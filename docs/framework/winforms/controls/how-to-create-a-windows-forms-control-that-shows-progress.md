@@ -11,10 +11,10 @@ helpviewer_keywords:
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
 ms.openlocfilehash: 1f457d6e2b0eb73da7a16dc93ea80a14ddb4b2c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202010"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>HOW TO：建立顯示進度的 Windows Forms 控制項
@@ -28,9 +28,9 @@ ms.locfileid: "59202010"
   
 -   覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>方法，以提供繪製控制項的邏輯。  
   
--   計算區域可用於繪製控制項使用其<xref:System.Windows.Forms.Control.ClientRectangle%2A>屬性。 `FlashTrackBar` 這會以其`OptimizedInvalidate`方法。  
+-   計算區域可用於繪製控制項使用其<xref:System.Windows.Forms.Control.ClientRectangle%2A>屬性。 `FlashTrackBar` 會在其 `OptimizedInvalidate` 方法中執行此作業。  
   
--   在 Windows Forms 設計工具中變更屬性時，請實作該屬性的序列化或持續性。 `FlashTrackBar` 定義`ShouldSerializeStartColor`並`ShouldSerializeEndColor`方法來序列化其`StartColor`和`EndColor`屬性。  
+-   在 Windows Forms 設計工具中變更屬性時，請實作該屬性的序列化或持續性。 `FlashTrackBar` 會定義 `ShouldSerializeStartColor` 和 `ShouldSerializeEndColor` 方法，以便將其 `StartColor` 和`EndColor` 屬性序列化。  
   
  下表顯示 `FlashTrackBar` 所定義的自訂屬性。  
   
@@ -95,4 +95,4 @@ ms.locfileid: "59202010"
 ## <a name="see-also"></a>另請參閱
 
 - [擴充設計階段支援](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
-- [Windows Form 控制項開發的基本概念](windows-forms-control-development-basics.md)
+- [Windows Forms 控制項開發的基本概念](windows-forms-control-development-basics.md)

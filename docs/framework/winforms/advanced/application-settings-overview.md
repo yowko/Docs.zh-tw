@@ -9,10 +9,10 @@ helpviewer_keywords:
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
 ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203622"
 ---
 # <a name="application-settings-overview"></a>應用程式設定概觀
@@ -53,9 +53,9 @@ ms.locfileid: "59203622"
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [HOW TO：驗證應用程式設定](how-to-validate-application-settings.md)
+- [如何：驗證應用程式設定](how-to-validate-application-settings.md)
 - [管理應用程式設定 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-- [如何：在執行階段使用 C# 讀取設定](how-to-read-settings-at-run-time-with-csharp.md)
+- [如何：在執行階段使用的讀取設定C#](how-to-read-settings-at-run-time-with-csharp.md)
 - [使用應用程式設定和使用者設定](using-application-settings-and-user-settings.md)
 - [應用程式設定架構](application-settings-architecture.md)
-- [自訂控制項的應用程式設定](application-settings-for-custom-controls.md)
+- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)

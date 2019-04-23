@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
 ms.openlocfilehash: 314409f5ac4ecb4b18f3b8d3f2aeb08a507ec9e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207262"
 ---
 # <a name="custom-bindings"></a>自訂繫結
@@ -74,9 +74,9 @@ ms.locfileid: "59207262"
   
 ## <a name="see-also"></a>另請參閱
 
-- [端點建立概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [使用繫結來設定服務和用戶端](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [建立端點概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [使用繫結設定服務與用戶端](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [HOW TO：自訂系統提供的繫結](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
+- [如何：自訂系統提供的繫結](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
 - [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
 - [自訂繫結](../../../../docs/framework/wcf/samples/custom-binding.md)

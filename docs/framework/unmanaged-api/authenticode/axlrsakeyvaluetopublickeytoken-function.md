@@ -11,10 +11,10 @@ ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 49476a4417e5431842f8e2ba0371c53c5c9f03e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207821"
 ---
 # <a name="axlrsakeyvaluetopublickeytoken-function"></a>\_AxlRSAKeyValueToPublicKeyToken 函式
@@ -42,7 +42,7 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
  [out] WCHAR * (要接收十六進位編碼的公開金鑰語彙基元) 的指標。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK` 如果函式成功。 否則會傳回錯誤碼。  
+ 如果函式成功，會傳回 `S_OK`。 否則會傳回錯誤碼。  
   
 ## <a name="see-also"></a>另請參閱
 

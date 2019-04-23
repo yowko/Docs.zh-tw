@@ -5,10 +5,10 @@ ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c82d32fe5b1e62a19ff5e2920c5943f1303b2d64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207026"
 ---
 # <a name="serialization-and-metadata"></a>序列化和中繼資料
@@ -69,4 +69,4 @@ ms.locfileid: "59207026"
 - [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [\<型別 > 項目](../../../docs/framework/net-native/type-element-net-native.md)
-- [\<命名空間 > 項目](../../../docs/framework/net-native/namespace-element-net-native.md)
+- [\<Namespace> 項目](../../../docs/framework/net-native/namespace-element-net-native.md)

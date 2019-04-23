@@ -8,10 +8,10 @@ helpviewer_keywords:
 - encoder parameters [Windows Forms], determining supported
 ms.assetid: f47ae459-e3ce-4d41-a140-2f6c6aea3f44
 ms.openlocfilehash: 2626eee239d9876125340dd133c5a9b3e45c3d7e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204571"
 ---
 # <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>HOW TO：判斷編碼器所支援的參數
@@ -32,6 +32,6 @@ ms.locfileid: "59204571"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：列出已安裝的編碼器](how-to-list-installed-encoders.md)
+- [如何：列出已安裝的編碼器](how-to-list-installed-encoders.md)
 - [點陣圖類型](types-of-bitmaps.md)
 - [使用 Managed GDI+ 中的影像編碼器和解碼器](using-image-encoders-and-decoders-in-managed-gdi.md)

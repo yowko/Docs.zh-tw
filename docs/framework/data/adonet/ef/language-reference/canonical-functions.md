@@ -3,10 +3,10 @@ title: 標準函式
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
 ms.openlocfilehash: 380c1dbcf86d8bbb844c2b226697d72d00c3e81a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202933"
 ---
 # <a name="canonical-functions"></a>標準函式
@@ -35,7 +35,7 @@ ms.locfileid: "59202933"
  [字串標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)  
  討論字串 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 標準函式。  
   
- [日期及時間標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)  
+ [日期和時間標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)  
  討論日期和時間 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 標準函式。  
   
  [位元標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)  

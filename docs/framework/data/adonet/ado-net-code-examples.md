@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
 ms.openlocfilehash: 3bbb2e046054e35cf01fe223318a3bf560ef7253
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180722"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET 程式碼範例
@@ -29,7 +29,7 @@ ms.locfileid: "59180722"
 
   - [LINQ to Entities](#linq-to-entities)
 
-  - [具型別的 ObjectQuery](#typed-objectquery)
+  - [具型別的的 ObjectQuery](#typed-objectquery)
 
   - [EntityClient](#entityclient) (`System.Data.EntityClient`)
 
@@ -346,8 +346,8 @@ End Class
 ## <a name="see-also"></a>另請參閱
 
 - [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [在 ADO.NET 中傳送和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [建立資料應用程式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
-- [查詢 Entity Data Model (Entity Framework 工作)](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
-- [HOW TO：執行可傳回匿名類型集合的查詢](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [查詢 Entity Data Model （Entity Framework 工作）](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
+- [如何：執行可傳回匿名類型集合的查詢](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

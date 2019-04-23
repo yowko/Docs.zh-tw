@@ -6,10 +6,10 @@ helpviewer_keywords:
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
 ms.openlocfilehash: c9193ffa9ef34f1e43a92feec230fa2282264147
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203011"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>滑鼠輸入在 Windows Form 中的運作方式
@@ -55,5 +55,5 @@ ms.locfileid: "59203011"
 ## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 應用程式中的滑鼠輸入](mouse-input-in-a-windows-forms-application.md)
-- [Windows Form 中的滑鼠捕捉](mouse-capture-in-windows-forms.md)
-- [Windows Form 中的滑鼠指標](mouse-pointers-in-windows-forms.md)
+- [Windows Forms 中的滑鼠捕捉](mouse-capture-in-windows-forms.md)
+- [Windows Forms 中的滑鼠指標](mouse-pointers-in-windows-forms.md)

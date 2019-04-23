@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c8aa10c25fd7459bebb1de6d71a54b6e361e20e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 413a04d6ccdfff4b9cbf937821683ab7f7b37361
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560811"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208120"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>在 .NET 中剖析日期和時間字串
 
@@ -32,7 +32,6 @@ ms.locfileid: "54560811"
 1. 您可以指定文字表示法中遺漏的元件在日期與時間中設定的方式。
 
 <xref:System.DateTime.Parse%2A> 和 <xref:System.DateTime.TryParse%2A> 方法會轉換許多常見的日期和時間表示法。 <xref:System.DateTime.ParseExact%2A> 和 <xref:System.DateTime.TryParseExact%2A> 方法會轉換符合日期和時間格式字串所指定模式的字串表示。 (如需詳細資訊，請參閱[標準日期和時間格式字串](standard-date-and-time-format-strings.md)以及[自訂日期和時間格式字串](custom-date-and-time-format-strings.md)相關文章)。
-
 
 目前的 <xref:System.Globalization.DateTimeFormatInfo> 物件提供了將文字解譯為日期與時間的更多控制方式。 <xref:System.Globalization.DateTimeFormatInfo> 的屬性描述了日期和時間分隔符號，以及月、日和紀元的名稱，還有 "AM" 和 "PM" 指定的格式。 目前的執行緒文化特性提供可表示目前文化特性的 <xref:System.Globalization.DateTimeFormatInfo>。 若需要特定文化特性或自訂設定，您可以指定剖析方法的 <xref:System.IFormatProvider> 參數。 針對 <xref:System.IFormatProvider> 參數，指定代表文化特性的 <xref:System.Globalization.CultureInfo> 物件，或指定 <xref:System.Globalization.DateTimeFormatInfo> 物件。
 
@@ -93,4 +92,4 @@ ms.locfileid: "54560811"
 - [格式化類型](formatting-types.md)
 - [.NET 中的類型轉換](type-conversion.md)
 - [標準日期和時間格式](standard-date-and-time-format-strings.md)
-- [自訂日期和時間格式字串](custom-date-and-time-format-strings.md)
+- [自訂日期與時間格式字串](custom-date-and-time-format-strings.md)

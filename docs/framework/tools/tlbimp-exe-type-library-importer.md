@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da36cfb86aae52af90451e92b8b17088e29481da
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 314977cb55d9c927ddf96a9279ebb83d8f69e936
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481751"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200918"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (類型程式庫匯入工具)
 類型程式庫匯入工具會將 COM 類型程式庫中找到的類型定義轉換為通用語言執行平台組件中的對等定義。 Tlbimp.exe 的輸出是二進位檔案 (組件)，它包含原始類型程式庫中所定義類型的執行階段中繼資料。 您可以使用像是 [Ildasm.exe](ildasm-exe-il-disassembler.md) 這類工具來檢查這個檔案。  
@@ -126,6 +126,7 @@ void SomeMethod(out bool x);
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [工具](index.md)
 - [Tlbexp.exe (類型程式庫匯出工具)](tlbexp-exe-type-library-exporter.md)
 - [匯入類型程式庫做為組件](../interop/importing-a-type-library-as-an-assembly.md)

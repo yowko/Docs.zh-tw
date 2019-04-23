@@ -7,10 +7,10 @@ helpviewer_keywords:
 - key frames [WPF], animating strings with
 ms.assetid: c62bc9fd-c09a-4227-bce0-0a1ab82049dd
 ms.openlocfilehash: 4a37408ad90fda12a95e66c1b44018967b376837
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204168"
 ---
 # <a name="how-to-animate-a-string-by-using-key-frames"></a>HOW TO：使用主要畫面格建立字串的動畫
@@ -32,4 +32,4 @@ ms.locfileid: "59204168"
 - <xref:System.Windows.Controls.Button>
 - <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>
 - [主要畫面格動畫概觀](key-frame-animations-overview.md)
-- [關於主要畫面格操作說明的主題](key-frame-animation-how-to-topics.md)
+- [主要畫面格操作說明主題](key-frame-animation-how-to-topics.md)

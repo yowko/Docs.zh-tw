@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5276c69da05cedcd3195a09da12ddc5b2d0fed67
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59201269"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo 方法
@@ -52,7 +52,7 @@ HRESULT GetArrayObjectInfo(
  [out]包含整數的陣列，表示較低的每個繫結的陣列的維度。  
   
  `ppData`  
- [out]根據 c + + 慣例配置陣列的原始緩衝區的位址指標。  
+ [out]未經處理的陣列，根據配置緩衝區的位址指標C++慣例。  
   
 ## <a name="remarks"></a>備註  
  `pDimensionSizes`和`pDimensionLowerBounds`是平行陣列，因此位於相同的索引，每個陣列中的項目相同的實體特性。  
@@ -64,7 +64,7 @@ HRESULT GetArrayObjectInfo(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

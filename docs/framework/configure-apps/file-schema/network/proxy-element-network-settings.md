@@ -1,5 +1,5 @@
 ---
-title: <proxy> 項目 （網路設定）
+title: <proxy> 項目 (網路設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
 ms.openlocfilehash: 8df9bbf2615776c2e023f03401785da95b2226eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204818"
 ---
 # <a name="proxy-element-network-settings"></a>\<proxy > 項目 （網路設定）
@@ -53,7 +53,7 @@ ms.locfileid: "59204818"
   
 ### <a name="parent-elements"></a>父項目  
   
-|**項目**|**描述**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。|  
   

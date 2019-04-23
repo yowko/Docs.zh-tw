@@ -1,5 +1,5 @@
 ---
-title: <add> ConnectionManagement （網路設定） 的項目
+title: connectionManagement 的 <add> 項目 (網路設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -11,10 +11,10 @@ helpviewer_keywords:
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
 ms.openlocfilehash: 3a046fd386536b29ea2dcad5660c65c08b7e4478
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204246"
 ---
 # <a name="add-element-for-connectionmanagement-network-settings"></a>\<新增 > connectionManagement （網路設定） 的項目
@@ -49,7 +49,7 @@ ms.locfileid: "59204246"
   
 ### <a name="parent-elements"></a>父項目  
   
-|**項目**|**描述**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|指定連接至網路主機的連線數目上限。|  
   

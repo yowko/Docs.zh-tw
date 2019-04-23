@@ -7,10 +7,10 @@ helpviewer_keywords:
 - transparency [Windows Forms], Windows Forms custom controls
 ms.assetid: 32433e63-f4e9-4305-9857-6de3edeb944a
 ms.openlocfilehash: 671075973793d7fbf0b70ce77428a0a632305b9c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206092"
 ---
 # <a name="how-to-give-your-control-a-transparent-background"></a>HOW TO：為控制項提供透明背景
@@ -24,11 +24,11 @@ ms.locfileid: "59206092"
   
 ### <a name="to-give-your-control-a-transparent-backcolor"></a>為控制項提供透明背景色彩  
   
--   在 [屬性] 視窗中，選擇<xref:System.Windows.Forms.ButtonBase.BackColor%2A>屬性並將它設定為 <xref:System.Drawing.Color.Transparent%2A>  
+-   在 [屬性] 視窗中，選擇 <xref:System.Windows.Forms.ButtonBase.BackColor%2A> 屬性並將其設定為 <xref:System.Drawing.Color.Transparent%2A>。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Drawing.Color.FromArgb%2A>
-- [使用 .NET Framework 開發自訂的 Windows Form 控制項](developing-custom-windows-forms-controls.md)
+- [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)
 - [使用 Managed 圖形類別](../advanced/using-managed-graphics-classes.md)
-- [HOW TO：繪製不透明和半透明線條](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)
+- [如何：繪製不透明和半透明線條](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)

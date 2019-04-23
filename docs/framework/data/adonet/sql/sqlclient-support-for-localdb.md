@@ -3,10 +3,10 @@ title: LocalDB 的 SqlClient 支援
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
 ms.openlocfilehash: 416945964af7fda5ed5aaab2f5aae1bbc8928556
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204753"
 ---
 # <a name="sqlclient-support-for-localdb"></a>LocalDB 的 SqlClient 支援
@@ -29,7 +29,7 @@ ms.locfileid: "59204753"
     server=(localdb)\\myInstance  
     ```  
   
- `User Instance=True` 不允許連接至 LocalDB 資料庫時。  
+ 連接至 LocalDB 資料庫時不允許`User Instance=True` 。  
   
  您可以從 [Microsoft SQL Server 2012 功能套件](https://www.microsoft.com/download/en/details.aspx?id=29065)下載 LocalDB。 如果您將使用 sqlcmd.exe 來修改 LocalDB 執行個體中的資料，您必須從 SQL Server 2012，您也可以從 SQL Server 2012 功能套件取得 sqlcmd。  
   
@@ -61,4 +61,4 @@ ms.locfileid: "59204753"
 ## <a name="see-also"></a>另請參閱
 
 - [SQL Server 功能和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

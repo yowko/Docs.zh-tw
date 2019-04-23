@@ -3,10 +3,10 @@ title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
 ms.openlocfilehash: f6509400d7f6633749155f778e3ba58ec6c27ec2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207314"
 ---
 # <a name="datatables"></a>DataTables
@@ -30,7 +30,7 @@ ms.locfileid: "59207314"
  [在 DataTable 中操作資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  說明如何加入、修改和刪除資料表中的資料。 說明如何使用**DataTable**事件，以檢視資料表中的資料變更。  
   
- [處理 DataTable 的事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
+ [處理 DataTable 事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
  提供可用事件的相關資訊，供**DataTable**，包括已修改資料行的值，並新增或刪除資料列時的事件。  
   
 ## <a name="related-sections"></a>相關章節  
@@ -57,4 +57,4 @@ ms.locfileid: "59207314"
   
 ## <a name="see-also"></a>另請參閱
 
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

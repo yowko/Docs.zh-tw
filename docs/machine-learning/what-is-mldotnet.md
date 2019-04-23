@@ -5,12 +5,12 @@ author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
 ms.date: 03/01/2019
-ms.openlocfilehash: 6ba4719c830c8b0344a38dad4b86d38cc323e972
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3f5d44e90ba705195deba54ef658668488cdb0f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466943"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200360"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>什麼是 ML.NET 以及如何了解機器學習服務的基本概念？
 
@@ -25,14 +25,13 @@ ML.NET 是免費的跨平台開放原始碼機器學習服務架構，可供您�
 
 來自機器學習服務的預報或預測可讓應用程式及裝置更聰明。 當您在線上購物時，機器學習服務可根據您已購買的商品，協助建議您可能會想要的其他產品。 當您刷卡時，機器學習服務會比較此交易與交易資料庫，並協助偵測詐騙。 當您的掃地機器人在房間吸塵時，機器學習服務可協助它判斷工作是否已完成。
 
-
 ## <a name="short-videos-on-data-science"></a>資料科學的簡短影片 
 
 頂尖資料科學家所提供的五段簡短影片中，於*初學者資料科學*內有機器學習服務與資料科學基本概念的快速簡介。 這些影片很基本但很實用，不論您是對進行資料科學有興趣，還是要與資料科學家合作。
 
 * 影片 1：[資料科學可回答的 5 個問題](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-the-5-questions-data-science-answers) *(5 分 14 秒)*。
 
-* 影片 2：[您的資料準備好可邁入資料科學了嗎？](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-is-your-data-ready-for-data-science) (4 分 56 秒)
+* 影片 2：[您的資料準備好可邁入資料科學了嗎？](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-is-your-data-ready-for-data-science) *(4 分 56 秒)*
 
 * 影片 3：[詢問可以利用資料回答的問題](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-ask-a-question-you-can-answer-with-data) *(4 分 17 秒)*
 

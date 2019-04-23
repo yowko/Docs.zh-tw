@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
 ms.openlocfilehash: e6f8ed3b893319e771eb0af96da7a58a7fad5c9b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200983"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML 的類型轉換子和標記延伸
@@ -32,7 +32,7 @@ ms.locfileid: "59200983"
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>類型轉換器  
- 在 .NET Framework XAML 服務定義中，類型轉換器是衍生自 CLR <xref:System.ComponentModel.TypeConverter> 類別的類別。 <xref:System.ComponentModel.TypeConverter> 是之前的 Microsoft.NET Framework XAML 就存在的類別。 其原始用途是為了支援 [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] 屬性的屬性視窗和類似的文字編輯表示。 .NET Framework 中引進的 XAML 使用 <xref:System.ComponentModel.TypeConverter> ，將文字語法 (如屬性值或 XAML 值節點中的文字語法) 轉換成物件。 <xref:System.ComponentModel.TypeConverter> 也可以用來序列化為文字語法的物件值。 <xref:System.ComponentModel.TypeConverter> 也在 Windows Presentation Foundation (WPF) 和 Windows Communication Foundation (WCF) 的舊版架構特定 XAML 實作中使用。 如需在 XAML 中 <xref:System.ComponentModel.TypeConverter> 的詳細資訊，請參閱 [Type Converters for XAML Overview](type-converters-for-xaml-overview.md)。  
+ 在 .NET Framework XAML 服務定義中，類型轉換器是衍生自 CLR <xref:System.ComponentModel.TypeConverter> 類別的類別。 <xref:System.ComponentModel.TypeConverter> 是之前的 Microsoft.NET Framework XAML 就存在的類別。 其原始用途是為了支援 [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] 屬性的屬性視窗和類似的文字編輯表示。 .NET Framework 中引進的 XAML 使用 <xref:System.ComponentModel.TypeConverter> ，將文字語法 (如屬性值或 XAML 值節點中的文字語法) 轉換成物件。 <xref:System.ComponentModel.TypeConverter> 也可用來將物件值序列化為文字語法。 <xref:System.ComponentModel.TypeConverter> 也在 Windows Presentation Foundation (WPF) 和 Windows Communication Foundation (WCF) 的舊版架構特定 XAML 實作中使用。 如需在 XAML 中 <xref:System.ComponentModel.TypeConverter> 的詳細資訊，請參閱 [Type Converters for XAML Overview](type-converters-for-xaml-overview.md)。  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>標記延伸  
@@ -45,7 +45,7 @@ ms.locfileid: "59200983"
  如需 XAML 之標記延伸實作模式的詳細資訊，請參閱 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)。  
   
 > [!NOTE]
->  <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 類型都在 <xref:System.Windows.Markup> 命名空間中，而不在 <xref:System.Xaml> 命名空間中。 這不表示這些類型專屬於情況下填入包含字串的 CLR 命名空間的 WPF 或 Windows Form 技術`Windows`。 <xref:System.Windows.Markup.MarkupExtension> 和<xref:System.Windows.Markup.ValueSerializer>位於 System.Xaml 組件，且有沒有特定架構相依性。 這些類型在 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 存在於 CLR 命名空間中，到了 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 仍存在於 CLR 命名空間中，這是為了避免破壞現有 WPF 專案中的參考。 如需詳細資訊，請參閱 [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md)。  
+>  <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 類型都在 <xref:System.Windows.Markup> 命名空間中，而不在 <xref:System.Xaml> 命名空間中。 這不表示這些類型專屬於情況下填入包含字串的 CLR 命名空間的 WPF 或 Windows Form 技術`Windows`。 <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 位於 System.Xaml 組件中，並且沒有特定架構相依性。 這些類型在 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 存在於 CLR 命名空間中，到了 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 仍存在於 CLR 命名空間中，這是為了避免破壞現有 WPF 專案中的參考。 如需詳細資訊，請參閱 [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md)。  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>值序列化程式  
@@ -71,4 +71,4 @@ ms.locfileid: "59200983"
 - <xref:System.Xaml.XamlObjectWriter>
 - [XAML 標記延伸概觀](markup-extensions-for-xaml-overview.md)
 - [XAML 類型轉換子概觀](type-converters-for-xaml-overview.md)
-- [適用於類型轉換子和標記延伸的服務內容](service-contexts-available-to-type-converters-and-markup-extensions.md)
+- [Service Contexts Available to Type Converters and Markup Extensions](service-contexts-available-to-type-converters-and-markup-extensions.md)

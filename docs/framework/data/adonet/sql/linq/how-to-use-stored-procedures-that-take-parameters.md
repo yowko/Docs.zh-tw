@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
 ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181762"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>HOW TO：使用有參數的預存程序
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 對應至參考參數，輸出參數，並實值型別會宣告為可為 null 的參數。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將輸出參數對應至參考參數，而且會針對實值型別 (Value Type)，將參數宣告為可為 Null。  
   
  如需如何使用輸入的參數中的查詢會傳回一個資料列集的範例，請參閱[How to:傳回資料列集](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)。  
   
@@ -43,5 +43,5 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 
 - [預存程序](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
 - [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [用可為 Null 的類型](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
-- [可為 Null 的實值類型](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [使用可為 Null 的型別](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [可為 Null 的值類型](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

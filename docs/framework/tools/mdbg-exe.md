@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3daf0a1cf2d1ae55780a16612aa33a0fdb70a52b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e5320bc6c5105c95d63b1888e1adbc2ecf1bc5fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282031"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199995"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework 命令列偵錯工具)
 .NET Framework 命令列偵錯工具可以協助工具廠商和應用程式開發人員尋找並修復以 .NET Framework 通用語言執行平台為目標之程式的 Bug。 這個工具使用執行階段偵錯 API 來提供偵錯服務。 目前您只能使用 MDbg.exe 偵錯 Managed 程式碼；不支援偵錯 Unmanaged 程式碼。  
@@ -34,7 +34,7 @@ MDbg [ProgramName[arguments]] [options]
   
  MDbg.exe 命令會區分大小寫。  
   
-|命令|描述|  
+|命令|說明|  
 |-------------|-----------------|  
 |**ap**[**rocess**] [*number*]|切換至另一個已偵錯的處理序，或列印可使用的處理序。 這些數字不是實際的處理序 ID (PID)，而是從 0 開始建立索引的清單。|  
 |**a**[**ttach**] [*pid*]|附加至處理序，或列印可使用的處理序。|  
@@ -81,7 +81,7 @@ MDbg [ProgramName[arguments]] [options]
 |**t**[**hread**] [*newThread*] [-*nick nickname*`]`|不帶參數的執行緒命令會顯示目前處理序中的所有 Managed 執行緒。 執行緒通常是以其執行緒編號識別，但是如果執行緒有指定的暱稱，則改為顯示暱稱。 您可以使用 `-nick` 參數指派暱稱給執行緒。<br /><br /> -   **thread** `-nick` *threadName* 會指派暱稱給目前執行中的執行緒。<br /><br /> 暱稱不可為編號。 如果目前的執行緒已經指定暱稱，就會以新的暱稱取代舊的暱稱。 如果新暱稱是空字串 ("")，則刪除目前執行緒的暱稱，而不指定任何新暱稱給執行緒。|  
 |**u**[**p**]|將現用堆疊框架往上移。|  
 |**uwgc**[**handle**] [*var*] &#124; [*address*]|列印由控制代碼追蹤的變數。 控制代碼可以用名稱或位址加以指定。|  
-|**when**|顯示目前使用中的 `when` 陳述式。<br /><br /> **when** **delete all** &#124; `num` [`num` [`num` …]]：刪除數字指定的 `when` 陳述式，若指定 `all` 則刪除所有 `when` 陳述式。<br /><br /> **when** `stopReason` [`specific_condition`] **do**`cmd` [`cmd` [`cmd` …] ]：*stopReason* 參數可以是下列其中一個：<br /><br /> `StepComplete`, `ProcessExited`, `ThreadCreated`, `BreakpointHit`, `ModuleLoaded`, `ClassLoaded`, `AssemblyLoaded`, `AssemblyUnloaded`, `ControlCTrapped`, `ExceptionThrown`, `UnhandledExceptionThrown`, `AsyncStop`, `AttachComplete`, `UserBreak`, `EvalComplete`, `EvalException`, `RemapOpportunityReached`, `NativeStop`.<br /><br /> *specific_condition* 可以是下列其中一個：<br /><br /> -   *number*：對於 `ThreadCreated` 和 `BreakpointHit`，只有在由執行緒 ID/中斷點編號，以相同的值停止時，才會觸發動作。<br />-   [`!`]*name*：針對 `ModuleLoaded`、`ClassLoaded`、`AssemblyLoaded`、`AssemblyUnloaded`、`ExceptionThrown` 和 `UnhandledExceptionThrown`，只在名稱與 *stopReason* 的名稱相符時，才會觸發動作。<br /><br /> *specific_condition* 對其他 *stopReason* 的值必須是空白。|  
+|**when**|顯示目前使用中的 `when` 陳述式。<br /><br /> **when** **delete all** &#124; `num` [`num` [`num` …]]：刪除數字指定的 `when` 陳述式，若指定 `all` 則刪除所有 `when` 陳述式。<br /><br /> **when** `stopReason` [`specific_condition`] **do**`cmd` [`cmd` [`cmd` …] ]：*stopReason* 參數可以是下列其中一個：<br /><br /> `StepComplete`、`ProcessExited`、`ThreadCreated`、`BreakpointHit`、`ModuleLoaded`、`ClassLoaded`、`AssemblyLoaded`、`AssemblyUnloaded`、`ControlCTrapped`、`ExceptionThrown`、`UnhandledExceptionThrown`、`AsyncStop`、`AttachComplete`、`UserBreak`、`EvalComplete`、`EvalException`、`RemapOpportunityReached`、`NativeStop`。<br /><br /> *specific_condition* 可以是下列其中一個：<br /><br /> -   *number*：對於 `ThreadCreated` 和 `BreakpointHit`，只有在由執行緒 ID/中斷點編號，以相同的值停止時，才會觸發動作。<br />-   [`!`]*name*：針對 `ModuleLoaded`、`ClassLoaded`、`AssemblyLoaded`、`AssemblyUnloaded`、`ExceptionThrown` 和 `UnhandledExceptionThrown`，只在名稱與 *stopReason* 的名稱相符時，才會觸發動作。<br /><br /> *specific_condition* 對其他 *stopReason* 的值必須是空白。|  
 |**w**[**here**] [`-v`] [`-c` *depth*] [*threadID*]|顯示有關堆疊框架的偵錯資訊。<br /><br /> -   `-v` 選項提供有關各個所顯示堆疊框架的詳細資訊。<br />-   指定 `depth` 的數字，限制所顯示的框架數目。 使用 **all** 命令，顯示所有框架。 預設值為 100。<br />-   如果指定 *threadID* 參數，您可以控制與堆疊相關聯的執行緒。 預設只有目前的執行緒。 使用 **all** 命令，取得所有執行緒。|  
 |**x** [`-c`*numSymbols*] [*module*[`!`*pattern*]]|顯示與模組 `pattern` 相符的函式。<br /><br /> 如果指定 *numSymbols*，則輸出僅限在指定的數目以內。 如果未指定 *pattern* 的 `!` (指示規則運算式)，則顯示所有功能。 如果未提供 *module*，則顯示所有載入的模組。 符號 (*~#*) 可透過使用 **break** 命令，用來設定中斷點。|  
   
@@ -105,5 +105,6 @@ mdbg>
  進入偵錯工具後，請使用上一節使用的指令和引數。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [工具](../../../docs/framework/tools/index.md)
 - [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

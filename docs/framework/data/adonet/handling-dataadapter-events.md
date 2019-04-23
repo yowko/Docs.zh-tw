@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
 ms.openlocfilehash: 864a9072b38054557b2583f505e6e7827c02d2de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180748"
 ---
 # <a name="handling-dataadapter-events"></a>處理 DataAdapter 的事件
@@ -22,7 +22,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter> 公開 (Expose) 的三個事件可
 |`FillError`|`Fill` 作業過程中發生錯誤。|  
   
 ## <a name="rowupdating-and-rowupdated"></a>RowUpdating 和 RowUpdated  
- `RowUpdating` 資料列的任何更新之前引發<xref:System.Data.DataSet>在資料來源中處理。 `RowUpdated` 資料列的任何更新之後，會引發`DataSet`在資料來源中處理。 所以，您可以使用 `RowUpdating` 在更新發生前修改更新行為，讓您更能控制更新發生的時間、保留對已更新資料列的參考、取消目前更新、將更新排程於稍後進行批次處理等其他功能。 `RowUpdated` 可用於回應錯誤和在更新期間發生的例外狀況。 您可以將錯誤資訊加入 `DataSet` 以及重試邏輯等等。  
+ 在資料來源中處理 `RowUpdating` 之資料列的任何更新之前，會引發 <xref:System.Data.DataSet>。 在資料來源中處理 `RowUpdated` 之資料列的任何更新之後，會引發 `DataSet`。 所以，您可以使用 `RowUpdating` 在更新發生前修改更新行為，讓您更能控制更新發生的時間、保留對已更新資料列的參考、取消目前更新、將更新排程於稍後進行批次處理等其他功能。 `RowUpdated` 對於回應在更新期間發生的錯誤和例外狀況而言很有用。 您可以將錯誤資訊加入 `DataSet` 以及重試邏輯等等。  
   
  傳遞至 <xref:System.Data.Common.RowUpdatingEventArgs> 和 <xref:System.Data.Common.RowUpdatedEventArgs> 事件的 `RowUpdating` 和 `RowUpdated` 引數包括下列項目：`Command` 屬性 (參考正用來執行更新的 `Command` 物件)、`Row` 屬性 (參考包含已更新資訊的 `DataRow` 物件)、`StatementType` 屬性 (正在執行該類型的更新)、`TableMapping` (如果適用)；以及作業的 `Status`。  
   
@@ -190,6 +190,6 @@ protected static void FillError(object sender, FillErrorEventArgs args)
 
 - [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [處理 DataSet 的事件](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
-- [處理 DataTable 的事件](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
+- [處理 DataTable 事件](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
 - [事件](../../../../docs/standard/events/index.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

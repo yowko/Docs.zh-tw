@@ -3,10 +3,10 @@ title: <behaviors>
 ms.date: 03/30/2017
 ms.assetid: 0e5da4e6-1aa5-466c-924e-f10efee57f0b
 ms.openlocfilehash: 108c349a44ed3ac902652f86241c1e96a622549b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204233"
 ---
 # <a name="behaviors"></a>\<behaviors>
@@ -56,6 +56,6 @@ ms.locfileid: "59204233"
 - <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>
 - [使用行為來設定與擴充執行階段](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
 - [設定用戶端行為](../../../../../docs/framework/wcf/configuring-client-behaviors.md)
-- [指定用戶端執行階段行為](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [指定用端執行階段行為](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [指定服務執行階段行為](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
 - [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

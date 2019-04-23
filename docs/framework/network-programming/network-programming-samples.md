@@ -2,12 +2,12 @@
 title: 網路程式設計範例
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: b74de4b9b7ef6a505b0f6f986ffe5152b60e7956
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 6d66a5ce0835a52dd1b8c331d94bc58ce17622c1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220292"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204545"
 ---
 # <a name="network-programming-samples"></a>網路程式設計範例
 本節包含可下載網路程式設計範例的描述和連結，而這些範例使用 <xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets> 和相關命名空間中的類別。 
@@ -34,7 +34,7 @@ ms.locfileid: "56220292"
  [NetStat 工具技術範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ks32hs88(v=vs.85))  
  示範 NCLNetStat 網路資訊工具。  
   
- [Network Information Technology Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/2xatedhd(v=vs.85)) (網路資訊技術範例)  
+ [網路資訊技術範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/2xatedhd(v=vs.85))  
  示範如何監視和顯示網路資訊。  
   
  [Ping 用戶端技術範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/5253acs7(v=vs.85))  
@@ -51,13 +51,13 @@ ms.locfileid: "56220292"
   
  [FTP 總管技術範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms233623(v=vs.85))  
  示範如何列出 FTP 伺服器的內容。  
-  
-  
+
 ## <a name="reference"></a>參考資料  
  <xref:System.Net>  
   
  <xref:System.Net.NetworkInformation>  
   
 ## <a name="see-also"></a>另請參閱
+
 - [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)
-- [網路程式設計「如何」主題](../../../docs/framework/network-programming/network-programming-how-to-topics.md)
+- [網路程式設計 HOW TO 主題](../../../docs/framework/network-programming/network-programming-how-to-topics.md)

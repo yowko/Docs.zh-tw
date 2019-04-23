@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
 ms.openlocfilehash: 485e7a17073d72618b9599113179cddde748e697
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181177"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>ErrorProvider 元件概觀 (Windows Form)
@@ -29,5 +29,5 @@ Windows Forms [ErrorProvider](errorprovider-component-windows-forms.md)元件用
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ErrorProvider>
-- [HOW TO：使用 Windows Forms ErrorProvider 元件檢視資料集錯誤](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
-- [HOW TO：使用 Windows Forms ErrorProvider 元件顯示表單驗證的錯誤圖示](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [如何：資料集使用 Windows Forms ErrorProvider 元件檢視錯誤](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [如何：表單驗證，使用 Windows Forms ErrorProvider 元件顯示錯誤圖示](display-error-icons-for-form-validation-with-wf-errorprovider.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
 ms.openlocfilehash: 81220ad4c0bf00a38abfe7257d5fc61e92e8d885
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206443"
 ---
 # <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>HOW TO：使用 ShowDialog 方法顯示 Windows Form 以支援 COM Interop
@@ -40,5 +40,5 @@ ms.locfileid: "59206443"
 ## <a name="see-also"></a>另請參閱
 
 - [將 .NET Framework 元件公開給 COM](../../interop/exposing-dotnet-components-to-com.md)
-- [HOW TO：在自己的執行緒上顯示每個 Windows Form 以支援 COM Interop](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
-- [Windows Form 和 Unmanaged 應用程式](windows-forms-and-unmanaged-applications.md)
+- [如何：在它自己的執行緒上顯示每個 Windows Form 以支援 COM Interop](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Windows Forms 和 Unmanaged 應用程式](windows-forms-and-unmanaged-applications.md)

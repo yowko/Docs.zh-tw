@@ -3,10 +3,10 @@ title: ADO.NET 架構
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
 ms.openlocfilehash: 3f3fc0c8c125c57116da4f1de467d738ac36ca29
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202634"
 ---
 # <a name="adonet-architecture"></a>ADO.NET 架構
@@ -49,14 +49,14 @@ ADO.NET 架構
  ADO.NET Entity Framework 的設計目標是要讓開發人員針對概念應用程式模型進行程式設計來建立資料存取應用程式，而不用直接對關聯式儲存結構描述進行程式設計。 其目的是要減少資料導向應用程式所需程式碼和維護的工作量。 如需詳細資訊，請參閱 < [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)。  
   
 ## <a name="wcf-data-services"></a>WCF 資料服務  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用來部署 Web 或內部網路上的資料服務。 系統會根據實體資料模型的規格，讓資料結構化成實體與關聯性。 部署在這個模型上的資料可由標準 HTTP 通訊協定定址。 如需詳細資訊，請參閱 [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 是用於在 Web 或內部網路上部署資料服務。 系統會根據實體資料模型的規格，讓資料結構化成實體與關聯性。 部署在這個模型上的資料可由標準 HTTP 通訊協定定址。 如需詳細資訊，請參閱 [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)。  
   
 ## <a name="xml-and-adonet"></a>XML 和 ADO.NET  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 會利用 XML 的功能，以提供已中斷連線的存取權的資料。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 已設計的手中-庫存中的 XML 類別與[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]; 兩者都是單一架構的元件。  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 會利用 XML 的功能，以中斷連接的方式存取資料。 在 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中，已將 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 和 XML 類別設計得相當緊密，因為這兩者都是同一個架構上的元件。  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 和中的 XML 類別[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]交集在於`DataSet`物件。 `DataSet` 可以填入 XML 來源的資料，無論它是檔案或 XML 資料流都一樣。 不管 `DataSet` 的資料來源為何，`DataSet` 都可組合成與全球資訊網協會 (W3C) 相容的 XML，而且包含其結構描述當做 XML 結構描述定義語言 (XSD) 結構描述。 由於 `DataSet` 的原生序列化格式是 XML，所以相當適合當做在各層之間移動資料的媒體，如此當需要在遠端對 XML Web Service 來回傳送資料和結構描述內容時，`DataSet` 將會是最佳選擇。 如需詳細資訊，請參閱 [XML 文件和資料](../../../../docs/standard/data/xml/index.md)。  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 和 XML 類別的交集在於 `DataSet` 物件。 `DataSet` 可以填入 XML 來源的資料，無論它是檔案或 XML 資料流都一樣。 不管 `DataSet` 的資料來源為何，`DataSet` 都可組合成與全球資訊網協會 (W3C) 相容的 XML，而且包含其結構描述當做 XML 結構描述定義語言 (XSD) 結構描述。 由於 `DataSet` 的原生序列化格式是 XML，所以相當適合當做在各層之間移動資料的媒體，如此當需要在遠端對 XML Web Service 來回傳送資料和結構描述內容時，`DataSet` 將會是最佳選擇。 如需詳細資訊，請參閱 [XML 文件和資料](../../../../docs/standard/data/xml/index.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

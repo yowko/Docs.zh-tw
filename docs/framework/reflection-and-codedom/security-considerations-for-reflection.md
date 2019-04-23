@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e3a4a2208f669dc4fc0589f08b32aeb2c5e4423
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c238f0aebd7c81443eb55fe0ee84844f0c9aee8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509299"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207509"
 ---
 # <a name="security-considerations-for-reflection"></a>反映的安全性考量
 反映可讓您取得類型和成員的相關資訊，以及存取成員 (也就是呼叫方法和建構函式、取得和設定屬性值、加入和移除事件處理常式等等)。 不限制使用反映來取得類型和成員的相關資訊。 所有程式碼都可以使用反映來執行下列工作：  
@@ -36,7 +36,7 @@ ms.locfileid: "54509299"
   
     -   呼叫程式碼基底類別的 Protected 成員。 (在反映中，這稱為系列層級的存取。)  
   
-    -   呼叫程式碼組件中的 `internal` 成員 (在 Visual Basic 中為 `Friend` 成員)。 (在反映中，這稱為組件層級存取。)  
+    -   `internal` 呼叫程式碼組件中的以下成員 (在 Visual Basic 中為 `Friend` 成員)： (在反映中，這稱為組件層級存取。)  
   
     -   包含呼叫程式碼之類別的其他執行個體的私用成員。  
   
@@ -105,6 +105,7 @@ ms.locfileid: "54509299"
 -   從 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 開始，使用反映來取得非公用類型和成員的相關資訊時，不需要任何權限。 在舊版中，會需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
