@@ -7,10 +7,10 @@ description: 了解如何使用 C#、Visual Basic 及 F#，在任何平台上使
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
 ms.openlocfilehash: 61b3e6f2aae2ad2633f82360b227a876f685fcc1
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427483"
 ---
 <!-- markdownlint-disable MD033 -->
@@ -77,7 +77,7 @@ ms.locfileid: "59427483"
         <h1>.NET 文件</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Docs</a>
+                <a data-default="true" href="#docs">文件</a>
                 <ul id="docs">
                     <li>
                         <a href="#getstarted">開始使用</a>
@@ -174,7 +174,7 @@ ms.locfileid: "59427483"
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/csharp">C# 指南</a></h3>
                                                 <p><a href="/dotnet/csharp/getting-started">開始使用</a></p>
-                                                <p><a href="/dotnet/csharp/tour-of-csharp">C# 導覽</a></p>
+                                                <p><a href="/dotnet/csharp/tour-of-csharp">C# 的教學課程</a></p>
                                                 <p><a href="/dotnet/csharp/whats-new">C# 的新功能</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">C# 語言參考</a></p>
                                             </div>
@@ -233,7 +233,7 @@ ms.locfileid: "59427483"
                                                 <h3><a href="/dotnet/machine-learning">ML.NET 指南</a></h3>
                                                 <p><a href="/dotnet/machine-learning/tutorials">教學課程</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources">資源</a></p>
-                                                <p><a href="/dotnet/machine-learning/resources/glossary">字彙表</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources/glossary">字彙</a></p>
                                                 <p><a href="/dotnet/api?view=ml-dotnet">ML.NET API 參考</a></p>
                                             </div>
                                         </div>
@@ -434,7 +434,7 @@ ms.locfileid: "59427483"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">行動訊息</a>
+                        <a href="#mobile">行動裝置</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios">
@@ -496,7 +496,7 @@ ms.locfileid: "59427483"
                         </ul>
                     </li>
                     <li>
-                        <a href="#desktop">桌面</a>
+                        <a href="#desktop">傳統型</a>
                         <ul id="desktop" class="cardsC">
                             <li>
                                 <a href="/uwp">
