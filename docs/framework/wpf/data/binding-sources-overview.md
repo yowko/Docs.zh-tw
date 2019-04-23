@@ -7,10 +7,10 @@ helpviewer_keywords:
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
 ms.openlocfilehash: 72ef84cb53c6eff1fc2fb9459b40e780869243a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145921"
 ---
 # <a name="binding-sources-overview"></a>繫結來源概觀
@@ -98,6 +98,6 @@ ms.locfileid: "59145921"
 - <xref:System.Windows.Data.XmlDataProvider>
 - [指定繫結來源](how-to-specify-the-binding-source.md)
 - [資料繫結概觀](data-binding-overview.md)
-- [HOW TO 主題](data-binding-how-to-topics.md)
+- [HOW-TO 主題](data-binding-how-to-topics.md)
 - [WPF 資料繫結與 LINQ to XML 概觀](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)
 - [資料繫結](../advanced/optimizing-performance-data-binding.md)

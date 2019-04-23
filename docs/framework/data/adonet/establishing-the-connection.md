@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
 ms.openlocfilehash: 7f8cca02e673339e892c16e0de99e20accdfd404
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142334"
 ---
 # <a name="establishing-the-connection"></a>建立連接
@@ -144,7 +144,7 @@ nwindConn.Open();
   
 ## <a name="see-also"></a>另請參閱
 
-- [連接資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [連接字串](../../../../docs/framework/data/adonet/connection-strings.md)
 - [OLE DB、ODBC 和 Oracle 連接共用](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

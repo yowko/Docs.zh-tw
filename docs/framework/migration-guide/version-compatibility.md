@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ef9445bb56523f3ef2adf668a4a637868b5d565
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f27385fadd872d2ff6f84cabe079811142008df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558909"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143646"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework 的版本相容性
 回溯相容性表示針對特定平台版本開發的應用程式將會在該平台的較新版本上執行。 .NET Framework 嘗試最大化回溯相容性：針對某一個 .NET Framework 版本撰寫的原始程式碼應該在較新版本的 .NET Framework 上編譯，且在某一個 .NET Framework 版本上執行的二進位檔行為應該與較新版本 .NET Framework 相同。  
@@ -34,7 +34,7 @@ ms.locfileid: "54558909"
 </configuration>  
 ```  
   
- 如需詳細資訊，請參閱[＜How to：設定應用程式以支援 .NET Framework 4 或 4.x](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)。  
+ 如需詳細資訊，請參閱[如何：設定應用程式以支援 .NET Framework 4 或 4.x](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)。  
   
 ## <a name="version-compatibility-for-components"></a>元件的版本相容性  
  應用程式可以控制其執行所在的 .NET Framework 版本，但是元件則無法控制。 元件和類別庫會在特定應用程式的內容中載入，因此會自動在應用程式執行所在的 .NET Framework 版本上執行。  
@@ -66,6 +66,7 @@ ms.locfileid: "54558909"
  如果您找不到問題的適當因應措施，請記得 .NET Framework 4.5 (或其中一個點版本) 會與版本 1.1、2.0 和 3.5 並存執行，而且是取代第 4 版的就地更新。 若是以 1.1、2.0 和 3.5 版為目標的應用程式，您可以在目標電腦上安裝適當的 .NET Framework 版本，以便在最佳環境中執行應用程式。 如需並存執行的詳細資訊，請參閱[並存執行](../../../docs/framework/deployment/side-by-side-execution.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [新功能](../../../docs/framework/whats-new/index.md)
 - [類別庫中已淘汰的功能](../../../docs/framework/whats-new/whats-obsolete.md)
 - [應用程式相容性](../../../docs/framework/migration-guide/application-compatibility.md)

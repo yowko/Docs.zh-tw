@@ -6,10 +6,10 @@ helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
 ms.openlocfilehash: 529d256a553c4000c77bcd5096db1a4d943874ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141748"
 ---
 # <a name="accessibility-domain-c-reference"></a>存取範圍定義域 (C# 參考)
@@ -28,11 +28,11 @@ ms.locfileid: "59141748"
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../../../csharp/language-reference/index.md)
-- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
 - [存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)
-- [協助工具層級](../../../csharp/language-reference/keywords/accessibility-levels.md)
-- [使用協助工具層級的限制](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)
+- [存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)
+- [使用存取範圍層級的限制](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)
 - [存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
 - [public](../../../csharp/language-reference/keywords/public.md)
 - [private](../../../csharp/language-reference/keywords/private.md)

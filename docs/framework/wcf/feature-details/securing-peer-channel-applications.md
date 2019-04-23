@@ -3,14 +3,14 @@ title: 確保對等通道應用程式安全
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
 ms.openlocfilehash: a747923f81f4773eb58a4b7500cf4fc1c006f889
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146236"
 ---
 # <a name="securing-peer-channel-applications"></a>確保對等通道應用程式安全
-和 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 下的其他繫結一樣，`NetPeerTcpBinding` 預設已啟用安全性，並且會提供傳輸和訊息型安全性 (或兩者皆提供)。 這個主題會討論這兩種類型的安全性。 繫結規格中的安全性模式標記所指定的安全性類型 (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`)。  
+和 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 下的其他繫結一樣，`NetPeerTcpBinding` 預設已啟用安全性，並且會提供傳輸和訊息型安全性 (或兩者皆提供)。 這個主題會討論這兩種類型的安全性。 安全性類型則是由繫結規格中的安全性模式標記所指定 (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`)。  
   
 ## <a name="transport-based-security"></a>傳輸型安全性  
  對等通道支援兩種可用來保護傳輸的驗證認證類型，這兩種類型都需要在相關聯的 `ClientCredentialSettings.Peer` 上設定 `ChannelFactory` 屬性：  

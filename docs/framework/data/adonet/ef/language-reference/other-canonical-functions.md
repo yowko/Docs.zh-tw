@@ -3,14 +3,14 @@ title: 其他標準函式
 ms.date: 03/30/2017
 ms.assetid: 729bd47b-8e41-494c-a9a9-dcabf8b74312
 ms.openlocfilehash: 05eea547b8c1ad4adf39faa5def5f25c9d45d767
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146363"
 ---
 # <a name="other-canonical-functions"></a>其他標準函式
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 包含標準函式不會分類為位元運算、 彙總、 數學、 日期/時間或字串。  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 包括一些未分類為位元運算、彙總、數學、日期/時間或字串的標準函式。  
   
  下表所示為其他 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 標準函式。  
   

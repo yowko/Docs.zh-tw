@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
 ms.openlocfilehash: 905578454b0bc6b5e74202d15c91645fed0fd461
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143243"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>定義 Windows Form 控制項中的屬性
@@ -122,7 +122,7 @@ public int Value {
   
 ## <a name="see-also"></a>另請參閱
 
-- [Windows Form 控制項中的屬性](properties-in-windows-forms-controls.md)
+- [Windows Forms 控制項中的屬性](properties-in-windows-forms-controls.md)
 - [使用 ShouldSerialize 和 Reset 方法定義預設值](defining-default-values-with-the-shouldserialize-and-reset-methods.md)
 - [屬性變更事件](property-changed-events.md)
-- [Windows Form 控制項中的屬性](attributes-in-windows-forms-controls.md)
+- [Windows Forms 控制項中的屬性](attributes-in-windows-forms-controls.md)

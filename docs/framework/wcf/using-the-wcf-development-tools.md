@@ -3,10 +3,10 @@ title: 使用 WCF 開發工具
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
 ms.openlocfilehash: 1ffa3be4a6b8976ab978ea995e8b2c1faaacf0ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144634"
 ---
 # <a name="using-the-wcf-development-tools"></a>使用 WCF 開發工具
@@ -27,7 +27,7 @@ ms.locfileid: "59144634"
   
  WCF 測試用戶端 (WcfTestClient.exe) 是一種 GUI 工具，可讓您輸入任意型別的參數，將該服務，以及檢視服務的回應傳回輸入送出。 它提供了完善的服務測試經驗與 WCF 服務自動主機結合時。  
   
- [從 XML 產生資料型別類型](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
+ [從 XML 產生資料類型類別](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
   
  儲存在剪貼簿中的 XML 資料可以貼到程式碼頁面上。 在資料中定義的類別將會轉換為程式碼型別。  
   
