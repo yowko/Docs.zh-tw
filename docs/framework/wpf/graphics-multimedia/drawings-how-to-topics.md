@@ -12,22 +12,22 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
 ms.openlocfilehash: 6be388292ce2c73b9ef555ea6b00c986c99dc11a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197733"
 ---
 # <a name="drawings-how-to-topics"></a>繪圖 HOW TO 主題
 在本節中的主題描述如何使用<xref:System.Windows.Media.Drawing>來繪製圖形、 影像或文字的物件。  
   
 ## <a name="in-this-section"></a>本節內容  
- [對繪圖套用 GuidelineSet](how-to-apply-a-guidelineset-to-a-drawing.md)  
-  [建立複合繪圖](how-to-create-a-composite-drawing.md)  
+ [對圖形套用 GuidelineSet](how-to-apply-a-guidelineset-to-a-drawing.md)  
+  [建立複合圖形](how-to-create-a-composite-drawing.md)  
   [建立 GeometryDrawing](how-to-create-a-geometrydrawing.md)  
   [使用 ImageDrawing 繪製影像](how-to-draw-an-image-using-imagedrawing.md)  
   [使用 VideoDrawing 播放媒體](how-to-play-media-using-a-videodrawing.md)  
-  [使用繪圖作為影像來源](how-to-use-a-drawing-as-an-image-source.md)  
+  [將圖形當做影像來源使用](how-to-use-a-drawing-as-an-image-source.md)  
   
 ## <a name="see-also"></a>另請參閱
 

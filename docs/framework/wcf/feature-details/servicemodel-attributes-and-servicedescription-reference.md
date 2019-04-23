@@ -3,10 +3,10 @@ title: ServiceModel 屬性與 ServiceDescription 參考
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
 ms.openlocfilehash: 022731d7d6e60d36c5f4a595edc90aaff0586a79
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195341"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel 屬性與 ServiceDescription 參考
@@ -31,9 +31,9 @@ ms.locfileid: "59195341"
   
 |ServiceContractAttribute 屬性|受影響的描述樹狀目錄值|  
 |---------------------------------------|-------------------------------------|  
-|CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A><xref:System.ServiceModel.Description.MessageDescription>加入至所有操作<xref:System.ServiceModel.Description.OperationDescription.Messages%2A>。|  
+|CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>，<xref:System.ServiceModel.Description.MessageDescription> 加入至所有操作 <xref:System.ServiceModel.Description.OperationDescription.Messages%2A> 中。|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> 與可能是子系保護層級。 如需有關保護層級階層的詳細資訊，請參閱[了解保護層級](../../../../docs/framework/wcf/understanding-protection-level.md)。|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> 與可能的子系保護層級。 如需有關保護層級階層的詳細資訊，請參閱[了解保護層級](../../../../docs/framework/wcf/understanding-protection-level.md)。|  
 |SessionMode|<xref:System.ServiceModel.Description.ContractDescription.SessionMode%2A>|  
   
 |ServiceKnownTypesAttribute 值|受影響的描述樹狀目錄值|  
@@ -42,18 +42,18 @@ ms.locfileid: "59195341"
   
 |OperationContractAttribute 值|受影響的描述樹狀目錄值|  
 |--------------------------------------|-------------------------------------|  
-|動作|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> 輸出訊息或輸入的訊息，視合約/回呼合約。|  
-|AsyncPattern|如果為 true，<xref:System.ServiceModel.Description.OperationDescription.BeginMethod%2A>和 <xref:System.ServiceModel.Description.OperationDescription.EndMethod%2A>|  
-|IsOneWay|對應至單一<xref:System.ServiceModel.Description.MessageDescription>中 <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>|  
+|動作|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> 用於輸出訊息或輸入訊息，視合約/回呼合約而定。|  
+|AsyncPattern|如果為 true，則為 <xref:System.ServiceModel.Description.OperationDescription.BeginMethod%2A> 和 <xref:System.ServiceModel.Description.OperationDescription.EndMethod%2A>|  
+|IsOneWay|對應至 <xref:System.ServiceModel.Description.MessageDescription> 中的單一 <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>。|  
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
 |名稱|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> 與可能是子系保護層級。 如需有關保護層級階層的詳細資訊，請參閱[了解保護層級](../../../../docs/framework/wcf/understanding-protection-level.md)。|  
-|ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> 輸出訊息或輸入的訊息，視合約/回呼合約。|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> 與可能的子系保護層級。 如需有關保護層級階層的詳細資訊，請參閱[了解保護層級](../../../../docs/framework/wcf/understanding-protection-level.md)。|  
+|ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> 用於輸出訊息或輸入訊息，視合約/回呼合約而定。|  
   
 |FaultContractAttribute 值|受影響的描述樹狀目錄值|  
 |----------------------------------|-------------------------------------|  
-|動作|<xref:System.ServiceModel.Description.FaultDescription.Action%2A> 視合約/回呼合約。|  
+|動作|<xref:System.ServiceModel.Description.FaultDescription.Action%2A>，視合約/回呼合約而定。|  
 |DetailType|<xref:System.ServiceModel.Description.FaultDescription.DetailType%2A>|  
 |名稱|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
 |命名空間|<xref:System.ServiceModel.Description.FaultDescription.Namespace%2A>|  
@@ -89,10 +89,10 @@ ms.locfileid: "59195341"
   
 |MessageBodyMemberAttribute 值|受影響的描述樹狀目錄值|  
 |--------------------------------------|-------------------------------------|  
-|名稱|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 中對應部分的 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|命名空間|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> 中對應部分的 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|順序|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> 中對應部分的 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> 中對應部分的 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|名稱|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 中的對應部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|命名空間|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> 中的對應部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|順序|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> 中的對應部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> 中的對應部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
 |MessageHeaderArrayAttribute 值|受影響的描述樹狀目錄值|  
 |---------------------------------------|-------------------------------------|  
@@ -109,7 +109,7 @@ ms.locfileid: "59195341"
   
 |MessageParameterAttribute 值|受影響的描述樹狀目錄值|  
 |-------------------------------------|-------------------------------------|  
-|名稱|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 中對應部分的 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|名稱|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 中的對應部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
  如需有關如何將描述樹狀目錄值轉換成中繼資料的詳細資訊，請參閱[ServiceDescription 與 WSDL 參考](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)。  
   

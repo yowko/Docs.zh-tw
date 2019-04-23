@@ -5,10 +5,10 @@ helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
 ms.openlocfilehash: 766e0c4d30a4fa0eed9ce154ca932f5371a43211
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196316"
 ---
 # <a name="implementing-service-contracts"></a>實作服務合約
@@ -60,6 +60,6 @@ class MathService
 ## <a name="see-also"></a>另請參閱
 
 - [設計與實作服務](../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [HOW TO：使用合約類別來建立服務](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)
-- [HOW TO：使用合約介面來建立服務](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)
+- [如何：使用合約類別，建立服務](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)
+- [如何：建立服務合約介面](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)
 - [指定服務執行階段行為](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

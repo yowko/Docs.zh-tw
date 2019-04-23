@@ -7,10 +7,10 @@ helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: fcebb938-62b9-4677-9cbe-6465bc863e22
 ms.openlocfilehash: 3ff23cbfa78b803d4526e7a7c389fd5d458a967c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195003"
 ---
 # <a name="soundplayer-class-overview"></a>SoundPlayer 類別概觀
@@ -32,7 +32,7 @@ ms.locfileid: "59195003"
 |<xref:System.Media.SoundPlayer.Play%2A> 方法|扮演指定的音效<xref:System.Media.SoundPlayer.SoundLocation%2A>或<xref:System.Media.SoundPlayer.Stream%2A>中新的執行緒屬性。|  
 |<xref:System.Media.SoundPlayer.PlaySync%2A> 方法|扮演指定的音效<xref:System.Media.SoundPlayer.SoundLocation%2A>或<xref:System.Media.SoundPlayer.Stream%2A>目前執行緒中的屬性。|  
 |<xref:System.Media.SoundPlayer.Stop%2A> 方法|停止任何目前正在播放的音效。|  
-|<xref:System.Media.SoundPlayer.LoadCompleted> Event - 事件|在嘗試載入音效之後引發。|  
+|<xref:System.Media.SoundPlayer.LoadCompleted> 事件|在嘗試載入音效之後引發。|  
   
 ## <a name="see-also"></a>另請參閱
 

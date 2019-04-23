@@ -3,10 +3,10 @@ title: <service>
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
 ms.openlocfilehash: 68bddc01b02d9885b3f0fc4c2cbc5c3249de03f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197954"
 ---
 # <a name="service"></a>\<service>
@@ -32,7 +32,7 @@ ms.locfileid: "59197954"
 |屬性|描述|  
 |---------------|-----------------|  
 |behaviorConfiguration|字串，其中包含要用於產生服務實體之行為的行為名稱。 行為名稱必須在定義服務之處的範圍內。 預設值為空字串。|  
-|名稱|必要的字串屬性，其中指定要具現化的服務型別。 這個設定必須等同於有效的型別。 格式應為 `Namespace.Class.`|  
+|名稱|必要的字串屬性，其中指定要具現化的服務型別。 這個設定必須等同於有效的型別。 格式應該為 `Namespace.Class.`。|  
   
 ### <a name="child-elements"></a>子元素  
   

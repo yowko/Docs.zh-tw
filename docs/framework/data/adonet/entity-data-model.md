@@ -3,10 +3,10 @@ title: 實體資料模型
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
 ms.openlocfilehash: 8e96890d97f652295a3fdb67c48ec37710280eec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197915"
 ---
 # <a name="entity-data-model"></a>實體資料模型
@@ -23,7 +23,7 @@ ms.locfileid: "59197915"
   
  [實體資料模型：命名空間](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
- [實體資料模型：基本資料類型](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
+ [實體資料模型：基本資料型別](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
  [實體資料模型：繼承](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "59197915"
   
  [關聯 End 多重性](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
   
- [Association Set - 關聯集](../../../../docs/framework/data/adonet/association-set.md)  
+ [關聯集](../../../../docs/framework/data/adonet/association-set.md)  
   
  [關聯集 End](../../../../docs/framework/data/adonet/association-set-end.md)  
   
@@ -39,13 +39,13 @@ ms.locfileid: "59197915"
   
  [複雜類型](../../../../docs/framework/data/adonet/complex-type.md)  
   
- [Entity Container - 實體容器](../../../../docs/framework/data/adonet/entity-container.md)  
+ [實體容器](../../../../docs/framework/data/adonet/entity-container.md)  
   
  [實體索引鍵](../../../../docs/framework/data/adonet/entity-key.md)  
   
  [實體集](../../../../docs/framework/data/adonet/entity-set.md)  
   
- [Entity Type - 實體類型](../../../../docs/framework/data/adonet/entity-type.md)  
+ [實體類型](../../../../docs/framework/data/adonet/entity-type.md)  
   
  [facet](../../../../docs/framework/data/adonet/facet.md)  
   
@@ -64,5 +64,5 @@ ms.locfileid: "59197915"
 ## <a name="see-also"></a>另請參閱
 
 - [ADO.NET 實體資料模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [.edmx 檔概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [.edmx 檔案概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [CSDL 規格](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

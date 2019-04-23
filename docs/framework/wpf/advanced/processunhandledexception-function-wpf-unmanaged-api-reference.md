@@ -9,10 +9,10 @@ api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 495ce5f6-bb4d-4b30-807a-c3c35f1ca95c
 ms.openlocfilehash: 0c8751454be6e0eed547c38e9d0bc7931abaec3d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196966"
 ---
 # <a name="processunhandledexception-function-wpf-unmanaged-api-reference"></a>ProcessUnhandledException 函式 (WPF Unmanaged API 參考)
@@ -45,4 +45,4 @@ void __stdcall ProcessUnhandledException(
   
 ## <a name="see-also"></a>另請參閱
 
-- [WPF 非受控 API 參考](wpf-unmanaged-api-reference.md)
+- [WPF Unmanaged API 參考](wpf-unmanaged-api-reference.md)

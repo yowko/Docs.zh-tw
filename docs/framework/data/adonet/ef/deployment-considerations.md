@@ -3,10 +3,10 @@ title: 部署考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
 ms.openlocfilehash: 7ab3827a9f2072f6f4b0c34f3801ee5dff2821d3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199592"
 ---
 # <a name="deployment-considerations-entity-framework"></a>部署考量 (Entity Framework)
@@ -31,4 +31,4 @@ ms.locfileid: "59199592"
 ## <a name="see-also"></a>另請參閱
 
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
-- [開發及部署考量因素](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+- [開發和部署考量](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

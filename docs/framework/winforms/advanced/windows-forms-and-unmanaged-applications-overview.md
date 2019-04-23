@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
 ms.openlocfilehash: 63631378911a9ba95713e68fb19d8d08176c7562
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195640"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Windows Form 和 Unmanaged 應用程式概觀
@@ -57,13 +57,13 @@ ms.locfileid: "59195640"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Windows Form 和 Unmanaged 應用程式](windows-forms-and-unmanaged-applications.md)
+- [Windows Forms 和 Unmanaged 應用程式](windows-forms-and-unmanaged-applications.md)
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [.NET Framework 應用程式中的 COM 互通性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [COM 互通性範例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
-- [Aximp.exe (Windows Form ActiveX 控制項匯入工具)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)
+- [Aximp.exe (Windows Forms ActiveX 控制項匯入工具)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)
 - [將 .NET Framework 元件公開給 COM](../../interop/exposing-dotnet-components-to-com.md)
 - [封裝 COM 的組件](../../interop/packaging-an-assembly-for-com.md)
 - [向 COM 註冊組件](../../interop/registering-assemblies-with-com.md)
-- [HOW TO：使用 ShowDialog 方法顯示 Windows Form 以支援 COM Interop](com-interop-by-displaying-a-windows-form-shadow.md)
-- [HOW TO：在自己的執行緒上顯示每個 Windows Form 以支援 COM Interop](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [如何：顯示 Windows Form 和 ShowDialog 方法以支援 COM Interop](com-interop-by-displaying-a-windows-form-shadow.md)
+- [如何：在它自己的執行緒上顯示每個 Windows Form 以支援 COM Interop](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

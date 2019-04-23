@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dfc94c2de1a14842cc017e5c4ef6023154c20f2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59194028"
 ---
 # <a name="idebuggerthreadcontrolstartblockingfordebugger-method"></a>IDebuggerThreadControl::StartBlockingForDebugger 方法
@@ -37,7 +37,7 @@ HRESULT StartBlockingForDebugger (
   
 ## <a name="parameters"></a>參數  
  `dwUnused`  
- [in]Reserved for future use.  
+ [in]保留供日後使用。  
   
 ## <a name="remarks"></a>備註  
  `StartBlockingForDebugger`無法在執行階段的執行緒上呼叫方法。  
@@ -49,7 +49,7 @@ HRESULT StartBlockingForDebugger (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,10 +17,10 @@ helpviewer_keywords:
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
 ms.openlocfilehash: f4a6e6c2a63e58c40e0cca9c67b12d1f65af0d2e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199423"
 ---
 # <a name="wpf-architecture"></a>WPF 架構
@@ -38,7 +38,7 @@ ms.locfileid: "59199423"
   
 <a name="System_Threading_DispatcherObject"></a>   
 ## <a name="systemthreadingdispatcherobject"></a>System.Threading.DispatcherObject  
- 中的大部分物件[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]衍生自<xref:System.Windows.Threading.DispatcherObject>，可用於處理並行和執行緒處理的基本建構。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 取決於由發送器所實作的訊息系統。 此運作方式很像熟悉的 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 訊息提取；事實上，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 發送器使用 User32 訊息來執行跨執行緒呼叫。  
+ 中的大部分物件[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]衍生自<xref:System.Windows.Threading.DispatcherObject>，可用於處理並行和執行緒處理的基本建構。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 是根據發送器所實作的訊息系統。 此運作方式很像熟悉的 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 訊息提取；事實上，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 發送器使用 User32 訊息來執行跨執行緒呼叫。  
   
  討論 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的並行時，實際上需要了解兩個核心概念：發送器和執行緒相似性。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "59199423"
   
  屬性系統也會提供屬性值的疏鬆儲存體。 因為物件可以有數十個 (甚至數百個) 屬性，所以大部分的值都處於其預設狀態 (繼承、透過樣式設定等等)，而且並非物件的每個執行個體都需要有其上定義之每個屬性的完整加權。  
   
- 屬性系統的最終新功能是附加屬性概念。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 項目為基礎的組合和元件的重複使用的原則。 它通常是後者，有些包含項目 (例如<xref:System.Windows.Controls.Grid>版面配置項目) 需要在子項目，來控制其行為 （例如資料列/資料行資訊） 上的其他資料。 允許任何物件提供所有其他物件的屬性定義，而不是建立所有這些屬性與每個項目的關聯。 這與 JavaScript 的 "expando" 功能類似。  
+ 屬性系統的最終新功能是附加屬性概念。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 項目的建置基礎是組合和元件重複使用的原則。 它通常是後者，有些包含項目 (例如<xref:System.Windows.Controls.Grid>版面配置項目) 需要在子項目，來控制其行為 （例如資料列/資料行資訊） 上的其他資料。 允許任何物件提供所有其他物件的屬性定義，而不是建立所有這些屬性與每個項目的關聯。 這與 JavaScript 的 "expando" 功能類似。  
   
 <a name="System_Windows_Media_Visual"></a>   
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
@@ -66,7 +66,7 @@ ms.locfileid: "59199423"
   
  <xref:System.Windows.Media.Visual> 其實是進入點[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]撰寫系統。 <xref:System.Windows.Media.Visual> 是的這些兩個子系統，managed 之間的連接點[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]和 unmanaged 的 milcore。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 透過周遊 milcore 所管理的 unmanaged 的資料結構顯示資料。 這些結構稱為組合節點，代表具有每個節點之轉譯指示的階層式顯示樹狀結構。 下圖右側所說明的這個樹狀結構只能透過訊息通訊協定進行存取。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 透過周遊 milcore 所管理的 Unmanaged 資料結構來顯示資料。 這些結構稱為組合節點，代表具有每個節點之轉譯指示的階層式顯示樹狀結構。 下圖右側所說明的這個樹狀結構只能透過訊息通訊協定進行存取。  
   
  當程式設計[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，您建立<xref:System.Windows.Media.Visual>項目，並在內部與複合樹狀結構，透過此傳訊通訊協定進行通訊的衍生型別。 每個<xref:System.Windows.Media.Visual>在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]可能會建立一個、 none、 或數個組合節點。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "59199423"
   
  在 User32 和 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 中，系統會在即時模式裁剪系統上運作。 需要轉譯元件時，系統會建立不允許元件接觸像素的外部裁剪界限，接著要求元件在該方塊中繪製像素。 此系統非常適合在記憶體受限系統中運作，因為內容變更時，您只需要接觸受影響元件；沒有兩個元件會形成單一像素的色彩。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用 「 繪製器的演算法 」 繪製模型。 這表示，會要求每個元件從後到前轉譯顯示，而不是裁剪每個元件。 這可在前一個元件的顯示上方繪製每個元件。 此模型的優點在於您可以有複雜且部分透明的圖形。 此模型運用現今的現代圖形硬體，因此相當快速 (建立 User32/[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 時則否)。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用「繪製器的演算法」繪製模型。 這表示，會要求每個元件從後到前轉譯顯示，而不是裁剪每個元件。 這可在前一個元件的顯示上方繪製每個元件。 此模型的優點在於您可以有複雜且部分透明的圖形。 此模型運用現今的現代圖形硬體，因此相當快速 (建立 User32/[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 時則否)。  
   
  如前所述，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的核心原理是移至更具宣告性且「以屬性為主」的程式設計模型。 在視覺物件系統中，這出現在幾個有趣的地方。  
   
@@ -90,13 +90,13 @@ ms.locfileid: "59199423"
 ## <a name="systemwindowsuielement"></a>System.Windows.UIElement  
  <xref:System.Windows.UIElement> 定義核心子系統，包括版面配置、 Input 和 Events。  
   
- 版面配置是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的核心概念。 在許多系統中，會有固定一組版面配置模型 (HTML 支援三種版面配置模型：非固定、絕對和資料表) 或沒有版面配置模型 (User32 實際上只支援絕對定位)。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 開始使用開發人員和設計人員想要具彈性且可擴充的版面配置模型，其無法由屬性值，而非命令式邏輯驅動的假設。 在<xref:System.Windows.UIElement>導入的層級，版面配置的基本合約是 – 的兩階段模型<xref:System.Windows.UIElement.Measure%2A>和<xref:System.Windows.UIElement.Arrange%2A>傳遞。  
+ 版面配置是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的核心概念。 在許多系統中，會有固定一組版面配置模型 (HTML 支援三種版面配置模型：非固定、絕對和資料表) 或沒有版面配置模型 (User32 實際上只支援絕對定位)。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 一開始的假設是開發人員和設計人員想要具彈性且可擴充的版面配置模型，而此模型可透過屬性值驅動，而非命令式邏輯。 在<xref:System.Windows.UIElement>導入的層級，版面配置的基本合約是 – 的兩階段模型<xref:System.Windows.UIElement.Measure%2A>和<xref:System.Windows.UIElement.Arrange%2A>傳遞。  
   
  <xref:System.Windows.UIElement.Measure%2A> 可讓元件決定它想要採取的大小。 這是從不同的階段<xref:System.Windows.UIElement.Arrange%2A>因為有許多情況下，父項目會在其中詢問子系測量數次，以決定其最理想的位置和大小。 父項目要求子項目進行測量的事實示範 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的另一個重要原理：內容大小。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的所有控制項都支援調整成其內容原本大小的能力。 這會讓當地語系化更為簡單，並在調整事物時允許動態配置項目。 <xref:System.Windows.UIElement.Arrange%2A>階段可讓父代定位和決定每個子系的最終大小。  
   
  很多時間通常會花談論的輸出端[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]–<xref:System.Windows.Media.Visual>和相關物件。 不過，輸入端上也會進行極大的創新。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 輸入模型的最基本變更可能是一致模型，而使用此模型，即可透過系統來路由傳送輸入事件。  
   
- 輸入來源是核心模式裝置驅動程式上的訊號，並且透過包含 Windows 核心和 User32 的複雜處理序路由傳送至正確的處理序和執行緒。 對應至輸入的 User32 訊息在路由傳送至 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 之後，會轉換為 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 未經處理的輸入訊息，並傳送至發送器。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 用來轉換成多個實際的事件，讓您在具有保證傳遞系統的低層級實作"MouseEnter"等功能的未經處理輸入事件。  
+ 輸入來源是核心模式裝置驅動程式上的訊號，並且透過包含 Windows 核心和 User32 的複雜處理序路由傳送至正確的處理序和執行緒。 對應至輸入的 User32 訊息在路由傳送至 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 之後，會轉換為 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 未經處理的輸入訊息，並傳送至發送器。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 允許將未經處理的輸入事件轉換為多個實際事件，方法是在具有保證傳遞之系統的低層級實作 "MouseEnter" 這類功能。  
   
  每個輸入事件都會轉換成至少兩個事件：「預覽」事件和實際事件。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的所有事件都有透過項目樹狀結構進行路由傳送的概念。 事件則稱為 「 事件反昇 」，如果使用者從樹狀結構的目標周遊至根目錄，並會說 「 通道 」，如果它們在根目錄中啟動，並周遊到目標。 輸入預覽事件通道，讓樹狀結構中的任何項目有機會進行篩選或對事件採取動作。 一般 (非預覽) 事件接著會從目標往上反昇到根。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "59199423"
   
  兩個最重要的事項，<xref:System.Windows.FrameworkElement>導入了資料繫結和樣式。  
   
- 使用 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 或 [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)] 來建立應用程式 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 的使用者，應該相當熟悉[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的資料繫結子系統。 在所有這些系統中，有一種簡單的方式可表示您想要一或多個屬性從指定的項目繫結至資料的某個部分。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 具有完整支援屬性繫結、 轉換和清單繫結。  
+ 使用 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 或 [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)] 來建立應用程式 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 的使用者，應該相當熟悉[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的資料繫結子系統。 在所有這些系統中，有一種簡單的方式可表示您想要一或多個屬性從指定的項目繫結至資料的某個部分。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 完整支援屬性繫結、轉換和清單繫結。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中資料繫結的其中一個最有趣功能是引進資料範本。 資料範本可讓您以宣告方式指定應該如何視覺化資料。 您可以解決問題，並讓資料判斷將建立的顯示，而不是建立可繫結至資料的自訂使用者介面。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "59199423"
   
 <a name="Summary"></a>   
 ## <a name="summary"></a>總結  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 可讓您建立動態、 資料驅動的呈現系統。 系統的每個組件都是設計成透過可驅動行為的屬性集來建立物件。 資料繫結是系統的基礎部分，並且在各層級進行整合。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 設計成讓您建立動態資料驅動的呈現系統。 系統的每個組件都是設計成透過可驅動行為的屬性集來建立物件。 資料繫結是系統的基礎部分，並且在各層級進行整合。  
   
  傳統應用程式會建立顯示，然後繫結至一些資料。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中，會由某種類型的資料繫結產生控制項的所有相關項目，即顯示的每個層面。 在按鈕內建立組合的控制項，並將其顯示繫結至按鈕的內容屬性，即會顯示在按鈕內找到的文字。  
   
@@ -150,5 +150,5 @@ ms.locfileid: "59199423"
 - <xref:System.Windows.Input.CommandBinding>
 - <xref:System.Windows.Controls.Control>
 - [資料繫結概觀](../data/data-binding-overview.md)
-- [配置](layout.md)
+- [版面配置](layout.md)
 - [動畫概觀](../graphics-multimedia/animation-overview.md)

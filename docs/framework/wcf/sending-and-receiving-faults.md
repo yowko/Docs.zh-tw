@@ -8,10 +8,10 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195055"
 ---
 # <a name="sending-and-receiving-faults"></a>傳送和接收錯誤
@@ -51,15 +51,15 @@ SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案
   
 -   <xref:System.ServiceModel.CommunicationException>  
   
- <xref:System.TimeoutException> 當作業超出指定的逾時期限，則會擲回物件。  
+ 當作業超出指定的逾時期間，就會擲回 <xref:System.TimeoutException> 物件。  
   
- <xref:System.ServiceModel.CommunicationException> 某些服務或用戶端上的可修復的通訊錯誤狀況時，會擲回物件。  
+ 當服務或用戶端上出現一些可修復的通訊錯誤情況，就會擲回 <xref:System.ServiceModel.CommunicationException> 物件。  
   
  <xref:System.ServiceModel.CommunicationException> 類別包含兩個重要的衍生型別，分別是 <xref:System.ServiceModel.FaultException> 和泛型 <xref:System.ServiceModel.FaultException%601> 型別。  
   
- <xref:System.ServiceModel.FaultException> 接聽項收到未預期或作業合約中指定的錯誤時，會擲回例外狀況通常發生這種情況時進行偵錯應用程式和服務<xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>屬性設定為`true`。  
+ 當接聽項收到未預期的或於作業合約中指定的錯誤，就會擲回 <xref:System.ServiceModel.FaultException> 例外狀況；當針對應用程式進行偵錯，且服務的 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 屬性設為 `true` 時，就很容易發生這個情況。  
   
- <xref:System.ServiceModel.FaultException%601> 會擲回例外狀況的用戶端上收到作業合約中指定的錯誤以回應雙向作業時 (也就是具有的方法<xref:System.ServiceModel.OperationContractAttribute>屬性搭配<xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>設定為`false`)。  
+ 收到作業合約中指定的錯誤時，用戶端會擲回 <xref:System.ServiceModel.FaultException%601> 例外狀況，以回應雙向作業 (也就是具有 <xref:System.ServiceModel.OperationContractAttribute> 屬性，且將 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 設為 `false` 的方法)。  
   
 > [!NOTE]
 >  當 WCF 服務有<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>或是<xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>屬性設定為`true`用戶端會把這種未宣告<xref:System.ServiceModel.FaultException%601>型別的<xref:System.ServiceModel.ExceptionDetail>。 用戶端可以捕捉此特定錯誤，或是在 <xref:System.ServiceModel.FaultException> 的 catch 區塊中處理此錯誤。  

@@ -3,22 +3,22 @@ title: 適用於 Entity Framework 的 SqlClient
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
 ms.openlocfilehash: d81499961e7e47bba3b2594ddddd192c87a4a936
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195458"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>適用於 Entity Framework 的 SqlClient
 本節將描述可讓 Entity Framework 透過 Microsoft SQL Server 運作的 .NET Framework Data Provider for SQL Server (SqlClient)。  
   
 ## <a name="provider-schema-attribute"></a>Provider 結構描述屬性  
- `Provider` 屬性`Schema`存放結構定義語言 (SSDL) 中的項目。  
+ 在存放結構定義語言 (SSDL) 中，`Provider` 是 `Schema` 項目的屬性。  
   
  若要使用 SqlClient，請將字串 "System.Data.SqlClient" 指派給 `Provider` 項目的 `Schema` 屬性。  
   
 ## <a name="providermanifesttoken-schema-attribute"></a>ProviderManifestToken 結構描述屬性  
- `ProviderManifestToken` 是的必要的屬性`Schema`SSDL 中的項目。 這個語彙基元 (Token) 是用來載入提供者資訊清單以供離線案例使用。 如需詳細資訊`ProviderManifestToken`屬性，請參閱[結構描述項目 (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl)。  
+ 在 SSDL 中，`ProviderManifestToken` 是 `Schema` 項目的必要屬性。 這個語彙基元 (Token) 是用來載入提供者資訊清單以供離線案例使用。 如需詳細資訊`ProviderManifestToken`屬性，請參閱[結構描述項目 (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl)。  
   
  SqlClient 可以作為不同版本的 SQL Server 的資料提供者。 這些版本具有不同的功能。 例如，[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] 不支援 `varchar(max)` 所導入的 `nvarchar(max)` 和 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 型別。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "59195458"
 ## <a name="in-this-section"></a>本節內容  
  [適用於 Entity Framework 的 SqlClient 函式](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)  
   
- [適用於 Entity Framework 之 SqlClient 的類型](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)  
+ [適用於 Entity Framework 的 SqlClient 類型](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)  
   
  [適用於 Entity Framework 的 SqlClient 已知問題](../../../../../docs/framework/data/adonet/ef/known-issues-in-sqlclient-for-entity-framework.md)  
   
