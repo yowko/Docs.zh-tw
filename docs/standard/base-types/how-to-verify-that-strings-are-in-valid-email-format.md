@@ -1,5 +1,5 @@
 ---
-title: 作法：確認字串是否為有效的電子郵件格式
+title: HOW TO：確認字串是否為有效的電子郵件格式
 ms.date: 12/10/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -21,13 +21,13 @@ ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 78210f9f007060551130812fcb5a9cd5b4728adc
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58890497"
 ---
-# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>作法：確認字串是否為有效的電子郵件格式
+# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>HOW TO：確認字串是否為有效的電子郵件格式
 下列範例會使用規則運算式來確認字串是否為有效的電子郵件格式。  
 
 ## <a name="example"></a>範例  
@@ -59,7 +59,7 @@ ms.locfileid: "58890497"
 |`(?("")("".+?(?<!\\)""@)`|如果第一個字元是引號，則比對是否為開頭引號後面至少接著一個任何字元，然後再接著結尾引號。 結尾引號前面絕不能是反斜線字元 (\\) 。 `(?<!` 是零寬度左不合樣 (Negative Lookbehind) 判斷提示的開頭。 此字串應該以 @ 記號做為結束。|  
 |<code>&#124;(([0-9a-z]</code>|如果第一個字元不是引號，則比對 a 到 z 或 A 到 Z 的任何字母字元 (此比較不區分大小寫) 或 0 到 9 的任何數字字元。|  
 |`(\.(?!\.))`|如果下一個字元是句號，則相符。 如果不是句號，則向右合樣下一個字元並繼續比對。 `(?!\.)` 是零寬度的右不合樣 (Negative Lookahead) 判斷提示，可防止電子郵件地址的本機部分出現兩個連續的句號。|  
-|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>如果下一個字元不是句號，則比對任何文字字元或下列其中一個字元：-!#$%'*+=?^\`{}&#124;~。|  
+|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>|如果下一個字元不是句號，則比對任何文字字元或下列其中一個字元：-!#$%'*+=?^\`{}&#124;~。|  
 |<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}&#124;~\w])*</code>|比對交替模式 (句號後面接著非句號，或某個字元) 零次以上。|  
 |`@`|比對 @ 字元。|  
 |`(?<=[0-9a-z])`|如果位於 @ 字元前面的字元是 A 到 Z、a 到 z 或 0 到 9，則繼續比對。 `(?<=[0-9a-z])` 建構可定義零寬度的左合樣 (Positive Lookbehind) 判斷提示。|  
