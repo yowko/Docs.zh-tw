@@ -3,10 +3,10 @@ title: 自訂編碼器
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
 ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190570"
 ---
 # <a name="custom-encoders"></a>自訂編碼器
@@ -30,11 +30,11 @@ ms.locfileid: "59190570"
   
  WCF 會提供下列類型的繫結項目衍生自<xref:System.ServiceModel.Channels.MessageEncodingBindingElement>可以提供文字、 二進位和訊息傳輸最佳化機制 (MTOM) 編碼的類別：  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>:最互通性最佳、 但效率最差的 XML 訊息編碼器。 Web 服務或 Web 服務用戶端通常可以瞭解文字 XML。 不過，將大型二進位資料區塊當做文字來傳輸是沒有效率的。  
+-   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>：最互通性最佳、 但效率最差的 XML 訊息編碼器。 Web 服務或 Web 服務用戶端通常可以瞭解文字 XML。 不過，將大型二進位資料區塊當做文字來傳輸是沒有效率的。  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>:表示指定的字元編碼繫結項目和版本設定用於二進位 XML 訊息的訊息。 這是最有效率的編碼方式的選項，但至少互通的因為它只支援由 WCF 端點。  
+-   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>：表示指定的字元編碼繫結項目和版本設定用於二進位 XML 訊息的訊息。 這是最有效率的編碼方式的選項，但至少互通的因為它只支援由 WCF 端點。  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>:表示繫結項目，指定的字元編碼和訊息版本處理，用於使用訊息傳輸最佳化機制 (MTOM) 編碼的訊息。 MTOM 是在 WCF 訊息中傳輸二進位資料的有效技術。 MTOM 編碼器會嘗試在效率和互通性之間保持平衡。 MTOM 編碼方式會以文字格式傳輸大部分的 XML，但是在傳輸大型區塊的二進位資料時，會依照原狀來傳送 (不轉換成文字)，好讓這些資料最佳化。  
+-   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>：表示繫結項目，指定的字元編碼和訊息版本處理，用於使用訊息傳輸最佳化機制 (MTOM) 編碼的訊息。 MTOM 是在 WCF 訊息中傳輸二進位資料的有效技術。 MTOM 編碼器會嘗試在效率和互通性之間保持平衡。 MTOM 編碼方式會以文字格式傳輸大部分的 XML，但是在傳輸大型區塊的二進位資料時，會依照原狀來傳送 (不轉換成文字)，好讓這些資料最佳化。  
   
  繫結項目會建立二進位、MTOM 或文字的 <xref:System.ServiceModel.Channels.MessageEncoderFactory>。 處理站會建立二進位、MTOM 或文字的 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 執行個體。 一般而言，只會有一個執行個體。 不過，如果是使用工作階段，就可以提供不同的編碼器給每個工作階段。 二進位編碼器會利用這種方式來協調動態字典 (請參閱＜XML 基礎結構＞)。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "59190570"
 ### <a name="pooling"></a>Pooling  
  每個編碼器實作都會盡可能嘗試集中共用。 減少配置是改善 Managed 程式碼效能的主要方法。 為了達成這種共用，這些實作會使用 `SynchronizedPool` 類別。 C# 檔案包含這個類別使用的其他最佳化方法的描述。  
   
- <xref:System.Xml.XmlDictionaryReader> 和<xref:System.Xml.XmlDictionaryWriter>會共用並重新初始化，以避免配置新的每個訊息執行個體。 對於讀取器，會在呼叫 `OnClose` 時由 `Close()` 回呼取回讀取器。 編碼器也會回收建構訊息時使用的某些訊息狀態物件。 您可以在三個衍生自 `MaxReadPoolSize` 的每一個類別上，透過其 `MaxWritePoolSize` 和 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 屬性來設定這些集區的大小。  
+ 為了避免替每一個訊息配置新的 <xref:System.Xml.XmlDictionaryReader> 和 <xref:System.Xml.XmlDictionaryWriter> 執行個體，編碼器會共用並重新初始化這些執行個體。 對於讀取器，會在呼叫 `OnClose` 時由 `Close()` 回呼取回讀取器。 編碼器也會回收建構訊息時使用的某些訊息狀態物件。 您可以在三個衍生自 `MaxReadPoolSize` 的每一個類別上，透過其 `MaxWritePoolSize` 和 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 屬性來設定這些集區的大小。  
   
 ### <a name="binary-encoding"></a>二進位編碼方式  
  當二進位編碼使用工作階段時，必須將動態字典字串傳達至訊息的接收者。 做法是在訊息前面加上動態字典字串。 接收者會剝取這些字串，然後將它們加入至工作階段，再處理訊息。 為了正確傳遞字典字串，傳輸需要獲得緩衝。  
@@ -79,9 +79,9 @@ ms.locfileid: "59190570"
   
 -   在這個類別中，您必須加以覆寫的主要方法如下：  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> 這個方法會接受<xref:System.ServiceModel.Channels.MessageEncodingBindingElement>物件，並將它寫入至<xref:System.IO.Stream>物件。  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A>，這個方法會接受 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 物件，並將它寫入至 <xref:System.IO.Stream> 物件。  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> 這個方法會接受<xref:System.IO.Stream>物件和標頭大小上限，然後傳回<xref:System.ServiceModel.Channels.Message>物件。  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A>，這個方法會接受 <xref:System.IO.Stream> 物件和最大標頭大小，然後傳回 <xref:System.ServiceModel.Channels.Message> 物件。  
   
  在處理標準傳輸通訊協定與自訂編碼之間轉換的這些方法中，它就是您要撰寫的程式碼。  
   

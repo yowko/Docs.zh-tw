@@ -6,10 +6,10 @@ helpviewer_keywords:
 - binding to LINQ query results [WPF]
 ms.assetid: ff2844d9-17ed-4ea6-aab1-5111af0bc684
 ms.openlocfilehash: 5464ee9c59a7c99a83774a7535b9b3c422c1d2e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59185896"
 ---
 # <a name="how-to-bind-to-the-results-of-a-linq-query"></a>HOW TO：繫結至 LINQ 查詢的結果
@@ -26,12 +26,12 @@ ms.locfileid: "59185896"
 [!code-csharp[LinqExample#Tasks](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#tasks)]  
 [!code-csharp[LinqExample#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#handler)]  
   
- 第二個清單方塊繫結到該集合，因為其<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>值設定為`{Binding}`。 如此一來，它會顯示傳回的集合 (根據`myTaskTemplate`<xref:System.Windows.DataTemplate>)。  
+ 第二個清單方塊繫結到該集合，因為其<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>值設定為`{Binding}`。 如此一來，它會顯示傳回的集合 (根據`myTaskTemplate` <xref:System.Windows.DataTemplate>)。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [讓資料可於 XAML 中繫結](how-to-make-data-available-for-binding-in-xaml.md)
 - [繫結至集合並根據選取項目顯示資訊](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
-- [WPF 4.5 版的新功能](../getting-started/whats-new.md)
+- [WPF 第 4.5 版的新功能](../getting-started/whats-new.md)
 - [資料繫結概觀](data-binding-overview.md)
-- [HOW TO 主題](data-binding-how-to-topics.md)
+- [HOW-TO 主題](data-binding-how-to-topics.md)

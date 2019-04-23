@@ -3,10 +3,10 @@ title: 管理資料服務內容 (WCF Data Services)
 ms.date: 03/30/2017
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
 ms.openlocfilehash: 33e7ce17eea5d534b941d778fd13144ad51b4094
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184739"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>管理資料服務內容 (WCF Data Services)
@@ -20,7 +20,7 @@ ms.locfileid: "59184739"
 ## <a name="managing-concurrency"></a>管理並行存取  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支援可讓資料服務偵測更新衝突的開放式並行存取。 可以透過一種方式來設定資料服務提供者，讓資料服務使用並行語彙基元來檢查實體的變更。 這個語彙基元包含實體類型的一個或多個屬性，資料服務會驗證這些屬性以判斷資源是否已變更。 並行語彙基元，包含要求及從資料服務回應的 eTag 標頭，則會為您管理[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端。 如需詳細資訊，請參閱 <<c0> [ 更新資料服務](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  
   
- <xref:System.Data.Services.Client.DataServiceContext> 會追蹤使用 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>、<xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 或是 <xref:System.Data.Services.Client.DataServiceCollection%601> 所手動提報的物件變更。 當呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法時，用戶端會將變更傳回資料服務。 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 當用戶端的資料變更與資料服務中的變更衝突時，可能會失敗。 當發生這個狀況時，您必須再次查詢實體資源，以接收更新資料。 若要覆寫資料服務中的變更，請使用 <xref:System.Data.Services.Client.MergeOption.PreserveChanges> 合併選項執行查詢。 當您再次呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 時，用戶端所保留的變更會保存到資料服務，前提是尚未針對資料服務中的資源進行其他變更。  
+ <xref:System.Data.Services.Client.DataServiceContext> 會追蹤使用 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>、<xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 或是 <xref:System.Data.Services.Client.DataServiceCollection%601> 所手動提報的物件變更。 當呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法時，用戶端會將變更傳回資料服務。 當用戶端的資料變更與資料服務的變更衝突時，<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 會失敗。 當發生這個狀況時，您必須再次查詢實體資源，以接收更新資料。 若要覆寫資料服務中的變更，請使用 <xref:System.Data.Services.Client.MergeOption.PreserveChanges> 合併選項執行查詢。 當您再次呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 時，用戶端所保留的變更會保存到資料服務，前提是尚未針對資料服務中的資源進行其他變更。  
   
 ## <a name="saving-changes"></a>儲存變更  
  變更會在 <xref:System.Data.Services.Client.DataServiceContext> 執行個體中追蹤，但是不會立即傳送至伺服器。 在針對指定的活動完成所需的變更之後，請呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>，將所有變更提交至資料服務。 <xref:System.Data.Services.Client.DataServiceResponse> 作業完成後，會傳回 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 物件。 <xref:System.Data.Services.Client.DataServiceResponse> 物件包含一連串的 <xref:System.Data.Services.Client.OperationResponse> 物件，其中依序包含一連串的 <xref:System.Data.Services.Client.EntityDescriptor> 或 <xref:System.Data.Services.Client.LinkDescriptor> 執行個體，表示持續性或嘗試性的變更。 在資料服務中建立或修改實體時，<xref:System.Data.Services.Client.EntityDescriptor> 會包括已更新實體的參考，其中包含任何伺服器產生的屬性值，例如以上範例中產生的 `ProductID` 值。 用戶端程式庫會自動更新 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件以便擁有這些新值。  
@@ -38,7 +38,7 @@ ms.locfileid: "59184739"
   
 ## <a name="see-also"></a>另請參閱
 
-- [WCF 資料服務用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [更新資料服務](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)
 - [非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)
 - [批次處理作業](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
 ms.openlocfilehash: 89c9397ba579f04d81eee7af6363f8fee3abfe1d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191272"
 ---
 # <a name="obtaining-ui-automation-elements"></a>取得 UI 自動化項目
@@ -34,9 +34,9 @@ ms.locfileid: "59191272"
 ## <a name="conditions"></a>Conditions  
  對於可用來擷取 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目的大部分技術，您都必須指定 <xref:System.Windows.Automation.Condition>，這是一組準則，定義您想要擷取哪些項目。  
   
- 最簡單的條件是 <xref:System.Windows.Automation.Condition.TrueCondition>，是一種預先定義的物件，會指定要傳回之搜尋範圍內的所有項目。 <xref:System.Windows.Automation.Condition.FalseCondition>反向<xref:System.Windows.Automation.Condition.TrueCondition>，不是很有用，因為它會防止找出的任何項目。  
+ 最簡單的條件是 <xref:System.Windows.Automation.Condition.TrueCondition>，是一種預先定義的物件，會指定要傳回之搜尋範圍內的所有項目。 <xref:System.Windows.Automation.Condition.FalseCondition>，也就是 <xref:System.Windows.Automation.Condition.TrueCondition>的反向，並不是很有用，原因在於它可能會讓任何項目都無法被找到。  
   
- 有三個預先定義的條件可單獨使用，或與其他條件組合使用： <xref:System.Windows.Automation.Automation.ContentViewCondition>、 <xref:System.Windows.Automation.Automation.ControlViewCondition>和 <xref:System.Windows.Automation.Automation.RawViewCondition>。 <xref:System.Windows.Automation.Automation.RawViewCondition>單獨使用，就相當於<xref:System.Windows.Automation.Condition.TrueCondition>，因為它不會篩選項目及其<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A>或<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A>屬性。  
+ 有三個預先定義的條件可單獨使用，或與其他條件組合使用： <xref:System.Windows.Automation.Automation.ContentViewCondition>、 <xref:System.Windows.Automation.Automation.ControlViewCondition>和 <xref:System.Windows.Automation.Automation.RawViewCondition>。 <xref:System.Windows.Automation.Automation.RawViewCondition>供本身使用，相當於 <xref:System.Windows.Automation.Condition.TrueCondition>，原因在於它不會依其 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> 或 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> 屬性篩選項目。  
   
  其他條件可從一個以上的 <xref:System.Windows.Automation.PropertyCondition> 物件建置，其中每個物件都會指定屬性值。 例如， <xref:System.Windows.Automation.PropertyCondition> 可能指定該項目是否已啟用，或者它是否支援特定的控制項模式。  
   
@@ -99,5 +99,5 @@ ms.locfileid: "59191272"
 ## <a name="see-also"></a>另請參閱
 
 - [根據屬性條件尋找 UI 自動化項目](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
-- [使用 TreeWalker 巡覽 UI 自動化項目](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
+- [使用 TreeWalker 導覽 UI 自動化項目](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
 - [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

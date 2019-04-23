@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: 90fd7332242ed58d7716e248248e2c06a6ba023f
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 8570692c02855cda7a1990f10ef97590449baccd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185736"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184661"
 ---
 # <a name="asynchronous-programming"></a>非同步程式設計
 
@@ -64,7 +64,6 @@ private DamageResult CalculateDamageDone()
     // Does an expensive calculation and returns
     // the result of that calculation.
 }
-
 
 calculateButton.Clicked += async (o, e) =>
 {
@@ -219,7 +218,7 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 
 雖然非同步程式設計相當簡單，但是需要牢記一些詳細資料，以避免非預期的行為。
 
-* `async` **方法需要其主體中有** `await` **關鍵字，或永遠不會產生它們！**
+* `async` **方法需要其主體中有**`await` **關鍵字，否則它們將永遠不會產生！**
 
 這是需要記住的重要事項。  如果 `await` 未用於 `async` 方法的主體中，C# 編譯器將會產生警告，但程式碼的編譯和執行就像一般方法一樣。  請注意，因為 C# 編譯器針對非同步方法所產生的狀態機器不會完成任何作業，所以這也非常沒有效率。
 
@@ -229,11 +228,11 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 
 * `async void` **應該只用於事件處理常式。**
 
-因為事件沒有傳回型別 (因此無法利用 `Task` 和 `Task<T>`)，所以 `async void` 是允許非同步事件處理常式運作的唯一方式。 `async void` 的任何其他使用都未遵循 TAP 模型，而且不容易使用，例如：
+`async void` 是允許非同步事件處理常式運作的唯一方式，因為事件沒有傳回類型 (因此無法利用 `Task` 和 `Task<T>`)。 `async void` 的任何其他使用都未遵循 TAP 模型，而且不容易使用，例如：
 
 * `async void` 方法中所擲回的例外狀況無法在該方法外部進行攔截。
 * `async void` 方法很難進行測試。
-* 如果呼叫端未預期 `async void` 方法非同步執行，則這些方法可能會造成不好的副作用。
+* `async void` 方法在呼叫端未預期它們為非同步的情況下，可能會造成不好的副作用。
 
 * **在 LINQ 運算式中使用非同步 Lambda 時，請小心處理**
 

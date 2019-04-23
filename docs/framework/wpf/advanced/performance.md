@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WPF [WPF], performance
 ms.assetid: c649a20f-8b7e-4a38-9b80-74839298d406
 ms.openlocfilehash: 268bb396564db983c293ab1d718171e963ab7aaa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188483"
 ---
 # <a name="performance"></a>效能
@@ -19,7 +19,7 @@ ms.locfileid: "59188483"
 ## <a name="in-this-section"></a>本節內容  
  [圖形轉譯層](graphics-rendering-tiers.md)  
  [最佳化 WPF 應用程式效能](optimizing-wpf-application-performance.md)  
- [逐步解說：在 WPF 應用程式中快取應用程式資料](walkthrough-caching-application-data-in-a-wpf-application.md)  
+ [逐步解說：快取中的 WPF 應用程式的應用程式資料](walkthrough-caching-application-data-in-a-wpf-application.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Media.RenderCapability>  
@@ -30,5 +30,5 @@ ms.locfileid: "59188483"
   
 ## <a name="see-also"></a>另請參閱
 
-- [配置](layout.md)
-- [動畫秘訣和訣竅](../graphics-multimedia/animation-tips-and-tricks.md)
+- [版面配置](layout.md)
+- [動畫祕訣和訣竅](../graphics-multimedia/animation-tips-and-tricks.md)

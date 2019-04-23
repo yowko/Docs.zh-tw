@@ -10,10 +10,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
 ms.openlocfilehash: a0b77a7356b09a5cc95ec165a62c45852f542b8a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59187418"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>HOW TO：凍結 Windows Forms DataGridView 控制項的資料行
@@ -46,5 +46,5 @@ ms.locfileid: "59187418"
 
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView>
-- [Windows Form DataGridView 控制項中的基本資料行、資料列和儲存格功能](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [HOW TO：重新調整 Windows Forms DataGridView 控制項的資料行順序](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 控制項中的基本資料行、資料列和儲存格功能](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [如何：啟用 Windows Form DataGridView 控制項中的資料行重新調整順序](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)

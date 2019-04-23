@@ -3,10 +3,10 @@ title: 重新執行攻擊
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
 ms.openlocfilehash: fefcb533cedb5405736ecda70c6879ebe00b8b49
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186754"
 ---
 # <a name="replay-attacks"></a>重新執行攻擊
@@ -39,8 +39,8 @@ A*重新執行攻擊*攻擊者複製兩方之間的訊息資料流，並重新�
 ## <a name="see-also"></a>另請參閱
 
 - [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [資訊洩露](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [權限提高](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [阻斷服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [阻絕服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [竄改](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

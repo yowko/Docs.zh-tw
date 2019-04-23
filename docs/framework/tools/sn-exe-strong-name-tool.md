@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bdb51d38109cf4c072a9841983e86a444e964b0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 24a8c7ce090b286db9d86e0fc6c54ae33e7e2d5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492630"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191883"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (強式名稱工具)
 強式名稱工具 (Sn.exe) 可幫助您使用[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)簽署組件。 Sn.exe 提供了金鑰管理、簽章產生和簽章驗證的選項。  
@@ -27,7 +27,7 @@ ms.locfileid: "57492630"
 
  如需強式命名和強式名稱組件的詳細資訊，請參閱[強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)和[如何：使用強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。  
   
- 強式名稱工具會隨 Visual Studio 自動安裝。 若要啟動此工具，請使用開發人員命令提示字元 (或 Windows 7 中的 Visual Studio 命令提示字元)。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 強式名稱工具會隨 Visual Studio 自動安裝。 若要啟動這項工具，請使用開發人員命令提示字元 (或 Windows 7 中的 Visual Studio 命令提示字元)。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
 
 > [!NOTE]
 >  在 64 位元電腦上，請使用 Visual Studio 開發人員命令提示字元執行 Sn.exe 的 32 位元版本，且使用 Visual Studio x64 Win64 命令提示字元執行 64 位元版本。 
@@ -125,6 +125,7 @@ sn -d MyContainer
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [工具](../../../docs/framework/tools/index.md)
 - [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)

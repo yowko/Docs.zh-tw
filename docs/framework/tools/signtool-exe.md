@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6fddc6142341630e96088323d0c23a2eba1e879
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 14207dcefe053e596052c9b94078333c1c714641
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479151"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185571"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (簽署工具)
-簽署工具是一個命令列工具，會以數位方式簽署檔案、驗證檔案中的簽章以及為檔案加上時間戳記。  
+簽署工具是一項命令列工具，會以數位方式簽署檔案、驗證檔案中的簽章以及為檔案加上時間戳記。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
@@ -70,7 +70,7 @@ signtool [command] [options] [file_name | ...]
 |Sign 命令選項|說明|  
 |-------------------------|-----------------|  
 |`/a`|自動選取最佳的簽署憑證。 簽署工具會找到滿足所有指定條件的所有有效憑證，並且選取有效時間最長的一個。 如果沒有這個選項，簽署工具只需要找出一個有效的簽署憑證。|  
-|`/ac`  *file*|從 *file* 將其他憑證加入至簽章區塊。|  
+|`/ac`  *檔案*|從 *file* 將其他憑證加入至簽章區塊。|  
 |`/as`|附加這個簽章。 如果主要簽章不存在，則會設定這個簽章做為主要簽章。|  
 |`/c`  *CertTemplateName*|指定適用於簽署憑證的「憑證範本名稱」(Certificate Template Name)，這是一個 Microsoft 擴充功能。|  
 |`/csp`  *CSPName*|指定包含私密金鑰容器的密碼編譯服務提供者 (Cryptographic Service Provider，CSP)。|  
@@ -82,9 +82,9 @@ signtool [command] [options] [file_name | ...]
 |`/kc`  *PrivKeyContainerName*|指定私密金鑰容器名稱。|  
 |`/n`  *SubjectName*|指定簽署憑證的主體名稱。 這個值可以是完整主體名稱的子字串。|  
 |`/nph`|如果支援，則隱藏可執行檔的頁面雜湊。 預設取決於 SIGNTOOL_PAGE_HASHES 環境變數和 wintrust.dll 版本。 若為非 PE 檔案，則會忽略這個選項。|  
-|`/p`  *Password*|指定用來開啟 PFX 檔案的密碼  (使用 `/f` 選項指定 PFX 檔)。|  
-|`/p7` *Path*|指定為每個指定內容檔產生公開金鑰加密標準 (PKCS) #7 檔案。 PKCS #7 檔案會命名為*路徑*\\*檔案名稱*.p7。|  
-|`/p7ce` *Value*|指定已簽署的 PKCS #7 內容的選項。 將 *Value* 設定為 "Embedded" 會將簽署內容內嵌在 PKCS #7 檔案中，設定為 "DetachedSignedData" 會產生已中斷連結的 PKCS #7 檔案的簽署資料部分。 如果未使用 `/p7ce` 選項，則預設會內嵌簽署的內容。|  
+|`/p`  *密碼*|指定用來開啟 PFX 檔案的密碼  (使用 `/f` 選項指定 PFX 檔)。|  
+|`/p7` *路徑*|指定為每個指定內容檔產生公開金鑰加密標準 (PKCS) #7 檔案。 PKCS #7 檔案會命名為*路徑*\\*檔案名稱*.p7。|  
+|`/p7ce` *值*|指定已簽署的 PKCS #7 內容的選項。 將 *Value* 設定為 "Embedded" 會將簽署內容內嵌在 PKCS #7 檔案中，設定為 "DetachedSignedData" 會產生已中斷連結的 PKCS #7 檔案的簽署資料部分。 如果未使用 `/p7ce` 選項，則預設會內嵌簽署的內容。|  
 |`/p7co` *\<OID>*|指定識別已簽署 PKCS #7 內容的物件識別項 (OID)。|  
 |`/ph`|如果支援，則產生可執行檔的頁面雜湊。|  
 |`/r`  *RootSubjectName*|指定簽署憑證必須鏈結之根憑證的主體名稱。 這個值可以是完整根憑證主體名稱的子字串。|  
@@ -94,7 +94,7 @@ signtool [command] [options] [file_name | ...]
 |`/t`  *URL*|指定時間戳記伺服器的 URL。 如果沒有這個選項 (或 `/tr`)，簽署的檔案就不會加上時間戳記。 如果加上時間戳記失敗，便會產生警告。 這個選項無法與 `/tr` 選項搭配使用。|  
 |`/td`  *alg*|與 `/tr` 選項一起使用以要求 RFC 3161 時間戳記伺服器使用的摘要演算法。|  
 |`/tr`  *URL*|指定 RFC 3161 時間戳記伺服器的 URL。 如果沒有這個選項 (或 `/t`)，簽署的檔案就不會加上時間戳記。 如果加上時間戳記失敗，便會產生警告。 這個選項無法與 `/t` 選項搭配使用。|  
-|`/u`  *Usage*|指定在簽署憑證時必須存在的增強金鑰使用方法 (Enhanced Key Usage，EKU)。 使用方法的值可以利用 OID 或字串指定。 預設的使用方法為 "Code Signing" (1.3.6.1.5.5.7.3.3)。|  
+|`/u`  *使用量*|指定在簽署憑證時必須存在的增強金鑰使用方法 (Enhanced Key Usage，EKU)。 使用方法的值可以利用 OID 或字串指定。 預設的使用方法為 "Code Signing" (1.3.6.1.5.5.7.3.3)。|  
 |`/uw`|指定「Windows 系統元件驗證」(1.3.6.1.4.1.311.10.3.6) 的使用方式。|  
   
  如需使用方式範例，請參閱[使用 SignTool 簽署檔案](/windows/desktop/SecCrypto/using-signtool-to-sign-a-file)。  
@@ -108,7 +108,7 @@ signtool [command] [options] [file_name | ...]
 |`/p7`|為 PKCS #7 檔案加上時間戳記。|  
 |`/t`  *URL*|指定時間戳記伺服器的 URL。 要加上時間戳記的檔案必須先經過簽署。 必須有 `/t` 或 `/tr` 任一選項。|  
 |`/td`  *alg*|要求 RFC 3161 時間戳記伺服器使用的摘要演算法。 `/td` 可搭配 `/tr` 選項使用。|  
-|`/tp` *index*|在 *index* 的簽章加上時間戳記。|  
+|`/tp` *索引*|在 *index* 的簽章加上時間戳記。|  
 |`/tr`  *URL*|指定 RFC 3161 時間戳記伺服器的 URL。 要加上時間戳記的檔案必須先經過簽署。 必須有 `/tr` 或 `/t` 任一選項。|  
   
  如需使用範例，請參閱[新增時間戳記至先前已簽署的檔案](/windows/desktop/SecCrypto/adding-time-stamps-to-previously-signed-files)。  
@@ -125,11 +125,11 @@ signtool [command] [options] [file_name | ...]
 |`/as`|使用系統元件 (驅動程式) 目錄資料庫尋找目錄。|  
 |`/c` *CatFile*|依名稱指定目錄檔。|  
 |`/d`|指定簽署工具應列印描述及描述 URL。|  
-|`/ds`  *Index*|驗證位於指定位置的簽章。|  
+|`/ds`  *索引*|驗證位於指定位置的簽章。|  
 |`/hash` (`SHA1`&#124;`SHA256`)|指定在目錄中搜尋檔案時，要使用的選擇性雜湊演算法。|  
 |`/kp`|指定應以核心模式驅動程式簽署原則執行驗證。|  
 |`/ms`|使用多個驗證語意。 在 [!INCLUDE[win8](../../../includes/win8-md.md)] 及以上版本上，這是 [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) 呼叫的預設行為。|  
-|`/o` *Version*|根據作業系統版本驗證檔案。 *Version* 的形式如下：*PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*。 *PlatformID* 代表 <xref:System.PlatformID> 列舉成員的基礎值。 **重要：** 建議使用 `/o` 參數。 如果未指定 `/o`，SignTool.exe 可能會傳回未預期的結果。 例如，如果您未包含 `/o` 參數，在舊版作業系統上正確驗證的系統目錄，可能無法在較新版作業系統正確驗證。|  
+|`/o` *版本*|根據作業系統版本驗證檔案。 *Version* 的形式如下：*PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*。 *PlatformID* 代表 <xref:System.PlatformID> 列舉成員的基礎值。 **重要：** 建議使用 `/o` 參數。 如果未指定 `/o`，SignTool.exe 可能會傳回未預期的結果。 例如，如果您未包含 `/o` 參數，在舊版作業系統上正確驗證的系統目錄，可能無法在較新版作業系統正確驗證。|  
 |`/p7`|驗證 PKCS #7 檔案。 PKCS #7 驗證沒有使用任何現有的原則。 檢查簽章，並建置簽署憑證鏈結。|  
 |`/pa`|指定使用預設 Authenticode 驗證原則。 如果未指定 `/pa` 選項，簽署工具便會使用「Windows 驅動程式驗證原則」(Windows Driver Verification Policy)。 這個選項無法與 `catdb` 選項搭配使用。|  
 |`/pg` *PolicyGUID*|依 GUID 指定驗證原則。 *PolicyGUID* 會對應至驗證原則的 ActionID。 這個選項無法與 `catdb` 選項搭配使用。|  
@@ -210,5 +210,6 @@ signtool verify /c MyCatalog.cat SystemFile.dll
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [工具](../../../docs/framework/tools/index.md)
 - [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

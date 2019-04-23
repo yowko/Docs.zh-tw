@@ -3,10 +3,10 @@ title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
 ms.openlocfilehash: 7221f19dd131dbd60ef1a61625633d54dfdbe85a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191740"
 ---
 # <a name="webmessageencoding"></a>\<webMessageEncoding>
@@ -58,7 +58,7 @@ ms.locfileid: "59191740"
   
  此繫結項目可藉由 `writeEncoding` 屬性，透過寫入字元編碼的方式進行設定。 提供的 <xref:System.Text.Encoding> 值會指定 JSON 和 Textual XML 案例在寫入時的行為。 在讀取時，任何有效的訊息編碼和文字編碼都是可解讀的。  
   
- `maxReadPoolSize` 和`maxWritePoolSize`也可用來設定讀取器和寫入分別配置的最大數目。 根據預設，將配置 64 個讀取器和 16 個寫入器。  
+ `maxReadPoolSize` 和 `maxWritePoolSize` 也可以用來設定要分別配置之讀取器和寫入器的最大數目。 根據預設，將配置 64 個讀取器和 16 個寫入器。  
   
  預設複雜度條件約束也會設定使用[ \<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))項目，以防止阻絕服務 (DOS) 類別攻擊試圖使用訊息複雜性困住端點處理資源。  
   

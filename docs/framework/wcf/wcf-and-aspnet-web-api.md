@@ -3,10 +3,10 @@ title: WCF 和 ASP.NET Web 應用程式開發介面
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
 ms.openlocfilehash: d805c09bef45932ba006a213343429ae7c9303df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192000"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF 和 ASP.NET Web 應用程式開發介面
@@ -28,5 +28,5 @@ WCF 是 Microsoft 的統一程式設計模型，用於建置服務導向的應�
   
 ## <a name="see-also"></a>另請參閱
 
-- [何謂 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
-- [Windows Communication Foundation 的主要概念](../../../docs/framework/wcf/fundamental-concepts.md)
+- [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Windows Communication Foundation 的基本概念](../../../docs/framework/wcf/fundamental-concepts.md)

@@ -3,10 +3,10 @@ title: ADO.NET 資料集
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
 ms.openlocfilehash: 50e8e8f5e4b3ee2f5a41cb9dad11b5e701135d9e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190934"
 ---
 # <a name="adonet-datasets"></a>ADO.NET 資料集
@@ -41,7 +41,7 @@ DataSet 物件模型
  **資料集**， **DataTable**，並**DataColumn**都**ExtendedProperties**屬性。 **ExtendedProperties**已**PropertyCollection**您可以在其中放置自訂資訊，例如 SELECT 陳述式，用來產生結果集或產生資料時的時間。 **ExtendedProperties**集合永續存在的結構描述資訊**DataSet**。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 提供 language integrated query 功能的中斷連接的資料儲存在資料集中。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 使用標準[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]語法，並使用 Visual Studio IDE 時提供編譯時間語法檢查、 靜態型別和 IntelliSense 支援。  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 可為儲存在 DataSet 的中斷連接資料提供 Language-integrated Query (LINQ) 功能。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 使用標準[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]語法，並使用 Visual Studio IDE 時提供編譯時間語法檢查、 靜態型別和 IntelliSense 支援。  
   
  如需詳細資訊，請參閱 [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
   
@@ -49,5 +49,5 @@ DataSet 物件模型
 
 - [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [DataSet、DataTable 和 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [在 ADO.NET 中傳送和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

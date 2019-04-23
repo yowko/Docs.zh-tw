@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6c327aad129f685e44f7b456e4ceef8f99fe12b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6d07fe8ec61ee4515696eb3cf3d808483b50dfb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712596"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186559"
 ---
 # <a name="setting-assembly-attributes"></a>設定組件屬性
 組件屬性是提供組件相關資訊的值。 屬性可分成下列幾組資訊：  
@@ -87,5 +87,6 @@ ms.locfileid: "54712596"
  [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [建立組件](../../../docs/framework/app-domains/create-assemblies.md)
 - [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)

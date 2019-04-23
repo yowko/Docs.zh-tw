@@ -10,23 +10,23 @@ helpviewer_keywords:
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
 ms.openlocfilehash: ae780da7d6c6d45cb791333e5f0edcf0690f297b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183738"
 ---
 # <a name="ui-automation-events-overview"></a>UI 自動化事件概觀
 > [!NOTE]
 >  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 事件通知是輔助技術，例如螢幕助讀程式和螢幕放大鏡的重要功能。 這些 UI 自動化用戶端會追蹤 UI 自動化提供者在 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 發生情況時所引發的事件，並使用此資訊來通知使用者。  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 事件通知是輔助技術的重要功能，例如螢幕助讀程式和螢幕放大鏡。 這些 UI 自動化用戶端會追蹤 UI 自動化提供者在 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 發生情況時所引發的事件，並使用此資訊來通知使用者。  
   
  藉由允許提供者應用程式選擇性地引發事件來改善效率，取決於是否有用戶端訂閱那些事件或完全沒有，前提是沒有用戶端正在接聽任何事件。  
   
 <a name="Types_of_Events"></a>   
 ## <a name="types-of-events"></a>事件類型  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件可分為下列類別。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件可分類如下。  
   
 |Event - 事件|描述|  
 |-----------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "59183738"
   
  即使 UI 的狀態未變更，也可能引發下列事件。  
   
--   `AutomationPropertyChangedEvent` （取決於已變更的屬性）  
+-   `AutomationPropertyChangedEvent` (取決於已變更的屬性)  
   
 -   `ElementSelectedEvent`  
   
@@ -49,7 +49,7 @@ ms.locfileid: "59183738"
   
 <a name="UI_Automation_Event_Identifiers"></a>   
 ## <a name="ui-automation-event-identifiers"></a>UI 自動化事件識別碼  
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 事件由識別<xref:System.Windows.Automation.AutomationEvent>物件。  <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> 屬性包含專門識別事件類型的值。  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 事件是由 <xref:System.Windows.Automation.AutomationEvent> 物件識別。  <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> 屬性包含專門識別事件類型的值。  
   
  下表提供 <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> 的可能值，以及用於事件引數的類型。 請注意，用戶端和提供者所使用的識別項是來自不同類別的同名欄位。  
   

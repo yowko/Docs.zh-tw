@@ -10,10 +10,10 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182295"
 ---
 # <a name="lazy-initialization"></a>延遲初始設定
@@ -23,7 +23,7 @@ ms.locfileid: "59182295"
   
 -   當建立某個物件會耗費大量資源，而您想要延遲到完成其他耗費資源的作業後，再建立它。 例如，假設當程式啟動時會載入數個物件執行個體，但只有部分是立即需要的。 您可以延遲到必要的物件皆已建立後，再對不需要的物件進行初始設定，以改善程式的啟動效能。  
   
- 雖然您可以自行撰寫程式碼執行延遲初始設定，但仍建議您改用 <xref:System.Lazy%601>。 <xref:System.Lazy%601> 和其相關的類型也支援安全執行緒，以及提供一致的例外狀況傳播原則。  
+ 雖然您可以自行撰寫程式碼執行延遲初始設定，但仍建議您改用 <xref:System.Lazy%601>。 <xref:System.Lazy%601> 及其相關類型也支援安全執行緒，並提供一致的例外狀況傳播原則。  
   
  下表列出 .NET Framework 第 4 版提供的類型，以在不同案例中啟用延遲初始化。  
   
@@ -102,8 +102,8 @@ ms.locfileid: "59182295"
 |-----------------|------------------------|--------------------------------|---------------------------|  
 |Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|否|否|  
 |Lazy(T)(Func(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|是|是|  
-|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或`false`(<xref:System.Threading.LazyThreadSafetyMode.None>)|否|否|  
-|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或`false`(<xref:System.Threading.LazyThreadSafetyMode.None>)|是|是|  
+|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或 `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|否|否|  
+|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或 `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|是|是|  
 |Lazy(T)(LazyThreadSafetyMode)|使用者指定的|否|否|  
 |Lazy(T)(Func(T), LazyThreadSafetyMode)|使用者指定的|是|如果使用者指定了 <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly> 則為否；否則為是。|  
   
@@ -126,7 +126,7 @@ ms.locfileid: "59182295"
  [!code-csharp[Lazy#7](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#7)]
  [!code-vb[Lazy#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#7)]  
   
- <xref:System.Threading.ThreadLocal%601> 在相同的方式為包裝其物件<xref:System.Lazy%601>，具有以下基本差異：  
+ <xref:System.Threading.ThreadLocal%601> 包裝其物件的方法，和 <xref:System.Lazy%601> 極其相似，但有以下基本差異：  
   
 -   每個執行緒都是使用不能從其他執行緒存取的專用私用資料，來初始化執行緒區域變數。  
   
@@ -157,4 +157,4 @@ ms.locfileid: "59182295"
 - [Managed 執行緒處理的基本概念](../../../docs/standard/threading/managed-threading-basics.md)
 - [執行緒和執行緒處理](../../../docs/standard/threading/threads-and-threading.md)
 - [工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [HOW TO：執行物件的延遲初始設定](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [如何：執行延遲初始化的物件](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

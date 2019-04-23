@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control types, Hyperlink
 ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
 ms.openlocfilehash: e239919426297d879a9ac90928481b554157e7e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186273"
 ---
 # <a name="ui-automation-support-for-the-hyperlink-control-type"></a>Hyperlink 控制項類型的 UI 自動化支援
@@ -57,13 +57,13 @@ ms.locfileid: "59186273"
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|是|所有超連結控制項必須支援叫用模式。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|視情況而定|當連結包含對使用者來說可以使用、且有意義的資訊時，超連結控制項應支援值控制項模式。|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|例如，套用至物件的 `"https://www...."`|例如，網際網路或內部網路位址的 URL 就是包含對使用者來說有意義之資訊的超連結。 不過，程式設計連結只對應用程式有意義，不建議用於 Value 屬性。|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|例如： `"https://www...."` |例如，網際網路或內部網路位址的 URL 就是包含對使用者來說有意義之資訊的超連結。 不過，程式設計連結只對應用程式有意義，不建議用於 Value 屬性。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件  
  下表列出所有超連結控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Event - 事件|支援|注意|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|注意|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|必要項|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要|None|  

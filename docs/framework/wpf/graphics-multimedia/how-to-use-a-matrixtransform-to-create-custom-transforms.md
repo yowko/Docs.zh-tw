@@ -5,10 +5,10 @@ helpviewer_keywords:
 - graphics [WPF], custom Transforms
 ms.assetid: 919381ca-989f-47cf-86b4-1094060236e4
 ms.openlocfilehash: aeccb961db539d4cc6dea75fb487fba06e59d6de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182308"
 ---
 # <a name="how-to-use-a-matrixtransform-to-create-custom-transforms"></a>HOW TO：使用 MatrixTransform 建立自訂轉換
@@ -25,5 +25,5 @@ ms.locfileid: "59182308"
 - <xref:System.Windows.Media.MatrixTransform>
 - <xref:System.Windows.Media.Transform>
 - [轉換概觀](transforms-overview.md)
-- [HOW TO 主題](transformations-how-to-topics.md)
+- [HOW-TO 主題](transformations-how-to-topics.md)
 - [WPF 中圖案和基本繪圖概觀](shapes-and-basic-drawing-in-wpf-overview.md)

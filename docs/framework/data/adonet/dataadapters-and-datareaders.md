@@ -3,10 +3,10 @@ title: DataAdapter 和 DataReader
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
 ms.openlocfilehash: af1d44b1e320557ab7906ce65dbeb5415b5c09dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189678"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapter 和 DataReader
@@ -20,13 +20,13 @@ ms.locfileid: "59189678"
  [使用 DataReader 擷取資料](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
  說明 ADO.NET **DataReader**物件，以及如何使用它來從資料來源傳回結果資料流。  
   
- [從 DataAdapter 填入資料集](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
+ [從 DataAdapter 填入 DataSet](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  說明如何使用 `DataSet` 來以資料表、資料行及資料列填入 `DataAdapter`。  
   
- [DataAdapter 的參數](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
+ [DataAdapter 參數](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  說明如何搭配使用參數與 `DataAdapter` 的命令屬性，包括如何將 `DataSet` 中資料行的內容對應至命令參數。  
   
- [將現有條件約束加入至資料集](../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
+ [將現有條件約束新增至 DataSet](../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
  說明如何將現有條件約束加入 `DataSet`。  
   
  [DataAdapter DataTable 和 DataColumn 對應](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)  
@@ -38,7 +38,7 @@ ms.locfileid: "59189678"
  [使用 DataAdapter 更新資料來源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  說明如何使用 `DataAdapter`，將 `DataSet` 中的變更解析回資料庫。  
   
- [處理 DataAdapter 的事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
+ [處理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
  說明 `DataAdapter` 事件以及如何使用它們。  
   
  [使用 DataAdapter 執行批次作業](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
@@ -46,8 +46,8 @@ ms.locfileid: "59189678"
   
 ## <a name="see-also"></a>另請參閱
 
-- [連接資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [命令和參數](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [異動和並行存取](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [DataSet、DataTable 和 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

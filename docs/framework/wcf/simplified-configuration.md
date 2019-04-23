@@ -3,14 +3,14 @@ title: 簡化的組態
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
 ms.openlocfilehash: 13cf8bd46ef3aabb011cb2ddd207963235468662
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184050"
 ---
 # <a name="simplified-configuration"></a>簡化的組態
-設定 Windows Communication Foundation (WCF) 服務可能是複雜的工作。 這項工作不但包含許多不同的選項，而且判斷需要哪些設定往往絕非易事。 雖然組態檔能夠增加的 WCF 服務的彈性，但是也會造成許多不易發現的問題。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 解決這些問題，並提供減少的大小和複雜度的服務組態的方法。  
+設定 Windows Communication Foundation (WCF) 服務可能是複雜的工作。 這項工作不但包含許多不同的選項，而且判斷需要哪些設定往往絕非易事。 雖然組態檔能夠增加的 WCF 服務的彈性，但是也會造成許多不易發現的問題。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 能夠解決這些問題，並且提供可讓使用者降低服務組態大小與複雜度的方式。  
   
 ## <a name="simplified-configuration"></a>簡化的組態  
  在 WCF 服務組態檔中，<`system.serviceModel`> 區段包含 <`service`> 裝載每個服務的項目。 <`service`> 元素包含的集合 <`endpoint`> 項目會指定每個服務，並選擇性地一組服務行為所公開的端點。 <`endpoint`> 項目會指定位址、 繫結和合約公開端點，以及選擇性的繫結組態和端點行為。 <`system.serviceModel`> 區段還包含 <`behaviors`> 可讓您指定服務或端點行為的項目。 下列範例顯示 <`system.serviceModel`> 組態檔區段。  
@@ -115,7 +115,7 @@ ms.locfileid: "59184050"
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用組態檔設定服務](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
+- [使用設定檔設定服務](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
 - [設定服務的繫結](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
 - [設定系統提供的繫結](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [設定服務](../../../docs/framework/wcf/configuring-services.md)

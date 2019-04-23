@@ -1,5 +1,5 @@
 ---
-title: 作法：建置多檔案組件
+title: HOW TO：建置多檔案組件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -20,13 +20,13 @@ ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bcc451903f7fbf7f82e2ed64834d26e605a0c069
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59187794"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>作法：建置多檔案組件
+# <a name="how-to-build-a-multifile-assembly"></a>HOW TO：建置多檔案組件
 本文說明如何建立多檔案組件，並提供說明程序中每個步驟的程式碼。
 
 > [!NOTE]
@@ -100,6 +100,6 @@ ms.locfileid: "59187794"
 ## <a name="see-also"></a>另請參閱
 
 - [建立組件](../../../docs/framework/app-domains/create-assemblies.md)
-- [作法：檢視組件內容](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)
+- [如何：檢視組件內容](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)
 - [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [多檔案組件](../../../docs/framework/app-domains/multifile-assemblies.md)

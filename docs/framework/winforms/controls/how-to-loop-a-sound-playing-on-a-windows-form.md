@@ -11,10 +11,10 @@ helpviewer_keywords:
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
 ms.openlocfilehash: a74acbbbcb5646a35de54a6000a0feae30f145a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188509"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>HOW TO：循環播放 Windows Forms 的音效
@@ -56,5 +56,5 @@ ms.locfileid: "59188509"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Media.SoundPlayer.PlayLooping%2A>
-- [HOW TO：播放 Windows Forms 的音效](how-to-play-a-sound-from-a-windows-form.md)
+- [如何：從 Windows Form 播放的音效](how-to-play-a-sound-from-a-windows-form.md)
 - [SoundPlayer 類別概觀](soundplayer-class-overview.md)

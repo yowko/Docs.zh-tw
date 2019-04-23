@@ -12,10 +12,10 @@ ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fdf840035150f08c894c984213af9a0abe6e95af
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192051"
 ---
 # <a name="developmentmode-element"></a>\<developmentMode > 項目
@@ -45,7 +45,7 @@ ms.locfileid: "59192051"
 |值|描述|  
 |-----------|-----------------|  
 |**true**|DEVPATH 環境變數所指定的目錄中的組件的搜尋。|  
-|**False**|不會搜尋 DEVPATH 環境變數所指定的目錄中的組件。 這是預設值|  
+|**false**|不會搜尋 DEVPATH 環境變數所指定的目錄中的組件。 這是預設值|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -75,4 +75,4 @@ ms.locfileid: "59192051"
 
 - [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [HOW TO：使用 DEVPATH 找出組件](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)
+- [如何：使用 DEVPATH 找出組件](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)

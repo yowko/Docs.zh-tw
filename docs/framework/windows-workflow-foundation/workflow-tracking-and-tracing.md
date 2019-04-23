@@ -5,10 +5,10 @@ helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
 ms.openlocfilehash: dbc5c0b51024c7b88b8c6cd9a052addd74e6f7e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191025"
 ---
 # <a name="workflow-tracking-and-tracing"></a>工作流程追蹤與追查
@@ -22,11 +22,11 @@ Windows 工作流程追蹤是專為提供工作流程可見性而設計的 [!INC
   
  若要了解程式設計的模型，本主題已針對追蹤基礎結構的主要元件進行討論：  
   
--   <xref:System.Activities.Tracking.TrackingRecord> 從工作流程執行階段發出的物件。 如需詳細資訊，請參閱 <<c0> [ 追蹤記錄](tracking-records.md)。  
+-   從工作流程執行階段發出的 <xref:System.Activities.Tracking.TrackingRecord> 物件。 如需詳細資訊，請參閱 <<c0> [ 追蹤記錄](tracking-records.md)。  
   
--   <xref:System.Activities.Tracking.TrackingParticipant> 訂閱物件<xref:System.Activities.Tracking.TrackingRecord>物件。 追蹤參與者包含處理來自 <xref:System.Activities.Tracking.TrackingRecord> 物件之裝載的邏輯 (例如，他們可以選擇寫入檔案)。 如需詳細資訊，請參閱 <<c0> [ 追蹤參與者](tracking-participants.md)。  
+-   訂閱 <xref:System.Activities.Tracking.TrackingParticipant> 物件的 <xref:System.Activities.Tracking.TrackingRecord> 物件。 追蹤參與者包含處理來自 <xref:System.Activities.Tracking.TrackingRecord> 物件之裝載的邏輯 (例如，他們可以選擇寫入檔案)。 如需詳細資訊，請參閱 <<c0> [ 追蹤參與者](tracking-participants.md)。  
   
--   <xref:System.Activities.Tracking.TrackingProfile> 物件會篩選從工作流程執行個體發出的追蹤記錄。 如需詳細資訊，請參閱 <<c0> [ 追蹤設定檔](tracking-profiles.md)。  
+-   從工作流程執行個體發出的 <xref:System.Activities.Tracking.TrackingProfile> 物件篩選追蹤記錄。 如需詳細資訊，請參閱 <<c0> [ 追蹤設定檔](tracking-profiles.md)。  
   
 ## <a name="workflow-tracking-infrastructure"></a>工作流程追蹤基礎結構  
  工作流程追蹤基礎結構會依照發行與訂閱的範例。 工作流程執行個體是追蹤記錄的發行者，而追蹤記錄的訂閱者則是註冊為工作流程的延伸。 訂閱 <xref:System.Activities.Tracking.TrackingRecord> 物件的這些延伸稱為追蹤參與者。 追蹤參與者是可延伸點，可存取 <xref:System.Activities.Tracking.TrackingRecord> 物件，並以編寫它們的任何方式進行處理。 追蹤基礎結構可讓應用程式篩選外送的追蹤記錄，讓參與者訂閱記錄的子集。 這個篩選機制是透過追蹤設定檔來完成。  

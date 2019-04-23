@@ -3,10 +3,10 @@ title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
 ms.openlocfilehash: 4105aaba92c73206e7a162415e3bc245507f40e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191909"
 ---
 # <a name="adonet"></a>ADO.NET
@@ -34,7 +34,7 @@ ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取�
  [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
  提供 LINQ to DataSet 的相關資訊，包括程式設計範例。  
   
- [在 ADO.NET 中傳送和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  說明如何連接至資料來源以及如何使用 `Commands`、`DataReaders` 和 `DataAdapters` 來擷取及修改資料。  
   
  [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
@@ -44,10 +44,10 @@ ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取�
  說明 Oracle 的 .NET Framework 資料提供者特定的功能與行為。  
   
 ## <a name="related-sections"></a>相關章節  
- [Language Integrated Query (LINQ)C#](../../../csharp/programming-guide/concepts/linq/index.md)  
+ [Language-Integrated Query (LINQ) - C#](../../../csharp/programming-guide/concepts/linq/index.md)  
  提供 LINQ 主題連結，詳細資訊和範例使用C#。  
   
- [語言整合式的查詢 (LINQ)-Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ [Language-Integrated Query (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
  提供 LINQ 主題和範例使用 Visual Basic 的連結。  
   
  [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
@@ -56,10 +56,10 @@ ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取�
  [.NET Framework 開發指南](../../development-guide.md)  
  提供 .NET Framework 中標準開發工作之相關資訊的連結。  
   
- [範例和教學課程](../../../samples-and-tutorials/index.md)  
+ [範例與教學課程](../../../samples-and-tutorials/index.md)  
  提供.NET 範例和教學課程的清單。
   
 ## <a name="see-also"></a>另請參閱
 
-- [在 Visual Studio 中存取資料](/visualstudio/data-tools/accessing-data-in-visual-studio)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [存取 Visual Studio 中的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

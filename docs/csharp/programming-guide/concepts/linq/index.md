@@ -3,10 +3,10 @@ title: Language-Integrated Query (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
 ms.openlocfilehash: c7dbe1bdef85de6028d37f8005dc5edea6c07925
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186624"
 ---
 # <a name="language-integrated-query-linq"></a>Language Integrated Query (LINQ)
@@ -35,7 +35,7 @@ Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# �
   
 -   某些查詢作業 (例如 <xref:System.Linq.Enumerable.Count%2A> 或 <xref:System.Linq.Enumerable.Max%2A>) 沒有同等的查詢運算式子句，因此必須以方法呼叫來表示。 方法語法能以數種方式來與查詢語法結合。 如需詳細資訊，請參閱 [LINQ 中的查詢語法和方法語法](query-syntax-and-method-syntax-in-linq.md)。  
   
--   根據查詢所套用的型別，可將查詢運算式編譯為運算式樹狀結構或委派。 <xref:System.Collections.Generic.IEnumerable%601> 查詢會編譯成委派。 <xref:System.Linq.IQueryable> <xref:System.Linq.IQueryable%601> 查詢會編譯成運算式樹狀架構。 如需詳細資訊，請參閱[運算式樹狀結構](../../../expression-trees.md)。  
+-   根據查詢所套用的型別，可將查詢運算式編譯為運算式樹狀結構或委派。 <xref:System.Collections.Generic.IEnumerable%601> 查詢會編譯成委派。 <xref:System.Linq.IQueryable> 和 <xref:System.Linq.IQueryable%601> 查詢會編譯成運算式樹狀架構。 如需詳細資訊，請參閱[運算式樹狀結構](../../../expression-trees.md)。  
 
 ## <a name="next-steps"></a>後續步驟
 
