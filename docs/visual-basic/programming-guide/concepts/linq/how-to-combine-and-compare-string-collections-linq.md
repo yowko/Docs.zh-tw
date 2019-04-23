@@ -3,18 +3,18 @@ title: HOW TO：合併和比較字串集合 (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
 ms.openlocfilehash: a0083c49c344a45a977793254d8062f2a6aa155a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341266"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="ca2d6-102">HOW TO：合併和比較字串集合 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ca2d6-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="ca2d6-103">本例示範如何合併包含文字行的檔案，然後排序結果。</span><span class="sxs-lookup"><span data-stu-id="ca2d6-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="ca2d6-104">具體來說，它會示範如何在兩組文字行上執行簡單的串連、等位和交集。</span><span class="sxs-lookup"><span data-stu-id="ca2d6-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="becea-102">HOW TO：合併和比較字串集合 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="becea-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="becea-103">本例示範如何合併包含文字行的檔案，然後排序結果。</span><span class="sxs-lookup"><span data-stu-id="becea-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="becea-104">具體來說，它會示範如何在兩組文字行上執行簡單的串連、等位和交集。</span><span class="sxs-lookup"><span data-stu-id="becea-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  
   
-### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="ca2d6-105">設定專案和文字檔案</span><span class="sxs-lookup"><span data-stu-id="ca2d6-105">To set up the project and the text files</span></span>  
+### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="becea-105">設定專案和文字檔案</span><span class="sxs-lookup"><span data-stu-id="becea-105">To set up the project and the text files</span></span>  
   
-1. <span data-ttu-id="ca2d6-106">將下列名稱複製到名為 names1.txt 的文字檔，並將它儲至專案資料夾：</span><span class="sxs-lookup"><span data-stu-id="ca2d6-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
+1. <span data-ttu-id="becea-106">將下列名稱複製到名為 names1.txt 的文字檔，並將它儲至專案資料夾：</span><span class="sxs-lookup"><span data-stu-id="becea-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ ms.locfileid: "59341266"
     Garcia, Debra  
     ```  
   
-2. <span data-ttu-id="ca2d6-107">將下列名稱複製到名為 names2.txt 的文字檔，並將它儲至專案資料夾。</span><span class="sxs-lookup"><span data-stu-id="ca2d6-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="ca2d6-108">請注意兩個檔案有部分名稱相同。</span><span class="sxs-lookup"><span data-stu-id="ca2d6-108">Note that the two files have some names in common.</span></span>  
+2. <span data-ttu-id="becea-107">將下列名稱複製到名為 names2.txt 的文字檔，並將它儲至專案資料夾。</span><span class="sxs-lookup"><span data-stu-id="becea-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="becea-108">請注意兩個檔案有部分名稱相同。</span><span class="sxs-lookup"><span data-stu-id="becea-108">Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -44,7 +44,7 @@ ms.locfileid: "59341266"
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a><span data-ttu-id="ca2d6-109">範例</span><span class="sxs-lookup"><span data-stu-id="ca2d6-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="becea-109">範例</span><span class="sxs-lookup"><span data-stu-id="becea-109">Example</span></span>  
   
 ```vb  
 Class ConcatenateStrings  
@@ -162,10 +162,10 @@ End Class
 ' 2 total names in list  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="ca2d6-110">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="ca2d6-110">Compiling the Code</span></span>  
- <span data-ttu-id="ca2d6-111">建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="ca2d6-111">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="becea-110">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="becea-110">Compiling the Code</span></span>  
+ <span data-ttu-id="becea-111">建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="becea-111">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ca2d6-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ca2d6-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="becea-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="becea-112">See also</span></span>
 
-- [<span data-ttu-id="ca2d6-113">LINQ 和字串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ca2d6-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="ca2d6-114">LINQ 和檔案目錄 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ca2d6-114">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="becea-113">LINQ 和字串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="becea-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="becea-114">LINQ 與檔案目錄 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="becea-114">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
