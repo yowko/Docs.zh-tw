@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f5035cd22ed099cec5e327c6957b13bcee52c766
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191120"
 ---
-# <a name="icordebugmanagedcallback2createconnection-method"></a><span data-ttu-id="6703f-102">ICorDebugManagedCallback2::CreateConnection 方法</span><span class="sxs-lookup"><span data-stu-id="6703f-102">ICorDebugManagedCallback2::CreateConnection Method</span></span>
-<span data-ttu-id="6703f-103">告知偵錯工具已建立的新的連線。</span><span class="sxs-lookup"><span data-stu-id="6703f-103">Notifies the debugger that a new connection has been created.</span></span>  
+# <a name="icordebugmanagedcallback2createconnection-method"></a><span data-ttu-id="05ac5-102">ICorDebugManagedCallback2::CreateConnection 方法</span><span class="sxs-lookup"><span data-stu-id="05ac5-102">ICorDebugManagedCallback2::CreateConnection Method</span></span>
+<span data-ttu-id="05ac5-103">告知偵錯工具已建立的新的連線。</span><span class="sxs-lookup"><span data-stu-id="05ac5-103">Notifies the debugger that a new connection has been created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6703f-104">語法</span><span class="sxs-lookup"><span data-stu-id="6703f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="05ac5-104">語法</span><span class="sxs-lookup"><span data-stu-id="05ac5-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateConnection (  
@@ -37,33 +37,33 @@ HRESULT CreateConnection (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6703f-105">參數</span><span class="sxs-lookup"><span data-stu-id="6703f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="05ac5-105">參數</span><span class="sxs-lookup"><span data-stu-id="05ac5-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="6703f-106">[in]代表程序的連接原先建立"ICorDebugProcess 」 物件的指標</span><span class="sxs-lookup"><span data-stu-id="6703f-106">[in] A pointer to an "ICorDebugProcess" object that represents the process in which the connection was created</span></span>  
+ <span data-ttu-id="05ac5-106">[in]代表程序的連接原先建立"ICorDebugProcess 」 物件的指標</span><span class="sxs-lookup"><span data-stu-id="05ac5-106">[in] A pointer to an "ICorDebugProcess" object that represents the process in which the connection was created</span></span>  
   
  `dwConnectionId`  
- <span data-ttu-id="6703f-107">[in]新的連接識別碼。</span><span class="sxs-lookup"><span data-stu-id="6703f-107">[in] The ID of the new connection.</span></span>  
+ <span data-ttu-id="05ac5-107">[in]新的連接識別碼。</span><span class="sxs-lookup"><span data-stu-id="05ac5-107">[in] The ID of the new connection.</span></span>  
   
  `pConnName`  
- <span data-ttu-id="6703f-108">[in]新的連接名稱指標。</span><span class="sxs-lookup"><span data-stu-id="6703f-108">[in] A pointer to the name of the new connection.</span></span>  
+ <span data-ttu-id="05ac5-108">[in]新的連接名稱指標。</span><span class="sxs-lookup"><span data-stu-id="05ac5-108">[in] A pointer to the name of the new connection.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6703f-109">備註</span><span class="sxs-lookup"><span data-stu-id="6703f-109">Remarks</span></span>  
- <span data-ttu-id="6703f-110">A`CreateConnection`回呼會在下列情況下引發：</span><span class="sxs-lookup"><span data-stu-id="6703f-110">A `CreateConnection` callback will be fired in either of the following cases:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="05ac5-109">備註</span><span class="sxs-lookup"><span data-stu-id="05ac5-109">Remarks</span></span>  
+ <span data-ttu-id="05ac5-110">A`CreateConnection`回呼會在下列情況下引發：</span><span class="sxs-lookup"><span data-stu-id="05ac5-110">A `CreateConnection` callback will be fired in either of the following cases:</span></span>  
   
--   <span data-ttu-id="6703f-111">當偵錯工具附加至包含連線的處理序。</span><span class="sxs-lookup"><span data-stu-id="6703f-111">When a debugger attaches to a process that contains connections.</span></span> <span data-ttu-id="6703f-112">在此情況下，執行階段會產生，並分派`CreateConnection`事件和[ICorDebugManagedCallback2::ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md)程序中每個連接的事件。</span><span class="sxs-lookup"><span data-stu-id="6703f-112">In this case, the runtime will generate and dispatch a `CreateConnection` event and a [ICorDebugManagedCallback2::ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) event for each connection in the process.</span></span>  
+-   <span data-ttu-id="05ac5-111">當偵錯工具附加至包含連線的處理序。</span><span class="sxs-lookup"><span data-stu-id="05ac5-111">When a debugger attaches to a process that contains connections.</span></span> <span data-ttu-id="05ac5-112">在此情況下，執行階段會產生，並分派`CreateConnection`事件和[ICorDebugManagedCallback2::ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md)程序中每個連接的事件。</span><span class="sxs-lookup"><span data-stu-id="05ac5-112">In this case, the runtime will generate and dispatch a `CreateConnection` event and a [ICorDebugManagedCallback2::ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) event for each connection in the process.</span></span>  
   
--   <span data-ttu-id="6703f-113">當主機呼叫[iclrdebugmanager:: Beginconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)中[裝載 API](../../../../docs/framework/unmanaged-api/hosting/index.md)。</span><span class="sxs-lookup"><span data-stu-id="6703f-113">When a host calls [ICLRDebugManager::BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) in the [Hosting API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span></span>  
+-   <span data-ttu-id="05ac5-113">當主機呼叫[iclrdebugmanager:: Beginconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)中[裝載 API](../../../../docs/framework/unmanaged-api/hosting/index.md)。</span><span class="sxs-lookup"><span data-stu-id="05ac5-113">When a host calls [ICLRDebugManager::BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) in the [Hosting API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6703f-114">需求</span><span class="sxs-lookup"><span data-stu-id="6703f-114">Requirements</span></span>  
- <span data-ttu-id="6703f-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6703f-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="05ac5-114">需求</span><span class="sxs-lookup"><span data-stu-id="05ac5-114">Requirements</span></span>  
+ <span data-ttu-id="05ac5-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="05ac5-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6703f-116">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6703f-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="05ac5-116">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="05ac5-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6703f-117">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6703f-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="05ac5-117">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="05ac5-117">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="6703f-118">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="6703f-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="05ac5-118">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05ac5-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6703f-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6703f-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="05ac5-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="05ac5-119">See also</span></span>
 
-- [<span data-ttu-id="6703f-120">ICorDebugManagedCallback2 介面</span><span class="sxs-lookup"><span data-stu-id="6703f-120">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [<span data-ttu-id="6703f-121">ICorDebugManagedCallback 介面</span><span class="sxs-lookup"><span data-stu-id="6703f-121">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="05ac5-120">ICorDebugManagedCallback2 介面</span><span class="sxs-lookup"><span data-stu-id="05ac5-120">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [<span data-ttu-id="05ac5-121">ICorDebugManagedCallback 介面</span><span class="sxs-lookup"><span data-stu-id="05ac5-121">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
