@@ -19,16 +19,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2dc3d350f5c97736b3b65c814a668195aceef2b0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132817"
 ---
-# <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a><span data-ttu-id="49ce8-102">ICLRDebugManager::SetSymbolReadingPolicy 方法</span><span class="sxs-lookup"><span data-stu-id="49ce8-102">ICLRDebugManager::SetSymbolReadingPolicy Method</span></span>
-<span data-ttu-id="49ce8-103">設定用於讀取程式資料庫 (PDB) 檔案的原則。</span><span class="sxs-lookup"><span data-stu-id="49ce8-103">Sets the policy for reading program database (PDB) files.</span></span> <span data-ttu-id="49ce8-104">原則會決定是否在呼叫堆疊中包含行號和檔案的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="49ce8-104">The policy determines whether information about line numbers and files is included in call stacks.</span></span>  
+# <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a><span data-ttu-id="b2ffa-102">ICLRDebugManager::SetSymbolReadingPolicy 方法</span><span class="sxs-lookup"><span data-stu-id="b2ffa-102">ICLRDebugManager::SetSymbolReadingPolicy Method</span></span>
+<span data-ttu-id="b2ffa-103">設定用於讀取程式資料庫 (PDB) 檔案的原則。</span><span class="sxs-lookup"><span data-stu-id="b2ffa-103">Sets the policy for reading program database (PDB) files.</span></span> <span data-ttu-id="b2ffa-104">原則會決定是否在呼叫堆疊中包含行號和檔案的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="b2ffa-104">The policy determines whether information about line numbers and files is included in call stacks.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="49ce8-105">語法</span><span class="sxs-lookup"><span data-stu-id="49ce8-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b2ffa-105">語法</span><span class="sxs-lookup"><span data-stu-id="b2ffa-105">Syntax</span></span>  
   
 ```  
 HRESULT SetSymbolReadingPolicy (  
@@ -36,27 +36,27 @@ HRESULT SetSymbolReadingPolicy (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="49ce8-106">參數</span><span class="sxs-lookup"><span data-stu-id="49ce8-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b2ffa-106">參數</span><span class="sxs-lookup"><span data-stu-id="b2ffa-106">Parameters</span></span>  
  `policy`  
- <span data-ttu-id="49ce8-107">[in]成員[ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md)列舉型別。</span><span class="sxs-lookup"><span data-stu-id="49ce8-107">[in] A member of the [ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="b2ffa-107">[in]成員[ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md)列舉型別。</span><span class="sxs-lookup"><span data-stu-id="b2ffa-107">[in] A member of the [ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md) enumeration.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="49ce8-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="49ce8-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b2ffa-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="b2ffa-108">Return Value</span></span>  
   
-|<span data-ttu-id="49ce8-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="49ce8-109">HRESULT</span></span>|<span data-ttu-id="49ce8-110">描述</span><span class="sxs-lookup"><span data-stu-id="49ce8-110">Description</span></span>|  
+|<span data-ttu-id="b2ffa-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b2ffa-109">HRESULT</span></span>|<span data-ttu-id="b2ffa-110">描述</span><span class="sxs-lookup"><span data-stu-id="b2ffa-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="49ce8-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="49ce8-111">S_OK</span></span>|`SetSymbolReadingPolicy` <span data-ttu-id="49ce8-112">已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="49ce8-112">returned successfully.</span></span>|  
-|<span data-ttu-id="49ce8-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="49ce8-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="49ce8-114">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="49ce8-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="49ce8-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="49ce8-115">E_FAIL</span></span>|<span data-ttu-id="49ce8-116">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="49ce8-116">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="49ce8-117">方法會傳回 E_FAIL 之後，CLR 不再使用舊的處理序內。</span><span class="sxs-lookup"><span data-stu-id="49ce8-117">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="49ce8-118">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="49ce8-118">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="b2ffa-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="b2ffa-111">S_OK</span></span>|<span data-ttu-id="b2ffa-112">`SetSymbolReadingPolicy` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="b2ffa-112">`SetSymbolReadingPolicy` returned successfully.</span></span>|  
+|<span data-ttu-id="b2ffa-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="b2ffa-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="b2ffa-114">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="b2ffa-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="b2ffa-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="b2ffa-115">E_FAIL</span></span>|<span data-ttu-id="b2ffa-116">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="b2ffa-116">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="b2ffa-117">方法會傳回 E_FAIL 之後，CLR 不再使用舊的處理序內。</span><span class="sxs-lookup"><span data-stu-id="b2ffa-117">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="b2ffa-118">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="b2ffa-118">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="49ce8-119">需求</span><span class="sxs-lookup"><span data-stu-id="49ce8-119">Requirements</span></span>  
- <span data-ttu-id="49ce8-120">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="49ce8-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b2ffa-119">需求</span><span class="sxs-lookup"><span data-stu-id="b2ffa-119">Requirements</span></span>  
+ <span data-ttu-id="b2ffa-120">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b2ffa-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="49ce8-121">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="49ce8-121">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b2ffa-121">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b2ffa-121">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="49ce8-122">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="49ce8-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b2ffa-122">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="b2ffa-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="49ce8-123">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="49ce8-123">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="b2ffa-123">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b2ffa-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="49ce8-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="49ce8-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b2ffa-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b2ffa-124">See also</span></span>
 
-- [<span data-ttu-id="49ce8-125">ICLRDebugManager 介面</span><span class="sxs-lookup"><span data-stu-id="49ce8-125">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
+- [<span data-ttu-id="b2ffa-125">ICLRDebugManager 介面</span><span class="sxs-lookup"><span data-stu-id="b2ffa-125">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)

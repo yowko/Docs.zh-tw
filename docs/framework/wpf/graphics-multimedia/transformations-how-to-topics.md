@@ -10,29 +10,29 @@ helpviewer_keywords:
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
 ms.openlocfilehash: 6e630b76e05803ffc4ac3c69c403d1ea2741b112
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140864"
 ---
-# <a name="transformations-how-to-topics"></a><span data-ttu-id="2c727-102">轉換 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="2c727-102">Transformations How-to Topics</span></span>
-<span data-ttu-id="2c727-103">在本節中的主題描述如何將不同的轉換套用至物件。</span><span class="sxs-lookup"><span data-stu-id="2c727-103">The topics in this section describe how to apply different transformations to objects.</span></span>  
+# <a name="transformations-how-to-topics"></a><span data-ttu-id="51a50-102">轉換 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="51a50-102">Transformations How-to Topics</span></span>
+<span data-ttu-id="51a50-103">在本節中的主題描述如何將不同的轉換套用至物件。</span><span class="sxs-lookup"><span data-stu-id="51a50-103">The topics in this section describe how to apply different transformations to objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2c727-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="2c727-104">In This Section</span></span>  
- [<span data-ttu-id="2c727-105">在事件發生時將轉換套用至元素</span><span class="sxs-lookup"><span data-stu-id="2c727-105">Apply a Transform to an Element When an Event Occurs</span></span>](how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
- [<span data-ttu-id="2c727-106">對物件套用多個轉換</span><span class="sxs-lookup"><span data-stu-id="2c727-106">Apply Multiple Transforms to an Object</span></span>](how-to-apply-multiple-transforms-to-an-object.md)  
- [<span data-ttu-id="2c727-107">使元素就地旋轉</span><span class="sxs-lookup"><span data-stu-id="2c727-107">Make an Element Spin in Place</span></span>](how-to-make-an-element-spin-in-place.md)  
- [<span data-ttu-id="2c727-108">旋轉物件</span><span class="sxs-lookup"><span data-stu-id="2c727-108">Rotate an Object</span></span>](how-to-rotate-an-object.md)  
- [<span data-ttu-id="2c727-109">縮放元素</span><span class="sxs-lookup"><span data-stu-id="2c727-109">Scale an Element</span></span>](how-to-scale-an-element.md)  
- [<span data-ttu-id="2c727-110">扭曲元素</span><span class="sxs-lookup"><span data-stu-id="2c727-110">Skew an Element</span></span>](how-to-skew-an-element.md)  
- [<span data-ttu-id="2c727-111">使用相對值指定轉換的原點</span><span class="sxs-lookup"><span data-stu-id="2c727-111">Specify the Origin of a Transform by Using Relative Values</span></span>](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
- [<span data-ttu-id="2c727-112">平移元素</span><span class="sxs-lookup"><span data-stu-id="2c727-112">Translate an Element</span></span>](how-to-translate-an-element.md)  
- [<span data-ttu-id="2c727-113">使用 MatrixTransform 建立自訂轉換</span><span class="sxs-lookup"><span data-stu-id="2c727-113">Use a MatrixTransform to Create Custom Transforms</span></span>](how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
+## <a name="in-this-section"></a><span data-ttu-id="51a50-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="51a50-104">In This Section</span></span>  
+ [<span data-ttu-id="51a50-105">在事件發生時套用轉換至元素</span><span class="sxs-lookup"><span data-stu-id="51a50-105">Apply a Transform to an Element When an Event Occurs</span></span>](how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
+ [<span data-ttu-id="51a50-106">將多個轉換套用至物件</span><span class="sxs-lookup"><span data-stu-id="51a50-106">Apply Multiple Transforms to an Object</span></span>](how-to-apply-multiple-transforms-to-an-object.md)  
+ [<span data-ttu-id="51a50-107">使元素就地旋轉</span><span class="sxs-lookup"><span data-stu-id="51a50-107">Make an Element Spin in Place</span></span>](how-to-make-an-element-spin-in-place.md)  
+ [<span data-ttu-id="51a50-108">旋轉物件</span><span class="sxs-lookup"><span data-stu-id="51a50-108">Rotate an Object</span></span>](how-to-rotate-an-object.md)  
+ [<span data-ttu-id="51a50-109">縮放元素</span><span class="sxs-lookup"><span data-stu-id="51a50-109">Scale an Element</span></span>](how-to-scale-an-element.md)  
+ [<span data-ttu-id="51a50-110">扭曲元素</span><span class="sxs-lookup"><span data-stu-id="51a50-110">Skew an Element</span></span>](how-to-skew-an-element.md)  
+ [<span data-ttu-id="51a50-111">使用相對值指定轉換的原點</span><span class="sxs-lookup"><span data-stu-id="51a50-111">Specify the Origin of a Transform by Using Relative Values</span></span>](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
+ [<span data-ttu-id="51a50-112">平移元素</span><span class="sxs-lookup"><span data-stu-id="51a50-112">Translate an Element</span></span>](how-to-translate-an-element.md)  
+ [<span data-ttu-id="51a50-113">使用 MatrixTransform 建立自訂轉換</span><span class="sxs-lookup"><span data-stu-id="51a50-113">Use a MatrixTransform to Create Custom Transforms</span></span>](how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
-## <a name="see-also"></a><span data-ttu-id="2c727-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2c727-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="51a50-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="51a50-114">See also</span></span>
 
 - <xref:System.Windows.Media.Transform>
-- [<span data-ttu-id="2c727-115">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="2c727-115">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="2c727-116">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="2c727-116">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="2c727-117">配置</span><span class="sxs-lookup"><span data-stu-id="2c727-117">Layout</span></span>](../advanced/layout.md)
+- [<span data-ttu-id="51a50-115">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="51a50-115">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="51a50-116">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="51a50-116">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="51a50-117">版面配置</span><span class="sxs-lookup"><span data-stu-id="51a50-117">Layout</span></span>](../advanced/layout.md)

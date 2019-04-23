@@ -10,24 +10,24 @@ helpviewer_keywords:
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
 ms.openlocfilehash: 57e32d3e56c3f319f7ee8aa58020d37e46a6454d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140214"
 ---
-# <a name="geometries"></a><span data-ttu-id="9565e-102">幾何</span><span class="sxs-lookup"><span data-stu-id="9565e-102">Geometries</span></span>
-<xref:System.Windows.Media.Geometry> <span data-ttu-id="9565e-103">是多用途的類別，用來呈現[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]圖形，點擊測試物件，並定義裁剪區域</span><span class="sxs-lookup"><span data-stu-id="9565e-103">is a versatile class, used to render [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphics, hit-test objects, and define clipping regions</span></span>  
+# <a name="geometries"></a><span data-ttu-id="fcbed-102">幾何</span><span class="sxs-lookup"><span data-stu-id="fcbed-102">Geometries</span></span>
+<span data-ttu-id="fcbed-103"><xref:System.Windows.Media.Geometry> 是多用途的類別，用來呈現[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]圖形，點擊測試物件，並定義裁剪區域</span><span class="sxs-lookup"><span data-stu-id="fcbed-103"><xref:System.Windows.Media.Geometry> is a versatile class, used to render [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphics, hit-test objects, and define clipping regions</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9565e-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="9565e-104">In This Section</span></span>  
- [<span data-ttu-id="9565e-105">路徑標記語法</span><span class="sxs-lookup"><span data-stu-id="9565e-105">Path Markup Syntax</span></span>](path-markup-syntax.md)  
- [<span data-ttu-id="9565e-106">幾何概觀</span><span class="sxs-lookup"><span data-stu-id="9565e-106">Geometry Overview</span></span>](geometry-overview.md)  
- [<span data-ttu-id="9565e-107">HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="9565e-107">How-to Topics</span></span>](geometries-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="fcbed-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="fcbed-104">In This Section</span></span>  
+ [<span data-ttu-id="fcbed-105">路徑標記語法</span><span class="sxs-lookup"><span data-stu-id="fcbed-105">Path Markup Syntax</span></span>](path-markup-syntax.md)  
+ [<span data-ttu-id="fcbed-106">幾何概觀</span><span class="sxs-lookup"><span data-stu-id="fcbed-106">Geometry Overview</span></span>](geometry-overview.md)  
+ [<span data-ttu-id="fcbed-107">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="fcbed-107">How-to Topics</span></span>](geometries-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9565e-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9565e-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fcbed-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fcbed-108">See also</span></span>
 
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
-- [<span data-ttu-id="9565e-109">2D 圖形和影像處理</span><span class="sxs-lookup"><span data-stu-id="9565e-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="9565e-110">WPF 中圖案和基本繪圖概觀</span><span class="sxs-lookup"><span data-stu-id="9565e-110">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)
-- [<span data-ttu-id="9565e-111">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="9565e-111">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="fcbed-109">2D 圖形和影像處理</span><span class="sxs-lookup"><span data-stu-id="fcbed-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="fcbed-110">WPF 中圖案和基本繪圖概觀</span><span class="sxs-lookup"><span data-stu-id="fcbed-110">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)
+- [<span data-ttu-id="fcbed-111">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="fcbed-111">Graphics and Multimedia</span></span>](index.md)

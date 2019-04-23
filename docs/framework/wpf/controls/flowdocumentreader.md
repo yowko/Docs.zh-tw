@@ -8,19 +8,19 @@ helpviewer_keywords:
 - FlowDocumentReader control [WPF]
 ms.assetid: ba7aaa70-f77b-4555-a79d-68a12c8e134b
 ms.openlocfilehash: d8201eeceeb39ffea888849eba32e77ee7c25ece
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138186"
 ---
-# <a name="flowdocumentreader"></a><span data-ttu-id="281c3-102">FlowDocumentReader</span><span class="sxs-lookup"><span data-stu-id="281c3-102">FlowDocumentReader</span></span>
-<span data-ttu-id="281c3-103"><xref:System.Windows.Controls.FlowDocumentReader>控制項用來檢視<xref:System.Windows.Documents.FlowDocument>內容。</span><span class="sxs-lookup"><span data-stu-id="281c3-103">The <xref:System.Windows.Controls.FlowDocumentReader> control is used to view <xref:System.Windows.Documents.FlowDocument> content.</span></span> <span data-ttu-id="281c3-104">它支援多種檢視模式。</span><span class="sxs-lookup"><span data-stu-id="281c3-104">It supports multiple viewing modes.</span></span>  
+# <a name="flowdocumentreader"></a><span data-ttu-id="9bb93-102">FlowDocumentReader</span><span class="sxs-lookup"><span data-stu-id="9bb93-102">FlowDocumentReader</span></span>
+<span data-ttu-id="9bb93-103"><xref:System.Windows.Controls.FlowDocumentReader>控制項用來檢視<xref:System.Windows.Documents.FlowDocument>內容。</span><span class="sxs-lookup"><span data-stu-id="9bb93-103">The <xref:System.Windows.Controls.FlowDocumentReader> control is used to view <xref:System.Windows.Documents.FlowDocument> content.</span></span> <span data-ttu-id="9bb93-104">它支援多種檢視模式。</span><span class="sxs-lookup"><span data-stu-id="9bb93-104">It supports multiple viewing modes.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="281c3-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="281c3-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9bb93-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9bb93-105">See also</span></span>
 
 - <xref:System.Windows.Controls.FlowDocumentReader>
 - <xref:System.Windows.Controls.FlowDocumentPageViewer>
 - <xref:System.Windows.Controls.FlowDocumentScrollViewer>
-- [<span data-ttu-id="281c3-106">WPF 中的文件</span><span class="sxs-lookup"><span data-stu-id="281c3-106">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
-- [<span data-ttu-id="281c3-107">非固定格式文件概觀</span><span class="sxs-lookup"><span data-stu-id="281c3-107">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
+- [<span data-ttu-id="9bb93-106">WPF 中的文件</span><span class="sxs-lookup"><span data-stu-id="9bb93-106">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
+- [<span data-ttu-id="9bb93-107">非固定格式文件概觀</span><span class="sxs-lookup"><span data-stu-id="9bb93-107">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)

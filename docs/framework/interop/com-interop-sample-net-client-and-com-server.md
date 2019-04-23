@@ -12,19 +12,19 @@ ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddbb7581ab254b428af621bc4412f60aa70bfb08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134520"
 ---
-# <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="ca33a-102">COM Interop 範例：.NET 用戶端與 COM 伺服器</span><span class="sxs-lookup"><span data-stu-id="ca33a-102">COM Interop Sample: .NET Client and COM Server</span></span>
-<span data-ttu-id="ca33a-103">此範例示範建置來存取 [COM 伺服器](#cpconcominteropsamplenetclientcomserveranchor2)的 [.NET 用戶端](#cpconcominteropsamplenetclientcomserveranchor1)如何建立 COM coclass 的執行個體，以及呼叫類別成員來執行貸款計算。</span><span class="sxs-lookup"><span data-stu-id="ca33a-103">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  
+# <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="8d730-102">COM Interop 範例：.NET 用戶端與 COM 伺服器</span><span class="sxs-lookup"><span data-stu-id="8d730-102">COM Interop Sample: .NET Client and COM Server</span></span>
+<span data-ttu-id="8d730-103">此範例示範建置來存取 [COM 伺服器](#cpconcominteropsamplenetclientcomserveranchor2)的 [.NET 用戶端](#cpconcominteropsamplenetclientcomserveranchor1)如何建立 COM coclass 的執行個體，以及呼叫類別成員來執行貸款計算。</span><span class="sxs-lookup"><span data-stu-id="8d730-103">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  
   
- <span data-ttu-id="ca33a-104">在此範例中，用戶端會建立和呼叫 **Loan** coclass 執行個體，並將四個引數 (這四個的其中一個等於零) 傳遞給執行個體，然後顯示運算。</span><span class="sxs-lookup"><span data-stu-id="ca33a-104">In this example, the client creates and calls an instance of the **Loan** coclass, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="ca33a-105">這個範例的程式碼片段會出現在本節中。</span><span class="sxs-lookup"><span data-stu-id="ca33a-105">Code fragments from this sample appear throughout this section.</span></span>  
+ <span data-ttu-id="8d730-104">在此範例中，用戶端會建立和呼叫 **Loan** coclass 執行個體，並將四個引數 (這四個的其中一個等於零) 傳遞給執行個體，然後顯示運算。</span><span class="sxs-lookup"><span data-stu-id="8d730-104">In this example, the client creates and calls an instance of the **Loan** coclass, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="8d730-105">這個範例的程式碼片段會出現在本節中。</span><span class="sxs-lookup"><span data-stu-id="8d730-105">Code fragments from this sample appear throughout this section.</span></span>  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>   
-## <a name="net-client"></a><span data-ttu-id="ca33a-106">.NET 用戶端</span><span class="sxs-lookup"><span data-stu-id="ca33a-106">.NET Client</span></span>  
+## <a name="net-client"></a><span data-ttu-id="8d730-106">.NET 用戶端</span><span class="sxs-lookup"><span data-stu-id="8d730-106">.NET Client</span></span>  
   
 ```vb  
 Imports System  
@@ -154,7 +154,7 @@ public class LoanApp {
 ```  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor2"></a>   
-## <a name="com-server"></a><span data-ttu-id="ca33a-107">COM 伺服器</span><span class="sxs-lookup"><span data-stu-id="ca33a-107">COM Server</span></span>  
+## <a name="com-server"></a><span data-ttu-id="8d730-107">COM 伺服器</span><span class="sxs-lookup"><span data-stu-id="8d730-107">COM Server</span></span>  
   
 ```cpp  
 // Loan.cpp : Implementation of CLoan  
@@ -299,6 +299,6 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ca33a-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ca33a-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8d730-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8d730-108">See also</span></span>
 
-- [<span data-ttu-id="ca33a-109">將 COM 元件公開給 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ca33a-109">Exposing COM Components to the .NET Framework</span></span>](../../../docs/framework/interop/exposing-com-components.md)
+- [<span data-ttu-id="8d730-109">將 COM 元件公開給 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="8d730-109">Exposing COM Components to the .NET Framework</span></span>](../../../docs/framework/interop/exposing-com-components.md)

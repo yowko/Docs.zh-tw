@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6e089d133374f112dea13e91f9bd571bd2b5af07
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132921"
 ---
-# <a name="ihostmallocdebugalloc-method"></a><span data-ttu-id="5447a-102">IHostMAlloc::DebugAlloc 方法</span><span class="sxs-lookup"><span data-stu-id="5447a-102">IHostMAlloc::DebugAlloc Method</span></span>
-<span data-ttu-id="5447a-103">要求主機指定的記憶體數量從堆積配置，並另外追蹤記憶體配置的位置。</span><span class="sxs-lookup"><span data-stu-id="5447a-103">Requests that the host allocate the specified amount of memory from the heap, and additionally track where the memory was allocated.</span></span>  
+# <a name="ihostmallocdebugalloc-method"></a><span data-ttu-id="a124f-102">IHostMAlloc::DebugAlloc 方法</span><span class="sxs-lookup"><span data-stu-id="a124f-102">IHostMAlloc::DebugAlloc Method</span></span>
+<span data-ttu-id="a124f-103">要求主機指定的記憶體數量從堆積配置，並另外追蹤記憶體配置的位置。</span><span class="sxs-lookup"><span data-stu-id="a124f-103">Requests that the host allocate the specified amount of memory from the heap, and additionally track where the memory was allocated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5447a-104">語法</span><span class="sxs-lookup"><span data-stu-id="5447a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a124f-104">語法</span><span class="sxs-lookup"><span data-stu-id="a124f-104">Syntax</span></span>  
   
 ```  
 HRESULT DebugAlloc (  
@@ -39,47 +39,47 @@ HRESULT DebugAlloc (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5447a-105">參數</span><span class="sxs-lookup"><span data-stu-id="5447a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a124f-105">參數</span><span class="sxs-lookup"><span data-stu-id="a124f-105">Parameters</span></span>  
  `cbSize`  
- <span data-ttu-id="5447a-106">[in]以位元組為單位，目前的記憶體配置要求的大小。</span><span class="sxs-lookup"><span data-stu-id="5447a-106">[in] The size, in bytes, of the current memory allocation request.</span></span>  
+ <span data-ttu-id="a124f-106">[in]以位元組為單位，目前的記憶體配置要求的大小。</span><span class="sxs-lookup"><span data-stu-id="a124f-106">[in] The size, in bytes, of the current memory allocation request.</span></span>  
   
  `dwCriticalLevel`  
- <span data-ttu-id="5447a-107">[in]其中一個[EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md)值，表示配置失敗的影響。</span><span class="sxs-lookup"><span data-stu-id="5447a-107">[in] One of the [EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) values, indicating the impact of an allocation failure.</span></span>  
+ <span data-ttu-id="a124f-107">[in]其中一個[EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md)值，表示配置失敗的影響。</span><span class="sxs-lookup"><span data-stu-id="a124f-107">[in] One of the [EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) values, indicating the impact of an allocation failure.</span></span>  
   
  `pszFileName`  
- <span data-ttu-id="5447a-108">[in]正在進行偵錯的可執行檔程式碼檔案。</span><span class="sxs-lookup"><span data-stu-id="5447a-108">[in] The code file of the executable being debugged.</span></span>  
+ <span data-ttu-id="a124f-108">[in]正在進行偵錯的可執行檔程式碼檔案。</span><span class="sxs-lookup"><span data-stu-id="a124f-108">[in] The code file of the executable being debugged.</span></span>  
   
  `iLineNo`  
- <span data-ttu-id="5447a-109">[in]中的行號`pszFileName`其中要求配置。</span><span class="sxs-lookup"><span data-stu-id="5447a-109">[in] The line number in `pszFileName` where the allocation was requested.</span></span>  
+ <span data-ttu-id="a124f-109">[in]中的行號`pszFileName`其中要求配置。</span><span class="sxs-lookup"><span data-stu-id="a124f-109">[in] The line number in `pszFileName` where the allocation was requested.</span></span>  
   
  `ppMem`  
- <span data-ttu-id="5447a-110">[out]配置的記憶體或如果無法完成要求為 null 指標。</span><span class="sxs-lookup"><span data-stu-id="5447a-110">[out] A pointer to the allocated memory, or null if the request could not be completed.</span></span>  
+ <span data-ttu-id="a124f-110">[out]配置的記憶體或如果無法完成要求為 null 指標。</span><span class="sxs-lookup"><span data-stu-id="a124f-110">[out] A pointer to the allocated memory, or null if the request could not be completed.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5447a-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="5447a-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a124f-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="a124f-111">Return Value</span></span>  
   
-|<span data-ttu-id="5447a-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5447a-112">HRESULT</span></span>|<span data-ttu-id="5447a-113">描述</span><span class="sxs-lookup"><span data-stu-id="5447a-113">Description</span></span>|  
+|<span data-ttu-id="a124f-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a124f-112">HRESULT</span></span>|<span data-ttu-id="a124f-113">描述</span><span class="sxs-lookup"><span data-stu-id="a124f-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="5447a-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="5447a-114">S_OK</span></span>|`DebugAlloc` <span data-ttu-id="5447a-115">已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="5447a-115">returned successfully.</span></span>|  
-|<span data-ttu-id="5447a-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="5447a-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="5447a-117">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="5447a-117">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="5447a-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="5447a-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="5447a-119">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="5447a-119">The call timed out.</span></span>|  
-|<span data-ttu-id="5447a-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="5447a-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="5447a-121">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="5447a-121">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="5447a-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="5447a-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="5447a-123">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="5447a-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="5447a-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="5447a-124">E_FAIL</span></span>|<span data-ttu-id="5447a-125">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="5447a-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="5447a-126">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="5447a-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="5447a-127">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="5447a-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="5447a-128">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="5447a-128">E_OUTOFMEMORY</span></span>|<span data-ttu-id="5447a-129">記憶體不足，無法完成配置要求。</span><span class="sxs-lookup"><span data-stu-id="5447a-129">Not enough memory was available to complete the allocation request.</span></span>|  
+|<span data-ttu-id="a124f-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="a124f-114">S_OK</span></span>|<span data-ttu-id="a124f-115">`DebugAlloc` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="a124f-115">`DebugAlloc` returned successfully.</span></span>|  
+|<span data-ttu-id="a124f-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="a124f-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="a124f-117">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="a124f-117">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="a124f-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="a124f-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="a124f-119">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="a124f-119">The call timed out.</span></span>|  
+|<span data-ttu-id="a124f-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="a124f-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="a124f-121">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="a124f-121">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="a124f-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="a124f-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="a124f-123">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="a124f-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="a124f-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="a124f-124">E_FAIL</span></span>|<span data-ttu-id="a124f-125">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="a124f-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="a124f-126">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="a124f-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="a124f-127">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="a124f-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="a124f-128">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="a124f-128">E_OUTOFMEMORY</span></span>|<span data-ttu-id="a124f-129">記憶體不足，無法完成配置要求。</span><span class="sxs-lookup"><span data-stu-id="a124f-129">Not enough memory was available to complete the allocation request.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5447a-130">備註</span><span class="sxs-lookup"><span data-stu-id="5447a-130">Remarks</span></span>  
- <span data-ttu-id="5447a-131">CLR 取得的介面指標[IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)藉由呼叫的執行個體[ihostmemorymanager:: Createmalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="5447a-131">The CLR gets an interface pointer to an [IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) instance by calling the [IHostMemoryManager::CreateMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) method.</span></span> `DebugAlloc` <span data-ttu-id="5447a-132">允許執行階段取得偵錯期間使用的程式碼檔案資訊。</span><span class="sxs-lookup"><span data-stu-id="5447a-132">allows the runtime to get code file information for use during debugging.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a124f-130">備註</span><span class="sxs-lookup"><span data-stu-id="a124f-130">Remarks</span></span>  
+ <span data-ttu-id="a124f-131">CLR 取得的介面指標[IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)藉由呼叫的執行個體[ihostmemorymanager:: Createmalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="a124f-131">The CLR gets an interface pointer to an [IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) instance by calling the [IHostMemoryManager::CreateMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) method.</span></span> <span data-ttu-id="a124f-132">`DebugAlloc` 允許執行階段取得偵錯期間使用的程式碼檔案資訊。</span><span class="sxs-lookup"><span data-stu-id="a124f-132">`DebugAlloc` allows the runtime to get code file information for use during debugging.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5447a-133">需求</span><span class="sxs-lookup"><span data-stu-id="5447a-133">Requirements</span></span>  
- <span data-ttu-id="5447a-134">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5447a-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a124f-133">需求</span><span class="sxs-lookup"><span data-stu-id="a124f-133">Requirements</span></span>  
+ <span data-ttu-id="a124f-134">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a124f-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5447a-135">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5447a-135">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="a124f-135">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a124f-135">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="5447a-136">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="5447a-136">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a124f-136">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="a124f-136">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="5447a-137">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="5447a-137">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="a124f-137">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a124f-137">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5447a-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5447a-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a124f-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a124f-138">See also</span></span>
 
-- [<span data-ttu-id="5447a-139">IHostMemoryManager 介面</span><span class="sxs-lookup"><span data-stu-id="5447a-139">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
-- [<span data-ttu-id="5447a-140">IHostMalloc 介面</span><span class="sxs-lookup"><span data-stu-id="5447a-140">IHostMalloc Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
+- [<span data-ttu-id="a124f-139">IHostMemoryManager 介面</span><span class="sxs-lookup"><span data-stu-id="a124f-139">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [<span data-ttu-id="a124f-140">IHostMalloc 介面</span><span class="sxs-lookup"><span data-stu-id="a124f-140">IHostMalloc Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
