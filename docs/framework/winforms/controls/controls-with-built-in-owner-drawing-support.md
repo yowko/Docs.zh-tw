@@ -9,10 +9,10 @@ helpviewer_keywords:
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
 ms.openlocfilehash: 1807170b2f5df2333ec3b271a11f9b929c1e7993
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087179"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>使用內建主控描繪支援的控制項
@@ -86,7 +86,7 @@ Windows Forms 中的主控描繪也稱為自訂繪圖，是變更特定控制項
   
 -   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [HOW TO：在 ComboBox 控制項中建立各種大小的文字](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+-   [如何：建立下拉式方塊控制項中的變數文字大小](how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>MenuItem 元件  
  <xref:System.Windows.Forms.MenuItem>元件表示的單一功能表項目<xref:System.Windows.Forms.MainMenu>或<xref:System.Windows.Forms.ContextMenu>元件。  
@@ -172,9 +172,9 @@ Windows Forms 中的主控描繪也稱為自訂繪圖，是變更特定控制項
   
 -   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [HOW TO：自訂 Windows Forms DataGridView 控制項的儲存格外觀](customize-the-appearance-of-cells-in-the-datagrid.md)  
+-   [如何：自訂 Windows Form DataGridView 控制項中的儲存格的外觀](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [HOW TO：自訂 Windows Forms DataGridView 控制項的資料列外觀](customize-the-appearance-of-rows-in-the-datagrid.md)  
+-   [如何：自訂 Windows Form DataGridView 控制項中的資料列的外觀](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip 控制項  
  <xref:System.Windows.Forms.ToolStrip> 和衍生的控制項可讓您自訂其外觀的任何層面。  
@@ -185,10 +185,10 @@ Windows Forms 中的主控描繪也稱為自訂繪圖，是變更特定控制項
   
 -   <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [HOW TO：建立和設定 Windows Forms 中 ToolStrip 控制項的自訂轉譯器](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+-   [如何：建立和設定 Windows Form 中 ToolStrip 控制項自訂轉譯器](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [HOW TO：自訂繪製 ToolStrip 控制項](how-to-custom-draw-a-toolstrip-control.md)  
+-   [如何：自訂繪製 ToolStrip 控制項](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>另請參閱
 
-- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)

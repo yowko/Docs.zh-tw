@@ -9,14 +9,14 @@ helpviewer_keywords:
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
 ms.openlocfilehash: 79dc7a3578c395ae8cdf5933e1249441f97071a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087985"
 ---
 # <a name="3-d-graphics-overview"></a>立體圖形概觀
-<a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 功能可讓開發人員以標記和程序性程式碼繪製、轉換 3D 圖形，以及以動畫顯示 3D 圖形。 開發人員可以結合 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 和 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 圖形來建立豐富的控制項、提供複雜的資料說明，或者加強應用程式介面的使用者體驗。 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 支援在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]並不適用於提供功能完整的遊戲開發平台。 本主題將提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 圖形系統中 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 功能的概觀。  
+<a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 功能可讓開發人員以標記和程序性程式碼繪製、轉換 3D 圖形，以及以動畫顯示 3D 圖形。 開發人員可以結合 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 和 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 圖形來建立豐富的控制項、提供複雜的資料說明，或者加強應用程式介面的使用者體驗。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 支援不適用於提供完整功能的遊戲開發平台。 本主題將提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 圖形系統中 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 功能的概觀。  
 
 <a name="threed_in_2d"></a>   
 ## <a name="3-d-in-a-2-d-container"></a>2D 容器中的 3D  
@@ -111,13 +111,13 @@ ms.locfileid: "59087985"
   
  下列光線衍生自基底類別<xref:System.Windows.Media.Media3D.Light>:  
   
--   <xref:System.Windows.Media.Media3D.AmbientLight>:提供環境光線，不論其位置或方向，統一的所有物件。  
+-   <xref:System.Windows.Media.Media3D.AmbientLight>：提供環境光線，不論其位置或方向，統一的所有物件。  
   
--   <xref:System.Windows.Media.Media3D.DirectionalLight>:位於等較遠的光線來源。  定向光線有<xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A>指定為 Vector3D，但沒有指定的位置。  
+-   <xref:System.Windows.Media.Media3D.DirectionalLight>：位於等較遠的光線來源。  定向光線有<xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A>指定為 Vector3D，但沒有指定的位置。  
   
--   <xref:System.Windows.Media.Media3D.PointLight>:位於光源等。 PointLights 有一個位置，並從該位置投射光線。 場景中的物件會根據其相對於光線的位置和距離來照明。 <xref:System.Windows.Media.Media3D.PointLightBase> 會公開<xref:System.Windows.Media.Media3D.PointLightBase.Range%2A>決定的距離，超過此模型將不會以醒目顯示光線的屬性。 PointLight 也公開衰減屬性，決定光線強度如何隨距離而降低。 您可以為光線衰減指定常數、線性插補或二次插補。  
+-   <xref:System.Windows.Media.Media3D.PointLight>：位於光源等。 PointLights 有一個位置，並從該位置投射光線。 場景中的物件會根據其相對於光線的位置和距離來照明。 <xref:System.Windows.Media.Media3D.PointLightBase> 會公開<xref:System.Windows.Media.Media3D.PointLightBase.Range%2A>決定的距離，超過此模型將不會以醒目顯示光線的屬性。 PointLight 也公開衰減屬性，決定光線強度如何隨距離而降低。 您可以為光線衰減指定常數、線性插補或二次插補。  
   
--   <xref:System.Windows.Media.Media3D.SpotLight>:繼承自 <xref:System.Windows.Media.Media3D.PointLight>。 Spotlight 照明的方式類似 PointLight，而且有位置和方向兩者。 他們將設定的圓錐形區域中的光線投射<xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A>和<xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A>以度為單位指定的屬性。  
+-   <xref:System.Windows.Media.Media3D.SpotLight>：繼承自 <xref:System.Windows.Media.Media3D.PointLight>。 Spotlight 照明的方式類似 PointLight，而且有位置和方向兩者。 他們將設定的圓錐形區域中的光線投射<xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A>和<xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A>以度為單位指定的屬性。  
   
  燈號都<xref:System.Windows.Media.Media3D.Model3D>物件，因此您可以轉換，並以動畫顯示光線的屬性，包括位置、 色彩、 方向和範圍。  
   
@@ -176,6 +176,6 @@ ms.locfileid: "59087985"
 - <xref:System.Windows.Media.Media3D.Material>
 - [立體轉換概觀](3-d-transformations-overview.md)
 - [最大化 WPF 3D 效能](maximize-wpf-3d-performance.md)
-- [HOW TO 主題](3-d-graphics-how-to-topics.md)
+- [HOW-TO 主題](3-d-graphics-how-to-topics.md)
 - [WPF 中圖案和基本繪圖概觀](shapes-and-basic-drawing-in-wpf-overview.md)
 - [使用影像、繪圖和視覺效果繪製](painting-with-images-drawings-and-visuals.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
 ms.openlocfilehash: 1d1b10b4da1263843bdce5447f0716569c7700e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085801"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments 指示詞
@@ -84,6 +84,6 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ## <a name="see-also"></a>另請參閱
 
 - [x:Class 指示詞](x-class-directive.md)
-- [x:Type 標記延伸](x-type-markup-extension.md)
+- [x:Type 標記延伸模組](x-type-markup-extension.md)
 - [通用 XAML 語言基本類型的內建類型](built-in-types-for-common-xaml-language-primitives.md)
 - [XAML 中的泛型](generics-in-xaml.md)

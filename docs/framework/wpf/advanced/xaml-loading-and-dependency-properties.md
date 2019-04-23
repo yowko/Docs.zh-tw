@@ -10,10 +10,10 @@ helpviewer_keywords:
 - loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
 ms.openlocfilehash: 4db87c5f266a9eed136f0651f48d11720abede65
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083826"
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>XAML 載入和相依性屬性
@@ -45,6 +45,6 @@ ms.locfileid: "59083826"
 - [相依性屬性概觀](dependency-properties-overview.md)
 - [XAML 概觀 (WPF)](xaml-overview-wpf.md)
 - [相依性屬性中繼資料](dependency-property-metadata.md)
-- [集合類型相依性屬性](collection-type-dependency-properties.md)
+- [集合類型的相依性屬性](collection-type-dependency-properties.md)
 - [相依性屬性的安全性](dependency-property-security.md)
 - [DependencyObject 的安全建構函式模式](safe-constructor-patterns-for-dependencyobjects.md)

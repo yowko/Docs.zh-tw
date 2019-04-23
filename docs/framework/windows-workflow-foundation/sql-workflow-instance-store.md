@@ -3,10 +3,10 @@ title: SQL 工作流程執行個體存放區
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
 ms.openlocfilehash: 8314781f46d9cd4eddd06f6be95f8e952feef1b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086568"
 ---
 # <a name="sql-workflow-instance-store"></a>SQL 工作流程執行個體存放區
@@ -22,11 +22,11 @@ ms.locfileid: "59086568"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [SQL 工作流程執行個體存放區的屬性](properties-of-sql-workflow-instance-store.md)  
+-   [SQL 工作流程執行個體屬性的存放區](properties-of-sql-workflow-instance-store.md)  
   
--   [HOW TO：啟用工作流程與工作流程服務的 SQL 持續性](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+-   [如何：啟用 SQL 持續性工作流程與工作流程服務](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
--   [執行個體啟動](instance-activation.md)  
+-   [執行個體啟用](instance-activation.md)  
   
 -   [支援查詢](support-for-queries.md)  
   

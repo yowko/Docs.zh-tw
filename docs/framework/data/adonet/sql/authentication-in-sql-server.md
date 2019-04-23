@@ -3,10 +3,10 @@ title: 在 SQL Server 中進行驗證
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
 ms.openlocfilehash: f7fac0756da3bcc19ee6370468f0e0e65c428d35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084033"
 ---
 # <a name="authentication-in-sql-server"></a>在 SQL Server 中進行驗證
@@ -82,6 +82,6 @@ SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。
 
 - [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [連接資料來源](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [連接至資料來源](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [連接字串](../../../../../docs/framework/data/adonet/connection-strings.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

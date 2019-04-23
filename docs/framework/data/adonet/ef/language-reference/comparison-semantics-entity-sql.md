@@ -3,10 +3,10 @@ title: 比較語意 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
 ms.openlocfilehash: 6b4c4177ebd6c45e00a1ac7774e40a43e0c14a74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083331"
 ---
 # <a name="comparison-semantics-entity-sql"></a>比較語意 (Entity SQL)
@@ -66,7 +66,7 @@ ms.locfileid: "59083331"
 ## <a name="supported-combinations"></a>支援的組合  
  以下資料表針對每一種型別顯示比較運算子的所有支援組合：  
   
-|**類型**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**IS NULL**<br /><br /> **IS NOT NULL**|  
+|**Type**|**=**<br /><br /> **\!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**為 NULL**<br /><br /> **不是 NULL**|  
 |-|-|-|-|-|-|-|-|  
 |實體類型|Ref<sup>1</sup>|所有屬性<sup>2</sup>|所有屬性<sup>2</sup>|所有屬性<sup>2</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|Ref<sup>1</sup>|  
 |複雜類型|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|擲回<sup>3</sup>|  

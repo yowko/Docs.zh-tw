@@ -7,10 +7,10 @@ helpviewer_keywords:
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
 ms.openlocfilehash: 21b8b08e56e8b4d48fb738b86247d3f04dc4150b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086438"
 ---
 # <a name="windows-forms-control-development-basics"></a>Windows Form 控制項開發的基本概念
@@ -32,7 +32,7 @@ ms.locfileid: "59086438"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：開發簡單的 Windows Forms 控制項](how-to-develop-a-simple-windows-forms-control.md)
-- [開發複合 Windows Form 控制項](developing-a-composite-windows-forms-control.md)
-- [HOW TO：建立顯示進度的 Windows Forms 控制項](how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [如何：開發簡單的 Windows Forms 控制項](how-to-develop-a-simple-windows-forms-control.md)
+- [開發複合 Windows Forms 控制項](developing-a-composite-windows-forms-control.md)
+- [如何：建立顯示進度的 Windows Form 控制項](how-to-create-a-windows-forms-control-that-shows-progress.md)
 - [各種自訂控制項](varieties-of-custom-controls.md)

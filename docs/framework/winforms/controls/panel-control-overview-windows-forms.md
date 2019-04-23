@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
 ms.openlocfilehash: d4976b3725d04162ac10242c486f57c4d2598769
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086360"
 ---
 # <a name="panel-control-overview-windows-forms"></a>Panel 控制項概觀 (Windows Form)
@@ -27,5 +27,5 @@ Windows Form<xref:System.Windows.Forms.Panel>控制項可用來提供其他控�
 
 - <xref:System.Windows.Forms.Panel>
 - [GroupBox 控制項](groupbox-control-windows-forms.md)
-- [HOW TO：使用設計工具以 Windows Forms Panel 控制項分組控制項](group-controls-with-wf-panel-control-using-the-designer.md)
-- [HOW TO：使用設計工具設定 Windows Forms 面板的背景](how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)
+- [如何：搭配 Windows Form Panel 控制項使用設計工具群組控制項](group-controls-with-wf-panel-control-using-the-designer.md)
+- [如何：設定使用設計工具的 Windows Form 面板的背景](how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)
