@@ -3,16 +3,16 @@ title: 從 DNX 移轉到 .NET Core CLI
 description: 從使用 DNX 工具移轉為 .NET Core CLI 工具。
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 006e909be03ec3d090135f32f7ba13311201f81e
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 0f00ee6c05a47d976028c3cd4eade2b2b399260b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "57845718"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160832"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>從 DNX 移轉到 .NET Core CLI (project.json)
 
-## <a name="overview"></a>總覽
+## <a name="overview"></a>概觀
 .NET Core 的 RC1 版本與 ASP.NET Core 1.0 引進了 DNX 工具。 .NET Core 的 RC2 版本與 ASP.NET Core 1.0 則從 DNX 進展到了 .NET Core CLI。
 
 現在，讓我們稍微複習一下什麼是 DNX。 DNX 是一種執行階段和工具組，可用來建置 .NET Core 和 ASP.NET Core 1.0 應用程式。 它由 3 個主要部分所組成：
@@ -46,7 +46,6 @@ CLI 工具已透過兩種主要方式進行封裝：
 如果您以前使用 DNX，您應該從其中的三個組件之一 (DNX、DNU 或 DNVM) 使用過一些命令。 使用 CLI 時，其中某些命令已變更，某些可能無法使用，某些雖然相同但有稍微不同的語意。
 
 下表顯示 DNX/DNU 命令和 CLI 對應項目之間的對應。
-
 
 | DNX 命令                    | CLI 命令    | 說明                                                                                                     |
 |--------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
@@ -118,10 +117,10 @@ CLI 和 DNX 都使用以 `project.json` 檔案為基礎的相同基本專案系�
 
 一旦您決定要使用何種可攜性類型時，即需要變更目標架構。 如果您撰寫過 .NET Core 的應用程式，您很可能會使用 `dnxcore50` 做為目標架構。 由新的 [.NET Standard](../../standard/net-standard.md) \(英文\) 所帶來的 CLI 和變更，使得架構必須為下列其中一項：
 
-1. `netcoreapp1.0`- 如果您要撰寫的應用程式在 .NET Core (包括 ASP.NET Core 應用程式) 上
-2. `netstandard1.6`- 如果您要撰寫 .NET Core 的類別庫
+1. `netcoreapp1.0` - 如果您要撰寫 .NET Core 應用程式 (包括 ASP.NET Core 應用程式)
+2. `netstandard1.6` - 如果您要撰寫 .NET Core 的類別庫
 
-如果您使用其他 `dnx` 目標 (例如 `dnx451`)，也必須變更這些項目。 `net451`應變更為 `dnx451`。
+如果您使用其他 `dnx` 目標 (例如 `dnx451`)，也必須變更這些項目。 `dnx451` 應變更為 `net451`。
 如需詳細資訊，請參閱 [.NET Standard](../../standard/net-standard.md) 主題。
 
 您的 `project.json` 現已大致就緒。 接著，您必須檢查相依性清單，並將相依性更新為較新版本；如果您是使用 ASP.NET Core 相依性的話，更應注意這項作業。 如果您之前針對 BCL API 使用不同的套件，則可以使用[應用程式可攜性類型](../deploying/index.md)文件中所述的執行階段套件。

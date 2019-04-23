@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 author: BrucePerlerMS
 ms.openlocfilehash: a357f153d61b6a8e1e105639bd68647dabdc26f8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336521"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772917"
 ---
 # <a name="how-to-enable-token-replay-detection"></a>如何：啟用權杖重新執行偵測
 ## <a name="applies-to"></a>適用於  

@@ -3,10 +3,10 @@ title: 可序列化的型別
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
 ms.openlocfilehash: 44fc538ccb69296b91c94d2b9ae497be599c0c7e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160845"
 ---
 # <a name="serializable-types"></a>可序列化的型別
@@ -27,7 +27,7 @@ ms.locfileid: "59160845"
   
 -   唯讀欄位、沒有 `get` 或 `set` 方法的屬性，以及具有內部或私用 `set` 或 `get` 方法的屬性不會序列化。 這類屬性會被略過，而且不會擲回例外狀況，但不包括 get-only 集合。  
   
--   <xref:System.Xml.Serialization.XmlSerializer> 屬性 (例如`XmlElement`， `XmlAttribute`， `XmlIgnore`，`XmlInclude`等等) 都會被忽略。  
+-   <xref:System.Xml.Serialization.XmlSerializer> 屬性 (例如 `XmlElement`、`XmlAttribute`、`XmlIgnore`、`XmlInclude` 等屬性) 會被略過。  
   
 -   如果您未將 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性套用至指定的型別，則序列化程式會忽略該型別中任何已套用 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性的成員。  
   
@@ -44,4 +44,4 @@ ms.locfileid: "59160845"
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [資料合約序列化程式支援的型別](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [資料合約序列化程式支援的類型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

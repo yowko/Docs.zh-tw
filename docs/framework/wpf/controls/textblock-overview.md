@@ -9,11 +9,11 @@ helpviewer_keywords:
 - TextBlock control [WPF]
 ms.assetid: 24720bca-341a-4b03-8a6b-7a678023b10a
 ms.openlocfilehash: ce7da2b9c9c8e2a3a24d3acf18396ca447ac3f27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203466"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772724"
 ---
 # <a name="textblock-overview"></a>TextBlock 概觀
 <xref:System.Windows.Controls.TextBlock>控制項提供的彈性文字支援[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。 這個元素的主要目標是不需要超過一個段落文字的基本 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 案例。 它支援一些屬性可讓準確控制呈現，例如<xref:System.Windows.Controls.TextBlock.FontFamily%2A>， <xref:System.Windows.Controls.TextBlock.FontSize%2A>， <xref:System.Windows.Controls.TextBlock.FontWeight%2A>， <xref:System.Windows.Controls.TextBlock.TextEffects%2A>，和<xref:System.Windows.Controls.TextBlock.TextWrapping%2A>。 文字內容可以使用新增<xref:System.Windows.Controls.TextBlock.Text%2A>屬性。 在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中使用時，開始和結束標記之間的內容會以隱含方式加入為元素的文字。  
