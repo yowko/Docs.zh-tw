@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
 ms.openlocfilehash: 6aad851770fb886de5d5c00b544ac6eac2857e42
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339043"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>HOW TO：回應 Windows Forms 應用程式中的字型配置變更
@@ -67,4 +67,4 @@ ms.locfileid: "59339043"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
-- [Windows Form 中的自動縮放比例](automatic-scaling-in-windows-forms.md)
+- [Windows Forms 中的自動縮放比例](automatic-scaling-in-windows-forms.md)

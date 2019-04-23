@@ -10,10 +10,10 @@ helpviewer_keywords:
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
 ms.openlocfilehash: e038da545bb3f56cc757710bcaa93aa2c86bfa67
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342541"
 ---
 # <a name="how-to-render-images-with-gdi"></a>HOW TO：使用 GDI+ 呈現影像
@@ -84,9 +84,9 @@ ms.locfileid: "59342541"
 ## <a name="see-also"></a>另請參閱
 
 - [圖形程式設計入門](getting-started-with-graphics-programming.md)
-- [HOW TO：建立繪製的圖形物件](how-to-create-graphics-objects-for-drawing.md)
+- [如何：建立繪圖的圖形物件](how-to-create-graphics-objects-for-drawing.md)
 - [GDI+ 中的畫筆、線條和矩形](pens-lines-and-rectangles-in-gdi.md)
-- [HOW TO：在 Windows Form 上繪製文字](how-to-draw-text-on-a-windows-form.md)
-- [Windows Form 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
-- [繪製線條或封閉圖形](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
+- [如何：Windows Form 上繪製文字](how-to-draw-text-on-a-windows-form.md)
+- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [繪製線條或封閉的圖形](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
 - [圖示影像編輯器](/cpp/windows/image-editor-for-icons)

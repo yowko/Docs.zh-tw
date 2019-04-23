@@ -11,10 +11,10 @@ helpviewer_keywords:
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
 ms.openlocfilehash: 04517e5089f55c2d2b08a492439026d33ed9069d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339836"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 權杖與宣告
@@ -31,7 +31,7 @@ ms.locfileid: "59339836"
 4. SAML 權杖上的簽章會告訴信賴憑證者，這是由安全性權杖服務所簽發的權杖。 使用證明金鑰所建立的訊息簽章會告訴信賴憑證者，該權杖曾簽發至用戶端。  
   
 ## <a name="from-claims-to-samlattributes"></a>從宣告到 SamlAttributes  
- 在 WCF 中，在 SAML 權杖中的陳述式會模型化為<xref:System.IdentityModel.Tokens.SamlAttribute>可以直接從填入的物件<xref:System.IdentityModel.Claims.Claim>所提供的物件<xref:System.IdentityModel.Claims.Claim>物件具有<xref:System.IdentityModel.Claims.Claim.Right%2A>屬性<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>而<xref:System.IdentityModel.Claims.Claim.Resource%2A>屬性屬於型別<xref:System.String>。 例如:   
+ 在 WCF 中，在 SAML 權杖中的陳述式會模型化為<xref:System.IdentityModel.Tokens.SamlAttribute>可以直接從填入的物件<xref:System.IdentityModel.Claims.Claim>所提供的物件<xref:System.IdentityModel.Claims.Claim>物件具有<xref:System.IdentityModel.Claims.Claim.Right%2A>屬性<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>而<xref:System.IdentityModel.Claims.Claim.Resource%2A>屬性屬於型別<xref:System.String>。 例如：  
   
  [!code-csharp[c_CreateSTS#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#8)]
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  
@@ -48,9 +48,9 @@ ms.locfileid: "59339836"
 - <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
 - <xref:System.IdentityModel.Claims.ClaimSet>
 - [同盟](../../../../docs/framework/wcf/feature-details/federation.md)
-- [HOW TO：建立同盟用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [HOW TO：設定同盟服務的認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [如何：建立聯合用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [如何：Federation Service 上設定認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [使用身分識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [宣告與權杖](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
 - [宣告建立與資源值](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
-- [HOW TO：建立自訂宣告](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [如何：建立自訂宣告](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: 89264098ed17b398c83bc2dcddd98d9d8fc958f7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e9a69c61df574ea391622ebb709c14948c71014d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679732"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341721"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>.NET Core 3.0 (Preview 2) 的新功能
 
@@ -31,10 +31,9 @@ ms.locfileid: "57679732"
 
 .NET Core 3.0 支援 C#8，並從 .NET Core 3.0 Preview 2 開始，支援這些新功能。 如需 C# 8.0 功能的詳細資訊，請參閱下列部落格文章：
 
-- [Do more with patterns in C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)
-- [Take C# 8.0 for a spin](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)
-- [Building C# 8.0](https://devblogs.microsoft.com/dotnet/building-c-8-0/)
-
+- [在 C# 8.0 中進一步運用模式](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)
+- [開始試用 C# 8.0](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)
+- [建置 C# 8.0](https://devblogs.microsoft.com/dotnet/building-c-8-0/)
 
 ### <a name="ranges-and-indices"></a>範圍和索引
 
@@ -71,8 +70,8 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 除了能夠執行 `await foreach` 之外，您也可以建立非同步迭代器，例如建立一個會傳回 `IAsyncEnumerable/IAsyncEnumerator` 以供您在其中執行 `await` 和 `yield` 的迭代器。 針對需要處置的物件，您可以使用各種 BCL 類型 (例如 `Stream` 和 `Timer`) 所實作的 `IAsyncDisposable`。
 
->[!NOTE]
->如果您想要使用 Visual Studio 2019 Preview 2 或最新預覽版的 [ C# 延伸模組 (適用於 Visual Studio Code)](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.18.0-beta5) 進行開發，則需要 .NET Core 3.0 Preview 2，才能使用非同步資料流。 如果您是在命令列使用.NET Core 3.0 Preview 2，則一切將會如預期般運作。
+> [!NOTE]
+> 如果您想要使用 Visual Studio 2019 或最新預覽版的[適用於 Visual Studio Code 的 C# 擴充](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.18.0-beta5) \(英文\) 進行開發，則需要 .NET Core 3.0 Preview 2 以使用非同步資料流。 如果您是在命令列使用.NET Core 3.0 Preview 2，則一切將會如預期般運作。
 
 ### <a name="using-declarations"></a>Using 宣告
 
@@ -171,15 +170,14 @@ static string Display(object o) => o switch
 
 有些作業 (例如連結和 Razor 頁面發佈) 仍然需要發佈。
 
-
 ## <a name="local-dotnet-tools"></a>本機 dotnet 工具
 
 >[!WARNING]
 >在 .NET Core 3.0 Preview 1 與 .NET Core 3.0 Preview 2 之間，.NET Core 本機工具已發生變更。  如果您執行 `dotnet tool restore` 或 `dotnet tool install` 這類命令，嘗試 Preview 1 中的本機工具，則需要先刪除您的本機工具快取資料夾，然後本機工具才能在 Preview 2 中正常運作。 此資料夾位於：
 >
->在 mac、Linux 上：`rm -r $HOME/.dotnet/toolResolverCache`
+>在 mac、Linux 上： `rm -r $HOME/.dotnet/toolResolverCache`
 >
->在 Windows 上：`rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
+>在 Windows 上： `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
 >
 >如果您沒有刪除此資料夾，則會收到錯誤。
 
@@ -269,7 +267,7 @@ dotnet new wpf
 dotnet new winforms
 ```
 
-Visual Studio 2019 Preview 2 會新增**專案**範本，供 .NET Core 3.0 Windows Forms 和 WPF 使用。 仍然尚未支援設計工具。 您可以在 Visual Studio 2019 中開啟、啟動和偵錯這些專案。
+Visual Studio 2019 會新增 [新增專案] 範本，供 .NET Core 3.0 Windows Forms 和 WPF 使用。 仍然尚未支援設計工具。 您可以在 Visual Studio 2019 中開啟、啟動和偵錯這些專案。
 
 Visual Studio 2017 15.9 新增了[啟用 .NET Core 預覽](https://devblogs.microsoft.com/dotnet/net-core-tooling-update-for-visual-studio-2017-version-15-9/)的功能，但您需要開啟該功能，而且它不是支援的情節。
 
@@ -309,7 +307,7 @@ Visual Studio 2017 15.9 新增了[啟用 .NET Core 預覽](https://devblogs.micr
 
 [MSIX](https://docs.microsoft.com/windows/msix/) 是新的 Windows 應用程式套件格式。 它可以用來將 .NET Core 3.0 桌面應用程式部署至 Windows 10。
 
-Visual Studio 2019 Preview 2 中提供的 [Windows 應用程式套件專案](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)可讓您利用[自封式](../deploying/index.md#self-contained-deployments-scd) .NET Core 應用程式建立 MSIX 套件。
+Visual Studio 2019 中提供的 [Windows 應用程式套件專案](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net) \(機器翻譯\) 可讓您利用[獨立式](../deploying/index.md#self-contained-deployments-scd) .NET Core 應用程式建立 MSIX 套件。
 
 >注意:.NET Core 專案檔必須指定在 `<RuntimeIdentifiers>` 屬性中支援的執行階段：
 ```xml
@@ -324,7 +322,7 @@ Visual Studio 2019 Preview 2 中提供的 [Windows 應用程式套件專案](htt
 
 ### <a name="utf8jsonreader"></a>Utf8JsonReader
 
-`System.Text.Json.Utf8JsonReader` 是一個高效能、低配置、只能順向讀取的 UTF-8 編碼 JSON 文字讀取器，會從 `ReadOnlySpan<byte>` 開始讀取。 `Utf8JsonReader` 是一個基礎的低階類型，可用來建置自訂剖析器和還原序列化程式。 使用新的 `Utf8JsonReader` 來讀取 JSON 承載會比使用來自 **Json.NET** 的讀取器快兩倍。 它會等到您需要將 JSON 權杖實現為 (UTF-16) 字串時，才進行配置。
+`System.Text.Json.Utf8JsonReader` 是一個高效能、低配置、只能順向讀取的 UTF-8 編碼 JSON 文字讀取器，其會從 `ReadOnlySpan<byte>` 開始讀取。 `Utf8JsonReader` 是一個基礎的低階類型，可用來建置自訂剖析器和還原序列化程式。 使用新的 `Utf8JsonReader` 來讀取 JSON 承載會比使用來自 **Json.NET** 的讀取器快兩倍。 它會等到您需要將 JSON 權杖實現為 (UTF-16) 字串時，才進行配置。
 
 這個新 API 將包含下列元件：
 
@@ -381,7 +379,7 @@ public static void Utf8JsonReaderLoop(ReadOnlySpan<byte> dataUtf8)
 
 ### <a name="utf8jsonwriter"></a>Utf8JsonWriter
 
-`System.Text.Json.Utf8JsonWriter` 提供高效能、非快取、僅轉接方式，從常見的 .NET 類型 (像是 `String`、`Int32` 和 `DateTime`) 撰寫 UTF-8 編碼的 JSON 文字。 如同讀取器，寫入器是一個基礎的低階類型，可用來組建自訂序列化程式。 使用新的 `Utf8JsonWriter` 撰寫 JSON 承載，其速度比從 **Json.NET** 使用寫入器還要快 30-80%，而且不會配置。
+`System.Text.Json.Utf8JsonWriter` 能提供高效能、非快取、僅轉接的方式，來從常見的 .NET 類型 (像是 `String`、`Int32` 和 `DateTime`) 撰寫 UTF-8 編碼的 JSON 文字。 如同讀取器，寫入器是一個基礎的低階類型，可用來組建自訂序列化程式。 使用新的 `Utf8JsonWriter` 撰寫 JSON 承載，其速度比從 **Json.NET** 使用寫入器還要快 30-80%，而且不會配置。
 
 以下是 `Utf8JsonWriter` 的使用方式樣本，其可作為起點：
 
@@ -427,7 +425,7 @@ static int WriteJson(IBufferWriter<byte> output, long[] extraData)
 
 ### <a name="jsondocument"></a>JsonDocument
 
-`System.Text.Json.JsonDocument` 是組建在 `Utf8JsonReader` 之上。 `JsonDocument` 可讓您剖析 JSON 資料和組建唯讀文件物件模型 (DOM)，而您可以查詢此模型來支援隨機存取和列舉。 撰寫資料的 JSON 元素可以透過 `JsonElement` 類型來存取，而此類型被 `JsonDocument` 屬性公開為名為 `RootElement` 的屬性。 `JsonElement` 包含 JSON 陣列和物件列舉程式，以及將 JSON 文字轉換為一般.NET 類型的 API。 使用 `JsonDocument` 剖析一般 JSON 承載，並存取其所有成員，速度比 **Json.NET** 還要快 2-3 倍，而且極少配置合理大小 (亦即 < 1 MB) 的資料。
+`System.Text.Json.JsonDocument` 是建置在 `Utf8JsonReader` 之上。 `JsonDocument` 可讓您剖析 JSON 資料和組建唯讀文件物件模型 (DOM)，而您可以查詢此模型來支援隨機存取和列舉。 撰寫資料的 JSON 元素可以透過 `JsonElement` 類型來存取，而此類型被 `JsonDocument` 屬性公開為名為 `RootElement` 的屬性。 `JsonElement` 包含 JSON 陣列和物件列舉程式，以及將 JSON 文字轉換為一般.NET 類型的 API。 使用 `JsonDocument` 剖析一般 JSON 承載，並存取其所有成員，速度比 **Json.NET** 還要快 2-3 倍，而且極少配置合理大小 (亦即 < 1 MB) 的資料。
 
 以下是 `JsonDocument` 和 `JsonElement` 的使用方式樣本，其可作為起點：
 
@@ -484,7 +482,6 @@ Windows 提供了豐富的原生 API，其採用的形式為一般 C API、COM �
 
 您可以看到使用 COM 與 [Excel 示範原始程式碼](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo)搭配的範例。
 
-
 ## <a name="type-sequencereader"></a>類型：SequenceReader
 
 在 .NET Core 3.0 中已新增 `System.Buffers.SequenceReader`，這可用來作為 `ReadOnlySequence<T>` 的讀取器。 這可讓您以輕鬆、高效能、低配置的方式，剖析可跨多個支援緩衝區的 `System.IO.Pipelines` 資料。 
@@ -520,9 +517,9 @@ public static void ReadLines(ReadOnlySequence<byte> sequence)
 
 ## <a name="type-metadataloadcontext"></a>類型：MetadataLoadContext
 
-已新增 `MetadataLoadContext` 類型，可讓您讀取組件中繼資料，而不會影響到呼叫端的應用程式網域。 讀取組件 (包括為與目前執行階段環境不同的架構和平台建置的組件) 時，會將組件當作資料來讀取。 `MetadataLoadContext` 與 <xref:System.Reflection.Assembly.ReflectionOnlyLoad*> (只有在 .NET Framework 中才有提供) 重疊。
+已新增 `MetadataLoadContext` 類型，可讓您讀取組件中繼資料，而不會影響到呼叫端的應用程式網域。 讀取組件 (包括為與目前執行階段環境不同的架構和平台建置的組件) 時，會將組件當作資料來讀取。 `MetadataLoadContext` 會與 <xref:System.Reflection.Assembly.ReflectionOnlyLoad*> (僅在 .NET Framework 中提供) 重疊。
 
-`MetdataLoadContext` 是 [System.Reflection.MetadataLoadContext 套件](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext)中所提供的類型。 這是一個 .NET Standard 2.0 套件。
+`MetdataLoadContext` 於 [System.Reflection.MetadataLoadContext 套件](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext) \(英文\) 中提供。 這是一個 .NET Standard 2.0 套件。
 
 `MetadataLoadContext` 公開 API 的方式與 <xref:System.Runtime.Loader.AssemblyLoadContext> 類型類似，但並非以該類型為基礎。 就像 <xref:System.Runtime.Loader.AssemblyLoadContext> 一樣，`MetadataLoadContext` 也可讓您載入已隔離之組件載入 Universe 內的組件。 `MetdataLoadContext` API 會傳回 <xref:System.Reflection.Assembly> 物件，以讓您使用熟悉的反映 API。 執行導向 API (例如 [MethodBase.Invoke](https://github.com/dotnet/corefx/blob/master/src/System.Reflection.MetadataLoadContext/src/System/Reflection/TypeLoading/Methods/RoMethod.cs#L127)) 不是允許使用的 API，將會擲回 InvalidOperationException。
 
@@ -773,7 +770,6 @@ sudo snap alias dotnet-sdk.dotnet dotnet
 GPIO 套件包含 GPIO、SPI、I2C 和 PWM 裝置的 API。 IoT 繫結套件包含各種晶片和感應器的[裝置繫結](https://github.com/dotnet/iot/blob/master/src/devices/README.md)，與 [dotnet/iot - src/devices](https://github.com/dotnet/iot/tree/master/src/devices) 中提供的裝置繫結相同。
 
 已宣佈為.NET Core 3.0 Preview 1 一部分的更新序列連接埠，不是這些套件的一部分，但可以作為 .NET Core 平台的一部分。
-
 
 ## <a name="platform-support"></a>平台支援
 

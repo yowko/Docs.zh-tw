@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 867bf0812e54c33dbe84737b67091fc87e3b0651
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661863"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342333"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>執行階段如何找出組件
 若要成功部署 .NET Framework 應用程式，您必須了解 Common Language Runtime 如何找出並繫結至構成應用程式的組件。 根據預設，執行階段會嘗試與用來建置應用程式的組件正確版本繫結。 組態檔設定可覆寫這個預設行為。  
@@ -40,16 +40,16 @@ ms.locfileid: "54661863"
   
  執行階段會使用下列步驟來解析組件參考：  
   
-1.  檢查適用的組態檔，包括應用程式組態檔、發行者原則檔和電腦組態檔，以[判斷正確的組件版本](#step1) 。 如果組態檔位於遠端電腦上，執行階段必須先找出並下載應用程式組態檔。  
+1. 檢查適用的組態檔，包括應用程式組態檔、發行者原則檔和電腦組態檔，以[判斷正確的組件版本](#step1) 。 如果組態檔位於遠端電腦上，執行階段必須先找出並下載應用程式組態檔。  
   
-2.  [檢查組件名稱之前是否已經被繫結](#step2) ，如果是的話，會使用先前載入的組件。 如果先前載入組件的要求失敗，此要求會立即失敗，而不會嘗試載入組件。  
+2. [檢查組件名稱之前是否已經被繫結](#step2) ，如果是的話，會使用先前載入的組件。 如果先前載入組件的要求失敗，此要求會立即失敗，而不會嘗試載入組件。  
   
     > [!NOTE]
     >  快取組件繫結失敗是 .NET Framework 2.0 版的新功能。  
   
-3.  [檢查全域組件快取](#step3)。 如果那裡找到組件，執行階段會使用此組件。  
+3. [檢查全域組件快取](#step3)。 如果那裡找到組件，執行階段會使用此組件。  
   
-4.  使用下列步驟來[探查組件](#step4) ：  
+4. 使用下列步驟來[探查組件](#step4) ：  
   
     1.  如果組態和發行者原則不會影響原始參考，而且如果繫結要求是使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法來建立的，執行階段會檢查位置提示。  
   
@@ -154,9 +154,9 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>步驟 4：透過程式碼基底或探查找出組件  
  使用呼叫組件參考和組態檔中的資訊來判斷正確的組件版本之後，以及在其簽入全域組件快取 (僅適用於強式名稱組件) 之後，Common Language Runtime 會嘗試尋找組件。 尋找組件的程序包含下列步驟：  
   
-1.  如果在應用程式組態檔中找到 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 項目，執行階段會檢查指定的位置。 如果找到相符項目，則會使用該組件，而不會進行探查。 如果在那裡沒有找到該組件，則繫結要求會失敗。  
+1. 如果在應用程式組態檔中找到 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 項目，執行階段會檢查指定的位置。 如果找到相符項目，則會使用該組件，而不會進行探查。 如果在那裡沒有找到該組件，則繫結要求會失敗。  
   
-2.  然後執行階段會使用本節稍後指定的規則來探查參考的組件。  
+2. 然後執行階段會使用本節稍後指定的規則來探查參考的組件。  
   
 > [!NOTE]
 >  如果目錄中有多個不同版本的組件，而且要參考特定版本的組件，就必須使用 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 項目，而不能使用 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 項目的 `privatePath` 屬性。 如果使用 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 項目，只要執行階段找到符合所參考之簡單組件名稱的組件 (無論是否確實相符)，就會停止探查。 如果是正確的相符項目，就會使用該組件。 如果不是正確的相符項目，就會停止探查，且繫結失敗。  
@@ -215,7 +215,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   參考的組件名稱：myAssembly  
   
--   應用程式根目錄：`http://www.code.microsoft.com`  
+-   應用程式根目錄： `http://www.code.microsoft.com`  
   
 -   組態檔中的 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 項目指定：bin  
   
@@ -248,5 +248,6 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  比方說，如果 Assembly1 參考 Assembly2，而且 Assembly1 是從 `http://www.code.microsoft.com/utils` 下載，則該位置會被視為有關在哪裡可以找到 Assembly2.dll 的提示。 執行階段接著會探查 `http://www.code.microsoft.com/utils/Assembly2.dll` 和 `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll` 中的組件。 如果在這兩個位置都找不到 Assembly2，執行階段就會查詢 Windows Installer。  
   
 ## <a name="see-also"></a>另請參閱
-- [組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
+
+- [組件載入的最佳作法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [部署](../../../docs/framework/deployment/index.md)

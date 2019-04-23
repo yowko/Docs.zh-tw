@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
 ms.openlocfilehash: 662343af42f72816a5a673d2cd6d839a5dca9190
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341396"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>HOW TO：使用設計工具以 Windows Forms Panel 控制項分組控制項
@@ -33,4 +33,4 @@ Windows Form<xref:System.Windows.Forms.Panel>控制項用來分組其他控制�
 
 - [Panel 控制項](panel-control-windows-forms.md)
 - [Panel 控制項概觀](panel-control-overview-windows-forms.md)
-- [HOW TO：設定面板背景](how-to-set-the-background-of-a-windows-forms-panel.md)
+- [如何：設定面板背景](how-to-set-the-background-of-a-windows-forms-panel.md)

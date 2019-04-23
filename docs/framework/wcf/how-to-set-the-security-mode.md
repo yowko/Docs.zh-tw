@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
 ms.openlocfilehash: 5a4550e4c914dcdbc9908e766c67a2efa53e6e9e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339381"
 ---
 # <a name="how-to-set-the-security-mode"></a>HOW TO：設定安全性模式
@@ -115,12 +115,12 @@ Windows Communication Foundation (WCF) 安全性有三種常見的安全性模�
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：使用 SSL 憑證設定連接埠](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [HOW TO：使用傳輸安全性和訊息認證](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+- [如何：使用 SSL 憑證設定連接埠](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [如何：使用傳輸安全性和訊息認證](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
 - [傳輸安全性](../../../docs/framework/wcf/feature-details/transport-security.md)
 - [訊息安全性](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [安全性概觀](../../../docs/framework/wcf/feature-details/security-overview.md)
 - [系統提供的繫結](../../../docs/framework/wcf/system-provided-bindings.md)
-- [\<安全性 >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
-- [\<安全性 >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
-- [\<安全性 >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
+- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
+- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)

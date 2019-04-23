@@ -9,10 +9,10 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
 ms.openlocfilehash: f7551f28d07c9517865f60af99954eb40e57daa2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340720"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>逐步解說：在 Windows Forms 中執行拖放作業
@@ -108,6 +108,6 @@ ms.locfileid: "59340720"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：將資料新增至剪貼簿](how-to-add-data-to-the-clipboard.md)
-- [HOW TO：從剪貼簿擷取資料](how-to-retrieve-data-from-the-clipboard.md)
+- [如何：將資料加入至剪貼簿](how-to-add-data-to-the-clipboard.md)
+- [如何：從剪貼簿擷取資料](how-to-retrieve-data-from-the-clipboard.md)
 - [拖放作業和剪貼簿支援](drag-and-drop-operations-and-clipboard-support.md)

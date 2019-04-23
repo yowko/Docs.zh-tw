@@ -1,5 +1,5 @@
 ---
-title: HOW TO：反覆存取日期和時間值
+title: 作法：反覆存取日期和時間值
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 045423f0393ff363b94f4c0e4fe0324c061120d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0aef9a1c81172cda9b6df4574edb331e0ed137ca
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628184"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340603"
 ---
-# <a name="how-to-round-trip-date-and-time-values"></a>HOW TO：反覆存取日期和時間值
+# <a name="how-to-round-trip-date-and-time-values"></a>作法：反覆存取日期和時間值
 在許多應用程式中，日期和時間值的用途都是要明確地識別單一時間點。 本主題說明如何儲存並還原 <xref:System.DateTime> 值、<xref:System.DateTimeOffset> 值，以及具有時區資訊的日期和時間值，讓還原值能夠識別出與儲存值相同的時間。  
   
 ### <a name="to-round-trip-a-datetime-value"></a>若要反覆存取 DateTime 值  
   
-1.  搭配 "o" 格式規範呼叫 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 方法，以將 <xref:System.DateTime> 值轉換為其字串表示。  
+1. 搭配 "o" 格式規範呼叫 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 方法，以將 <xref:System.DateTime> 值轉換為其字串表示。  
   
-2.  將 <xref:System.DateTime> 值的字串表示儲存至檔案，或跨處理序、應用程式定義域或電腦界限進行傳遞。  
+2. 將 <xref:System.DateTime> 值的字串表示儲存至檔案，或跨處理序、應用程式定義域或電腦界限進行傳遞。  
   
-3.  擷取代表 <xref:System.DateTime> 值的字串。  
+3. 擷取代表 <xref:System.DateTime> 值的字串。  
   
-4.  呼叫 <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> 方法，然後傳遞 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> 作為 `styles` 參數值。  
+4. 呼叫 <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> 方法，然後傳遞 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> 作為 `styles` 參數值。  
   
  下列範例說明如何反覆存取 <xref:System.DateTime> 值。  
   
@@ -43,13 +43,13 @@ ms.locfileid: "54628184"
   
 ### <a name="to-round-trip-a-datetimeoffset-value"></a>若要反覆存取 DateTimeOffset 值  
   
-1.  搭配 "o" 格式規範呼叫 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 方法，以將 <xref:System.DateTimeOffset> 值轉換為其字串表示。  
+1. 搭配 "o" 格式規範呼叫 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 方法，以將 <xref:System.DateTimeOffset> 值轉換為其字串表示。  
   
-2.  將 <xref:System.DateTimeOffset> 值的字串表示儲存至檔案，或跨處理序、應用程式定義域或電腦界限進行傳遞。  
+2. 將 <xref:System.DateTimeOffset> 值的字串表示儲存至檔案，或跨處理序、應用程式定義域或電腦界限進行傳遞。  
   
-3.  擷取代表 <xref:System.DateTimeOffset> 值的字串。  
+3. 擷取代表 <xref:System.DateTimeOffset> 值的字串。  
   
-4.  呼叫 <xref:System.DateTimeOffset.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> 方法，然後傳遞 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> 作為 `styles` 參數值。  
+4. 呼叫 <xref:System.DateTimeOffset.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> 方法，然後傳遞 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> 作為 `styles` 參數值。  
   
  下列範例說明如何反覆存取 <xref:System.DateTimeOffset> 值。  
   
@@ -60,18 +60,18 @@ ms.locfileid: "54628184"
   
 ### <a name="to-round-trip-a-date-and-time-value-with-its-time-zone"></a>使用其時區反覆存取日期和時間值  
   
-1.  定義包含兩個欄位的類別或結構。 第一個欄位是 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 物件，而第二個是 <xref:System.TimeZoneInfo> 物件。 下列範例是這種類型的簡單版本。  
+1. 定義包含兩個欄位的類別或結構。 第一個欄位是 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 物件，而第二個是 <xref:System.TimeZoneInfo> 物件。 下列範例是這種類型的簡單版本。  
   
      [!code-csharp[Formatting.HowTo.RoundTrip#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#3)]
      [!code-vb[Formatting.HowTo.RoundTrip#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#3)]  
   
-2.  使用 <xref:System.SerializableAttribute> 屬性來標示類別。  
+2. 使用 <xref:System.SerializableAttribute> 屬性來標示類別。  
   
-3.  使用 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType> 方法來將物件序列化。  
+3. 使用 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType> 方法來將物件序列化。  
   
-4.  使用 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A> 方法來還原物件。  
+4. 使用 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A> 方法來還原物件。  
   
-5.  將還原序列化的物件轉型 (在 C# 中) 或轉換 (在 Visual Basic 中) 為適當類型的物件。  
+5. 將還原序列化的物件轉型 (在 C# 中) 或轉換 (在 Visual Basic 中) 為適當類型的物件。  
   
  下列範例說明如何反覆存取會儲存日期和時間及時區資訊的物件。  
   
@@ -87,13 +87,13 @@ ms.locfileid: "54628184"
   
     -   <xref:System> (僅限 C#)。  
   
-    -   <xref:System.Globalization?displayProperty=nameWithType>.  
+    -   <xref:System.Globalization?displayProperty=nameWithType>。  
   
-    -   <xref:System.IO?displayProperty=nameWithType>.  
+    -   <xref:System.IO?displayProperty=nameWithType>。  
   
-    -   <xref:System.Runtime.Serialization?displayProperty=nameWithType>.  
+    -   <xref:System.Runtime.Serialization?displayProperty=nameWithType>。  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.  
+    -   <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>。  
   
 -   對 System.Core.dll 的參考。  
   
@@ -102,5 +102,5 @@ ms.locfileid: "54628184"
 ## <a name="see-also"></a>另請參閱
 
 - [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)
-- [在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 之間選擇](../../../docs/standard/datetime/choosing-between-datetime.md)
+- [在 DateTime、DateTimeOffset、 TimeSpan 和  TimeZoneInfo 之間選擇](../../../docs/standard/datetime/choosing-between-datetime.md)
 - [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

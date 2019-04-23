@@ -6,10 +6,10 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340486"
 ---
 # <a name="multimedia-overview"></a>多媒體概觀
@@ -77,11 +77,11 @@ ms.locfileid: "59340486"
   
  <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>和<xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>屬性不是控制媒體播放的唯一方式。 在時鐘模式中，時鐘可以控制<xref:System.Windows.Controls.MediaElement>和互動式控制方法有控制何時<xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>是<xref:System.Windows.Controls.MediaState.Manual>。 <xref:System.Windows.Controls.MediaElement> 會評估下列優先權來處理此控制權競爭。  
   
-1. <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>。 當媒體卸載時取得控制權。 這可確保釋放所有的媒體資源時，會根據預設，即使<xref:System.Windows.Media.MediaClock>相關聯<xref:System.Windows.Controls.MediaElement>。  
+1. <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>. 當媒體卸載時取得控制權。 這可確保釋放所有的媒體資源時，會根據預設，即使<xref:System.Windows.Media.MediaClock>相關聯<xref:System.Windows.Controls.MediaElement>。  
   
-2. <xref:System.Windows.Media.MediaClock>。 當媒體具有時<xref:System.Windows.Controls.MediaElement.Clock%2A>。 如果媒體已卸載<xref:System.Windows.Media.MediaClock>才會生效，只要<xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>是<xref:System.Windows.Controls.MediaState.Manual>。 時鐘模式一律會覆寫的載入的行為<xref:System.Windows.Controls.MediaElement>。  
+2. <xref:System.Windows.Media.MediaClock>. 當媒體具有時<xref:System.Windows.Controls.MediaElement.Clock%2A>。 如果媒體已卸載<xref:System.Windows.Media.MediaClock>才會生效，只要<xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>是<xref:System.Windows.Controls.MediaState.Manual>。 時鐘模式一律會覆寫的載入的行為<xref:System.Windows.Controls.MediaElement>。  
   
-3. <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>。 當媒體載入時取得控制權。  
+3. <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>. 當媒體載入時取得控制權。  
   
 4. 互動式控制方法。 在放置時<xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>是<xref:System.Windows.Controls.MediaState.Manual>。 可用的控制方法都<xref:System.Windows.Controls.MediaElement.Play%2A>， <xref:System.Windows.Controls.MediaElement.Pause%2A>， <xref:System.Windows.Controls.MediaElement.Close%2A>，和<xref:System.Windows.Controls.MediaElement.Stop%2A>。  
   
@@ -99,9 +99,9 @@ ms.locfileid: "59340486"
 ### <a name="controlling-mediaplayer"></a>控制 MediaPlayer  
  因為<xref:System.Windows.Media.MediaPlayer>是無狀態，有只有兩種方式可以控制媒體播放。  
   
-1. 互動式控制方法。 在獨立模式中就地 (`null`<xref:System.Windows.Media.MediaPlayer.Clock%2A>屬性)。  
+1. 互動式控制方法。 在獨立模式中就地 (`null` <xref:System.Windows.Media.MediaPlayer.Clock%2A>屬性)。  
   
-2. <xref:System.Windows.Media.MediaClock>。 當媒體具有時<xref:System.Windows.Media.MediaPlayer.Clock%2A>。  
+2. <xref:System.Windows.Media.MediaClock>. 當媒體具有時<xref:System.Windows.Media.MediaPlayer.Clock%2A>。  
   
 ### <a name="displaying-a-mediaplayer"></a>顯示 MediaPlayer  
  技術上來說，<xref:System.Windows.Media.MediaPlayer>無法顯示，因為它有沒有實體表示法。 不過，它可用來呈現媒體<xref:System.Windows.Media.Drawing>使用<xref:System.Windows.Media.VideoDrawing>類別。 下列範例示範如何使用<xref:System.Windows.Media.VideoDrawing>來顯示媒體。  
@@ -113,5 +113,5 @@ ms.locfileid: "59340486"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Media.DrawingGroup>
-- [配置](../advanced/layout.md)
-- [HOW TO 主題](audio-and-video-how-to-topics.md)
+- [版面配置](../advanced/layout.md)
+- [HOW-TO 主題](audio-and-video-how-to-topics.md)

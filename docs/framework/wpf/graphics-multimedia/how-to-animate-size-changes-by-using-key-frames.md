@@ -7,10 +7,10 @@ helpviewer_keywords:
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
 ms.openlocfilehash: 0629b6600444bd172af451fd7e970bff894d8047
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342358"
 ---
 # <a name="how-to-animate-size-changes-by-using-key-frames"></a>HOW TO：使用主要畫面格建立大小變更的動畫
@@ -38,4 +38,4 @@ ms.locfileid: "59342358"
 - <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>
 - <xref:System.Windows.Media.Animation.SplineSizeKeyFrame>
 - [主要畫面格動畫概觀](key-frame-animations-overview.md)
-- [關於主要畫面格操作說明的主題](key-frame-animation-how-to-topics.md)
+- [主要畫面格操作說明主題](key-frame-animation-how-to-topics.md)

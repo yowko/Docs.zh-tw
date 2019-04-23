@@ -3,16 +3,16 @@ title: 指定自訂的加密演算法
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
 ms.openlocfilehash: b365c3c8e74adcad03246a227d6593c49f8b3993
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342826"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>指定自訂的加密演算法
 WCF 可讓您指定加密資料或計算數位簽章時使用的自訂密碼編譯演算法。 其步驟如下：  
   
-1. 衍生的類別 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
+1. 從 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 衍生類別  
   
 2. 註冊演算法  
   
@@ -127,7 +127,7 @@ WSHttpBinding binding = new WSHttpBinding();
   
 ## <a name="see-also"></a>另請參閱
 
-- [確保服務與用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [保護服務的安全](../../../../docs/framework/wcf/securing-services.md)
+- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [保護服務安全](../../../../docs/framework/wcf/securing-services.md)
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)

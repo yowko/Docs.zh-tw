@@ -3,10 +3,10 @@ title: HOW TO：建立未簽署的 Friend 組件 (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
 ms.openlocfilehash: 4771d0fe116d1532c270cf41b209665d5403a9b8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339173"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>HOW TO：建立未簽署的 Friend 組件 (Visual Basic)
@@ -89,5 +89,5 @@ ms.locfileid: "59339173"
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [.NET 中的組件](../../../../standard/assembly/index.md)
 - [Friend 組件](../../../../standard/assembly/friend-assemblies.md)
-- [HOW TO：建立簽署的 Friend 組件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
+- [如何：建立簽署的 Friend 組件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
 - [程式設計指南概念](../../../../visual-basic/programming-guide/concepts/index.md)

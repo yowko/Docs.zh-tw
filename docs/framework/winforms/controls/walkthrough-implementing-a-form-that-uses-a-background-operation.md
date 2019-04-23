@@ -16,10 +16,10 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
 ms.openlocfilehash: 6399fb853162174895d892399fd3eb5226101515
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343398"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>逐步解說：實作使用背景作業的表單
@@ -166,9 +166,9 @@ ms.locfileid: "59343398"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>
-- [Managed 執行緒處理](../../../standard/threading/index.md)
+- [受控執行緒處理](../../../standard/threading/index.md)
 - [Managed 執行緒處理的最佳實施方針](../../../standard/threading/managed-threading-best-practices.md)
 - [事件架構非同步模式概觀](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [HOW TO：實作使用背景作業的表單](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [如何：實作使用背景作業的表單](how-to-implement-a-form-that-uses-a-background-operation.md)
 - [逐步解說：在背景執行作業](walkthrough-running-an-operation-in-the-background.md)
 - [BackgroundWorker 元件](backgroundworker-component.md)

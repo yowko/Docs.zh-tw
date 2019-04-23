@@ -1,15 +1,15 @@
 ---
-title: 作法：載入和卸載組件 (C#)
+title: HOW TO：載入和卸載組件 (C#)
 ms.date: 07/20/2015
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
 ms.openlocfilehash: 52f7173efe497ab286c607db681f256983adc077
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342033"
 ---
-# <a name="how-to-load-and-unload-assemblies-c"></a>作法：載入和卸載組件 (C#)
+# <a name="how-to-load-and-unload-assemblies-c"></a>HOW TO：載入和卸載組件 (C#)
 您的程式所參考的組件會在建置時自動載入，不過您也可以在執行階段，將特定組件載入目前的應用程式定義域。 如需詳細資訊，請參閱[如何：將組件載入應用程式定義域](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)。  
   
  若要卸載個別組件，您必須先卸載所有包含該組件的應用程式定義域。 即使組件超出範圍，實際組件檔仍會保持載入狀態，直到卸載所有包含該組件的應用程式定義域為止。  
@@ -26,6 +26,6 @@ ms.locfileid: "59342033"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計手冊](../../../../csharp/programming-guide/index.md)
+- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)
 - [.NET 中的組件](../../../../standard/assembly/index.md)
-- [作法：將組件載入應用程式定義域](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)
+- [如何：將組件載入應用程式定義域](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)

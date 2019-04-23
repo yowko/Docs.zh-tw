@@ -3,10 +3,10 @@ title: HOW TO：藉由修改 DBML 檔案產生自訂程式碼
 ms.date: 03/30/2017
 ms.assetid: 50ad597a-8598-42d3-82dd-fc7d702ebc37
 ms.openlocfilehash: c3fa4d9db4076309ab7d6066cc7072797eaead54
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338419"
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>HOW TO：藉由修改 DBML 檔案產生自訂程式碼

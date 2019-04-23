@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03600a7c7fbff30acab46f875fb8cd2516207457
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654597"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341071"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework 並存執行
 並存執行是在同一台電腦上執行多個版本之應用程式或元件的能力。 在同一台電腦上，您可以同時擁有通用語言執行平台的多個版本，以及使用某一版執行階段的應用程式和元件的多個版本。  
@@ -75,11 +75,11 @@ ms.locfileid: "58654597"
   
  如果應用程式組態檔存在，執行階段會根據下列程序的結果來決定要載入的適當執行階段版本：  
   
-1.  執行階段檢查應用程式組態檔中的 [\<supportedRuntime> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)項目。 如果 **\<supportedRuntime>** 項目中指定了一或多個支援的執行階段版本，執行階段會載入第一個 **\<supportedRuntime>** 項目所指定的執行階段版本。 如果無法使用這個版本，執行階段會檢查下一個 **\<supportedRuntime>** 項目並嘗試載入指定的執行階段版本。 如果這個執行階段版本不能使用，則會檢查後面的 **\<supportedRuntime>** 項目。 如果沒有可用的受支援執行階段版本，執行階段便無法載入執行階段版本並顯示訊息給使用者 (請參閱步驟 3)。  
+1. 執行階段檢查應用程式組態檔中的 [\<supportedRuntime> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)項目。 如果 **\<supportedRuntime>** 項目中指定了一或多個支援的執行階段版本，執行階段會載入第一個 **\<supportedRuntime>** 項目所指定的執行階段版本。 如果無法使用這個版本，執行階段會檢查下一個 **\<supportedRuntime>** 項目並嘗試載入指定的執行階段版本。 如果這個執行階段版本不能使用，則會檢查後面的 **\<supportedRuntime>** 項目。 如果沒有可用的受支援執行階段版本，執行階段便無法載入執行階段版本並顯示訊息給使用者 (請參閱步驟 3)。  
   
-2.  執行階段讀取應用程式可執行檔的 PE 檔標頭。 如果有 PE 檔標頭指定的執行階段版本可用，執行階段便會載入該版本。 如果無法使用指定的執行階段版本，執行階段會搜尋 Microsoft 判斷可與 PE 標頭中的執行階段版本相容的執行階段版本。 如果找不到該版本，則會繼續進行本程序中的步驟 3。  
+2. 執行階段讀取應用程式可執行檔的 PE 檔標頭。 如果有 PE 檔標頭指定的執行階段版本可用，執行階段便會載入該版本。 如果無法使用指定的執行階段版本，執行階段會搜尋 Microsoft 判斷可與 PE 標頭中的執行階段版本相容的執行階段版本。 如果找不到該版本，則會繼續進行本程序中的步驟 3。  
   
-3.  執行階段顯示訊息，指出應用程式支援的執行階段版本無法使用。 此時不會載入執行階段。  
+3. 執行階段顯示訊息，指出應用程式支援的執行階段版本無法使用。 此時不會載入執行階段。  
   
     > [!NOTE]
     >  您可以使用登錄機碼 HKLM\Software\Microsoft\\.NETFramework 下的 NoGuiFromShim 值，或使用環境變數 COMPLUS_NoGuiFromShim，來隱藏這項訊息。 例如，您可以隱藏通常不需與使用者互動之應用程式 (例如自動安裝或 Windows 服務) 的訊息。 隱藏這項訊息之後，執行階段會將訊息寫入事件記錄檔。  將登錄值 NoGuiFromShim 設定為 1，以隱藏電腦上所有應用程式的這項訊息。 或者，將 COMPLUS_NoGuiFromShim 環境變數設定為 1，以隱藏特定使用者內容中所執行之應用程式的這項訊息。  
@@ -113,7 +113,7 @@ publicKeyToken=...,
   
 |標題|說明|  
 |-----------|-----------------|  
-|[如何：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|說明如何將應用程式繫結至組件的特定版本。|  
+|[作法：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|說明如何將應用程式繫結至組件的特定版本。|  
 |[設定組件繫結重新導向](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|說明如何將組件繫結參考重新導向至 .NET Framework 組件的特定版本。|  
 |[同處理序並存執行](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|討論如何使用同處理序並存執行階段主機啟用，在單一處理序中執行多個版本的 CLR。|  
 |[Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|提供組件的概觀。|  

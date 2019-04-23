@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
 ms.openlocfilehash: e899b57e02f492b0e4909aca84c069e5b7688618
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339810"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>HOW TO：宣告混合的存取層級 (Visual Basic) 的屬性
@@ -39,10 +39,10 @@ ms.locfileid: "59339810"
 - [程序](./index.md)
 - [屬性程序](./property-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
-- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Visual Basic 中屬性和變數的差別](./differences-between-properties-and-variables.md)
-- [HOW TO：建立屬性](./how-to-create-a-property.md)
-- [HOW TO：呼叫屬性程序](./how-to-call-a-property-procedure.md)
-- [HOW TO：宣告，並在 Visual Basic 中呼叫預設屬性](./how-to-declare-and-call-a-default-property.md)
-- [HOW TO：將值置入屬性](./how-to-put-a-value-in-a-property.md)
-- [HOW TO：取得屬性值](./how-to-get-a-value-from-a-property.md)
+- [Property 陳述式](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [在 Visual Basic 中屬性和變數之間的差異](./differences-between-properties-and-variables.md)
+- [如何：建立屬性](./how-to-create-a-property.md)
+- [如何：呼叫屬性程序](./how-to-call-a-property-procedure.md)
+- [如何：宣告，並在 Visual Basic 中呼叫預設屬性](./how-to-declare-and-call-a-default-property.md)
+- [如何：將值放在屬性中](./how-to-put-a-value-in-a-property.md)
+- [如何：取得屬性值](./how-to-get-a-value-from-a-property.md)

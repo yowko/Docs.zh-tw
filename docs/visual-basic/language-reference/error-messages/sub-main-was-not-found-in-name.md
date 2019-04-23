@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Sub Main error message
 ms.assetid: a006d57d-4dd3-46a7-9026-ca9a31470da7
 ms.openlocfilehash: e48968472fea2accd85544f2360a6732e2bcbe17
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338744"
 ---
 # <a name="sub-main-was-not-found-in-name"></a>'Sub Main' 找不到在 '\<名稱 >'
-`Sub Main` 是已為其指定遺漏或不正確的位置。  
+`Sub Main` 遺漏，或指定的位置不正確。  
   
  **錯誤 ID:** BC30420  
   
@@ -29,4 +29,4 @@ ms.locfileid: "59338744"
 ## <a name="see-also"></a>另請參閱
 
 - [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Visual Basic 中的 Main 程序](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [在 Visual Basic 中的 main 程序](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

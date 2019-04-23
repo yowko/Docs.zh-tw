@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 182de6ebf9d22da644f1d19566e8cab0052e8521
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 470fcfde7a5e68887fa3a6e99cb8881073ffeba5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221683"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341383"
 ---
 # <a name="where-clause-c-reference"></a>where 子句 (C# 參考)
 
@@ -27,7 +27,7 @@ ms.locfileid: "54221683"
 
 ## <a name="example"></a>範例
 
-在單一 `where` 子句內，您可以使用 [&&](../operators/conditional-and-operator.md) 和 [&#124;&#124;](../operators/conditional-or-operator.md) 運算子來指定所需數目的述詞。 在下列範例中，查詢會指定兩個述詞，只選取小於五的偶數。
+在單一 `where` 子句內，您可以使用 [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) 和 [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) 運算子來指定所需數目的述詞。 在下列範例中，查詢會指定兩個述詞，只選取小於五的偶數。
 
 [!code-csharp[cscsrefQueryKeywords#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#6)]  
 

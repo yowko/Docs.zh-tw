@@ -1,15 +1,15 @@
 ---
-title: 作法：判斷檔案是否為組件 (C#)
+title: HOW TO：判斷檔案是否為組件 (C#)
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
 ms.openlocfilehash: e8026ab5fa44b7601e54b5e76ebf9eb434596a07
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340135"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>作法：判斷檔案是否為組件 (C#)
+# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>HOW TO：判斷檔案是否為組件 (C#)
 檔案只有受管理時才是組件，而且其中繼資料會包含組件項目。 如需組件和中繼資料的詳細資訊，請參閱[組件資訊清單](../../../../../docs/framework/app-domains/assembly-manifest.md)主題。  
   
 ### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>如何以手動方式判斷檔案是否為組件  
@@ -69,5 +69,5 @@ class TestAssembly
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Reflection.AssemblyName>
-- [C# 程式設計手冊](../../../../csharp/programming-guide/index.md)
+- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)
 - [.NET 中的組件](../../../../standard/assembly/index.md)

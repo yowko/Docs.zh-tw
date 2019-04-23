@@ -6,10 +6,10 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 ms.assetid: 12c71221-2377-4bb6-b10b-7b4b300fd462
 ms.openlocfilehash: d3ec2e16f06169790711c92c9d445ae93ee50c95
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338653"
 ---
 # <a name="how-to-create-mdi-parent-forms"></a>HOW TO：建立 MDI 父表單
@@ -38,7 +38,7 @@ ms.locfileid: "59338653"
 ## <a name="see-also"></a>另請參閱
 
 - [多重文件介面 (MDI) 應用程式](multiple-document-interface-mdi-applications.md)
-- [HOW TO：建立 MDI 子表單](how-to-create-mdi-child-forms.md)
-- [HOW TO：決定作用中的 MDI 子系](how-to-determine-the-active-mdi-child.md)
-- [HOW TO：傳送資料至作用中的 MDI 子系](how-to-send-data-to-the-active-mdi-child.md)
-- [HOW TO：排列 MDI 子表單](how-to-arrange-mdi-child-forms.md)
+- [如何：建立 MDI 子表單](how-to-create-mdi-child-forms.md)
+- [如何：決定作用中的 MDI 子系](how-to-determine-the-active-mdi-child.md)
+- [如何：將資料傳送至作用中的 MDI 子系](how-to-send-data-to-the-active-mdi-child.md)
+- [如何：排列 MDI 子表單](how-to-arrange-mdi-child-forms.md)
