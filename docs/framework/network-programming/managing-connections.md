@@ -18,10 +18,10 @@ helpviewer_keywords:
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
 ms.openlocfilehash: 9c434ce0f5934509489a7deeced9e9e579d9cf7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152902"
 ---
 # <a name="managing-connections"></a>管理連接
@@ -66,5 +66,5 @@ sp.ConnectionLimit = newLimit
   
 ## <a name="see-also"></a>另請參閱
 
-- [連接群組](../../../docs/framework/network-programming/connection-grouping.md)
+- [連線群組](../../../docs/framework/network-programming/connection-grouping.md)
 - [使用應用程式通訊協定](../../../docs/framework/network-programming/using-application-protocols.md)

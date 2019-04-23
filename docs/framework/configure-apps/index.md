@@ -25,10 +25,10 @@ helpviewer_keywords:
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147104"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>使用組態檔設定應用程式
@@ -101,7 +101,7 @@ ms.locfileid: "59147104"
 -   使用者原則組態檔：%USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>本節內容  
- [HOW TO：使用 DEVPATH 找出組件](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
+ [如何：使用 DEVPATH 找出組件](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
  說明如何在搜尋組件時指示執行階段使用 DEVPATH 環境變數。  
   
  [重新導向組件版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
@@ -113,7 +113,7 @@ ms.locfileid: "59147104"
  [設定密碼編譯類別](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  說明如何將演算法名稱對應到加密類別，物件識別項對應到加密演算法。  
   
- [HOW TO：建立發行者原則](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
+ [如何：建立發行者原則](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
  說明您何時應該以何種方式新增發行者原則檔，以指定組件重新導向和程式碼基底設定。  
   
  [組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)  

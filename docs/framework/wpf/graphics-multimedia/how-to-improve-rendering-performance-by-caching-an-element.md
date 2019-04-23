@@ -9,10 +9,10 @@ helpviewer_keywords:
 - UIElement [WPF], caching
 ms.assetid: 4739c1fc-60ba-4c46-aba6-f6c1a2688f19
 ms.openlocfilehash: 118e8b0cca52c44788c9d5b291d710f765e7af2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59153370"
 ---
 # <a name="how-to-improve-rendering-performance-by-caching-an-element"></a>HOW TO：透過快取項目改善轉譯效能
@@ -28,4 +28,4 @@ ms.locfileid: "59153370"
 - <xref:System.Windows.Media.BitmapCache>
 - <xref:System.Windows.Media.BitmapCacheBrush>
 - <xref:System.Windows.UIElement.CacheMode%2A>
-- [HOW TO：使用快取的項目作為筆刷](how-to-use-a-cached-element-as-a-brush.md)
+- [如何：使用快取項目當做筆刷](how-to-use-a-cached-element-as-a-brush.md)

@@ -11,10 +11,10 @@ ms.assetid: 2d92a746-d68c-4f53-a16e-727f071a2d80
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1b2535441da173ee13653c68f25039fd1431261a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147429"
 ---
 # <a name="axlpublickeyblobtopublickeytoken-function"></a>_AxlPublicKeyBlobToPublicKeyToken 函式
@@ -37,7 +37,7 @@ HRESULT _AxlPublicKeyBlobToPublicKeyToken (
  [out] WCHAR * 的指標，可接收十六進位編碼公開金鑰雜湊。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK` 如果函式成功，則否則`S_FALSE`。  
+ 如果函式成功，會傳回 `S_OK`，否則會傳回 `S_FALSE`。  
   
 ## <a name="see-also"></a>另請參閱
 

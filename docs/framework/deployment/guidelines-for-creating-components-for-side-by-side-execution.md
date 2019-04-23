@@ -8,10 +8,10 @@ ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0e88ba4260e9deaf53ae828f222d32f8ece61ffa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151030"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>建立並存執行元件的方針
@@ -65,4 +65,4 @@ ms.locfileid: "59151030"
 ## <a name="see-also"></a>另請參閱
 
 - [並存執行](../../../docs/framework/deployment/side-by-side-execution.md)
-- [作法：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [如何：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

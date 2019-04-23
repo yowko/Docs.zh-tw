@@ -3,10 +3,10 @@ title: 設定 ADO.NET 應用程式的安全性
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
 ms.openlocfilehash: 32d3de15242aaf9cfacd9371289a5a0a675f884b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149379"
 ---
 # <a name="securing-adonet-applications"></a>設定 ADO.NET 應用程式的安全性
@@ -20,7 +20,7 @@ ms.locfileid: "59149379"
  [安全性概觀](../../../../docs/framework/data/adonet/security-overview.md)  
  針對設計安全的 ADO. NET 應用程式提供建議。  
   
- [安全存取資料](../../../../docs/framework/data/adonet/secure-data-access.md)  
+ [安全資料存取](../../../../docs/framework/data/adonet/secure-data-access.md)  
  說明如何使用安全資料來源的資料。  
   
  [保護用戶端應用程式的安全](../../../../docs/framework/data/adonet/secure-client-applications.md)  
@@ -45,7 +45,7 @@ ms.locfileid: "59149379"
  [安全性工具](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  
  保護及管理安全性原則的 .NET Framework 工具。  
   
- [建立安全應用程式的資源](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
+ [用於建立安全應用程式的資源](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
  提供建立安全應用程式的主題連結。  
   
  [安全性參考書目](/visualstudio/ide/security-bibliography)  
@@ -54,4 +54,4 @@ ms.locfileid: "59149379"
 ## <a name="see-also"></a>另請參閱
 
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

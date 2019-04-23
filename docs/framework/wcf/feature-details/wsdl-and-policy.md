@@ -3,10 +3,10 @@ title: WSDL 與原則
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
 ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151901"
 ---
 # <a name="wsdl-and-policy"></a>WSDL 與原則
@@ -74,6 +74,6 @@ ms.locfileid: "59151901"
   
 ## <a name="see-also"></a>另請參閱
 
-- [自訂 WSDL 發行物](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [HOW TO：匯出自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [HOW TO：匯入自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [自訂 WSDL 發行集](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
+- [如何：匯出自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [如何：匯入自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

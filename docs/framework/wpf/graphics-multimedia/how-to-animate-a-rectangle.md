@@ -9,10 +9,10 @@ helpviewer_keywords:
 - rectangles [WPF], animating
 ms.assetid: 572ffb95-790d-4ace-adbf-b2ea8a90e75b
 ms.openlocfilehash: 7f7cf24f7883553329de3761ff0670e8e3a09463
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151004"
 ---
 # <a name="how-to-animate-a-rectangle"></a>HOW TO：建立矩形動畫
@@ -31,5 +31,5 @@ ms.locfileid: "59151004"
 - <xref:System.Windows.Media.RectangleGeometry>
 - [動畫概觀](animation-overview.md)
 - [圖形和多媒體](index.md)
-- [圖形 HOW TO 主題](graphics-how-to-topics.md)
-- [動畫和計時 HOW TO 主題](animation-and-timing-how-to-topics.md)
+- [圖形 how to 主題](graphics-how-to-topics.md)
+- [動畫和計時 how to 主題](animation-and-timing-how-to-topics.md)

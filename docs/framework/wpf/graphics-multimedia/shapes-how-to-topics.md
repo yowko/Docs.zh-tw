@@ -10,20 +10,20 @@ helpviewer_keywords:
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
 ms.openlocfilehash: d304a411a92272315506a08a714ae1a5f9b6a000
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150159"
 ---
 # <a name="shapes-how-to-topics"></a>圖案 HOW TO 主題
 在本節中的主題將示範如何使用<xref:System.Windows.Shapes.Shape>物件基本圖形描繪至螢幕。  
   
 ## <a name="in-this-section"></a>本節內容  
- [使用多邊形元素繪製封閉的圖形](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [使用 Polygon 元素繪製封閉的圖形](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
  [繪製橢圓形或圓形](how-to-draw-an-ellipse-or-a-circle.md)  
  [繪製線條](how-to-draw-a-line.md)  
- [使用聚合線條元素繪製聚合線條](how-to-draw-a-polyline-by-using-the-polyline-element.md)  
+ [使用 Polyline 元素繪製聚合線](how-to-draw-a-polyline-by-using-the-polyline-element.md)  
  [繪製矩形](how-to-draw-a-rectangle.md)  
  [修改線條或線段結尾的端點](how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   

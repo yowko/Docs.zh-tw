@@ -8,10 +8,10 @@ ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5df468b87c62f454f6a42fa7a80d92e5ec199fd1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151537"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>設定組件繫結重新導向
@@ -59,4 +59,4 @@ ms.locfileid: "59151537"
   
 ## <a name="see-also"></a>另請參閱
 
-- [作法：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [如何：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

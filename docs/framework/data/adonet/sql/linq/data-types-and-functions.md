@@ -3,10 +3,10 @@ title: 資料類型與函式
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
 ms.openlocfilehash: c17c02900ea6ebda1ee4bbf6e6534310f125a0a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151940"
 ---
 # <a name="data-types-and-functions"></a>資料類型與函式
@@ -20,7 +20,7 @@ ms.locfileid: "59151940"
 |[基本資料類型](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|摘要列出與 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之間的行為差異。|  
 |[Boolean 資料類型](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|摘要列出與 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之間的行為差異。|  
 |[Null 語意](../../../../../../docs/framework/data/adonet/sql/linq/null-semantics.md)|提供 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 主題的連結，而這些主題是討論 Null 和可為 Null 的問題。|  
-|[數值與比較運算子](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|摘要列出與 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之間的行為差異。|  
+|[數值和比較運算子](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|摘要列出與 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之間的行為差異。|  
 |[序列運算子](../../../../../../docs/framework/data/adonet/sql/linq/sequence-operators.md)|摘要列出與 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之間的行為差異。|  
 |[System.Convert 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-convert-methods.md)|摘要列出與 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之間的行為差異。|  
 |[System.DateTime 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)|描述 LINQ to SQL 對 <xref:System.DateTime?displayProperty=nameWithType> 結構之成員的支援。|  

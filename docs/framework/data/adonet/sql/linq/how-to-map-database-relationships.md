@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
 ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152876"
 ---
 # <a name="how-to-map-database-relationships"></a>HOW TO：對應資料庫關聯性
@@ -28,7 +28,7 @@ ms.locfileid: "59152876"
   
 -   多對多：在多對多關聯性，連結資料表的主索引鍵 (也稱為*聯合*資料表) 通常由兩個資料表的外部索引鍵的複合形成。  
   
-     例如，請考慮`Employee` - `Project`藉由使用連結資料表的多對多關聯性形成`EmployeeProject`。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 需要這類關聯性會模型化所使用的三個類別： `Employee`， `Project`，和`EmployeeProject`。 在此情況下，變更 `Employee` 和 `Project` 之間的關聯性，似乎需要更新主索引鍵 `EmployeeProject`。 但是，刪除現有的 `EmployeeProject` 再建立新的 `EmployeeProject` 時，其實最能模擬此種情況。  
+     例如，請考慮`Employee` - `Project`藉由使用連結資料表的多對多關聯性形成`EmployeeProject`。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 要求使用下列三個類別塑造此種關聯性：`Employee`、`Project` 和 `EmployeeProject`。 在此情況下，變更 `Employee` 和 `Project` 之間的關聯性，似乎需要更新主索引鍵 `EmployeeProject`。 但是，刪除現有的 `EmployeeProject` 再建立新的 `EmployeeProject` 時，其實最能模擬此種情況。  
   
     > [!NOTE]
     >  關聯式資料庫中的關聯性通常會塑造成需參考其他資料表中主索引鍵的外部索引鍵值。 若要巡覽其間您明確建立關聯的兩個資料表可以使用關聯式*聯結*作業。  
@@ -55,5 +55,5 @@ ms.locfileid: "59152876"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：使用程式碼編輯器自訂實體類別](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [如何：使用程式碼編輯器自訂實體類別](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
 - [LINQ to SQL 物件模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)

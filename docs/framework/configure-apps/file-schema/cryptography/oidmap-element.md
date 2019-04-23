@@ -9,10 +9,10 @@ helpviewer_keywords:
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 ms.openlocfilehash: 80564c5895e08884f78a4ec7c955ecdb11126e35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146870"
 ---
 # <a name="oidmap-element"></a>\<oidMap > 項目
@@ -77,6 +77,6 @@ ms.locfileid: "59146870"
 
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [密碼編譯服務](../../../../../docs/standard/security/cryptographic-services.md)
+- [The signature is valid](../../../../../docs/standard/security/cryptographic-services.md)
 - [設定密碼編譯類別](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
 - [對應物件識別項至密碼編譯演算法](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

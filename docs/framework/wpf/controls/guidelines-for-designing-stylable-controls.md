@@ -6,10 +6,10 @@ helpviewer_keywords:
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
 ms.openlocfilehash: 756cc821b1a9fe20741e390a1fe6e84d12cc6363
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148157"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>設計可設定樣式控制項的方針
@@ -38,15 +38,15 @@ ms.locfileid: "59148157"
 <a name="General_Guidelines"></a>   
 ## <a name="general-guidelines"></a>一般方針  
   
--   **不完全是會強制執行範本合約。** 控制項的範本合約成份可能包含元素、命令、繫結、觸發程序，或甚至是讓控制項正常運作所需或應有的屬性設定。  
+-   **請勿強制執行範本合約。** 控制項的範本合約成份可能包含元素、命令、繫結、觸發程序，或甚至是讓控制項正常運作所需或應有的屬性設定。  
   
     -   將合約儘量縮減到最少。  
   
-    -   設計時需有心理準備，即在設計階段 (亦即在使用設計工具時) 控制項範本處於不完整狀態是正常的。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 讓控制項有要建置在預期這類狀態可能是有效的情況下，不提供 「 撰寫中 」 狀態基礎結構。  
+    -   設計時需有心理準備，即在設計階段 (亦即在使用設計工具時) 控制項範本處於不完整狀態是正常的。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 並不提供「撰寫中」狀態的基礎結構，因此建置控制項時，必須預期這類狀態可能是有效的狀態。  
   
     -   當有未遵守範本合約任何方面的情況時，請勿擲回例外狀況。 同樣地，面板在子系太多或太少時，也不應該擲回例外狀況。  
   
--   **因素周邊功能列入為範本協助程式元素。** 每個控制項都應該將焦點放在其核心功能和實際的價值主張，並由控制項的一般使用方式定義。 為了達到該目的，請使用範本內的撰寫和協助程式元素來啟用周邊行為和視覺效果，也就是未包含在控制項核心功能內的那些行為和視覺效果。 協助程式元素分成三個分類：  
+-   **將周邊功能列入為範本協助程式元素的考量因素。** 每個控制項都應該將焦點放在其核心功能和實際的價值主張，並由控制項的一般使用方式定義。 為了達到該目的，請使用範本內的撰寫和協助程式元素來啟用周邊行為和視覺效果，也就是未包含在控制項核心功能內的那些行為和視覺效果。 協助程式元素分成三個分類：  
   
     -   「獨立」協助程式是範本中公開且可重複使用的控制項，或是以「匿名方式」使用的基本型別，也就是說，協助程式元素和已設定樣式的控制項都不知道彼此。 就技術而言，任何元素都可以是匿名型別，但在此內容中，此詞彙所描述的是那些封裝特製化功能來實現目標案例的型別。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "59148157"
   
 -   **使用 Name 屬性在範本內標幟元素**。 控制項如果需要在其樣式中尋找元素，以便透過程式設計方式存取該元素，應該使用 `Name` 屬性和 `FindName` 典型來執行此操作。 控制項不應該在找不到元素時擲回例外狀況，而是應該以無訊息且依正常程序的方式，停用需要該元素的功能。  
   
--   **使用最佳作法來表示控制項的狀態和樣式中的行為。** 以下是已排序的最佳做法清單，用來表達樣式中的控制項狀態變更和行為。 您應該使用清單上第一個可實現您案例的項目。  
+-   **使用可表達樣式中控制項狀態和行為的最佳做法。** 以下是已排序的最佳做法清單，用來表達樣式中的控制項狀態變更和行為。 您應該使用清單上第一個可實現您案例的項目。  
   
     1.  屬性繫結。 範例： 繫結之間<xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A?displayProperty=nameWithType>和<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A?displayProperty=nameWithType>。  
   
@@ -99,9 +99,9 @@ ms.locfileid: "59148157"
   
 -   **儘量不要使用樣式觸發程序 (與範本觸發程序相反)**。 針對會影響範本中元素上屬性的觸發程序，您必須在範本中進行宣告。 針對會影響控制項 (無 `TargetName`) 上屬性的觸發程序，除非您知道變更範本應該也會終結觸發程序，否則您可以在樣式中進行宣告。  
   
--   **為配合現有的樣式設定模式。** 在很多時候，都有多種方式可以解決問題。 請注意，儘可能與現有的控制項樣式設定模式保持一致。 這點特別重要，衍生自相同基底類型的控制項 (例如<xref:System.Windows.Controls.ContentControl>， <xref:System.Windows.Controls.ItemsControl>，<xref:System.Windows.Controls.Primitives.RangeBase>等等)。  
+-   **與現有的樣式設定模式保持一致。** 在很多時候，都有多種方式可以解決問題。 請注意，儘可能與現有的控制項樣式設定模式保持一致。 這點特別重要，衍生自相同基底類型的控制項 (例如<xref:System.Windows.Controls.ContentControl>， <xref:System.Windows.Controls.ItemsControl>，<xref:System.Windows.Controls.Primitives.RangeBase>等等)。  
   
--   **公開屬性來啟用常見的自訂案例，而不重新範本化**。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 不支援可插式/可自訂的組件，因此控制項使用者有自訂的只有兩個方法： 直接設定屬性，或設定使用樣式的屬性。 記住這一點之後，就可以公開以非常常見、高優先順序自訂案例為目標的數量有限屬性，否則這些案例將需要重新範本化。 以下是啟用自訂案例的時機和方式的最佳做法：  
+-   **公開屬性來啟用常見的自訂案例，而不重新範本化**。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 不支援可插式/可自訂的組件，因此控制項使用者僅有兩種自訂方法可用：直接設定屬性，或使用樣式來設定屬性。 記住這一點之後，就可以公開以非常常見、高優先順序自訂案例為目標的數量有限屬性，否則這些案例將需要重新範本化。 以下是啟用自訂案例的時機和方式的最佳做法：  
   
     -   非常常見的自訂應該以控制項上屬性的形式公開，並由範本取用。  
   

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Protected Friend keyword [Visual Basic]
 - Protected Friend keyword [Visual Basic], syntax
 ms.openlocfilehash: 331c63dc290d4096e8158f265ee869b47743a273
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151771"
 ---
 # <a name="protected-friend-visual-basic"></a>受保護的 Friend (Visual Basic)
@@ -28,7 +28,7 @@ ms.locfileid: "59151771"
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](friend.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
-- [受保護的私用](./private-protected.md)
+- [Private Protected](./private-protected.md)
 - [在 Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)

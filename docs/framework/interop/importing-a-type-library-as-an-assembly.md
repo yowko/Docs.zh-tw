@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 043fe74f66635c30f12555efb9ccc9415e200ec3
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 4104ddba1942f9cb9bd860d53dc54968de5af891
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151264"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>匯入類型程式庫做為組件
 COM 類型定義通常位於型別程式庫中。 反之，符合 CLS 的編譯器則是在組件中產生型別中繼資料。 這兩種類型資訊的來源有相當大的差異。 本主題描述從型別程式庫產生中繼資料的技術。 產生的組件稱為 Interop 組件，其包含的類型資訊可讓 .NET Framework 應用程式使用 COM 類型。  
@@ -50,7 +50,7 @@ COM 類型定義通常位於型別程式庫中。 反之，符合 CLS 的編譯�
   
      型別程式庫匯入工具提供命令列選項，可以調整產生的 Interop 檔案的中繼資料、從現有型別程式庫匯入型別，以及產生 Interop 組件和命名空間。 如需相關指示，請參閱[如何：從型別程式庫產生 Interop 組件](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)。  
   
--   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> 類別  
+-   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> Class - 類別  
   
      這個類別提供將型別程式庫中的 coclass 和介面轉換為組件內中繼資料的方法。 它會產生與 Tlbimp.exe 相同的中繼資料輸出。 不過，不同於 Tlbimp.exe，<xref:System.Runtime.InteropServices.TypeLibConverter> 類別可以將記憶體內部型別程式庫轉換為中繼資料。  
   
@@ -71,13 +71,14 @@ COM 類型定義通常位於型別程式庫中。 反之，符合 CLS 的編譯�
  如需 COM Interop 匯入處理序的詳細資訊，請參閱[型別程式庫至組件轉換的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - [將 COM 元件公開給 .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
 - [型別程式庫至組件轉換的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Tlbimp.exe (類型程式庫匯入工具)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
 - [自訂標準包裝函式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
-- [在受控程式碼中使用 COM 類型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
+- [在受控程式碼中使用 COM 型別](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [編譯 Interop 專案](../../../docs/framework/interop/compiling-an-interop-project.md)
 - [部署 Interop 應用程式](../../../docs/framework/interop/deploying-an-interop-application.md)
-- [如何：將參考新增至型別程式庫](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
-- [如何：從型別程式庫產生 Interop 組件](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
+- [作法：將參考新增至型別程式庫](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
+- [作法：從型別程式庫產生 Interop 組件](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)

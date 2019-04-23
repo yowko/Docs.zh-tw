@@ -3,10 +3,10 @@ title: SQL Server 安全性概觀
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
 ms.openlocfilehash: de0c79a95a786f33b05c88ce4ed298837f2a6923
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148586"
 ---
 # <a name="overview-of-sql-server-security"></a>SQL Server 安全性概觀
@@ -44,4 +44,4 @@ ms.locfileid: "59148586"
 - [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

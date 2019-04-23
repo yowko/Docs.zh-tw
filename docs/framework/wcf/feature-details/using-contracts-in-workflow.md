@@ -3,10 +3,10 @@ title: 在工作流程中使用合約
 ms.date: 03/30/2017
 ms.assetid: 939c64e9-e7cc-4abc-b41e-27cfce1d7e50
 ms.openlocfilehash: dd35766011c412acc937eed75d523a0574f6b9cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150055"
 ---
 # <a name="using-contracts-in-workflow"></a>在工作流程中使用合約
@@ -35,5 +35,5 @@ ms.locfileid: "59150055"
 
 - [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [傳訊活動](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
-- [HOW TO：使用傳訊活動建立工作流程服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
-- [HOW TO：建立會取用現有服務合約的工作流程服務](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)
+- [如何：搭配訊息活動建立工作流程服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
+- [如何：建立會取用現有服務合約的工作流程服務](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)

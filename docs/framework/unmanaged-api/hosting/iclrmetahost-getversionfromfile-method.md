@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a6c7fd48269a3e8291a548b3e13efe5c8e70652
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150809"
 ---
 # <a name="iclrmetahostgetversionfromfile-method"></a>ICLRMetaHost::GetVersionFromFile 方法
@@ -58,7 +58,7 @@ HRESULT GetVersionFromFile (
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|E_POINTER|`pwzbuffer` 或`pcchBuffer`為 null。|  
+|E_POINTER|`pwzbuffer` 或 `pcchBuffer` 為 null。|  
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|緩衝區是太小。|  
   
 ## <a name="requirements"></a>需求  
@@ -68,7 +68,7 @@ HRESULT GetVersionFromFile (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

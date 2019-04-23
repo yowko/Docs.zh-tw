@@ -3,10 +3,10 @@ title: SQL-CLR 類型對應
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152486"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 類型對應
@@ -104,7 +104,7 @@ ms.locfileid: "59152486"
   
  下表顯示 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法用於定義建立哪些 SQL 資料行型別來對應至 CLR 型別 (定義於物件模型或外部對應檔案中) 的預設型別對應。  
   
-|CLR 型別|所使用的預設 SQL Server 類型 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|CLR 型別|<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 所使用的預設 SQL Server 型別|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Boolean?displayProperty=nameWithType>|`BIT`|  
 |<xref:System.Byte?displayProperty=nameWithType>|`TINYINT`|  
@@ -142,12 +142,12 @@ ms.locfileid: "59152486"
   
  下表顯示 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法用於定義建立哪些 SQL 資料行型別來對應至 CLR 型別 (定義於物件模型或外部對應檔案中) 的預設型別對應。  
   
-|CLR 型別|所使用的預設 SQL Server 類型 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|CLR 型別|<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 所使用的預設 SQL Server 型別|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Char?displayProperty=nameWithType>|`NCHAR(1)`|  
 |<xref:System.String?displayProperty=nameWithType>|`NVARCHAR(4000)`|  
 |<xref:System.Char?displayProperty=nameWithType>[]|`NVARCHAR(4000)`|  
-|自訂型別實作`Parse()`和 `ToString()`|`NVARCHAR(MAX)`|  
+|實作 `Parse()` 和 `ToString()` 的自訂型別|`NVARCHAR(MAX)`|  
   
  雖然還有許多其他以文字為基礎的對應和 XML 對應可供您選擇，但是在資料庫之間來回轉譯時，某些對應可能會造成溢位或資料遺失的例外狀況。 如需詳細資訊，請參閱 <<c0> [ 型別對應的執行階段行為對照表](#BehaviorMatrix)。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "59152486"
   
  下表顯示 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法用於定義建立哪些 SQL 資料行型別來對應至 CLR 型別 (定義於物件模型或外部對應檔案中) 的預設型別對應。  
   
-|CLR 型別|所使用的預設 SQL Server 類型 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|CLR 型別|<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 所使用的預設 SQL Server 型別|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.DateTime?displayProperty=nameWithType>|`DATETIME`|  
 |<xref:System.DateTimeOffset?displayProperty=nameWithType>|`DATETIMEOFFSET`|  
@@ -199,7 +199,7 @@ ms.locfileid: "59152486"
 ### <a name="systemdatetime"></a>System.Datetime  
  CLR <xref:System.DateTime?displayProperty=nameWithType> 型別的範圍和精確度大於 SQL Server `DATETIME` 型別的範圍和精確度，而這是 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法的預設型別對應。 若要協助避免與超出 `DATETIME` 範圍之日期相關的例外狀況，請使用 `DATETIME2` (從 Microsoft SQL Server 2008 開始提供)。 `DATETIME2` 可以比對的範圍和精確度的 clr <xref:System.DateTime?displayProperty=nameWithType>。  
   
- SQL Server 日期沒有 <xref:System.TimeZone> 的概念，而這是 CLR 中完全支援的功能。 <xref:System.TimeZone> 值會原樣儲存至資料庫，而不<xref:System.TimeZone>轉換時，不論原始<xref:System.DateTimeKind>資訊。 從資料庫擷取 <xref:System.DateTime> 值時，這個值會原樣載入至 <xref:System.DateTime>，並將 <xref:System.DateTimeKind> 設為 <xref:System.DateTimeKind.Unspecified> 中。 如需有關支援<xref:System.DateTime?displayProperty=nameWithType>方法，請參閱[System.DateTime 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)。  
+ SQL Server 日期沒有 <xref:System.TimeZone> 的概念，而這是 CLR 中完全支援的功能。 不論原始 <xref:System.TimeZone> 資訊為何，<xref:System.TimeZone> 值會原樣儲存至資料庫，而不進行 <xref:System.DateTimeKind> 轉換。 從資料庫擷取 <xref:System.DateTime> 值時，這個值會原樣載入至 <xref:System.DateTime>，並將 <xref:System.DateTimeKind> 設為 <xref:System.DateTimeKind.Unspecified> 中。 如需有關支援<xref:System.DateTime?displayProperty=nameWithType>方法，請參閱[System.DateTime 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)。  
   
 ### <a name="systemtimespan"></a>System.TimeSpan  
  Microsoft SQL Server 2008 和 .NET Framework 3.5 SP1 可讓您將 CLR <xref:System.TimeSpan?displayProperty=nameWithType> 型別對應至 SQL Server `TIME` 型別。 不過，CLR <xref:System.TimeSpan?displayProperty=nameWithType> 所支援的範圍與 SQL Server `TIME` 型別所支援的範圍之間具有大幅差異。 將小於 0 或大於 23:59:59.9999999 小時的值對應至 SQL `TIME` 將會造成溢位的例外狀況。 如需詳細資訊，請參閱 < [System.TimeSpan 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)。  
@@ -221,7 +221,7 @@ ms.locfileid: "59152486"
   
  下表顯示 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法用於定義建立哪些 SQL 資料行型別來對應至 CLR 型別 (定義於物件模型或外部對應檔案中) 的預設型別對應。  
   
-|CLR 型別|所使用的預設 SQL Server 類型 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|CLR 型別|<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 所使用的預設 SQL Server 型別|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
 |<xref:System.Byte?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
@@ -249,7 +249,7 @@ ms.locfileid: "59152486"
   
  下表顯示 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法用於定義建立哪些 SQL 資料行型別來對應至 CLR 型別 (定義於物件模型或外部對應檔案中) 的預設型別對應。  
   
-|CLR 型別|所使用的預設 SQL Server 類型 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|CLR 型別|<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 所使用的預設 SQL Server 型別|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Guid?displayProperty=nameWithType>|`UNIQUEIDENTIFIER`|  
 |<xref:System.Object?displayProperty=nameWithType>|`SQL_VARIANT`|  
@@ -258,7 +258,7 @@ ms.locfileid: "59152486"
   
 ## <a name="see-also"></a>另請參閱
 
-- [屬性架構對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+- [以屬性為基礎的對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [資料類型與函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [資料類型和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
 - [SQL-CLR 類型不符](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)

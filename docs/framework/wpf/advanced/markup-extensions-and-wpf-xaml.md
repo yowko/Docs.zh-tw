@@ -16,10 +16,10 @@ helpviewer_keywords:
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
 ms.openlocfilehash: 46539f0cfdcc478e2f5e4cd7aecf16ac059e6332
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148092"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>標記延伸和 WPF XAML
@@ -41,13 +41,13 @@ ms.locfileid: "59148092"
 ## <a name="xaml-defined-markup-extensions"></a>已定義 XAML 的標記延伸  
  數個標記延伸模組不是 XAML 的 WPF 實作所特有，而是作為語言之 XAML 的內建功能或功能實作。 這些標記延伸模組在 System.Xaml 組件中實作為一般 .NET Framework XAML 服務的一部分，並且位在 XAML 語言 XAML 命名空間內。 根據常見標記用法，這些標記延伸模組通常可以透過用法中的 `x:` 前置詞進行識別。 <xref:System.Windows.Markup.MarkupExtension>基底類別 （也定義於 System.Xaml） 提供應該使用的所有標記延伸，以便支援 XAML 讀取器和 XAML 寫入器，包括 WPF XAML 中的模式。  
   
--   `x:Type` 提供<xref:System.Type>具名類型的物件。 這項工具最常用於樣式和範本。 如需詳細資訊，請參閱 [x:Type 標記延伸模組](../../xaml-services/x-type-markup-extension.md)。  
+-   `x:Type` 提供具名類型的 <xref:System.Type> 物件。 這項工具最常用於樣式和範本。 如需詳細資訊，請參閱 [x:Type 標記延伸模組](../../xaml-services/x-type-markup-extension.md)。  
   
 -   `x:Static` 會產生靜態值。 值來自實值類型程式碼實體，而此實體不是直接為目標屬性值類型，但可以評估為該類型。 如需詳細資訊，請參閱 [x:Static 標記延伸模組](../../xaml-services/x-static-markup-extension.md)。  
   
--   `x:Null` 指定`null`做為屬性值和可用的屬性或屬性項目值。 如需詳細資訊，請參閱 [x:Null 標記延伸模組](../../xaml-services/x-null-markup-extension.md)。  
+-   `x:Null` 指定 `null` 作為屬性的值，而且可以用於屬性 (attribute) 或屬性 (property) 項目值。 如需詳細資訊，請參閱 [x:Null 標記延伸模組](../../xaml-services/x-null-markup-extension.md)。  
   
--   `x:Array` 建立一般陣列中 XAML 語法，其中的集合支援由 WPF 基底項目，且控制模型故意不使用的情況下提供支援。 如需詳細資訊，請參閱 [x:Array 標記延伸模組](../../xaml-services/x-array-markup-extension.md)。  
+-   如果故意不使用 WPF 基底項目和控制項模型所提供的集合支援，則 `x:Array` 支援使用 XAML 語法來建立一般陣列。 如需詳細資訊，請參閱 [x:Array 標記延伸模組](../../xaml-services/x-array-markup-extension.md)。  
   
 > [!NOTE]
 >  `x:` 前置詞用於 XAML 檔案或生產的根項目中 XAML 語言內建功能的一般 XAML 命名空間對應。 比方說，WPF 應用程式的 Visual Studio 範本會起始 XAML 檔案使用此`x:`對應。 您可以選擇專屬 XAML 命名空間對應中的不同前置詞語彙基元，但是這份文件將假設使用預設 `x:` 對應來識別這些是 XAML 語言 XAML 命名空間之已定義部分的實體，而非與特定架構無關的 WPF 預設命名空間或其他 XML 命名空間。  
@@ -56,19 +56,19 @@ ms.locfileid: "59148092"
 ## <a name="wpf-specific-markup-extensions"></a>WPF 特定標記延伸模組  
  WPF 程式設計中所使用的最常見標記延伸模組是支援資源參考的標記延伸模組 (`StaticResource` 和 `DynamicResource`)，以及支援資料繫結的標記延伸模組 (`Binding`)。  
   
--   `StaticResource` 提供屬性的值，以替代已定義之資源的值。 `StaticResource` 評估最終會在 XAML 載入期間進行，而且無法在執行階段存取物件圖形。 如需詳細資訊，請參閱 [StaticResource 標記延伸模組](staticresource-markup-extension.md)。  
+-   `StaticResource` 會替代已定義資源的值，來提供屬性的值。 `StaticResource` 評估最終會在 XAML 載入期間進行，而且無法在執行階段存取物件圖形。 如需詳細資訊，請參閱 [StaticResource 標記延伸模組](staticresource-markup-extension.md)。  
   
--   `DynamicResource` 提供延後該值是資源的執行階段參考屬性的值。 動態資源參考可在每次存取這類資源時強制執行新的查閱作業，而且可以在執行階段存取物件圖形。 若要取得這項存取，WPF 屬性系統中的相依性屬性以及評估過的運算式都支援 `DynamicResource` 概念。 因此，您只能針對相依性屬性目標使用 `DynamicResource`。 如需詳細資訊，請參閱 [DynamicResource 標記延伸模組](dynamicresource-markup-extension.md)。  
+-   `DynamicResource` 會針對屬性提供一個值，方式是延後該值，使其變成資源的執行階段參考。 動態資源參考可在每次存取這類資源時強制執行新的查閱作業，而且可以在執行階段存取物件圖形。 若要取得這項存取，WPF 屬性系統中的相依性屬性以及評估過的運算式都支援 `DynamicResource` 概念。 因此，您只能針對相依性屬性目標使用 `DynamicResource`。 如需詳細資訊，請參閱 [DynamicResource 標記延伸模組](dynamicresource-markup-extension.md)。  
   
--   `Binding` 提供資料繫結所使用的資料內容會套用至父物件，在執行階段的屬性值。 此標記延伸模組啟用用於指定資料繫結的重大內嵌語法，因此相當複雜。 如需詳細資訊，請參閱[Binding 標記延伸模組](binding-markup-extension.md)。  
+-   `Binding` 使用在執行階段套用至父物件的資料內容，來提供屬性的資料繫結值。 此標記延伸模組啟用用於指定資料繫結的重大內嵌語法，因此相當複雜。 如需詳細資訊，請參閱[Binding 標記延伸模組](binding-markup-extension.md)。  
   
 -   `RelativeSource` 提供來源資訊<xref:System.Windows.Data.Binding>，可以瀏覽數個可能的關聯性，在執行階段物件樹狀目錄中。 這會提供在多用途範本中所建立或使用程式碼所建立之繫結的特殊化來源，而不需要完全了解周圍物件樹狀結構。 如需詳細資訊，請參閱 [RelativeSource 標記延伸模組](relativesource-markupextension.md)。  
   
--   `TemplateBinding` 可讓控制項樣板以使用來自物件模型定義的屬性，會使用範本之類別的樣板化屬性的值。 換句話說，範本定義內的屬性可以存取只在套用範本後存在的內容。 如需詳細資訊，請參閱 [TemplateBinding 標記延伸模組](templatebinding-markup-extension.md)。 如需 `TemplateBinding` 實際使用的詳細資訊，請參閱 [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) (使用 ControlTemplates 設定樣式範例)。  
+-   `TemplateBinding` 可讓控制項範本使用範本屬性的值，而範本屬性來自將使用範本之類別的物件模型定義屬性。 換句話說，範本定義內的屬性可以存取只在套用範本後存在的內容。 如需詳細資訊，請參閱 [TemplateBinding 標記延伸模組](templatebinding-markup-extension.md)。 如需 `TemplateBinding` 實際使用的詳細資訊，請參閱 [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) (使用 ControlTemplates 設定樣式範例)。  
   
--   `ColorConvertedBitmap` 支援相對較進階的影像處理案例。 如需詳細資訊，請參閱 [ColorConvertedBitmap 標記延伸模組](colorconvertedbitmap-markup-extension.md)。  
+-   `ColorConvertedBitmap` 支援一個相當進階的影像處理案例。 如需詳細資訊，請參閱 [ColorConvertedBitmap 標記延伸模組](colorconvertedbitmap-markup-extension.md)。  
   
--   `ComponentResourceKey` 和`ThemeDictionary`支援資源查閱的層面，特別是針對資源和隨附的自訂控制項的佈景主題。 如需詳細資訊，請參閱 [ComponentResourceKey 標記延伸模組](componentresourcekey-markup-extension.md)、[ThemeDictionary 標記延伸模組](themedictionary-markup-extension.md)或[控制項撰寫概觀](../controls/control-authoring-overview.md)。  
+-   `ComponentResourceKey` 和 `ThemeDictionary` 支援資源查閱各層面，特別是針對與自訂控制項一起封裝的資源和主題。 如需詳細資訊，請參閱 [ComponentResourceKey 標記延伸模組](componentresourcekey-markup-extension.md)、[ThemeDictionary 標記延伸模組](themedictionary-markup-extension.md)或[控制項撰寫概觀](../controls/control-authoring-overview.md)。  
   
 <a name="StarExtension"></a>   
 ## <a name="extension-classes"></a>*延伸模組類別  
@@ -119,9 +119,9 @@ ms.locfileid: "59148092"
 ## <a name="see-also"></a>另請參閱
 
 - [XAML 概觀 (WPF)](xaml-overview-wpf.md)
-- [XAML 命名空間 (x:)語言功能](../../xaml-services/xaml-namespace-x-language-features.md)
-- [WPF XAML 擴充功能](wpf-xaml-extensions.md)
+- [XAML 命名空間 （x:）語言功能](../../xaml-services/xaml-namespace-x-language-features.md)
+- [WPF XAML 延伸](wpf-xaml-extensions.md)
 - [StaticResource 標記延伸](staticresource-markup-extension.md)
-- [繫結標記延伸](binding-markup-extension.md)
+- [Binding 標記延伸](binding-markup-extension.md)
 - [DynamicResource 標記延伸](dynamicresource-markup-extension.md)
-- [x:Type 標記延伸](../../xaml-services/x-type-markup-extension.md)
+- [x:Type 標記延伸模組](../../xaml-services/x-type-markup-extension.md)

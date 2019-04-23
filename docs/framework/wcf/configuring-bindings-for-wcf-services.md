@@ -5,10 +5,10 @@ helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
 ms.openlocfilehash: 009011100af86e315aa41beb822b1448e2f21b25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150445"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>設定 Windows Communication Foundation 服務的繫結
@@ -58,7 +58,7 @@ ms.locfileid: "59150445"
 </service>  
 ```  
   
- 在此範例中，`name` 屬性表示組態是針對哪種服務類型。 當您在編碼中以 `HelloWorld` 合約建立服務，它將以範例組態定義的所有端點進行初始化。 如果組件實作只有一個服務合約，`name`可以省略屬性，因為服務使用的唯一可用的型別。 這個屬性接受的格式必須是字串 `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
+ 在此範例中，`name` 屬性表示組態是針對哪種服務類型。 當您在編碼中以 `HelloWorld` 合約建立服務，它將以範例組態定義的所有端點進行初始化。 如果組件實作只有一個服務合約，`name`可以省略屬性，因為服務使用的唯一可用的型別。 該屬性取用一個字串，格式必須為 `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
   
  `address` 屬性指定其他端點用來和服務通訊的 URI。 URI 可能是絕對或相對路徑。 如果提供相對位址，主機必須為繫結中使用的傳輸配置提供適當的基底位址。 如果沒有設定位址，會將基底位址假設為該端點的位址。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "59150445"
   
 ## <a name="see-also"></a>另請參閱
 
-- [簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)
+- [簡化設定](../../../docs/framework/wcf/simplified-configuration.md)
 - [系統提供的繫結](../../../docs/framework/wcf/system-provided-bindings.md)
-- [端點建立概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [使用繫結來設定服務和用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [建立端點概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [使用繫結設定服務與用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

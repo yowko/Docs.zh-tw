@@ -7,10 +7,10 @@ helpviewer_keywords:
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
 ms.openlocfilehash: 8d7b9c811c557b10160c2581a59f5ebf72882bfd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147039"
 ---
 # <a name="introduction-to-extensibility"></a>擴充性簡介
@@ -54,4 +54,4 @@ Windows Communication Foundation (WCF) 應用程式模型是設計用來解決�
   
 ## <a name="see-also"></a>另請參閱
 
-- [延伸 WCF](../../../docs/framework/wcf/extending/index.md)
+- [擴充 WCF](../../../docs/framework/wcf/extending/index.md)
