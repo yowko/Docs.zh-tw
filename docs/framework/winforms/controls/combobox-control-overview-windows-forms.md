@@ -10,10 +10,10 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], about combo boxes
 ms.assetid: a58b393f-a614-45d1-8961-857a024b5acd
 ms.openlocfilehash: 80056771744c9b97828a024adf32638e545a839e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211567"
 ---
 # <a name="combobox-control-overview-windows-forms"></a>ComboBox 控制項概觀 (Windows Form)
@@ -27,10 +27,10 @@ Windows Form<xref:System.Windows.Forms.ComboBox>控制項用來顯示在下拉�
 
 - <xref:System.Windows.Forms.ComboBox>
 - [ListBox 控制項概觀](listbox-control-overview-windows-forms.md)
-- [何時使用 Windows Form ComboBox 取代 ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
-- [HOW TO：在 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項中新增和移除項目](add-and-remove-items-from-a-wf-combobox.md)
-- [HOW TO：排序 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項內容](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [HOW TO：在 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項中存取特定項目](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)
-- [HOW TO：將 Windows Forms ComboBox 或 ListBox 控制項繫結至資料](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
-- [用來列出選項的 Windows Form 控制項](windows-forms-controls-used-to-list-options.md)
-- [HOW TO：為 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項建立查閱資料表](create-a-lookup-table-for-a-wf-combobox-listbox.md)
+- [何時使用 Windows Forms ComboBox 取代 ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
+- [如何：新增和移除項目從 Windows Form 的 ComboBox、 ListBox 或 CheckedListBox 控制項](add-and-remove-items-from-a-wf-combobox.md)
+- [如何：排序內容的 Windows Forms 的 ComboBox、 ListBox 或 CheckedListBox 控制項](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [如何：存取特定項目中的 Windows Forms 的 ComboBox、 ListBox 或 CheckedListBox 控制項](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)
+- [如何：將 Windows Form ComboBox 或 ListBox 控制項繫結至資料](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
+- [用來列出選項的 Windows Forms 控制項](windows-forms-controls-used-to-list-options.md)
+- [如何：Windows form 的 ComboBox、 ListBox 或 CheckedListBox 控制項建立查閱資料表](create-a-lookup-table-for-a-wf-combobox-listbox.md)

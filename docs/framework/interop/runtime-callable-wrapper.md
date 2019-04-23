@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1962815b8e294b1321320ce500554046d05f4c8f
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 5a4a2f59ee81ac7884050f588d9bd437977490e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654129"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210127"
 ---
 # <a name="runtime-callable-wrapper"></a>執行階段可呼叫包裝函式
 Common Language Runtime 會透過名為執行階段可呼叫包裝函式 (RCW) 的 Proxy 來公開 COM 物件。 雖然 RCW 對 .NET 用戶端似乎是個普通物件，但其主要功能是在 .NET 用戶端與 COM 物件之間封送處理呼叫。  
@@ -25,8 +25,7 @@ Common Language Runtime 會透過名為執行階段可呼叫包裝函式 (RCW) �
 下圖顯示透過執行階段可呼叫包裝函式來存取 COM 物件的程序：
 
  ![透過 RCW 存取 COM 物件的程序。](./media/runtime-callable-wrapper/runtime-callable-wrapper.gif)  
-   
-  
+
  使用衍生自類型程式庫的中繼資料，執行階段可以建立所呼叫的 COM 物件，以及該物件的包裝函式。 每個 RCW 都會在其包裝的 COM 物件上維護介面指標的快取，當不再需要 RCW 時，就會在 COM 物件上釋出其參考。 執行階段會在 RCW 上執行記憶體回收。  
   
  RCW 有許多活動，其中包括代表所包裝的物件，在 Managed 與 Unmanaged 程式碼之間封送處理資料。 具體來說，每當用戶端與伺服器之間，有不同表示方式的資料要傳遞時，RCW 就會針對方法引數和方法傳回值提供封送處理。  
@@ -60,6 +59,7 @@ Common Language Runtime 會透過名為執行階段可呼叫包裝函式 (RCW) �
 |**IEnumVARIANT**|可讓支援列舉的 COM 類型被視為集合來處理。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [COM 包裝函式](com-wrappers.md)
 - [COM 可呼叫包裝函式](com-callable-wrapper.md)
 - [型別程式庫至組件轉換的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))

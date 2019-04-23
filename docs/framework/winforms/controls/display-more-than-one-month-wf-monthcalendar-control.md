@@ -12,10 +12,10 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d197caa2-38a5-4cb4-acc3-562130c2ace3
 ms.openlocfilehash: 79100b52d8e0a5b651edb9d6555a4497287ed858
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209550"
 ---
 # <a name="how-to-display-more-than-one-month-in-the-windows-forms-monthcalendar-control"></a>HOW TO：在 Windows Forms MonthCalendar 控制項中顯示多個月份
@@ -40,5 +40,5 @@ Windows Form<xref:System.Windows.Forms.MonthCalendar>控制項可以顯示最多
 ## <a name="see-also"></a>另請參閱
 
 - [MonthCalendar 控制項](monthcalendar-control-windows-forms.md)
-- [HOW TO：在 Windows Forms 的 MonthCalendar 控制項中選取一個日期範圍](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [HOW TO：變更 Windows Forms MonthCalendar 控制項的外觀](how-to-change-monthcalendar-control-appearance.md)
+- [如何：在 Windows Form MonthCalendar 控制項中選取一個日期範圍](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [如何：變更 Windows Form MonthCalendar 控制項的外觀](how-to-change-monthcalendar-control-appearance.md)

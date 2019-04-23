@@ -7,17 +7,17 @@ helpviewer_keywords:
 - resizing grid columns [WPF]
 ms.assetid: 47b20fe6-7adc-4aa6-9693-b4e184eef74b
 ms.openlocfilehash: f743e9ccf8a984a646a4b8f05ee99162e5bc73ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210434"
 ---
 # <a name="how-to-resize-columns-with-a-gridsplitter"></a>HOW TO：使用 GridSplitter 調整資料行的大小
 此範例示範如何建立垂直<xref:System.Windows.Controls.GridSplitter>來重新分配的空間中的兩個資料行之間<xref:System.Windows.Controls.Grid>而不需要變更的維度<xref:System.Windows.Controls.Grid>。  
   
 ## <a name="example"></a>範例  
- **如何建立 GridSplitter 重疊的資料行的邊緣**  
+ **如何建立重疊資料行邊緣的 GridSplitter**  
   
  若要指定<xref:System.Windows.Controls.GridSplitter>，調整大小，在相鄰的資料行<xref:System.Windows.Controls.Grid>，將<xref:System.Windows.Controls.Grid.Column%2A>附加屬性設定為其中一個您想要調整大小的資料行。 如果您<xref:System.Windows.Controls.Grid>有一個以上的資料列，設定<xref:System.Windows.Controls.Grid.RowSpan%2A>附加屬性的資料列數目。 然後設定<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>屬性，以<xref:System.Windows.HorizontalAlignment.Left>或<xref:System.Windows.HorizontalAlignment.Right>（您所設定的對齊方式取決於您想要調整大小的兩個資料行上）。 最後，設定<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>屬性設<xref:System.Windows.VerticalAlignment.Stretch>。  
   
@@ -37,4 +37,4 @@ ms.locfileid: "59210434"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Controls.GridSplitter>
-- [HOW TO 主題](gridsplitter-how-to-topics.md)
+- [HOW-TO 主題](gridsplitter-how-to-topics.md)

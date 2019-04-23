@@ -11,10 +11,10 @@ helpviewer_keywords:
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
 ms.openlocfilehash: edc5fbe552a04387fc3f152cb53444605d142624
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209966"
 ---
 # <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>HOW TO：透過 RowGroups 屬性管理資料表的資料列群組
@@ -85,6 +85,6 @@ ms.locfileid: "59209966"
   
 ## <a name="see-also"></a>另請參閱
 
-- [操作說明：透過 Inlines 屬性管理動態內容項目](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [操作說明：管理非固定格式內容項目，透過 Inlines 屬性](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
 - [透過 Blocks 屬性管理 FlowDocument](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
-- [透過 Columns 屬性管理資料表的資料行](how-to-manipulate-table-columns-through-the-columns-property.md)
+- [透過 Columns 屬性管理表格的資料行](how-to-manipulate-table-columns-through-the-columns-property.md)

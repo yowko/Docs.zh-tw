@@ -3,10 +3,10 @@ title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
 ms.openlocfilehash: 575b2a3e34246e1082d34545baaf812203a1dde1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209108"
 ---
 # <a name="hosting"></a>裝載
@@ -15,10 +15,10 @@ ms.locfileid: "59209108"
  從未受信任的主機執行服務或任何延伸項目都會破壞安全性，這點請您務必注意。  
   
 ## <a name="in-this-section"></a>本節內容  
- [在網際網路資訊服務中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [在 Internet Information Services 中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
  描述如何將 Windows Communication Foundation (WCF) 服務裝載在 Internet Information Services 或[Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496)。  
   
- [在 Windows Process Activation Service 中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  
+ [在 Windows 處理序啟用服務中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  
  描述由 Windows Process Activation Service 裝載的 WCF 服務的方式。  
   
  [在 Windows 服務應用程式中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-a-windows-service-application.md)  
@@ -27,7 +27,7 @@ ms.locfileid: "59209108"
  [在 Managed 應用程式中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)  
  描述如何在受管理的應用程式中裝載 WCF 服務。  
   
- [在 IIS 與 WAS 中以組態為基礎的啟動](../../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
+ [IIS 和 WAS 中以組態為基礎的啟用](../../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
  描述在 IIS 或 WAS 下裝載 WCF 服務的方式，而不使用.svc 檔案。  
   
  [支援多重 IIS 網站繫結](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)  

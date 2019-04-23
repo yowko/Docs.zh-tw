@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
 ms.openlocfilehash: 70dda68112d47d3e5a0609a5df7696920477c698
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210200"
 ---
 # <a name="planning-for-application-performance"></a>應用程式效能規劃
@@ -40,6 +40,6 @@ ms.locfileid: "59210200"
 - [2D 圖形和影像處理](optimizing-performance-2d-graphics-and-imaging.md)
 - [物件行為](optimizing-performance-object-behavior.md)
 - [應用程式資源](optimizing-performance-application-resources.md)
-- [文字](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [資料繫結](optimizing-performance-data-binding.md)
 - [其他效能建議](optimizing-performance-other-recommendations.md)
