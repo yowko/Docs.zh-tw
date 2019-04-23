@@ -7,32 +7,32 @@ helpviewer_keywords:
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
 ms.openlocfilehash: 06cbc82f3636c4063b445a0ccbe871e0be1dd847
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134656"
 ---
 # <a name="ui-automation-overview"></a>UI 自動化概觀
 > [!NOTE]
 >  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 是新的協助工具架構，用於[!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]，在所有支援的作業系統上使用[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]。  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 是 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]的新協助工具架構，可在所有支援 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]的作業系統上使用。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供以程式設計方式存取大部分[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]項目在桌面上，啟用輔助技術產品，例如畫面提供相關資訊的讀者[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]給使用者，以及操作[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]以外的其他方法標準輸入。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 也可讓與互動的自動化的測試指令碼[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 會以程式設計方式存取桌面上大部分的 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 項目，啟用輔助技術產品 (例如螢幕助讀員)，以便為使用者提供 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 的相關資訊，以及使用標準輸入以外的方式來操作 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 也可以讓自動化測試指令碼與 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]互動。  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 不會啟用透過不同的使用者來啟動處理序間通訊**以執行**命令。  
+>  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 不支援不同使用者透過 **Run as** 命令，來啟動處理序之間通訊的功能。  
   
  撰寫使用者介面自動化用戶端應用程式時，可以保證應用程式可在多個架構上運作。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心可以降低組成 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]各種元件之架構的任何差異。 例如， `Content` 按鈕的 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 屬性、 `Caption` 按鈕的 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 屬性以及 HTML 影像的 `ALT` 屬性，都會對應至 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>檢視中的單一屬性 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供完整的功能[!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]， [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)]，和[!INCLUDE[TLA2#tla_winnetsvrfam](../../../includes/tla2sharptla-winnetsvrfam-md.md)]。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]、 [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)]和 [!INCLUDE[TLA2#tla_winnetsvrfam](../../../includes/tla2sharptla-winnetsvrfam-md.md)]中的完整功能。  
   
  使用者介面自動化提供者會透過內建的橋接服務，為 [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] 用戶端應用程式提供某些支援。  
   
 <a name="Providers_and_Clients"></a>   
 ## <a name="providers-and-clients"></a>提供者和用戶端  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 下表所示，有四個主要元件。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 具有四個主要元件，如下表所示。  
   
 |元件|描述|  
 |---------------|-----------------|  
@@ -46,11 +46,11 @@ ms.locfileid: "59134656"
 |區段|主題|適用對象|  
 |-------------|--------------------|--------------|  
 |[UI 自動化基礎觀念](../../../docs/framework/ui-automation/index.md)（本節）|概念概觀淺論。|全部。|  
-|[使用 Managed 程式碼的 UI 自動化提供者](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)|協助您使用提供者 API 的概觀及操作說明主題。|控制項開發人員。|  
-|[Managed 程式碼的 UI 自動化用戶端](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)|協助您使用用戶端 API 的概觀及操作說明主題。|用戶端應用程式開發人員。|  
-|[UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)|提供者應如何實作控制項模式，以及哪些功能可供用戶端使用的相關資訊。|全部。|  
-|[UI 自動化的文字模式](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)|提供者應如何實作文字控制項模式，以及哪些功能可供用戶端使用的相關資訊。|全部。|  
-|[UI 自動化控制項類型](../../../docs/framework/ui-automation/ui-automation-control-types.md)|不同控制項類型支援之屬性和控制項模式的相關資訊。|全部。|  
+|[Managed 程式碼的使用者介面自動化提供者](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)|協助您使用提供者 API 的概觀及操作說明主題。|控制項開發人員。|  
+|[Managed 程式碼的使用者介面自動化用戶端](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)|協助您使用用戶端 API 的概觀及操作說明主題。|用戶端應用程式開發人員。|  
+|[使用者介面自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)|提供者應如何實作控制項模式，以及哪些功能可供用戶端使用的相關資訊。|全部。|  
+|[使用者介面自動化文字模式](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)|提供者應如何實作文字控制項模式，以及哪些功能可供用戶端使用的相關資訊。|全部。|  
+|[UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md)|不同控制項類型支援之屬性和控制項模式的相關資訊。|全部。|  
   
  下表會列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間、包含這些命名空間的 DLL 以及命名空間的適用對象。  
   
@@ -63,16 +63,16 @@ ms.locfileid: "59134656"
   
 <a name="UI_Automation_Model"></a>   
 ## <a name="ui-automation-model"></a>使用者介面自動化模型  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 每個部分公開[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]用戶端應用程式，做為<xref:System.Windows.Automation.AutomationElement>。 項目包含於樹狀結構中，且桌面是根項目。 用戶端可將樹狀結構之未經處理的檢視篩選為控制項檢視或內容檢視。 應用程式也可以建立自訂檢視。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 會將 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 的每個部分公開給用戶端應用程式，做為 <xref:System.Windows.Automation.AutomationElement>。 項目包含於樹狀結構中，且桌面是根項目。 用戶端可將樹狀結構之未經處理的檢視篩選為控制項檢視或內容檢視。 應用程式也可以建立自訂檢視。  
   
- <xref:System.Windows.Automation.AutomationElement> 物件會公開的通用屬性[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]它們所代表的項目。 其中一個屬性是控制項類型，它會將其基本外觀和功能定義為單一可辨識的實體：例如，按鈕或核取方塊。  
+ <xref:System.Windows.Automation.AutomationElement> 物件會公開其所代表之 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 項目的常見屬性。 其中一個屬性是控制項類型，它會將其基本外觀和功能定義為單一可辨識的實體：例如，按鈕或核取方塊。  
   
  此外，項目還會公開控制項模式，用以提供其控制項類型專用的屬性。 控制項模式也會公開方法，讓用戶端取得項目的進一步資訊及提供輸入。  
   
 > [!NOTE]
 >  控制項類型和控制項模式之間並不存在一對一的對應關係。 控制項模式可由多個控制項類型所支援，且控制項可支援多個控制項模式，每個控制項都會公開其行為的不同層面。 例如，下拉式方塊擁有至少兩個控制項模式：其中一個代表展開和折疊的能力，另一個則代表選取機制。 如需特定資訊，請參閱 [UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md)。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 也提供透過事件的用戶端應用程式的資訊。 與 [!INCLUDE[TLA2#tla_winevents](../../../includes/tla2sharptla-winevents-md.md)]不同的是， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件並不是以廣播機制為基礎。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 用戶端註冊特定的事件通知，並且可以要求將特定[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性和控制項模式資訊傳遞至其事件處理常式。 此外， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件也包含引發事件之項目的參考。 提供者可以選擇引發事件來改善效能，取決於是否有任何用戶端接聽。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 也可以透過事件，將資訊提供給用戶端應用程式。 與 [!INCLUDE[TLA2#tla_winevents](../../../includes/tla2sharptla-winevents-md.md)]不同的是， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件並不是以廣播機制為基礎。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 用戶端會註冊特定事件通知，且可以要求將特定的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性和控制項模式資訊傳遞至所屬的事件處理常式。 此外， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件也包含引發事件之項目的參考。 提供者可以選擇引發事件來改善效能，取決於是否有任何用戶端接聽。  
   
 ## <a name="see-also"></a>另請參閱
 

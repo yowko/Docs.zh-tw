@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control types, Pane
 ms.assetid: 79761191-4449-4630-899c-9cbdb8867d3f
 ms.openlocfilehash: 3a610f86e15aadcbbc1ebb62d445c2d677f6f4bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59131491"
 ---
 # <a name="ui-automation-support-for-the-pane-control-type"></a>Pane 控制項類型的 UI 自動化支援
@@ -65,7 +65,7 @@ ms.locfileid: "59131491"
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件  
  下表列出所有窗格控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Event - 事件|支援/值|注意|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援/值|注意|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent>|永不|None|  
 |<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowOpenedEvent>|永不|None|  
@@ -89,7 +89,7 @@ ms.locfileid: "59131491"
   
  ![包含兩個窗格的 applet 視窗的螢幕擷取畫面](../../../docs/framework/ui-automation/media/uiauto-pane.GIF "uiauto_pane")  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構-控制項檢視|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構-內容檢視|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構 - 控制項檢視|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構 - 內容檢視|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |<ul><li>窗格</li><li>樹狀結構 (捲動模式)<br /><br /> <ul><li>TreeItem</li><li>窗格</li><li>編輯 (捲動模式</li></ul></li></ul>|窗格<br />-樹狀結構 （捲動模式）<br />-TreeItem<br />-   …Pane<br />-編輯<br />-（捲動模式）|  
   

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
 ms.openlocfilehash: 9dfe34406bfda2c16bd2f0cd53796b2fcef07b57
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138329"
 ---
 # <a name="services-and-transactions"></a>服務與異動
@@ -90,6 +90,6 @@ using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Require
   
 ## <a name="see-also"></a>另請參閱
 
-- [System.ServiceModel 中的交易式支援](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)
+- [System.ServiceModel 中的異動式支援](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)
 - [異動模型](../../../docs/framework/wcf/feature-details/transaction-models.md)
-- [WS 交易流程](../../../docs/framework/wcf/samples/ws-transaction-flow.md)
+- [WS 異動流程](../../../docs/framework/wcf/samples/ws-transaction-flow.md)

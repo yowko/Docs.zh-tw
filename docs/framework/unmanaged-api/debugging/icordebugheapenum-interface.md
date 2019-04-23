@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 79ef77e52e14fede9949121e7ec4575d10b820c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135846"
 ---
 # <a name="icordebugheapenum-interface"></a>ICorDebugHeapEnum 介面
@@ -30,7 +30,7 @@ ms.locfileid: "59135846"
   
 |方法|描述|  
 |------------|-----------------|  
-|[下一個方法](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md)|取得 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) 執行個體的指定數目，其中包含 Managed 堆積上物件的相關資訊。|  
+|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md)|取得 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) 執行個體的指定數目，其中包含 Managed 堆積上物件的相關資訊。|  
   
 ## <a name="remarks"></a>備註  
  `ICorDebugHeapEnum` ICorDebugEnum 介面實作的介面。  
@@ -44,7 +44,7 @@ ms.locfileid: "59135846"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

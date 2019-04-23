@@ -3,17 +3,17 @@ title: 撰寫巢狀 Entity SQL 查詢
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
 ms.openlocfilehash: 4d6892e96cfbc9c5ba9d389aa03588c5133c7943
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137978"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>撰寫巢狀 Entity SQL 查詢
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 是一個豐富的功能性語言。 建置組塊[!INCLUDE[esql](../../../../../../includes/esql-md.md)]是運算式。 與傳統 SQL，不同[!INCLUDE[esql](../../../../../../includes/esql-md.md)]並不限於表格式結果集：[!INCLUDE[esql](../../../../../../includes/esql-md.md)]支援撰寫複雜的運算式包含常值、 參數或巢狀的運算式。 運算式中的值可以參數化，或是某個其他運算式所組成。  
   
 ## <a name="nested-expressions"></a>巢狀運算式  
- 巢狀運算式可以放在它傳回之型別的值接受的任何地方。 例如:   
+ 巢狀運算式可以放在它傳回之型別的值接受的任何地方。 例如：  
   
 ```  
 -- Returns a hierarchical collection of three elements at top-level.   

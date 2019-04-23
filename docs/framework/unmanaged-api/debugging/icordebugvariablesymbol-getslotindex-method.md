@@ -5,10 +5,10 @@ ms.assetid: 09c19f5f-afc4-4e0c-bffe-cd7147bc7a43
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: affe67006c9e37d55b0f9d107c92441da44c9ab8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138784"
 ---
 # <a name="icordebugvariablesymbolgetslotindex-method"></a>ICorDebugVariableSymbol::GetSlotIndex Method
@@ -27,7 +27,7 @@ HRESULT GetSlotIndex(
  [out] 區域變數位置索引的指標。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK` 如果成功。 `E_FAIL` 如果變數是函式引數。  
+ 如果成功，則為 `S_OK`。 如果變數是函式引數，則為 `E_FAIL`。  
   
 ## <a name="remarks"></a>備註  
  區域變數的 Managed 位置索引可用來擷取變數的中繼資料資訊。  
@@ -42,7 +42,7 @@ HRESULT GetSlotIndex(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

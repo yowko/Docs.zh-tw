@@ -3,14 +3,14 @@ title: WF 中的集合活動
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
 ms.openlocfilehash: 6e4b9ce6f967ba9405f55dbf5fd4708d3319b458
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133776"
 ---
 # <a name="collection-activities-in-wf"></a>WF 中的集合活動
-集合活動可用來處理工作流程中的集合物件。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 已新增和移除集合中的項目、 測試集合中的項目存在以及清除集合的系統提供活動。 `ExistsInCollection` 並`RemoveFromCollection`有<xref:System.Activities.OutArgument%601>型別的<xref:System.Boolean>，這會表示結果。  
+集合活動可用來處理工作流程中的集合物件。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 含有系統提供的活動，可用於加入與移除集合中的物件、測試集合中項目的存在，以及清除集合。 `ExistsInCollection` 並`RemoveFromCollection`有<xref:System.Activities.OutArgument%601>型別的<xref:System.Boolean>，這會表示結果。  
   
 > [!IMPORTANT]
 >  如果集合活動在設定基礎集合物件之前執行，便會擲回 <xref:System.InvalidOperationException> 與活動錯誤。  
@@ -225,7 +225,7 @@ Activity wf = new Sequence
 </Sequence>  
 ```  
   
- 上述程式碼範例也可以建立使用<xref:Microsoft.CSharp.Activities.CSharpValue%601>而不是 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
+ 您也可以使用 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 代替 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 來建立上述程式碼範例。  
   
 ```csharp
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -427,4 +427,4 @@ Activity wf = new Sequence
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用命令式程式碼撰寫工作流程、活動和運算式](authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [使用命令式程式碼撰寫工作流程、活動與運算式](authoring-workflows-activities-and-expressions-using-imperative-code.md)

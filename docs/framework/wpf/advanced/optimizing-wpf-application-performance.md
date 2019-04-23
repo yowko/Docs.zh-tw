@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
 ms.openlocfilehash: 53291a0e428b723cd7a6e7b1184639a7b3c3b972
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141553"
 ---
 # <a name="optimizing-wpf-application-performance"></a>最佳化 WPF 應用程式效能
@@ -33,7 +33,7 @@ ms.locfileid: "59141553"
   
  [應用程式資源](optimizing-performance-application-resources.md)  
   
- [文字](optimizing-performance-text.md)  
+ [Text](optimizing-performance-text.md)  
   
  [資料繫結](optimizing-performance-data-binding.md)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "59141553"
 - <xref:System.Windows.Media.RenderCapability>
 - [圖形轉譯層](graphics-rendering-tiers.md)
 - [WPF 圖形轉譯概觀](../graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [配置](layout.md)
+- [版面配置](layout.md)
 - [WPF 中的樹狀結構](trees-in-wpf.md)
 - [繪圖物件概觀](../graphics-multimedia/drawing-objects-overview.md)
 - [使用 DrawingVisual 物件](../graphics-multimedia/using-drawingvisual-objects.md)
@@ -60,6 +60,6 @@ ms.locfileid: "59141553"
 - [繪製格式化的文字](drawing-formatted-text.md)
 - [WPF 中的印刷樣式](typography-in-wpf.md)
 - [資料繫結概觀](../data/data-binding-overview.md)
-- [巡覽概觀](../app-development/navigation-overview.md)
-- [動畫秘訣和訣竅](../graphics-multimedia/animation-tips-and-tricks.md)
-- [逐步解說：在 WPF 應用程式中快取應用程式資料](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [瀏覽概觀](../app-development/navigation-overview.md)
+- [動畫祕訣和訣竅](../graphics-multimedia/animation-tips-and-tricks.md)
+- [逐步解說：快取中的 WPF 應用程式的應用程式資料](walkthrough-caching-application-data-in-a-wpf-application.md)

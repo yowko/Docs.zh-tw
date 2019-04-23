@@ -5,10 +5,10 @@ helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
 ms.openlocfilehash: 144d2b6732ea319ba920317601eff2ebd7b58322
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132570"
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用組態檔設定服務
@@ -74,22 +74,22 @@ ms.locfileid: "59132570"
 ### <a name="the-service-element"></a>\<服務 > 項目  
  每項服務都有下列屬性：  
   
--   `name`。 指定用來提供服務合約實作的型別。 這是由命名空間、句號和型別名稱組成的完整名稱。 例如 `"MyNameSpace.myServiceType"`。  
+-   `name`. 指定用來提供服務合約實作的型別。 這是由命名空間、句號和型別名稱組成的完整名稱。 例如 `"MyNameSpace.myServiceType"`。  
   
--   `behaviorConfiguration`。 指定在 `behavior` 項目中找到的其中一個 `behaviors` 項目名稱。 指定的行為會掌管服務是否允許模擬之類的動作。 如果其值為空白名稱或未提供 `behaviorConfiguration` ，則會將一組預設的服務行為加入至服務。  
+-   `behaviorConfiguration`. 指定在 `behavior` 項目中找到的其中一個 `behaviors` 項目名稱。 指定的行為會掌管服務是否允許模擬之類的動作。 如果其值為空白名稱或未提供 `behaviorConfiguration` ，則會將一組預設的服務行為加入至服務。  
   
 -   [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
   
 ### <a name="the-endpoint-element"></a>\<端點 > 項目  
  每個端點都需要下列屬性代表的位址、繫結和合約：  
   
--   `address`。 指定服務的統一資源識別元 (URI)，此識別元可以是絕對位址，或是相對於服務基底位址的相對位址。 如果設為空字串，則代表在建立服務的 <xref:System.ServiceModel.ServiceHost> 時，指定的基底位址將有可用的端點。  
+-   `address`. 指定服務的統一資源識別元 (URI)，此識別元可以是絕對位址，或是相對於服務基底位址的相對位址。 如果設為空字串，則代表在建立服務的 <xref:System.ServiceModel.ServiceHost> 時，指定的基底位址將有可用的端點。  
   
--   `binding`。 一般來說，會指定系統提供的繫結，例如 <xref:System.ServiceModel.WSHttpBinding>，但是也可以指定使用者定義的繫結。 指定的繫結會決定使用的傳輸類型、安全性和編碼，以及是否支援或啟用可靠工作階段、交易或資料流處理。  
+-   `binding`. 一般來說，會指定系統提供的繫結，例如 <xref:System.ServiceModel.WSHttpBinding>，但是也可以指定使用者定義的繫結。 指定的繫結會決定使用的傳輸類型、安全性和編碼，以及是否支援或啟用可靠工作階段、交易或資料流處理。  
   
--   `bindingConfiguration`。 如果必須修改預設的繫結值，可以藉由設定 `binding` 項目中的適當 `bindings` 項目來達成。 此屬性應該被賦予與用來變更預設值時所用的 `name` 項目的 `binding` 屬性相同的值。 如果未指定名稱或在繫結中未指定 `bindingConfiguration` ，則會將繫結型別的預設繫結用於端點。  
+-   `bindingConfiguration`. 如果必須修改預設的繫結值，可以藉由設定 `binding` 項目中的適當 `bindings` 項目來達成。 此屬性應該被賦予與用來變更預設值時所用的 `name` 項目的 `binding` 屬性相同的值。 如果未指定名稱或在繫結中未指定 `bindingConfiguration` ，則會將繫結型別的預設繫結用於端點。  
   
--   `contract`。 指定可定義合約的介面。 這個介面是由 `name` 項目的 `service` 屬性所指定的 Common Language Runtime (CLR) 型別所實作。  
+-   `contract`. 指定可定義合約的介面。 這個介面是由 `name` 項目的 `service` 屬性所指定的 Common Language Runtime (CLR) 型別所實作。  
   
 -   [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md)  
   
@@ -264,7 +264,7 @@ ms.locfileid: "59132570"
   
 ## <a name="see-also"></a>另請參閱
 
-- [簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)
+- [簡化設定](../../../docs/framework/wcf/simplified-configuration.md)
 - [設定 WCF 服務](configuring-services.md)
 - [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)
 - [\<binding>](../../../docs/framework/misc/binding.md)

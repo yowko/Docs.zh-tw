@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
 ms.openlocfilehash: 2f95213390187648c9f58b9b2bf2d5e3f49fb860
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135352"
 ---
 # <a name="wif-and-web-farms"></a>WIF 和 Web 伺服陣列
@@ -88,7 +88,7 @@ public interface ISessionSecurityTokenCacheService
 }  
 ```  
   
- 下列程式碼示範 WCF 快取服務的實作。 在此範例中，將使用 WIF 所實作的記憶體內部工作階段權杖快取 (預設值)。 或者，您可以實作資料庫支援的持久快取。 `ISessionSecurityTokenCacheService` 定義如上所示的介面。 在此範例中，為求簡潔起見，不會顯示實作介面所需的全部方法。  
+ 下列程式碼示範 WCF 快取服務的實作。 在此範例中，將使用 WIF 所實作的記憶體內部工作階段權杖快取 (預設值)。 或者，您可以實作資料庫支援的持久快取。 `ISessionSecurityTokenCacheService` 定義了上述介面。 在此範例中，為求簡潔起見，不會顯示實作介面所需的全部方法。  
   
 ```  
 using System;  

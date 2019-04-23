@@ -3,10 +3,10 @@ title: SQL-CLR 自訂類型對應
 ms.date: 03/30/2017
 ms.assetid: d916c7fb-4b56-4214-acbe-5e23365047b2
 ms.openlocfilehash: bc92d54cad6a977268ef3f000c684d5f195a933d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140409"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>SQL-CLR 自訂類型對應

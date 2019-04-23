@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
 ms.openlocfilehash: e7e7ba379f6f92f3ba8fba55f22c8eaec81ab1cf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133883"
 ---
 # <a name="performance-counters-in-adonet"></a>ADO.NET 中的效能計數器
@@ -396,7 +396,7 @@ class Program
 
 ## <a name="see-also"></a>另請參閱
 
-- [連接資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [OLE DB、ODBC 和 Oracle 連接共用](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
 - [適用於 ASP.NET 的效能計數器](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
 - [執行階段分析](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)

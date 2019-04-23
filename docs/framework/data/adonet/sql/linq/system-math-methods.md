@@ -3,14 +3,14 @@ title: System.Math 方法
 ms.date: 03/30/2017
 ms.assetid: 0f299521-6f41-4720-bd70-67c93fc50948
 ms.openlocfilehash: 1dae31b30962505c07c198f3bd35fceb8f400efb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141709"
 ---
 # <a name="systemmath-methods"></a>System.Math 方法
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援下列<xref:System.Math>方法。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援下列 <xref:System.Math> 方法。  
   
 -   <xref:System.Math.DivRem%28System.Int32%2CSystem.Int32%2CSystem.Int32%40%29?displayProperty=nameWithType>  
   
@@ -23,8 +23,8 @@ ms.locfileid: "59141709"
   
  在 SQL 中，`ROUND` 函式則會一律往遠離 0 的方向捨入。 因此 2.5 會捨入為 3，這與 .NET Framework 中捨入為 2 相反。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會傳遞給 SQL`ROUND`語意，而不會嘗試實作 Banker's rounding。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會採用 SQL `ROUND` 語意，不會嘗試實作 Banker's Rounding (四捨六入五成雙)。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [資料類型與函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [資料類型和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

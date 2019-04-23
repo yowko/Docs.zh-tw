@@ -9,10 +9,10 @@ helpviewer_keywords:
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
 ms.openlocfilehash: de9dce1b3c15070fda268c430ce5da641efef6f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130672"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>HOW TO：設定 JPEG 壓縮層級
@@ -131,6 +131,6 @@ End Function
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：判斷編碼器所支援的參數](how-to-determine-the-parameters-supported-by-an-encoder.md)
+- [如何：判斷編碼器所支援的參數](how-to-determine-the-parameters-supported-by-an-encoder.md)
 - [點陣圖類型](types-of-bitmaps.md)
 - [使用 Managed GDI+ 中的影像編碼器和解碼器](using-image-encoders-and-decoders-in-managed-gdi.md)

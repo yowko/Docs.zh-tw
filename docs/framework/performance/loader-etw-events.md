@@ -8,10 +8,10 @@ ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141527"
 ---
 # <a name="loader-etw-events"></a>載入器 ETW 事件
@@ -45,7 +45,7 @@ ms.locfileid: "59141527"
   
 |Event - 事件|事件 ID|描述|  
 |-----------|--------------|-----------------|  
-|`AppDomainLoad_V1` （針對所有的應用程式定義域記錄）|156|每當在處理序的存留期間建立應用程式定義域時引發。|  
+|`AppDomainLoad_V1` (針對所有應用程式定義域記錄)|156|每當在處理序的存留期間建立應用程式定義域時引發。|  
 |`AppDomainUnLoad_V1`|157|每當在處理序的存留期間終結應用程式定義域時引發。|  
 |`AppDomainDCStart_V1`|157|在開始取消期間列舉應用程式定義域。|  
 |`AppDomainDCEnd_V1`|158|在結束取消期間列舉應用程式定義域。|  

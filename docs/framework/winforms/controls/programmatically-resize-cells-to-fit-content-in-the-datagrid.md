@@ -12,10 +12,10 @@ helpviewer_keywords:
 - grids [Windows Forms], resizing cells to fit content
 ms.assetid: 63d770dc-b3f5-462b-901a-3125b2753792
 ms.openlocfilehash: e8240d1d5ac9784bd33d65e4c79c3d5ac7595657
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138628"
 ---
 # <a name="how-to-programmatically-resize-cells-to-fit-content-in-the-windows-forms-datagridview-control"></a>HOW TO：以程式設計方式調整儲存格大小使符合 Windows Forms DataGridView 控制項的內容
@@ -52,6 +52,6 @@ ms.locfileid: "59138628"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [調整 Windows Form DataGridView 控制項中資料行和資料列的大小](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
-- [Windows Form DataGridView 控制項中的調整大小選項](sizing-options-in-the-windows-forms-datagridview-control.md)
-- [HOW TO：在 Windows Forms DataGridView 控制項的內容變更時自動調整儲存格大小](automatically-resize-cells-when-content-changes-in-the-datagrid.md)
+- [調整 Windows Forms DataGridView 控制項中資料行和資料列的大小](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 控制項中的調整大小選項](sizing-options-in-the-windows-forms-datagridview-control.md)
+- [如何：自動調整大小的資料格，當 Windows Form DataGridView 控制項中的內容變更](automatically-resize-cells-when-content-changes-in-the-datagrid.md)

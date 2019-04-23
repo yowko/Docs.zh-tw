@@ -5,10 +5,10 @@ ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2d2dbff544f991712ad26f2cb12d638801b5a3fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137874"
 ---
 # <a name="parameter-element-net-native"></a>\<參數 > 項目 (.NET Native)
@@ -68,14 +68,14 @@ ms.locfileid: "59137874"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<方法 >](../../../docs/framework/net-native/method-element-net-native.md)|將執行階段反映原則套用到建構函式或方法。|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|將執行階段反映原則套用到建構函式或方法。|  
   
 ## <a name="remarks"></a>備註  
  `<Parameter>` 項目是 [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) 項目的子項，用來將原則套用至特定的方法參數。 特定的方法參數是依名稱指定，而不是依類型。 必須存在至少一個表示原則類型的屬性，例如 `Activate` 或 `Dynamic`。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<方法 > 項目](../../../docs/framework/net-native/method-element-net-native.md)
+- [\<Method> 項目](../../../docs/framework/net-native/method-element-net-native.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)

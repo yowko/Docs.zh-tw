@@ -6,10 +6,10 @@ helpviewer_keywords:
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
 ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132051"
 ---
 # <a name="distributed-application-security"></a>分散式應用程式安全性
@@ -96,7 +96,7 @@ Windows Communication Foundation (WCF) 安全性分為三個主要的功能區�
   
 ## <a name="see-also"></a>另請參閱
 
-- [端點建立概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [建立端點概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server AppFabric 的資訊安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

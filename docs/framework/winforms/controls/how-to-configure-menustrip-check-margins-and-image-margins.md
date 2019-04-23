@@ -10,10 +10,10 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], configuring check and image margins
 ms.assetid: 45a9075d-4bea-4ce2-9b2c-7619aa39f8ce
 ms.openlocfilehash: 09de1a9ca4be1c4ebfb0e13e800c09753bd04f11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134988"
 ---
 # <a name="how-to-configure-menustrip-check-margins-and-image-margins"></a>HOW TO：設定 MenuStrip 核取邊界和影像邊界
@@ -38,4 +38,4 @@ ms.locfileid: "59134988"
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.ToolStripDropDown>
 - [ToolStrip 控制項](toolstrip-control-windows-forms.md)
-- [HOW TO：啟用 ContextMenuStrip 控制項的核取邊界和影像邊界](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)
+- [如何：啟用核取邊界和 ContextMenuStrip 控制項中的影像邊界](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)

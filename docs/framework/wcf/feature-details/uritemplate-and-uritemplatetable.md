@@ -3,10 +3,10 @@ title: UriTemplate 與 UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
 ms.openlocfilehash: b0dc3b2b747bc08da239490db7db3ba77d1e7ed8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130243"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 與 UriTemplateTable
@@ -25,22 +25,22 @@ Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 W
  這份表格說明結構上類似的 URI 集合。 每個項目都是 URI 範本。 大括號內的片段描述變數， 大括號外的片段則描述常值字串。 WCF 範本類別可以讓開發人員需要將傳入的 URI，例如，"/ weather/wa/seattle/循環 」，並使其符合範本描述，"/weather/wa/seattle/cycling {state} / {city} / {活動}"。  
   
 ## <a name="uritemplate"></a>UriTemplate  
- <xref:System.UriTemplate> 是封裝 URI 範本的類別。 建構函式會包含用來定義範本的字串參數。 此字串會將範本包含在下一節中說明的格式裡。 <xref:System.UriTemplate> 類別所提供的方法可讓您將傳入的 URI 與範本進行比對、從範本產生 URI、擷取範本中使用的變數名稱集合，並判斷這兩個範本是否相等，然後傳回範本的字串。  
+ <xref:System.UriTemplate> 是一個會封裝 URI 範本的類別。 建構函式會包含用來定義範本的字串參數。 此字串會將範本包含在下一節中說明的格式裡。 <xref:System.UriTemplate> 類別所提供的方法可讓您將傳入的 URI 與範本進行比對、從範本產生 URI、擷取範本中使用的變數名稱集合，並判斷這兩個範本是否相等，然後傳回範本的字串。  
   
- <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> 會採用基底位址與候選 URI 並且嘗試比對 URI 與範本。 如果比對成功，則會傳回 <xref:System.UriTemplateMatch> 執行個體。 <xref:System.UriTemplateMatch>物件包含一個起始 URI、一個候選 URI、一個查詢參數的名稱/值集合、一個相對路徑片段陣列、一個相符的變數名稱/值集合、用來執行比對的<xref:System.UriTemplate>執行個體、一個包含候選 URI (當範本包含萬用字元時所使用) 中任何不相符部分的字串，以及一個與範本相關聯的物件。  
+ <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> 包含基底位址與候選 URI，並嘗試將 URI 與範本進行比對。 如果比對成功，則會傳回 <xref:System.UriTemplateMatch> 執行個體。 <xref:System.UriTemplateMatch>物件包含一個起始 URI、一個候選 URI、一個查詢參數的名稱/值集合、一個相對路徑片段陣列、一個相符的變數名稱/值集合、用來執行比對的<xref:System.UriTemplate>執行個體、一個包含候選 URI (當範本包含萬用字元時所使用) 中任何不相符部分的字串，以及一個與範本相關聯的物件。  
   
 > [!NOTE]
 >  <xref:System.UriTemplate> 類別在將範本與候選 URI 與進行比較時，會忽略配置和連接埠編號。  
   
- 有兩種方法可讓您從範本中產生 URI：<xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> 和 <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>。 <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> 接受的基底位址和參數的名稱/值集合。 當範本經過繫結，就會以這些參數來取代變數。 <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> 採用名稱/值組，並會由左至右取代它們。  
+ 有兩種方法可讓您從範本中產生 URI：<xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> 和 <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>。 <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> 需要基底位址和參數的名稱/值集合。 當範本經過繫結，就會以這些參數來取代變數。 <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> 將會由左至右取代其接受的名稱/值組。  
   
- <xref:System.UriTemplate.ToString> 傳回範本字串。  
+ <xref:System.UriTemplate.ToString> 會傳回範本字串。  
   
  <xref:System.UriTemplate.PathSegmentVariableNames%2A> 屬性包含範本字串之路徑片段中所使用的變數名稱集合。  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> 採用<xref:System.UriTemplate>做為參數，並傳回布林值，指定兩個範本是否相等。 如需詳細資訊，請參閱本主題稍後的相等的範本區段。  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> 以 <xref:System.UriTemplate> 做為參數，並傳回布林值指出兩個範本是否相等。 如需詳細資訊，請參閱本主題稍後的相等的範本區段。  
   
- <xref:System.UriTemplate> 被設計用於搭配符合 HTTP URI 文法的任何 URI 配置。 以下是支援的 URI 配置範例：  
+ <xref:System.UriTemplate> 的設計即是可與符合 HTTP URI 文法的任何 URI 配置搭配使用。 以下是支援的 URI 配置範例：  
   
 - http://  
   

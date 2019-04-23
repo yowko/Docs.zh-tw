@@ -3,10 +3,10 @@ title: LINQ to SQL 的典型使用步驟
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
 ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132843"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>LINQ to SQL 的典型使用步驟
@@ -20,7 +20,7 @@ ms.locfileid: "59132843"
 ### <a name="1-select-a-tool-to-create-the-model"></a>1.選取用以建立模型的工具。  
  用於建立模型的工具有三種。  
   
--   必須提供 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+-   [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
      這個設計工具提供了豐富的使用者介面，可用於從現有資料庫建立物件模型。 此工具是 Visual Studio IDE 的一部分，並最適合用於小型或中型資料庫。  
   

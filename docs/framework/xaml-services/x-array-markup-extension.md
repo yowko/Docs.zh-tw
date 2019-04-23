@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
 ms.openlocfilehash: 4f4e26eb3e5ccaf66b2173c7fc9952375c5f2a58
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139135"
 ---
 # <a name="xarray-markup-extension"></a>x:Array 標記延伸
@@ -44,7 +44,7 @@ ms.locfileid: "59139135"
   
  `x:Array` 是多個適用於一般 XAML 中的語言擴充性。 但`x:Array`也可用於指定 XAML 的採用，XAML 支援集合做為其結構化的屬性內容的特定屬性的值。 例如，您可以在其中指定的內容<xref:System.Collections.IEnumerable>屬性與`x:Array`使用量。  
   
- `x:Array` 是標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 `x:Array` 有一部分是該規則的例外狀況因為而不是提供替代的屬性值的處理，`x:Array`提供替代處理其內部文字內容。 此行為可讓現有的內容模型分組為陣列，並存取具名的陣列; 稍後在程式碼後置中參考可能不支援的類型您可以呼叫<xref:System.Array>方法，以取得個別的陣列項目。  
+ `x:Array` 是一種標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 `x:Array` 有一部分是該規則的例外狀況因為而不是提供替代的屬性值的處理，`x:Array`提供替代處理其內部文字內容。 此行為可讓現有的內容模型分組為陣列，並存取具名的陣列; 稍後在程式碼後置中參考可能不支援的類型您可以呼叫<xref:System.Array>方法，以取得個別的陣列項目。  
   
  在 XAML 中的所有標記延伸都使用大括號 ({,} `)`在其屬性語法中，這是用的 XAML 處理器知道某個標記延伸必須處理的屬性值的慣例。 如需一般的標記延伸的詳細資訊，請參閱[Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md)。  
   

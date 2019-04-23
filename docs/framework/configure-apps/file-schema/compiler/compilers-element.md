@@ -10,10 +10,10 @@ helpviewer_keywords:
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
 ms.openlocfilehash: 744ef0d9bc58e6a0152dce53c40c24eb5283dc0f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130516"
 ---
 # <a name="compilers-element"></a>\<編譯器 > 項目
@@ -41,13 +41,13 @@ ms.locfileid: "59130516"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<編譯器 > 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|指定語言提供者的編譯器組態屬性。|  
+|[\<編譯器> 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|指定語言提供者的編譯器組態屬性。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<組態 > 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
+|[\<configuration> 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |[\<system.codedom > 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|指定可用語言提供者的編譯器組態設定。|  
   
 ## <a name="remarks"></a>備註  
@@ -83,4 +83,4 @@ ms.locfileid: "59130516"
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [編譯器和語言提供者設定結構描述](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
-- [\<編譯器 > 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [\<編譯器> 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

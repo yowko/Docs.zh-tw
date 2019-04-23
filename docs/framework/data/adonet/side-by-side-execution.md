@@ -3,10 +3,10 @@ title: ADO.NET 中的並存執行
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
 ms.openlocfilehash: a8747d749ed7e751ba577a2cd29c2048065f2645
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136756"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET 中的並存執行
@@ -15,7 +15,7 @@ ms.locfileid: "59136756"
  使用某個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本所編譯的應用程式可在不同的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本上執行。 但是，我們建議您最好先針對已安裝的每個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本編譯應用程式版本，然後再個別執行。 不論是上述哪一種狀況，您都應該了解 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 各版本間的差異，因為它會影響應用程式的向前相容性或回溯相容性 (Backward Compatibility)。  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>向前相容性和回溯相容性  
- 所謂向前相容性是指應用程式可以使用舊版的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 編譯，但仍可順利在新版的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 上執行。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 針對所撰寫的程式碼[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]1.1 版是向前相容於更新版本。  
+ 所謂向前相容性是指應用程式可以使用舊版的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 編譯，但仍可順利在新版的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 上執行。 針對 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 1.1 版所撰寫的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 程式碼可向前相容於更新版本。  
   
  所謂回溯相容性是指針對新版 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 所編譯的應用程式，但仍可在舊版 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 上繼續執行，而不會減損任何功能。 當然，這不適用於新版的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 所引入的功能。  
   
@@ -67,5 +67,5 @@ SET NOCOUNT OFF;
 ## <a name="see-also"></a>另請參閱
 
 - [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [在 ADO.NET 中傳送和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

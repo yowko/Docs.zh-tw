@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
 ms.openlocfilehash: e035ff04a70a441f7f64bbc230ba6d8036fb2ace
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130607"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>對應物件識別項至密碼編譯演算法
@@ -43,4 +43,4 @@ ms.locfileid: "59130607"
 ## <a name="see-also"></a>另請參閱
 
 - [設定密碼編譯類別](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [密碼編譯服務](../../../docs/standard/security/cryptographic-services.md)
+- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)

@@ -3,10 +3,10 @@ title: SQL Server 中的應用程式安全性案例
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
 ms.openlocfilehash: 96c9f48cbf2e2ade2ff1688573a83fd86d613f2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130139"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server 中的應用程式安全性案例
@@ -35,7 +35,7 @@ ms.locfileid: "59130139"
  即使在使用「Windows 驗證」時，也請務必為 `sa` 帳戶指派強式密碼。  
   
 ## <a name="in-this-section"></a>本節內容  
- [使用預存程序管理 SQL Server 中的權限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+ [在 SQL Server 中使用預存程序來管理權限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  說明如何使用預存程序 (Stored Procedure) 管理權限並控制資料存取。 使用預存程序是許多安全性威脅的有效回應方式。  
   
  [在 SQL Server 中撰寫安全的動態 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
@@ -61,4 +61,4 @@ ms.locfileid: "59130139"
 - [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

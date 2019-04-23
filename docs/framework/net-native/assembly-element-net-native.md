@@ -5,10 +5,10 @@ ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c0788c05edace2142d348c679c73aa1b4404ce75
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137848"
 ---
 # <a name="assembly-element-net-native"></a>\<組件 > 項目 (.NET Native)
@@ -53,7 +53,7 @@ ms.locfileid: "59137848"
   
 |值|描述|  
 |-----------|-----------------|  
-|*assembly_name*|組件的簡單名稱，不包含其副檔名。 這個屬性 (Attribute) 會對應至 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> 屬性 (Property)。 例如，名為 Extensions.dll 之組件的名稱是 "Extensions"。<br /><br /> 您也可以指定常值字串 `*Application*`，以將原則套用至應用程式套件中的所有組件 (無論這些組件是否已載入)。 `*Application*` 永遠不會將原則套用至.NET Framework 組件。|  
+|*assembly_name*|組件的簡單名稱，不包含其副檔名。 這個屬性 (Attribute) 會對應至 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> 屬性 (Property)。 例如，名為 Extensions.dll 之組件的名稱是 "Extensions"。<br /><br /> 您也可以指定常值字串 `*Application*`，以將原則套用至應用程式套件中的所有組件 (無論這些組件是否已載入)。 `*Application*` 永遠不會將原則套用至 .NET Framework 組件。|  
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
@@ -65,7 +65,7 @@ ms.locfileid: "59137848"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<命名空間 >](../../../docs/framework/net-native/namespace-element-net-native.md)|將反映原則套用至子命名空間中的所有類型。|  
+|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|將反映原則套用至子命名空間中的所有類型。|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至類型。|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|將反映原則套用至建構的泛型類型。|  
   
@@ -74,7 +74,7 @@ ms.locfileid: "59137848"
 |項目|描述|  
 |-------------|-----------------|  
 |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|做為容器，以包含整個應用程式的類型，以及中繼資料可在執行階段用於反映的類型成員。 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 元素可以有零、一或多個 `<Assembly>` 元素。|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|定義包含類型和類型成員的組件，這些類型和類型成員的中繼資料可在執行階段用於反映。 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 元素可以有零或一個 `<Assembly>` 元素。|  
+|[\<程式庫>](../../../docs/framework/net-native/library-element-net-native.md)|定義包含類型和類型成員的組件，這些類型和類型成員的中繼資料可在執行階段用於反映。 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 元素可以有零或一個 `<Assembly>` 元素。|  
   
 ## <a name="remarks"></a>備註  
  `<Assembly>` 元素可定義組件中所有類型的執行階段原則。 其不同於 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 元素，後者會指定程式庫，但會依據其子元素來定義執行階段反映原則。 `<Assembly>` 元素會套用至組件中的所有類型，除非是被子元素覆寫。  

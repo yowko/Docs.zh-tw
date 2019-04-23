@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
 ms.openlocfilehash: 5c9d94aca6b9b53c505fa7419406a0d2fc4a0ae7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134780"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>實作 UI 自動化 Invoke 控制項模式
@@ -29,7 +29,7 @@ ms.locfileid: "59134780"
   
 -   通常按一下、按兩下或按 ENTER、使用預先定義的鍵盤快速鍵，或其他按鈕組合，就可以叫用控制項。  
   
--   <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> 已啟動 （以執行其相關聯的動作的控制項回應） 的控制項上引發。 在可能的情況下，應該是在控制項完成該動作並返回，且沒有發生封鎖時才會引發該事件。 在下列情節中，叫用事件應該在服務叫用要求之前引發：  
+-   已啟動的控制項上會引發<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> (以回應執行相關動作的控制項)。 在可能的情況下，應該是在控制項完成該動作並返回，且沒有發生封鎖時才會引發該事件。 在下列情節中，叫用事件應該在服務叫用要求之前引發：  
   
     -   無法或不適合等待至動作完成。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "59134780"
   
 -   叫用某個項目時，此項目可能會立即從 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構中消失。 要求事件回呼所提供的項目資訊，可能會因此而失敗。 建議的解決方法是預先擷取快取的資訊。  
   
--   控制項可以實作多個控制項模式。 例如， [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 工具列上的 [填滿色彩] 控制項會實作 <xref:System.Windows.Automation.InvokePattern> 及 <xref:System.Windows.Automation.ExpandCollapsePattern> 控制項模式。 <xref:System.Windows.Automation.ExpandCollapsePattern> 會公開功能表和<xref:System.Windows.Automation.InvokePattern>填滿作用中的選取範圍，以選擇的色彩。  
+-   控制項可以實作多個控制項模式。 例如， [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 工具列上的 [填滿色彩] 控制項會實作 <xref:System.Windows.Automation.InvokePattern> 及 <xref:System.Windows.Automation.ExpandCollapsePattern> 控制項模式。 <xref:System.Windows.Automation.ExpandCollapsePattern> 會公開功能表，而 <xref:System.Windows.Automation.InvokePattern> 則會以選擇的色彩填滿作用中的選取範圍。  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iinvokeprovider"></a>IInvokeProvider 的必要成員  
@@ -56,7 +56,7 @@ ms.locfileid: "59134780"
   
 |必要成員|成員類型|注意|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|方法|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 是非同步呼叫，必須立即傳回而不會封鎖。<br /><br /> 對於叫用時直接或間接啟動強制回應對話方塊的控制項，此行為尤其重要。 任何引發事件的使用者介面自動化用戶端都會維持封鎖的狀態，直到強制回應對話方塊關閉為止。|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|方法|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 為非同步呼叫，且必須立即返回，不可封鎖。<br /><br /> 對於叫用時直接或間接啟動強制回應對話方塊的控制項，此行為尤其重要。 任何引發事件的使用者介面自動化用戶端都會維持封鎖的狀態，直到強制回應對話方塊關閉為止。|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>例外狀況  
@@ -73,4 +73,4 @@ ms.locfileid: "59134780"
 - [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [使用 UI 自動化叫用控制項](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
 - [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [使用 UI 自動化中的快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

@@ -1,12 +1,12 @@
 ---
-title: <add> SchemeSettings （Uri 設定） 的項目
+title: schemeSettings 的 <add> 項目 (URI 設定)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
 ms.openlocfilehash: e7606a1185d406384a926ca4dcb7c42586461574
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139928"
 ---
 # <a name="add-element-for-schemesettings-uri-settings"></a>\<新增 > schemeSettings （Uri 設定） 的項目
@@ -48,7 +48,7 @@ ms.locfileid: "59139928"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<schemeSettings > 項目 （Uri 設定）](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|指定如何針對特定配置剖析 <xref:System.Uri>。|  
+|[\<schemeSettings> 項目 (URI 設定)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|指定如何針對特定配置剖析 <xref:System.Uri>。|  
   
 ## <a name="remarks"></a>備註  
  根據預設，<xref:System.Uri?displayProperty=nameWithType>類別取消逸出百分比編碼路徑分隔符號，然後再執行路徑壓縮。 這被實作為安全性機制，抵禦攻擊，如下所示：  

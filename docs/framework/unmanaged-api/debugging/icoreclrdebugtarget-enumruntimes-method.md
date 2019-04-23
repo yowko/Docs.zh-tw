@@ -20,10 +20,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: afb31646d21ec7e15f79601f5fe83ea6ce44fa90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134670"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes 方法
@@ -54,7 +54,7 @@ HRESULT EnumRuntimes (
  成功。  
   
  S_FALSE  
- `dwInternalProcessID` 不符合的電腦，執行任何處理序可能因為處理序已終止。 `pcRuntimes` 和`ppRuntimes`將會是 null。  
+ `dwInternalProcessID` 不符合電腦上所執行的任何處理序，可能是因為處理序已終止。 `pcRuntimes` 和 `ppRuntimes` 將為 null。  
   
  E_OUTOFMEMORY  
  無法為 `ppRuntimes` 配置足夠的記憶體。  

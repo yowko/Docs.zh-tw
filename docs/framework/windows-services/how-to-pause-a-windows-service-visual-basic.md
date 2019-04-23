@@ -1,5 +1,5 @@
 ---
-title: 作法：暫停 Windows 服務 (Visual Basic)
+title: HOW TO：暫停 Windows 服務 (Visual Basic)
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
 author: ghogen
 ms.openlocfilehash: f0b0ad1b18a57ca9a2c069ab172966730b62e84e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136177"
 ---
-# <a name="how-to-pause-a-windows-service-visual-basic"></a>作法：暫停 Windows 服務 (Visual Basic)
+# <a name="how-to-pause-a-windows-service-visual-basic"></a>HOW TO：暫停 Windows 服務 (Visual Basic)
 這個範例會使用 <xref:System.ServiceProcess.ServiceController> 元件，在本機電腦上暫停 IIS 管理服務。  
   
 ## <a name="example"></a>範例  
@@ -52,4 +52,4 @@ ms.locfileid: "59136177"
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>
 - <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>
-- [作法：繼續執行 Windows 服務 (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)
+- [如何：繼續執行 Windows 服務 (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)

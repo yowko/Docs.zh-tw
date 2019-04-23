@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 121c4bca3419ef1e34a03ff7600285948ca4c237
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137601"
 ---
 # <a name="icordebugtypeenum-interface"></a>ICorDebugTypeEnum 介面
@@ -30,7 +30,7 @@ ms.locfileid: "59137601"
   
 |方法|描述|  
 |------------|-----------------|  
-|[下一個方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-next-method.md)|取得指定的數目`ICorDebugType`從列舉型別，從目前位置開始的執行個體。|  
+|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-next-method.md)|取得指定的數目`ICorDebugType`從列舉型別，從目前位置開始的執行個體。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -44,7 +44,7 @@ ms.locfileid: "59137601"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

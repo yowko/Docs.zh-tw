@@ -3,16 +3,16 @@ title: 類型系統 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
 ms.openlocfilehash: 0afeffd3ad180d6cc6175010140754e279988b38
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134559"
 ---
 # <a name="type-system-entity-sql"></a>類型系統 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援數種類型：  
   
--   基本 （簡單） 類型，例如`Int32`和 `String.`  
+-   基本 (簡單) 型別，例如 `Int32` 和 `String.`。  
   
 -   結構描述中定義的名義型別，例如 <xref:System.Data.Metadata.Edm.EntityType>、<xref:System.Data.Metadata.Edm.ComplexType> 和 <xref:System.Data.Metadata.Edm.RelationshipType>。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "59134559"
 ## <a name="references"></a>參考  
  參考是指向特定實體集中特定實體的邏輯指標。  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援下列用來建構、 解構及巡覽參考的運算子：  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援下列用來建構、解構及巡覽參考的運算子：  
   
 -   [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)  
   

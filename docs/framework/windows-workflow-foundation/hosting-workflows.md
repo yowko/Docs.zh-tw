@@ -5,10 +5,10 @@ helpviewer_keywords:
 - programming [WF], hosting workflows
 ms.assetid: a99a5990-b53b-419b-9538-b1c3d1ba5db3
 ms.openlocfilehash: 3b3b7b94c94096d916efb9399c82ad6ddf8b8b1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137744"
 ---
 # <a name="hosting-workflows"></a>裝載工作流程
@@ -24,10 +24,10 @@ ms.locfileid: "59137744"
  [活動樹狀結構檢查](activity-tree-inspection.md)  
  說明工作流程裝載作者如何使用 <xref:System.Activities.WorkflowInspectionServices> 檢查工作流程。  
   
- [序列化工作流程及 XAML 之間的活動 ](serializing-workflows-and-activities-to-and-from-xaml.md)  
+ [對 XAML 來回進行序列化工作流程與活動](serializing-workflows-and-activities-to-and-from-xaml.md)  
  描述如何將工作流程序列化為 XAML，以及使用序列化的工作流程定義。  
   
- [使用 WorkflowIdentity 與版本控制](using-workflowidentity-and-versioning.md)  
+ [使用 WorkflowIdentity 與版本設定](using-workflowidentity-and-versioning.md)  
  描述如何使用 `WorkflowIdentity` 裝載工作流程並存的多個版本。  
   
 ## <a name="see-also"></a>另請參閱

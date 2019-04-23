@@ -3,10 +3,10 @@ title: 。 (成員存取) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4733e3b2-3efa-4b96-b591-ac31350e96ad
 ms.openlocfilehash: 6ebedd2b381d035d199e151f64632acf7d502ff5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139707"
 ---
 # <a name="-member-access-entity-sql"></a>。 (成員存取) (Entity SQL)

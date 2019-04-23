@@ -10,10 +10,10 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to DBNull values
 ms.assetid: 96494e6f-5f40-4f83-af97-bbd7192c2af8
 ms.openlocfilehash: cc3dde0db3dad6faff548951ff06a39d23248d53
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137757"
 ---
 # <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>HOW TO：將 Windows Forms 控制項繫結至 DBNull 資料庫值
@@ -37,5 +37,5 @@ ms.locfileid: "59137757"
 ## <a name="see-also"></a>另請參閱
 
 - [BindingSource 元件](bindingsource-component.md)
-- [HOW TO：處理資料繫結發生的錯誤和例外狀況](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
-- [HOW TO：將 Windows Forms 控制項繫結至類型](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [如何：處理錯誤和資料繫結時所發生例外狀況](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [如何：將 Windows Forms 控制項繫結至型別](how-to-bind-a-windows-forms-control-to-a-type.md)

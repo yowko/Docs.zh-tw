@@ -8,10 +8,10 @@ helpviewer_keywords:
 - get started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
 ms.openlocfilehash: d4613edefeb8db2c0d1e11e925f8ac41329efb0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137919"
 ---
 # <a name="tutorial-get-started-with-windows-communication-foundation-applications"></a>教學課程：開始使用 Windows Communication Foundation 應用程式
@@ -63,11 +63,11 @@ ms.locfileid: "59137919"
 - [基本程式設計週期](basic-programming-lifecycle.md)
 - [建置用戶端](building-clients.md)
 - [基本 WCF 程式設計](basic-wcf-programming.md)
-- [HOW TO：建立雙工合約](feature-details/how-to-create-a-duplex-contract.md)
-- [HOW TO：Access services 搭配雙工合約](feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [如何：建立雙工合約](feature-details/how-to-create-a-duplex-contract.md)
+- [如何：Access services 搭配雙工合約](feature-details/how-to-access-services-with-a-duplex-contract.md)
 - [ServiceModel Metadata Utility 工具 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [HOW TO：使用 Svcutil.exe 來下載中繼資料文件](feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
-- [HOW TO：發佈服務，使用組態檔的中繼資料](feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [如何：使用 Svcutil.exe 來下載中繼資料文件](feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
+- [如何：發佈服務，使用組態檔的中繼資料](feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [使用繫結設定服務和用戶端](using-bindings-to-configure-services-and-clients.md)
 - [開始使用範例](samples/getting-started-sample.md)
 - [Windows Communication Foundation 範例](samples/index.md)

@@ -3,10 +3,10 @@ title: HOW TO：建立工作流程
 ms.date: 03/30/2017
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
 ms.openlocfilehash: 4b24e57cce4d42645fc1750ac932e5f24cf24913
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134793"
 ---
 # <a name="how-to-create-a-workflow"></a>HOW TO：建立工作流程
@@ -19,13 +19,13 @@ ms.locfileid: "59134793"
 >  若要下載教學課程的完整版本，請參閱 [Windows Workflow Foundation (WF45) - 快速入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
 ## <a name="in-this-section"></a>本節內容  
- [HOW TO：建立循序工作流程](how-to-create-a-sequential-workflow.md)  
+ [如何：建立循序工作流程](how-to-create-a-sequential-workflow.md)  
  說明如何使用 <xref:System.Activities.Statements.Sequence> 活動建立循序工作流程。  
   
- [HOW TO：建立流程圖工作流程](how-to-create-a-flowchart-workflow.md)  
+ [如何：建立流程圖工作流程](how-to-create-a-flowchart-workflow.md)  
  說明如何使用 <xref:System.Activities.Statements.Flowchart> 活動建立流程圖工作流程。  
   
- [HOW TO：建立狀態機器工作流程](how-to-create-a-state-machine-workflow.md)  
+ [如何：建立狀態機器工作流程](how-to-create-a-state-machine-workflow.md)  
  說明如何使用 <xref:System.Activities.Statements.StateMachine> 活動建立狀態電腦工作流程。  
   
 ## <a name="see-also"></a>另請參閱

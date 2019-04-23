@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
 ms.openlocfilehash: ad2248c791fadc5363d90ff496d5e040f6036ab3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132089"
 ---
 # <a name="themedictionary-markup-extension"></a>ThemeDictionary 標記延伸
@@ -49,9 +49,9 @@ ms.locfileid: "59132089"
   
  屬性 (Attribute) 語法是最常搭配這個標記延伸來使用的語法。 `ThemeDictionary` 識別項字串後所提供的字串語彙基元，是指派做為基礎 <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> 延伸類別的 <xref:System.Windows.ThemeDictionaryExtension> 值。  
   
- `ThemeDictionary` 也可能會使用物件元素語法中。 在此案例中，指定的值<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A>屬性是必要項。  
+ `ThemeDictionary` 可能也會用於物件元素語法中。 在此案例中，指定的值<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A>屬性是必要項。  
   
- `ThemeDictionary` 也可以用於指定的詳細資訊的屬性使用方式<xref:System.Windows.Markup.StaticExtension.Member%2A>屬性做為屬性 = 值組：  
+ `ThemeDictionary` 也可以用於會指定 <xref:System.Windows.Markup.StaticExtension.Member%2A> 屬性 (Property) 做為 property=value 配對組的詳細屬性 (Attribute) 使用方式中。  
   
 ```xml  
 <object property="{ThemeDictionary AssemblyName=assemblyUri}" .../>  
@@ -61,7 +61,7 @@ ms.locfileid: "59132089"
   
  在  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器實作中，這個標記延伸的處理由定義<xref:System.Windows.ThemeDictionaryExtension>類別。  
   
- `ThemeDictionary` 是標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有標記延伸都會在其屬性語法中使用 { 與 } 字元，這個慣例讓 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器知道某個標記延伸必須處理這個屬性。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
+ `ThemeDictionary` 是一種標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有標記延伸都會在其屬性語法中使用 { 與 } 字元，這個慣例讓 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器知道某個標記延伸必須處理這個屬性。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

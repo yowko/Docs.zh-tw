@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ebc41d4d59100b9e71bd6ed3abd2ff26937e7465
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37c2ad92af938c1816c275ce217e48652b0628d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554552"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141254"
 ---
 # <a name="in-process-side-by-side-execution"></a>同處理序並存執行
 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，您可以使用同處理序並存裝載，在單一處理序中執行多個 Common Language Runtime (CLR) 版本。 根據預設，Managed COM 元件會與建置它們的 .NET Framework 版本一起執行，不論針對程序所載入的 .NET Framework 版本為何。  
@@ -174,5 +174,6 @@ int _tmain(int argc, _TCHAR* argv[])
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [\<startup> 項目](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
 - [\<supportedRuntime> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

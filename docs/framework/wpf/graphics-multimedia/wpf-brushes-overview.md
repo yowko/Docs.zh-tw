@@ -8,10 +8,10 @@ helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
 ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132206"
 ---
 # <a name="wpf-brushes-overview"></a>WPF 筆刷概觀
@@ -28,11 +28,11 @@ ms.locfileid: "59132206"
   
 |類別|筆刷屬性|  
 |-----------|----------------------|  
-|<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>, <xref:System.Windows.Controls.Border.Background%2A>|  
+|<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>、 <xref:System.Windows.Controls.Border.Background%2A>|  
 |<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>|  
 |<xref:System.Windows.Controls.Panel>|<xref:System.Windows.Controls.Panel.Background%2A>|  
 |<xref:System.Windows.Media.Pen>|<xref:System.Windows.Media.Pen.Brush%2A>|  
-|<xref:System.Windows.Shapes.Shape>|<xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>|  
+|<xref:System.Windows.Shapes.Shape>|<xref:System.Windows.Shapes.Shape.Fill%2A>、 <xref:System.Windows.Shapes.Shape.Stroke%2A>|  
 |<xref:System.Windows.Controls.TextBlock>|<xref:System.Windows.Controls.TextBlock.Background%2A>|  
   
  下列各節說明不同<xref:System.Windows.Media.Brush>類型，並提供每個範例。  
@@ -170,5 +170,5 @@ ms.locfileid: "59132206"
 - [筆刷範例](https://go.microsoft.com/fwlink/?LinkID=159973)
 - [ImageBrush 範例](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush 範例](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [HOW TO 主題](brushes-how-to-topics.md)
+- [HOW-TO 主題](brushes-how-to-topics.md)
 - [其他效能建議](../advanced/optimizing-performance-other-recommendations.md)

@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Internet, sockets
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
 ms.openlocfilehash: 4a1b18f2c31bf8dad8cf32e2e5205cf3008e7b18
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136041"
 ---
 # <a name="sockets"></a>通訊端
@@ -31,6 +31,6 @@ ms.locfileid: "59136041"
   
 ## <a name="see-also"></a>另請參閱
 
-- [作法：建立通訊端](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+- [如何：建立通訊端](../../../docs/framework/network-programming/how-to-create-a-socket.md)
 
 - [使用應用程式通訊協定](../../../docs/framework/network-programming/using-application-protocols.md)

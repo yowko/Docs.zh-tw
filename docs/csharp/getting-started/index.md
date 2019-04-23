@@ -9,10 +9,10 @@ ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
 ms.openlocfilehash: 5c502c3832ca9afc30599d47d0890fae168fa998
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130960"
 ---
 # <a name="get-started-with-c"></a>開始使用 C\#
@@ -43,7 +43,7 @@ ms.locfileid: "59130960"
 
 ## <a name="related-sections"></a>相關章節
 
-* [C# 程式設計手冊](../../csharp/programming-guide/index.md)
+* [C# 程式設計指南](../../csharp/programming-guide/index.md)
 
     提供 C# 程式設計概念的資訊，並說明如何在 C# 中執行各種工作。
 

@@ -3,10 +3,10 @@ title: <defaultPorts>
 ms.date: 03/30/2017
 ms.assetid: 725d4ee5-bd46-4f0e-9c20-30ba75d6eb2c
 ms.openlocfilehash: 4d7fdfb1cccb14f03d11864f1939cb578c79880a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130620"
 ---
 # <a name="defaultports"></a>\<defaultPorts>
@@ -40,7 +40,7 @@ ms.locfileid: "59130620"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<新增 > 的\<a d d >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-defaultports.md)|預設通訊端點，用戶端應用程式會接聽這個端點。|  
+|[\<add> of \<defaultPorts>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-defaultports.md)|預設通訊端點，用戶端應用程式會接聽這個端點。|  
   
 ### <a name="parent-elements"></a>父項目  
   

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - GDI+, polygons
 ms.assetid: a72213d2-d69a-4c2b-a75c-be7b20390c13
 ms.openlocfilehash: 2b1e3d387e4d056d9187c54dcef560544206c370
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132622"
 ---
 # <a name="polygons-in-gdi"></a>GDI+ 中的多邊形
@@ -36,4 +36,4 @@ ms.locfileid: "59132622"
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [線條、曲線和形狀](lines-curves-and-shapes.md)
-- [HOW TO：建立畫筆](how-to-create-a-pen.md)
+- [如何：建立畫筆](how-to-create-a-pen.md)
