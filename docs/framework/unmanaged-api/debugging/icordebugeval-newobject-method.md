@@ -18,18 +18,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9c2d6a66eca080b480b508afea36c33b3e0aeec0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178226"
 ---
-# <a name="icordebugevalnewobject-method"></a><span data-ttu-id="5f35b-102">ICorDebugEval::NewObject 方法</span><span class="sxs-lookup"><span data-stu-id="5f35b-102">ICorDebugEval::NewObject Method</span></span>
-<span data-ttu-id="5f35b-103">配置新的物件執行個體，並呼叫指定的建構函式方法。</span><span class="sxs-lookup"><span data-stu-id="5f35b-103">Allocates a new object instance and calls the specified constructor method.</span></span>  
+# <a name="icordebugevalnewobject-method"></a><span data-ttu-id="02c07-102">ICorDebugEval::NewObject 方法</span><span class="sxs-lookup"><span data-stu-id="02c07-102">ICorDebugEval::NewObject Method</span></span>
+<span data-ttu-id="02c07-103">配置新的物件執行個體，並呼叫指定的建構函式方法。</span><span class="sxs-lookup"><span data-stu-id="02c07-103">Allocates a new object instance and calls the specified constructor method.</span></span>  
   
- <span data-ttu-id="5f35b-104">這個方法是在.NET Framework 2.0 版中已過時。</span><span class="sxs-lookup"><span data-stu-id="5f35b-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="5f35b-105">使用[ICorDebugEval2::NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)改。</span><span class="sxs-lookup"><span data-stu-id="5f35b-105">Use [ICorDebugEval2::NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) instead.</span></span>  
+ <span data-ttu-id="02c07-104">這個方法是在.NET Framework 2.0 版中已過時。</span><span class="sxs-lookup"><span data-stu-id="02c07-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="02c07-105">使用[ICorDebugEval2::NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)改。</span><span class="sxs-lookup"><span data-stu-id="02c07-105">Use [ICorDebugEval2::NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5f35b-106">語法</span><span class="sxs-lookup"><span data-stu-id="5f35b-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="02c07-106">語法</span><span class="sxs-lookup"><span data-stu-id="02c07-106">Syntax</span></span>  
   
 ```  
 HRESULT NewObject (  
@@ -39,25 +39,25 @@ HRESULT NewObject (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5f35b-107">參數</span><span class="sxs-lookup"><span data-stu-id="5f35b-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="02c07-107">參數</span><span class="sxs-lookup"><span data-stu-id="02c07-107">Parameters</span></span>  
  `pConstructor`  
- <span data-ttu-id="5f35b-108">[in]呼叫建構函式。</span><span class="sxs-lookup"><span data-stu-id="5f35b-108">[in] The constructor to be called.</span></span>  
+ <span data-ttu-id="02c07-108">[in]呼叫建構函式。</span><span class="sxs-lookup"><span data-stu-id="02c07-108">[in] The constructor to be called.</span></span>  
   
  `nArgs`  
- <span data-ttu-id="5f35b-109">[in] `ppArgs` 陣列的大小。</span><span class="sxs-lookup"><span data-stu-id="5f35b-109">[in] The size of the `ppArgs` array.</span></span>  
+ <span data-ttu-id="02c07-109">[in] `ppArgs` 陣列的大小。</span><span class="sxs-lookup"><span data-stu-id="02c07-109">[in] The size of the `ppArgs` array.</span></span>  
   
  `ppArgs`  
- <span data-ttu-id="5f35b-110">[in]ICorDebugValue 物件陣列，每一個都代表要傳遞至建構函式的引數。</span><span class="sxs-lookup"><span data-stu-id="5f35b-110">[in] An array of ICorDebugValue objects, each of which represents an argument to be passed to the constructor.</span></span>  
+ <span data-ttu-id="02c07-110">[in]ICorDebugValue 物件陣列，每一個都代表要傳遞至建構函式的引數。</span><span class="sxs-lookup"><span data-stu-id="02c07-110">[in] An array of ICorDebugValue objects, each of which represents an argument to be passed to the constructor.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5f35b-111">需求</span><span class="sxs-lookup"><span data-stu-id="5f35b-111">Requirements</span></span>  
- <span data-ttu-id="5f35b-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5f35b-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="02c07-111">需求</span><span class="sxs-lookup"><span data-stu-id="02c07-111">Requirements</span></span>  
+ <span data-ttu-id="02c07-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="02c07-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5f35b-113">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5f35b-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="02c07-113">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="02c07-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5f35b-114">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5f35b-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="02c07-114">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="02c07-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5f35b-115">**.NET framework 版本：** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="5f35b-115">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="02c07-115">**.NET framework 版本：** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="02c07-115">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5f35b-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5f35b-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="02c07-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="02c07-116">See also</span></span>
 
-- [<span data-ttu-id="5f35b-117">NewParameterizedObject 方法</span><span class="sxs-lookup"><span data-stu-id="5f35b-117">NewParameterizedObject Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)
+- [<span data-ttu-id="02c07-117">NewParameterizedObject 方法</span><span class="sxs-lookup"><span data-stu-id="02c07-117">NewParameterizedObject Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)

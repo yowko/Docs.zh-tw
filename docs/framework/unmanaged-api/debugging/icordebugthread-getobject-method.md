@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7fa90aff73d94baf2cbf7d01f41710cb2aa10213
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178733"
 ---
-# <a name="icordebugthreadgetobject-method"></a><span data-ttu-id="22ec0-102">ICorDebugThread::GetObject 方法</span><span class="sxs-lookup"><span data-stu-id="22ec0-102">ICorDebugThread::GetObject Method</span></span>
-<span data-ttu-id="22ec0-103">取得 common language runtime (CLR) 執行緒的介面指標。</span><span class="sxs-lookup"><span data-stu-id="22ec0-103">Gets an interface pointer to the common language runtime (CLR) thread.</span></span>  
+# <a name="icordebugthreadgetobject-method"></a><span data-ttu-id="01dc6-102">ICorDebugThread::GetObject 方法</span><span class="sxs-lookup"><span data-stu-id="01dc6-102">ICorDebugThread::GetObject Method</span></span>
+<span data-ttu-id="01dc6-103">取得 common language runtime (CLR) 執行緒的介面指標。</span><span class="sxs-lookup"><span data-stu-id="01dc6-103">Gets an interface pointer to the common language runtime (CLR) thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="22ec0-104">語法</span><span class="sxs-lookup"><span data-stu-id="22ec0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="01dc6-104">語法</span><span class="sxs-lookup"><span data-stu-id="01dc6-104">Syntax</span></span>  
   
 ```  
 HRESULT GetObject (  
@@ -35,19 +35,19 @@ HRESULT GetObject (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="22ec0-105">參數</span><span class="sxs-lookup"><span data-stu-id="22ec0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="01dc6-105">參數</span><span class="sxs-lookup"><span data-stu-id="01dc6-105">Parameters</span></span>  
  `ppObject`  
- <span data-ttu-id="22ec0-106">[out]ICorDebugValue 介面物件，表示 CLR 執行緒的位址指標。</span><span class="sxs-lookup"><span data-stu-id="22ec0-106">[out] A pointer to the address of an ICorDebugValue interface object that represents the CLR thread.</span></span>  
+ <span data-ttu-id="01dc6-106">[out]ICorDebugValue 介面物件，表示 CLR 執行緒的位址指標。</span><span class="sxs-lookup"><span data-stu-id="01dc6-106">[out] A pointer to the address of an ICorDebugValue interface object that represents the CLR thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="22ec0-107">需求</span><span class="sxs-lookup"><span data-stu-id="22ec0-107">Requirements</span></span>  
- <span data-ttu-id="22ec0-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="22ec0-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="01dc6-107">需求</span><span class="sxs-lookup"><span data-stu-id="01dc6-107">Requirements</span></span>  
+ <span data-ttu-id="01dc6-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="01dc6-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="22ec0-109">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="22ec0-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="01dc6-109">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="01dc6-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="22ec0-110">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="22ec0-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="01dc6-110">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="01dc6-110">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="22ec0-111">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="22ec0-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="01dc6-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01dc6-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="22ec0-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="22ec0-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="01dc6-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="01dc6-112">See also</span></span>
 
 - <xref:System.Threading.Thread>
