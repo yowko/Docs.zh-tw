@@ -1,35 +1,28 @@
-items:
 - name: 移轉手冊
   href: index.md
   items:
-  - name: 應用程式相容性
-    href: application-compatibility.md
-    items:
-    - name: 執行階段變更
-      href: runtime/index.md
-    - name: 重定目標變更
-      href: retargeting/index.md
-  - name: 版本相容性
-    href: version-compatibility.md
-  - name: 版本和相依性
-    href: versions-and-dependencies.md
-    items:
-    - name: 作法：判斷安裝的 .NET Framework 版本
-      href: how-to-determine-which-versions-are-installed.md
+    - name: 應用程式相容性
+      href: application-compatibility.md
       items:
-      - name: .NET Framework 版本的最低 Release DWORD 值
-        href: minimum-release-dword.md
-    - name: 作法：判斷安裝的 .NET Framework 更新
-      href: how-to-determine-which-net-framework-updates-are-installed.md
-  - name: 作法：設定應用程式以支援 .NET Framework 4 或更新版本
-    href: how-to-configure-an-app-to-support-net-framework-4-or-4-5.md
-  - name: 從 .NET Framework 1.1 移轉
-    href: migrating-from-the-net-framework-1-1.md
-  - name: .NET Framework 4 移轉問題
-    href: net-framework-4-migration-issues.md
-ms.openlocfilehash: ad5a32ddb015693e5c146e5e3dfea3979013e18e
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59054932"
+        - name: 執行階段變更
+          href: runtime/index.md
+        - name: 重定目標變更
+          href: retargeting/index.md
+    - name: 版本相容性
+      href: version-compatibility.md
+    - name: 版本和相依性
+      href: versions-and-dependencies.md
+      items:
+        - name: HOW TO：判斷安裝的 .NET Framework 版本
+          href: how-to-determine-which-versions-are-installed.md
+          items:
+            - name: .NET Framework 版本的最低 Release DWORD 值
+              href: minimum-release-dword.md
+        - name: HOW TO：判斷安裝的 .NET Framework 更新
+          href: how-to-determine-which-net-framework-updates-are-installed.md
+    - name: HOW TO：設定應用程式以支援 .NET Framework 4 或更新版本
+      href: how-to-configure-an-app-to-support-net-framework-4-or-4-5.md
+    - name: 從 .NET Framework 1.1 移轉
+      href: migrating-from-the-net-framework-1-1.md
+    - name: .NET Framework 4 移轉問題
+      href: net-framework-4-migration-issues.md
