@@ -8,11 +8,11 @@ helpviewer_keywords:
 - status bars [Windows Forms], about status bars
 ms.assetid: c0d9bcbb-f8b8-46ef-bae2-4146b8c8ce99
 ms.openlocfilehash: f6f2d4b19b7ec91c964c72e3aca85e0253c7cc22
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129710"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977024"
 ---
 # <a name="statusstrip-control-overview"></a>StatusStrip 控制項概觀
 <xref:System.Windows.Forms.StatusStrip> 控制項會顯示 <xref:System.Windows.Forms.Form> 上正在檢視之物件或該物件之元件的相關資訊，或顯示與該物件在您的應用程式中作業相關的內容資訊。 一般而言，<xref:System.Windows.Forms.StatusStrip> 控制項是由 <xref:System.Windows.Forms.ToolStripStatusLabel> 物件所組成，其中每個物件會顯示文字和 (或) 圖示。 <xref:System.Windows.Forms.StatusStrip> 也可以包含 <xref:System.Windows.Forms.ToolStripDropDownButton>、<xref:System.Windows.Forms.ToolStripSplitButton> 和 <xref:System.Windows.Forms.ToolStripProgressBar> 控制項。  

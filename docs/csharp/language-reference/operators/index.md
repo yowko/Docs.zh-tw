@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 4958f3e28b80fca2086d45827df1ced8fc26bd8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f4267caeb6301950b9f6a8b9545a47b9f48e7920
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672286"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977375"
 ---
 # <a name="c-operators"></a>C# 運算子
 
@@ -77,7 +77,7 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 
 [\!x](boolean-logical-operators.md#logical-negation-operator-) – 邏輯否定。
 
-[~x](bitwise-complement-operator.md) – 位元補數。
+[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-) – 位元補數。
 
 [++x](arithmetic-operators.md#increment-operator-) – 前置遞增。 傳回 x 的值之前，利用大於 x 值的值 (通常會加上整數 1) 更新儲存位置。
 
@@ -90,6 +90,10 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 [&x](and-operator.md) – 位址。
 
 [*x](multiplication-operator.md) – 取值。
+
+[true 運算子](../keywords/true-false-operators.md) - 傳回 [bool](../keywords/bool.md) 值 `true` 以指出運算元必然為 true。
+
+[false 運算子](../keywords/true-false-operators.md) - 傳回 [bool](../keywords/bool.md) 值 `true`，以指出運算元必然為 false。
 
 ## <a name="multiplicative-operators"></a>乘法類運算子
 
@@ -113,9 +117,9 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 
 這些運算子具有的優先順序高於下一個區段且低於前一個區段。
 
-[x <\<  y](left-shift-operator.md) – 位元向左移位並使用右邊的零填滿。
+[x <\<  y](bitwise-and-shift-operators.md#left-shift-operator-) – 位元向左移位並使用右邊的零填滿。
 
-[x >> y](right-shift-operator.md) – 位元向右移位。 如果左運算元是 `int` 或 `long`，則以正負號位元填入左位元。 如果左運算元是 `uint` 或 `ulong`，則以零填入左位元。
+[x >> y](bitwise-and-shift-operators.md#right-shift-operator-) – 位元向右移位。 如果左運算元是 `int` 或 `long`，則以正負號位元填入左位元。 如果左運算元是 `uint` 或 `ulong`，則以零填入左位元。
 
 ## <a name="relational-and-type-testing-operators"></a>關係和類型測試運算子
 
@@ -145,27 +149,19 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 
 此運算子具有的優先順序高於下一個區段且低於前一個區段。
 
-[x & y](and-operator.md) – 邏輯或位元 AND。 您通常可以將整數類型和 `enum` 類型搭配使用。
+`x & y` – `bool` 運算元的 [邏輯 AND](boolean-logical-operators.md#logical-and-operator-)，或整數型別之運算元的 [位元邏輯 AND](bitwise-and-shift-operators.md#logical-and-operator-)。
 
 ## <a name="logical-xor-operator"></a>邏輯 XOR 運算子
 
 此運算子具有的優先順序高於下一個區段且低於前一個區段。
 
-[x ^ y](xor-operator.md) – 邏輯或位元 XOR。 您通常可以將整數類型和 `enum` 類型搭配使用。
+`x ^ y` – `bool` 運算元的 [邏輯 XOR](boolean-logical-operators.md#logical-exclusive-or-operator-)，或整數型別之運算元的 [位元邏輯 XOR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-)。
 
 ## <a name="logical-or-operator"></a>邏輯 OR 運算子
 
 此運算子具有的優先順序高於下一個區段且低於前一個區段。
 
-[x &#124; y](or-operator.md) – 邏輯或位元 OR。 您通常可以將整數類型和 `enum` 類型搭配使用。
-
-## <a name="true-operator"></a>True 運算子
-
-[true](../keywords/true-false-operators.md) 運算子傳回 [bool](../keywords/bool.md) 值 `true`，以指出運算元必然為 true。 
-
-## <a name="false-operator"></a>False 運算子
-
-[false](../keywords/true-false-operators.md) 運算子傳回 [bool](../keywords/bool.md) 值 `true`，以指出運算元必然為 false。 
+`x | y` – `bool` 運算元的 [邏輯 OR](boolean-logical-operators.md#logical-or-operator-)，或整數型別之運算元的 [位元邏輯 OR](bitwise-and-shift-operators.md#logical-or-operator-)。
 
 ## <a name="conditional-and-operator"></a>條件 AND 運算子
 
@@ -201,21 +197,21 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 
 [x -= y](subtraction-assignment-operator.md) – 遞減。 將 `x` 的值減去 `y` 的值，將結果儲存在 `x`，並傳回新的值。 如果 `x` 指定 `event`，則 `y` 必須是適當的函式，其中會將 C# 視為事件處理常式予以移除。
 
-[x *= y](multiplication-assignment-operator.md) – 乘法指派。 將 `y` 的值乘以 `x` 的值，將結果儲存在 `x`，並傳回新的值。
+[x *= y](arithmetic-operators.md#compound-assignment) – 乘法指派。 將 `y` 的值乘以 `x` 的值，將結果儲存在 `x`，並傳回新的值。
 
 [x /= y](arithmetic-operators.md#compound-assignment) – 除法指派。 將 `x` 的值除以 `y` 的值，將結果儲存在 `x`，並傳回新的值。
 
 [x %= y](arithmetic-operators.md#compound-assignment) – 餘數指派。 將 `x` 的值除以 `y` 的值，將餘數儲存在 `x`，並傳回新的值。
 
-[x &= y](and-assignment-operator.md) – AND 指派。 將 `y` 的值和 `x` 的值進行 AND 處理，將結果儲存在 `x`，並傳回新的值。
+[x &= y](boolean-logical-operators.md#compound-assignment) – AND 指派。 將 `y` 的值和 `x` 的值進行 AND 處理，將結果儲存在 `x`，並傳回新的值。
 
-[x &#124;= y](or-assignment-operator.md) – OR 指派。 將 `y` 的值和 `x` 的值進行 OR 處理，將結果儲存在 `x`，並傳回新的值。
+[x &#124;= y](boolean-logical-operators.md#compound-assignment) – OR 指派。 將 `y` 的值和 `x` 的值進行 OR 處理，將結果儲存在 `x`，並傳回新的值。
 
-[x ^= y](xor-assignment-operator.md) – XOR 指派。 將 `y` 的值和 `x` 的值進行 XOR 處理，將結果儲存在 `x`，並傳回新的值。
+[x ^= y](boolean-logical-operators.md#compound-assignment) – XOR 指派。 將 `y` 的值和 `x` 的值進行 XOR 處理，將結果儲存在 `x`，並傳回新的值。
 
-[x <<= y](left-shift-assignment-operator.md) – 左移指派。 將 `x` 的值向左移 `y` 個空格，將結果儲存在 `x`，並傳回新的值。
+[x <<= y](bitwise-and-shift-operators.md#compound-assignment) – 左移指派。 將 `x` 的值向左移 `y` 個空格，將結果儲存在 `x`，並傳回新的值。
 
-[x >>= y](right-shift-assignment-operator.md) – 右移指派。 將 `x` 的值向右移 `y` 個空格，將結果儲存在 `x`，並傳回新的值。
+[x >>= y](bitwise-and-shift-operators.md#compound-assignment) – 右移指派。 將 `x` 的值向右移 `y` 個空格，將結果儲存在 `x`，並傳回新的值。
 
 [=>](lambda-operator.md) – lambda 宣告。
 

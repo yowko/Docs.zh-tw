@@ -9,19 +9,21 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a04465c31b160f97568ed88c434e7e3a5126ebb6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186091"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975750"
 ---
 # <a name="how-to-create-a-path-gradient"></a>HOW TO：建立路徑漸層
 <xref:System.Drawing.Drawing2D.PathGradientBrush>類別可讓您自訂您逐漸變更色彩填滿圖形的方式。 例如，您可以指定路徑的中心的一種色彩和路徑的界限的另一種色彩。 您也可以指定不同的色彩，每個界限的數個點的路徑。  
   
 > [!NOTE]
->  在  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，路徑是一系列的線條和曲線維護<xref:System.Drawing.Drawing2D.GraphicsPath>物件。 如需詳細資訊[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]路徑，請參閱[GDI + 中的圖形路徑](graphics-paths-in-gdi.md)並[Constructing 和繪製路徑](constructing-and-drawing-paths.md)。  
-  
+>  在 GDI + 中，路徑是一連串的直線和曲線維護<xref:System.Drawing.Drawing2D.GraphicsPath>物件。 如需 GDI + 路徑的詳細資訊，請參閱 < [GDI + 中的圖形路徑](graphics-paths-in-gdi.md)並[Constructing 和繪製路徑](constructing-and-drawing-paths.md)。  
+
+這篇文章中的範例是呼叫從控制項的方法<xref:System.Windows.Forms.Control.Paint>事件處理常式。  
+
 ### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>若要使用的路徑漸層填滿橢圓形  
   
 -   下列範例會填滿橢圓形使用路徑漸層筆刷。 之中心色彩設定為藍色，邊界色彩設定為青色。 下圖顯示實心的橢圓形。  
@@ -30,7 +32,7 @@ ms.locfileid: "59186091"
   
      根據預設，路徑漸層筆刷不會延伸超出路徑的界限。 如果您使用路徑漸層筆刷填滿圖形超出路徑的界限時，在路徑外螢幕區域不會被填入。  
   
-     下圖顯示如果您變更，會發生什麼事<xref:System.Drawing.Graphics.FillEllipse%2A>在下列程式碼中呼叫`e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
+     下圖顯示如果您變更，會發生什麼事<xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType>在下列程式碼中呼叫`e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
      ![擴充到界限路徑的漸層停駐的路徑。](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   

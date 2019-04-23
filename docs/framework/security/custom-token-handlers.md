@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
 ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312107"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975672"
 ---
 # <a name="custom-token-handlers"></a>自訂權杖處理常式
 本主題討論 WIF 中的權杖處理常式以及如何使用它們來處理權杖。 本主題也涵蓋建立權杖類型的自訂權杖處理常式所需的作業，而 WIF 中預設不支援這些權杖類型。  

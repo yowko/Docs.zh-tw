@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ToolStripProgressBar control [Windows Forms], about ToolStripProgressBar control
 ms.assetid: ec3ab522-5fe4-4b4d-a551-bc19e84f4774
 ms.openlocfilehash: 380dabe2468ae3c7d9d7303498823d847a8d119e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162107"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976348"
 ---
 # <a name="toolstripprogressbar-control-overview"></a>ToolStripProgressBar 控制項概觀
 <xref:System.Windows.Forms.ToolStripProgressBar>結合的浮動定位和所有的轉譯功能<xref:System.Windows.Forms.ToolStrip>控制項和其一般的程序追蹤功能。 A<xref:System.Windows.Forms.ToolStripProgressBar>最通常由<xref:System.Windows.Forms.StatusStrip>，且較不頻繁的<xref:System.Windows.Forms.ToolStrip>。  

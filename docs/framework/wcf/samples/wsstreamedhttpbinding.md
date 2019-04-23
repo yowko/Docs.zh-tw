@@ -3,11 +3,11 @@ title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
 ms.openlocfilehash: de0c5683b081ecebf2168ffb5d6a2768fdd0a1fe
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59313979"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975984"
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 本範例會示範如何建立可在使用 HTTP 傳輸時支援資料流案例的繫結。  
