@@ -9,17 +9,17 @@ ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 50d76aef201fead37923a65cfeead16638b09842
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031170"
 ---
 # <a name="asynchronous-programming-patterns"></a>非同步程式設計模式
 
 .NET 提供三種模式來執行非同步作業：  
 
-- **工作架構非同步模式 (TAP)**，使用單一方法來代表非同步作業的起始與完成。 TAP 是在 .NET Framework 4 中引進。 **它是在 .NET 中進行非同步程式設計的建議方法。** C# 中的 [async](~/docs/csharp/language-reference/keywords/async.md) 與 [await](~/docs/csharp/language-reference/keywords/await.md) 關鍵字，以及 Visual Basic 中的 [Async](~/docs/visual-basic/language-reference/modifiers/async.md) 與 [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) 運算子，都加入對 TAP 的語言支援。 如需詳細資訊，請參閱[事件架構非同步模式 (TAP)](task-based-asynchronous-pattern-tap.md)  
+- **工作架構非同步模式 (TAP)**，使用單一方法來代表非同步作業的起始與完成。 TAP 是在 .NET Framework 4 中引進。 **它是在 .NET 中進行非同步程式設計的建議方法。** C# 中的 [async](~/docs/csharp/language-reference/keywords/async.md) 與 [await](~/docs/csharp/language-reference/keywords/await.md) 關鍵字，以及 Visual Basic 中的 [Async](~/docs/visual-basic/language-reference/modifiers/async.md) 與 [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) 運算子，都加入對 TAP 的語言支援。 如需詳細資訊，請參閱[以工作為基礎的非同步模式 (TAP)](task-based-asynchronous-pattern-tap.md)  
 
 - **事件架構非同步模式 (EAP)**，這是用於提供非同步行為的事件架構傳統模型。 它需要一個具有 `Async` 尾碼的方法、一或多個事件，事件處理常式委派類型，以及 `EventArg` 衍生類型。 在 .NET Framework 2.0 中採用了 EAP。 在新的程式開發時，不再建議使用它。 如需詳細資訊，請參閱[事件架構非同步模式 (EAP)](event-based-asynchronous-pattern-eap.md)。  
 

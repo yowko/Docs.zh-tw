@@ -1,32 +1,25 @@
-items:
 - name: 設定應用程式
   href: index.md
   items:
-  - name: 作法：使用 DEVPATH 找出組件
-    href: how-to-locate-assemblies-by-using-devpath.md
-  - name: 重新導向組件版本
-    href: redirect-assembly-versions.md
-    items:
-    - name: 作法：啟用和停用自動繫結重新導向
-      href: how-to-enable-and-disable-automatic-binding-redirection.md
-    - name: 組件繫結重新導向安全性使用權限
-      href: assembly-binding-redirection-security-permission.md
-  - name: 指定組件的位置
-    href: specify-assembly-location.md
-  - name: 設定密碼編譯類別
-    href: configure-cryptography-classes.md
-    items:
-    - name: 將演算法名稱對應至密碼編譯類別
-      href: map-algorithm-names-to-cryptography-classes.md
-    - name: 對應物件識別項至密碼編譯演算法
-      href: map-object-identifiers-to-cryptography-algorithms.md
-  - name: 作法：建立發行者原則
-    href: how-to-create-a-publisher-policy.md
-  - name: 組態檔結構描述
-    href: file-schema/index.md
-ms.openlocfilehash: 17fd8cdff154ae7e61609a6b819b14ad8fb4805b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468244"
+    - name: HOW TO：使用 DEVPATH 找出組件
+      href: how-to-locate-assemblies-by-using-devpath.md
+    - name: 重新導向組件版本
+      href: redirect-assembly-versions.md
+      items:
+        - name: HOW TO：啟用和停用自動繫結重新導向
+          href: how-to-enable-and-disable-automatic-binding-redirection.md
+        - name: 組件繫結重新導向安全性使用權限
+          href: assembly-binding-redirection-security-permission.md
+    - name: 指定組件的位置
+      href: specify-assembly-location.md
+    - name: 設定密碼編譯類別
+      href: configure-cryptography-classes.md
+      items:
+        - name: 將演算法名稱對應至密碼編譯類別
+          href: map-algorithm-names-to-cryptography-classes.md
+        - name: 對應物件識別項至密碼編譯演算法
+          href: map-object-identifiers-to-cryptography-algorithms.md
+    - name: HOW TO：建立發行者原則
+      href: how-to-create-a-publisher-policy.md
+    - name: 組態檔結構描述
+      href: file-schema/index.md

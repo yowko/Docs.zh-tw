@@ -17,11 +17,11 @@ ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b5e49e9d575ae2ec9b48b18f839d469632ffa769
-ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58348800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770405"
 ---
 # <a name="handling-and-raising-events"></a>處理和引發事件
 
@@ -61,9 +61,7 @@ ms.locfileid: "58348800"
 
 與事件相關聯的資料可以透過事件資料類別提供。 .NET 提供了許多事件資料類別，可讓您在應用程式中使用。 例如，<xref:System.IO.Ports.SerialDataReceivedEventArgs> 類別是 <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=nameWithType> 事件的事件資料類別。 .NET 遵循的命名模式是以 `EventArgs` 作為所有事件資料類型的結尾。 您可以藉由查看事件的委派，判斷與事件相關聯的事件資料類別。 例如，<xref:System.IO.Ports.SerialDataReceivedEventHandler> 委派會包含 <xref:System.IO.Ports.SerialDataReceivedEventArgs> 類別做為其中一個參數。  
   
-
-  <xref:System.EventArgs> 類別是所有事件資料類別的基底類型。 <xref:System.EventArgs> 也是您在事件沒有任何相關資料時使用的類別。 如果您建立的事件主要工作只是通知其他類別有事件發生，而不需要傳遞任何資料，請在委派中加入 <xref:System.EventArgs> 類別做為第二個參數。 您可以在未提供資料時傳遞 <xref:System.EventArgs.Empty?displayProperty=nameWithType> 值。 
-  <xref:System.EventHandler> 委派會包含 <xref:System.EventArgs> 類別做為參數。  
+<xref:System.EventArgs> 類別是所有事件資料類別的基底類型。 <xref:System.EventArgs> 也是您在事件沒有任何相關資料時使用的類別。 如果您建立的事件主要工作只是通知其他類別有事件發生，而不需要傳遞任何資料，請在委派中加入 <xref:System.EventArgs> 類別做為第二個參數。 您可以在未提供資料時傳遞 <xref:System.EventArgs.Empty?displayProperty=nameWithType> 值。 <xref:System.EventHandler> 委派會包含 <xref:System.EventArgs> 類別做為參數。  
   
 當您要建立自訂事件資料類別時，請建立衍生自 <xref:System.EventArgs> 的類別，然後提供傳遞事件相關資料所需的所有成員。 一般而言，您應該使用與 .NET 相同的命名模式，並以 `EventArgs` 作為事件資料類別名稱的結尾。  
   

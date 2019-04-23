@@ -1,36 +1,29 @@
-items:
 - name: 泛型
   href: index.md
   items:
-  - name: 泛型簡介
-    href: introduction-to-generics.md
-  - name: 泛型的優點
-    href: benefits-of-generics.md
-  - name: 泛型類型參數
-    href: generic-type-parameters.md
-  - name: 型別參數的條件約束
-    href: constraints-on-type-parameters.md
-  - name: 泛型類別
-    href: generic-classes.md
-  - name: 泛型介面
-    href: generic-interfaces.md
-  - name: 泛型方法
-    href: generic-methods.md
-  - name: 泛型和陣列
-    href: generics-and-arrays.md
-  - name: 泛型委派
-    href: generic-delegates.md
-  - name: C++ 範本和 C# 泛型之間的差異
-    href: differences-between-cpp-templates-and-csharp-generics.md
-  - name: 執行階段中的泛型
-    href: generics-in-the-run-time.md
-  - name: 泛型和反映
-    href: generics-and-reflection.md
-  - name: 泛型和屬性
-    href: generics-and-attributes.md
-ms.openlocfilehash: daccd9dc4b0c808750866aacad6dacffc1282f6e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468220"
+    - name: 泛型簡介
+      href: introduction-to-generics.md
+    - name: 泛型的優點
+      href: benefits-of-generics.md
+    - name: 泛型類型參數
+      href: generic-type-parameters.md
+    - name: 型別參數的條件約束
+      href: constraints-on-type-parameters.md
+    - name: 泛型類別
+      href: generic-classes.md
+    - name: 泛型介面
+      href: generic-interfaces.md
+    - name: 泛型方法
+      href: generic-methods.md
+    - name: 泛型和陣列
+      href: generics-and-arrays.md
+    - name: 泛型委派
+      href: generic-delegates.md
+    - name: 'C++ 範本和 C# 泛型之間的差異'
+      href: differences-between-cpp-templates-and-csharp-generics.md
+    - name: 執行階段中的泛型
+      href: generics-in-the-run-time.md
+    - name: 泛型和反映
+      href: generics-and-reflection.md
+    - name: 泛型和屬性
+      href: generics-and-attributes.md

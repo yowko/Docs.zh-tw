@@ -1,18 +1,11 @@
-items:
 - name: Main() 和命令列引數
   href: index.md
   items:
-  - name: 命令列引數
-    href: command-line-arguments.md
-  - name: 作法：顯示命令列引數
-    href: how-to-display-command-line-arguments.md
-  - name: 作法：使用 foreach 存取命令列引數
-    href: how-to-access-command-line-arguments-using-foreach.md
-  - name: Main() 傳回值
-    href: main-return-values.md
-ms.openlocfilehash: f46f240118ac595dc8d933ecd5f7efbf16cb25ab
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468327"
+    - name: 命令列引數
+      href: command-line-arguments.md
+    - name: HOW TO：顯示命令列引數
+      href: how-to-display-command-line-arguments.md
+    - name: HOW TO：使用 foreach 存取命令列引數
+      href: how-to-access-command-line-arguments-using-foreach.md
+    - name: Main() 傳回值
+      href: main-return-values.md

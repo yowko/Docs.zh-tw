@@ -1,6 +1,6 @@
 ---
-title: .NET Framework 4.7、4.6 和 4.5
-ms.date: 04/10/2018
+title: .NET Framework 文件
+ms.date: 04/02/2019
 ms.custom: updateeachrelease
 f1_keywords:
 - f61f02f2-2f20-483d-8f56-a9c8f3a54986
@@ -10,53 +10,60 @@ helpviewer_keywords:
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce84cf888145c85361d82e9b4c1d2c8c2db4fd5b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b6e21d2514ad357c906885750d9320575bdb75b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643929"
 ---
 # <a name="net-framework-guide"></a>.NET Framework 指南
 
 > [!NOTE]
-> 此 .NET Framework 內容集包含 .NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1 和 4.7.2 版的資訊。 若要下載 .NET Framework，請參閱[安裝 .NET Framework](../../docs/framework/install/guide-for-developers.md)。 如需 NET Framework 4.5、[!INCLUDE[net_v46](../../includes/net-v46-md.md)]、其小數點版本以及 .NET Framework 4.7、4.7.1 和 4.7.2 版的新功能和變更清單，請參閱 [.NET Framework 的新功能](../../docs/framework/whats-new/index.md)。 如需支援平台的清單，請參閱 [.NET Framework 系統需求](../../docs/framework/get-started/system-requirements.md)。 
+> 此 .NET Framework 內容集包含 .NET Framework 4.5 到 4.8 版的資訊。 若要下載 .NET Framework，請參閱[安裝 .NET Framework](./install/guide-for-developers.md)。 如需 .NET Framework 的新功能和變更清單，請參閱 [.NET Framework 中的新功能](./whats-new/index.md)。 如需支援平台的清單，請參閱 [.NET Framework 系統需求](./get-started/system-requirements.md)。 如需舊版 .NET Framework 的文件，請參閱 [.NET 舊版文件](https://docs.microsoft.com/previous-versions/dotnet/)。
 
 .NET Framework 這套開發平台可用於建置可在網路、Windows、Windows Phone、Windows Server 及 Microsoft Azure 上使用的 App。 這是由通用語言執行平台 (CLR) 和 .NET Framework 類別庫 (包括各種功能且支援許多產業標準) 所組成。
 
-.NET Framework 提供許多服務，包括記憶體管理、類型與記憶體安全、安全性、網路及應用程式部署。 它提供了簡單好用的資料結構和 API，以抽取出較低層級的 Windows 作業系統。 您可以使用各種程式設計語言與 .NET Framework 一起搭配使用，包括 C#、F# 及 Visual Basic。  
+.NET Framework 提供許多服務，包括記憶體管理、類型與記憶體安全、安全性、網路及應用程式部署。 它提供了簡單好用的資料結構和 API，以抽取出較低層級的 Windows 作業系統。 您可以搭配 .NET Framework 使用不同的程式設計語言，包括 C#、F# 與 Visual Basic。
 
-如需適用於使用者和開發人員的 .NET Framework 一般簡介，請參閱[使用者入門](../../docs/framework/get-started/index.md)。 如需 .NET Framework 架構與重要功能的簡介，請參閱[概觀](../../docs/framework/get-started/overview.md)。  
+如需適用於使用者和開發人員的 .NET Framework 一般簡介，請參閱[使用者入門](./get-started/index.md)。 如需 .NET Framework 架構與重要功能的簡介，請參閱[概觀](./get-started/overview.md)。
 
 .NET Framework 可以搭配 Docker 與 [Windows 容器 (英文)](/virtualization/windowscontainers/about/) 使用。 請參閱[使用 Docker 部署 .NET Framework 應用程式](./docker/index.md)，以了解如何在 Docker 容器中執行應用程式。
 
 ## <a name="installation"></a>安裝
 
-.NET Framework 隨附於 Windows，讓您能夠執行 .NET Framework 應用程式。 但您需要的 .NET framework 版本可能比 Windows 所隨附的版本更高。 如需詳細資訊，請參閱[在 Windows 上安裝 .NET Framework](./install/index.md)。
+.NET Framework 隨附於 Windows，讓您能夠執行 .NET Framework 應用程式。 但您需要的 .NET Framework 版本可能比 Windows 所隨附的版本更高。 如需詳細資訊，請參閱[在 Windows 上安裝 .NET Framework](./install/index.md)。
 
 請參閱[修復 .NET Framework](./install/repair.md)，以了解如何在遇到 .NET Framework 安裝錯誤時修復 .NET Framework 安裝。
 
-如需下載 .NET Framework 的詳細資訊，請參閱[安裝適用於開發人員的 .NET Framework](../../docs/framework/install/guide-for-developers.md)。  
-  
+如需下載 .NET Framework 的詳細資訊，請參閱[安裝適用於開發人員的 .NET Framework](./install/guide-for-developers.md)。
+
 ## <a name="in-this-section"></a>本節內容
 
-[新功能](../../docs/framework/whats-new/index.md)  
-描述最新版 .NET Framework 中重要的新功能與變更。 包含過時類型及成員的清單，並提供從舊版 .NET Framework 移轉您的應用程式的指南。  
-  
-[快速入門](../../docs/framework/get-started/index.md)  
-提供 .NET Framework 的完整概觀與其他資源的連結。  
-  
-[移轉手冊](../../docs/framework/migration-guide/index.md)   
-提供將應用程式移轉至新版 .NET Framework 時所需考量的資源和變更清單。  
-  
-[開發指南](../../docs/framework/development-guide.md)  
-提供應用程式開發所有主要技術領域和工作的指引，包括建立、設定、偵錯、保護及部署您的應用程式，以及有關動態程式設計、互通性、擴充性、記憶體管理和執行緒的資訊。  
-  
-[工具](../../docs/framework/tools/index.md)  
-說明透過使用 .NET Framework 技術，可協助您開發、設定及部署應用程式的工具。  
-  
-[.NET Framework 類別庫](/dotnet/api/?view=netframework-4.7.2)   
-為每個包含在 .NET Framework 命名空間的類別提供語法、程式碼範例和相關資訊。  
-  
-[其他類別庫和 API](../../docs/framework/additional-apis/index.md)  
-提供頻外 (OOB) 版本中所包含類別的文件，以及針對特定平台或 .NET Framework 實作之類別的文件。
+* [新功能](./whats-new/index.md)  
+描述最新版 .NET Framework 中重要的新功能與變更。 包含過時類型及成員的清單，並提供從舊版 .NET Framework 移轉您的應用程式的指南。
+
+* [開始使用](./get-started/index.md)  
+提供 .NET Framework 的完整概觀與其他資源的連結。
+
+* [安裝指南](./install/index.md)  
+提供有關 .NET Framework 安裝與疑難排解的資源與指導方針。
+
+* [移轉手冊](./migration-guide/index.md)  
+提供將應用程式移轉至新版 .NET Framework 時所需考量的資源與變更清單。
+
+* [Docker 上的 .NET Framework 指南](./docker/index.md)  
+使用 Windows 容器，提供搭配 Docker 執行 .NET Framework 應用程式的資源。
+
+* [開發指南](./development-guide.md)  
+提供應用程式開發所有主要技術領域和工作的指引，包括建立、設定、偵錯、保護及部署您的應用程式，以及有關動態程式設計、互通性、擴充性、記憶體管理和執行緒的資訊。
+
+* [工具](./tools/index.md)  
+說明透過使用 .NET Framework 技術，可協助您開發、設定及部署應用程式的工具。
+
+* [其他類別庫和 API](./additional-apis/index.md)  
+提供 Microsoft 工具使用之私人 .NET Framework API 的文件。
+
+## <a name="see-also"></a>另請參閱
+
+* [.NET Framework 類別庫](/dotnet/api/?view=netframework-4.8)

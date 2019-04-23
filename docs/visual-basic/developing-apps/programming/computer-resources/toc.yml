@@ -1,58 +1,51 @@
-items:
 - name: 存取電腦資源
   href: index.md
   items:
-  - name: 播放音效
-    href: playing-sounds.md
-  - name: 在剪貼簿儲存和讀取資料
-    href: storing-data-to-and-reading-from-the-clipboard.md
-  - name: 取得電腦的相關資訊
-    href: getting-information-about-the-computer.md
-  - name: 存取鍵盤
-    href: accessing-the-keyboard.md
-    items:
-    - name: 作法：啟動應用程式並將按鍵輸入傳送至該應用程式
-      href: how-to-start-an-application-and-send-it-keystrokes.md
-  - name: 存取滑鼠
-    href: accessing-the-mouse.md
-  - name: 執行網路作業
-    href: performing-network-operations.md
-    items:
-    - name: 作法：上傳檔案
-      href: how-to-upload-a-file.md
-    - name: 作法：下載檔案
-      href: how-to-download-a-file.md
-    - name: 作法：檢查連線狀態
-      href: how-to-check-connection-status.md
-  - name: 存取電腦的連接埠
-    href: accessing-the-computer-s-ports.md
-    items:
-    - name: 作法：顯示可用的序列埠
-      href: how-to-show-available-serial-ports.md
-    - name: 作法：撥接與序列埠連接的數據機
-      href: how-to-dial-modems-attached-to-serial-ports.md
-    - name: 作法：將字串傳送至序列埠
-      href: how-to-send-strings-to-serial-ports.md
-    - name: 作法：接收來自序列埠的字串
-      href: how-to-receive-strings-from-serial-ports.md
-    - name: .NET Framework 中的連接埠作業
-      href: port-operations-in-the-net-framework.md
-  - name: 讀取和寫入登錄
-    href: reading-from-and-writing-to-the-registry.md
-    items:
-    - name: 作法：建立登錄機碼並設定其值
-      href: how-to-create-a-registry-key-and-set-its-value.md
-    - name: 作法：讀取登錄機碼的值
-      href: how-to-read-a-value-from-a-registry-key.md
-    - name: 作法：刪除登錄機碼
-      href: how-to-delete-a-registry-key.md
-    - name: 使用 Microsoft.Win32 命名空間讀取和寫入登錄
-      href: reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md
-    - name: 安全性和登錄
-      href: security-and-the-registry.md
-ms.openlocfilehash: b45e258b05c06cb8494a1644bd43cca447578e6c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468145"
+    - name: 播放音效
+      href: playing-sounds.md
+    - name: 在剪貼簿儲存和讀取資料
+      href: storing-data-to-and-reading-from-the-clipboard.md
+    - name: 取得電腦的相關資訊
+      href: getting-information-about-the-computer.md
+    - name: 存取鍵盤
+      href: accessing-the-keyboard.md
+      items:
+        - name: HOW TO：啟動應用程式並將按鍵輸入傳送至該應用程式
+          href: how-to-start-an-application-and-send-it-keystrokes.md
+    - name: 存取滑鼠
+      href: accessing-the-mouse.md
+    - name: 執行網路作業
+      href: performing-network-operations.md
+      items:
+        - name: HOW TO：上傳檔案
+          href: how-to-upload-a-file.md
+        - name: HOW TO：下載檔案
+          href: how-to-download-a-file.md
+        - name: HOW TO：檢查連線狀態
+          href: how-to-check-connection-status.md
+    - name: 存取電腦的連接埠
+      href: accessing-the-computer-s-ports.md
+      items:
+        - name: HOW TO：顯示可用的序列埠
+          href: how-to-show-available-serial-ports.md
+        - name: HOW TO：撥接與序列埠連接的數據機
+          href: how-to-dial-modems-attached-to-serial-ports.md
+        - name: HOW TO：將字串傳送至序列埠
+          href: how-to-send-strings-to-serial-ports.md
+        - name: HOW TO：接收來自序列埠的字串
+          href: how-to-receive-strings-from-serial-ports.md
+        - name: .NET Framework 中的連接埠作業
+          href: port-operations-in-the-net-framework.md
+    - name: 讀取和寫入登錄
+      href: reading-from-and-writing-to-the-registry.md
+      items:
+        - name: HOW TO：建立登錄機碼並設定其值
+          href: how-to-create-a-registry-key-and-set-its-value.md
+        - name: HOW TO：讀取登錄機碼的值
+          href: how-to-read-a-value-from-a-registry-key.md
+        - name: HOW TO：刪除登錄機碼
+          href: how-to-delete-a-registry-key.md
+        - name: 使用 Microsoft.Win32 命名空間讀取和寫入登錄
+          href: reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md
+        - name: 安全性和登錄
+          href: security-and-the-registry.md

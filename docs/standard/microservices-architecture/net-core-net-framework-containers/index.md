@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
 ms.openlocfilehash: e71739b06275d4ee786d246004930d7b66fbc72b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019603"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a>針對 Docker 容器在 .NET Core 和 .NET Framework 之間進行選擇
 

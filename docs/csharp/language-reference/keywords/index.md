@@ -1,14 +1,20 @@
 ---
-title: 'C# 關鍵字'
+title: C# 關鍵字
 ms.date: 03/07/2017
 f1_keywords:
-  - cs.keywords
+- cs.keywords
 helpviewer_keywords:
-  - 'keywords [C#]'
-  - 'C# language, keywords'
-  - 'Visual C#, keywords'
-  - '@ keyword'
+- keywords [C#]
+- C# language, keywords
+- Visual C#, keywords
+- '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
+ms.openlocfilehash: c590a33b83a9c6d1b839ecb496e8eb08488b2598
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61661395"
 ---
 # <a name="c-keywords"></a>C# 關鍵字
 關鍵字是預先定義的保留識別項，它對編譯器具有特殊意義。 您必須在關鍵字加上 `@` 做為前置詞，才能將它們當做程式中的識別項使用。 例如，`@if` 是有效的識別項，但 `if` 不是，因為 `if` 是關鍵字。  

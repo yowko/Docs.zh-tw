@@ -1,45 +1,38 @@
-items:
 - name: 交易處理
   href: index.md
   items:
-  - name: 交易基礎觀念
-    href: transaction-fundamentals.md
-  - name: System.Transactions 所提供的功能
-    href: features-provided-by-system-transactions.md
-    items:
-    - name: 撰寫異動式應用程式
-      href: writing-a-transactional-application.md
+    - name: 交易基礎觀念
+      href: transaction-fundamentals.md
+    - name: System.Transactions 所提供的功能
+      href: features-provided-by-system-transactions.md
       items:
-      - name: 使用交易範圍實作隱含交易
-        href: implementing-an-implicit-transaction-using-transaction-scope.md
-      - name: 使用 CommittableTransaction 實作明確交易
-        href: implementing-an-explicit-transaction-using-committabletransaction.md
-      - name: 使用 DependentTransaction 管理並行存取
-        href: managing-concurrency-with-dependenttransaction.md
-      - name: 與 Enterprise Services 和 COM+ 交易的互通性
-        href: interoperability-with-enterprise-services-and-com-transactions.md
-      - name: 交易管理擴大規模
-        href: transaction-management-escalation.md
-      - name: 診斷追蹤
-        href: diagnostic-traces.md
-      - name: 在 ASP.NET 中使用 System.Transactions
-        href: using-system-transactions-in-aspnet.md
-    - name: 實作資源管理員
-      href: implementing-a-resource-manager.md
-      items:
-      - name: 將資源登記成為交易中的參與者
-        href: enlisting-resources-as-participants-in-a-transaction.md
-      - name: 在單一階段和多重階段中認可交易
-        href: committing-a-transaction-in-single-phase-and-multi-phase.md
-      - name: 執行復原
-        href: performing-recovery.md
-      - name: 存取資源的安全性信任層級
-        href: security-trust-levels-in-accessing-resources.md
-      - name: 使用單一階段交易認可和可提升單一階段告知進行最佳化
-        href: optimization-spc-and-promotable-spn.md
-ms.openlocfilehash: 9ebce82b22c684bc2cee3892cb53803eef725dee
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468280"
+        - name: 撰寫異動式應用程式
+          href: writing-a-transactional-application.md
+          items:
+            - name: 使用交易範圍實作隱含交易
+              href: implementing-an-implicit-transaction-using-transaction-scope.md
+            - name: 使用 CommittableTransaction 實作明確交易
+              href: implementing-an-explicit-transaction-using-committabletransaction.md
+            - name: 使用 DependentTransaction 管理並行存取
+              href: managing-concurrency-with-dependenttransaction.md
+            - name: 與 Enterprise Services 和 COM+ 交易的互通性
+              href: interoperability-with-enterprise-services-and-com-transactions.md
+            - name: 交易管理擴大規模
+              href: transaction-management-escalation.md
+            - name: 診斷追蹤
+              href: diagnostic-traces.md
+            - name: 在 ASP.NET 中使用 System.Transactions
+              href: using-system-transactions-in-aspnet.md
+        - name: 實作資源管理員
+          href: implementing-a-resource-manager.md
+          items:
+            - name: 將資源登記成為交易中的參與者
+              href: enlisting-resources-as-participants-in-a-transaction.md
+            - name: 在單一階段和多重階段中認可交易
+              href: committing-a-transaction-in-single-phase-and-multi-phase.md
+            - name: 執行復原
+              href: performing-recovery.md
+            - name: 存取資源的安全性信任層級
+              href: security-trust-levels-in-accessing-resources.md
+            - name: 使用單一階段交易認可和可提升單一階段告知進行最佳化
+              href: optimization-spc-and-promotable-spn.md

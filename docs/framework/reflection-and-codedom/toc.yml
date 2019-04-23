@@ -1,61 +1,54 @@
-items:
 - name: 動態程式設計
   href: index.md
   items:
-  - name: 反射
-    href: reflection.md
-    items:
-    - name: 檢視類型資訊
-      href: viewing-type-information.md
-    - name: 反映和泛用類型
-      href: reflection-and-generic-types.md
-    - name: 作法：使用反映檢查和具現化泛型型別
-      href: how-to-examine-and-instantiate-generic-types-with-reflection.md
-    - name: 反映的安全性考量
-      href: security-considerations-for-reflection.md
-    - name: 動態載入和使用類型
-      href: dynamically-loading-and-using-types.md
-    - name: 作法：將組件載入僅限反映的內容
-      href: how-to-load-assemblies-into-the-reflection-only-context.md
-    - name: 存取自訂屬性
-      href: accessing-custom-attributes.md
-    - name: 指定完整的類型名稱
-      href: specifying-fully-qualified-type-names.md
-    - name: 作法：使用反映連結委派
-      href: how-to-hook-up-a-delegate-using-reflection.md
-    - name: 適用於 Windows 市集應用程式之 .NET Framework 中的反映
-      href: reflection-for-windows-store-apps.md
-  - name: 發出動態方法和組件
-    href: emitting-dynamic-methods-and-assemblies.md
-    items:
-    - name: 反映發出中的安全性問題
-      href: security-issues-in-reflection-emit.md
-    - name: 逐步解說：在部分信任情節中發出程式碼
-      href: walkthrough-emitting-code-in-partial-trust-scenarios.md
-    - name: 作法：定義和執行動態方法
-      href: how-to-define-and-execute-dynamic-methods.md
-    - name: 作法：使用反映發出定義泛型型別
-      href: how-to-define-a-generic-type-with-reflection-emit.md
-    - name: 作法：使用反映發出定義泛型方法
-      href: how-to-define-a-generic-method-with-reflection-emit.md
-    - name: 動態類型產生的可回收組件
-      href: collectible-assemblies.md
-  - name: Dynamic Language Runtime 概觀
-    href: dynamic-language-runtime-overview.md
-  - name: 動態原始程式碼的產生和編譯
-    href: dynamic-source-code-generation-and-compilation.md
-    items:
-    - name: 使用 CodeDOM
-      href: using-the-codedom.md
-    - name: 從 CodeDOM 圖表產生和編譯原始程式碼
-      href: generating-and-compiling-source-code-from-a-codedom-graph.md
-    - name: 作法：使用 CodeDOM 建立 XML 文件檔案
-      href: how-to-create-an-xml-documentation-file-using-codedom.md
-    - name: 作法：使用 CodeDOM 建立類別
-      href: how-to-create-a-class-using-codedom.md
-ms.openlocfilehash: 00d24c89f04d5bfb257fa3e7835741190c8fcbdc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468191"
+    - name: 反射
+      href: reflection.md
+      items:
+        - name: 檢視類型資訊
+          href: viewing-type-information.md
+        - name: 反映和泛用類型
+          href: reflection-and-generic-types.md
+        - name: HOW TO：使用反映檢查和具現化泛型型別
+          href: how-to-examine-and-instantiate-generic-types-with-reflection.md
+        - name: 反映的安全性考量
+          href: security-considerations-for-reflection.md
+        - name: 動態載入和使用類型
+          href: dynamically-loading-and-using-types.md
+        - name: HOW TO：將組件載入僅限反映的內容
+          href: how-to-load-assemblies-into-the-reflection-only-context.md
+        - name: 存取自訂屬性
+          href: accessing-custom-attributes.md
+        - name: 指定完整的類型名稱
+          href: specifying-fully-qualified-type-names.md
+        - name: HOW TO：使用反映連結委派
+          href: how-to-hook-up-a-delegate-using-reflection.md
+        - name: 適用於 Windows 市集應用程式之 .NET Framework 中的反映
+          href: reflection-for-windows-store-apps.md
+    - name: 發出動態方法和組件
+      href: emitting-dynamic-methods-and-assemblies.md
+      items:
+        - name: 反映發出中的安全性問題
+          href: security-issues-in-reflection-emit.md
+        - name: 逐步解說：在部分信任情節中發出程式碼
+          href: walkthrough-emitting-code-in-partial-trust-scenarios.md
+        - name: HOW TO：定義和執行動態方法
+          href: how-to-define-and-execute-dynamic-methods.md
+        - name: HOW TO：使用反映發出定義泛型型別
+          href: how-to-define-a-generic-type-with-reflection-emit.md
+        - name: HOW TO：使用反映發出定義泛型方法
+          href: how-to-define-a-generic-method-with-reflection-emit.md
+        - name: 動態類型產生的可回收組件
+          href: collectible-assemblies.md
+    - name: Dynamic Language Runtime 概觀
+      href: dynamic-language-runtime-overview.md
+    - name: 動態原始程式碼的產生和編譯
+      href: dynamic-source-code-generation-and-compilation.md
+      items:
+        - name: 使用 CodeDOM
+          href: using-the-codedom.md
+        - name: 從 CodeDOM 圖表產生和編譯原始程式碼
+          href: generating-and-compiling-source-code-from-a-codedom-graph.md
+        - name: HOW TO：使用 CodeDOM 建立 XML 文件檔案
+          href: how-to-create-an-xml-documentation-file-using-codedom.md
+        - name: HOW TO：使用 CodeDOM 建立類別
+          href: how-to-create-a-class-using-codedom.md

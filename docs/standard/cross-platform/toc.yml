@@ -1,22 +1,15 @@
-items:
 - name: 進行多平台開發
   href: index.md
   items:
-  - name: 可攜式類別庫
-    href: cross-platform-development-with-the-portable-class-library.md
-  - name: 搭配 MVVM 使用可攜式類別庫
-    href: using-portable-class-library-with-model-view-view-model.md
-  - name: 以多平台為目標之函式庫的應用程式資源
-    href: app-resources-for-libraries-that-target-multiple-platforms.md
-  - name: 適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援
-    href: support-for-windows-store-apps-and-windows-runtime.md
-  - name: 傳遞 URI 給 Windows 執行階段
-    href: passing-a-uri-to-the-windows-runtime.md
-  - name: WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) 方法
-    href: windowsruntimestreamextensions-asrandomaccessstream-method.md
-ms.openlocfilehash: 92ecd411bf13b7906d5faaaf459f9b786f3aba0a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468354"
+    - name: 可攜式類別庫
+      href: cross-platform-development-with-the-portable-class-library.md
+    - name: 搭配 MVVM 使用可攜式類別庫
+      href: using-portable-class-library-with-model-view-view-model.md
+    - name: 以多平台為目標之函式庫的應用程式資源
+      href: app-resources-for-libraries-that-target-multiple-platforms.md
+    - name: 適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援
+      href: support-for-windows-store-apps-and-windows-runtime.md
+    - name: 傳遞 URI 給 Windows 執行階段
+      href: passing-a-uri-to-the-windows-runtime.md
+    - name: WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) 方法
+      href: windowsruntimestreamextensions-asrandomaccessstream-method.md

@@ -1,28 +1,21 @@
-items:
 - name: Authenticode
   href: index.md
   items:
-  - name: _AxlGetIssuerPublicKeyHash 函式
-    href: axlgetissuerpublickeyhash-function.md
-  - name: _AxlPublicKeyBlobToPublicKeyToken 函式
-    href: axlpublickeyblobtopublickeytoken-function.md
-  - name: _AxlRSAKeyValueToPublicKeyToken 函式
-    href: axlrsakeyvaluetopublickeytoken-function.md
-  - name: CertFreeAuthenticodeSignerInfo 函式
-    href: certfreeauthenticodesignerinfo-function.md
-  - name: CertFreeAuthenticodeTimestamperInfo 函式
-    href: certfreeauthenticodetimestamperinfo-function.md
-  - name: CertTimestampAuthenticodeLicense 函式
-    href: certtimestampauthenticodelicense-function.md
-  - name: CertVerifyAuthenticodeLicense 函式
-    href: certverifyauthenticodelicense-function.md
-  - name: AXL_AUTHENTICODE_SIGNER_INFO 結構
-    href: axl-authenticode-signer-info-structure.md
-  - name: AXL_AUTHENTICODE_TIMESTAMPER_INFO 結構
-    href: axl-authenticode-timestamper-info-structure.md
-ms.openlocfilehash: 2ef9b3d6a038f9e57375b7c99ab82f00547af726
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468233"
+    - name: _AxlGetIssuerPublicKeyHash 函式
+      href: axlgetissuerpublickeyhash-function.md
+    - name: _AxlPublicKeyBlobToPublicKeyToken 函式
+      href: axlpublickeyblobtopublickeytoken-function.md
+    - name: _AxlRSAKeyValueToPublicKeyToken 函式
+      href: axlrsakeyvaluetopublickeytoken-function.md
+    - name: CertFreeAuthenticodeSignerInfo 函式
+      href: certfreeauthenticodesignerinfo-function.md
+    - name: CertFreeAuthenticodeTimestamperInfo 函式
+      href: certfreeauthenticodetimestamperinfo-function.md
+    - name: CertTimestampAuthenticodeLicense 函式
+      href: certtimestampauthenticodelicense-function.md
+    - name: CertVerifyAuthenticodeLicense 函式
+      href: certverifyauthenticodelicense-function.md
+    - name: AXL_AUTHENTICODE_SIGNER_INFO 結構
+      href: axl-authenticode-signer-info-structure.md
+    - name: AXL_AUTHENTICODE_TIMESTAMPER_INFO 結構
+      href: axl-authenticode-timestamper-info-structure.md

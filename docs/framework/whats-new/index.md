@@ -1,7 +1,7 @@
 ---
 title: .NET Framework 中的新功能
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 04/18/2019
 dev_langs:
 - csharp
 - vb
@@ -10,17 +10,18 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d67626a72e04cd1163e749339d8d5fac22959a3a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 3c0fcf9bd1c1e8df19458f681497b77348279915
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914824"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新功能
 
 本文摘要說明下列 .NET Framework 版本中重要的新功能和增強功能：
 
+- [.NET Framework 4.8](#v48)
 - [.NET Framework 4.7.2](#v472)
 - [.NET Framework 4.7.1](#v471)
 - [.NET Framework 4.7](#v47)
@@ -36,40 +37,173 @@ ms.locfileid: "59613755"
 > [!NOTE]
 > .NET Framework 小組也會不定期隨著 NuGet 發行相關功能，以擴充平台支援並引進新功能，例如不可變的集合和支援 SIMD 的向量類型。 如需詳細資訊，請參閱[其他類別庫和 API](../additional-apis/index.md) 以及 [.NET Framework 和不定期發行](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。 請參閱 .NET Framework 的 [NuGet 套件完整清單](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/)，或訂閱[我們的摘要](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/)。
 
+<a name="v48" />
+
+## <a name="introducing-net-framework-48"></a>.NET Framework 4.8 簡介
+
+.NET Framework 4.8 建置於舊版 .NET Framework 4.x 的基礎上，方法是新增許多新的修正和多個新功能，同時保有產品的高穩定性。
+
+### <a name="downloading-and-installing-net-framework-48"></a>下載並安裝 .NET Framework 4.8
+
+您可以從下列位置下載 .NET Framework 4.8：
+
+- [.NET Framework 4.8 Web 安裝程式](https://go.microsoft.com/fwlink/?LinkId=2085155)
+
+- [NET Framework 4.8 離線安裝程式](https://go.microsoft.com/fwlink/?linkid=2088631)
+
+.NET Framework 4.8 可以安裝在 Windows 10、Windows 8.1、Windows 7 SP1，以及自 Windows Server 2008 R2 SP1 起的相對應伺服器平台上。 您可以使用 Web 安裝程式或離線安裝程式來安裝 .NET Framework 4.8。 針對大部分的使用者，我們建議使用 Web 安裝程式。
+
+透過安裝 [.NET Framework 4.8 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=2085167)，即能以 Visual Studio 2012 或更新版本中的 .NET Framework 4.8 為目標。
+
+### <a name="whats-new-in-net-framework-48"></a>.NET Framework 4.8 中的新功能
+
+.NET Framework 4.8 引進下列領域的新功能：
+
+- [基底類別](#core48)
+- [Windows Communication Foundation (WCF)](#wcf48)
+- [Windows Presentation Foundation (WPF)](#wpf48)
+- [通用語言執行平台](#clr48) 
+
+改善的協助工具，允許應用程式為輔助技術使用者提供適當的體驗，這仍是 .NET Framework 4.8 的主要焦點。 如需 .NET Framework 4.8 中協助工具改善的資訊；請參閱 [.NET Framework 協助工具的新功能](whats-new-in-accessibility.md)。
+
+<a name="core48" />
+
+#### <a name="base-classes"></a>基底類別
+
+**降低對密碼編譯的 FIPS 影響**。 在舊版 .NET Framework 中，受控密碼編譯提供者類別 (例如 <xref:System.Security.Cryptography.SHA256Managed>) 會在系統密碼編譯程式庫以「FIPS 模式」設定時擲回 <xref:System.Security.Cryptography.CryptographicException>。 擲回這些例外狀況的原因是受控密碼編譯提供者類別版本不像系統密碼編譯程式庫一樣已通過 FIPS (聯邦資訊處理標準) 140-2 認證。 因為一些提供者將其開發機器設定為 FIPS 模式，在生產系統中通常會擲回該例外狀況。
+
+根據預設，在以 .NET Framework 4.8 為目標的應用程式中，下列受控密碼編譯類別在此案例中已不會再擲回 a <xref:System.Security.Cryptography.CryptographicException>：
+
+- <xref:System.Security.Cryptography.MD5Cng>
+- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>
+- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>
+- <xref:System.Security.Cryptography.RijndaelManaged>
+- <xref:System.Security.Cryptography.RIPEMD160Managed>
+- <xref:System.Security.Cryptography.SHA256Managed> 
+
+相反地，這些類別會將密碼編譯作業重新導向到系統密碼編譯程式庫。 此變更有效地去除了開發人員環境與生產環境之間的潛在混淆，而且讓原生元件與受控元件在相同的密碼編譯原則下執行。 相依於這些例外狀況的應用程式可以透過將 AppContext 切換參數 `Switch.System.Security.Cryptography.UseLegacyFipsThrow` 設定為 `true` 以還原先前的行為。 如需詳細資訊，請參閱[受控密碼編譯類別在 FIPS 模式中不會擲回 CryptographyException](../migration-guide/retargeting/4.7.2-4.8.md#managed-cryptography-classes-do-not-throw-a-cryptographyexception-in-fips-mode) \(英文\)。
+
+**ZLib 更新版本的使用**
+
+從 .NET Framework 4.5 開始，clrcompression.dll 組件使用原生的資料壓縮外部程式庫 [ZLib](https://www.zlib.net) 來提供 Deflate 演算法的實作。 在 .NET Framework 4.8 中，clrcompression.dll 已更新為使用 ZLib 1.2.11 版，這包括數個重要改進與修正。
+
+<a name="wcf48" />
+
+#### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
+
+**ServiceHealthBehavior 簡介**
+
+協調流程工具廣為使用健康情況端點根據服務的健康情況狀態來管理服務。 也可以透過監視要追蹤的工具並提供有關服務可用性與效能的通知，來使用健康情況檢查。 
+
+**ServiceHealthBehavior** 是 WCF 服務行為，它會延伸 <xref:System.ServiceModel.Description.IServiceBehavior>。  當新增到 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors?displayProperty=nameWithType> 集合時，服務行為會執行下列動作：
+
+- 傳回具有 HTTP 回應碼的服務健康情況狀態。 您可以在查詢字串中指定 HTTP/GET 健康情況探查要求的 HTTP 狀態碼。
+
+- 發佈服務健康情況相關資訊。 服務特定詳細資料 (包括服務狀態、節流計數與容量) 可以透過 `?health` 查詢字串使用 HTTP/GET 來顯示。 針對行為不當的 WCF 服務進行疑難排解時，能否輕鬆存取此類資訊非常重要。
+
+有兩種方式可公開健康情況端點及發佈 WCF 服務健康情況資訊：
+
+- 透過程式碼。 例如：
+
+  ```csharp
+  ServiceHost host = new ServiceHost(typeof(Service1), 
+                     new Uri("http://contoso:81/Service1")); 
+  ServiceHealthBehavior healthBehavior =
+      host.Description.Behaviors.Find<ServiceHealthBehavior>(); 
+  if (healthBehavior == null)
+  { 
+     healthBehavior = new ServiceHealthBehavior(); 
+  } 
+   host.Description.Behaviors.Add(healthBehavior); 
+  ```
+
+- 透過使用設定檔。 例如：
+
+  ```xml
+  <behaviors>
+    <serviceBehaviors>
+      <behavior name="DefaultBehavior">
+        <serviceHealth httpsGetEnabled="true"/>
+      </behavior>
+    </serviceBehaviors>
+  </behaviors>
+  ```
+
+您可以透過使用查詢參數 (例如 `OnServiceFailure`、`OnDispatcherFailure`、`OnListenerFailure`、`OnThrottlePercentExceeded`) 來查詢服務的健康情況狀態，而且可以為每個查詢參數指定 HTTP 回應碼。 若針對查詢參數忽略 HTTP 回應碼，預設會使用 503 HTTP 狀態碼。 例如：
+
+- OnServiceFailure：`https://contoso:81/Service1?health&OnServiceFailure=450`
+
+  當 [ServiceHost.State](xref:System.ServiceModel.Channels.CommunicationObject.State) 大於 <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType> 時，會傳回 450 HTTP 回應狀態碼。
+查詢參數與範例：
+
+- OnDispatcherFailure：`https://contoso:81/Service1?health&OnDispatcherFailure=455`
+  
+  當任何通道發送器的狀態大於 <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType> 時，會傳回 455 HTTP 回應狀態碼。
+
+- OnListenerFailure：`https://contoso:81/Service1?health&OnListenerFailure=465`
+
+  當任何通道接聽程式的狀態大於 <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType> 時，會傳回 465 HTTP 回應狀態碼。
+
+- OnThrottlePercentExceeded：`https://contoso:81/Service1?health&OnThrottlePercentExceeded= 70:350,95:500`
+
+  指定觸發回應的百分比 {1 – 100} 與其 HTTP 回應碼 {200 – 599}。 在這個範例中：
+  
+    - 若百分比大於 95，會傳回 500 HTTP 回應碼。
+    
+    - 若百分比介於 70 到 95 之間，會傳回 350。
+    
+    - 否則，會傳回 200。
+
+您可以透過指定如 `https://contoso:81/Service1?health` 的查詢字串以使用 HTML 方式顯示服務健康情況狀態，或透過指定如 `https://contoso:81/Service1?health&Xml` 的查詢字串以使用 XML 方式顯示服務健康情況狀態。 如 `https://contoso:81/Service1?health&NoContent` 的查詢字串會傳回空的 HTML 頁面。
+
+<a name="wpf48" />
+
+#### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
+
+**高 DPI 增強功能**
+
+在 .NET Framework 4.8 中，WPF 已加入對「個別監視器 V2 DPI 感知」與「混合模式 DPI 縮放比例」的支援。 如需有關高 DPI 開發的詳細資訊，請參閱 [Windows 上的高 DPI 傳統型應用程式開發](/desktop/hidpi/high-dpi-desktop-application-development-on-windows) \(英文\)。 
+
+.NET Framework 4.8 已改善對支援「混合模式 DPI 縮放比例」之平台上裝載之 HWNDs 與 Windows Forms 交互操作 (在高 DPI WPF 應用程式中) 的支援 (從 Windows 10 April 2018 Update 開始)。 當裝載的 HWNDs 或 Windows Forms 控制項建立為「混合模式 DPI 縮放」視窗 (透過呼叫 [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) 與 [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext)) 時，它們可以裝載在個別監視器 V2 WPF 應用程式中，並適當地調整大小及比例。 此類裝載內容不會以原生 DPI 轉譯；相反地，作業系統會將裝載內容調整為適當的大小。 對「個別監視器 v2 DPI 感知」的支援也允許在高 DPI 應用程式的原生視窗中裝載 WPF 控制項 (亦即，父項化)。 
+
+為啟用對「混合模式高 DPI 縮放比例」的支援，您可以在應用程式設定檔中設定下列 [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 切換參數：
+
+```xml
+<runtime>
+   <AppContextSwitchOverrides value = "Switch.System.Windows.DoNotScaleForDpiChanges=false; Switch.System.Windows.DoNotUsePresentationDpiCapabilityTier2OrGreater=false"/>
+</runtime>
+```
+
+<a name="clr48" />
+
+#### <a name="common-language-runtime"></a>Common Language Runtime
+
+.NET Framework 4.8 中的執行階段包括下列變更與改良功能：
+
+**JIT 編譯器的改良功能**。 .NET Framework 4.8 中的 Just-In-Time (JIT) 編譯器是以 .NET Core 2.1 中的 JIT 編譯器為基礎。 .NET Framework 4.8 JIT 編譯器中包括對 .NET Core 2.1 JIT 編譯器進行的許多最佳化與所有錯誤 (Bug) 修正。 
+
+**NGEN 改良功能**。 執行階段已針對 [Native Image Generator](../tools/ngen-exe-native-image-generator.md) (NGEN) 映像改良其記憶體管理，以便從 NGEN 映像對應的資料不會常駐在記憶體中。 這有效減少受攻擊面，以防止攻擊者嘗試透過修正將執行的記憶體來執行任意程式碼。
+
+**所有組件的反惡意程式碼軟體掃描**。 在舊版 .NET Framework 中，執行階段會使用 Windows Defender 或第三方反惡意程式碼軟體來掃描從磁碟載入的所有組件。 不過，不會掃描從其他來源 (例如透過 <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType> 方法) 載入的組件，因此這些組件可能包含未經偵測的惡意程式碼。 從在 Windows 10 上執行的 .NET Framework 4.8 開始，執行階段會觸發由實作[反惡意程式碼掃描介面 (AMSI)](/windows/desktop/AMSI/antimalware-scan-interface-portal) 之反惡意程式碼解決方案進行的掃描。  
+
 <a name="v472" />
 
-## <a name="introducing-the-net-framework-472"></a>.NET Framework 4.7.2 簡介
-
-.NET Framework 4.7.2 建置於舊版 .NET Framework 4.x 的基礎上，方法是新增許多新的修正和多項新功能，同時保有產品的高穩定性。
-
-### <a name="downloading-and-installing-the-net-framework-472"></a>下載並安裝 .NET Framework 4.7.2
-
-您可以從下列位置下載 .NET Framework 4.7.2：
-
-- [.NET Framework 4.7.2 Web 安裝程式](https://go.microsoft.com/fwlink/?LinkId=863262)
-
-- [NET Framework 4.7.2 離線安裝程式](https://go.microsoft.com/fwlink/?LinkId=863265)
-
-.NET Framework 4.7.2 可以安裝在 Windows 10、Windows 8.1、Windows 7 SP1，以及自 Windows Server 2008 R2 SP1 起的相對應伺服器平台上。 您可以使用 Web 安裝程式或離線安裝程式來安裝 .NET Framework 4.7.2。 針對大部分的使用者，我們建議使用 Web 安裝程式。
-
-透過安裝 [.NET Framework 4.7.2 開發人員套件](https://go.microsoft.com/fwlink/?LinkId=874338)，即能以 Visual Studio 2012 或更新版本中的 .NET Framework 4.7.2 為目標。
-
-### <a name="whats-new-in-the-net-framework-472"></a>.NET Framework 4.7.2 的新功能
+## <a name="whats-new-in-net-framework-472"></a>.NET Framework 4.7.2 中的新功能
 
 .NET Framework 4.7.2 包含下列領域的新功能：
 
-- [核心](#core-472)
+- [基底類別](#core-472)
 - [ASP.NET](#asp-net472)
 - [網路功能](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
 
-.NET Framework 4.7.2 中的持續重點是改善協助工具，以允許應用程式為輔助技術使用者提供適當的體驗。 如需 .NET Framework 4.7.2 中協助工具改善的資訊；請參閱 [.NET Framework 協助工具的新功能](whats-new-in-accessibility.md)。
+.NET Framework 4.7.2 中的主要焦點是改善協助工具，以允許應用程式為輔助技術使用者提供適當的體驗。 如需 .NET Framework 4.7.2 中協助工具改善的資訊；請參閱 [.NET Framework 協助工具的新功能](whats-new-in-accessibility.md)。
 
 <a name="core-472" />
 
-#### <a name="core"></a>核心
+#### <a name="base-classes"></a>基底類別
 
 .NET Framework 4.7.2 具有大量的密碼編譯增強功能、更好的 ZIP 封存解壓縮支援，以及其他集合 API。
 
@@ -308,7 +442,7 @@ c.SameSite = SameSiteMode.Lax
 
 **支援 Azure Active Directory 通用驗證和多重要素驗證**
 
-持續成長的合規性和安全性需求需要許多客戶使用多重要素驗證 (MFA)。 此外，目前的最佳作法建議不要在連接字串中直接包括使用者密碼。 若要支援這些變更，.NET Framework 4.7.2 會藉由為現有的 "Authentication" 關鍵字新增新值 "Active Directory Interactive" 來擴充 [SQLClient 連接字串](xref:System.Data.SqlClient.SqlConnection.ConnectionString)，以支援 MFA 和 [Azure AD 驗證](/azure/sql-database/sql-database-aad-authentication-configure)。 新的互動式方法支援原生和同盟的 Azure AD 使用者，以及 Azure AD 來賓使用者。 使用這個方法時，SQL 資料庫支援 Azure AD 所強制執行的 MFA 驗證。 此外，驗證程序會要求使用者密碼遵循安全性最佳作法。
+持續成長的合規性和安全性需求需要許多客戶使用多重要素驗證 (MFA)。 此外，目前的最佳作法建議不要在連接字串中直接包括使用者密碼。 為支援這些變更，.NET Framework 4.7.2 透過為現有的 "Authentication" 關鍵字新增新值 "Active Directory Interactive" 來擴充 [SQLClient 連接字串](xref:System.Data.SqlClient.SqlConnection.ConnectionString)，以支援 MFA 和 [Azure AD 驗證](/azure/sql-database/sql-database-aad-authentication-configure)。 新的互動式方法支援原生和同盟的 Azure AD 使用者，以及 Azure AD 來賓使用者。 使用這個方法時，SQL 資料庫支援 Azure AD 所強制執行的 MFA 驗證。 此外，驗證程序會要求使用者密碼遵循安全性最佳作法。
 
 在舊版 .NET Framework 中，SQL 連接性只支援 <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryPassword?displayProperty=nameWithType> 和 <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryIntegrated?displayProperty=nameWithType> 選項。 這兩種屬於非互動式 [ADAL 通訊協定](/azure/active-directory/develop/active-directory-authentication-libraries)，因此不支援 MFA。 利用新的 <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryInteractive?displayProperty=nameWithType> 選項，SQL 連接性支援 MFA 以及現有的驗證方法 (密碼和整合式驗證)，可讓使用者以互動方式輸入使用者密碼，而不需要將密碼保存到連接字串中。
 
@@ -316,7 +450,7 @@ c.SameSite = SameSiteMode.Lax
 
 **支援 Always Encrypted 第 2 版**
 
-NET Framework 4.7.2 會新增飛地式 Always Encrypted 的支援。 Always Encrypted 的原始版本是加密金鑰絕不會離開用戶端的用戶端加密技術。 在飛地式 Always Encrypted 中，用戶端可以選擇性地將加密金鑰傳送至安全飛地，也就是可視為 SQL Server 一部分，但 SQL Server 程式碼無法竄改的安全計算實體。 若要支援飛地式 Always Encrypted，.NET Framework 4.7.2 會將下列類型和成員新增至 <xref:System.Data.SqlClient> 命名空間：
+NET Framework 4.7.2 會新增飛地式 Always Encrypted 的支援。 Always Encrypted 的原始版本是加密金鑰絕不會離開用戶端的用戶端加密技術。 在飛地式 Always Encrypted 中，用戶端可以選擇性地將加密金鑰傳送至安全飛地，也就是可視為 SQL Server 一部分，但 SQL Server 程式碼無法竄改的安全計算實體。 為支援飛地式 Always Encrypted，.NET Framework 4.7.2 將下列類型和成員新增至 <xref:System.Data.SqlClient> 命名空間：
 
 - <xref:System.Data.SqlClient.SqlConnectionStringBuilder.EnclaveAttestationUrl?displayProperty=nameWithType>，其可指定飛地式 Always Encrypted 的 URL。
 
@@ -433,11 +567,11 @@ public class StaticResourceResolvedEventArgs : EventArgs
 
 <a name="v471" />
 
-## <a name="whats-new-in-the-net-framework-471"></a>.NET Framework 4.7.1 的新功能
+## <a name="whats-new-in-net-framework-471"></a>.NET Framework 4.7.1 中的新功能
 
 .NET Framework 4.7.1 包含下列領域的新功能：
 
-- [核心](#core471)
+- [基底類別](#core471)
 - [Common Language Runtime (CLR)](#clr)
 - [網路功能](#net471)
 - [ASP.NET](#asp-net471)
@@ -446,11 +580,11 @@ public class StaticResourceResolvedEventArgs : EventArgs
 
 <a name="core471" />
 
-#### <a name="core"></a>核心
+#### <a name="base-classes"></a>基底類別
 
 **.NET Standard 2.0 的支援**
 
-[.NET Standard](~/docs/standard/net-standard.md) 定義一組必須在每個 .NET 實作上提供的 API，而 .NET 實作支援該版本的標準。 .NET Framework 4.7.1 完全支援 .NET Standard 2.0，並新增[大約 200 個 API](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt)，而這些 API 定義於 .NET Standard 2.0，並在 .NET Framework 4.6.1、4.6.2 和 4.7 中遺失  (請注意，只有在目標系統上一併部署其他 .NET Standard 支援檔案時，這些版本的 .NET Framework 才支援 .NET Standard 2.0)。如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/)部落格文章中的＜BCL - .NET Standard 2.0 支援＞。
+[.NET Standard](~/docs/standard/net-standard.md) 定義一組必須在每個 .NET 實作上提供的 API，而 .NET 實作支援該版本的標準。 .NET Framework 4.7.1 完全支援 .NET Standard 2.0，並新增[大約 200 個 API](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt)，而這些 API 定義於 .NET Standard 2.0，在 .NET Framework 4.6.1、4.6.2 和 4.7 中則不提供。 (請注意，只有在目標系統上一併部署其他 .NET Standard 支援檔案時，這些版本的 .NET Framework 才支援 .NET Standard 2.0)。如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/)部落格文章中的＜BCL - .NET Standard 2.0 支援＞。
 
 **組態產生器的支援**
 
@@ -516,22 +650,22 @@ ASP.NET 會在包含 23 個事件的預先定義管線中處理要求。 ASP.NET
 
 <a name="v47" />
 
-## <a name="whats-new-in-the-net-framework-47"></a>.NET Framework 4.7 中的新增功能
+## <a name="whats-new-in-net-framework-47"></a>.NET Framework 4.7 中的新功能
 
 .NET Framework 4.7 包含下列領域的新功能：
 
-- [核心](#Core47)
+- [基底類別](#Core47)
 - [網路功能](#net47)
 - [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows Form](#wf47)
 - [Windows Presentation Foundation (WPF)](#WPF47)
 
-如需 .NET Framework 4.7 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.7 API 變更 (英文)](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md)。 如需 .NET Framework 4.7 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.7 變更清單 (英文)](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md)。  如需詳細資訊，請參閱 .NET 部落格中的[宣告 .NET Framework 4.7](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7/)。
+如需 .NET Framework 4.7 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.7 API 變更](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) \(英文\)。 如需 .NET Framework 4.7 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.7 變更清單](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) \(英文\)。  如需詳細資訊，請參閱 .NET 部落格中的[宣告 .NET Framework 4.7](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7/)。
 
 <a name="Core47" />
 
-#### <a name="core"></a>核心
+#### <a name="base-classes"></a>基底類別
 
 .NET Framework 4.7 改進了 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 所執行的序列化：
 
@@ -626,7 +760,7 @@ WPF 在 <xref:System.Printing.PrintQueue?displayProperty=nameWithType> 類別中
 
 <a name="v462" />
 
-## <a name="whats-new-in-the-net-framework-462"></a>.NET Framework 4.6.2 中的新增功能
+## <a name="whats-new-in-net-framework-462"></a>.NET Framework 4.6.2 中的新功能
 
 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 包含下列領域的新功能：
 
@@ -650,7 +784,7 @@ WPF 在 <xref:System.Printing.PrintQueue?displayProperty=nameWithType> 類別中
 
 - [偵錯改進](#Debug462)
 
-如需 .NET Framework 4.6.2 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 API 變更](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md)。 如需 .NET Framework 4..6.2 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 變更清單 (英文)](https://go.microsoft.com/fwlink/?LinkId=708778)。  如需詳細資訊，請參閱 .NET 部落格中的[宣告 .NET Framework 4.6.2](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/)。
+如需 .NET Framework 4.6.2 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 API 變更](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md) \(英文\)。 如需 .NET Framework 4.6.2 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 變更清單](https://go.microsoft.com/fwlink/?LinkId=708778) \(英文\)。  如需詳細資訊，請參閱 .NET 部落格中的[宣告 .NET Framework 4.6.2](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/)。
 
 <a name="ASPNET462" />
 
@@ -752,7 +886,7 @@ public interface ISessionStateModule : IHttpModule {
 
 除了支援較大的 FIPS 186-3 金鑰大小，[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 也允許使用 SHA-2 系列雜湊演算法 (SHA256、SHA384 及 SHA512) 運算簽章。 FIPS 186-3 支援是由新的 <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType> 類別所提供。
 
-為了保持 .NET Framework 4.6 中 <xref:System.Security.Cryptography.RSA> 類別和 .NET Framework 4.6.1 中 <xref:System.Security.Cryptography.ECDsa> 類別的最新變更，[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中的 <xref:System.Security.Cryptography.DSA> 抽象基底類別有額外的方法，可讓呼叫者使用這項功能，而不用轉型。 您可以呼叫 <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> 擴充方法來簽署資料，如下列範例所示。
+為了保持 .NET Framework 4.6 中 <xref:System.Security.Cryptography.RSA> 類別和 .NET Framework 4.6.1 中 <xref:System.Security.Cryptography.ECDsa> 類別的最新變更，[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中的 <xref:System.Security.Cryptography.DSA> 抽象基底類別有額外的方法，可讓呼叫者使用此功能，而不用轉型。 您可以呼叫 <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> 擴充方法來簽署資料，如下列範例所示。
 
 ```csharp
 public static byte[] SignDataDsaSha384(byte[] data, X509Certificate2 cert)
@@ -1087,7 +1221,7 @@ Windows 現在提供將現有 Windows 傳統型應用程式 (包括 WPF 和 Wind
 
 <a name="v461" />
 
-## <a name="whats-new-in-the-net-framework-461"></a>.NET Framework 4.6.1 的新功能
+## <a name="whats-new-in-net-framework-461"></a>.NET Framework 4.6.1 中的新功能
 
 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 包含下列領域的新功能：
 
@@ -1109,13 +1243,13 @@ Windows 現在提供將現有 Windows 傳統型應用程式 (包括 WPF 和 Wind
 
 - [4.6.1 中的應用程式相容性](../migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)
 
-- [.NET Framework API diff](https://go.microsoft.com/fwlink/?LinkId=622989) (於 GitHub)
+- [.NET Framework API diff](https://go.microsoft.com/fwlink/?LinkId=622989) (在 GitHub 上)
 
 <a name="Crypto" />
 
 ### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>加密：支援包含 ECDSA 的 X509 憑證
 
-加入 X509 憑證 RSACng 支援的 .NET Framework 4.6。 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 加入了 ECDSA (橢圓曲線數位簽章演算法) X509 憑證的支援。
+.NET Framework 4.6 加入 X509 憑證的 RSACng 支援。 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 加入了 ECDSA (橢圓曲線數位簽章演算法) X509 憑證的支援。
 
 ECDSA 提供較佳的效能，其密碼編譯演算法比 RSA 更安全，為傳輸層安全性 (TLS) 的效能和延展性提供了絕佳的選擇。 .NET Framework 實作會將呼叫包裝在現有的 Windows 功能中。
 
@@ -1423,7 +1557,7 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
 
          不只電腦上建立的任何現有 ETW 工作階段，您現在還可以使用 <xref:System.Diagnostics.Tracing.EventSource> 類別，將管理或操作訊息記錄到事件記錄檔中。 以往，您必須使用 Microsoft.Diagnostics.Tracing.EventSource NuGet 套件，才能使用這項功能。 .NET Framework 4.6 現已內建此功能。
 
-         NuGet 套件和 .NET Framework 4.6 已更新下列功能：
+         NuGet 套件和 .NET Framework 4.6 已更新並支援下列功能：
 
         - **動態事件**
 
@@ -1582,7 +1716,7 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
 
 <a name="v452" />
 
-## <a name="whats-new-in-the-net-framework-452"></a>.NET Framework 4.5.2 中的新增功能
+## <a name="whats-new-in-net-framework-452"></a>.NET Framework 4.5.2 中的新功能
 
 - **ASP.NET 應用程式的全新 API。** 新的 <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=nameWithType> 和 <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=nameWithType> 方法可讓您在回應清除至用戶端應用程式時，檢查及修改回應標頭和狀態碼。 請考慮使用這些方法來取代 <xref:System.Web.HttpApplication.PreSendRequestHeaders> 和 <xref:System.Web.HttpApplication.PreSendRequestContent> 事件，這些方法的效率更高且更可靠。
 
@@ -1639,7 +1773,7 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
 
 - **升級交易並將它轉換成永久性登記**
 
-     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> 是新加入 .NET Framework 4.5.2 和 4.6 的 API：
+     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> 是新加入 .NET Framework 4.5.2 和 4.6 的新 API：
 
     ```csharp
     [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name = "FullTrust")]
@@ -1653,7 +1787,7 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
 
 <a name="v451" />
 
-## <a name="whats-new-in-the-net-framework-451"></a>.NET Framework 4.5.1 中的新增功能
+## <a name="whats-new-in-net-framework-451"></a>.NET Framework 4.5.1 中的新功能
 
 **2014 年 4 月更新**：
 
@@ -1673,7 +1807,7 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
 
 - [.NET Framework 參考來源](https://referencesource.microsoft.com/)提供新瀏覽體驗和增強功能。 您現在可以在線上瀏覽 .NET Framework 原始程式碼、[下載參考](https://referencesource.microsoft.com/download.html)以供離線檢視，並在偵錯時逐步執行原始程式碼 (包含修補程式和更新)。 如需詳細資訊，請參閱部落格文章：[.NET 參考來源的新風貌 (英文)](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/)。
 
-.NET Framework 4.5.1 的核心新功能和增強功能包括：
+.NET Framework 4.5.1 中基底類別的新功能和增強功能包括：
 
 - 組件的自動繫結重新導向。 自 Visual Studio 2013 起，當您編譯可以在 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 上運作的應用程式時，若您的應用程式或其元件參考了相同組件的多個版本，可能會將繫結重新導向新增到應用程式的組態檔中。 您也可以對鎖定舊版 .NET Framework 的專案啟用這項功能。 如需詳細資訊，請參閱[如何：啟用和停用自動繫結重新導向](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)。
 
@@ -1715,9 +1849,9 @@ Windows Forms 的增強功能包括：
 
 <a name="v45" />
 
-## <a name="whats-new-in-the-net-framework-45"></a>.NET Framework 4.5 中的新增功能
+## <a name="whats-new-in-net-framework-45"></a>.NET Framework 4.5 中的新功能
 
-### <a name="core-new-features-and-improvements"></a>核心新功能和增強功能
+### <a name="base-classes"></a>基底類別
 
 - 可透過在部署期間偵測及關閉 .NET Framework 4 應用程式的方式，減少系統重新啟動次數的功能。 請參閱[在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../deployment/reducing-system-restarts.md)。
 

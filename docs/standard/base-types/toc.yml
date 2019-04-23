@@ -1,140 +1,133 @@
-items:
 - name: 基底類型
   href: index.md
   items:
-  - name: 一般類型系統
-    href: common-type-system.md
-  - name: .NET 中的類型轉換
-    href: type-conversion.md
-    items:
-    - name: 類型轉換表
-      href: conversion-tables.md
-  - name: 格式化類型
-    href: formatting-types.md
-    items:
-    - name: 標準數值格式字串
-      href: standard-numeric-format-strings.md
-    - name: 自訂數值格式字串
-      href: custom-numeric-format-strings.md
-    - name: 標準日期和時間格式字串
-      href: standard-date-and-time-format-strings.md
-    - name: 自訂日期和時間格式字串
-      href: custom-date-and-time-format-strings.md
-    - name: 標準 TimeSpan 格式字串
-      href: standard-timespan-format-strings.md
-    - name: 自訂 TimeSpan 格式字串
-      href: custom-timespan-format-strings.md
-    - name: 列舉格式字串
-      href: enumeration-format-strings.md
-    - name: 複合格式
-      href: composite-formatting.md
-    - name: 執行格式化作業
-      href: performing-formatting-operations.md
+    - name: 一般類型系統
+      href: common-type-system.md
+    - name: .NET 中的類型轉換
+      href: type-conversion.md
       items:
-      - name: 作法：以前置字元零來填補數字
-        href: how-to-pad-a-number-with-leading-zeros.md
-      - name: 作法：從特定日期擷取一星期的哪一日
-        href: how-to-extract-the-day-of-the-week-from-a-specific-date.md
-      - name: 作法：定義和使用自訂數值格式提供者
-        href: how-to-define-and-use-custom-numeric-format-providers.md
-      - name: 作法：反覆存取日期和時間值
-        href: how-to-round-trip-date-and-time-values.md
-      - name: 作法：將使用者輸入 Web 控制項的數值轉換成數字
-        href: how-to-convert-numeric-user-input-in-web-controls-to-numbers.md
-      - name: 作法：對 Web 使用者顯示當地語系化的日期和時間資訊
-        href: how-to-display-localized-date-and-time-information-to-web-users.md
-      - name: 作法：在日期與時間值中顯示毫秒
-        href: how-to-display-milliseconds-in-date-and-time-values.md
-      - name: 作法：在非西曆中顯示日期
-        href: how-to-display-dates-in-non-gregorian-calendars.md
-  - name: 操作字串
-    href: manipulating-strings.md
-    items:
-    - name: 使用字串的最佳做法
-      href: best-practices-strings.md
-    - name: 基本字串作業
-      href: basic-string-operations.md
+        - name: 類型轉換表
+          href: conversion-tables.md
+    - name: 格式化類型
+      href: formatting-types.md
       items:
-      - name: 建立新字串
-        href: creating-new.md
-      - name: 修剪和移除字元
-        href: trimming.md
-      - name: 填補字串
-        href: padding.md
-      - name: 比較字串
-        href: comparing.md
-      - name: 變更大小寫
-        href: changing-case.md
-      - name: 使用 StringBuilder 類別
-        href: stringbuilder.md
-      - name: 作法：執行基本字串操作
-        href: basic-manipulations.md
-    - name: .NET 中的規則運算式
-      href: regular-expressions.md
+        - name: 標準數值格式字串
+          href: standard-numeric-format-strings.md
+        - name: 自訂數值格式字串
+          href: custom-numeric-format-strings.md
+        - name: 標準日期和時間格式字串
+          href: standard-date-and-time-format-strings.md
+        - name: 自訂日期和時間格式字串
+          href: custom-date-and-time-format-strings.md
+        - name: 標準 TimeSpan 格式字串
+          href: standard-timespan-format-strings.md
+        - name: 自訂 TimeSpan 格式字串
+          href: custom-timespan-format-strings.md
+        - name: 列舉格式字串
+          href: enumeration-format-strings.md
+        - name: 複合格式
+          href: composite-formatting.md
+        - name: 執行格式化作業
+          href: performing-formatting-operations.md
+          items:
+            - name: HOW TO：以前置字元零來填補數字
+              href: how-to-pad-a-number-with-leading-zeros.md
+            - name: HOW TO：從特定日期擷取一星期的哪一日
+              href: how-to-extract-the-day-of-the-week-from-a-specific-date.md
+            - name: HOW TO：定義和使用自訂數值格式提供者
+              href: how-to-define-and-use-custom-numeric-format-providers.md
+            - name: HOW TO：反覆存取日期和時間值
+              href: how-to-round-trip-date-and-time-values.md
+            - name: HOW TO：將使用者輸入 Web 控制項的數值轉換成數字
+              href: how-to-convert-numeric-user-input-in-web-controls-to-numbers.md
+            - name: HOW TO：對 Web 使用者顯示當地語系化的日期和時間資訊
+              href: how-to-display-localized-date-and-time-information-to-web-users.md
+            - name: HOW TO：在日期與時間值中顯示毫秒
+              href: how-to-display-milliseconds-in-date-and-time-values.md
+            - name: HOW TO：在非西曆中顯示日期
+              href: how-to-display-dates-in-non-gregorian-calendars.md
+    - name: 操作字串
+      href: manipulating-strings.md
       items:
-      - name: 規則運算式語言 - 快速參考
-        href: regular-expression-language-quick-reference.md
-        items:
-        - name: 逸出字元
-          href: character-escapes-in-regular-expressions.md
-        - name: 字元類別
-          href: character-classes-in-regular-expressions.md
-        - name: 錨點
-          href: anchors-in-regular-expressions.md
-        - name: 分組建構
-          href: grouping-constructs-in-regular-expressions.md
-        - name: 數量詞
-          href: quantifiers-in-regular-expressions.md
-        - name: 反向參考建構
-          href: backreference-constructs-in-regular-expressions.md
-        - name: 替代建構
-          href: alternation-constructs-in-regular-expressions.md
-        - name: 替代
-          href: substitutions-in-regular-expressions.md
-        - name: 規則運算式選項
-          href: regular-expression-options.md
-        - name: 其他建構
-          href: miscellaneous-constructs-in-regular-expressions.md
-      - name: 規則運算式的最佳做法
-        href: best-practices.md
-      - name: 規則運算式物件模型
-        href: the-regular-expression-object-model.md
-      - name: 規則運算式行為的詳細資訊
-        href: details-of-regular-expression-behavior.md
-        items:
-        - name: 回溯
-          href: backtracking-in-regular-expressions.md
-        - name: 編譯和重複使用
-          href: compilation-and-reuse-in-regular-expressions.md
-        - name: 執行緒安全
-          href: thread-safety-in-regular-expressions.md
-      - name: 規則運算式範例
-        href: regular-expression-examples.md
-        items:
-        - name: 範例：掃描 HREF
-          href: regular-expression-example-scanning-for-hrefs.md
-        - name: 範例：變更日期格式
-          href: regular-expression-example-changing-date-formats.md
-        - name: 作法：從 URL 擷取通訊協定和連接埠號碼
-          href: how-to-extract-a-protocol-and-port-number-from-a-url.md
-        - name: 作法：從字串中刪除無效的字元
-          href: how-to-strip-invalid-characters-from-a-string.md
-        - name: 作法：確認字串是否為有效的電子郵件格式
-          href: how-to-verify-that-strings-are-in-valid-email-format.md
-    - name: .NET 中的字元編碼
-      href: character-encoding.md
-  - name: 剖析字串
-    href: parsing-strings.md
-    items:
-    - name: 剖析數值字串
-      href: parsing-numeric.md
-    - name: 剖析日期和時間字串
-      href: parsing-datetime.md
-    - name: 剖析其他字串
-      href: parsing-other.md
-ms.openlocfilehash: 893959894168d56c05f525a167773ee9e69e9f1b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468156"
+        - name: 使用字串的最佳做法
+          href: best-practices-strings.md
+        - name: 基本字串作業
+          href: basic-string-operations.md
+          items:
+            - name: 建立新字串
+              href: creating-new.md
+            - name: 修剪和移除字元
+              href: trimming.md
+            - name: 填補字串
+              href: padding.md
+            - name: 比較字串
+              href: comparing.md
+            - name: 變更大小寫
+              href: changing-case.md
+            - name: 使用 StringBuilder 類別
+              href: stringbuilder.md
+            - name: HOW TO：執行基本字串操作
+              href: basic-manipulations.md
+        - name: .NET 中的規則運算式
+          href: regular-expressions.md
+          items:
+            - name: 規則運算式語言 - 快速參考
+              href: regular-expression-language-quick-reference.md
+              items:
+                - name: 逸出字元
+                  href: character-escapes-in-regular-expressions.md
+                - name: 字元類別
+                  href: character-classes-in-regular-expressions.md
+                - name: 錨點
+                  href: anchors-in-regular-expressions.md
+                - name: 分組建構
+                  href: grouping-constructs-in-regular-expressions.md
+                - name: 數量詞
+                  href: quantifiers-in-regular-expressions.md
+                - name: 反向參考建構
+                  href: backreference-constructs-in-regular-expressions.md
+                - name: 替代建構
+                  href: alternation-constructs-in-regular-expressions.md
+                - name: 替代
+                  href: substitutions-in-regular-expressions.md
+                - name: 規則運算式選項
+                  href: regular-expression-options.md
+                - name: 其他建構
+                  href: miscellaneous-constructs-in-regular-expressions.md
+            - name: 規則運算式的最佳做法
+              href: best-practices.md
+            - name: 規則運算式物件模型
+              href: the-regular-expression-object-model.md
+            - name: 規則運算式行為的詳細資訊
+              href: details-of-regular-expression-behavior.md
+              items:
+                - name: 回溯
+                  href: backtracking-in-regular-expressions.md
+                - name: 編譯和重複使用
+                  href: compilation-and-reuse-in-regular-expressions.md
+                - name: 執行緒安全
+                  href: thread-safety-in-regular-expressions.md
+            - name: 規則運算式範例
+              href: regular-expression-examples.md
+              items:
+                - name: 範例：掃描 HREF
+                  href: regular-expression-example-scanning-for-hrefs.md
+                - name: 範例：變更日期格式
+                  href: regular-expression-example-changing-date-formats.md
+                - name: HOW TO：從 URL 擷取通訊協定和連接埠號碼
+                  href: how-to-extract-a-protocol-and-port-number-from-a-url.md
+                - name: HOW TO：從字串中刪除無效的字元
+                  href: how-to-strip-invalid-characters-from-a-string.md
+                - name: HOW TO：確認字串是否為有效的電子郵件格式
+                  href: how-to-verify-that-strings-are-in-valid-email-format.md
+        - name: .NET 中的字元編碼
+          href: character-encoding.md
+    - name: 剖析字串
+      href: parsing-strings.md
+      items:
+        - name: 剖析數值字串
+          href: parsing-numeric.md
+        - name: 剖析日期和時間字串
+          href: parsing-datetime.md
+        - name: 剖析其他字串
+          href: parsing-other.md

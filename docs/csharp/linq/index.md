@@ -4,15 +4,15 @@ description: 介紹使用 C# 的 Language Integrated Query (LINQ)
 ms.date: 11/30/2016
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
 ms.openlocfilehash: 18dafaf590697a3c9d669f346c956fd4df3378f0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61688822"
 ---
 # <a name="language-integrated-query-linq"></a>Language Integrated Query (LINQ)
 
-Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# 語言為基礎之技術的名稱。 傳統上，針對資料的查詢是以簡單字串表示，而不會在編譯期間進行型別檢查，或提供 IntelliSense 支援。 此外，您必須針對每個資料來源型別 (例如 SQL 資料庫、XML 文件、各種 Web 服務等等) 學習不同的查詢語言。 透過 LINQ，查詢會是第一級語言建構，和類別、方法及事件相同。
+Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# 語言為基礎之技術的名稱。 傳統上，針對資料的查詢是以簡單字串表示，而不會在編譯期間進行型別檢查，或提供 IntelliSense 支援。 此外，您還必須了解每種資料來源類型的不同查詢語言：SQL 資料庫、XML 文件、各種 Web 服務等。 透過 LINQ，查詢會是第一級語言建構，和類別、方法及事件相同。
 
 對於撰寫查詢的開發人員來說，LINQ 最明顯的「語言整合」部分就是查詢運算式。 查詢運算式是以宣告式「查詢語法」撰寫。 透過使用查詢語法，您就可以利用最少的程式碼，針對資料來源執行篩選、排序及分組作業。 您可以使用相同的基本查詢運算式模式，來查詢並轉換 SQL 資料庫、ADO .NET 資料集、XML 文件及資料流，以及 .NET 集合中的資料。
 
@@ -44,9 +44,9 @@ Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# �
 
 - XML 文件：[LINQ to XML](../programming-guide/concepts/linq/linq-to-xml.md)
 
-- ADO.NET Entity Framework：[LINQ to Entities](../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- ADO.NET Entity Framework：[LINQ 至實體](../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
 
-- .NET 集合、檔案、字串等等：[LINQ to Objects](../programming-guide/concepts/linq/linq-to-objects.md)
+- .NET 集合、檔案、字串等：[LINQ 至物件](../programming-guide/concepts/linq/linq-to-objects.md)
 
 若要深入了解 LINQ 的一般資訊，請參閱 [C# 中的 LINQ](linq-in-csharp.md)。
 

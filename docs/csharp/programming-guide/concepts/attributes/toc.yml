@@ -1,21 +1,14 @@
-items:
 - name: 屬性
   href: index.md
   items:
-  - name: 建立自訂屬性
-    href: creating-custom-attributes.md
-    items:
-    - name: AttributeUsage
-      href: attributeusage.md
-  - name: 使用反映存取屬性
-    href: accessing-attributes-by-using-reflection.md
-  - name: 作法：使用屬性建立 C-C++ 等位
-    href: how-to-create-a-c-cpp-union-by-using-attributes.md
-  - name: 常見屬性
-    href: common-attributes.md
-ms.openlocfilehash: a0d3d1f59209cdbba6ccda6ddb8a3173ddab74d0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468254"
+    - name: 建立自訂屬性
+      href: creating-custom-attributes.md
+      items:
+        - name: AttributeUsage
+          href: attributeusage.md
+    - name: 使用反映存取屬性
+      href: accessing-attributes-by-using-reflection.md
+    - name: HOW TO：使用屬性建立 C-C++ 等位
+      href: how-to-create-a-c-cpp-union-by-using-attributes.md
+    - name: 常見屬性
+      href: common-attributes.md

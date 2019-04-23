@@ -1,43 +1,36 @@
-items:
 - name: 部署
   href: index.md
   items:
-  - name: 部署 .NET Framework
-    href: deploying-the-net-framework.md
-    items:
-    - name: 開發人員部署手冊
-      href: deployment-guide-for-developers.md
-    - name: 系統管理員部署手冊
-      href: guide-for-administrators.md
-    - name: 在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數
-      href: reducing-system-restarts.md
-    - name: 作法：取得 .NET Framework 4.5 安裝程式的進度
-      href: how-to-get-progress-from-the-dotnet-installer.md
-    - name: .NET Framework 初始化錯誤：管理使用者體驗
-      href: initialization-errors-managing-the-user-experience.md
-    - name: 作法：對 CLR 啟用問題進行偵錯
-      href: how-to-debug-clr-activation-issues.md
-  - name: 部署 .NET Framework 應用程式
-    href: net-framework-applications.md
-    items:
-    - name: 執行階段如何找出組件
-      href: how-the-runtime-locates-assemblies.md
-    - name: 組件載入的最佳作法
-      href: best-practices-for-assembly-loading.md
-  - name: .NET Framework Client Profile
-    href: client-profile.md
-  - name: 並存執行
-    href: side-by-side-execution.md
-    items:
-    - name: 設定組件繫結重新導向
-      href: configuring-assembly-binding-redirection.md
-    - name: 建立並存執行元件的方針
-      href: guidelines-for-creating-components-for-side-by-side-execution.md
-    - name: 同處理序並存執行
-      href: in-process-side-by-side-execution.md
-ms.openlocfilehash: 73f101fc5031c1ae97a626025d6b16c5729a2568
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468302"
+    - name: 部署 .NET Framework
+      href: deploying-the-net-framework.md
+      items:
+        - name: 開發人員部署手冊
+          href: deployment-guide-for-developers.md
+        - name: 系統管理員部署手冊
+          href: guide-for-administrators.md
+        - name: 在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數
+          href: reducing-system-restarts.md
+        - name: HOW TO：取得 .NET Framework 4.5 安裝程式的進度
+          href: how-to-get-progress-from-the-dotnet-installer.md
+        - name: .NET Framework 初始化錯誤：管理使用者體驗
+          href: initialization-errors-managing-the-user-experience.md
+        - name: HOW TO：對 CLR 啟用問題進行偵錯
+          href: how-to-debug-clr-activation-issues.md
+    - name: 部署 .NET Framework 應用程式
+      href: net-framework-applications.md
+      items:
+        - name: 執行階段如何找出組件
+          href: how-the-runtime-locates-assemblies.md
+        - name: 組件載入的最佳作法
+          href: best-practices-for-assembly-loading.md
+    - name: .NET Framework Client Profile
+      href: client-profile.md
+    - name: 並存執行
+      href: side-by-side-execution.md
+      items:
+        - name: 設定組件繫結重新導向
+          href: configuring-assembly-binding-redirection.md
+        - name: 建立並存執行元件的方針
+          href: guidelines-for-creating-components-for-side-by-side-execution.md
+        - name: 同處理序並存執行
+          href: in-process-side-by-side-execution.md

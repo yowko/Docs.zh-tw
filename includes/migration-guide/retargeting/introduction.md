@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d4f22aa41eb7aeffd655d980cb8418649462273e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757736"
+---
 ## <a name="introduction"></a>簡介
 重定目標變更會影響以其他 .NET Framework 為目標重新編譯的應用程式。 包括：
 

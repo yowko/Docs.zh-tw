@@ -1,25 +1,18 @@
-items:
 - name: 型別
   href: index.md
   items:
-  - name: 轉換和類型轉換
-    href: casting-and-type-conversions.md
-  - name: Boxing 和 Unboxing
-    href: boxing-and-unboxing.md
-  - name: 使用動態類型
-    href: using-type-dynamic.md
-    items:
-    - name: 逐步解說：建立和使用動態物件 (C# 和 Visual Basic)
-      href: walkthrough-creating-and-using-dynamic-objects.md
-  - name: 作法：將位元組陣列轉換為 int
-    href: how-to-convert-a-byte-array-to-an-int.md
-  - name: 作法：將字串轉換為數字
-    href: how-to-convert-a-string-to-a-number.md
-  - name: 作法：在十六進位字串和數字類型間轉換
-    href: how-to-convert-between-hexadecimal-strings-and-numeric-types.md
-ms.openlocfilehash: ec544bd0f41d24e9775277ac1968787de9391dd5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468176"
+    - name: 轉換和類型轉換
+      href: casting-and-type-conversions.md
+    - name: Boxing 和 Unboxing
+      href: boxing-and-unboxing.md
+    - name: 使用動態類型
+      href: using-type-dynamic.md
+      items:
+        - name: '逐步解說：建立和使用動態物件 (C# 和 Visual Basic)'
+          href: walkthrough-creating-and-using-dynamic-objects.md
+    - name: HOW TO：將位元組陣列轉換為 int
+      href: how-to-convert-a-byte-array-to-an-int.md
+    - name: HOW TO：將字串轉換為數字
+      href: how-to-convert-a-string-to-a-number.md
+    - name: HOW TO：在十六進位字串和數字類型間轉換
+      href: how-to-convert-between-hexadecimal-strings-and-numeric-types.md

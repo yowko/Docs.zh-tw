@@ -1,127 +1,120 @@
-items:
 - name: 類別和結構
   href: index.md
   items:
-  - name: 類別
-    href: classes.md
-  - name: 物件
-    href: objects.md
-  - name: 結構
-    href: structs.md
-    items:
-    - name: 使用結構
-      href: using-structs.md
-  - name: 繼承
-    href: inheritance.md
-  - name: 多型
-    href: polymorphism.md
-    items:
-    - name: 使用 Override 和 New 關鍵字進行版本設定
-      href: versioning-with-the-override-and-new-keywords.md
-    - name: 了解使用 Override 和 New 關鍵字的時機
-      href: knowing-when-to-use-override-and-new-keywords.md
-    - name: 作法：覆寫 ToString 方法
-      href: how-to-override-the-tostring-method.md
-  - name: 抽象和密封類別以及類別成員
-    href: abstract-and-sealed-classes-and-class-members.md
-    items:
-    - name: 作法：定義抽象屬性
-      href: how-to-define-abstract-properties.md
-  - name: 靜態類別和靜態類別成員
-    href: static-classes-and-static-class-members.md
-  - name: 成員
-    href: members.md
-  - name: 存取修飾詞
-    href: access-modifiers.md
-  - name: 欄位
-    href: fields.md
-  - name: 常數
-    href: constants.md
-    items:
-    - name: 作法：在 C# 中定義常數
-      href: how-to-define-constants.md
-  - name: 屬性
-    href: properties.md
-    items:
-    - name: 使用屬性
-      href: using-properties.md
-    - name: 介面屬性
-      href: interface-properties.md
-    - name: 限制存取子協助工具
-      href: restricting-accessor-accessibility.md
-    - name: 作法：宣告及使用讀寫屬性
-      href: how-to-declare-and-use-read-write-properties.md
-    - name: 自動實作的屬性
-      href: auto-implemented-properties.md
-    - name: 作法：使用自動實作的屬性來實作輕量型類別
-      href: how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
-  - name: 方法
-    href: methods.md
-    items:
-    - name: 區域函式
-      href: local-functions.md
-    - name: ref 傳回值和 ref 區域變數
-      href: ref-returns.md
-    - name: 傳遞參數
-      href: passing-parameters.md
+    - name: 類別
+      href: classes.md
+    - name: 物件
+      href: objects.md
+    - name: 結構
+      href: structs.md
       items:
-      - name: 傳遞實值型別參數
-        href: passing-value-type-parameters.md
-      - name: 傳遞參考型別參數
-        href: passing-reference-type-parameters.md
-      - name: 作法：了解將結構和類別參考傳遞給方法之間的差異
-        href: how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
-    - name: 隱含類型區域變數
-      href: implicitly-typed-local-variables.md
+        - name: 使用結構
+          href: using-structs.md
+    - name: 繼承
+      href: inheritance.md
+    - name: 多型
+      href: polymorphism.md
       items:
-      - name: 作法：在查詢運算式中使用隱含型別區域變數和陣列
-        href: how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
-    - name: 擴充方法
-      href: extension-methods.md
+        - name: 使用 Override 和 New 關鍵字進行版本設定
+          href: versioning-with-the-override-and-new-keywords.md
+        - name: 了解使用 Override 和 New 關鍵字的時機
+          href: knowing-when-to-use-override-and-new-keywords.md
+        - name: HOW TO：覆寫 ToString 方法
+          href: how-to-override-the-tostring-method.md
+    - name: 抽象和密封類別以及類別成員
+      href: abstract-and-sealed-classes-and-class-members.md
       items:
-      - name: 作法：實作和呼叫自訂延伸模組
-        href: how-to-implement-and-call-a-custom-extension-method.md
-      - name: 作法：為列舉建立新方法
-        href: how-to-create-a-new-method-for-an-enumeration.md
-    - name: 具名和選擇性引數
-      href: named-and-optional-arguments.md
+        - name: HOW TO：定義抽象屬性
+          href: how-to-define-abstract-properties.md
+    - name: 靜態類別和靜態類別成員
+      href: static-classes-and-static-class-members.md
+    - name: 成員
+      href: members.md
+    - name: 存取修飾詞
+      href: access-modifiers.md
+    - name: 欄位
+      href: fields.md
+    - name: 常數
+      href: constants.md
       items:
-      - name: 作法：在 Office 程式設計中使用具名和選擇性引數
-        href: how-to-use-named-and-optional-arguments-in-office-programming.md
-  - name: 建構函式
-    href: constructors.md
-    items:
-    - name: 使用建構函式
-      href: using-constructors.md
-    - name: 執行個體建構函式
-      href: instance-constructors.md
-    - name: 私用建構函式
-      href: private-constructors.md
-    - name: 靜態建構函式
-      href: static-constructors.md
-    - name: 作法：撰寫複製建構函式
-      href: how-to-write-a-copy-constructor.md
-  - name: 完成項
-    href: destructors.md
-  - name: 物件和集合初始設定式
-    href: object-and-collection-initializers.md
-    items:
-    - name: 作法：使用物件初始設定式將物件初始化
-      href: how-to-initialize-objects-by-using-an-object-initializer.md
-    - name: 作法：使用集合初始設定式將字典初始化
-      href: how-to-initialize-a-dictionary-with-a-collection-initializer.md
-  - name: 巢狀類型
-    href: nested-types.md
-  - name: 部分類別和方法
-    href: partial-classes-and-methods.md
-  - name: 匿名類型
-    href: anonymous-types.md
-    items:
-    - name: 作法：在查詢中傳回項目屬性的子集
-      href: how-to-return-subsets-of-element-properties-in-a-query.md
-ms.openlocfilehash: ab61eea92fcbfb960038eb09b6e83c31d55eb24e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468282"
+        - name: 'HOW TO：在 C# 中定義常數'
+          href: how-to-define-constants.md
+    - name: 屬性
+      href: properties.md
+      items:
+        - name: 使用屬性
+          href: using-properties.md
+        - name: 介面屬性
+          href: interface-properties.md
+        - name: 限制存取子協助工具
+          href: restricting-accessor-accessibility.md
+        - name: HOW TO：宣告及使用讀寫屬性
+          href: how-to-declare-and-use-read-write-properties.md
+        - name: 自動實作的屬性
+          href: auto-implemented-properties.md
+        - name: HOW TO：使用自動實作的屬性來實作輕量型類別
+          href: how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
+    - name: 方法
+      href: methods.md
+      items:
+        - name: 區域函式
+          href: local-functions.md
+        - name: ref 傳回值和 ref 區域變數
+          href: ref-returns.md
+        - name: 傳遞參數
+          href: passing-parameters.md
+          items:
+            - name: 傳遞實值型別參數
+              href: passing-value-type-parameters.md
+            - name: 傳遞參考型別參數
+              href: passing-reference-type-parameters.md
+            - name: HOW TO：了解將結構和類別參考傳遞給方法之間的差異
+              href: how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
+        - name: 隱含類型區域變數
+          href: implicitly-typed-local-variables.md
+          items:
+            - name: HOW TO：在查詢運算式中使用隱含型別區域變數和陣列
+              href: how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
+        - name: 擴充方法
+          href: extension-methods.md
+          items:
+            - name: HOW TO：實作和呼叫自訂延伸模組
+              href: how-to-implement-and-call-a-custom-extension-method.md
+            - name: HOW TO：為列舉建立新方法
+              href: how-to-create-a-new-method-for-an-enumeration.md
+        - name: 具名和選擇性引數
+          href: named-and-optional-arguments.md
+          items:
+            - name: HOW TO：在 Office 程式設計中使用具名和選擇性引數
+              href: how-to-use-named-and-optional-arguments-in-office-programming.md
+    - name: 建構函式
+      href: constructors.md
+      items:
+        - name: 使用建構函式
+          href: using-constructors.md
+        - name: 執行個體建構函式
+          href: instance-constructors.md
+        - name: 私用建構函式
+          href: private-constructors.md
+        - name: 靜態建構函式
+          href: static-constructors.md
+        - name: HOW TO：撰寫複製建構函式
+          href: how-to-write-a-copy-constructor.md
+    - name: 完成項
+      href: destructors.md
+    - name: 物件和集合初始設定式
+      href: object-and-collection-initializers.md
+      items:
+        - name: HOW TO：使用物件初始設定式將物件初始化
+          href: how-to-initialize-objects-by-using-an-object-initializer.md
+        - name: HOW TO：使用集合初始設定式將字典初始化
+          href: how-to-initialize-a-dictionary-with-a-collection-initializer.md
+    - name: 巢狀類型
+      href: nested-types.md
+    - name: 部分類別和方法
+      href: partial-classes-and-methods.md
+    - name: 匿名類型
+      href: anonymous-types.md
+      items:
+        - name: HOW TO：在查詢中傳回項目屬性的子集
+          href: how-to-return-subsets-of-element-properties-in-a-query.md

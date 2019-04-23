@@ -1,16 +1,9 @@
-items:
 - name: 委派
   href: index.md
   items:
-  - name: 作法：叫用委派方法
-    href: how-to-invoke-a-delegate-method.md
-  - name: 作法：將程序傳遞至其他程序
-    href: how-to-pass-procedures-to-another-procedure.md
-  - name: 寬鬆委派轉換
-    href: relaxed-delegate-conversion.md
-ms.openlocfilehash: 245db8051550fbdaa16338a8f184c0b900b20139
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468188"
+    - name: HOW TO：叫用委派方法
+      href: how-to-invoke-a-delegate-method.md
+    - name: HOW TO：將程序傳遞至其他程序
+      href: how-to-pass-procedures-to-another-procedure.md
+    - name: 寬鬆委派轉換
+      href: relaxed-delegate-conversion.md

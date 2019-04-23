@@ -14,8 +14,8 @@ ms.openlocfilehash: 2d896708c702f5261239eb74f925c10eacd89619
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61709883"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>陳述式、運算式和運算子 (C# 程式設計手冊)
 

@@ -1,118 +1,113 @@
-items:
 - name: 執行階段設定結構描述
   href: index.md
   items:
-  - name: <runtime> 項目
-    href: runtime-element.md
-    items:
-    - name: <alwaysFlowImpersonationPolicy> 項目
-      href: alwaysflowimpersonationpolicy-element.md
-    - name: <AppContextSwitchOverrides> 項目
-      href: appcontextswitchoverrides-element.md
-    - name: <appDomainManagerAssembly> 項目
-      href: appdomainmanagerassembly-element.md
-    - name: <appDomainManagerType> 項目
-      href: appdomainmanagertype-element.md
-    - name: <appDomainResourceMonitoring> 項目
-      href: appdomainresourcemonitoring-element.md
-    - name: <assemblyBinding> 項目
-      href: assemblybinding-element-for-runtime.md
+    - name: <runtime> 項目
+      href: runtime-element.md
       items:
-      - name: <dependentAssembly> 項目
-        href: dependentassembly-element.md
-        items:
-        - name: <assemblyIdentity> 項目
-          href: assemblyidentity-element-for-runtime.md
-        - name: <bindingRedirect> 項目
-          href: bindingredirect-element.md
-        - name: <codeBase> 項目
-          href: codebase-element.md
-      - name: <probing> 項目
-        href: probing-element.md
-      - name: <publisherPolicy> 項目
-        href: publisherpolicy-element.md
-      - name: <qualifyAssembly> 項目
-        href: qualifyassembly-element.md
-    - name: <bypassTrustedAppStrongNames> 項目
-      href: bypasstrustedappstrongnames-element.md
-    - name: <CompatSortNLSVersion> 項目
-      href: compatsortnlsversion-element.md
-    - name: <developmentMode> 項目
-      href: developmentmode-element.md
-    - name: <disableCachingBindingFailures> 項目
-      href: disablecachingbindingfailures-element.md
-    - name: <disableCommitThreadStack> 項目
-      href: disablecommitthreadstack-element.md
-    - name: <disableFusionUpdatesFromADManager> 項目
-      href: disablefusionupdatesfromadmanager-element.md
-    - name: <EnableAmPmParseAdjustment> 項目
-      href: enableampmparseadjustment-element.md
-    - name: <enforceFIPSPolicy> 項目
-      href: enforcefipspolicy-element.md
-    - name: <etwEnable> 項目
-      href: etwenable-element.md
-    - name: <forcePerformanceCounterUniqueSharedMemoryReads> 項目
-      href: forceperformancecounteruniquesharedmemoryreads-element.md
-    - name: <gcAllowVeryLargeObjects> 項目
-      href: gcallowverylargeobjects-element.md
-    - name: <gcConcurrent> 項目
-      href: gcconcurrent-element.md
-    - name: <GCCpuGroup> 項目
-      href: gccpugroup-element.md
-    - name: <gcServer> 項目
-      href: gcserver-element.md
-    - name: <generatePublisherEvidence> 項目
-      href: generatepublisherevidence-element.md
-    - name: <legacyCorruptedStateExceptionsPolicy> 項目
-      href: legacycorruptedstateexceptionspolicy-element.md
-    - name: <legacyImpersonationPolicy> 項目
-      href: legacyimpersonationpolicy-element.md
-    - name: <loadFromRemoteSources>
-      href: loadfromremotesources-element.md
-    - name: <NetFx40_LegacySecurityPolicy> 項目
-      href: netfx40-legacysecuritypolicy-element.md
-    - name: <NetFx40_PInvokeStackResilience> 項目
-      href: netfx40-pinvokestackresilience-element.md
-    - name: <NetFx45_CultureAwareComparerGetHashCode_LongStrings> 項目
-      href: netfx45-cultureawarecomparergethashcode-longstrings-element.md
-    - name: <PreferComInsteadOfManagedRemoting> 項目
-      href: prefercominsteadofmanagedremoting-element.md
-    - name: <relativeBindForResources> 項目
-      href: relativebindforresources-element.md
-    - name: <shadowCopyVerifyByTimestamp> 項目
-      href: shadowcopyverifybytimestamp-element.md
-    - name: <supportPortability> 項目
-      href: supportportability-element.md
-    - name: <system.runtime.caching> 項目 (快取設定)
-      href: system-runtime-caching-element-cache-settings.md
-      items:
-      - name: <memoryCache> 項目 (快取設定)
-        href: memorycache-element-cache-settings.md
-        items:
-        - name: <namedCaches> 項目 (快取設定)
-          href: namedcaches-element-cache-settings.md
+        - name: <alwaysFlowImpersonationPolicy> 項目
+          href: alwaysflowimpersonationpolicy-element.md
+        - name: <AppContextSwitchOverrides> 項目
+          href: appcontextswitchoverrides-element.md
+        - name: <appDomainManagerAssembly> 項目
+          href: appdomainmanagerassembly-element.md
+        - name: <appDomainManagerType> 項目
+          href: appdomainmanagertype-element.md
+        - name: <appDomainResourceMonitoring> 項目
+          href: appdomainresourcemonitoring-element.md
+        - name: <assemblyBinding> 項目
+          href: assemblybinding-element-for-runtime.md
           items:
-          - name: <namedCaches> 的 <add> 項目
-            href: add-element-for-namedcaches.md
-          - name: <namedCaches> 的 <clear> 項目
-            href: clear-element-for-namedcaches.md
-          - name: <namedCaches> 的 <remove> 項目
-            href: remove-element-for-namedcaches.md
-    - name: <Thread_UseAllCpuGroups> 項目
-      href: thread-useallcpugroups-element.md
-    - name: <ThrowUnobservedTaskExceptions> 項目
-      href: throwunobservedtaskexceptions-element.md
-    - name: <TimeSpan_LegacyFormatMode> 項目
-      href: timespan-legacyformatmode-element.md
-    - name: <useLegacyJit> 項目
-      href: uselegacyjit-element.md
-    - name: <UseRandomizedStringHashAlgorithm> 項目
-      href: userandomizedstringhashalgorithm-element.md
-    - name: <UseSmallInternalThreadStacks> 項目
-      href: usesmallinternalthreadstacks-element.md
-ms.openlocfilehash: eb118bcc739543a13b512d481cbaa04883095582
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468367"
+            - name: <dependentAssembly> 項目
+              href: dependentassembly-element.md
+              items:
+                - name: <assemblyIdentity> 項目
+                  href: assemblyidentity-element-for-runtime.md
+                - name: <bindingRedirect> 項目
+                  href: bindingredirect-element.md
+                - name: <codeBase> 項目
+                  href: codebase-element.md
+            - name: <probing> 項目
+              href: probing-element.md
+            - name: <publisherPolicy> 項目
+              href: publisherpolicy-element.md
+            - name: <qualifyAssembly> 項目
+              href: qualifyassembly-element.md
+        - name: <bypassTrustedAppStrongNames> 項目
+          href: bypasstrustedappstrongnames-element.md
+        - name: <CompatSortNLSVersion> 項目
+          href: compatsortnlsversion-element.md
+        - name: <Crst_DisableSpinWait> 元素
+          href: crst-disablespinwait-element.md
+        - name: <developmentMode> 項目
+          href: developmentmode-element.md
+        - name: <disableCachingBindingFailures> 項目
+          href: disablecachingbindingfailures-element.md
+        - name: <disableCommitThreadStack> 項目
+          href: disablecommitthreadstack-element.md
+        - name: <disableFusionUpdatesFromADManager> 項目
+          href: disablefusionupdatesfromadmanager-element.md
+        - name: <EnableAmPmParseAdjustment> 項目
+          href: enableampmparseadjustment-element.md
+        - name: <enforceFIPSPolicy> 項目
+          href: enforcefipspolicy-element.md
+        - name: <etwEnable> 項目
+          href: etwenable-element.md
+        - name: <forcePerformanceCounterUniqueSharedMemoryReads> 項目
+          href: forceperformancecounteruniquesharedmemoryreads-element.md
+        - name: <gcAllowVeryLargeObjects> 項目
+          href: gcallowverylargeobjects-element.md
+        - name: <gcConcurrent> 項目
+          href: gcconcurrent-element.md
+        - name: <GCCpuGroup> 項目
+          href: gccpugroup-element.md
+        - name: <gcServer> 項目
+          href: gcserver-element.md
+        - name: <generatePublisherEvidence> 項目
+          href: generatepublisherevidence-element.md
+        - name: <legacyCorruptedStateExceptionsPolicy> 項目
+          href: legacycorruptedstateexceptionspolicy-element.md
+        - name: <legacyImpersonationPolicy> 項目
+          href: legacyimpersonationpolicy-element.md
+        - name: <loadFromRemoteSources>
+          href: loadfromremotesources-element.md
+        - name: <NetFx40_LegacySecurityPolicy> 項目
+          href: netfx40-legacysecuritypolicy-element.md
+        - name: <NetFx40_PInvokeStackResilience> 項目
+          href: netfx40-pinvokestackresilience-element.md
+        - name: <NetFx45_CultureAwareComparerGetHashCode_LongStrings> 項目
+          href: netfx45-cultureawarecomparergethashcode-longstrings-element.md
+        - name: <PreferComInsteadOfManagedRemoting> 項目
+          href: prefercominsteadofmanagedremoting-element.md
+        - name: <relativeBindForResources> 項目
+          href: relativebindforresources-element.md
+        - name: <shadowCopyVerifyByTimestamp> 項目
+          href: shadowcopyverifybytimestamp-element.md
+        - name: <supportPortability> 項目
+          href: supportportability-element.md
+        - name: <system.runtime.caching> 項目 (快取設定)
+          href: system-runtime-caching-element-cache-settings.md
+          items:
+            - name: <memoryCache> 項目 (快取設定)
+              href: memorycache-element-cache-settings.md
+              items:
+                - name: <namedCaches> 項目 (快取設定)
+                  href: namedcaches-element-cache-settings.md
+                  items:
+                    - name: <namedCaches> 的 <add> 項目
+                      href: add-element-for-namedcaches.md
+                    - name: <namedCaches> 的 <clear> 項目
+                      href: clear-element-for-namedcaches.md
+                    - name: <namedCaches> 的 <remove> 項目
+                      href: remove-element-for-namedcaches.md
+        - name: <Thread_UseAllCpuGroups> 項目
+          href: thread-useallcpugroups-element.md
+        - name: <ThrowUnobservedTaskExceptions> 項目
+          href: throwunobservedtaskexceptions-element.md
+        - name: <TimeSpan_LegacyFormatMode> 項目
+          href: timespan-legacyformatmode-element.md
+        - name: <useLegacyJit> 項目
+          href: uselegacyjit-element.md
+        - name: <UseRandomizedStringHashAlgorithm> 項目
+          href: userandomizedstringhashalgorithm-element.md
+        - name: <UseSmallInternalThreadStacks> 項目
+          href: usesmallinternalthreadstacks-element.md

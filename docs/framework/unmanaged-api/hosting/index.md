@@ -9,11 +9,11 @@ ms.assetid: 14295c28-1da8-408b-a656-9584abcd9896
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 412b61e026b019f7516332c247b203ac85304146
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672935"
 ---
 # <a name="hosting-unmanaged-api-reference"></a>裝載 (Unmanaged API 參考)
 裝載應用程式開發介面可讓 Unmanaged 主應用程式將 Common Language Runtime (CLR) 整合至其應用程式中。  

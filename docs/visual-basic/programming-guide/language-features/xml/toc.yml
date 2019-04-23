@@ -1,49 +1,42 @@
-items:
 - name: Visual Basic 中的 XML
   href: index.md
   items:
-  - name: LINQ to XML 概觀
-    href: overview-of-linq-to-xml.md
-  - name: 建立 XML
-    href: creating-xml.md
-    items:
-    - name: XML 常值概觀
-      href: xml-literals-overview.md
-    - name: XML 中內嵌的運算式
-      href: embedded-expressions-in-xml.md
-    - name: 宣告的 XML 元素和屬性名稱
-      href: names-of-declared-xml-elements-and-attributes.md
-    - name: XML 常值和 XML 1.0 規格
-      href: xml-literals-and-the-xml-1-0-specification.md
-    - name: XML 常值中的空白字元
-      href: white-space-in-xml-literals.md
-    - name: 作法：建立 XML 常值
-      href: how-to-create-xml-literals.md
-    - name: 作法：將運算式內嵌在 XML 常值中
-      href: how-to-embed-expressions-in-xml-literals.md
-  - name: 操作 XML
-    href: manipulating-xml.md
-    items:
-    - name: 作法：從檔案、字串或資料流載入 XML
-      href: how-to-load-xml-from-a-file-string-or-stream.md
-    - name: 作法：使用 LINQ 轉換 XML
-      href: how-to-transform-xml-by-using-linq.md
-    - name: 作法：修改 XML 常值
-      href: how-to-modify-xml-literals.md
-  - name: 存取 XML
-    href: accessing-xml.md
-    items:
-    - name: 作法：存取 XML 子系項目
-      href: how-to-access-xml-descendant-elements.md
-    - name: 作法：存取 XML 子項目
-      href: how-to-access-xml-child-elements.md
-    - name: 作法：存取 XML 屬性
-      href: how-to-access-xml-attributes.md
-    - name: 作法：宣告和使用 XML 命名空間前置詞
-      href: how-to-declare-and-use-xml-namespace-prefixes.md
-ms.openlocfilehash: 7d2d931b5f88e9af9a2cdef92168d907e3fd6ce6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468314"
+    - name: LINQ to XML 概觀
+      href: overview-of-linq-to-xml.md
+    - name: 建立 XML
+      href: creating-xml.md
+      items:
+        - name: XML 常值概觀
+          href: xml-literals-overview.md
+        - name: XML 中內嵌的運算式
+          href: embedded-expressions-in-xml.md
+        - name: 宣告的 XML 元素和屬性名稱
+          href: names-of-declared-xml-elements-and-attributes.md
+        - name: XML 常值和 XML 1.0 規格
+          href: xml-literals-and-the-xml-1-0-specification.md
+        - name: XML 常值中的空白字元
+          href: white-space-in-xml-literals.md
+        - name: HOW TO：建立 XML 常值
+          href: how-to-create-xml-literals.md
+        - name: HOW TO：將運算式內嵌在 XML 常值中
+          href: how-to-embed-expressions-in-xml-literals.md
+    - name: 操作 XML
+      href: manipulating-xml.md
+      items:
+        - name: HOW TO：從檔案、字串或資料流載入 XML
+          href: how-to-load-xml-from-a-file-string-or-stream.md
+        - name: HOW TO：使用 LINQ 轉換 XML
+          href: how-to-transform-xml-by-using-linq.md
+        - name: HOW TO：修改 XML 常值
+          href: how-to-modify-xml-literals.md
+    - name: 存取 XML
+      href: accessing-xml.md
+      items:
+        - name: HOW TO：存取 XML 子系項目
+          href: how-to-access-xml-descendant-elements.md
+        - name: HOW TO：存取 XML 子項目
+          href: how-to-access-xml-child-elements.md
+        - name: HOW TO：存取 XML 屬性
+          href: how-to-access-xml-attributes.md
+        - name: HOW TO：宣告和使用 XML 命名空間前置詞
+          href: how-to-declare-and-use-xml-namespace-prefixes.md

@@ -1,20 +1,13 @@
-items:
 - name: 快速入門
   href: index.md
   items:
-  - name: Visual Studio 中的 WPF 簡介
-    href: introduction-to-wpf-in-vs.md
-  - name: WPF 4.5 版的新功能
-    href: whats-new.md
-  - name: 逐步解說：我的第一個 WPF 傳統型應用程式
-    href: walkthrough-my-first-wpf-desktop-application.md
-  - name: WPF 逐步解說
-    href: wpf-walkthroughs.md
-  - name: WPF 社群意見回應
-    href: community-feedback.md
-ms.openlocfilehash: bebf111d94212c0a337602a7921f7ec5e639eed6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468578"
+    - name: Visual Studio 中的 WPF 簡介
+      href: introduction-to-wpf-in-vs.md
+    - name: WPF 4.5 版的新功能
+      href: whats-new.md
+    - name: 逐步解說：我的第一個 WPF 傳統型應用程式
+      href: walkthrough-my-first-wpf-desktop-application.md
+    - name: WPF 逐步解說
+      href: wpf-walkthroughs.md
+    - name: WPF 社群意見回應
+      href: community-feedback.md
