@@ -3,11 +3,11 @@ title: SOAP 及 HTTP 端點
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
 ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59307440"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768913"
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP 及 HTTP 端點
 此範例示範如何實作以 RPC 為基礎的服務，並將它公開的 SOAP 格式和"Plain Old XML"(POX) 格式中使用 WCF Web 程式設計模型。 請參閱[基本 HTTP 服務](../../../../docs/framework/wcf/samples/basic-http-service.md)如需詳細資訊，服務的 HTTP 繫結的範例。 這個範例的重點在於，使用不同繫結透過 SOAP 和 HTTP 公開相同服務的相關詳細資料。  

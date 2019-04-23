@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGrid [WPF], row details
 ms.assetid: 0bdc6f50-9b4c-483f-9df6-a47a1fde998b
 ms.openlocfilehash: d5b6539f3d379088528b9654861267988b6fc69b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59317883"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768640"
 ---
 # <a name="how-to-add-row-details-to-a-datagrid-control"></a>HOW TO：將資料列詳細資料新增至 DataGrid 控制項
 當使用<xref:System.Windows.Controls.DataGrid>控制項，您可以藉由新增資料列的詳細資料 區段中自訂資料呈現方式。 新增資料列詳細資料 區段可讓您將可選擇性地看見或是已摺疊的範本中的部分資料。 例如，您可以在其中新增資料列詳細資料，以<xref:System.Windows.Controls.DataGrid>其中會提供每個資料列的資料摘要<xref:System.Windows.Controls.DataGrid>，但是當使用者選取一個資料列會顯示更多資料欄位。 您定義的範本中的資料列詳細資料 區段<xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A>屬性。 下圖顯示資料列詳細資料區段的範例。  

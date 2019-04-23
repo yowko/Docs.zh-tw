@@ -3,11 +3,11 @@ title: WCF 探索概觀
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
 ms.openlocfilehash: cb1eb52e0996a03709a755ff2f148152e2625c58
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59335338"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768406"
 ---
 # <a name="wcf-discovery-overview"></a>WCF 探索概觀
 探索 API 為使用 WS-Discovery 通訊協定動態發行和探索 Web 服務的作業，提供了統一的程式設計模型。 這些 API 可讓服務自行發行，並且讓用戶端尋找發行的服務。 一旦服務變成可探索，就能夠傳送公告訊息，以及接聽和回應探索要求。 可探索的服務可以傳送 Hello 訊息，公告服務抵達網路，以及傳送 Bye 訊息，公告服務離開網路。 若要尋找服務，用戶端可傳送包含特定準則的 `Probe` 要求，例如服務合約型別、關鍵字以及在網路上的範圍。 服務會接收 `Probe` 要求並判斷是否符合準則。 如果服務符合準則，則會將 `ProbeMatch` 訊息傳回至用戶端做為回應，其中包含連絡服務所需的資訊。 用戶端也可以傳送 `Resolve` 要求，以尋找可能已變更其端點位址的服務。 相符的服務會透過將 `Resolve` 訊息傳回用戶端的方式回應 `ResolveMatch` 要求。  

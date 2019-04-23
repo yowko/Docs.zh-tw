@@ -3,11 +3,11 @@ title: 組態與中繼資料支援
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
 ms.openlocfilehash: abc9177fcc7b338a365d61721b63041ddcd68ab9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298301"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769433"
 ---
 # <a name="configuration-and-metadata-support"></a>組態與中繼資料支援
 這個主題描述如何啟用繫結和繫結項目的組態與中繼資料支援。  

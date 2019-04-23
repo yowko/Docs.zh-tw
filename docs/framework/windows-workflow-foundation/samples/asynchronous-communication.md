@@ -3,11 +3,11 @@ title: 非同步通訊
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
 ms.openlocfilehash: a9da04e2c6d3c131603211f53c54fd25dde8d338
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59323651"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769927"
 ---
 # <a name="asynchronous-communication"></a>非同步通訊
 這個範例會示範如何兩個不同的 Windows Workflow Foundation (WF) 服務之間的通訊是以非同步方式預設值。  

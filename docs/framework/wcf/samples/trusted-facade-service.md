@@ -3,11 +3,11 @@ title: 信任的外觀服務
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
 ms.openlocfilehash: 4921b2746b9df362a0bb3e6048602d41f3f2faaf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59346154"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768186"
 ---
 # <a name="trusted-facade-service"></a>信任的外觀服務
 此案例的範例示範如何呼叫者的身分識別資訊從一個服務到另一個使用 Windows Communication Foundation (WCF) 安全性基礎結構。  

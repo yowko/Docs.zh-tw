@@ -1,5 +1,5 @@
 ---
-title: 作法：接收第一個可能發生的例外狀況通知
+title: HOW TO：接收第一個可能發生的例外狀況通知
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6f70b4c67de892c3b66a0099dae9f618a99b3f1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59314109"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770486"
 ---
-# <a name="how-to-receive-first-chance-exception-notifications"></a>作法：接收第一個可能發生的例外狀況通知
+# <a name="how-to-receive-first-chance-exception-notifications"></a>HOW TO：接收第一個可能發生的例外狀況通知
 <xref:System.AppDomain> 類別的 <xref:System.AppDomain.FirstChanceException> 事件可讓您在 Common Language Runtime 開始搜尋例外狀況處理常式之前，收到已擲回例外狀況的通知。
 
  這個事件是在應用程式定義域層級引發。 執行的執行緒可以通過多個應用程式定義域；因此，在另一個應用程式定義域中無法處理某個應用程式定義域中未處理的例外狀況。 在應用程式定義域處理例外狀況之前，通知都會發生在每個已新增事件之處理常式的應用程式定義域中。

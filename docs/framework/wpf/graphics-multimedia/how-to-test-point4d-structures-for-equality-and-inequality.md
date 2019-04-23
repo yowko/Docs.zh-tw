@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Point4D structures [WPF], testing for equality
 ms.assetid: e004a67e-db7f-4af8-a31f-e6b2a44ccf34
 ms.openlocfilehash: ce1188e99ef2b0682427cc2e227aaccd27f7c4f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198435"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770148"
 ---
 # <a name="how-to-test-point4d-structures-for-equality-and-inequality"></a>HOW TO：測試 Point4D 結構是否相等和不相等
 此範例示範如何測試<xref:System.Windows.Media.Media3D.Point4D>結構是否相等和不等比較。  

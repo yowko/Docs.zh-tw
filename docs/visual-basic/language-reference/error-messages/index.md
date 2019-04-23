@@ -8,11 +8,11 @@ helpviewer_keywords:
 - errors [Visual Basic], trappable
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
 ms.openlocfilehash: 822c0f266e7dd68f063043d98a9f4af308ae93fd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59338133"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770096"
 ---
 # <a name="error-messages-visual-basic"></a>錯誤訊息 (Visual Basic)
 當您撰寫、編譯或執行 Visual Basic 應用程式時，可能發生下列類型的錯誤：  

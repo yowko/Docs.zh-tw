@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Computer.Info object [Visual Basic], tasks
 ms.assetid: 13c145bc-5c85-4fea-a5dd-2ca8681a0252
 ms.openlocfilehash: 00e6acd7cdbb41d8d763ae2a948bf9c108d54d59
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823450"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768874"
 ---
 # <a name="getting-information-about-the-computer-visual-basic"></a>取得電腦的相關資訊 (Visual Basic)
 `My.Computer.Info` 物件所提供的屬性可用來取得電腦的記憶體、已載入組件、名稱和作業系統的相關資訊。  

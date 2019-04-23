@@ -3,11 +3,11 @@ title: 使用活動類別撰寫工作流程活動
 ms.date: 03/30/2017
 ms.assetid: 7b7b1c66-f093-43c3-b4d1-7173b46516da
 ms.openlocfilehash: 1bec10b6ae9fb43319cfb6acbf59133e1acca09c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59322312"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770762"
 ---
 # <a name="workflow-activity-authoring-using-the-activity-class"></a>使用活動類別撰寫工作流程活動
 最基本的方式，來建立使用 Windows Workflow Foundation (WF) 中的活動[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]是建立繼承自類別<xref:System.Activities.Activity>建立功能的組合自訂活動或活動從[內建活動程式庫](net-framework-4-5-built-in-activity-library.md)。 本主題示範如何建立會寫入兩個訊息至主控台的活動。
