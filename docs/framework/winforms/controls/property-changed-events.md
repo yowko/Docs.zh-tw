@@ -9,10 +9,10 @@ helpviewer_keywords:
 - properties [Windows Forms], changes
 ms.assetid: 268039ec-5aaa-4d76-b902-acccb036c850
 ms.openlocfilehash: cabfd9e799288a332a0b2f96140f5f1cc328508b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105764"
 ---
 # <a name="property-changed-events"></a>屬性變更事件
@@ -28,5 +28,5 @@ ms.locfileid: "59105764"
 ## <a name="see-also"></a>另請參閱
 
 - [事件](../../../standard/events/index.md)
-- [Windows Form 控制項中的事件](events-in-windows-forms-controls.md)
-- [Windows Form 控制項中的屬性](properties-in-windows-forms-controls.md)
+- [Windows Forms 控制項中的事件](events-in-windows-forms-controls.md)
+- [Windows Forms 控制項中的屬性](properties-in-windows-forms-controls.md)

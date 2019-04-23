@@ -6,10 +6,10 @@ helpviewer_keywords:
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
 ms.openlocfilehash: 5df6d39bef137bd4005316eac252ca0952df5e7f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098776"
 ---
 # <a name="use-automatic-layout-overview"></a>使用自動配置概觀
@@ -109,5 +109,5 @@ Grid
 ## <a name="see-also"></a>另請參閱
 
 - [WPF 的全球化](globalization-for-wpf.md)
-- [使用自動配置建立按鈕](how-to-use-automatic-layout-to-create-a-button.md)
-- [針對自動版面配置使用格線](how-to-use-a-grid-for-automatic-layout.md)
+- [使用自動版面配置建立按鈕](how-to-use-automatic-layout-to-create-a-button.md)
+- [針對自動版面配置使用方格](how-to-use-a-grid-for-automatic-layout.md)

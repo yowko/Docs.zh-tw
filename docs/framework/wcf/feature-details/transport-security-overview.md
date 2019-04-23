@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
 ms.openlocfilehash: 04526e8aea09b412de4d3a94f17938b02ad6527b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105270"
 ---
 # <a name="transport-security-overview"></a>傳輸安全性概觀
@@ -19,7 +19,7 @@ Windows Communication Foundation (WCF) 中的傳輸安全性機制取決於繫�
 >  使用 SSL 安全性時使用.NET Framework 3.5 和更新版本的 WCF 用戶端會使用其憑證存放區中的中繼憑證和服務上執行憑證鏈結驗證的 SSL 交涉期間收到的中繼憑證憑證。 .NET Framework 3.0 只會使用安裝在本機憑證存放區中的中繼憑證。  
   
 > [!WARNING]
->  使用傳輸安全性時，可能會覆寫 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 屬性。 若要防止發生組這<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType>至<xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>。 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 是可以設定在服務描述的服務行為。  
+>  使用傳輸安全性時，可能會覆寫 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 屬性。 若要防止發生組這<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType>至<xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>。 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 是可在服務描述上設定的服務行為。  
   
 ## <a name="basichttpbinding"></a>BasicHttpBinding  
  根據預設，<xref:System.ServiceModel.BasicHttpBinding> 類別不會提供安全性。 這個繫結是設計用來與未實作安全性的 Web 服務提供者互通。 不過，您可以透過將 <xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> 屬性設定為 <xref:System.ServiceModel.BasicHttpSecurityMode.None> 以外的任何值來啟動安全性。 若要啟用傳輸安全性，請將此屬性設為 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>。  

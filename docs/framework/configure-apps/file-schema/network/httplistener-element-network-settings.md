@@ -1,12 +1,12 @@
 ---
-title: <httpListener> 項目 （網路設定）
+title: <httpListener> 項目 (網路設定)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
 ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099738"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener > 項目 （網路設定）
@@ -41,9 +41,9 @@ ms.locfileid: "59099738"
   
 ### <a name="parent-elements"></a>父項目  
   
-|**項目**|**描述**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
-|[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
   
 ## <a name="remarks"></a>備註  
  **UnescapeRequestUrl**屬性會指出如果<xref:System.Net.HttpListener>使用原始未逸出的 URI，而不是轉換的 URI，其中任何百分比編碼的值會轉換，並且會採取其他的正規化步驟。  

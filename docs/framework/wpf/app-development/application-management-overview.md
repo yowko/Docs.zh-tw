@@ -8,10 +8,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100076"
 ---
 # <a name="application-management-overview"></a>應用程式管理概觀
@@ -105,7 +105,7 @@ ms.locfileid: "59100076"
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>取得目前的應用程式  
- 因為的功能<xref:System.Windows.Application>整個應用程式可共用的類別，則只有一個執行個體<xref:System.Windows.Application>每個類別<xref:System.AppDomain>。 若要強制執行此項目，<xref:System.Windows.Application>類別會實作為單一類別 (請參閱[中實作 Singleton C# ](https://go.microsoft.com/fwlink/?LinkId=100567))，這會建立本身的單一執行個體，並提供共用存取權與`static`<xref:System.Windows.Application.Current%2A>屬性。  
+ 因為的功能<xref:System.Windows.Application>整個應用程式可共用的類別，則只有一個執行個體<xref:System.Windows.Application>每個類別<xref:System.AppDomain>。 為了強制執行此項目，<xref:System.Windows.Application>類別會實作為單一類別 (請參閱[C# 中實作的單一](https://go.microsoft.com/fwlink/?LinkId=100567))，這會建立本身的單一執行個體，並提供共用存取權與`static` <xref:System.Windows.Application.Current%2A>屬性。  
   
  下列程式碼示範如何取得的參考<xref:System.Windows.Application>目前的物件<xref:System.AppDomain>。  
   
@@ -358,8 +358,8 @@ ms.locfileid: "59100076"
 
 - <xref:System.Windows.Application>
 - [WPF 視窗概觀](wpf-windows-overview.md)
-- [巡覽概觀](navigation-overview.md)
+- [瀏覽概觀](navigation-overview.md)
 - [WPF 應用程式資源、內容和資料檔案](wpf-application-resource-content-and-data-files.md)
 - [WPF 中的 Pack URI](pack-uris-in-wpf.md)
-- [應用程式模型：HOW TO 主題](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
+- [應用程式模型：How to 主題](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
 - [應用程式開發](index.md)

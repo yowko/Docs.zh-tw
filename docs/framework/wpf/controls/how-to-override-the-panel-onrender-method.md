@@ -15,10 +15,10 @@ helpviewer_keywords:
 - Panel control [WPF], overriding OnRender method
 ms.assetid: 57397834-a085-4e36-90ab-416fad98f341
 ms.openlocfilehash: c4539847368c1a5789e99ec92106d17077ed5943
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102527"
 ---
 # <a name="how-to-override-the-panel-onrender-method"></a>HOW TO：覆寫 Panel 的 OnRender 方法
@@ -35,4 +35,4 @@ ms.locfileid: "59102527"
 - <xref:System.Windows.Controls.Panel>
 - [面板概觀](panels-overview.md)
 - [自訂放射狀面板範例](https://go.microsoft.com/fwlink/?LinkID=159982)
-- [HOW TO 主題](panel-how-to-topics.md)
+- [HOW-TO 主題](panel-how-to-topics.md)

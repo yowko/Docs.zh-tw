@@ -5,10 +5,10 @@ ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c92d71c9862dfbdace4de2e30cf48ace7becfd0b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105845"
 ---
 # <a name="reflection-and-net-native"></a>反映和 .NET Native
@@ -36,4 +36,4 @@ ms.locfileid: "59105845"
 ## <a name="see-also"></a>另請參閱
 
 - [使用 .NET Native 編譯應用程式](../../../docs/framework/net-native/index.md)
-- [.NET 原生和編譯](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [.NET Native 和編譯](../../../docs/framework/net-native/net-native-and-compilation.md)

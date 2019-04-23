@@ -3,10 +3,10 @@ title: 疑難排解
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
 ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105478"
 ---
 # <a name="troubleshooting"></a>疑難排解
@@ -15,7 +15,7 @@ ms.locfileid: "59105478"
  其他問題的解答[常見問題集](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)。  
   
 ## <a name="unsupported-standard-query-operators"></a>不支援的標準查詢運算子  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援所有標準查詢運算子方法 (例如<xref:System.Linq.Enumerable.ElementAt%2A>)。 因此，專案即使可以編譯，仍可能產生執行階段錯誤。 如需詳細資訊，請參閱 <<c0> [ 標準查詢運算子轉譯](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 並非支援所有標準查詢運算子方法 (例如 <xref:System.Linq.Enumerable.ElementAt%2A>)。 因此，專案即使可以編譯，仍可能產生執行階段錯誤。 如需詳細資訊，請參閱 <<c0> [ 標準查詢運算子轉譯](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)。  
   
 ## <a name="memory-issues"></a>記憶體問題  
  如果查詢牽涉到記憶體中集合和[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>，可能會在記憶體中，根據在其中指定兩個集合的順序執行查詢。 如果查詢必須在記憶體中執行，則必須擷取資料庫資料表中的資料。  
@@ -26,10 +26,10 @@ ms.locfileid: "59105478"
  若要指定輸入檔案名稱，請將名稱以輸入檔案加入命令列。 不支援將檔案名稱包含在連接字串中 (使用 **/conn** 選項)。 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
   
 ## <a name="class-library-projects"></a>類別庫專案  
- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]會在專案的 `app.config` 檔案中建立連接字串。 類別庫專案不使用 `app.config` 檔案。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用提供設計階段檔案中的連接字串。 變更 `app.config` 中的值不會變更應用程式所連接的資料庫。  
+ [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]會在專案的 `app.config` 檔案中建立連接字串。 類別庫專案不使用 `app.config` 檔案。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會使用設計階段檔案中提供的連接字串。 變更 `app.config` 中的值不會變更應用程式所連接的資料庫。  
   
 ## <a name="cascade-delete"></a>串聯刪除  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援或辨識串聯刪除作業。 如果您要刪除有條件約束之資料表中的資料列，必須執行下列其中一項工作：  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援或辨識串聯 (Cascade) 刪除作業。 如果您要刪除有條件約束之資料表中的資料列，必須執行下列其中一項工作：  
   
 -   在資料庫的外部索引鍵條件約束中設定 `ON DELETE CASCADE` 規則。  
   

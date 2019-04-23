@@ -9,10 +9,10 @@ helpviewer_keywords:
 - classes, TextPattern
 ms.assetid: b51206f2-1281-4ad0-9820-ea39d88ae577
 ms.openlocfilehash: 5646ecf9e2d5deb9fd1e7a1460860d8dd2f4dd9d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104633"
 ---
 # <a name="ui-automation-text-pattern"></a>UI 自動化的文字模式
@@ -24,12 +24,12 @@ ms.locfileid: "59104633"
 ## <a name="in-this-section"></a>本節內容  
  [UI 自動化 TextPattern 概觀](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
  [TextPattern 和 Embedded 物件概觀](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
- [HOW TO 主題](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
+ [HOW-TO 主題](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Automation.Text>  
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
+- [使用者介面自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
 - [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)

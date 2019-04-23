@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Windows Communication Foundation, requirements
 ms.assetid: c43918db-9a36-426c-9e8a-e1bd6688a5b7
 ms.openlocfilehash: 5bd681b5f0be45526a3448ecf4afcf6ccbd41c98
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099933"
 ---
 # <a name="wcf-system-requirements"></a>WCF 系統需求
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) 是用來建立分散式應用程式的�
   
 ## <a name="see-also"></a>另請參閱
 
-- [概觀說明](../../../docs/framework/wcf/conceptual-overview.md)
+- [概念性概觀](../../../docs/framework/wcf/conceptual-overview.md)
 - [基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)
 - [WCF 功能詳細資料](../../../docs/framework/wcf/feature-details/index.md)
-- [方針及最佳作法](../../../docs/framework/wcf/guidelines-and-best-practices.md)
+- [方針及最佳做法](../../../docs/framework/wcf/guidelines-and-best-practices.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
 ms.openlocfilehash: 3dcc6f763acfff076bb03076a17e3a8f8916267c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097248"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>實作商務邏輯 (LINQ to SQL)
@@ -177,7 +177,7 @@ partial class Customer
   
  如需如何使用部分方法將商務邏輯加入到應用程式中，請參閱下列主題：  
   
- [HOW TO：將驗證新增至實體類別](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
+ [如何：將驗證新增至實體類別](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
   
  [逐步解說：自訂實體類別的插入、更新和刪除行為](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
@@ -187,5 +187,5 @@ partial class Customer
 
 - [部分類別和方法](../../../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
 - [部分方法](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)
-- [LINQ to SQL 工具，在 Visual Studio 中](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
+- [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) (Visual Studio 中的 LINQ to SQL 工具)
 - [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

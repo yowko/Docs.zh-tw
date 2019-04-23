@@ -5,10 +5,10 @@ ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cfc9dc5c8122f9b1b1696cedcd5d9a8ceead403
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100219"
 ---
 # <a name="directives-element-net-native"></a>\<指示詞 > 項目 (.NET Native)
@@ -35,7 +35,7 @@ ms.locfileid: "59100219"
 |項目|描述|  
 |-------------|-----------------|  
 |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|做為容器，以包含整個應用程式中，可將中繼資料用於反映的類型和類型成員。|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|定義子類型和類型成員會在執行階段需要中繼資料的組件。|  
+|[\<程式庫>](../../../docs/framework/net-native/library-element-net-native.md)|定義子類型和類型成員會在執行階段需要中繼資料的組件。|  
   
 ## <a name="remarks"></a>備註  
  每個執行階段指示詞檔案都只能包含一個 `<Directives>` 元素。  

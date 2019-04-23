@@ -7,10 +7,10 @@ helpviewer_keywords:
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
 ms.openlocfilehash: b0e4f9af0ff84a8d560b332d227b1ba9ae18bd4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099699"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation 架構
@@ -47,5 +47,5 @@ ms.locfileid: "59099699"
   
 ## <a name="see-also"></a>另請參閱
 
-- [何謂 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
-- [Windows Communication Foundation 的主要概念](../../../docs/framework/wcf/fundamental-concepts.md)
+- [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Windows Communication Foundation 的基本概念](../../../docs/framework/wcf/fundamental-concepts.md)

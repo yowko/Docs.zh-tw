@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
 ms.openlocfilehash: 0c53e3a15bcbe61db7da1edb31ecd3fd562603f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099890"
 ---
 # <a name="loading-a-dataset-from-xml"></a>從 XML 載入資料集
@@ -21,12 +21,12 @@ ms.locfileid: "59099890"
   
 |選項|描述|  
 |------------|-----------------|  
-|**自動**|這是預設值。 檢查 XML 並依下列順序選擇最適當的選項：<br /><br /> -如果 XML 為 DiffGram， **DiffGram**用。<br />-如果<xref:System.Data.DataSet>包含結構描述或 XML 包含內嵌結構描述**ReadSchema**用。<br />-如果<xref:System.Data.DataSet>不包含結構描述，且 XML 不包含內嵌結構描述**InferSchema**用。<br /><br /> 如果您知道要讀取的 XML 格式，為了達到最佳效能建議您設定的明確**XmlReadMode**，而不是接受**自動**預設值。|  
+|**Auto**|這是預設值。 檢查 XML 並依下列順序選擇最適當的選項：<br /><br /> -如果 XML 為 DiffGram， **DiffGram**用。<br />-如果<xref:System.Data.DataSet>包含結構描述或 XML 包含內嵌結構描述**ReadSchema**用。<br />-如果<xref:System.Data.DataSet>不包含結構描述，且 XML 不包含內嵌結構描述**InferSchema**用。<br /><br /> 如果您知道要讀取的 XML 格式，為了達到最佳效能建議您設定的明確**XmlReadMode**，而不是接受**自動**預設值。|  
 |**ReadSchema**|讀取任何內嵌結構描述，並載入資料和結構描述。<br /><br /> 如果 <xref:System.Data.DataSet> 已經包含結構描述，則會將新資料表從內嵌結構描述加入 <xref:System.Data.DataSet> 的現有結構描述中。 如果內嵌結構描述中的任何資料表已經存在於 <xref:System.Data.DataSet> 中，則會擲回例外狀況。 您不能修改現有的資料表使用的結構描述**XmlReadMode.ReadSchema**。<br /><br /> 如果 <xref:System.Data.DataSet> 不包含結構描述，且沒有內嵌結構描述，則不會讀取任何資料。<br /><br /> 內嵌結構描述可使用 XML 結構描述定義語言 (XSD) 的結構描述來定義。 如需有關撰寫為 XML 結構描述的內嵌結構描述的詳細資訊，請參閱 <<c0> [ 衍生資料集關聯式結構從 XML 結構描述 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)。|  
 |**IgnoreSchema**|忽略任何內嵌結構描述，並將資料載入現有的 <xref:System.Data.DataSet> 結構描述中。 任何與現有結構描述不相符的資料會被捨棄。 如果 <xref:System.Data.DataSet> 中沒有結構描述，則不會載入任何資料。<br /><br /> 如果資料是 DiffGram， **IgnoreSchema**有相同的功能**DiffGram** *。*|  
 |**InferSchema**|忽略任何內嵌結構描述，並推斷每個 XML 資料結構的結構描述，然後載入資料。<br /><br /> 如果 <xref:System.Data.DataSet> 已經包含結構描述，則會將資料行加入現有的資料表來擴充目前的結構描述。 如果沒有現有的資料表，則不會加入額外的資料表。 如果推斷資料表已經存在但使用不同的命名空間，或者任何推斷的資料行與現有資料行衝突，便會擲回例外狀況。<br /><br /> 如需詳細資訊，瞭解**ReadXmlSchema**推斷結構描述從 XML 文件，請參閱[推斷資料集關聯式結構從 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)。|  
 |**DiffGram**|讀取 DiffGram 並將資料加入目前的結構描述。 **DiffGram**合併現有的資料列的唯一識別碼值相符之處的新資料列。 請參閱這個主題結尾處＜從 XML 合併資料＞。 如需有關 Diffgram 的詳細資訊，請參閱[DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)。|  
-|**Fragment**|繼續讀取多個 XML 片段，直到到達資料流末。 與 <xref:System.Data.DataSet> 結構描述相符的片段會附加至適當的資料表。 與 <xref:System.Data.DataSet> 結構描述不相符的片段則會捨棄。|  
+|**片段**|繼續讀取多個 XML 片段，直到到達資料流末。 與 <xref:System.Data.DataSet> 結構描述相符的片段會附加至適當的資料表。 與 <xref:System.Data.DataSet> 結構描述不相符的片段則會捨棄。|  
   
 > [!NOTE]
 >  如果您傳遞**XmlReader**要**ReadXml**定位的一部分的 XML 文件的方式**ReadXml**將讀取的下一個項目節點，並將它視為根項目，項目節點的結尾。 這不會套用如果您指定**XmlReadMode.Fragment**。  
@@ -100,7 +100,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 > [!NOTE]
->  如果的 XSD 結構描述您<xref:System.Data.DataSet>包含**targetNamespace**，可能不會讀取資料，並呼叫時，您可能會遇到例外狀況**ReadXml**載入<xref:System.Data.DataSet>包含的 xml非限定命名空間的項目。 若要在此情況下讀取不合格的項目，設定**elementFormDefault**等於"qualified"中的 XSD 結構描述。 例如:   
+>  如果的 XSD 結構描述您<xref:System.Data.DataSet>包含**targetNamespace**，可能不會讀取資料，並呼叫時，您可能會遇到例外狀況**ReadXml**載入<xref:System.Data.DataSet>包含的 xml非限定命名空間的項目。 若要在此情況下讀取不合格的項目，設定**elementFormDefault**等於"qualified"中的 XSD 結構描述。 例如：  
   
 ```xml  
 <xsd:schema id="customDataSet"   
@@ -118,10 +118,10 @@ foreach (DataTable dataTable in dataSet.Tables)
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Data.DataSet.Merge%2A?displayProperty=nameWithType>
-- [在資料集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
 - [DiffGram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)
 - [從 XML 結構描述 (XSD) 衍生資料集關聯式結構](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
 - [從 XML 推斷資料集關聯式結構](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
 - [從 XML 載入資料集結構描述資訊](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
 - [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

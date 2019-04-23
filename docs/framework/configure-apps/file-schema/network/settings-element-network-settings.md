@@ -1,5 +1,5 @@
 ---
-title: <settings> 項目 （網路設定）
+title: <settings> 項目 (網路設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#settings
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
 ms.openlocfilehash: a1733803d1f5a5bf64aeb69d0360cef3de3b3a69
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096923"
 ---
 # <a name="settings-element-network-settings"></a>\<設定 > 項目 （網路設定）
@@ -51,7 +51,7 @@ ms.locfileid: "59096923"
 |[ipv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|可讓網際網路通訊協定第 6 版 (IPv6) 支援。|  
 |[\<performanceCounter > 項目 （網路設定）](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|啟用網路效能計數器。|  
 |[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|設定網路資源的連線。|  
-|[通訊端](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|指定通訊端作業是否使用完成通訊埠。|  
+|[socket](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|指定通訊端作業是否使用完成通訊埠。|  
 |[\<webProxyScript > 項目 （網路設定）](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|設定用來探索 Web proxy 指令碼的特性。|  
   
 ### <a name="parent-elements"></a>父項目  

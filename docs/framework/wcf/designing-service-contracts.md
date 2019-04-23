@@ -8,10 +8,10 @@ helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
 ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102735"
 ---
 # <a name="designing-service-contracts"></a>設計服務合約
@@ -271,11 +271,11 @@ End Interface
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：建立要求-回覆合約](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
-- [HOW TO：建立單向合約](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
-- [HOW TO：建立雙面合約](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [如何：建立要求-回覆合約](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
+- [如何：建立單向合約](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
+- [如何：建立雙工合約](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
 - [指定服務合約中的資料傳輸](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
-- [指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [指定及處理合約與服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [使用工作階段](../../../docs/framework/wcf/using-sessions.md)
 - [同步和非同步作業](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
 - [可靠的服務](../../../docs/framework/wcf/reliable-services.md)

@@ -32,10 +32,10 @@ helpviewer_keywords:
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
 ms.openlocfilehash: 26e2a25855485bdd19d30e8497d0f75b7d4432e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097157"
 ---
 # <a name="handling-errors"></a>處理錯誤
@@ -169,5 +169,5 @@ End Try
   
 ## <a name="see-also"></a>另請參閱
 
-- [例外狀況處理基礎觀念](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+- [例外狀況處理基本概念](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
 - [要求資料](../../../docs/framework/network-programming/requesting-data.md)

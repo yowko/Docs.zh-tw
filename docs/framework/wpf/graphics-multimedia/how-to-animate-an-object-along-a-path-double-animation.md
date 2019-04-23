@@ -9,10 +9,10 @@ helpviewer_keywords:
 - double animation [WPF]
 ms.assetid: 5a3c4a99-f303-42ad-a52a-e4794bb1798e
 ms.openlocfilehash: 54f345bbe6b513e3593cbf45ba190d4a44228424
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101441"
 ---
 # <a name="how-to-animate-an-object-along-a-path-double-animation"></a>HOW TO：沿著路徑建立物件的動畫 (雙精度浮點數動畫)
@@ -37,4 +37,4 @@ ms.locfileid: "59101441"
 ## <a name="see-also"></a>另請參閱
 
 - [動畫概觀](animation-overview.md)
-- [路徑動畫 HOW TO 主題](path-animation-how-to-topics.md)
+- [路徑動畫操作說明主題](path-animation-how-to-topics.md)

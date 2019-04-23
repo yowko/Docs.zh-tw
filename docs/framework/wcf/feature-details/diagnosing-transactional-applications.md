@@ -3,10 +3,10 @@ title: 診斷交易式應用程式
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
 ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101708"
 ---
 # <a name="diagnosing-transactional-applications"></a>診斷交易式應用程式
@@ -124,4 +124,4 @@ ms.locfileid: "59101708"
 
 - [管理與診斷](../../../../docs/framework/wcf/diagnostics/index.md)
 - [設定追蹤](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [WS-AtomicTransaction 組態公用程式 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [WS-AtomicTransaction 設定公用程式 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

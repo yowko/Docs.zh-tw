@@ -8,10 +8,10 @@ helpviewer_keywords:
 - examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
 ms.openlocfilehash: 20ec03e6b84110f7ea00c134dc18b23f233c5f58
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103437"
 ---
 # <a name="double-buffered-graphics"></a>雙重緩衝的圖形
@@ -37,7 +37,7 @@ ms.locfileid: "59103437"
 - <xref:System.Drawing.BufferedGraphics>
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphicsManager>
-- [HOW TO：手動呈現已緩衝的圖形](how-to-manually-render-buffered-graphics.md)
-- [HOW TO：使用表單和控制項的雙重緩衝以減少圖形閃爍](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
-- [HOW TO：手動管理已緩衝的圖形](how-to-manually-manage-buffered-graphics.md)
-- [Windows Form 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [如何：手動轉譯已緩衝的圖形](how-to-manually-render-buffered-graphics.md)
+- [如何：減少使用表單和控制項的雙重緩衝的圖形重繪閃動](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
+- [如何：手動管理已緩衝的圖形](how-to-manually-manage-buffered-graphics.md)
+- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)

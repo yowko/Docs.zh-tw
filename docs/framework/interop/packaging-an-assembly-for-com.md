@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d51fcbdeeaa1fe30bbdeff5eb85a1c15fa9b4847
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: dc02178223e48c7c578d10ba92123d9436d4f439
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221078"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097261"
 ---
 # <a name="packaging-an-assembly-for-com"></a>封裝 COM 的組件
 COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型的下列資訊：  
@@ -50,7 +50,7 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
   
      COM 應用程式使用時，大部分類型都需要型別程式庫。 您可以產生型別程式庫，或讓 COM 開發人員執行這項工作。 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供下列選項來產生型別程式庫：  
   
-    -   [型別程式庫匯出工具](#cpconpackagingassemblyforcomanchor1)  
+    -   [類型程式庫匯出工具](#cpconpackagingassemblyforcomanchor1)  
   
     -   [TypeLibConverter 類別](#cpconpackagingassemblyforcomanchor2)  
   
@@ -81,6 +81,7 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
  [.NET 服務安裝工具 (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) 會將 Managed 類別新增至 Windows 2000 元件服務，並將數項工作合併到單一工具。 除了載入和註冊組件之外，Regsvcs.exe 還可以在現有 COM+ 1.0 應用程式中產生、註冊和安裝型別程式庫。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [將 .NET Framework 元件公開給 COM](exposing-dotnet-components-to-com.md)
@@ -89,4 +90,4 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
 - [組件安全性考量](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe (類型程式庫匯出工具)](../tools/tlbexp-exe-type-library-exporter.md)
 - [向 COM 註冊組件](registering-assemblies-with-com.md)
-- [如何：將型別程式庫當作 Win32 資源內嵌在應用程式中](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))
+- [作法：將型別程式庫當作 Win32 資源內嵌在應用程式中](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

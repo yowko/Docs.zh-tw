@@ -13,10 +13,10 @@ helpviewer_keywords:
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
 ms.openlocfilehash: 723e05803b1f7d2bc56476248987085dbe5e23f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101597"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>HOW TO：使用 Windows Forms TabControl 新增和移除索引標籤
@@ -77,6 +77,6 @@ ms.locfileid: "59101597"
 ## <a name="see-also"></a>另請參閱
 
 - [TabControl 控制項概觀](tabcontrol-control-overview-windows-forms.md)
-- [HOW TO：將控制項新增至索引標籤頁](how-to-add-a-control-to-a-tab-page.md)
-- [HOW TO：停用索引標籤頁](how-to-disable-tab-pages.md)
-- [HOW TO：變更 Windows Forms TabControl 的外觀](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [如何：將控制項加入索引標籤頁](how-to-add-a-control-to-a-tab-page.md)
+- [如何：停用索引標籤頁](how-to-disable-tab-pages.md)
+- [如何：變更 Windows Form TabControl 的外觀](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

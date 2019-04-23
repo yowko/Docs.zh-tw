@@ -3,10 +3,10 @@ title: 具類型資料集
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
 ms.openlocfilehash: 92ed3f8fd392238785fd2d205668f14fe477f2b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098646"
 ---
 # <a name="typed-datasets"></a>具類型資料集
@@ -17,7 +17,7 @@ ms.locfileid: "59098646"
  此外，強型別**資料集**提供存取值為正確的類型，在編譯時期。 使用強型別**資料集**，程式碼是編譯而不會在執行階段時攔截類型不符的錯誤。  
   
 ## <a name="in-this-section"></a>本節內容  
- [產生強類型資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
+ [產生強型別資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
  描述如何建立和使用強型別**資料集**。  
   
  [註釋具類型資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
@@ -26,4 +26,4 @@ ms.locfileid: "59098646"
 ## <a name="see-also"></a>另請參閱
 
 - [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
