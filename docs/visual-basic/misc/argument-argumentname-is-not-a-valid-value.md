@@ -5,21 +5,21 @@ f1_keywords:
 - vbrArgument_InvalidValue1
 ms.assetid: 38d937f1-3f81-4c15-834f-c4a2769a0011
 ms.openlocfilehash: 72b20b57c5d492806d75d3ced8feb8ebfe0b3791
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309390"
 ---
-# <a name="argument-argumentname-is-not-a-valid-value"></a><span data-ttu-id="5fabf-102">引數 '\<引數名稱 >' 不是有效的值</span><span class="sxs-lookup"><span data-stu-id="5fabf-102">Argument '\<argumentname>' is not a valid value</span></span>
-<span data-ttu-id="5fabf-103">引數的值無效。</span><span class="sxs-lookup"><span data-stu-id="5fabf-103">An argument's value is not valid.</span></span>  
+# <a name="argument-argumentname-is-not-a-valid-value"></a><span data-ttu-id="0d941-102">引數 '\<引數名稱 >' 不是有效的值</span><span class="sxs-lookup"><span data-stu-id="0d941-102">Argument '\<argumentname>' is not a valid value</span></span>
+<span data-ttu-id="0d941-103">引數的值無效。</span><span class="sxs-lookup"><span data-stu-id="0d941-103">An argument's value is not valid.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="5fabf-104">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="5fabf-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0d941-104">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="0d941-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="5fabf-105">請檢查引數的值。</span><span class="sxs-lookup"><span data-stu-id="5fabf-105">Check the value of the argument.</span></span>  
+1. <span data-ttu-id="0d941-105">請檢查引數的值。</span><span class="sxs-lookup"><span data-stu-id="0d941-105">Check the value of the argument.</span></span>  
   
-2. <span data-ttu-id="5fabf-106">如果透過計算來提供引數，請檢查計算所處理的值。</span><span class="sxs-lookup"><span data-stu-id="5fabf-106">If the argument is supplied by a calculation, check the values that the calculation processes.</span></span>  
+2. <span data-ttu-id="0d941-106">如果透過計算來提供引數，請檢查計算所處理的值。</span><span class="sxs-lookup"><span data-stu-id="0d941-106">If the argument is supplied by a calculation, check the values that the calculation processes.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5fabf-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5fabf-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0d941-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0d941-107">See also</span></span>
 
-- [<span data-ttu-id="5fabf-108">以傳值和傳址方式傳遞引數</span><span class="sxs-lookup"><span data-stu-id="5fabf-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [<span data-ttu-id="0d941-108">以傳值和傳址方式傳遞引數</span><span class="sxs-lookup"><span data-stu-id="0d941-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

@@ -3,40 +3,40 @@ title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
 ms.openlocfilehash: 7402ac9ccc0e5e1777fa77f339d7605e1d306e13
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312666"
 ---
-# <a name="customchannelstester"></a><span data-ttu-id="258ae-102">CustomChannelsTester</span><span class="sxs-lookup"><span data-stu-id="258ae-102">CustomChannelsTester</span></span>
-<span data-ttu-id="258ae-103">`CustomChannelsTester` 工具，可以用來針對預先定義之服務合約集合測試自訂通道實作。</span><span class="sxs-lookup"><span data-stu-id="258ae-103">The `CustomChannelsTester` is a tool that you can use to test your custom channel implementations against a set of predefined service contracts.</span></span> <span data-ttu-id="258ae-104">您可以選擇服務合約集合，然後將該集合使用 XML 檔傳遞到此工具。</span><span class="sxs-lookup"><span data-stu-id="258ae-104">You can select the set of service contracts and pass it to the tool using an XML file.</span></span> <span data-ttu-id="258ae-105">接著，此工具就會產生服務，以及會在訊息交換期間執行自訂通道實作的用戶端。</span><span class="sxs-lookup"><span data-stu-id="258ae-105">The tool then generates the service and client that exercises your custom channel implementations during message exchange.</span></span>  
+# <a name="customchannelstester"></a><span data-ttu-id="ae0b7-102">CustomChannelsTester</span><span class="sxs-lookup"><span data-stu-id="ae0b7-102">CustomChannelsTester</span></span>
+<span data-ttu-id="ae0b7-103">`CustomChannelsTester` 工具，可以用來針對預先定義之服務合約集合測試自訂通道實作。</span><span class="sxs-lookup"><span data-stu-id="ae0b7-103">The `CustomChannelsTester` is a tool that you can use to test your custom channel implementations against a set of predefined service contracts.</span></span> <span data-ttu-id="ae0b7-104">您可以選擇服務合約集合，然後將該集合使用 XML 檔傳遞到此工具。</span><span class="sxs-lookup"><span data-stu-id="ae0b7-104">You can select the set of service contracts and pass it to the tool using an XML file.</span></span> <span data-ttu-id="ae0b7-105">接著，此工具就會產生服務，以及會在訊息交換期間執行自訂通道實作的用戶端。</span><span class="sxs-lookup"><span data-stu-id="ae0b7-105">The tool then generates the service and client that exercises your custom channel implementations during message exchange.</span></span>  
   
-### <a name="to-build-the-tool"></a><span data-ttu-id="258ae-106">建置工具</span><span class="sxs-lookup"><span data-stu-id="258ae-106">To build the tool</span></span>  
+### <a name="to-build-the-tool"></a><span data-ttu-id="ae0b7-106">建置工具</span><span class="sxs-lookup"><span data-stu-id="ae0b7-106">To build the tool</span></span>  
   
-1. <span data-ttu-id="258ae-107">若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="258ae-107">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+1. <span data-ttu-id="ae0b7-107">若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="ae0b7-107">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-2. <span data-ttu-id="258ae-108">建置方案時，會產生三個檔案：CustomChannelsTester.exe、 TestSpec.xml 和 SampleRun.cmd。</span><span class="sxs-lookup"><span data-stu-id="258ae-108">Building the solution generates three files: CustomChannelsTester.exe, TestSpec.xml and SampleRun.cmd.</span></span> <span data-ttu-id="258ae-109">檔案 SampleRun.cmd 有一個示範如何使用此工具來測試的範例命令列[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。</span><span class="sxs-lookup"><span data-stu-id="258ae-109">The file SampleRun.cmd has a sample command line that shows how to use this tool to test the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample.</span></span>  
+2. <span data-ttu-id="ae0b7-108">建置方案時，會產生三個檔案：CustomChannelsTester.exe、 TestSpec.xml 和 SampleRun.cmd。</span><span class="sxs-lookup"><span data-stu-id="ae0b7-108">Building the solution generates three files: CustomChannelsTester.exe, TestSpec.xml and SampleRun.cmd.</span></span> <span data-ttu-id="ae0b7-109">檔案 SampleRun.cmd 有一個示範如何使用此工具來測試的範例命令列[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。</span><span class="sxs-lookup"><span data-stu-id="ae0b7-109">The file SampleRun.cmd has a sample command line that shows how to use this tool to test the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample.</span></span>  
   
-### <a name="to-run-the-tool"></a><span data-ttu-id="258ae-110">執行工具</span><span class="sxs-lookup"><span data-stu-id="258ae-110">To run the tool</span></span>  
+### <a name="to-run-the-tool"></a><span data-ttu-id="ae0b7-110">執行工具</span><span class="sxs-lookup"><span data-stu-id="ae0b7-110">To run the tool</span></span>  
   
--   <span data-ttu-id="258ae-111">在命令提示字元中輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="258ae-111">At the command prompt type the following command:</span></span>  
+-   <span data-ttu-id="ae0b7-111">在命令提示字元中輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="ae0b7-111">At the command prompt type the following command:</span></span>  
   
     ```  
     CustomChannelsTester.exe /binding:YourCustomBindngName /dll:TheAssemblyWhereThisTypeisDefined /testspec:XmlFileNameWhichContainsTestOptions  
     ```  
   
-     <span data-ttu-id="258ae-112">這時必須使用 `/binding` 選項。</span><span class="sxs-lookup"><span data-stu-id="258ae-112">Using the `/binding` option is required.</span></span>  
+     <span data-ttu-id="ae0b7-112">這時必須使用 `/binding` 選項。</span><span class="sxs-lookup"><span data-stu-id="ae0b7-112">Using the `/binding` option is required.</span></span>  
   
-     `/dll` <span data-ttu-id="258ae-113">如果"binding"不是系統提供的繫結，提供由 Windows Communication Foundation (WCF)，則為必要。</span><span class="sxs-lookup"><span data-stu-id="258ae-113">is required if "binding" is not a system-provided binding provided by Windows Communication Foundation (WCF).</span></span>  
+     <span data-ttu-id="ae0b7-113">`/dll` 如果"binding"不是系統提供的繫結，提供由 Windows Communication Foundation (WCF)，則為必要。</span><span class="sxs-lookup"><span data-stu-id="ae0b7-113">`/dll` is required if "binding" is not a system-provided binding provided by Windows Communication Foundation (WCF).</span></span>  
   
-     `/testspec` <span data-ttu-id="258ae-114">是選擇性的。</span><span class="sxs-lookup"><span data-stu-id="258ae-114">is optional.</span></span>  
+     <span data-ttu-id="ae0b7-114">`/testspec` 是選擇項。</span><span class="sxs-lookup"><span data-stu-id="ae0b7-114">`/testspec` is optional.</span></span>  
   
-     <span data-ttu-id="258ae-115">這個選項會根據測試規格和繫結建立伺服器與用戶端。</span><span class="sxs-lookup"><span data-stu-id="258ae-115">This creates server and clients based on the test specifications and the binding.</span></span>  
+     <span data-ttu-id="ae0b7-115">這個選項會根據測試規格和繫結建立伺服器與用戶端。</span><span class="sxs-lookup"><span data-stu-id="ae0b7-115">This creates server and clients based on the test specifications and the binding.</span></span>  
   
-     <span data-ttu-id="258ae-116">執行用戶端與伺服器，然後傳回結果。</span><span class="sxs-lookup"><span data-stu-id="258ae-116">Executes the client and server and returns the results.</span></span>  
+     <span data-ttu-id="ae0b7-116">執行用戶端與伺服器，然後傳回結果。</span><span class="sxs-lookup"><span data-stu-id="ae0b7-116">Executes the client and server and returns the results.</span></span>  
   
-     <span data-ttu-id="258ae-117">下列是測試規格之描述的範例 XML (testspec.xml)：</span><span class="sxs-lookup"><span data-stu-id="258ae-117">The following is the sample XML for the description of the test specifications (testspec.xml):</span></span>  
+     <span data-ttu-id="ae0b7-117">下列是測試規格之描述的範例 XML (testspec.xml)：</span><span class="sxs-lookup"><span data-stu-id="ae0b7-117">The following is the sample XML for the description of the test specifications (testspec.xml):</span></span>  
   
     ```xml  
     <TestSpec xmlns="http://WCF/TestSpec" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"   
