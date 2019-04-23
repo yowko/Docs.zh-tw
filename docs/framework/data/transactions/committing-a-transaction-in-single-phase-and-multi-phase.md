@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
 ms.openlocfilehash: cbe00fb792ab5f2a7586a958ddbe5bdf004656dc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089548"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>在單一階段和多重階段中認可交易
@@ -111,5 +111,5 @@ public void InDoubt (Enlistment enlistment)
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用單一階段交易認可和可提升單一階段告知進行最佳化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)
-- [將資源登記成為交易中的參與者](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
+- [使用單一階段認可和可提升單一階段通知進行最佳化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)
+- [將資源登記為異動中的參與者](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
 ms.openlocfilehash: 83147c3f9d70434f5c8dd34e2e56f44f71adc53d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092899"
 ---
 # <a name="row-states-and-row-versions"></a>資料列狀態和資料列版本
@@ -23,7 +23,7 @@ ADO.NET 使用資料列狀態和版本來管理資料表中的資料列。 資�
 |<xref:System.Data.DataRowState.Added>|資料列已加入至資料表，但尚未呼叫 `AcceptChanges`。|  
 |<xref:System.Data.DataRowState.Modified>|有些資料列項目已變更。|  
 |<xref:System.Data.DataRowState.Deleted>|已從資料表中刪除資料列，但是尚未呼叫 `AcceptChanges`。|  
-|<xref:System.Data.DataRowState.Detached>|資料列不屬於任何 `DataRowCollection`。 已將新建立資料列的 `RowState` 設為 `Detached`。 呼叫 `DataRow` 方法以將新 `DataRowCollection` 加入至 `Add` 後，`RowState` 屬性的值會設為 `Added`。<br /><br /> `Detached` 也有設定的資料列，已經移除了`DataRowCollection`使用`Remove`方法，或由`Delete`方法，後面`AcceptChanges`方法。|  
+|<xref:System.Data.DataRowState.Detached>|資料列不屬於任何 `DataRowCollection`。 已將新建立資料列的 `RowState` 設為 `Detached`。 呼叫 `DataRow` 方法以將新 `DataRowCollection` 加入至 `Add` 後，`RowState` 屬性的值會設為 `Added`。<br /><br /> 使用 `Detached` 方法，或是先使用 `DataRowCollection` 方法再使用 `Remove` 方法，從 `Delete` 中移除的資料列也會設定為 `AcceptChanges`。|  
   
  在 `AcceptChanges`、<xref:System.Data.DataSet> 或 <xref:System.Data.DataTable> 上呼叫 <xref:System.Data.DataRow> 時，具有 `Deleted` 資料列狀態的所有資料列都將移除。 其餘資料列的狀態將設為 `Unchanged`，而 `Original` 資料列版本中的值將以 `Current` 資料列版本值覆寫。 在呼叫 `RejectChanges` 時，所有狀態為 `Added` 的資料列都會移除。 其餘資料列的狀態將設為 `Unchanged`，而 `Current` 資料列版本中的值將以 `Original` 資料列版本值覆寫。  
   
@@ -50,7 +50,7 @@ string custID = custRow["CustomerID", DataRowVersion.Original].ToString();
   
  您可以測試 `DataRow` 是否具有特定的資料列版本，方法是呼叫 <xref:System.Data.DataRow.HasVersion%2A> 方法，並將 `DataRowVersion` 當做引數傳遞。 例如，`DataRow.HasVersion(DataRowVersion.Original)` 將在呼叫 `false` 之前，針對所新建立的資料列傳回 `AcceptChanges`。  
   
- 下列程式碼範例顯示資料表內所有已刪除的資料列中的值。 `Deleted` 資料列沒有`Current`資料列版本，因此您必須傳遞`DataRowVersion.Original`時存取的資料行值。  
+ 下列程式碼範例顯示資料表內所有已刪除的資料列中的值。 `Deleted` 資料列沒有 `Current` 資料列版本，因此您必須在存取資料行值時傳遞 `DataRowVersion.Original`。  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -99,4 +99,4 @@ foreach (DataRow delRow in delRows)
 - [在 DataTable 中操作資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
 - [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [DataAdapter 和 DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

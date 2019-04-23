@@ -10,10 +10,10 @@ helpviewer_keywords:
 - binding data [WPF], converting bound data
 ms.assetid: b00aaa19-c6df-4c3b-a9fd-88a0b488df2b
 ms.openlocfilehash: 40699bec1c6cd775f7f8495b7a49eda15fb2ed83
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59093796"
 ---
 # <a name="how-to-convert-bound-data"></a>HOW TO：轉換繫結的資料
@@ -41,4 +41,4 @@ ms.locfileid: "59093796"
 
 - [實作繫結驗證](how-to-implement-binding-validation.md)
 - [資料繫結概觀](data-binding-overview.md)
-- [HOW TO 主題](data-binding-how-to-topics.md)
+- [HOW-TO 主題](data-binding-how-to-topics.md)

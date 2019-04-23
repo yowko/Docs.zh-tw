@@ -3,12 +3,12 @@ title: 運算式樹狀架構
 description: 了解 .NET Core 中的運算式樹狀架構，以及如何使用它們來表示您可以檢查、修改和執行的程式碼結構。
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: b7a39ccec293a22e4b4d7d01b30f9f441fd0079b
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: db6e23d1ad0014a7dbb58a0cd473e67d6bd9acc0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096611"
 ---
 # <a name="expression-trees"></a>運算式樹狀架構
 
@@ -22,7 +22,7 @@ ms.locfileid: "58125833"
 您可能已撰寫使用運算式樹狀架構的程式碼。 Entity Framework 的 LINQ API 接受運算式樹狀架構作為 LINQ 查詢運算式模式的引數。
 這可讓 [Entity Framework](/ef/) 將以 C# 撰寫的查詢，轉譯為在資料庫引擎中執行的 SQL。 另一個範例是 [Moq](https://github.com/Moq/moq)，這是 .NET 的熱門模擬架構。
 
-此教學課程的其餘章節會探索運算式樹狀架構為何、查看支援運算式樹狀架構的架構類別，並示範如何使用運算式樹狀架構。 您將了解如何讀取運算式樹狀架構、如何建立運算式樹狀架構、如何建立修改後的運算式樹狀架構，以及如何執行由運算式樹狀架構表示的程式碼。 閱讀完後，您將能夠使用這些結構來建立豐富彈性的演算法。
+本教學課程的其餘章節會探索運算式樹狀架構為何、查看支援運算式樹狀架構的架構類別，並示範如何使用運算式樹狀架構。 您將了解如何讀取運算式樹狀架構、如何建立運算式樹狀架構、如何建立修改後的運算式樹狀架構，以及如何執行由運算式樹狀架構表示的程式碼。 閱讀完後，您將能夠使用這些結構來建立豐富彈性的演算法。
 
 1. [說明運算式樹狀架構](expression-trees-explained.md)
 
@@ -51,4 +51,3 @@ ms.locfileid: "58125833"
 7. [總結](expression-trees-summary.md)
 
     檢閱運算式樹狀架構的相關資訊。
-    

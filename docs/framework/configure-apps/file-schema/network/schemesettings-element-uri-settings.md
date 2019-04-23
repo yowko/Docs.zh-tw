@@ -1,12 +1,12 @@
 ---
-title: <schemeSettings> 項目 （Uri 設定）
+title: <schemeSettings> 項目 (URI 設定)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
 ms.openlocfilehash: 8dc505d8a9de4e8939372af61b23652551c36530
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59094226"
 ---
 # <a name="schemesettings-element-uri-settings"></a>\<schemeSettings > 項目 （Uri 設定）
@@ -31,15 +31,15 @@ ms.locfileid: "59094226"
   
 ### <a name="child-elements"></a>子元素  
   
-|**項目**|**描述**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|新增為結構描述名稱的配置設定。|  
-|[清除](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|清除所有現有的配置設定。|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|清除所有現有的配置設定。|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|移除結構描述設定的配置名稱。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**項目**|**描述**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含指定.NET Framework 如何處理使用統一資源識別元 (Uri) 表示的 web 位址的設定。|  
   

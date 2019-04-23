@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
 ms.openlocfilehash: 786094bc426066b45fd1a214950ec1e030f0b731
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088830"
 ---
 # <a name="connection-strings-and-configuration-files"></a>連接字串和組態檔
@@ -67,7 +67,7 @@ ms.locfileid: "59088830"
 >  **machine.config** 檔案也包含 **connectionStrings** 區段，後者則包含 Visual Studio 所使用的連接字串。 從 Windows 應用程式中的 **app.config** 檔案依提供者名稱擷取連接字串時，**machine.config** 中的連接字串會最先載入，然後再載入 **app.config** 的項目。如果在 **connectionStrings** 項目之後緊接著新增 **clear**，就會從記憶體中的資料結構移除所有繼承的參考，如此便只會考量定義於本機 **app.config** 檔案中的連接字串。  
   
 ### <a name="working-with-the-configuration-classes"></a>使用組態類別  
- 從 .NET Framework 2.0 開始，在本機電腦上使用組態檔時，就會使用 <xref:System.Configuration.ConfigurationManager> 來取代已被取代的 <xref:System.Configuration.ConfigurationSettings>。 <xref:System.Web.Configuration.WebConfigurationManager> 用來搭配 ASP.NET 組態檔。 這是為了在 Web 伺服器上使用組態檔而設計，可透過程式設計的方式存取 **system.web** 之類的組態檔區段。  
+ 從 .NET Framework 2.0 開始，在本機電腦上使用組態檔時，就會使用 <xref:System.Configuration.ConfigurationManager> 來取代已被取代的 <xref:System.Configuration.ConfigurationSettings>。 <xref:System.Web.Configuration.WebConfigurationManager> 則會用於搭配 ASP.NET 組態檔。 這是為了在 Web 伺服器上使用組態檔而設計，可透過程式設計的方式存取 **system.web** 之類的組態檔區段。  
   
 > [!NOTE]
 >  您必須為呼叫端授與權限，才能在執行階段存取組態檔；所需的權限則根據應用程式類型、組態檔以及位置而有所不同。 如需詳細資訊，請參閱[使用組態類別](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))和 <xref:System.Web.Configuration.WebConfigurationManager> (適用於 ASP.NET 應用程式) 以及 <xref:System.Configuration.ConfigurationManager> (適用於 Windows 應用程式)。  
@@ -172,8 +172,8 @@ ms.locfileid: "59088830"
 ## <a name="see-also"></a>另請參閱
 
 - [連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [保護連接資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [使用組態類別](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
 - [設定應用程式](../../../../docs/framework/configure-apps/index.md)
 - [ASP.NET 網站管理](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

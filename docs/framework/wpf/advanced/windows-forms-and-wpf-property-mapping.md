@@ -9,10 +9,10 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
 ms.openlocfilehash: a7d78837a141ed322da42629501cee6dcc9143e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088817"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Windows Form 和 WPF 屬性對應
@@ -138,7 +138,7 @@ ms.locfileid: "59088817"
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [WPF 和 Win32 互通](wpf-and-win32-interoperation.md)
-- [WPF 和 Windows Form 互通](wpf-and-windows-forms-interoperation.md)
-- [逐步解說：使用 WindowsFormsHost 項目對應屬性](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
+- [WPF 和 Win32 交互操作](wpf-and-win32-interoperation.md)
+- [WPF 和 Windows Forms 互通](wpf-and-windows-forms-interoperation.md)
+- [逐步解說：使用 WindowsFormsHost 元素對應屬性](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
 - [逐步解說：使用 ElementHost 控制項對應屬性](walkthrough-mapping-properties-using-the-elementhost-control.md)

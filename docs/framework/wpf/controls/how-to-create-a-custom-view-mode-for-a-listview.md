@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ListView controls [WPF], creating custom View mode
 ms.assetid: 71077349-eeb9-4344-ab29-b5df96df3314
 ms.openlocfilehash: de11250a2e7529fba3b262e42b6714262738fa90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092886"
 ---
 # <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>HOW TO：建立 ListView 的自訂檢視模式
@@ -46,6 +46,6 @@ ms.locfileid: "59092886"
 
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [HOW TO 主題](listview-how-to-topics.md)
+- [HOW-TO 主題](listview-how-to-topics.md)
 - [ListView 概觀](listview-overview.md)
 - [GridView 概觀](gridview-overview.md)

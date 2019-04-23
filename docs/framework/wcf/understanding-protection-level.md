@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
 ms.openlocfilehash: 90fb844931c3af54367d0e7c14a766636cdcc71a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096045"
 ---
 # <a name="understanding-protection-level"></a>了解保護層級
@@ -28,11 +28,11 @@ ms.locfileid: "59096045"
   
 -   訊息的任何部分都存在三個基本保護層級。 屬性 (無論其出現在任何位置) 會設定為其中一個 <xref:System.Net.Security.ProtectionLevel> 列舉值。 這些值包括如下 (依照遞增的保護順序)：  
   
-    -   `None`。  
+    -   `None`.  
   
-    -   `Sign`。 保護的部分會以數位方式簽署。 這樣可以確保偵測到保護訊息部分所受到的任何竄改。  
+    -   `Sign`. 保護的部分會以數位方式簽署。 這樣可以確保偵測到保護訊息部分所受到的任何竄改。  
   
-    -   `EncryptAndSign`。 訊息部分會先加密以確保機密性，接著才進行簽署。  
+    -   `EncryptAndSign`. 訊息部分會先加密以確保機密性，接著才進行簽署。  
   
 -   您可以設定保護需求僅適用於*應用程式資料*透過這項功能。 例如，WS-Addressing 標頭是基礎結構資料，因此不會受到 `ProtectionLevel` 影響。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "59096045"
 - <xref:System.ServiceModel.MessageHeaderAttribute>
 - <xref:System.ServiceModel.MessageBodyMemberAttribute>
 - <xref:System.Net.Security.ProtectionLevel>
-- [保護服務的安全](../../../docs/framework/wcf/securing-services.md)
-- [HOW TO：設定 ProtectionLevel 屬性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [保護服務安全](../../../docs/framework/wcf/securing-services.md)
+- [如何：設定 ProtectionLevel 屬性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [指定及處理合約與服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [使用訊息合約](../../../docs/framework/wcf/feature-details/using-message-contracts.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - DataTemplate [WPF]
 ms.assetid: bfcd564e-5e9e-451e-8641-a9b5c3cfac90
 ms.openlocfilehash: de5a4937feabdb4486d9dcf9d5e5bfddd2356690
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089167"
 ---
 # <a name="how-to-find-datatemplate-generated-elements"></a>HOW TO：尋找 DataTemplate 產生的項目
@@ -39,9 +39,9 @@ ms.locfileid: "59089167"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：尋找 ControlTemplate 產生的元素](../controls/how-to-find-controltemplate-generated-elements.md)
+- [如何：尋找 ControlTemplate 產生的項目](../controls/how-to-find-controltemplate-generated-elements.md)
 - [資料繫結概觀](data-binding-overview.md)
-- [HOW TO 主題](data-binding-how-to-topics.md)
+- [HOW-TO 主題](data-binding-how-to-topics.md)
 - [樣式設定和範本化](../controls/styling-and-templating.md)
 - [WPF XAML 名稱範圍](../advanced/wpf-xaml-namescopes.md)
 - [WPF 中的樹狀結構](../advanced/trees-in-wpf.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], creating
 ms.assetid: 99f6e876-3f7f-4139-9063-e36587c95b02
 ms.openlocfilehash: ccd9354d623cf1b452bc3890b7fd9a5248cb69c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088791"
 ---
 # <a name="how-to-create-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>HOW TO：使用兩個 Windows Forms DataGridView 控制項建立主從式表單
@@ -41,6 +41,6 @@ ms.locfileid: "59088791"
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [逐步解說：使用兩個 Windows Forms DataGridView 控制項建立主從式表單](creating-a-master-detail-form-using-two-datagridviews.md)
-- [在 Windows Form DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [保護連接資訊](../../data/adonet/protecting-connection-information.md)
+- [逐步解說：建立主版/詳細表單使用兩個 Windows Form DataGridView 控制項](creating-a-master-detail-form-using-two-datagridviews.md)
+- [在 Windows Forms DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [保護連線資訊](../../data/adonet/protecting-connection-information.md)

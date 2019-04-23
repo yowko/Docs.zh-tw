@@ -3,10 +3,10 @@ title: SQL Server 中的伺服器和資料庫角色
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
 ms.openlocfilehash: e2d0de08f23bc3767e11de31c4ded4a326d060a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087972"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server 中的伺服器和資料庫角色
@@ -16,7 +16,7 @@ ms.locfileid: "59087972"
  固定伺服器角色擁有固定的權限組和整個伺服器的範圍， 這些角色專門用於管理 SQL Server，且指派給角色的權限都無法變更。 您可以將登入指派給固定伺服器角色，而不必擁有資料庫的使用者脹戶。  
   
 > [!IMPORTANT]
->  `sysadmin` 固定伺服器角色涵蓋所有其他的角色，而且範圍不受限制。 除非高度信任主體的安全性，否則請勿將主體新增到此角色中。 `sysadmin` 角色成員具有不可撤銷的管理權限，在所有伺服器資料庫和資源。  
+>  `sysadmin` 固定伺服器角色涵蓋所有其他的角色，而且範圍不受限制。 除非高度信任主體的安全性，否則請勿將主體新增到此角色中。 `sysadmin` 角色成員對於所有的伺服器資料庫和資源都具有不可撤銷的管理權限。  
   
  當您要將使用者新增到固定伺服器角色時，請嚴加篩選。 例如，`bulkadmin` 角色可讓使用者加任何本機檔案的內容插入至資料表，因而可能危及資料完整性。 如需固定的伺服器角色和權限的完整清單，請參閱 SQL Server 線上叢書 》。  
   
@@ -68,4 +68,4 @@ ms.locfileid: "59087972"
 - [在 SQL Server 中進行驗證](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
 - [SQL Server 中的擁有權和使用者結構描述分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
 - [SQL Server 中的授權和權限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

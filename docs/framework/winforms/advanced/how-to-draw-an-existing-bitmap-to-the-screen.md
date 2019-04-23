@@ -10,10 +10,10 @@ helpviewer_keywords:
 - images [Windows Forms], displaying on Windows Forms
 ms.assetid: 5bc558d7-b326-4050-a834-b8600da0de95
 ms.openlocfilehash: 90511adf9caffe7952e270d6fe32dd85162a29d7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089162"
 ---
 # <a name="how-to-draw-an-existing-bitmap-to-the-screen"></a>HOW TO：將現有點陣圖描繪至螢幕
@@ -34,5 +34,5 @@ ms.locfileid: "59089162"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Windows Form 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
 - [使用影像、點陣圖、圖示和中繼檔](working-with-images-bitmaps-icons-and-metafiles.md)

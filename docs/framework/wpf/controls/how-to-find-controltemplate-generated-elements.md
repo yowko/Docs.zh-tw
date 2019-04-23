@@ -9,10 +9,10 @@ helpviewer_keywords:
 - finding ControlTemplate elements [WPF]
 ms.assetid: d7b25447-ceff-4bb4-9be5-fd7c40ef00af
 ms.openlocfilehash: 426f6c93433711ac72fe67eff2ee3006aa4d9166
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092103"
 ---
 # <a name="how-to-find-controltemplate-generated-elements"></a>HOW TO：尋找 ControlTemplate 產生的元素
@@ -30,7 +30,7 @@ ms.locfileid: "59092103"
   
 ## <a name="see-also"></a>另請參閱
 
-- [尋找 DataTemplate 產生的項目](../data/how-to-find-datatemplate-generated-elements.md)
+- [尋找 DataTemplate 產生的元素](../data/how-to-find-datatemplate-generated-elements.md)
 - [樣式設定和範本化](styling-and-templating.md)
 - [WPF XAML 名稱範圍](../advanced/wpf-xaml-namescopes.md)
 - [WPF 中的樹狀結構](../advanced/trees-in-wpf.md)

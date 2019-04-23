@@ -7,10 +7,10 @@ helpviewer_keywords:
 - geometry classes [WPF]
 ms.assetid: 83873331-b013-472e-8197-8ba993dd242f
 ms.openlocfilehash: 3afee770e36b7daea754775f64dd7f1030659267
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096234"
 ---
 # <a name="geometries-how-to-topics"></a>幾何 HOW TO 主題
@@ -19,14 +19,14 @@ ms.locfileid: "59096234"
 ## <a name="in-this-section"></a>本節內容  
  [建立 EllipseGeometry 的動畫](how-to-animate-an-ellipsegeometry.md)  
  [建立 ArcSegment 大小的動畫](how-to-animate-the-size-of-an-arcsegment.md)  
- [控制複合圖形的填色](how-to-control-the-fill-of-a-composite-shape.md)  
+ [控制複合圖案的填色](how-to-control-the-fill-of-a-composite-shape.md)  
  [建立合併幾何](how-to-create-a-combined-geometry.md)  
- [建立複合圖形](how-to-create-a-composite-shape.md)  
+ [建立複合圖案](how-to-create-a-composite-shape.md)  
  [建立三次方貝茲曲線](how-to-create-a-cubic-bezier-curve.md)  
  [使用 LineGeometry 建立線條](how-to-create-a-line-using-a-linegeometry.md)  
  [在 PathGeometry 中建立 LineSegment](how-to-create-a-linesegment-in-a-pathgeometry.md)  
- [使用 PathGeometry 建立圖形](how-to-create-a-shape-by-using-a-pathgeometry.md)  
- [使用 StreamGeometry 建立圖形](how-to-create-a-shape-using-a-streamgeometry.md)  
+ [使用 PathGeometry 建立圖案](how-to-create-a-shape-by-using-a-pathgeometry.md)  
+ [使用 StreamGeometry 建立圖案](how-to-create-a-shape-using-a-streamgeometry.md)  
  [建立二次方貝茲曲線](how-to-create-a-quadratic-bezier-curve.md)  
  [建立橢圓形弧線](how-to-create-an-elliptical-arc.md)  
  [在 PathGeometry 內建立多個子路徑](how-to-create-multiple-subpaths-within-a-pathgeometry.md)  

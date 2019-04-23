@@ -20,10 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096260"
 ---
 # <a name="common-type-system"></a>一般類型系統
@@ -41,11 +41,11 @@ ms.locfileid: "59096260"
   
 -   [.NET 中的類型](#types_in_the_net_framework)  
   
--   [類型定義](#type_definitions)  
+-   [型別定義](#type_definitions)  
   
 -   [型別成員](#type_members)  
   
--   [型別成員的特性](#characteristics_of_type_members)  
+-   [類型成員的特性](#characteristics_of_type_members)  
   
 <a name="types_in_the_net_framework"></a>   
 ## <a name="types-in-net"></a>.NET 中的類型  
@@ -239,7 +239,7 @@ ms.locfileid: "59096260"
   
 -   [事件](#Events)  
   
--   [巢狀型別](#NestedTypes)  
+-   [巢狀類型](#NestedTypes)  
   
 <a name="Fields"></a>   
 ### <a name="fields"></a>欄位  
@@ -319,5 +319,5 @@ ms.locfileid: "59096260"
 ## <a name="see-also"></a>另請參閱
 
 - [.NET API 瀏覽器](/dotnet/api)
-- [Common Language Runtime](../../../docs/standard/clr.md)
+- [通用語言執行平台](../../../docs/standard/clr.md)
 - [.NET 中的類型轉換](../../../docs/standard/base-types/type-conversion.md)

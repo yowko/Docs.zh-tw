@@ -3,10 +3,10 @@ title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
 ms.openlocfilehash: 9353b143a328e0fb183b7870332462a0a2c91b10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59094498"
 ---
 # <a name="facet"></a>facet
@@ -22,8 +22,8 @@ A *facet*用以基本型別屬性定義中加入詳細資料。 A[屬性](../../
 |`Collation`|在執行比較和排序屬性值的作業時，指定要使用的定序順序 (或排序順序)。|`String`|  
 |`ConcurrencyMode`|表示屬性值應用於開放式並行存取檢查。|所有基底類型屬性|  
 |`Default`|執行個體化時如果沒有提供值，請指定屬性的預設值。|所有基底類型屬性|  
-|`FixedLength`|指定屬性值的長度是否可以變更。|`Binary`, `String`|  
-|`MaxLength`|指定屬性值的最大長度。|`Binary`, `String`|  
+|`FixedLength`|指定屬性值的長度是否可以變更。|`Binary`、 `String`|  
+|`MaxLength`|指定屬性值的最大長度。|`Binary`、 `String`|  
 |`Nullable`|指定屬性是否可以有 null 值。|所有基底類型屬性|  
 |`Precision`|針對型別 `Decimal` 的屬性，指定屬性值可以擁有的位數。 針對型別 `Time`、`DateTime` 和 `DateTimeOffset` 的屬性，指定屬性值秒數之小數點後的位數。|`DateTime`, `DateTimeOffset`, `Decimal`, `Time`,|  
 |`Scale`|指定屬性值小數點右邊的位數。|Decimal|  

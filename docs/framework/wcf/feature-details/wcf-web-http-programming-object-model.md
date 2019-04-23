@@ -3,10 +3,10 @@ title: WCF Web HTTP 程式設計物件模型
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
 ms.openlocfilehash: f1772220ed5f425ec603fd8927f4617446d106eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096006"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP 程式設計物件模型
@@ -74,7 +74,7 @@ WCF WEB HTTP 程式設計模型可讓開發人員公開透過基本 HTTP 要求�
  <xref:System.UriTemplateTable> 類別表示一組相關聯的 <xref:System.UriTemplate> 物件，而這限制為開發人員所選擇的物件。 它可讓您比對候選的統一資源識別元 (URI) 和該組物件中的範本，並擷取與相符範本關聯的資料。 <xref:System.UriTemplateTable> 為內部使用 WCF WEB HTTP 程式設計模型來將特定 Uri 群組對應至服務作業。  
   
 ## <a name="webservicehost"></a>WebServiceHost  
- <xref:System.ServiceModel.Web.WebServiceHost> 擴充<xref:System.ServiceModel.ServiceHost>輕鬆裝載非 SOAP Web 樣式服務。 如果 <xref:System.ServiceModel.Web.WebServiceHost> 在服務描述中找不到端點，則會自動在服務的基底位址中建立預設端點。 建立預設 HTTP 端點時，<xref:System.ServiceModel.Web.WebServiceHost> 也會停用 HTTP 說明網頁和 Web 服務描述語言 (WSDL) 的 GET 功能，使中繼資料端點不會干擾預設 HTTP 端點。 <xref:System.ServiceModel.Web.WebServiceHost> 也可確保所使用的所有端點<xref:System.ServiceModel.WebHttpBinding>有必要<xref:System.ServiceModel.Description.WebHttpBehavior>附加。 最後，<xref:System.ServiceModel.Web.WebServiceHost> 會自動設定端點的繫結，以在安全虛擬目錄中使用時處理相關聯的網際網路資訊服務 (IIS) 安全性設定。  
+ <xref:System.ServiceModel.Web.WebServiceHost> 會擴充 <xref:System.ServiceModel.ServiceHost>，讓它可更輕鬆裝載非 SOAP Web 式服務。 如果 <xref:System.ServiceModel.Web.WebServiceHost> 在服務描述中找不到端點，則會自動在服務的基底位址中建立預設端點。 建立預設 HTTP 端點時，<xref:System.ServiceModel.Web.WebServiceHost> 也會停用 HTTP 說明網頁和 Web 服務描述語言 (WSDL) 的 GET 功能，使中繼資料端點不會干擾預設 HTTP 端點。 <xref:System.ServiceModel.Web.WebServiceHost> 也會確保所有使用 <xref:System.ServiceModel.WebHttpBinding> 的端點都已附加必要的 <xref:System.ServiceModel.Description.WebHttpBehavior>。 最後，<xref:System.ServiceModel.Web.WebServiceHost> 會自動設定端點的繫結，以在安全虛擬目錄中使用時處理相關聯的網際網路資訊服務 (IIS) 安全性設定。  
   
 ## <a name="webservicehostfactory"></a>WebServiceHostFactory  
  當服務是在網際網路資訊服務 (IIS) 或 Windows Process Activation Service (WAS) 下裝載時，可以使用 <xref:System.ServiceModel.Activation.WebServiceHostFactory> 類別以動態建立 <xref:System.ServiceModel.Web.WebServiceHost>。 和主應用程式在其中具現化 <xref:System.ServiceModel.Web.WebServiceHost> 的自我裝載服務不同，透過 IIS 或 WAS 裝載的服務會使用這個類別來建立用於服務的 <xref:System.ServiceModel.Web.WebServiceHost>。 接收到服務的傳入要求時，就會呼叫 <xref:System.ServiceModel.Activation.WebServiceHostFactory.CreateServiceHost%28System.Type%2CSystem.Uri%5B%5D%29> 方法。  
@@ -83,7 +83,7 @@ WCF WEB HTTP 程式設計模型可讓開發人員公開透過基本 HTTP 要求�
  <xref:System.ServiceModel.Description.WebHttpBehavior> 類別會對服務模型層中的 Web 式服務支援，提供必要的格式器、作業選取器等等。 這個動作會實作為端點行為 (用於與 <xref:System.ServiceModel.WebHttpBinding> 搭配使用)，並可對每個端點指定格式器和作業選取器，因此可讓相同的服務實作可同時公開 SOAP 和 POX 端點。  
   
 ### <a name="extending-webhttpbehavior"></a>擴充 WebHttpBehavior  
- <xref:System.ServiceModel.Description.WebHttpBehavior> 是可延伸使用的一些虛擬方法： <xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>， <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>， <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>， <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>，和<xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>。 開發人員可以從 <xref:System.ServiceModel.Description.WebHttpBehavior> 衍生類別，並覆寫這些方法以自訂預設行為。  
+ 使用一些虛擬方法即可擴充 <xref:System.ServiceModel.Description.WebHttpBehavior>：<xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>、<xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>、<xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>、<xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29> 和 <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>。 開發人員可以從 <xref:System.ServiceModel.Description.WebHttpBehavior> 衍生類別，並覆寫這些方法以自訂預設行為。  
   
  <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> 是擴充 <xref:System.ServiceModel.Description.WebHttpBehavior> 的範例。 <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> 可啟用 Windows Communication Foundation (WCF) 端點從瀏覽器型 ASP.NET AJAX 用戶端接收 HTTP 要求。 [使用 HTTP POST 的 AJAX 服務](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)舉例說明使用這個擴充點。  
   

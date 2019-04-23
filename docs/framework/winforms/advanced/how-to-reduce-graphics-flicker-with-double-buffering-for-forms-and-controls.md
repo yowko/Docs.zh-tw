@@ -9,10 +9,10 @@ helpviewer_keywords:
 - graphics [Windows Forms], reducing double-buffered flicker
 ms.assetid: 91083d3a-653f-4f15-a467-0f37b2aa39d6
 ms.openlocfilehash: ef05b72b33d3f28d1811389dfae65554a1567d43
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096949"
 ---
 # <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a>HOW TO：使用表單和控制項的雙重緩衝以減少圖形閃爍
@@ -39,4 +39,4 @@ ms.locfileid: "59096949"
 - <xref:System.Windows.Forms.Control.DoubleBuffered%2A>
 - <xref:System.Windows.Forms.Control.SetStyle%2A>
 - [雙重緩衝的圖形](double-buffered-graphics.md)
-- [Windows Form 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)

@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 57adeab5-f06a-44b2-916b-0e177cf0f4a6
 ms.openlocfilehash: cfe3350ac42d1e0e837b79f25753f62dc2051dd2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096247"
 ---
 # <a name="workflowunhandledexception"></a>\<workflowUnhandledException>
@@ -38,7 +38,7 @@ ms.locfileid: "59096247"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|action|字串，可指定發生未處理的例外狀況時要採取的動作。 此屬性是類型 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction>|  
+|action|字串，可指定發生未處理的例外狀況時要採取的動作。 此屬性的型別為 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction>。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  

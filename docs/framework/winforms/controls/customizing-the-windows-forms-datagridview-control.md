@@ -6,10 +6,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], customization
 ms.assetid: 01ea5d4c-a736-4596-b0e9-a67a1b86e15f
 ms.openlocfilehash: ab8d1f07c608aca4f14f5e73860f8c3e263a4610
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091378"
 ---
 # <a name="customizing-the-windows-forms-datagridview-control"></a>自訂 Windows Form DataGridView 控制項
@@ -18,19 +18,19 @@ ms.locfileid: "59091378"
  若要繪製的儲存格和資料列自行，您可以處理各種`DataGridView`繪製事件。 若要修改現有的功能，或提供新功能，您可以建立自己的型別衍生自現有`DataGridViewCell`， `DataGridViewColumn`，和`DataGridViewRow`型別。 您也可以建立顯示您選擇的儲存格處於編輯模式的控制項的衍生型別，以提供新的編輯功能。  
   
 ## <a name="in-this-section"></a>本節內容  
- [HOW TO：自訂 Windows Forms DataGridView 控制項的儲存格外觀](customize-the-appearance-of-cells-in-the-datagrid.md)  
+ [如何：自訂 Windows Form DataGridView 控制項中的儲存格的外觀](customize-the-appearance-of-cells-in-the-datagrid.md)  
  描述如何處理<xref:System.Windows.Forms.DataGridView.CellPainting>手動事件，以繪製儲存格。  
   
- [HOW TO：自訂 Windows Forms DataGridView 控制項的資料列外觀](customize-the-appearance-of-rows-in-the-datagrid.md)  
+ [如何：自訂 Windows Form DataGridView 控制項中的資料列的外觀](customize-the-appearance-of-rows-in-the-datagrid.md)  
  描述如何處理<xref:System.Windows.Forms.DataGridView.RowPrePaint>和<xref:System.Windows.Forms.DataGridView.RowPostPaint>事件以繪製自訂的漸層背景的資料列和內容，跨越多個資料行。  
   
- [HOW TO：擴充 Windows Forms DataGridView 控制項之儲存格和資料行的行為和外觀，以自訂儲存格和資料行](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
+ [如何：自訂儲存格和 Windows Form DataGridView 控制項中的資料行，藉由擴充其行為和外觀](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
  描述如何建立自訂的型別衍生自`DataGridViewCell`和`DataGridViewColumn`才能將滑鼠指標停留在其上時，反白顯示的資料格。  
   
- [HOW TO：停用 Windows Forms DataGridView 控制項按鈕資料行的按鈕](disable-buttons-in-a-button-column-in-the-datagrid.md)  
+ [如何：停用在 Windows Form DataGridView 控制項按鈕資料行中的按鈕](disable-buttons-in-a-button-column-in-the-datagrid.md)  
  描述如何建立自訂的型別衍生自<xref:System.Windows.Forms.DataGridViewButtonCell>和<xref:System.Windows.Forms.DataGridViewButtonColumn>若要在按鈕資料行中顯示已停用的按鈕。  
   
- [HOW TO：Windows Forms DataGridView 儲存格的主控制項](how-to-host-controls-in-windows-forms-datagridview-cells.md)  
+ [如何：在 Windows Forms DataGridView 儲存格中的主控制項](how-to-host-controls-in-windows-forms-datagridview-cells.md)  
  描述如何實作`IDataGridViewEditingControl`介面，並建立自訂的型別衍生自`DataGridViewCell`並`DataGridViewColumn`以顯示<xref:System.Windows.Forms.DateTimePicker>控制當儲存格處於編輯模式。  
   
 ## <a name="reference"></a>參考資料  
@@ -50,10 +50,10 @@ ms.locfileid: "59091378"
  提供參考文件<xref:System.Windows.Forms.IDataGridViewEditingControl>介面。  
   
 ## <a name="related-sections"></a>相關章節  
- [Windows Form DataGridView 控制項中的基本格式化和樣式設定](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView 控制項中的基本格式化和樣式設定](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
  提供主題描述如何修改控制項基本外觀和儲存格資料顯示格式。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [DataGridView 控制項](datagridview-control-windows-forms.md)
-- [Windows Form DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)

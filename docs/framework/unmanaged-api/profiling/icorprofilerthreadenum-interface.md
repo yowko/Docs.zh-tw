@@ -17,10 +17,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 47359cd71460732100364f07e0dc5efacc44c760
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092041"
 ---
 # <a name="icorprofilerthreadenum-interface"></a>ICorProfilerThreadEnum 介面
@@ -32,7 +32,7 @@ ms.locfileid: "59092041"
 |------------|-----------------|  
 |[Clone 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-clone-method.md)|取得這個 `ICorProfilerThreadEnum` 介面複本的介面指標。|  
 |[GetCount 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-getcount-method.md)|取得應用程式所使用的執行緒數目。|  
-|[下一個方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-next-method.md)|從循序執行緒集合中取得指定的連續執行緒數目，從序列中列舉值的目前位置開始。|  
+|[Next 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-next-method.md)|從循序執行緒集合中取得指定的連續執行緒數目，從序列中列舉值的目前位置開始。|  
 |[Reset 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-reset-method.md)|將列舉值的資料指標移至序列的開始位置。|  
 |[Skip 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-skip-method.md)|將列舉值的資料指標從其目前位置前移，以略過指定數目的項目。|  
   
@@ -46,7 +46,7 @@ ms.locfileid: "59092041"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
 ms.openlocfilehash: 83643d8acea706bad439683702e4228d240b97bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59090298"
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>GridView 資料行行首樣式和範本概觀
@@ -37,6 +37,6 @@ ms.locfileid: "59090298"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO 主題](listview-how-to-topics.md)
+- [HOW-TO 主題](listview-how-to-topics.md)
 - [ListView 概觀](listview-overview.md)
 - [GridView 概觀](gridview-overview.md)

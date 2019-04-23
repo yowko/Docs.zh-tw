@@ -3,10 +3,10 @@ title: HOW TO：產生物件模型作為外部檔案
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
 ms.openlocfilehash: 2e439cd6628daa5b574be2049393dc2964896679
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095570"
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>HOW TO：產生物件模型作為外部檔案
@@ -52,4 +52,4 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 
 - [建立物件模型](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [HOW TO：以 Visual Basic 或 C# 產生物件模型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [如何：以 Visual Basic 或 C# 產生物件模型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)

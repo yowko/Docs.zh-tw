@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
 ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092276"
 ---
 # <a name="administration-and-diagnostics"></a>管理與診斷
@@ -41,12 +41,12 @@ Windows Communication Foundation (WCF) 提供一組豐富的功能，可協助�
   
 ## <a name="see-also"></a>另請參閱
 
-- [設定您的應用程式](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
+- [設定應用程式](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
 - [部署服務](../../../../docs/framework/wcf/diagnostics/deploying-services.md)
 - [例外狀況參考](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)
 - [事件記錄](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
 - [訊息記錄](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [組態編輯器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
+- [設定編輯器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
 - [服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [ServiceModel 註冊工具](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)
 - [追蹤](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
