@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7dfbba3cef8afadfc6e12e53ea328c4fc7165ca0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206755"
 ---
-# <a name="corprfgcrootkind-enumeration"></a><span data-ttu-id="0a2de-102">COR_PRF_GC_ROOT_KIND 列舉</span><span class="sxs-lookup"><span data-stu-id="0a2de-102">COR_PRF_GC_ROOT_KIND Enumeration</span></span>
-<span data-ttu-id="0a2de-103">表示，由記憶體回收根目錄的種類[ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)回呼。</span><span class="sxs-lookup"><span data-stu-id="0a2de-103">Indicates the kind of garbage collection root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.</span></span>  
+# <a name="corprfgcrootkind-enumeration"></a><span data-ttu-id="8cea5-102">COR_PRF_GC_ROOT_KIND 列舉</span><span class="sxs-lookup"><span data-stu-id="8cea5-102">COR_PRF_GC_ROOT_KIND Enumeration</span></span>
+<span data-ttu-id="8cea5-103">表示，由記憶體回收根目錄的種類[ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)回呼。</span><span class="sxs-lookup"><span data-stu-id="8cea5-103">Indicates the kind of garbage collection root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0a2de-104">語法</span><span class="sxs-lookup"><span data-stu-id="0a2de-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8cea5-104">語法</span><span class="sxs-lookup"><span data-stu-id="8cea5-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -37,24 +37,24 @@ typedef enum {
 } COR_PRF_GC_ROOT_KIND;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="0a2de-105">成員</span><span class="sxs-lookup"><span data-stu-id="0a2de-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="8cea5-105">成員</span><span class="sxs-lookup"><span data-stu-id="8cea5-105">Members</span></span>  
   
-|<span data-ttu-id="0a2de-106">成員</span><span class="sxs-lookup"><span data-stu-id="0a2de-106">Member</span></span>|<span data-ttu-id="0a2de-107">描述</span><span class="sxs-lookup"><span data-stu-id="0a2de-107">Description</span></span>|  
+|<span data-ttu-id="8cea5-106">成員</span><span class="sxs-lookup"><span data-stu-id="8cea5-106">Member</span></span>|<span data-ttu-id="8cea5-107">描述</span><span class="sxs-lookup"><span data-stu-id="8cea5-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_STACK`|<span data-ttu-id="0a2de-108">根目錄是在堆疊上的變數。</span><span class="sxs-lookup"><span data-stu-id="0a2de-108">The root is a variable on the stack.</span></span>|  
-|`COR_PRF_GC_ROOT_FINALIZER`|<span data-ttu-id="0a2de-109">根是完成項佇列中的項目。</span><span class="sxs-lookup"><span data-stu-id="0a2de-109">The root is an entry in the finalizer queue.</span></span>|  
-|`COR_PRF_GC_ROOT_HANDLE`|<span data-ttu-id="0a2de-110">根是記憶體回收控制代碼。</span><span class="sxs-lookup"><span data-stu-id="0a2de-110">The root is a garbage collection handle.</span></span>|  
-|`COR_PRF_GC_ROOT_OTHER`|<span data-ttu-id="0a2de-111">未指定的根類型。</span><span class="sxs-lookup"><span data-stu-id="0a2de-111">The kind of root is unspecified.</span></span>|  
+|`COR_PRF_GC_ROOT_STACK`|<span data-ttu-id="8cea5-108">根目錄是在堆疊上的變數。</span><span class="sxs-lookup"><span data-stu-id="8cea5-108">The root is a variable on the stack.</span></span>|  
+|`COR_PRF_GC_ROOT_FINALIZER`|<span data-ttu-id="8cea5-109">根是完成項佇列中的項目。</span><span class="sxs-lookup"><span data-stu-id="8cea5-109">The root is an entry in the finalizer queue.</span></span>|  
+|`COR_PRF_GC_ROOT_HANDLE`|<span data-ttu-id="8cea5-110">根是記憶體回收控制代碼。</span><span class="sxs-lookup"><span data-stu-id="8cea5-110">The root is a garbage collection handle.</span></span>|  
+|`COR_PRF_GC_ROOT_OTHER`|<span data-ttu-id="8cea5-111">未指定的根類型。</span><span class="sxs-lookup"><span data-stu-id="8cea5-111">The kind of root is unspecified.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0a2de-112">需求</span><span class="sxs-lookup"><span data-stu-id="0a2de-112">Requirements</span></span>  
- <span data-ttu-id="0a2de-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0a2de-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8cea5-112">需求</span><span class="sxs-lookup"><span data-stu-id="8cea5-112">Requirements</span></span>  
+ <span data-ttu-id="8cea5-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8cea5-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0a2de-114">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0a2de-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="8cea5-114">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8cea5-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="0a2de-115">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0a2de-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8cea5-115">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8cea5-115">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="0a2de-116">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="0a2de-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="8cea5-116">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8cea5-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a2de-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0a2de-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8cea5-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8cea5-117">See also</span></span>
 
-- [<span data-ttu-id="0a2de-118">分析列舉</span><span class="sxs-lookup"><span data-stu-id="0a2de-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="8cea5-118">分析列舉</span><span class="sxs-lookup"><span data-stu-id="8cea5-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

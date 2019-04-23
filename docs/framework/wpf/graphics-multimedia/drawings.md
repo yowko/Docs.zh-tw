@@ -14,23 +14,23 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
 ms.openlocfilehash: 975fafebe255d5ff4848fde2c0b0ff08b68d4f7b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206404"
 ---
-# <a name="drawings"></a><span data-ttu-id="548d6-102">繪圖</span><span class="sxs-lookup"><span data-stu-id="548d6-102">Drawings</span></span>
-<xref:System.Windows.Media.Drawing> <span data-ttu-id="548d6-103">物件用來有效率地繪製圖形、 影像或文字。</span><span class="sxs-lookup"><span data-stu-id="548d6-103">objects are used to efficiently draw shapes, images, or text.</span></span> <span data-ttu-id="548d6-104">使用繪製時，會使用繪圖<xref:System.Windows.Media.DrawingBrush>或程式設計與<xref:System.Windows.Media.Visual>物件。</span><span class="sxs-lookup"><span data-stu-id="548d6-104">Drawings are used when painting with a <xref:System.Windows.Media.DrawingBrush> or programming with <xref:System.Windows.Media.Visual> objects.</span></span>  
+# <a name="drawings"></a><span data-ttu-id="0ab83-102">繪圖</span><span class="sxs-lookup"><span data-stu-id="0ab83-102">Drawings</span></span>
+<span data-ttu-id="0ab83-103"><xref:System.Windows.Media.Drawing> 物件用來有效率地繪製圖形、 影像或文字。</span><span class="sxs-lookup"><span data-stu-id="0ab83-103"><xref:System.Windows.Media.Drawing> objects are used to efficiently draw shapes, images, or text.</span></span> <span data-ttu-id="0ab83-104">使用繪製時，會使用繪圖<xref:System.Windows.Media.DrawingBrush>或程式設計與<xref:System.Windows.Media.Visual>物件。</span><span class="sxs-lookup"><span data-stu-id="0ab83-104">Drawings are used when painting with a <xref:System.Windows.Media.DrawingBrush> or programming with <xref:System.Windows.Media.Visual> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="548d6-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="548d6-105">In This Section</span></span>  
- [<span data-ttu-id="548d6-106">繪圖物件概觀</span><span class="sxs-lookup"><span data-stu-id="548d6-106">Drawing Objects Overview</span></span>](drawing-objects-overview.md)  
-  [<span data-ttu-id="548d6-107">HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="548d6-107">How-to Topics</span></span>](drawings-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="0ab83-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="0ab83-105">In This Section</span></span>  
+ [<span data-ttu-id="0ab83-106">繪圖物件概觀</span><span class="sxs-lookup"><span data-stu-id="0ab83-106">Drawing Objects Overview</span></span>](drawing-objects-overview.md)  
+  [<span data-ttu-id="0ab83-107">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="0ab83-107">How-to Topics</span></span>](drawings-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="548d6-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="548d6-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0ab83-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0ab83-108">See also</span></span>
 
 - <xref:System.Windows.Media.Drawing>
-- [<span data-ttu-id="548d6-109">2D 圖形和影像處理</span><span class="sxs-lookup"><span data-stu-id="548d6-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="548d6-110">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="548d6-110">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="548d6-111">WPF 中圖案和基本繪圖概觀</span><span class="sxs-lookup"><span data-stu-id="548d6-111">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)
-- [<span data-ttu-id="548d6-112">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="548d6-112">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="0ab83-109">2D 圖形和影像處理</span><span class="sxs-lookup"><span data-stu-id="0ab83-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="0ab83-110">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="0ab83-110">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="0ab83-111">WPF 中圖案和基本繪圖概觀</span><span class="sxs-lookup"><span data-stu-id="0ab83-111">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)
+- [<span data-ttu-id="0ab83-112">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="0ab83-112">Graphics and Multimedia</span></span>](index.md)

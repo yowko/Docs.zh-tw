@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 784e58e0c5c2329705671580d53763f2ac30f0b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59201347"
 ---
-# <a name="importfileex2-method"></a><span data-ttu-id="55f0a-102">ImportFileEx2 方法</span><span class="sxs-lookup"><span data-stu-id="55f0a-102">ImportFileEx2 Method</span></span>
-<span data-ttu-id="55f0a-103">匯入組件和未繫結的模組。</span><span class="sxs-lookup"><span data-stu-id="55f0a-103">Imports assemblies and unbound modules.</span></span> <span data-ttu-id="55f0a-104">這個方法就像是[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)，但即使正在匯入的檔案不存在磁碟上的運作方式。</span><span class="sxs-lookup"><span data-stu-id="55f0a-104">This method is like [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), but works even if the file being imported does not exist on disk.</span></span>  
+# <a name="importfileex2-method"></a><span data-ttu-id="3d157-102">ImportFileEx2 方法</span><span class="sxs-lookup"><span data-stu-id="3d157-102">ImportFileEx2 Method</span></span>
+<span data-ttu-id="3d157-103">匯入組件和未繫結的模組。</span><span class="sxs-lookup"><span data-stu-id="3d157-103">Imports assemblies and unbound modules.</span></span> <span data-ttu-id="3d157-104">這個方法就像是[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)，但即使正在匯入的檔案不存在磁碟上的運作方式。</span><span class="sxs-lookup"><span data-stu-id="3d157-104">This method is like [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), but works even if the file being imported does not exist on disk.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="55f0a-105">語法</span><span class="sxs-lookup"><span data-stu-id="55f0a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3d157-105">語法</span><span class="sxs-lookup"><span data-stu-id="3d157-105">Syntax</span></span>  
   
 ```  
 HRESULT ImportFileEx2(  
@@ -41,39 +41,39 @@ HRESULT ImportFileEx2(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="55f0a-106">參數</span><span class="sxs-lookup"><span data-stu-id="55f0a-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3d157-106">參數</span><span class="sxs-lookup"><span data-stu-id="3d157-106">Parameters</span></span>  
  `pszFilename`  
- <span data-ttu-id="55f0a-107">要匯入的檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="55f0a-107">Name of file to be imported.</span></span>  
+ <span data-ttu-id="3d157-107">要匯入的檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="3d157-107">Name of file to be imported.</span></span>  
   
  `pszTargetName`  
- <span data-ttu-id="55f0a-108">選擇性的目標檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="55f0a-108">Optional name of target file.</span></span>  
+ <span data-ttu-id="3d157-108">選擇性的目標檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="3d157-108">Optional name of target file.</span></span>  
   
  `pAssemblyScopeIn`  
- <span data-ttu-id="55f0a-109">選擇性的匯入範圍[IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="55f0a-109">Optional import scope [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface.</span></span>  
+ <span data-ttu-id="3d157-109">選擇性的匯入範圍[IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="3d157-109">Optional import scope [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface.</span></span>  
   
  `fSmartImport`  
- <span data-ttu-id="55f0a-110">如果為 TRUE，會使用 ImportTypes，否則匯入必須手動執行。</span><span class="sxs-lookup"><span data-stu-id="55f0a-110">If TRUE, ImportTypes is used, otherwise importing must be performed manually.</span></span>  
+ <span data-ttu-id="3d157-110">如果為 TRUE，會使用 ImportTypes，否則匯入必須手動執行。</span><span class="sxs-lookup"><span data-stu-id="3d157-110">If TRUE, ImportTypes is used, otherwise importing must be performed manually.</span></span>  
   
  `dwOpenFlags`  
- <span data-ttu-id="55f0a-111">要傳遞至旗標[OpenScope 方法](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)。</span><span class="sxs-lookup"><span data-stu-id="55f0a-111">Flags to be passed along to [OpenScope Method](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).</span></span>  
+ <span data-ttu-id="3d157-111">要傳遞至旗標[OpenScope 方法](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)。</span><span class="sxs-lookup"><span data-stu-id="3d157-111">Flags to be passed along to [OpenScope Method](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).</span></span>  
   
  `pImportToken`  
- <span data-ttu-id="55f0a-112">接收的組件或檔案的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="55f0a-112">Receives unique ID for the assembly or file.</span></span>  
+ <span data-ttu-id="3d157-112">接收的組件或檔案的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="3d157-112">Receives unique ID for the assembly or file.</span></span>  
   
  `ppAssemblyScope`  
- <span data-ttu-id="55f0a-113">接收的組件匯入範圍[IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="55f0a-113">Receives assembly import scope [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface.</span></span> <span data-ttu-id="55f0a-114">如果檔案不是組件時，就可以是 NULL。</span><span class="sxs-lookup"><span data-stu-id="55f0a-114">Can be NULL if the file is not an assembly.</span></span>  
+ <span data-ttu-id="3d157-113">接收的組件匯入範圍[IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="3d157-113">Receives assembly import scope [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface.</span></span> <span data-ttu-id="3d157-114">如果檔案不是組件時，就可以是 NULL。</span><span class="sxs-lookup"><span data-stu-id="3d157-114">Can be NULL if the file is not an assembly.</span></span>  
   
  `pdwCountOfScopes`  
- <span data-ttu-id="55f0a-115">接收檔案和/或匯入的範圍的數目。</span><span class="sxs-lookup"><span data-stu-id="55f0a-115">Receives the number of files and/or scopes imported.</span></span>  
+ <span data-ttu-id="3d157-115">接收檔案和/或匯入的範圍的數目。</span><span class="sxs-lookup"><span data-stu-id="3d157-115">Receives the number of files and/or scopes imported.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="55f0a-116">傳回值</span><span class="sxs-lookup"><span data-stu-id="55f0a-116">Return Value</span></span>  
- <span data-ttu-id="55f0a-117">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="55f0a-117">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3d157-116">傳回值</span><span class="sxs-lookup"><span data-stu-id="3d157-116">Return Value</span></span>  
+ <span data-ttu-id="3d157-117">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="3d157-117">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="55f0a-118">需求</span><span class="sxs-lookup"><span data-stu-id="55f0a-118">Requirements</span></span>  
- <span data-ttu-id="55f0a-119">需要 alink.h。</span><span class="sxs-lookup"><span data-stu-id="55f0a-119">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3d157-118">需求</span><span class="sxs-lookup"><span data-stu-id="3d157-118">Requirements</span></span>  
+ <span data-ttu-id="3d157-119">需要 alink.h。</span><span class="sxs-lookup"><span data-stu-id="3d157-119">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="55f0a-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="55f0a-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3d157-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3d157-120">See also</span></span>
 
-- [<span data-ttu-id="55f0a-121">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="55f0a-121">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="55f0a-122">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="55f0a-122">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="55f0a-123">ALink API</span><span class="sxs-lookup"><span data-stu-id="55f0a-123">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="3d157-121">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="3d157-121">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="3d157-122">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="3d157-122">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="3d157-123">ALink API</span><span class="sxs-lookup"><span data-stu-id="3d157-123">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

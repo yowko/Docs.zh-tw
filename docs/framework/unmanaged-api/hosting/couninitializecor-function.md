@@ -18,24 +18,24 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0845c4d493cb3c750931a0ae2ad92b628a255c0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202712"
 ---
-# <a name="couninitializecor-function"></a><span data-ttu-id="59e92-102">CoUninitializeCor 函式</span><span class="sxs-lookup"><span data-stu-id="59e92-102">CoUninitializeCor Function</span></span>
-`CoUninitializeCor` <span data-ttu-id="59e92-103">已過時。</span><span class="sxs-lookup"><span data-stu-id="59e92-103">is obsolete.</span></span>  
+# <a name="couninitializecor-function"></a><span data-ttu-id="6d059-102">CoUninitializeCor 函式</span><span class="sxs-lookup"><span data-stu-id="6d059-102">CoUninitializeCor Function</span></span>
+<span data-ttu-id="6d059-103">`CoUninitializeCor` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="6d059-103">`CoUninitializeCor` is obsolete.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="59e92-104">語法</span><span class="sxs-lookup"><span data-stu-id="59e92-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6d059-104">語法</span><span class="sxs-lookup"><span data-stu-id="6d059-104">Syntax</span></span>  
   
 ```  
 STDAPI_(void) CoUninitializeCor(void);  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="59e92-105">備註</span><span class="sxs-lookup"><span data-stu-id="59e92-105">Remarks</span></span>  
- <span data-ttu-id="59e92-106">Common language runtime 無法從處理序卸載。</span><span class="sxs-lookup"><span data-stu-id="59e92-106">The common language runtime cannot be unloaded from a process.</span></span> <span data-ttu-id="59e92-107">若要完全移除執行中處理序的執行階段，您必須關閉該程序。</span><span class="sxs-lookup"><span data-stu-id="59e92-107">To completely remove the runtime from a running process, you must shut down that process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6d059-105">備註</span><span class="sxs-lookup"><span data-stu-id="6d059-105">Remarks</span></span>  
+ <span data-ttu-id="6d059-106">Common language runtime 無法從處理序卸載。</span><span class="sxs-lookup"><span data-stu-id="6d059-106">The common language runtime cannot be unloaded from a process.</span></span> <span data-ttu-id="6d059-107">若要完全移除執行中處理序的執行階段，您必須關閉該程序。</span><span class="sxs-lookup"><span data-stu-id="6d059-107">To completely remove the runtime from a running process, you must shut down that process.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="59e92-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="59e92-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6d059-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6d059-108">See also</span></span>
 
-- [<span data-ttu-id="59e92-109">中繼資料全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="59e92-109">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [<span data-ttu-id="6d059-109">中繼資料全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="6d059-109">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

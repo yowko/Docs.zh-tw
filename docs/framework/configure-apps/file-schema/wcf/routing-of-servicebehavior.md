@@ -3,22 +3,22 @@ title: <routing> 的 <serviceBehavior>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
 ms.openlocfilehash: b7a9be18395ef8878900d754b5aa5afdeee0cff8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202504"
 ---
-# <a name="routing-of-servicebehavior"></a><span data-ttu-id="600b1-102">\<路由 > 的\<v ></span><span class="sxs-lookup"><span data-stu-id="600b1-102">\<routing> of \<serviceBehavior></span></span>
-<span data-ttu-id="600b1-103">提供於執行階段存取路由服務的功能，可用來動態修改路由組態。</span><span class="sxs-lookup"><span data-stu-id="600b1-103">Provides run-time access to the routing service to allow dynamic modification of the routing configuration.</span></span>  
+# <a name="routing-of-servicebehavior"></a><span data-ttu-id="175fb-102">\<路由 > 的\<v ></span><span class="sxs-lookup"><span data-stu-id="175fb-102">\<routing> of \<serviceBehavior></span></span>
+<span data-ttu-id="175fb-103">提供於執行階段存取路由服務的功能，可用來動態修改路由組態。</span><span class="sxs-lookup"><span data-stu-id="175fb-103">Provides run-time access to the routing service to allow dynamic modification of the routing configuration.</span></span>  
   
- <span data-ttu-id="600b1-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="600b1-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="600b1-105">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="600b1-105">\<behaviors></span></span>  
-<span data-ttu-id="600b1-106">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="600b1-106">\<serviceBehaviors></span></span>  
-<span data-ttu-id="600b1-107">\<behavior></span><span class="sxs-lookup"><span data-stu-id="600b1-107">\<behavior></span></span>  
-<span data-ttu-id="600b1-108">\<路由 ></span><span class="sxs-lookup"><span data-stu-id="600b1-108">\<routing></span></span>  
+ <span data-ttu-id="175fb-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="175fb-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="175fb-105">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="175fb-105">\<behaviors></span></span>  
+<span data-ttu-id="175fb-106">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="175fb-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="175fb-107">\<behavior></span><span class="sxs-lookup"><span data-stu-id="175fb-107">\<behavior></span></span>  
+<span data-ttu-id="175fb-108">\<路由 ></span><span class="sxs-lookup"><span data-stu-id="175fb-108">\<routing></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="600b1-109">語法</span><span class="sxs-lookup"><span data-stu-id="600b1-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="175fb-109">語法</span><span class="sxs-lookup"><span data-stu-id="175fb-109">Syntax</span></span>  
   
 ```xml  
 <behaviors>
@@ -32,27 +32,27 @@ ms.locfileid: "59202504"
 </behaviors>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="600b1-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="600b1-110">Attributes and Elements</span></span>  
- <span data-ttu-id="600b1-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="600b1-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="175fb-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="175fb-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="175fb-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="175fb-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="600b1-112">屬性</span><span class="sxs-lookup"><span data-stu-id="600b1-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="175fb-112">屬性</span><span class="sxs-lookup"><span data-stu-id="175fb-112">Attributes</span></span>  
   
-|<span data-ttu-id="600b1-113">屬性</span><span class="sxs-lookup"><span data-stu-id="600b1-113">Attribute</span></span>|<span data-ttu-id="600b1-114">描述</span><span class="sxs-lookup"><span data-stu-id="600b1-114">Description</span></span>|  
+|<span data-ttu-id="175fb-113">屬性</span><span class="sxs-lookup"><span data-stu-id="175fb-113">Attribute</span></span>|<span data-ttu-id="175fb-114">描述</span><span class="sxs-lookup"><span data-stu-id="175fb-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="600b1-115">filterTable</span><span class="sxs-lookup"><span data-stu-id="600b1-115">filterTable</span></span>|<span data-ttu-id="600b1-116">字串，指定路由表的名稱，該路由表包含將由路由服務評估的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="600b1-116">A string that specifies the name of the routing table that contains filters to be evaluated by the routing service.</span></span> <span data-ttu-id="600b1-117">此值必須符合`name`的屬性[ \<filterTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertable.md)中的項目[ \<filterTables >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md)一節。</span><span class="sxs-lookup"><span data-stu-id="600b1-117">This value must match the `name` attribute of a [\<filterTable>](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertable.md) element in the [\<filterTables>](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) section.</span></span>|  
-|<span data-ttu-id="600b1-118">routeOnHeaderOnly</span><span class="sxs-lookup"><span data-stu-id="600b1-118">routeOnHeaderOnly</span></span>|<span data-ttu-id="600b1-119">布林值，指定篩選器會檢查訊息本文和標頭，或者只檢查標頭。</span><span class="sxs-lookup"><span data-stu-id="600b1-119">A Boolean value that specifies whether the filter will examine both the message body and the header, or the header only.</span></span> <span data-ttu-id="600b1-120">預設為 `true`。</span><span class="sxs-lookup"><span data-stu-id="600b1-120">The default is `true`.</span></span>|  
-|<span data-ttu-id="600b1-121">soapProcessingEnabled</span><span class="sxs-lookup"><span data-stu-id="600b1-121">soapProcessingEnabled</span></span>|<span data-ttu-id="600b1-122">布林值，指定是否應進行 SOAP 處理。</span><span class="sxs-lookup"><span data-stu-id="600b1-122">A Boolean value that specifies whether SOAP processing should occur.</span></span>|  
+|<span data-ttu-id="175fb-115">filterTable</span><span class="sxs-lookup"><span data-stu-id="175fb-115">filterTable</span></span>|<span data-ttu-id="175fb-116">字串，指定路由表的名稱，該路由表包含將由路由服務評估的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="175fb-116">A string that specifies the name of the routing table that contains filters to be evaluated by the routing service.</span></span> <span data-ttu-id="175fb-117">此值必須符合`name`的屬性[ \<filterTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertable.md)中的項目[ \<filterTables >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md)一節。</span><span class="sxs-lookup"><span data-stu-id="175fb-117">This value must match the `name` attribute of a [\<filterTable>](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertable.md) element in the [\<filterTables>](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) section.</span></span>|  
+|<span data-ttu-id="175fb-118">routeOnHeaderOnly</span><span class="sxs-lookup"><span data-stu-id="175fb-118">routeOnHeaderOnly</span></span>|<span data-ttu-id="175fb-119">布林值，指定篩選器會檢查訊息本文和標頭，或者只檢查標頭。</span><span class="sxs-lookup"><span data-stu-id="175fb-119">A Boolean value that specifies whether the filter will examine both the message body and the header, or the header only.</span></span> <span data-ttu-id="175fb-120">預設為 `true`。</span><span class="sxs-lookup"><span data-stu-id="175fb-120">The default is `true`.</span></span>|  
+|<span data-ttu-id="175fb-121">soapProcessingEnabled</span><span class="sxs-lookup"><span data-stu-id="175fb-121">soapProcessingEnabled</span></span>|<span data-ttu-id="175fb-122">布林值，指定是否應進行 SOAP 處理。</span><span class="sxs-lookup"><span data-stu-id="175fb-122">A Boolean value that specifies whether SOAP processing should occur.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="600b1-123">子元素</span><span class="sxs-lookup"><span data-stu-id="600b1-123">Child Elements</span></span>  
- <span data-ttu-id="600b1-124">無。</span><span class="sxs-lookup"><span data-stu-id="600b1-124">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="175fb-123">子元素</span><span class="sxs-lookup"><span data-stu-id="175fb-123">Child Elements</span></span>  
+ <span data-ttu-id="175fb-124">無。</span><span class="sxs-lookup"><span data-stu-id="175fb-124">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="600b1-125">父項目</span><span class="sxs-lookup"><span data-stu-id="600b1-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="175fb-125">父項目</span><span class="sxs-lookup"><span data-stu-id="175fb-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="600b1-126">項目</span><span class="sxs-lookup"><span data-stu-id="600b1-126">Element</span></span>|<span data-ttu-id="600b1-127">描述</span><span class="sxs-lookup"><span data-stu-id="600b1-127">Description</span></span>|  
+|<span data-ttu-id="175fb-126">項目</span><span class="sxs-lookup"><span data-stu-id="175fb-126">Element</span></span>|<span data-ttu-id="175fb-127">描述</span><span class="sxs-lookup"><span data-stu-id="175fb-127">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="600b1-128">\<behavior></span><span class="sxs-lookup"><span data-stu-id="600b1-128">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="600b1-129">指定行為項目。</span><span class="sxs-lookup"><span data-stu-id="600b1-129">Specifies a behavior element.</span></span>|  
+|[<span data-ttu-id="175fb-128">\<behavior></span><span class="sxs-lookup"><span data-stu-id="175fb-128">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="175fb-129">指定行為項目。</span><span class="sxs-lookup"><span data-stu-id="175fb-129">Specifies a behavior element.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="600b1-130">備註</span><span class="sxs-lookup"><span data-stu-id="600b1-130">Remarks</span></span>  
- <span data-ttu-id="600b1-131">加入至服務的行為組態時，這個組態項目會啟用服務的路由。</span><span class="sxs-lookup"><span data-stu-id="600b1-131">When added to the service’s behavior configuration, this configuration element enables routing for the service.</span></span> <span data-ttu-id="600b1-132">您可以指定這個項目中的服務使用實際的路由表。</span><span class="sxs-lookup"><span data-stu-id="600b1-132">You can specify the actual routing table to be used by the service in this element.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="175fb-130">備註</span><span class="sxs-lookup"><span data-stu-id="175fb-130">Remarks</span></span>  
+ <span data-ttu-id="175fb-131">加入至服務的行為組態時，這個組態項目會啟用服務的路由。</span><span class="sxs-lookup"><span data-stu-id="175fb-131">When added to the service’s behavior configuration, this configuration element enables routing for the service.</span></span> <span data-ttu-id="175fb-132">您可以指定這個項目中的服務使用實際的路由表。</span><span class="sxs-lookup"><span data-stu-id="175fb-132">You can specify the actual routing table to be used by the service in this element.</span></span>  
   
- <span data-ttu-id="600b1-133">使用這個組態區段時，您可以在部署模式變更時即時變更路由設定。</span><span class="sxs-lookup"><span data-stu-id="600b1-133">Using this configuration section, you can change your routing settings on the fly when your deployment pattern changes.</span></span> <span data-ttu-id="600b1-134">在執行階段中，您可以使用新的路由設定註冊自己的路由擴充，而路由服務會開始將更新後的組態資訊用於新的訊息及工作階段，同時又可以在訊息/工作階段啟動時使用現有的任何規則結束進行中的訊息/工作階段。</span><span class="sxs-lookup"><span data-stu-id="600b1-134">At runtime, you can register your own routing extension with new routing settings and the routing service will begin using the updated configuration information for new messages and sessions, while leaving in-flight messages/sessions using whatever rules were in place when they started.</span></span>  <span data-ttu-id="600b1-135">這樣您就可以在執行階段期間進行具工作階段安全且回收頻率較低的路由服務重新設定。</span><span class="sxs-lookup"><span data-stu-id="600b1-135">This gives you the ability to do session-safe, recycle-less reconfiguration of the Routing Service during runtime.</span></span>  
+ <span data-ttu-id="175fb-133">使用這個組態區段時，您可以在部署模式變更時即時變更路由設定。</span><span class="sxs-lookup"><span data-stu-id="175fb-133">Using this configuration section, you can change your routing settings on the fly when your deployment pattern changes.</span></span> <span data-ttu-id="175fb-134">在執行階段中，您可以使用新的路由設定註冊自己的路由擴充，而路由服務會開始將更新後的組態資訊用於新的訊息及工作階段，同時又可以在訊息/工作階段啟動時使用現有的任何規則結束進行中的訊息/工作階段。</span><span class="sxs-lookup"><span data-stu-id="175fb-134">At runtime, you can register your own routing extension with new routing settings and the routing service will begin using the updated configuration information for new messages and sessions, while leaving in-flight messages/sessions using whatever rules were in place when they started.</span></span>  <span data-ttu-id="175fb-135">這樣您就可以在執行階段期間進行具工作階段安全且回收頻率較低的路由服務重新設定。</span><span class="sxs-lookup"><span data-stu-id="175fb-135">This gives you the ability to do session-safe, recycle-less reconfiguration of the Routing Service during runtime.</span></span>  

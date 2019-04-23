@@ -10,23 +10,23 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
 ms.openlocfilehash: 247ec4fc11f33587e77c49244b239a574c8f3cfc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207353"
 ---
-# <a name="overview-of-using-controls-in-windows-forms"></a><span data-ttu-id="ef97c-102">在 Windows Form 中使用控制項的概觀</span><span class="sxs-lookup"><span data-stu-id="ef97c-102">Overview of Using Controls in Windows Forms</span></span>
-<span data-ttu-id="ef97c-103">本主題說明在 Windows Forms 應用程式的基本項目，並提供簡單的範例會使用控制項和處理 Windows Forms 應用程式中的事件。</span><span class="sxs-lookup"><span data-stu-id="ef97c-103">This topic describes the essential elements of a Windows Forms application and provides a simple example that uses controls and handles events in a Windows Forms application.</span></span>  
+# <a name="overview-of-using-controls-in-windows-forms"></a><span data-ttu-id="ff7a3-102">在 Windows Form 中使用控制項的概觀</span><span class="sxs-lookup"><span data-stu-id="ff7a3-102">Overview of Using Controls in Windows Forms</span></span>
+<span data-ttu-id="ff7a3-103">本主題說明在 Windows Forms 應用程式的基本項目，並提供簡單的範例會使用控制項和處理 Windows Forms 應用程式中的事件。</span><span class="sxs-lookup"><span data-stu-id="ff7a3-103">This topic describes the essential elements of a Windows Forms application and provides a simple example that uses controls and handles events in a Windows Forms application.</span></span>  
   
-## <a name="simple-windows-forms-applications"></a><span data-ttu-id="ef97c-104">簡單的 Windows Forms 應用程式</span><span class="sxs-lookup"><span data-stu-id="ef97c-104">Simple Windows Forms Applications</span></span>  
- <span data-ttu-id="ef97c-105">至少在 Windows Forms 應用程式包含下列項目：</span><span class="sxs-lookup"><span data-stu-id="ef97c-105">At a minimum, a Windows Forms application consists of the following elements:</span></span>  
+## <a name="simple-windows-forms-applications"></a><span data-ttu-id="ff7a3-104">簡單的 Windows Forms 應用程式</span><span class="sxs-lookup"><span data-stu-id="ff7a3-104">Simple Windows Forms Applications</span></span>  
+ <span data-ttu-id="ff7a3-105">至少在 Windows Forms 應用程式包含下列項目：</span><span class="sxs-lookup"><span data-stu-id="ff7a3-105">At a minimum, a Windows Forms application consists of the following elements:</span></span>  
   
--   <span data-ttu-id="ef97c-106">一或多個類別衍生自<xref:System.Windows.Forms.Form?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="ef97c-106">One or more classes that derive from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span></span>  
+-   <span data-ttu-id="ff7a3-106">一或多個類別衍生自<xref:System.Windows.Forms.Form?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="ff7a3-106">One or more classes that derive from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span></span>  
   
--   <span data-ttu-id="ef97c-107">A`Main`叫用方法`static`(`shared`在 Visual Basic 中)<xref:System.Windows.Forms.Application.Run%2A>方法，並傳遞<xref:System.Windows.Forms.Form>給它的執行個體。</span><span class="sxs-lookup"><span data-stu-id="ef97c-107">A `Main` method that invokes the `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> method and passes a <xref:System.Windows.Forms.Form> instance to it.</span></span> <span data-ttu-id="ef97c-108"><xref:System.Windows.Forms.Application.Run%2A>方法會處理從作業系統到應用程式的訊息。</span><span class="sxs-lookup"><span data-stu-id="ef97c-108">The <xref:System.Windows.Forms.Application.Run%2A> method processes messages from the operating system to the application.</span></span>  
+-   <span data-ttu-id="ff7a3-107">A`Main`叫用方法`static`(`shared`在 Visual Basic 中)<xref:System.Windows.Forms.Application.Run%2A>方法，並傳遞<xref:System.Windows.Forms.Form>給它的執行個體。</span><span class="sxs-lookup"><span data-stu-id="ff7a3-107">A `Main` method that invokes the `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> method and passes a <xref:System.Windows.Forms.Form> instance to it.</span></span> <span data-ttu-id="ff7a3-108"><xref:System.Windows.Forms.Application.Run%2A>方法會處理從作業系統到應用程式的訊息。</span><span class="sxs-lookup"><span data-stu-id="ff7a3-108">The <xref:System.Windows.Forms.Application.Run%2A> method processes messages from the operating system to the application.</span></span>  
   
- <span data-ttu-id="ef97c-109">下列程式碼範例會顯示在 Windows Forms 應用程式的基本項目。</span><span class="sxs-lookup"><span data-stu-id="ef97c-109">The following code example shows the essential elements of a Windows Forms application.</span></span>  
+ <span data-ttu-id="ff7a3-109">下列程式碼範例會顯示在 Windows Forms 應用程式的基本項目。</span><span class="sxs-lookup"><span data-stu-id="ff7a3-109">The following code example shows the essential elements of a Windows Forms application.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -74,8 +74,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="using-controls-in-a-windows-forms-application"></a><span data-ttu-id="ef97c-110">在 Windows Forms 應用程式中使用控制項</span><span class="sxs-lookup"><span data-stu-id="ef97c-110">Using Controls in a Windows Forms Application</span></span>  
- <span data-ttu-id="ef97c-111">下列程式碼範例顯示簡單的應用程式，說明 Windows Forms 應用程式使用的控制項和處理事件的方式。</span><span class="sxs-lookup"><span data-stu-id="ef97c-111">The following code example shows a simple application that illustrates how Windows Forms applications use controls and handle events.</span></span> <span data-ttu-id="ef97c-112">此範例包含三個表單; 上的按鈕每個按鈕變更時按下的背景色彩。</span><span class="sxs-lookup"><span data-stu-id="ef97c-112">The example consists of three buttons on a form; each button changes the background color when clicked.</span></span>  
+## <a name="using-controls-in-a-windows-forms-application"></a><span data-ttu-id="ff7a3-110">在 Windows Forms 應用程式中使用控制項</span><span class="sxs-lookup"><span data-stu-id="ff7a3-110">Using Controls in a Windows Forms Application</span></span>  
+ <span data-ttu-id="ff7a3-111">下列程式碼範例顯示簡單的應用程式，說明 Windows Forms 應用程式使用的控制項和處理事件的方式。</span><span class="sxs-lookup"><span data-stu-id="ff7a3-111">The following code example shows a simple application that illustrates how Windows Forms applications use controls and handle events.</span></span> <span data-ttu-id="ff7a3-112">此範例包含三個表單; 上的按鈕每個按鈕變更時按下的背景色彩。</span><span class="sxs-lookup"><span data-stu-id="ff7a3-112">The example consists of three buttons on a form; each button changes the background color when clicked.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -223,7 +223,7 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ef97c-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ef97c-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ff7a3-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ff7a3-113">See also</span></span>
 
-- [<span data-ttu-id="ef97c-114">使用 .NET Framework 開發自訂的 Windows Form 控制項</span><span class="sxs-lookup"><span data-stu-id="ef97c-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
-- [<span data-ttu-id="ef97c-115">Windows Form 控制項開發的基本概念</span><span class="sxs-lookup"><span data-stu-id="ef97c-115">Windows Forms Control Development Basics</span></span>](windows-forms-control-development-basics.md)
+- [<span data-ttu-id="ff7a3-114">使用 .NET Framework 開發自訂的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="ff7a3-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
+- [<span data-ttu-id="ff7a3-115">Windows Forms 控制項開發的基本概念</span><span class="sxs-lookup"><span data-stu-id="ff7a3-115">Windows Forms Control Development Basics</span></span>](windows-forms-control-development-basics.md)

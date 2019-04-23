@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 872164e2f48f1ef234b729b28aa9b1af1589c0fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180933"
 ---
-# <a name="getdemultiplexedstub-function"></a><span data-ttu-id="9ed54-103">GetDemultiplexedStub 函式</span><span class="sxs-lookup"><span data-stu-id="9ed54-103">GetDemultiplexedStub function</span></span>
-<span data-ttu-id="9ed54-104">建立物件轉寄站接收以協助用戶端從 Windows Management 接收非同步呼叫。</span><span class="sxs-lookup"><span data-stu-id="9ed54-104">Creates an object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
+# <a name="getdemultiplexedstub-function"></a><span data-ttu-id="3f192-103">GetDemultiplexedStub 函式</span><span class="sxs-lookup"><span data-stu-id="3f192-103">GetDemultiplexedStub function</span></span>
+<span data-ttu-id="3f192-104">建立物件轉寄站接收以協助用戶端從 Windows Management 接收非同步呼叫。</span><span class="sxs-lookup"><span data-stu-id="3f192-104">Creates an object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="9ed54-105">語法</span><span class="sxs-lookup"><span data-stu-id="9ed54-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3f192-105">語法</span><span class="sxs-lookup"><span data-stu-id="3f192-105">Syntax</span></span>  
   
 ```  
 HRESULT GetDemultiplexedStub (
@@ -38,30 +38,30 @@ HRESULT GetDemultiplexedStub (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="9ed54-106">參數</span><span class="sxs-lookup"><span data-stu-id="9ed54-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="3f192-106">參數</span><span class="sxs-lookup"><span data-stu-id="3f192-106">Parameters</span></span>
 
 `pObject`  
-<span data-ttu-id="9ed54-107">[in]用戶端的程序中實作的指標[IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink)。</span><span class="sxs-lookup"><span data-stu-id="9ed54-107">[in] A pointer to the client's in-process implementation of [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span></span>
+<span data-ttu-id="3f192-107">[in]用戶端的程序中實作的指標[IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink)。</span><span class="sxs-lookup"><span data-stu-id="3f192-107">[in] A pointer to the client's in-process implementation of [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span></span>
 
 `isLocal`  
-<span data-ttu-id="9ed54-108">[in]指出事件是否位於本機的旗標 (`true`)，否則`false`。</span><span class="sxs-lookup"><span data-stu-id="9ed54-108">[in] A flag that indicates whether the event is local (`true`); otherwise, `false`.</span></span>
+<span data-ttu-id="3f192-108">[in]指出事件是否位於本機的旗標 (`true`)，否則`false`。</span><span class="sxs-lookup"><span data-stu-id="3f192-108">[in] A flag that indicates whether the event is local (`true`); otherwise, `false`.</span></span>
 
 `ppObject`  
-<span data-ttu-id="9ed54-109">[out]若要協助用戶端接收非同步呼叫，從 Windows 管理物件轉寄站接收。</span><span class="sxs-lookup"><span data-stu-id="9ed54-109">[out] A object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
+<span data-ttu-id="3f192-109">[out]若要協助用戶端接收非同步呼叫，從 Windows 管理物件轉寄站接收。</span><span class="sxs-lookup"><span data-stu-id="3f192-109">[out] A object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="9ed54-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="9ed54-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="3f192-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="3f192-110">Return value</span></span>
 
-<span data-ttu-id="9ed54-111">如果此函數成功，傳回的值是`S_OK`(0)。</span><span class="sxs-lookup"><span data-stu-id="9ed54-111">If the function succeeds, the return value is `S_OK` (0).</span></span>
+<span data-ttu-id="3f192-111">如果此函數成功，傳回的值是`S_OK`(0)。</span><span class="sxs-lookup"><span data-stu-id="3f192-111">If the function succeeds, the return value is `S_OK` (0).</span></span>
 
-<span data-ttu-id="9ed54-112">如果函式失敗，傳回的值就會為非零的錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="9ed54-112">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="9ed54-113">若要取得延伸錯誤資訊，請呼叫[GetErrorInfo](geterrorinfo.md)函式。</span><span class="sxs-lookup"><span data-stu-id="9ed54-113">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
+<span data-ttu-id="3f192-112">如果函式失敗，傳回的值就會為非零的錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="3f192-112">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="3f192-113">若要取得延伸錯誤資訊，請呼叫[GetErrorInfo](geterrorinfo.md)函式。</span><span class="sxs-lookup"><span data-stu-id="3f192-113">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
     
-## <a name="requirements"></a><span data-ttu-id="9ed54-114">需求</span><span class="sxs-lookup"><span data-stu-id="9ed54-114">Requirements</span></span>  
- <span data-ttu-id="9ed54-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9ed54-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f192-114">需求</span><span class="sxs-lookup"><span data-stu-id="3f192-114">Requirements</span></span>  
+ <span data-ttu-id="3f192-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3f192-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9ed54-116">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="9ed54-116">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="3f192-116">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="3f192-116">**Header:** WMINet_Utils.idl</span></span>  
   
- **<span data-ttu-id="9ed54-117">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="9ed54-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ <span data-ttu-id="3f192-117">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="3f192-117">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ed54-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9ed54-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3f192-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3f192-118">See also</span></span>
 
-- [<span data-ttu-id="9ed54-119">WMI 與效能計數器 (非受控 API 參考)</span><span class="sxs-lookup"><span data-stu-id="9ed54-119">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="3f192-119">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="3f192-119">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

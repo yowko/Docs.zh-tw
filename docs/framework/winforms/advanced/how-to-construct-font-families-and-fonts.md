@@ -9,47 +9,47 @@ helpviewer_keywords:
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
 ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181216"
 ---
-# <a name="how-to-construct-font-families-and-fonts"></a><span data-ttu-id="e180a-102">HOW TO：建構字型家族和字型</span><span class="sxs-lookup"><span data-stu-id="e180a-102">How to: Construct Font Families and Fonts</span></span>
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <span data-ttu-id="e180a-103">分組的字型系列字樣相同但不同的字型。</span><span class="sxs-lookup"><span data-stu-id="e180a-103">groups fonts with the same typeface but different styles into font families.</span></span> <span data-ttu-id="e180a-104">比方說，新細明體字型系列包含下列字型：</span><span class="sxs-lookup"><span data-stu-id="e180a-104">For example, the Arial font family contains the following fonts:</span></span>  
+# <a name="how-to-construct-font-families-and-fonts"></a><span data-ttu-id="72c3a-102">HOW TO：建構字型家族和字型</span><span class="sxs-lookup"><span data-stu-id="72c3a-102">How to: Construct Font Families and Fonts</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <span data-ttu-id="72c3a-103">分組的字型系列字樣相同但不同的字型。</span><span class="sxs-lookup"><span data-stu-id="72c3a-103">groups fonts with the same typeface but different styles into font families.</span></span> <span data-ttu-id="72c3a-104">比方說，新細明體字型系列包含下列字型：</span><span class="sxs-lookup"><span data-stu-id="72c3a-104">For example, the Arial font family contains the following fonts:</span></span>  
   
--   <span data-ttu-id="e180a-105">新細明體的一般</span><span class="sxs-lookup"><span data-stu-id="e180a-105">Arial Regular</span></span>  
+-   <span data-ttu-id="72c3a-105">新細明體的一般</span><span class="sxs-lookup"><span data-stu-id="72c3a-105">Arial Regular</span></span>  
   
--   <span data-ttu-id="e180a-106">新細明體粗體</span><span class="sxs-lookup"><span data-stu-id="e180a-106">Arial Bold</span></span>  
+-   <span data-ttu-id="72c3a-106">新細明體粗體</span><span class="sxs-lookup"><span data-stu-id="72c3a-106">Arial Bold</span></span>  
   
--   <span data-ttu-id="e180a-107">新細明體斜體</span><span class="sxs-lookup"><span data-stu-id="e180a-107">Arial Italic</span></span>  
+-   <span data-ttu-id="72c3a-107">新細明體斜體</span><span class="sxs-lookup"><span data-stu-id="72c3a-107">Arial Italic</span></span>  
   
--   <span data-ttu-id="e180a-108">新細明體</span><span class="sxs-lookup"><span data-stu-id="e180a-108">Arial Bold Italic</span></span>  
+-   <span data-ttu-id="72c3a-108">新細明體</span><span class="sxs-lookup"><span data-stu-id="72c3a-108">Arial Bold Italic</span></span>  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <span data-ttu-id="e180a-109">使用表單系列的四個樣式： 一般、 粗體、 斜體和粗體斜體。</span><span class="sxs-lookup"><span data-stu-id="e180a-109">uses four styles to form families: regular, bold, italic, and bold italic.</span></span> <span data-ttu-id="e180a-110">這類的形容詞*縮小*並*捨入*不會被視為樣式; 而是它們屬於的系列名稱。</span><span class="sxs-lookup"><span data-stu-id="e180a-110">Adjectives such as *narrow* and *rounded* are not considered styles; rather they are part of the family name.</span></span> <span data-ttu-id="e180a-111">比方說，新細明體窄時，為字型家族，具有下列成員：</span><span class="sxs-lookup"><span data-stu-id="e180a-111">For example, Arial Narrow is a font family with the following members:</span></span>  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <span data-ttu-id="72c3a-109">使用表單系列的四個樣式： 一般、 粗體、 斜體和粗體斜體。</span><span class="sxs-lookup"><span data-stu-id="72c3a-109">uses four styles to form families: regular, bold, italic, and bold italic.</span></span> <span data-ttu-id="72c3a-110">這類的形容詞*縮小*並*捨入*不會被視為樣式; 而是它們屬於的系列名稱。</span><span class="sxs-lookup"><span data-stu-id="72c3a-110">Adjectives such as *narrow* and *rounded* are not considered styles; rather they are part of the family name.</span></span> <span data-ttu-id="72c3a-111">比方說，新細明體窄時，為字型家族，具有下列成員：</span><span class="sxs-lookup"><span data-stu-id="72c3a-111">For example, Arial Narrow is a font family with the following members:</span></span>  
   
--   <span data-ttu-id="e180a-112">新細明體窄一般</span><span class="sxs-lookup"><span data-stu-id="e180a-112">Arial Narrow Regular</span></span>  
+-   <span data-ttu-id="72c3a-112">新細明體窄一般</span><span class="sxs-lookup"><span data-stu-id="72c3a-112">Arial Narrow Regular</span></span>  
   
--   <span data-ttu-id="e180a-113">粗體的新細明體</span><span class="sxs-lookup"><span data-stu-id="e180a-113">Arial Narrow Bold</span></span>  
+-   <span data-ttu-id="72c3a-113">粗體的新細明體</span><span class="sxs-lookup"><span data-stu-id="72c3a-113">Arial Narrow Bold</span></span>  
   
--   <span data-ttu-id="e180a-114">新細明體窄斜體</span><span class="sxs-lookup"><span data-stu-id="e180a-114">Arial Narrow Italic</span></span>  
+-   <span data-ttu-id="72c3a-114">新細明體窄斜體</span><span class="sxs-lookup"><span data-stu-id="72c3a-114">Arial Narrow Italic</span></span>  
   
--   <span data-ttu-id="e180a-115">窄的新細明體</span><span class="sxs-lookup"><span data-stu-id="e180a-115">Arial Narrow Bold Italic</span></span>  
+-   <span data-ttu-id="72c3a-115">窄的新細明體</span><span class="sxs-lookup"><span data-stu-id="72c3a-115">Arial Narrow Bold Italic</span></span>  
   
- <span data-ttu-id="e180a-116">您可以繪製的文字之前[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您必須建構<xref:System.Drawing.FontFamily>物件和<xref:System.Drawing.Font>物件。</span><span class="sxs-lookup"><span data-stu-id="e180a-116">Before you can draw text with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], you need to construct a <xref:System.Drawing.FontFamily> object and a <xref:System.Drawing.Font> object.</span></span> <span data-ttu-id="e180a-117"><xref:System.Drawing.FontFamily>物件會指定 （例如，新細明體），字樣和<xref:System.Drawing.Font>物件指定大小、 樣式和單位。</span><span class="sxs-lookup"><span data-stu-id="e180a-117">The <xref:System.Drawing.FontFamily> object specifies the typeface (for example, Arial), and the <xref:System.Drawing.Font> object specifies the size, style, and units.</span></span>  
+ <span data-ttu-id="72c3a-116">您可以繪製的文字之前[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您必須建構<xref:System.Drawing.FontFamily>物件和<xref:System.Drawing.Font>物件。</span><span class="sxs-lookup"><span data-stu-id="72c3a-116">Before you can draw text with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], you need to construct a <xref:System.Drawing.FontFamily> object and a <xref:System.Drawing.Font> object.</span></span> <span data-ttu-id="72c3a-117"><xref:System.Drawing.FontFamily>物件會指定 （例如，新細明體），字樣和<xref:System.Drawing.Font>物件指定大小、 樣式和單位。</span><span class="sxs-lookup"><span data-stu-id="72c3a-117">The <xref:System.Drawing.FontFamily> object specifies the typeface (for example, Arial), and the <xref:System.Drawing.Font> object specifies the size, style, and units.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e180a-118">範例</span><span class="sxs-lookup"><span data-stu-id="e180a-118">Example</span></span>  
- <span data-ttu-id="e180a-119">下列範例會建構規則的樣式新細明體字型的大小為 16 個像素。</span><span class="sxs-lookup"><span data-stu-id="e180a-119">The following example constructs a regular style Arial font with a size of 16 pixels.</span></span> <span data-ttu-id="e180a-120">在下列程式碼中，第一個引數傳遞給<xref:System.Drawing.Font.%23ctor%2A>建構函式是<xref:System.Drawing.FontFamily>物件。</span><span class="sxs-lookup"><span data-stu-id="e180a-120">In the following code, the first argument passed to the <xref:System.Drawing.Font.%23ctor%2A> constructor is the <xref:System.Drawing.FontFamily> object.</span></span> <span data-ttu-id="e180a-121">第二個引數會指定在第四個引數所識別的單位中測量的字型的大小。</span><span class="sxs-lookup"><span data-stu-id="e180a-121">The second argument specifies the size of the font measured in units identified by the fourth argument.</span></span> <span data-ttu-id="e180a-122">第三個引數識別的樣式。</span><span class="sxs-lookup"><span data-stu-id="e180a-122">The third argument identifies the style.</span></span>  
+## <a name="example"></a><span data-ttu-id="72c3a-118">範例</span><span class="sxs-lookup"><span data-stu-id="72c3a-118">Example</span></span>  
+ <span data-ttu-id="72c3a-119">下列範例會建構規則的樣式新細明體字型的大小為 16 個像素。</span><span class="sxs-lookup"><span data-stu-id="72c3a-119">The following example constructs a regular style Arial font with a size of 16 pixels.</span></span> <span data-ttu-id="72c3a-120">在下列程式碼中，第一個引數傳遞給<xref:System.Drawing.Font.%23ctor%2A>建構函式是<xref:System.Drawing.FontFamily>物件。</span><span class="sxs-lookup"><span data-stu-id="72c3a-120">In the following code, the first argument passed to the <xref:System.Drawing.Font.%23ctor%2A> constructor is the <xref:System.Drawing.FontFamily> object.</span></span> <span data-ttu-id="72c3a-121">第二個引數會指定在第四個引數所識別的單位中測量的字型的大小。</span><span class="sxs-lookup"><span data-stu-id="72c3a-121">The second argument specifies the size of the font measured in units identified by the fourth argument.</span></span> <span data-ttu-id="72c3a-122">第三個引數識別的樣式。</span><span class="sxs-lookup"><span data-stu-id="72c3a-122">The third argument identifies the style.</span></span>  
   
- <xref:System.Drawing.GraphicsUnit.Pixel> <span data-ttu-id="e180a-123">隸屬<xref:System.Drawing.GraphicsUnit>列舉型別，並<xref:System.Drawing.FontStyle.Regular>隸屬<xref:System.Drawing.FontStyle>列舉型別。</span><span class="sxs-lookup"><span data-stu-id="e180a-123">is a member of the <xref:System.Drawing.GraphicsUnit> enumeration, and <xref:System.Drawing.FontStyle.Regular> is a member of the <xref:System.Drawing.FontStyle> enumeration.</span></span>  
+ <span data-ttu-id="72c3a-123"><xref:System.Drawing.GraphicsUnit.Pixel> 隸屬<xref:System.Drawing.GraphicsUnit>列舉型別，並<xref:System.Drawing.FontStyle.Regular>隸屬<xref:System.Drawing.FontStyle>列舉型別。</span><span class="sxs-lookup"><span data-stu-id="72c3a-123"><xref:System.Drawing.GraphicsUnit.Pixel> is a member of the <xref:System.Drawing.GraphicsUnit> enumeration, and <xref:System.Drawing.FontStyle.Regular> is a member of the <xref:System.Drawing.FontStyle> enumeration.</span></span>  
   
  [!code-csharp[System.Drawing.FontsAndText#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.FontsAndText#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#61)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="e180a-124">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="e180a-124">Compiling the Code</span></span>  
- <span data-ttu-id="e180a-125">上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs>`e`，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。</span><span class="sxs-lookup"><span data-stu-id="e180a-125">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="72c3a-124">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="72c3a-124">Compiling the Code</span></span>  
+ <span data-ttu-id="72c3a-125">上述範例設計是為搭配 Windows Form 使用所設計，而且需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，這是 <xref:System.Windows.Forms.PaintEventHandler> 的參數。</span><span class="sxs-lookup"><span data-stu-id="72c3a-125">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e180a-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e180a-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="72c3a-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="72c3a-126">See also</span></span>
 
-- [<span data-ttu-id="e180a-127">使用字型和文字</span><span class="sxs-lookup"><span data-stu-id="e180a-127">Using Fonts and Text</span></span>](using-fonts-and-text.md)
-- [<span data-ttu-id="e180a-128">Windows Form 中的圖形和繪圖</span><span class="sxs-lookup"><span data-stu-id="e180a-128">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)
+- [<span data-ttu-id="72c3a-127">使用字型和文字</span><span class="sxs-lookup"><span data-stu-id="72c3a-127">Using Fonts and Text</span></span>](using-fonts-and-text.md)
+- [<span data-ttu-id="72c3a-128">Windows Forms 中的圖形和繪圖</span><span class="sxs-lookup"><span data-stu-id="72c3a-128">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)
