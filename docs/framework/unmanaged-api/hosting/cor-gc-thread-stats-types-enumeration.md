@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c631a0a3abb3cb2a342dfd44fdffb147b742ae3c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212462"
 ---
-# <a name="corgcthreadstatstypes-enumeration"></a><span data-ttu-id="8021e-102">COR_GC_THREAD_STATS_TYPES 列舉</span><span class="sxs-lookup"><span data-stu-id="8021e-102">COR_GC_THREAD_STATS_TYPES Enumeration</span></span>
-<span data-ttu-id="8021e-103">表示執行緒的記憶體回收集合統計資料。</span><span class="sxs-lookup"><span data-stu-id="8021e-103">Indicates the garbage collection statistics for a thread.</span></span>  
+# <a name="corgcthreadstatstypes-enumeration"></a><span data-ttu-id="0c5d0-102">COR_GC_THREAD_STATS_TYPES 列舉</span><span class="sxs-lookup"><span data-stu-id="0c5d0-102">COR_GC_THREAD_STATS_TYPES Enumeration</span></span>
+<span data-ttu-id="0c5d0-103">表示執行緒的記憶體回收集合統計資料。</span><span class="sxs-lookup"><span data-stu-id="0c5d0-103">Indicates the garbage collection statistics for a thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8021e-104">語法</span><span class="sxs-lookup"><span data-stu-id="8021e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0c5d0-104">語法</span><span class="sxs-lookup"><span data-stu-id="0c5d0-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -34,19 +34,19 @@ typedef enum {
 } COR_GC_THREAD_STATS_TYPES;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="8021e-105">成員</span><span class="sxs-lookup"><span data-stu-id="8021e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0c5d0-105">成員</span><span class="sxs-lookup"><span data-stu-id="0c5d0-105">Members</span></span>  
   
-|<span data-ttu-id="8021e-106">成員</span><span class="sxs-lookup"><span data-stu-id="8021e-106">Member</span></span>|<span data-ttu-id="8021e-107">描述</span><span class="sxs-lookup"><span data-stu-id="8021e-107">Description</span></span>|  
+|<span data-ttu-id="0c5d0-106">成員</span><span class="sxs-lookup"><span data-stu-id="0c5d0-106">Member</span></span>|<span data-ttu-id="0c5d0-107">描述</span><span class="sxs-lookup"><span data-stu-id="0c5d0-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|<span data-ttu-id="8021e-108">執行緒已升級最新的記憶體回收集合中的位元組。</span><span class="sxs-lookup"><span data-stu-id="8021e-108">The thread has bytes that were promoted in the most recent garbage collection.</span></span>|  
+|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|<span data-ttu-id="0c5d0-108">執行緒已升級最新的記憶體回收集合中的位元組。</span><span class="sxs-lookup"><span data-stu-id="0c5d0-108">The thread has bytes that were promoted in the most recent garbage collection.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8021e-109">需求</span><span class="sxs-lookup"><span data-stu-id="8021e-109">Requirements</span></span>  
- <span data-ttu-id="8021e-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8021e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0c5d0-109">需求</span><span class="sxs-lookup"><span data-stu-id="0c5d0-109">Requirements</span></span>  
+ <span data-ttu-id="0c5d0-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0c5d0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8021e-111">**標頭：** GCHost.idl GCHost.h</span><span class="sxs-lookup"><span data-stu-id="8021e-111">**Header:** GCHost.idl, GCHost.h</span></span>  
+ <span data-ttu-id="0c5d0-111">**標頭：** GCHost.idl GCHost.h</span><span class="sxs-lookup"><span data-stu-id="0c5d0-111">**Header:** GCHost.idl, GCHost.h</span></span>  
   
- **<span data-ttu-id="8021e-112">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="8021e-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="0c5d0-112">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0c5d0-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8021e-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8021e-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0c5d0-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0c5d0-113">See also</span></span>
 
-- [<span data-ttu-id="8021e-114">裝載列舉</span><span class="sxs-lookup"><span data-stu-id="8021e-114">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="0c5d0-114">裝載列舉</span><span class="sxs-lookup"><span data-stu-id="0c5d0-114">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

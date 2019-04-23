@@ -3,26 +3,26 @@ title: OracleType
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
 ms.openlocfilehash: 3762fdaee1312a7cb008386bb1f6b7bf7cb4316e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212306"
 ---
-# <a name="oracletypes"></a><span data-ttu-id="29cb6-102">OracleType</span><span class="sxs-lookup"><span data-stu-id="29cb6-102">OracleTypes</span></span>
-<span data-ttu-id="29cb6-103">Oracle 的 .NET Framework 資料提供者包括數個可讓您使用 Oracle 資料型別的結構。</span><span class="sxs-lookup"><span data-stu-id="29cb6-103">The .NET Framework Data Provider for Oracle includes several structures you can use to work with Oracle data types.</span></span> <span data-ttu-id="29cb6-104">這些結構包括 <xref:System.Data.OracleClient.OracleNumber> 及 <xref:System.Data.OracleClient.OracleString>。</span><span class="sxs-lookup"><span data-stu-id="29cb6-104">These include <xref:System.Data.OracleClient.OracleNumber> and <xref:System.Data.OracleClient.OracleString>.</span></span>  
+# <a name="oracletypes"></a><span data-ttu-id="37d0b-102">OracleType</span><span class="sxs-lookup"><span data-stu-id="37d0b-102">OracleTypes</span></span>
+<span data-ttu-id="37d0b-103">Oracle 的 .NET Framework 資料提供者包括數個可讓您使用 Oracle 資料型別的結構。</span><span class="sxs-lookup"><span data-stu-id="37d0b-103">The .NET Framework Data Provider for Oracle includes several structures you can use to work with Oracle data types.</span></span> <span data-ttu-id="37d0b-104">這些結構包括 <xref:System.Data.OracleClient.OracleNumber> 及 <xref:System.Data.OracleClient.OracleString>。</span><span class="sxs-lookup"><span data-stu-id="37d0b-104">These include <xref:System.Data.OracleClient.OracleNumber> and <xref:System.Data.OracleClient.OracleString>.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="29cb6-105">如需這些結構的完整清單，請參閱 <xref:System.Data.OracleClient>。</span><span class="sxs-lookup"><span data-stu-id="29cb6-105">For a complete list of these structures, see <xref:System.Data.OracleClient>.</span></span>  
+>  <span data-ttu-id="37d0b-105">如需這些結構的完整清單，請參閱 <xref:System.Data.OracleClient>。</span><span class="sxs-lookup"><span data-stu-id="37d0b-105">For a complete list of these structures, see <xref:System.Data.OracleClient>.</span></span>  
   
- <span data-ttu-id="29cb6-106">下列 C# 範例：</span><span class="sxs-lookup"><span data-stu-id="29cb6-106">The following C# examples:</span></span>  
+ <span data-ttu-id="37d0b-106">下列 C# 範例：</span><span class="sxs-lookup"><span data-stu-id="37d0b-106">The following C# examples:</span></span>  
   
--   <span data-ttu-id="29cb6-107">建立 Oracle 資料表並為其載入資料。</span><span class="sxs-lookup"><span data-stu-id="29cb6-107">Create an Oracle table and load it with data.</span></span>  
+-   <span data-ttu-id="37d0b-107">建立 Oracle 資料表並為其載入資料。</span><span class="sxs-lookup"><span data-stu-id="37d0b-107">Create an Oracle table and load it with data.</span></span>  
   
--   <span data-ttu-id="29cb6-108">使用 <xref:System.Data.OracleClient.OracleDataReader> 存取資料，並使用數個 <xref:System.Data.OracleClient.OracleType> 結構顯示資料。</span><span class="sxs-lookup"><span data-stu-id="29cb6-108">Use an <xref:System.Data.OracleClient.OracleDataReader> to access the data, and use several <xref:System.Data.OracleClient.OracleType> structures to display the data.</span></span>  
+-   <span data-ttu-id="37d0b-108">使用 <xref:System.Data.OracleClient.OracleDataReader> 存取資料，並使用數個 <xref:System.Data.OracleClient.OracleType> 結構顯示資料。</span><span class="sxs-lookup"><span data-stu-id="37d0b-108">Use an <xref:System.Data.OracleClient.OracleDataReader> to access the data, and use several <xref:System.Data.OracleClient.OracleType> structures to display the data.</span></span>  
   
-## <a name="creating-an-oracle-table"></a><span data-ttu-id="29cb6-109">建立 Oracle 資料表</span><span class="sxs-lookup"><span data-stu-id="29cb6-109">Creating an Oracle Table</span></span>  
- <span data-ttu-id="29cb6-110">此範例建立 Oracle 資料表並為其載入資料。</span><span class="sxs-lookup"><span data-stu-id="29cb6-110">This example creates an Oracle table and loads it with data.</span></span> <span data-ttu-id="29cb6-111">您必須先執行此範例，才能執行下一個範例。</span><span class="sxs-lookup"><span data-stu-id="29cb6-111">You must run this example before running the next example.</span></span>  
+## <a name="creating-an-oracle-table"></a><span data-ttu-id="37d0b-109">建立 Oracle 資料表</span><span class="sxs-lookup"><span data-stu-id="37d0b-109">Creating an Oracle Table</span></span>  
+ <span data-ttu-id="37d0b-110">此範例建立 Oracle 資料表並為其載入資料。</span><span class="sxs-lookup"><span data-stu-id="37d0b-110">This example creates an Oracle table and loads it with data.</span></span> <span data-ttu-id="37d0b-111">您必須先執行此範例，才能執行下一個範例。</span><span class="sxs-lookup"><span data-stu-id="37d0b-111">You must run this example before running the next example.</span></span>  
   
 ```csharp  
 public void Setup(string connectionString)  
@@ -51,8 +51,8 @@ public void Setup(string connectionString)
 }  
 ```  
   
-## <a name="retrieving-data-from-the-oracle-table"></a><span data-ttu-id="29cb6-112">從 Oracle 資料表擷取資料</span><span class="sxs-lookup"><span data-stu-id="29cb6-112">Retrieving Data from the Oracle Table</span></span>  
- <span data-ttu-id="29cb6-113">這個範例會使用**OracleDataReader**存取資料，並使用數個**OracleType**結構顯示資料。</span><span class="sxs-lookup"><span data-stu-id="29cb6-113">This example uses an **OracleDataReader** to access the data, and uses several **OracleType** structures to display the data.</span></span>  
+## <a name="retrieving-data-from-the-oracle-table"></a><span data-ttu-id="37d0b-112">從 Oracle 資料表擷取資料</span><span class="sxs-lookup"><span data-stu-id="37d0b-112">Retrieving Data from the Oracle Table</span></span>  
+ <span data-ttu-id="37d0b-113">這個範例會使用**OracleDataReader**存取資料，並使用數個**OracleType**結構顯示資料。</span><span class="sxs-lookup"><span data-stu-id="37d0b-113">This example uses an **OracleDataReader** to access the data, and uses several **OracleType** structures to display the data.</span></span>  
   
 ```csharp  
 public void ReadOracleTypesExample(string connectionString)  
@@ -115,7 +115,7 @@ public void ReadOracleTypesExample(string connectionString)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="29cb6-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="29cb6-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="37d0b-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="37d0b-114">See also</span></span>
 
-- [<span data-ttu-id="29cb6-115">Oracle 和 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="29cb6-115">Oracle and ADO.NET</span></span>](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [<span data-ttu-id="29cb6-116">ADO.NET Managed 提供者和DataSet開發人員中心</span><span class="sxs-lookup"><span data-stu-id="29cb6-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="37d0b-115">Oracle 和 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="37d0b-115">Oracle and ADO.NET</span></span>](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [<span data-ttu-id="37d0b-116">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="37d0b-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

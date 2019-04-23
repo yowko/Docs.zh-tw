@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5bdf9fb50fe06141df6f3818c784588b9e2138af
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212020"
 ---
-# <a name="exporttypeforwarder-method"></a><span data-ttu-id="3a268-102">ExportTypeForwarder 方法</span><span class="sxs-lookup"><span data-stu-id="3a268-102">ExportTypeForwarder Method</span></span>
-<span data-ttu-id="3a268-103">將指定的組件的型別表中的類型轉送子。</span><span class="sxs-lookup"><span data-stu-id="3a268-103">Adds a type forwarder to the type table of the given assembly.</span></span>  
+# <a name="exporttypeforwarder-method"></a><span data-ttu-id="67924-102">ExportTypeForwarder 方法</span><span class="sxs-lookup"><span data-stu-id="67924-102">ExportTypeForwarder Method</span></span>
+<span data-ttu-id="67924-103">將指定的組件的型別表中的類型轉送子。</span><span class="sxs-lookup"><span data-stu-id="67924-103">Adds a type forwarder to the type table of the given assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3a268-104">語法</span><span class="sxs-lookup"><span data-stu-id="3a268-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="67924-104">語法</span><span class="sxs-lookup"><span data-stu-id="67924-104">Syntax</span></span>  
   
 ```  
 HRESULT ExportTypeForwarder(  
@@ -37,27 +37,27 @@ HRESULT ExportTypeForwarder(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3a268-105">參數</span><span class="sxs-lookup"><span data-stu-id="3a268-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="67924-105">參數</span><span class="sxs-lookup"><span data-stu-id="67924-105">Parameters</span></span>  
  `tkAssemblyRef`  
- <span data-ttu-id="3a268-106">類型轉送子所參考之組件參考。</span><span class="sxs-lookup"><span data-stu-id="3a268-106">Reference to the assembly to which the type forwarder refers.</span></span>  
+ <span data-ttu-id="67924-106">類型轉送子所參考之組件參考。</span><span class="sxs-lookup"><span data-stu-id="67924-106">Reference to the assembly to which the type forwarder refers.</span></span>  
   
  `pszTypename`  
- <span data-ttu-id="3a268-107">若要匯出的完整型別名稱。</span><span class="sxs-lookup"><span data-stu-id="3a268-107">Fully qualified type name to export.</span></span>  
+ <span data-ttu-id="67924-107">若要匯出的完整型別名稱。</span><span class="sxs-lookup"><span data-stu-id="67924-107">Fully qualified type name to export.</span></span>  
   
  `dwFlags`  
- `ComType` <span data-ttu-id="3a268-108">這類旗標`tdPublic`或`tdNested`。</span><span class="sxs-lookup"><span data-stu-id="3a268-108">flags such as `tdPublic` or `tdNested`.</span></span> <span data-ttu-id="3a268-109">這個值可能會傳遞至[DefineExportedType 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)。</span><span class="sxs-lookup"><span data-stu-id="3a268-109">This value may be passed to [DefineExportedType Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
+ <span data-ttu-id="67924-108">`ComType` 這類旗標`tdPublic`或`tdNested`。</span><span class="sxs-lookup"><span data-stu-id="67924-108">`ComType` flags such as `tdPublic` or `tdNested`.</span></span> <span data-ttu-id="67924-109">這個值可能會傳遞至[DefineExportedType 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)。</span><span class="sxs-lookup"><span data-stu-id="67924-109">This value may be passed to [DefineExportedType Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
   
  `pType`  
- <span data-ttu-id="3a268-110">收到之匯出型別的權杖。</span><span class="sxs-lookup"><span data-stu-id="3a268-110">Receives the token of the exported type.</span></span> <span data-ttu-id="3a268-111">這是才需要發出巢狀型別。</span><span class="sxs-lookup"><span data-stu-id="3a268-111">This is necessary only for emitting nested types.</span></span>  
+ <span data-ttu-id="67924-110">收到之匯出型別的權杖。</span><span class="sxs-lookup"><span data-stu-id="67924-110">Receives the token of the exported type.</span></span> <span data-ttu-id="67924-111">這是才需要發出巢狀型別。</span><span class="sxs-lookup"><span data-stu-id="67924-111">This is necessary only for emitting nested types.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3a268-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="3a268-112">Return Value</span></span>  
- <span data-ttu-id="3a268-113">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="3a268-113">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="67924-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="67924-112">Return Value</span></span>  
+ <span data-ttu-id="67924-113">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="67924-113">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3a268-114">需求</span><span class="sxs-lookup"><span data-stu-id="3a268-114">Requirements</span></span>  
- <span data-ttu-id="3a268-115">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="3a268-115">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="67924-114">需求</span><span class="sxs-lookup"><span data-stu-id="67924-114">Requirements</span></span>  
+ <span data-ttu-id="67924-115">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="67924-115">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3a268-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3a268-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="67924-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="67924-116">See also</span></span>
 
-- [<span data-ttu-id="3a268-117">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="3a268-117">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="3a268-118">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="3a268-118">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="3a268-119">ALink API</span><span class="sxs-lookup"><span data-stu-id="3a268-119">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="67924-117">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="67924-117">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="67924-118">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="67924-118">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="67924-119">ALink API</span><span class="sxs-lookup"><span data-stu-id="67924-119">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

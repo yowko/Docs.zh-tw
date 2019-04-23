@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9a37355365f337527bbc9254cae6e6f3d3f2f604
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216843"
 ---
-# <a name="asmcmpflags-enumeration"></a><span data-ttu-id="fd124-102">ASM_CMP_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="fd124-102">ASM_CMP_FLAGS Enumeration</span></span>
-<span data-ttu-id="fd124-103">表示版本、 組建、 文化特性、 簽章，依此類推，所要比較的兩個組件的[iassemblyname:: Isequal](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="fd124-103">Indicates the version, build, culture, signature, and so on, of two assemblies to be compared by the [IAssemblyName::IsEqual](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) method.</span></span>  
+# <a name="asmcmpflags-enumeration"></a><span data-ttu-id="9a14a-102">ASM_CMP_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="9a14a-102">ASM_CMP_FLAGS Enumeration</span></span>
+<span data-ttu-id="9a14a-103">表示版本、 組建、 文化特性、 簽章，依此類推，所要比較的兩個組件的[iassemblyname:: Isequal](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="9a14a-103">Indicates the version, build, culture, signature, and so on, of two assemblies to be compared by the [IAssemblyName::IsEqual](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fd124-104">語法</span><span class="sxs-lookup"><span data-stu-id="fd124-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9a14a-104">語法</span><span class="sxs-lookup"><span data-stu-id="9a14a-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -67,16 +67,16 @@ typedef enum {
 } ASM_CMP_FLAGS;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="fd124-105">需求</span><span class="sxs-lookup"><span data-stu-id="fd124-105">Requirements</span></span>  
- <span data-ttu-id="fd124-106">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fd124-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9a14a-105">需求</span><span class="sxs-lookup"><span data-stu-id="9a14a-105">Requirements</span></span>  
+ <span data-ttu-id="9a14a-106">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9a14a-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fd124-107">**標頭：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="fd124-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="9a14a-107">**標頭：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="9a14a-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="fd124-108">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="fd124-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9a14a-108">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="9a14a-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="fd124-109">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="fd124-109">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="9a14a-109">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a14a-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fd124-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fd124-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9a14a-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9a14a-110">See also</span></span>
 
-- [<span data-ttu-id="fd124-111">IAssemblyName 介面</span><span class="sxs-lookup"><span data-stu-id="fd124-111">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [<span data-ttu-id="fd124-112">融合列舉</span><span class="sxs-lookup"><span data-stu-id="fd124-112">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [<span data-ttu-id="9a14a-111">IAssemblyName 介面</span><span class="sxs-lookup"><span data-stu-id="9a14a-111">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="9a14a-112">融合列舉</span><span class="sxs-lookup"><span data-stu-id="9a14a-112">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

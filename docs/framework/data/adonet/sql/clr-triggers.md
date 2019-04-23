@@ -3,21 +3,21 @@ title: CLR 觸發程序
 ms.date: 03/30/2017
 ms.assetid: defe379c-30c7-487f-9abd-9c5e12ff49be
 ms.openlocfilehash: 70ba8e072761df561f94c7343fa75c0398f1b5e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215322"
 ---
-# <a name="clr-triggers"></a><span data-ttu-id="41216-102">CLR 觸發程序</span><span class="sxs-lookup"><span data-stu-id="41216-102">CLR Triggers</span></span>
-<span data-ttu-id="41216-103">觸發程序是一種特殊型別的預存程序，它會在執行語言事件時自動執行。</span><span class="sxs-lookup"><span data-stu-id="41216-103">A trigger is a special type of stored procedure that automatically runs when a language event executes.</span></span> <span data-ttu-id="41216-104">因為 Microsoft SQL Server 已與 .NET Framework Common Language Runtime (CLR) 整合，所以您可以使用任何 .NET Framework 語言建立 CLR 觸發程序。</span><span class="sxs-lookup"><span data-stu-id="41216-104">Because of the Microsoft SQL Server integration with the .NET Framework common language runtime (CLR), you can use any .NET Framework language to create CLR triggers.</span></span>  
+# <a name="clr-triggers"></a><span data-ttu-id="43374-102">CLR 觸發程序</span><span class="sxs-lookup"><span data-stu-id="43374-102">CLR Triggers</span></span>
+<span data-ttu-id="43374-103">觸發程序是一種特殊型別的預存程序，它會在執行語言事件時自動執行。</span><span class="sxs-lookup"><span data-stu-id="43374-103">A trigger is a special type of stored procedure that automatically runs when a language event executes.</span></span> <span data-ttu-id="43374-104">因為 Microsoft SQL Server 已與 .NET Framework Common Language Runtime (CLR) 整合，所以您可以使用任何 .NET Framework 語言建立 CLR 觸發程序。</span><span class="sxs-lookup"><span data-stu-id="43374-104">Because of the Microsoft SQL Server integration with the .NET Framework common language runtime (CLR), you can use any .NET Framework language to create CLR triggers.</span></span>  
   
- <span data-ttu-id="41216-105">如需詳細資訊，請參閱 < [SQL Server 文件](/sql)您使用的 SQL Server 的版本。</span><span class="sxs-lookup"><span data-stu-id="41216-105">For more detailed information, see the [SQL Server documentation](/sql) for the version of SQL Server you're using.</span></span>
+ <span data-ttu-id="43374-105">如需詳細資訊，請參閱 < [SQL Server 文件](/sql)您使用的 SQL Server 的版本。</span><span class="sxs-lookup"><span data-stu-id="43374-105">For more detailed information, see the [SQL Server documentation](/sql) for the version of SQL Server you're using.</span></span>
   
- **<span data-ttu-id="41216-106">SQL Server 文件</span><span class="sxs-lookup"><span data-stu-id="41216-106">SQL Server documentation</span></span>**
+ <span data-ttu-id="43374-106">**SQL Server 文件**</span><span class="sxs-lookup"><span data-stu-id="43374-106">**SQL Server documentation**</span></span>
   
-1. [<span data-ttu-id="41216-107">CLR 觸發程序</span><span class="sxs-lookup"><span data-stu-id="41216-107">CLR Triggers</span></span>](/sql/database-engine/dev-guide/clr-triggers)
+1. [<span data-ttu-id="43374-107">CLR 觸發程序</span><span class="sxs-lookup"><span data-stu-id="43374-107">CLR Triggers</span></span>](/sql/database-engine/dev-guide/clr-triggers)
   
-## <a name="see-also"></a><span data-ttu-id="41216-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="41216-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="43374-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="43374-108">See also</span></span>
 
-- [<span data-ttu-id="41216-109">ADO.NET Managed 提供者和DataSet開發人員中心</span><span class="sxs-lookup"><span data-stu-id="41216-109">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="43374-109">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="43374-109">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
