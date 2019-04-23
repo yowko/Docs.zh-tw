@@ -3,10 +3,10 @@ title: Byref
 description: 了解 byref 和中的類似 byref 類型F#，用來進行低層級的程式設計。
 ms.date: 09/02/2018
 ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055361"
 ---
 # <a name="byrefs"></a>Byref
@@ -106,7 +106,7 @@ let f (x: inref<SomeStruct>) = x.SomeField
 
 目的`outref<'T>`是指出只應該從讀取指標。 意外`outref<'T>`讀取基礎的允許值，儘管其名稱。 這是基於相容性。 語意上來說，`outref<'T>`沒什麼兩樣`byref<'T>`。
 
-### <a name="interop-with-c"></a>使用 C# 的 interop\#
+### <a name="interop-with-c"></a>使用 c# 的 interop\#
 
 C# 支援`in ref`並`out ref`關鍵字，除了`ref`傳回。 下表顯示F#會解譯項目C#發出：
 
@@ -121,10 +121,10 @@ C# 支援`in ref`並`out ref`關鍵字，除了`ref`傳回。 下表顯示F#會�
 
 |F#建構|發出的建構|
 |------------|-----------------|
-|`inref<'T>` Argument - 引數|`[In]` 引數上的屬性|
-|`inref<'T>` return|`modreq` 值的屬性|
+|`inref<'T>` 引數|`[In]` 引數上的屬性|
+|`inref<'T>` 傳回|`modreq` 值的屬性|
 |`inref<'T>` 抽象位置或實作中|`modreq` 在 引數或傳回|
-|`outref<'T>` Argument - 引數|`[Out]` 引數上的屬性|
+|`outref<'T>` 引數|`[Out]` 引數上的屬性|
 
 ### <a name="type-inference-and-overloading-rules"></a>型別推斷 」 和 「 多載規則
 

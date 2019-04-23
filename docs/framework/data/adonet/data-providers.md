@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
 ms.openlocfilehash: f821088375bf1df01e75de5e0c226334baca113f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074023"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework 資料提供者
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者的用途是連接資料庫、執行命令和擷取結果。 這些結果會直接處理、放入 <xref:System.Data.DataSet> 中以便視需要而公開給使用者、與多個來源的資料結合，或在各層之間進行遠端控制。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者是輕量級，建立最小層之間的資料來源和程式碼，以提升效能而不犧牲功能。  
+[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者的用途是連接資料庫、執行命令和擷取結果。 這些結果會直接處理、放入 <xref:System.Data.DataSet> 中以便視需要而公開給使用者、與多個來源的資料結合，或在各層之間進行遠端控制。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者是輕量型的，可在資料來源與程式碼之間建立最小層，以提升效能而不會犧牲功能。  
   
  下表列出包含在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中的資料提供者。  
   
@@ -89,7 +89,7 @@ using System.Data.SqlClient;
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 無法用於 OLE DB provider for ODBC (MSDASQL)。 若要使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]存取 ODBC 資料來源，請使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 類別位於<xref:System.Data.OleDb>命名空間。 下列程式碼範例顯示如何將 `System.Data.OleDb` 命名空間納入您的應用程式。  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 類別位於 <xref:System.Data.OleDb> 命名空間中。 下列程式碼範例顯示如何將 `System.Data.OleDb` 命名空間納入您的應用程式。  
   
 ```vb  
 Imports System.Data.OleDb  
@@ -110,7 +110,7 @@ using System.Data.OleDb;
 |Oracle 的 Microsoft ODBC|  
 |Microsoft Access Driver (*.mdb)|  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC 類別位於<xref:System.Data.Odbc>命名空間。  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC 類別位於 <xref:System.Data.Odbc> 命名空間中。  
   
  下列程式碼範例顯示如何將 `System.Data.Odbc` 命名空間納入您的應用程式。  
   
@@ -130,7 +130,7 @@ using System.Data.Odbc;
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 要求先在系統上安裝 Oracle 用戶端軟體 (8.1.7 (含) 以後版本)，以便連接到 Oracle 資料來源。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 類別位於<xref:System.Data.OracleClient>命名空間，且包含在`System.Data.OracleClient.dll`組件。 如果編譯的應用程式有使用資料提供者，則必須參考 `System.Data.dll` 和 `System.Data.OracleClient.dll` 。  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 類別位於 <xref:System.Data.OracleClient> 命名空間中，且包含在 `System.Data.OracleClient.dll` 組件 (Assembly) 中。 如果編譯的應用程式有使用資料提供者，則必須參考 `System.Data.dll` 和 `System.Data.OracleClient.dll` 。  
   
  下列程式碼範例顯示如何將 `System.Data.OracleClient` 命名空間納入您的應用程式。  
   
@@ -160,5 +160,5 @@ using System.Data.OracleClient;
 ## <a name="see-also"></a>另請參閱
 
 - [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [在 ADO.NET 中傳送和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

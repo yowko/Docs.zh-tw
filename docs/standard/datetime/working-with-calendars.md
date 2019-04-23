@@ -16,10 +16,10 @@ ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055309"
 ---
 # <a name="working-with-calendars"></a>使用日曆
@@ -30,33 +30,33 @@ ms.locfileid: "59055309"
 
 在.NET 中的所有行事曆衍生自<xref:System.Globalization.Calendar?displayProperty=nameWithType>類別，可提供了基準曆法實作。 其中一個衍生自 <xref:System.Globalization.Calendar> 類別的類別是 <xref:System.Globalization.EastAsianLunisolarCalendar> 類別，其為所有陰陽曆的基底類別。 .NET 還包括下列曆法實作：
 
-* <xref:System.Globalization.ChineseLunisolarCalendar>表示中文陰陽曆。
+* <xref:System.Globalization.ChineseLunisolarCalendar>，表示中文陰陽曆。
 
-* <xref:System.Globalization.GregorianCalendar>表示西曆。 這個曆法會進一步細分成子類型 (例如阿拉伯和中東法文)，這些子類別是由 <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 列舉類型所定義。 <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> 屬性會指定西曆的子類型。
+* <xref:System.Globalization.GregorianCalendar>，表示西曆。 這個曆法會進一步細分成子類型 (例如阿拉伯和中東法文)，這些子類別是由 <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 列舉類型所定義。 <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> 屬性會指定西曆的子類型。
 
-* <xref:System.Globalization.HebrewCalendar>表示希伯來曆法。
+* <xref:System.Globalization.HebrewCalendar>，表示希伯來曆法。
 
-* <xref:System.Globalization.HijriCalendar>表示回曆。
+* <xref:System.Globalization.HijriCalendar>，表示回曆。
 
-* <xref:System.Globalization.JapaneseCalendar>表示日本曆法。
+* <xref:System.Globalization.JapaneseCalendar>，表示日本曆法。
 
-* <xref:System.Globalization.JapaneseLunisolarCalendar>表示日文陰陽曆。
+* <xref:System.Globalization.JapaneseLunisolarCalendar>，表示日文陰陽曆。
 
-* <xref:System.Globalization.JulianCalendar>表示凱撒曆法。
+* <xref:System.Globalization.JulianCalendar>，表示凱撒曆法。
 
-* <xref:System.Globalization.KoreanCalendar>表示韓國曆法。
+* <xref:System.Globalization.KoreanCalendar>，表示韓國曆法。
 
-* <xref:System.Globalization.KoreanLunisolarCalendar>表示韓文陰陽曆。
+* <xref:System.Globalization.KoreanLunisolarCalendar>，表示韓文陰陽曆。
 
-* <xref:System.Globalization.PersianCalendar>代表的波斯曆。
+* <xref:System.Globalization.PersianCalendar>，表示波斯曆。
 
-* <xref:System.Globalization.TaiwanCalendar>表示台灣曆法。
+* <xref:System.Globalization.TaiwanCalendar>，表示台灣曆法。
 
-* <xref:System.Globalization.TaiwanLunisolarCalendar>表示台灣使用的陰陽曆。
+* <xref:System.Globalization.TaiwanLunisolarCalendar>，表示台灣使用的陰陽曆。
 
-* <xref:System.Globalization.ThaiBuddhistCalendar>表示泰國佛教曆法。
+* <xref:System.Globalization.ThaiBuddhistCalendar>，表示泰國佛教曆法。
 
-* <xref:System.Globalization.UmAlQuraCalendar>表示 Um Al Qura 曆法。
+* <xref:System.Globalization.UmAlQuraCalendar>，表示 Um Al Qura 曆法。
 
 曆法的使用方式有兩種：
 
@@ -362,6 +362,6 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
 
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：在非西曆中顯示日期](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
+- [如何：在非西曆中顯示日期](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
 - [範例：行事曆週範圍公用程式](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
-- [曆法類別](xref:System.Globalization.Calendar)
+- [行事曆類別](xref:System.Globalization.Calendar)

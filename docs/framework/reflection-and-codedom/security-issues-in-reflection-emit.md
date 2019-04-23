@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40db78b8b09b90ab5e11dcc61dc042af1981e827
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2717655ac73cac6635aba563f008feb460a5f788
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074517"
 ---
 # <a name="security-issues-in-reflection-emit"></a>反映發出中的安全性問題
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供三種發出 Microsoft 中繼語言 (MSIL) 的方式，每種都有它自己的安全性問題：  
@@ -27,7 +27,7 @@ ms.locfileid: "54701400"
   
 -   [匿名裝載的動態方法](#Anonymously_Hosted_Dynamic_Methods)  
   
--   [與現有組件建立關聯的動態方法](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
+-   [與現有組件相關聯的動態方法](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
   
  無論您產生動態程式碼的方式為何，執行產生的程式碼需要所有權限，這些是產生的程式碼所使用之類型和方法所需的。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "54701400"
  從 [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 開始，當發出動態組件和動態方法時，不再需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。 在所有舊版 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中需要此旗標。  
   
 > [!NOTE]
->  根據預設，具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission> 包含在 `FullTrust` 和 `LocalIntranet` 具名權限集合，而不是 `Internet` 權限集合。 因此，在舊版的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中，僅當程式庫執行針對 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 的 <xref:System.Security.PermissionSet.Assert%2A> 時，程式庫才可搭配網際網路權限使用。 這類程式庫需要仔細的安全性檢閱，因為編碼錯誤可能會造成安全性漏洞。 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 允許在部分信任案例中發出程式碼，而不需提出任何安全性要求，因為產生的程式碼本質上並非有權限的作業。 也就是產生的程式碼之權限不會比發出程式碼的組件還多。 這可讓程式庫發出安全性透明的程式碼，並可免除 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 判斷提示的需要，這可簡化撰寫安全程式庫的工作。  
+>  <xref:System.Security.Permissions.ReflectionPermission> (具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 旗標) 根據預設會包含在 `FullTrust` 和 `LocalIntranet` 具名權限集合，而不是 `Internet` 權限集合。 因此，在舊版的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中，僅當程式庫執行針對 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 的 <xref:System.Security.PermissionSet.Assert%2A> 時，程式庫才可搭配網際網路權限使用。 這類程式庫需要仔細的安全性檢閱，因為編碼錯誤可能會造成安全性漏洞。 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 允許在部分信任案例中發出程式碼，而不需提出任何安全性要求，因為產生的程式碼本質上並非有權限的作業。 也就是產生的程式碼之權限不會比發出程式碼的組件還多。 這可讓程式庫發出安全性透明的程式碼，並可免除 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 判斷提示的需要，這可簡化撰寫安全程式庫的工作。  
   
  此外，[!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 導入了 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標，用來從部分信任的動態方法中存取非公用類型和成員。 對於會存取非公用類型和成員的動態方法，舊版的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 需要 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 旗標；這是永遠不該授與部分信任程式碼的權限。  
   
@@ -154,5 +154,6 @@ ms.locfileid: "54701400"
  從 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 開始，取得非公用類型和成員的相關資訊不需要權限。 反映會用來取得發出動態方法需要的資訊。 例如，<xref:System.Reflection.MethodInfo> 物件會用來發出方法呼叫。 舊版的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。 如需詳細資訊，請參閱[反映的安全性考量](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [反映的安全性考量](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
 - [發出動態方法和組件](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)

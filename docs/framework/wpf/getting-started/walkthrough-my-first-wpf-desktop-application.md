@@ -12,10 +12,10 @@ author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
 ms.openlocfilehash: dbfc40bd1fcc97810ea1397731bd8c232297cbd1
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055244"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>逐步解說：我的第一個 WPF 傳統型應用程式
@@ -375,17 +375,17 @@ ms.locfileid: "59055244"
 
     這個 XAML 會加入下列樣式：
 
-    - `headerTextStyle`:若要格式化頁面標題<xref:System.Windows.Controls.Label>。
+    - `headerTextStyle`：若要格式化頁面標題<xref:System.Windows.Controls.Label>。
 
-    - `labelStyle`:若要格式化<xref:System.Windows.Controls.Label>控制項。
+    - `labelStyle`：若要格式化<xref:System.Windows.Controls.Label>控制項。
 
-    - `columnHeaderStyle`:若要格式化<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>。
+    - `columnHeaderStyle`：若要格式化<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>。
 
-    - `listHeaderStyle`:若要格式化清單標頭<xref:System.Windows.Controls.Border>控制項。
+    - `listHeaderStyle`：若要格式化清單標頭<xref:System.Windows.Controls.Border>控制項。
 
-    - `listHeaderTextStyle`:若要格式化清單標頭<xref:System.Windows.Controls.Label>。
+    - `listHeaderTextStyle`：若要格式化清單標頭<xref:System.Windows.Controls.Label>。
 
-    - `buttonStyle`:若要格式化<xref:System.Windows.Controls.Button>上`ExpenseItHome.xaml`。
+    - `buttonStyle`：若要格式化<xref:System.Windows.Controls.Button>上`ExpenseItHome.xaml`。
 
     請注意，樣式是資源和子系<xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>屬性項目。 在這裡，樣式會套用至應用程式中的所有元素。 如需在.NET Framework 應用程式中使用資源的範例，請參閱[使用應用程式資源](../advanced/how-to-use-application-resources.md)。
 
@@ -495,7 +495,7 @@ ms.locfileid: "59055244"
 - [WPF 架構](../advanced/wpf-architecture.md)
 - [XAML 概觀 (WPF)](../advanced/xaml-overview-wpf.md)
 - [相依性屬性概觀](../advanced/dependency-properties-overview.md)
-- [配置](../advanced/layout.md)
+- [版面配置](../advanced/layout.md)
 
 如需建立應用程式的詳細資訊，請參閱下列主題：
 

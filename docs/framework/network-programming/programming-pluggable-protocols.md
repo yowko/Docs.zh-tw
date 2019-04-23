@@ -16,10 +16,10 @@ helpviewer_keywords:
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
 ms.openlocfilehash: d14eb426c8e142f56d9f024dcbf37a1d2d78664d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072337"
 ---
 # <a name="programming-pluggable-protocols"></a>可插式通訊協定程式設計
@@ -36,4 +36,4 @@ ms.locfileid: "59072337"
 - [衍生自 WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
 - [衍生自 WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
 - [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)
-- [作法：轉換 WebRequest 類型以存取通訊協定特定屬性](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)
+- [如何：轉換 WebRequest 類型以存取通訊協定特定屬性](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

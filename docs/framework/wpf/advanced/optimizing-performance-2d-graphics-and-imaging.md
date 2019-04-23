@@ -13,14 +13,14 @@ helpviewer_keywords:
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
 ms.openlocfilehash: 4fca9231872a268470c9bcfa73e7a0c0a26d300c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074985"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>最佳化效能：2D 圖形和影像處理
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供各種 2D 圖形和影像處理功能，可以最佳化您的應用程式的需求。 本主題提供下列領域的效能最佳化相關資訊。  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供各種 2D 圖形和影像處理功能，可以針對您的應用程式需求最佳化。 本主題提供下列領域的效能最佳化相關資訊。  
 
 <a name="Drawing_and_Shapes"></a>   
 ## <a name="drawing-and-shapes"></a>繪圖和圖形  
@@ -28,7 +28,7 @@ ms.locfileid: "59074985"
   
  A<xref:System.Windows.Shapes.Shape>可讓您將圖形描繪至螢幕。 因為它們衍生自<xref:System.Windows.FrameworkElement>類別，<xref:System.Windows.Shapes.Shape>物件都可以使用在面板和大部分的控制項。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供數個層級的圖形和轉譯服務存取權。 在最上層的<xref:System.Windows.Shapes.Shape>物件很容易使用，並提供許多實用的功能，例如版面配置和事件處理。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供數個立即可用的 shape 物件。 所有的 shape 物件繼承自<xref:System.Windows.Shapes.Shape>類別。 可用的 shape 物件包含<xref:System.Windows.Shapes.Ellipse>， <xref:System.Windows.Shapes.Line>， <xref:System.Windows.Shapes.Path>， <xref:System.Windows.Shapes.Polygon>， <xref:System.Windows.Shapes.Polyline>，和<xref:System.Windows.Shapes.Rectangle>。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了數層的圖形和轉譯服務存取權。 在最上層的<xref:System.Windows.Shapes.Shape>物件很容易使用，並提供許多實用的功能，例如版面配置和事件處理。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 則提供數個立即可用的 Shape 物件。 所有的 shape 物件繼承自<xref:System.Windows.Shapes.Shape>類別。 可用的 shape 物件包含<xref:System.Windows.Shapes.Ellipse>， <xref:System.Windows.Shapes.Line>， <xref:System.Windows.Shapes.Path>， <xref:System.Windows.Shapes.Polygon>， <xref:System.Windows.Shapes.Polyline>，和<xref:System.Windows.Shapes.Rectangle>。  
   
  <xref:System.Windows.Media.Drawing> 物件，相反地，非衍生自<xref:System.Windows.FrameworkElement>類別，並提供輕量型實作呈現圖形、 影像和文字。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "59074985"
   
 <a name="Images"></a>   
 ## <a name="images"></a>影像  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 映像在舊版的映像的功能提供顯著的改進[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]。 以往，影像處理功能 (例如顯示點陣圖或使用通用控制項上的影像) 主要是由 Microsoft Windows 圖形裝置介面 (GDI) 或 Microsoft Windows GDI+ 應用程式開發介面 (API) 進行處理。 這些 API 提供基本影像處理功能，但無法支援轉碼器擴充性和高畫質影像等功能。 WPF 影像處理 API 的設計目的是克服 GDI 和 GDI+ 的缺點，並提供一組新的 API 以在應用程式內顯示及使用影像。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 影像處理功能比舊版 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 影像處理功能有更大幅的改良。 以往，影像處理功能 (例如顯示點陣圖或使用通用控制項上的影像) 主要是由 Microsoft Windows 圖形裝置介面 (GDI) 或 Microsoft Windows GDI+ 應用程式開發介面 (API) 進行處理。 這些 API 提供基本影像處理功能，但無法支援轉碼器擴充性和高畫質影像等功能。 WPF 影像處理 API 的設計目的是克服 GDI 和 GDI+ 的缺點，並提供一組新的 API 以在應用程式內顯示及使用影像。  
   
  使用影像時，請考慮下列建議事項以取得較佳的效能：  
   
@@ -106,7 +106,7 @@ ms.locfileid: "59074985"
 - [版面配置與設計](optimizing-performance-layout-and-design.md)
 - [物件行為](optimizing-performance-object-behavior.md)
 - [應用程式資源](optimizing-performance-application-resources.md)
-- [文字](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [資料繫結](optimizing-performance-data-binding.md)
 - [其他效能建議](optimizing-performance-other-recommendations.md)
-- [動畫秘訣和訣竅](../graphics-multimedia/animation-tips-and-tricks.md)
+- [動畫祕訣和訣竅](../graphics-multimedia/animation-tips-and-tricks.md)

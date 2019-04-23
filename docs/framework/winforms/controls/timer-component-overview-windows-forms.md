@@ -8,10 +8,10 @@ helpviewer_keywords:
 - timers [Windows Forms], about timers
 ms.assetid: e672c05b-a8b6-4b26-9e4d-9223aa9e3873
 ms.openlocfilehash: 5bef0ba87d6a496acf7575965128be2b20b437ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074205"
 ---
 # <a name="timer-component-overview-windows-forms"></a>Timer 元件概觀 (Windows Form)
@@ -24,4 +24,4 @@ Windows Form <xref:System.Windows.Forms.Timer> 是定期引發事件的元件。
 
 - <xref:System.Windows.Forms.Timer>
 - [Timer 元件](timer-component-windows-forms.md)
-- [Windows Form Timer 元件的 Interval 屬性限制](limitations-of-the-timer-component-interval-property.md)
+- [Windows Forms Timer 元件的 Interval 屬性限制](limitations-of-the-timer-component-interval-property.md)

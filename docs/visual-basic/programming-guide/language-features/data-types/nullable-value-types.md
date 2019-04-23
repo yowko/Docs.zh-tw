@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
 ms.openlocfilehash: d17d2ad3fd99c6d563c21ddd646396ccb1c1ca48
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58921308"
 ---
 # <a name="nullable-value-types-visual-basic"></a>可為 Null 的實值類型 (Visual Basic)
@@ -109,10 +109,10 @@ Null 值可用於指出為未定義或未知的值。 如果`numberOfChildren`�
 
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
-- [用可為 Null 的類型](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [使用可為 Null 的型別](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [資料類型](index.md)
 - [Value Types and Reference Types](value-types-and-reference-types.md)
-- [資料類型疑難排解](troubleshooting-data-types.md)
+- [資料類型的疑難排解](troubleshooting-data-types.md)
 - [使用 TableAdapter 填入資料集](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)
 - [If 運算子](../../../language-reference/operators/if-operator.md)
 - [區域類型推斷](../variables/local-type-inference.md)

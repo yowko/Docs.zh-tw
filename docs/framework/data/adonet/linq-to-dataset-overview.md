@@ -3,10 +3,10 @@ title: LINQ to DataSet 概觀
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
 ms.openlocfilehash: 635f1c17da40095990c238912f9e09ad398e6637
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073672"
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ to DataSet 概觀
@@ -14,7 +14,7 @@ ms.locfileid: "59073672"
   
  雖然 <xref:System.Data.DataSet> 具有上述優點，但是它的查詢功能仍然有限。 <xref:System.Data.DataTable.Select%2A> 方法可用於篩選和排序，而 <xref:System.Data.DataRow.GetChildRows%2A> 和 <xref:System.Data.DataRow.GetParentRow%2A> 方法可用於階層導覽。 不過，若要進行更複雜的作業，開發人員就必須撰寫自訂查詢。 這樣做可能會產生執行效能較低而且難以維護的應用程式。  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 可讓它更方便且快速地查詢快取中的資料<xref:System.Data.DataSet>物件。 這些查詢是以程式語言本身表示，而非以內嵌於應用程式程式碼中的字串常值 (String Literal) 表示。 這表示，開發人員不需要學習不同的查詢語言。 此外，[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]可讓 Visual Studio 開發人員更有效率地工作，因為 Visual Studio IDE 提供編譯時間語法檢查、 靜態型別和 IntelliSense 支援[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 也可以用來查詢已合併一或多個資料來源的資料。 這點可以實現許多資料表示和處理方式需要彈性的案例。 尤其，一般報表、分析和商務智慧應用程式都需要這種管理方法。  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 可讓您更方便且更快速地查詢在 <xref:System.Data.DataSet> 物件中快取的資料。 這些查詢是以程式語言本身表示，而非以內嵌於應用程式程式碼中的字串常值 (String Literal) 表示。 這表示，開發人員不需要學習不同的查詢語言。 此外，[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]可讓 Visual Studio 開發人員更有效率地工作，因為 Visual Studio IDE 提供編譯時間語法檢查、 靜態型別和 IntelliSense 支援[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 也可用來查詢已經從一個或多個資料來源合併的資料。 這點可以實現許多資料表示和處理方式需要彈性的案例。 尤其，一般報表、分析和商務智慧應用程式都需要這種管理方法。  
   
 ## <a name="querying-datasets-using-linq-to-dataset"></a>使用 LINQ to DataSet 來查詢 DataSet  
  您必須先填入 (Populate) <xref:System.Data.DataSet>，然後才能開始使用 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 來查詢 <xref:System.Data.DataSet> 物件。 有數種方式將資料載入<xref:System.Data.DataSet>，例如使用<xref:System.Data.Common.DataAdapter>類別或[LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)。 將資料載入之後<xref:System.Data.DataSet>物件時，您可以開始查詢它。 使用來編寫查詢[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]類似於使用[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]針對其他[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-已啟用資料來源。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 可以針對單一資料表中執行查詢<xref:System.Data.DataSet>或針對一個以上的資料表，使用<xref:System.Linq.Enumerable.Join%2A>和<xref:System.Linq.Enumerable.GroupJoin%2A>標準查詢運算子。  
@@ -30,7 +30,7 @@ ms.locfileid: "59073672"
   
 ## <a name="see-also"></a>另請參閱
 
-- [查詢 DataSet](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
-- [Language Integrated Query (LINQ)C#](../../../csharp/programming-guide/concepts/linq/index.md)
-- [語言整合式的查詢 (LINQ)-Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [查詢資料集](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
+- [Language-Integrated Query (LINQ) - C#](../../../csharp/programming-guide/concepts/linq/index.md)
+- [Language-Integrated Query (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)

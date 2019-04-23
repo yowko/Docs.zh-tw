@@ -3,10 +3,10 @@ title: 匯入宣告：Open 關鍵字
 description: 深入了解F#匯入宣告，以及如何指定模組或命名空間不需使用完整限定的名稱，您可以參考其項目。
 ms.date: 04/04/2019
 ms.openlocfilehash: ad64190c3243c57a185f3b864270fca80590f079
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59054997"
 ---
 # <a name="import-declarations-the-open-keyword"></a>匯入宣告：`open`關鍵字
@@ -24,7 +24,7 @@ open module-or-namespace-name
 
 ## <a name="remarks"></a>備註
 
-使用完整的命名空間或模組路徑來參考程式碼每次可以建立很難寫入、 讀取和維護的程式碼。 相反地，您可以使用`open`關鍵字常用模組及命名空間，因此當您參考該模組或命名空間的成員，您可以使用名稱的簡短形式，而不是完整限定名稱。 這個關鍵字是類似於`using`C# 關鍵字`using namespace`Visual c + + 和`Imports`Visual Basic 中。
+使用完整的命名空間或模組路徑來參考程式碼每次可以建立很難寫入、 讀取和維護的程式碼。 相反地，您可以使用`open`關鍵字常用模組及命名空間，因此當您參考該模組或命名空間的成員，您可以使用名稱的簡短形式，而不是完整限定名稱。 這個關鍵字是類似`using`關鍵字，在C#，`using namespace`視覺效果中C++，和`Imports`Visual Basic 中。
 
 模組或命名空間提供必須在相同的專案或參考的專案或組件中。 如果不是，您可以將參考加入專案，或使用`-reference`命令`-`列選項 (或其縮寫， `-r`)。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。
 

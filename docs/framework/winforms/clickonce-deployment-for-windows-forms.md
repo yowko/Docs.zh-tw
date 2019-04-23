@@ -7,10 +7,10 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
 ms.openlocfilehash: 1212096422f5bb10c7b781228dc54c8790ac97ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072840"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Windows Form 的 ClickOnce 部署
@@ -41,16 +41,16 @@ ms.locfileid: "59072840"
  [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  示範如何使用命令列和 SDK 工具來部署 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]，而不使用 Visual Studio。  
   
- [HOW TO：加入用戶端電腦中的受信任的發行者，ClickOnce 應用程式](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
+ [如何：將信任發行者新增到 ClickOnce 應用程式的用戶端電腦](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
  示範信任的應用程式部署所需之用戶端電腦的一次組態。  
   
- [HOW TO：指定部署更新的替代位置](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
+ [如何：指定部署更新的替代位置](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
  示範如何使用 SDK 工具設定 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 應用程式，來檢查其他位置是否有新版應用程式。  
   
  [逐步解說：依需求以 ClickOnce 部署 API 下載組件](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
  示範如何使用應用程式開發介面呼叫，在應用程式第一次嘗試載入組件時擷取組件。  
   
- [HOW TO：在線上 ClickOnce 應用程式中擷取查詢字串資訊](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  
+ [如何：在線上 ClickOnce 應用程式中擷取查詢字串資訊](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  
  示範如何從用來執行 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 應用程式的 URL 擷取參數。  
   
  [ClickOnce 快取概觀](/visualstudio/deployment/clickonce-cache-overview)  
@@ -59,7 +59,7 @@ ms.locfileid: "59072840"
  [在 ClickOnce 應用程式中存取本機和遠端資料](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)  
  描述如何從 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 應用程式存取本機資料檔案和遠端資料來源。  
   
- [HOW TO：在 ClickOnce 應用程式中納入資料檔案](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
+ [如何：在 ClickOnce 應用程式中納入資料檔案](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
  示範如何標記檔案，以便在 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 資料目錄中使用。  
   
 ## <a name="see-also"></a>另請參閱
@@ -69,4 +69,4 @@ ms.locfileid: "59072840"
 - [從命令列建置 ClickOnce 應用程式](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
 - [偵錯使用 System.Deployment.Application 的 ClickOnce 應用程式](/visualstudio/deployment/debugging-clickonce-applications-that-use-system-deployment-application)
 - [使用 ClickOnce 部署 COM 元件](/visualstudio/deployment/deploying-com-components-with-clickonce)
-- [HOW TO：使用發行精靈發行 ClickOnce 應用程式](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)
+- [如何：使用 [發佈精靈] 發佈 ClickOnce 應用程式](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)

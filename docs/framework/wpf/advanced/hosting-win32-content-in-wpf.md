@@ -7,10 +7,10 @@ helpviewer_keywords:
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
 ms.openlocfilehash: 8773cac1e421ecdca036e88d79797dae16f72b17
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055075"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>在 WPF 中裝載 Win32 內容
@@ -370,4 +370,4 @@ public partial class Window1 : Window {
 
 ## <a name="see-also"></a>另請參閱
 
-- [WPF 和 Win32 互通](wpf-and-win32-interoperation.md)
+- [WPF 和 Win32 交互操作](wpf-and-win32-interoperation.md)
