@@ -13,10 +13,10 @@ helpviewer_keywords:
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
 ms.openlocfilehash: 050af6d10faec3dd09998349dcf96e96ea0f9201
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306180"
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>HOW TO：使用 Windows Forms FolderBrowserDialog 元件選擇資料夾
@@ -69,5 +69,5 @@ ms.locfileid: "59306180"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [FolderBrowserDialog 元件概觀 (Windows Form)](folderbrowserdialog-component-overview-windows-forms.md)
+- [FolderBrowserDialog 元件概觀 (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)
 - [FolderBrowserDialog 元件](folderbrowserdialog-component-windows-forms.md)

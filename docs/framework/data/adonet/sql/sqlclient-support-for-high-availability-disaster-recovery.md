@@ -3,10 +3,10 @@ title: 高可用性、嚴重損壞修復的 SqlClient 支援
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307588"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>高可用性、嚴重損壞修復的 SqlClient 支援
@@ -63,7 +63,7 @@ ms.locfileid: "59307588"
   
 2. 如果應用程式使用 `ApplicationIntent=ReadWrite` (討論如下)，且次要複本位置設定為唯讀存取。  
   
- <xref:System.Data.SqlClient.SqlDependency> 不支援在唯讀的次要複本上。  
+ 唯讀次要複本不支援 <xref:System.Data.SqlClient.SqlDependency>。  
   
  如果主要複本設定為拒絕唯讀工作負載，且連接字串包含 `ApplicationIntent=ReadOnly`，連接將會失敗。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "59307588"
   
  `ApplicationIntent` 關鍵字不適用於舊式的唯讀資料庫。  
   
- 資料庫可以允許或不允許目標 AlwaysOn 資料庫上的讀取工作負載。 (這藉`ALLOW_CONNECTIONS`子句`PRIMARY_ROLE`和`SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]陳述式。)  
+ 資料庫可以允許或不允許目標 AlwaysOn 資料庫上的讀取工作負載。 (此作業會透過 `ALLOW_CONNECTIONS` 和 `PRIMARY_ROLE``SECONDARY_ROLE` 陳述式的 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 子句來完成)。  
   
  `ApplicationIntent` 關鍵字可用於啟用唯讀路由。  
   
@@ -99,4 +99,4 @@ ms.locfileid: "59307588"
 ## <a name="see-also"></a>另請參閱
 
 - [SQL Server 功能和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

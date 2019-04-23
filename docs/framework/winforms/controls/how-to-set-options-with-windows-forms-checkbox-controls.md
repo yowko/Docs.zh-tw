@@ -13,10 +13,10 @@ helpviewer_keywords:
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
 ms.openlocfilehash: 881996563acef36a1981ca6236c155b8fc56ef0a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307299"
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>HOW TO：使用 Windows Forms CheckBox 控制項設定選項
@@ -69,5 +69,5 @@ Windows Form<xref:System.Windows.Forms.CheckBox>控制項用來授權使用者 T
 
 - <xref:System.Windows.Forms.CheckBox>
 - [CheckBox 控制項概觀](checkbox-control-overview-windows-forms.md)
-- [HOW TO：回應 Windows Forms 核取方塊的按一下動作](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [如何：回應 Windows Form CheckBox 按一下動作](how-to-respond-to-windows-forms-checkbox-clicks.md)
 - [CheckBox 控制項](checkbox-control-windows-forms.md)

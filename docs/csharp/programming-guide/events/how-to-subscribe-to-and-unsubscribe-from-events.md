@@ -1,5 +1,5 @@
 ---
-title: 作法：訂閱及取消訂閱事件 - C# 程式設計手冊
+title: HOW TO：訂閱及取消訂閱事件 - C# 程式設計手冊
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
 ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306595"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>作法：訂閱及取消訂閱事件 (C# 程式設計手冊)
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>HOW TO：訂閱及取消訂閱事件 (C# 程式設計手冊)
 如果您想要撰寫在引發事件時所呼叫的自訂程式碼，您可以訂閱由其他類別發行的事件。 例如，您可以訂閱某個按鈕的 `click` 事件，讓應用程式在使用者按下該按鈕時執行某項動作。  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>使用 Visual Studio IDE 訂閱事件  
@@ -102,7 +102,7 @@ ms.locfileid: "59306595"
 ## <a name="see-also"></a>另請參閱
 
 - [事件](../../../csharp/programming-guide/events/index.md)
-- [Event - 事件](../../../csharp/language-reference/keywords/event.md)
-- [作法：發佈符合 .NET Framework 方針的事件](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [event](../../../csharp/language-reference/keywords/event.md)
+- [如何：發行符合 .NET Framework 指導方針的事件](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [-= 運算子 (C# 參考)](../../language-reference/operators/subtraction-assignment-operator.md)
 - [+= 運算子](../../../csharp/language-reference/operators/addition-assignment-operator.md)

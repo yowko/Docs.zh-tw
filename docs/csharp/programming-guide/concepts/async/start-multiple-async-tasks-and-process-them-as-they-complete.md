@@ -2,12 +2,12 @@
 title: 在非同步工作完成時進行處理
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: ec5729eaa8d63eb18b1ac4dea5820cbf834d001b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 335eb5dce74a7f0a2b8af550250105d460212b6a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152355"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304853"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>啟動多項非同步工作並在它們完成時進行處理 (C#)
 
@@ -20,22 +20,22 @@ ms.locfileid: "53152355"
 
 ## <a name="download-an-example-solution"></a>下載範例解決方案
 
-您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。
+您可以從 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。
 
 > [!TIP]
 > 如果您不想要下載專案，可以檢閱本主題結尾的 MainWindow.xaml.cs 檔案。
 
-1.  從 ZIP 檔案中解壓縮您下載的檔案，然後啟動 Visual Studio。
+1. 從 ZIP 檔案中解壓縮您下載的檔案，然後啟動 Visual Studio。
 
-2.  在功能表列上選擇 [檔案] >  [開啟] > [專案/解決方案]。
+2. 在功能表列上選擇 [檔案] >  [開啟] > [專案/解決方案]。
 
-3.  在 [開啟專案] 對話方塊中，開啟您已下載的範例程式碼所在的資料夾，然後開啟 AsyncFineTuningCS 的解決方案 (.sln) 檔案。
+3. 在 [開啟專案] 對話方塊中，開啟您已下載的範例程式碼所在的資料夾，然後開啟 AsyncFineTuningCS 的解決方案 (.sln) 檔案。
 
-4.  在方案總管中，開啟 **ProcessTasksAsTheyFinish** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。
+4. 在方案總管中，開啟 **ProcessTasksAsTheyFinish** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。
 
-5.  選擇 **F5** 鍵以執行程式 (或按 **Ctrl**+**F5** 鍵以執行程式而不進行偵錯)。
+5. 選擇 **F5** 鍵以執行程式 (或按 **Ctrl**+**F5** 鍵以執行程式而不進行偵錯)。
 
-6.  執行專案數次，確認所下載的長度不一定會以相同的順序出現。
+6. 執行專案數次，確認所下載的長度不一定會以相同的順序出現。
 
 ## <a name="create-the-program-yourself"></a>自行建立程式
 
@@ -87,7 +87,7 @@ IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessUR
 
 下列程式碼是範例的 MainWindow.xaml.cs 檔案的完整文字。 星號會標記已針對此範例新增的項目。 同時請注意，您必須新增 <xref:System.Net.Http> 的參考。
 
-您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。
+您可以從 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。
 
 ```csharp
 using System;
@@ -230,4 +230,4 @@ namespace ProcessTasksAsTheyFinish
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [微調非同步應用程式 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [使用 Async 和 Await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [非同步範例：微調應用程式 (英文)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [非同步範例：微調您的應用程式](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - splash screen [WPF]
 ms.assetid: d70a25c4-5fb9-4c27-b01d-b1b8ef39b3fd
 ms.openlocfilehash: 3120ee64d65822d323800a89466c6b707169aaaa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307472"
 ---
 # <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>HOW TO：將啟動顯示畫面新增至 WPF 應用程式
@@ -47,4 +47,4 @@ ms.locfileid: "59307472"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.SplashScreen>
-- [HOW TO：將現有的項目加入至專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))
+- [如何：將現有的項目加入至專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))

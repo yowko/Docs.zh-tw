@@ -3,10 +3,10 @@ title: 自訂追蹤
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
 ms.openlocfilehash: 7e275af046013dcd76cb61c25ace1d96fd7e4b93
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307605"
 ---
 # <a name="custom-tracking"></a>自訂追蹤
@@ -18,7 +18,7 @@ ms.locfileid: "59307605"
 |元件|描述|
 |---------------|-----------------|
 |追蹤執行階段|提供基礎結構以發出追蹤記錄。|
-|追蹤參與者|耗用追蹤記錄。 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 隨附追蹤參與者寫入追蹤記錄當做事件追蹤的 Windows (ETW) 事件。|
+|追蹤參與者|耗用追蹤記錄。 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 隨附追蹤參與者，可將追蹤記錄當做 Windows 事件追蹤 (ETW) 事件撰寫。|
 |追蹤設定檔|篩選機制，可讓追蹤參與者訂閱從工作流程執行個體發出之追蹤記錄的子集。|
 
  下表詳細說明工作流程執行階段發出的追蹤記錄。

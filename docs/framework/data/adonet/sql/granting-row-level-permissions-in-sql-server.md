@@ -2,12 +2,12 @@
 title: 在 SQL Server 中授與資料列層級權限
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: acd4a8962e0c4cd3504b9912a4de66d2a461805a
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.openlocfilehash: 891b5114551c5784b11504f2463525087125131f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844765"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973079"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>在 SQL Server 中授與資料列層級權限
 
@@ -23,35 +23,35 @@ ms.locfileid: "57844765"
 
 - 啟用資料列層級篩選：
 
-    - 如果您使用 SQL Server 2016 (含) 以上版本或 [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)，請建立一個安全性原則將述詞加入資料表中，以限制傳回的資料列必須符合目前的資料庫使用者 (使用 CURRENT_USER() 內建函式) 或目前的登入名稱 (使用 SUSER_SNAME() 內建函式)：
+  - 如果您使用 SQL Server 2016 (含) 以上版本或 [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)，請建立一個安全性原則將述詞加入資料表中，以限制傳回的資料列必須符合目前的資料庫使用者 (使用 CURRENT_USER() 內建函式) 或目前的登入名稱 (使用 SUSER_SNAME() 內建函式)：
 
-        ```sql
-        CREATE SCHEMA Security
-        GO
+      ```sql
+      CREATE SCHEMA Security
+      GO
 
-        CREATE FUNCTION Security.userAccessPredicate(@UserName sysname)
-            RETURNS TABLE
-            WITH SCHEMABINDING
-        AS
-            RETURN SELECT 1 AS accessResult
-            WHERE @UserName = SUSER_SNAME()
-        GO
+      CREATE FUNCTION Security.userAccessPredicate(@UserName sysname)
+          RETURNS TABLE
+          WITH SCHEMABINDING
+      AS
+          RETURN SELECT 1 AS accessResult
+          WHERE @UserName = SUSER_SNAME()
+      GO
 
-        CREATE SECURITY POLICY Security.userAccessPolicy
-            ADD FILTER PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable,
-            ADD BLOCK PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable
-        GO
-        ```
+      CREATE SECURITY POLICY Security.userAccessPolicy
+          ADD FILTER PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable,
+          ADD BLOCK PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable
+      GO
+      ```
 
-    - 如果您使用 SQL Server 2016 之前的版本，可以透過檢視來達到類似的功能：
+  - 如果您使用 SQL Server 2016 之前的版本，可以透過檢視來達到類似的功能：
 
-        ```sql
-        CREATE VIEW vw_MyTable
-        AS
-            RETURN SELECT * FROM MyTable
-            WHERE UserName = SUSER_SNAME()
-        GO
-        ```
+      ```sql
+      CREATE VIEW vw_MyTable
+      AS
+          RETURN SELECT * FROM MyTable
+          WHERE UserName = SUSER_SNAME()
+      GO
+      ```
 
 - 建立預存程序來選取、插入、更新及刪除資料。 如果篩選是由安全性原則制定，預存程序應該在基底資料表上直接執行這些作業；如果篩選是由檢視制定，預存程序應該改為對檢視執行。 安全性原則或檢視會自動篩選使用者查詢所傳回或修改的資料列，而預存程序會提供更嚴格的安全性界限，以防止具有直接查詢存取權的使用者成功執行可能推斷出已篩選資料的查詢。
 

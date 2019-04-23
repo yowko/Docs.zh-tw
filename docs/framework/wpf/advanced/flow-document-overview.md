@@ -10,10 +10,10 @@ helpviewer_keywords:
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
 ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303488"
 ---
 # <a name="flow-document-overview"></a>非固定格式文件概觀
@@ -154,7 +154,7 @@ ms.locfileid: "59303488"
   
  **注意：** 從開始[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]，則<xref:System.Windows.Documents.Run.Text%2A>屬性<xref:System.Windows.Documents.Run>物件是相依性屬性。 您可以繫結<xref:System.Windows.Documents.Run.Text%2A>屬性到資料來源，例如<xref:System.Windows.Controls.TextBlock>。 <xref:System.Windows.Documents.Run.Text%2A>屬性完全支援單向繫結。 <xref:System.Windows.Documents.Run.Text%2A>屬性也支援雙向繫結，除了<xref:System.Windows.Controls.RichTextBox>。 如需範例，請參閱 <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>。  
   
- **範圍**  
+ **Span**  
   
  <xref:System.Windows.Documents.Span> 一起分組其他內嵌內容項目。 內的內容套用任何固有的轉譯<xref:System.Windows.Documents.Span>項目。 不過，項目繼承自<xref:System.Windows.Documents.Span>包括<xref:System.Windows.Documents.Hyperlink>， <xref:System.Windows.Documents.Bold>，<xref:System.Windows.Documents.Italic>和<xref:System.Windows.Documents.Underline>不要將格式套用至文字。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "59303488"
   
  <xref:System.Windows.Documents.Figure> 和<xref:System.Windows.Documents.Floater>數種方式不同，並且用於不同的案例。  
   
- **圖：**  
+ **圖表：**  
   
 -   可以位於：您可以設定其水平和垂直錨點上，以將它固定相對於頁面、 內容、 資料行或段落。 您也可以使用其<xref:System.Windows.Documents.Figure.HorizontalOffset%2A>和<xref:System.Windows.Documents.Figure.VerticalOffset%2A>屬性來指定任意位移。  
   
@@ -202,7 +202,7 @@ ms.locfileid: "59303488"
   
 -   不分頁︰如果內的內容<xref:System.Windows.Documents.Figure>未符合內部<xref:System.Windows.Documents.Figure>，它會轉譯任何符合最適大小，其餘的內容會遺失  
   
- **浮動：**  
+ **Floater：**  
   
 -   無法定位，但會轉譯任何可用的空間。 您不能設定位移或錨點<xref:System.Windows.Documents.Floater>。  
   
@@ -348,11 +348,11 @@ ms.locfileid: "59303488"
   
 ## <a name="see-also"></a>另請參閱
 
-- [文字](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [WPF 中的印刷樣式](typography-in-wpf.md)
-- [HOW TO 主題](flow-content-elements-how-to-topics.md)
+- [HOW-TO 主題](flow-content-elements-how-to-topics.md)
 - [TextElement 內容模型概觀](textelement-content-model-overview.md)
 - [RichTextBox 概觀](../controls/richtextbox-overview.md)
 - [WPF 中的文件](documents-in-wpf.md)
 - [資料表概觀](table-overview.md)
-- [附註概觀](annotations-overview.md)
+- [註釋概觀](annotations-overview.md)

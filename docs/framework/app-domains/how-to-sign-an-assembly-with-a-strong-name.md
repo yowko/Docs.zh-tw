@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用強式名稱簽署組件
+title: 作法：使用強式名稱簽署組件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bd250caae1bd98d238f8d99702a97f0cdbc7448
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 5580b6d8af7319397ad7eb6416941c2be0dcdb76
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826898"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303416"
 ---
-# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>HOW TO：使用強式名稱簽署組件
+# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>作法：使用強式名稱簽署組件
 以下是幾種以強式名稱簽署組件的方式：  
   
 -   使用 Visual Studio 中，專案之 [ **屬性** ] 對話方塊中的 [ **簽署** ] 索引標籤。 這是最簡單、最方便以強式名稱簽署組件的方式。  
@@ -35,13 +35,13 @@ ms.locfileid: "55826898"
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>若要使用 Visual Studio 建立組件並以強式名稱簽署組件  
   
-1.  在 **方案總管**中，開啟專案的捷徑功能表，然後選擇 [屬性] 。  
+1. 在 **方案總管**中，開啟專案的捷徑功能表，然後選擇 [屬性] 。  
   
-2.  選擇 [ **簽署** ] 索引標籤。  
+2. 選擇 [ **簽署** ] 索引標籤。  
   
-3.  選取 [簽署組件] 方塊。  
+3. 選取 [簽署組件] 方塊。  
   
-4.  在 [選擇強式名稱金鑰檔] 方塊中，選擇 [\<瀏覽...>]，然後巡覽至金鑰檔。 若要建立新的金鑰檔，請選擇 [\<新增...>]，並且在 [建立強式名稱金鑰] 對話方塊中輸入其名稱。  
+4. 在 [選擇強式名稱金鑰檔] 方塊中，選擇 [\<瀏覽...>]，然後巡覽至金鑰檔。 若要建立新的金鑰檔，請選擇 [\<新增...>]，並且在 [建立強式名稱金鑰] 對話方塊中輸入其名稱。  
   
 > [!NOTE]
 >  若要[延遲簽署組件](../../../docs/framework/app-domains/delay-sign-assembly.md)，請選擇公開金鑰檔案。  
@@ -73,9 +73,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 #### <a name="to-sign-an-assembly-with-a-strong-name-by-using-attributes"></a>若要使用屬性以強式名稱簽署組件  
   
-1.  將 <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> 或 <xref:System.Reflection.AssemblyKeyNameAttribute> 屬性加入至您的原始程式碼檔，並指定容器或檔案名稱，其中包含以強式名稱簽署組件時所使用的金鑰組。  
+1. 將 <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> 或 <xref:System.Reflection.AssemblyKeyNameAttribute> 屬性加入至您的原始程式碼檔，並指定容器或檔案名稱，其中包含以強式名稱簽署組件時所使用的金鑰組。  
   
-2.  以一般方式編譯原始程式碼檔。  
+2. 以一般方式編譯原始程式碼檔。  
   
 > [!NOTE]
 >  C# 和 Visual Basic 編譯器在原始程式碼中遇到 <xref:System.Reflection.AssemblyKeyFileAttribute> 或 <xref:System.Reflection.AssemblyKeyNameAttribute> 屬性時，會發出編譯器警告 (分別為 CS1699 和 BC41008)。 您可以忽略這些警告。  
@@ -101,9 +101,10 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [如何：建立公開/私密金鑰組](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [作法：建立公開/私密金鑰組](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
 - [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [延遲簽署組件](../../../docs/framework/app-domains/delay-sign-assembly.md)
 - [管理組件和資訊清單簽署](/visualstudio/ide/managing-assembly-and-manifest-signing)
-- [專案設計工具、簽署頁面](/visualstudio/ide/reference/signing-page-project-designer)
+- [專案設計工具、簽署頁](/visualstudio/ide/reference/signing-page-project-designer)

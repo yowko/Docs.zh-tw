@@ -3,10 +3,10 @@ title: FLATTEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 1a670c63-0a29-4738-80e6-101f66af05c3
 ms.openlocfilehash: 4f9a6315fc9cc2f295c21cc5fb7e1007e47796b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304568"
 ---
 # <a name="flatten-entity-sql"></a>FLATTEN (Entity SQL)
@@ -23,7 +23,7 @@ FLATTEN ( collection )
  任何傳回值集合的集合以便扁平化成為單一集合的有效運算式。  
   
 ## <a name="remarks"></a>備註  
- `FLATTEN` 是其中一個[!INCLUDE[esql](../../../../../../includes/esql-md.md)]設定運算子。 所有 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 設定運算子都會從左到右評估。 請參閱[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)的優先順序資訊[!INCLUDE[esql](../../../../../../includes/esql-md.md)]設定運算子。  
+ `FLATTEN` 是其中一個 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 設定運算子。 所有 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 設定運算子都會從左到右評估。 請參閱[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)的優先順序資訊[!INCLUDE[esql](../../../../../../includes/esql-md.md)]設定運算子。  
   
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢會使用 `FLATTEN` 運算子，將集合轉換成扁平化集合。 若要編譯及執行此查詢，請遵循以下步驟：  

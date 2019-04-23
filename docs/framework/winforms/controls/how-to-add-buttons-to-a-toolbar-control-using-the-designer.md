@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
 ms.openlocfilehash: 509aa0b03dbbb370384fb83e0d8e5471fc2cb819
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306185"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>HOW TO：使用設計工具將按鈕新增至 ToolBar 控制項
@@ -50,7 +50,7 @@ ms.locfileid: "59306185"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ToolBar>
-- [HOW TO：定義工具列按鈕的圖示](how-to-define-an-icon-for-a-toolbar-button.md)
-- [HOW TO：觸發工具列按鈕的功能表事件](how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [ToolBar 控制項概觀](toolbar-control-overview-windows-forms.md)
+- [如何：定義工具列按鈕的圖示](how-to-define-an-icon-for-a-toolbar-button.md)
+- [如何：觸發程序的工具列按鈕的功能表事件](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [工具列控制項概觀](toolbar-control-overview-windows-forms.md)
 - [ToolBar 控制項](toolbar-control-windows-forms.md)

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
 ms.openlocfilehash: 0f5afde1cc0be772baff373c84c82f81df284b9b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303982"
 ---
 # <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>HOW TO：觸發工具列按鈕的功能表事件
@@ -137,6 +137,6 @@ ms.locfileid: "59303982"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ToolBar>
-- [HOW TO：將按鈕新增至 ToolBar 控制項](how-to-add-buttons-to-a-toolbar-control.md)
-- [HOW TO：定義工具列按鈕的圖示](how-to-define-an-icon-for-a-toolbar-button.md)
+- [如何：將按鈕加入至 ToolBar 控制項](how-to-add-buttons-to-a-toolbar-control.md)
+- [如何：定義工具列按鈕的圖示](how-to-define-an-icon-for-a-toolbar-button.md)
 - [ToolBar 控制項](toolbar-control-windows-forms.md)

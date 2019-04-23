@@ -14,10 +14,10 @@ helpviewer_keywords:
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
 ms.openlocfilehash: 52c18b959361079aac6b95dc5d4584bf464a306a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304515"
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>HOW TO：使用 Windows Forms NotifyIcon 元件將應用程式圖示新增至工作列
@@ -75,6 +75,6 @@ Windows Form<xref:System.Windows.Forms.NotifyIcon>元件會顯示單一圖示在
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [HOW TO：建立捷徑功能表與 Windows Forms NotifyIcon 元件的關聯](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
+- [如何：使用 Windows Forms NotifyIcon 元件關聯的捷徑功能表](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
 - [NotifyIcon 元件](notifyicon-component-windows-forms.md)
 - [NotifyIcon 元件概觀](notifyicon-component-overview-windows-forms.md)

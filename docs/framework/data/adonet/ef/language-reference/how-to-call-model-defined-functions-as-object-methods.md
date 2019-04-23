@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
 ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304827"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>HOW TO：將模型定義函式當作物件方法來呼叫
@@ -44,7 +44,7 @@ ms.locfileid: "59304827"
 2. 呼叫方法做為自訂類別上之靜態方法的成員  
   
 ## <a name="example"></a>範例  
- **呼叫模型定義函式做為 ObjectContext 物件上的方法**  
+ **做為 ObjectContext 物件上的方法中呼叫模型定義函式**  
   
  下列範例示範如何呼叫模型定義函式做為 <xref:System.Data.Objects.ObjectContext> 物件上的方法。 此範例會使用[AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "59304827"
  [!code-vb[DP L2E Methods on ObjectContext#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#9)]  
   
 ## <a name="example"></a>範例  
- **呼叫模型定義函式做為自訂類別上的靜態方法**  
+ **做為自訂類別上的靜態方法呼叫模型定義函式**  
   
  下一個範例示範如何呼叫模型定義函式做為自訂類別上的靜態方法。 此範例會使用[AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。  
   
@@ -107,6 +107,6 @@ ms.locfileid: "59304827"
   
 ## <a name="see-also"></a>另請參閱
 
-- [.edmx 檔概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [.edmx 檔案概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [LINQ to Entities 中的查詢](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
 - [在 LINQ to Entities 查詢中呼叫函式](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)

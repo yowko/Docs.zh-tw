@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30149
 ms.assetid: 29d1b7f4-dca7-478c-bbe7-c657f342c183
 ms.openlocfilehash: 432f089bc77928308820d7456d930fba8dc513f7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304905"
 ---
 # <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<type1 >'\<類型名稱 >' 必須實作 '\<方法名稱 >' 的介面'\<介面名稱 >'
@@ -23,7 +23,7 @@ ms.locfileid: "59304905"
   
 1. 宣告具有相同的名稱與簽章的介面中所定義的程序。 務必要包含在至少`End Function`或`End Sub`陳述式。  
   
-2. 新增`Implements`子句來結束`Function`或`Sub`陳述式。 例如：  
+2. 新增`Implements`子句來結束`Function`或`Sub`陳述式。 例如:   
   
     ```  
     Public Sub DoSomething() Implements IBaseInterface.DoSomething  

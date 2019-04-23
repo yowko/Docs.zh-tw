@@ -8,10 +8,10 @@ helpviewer_keywords:
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
 ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307453"
 ---
 # <a name="operators-c-programming-guide"></a>運算子 (C# 程式設計手冊)
@@ -91,7 +91,7 @@ ms.locfileid: "59307453"
 |x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|左移|  
 |x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|右移|  
   
- **關係和類型運算子**  
+ **關係和型別運算子**  
   
 |運算式|說明|  
 |----------------|-----------------|  
@@ -107,7 +107,7 @@ ms.locfileid: "59307453"
 |運算式|說明|  
 |----------------|-----------------|  
 |x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|等於|  
-|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|不等於|  
+|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|不相等|  
   
  **邏輯、條件和 Null 運算子**  
   
@@ -177,5 +177,5 @@ a = (b = c);
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [陳述式、運算式和運算子](../../../csharp/programming-guide/statements-expressions-operators/index.md)

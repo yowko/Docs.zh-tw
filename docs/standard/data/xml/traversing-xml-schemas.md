@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c587f4248205251824be851c135d93784e86c2f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646629"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305035"
 ---
 # <a name="traversing-xml-schemas"></a>周遊 XML 結構描述
 使用結構描述物件模型 (SOM) API 周遊 XML 結構描述，可以提供對儲存於 SOM 之項目、屬性及型別的存取權。 周遊載入到 SOM 的 XML 結構描述也是使用 SOM API 編輯 XML 結構描述的第一步。  
@@ -29,9 +29,9 @@ ms.locfileid: "54646629"
 |<xref:System.Xml.Schema.XmlSchema.AttributeGroups%2A>|<xref:System.Xml.Schema.XmlSchemaAttributeGroup>|  
 |<xref:System.Xml.Schema.XmlSchema.Groups%2A>|<xref:System.Xml.Schema.XmlSchemaGroup>|  
 |<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<xref:System.Xml.Schema.XmlSchemaExternal>、<xref:System.Xml.Schema.XmlSchemaInclude>、<xref:System.Xml.Schema.XmlSchemaImport> 或 <xref:System.Xml.Schema.XmlSchemaRedefine>|  
-|<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject> (可提供對所有全域層級項目、屬性及型別的存取權)。|  
+|<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject> (可提供對所有全域層級項目、屬性及類型的存取權)。|  
 |<xref:System.Xml.Schema.XmlSchema.Notations%2A>|<xref:System.Xml.Schema.XmlSchemaNotation>|  
-|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>, <xref:System.Xml.Schema.XmlSchemaSimpleType>, <xref:System.Xml.Schema.XmlSchemaComplexType>|  
+|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>中， <xref:System.Xml.Schema.XmlSchemaSimpleType>中， <xref:System.Xml.Schema.XmlSchemaComplexType>|  
 |<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> (提供對不屬於結構描述命名空間之屬性的存取權)|  
   
 > [!NOTE]
@@ -43,19 +43,19 @@ ms.locfileid: "54646629"
   
  該範例會按下列步驟周遊客戶結構描述。  
   
-1.  將客戶結構描述加入至新 <xref:System.Xml.Schema.XmlSchemaSet> 物件，然後編譯它。 讀取或編譯結構描述時遇到的任何結構描述驗證警告及錯誤，都會由 <xref:System.Xml.Schema.ValidationEventHandler> 委派處理。  
+1. 將客戶結構描述加入至新 <xref:System.Xml.Schema.XmlSchemaSet> 物件，然後編譯它。 讀取或編譯結構描述時遇到的任何結構描述驗證警告及錯誤，都會由 <xref:System.Xml.Schema.ValidationEventHandler> 委派處理。  
   
-2.  藉由重複處理 <xref:System.Xml.Schema.XmlSchema> 屬性，從 <xref:System.Xml.Schema.XmlSchemaSet> 擷取已編譯的 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 物件。 因為已編譯結構描述，因此可存取後結構描述編譯資訊集 (PSCI) 屬性。  
+2. 藉由重複處理 <xref:System.Xml.Schema.XmlSchema> 屬性，從 <xref:System.Xml.Schema.XmlSchemaSet> 擷取已編譯的 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 物件。 因為已編譯結構描述，因此可存取後結構描述編譯資訊集 (PSCI) 屬性。  
   
-3.  重複處理後結構描述編譯 <xref:System.Xml.Schema.XmlSchemaElement> 集合之 <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> 集合中的每個 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>，會將每個項目的名稱寫入主控台。  
+3. 重複處理後結構描述編譯 <xref:System.Xml.Schema.XmlSchemaElement> 集合之 <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> 集合中的每個 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>，會將每個項目的名稱寫入主控台。  
   
-4.  使用 `Customer` 類別，取得 <xref:System.Xml.Schema.XmlSchemaComplexType> 項目的複雜型別。  
+4. 使用 `Customer` 類別，取得 <xref:System.Xml.Schema.XmlSchemaComplexType> 項目的複雜型別。  
   
-5.  如果複雜型別具有任何屬性，請取得 <xref:System.Collections.IDictionaryEnumerator> 來列舉每個 <xref:System.Xml.Schema.XmlSchemaAttribute>，並將其名稱寫入主控台。  
+5. 如果複雜型別具有任何屬性，請取得 <xref:System.Collections.IDictionaryEnumerator> 來列舉每個 <xref:System.Xml.Schema.XmlSchemaAttribute>，並將其名稱寫入主控台。  
   
-6.  使用 <xref:System.Xml.Schema.XmlSchemaSequence> 類別，取得複雜型別的順序物件。  
+6. 使用 <xref:System.Xml.Schema.XmlSchemaSequence> 類別，取得複雜型別的順序物件。  
   
-7.  重複處理 <xref:System.Xml.Schema.XmlSchemaElement> 集合中的每個 <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType>，會將每個項目子系的名稱寫入主控台。  
+7. 重複處理 <xref:System.Xml.Schema.XmlSchemaElement> 集合中的每個 <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType>，會將每個項目子系的名稱寫入主控台。  
   
  下列是完整的程式碼範例。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "54646629"
 ## <a name="see-also"></a>另請參閱
 
 - [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [讀取及寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
 - [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)
 - [編輯 XML 結構描述](../../../../docs/standard/data/xml/editing-xml-schemas.md)
 - [併入或匯入 XML 結構描述](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)

@@ -16,10 +16,10 @@ helpviewer_keywords:
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
 ms.openlocfilehash: b869898a20008343b6c6cbe4bc7e399fc86fb232
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306049"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>HOW TO：將 Windows Forms ComboBox 或 ListBox 控制項繫結至資料
@@ -57,6 +57,6 @@ ms.locfileid: "59306049"
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [Windows Form 資料繫結](../windows-forms-data-binding.md)
-- [資料繫結和 Windows Form](../data-binding-and-windows-forms.md)
-- [用來列出選項的 Windows Form 控制項](windows-forms-controls-used-to-list-options.md)
+- [Windows Forms 資料繫結](../windows-forms-data-binding.md)
+- [資料繫結和 Windows Forms](../data-binding-and-windows-forms.md)
+- [用來列出選項的 Windows Forms 控制項](windows-forms-controls-used-to-list-options.md)

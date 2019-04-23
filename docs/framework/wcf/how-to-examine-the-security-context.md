@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
 ms.openlocfilehash: c6c36641463a45b79d437ae3910bbe7474d425cb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305100"
 ---
 # <a name="how-to-examine-the-security-context"></a>HOW TO：檢查資訊安全內容
@@ -56,5 +56,5 @@ ms.locfileid: "59305100"
   
 ## <a name="see-also"></a>另請參閱
 
-- [保護服務的安全](../../../docs/framework/wcf/securing-services.md)
+- [保護服務安全](../../../docs/framework/wcf/securing-services.md)
 - [服務身分識別和驗證](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

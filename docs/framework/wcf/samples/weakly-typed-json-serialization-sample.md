@@ -3,10 +3,10 @@ title: 弱型別 JSON 序列化範例
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
 ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303683"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>弱型別 JSON 序列化範例
@@ -58,7 +58,7 @@ ms.locfileid: "59303683"
   
  這可能會很麻煩，特別是如果用戶端必須處理一種以上的 JSON 物件型別。  
   
- 這個範例提供的 `JsonObject` 型別引入還原序列化 JSON 物件的弱式型別表示。 `JsonObject` 依賴 JSON 物件之間的自然對應以及[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]字典，以及 JSON 陣列之間的對應和[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]陣列。 下列程式碼會顯示 `JsonObject` 型別。  
+ 這個範例提供的 `JsonObject` 型別引入還原序列化 JSON 物件的弱式型別表示。 `JsonObject` 需要依賴 JSON 物件與 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 字典之間的自然對應以及 JSON 陣列與 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 陣列之間的對應。 下列程式碼會顯示 `JsonObject` 型別。  
   
 ```  
 // Instantiation of JsonObject json omitted  

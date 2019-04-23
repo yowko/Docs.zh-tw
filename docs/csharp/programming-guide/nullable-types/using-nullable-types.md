@@ -6,12 +6,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: 5e468641efd4627c887d9a980fc4ed1129196e20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef7c9c18d303131b5a1c0156be820e1d475e7ec1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658243"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306647"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>使用可為 Null 的型別 (C# 程式設計指南)
 
@@ -31,7 +31,7 @@ ms.locfileid: "54658243"
   
 - <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> 指出可為 Null 型別的執行個體是否有其基礎型別的值。
   
-- 若 <xref:System.Nullable%601.HasValue%2A> 為 `true`，則 <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> 會取得基礎型別的值。 若 <xref:System.Nullable%601.HasValue%2A> 為 `false`，則 <xref:System.Nullable%601.Value%2A> 屬性會擲回 <xref:System.InvalidOperationException>。
+- <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> 會取得基礎型別的值 (若 <xref:System.Nullable%601.HasValue%2A>為 `true`)。 若 <xref:System.Nullable%601.HasValue%2A> 為 `false`，則 <xref:System.Nullable%601.Value%2A> 屬性會擲回 <xref:System.InvalidOperationException>。
   
 下列範例中的程式碼會使用 `HasValue` 屬性，在顯示之前測試變數是否包含值：
   
@@ -66,6 +66,9 @@ ms.locfileid: "54658243"
 預先定義的一元和二元運算子，以及針對實值型別而存在的任何使用者定義的運算子，也能為可為 Null 的型別所用。 若其中一或兩個運算元皆為 Null，這些運算子便會產生 Null 值；否則，運算子會使用包含的值來計算結果。 例如：  
   
 [!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
+
+> [!NOTE]
+> 針對 `bool?` 型別，預先定義的 `&` 和 `|` 運算子不會遵循本節中描述的規則：即使其中一個運算元為 Null，運算子評估的結果也可能為非 Null。 如需詳細資訊，請參閱[布林邏輯運算子](../../language-reference/operators/boolean-logical-operators.md)一文的[可為 Null 的布林邏輯運算子](../../language-reference/operators/boolean-logical-operators.md#nullable-boolean-logical-operators)一節。
   
 針對關係運算子 (`<`、`>`、`<=`、`>=`)，若其中一或兩個運算元皆為 Null，則結果為 `false`。 請不要因為特定的比較 (例如 `<=`) 傳回 `false`，就假設相反的比較 (`>`) 就會傳回 `true`。 下列範例會顯示 10
 
@@ -75,6 +78,8 @@ ms.locfileid: "54658243"
 [!code-csharp-interactive[relational and equality operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#8)]
   
 上述範例也顯示兩個可為 Null 的型別，當其值皆為 Null 時，其相等比較評估結果為 `true`。
+
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[增益運算子](~/_csharplang/spec/expressions.md#lifted-operators)一節。
 
 ## <a name="boxing-and-unboxing"></a>Boxing 和 Unboxing
 
@@ -87,31 +92,8 @@ ms.locfileid: "54658243"
 
 [!code-csharp-interactive[boxing and unboxing](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#9)]
 
-## <a name="the-bool-type"></a>bool? 類型
-
-`bool?` 可為 Null 的型別可以包含三個不同的值︰[true](../../language-reference/keywords/true-literal.md)、[false](../../language-reference/keywords/false-literal.md) 和 [null](../../language-reference/keywords/null.md)。 `bool?` 型別與 SQL 中使用的 Boolean 變數型別相似。 為確定 `&` 和 `|` 運算子所產生的結果與 SQL 的三個布林值類型一致，會提供下列預先定義的運算子︰
-
-- `bool? operator &(bool? x, bool? y)`  
-- `bool? operator |(bool? x, bool? y)`  
-  
-這些運算子的語意是由下列表格定義的：  
-  
-|x|y|x&y|x&#124;y|  
-|-------|-------|---------|--------------|  
-|true|true|true|true|  
-|true|False|false|true|  
-|true|null|null|true|  
-|False|true|False|true|  
-|False|False|False|False|  
-|False|null|False|null|  
-|null|true|null|true|  
-|null|False|False|null|  
-|null|null|null|null|  
-
-請注意，這兩個運算子不會遵循[運算子](#operators)一節中描述的規則：即使其中一個運算元為 Null，運算子評估的結果也可能為非 Null。
-  
 ## <a name="see-also"></a>另請參閱
 
 - [可為 Null 的型別](index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [「增益」(Lift) 的真正意義是什麼？(英文)](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+- [C# 程式設計手冊](../../programming-guide/index.md)
+- [「增益」(Lift) 的真正意義是什麼？](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)

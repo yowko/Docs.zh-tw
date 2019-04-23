@@ -6,10 +6,10 @@ helpviewer_keywords:
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
 ms.openlocfilehash: 312c0e0f100e85256ad4ca856ccf7f35dbaa36dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305243"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>HOW TO：傳遞至另一個程序，在 Visual Basic 中的程序
@@ -50,4 +50,4 @@ ms.locfileid: "59305243"
 - [委派](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [AddressOf 運算子](../../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Delegate 陳述式](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [HOW TO：叫用委派方法](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
+- [如何：叫用委派方法](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)

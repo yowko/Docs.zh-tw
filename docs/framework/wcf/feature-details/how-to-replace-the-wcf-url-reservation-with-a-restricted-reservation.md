@@ -3,10 +3,10 @@ title: HOW TO：以受限的保留項目取代 WCF URL 保留項目
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
 ms.openlocfilehash: f9cfda1d4ca14dd380dd01f944d4c900f9832096
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307557"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>HOW TO：以受限的保留項目取代 WCF URL 保留項目
@@ -32,7 +32,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 2. 在中輸入**netsh http delete urlacl =http://+:80/Temporary_Listen_Addresses/** 在命令提示字元 視窗中。  
   
-3. 如果成功刪除保留項目，就會顯示下列訊息。 **URL 保留項目已成功刪除**  
+3. 如果成功刪除保留項目，就會顯示下列訊息。 **已成功刪除的 URL 保留項目**  
   
 ## <a name="creating-a-new-security-group-and-new-restricted-url-reservation"></a>建立新的安全性群組與新的受限 URL 保留項目  
  若要以受限的保留項目取代 WCF URL 保留項目，您必須先建立新的安全性群組。 您可以從命令提示字元或電腦管理主控台執行這個動作。 您只需要選擇其中一種方式。  
@@ -43,7 +43,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 2. 輸入**net localgroup"\<安全性群組名稱 >"/ 註解:"\<安全性群組描述 >"/add**在命令提示字元。 取代**\<安全性的群組名稱 >** 具有您想要建立的安全性群組的名稱並**\<安全性群組描述 >** 使用適合的描述安全性群組。  
   
-3. 如果成功建立安全性群組，就會顯示下列訊息。 **此命令已成功完成。**  
+3. 如果成功建立安全性群組，就會顯示下列訊息。 **已成功完成命令。**  
   
 #### <a name="to-create-a-new-security-group-from-the-computer-management-console"></a>若要從電腦管理主控台建立新的安全性群組  
   
