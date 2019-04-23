@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1cb5f9decbcdfb71f67a5132dc59773f1de8b0a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086425"
 ---
-# <a name="corimageunloading-function"></a><span data-ttu-id="3cbdd-102">_CorImageUnloading 函式</span><span class="sxs-lookup"><span data-stu-id="3cbdd-102">_CorImageUnloading Function</span></span>
-<span data-ttu-id="3cbdd-103">卸載 managed 的模組映像時，請通知載入器。</span><span class="sxs-lookup"><span data-stu-id="3cbdd-103">Notifies the loader when the managed module images are unloaded.</span></span>  
+# <a name="corimageunloading-function"></a><span data-ttu-id="2cd33-102">_CorImageUnloading 函式</span><span class="sxs-lookup"><span data-stu-id="2cd33-102">_CorImageUnloading Function</span></span>
+<span data-ttu-id="2cd33-103">卸載 managed 的模組映像時，請通知載入器。</span><span class="sxs-lookup"><span data-stu-id="2cd33-103">Notifies the loader when the managed module images are unloaded.</span></span>  
   
- <span data-ttu-id="3cbdd-104">未實作此函式。</span><span class="sxs-lookup"><span data-stu-id="3cbdd-104">This function is not implemented.</span></span> <span data-ttu-id="3cbdd-105">如果呼叫，它會傳回 E_NOTIMPL。</span><span class="sxs-lookup"><span data-stu-id="3cbdd-105">If called, it returns E_NOTIMPL.</span></span>  
+ <span data-ttu-id="2cd33-104">未實作此函式。</span><span class="sxs-lookup"><span data-stu-id="2cd33-104">This function is not implemented.</span></span> <span data-ttu-id="2cd33-105">如果呼叫，它會傳回 E_NOTIMPL。</span><span class="sxs-lookup"><span data-stu-id="2cd33-105">If called, it returns E_NOTIMPL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3cbdd-106">語法</span><span class="sxs-lookup"><span data-stu-id="3cbdd-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2cd33-106">語法</span><span class="sxs-lookup"><span data-stu-id="2cd33-106">Syntax</span></span>  
   
 ```  
 STDAPI (VOID) _CorImageUnloading(   
@@ -36,19 +36,19 @@ STDAPI (VOID) _CorImageUnloading(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3cbdd-107">參數</span><span class="sxs-lookup"><span data-stu-id="3cbdd-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2cd33-107">參數</span><span class="sxs-lookup"><span data-stu-id="2cd33-107">Parameters</span></span>  
  `ImageBase`  
- <span data-ttu-id="3cbdd-108">[in]要卸載之影像的起始位置指標。</span><span class="sxs-lookup"><span data-stu-id="3cbdd-108">[in] A pointer to the starting location of the image to unload.</span></span>  
+ <span data-ttu-id="2cd33-108">[in]要卸載之影像的起始位置指標。</span><span class="sxs-lookup"><span data-stu-id="2cd33-108">[in] A pointer to the starting location of the image to unload.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3cbdd-109">需求</span><span class="sxs-lookup"><span data-stu-id="3cbdd-109">Requirements</span></span>  
- <span data-ttu-id="3cbdd-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3cbdd-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2cd33-109">需求</span><span class="sxs-lookup"><span data-stu-id="2cd33-109">Requirements</span></span>  
+ <span data-ttu-id="2cd33-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2cd33-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3cbdd-111">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3cbdd-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="2cd33-111">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="2cd33-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3cbdd-112">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="3cbdd-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="2cd33-112">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="2cd33-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="3cbdd-113">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="3cbdd-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="2cd33-113">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2cd33-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3cbdd-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3cbdd-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2cd33-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2cd33-114">See also</span></span>
 
-- [<span data-ttu-id="3cbdd-115">中繼資料全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="3cbdd-115">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [<span data-ttu-id="2cd33-115">中繼資料全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="2cd33-115">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

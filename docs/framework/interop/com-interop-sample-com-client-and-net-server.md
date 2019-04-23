@@ -11,17 +11,17 @@ ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4a928dde8615589cbc8e502a9b5dd033beded4c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086750"
 ---
-# <a name="com-interop-sample-com-client-and-net-server"></a><span data-ttu-id="0b73c-102">COM Interop 範例：COM 用戶端與 .NET 伺服器</span><span class="sxs-lookup"><span data-stu-id="0b73c-102">COM Interop Sample: COM Client and .NET Server</span></span>
-<span data-ttu-id="0b73c-103">此範例示範執行貸款計算之 [COM 用戶端](#cpconcominteropsamplecomclientnetserveranchor1)與 [.NET 伺服器](#cpconcominteropsamplecomclientnetserveranchor2)的交互操作。</span><span class="sxs-lookup"><span data-stu-id="0b73c-103">This sample demonstrates the interoperation of a [COM Client](#cpconcominteropsamplecomclientnetserveranchor1) and a [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) that performs mortgage calculations.</span></span> <span data-ttu-id="0b73c-104">在此範例中，用戶端會建立和呼叫 Managed `Loan` 類別的執行個體，並將四個引數 (這四個的其中一個等於零) 傳遞給執行個體，然後顯示運算。</span><span class="sxs-lookup"><span data-stu-id="0b73c-104">In this example, the client creates and calls an instance of the managed `Loan` class, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="0b73c-105">這個範例的程式碼範例會出現在本節中。</span><span class="sxs-lookup"><span data-stu-id="0b73c-105">Code examples from this sample appear throughout this section.</span></span>  
+# <a name="com-interop-sample-com-client-and-net-server"></a><span data-ttu-id="aea48-102">COM Interop 範例：COM 用戶端與 .NET 伺服器</span><span class="sxs-lookup"><span data-stu-id="aea48-102">COM Interop Sample: COM Client and .NET Server</span></span>
+<span data-ttu-id="aea48-103">此範例示範執行貸款計算之 [COM 用戶端](#cpconcominteropsamplecomclientnetserveranchor1)與 [.NET 伺服器](#cpconcominteropsamplecomclientnetserveranchor2)的交互操作。</span><span class="sxs-lookup"><span data-stu-id="aea48-103">This sample demonstrates the interoperation of a [COM Client](#cpconcominteropsamplecomclientnetserveranchor1) and a [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) that performs mortgage calculations.</span></span> <span data-ttu-id="aea48-104">在此範例中，用戶端會建立和呼叫 Managed `Loan` 類別的執行個體，並將四個引數 (這四個的其中一個等於零) 傳遞給執行個體，然後顯示運算。</span><span class="sxs-lookup"><span data-stu-id="aea48-104">In this example, the client creates and calls an instance of the managed `Loan` class, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="aea48-105">這個範例的程式碼範例會出現在本節中。</span><span class="sxs-lookup"><span data-stu-id="aea48-105">Code examples from this sample appear throughout this section.</span></span>  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>   
-## <a name="com-client"></a><span data-ttu-id="0b73c-106">COM 用戶端</span><span class="sxs-lookup"><span data-stu-id="0b73c-106">COM Client</span></span>  
+## <a name="com-client"></a><span data-ttu-id="aea48-106">COM 用戶端</span><span class="sxs-lookup"><span data-stu-id="aea48-106">COM Client</span></span>  
   
 ```cpp  
 // ConLoan.cpp : Defines the entry point for the console application.  
@@ -88,7 +88,7 @@ int main(int argc, char* argv[])
 ```  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor2"></a>   
-## <a name="net-server"></a><span data-ttu-id="0b73c-107">.NET 伺服器</span><span class="sxs-lookup"><span data-stu-id="0b73c-107">.NET Server</span></span>  
+## <a name="net-server"></a><span data-ttu-id="aea48-107">.NET 伺服器</span><span class="sxs-lookup"><span data-stu-id="aea48-107">.NET Server</span></span>  
   
 ```vb  
 Imports System  
@@ -389,6 +389,6 @@ namespace LoanLib {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0b73c-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0b73c-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aea48-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="aea48-108">See also</span></span>
 
-- [<span data-ttu-id="0b73c-109">將 .NET Framework 元件公開給 COM</span><span class="sxs-lookup"><span data-stu-id="0b73c-109">Exposing .NET Framework Components to COM</span></span>](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [<span data-ttu-id="aea48-109">將 .NET Framework 元件公開給 COM</span><span class="sxs-lookup"><span data-stu-id="aea48-109">Exposing .NET Framework Components to COM</span></span>](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
