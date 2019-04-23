@@ -13,10 +13,10 @@ ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3b149a9b8ee41f5e196fd69258044f9b6563cb99
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217870"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
@@ -28,7 +28,7 @@ ms.locfileid: "59217870"
 ## <a name="cause"></a>原因  
  如果使用者建立衍生自 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 的類別，則必須提供 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法的實作；因此，這是個別資源特有的情況。 不過，需求如下：  
   
--   <xref:System.Runtime.InteropServices.SafeHandle> 和<xref:System.Runtime.InteropServices.CriticalHandle>類型代表重要處理序資源周圍的包裝函式。 記憶體遺漏會使處理序過一段時間後即無法使用。  
+-   <xref:System.Runtime.InteropServices.SafeHandle> 和 <xref:System.Runtime.InteropServices.CriticalHandle> 類型代表重要處理序資源周圍的包裝函式。 記憶體遺漏會使處理序過一段時間後即無法使用。  
   
 -   <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法執行其函式時，絕不能失敗。 一旦處理序取得這類資源，<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 是將其釋出的唯一方式。 因此，失敗即代表資源流失。  
   

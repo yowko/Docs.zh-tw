@@ -3,10 +3,10 @@ title: 傳輸安全性
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
 ms.openlocfilehash: 036c3db96a14b6e2be299380f495f54436b5c87d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218962"
 ---
 # <a name="transport-security"></a>傳輸安全性
@@ -25,7 +25,7 @@ ms.locfileid: "59218962"
  [使用模擬搭配傳輸安全性](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  說明傳輸安全性模式可能搭配的五種模擬層級。  
   
- [HOW TO：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [如何：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  逐步說明使用 X.509 憑證在電腦上設定連接埠以獲得 SSL (傳輸) 安全性的基本概念。  
   
 ## <a name="reference"></a>參考資料  
@@ -36,7 +36,7 @@ ms.locfileid: "59218962"
  <xref:System.ServiceModel.Security>  
   
 ## <a name="related-sections"></a>相關章節  
- [確保服務與用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
 ## <a name="see-also"></a>另請參閱
 
