@@ -3,10 +3,10 @@ title: <headers>
 ms.date: 03/30/2017
 ms.assetid: c79b897d-8ea3-40b5-a8b6-2471941f7ed3
 ms.openlocfilehash: 660497012dd057e4ecf95524833e2573fe03a8b0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224545"
 ---
 # <a name="headers"></a>\<headers>
@@ -49,4 +49,4 @@ ms.locfileid: "59224545"
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Headers%2A>
 - <xref:System.ServiceModel.Channels.AddressHeaderCollection>
-- [端點：位址、繫結和合約](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [端點：位址、 繫結和合約](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

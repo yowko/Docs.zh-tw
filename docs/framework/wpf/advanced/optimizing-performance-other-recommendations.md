@@ -12,10 +12,10 @@ helpviewer_keywords:
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
 ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224282"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>最佳化效能：其他建議
@@ -25,7 +25,7 @@ ms.locfileid: "59224282"
   
 -   [筆刷透明度與項目透明度的比較](#Opacity)  
   
--   [物件瀏覽](#Navigation_Objects)  
+-   [物件瀏1覽](#Navigation_Objects)  
   
 -   [大型立體表面的點擊測試](#Hit_Testing)  
   
@@ -80,6 +80,6 @@ ms.locfileid: "59224282"
 - [2D 圖形和影像處理](optimizing-performance-2d-graphics-and-imaging.md)
 - [物件行為](optimizing-performance-object-behavior.md)
 - [應用程式資源](optimizing-performance-application-resources.md)
-- [文字](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [資料繫結](optimizing-performance-data-binding.md)
-- [動畫秘訣和訣竅](../graphics-multimedia/animation-tips-and-tricks.md)
+- [動畫祕訣和訣竅](../graphics-multimedia/animation-tips-and-tricks.md)

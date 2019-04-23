@@ -3,10 +3,10 @@ title: 安全對話與安全工作階段
 ms.date: 03/30/2017
 ms.assetid: 48cb104a-532d-40ae-aa57-769dae103fda
 ms.openlocfilehash: 9b2c22d6db5a773bfb3f3a41e458b530fc889d71
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224399"
 ---
 # <a name="secure-conversations-and-secure-sessions"></a>安全對話與安全工作階段
@@ -19,4 +19,4 @@ Windows Communication Foundation (WCF) 的功能是能夠建立安全工作階�
 ## <a name="see-also"></a>另請參閱
 
 - [工作階段、執行個體與並行](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)
-- [HOW TO：建立需要工作階段的服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+- [如何：建立需要工作階段的服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)

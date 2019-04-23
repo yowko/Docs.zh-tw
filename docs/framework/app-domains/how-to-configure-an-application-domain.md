@@ -1,5 +1,5 @@
 ---
-title: 作法：設定應用程式定義域
+title: HOW TO：設定應用程式定義域
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fe0c7ecf1b0daf0e9ea56ec590083fe1ccd2d693
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225075"
 ---
-# <a name="how-to-configure-an-application-domain"></a>作法：設定應用程式定義域
+# <a name="how-to-configure-an-application-domain"></a>HOW TO：設定應用程式定義域
 您可以使用 <xref:System.AppDomainSetup> 類別向 Common Language Runtime 提供新應用程式定義域的設定資訊。 建立您自己的應用程式定義域時，最重要的屬性是 <xref:System.AppDomainSetup.ApplicationBase%2A>。 其他 **AppDomainSetup** 屬性主要是執行階段主機用來設定特定的應用程式定義域。  
   
  **ApplicationBase** 屬性會定義應用程式的根目錄。 當執行階段需要滿足類型要求時，它會探查組件在 **ApplicationBase** 屬性指定的目錄中是否包含該類型。  
