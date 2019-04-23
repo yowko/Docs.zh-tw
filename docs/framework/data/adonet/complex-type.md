@@ -3,41 +3,41 @@ title: 複雜類型
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
 ms.openlocfilehash: 9d63660c441192bbc9ecb48bb3a86030b46461cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160806"
 ---
-# <a name="complex-type"></a><span data-ttu-id="19308-102">複雜類型</span><span class="sxs-lookup"><span data-stu-id="19308-102">complex type</span></span>
-<span data-ttu-id="19308-103">A*複雜型別*是上定義豐富結構化屬性的範本[實體類型](../../../../docs/framework/data/adonet/entity-type.md)或其他複雜類型。</span><span class="sxs-lookup"><span data-stu-id="19308-103">A *complex type* is a template for defining rich, structured properties on [entity types](../../../../docs/framework/data/adonet/entity-type.md) or on other complex types.</span></span> <span data-ttu-id="19308-104">每個範本包含下列資訊：</span><span class="sxs-lookup"><span data-stu-id="19308-104">Each template contains the following:</span></span>  
+# <a name="complex-type"></a><span data-ttu-id="b006f-102">複雜類型</span><span class="sxs-lookup"><span data-stu-id="b006f-102">complex type</span></span>
+<span data-ttu-id="b006f-103">A*複雜型別*是上定義豐富結構化屬性的範本[實體類型](../../../../docs/framework/data/adonet/entity-type.md)或其他複雜類型。</span><span class="sxs-lookup"><span data-stu-id="b006f-103">A *complex type* is a template for defining rich, structured properties on [entity types](../../../../docs/framework/data/adonet/entity-type.md) or on other complex types.</span></span> <span data-ttu-id="b006f-104">每個範本包含下列資訊：</span><span class="sxs-lookup"><span data-stu-id="b006f-104">Each template contains the following:</span></span>  
   
--   <span data-ttu-id="19308-105">唯一名稱。</span><span class="sxs-lookup"><span data-stu-id="19308-105">A unique name.</span></span> <span data-ttu-id="19308-106">(必要項)</span><span class="sxs-lookup"><span data-stu-id="19308-106">(Required)</span></span>  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="19308-107">複雜類型的名稱不可以與同一個命名空間中的實體類型名稱相同。</span><span class="sxs-lookup"><span data-stu-id="19308-107">The name of a complex type cannot be the same as an entity type name within the same namespace.</span></span>  
-  
--   <span data-ttu-id="19308-108">一或多個表單中的資料[屬性](../../../../docs/framework/data/adonet/property.md)。</span><span class="sxs-lookup"><span data-stu-id="19308-108">Data in the form of one or more [properties](../../../../docs/framework/data/adonet/property.md).</span></span> <span data-ttu-id="19308-109">(選擇性。)</span><span class="sxs-lookup"><span data-stu-id="19308-109">(Optional.)</span></span>  
+-   <span data-ttu-id="b006f-105">唯一名稱。</span><span class="sxs-lookup"><span data-stu-id="b006f-105">A unique name.</span></span> <span data-ttu-id="b006f-106">(必要項)</span><span class="sxs-lookup"><span data-stu-id="b006f-106">(Required)</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="19308-110">複雜類型的屬性可以是另一個複雜類型。</span><span class="sxs-lookup"><span data-stu-id="19308-110">A property of a complex type can be another complex type.</span></span>  
+    >  <span data-ttu-id="b006f-107">複雜類型的名稱不可以與同一個命名空間中的實體類型名稱相同。</span><span class="sxs-lookup"><span data-stu-id="b006f-107">The name of a complex type cannot be the same as an entity type name within the same namespace.</span></span>  
   
- <span data-ttu-id="19308-111">複雜類型與實體類型相似之處在於，複雜類型可以包含基本型別屬性或其他複雜類型形式的資料承載。</span><span class="sxs-lookup"><span data-stu-id="19308-111">A complex type is similar to an entity type in that a complex type can carry a data payload in the form of primitive type properties or other complex types.</span></span> <span data-ttu-id="19308-112">不過，複雜型別和實體類型之間還是有些重大的差異：</span><span class="sxs-lookup"><span data-stu-id="19308-112">However, there are some key differences between complex types and entity types:</span></span>  
+-   <span data-ttu-id="b006f-108">一或多個表單中的資料[屬性](../../../../docs/framework/data/adonet/property.md)。</span><span class="sxs-lookup"><span data-stu-id="b006f-108">Data in the form of one or more [properties](../../../../docs/framework/data/adonet/property.md).</span></span> <span data-ttu-id="b006f-109">(選擇性。)</span><span class="sxs-lookup"><span data-stu-id="b006f-109">(Optional.)</span></span>  
   
--   <span data-ttu-id="19308-113">複雜類型不具有識別，因此無法獨立存在。</span><span class="sxs-lookup"><span data-stu-id="19308-113">Complex types do not have identities and therefore cannot exist independently.</span></span> <span data-ttu-id="19308-114">複雜類型只能以實體類型或其他複雜類型的屬性形式存在。</span><span class="sxs-lookup"><span data-stu-id="19308-114">Complex types can only exist as properties on entity types or other complex types.</span></span>  
+    > [!NOTE]
+    >  <span data-ttu-id="b006f-110">複雜類型的屬性可以是另一個複雜類型。</span><span class="sxs-lookup"><span data-stu-id="b006f-110">A property of a complex type can be another complex type.</span></span>  
   
--   <span data-ttu-id="19308-115">複雜型別不能參與[關聯](../../../../docs/framework/data/adonet/association-type.md)。</span><span class="sxs-lookup"><span data-stu-id="19308-115">Complex types cannot participate in [associations](../../../../docs/framework/data/adonet/association-type.md).</span></span> <span data-ttu-id="19308-116">關聯的兩個端點可以是複雜類型，因此[導覽屬性](../../../../docs/framework/data/adonet/navigation-property.md)不能定義於複雜型別。</span><span class="sxs-lookup"><span data-stu-id="19308-116">Neither end of an association can be a complex type, and therefore [navigation properties](../../../../docs/framework/data/adonet/navigation-property.md) cannot be defined on complex types.</span></span>  
+ <span data-ttu-id="b006f-111">複雜類型與實體類型相似之處在於，複雜類型可以包含基本型別屬性或其他複雜類型形式的資料承載。</span><span class="sxs-lookup"><span data-stu-id="b006f-111">A complex type is similar to an entity type in that a complex type can carry a data payload in the form of primitive type properties or other complex types.</span></span> <span data-ttu-id="b006f-112">不過，複雜型別和實體類型之間還是有些重大的差異：</span><span class="sxs-lookup"><span data-stu-id="b006f-112">However, there are some key differences between complex types and entity types:</span></span>  
   
-## <a name="example"></a><span data-ttu-id="19308-117">範例</span><span class="sxs-lookup"><span data-stu-id="19308-117">Example</span></span>  
- <span data-ttu-id="19308-118">[ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)會使用稱為概念結構定義語言的特定領域語言 (DSL) ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 來定義概念模型。</span><span class="sxs-lookup"><span data-stu-id="19308-118">The [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="19308-119">下列 CSDL 以基底類型屬性 `StreetAddress`、`City`、`StateOrProvince`、`Country` 和 `PostalCode` 定義複雜類型 Address。</span><span class="sxs-lookup"><span data-stu-id="19308-119">The following CSDL defines a complex type, Address, with the primitive type properties `StreetAddress`, `City`, `StateOrProvince`, `Country`, and `PostalCode`.</span></span>  
+-   <span data-ttu-id="b006f-113">複雜類型不具有識別，因此無法獨立存在。</span><span class="sxs-lookup"><span data-stu-id="b006f-113">Complex types do not have identities and therefore cannot exist independently.</span></span> <span data-ttu-id="b006f-114">複雜類型只能以實體類型或其他複雜類型的屬性形式存在。</span><span class="sxs-lookup"><span data-stu-id="b006f-114">Complex types can only exist as properties on entity types or other complex types.</span></span>  
+  
+-   <span data-ttu-id="b006f-115">複雜型別不能參與[關聯](../../../../docs/framework/data/adonet/association-type.md)。</span><span class="sxs-lookup"><span data-stu-id="b006f-115">Complex types cannot participate in [associations](../../../../docs/framework/data/adonet/association-type.md).</span></span> <span data-ttu-id="b006f-116">關聯的兩個端點可以是複雜類型，因此[導覽屬性](../../../../docs/framework/data/adonet/navigation-property.md)不能定義於複雜型別。</span><span class="sxs-lookup"><span data-stu-id="b006f-116">Neither end of an association can be a complex type, and therefore [navigation properties](../../../../docs/framework/data/adonet/navigation-property.md) cannot be defined on complex types.</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="b006f-117">範例</span><span class="sxs-lookup"><span data-stu-id="b006f-117">Example</span></span>  
+ <span data-ttu-id="b006f-118">[ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)會使用稱為概念結構定義語言的特定領域語言 (DSL) ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 來定義概念模型。</span><span class="sxs-lookup"><span data-stu-id="b006f-118">The [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="b006f-119">下列 CSDL 以基底類型屬性 `StreetAddress`、`City`、`StateOrProvince`、`Country` 和 `PostalCode` 定義複雜類型 Address。</span><span class="sxs-lookup"><span data-stu-id="b006f-119">The following CSDL defines a complex type, Address, with the primitive type properties `StreetAddress`, `City`, `StateOrProvince`, `Country`, and `PostalCode`.</span></span>  
   
  [!code-xml[EDM_Example_Model#ComplexTypeExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#complextypeexample)]  
   
- <span data-ttu-id="19308-120">若要將上方的複雜類型 `Address` 定義為實體類型上的屬性，您必須在實體類型定義中宣告屬性型別。</span><span class="sxs-lookup"><span data-stu-id="19308-120">To define the complex type `Address` (above) as a property on an entity type, you must declare the property type in the entity type definition.</span></span> <span data-ttu-id="19308-121">下列 CSDL 會在實體類型 (Publisher) 上將 `Address` 屬性宣告為複雜類型：</span><span class="sxs-lookup"><span data-stu-id="19308-121">The following CSDL declares the `Address` property as a complex type on an entity type (Publisher):</span></span>  
+ <span data-ttu-id="b006f-120">若要將上方的複雜類型 `Address` 定義為實體類型上的屬性，您必須在實體類型定義中宣告屬性型別。</span><span class="sxs-lookup"><span data-stu-id="b006f-120">To define the complex type `Address` (above) as a property on an entity type, you must declare the property type in the entity type definition.</span></span> <span data-ttu-id="b006f-121">下列 CSDL 會在實體類型 (Publisher) 上將 `Address` 屬性宣告為複雜類型：</span><span class="sxs-lookup"><span data-stu-id="b006f-121">The following CSDL declares the `Address` property as a complex type on an entity type (Publisher):</span></span>  
   
  [!code-xml[EDM_Example_Model#EntityWithComplexType](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#entitywithcomplextype)]  
   
-## <a name="see-also"></a><span data-ttu-id="19308-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="19308-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b006f-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b006f-122">See also</span></span>
 
-- [<span data-ttu-id="19308-123">實體資料模型索引鍵概念</span><span class="sxs-lookup"><span data-stu-id="19308-123">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [<span data-ttu-id="19308-124">實體資料模型</span><span class="sxs-lookup"><span data-stu-id="19308-124">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [<span data-ttu-id="b006f-123">實體資料模型索引鍵概念</span><span class="sxs-lookup"><span data-stu-id="b006f-123">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [<span data-ttu-id="b006f-124">實體資料模型</span><span class="sxs-lookup"><span data-stu-id="b006f-124">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)

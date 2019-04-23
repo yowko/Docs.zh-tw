@@ -18,18 +18,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3fe1f93c621fd567471b9a49e4aa75cb90e6e0e7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161157"
 ---
-# <a name="iclrruntimeinfoloadlibrary-method"></a><span data-ttu-id="5e24e-102">ICLRRuntimeInfo::LoadLibrary 方法</span><span class="sxs-lookup"><span data-stu-id="5e24e-102">ICLRRuntimeInfo::LoadLibrary Method</span></span>
-<span data-ttu-id="5e24e-103">從 common language runtime (CLR) 所表示載入的.NET Framework 程式庫[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="5e24e-103">Loads a .NET Framework library from the common language runtime (CLR) represented by an [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.</span></span>  
+# <a name="iclrruntimeinfoloadlibrary-method"></a><span data-ttu-id="8f9e4-102">ICLRRuntimeInfo::LoadLibrary 方法</span><span class="sxs-lookup"><span data-stu-id="8f9e4-102">ICLRRuntimeInfo::LoadLibrary Method</span></span>
+<span data-ttu-id="8f9e4-103">從 common language runtime (CLR) 所表示載入的.NET Framework 程式庫[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="8f9e4-103">Loads a .NET Framework library from the common language runtime (CLR) represented by an [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.</span></span>  
   
- <span data-ttu-id="5e24e-104">這個方法會取代[LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md)函式。</span><span class="sxs-lookup"><span data-stu-id="5e24e-104">This method supersedes the [LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) function.</span></span>  
+ <span data-ttu-id="8f9e4-104">這個方法會取代[LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md)函式。</span><span class="sxs-lookup"><span data-stu-id="8f9e4-104">This method supersedes the [LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5e24e-105">語法</span><span class="sxs-lookup"><span data-stu-id="5e24e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8f9e4-105">語法</span><span class="sxs-lookup"><span data-stu-id="8f9e4-105">Syntax</span></span>  
   
 ```  
 HRESULT LoadLibrary(  
@@ -37,36 +37,36 @@ HRESULT LoadLibrary(
      [out, retval] HMODULE *phndModule);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5e24e-106">參數</span><span class="sxs-lookup"><span data-stu-id="5e24e-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8f9e4-106">參數</span><span class="sxs-lookup"><span data-stu-id="8f9e4-106">Parameters</span></span>  
  `pwzDllName`  
- <span data-ttu-id="5e24e-107">[in]要載入之組件名稱。</span><span class="sxs-lookup"><span data-stu-id="5e24e-107">[in] The name of the assembly to be loaded.</span></span>  
+ <span data-ttu-id="8f9e4-107">[in]要載入之組件名稱。</span><span class="sxs-lookup"><span data-stu-id="8f9e4-107">[in] The name of the assembly to be loaded.</span></span>  
   
  `phndModule`  
- <span data-ttu-id="5e24e-108">[out]載入的組件控制代碼。</span><span class="sxs-lookup"><span data-stu-id="5e24e-108">[out] A handle to the loaded assembly.</span></span>  
+ <span data-ttu-id="8f9e4-108">[out]載入的組件控制代碼。</span><span class="sxs-lookup"><span data-stu-id="8f9e4-108">[out] A handle to the loaded assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5e24e-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="5e24e-109">Return Value</span></span>  
- <span data-ttu-id="5e24e-110">這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="5e24e-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8f9e4-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="8f9e4-109">Return Value</span></span>  
+ <span data-ttu-id="8f9e4-110">這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="8f9e4-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="5e24e-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5e24e-111">HRESULT</span></span>|<span data-ttu-id="5e24e-112">描述</span><span class="sxs-lookup"><span data-stu-id="5e24e-112">Description</span></span>|  
+|<span data-ttu-id="8f9e4-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8f9e4-111">HRESULT</span></span>|<span data-ttu-id="8f9e4-112">描述</span><span class="sxs-lookup"><span data-stu-id="8f9e4-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="5e24e-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="5e24e-113">S_OK</span></span>|<span data-ttu-id="5e24e-114">已成功完成命令。</span><span class="sxs-lookup"><span data-stu-id="5e24e-114">The method completed successfully.</span></span>|  
-|<span data-ttu-id="5e24e-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="5e24e-115">E_POINTER</span></span>|`pwzDllName` <span data-ttu-id="5e24e-116">或`phndModule`為 null。</span><span class="sxs-lookup"><span data-stu-id="5e24e-116">or `phndModule` is null.</span></span>|  
-|<span data-ttu-id="5e24e-117">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="5e24e-117">E_OUTOFMEMORY</span></span>|<span data-ttu-id="5e24e-118">沒有足夠的記憶體是可用來處理要求。</span><span class="sxs-lookup"><span data-stu-id="5e24e-118">Not enough memory is available to handle the request.</span></span>|  
+|<span data-ttu-id="8f9e4-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="8f9e4-113">S_OK</span></span>|<span data-ttu-id="8f9e4-114">已成功完成命令。</span><span class="sxs-lookup"><span data-stu-id="8f9e4-114">The method completed successfully.</span></span>|  
+|<span data-ttu-id="8f9e4-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="8f9e4-115">E_POINTER</span></span>|<span data-ttu-id="8f9e4-116">`pwzDllName` 或 `phndModule` 為 null。</span><span class="sxs-lookup"><span data-stu-id="8f9e4-116">`pwzDllName` or `phndModule` is null.</span></span>|  
+|<span data-ttu-id="8f9e4-117">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="8f9e4-117">E_OUTOFMEMORY</span></span>|<span data-ttu-id="8f9e4-118">沒有足夠的記憶體是可用來處理要求。</span><span class="sxs-lookup"><span data-stu-id="8f9e4-118">Not enough memory is available to handle the request.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5e24e-119">備註</span><span class="sxs-lookup"><span data-stu-id="5e24e-119">Remarks</span></span>  
- <span data-ttu-id="5e24e-120">這個方法只會載入 Dll 包含在.NET Framework 可轉散發套件。</span><span class="sxs-lookup"><span data-stu-id="5e24e-120">This method only loads DLLs included in the .NET Framework redistributable package.</span></span> <span data-ttu-id="5e24e-121">它無法載入使用者產生的組件。</span><span class="sxs-lookup"><span data-stu-id="5e24e-121">It can not load user-generated assemblies.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8f9e4-119">備註</span><span class="sxs-lookup"><span data-stu-id="8f9e4-119">Remarks</span></span>  
+ <span data-ttu-id="8f9e4-120">這個方法只會載入 Dll 包含在.NET Framework 可轉散發套件。</span><span class="sxs-lookup"><span data-stu-id="8f9e4-120">This method only loads DLLs included in the .NET Framework redistributable package.</span></span> <span data-ttu-id="8f9e4-121">它無法載入使用者產生的組件。</span><span class="sxs-lookup"><span data-stu-id="8f9e4-121">It can not load user-generated assemblies.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5e24e-122">需求</span><span class="sxs-lookup"><span data-stu-id="5e24e-122">Requirements</span></span>  
- <span data-ttu-id="5e24e-123">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5e24e-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8f9e4-122">需求</span><span class="sxs-lookup"><span data-stu-id="8f9e4-122">Requirements</span></span>  
+ <span data-ttu-id="8f9e4-123">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8f9e4-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5e24e-124">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="5e24e-124">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="8f9e4-124">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="8f9e4-124">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="5e24e-125">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="5e24e-125">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8f9e4-125">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="8f9e4-125">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="5e24e-126">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="5e24e-126">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ <span data-ttu-id="8f9e4-126">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8f9e4-126">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5e24e-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5e24e-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8f9e4-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8f9e4-127">See also</span></span>
 
-- [<span data-ttu-id="5e24e-128">ICLRRuntimeInfo 介面</span><span class="sxs-lookup"><span data-stu-id="5e24e-128">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="5e24e-129">裝載介面</span><span class="sxs-lookup"><span data-stu-id="5e24e-129">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="5e24e-130">裝載</span><span class="sxs-lookup"><span data-stu-id="5e24e-130">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="8f9e4-128">ICLRRuntimeInfo 介面</span><span class="sxs-lookup"><span data-stu-id="8f9e4-128">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="8f9e4-129">裝載介面</span><span class="sxs-lookup"><span data-stu-id="8f9e4-129">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="8f9e4-130">裝載</span><span class="sxs-lookup"><span data-stu-id="8f9e4-130">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
