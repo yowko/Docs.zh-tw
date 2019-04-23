@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: c099bde5a90e7e95eb5d9da6aacf763054a865ae
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 352599d60a42a034b3d6647b1fe8f1cbf2f4572d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201322"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612000"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core 測試 .NET Standard 程式庫
 
@@ -150,12 +150,14 @@ Assert 方法 | 功能
    string[] words = { "alphabet", "Error", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
                       "1234", ".", ";", " " };
    ```
+
    ```vb
    Dim words() As String = { "alphabet", "Error", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
                       "1234", ".", ";", " " }
 
    ```
-1. 從功能表列中，選取 [測試]  >  [執行]  >  [所有測試] 來執行測試。 [測試總管] 視窗表示兩個測試成功，而且有一個失敗。
+
+1. 從功能表列中，選取 [測試]  >  [執行]  >  [所有測試] 來執行測試。 [測試總管] 視窗表示兩個測試成功，而且有一項失敗。
 
    ![測試總管視窗，其中包含失敗的測試](./media/testing-library-with-visual-studio/failed-test-window.png)
 

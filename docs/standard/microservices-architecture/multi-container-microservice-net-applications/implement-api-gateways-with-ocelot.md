@@ -4,12 +4,12 @@ description: 了解如何使用 Ocelot 實作 API 閘道，並了解如何在以
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b7ef0e7a172337f32f625bd65261b6577decd223
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 5d4f2a3b2551f8da83359b26578d45559721f7df
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464537"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613716"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>使用 Ocelot 實作 API 閘道
 
@@ -85,6 +85,7 @@ public async Task<IActionResult> GetItemById(int id)
     return NotFound();
 }
 ```
+
 HTTP 要求最終會執行該類型的 C# 程式碼來存取微服務資料庫，並執行任何其他必要動作。
 
 就微服務 URL 而言，當容器部署在您的本機開發電腦 (本機 Docker 主機) 時，每個微服務的容器一律會在其 dockerfile 中指定內部連接埠 (通常是連接埠 80)，如下列 dockerfile 所示：
@@ -564,16 +565,16 @@ services.AddAuthentication(options =>
 使用 Ocelot API 閘道時，還有其他重要的功能可供探索及使用，下列連結將進行說明。
 
 - **在整合 Ocelot 與 Consul 或 Eureka 的用戶端進行服務探索** \
-  [https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
+  <https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html>
 
 - **API 閘道層的快取** \
-  [https://ocelot.readthedocs.io/en/latest/features/caching.html](https://ocelot.readthedocs.io/en/latest/features/caching.html)
+  <https://ocelot.readthedocs.io/en/latest/features/caching.html>
 
 - **API 閘道層的記錄** \
-  [https://ocelot.readthedocs.io/en/latest/features/logging.html](https://ocelot.readthedocs.io/en/latest/features/logging.html)
+  <https://ocelot.readthedocs.io/en/latest/features/logging.html>
 
 - **API 閘道層的服務品質 (重試和斷路器)** \
-  [https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
+  <https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html>
 
 - **速率限制** \
   [https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )

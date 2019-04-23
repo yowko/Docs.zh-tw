@@ -3,10 +3,10 @@ title: 在程式碼中設定 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
 ms.openlocfilehash: 8a1eeff76b02315143fb7b50ccc41aa18bb9eb0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225699"
 ---
 # <a name="configuring-wcf-services-in-code"></a>在程式碼中設定 WCF 服務
@@ -95,14 +95,14 @@ public class Service1 : IService1
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用組態檔設定服務](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
+- [使用設定檔設定服務](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
 - [設定用戶端行為](../../../docs/framework/wcf/configuring-client-behaviors.md)
-- [簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)
+- [簡化設定](../../../docs/framework/wcf/simplified-configuration.md)
 - [組態](../../../docs/framework/wcf/samples/configuration-sample.md)
-- [在 IIS 與 WAS 中以組態為基礎的啟動](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)
+- [IIS 和 WAS 中以組態為基礎的啟用](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)
 - [組態與中繼資料支援](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)
 - [組態](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)
-- [HOW TO：在組態中指定服務繫結](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [HOW TO：在組態中建立服務端點](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [HOW TO：使用組態檔發行服務的中繼資料](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
-- [HOW TO：在組態中指定用戶端繫結](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+- [如何：在組態中指定的服務繫結](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
+- [如何：在組態中建立服務端點](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [如何：發行服務，使用組態檔的中繼資料](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [如何：在組態中指定的用戶端繫結](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)

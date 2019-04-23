@@ -6,10 +6,10 @@ helpviewer_keywords:
 - certificates [WCF], service certificate validation
 ms.assetid: 9dffcab2-70a9-40f0-99fd-d3a0b296028f
 ms.openlocfilehash: 0bced548cdc9423d1907de09e8b52ebe078d7c19
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225909"
 ---
 # <a name="differences-between-service-certificate-validation-done-by-internet-explorer-and-wcf"></a>Internet Explorer 與 WCF 執行之服務憑證驗證之間的差異
@@ -18,4 +18,4 @@ Internet Explorer 和 Windows Communication Foundation (WCF) 驗證服務憑證�
 ## <a name="see-also"></a>另請參閱
 
 - [透過 TCP 與 SOAP 安全性的 HTTPS 與 SSL 之間的憑證驗證差異](../../../../docs/framework/wcf/feature-details/cert-val-diff-https-ssl-over-tcp-and-soap.md)
-- [HOW TO：擷取中繼資料並實作相容性服務](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)
+- [如何：擷取中繼資料，並實作相容服務](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)

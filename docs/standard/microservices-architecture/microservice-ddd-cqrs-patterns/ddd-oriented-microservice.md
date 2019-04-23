@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解 DDD 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: e41f84a79dc075de05a9e30ccbf3de38175900a2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 5c56e497ffb6466840d034458daaebf9fe0c8f03
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464901"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611480"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>設計 DDD 導向微服務
 
@@ -96,13 +96,13 @@ Eric Evans 的優良書籍 [Domain Driven Design (領域驅動設計)](https://d
 #### <a name="additional-resources"></a>其他資源
 
 - **DevIQ。Persistence Ignorance principle** \ (持續性無知準則)
-  [https://deviq.com/persistence-ignorance/](https://deviq.com/persistence-ignorance/)
+  <https://deviq.com/persistence-ignorance/>
 
 - **Oren Eini。Infrastructure Ignorance** \ (基礎結構無知)
-  [https://ayende.com/blog/3137/infrastructure-ignorance](https://ayende.com/blog/3137/infrastructure-ignorance)
+  <https://ayende.com/blog/3137/infrastructure-ignorance>
 
 - **Angel Lopez。Layered Architecture In Domain-Driven Design** \ (領域導向設計中的分層架構)
-  [https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
+  <https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/>
 
 >[!div class="step-by-step"]
 >[上一頁](cqrs-microservice-reads.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 877992227df417badf7322be7f9be79bf7256e69
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 4958f3e28b80fca2086d45827df1ced8fc26bd8e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59308649"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672286"
 ---
 # <a name="c-operators"></a>C# 運算子
 
@@ -159,6 +159,14 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 
 [x &#124; y](or-operator.md) – 邏輯或位元 OR。 您通常可以將整數類型和 `enum` 類型搭配使用。
 
+## <a name="true-operator"></a>True 運算子
+
+[true](../keywords/true-false-operators.md) 運算子傳回 [bool](../keywords/bool.md) 值 `true`，以指出運算元必然為 true。 
+
+## <a name="false-operator"></a>False 運算子
+
+[false](../keywords/true-false-operators.md) 運算子傳回 [bool](../keywords/bool.md) 值 `true`，以指出運算元必然為 false。 
+
 ## <a name="conditional-and-operator"></a>條件 AND 運算子
 
 此運算子具有的優先順序高於下一個區段且低於前一個區段。
@@ -214,7 +222,7 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計手冊](../../programming-guide/index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
 - [C#](../../index.md)
-- [可多載的運算子](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
+- [多載運算子](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
 - [C# 關鍵字](../keywords/index.md)

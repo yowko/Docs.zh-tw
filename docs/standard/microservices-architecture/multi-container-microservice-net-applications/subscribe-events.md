@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解發佈�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: afd3148f77dc4222a077f7ce020260ee889e92cb
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 962d12c054bed3b2623283e17f83b8466ab2811b
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466136"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613274"
 ---
 # <a name="subscribing-to-events"></a>訂閱事件
 
@@ -325,16 +325,16 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 ### <a name="additional-resources"></a>其他資源
 
 - **使用 NServiceBus 派生的 eShopOnContainers (Particular Software)** \
-    [https://go.particular.net/eShopOnContainers](https://go.particular.net/eShopOnContainers)
+    <https://go.particular.net/eShopOnContainers>
 
 - **事件驅動傳訊** \
     [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 - **Jimmy Bogard：重構以提高彈性：評估結合程度** \
-    [https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
+    <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 - **發佈訂閱通道** \
-    [https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+    <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
 - **在繫結的內容之間通訊** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
@@ -343,19 +343,19 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 - **Philip Brown：整合已繫結內容的策略** \
-    [https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
+    <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
 
 - **Chris Richardson：使用彙總、事件溯源及 CQRS 開發交易微服務 - 第 2 部分** \
-    [https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
+    <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson>
 
 - **Chris Richardson：事件溯源模式** \
-    [https://microservices.io/patterns/data/event-sourcing.html](https://microservices.io/patterns/data/event-sourcing.html)
+    <https://microservices.io/patterns/data/event-sourcing.html>
 
 - **事件溯源簡介** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
 - **Event Store 資料庫**. 官方網站。 \
-    [https://geteventstore.com/](https://geteventstore.com/)
+    <https://geteventstore.com/>
 
 - **Patrick Nommensen：微服務的事件驅動資料管理** \
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
@@ -364,25 +364,25 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
 
 - **什麼是 CAP 定理？** \
-    [https://www.quora.com/What-Is-CAP-Theorem-1](https://www.quora.com/What-Is-CAP-Theorem-1)
+    <https://www.quora.com/What-Is-CAP-Theorem-1>
 
 - **資料一致性入門** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 - **Rick Saling：CAP 定理：為何雲端及網際網路的「一切都不同」** \
-    [https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
+    <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
 - **Eric Brewer：十二年後的 CAP：「規則」變更的方式** \
-    [https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
+    <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>
 
 - **Azure 服務匯流排：代理傳訊：重複項目偵測**  \
-    [https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
+    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **可靠性指南** (RabbitMQ 文件) \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
 
 - **Azure 服務匯流排：代理傳訊：重複項目偵測** \
-    [https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
+    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **可靠性指南** (RabbitMQ 文件) \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html%23consumer)

@@ -3,10 +3,10 @@ title: 模型定義函式
 ms.date: 03/30/2017
 ms.assetid: 8bb2edc8-e8e7-44c2-adc7-f44e11bda4f0
 ms.openlocfilehash: 77152e8f37b009cbc3e72f053ead867914768d3d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226634"
 ---
 # <a name="model-defined-function"></a>模型定義函式
@@ -40,4 +40,4 @@ A*模型定義函式*是概念模型中所定義的函式。 模型定義函式�
 
 - [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)
-- [實體資料模型：基本資料類型](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)
+- [實體資料模型：基本資料型別](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)

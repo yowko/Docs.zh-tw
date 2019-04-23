@@ -3,16 +3,16 @@ title: 迭代器
 description: 了解如何使用內建 C# 迭代器，以及如何建立您自己的自訂迭代器方法。
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: f1be4e9a8b67f0e71615c730af4316253224b888
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e816af698a39a4b44aefa92017efdbc9e3c8cc1d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155216"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613430"
 ---
 # <a name="iterators"></a>迭代器
 
-您撰寫的幾乎所有程式或多或少都需要逐一查看集合。 您將會撰寫程式碼，以查看集合中的每個項目。 
+您撰寫的幾乎所有程式或多或少都需要逐一查看集合。 您將會撰寫程式碼，以查看集合中的每個項目。
 
 您也會建立迭代器方法，也就是為該類別的項目產生迭代器的方法。 這些方法可用於：
 
@@ -28,7 +28,7 @@ C# 語言會為上述兩個案例提供功能。 本文將概述這些功能。
 ## <a name="iterating-with-foreach"></a>使用 foreach 逐一查看
 
 列舉集合很簡單：`foreach` 關鍵字會列舉集合，並對集合中的每個元素執行一次內嵌陳述式：
- 
+
 ```csharp
 foreach (var item in collection)
 {
@@ -42,7 +42,7 @@ foreach (var item in collection)
 
 ## <a name="enumeration-sources-with-iterator-methods"></a>具有迭代器方法的列舉來源
 
-C# 語言另一個很棒的功能是可讓您建立方法，以建立列舉的來源。 這些方法稱為「迭代器方法」。 迭代器方法定義如何在要求時於序列中產生物件。 您可以使用 `yield return` 內容關鍵字來定義迭代器方法。 
+C# 語言另一個很棒的功能是可讓您建立方法，以建立列舉的來源。 這些方法稱為「迭代器方法」。 迭代器方法定義如何在要求時於序列中產生物件。 您可以使用 `yield return` 內容關鍵字來定義迭代器方法。
 
 您可以撰寫這個方法，以產生從 0 到 9 的整數序列：
 
@@ -82,9 +82,9 @@ public IEnumerable<int> GetSingleDigitNumbers()
     int index = 0;
     while (index++ < 10)
         yield return index;
-        
+
     yield return 50;
-    
+
     index = 100;
     while (index++ < 110)
         yield return index;
@@ -113,12 +113,12 @@ public IEnumerable<int> GetSingleDigitNumbers()
     int index = 0;
     while (index++ < 10)
         yield return index;
-        
+
     yield return 50;
-   
-    // generates a compile time error: 
+
+    // generates a compile time error:
     var items = new int[] {100, 101, 102, 103, 104, 105, 106, 107, 108, 109 };
-    return items;  
+    return items;
 }
 ```
 
@@ -132,15 +132,15 @@ public IEnumerable<int> GetSingleDigitNumbers()
     int index = 0;
     while (index++ < 10)
         yield return index;
-        
+
     yield return 50;
-   
+
     var items = new int[] {100, 101, 102, 103, 104, 105, 106, 107, 108, 109 };
     foreach (var item in items)
         yield return item;
 }
 ```
- 
+
 有時候，適當的解決方法是將一個迭代器方法分成兩個不同的方法。 其中一個方法使用 `return`，而第二個方法使用 `yield return`。 請考慮您可能需要根據布林值引數傳回空集合或前 5 個奇數的情況。 您可以將其撰寫成下列兩個方法：
 
 ```csharp
@@ -160,12 +160,12 @@ private IEnumerable<int> IteratorMethod()
             yield return index;
 }
 ```
- 
+
 請看看上述方法。 第一個方法使用標準 `return` 陳述式來傳回空集合，或第二個方法所建立的迭代器。 第二個方法使用 `yield return` 陳述式來建立要求的序列。
 
 ## <a name="deeper-dive-into-foreach"></a>深入探討 `foreach`
 
-`foreach` 陳述式會展開為一個標準慣例，該慣例使用 `IEnumerable<T>` 和 `IEnumerator<T>` 介面來逐一查看集合的所有項目。 它也會將開發人員未正確管理資源時所發生的錯誤降到最低。 
+`foreach` 陳述式會展開為一個標準慣例，該慣例使用 `IEnumerable<T>` 和 `IEnumerator<T>` 介面來逐一查看集合的所有項目。 它也會將開發人員未正確管理資源時所發生的錯誤降到最低。
 
 編譯器會將第一個範例中所示的 `foreach` 迴圈轉譯為類似下列建構的程式碼：
 
@@ -198,14 +198,14 @@ while (enumerator.MoveNext())
 ```csharp
 {
     var enumerator = collection.GetEnumerator();
-    try 
+    try
     {
         while (enumerator.MoveNext())
         {
             var item = enumerator.Current;
             Console.WriteLine(item.ToString());
         }
-    } finally 
+    } finally
     {
         // dispose of enumerator.
     }
@@ -215,26 +215,27 @@ while (enumerator.MoveNext())
 用來處置列舉程式的方法取決於 `enumerator` 類型的特性。 在一般情況下，`finally` 子句會展開為：
 
 ```csharp
-finally 
+finally
 {
    (enumerator as IDisposable)?.Dispose();
-} 
+}
 ```
 
 不過，如果 `enumerator` 的類型是密封類型，而且不會將 `enumerator` 的類型隱含轉換成 `IDisposable`，則 `finally` 子句會展開為空白區塊：
+
 ```csharp
-finally 
+finally
 {
-} 
+}
 ```
 
 如果會將 `enumerator` 的類型隱含轉換成 `IDisposable`，而且 `enumerator` 是不可為 null 的實值型別，`finally` 子句會展開為：
 
 ```csharp
-finally 
+finally
 {
    ((IDisposable)enumerator).Dispose();
-} 
+}
 ```
 
-還好，您不需要記住上述所有詳細資料。 `foreach` 陳述式會為您處理上述所有細微差異。 編譯器會為上述任何建構產生正確的程式碼。 
+還好，您不需要記住上述所有詳細資料。 `foreach` 陳述式會為您處理上述所有細微差異。 編譯器會為上述任何建構產生正確的程式碼。

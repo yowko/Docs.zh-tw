@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 深入了�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 1c943ac93e629da069b594291cd55a952e18742c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 353e50de65f21930ebe0bef9e239e1e333403676
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464394"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612039"
 ---
 # <a name="domain-events-design-and-implementation"></a>領域事件：設計和實作
 
@@ -347,37 +347,37 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 ## <a name="additional-resources"></a>其他資源
 
 - **Greg Young。What is a Domain Event?** (什麼是領域事件？) \
-  [http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
+  <http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/>
 
 - **Jan Stenberg：Domain Events and Eventual Consistency** \ (領域事件與最終一致性)
-  [https://www.infoq.com/news/2015/09/domain-events-consistency](https://www.infoq.com/news/2015/09/domain-events-consistency)
+  <https://www.infoq.com/news/2015/09/domain-events-consistency>
 
 - **Jimmy Bogard：A better domain events pattern** \ (更佳的領域事件模式)
-  [https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
+  <https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/>
 
 - **Vaughn Vernon：Effective Aggregate Design Part II:Making Aggregates Work Together** \ (有效彙總設計第二部分：讓彙總搭配運作)
   [https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 - **Jimmy Bogard：Strengthening your domain:Domain Events** \ (加強您的領域：領域事件)
-  [https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)
+  <https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>
 
 - **Tony Truong：Domain Events Pattern Example** \ (領域事件模式範例)
-  [https://www.tonytruong.net/domain-events-pattern-example/](https://www.tonytruong.net/domain-events-pattern-example/)
+  <https://www.tonytruong.net/domain-events-pattern-example/>
 
 - **Udi Dahan.How to create fully encapsulated Domain Models** \ (如何建立完整封裝式領域模型)
-  [http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
+  <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 - **Udi Dahan.Domain Events – Take 2** \ (領域事件 - 第 2 步)
-  [http://udidahan.com/2008/08/25/domain-events-take-2/](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
+  <http://udidahan.com/2008/08/25/domain-events-take-2/>
 
 - **Udi Dahan.Domain Events – Salvation** \ (領域事件 - 解答)
-  [http://udidahan.com/2009/06/14/domain-events-salvation/](http://udidahan.com/2009/06/14/domain-events-salvation/)
+  <http://udidahan.com/2009/06/14/domain-events-salvation/>
 
 - **Jan Kronquist：Don't publish Domain Events, return them!** (別發佈領域事件，傳回它們！) \
-  [https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
+  <https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/>
 
 - **Cesar de la Torre：Domain Events vs.Integration Events in DDD and microservices architectures** \ (DDD 與微服務架構中的整合事件)
-  [https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
+  <https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/>
 
 >[!div class="step-by-step"]
 >[上一頁](client-side-validation.md)

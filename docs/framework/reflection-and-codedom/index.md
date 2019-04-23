@@ -8,17 +8,17 @@ ms.assetid: f78ec137-df0e-48c9-a7a0-5f6a1055f011
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a190e238992313e498e28217587029041f386040
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226517"
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>在 .NET Framework 中進行動態程式設計
 文件中的這一節提供 .NET Framework 中動態程式設計的相關資訊。  
   
 ## <a name="in-this-section"></a>本節內容  
- [反射](../../../docs/framework/reflection-and-codedom/reflection.md)  
+ [反映](../../../docs/framework/reflection-and-codedom/reflection.md)  
  描述如何在執行階段使用反映處理物件。  
   
  [發出動態方法和組件](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  

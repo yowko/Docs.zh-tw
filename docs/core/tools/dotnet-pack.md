@@ -2,12 +2,12 @@
 title: dotnet pack 命令
 description: dotnet pack 命令會建立 .NET Core 專案的 NuGet 套件。
 ms.date: 12/04/2018
-ms.openlocfilehash: 4b665140f7c660c5851fb68b07ecec2d9391b925
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 8faa99bf35d9802b16f951082b20644d45a939c7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464472"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672122"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -20,17 +20,21 @@ ms.locfileid: "58464472"
 ## <a name="synopsis"></a>概要
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
     [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
+
 ---
 
 ## <a name="description"></a>說明
@@ -109,6 +113,7 @@ dotnet pack [-h|--help]
 
 > [!NOTE]
 > Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新增至您的 .csproj 檔案：
+>
 > ```xml
 > <PropertyGroup>
 >    <IsPackable>true</IsPackable>
@@ -208,5 +213,5 @@ dotnet pack [-h|--help]
 * 使用 [.nuspec 檔案](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)來封裝專案：
 
   ```console
-  dotnet pack  ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget
+  dotnet pack ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget
   ```

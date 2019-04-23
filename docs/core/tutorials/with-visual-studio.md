@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7a2a7b251f38a2f1add39e50e32a832adaedc965
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: df91d9da1f743e17072ad6106d0c4e06d751c2ea
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362792"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612808"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core SDK 來建置 C# Hello World 應用程式
 
@@ -29,7 +29,7 @@ ms.locfileid: "54362792"
 1. 啟動 Visual Studio 2017。 從功能表列中選取 [檔案]  >  [新增]  >  [專案]。 在 [新增專案]* 對話方塊中，選取後面跟著 [.NET Core] 節點的 [Visual C#] 節點。 然後選取 [主控台應用程式 (.NET Core)] 專案範本。 在 [名稱] 文字方塊中，鍵入 "HelloWorld"。 選取 [確定] 按鈕。
 
    ![已選取 [主控台應用程式] 的 [新增專案] 對話方塊](./media/with-visual-studio/visual-studio-new-project.png)
-   
+
 1. Visual Studio 使用範本建立專案。 .NET Core 的 C# 主控台應用程式範本會自動定義一個 `Program` 類別，該類別具有採用 <xref:System.String> 陣列為引數的單一 `Main` 方法。 `Main` 是應用程式進入點，是執行階段在啟動應用程式時會自動呼叫的方法。 在應用程式啟動時所提供的所有命令列引數，都會在 *args* 陣列中提供。
 
    ![Visual Studio 和新的 HelloWorld 專案](./media/with-visual-studio/visual-studio-main-window.png)
@@ -42,6 +42,7 @@ ms.locfileid: "54362792"
    Console.Write("Press any key to continue...");
    Console.ReadKey(true);
    ```
+
    此程式碼會提示使用者按下任意鍵，並暫停程式直到按下按鍵為止。
 
 1. 在功能表列中，選取 [組建]  >  [組建方案]。 這會將您的程式編譯成中繼語言 (IL)，而該語言是由 Just-In-Time (JIT) 編譯器轉換為二進位程式碼。

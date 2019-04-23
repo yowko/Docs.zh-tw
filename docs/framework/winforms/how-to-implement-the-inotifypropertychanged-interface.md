@@ -8,10 +8,10 @@ helpviewer_keywords:
 - INotifyPropertyChanged interface [Windows Forms], implementing
 ms.assetid: eac428af-b43b-46ac-80d9-1a5f88658725
 ms.openlocfilehash: cfdfb22fd854a8f630243e0f612761c71cb778d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225595"
 ---
 # <a name="how-to-implement-the-inotifypropertychanged-interface"></a>HOW TO：實作 INotifyPropertyChanged 介面
@@ -23,7 +23,7 @@ ms.locfileid: "59225595"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：套用 PropertyNameChanged 模式](how-to-apply-the-propertynamechanged-pattern.md)
-- [Windows Form 資料繫結](windows-forms-data-binding.md)
-- [HOW TO：使用 BindingSource 和 INotifyPropertyChanged 介面引發變更通知](./controls/raise-change-notifications--bindingsource.md)
-- [Windows Form 資料繫結中的變更告知](change-notification-in-windows-forms-data-binding.md)
+- [如何：套用 PropertyNameChanged 模式](how-to-apply-the-propertynamechanged-pattern.md)
+- [Windows Forms 資料繫結](windows-forms-data-binding.md)
+- [如何：使用 BindingSource 和 INotifyPropertyChanged 介面引發變更通知](./controls/raise-change-notifications--bindingsource.md)
+- [Windows Forms 資料繫結中的變更告知](change-notification-in-windows-forms-data-binding.md)

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - behavior [WCF], service performance
 ms.assetid: f9dc120c-dc24-49d5-930e-b22f5bc73423
 ms.openlocfilehash: e42f44b5fa103d5c083bdce3086b6499c5bb3673
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211513"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59767184"
 ---
 # <a name="using-servicethrottlingbehavior-to-control-wcf-service-performance"></a>使用 ServiceThrottlingBehavior 來控制 WCF 服務效能
 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> 類別會公開可用來限制應用程式層級上所能建立之執行個體或工作階段數目的屬性。 您可以使用這種行為，來微調您的 Windows Communication Foundation (WCF) 應用程式的效能。  

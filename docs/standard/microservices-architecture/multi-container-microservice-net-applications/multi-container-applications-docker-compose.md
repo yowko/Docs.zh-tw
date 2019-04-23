@@ -4,12 +4,12 @@ description: 如何使用 docker-compose.yml 指定多容器應用程式的微�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 4f4918a6f26a617fad38c7955415c4ff559a9187
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: f40559ef7c41febb5e17d583ef2d0eb64addc0a8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920775"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613183"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定義多容器應用程式
 
@@ -423,7 +423,7 @@ Docker-compose 預期 .env 檔案中每行的格式都是 \<變數\>=\<值\>。
 #### <a name="additional-resources"></a>其他資源
 
 - **Docker Compose 的概觀** \
-    [https://docs.docker.com/compose/overview/](https://docs.docker.com/compose/overview/)
+    <https://docs.docker.com/compose/overview/>
 
 - **多個 Compose 檔案** \
     [https://docs.docker.com/compose/extends/\#multiple-compose-files](https://docs.docker.com/compose/extends/#multiple-compose-files)
@@ -466,7 +466,7 @@ ENTRYPOINT ["dotnet", "run"]
 #### <a name="additional-resources"></a>其他資源
 
 - **使用 ASP.NET Core 建置最佳化 Docker 映像** \
-    [https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
+    <https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/>
 
 - **建置 .NET Core 應用程式的 Docker 映像** \
     [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)

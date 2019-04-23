@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9edc54b5b7d86f0ecb58a6910cde82d088b2c663
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 19f1d3d1d94db885938a5da3f3b66c8e554205b5
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357855"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611389"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>在 .NET 應用程式中封裝和部署資源
 
@@ -147,7 +147,7 @@ ms.locfileid: "57357855"
        > 在具備區分大小寫之檔案系統的作業系統 (也就是 Linux 和 macOS) 上，文化特性名稱子目錄搜尋會區分大小寫。 子目錄名稱必須完全符合 <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> 的大小寫 (例如 `es` 或 `es-MX`)。
 
        > [!NOTE]
-       > 如果程式設計師已從 <xref:System.Runtime.Loader.AssemblyLoadContext> 衍生了自訂組件載入內容，則情況很複雜。 如果已將執行中組件載入到自訂內容，執行階段就會將附屬組件載入到自訂內容。 詳細資料不在此文件的範圍內。 請參閱 <xref:System.Runtime.Loader.AssemblyLoadContext>。
+       > 如果程式設計師已從 <xref:System.Runtime.Loader.AssemblyLoadContext> 衍生了自訂組件載入內容，則情況很複雜。 如果已將執行中組件載入到自訂內容，執行階段就會將附屬組件載入到自訂內容。 詳細資料不在本文的範圍內。 請參閱 <xref:System.Runtime.Loader.AssemblyLoadContext>。
 
      * 如果找不到附屬組件，<xref:System.Runtime.Loader.AssemblyLoadContext> 就會引發 <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> 事件，指出找不到附屬組件。 如果您選擇處理事件，則您的事件處理常式可以載入並傳回附屬組件的參考。
      * 如果仍然找不到附屬組件，AssemblyLoadContext 就會導致 AppDomain 觸發 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件，指出它找不到附屬組件。 如果您選擇處理事件，則您的事件處理常式可以載入並傳回附屬組件的參考。
@@ -226,13 +226,14 @@ vbc Example1.vb
 ```
 Bon jour!
 ```
+
 ## <a name="suggested-packaging-alternative"></a>建議的封裝替代方式
 
 時間或預算限制可能會讓您無法針對應用程式所支援的每個子文化特性建立一組資源。 相反地，您可以建立所有相關子文化特性可使用之父文化特性的單一附屬組件。 例如，您可以提供要求地區特定英文資源之使用者所擷取的單一英文附屬組件 (en)，以及要求地區特定德文資源之使用者的單一德文附屬組件 (de)。 例如，德國德文 (de-DE)、奧地利德文 (de-AT) 和瑞士德文 (de-CH) 的要求會改為使用德文附屬組件 (de)。 預設資源是最終後援，因此應該是大部分應用程式使用者所要求的資源，請小心選擇這些資源。 這種方式所部署的資源具有較少的特定文化特性，但可以大幅減少您應用程式的當地語系化成本。
 
 ## <a name="see-also"></a>另請參閱
 
-- [傳統型中應用程式的資源](../../../docs/framework/resources/index.md)
+- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)
 - [全域組件快取](../../../docs/framework/app-domains/gac.md)
 - [建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
 - [建立附屬組件](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

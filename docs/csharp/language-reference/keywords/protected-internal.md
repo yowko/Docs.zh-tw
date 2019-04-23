@@ -3,12 +3,12 @@ title: protected internal - C# 參考
 ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: 09685e38e879de787b0f6bab8c189a8815433904
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 090baae7fe0e49289059e060d5dcba7b037ae47a
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238646"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613300"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (C# 參考)
 
@@ -55,6 +55,7 @@ class DerivedClass : BaseClass
     }
 }
 ```
+
 此範例包含兩個檔案：`Assembly1.cs` 和 `Assembly2.cs`。
 第一個檔案包含公用的基底類別 `BaseClass`，以及另一個類別 `TestAccess`。 `BaseClass` 擁有 protected internal 成員 `myValue`，它是由 `TestAccess` 類型存取。
 在第二個檔案中，嘗試透過 `BaseClass` 的執行個體存取 `myValue` 會產生錯誤，而透過衍生類別 `DerivedClass` 的執行個體存取這個成員時會成功。

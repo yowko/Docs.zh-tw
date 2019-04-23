@@ -4,12 +4,12 @@ description: 了解 API 閘道模式和直接用戶端對微服務通訊的差�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 0e2db3629d504065a122a69b916f19aa3b838aab
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f1deb453519eec23e4c9bc8c19800e9caedf0c10
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462951"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611818"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 閘道模式與直接用戶端對微服務通訊
 
@@ -173,25 +173,25 @@ API 閘道產品的作用通常像是連入通訊的反向 Proxy，您也可以�
 ## <a name="additional-resources"></a>其他資源
 
 - **Charles Richardson：模式：API 閘道/前端的後端** \
-  [https://microservices.io/patterns/apigateway.html](https://microservices.io/patterns/apigateway.html)
+  <https://microservices.io/patterns/apigateway.html>
 
 - **API 閘道模式** \
-  [https://docs.microsoft.com/azure/architecture/microservices/gateway](https://docs.microsoft.com/azure/architecture/microservices/gateway)
+  <https://docs.microsoft.com/azure/architecture/microservices/gateway>
 
 - **彙總和撰寫模式** \
-  [https://microservices.io/patterns/data/api-composition.html](https://microservices.io/patterns/data/api-composition.html)
+  <https://microservices.io/patterns/data/api-composition.html>
 
 - **Azure API 管理** \
-  [https://azure.microsoft.com/services/api-management/](https://azure.microsoft.com/services/api-management/)
+  <https://azure.microsoft.com/services/api-management/>
 
 - **Udi Dahan.Service Oriented Composition (服務導向組合)** \
-  [http://udidahan.com/2014/07/30/service-oriented-composition-with-video/](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
+  <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 - **Clemens Vasters：GOTO 2016 的傳訊和微服務 (影片)** \
-  [https://www.youtube.com/watch?v=rXi5CLjIQ9k](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+  <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
 - **API 閘道簡介** (ASP.net Core API 閘道教學課程系列)\
-  [https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html](https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html)
+  <https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html>
 
 >[!div class="step-by-step"]
 >[上一頁](identify-microservice-domain-model-boundaries.md)

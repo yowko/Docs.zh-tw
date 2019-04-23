@@ -4,12 +4,12 @@ description: 了解開發 Docker 應用程式的工作流程詳細資料。 一�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 3fb5c06f8ed58b45a3ee669931d8c3118b3dc314
-ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
+ms.openlocfilehash: f23a2352d86d5c77d2f05af2a2452fb3c944e049
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59553871"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613365"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 應用程式的開發工作流程
 
@@ -64,7 +64,7 @@ ms.locfileid: "59553871"
 ### <a name="additional-resources"></a>其他資源
 
 - **Get started with Docker CE for Windows (開始使用 Docker CE for Windows)** \
-  [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)
+  <https://docs.docker.com/docker-for-windows/>
 
 - **Visual Studio 2017** \
   [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
@@ -122,7 +122,7 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
 
 - **組建您自己的映像**. 在官方 Docker 文件中。\
-  [https://docs.docker.com/engine/tutorials/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)
+  <https://docs.docker.com/engine/tutorials/dockerimages/>
 
 - **Staying up-to-date with .NET Container Images (保持 .NET 容器映像的最新狀態)** \
   <https://devblogs.microsoft.com/dotnet/staying-up-to-date-with-net-container-images/>
@@ -290,10 +290,10 @@ RUN dotnet restore
 ### <a name="additional-resources"></a>其他資源
 
 - **多架構 .NET Core 映像**。\
-  [https://github.com/dotnet/announcements/issues/14](https://github.com/dotnet/announcements/issues/14)
+  <https://github.com/dotnet/announcements/issues/14>
 
 - **建立基底映像**。 官方 Docker 文件。\
-  [https://docs.docker.com/engine/userguide/eng-image/baseimages/](https://docs.docker.com/engine/userguide/eng-image/baseimages/)
+  <https://docs.docker.com/develop/develop-images/baseimages/>
 
 ![3 - 建立定義於 Dockerfile 的映像](./media/image7.png)
 
@@ -485,7 +485,7 @@ docker-compose.yml 檔案指定的不只是使用何種容器，還會指定它�
 ### <a name="additional-resources"></a>其他資源
 
 - **Deploy an ASP.NET container to a remote Docker host (將 ASP.NET 容器部署至遠端 Docker 主機)** \
-  [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
+  <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>測試與部署協調器的注意事項
 
@@ -522,10 +522,10 @@ docker-compose up 和 docker run 命令 (在 Visual Studio 中執行和偵錯容
 ### <a name="additional-resources"></a>其他資源
 
 - **對本機 Docker 容器中的應用程式偵錯** \
-  [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
+  [https://docs.microsoft.com/visualstudio/containers/edit-and-refresh](/visualstudio/containers/edit-and-refresh)
 
 - **Steve Lasker。使用 Docker 組建、偵錯、部署 ASP.NET Core 應用程式。** 影片。 \
-  [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
+  <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115>
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>使用 Visual Studio 開發容器時的簡化工作流程
 
@@ -540,7 +540,7 @@ docker-compose up 和 docker run 命令 (在 Visual Studio 中執行和偵錯容
 ### <a name="additional-resources"></a>其他資源
 
 - **Steve Lasker：.NET Docker Development with Visual Studio 2017 (使用 Visual Studio 2017 進行 .NET Docker 開發)** \
-  [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
+  <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>在 DockerFile 中使用 PowerShell 命令來設定 Windows 容器 
 
@@ -562,7 +562,7 @@ RUN powershell add-windowsfeature web-asp-net45
 ### <a name="additional-resources"></a>其他資源
 
 - **aspnet-docker/Dockerfile.** 要從 Dockerfile 執行以包含 Windows 功能的範例 PowerShell 命令。\
-  [https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile)
+  <https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile>
 
 >[!div class="step-by-step"]
 >[上一頁](index.md)

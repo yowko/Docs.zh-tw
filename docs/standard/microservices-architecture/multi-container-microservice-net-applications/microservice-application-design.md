@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解微�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 777262ddeecf1e171344b34e586032e56f398463
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 160eba2c7249793592caf13622b01c597d7feec7
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674389"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613859"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>設計微服務導向應用程式
 
@@ -92,7 +92,7 @@ ms.locfileid: "57674389"
 ### <a name="additional-resources"></a>其他資源
 
 - **eShopOnContainers GitHub 存放庫：參考應用程式的原始程式碼**\
-    [https://aka.ms/eShopOnContainers/](https://aka.ms/eShopOnContainers/)
+    <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>微服務架構解決方案的優點
 
@@ -136,11 +136,11 @@ ms.locfileid: "57674389"
 
 如＜架構＞一節中所述，設計及建置以微服務為基礎的複雜應用程式時，您可以考慮使用多個更精細的 API 閘道，而不是更簡單的用戶端與微服務直接通訊方法。
 
-**分割微服務**。 最後，不論您對微服務架構採取哪種方法，另一個挑戰是決定如何將端對端應用程式分割成多個微服務。 如此指南的＜架構＞一節中所述，您可以採取數種技術和方法。 基本上，您需要識別與其他區域分離並具有較少硬式相依性的應用程式區域。 在許多情況下，這與依使用案例分割服務一致。 例如，在我們的電子商店應用程式中，我們有一個訂購服務，負責與訂購流程相關的所有商務邏輯。 我們也有實作其他功能的目錄服務和購物籃服務。 在理想情況下，每個服務只應該有一小組職責。 這類似於套用至類別的單一功能原則 (Single Responsibility Principle，SRP)，其中指出類別應該只有一個改變的原因。 但在此情況下，它與微服務相關，因此範圍會大於單一類別。 特別是微服務必須完全自主、端對端且包含其專屬資料來源的職責。
+**分割微服務**。 最後，不論您對微服務架構採取哪種方法，另一項挑戰是決定如何將端對端應用程式分割成多個微服務。 如本指南的＜架構＞一節中所述，您可以採取數種技術和方法。 基本上，您需要識別與其他區域分離並具有較少硬式相依性的應用程式區域。 在許多情況下，這與依使用案例分割服務一致。 例如，在我們的電子商店應用程式中，我們有一個訂購服務，負責與訂購流程相關的所有商務邏輯。 我們也有實作其他功能的目錄服務和購物籃服務。 在理想情況下，每個服務只應該有一小組職責。 這類似於套用至類別的單一功能原則 (Single Responsibility Principle，SRP)，其中指出類別應該只有一個改變的原因。 但在此情況下，它與微服務相關，因此範圍會大於單一類別。 特別是微服務必須完全自主、端對端且包含其專屬資料來源的職責。
 
 ## <a name="external-versus-internal-architecture-and-design-patterns"></a>外部與內部架構和設計模式
 
-外部架構是由多個服務所組成的微服務架構，並遵循此指南的＜架構＞一節中所述的原則。 不過，根據每個微服務的本質 (與您選擇的高階微服務架構無關)，通常且有時候最好擁有不同的內部架構，且每個架構是以不同的模式為基礎並針對不同的微服務。 這些微服務甚至可以使用不同的技術和程式設計語言。 圖 6-2 說明此多樣性。
+外部架構是由多個服務所組成的微服務架構，並遵循本指南的＜架構＞一節中所述的原則。 不過，根據每個微服務的本質 (與您選擇的高階微服務架構無關)，通常且有時候最好擁有不同的內部架構，且每個架構是以不同的模式為基礎並針對不同的微服務。 這些微服務甚至可以使用不同的技術和程式設計語言。 圖 6-2 說明此多樣性。
 
 ![外部架構的差異：微服務模式、API 閘道、彈性通訊、pub/sub 等：內部架構：資料 動/CRUD、DDD 模式、相依性插入、多程式庫等。](./media/image2.png)
 

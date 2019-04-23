@@ -4,12 +4,12 @@ description: 探索微服務之間的不同通訊方式，並了解同步和非�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 4b57607897e42ff68ff7566120bc3c932040a2a6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 364bd4eb82907fcf0fbcc850eca839f676a2dbf8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466188"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613235"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>微服務架構中的通訊
 
@@ -90,10 +90,10 @@ ms.locfileid: "58466188"
 ### <a name="additional-resources"></a>其他資源
 
 - **Martin Fowler：Richardson 成熟度模型** REST 模型的描述。 \
-  [https://martinfowler.com/articles/richardsonMaturityModel.html](https://martinfowler.com/articles/richardsonMaturityModel.html)
+  <https://martinfowler.com/articles/richardsonMaturityModel.html>
 
 - **Swagger** 官方網站。 \
-  [https://swagger.io/](https://swagger.io/)
+  <https://swagger.io/>
 
 ### <a name="push-and-real-time-communication-based-on-http"></a>以 HTTP 為基礎的推送和即時通訊
 

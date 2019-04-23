@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d3eb82cf9bac1e40947fb78882d18c5f09b0092
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3177ae53d8b932a52dccf11b12d44fd07ec1c4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690081"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226621"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>風險降低：新的 64 位元 JIT 編譯器
 從 .NET Framework 4.6 開始，執行階段包含新的 64 位元 JIT 編譯器，用於 Just-In-Time 編譯。 這項變更不會影響使用 32 位元 JIT 編譯器的編譯。  
@@ -70,5 +70,6 @@ ms.locfileid: "54690081"
  您也可以前往 [Microsoft Connect](https://connect.microsoft.com/VisualStudio) 回報錯誤，讓我們知道問題所在。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [執行階段變更](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
 - [\<useLegacyJit> 項目](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)

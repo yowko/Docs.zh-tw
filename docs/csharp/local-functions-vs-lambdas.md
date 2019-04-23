@@ -3,12 +3,12 @@ title: 區域函式與 Lambda 運算式的比較
 description: 了解區域函式可能比 Lambda 運算式更適用的原因。
 ms.date: 06/27/2016
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 17ad1e8782adbf9e0f892d72849e58ef9c5ddce1
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 7577950314f8c57fba635db8b2bcd69e8d427dc3
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125768"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611441"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>區域函式與 Lambda 運算式的比較
 
@@ -59,7 +59,7 @@ Lambda 運算式所需的具現化代表額外的記憶體配置，這可能會�
 > [!NOTE]
 > 這個方法的對等區域函式也會使用關閉的類別。 不論區域函式的關閉實作為 `class` 還是 `struct` 都是實作詳細資料。 區域函式可以使用 `struct`，而 Lambda 一律會使用 `class`。
 
-[!code-csharp[TaskLocalFunctionExample](../../samples/snippets/csharp/new-in-7/AsyncWork.cs#29_TaskExample "Task returning method with local function")]
+[!code-csharp[TaskLocalFunctionExample](../../samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 此範例中未示範的最後一個優點，在於可以使用 `yield return` 語法來產生一連串的值，以將區域函式實作為迭代器。 Lambda 運算式中不可以有 `yield return` 陳述式。
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
 ms.openlocfilehash: d79ce0d189fc88310594f356f1901d93b3e1e06f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59340915"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768029"
 ---
 # <a name="impersonating-the-client"></a>模擬用戶端
 此模擬範例會示範如何在服務端模擬呼叫者應用程式，以便讓服務能夠代表該呼叫者存取系統資源。  

@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 探索在�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 3adf711fd00ac0ab57764a67a08ce453318fd965
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 106e38a3cf3a121c4d7f879b718c832d27e0910f
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463133"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611506"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>測試 ASP.NET Core 服務和 Web 應用程式
 
@@ -104,25 +104,25 @@ public class PrimeWebDefaultRequestShould
 #### <a name="additional-resources"></a>其他資源
 
 - **Steve Smith.測試控制器** (ASP.NET Core) \
-    [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
+    [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](/aspnet/core/mvc/controllers/testing)
 
 - **Steve Smith.整合測試** (ASP.NET Core) \
-    [https://docs.microsoft.com/aspnet/core/test/integration-tests](https://docs.microsoft.com/aspnet/core/test/integration-tests)
+    [https://docs.microsoft.com/aspnet/core/test/integration-tests](/aspnet/core/test/integration-tests)
 
 - **使用 dotnet test 的 .NET Core 單元測試** \
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**. 官方網站。 \
-    [https://xunit.github.io/](https://xunit.github.io/)
+    <https://xunit.github.io/>
 
 - **單元測試基本概念。** \
     [https://docs.microsoft.com/visualstudio/test/unit-test-basics](/visualstudio/test/unit-test-basics)
 
 - **Moq**. GitHub 存放庫。 \
-    [https://github.com/moq/moq](https://github.com/moq/moq)
+    <https://github.com/moq/moq>
 
 - **NUnit**. 官方網站。 \
-    [https://www.nunit.org/](https://www.nunit.org/)
+    <https://www.nunit.org/>
 
 ### <a name="implementing-service-tests-on-a-multi-container-application"></a>實作多重容器應用程式上的服務測試
 
@@ -203,10 +203,10 @@ docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 ### <a name="additional-resources"></a>其他資源
 
 - GitHub 上 eShopOnContainers 存放庫上的**測試讀我檔案** \
-    [https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test)
+    <https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test>
 
 - GitHub 上 eShopOnContainers 存放庫上的**負載測試讀我檔案** \
-    [https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/)
+    <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/>
 
 > [!div class="step-by-step"]
 > [上一頁](subscribe-events.md)

@@ -4,12 +4,12 @@ description: Microsoft WCF dotnet-svcutil 工具的概觀，此工具可新增 .
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: a1361c30e6b529d68dc93a65c645d31ca6c8e564
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: b5dfb84f19c3748daa303c828cbe881f1582eb76
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747232"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612809"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>適用於 .NET Core 的 WCF dotnet-svcutil 工具
 
@@ -66,6 +66,7 @@ dotnet new web
 
 3. 將 [`dotnet-svcutil` NuGet 套件](https://nuget.org/packages/dotnet-svcutil)安裝為 CLI 工具：
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+
 ```console
 dotnet tool install --global dotnet-svcutil
 ```
@@ -89,14 +90,17 @@ dotnet restore
 
 4. 執行 _dotnet-svcutil_ 命令以產生 Web 服務參考檔案，如下所示：
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+
 ```console
 dotnet-svcutil http://contoso.com/SayHello.svc
 ```
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+
 ```console
 dotnet svcutil http://contoso.com/SayHello.svc
 ```
+
 ---
 
 產生的檔案會儲存為 _HelloSvcutil/ServiceReference/Reference.cs_。 _dotnet-svcutil_ 工具也會將 Proxy 程式碼所需的適當 WCF 套件，以套件參考的形式新增到專案。
@@ -149,14 +153,17 @@ dotnet run
 
 如需 `dotnet-svcutil` 工具參數的詳細說明，請依下列所示叫用工具並傳遞 help 參數：
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+
 ```console
 dotnet-svcutil --help
 ```
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+
 ```console
 dotnet svcutil --help
 ```
+
 ---
 
 ## <a name="feedback--questions"></a>意見反應和問題

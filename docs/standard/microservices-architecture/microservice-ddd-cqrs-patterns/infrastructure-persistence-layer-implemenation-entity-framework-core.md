@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 使用 Enti
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 5174f3ac649ef002c7efff2fcc56effa3f84abba
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: a84c5057b7a35c837f2c597cd3e60cd293a70009
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465291"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611649"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>使用 Entity Framework Core 實作基礎結構持續層
 
@@ -26,16 +26,16 @@ Entity Framework (EF) Core 是常見 Entity Framework 資料存取技術的輕�
 #### <a name="additional-resources"></a>其他資源
 
 - **Entity Framework Core** \
-  [https://docs.microsoft.com/ef/core/](https://docs.microsoft.com/ef/core/)
+  [https://docs.microsoft.com/ef/core/](/ef/core/)
 
 - **使用 Visual Studio 的 ASP.NET Core 與 Entity Framework Core 使用者入門** \
-  [https://docs.microsoft.com/aspnet/core/data/ef-mvc/](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
+  [https://docs.microsoft.com/aspnet/core/data/ef-mvc/](/aspnet/core/data/ef-mvc/)
 
 - **DbContext 類別** \
-  [https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext)
+  [https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext](xref:Microsoft.EntityFrameworkCore.DbContext)
 
 - **比較 EF Core 與 EF6.x** \
-  [https://docs.microsoft.com/ef/efcore-and-ef6/index](https://docs.microsoft.com/ef/efcore-and-ef6/index)
+  [https://docs.microsoft.com/ef/efcore-and-ef6/index](/ef/efcore-and-ef6/index)
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>DDD 觀點的 Entity Framework Core 基礎結構
 
@@ -235,13 +235,13 @@ builder.RegisterType<OrderRepository>()
 #### <a name="additional-resources"></a>其他資源
 
 - **在 ASP.NET MVC 應用程式中實作存放庫與工作單位模式** \
-  [https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+  <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
 - **Jonathan Allen.使用 Entity Framework、Dapper 及 Chain 實作存放庫模式策略** \
-  [https://www.infoq.com/articles/repository-implementation-strategies](https://www.infoq.com/articles/repository-implementation-strategies)
+  <https://www.infoq.com/articles/repository-implementation-strategies>
 
 - **Cesar de la Torre：比較 ASP.NET Core IoC 容器服務存留期與 Autofac IoC 容器執行個體範圍** \
-  [https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+  <https://devblogs.microsoft.com/cesardelatorre/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/>
 
 ## <a name="table-mapping"></a>資料表對應
 
@@ -452,22 +452,22 @@ public IEnumerable<T> List(ISpecification<T> spec)
 #### <a name="additional-resources"></a>其他資源
 
 - **資料表對應** \
-  [https://docs.microsoft.com/ef/core/modeling/relational/tables](https://docs.microsoft.com/ef/core/modeling/relational/tables)
+  [https://docs.microsoft.com/ef/core/modeling/relational/tables](/ef/core/modeling/relational/tables)
 
 - **使用 HiLo 配合 Entity Framework Core 產生金鑰** \
-  [https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/](https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
+  <https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/>
 
 - **支援欄位** \
-  [https://docs.microsoft.com/ef/core/modeling/backing-field](https://docs.microsoft.com/ef/core/modeling/backing-field)
+  [https://docs.microsoft.com/ef/core/modeling/backing-field](/ef/core/modeling/backing-field)
 
 - **Steve Smith.Entity Framework Core 中的封裝式集合** \
-  [https://ardalis.com/encapsulated-collections-in-entity-framework-core](https://ardalis.com/encapsulated-collections-in-entity-framework-core)
+  <https://ardalis.com/encapsulated-collections-in-entity-framework-core>
 
 - **陰影屬性** \
-  [https://docs.microsoft.com/ef/core/modeling/shadow-properties](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
+  [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
 
 - **規格模式** \
-  [https://deviq.com/specification-pattern/](https://deviq.com/specification-pattern/)
+  <https://deviq.com/specification-pattern/>
 
 > [!div class="step-by-step"]
 > [上一頁](infrastructure-persistence-layer-design.md)

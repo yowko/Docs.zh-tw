@@ -4,12 +4,12 @@ description: 探索如何在二元分類案例中使用 ML.NET，以了解如何
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 202edc5127388df2397053d5703d33a39046374f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: e88a85b96c1e5d33d748332991cb9480222a9c66
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303111"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612091"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>教學課程：在情感分析二元分類案例中使用 ML.NET
 
@@ -33,7 +33,7 @@ ms.locfileid: "59303111"
 
 ## <a name="sentiment-analysis-sample-overview"></a>情感分析範例概觀
 
-範例是一個主控台應用程式，會使用 ML.NET 來定型模型，以將情感分類並預測為正面或負面。 Yelp 情感資料集是來自加州大學爾灣分校 (UCI)，且被分割成定型資料集與測試資料集。 範例使用測試資料集來評估模型，以進行品質分析。 
+範例是一個主控台應用程式，會使用 ML.NET 來定型模型，以將情感分類並預測為正面或負面。 Yelp 情感資料集是來自加州大學爾灣分校 (UCI)，且被分割成定型資料集與測試資料集。 範例使用測試資料集來評估模型，以進行品質分析。
 
 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 存放庫中找到本教學課程的原始程式碼。
 
@@ -53,7 +53,7 @@ ms.locfileid: "59303111"
 2. **準備您的資料**
    * **載入資料**
    * **擷取特徵 (轉換您的資料)**
-3. **建置和定型** 
+3. **建置和定型**
    * **將模型定型**
    * **評估模型**
 4. **部署模型**
@@ -96,7 +96,7 @@ ms.locfileid: "59303111"
 * 二元：不是 A 就是 B。
 * 多元分類：可使用單一模型來預測的多重分類。
 
-由於網站評論必須被分類為正面或負面的，您將會使用二元分類演算法。 
+由於網站評論必須被分類為正面或負面的，您將會使用二元分類演算法。
 
 ## <a name="create-a-console-application"></a>建立主控台應用程式
 
@@ -178,21 +178,22 @@ public static TrainCatalogBase.TrainTestData LoadData(MLContext mlContext)
 
 }
 ```
+
 ## <a name="load-the-data"></a>載入資料
 
-因為您先前所建立的 `SentimentData` 資料模型類型符合資料集結構描述，所以您可以針對 [LoadFromTextFile 方法](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)使用 `MLContext.Data.LoadFromTextFile` 包裝函式，來將初始化、對應和資料集載入合併成一行程式碼。 它會傳回 <xref:Microsoft.Data.DataView.IDataView>。 
+因為您先前所建立的 `SentimentData` 資料模型類型符合資料集結構描述，所以您可以針對 [LoadFromTextFile 方法](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)使用 `MLContext.Data.LoadFromTextFile` 包裝函式，來將初始化、對應和資料集載入合併成一行程式碼。 它會傳回 <xref:Microsoft.Data.DataView.IDataView>。
 
- 作為 `Transforms` 的輸入和輸出，`DataView` 是基本的資料管線類型，相當於 `LINQ` 的 `IEnumerable`。
+作為 `Transforms` 的輸入和輸出，`DataView` 是基本的資料管線類型，相當於 `LINQ` 的 `IEnumerable`。
 
 在 ML.NET 中，資料相當於 SQL 檢視。 它是延遲評估、結構描述化且異質性的。 物件是管線的第一個部分，並且會載入資料。 在本教學課程中，它會載入資料集，其中包含評論及所對應的有害的或無害的情感。 這用來建立模型並加以定型。
 
- 將下列程式碼新增為 `LoadData` 方法的第一行：
+將下列程式碼新增為 `LoadData` 方法的第一行：
 
 [!code-csharp[LoadData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#LoadData "loading dataset")]
 
 ### <a name="split-the-dataset-for-model-training-and-testing"></a>分割資料集以進行模型定型與測試
 
-接下來，您需要定型資料集與測試資料集，以分別對模型進行定型與評估。 使用 `MLContext.BinaryClassification.TrainTestSplit`，其會包裝 <xref:Microsoft.ML.StaticPipe.TrainingStaticExtensions.TrainTestSplit%2A> 以將載入的資料集分割為定型與測試資料集，然後將它們包含在 <xref:Microsoft.ML.TrainCatalogBase.TrainTestData> 內並傳回。 您可以搭配 `testFraction` 參數來指定測試集的資料分數。 預設值是 10%，但您在此範例中會使用 20% 以針對評估使用更多資料。  
+接下來，您需要定型資料集與測試資料集，以分別對模型進行定型與評估。 使用 `MLContext.BinaryClassification.TrainTestSplit`，其會包裝 <xref:Microsoft.ML.StaticPipe.TrainingStaticExtensions.TrainTestSplit%2A> 以將載入的資料集分割為定型與測試資料集，然後將它們包含在 <xref:Microsoft.ML.TrainCatalogBase.TrainTestData> 內並傳回。 您可以搭配 `testFraction` 參數來指定測試集的資料分數。 預設值是 10%，但您在此範例中會使用 20% 以針對評估使用更多資料。
 
 若要將載入的資料分割成所需的資料集，請將下列程式碼加入為 `LoadData` 方法中的下一行：
 
@@ -224,7 +225,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView spl
 }
 ```
 
-請注意，有兩個參數傳遞至 Train 方法中：針對內容 (`mlContext`) 的 `MLContext`，以及針對定型資料集 (`splitTrainSet`) 的 `IDataView`。 
+請注意，有兩個參數傳遞至 Train 方法中：針對內容 (`mlContext`) 的 `MLContext`，以及針對定型資料集 (`splitTrainSet`) 的 `IDataView`。
 
 ## <a name="extract-and-transform-the-data"></a>擷取並轉換資料
 
@@ -353,7 +354,7 @@ private static void UseModelWithSingleItem(MLContext mlContext, ITransformer mod
 雖然 `model` 是可在多個資料列上運作的 `transformer`，但常見的生產環境案例需要根據個別範例進行預測。 <xref:Microsoft.ML.PredictionEngine%602> 是從 `CreatePredictionEngine` 方法傳回的包裝函式。 讓我們在 `Predict` 方法中的第一行加入下列程式碼，來建立 `PredictionEngine`：
 
 [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
-  
+
 透過建立 `SentimentData` 的執行個體，在 `Predict` 方法中新增評論，以測試定型模型的預測：
 
 [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
@@ -450,7 +451,7 @@ Press any key to continue . . .
 
 ```
 
-恭喜您！ 您現在已成功建置可對訊息情感進行分類和預測的機器學習模型。 
+恭喜您！ 您現在已成功建置可對訊息情感進行分類和預測的機器學習模型。
 
 建立成功的模型是一個需要反覆嘗試的程序。 此模型一開始的品質較低，因為此教學課程是使用小型的資料集來提供快速的模型定型。 如果您對於模型的品質感到不滿意，可以嘗試為它提供較大的定型資料集，或選擇不同的定型演算法，並針對每個演算法搭配不同的超參數來改善它。
 
@@ -459,6 +460,7 @@ Press any key to continue . . .
 ## <a name="next-steps"></a>後續步驟
 
 在本教學課程中，您將了解如何：
+
 > [!div class="checklist"]
 > * 了解問題
 > * 選取適當的機器學習演算法
@@ -470,5 +472,6 @@ Press any key to continue . . .
 > * 使用已載入的模型部署和預測
 
 前進到下一個教學課程來深入了解
+
 > [!div class="nextstepaction"]
 > [問題分類](github-issue-classification.md)

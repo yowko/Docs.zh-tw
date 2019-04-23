@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 ms.assetid: d10aef35-701e-4a3c-a684-2a2ed1aeaca6
 ms.openlocfilehash: dae254c14790841b37162fca9f998be429006125
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225608"
 ---
 # <a name="how-to-validate-data-in-the-windows-forms-datagridview-control"></a>HOW TO：驗證 Windows Forms DataGridView 控制項的資料
@@ -40,7 +40,7 @@ ms.locfileid: "59225608"
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [逐步解說：驗證 Windows Forms DataGridView 控制項的資料](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
-- [Windows Form DataGridView 控制項中的資料輸入](data-entry-in-the-windows-forms-datagridview-control.md)
-- [逐步解說：處理 Windows Forms DataGridView 控制項在資料輸入期間發生的錯誤](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
-- [保護連接資訊](../../data/adonet/protecting-connection-information.md)
+- [逐步解說：驗證 Windows Form DataGridView 控制項中的資料](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 控制項中的資料輸入](data-entry-in-the-windows-forms-datagridview-control.md)
+- [逐步解說：處理 Windows Form DataGridView 控制項中的資料輸入期間所發生的錯誤](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [保護連線資訊](../../data/adonet/protecting-connection-information.md)

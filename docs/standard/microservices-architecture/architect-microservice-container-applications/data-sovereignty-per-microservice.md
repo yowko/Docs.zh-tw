@@ -4,12 +4,12 @@ description: 每個微服務之資料自主性是微服務的其中一個重點�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 8db5e4ae8e0da63493a09c76614d898358bdea98
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 1b0b1fbb72f759eb337c0c1a9c465cc4088d8eff
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464031"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611233"
 ---
 # <a name="data-sovereignty-per-microservice"></a>每個微服務的資料自主性
 
@@ -50,16 +50,16 @@ DDD 藉由以分散式微服務的形式得到真實界限而從微服務獲益�
 ### <a name="additional-resources"></a>其他資源
 
 - **Chris Richardson：模式：每個服務的資料庫** \
-  [https://microservices.io/patterns/data/database-per-service.html](https://microservices.io/patterns/data/database-per-service.html)
+  <https://microservices.io/patterns/data/database-per-service.html>
 
 - **Martin Fowler：BoundedContext** \
-  [https://martinfowler.com/bliki/BoundedContext.html](https://martinfowler.com/bliki/BoundedContext.html)
+  <https://martinfowler.com/bliki/BoundedContext.html>
 
 - **Martin Fowler：PolyglotPersistence** \
-  [https://martinfowler.com/bliki/PolyglotPersistence.html](https://martinfowler.com/bliki/PolyglotPersistence.html)
+  <https://martinfowler.com/bliki/PolyglotPersistence.html>
 
 - **Alberto Brandolini.含內容對應的策略性領域導向設計** \
-  [https://www.infoq.com/articles/ddd-contextmapping](https://www.infoq.com/articles/ddd-contextmapping)
+  <https://www.infoq.com/articles/ddd-contextmapping>
 
 >[!div class="step-by-step"]
 >[上一頁](microservices-architecture.md)

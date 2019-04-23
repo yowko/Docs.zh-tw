@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解一�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 07ed5ba4650eea72f29d254accaaaea5208b1129
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 851068b511106157a759a0600c404b4d1154e5ee
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465941"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613626"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>使用 NoSQL 資料庫作為持續性基礎結構
 
@@ -314,31 +314,31 @@ services:
 #### <a name="additional-resources"></a>其他資源
 
 - **將 NoSQL 資料庫的文件資料模組化** \
-  [https://docs.microsoft.com/azure/cosmos-db/modeling-data](https://docs.microsoft.com/azure/cosmos-db/modeling-data)
+  <https://docs.microsoft.com/azure/cosmos-db/modeling-data>
 
 - **Vaughn Vernon：理想的領域驅動設計彙總存放區？** \
   <https://kalele.io/blog-posts/the-ideal-domain-driven-design-aggregate-store/>
 
 - **Azure Cosmos DB 簡介：適用於 MongoDB 的 API**  \
-  [https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
+  <https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction>
 
 - **Azure Cosmos DB：使用 .NET 與 Azure 入口網站建置 MongoDB API Web 應用程式**  \
   [https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet )
 
 - **將 Azure Cosmos DB 模擬器用於本機開發及測試**  \
-  [https://docs.microsoft.com/azure/cosmos-db/local-emulator](https://docs.microsoft.com/azure/cosmos-db/local-emulator)
+  <https://docs.microsoft.com/azure/cosmos-db/local-emulator>
 
 - **將 MongoDB 應用程式連線至 Azure Cosmos DB**  \
-  [https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)
+  <https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account>
 
 - **Cosmos DB 模擬器 Docker 映像 (Windows 容器)**  \
-  [https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/)
+  <https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/>
 
 - **MongoDB Docker 映像 (Linux 與 Windows 容器)**  \
-  [https://hub.docker.com/r/_/mongo/](https://hub.docker.com/r/_/mongo/)
+  <https://hub.docker.com/\_/mongo/>
 
 - **搭配 Azure Cosmos DB 使用 MongoChef (Studio 3T)：適用於 MongoDB 的 API 帳戶**  \
-  [https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef](https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef)
+  <https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef>
 
 >[!div class="step-by-step"]
 >[上一頁](infrastructure-persistence-layer-implemenation-entity-framework-core.md)

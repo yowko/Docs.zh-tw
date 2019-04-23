@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解如何�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 5c16b38d7720fb739aa0711d4511afacd7b92c7a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 21a06036609ec4c84b496d58423a111ee658f3aa
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465304"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612260"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>建立簡單資料驅動 CRUD 微服務
 
@@ -213,10 +213,10 @@ public void ConfigureServices(IServiceCollection services)
 ### <a name="additional-resources"></a>其他資源
 
 - **查詢資料** \
-  [https://docs.microsoft.com/ef/core/querying/index](https://docs.microsoft.com/ef/core/querying/index)
+  [https://docs.microsoft.com/ef/core/querying/index](/ef/core/querying/index)
 
 - **儲存資料** \
-  [https://docs.microsoft.com/ef/core/saving/index](https://docs.microsoft.com/ef/core/saving/index)
+  [https://docs.microsoft.com/ef/core/saving/index](/ef/core/saving/index)
 
 ## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>Docker 容器所使用的 DB 連接字串及環境變數
 
@@ -297,13 +297,13 @@ public class CatalogController : ControllerBase
 ### <a name="additional-resources"></a>其他資源
 
 - **Scott Hanselman。ASP.NET Core RESTful Web API 版本設定變得更加容易** \
-  [https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
+  <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
 - **進行 RESTful web API 的版本設定** \
-  [https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+  <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
 - **Roy Fielding。版本設定、超媒體及 REST** \
-  [https://www.infoq.com/articles/roy-fielding-on-versioning](https://www.infoq.com/articles/roy-fielding-on-versioning)
+  <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>從您的 ASP.NET Core Web API 產生 Swagger 描述中繼資料
 
@@ -313,7 +313,7 @@ Swagger 的核心是 Swagger 規格，即儲存於 JSON 或 YAML 檔案中的 AP
 
 規格是 OpenAPI 規格 (OAS) 的基礎，並且是在開放、透明且共同作業的社群開發的，以標準化定義 RESTful 介面的方式。
 
-規格定義了可探索到服務的結構，以及理解其功能的方式。 如需詳細資訊，包含 Web 編輯器及來自 Spotify、Uber、Slack 及 Microsoft 等公司的 Swagger 規格範例，請參閱 Swagger 網站 ([https://swagger.io](https://swagger.io))。
+規格定義了可探索到服務的結構，以及理解其功能的方式。 如需詳細資訊，包含 Web 編輯器及來自像是 Spotify、Uber、Slack 及 Microsoft 等公司 Swagger 規格的範例，請參閱 Swagger 網站 (<https://swagger.io>)。
 
 ### <a name="why-use-swagger"></a>為何要使用 Swagger？
 
@@ -423,13 +423,13 @@ public class Startup
 ### <a name="additional-resources"></a>其他資源
 
 - **使用 Swagger 的 ASP.NET Web API 說明頁面** \
-  [https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
+  [https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger](/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 - **開始使用 Swashbuckle 及 ASP.NET Core** \
-  [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle?tabs=visual-studio](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle?tabs=visual-studio)
+  [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle](/aspnet/core/tutorials/getting-started-with-swashbuckle)
 
 - **開始使用 NSwag 及 ASP.NET Core** \
-  [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio)
+  [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag](/aspnet/core/tutorials/getting-started-with-nswag)
 
 > [!div class="step-by-step"]
 > [上一頁](microservice-application-design.md)

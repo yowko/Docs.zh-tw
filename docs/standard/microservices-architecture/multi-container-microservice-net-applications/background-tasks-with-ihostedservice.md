@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解在�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 7af65077eccfaddeaf25b5f403f1b9824ed4ea17
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: b262f5352f62e74ec184e2e00e8cff3aeecc2f64
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465174"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613794"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>在微服務中使用 IHostedService 和 BackgroundService 類別實作背景工作
 
@@ -23,35 +23,35 @@ ms.locfileid: "58465174"
 
 **圖 6-26**。 在 WebHost 與主機中使用 IHostedService
 
-請注意 `WebHost` 與 `Host` 之間的差異。 
+請注意 `WebHost` 與 `Host` 之間的差異。
 
 ASP.NET Core 2.0 中的 `WebHost` (實作 `IWebHost` 的基底類別) 是用來將 HTTP 伺服器功能提供給程序的基礎結構成品，就像您是實作 MVC Web 應用程式或 Web API 服務一樣。 它會提供 ASP.NET Core 中的所有新基礎結構優點，讓您可以使用相依性插入、在要求管道中插入中介軟體等等，以及精確地針對背景工作使用這些 `IHostedServices`。
 
 .NET Core 2.1 中引進了 `Host` (實作 `IHost` 的基底類別)。 基本上，`Host` 可讓您擁有與 `WebHost` 類似的基礎結構 (相依性插入、託管服務等等)，但在此情況下，您只想要有主機的簡單且輕量程序，而不想要有與 MVC、Web API 或 HTTP 伺服器功能有關的程序。
 
-因此，您可以選擇並使用 IHost 建立特殊化託管程序以處理託管服務，但不處理其他項目 (例如其製作目的只是要裝載 `IHostedServices` 的微服務)，也可以擴充現有 ASP.NET Core `WebHost` (例如現有 ASP.NET Core Web API 或 MVC 應用程式)。 
+因此，您可以選擇並使用 IHost 建立特殊化託管程序以處理託管服務，但不處理其他項目 (例如其製作目的只是要裝載 `IHostedServices` 的微服務)，也可以擴充現有 ASP.NET Core `WebHost` (例如現有 ASP.NET Core Web API 或 MVC 應用程式)。
 
 根據您的商務和延展性需求，每種方法都有其優缺點。 底線基本上是，如果您的背景工作與 HTTP (IWebHost) 無關，則您應該使用 IHost。
 
 ## <a name="registering-hosted-services-in-your-webhost-or-host"></a>在 WebHost 或主機中註冊託管服務
 
-讓我們更深入了解 `IHostedService` 介面，因為它在 `WebHost` 或 `Host` 中的使用相當類似。 
+讓我們更深入了解 `IHostedService` 介面，因為它在 `WebHost` 或 `Host` 中的使用相當類似。
 
 SignalR 是使用託管服務之成品的一個範例，但您也可以將它用於下列更簡單的事項：
 
--   輪詢資料庫以找出變更的背景工作。
--   定期更新某個快取的已排定工作。
--   允許在背景執行緒上執行工作的 QueueBackgroundWorkItem 實作。
--   在共用 `ILogger` 這類通用服務時，於 Web 應用程式背景處理來自佇列的訊息。
--   使用 `Task.Run()` 啟動的背景工作。
+- 輪詢資料庫以找出變更的背景工作。
+- 定期更新某個快取的已排定工作。
+- 允許在背景執行緒上執行工作的 QueueBackgroundWorkItem 實作。
+- 在共用 `ILogger` 這類通用服務時，於 Web 應用程式背景處理來自佇列的訊息。
+- 使用 `Task.Run()` 啟動的背景工作。
 
 您基本上可以根據 IHostedService，將其中任何動作卸載至背景工作。
 
-將一或多個 `IHostedServices` 新增至 `WebHost` 或 `Host` 的方法是透過 ASP.NET Core `WebHost` (或 .NET Core 2.1 和更高版本中的 `Host`) 中的標準 DI (相依性插入) 註冊它們。 基本上，您必須在 `Startup` 類別的熟悉 `ConfigureServices()` 方法內註冊託管服務，如典型 ASP.NET WebHost 中的下列程式碼所示。 
+將一或多個 `IHostedServices` 新增至 `WebHost` 或 `Host` 的方法是透過 ASP.NET Core `WebHost` (或 .NET Core 2.1 和更高版本中的 `Host`) 中的標準 DI (相依性插入) 註冊它們。 基本上，您必須在 `Startup` 類別的熟悉 `ConfigureServices()` 方法內註冊託管服務，如典型 ASP.NET WebHost 中的下列程式碼所示。
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
-{            
+{
     //Other DI registrations;
 
     // Register Hosted Services
@@ -93,13 +93,14 @@ namespace Microsoft.Extensions.Hosting
     }
 }
 ```
+
 假設您可以建立多個 IHostedService 實作，並在 `ConfigureService()` 方法中將它們註冊至 DI 容器，如前所示。 將會啟動與停止所有這些託管服務以及應用程式/微服務。
 
 身為開發人員，您負責在主機觸發 `StopAsync()` 方法時處理停止動作或服務。
 
 ## <a name="implementing-ihostedservice-with-a-custom-hosted-service-class-deriving-from-the-backgroundservice-base-class"></a>使用衍生自 BackgroundService 基底類別的自訂託管服務類別來實作 IHostedService
 
-您可以繼續並從頭開始建立自訂託管服務類別，並實作 `IHostedService`，就像使用 .NET Core 2.0 時所需執行的作業。 
+您可以繼續並從頭開始建立自訂託管服務類別，並實作 `IHostedService`，就像使用 .NET Core 2.0 時所需執行的作業。
 
 不過，因為大部分背景工作都會有與取消權杖管理和其他典型作業相關的類似需求，所以有一個您可以從中衍生且名為 `BackgroundService` 的便利抽象基底類別 (自 .NET Core 2.1 起提供)。
 
@@ -108,14 +109,14 @@ namespace Microsoft.Extensions.Hosting
 下個程式碼是 .NET Core 中所實作的抽象 BackgroundService 基底類別。
 
 ```csharp
-// Copyright (c) .NET Foundation. Licensed under the Apache License, Version 2.0. 
+// Copyright (c) .NET Foundation. Licensed under the Apache License, Version 2.0.
 /// <summary>
 /// Base class for implementing a long running <see cref="IHostedService"/>.
 /// </summary>
 public abstract class BackgroundService : IHostedService, IDisposable
 {
     private Task _executingTask;
-    private readonly CancellationTokenSource _stoppingCts = 
+    private readonly CancellationTokenSource _stoppingCts =
                                                    new CancellationTokenSource();
 
     protected abstract Task ExecuteAsync(CancellationToken stoppingToken);
@@ -125,7 +126,7 @@ public abstract class BackgroundService : IHostedService, IDisposable
         // Store the task we're executing
         _executingTask = ExecuteAsync(_stoppingCts.Token);
 
-        // If the task is completed then return it, 
+        // If the task is completed then return it,
         // this will bubble cancellation and failure to the caller
         if (_executingTask.IsCompleted)
         {
@@ -135,7 +136,7 @@ public abstract class BackgroundService : IHostedService, IDisposable
         // Otherwise it's running
         return Task.CompletedTask;
     }
-    
+
     public virtual async Task StopAsync(CancellationToken cancellationToken)
     {
         // Stop called without start
@@ -169,7 +170,7 @@ public abstract class BackgroundService : IHostedService, IDisposable
 
 ```csharp
 public class GracePeriodManagerService : BackgroundService
-{        
+{
     private readonly ILogger<GracePeriodManagerService> _logger;
     private readonly OrderingBackgroundSettings _settings;
 
@@ -179,27 +180,27 @@ public class GracePeriodManagerService : BackgroundService
                                      IEventBus eventBus,
                                      ILogger<GracePeriodManagerService> logger)
     {
-        //Constructor’s parameters validations...       
+        //Constructor’s parameters validations...
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
         _logger.LogDebug($"GracePeriodManagerService is starting.");
 
-        stoppingToken.Register(() => 
+        stoppingToken.Register(() =>
             _logger.LogDebug($" GracePeriod background task is stopping."));
 
         while (!stoppingToken.IsCancellationRequested)
         {
             _logger.LogDebug($"GracePeriod task doing background work.");
 
-            // This eShopOnContainers method is querying a database table 
+            // This eShopOnContainers method is querying a database table
             // and publishing events into the Event Bus (RabbitMS / ServiceBus)
             CheckConfirmedGracePeriodOrders();
 
             await Task.Delay(_settings.CheckUpdateTime, stoppingToken);
         }
-            
+
         _logger.LogDebug($"GracePeriod background task is stopping.");
     }
 
@@ -224,7 +225,7 @@ WebHost.CreateDefaultBuilder(args)
 ### <a name="summary-class-diagram"></a>摘要類別圖表
 
 下圖顯示在實作 IHostedServices 時所涉類別和介面的視覺效果摘要。
- 
+
 ![類別圖表：IWebHost 和 IHost 可以裝載許多服務，它們繼承自 BackgroundService，而 BackgroundService 實作 IHostedService。](./media/image27.png)
 
 **圖 6-27**。 類別圖表，顯示多個與 IHostedService 相關的類別和介面
@@ -239,14 +240,14 @@ WebHost.CreateDefaultBuilder(args)
 
 #### <a name="additional-resources"></a>其他資源
 
--   **在 ASP.NET Core/Standard 2.0 中建置已排定工作** <br/>
-    [https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html](https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html)
+- **在 ASP.NET Core/Standard 2.0 中建置已排定工作** <br/>
+    <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
--   **在 ASP.NET Core 2.0 中實作 IHostedService** <br/>
-    [https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice](https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice)
+- **在 ASP.NET Core 2.0 中實作 IHostedService** <br/>
+    <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
--   **使用 ASP.NET Core 2.1 的 GenericHost 樣本** <br/>
-    [https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample](https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample)
+- **使用 ASP.NET Core 2.1 的 GenericHost 樣本** <br/>
+    <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 >[!div class="step-by-step"]
 >[上一頁](test-aspnet-core-services-web-apps.md)

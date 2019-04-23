@@ -4,12 +4,12 @@ description: 了解如何在 C# 中使用 Visual Studio Code 建立並偵錯您�
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: d91427197662d61c1c3ffc242de9b1128b81b9c6
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: d23f095454a24d67c2b9fb7a0f090fb08ff9e8bb
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890549"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613443"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 與 Visual Studio Code 使用者入門
 
@@ -93,6 +93,7 @@ ms.locfileid: "58890549"
 1. 若要新增類別，請在「VSCode 總管」中按一下滑鼠右鍵，然後選取 [新增檔案]。 這會在您於 VSCode 中開啟的資料夾內新增檔案。
 2. 將檔案命名為 `MyClass.cs`。 您必須在結尾加上 `.cs` 副檔名來儲存它，系統才能將它辨識為 csharp 檔案。
 3. 新增下方程式碼來建立您的第一個類別。 請務必包含正確的命名空間，如此您才能夠從 `Program.cs` 檔案參考它。
+
 ``` csharp
 using System;
 
@@ -127,6 +128,7 @@ namespace HelloWorld
 ```
 
 5. 儲存變更，然後重新執行您的程式。 應該會顯示含有所附加字串的新訊息。
+
 ```console
 > dotnet run
 Hello World! Happy coding!
@@ -140,5 +142,5 @@ Visual Studio Code C# 延伸模組可為您產生用於建置和偵錯的資產�
 
 ## <a name="see-also"></a>另請參閱
 
-- [設定 Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
-- [在 Visual Studio Code 中偵錯](https://code.visualstudio.com/Docs/editor/debugging)
+- [設定 Visual Studio Code (英文)](https://code.visualstudio.com/docs/setup/setup-overview)
+- [在 Visual Studio Code 中偵錯 (英文)](https://code.visualstudio.com/Docs/editor/debugging)

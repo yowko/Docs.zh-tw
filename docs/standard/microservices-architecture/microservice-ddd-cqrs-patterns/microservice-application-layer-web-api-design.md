@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 用於設計�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 4a6a7faac6d0419d88e613ca23d9862475659918
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 9177ac9a79afaea01f0ec21b0a64bad5a94e9966
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464199"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612234"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>設計微服務應用程式層及 Web API
 
@@ -38,13 +38,13 @@ SOLID 與您設計應用程式或微服務的內部層及減少其之間的相�
 #### <a name="additional-resources"></a>其他資源
 
 - **SOLID：基本 OOP 準則** \
-  [https://deviq.com/solid/](https://deviq.com/solid/)
+  <https://deviq.com/solid/>
 
 - **Inversion of Control Containers and the Dependency Injection pattern (逆轉控制容器和相依性插入模式)** \
-  [https://martinfowler.com/articles/injection.html](https://martinfowler.com/articles/injection.html)
+  <https://martinfowler.com/articles/injection.html>
 
 - **Steve Smith.New is Glue (接著劑：New)** \
-  [https://ardalis.com/new-is-glue](https://ardalis.com/new-is-glue)
+  <https://ardalis.com/new-is-glue>
 
 > [!div class="step-by-step"]
 > [上一頁](nosql-database-persistence-infrastructure.md)

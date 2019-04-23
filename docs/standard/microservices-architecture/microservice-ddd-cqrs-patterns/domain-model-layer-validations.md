@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解領�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 6c5f42309970f14aa9a0cda3c48efa59b620bdb5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: ae1252f4544f184a5f63ef02ba898da9b4373e17
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464160"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612702"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>設計領域模型層中的驗證
 
@@ -88,25 +88,25 @@ public void SetAddress(string line1, string line2,
 ## <a name="additional-resources"></a>其他資源
 
 - **Rachel Appel：ASP.NET Core MVC 中的模型驗證簡介** \
-  [https://docs.microsoft.com/aspnet/core/mvc/models/validation](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
+  <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 
 - **Rick Anderson，新增驗證** \
-  [https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+  <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
 - **Martin Fowler：在驗證中將擲回例外狀況取代為通知** \
-  [https://martinfowler.com/articles/replaceThrowWithNotification.html](https://martinfowler.com/articles/replaceThrowWithNotification.html)
+  <https://martinfowler.com/articles/replaceThrowWithNotification.html>
 
 - **規格和通知模式** \
-  [https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
+  <https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns>
 
 - **Lev Gorodinski：網域驅動設計 (DDD) 中的驗證** \
-  [http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
+  <http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/>
 
 - **Colin Jack：領域模型驗證** \
-  [https://colinjack.blogspot.com/2008/03/domain-model-validation.html](https://colinjack.blogspot.com/2008/03/domain-model-validation.html)
+  <https://colinjack.blogspot.com/2008/03/domain-model-validation.html>
 
 - **Jimmy Bogard：DDD 世界中的驗證** \
-  [https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
+  <https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/>
 
 > [!div class="step-by-step"]
 > [上一頁](enumeration-classes-over-enum-types.md)
