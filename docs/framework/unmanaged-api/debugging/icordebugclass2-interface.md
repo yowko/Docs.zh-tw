@@ -17,38 +17,38 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 015085cff23028814937dfef9aea19af7438b4f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173806"
 ---
-# <a name="icordebugclass2-interface"></a><span data-ttu-id="05aac-102">ICorDebugClass2 介面</span><span class="sxs-lookup"><span data-stu-id="05aac-102">ICorDebugClass2 Interface</span></span>
+# <a name="icordebugclass2-interface"></a><span data-ttu-id="6c044-102">ICorDebugClass2 介面</span><span class="sxs-lookup"><span data-stu-id="6c044-102">ICorDebugClass2 Interface</span></span>
 
-<span data-ttu-id="05aac-103">表示泛型類別，或是具有 <xref:System.Type> 類型之方法參數的類別。</span><span class="sxs-lookup"><span data-stu-id="05aac-103">Represents a generic class or a class with a method parameter of type <xref:System.Type>.</span></span> <span data-ttu-id="05aac-104">這個介面會擴充[ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="05aac-104">This interface extends [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md).</span></span>  
+<span data-ttu-id="6c044-103">表示泛型類別，或是具有 <xref:System.Type> 類型之方法參數的類別。</span><span class="sxs-lookup"><span data-stu-id="6c044-103">Represents a generic class or a class with a method parameter of type <xref:System.Type>.</span></span> <span data-ttu-id="6c044-104">這個介面會擴充[ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="6c044-104">This interface extends [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md).</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="05aac-105">方法</span><span class="sxs-lookup"><span data-stu-id="05aac-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="6c044-105">方法</span><span class="sxs-lookup"><span data-stu-id="6c044-105">Methods</span></span>  
   
-|<span data-ttu-id="05aac-106">方法</span><span class="sxs-lookup"><span data-stu-id="05aac-106">Method</span></span>|<span data-ttu-id="05aac-107">描述</span><span class="sxs-lookup"><span data-stu-id="05aac-107">Description</span></span>|  
+|<span data-ttu-id="6c044-106">方法</span><span class="sxs-lookup"><span data-stu-id="6c044-106">Method</span></span>|<span data-ttu-id="6c044-107">描述</span><span class="sxs-lookup"><span data-stu-id="6c044-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="05aac-108">GetParameterizedType 方法</span><span class="sxs-lookup"><span data-stu-id="05aac-108">GetParameterizedType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-getparameterizedtype-method.md)|<span data-ttu-id="05aac-109">取得這個類別的型別宣告。</span><span class="sxs-lookup"><span data-stu-id="05aac-109">Gets the type declaration for this class.</span></span>|  
-|[<span data-ttu-id="05aac-110">SetJMCStatus 方法</span><span class="sxs-lookup"><span data-stu-id="05aac-110">SetJMCStatus Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-setjmcstatus-method.md)|<span data-ttu-id="05aac-111">這個類別的每個方法，設定值，指出方法是否為使用者定義的程式碼。</span><span class="sxs-lookup"><span data-stu-id="05aac-111">For each method of this class, sets a value that indicates whether the method is user-defined code.</span></span>|  
+|[<span data-ttu-id="6c044-108">GetParameterizedType 方法</span><span class="sxs-lookup"><span data-stu-id="6c044-108">GetParameterizedType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-getparameterizedtype-method.md)|<span data-ttu-id="6c044-109">取得這個類別的型別宣告。</span><span class="sxs-lookup"><span data-stu-id="6c044-109">Gets the type declaration for this class.</span></span>|  
+|[<span data-ttu-id="6c044-110">SetJMCStatus 方法</span><span class="sxs-lookup"><span data-stu-id="6c044-110">SetJMCStatus Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-setjmcstatus-method.md)|<span data-ttu-id="6c044-111">這個類別的每個方法，設定值，指出方法是否為使用者定義的程式碼。</span><span class="sxs-lookup"><span data-stu-id="6c044-111">For each method of this class, sets a value that indicates whether the method is user-defined code.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="05aac-112">備註</span><span class="sxs-lookup"><span data-stu-id="05aac-112">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6c044-112">備註</span><span class="sxs-lookup"><span data-stu-id="6c044-112">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="05aac-113">這個介面不支援跨電腦或跨處理序的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="05aac-113">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="6c044-113">這個介面不支援跨電腦或跨處理序的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="6c044-113">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="05aac-114">需求</span><span class="sxs-lookup"><span data-stu-id="05aac-114">Requirements</span></span>  
- <span data-ttu-id="05aac-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="05aac-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6c044-114">需求</span><span class="sxs-lookup"><span data-stu-id="6c044-114">Requirements</span></span>  
+ <span data-ttu-id="6c044-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6c044-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="05aac-116">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="05aac-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6c044-116">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6c044-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="05aac-117">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="05aac-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6c044-117">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6c044-117">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="05aac-118">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="05aac-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="6c044-118">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6c044-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="05aac-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="05aac-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6c044-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6c044-119">See also</span></span>
 
-- [<span data-ttu-id="05aac-120">ICorDebugClass 介面</span><span class="sxs-lookup"><span data-stu-id="05aac-120">ICorDebugClass Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
-- [<span data-ttu-id="05aac-121">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="05aac-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="6c044-120">ICorDebugClass 介面</span><span class="sxs-lookup"><span data-stu-id="6c044-120">ICorDebugClass Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
+- [<span data-ttu-id="6c044-121">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="6c044-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

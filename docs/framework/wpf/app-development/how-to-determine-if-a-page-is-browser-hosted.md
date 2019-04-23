@@ -9,24 +9,24 @@ helpviewer_keywords:
 - pages [WPF], hosted in browser
 ms.assetid: 737e0f26-8371-49b4-9579-70879e51e1aa
 ms.openlocfilehash: d154de2f885101d1bd0c4613dfb1604be8acbe6a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107142"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978337"
 ---
-# <a name="how-to-determine-if-a-page-is-browser-hosted"></a><span data-ttu-id="0e28b-102">HOW TO：判斷頁面是否由瀏覽器裝載</span><span class="sxs-lookup"><span data-stu-id="0e28b-102">How to: Determine If a Page is Browser Hosted</span></span>
-<span data-ttu-id="0e28b-103">此範例示範如何判斷<xref:System.Windows.Controls.Page>裝載於瀏覽器。</span><span class="sxs-lookup"><span data-stu-id="0e28b-103">This example demonstrates how to determine if a <xref:System.Windows.Controls.Page> is hosted in a browser.</span></span>  
+# <a name="how-to-determine-if-a-page-is-browser-hosted"></a><span data-ttu-id="5145b-102">HOW TO：判斷頁面是否由瀏覽器裝載</span><span class="sxs-lookup"><span data-stu-id="5145b-102">How to: Determine If a Page is Browser Hosted</span></span>
+<span data-ttu-id="5145b-103">此範例示範如何判斷<xref:System.Windows.Controls.Page>裝載於瀏覽器。</span><span class="sxs-lookup"><span data-stu-id="5145b-103">This example demonstrates how to determine if a <xref:System.Windows.Controls.Page> is hosted in a browser.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0e28b-104">範例</span><span class="sxs-lookup"><span data-stu-id="0e28b-104">Example</span></span>  
- <span data-ttu-id="0e28b-105">A<xref:System.Windows.Controls.Page>可以是主機無從驗證，因此，可以載入數種不同的主機，包括<xref:System.Windows.Controls.Frame>、 <xref:System.Windows.Navigation.NavigationWindow>，或瀏覽器。</span><span class="sxs-lookup"><span data-stu-id="0e28b-105">A <xref:System.Windows.Controls.Page> can be host agnostic and, consequently, can be loaded into several different types of hosts, including a <xref:System.Windows.Controls.Frame>, a <xref:System.Windows.Navigation.NavigationWindow>, or a browser.</span></span> <span data-ttu-id="0e28b-106">發生這種情況您有程式庫組件包含一或多個頁面，且這是由多個獨立部署所參考的和可瀏覽 ([!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]) 裝載應用程式。</span><span class="sxs-lookup"><span data-stu-id="0e28b-106">This can happen when you have a library assembly that contains one or more pages, and which is referenced by multiple standalone and browsable ([!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]) host applications.</span></span>  
+## <a name="example"></a><span data-ttu-id="5145b-104">範例</span><span class="sxs-lookup"><span data-stu-id="5145b-104">Example</span></span>  
+ <span data-ttu-id="5145b-105">A<xref:System.Windows.Controls.Page>可以是主機無從驗證，因此，可以載入數種不同的主機，包括<xref:System.Windows.Controls.Frame>、 <xref:System.Windows.Navigation.NavigationWindow>，或瀏覽器。</span><span class="sxs-lookup"><span data-stu-id="5145b-105">A <xref:System.Windows.Controls.Page> can be host agnostic and, consequently, can be loaded into several different types of hosts, including a <xref:System.Windows.Controls.Frame>, a <xref:System.Windows.Navigation.NavigationWindow>, or a browser.</span></span> <span data-ttu-id="5145b-106">發生這種情況您有程式庫組件包含一或多個頁面，且這是由多個獨立部署所參考的和可瀏覽 ([!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]) 裝載應用程式。</span><span class="sxs-lookup"><span data-stu-id="5145b-106">This can happen when you have a library assembly that contains one or more pages, and which is referenced by multiple standalone and browsable ([!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]) host applications.</span></span>  
   
- <span data-ttu-id="0e28b-107">下列範例示範如何使用<xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType>來判斷如果<xref:System.Windows.Controls.Page>裝載於瀏覽器。</span><span class="sxs-lookup"><span data-stu-id="0e28b-107">The following example demonstrates how to use <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> to determine if a <xref:System.Windows.Controls.Page> is hosted in a browser.</span></span>  
+ <span data-ttu-id="5145b-107">下列範例示範如何使用<xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType>來判斷如果<xref:System.Windows.Controls.Page>裝載於瀏覽器。</span><span class="sxs-lookup"><span data-stu-id="5145b-107">The following example demonstrates how to use <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> to determine if a <xref:System.Windows.Controls.Page> is hosted in a browser.</span></span>  
   
  [!code-csharp[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/CSharp/Page1.xaml.cs#isbrowserhostedcode)]
  [!code-vb[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/visualbasic/page1.xaml.vb#isbrowserhostedcode)]  
   
-## <a name="see-also"></a><span data-ttu-id="0e28b-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0e28b-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5145b-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5145b-108">See also</span></span>
 
 - <xref:System.Windows.Controls.Frame>
 - <xref:System.Windows.Controls.Page>

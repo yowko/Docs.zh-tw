@@ -18,30 +18,30 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5a4379a5f3c820889928f9008186b2f95b74b6da
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173520"
 ---
-# <a name="itypenamebuilderclear-method"></a><span data-ttu-id="de3c4-102">ITypeNameBuilder::Clear 方法</span><span class="sxs-lookup"><span data-stu-id="de3c4-102">ITypeNameBuilder::Clear Method</span></span>
-<span data-ttu-id="de3c4-103">此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="de3c4-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamebuilderclear-method"></a><span data-ttu-id="ddab1-102">ITypeNameBuilder::Clear 方法</span><span class="sxs-lookup"><span data-stu-id="ddab1-102">ITypeNameBuilder::Clear Method</span></span>
+<span data-ttu-id="ddab1-103">此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="ddab1-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="de3c4-104">語法</span><span class="sxs-lookup"><span data-stu-id="de3c4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ddab1-104">語法</span><span class="sxs-lookup"><span data-stu-id="ddab1-104">Syntax</span></span>  
   
 ```  
 HRESULT Clear ( );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="de3c4-105">需求</span><span class="sxs-lookup"><span data-stu-id="de3c4-105">Requirements</span></span>  
- <span data-ttu-id="de3c4-106">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="de3c4-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ddab1-105">需求</span><span class="sxs-lookup"><span data-stu-id="ddab1-105">Requirements</span></span>  
+ <span data-ttu-id="ddab1-106">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ddab1-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="de3c4-107">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="de3c4-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ddab1-107">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ddab1-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="de3c4-108">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="de3c4-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ddab1-108">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="ddab1-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="de3c4-109">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="de3c4-109">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="ddab1-109">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ddab1-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="de3c4-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="de3c4-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ddab1-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ddab1-110">See also</span></span>
 
-- [<span data-ttu-id="de3c4-111">裝載介面</span><span class="sxs-lookup"><span data-stu-id="de3c4-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="ddab1-111">裝載介面</span><span class="sxs-lookup"><span data-stu-id="ddab1-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

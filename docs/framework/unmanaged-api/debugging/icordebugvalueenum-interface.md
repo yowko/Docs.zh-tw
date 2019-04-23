@@ -17,35 +17,35 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9484f211ff31c4fa71692db646ef3c556df0acad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171934"
 ---
-# <a name="icordebugvalueenum-interface"></a><span data-ttu-id="21c5e-102">ICorDebugValueEnum 介面</span><span class="sxs-lookup"><span data-stu-id="21c5e-102">ICorDebugValueEnum Interface</span></span>
-<span data-ttu-id="21c5e-103">實作 「 ICorDebugEnum 」 方法，並列舉"ICorDebugValue"陣列。</span><span class="sxs-lookup"><span data-stu-id="21c5e-103">Implements "ICorDebugEnum" methods and enumerates "ICorDebugValue" arrays.</span></span>  
+# <a name="icordebugvalueenum-interface"></a><span data-ttu-id="2ffc5-102">ICorDebugValueEnum 介面</span><span class="sxs-lookup"><span data-stu-id="2ffc5-102">ICorDebugValueEnum Interface</span></span>
+<span data-ttu-id="2ffc5-103">實作 「 ICorDebugEnum 」 方法，並列舉"ICorDebugValue"陣列。</span><span class="sxs-lookup"><span data-stu-id="2ffc5-103">Implements "ICorDebugEnum" methods and enumerates "ICorDebugValue" arrays.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="21c5e-104">方法</span><span class="sxs-lookup"><span data-stu-id="21c5e-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="2ffc5-104">方法</span><span class="sxs-lookup"><span data-stu-id="2ffc5-104">Methods</span></span>  
   
-|<span data-ttu-id="21c5e-105">方法</span><span class="sxs-lookup"><span data-stu-id="21c5e-105">Method</span></span>|<span data-ttu-id="21c5e-106">描述</span><span class="sxs-lookup"><span data-stu-id="21c5e-106">Description</span></span>|  
+|<span data-ttu-id="2ffc5-105">方法</span><span class="sxs-lookup"><span data-stu-id="2ffc5-105">Method</span></span>|<span data-ttu-id="2ffc5-106">描述</span><span class="sxs-lookup"><span data-stu-id="2ffc5-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="21c5e-107">下一個方法</span><span class="sxs-lookup"><span data-stu-id="21c5e-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalueenum-next-method.md)|<span data-ttu-id="21c5e-108">取得指定的數目`ICorDebugValue`從列舉型別，從目前位置開始的執行個體。</span><span class="sxs-lookup"><span data-stu-id="21c5e-108">Gets the specified number of `ICorDebugValue` instances from the enumeration, starting at the current position.</span></span>|  
+|[<span data-ttu-id="2ffc5-107">Next 方法</span><span class="sxs-lookup"><span data-stu-id="2ffc5-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalueenum-next-method.md)|<span data-ttu-id="2ffc5-108">取得指定的數目`ICorDebugValue`從列舉型別，從目前位置開始的執行個體。</span><span class="sxs-lookup"><span data-stu-id="2ffc5-108">Gets the specified number of `ICorDebugValue` instances from the enumeration, starting at the current position.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="21c5e-109">備註</span><span class="sxs-lookup"><span data-stu-id="21c5e-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2ffc5-109">備註</span><span class="sxs-lookup"><span data-stu-id="2ffc5-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="21c5e-110">這個介面不支援跨電腦或跨處理序的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="21c5e-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="2ffc5-110">這個介面不支援跨電腦或跨處理序的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="2ffc5-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="21c5e-111">需求</span><span class="sxs-lookup"><span data-stu-id="21c5e-111">Requirements</span></span>  
- <span data-ttu-id="21c5e-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="21c5e-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2ffc5-111">需求</span><span class="sxs-lookup"><span data-stu-id="2ffc5-111">Requirements</span></span>  
+ <span data-ttu-id="2ffc5-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2ffc5-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="21c5e-113">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="21c5e-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2ffc5-113">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2ffc5-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="21c5e-114">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="21c5e-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2ffc5-114">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2ffc5-114">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="21c5e-115">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="21c5e-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="2ffc5-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2ffc5-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="21c5e-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="21c5e-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2ffc5-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2ffc5-116">See also</span></span>
 
-- [<span data-ttu-id="21c5e-117">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="21c5e-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="2ffc5-117">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="2ffc5-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
