@@ -1,5 +1,5 @@
 ---
-title: 作法：取消工作及其子系
+title: HOW TO：取消工作及其子系
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 08e5712db60fb09b48d6be9f35737c9a884d1ce8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324470"
 ---
-# <a name="how-to-cancel-a-task-and-its-children"></a>作法：取消工作及其子系
+# <a name="how-to-cancel-a-task-and-its-children"></a>HOW TO：取消工作及其子系
 這些範例示範如何執行下列工作：  
   
 1. 建立和啟動可取消的工作。  

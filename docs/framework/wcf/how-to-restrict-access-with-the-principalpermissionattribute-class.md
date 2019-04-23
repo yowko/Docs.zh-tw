@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
 ms.openlocfilehash: ae2aa4c5629096ee7d888e7c4e334c3b6696db3f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323313"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>HOW TO：使用 PrincipalPermissionAttribute 類別來限制存取
@@ -41,7 +41,7 @@ ms.locfileid: "59323313"
   
 1. 開啟 Windows Communication Foundation (WCF) 程式碼檔案，其中包含實作的服務合約程式碼。 如需有關如何實作合約的詳細資訊，請參閱 < [Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)。  
   
-2. 將 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 屬性 (Attribute) 套用至每一個必須限於特定群組的方法。 將 <xref:System.Security.Permissions.SecurityAttribute.Action%2A> 屬性設為 <xref:System.Security.Permissions.SecurityAction.Demand>，並將 <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> 屬性設為群組名稱。 例如：  
+2. 將 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 屬性 (Attribute) 套用至每一個必須限於特定群組的方法。 將 <xref:System.Security.Permissions.SecurityAttribute.Action%2A> 屬性設為 <xref:System.Security.Permissions.SecurityAction.Demand>，並將 <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> 屬性設為群組名稱。 例如:   
   
      [!code-csharp[c_PrincipalPermissionAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#1)]
      [!code-vb[c_PrincipalPermissionAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#1)]  
@@ -92,4 +92,4 @@ ms.locfileid: "59323313"
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>
 - [授權存取服務作業](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
 - [安全性概觀](../../../docs/framework/wcf/feature-details/security-overview.md)
-- [實作服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)
+- [履行服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)

@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 1bb93652-d687-46ff-bff6-69ecdcf97437
 ms.openlocfilehash: a676f03b4e6f9dd210b843a6f3bf00c735889500
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330151"
 ---
 # <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>HOW TO：以 WorkflowServiceHost 設定閒置行為
-工作流程遇到必須由外部刺激繼續執行的書籤時，例如工作流程執行個體正在等候訊息使用 <xref:System.ServiceModel.Activities.Receive> 活動加以傳遞時，工作流程就會進入閒置狀態。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> 是可讓您指定的時間之間的服務執行個體閒置時保存或卸載執行個體的行為。 其中包含兩個屬性，可用來設定這些時間範圍。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> 指定當工作流程服務執行個體進入閒置到工作流程服務執行個體保存的時間範圍。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> 指定的時間範圍時的工作流程服務執行個體進入閒置與卸載工作流程服務執行個體時，而卸載的意義執行個體保存到執行個體存放區，並從記憶體中移除。 本主題說明如何設定組態檔中的 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> 。  
+工作流程遇到必須由外部刺激繼續執行的書籤時，例如工作流程執行個體正在等候訊息使用 <xref:System.ServiceModel.Activities.Receive> 活動加以傳遞時，工作流程就會進入閒置狀態。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> 是一種行為，可讓您指定從服務執行個體進入閒置到此執行個體保存或卸載的間隔時間。 其中包含兩個屬性，可用來設定這些時間範圍。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> 會指定從工作流程服務執行個體進入閒置到工作流程服務執行個體保存的時間範圍。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> 會指定從工作流程服務執行個體進入閒置到工作流程服務執行個體卸載的時間範圍，而卸載的意義是將執行個體保存到執行個體儲存區並從記憶體中移除。 本主題說明如何設定組態檔中的 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> 。  
   
 ### <a name="to-configure-workflowidlebehavior"></a>若要設定 WorkflowIdleBehavior  
   
@@ -44,5 +44,5 @@ ms.locfileid: "59330151"
 ## <a name="see-also"></a>另請參閱
 
 - [工作流程服務主機擴充性](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
-- [簡化的組態](../../../../docs/framework/wcf/simplified-configuration.md)
+- [簡化設定](../../../../docs/framework/wcf/simplified-configuration.md)
 - [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)

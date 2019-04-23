@@ -2,12 +2,12 @@
 title: Visual Studio 中的偵錯運算式樹狀架構 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 308b377af00a3d12523f8f8d469c50808f216030
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95a01a98e771e04afd296428ed56e9518bad9ac2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632149"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330400"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Visual Studio 中的偵錯運算式樹狀架構 (C#)
 當您針對應用程式進行偵錯時，可以分析運算式樹狀架構的結構與內容。 若要取得運算式樹狀結構的快速概觀，您可以使用 `DebugView` 屬性，它只適用於偵錯模式。 如需偵錯的詳細資訊，請參閱 [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)。  
@@ -16,16 +16,16 @@ ms.locfileid: "54632149"
   
 ### <a name="to-open-a-visualizer-for-an-expression-tree"></a>開啟運算式樹狀架構的視覺化檢視  
   
-1.  在 [DataTips]、[監看式] 視窗，或是在 [自動變數] 視窗或 [區域變數] 視窗中，按一下出現在運算式樹狀架構 `DebugView` 屬性旁邊的放大鏡圖示。  
+1. 在 [DataTips]、[監看式] 視窗，或是在 [自動變數] 視窗或 [區域變數] 視窗中，按一下出現在運算式樹狀架構 `DebugView` 屬性旁邊的放大鏡圖示。  
   
      視覺化檢視的清單隨即顯示。  
   
-2.  按一下要使用的視覺化檢視。  
+2. 按一下要使用的視覺化檢視。  
   
  如下列各節中所述，每個運算式類型會顯示在視覺化檢視中。  
   
 ## <a name="parameterexpressions"></a>ParameterExpression  
- 顯示 <xref:System.Linq.Expressions.ParameterExpression> 變數名稱時，其開頭會加上 "$" 符號。  
+ <xref:System.Linq.Expressions.ParameterExpression> 變數名稱顯示時，其開頭會加上 "$" 符號。  
   
  如果參數沒有名稱，會指派自動產生的名稱給它，例如 `$var1` 或 `$var2`。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "54632149"
 |`BlockExpression block =  Expression.Block(typeof(Object), Expression.Constant("test"));`|`.Block<System.Object>() {`<br /><br /> `"test"`<br /><br /> `}`|  
   
 ## <a name="lambdaexpression"></a>LambdaExpression  
- <xref:System.Linq.Expressions.LambdaExpression> 物件會與其委派類型一起顯示。  
+ <xref:System.Linq.Expressions.LambdaExpression> 物件會與其委派型別一起顯示。  
   
  如果 Lambda 運算式沒有名稱，會指派自動產生的名稱給它，例如 `#Lambda1` 或 `#Lambda2`。  
   
@@ -105,6 +105,6 @@ ms.locfileid: "54632149"
   
 ## <a name="see-also"></a>另請參閱
 
-- [運算式樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [運算式樹狀架構 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
 - [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)
 - [建立自訂視覺化檢視](/visualstudio/debugger/create-custom-visualizers-of-data)

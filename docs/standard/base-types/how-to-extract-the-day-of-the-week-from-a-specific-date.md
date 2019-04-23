@@ -1,5 +1,5 @@
 ---
-title: HOW TO：從特定日期擷取一星期的哪一日
+title: 作法：從特定日期擷取一星期的哪一日
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -24,23 +24,23 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2c422a75244302ae6433af933995b00bdfaa061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c665cb590a090c546d50f780477c254344914a2f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537968"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327759"
 ---
-# <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>HOW TO：從特定日期擷取一星期的哪一日
+# <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>作法：從特定日期擷取一星期的哪一日
 .NET Framework 可方便判斷特定日期是一週的第幾天，並可顯示特定日期當地語系化的工作日名稱。 您可以從 <xref:System.DateTime.DayOfWeek%2A> 或 <xref:System.DateTimeOffset.DayOfWeek%2A> 屬性取得指出對應於特定日期是星期幾的列舉值。 相對地，擷取工作日名稱是一種格式化作業，可藉由呼叫格式化方法來執行，例如日期和時間值的 `ToString` 方法或 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法。 本主題示範如何執行下列格式化作業：  
   
 ### <a name="to-extract-a-number-indicating-the-day-of-the-week-from-a-specific-date"></a>從特定日期擷取指出星期幾的數字  
   
-1.  如果您要處理日期的字串表示法，請使用靜態 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 方法，將其轉換成 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 值。  
+1. 如果您要處理日期的字串表示法，請使用靜態 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 方法，將其轉換成 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 值。  
   
-2.  使用 <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> 屬性，以擷取指出星期幾的 <xref:System.DayOfWeek> 值。  
+2. 使用 <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> 屬性，以擷取指出星期幾的 <xref:System.DayOfWeek> 值。  
   
-3.  若有需要，可將 <xref:System.DayOfWeek> 值轉型 (在 C# 中) 或轉換 (在 Visual Basic 中) 成整數。  
+3. 若有需要，可將 <xref:System.DayOfWeek> 值轉型 (在 C# 中) 或轉換 (在 Visual Basic 中) 成整數。  
   
  下列範例顯示代表特定日期是星期幾的整數。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "54537968"
   
 ### <a name="to-extract-the-abbreviated-weekday-name-from-a-specific-date"></a>從特定日期擷取縮寫的工作日名稱。  
   
-1.  如果您要處理日期的字串表示法，請使用靜態 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 方法，將其轉換成 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 值。  
+1. 如果您要處理日期的字串表示法，請使用靜態 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 方法，將其轉換成 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 值。  
   
-2.  您可以擷取目前文化特性或特定文化特性的工作日名稱縮寫。  
+2. 您可以擷取目前文化特性或特定文化特性的工作日名稱縮寫。  
   
     1.  若要擷取目前文化特性的工作日名稱縮寫，請呼叫日期和時間值的 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 執行個體方法，並傳遞字串 "ddd" 做為 `format` 參數。 下列範例說明如何呼叫 <xref:System.DateTime.ToString%28System.String%29> 方法。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "54537968"
   
 ### <a name="to-extract-the-full-weekday-name-from-a-specific-date"></a>從特定日期擷取完整的工作日名稱。  
   
-1.  如果您要處理日期的字串表示法，請使用靜態 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 方法，將其轉換成 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 值。  
+1. 如果您要處理日期的字串表示法，請使用靜態 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 方法，將其轉換成 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 值。  
   
-2.  您可以擷取目前文化特性或特定文化特性的完整工作日名稱。  
+2. 您可以擷取目前文化特性或特定文化特性的完整工作日名稱。  
   
     1.  若要擷取目前文化特性的工作日名稱，請呼叫日期和時間值的 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 執行個體方法，並傳遞字串 "dddd" 做為 `format` 參數。 下列範例說明如何呼叫 <xref:System.DateTime.ToString%28System.String%29> 方法。  
   
@@ -87,9 +87,9 @@ ms.locfileid: "54537968"
   
  個別語言可能會提供功能來複製或補充 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供的功能。 例如，Visual Basic 就有包含兩個這類函式：  
   
--   `Weekday` 會傳回指出特定日期是星期幾的數字。 它會將一週第一天的序數值視為一，而 <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> 屬性會將其視為零。  
+-   `Weekday`，其會傳回指出特定日期是星期幾的數字。 它會將一週第一天的序數值視為一，而 <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> 屬性會將其視為零。  
   
--   `WeekdayName` 會傳回目前文化特性中對應特定工作日編號的週間日名稱。  
+-   `WeekdayName`，其會傳回目前文化特性中對應特定工作日編號的週間日名稱。  
   
  下列範例說明如何使用 Visual Basic `Weekday` 和 `WeekdayName` 函式。  
   

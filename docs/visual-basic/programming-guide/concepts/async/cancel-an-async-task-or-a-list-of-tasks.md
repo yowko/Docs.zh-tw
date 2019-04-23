@@ -3,10 +3,10 @@ title: 取消一項非同步工作或一份工作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
 ms.openlocfilehash: 62321a5fc011f71ed6125fbaa315573d13667488
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324756"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>取消一項非同步工作或一份工作 (Visual Basic)
@@ -250,7 +250,7 @@ ms.locfileid: "59324756"
 ## <a name="BKMK_CompleteExamples"></a> 完整範例  
  下列各節包含每個先前範例的程式碼。 請注意，您必須新增 <xref:System.Net.Http> 的參考。  
   
- 您可以下載的專案[非同步範例：Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。  
+ 您可以從 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。  
   
 ### <a name="cancel-a-task-example"></a>取消工作範例  
  下列程式碼是取消單一工作之範例的完整 MainWindow.xaml.vb 檔案。  

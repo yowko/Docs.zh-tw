@@ -3,10 +3,10 @@ title: LINQ to Objects (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: dd4c30bc-1c9b-4781-a482-b5eada38deb2
 ms.openlocfilehash: c1e2e8fbaaf984fec69322a459fc7c55890965ad
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326875"
 ---
 # <a name="linq-to-objects-visual-basic"></a>LINQ to Objects (Visual Basic)
@@ -33,13 +33,13 @@ ms.locfileid: "59326875"
  [LINQ 和反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-reflection.md)  
  示範 LINQ 如何使用反映的範例連結。  
   
- [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
+ [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
  說明如何使用 LINQ 與檔案系統互動。 此外也包含示範這些概念的主題連結。  
   
- [HOW TO：使用 LINQ (Visual Basic) 查詢 ArrayList](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
+ [如何：使用 LINQ (Visual Basic) 查詢 ArrayList](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
  示範如何以 C# 查詢 ArrayList。  
   
- [HOW TO：新增自訂方法的 LINQ 查詢 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
+ [如何：新增自訂方法的 LINQ 查詢 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
  說明如何透過將擴充方法加入至 <xref:System.Collections.Generic.IEnumerable%601> 介面，來延伸您可以用於 LINQ 查詢的方法組。  
   
  [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  

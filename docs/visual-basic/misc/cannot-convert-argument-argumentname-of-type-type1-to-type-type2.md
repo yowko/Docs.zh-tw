@@ -5,10 +5,10 @@ f1_keywords:
 - vbrForLoop_ConvertToType3
 ms.assetid: fdf6c571-9c6c-4db2-8960-f394720b01e5
 ms.openlocfilehash: 33e732f529be2f4d200355e352bb8b7bc7e629f3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322858"
 ---
 # <a name="cannot-convert-argument-argumentname-of-type-type1-to-type-type2"></a>無法轉換引數 '\<引數名稱 >' 的類型'\<type1 >' 為類型 '\<type2 >'
@@ -20,4 +20,4 @@ ms.locfileid: "59322858"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Visual Basic 中的類型轉換](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [在 Visual Basic 中的類型轉換](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

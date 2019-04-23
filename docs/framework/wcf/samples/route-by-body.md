@@ -3,10 +3,10 @@ title: 依本文路由
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
 ms.openlocfilehash: b8a3f7785d7d59d8ad85d6dddde7fd6a04a12d63
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320713"
 ---
 # <a name="route-by-body"></a>依本文路由
@@ -35,7 +35,7 @@ ms.locfileid: "59320713"
     }  
 ```  
   
- 如果是合約，服務需要自訂分派行為 `DispatchByBodyBehavior`，以允許在作業之間分派訊息。 這個分派行為會初始化`DispatchByBodyElementOperationSelector`自訂作業選取器依個別包裝元素之 QName 鍵入的作業名稱的資料表。 `DispatchByBodyElementOperationSelector` 會查看本文的第一個子系的開始標記，並選取使用先前提到的資料表作業。  
+ 如果是合約，服務需要自訂分派行為 `DispatchByBodyBehavior`，以允許在作業之間分派訊息。 這個分派行為會初始化`DispatchByBodyElementOperationSelector`自訂作業選取器依個別包裝元素之 QName 鍵入的作業名稱的資料表。 `DispatchByBodyElementOperationSelector` 會查看本文之第一個子系的開始標記，並使用先前提到的資料表來選取作業。  
   
  用戶端會使用從 WSDL 匯出服務會使用自動產生的 proxy [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   

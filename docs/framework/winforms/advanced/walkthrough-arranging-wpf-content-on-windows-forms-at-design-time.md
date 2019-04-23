@@ -10,10 +10,10 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 ms.openlocfilehash: 306c042fe432f0c087ceb1b5ff6b5aec0fe0bbc7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327304"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>逐步解說：在設計階段排列 Windows Forms 的 WPF 內容
@@ -151,9 +151,9 @@ ms.locfileid: "59327304"
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [HOW TO：錨定和停駐 TableLayoutPanel 控制項中的子控制項](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [HOW TO：在設計階段將控制項對齊表單邊緣](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
-- [逐步解說：使用對齊線排列 Windows Forms 的控制項](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [如何：錨定和停駐 TableLayoutPanel 控制項中的子控制項](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [如何：將控制項和表單邊緣對齊在設計階段](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [逐步解說：使用對齊線的 Windows Form 上排列控制項](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [移轉和互通性](../../wpf/advanced/migration-and-interoperability.md)
 - [使用 WPF 控制項](using-wpf-controls.md)
 - [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)

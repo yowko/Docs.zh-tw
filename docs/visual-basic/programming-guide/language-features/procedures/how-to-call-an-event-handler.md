@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
 ms.openlocfilehash: 3690d1c2eb8ece9059b8b25b5a14bef2021bc8f6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320167"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>HOW TO：在 Visual Basic 中呼叫事件處理常式
@@ -55,8 +55,8 @@ ms.locfileid: "59320167"
 ## <a name="see-also"></a>另請參閱
 
 - [程序](./index.md)
-- [子程序](./sub-procedures.md)
+- [Sub 程序](./sub-procedures.md)
 - [Sub 陳述式](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [AddressOf 運算子](../../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [HOW TO：建立程序](./how-to-create-a-procedure.md)
-- [HOW TO：呼叫不傳回值的程序](./how-to-call-a-procedure-that-does-not-return-a-value.md)
+- [如何：建立程序](./how-to-create-a-procedure.md)
+- [如何：呼叫不傳回值的程序](./how-to-call-a-procedure-that-does-not-return-a-value.md)

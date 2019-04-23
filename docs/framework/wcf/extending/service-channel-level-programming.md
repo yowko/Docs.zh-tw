@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
 ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329126"
 ---
 # <a name="service-channel-level-programming"></a>服務通道層級的程式設計
@@ -36,7 +36,7 @@ ms.locfileid: "59329126"
 #### <a name="building-a-channellistener"></a>建置 ChannelListener  
  在建立繫結後，我們可以呼叫 <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> 來建置通道接聽程式，其中的型別參數就是要建立的通道類型。 在此範例中，我們會使用 <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType>，因為我們想要以要求/回覆訊息交換模式來接聽傳入訊息。  
   
- <xref:System.ServiceModel.Channels.IReplyChannel> 用來接收要求訊息與傳回回覆訊息。 呼叫 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> 會傳回 <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>，以便用來接收要求訊息並傳回回覆訊息。  
+ <xref:System.ServiceModel.Channels.IReplyChannel> 會被用來接收要求訊息與傳回回覆訊息。 呼叫 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> 會傳回 <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>，以便用來接收要求訊息並傳回回覆訊息。  
   
  在建立接聽程式時，我們會傳送接聽程式所接聽的網路位址，在此範例為 `http://localhost:8080/channelapp`。 一般來說，每個傳輸通道都支援一到數個位址配置，例如，HTTP 傳輸同時支援 http 和 https 配置。  
   

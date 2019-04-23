@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320043"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>HOW TO：建立及執行長時間執行的工作流程
@@ -25,23 +25,23 @@ ms.locfileid: "59320043"
   
 -   [若要建立持續性資料庫](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
   
--   [將參考加入至 DurableInstancing 組件](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
+-   [若要加入至 DurableInstancing 組件參考](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
--   [建立工作流程主表單](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
+-   [若要建立工作流程主表單](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [加入表單的屬性和 Helper 方法](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+-   [若要新增的屬性和 helper 方法的表單](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [設定執行個體存放區、工作流程開發週期處理常式及擴充](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+-   [若要設定的執行個體存放區、 工作流程開發週期處理常式和延伸模組](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [使其能夠啟動和繼續使用多個工作流程類型](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+-   [若要啟用啟動與繼續使用多個工作流程類型](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
--   [啟動新的工作流程](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+-   [若要啟動新的工作流程](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
--   [繼續使用工作流程](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
+-   [若要繼續工作流程](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
 -   [終止工作流程](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [若要建置及執行應用程式](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+-   [若要建置並執行應用程式](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
 ### <a name="BKMK_CreatePersistenceDatabase"></a> 若要建立持續性資料庫  
   
@@ -50,7 +50,7 @@ ms.locfileid: "59320043"
     > [!NOTE]
     >  請確定您已**Create Database**本機伺服器上的權限，才能建立資料庫。  
   
-2. 選擇**開放**，**檔案**從**檔案**功能表。 瀏覽至下列資料夾： `C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`  
+2. 選擇**開放**，**檔案**從**檔案**功能表。 瀏覽至下列資料夾：`C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`  
   
      選取下列兩個檔案，然後按一下**開啟**。  
   
@@ -94,12 +94,12 @@ ms.locfileid: "59320043"
   
     |控制項|屬性：值|  
     |-------------|---------------------|  
-    |**按鈕**|名稱：NewGame<br /><br /> 位置:13, 13<br /><br /> 大小：75, 23<br /><br /> 文字：新遊戲|  
-    |**ThisAddIn**|位置:94, 18<br /><br /> 文字：猜號碼，從 1 到|  
+    |**Button**|名稱：NewGame<br /><br /> 位置:13, 13<br /><br /> 大小：75, 23<br /><br /> 文字：新遊戲|  
+    |**Label**|位置:94, 18<br /><br /> 文字：猜號碼，從 1 到|  
     |**ComboBox**|名稱：NumberRange<br /><br /> DropDownStyle:DropDownList<br /><br /> Items：10, 100, 1000<br /><br /> 位置:228, 12<br /><br /> 大小：143, 21|  
-    |**ThisAddIn**|位置:13, 43<br /><br /> 文字：工作流程類型|  
+    |**Label**|位置:13, 43<br /><br /> 文字：工作流程類型|  
     |**ComboBox**|名稱：WorkflowType<br /><br /> DropDownStyle:DropDownList<br /><br /> Items：StateMachineNumberGuessWorkflow，FlowchartNumberGuessWorkflow，SequentialNumberGuessWorkflow<br /><br /> 位置:94, 40<br /><br /> 大小：277, 21|  
-    |**ThisAddIn**|名稱：WorkflowVersion<br /><br /> 位置:13, 362<br /><br /> 文字：工作流程版本|  
+    |**Label**|名稱：WorkflowVersion<br /><br /> 位置:13, 362<br /><br /> 文字：工作流程版本|  
     |**GroupBox**|位置:13, 67<br /><br /> 大小：358, 287<br /><br /> 文字：遊戲|  
   
     > [!NOTE]
@@ -107,12 +107,12 @@ ms.locfileid: "59320043"
   
     |控制項|屬性：值|  
     |-------------|---------------------|  
-    |**ThisAddIn**|位置:7, 20<br /><br /> 文字：工作流程執行個體識別碼|  
+    |**Label**|位置:7, 20<br /><br /> 文字：工作流程執行個體識別碼|  
     |**ComboBox**|名稱：InstanceId<br /><br /> DropDownStyle:DropDownList<br /><br /> 位置:121, 17<br /><br /> 大小：227, 21|  
-    |**ThisAddIn**|位置:7, 47<br /><br /> 文字：猜測|  
+    |**Label**|位置:7, 47<br /><br /> 文字：猜測|  
     |**TextBox**|名稱：猜測<br /><br /> 位置:50, 44<br /><br /> 大小：65, 20|  
-    |**按鈕**|名稱：EnterGuess<br /><br /> 位置:121, 42<br /><br /> 大小：75, 23<br /><br /> 文字：輸入猜測|  
-    |**按鈕**|名稱：QuitGame<br /><br /> 位置:274, 42<br /><br /> 大小：75, 23<br /><br /> 文字：結束|  
+    |**Button**|名稱：EnterGuess<br /><br /> 位置:121, 42<br /><br /> 大小：75, 23<br /><br /> 文字：輸入猜測|  
+    |**Button**|名稱：QuitGame<br /><br /> 位置:274, 42<br /><br /> 大小：75, 23<br /><br /> 文字：結束|  
     |**TextBox**|名稱：WorkflowStatus<br /><br /> 位置:10, 73<br /><br /> Multiline:True<br /><br /> 唯讀：True<br /><br /> 捲軸：垂直<br /><br /> 大小：338, 208|  
   
 5. 設定**AcceptButton**表單的屬性**EnterGuess**。  
@@ -341,7 +341,7 @@ ms.locfileid: "59320043"
     }  
     ```  
   
-     `ListPersistedWorkflows` 查詢執行個體存放區持續性工作流程執行個體，並將執行個體識別碼，加入`cboInstanceId`下拉式方塊。  
+     `ListPersistedWorkflows` 會在執行個體存放區中查詢持續性工作流成執行個體，並將執行個體識別碼加入 `cboInstanceId` 下拉式方塊。  
   
 10. 將下列 `UpdateStatus` 方法及對應的委派加入至表單類別。 此方法會將表單上的狀態視窗更新為目前執行中的工作流程狀態。  
   
@@ -574,7 +574,7 @@ ms.locfileid: "59320043"
     };  
     ```  
   
-     <xref:System.Activities.PersistableIdleAction> 列舉有三個值：<xref:System.Activities.PersistableIdleAction.None>、<xref:System.Activities.PersistableIdleAction.Persist> 及 <xref:System.Activities.PersistableIdleAction.Unload>。 <xref:System.Activities.PersistableIdleAction.Persist> 會導致工作流程繼續持續，但不會造成工作流程卸載。 <xref:System.Activities.PersistableIdleAction.Unload> 導致工作流程繼續持續並卸載。  
+     <xref:System.Activities.PersistableIdleAction> 列舉有三個值：<xref:System.Activities.PersistableIdleAction.None>、<xref:System.Activities.PersistableIdleAction.Persist> 及 <xref:System.Activities.PersistableIdleAction.Unload>。 <xref:System.Activities.PersistableIdleAction.Persist> 會使工作流程繼續持續，但不會導致工作流程卸載。 <xref:System.Activities.PersistableIdleAction.Unload> 會使工作流程繼續持續並卸載。  
   
      下列範例是完成的 `ConfigureWorkflowApplication` 方法。  
   
@@ -692,7 +692,7 @@ ms.locfileid: "59320043"
     ```  
   
 ### <a name="BKMK_WorkflowVersionMap"></a> 若要啟用啟動與繼續使用多個工作流程類型  
- 主機必須提供工作流程定義，才能繼續工作流程執行個體。 本教學課程包含三種工作流程型別，後續的教學課程將介紹這些類型的多個版本。 `WorkflowIdentity` 可讓主應用程式的持續性工作流程執行個體相關聯的識別資訊。 本節中的步驟示範如何建立公用程式類別，以協助將持續性工作流程執行個體的工作流程識別對應至相對應的工作流程定義。 如需詳細資訊`WorkflowIdentity`及版本設定，請參閱 <<c2> [ 使用 WorkflowIdentity 與版本控制](using-workflowidentity-and-versioning.md)。  
+ 主機必須提供工作流程定義，才能繼續工作流程執行個體。 本教學課程包含三種工作流程型別，後續的教學課程將介紹這些類型的多個版本。 `WorkflowIdentity` 提供方法，讓主應用程式能夠將識別資訊與持續的工作流程執行個體建立關聯。 本節中的步驟示範如何建立公用程式類別，以協助將持續性工作流程執行個體的工作流程識別對應至相對應的工作流程定義。 如需詳細資訊`WorkflowIdentity`及版本設定，請參閱 <<c2> [ 使用 WorkflowIdentity 與版本控制](using-workflowidentity-and-versioning.md)。  
   
 1. 以滑鼠右鍵按一下**NumberGuessWorkflowHost**中**方案總管**，然後選擇 **新增**，**類別**。 型別`WorkflowVersionMap`成**名稱**方塊，然後按一下**新增**。  
   
@@ -806,7 +806,7 @@ ms.locfileid: "59320043"
     }  
     ```  
   
-     `WorkflowVersionMap` 包含三個工作流程識別對應至三個工作流程定義中，從本教學課程，以及啟動和繼續工作流程時，會將下列各節中使用。  
+     `WorkflowVersionMap` 包含三個工作流程識別，其對應於此教學課程中的三個工作流程定義，在下列章節中，啟動及繼續使用工作流程時會使用這些識別。  
   
 ### <a name="BKMK_StartWorkflow"></a> 若要啟動新的工作流程  
   

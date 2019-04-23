@@ -3,10 +3,10 @@ title: (模數) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 243ddc4f-3c4e-41e1-a3ef-4ed39e36248b
 ms.openlocfilehash: e2d2c4cd6fd62cf5785d6b69aa399a74f8d04d30
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326732"
 ---
 # <a name="modulo-entity-sql"></a>(模數) (Entity SQL)
@@ -20,10 +20,10 @@ dividend % divisor
   
 ## <a name="arguments"></a>引數  
  `dividend`  
- 要當做被除數的數值運算式。 `dividend` 為任何一個數值資料類型的任何有效運算式。  
+ 要當做被除數的數值運算式。 `dividend` 是任何一個數值資料型別的任何有效運算式。  
   
  `divisor`  
- 要當做除數的數值運算式。 `divisor` 為任何一個數值資料類型的任何有效運算式。  
+ 要當做除數的數值運算式。 `divisor` 是任何一個數值資料型別的任何有效運算式。  
   
 ## <a name="result-types"></a>結果型別  
  Edm.Int32  

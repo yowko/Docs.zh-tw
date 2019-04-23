@@ -9,10 +9,10 @@ helpviewer_keywords:
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
 ms.openlocfilehash: 03d3a0c6026761fcdbc45472f2bbb7ac593f4394
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325679"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>HOW TO：將資料新增至剪貼簿
@@ -63,4 +63,4 @@ ms.locfileid: "59325679"
 ## <a name="see-also"></a>另請參閱
 
 - [拖放作業和剪貼簿支援](drag-and-drop-operations-and-clipboard-support.md)
-- [HOW TO：從剪貼簿擷取資料](how-to-retrieve-data-from-the-clipboard.md)
+- [如何：從剪貼簿擷取資料](how-to-retrieve-data-from-the-clipboard.md)

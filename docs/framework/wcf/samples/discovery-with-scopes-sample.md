@@ -3,10 +3,10 @@ title: 探索範圍範例
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
 ms.openlocfilehash: 9ad20e63e00464ed615620b9d0ec83fb90d07444
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328084"
 ---
 # <a name="discovery-with-scopes-sample"></a>探索範圍範例
@@ -20,7 +20,7 @@ ms.locfileid: "59328084"
   
 #### <a name="to-use-this-sample"></a>若要使用這個範例  
   
-1. 這個範例使用 HTTP 端點，若要執行這個範例，則必須加入正確的 URL ACL。 請參閱[設定 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)如需詳細資訊。 以更高的權限執行下列命令應該就能加入適當的 ACL。 您可能想要將 Domain 和 Username 替換下列引數，如果命令無法運作，因為： `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. 這個範例使用 HTTP 端點，若要執行這個範例，則必須加入正確的 URL ACL。 請參閱[設定 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)如需詳細資訊。 以更高的權限執行下列命令應該就能加入適當的 ACL。 如果命令未正確執行，您可能要將 Domain 和 Username 替換成下列引數：`netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2. 建置方案。  
   

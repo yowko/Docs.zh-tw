@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
 ms.openlocfilehash: 56099d334a03e85b816cf48983cbbead0784ef5b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320388"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>HOW TO：建立程序 (Visual Basic)
@@ -56,12 +56,12 @@ ms.locfileid: "59320388"
 ## <a name="see-also"></a>另請參閱
 
 - [程序](./index.md)
-- [子程序](./sub-procedures.md)
+- [Sub 程序](./sub-procedures.md)
 - [函式程序](./function-procedures.md)
 - [屬性程序](./property-procedures.md)
 - [運算子程序](./operator-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
 - [遞迴程序](./recursive-procedures.md)
-- [程序多載](./procedure-overloading.md)
+- [程序多載化](./procedure-overloading.md)
 - [物件和類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
 - [物件導向程式設計 (Visual Basic)](../../concepts/object-oriented-programming.md)

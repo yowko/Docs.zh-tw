@@ -6,10 +6,10 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
 ms.openlocfilehash: c34d3988c89e0ce07676e9181200fc039010b50a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324978"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>HOW TO：將 XML 轉換使用 LINQ (Visual Basic)
@@ -160,6 +160,6 @@ ms.locfileid: "59324978"
 - [XML 常值](../../../../visual-basic/language-reference/xml-literals/index.md)
 - [在 Visual Basic 中管理 XML](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [HOW TO：從檔案、字串或資料流載入 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
+- [如何：從檔案、 字串或 Stream 載入 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

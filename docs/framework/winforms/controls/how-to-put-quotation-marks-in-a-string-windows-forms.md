@@ -11,14 +11,14 @@ helpviewer_keywords:
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
 ms.openlocfilehash: 14180f0326b38872f5d1b112c3d9a87022fb79e9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328058"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>HOW TO：將引號放入字串中 (Windows Forms)
-您有時可能想要將引號 (" ") 放入文字字串中。 例如：  
+您有時可能想要將引號 (" ") 放入文字字串中。 例如:   
   
  She said, "You deserve a treat!"  
   
@@ -93,9 +93,9 @@ ms.locfileid: "59328058"
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>
 - [TextBox 控制項概觀](textbox-control-overview-windows-forms.md)
-- [HOW TO：控制 Windows Forms TextBox 控制項的插入點](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [HOW TO：使用 Windows Forms TextBox 控制項建立密碼文字方塊](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [HOW TO：建立唯讀文字方塊](how-to-create-a-read-only-text-box-windows-forms.md)
-- [HOW TO：選取 Windows Forms TextBox 控制項的文字](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [HOW TO：檢視 Windows Forms TextBox 控制項中的多行](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [如何：控制 Windows Forms TextBox 控制項中的插入點](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [如何：使用 Windows Forms TextBox 控制項建立密碼文字方塊](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [如何：建立唯讀文字方塊](how-to-create-a-read-only-text-box-windows-forms.md)
+- [如何：在 Windows Forms TextBox 控制項中選取文字](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [如何：在 Windows Forms TextBox 控制項中檢視多行](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox 控制項](textbox-control-windows-forms.md)

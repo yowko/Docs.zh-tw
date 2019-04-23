@@ -7,10 +7,10 @@ helpviewer_keywords:
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
 ms.openlocfilehash: 7c25c012798adcf90c652beb91a7550406e5f8ff
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321428"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>HOW TO：使用設計工具在 Windows Forms ListView 控制項中分組項目
@@ -52,4 +52,4 @@ ms.locfileid: "59321428"
 - <xref:System.Windows.Forms.ListViewGroup>
 - [ListView 控制項](listview-control-windows-forms.md)
 - [ListView 控制項概觀](listview-control-overview-windows-forms.md)
-- [HOW TO：使用 Windows Forms ListView 控制項新增和移除項目](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [如何：新增和移除項目，使用 Windows Forms ListView 控制項](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

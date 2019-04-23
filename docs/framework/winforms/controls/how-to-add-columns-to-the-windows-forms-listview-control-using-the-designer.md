@@ -6,10 +6,10 @@ helpviewer_keywords:
 - columns [Windows Forms], adding to ListView controls
 ms.assetid: 5b1a8b4d-587e-479a-95c1-f9b90884f13a
 ms.openlocfilehash: 48fd223c8e770e64513d79ef9d24f93321c98332
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322091"
 ---
 # <a name="how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer"></a>HOW TO：使用設計工具將資料行新增至 Windows Forms ListView 控制項
@@ -33,7 +33,7 @@ Windows Forms<xref:System.Windows.Forms.ListView>控制項可以顯示多個資�
 ## <a name="see-also"></a>另請參閱
 
 - [ListView 控制項概觀](listview-control-overview-windows-forms.md)
-- [HOW TO：使用 Windows Forms ListView 控制項新增和移除項目](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [HOW TO：使用 Windows Forms ListView 控制項顯示資料行的子項目](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
-- [HOW TO：顯示 Windows Forms ListView 控制項的圖示](how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [HOW TO：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [如何：新增和移除項目，使用 Windows Forms ListView 控制項](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [如何：使用 Windows Forms ListView 控制項的資料行顯示子項目](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
+- [如何：Windows Form ListView 控制項中顯示的圖示](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [如何：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Form)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

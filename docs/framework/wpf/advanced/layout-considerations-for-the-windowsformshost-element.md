@@ -10,10 +10,10 @@ helpviewer_keywords:
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
 ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327850"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 項目的配置考量
@@ -40,7 +40,7 @@ ms.locfileid: "59327850"
   
 -   在某些情況下，無法調整 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項大小，或只能將它調整為特定維度。 例如， [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox>控制項支援只有單一高度由控制項字型大小所定義。 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]其中項目可以垂直延伸，裝載的動態配置<xref:System.Windows.Forms.ComboBox>控制項將不會如預期延伸。  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項無法旋轉或扭曲。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>項目引發<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件，如果您套用扭曲或旋轉轉換。 如果您不會處理<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件， <xref:System.InvalidOperationException> ，就會引發。  
+-   無法旋轉或扭曲 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>項目引發<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件，如果您套用扭曲或旋轉轉換。 如果您不會處理<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件， <xref:System.InvalidOperationException> ，就會引發。  
   
 -   在大部分情況下，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項不支援等比例縮放。 雖然會縮放控制項的整體維度，但是可能無法如預期調整控制項的子控制項和元件大小。 這項限制取決於每個 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項支援縮放比例的程度。 此外，您無法調整[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項到 0 像素的大小。  
   
@@ -104,5 +104,5 @@ ms.locfileid: "59327850"
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [逐步解說：在 WPF 中排列 Windows Forms 控制項](walkthrough-arranging-windows-forms-controls-in-wpf.md)
 - [排列 Windows Form 控制項，在 WPF 範例](https://go.microsoft.com/fwlink/?LinkID=159971)
-- [Windows Form 和 WPF 屬性對應](windows-forms-and-wpf-property-mapping.md)
+- [Windows Forms 和 WPF 屬性對應](windows-forms-and-wpf-property-mapping.md)
 - [移轉和互通性](migration-and-interoperability.md)

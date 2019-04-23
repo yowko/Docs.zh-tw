@@ -3,10 +3,10 @@ title: < （小於） (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 1fc2a039-3ad6-4b3c-b41d-09932e803f86
 ms.openlocfilehash: 1ca1cbdf1282782295b659393e8f54aae3ec5649
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320440"
 ---
 # <a name="-less-than-entity-sql"></a>\< (小於) (Entity SQL)
@@ -23,7 +23,7 @@ expression < expression
  任何有效的運算式。 兩個運算式都必須有可隱含轉換的資料型別。  
   
 ## <a name="result-types"></a>結果型別  
- `true` 左的運算式是否小於右邊的運算式; 的值否則， `false`。  
+ 如果左運算式的值小於右運算式則為`true` ；否則為 `false`。  
   
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢使用 < 比較運算子來比較兩個運算式，以判斷左運算式的值是否小於右運算式。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
 ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325510"
 ---
 # <a name="drawing-objects-overview"></a>繪圖物件概觀
@@ -241,4 +241,4 @@ DrawingImage
 - [WPF 中圖案和基本繪圖概觀](shapes-and-basic-drawing-in-wpf-overview.md)
 - [WPF 圖形轉譯概觀](wpf-graphics-rendering-overview.md)
 - [Freezable 物件概觀](../advanced/freezable-objects-overview.md)
-- [HOW TO 主題](drawings-how-to-topics.md)
+- [HOW-TO 主題](drawings-how-to-topics.md)

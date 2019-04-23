@@ -3,10 +3,10 @@ title: 虛擬目錄安裝指示
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
 ms.openlocfilehash: fdff88026a49989870ee5c47f9a38a65ecad3c80
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325341"
 ---
 # <a name="virtual-directory-setup-instructions"></a>虛擬目錄安裝指示
@@ -59,9 +59,9 @@ Windows Communication Foundation (WCF) 範例的目的是共用一個通用的�
   
 7. 預設會選取下列核取方塊：  
   
-    -   **讀取**  
+    -   **Read**  
   
-    -   **執行指令碼 (如 ASP)**  
+    -   **執行指令碼 （例如 ASP)**  
   
 8. 按一下 **下一步**，然後按一下**完成**以完成精靈。  
   
@@ -84,11 +84,11 @@ Windows Communication Foundation (WCF) 範例的目的是共用一個通用的�
   
 2. 預設會選取下列核取方塊：  
   
-    -   **讀取**  
+    -   **Read**  
   
     -   **記錄查閱**  
   
-    -   **編製這個資源的索引**  
+    -   **此資源編製索引**  
   
 3. 選取 **瀏覽目錄**核取方塊。 這可讓您使用 Internet Explorer 存取目錄的目錄；如此將有助於偵錯服務。  
   

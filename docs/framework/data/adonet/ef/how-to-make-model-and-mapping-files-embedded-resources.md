@@ -3,10 +3,10 @@ title: HOW TO：讓模型和對應檔成為內嵌資源
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
 ms.openlocfilehash: eae3681664ab1fd095487a7b7ed395302faf2588
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329527"
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>HOW TO：讓模型和對應檔成為內嵌資源
@@ -39,6 +39,6 @@ ms.locfileid: "59329527"
 ## <a name="see-also"></a>另請參閱
 
 - [建立模型和對應](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
-- [HOW TO：定義連接字串](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)
-- [HOW TO：建置 EntityCollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)
+- [如何：定義連接字串](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)
+- [如何：建置 Entitycollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)
 - [ADO.NET 實體資料模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

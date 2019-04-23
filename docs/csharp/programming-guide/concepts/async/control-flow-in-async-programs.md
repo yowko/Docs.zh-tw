@@ -2,12 +2,12 @@
 title: 非同步程式中的控制流程 (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 45d349fa131daf3fdf39d29d53d8ec236c79f81f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6a7b8f3f41b2096e3e7524d03217bdc123f26f10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150598"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326199"
 ---
 # <a name="control-flow-in-async-programs-c"></a>非同步程式中的控制流程 (C#)
 
@@ -19,7 +19,7 @@ ms.locfileid: "53150598"
 
 -   `startButton_Click`，其呼叫 `AccessTheWebAsync` 並顯示結果。
 
--   `AccessTheWebAsync`，會將網站的內容下載為字串，並傳回字串的長度。 `AccessTheWebAsync`使用非同步的 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> 來下載內容。
+-   `AccessTheWebAsync`，會將網站的內容下載為字串，並傳回字串的長度。 `AccessTheWebAsync` 使用非同步的 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> 來下載內容。
 
 編號的顯示行會出現在程式中的策略點，協助您了解程式的執行方式，以及說明每個標記點所發生的情況。 顯示行會標上 "ONE" 到 "SIX"。 標籤代表程式到達這些程式碼行的順序。
 
@@ -97,13 +97,13 @@ Length of the downloaded string: 33946.
 
 ### <a name="download-the-program"></a>下載程式
 
-您可以從 [Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (非同步範例：非同步程式中的控制流程) 下載本主題的應用程式。 下列步驟會開啟和執行程式。
+您可以從[非同步範例：非同步程式中的控制流程](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)下載本主題的應用程式。 下列步驟會開啟和執行程式。
 
-1.  解壓縮下載的檔案，然後啟動 Visual Studio。
+1. 解壓縮下載的檔案，然後啟動 Visual Studio。
 
-2.  在功能表列上選擇 [檔案] >  [開啟] > [專案/解決方案]。
+2. 在功能表列上選擇 [檔案] >  [開啟] > [專案/解決方案]。
 
-3.  巡覽至保存解壓縮之範例程式碼的資料夾，並開啟方案 (.sln) 檔案，然後選擇 **F5** 鍵來建置和執行專案。
+3. 巡覽至保存解壓縮之範例程式碼的資料夾，並開啟方案 (.sln) 檔案，然後選擇 **F5** 鍵來建置和執行專案。
 
 ### <a name="create-the-program-yourself"></a>自行建立程式
 
@@ -111,23 +111,23 @@ Length of the downloaded string: 33946.
 
 若要執行專案，請執行下列步驟：
 
-1.  啟動 Visual Studio。
+1. 啟動 Visual Studio。
 
-2.  在功能表列上，選擇 [檔案] > [新增] > [專案]。
+2. 在功能表列上，選擇 [檔案] > [新增] > [專案]。
 
      [ **新增專案** ] 對話方塊隨即開啟。
 
-3.  選擇 [已安裝]  >  [Visual C#]  >  [Windows Desktop] 類別，然後從專案範本的清單中選擇 [WPF 應用程式]。
+3. 選擇 [已安裝]  >  [Visual C#]  >  [Windows Desktop] 類別，然後從專案範本的清單中選擇 [WPF 應用程式]。
 
-4.  輸入 `AsyncTracer` 作為專案的名稱，然後選擇 [確定] 按鈕。
+4. 輸入 `AsyncTracer` 作為專案的名稱，然後選擇 [確定] 按鈕。
 
      新的專案隨即出現在方案總管中。
 
-5.  在 Visual Studio 程式碼編輯器中，選擇 [ **MainWindow.xaml** ] 索引標籤。
+5. 在 Visual Studio 程式碼編輯器中，選擇 [ **MainWindow.xaml** ] 索引標籤。
 
      如未顯示索引標籤，請在方案總管中開啟 MainWindow.xaml 的捷徑功能表，然後選擇 [檢視程式碼]。
 
-6.  在 MainWindow.xaml 的 [XAML] 檢視中，以下列程式碼取代程式碼。
+6. 在 MainWindow.xaml 的 [XAML] 檢視中，以下列程式碼取代程式碼。
 
     ```csharp
     <Window
@@ -145,9 +145,9 @@ Length of the downloaded string: 33946.
 
      包含文字方塊和按鈕的簡易視窗會出現在 MainWindow.xaml 的 [設計] 檢視中。
 
-7.  加入 <xref:System.Net.Http> 的參考。
+7. 加入 <xref:System.Net.Http> 的參考。
 
-8.  在方案總管中，開啟 MainWindow.xaml.cs 的捷徑功能表，然後選擇 [檢視程式碼]。
+8. 在方案總管中，開啟 MainWindow.xaml.cs 的捷徑功能表，然後選擇 [檢視程式碼]。
 
 9. 將 MainWindow.xaml.cs 中的程式碼更換為下列程式碼。
 
@@ -311,7 +311,7 @@ string urlContents = await getStringTask;
  除非傳回 `client.GetStringAsync`，否則 await 運算式會暫止 `AccessTheWebAsync`。 同時，控制項會返回 `AccessTheWebAsync` 的呼叫端 `startButton_Click`。
 
 > [!NOTE]
-> 一般而言，您會立即等候非同步方法呼叫。 例如，下列指派可以取代可建立後等候 `getStringTask` 的先前程式碼：`string urlContents = await client.GetStringAsync("https://msdn.microsoft.com");`
+> 一般而言，您會立即等候非同步方法呼叫。 例如，下列指派可以取代可建立後等候 `getStringTask` 的先前程式碼： `string urlContents = await client.GetStringAsync("https://msdn.microsoft.com");`
 >
 > 在本主題中，稍後會套用 await 運算子，以容納透過程式標記控制流程的輸出行。
 
@@ -389,5 +389,5 @@ int contentLength = await getLengthTask;
 
 - [使用 Async 和 Await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [非同步方法的傳回型別 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
-- [逐步解說：使用 async 和 await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (非同步範例：非同步程式中的控制流程 (C# 和 Visual Basic))
+- [逐步解說：使用 Async 和 Await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [非同步範例：非同步程式中的控制流程 (C# 和 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

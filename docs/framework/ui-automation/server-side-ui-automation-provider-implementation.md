@@ -7,10 +7,10 @@ helpviewer_keywords:
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
 ms.openlocfilehash: 3b3e69d1c52b98822a4cf3b75de74466e1dc68f0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320048"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>伺服器端 UI 自動化提供者實作
@@ -19,7 +19,7 @@ ms.locfileid: "59320048"
   
  本節描述如何為自訂控制項實作伺服器端使用者介面自動化提供者。  
   
- 實作中的，Windows Presentation Foundation (WPF) 項目，且非位[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]項目 (例如專為[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) 本質上不同。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 項目提供支援[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]透過衍生自類別<xref:System.Windows.Automation.Peers.AutomationPeer>。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 項目透過提供者介面的實作提供支援。  
+ 實作中的，Windows Presentation Foundation (WPF) 項目，且非位[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]項目 (例如專為[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) 本質上不同。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 項目透過衍生自 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的類別提供 <xref:System.Windows.Automation.Peers.AutomationPeer>的支援。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 項目透過提供者介面的實作提供支援。  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>安全性考量  
@@ -68,7 +68,7 @@ ms.locfileid: "59320048"
   
 |功能|實作|  
 |-------------------|--------------------|  
-|公開 （expose) 的提供者 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|在回應傳送至控制項視窗的 WM_GETOBJECT 訊息時，傳回實作 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple> 的物件 (或衍生的介面)。 對於片段，這必須是片段根的提供者。|  
+|將提供者公開至 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|在回應傳送至控制項視窗的 WM_GETOBJECT 訊息時，傳回實作 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple> 的物件 (或衍生的介面)。 對於片段，這必須是片段根的提供者。|  
 |提供屬性值|實作 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A> 來提供或覆寫值。|  
 |可讓用戶端與控制項互動|實作支援控制模式的介面，例如 <xref:System.Windows.Automation.Provider.IInvokeProvider>。 實作 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A>時傳回這些模式提供者。|  
 |引發事件|呼叫 <xref:System.Windows.Automation.Provider.AutomationInteropProvider> 的其中一個靜態方法，來引發用戶端可以接聽的事件。|  
@@ -77,7 +77,7 @@ ms.locfileid: "59320048"
   
 <a name="Property_Values_in_Non_WPF_Providers"></a>   
 ### <a name="property-values-in-non-wpf-providers"></a>非 WPF 提供者中的屬性值  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 自訂控制項的提供者必須支援由自動化系統以及用戶端應用程式可以使用某些屬性。 對於裝載於視窗 (HWND) 的項目， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 可以從預設視窗提供者擷取某些屬性，但必須從自訂提供者取得其他屬性。  
+ 自訂控制項的[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供者必須支援某些屬性，而這些屬性可由自動化系統以及用戶端應用程式使用。 對於裝載於視窗 (HWND) 的項目， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 可以從預設視窗提供者擷取某些屬性，但必須從自訂提供者取得其他屬性。  
   
  以 HWND 為基礎的控制項的提供者通常不需要提供下列屬性 (以欄位值識別)：  
   
@@ -112,7 +112,7 @@ ms.locfileid: "59320048"
   
 <a name="Events_in_Non_WPF_Providers"></a>   
 ### <a name="events-in-non-wpf-providers"></a>非 WPF 提供者中的事件  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供者應該引發事件，以通知用戶端應用程式 UI 的狀態中的變更。 下列方法會用於引發事件。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供者應該引發事件，將 UI 狀態中的變更通知用戶端應用程式。 下列方法會用於引發事件。  
   
 |方法|描述|  
 |------------|-----------------|  
@@ -144,7 +144,7 @@ ms.locfileid: "59320048"
   
 <a name="Non_WPF_Provider_Reparenting"></a>   
 ### <a name="non-wpf-provider-reparenting"></a>非 WPF 提供者重設父代  
- 實際上快顯視窗是最上層視窗，因此預設為出現在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構，以做為桌面的子系。 不過，在許多情況下，快顯視窗在邏輯上是一些其他控制項的子系。 例如，下拉式方塊的下拉式清單在邏輯上是下拉式方塊的子系。 同樣地，功能表快顯視窗在邏輯上是功能表的子系。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供支援，以重設父代的快顯視窗，使其顯示為關聯控制項的子系。  
+ 實際上快顯視窗是最上層視窗，因此預設為出現在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構，以做為桌面的子系。 不過，在許多情況下，快顯視窗在邏輯上是一些其他控制項的子系。 例如，下拉式方塊的下拉式清單在邏輯上是下拉式方塊的子系。 同樣地，功能表快顯視窗在邏輯上是功能表的子系。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供支援，以重設快顯視窗的父代，讓它們看起來似乎是相關聯控制項的子系。  
   
  若要重設快顯視窗的父代：  
   
@@ -162,7 +162,7 @@ ms.locfileid: "59320048"
   
 <a name="Non_WPF_Provider_Repositioning"></a>   
 ### <a name="non-wpf-provider-repositioning"></a>非 WPF 提供者重設配置  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 片段可能包含每個都包含在一個視窗 (HWND) 的兩個或多個項目。 因為每個 HWND 都有自己的預設提供者，將 HWND 視為包含 HWND 的子系，所以 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構會根據預設將 HWND 顯示在片段中，做為父視窗的子系。 在大部分情況下，這是所需的行為，但有時候，可能會造成混淆，因為它不符合 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]的邏輯結構。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 片段可能包含兩個或多個項目，而每一個都包含在一個視窗 (HWND) 中。 因為每個 HWND 都有自己的預設提供者，將 HWND 視為包含 HWND 的子系，所以 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構會根據預設將 HWND 顯示在片段中，做為父視窗的子系。 在大部分情況下，這是所需的行為，但有時候，可能會造成混淆，因為它不符合 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]的邏輯結構。  
   
  rebar 控制項就是這種情況的好範例。 Rebar 包含群組列，其中每一個可以輪流包含 HWND 型控制項，例如工具列、編輯方塊或下拉式方塊。 Rebar HWND 的預設視窗提供者會將群組列控制項 HWND 視為子系，而且 rebar 提供者也會將群組列視為子系。 因為 HWND 提供者和 rebar 提供者會一起運作，並且結合其子系，所以群組列和 HWND 型控制項會顯示為 rebar 的子系。 不過，在邏輯上只有群組列應該顯示為 rebar 的子系，而且每個群組列提供者應該要與其包含之控制項的預設 HWND 提供者配合。  
   
@@ -174,5 +174,5 @@ ms.locfileid: "59320048"
 - [公開伺服器端 UI 自動化提供者](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
 - [從 UI 自動化提供者傳回屬性](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
 - [UI 自動化提供者引發事件](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
-- [在 UI 自動化片段提供者中啟用巡覽](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [在 UI 自動化片段提供者中啟用導覽](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
 - [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)

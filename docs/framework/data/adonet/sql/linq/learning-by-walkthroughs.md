@@ -3,10 +3,10 @@ title: 依逐步解說學習
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
 ms.openlocfilehash: 611644ce9d6f95bc4113b81bfff36ecaf9cf0b4a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329306"
 ---
 # <a name="learning-by-walkthroughs"></a>依逐步解說學習
@@ -23,7 +23,7 @@ ms.locfileid: "59329306"
 |目標|Visual Basic|C#|  
 |---------------|------------------|---------|  
 |建立實體類別及執行簡單的查詢。|[逐步解說：簡單的物件模型和查詢 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[逐步解說：簡單的物件模型和查詢 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
-|加入第二個類別並執行更複雜的查詢<br /><br /> (必須完成上一個逐步解說)。|[逐步解說：跨關聯性查詢 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[逐步解說：跨關聯性查詢 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
+|加入第二個類別並執行更複雜的查詢<br /><br /> (必須完成上一個逐步解說)。|[逐步解說：查詢跨關聯性 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[逐步解說：跨關聯性查詢 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
 |在資料庫中加入、變更和刪除項目。|[逐步解說：操作資料 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[逐步解說：操作資料 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
 |使用預存程序。|[逐步解說：僅使用預存程序 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[逐步解說：僅使用預存程序 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
   
@@ -35,7 +35,7 @@ ms.locfileid: "59329306"
 -   SQL 引擎：這些逐步解說會寫入至使用 SQL Server Express 來實作。 如果您沒有 SQL Server Express，可以免費進行下載。 如需詳細資訊，請參閱 <<c0> [ 下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
     > [!NOTE]
-    >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 逐步解說會使用檔案名稱的連接字串。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 為了方便起見，讓 SQL Server Express 使用者只需指定檔名即可。 請時時注意安全性問題。 如需詳細資訊，請參閱 < [LINQ to SQL 中的安全性](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)。  
+    >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 逐步解說會使用檔名做為連接字串 (Connection String)。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 為了方便起見，讓 SQL Server Express 使用者只需指定檔名即可。 請時時注意安全性問題。 如需詳細資訊，請參閱 < [LINQ to SQL 中的安全性](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)。  
   
 -   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 逐步解說通常需要 Northwind 範例資料庫。 如需詳細資訊，請參閱 <<c0> [ 下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   

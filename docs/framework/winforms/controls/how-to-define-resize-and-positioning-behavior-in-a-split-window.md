@@ -10,10 +10,10 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
 ms.openlocfilehash: 8cdcfdfaa135a92ed6a6e96d4a72de2c97f2493d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328669"
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>HOW TO：定義分割視窗的調整大小和位置行為

@@ -2,12 +2,12 @@
 title: 具有延伸保護的整合式 Windows 驗證
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 93156ab346d97259030b001d3a4d8ca4612f48c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3088d59a91b5caa75cda3e40a5203874c24325cd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591613"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325718"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>具有延伸保護的整合式 Windows 驗證
 已建立的增強功能會影響 <xref:System.Net> 中的 <xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Mail.SmtpClient>、<xref:System.Net.Security.SslStream>、<xref:System.Net.Security.NegotiateStream> 和相關類別以及相關命名空間處理整合式 Windows 驗證的方式。 為加強安全性，擴充保護已新增支援。  
@@ -25,17 +25,17 @@ ms.locfileid: "54591613"
   
  整體目標如下：  
   
-1.  如已更新用戶端支援擴充保護，應用程式應該向所有支援的驗證通訊協定提供通道繫結和服務繫結資訊。 有要繫結的通道 (TLS) 時，只能提供通道繫結資訊。 應該一律提供服務繫結資訊。  
+1. 如已更新用戶端支援擴充保護，應用程式應該向所有支援的驗證通訊協定提供通道繫結和服務繫結資訊。 有要繫結的通道 (TLS) 時，只能提供通道繫結資訊。 應該一律提供服務繫結資訊。  
   
-2.  已正確設定的更新伺服器可能會在當它出現於用戶端驗證權杖時，驗證通道和服務繫結資訊，並在通道繫結不相符時，拒絕驗證嘗試。 根據部署案例，伺服器可能會驗證通道繫結、服務繫結或兩者都驗證。  
+2. 已正確設定的更新伺服器可能會在當它出現於用戶端驗證權杖時，驗證通道和服務繫結資訊，並在通道繫結不相符時，拒絕驗證嘗試。 根據部署案例，伺服器可能會驗證通道繫結、服務繫結或兩者都驗證。  
   
-3.  更新的伺服器能夠接受或拒絕下層用戶端要求，這些要求不包含以原則為基礎的通道繫結資訊。  
+3. 更新的伺服器能夠接受或拒絕下層用戶端要求，這些要求不包含以原則為基礎的通道繫結資訊。  
   
  擴充保護所使用的資訊，是由下列兩個部分的其中之一或全部所組成：  
   
-1.  通道繫結權杖或 CBT。  
+1. 通道繫結權杖或 CBT。  
   
-2.  使用服務主體名稱或 SPN 格式的服務繫結資訊。  
+2. 使用服務主體名稱或 SPN 格式的服務繫結資訊。  
   
  服務繫結資訊會指出用戶端意圖驗證特定的服務端點。 用戶端與伺服器之間的通訊使用下列屬性：  
   
@@ -122,11 +122,11 @@ ms.locfileid: "54591613"
   
  在此組態中，當透過外部安全通道向伺服器提出要求時，會查詢外部通道是否有通道繫結。 此通道繫結會傳遞給驗證 SSPI 呼叫，確認驗證 Blob 中的通道繫結是否相符。 有三個可能的結果：  
   
-1.  伺服器的基礎作業系統不支援擴充的保護。 要求不會向應用程式公開，且未經授權的 (401) 回應會傳回至用戶端。 記錄到 <xref:System.Net.HttpListener> 追蹤來源的訊息會指定失敗的原因。  
+1. 伺服器的基礎作業系統不支援擴充的保護。 要求不會向應用程式公開，且未經授權的 (401) 回應會傳回至用戶端。 記錄到 <xref:System.Net.HttpListener> 追蹤來源的訊息會指定失敗的原因。  
   
-2.  SSPI 呼叫失敗，表示可能是用戶端指定的通道繫結不符合從外部通道擷取的預期值，或針對 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> 在伺服器上設定擴充保護原則時，用戶端無法提供通道繫結。 這兩種情況下，要求都不會向應用程式公開，且未經授權的 (401) 回應會傳回至用戶端。 記錄到 <xref:System.Net.HttpListener> 追蹤來源的訊息會指定失敗的原因。  
+2. SSPI 呼叫失敗，表示可能是用戶端指定的通道繫結不符合從外部通道擷取的預期值，或針對 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> 在伺服器上設定擴充保護原則時，用戶端無法提供通道繫結。 這兩種情況下，要求都不會向應用程式公開，且未經授權的 (401) 回應會傳回至用戶端。 記錄到 <xref:System.Net.HttpListener> 追蹤來源的訊息會指定失敗的原因。  
   
-3.  用戶端指定了正確的通道繫結，或允許連接但未指定通道繫結，因為伺服器上使用 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 設定擴充保護原則。要求會傳回應用程式處理。 不會自動執行服務名稱檢查。 應用程式可選擇執行它自己使用 <xref:System.Net.HttpListenerRequest.ServiceName%2A> 屬性的服務名稱驗證，但在這些情況下會重複。  
+3. 用戶端指定了正確的通道繫結，或允許連接但未指定通道繫結，因為伺服器上使用 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 設定擴充保護原則。要求會傳回應用程式處理。 不會自動執行服務名稱檢查。 應用程式可選擇執行它自己使用 <xref:System.Net.HttpListenerRequest.ServiceName%2A> 屬性的服務名稱驗證，但在這些情況下會重複。  
   
  如果應用程式進行自己的 SSPI 呼叫，執行以在 HTTP 要求主體內來回傳遞的 Blob 為基礎的驗證，而且想要支援通道繫結，它需要從使用 <xref:System.Net.HttpListener> 的外部安全通道擷取預期的通道繫結，才能將它傳遞給原生的 Win32 [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) 函式。 若要這樣做，請使用 <xref:System.Net.HttpListenerRequest.TransportContext%2A> 屬性並呼叫 <xref:System.Net.TransportContext.GetChannelBinding%2A> 方法來擷取 CBT。 僅支援端點繫結。 如指定任何其他 <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint>，就會擲回 <xref:System.NotSupportedException>。 如果基礎作業系統支援通道繫結，<xref:System.Net.TransportContext.GetChannelBinding%2A> 方法會將 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle> 包裝的指標傳回給通道繫結，此通道繫結適合傳遞給 [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) 函式作為傳入 `pInput` 參數之 SecBuffer 結構的 pvBuffer 成員。 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> 屬性包含通道繫結的長度，以位元組為單位。 如果基礎作業系統不支援通道繫結，此函式會傳回 `null`。  
   
@@ -136,18 +136,19 @@ ms.locfileid: "54591613"
   
  在此組態中，向沒有外部安全通道的伺服器提出要求時，通常會在沒有通道繫結檢查的情況下繼續驗證。 如果驗證成功，會查詢內容是否有用戶端提供的服務名稱，用以比對驗證可接受的服務名稱清單。 有四個可能的結果：  
   
-1.  伺服器的基礎作業系統不支援擴充的保護。 要求不會向應用程式公開，且未經授權的 (401) 回應會傳回至用戶端。 記錄到 <xref:System.Net.HttpListener> 追蹤來源的訊息會指定失敗的原因。  
+1. 伺服器的基礎作業系統不支援擴充的保護。 要求不會向應用程式公開，且未經授權的 (401) 回應會傳回至用戶端。 記錄到 <xref:System.Net.HttpListener> 追蹤來源的訊息會指定失敗的原因。  
   
-2.  用戶端的基礎作業系統不支援擴充的保護。 在 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 組態中，該驗證嘗試會成功，且要求會傳回給應用程式。 在 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> 組態中，驗證嘗試會失敗。 要求不會向應用程式公開，且未經授權的 (401) 回應會傳回至用戶端。 記錄到 <xref:System.Net.HttpListener> 追蹤來源的訊息會指定失敗的原因。  
+2. 用戶端的基礎作業系統不支援擴充的保護。 在 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 組態中，該驗證嘗試會成功，且要求會傳回給應用程式。 在 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> 組態中，驗證嘗試會失敗。 要求不會向應用程式公開，且未經授權的 (401) 回應會傳回至用戶端。 記錄到 <xref:System.Net.HttpListener> 追蹤來源的訊息會指定失敗的原因。  
   
-3.  用戶端基礎作業系統支援擴充的保護，但應用程式未指定服務繫結。 要求不會向應用程式公開，且未經授權的 (401) 回應會傳回至用戶端。 記錄到 <xref:System.Net.HttpListener> 追蹤來源的訊息會指定失敗的原因。  
+3. 用戶端基礎作業系統支援擴充的保護，但應用程式未指定服務繫結。 要求不會向應用程式公開，且未經授權的 (401) 回應會傳回至用戶端。 記錄到 <xref:System.Net.HttpListener> 追蹤來源的訊息會指定失敗的原因。  
   
-4.  用戶端指定了服務繫結。 比較服務繫結和允許的服務繫結清單。 如果相符，則要求會傳回至應用程式。 否則，要求不會向應用程式公開，且未經授權的 (401) 回應會自動傳回至用戶端。 記錄到 <xref:System.Net.HttpListener> 追蹤來源的訊息會指定失敗的原因。  
+4. 用戶端指定了服務繫結。 比較服務繫結和允許的服務繫結清單。 如果相符，則要求會傳回至應用程式。 否則，要求不會向應用程式公開，且未經授權的 (401) 回應會自動傳回至用戶端。 記錄到 <xref:System.Net.HttpListener> 追蹤來源的訊息會指定失敗的原因。  
   
  如果使用可接受服務名稱允許清單的這個簡單方法不足，應用程式可以查詢 <xref:System.Net.HttpListenerRequest.ServiceName%2A> 屬性，提供它自己的服務名稱驗證。 在上述的 1 和 2 案例中，屬性會傳回 `null`。 在案例 3 中，它會傳回空字串。 在案例 4 中，會傳回用戶端指定的服務名稱。  
   
  伺服器應用程式也可以使用這些擴充的保護功能，搭配其他類型的要求進行驗證，以及在使用受信任的 Proxy 時進行驗證。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Security.Authentication.ExtendedProtection>
 - <xref:System.Security.Authentication.ExtendedProtection.Configuration>

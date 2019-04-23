@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
 ms.openlocfilehash: 222ce575d9e977cc8b68862385b4a1b147c6394a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326381"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a>HOW TO：將變更提交至資料庫
@@ -35,7 +35,7 @@ ms.locfileid: "59326381"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：偵測和解決發生衝突的提交內容](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
-- [HOW TO：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [如何：偵測和解決衝突的提交內容](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
+- [如何：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
 - [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [變更資料和提交](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [變更和提交資料](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

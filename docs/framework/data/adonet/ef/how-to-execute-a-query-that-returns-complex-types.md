@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c2209fdb-70ef-4dea-8bb8-097fe96f5563
 ms.openlocfilehash: a428f54c3834ccdf6a0c7a5bfce8307172724524
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322884"
 ---
 # <a name="how-to-execute-a-query-that-returns-complex-types"></a>HOW TO：執行可傳回複雜類型的查詢
@@ -26,7 +26,7 @@ ms.locfileid: "59322884"
   
 3. 按兩下 要顯示在模型的.edmx 檔案[模型瀏覽器視窗](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738483(v=vs.100))在實體設計工具。 Entity Designer 介面上，選取`Email`並`Phone`的屬性`Contact`實體類型，然後以滑鼠右鍵按一下並選取**重構至新的複雜型別**。  
   
-4. 新的複雜型別與所選`Email`並`Phone`屬性新增至**模型瀏覽器**。 複雜型別有預設名稱： 重新命名的型別`EmailPhone`中**屬性**視窗。 也會將新的 `ComplexProperty` 屬性加入至 `Contact` 實體類型。 重新命名屬性 `EmailPhoneComplexType.`  
+4. 新的複雜型別與所選`Email`並`Phone`屬性新增至**模型瀏覽器**。 複雜型別有預設名稱： 重新命名的型別`EmailPhone`中**屬性**視窗。 也會將新的 `ComplexProperty` 屬性加入至 `Contact` 實體類型。 將屬性重新命名為 `EmailPhoneComplexType.`  
   
      建立和修改複雜型別的使用 Entity Data Model 精靈的相關資訊，請參閱[How to:將現有屬性重構到複雜型別屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456814(v=vs.100))和[How to:建立和修改複雜型別](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))。  
   

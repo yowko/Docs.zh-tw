@@ -7,10 +7,10 @@ helpviewer_keywords:
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
 ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327369"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>HOW TO：在 Windows Forms 中建立 Windows 檔案總管樣式的介面
@@ -52,7 +52,7 @@ Windows 檔案總管會是應用程式的一般使用者介面選擇，因為其
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [HOW TO：使用 Windows Forms 建立多窗格使用者介面](how-to-create-a-multipane-user-interface-with-windows-forms.md)
-- [HOW TO：定義分割視窗的調整大小和位置行為](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
-- [HOW TO：水平分割視窗](how-to-split-a-window-horizontally.md)
+- [如何：利用 Windows Form 建立多窗格使用者介面](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [如何：定義調整大小和位置行為在分隔視窗](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [如何：水平分隔視窗](how-to-split-a-window-horizontally.md)
 - [SplitContainer 控制項](splitcontainer-control-windows-forms.md)

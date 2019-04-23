@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
 ms.openlocfilehash: 4fc4565db58d008f52bc047d26118fc849648770
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329449"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>HOW TO：並存裝載工作流程的多個版本
-`WorkflowIdentity` 提供工作流程應用程式開發人員工作流程定義，相關聯的名稱和版本以及這項資訊與持續性工作流程執行個體相關聯的方式。 此身分識別資訊可由工作流程應用程式開發人員使用以啟用案例 (例如並存執行多個版本的工作流程定義)，以及提供動態更新等其他功能的基礎。 教學課程中的此步驟示範如何使用 `WorkflowIdentity` 同時裝載工作流程的多個版本。
+`WorkflowIdentity` 提供一種方法，讓工作流程應用程式開發人員能夠將名稱和版本與工作流程定義產生關聯性，並為這項資訊與持續性工作流程執行個體建立關聯性。 此身分識別資訊可由工作流程應用程式開發人員使用以啟用案例 (例如並存執行多個版本的工作流程定義)，以及提供動態更新等其他功能的基礎。 教學課程中的此步驟示範如何使用 `WorkflowIdentity` 同時裝載工作流程的多個版本。
 
 > [!NOTE]
 >  若要下載完整的版或觀看視訊逐步解說教學課程，請參閱[Windows Workflow Foundation (WF45)-入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
@@ -25,15 +25,15 @@ ms.locfileid: "59329449"
   
 -   [更新工作流程](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
   
-    -   [更新狀態機器工作流程](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
+    -   [若要更新的狀態機器工作流程](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
   
     -   [更新流程圖工作流程](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
   
-    -   [更新循序工作流程](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
+    -   [若要更新循序工作流程](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
   
--   [更新 WorkflowVersionMap 以包含舊版的工作流程](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
+-   [若要更新 WorkflowVersionMap 以包含舊版的工作流程](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
   
--   [若要建置及執行應用程式](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
+-   [若要建置並執行應用程式](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
 >  依照本主題中的步驟進行之前，請執行應用程式、啟動每種型別的數個工作流程，然後針對每個工作流程進行一或兩次猜測。 在此步驟和下一個步驟，使用這些保存的工作流程[How to:更新執行中工作流程執行個體的定義](how-to-update-the-definition-of-a-running-workflow-instance.md)。
@@ -555,14 +555,14 @@ ms.locfileid: "59329449"
 
 2. 按一下 啟動新的工作流程**新遊戲**。 工作流程的版本會顯示在狀態視窗下，反映從相關聯的 `WorkflowIdentity` 更新的版本。 記下 `InstanceId`，當工作流程完成時，您就可以檢視該工作流程的追蹤檔案，然後輸入猜測直到遊戲完成為止。 請注意，狀態視窗中所顯示的使用者猜測資訊，會以 `WriteLine` 活動的更新為根據。
 
- **請輸入 1 到 10 之間的數字**  
-**5 太大了。**  
-**請輸入 1 到 10 之間的數字**  
-**3 太大了。**  
-**請輸入 1 到 10 之間的數字**  
-**1 太小了。**  
-**請輸入 1 到 10 之間的數字**  
-**恭喜您，您試了 4 次就猜到正確數字。**  
+ **請輸入介於 1 到 10 之間的數字**  
+**5 是太高。**  
+**請輸入介於 1 到 10 之間的數字**  
+**3 是太高。**  
+**請輸入介於 1 到 10 之間的數字**  
+**1 是過低。**  
+**請輸入介於 1 到 10 之間的數字**  
+**恭喜，您猜數字到 4。**  
 
     > [!NOTE]
     >  即會顯示從 `WriteLine` 活動更新的文字，但不會顯示本主題中最後加入的 `WriteLine` 活動的輸出。 這是因為狀態視窗是由 `PersistableIdle` 處理常式更新的。 由於工作流程已完成且不會在最後一個活動之後閒置，因此不會呼叫 `PersistableIdle` 處理常式。 但是，`Completed` 處理常式會在狀態視窗顯示類似的訊息。 如果需要，可以將程式碼加入到 `Completed` 處理常式，從 `StringWriter` 擷取文字並將其顯示在狀態視窗中。

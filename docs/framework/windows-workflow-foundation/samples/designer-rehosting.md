@@ -3,10 +3,10 @@ title: 設計工具重新裝載
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
 ms.openlocfilehash: b2a51014e34bf27d6f016db71d2c2eaabb906c6d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328162"
 ---
 # <a name="designer-rehosting"></a>設計工具重新裝載
@@ -40,7 +40,7 @@ ms.locfileid: "59328162"
 </Grid>  
 ```  
   
- 範例接著建立設計工具，並且將其主要 <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> 和 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> 與使用者介面中的適當容器產生關聯。 在下列範例中有些其他程式碼行需要說明。 若要針對 <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> 隨附的活動，與預設活動設計工具建立關聯，必須使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 呼叫。 <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> 呼叫傳入要編輯的 WF 項目。 最後，<xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (主要畫布) 和 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (屬性方格) 會放在使用者介面上。  
+ 範例接著建立設計工具，並且將其主要 <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> 和 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> 與使用者介面中的適當容器產生關聯。 在下列範例中有些其他程式碼行需要說明。 若要針對 <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> 隨附的活動，與預設活動設計工具建立關聯，必須使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 呼叫。 會呼叫 <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> 以傳入所要編輯的 WF 項目。 最後，<xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (主要畫布) 和 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (屬性方格) 會放在使用者介面上。  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  

@@ -5,16 +5,16 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 3a50b5f085aee4afc2f388aeac8a4f68823b92c7
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: aebfaa85338e014ca47256b85a1bd6529ad803bb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675857"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327161"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>作法：將 Windows Forms 傳統型應用程式移植到 .NET Core
 
-此文章說明如何將 Windows Forms 傳統型應用程式從 .NET Framework 移植到 .NET Core 3.0。 .NET Core 3.0 SDK 支源 Windows Forms 應用程式。 Windows Forms 仍然是僅限 Windows 的架構，只能在 Windows 上執行。 本範例使用 .NET Core SDK CLI 來建立和管理您的專案。
+此文章說明如何將 Windows Forms 傳統型應用程式從 .NET Framework 移植到 .NET Core 3.0。 .NET Core 3.0 SDK 支源 Windows Forms 應用程式。 Windows Forms 仍然是僅限 Windows 的架構，只能在 Windows 上執行。 此範例使用 .NET Core SDK CLI 來建立和管理您的專案。
 
 在此文章中，各種不同的名稱會用來識別用於移轉的檔案類型。 在移轉您的專案時，您的檔案會有不同的名稱，因此請在心裡將它們與下面所列的項目進行比對：
 
@@ -25,9 +25,9 @@ ms.locfileid: "58675857"
 | **MyFormsCore.csproj** | 您所建立的新 .NET Core 專案的名稱。 |
 | **MyAppCore.exe** | .NET Core Windows Forms 應用程式可執行檔。 |
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
-- 適用於您想要執行之任何設計工具工作的 [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=winforms+core) 。
+- 適用於您想要執行之任何設計工具工作的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 。
 
   安裝下列 Visual Studio 工作負載：
   - .NET 桌面開發
@@ -37,11 +37,10 @@ ms.locfileid: "58675857"
 - 您的專案必須以 C# 進行編碼。 
 - 安裝最新的 [.NET Core 3.0](https://aka.ms/netcore3download) 預覽。
 
-
 >[!NOTE]
->**Visual Studio 2017** 不支援 .NET Core 3.0 專案。 **Visual Studio 2019 預覽/RC** 支援 .NET Core 3.0 專案，但尚不支援 .NET Core 3.0 Windows Forms 專案的視覺化設計工具。 若要使用視覺化設計工具，您的解決方案中必須具有 .NET Windows Forms 專案，該專案與 .NET Core 專案共用表單檔案。
+>**Visual Studio 2017** 不支援 .NET Core 3.0 專案。 **Visual Studio 2019** 支援 .NET Core 3.0 專案，但尚不支援 .NET Core 3.0 Windows Forms 專案的視覺化設計工具。 若要使用視覺化設計工具，您的解決方案中必須具有 .NET Windows Forms 專案，該專案與 .NET Core 專案共用表單檔案。
 
-### <a name="consider"></a>Consider
+### <a name="consider"></a>考量
 
 移植 .NET Framework Windows Forms 應用程式時，您必須考量幾件事。
 
@@ -61,7 +60,7 @@ ms.locfileid: "58675857"
 
     在任何移轉之前使用最新版本的 NuGet 套件永遠是最好的作法。 如果您的應用程式會參考任何 NuGet 套件，請將它們更新為最新版本。 請確定您的應用程式建置成功。 升級後，如果有任何套件錯誤，請將套件降級為不會中斷程式碼的最新版本。
 
-01. Visual Studio 2019 預覽 / RC 尚不支援.NET Core 3.0 的表單設計工具
+01. Visual Studio 2019 尚不支援 .NET Core 3.0 的表單設計工具
 
     目前，如果要使用 Visual Studio 中的表單設計工具，則需要保留現有的 .NET Framework Windows Forms 專案檔案。
 
@@ -295,7 +294,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
 
 ## <a name="windows-forms-designer"></a>Windows Form 設計工具
 
-如此文章所述，Visual Studio 2019 預覽/RC 僅支援 .NET Framework 專案中的表單設計工具。 藉由建立並排.NET Core 專案，您可以在使用 .NET Framework 專案設計表單時，同時使用 .NET Core 測試您的專案。 您的方案檔包含 .NET Framework 和 .NET Core 專案。 在 .NET Framework 專案中新增和設計您的表單和控制項，且根據我們新增至 .NET Core 專案的檔案 Glob 模式，任何新的或已變更的檔案將自動包含在 .NET Core 專案中。
+如此文章所述，Visual Studio 2019 僅支援 .NET Framework 專案中的表單設計工具。 藉由建立並排.NET Core 專案，您可以在使用 .NET Framework 專案設計表單時，同時使用 .NET Core 測試您的專案。 您的方案檔包含 .NET Framework 和 .NET Core 專案。 在 .NET Framework 專案中新增和設計您的表單和控制項，且根據我們新增至 .NET Core 專案的檔案 Glob 模式，任何新的或已變更的檔案將自動包含在 .NET Core 專案中。
 
 一旦 Visual Studio 2019 支援 Windows Form 設計工具，您就可以將 .NET Core 專案檔案的內容複製/貼上到 .NET Framework 專案檔案中。 然後刪除新增了 `<Source>` 和 `<EmbeddedResource>` 項目的檔案 Glob 模式。 修正應用程式所使用之任何專案參考的路徑。 這會有效地將 .NET Framework 專案升級至 .NET Core 專案。
  

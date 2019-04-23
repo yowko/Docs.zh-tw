@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ebd54afb312de0796b5a96b3d41f1e98dd97bd1b
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: f7bda02e1862740e6a6328835367a6a5e9929033
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654350"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328305"
 ---
 # <a name="memory-mapped-files"></a>記憶體對應檔案
 記憶體對應檔案包含檔案在虛擬記憶體中的內容。 檔案和記憶體空間之間的這個對應可讓應用程式 (包括多個處理序) 透過直接讀取和寫入記憶體來修改檔案。 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，您可以利用與原生 Windows 功能存取記憶體對應檔案相同的方法，使用 受控碼來存取記憶體對應檔案，如[管理記憶體對應檔案](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)) \(英文\) 所述。  
@@ -59,7 +59,7 @@ ms.locfileid: "58654350"
 |針對記憶體對應檔案，取得循序存取檢視的 <xref:System.IO.UnmanagedMemoryStream> 物件。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream%2A?displayProperty=nameWithType> 方法。|  
 |針對記憶體對應檔案，取得隨機存取檢視的 <xref:System.IO.UnmanagedMemoryAccessor> 物件。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor%2A?displayProperty=nameWithType> 方法。|  
 |取得搭配非受控程式碼 使用的 <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> 物件。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle%2A?displayProperty=nameWithType> 屬性。<br /><br /> -或-<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType> 屬性。<br /><br /> -或-<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedViewStream.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType> 屬性。|  
-|延遲配置記憶體，直到建立檢視 (僅限非持續性檔案) 為止 <br /><br /> (若要判斷目前的系統頁面大小，請使用 <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType> 屬性)。|具有 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType> 值的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> 方法。<br /><br /> -或-<br /><br /> 將 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> 列舉當作參數的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> 方法。|  
+|延遲配置記憶體，直到建立檢視 (僅限非持續性檔案) 為止 <br /><br /> (若要判斷目前的系統頁面大小，請使用 <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType> 屬性)。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> 方法，具有 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType> 值。<br /><br /> -或-<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> 方法，具有 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> 列舉作為參數。|  
   
 ### <a name="security"></a>安全性  
  使用下列採用 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> 列舉作為參數的方法建立記憶體對應檔案時，您可以套用存取權限：  
@@ -96,29 +96,29 @@ ms.locfileid: "58654350"
   
  下列範例包含三個不同的處理序 (主控台應用程式)，這些處理序會將布林值寫入記憶體對應檔案。 發生下列順序的動作：  
   
-1.  `Process A` 會建立記憶體對應檔案，並在其中寫入值。  
+1. `Process A` 會建立記憶體對應檔案，並在其中寫入值。  
   
-2.  `Process B` 會開啟記憶體對應檔案，並在其中寫入值。  
+2. `Process B` 會開啟記憶體對應檔案，並在其中寫入值。  
   
-3.  `Process C` 會開啟記憶體對應檔案，並在其中寫入值。  
+3. `Process C` 會開啟記憶體對應檔案，並在其中寫入值。  
   
-4.  `Process A` 會讀取並顯示記憶體對應檔案中的值。  
+4. `Process A` 會讀取並顯示記憶體對應檔案中的值。  
   
-5.  使用記憶體對應檔案完成 `Process A` 之後，檔案會立即由記憶體回收進行回收。  
+5. 使用記憶體對應檔案完成 `Process A` 之後，檔案會立即由記憶體回收進行回收。  
   
  若要執行此範例，請執行下列動作：  
   
-1.  編譯應用程式，並開啟三個 [命令提示字元] 視窗。  
+1. 編譯應用程式，並開啟三個 [命令提示字元] 視窗。  
   
-2.  在第一個 [命令提示字元] 視窗中，執行 `Process A`。  
+2. 在第一個 [命令提示字元] 視窗中，執行 `Process A`。  
   
-3.  在第二個 [命令提示字元] 視窗中，執行 `Process B`。  
+3. 在第二個 [命令提示字元] 視窗中，執行 `Process B`。  
   
-4.  返回 `Process A`，然後按 ENTER。  
+4. 返回 `Process A`，然後按 ENTER。  
   
-5.  在第三個 [命令提示字元] 視窗中，執行 `Process C`。  
+5. 在第三個 [命令提示字元] 視窗中，執行 `Process C`。  
   
-6.  返回 `Process A`，然後按 ENTER。  
+6. 返回 `Process A`，然後按 ENTER。  
   
  `Process A` 的輸出如下：  
   

@@ -1,15 +1,15 @@
 ---
-title: 作法：合併和比較字串集合 (LINQ) (C#)
+title: HOW TO：合併和比較字串集合 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
 ms.openlocfilehash: 5f8d734738606ada2db6db7f3c8e6c08ca57a543
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323742"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>作法：合併和比較字串集合 (LINQ) (C#)
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>HOW TO：合併和比較字串集合 (LINQ) (C#)
 本例示範如何合併包含文字行的檔案，然後排序結果。 具體來說，它會示範如何在兩組文字行上執行簡單的串連、等位和交集。  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>設定專案和文字檔案  

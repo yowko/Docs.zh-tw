@@ -3,10 +3,10 @@ title: 使用探索用戶端通道
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
 ms.openlocfilehash: 298cafe34b20a3644f967acf15f831be5b0b90ac
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329930"
 ---
 # <a name="using-the-discovery-client-channel"></a>使用探索用戶端通道
@@ -20,7 +20,7 @@ ms.locfileid: "59329930"
   
  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 類別包含兩個公用屬性：  
   
-1. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>用來描述您想要呼叫的服務。  
+1. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>，用來描述您要呼叫的服務。  
   
 2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> 指定要傳送探索訊息的探索端點。  
   

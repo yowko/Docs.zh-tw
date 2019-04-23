@@ -6,10 +6,10 @@ helpviewer_keywords:
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
 ms.openlocfilehash: 56fef77448f3523732e755f57e8cdabe6ad71379
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327642"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>逐步解說：變更 My.Application.Log 寫入資訊的位置 (Visual Basic)
@@ -187,5 +187,5 @@ ms.locfileid: "59327642"
 - <xref:System.Diagnostics.TraceListener>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>
 - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>
-- [作法：將事件資訊寫入文字檔](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)
-- [作法：寫入應用程式事件記錄檔](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
+- [如何：將事件資訊寫入至文字檔](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)
+- [如何：寫入至應用程式事件記錄檔](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)

@@ -3,10 +3,10 @@ title: 資料庫存取活動
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
 ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322598"
 ---
 # <a name="database-access-activities"></a>資料庫存取活動
@@ -242,12 +242,12 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 |CommandType|要執行之 <xref:System.Data.Common.DbCommand> 的型別。|
 |Sql|要執行的 SQL 命令。|
 |參數|SQL 查詢的參數集合。|
-|結果|<xref:System.Data.DataSet> 執行查詢之後，會取得之項目。|
+|結果|查詢執行之後取得的 <xref:System.Data.DataSet>。|
 
 ## <a name="configuring-connection-information"></a>設定連接資訊
  所有 DbActivities 會共用相同的組態參數。 您可以透過兩種方式加以設定：
 
--   `ConnectionString + InvariantName`:設定 ADO.NET 提供者非變異名稱和連接字串。
+-   `ConnectionString + InvariantName`：設定 ADO.NET 提供者非變異名稱和連接字串。
 
     ```
     Activity dbSelectCount = new DbQueryScalar<DateTime>()
@@ -260,7 +260,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };
     ```
 
--   `ConfigName`:設定包含連接資訊的組態區段名稱。
+-   `ConfigName`：設定包含連接資訊的組態區段名稱。
 
     ```xml
     <connectionStrings>

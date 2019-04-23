@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
 ms.openlocfilehash: 6194ef288bd43267c2b00fa6d7c6250e90b37c75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322637"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>HOW TO：使用修飾詞和 GenerateMember 屬性
@@ -62,6 +62,6 @@ ms.locfileid: "59322637"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Button>
-- [Windows Form 視覺繼承](windows-forms-visual-inheritance.md)
+- [Windows Forms 視覺繼承](windows-forms-visual-inheritance.md)
 - [逐步解說：示範視覺化繼承](walkthrough-demonstrating-visual-inheritance.md)
-- [HOW TO：繼承 Windows Forms](how-to-inherit-windows-forms.md)
+- [如何：繼承 Windows Forms](how-to-inherit-windows-forms.md)

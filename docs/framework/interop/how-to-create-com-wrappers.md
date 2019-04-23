@@ -1,5 +1,5 @@
 ---
-title: 作法：建立 COM 包裝函式
+title: HOW TO：建立 COM 包裝函式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
@@ -8,13 +8,13 @@ ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1c26c84ece1231a4e118144c163fa3e9c7619301
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324121"
 ---
-# <a name="how-to-create-com-wrappers"></a>作法：建立 COM 包裝函式
+# <a name="how-to-create-com-wrappers"></a>HOW TO：建立 COM 包裝函式
 
 您可以使用 Visual Studio 2005 功能或 .NET Framework 工具 Tlbimp.exe 和 Regasm.exe 來建立元件物件模型 (COM) 包裝函式。 這兩種方法會產生兩種類型的 COM 包裝函式：
 

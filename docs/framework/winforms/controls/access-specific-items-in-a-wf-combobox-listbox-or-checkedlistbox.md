@@ -14,10 +14,10 @@ helpviewer_keywords:
 - CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
 ms.openlocfilehash: fbdd9168fe286823db7cf066ae0f821b8db88ecb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324522"
 ---
 # <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>HOW TO：在 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項中存取特定項目
@@ -56,4 +56,4 @@ ms.locfileid: "59324522"
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [用來列出選項的 Windows Form 控制項](windows-forms-controls-used-to-list-options.md)
+- [用來列出選項的 Windows Forms 控制項](windows-forms-controls-used-to-list-options.md)

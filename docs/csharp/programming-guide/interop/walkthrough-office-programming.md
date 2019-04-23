@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 3dce7e4bce0b056437445b92f52f6c6360844289
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1f46d6594c249db394a5493ad9cdbbb1937a5d45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966134"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328448"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>逐步解說：Office 程式設計 (C# 與 Visual Basic)
 Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式設計的功能。 有助益的 C# 功能包括具名和選擇性引數以及類型為 `dynamic` 的傳回值。 在 COM 程式設計中，您可以省略 `ref` 關鍵字並存取索引的屬性。 Visual Basic 中的功能包含自動實作的屬性、Lambda 運算式中的陳述式，以及集合初始設定式。
@@ -33,35 +33,35 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
   
 ### <a name="to-set-up-an-excel-add-in-application"></a>設定 Excel 增益集應用程式  
   
-1.  啟動 Visual Studio。  
+1. 啟動 Visual Studio。  
   
-2.  在 [檔案]  功能表中，指向 [新增] ，然後按一下 [專案] 。  
+2. 在 [檔案]  功能表中，指向 [新增] ，然後按一下 [專案] 。  
   
-3.  在 [已安裝的範本] 窗格中，展開 **Visual Basic** 或 **Visual C#**，並展開 **Office**，然後按一下 Office 產品的版本年份。  
+3. 在 [已安裝的範本] 窗格中，展開 **Visual Basic** 或 **Visual C#**，並展開 **Office**，然後按一下 Office 產品的版本年份。  
   
-4.  在 [範本] 窗格中，按一下 [Excel \<版本 > 增益集]。  
+4. 在 [範本] 窗格中，按一下 [Excel \<版本 > 增益集]。  
   
-5.  查看 [範本] 窗格頂端，確定 **.NET Framework 4** 或更新版本出現在 [目標 Framework] 方塊中。  
+5. 查看 [範本] 窗格頂端，確定 **.NET Framework 4** 或更新版本出現在 [目標 Framework] 方塊中。  
   
-6.  視需要在 [名稱] 方塊中，輸入您專案的名稱。  
+6. 視需要在 [名稱] 方塊中，輸入您專案的名稱。  
   
-7.  按一下 [確定 **Deploying Office Solutions**]。  
+7. 按一下 [確定]。  
   
-8.  新的專案隨即會出現在方案總管中。  
+8. 新的專案隨即會出現在方案總管中。  
   
 ### <a name="to-add-references"></a>加入參考  
   
-1.  在方案總管中，於專案名稱上按一下滑鼠右鍵，然後按一下 [新增參考]。 [加入參考] 對話方塊隨即出現。  
+1. 在方案總管中，於專案名稱上按一下滑鼠右鍵，然後按一下 [新增參考]。 [加入參考] 對話方塊隨即出現。  
   
-2.  在 [組件] 索引標籤上，選取 **Microsoft.Office.Interop.Excel** `<version>.0.0.0` 版 (如需 Office 產品版本號碼的金鑰，請參閱 [Microsoft 版本](https://en.wikipedia.org/wiki/Microsoft_Office#Versions))，並在 [元件名稱] 清單中，按住 CTRL 鍵，然後選取 **Microsoft.Office.Interop.Word** `version <version>.0.0.0`。 如果看不到組件，則可能需要確定組件已安裝及顯示 (請參閱[如何：安裝 Office 主要 Interop 組件](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))。  
+2. 在 [組件] 索引標籤上，選取 **Microsoft.Office.Interop.Excel** `<version>.0.0.0` 版 (如需 Office 產品版本號碼的金鑰，請參閱 [Microsoft 版本](https://en.wikipedia.org/wiki/Microsoft_Office#Versions))，並在 [元件名稱] 清單中，按住 CTRL 鍵，然後選取 **Microsoft.Office.Interop.Word** `version <version>.0.0.0`。 如果看不到組件，則可能需要確定組件已安裝及顯示 (請參閱[如何：安裝 Office 主要 Interop 組件](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))。  
   
-3.  按一下 [確定 **Deploying Office Solutions**]。  
+3. 按一下 [確定]。  
   
 ### <a name="to-add-necessary-imports-statements-or-using-directives"></a>加入必要的 Imports 陳述式或 using 指示詞  
   
-1.  在方案總管中，以滑鼠右鍵按一下 **ThisAddIn.vb** 或 **ThisAddIn.cs** 檔案，然後按一下 [檢視程式碼]。  
+1. 在方案總管中，以滑鼠右鍵按一下 **ThisAddIn.vb** 或 **ThisAddIn.cs** 檔案，然後按一下 [檢視程式碼]。  
   
-2.  將下列 `Imports` 陳述式 (Visual Basic) 或 `using` 指示詞 (C#) 加入還沒有這兩者的程式碼檔案頂端。  
+2. 將下列 `Imports` 陳述式 (Visual Basic) 或 `using` 指示詞 (C#) 加入還沒有這兩者的程式碼檔案頂端。  
   
      [!code-csharp[csOfficeWalkthrough#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#1)]
 
@@ -69,15 +69,15 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
   
 ### <a name="to-create-a-list-of-bank-accounts"></a>建立銀行帳戶清單  
   
-1.  在方案總管中，以滑鼠右鍵按一下您的專案名稱，再按一下 [新增]，然後按一下 [類別]。 如果您使用 Visual Basic，請將類別命名為 Account.vb；如果您使用 C#，則請將類別命名為 Account.cs。 按一下 [加入] 。  
+1. 在方案總管中，以滑鼠右鍵按一下您的專案名稱，再按一下 [新增]，然後按一下 [類別]。 如果您使用 Visual Basic，請將類別命名為 Account.vb；如果您使用 C#，則請將類別命名為 Account.cs。 按一下 [加入] 。  
   
-2.  將 `Account` 類別的定義取代為下列程式碼。 類別定義使用「自動實作屬性」。 如需詳細資訊，請參閱[自動實作的屬性](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)。  
+2. 將 `Account` 類別的定義取代為下列程式碼。 類別定義使用「自動實作屬性」。 如需詳細資訊，請參閱[自動實作的屬性](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)。  
   
      [!code-csharp[csOfficeWalkthrough#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/account.cs#2)]
 
      [!code-vb[csOfficeWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/account.vb#2)]  
   
-3.  若要建立含有兩個帳戶的 `bankAccounts` 清單，請將下列程式碼新增至 *ThisAddIn.vb* 或 *ThisAddIn.cs* 中的 `ThisAddIn_Startup` 方法。 清單宣告使用「集合初始設定式」。 如需詳細資訊，請參閱[集合初始設定式](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)。  
+3. 若要建立含有兩個帳戶的 `bankAccounts` 清單，請將下列程式碼新增至 *ThisAddIn.vb* 或 *ThisAddIn.cs* 中的 `ThisAddIn_Startup` 方法。 清單宣告使用「集合初始設定式」。 如需詳細資訊，請參閱[集合初始設定式](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)。  
   
      [!code-csharp[csOfficeWalkthrough#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#3)]
 
@@ -85,7 +85,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
   
 ### <a name="to-export-data-to-excel"></a>將資料匯出至 Excel  
   
-1.  在相同的檔案中，將下列方法加入 `ThisAddIn` 類別。 這個方法會設定 Excel 活頁簿，並將資料匯出到 Excel 活頁簿。  
+1. 在相同的檔案中，將下列方法加入 `ThisAddIn` 類別。 這個方法會設定 Excel 活頁簿，並將資料匯出到 Excel 活頁簿。  
   
      [!code-csharp[csOfficeWalkthrough#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#4)]
 
@@ -109,13 +109,13 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
   
          如需詳細資訊，請參閱[如何：在 COM Interop 程式設計中使用已編製索引的屬性](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)。  
   
-2.  在 `DisplayInExcel` 結尾加入下列程式碼，以調整資料行寬度以容納內容。  
+2. 在 `DisplayInExcel` 結尾加入下列程式碼，以調整資料行寬度以容納內容。  
   
      [!code-csharp[csOfficeWalkthrough#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#7)]
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]  
   
-     這些新增內容可示範 C# 中的另一個功能：將 COM 主機 (例如 Office) 傳回的 `Object` 值，視為具有 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 類型。 如果已將 [內嵌 Interop 類型] 設定為其預設值 `True`，則會自動發生這種情況；同樣地，當 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 編譯器選項參考了組件時也會如此。 `dynamic` 類型可以進行晚期繫結 (Visual Basic 中已有這個功能)，並避免在 Visual C# 2008 和語言舊版本中需要明確轉型。  
+     這些新增內容可示範 C# 中的另一項功能：將 COM 主機 (例如 Office) 傳回的 `Object` 值，視為具有 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 類型。 如果已將 [內嵌 Interop 類型] 設定為其預設值 `True`，則會自動發生這種情況；同樣地，當 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 編譯器選項參考了組件時也會如此。 `dynamic` 類型可以進行晚期繫結 (Visual Basic 中已有這個功能)，並避免在 Visual C# 2008 和語言舊版本中需要明確轉型。  
   
      例如，`excelApp.Columns[1]` 會傳回 `Object`；而 `AutoFit` 則為 Excel [Range](<xref:Microsoft.Office.Interop.Excel.Range>) 方法。 如果沒有 `dynamic`，則在呼叫 `excelApp.Columns[1]` 方法之前，必須將 `Range` 所傳回的物件，轉型為 `AutoFit` 執行個體。  
   
@@ -125,17 +125,17 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
   
 ### <a name="to-invoke-displayinexcel"></a>叫用 DisplayInExcel  
   
-1.  在 `ThisAddIn_StartUp` 方法的結尾，加入下列程式碼。 `DisplayInExcel` 呼叫包含兩個引數。 第一個引數是要處理的帳戶清單名稱。 第二個引數則是多行的 Lambda 運算式，定義如何處理資料。 每個帳戶的 `ID` 和 `balance` 值都會顯示在相鄰的儲存格中，而且如果餘額小於零，則會以紅色顯示資料列。 如需詳細資訊，請參閱 [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
+1. 在 `ThisAddIn_StartUp` 方法的結尾，加入下列程式碼。 `DisplayInExcel` 呼叫包含兩個引數。 第一個引數是要處理的帳戶清單名稱。 第二個引數則是多行的 Lambda 運算式，定義如何處理資料。 每個帳戶的 `ID` 和 `balance` 值都會顯示在相鄰的儲存格中，而且如果餘額小於零，則會以紅色顯示資料列。 如需詳細資訊，請參閱 [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
   
      [!code-csharp[csOfficeWalkthrough#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#9)]
 
      [!code-vb[csOfficeWalkthrough#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#9)]  
   
-2.  若要執行程式，請按 F5 鍵。 隨即會出現內含帳戶資料的 Excel 工作表。  
+2. 若要執行程式，請按 F5 鍵。 隨即會出現內含帳戶資料的 Excel 工作表。  
   
 ### <a name="to-add-a-word-document"></a>加入 Word 文件  
   
-1.  在 `ThisAddIn_StartUp` 方法的結尾加入下列程式碼，可以建立內含 Excel 活頁簿連結的 Word 文件。  
+1. 在 `ThisAddIn_StartUp` 方法的結尾加入下列程式碼，可以建立內含 Excel 活頁簿連結的 Word 文件。  
   
      [!code-csharp[csOfficeWalkthrough#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#10)]
 
@@ -145,50 +145,50 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
   
 ### <a name="to-run-the-application"></a>若要執行應用程式  
   
-1.  按 F5 執行應用程式。 隨即會啟動 Excel，並會顯示含有 `bankAccounts` 中兩個帳戶資訊的資料表。 然後，會出現包含 Excel 資料表連結的 Word 文件。  
+1. 按 F5 執行應用程式。 隨即會啟動 Excel，並會顯示含有 `bankAccounts` 中兩個帳戶資訊的資料表。 然後，會出現包含 Excel 資料表連結的 Word 文件。  
   
 ### <a name="to-clean-up-the-completed-project"></a>清除已完成的專案  
   
-1.  在 Visual Studio 中，按一下 [建置] 功能表上的 [清除方案]。 否則，每次在電腦上開啟 Excel 時，都會執行增益集。  
+1. 在 Visual Studio 中，按一下 [建置] 功能表上的 [清除方案]。 否則，每次在電腦上開啟 Excel 時，都會執行增益集。  
   
 ### <a name="to-find-the-pia-reference"></a>尋找 PIA 參考  
   
-1.  重新執行應用程式，但不要按一下 [清除方案]。  
+1. 重新執行應用程式，但不要按一下 [清除方案]。  
   
-2.  選取 [開始]。 找出 **Microsoft Visual Studio\<版本>**，開啟開發人員命令提示字元。  
+2. 選取 [開始]。 找出 **Microsoft Visual Studio\<版本>**，開啟開發人員命令提示字元。  
   
-3.  在 [Visual Studio 開發人員命令提示字元] 視窗中鍵入 `ildasm`，然後按 ENTER。 隨即會出現 IL DASM 視窗。  
+3. 在 [Visual Studio 開發人員命令提示字元] 視窗中鍵入 `ildasm`，然後按 ENTER。 隨即會出現 IL DASM 視窗。  
   
-4.  在 IL DASM 視窗的 [檔案] 功能表上，選取 [檔案] > [開啟]。 按兩下 [Visual Studio \<版本>]，然後按兩下 [專案]。 開啟您專案的資料夾，並查看 bin/Debug 資料夾中的 <您的專案名稱>.dll。 按兩下 <您的專案名稱>.dll。 新的視窗除了顯示會其他模組和組件的參考之外，還會顯示您專案的屬性。 請注意，組件中會包含命名空間 `Microsoft.Office.Interop.Excel` 和 `Microsoft.Office.Interop.Word`。 在 Visual Studio 中，編譯器預設會將您所需要的類型從參考的 PIA 匯入組件。  
+4. 在 IL DASM 視窗的 [檔案] 功能表上，選取 [檔案] > [開啟]。 按兩下 [Visual Studio \<版本>]，然後按兩下 [專案]。 開啟您專案的資料夾，並查看 bin/Debug 資料夾中的 <您的專案名稱>.dll。 按兩下 <您的專案名稱>.dll。 新的視窗除了顯示會其他模組和組件的參考之外，還會顯示您專案的屬性。 請注意，組件中會包含命名空間 `Microsoft.Office.Interop.Excel` 和 `Microsoft.Office.Interop.Word`。 在 Visual Studio 中，編譯器預設會將您所需要的類型從參考的 PIA 匯入組件。  
   
      如需詳細資訊，請參閱[如何：檢視組件內容](../../../framework/app-domains/how-to-view-assembly-contents.md)。  
   
-5.  按兩下**資訊清單**圖示。 隨即會出現一個視窗，內含專案所參考之項目的組件清單。 `Microsoft.Office.Interop.Excel` 和 `Microsoft.Office.Interop.Word` 未包含在清單中。 因為您專案所需的類型已匯入組件中，所以不需要 PIA 參考。 這會讓部署更為容易。 PIA 不需要存在於使用者的電腦上，而且因為應用程式不需要部署特定版本的 PIA，所以應用程式可以設計成與多個版本的 Office 搭配使用，但前提是所有版本都有必要的 API。  
+5. 按兩下**資訊清單**圖示。 隨即會出現一個視窗，內含專案所參考之項目的組件清單。 `Microsoft.Office.Interop.Excel` 和 `Microsoft.Office.Interop.Word` 未包含在清單中。 因為您專案所需的類型已匯入組件中，所以不需要 PIA 參考。 這會讓部署更為容易。 PIA 不需要存在於使用者的電腦上，而且因為應用程式不需要部署特定版本的 PIA，所以應用程式可以設計成與多個版本的 Office 搭配使用，但前提是所有版本都有必要的 API。  
   
      因為不再需要部署 PIA，所以您可以在使用多個版本 Office (包括舊版本) 的進階情況下，建立應用程式。 不過，這只適用於程式碼未使用供任何 API 時 (目前所用 Office 版本中不提供)。 您不一定清楚舊版本中是否有特定 API，也因為此，不建議使用舊版 Office。  
   
     > [!NOTE]
     > 在 Office 2003 之前，Office 未發行 PIA。 因此，產生 Office 2002 或舊版 Interop 組件唯一的方法，是匯入 COM 參考。  
   
-6.  關閉資訊清單視窗和組件視窗。  
+6. 關閉資訊清單視窗和組件視窗。  
   
 ### <a name="to-restore-the-pia-dependency"></a>還原 PIA 相依性  
   
-1.  在方案總管中，按一下 [顯示所有檔案] 按鈕。 展開 [參考] 資料夾，然後選取 **Microsoft.Office.Interop.Excel**。 按 F4 顯示 [屬性] 視窗。  
+1. 在方案總管中，按一下 [顯示所有檔案] 按鈕。 展開 [參考] 資料夾，然後選取 **Microsoft.Office.Interop.Excel**。 按 F4 顯示 [屬性] 視窗。  
   
-2.  在 [屬性] 視窗中，將 [內嵌 Interop 類型] 屬性從 [True] 變更為 [False]。  
+2. 在 [屬性] 視窗中，將 [內嵌 Interop 類型] 屬性從 [True] 變更為 [False]。  
   
-3.  為 `Microsoft.Office.Interop.Word`，重複本程序中的步驟 1 和 2。  
+3. 為 `Microsoft.Office.Interop.Word`，重複本程序中的步驟 1 和 2。  
   
-4.  在 C# 中，將 `Autofit` 方法結尾的兩個 `DisplayInExcel` 呼叫標為註解。  
+4. 在 C# 中，將 `Autofit` 方法結尾的兩個 `DisplayInExcel` 呼叫標為註解。  
   
-5.  按 F5 鍵，確認專案仍然正確地執行。  
+5. 按 F5 鍵，確認專案仍然正確地執行。  
   
-6.  重複前一個程序中的步驟 1-3，開啟組件視窗。 請注意，`Microsoft.Office.Interop.Word` 和 `Microsoft.Office.Interop.Excel` 已不在內嵌的組件清單中。  
+6. 重複前一個程序中的步驟 1-3，開啟組件視窗。 請注意，`Microsoft.Office.Interop.Word` 和 `Microsoft.Office.Interop.Excel` 已不在內嵌的組件清單中。  
   
-7.  按兩下**資訊清單**圖示，並捲動所參考之組件的清單。 `Microsoft.Office.Interop.Word` 和 `Microsoft.Office.Interop.Excel` 都在清單中。 由於應用程式會參考 Excel 和 Word PIA，而且 [內嵌 Interop 類型] 屬性設定為 [False]，所以使用者電腦上必須具有這兩個組件。  
+7. 按兩下**資訊清單**圖示，並捲動所參考之組件的清單。 `Microsoft.Office.Interop.Word` 和 `Microsoft.Office.Interop.Excel` 都在清單中。 由於應用程式會參考 Excel 和 Word PIA，而且 [內嵌 Interop 類型] 屬性設定為 [False]，所以使用者電腦上必須具有這兩個組件。  
   
-8.  在 Visual Studio 中，按一下 [建置] 功能表上的 [清除方案]，清除已完成的專案。  
+8. 在 Visual Studio 中，按一下 [建置] 功能表上的 [清除方案]，清除已完成的專案。  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -200,12 +200,12 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
 - [依位置和名稱傳遞引數](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
 - [具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [早期和晚期繫結](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
-- [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [動態](../../../csharp/language-reference/keywords/dynamic.md)
+- [使用動態類型](../../../csharp/programming-guide/types/using-type-dynamic.md)
 - [Lambda 運算式 (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Lambda 運算式 (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
-- [如何：在 COM Interop 程式設計中使用已編製索引的屬性](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)
-- [逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的類型資訊](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120)) \(英文\)
+- [作法：在 COM Interop 程式設計中使用已編製索引的屬性](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)
+- [逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的型別資訊](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
 - [逐步解說：從受控組件內嵌類型](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [逐步解說：建立 Excel 的第一個 VSTO 增益集](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)

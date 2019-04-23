@@ -3,10 +3,10 @@ title: 當取消剩餘的非同步工作是完成 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
 ms.openlocfilehash: 5dd9a99b96dc1e599fc2bde3a796beadf33f8147
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324509"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>當取消剩餘的非同步工作是完成 (Visual Basic)
@@ -78,7 +78,7 @@ End Function
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4. 對這組工作呼叫 `WhenAny`。 `WhenAny` 傳回`Task(Of Task(Of Integer))`或`Task<Task<int>>`。  亦即，`WhenAny` 會傳回評估為單一 `Task(Of Integer)` 或 `Task<int>` 的等候中工作。 該單一工作是完成集合中的第一項工作。 先完成的工作會指派給 `firstFinishedTask`。 `firstFinishedTask` 的型別是 `TResult` 為整數的 <xref:System.Threading.Tasks.Task%601>，因為這是 `ProcessURLAsync` 的傳回型別。  
+4. 對這組工作呼叫 `WhenAny`。 `WhenAny` 會傳回 `Task(Of Task(Of Integer))` 或 `Task<Task<int>>`。  亦即，`WhenAny` 會傳回評估為單一 `Task(Of Integer)` 或 `Task<int>` 的等候中工作。 該單一工作是完成集合中的第一項工作。 先完成的工作會指派給 `firstFinishedTask`。 `firstFinishedTask` 的型別是 `TResult` 為整數的 <xref:System.Threading.Tasks.Task%601>，因為這是 `ProcessURLAsync` 的傳回型別。  
   
 ```vb  
 ' ***Call WhenAny and then await the result. The task that finishes   

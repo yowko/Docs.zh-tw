@@ -11,10 +11,10 @@ helpviewer_keywords:
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
 ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324197"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>HOW TO：建立繪製的圖形物件
@@ -165,14 +165,14 @@ ms.locfileid: "59324197"
   
     |若要轉譯|請參閱|  
     |---------------|---------|  
-    |線條|[HOW TO：在 Windows Form 上繪製線條](how-to-draw-a-line-on-a-windows-form.md)|  
-    |圖形|[HOW TO：繪製外框形狀](how-to-draw-an-outlined-shape.md)|  
-    |文字|[HOW TO：在 Windows Form 上繪製文字](how-to-draw-text-on-a-windows-form.md)|  
-    |影像|[HOW TO：使用 GDI+ 呈現影像](how-to-render-images-with-gdi.md)|  
+    |線條|[如何：在 Windows Form 上繪製線條](how-to-draw-a-line-on-a-windows-form.md)|  
+    |圖形|[如何：繪製外框的形狀](how-to-draw-an-outlined-shape.md)|  
+    |文字|[如何：Windows Form 上繪製文字](how-to-draw-text-on-a-windows-form.md)|  
+    |影像|[如何：使用 GDI + 呈現影像](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>另請參閱
 
 - [圖形程式設計入門](getting-started-with-graphics-programming.md)
-- [Windows Form 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
 - [線條、曲線和形狀](lines-curves-and-shapes.md)
-- [HOW TO：使用 GDI+ 呈現影像](how-to-render-images-with-gdi.md)
+- [如何：使用 GDI + 呈現影像](how-to-render-images-with-gdi.md)

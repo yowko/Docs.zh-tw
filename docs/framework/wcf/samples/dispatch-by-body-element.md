@@ -3,10 +3,10 @@ title: 按本文項目分派
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
 ms.openlocfilehash: ff82ab027ff66b1c4c7433ea77efa6c34ccae088
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330190"
 ---
 # <a name="dispatch-by-body-element"></a>按本文項目分派
@@ -34,7 +34,7 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
 }
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 實作則非常簡單，因為在介面上只有一個方法所建置： <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>。 此方法的工作為檢查傳入的訊息，並針對目前的端點，傳回等於服務合約之方法名稱的字串。  
+ <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 實作的建置上則非常簡單，因為在介面上只有一個方法：<xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>。 此方法的工作為檢查傳入的訊息，並針對目前的端點，傳回等於服務合約之方法名稱的字串。  
   
  在此範例中，作業選取器會使用 <xref:System.Xml.XmlDictionaryReader>，取得傳入訊息本文的 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>。 這個方法已經將讀取器放置在訊息本文的第一個子系上，因此便可取得目前項目的名稱和命名空間 URI，並將這些項目結合至 `XmlQualifiedName`，然後使用結合項目查閱作業選取器持有之字典的對應作業。  
   

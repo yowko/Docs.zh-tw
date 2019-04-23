@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
 ms.openlocfilehash: 1445a95fc6360a7956048d2bae2d840f9c3f7a99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325692"
 ---
 # <a name="database-mirroring-in-sql-server"></a>在 SQL Server 中建立資料庫鏡像
@@ -65,4 +65,4 @@ string activeServer = connection.DataSource;
   
 ## <a name="see-also"></a>另請參閱
 
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

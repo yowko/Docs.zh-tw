@@ -3,10 +3,10 @@ title: LINQ to SQL 中的程式碼產生
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
 ms.openlocfilehash: 6565655cdb3222a8c9fa7e7759bac09d57ee269b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321584"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL 中的程式碼產生
@@ -273,6 +273,6 @@ elementFormDefault="qualified" >
 
 - [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [HOW TO：產生物件模型作為外部檔案](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [如何：產生物件模型當做外部檔案](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
 - [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
 - [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

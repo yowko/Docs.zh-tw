@@ -5,10 +5,10 @@ helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
 ms.openlocfilehash: 3b4f00617418d5f84a0da5d0e531e1f671b58bb1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323144"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>使用繫結來設定服務和用戶端
@@ -29,13 +29,13 @@ ms.locfileid: "59323144"
 ## <a name="system-provided-bindings"></a>系統提供的繫結  
  WCF 包含一組系統提供繫結是設計用來涵蓋大部分的應用程式的需求和案例。 下列類別則表示系統提供之繫結的一些範例：  
   
--   <xref:System.ServiceModel.BasicHttpBinding>:HTTP 通訊協定繫結，適用於連線至 Web 服務，符合 WS-I-Basic Profile 1.1 規格 (比方說，將 ASP.NET Web 服務 [ASMX] 為基礎的服務)。  
+-   <xref:System.ServiceModel.BasicHttpBinding>：HTTP 通訊協定繫結，適用於連線至 Web 服務，符合 WS-I-Basic Profile 1.1 規格 (比方說，將 ASP.NET Web 服務 [ASMX] 為基礎的服務)。  
   
--   <xref:System.ServiceModel.WSHttpBinding>:HTTP 通訊協定繫結適合用來連接到端點符合 Web 服務規格通訊協定。  
+-   <xref:System.ServiceModel.WSHttpBinding>：HTTP 通訊協定繫結適合用來連接到端點符合 Web 服務規格通訊協定。  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>:使用.NET 二進位編碼和框架技術搭配使用 Windows 具名管道傳輸來連接至同一部電腦上的其他 WCF 端點。  
+-   <xref:System.ServiceModel.NetNamedPipeBinding>：使用.NET 二進位編碼和框架技術搭配使用 Windows 具名管道傳輸來連接至同一部電腦上的其他 WCF 端點。  
   
--   <xref:System.ServiceModel.NetMsmqBinding>:使用.NET 二進位編碼和框架技術搭配訊息佇列 (也稱為 MSMQ) 來建立佇列的訊息連線與其他 WCF 端點。  
+-   <xref:System.ServiceModel.NetMsmqBinding>：使用.NET 二進位編碼和框架技術搭配訊息佇列 (也稱為 MSMQ) 來建立佇列的訊息連線與其他 WCF 端點。  
   
  如需完整的系統提供繫結，和描述，請參閱[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)。  
   
@@ -58,8 +58,8 @@ ms.locfileid: "59323144"
   
 ## <a name="see-also"></a>另請參閱
 
-- [端點建立概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [HOW TO：在組態中指定服務繫結](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [HOW TO：在程式碼中指定服務繫結](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
-- [HOW TO：在組態中指定用戶端繫結](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
-- [HOW TO：在程式碼中指定用戶端繫結](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)
+- [建立端點概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [如何：在組態中指定的服務繫結](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
+- [如何：在程式碼中指定的服務繫結](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+- [如何：在組態中指定的用戶端繫結](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+- [如何：在程式碼中指定的用戶端繫結](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)

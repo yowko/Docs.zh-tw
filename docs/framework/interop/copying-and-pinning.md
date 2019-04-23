@@ -9,23 +9,21 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45ac26442adc78c5d1e6a2efe94fc2cefff86562
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: e1696bd6eb4eb3a43593cf7ed264c80745c1ec66
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219616"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326277"
 ---
 # <a name="copying-and-pinning"></a>複製和 Pin
 封送處理資料時，Interop 封送處理器可以複製或釘選所封送處理的資料。 複製資料時會將某個記憶體位置中的一份資料放入另一個記憶體位置。 下圖顯示複製實值型別與以傳址方式將類型從 Managed 複製至 Unmanaged 記憶體之間的差異。  
   
- ![以傳值和傳址方式傳遞的實值型別](./media/interopmarshalcopy.gif "Interopmarshalcopy")  
-以傳值和傳址方式傳遞的實值類型  
+ ![示範如何複製值和參考型別的圖表。](./media/copying-and-pinning/interop-marshal-copy.gif)  
   
- 以傳值方式傳遞的方法引數會封送處理成 Unmanaged 程式碼，以作為堆疊上的值。 複製程序是直接的。 以傳址方式傳遞的引數會傳遞為堆疊上的指標。 同時以傳值和傳址方式傳遞參考型別。 如下圖所示，會複製或釘選以傳值方式傳遞的參考型別。  
+ 以傳值方式傳遞的方法引數會封送處理成 Unmanaged 程式碼，以作為堆疊上的值。 複製程序是直接的。 以傳址方式傳遞的引數會傳遞為堆疊上的指標。 同時以傳值和傳址方式傳遞參考型別。 如下圖所示，會複製或釘選以傳值方式傳遞的參考型別： 
   
- ![COM Interop](./media/interopmarshalpin.gif "Interopmarshalpin")  
-以傳值和傳址方式傳遞的參考型別  
+ ![示範以傳值和傳址方式傳遞之參考型別的圖表。](./media/copying-and-pinning/interop-marshal-reference-pin.gif)  
   
  釘選會暫時鎖定其目前記憶體位置中的資料，因此 Common Language Runtime 的記憶體回收行程不會重新定位它。 封送處理器會釘選資料，以減少複製和增強效能的額外負荷。 資料的類型決定在封送處理程序期間複製還是釘選資料。  在封送處理期間，會針對 <xref:System.String> 這類物件自動執行釘選，不過，您也可以使用 <xref:System.Runtime.InteropServices.GCHandle> 類別來手動釘選記憶體。  
   
@@ -78,6 +76,7 @@ ms.locfileid: "56219616"
  以傳值方式傳遞 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 時，封送處理器會直接將 **StringBuilder** 的內部緩衝區參考傳遞給呼叫者。 呼叫者和被呼叫者必須同意緩衝區的大小。 呼叫者負責建立長度足夠的 **StringBuilder**。 被呼叫者必須採取必要的預防措施，確保緩衝區未溢位。 **StringBuilder** 是規則的例外狀況，而此規則預設會將以傳值方式傳遞的參考型別傳遞為 In 參數。 它一律會傳遞為 In/Out。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [預設的封送處理行為](default-marshaling-behavior.md)
 - [方向屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Interop 封送處理](interop-marshaling.md)

@@ -15,10 +15,10 @@ helpviewer_keywords:
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
 ms.openlocfilehash: 105a44f90c1c654a21fc8920a149ad63b2dabc99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323846"
 ---
 # <a name="creating-an-ink-input-control"></a>建立筆墨輸入控制項
@@ -26,9 +26,9 @@ ms.locfileid: "59323846"
   
  本主題包含下列子章節：  
   
--   [HOW TO：收集手寫筆點資料，並建立筆墨筆劃](#CollectingStylusPointDataAndCreatingInkStrokes)  
+-   [如何：收集手寫筆點資料，並建立筆墨筆劃](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [HOW TO：啟用您的控制項為接受來自滑鼠輸入](#EnablingYourControlToAcceptInputTromTheMouse)  
+-   [如何：啟用您的控制項為接受來自滑鼠輸入](#EnablingYourControlToAcceptInputTromTheMouse)  
   
 -   [將它放在一起](#PuttingItTogether)  
   
@@ -100,5 +100,5 @@ ms.locfileid: "59323846"
   
 ## <a name="see-also"></a>另請參閱
 
-- [筆墨進階處理](advanced-ink-handling.md)
+- [筆跡進階處理](advanced-ink-handling.md)
 - [存取和管理手寫筆輸入](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

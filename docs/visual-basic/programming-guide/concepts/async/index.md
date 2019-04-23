@@ -3,10 +3,10 @@ title: 使用 Async 和 Await 進行非同步程式設計 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
 ms.openlocfilehash: 8593275371fcd97db2357211c3e221839b878527
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324717"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>使用 Async 和 Await 進行非同步程式設計 (Visual Basic)
@@ -23,9 +23,9 @@ ms.locfileid: "59324717"
   
 |應用程式區域|包含非同步方法的支援 API|  
 |----------------------|------------------------------------------------|  
-|Web 存取|<xref:System.Net.Http.HttpClient>, <xref:Windows.Web.Syndication.SyndicationClient>|  
-|處理檔案|<xref:Windows.Storage.StorageFile>、 <xref:System.IO.StreamWriter>、 <xref:System.IO.StreamReader>、 <xref:System.Xml.XmlReader>|  
-|處理影像|<xref:Windows.Media.Capture.MediaCapture>中， <xref:Windows.Graphics.Imaging.BitmapEncoder>中， <xref:Windows.Graphics.Imaging.BitmapDecoder>|  
+|Web 存取|<xref:System.Net.Http.HttpClient>、 <xref:Windows.Web.Syndication.SyndicationClient>|  
+|處理檔案|<xref:Windows.Storage.StorageFile>, <xref:System.IO.StreamWriter>, <xref:System.IO.StreamReader>, <xref:System.Xml.XmlReader>|  
+|處理影像|<xref:Windows.Media.Capture.MediaCapture>, <xref:Windows.Graphics.Imaging.BitmapEncoder>, <xref:Windows.Graphics.Imaging.BitmapDecoder>|  
 |WCF 程式設計|[同步和非同步作業](../../../../framework/wcf/synchronous-and-asynchronous-operations.md)|  
 |||  
   
@@ -87,9 +87,9 @@ Dim urlContents As String = Await client.GetStringAsync()
   
 -   傳回類型是下列其中一種類型：  
   
-    -   <xref:System.Threading.Tasks.Task%601> 如果您的方法沒有 return 陳述式中運算元的類型為 TResult。  
+    -   如果方法的 return 陳述式中運算元的類型為 TResult，則為 <xref:System.Threading.Tasks.Task%601>。  
   
-    -   <xref:System.Threading.Tasks.Task> 如果方法沒有 return 陳述式或是 return 陳述式沒有運算元。  
+    -   如果方法沒有 return 陳述式或是 return 陳述式沒有運算元，則為 <xref:System.Threading.Tasks.Task>。  
   
     -   如果您撰寫的是非同步事件處理常式，則為 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)。  
   
@@ -110,19 +110,19 @@ Dim urlContents As String = Await client.GetStringAsync()
   
 1. 事件處理常式會呼叫並等候 `AccessTheWebAsync` 非同步方法。  
   
-2. `AccessTheWebAsync` 會建立<xref:System.Net.Http.HttpClient>執行個體並呼叫<xref:System.Net.Http.HttpClient.GetStringAsync%2A>非同步方法下載網站，以做為字串的內容。  
+2. `AccessTheWebAsync` 會建立 <xref:System.Net.Http.HttpClient> 執行個體並呼叫 <xref:System.Net.Http.HttpClient.GetStringAsync%2A> 非同步方法，將網站的內容當做字串下載。  
   
 3. `GetStringAsync` 中發生了導致進度暫停的一些狀況。 可能必須等待網站下載或其他封鎖活動。 為了避免封鎖資源，`GetStringAsync` 會將控制權遞交 (Yield) 給它的呼叫端 `AccessTheWebAsync`。  
   
-     `GetStringAsync` 會傳回<xref:System.Threading.Tasks.Task%601>其中 TResult 是字串，並`AccessTheWebAsync`指派工作`getStringTask`變數。 工作代表對 `GetStringAsync` 之呼叫的進行中程序，並承諾會在工作完成時產生實際字串值。  
+     `GetStringAsync` 會傳回 <xref:System.Threading.Tasks.Task%601> (其中 TResult 是字串)，而 `AccessTheWebAsync` 則會將工作指派給 `getStringTask` 變數。 工作代表對 `GetStringAsync` 之呼叫的進行中程序，並承諾會在工作完成時產生實際字串值。  
   
 4. 因為尚未等候 `getStringTask`，所以 `AccessTheWebAsync` 可以繼續進行其他不相依於 `GetStringAsync` 之最終結果的其他工作。 這項工作是由對同步方法 `DoIndependentWork` 的呼叫來表示。  
   
-5. `DoIndependentWork` 是同步的方法，其工作並返回其呼叫端。  
+5. `DoIndependentWork` 是完成其工作並傳回其呼叫端的同步方法。  
   
-6. `AccessTheWebAsync` 已用完工作，但未產生的結果`getStringTask`。 `AccessTheWebAsync` 方法必須等到有字串，接著要計算並傳回下載的字串，但是此方法的長度不能計算該值。  
+6. `AccessTheWebAsync` 已完成所有可處理的工作，但未取得來自 `getStringTask` 的結果。 `AccessTheWebAsync` 接著要計算和傳回下載字串的長度，但是方法必須等到有字串時才能計算該值。  
   
-     因此，`AccessTheWebAsync` 會使用 await 運算子暫停其進度，並將控制權遞交 (Yield) 給呼叫 `AccessTheWebAsync` 的方法。 `AccessTheWebAsync` 會傳回`Task<int>`(`Task(Of Integer)` Visual Basic 中) 給呼叫者。 這項工作代表承諾會產生相當於下載字串長度的整數結果。  
+     因此，`AccessTheWebAsync` 會使用 await 運算子暫停其進度，並將控制權遞交 (Yield) 給呼叫 `AccessTheWebAsync` 的方法。 `AccessTheWebAsync` 會將 `Task<int>` (在 Visual Basic 中為 `Task(Of Integer)`) 傳回呼叫端。 這項工作代表承諾會產生相當於下載字串長度的整數結果。  
   
     > [!NOTE]
     >  如果 `GetStringAsync` (和 `getStringTask`) 在 `AccessTheWebAsync` 等候它之前先完成，控制權仍會留在 `AccessTheWebAsync`。 如果呼叫的非同步處理序 (`AccessTheWebAsync`) 已完成，而 AccessTheWebSync 無需等候最終結果時，那麼暫停然後再返回 `getStringTask` 就是不必要的。  
@@ -160,7 +160,7 @@ Dim urlContents As String = Await client.GetStringAsync()
   
  非同步方法中通常會出現一或多次 `Await` 運算子，但是沒有 `Await` 運算式也不會造成編譯器錯誤。 如果非同步方法未使用 `Await` 運算子來標記暫停點，方法會無視於 `Async` 修飾詞，像同步方法一樣執行。 編譯器將對這類方法發出警告。  
   
- `Async` 和`Await`是內容關鍵字。 如需詳細資訊和範例，請參閱下列主題：  
+ `Async` 和 `Await` 都是內容關鍵字。 如需詳細資訊和範例，請參閱下列主題：  
   
 -   [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
   
@@ -217,9 +217,9 @@ Await Task_MethodAsync()
   
  Windows 執行階段程式設計中的非同步 API 具有下列其中一種傳回型別 (類似於工作)：  
   
--   <xref:Windows.Foundation.IAsyncOperation%601>它會對應到 <xref:System.Threading.Tasks.Task%601>  
+-   <xref:Windows.Foundation.IAsyncOperation%601>，對應至 <xref:System.Threading.Tasks.Task%601>  
   
--   <xref:Windows.Foundation.IAsyncAction>它會對應到 <xref:System.Threading.Tasks.Task>  
+-   <xref:Windows.Foundation.IAsyncAction>，對應至 <xref:System.Threading.Tasks.Task>  
   
 -   <xref:Windows.Foundation.IAsyncActionWithProgress%601>  
   
@@ -236,17 +236,17 @@ Await Task_MethodAsync()
   
 |標題|說明|範例|  
 |-----------|-----------------|------------|  
-|[逐步解說：存取 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|顯示如何將同步 WPF 方案轉換為非同步 WPF 方案。 應用程式會下載一系列的網站。|[非同步範例：存取 Web 逐步解說](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|  
-|[HOW TO：擴充非同步逐步解說使用 Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|將 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 加入至前一個逐步解說。 使用 `WhenAll` 會同時開始進行所有的下載。||  
-|[HOW TO：同時發出多個 Web 要求，使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|示範如何同時啟動數個工作。|[非同步範例：同時發出多個 Web 要求](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|  
-|[非同步方法的傳回類型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)|說明非同步方法可以傳回的類型，並解釋每種類型的適用時機。||  
-|[非同步程式 (Visual Basic) 中的控制流程](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)|在非同步程式中詳細追蹤一連串 await 運算式的控制流程。|[非同步範例：非同步程式中的控制流程](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|  
+|[逐步解說：存取 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|顯示如何將同步 WPF 方案轉換為非同步 WPF 方案。 應用程式會下載一系列的網站。|[非同步範例：存取 Web 逐步解說](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) \(英文\)|  
+|[如何：擴充非同步逐步解說使用 Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|將 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 加入至前一個逐步解說。 使用 `WhenAll` 會同時開始進行所有的下載。||  
+|[如何：同時發出多個 Web 要求，使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|示範如何同時啟動數個工作。|[非同步範例：以平行方式提出多個 Web 要求](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|  
+|[非同步方法的傳回型別 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)|說明非同步方法可以傳回的類型，並解釋每種類型的適用時機。||  
+|[非同步程式中的控制流程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)|在非同步程式中詳細追蹤一連串 await 運算式的控制流程。|[非同步範例：非同步程式中的控制流程](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|  
 |[微調非同步應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)|顯示如何將下列功能加入至您的非同步方案：<br /><br /> -   [取消一項非同步工作或工作清單 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)<br />-   [在一段時間後取消非同步工作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)<br />-   [當其中一項工作完成時，取消剩餘的非同步工作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)<br />-   [啟動多項非同步工作並在它們完成時進行處理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)|[非同步範例：微調您的應用程式](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|  
-|[處理非同步應用程式 (Visual Basic) 中的重新進入](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)|顯示如何處理現用非同步作業在執行當中重新啟動的情況。||  
-|[WhenAny:銜接 .NET Framework 和 Windows 執行階段](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|顯示如何在 [!INCLUDE[wrt](~/includes/wrt-md.md)] 中進行 .NET Framework 與 IAsyncOperations 之工作類型之間的橋接，讓您可以搭配使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 與 [!INCLUDE[wrt](~/includes/wrt-md.md)] 方法。|[非同步範例：銜接.NET 和 Windows 執行階段 （AsTask 和 WhenAny）](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|  
-|非同步取消：銜接 .NET Framework 和 Windows 執行階段|顯示如何在 [!INCLUDE[wrt](~/includes/wrt-md.md)] 中進行 .NET Framework 與 IAsyncOperations 之工作類型之間的橋接，讓您可以搭配使用 <xref:System.Threading.CancellationTokenSource> 與 [!INCLUDE[wrt](~/includes/wrt-md.md)] 方法。|[非同步範例：銜接.NET 和 Windows 執行階段 (AsTask & Cancellation)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|  
+|[處理非同步應用程式中的重新進入 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)|顯示如何處理現用非同步作業在執行當中重新啟動的情況。||  
+|[WhenAny：銜接 .NET Framework 和 Windows 執行階段](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|顯示如何在 [!INCLUDE[wrt](~/includes/wrt-md.md)] 中進行 .NET Framework 與 IAsyncOperations 之工作類型之間的橋接，讓您可以搭配使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 與 [!INCLUDE[wrt](~/includes/wrt-md.md)] 方法。|[非同步範例：銜接 .NET 和 Windows 執行階段 (AsTask 和 WhenAny)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120)) \(英文\)|  
+|非同步取消：銜接 .NET Framework 和 Windows 執行階段|顯示如何在 [!INCLUDE[wrt](~/includes/wrt-md.md)] 中進行 .NET Framework 與 IAsyncOperations 之工作類型之間的橋接，讓您可以搭配使用 <xref:System.Threading.CancellationTokenSource> 與 [!INCLUDE[wrt](~/includes/wrt-md.md)] 方法。|[非同步範例：銜接 .NET 和 Windows 執行階段 (AsTask & Cancellation) (英文)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|  
 |[使用非同步方式存取檔案 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/using-async-for-file-access.md)|列出並示範使用 async 和 await 存取檔案的優點。||  
-|[以工作為基礎的非同步模式 (TAP)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|描述 .NET Framework 中非同步的新模式。 這個模式是根據 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 類型。||  
+|[工作式非同步模式 (TAP)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|描述 .NET Framework 中非同步的新模式。 這個模式是根據 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 類型。||  
 |[Channel 9 上的非同步影片](https://channel9.msdn.com/search?term=async+&type=All)|提供有關非同步程式設計的各種不同視訊連結。||  
   
 ## <a name="BKMK_CompleteExample"></a> 完整範例  

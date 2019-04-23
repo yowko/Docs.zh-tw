@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: be488b262764480b519e291727a21830d7a18e8f
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 5928478518b0bc1eb498381567d52d5ddba4d8b7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201426"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326056"
 ---
 # <a name="data-transformations-with-linq-c"></a>使用 LINQ 轉換資料 (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 不只是關於擷取資料。 它也是功能強大的資料轉換工具。 使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢，您可以使用來源序列作為輸入，並在許多方面修改它，以建立新的輸出序列。 藉由排序及群組，您可以修改序列本身，而不修改項目本身。 但或許 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 最強大的功能查詢就是能夠建立新的類型。 這是在 [select](../../../../csharp/language-reference/keywords/select-clause.md) 子句中完成。 例如，您可以進行下列工作：  
@@ -44,14 +44,14 @@ ms.locfileid: "57201426"
 ## <a name="selecting-a-subset-of-each-source-element"></a>選取每個來源項目的子集  
  有兩種主要方式，可選取來源序列中每個項目的子集︰  
   
-1.  若只要選取來源項目的一個成員，請使用點運算。 在下列範例中，假設 `Customer` 物件包含數個公用屬性，包括名為 `City` 的字串。 在執行時，此查詢會產生字串的輸出序列。  
+1. 若只要選取來源項目的一個成員，請使用點運算。 在下列範例中，假設 `Customer` 物件包含數個公用屬性，包括名為 `City` 的字串。 在執行時，此查詢會產生字串的輸出序列。  
   
     ```csharp
     var query = from cust in Customers  
                 select cust.City;  
     ```  
   
-2.  若要建立包含來自來源項目之多個屬性的項目，您可以使用物件初始設定式與具名物件或匿名型別。 下列範例示範如何使用匿名型別封裝來自每個 `Customer` 項目的兩個屬性︰  
+2. 若要建立包含來自來源項目之多個屬性的項目，您可以使用物件初始設定式與具名物件或匿名型別。 下列範例示範如何使用匿名型別封裝來自每個 `Customer` 項目的兩個屬性︰  
   
     ```csharp
     var query = from cust in Customer  

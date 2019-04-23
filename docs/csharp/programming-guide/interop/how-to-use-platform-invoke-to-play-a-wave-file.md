@@ -8,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 209a0f03197e0f77e23be0dc1170789688f3e09a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 29c36bd0494879b66674cf3a3c404fdaf3908f59
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967213"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323807"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>作法：使用平台叫用播放 WAV 檔 (C# 程式設計指南)
 下列 C# 程式碼範例說明如何在 Windows 作業系統上使用平台叫用服務來播放 .wav 音效檔。  
@@ -31,22 +31,22 @@ ms.locfileid: "56967213"
   
 ### <a name="to-compile-the-code"></a>編譯程式碼  
   
-1.  在 Visual Studio 中建立新的 C# Windows 應用程式專案，並將它命名為 **WinSound**。  
+1. 在 Visual Studio 中建立新的 C# Windows 應用程式專案，並將它命名為 **WinSound**。  
   
-2.  複製上述程式碼，並將它貼至 `Form1.cs` 檔案的內容上。  
+2. 複製上述程式碼，並將它貼至 `Form1.cs` 檔案的內容上。  
   
-3.  複製下列程式碼，並將它貼入 `Form1.Designer.cs` 檔案之 `InitializeComponent()` 方法中的任何現有程式碼後面。  
+3. 複製下列程式碼，並將它貼入 `Form1.Designer.cs` 檔案之 `InitializeComponent()` 方法中的任何現有程式碼後面。  
   
      [!code-csharp[csProgGuideInterop#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#4)]  
   
-4.  編譯並執行程式碼。  
+4. 編譯並執行程式碼。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  如需詳細資訊，請參閱 [.NET 的安全性](../../../standard/security/index.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)
 - [互通性概觀](../../../csharp/programming-guide/interop/interoperability-overview.md)
-- [詳述平台叫用](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
+- [進一步了解平台叫用](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [使用平台叫用封送處理資料](../../../framework/interop/marshaling-data-with-platform-invoke.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
 ms.openlocfilehash: 5e530b475745a3df7482b9ea4276f004d13ec055
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329956"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>HOW TO：使用設計工具將資料表和資料行新增至 Windows Forms DataGrid 控制項
@@ -60,4 +60,4 @@ ms.locfileid: "59329956"
 ## <a name="see-also"></a>另請參閱
 
 - [DataGrid 控制項](datagrid-control-windows-forms.md)
-- [HOW TO：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [如何：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

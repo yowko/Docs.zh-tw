@@ -11,10 +11,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
 ms.openlocfilehash: b606de4b7cf4648fdc7ada3c1f6faec81342d02c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320635"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>逐步解說：使用 Visual Basic 繼承 Windows Forms 控制項
@@ -148,7 +148,7 @@ ms.locfileid: "59320635"
   
 ## <a name="see-also"></a>另請參閱
 
-- [逐步解說：使用 Visual Basic 撰寫複合控制項](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [HOW TO：在 [選擇工具箱項目] 對話方塊中顯示控制項](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [使用 .NET Framework 開發自訂的 Windows Form 控制項](developing-custom-windows-forms-controls.md)
-- [繼承的基本概念 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [逐步解說：撰寫使用 Visual Basic 複合控制項](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [如何：顯示中的控制項選擇工具箱項目對話方塊](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)
+- [繼承基本概念 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

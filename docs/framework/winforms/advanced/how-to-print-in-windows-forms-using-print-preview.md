@@ -10,10 +10,10 @@ helpviewer_keywords:
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
 ms.openlocfilehash: db9269978f3a77920778ab120a6ace11d6dd111c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325757"
 ---
 # <a name="how-to-print-in-windows-forms-using-print-preview"></a>HOW TO：使用預覽列印在 Windows Forms 中進行列印
@@ -66,6 +66,6 @@ ms.locfileid: "59325757"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：在 Windows Forms 中列印多頁文字檔](how-to-print-a-multi-page-text-file-in-windows-forms.md)
-- [Windows Form 列印支援](windows-forms-print-support.md)
-- [Windows Form 中更安全的列印](../more-secure-printing-in-windows-forms.md)
+- [如何：列印 Windows Form 中的多頁文字檔](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Windows Forms 列印支援](windows-forms-print-support.md)
+- [Windows Forms 中更安全的列印](../more-secure-printing-in-windows-forms.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
 ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319998"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 疑難排解快速入門
@@ -19,27 +19,27 @@ ms.locfileid: "59319998"
   
      HTTP 錯誤 404.3 – 找不到。由於延伸組態的緣故，無法提供您要求的網頁。 若網頁是指令碼，請加入處理常式。 如應下載檔案，請加入 MIME 對應。 詳細的錯誤 InformationModule StaticFileModule。  
   
-2. [如果我的用戶端在第一個要求之後閒置一陣子，有時我會在第二個要求收到 MessageSecurityException。 這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
+2. [如果我的用戶端在第一個要求之後閒置一陣子，有時我會在第二個要求收到 MessageSecurityException。這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
   
-3. [我的服務在與大約 10 個用戶端互動之後，開始拒絕新的用戶端。 這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
+3. [我的服務在與大約 10 個用戶端互動之後，開始拒絕新的用戶端。這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
   
 4. [我可以從 WCF 應用程式的組態檔以外的地方載入我的服務組態嗎？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
   
-5. [我的服務和用戶端運作良好，但是當用戶端在另一台電腦上時，它們就無法運作。 發生什麼事？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
+5. [我的服務和用戶端運作良好，但是當用戶端在另一台電腦上時，它們就無法運作。這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
   
-6. [當我擲回 FaultException\<例外狀況 > 其中型別是例外狀況，我一定會收到一般的 FaultException 型別，用戶端上並不是泛型類型。 發生什麼事？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
+6. [當我擲回 FaultException\<例外狀況 > 其中型別是例外狀況，我一定會收到一般的 FaultException 型別，用戶端上並不是泛型類型。這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
   
-7. [當回覆未包含任何資料時，單向和要求與回覆作業似乎會以大約相同的速度傳回。 這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
+7. [當回覆未包含任何資料時，單向和要求與回覆作業似乎會以大約相同的速度傳回。這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
   
-8. [我使用 X.509 憑證搭配我的服務，然後得到 System.Security.Cryptography.CryptographicException。 發生什麼事？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
+8. [我使用 X.509 憑證搭配我的服務，然後得到 System.Security.Cryptography.CryptographicException。這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
   
-9. [我將作業的第一個參數從大寫變更為小寫；現在我的用戶端擲回了例外狀況。 這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q88)  
+9. [我將作業的第一個參數從大寫變更為小寫；現在我的用戶端擲回了例外狀況。這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q88)  
   
-10. [我正在使用我的其中一種追蹤工具，而我得到 EndpointNotFoundException。 發生什麼事？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q99)  
+10. [我正在使用我的其中一種追蹤工具，而我得到 EndpointNotFoundException。這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q99)  
   
 11. [從 WCF SOAP 應用程式呼叫 WCF Web HTTP 應用程式時，服務就會傳回下列錯誤：405 不允許的方法](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BK_MK99)  
   
- [什麼是基底位址？ 它與端點位址如何產生關聯？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q10)  
+ [什麼是基底位址？它與端點位址如何產生關聯？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q10)  
   
 <a name="bkmk_0"></a>   
 ## <a name="after-installing-windows-7-and-iis-when-i-attempt-to-browse-to-a-wcf-service-i-get-the-following-error-message-http-error-4043--not-found"></a>安裝 Windows 7 和 IIS 之後，當我嘗試瀏覽至 WCF 服務時得到下列錯誤訊息：HTTP 錯誤 404.3 – 找不到  
@@ -237,7 +237,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BK_MK99"></a>   
 ## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>從 WCF SOAP 應用程式呼叫 WCF Web HTTP 應用程式時，服務就會傳回下列錯誤：405 不允許的方法  
- 呼叫 WCF Web HTTP 應用程式 (使用的服務<xref:System.ServiceModel.WebHttpBinding>和<xref:System.ServiceModel.Description.WebHttpBehavior>) 從 WCF 服務可能會產生下列例外狀況：`Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]:遠端伺服器傳回未預期的回應：(405) 方法不允許。 ' 發生這個例外狀況，因為 WCF 覆寫傳出<xref:System.ServiceModel.OperationContext>以傳入<xref:System.ServiceModel.OperationContext>。 若要解決這個問題，請在 WCF Web HTTP 服務作業中建立 <xref:System.ServiceModel.OperationContextScope> 。 例如：  
+ 呼叫 WCF Web HTTP 應用程式 (使用的服務<xref:System.ServiceModel.WebHttpBinding>和<xref:System.ServiceModel.Description.WebHttpBehavior>) 從 WCF 服務可能會產生下列例外狀況：`Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]:遠端伺服器傳回未預期的回應：(405) 方法不允許。 ' 發生這個例外狀況，因為 WCF 覆寫傳出<xref:System.ServiceModel.OperationContext>以傳入<xref:System.ServiceModel.OperationContext>。 若要解決這個問題，請在 WCF Web HTTP 服務作業中建立 <xref:System.ServiceModel.OperationContextScope> 。 例如:   
   
 ```csharp
 public string Echo(string input)  

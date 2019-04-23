@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
 ms.openlocfilehash: 17ce930a91d2eb3626e92898e00e67be4741cf56
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321597"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>HOW TO：調整 Windows Forms 的控制項大小
@@ -34,9 +34,9 @@ ms.locfileid: "59321597"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Windows Form 控制項](index.md)
-- [排列 Windows Form 上的控制項](arranging-controls-on-windows-forms.md)
-- [標記個別 Windows Form 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)
-- [依功能區分 Windows Form 控制項](windows-forms-controls-by-function.md)
-- [HOW TO：調整 Windows Form 使用設計工具的大小](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))
+- [Windows Forms 控制項](index.md)
+- [排列 Windows Forms 上的控制項](arranging-controls-on-windows-forms.md)
+- [標記個別 Windows Forms 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [依功能區分 Windows Forms 控制項](windows-forms-controls-by-function.md)
+- [如何：調整 Windows Form 使用設計工具的大小](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))

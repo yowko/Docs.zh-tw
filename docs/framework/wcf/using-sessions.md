@@ -8,10 +8,10 @@ helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
 ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320921"
 ---
 # <a name="using-sessions"></a>使用工作階段
@@ -32,11 +32,11 @@ ms.locfileid: "59320921"
   
  如果您熟悉<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>類別中[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]應用程式和功能提供，您可能會注意到這種種類的工作階段和 WCF 工作階段的下列差異：  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 工作階段會一律伺服器起始。  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 工作階段一律由伺服器啟動。  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 工作階段是以隱含方式排序。  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 工作階段具有隱含未排序特性。  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 工作階段要求之間，提供一般的資料儲存機制。  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 工作階段提供了跨要求的一般資料儲存機制。  
   
  本主題內容：  
   
@@ -108,14 +108,14 @@ ms.locfileid: "59320921"
 > [!NOTE]
 >  雖然預設行為與本機建構函式和解構函式有相似之處，但也只是相似而已。 初始化或終止作業，或同時在相同的時間，可以是任何 WCF 服務作業。 此外，在預設案例中，您可以不按次序且不限次數地呼叫啟始作業。一旦建立工作階段並使其與執行個體產生關聯，就不能再建立其他工作階段，除非您明確地控制服務執行個體的存留期 (管理 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> 物件)。 最後，狀態會與工作階段而非服務物件相關聯。  
   
- 例如，`ICalculatorSession`在上述範例中使用的合約需要 WCF 用戶端物件第一次呼叫`Clear`此 WCF 用戶端物件的工作階段的作業之前的任何其他作業，應該終止時它會呼叫`Equals`作業。 下列程式碼範例示範強制執行這些要求的合約。 `Clear` 必須先呼叫以初始化工作階段，且工作階段結束時`Equals`呼叫。  
+ 例如，`ICalculatorSession`在上述範例中使用的合約需要 WCF 用戶端物件第一次呼叫`Clear`此 WCF 用戶端物件的工作階段的作業之前的任何其他作業，應該終止時它會呼叫`Equals`作業。 下列程式碼範例示範強制執行這些要求的合約。 必須先呼叫`Clear` ，才能起始工作階段，而該工作階段會在呼叫 `Equals` 時結束。  
   
  [!code-csharp[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.isinitiatingisterminating/cs/service.cs#1)]
  [!code-vb[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.isinitiatingisterminating/vb/service.vb#1)]  
   
  服務不會啟動用戶端的工作階段。 在 WCF 用戶端應用程式，工作階段架構通道的存留期和工作階段本身的存留期之間存在直接的關聯性。 因此，用戶端會藉由建立新的工作階段架構通道來建立新工作階段，然後適當地關閉工作階段架構通道來終止現有的工作階段。 用戶端會呼叫下列其中一項，藉此啟動服務端點的工作階段：  
   
--   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 呼叫所傳回的通道上<xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
+-   通道上藉由呼叫<xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 所傳回的 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
   
 -   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 所產生 WCF 用戶端物件上[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "59320921"
   
  一般來說，用戶端會呼叫下列其中一項，藉此結束服務端點的工作階段：  
   
--   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 呼叫所傳回的通道上<xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
+-   通道上藉由呼叫<xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 所傳回的 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
   
 -   <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> 在 Svcutil.exe 所產生的 WCF 用戶端物件。  
   

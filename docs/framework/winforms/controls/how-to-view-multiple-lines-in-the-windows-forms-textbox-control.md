@@ -12,10 +12,10 @@ helpviewer_keywords:
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
 ms.openlocfilehash: 47404f02a753fe143dd573bdf73143416872af9d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324184"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>HOW TO：檢視 Windows Forms TextBox 控制項中的多行
@@ -44,15 +44,15 @@ ms.locfileid: "59324184"
     |值|描述|  
     |-----------|-----------------|  
     |`false`|控制項中的文字會不會自動換行，因此它會向右捲動，直到達到分行符號。 使用此值，如果您選擇<xref:System.Windows.Forms.ScrollBars.Horizontal>捲軸或<xref:System.Windows.Forms.ScrollBars.Both>上面。|  
-    |`true` (預設值)|不會出現水平捲軸。 使用此值，如果您選擇<xref:System.Windows.Forms.ScrollBars.Vertical>捲軸或<xref:System.Windows.Forms.ScrollBars.None>上面，來顯示一或多個段落。|  
+    |`true` (預設)|不會出現水平捲軸。 使用此值，如果您選擇<xref:System.Windows.Forms.ScrollBars.Vertical>捲軸或<xref:System.Windows.Forms.ScrollBars.None>上面，來顯示一或多個段落。|  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox 控制項概觀](textbox-control-overview-windows-forms.md)
-- [HOW TO：控制 Windows Forms TextBox 控制項的插入點](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [HOW TO：使用 Windows Forms TextBox 控制項建立密碼文字方塊](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [HOW TO：建立唯讀文字方塊](how-to-create-a-read-only-text-box-windows-forms.md)
-- [HOW TO：將引號放入字串中](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [HOW TO：選取 Windows Forms TextBox 控制項的文字](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [如何：控制 Windows Forms TextBox 控制項中的插入點](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [如何：使用 Windows Forms TextBox 控制項建立密碼文字方塊](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [如何：建立唯讀文字方塊](how-to-create-a-read-only-text-box-windows-forms.md)
+- [如何：將引號放入字串](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [如何：在 Windows Forms TextBox 控制項中選取文字](how-to-select-text-in-the-windows-forms-textbox-control.md)
 - [TextBox 控制項](textbox-control-windows-forms.md)

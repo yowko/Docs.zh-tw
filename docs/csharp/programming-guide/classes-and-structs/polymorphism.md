@@ -7,10 +7,10 @@ helpviewer_keywords:
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
 ms.openlocfilehash: 9bb87115f4649a890d1fb2aab1595c3b6848bc74
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322078"
 ---
 # <a name="polymorphism-c-programming-guide"></a>多型 (C# 程式設計手冊)
@@ -89,15 +89,15 @@ ms.locfileid: "59322078"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [使用 Override 和 New 關鍵字進行版本設定](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+-   [使用 Override 和 New 關鍵字進行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   
 -   [了解使用 Override 和 New 關鍵字的時機](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [作法：覆寫 ToString 方法](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+-   [如何：覆寫 ToString 方法](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
 - [抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
 - [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)

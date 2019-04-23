@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
 ms.openlocfilehash: c8a16dc0269fbd768a73e99f15f53e38c207a8d4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326836"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>HOW TO：建立循序工作流程
@@ -164,5 +164,5 @@ ms.locfileid: "59326836"
 - [Windows Workflow Foundation 程式設計](programming.md)
 - [設計工作流程](designing-workflows.md)
 - [快速入門教學課程](getting-started-tutorial.md)
-- [HOW TO：建立活動](how-to-create-an-activity.md)
-- [HOW TO：執行工作流程](how-to-run-a-workflow.md)
+- [如何：建立活動](how-to-create-an-activity.md)
+- [如何：執行工作流程](how-to-run-a-workflow.md)

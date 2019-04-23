@@ -4,12 +4,12 @@ description: 本主題會逐步引導您建置一個包含可重複使用之程�
 author: guardrex
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3c515c3771f8204bbc7b6944f81fed463c309bc3
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: be0aebb1ac700de07a52c4c50383f45d1191b7f6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203398"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327746"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 解決方案
 
@@ -26,7 +26,7 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 
 - OpenSSL (如果執行 .NET Core 1.1)：請參閱 [Mac 上 .NET Core 的先決條件](../macos-prerequisites.md)主題。
 - [.NET Core SDK 1.1 或更新版本](https://www.microsoft.com/net/core#macos)
-- [Visual Studio 2017 for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)
+- [Visual Studio 2017 for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
 如需必要條件的詳細資訊，請參閱 [Mac 上 .NET Core 的先決條件](../../core/macos-prerequisites.md)。 如需 Visual Studio 2017 for Mac 的完整系統需求，請參閱 [Visual Studio 2017 for Mac 產品系列系統需求](/visualstudio/productinfo/vs2017-system-requirements-mac)。
 
@@ -144,7 +144,7 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
    }
    ```
 
-   `CountInstancesCorrectly` 會檢查 `GetWordCount` 方法是否能正確計數。 `InlineData` 提供要檢查的計數、搜尋文字，以及輸入字串。 測試方法會針對每一行資料各執行一次。 請注意，即使您知道資料中的計數是正確的，且值符合 `GetWordCount` 方法所傳回的計數，仍然要再次先使用 `Assert.NotEqual` 來判斷提示出錯誤。 執行刻意讓測試失敗的步驟，起初看起來似乎有點浪費時間，但是先透過讓測試失敗以檢查測試的邏輯，是一個對測試邏輯很重要的檢查。 當您遇到預期會失敗卻成功的測試方法時，代表測試邏輯中有錯誤。 每次當您建立測試方法時，都值得採取此步驟。
+   `CountInstancesCorrectly` 會檢查 `GetWordCount` 方法是否能正確計數。 `InlineData` 提供要檢查的計數、搜尋文字，以及輸入字串。 測試方法會針對每一行資料各執行一次。 請注意，即使您知道資料中的計數是正確的，且值符合 `GetWordCount` 方法所傳回的計數，仍然要再次先使用 `Assert.NotEqual` 來判斷提示出錯誤。 執行刻意讓測試失敗的步驟，起初看起來似乎有點浪費時間，但是先透過讓測試失敗以檢查測試的邏輯，是一項對測試邏輯很重要的檢查。 當您遇到預期會失敗卻成功的測試方法時，代表測試邏輯中有錯誤。 每次當您建立測試方法時，都值得採取此步驟。
 
 1. 儲存檔案，然後再次執行測試。 大小寫的測試會通過，但是三個計數測試會失敗。 這正是您預期會發生的情況。
 

@@ -3,10 +3,10 @@ title: HOW TO：建立要求-回覆合約
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
 ms.openlocfilehash: 7a446db49dcc6a12b900292f1b19c9973835f2c1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327473"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>HOW TO：建立要求-回覆合約
@@ -45,10 +45,10 @@ public interface ICalculator
   
 -   如需如何指定作業合約的詳細資訊，請參閱<xref:System.ServiceModel.OperationContractAttribute>類別和<xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>屬性。  
   
--   藉由套用 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 屬性，部署服務時就會自動產生服務合約定義，亦即 Web 服務描述語言 (WSDL) 文件。 只要將 `?wsdl` 附加至服務的 HTTP 基底位址，便能夠下載這份文件。 例如，套用至物件的 `http://microsoft/CalculatorService?wsdl`  
+-   藉由套用 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 屬性，部署服務時就會自動產生服務合約定義，亦即 Web 服務描述語言 (WSDL) 文件。 只要將 `?wsdl` 附加至服務的 HTTP 基底位址，便能夠下載這份文件。 例如： `http://microsoft/CalculatorService?wsdl`   
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.OperationContractAttribute>
 - [設計服務合約](../../../../docs/framework/wcf/designing-service-contracts.md)
-- [HOW TO：建立雙面合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [如何：建立雙工合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

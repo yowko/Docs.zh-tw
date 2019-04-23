@@ -14,10 +14,10 @@ ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325705"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>HOW TO：建立、初始化和設定追蹤參數
@@ -77,7 +77,7 @@ ms.locfileid: "59325705"
   
     -   **Visual Basic:** 在 **加入新項目**對話方塊方塊中，選擇**應用程式組態檔**。  
   
-         隨即會建立並開啟應用程式組態檔。 這是其根項目是 XML 文件 `<configuration>.`  
+         隨即會建立並開啟應用程式組態檔。 這是根項目為 `<configuration>.` 的 XML 文件。  
   
     -   **視覺化C#:** 在 **加入新項目**對話方塊方塊中，選擇**XML 檔案**。 將這個檔案命名為 **app.config**。在 XML 編輯器中，於 XML 宣告後加入下列 XML：  
   
@@ -127,7 +127,7 @@ ms.locfileid: "59325705"
   
 ## <a name="see-also"></a>另請參閱
 
-- [追蹤和稽核應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [HOW TO：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [追蹤和檢測應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [如何：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [追蹤和偵錯設定結構描述](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

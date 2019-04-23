@@ -3,10 +3,10 @@ title: 傳輸：WSE 3.0 TCP 互通性
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
 ms.openlocfilehash: cc483e44e625534d87ea94e84fc984f0aff880f9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324210"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>傳輸：WSE 3.0 TCP 互通性
@@ -23,7 +23,7 @@ WSE 3.0 TCP 互通性傳輸範例示範如何實作 TCP 雙工工作階段做為
 5. 新增繫結項目，而此繫結項目會將自訂傳輸新增至通道堆疊。 如需詳細資訊，請參閱 [新增繫結項目]。  
   
 ## <a name="creating-iduplexsessionchannel"></a>建立 IDuplexSessionChannel  
- 撰寫 WSE 3.0 TCP 互通性傳輸的第一個步驟，就是在 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 之上建立 <xref:System.Net.Sockets.Socket> 的實作。 `WseTcpDuplexSessionChannel` 衍生自<xref:System.ServiceModel.Channels.ChannelBase>。 傳送訊息的邏輯是由兩個主要部分所組成：（1） 將訊息編碼成位元組，以及 (2) 框架處理這些位元組而透過線路傳送它們。  
+ 撰寫 WSE 3.0 TCP 互通性傳輸的第一個步驟，就是在 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 之上建立 <xref:System.Net.Sockets.Socket> 的實作。 `WseTcpDuplexSessionChannel` 是衍生自 <xref:System.ServiceModel.Channels.ChannelBase>。 傳送訊息的邏輯是由兩個主要部分所組成：（1） 將訊息編碼成位元組，以及 (2) 框架處理這些位元組而透過線路傳送它們。  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   
@@ -31,13 +31,13 @@ WSE 3.0 TCP 互通性傳輸範例示範如何實作 TCP 雙工工作階段做為
   
  此外也可使用鎖定，讓 Send() 呼叫可依序保留 IDuplexSessionChannel 保證，這樣便可正確地同步處理基礎通訊端的呼叫。  
   
- `WseTcpDuplexSessionChannel` 會使用<xref:System.ServiceModel.Channels.MessageEncoder>轉譯<xref:System.ServiceModel.Channels.Message>byte [] 來回。 由於這是一種傳輸功能，`WseTcpDuplexSessionChannel` 也會負責套用設定通道所使用的遠端位址。 `EncodeMessage` 封裝這個轉換的邏輯。  
+ `WseTcpDuplexSessionChannel` 會使用 <xref:System.ServiceModel.Channels.MessageEncoder>，從 byte[] 來回轉換 <xref:System.ServiceModel.Channels.Message>。 由於這是一種傳輸功能，`WseTcpDuplexSessionChannel` 也會負責套用設定通道所使用的遠端位址。 `EncodeMessage` 會封裝這個轉換的邏輯。  
   
  `this.RemoteAddress.ApplyTo(message);`  
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- 一旦將 <xref:System.ServiceModel.Channels.Message> 編碼為位元組，就必須在網路上傳輸。 此時需要系統來定義訊息界限。 WSE 3.0 會使用新版[DIME](https://go.microsoft.com/fwlink/?LinkId=94999)做為其框架通訊協定。 `WriteData` 會封裝框架邏輯，以將 byte [] 包裝成一組 DIME 記錄。  
+ 一旦將 <xref:System.ServiceModel.Channels.Message> 編碼為位元組，就必須在網路上傳輸。 此時需要系統來定義訊息界限。 WSE 3.0 會使用新版[DIME](https://go.microsoft.com/fwlink/?LinkId=94999)做為其框架通訊協定。 `WriteData` 會封裝框架邏輯，以將 byte[] 包裝在一組 DIME 記錄中。  
   
  接收訊息的邏輯也十分類似。 主要的複雜度是在於處理通訊端讀取會傳回少於所要求之位元組的情況。 若要接收訊息，`WseTcpDuplexSessionChannel` 會讀取網路上的位元組、解碼 DIME 框架，然後使用 <xref:System.ServiceModel.Channels.MessageEncoder> 將 byte[] 轉換為 <xref:System.ServiceModel.Channels.Message>。  
   

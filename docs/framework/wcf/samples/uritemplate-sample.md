@@ -3,10 +3,10 @@ title: UriTemplate 範例
 ms.date: 03/30/2017
 ms.assetid: 0aaf91d0-ce18-468d-8006-bc9bc2e48231
 ms.openlocfilehash: 5f8a969a9ddea633d12ebe2d922c152dbb0d7241
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322611"
 ---
 # <a name="uritemplate-sample"></a>UriTemplate 範例
@@ -16,7 +16,7 @@ ms.locfileid: "59322611"
   
 -   從使用 `UriTemplate` 和 <xref:System.UriTemplate.BindByName%2A> 的 <xref:System.UriTemplate.BindByPosition%2A> 產生 URI。  
   
--   <xref:System.UriTemplateTable.Match%2A>這是反向作業`BindByName`和`BindByPosition`。  
+-   <xref:System.UriTemplateTable.Match%2A> 是 `BindByName` 和 `BindByPosition` 的反向作業。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   

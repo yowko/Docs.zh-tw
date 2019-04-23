@@ -6,16 +6,16 @@ dev_langs:
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
 ms.openlocfilehash: 84762d8917609b84a049ea665b575acfa6e5fecf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325185"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>HOW TO：將 WCF 服務設為與 ASP.NET Web 服務用戶端交互操作
 若要設定 Windows Communication Foundation (WCF) 服務端點是可與互通[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 服務用戶端，請使用<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>與您的服務端點的繫結類型的類型。  
   
- 您可選擇啟用 HTTPS 支援及對繫結的傳輸層級用戶端驗證。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務用戶端不支援 MTOM 訊息編碼，因此<xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType>屬性應該保留為預設值，也就是<xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>。 ASP.Net Web 服務用戶端不支援 Web 服務安全性，因此應該將 <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> 設定為 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>。  
+ 您可選擇啟用 HTTPS 支援及對繫結的傳輸層級用戶端驗證。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務用戶端不支援 MTOM 訊息編碼，因此應將 <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> 屬性保留為預設值，也就是 <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>。 ASP.Net Web 服務用戶端不支援 Web 服務安全性，因此應該將 <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> 設定為 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>。  
   
  若要將 WCF 服務的中繼資料提供給[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 服務 proxy 產生工具 (也就是[Web 服務描述語言工具 (Wsdl.exe)](https://go.microsoft.com/fwlink/?LinkId=73833)， [Web 服務探索工具 (Disco.exe)](https://go.microsoft.com/fwlink/?LinkId=73834)，並在 Visual Studio 中的 「 加入 Web 參考 」 功能)，您應該公開的 HTTP/GET 中繼資料端點。  
   
@@ -48,10 +48,10 @@ ms.locfileid: "59325185"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：在程式碼中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)
-- [HOW TO：使用程式碼發行服務的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
-- [HOW TO：在組態中指定服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [HOW TO：在組態中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [HOW TO：使用組態檔發行服務的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [如何：在程式碼中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)
+- [如何：發行服務，使用程式碼的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [如何：在組態中指定的服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
+- [如何：在組態中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [如何：發行服務，使用組態檔的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [傳輸安全性](../../../../docs/framework/wcf/feature-details/transport-security.md)
 - [使用中繼資料](../../../../docs/framework/wcf/feature-details/using-metadata.md)

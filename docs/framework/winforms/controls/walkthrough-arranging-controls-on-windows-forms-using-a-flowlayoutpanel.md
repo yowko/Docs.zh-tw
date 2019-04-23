@@ -8,10 +8,10 @@ helpviewer_keywords:
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
 ms.openlocfilehash: 81a19d063f31b3c28fc15a061b5173495e83f6fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321883"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項
@@ -191,10 +191,10 @@ ms.locfileid: "59321883"
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [逐步解說：使用對齊線排列 Windows Forms 的控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Microsoft Windows 使用者經驗, 使用者介面開發人員和設計人員的正式方針。 Redmond，WA:Microsoft Press，1999年。 (USBN:0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
+- [逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [逐步解說：使用對齊線的 Windows Form 上排列控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Microsoft Windows 使用者經驗, 使用者介面開發人員和設計人員的正式方針。Redmond，WA:Microsoft Press，1999年。(USBN:0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
 - [AutoSize 屬性概觀](autosize-property-overview.md)
-- [HOW TO：固定 Windows Forms 上的控制項](how-to-dock-controls-on-windows-forms.md)
-- [HOW TO：錨定 Windows Forms 上的控制項](how-to-anchor-controls-on-windows-forms.md)
-- [逐步解說：使用邊框間距、邊界和自動調整屬性配置 Windows Forms 控制項](windows-forms-controls-padding-autosize.md)
+- [如何：停駐在 Windows Forms 上控制項](how-to-dock-controls-on-windows-forms.md)
+- [如何：在 Windows Forms 上控制項的錨定](how-to-anchor-controls-on-windows-forms.md)
+- [逐步解說：配置 Windows Form 控制項和邊框距離、 邊界和 AutoSize 屬性](windows-forms-controls-padding-autosize.md)

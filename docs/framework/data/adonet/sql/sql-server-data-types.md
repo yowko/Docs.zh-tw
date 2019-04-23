@@ -3,10 +3,10 @@ title: SQL Server 資料類型和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
 ms.openlocfilehash: 9e81e54f223d35a3db9c943edf6f9f9b24110faa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326303"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 資料類型和 ADO.NET
@@ -20,7 +20,7 @@ SQL Server 和 .NET Framework 是以不同的型別系統為基礎，而且可�
   
  **SQL Server 線上叢書**  
   
-1. [資料型別 (Database Engine)](https://go.microsoft.com/fwlink/?LinkID=107468)  
+1. [資料類型 (Database Engine)](https://go.microsoft.com/fwlink/?LinkID=107468)  
   
 ## <a name="in-this-section"></a>本節內容  
  [SqlTypes 和資料集](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
@@ -60,4 +60,4 @@ SQL Server 和 .NET Framework 是以不同的型別系統為基礎，而且可�
 - [設定參數和參數資料類型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [資料表值參數](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)
 - [SQL Server 二進位和大量數值資料](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

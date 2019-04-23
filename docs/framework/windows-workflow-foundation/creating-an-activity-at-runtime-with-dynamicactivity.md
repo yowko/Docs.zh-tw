@@ -3,17 +3,17 @@ title: 使用 DynamicActivity 在執行階段建立活動
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
 ms.openlocfilehash: ed133e972caa9a3a62ab2ac1310cb1bd666947ce
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321222"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>使用 DynamicActivity 在執行階段建立活動
-<xref:System.Activities.DynamicActivity> 是具體、 密封的類別具有公用建構函式。 <xref:System.Activities.DynamicActivity> 可用來組合活動功能，在執行階段使用活動 dom。  
+<xref:System.Activities.DynamicActivity> 是含公用建構函式的具體密封類別。 <xref:System.Activities.DynamicActivity> 可在執行階段中使用活動 DOM 來組合活動功能。  
   
 ## <a name="dynamicactivity-features"></a>DynamicActivity 功能  
- <xref:System.Activities.DynamicActivity> 具有存取執行屬性、 引數和變數，但不是能存取執行階段服務，例如排程子活動或追蹤。  
+ <xref:System.Activities.DynamicActivity> 可以存取執行屬性、引數和變數，但不可以存取執行階段服務，例如排定子活動或追蹤。  
   
  最上層的屬性可以使用工作流程 <xref:System.Activities.Argument> 物件來設定。 在命令式程式碼中，這些引數是使用新型別的 CLR 屬性建立的。 在 XAML 中，這些引數則是使用 `x:Class` 和 `x:Member` 標籤宣告的。  
   
@@ -98,4 +98,4 @@ ms.locfileid: "59321222"
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用命令式程式碼撰寫工作流程、活動和運算式](authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [使用命令式程式碼撰寫工作流程、活動與運算式](authoring-workflows-activities-and-expressions-using-imperative-code.md)

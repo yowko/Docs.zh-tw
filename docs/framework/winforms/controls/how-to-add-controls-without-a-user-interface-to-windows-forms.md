@@ -15,10 +15,10 @@ helpviewer_keywords:
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
 ms.openlocfilehash: 0768f811653543b3370310ccc0b59890273baf52
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330099"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>HOW TO：將沒有使用者介面的控制項新增至 Windows Forms
@@ -81,11 +81,11 @@ ms.locfileid: "59330099"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Windows Form 控制項](index.md)
-- [HOW TO：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [HOW TO：將 ActiveX 控制項新增至 Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
-- [HOW TO：在 Windows Forms 之間複製控制項](how-to-copy-controls-between-windows-forms.md)
-- [將控制項加入 Windows Form](putting-controls-on-windows-forms.md)
-- [標記個別 Windows Form 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)
-- [依功能區分 Windows Form 控制項](windows-forms-controls-by-function.md)
+- [Windows Forms 控制項](index.md)
+- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [如何：將 ActiveX 控制項新增至 Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
+- [如何：Windows Form 之間複製控制項](how-to-copy-controls-between-windows-forms.md)
+- [將控制項加入 Windows Forms](putting-controls-on-windows-forms.md)
+- [標記個別 Windows Forms 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [依功能區分 Windows Forms 控制項](windows-forms-controls-by-function.md)

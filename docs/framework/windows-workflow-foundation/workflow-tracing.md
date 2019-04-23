@@ -3,10 +3,10 @@ title: 工作流程追蹤
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
 ms.openlocfilehash: cd53ed834fdacb639b38346dca831ef4c3e26337
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321662"
 ---
 # <a name="workflow-tracing"></a>工作流程追蹤
@@ -23,7 +23,7 @@ ms.locfileid: "59321662"
   
 4. 預設的分析追蹤緩衝區大小只有 4 KB；建議您將大小增加至 32 KB。 若要執行這項操作，請執行下列步驟。  
   
-    1.  目前的 framework 目錄 (例如 C:\Windows\Microsoft.NET\Framework\v4.0.21203) 中執行下列命令： `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
+    1.  在目前的 Framework 目錄 (例如 C:\Windows\Microsoft.NET\Framework\v4.0.21203) 中執行下列命令：`wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   
     2.  變更\<bufferSize > 32 Windows.ApplicationServer.Applications.man 檔案中的值。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "59321662"
                   </channel>  
         ```  
   
-    3.  目前的 framework 目錄 (例如 C:\Windows\Microsoft.NET\Framework\v4.0.21203) 中執行下列命令： `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
+    3.  在目前的 Framework 目錄 (例如 C:\Windows\Microsoft.NET\Framework\v4.0.21203) 中執行下列命令：`wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
 >  如果您使用.NET Framework 4 Client Profile，您必須先從.NET Framework 4 目錄執行下列命令註冊 ETW 資訊清單： `ServiceModelReg.exe –i –c:etw`  

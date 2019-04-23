@@ -3,10 +3,10 @@ title: HOW TO：以 Visual Basic 或 C# 產生物件模型
 ms.date: 03/30/2017
 ms.assetid: a0c73b33-5650-420c-b9dc-f49310c201ee
 ms.openlocfilehash: 8752a28b9bcfd068afcfc5d33c3097f26cf0f231
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225361"
 ---
 # <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>HOW TO：在 Visual Basic 或 C 中產生物件模型\#
@@ -40,8 +40,8 @@ sqlmetal /code:northwind.cs /language:csharp "c:\northwnd.mdf" /sprocs /function
 - [程式設計手冊](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)
 - [LINQ to SQL 物件模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
 - [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
-- [HOW TO：使用程式碼編輯器自訂實體類別](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
-- [屬性架構對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+- [如何：使用程式碼編輯器自訂實體類別](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [以屬性為基礎的對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
 - [外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
 - [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

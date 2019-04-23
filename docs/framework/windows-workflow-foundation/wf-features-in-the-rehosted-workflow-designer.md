@@ -3,10 +3,10 @@ title: 針對重新裝載之工作流程設計工具中的新 Workflow Foundatio
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
 ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324158"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援
@@ -130,7 +130,7 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
   
 3. 設計工具支援建立共用的觸發程序轉換  
   
-4. 用來建立狀態機器工作流程，包括活動： <xref:System.Activities.Statements.StateMachine>， <xref:System.Activities.Statements.State>，及 <xref:System.Activities.Statements.Transition>  
+4. 用來建立狀態機器工作流程的活動包括：<xref:System.Activities.Statements.StateMachine>、<xref:System.Activities.Statements.State> 和 <xref:System.Activities.Statements.Transition>  
   
  下列螢幕擷取畫面會顯示已完成的狀態機器工作流程，從[入門教學課程](getting-started-tutorial.md)步驟[How to:建立狀態機器工作流程](how-to-create-a-state-machine-workflow.md)。  
   

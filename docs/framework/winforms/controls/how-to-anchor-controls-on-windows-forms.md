@@ -13,10 +13,10 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
 ms.openlocfilehash: b5550aef220ece09d5486421275b19a37bfe9011
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329774"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>HOW TO：錨定 Windows Forms 上的控制項
@@ -55,10 +55,10 @@ ms.locfileid: "59329774"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Windows Form 控制項](index.md)
-- [排列 Windows Form 上的控制項](arranging-controls-on-windows-forms.md)
+- [Windows Forms 控制項](index.md)
+- [排列 Windows Forms 上的控制項](arranging-controls-on-windows-forms.md)
 - [AutoSize 屬性概觀](autosize-property-overview.md)
-- [HOW TO：固定 Windows Forms 上的控制項](how-to-dock-controls-on-windows-forms.md)
-- [逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [逐步解說：使用邊框間距、邊界和自動調整屬性配置 Windows Forms 控制項](windows-forms-controls-padding-autosize.md)
+- [如何：停駐在 Windows Forms 上控制項](how-to-dock-controls-on-windows-forms.md)
+- [逐步解說：排列 Windows Form 使用 FlowLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [逐步解說：配置 Windows Form 控制項和邊框距離、 邊界和 AutoSize 屬性](windows-forms-controls-padding-autosize.md)

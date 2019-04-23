@@ -5,10 +5,10 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
 ms.openlocfilehash: 9aac3a0efd6359c25a6972f0e0b52dd489ec31db
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327525"
 ---
 # <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>HOW TO：在應用程式之間執行拖放作業
@@ -40,6 +40,6 @@ ms.locfileid: "59327525"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：將資料新增至剪貼簿](how-to-add-data-to-the-clipboard.md)
-- [HOW TO：從剪貼簿擷取資料](how-to-retrieve-data-from-the-clipboard.md)
+- [如何：將資料加入至剪貼簿](how-to-add-data-to-the-clipboard.md)
+- [如何：從剪貼簿擷取資料](how-to-retrieve-data-from-the-clipboard.md)
 - [拖放作業和剪貼簿支援](drag-and-drop-operations-and-clipboard-support.md)

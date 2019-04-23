@@ -1,5 +1,5 @@
 ---
-title: <assemblyBinding> 項目 <runtime>
+title: <runtime> 的 <assemblyBinding> 項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding
@@ -11,10 +11,10 @@ ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eec77d4dd42a7b95d1e2cd0e353e2e54746676b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225244"
 ---
 # <a name="assemblybinding-element-for-runtime"></a>\<Assemblybinding> > 項目\<執行階段 >
@@ -47,7 +47,7 @@ ms.locfileid: "59225244"
 |項目|描述|  
 |-------------|-----------------|  
 |[\<dependentAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)|封裝組件的繫結原則和組件位置。 使用其中一個 **\<dependentAssembly >** 每個組件的標記。|  
-|[\<探查 >](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|指定載入組件時，Common Language Runtime 會搜尋的子目錄。|  
+|[\<probing>](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|指定載入組件時，Common Language Runtime 會搜尋的子目錄。|  
 |[\<publisherPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)|指定執行階段是否套用發行者原則。|  
 |[\<qualifyAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md)|指定應該在使用部分名稱時以動態方式載入的組件的完整名稱。|  
   
