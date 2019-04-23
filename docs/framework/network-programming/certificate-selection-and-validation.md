@@ -2,12 +2,12 @@
 title: 憑證的選取和驗證
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: 6d2c5470856f09d3da3bcae890717757c598a4c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79cc46d91f6b1818154bac6f62df2acbac36fe20
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666652"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318347"
 ---
 # <a name="certificate-selection-and-validation"></a>憑證的選取和驗證
 <xref:System.Net> 類別支援數種方式來選取並驗證 <xref:System.Security.Cryptography.X509Certificates>，以進行安全通訊端層 (SSL) 連線。 用戶端可以選取一或多個憑證，以向伺服器驗證它自己。 伺服器可能需要用戶端憑證具有一或多個特定屬性，來進行驗證。  
@@ -29,11 +29,11 @@ ms.locfileid: "54666652"
 ## <a name="client-certificate-selection"></a>用戶端憑證選擇  
  .NET Framework 使用下列方式選取要向伺服器呈現的用戶端憑證：  
   
-1.  如果先前向伺服器呈現用戶端憑證，則會在第一次呈現時快取憑證，並重複用於後續的用戶端憑證要求。  
+1. 如果先前向伺服器呈現用戶端憑證，則會在第一次呈現時快取憑證，並重複用於後續的用戶端憑證要求。  
   
-2.  如果具有委派，請一律使用委派結果作為可選取的用戶端憑證。 可能的話，請嘗試使用快取的憑證；但是，如果委派已傳回 Null，而且憑證集合不是空的，則不會使用快取的匿名認證。  
+2. 如果具有委派，請一律使用委派結果作為可選取的用戶端憑證。 可能的話，請嘗試使用快取的憑證；但是，如果委派已傳回 Null，而且憑證集合不是空的，則不會使用快取的匿名認證。  
   
-3.  如果這是用戶端憑證的第一個挑戰，Framework 會列舉與連線建立關聯之 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 或 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 類別物件中的憑證，以尋找伺服器所提供的憑證簽發者清單與用戶端憑證簽發者名稱之間的相符項目。 第一個符合的憑證會傳送至伺服器。 如果沒有相符的憑證，或憑證集合是空的，則會將匿名認證傳送至伺服器。  
+3. 如果這是用戶端憑證的第一個挑戰，Framework 會列舉與連線建立關聯之 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 或 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 類別物件中的憑證，以尋找伺服器所提供的憑證簽發者清單與用戶端憑證簽發者名稱之間的相符項目。 第一個符合的憑證會傳送至伺服器。 如果沒有相符的憑證，或憑證集合是空的，則會將匿名認證傳送至伺服器。  
   
 ## <a name="tools-for-certificate-configuration"></a>憑證組態的工具  
  數個工具可進行用戶端和伺服器憑證組態。  
@@ -53,5 +53,6 @@ ms.locfileid: "54666652"
  除了這些工具之外，<xref:System.Security.Cryptography.X509Certificates.X509Certificate> 和 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 類別還會提供從檔案系統載入憑證的方法。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [網路程式設計的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)
 - [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)

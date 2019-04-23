@@ -5,10 +5,10 @@ helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
 ms.openlocfilehash: ad7e713ac4cbbe5bf227f4ab93e8f88684dcb0d3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319673"
 ---
 # <a name="designing-and-implementing-services"></a>設計與實作服務
@@ -69,4 +69,4 @@ ms.locfileid: "59319673"
 ## <a name="see-also"></a>另請參閱
 
 - [設計服務合約](../../../docs/framework/wcf/designing-service-contracts.md)
-- [實作服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)
+- [履行服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)

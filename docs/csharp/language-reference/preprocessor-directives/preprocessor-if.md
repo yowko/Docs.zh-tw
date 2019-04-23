@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: b92660a69194ff2d52cd78427f73510de514ea48
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 027c99df806197637675837b7556b176dc115aba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545815"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318971"
 ---
 # <a name="if-c-reference"></a>#if (C# 參考)
 
@@ -24,11 +24,11 @@ ms.locfileid: "58545815"
 #endif
 ```
 
-您只能使用運算子 [==](../operators/equality-operators.md#equality-operator-) (相等) 和 [!=](../operators/equality-operators.md#inequality-operator-) (不等) 來測試 [true](../keywords/true.md) 或 [false](../keywords/false.md)。 True 表示已定義符號。 `#if DEBUG` 陳述式的意義與 `#if (DEBUG == true)` 一樣。 您可以使用運算子 [&&](../operators/conditional-and-operator.md) (且)、[&#124;&#124;](../operators/conditional-or-operator.md) (或) 及 [!](../operators/logical-negation-operator.md) (非)，來評估是否已定義多個符號。 您也可以使用括弧來將符號和運算子分組。
+您只能使用運算子 [==](../operators/equality-operators.md#equality-operator-) (相等) 和 [!=](../operators/equality-operators.md#inequality-operator-) (不等) 來測試 [true](../keywords/true.md) 或 [false](../keywords/false.md)。 True 表示已定義符號。 `#if DEBUG` 陳述式的意義與 `#if (DEBUG == true)` 一樣。 您可以使用運算子 [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (且)、[&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (或) 及 [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (非)，來評估是否已定義多個符號。 您也可以使用括弧來將符號和運算子分組。
 
 ## <a name="remarks"></a>備註
 
-`#if` 連同 [#else](preprocessor-else.md)、[#elif](preprocessor-elif.md)、[#endif](preprocessor-endif.md)、[#define](preprocessor-define.md) 及 [#undef](preprocessor-undef.md) 指示詞，可讓您根據一或多個符號是否存在來包含或排除程式碼。 在編譯偵錯組建的程式碼時，或是在針對特定組態進行編譯時，這非常實用。
+`#if`連同 [#else](preprocessor-else.md)、[#elif](preprocessor-elif.md)、[#endif](preprocessor-endif.md)、[#define](preprocessor-define.md) 及 [#undef](preprocessor-undef.md) 指示詞，可讓您根據一或多個符號是否存在來包含或排除程式碼。 在編譯偵錯組建的程式碼時，或是在針對特定組態進行編譯時，這非常實用。
 
 以 `#if` 指示詞開頭的條件式指示詞必須明確地以 `#endif` 指示詞終止。
 
@@ -90,6 +90,6 @@ public class MyClass
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../../../csharp/language-reference/index.md)
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)
 - [C# 前置處理器指示詞](index.md)
-- [如何：使用追蹤和偵錯進行條件式編譯](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [作法：使用追蹤和偵錯進行條件式編譯](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)

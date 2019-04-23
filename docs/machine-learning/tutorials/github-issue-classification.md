@@ -5,10 +5,10 @@ ms.date: 03/12/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e25f044247064db26e4e1e74590d6f4970fe4477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318776"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>教學課程：在多類別分類案例中使用 ML.NET 來為 GitHub 問題分類
@@ -150,7 +150,7 @@ ms.locfileid: "59318776"
 * `_mlContext` 是提供處理內容的 <xref:Microsoft.ML.MLContext>。
 * `_trainingDataView` 是用來處理定型資料集的 <xref:Microsoft.Data.DataView.IDataView>。
 * `_predEngine` 是用於單一預測的 <xref:Microsoft.ML.PredictionEngine%602>。
-* `_reader` 是用來載入並轉換資料集的 <xref:Microsoft.ML.Data.TextLoader>。
+* `_reader` 是 <xref:Microsoft.ML.Data.TextLoader>，用來載入並轉換資料集。
 
 將下列程式碼新增至 `Main` 方法正上方的一行，以指定這些路徑和其他變數：
 
@@ -203,8 +203,8 @@ ms.locfileid: "59318776"
 
 * 第一個資料行 `ID`(GitHub 問題識別碼)
 * 第二個資料行 `Area`(用於定型的預測)
-* 第三個資料行 `Title` (GitHub 問題標題) 是第一個用來預測以下項目的[特徵](../resources/glossary.md##feature)： `Area`
-* 第四個資料行 `Description` 是第二個用來預測以下項目的特徵： `Area`
+* 第三個資料行 `Title`(GitHub 問題標題) 是第一個用來預測 `Area` 的[特徵](../resources/glossary.md##feature)
+* 第四個資料行 `Description` 是第二個用來預測 `Area`的特徵
 
 若要初始化並載入 `_trainingDataView` 全域變數以將其用於管線，請在 `mlContext` 初始化後，新增下列程式碼：
 

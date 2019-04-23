@@ -2,12 +2,12 @@
 title: 在一段時間後取消非同步工作 (C#)
 ms.date: 07/20/2015
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-ms.openlocfilehash: 48d3d41e8c4e2d696065c11245279e49142afa07
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 64a2a81e5de17594a84782f6474033d04662d8ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125765"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318386"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>在一段時間後取消非同步工作 (C#)
 
@@ -20,19 +20,19 @@ ms.locfileid: "53125765"
 
 ## <a name="download-the-example"></a>下載範例
 
-您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。
+您可以從 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。
 
-1.  解壓縮您下載的檔案，然後啟動 Visual Studio。
+1. 解壓縮您下載的檔案，然後啟動 Visual Studio。
 
-2.  在功能表列上選擇 [檔案] >  [開啟] > [專案/解決方案]。
+2. 在功能表列上選擇 [檔案] >  [開啟] > [專案/解決方案]。
 
-3.  在 [開啟專案] 對話方塊中，開啟保存已解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningCS 的方案 (.sln) 檔案。
+3. 在 [開啟專案] 對話方塊中，開啟保存已解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningCS 的方案 (.sln) 檔案。
 
-4.  在方案總管中，開啟 **CancelAfterTime** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。
+4. 在方案總管中，開啟 **CancelAfterTime** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。
 
-5.  選擇 **F5** 鍵以執行專案。 (或者，按 **Ctrl** + **F5** 鍵以執行專案，而不進行偵錯)。
+5. 選擇 **F5** 鍵以執行專案。 (或者，按 **Ctrl** + **F5** 鍵以執行專案，而不進行偵錯)。
 
-6.  執行程式數次，確認輸出可能會顯示所有網站、沒有網站或某些網站的輸出。
+6. 執行程式數次，確認輸出可能會顯示所有網站、沒有網站或某些網站的輸出。
 
 如果您不想要下載專案，則可以檢閱本主題結尾的 MainWindow.xaml.cs 檔案。
 
@@ -92,7 +92,7 @@ Downloads canceled.
 
 請注意，您必須新增 <xref:System.Net.Http> 的參考。
 
-您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。
+您可以從 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。
 
 ```csharp
 using System;
@@ -218,7 +218,7 @@ namespace CancelAfterTime
 ## <a name="see-also"></a>另請參閱
 
 - [使用 Async 和 Await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [逐步解說：使用 async 和 await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [逐步解說：使用 Async 和 Await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [取消一項非同步工作或工作清單 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
 - [微調非同步應用程式 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [非同步範例：微調應用程式 (英文)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [非同步範例：微調您的應用程式](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

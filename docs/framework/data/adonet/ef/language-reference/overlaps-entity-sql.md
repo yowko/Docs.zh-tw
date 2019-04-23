@@ -3,10 +3,10 @@ title: OVERLAPS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
 ms.openlocfilehash: 9d909fb7efbb29619351cfc866b0f84381d0b80b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319634"
 ---
 # <a name="overlaps-entity-sql"></a>OVERLAPS (Entity SQL)
@@ -23,7 +23,7 @@ expression OVERLAPS expression
  任何有效的查詢運算式，該運算式會傳回要與另一個查詢運算式傳回之集合相比較的集合。 所有運算式都必須具有與 `expression`相同的型別或是共同基底型別或衍生型別。  
   
 ## <a name="return-value"></a>傳回值  
- `true` 如果兩個集合有共同的項目;否則， `false`。  
+ 如果兩個集合有共同項目則為`true` ；否則為 `false`。  
   
 ## <a name="remarks"></a>備註  
  OVERLAPS 提供的功能就相當於下列：  

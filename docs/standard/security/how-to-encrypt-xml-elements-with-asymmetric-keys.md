@@ -20,10 +20,10 @@ ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ec5d42bd003f6fb6a79bbd71beb8c88efa4e84c2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318022"
 ---
 # <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>HOW TO：使用非對稱金鑰加密 XML 元素
@@ -145,4 +145,4 @@ ms.locfileid: "59318022"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Security.Cryptography.Xml>
-- [HOW TO：使用非對稱金鑰解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)
+- [如何：使用非對稱金鑰解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
 ms.openlocfilehash: efd65ff6417b1a63a7f87917c4d9a95dedc464ad
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318802"
 ---
 # <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>HOW TO：在 Windows Forms 中選擇附加至使用者電腦的印表機
@@ -108,4 +108,4 @@ ms.locfileid: "59318802"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Windows Form 列印支援](windows-forms-print-support.md)
+- [Windows Forms 列印支援](windows-forms-print-support.md)

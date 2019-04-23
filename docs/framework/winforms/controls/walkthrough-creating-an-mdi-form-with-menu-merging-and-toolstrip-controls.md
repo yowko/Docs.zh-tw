@@ -15,10 +15,10 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
 ms.openlocfilehash: 62e137df53d06f5aedb2701b5727c25e52f35614
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319062"
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>逐步解說：建立具有功能表合併和 ToolStrip 控制項的 MDI 表單
@@ -209,7 +209,7 @@ ms.locfileid: "59319062"
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
-- [HOW TO：建立 MDI 父表單](../advanced/how-to-create-mdi-parent-forms.md)
-- [HOW TO：建立 MDI 子表單](../advanced/how-to-create-mdi-child-forms.md)
-- [HOW TO：將 MenuStrip 插入至 MDI 下拉式功能表中](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
+- [如何：建立 MDI 父表單](../advanced/how-to-create-mdi-parent-forms.md)
+- [如何：建立 MDI 子表單](../advanced/how-to-create-mdi-child-forms.md)
+- [如何：將 MenuStrip 插入至 MDI 下拉式功能表](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
 - [ToolStrip 控制項](toolstrip-control-windows-forms.md)

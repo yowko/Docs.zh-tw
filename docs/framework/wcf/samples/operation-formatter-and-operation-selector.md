@@ -3,10 +3,10 @@ title: 作業格式器和作業選取器
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
 ms.openlocfilehash: 45b489aeb88f57fe442cef9ffed1a2ee079b75e3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318919"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>作業格式器和作業選取器
@@ -16,11 +16,11 @@ ms.locfileid: "59318919"
   
  為了此示範，範例提供下列各項：  
   
--   `QueryStringFormatter`它會實作<xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>和<xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>在用戶端和伺服器，分別和處理查詢字串中的資料。  
+-   `QueryStringFormatter`，會分別對用戶端和伺服器實作 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 和 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>，並處理查詢字串中的資料。  
   
--   `UriOperationSelector`它會實作<xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>執行 GET 要求中的作業名稱為基礎的作業分派在伺服器上。  
+-   `UriOperationSelector`，會在伺服器上實作 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>，以根據 GET 要求中的作業名稱執行作業分派。  
   
--   `EnableHttpGetRequestsBehavior` 端點行為 （與對應的組態），執行階段来加入必要的作業選取器。  
+-   `EnableHttpGetRequestsBehavior` 端點行為 (以及對應的組態)，會將必要的作業選取器加入至執行階段。  
   
 -   示範如何將新作業格式器插入至執行階段。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "59318919"
   
 -   此範例會使用 <xref:System.ComponentModel.TypeConverter> 類別，將要求訊息中的參數資料與字串互相轉換。 如果特定型別無法使用 <xref:System.ComponentModel.TypeConverter>，則範例格式器會擲回例外狀況。  
   
--   在用戶端的 `IClientMessageFormatter.SerializeRequest` 方法中，格式器會使用適當的收件者地址來建立 URI，並將作業名稱附加為後置字元。 這個名稱會分派至伺服器上的適當作業。 接著會採用參數物件的陣列，並使用 <xref:System.ComponentModel.TypeConverter> 類別轉換的參數名稱和值，將參數資料序列化為 URI 查詢字串。 然後會將 <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> 和 <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> 屬性設定為這個 URI。 <xref:System.ServiceModel.Channels.MessageProperties> 透過存取<xref:System.ServiceModel.Channels.Message.Properties%2A>屬性。  
+-   在用戶端的 `IClientMessageFormatter.SerializeRequest` 方法中，格式器會使用適當的收件者地址來建立 URI，並將作業名稱附加為後置字元。 這個名稱會分派至伺服器上的適當作業。 接著會採用參數物件的陣列，並使用 <xref:System.ComponentModel.TypeConverter> 類別轉換的參數名稱和值，將參數資料序列化為 URI 查詢字串。 然後會將 <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> 和 <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> 屬性設定為這個 URI。 <xref:System.ServiceModel.Channels.MessageProperties> 是透過 <xref:System.ServiceModel.Channels.Message.Properties%2A> 屬性來存取。  
   
 -   在伺服器的 `IDispatchMessageFormatter.DeserializeRequest` 方法中，格式器會在傳入要求訊息屬性中擷取 `Via` URI。 這個格式器會將 URI 查詢字串中的名稱/值組剖析為參數名稱和值，並使用參數名稱和值填入 (Populate) 傳遞至方法的參數陣列。 請注意，已進行作業分派，因此這個方法會忽略作業名稱後置字元。  
   

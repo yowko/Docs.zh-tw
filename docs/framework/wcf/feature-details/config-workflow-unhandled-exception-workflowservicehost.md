@@ -3,10 +3,10 @@ title: HOW TO：以 WorkflowServiceHost 設定工作流程的未處理例外狀�
 ms.date: 03/30/2017
 ms.assetid: 51b25c86-292c-43e4-8d13-273d2badc8ad
 ms.openlocfilehash: cd3729019b5371b5313bba3814758c723c0d448a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318739"
 ---
 # <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>HOW TO：以 WorkflowServiceHost 設定工作流程的未處理例外狀況行為
@@ -46,7 +46,7 @@ ms.locfileid: "59318739"
      **cancel**  
      呼叫執行個體的取消處理常式，然後完成記憶體中的執行個體，該記憶體可能也會將執行個體從執行個體庫中移除。  
   
-     **結束**  
+     **terminate**  
      完成記憶體中的執行個體並將其從執行個體庫中移除。  
   
      如需詳細資訊<xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>，請參閱 < [Workflow Service Host Extensibility](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)。  
