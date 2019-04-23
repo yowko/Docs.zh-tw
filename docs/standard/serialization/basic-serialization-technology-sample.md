@@ -3,10 +3,10 @@ title: 基本序列化技術範例
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315006"
 ---
 # <a name="basic-serialization-technology-sample"></a>基本序列化技術範例
@@ -72,11 +72,11 @@ ms.locfileid: "59315006"
   
 -   資料流 I/O  
   
-    -   <xref:System.IO.Stream> 用來序列化和還原序列化。 這個範例所用的特定資料流型別是 <xref:System.IO.FileStream> 型別。 不過，序列化可以使用衍生自 <xref:System.IO.Stream> 的任何型別。  
+    -   <xref:System.IO.Stream> 用來執行序列化及還原序列化。 這個範例所用的特定資料流型別是 <xref:System.IO.FileStream> 型別。 不過，序列化可以使用衍生自 <xref:System.IO.Stream> 的任何型別。  
   
-    -   <xref:System.IO.File> 用來建立<xref:System.IO.FileStream>物件來讀取及建立磁碟上的檔案。  
+    -   <xref:System.IO.File> 用來建立 <xref:System.IO.FileStream> 物件，以便在磁碟上讀取及建立檔案。  
   
-    -   <xref:System.IO.FileStream> 用來序列化和還原序列化連結的清單。  
+    -   <xref:System.IO.FileStream> 用來將連結串列序列化及還原序列化。  
   
 ## <a name="see-also"></a>另請參閱
 

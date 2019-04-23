@@ -8,10 +8,10 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
 ms.openlocfilehash: 8bb630d3fb7e064935440439f2f07816e87c77dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317008"
 ---
 # <a name="how-to-author-composite-controls"></a>HOW TO：撰寫複合控制項
@@ -80,10 +80,10 @@ ms.locfileid: "59317008"
   
 ## <a name="see-also"></a>另請參閱
 
-- [逐步解說：使用 Visual Basic 撰寫複合控制項](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [逐步解說：使用 Visual C# 撰寫複合控制項](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [逐步解說：使用 Visual Basic 繼承 Windows Forms 控制項](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [逐步解說：使用 Visual C# 繼承來自 Windows Form 的控制項](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [逐步解說：撰寫使用 Visual Basic 複合控制項](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [逐步解說：撰寫複合控制項具有視覺效果C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [逐步解說：繼承自使用 Visual Basic 的 Windows Forms 控制項](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [逐步解說：繼承自具有視覺效果的 Windows Forms 控制項C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 - [控制項類型建議](control-type-recommendations.md)
-- [HOW TO：撰寫 Windows Forms 的控制項](how-to-author-controls-for-windows-forms.md)
+- [如何：撰寫 Windows forms 的控制項](how-to-author-controls-for-windows-forms.md)
 - [各種自訂控制項](varieties-of-custom-controls.md)

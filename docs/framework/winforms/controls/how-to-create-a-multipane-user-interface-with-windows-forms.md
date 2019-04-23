@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
 ms.openlocfilehash: 8650ba3b8011e50779080e31d94727609f2d08f1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315150"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>HOW TO：使用 Windows Forms 建立多窗格使用者介面
@@ -180,4 +180,4 @@ ms.locfileid: "59315150"
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer 控制項](splitcontainer-control-windows-forms.md)
-- [HOW TO：使用設計工具以 Windows Forms 建立多窗格使用者介面](create-a-multipane-user-interface-with-wf-using-the-designer.md)
+- [如何：使用設計工具的 Windows form 建立多窗格使用者介面](create-a-multipane-user-interface-with-wf-using-the-designer.md)

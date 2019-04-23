@@ -12,10 +12,10 @@ helpviewer_keywords:
 - run time [Windows Forms], changing print options
 ms.assetid: 438501d8-9a70-4fb3-aae6-e46579aba0c6
 ms.openlocfilehash: 2aaf988f362baf9cd80eb16e4a08f7f65a5077bb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311418"
 ---
 # <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>HOW TO：在執行階段從 PrintDialog 擷取使用者輸入
@@ -57,5 +57,5 @@ ms.locfileid: "59311418"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：在 Windows Forms 中列印多頁文字檔](how-to-print-a-multi-page-text-file-in-windows-forms.md)
-- [Windows Form 列印支援](windows-forms-print-support.md)
+- [如何：列印 Windows Form 中的多頁文字檔](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Windows Forms 列印支援](windows-forms-print-support.md)

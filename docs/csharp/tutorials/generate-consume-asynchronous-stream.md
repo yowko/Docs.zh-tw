@@ -3,27 +3,27 @@ title: 產生及使用非同步資料流
 description: 這個進階教學課程說明產生及取用非同步資料流提供更自然的方式來處理能以非同步方式產生之資料序列的案例。
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: c8be9cf4b83e3dd72232279e7c15dcba639c2058
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 0fa7c778ca9ce0f0124fcc520dd4de65f2f92ea8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305997"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308545"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>教學課程：使用 C# 8.0 與 .NET Core 3.0 產生及取用非同步資料流
 
 C# 8.0 引進了**非同步資料流**，當能以非同步方式擷取或產生資料流中的元素時，它會建構資料來源資料流處理模型。 非同步資料流仰賴 .NET Standard 2.1 中引進並在 .NET Core 3.0 中實作的新介面來針對非同步資料流處理資料來源提供自然程式設計模型。
 
-在此教學課程中，您將了解如何：
+在本教學課程中，您將了解如何：
 
 > [!div class="checklist"]
 > * 建立會以非同步方式產生資料元素序列的資料來源。
 > * 以非同步方式取用資料來源。
 > * 識別何時應該使用新的介面與資料來源，而非先前的同步資料來源。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
-您將必須設定電腦來執行 .NET Core，包括 C# 8.0 搶鮮版 (Beta) 編譯器。 從 [Visual Studio 2019 Preview 1](https://visualstudio.microsoft.com/vs/preview/) \(英文\) 或 [.NET Core 3.0 Preview 1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0) \(英文\) 開始，您就可以在其中找到 C# 8 搶鮮版 (Beta) 編譯器。 非同步資料流最早是在 .NET Core 3.0 Preview 1 中提供。
+您將必須設定電腦來執行 .NET Core，包括 C# 8.0 搶鮮版 (Beta) 編譯器。 從 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或最新的 [.NET Core 3.0 Preview SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0) 開始，可以使用 C# 8 搶鮮版 (Beta) 編譯器。 非同步資料流最早是在 .NET Core 3.0 Preview 1 中提供。
 
 您將必須建立 [GitHub 存取權杖](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token)，以便存取 GitHub GraphQL 端點。 為您的 GitHub 存取權杖選取下列權限：
 
@@ -35,7 +35,7 @@ C# 8.0 引進了**非同步資料流**，當能以非同步方式擷取或產生
 > [!WARNING]
 > 保護您個人存取權杖的安全。 使用您個人存取權杖的任何軟體都可以使用您的存取權限進行 GitHub API 呼叫。
 
-此教學課程假設您已熟悉 C# 和 .NET，包括 Visual Studio 或 .NET Core CLI。
+本教學課程假設您已熟悉 C# 和 .NET，包括 Visual Studio 或 .NET Core CLI。
 
 ## <a name="run-the-starter-application"></a>執行入門應用程式
 

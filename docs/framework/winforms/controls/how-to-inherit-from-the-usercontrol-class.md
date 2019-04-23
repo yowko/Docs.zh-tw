@@ -8,10 +8,10 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
 ms.openlocfilehash: 5e9bdb6d6628b1c696b7944dc0ea1f4c974c8172
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311405"
 ---
 # <a name="how-to-inherit-from-the-usercontrol-class"></a>HOW TO：繼承 UserControl 類別
@@ -37,8 +37,8 @@ ms.locfileid: "59311405"
 ## <a name="see-also"></a>另請參閱
 
 - [各種自訂控制項](varieties-of-custom-controls.md)
-- [HOW TO：繼承控制項類別](how-to-inherit-from-the-control-class.md)
-- [HOW TO：繼承現有的 Windows Forms 控制項](how-to-inherit-from-existing-windows-forms-controls.md)
-- [HOW TO：撰寫 Windows Forms 的控制項](how-to-author-controls-for-windows-forms.md)
+- [如何：繼承自 Control 類別](how-to-inherit-from-the-control-class.md)
+- [如何：繼承自現有的 Windows Forms 控制項](how-to-inherit-from-existing-windows-forms-controls.md)
+- [如何：撰寫 Windows forms 的控制項](how-to-author-controls-for-windows-forms.md)
 - [Visual Basic 中的繼承事件處理常式疑難排解](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [HOW TO：測試 UserControl 的執行階段行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [如何：測試 UserControl 的執行階段行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)

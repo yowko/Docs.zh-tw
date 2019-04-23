@@ -1,5 +1,5 @@
 ---
-title: 作法：使用 Web Forms 應用程式中的事件
+title: HOW TO：使用 Web Forms 應用程式中的事件
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,13 +15,13 @@ ms.assetid: 73bf8638-c4ec-4069-b0bb-a1dc79b92e32
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc1dee9377200e4c9fd575b8dcd00982db45f249
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317807"
 ---
-# <a name="how-to-consume-events-in-a-web-forms-application"></a>作法：使用 Web Forms 應用程式中的事件
+# <a name="how-to-consume-events-in-a-web-forms-application"></a>HOW TO：使用 Web Forms 應用程式中的事件
 ASP.NET Web Form 應用程式中的常見使用情況是使用控制項填入網頁，然後根據使用者所按的控制項，執行特定動作。 例如，當使用者在網頁中按一下 <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> 控制項時，控制項就會引發事件。 藉由處理事件，您的應用程式可以針對按一下按鈕執行適當的應用程式邏輯。  
   
 ### <a name="to-handle-a-button-click-event-on-a-webpage"></a>若要處理網頁上按鈕的 Click 事件  

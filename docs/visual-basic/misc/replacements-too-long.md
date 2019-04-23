@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID746
 ms.assetid: 398ff5eb-b580-456f-8f24-b7a8318e1193
 ms.openlocfilehash: 4ac66aa6e48a81c49ac21d6d4a15ba0fe278bf29
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317684"
 ---
 # <a name="replacements-too-long"></a>取代文字太長
@@ -20,4 +20,4 @@ ms.locfileid: "59317684"
   
 ## <a name="see-also"></a>另請參閱
 
-- [尋找和取代文字](/visualstudio/ide/finding-and-replacing-text)
+- [尋找及取代文字](/visualstudio/ide/finding-and-replacing-text)

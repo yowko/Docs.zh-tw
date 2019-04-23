@@ -6,10 +6,10 @@ helpviewer_keywords:
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
 ms.openlocfilehash: 5cb0684637a716dfec947740ba345c62eaabddd7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313797"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>HOW TO：呼叫擴充方法 (Visual Basic)
@@ -96,6 +96,6 @@ End Module
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：撰寫延伸模組](./how-to-write-an-extension-method.md)
+- [如何：撰寫擴充方法](./how-to-write-an-extension-method.md)
 - [擴充方法](./extension-methods.md)
-- [Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [在 Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

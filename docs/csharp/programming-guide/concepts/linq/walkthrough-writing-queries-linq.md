@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 083f6c05f433436530326cd02b99cd98f86e8606
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 29c24d9920bff38beced8f5995ec328571e6b5d9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202414"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309221"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>逐步解說：在 C# 中撰寫查詢 (LINQ)
 本逐步解說示範用以撰寫 LINQ 查詢運算式的 C# 語言功能。  
@@ -24,19 +24,19 @@ ms.locfileid: "57202414"
   
 #### <a name="to-create-a-project-in-visual-studio"></a>若要在 Visual Studio 中建立專案  
   
-1.  啟動 Visual Studio。  
+1. 啟動 Visual Studio。  
   
-2.  在功能表列上，選擇 [檔案] 、[新增] 、[專案] 。  
+2. 在功能表列上，選擇 [檔案] 、[新增] 、[專案] 。  
   
      [ **新增專案** ] 對話方塊隨即開啟。  
   
-3.  依序展開 [已安裝]、[範本] 和 [Visual C#]，然後選擇 [主控台應用程式]。  
+3. 依序展開 [已安裝]、[範本] 和 [Visual C#]，然後選擇 [主控台應用程式]。  
   
-4.  在 [名稱] 文字方塊中，輸入不同的名稱或接受預設名稱，然後按一下 [確定] 按鈕。  
+4. 在 [名稱] 文字方塊中，輸入不同的名稱或接受預設名稱，然後按一下 [確定] 按鈕。  
   
      新的專案隨即會出現在方案總管中。  
   
-5.  您會發現專案具有 System.Core.dll 的參考和 <xref:System.Linq?displayProperty=nameWithType> 命名空間的 `using` 指示詞。  
+5. 您會發現專案具有 System.Core.dll 的參考和 <xref:System.Linq?displayProperty=nameWithType> 命名空間的 `using` 指示詞。  
   
 ## <a name="create-an-in-memory-data-source"></a>建立記憶體內部資料來源  
  查詢的資料來源是 `Student` 物件的簡單清單。 每個 `Student` 記錄都有名字、姓氏和整數的陣列，表示其在班級上的測驗分數。 將此程式碼複製到您的專案中。 並注意下列特性：  
@@ -57,7 +57,7 @@ ms.locfileid: "57202414"
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>若要將新的學生新增至學生清單  
   
-1.  將新的 `Student` 新增至 `Students` 清單，並使用您所選擇的名稱和測驗分數。 請嘗試輸入新的學生資訊，以便進一步了解物件初始設定式語法。  
+1. 將新的 `Student` 新增至 `Students` 清單，並使用您所選擇的名稱和測驗分數。 請嘗試輸入新的學生資訊，以便進一步了解物件初始設定式語法。  
   
 ## <a name="create-the-query"></a>建立查詢  
   
@@ -73,19 +73,19 @@ ms.locfileid: "57202414"
   
 #### <a name="to-execute-the-query"></a>查詢查詢  
   
-1.  現在，請撰寫 `foreach` 迴圈以執行查詢。 請注意下列程式碼的相關重點：  
+1. 現在，請撰寫 `foreach` 迴圈以執行查詢。 請注意下列程式碼的相關重點：  
   
     -   您可透過 `foreach` 迴圈中的反覆運算變數，存取傳回序列中的每個項目。  
   
     -   此變數的類型是 `Student`，其與 `IEnumerable<Student>` 查詢變數類型相容。  
   
-2.  加入此程式碼之後，建置並執行應用程式，即可在 [主控台] 視窗中查看結果。  
+2. 加入此程式碼之後，建置並執行應用程式，即可在 [主控台] 視窗中查看結果。  
   
  [!code-csharp[CsLINQGettingStarted#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#13)]  
   
 #### <a name="to-add-another-filter-condition"></a>若要新增其他篩選條件  
   
-1.  您可以在 `where` 中結合多個布林條件，以進一步精簡查詢子句。 下列程式碼會新增條件，讓查詢傳回第一次分數高於 90 分，但最後一次的分數低於 80 分的學生。 `where` 子句應類似於下列程式碼。  
+1. 您可以在 `where` 中結合多個布林條件，以進一步精簡查詢子句。 下列程式碼會新增條件，讓查詢傳回第一次分數高於 90 分，但最後一次的分數低於 80 分的學生。 `where` 子句應類似於下列程式碼。  
   
     ```csharp
     where student.Scores[0] > 90 && student.Scores[3] < 80  
@@ -97,19 +97,19 @@ ms.locfileid: "57202414"
   
 #### <a name="to-order-the-results"></a>若要排序結果  
   
-1.  如果結果有依照某種順序排列，會比較容易進行掃描。 您可以依據來源項目中任何可存取的欄位，來排序傳回的序列。 例如，下列 `orderby` 子句會根據每個學生的姓氏，依字母 A 到 Z 順序，來排序結果。 請在 `where` 陳述式正後方、`select` 陳述式正前方，將下列 `orderby` 子句新增至查詢：  
+1. 如果結果有依照某種順序排列，會比較容易進行掃描。 您可以依據來源項目中任何可存取的欄位，來排序傳回的序列。 例如，下列 `orderby` 子句會根據每個學生的姓氏，依字母 A 到 Z 順序，來排序結果。 請在 `where` 陳述式正後方、`select` 陳述式正前方，將下列 `orderby` 子句新增至查詢：  
   
     ```csharp
     orderby student.Last ascending  
     ```  
   
-2.  現在，變更 `orderby` 子句，以根據第一個測驗，依最低分到最高分的相反順序來排序結果。  
+2. 現在，變更 `orderby` 子句，以根據第一個測驗，依最低分到最高分的相反順序來排序結果。  
   
     ```csharp
     orderby student.Scores[0] descending  
     ```  
   
-3.  變更 `WriteLine` 格式字串，以便查看分數：  
+3. 變更 `WriteLine` 格式字串，以便查看分數：  
   
     ```csharp
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
@@ -119,21 +119,21 @@ ms.locfileid: "57202414"
   
 #### <a name="to-group-the-results"></a>若要將結果分組  
   
-1.  查詢運算式中提供分組這項強大的功能。 使用 group 子句進行查詢時，會產生一個群組序列，且每個群組本身會包含 `Key` 以及組成該群組之所有成員的序列。 下列新查詢會以學生姓氏的第一個字母作為索引鍵，來進行分組。  
+1. 查詢運算式中提供分組這項強大的功能。 使用 group 子句進行查詢時，會產生一個群組序列，且每個群組本身會包含 `Key` 以及組成該群組之所有成員的序列。 下列新查詢會以學生姓氏的第一個字母作為索引鍵，來進行分組。  
   
      [!code-csharp[CsLINQGettingStarted#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#14)]  
   
-2.  請注意，查詢類型現在已變更。 現在，即會產生具有 `char` 類型索引鍵的群組序列，以及 `Student` 物件的序列。 由於查詢類型已變更，因此下列程式碼也會變更 `foreach` 執行迴圈：  
+2. 請注意，查詢類型現在已變更。 現在，即會產生具有 `char` 類型索引鍵的群組序列，以及 `Student` 物件的序列。 由於查詢類型已變更，因此下列程式碼也會變更 `foreach` 執行迴圈：  
   
      [!code-csharp[CsLINQGettingStarted#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#15)]  
   
-3.  執行應用程式，並在 [主控台] 視窗中檢視結果。  
+3. 執行應用程式，並在 [主控台] 視窗中檢視結果。  
   
      如需詳細資訊，請參閱 [group 子句](../../../../csharp/language-reference/keywords/group-clause.md)。  
   
 #### <a name="to-make-the-variables-implicitly-typed"></a>若要將變數設為隱含類型  
   
-1.  在明確撰寫 `IGroupings` 的 `IEnumerables` 程式碼時，可能很快就會感到枯燥乏味。 為了方便起見，您可以使用 `var` 來撰寫相同的查詢和 `foreach` 迴圈。 `var` 關鍵字不會變更物件的類型，而只會指示編譯器推斷類型。 將 `studentQuery` 類型和反覆運算變數 `group` 變更為 `var`，然後重新執行查詢。 請注意，在內部 `foreach` 迴圈中，反覆運算變數類型仍為 `Student`，查詢亦會如往常般運作。 將 `s` 反覆運算變數變更為 `var`，然後再次執行查詢。 您會發現結果完全相同。  
+1. 在明確撰寫 `IGroupings` 的 `IEnumerables` 程式碼時，可能很快就會感到枯燥乏味。 為了方便起見，您可以使用 `var` 來撰寫相同的查詢和 `foreach` 迴圈。 `var` 關鍵字不會變更物件的類型，而只會指示編譯器推斷類型。 將 `studentQuery` 類型和反覆運算變數 `group` 變更為 `var`，然後重新執行查詢。 請注意，在內部 `foreach` 迴圈中，反覆運算變數類型仍為 `Student`，查詢亦會如往常般運作。 將 `s` 反覆運算變數變更為 `var`，然後再次執行查詢。 您會發現結果完全相同。  
   
      [!code-csharp[CsLINQGettingStarted#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#16)]  
   
@@ -141,7 +141,7 @@ ms.locfileid: "57202414"
   
 #### <a name="to-order-the-groups-by-their-key-value"></a>若要依索引鍵值排序群組  
   
-1.  當您執行上述查詢時，您會發現群組不是依字母順序排列。 若要變更這種情況，您必須在 `group` 子句之後提供 `orderby` 子句。 不過，若要使用 `orderby` 子句，您必須先取得識別項，以作為 `group` 子句所建立的群組參考。 您可以使用 `into` 關鍵字來提供識別項，如下所示：  
+1. 當您執行上述查詢時，您會發現群組不是依字母順序排列。 若要變更這種情況，您必須在 `group` 子句之後提供 `orderby` 子句。 不過，若要使用 `orderby` 子句，您必須先取得識別項，以作為 `group` 子句所建立的群組參考。 您可以使用 `into` 關鍵字來提供識別項，如下所示：  
   
      [!code-csharp[csLINQGettingStarted#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#17)]  
   
@@ -149,7 +149,7 @@ ms.locfileid: "57202414"
   
 #### <a name="to-introduce-an-identifier-by-using-let"></a>若要使用 let 引進識別項  
   
-1.  針對查詢運算式中的任何運算式結果，您可以使用 `let` 關鍵字引進識別項。 如下列範例所示，此識別項非常方便，它也可以儲存運算式的結果，而不需進行多次計算，藉此提高效能。  
+1. 針對查詢運算式中的任何運算式結果，您可以使用 `let` 關鍵字引進識別項。 如下列範例所示，此識別項非常方便，它也可以儲存運算式的結果，而不需進行多次計算，藉此提高效能。  
   
      [!code-csharp[csLINQGettingStarted#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#18)]  
   
@@ -157,17 +157,17 @@ ms.locfileid: "57202414"
   
 #### <a name="to-use-method-syntax-in-a-query-expression"></a>若要在查詢運算式中使用方法語法  
   
-1.  如 [LINQ 中的查詢語法及方法語法](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)中所述，某些查詢作業只能使用方法語法來表示。 下列程式碼會針對來源序列中的每個 `Student` 計算總分，然後在該查詢結果上呼叫 `Average()` 方法以計算班級的平均分數。
+1. 如 [LINQ 中的查詢語法及方法語法](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)中所述，某些查詢作業只能使用方法語法來表示。 下列程式碼會針對來源序列中的每個 `Student` 計算總分，然後在該查詢結果上呼叫 `Average()` 方法以計算班級的平均分數。
   
      [!code-csharp[csLINQGettingStarted#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#19)]  
   
 #### <a name="to-transform-or-project-in-the-select-clause"></a>若要在 select 子句中轉換或投影  
   
-1.  這是一種非常普遍的查詢，產生的序列項目與來源序列中的項目不同。 刪除或註解您先前的查詢和執行迴圈，並將其取代為下列程式碼。 請注意，查詢會傳回一個字串序列 (而不是 `Students`)，且這項事實會反映在 `foreach` 迴圈中。  
+1. 這是一種非常普遍的查詢，產生的序列項目與來源序列中的項目不同。 刪除或註解您先前的查詢和執行迴圈，並將其取代為下列程式碼。 請注意，查詢會傳回一個字串序列 (而不是 `Students`)，且這項事實會反映在 `foreach` 迴圈中。  
   
      [!code-csharp[csLINQGettingStarted#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#20)]  
   
-2.  此逐步解說中稍早的程式碼指出，班級平均成績約 334 分。 若要產生一個總分高於班級平均分數並包含 `Student ID` 的 `Students` 序列，您可以使用 `select` 陳述式中的匿名型別：  
+2. 此逐步解說中稍早的程式碼指出，班級平均成績約 334 分。 若要產生一個總分高於班級平均分數並包含 `Student ID` 的 `Students` 序列，您可以使用 `select` 陳述式中的匿名型別：  
   
      [!code-csharp[csLINQGettingStarted#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#21)]  
   

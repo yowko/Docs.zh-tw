@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c5f1882c37861fe7dd7997348dc51e30ce2950e
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 29f29da6f5a95181abfd4540b017561115d59284
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218537"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314746"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>作法：登錄主要 Interop 組件
 
@@ -36,7 +36,7 @@ ms.locfileid: "56218537"
 
 ## <a name="to-register-a-primary-interop-assembly"></a>註冊主要 Interop 組件
 
-1.  在命令提示中，輸入：
+1. 在命令提示中，輸入：
 
      **regasm** *assemblyname*
 
@@ -51,6 +51,6 @@ regasm CompanyA.UtilLib.dll
 
 ## <a name="see-also"></a>另請參閱
 
-- [使用主要 Interop 組件設計程式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
+- [使用主要 Interop 組件進行程式設計](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
 - [找出主要 Interop 組件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))
 - [轉散發主要 Interop 組件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0dt2w20(v=vs.100))

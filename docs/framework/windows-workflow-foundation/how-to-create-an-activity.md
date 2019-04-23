@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: 48df9b90a92468858bd3ac5498bd83fd0d57fe75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315136"
 ---
 # <a name="how-to-create-an-activity"></a>HOW TO：建立活動
@@ -46,7 +46,7 @@ ms.locfileid: "59315136"
      [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
-    > `ReadInt` 活動衍生自 <xref:System.Activities.NativeActivity%601>，而不是程式碼活動範本預設的 <xref:System.Activities.CodeActivity>。 <xref:System.Activities.CodeActivity%601> 如果活動提供單一的結果，透過公開可用<xref:System.Activities.Activity%601.Result%2A>引數，但<xref:System.Activities.CodeActivity%601>因此不支援使用書籤，<xref:System.Activities.NativeActivity%601>用。
+    > `ReadInt` 活動衍生自 <xref:System.Activities.NativeActivity%601>，而不是程式碼活動範本預設的 <xref:System.Activities.CodeActivity>。 如果活動提供單一結果 (透過 <xref:System.Activities.CodeActivity%601> 引數公開)，則可使用 <xref:System.Activities.Activity%601.Result%2A>，但 <xref:System.Activities.CodeActivity%601> 不支援使用書籤，因而會使用 <xref:System.Activities.NativeActivity%601>。
 
 ## <a name="create-the-prompt-activity"></a>建立提示活動
 
@@ -106,7 +106,7 @@ ms.locfileid: "59315136"
 
 - <xref:System.Activities.CodeActivity>
 - <xref:System.Activities.NativeActivity%601>
-- [設計和實作自訂活動](designing-and-implementing-custom-activities.md)
+- [設計及實作自訂活動](designing-and-implementing-custom-activities.md)
 - [快速入門教學課程](getting-started-tutorial.md)
-- [HOW TO：建立工作流程](how-to-create-a-workflow.md)
-- [使用自訂活動設計工具中的 ExpressionTextBox](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [如何：建立工作流程](how-to-create-a-workflow.md)
+- [在自訂活動設計工具中使用 ExpressionTextBox](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

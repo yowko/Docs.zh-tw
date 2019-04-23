@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
 ms.openlocfilehash: 0d8799359a12b9bb64331d83df2500bede8c0ff2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314538"
 ---
 # <a name="how-to-inherit-windows-forms"></a>HOW TO：繼承 Windows Forms
@@ -42,8 +42,8 @@ ms.locfileid: "59314538"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Inherits Statement](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+- [Inherits 陳述式](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [Imports 陳述式 (.NET 命名空間和類型)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
 - [修改基底表單外觀的效果](effects-of-modifying-base-form-appearance.md)
-- [Windows Form 視覺繼承](windows-forms-visual-inheritance.md)
+- [Windows Forms 視覺繼承](windows-forms-visual-inheritance.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
 ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317881"
 ---
 # <a name="how-to-validate-application-settings"></a>HOW TO：驗證應用程式設定
@@ -162,5 +162,5 @@ ms.locfileid: "59317881"
   
 ## <a name="see-also"></a>另請參閱
 
-- [在 Windows Form 中建立事件處理常式](../creating-event-handlers-in-windows-forms.md)
-- [HOW TO：建立應用程式設定](how-to-create-application-settings.md)
+- [在 Windows Forms 中建立事件處理常式](../creating-event-handlers-in-windows-forms.md)
+- [如何：建立應用程式設定](how-to-create-application-settings.md)

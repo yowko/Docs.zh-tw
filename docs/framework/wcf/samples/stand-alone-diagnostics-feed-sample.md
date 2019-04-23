@@ -3,10 +3,10 @@ title: 獨立診斷摘要範例
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
 ms.openlocfilehash: 2737621a98f6a7e89ef3aee01fd1ad7a2a60f9b5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316553"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>獨立診斷摘要範例
@@ -96,4 +96,4 @@ foreach (SyndicationItem i in feed.Items)
 ## <a name="see-also"></a>另請參閱
 
 - [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [WCF 新聞訂閱](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+- [WCF 摘要整合](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

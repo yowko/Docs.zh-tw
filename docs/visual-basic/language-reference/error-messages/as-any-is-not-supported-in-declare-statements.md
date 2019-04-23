@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30828
 ms.assetid: 7e5cf519-8b64-4ac5-8116-705fe26c846d
 ms.openlocfilehash: 3593f238c72cbcce911c72e42552d6a75188b628
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310690"
 ---
 # <a name="as-any-is-not-supported-in-declare-statements"></a>'Declare' 陳述式中不支援 'As Any'
@@ -32,6 +32,6 @@ ms.locfileid: "59310690"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [逐步解說：呼叫 Windows Api](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
-- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [逐步解說：呼叫 Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+- [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)
 - [在 Managed 程式碼中建立原型](../../../framework/interop/creating-prototypes-in-managed-code.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74ddda813d756fb5cb54cb600e3cbf1cf68b3f38
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: b129da00fcd841566a4a823d8929348441d0a0f3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221143"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315539"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>作法：使用反映發出定義泛型型別
 本主題示範如何建立具有兩個型別參數的簡單泛型類型、如何將類別條件約束、介面條件約束及特殊條件約束套用至型別參數，以及如何建立成員，以使用類別的型別參數作為參數類型及傳回類型。  
@@ -27,25 +27,25 @@ ms.locfileid: "56221143"
   
 ### <a name="to-define-a-generic-type"></a>定義泛型型別  
   
-1.  定義名為 `GenericEmitExample1` 的動態組件。 在本例中，組件在執行後會儲存到磁碟，因此指定 <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>。  
+1. 定義名為 `GenericEmitExample1` 的動態組件。 在本例中，組件在執行後會儲存到磁碟，因此指定 <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>。  
   
      [!code-cpp[EmitGenericType#2](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#2)]
      [!code-csharp[EmitGenericType#2](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#2)]
      [!code-vb[EmitGenericType#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#2)]  
   
-2.  定義動態模組。 組件是由可執行模組組成。 組件如僅有一個模組，則模組名稱和組件名稱相同，且檔案名稱是模組名稱加上副檔名。  
+2. 定義動態模組。 組件是由可執行模組組成。 組件如僅有一個模組，則模組名稱和組件名稱相同，且檔案名稱是模組名稱加上副檔名。  
   
      [!code-cpp[EmitGenericType#3](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#3)]
      [!code-csharp[EmitGenericType#3](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#3)]
      [!code-vb[EmitGenericType#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#3)]  
   
-3.  定義類別。 本例中的類別名為 `Sample`。  
+3. 定義類別。 本例中的類別名為 `Sample`。  
   
      [!code-cpp[EmitGenericType#4](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#4)]
      [!code-csharp[EmitGenericType#4](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#4)]
      [!code-vb[EmitGenericType#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#4)]  
   
-4.  將包含參數名稱的字串陣列傳遞至 <xref:System.Reflection.Emit.TypeBuilder.DefineGenericParameters%2A?displayProperty=nameWithType> 方法，以定義 `Sample` 的泛型型別參數。 這可讓類別成為泛型型別。 傳回值是代表型別參數的 <xref:System.Reflection.Emit.GenericTypeParameterBuilder> 物件陣列，可用於發出的程式碼中。  
+4. 將包含參數名稱的字串陣列傳遞至 <xref:System.Reflection.Emit.TypeBuilder.DefineGenericParameters%2A?displayProperty=nameWithType> 方法，以定義 `Sample` 的泛型型別參數。 這可讓類別成為泛型型別。 傳回值是代表型別參數的 <xref:System.Reflection.Emit.GenericTypeParameterBuilder> 物件陣列，可用於發出的程式碼中。  
   
      在下列程式碼中，`Sample` 會成為具有型別參數 `TFirst` 和 `TSecond` 的泛型型別。 若要讓程式碼便於閱讀，每個 <xref:System.Reflection.Emit.GenericTypeParameterBuilder> 都要放在與型別參數同名的變數中。  
   
@@ -53,25 +53,25 @@ ms.locfileid: "56221143"
      [!code-csharp[EmitGenericType#5](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#5)]
      [!code-vb[EmitGenericType#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#5)]  
   
-5.  將特殊條件約束新增至型別參數。 在此範例中，型別參數 `TFirst` 限為具有無參數建構函式的類型及參考型別。  
+5. 將特殊條件約束新增至型別參數。 在此範例中，型別參數 `TFirst` 限為具有無參數建構函式的類型及參考型別。  
   
      [!code-cpp[EmitGenericType#6](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#6)]
      [!code-csharp[EmitGenericType#6](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#6)]
      [!code-vb[EmitGenericType#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#6)]  
   
-6.  或者將類別和介面條件約束新增至類型參數。 在本例中，型別參數 `TFirst` 限制為衍生自基底類別的類型，而此基底類別是由包含在變數 `baseType` 中的 <xref:System.Type> 物件所表示；以及實作介面的類型，而此介面的類型包含在變數 `interfaceA` 和 `interfaceB` 中。 請參閱宣告和指派這些變數的程式碼範例。  
+6. 或者將類別和介面條件約束新增至類型參數。 在本例中，型別參數 `TFirst` 限制為衍生自基底類別的類型，而此基底類別是由包含在變數 `baseType` 中的 <xref:System.Type> 物件所表示；以及實作介面的類型，而此介面的類型包含在變數 `interfaceA` 和 `interfaceB` 中。 請參閱宣告和指派這些變數的程式碼範例。  
   
      [!code-cpp[EmitGenericType#7](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#7)]
      [!code-csharp[EmitGenericType#7](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#7)]
      [!code-vb[EmitGenericType#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#7)]  
   
-7.  定義欄位。 本例中的欄位類型是由型別參數 `TFirst` 所指定。 <xref:System.Reflection.Emit.GenericTypeParameterBuilder> 衍生自 <xref:System.Type>，所以只要可以使用類型的位置，都可以使用泛型型別參數。  
+7. 定義欄位。 本例中的欄位類型是由型別參數 `TFirst` 所指定。 <xref:System.Reflection.Emit.GenericTypeParameterBuilder> 衍生自 <xref:System.Type>，所以只要可以使用類型的位置，都可以使用泛型型別參數。  
   
      [!code-cpp[EmitGenericType#21](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#21)]
      [!code-csharp[EmitGenericType#21](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#21)]
      [!code-vb[EmitGenericType#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#21)]  
   
-8.  定義使用泛型型別之型別參數的方法。 請注意，這類方法不是泛型，除非它們有自己的型別參數清單。 下列程式碼定義 `static` 方法 (Visual Basic 為 `Shared`)，其接受 `TFirst` 陣列並傳回包含陣列所有項目的 `List<TFirst>` (Visual Basic 為 `List(Of TFirst)`)。 若要定義這個方法，即必須在泛型型別定義 `List<T>` 呼叫 <xref:System.Type.MakeGenericType%2A>，以建立類型 `List<TFirst>`。 (當您使用 `typeof` 運算子時會省略 `T` (Visual Basic 為 `GetType`)，以取得泛型型別定義。)參數類型是使用 <xref:System.Type.MakeArrayType%2A> 方法所建立。  
+8. 定義使用泛型型別之型別參數的方法。 請注意，這類方法不是泛型，除非它們有自己的型別參數清單。 下列程式碼定義 `static` 方法 (Visual Basic 為 `Shared`)，其接受 `TFirst` 陣列並傳回包含陣列所有項目的 `List<TFirst>` (Visual Basic 為 `List(Of TFirst)`)。 若要定義這個方法，即必須在泛型型別定義 `List<T>` 呼叫 <xref:System.Type.MakeGenericType%2A>，以建立類型 `List<TFirst>`。 (當您使用 `typeof` 運算子時會省略 `T` (Visual Basic 為 `GetType`)，以取得泛型型別定義。)參數類型是使用 <xref:System.Type.MakeArrayType%2A> 方法所建立。  
   
      [!code-cpp[EmitGenericType#22](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#22)]
      [!code-csharp[EmitGenericType#22](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#22)]
@@ -136,6 +136,7 @@ ms.locfileid: "56221143"
 -   在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
 - [使用反映發出](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
 - [反映發出動態組件案例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))

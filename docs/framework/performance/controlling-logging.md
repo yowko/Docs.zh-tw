@@ -7,10 +7,10 @@ ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16ed4d86d64a6d3c569c7fd7ab9e9e3a3943f078
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312094"
 ---
 # <a name="controlling-net-framework-logging"></a>控制 .NET Framework 記錄
@@ -53,9 +53,9 @@ Provider                                 GUID
   
     -   `-p` 參數會識別提供者 GUID。  
   
-    -   `0x1CCBD` 指定將會引發事件的類別。  
+    -   `0x1CCBD` 會指定即將引發之事件的分類。  
   
-    -   `0x5` 設定記錄 （在本例中為 verbose (5)） 的層級。  
+    -   `0x5` 會設定記錄的層級 (在本例中，設為詳細資訊 (5))。  
   
     -   `-ets` 參數會指示 Logman 傳送命令給事件追蹤工作階段。  
   

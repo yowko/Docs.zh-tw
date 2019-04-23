@@ -8,10 +8,10 @@ helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
 ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315877"
 ---
 # <a name="data-transfer-architectural-overview"></a>資料傳輸架構概觀
@@ -81,8 +81,8 @@ Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可�
 |------------------|--------------------------|--------------------------------------------------|-------------------------------------------------------|  
 |傳出，從經過非資料流處理的程式設計模型建立|寫入訊息需要的資料 (例如，物件與需要序列化它的 <xref:System.Runtime.Serialization.DataContractSerializer> 執行個體)*|自訂邏輯以根據儲存資料寫出訊息 (例如，呼叫 `WriteObject` 上的 `DataContractSerializer` (如果這是使用中的序列化程式))*|呼叫 `OnWriteBodyContents`、緩衝處理結果、透過緩衝區傳回 XML 讀取器|  
 |傳出，從經過資料流處理的程式設計模型建立|使用要寫入之資料的 `Stream` *|使用 <xref:System.Xml.IStreamProvider> 機制從儲存的資料流寫出資料*|呼叫 `OnWriteBodyContents`、緩衝處理結果、透過緩衝區傳回 XML 讀取器|  
-|從資料流通道堆疊傳入|`Stream` 物件，表示透過網路傳入並且搭配 <xref:System.Xml.XmlReader> 的資料|寫出內容從儲存`XmlReader`使用 `WriteNode`|會傳回儲存 `XmlReader`|  
-|從非資料流的通道堆疊傳入|包含搭配 `XmlReader` 之本文資料的緩衝區|寫出內容從儲存`XmlReader`使用 `WriteNode`|傳回儲存的 lang|  
+|從資料流通道堆疊傳入|`Stream` 物件，表示透過網路傳入並且搭配 <xref:System.Xml.XmlReader> 的資料|使用 `XmlReader` 從儲存的 `WriteNode`寫出內容|傳回儲存的 `XmlReader`|  
+|從非資料流的通道堆疊傳入|包含搭配 `XmlReader` 之本文資料的緩衝區|使用 `XmlReader` 從儲存的 `WriteNode`寫出內容|傳回儲存的 lang|  
   
  \* 這些項目不會直接實作`Message`子類別，但在子類別的<xref:System.ServiceModel.Channels.BodyWriter>類別。 如需 <xref:System.ServiceModel.Channels.BodyWriter>的詳細資訊，請參閱 [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
   
@@ -135,7 +135,7 @@ Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可�
   
  如同之前所述，動作可能有很多種：經由各種通訊協定傳送或接收網路封包、在資料庫中讀取或寫入訊息，或是在訊息佇列中新增或清除佇列訊息，以提供為數不多的範例。 所有這些動作都有一個共通： 它們需要 WCF 之間轉換`Message`執行個體和實際位元組，可以傳送、 接收、 讀取、 寫入，群組排入佇列，或從佇列中清除。 將 `Message` 轉換為位元組群組的程序稱為「 *編碼*」(Encoding)，而從位元組群組建立 `Message` 的反向程序稱為「 *解碼*」(Decoding)。  
   
- 大部分的傳輸通道會使用稱為「 *訊息編碼器* 」(Message Encoder) 的元件以完成編碼與解碼工作。 訊息編碼器是 <xref:System.ServiceModel.Channels.MessageEncoder> 類別的子類別。 `MessageEncoder` 包含各種`ReadMessage`並`WriteMessage`之間進行轉換的方法多載`Message`和位元組群組。  
+ 大部分的傳輸通道會使用稱為「 *訊息編碼器* 」(Message Encoder) 的元件以完成編碼與解碼工作。 訊息編碼器是 <xref:System.ServiceModel.Channels.MessageEncoder> 類別的子類別。 `MessageEncoder` 包含各種 `ReadMessage` 和 `WriteMessage` 方法多載，以便在 `Message` 和位元組群組之間轉換。  
   
  在傳送端，緩衝處理的傳輸通道會將從上一層通道接收到的 `Message` 物件傳遞到 `WriteMessage`。 它會取回位元組陣列，然後用來執行其動作 (例如將這些位元組封裝成有效 TCP 封包，然後將它們傳送至正確的目的地)。 資料流傳輸通道會先建立 `Stream` (例如，透過傳出 TCP 連線)，然後同時傳遞需要傳送的 `Stream` 和 `Message` 至適當 `WriteMessage` 多載以寫出訊息。  
   
@@ -268,9 +268,9 @@ Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可�
   
  WCF 支援序列化和還原序列化參數及訊息部分的 「 現成 」 的兩種序列化技術：<xref:System.Runtime.Serialization.DataContractSerializer>而`XmlSerializer`。 此外，您可以撰寫自訂序列化程式。 不過，WCF 的其他部分 (例如泛型`GetBody`方法或 SOAP 錯誤序列化) 可能會受限於只能使用<xref:System.Runtime.Serialization.XmlObjectSerializer>子類別 (<xref:System.Runtime.Serialization.DataContractSerializer>並<xref:System.Runtime.Serialization.NetDataContractSerializer>，而非<xref:System.Xml.Serialization.XmlSerializer>)，或甚至被硬式編碼為只使用<xref:System.Runtime.Serialization.DataContractSerializer>。  
   
- `XmlSerializer` 是在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務中使用的序列化引擎。 `DataContractSerializer` 是了解新資料合約程式設計模型的新序列化引擎。 `DataContractSerializer` 是預設選擇，並選擇来使用`XmlSerializer`可根據每個作業使用<xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A>屬性。  
+ `XmlSerializer` 是在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務中使用的序列化引擎。 `DataContractSerializer` 是了解新資料合約程式設計模型的新序列化引擎。 `DataContractSerializer` 是預設選擇，而您可以使用 `XmlSerializer` 屬性，針對個別作業選擇使用 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> 。  
   
- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 並<xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>負責作業行為插入訊息格式器，如`DataContractSerializer`而`XmlSerializer`分別。 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 行為實際上能夠與任何衍生自 <xref:System.Runtime.Serialization.XmlObjectSerializer>的序列化程式共同運作，其中包含 <xref:System.Runtime.Serialization.NetDataContractSerializer> (在「使用獨立序列化」中會詳細描述)。 行為會呼叫其中一個 `CreateSerializer` 虛擬方法多載以取得序列化程式。 若要插入不同的序列化程式，請建立新的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 子類別，然後同時覆寫 `CreateSerializer` 多載。  
+ <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 和 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 是分別負責插入 `DataContractSerializer` 與 `XmlSerializer`之訊息格式器的作業行為。 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 行為實際上能夠與任何衍生自 <xref:System.Runtime.Serialization.XmlObjectSerializer>的序列化程式共同運作，其中包含 <xref:System.Runtime.Serialization.NetDataContractSerializer> (在「使用獨立序列化」中會詳細描述)。 行為會呼叫其中一個 `CreateSerializer` 虛擬方法多載以取得序列化程式。 若要插入不同的序列化程式，請建立新的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 子類別，然後同時覆寫 `CreateSerializer` 多載。  
   
 ## <a name="see-also"></a>另請參閱
 

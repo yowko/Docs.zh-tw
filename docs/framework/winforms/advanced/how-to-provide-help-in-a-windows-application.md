@@ -9,10 +9,10 @@ helpviewer_keywords:
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
 ms.openlocfilehash: cbecb82acb22915af96fa26f08e441b4f6686c4a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312708"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>HOW TO：在 Windows 應用程式中提供說明
@@ -57,7 +57,7 @@ ms.locfileid: "59312708"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：顯示快顯說明](how-to-display-pop-up-help.md)
+- [如何：顯示快顯說明](how-to-display-pop-up-help.md)
 - [使用工具提示來顯示控制項說明](control-help-using-tooltips.md)
-- [整合 Windows Form 中的使用者說明](integrating-user-help-in-windows-forms.md)
+- [整合 Windows Forms 中的使用者說明](integrating-user-help-in-windows-forms.md)
 - [Windows Forms](../index.md)

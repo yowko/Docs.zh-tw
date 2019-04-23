@@ -1,15 +1,15 @@
 ---
-title: 作法：與其他應用程式共用組件 (C#)
+title: HOW TO：與其他應用程式共用組件 (C#)
 ms.date: 07/20/2015
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
 ms.openlocfilehash: 8bb36c2aded1144349b86b17a45eef4b48c8aabe
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314785"
 ---
-# <a name="how-to-share-an-assembly-with-other-applications-c"></a>作法：與其他應用程式共用組件 (C#)
+# <a name="how-to-share-an-assembly-with-other-applications-c"></a>HOW TO：與其他應用程式共用組件 (C#)
 組件可以是私用或共用的︰根據預設，大多數簡單的程式由於不會供其他應用程式使用，因此只會包含一個私用組件。  
   
  為了與其他應用程式共用組件，必須將該組件放在[全域組件快取](../../../../framework/app-domains/gac.md) (GAC) 中。  
@@ -28,5 +28,5 @@ ms.locfileid: "59314785"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計手冊](../../../../csharp/programming-guide/index.md)
+- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)
 - [使用組件設計程式](../../../../framework/app-domains/programming-with-assemblies.md)

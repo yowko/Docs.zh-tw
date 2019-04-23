@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8e2cab36c1dd990a1bf848067e7ae81baeb9ed8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a6d205cc9b13a43cd3b519c2a262f3db767ace7b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355047"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309481"
 ---
 # <a name="com-callable-wrapper"></a>COM 可呼叫包裝函式
 
@@ -27,7 +27,7 @@ ms.locfileid: "57355047"
 
 執行階段會為 Managed 物件建立剛好一個 CCW，不論要求其服務的 COM 用戶端數目有多少。 如下圖所示，多個 COM 用戶端可以保留對公開 INew 介面之 CCW 的參考。 CCW 接著會保留對實作介面且已記憶體回收之 Managed 物件的單一參考。 COM 和 .NET 用戶端都可以同時對相同的 Managed 物件提出要求。
 
-![COM 可呼叫包裝函式](./media/ccw.gif "ccw") 透過 COM 可呼叫包裝函式存取 .NET 物件
+![保留參考公開 INew 之 CCW 的多個 COM 用戶端。](./media/com-callable-wrapper/com-callable-wrapper-clients.gif)
 
 在 .NET Framework 內執行的其他類別看不到 COM 可呼叫包裝函式。 其主要目的是要封送處理 Managed 和 Unmanaged 程式碼之間的呼叫。不過，CCW 也會管理物件識別和它們所包裝之 Managed 物件的物件存留期。
 
@@ -45,7 +45,7 @@ CCW 會以與 COM 強制進行介面型互動一致的方式，向 COM 用戶端
 
 為了建立這種無縫式的方法，CCW 會製造傳統 COM 介面，例如 **IUnknown** 和 **IDispatch**。 如下圖所示，CCW 會維護對其所包裝之 .NET 物件的單一參考。 COM 用戶端和 .NET 物件會透過 Proxy 和 CCW 虛設常式建構彼此互動。
 
-![COM 介面](./media/ccwwithinterfaces.gif "ccwwithinterfaces") COM 介面和 COM 可呼叫包裝函式
+![此圖顯示 CCW 如何製造 COM 介面。](./media/com-callable-wrapper/com-callable-wrapper-interfaces.gif)
 
 除了公開受管理環境中的類別明確實作的介面，.NET Framework 也會代表物件提供下表所列 COM 介面的實作。 .NET 類別可以藉由提供自己的這些介面實作來覆寫預設行為。 不過，執行階段一律會提供 **IUnknown** 和 **IDispatch** 介面的實作。
 
@@ -64,7 +64,7 @@ CCW 會以與 COM 強制進行介面型互動一致的方式，向 COM 用戶端
 |---------------|-----------------|
 |(\_*classname*) 類別介面|由執行階段公開且未明確定義的介面，它會公開所有公用介面、方法、屬性和 Managed 物件上明確公開的欄位。|
 |**IConnectionPoint** 和 **IConnectionPointContainer**|來源為以委派為基礎之事件的物件介面 (註冊事件訂閱者用的介面)。|
-|**IDispatchEx**|如果類別實作 **IExpando**，則為執行階段提供的介面。 **IDispatchEx** 介面是 **IDispatch** 介面的延伸模組，它不同於 **IDispatch**，可進行成員的列舉、新增、刪除和區分大小寫的呼叫。|
+|**IDispatchEx**|如果類別實作 **IExpando**，則為執行階段提供的介面。 **IDispatchEx** 介面是 **IDispatch** 介面的延伸，它不同於 **IDispatch**，可進行成員的列舉、新增、刪除和區分大小寫呼叫。|
 |**IEnumVARIANT**|集合類型類別的介面，如果類別實作 **IEnumerable**，它會列舉集合中的物件。|
 
 ## <a name="introducing-the-class-interface"></a>類別介面簡介

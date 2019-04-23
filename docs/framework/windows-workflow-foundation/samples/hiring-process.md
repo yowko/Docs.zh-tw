@@ -3,10 +3,10 @@ title: 招聘程序
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
 ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313147"
 ---
 # <a name="hiring-process"></a>招聘程序
@@ -18,7 +18,7 @@ ms.locfileid: "59313147"
   
  此範例示範以下的 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 功能：  
   
--   <xref:System.Activities.Statements.Flowchart> 和<xref:System.Activities.Statements.Sequence>來模型化商務程序的工作流程。  
+-   將商務程序模型化的 <xref:System.Activities.Statements.Flowchart> 和 <xref:System.Activities.Statements.Sequence> 工作流程。  
   
 -   工作流程服務。  
   
@@ -121,10 +121,10 @@ ms.locfileid: "59313147"
 |活動撰寫|此程序定義會使用 <xref:System.Activities.Activity> 的免費撰寫。 此流程圖包含幾個序列和平行活動，這些活動同時也包含其他活動 (依此類推)。|HiringRequestService|  
 |平行活動|-   <xref:System.Activities.Statements.ParallelForEach%601> 用來在 CEO 和人力資源部門經理的收件匣中註冊，以平行方式 （等候兩位人力資源部門經理的核准步驟）。<br />-   <xref:System.Activities.Statements.Parallel> 用來執行已完成] 和 [已拒絕步驟中的某些清除工作|HiringRequestService|  
 |模型取消|此流程圖會使用 <xref:System.Activities.Statements.CancellationScope> 建立取消行為 (在此案例中，它會執行某些清除工作)。|HiringRequestService|  
-|客戶持續性參與者|`HiringRequestPersistenceParticipant` 將工作流程變數的資料儲存至儲存到 Contoso HR 資料庫中的資料表。|HiringRequestService|  
-|工作流程服務|`ResumeRequestService` 使用工作流程服務實作的。 工作流程定義和服務資訊會包含在 ResumeRequestService.xamlx 中。 此服務會設定為使用持續性與追蹤。|ResumeRequestService|  
-|永久性計時器|`ResumeRequestService` 使用永久性計時器來定義刊登工作的持續期間 （逾時到期之後，刊登已關閉）。|ResumeRequestService|  
-|異動|<xref:System.Activities.Statements.TransactionScope> 用來確保數個活動執行內的資料一致性 （當收到新的履歷表時）。|ResumeRequestService|  
+|客戶持續性參與者|`HiringRequestPersistenceParticipant` 會將工作流程變數中的資料儲存到 Contoso HR 資料庫內所儲存的資料表中。|HiringRequestService|  
+|工作流程服務|`ResumeRequestService` 是使用工作流程服務所實作。 工作流程定義和服務資訊會包含在 ResumeRequestService.xamlx 中。 此服務會設定為使用持續性與追蹤。|ResumeRequestService|  
+|永久性計時器|`ResumeRequestService` 會使用永久性計時器來定義刊登工作的期間 (一旦過了期限之後，刊登就會結束)。|ResumeRequestService|  
+|異動|<xref:System.Activities.Statements.TransactionScope> 是用來確保數個活動執行內的資料都是一致的 (當收到新的履歷表時)。|ResumeRequestService|  
 |異動|自訂持續性參與者 (`HiringRequestPersistenceParticipant`) 和自訂追蹤參與者 (`HistoryFileTrackingParticipant`) 會使用相同的交易。|HiringRequestService|  
 |在 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 應用程式中使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。|工作流程是從兩個 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式進行存取。|InternalClient / CareersWebSite|  
   

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
 ms.openlocfilehash: 15cf94d5ea191435723f754f35e43d65632142e2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311197"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>HOW TO：建立流程圖工作流程
@@ -157,5 +157,5 @@ ms.locfileid: "59311197"
 - [Windows Workflow Foundation 程式設計](programming.md)
 - [設計工作流程](designing-workflows.md)
 - [快速入門教學課程](getting-started-tutorial.md)
-- [HOW TO：建立活動](how-to-create-an-activity.md)
-- [HOW TO：執行工作流程](how-to-run-a-workflow.md)
+- [如何：建立活動](how-to-create-an-activity.md)
+- [如何：執行工作流程](how-to-run-a-workflow.md)

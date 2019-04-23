@@ -1,15 +1,15 @@
 ---
-title: 作法：計算 CSV 文字檔中的資料行值 (LINQ) (C#)
+title: HOW TO：計算 CSV 文字檔中的資料行值 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
 ms.openlocfilehash: 0a1b42bf941fa65f053be4931ddfbbbdf1223a48
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309358"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>作法：計算 CSV 文字檔中的資料行值 (LINQ) (C#)
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>HOW TO：計算 CSV 文字檔中的資料行值 (LINQ) (C#)
 本例示範如何在 .csv 檔案的資料行上執行彙總計算，例如總和、平均、最小值和最大值。 此處顯示的範例準則可以套用至其他類型的結構化文字。  
   
 ### <a name="to-create-the-source-file"></a>建立來源檔案  

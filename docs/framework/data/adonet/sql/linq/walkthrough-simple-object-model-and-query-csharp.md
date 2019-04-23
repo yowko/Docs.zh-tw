@@ -3,10 +3,10 @@ title: 逐步解說：簡單的物件模型和查詢 (C#)
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
 ms.openlocfilehash: dc56f1e7886a1a1391d94b512ba5c91ca8c9092a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309455"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>逐步解說：簡單的物件模型和查詢 (C#)
@@ -87,7 +87,7 @@ ms.locfileid: "59309455"
   
 -   您會指定 `CustomerID` 屬性 (Property)，以表示資料庫中的主索引鍵資料行。  
   
--   您會指定 `_CustomerID` 和 `_City` 欄位做為私用儲存區。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以然後儲存和擷取值直接管理，而不是使用可能含有商務邏輯的公用存取子。  
+-   您會指定 `_CustomerID` 和 `_City` 欄位做為私用儲存區。 然後，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以直接儲存和擷取值，而不必使用可能含有商務邏輯的公用存取子。  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>若要表示兩個資料庫資料行的特性  
   

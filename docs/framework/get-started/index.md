@@ -9,10 +9,10 @@ ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d6604beca5c0031b55fc22fc48e0c23d27c8a37e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314967"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 使用者入門
@@ -79,11 +79,11 @@ ms.locfileid: "59314967"
 
 | 標題 | 說明 |
 | ----- |------------ |
-| [總覽](overview.md) | 替建置以 .NET Framework 為目標之應用程式的開發人員提供詳細資訊。 |
-| [安裝指南](../install/index.md) | 提供安裝 .NET Framework 的相關資訊。 |  
-| [.NET Framework 和 Out-of-Band 發行版本](the-net-framework-and-out-of-band-releases.md) | 描述 .NET Framework 的頻外發行以及如何將其運用在您的應用程式中。 |
+| [概觀](overview.md) | 替建置以 .NET Framework 為目標之應用程式的開發人員提供詳細資訊。 |
+| [安裝指南 (英文)](../install/index.md) | 提供安裝 .NET Framework 的相關資訊。 |  
+| [.NET Framework 和不定期發行](the-net-framework-and-out-of-band-releases.md) | 描述 .NET Framework 的頻外發行以及如何將其運用在您的應用程式中。 |
 | [系統需求](system-requirements.md) | 列出執行 .NET Framework 的硬體與軟體需求。 |
-| [.NET 的核心和開放原始碼](net-core-and-open-source.md) | 描述 .NET Core 的相關 .NET Framework 功能，以及如何存取開放原始碼 .NET Core 專案。 |
+| [.NET Core 和開放原始碼](net-core-and-open-source.md) | 描述 .NET Core 的相關 .NET Framework 功能，以及如何存取開放原始碼 .NET Core 專案。 |
 | [.NET Core 文件](../../core/index.md) | 提供適用於 .NET Core 的概念性及 API 參考文件。 |
 | [.NET Standard](../../standard/net-standard.md) | 討論 .NET Standard，這是個別 .NET 實作支援的版本化規格，以保證在多個平台上都能使用一組一致的 API。
 

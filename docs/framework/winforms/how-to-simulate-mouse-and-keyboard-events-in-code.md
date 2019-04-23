@@ -13,10 +13,10 @@ helpviewer_keywords:
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
 ms.openlocfilehash: 6931f9b012a67c2d18995f2a3a56f290be0f0ddb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313082"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>HOW TO：以程式碼模擬滑鼠和鍵盤事件
@@ -91,4 +91,4 @@ Windows Form 提供以程式設計方式模擬滑鼠和鍵盤輸入的數個選�
   
 ## <a name="see-also"></a>另請參閱
 
-- [Windows Form 中的使用者輸入](user-input-in-windows-forms.md)
+- [Windows Forms 中的使用者輸入](user-input-in-windows-forms.md)

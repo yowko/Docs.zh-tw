@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
 ms.openlocfilehash: 14f225f5587379b3efa7b6dc2475f1b697ebb281
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314213"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>HOW TO：繼承控制項類別
@@ -46,8 +46,8 @@ ms.locfileid: "59314213"
 ## <a name="see-also"></a>另請參閱
 
 - [各種自訂控制項](varieties-of-custom-controls.md)
-- [HOW TO：繼承 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)
-- [HOW TO：繼承現有的 Windows Forms 控制項](how-to-inherit-from-existing-windows-forms-controls.md)
-- [HOW TO：撰寫 Windows Forms 的控制項](how-to-author-controls-for-windows-forms.md)
+- [如何：繼承自 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)
+- [如何：繼承自現有的 Windows Forms 控制項](how-to-inherit-from-existing-windows-forms-controls.md)
+- [如何：撰寫 Windows forms 的控制項](how-to-author-controls-for-windows-forms.md)
 - [Visual Basic 中的繼承事件處理常式疑難排解](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [在設計階段開發 Windows Form 控制項](developing-windows-forms-controls-at-design-time.md)
+- [在設計階段開發 Windows Forms 控制項](developing-windows-forms-controls-at-design-time.md)

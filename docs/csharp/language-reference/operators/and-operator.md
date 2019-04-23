@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '& operator [C#]'
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
-ms.openlocfilehash: a799c0e37d6607e8ff72ab984ff5e540a4e11063
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 67d60709e1c6c76071ecfb7aac74c83dec6f372a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236371"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310040"
 ---
 # <a name="amp-operator-c-reference"></a>&amp; 運算子 (C# 參考)
 
@@ -46,9 +46,9 @@ ms.locfileid: "53236371"
 
 [!code-csharp-interactive[bool logical AND](~/samples/snippets/csharp/language-reference/operators/AndOperatorExamples.cs#BooleanOperands)]
 
-[條件式 AND 運算子](conditional-and-operator.md) `&&` 也會計算其運算元的邏輯 AND，但只有在第一個運算元的值為 `true` 時，才會求第二個運算元的值。
+[條件式 AND 運算子](boolean-logical-operators.md#conditional-logical-and-operator-) `&&` 也會計算其運算元的邏輯 AND，但在第一個運算元的值評估為 `false` 時，則不會評估第二個運算元。
 
-若是可為 Null 的 bool 運算元，`&` 運算子的行為與 SQL 的三值邏輯一致。 如需詳細資訊，請參閱[使用可為 Null 的型別](../../programming-guide/nullable-types/using-nullable-types.md)一文的 [bool? 型別](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type)一節。
+若是可為 Null 的 bool 運算元，`&` 運算子的行為與 SQL 的三值邏輯一致。 如需詳細資訊，請參閱[布林值邏輯運算子](boolean-logical-operators.md)一文的[可為 Null 的布林值邏輯運算子](boolean-logical-operators.md#nullable-boolean-logical-operators)一節。
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
@@ -61,10 +61,10 @@ ms.locfileid: "53236371"
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 程式設計手冊](../../programming-guide/index.md)
 - [C# 運算子](index.md)
-- [指標型別](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [布林值邏輯運算子](boolean-logical-operators.md)
+- [指標類型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [| 運算子](or-operator.md)
 - [^ 運算子](xor-operator.md)
 - [~ 運算子](bitwise-complement-operator.md)
-- [&& 運算子](conditional-and-operator.md)

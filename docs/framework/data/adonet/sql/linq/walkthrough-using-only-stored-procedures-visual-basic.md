@@ -5,10 +5,10 @@ dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
 ms.openlocfilehash: 1527e3b4b614d4e700ae0c2c0fc555e14c7bc8d2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314824"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>逐步解說：僅使用預存程序 (Visual Basic)
@@ -105,7 +105,7 @@ ms.locfileid: "59314824"
   
 1. 在 [**方案總管] 中**，以滑鼠右鍵按一下**Form1.vb**，然後按一下**檢視程式碼**。  
   
-     `Class Form1` 在程式碼編輯器隨即出現。  
+     `Class Form1` 會顯示在程式碼編輯器中。  
   
 2. 在 `Form1` 程式碼區塊中輸入下列程式碼：  
   

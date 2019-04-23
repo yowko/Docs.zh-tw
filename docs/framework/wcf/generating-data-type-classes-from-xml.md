@@ -3,14 +3,14 @@ title: 從 XML 產生資料型別類型
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
 ms.openlocfilehash: c1b5dfda8aa5370dbc202ab90c75ab5677970467
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309338"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>從 XML 產生資料型別類型
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 包含從 XML 產生資料類型類別的新功能。 本主題描述如何自動產生.NET 部落格 rss 摘要的 資料類型。  
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 包含可以從 XML 產生資料類型類別的新功能。 本主題描述如何自動產生.NET 部落格 rss 摘要的 資料類型。  
   
 ### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a>取得 XML.NET 部落格 rss 摘要  
   

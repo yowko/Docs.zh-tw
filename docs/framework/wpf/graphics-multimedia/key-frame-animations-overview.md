@@ -7,10 +7,10 @@ helpviewer_keywords:
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
 ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316735"
 ---
 # <a name="key-frame-animations-overview"></a>主要畫面格動畫概觀
@@ -292,5 +292,5 @@ ms.locfileid: "59316735"
 - [主要畫面格動畫範例](https://go.microsoft.com/fwlink/?LinkID=160012)
 - [動畫概觀](animation-overview.md)
 - [分鏡腳本概觀](storyboards-overview.md)
-- [關於主要畫面格操作說明的主題](key-frame-animation-how-to-topics.md)
+- [主要畫面格操作說明主題](key-frame-animation-how-to-topics.md)
 - [計時行為概觀](timing-behaviors-overview.md)

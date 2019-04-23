@@ -18,10 +18,10 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
 ms.openlocfilehash: ffe4bf6fb29e82b04938e2ba9a2d9d21e5eabcde
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314304"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>HOW TO：使用 Windows Forms Label 控制項建立便捷鍵
@@ -65,6 +65,6 @@ Windows Form<xref:System.Windows.Forms.Label>控制項可以用來定義其他�
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：調整 Windows Forms Label 控制項的大小使符合其內容](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [如何：調整大小以容納其內容的 Windows Form Label 控制項](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
 - [Label 控制項概觀](label-control-overview-windows-forms.md)
 - [Label 控制項](label-control-windows-forms.md)

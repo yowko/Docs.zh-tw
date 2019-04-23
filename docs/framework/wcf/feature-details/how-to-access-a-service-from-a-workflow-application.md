@@ -3,10 +3,10 @@ title: 如何：存取來自工作流程應用程式的服務
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
 ms.openlocfilehash: 178fb04244cb3e5075722877fdd3e2b5a92b8502
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309312"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>如何：存取來自工作流程應用程式的服務
@@ -65,5 +65,5 @@ ms.locfileid: "59309312"
 ## <a name="see-also"></a>另請參閱
 
 - [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [HOW TO：使用傳訊活動建立工作流程服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
-- [從 Web 專案的工作流程中取用 WCF 服務](https://go.microsoft.com/fwlink/?LinkId=207725)
+- [如何：搭配訊息活動建立工作流程服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
+- [使用 WCF 服務，從工作流程中的 Web 專案](https://go.microsoft.com/fwlink/?LinkId=207725)

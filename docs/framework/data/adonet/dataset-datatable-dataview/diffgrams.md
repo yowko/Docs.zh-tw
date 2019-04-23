@@ -3,10 +3,10 @@ title: DiffGram
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
 ms.openlocfilehash: 048c5331028bbe2bb232302637dbb12bcdd2adc3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313511"
 ---
 # <a name="diffgrams"></a>DiffGram
@@ -85,7 +85,7 @@ DiffGram 是 XML 格式，可用來識別資料項目的目前和原始版本。
 |----------------|-----------------|  
 |**id**|用來在項目進行配對 **\<before>： 之前 >** 並 **\<diffgr:errors >** 區塊中的項目**\<*****DataInstance*** **>** 區塊。 值與**diffgr: id**註解會採用 *[TableName] [RowIdentifier]*。 例如：`<Customers diffgr:id="Customers1">`。|  
 |**parentId**|識別哪個項目**\<** ***DataInstance*** **>** 區塊是目前項目的父項目。 值與**diffgr: parentid**註解會採用 *[TableName] [RowIdentifier]*。 例如：`<Orders diffgr:parentId="Customers1">`。|  
-|**hasChanges**|識別中的資料列**\<** ***DataInstance*** **>** 封鎖，因為修改。 **HasChanges**註釋可以具有下列兩個值之一：<br /><br /> **inserted**<br /> 識別**Added**資料列。<br /><br /> **modified**<br /> 識別**Modified**包含資料列**原始**中的資料列版本 **\<before>： 之前 >** 區塊。 請注意， **Deleted**資料列會有**原始**中的資料列版本 **\<before>： 之前 >** 區塊，但會在沒有註釋項目**\<**  ***DataInstance*** **>** 區塊。|  
+|**hasChanges**|識別中的資料列**\<** ***DataInstance*** **>** 封鎖，因為修改。 **HasChanges**註釋可以具有下列兩個值之一：<br /><br /> **inserted**<br /> 識別**Added**資料列。<br /><br /> **修改**<br /> 識別**Modified**包含資料列**原始**中的資料列版本 **\<before>： 之前 >** 區塊。 請注意， **Deleted**資料列會有**原始**中的資料列版本 **\<before>： 之前 >** 區塊，但會在沒有註釋項目**\<**  ***DataInstance*** **>** 區塊。|  
 |**hasErrors**|識別中的資料列**\<** ***DataInstance*** **>** 區塊**RowError**。 錯誤項目會置於 **\<diffgr:errors >** 區塊。|  
 |**錯誤**|包含的文字**RowError**內的特定項目的 **\<diffgr:errors >** 區塊。|  
   
@@ -133,8 +133,8 @@ DiffGram 是 XML 格式，可用來識別資料項目的目前和原始版本。
   
 ## <a name="see-also"></a>另請參閱
 
-- [在資料集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
 - [從 XML 載入資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [將資料集內容當做 XML 資料寫入](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
+- [將資料集內容當作 XML 資料寫入](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
 - [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -3,10 +3,10 @@ title: 單一 ListenUri 的多個端點
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
 ms.openlocfilehash: 6249690b7fdc95affd21eee13e0c6e2af1c4f8a0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312354"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>單一 ListenUri 的多個端點
@@ -39,7 +39,7 @@ ms.locfileid: "59312354"
   
  這三個端點都會裝載在相同的 `ListenUri`，並使用相同的 `binding`。相同 `ListenUri` 上的端點必須具有相同的繫結，這樣才可以共用接聽電腦上該實際位址之訊息的單一通道堆疊。 每個端點的 `address` 為 URN。雖然一般來說，位址表示實際位置，事實上位址可以是任何種類的 URI，因為位址的用途就是比對和篩選，如本範例所示。  
   
- 因為所有的三個端點都共用相同`ListenUri`，當訊息抵達時，Windows Communication Foundation (WCF) 必須決定訊息的目的地的哪一個端點。 每個端點都具有由兩個部分組成的訊息篩選條件：位址篩選條件和合約篩選條件。 位址篩選條件會比對 SOAP 訊息的 `To` 和服務端點的位址。 例如，只有指定 `To "Urn:OtherEcho"` 的訊息是這個服務第三個端點的候選。 合約篩選條件會比對與特定合約作業相關聯的動作。 例如，具有 `IEcho` 動作的訊息。 `Echo` 符合這個服務中，第二和第三個端點的合約篩選條件，因為這兩個端點都會裝載`IEcho`合約。  
+ 因為所有的三個端點都共用相同`ListenUri`，當訊息抵達時，Windows Communication Foundation (WCF) 必須決定訊息的目的地的哪一個端點。 每個端點都具有由兩個部分組成的訊息篩選條件：位址篩選條件和合約篩選條件。 位址篩選條件會比對 SOAP 訊息的 `To` 和服務端點的位址。 例如，只有指定 `To "Urn:OtherEcho"` 的訊息是這個服務第三個端點的候選。 合約篩選條件會比對與特定合約作業相關聯的動作。 例如，具有 `IEcho` 動作的訊息。 `Echo` 會比對這個服務第二和第三個端點的合約篩選條件，因為這兩個端點都會裝載 `IEcho` 合約。  
   
  因此，結合位址篩選條件和合約篩選條件之後，就可以將抵達這個服務之 `ListenUri` 的每個訊息路由至正確的端點。 第三個端點與其他兩個端點不同，它會接受從其他端點傳送至不同位址的訊息。 第一個和第二個端點可以依合約 (傳入訊息的動作) 區分。  
   

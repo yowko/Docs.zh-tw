@@ -8,10 +8,10 @@ helpviewer_keywords:
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
 ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315682"
 ---
 # <a name="dependency-property-value-precedence"></a>相依性屬性值優先順序
@@ -39,35 +39,35 @@ ms.locfileid: "59315682"
 ## <a name="dependency-property-setting-precedence-list"></a>相依性屬性設定優先順序清單  
  以下是屬性系統在指派相依性屬性的執行階段值時，所使用的決定順序。 最高優先順序會先列出。 此清單更進一步說明了[相依性屬性概觀](dependency-properties-overview.md)中所述的部分概要。  
   
-1. **屬性系統強制型轉。** 如需強制型轉的詳細資訊，請參閱本主題稍後的[強制型轉、動畫和基底值](#animations)。  
+1. **屬性系統強制型轉**： 如需強制型轉的詳細資訊，請參閱本主題稍後的[強制型轉、動畫和基底值](#animations)。  
   
-2. **作用中動畫或具有 Hold 行為的動畫。** 屬性的動畫必須優先於基底 (非動畫) 值，才能有任何實際效果，即使該值是在本機設定也一樣。 如需詳細資訊，請參閱本主題稍後的[強制型轉、動畫和基底值](#animations)。  
+2. **作用中動畫或具有 Hold 行為的動畫**： 屬性的動畫必須優先於基底 (非動畫) 值，才能有任何實際效果，即使該值是在本機設定也一樣。 如需詳細資訊，請參閱本主題稍後的[強制型轉、動畫和基底值](#animations)。  
   
-3. **本機值。** 可能透過方便的 「 包裝函式 」 屬性，這也等同於設定中的屬性或屬性項目設定區域數值[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，或藉由呼叫<xref:System.Windows.DependencyObject.SetValue%2A>[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]使用特定的執行個體的屬性。 如果使用繫結或資源來設定區域數值，其在優先順序中的作用就如同設定直接值。  
+3. **區域數值**： 可能透過方便的 「 包裝函式 」 屬性，這也等同於設定中的屬性或屬性項目設定區域數值[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，或藉由呼叫<xref:System.Windows.DependencyObject.SetValue%2A>[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]使用特定的執行個體的屬性。 如果使用繫結或資源來設定區域數值，其在優先順序中的作用就如同設定直接值。  
   
-4. **TemplatedParent 範本屬性。** 項目具有<xref:System.Windows.FrameworkElement.TemplatedParent%2A>是建立為範本的一部分 (<xref:System.Windows.Controls.ControlTemplate>或<xref:System.Windows.DataTemplate>)。 如需何時套用此屬性的詳細資訊，請參閱本主題稍後的 [TemplatedParent](#templatedparent)。 在範本內，優先順序如下：  
+4. **TemplatedParent 範本屬性**： 項目具有<xref:System.Windows.FrameworkElement.TemplatedParent%2A>是建立為範本的一部分 (<xref:System.Windows.Controls.ControlTemplate>或<xref:System.Windows.DataTemplate>)。 如需何時套用此屬性的詳細資訊，請參閱本主題稍後的 [TemplatedParent](#templatedparent)。 在範本內，優先順序如下：  
   
     1.  從觸發<xref:System.Windows.FrameworkElement.TemplatedParent%2A>範本。  
   
     2.  屬性集 (通常是透過[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]屬性) 中<xref:System.Windows.FrameworkElement.TemplatedParent%2A>範本。  
   
-5. **隱含樣式。** 僅適用於 `Style` 屬性。 `Style` 屬性是由具有符合項目類型之索引鍵的任何樣式資源所填入。 該樣式資源必須位於頁面或應用程式中；查閱隱含樣式資源不會進行到主題中。  
+5. **隱含樣式**： 僅適用於 `Style` 屬性。 `Style` 屬性是由具有符合項目類型之索引鍵的任何樣式資源所填入。 該樣式資源必須位於頁面或應用程式中；查閱隱含樣式資源不會進行到主題中。  
   
-6. **樣式觸發程序。** 來自於頁面或應用程式之樣式內的觸發程序 (這些樣式可為明確或隱含樣式，但不能來自於預設樣式，預設樣式的優先順序較低)。  
+6. **樣式觸發程序**： 來自於頁面或應用程式之樣式內的觸發程序 (這些樣式可為明確或隱含樣式，但不能來自於預設樣式，預設樣式的優先順序較低)。  
   
-7. **樣板觸發程序。** 樣式內之範本或直接套用之範本中的任何觸發程序。  
+7. **樣板觸發程序**： 樣式內之範本或直接套用之範本中的任何觸發程序。  
   
-8. **樣式 setter。** 從數值<xref:System.Windows.Setter>樣式從網頁或應用程式內。  
+8. **樣式 setter**： 從數值<xref:System.Windows.Setter>樣式從網頁或應用程式內。  
   
-9. **預設 （主題） 樣式。** 如需何時套用此樣式，以及主題樣式與主題樣式內範本之關聯的詳細資訊，請參閱本主題稍後的[預設 (主題) 樣式](#themestyles)。 在預設樣式內，優先順序如下：  
+9. **預設 (主題) 樣式**： 如需何時套用此樣式，以及主題樣式與主題樣式內範本之關聯的詳細資訊，請參閱本主題稍後的[預設 (主題) 樣式](#themestyles)。 在預設樣式內，優先順序如下：  
   
     1.  主題樣式中的作用中觸發程序。  
   
     2.  主題樣式中的 setter。  
   
-10. **繼承。** 有幾個相依性屬性會從父項目繼承值到子項目，因此無須在整個應用程式的每一個項目上特別設定。 如需詳細資訊，請參閱[屬性值繼承](property-value-inheritance.md)。  
+10. **繼承**： 有幾個相依性屬性會從父項目繼承值到子項目，因此無須在整個應用程式的每一個項目上特別設定。 如需詳細資訊，請參閱[屬性值繼承](property-value-inheritance.md)。  
   
-11. **從相依性屬性中繼資料的預設值。** 任何指定的相依性屬性都可能會有屬性系統註冊為該特定屬性建立的預設值。 此外，繼承相依性屬性的衍生類別可選擇根據類型覆寫該中繼資料 (包括預設值)。 如需詳細資訊，請參閱[相依性屬性中繼資料](dependency-property-metadata.md)。 因為會在預設值之前檢查繼承，所以對繼承的屬性而言，父項目的預設值會優先於子項目。  因此，如果未在任何位置設定可繼承的屬性，就會使用在根項目或父項目上指定的預設值，而不是子項目的預設值。  
+11. **來自相依性屬性中繼資料的預設值**： 任何指定的相依性屬性都可能會有屬性系統註冊為該特定屬性建立的預設值。 此外，繼承相依性屬性的衍生類別可選擇根據類型覆寫該中繼資料 (包括預設值)。 如需詳細資訊，請參閱[相依性屬性中繼資料](dependency-property-metadata.md)。 因為會在預設值之前檢查繼承，所以對繼承的屬性而言，父項目的預設值會優先於子項目。  因此，如果未在任何位置設定可繼承的屬性，就會使用在根項目或父項目上指定的預設值，而不是子項目的預設值。  
   
 <a name="templatedparent"></a>   
 ## <a name="templatedparent"></a>TemplatedParent  
@@ -77,9 +77,9 @@ ms.locfileid: "59315682"
 ## <a name="the-style-property"></a>Style 屬性  
  上述查閱順序適用於所有可能的相依性屬性，但有一個例外：<xref:System.Windows.FrameworkElement.Style%2A>屬性。 <xref:System.Windows.FrameworkElement.Style%2A>屬性是唯一的它無法本身能設定樣式，因此不會套用優先順序項目 5 至 8。 此外，建立動畫，或將強制轉型<xref:System.Windows.FrameworkElement.Style%2A>不建議您 (和動畫<xref:System.Windows.FrameworkElement.Style%2A>需要自訂動畫類別)。 這會保留三種方式，<xref:System.Windows.FrameworkElement.Style%2A>可能設定的屬性：  
   
--   **明確樣式。** <xref:System.Windows.FrameworkElement.Style%2A>直接設定屬性。 在大多數情況下，樣式不會內嵌定義，而是使用明確索引鍵將它當做資源參考。 在此情況下，Style 屬性本身就會當做區域數值，也就是優先順序項目 3。  
+-   **明確樣式**： <xref:System.Windows.FrameworkElement.Style%2A>直接設定屬性。 在大多數情況下，樣式不會內嵌定義，而是使用明確索引鍵將它當做資源參考。 在此情況下，Style 屬性本身就會當做區域數值，也就是優先順序項目 3。  
   
--   **隱含樣式。** <xref:System.Windows.FrameworkElement.Style%2A>屬性不會直接設定。 不過， <xref:System.Windows.FrameworkElement.Style%2A> （頁面、 應用程式） 時，資源查閱序列中某一層級存在，而且做為索引鍵使用的樣式會套用至型別對應的資源索引鍵。 在此情況下，<xref:System.Windows.FrameworkElement.Style%2A>屬性本身就會依優先順序，順序為項目 5 中識別。 使用偵測到此狀況<xref:System.Windows.DependencyPropertyHelper>對抗<xref:System.Windows.FrameworkElement.Style%2A>屬性，並尋找<xref:System.Windows.BaseValueSource.ImplicitStyleReference>結果中。  
+-   **隱含樣式**： <xref:System.Windows.FrameworkElement.Style%2A>屬性不會直接設定。 不過， <xref:System.Windows.FrameworkElement.Style%2A> （頁面、 應用程式） 時，資源查閱序列中某一層級存在，而且做為索引鍵使用的樣式會套用至型別對應的資源索引鍵。 在此情況下，<xref:System.Windows.FrameworkElement.Style%2A>屬性本身就會依優先順序，順序為項目 5 中識別。 使用偵測到此狀況<xref:System.Windows.DependencyPropertyHelper>對抗<xref:System.Windows.FrameworkElement.Style%2A>屬性，並尋找<xref:System.Windows.BaseValueSource.ImplicitStyleReference>結果中。  
   
 -   **預設樣式**也稱為**主題樣式**。 <xref:System.Windows.FrameworkElement.Style%2A>屬性未直接設定，而且事實上會讀取為`null`執行階段為止。 在此情況下，樣式會來自屬於 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 展示引擎一部分的執行階段主題評估。  
   

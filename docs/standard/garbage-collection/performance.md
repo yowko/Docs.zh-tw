@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69a11e99966467de005ab92d3dcdebaa70bbdbe4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397978"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310560"
 ---
 # <a name="garbage-collection-and-performance"></a>記憶體回收和效能
 <a name="top"></a> 本主題描述記憶體回收和記憶體使用量的相關問題。 它解決關於 Managed 堆積的問題，並說明如何將記憶體回收對應用程式的影響降至最低。 每個問題已連結至程序，可讓您用來調查問題。  
@@ -22,7 +22,7 @@ ms.locfileid: "47397978"
   
 -   [效能分析工具](#performance_analysis_tools)  
   
--   [針對效能問題進行疑難排解](#troubleshooting_performance_issues)  
+-   [效能問題疑難排解](#troubleshooting_performance_issues)  
   
 -   [疑難排解方針](#troubleshooting_guidelines)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "47397978"
   
 -   [記憶體回收行程回收物件速度不夠快](#Issue_NotFastEnough)  
   
--   [Managed 堆積太過分散](#Issue_Fragmentation)  
+-   [受控堆積太過分散](#Issue_Fragmentation)  
   
 -   [記憶體回收暫停太長](#Issue_LongPauses)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "47397978"
   
 |效能檢查|  
 |------------------------|  
-|[判斷記憶體不足例外狀況是否為 Managed。](#OOMIsManaged)<br /><br /> [判斷可以保留多少虛擬記憶體。](#GetVM)<br /><br /> [判斷是否有足夠的實體記憶體。](#Physical)|  
+|[判斷記憶體不足例外狀況是否已受控。](#OOMIsManaged)<br /><br /> [判斷可以保留多少虛擬記憶體。](#GetVM)<br /><br /> [判斷是否有足夠的實體記憶體。](#Physical)|  
   
  如果您判斷例外狀況不合法，請連絡 Microsoft 客戶服務及支援，並提供下列資訊：  
   
@@ -115,7 +115,7 @@ ms.locfileid: "47397978"
   
 |效能檢查|  
 |------------------------|  
-|[判斷可以保留多少虛擬記憶體。](#GetVM)<br /><br /> [判斷 Managed 堆積正在認可的記憶體數量。](#ManagedHeapCommit)<br /><br /> [判斷 Managed 堆積保留的記憶體數量。](#ManagedHeapReserve)<br /><br /> [判斷層代 2 的大型物件。](#ExamineGen2)<br /><br /> [判斷物件的參考。](#ObjRef)|  
+|[判斷可以保留多少虛擬記憶體。](#GetVM)<br /><br /> [判斷受控堆積正在認可的記憶體數量。](#ManagedHeapCommit)<br /><br /> [判斷受控堆積保留的記憶體數量。](#ManagedHeapReserve)<br /><br /> [判斷層代 2 中的大型物件。](#ExamineGen2)<br /><br /> [判斷物件的參考。](#ObjRef)|  
   
 <a name="Issue_NotFastEnough"></a>   
 ### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a>問題：記憶體回收行程回收物件速度不夠快  
@@ -128,7 +128,7 @@ ms.locfileid: "47397978"
 |[檢查物件的參考。](#ObjRef)<br /><br /> [判斷是否已執行完成項。](#Induce)<br /><br /> [判斷是否有等候完成的物件。](#Finalize)|  
   
 <a name="Issue_Fragmentation"></a>   
-### <a name="issue-the-managed-heap-is-too-fragmented"></a>問題：Managed 堆積太過分散  
+### <a name="issue-the-managed-heap-is-too-fragmented"></a>問題：受控堆積太過分散  
  分散層級的計算方式是可用空間佔層代配置記憶體總數的比例。 針對層代 2，可接受的分散層級是不超過 20%。 層代 2 可能會非常大，因此分散比例比絕對值更重要。  
   
  層代 0 中有很多可用空間不成問題，因為這是配置新物件配置所在的層代。  
@@ -151,7 +151,7 @@ ms.locfileid: "47397978"
   
 |效能檢查|  
 |------------------------|  
-|[判斷 Managed 堆積中的可用空間數量。](#Fragmented)<br /><br /> [判斷被固定的物件數目。](#Pinned)|  
+|[判斷受控堆積中的可用空間數量。](#Fragmented)<br /><br /> [判斷被固定的物件數目。](#Pinned)|  
   
  如果您認為是不合法的分散原因，請連絡 Microsoft 客戶服務及支援中心。  
   
@@ -236,17 +236,17 @@ ms.locfileid: "47397978"
   
 -   [判斷問題是否由於記憶體回收所造成。](#IsGC)  
   
--   [判斷記憶體不足例外狀況是否為 Managed。](#OOMIsManaged)  
+-   [判斷記憶體不足例外狀況是否已受控。](#OOMIsManaged)  
   
 -   [判斷可以保留多少虛擬記憶體。](#GetVM)  
   
 -   [判斷是否有足夠的實體記憶體。](#Physical)  
   
--   [判斷 Managed 堆積正在認可的記憶體數量。](#ManagedHeapCommit)  
+-   [判斷受控堆積正在認可的記憶體數量。](#ManagedHeapCommit)  
   
--   [判斷 Managed 堆積保留的記憶體數量。](#ManagedHeapReserve)  
+-   [判斷受控堆積保留的記憶體數量。](#ManagedHeapReserve)  
   
--   [判斷層代 2 的大型物件。](#ExamineGen2)  
+-   [判斷層代 2 中的大型物件。](#ExamineGen2)  
   
 -   [判斷物件的參考。](#ObjRef)  
   
@@ -254,7 +254,7 @@ ms.locfileid: "47397978"
   
 -   [判斷是否有等候完成的物件。](#Finalize)  
   
--   [判斷 Managed 堆積中的可用空間數量。](#Fragmented)  
+-   [判斷受控堆積中的可用空間數量。](#Fragmented)  
   
 -   [判斷被固定的物件數目。](#Pinned)  
   
@@ -278,7 +278,7 @@ ms.locfileid: "47397978"
 <a name="OOMIsManaged"></a>   
 ##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>判斷記憶體不足例外狀況是否為 Managed  
   
-1.  在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入列印例外狀況 (**pe**) 命令：  
+1. 在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入列印例外狀況 (**pe**) 命令：  
   
      **!pe**  
   
@@ -292,7 +292,7 @@ ms.locfileid: "47397978"
     StackTrace (generated):  
     ```  
   
-2.  如果輸出未指定例外狀況，您必須判斷記憶體不足例外狀況是來自哪一個執行緒。 在偵錯工具中輸入下列命令，顯示所有執行緒與其呼叫堆疊：  
+2. 如果輸出未指定例外狀況，您必須判斷記憶體不足例外狀況是來自哪一個執行緒。 在偵錯工具中輸入下列命令，顯示所有執行緒與其呼叫堆疊：  
   
      **~\*kb**  
   
@@ -302,7 +302,7 @@ ms.locfileid: "47397978"
     28adfb44 7923918f 5b61f2b4 00000000 5b61f2b4 mscorwks!RaiseTheException+0xa0   
     ```  
   
-3.  您可以使用下列命令來傾印巢狀例外狀況。  
+3. 您可以使用下列命令來傾印巢狀例外狀況。  
   
      **!pe -nested**  
   
@@ -344,9 +344,9 @@ ms.locfileid: "47397978"
 <a name="Physical"></a>   
 ##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>判斷是否有足夠的實體記憶體  
   
-1.  啟動 Windows 工作管理員。  
+1. 啟動 Windows 工作管理員。  
   
-2.  在 [效能] 索引標籤上，查看已認可的值。 (在 Windows 7 中，查看 [系統群組] 中的 [認可 (KB)]。)  
+2. 在 [效能] 索引標籤上，查看已認可的值。 (在 Windows 7 中，查看 [系統群組] 中的 [認可 (KB)]。)  
   
      如果 [總計] 很接近 [限制]，則您的實體記憶體不足。  
   
@@ -415,7 +415,7 @@ ms.locfileid: "47397978"
   
      如果 Managed 堆積很大，**dumpheap** 可能需要一些時間才能完成。  
   
-     您可以從輸出的最後幾行開始分析，因為它們列出使用最多空間的物件。 例如:   
+     您可以從輸出的最後幾行開始分析，因為它們列出使用最多空間的物件。 例如：  
   
     ```  
     2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo  
@@ -494,13 +494,13 @@ ms.locfileid: "47397978"
 <a name="Finalize"></a>   
 ##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>判斷是否有等候完成的物件  
   
-1.  在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：  
+1. 在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：  
   
      **!finalizequeue**  
   
      查看準備好進行最終處理的物件數目。 如果數量很高，您必須檢查為什麼這些完成項完全沒有進度，或進行的速度不夠快。  
   
-2.  若要取得執行緒的輸出，請輸入下列命令：  
+2. 若要取得執行緒的輸出，請輸入下列命令：  
   
      **threads -special**  
   
@@ -554,7 +554,7 @@ ms.locfileid: "47397978"
   
 -   計算層代 0 所使用的空間：  
   
-     **?49e05d04-0x49521f8c**  
+     **? 49e05d04-0x49521f8c**  
   
      結果如下所示。 層代 0 大約 9 MB。  
   

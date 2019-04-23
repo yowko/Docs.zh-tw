@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
 ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313563"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
@@ -266,7 +266,7 @@ ms.locfileid: "59313563"
   
 |區域|資源|  
 |----------|--------------|  
-|Managed 程式碼|[模式和實務應用程式的安全性指導方針](https://go.microsoft.com/fwlink/?LinkId=117426)|  
+|Managed 程式碼|[Patterns and Practices Security Guidance for Applications](https://go.microsoft.com/fwlink/?LinkId=117426) (應用程式的模式和實務安全性指南)|  
 |[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[程式碼存取安全性](../misc/code-access-security.md)|  
 |[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 部分信任安全性](wpf-partial-trust-security.md)|  
@@ -276,7 +276,7 @@ ms.locfileid: "59313563"
 - [WPF 部分信任安全性](wpf-partial-trust-security.md)
 - [WPF 安全性策略 – 平台安全性](wpf-security-strategy-platform-security.md)
 - [WPF 安全性策略 – 安全性工程](wpf-security-strategy-security-engineering.md)
-- [模式和實務應用程式的安全性指導方針](https://go.microsoft.com/fwlink/?LinkId=117426)
+- [Patterns and Practices Security Guidance for Applications](https://go.microsoft.com/fwlink/?LinkId=117426) (應用程式的模式和實務安全性指南)
 - [程式碼存取安全性](../misc/code-access-security.md)
 - [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)
 - [XAML 概觀 (WPF)](./advanced/xaml-overview-wpf.md)

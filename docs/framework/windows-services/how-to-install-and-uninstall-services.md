@@ -1,5 +1,5 @@
 ---
-title: HOW TO：安裝和解除安裝 Windows 服務
+title: 作法：安裝和解除安裝 Windows 服務
 ms.date: 02/05/2019
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 43b5ad2f346406897e8bcbcce5660a6c9524f9af
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 0119fee443aafd1d4215260d2cf42cec9f7eba74
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826251"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308467"
 ---
-# <a name="how-to-install-and-uninstall-windows-services"></a>HOW TO：安裝和解除安裝 Windows 服務
+# <a name="how-to-install-and-uninstall-windows-services"></a>作法：安裝和解除安裝 Windows 服務
 如果您正在使用 .NET Framework 開發 Windows 服務，您可以使用 [*InstallUtil.exe*](../tools/installutil-exe-installer-tool.md) 命令列公用程式來快速安裝服務應用程式。 開發人員若想發行使用者可安裝及解除安裝的 Windows 服務，則應該使用 InstallShield。 如需詳細資訊，請參閱[建立安裝程式套件 (Windows 用戶端)](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client)。
   
 > [!WARNING]
@@ -34,13 +34,13 @@ ms.locfileid: "55826251"
   
 ### <a name="install-your-service-manually"></a>以手動方式安裝您的服務  
   
-1.  從 [開始] 功能表，選取 [Visual Studio \<版本>] 目錄，然後選取 [VS \<版本> 開發人員命令提示字元]。
+1. 從 [開始] 功能表，選取 [Visual Studio \<版本>] 目錄，然後選取 [VS \<版本> 開發人員命令提示字元]。
   
      隨即顯示 Visual Studio 開發人員命令提示字元。 
   
-2.  存取您的專案已編譯之可執行檔所在的目錄。  
+2. 存取您的專案已編譯之可執行檔所在的目錄。  
   
-3.  從命令提示字元，以您專案的可執行檔作為參數來執行 *InstallUtil.exe*：  
+3. 從命令提示字元，以您專案的可執行檔作為參數來執行 *InstallUtil.exe*：  
   
     ```console
     installutil <yourproject>.exe  
@@ -58,7 +58,7 @@ ms.locfileid: "55826251"
   
      隨即顯示 Visual Studio 開發人員命令提示字元。  
   
-2.  從命令提示字元，以您專案的輸出作為參數來執行 *InstallUtil.exe*：  
+2. 從命令提示字元，以您專案的輸出作為參數來執行 *InstallUtil.exe*：  
   
     ```console  
     installutil /u <yourproject>.exe  
@@ -67,7 +67,8 @@ ms.locfileid: "55826251"
 3. 刪除服務的可執行檔之後，服務可能還是會在登錄中。 如果是這種情況，請使用命令 [sc delete](/windows-server/administration/windows-commands/sc-delete) 來從登錄中移除服務項目。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Windows 服務應用程式簡介](../windows-services/introduction-to-windows-service-applications.md)
-- [如何：建立 Windows 服務](../windows-services/how-to-create-windows-services.md)
-- [如何：將安裝程式新增至服務應用程式](../windows-services/how-to-add-installers-to-your-service-application.md)
+- [作法：建立 Windows 服務](../windows-services/how-to-create-windows-services.md)
+- [作法：將安裝程式新增至服務應用程式](../windows-services/how-to-add-installers-to-your-service-application.md)
 - [Installutil.exe (安裝程式工具)](../tools/installutil-exe-installer-tool.md)

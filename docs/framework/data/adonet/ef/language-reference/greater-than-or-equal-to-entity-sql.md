@@ -3,10 +3,10 @@ title: '>= (大於或等於) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 70780ac4-0123-4da8-b731-8af856daffe3
 ms.openlocfilehash: b5a8a834c325cca38e2c106ca3f8ee829dd699b2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317138"
 ---
 # <a name="-greater-than-or-equal-to-entity-sql"></a>> = (大於或等於) (Entity SQL)
@@ -23,7 +23,7 @@ expression >= expression
  任何有效的運算式。 兩個運算式都必須有可隱含轉換的資料型別。  
   
 ## <a name="result-types"></a>結果型別  
- `true` 如果左的運算式的值大於或等於右邊的運算式;否則， `false`。  
+ 如果左運算式的值大於或等於右運算式則為`true` ；否則為 `false`。  
   
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢使用 >= 比較運算子來比較兩個運算式，以判斷左運算式的值是否大於或等於右運算式。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  

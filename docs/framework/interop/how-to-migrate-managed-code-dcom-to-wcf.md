@@ -1,17 +1,17 @@
 ---
-title: HOW TO：將受控碼 DCOM 移轉至 WCF
+title: 作法：將受控碼 DCOM 移轉至 WCF
 ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a417c94106988e07e2b2ab2766c691f081ca7006
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74acea566e4b0e407e86cb67d3f521f18c2d68af
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734512"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307713"
 ---
-# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>HOW TO：將受控碼 DCOM 移轉至 WCF
+# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>作法：將受控碼 DCOM 移轉至 WCF
 對於分散式環境中伺服器與用戶端之間的 Managed 程式碼呼叫，Windows Communication Foundation (WCF) 是比分散式元件物件模型 (DCOM) 更建議使用的安全選擇。 本文將說明如何在下列情節中將程式碼從 DCOM 移轉至 WCF。  
   
 -   遠端服務以傳值方式將物件傳回給用戶端  
@@ -302,7 +302,7 @@ public interface ISessionBoundObject
     }  
 ```  
   
- 以下是此服務的實作： 這個實作會維護單一通道處理站來建立工作階段物件。  呼叫 `GetInstanceAddress` 時，它會建立通道，並建立指向與這個通道關聯之遠端位址的 <xref:System.ServiceModel.EndpointAddress10> 物件。   <xref:System.ServiceModel.EndpointAddress10> 是能夠以傳值方式傳回至用戶端的資料類型。  
+ 以下是此服務的實作： 此實作會維護單一通道處理站來建立工作階段物件。  呼叫 `GetInstanceAddress` 時，它會建立通道，並建立指向與這個通道關聯之遠端位址的 <xref:System.ServiceModel.EndpointAddress10> 物件。   <xref:System.ServiceModel.EndpointAddress10> 是能夠以傳值方式傳回至用戶端的資料類型。  
   
 ```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
@@ -325,9 +325,9 @@ public class SessionBoundFactory : ISessionBoundFactory
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>步驟 3：設定並啟動 WCF 服務  
  若要裝載這些服務，您必須在伺服器的組態檔 (web.config) 加入下列內容。  
   
-1.  加入宣告描述工作階段物件端點的 `<client>` 區段。  在此情節中，伺服器也做為用戶端，並必須設定為啟用此設定。  
+1. 加入宣告描述工作階段物件端點的 `<client>` 區段。  在此情節中，伺服器也做為用戶端，並必須設定為啟用此設定。  
   
-2.  在 `<services>` 區段中，宣告處理站和工作階段物件的服務端點。  這可讓用戶端與服務端點進行通訊、 取得 <xref:System.ServiceModel.EndpointAddress10> 並建立工作階段通道。  
+2. 在 `<services>` 區段中，宣告處理站和工作階段物件的服務端點。  這可讓用戶端與服務端點進行通訊、 取得 <xref:System.ServiceModel.EndpointAddress10> 並建立工作階段通道。  
   
  以下是具有這些設定的範例組態檔：  
   
@@ -390,13 +390,13 @@ sessionBoundServiceHost.Open();
   
  若要呼叫服務，請將程式碼加入用戶端以執行下列動作：  
   
-1.  建立 `ISessionBoundFactory` 服務的通道。  
+1. 建立 `ISessionBoundFactory` 服務的通道。  
   
-2.  使用通道叫用 `ISessionBoundFactory` 服務，並取得 <xref:System.ServiceModel.EndpointAddress10> 物件。  
+2. 使用通道叫用 `ISessionBoundFactory` 服務，並取得 <xref:System.ServiceModel.EndpointAddress10> 物件。  
   
-3.  使用 <xref:System.ServiceModel.EndpointAddress10> 建立通道，以取得工作階段物件。  
+3. 使用 <xref:System.ServiceModel.EndpointAddress10> 建立通道，以取得工作階段物件。  
   
-4.  呼叫 `SetCurrentValue` 和 `GetCurrentValue` 方法，以示範仍會保持在多個呼叫之間使用相同的物件執行個體。  
+4. 呼叫 `SetCurrentValue` 和 `GetCurrentValue` 方法，以示範仍會保持在多個呼叫之間使用相同的物件執行個體。  
   
 ```csharp  
 ChannelFactory<ISessionBoundFactory> factory =  
@@ -422,6 +422,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)
 - [設計與實作服務](../../../docs/framework/wcf/designing-and-implementing-services.md)
 - [建置用戶端](../../../docs/framework/wcf/building-clients.md)

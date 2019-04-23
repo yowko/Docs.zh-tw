@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
 ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312172"
 ---
 # <a name="claims-based-authorization-using-wif"></a>使用 WIF 進行宣告式授權
@@ -60,4 +60,4 @@ ms.locfileid: "59312172"
   
 5. 如果結果為 true 則授與存取權限，如果為 false 則拒絕存取。 例如，規則可能是使用者必須年滿 21 歲，並且住在華盛頓州。  
   
- <xref:System.Security.Claims.ClaimsAuthorizationManager> 適合用來具體化您的應用程式中的宣告型授權的決策邏輯。 ClaimsAuthorizationManager 是隨附於 .NET 4.5 的 WIF 元件， 可讓您擷取傳入要求並實作您選擇的邏輯，根據傳入宣告制定授權決策。 如果必須變更授權邏輯，這就變得很重要。 在這種情況下，使用 ClaimsAuthorizationManager 既不會影響應用程式的完整性，還可以降低變更結果導致應用程式錯誤的可能性。 若要深入了解如何使用 ClaimsAuthorizationManager 實作宣告型存取控制，請參閱[How To:實作宣告授權在宣告感知 ASP.NET 應用程式中使用 WIF 與 ACS](https://go.microsoft.com/fwlink/?LinkID=247446)。
+ 如果您希望利用外部的決策邏輯來處理應用程式中的宣告式授權，<xref:System.Security.Claims.ClaimsAuthorizationManager> 就很有用。 ClaimsAuthorizationManager 是隨附於 .NET 4.5 的 WIF 元件， 可讓您擷取傳入要求並實作您選擇的邏輯，根據傳入宣告制定授權決策。 如果必須變更授權邏輯，這就變得很重要。 在這種情況下，使用 ClaimsAuthorizationManager 既不會影響應用程式的完整性，還可以降低變更結果導致應用程式錯誤的可能性。 若要深入了解如何使用 ClaimsAuthorizationManager 實作宣告型存取控制，請參閱[How To:實作宣告授權在宣告感知 ASP.NET 應用程式中使用 WIF 與 ACS](https://go.microsoft.com/fwlink/?LinkID=247446)。

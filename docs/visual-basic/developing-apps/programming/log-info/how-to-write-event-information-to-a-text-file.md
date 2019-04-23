@@ -1,5 +1,5 @@
 ---
-title: 作法：將事件資訊寫入至文字檔 (Visual Basic)
+title: HOW TO：將事件資訊寫入至文字檔 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs [Visual Studio], writing event information
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
 ms.openlocfilehash: e696ccb7327197c2f3a2468d30085dc6d390e034
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312707"
 ---
-# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>作法：將事件資訊寫入至文字檔 (Visual Basic)
+# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>HOW TO：將事件資訊寫入至文字檔 (Visual Basic)
 您可以使用 `My.Application.Log` 和 `My.Log` 物件來記錄應用程式中發生之事件的相關資訊。 這個範例示範如何使用 `My.Application.Log.WriteEntry` 方法將追蹤資訊記錄到記錄檔。  
   
 ### <a name="to-add-and-configure-the-file-log-listener"></a>新增和設定檔案記錄檔接聽程式  
@@ -71,4 +71,4 @@ ms.locfileid: "59312707"
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [作法：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [如何：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)

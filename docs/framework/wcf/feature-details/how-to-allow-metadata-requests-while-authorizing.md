@@ -8,10 +8,10 @@ helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
 ms.openlocfilehash: bea4f7e90df29678697fe6708bdc6a73145522db
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317697"
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>如何：授權時同時允許中繼資料要求
@@ -25,7 +25,7 @@ ms.locfileid: "59317697"
   
 2. 覆寫 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 方法。 方法會依據是否允許授權而傳回 `true` 或 `false`。 關於目前程式的資訊可在 <xref:System.ServiceModel.OperationContext> 傳給方法的參數找到。  
   
-3. 在覆寫中，如以下範例所示，檢查合約名稱、命名空間以及動作。 如果條件為有效的則傳回 `true.`  
+3. 在覆寫中，如以下範例所示，檢查合約名稱、命名空間以及動作。 若條件有效，會傳回 `true.`  
   
 4. 使用擴充點套用類別。 如需詳細資訊，請參閱[如何：建立自訂授權管理員服務](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)。  
   
@@ -38,5 +38,5 @@ ms.locfileid: "59317697"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [Authorization](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [使用身分識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

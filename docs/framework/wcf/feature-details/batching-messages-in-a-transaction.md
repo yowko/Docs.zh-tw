@@ -5,10 +5,10 @@ helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
 ms.openlocfilehash: 2d820087973e689514a0a19a7adc912f49e9d0a2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310521"
 ---
 # <a name="batching-messages-in-a-transaction"></a>批次處理異動中的訊息
@@ -20,11 +20,11 @@ ms.locfileid: "59310521"
 ## <a name="committing-a-transaction"></a>認可異動  
  批次處理的異動會根據下列原則進行認可：  
   
--   `MaxBatchSize`。 <xref:System.ServiceModel.Description.TransactedBatchingBehavior> 行為的屬性。 此屬性會決定放入批次中的訊息數目上限。 當到達此數目時，就會認可批次。 這個值並不是一項嚴格的限制，因此可以在收到此訊息數目之前認可批次。  
+-   `MaxBatchSize`. <xref:System.ServiceModel.Description.TransactedBatchingBehavior> 行為的屬性。 此屬性會決定放入批次中的訊息數目上限。 當到達此數目時，就會認可批次。 這個值並不是一項嚴格的限制，因此可以在收到此訊息數目之前認可批次。  
   
--   `Transaction Timeout`。 在經過 80% 的異動逾時之後，就會認可批次並且建立新批次。 這表示，如果完成交易的指定時間只剩不到 20%，就會認可交易。  
+-   `Transaction Timeout`. 在經過 80% 的異動逾時之後，就會認可批次並且建立新批次。 這表示，如果完成交易的指定時間只剩不到 20%，就會認可交易。  
   
--   `TransactionScopeRequired`。 當處理一批訊息，WCF 會尋找具有`TransactionScopeRequired`  =  `false`，它會認可批次，並重新開啟新的批次與第一個訊息回條上`TransactionScopeRequired`  =  `true`和`TransactionAutoComplete` = `true`.  
+-   `TransactionScopeRequired`. 當處理一批訊息，WCF 會尋找具有`TransactionScopeRequired`  =  `false`，它會認可批次，並重新開啟新的批次與第一個訊息回條上`TransactionScopeRequired`  =  `true`和`TransactionAutoComplete` = `true`.  
   
 -   如果佇列中已沒有任何訊息，即使尚未到達 `MaxBatchSize` 或尚未經過交易逾時的 80%，仍會認可目前的批次。  
   

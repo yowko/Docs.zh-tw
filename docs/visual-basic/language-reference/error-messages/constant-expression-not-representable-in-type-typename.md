@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30439
 ms.assetid: 0a842906-3bc5-4946-8a37-3e3da883ef63
 ms.openlocfilehash: 4f801337c07d6b3829aa6e0c535c434d8bd672b2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307661"
 ---
 # <a name="constant-expression-not-representable-in-type-typename"></a>型別中無法顯示常數運算式 '\<類型名稱 >'
@@ -25,5 +25,5 @@ ms.locfileid: "59307661"
   
 ## <a name="see-also"></a>另請參閱
 
-- [常數概觀](../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
+- [常數的概觀](../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [常數和列舉](../../../visual-basic/language-reference/constants-and-enumerations.md)

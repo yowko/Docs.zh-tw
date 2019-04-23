@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409441"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315760"
 ---
 # <a name="default-marshaling-behavior"></a>預設的封送處理行為
 Interop 封送處理會依據規則作業，這些規則指定與方法參數關聯的資料在 Managed 和 Unmanaged 記憶體之間傳遞時的運作方式。 這些內建規則會將這類封送處理活動當做資料類型轉換來控制；控制被呼叫者是否可以變更收到的資料，並將這些變更傳回給呼叫端；以及控制在哪些情況下，封送處理器會提供效能最佳化。  
@@ -64,11 +64,11 @@ BSTR MethodOne (BSTR b) {
   
  如果介面不是來自已知的物件，則封送處理器會執行下列作業：  
   
-1.  封送處理器會查詢物件是否有 **IProvideClassInfo2** 介面。 如果有的話，封送處理器會使用從 **IProvideClassInfo2.GetGUID** 傳回的 CLSID 來識別提供介面的 coclass。 如果先前已註冊組件，封送處理器就可以使用 CLSID 從登錄中找出包裝函式。  
+1. 封送處理器會查詢物件是否有 **IProvideClassInfo2** 介面。 如果有的話，封送處理器會使用從 **IProvideClassInfo2.GetGUID** 傳回的 CLSID 來識別提供介面的 coclass。 如果先前已註冊組件，封送處理器就可以使用 CLSID 從登錄中找出包裝函式。  
   
-2.  封送處理器會查詢介面是否有 **IProvideClassInfo** 介面。 如果有的話，封送處理器會使用從 **IProvideClassInfo.GetClassinfo** 傳回的 **ITypeInfo** 來判斷公開介面之類別的 CLSID。 封送處理器可以使用 CLSID 來找出包裝函式的中繼資料。  
+2. 封送處理器會查詢介面是否有 **IProvideClassInfo** 介面。 如果有的話，封送處理器會使用從 **IProvideClassInfo.GetClassinfo** 傳回的 **ITypeInfo** 來判斷公開介面之類別的 CLSID。 封送處理器可以使用 CLSID 來找出包裝函式的中繼資料。  
   
-3.  如果封送處理器仍然無法識別類別，則會以稱為 **System.__ComObject** 的泛型包裝函式類別來包裝介面。  
+3. 如果封送處理器仍然無法識別類別，則會以稱為 **System.__ComObject** 的泛型包裝函式類別來包裝介面。  
   
 ## <a name="default-marshaling-for-delegates"></a>委派的預設封送處理  
  根據呼叫的機制，Managed 委派會封送處理為 COM 介面或函式指標：  
@@ -166,9 +166,9 @@ internal class DelegateTest {
   
  本節提供下列格式化實值型別的相關資訊：  
   
--   [在平台叫用中使用的實值型別](#value-types-used-in-platform-invoke)  
+-   [在平台叫用中使用的實值類型](#value-types-used-in-platform-invoke)  
   
--   [在 COM Interop 中使用的實值型別](#value-types-used-in-com-interop)  
+-   [在 COM Interop 中使用的實值類型](#value-types-used-in-com-interop)  
   
  本主題除了描述格式化類型之外，還指出具有獨特封送處理行為的[系統實值型別](#system-value-types)。  
   
@@ -333,7 +333,7 @@ public class Point {
 ### <a name="value-types-used-in-com-interop"></a>在 COM Interop 中使用的實值類型  
  格式化類型也可以傳遞至 COM Interop 方法呼叫。 事實上，當匯出至類型程式庫時，實值類型會自動轉換成結構。 如下列範例所示，`Point` 實值類型會變成名為 `Point` 的類型定義 (typedef)。 `Point` typedef 會取代在類型程式庫中的所有 `Point` 實值類型的參考。  
   
- **型別程式庫呈現**  
+ **類型程式庫表示**  
   
 ```cpp  
 typedef struct tagPoint {  
@@ -440,6 +440,7 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)
 - [複製和 Pin](copying-and-pinning.md)
 - [陣列的預設封送處理](default-marshaling-for-arrays.md)

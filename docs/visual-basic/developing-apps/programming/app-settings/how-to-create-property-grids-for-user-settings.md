@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中建立使用者設定的屬性方格
+title: HOW TO：在 Visual Basic 中建立使用者設定的屬性方格
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], creating property grids for user settings
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - property grids
 ms.assetid: b0bc737e-50d1-43d1-a6df-268db6e6f91c
 ms.openlocfilehash: 5f4b962762aeecea65748c5456bc4a2d75595d4f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311613"
 ---
-# <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>作法：在 Visual Basic 中建立使用者設定的屬性方格
+# <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>HOW TO：在 Visual Basic 中建立使用者設定的屬性方格
 您可以使用 `My.Settings` 物件的使用者設定屬性填入 <xref:System.Windows.Forms.PropertyGrid> 控制項，以建立使用者設定的屬性方格。  
   
 > [!NOTE]
@@ -52,7 +52,7 @@ ms.locfileid: "59311613"
 ## <a name="see-also"></a>另請參閱
 
 - [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)
-- [作法：在 Visual Basic 中讀取應用程式設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
-- [作法：在 Visual Basic 中變更使用者設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
-- [作法：保存 Visual Basic 中的使用者設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
+- [如何：在 Visual Basic 中讀取應用程式設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
+- [如何：在 Visual Basic 中變更使用者設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
+- [如何：保存 Visual Basic 中的使用者設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
 - [管理應用程式設定 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)

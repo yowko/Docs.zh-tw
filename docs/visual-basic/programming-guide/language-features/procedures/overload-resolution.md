@@ -11,16 +11,16 @@ helpviewer_keywords:
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
 ms.openlocfilehash: 4f81c7377423899c142c4270f325bbd7ed20b877
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312237"
 ---
 # <a name="overload-resolution-visual-basic"></a>多載解析 (Visual Basic)
 當 Visual Basic 編譯器遇到定義在數個多載版本的程序的呼叫時，編譯器必須決定要呼叫的多載。 它會執行下列步驟：  
   
-1. **存取範圍。** 它會排除任何多載，以防止呼叫程式碼呼叫它的存取層級。  
+1. **協助工具。** 它會排除任何多載，以防止呼叫程式碼呼叫它的存取層級。  
   
 2. **參數的數目。** 它會排除任何在呼叫中定義不同數目的參數所提供的多載。  
   
@@ -62,12 +62,12 @@ ms.locfileid: "59312237"
 
 - [選擇性參數](./optional-parameters.md)
 - [參數陣列](./parameter-arrays.md)
-- [程序多載](./procedure-overloading.md)
-- [針對程序進行疑難排解](./troubleshooting-procedures.md)
-- [HOW TO：定義程序的多個版本](./how-to-define-multiple-versions-of-a-procedure.md)
-- [HOW TO：呼叫多載程序](./how-to-call-an-overloaded-procedure.md)
-- [HOW TO：多載使用選擇性參數的程序](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [HOW TO：多載使用不確定參數數目的程序](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
-- [多載程序的考量](./considerations-in-overloading-procedures.md)
-- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [程序多載化](./procedure-overloading.md)
+- [程序的疑難排解](./troubleshooting-procedures.md)
+- [如何：定義多個版本的程序](./how-to-define-multiple-versions-of-a-procedure.md)
+- [如何：呼叫多載程序](./how-to-call-an-overloaded-procedure.md)
+- [如何：多載會採用選擇性參數的程序](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [如何：多載不定數目參數的程序](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [多載化程序的考慮因素](./considerations-in-overloading-procedures.md)
+- [多載](../../../../visual-basic/language-reference/modifiers/overloads.md)
 - [擴充方法](./extension-methods.md)

@@ -10,10 +10,10 @@ ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c35e796333aa3a93b7a66416fe0d93b7b1f3837f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311951"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 工具
@@ -32,7 +32,7 @@ ms.locfileid: "59311951"
  [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
  從模組或資源檔中產生一個包含組件資訊清單的檔案。  
   
- [Aximp.exe (Windows Form ActiveX 控制項匯入工具)](../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
+ [Aximp.exe (Windows Forms ActiveX 控制項匯入工具)](../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
  將 COM 類型程式庫中的類型定義轉換為 Windows Form 控制項中的 ActiveX 控制項。  
   
  [Caspol.exe (程式碼存取安全性原則工具)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
@@ -107,7 +107,7 @@ ms.locfileid: "59311951"
  [Sn.exe (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
  幫助以強式名稱 (Strong Name) 建立組件。 這個工具提供了金鑰管理、簽章產生和簽章驗證的選項。  
   
- [SOS.dll (SOS 偵錯擴充功能)](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md)  
+ [SOS.dll (SOS 偵錯延伸模組)](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md)  
  提供內部通用語言執行平台環境的相關資訊，以協助您在 WinDbg.exe 偵錯工具和 Visual Studio 中偵錯 Managed 程式。  
   
  [SqlMetal.exe (程式碼產生工具)](../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)  
@@ -125,7 +125,7 @@ ms.locfileid: "59311951"
  [Winmdexp.exe (Windows 執行階段中繼資料匯出工具)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
  匯出已編譯成 .winmdobj 檔案的 .NET Framework 組件至 Windows 執行階段元件中，該組件已封裝為同時包含 Windows 執行階段中繼資料和實作資訊的 .winmd 檔案。  
   
- [Winres.exe (Windows Form 資源編輯器)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
+ [Winres.exe (Windows Forms 資源編輯器)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
  幫助您當地語系化 Windows Forms 所使用的使用者介面 (UI) 資源 (.resx 或 .resources 檔案)。 您可以解譯字串，然後調整大小、移動和隱藏控制項來容納當地語系化的字串。  
   
 ## <a name="related-sections"></a>相關章節  

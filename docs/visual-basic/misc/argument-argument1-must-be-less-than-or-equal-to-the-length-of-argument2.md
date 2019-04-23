@@ -5,10 +5,10 @@ f1_keywords:
 - vbrArgument_IndexLELength2
 ms.assetid: 10765f81-79c5-44c2-89c5-888253105b78
 ms.openlocfilehash: dd090b20e2d32ce8313720cc3cb0d3ef9fd76e72
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310339"
 ---
 # <a name="argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument-argument2"></a>引數 '\<引數 1 >' 必須是小於或等於引數的長度'\<引數 2 >'

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
 ms.openlocfilehash: 2815757bf9b00375f763673f18180bfbf51a165a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317438"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>HOW TO：以非同步方式呼叫 WCF 服務作業
@@ -40,7 +40,7 @@ ms.locfileid: "59317438"
          [!code-csharp[EventAsync#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#2)]
          [!code-vb[EventAsync#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#2)]  
   
-    -   <xref:System.EventArgs?displayProperty=nameWithType> 每個作業的類型 (表單的 <`operationName`>`CompletedEventArgs`) 與事件架構非同步呼叫方法搭配使用。 例如：  
+    -   <xref:System.EventArgs?displayProperty=nameWithType> 每個作業的類型 (表單的 <`operationName`>`CompletedEventArgs`) 與事件架構非同步呼叫方法搭配使用。 例如:   
   
          [!code-csharp[EventAsync#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#3)]
          [!code-vb[EventAsync#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#3)]  
@@ -50,7 +50,7 @@ ms.locfileid: "59317438"
      [!code-csharp[EventAsync#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#4)]
      [!code-vb[EventAsync#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#4)]  
   
-3. 在呼叫作業之前, 使用 新的泛型<xref:System.EventHandler%601?displayProperty=nameWithType>類型的 <`operationName` > `EventArgs`將處理常式方法 （在上一個步驟中所建立的） 新增至 <`operationName` > `Completed`事件。 然後呼叫 <`operationName` > `Async`方法。 例如:   
+3. 在呼叫作業之前, 使用 新的泛型<xref:System.EventHandler%601?displayProperty=nameWithType>類型的 <`operationName` > `EventArgs`將處理常式方法 （在上一個步驟中所建立的） 新增至 <`operationName` > `Completed`事件。 然後呼叫 <`operationName` > `Async`方法。 例如：  
   
      [!code-csharp[EventAsync#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#5)]
      [!code-vb[EventAsync#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#5)]  
@@ -65,4 +65,4 @@ ms.locfileid: "59317438"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：實作非同步服務作業](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)
+- [如何：實作非同步服務作業](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)

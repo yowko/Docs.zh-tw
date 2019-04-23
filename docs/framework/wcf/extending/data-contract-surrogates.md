@@ -5,10 +5,10 @@ helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
 ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315344"
 ---
 # <a name="data-contract-surrogates"></a>資料合約代理
@@ -54,7 +54,7 @@ ms.locfileid: "59315344"
 ### <a name="getobjecttoserialize-method"></a>GetObjectToSerialize 方法  
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 方法會將原始型別執行個體轉換成代理型別執行個體。 這是序列化需要的方法。  
   
- 下一個步驟是定義實體資料藉由實作 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 方法，從原始執行個體對應到代理的方式。 例如:   
+ 下一個步驟是定義實體資料藉由實作 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 方法，從原始執行個體對應到代理的方式。 例如：  
   
  [!code-csharp[C_IDataContractSurrogate#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#4)]  
   
@@ -71,7 +71,7 @@ ms.locfileid: "59315344"
 ### <a name="getdeserializedobject-method"></a>GetDeserializedObject 方法  
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> 方法會將代理型別執行個體轉換成原始型別執行個體。 這是還原序列化所需的程序。  
   
- 下一項工作是定義將實體資料從代理執行個體對應到原始執行個體的方式。 例如:   
+ 下一項工作是定義將實體資料從代理執行個體對應到原始執行個體的方式。 例如：  
   
  [!code-csharp[C_IDataContractSurrogate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#5)]  
   
@@ -84,7 +84,7 @@ ms.locfileid: "59315344"
  之前的範例會將 `InventorySurrogated` 型別的物件轉換回初始型別 `Inventory`。 在這個案例中，資料是從 `InventorySurrogated` 直接傳輸回 `Inventory` 中對應的欄位。 由於沒有資料管理，因此每個成員欄位都會包含與序列化之前相同的值。  
   
 ### <a name="getcustomdatatoexport-method"></a>GetCustomDataToExport 方法  
- 匯出結構描述時，<xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> 方法是選擇性的。 這個方法是用來將額外的資料或提示插入匯出的結構描述中。 額外的資料可在成員層級或型別層級插入。 例如:   
+ 匯出結構描述時，<xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> 方法是選擇性的。 這個方法是用來將額外的資料或提示插入匯出的結構描述中。 額外的資料可在成員層級或型別層級插入。 例如：  
   
  [!code-csharp[C_IDataContractSurrogate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#6)]  
   
@@ -116,7 +116,7 @@ ms.locfileid: "59315344"
 ### <a name="processimportedtype-method"></a>ProcessImportedType 方法  
  <xref:System.Runtime.Serialization.IDataContractSurrogate.ProcessImportedType%2A> 方法會自訂任何從結構描述匯入作業建立的型別。 這個方法是一個選擇項目。  
   
- 當匯入結構描述時，這個方法會允許自訂任何匯入的型別和編譯資訊。 例如：  
+ 當匯入結構描述時，這個方法會允許自訂任何匯入的型別和編譯資訊。 例如:   
   
  [!code-csharp[C_IDataContractSurrogate#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#7)]  
   

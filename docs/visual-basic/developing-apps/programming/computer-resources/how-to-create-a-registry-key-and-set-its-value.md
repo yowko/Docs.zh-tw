@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中建立登錄機碼並設定其值
+title: HOW TO：在 Visual Basic 中建立登錄機碼並設定其值
 ms.date: 07/20/2015
 f1_keywords:
 - RegistryKey.CreateSubKey
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
 ms.openlocfilehash: 0cadff8b44c60041e2664b1d3b70830209014301
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312604"
 ---
-# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>作法：在 Visual Basic 中建立登錄機碼並設定其值
+# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>HOW TO：在 Visual Basic 中建立登錄機碼並設定其值
 `My.Computer.Registry` 物件的 `CreateSubKey` 方法可以用來建立登錄機碼。  
   
 ## <a name="procedure"></a>程序  

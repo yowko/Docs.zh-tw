@@ -9,10 +9,10 @@ helpviewer_keywords:
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
 ms.openlocfilehash: 05cbe8b18a0d9635091b373d0acddb2ba665cc37
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317333"
 ---
 # <a name="serialization-guidelines"></a>序列化方針
@@ -142,7 +142,7 @@ ms.locfileid: "59317333"
 
 - [使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [資料合約序列化程式](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
-- [資料合約序列化程式支援的型別](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [資料合約序列化程式支援的類型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [二進位序列化](binary-serialization.md)
 - [.NET 遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)

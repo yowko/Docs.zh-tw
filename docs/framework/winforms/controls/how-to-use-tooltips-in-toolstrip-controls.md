@@ -7,10 +7,10 @@ helpviewer_keywords:
 - tooltips [Windows Forms], adding
 ms.assetid: c5d86024-a7c5-44ee-8b3f-2daf53d80d3e
 ms.openlocfilehash: ffaf859fafc87131de525f7bf2f52db421a208c0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316995"
 ---
 # <a name="how-to-use-tooltips-in-toolstrip-controls"></a>HOW TO：在 ToolStrip 控制項使用工具提示
@@ -30,7 +30,7 @@ ms.locfileid: "59316995"
   
      `AutoToolTip`屬性是`true`的預設<xref:System.Windows.Forms.ToolStripButton>， <xref:System.Windows.Forms.ToolStripDropDownButton>，和<xref:System.Windows.Forms.ToolStripSplitButton>。  
   
-     A<xref:System.Windows.Forms.ToolStripButton>會使用其`Text`屬性<xref:System.Windows.Forms.ToolTip>預設的文字。 使用此程序中的自訂文字顯示<xref:System.Windows.Forms.ToolStripButton><xref:System.Windows.Forms.ToolTip>。  
+     A<xref:System.Windows.Forms.ToolStripButton>會使用其`Text`屬性<xref:System.Windows.Forms.ToolTip>預設的文字。 使用此程序顯示自訂的文字<xref:System.Windows.Forms.ToolStripButton> <xref:System.Windows.Forms.ToolTip>。  
   
 > [!NOTE]
 >  如果您設定<xref:System.Windows.Forms.ToolStripItemDisplayStyle>要<xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>或<xref:System.Windows.Forms.ToolStripItemDisplayStyle.Image>，沒有文字會出現在 [] 按鈕，但仍會顯示工具提示。  

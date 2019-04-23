@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
 ms.openlocfilehash: 0d8428487c3c320a634914b99219e23befb70d55
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312159"
 ---
 # <a name="how-to-enable-streaming"></a>HOW TO：啟用資料流
@@ -30,17 +30,17 @@ Windows Communication Foundation (WCF) 可以傳送使用緩衝或資料流傳�
      [!code-csharp[c_HowTo_EnableStreaming#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#1)]
      [!code-vb[c_HowTo_EnableStreaming#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#1)]  
   
-     `GetStream` 作業會接收一些緩衝處理的輸入資料做為 `string` (會經過緩衝處理，並傳回已經過資料流處理的 `Stream`)。 相反地，`UploadStream` 會接受 `Stream` (經過資料流處理) 並傳回 `bool` (經過緩衝處理)。 `EchoStream` 會接受並傳回`Stream`是作業的範例的輸入和輸出訊息會以資料流處理。 最後，`GetReversedStream` 不接受任何輸入，而只是傳回 `Stream` (經過資料流處理)。  
+     `GetStream` 作業會接收一些緩衝處理的輸入資料做為 `string` (會經過緩衝處理，並傳回已經過資料流處理的 `Stream`)。 相反地，`UploadStream` 會接受 `Stream` (經過資料流處理) 並傳回 `bool` (經過緩衝處理)。 `EchoStream` 會接受並傳回 `Stream`，而這項作業也是對輸入和輸出兩種訊息都進行資料流處理的範例。 最後，`GetReversedStream` 不接受任何輸入，而只是傳回 `Stream` (經過資料流處理)。  
   
 2. 繫結必須啟用資料流處理。 您可以設定 `TransferMode` 屬性，並採用下列其中一個值：  
   
     1.  `Buffered`,  
   
-    2.  `Streamed`可使用兩個方向的資料流通訊。  
+    2.  `Streamed`，可啟用雙向資料流通訊。  
   
-    3.  `StreamedRequest`可讓資料流只要求。  
+    3.  `StreamedRequest`，只會啟用要求的資料流處理。  
   
-    4.  `StreamedResponse`可讓資料流只回應。  
+    4.  `StreamedResponse`，只會啟用回應的資料流處理。  
   
      `BasicHttpBinding` 會公開繫結上的 `TransferMode` 屬性，就像 `NetTcpBinding` 和 `NetNamedPipeBinding` 一樣。 `TransferMode` 屬性也可以在傳輸繫結項目上設定，並用於自訂繫結。  
   
@@ -69,12 +69,12 @@ Windows Communication Foundation (WCF) 可以傳送使用緩衝或資料流傳�
   
 1. 若要對每個正在傳送或接收的資料流區塊 (Chunk) 進行特殊處理，請從 <xref:System.IO.Stream> 衍生自訂資料流類別。 下列程式碼包含 `GetReversedStream` 方法和 `ReverseStream` 類別，是一個自訂資料流範例。  
   
-     `GetReversedStream` 建立並傳回的新執行個體`ReverseStream`。 實際的處理會在系統從這個 `ReverseStream` 物件讀取時進行。 `ReverseStream.Read` 方法會從基礎檔案讀取位元組區塊，然後將其序列反轉，再傳回此相反序列的位元組。 此方法不會反轉整個檔案內容，它只是一次反轉一個位元組區塊。 下列範例說明如何在對資料流讀取內容或寫入內容時執行資料流處理。  
+     `GetReversedStream` 會建立並傳回 `ReverseStream` 的新執行個體。 實際的處理會在系統從這個 `ReverseStream` 物件讀取時進行。 `ReverseStream.Read` 方法會從基礎檔案讀取位元組區塊，然後將其序列反轉，再傳回此相反序列的位元組。 此方法不會反轉整個檔案內容，它只是一次反轉一個位元組區塊。 下列範例說明如何在對資料流讀取內容或寫入內容時執行資料流處理。  
   
      [!code-csharp[c_HowTo_EnableStreaming#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#2)]
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [大型資料與資料流](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
+- [大型資料和資料流](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
 - [資料流](../../../../docs/framework/wcf/samples/stream.md)

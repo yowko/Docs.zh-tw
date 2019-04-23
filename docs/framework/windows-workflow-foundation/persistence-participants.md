@@ -3,10 +3,10 @@ title: 持續性參與者
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
 ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316358"
 ---
 # <a name="persistence-participants"></a>持續性參與者
@@ -58,7 +58,7 @@ ms.locfileid: "59316358"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [HOW TO：建立自訂持續性參與者](how-to-create-a-custom-persistence-participant.md)  
+-   [如何：建立自訂持續性參與者](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>另請參閱
 

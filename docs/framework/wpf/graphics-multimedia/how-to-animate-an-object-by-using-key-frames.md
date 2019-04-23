@@ -6,10 +6,10 @@ helpviewer_keywords:
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
 ms.openlocfilehash: b0a0f7c00125a43228a2658415b72f4d541f37be
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315838"
 ---
 # <a name="how-to-animate-an-object-by-using-key-frames"></a>HOW TO：使用主要畫面格建立物件的動畫
@@ -43,4 +43,4 @@ ms.locfileid: "59315838"
 - <xref:System.Windows.Media.RadialGradientBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - [主要畫面格動畫概觀](key-frame-animations-overview.md)
-- [關於主要畫面格操作說明的主題](key-frame-animation-how-to-topics.md)
+- [主要畫面格操作說明主題](key-frame-animation-how-to-topics.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
 ms.openlocfilehash: 2cc3c54563b261d49264314f7306193accbe4040
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311431"
 ---
 # <a name="instancing"></a>執行個體
@@ -22,11 +22,11 @@ ms.locfileid: "59311431"
   
  以下為可用的執行個體模式：  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>:針對每個用戶端要求建立新的服務執行個體。  
+-   <xref:System.ServiceModel.InstanceContextMode.PerCall>：針對每個用戶端要求建立新的服務執行個體。  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>:新執行個體是針對每個新的用戶端工作階段中，建立和維護 （需要支援工作階段的繫結） 該工作階段的存留期。  
+-   <xref:System.ServiceModel.InstanceContextMode.PerSession>：新執行個體是針對每個新的用戶端工作階段中，建立和維護 （需要支援工作階段的繫結） 該工作階段的存留期。  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>:單一執行個體的服務類別會處理所有的用戶端要求應用程式的存留期。  
+-   <xref:System.ServiceModel.InstanceContextMode.Single>：單一執行個體的服務類別會處理所有的用戶端要求應用程式的存留期。  
   
  此服務類別會指定具有 `[ServiceBehavior(InstanceContextMode=<setting>)]` 屬性的執行個體行為，如下列程式碼範例所示。 藉由將程式碼行標記為註解，您便可以觀察到每個執行個體模式的行為。 請記得在變更執行個體模式後重建服務。 這時並不需要在用戶端上指定任何與執行個體相關的設定。  
   

@@ -1,18 +1,18 @@
 ---
-title: 作法：使用 My 命名空間 - C# 程式設計指南
+title: HOW TO：使用 My 命名空間 - C# 程式設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
 ms.openlocfilehash: 9621f6a01ef4e30bf34b97df3d2c3033e9b62a23
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316020"
 ---
-# <a name="how-to-use-the-my-namespace-c-programming-guide"></a>作法：使用 My 命名空間 (C# 程式設計指南)
+# <a name="how-to-use-the-my-namespace-c-programming-guide"></a>HOW TO：使用 My 命名空間 (C# 程式設計指南)
 <xref:Microsoft.VisualBasic.MyServices> 命名空間 (Visual Basic 中的 `My`) 允許您以輕鬆且直覺式的方式存取許多 .NET Framework 類別，讓您能夠撰寫程式碼以與電腦、應用程式、設定、資源等等互動。 雖然原本設計為搭配使用 Visual Basic，但 `MyServices` 命名空間可以在 C# 應用程式中使用。  
   
  如需從 Visual Basic 中使用 `MyServices` 命名空間的詳細資訊，請參閱[使用 My 開發](../../../visual-basic/developing-apps/development-with-my/index.md)。  
@@ -41,6 +41,6 @@ ms.locfileid: "59316020"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [命名空間](../../../csharp/programming-guide/namespaces/index.md)
 - [使用命名空間](../../../csharp/programming-guide/namespaces/using-namespaces.md)
