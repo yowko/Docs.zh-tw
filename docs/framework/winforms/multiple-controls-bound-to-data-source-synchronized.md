@@ -9,10 +9,10 @@ helpviewer_keywords:
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
 ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170335"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>HOW TO：確保繫結至相同資料來源的多個控制項都能保持同步
@@ -42,7 +42,7 @@ ms.locfileid: "59170335"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：使用 BindingSource 元件跨表單共用繫結資料](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
-- [Windows Form 資料繫結中的變更告知](change-notification-in-windows-forms-data-binding.md)
+- [如何：使用 BindingSource 元件跨表單共用繫結的資料](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
+- [Windows Forms 資料繫結中的變更告知](change-notification-in-windows-forms-data-binding.md)
 - [與資料繫結相關的介面](interfaces-related-to-data-binding.md)
-- [Windows Form 資料繫結](windows-forms-data-binding.md)
+- [Windows Forms 資料繫結](windows-forms-data-binding.md)

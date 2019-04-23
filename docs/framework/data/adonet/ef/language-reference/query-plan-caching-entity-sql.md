@@ -3,10 +3,10 @@ title: 查詢計畫快取 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
 ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178174"
 ---
 # <a name="query-plan-caching-entity-sql"></a>查詢計畫快取 (Entity SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "59178174"
   
 -   查詢文字應該是固定模式，最好是某個固定字串或資源。  
   
--   <xref:System.Data.EntityClient.EntityParameter> 或<xref:System.Data.Objects.ObjectParameter>每當必須傳遞使用者提供的值應該使用。  
+-   每當必須傳遞使用者提供的值時，就應該使用 <xref:System.Data.EntityClient.EntityParameter> 或 <xref:System.Data.Objects.ObjectParameter>。  
   
  您應該避免下列查詢模式，這樣會耗用查詢計畫快取中的位置，而這是不必要的：  
   

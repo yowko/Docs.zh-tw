@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
 ms.openlocfilehash: 3455c7ccdedb432fc05c7dc9e80f0f7509f4fa0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170309"
 ---
 # <a name="binding-markup-extension"></a>繫結標記延伸
@@ -56,7 +56,7 @@ ms.locfileid: "59170309"
   
 -   <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>： 識別可能的繫結群組的字串。 這是相當進階的繫結的概念;請參閱參考頁面<xref:System.Windows.Data.BindingBase.BindingGroupName%2A>。  
   
--   <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>:布林值，可以是`true`或`false`。 預設為 `false`。  
+-   <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>：布林值，可以是`true`或`false`。 預設為 `false`。  
   
 -   <xref:System.Windows.Data.Binding.Converter%2A>： 可設定為`bindProp` = `value`字串，在運算式中，但若要這樣做需要物件參考的值，例如[StaticResource 標記延伸](staticresource-markup-extension.md)。 在此情況下為自訂轉換子類別的執行個體。  
   
@@ -68,15 +68,15 @@ ms.locfileid: "59170309"
   
 -   <xref:System.Windows.Data.BindingBase.FallbackValue%2A>： 可設定為`bindProp` = `value`字串運算式，但這是取決於所傳遞的值類型。 如果傳遞參考類型，需要物件參考，例如巢狀[StaticResource 標記延伸](staticresource-markup-extension.md)。  
   
--   <xref:System.Windows.Data.Binding.IsAsync%2A>:布林值，可以是`true`或`false`。 預設為 `false`。  
+-   <xref:System.Windows.Data.Binding.IsAsync%2A>：布林值，可以是`true`或`false`。 預設為 `false`。  
   
 -   <xref:System.Windows.Data.Binding.Mode%2A>:*值*是常數的名稱從<xref:System.Windows.Data.BindingMode>列舉型別。 例如， `{Binding Mode=OneWay}` 。  
   
--   <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>:布林值，可以是`true`或`false`。 預設為 `false`。  
+-   <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>：布林值，可以是`true`或`false`。 預設為 `false`。  
   
--   <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>:布林值，可以是`true`或`false`。 預設為 `false`。  
+-   <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>：布林值，可以是`true`或`false`。 預設為 `false`。  
   
--   <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>:布林值，可以是`true`或`false`。 預設為 `false`。  
+-   <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>：布林值，可以是`true`或`false`。 預設為 `false`。  
   
 -   <xref:System.Windows.Data.Binding.Path%2A>： 描述將資料物件或一種一般的物件模型路徑的字串。 格式會提供數個不同的慣例，可周遊無法適當地描述本主題中的物件模型。 請參閱[PropertyPath XAML 語法](propertypath-xaml-syntax.md)。  
   
@@ -90,9 +90,9 @@ ms.locfileid: "59170309"
   
 -   <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>:*值*是常數的名稱從<xref:System.Windows.Data.UpdateSourceTrigger>列舉型別。 例如， `{Binding UpdateSourceTrigger=LostFocus}` 。 特定控制項可能會有不同的預設值，這個繫結屬性。 請參閱 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>。  
   
--   <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>:布林值，可以是`true`或`false`。 預設為 `false`。 請參閱＜備註＞。  
+-   <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>：布林值，可以是`true`或`false`。 預設為 `false`。 請參閱＜備註＞。  
   
--   <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>:布林值，可以是`true`或`false`。 預設為 `false`。 請參閱＜備註＞。  
+-   <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>：布林值，可以是`true`或`false`。 預設為 `false`。 請參閱＜備註＞。  
   
 -   <xref:System.Windows.Data.Binding.XPath%2A>： 描述 XML 資料來源的 XMLDOM 路徑的字串。 請參閱[繫結至 XML 資料使用 XMLDataProvider 和 XPath 查詢](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "59170309"
   
  涉及資料驗證的繫結通常由明確指定`Binding`項目而`{Binding ...}`運算式，並設定<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>或<xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>在運算式中不常見。 這是因為同一系列文件屬性<xref:System.Windows.Data.Binding.ValidationRules%2A>無法輕易地設定運算式格式。 如需詳細資訊，請參閱 <<c0> [ 實作繫結驗證](../data/how-to-implement-binding-validation.md)。  
   
- `Binding` 是標記延伸。 需要逸出屬性值為常值或處理常式名稱，而且是比在特定類型或屬性上設定屬性的類型轉換器更通用的需求時，通常被實作標記延伸。 在 XAML 使用的所有標記延伸`{`和`}`字元在其屬性語法中，這是用的 XAML 處理器知道某個標記延伸必須處理字串內容的慣例。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
+ `Binding` 是一種標記延伸。 需要逸出屬性值為常值或處理常式名稱，而且是比在特定類型或屬性上設定屬性的類型轉換器更通用的需求時，通常被實作標記延伸。 在 XAML 使用的所有標記延伸`{`和`}`字元在其屬性語法中，這是用的 XAML 處理器知道某個標記延伸必須處理字串內容的慣例。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
   
  `Binding` 已到達非典型的標記中的延伸模組，<xref:System.Windows.Data.Binding>實作 WPF 的 XAML 實作的擴充功能的類別也會實作數個其他的方法和 XAML 不相關的屬性。 其他成員旨在使<xref:System.Windows.Data.Binding>更具彈性且獨立的類別，可以解決許多除了做為 XAML 標記延伸的資料繫結案例。  
   

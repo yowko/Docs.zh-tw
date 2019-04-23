@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pages [WPF], hosted in browser
 ms.assetid: 737e0f26-8371-49b4-9579-70879e51e1aa
 ms.openlocfilehash: d154de2f885101d1bd0c4613dfb1604be8acbe6a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107142"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978337"
 ---
 # <a name="how-to-determine-if-a-page-is-browser-hosted"></a>HOW TO：判斷頁面是否由瀏覽器裝載
 此範例示範如何判斷<xref:System.Windows.Controls.Page>裝載於瀏覽器。  

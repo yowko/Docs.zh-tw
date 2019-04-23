@@ -3,10 +3,10 @@ title: 不支援的案例
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178772"
 ---
 # <a name="unsupported-scenarios"></a>不支援的案例
@@ -75,7 +75,7 @@ ms.locfileid: "59178772"
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>如果需要使用 ASP.NET 模擬與 ASP.NET 相容性的話，訊息安全性就會失敗  
  WCF 不支援下列設定的組合，因為它們可以防止用戶端驗證發生：  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 已啟用模擬。 這是在 web.config 中藉由設定`impersonate`屬性的 <`identity`> 項目`true`。  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模擬已啟用。 這是在 web.config 中藉由設定`impersonate`屬性的 <`identity`> 項目`true`。  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 藉由設定啟用相容性模式`aspNetCompatibilityEnabled`的屬性[ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)到`true`。  
   
@@ -111,8 +111,8 @@ ms.locfileid: "59178772"
 ## <a name="see-also"></a>另請參閱
 
 - [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [資訊洩露](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [權限提高](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [阻斷服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [阻絕服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [竄改](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [重新執行攻擊](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

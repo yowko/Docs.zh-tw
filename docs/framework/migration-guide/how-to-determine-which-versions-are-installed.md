@@ -1,5 +1,5 @@
 ---
-title: 作法：判斷安裝的 .NET Framework 版本
+title: HOW TO：判斷安裝的 .NET Framework 版本
 ms.date: 04/02/2019
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 364d28d5df8e284445d825fbbeb963c54b7b9e27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176302"
 ---
-# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>作法：判斷安裝的 .NET Framework 版本
+# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>HOW TO：判斷安裝的 .NET Framework 版本
 
 使用者可以在電腦上[安裝](https://docs.microsoft.com/dotnet/framework/install)及執行多個版本的 .NET Framework。 當您開發或部署應用程式時，您可能需要知道使用者電腦上安裝的 .NET Framework 版本。 
 
@@ -213,6 +213,6 @@ ms.locfileid: "59176302"
 
 ## <a name="see-also"></a>另請參閱
 
-- [作法：判斷已安裝哪些 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)
+- [如何：判斷安裝的 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)
 - [安裝適用於開發人員的 .NET Framework](../install/guide-for-developers.md)
 - [.NET Framework 版本和相依性](versions-and-dependencies.md)

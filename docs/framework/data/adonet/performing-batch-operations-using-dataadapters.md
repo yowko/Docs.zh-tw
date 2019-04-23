@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
 ms.openlocfilehash: bb3f35f17b2dd451b41035c8e34f7b3a886a26e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178122"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>使用 DataAdapter 執行批次作業
@@ -134,7 +134,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ### <a name="accessing-updated-rows"></a>存取更新的資料列  
  停用批次處理後，就可以使用 <xref:System.Data.Common.RowUpdatedEventArgs.Row%2A> 類別的 <xref:System.Data.Common.RowUpdatedEventArgs> 屬性存取正在更新的資料列。  
   
- 啟用批次處理時，會針對多個資料列產生單一 `RowUpdated` 事件。 因此，每個資料列的 `Row` 屬性值都是 null。 `RowUpdating` 每個資料列，仍會產生事件。 您可以使用 <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> 類別的 <xref:System.Data.Common.RowUpdatedEventArgs> 方法，將處理的資料列參考複製至陣列，以存取這些資料列。 如果目前未處理任何資料列，則 `CopyToRows` 會擲回 <xref:System.ArgumentNullException>。 呼叫 <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> 方法前，請使用 <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> 屬性傳回已處理的資料列數。  
+ 啟用批次處理時，會針對多個資料列產生單一 `RowUpdated` 事件。 因此，每個資料列的 `Row` 屬性值都是 null。 但仍會針對每個資料列產生 `RowUpdating` 事件。 您可以使用 <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> 類別的 <xref:System.Data.Common.RowUpdatedEventArgs> 方法，將處理的資料列參考複製至陣列，以存取這些資料列。 如果目前未處理任何資料列，則 `CopyToRows` 會擲回 <xref:System.ArgumentNullException>。 呼叫 <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> 方法前，請使用 <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> 屬性傳回已處理的資料列數。  
   
 ### <a name="handling-data-errors"></a>處理資料錯誤   
  批次執行與執行每個獨立陳述式具有相同的效果。 系統會以陳述式加入至批次的順序執行它們。 批次模式下所發生的錯誤，與停用批次模式所發生的錯誤，擁有相同的處理方式。 每個資料列是分開處理的。 在 <xref:System.Data.DataRow> 內的對應 <xref:System.Data.DataTable> 中，只會更新資料庫中已成功處理的資料列。  
@@ -145,5 +145,5 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 
 - [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [使用 DataAdapter 更新資料來源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [處理 DataAdapter 的事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [處理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

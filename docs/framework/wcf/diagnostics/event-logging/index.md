@@ -5,10 +5,10 @@ helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
 ms.openlocfilehash: 2dd4f82e8a100074850b21d298e91dc5dc15c59d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175275"
 ---
 # <a name="event-logging-in-wcf"></a>WCF 的事件記錄
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF) 追蹤 Windows 事件記錄檔中的內�
   
 -   共用接聽項：WCF TCP Port Sharing Service 會記錄事件時無法啟動。  
   
--   [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]:當服務無法啟動的事件記錄。  
+-   [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]：當服務無法啟動的事件記錄。  
   
 -   嚴重和錯誤事件，例如啟動失敗或當機  
   

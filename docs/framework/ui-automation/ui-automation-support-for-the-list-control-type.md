@@ -7,10 +7,10 @@ helpviewer_keywords:
 - UI Automation, List control type
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
 ms.openlocfilehash: 7811efd680bbeb299a4e37b74768f7462b808e9a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178499"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>List 控制項類型的 UI 自動化支援
@@ -81,13 +81,13 @@ ms.locfileid: "59178499"
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|視情況而定|如果容器中的項目是可以捲動的，即實作此控制項模式。|  
 |<xref:System.Windows.Automation.Provider.IGridProvider>|視情況而定|當需要使用方格逐一巡覽項目時，即實作此模式。|  
 |<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|視情況而定|如果控制項支援容器中項目的多重檢視，即實作此控制項模式。|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|永不|`ITableProvider` 永遠不會支援清單控制項類型。 如果控制項需要支援此控制項模式，則控制項應為資料方格控制項類型。|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|永不|清單控制項類型並不支援`ITableProvider` 。 如果控制項需要支援此控制項模式，則控制項應為資料方格控制項類型。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件  
  下表列出所有清單控制項支援所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Event - 事件|支援/值|注意|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援/值|注意|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|視情況而定|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|視情況而定|None|  

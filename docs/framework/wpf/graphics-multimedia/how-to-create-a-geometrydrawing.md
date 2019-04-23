@@ -8,10 +8,10 @@ helpviewer_keywords:
 - classes [WPF], GeometryDrawing
 ms.assetid: 11d3c096-91ba-4d41-9bba-aeac0db70f97
 ms.openlocfilehash: f5cdcfdb68ad8030bcbd6c689f45a8baddd000e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59179786"
 ---
 # <a name="how-to-create-a-geometrydrawing"></a>HOW TO：建立 GeometryDrawing
@@ -34,4 +34,4 @@ ms.locfileid: "59179786"
 - <xref:System.Windows.Media.DrawingGroup>
 - [繪圖物件概觀](drawing-objects-overview.md)
 - [幾何概觀](geometry-overview.md)
-- [建立複合繪圖](how-to-create-a-composite-drawing.md)
+- [建立複合圖形](how-to-create-a-composite-drawing.md)

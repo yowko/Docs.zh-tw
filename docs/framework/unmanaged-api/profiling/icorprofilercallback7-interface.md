@@ -12,10 +12,10 @@ ms.assetid: a0be019e-aaa1-4036-990f-565f114d4b5c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 81477010b22edee71098edfc1b8557db08b6038f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178629"
 ---
 # <a name="icorprofilercallback7-interface"></a>ICorProfilerCallback7 介面
@@ -34,7 +34,7 @@ ms.locfileid: "59178629"
   
  **標頭：** CorProf.idl, CorProf.h  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

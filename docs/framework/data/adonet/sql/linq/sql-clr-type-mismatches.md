@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
 ms.openlocfilehash: 77090a9f22dcf3d55739aa03535bee863793d858
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172883"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR 類型不符
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 蒐集大部分的物件模型和 SQL Server 之間的轉譯。 不過，在某些情況下，還是無法進行精確的轉譯。 下列各節將摘要列出 Common Language Runtime (CLR) 型別與 SQL Server 資料庫型別之間的這些主要不符。 您可以找到更多特定型別對應和在函式轉譯詳細[SQL-CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)並[Data Types and Functions](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會自動執行物件模型 (Object Model) 與 SQL Server 之間大部分的轉譯作業。 不過，在某些情況下，還是無法進行精確的轉譯。 下列各節將摘要列出 Common Language Runtime (CLR) 型別與 SQL Server 資料庫型別之間的這些主要不符。 您可以找到更多特定型別對應和在函式轉譯詳細[SQL-CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)並[Data Types and Functions](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)。  
   
 ## <a name="data-types"></a>資料類型  
  CLR 與 SQL Server 之間的轉譯會在查詢傳送至資料庫，以及結果傳回給物件模型時進行。 例如，下列 Transact-SQL 查詢需要進行兩種值轉換：  
@@ -114,11 +114,11 @@ or col1 != col2
  定序 (Collation) 中的值 `null` (`nothing`) 是由 SQL Server 所定義，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不會變更這個定序。  
   
 ### <a name="type-conversion-and-promotion"></a>型別轉換和提升  
- SQL 支援在運算式中使用一組豐富的隱含轉換。 C# 中的類似運算式則需要明確轉換 (Cast)。 例如:   
+ SQL 支援在運算式中使用一組豐富的隱含轉換。 C# 中的類似運算式則需要明確轉換 (Cast)。 例如：  
   
--   `Nvarchar` 和`DateTime`類型可以在 SQL 中比較，而不需要任何明確的轉換;C#需要明確轉換。  
+-   在 SQL 中不需要任何明確轉換 (Cast)，就可以比較 `Nvarchar` 和 `DateTime` 型別，在 C# 中則需要明確轉換 (Conversion)。  
   
--   `Decimal` 隱含地轉換成`DateTime`SQL 中。 C# 則不允許隱含轉換。  
+-   在 SQL 中 `Decimal` 會隱含地轉換為 `DateTime`。 C# 則不允許隱含轉換。  
   
  同樣地，因為基礎的一組型別不同，所以 Transact-SQL 中的型別優先順序也會與 C# 中的型別優先順序不同。 事實上，優先順序清單之間並沒有明確的子集/超集關聯性 (Relationship)。 例如，將 `nvarchar` 與 `varchar` 比較會將 `varchar` 運算式隱含地轉換為 `nvarchar`。 CLR 不提供對等的提升作業。  
   
@@ -146,7 +146,7 @@ Where Col1 = Col2
   
  實際上，定序子項子句會建立*限制型別*這不是可取代。  
   
- 同樣地，這些型別系統的排序次序也有顯著的差異。 這項差異會影響結果的排序。 <xref:System.Guid> 篡順序來排序所有 16 位元組上 (`IComparable()`)，而 T-SQL 會依下列順序來比較 Guid: node(10-15)、 clock-seq(8-9)、 time-high(6-7)、 time-mid(4-5)、 time-low(0-3)。 在 SQL 7.0 中，這項排序作業會在 NT 產生的 GUID 具有這類八位元順序時執行。 這種方式可確保在相同節點叢集上產生的 GUID，會根據時間戳記連續出現。 這種方式同時也適用於建置索引 (「插入」現在變成「附加」，而不是隨機 IO)。 後來在 Windows 中，這個順序基於隱私權考量被打亂了，但是 SQL 還是必須維護相容性。 因應措施是使用<xref:System.Data.SqlTypes.SqlGuid>而不是<xref:System.Guid>。  
+ 同樣地，這些型別系統的排序次序也有顯著的差異。 這項差異會影響結果的排序。 所有 16 位元組上的 <xref:System.Guid> 都會依詞彙編篡順序來排序 (`IComparable()`)，而 T-SQL 會依下列順序比較 GUID：node(10-15)、clock-seq(8-9)、time-high(6-7)、time-mid(4-5)、time-low(0-3)。 在 SQL 7.0 中，這項排序作業會在 NT 產生的 GUID 具有這類八位元順序時執行。 這種方式可確保在相同節點叢集上產生的 GUID，會根據時間戳記連續出現。 這種方式同時也適用於建置索引 (「插入」現在變成「附加」，而不是隨機 IO)。 後來在 Windows 中，這個順序基於隱私權考量被打亂了，但是 SQL 還是必須維護相容性。 因應措施是使用<xref:System.Data.SqlTypes.SqlGuid>而不是<xref:System.Guid>。  
   
 ### <a name="operator-and-function-differences"></a>運算子和函式差異  
  在本質上相等的運算子和函式，在語意上具有少許的差異。 例如:   
@@ -157,7 +157,7 @@ Where Col1 = Col2
   
     -   則鬆散轉譯為`AND` / `OR`運算子可能會導致未預期的錯誤，如果C#運算式依賴評估根據第一個運算元評估結果的第二個運算元。  
   
--   `Round()` 函式有不同的語意[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]和 T-SQL 中。  
+-   `Round()` 函式在 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 和 T-SQL 中的語意不同。  
   
 -   在 CLR 中，字串的起始索引是 0，而在 SQL 中則是 1。 因此，任何具有索引的函式都需要進行索引轉譯。  
   

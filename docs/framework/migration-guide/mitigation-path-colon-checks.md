@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 741bb73280d9e81fc1865867152ab1243e9dd53c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 342c3ce59ad80c9a60f2a2b69b30f77ff0549415
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494674"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176757"
 ---
 # <a name="mitigation-path-colon-checks"></a>風險降低：路徑冒號檢查
 從以 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 為目標的應用程式開始，為了支援先前所不支援的路徑 (就長度和格式兩方面) 而有數項變更。 特別是提供更正確的適當磁碟機分隔符號語法 (冒號) 檢查。  
@@ -33,4 +33,5 @@ ms.locfileid: "54494674"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [重定目標變更](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)

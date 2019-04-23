@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
 ms.openlocfilehash: 177b61cab99d21a844298632020244fa424d8d2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176575"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider 元件概觀 (Windows Form)
@@ -38,4 +38,4 @@ Windows Forms [HelpProvider](helpprovider-component-windows-forms.md)元件可�
   
 ## <a name="see-also"></a>另請參閱
 
-- [Windows Form 應用程式中的說明系統](../advanced/help-systems-in-windows-forms-applications.md)
+- [Windows Forms 應用程式中的說明系統](../advanced/help-systems-in-windows-forms-applications.md)

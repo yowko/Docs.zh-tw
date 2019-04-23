@@ -5,10 +5,10 @@ dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
 ms.openlocfilehash: 82f840ab7dd26a4888ebf024d696f2c70701eb18
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173286"
 ---
 # <a name="the-load-method"></a>Load 方法
@@ -21,7 +21,7 @@ ms.locfileid: "59173286"
 |LoadOption 值|描述|  
 |----------------------|-----------------|  
 |**OverwriteRow**|內送資料列都有相同**PrimaryKey**為已在資料列的值**DataTable**，則**原始**並**目前**的每個值資料行所取代的值中的內送的資料列，而**RowState**屬性設定為**Unchanged**。<br /><br /> 還不存在於資料來源的資料列**DataTable**會加上**RowState**的值**Unchanged**。<br /><br /> 此選項會實際重新整理的內容**DataTable** ，使其符合資料來源的內容。|  
-|**PreserveCurrentValues (預設值)**|如果內送資料列具有相同**PrimaryKey**為已在資料列的值**DataTable**，則**原始**值設定為內容的內送的資料列，以及**目前**值不會變更。<br /><br /> 如果**RowState**是**Added**或**Modified**，它會設定為**Modified**。<br /><br /> 如果**RowState**已**Deleted**，則仍會保持**Deleted**。<br /><br /> 還不存在於資料來源的資料列**DataTable**加入，而**RowState**設定為**Unchanged**。|  
+|**PreserveCurrentValues （預設值）**|如果內送資料列具有相同**PrimaryKey**為已在資料列的值**DataTable**，則**原始**值設定為內容的內送的資料列，以及**目前**值不會變更。<br /><br /> 如果**RowState**是**Added**或**Modified**，它會設定為**Modified**。<br /><br /> 如果**RowState**已**Deleted**，則仍會保持**Deleted**。<br /><br /> 還不存在於資料來源的資料列**DataTable**加入，而**RowState**設定為**Unchanged**。|  
 |**UpdateCurrentValues**|如果內送資料列具有相同**PrimaryKey**已在資料列的值**DataTable**，則**目前**值複製到**原始**值，而**目前**值會設定內送資料列的內容。<br /><br /> 如果**RowState**中**DataTable**已**Added**，則**RowState**保持**Added**。 資料列標示為**Modified**或**Deleted**，則**RowState**是**Modified**。<br /><br /> 還不存在於資料來源的資料列**DataTable**加入，而**RowState**設定為**Added**。|  
   
  下列範例會使用**負載**方法，以顯示生日清單中的員工**Northwind**資料庫。  
@@ -71,4 +71,4 @@ End Sub
 ## <a name="see-also"></a>另請參閱
 
 - [在 DataTable 中操作資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

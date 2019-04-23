@@ -3,10 +3,10 @@ title: 新聞訂閱擴充性
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
 ms.openlocfilehash: 226ea682d8b17a818e6d5be2097a19315d106bda
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170796"
 ---
 # <a name="syndication-extensibility"></a>新聞訂閱擴充性
@@ -46,5 +46,5 @@ ms.locfileid: "59170796"
   
 ## <a name="see-also"></a>另請參閱
 
-- [WCF 新聞訂閱概觀](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
-- [新聞訂閱架構](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
+- [WCF 摘要整合概觀](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
+- [摘要整合架構](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)

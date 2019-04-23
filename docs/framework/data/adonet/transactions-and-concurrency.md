@@ -3,10 +3,10 @@ title: 異動和並行存取
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
 ms.openlocfilehash: ba857031a54374ee295c2bfd724e7fb8651b7c1f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174690"
 ---
 # <a name="transactions-and-concurrency"></a>異動和並行存取
@@ -36,9 +36,9 @@ ms.locfileid: "59174690"
   
 ## <a name="see-also"></a>另請參閱
 
-- [交易基礎觀念](../../../../docs/framework/data/transactions/transaction-fundamentals.md)
-- [連接資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [交易基礎概念](../../../../docs/framework/data/transactions/transaction-fundamentals.md)
+- [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [命令和參數](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

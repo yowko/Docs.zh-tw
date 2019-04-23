@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-ms.openlocfilehash: f07053c9fba194138467bbf8664e2f5fe1f667ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 66964497159c5c03a9070090ee60b43fa7d31abf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352812"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978922"
 ---
 # <a name="data-binding"></a>資料繫結
 
@@ -42,9 +42,9 @@ ms.locfileid: "57352812"
 
 - 資料來源是 <xref:System.Linq.IQueryable%601>。 有兩種案例：
 
-    - 如果[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]找到基礎<xref:System.Data.Linq.Table%601>從<xref:System.Linq.IQueryable%601>來源允許進行編輯，這種情況是第一個項目符號點相同。
+  - 如果[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]找到基礎<xref:System.Data.Linq.Table%601>從<xref:System.Linq.IQueryable%601>來源允許進行編輯，這種情況是第一個項目符號點相同。
 
-    - 如果[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]找不到基礎<xref:System.Data.Linq.Table%601>，版本不允許的來源 (例如`groupby`)。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 瀏覽查詢以填入泛型`SortableBindingList`，這是簡單<xref:System.ComponentModel.BindingList%601>實作排序功能之 T 實體，則指定的屬性。
+  - 如果[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]找不到基礎<xref:System.Data.Linq.Table%601>，版本不允許的來源 (例如`groupby`)。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 瀏覽查詢以填入泛型`SortableBindingList`，這是簡單<xref:System.ComponentModel.BindingList%601>實作排序功能之 T 實體，則指定的屬性。
 
 ## <a name="specialized-collections"></a>特定的集合
 
@@ -66,13 +66,11 @@ ms.locfileid: "57352812"
 
 ## <a name="binding-to-entitysets"></a>繫結至 EntitySet
 
-因為 `EntitySet` 已經是實作 `EntitySet` 的集合，所以繫結至 <xref:System.ComponentModel.IBindingList> 是特殊情況。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 將排序和取消 (<xref:System.ComponentModel.ICancelAddNew>) 支援。 
-  `EntitySet` 類別會使用內部清單來儲存實體。 這份清單是以泛型陣列 (泛型 `ItemList` 類別) 為基礎的低階集合。
+因為 `EntitySet` 已經是實作 `EntitySet` 的集合，所以繫結至 <xref:System.ComponentModel.IBindingList> 是特殊情況。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 將排序和取消 (<xref:System.ComponentModel.ICancelAddNew>) 支援。 `EntitySet` 類別會使用內部清單來儲存實體。 這份清單是以泛型陣列 (泛型 `ItemList` 類別) 為基礎的低階集合。
 
 ### <a name="adding-a-sorting-feature"></a>加入排序功能
 
-陣列提供的排序方法 (`Array.Sort()`) 可以與 T 的 `Comparer` 搭配使用。而 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會使用本主題之前所述的泛型 `SortableBindingList.PropertyComparer` 類別，來取得屬性的這個 `Comparer` 以及排序方向。 
-  `ApplySort` 方法會加入至泛型 `ItemList`，以呼叫這個功能。
+陣列提供的排序方法 (`Array.Sort()`) 可以與 T 的 `Comparer` 搭配使用。而 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會使用本主題之前所述的泛型 `SortableBindingList.PropertyComparer` 類別，來取得屬性的這個 `Comparer` 以及排序方向。 `ApplySort` 方法會加入至泛型 `ItemList`，以呼叫這個功能。
 
 您現在必須在 `EntitySet` 端上宣告排序支援：
 

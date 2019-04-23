@@ -1,18 +1,18 @@
 ---
-title: 作法：存取 HTTP 特定屬性
+title: HOW TO：存取 HTTP 特定屬性
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
 ms.openlocfilehash: 107e57ca947012f5e2f65835d684f5e6068b3681
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176588"
 ---
-# <a name="how-to-access-http-specific-properties"></a>作法：存取 HTTP 特定屬性
+# <a name="how-to-access-http-specific-properties"></a>HOW TO：存取 HTTP 特定屬性
 這個範例示範如何關閉 HTTP **保持運作**行為，以及如何從 Web 伺服器取得通訊協定版本號碼。  
   
 ## <a name="example"></a>範例  

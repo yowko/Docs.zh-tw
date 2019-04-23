@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
 ms.openlocfilehash: d444349f8bc9236e1d15f484f35b1326c77e2425
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170647"
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>HOW TO：在分鏡腳本開始後使用事件觸發程序進行控制
@@ -18,17 +18,17 @@ ms.locfileid: "59170647"
   
  使用下列的分鏡腳本動作，並搭配<xref:System.Windows.EventTrigger>物件來控制分鏡腳本。  
   
--   <xref:System.Windows.Media.Animation.PauseStoryboard>:暫停分鏡腳本。  
+-   <xref:System.Windows.Media.Animation.PauseStoryboard>：暫停分鏡腳本。  
   
--   <xref:System.Windows.Media.Animation.ResumeStoryboard>:繼續已暫停的分鏡腳本。  
+-   <xref:System.Windows.Media.Animation.ResumeStoryboard>：繼續已暫停的分鏡腳本。  
   
--   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>:變更分鏡腳本的速度。  
+-   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>：變更分鏡腳本的速度。  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>:如果有的話，請前進到其填滿期間中，結尾的分鏡腳本。  
+-   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>：如果有的話，請前進到其填滿期間中，結尾的分鏡腳本。  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>:停止分鏡腳本。  
+-   <xref:System.Windows.Media.Animation.StopStoryboard>：停止分鏡腳本。  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>:移除分鏡腳本，釋放資源。  
+-   <xref:System.Windows.Media.Animation.RemoveStoryboard>：移除分鏡腳本，釋放資源。  
   
 ## <a name="example"></a>範例  
  下列範例會使用可控制的分鏡腳本動作以互動方式控制分鏡腳本。  

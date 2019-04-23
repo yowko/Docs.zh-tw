@@ -3,10 +3,10 @@ title: SQL Server 持續性資料庫
 ms.date: 03/30/2017
 ms.assetid: 4e594eec-2a31-4d49-ad31-aca2ecbb1f69
 ms.openlocfilehash: f69a6b3a67407a2273e04ba3e652693a3a10f9a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171535"
 ---
 # <a name="sql-server-persistence-database"></a>SQL Server 持續性資料庫
@@ -16,9 +16,9 @@ ms.locfileid: "59171535"
   
 -   [持續性資料庫結構描述](persistence-database-schema.md)  
   
--   [HOW TO：將執行個體資料屬性還原序列化](how-to-deserialize-instance-data-properties.md)  
+-   [如何：還原序列化執行個體資料屬性](how-to-deserialize-instance-data-properties.md)  
   
--   [HOW TO：非保存執行個體的查詢](how-to-query-for-non-persisted-instances.md)  
+-   [如何：非保存執行個體的查詢](how-to-query-for-non-persisted-instances.md)  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -10,23 +10,23 @@ helpviewer_keywords:
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
 ms.openlocfilehash: 48e439719afa2426b5d8f822c621080cdc32514e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174040"
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>HOW TO：建立有便捷鍵和自動換行的控制項
 此範例示範如何建立具有便捷鍵並支援自動換行的控制項。 此範例會使用<xref:System.Windows.Controls.Label>來說明這些概念的控制項。  
   
 ## <a name="example"></a>範例  
- **將文字換行新增至您的標籤**  
+ **將自動換行功能新增到您的標籤**  
   
  <xref:System.Windows.Controls.Label>控制項不支援文字換行。 如果您需要一個多行換行的標籤，您可以將支援自動換行的另一個元素內嵌在巢狀結構中，並將該元素放在標籤內。 下列範例示範如何使用<xref:System.Windows.Controls.TextBlock>讓會包裝數行文字的標籤。  
   
  [!code-xaml[LabelSnippet#5](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
   
- **將便捷鍵和文字換行新增至您的標籤**  
+ **將便捷鍵和自動換行功能新增到您的標籤**  
   
  如果您需要<xref:System.Windows.Controls.Label>具有便捷鍵 （助憶鍵），請使用<xref:System.Windows.Controls.AccessText>內的項目<xref:System.Windows.Controls.Label>。  
   
@@ -38,4 +38,4 @@ ms.locfileid: "59174040"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：設定標籤的目標屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))
+- [如何：設定標籤的目標屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))

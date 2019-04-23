@@ -12,10 +12,10 @@ helpviewer_keywords:
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
 ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175015"
 ---
 # <a name="operator-procedures-visual-basic"></a>運算子程序 (Visual Basic)
@@ -66,7 +66,7 @@ ms.locfileid: "59175015"
   
  隱含呼叫運算子程序的語法如下所示：  
   
- `Dim testStruct As`  *結構名稱*  
+ `Dim testStruct As`  *structurename*  
   
  `Dim testNewStruct As`  *structurename*  `= testStruct`  *operatorsymbol*  `10`  
   
@@ -82,12 +82,12 @@ ms.locfileid: "59175015"
 ## <a name="see-also"></a>另請參閱
 
 - [程序](./index.md)
-- [子程序](./sub-procedures.md)
+- [Sub 程序](./sub-procedures.md)
 - [函式程序](./function-procedures.md)
 - [屬性程序](./property-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
-- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [HOW TO：定義運算子](./how-to-define-an-operator.md)
-- [HOW TO：定義轉換運算子](./how-to-define-a-conversion-operator.md)
-- [HOW TO：呼叫運算子程序](./how-to-call-an-operator-procedure.md)
-- [HOW TO：使用定義運算子的類別](./how-to-use-a-class-that-defines-operators.md)
+- [Operator 陳述式](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [如何：定義運算子](./how-to-define-an-operator.md)
+- [如何：定義轉換運算子](./how-to-define-a-conversion-operator.md)
+- [如何：呼叫運算子程序](./how-to-call-an-operator-procedure.md)
+- [如何：使用定義運算子的類別](./how-to-use-a-class-that-defines-operators.md)
