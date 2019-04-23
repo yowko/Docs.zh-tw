@@ -4,12 +4,12 @@ description: 了解如何從原生程式碼裝載 .NET Core 執行階段，以�
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 27717cd68d2ef7c19289a9e06f99bb8767f2f582
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 53cdc13d5a356a2975182c58374a0e9c6639ec17
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654051"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481141"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>撰寫自訂 .NET Core 主機以從原生程式碼控制 .NET 執行階段
 
@@ -52,11 +52,11 @@ dotnet/samples GitHub 存放庫中提供下列示範教學課程所述步驟的[
 
 CoreClrHost 有幾個可用於裝載 .NET Core 的重要方法：
 
-* `coreclr_initialize`：啟動 .NET Core 執行階段，並設定預設的 (且唯一的) AppDomain。
-* `coreclr_execute_assembly`：執行受控組件。
-* `coreclr_create_delegate`：建立受控方法的函式指標。
-* `coreclr_shutdown`：關閉 .NET Core 執行階段。
-* `coreclr_shutdown_2`：如同 `coreclr_shutdown`，但還會擷取受控碼的結束代碼。
+* `coreclr_initialize`:啟動 .NET Core 執行階段，並設定預設的 (且唯一的) AppDomain。
+* `coreclr_execute_assembly`:執行受控組件。
+* `coreclr_create_delegate`:建立受控方法的函式指標。
+* `coreclr_shutdown`:關閉 .NET Core 執行階段。
+* `coreclr_shutdown_2`:如同 `coreclr_shutdown`，但還會擷取受控碼的結束代碼。
 
 載入 CoreCLR 程式庫之後，下一個步驟是使用 `GetProcAddress` (在 Windows 上) 或 `dlsym` (在 Linux/Mac 上) 取得這些函式的參考。
 
@@ -68,8 +68,10 @@ CoreClrHost 有幾個可用於裝載 .NET Core 的重要方法：
 
 常用屬性包括：
 
-* `TRUSTED_PLATFORM_ASSEMBLIES`：這是執行階段預設能夠解析的組件路徑 (在 Windows 上會以 ';' 分隔，而在 Linux 上則以 ':' 分隔) 清單。 某些主機具有硬式編碼資訊清單，其中列出它們可以載入的組件。 其他主機則會在此清單的特定位置 (例如，*coreclr.dll* 旁邊) 放入任何程式庫。
-* `APP_PATHS`：這是在信賴平台組件 (TPA) 清單中找不到組件時，要在其中探查組件的路徑清單。 因為主機可以進一步控制使用 TPA 清單載入哪些組件，所以主機最好確定它們預期載入哪些組件，並明確列出這些組件。 不過，如果需要在執行階段進行探查，此屬性可用於這種情況。
+* `TRUSTED_PLATFORM_ASSEMBLIES`
+  這是執行階段預設能夠解析的組件路徑清單 (在 Windows 上會以 ';' 分隔，而在 Linux 上則以 ':' 分隔)。 某些主機具有硬式編碼資訊清單，其中列出它們可以載入的組件。 其他主機則會在此清單的特定位置 (例如，*coreclr.dll* 旁邊) 放入任何程式庫。
+* `APP_PATHS`
+  這是在信賴平台組件 (TPA) 清單中找不到組件時，要在其中探查組件的路徑清單。 因為主機可以進一步控制使用 TPA 清單載入哪些組件，所以主機最好確定它們預期載入哪些組件，並明確列出這些組件。 不過，如果需要在執行階段進行探查，此屬性可用於這種情況。
 *  `APP_NI_PATHS`：此清單與 APP_PATHS 類似，不同之處在於其用途是作為探查原生映像的路徑。
 *  `NATIVE_DLL_SEARCH_DIRECTORIES`：此屬性是想要透過 p/invoke 呼叫原生程式庫時，載入器應探查的路徑清單。
 *  `PLATFORM_RESOURCE_ROOTS`：此清單包含要在其中探查資源附屬組件的路徑 (位於文化特性專屬子目錄中)。
@@ -114,7 +116,7 @@ int hr = executeAssembly(
 
 [!code-cpp[CoreClrHost#6](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#6)]
 
-請記得使用 `FreeLibrary` (在 Windows 上) 或 `dlclose` (在 Linux/Mac 上) 來卸載 CoreCLR 程式庫。
+CoreCLR 不支援重新初始化或卸載。 請勿再次呼叫 `coreclr_initialize` 或卸載 CoreCLR 程式庫。
 
 ## <a name="create-a-host-using-mscoreeh"></a>使用 Mscoree.h 建立主機
 
@@ -164,8 +166,10 @@ AppDomain 旗標會指定與安全性和 Interop 相關的 AppDomain 行為。 �
 
 常見的 AppDomain 屬性包括：
 
-* `TRUSTED_PLATFORM_ASSEMBLIES`：這是 AppDomain 應設定載入優先權並授與完全信任 (即使是部分信任的定義域) 的組件路徑清單 (在 Windows 上會以 `;` 分隔，而在 Linux/Mac 上則以 `:` 分隔)。 此清單可用來包含 'Framework' 組件及其他信任的模組，類似於 .NET Framework 案例中的 GAC。 某些主機會將任何程式庫放在此清單中的 *coreclr.dll* 旁，其他主機則會有針對其用途列出信任組件的硬式編碼資訊清單。
-* `APP_PATHS`：這是在信賴平台組件 (TPA) 清單中找不到組件時，要在其中探查組件的路徑清單。 因為主機可以進一步控制使用 TPA 清單載入哪些組件，所以主機最好確定它們預期載入哪些組件，並明確列出這些組件。 不過，如果需要在執行階段進行探查，此屬性可用於這種情況。
+* `TRUSTED_PLATFORM_ASSEMBLIES`
+  這是 AppDomain 應設定載入優先權並授與完全信任 (即使是部分信任的定義域) 的組件路徑清單 (在 Windows 上會以 `;` 分隔，而在 Linux/Mac 上則以 `:` 分隔)。 此清單可用來包含 'Framework' 組件及其他信任的模組，類似於 .NET Framework 案例中的 GAC。 某些主機會將任何程式庫放在此清單中的 *coreclr.dll* 旁，其他主機則會有針對其用途列出信任組件的硬式編碼資訊清單。
+* `APP_PATHS`
+  這是在信賴平台組件 (TPA) 清單中找不到組件時，要在其中探查組件的路徑清單。 因為主機可以進一步控制使用 TPA 清單載入哪些組件，所以主機最好確定它們預期載入哪些組件，並明確列出這些組件。 不過，如果需要在執行階段進行探查，此屬性可用於這種情況。
 *  `APP_NI_PATHS`：此清單與 APP_PATHS 非常類似，不同之處在於其用途是作為探查原生影像的路徑。
 *  `NATIVE_DLL_SEARCH_DIRECTORIES`：此屬性是想要透過 p/invoke 呼叫原生 DLL 時，載入器應探查的路徑清單。
 *  `PLATFORM_RESOURCE_ROOTS`：此清單包含要在其中探查資源附屬組件的路徑 (位於文化特性專屬子目錄中)。
@@ -202,6 +206,8 @@ hr = runtimeHost->CreateDelegate(
 最後，主機應該藉由卸載 AppDomain、停止執行階段並釋放 `ICLRRuntimeHost4` 參考來清除自身。
 
 [!code-cpp[NetCoreHost#9](~/samples/core/hosting/HostWithMscoree/host.cpp#9)]
+
+CoreCLR 不支援卸載。 請勿卸載 CoreCLR 程式庫。
 
 ## <a name="conclusion"></a>結論
 建置主機之後，您可以從命令列執行主機，並傳遞主機預期的任何引數 (例如要針對 mscoree 範例主機執行的受控應用程式)，藉以進行測試。 指定主機要執行的 .NET Core 應用程式時，請務必使用 `dotnet build` 所產生的 .dll。 `dotnet publish` 為獨立式應用程式所產生的可執行檔 (.exe 檔案)，其實就是預設 .NET Core 主機 (因此應用程式可在主要情況下從命令列直接啟動)；使用者程式碼會編譯成同名的 DLL。

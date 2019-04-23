@@ -9,10 +9,10 @@ helpviewer_keywords:
 - UI Automation, supporting control patterns in provider
 ms.assetid: 0d635c35-ffa8-4dc8-bbc9-12fcd5445776
 ms.openlocfilehash: 65ec0f85bf0a63d0051ff9491623a65abee7a05c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336677"
 ---
 # <a name="support-control-patterns-in-a-ui-automation-provider"></a>支援 UI 自動化提供者的控制項模式
@@ -25,7 +25,7 @@ ms.locfileid: "59336677"
   
 1. 針對項目應該支援的控制項模式，實作適當的介面，例如適用於 <xref:System.Windows.Automation.Provider.IInvokeProvider> 的 <xref:System.Windows.Automation.InvokePattern>。  
   
-2. 傳回物件，包含您的實作中的每個控制項介面的實作 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>  
+2. 在 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>實作中，傳回包含每個控制項介面實作的物件  
   
 ## <a name="example"></a>範例  
  下列範例示範單一選取自訂清單方塊的 <xref:System.Windows.Automation.Provider.ISelectionProvider> 實作。 它會傳回三個屬性並取得目前選取的項目。  

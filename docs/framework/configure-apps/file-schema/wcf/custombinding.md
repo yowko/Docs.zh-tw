@@ -3,10 +3,10 @@ title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
 ms.openlocfilehash: 60ce3cdfd7c78d152c71cdd652532cc96a6be296
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481115"
 ---
 # <a name="custombinding"></a>\<customBinding>
@@ -193,7 +193,7 @@ ms.locfileid: "59481115"
 |[\<compositeDuplex>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|指定自訂繫結的雙向傳訊。 它是和本身不允許雙工通訊的傳輸一起使用，例如 HTTP。 相反地，TCP 本身就允許雙工通訊，因此不需要使用這個繫結項目也可讓服務將訊息傳回用戶端。<br /><br /> 用戶端必須公開位址，才能讓服務接觸並建立連接。 這個用戶端位址是由 `ClientBaseAddress` 屬性提供。<br /><br /> 此項目的型別為 <xref:System.ServiceModel.Configuration.CompositeDuplexElement>。|
 |[\<pnrpPeerResolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|指定對等名稱解析通訊協定 (PNRP) 對等名稱解析程式。 此項目的型別為 <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>。|
 |[\<reliableSession>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|指定 WS-Reliable 訊息設定。 將這個項目新增至自訂繫結時，產生的通道可支援確實傳送一次保證。 此項目的型別為 <xref:System.ServiceModel.Configuration.ReliableSessionElement>。|
-|[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自訂繫結的安全性選項。 此項目的型別為 <xref:System.ServiceModel.Configuration.SecurityElement>。|
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自訂繫結的安全性選項。 此項目的型別為 <xref:System.ServiceModel.Configuration.SecurityElement>。|
 |[\<sslStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|指定 SSL 資料流繫結的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>。|
 |[\<transactionFlow>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|指定繫結應支援交易流程，並指定 `transactionProtocol` 屬性使用的通訊協定。 此項目的型別為 <xref:System.ServiceModel.Configuration.TransactionFlowElement>。|
 |[\<windowsStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|指定自訂繫結的資料流 (Streaming) 安全性選項。 此項目的型別為 <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>。|
@@ -305,4 +305,4 @@ ms.locfileid: "59481115"
 - [customBinding 元素](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
 - [繫結](../../../../../docs/framework/wcf/bindings.md)
 - [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結來設定服務和用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
 ms.openlocfilehash: 274ec2e8ef16190da53061bb197bc3b1a1fadcf8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336105"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>逐步解說：DataGrid 控制項中顯示資料從 SQL Server 資料庫

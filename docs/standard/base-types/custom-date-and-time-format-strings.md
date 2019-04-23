@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 409cea924b8a775621c3073e27009d1f556e4f42
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c8c9fe05049feff6e15c765212b72e35265fd844
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838569"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345426"
 ---
 # <a name="custom-date-and-time-format-strings"></a>自訂日期與時間格式字串
 
@@ -632,7 +632,7 @@ ms.locfileid: "58838569"
 |F|H|K|M|d|
 |f|G|h|m|秒|
 |t|y|z|%|:|
-|/|"|'|\||
+|/|"|'|&#92;||
 
 所有其他字元一律會解譯為字元常值，並在格式化作業中，原封不動地包含在結果字串中。  在剖析作業中，它們必須完全符合輸入字串中的字元；這項比較會區分大小寫。
 

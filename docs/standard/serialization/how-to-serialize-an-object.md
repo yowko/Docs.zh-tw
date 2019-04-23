@@ -9,10 +9,10 @@ helpviewer_keywords:
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
 ms.openlocfilehash: ff00151d7aaba27faeee1c9d315cac0c8afc0b0d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336313"
 ---
 # <a name="how-to-serialize-an-object"></a>HOW TO：序列化物件
@@ -53,4 +53,4 @@ ms.locfileid: "59336313"
 ## <a name="see-also"></a>另請參閱
 
 - [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [HOW TO：將物件還原序列化](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

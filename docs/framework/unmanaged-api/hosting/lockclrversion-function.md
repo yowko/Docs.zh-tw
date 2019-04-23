@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91bb1a9416e577dbb5cc96e8be87033c53232811
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336690"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 函式
@@ -91,7 +91,7 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
  **LIBRARY:** MSCorEE.dll  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

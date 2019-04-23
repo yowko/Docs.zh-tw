@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: 清單集合
-  ms.openlocfilehash: 49fec69db0d3ae08b4f4904838be8bd5a2df3b10
-  ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+  ms.openlocfilehash: 62cc52e22406c6c19dad6cc800078e0d8f34f0d6
+  ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 04/04/2019
-  ms.locfileid: "58921061"
+  ms.lasthandoff: 04/09/2019
+  ms.locfileid: "59427522"
 items:
 - durationInMinutes: 1
   content: >
@@ -69,7 +69,7 @@ items:
     > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
 - title: 搭配使用 if 和 else
   durationInMinutes: 10
-  content: "\n若要在 True 和 False 分支中執行不同的程式碼，則必須建立可在條件為 False 時執行的 `else` 分支。 試試這個：\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\n只有當測試的條件為 `false` 時，才會執行 `else` 關鍵字之後的陳述式。 將 `if` 和 `else` 結合布林值條件，就可提供您需要的所有功能。\n\n> [!IMPORTANT]\n> `if` 和 `else` 陳述式之下的縮排是為了方便人類閱讀。\n> C# 語言不會將縮排或空白字元視為有意義的內容。\n> `if` 或 `else` 關鍵字之後的陳述式將會根據條件來執行。 此教學課程中的所有範例都遵循常見的實務，根據陳述式的控制流程縮排程式碼行。\n\n因為縮排沒有意義，當您要依條件執行的區塊中有超過一個陳述式時，就需要使用 `{` 和 `}` 來表示。 C# 程式設計人員通常會在所有的 `if` 和 `else` 子句上使用這些大括號。 下列範例與您剛剛所建立的內容相同。 試試看。\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> 本教學課程的其餘部分，程式碼範例都會遵循常見的做法，在程式碼中包含大括號。\n\n您可以測試更複雜的條件：\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a > b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is greater than the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not greater than the second\");\n}\n```\n\n`&&` 代表「且」。 這表示兩個條件都必須為 True，才會執行 True 分支中的陳述式。  這些範例也示範在每個條件式分支中可以有多個陳述式，前提是必須將陳述式放在 `{` 和 `}` 之中。\n\n您也可以使用 `||` 來代表「或」：\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a > b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is greater than the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not greater than the second\");\n}\n```\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
+  content: "\n若要在 True 和 False 分支中執行不同的程式碼，則必須建立可在條件為 False 時執行的 `else` 分支。 試試這個：\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\n只有當測試的條件為 `false` 時，才會執行 `else` 關鍵字之後的陳述式。 將 `if` 和 `else` 結合布林值條件，就可提供您需要的所有功能。\n\n> [!IMPORTANT]\n> `if` 和 `else` 陳述式之下的縮排是為了方便人類閱讀。\n> C# 語言不會將縮排或空白字元視為有意義的內容。\n> `if` 或 `else` 關鍵字之後的陳述式將會根據條件來執行。 此教學課程中的所有範例都遵循常見的實務，根據陳述式的控制流程縮排程式碼行。\n\n因為縮排沒有意義，當您要依條件執行的區塊中有超過一個陳述式時，就需要使用 `{` 和 `}` 來表示。 C# 程式設計人員通常會在所有的 `if` 和 `else` 子句上使用這些大括號。 下列範例與您剛剛所建立的內容相同。 試試看。\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> 本教學課程的其餘部分，程式碼範例都會遵循常見的做法，在程式碼中包含大括號。\n\n您可以測試更複雜的條件：\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\n適用於*相等*的 `==` 符號測試。 使用 `==` 可區分指派中相等的測試，您在 `a = 5` 中看過該指派。\n\n`&&` 代表「且」。 這表示兩個條件都必須為 True，才會執行 True 分支中的陳述式。  這些範例也示範在每個條件式分支中可以有多個陳述式，前提是必須將陳述式放在 `{` 和 `}` 之中。\n\n您也可以使用 `||` 來代表「或」：\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\n修改 `a`、`b` 和 `c` 的值，並在 `&&` 和 `||` 之間切換以進行探索。 您將更加了解 `&&` 和 `||` 運算子的工作原理。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - title: 使用迴圈重複執行作業
   durationInMinutes: 6
   content: >

@@ -3,10 +3,10 @@ title: HOW TO：不使用組態新增 ASP.NET AJAX 端點
 ms.date: 03/30/2017
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
 ms.openlocfilehash: 078580b96ab911f65790e58338951532cd7ad704
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344685"
 ---
 # <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>HOW TO：不使用組態新增 ASP.NET AJAX 端點
@@ -99,4 +99,4 @@ Windows Communication Foundation (WCF) 可讓您建立公開啟用 ASP.NET AJAX 
 ## <a name="see-also"></a>另請參閱
 
 - [建立 ASP.NET AJAX 的 WCF 服務](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)
-- [HOW TO：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+- [如何：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

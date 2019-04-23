@@ -1,19 +1,19 @@
 ---
 title: is - C# 參考
 ms.custom: seodec18
-ms.date: 02/17/2017
+ms.date: 04/09/2019
 f1_keywords:
 - is_CSharpKeyword
 - is
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: a391449afd53b28ae4293865314275782d6e9505
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 83cb308a14a6db99f65b30eded20442d675cbd57
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977043"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480829"
 ---
 # <a name="is-c-reference"></a>is (C# 參考)
 
@@ -47,11 +47,11 @@ ms.locfileid: "56977043"
 
 [!code-csharp[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
 
-如果運算式已知一定會是 `true` 或 `false`，`is` 關鍵字會產生編譯時期警告。 它只會考慮參考轉換、boxing 轉換和 unboxing 轉換，不會考慮使用者定義轉換，或是由類型的 [implicit](implicit.md) 和 [explicit](explicit.md) 運算子定義的轉換。 下列範例會產生警告，因為轉換的結果在編譯時期為已知。 請注意，從 `int` 轉換成 `long` 和 `double` 的 `is` 運算式會傳回 false，因為這些轉換是由 [implicit](implicit.md) 運算子處理。
+如果運算式已知一定會是 `true` 或 `false`，`is` 關鍵字會產生編譯時期警告。 它只會考慮參考轉換、boxing 轉換和 unboxing 轉換，不會考慮使用者定義轉換，或是由類型的 [implicit](implicit.md) 和 [explicit](explicit.md) 運算子定義的轉換。 下列範例會產生警告，因為轉換的結果在編譯時期為已知。 適用於從 `int` 轉換成 `long` 和 `double` 的 `is` 運算式會傳回 false，因為這些轉換是由 [implicit](implicit.md) 運算子處理。
 
 [!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
 
-`expr` 可以是傳回值的任何運算式，但匿名方法和 Lambda 運算式則除外。 下列範例使用 `is` 來評估方法呼叫的傳回值。   
+`expr` 不能是匿名方法或 Lambda 運算式。 它可以是任何其他會傳回值的運算式。 下列範例使用 `is` 來評估方法呼叫的傳回值。   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
 從 C# 7.0 開始，您可以搭配[類型模式](#type)使用模式比對來撰寫更簡潔的程式碼，以使用 `is` 陳述式。
@@ -66,9 +66,9 @@ ms.locfileid: "56977043"
 
 - [var 模式](#var)，比對一定會成功，而且會將運算式的值繫結至新的區域變數。 
 
-### <a name="type" /> 類型模式 </a>
+### <a name="a-nametype-type-pattern"></a><a name="type" />類型模式
 
-使用類型模式執行模式比對時，`is` 會測試運算式是否可轉換成指定的類型；如果可以的話，則會將它轉換成該類型的變數。 它是 `is` 陳述式的直接延伸，允許精簡類型的評估和轉換。 `is` 類型模式的一般格式為：
+使用類型模式執行模式比對時，`is` 會測試運算式是否可轉換成指定的類型；如果可以的話，則會將它轉換成該類型的變數。 它是 `is` 陳述式的直覺性延伸，允許精簡的類型評估和轉換。 `is` 類型模式的一般格式為：
 
 ```csharp
    expr is type varname 
@@ -76,7 +76,7 @@ ms.locfileid: "56977043"
 
 其中 *expr* 是評估為特定類型執行個體的運算式，*type* 是 *expr* 的結果要轉換的目標類型名稱，而 *varname* 是 *expr* 的結果所轉換的目標物件 (如果 `is` 測試為 `true`)。 
 
-如果 *expr* 不是 `null`，且符合下列任一項，則 `is` 運算式為 `true`：
+如果 *expr* 不是 `null`，且下列任何一個條件成立，則 `is` 運算式為 `true`：
 
 - *expr* 是其類型與 *type* 相同的執行個體。
 
@@ -85,6 +85,8 @@ ms.locfileid: "56977043"
 - *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」是定義於變數宣告的變數類型。 變數的「執行階段類型」是指派給該變數的執行個體類型。
 
 - *expr* 是實作 *type* 介面的類型執行個體。
+
+從 C# 7.1 開始，*expr* 可以擁有由泛型類型參數及其條件約束所定義的編譯時間類型。 
 
 如果 *exp* 為 `true`，且 `is` 與 `if` 陳述式搭配使用，則會指派 *varname* ；而且只在 `if` 陳述式內具有區域範圍。
 
@@ -106,7 +108,7 @@ ms.locfileid: "56977043"
 
 ### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> 常數模式
 
-以常數模式執行模式比對時，`is` 會測試運算式是否等於指定的常數。 在 C# 6 (含) 以前版本中，[switch](switch.md) 陳述式支援常數模式。 從 C# 7.0 開始，`is` 陳述式也提供支援。 它的語法為：
+以常數模式執行模式比對時，`is` 會測試運算式是否等於指定的常數。 在 C# 6 (含) 以前版本中，[switch](switch.md) 陳述式支援常數模式。 從 C# 7.0 開始，它同時也被 `is` 陳述式支援。 它的語法為：
 
 ```csharp
    expr is constant
@@ -142,17 +144,15 @@ ms.locfileid: "56977043"
  
 ### <a name="var" /> var 模式 </a>
 
-以 var 模式進行模式比對一定會成功。 其語法為
+搭配 var 模式的模式比對針對非 Null 運算式一律會成功；如果 *expr* 是 `null`，則 `is` 運算式便會為 `false`。 *expr* 的非 Null 值一律會被指派至類型與 *expr* 的執行階段時間類型相同的本機變數。  它的語法為：
 
 ```csharp 
    expr is var varname
 ```
 
-其中 *expr* 的值一定會指派給名為 *varname* 的區域變數。 *varname* 是其類型與 *expr* 相同的靜態變數。 下列範例使用 var 模式將運算式指派給名為 `obj` 的變數， 然後顯示 `obj` 的值和類型。
+下列範例使用 var 模式將運算式指派給名為 `obj` 的變數， 然後顯示 `obj` 的值和類型。
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
-
-請注意，如果 *expr* 為 `null`，`is` 運算式仍為 true，而且會將 `null` 指派給 *varname*。 
 
 ## <a name="c-language-specification"></a>C# 語言規格
   

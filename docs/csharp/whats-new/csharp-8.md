@@ -1,37 +1,37 @@
 ---
 title: C# 8.0 的新功能 - C# 指南
-description: 大致了解 C# 8.0 中可用的新功能。 此文章為適用於預覽 2 的最新資訊。
+description: 大致了解 C# 8.0 中可用的新功能。 本文為適用於預覽 2 的最新資訊。
 ms.date: 02/12/2019
-ms.openlocfilehash: 07752d6d7784ff4aeb70900ef3bcd90cb29f7c22
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545555"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427275"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
 有許多 C# 語言的增強功能，您已經可透過預覽 2 來試用。 在預覽 2 中新增的功能為：
 
 - [模式比對增強功能](#more-patterns-in-more-places)：
-  * [Switch 運算式](#switch-expressions)
+  * [switch 運算式](#switch-expressions)
   * [屬性模式](#property-patterns)
   * [Tuple 模式](#tuple-patterns)
   * [位置模式](#positional-patterns)
-- [Using 宣告](#using-declarations)
+- [using 宣告](#using-declarations)
 - [靜態區域函式](#static-local-functions)
 - [可處置的 ref struct](#disposable-ref-structs)
 
 下列語言功能首次出現於 C# 8.0 預覽 1 中：
 
-- [可為 Null 的參考類型](#nullable-reference-types)
+- [可為 Null 的參考型別](#nullable-reference-types)
 - [非同步資料流](#asynchronous-streams)
 - [索引和範圍](#indices-and-ranges)
 
 > [!NOTE]
-> 此文章內容為 C# 8.0 預覽 2 的最新更新。
+> 本文內容為 C# 8.0 預覽 2 的最新更新。
 
-此文章的其餘部分會簡短說明這些功能。 提供教學課程及概觀的連結，其中包含深入詳盡的文章。
+本文的其餘部分會簡短說明這些功能。 提供教學課程及概觀的連結，其中包含深入詳盡的文章。
 
 ## <a name="more-patterns-in-more-places"></a>在更多位置使用更多的模式
 
@@ -58,7 +58,7 @@ public enum Rainbow
 }
 ```
 
-您可使用以下包含 switch 運算式的方法，將 `Rainbow` 值轉換為其 RGB 值：
+如果您的應用程式定義了由 `R`、`G` 和 `B` 元件所建構的 `RGBColor` 型別，則可以使用包含 switch 運算式的下列方法，將 `Rainbow` 值轉換為其 RGB 值：
 
 ```csharp
 public static RGBColor FromRainbow(Rainbow colorBand) =>
@@ -75,7 +75,7 @@ public static RGBColor FromRainbow(Rainbow colorBand) =>
     };
 ```
 
-幾個語法改進如下：
+幾項語法改進如下：
 
 - 變數挪到了 `switch` 關鍵字前。 不同的順序讓您可輕鬆區分出 switch 運算式及 switch 陳述式。
 - `case` 及 `:` 元素取代為 `=>`。 這更加精簡而且符合直覺。
@@ -219,7 +219,6 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 ```
 
 在上述範例中，到達方法的右大括號時，就會處置檔案。 這是宣告 `file` 之範圍的結尾。 上述程式碼與下列使用傳統 [using 陳述式](../language-reference/keywords/using-statement.md)的程式碼相等：
-
 
 ```csharp
 static void WriteLinesToFile(IEnumerable<string> lines)

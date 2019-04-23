@@ -4,10 +4,10 @@ description: 第一次接觸 C#？ 了解該語言的基本概念。
 ms.date: 04/05/2019
 ms.custom: seoapril2019
 ms.openlocfilehash: c3a117d660c02702e900b827c2eed9c6b56b5606
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481089"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# 語言教學課程

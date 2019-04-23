@@ -12,10 +12,10 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
 ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344997"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>HOW TO：巡覽 Windows Forms 中的資料
@@ -52,7 +52,7 @@ ms.locfileid: "59344997"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Windows Form 支援的資料來源](data-sources-supported-by-windows-forms.md)
-- [Windows Form 資料繫結中的變更告知](change-notification-in-windows-forms-data-binding.md)
-- [資料繫結和 Windows Form](data-binding-and-windows-forms.md)
-- [Windows Form 資料繫結](windows-forms-data-binding.md)
+- [Windows Forms 支援的資料來源](data-sources-supported-by-windows-forms.md)
+- [Windows Forms 資料繫結中的變更告知](change-notification-in-windows-forms-data-binding.md)
+- [資料繫結和 Windows Forms](data-binding-and-windows-forms.md)
+- [Windows Forms 資料繫結](windows-forms-data-binding.md)

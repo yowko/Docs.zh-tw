@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Visual Basic code, documenting with XML
 ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
 ms.openlocfilehash: 6b9fe9994b7bdf2259dcdb1ecef906e0f9955c8f
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480621"
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>使用 XML 在程式碼中加入文件 (Visual Basic)
@@ -45,7 +45,7 @@ XML 文件開頭`'''`。 這些註解在處理時有一些限制：
 
 - [處理 XML 檔案](../../../visual-basic/programming-guide/program-structure/processing-the-xml-file.md)
 
-- [HOW TO：建立 XML 文件](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [如何：建立 XML 文件](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 
 - [Visual Studio 中的 XML 工具](/visualstudio/xml-tools/xml-tools-in-visual-studio)
 

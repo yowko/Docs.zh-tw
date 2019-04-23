@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
 ms.openlocfilehash: 43bc222bb69aafa3fa3492d79d35fbc492055ead
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344828"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>未使用認證交涉的 Windows 用戶端訊息安全性
@@ -150,4 +150,4 @@ ms.locfileid: "59344828"
 
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Windows Server AppFabric 的資訊安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

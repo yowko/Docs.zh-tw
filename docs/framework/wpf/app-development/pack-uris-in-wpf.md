@@ -10,10 +10,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
 ms.openlocfilehash: 4e005ea96df45da8326386f8b43aa5640ce810b1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344347"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF 中的 Pack URI
@@ -151,7 +151,7 @@ ms.locfileid: "59344347"
  `pack://application:,,,/Subfolder/ContentFile.xaml`  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] 無法巡覽的內容檔案。 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]配置只支援巡覽至[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]位於來源網站上的檔案。  
+>  無法巡覽至 [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] 內容檔。 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]配置只支援巡覽至[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]位於來源網站上的檔案。  
   
 <a name="The_siteoforigin_____Authority"></a>   
 ## <a name="site-of-origin-pack-uris"></a>來源網站套件 URI  
@@ -171,9 +171,9 @@ ms.locfileid: "59344347"
   
 <a name="Page_Files"></a>   
 ## <a name="page-files"></a>分頁檔  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案設定為[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page`項目時，會編譯成組件上，做為資源檔相同的方式。 因此，[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page`項目可以使用組件識別[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]資源檔。  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 設定為的檔案[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page`項目時，會編譯成組件上，做為資源檔相同的方式。 因此， [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page`項目可以使用組件識別[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]資源檔。  
   
- 型別[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]檔案，通常會設定為[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page`項目具有下列作為其根項目其中之一：  
+ 型別[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]通常會設定為的檔案[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page`項目具有下列作為其根項目其中之一：  
   
 -   <xref:System.Windows.Window?displayProperty=nameWithType>  
   

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
 ms.openlocfilehash: 8b709de728726b7695b987c48574d2a70a1bc27e
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481375"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>開發和部署 WCF 資料服務
@@ -96,15 +96,15 @@ WCF Data Services 提供選擇裝載資料服務之程序的彈性。 若要將�
 
   - **用於 ASP.NET Web 應用程式的部署技術**
 
-    - [HOW TO：在 Visual Studio 中建立 Web 部署套件](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
+    - [如何：在 Visual Studio 中建立 Web 部署套件](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
 
-    - [HOW TO：部署 Web 專案使用單鍵發行 Visual Studio 中](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
+    - [如何：部署 Web 專案使用單鍵發行 Visual Studio 中](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
 
   - **用於 ASP.NET 網站的部署技術**
 
-    - [HOW TO：複製網站的檔案，以複製網站工具](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
+    - [如何：複製網站的檔案，以複製網站工具](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
 
-    - [HOW TO：發行網站](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
+    - [如何：發行網站](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
 
     - [逐步解說：使用 XCOPY 將 ASP.NET Web 應用程式部署](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
 
@@ -128,5 +128,5 @@ WCF Data Services 提供選擇裝載資料服務之程序的彈性。 若要將�
 ## <a name="see-also"></a>另請參閱
 
 - [裝載資料服務](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
-- [保護 WCF Data Services 的安全](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
-- [定義 WCF 資料服務](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [保護 WCF 資料服務的安全](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
+- [定義 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

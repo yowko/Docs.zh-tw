@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 7eb50bcb-38d8-4afb-86aa-2573586697c2
 author: BrucePerlerMS
 ms.openlocfilehash: 36f7687f42c6e0d6f865a025f09c4ead6f79960c
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481401"
 ---
 # <a name="windows-identity-foundation"></a>Windows Identity Foundation
@@ -30,7 +30,7 @@ ms.locfileid: "59481401"
 
 - [WIF 功能](../../../docs/framework/security/wif-features.md)
 
-  - [Visual Studio 2012 的識別和存取工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)
+  - [Visual Studio 2012 的身分識別與存取工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)
 
   - [WIF 工作階段管理](../../../docs/framework/security/wif-session-management.md)
 
@@ -40,19 +40,19 @@ ms.locfileid: "59481401"
 
   - [WSTrustChannelFactory 和 WSTrustChannel](../../../docs/framework/security/wstrustchannelfactory-and-wstrustchannel.md)
 
-- [WIF 的實作索引](../../../docs/framework/security/wif-how-tos-index.md)
+- [WIF 的操作說明索引](../../../docs/framework/security/wif-how-tos-index.md)
 
-  - [如何：使用 WIF 建置宣告感知 ASP.NET MVC Web 應用程式](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)
+  - [如何：建置宣告感知 ASP.NET MVC Web 應用程式使用 WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)
 
-  - [如何：使用 WIF 建置宣告感知 ASP.NET Web Forms 應用程式](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+  - [如何：建置宣告感知 ASP.NET Web Form 應用程式使用 WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
 
-  - [如何：使用表單型驗證建置宣告感知 ASP.NET 應用程式](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)
+  - [如何：建置宣告感知 ASP.NET 應用程式使用表單型驗證](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)
 
-  - [如何：使用 Windows 驗證建置宣告感知 ASP.NET 應用程式](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)
+  - [如何：建置宣告感知 ASP.NET 應用程式使用 Windows 驗證](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)
 
-  - [如何：使用 WIF 追蹤對宣告感知應用程式和服務進行偵錯](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)
+  - [如何：偵錯之可感知宣告的應用程式和服務使用 WIF 追蹤](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)
 
-  - [如何：使用 WIF 顯示登入的狀態](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)
+  - [如何：顯示登入的狀態使用 WIF](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)
 
   - [如何：啟用權杖重新執行偵測](../../../docs/framework/security/how-to-enable-token-replay-detection.md)
 

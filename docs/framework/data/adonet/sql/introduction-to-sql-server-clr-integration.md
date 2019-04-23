@@ -3,10 +3,10 @@ title: SQL Server CLR 整合簡介
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
 ms.openlocfilehash: dc7d19bf361ed5fcda1fd5edf64eeb5e4ce15a71
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336807"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server CLR 整合簡介
@@ -68,4 +68,4 @@ GO
 ## <a name="see-also"></a>另請參閱
 
 - [程式碼存取安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

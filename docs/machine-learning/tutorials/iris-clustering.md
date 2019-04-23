@@ -3,22 +3,22 @@ title: 使用叢集學習工具建立鳶尾花叢集 - ML.NET
 description: 了解如何在群集案例中使用 ML.NET
 author: pkulikov
 ms.author: johalex
-ms.date: 03/18/2019
+ms.date: 04/08/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: be59760091767b7229d80693cd69434581a8b140
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 86eba0c7a3eaeed008d41ff950bf2fd7e0e5fb57
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634410"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481336"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>教學課程：ML.NET 的使用叢集學習工具建立鳶尾花叢集
 
 > [!NOTE]
 > 本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) \(英文)。
 
-此教學課程與關聯的範例目前是使用 **ML.NET 0.11 版**。 如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊。
+此教學課程與關聯的範例目前是使用 **ML.NET 1.0 RC (候選版) (`1.0.0-preview` 版)**。 如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊。
 
 本教學課程說明如何使用 ML.NET 為[鳶尾花資料集](https://en.wikipedia.org/wiki/Iris_flower_data_set)建立一個[群集模型](../resources/tasks.md#clustering)。
 
@@ -34,7 +34,7 @@ ms.locfileid: "58634410"
 
 ## <a name="prerequisites"></a>必要條件
 
-- 已安裝「.NET Core 跨平台開發」工作負載的 [Visual Studio 2017 15.6 或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。
+- 已安裝「.NET Core 跨平台開發」工作負載的 [Visual Studio 2017 15.6 或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
 
 ## <a name="understand-the-problem"></a>了解問題
 
@@ -127,16 +127,16 @@ ms.locfileid: "58634410"
 
 將下列程式碼新增至 `Main` 方法，以設定資料載入方式：
 
-[!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
+[!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 
-使用 [LoadFromTextFile 方法](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)的泛型 `MLContext.Data.LoadFromTextFile` 包裝函式來載入資料。 它會傳回從 `IrisData` 資料模型類型推斷資料集結構描述的 <xref:Microsoft.Data.DataView.IDataView>、使用資料集標頭，並以逗號分隔。
+泛型的 [`MLContext.Data.LoadFromTextFile` 擴充方法](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)會從所提供的 `IrisData` 類型推斷資料集結構描述，並傳回 <xref:Microsoft.ML.IDataView>，其可作為轉換器的輸入使用。
 
 ## <a name="create-a-learning-pipeline"></a>建立學習管線
 
 在本教學課程中，叢集工作的學習管線包含下列兩個步驟：
 
 - 將載入的資料行串連成一個 [特徵] 資料行，以供叢集定型器使用；
-- 使用 <xref:Microsoft.ML.Trainers.KMeansPlusPlusTrainer> 定型器透過 k-means++ 叢集演算法將模型定型。
+- 使用 <xref:Microsoft.ML.Trainers.KMeansTrainer> 定型器透過 k-means++ 叢集演算法將模型定型。
 
 將下列程式碼加入 `Main` 方法：
 

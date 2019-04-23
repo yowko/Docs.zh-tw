@@ -1,5 +1,5 @@
 ---
-title: 作法：使用反映檢查和具現化泛型型別
+title: HOW TO：使用反映檢查和具現化泛型型別
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddddc746eb29c526adb8a15fc6ac40acc22954cf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337223"
 ---
-# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>作法：使用反映檢查和具現化泛型型別
+# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>HOW TO：使用反映檢查和具現化泛型型別
 取得泛型型別相關資訊的方式和取得其他類型相關資訊的方式一樣：檢查代表泛型型別的 <xref:System.Type> 物件。 主要差異是泛型型別有代表其泛型型別參數的 <xref:System.Type> 物件清單。 本節的第一個程序是檢查泛型型別。  
   
  您可以將型別引數繫結至泛型型別定義的型別參數，建立代表建構類型的 <xref:System.Type> 物件。 第二個程序即示範此作業。  

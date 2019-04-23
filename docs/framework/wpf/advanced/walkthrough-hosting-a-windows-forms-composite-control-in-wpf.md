@@ -9,14 +9,14 @@ helpviewer_keywords:
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
 ms.openlocfilehash: 90d0e2f3c6ebab070809a4813c87da3539fd14f1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337847"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>逐步解說：將 Windows Forms 複合控制項裝載在 WPF 中
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供豐富的環境，以建立應用程式。 不過，如果您已長期開發[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]程式碼，它可以更有效率地重複使用至少其中某些程式碼中您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式而不從頭重寫程式。 最常見的案例是當您有現有的 Windows Form 控制項。 在某些情況下，您甚至可能無法存取這些控制項的原始程式碼。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供簡單的程序這類控制項裝載於[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。 例如，您可以使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]適用於大部分的程式設計時裝載您特殊<xref:System.Windows.Forms.DataGridView>控制項。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，如果您已長期開發[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]程式碼，它可以更有效率地重複使用至少其中某些程式碼中您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式而不從頭重寫程式。 最常見的案例是當您有現有的 Windows Form 控制項。 在某些情況下，您甚至可能無法存取這些控制項的原始程式碼。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供簡單的程序這類控制項裝載於[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。 例如，您可以使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]適用於大部分的程式設計時裝載您特殊<xref:System.Windows.Forms.DataGridView>控制項。  
   
  本逐步解說將引導您透過應用程式裝載 Windows Forms 複合控制項，以執行中的資料輸入[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。 複合控制項會封裝在 DLL 中。 這個一般程序可以延伸到更複雜的應用程式和控制項。 本逐步解說設計成幾乎完全相同的外觀和功能[逐步解說：裝載 WPF 複合控制項在 Windows Form 中的](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)。 主要差異在於裝載案例相反。  
   
@@ -243,5 +243,5 @@ using MyControls;
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [逐步解說：將 Windows Forms 控制項裝載在 WPF 中](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
-- [逐步解說：在 Windows Forms 中裝載 WPF 複合控制項](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [逐步解說：裝載在 WPF 中的 Windows Forms 控制項](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [逐步解說：裝載 Windows Forms 中的 WPF 複合控制項](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
 ms.openlocfilehash: 911c13b2a24c1906fe3da787460209f12296c993
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337119"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>HOW TO：在組態中指定服務繫結
@@ -94,5 +94,5 @@ ms.locfileid: "59337119"
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用繫結來設定服務和用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [使用繫結設定服務與用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [指定端點位址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

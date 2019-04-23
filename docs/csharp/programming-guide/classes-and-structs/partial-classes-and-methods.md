@@ -8,10 +8,10 @@ helpviewer_keywords:
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
 ms.openlocfilehash: 0d54101badab297457e8d8ecf277898fc6908779
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481051"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>部分類別和方法 (C# 程式設計手冊)
@@ -172,8 +172,8 @@ partial void onNameChanged()
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)
 - [結構](../../../csharp/programming-guide/classes-and-structs/structs.md)
 - [介面](../../../csharp/programming-guide/interfaces/index.md)
-- [partial (類型)](../../../csharp/language-reference/keywords/partial-type.md)
+- [partial (型別)](../../../csharp/language-reference/keywords/partial-type.md)

@@ -3,12 +3,12 @@ title: 分支和迴圈 - C# 教學課程簡介
 description: 在這個關於分支和迴圈的教學課程中，您將會撰寫 C# 程式碼以探索支援條件式分支和迴圈的語言語法，以重複執行陳述式。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: ad5891c11c516a7c5e3d46bea9c17c85b4a8536e
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 4a116ae5294915770dec742c147cf2ba1bf6e284
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920944"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427249"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>透過分支和迴圈陳述式了解條件式邏輯
 
@@ -88,34 +88,38 @@ else
 
 ```csharp
 int c = 4;
-if ((a + b + c > 10) && (a > b))
+if ((a + b + c > 10) && (a == b))
 {
     Console.WriteLine("The answer is greater than 10");
-    Console.WriteLine("And the first number is greater than the second");
+    Console.WriteLine("And the first number is equal to the second");
 }
 else
 {
     Console.WriteLine("The answer is not greater than 10");
-    Console.WriteLine("Or the first number is not greater than the second");
+    Console.WriteLine("Or the first number is not equal to the second");
 }
 ```
+
+適用於*相等*的 `==` 符號測試。 使用 `==` 可區分指派中相等的測試，您在 `a = 5` 中看過該指派。
 
 `&&` 代表「且」。 這表示兩個條件都必須為 True，才會執行 True 分支中的陳述式。  這些範例也示範在每個條件式分支中可以有多個陳述式，前提是必須將陳述式放在 `{` 和 `}` 之中。
 
 您也可以使用 `||` 來代表「或」。 在您目前已撰寫的程式碼後方新增下列程式碼：
 
 ```csharp
-if ((a + b + c > 10) || (a > b))
+if ((a + b + c > 10) || (a == b))
 {
     Console.WriteLine("The answer is greater than 10");
-    Console.WriteLine("Or the first number is greater than the second");
+    Console.WriteLine("Or the first number is equal to the second");
 }
 else
 {
     Console.WriteLine("The answer is not greater than 10");
-    Console.WriteLine("And the first number is not greater than the second");
+    Console.WriteLine("And the first number is not equal to the second");
 }
 ```
+
+修改 `a`、`b` 和 `c` 的值，並在 `&&` 和 `||` 之間切換以進行探索。 您將更加了解 `&&` 和 `||` 運算子的工作原理。
 
 您已完成第一個步驟。 在開始下一節之前，讓我們將目前的程式碼移到另一個個別的方法。 這可讓您更輕鬆地開始處理新的範例。 將 `Main` 方法重新命名為 `ExploreIf`，然後撰寫會呼叫 `ExploreIf` 的新 `Main` 方法。 當您完成時，您的程式碼看起來應該像這樣：
 

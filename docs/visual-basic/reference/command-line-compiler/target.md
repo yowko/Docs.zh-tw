@@ -7,10 +7,10 @@ helpviewer_keywords:
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 ms.openlocfilehash: c91e69e3d9f17f758990b8385f6b8d0a1c03bef6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344737"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
@@ -25,7 +25,7 @@ ms.locfileid: "59344737"
 ## <a name="remarks"></a>備註  
  下表摘要說明的效果`-target`選項。  
   
-|**選項**|**行為**|  
+|**選項**|**Behavior**|  
 |----------------|------------------|  
 |`-target:exe`|可讓編譯器建立可執行主控台應用程式。<br /><br /> 這是預設選項，若未`-target`指定選項。 可執行檔會建立副檔名為.exe。<br /><br /> 除非另有指定，否則`/out`選項，輸出檔案名稱會採用包含輸入檔名稱`Sub Main`程序。<br /><br /> 只有一個`Sub Main`編譯為.exe 檔的原始程式碼檔案中所需的程序。 使用`-main`編譯器選項來指定哪個類別包含`Sub Main`程序。|  
 |`-target:library`|可讓編譯器建立動態連結程式庫 (DLL)。<br /><br /> 動態連結程式庫檔案會建立副檔名為.dll。<br /><br /> 除非另有指定與`-out`選項，輸出檔案名稱會採用第一個輸入檔案名稱。<br /><br /> 建置 DLL 時`Sub Main`程序就不需要。|  

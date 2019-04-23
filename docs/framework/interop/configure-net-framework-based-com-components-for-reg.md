@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b66265a58dcbb6f795e1d207e0bb6f75252161e
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ea62f7dc5c47f52f94567857427e7add929b8b1c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093537"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336573"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>作法：設定 .NET Framework 架構 COM 元件進行免註冊啟用
 .NET Framework 型元件的免註冊啟用，只比 COM 元件的免註冊啟用略為複雜。 安裝程式需要兩個資訊清單：  
@@ -28,9 +28,9 @@ ms.locfileid: "56093537"
   
 ### <a name="to-create-an-application-manifest"></a>建立應用程式資訊清單  
   
-1.  使用 XML 編輯器，建立 (或修改) COM 應用程式所擁有的應用程式資訊清單，而其與一或多個 Managed 元件交互操作。  
+1. 使用 XML 編輯器，建立 (或修改) COM 應用程式所擁有的應用程式資訊清單，而其與一或多個 Managed 元件交互操作。  
   
-2.  在檔案開頭，插入下列標準標頭：  
+2. 在檔案開頭，插入下列標準標頭：  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -39,7 +39,7 @@ ms.locfileid: "56093537"
   
      如需資訊清單元素及其屬性的相關資訊，請參閱[應用程式資訊清單](/windows/desktop/SbsCs/application-manifests) \(英文\)。  
   
-3.  識別資訊清單的擁有者。 在下列範例中，`myComApp` 第 1 版擁有資訊清單檔。  
+3. 識別資訊清單的擁有者。 在下列範例中，`myComApp` 第 1 版擁有資訊清單檔。  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -51,7 +51,7 @@ ms.locfileid: "56093537"
       />  
     ```  
   
-4.  識別相依組件。 在下列範例中，`myComApp` 取決於 `myManagedComp`。  
+4. 識別相依組件。 在下列範例中，`myComApp` 取決於 `myManagedComp`。  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -75,22 +75,22 @@ ms.locfileid: "56093537"
     </assembly>  
     ```  
   
-5.  儲存並命名資訊清單檔。 應用程式資訊清單的名稱就是後接 .manifest 副檔名的組件可執行檔名稱。 例如，myComApp.exe 的應用程式資訊清單檔案名稱是 myComApp.exe.manifest。  
+5. 儲存並命名資訊清單檔。 應用程式資訊清單的名稱就是後接 .manifest 副檔名的組件可執行檔名稱。 例如，myComApp.exe 的應用程式資訊清單檔案名稱是 myComApp.exe.manifest。  
   
  您可以在與 COM 應用程式相同的目錄中安裝應用程式資訊清單。 或者，您可以將它當成資源新增至應用程式的.exe 檔案。 如需詳細資訊，請參閱[關於並存組件](/windows/desktop/SbsCs/about-side-by-side-assemblies-) \(英文\)。  
   
 #### <a name="to-create-a-component-manifest"></a>建立元件資訊清單  
   
-1.  使用 XML 編輯器，建立元件資訊清單以描述 Managed 組件。  
+1. 使用 XML 編輯器，建立元件資訊清單以描述 Managed 組件。  
   
-2.  在檔案開頭，插入下列標準標頭：  
+2. 在檔案開頭，插入下列標準標頭：  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-3.  識別檔案的擁有者。 應用程式資訊清單檔中 `<dependentAssembly>` 項目的 `<assemblyIdentity>` 項目必須符合元件資訊清單中的項目。 在下列範例中，`myManagedComp` 版本 1.2.3.4 擁有資訊清單檔。  
+3. 識別檔案的擁有者。 應用程式資訊清單檔中 `<dependentAssembly>` 項目的 `<assemblyIdentity>` 項目必須符合元件資訊清單中的項目。 在下列範例中，`myManagedComp` 版本 1.2.3.4 擁有資訊清單檔。  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -103,9 +103,9 @@ ms.locfileid: "56093537"
            />  
     ```  
   
-4.  識別組件中的每個類別。 使用 `<clrClass>` 項目，唯一識別 Managed 組件中的每個類別。 項目 (即 `<assembly>` 項目的子項目) 具有下表所述的屬性。  
+4. 識別組件中的每個類別。 使用 `<clrClass>` 項目，唯一識別 Managed 組件中的每個類別。 項目 (即 `<assembly>` 項目的子項目) 具有下表所述的屬性。  
   
-    |屬性|描述|必要|  
+    |屬性|說明|必要|  
     |---------------|-----------------|--------------|  
     |`clsid`|指定要啟用之類別的識別碼。|是|  
     |`description`|通知使用者有關元件的字串。 空字串為預設值。|否|  
@@ -146,25 +146,25 @@ ms.locfileid: "56093537"
     </assembly>  
     ```  
   
-5.  儲存並命名資訊清單檔。 元件資訊清單的名稱就是後接 .manifest 副檔名的組件庫名稱。 例如，myManagedComp.dll 是 myManagedComp.manifest。  
+5. 儲存並命名資訊清單檔。 元件資訊清單的名稱就是後接 .manifest 副檔名的組件庫名稱。 例如，myManagedComp.dll 是 myManagedComp.manifest。  
   
  您必須將元件資訊清單內嵌為組件中的資源。  
   
 #### <a name="to-embed-a-component-manifest-in-a-managed-assembly"></a>將元件資訊清單內嵌至 Managed 組件  
   
-1.  建立包含下列陳述式的資源指令碼：  
+1. 建立包含下列陳述式的資源指令碼：  
   
      `RT_MANIFEST 1 myManagedComp.manifest`  
   
      在此陳述式中，`myManagedComp.manifest` 是所內嵌之元件資訊清單的名稱。 在此範例中，指令碼檔名稱是 `myresource.rc`。  
   
-2.  使用 Microsoft Windows 資源編譯器 (Rc.exe) 編譯指令碼。 在命令提示字元中輸入下列命令：  
+2. 使用 Microsoft Windows 資源編譯器 (Rc.exe) 編譯指令碼。 在命令提示字元中輸入下列命令：  
   
      `rc myresource.rc`  
   
      Rc.exe 會產生 `myresource.res` 資源檔。  
   
-3.  重新編譯組件的原始程式檔，然後使用 **/win32res** 選項來指定資源檔：  
+3. 重新編譯組件的原始程式檔，然後使用 **/win32res** 選項來指定資源檔：  
   
     ```  
     /win32res:myresource.res  
@@ -173,6 +173,7 @@ ms.locfileid: "56093537"
      同樣地，`myresource.res` 是包含內嵌資源之資源檔的名稱。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [免註冊的 COM Interop](registration-free-com-interop.md)
 - [免註冊 COM Interop 的需求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
 - [設定適用於免註冊啟用的 COM 元件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))

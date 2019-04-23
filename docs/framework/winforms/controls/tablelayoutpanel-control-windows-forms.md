@@ -10,10 +10,10 @@ helpviewer_keywords:
 - automatic sizing
 ms.assetid: f55175c6-424e-4782-a86e-3f79c1550235
 ms.openlocfilehash: b51d3bd8e9d8816dfae6c10fc752adb0b3cea59c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337782"
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a>TableLayoutPanel 控制項 (Windows Form)
@@ -29,22 +29,22 @@ ms.locfileid: "59337782"
  [AutoSize 在 TableLayoutPanel 控制項中的行為](autosize-behavior-in-the-tablelayoutpanel-control.md)  
  說明 <xref:System.Windows.Forms.TableLayoutPanel> 控制項支援自動調整大小行為的方式。  
   
- [HOW TO：錨定和停駐 TableLayoutPanel 控制項中的子控制項](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
+ [如何：錨定和停駐 TableLayoutPanel 控制項中的子控制項](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
  示範如何錨定和停駐 <xref:System.Windows.Forms.TableLayoutPanel> 控制項中的子控制項。  
   
- [HOW TO：設計可適當回應當地語系化的 Windows Forms 配置](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
+ [如何：設計可適當回應當地語系化的 Windows Forms 配置](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
  示範如何使用 <xref:System.Windows.Forms.TableLayoutPanel> 控制項來建立適當回應當地語系化的表單。  
   
- [HOW TO：建立適用於資料輸入且可調整大小的 Windows Forms](how-to-create-a-resizable-windows-form-for-data-entry.md)  
+ [如何：建立適用於資料輸入且可調整大小的 Windows Form](how-to-create-a-resizable-windows-form-for-data-entry.md)  
  示範如何使用 <xref:System.Windows.Forms.TableLayoutPanel> 控制項來建立可適當回應調整大小的表單。  
   
-1. [HOW TO：在 TableLayoutPanel 控制項中對齊和縮放控制項](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
+1. [如何：對齊和縮放 TableLayoutPanel 控制項中的控制項](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
-2. [HOW TO：擴展 TableLayoutPanel 控制項中的資料列和資料行](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
+2. [如何：合併資料列和 TableLayoutPanel 控制項中的資料行](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
-3. [HOW TO：編輯 TableLayoutPanel 控制項中的資料行和資料列](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
+3. [如何：編輯資料行和 TableLayoutPanel 控制項中的資料列](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-4. [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+4. [逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.TableLayoutPanel>  

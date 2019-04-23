@@ -16,10 +16,10 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
 ms.openlocfilehash: edebfaee6f0da6826f4b757568408662f3208d41
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344009"
 ---
 # <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>HOW TO：使用 Windows Forms LinkLabel 控制項連結至物件或網頁
@@ -182,5 +182,5 @@ Windows Form<xref:System.Windows.Forms.LinkLabel>控制項可讓您在表單上�
 
 - <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
 - [LinkLabel 控制項概觀](linklabel-control-overview-windows-forms.md)
-- [HOW TO：變更 Windows Forms LinkLabel 控制項的外觀](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [如何：變更 Windows Forms LinkLabel 控制項的外觀](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
 - [LinkLabel 控制項](linklabel-control-windows-forms.md)

@@ -1,6 +1,6 @@
 ---
 title: C# switch 陳述式
-ms.date: 08/14/2018
+ms.date: 04/09/2019
 f1_keywords:
 - switch_CSharpKeyword
 - switch
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 73524fd54aeffc86fe0c451ec4418308da764682
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 960394bd61f9e9163fe93c4324bf708d50ec3e08
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463250"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481453"
 ---
 # <a name="switch-c-reference"></a>switch (C# 參考)
 
-`switch` 是一個選取範圍陳述式，可根據使用「比對運算式」的模式比對，從候選項清單中選擇要執行的單一「參數區段」。
+`switch` 為選取範圍陳述式，可根據搭配「比對運算式」的模式比對，從候選項清單中選擇要執行的單一「參數區段」。
 
 [!code-csharp[switch#1](~/samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
 
@@ -41,7 +41,7 @@ ms.locfileid: "58463250"
    switch (expr)
 ```
 
-在 C# 6 中，比對運算式必須是傳回下列類型之值的運算式︰
+在 C# 6 和更早坂本中，比對運算式必須是傳回下列類型之值的運算式︰
 
 - [char](char.md)。
 - [string](string.md)。
@@ -57,7 +57,7 @@ ms.locfileid: "58463250"
 
 `switch` 陳述式可包含任意數目的參數區段，而每個區段都可以擁有一或多個 case 標籤，如下列範例所示。 不過，不可以有兩個 case 標籤包含相同的運算式。
 
-[!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
+[!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
 switch 陳述式中只會執行一個參數區段。 C# 不允許從某個參數區段繼續執行至另一個參數區段。 因此，下列程式碼會產生編譯器錯誤 CS0163：「控制項無法從一個 case 標籤 (\<case label>) 掉入另一個。」
 
@@ -76,23 +76,23 @@ switch (caseSwitch)
 
 使用 [break](break.md)、[goto](goto.md) 或 [return](return.md) 陳述式明確地結束參數區段，通常會符合這項需求。 不過，下列程式碼也是有效，因為它可確保程式控制權無法切換到 `default` 參數區段。
 
-[!code-csharp[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]
+[!code-csharp[switch#4](~/samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]
 
 在 case 標籤符合比對運算式的參數區段中，陳述式清單是從第一個陳述式開始執行，然後繼續進行整份陳述式清單，通常會進行直到跳躍陳述式為止，例如到達 `break`、`goto case`、`goto label`、`return` 或 `throw`。 到達該點時，控制項會在 `switch` 陳述式之外傳輸，或傳輸至另一個 case 標籤。 如果使用 `goto` 陳述式，就必須將控制權轉移到常數標籤。 這項限制是必要的，因為嘗試將控制項傳送至非常數標籤，會將控制項傳送至程式碼中非預期的位置或建立無止盡的迴圈，出現非預期的副作用。
 
 ## <a name="case-labels"></a>case 標籤
 
-每個 case 標籤都會指定要與比對運算式比較的模式 (先前範例中的 `caseSwitch` 變數)。 如果相符，控制權會轉移至 **「第一個」** 相符 case 標籤的參數區段。 若無任何 case 標籤模式符合比對運算式，會將控制權轉移到具有 `default` case 標籤的區段 (如有此標籤)。 如果沒有 `default` case，則不會執行任何參數區段中的陳述式，而且控制權會轉移到 `switch` 陳述式外部。
+每個 case 標籤都會指定要與比對運算式比較的模式 (先前範例中的 `caseSwitch` 變數)。 如果相符，控制權會轉移至 **「第一個」** 相符 case 標籤的參數區段。 若無任何狀況標籤模式符合比對運算式，會將控制權轉移到具有 `default` 狀況標籤的區段 (如有此區段)。 如果沒有 `default` 狀況，則不會執行任何參數區段中的陳述式，而且控制權會轉移到 `switch` 陳述式外部。
 
 如需 `switch` 陳述式和模式比對的資訊，請參閱[模式比對與 `switch` 陳述式](#pattern)一節。
 
-因為 C# 6 只支援常數模式，且不允許重複常數值，所以 case 標籤定義互斥值，而且只有一個模式可以符合比對運算式。 因此，`case` 陳述式的出現順序並不重要。
+因為 C# 6 只支援常數模式，且不允許重複常數值，所以狀況標籤會定義互斥值，而且只有一個模式可以符合比對運算式。 因此，`case` 陳述式的出現順序並不重要。
 
 不過，在 C# 7.0 中，因為支援其他模式，所以 case 標籤不需要定義互斥值，而且可以有多個模式符合比對運算式。 因為只會執行包含相符模式之第一個參數區段中的陳述式，所以 `case` 陳述式的出現順序現在十分重要。 如果 C# 偵測到一或多個 case 陳述式等於或為先前陳述式子集的參數區段，則會產生編譯器錯誤 CS8120：「先前的案例已處理切換案例。」
 
 下列範例說明使用各種非互斥模式的 `switch` 陳述式。 如果您移動 `case 0:` 參數區段，讓它不再是 `switch` 陳述式中的第一個區段，則 C# 會產生編譯器錯誤，因為值為零的整數是所有整數的子集，而這是 `case int val` 陳述式所定義的模式。
 
-[!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]
+[!code-csharp[switch#5](~/samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]
 
 您可以更正此問題，並使用兩種方式之一來排除編譯器警告︰
 
@@ -102,7 +102,7 @@ switch (caseSwitch)
 
 ## <a name="the-default-case"></a>`default` case
 
-如果比對運算式不符合任何其他 `case` 標籤，則 `default` case 指定要執行的參數區段。 如果 `default` case 不存在，而且比對運算式不符合任何其他 `case` 標籤，則程式流程會落到 `switch` 陳述式。
+如果比對運算式不符合任何其他 `case` 標籤，則 `default` 狀況會指定要執行的參數區段。 如果 `default` 狀況不存在，而且比對運算式不符合任何其他 `case` 標籤，則程式流程會落到 `switch` 陳述式。
 
 `default` case 可以依任何順序出現在 `switch` 陳述式中。 不論它在原始程式碼中的順序為何，一律都會在評估過所有 `case` 標籤之後最後才進行評估。
 
@@ -135,11 +135,11 @@ switch (caseSwitch)
 
 下列範例使用常數模式，來判斷特定日期是週末、工作週的第一天、工作週的最後一天，還是工作週的中間一天。 其會依據 <xref:System.DayOfWeek> 列舉的成員，評估當日的 <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> 屬性。
 
-[!code-csharp[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
+[!code-csharp[switch#7](~/samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
 下列範例使用常數模式，來處理模擬自動咖啡機之主控台應用程式中的使用者輸入。
 
-[!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]
+[!code-csharp[switch#6](~/samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]
 
 ### <a name="type-pattern"></a>類型模式
 
@@ -149,7 +149,7 @@ switch (caseSwitch)
    case type varname
 ```
 
-其中，如果比對成功，則 *type* 是 *expr* 的結果要轉換的目標類型名稱，而 *varname* 是 *expr* 的結果所轉換的目標物件。
+其中，如果比對成功，則 *type* 是 *expr* 的結果要轉換的目標類型名稱，而 *varname* 是 *expr* 的結果所轉換的目標物件。 從 C# 7.1 開始，編譯時間類型的 *expr* 可以是泛型類型參數。
 
 如果符合下列任一項，則 `case` 運算式為`true`：
 
@@ -163,7 +163,7 @@ switch (caseSwitch)
 
 如果 case 運算式為 true，則 *varname* 會明確地進行指派，並且只具有參數區段內的區域範圍。
 
-請注意，`null` 不符合類型。 若要比對 `null`，請使用下列 `case` 標籤︰
+請注意，`null` 不會符合類型。 若要比對 `null`，請使用下列 `case` 標籤︰
 
 ```csharp
 case null:
@@ -172,6 +172,12 @@ case null:
 下列範例使用類型模式提供各種集合類型的資訊。
 
 [!code-csharp[type-pattern#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
+
+與其使用 `object`，您可以建立泛型方法，使用集合的類型作為類型參數，如下列程式碼所示：
+
+[!code-csharp[type-pattern#3](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern3.cs#1)]
+
+泛型版本與第一個範例之間有兩個差異。 首先，您無法使用 `null` 狀況。 您無法使用任何常數狀況，因為編譯器無法將任何任意類型 `T` 轉換為 `object`以外的任何其他類型。 先前的 `default` 狀況現在會針對非 Null `object`進行測試。 這代表 `default` 狀況只會針對 `null` 進行測試。
 
 如果沒有模式比對，此程式碼可能會撰寫如下。 使用類型模式比對時，不需要測試轉換的結果是否為 `null` 或執行重複轉換，因此會產生更精簡且容易閱讀的程式碼。
 
@@ -194,7 +200,7 @@ case null:
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 程式設計手冊](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [if-else](if-else.md)
 - [模式比對](../../pattern-matching.md)

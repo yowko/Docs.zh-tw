@@ -12,10 +12,10 @@ helpviewer_keywords:
 - run time [Windows Forms], making controls invisible
 ms.assetid: 69eb2e72-32f5-4f79-a157-c2c5f60c1628
 ms.openlocfilehash: e9af529541a40a951d6defea180dbbef04c8f3be
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345894"
 ---
 # <a name="how-to-make-your-control-invisible-at-run-time"></a>HOW TO：在執行階段隱藏控制項
@@ -42,5 +42,5 @@ ms.locfileid: "59345894"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Control.Visible%2A>
-- [使用 .NET Framework 開發自訂的 Windows Form 控制項](developing-custom-windows-forms-controls.md)
-- [HOW TO：為控制項提供透明背景](how-to-give-your-control-a-transparent-background.md)
+- [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)
+- [如何：為控制項提供透明背景](how-to-give-your-control-a-transparent-background.md)

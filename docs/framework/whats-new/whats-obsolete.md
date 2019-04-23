@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 416192d431234b2ce7d6e53f21803f88371a6805
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 9c84afced8c98530e6d6b02c1cde69e93bd8d7e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58018740"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337275"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework 類別庫中的過時功能
 .NET Framework 會隨著時間改變。 每個新版本都會加入一些提供新功能的新類型和類型成員。 現有的類型及其成員也會隨著時間改變。 例如，當某些類型所支援的技術由新技術取代時，這些類型的重要性會降低，而且某些方法會由更方便或功能更完整的新方法取代。  
@@ -42,9 +42,9 @@ ms.locfileid: "58018740"
   
  您可以選擇不要針對更新的 .NET Framework 版本重新編譯現有的程式碼， 而改為指定現有已編譯程式碼所執行的目標 .NET Framework 版本。 例如，假設您有一個名為 app1.exe 而且已針對 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 編譯的應用程式，但是您想要讓這個應用程式針對 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 執行。 此時，您需要進行下列步驟：  
   
-1.  建立主要可執行檔的組態檔，並將它命名為 *appName*.exe.config，其中 *appName* 是應用程式可執行檔的名稱。 對於範例中名為 app1.exe 的應用程式而言，您要建立名為 app1.exe.config 的組態檔。  
+1. 建立主要可執行檔的組態檔，並將它命名為 *appName*.exe.config，其中 *appName* 是應用程式可執行檔的名稱。 對於範例中名為 app1.exe 的應用程式而言，您要建立名為 app1.exe.config 的組態檔。  
   
-2.  將下列內容加入組態檔。  
+2. 將下列內容加入組態檔。  
   
     ```xml  
     <configuration>  
@@ -68,12 +68,12 @@ ms.locfileid: "58018740"
 |1.0|v1.0.3705|  
   
 ## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>.NET Framework 4.5 和更新版本的已淘汰清單  
- [過時的類型](obsolete-types.md)  
+ [已淘汰的類型](obsolete-types.md)  
   
- [過時的成員](obsolete-members.md)  
+ [已淘汰的成員](obsolete-members.md)  
   
 ## <a name="obsolete-lists-for-previous-versions"></a>舊版的過時清單  
- [.NET Framework 4 中過時的類型](https://go.microsoft.com/fwlink/?LinkId=224224)  
+ [.NET Framework 4 中過時的型別](https://go.microsoft.com/fwlink/?LinkId=224224)  
   
  [.NET Framework 4 中過時的成員](https://go.microsoft.com/fwlink/?LinkId=224227)  
   
@@ -82,4 +82,5 @@ ms.locfileid: "58018740"
  [.NET Framework 2.0 的過時清單](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [\<supportedRuntime> 項目](../configure-apps/file-schema/startup/supportedruntime-element.md)

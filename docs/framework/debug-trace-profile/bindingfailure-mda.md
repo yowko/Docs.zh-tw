@@ -12,10 +12,10 @@ ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1e904d452b9f4a1b172d35984b752c0d97228338
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480946"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
@@ -52,7 +52,7 @@ ms.locfileid: "59480946"
 
 - 根據先前的判斷來解決原因。 可能的解決方式選項如下：
 
-  - 在全域組件快取中安裝所要求的組件，並呼叫 <xref:System.Reflection.Assembly.Load%2A> 若要依身分識別載入組件的方法。
+  - 在全域組件快取中安裝所要求的組件，並呼叫 <xref:System.Reflection.Assembly.Load%2A> 方法，依身分識別載入組件。
 
   - 將所要求的組件複製至應用程式目錄，並呼叫 <xref:System.Reflection.Assembly.Load%2A> 方法，依身分識別載入組件。
 

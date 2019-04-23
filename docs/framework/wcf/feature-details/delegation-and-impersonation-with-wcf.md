@@ -9,10 +9,10 @@ helpviewer_keywords:
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
 ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345517"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>使用 WCF 的委派和模擬
@@ -37,9 +37,9 @@ ms.locfileid: "59345517"
 ### <a name="cached-token-impersonation"></a>快取權杖模擬  
  您可以用下列項目來執行快取權杖模擬：  
   
--   <xref:System.ServiceModel.WSHttpBinding><xref:System.ServiceModel.WSDualHttpBinding>，和<xref:System.ServiceModel.NetTcpBinding>Windows 用戶端認證。  
+-   具有 Windows 用戶端認證的<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>及 <xref:System.ServiceModel.NetTcpBinding> 。  
   
--   <xref:System.ServiceModel.BasicHttpBinding> 具有<xref:System.ServiceModel.BasicHttpSecurityMode>設定為<xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential>認證或任何其他標準繫結，用戶端會向服務可以對應至有效 Windows 帳戶的使用者名稱認證。  
+-   <xref:System.ServiceModel.BasicHttpBinding> ，其 <xref:System.ServiceModel.BasicHttpSecurityMode> 設定為 <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> 認證或是其他任何標準繫結，繫結是指用戶端會在其中提供可由服務用來對應至有效 Windows 帳戶的使用者名稱認證。  
   
 -   任何使用 Windows 用戶端認證，而且 <xref:System.ServiceModel.Channels.CustomBinding> 已設定為 `requireCancellation` 的 `true`  (此屬性可在下列類別上使用：<xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>、<xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> 及 <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>)。如果此繫結上有使用安全對話，這時也必須將 `requireCancellation` 屬性設定為 `true`。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "59345517"
 ### <a name="s4u-based-impersonation"></a>S4U 架構模擬  
  您可以用下列項目來執行 S4U 架構模擬：  
   
--   <xref:System.ServiceModel.WSHttpBinding><xref:System.ServiceModel.WSDualHttpBinding>，和<xref:System.ServiceModel.NetTcpBinding>與憑證用戶端認證的服務可以對應至有效的 Windows 帳戶。  
+-   <xref:System.ServiceModel.WSHttpBinding>、 <xref:System.ServiceModel.WSDualHttpBinding>及 <xref:System.ServiceModel.NetTcpBinding> ，包含可讓服務用來對應至有效 Windows 帳戶的憑證用戶端認證。  
   
 -   任何使用 Windows 用戶端認證，而且 <xref:System.ServiceModel.Channels.CustomBinding> 屬性已設定為 `requireCancellation` 的 `false`。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "59345517"
   
  下表會指定在從快取權杖模擬時，服務所取得的模擬等級。  
   
-|`AllowedImpersonationLevel` value|服務 `SeImpersonatePrivilege`|服務和用戶端能夠委派|快取的權杖 `ImpersonationLevel`|  
+|`AllowedImpersonationLevel` 值|服務具有 `SeImpersonatePrivilege`|服務和用戶端能夠委派|快取權杖 `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |匿名|是|N/A|模擬|  
 |匿名|否|N/A|識別|  
@@ -125,7 +125,7 @@ ms.locfileid: "59345517"
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>從使用者名稱認證和快取權杖模擬取得的模擬等級  
  藉由傳遞服務，其使用者名稱和密碼，用戶端可讓身為該使用者，這相當於設定登入的 WCF`AllowedImpersonationLevel`屬性設<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>。 (`AllowedImpersonationLevel` 可在 <xref:System.ServiceModel.Security.WindowsClientCredential> 和 <xref:System.ServiceModel.Security.HttpDigestClientCredential> 類別上使用)。下表提供當服務接收使用者名稱認證時所取得的模擬等級。  
   
-|`AllowedImpersonationLevel`|服務 `SeImpersonatePrivilege`|服務和用戶端能夠委派|快取的權杖 `ImpersonationLevel`|  
+|`AllowedImpersonationLevel`|服務具有 `SeImpersonatePrivilege`|服務和用戶端能夠委派|快取權杖 `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |N/A|是|是|委派|  
 |N/A|是|否|模擬|  
@@ -133,7 +133,7 @@ ms.locfileid: "59345517"
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>從 S4U 架構模擬取得的模擬等級  
   
-|服務 `SeTcbPrivilege`|服務 `SeImpersonatePrivilege`|服務和用戶端能夠委派|快取的權杖 `ImpersonationLevel`|  
+|服務具有 `SeTcbPrivilege`|服務具有 `SeImpersonatePrivilege`|服務和用戶端能夠委派|快取權杖 `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |是|是|N/A|模擬|  
 |是|否|N/A|識別|  
@@ -222,5 +222,5 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 - <xref:System.Security.Principal.TokenImpersonationLevel.Identification>
 - [使用模擬搭配傳輸安全性](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
 - [模擬用戶端](../../../../docs/framework/wcf/samples/impersonating-the-client.md)
-- [HOW TO：在服務上模擬用戶端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [如何：服務上模擬用戶端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
 - [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

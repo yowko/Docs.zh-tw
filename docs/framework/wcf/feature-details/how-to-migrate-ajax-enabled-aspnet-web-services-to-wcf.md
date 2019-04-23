@@ -3,10 +3,10 @@ title: HOW TO：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
 ms.openlocfilehash: 6114fa90b10a5d0cacb60a7ad40f63fae776e174
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337418"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>HOW TO：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF
@@ -193,7 +193,7 @@ d.Add("two", 2);
 
  這個字典在 JSON 物件中的表示如下列清單所示：
 
--   [{"Key":"one","Value":1},{"Key":"two","Value":2}] by the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
+-   [{"Key":"one","Value":1},{"Key":"two","Value":2}]，透過 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
 
 -   {"one": 1，"two": 2} 的 ASP.NET ajax <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
@@ -204,14 +204,14 @@ d.Add("two", 2);
 |差異分類|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|
 |-----------------------------|--------------------------------|---------------------------------------|
 |將空的緩衝區 (新的 byte[0]) 還原序列化成 <xref:System.Object> (或 <xref:System.Uri> 或一些其他的類別)。|SerializationException|null|
-|序列化 <xref:System.DBNull.Value>|{} (或 {"__type":"#System"})|Null|
+|<xref:System.DBNull.Value> 的序列化|{} (或 {"__type":"#System"})|Null|
 |[Serializable] 型別的私用成員序列化|已序列化|未序列化|
 |<xref:System.Runtime.Serialization.ISerializable> 型別的公用屬性序列化。|未序列化|已序列化|
 |JSON 的 "Extensions"|遵守 JSON 規格，需要在物件成員名稱上加上引號 ({"a":"hello"})。|支援不加引號的物件成員名稱 ({a:"hello"})。|
-|<xref:System.DateTime> 國際標準時間 (UTC)|不支援格式"\\/Date(123456789U)\\/ 」 或 「\\/日期\\(\d+ (U&#124;(\\+\\-[\d{4}]))？\\)\\\\/)".|支援格式"\\/Date(123456789U)\\/"和"\\/日期\\(\d+ (U&#124;(\\+\\-[\d{4}]))？\\)\\ \\/)"做為 DateTime 值。|
+|<xref:System.DateTime> 以 Coordinated Universal Time (UTC) 時間計算|不支援格式"\\/Date(123456789U)\\/ 」 或 「\\/日期\\(\d+ (U&#124;(\\+\\-[\d{4}]))？\\)\\\\/)".|支援格式"\\/Date(123456789U)\\/"和"\\/日期\\(\d+ (U&#124;(\\+\\-[\d{4}]))？\\)\\ \\/)"做為 DateTime 值。|
 |字典表示法|陣列的 KeyValuePair\<K，V >，可處理索引鍵的類型不是字串。|做為實際的 JSON 物件 - 但只能處理屬於字串的金鑰型別。|
 |逸出字元|一律使用逸出正斜線 (/)；絕不允許使用未逸出的無效 JSON 字元，例如 "\n"。|使用逸出斜線 (/) 做為 DateTime 值。|
 
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [如何：使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
 ms.openlocfilehash: fc2b7ed2004b842116d051b393f00506428def61
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344542"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>HOW TO：建立 Lambda 運算式 (Visual Basic)
@@ -111,6 +111,6 @@ A *lambda 運算式*函式或副程式，並沒有名稱。 只要委派型別�
 - [Function 陳述式](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub 陳述式](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [委派](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [HOW TO：傳遞至另一個程序，在 Visual Basic 中的程序](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [如何：傳遞至另一個程序，在 Visual Basic 中的程序](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
 - [Delegate 陳述式](../../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: b543ab2e200e8169a251db8ddfb1493c5583ed69
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7f4699b5277c5feeac4d9116ac85e096247aa748
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360247"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427444"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 的單元測試最佳做法
 
@@ -18,7 +18,7 @@ ms.locfileid: "57360247"
 
 在此指南中，您將了解一些撰寫單元測試時的最佳做法，讓您的測試保有復原能力且易於了解。
 
-作者：[John Reese](https://reese.dev) (特別感謝 [Roy Osherove](http://osherove.com/))
+作者：[John Reese](https://reese.dev) (特別感謝 [Roy Osherove](https://osherove.com/))
 
 ## <a name="why-unit-test"></a>為何選擇單元測試？
 
@@ -82,7 +82,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-透過將類別重新命名為 `FakeOrder`，您已使該類別更加通用，因此可將該類別作為模擬或虛設常式使用。 請取其更適合測試案例者。 在上述範例中，`FakeOrder` 作為虛設常式使用。 在判定期間，您沒有以任何形式使用 `FakeOrder`。 `FakeOrder` 只是傳入 `Purchase` 類別以滿足建構函式的需求。
+透過將類別重新命名為 `FakeOrder`，您已使該類別更加通用，因此可將該類別作為模擬或虛設常式使用。 請取其更適合測試案例者。 在上述範例中，`FakeOrder` 作為虛設常式使用。 在判定期間，您沒有以任何形式使用 `FakeOrder`。 `FakeOrder` 只會傳入 `Purchase` 類別以滿足建構函式的需求。
 
 若要用作模擬，您可以執行類似下述內容
 
@@ -234,7 +234,7 @@ Assert.True(mockOrder.Validated);
 將多個判定帶進測試案例時，並不保證所有的判定皆會執行。 在大部分的單元測試架構中，一旦判定在單元測試中失敗，進行中的測試將自動視為失敗。 這可能會令人困惑，因為實際運作的功能會顯示為失敗。
 
 > [!NOTE]
-> 此規則的常見例外狀況是針對物件進行判定時。 在此情況下，通常可以接受對每個屬性擁有多個判定，確保物件處於您預期的狀態。
+> 這項規則的常見例外狀況是針對物件進行判定時。 在此情況下，通常可以接受對每個屬性擁有多個判定，確保物件處於您預期的狀態。
 
 #### <a name="bad"></a>不良：
 [!code-csharp[BeforeMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
@@ -250,17 +250,17 @@ Assert.True(mockOrder.Validated);
 ```csharp
 public string ParseLogLine(string input)
 {
-    var sanitizedInput = trimInput(input);
+    var sanitizedInput = TrimInput(input);
     return sanitizedInput;
 }
 
-private string trimInput(string input)
+private string TrimInput(string input)
 {
     return input.Trim();
 }
 ```
 
-您的第一個反應可能是開始撰寫 `trimInput` 的測試，因為您想要確定該方法是否如預期般運作。 不過，`ParseLogLine` 很有可能會以非預期的方式操作 `sanitizedInput`，使得對 `trimInput` 的測試變得毫無用處。 
+您的第一個反應可能是開始撰寫 `TrimInput` 的測試，因為您想要確定該方法是否如預期般運作。 不過，`ParseLogLine` 很有可能會以非預期的方式操作 `sanitizedInput`，使得對 `TrimInput` 的測試變得毫無用處。 
 
 實際的測試應該針對公眾對應方法 `ParseLogLine` 執行，因為這才是您最應關注的項目。 
 
@@ -318,8 +318,8 @@ public void GetDiscountedPrice_OnTuesday_ReturnsHalfPrice()
 
 不幸的是，您很快就會發現測試有幾個問題。 
 
-- 如果測試套件是在星期二執行，第二項測試會通過，但第一個測試會失敗。
-- 如果測試套件是在其他天執行，第一個測試會通過，但第二項測試會失敗。
+- 如果測試套件是在星期二執行，第二項測試會通過，但第一項測試會失敗。
+- 如果測試套件是在其他天執行，第一項測試會通過，但第二項測試會失敗。
 
 若要解決這些問題，您需要將「接合線」帶進生產環境程式碼。 其中一個方法是在介面中包裝您需要控制的程式碼，並使生產環境程式碼相依於該介面。
 

@@ -4,10 +4,10 @@ description: 了解如何執行特定工作協助建立自訂 AI 解決方案，
 ms.custom: seodec18
 ms.date: 03/01/2019
 ms.openlocfilehash: c8d1258629f777cd8bced47e4b956c9cf100a682
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427558"
 ---
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>.NET 機器學習操作指南 - ML.NET
@@ -16,7 +16,7 @@ ms.locfileid: "59427558"
 
 ## <a name="load-the-data"></a>載入資料
 
-* [從 CSV 檔案載入具有很多欄的資料以進行機器學習處理。](load-data-from-mult-column-csv-ml-net.md)
+* [從 CSV 檔案的許多欄載入資料以進行機器學習處理。](load-data-from-mult-column-csv-ml-net.md)
 
 * [從多個檔案載入資料以進行機器學習處理。](load-data-from-multiple-files-ml-net.md)
 
@@ -24,7 +24,7 @@ ms.locfileid: "59427558"
 
 ### <a name="prepare-the-data"></a>準備資料
 
-* [使用正規器來預先處理定型資料，以用於資料處理。](normalizers-preprocess-data-ml-net.md)
+* [使用正常化來前置處理定型資料，以用於資料處理。](normalizers-preprocess-data-ml-net.md)
 
 ## <a name="train-the-model"></a>將模型定型
 
@@ -32,7 +32,7 @@ ms.locfileid: "59427558"
 
 * [使用交叉驗證將機器學習模型定型。](train-cross-validation-ml-net.md)
 
-* [使用 ML.NET 將迴歸模型定型以預測值](train-regression-model-ml-net.md)
+* [使用 ML.NET 將迴歸模型定型以預測值。](train-regression-model-ml-net.md)
 
 ### <a name="evaluate-the-model-quality"></a>評估模型品質
 
@@ -54,10 +54,10 @@ ms.locfileid: "59427558"
 
 * [在 ML.NET 管線處理期間檢查中繼資料值。](inspect-intermediate-data-ml-net.md)
 
-* [讓已定型的機器學習模型能在應用程式中運作。](consuming-model-ml-net.md)
+* [讓定型機器學習模型能在應用程式中運作。](consuming-model-ml-net.md)
 
 * [使用 PredictionFunction 一次進行一個預測。](single-predict-model-ml-net.md)
 
 ## <a name="probabilistic-infernet"></a>概率 (Infer.NET)
 
-* [使用 Infer.NET 與概率程式設計建立賽程表清單應用程式。](matchup-app-infer-net.md)
+* [使用 Infer.NET 與概率程式設計建立遊戲配對清單應用程式。](matchup-app-infer-net.md)

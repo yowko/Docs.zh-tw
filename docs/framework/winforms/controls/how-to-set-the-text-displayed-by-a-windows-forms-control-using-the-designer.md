@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Windows Forms, setting the text displayed
 ms.assetid: 9d18e0e0-f17f-4074-837d-e67ceeeaa89d
 ms.openlocfilehash: a0f567befb1e0c323dd16fffedec279ff836cbf8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337951"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer"></a>HOW TO：使用設計工具設定 Windows Forms 控制項所顯示的文字
@@ -27,6 +27,6 @@ Windows Form 控制項通常會顯示一些文字相關控制項的主要功能�
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：設定 Windows Forms 控制項所顯示的文字](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [如何：設定所顯示之文字的 Windows Form 控制項](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [使用字型和文字](../advanced/using-fonts-and-text.md)
-- [標記個別 Windows Form 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [標記個別 Windows Forms 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
 ms.openlocfilehash: fd6240faf702ccb5e543bfd6a7779284f38d8850
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337236"
 ---
 # <a name="-main"></a>-main
@@ -57,4 +57,4 @@ vbc t2.vb t3.vb -main:Test2
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Visual Basic 中的 Main 程序](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [在 Visual Basic 中的 main 程序](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

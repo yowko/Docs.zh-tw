@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bde7ebcc73c5e9e2d87074b78d78bb63cd441ad
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 599432af178031a85dea4155a8fd2923f879a600
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583637"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427353"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>作法：撰寫簡單的 Parallel.ForEach 迴圈
 
@@ -51,7 +51,7 @@ ms.locfileid: "56583637"
 
 從命令列中，您可使用 .NET Core 及其 CLI 工具 (例如 `dotnet new console` 或 `dotnet new console -lang vb`)，或者可建立檔案，然後使用 .NET Framework 應用程式的命令列編譯器。
 
-對於 .NET Core 專案，您必須參考 **System.Drawing.Common** NuGet 套件。 在 Visual Studio 中，使用 NuGet 套件管理員來安裝套件。 或者，您可將參考新增至 *.* csproj* 或 *.* vbproj* 檔案中的套件：
+對於 .NET Core 專案，您必須參考 **System.Drawing.Common** NuGet 套件。 在 Visual Studio 中，使用 NuGet 套件管理員來安裝套件。 或者，您可將參考新增至 \*.csproj 或 \*.vbproj 檔案中的套件：
  
 ```xml
 <ItemGroup>

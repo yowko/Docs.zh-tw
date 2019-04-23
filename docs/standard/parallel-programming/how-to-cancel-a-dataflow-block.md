@@ -1,5 +1,5 @@
 ---
-title: 如何：取消資料流程區塊
+title: 作法：取消資料流程區塊
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,53 +12,53 @@ helpviewer_keywords:
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa37909c76da804112464daacea6244f1c321516
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b95f0a3535716c4a01dae52abe38eb850f080cf0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085195"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345192"
 ---
-# <a name="how-to-cancel-a-dataflow-block"></a>如何：取消資料流程區塊
+# <a name="how-to-cancel-a-dataflow-block"></a>作法：取消資料流程區塊
 本文件示範如何在您的應用程式中啟用取消作業。 此範例會使用 Windows Forms 來顯示工作項目在資料流程管線中的作用位置，以及取消作業的效果。  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
   
 ## <a name="to-create-the-windows-forms-application"></a>若要建立 Windows Forms 應用程式  
   
-1.  建立 C# 或 Visual Basic **Windows Forms 應用程式**專案。 在下列步驟中，專案會命名為 `CancellationWinForms`。  
+1. 建立 C# 或 Visual Basic **Windows Forms 應用程式**專案。 在下列步驟中，專案會命名為 `CancellationWinForms`。  
   
-2.  在主要表單 Form1.cs (在 Visual Basic 中為 Form1.vb) 的表單設計工具上，新增 <xref:System.Windows.Forms.ToolStrip> 控制項。  
+2. 在主要表單 Form1.cs (在 Visual Basic 中為 Form1.vb) 的表單設計工具上，新增 <xref:System.Windows.Forms.ToolStrip> 控制項。  
   
-3.  將 <xref:System.Windows.Forms.ToolStripButton> 控制項加入 <xref:System.Windows.Forms.ToolStrip> 控制項。 將 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 屬性設為 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> 並將 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 屬性設為**新增工作項目**。  
+3. 將 <xref:System.Windows.Forms.ToolStripButton> 控制項加入 <xref:System.Windows.Forms.ToolStrip> 控制項。 將 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 屬性設為 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> 並將 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 屬性設為**新增工作項目**。  
   
-4.  將第二個 <xref:System.Windows.Forms.ToolStripButton> 控制項加入 <xref:System.Windows.Forms.ToolStrip> 控制項。 將 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 屬性設為 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>，將 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 屬性設為 **Cancel**，然後將 <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> 屬性設為 `False`。  
+4. 將第二個 <xref:System.Windows.Forms.ToolStripButton> 控制項加入 <xref:System.Windows.Forms.ToolStrip> 控制項。 將 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 屬性設為 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>，將 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 屬性設為 **Cancel**，然後將 <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> 屬性設為 `False`。  
   
-5.  將四個 <xref:System.Windows.Forms.ToolStripProgressBar> 物件加入 <xref:System.Windows.Forms.ToolStrip> 控制項。  
+5. 將四個 <xref:System.Windows.Forms.ToolStripProgressBar> 物件加入 <xref:System.Windows.Forms.ToolStrip> 控制項。  
   
 ## <a name="creating-the-dataflow-pipeline"></a>建立資料流程管線  
  本節說明如何建立資料流程管線，以處理工作項目並更新進度列。  
   
 ### <a name="to-create-the-dataflow-pipeline"></a>建立資料流程管線  
   
-1.  在您的專案中，加入 System.Threading.Tasks.Dataflow.dll 的參考。  
+1. 在您的專案中，加入 System.Threading.Tasks.Dataflow.dll 的參考。  
   
-2.  確定 Form1.cs (在 Visual Basic 中為 Form1.vb) 包含下列 `using` 陳述式 (在 Visual Basic 中為 `Imports`)。  
+2. 確定 Form1.cs (在 Visual Basic 中為 Form1.vb) 包含下列 `using` 陳述式 (在 Visual Basic 中為 `Imports`)。  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#1)]
      [!code-vb[TPLDataflow_CancellationWinForms#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#1)]  
   
-3.  將 `WorkItem` 類別新增為 `Form1` 類別的內部類別。  
+3. 將 `WorkItem` 類別新增為 `Form1` 類別的內部類別。  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#2)]
      [!code-vb[TPLDataflow_CancellationWinForms#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#2)]  
   
-4.  將下列資料成員新增至 `Form1` 類別。  
+4. 將下列資料成員新增至 `Form1` 類別。  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#3)]
      [!code-vb[TPLDataflow_CancellationWinForms#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#3)]  
   
-5.  將下列 `CreatePipeline` 方法新增至 `Form1` 類別。  
+5. 將下列 `CreatePipeline` 方法新增至 `Form1` 類別。  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#4)]
      [!code-vb[TPLDataflow_CancellationWinForms#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#4)]  
@@ -72,16 +72,16 @@ ms.locfileid: "44085195"
   
 ### <a name="to-connect-the-dataflow-pipeline-to-the-user-interface"></a>將資料流程管線連接至使用者介面  
   
-1.  在主要表單的表單設計工具上，為 [新增工作項目] 的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件建立事件處理常式。  
+1. 在主要表單的表單設計工具上，為 [新增工作項目] 的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件建立事件處理常式。  
   
-2.  實作 [新增工作項目] 按鈕的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
+2. 實作 [新增工作項目] 按鈕的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#5)]
      [!code-vb[TPLDataflow_CancellationWinForms#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#5)]  
   
-3.  在主要表單的表單設計工具上，為 [取消] 的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件建立事件處理常式。  
+3. 在主要表單的表單設計工具上，為 [取消] 的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件建立事件處理常式。  
   
-4.  實作 [取消] 按鈕的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件處理常式。  
+4. 實作 [取消] 按鈕的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件處理常式。  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#6)]
      [!code-vb[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#6)]  

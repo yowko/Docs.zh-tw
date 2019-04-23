@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
 ms.openlocfilehash: dcbccbea279796fdaec1227b7575cf39e47f9e4f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336872"
 ---
 # <a name="exporting-schemas-from-classes"></a>從類別匯出結構描述
@@ -43,12 +43,12 @@ ms.locfileid: "59336872"
 ## <a name="export-options"></a>匯出選項  
  您可以將 <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> 之 <xref:System.Runtime.Serialization.XsdDataContractExporter> 屬性設定為 <xref:System.Runtime.Serialization.ExportOptions> 類別的執行個體，以控制匯出處理程序的各方面。 特別是，您可以設定下列選項：  
   
--   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>。 `Type` 的這個集合代表正在匯出之型別的已知型別 (如需詳細資訊，請參閱 < [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。)除了傳遞至 `Export` 方法的型別之外，每次呼叫 `Export` 也會匯出這些已知型別。  
+-   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. `Type` 的這個集合代表正在匯出之型別的已知型別 (如需詳細資訊，請參閱 < [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。)除了傳遞至 `Export` 方法的型別之外，每次呼叫 `Export` 也會匯出這些已知型別。  
   
--   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 可以透過將會自訂匯出程序的這個屬性來提供。 如需詳細資訊，請參閱 <<c0> [ 資料合約代理](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 根據預設，不會使用 Surrogate。  
+-   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. <xref:System.Runtime.Serialization.IDataContractSurrogate> 可以透過將會自訂匯出程序的這個屬性來提供。 如需詳細資訊，請參閱 <<c0> [ 資料合約代理](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 根據預設，不會使用 Surrogate。  
   
 ## <a name="helper-methods"></a>Helper 方法  
- 除了匯出結構描述的主要角色之外， `XsdDataContractExporter` 還提供數種有用的 Helper 方法，提供有關型別的資訊。 它們包括：  
+ 除了匯出結構描述的主要角色之外， `XsdDataContractExporter` 還提供數種有用的 Helper 方法，提供有關型別的資訊。 這些活動包括：  
   
 -   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> 方法。 這個方法會採用 `Type` 並傳回 <xref:System.Xml.XmlQualifiedName> ，代表如果將這個型別序列化為根物件，會使用的根項目名稱和命名空間。  
   

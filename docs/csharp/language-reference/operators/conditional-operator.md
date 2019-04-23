@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 210b7cabb658c6f068d9ab34c83050ad6267e426
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c03fa202b413c98230ba70ca7a0b709d7865cb91
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704904"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427379"
 ---
 # <a name="-operator-c-reference"></a>?:運算子 (C# 參考)
 
@@ -24,12 +24,12 @@ ms.locfileid: "57704904"
 條件運算子的語法如下：
 
 ```csharp
-condition ? consequence : alternative
+condition ? consequent : alternative
 ```
 
-`condition` 運算式必須評估為 `true` 或 `false`。 如果 `condition` 評估為 `true`，就會接著評估 `consequence` 運算式，且其結果會成為運算的結果。 如果 `condition` 評估為 `false`，則會接著評估 `alternative` 運算式，且其結果會成為運算的結果。 系統只會評估 `consequence` 或 `alternative`。
+`condition` 運算式必須評估為 `true` 或 `false`。 如果 `condition` 評估為 `true`，就會接著評估 `consequent` 運算式，且其結果會成為運算的結果。 如果 `condition` 評估為 `false`，則會接著評估 `alternative` 運算式，且其結果會成為運算的結果。 系統只會評估 `consequent` 或 `alternative`。
 
-`consequence` 和 `alternative` 的型別必須相同，或是必須有從一個型別轉換成另一型別的隱含轉換。
+`consequent` 和 `alternative` 的型別必須相同，或是必須有從一個型別轉換成另一型別的隱含轉換。
 
 條件運算子是右向關聯運算子，亦即，以下形式的運算式
 
@@ -54,12 +54,12 @@ a ? b : (c ? d : e)
 條件 ref 運算式的語法如下：
 
 ```csharp
-condition ? ref consequence : ref alternative
+condition ? ref consequent : ref alternative
 ```
 
-與原始條件運算子相同，條件 ref 運算式只會評估兩個運算式其中之一：`consequence` 或 `alternative`。
+與原始條件運算子相同，條件 ref 運算式只會評估兩個運算式其中之一：`consequent` 或 `alternative`。
 
-就條件 ref 運算式而言，`consequence` 與 `alternative` 的型別必須相同。
+就條件 ref 運算式而言，`consequent` 與 `alternative` 的型別必須相同。
 
 下列範例示範條件 ref 運算式的用法：
 
@@ -84,9 +84,9 @@ condition ? ref consequence : ref alternative
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 程式設計手冊](../../programming-guide/index.md)
 - [C# 運算子](index.md)
 - [if-else 陳述式](../keywords/if-else.md)
 - [?. 和 ?[] 運算子](null-conditional-operators.md)
-- [??運算子](null-coalescing-operator.md)
+- [?? 運算子](null-coalescing-operator.md)
 - [ref 關鍵字](../keywords/ref.md)

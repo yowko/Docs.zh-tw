@@ -3,12 +3,12 @@ title: 使用可為 Null 的參考類型進行設計
 description: 本進階教學課程提供可為 Null 的參考類型簡介。 您將了解如何在參考值可能為 Null 時表達您的設計意圖，以及在它們不能為 Null 時強制執行編譯器。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 57f738771a6f1d2cebe7af546d06ac7d7289a338
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443247"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427288"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>教學課程：使用可為 Null 的參考型別遷移現有程式碼
 
@@ -24,7 +24,7 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 
 ## <a name="prerequisites"></a>必要條件
 
-您將需要設定您的機器，以執行 .NET Core (包括 C# 8.0 搶鮮版 (Beta) 編譯器)。 C# 8 搶鮮版 (Beta) 編譯器可在 [Visual Studio 2019 preview 2 及更新版本](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview)，或 [.NET Core 3.0 preview 2](https://dotnet.microsoft.com/download/dotnet-core/3.0) 中取得。
+您將需要設定您的機器，以執行 .NET Core (包括 C# 8.0 搶鮮版 (Beta) 編譯器)。 您可以在 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或最新 [.NET Core 3.0 Preview](https://dotnet.microsoft.com/download/dotnet-core/3.0) 中找到 C# 8 搶鮮版 (Beta) 編譯器。
 
 本教學課程假設您已熟悉 C# 和 .NET，包括 Visual Studio 或 .NET Core CLI。
 
@@ -81,7 +81,7 @@ public class NewsStoryViewModel
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-先前的程式碼區塊中此時又發生了一些事情。 此應用程式使用 [AutoMapper](http://automapper.org/) NuGet 套件來從 `ISyndicationItem` 建構新的項目。 您發現新的故事項目已經建構完成，而屬性也已在單一陳述式中設定。 這表示 `NewsStoryViewModel` 的設計指出這些屬性永遠都不應該具備 `null` 值。 這些屬性應為**不可為 Null 參考型別**。 這種方式最能表達原始的設計意圖。 事實上，任何 `NewsStoryViewModel`「都會」使用非 Null 值正確具現化。 這可讓下列的初始化程式碼成為有效修正：
+先前的程式碼區塊中此時又發生了一些事情。 此應用程式使用 [AutoMapper](https://automapper.org/) NuGet 套件來從 `ISyndicationItem` 建構新的項目。 您發現新的故事項目已經建構完成，而屬性也已在單一陳述式中設定。 這表示 `NewsStoryViewModel` 的設計指出這些屬性永遠都不應該具備 `null` 值。 這些屬性應為**不可為 Null 參考型別**。 這種方式最能表達原始的設計意圖。 事實上，任何 `NewsStoryViewModel`「都會」使用非 Null 值正確具現化。 這可讓下列的初始化程式碼成為有效修正：
 
 ```csharp
 public class NewsStoryViewModel

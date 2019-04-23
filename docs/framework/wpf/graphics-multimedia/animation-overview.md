@@ -9,10 +9,10 @@ helpviewer_keywords:
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
 ms.openlocfilehash: 530f6cb8fbe80df3ad374f8ad0e4836be82830a9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337730"
 ---
 # <a name="animation-overview"></a>動畫概觀
@@ -35,9 +35,9 @@ ms.locfileid: "59337730"
   
 -   然後程式使用新值更新矩形，並重新繪製矩形。  
   
- 之前[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]開發人員，就必須建立並管理他們自己的計時系統或使用特殊的自訂程式庫。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含會公開透過 managed 程式碼的高效率計時系統以及[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和已完全整合至[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]framework。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫可讓您輕鬆地建立控制項和其他圖形物件的動畫。  
+ 之前[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]開發人員，就必須建立並管理他們自己的計時系統或使用特殊的自訂程式庫。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含會公開透過 managed 程式碼的高效率計時系統以及[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和已完全整合至[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]framework。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫可讓您輕鬆以動畫顯示控制項和其他圖形物件。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 處理管理計時系統以及有效率地重新繪製畫面的所有幕後工作。 它提供的計時類別，可讓您專注在您想要建立的效果，而不是達成這些效果的技術。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也可以輕鬆建立您自己的動畫，藉由公開您的類別可以繼承的動畫基底類別，以產生自訂的動畫。 這些自訂動畫可以獲得標準動畫類別的許多效能優勢。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 會有效率地處理管理計時系統以及重新繪製畫面的所有幕後工作。 它提供的計時類別，可讓您專注在您想要建立的效果，而不是達成這些效果的技術。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也公開您的類別可以繼承的動畫基底類別，方便您建立您自己的動畫，以產生自訂的動畫。 這些自訂動畫可以獲得標準動畫類別的許多效能優勢。  
   
 <a name="thewpftimingsystem"></a>   
 ## <a name="wpf-property-animation-system"></a>WPF 屬性動畫系統  
@@ -318,7 +318,7 @@ ms.locfileid: "59337730"
 ## <a name="animation-samples"></a>動畫範例  
  下列範例可以幫助您開始將動畫加入至您的應用程式。  
   
--   [From、 To 和 By 動畫目標值範例](https://go.microsoft.com/fwlink/?LinkID=159988)  
+-   [From、To 和 By 動畫目標值範例](https://go.microsoft.com/fwlink/?LinkID=159988)  
   
      示範不同 From/To/By 設定。  
   
@@ -332,7 +332,7 @@ ms.locfileid: "59337730"
 |標題|描述|  
 |-----------|-----------------|  
 |[動畫和計時系統概觀](animation-and-timing-system-overview.md)|描述計時系統如何使用<xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>類別，可讓您建立動畫。|  
-|[動畫秘訣和訣竅](animation-tips-and-tricks.md)|列出解決動畫問題 (例如效能) 的有用祕訣。|  
+|[動畫祕訣和訣竅](animation-tips-and-tricks.md)|列出解決動畫問題 (例如效能) 的有用祕訣。|  
 |[自訂動畫概觀](custom-animations-overview.md)|描述如何使用主要畫面格、動畫類別或每個畫面格回呼來擴充動畫系統。|  
 |From/To/By 動畫概觀|描述如何建立在兩個值之間轉換的動畫。|  
 |[主要畫面格動畫概觀](key-frame-animations-overview.md)|描述如何建立有多個目標值的動畫，包括控制插補方法的能力。|  
@@ -342,10 +342,10 @@ ms.locfileid: "59337730"
 |[分鏡腳本概觀](storyboards-overview.md)|描述如何使用有多個時間軸的分鏡腳本建立複雜的動畫。|  
 |[計時行為概觀](timing-behaviors-overview.md)|描述<xref:System.Windows.Media.Animation.Timeline>型別和動畫中使用的屬性。|  
 |[計時事件概觀](timing-events-overview.md)|描述用於事件<xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>物件用來執行程式碼，在時間軸中的點，例如開始、 暫停、 繼續、 略過，或停止。|  
-|[HOW TO 主題](animation-and-timing-how-to-topics.md)|包含在應用程式中使用動畫及時間軸的程式碼範例。|  
-|[時鐘 HOW TO 主題](clocks-how-to-topics.md)|包含程式碼範例使用<xref:System.Windows.Media.Animation.Clock>應用程式中的物件。|  
-|[關於主要畫面格操作說明的主題](key-frame-animation-how-to-topics.md)|包含在應用程式中使用主要畫面格動畫的程式碼範例。|  
-|[路徑動畫 HOW TO 主題](path-animation-how-to-topics.md)|包含在應用程式中使用路徑動畫的程式碼範例。|  
+|[HOW-TO 主題](animation-and-timing-how-to-topics.md)|包含在應用程式中使用動畫及時間軸的程式碼範例。|  
+|[時鐘操作說明主題](clocks-how-to-topics.md)|包含程式碼範例使用<xref:System.Windows.Media.Animation.Clock>應用程式中的物件。|  
+|[主要畫面格操作說明主題](key-frame-animation-how-to-topics.md)|包含在應用程式中使用主要畫面格動畫的程式碼範例。|  
+|[路徑動畫操作說明主題](path-animation-how-to-topics.md)|包含在應用程式中使用路徑動畫的程式碼範例。|  
   
 <a name="reference"></a>   
 ## <a name="reference"></a>參考資料  

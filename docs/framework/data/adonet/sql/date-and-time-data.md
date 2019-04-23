@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
 ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344167"
 ---
 # <a name="date-and-time-data"></a>日期和時間資料
@@ -99,7 +99,7 @@ SQL Server 2008 導入了處理日期和時間資訊的新資料型別。 這些
 >  小於零或是大於或等於 24 小時的時間值將會擲回 <xref:System.ArgumentException>。  
   
 ### <a name="creating-parameters"></a>建立參數  
- 您可以建立<xref:System.Data.SqlClient.SqlParameter>物件使用其建構函式，或將它加入至<xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A>藉由呼叫集合`Add`方法<xref:System.Data.SqlClient.SqlParameterCollection>。 `Add` 方法會將建構函式引數或現有的參數物件當做輸入。  
+ 您可以使用 <xref:System.Data.SqlClient.SqlParameter> 物件的建構函式 (Constructor)，或將它加入至 <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 集合 (透過呼叫 `Add` 的 <xref:System.Data.SqlClient.SqlParameterCollection> 方法)，藉以建立此物件。 `Add` 方法會將建構函式引數或現有的參數物件當做輸入。  
   
  本主題的下列章節會提供如何指定 date 和 time 參數的範例。 如需使用參數的其他範例，請參閱[設定參數和參數資料類型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)並[DataAdapter 的參數](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)。  
   
@@ -244,4 +244,4 @@ command.Parameters.AddWithValue( _
 - [SQL Server 資料類型對應](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [設定參數和參數資料類型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [SQL Server 資料類型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
 ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344919"
 ---
 # <a name="xaml-resources"></a>XAML 資源
@@ -128,7 +128,7 @@ ms.locfileid: "59344919"
   
 -   要設定的屬性必須是屬性上<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。 屬性都必須受<xref:System.Windows.DependencyProperty>。  
   
--   參考中的值是<xref:System.Windows.Style><xref:System.Windows.Setter>。  
+-   參考中的值是<xref:System.Windows.Style> <xref:System.Windows.Setter>。  
   
 -   所設定的屬性必須是屬性上<xref:System.Windows.Freezable>提供的值為<xref:System.Windows.FrameworkElement>或是<xref:System.Windows.FrameworkContentElement>屬性，或<xref:System.Windows.Setter>值。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "59344919"
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- 該樣式其實有索引鍵： 隱含索引鍵`typeof(`<xref:System.Windows.Controls.Button>`)`。 在標記中，您可以指定<xref:System.Windows.Style.TargetType%2A>直接做為類型名稱 (或您可以選擇性地使用[{x: Type...}](../../xaml-services/x-type-markup-extension.md) 要傳回<xref:System.Type>。  
+ 該樣式其實有索引鍵： 隱含索引鍵`typeof(` <xref:System.Windows.Controls.Button> `)`。 在標記中，您可以指定<xref:System.Windows.Style.TargetType%2A>直接做為類型名稱 (或您可以選擇性地使用[{x: Type...}](../../xaml-services/x-type-markup-extension.md) 要傳回<xref:System.Type>。  
   
  透過所使用的預設佈景主題樣式機制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，樣式會套用作為執行階段樣式<xref:System.Windows.Controls.Button>在頁面上，即使<xref:System.Windows.Controls.Button>本身不會嘗試指定其<xref:System.Windows.FrameworkElement.Style%2A>屬性或特定的資源參考的樣式。 稍早在比使用佈景主題字典樣式所具有的相同金鑰的佈景主題字典樣式的查閱序列中找到您頁面中定義的樣式。 您可以指定`<Button>Hello</Button>`頁面，並以您定義的樣式中的任何地方<xref:System.Windows.Style.TargetType%2A>的`Button`會套用至該按鈕。 如果您想，您可以仍然明確樣式的索引鍵具有相同的型別值<xref:System.Windows.Style.TargetType%2A>、 清楚的標記，但為選用。  
   
@@ -159,6 +159,6 @@ ms.locfileid: "59344919"
 - [資源和程式碼](resources-and-code.md)
 - [定義和參考資源](how-to-define-and-reference-a-resource.md)
 - [應用程式管理概觀](../app-development/application-management-overview.md)
-- [x:Type 標記延伸](../../xaml-services/x-type-markup-extension.md)
+- [x:Type 標記延伸模組](../../xaml-services/x-type-markup-extension.md)
 - [StaticResource 標記延伸](staticresource-markup-extension.md)
 - [DynamicResource 標記延伸](dynamicresource-markup-extension.md)

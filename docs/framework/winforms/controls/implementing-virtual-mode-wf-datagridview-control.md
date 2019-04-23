@@ -13,10 +13,10 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
 ms.openlocfilehash: 7f6bf1703a6536f4d22b3a2fbe412579c59d39dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344321"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>逐步解說：在 Windows Forms DataGridView 控制項中實作虛擬模式
@@ -136,7 +136,7 @@ ms.locfileid: "59344321"
 - <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>
 - <xref:System.Windows.Forms.DataGridView.CancelRowEdit>
 - <xref:System.Windows.Forms.DataGridView.UserDeletingRow>
-- [Windows Form DataGridView 控制項中的效能微調](performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [縮放 Windows Form DataGridView 控制項的最佳作法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [在 Windows Form DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
-- [HOW TO：在 Windows Forms DataGridView 控制項中實作虛擬模式](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 控制項中的效能微調](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [縮放 Windows Forms DataGridView 控制項的最佳作法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [在 Windows Forms DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
+- [如何：在 Windows Form DataGridView 控制項中實作虛擬模式](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)

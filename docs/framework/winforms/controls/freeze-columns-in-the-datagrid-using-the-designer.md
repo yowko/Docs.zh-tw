@@ -8,10 +8,10 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: 87412dd2-478f-4751-af87-dafc591fc215
 ms.openlocfilehash: 397a2c5a7879be8c1bef7e04e72cf675f25d0fb8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344308"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：使用設計工具凍結 Windows Forms DataGridView 控制項的資料行
@@ -39,8 +39,8 @@ ms.locfileid: "59344308"
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
-- [HOW TO：使用設計工具在 Windows Forms DataGridView 控制項中新增和移除資料行](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [HOW TO：使用設計工具重新調整 Windows Forms DataGridView 控制項的資料行順序](enable-column-reordering-in-the-datagrid-using-the-designer.md)
-- [HOW TO：顯示全球化 Windows Form 中由右至左的文字](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100))
-- [HOW TO：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [HOW TO：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [如何：新增和移除使用設計工具的 Windows Form DataGridView 控制項中的資料行](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [如何：啟用 Windows Form DataGridView 控制項中使用設計工具中的資料行重新調整順序](enable-column-reordering-in-the-datagrid-using-the-designer.md)
+- [如何：顯示全球化 Windows Form 中由右至左的文字](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100))
+- [如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)

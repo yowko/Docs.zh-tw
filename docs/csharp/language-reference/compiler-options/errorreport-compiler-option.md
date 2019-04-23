@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 27c7500a3d33ec17680896f21f0e44d98fee94c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4797f35a3738955f620fad7a93f8695685d21057
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638466"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345088"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (C# 編譯器選項)
 此選項提供將 C# 編譯器內部錯誤回報給 Microsoft 的便利方式。  
@@ -34,7 +34,7 @@ ms.locfileid: "54638466"
  **提示**  
  提示您在收到內部編譯器錯誤時傳送報告。 **提示**是您在開發環境中編譯應用程式的預設值。  
   
- **queue**  
+ **佇列**  
  佇列錯誤報告。 當您使用系統管理認證登入時，您可以報告自上次登入後的任何失敗。 系統提示您傳送錯誤報告的頻率，最多三天一次。 **佇列**是您在命令列編譯應用程式的預設值。  
   
  **傳送**  
@@ -51,13 +51,13 @@ ms.locfileid: "54638466"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性] 頁面。 如需詳細資訊，請參閱[專案設計工具、建置頁 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
+1. 開啟專案的 [屬性] 頁面。 如需詳細資訊，請參閱[專案設計工具、建置頁 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
   
-2.  按一下 [建置] 屬性頁面。  
+2. 按一下 [建置] 屬性頁面。  
   
-3.  按一下 [ **進階** ] 按鈕。  
+3. 按一下 [ **進階** ] 按鈕。  
   
-4.  修改**報告編譯器內部錯誤**屬性。  
+4. 修改**報告編譯器內部錯誤**屬性。  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>。  
   

@@ -3,10 +3,10 @@ title: HOW TO：以程式設計方式將探索能力新增至 WCF 服務與用�
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
 ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336586"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>HOW TO：以程式設計方式將探索能力新增至 WCF 服務與用戶端
@@ -58,7 +58,7 @@ ms.locfileid: "59336586"
   
 1. 將新主控台應用程式加入至名為 `DiscoveryClientApp` 的方案。  
   
-2. 將參考加入`System.ServiceModel.dll`和 `System.ServiceModel.Discovery.dll`  
+2. 將參考加入至 `System.ServiceModel.dll` 和 `System.ServiceModel.Discovery.dll`  
   
 3. 從現有的用戶端專案複製 GeneratedClient.cs 和 App.config 檔案並貼上至 DiscoveryClientApp 專案。 若要這樣做，請以滑鼠右鍵按一下中的檔案**方案總管**，選取**複製**，然後選取**DiscoveryClientApp**專案、 以滑鼠右鍵按一下，然後選取**貼上**。  
   

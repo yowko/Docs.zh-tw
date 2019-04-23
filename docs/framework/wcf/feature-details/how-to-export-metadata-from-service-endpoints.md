@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
 ms.openlocfilehash: 6bf2eb3d295f9cbf6a7e13a612d5846ceaa75ab4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345504"
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>HOW TO：從服務端點匯出中繼資料
@@ -59,4 +59,4 @@ ms.locfileid: "59345504"
 
 - [中繼資料架構概觀](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [使用中繼資料](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [端點：位址、繫結和合約](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [端點：位址、 繫結和合約](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

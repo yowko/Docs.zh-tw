@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e96f86e516e7b741aa9fbf67efd1683d0845101
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a785401f0477131e6ebf0e9c04ce6d0b0b4d4f5c
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488509"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517534"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL 反組譯工具)
 
@@ -69,7 +69,7 @@ ildasm [options] [PEfilename] [options]
 |**/classlist**|包括模組中定義的類別清單。|
 |**/forward**|使用 forward 類別宣告。|
 |**/headers**|在輸出中包含檔案標頭資訊。|
-|**/item:** `class`[**::** `member`[`(sig`]]|根據提供的引數反組譯下列項目：<br /><br /> -   反組譯指定的 `class`。<br />-   反組譯 `class` 的指定 `member`。<br />-   以指定的簽章 `sig` 反組譯 `class` 的 `member`。 `sig` 的格式為：<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **注意**：在 .NET Framework 1.0 和 1.1 版中，`sig` 後面必須接著右括號：`(sig)`。 從 .NET Framework 2.0 開始，必須省略右括號：(`sig`。|
+|**/item:** `class`[**::** `member`[`(sig`]]|根據提供的引數反組譯下列項目：<br /><br /> -   反組譯指定的 `class`。<br />-   反組譯 `class` 的指定 `member`。<br />-   以指定的簽章 `sig` 反組譯 `class` 的 `member`。 `sig` 的格式為：<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **注意**：在 .NET Framework 1.0 和 1.1 版中，`sig` 後面必須接著右括號：`(sig)`。 從 Net Framework 2.0 開始，必須省略右括號：`(sig`。|
 |**/noil**|隱藏 IL 組件的程式碼輸出。|
 |**/stats**|包含影像中的統計資料。|
 |**/typelist**|產生完整的類型清單，以便在反覆存取時保留類型順序。|

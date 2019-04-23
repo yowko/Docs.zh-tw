@@ -10,10 +10,10 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
 ms.openlocfilehash: 7c26e00acd4278ced53ad29c748ac076e0215a23
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337704"
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>HOW TO：提供控制項的工具箱點陣圖
@@ -66,7 +66,7 @@ ms.locfileid: "59337704"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Drawing.ToolboxBitmapAttribute>
-- [逐步解說：自動將自訂元件填入工具箱](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
-- [在設計階段開發 Windows Form 控制項](developing-windows-forms-controls-at-design-time.md)
+- [逐步解說：自動填入 [工具箱] 中的以自訂元件](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [在設計階段開發 Windows Forms 控制項](developing-windows-forms-controls-at-design-time.md)
 - [屬性概觀 (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 - [屬性 (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)

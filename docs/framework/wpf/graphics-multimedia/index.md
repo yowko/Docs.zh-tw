@@ -13,10 +13,10 @@ helpviewer_keywords:
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
 ms.openlocfilehash: 58ee58577b9ff71112103abb4d33c8b85d3c806f
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481349"
 ---
 # <a name="graphics-and-multimedia"></a>圖形和多媒體
@@ -59,7 +59,7 @@ WPF 可支援高品質的 2D 圖形。 這些功能包括筆刷、幾何、影�
 
 ### <a name="2-d-shapes"></a>2D 圖案
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供程式庫的常用向量繪製[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]圖形，例如矩形和橢圓形，如下圖所示。
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供以向量繪製的常用 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 圖形圖庫，例如下圖所示的矩形和橢圓形。
 
 ![圖表顯示橢圓形和矩形。](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
@@ -109,7 +109,7 @@ End Class
 
 ### <a name="2-d-effects"></a>2D 效果
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供的程式庫[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]類別，可用來建立各種不同的效果。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 轉譯功能可讓您繪製具有漸層的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素、點陣圖、繪圖和影片，以及使用旋轉、縮放和傾斜來操作。 下圖提供您可以使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 筆刷達到許多效果的範例。
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 類別的程式庫可讓您建立各種不同的效果。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 轉譯功能可讓您繪製具有漸層的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素、點陣圖、繪圖和影片，以及使用旋轉、縮放和傾斜來操作。 下圖提供您可以使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 筆刷達到許多效果的範例。
 
 ![圖例中顯示不同的 WPF 筆刷和 [小畫家] 項目。](./media/index/brushes-paint-elements.png)
 
@@ -119,7 +119,7 @@ End Class
 
 ## <a name="3-d-rendering"></a>3D 轉譯
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供一組[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]整合的轉譯能力[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]支援中的圖形[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]為了讓您建立更有趣的版面配置， [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，和資料視覺效果。 另一方面，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 可讓您將 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 影像轉譯到 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 圖形的表面上，如下圖所示範。
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供一組 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 轉譯功能，和 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 圖形支援整合，讓您建立更有趣的版面配置、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 及資料視覺效果。 另一方面，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 可讓您將 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 影像轉譯到 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 圖形的表面上，如下圖所示範。
 
 ![示範以不同的紋理 3d 圖形的範例螢幕擷取畫面。](./media/index/visual-three-dimensional-shape.png)
 
@@ -170,6 +170,6 @@ End Class
 - [WPF 中圖案和基本繪圖概觀](shapes-and-basic-drawing-in-wpf-overview.md)
 - [使用純色和漸層繪製的概觀](painting-with-solid-colors-and-gradients-overview.md)
 - [使用影像、繪圖和視覺效果繪製](painting-with-images-drawings-and-visuals.md)
-- [動畫和計時 HOW TO 主題](animation-and-timing-how-to-topics.md)
+- [動畫和計時 how to 主題](animation-and-timing-how-to-topics.md)
 - [立體圖形概觀](3-d-graphics-overview.md)
 - [多媒體概觀](multimedia-overview.md)

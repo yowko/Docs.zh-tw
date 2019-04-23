@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
 ms.openlocfilehash: e0bbb24b07fdc1c362e2be43d69d189defbc27a4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59346180"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>HOW TO：使用含階層式資料的主從式模式
@@ -39,4 +39,4 @@ ms.locfileid: "59346180"
 - [繫結至集合並根據選取項目顯示資訊](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
 - [資料繫結概觀](data-binding-overview.md)
 - [資料範本化概觀](data-templating-overview.md)
-- [HOW TO 主題](data-binding-how-to-topics.md)
+- [HOW-TO 主題](data-binding-how-to-topics.md)

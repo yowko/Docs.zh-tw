@@ -3,12 +3,12 @@ title: 教學課程：撰寫您的第一個分析器和程式碼修正
 description: 本教學課程提供 使用 .NET Compiler SDK (Roslyn API) 來建置分析器和程式碼修正的逐步指示。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 665dac9d36933c35be19cc826b8b4dc614c38ed2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 7e3d1ac3a1ef692a1b7f1980fd00f95b04a8d047
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677163"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427496"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>教學課程：撰寫您的第一個分析器和程式碼修正
 
@@ -254,7 +254,7 @@ using Microsoft.CodeAnalysis.Formatting;
 
 ![可設為常數警告](media/how-to-write-csharp-analyzer-code-fix/make-const-warning.png)
 
-您已完成許多進度。 可設為 `const` 的宣告底下會出現波浪線。 但仍有工作尚待完成。 如果您依序以 `i`、`j`、`k` 的順序將 `const` 新增至宣告，則可正常運作。 但是，如果您以不同的順序從 `k` 開始新增 `const` 修飾詞 i，分析器將會產生錯誤：除非 `i` 和 `j` 皆已為 `const`，否則 `k` 無法宣告為 `const`。 您必須執行更多分析，以確保能夠以不同的方式讓變數完成宣告和初始化。
+您已完成許多進度。 可設為 `const` 的宣告底下會出現波浪線。 但仍有工作尚待完成。 如果您依序以 `i`、`j`、`k` 的順序將 `const` 新增至宣告，則可正常運作。 但是，如果您以不同的順序從 `k` 開始新增 `const` 修飾詞，分析器將會產生錯誤：除非 `i` 和 `j` 皆已為 `const`，否則 `k` 無法宣告為 `const`。 您必須執行更多分析，以確保能夠以不同的方式讓變數完成宣告和初始化。
 
 ## <a name="build-data-driven-tests"></a>建置資料驅動型測試
 

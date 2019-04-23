@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
 ms.openlocfilehash: e18fe451ea4a80ac959ed61b66394920f8bf177f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336079"
 ---
 # <a name="-optionstrict"></a>-optionstrict
@@ -65,5 +65,5 @@ vbc -optionstrict+ test.vb
 - [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)
 - [-warnaserror (Visual Basic)](../../../visual-basic/reference/command-line-compiler/warnaserror.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Long](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [選項對話方塊、專案、Visual Basic 預設值](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

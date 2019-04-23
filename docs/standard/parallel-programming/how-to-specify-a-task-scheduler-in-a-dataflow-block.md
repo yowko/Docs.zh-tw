@@ -1,5 +1,5 @@
 ---
-title: 作法：在資料流程區塊中指定工作排程器
+title: HOW TO：在資料流程區塊中指定工作排程器
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 681c0f1f918c8991ed2544189488d1ea25547834
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345842"
 ---
-# <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>作法：在資料流程區塊中指定工作排程器
+# <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>HOW TO：在資料流程區塊中指定工作排程器
 此文件將示範當您在應用程式中使用資料流程時，如何與特定工作排程器產生關聯。 這個範例會使用 Windows Form 應用程式中的 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> 類別顯示讀取器工作何時為使用中，以及寫入器工作何時為使用中。 另外還會使用 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 方法讓資料流程區塊在使用者介面執行緒上執行。
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]

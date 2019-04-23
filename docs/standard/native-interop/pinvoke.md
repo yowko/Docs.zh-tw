@@ -4,12 +4,12 @@ description: 了解如何在 .NET 中透過 P/Invoke 呼叫原生函式。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 4836096e12f6c3d317daa5da91566ab472053ede
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1a5f2f9d13429f84d5b5bb58d36f015004fb746b
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409233"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517859"
 ---
 # <a name="platform-invoke-pinvoke"></a>平台叫用 (P/Invoke)
 
@@ -24,7 +24,7 @@ public class Program {
 
     // Import user32.dll (containing the function we need) and define
     // the method corresponding to the native function.
-    [DllImport("user32.dll")]
+    [DllImport("user32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
     public static extern int MessageBox(IntPtr hWnd, String text, String caption, int options);
 
     public static void Main(string[] args) {
@@ -37,7 +37,7 @@ public class Program {
 上述範例很簡單，但它顯示了從受控碼叫用非受控函式所需的項目。 現在逐步查看範例︰
 
 *   行 #1 顯示 `System.Runtime.InteropServices` 命名空間的 using 陳述式，該命名空間持有需要的所有項目。
-*   行 #7 引進 `DllImport` 屬性。 此屬性十分重要，因為它會告訴執行階段應載入 Unmanaged DLL。 傳入的字串是我們的目標函式所在的 DLL。
+*   行 #7 引進 `DllImport` 屬性。 此屬性十分重要，因為它會告訴執行階段應載入 Unmanaged DLL。 傳入的字串是我們的目標函式所在的 DLL。 此外，它會指定要使用哪個[字元集](./charset.md)來對字串進行封送處理。 最後，它會指定此函式會呼叫 [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror)，且執行階段應該擷取錯誤碼，讓使用者可以透過 <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType> 擷取它。
 *   行 #8 是 P/Invoke 工作的關鍵。 它會定義與 Unmanaged 方法具有**同樣簽章**的 Managed 方法。 您可以注意到宣告具有新的關鍵字 `extern`，它會告訴執行階段這就是外部方法，而且當您叫用它時，執行階段應該能在 `DllImport` 屬性指定的 DLL 中找到此關鍵字。
 
 此範例的其餘部分僅示範如何叫用方法，就如同叫用任何其他 Managed 方法一樣。
@@ -237,7 +237,6 @@ namespace PInvokeSamples {
 ```
 
 上述兩個範例依參數而定，在這兩種情況下，參數會被指定為 Managed 類型。 執行階段會執行「正確的動作」，並將這些項目處理成對等於另一端的項目。 在我們的[類型封送處理](type-marshalling.md)頁面上了解類型如何封送至機器碼。
-
 
 ## <a name="more-resources"></a>更多資源
 

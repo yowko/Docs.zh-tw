@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 16154ff6b2fcf6c537126b6ced03c45f6746b57a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8edc747c003cd5527df509af83325816671ddfb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649397"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346102"
 ---
 # <a name="character-encoding-in-net"></a>.NET 中的字元編碼
 字元是可以用許多不同的方式來表示的抽象實體。 字元編碼是一套系統，可將所支援之字元集中的每個字元與代表該字元的特定值配對。 例如，摩斯密碼就是一種字元編碼，可將羅馬字母中的每個字元與適合透過電報線路傳輸的點和虛線圖樣配對。 電腦的字元編碼可將所支援之字元集中的每個字元與代表該字元的數值配對。 字元編碼包含兩個不同的元件：  
@@ -215,11 +215,11 @@ ms.locfileid: "54649397"
   
  此外，您可以執行下列步驟，來實作使用自動調整後援、取代後援或例外狀況後援的自訂方案：  
   
-1.  針對編碼作業從 <xref:System.Text.EncoderFallback> 衍生類別，並針對解碼作業從 <xref:System.Text.DecoderFallback> 衍生類別。  
+1. 針對編碼作業從 <xref:System.Text.EncoderFallback> 衍生類別，並針對解碼作業從 <xref:System.Text.DecoderFallback> 衍生類別。  
   
-2.  針對編碼作業從 <xref:System.Text.EncoderFallbackBuffer> 衍生類別，並針對解碼作業從 <xref:System.Text.DecoderFallbackBuffer> 衍生類別。  
+2. 針對編碼作業從 <xref:System.Text.EncoderFallbackBuffer> 衍生類別，並針對解碼作業從 <xref:System.Text.DecoderFallbackBuffer> 衍生類別。  
   
-3.  至於例外狀況後援，如果預先定義的 <xref:System.Text.EncoderFallbackException> 和 <xref:System.Text.DecoderFallbackException> 類別不符合您的需求，則從例外狀況物件 (例如 <xref:System.Exception> 或 <xref:System.ArgumentException>) 衍生類別。  
+3. 至於例外狀況後援，如果預先定義的 <xref:System.Text.EncoderFallbackException> 和 <xref:System.Text.DecoderFallbackException> 類別不符合您的需求，則從例外狀況物件 (例如 <xref:System.Exception> 或 <xref:System.ArgumentException>) 衍生類別。  
   
 ### <a name="deriving-from-encoderfallback-or-decoderfallback"></a>衍生自 EncoderFallback 或 DecoderFallback  
  若要實作自訂後援方案，您必須針對編碼作業建立繼承自 <xref:System.Text.EncoderFallback> 的類別，以及針對解碼作業建立繼承自 <xref:System.Text.DecoderFallback> 的類別。 這些類別的執行個體會傳遞給 <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> 方法，並且做為編碼類別和後援實作之間的媒介。  
@@ -235,7 +235,7 @@ ms.locfileid: "54649397"
   
  當您針對編碼器或解碼器建立自訂後援方案時，必須實作下列成員：  
   
--   <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 方法。 編碼器會呼叫<xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 來提供後援緩衝區，其中包含無法編碼之字元的相關資訊。 由於要編碼的字元可能是 Surrogate 字組，因此這個方法為多載。 其中一個多載會收到傳遞之要編碼的字元，以及其在字串中的索引。 第二個多載會收到傳遞的高和低 Surrogate，以及其在字串中的索引。 解碼器會呼叫 <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 方法來提供後援緩衝區，其中包含無法解碼之位元組的相關資訊。 這個方法會收到傳遞之無法解碼的位元組陣列，以及第一個位元組的索引。 如果後援緩衝區可以提供自動調整或一或多個取代字元，則後援方法應該傳回 `true` ，否則應該傳回 `false`。 若是例外狀況後援，後援方法應該擲回例外狀況。  
+-   <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 方法。 <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 會被編碼器呼叫來提供後援緩衝區，其中包含無法編碼之字元的相關資訊。 由於要編碼的字元可能是 Surrogate 字組，因此這個方法為多載。 其中一個多載會收到傳遞之要編碼的字元，以及其在字串中的索引。 第二個多載會收到傳遞的高和低 Surrogate，以及其在字串中的索引。 解碼器會呼叫 <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 方法來提供後援緩衝區，其中包含無法解碼之位元組的相關資訊。 這個方法會收到傳遞之無法解碼的位元組陣列，以及第一個位元組的索引。 如果後援緩衝區可以提供自動調整或一或多個取代字元，則後援方法應該傳回 `true` ，否則應該傳回 `false`。 若是例外狀況後援，後援方法應該擲回例外狀況。  
   
 -   <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> 方法，編碼器或解碼器會重複呼叫這個方法，以便從後援緩衝區取得下一個字元。 當所有後援字元都已傳回時，這個方法應傳回 U+0000。  
   

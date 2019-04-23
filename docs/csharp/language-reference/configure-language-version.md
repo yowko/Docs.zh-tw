@@ -2,12 +2,12 @@
 title: 選取 C# 語言版本 - C# 指南
 description: 設定編譯器以特定的編譯器版本執行語法驗證
 ms.date: 02/28/2019
-ms.openlocfilehash: 6d31a757171bd2eecdcc1fbd3da765dcb3fe45c0
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: feb3e51a107f9830071b55c7985f202edc842f4a
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212023"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480738"
 ---
 # <a name="select-the-c-language-version"></a>選取 C# 語言版本
 
@@ -80,7 +80,7 @@ Visual Studio 可協助您判斷您需要的語言版本。 如果您使用不�
 
 ## <a name="configure-multiple-projects"></a>設定多個專案
 
-您可以建立 **Directory.build.props** 檔案，其中包含 `<LangVersion>` 元素來設定多個目錄。 您通常會在解決方案目錄中進行。 將下列內容新增到解決方案目錄中的 **Directory.build.props** 檔案：
+您可以建立 **Directory.Build.props** 檔案，其中包含 `<LangVersion>` 元素來設定多個目錄。 您通常會在解決方案目錄中進行。 將下列內容新增到解決方案目錄中的 **Directory.Build.props** 檔案：
 
 ```xml
 <Project>

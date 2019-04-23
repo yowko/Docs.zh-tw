@@ -12,29 +12,29 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3e6548484f3e41ce67522931f4eafef3acee1fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652011"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336144"
 ---
 # <a name="managed-execution-process"></a>Managed 執行程序
 <a name="introduction"></a> Managed 執行處理序包含下列步驟，將於本主題中稍後詳細討論：  
   
-1.  [選擇編譯器](#choosing_a_compiler)。  
+1. [選擇編譯器](#choosing_a_compiler)。  
   
      若要享有 Common Language Runtime 帶來的好處，您必須使用一個或多個以執行階段為目標的語言編譯器。  
   
-2.  [編譯您的程式碼為 MSIL](#compiling_to_msil)。  
+2. [編譯您的程式碼為 MSIL](#compiling_to_msil)。  
   
      編譯會將您的原始程式碼轉譯成 Microsoft 中間語言 (MSIL)，並產生必要的中繼資料。  
   
-3.  [將 MSIL 編譯成機器碼](#compiling_msil_to_native_code)。  
+3. [將 MSIL 編譯成機器碼](#compiling_msil_to_native_code)。  
   
      在執行期間，Just-In-Time (JIT) 編譯器會將 MSIL 轉譯成機器碼。 在這個編譯期間，程式碼必須通過驗證程序，這會檢查 MSIL 和中繼資料，以了解是否可判斷程式碼為類型安全的。  
   
-4.  [執行程式碼](#running_code)。  
+4. [執行程式碼](#running_code)。  
   
      Common Language Runtime 提供基礎結構，啟用執行以及可在執行期間使用的服務。  
   
@@ -99,9 +99,9 @@ ms.locfileid: "54652011"
   
  在 Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] 和 [!INCLUDE[windowsver](../../includes/windowsver-md.md)]中，作業系統載入器會查看 COFF 標頭中的位元，檢查 Managed 模組。 所設定的位元代表 Managed 模組。 如果載入器偵測到 Managed 模組，則會載入 mscoree.dll，而當載入和卸載 Managed 模組映像時， `_CorValidateImage` 和 `_CorImageUnloading` 會通知載入器。 `_CorValidateImage` 會執行下列動作：  
   
-1.  確定程式碼是有效的 Managed 程式碼。  
+1. 確定程式碼是有效的 Managed 程式碼。  
   
-2.  將映像中的進入點變更為執行階段中的進入點。  
+2. 將映像中的進入點變更為執行階段中的進入點。  
   
  在 64 位元的 Windows 中， `_CorValidateImage` 會將記憶體中的映像從 PE32 格式轉換為 PE32+ 格式，以便進行修改。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "54652011"
   
 ## <a name="see-also"></a>另請參閱
 
-- [概觀](../../docs/framework/get-started/overview.md)
+- [總覽](../../docs/framework/get-started/overview.md)
 - [語言獨立性以及與語言無關的元件](../../docs/standard/language-independence-and-language-independent-components.md)
 - [中繼資料和自我描述元件](../../docs/standard/metadata-and-self-describing-components.md)
 - [Ilasm.exe (IL 組譯工具)](../../docs/framework/tools/ilasm-exe-il-assembler.md)

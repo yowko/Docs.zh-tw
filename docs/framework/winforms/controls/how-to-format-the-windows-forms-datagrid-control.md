@@ -15,10 +15,10 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: a50fcc3b-8abf-47ec-9029-7f268af4ddb1
 ms.openlocfilehash: 8e5c41d6f146e6abef8d7670e6191b587ac86c92
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336118"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control"></a>HOW TO：格式化 Windows Forms DataGrid 控制項
@@ -158,5 +158,5 @@ ms.locfileid: "59336118"
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [HOW TO：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [如何：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [DataGrid 控制項](datagrid-control-windows-forms.md)

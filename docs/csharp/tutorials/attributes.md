@@ -4,12 +4,12 @@ description: 了解 C# 中屬性的運作方式。
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: e744f3585fe7be02fb8bdd25f559a12a88b61730
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3141c1bf7ddcf3fd3426290428f9eeeb54b3c872
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975598"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481227"
 ---
 # <a name="using-attributes-in-c"></a>在 C\# 中使用屬性
 
@@ -74,7 +74,7 @@ ms.locfileid: "56975598"
 
 [!code-csharp[Invalid attempt to use the attribute constructor](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeGotcha2)]
 
-上述程式碼會造成編譯器錯誤，例如：`Attribute constructor parameter 'myClass' has type 'Foo', which is not a valid attribute parameter type`
+上述程式碼會造成編譯器錯誤，例如： `Attribute constructor parameter 'myClass' has type 'Foo', which is not a valid attribute parameter type`
 
 ## <a name="how-to-restrict-attribute-usage"></a>如何限制屬性使用方式
 
@@ -100,7 +100,7 @@ ms.locfileid: "56975598"
 
 [!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample1)]
 
-如果您嘗試將上述屬性放在類別或結構以外的項目中，就會發生如下的編譯器錯誤：`Attribute 'MyAttributeForClassAndStructOnly' is not valid on this declaration type. It is only valid on 'class, struct' declarations`
+如果您嘗試將上述屬性放在類別或結構以外的項目中，就會發生如下的編譯器錯誤： `Attribute 'MyAttributeForClassAndStructOnly' is not valid on this declaration type. It is only valid on 'class, struct' declarations`
 
 [!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample2)]
 
@@ -114,7 +114,7 @@ ms.locfileid: "56975598"
 
 [!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 
-該程式碼會印出類似以下的內容：`The assembly qualified name of MyClass is ConsoleApplication.MyClass, attributes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`
+該程式碼會印出類似以下的內容： `The assembly qualified name of MyClass is ConsoleApplication.MyClass, attributes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`
 
 一旦您擁有 `TypeInfo` 物件 (或 `MemberInfo`、`FieldInfo` 等)，就可以使用 `GetCustomAttributes` 方法。 這會傳回 `Attribute` 物件的集合。
 您也可以使用 `GetCustomAttribute` 並指定一個「屬性」型別。
@@ -134,12 +134,12 @@ ms.locfileid: "56975598"
 
 以下是幾個值得注意的屬性，內建於 .NET Core 基底類別庫中︰
 
-* `[Obsolete]`. 此屬性使用於上述範例中，且存在於 `System` 命名空間。 提供有關變更的程式碼基底的宣告式文件會很有用。 訊息可以字串的形式提供，使用另一個布林值參數可以從編譯器警告提升至編譯器錯誤。
+* `[Obsolete]`。 此屬性使用於上述範例中，且存在於 `System` 命名空間。 提供有關變更的程式碼基底的宣告式文件會很有用。 訊息可以字串的形式提供，使用另一個布林值參數可以從編譯器警告提升至編譯器錯誤。
 
-* `[Conditional]`. 此屬性位於 `System.Diagnostics` 命名空間。 這個屬性可以套用至方法 (或屬性類別)。 您必須傳遞字串給建構函式。
+* `[Conditional]`。 此屬性位於 `System.Diagnostics` 命名空間。 這個屬性可以套用至方法 (或屬性類別)。 您必須傳遞字串給建構函式。
 如果該字串不符合 `#define` 指示詞，C# 編譯器會移除對該方法的任何呼叫 (但非方法本身)。 這通常用於偵錯 (診斷) 用途。
 
-* `[CallerMemberName]`. 這個屬性可以用於參數，並存在 `System.Runtime.CompilerServices` 命名空間中。 這個屬性可用來插入呼叫另一個方法之方法的名稱。 在各種 UI 架構中實作 INotifyPropertyChanged 時，這通常做為消除 'magic strings' 的方法。 範例如下：
+* `[CallerMemberName]`。 這個屬性可以用於參數，並存在 `System.Runtime.CompilerServices` 命名空間中。 這個屬性可用來插入呼叫另一個方法之方法的名稱。 在各種 UI 架構中實作 INotifyPropertyChanged 時，這通常做為消除 'magic strings' 的方法。 範例如下：
 
 [!code-csharp[Using CallerMemberName when implementing INotifyPropertyChanged](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
 
@@ -147,4 +147,4 @@ ms.locfileid: "56975598"
 
 ## <a name="summary"></a>總結
 
-屬性能為 C# 提供宣告式能力。 但它們是做為中繼資料的一種程式碼，無法自行運作。
+屬性為 C# 帶來了宣告式能力，但它們是程式碼的中繼資料形式，且無法自行運作。

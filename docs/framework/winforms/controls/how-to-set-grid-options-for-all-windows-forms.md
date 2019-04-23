@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
 ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336053"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>HOW TO：設定所有 Windows Forms 的格線選項
@@ -31,13 +31,13 @@ ms.locfileid: "59336053"
   
 ## <a name="see-also"></a>另請參閱
 
-- [逐步解說：使用對齊線排列 Windows Forms 的控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [選項對話方塊、Windows Form 設計工具、一般](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
-- [Windows Form 控制項](index.md)
-- [HOW TO：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [排列 Windows Form 上的控制項](arranging-controls-on-windows-forms.md)
-- [HOW TO：設定 Windows Forms 的定位順序](how-to-set-the-tab-order-on-windows-forms.md)
-- [HOW TO：設定 Windows Forms 控制項所顯示的文字](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [將控制項加入 Windows Form](putting-controls-on-windows-forms.md)
-- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)
-- [依功能區分 Windows Form 控制項](windows-forms-controls-by-function.md)
+- [逐步解說：使用對齊線的 Windows Form 上排列控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [選項對話方塊、 Windows Form 設計工具、 一般](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+- [Windows Forms 控制項](index.md)
+- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [排列 Windows Forms 上的控制項](arranging-controls-on-windows-forms.md)
+- [如何：在 Windows Form 上設定定位順序](how-to-set-the-tab-order-on-windows-forms.md)
+- [如何：設定所顯示之文字的 Windows Form 控制項](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [將控制項加入 Windows Forms](putting-controls-on-windows-forms.md)
+- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [依功能區分 Windows Forms 控制項](windows-forms-controls-by-function.md)

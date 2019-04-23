@@ -1,5 +1,5 @@
 ---
-title: 作法：啟動服務
+title: HOW TO：啟動服務
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, starting
@@ -7,13 +7,13 @@ helpviewer_keywords:
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
 ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336833"
 ---
-# <a name="how-to-start-services"></a>作法：啟動服務
+# <a name="how-to-start-services"></a>HOW TO：啟動服務
 安裝服務之後，必須加以啟動。 從呼叫服務類別上的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法開始。 通常，<xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法會定義服務將執行的有用工作。 服務啟動之後，即會保持作用中，直到您以手動方式暫停或停止它為止。  
   
  服務可以設定為自動或手動啟動。 自動啟動的服務將在其安裝所在的電腦重新開機或第一次開啟時啟動。 使用者必須啟動以手動方式啟動的服務。  
@@ -36,7 +36,7 @@ ms.locfileid: "59336833"
     |若要安裝服務|設定此值|  
     |----------------------------------|--------------------|  
     |當電腦重新開機時|**自動**|  
-    |當明確的使用者動作啟動服務時|**手動**|  
+    |當明確的使用者動作啟動服務時|**Manual**|  
   
     > [!TIP]
     >  若不要讓服務啟動，可以將 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 屬性設定為 **Disabled**。 如果您要將伺服器重新開機多次，而且想要防止要正常啟動的服務被啟動，藉以節省時間，則可以這樣做。  
@@ -80,5 +80,5 @@ ms.locfileid: "59336833"
 ## <a name="see-also"></a>另請參閱
 
 - [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [作法：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [作法：將安裝程式新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [如何：將安裝程式新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

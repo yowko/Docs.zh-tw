@@ -1,15 +1,15 @@
 ---
-title: 作法：使用群組將檔案分割成許多檔案 (LINQ) (C#)
+title: HOW TO：使用群組將檔案分割成許多檔案 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
 ms.openlocfilehash: a78274a51bfec59147d97f88596a6ec60e40a997
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337366"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>作法：使用群組將檔案分割成許多檔案 (LINQ) (C#)
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>HOW TO：使用群組將檔案分割成許多檔案 (LINQ) (C#)
 此範例示範如何合併兩個檔案的內容，然後建立一組以新方法組織資料的新檔案。  
   
 ### <a name="to-create-the-data-files"></a>建立資料檔  

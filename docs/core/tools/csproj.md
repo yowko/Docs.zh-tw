@@ -1,13 +1,13 @@
 ---
 title: 適用於 .NET Core 之 csproj 格式的新增項目
 description: 深入了解現有和 .NET Core csproj 檔案之間的差異
-ms.date: 09/22/2017
-ms.openlocfilehash: e196be28f622873359153f32c5dd9b0b5a514c0f
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.date: 04/08/2019
+ms.openlocfilehash: f72ea279079b4cdb3a06a2ba64925e2a335e1ed2
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654649"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517326"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -15,7 +15,7 @@ ms.locfileid: "58654649"
 
 ## <a name="implicit-package-references"></a>隱含套件參考
 
-會根據您專案檔之 `<TargetFramework>` 或 `<TargetFrameworks>` 屬性中指定的目標架構來隱含參考中繼套件。 如果指定了 `<TargetFramework>`，則會忽略 `<TargetFrameworks>`，與順序無關。
+會根據您專案檔之 `<TargetFramework>` 或 `<TargetFrameworks>` 屬性中指定的目標架構來隱含參考中繼套件。 如果指定了 `<TargetFramework>`，則會忽略 `<TargetFrameworks>`，與順序無關。 如需詳細資訊，請參閱[套件、中繼套件和架構](../packages.md)。 
 
 ```xml
  <PropertyGroup>
@@ -31,15 +31,39 @@ ms.locfileid: "58654649"
 
 ### <a name="recommendations"></a>建議
 
-由於會隱含參考 `Microsoft.NETCore.App` 或 `NetStandard.Library` 中繼套件，因此建議使用下列最佳做法：
+由於會隱含參考 `Microsoft.NETCore.App` 或 `NETStandard.Library` 中繼套件，因此建議使用下列最佳做法：
 
-* 以 .NET Core 或 .NET Standard 為目標時，絕不透過專案檔中的 `<PackageReference>` 項目明確參考 `Microsoft.NETCore.App` 或 `NetStandard.Library` 中繼套件。
+* 以 .NET Core 或 .NET Standard 為目標時，絕不透過專案檔中的 `<PackageReference>` 項目明確參考 `Microsoft.NETCore.App` 或 `NETStandard.Library` 中繼套件。
 * 如果您以 .NET Core 為目標時需要特定版本的執行階段，您應該使用專案中的 `<RuntimeFrameworkVersion>` 屬性 (例如 `1.0.4`)，而不是參考中繼套件。
-    * 如果您使用[獨立性部署](../deploying/index.md#self-contained-deployments-scd)，並需要 1.0.0 LTS 執行階段的特定更新程式版本，就可能會發生此情況。
-* 如果您以 .NET Standard 為目標時需要特定版本的 `NetStandard.Library` 中繼套件，您可以使用 `<NetStandardImplicitPackageVersion>` 屬性並設定所需的版本。
-* 請不要在 .NET Framework 專案中明確地新增或更新 `Microsoft.NETCore.App` 或 `NetStandard.Library` 中繼套件的參考。 如果使用 .NET Standard 型 NuGet 套件時需要任何版本的 `NetStandard.Library`，NuGet 會自動安裝該版本。
+  * 如果您使用[獨立性部署](../deploying/index.md#self-contained-deployments-scd)，並需要 1.0.0 LTS 執行階段的特定更新程式版本，就可能會發生此情況。
+* 如果您以 .NET Standard 為目標時需要特定版本的 `NETStandard.Library` 中繼套件，您可以使用 `<NetStandardImplicitPackageVersion>` 屬性並設定所需的版本。
+* 請不要在 .NET Framework 專案中明確地新增或更新 `Microsoft.NETCore.App` 或 `NETStandard.Library` 中繼套件的參考。 如果使用 .NET Standard 型 NuGet 套件時需要任何版本的 `NETStandard.Library`，NuGet 會自動安裝該版本。
+
+## <a name="implicit-version-for-some-package-references"></a>某些套件參考的隱含版本
+
+[`<PackageReference>`](#packagereference) 的大部分使用方式都需要設定 `Version` 屬性來指定要使用的 NuGet 套件版本。 不過，使用 .NET Core 2.1 或 2.2 並參考 [Microsoft.AspNetCore.App](/aspnet/core/fundamentals/metapackage-app) 或 [Microsoft.AspNetCore.All](/aspnet/core/fundamentals/metapackage) 時，該屬性是不必要的。 .NET Core SDK 可以自動針對這些套件選取應使用的版本。
+
+### <a name="recommendation"></a>建議
+
+參考 `Microsoft.AspNetCore.App` 或 `Microsoft.AspNetCore.All` 套件時，請不要指定其版本。 若指定版本，SDK 可能會產生警告 NETSDK1071。 若要修正此警告，請移除套件版本，如下列範例所示：
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Microsoft.AspNetCore.App" />
+</ItemGroup>
+```
+
+> 已知問題：.NET Core 2.1 SDK 僅在專案同時使用 Microsoft.NET.Sdk.Web 時才支援此語法。 此問題已在 .NET Core 2.2 SDK 中解決。
+
+這些針對 ASP.NET Core 中繼套件的參考，具有和大部分的一般 NuGet 套件些微不同的行為。 使用這些中繼套件之應用程式的[架構相依部署](../deploying/index.md#framework-dependent-deployments-fdd)會自動利用 ASP.NET Core 共用架構的優點。 當您使用中繼套件時，系統**不會**搭配應用程式部署來自所參考之 ASP.NET Core NuGet 套件的任何資產；ASP.NET Core 共用架構會包含這些資產。 共用架構中的資產會針對目標平台最佳化，以改善應用程式啟動時間。 如需共用架構的詳細資訊，請參閱 [.NET Core 發佈封裝](../build/distribution-packaging.md)。
+
+如果「已指定」某個版本，系統會將它視為 ASP.NET Core 共用架構適用於架構相依部署的「最小」版本，以及獨立式部署的「確切」版本。 這可能會導致下列結果：
+
+* 如果安裝在伺服器上的 ASP.NET Core 版本小於 PackageReference 上所指定的版本，.NET Core 處理序將無法啟動。 針對中繼套件的更新通常會在於裝載環境 (例如 Azure) 中推出之前，先在 NuGet.org 上提供使用。 將 PackageReference 上的版本更新為 ASP.NET Core 的版本，可能會導致已部署的應用程式發生失敗。
+* 如果應用程式是以[獨立式部署](../deploying/index.md#self-contained-deployments-scd)的形式部署，該應用程式可能不會包含針對 .NET Core 的最新安全性更新。 沒有指定版本時，獨立式部署中的 SDK 可以自動包含最新版本的 ASP.NET Core。
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>.NET Core 專案中包含預設編譯
+
 隨著改為使用最新 SDK 版本中的 *csproj* 格式，編譯項目的預設包含項目和排除項目以及內嵌資源都已移至 SDK 屬性檔。 這表示您不再需要於專案檔中指定這些項目。
 
 這樣做的主要原因是為了讓專案檔更為簡潔。 SDK 中的預設值應該涵蓋最常見的使用案例，而不需要在每個建立的專案中重複這些項目。 這會產生較小的專案檔，而更容易了解及視需要手動編輯。
@@ -100,6 +124,7 @@ ms.locfileid: "58654649"
 ## <a name="additions"></a>新增項目
 
 ### <a name="sdk-attribute"></a>Sdk 屬性
+
 *.csproj* 檔案的根 `<Project>` 元素有一個新屬性，稱為 `Sdk`。 `Sdk` 會指定專案將使用的 SDK。 如[分層文件](cli-msbuild-architecture.md)所述，SDK 是可建置 .NET Core 程式碼的一組 MSBuild [工作](/visualstudio/msbuild/msbuild-tasks)和[目標](/visualstudio/msbuild/msbuild-targets)。 我們隨 .NET Core 工具提供三個主要 SDK：
 
 1. 識別碼為 `Microsoft.NET.Sdk` 的 .NET Core SDK
@@ -282,7 +307,6 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 ### <a name="packagelicenseurl"></a>PackageLicenseUrl
 
 適用於套件的授權 URL。 (_自 Visual Studio 15.9.4、.NET SDK 2.1.502 及 2.2.101 起淘汰_)
-
 
 ### <a name="packageiconurl"></a>PackageIconUrl
 

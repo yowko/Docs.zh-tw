@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用組件執行 XSLT 轉換
+title: 作法：使用組件執行 XSLT 轉換
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f32a71ec04d791c83f711beee1086bcba283401c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcf869d77882810d063532b2cf0c8139be163b7a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625610"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345400"
 ---
-# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>HOW TO：使用組件執行 XSLT 轉換
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>作法：使用組件執行 XSLT 轉換
 XSLT 編譯器 (xsltc.exe) 會編譯 XSLT 樣式表並產生組件。 然後此組件可以直接傳遞到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。  
   
 ### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>將 XML 和 XSLT 檔案複製到本機電腦  
@@ -132,7 +132,7 @@ XSLT 編譯器 (xsltc.exe) 會編譯 XSLT 樣式表並產生組件。 然後此�
   
 ### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>在啟用指令碼的情況下編譯樣式表。  
   
-1.  從命令列執行下列命令會建立兩個名為 `Transform.dll` 和 `Transform_Script1.dll` 的組件 (這是預設行為。 除非另外指定，否則類別和組件的名稱會預設為主要樣式表的名稱)：  
+1. 從命令列執行下列命令會建立兩個名為 `Transform.dll` 和 `Transform_Script1.dll` 的組件 (這是預設行為。 除非另外指定，否則類別和組件的名稱會預設為主要樣式表的名稱)：  
   
     ```  
     xsltc /settings:script+ Transform.xsl  
@@ -146,15 +146,15 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 ### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>當您在編譯程式碼時，將編譯的組件當做參考併入  
   
-1.  您可以在 Visual Studio 中包含組件，其方式是在 [方案總管] 內或是從命令列加入參考。  
+1. 您可以在 Visual Studio 中包含組件，其方式是在 [方案總管] 內或是從命令列加入參考。  
   
-2.  如果是使用 C# 的命令列，請使用以下程式碼：  
+2. 如果是使用 C# 的命令列，請使用以下程式碼：  
   
     ```  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-3.  如果是使用 Visual Basic 的命令列，請使用以下程式碼：  
+3. 如果是使用 Visual Basic 的命令列，請使用以下程式碼：  
   
     ```  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
@@ -162,7 +162,7 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 ### <a name="to-use-the-compiled-assembly-in-your-code"></a>在程式碼中使用編譯的組件  
   
-1.  下列範例將示範如何使用編譯的樣式表執行 XSLT 轉換。  
+1. 下列範例將示範如何使用編譯的樣式表執行 XSLT 轉換。  
   
  [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
  [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  

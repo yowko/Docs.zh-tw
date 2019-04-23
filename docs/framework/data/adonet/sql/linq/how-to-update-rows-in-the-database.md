@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: a2b5c90f-6cc3-4128-bfab-1db488d5af26
 ms.openlocfilehash: e40866c5160d6850b39133050d09026f5ffd6cc5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344168"
 ---
 # <a name="how-to-update-rows-in-the-database"></a>HOW TO：更新資料庫中的資料列
@@ -38,6 +38,6 @@ ms.locfileid: "59344168"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
-- [HOW TO：指派用來執行更新、插入和刪除的預存程序 (O/R 設計工具)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
-- [變更資料和提交](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [如何：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [如何：指派用來執行更新、插入和刪除的預存程序 (O/R 設計工具)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
+- [變更和提交資料](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

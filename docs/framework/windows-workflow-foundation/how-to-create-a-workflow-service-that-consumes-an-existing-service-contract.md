@@ -3,14 +3,14 @@ title: HOW TO：建立會取用現有服務合約的工作流程服務
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
 ms.openlocfilehash: c2ca9c349718c3939d74d052ff0ed448879cd045
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344711"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>HOW TO：建立會取用現有服務合約的工作流程服務
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 功能更佳的 web 服務與合約優先工作流程開發形式中的工作流程之間的整合。 合約優先工作流程開發工具可讓您在 Code First 中設計合約。 此工具會自動在合約中的作業工具箱內產生活動範本。  
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 採用合約優先工作流程開發形式，可在 Web 服務和工作流程中提供更好的整合。 合約優先工作流程開發工具可讓您在 Code First 中設計合約。 此工具會自動在合約中的作業工具箱內產生活動範本。  
   
 > [!NOTE]
 >  本主題提供建立合約優先工作流程服務的逐步指示。 如需合約優先工作流程服務開發的詳細資訊，請參閱[合約優先工作流程服務開發](contract-first-workflow-service-development.md)。  

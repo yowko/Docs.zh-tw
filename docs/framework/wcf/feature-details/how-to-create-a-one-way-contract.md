@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
 ms.openlocfilehash: cc777da65ce1c0d425404b1cc8d47e8189684a7f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337002"
 ---
 # <a name="how-to-create-a-one-way-contract"></a>HOW TO：建立單向合約
@@ -36,6 +36,6 @@ ms.locfileid: "59337002"
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - [設計與實作服務](../../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [HOW TO：定義服務合約](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [如何：定義服務合約](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
 - [工作階段](../../../../docs/framework/wcf/samples/session.md)
-- [HOW TO：建立雙面合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [如何：建立雙工合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
