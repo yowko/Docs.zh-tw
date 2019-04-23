@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e0957228489df30833790e59da1ca597fc1f92f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076503"
 ---
-# <a name="icorprofilerinfo3getstringlayout2-method"></a><span data-ttu-id="d80c3-102">ICorProfilerInfo3::GetStringLayout2 方法</span><span class="sxs-lookup"><span data-stu-id="d80c3-102">ICorProfilerInfo3::GetStringLayout2 Method</span></span>
-<span data-ttu-id="d80c3-103">取得字串物件配置的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="d80c3-103">Gets information about the layout of a string object.</span></span> <span data-ttu-id="d80c3-104">這個方法會取代[ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="d80c3-104">This method supersedes the [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) method.</span></span>  
+# <a name="icorprofilerinfo3getstringlayout2-method"></a><span data-ttu-id="476b1-102">ICorProfilerInfo3::GetStringLayout2 方法</span><span class="sxs-lookup"><span data-stu-id="476b1-102">ICorProfilerInfo3::GetStringLayout2 Method</span></span>
+<span data-ttu-id="476b1-103">取得字串物件配置的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="476b1-103">Gets information about the layout of a string object.</span></span> <span data-ttu-id="476b1-104">這個方法會取代[ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="476b1-104">This method supersedes the [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d80c3-105">語法</span><span class="sxs-lookup"><span data-stu-id="d80c3-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="476b1-105">語法</span><span class="sxs-lookup"><span data-stu-id="476b1-105">Syntax</span></span>  
   
 ```  
 HRESULT GetStringLayout2(  
@@ -35,26 +35,26 @@ HRESULT GetStringLayout2(
     [out] ULONG *pBufferOffset);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d80c3-106">參數</span><span class="sxs-lookup"><span data-stu-id="d80c3-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="476b1-106">參數</span><span class="sxs-lookup"><span data-stu-id="476b1-106">Parameters</span></span>  
  `pStringLengthOffset`  
- <span data-ttu-id="d80c3-107">[out]指標位移的位置，相對於`ObjectID`儲存的字串本身長度的指標。</span><span class="sxs-lookup"><span data-stu-id="d80c3-107">[out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself.</span></span> <span data-ttu-id="d80c3-108">長度會儲存為`DWORD`。</span><span class="sxs-lookup"><span data-stu-id="d80c3-108">The length is stored as a `DWORD`.</span></span>  
+ <span data-ttu-id="476b1-107">[out]指標位移的位置，相對於`ObjectID`儲存的字串本身長度的指標。</span><span class="sxs-lookup"><span data-stu-id="476b1-107">[out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself.</span></span> <span data-ttu-id="476b1-108">長度會儲存為`DWORD`。</span><span class="sxs-lookup"><span data-stu-id="476b1-108">The length is stored as a `DWORD`.</span></span>  
   
  `pBufferOffset`  
- <span data-ttu-id="d80c3-109">[out]相對於的緩衝區位移的指標`ObjectID`指標，其中儲存的寬字元字串。</span><span class="sxs-lookup"><span data-stu-id="d80c3-109">[out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, which stores the string of wide characters.</span></span>  
+ <span data-ttu-id="476b1-109">[out]相對於的緩衝區位移的指標`ObjectID`指標，其中儲存的寬字元字串。</span><span class="sxs-lookup"><span data-stu-id="476b1-109">[out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, which stores the string of wide characters.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d80c3-110">備註</span><span class="sxs-lookup"><span data-stu-id="d80c3-110">Remarks</span></span>  
- <span data-ttu-id="d80c3-111">字串可能會或可能不是以 null 結尾。</span><span class="sxs-lookup"><span data-stu-id="d80c3-111">Strings may or may not be null-terminated.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="476b1-110">備註</span><span class="sxs-lookup"><span data-stu-id="476b1-110">Remarks</span></span>  
+ <span data-ttu-id="476b1-111">字串可能會或可能不是以 null 結尾。</span><span class="sxs-lookup"><span data-stu-id="476b1-111">Strings may or may not be null-terminated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d80c3-112">需求</span><span class="sxs-lookup"><span data-stu-id="d80c3-112">Requirements</span></span>  
- <span data-ttu-id="d80c3-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d80c3-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="476b1-112">需求</span><span class="sxs-lookup"><span data-stu-id="476b1-112">Requirements</span></span>  
+ <span data-ttu-id="476b1-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="476b1-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d80c3-114">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d80c3-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="476b1-114">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="476b1-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d80c3-115">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d80c3-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="476b1-115">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="476b1-115">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="d80c3-116">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="d80c3-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ <span data-ttu-id="476b1-116">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="476b1-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d80c3-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d80c3-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="476b1-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="476b1-117">See also</span></span>
 
-- [<span data-ttu-id="d80c3-118">ICorProfilerInfo3 介面</span><span class="sxs-lookup"><span data-stu-id="d80c3-118">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="d80c3-119">分析介面</span><span class="sxs-lookup"><span data-stu-id="d80c3-119">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="476b1-118">ICorProfilerInfo3 介面</span><span class="sxs-lookup"><span data-stu-id="476b1-118">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="476b1-119">分析介面</span><span class="sxs-lookup"><span data-stu-id="476b1-119">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

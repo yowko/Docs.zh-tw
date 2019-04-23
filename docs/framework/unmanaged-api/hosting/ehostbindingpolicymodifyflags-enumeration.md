@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0e8357d20edba993f5a7682f31c04afea4362afd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080211"
 ---
-# <a name="ehostbindingpolicymodifyflags-enumeration"></a><span data-ttu-id="3c36a-102">EHostBindingPolicyModifyFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="3c36a-102">EHostBindingPolicyModifyFlags Enumeration</span></span>
-<span data-ttu-id="3c36a-103">可讓主應用程式指定的重新導向套用原則的修改從來源組件的目標組件時，應該執行 common language runtime (CLR) 型別。</span><span class="sxs-lookup"><span data-stu-id="3c36a-103">Allows the host to specify the type of redirection the common language runtime (CLR) should perform when applying policy modifications from a source assembly to a target assembly.</span></span>  
+# <a name="ehostbindingpolicymodifyflags-enumeration"></a><span data-ttu-id="3c37d-102">EHostBindingPolicyModifyFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="3c37d-102">EHostBindingPolicyModifyFlags Enumeration</span></span>
+<span data-ttu-id="3c37d-103">可讓主應用程式指定的重新導向套用原則的修改從來源組件的目標組件時，應該執行 common language runtime (CLR) 型別。</span><span class="sxs-lookup"><span data-stu-id="3c37d-103">Allows the host to specify the type of redirection the common language runtime (CLR) should perform when applying policy modifications from a source assembly to a target assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3c36a-104">語法</span><span class="sxs-lookup"><span data-stu-id="3c36a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3c37d-104">語法</span><span class="sxs-lookup"><span data-stu-id="3c37d-104">Syntax</span></span>  
   
 ```  
 typedef enum _hostBindingPolicyModifyFlags {  
@@ -37,28 +37,28 @@ typedef enum _hostBindingPolicyModifyFlags {
 } EHostBindingPolicyModifyFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="3c36a-105">成員</span><span class="sxs-lookup"><span data-stu-id="3c36a-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="3c37d-105">成員</span><span class="sxs-lookup"><span data-stu-id="3c37d-105">Members</span></span>  
   
-|<span data-ttu-id="3c36a-106">成員</span><span class="sxs-lookup"><span data-stu-id="3c36a-106">Member</span></span>|<span data-ttu-id="3c36a-107">描述</span><span class="sxs-lookup"><span data-stu-id="3c36a-107">Description</span></span>|  
+|<span data-ttu-id="3c37d-106">成員</span><span class="sxs-lookup"><span data-stu-id="3c37d-106">Member</span></span>|<span data-ttu-id="3c37d-107">描述</span><span class="sxs-lookup"><span data-stu-id="3c37d-107">Description</span></span>|  
 |------------|-----------------|  
-|`HOST_BINDING_POLICY_MODIFY_CHAIN`|<span data-ttu-id="3c36a-108">指定 CLR 會鏈結至目標組件的來源組件的原則值。</span><span class="sxs-lookup"><span data-stu-id="3c36a-108">Specifies that the CLR will chain policy values of the source assembly onto those of the target assembly.</span></span>|  
-|`HOST_BINDING_POLICY_MODIFY_DEFAULT`|<span data-ttu-id="3c36a-109">指定 CLR 會執行預設動作。</span><span class="sxs-lookup"><span data-stu-id="3c36a-109">Specifies that the CLR will perform the default action.</span></span>|  
-|`HOST_BINDING_POLICY_MODIFY_MAX`|<span data-ttu-id="3c36a-110">指定 CLR 會設定此原則的值之目標組件的最大值。</span><span class="sxs-lookup"><span data-stu-id="3c36a-110">Specifies that the CLR will set the policy values of the target assembly to the maximum values.</span></span>|  
-|`HOST_BINDING_POLICY_MODIFY_REMOVE`|<span data-ttu-id="3c36a-111">指定 CLR 將會取代之目標組件的原則值，與來源組件。</span><span class="sxs-lookup"><span data-stu-id="3c36a-111">Specifies that the CLR will replace policy values of the target assembly with those of the source assembly.</span></span>|  
+|`HOST_BINDING_POLICY_MODIFY_CHAIN`|<span data-ttu-id="3c37d-108">指定 CLR 會鏈結至目標組件的來源組件的原則值。</span><span class="sxs-lookup"><span data-stu-id="3c37d-108">Specifies that the CLR will chain policy values of the source assembly onto those of the target assembly.</span></span>|  
+|`HOST_BINDING_POLICY_MODIFY_DEFAULT`|<span data-ttu-id="3c37d-109">指定 CLR 會執行預設動作。</span><span class="sxs-lookup"><span data-stu-id="3c37d-109">Specifies that the CLR will perform the default action.</span></span>|  
+|`HOST_BINDING_POLICY_MODIFY_MAX`|<span data-ttu-id="3c37d-110">指定 CLR 會設定此原則的值之目標組件的最大值。</span><span class="sxs-lookup"><span data-stu-id="3c37d-110">Specifies that the CLR will set the policy values of the target assembly to the maximum values.</span></span>|  
+|`HOST_BINDING_POLICY_MODIFY_REMOVE`|<span data-ttu-id="3c37d-111">指定 CLR 將會取代之目標組件的原則值，與來源組件。</span><span class="sxs-lookup"><span data-stu-id="3c37d-111">Specifies that the CLR will replace policy values of the target assembly with those of the source assembly.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3c36a-112">備註</span><span class="sxs-lookup"><span data-stu-id="3c36a-112">Remarks</span></span>  
- <span data-ttu-id="3c36a-113">[Iclrhostbindingpolicymanager:: Modifyapplicationpolicy](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md)方法會採用類型參數的`EHostBindingPolicyModifyFlags`。</span><span class="sxs-lookup"><span data-stu-id="3c36a-113">The [ICLRHostBindingPolicyManager::ModifyApplicationPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md) method takes a parameter of type `EHostBindingPolicyModifyFlags`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3c37d-112">備註</span><span class="sxs-lookup"><span data-stu-id="3c37d-112">Remarks</span></span>  
+ <span data-ttu-id="3c37d-113">[Iclrhostbindingpolicymanager:: Modifyapplicationpolicy](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md)方法會採用類型參數的`EHostBindingPolicyModifyFlags`。</span><span class="sxs-lookup"><span data-stu-id="3c37d-113">The [ICLRHostBindingPolicyManager::ModifyApplicationPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md) method takes a parameter of type `EHostBindingPolicyModifyFlags`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3c36a-114">需求</span><span class="sxs-lookup"><span data-stu-id="3c36a-114">Requirements</span></span>  
- <span data-ttu-id="3c36a-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3c36a-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3c37d-114">需求</span><span class="sxs-lookup"><span data-stu-id="3c37d-114">Requirements</span></span>  
+ <span data-ttu-id="3c37d-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3c37d-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3c36a-116">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3c36a-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="3c37d-116">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3c37d-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="3c36a-117">**LIBRARY:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3c36a-117">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="3c37d-117">**LIBRARY:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3c37d-117">**Library:** MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="3c36a-118">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="3c36a-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="3c37d-118">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3c37d-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3c36a-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3c36a-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3c37d-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3c37d-119">See also</span></span>
 
-- [<span data-ttu-id="3c36a-120">ICLRHostBindingPolicyManager 介面</span><span class="sxs-lookup"><span data-stu-id="3c36a-120">ICLRHostBindingPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
-- [<span data-ttu-id="3c36a-121">裝載列舉</span><span class="sxs-lookup"><span data-stu-id="3c36a-121">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="3c37d-120">ICLRHostBindingPolicyManager 介面</span><span class="sxs-lookup"><span data-stu-id="3c37d-120">ICLRHostBindingPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
+- [<span data-ttu-id="3c37d-121">裝載列舉</span><span class="sxs-lookup"><span data-stu-id="3c37d-121">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

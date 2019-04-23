@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d22e61d28e0fbf06fa1cfe9e9ac18a534726f01d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076451"
 ---
-# <a name="imetadatatablesgetblobheapsize-method"></a><span data-ttu-id="2cae9-102">IMetaDataTables::GetBlobHeapSize 方法</span><span class="sxs-lookup"><span data-stu-id="2cae9-102">IMetaDataTables::GetBlobHeapSize Method</span></span>
-<span data-ttu-id="2cae9-103">取得大小，以位元組為單位的二進位大型物件 (BLOB) 堆積。</span><span class="sxs-lookup"><span data-stu-id="2cae9-103">Gets the size, in bytes, of the binary large object (BLOB) heap.</span></span>  
+# <a name="imetadatatablesgetblobheapsize-method"></a><span data-ttu-id="de240-102">IMetaDataTables::GetBlobHeapSize 方法</span><span class="sxs-lookup"><span data-stu-id="de240-102">IMetaDataTables::GetBlobHeapSize Method</span></span>
+<span data-ttu-id="de240-103">取得大小，以位元組為單位的二進位大型物件 (BLOB) 堆積。</span><span class="sxs-lookup"><span data-stu-id="de240-103">Gets the size, in bytes, of the binary large object (BLOB) heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2cae9-104">語法</span><span class="sxs-lookup"><span data-stu-id="2cae9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="de240-104">語法</span><span class="sxs-lookup"><span data-stu-id="de240-104">Syntax</span></span>  
   
 ```  
 HRESULT GetBlobHeapSize (  
@@ -35,20 +35,20 @@ HRESULT GetBlobHeapSize (
 );   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2cae9-105">參數</span><span class="sxs-lookup"><span data-stu-id="2cae9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="de240-105">參數</span><span class="sxs-lookup"><span data-stu-id="de240-105">Parameters</span></span>  
  `pcbBlobs`  
- <span data-ttu-id="2cae9-106">[out]大小 （位元組），對 BLOB 堆積的指標。</span><span class="sxs-lookup"><span data-stu-id="2cae9-106">[out] A pointer to the size, in bytes, of the BLOB heap.</span></span>  
+ <span data-ttu-id="de240-106">[out]大小 （位元組），對 BLOB 堆積的指標。</span><span class="sxs-lookup"><span data-stu-id="de240-106">[out] A pointer to the size, in bytes, of the BLOB heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2cae9-107">需求</span><span class="sxs-lookup"><span data-stu-id="2cae9-107">Requirements</span></span>  
- <span data-ttu-id="2cae9-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2cae9-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="de240-107">需求</span><span class="sxs-lookup"><span data-stu-id="de240-107">Requirements</span></span>  
+ <span data-ttu-id="de240-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="de240-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2cae9-109">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="2cae9-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="de240-109">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="de240-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="2cae9-110">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="2cae9-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="de240-110">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="de240-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="2cae9-111">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="2cae9-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="de240-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="de240-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2cae9-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2cae9-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="de240-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="de240-112">See also</span></span>
 
-- [<span data-ttu-id="2cae9-113">IMetaDataTables 介面</span><span class="sxs-lookup"><span data-stu-id="2cae9-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="2cae9-114">IMetaDataTables2 介面</span><span class="sxs-lookup"><span data-stu-id="2cae9-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="de240-113">IMetaDataTables 介面</span><span class="sxs-lookup"><span data-stu-id="de240-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="de240-114">IMetaDataTables2 介面</span><span class="sxs-lookup"><span data-stu-id="de240-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

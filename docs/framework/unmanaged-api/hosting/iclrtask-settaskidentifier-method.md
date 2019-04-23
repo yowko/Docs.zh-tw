@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: abd8848ed54b26b66090e4865f9c3a0e5c4d20db
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078313"
 ---
-# <a name="iclrtasksettaskidentifier-method"></a><span data-ttu-id="a0b16-102">ICLRTask::SetTaskIdentifier 方法</span><span class="sxs-lookup"><span data-stu-id="a0b16-102">ICLRTask::SetTaskIdentifier Method</span></span>
-<span data-ttu-id="a0b16-103">指示 common language runtime (CLR)，表示由目前的工作相關聯的指定之識別碼值[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)執行個體。</span><span class="sxs-lookup"><span data-stu-id="a0b16-103">Instructs the common language runtime (CLR) to associate the specified identifier value with the task represented by the current [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance.</span></span>  
+# <a name="iclrtasksettaskidentifier-method"></a><span data-ttu-id="607ad-102">ICLRTask::SetTaskIdentifier 方法</span><span class="sxs-lookup"><span data-stu-id="607ad-102">ICLRTask::SetTaskIdentifier Method</span></span>
+<span data-ttu-id="607ad-103">指示 common language runtime (CLR)，表示由目前的工作相關聯的指定之識別碼值[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)執行個體。</span><span class="sxs-lookup"><span data-stu-id="607ad-103">Instructs the common language runtime (CLR) to associate the specified identifier value with the task represented by the current [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a0b16-104">語法</span><span class="sxs-lookup"><span data-stu-id="a0b16-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="607ad-104">語法</span><span class="sxs-lookup"><span data-stu-id="607ad-104">Syntax</span></span>  
   
 ```  
 HRESULT SetTaskIdentifier (  
@@ -35,36 +35,36 @@ HRESULT SetTaskIdentifier (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a0b16-105">參數</span><span class="sxs-lookup"><span data-stu-id="a0b16-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="607ad-105">參數</span><span class="sxs-lookup"><span data-stu-id="607ad-105">Parameters</span></span>  
  `Asked`  
- <span data-ttu-id="a0b16-106">[in]通用語言執行平台，表示由目前的工作相關聯的唯一識別碼`ICLRTask`執行個體。</span><span class="sxs-lookup"><span data-stu-id="a0b16-106">[in] The unique identifier for the common language runtime to associate with the task represented by the current `ICLRTask` instance.</span></span>  
+ <span data-ttu-id="607ad-106">[in]通用語言執行平台，表示由目前的工作相關聯的唯一識別碼`ICLRTask`執行個體。</span><span class="sxs-lookup"><span data-stu-id="607ad-106">[in] The unique identifier for the common language runtime to associate with the task represented by the current `ICLRTask` instance.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a0b16-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="a0b16-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="607ad-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="607ad-107">Return Value</span></span>  
   
-|<span data-ttu-id="a0b16-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a0b16-108">HRESULT</span></span>|<span data-ttu-id="a0b16-109">描述</span><span class="sxs-lookup"><span data-stu-id="a0b16-109">Description</span></span>|  
+|<span data-ttu-id="607ad-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="607ad-108">HRESULT</span></span>|<span data-ttu-id="607ad-109">描述</span><span class="sxs-lookup"><span data-stu-id="607ad-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="a0b16-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="a0b16-110">S_OK</span></span>|`SetTaskIdentifier` <span data-ttu-id="a0b16-111">已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="a0b16-111">returned successfully.</span></span>|  
-|<span data-ttu-id="a0b16-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="a0b16-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="a0b16-113">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="a0b16-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="a0b16-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="a0b16-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="a0b16-115">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="a0b16-115">The call timed out.</span></span>|  
-|<span data-ttu-id="a0b16-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="a0b16-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="a0b16-117">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="a0b16-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="a0b16-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="a0b16-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="a0b16-119">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="a0b16-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="a0b16-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="a0b16-120">E_FAIL</span></span>|<span data-ttu-id="a0b16-121">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="a0b16-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="a0b16-122">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="a0b16-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="a0b16-123">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="a0b16-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="607ad-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="607ad-110">S_OK</span></span>|<span data-ttu-id="607ad-111">`SetTaskIdentifier` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="607ad-111">`SetTaskIdentifier` returned successfully.</span></span>|  
+|<span data-ttu-id="607ad-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="607ad-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="607ad-113">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="607ad-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="607ad-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="607ad-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="607ad-115">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="607ad-115">The call timed out.</span></span>|  
+|<span data-ttu-id="607ad-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="607ad-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="607ad-117">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="607ad-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="607ad-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="607ad-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="607ad-119">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="607ad-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="607ad-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="607ad-120">E_FAIL</span></span>|<span data-ttu-id="607ad-121">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="607ad-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="607ad-122">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="607ad-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="607ad-123">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="607ad-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a0b16-124">備註</span><span class="sxs-lookup"><span data-stu-id="a0b16-124">Remarks</span></span>  
- <span data-ttu-id="a0b16-125">主應用程式可以將識別項關聯的工作，可協助整合 CLR 和偵錯環境中的主機。</span><span class="sxs-lookup"><span data-stu-id="a0b16-125">The host can associate an identifier with a task to help integrate the CLR and the host in a debugging environment.</span></span> <span data-ttu-id="a0b16-126">表示識別項具有對 CLR 而言沒有意義。</span><span class="sxs-lookup"><span data-stu-id="a0b16-126">The identifier has no meaning for the CLR.</span></span> <span data-ttu-id="a0b16-127">CLR 會將它傳遞給偵錯工具應用程式。</span><span class="sxs-lookup"><span data-stu-id="a0b16-127">The CLR passes it along to a debugger application.</span></span> <span data-ttu-id="a0b16-128">偵錯工具可以使用這個識別碼與主應用程式呼叫堆疊、 建立關聯 CLR 呼叫堆疊，並啟用其各自的追蹤資訊，以在偵錯工具的使用者介面中檢視時進行整合。</span><span class="sxs-lookup"><span data-stu-id="a0b16-128">The debugger can use this identifier to associate a CLR call stack with a host call stack, and enable their respective trace information to be unified when viewed in the debugger's user interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="607ad-124">備註</span><span class="sxs-lookup"><span data-stu-id="607ad-124">Remarks</span></span>  
+ <span data-ttu-id="607ad-125">主應用程式可以將識別項關聯的工作，可協助整合 CLR 和偵錯環境中的主機。</span><span class="sxs-lookup"><span data-stu-id="607ad-125">The host can associate an identifier with a task to help integrate the CLR and the host in a debugging environment.</span></span> <span data-ttu-id="607ad-126">表示識別項具有對 CLR 而言沒有意義。</span><span class="sxs-lookup"><span data-stu-id="607ad-126">The identifier has no meaning for the CLR.</span></span> <span data-ttu-id="607ad-127">CLR 會將它傳遞給偵錯工具應用程式。</span><span class="sxs-lookup"><span data-stu-id="607ad-127">The CLR passes it along to a debugger application.</span></span> <span data-ttu-id="607ad-128">偵錯工具可以使用這個識別碼與主應用程式呼叫堆疊、 建立關聯 CLR 呼叫堆疊，並啟用其各自的追蹤資訊，以在偵錯工具的使用者介面中檢視時進行整合。</span><span class="sxs-lookup"><span data-stu-id="607ad-128">The debugger can use this identifier to associate a CLR call stack with a host call stack, and enable their respective trace information to be unified when viewed in the debugger's user interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a0b16-129">需求</span><span class="sxs-lookup"><span data-stu-id="a0b16-129">Requirements</span></span>  
- <span data-ttu-id="a0b16-130">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a0b16-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="607ad-129">需求</span><span class="sxs-lookup"><span data-stu-id="607ad-129">Requirements</span></span>  
+ <span data-ttu-id="607ad-130">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="607ad-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a0b16-131">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a0b16-131">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="607ad-131">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="607ad-131">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="a0b16-132">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="a0b16-132">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="607ad-132">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="607ad-132">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="a0b16-133">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="a0b16-133">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="607ad-133">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="607ad-133">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a0b16-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a0b16-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="607ad-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="607ad-134">See also</span></span>
 
-- [<span data-ttu-id="a0b16-135">ICLRTask 介面</span><span class="sxs-lookup"><span data-stu-id="a0b16-135">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="a0b16-136">ICLRTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="a0b16-136">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="a0b16-137">IHostTask 介面</span><span class="sxs-lookup"><span data-stu-id="a0b16-137">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="a0b16-138">IHostTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="a0b16-138">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="607ad-135">ICLRTask 介面</span><span class="sxs-lookup"><span data-stu-id="607ad-135">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="607ad-136">ICLRTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="607ad-136">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="607ad-137">IHostTask 介面</span><span class="sxs-lookup"><span data-stu-id="607ad-137">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="607ad-138">IHostTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="607ad-138">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

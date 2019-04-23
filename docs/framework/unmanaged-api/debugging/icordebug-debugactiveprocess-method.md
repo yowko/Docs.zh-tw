@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b880358ed0d7bce4896217bc07c6ef6268d62962
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076272"
 ---
-# <a name="icordebugdebugactiveprocess-method"></a><span data-ttu-id="97ac6-102">ICorDebug::DebugActiveProcess 方法</span><span class="sxs-lookup"><span data-stu-id="97ac6-102">ICorDebug::DebugActiveProcess Method</span></span>
-<span data-ttu-id="97ac6-103">將偵錯工具附加至現有的處理序。</span><span class="sxs-lookup"><span data-stu-id="97ac6-103">Attaches the debugger to an existing process.</span></span>  
+# <a name="icordebugdebugactiveprocess-method"></a><span data-ttu-id="3bbe3-102">ICorDebug::DebugActiveProcess 方法</span><span class="sxs-lookup"><span data-stu-id="3bbe3-102">ICorDebug::DebugActiveProcess Method</span></span>
+<span data-ttu-id="3bbe3-103">將偵錯工具附加至現有的處理序。</span><span class="sxs-lookup"><span data-stu-id="3bbe3-103">Attaches the debugger to an existing process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="97ac6-104">語法</span><span class="sxs-lookup"><span data-stu-id="97ac6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3bbe3-104">語法</span><span class="sxs-lookup"><span data-stu-id="3bbe3-104">Syntax</span></span>  
   
 ```  
 HRESULT DebugActiveProcess (  
@@ -37,28 +37,28 @@ HRESULT DebugActiveProcess (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="97ac6-105">參數</span><span class="sxs-lookup"><span data-stu-id="97ac6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3bbe3-105">參數</span><span class="sxs-lookup"><span data-stu-id="3bbe3-105">Parameters</span></span>  
  `id`  
- <span data-ttu-id="97ac6-106">[in]偵錯工具後要附加到處理序的識別碼。</span><span class="sxs-lookup"><span data-stu-id="97ac6-106">[in] The ID of the process to which the debugger is to be attached.</span></span>  
+ <span data-ttu-id="3bbe3-106">[in]偵錯工具後要附加到處理序的識別碼。</span><span class="sxs-lookup"><span data-stu-id="3bbe3-106">[in] The ID of the process to which the debugger is to be attached.</span></span>  
   
  `win32Attach`  
- <span data-ttu-id="97ac6-107">[in]布林值，設為`true`如果偵錯工具應該做為處理序的 Win32 偵錯工具，並分派 unmanaged 的回呼中; 否則`false`。</span><span class="sxs-lookup"><span data-stu-id="97ac6-107">[in] Boolean value that is set to `true` if the debugger should behave as the Win32 debugger for the process and dispatch the unmanaged callbacks; otherwise, `false`.</span></span>  
+ <span data-ttu-id="3bbe3-107">[in]布林值，設為`true`如果偵錯工具應該做為處理序的 Win32 偵錯工具，並分派 unmanaged 的回呼中; 否則`false`。</span><span class="sxs-lookup"><span data-stu-id="3bbe3-107">[in] Boolean value that is set to `true` if the debugger should behave as the Win32 debugger for the process and dispatch the unmanaged callbacks; otherwise, `false`.</span></span>  
   
  `ppProcess`  
- <span data-ttu-id="97ac6-108">[out]表示要附加偵錯工具的程序的"ICorDebugProcess 」 物件的位址指標。</span><span class="sxs-lookup"><span data-stu-id="97ac6-108">[out] A pointer to the address of an "ICorDebugProcess" object that represents the process to which the debugger has been attached.</span></span>  
+ <span data-ttu-id="3bbe3-108">[out]表示要附加偵錯工具的程序的"ICorDebugProcess 」 物件的位址指標。</span><span class="sxs-lookup"><span data-stu-id="3bbe3-108">[out] A pointer to the address of an "ICorDebugProcess" object that represents the process to which the debugger has been attached.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="97ac6-109">備註</span><span class="sxs-lookup"><span data-stu-id="97ac6-109">Remarks</span></span>  
- <span data-ttu-id="97ac6-110">不支援 Win9x 和非 x86 平台上，例如 IA-64 架構和 amd64 平台的 interop 偵錯。</span><span class="sxs-lookup"><span data-stu-id="97ac6-110">Interop debugging is not supported on Win9x and non-x86 platforms, such as IA-64-based and AMD64-based platforms.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3bbe3-109">備註</span><span class="sxs-lookup"><span data-stu-id="3bbe3-109">Remarks</span></span>  
+ <span data-ttu-id="3bbe3-110">不支援 Win9x 和非 x86 平台上，例如 IA-64 架構和 amd64 平台的 interop 偵錯。</span><span class="sxs-lookup"><span data-stu-id="3bbe3-110">Interop debugging is not supported on Win9x and non-x86 platforms, such as IA-64-based and AMD64-based platforms.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="97ac6-111">需求</span><span class="sxs-lookup"><span data-stu-id="97ac6-111">Requirements</span></span>  
- <span data-ttu-id="97ac6-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="97ac6-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3bbe3-111">需求</span><span class="sxs-lookup"><span data-stu-id="3bbe3-111">Requirements</span></span>  
+ <span data-ttu-id="3bbe3-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3bbe3-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="97ac6-113">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="97ac6-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3bbe3-113">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3bbe3-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="97ac6-114">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="97ac6-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3bbe3-114">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3bbe3-114">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="97ac6-115">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="97ac6-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="3bbe3-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3bbe3-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="97ac6-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="97ac6-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3bbe3-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3bbe3-116">See also</span></span>
 
-- [<span data-ttu-id="97ac6-117">ICorDebug 介面</span><span class="sxs-lookup"><span data-stu-id="97ac6-117">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="3bbe3-117">ICorDebug 介面</span><span class="sxs-lookup"><span data-stu-id="3bbe3-117">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

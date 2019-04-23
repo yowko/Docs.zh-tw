@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6e851c1bd56c0e9ece02fb06c0dcd9975a5b02ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079431"
 ---
-# <a name="linkresource-method"></a><span data-ttu-id="5f80a-102">LinkResource 方法</span><span class="sxs-lookup"><span data-stu-id="5f80a-102">LinkResource Method</span></span>
-<span data-ttu-id="5f80a-103">在資源中的連結。</span><span class="sxs-lookup"><span data-stu-id="5f80a-103">Links in a resource.</span></span>  
+# <a name="linkresource-method"></a><span data-ttu-id="c1865-102">LinkResource 方法</span><span class="sxs-lookup"><span data-stu-id="c1865-102">LinkResource Method</span></span>
+<span data-ttu-id="c1865-103">在資源中的連結。</span><span class="sxs-lookup"><span data-stu-id="c1865-103">Links in a resource.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5f80a-104">語法</span><span class="sxs-lookup"><span data-stu-id="5f80a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c1865-104">語法</span><span class="sxs-lookup"><span data-stu-id="c1865-104">Syntax</span></span>  
   
 ```  
 HRESULT LinkResource(  
@@ -38,30 +38,30 @@ HRESULT LinkResource(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5f80a-105">參數</span><span class="sxs-lookup"><span data-stu-id="5f80a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c1865-105">參數</span><span class="sxs-lookup"><span data-stu-id="c1865-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="5f80a-106">組件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="5f80a-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="c1865-106">組件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="c1865-106">ID of the assembly.</span></span>  
   
  `pszFileName`  
- <span data-ttu-id="5f80a-107">檔案的名稱。</span><span class="sxs-lookup"><span data-stu-id="5f80a-107">Name of the file.</span></span>  
+ <span data-ttu-id="c1865-107">檔案的名稱。</span><span class="sxs-lookup"><span data-stu-id="c1865-107">Name of the file.</span></span>  
   
  `pszNewLocation`  
- <span data-ttu-id="5f80a-108">選擇性的新檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="5f80a-108">Optional new file name.</span></span> <span data-ttu-id="5f80a-109">如果不是 NULL，`pszFileName`會複製到 pszNewLocation。</span><span class="sxs-lookup"><span data-stu-id="5f80a-109">If non-NULL, `pszFileName` will be copied to pszNewLocation.</span></span>  
+ <span data-ttu-id="c1865-108">選擇性的新檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="c1865-108">Optional new file name.</span></span> <span data-ttu-id="c1865-109">如果不是 NULL，`pszFileName`會複製到 pszNewLocation。</span><span class="sxs-lookup"><span data-stu-id="c1865-109">If non-NULL, `pszFileName` will be copied to pszNewLocation.</span></span>  
   
  `pszResourceName`  
- <span data-ttu-id="5f80a-110">資源的名稱。</span><span class="sxs-lookup"><span data-stu-id="5f80a-110">Name of the resource.</span></span>  
+ <span data-ttu-id="c1865-110">資源的名稱。</span><span class="sxs-lookup"><span data-stu-id="c1865-110">Name of the resource.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="5f80a-111">協助工具加上旗標這類`mrPublic`和`mrPrivate`。</span><span class="sxs-lookup"><span data-stu-id="5f80a-111">Accessibility flags such as `mrPublic` and `mrPrivate`.</span></span> <span data-ttu-id="5f80a-112">這個參數可能會傳遞給[DefineManifestResource 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md)。</span><span class="sxs-lookup"><span data-stu-id="5f80a-112">This parameter may be passed to [DefineManifestResource Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md).</span></span>  
+ <span data-ttu-id="c1865-111">協助工具加上旗標這類`mrPublic`和`mrPrivate`。</span><span class="sxs-lookup"><span data-stu-id="c1865-111">Accessibility flags such as `mrPublic` and `mrPrivate`.</span></span> <span data-ttu-id="c1865-112">這個參數可能會傳遞給[DefineManifestResource 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md)。</span><span class="sxs-lookup"><span data-stu-id="c1865-112">This parameter may be passed to [DefineManifestResource Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5f80a-113">傳回值</span><span class="sxs-lookup"><span data-stu-id="5f80a-113">Return Value</span></span>  
- <span data-ttu-id="5f80a-114">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="5f80a-114">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c1865-113">傳回值</span><span class="sxs-lookup"><span data-stu-id="c1865-113">Return Value</span></span>  
+ <span data-ttu-id="c1865-114">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="c1865-114">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5f80a-115">需求</span><span class="sxs-lookup"><span data-stu-id="5f80a-115">Requirements</span></span>  
- <span data-ttu-id="5f80a-116">需要 alink.h。</span><span class="sxs-lookup"><span data-stu-id="5f80a-116">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c1865-115">需求</span><span class="sxs-lookup"><span data-stu-id="c1865-115">Requirements</span></span>  
+ <span data-ttu-id="c1865-116">需要 alink.h。</span><span class="sxs-lookup"><span data-stu-id="c1865-116">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5f80a-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5f80a-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c1865-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c1865-117">See also</span></span>
 
-- [<span data-ttu-id="5f80a-118">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="5f80a-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="5f80a-119">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="5f80a-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="5f80a-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="5f80a-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="c1865-118">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="c1865-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="c1865-119">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="c1865-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="c1865-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="c1865-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

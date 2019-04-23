@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9687f6139d67a2387091367c2c72167e03be4eee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080653"
 ---
-# <a name="iclrdatatargetgetcurrentthreadid-method"></a><span data-ttu-id="92df7-102">ICLRDataTarget::GetCurrentThreadID 方法</span><span class="sxs-lookup"><span data-stu-id="92df7-102">ICLRDataTarget::GetCurrentThreadID Method</span></span>
-<span data-ttu-id="92df7-103">取得目前執行緒的作業系統識別項。</span><span class="sxs-lookup"><span data-stu-id="92df7-103">Gets the operating system identifier for the current thread.</span></span>  
+# <a name="iclrdatatargetgetcurrentthreadid-method"></a><span data-ttu-id="79e00-102">ICLRDataTarget::GetCurrentThreadID 方法</span><span class="sxs-lookup"><span data-stu-id="79e00-102">ICLRDataTarget::GetCurrentThreadID Method</span></span>
+<span data-ttu-id="79e00-103">取得目前執行緒的作業系統識別項。</span><span class="sxs-lookup"><span data-stu-id="79e00-103">Gets the operating system identifier for the current thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="92df7-104">語法</span><span class="sxs-lookup"><span data-stu-id="92df7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="79e00-104">語法</span><span class="sxs-lookup"><span data-stu-id="79e00-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentThreadID (  
@@ -35,22 +35,22 @@ HRESULT GetCurrentThreadID (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="92df7-105">參數</span><span class="sxs-lookup"><span data-stu-id="92df7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="79e00-105">參數</span><span class="sxs-lookup"><span data-stu-id="79e00-105">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="92df7-106">[out]目標處理序的目前執行緒的作業系統識別碼指標。</span><span class="sxs-lookup"><span data-stu-id="92df7-106">[out] A pointer to the operating system identifier of the current thread for the target process.</span></span>  
+ <span data-ttu-id="79e00-106">[out]目標處理序的目前執行緒的作業系統識別碼指標。</span><span class="sxs-lookup"><span data-stu-id="79e00-106">[out] A pointer to the operating system identifier of the current thread for the target process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="92df7-107">備註</span><span class="sxs-lookup"><span data-stu-id="92df7-107">Remarks</span></span>  
- <span data-ttu-id="92df7-108">如果沒有目前的執行緒，目標處理序`GetCurrentThreadID`方法可能會失敗。</span><span class="sxs-lookup"><span data-stu-id="92df7-108">If there is no current thread for the target process, the `GetCurrentThreadID` method may fail.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="79e00-107">備註</span><span class="sxs-lookup"><span data-stu-id="79e00-107">Remarks</span></span>  
+ <span data-ttu-id="79e00-108">如果沒有目前的執行緒，目標處理序`GetCurrentThreadID`方法可能會失敗。</span><span class="sxs-lookup"><span data-stu-id="79e00-108">If there is no current thread for the target process, the `GetCurrentThreadID` method may fail.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="92df7-109">需求</span><span class="sxs-lookup"><span data-stu-id="92df7-109">Requirements</span></span>  
- <span data-ttu-id="92df7-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="92df7-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="79e00-109">需求</span><span class="sxs-lookup"><span data-stu-id="79e00-109">Requirements</span></span>  
+ <span data-ttu-id="79e00-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="79e00-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="92df7-111">**標頭：** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="92df7-111">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="79e00-111">**標頭：** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="79e00-111">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="92df7-112">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="92df7-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="79e00-112">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="79e00-112">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="92df7-113">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="92df7-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="79e00-113">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="79e00-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="92df7-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="92df7-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="79e00-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="79e00-114">See also</span></span>
 
-- [<span data-ttu-id="92df7-115">ICLRDataTarget 介面</span><span class="sxs-lookup"><span data-stu-id="92df7-115">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [<span data-ttu-id="79e00-115">ICLRDataTarget 介面</span><span class="sxs-lookup"><span data-stu-id="79e00-115">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
