@@ -1,5 +1,5 @@
 ---
-title: 作法：使用 Tlbimp.exe 產生主要 Interop 組件
+title: HOW TO：使用 Tlbimp.exe 產生主要 Interop 組件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - primary interop assemblies, generating
@@ -9,13 +9,13 @@ ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a944cf87783c59c21bffc9c48a18237c9fe6cdec
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295493"
 ---
-# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>作法：使用 Tlbimp.exe 產生主要 Interop 組件
+# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>HOW TO：使用 Tlbimp.exe 產生主要 Interop 組件
 有兩種方式可產生主要 Interop 組件：  
   
 -   使用 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供的[型別程式庫匯入工具 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)。  
@@ -69,4 +69,4 @@ tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /refer
   
 ## <a name="see-also"></a>另請參閱
 
-- [作法：登錄主要 Interop 組件](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)
+- [如何：登錄主要 Interop 組件](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)

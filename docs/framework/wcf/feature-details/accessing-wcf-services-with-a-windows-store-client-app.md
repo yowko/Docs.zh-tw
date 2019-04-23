@@ -3,10 +3,10 @@ title: 使用 Windows 市集用戶端應用程式存取 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
 ms.openlocfilehash: a7d87e6014f26842c35b0d1bf5028682a4cf69e5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294856"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>使用 Windows 市集用戶端應用程式存取 WCF 服務
@@ -176,9 +176,9 @@ void async SomeMethod()
   
 ## <a name="see-also"></a>另請參閱
 
-- [Windows 市集應用程式中的 WCF 部落格](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
+- [WCF Windows 市集應用程式部落格](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
 - [WCF Windows 市集用戶端與安全性](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
 - [Windows 市集應用程式與跨電腦呼叫](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
-- [從 Windows 市集應用程式呼叫在 Azure 中部署的 WCF 服務](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [呼叫從 Windows 市集應用程式在 Azure 中部署的 WCF 服務](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
 - [WCF 安全性程式設計](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [繫結](../../../../docs/framework/wcf/bindings.md)

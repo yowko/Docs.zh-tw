@@ -3,10 +3,10 @@ title: 以 XmlSerializer 自訂序列化順序
 ms.date: 03/30/2017
 ms.assetid: 975abd20-2a1d-42db-aed3-e898025ccce7
 ms.openlocfilehash: f63d460163c33c4253cf565a5755babc1030164f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295027"
 ---
 # <a name="custom-serialization-order-with-xmlserializer"></a>以 XmlSerializer 自訂序列化順序

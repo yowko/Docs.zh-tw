@@ -3,22 +3,22 @@ title: NativeActivity 基底類別
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
 ms.openlocfilehash: f718d247e7110b46cdd13038c7c93c1e45612c75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296585"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity 基底類別
 
-<xref:System.Activities.NativeActivity> 是具有受保護的建構函式的抽象類別。 如同 <xref:System.Activities.CodeActivity>，<xref:System.Activities.NativeActivity> 會用於透過實作 <xref:System.Activities.NativeActivity.Execute%2A> 方法的方式寫入命令式行為。 不同於 <xref:System.Activities.CodeActivity> 的是，<xref:System.Activities.NativeActivity> 可透過傳遞至 <xref:System.Activities.NativeActivityContext> 方法的 <xref:System.Activities.NativeActivity.Execute%2A> 物件，存取工作流程執行階段的所有公開功能。
+<xref:System.Activities.NativeActivity> 是具有受保護建構函式的抽象類別。 如同 <xref:System.Activities.CodeActivity>，<xref:System.Activities.NativeActivity> 會用於透過實作 <xref:System.Activities.NativeActivity.Execute%2A> 方法的方式寫入命令式行為。 不同於 <xref:System.Activities.CodeActivity> 的是，<xref:System.Activities.NativeActivity> 可透過傳遞至 <xref:System.Activities.NativeActivityContext> 方法的 <xref:System.Activities.NativeActivity.Execute%2A> 物件，存取工作流程執行階段的所有公開功能。
 
 ## <a name="using-nativeactivitycontext"></a>使用 NativeActivityContext
  工作流程執行階段的功能可透過 <xref:System.Activities.NativeActivity.Execute%2A> 方法內部存取，方法是使用 `context` 參數的成員 (型別為 <xref:System.Activities.NativeActivityContext>)。 透過 <xref:System.Activities.NativeActivityContext> 可使用的功能如下：
 
 -   取得與設定引數和變數。
 
--   排程子活動。 <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>
+-   使用 <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A> 排程子活動。
 
 -   使用 <xref:System.Activities.NativeActivityContext.Abort%2A> 中止活動執行。
 

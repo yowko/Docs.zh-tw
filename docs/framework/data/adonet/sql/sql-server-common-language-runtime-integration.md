@@ -3,10 +3,10 @@ title: SQL Server Common Language Runtime 整合
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
 ms.openlocfilehash: fd043aa6c7e5b9246a36146e000e5cba9e090d3e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297496"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>SQL Server Common Language Runtime 整合
@@ -36,7 +36,7 @@ SQL Server 2005 導入了 .NET Framework for Microsoft Windows 之 Common Langua
  [CLR 觸發程序](../../../../../docs/framework/data/adonet/sql/clr-triggers.md)  
  說明如何實作及使用 CLR 觸發程序。 同時提供其他主題的連結。  
   
- [內容連接](../../../../../docs/framework/data/adonet/sql/the-context-connection.md)  
+ [內容連線](../../../../../docs/framework/data/adonet/sql/the-context-connection.md)  
  說明內容連接。  
   
  [ADO.NET 的 SQL Server 同處理序特定行為](../../../../../docs/framework/data/adonet/sql/sql-server-in-process-specific-behavior-of-adonet.md)  
@@ -45,4 +45,4 @@ SQL Server 2005 導入了 .NET Framework for Microsoft Windows 之 Common Langua
 ## <a name="see-also"></a>另請參閱
 
 - [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

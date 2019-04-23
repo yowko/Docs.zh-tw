@@ -1,25 +1,24 @@
 ---
-title: HOW TO：將使用者資訊指派給群組連線
+title: 作法：將使用者資訊指派給群組連線
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 927a87b250863c4d59e630264ee11286c30deb3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fa84052bcf9ca97b903111fc02e319b25deb384
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607994"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296962"
 ---
-# <a name="how-to-assign-user-information-to-group-connections"></a>HOW TO：將使用者資訊指派給群組連線
+# <a name="how-to-assign-user-information-to-group-connections"></a>作法：將使用者資訊指派給群組連線
 
-  
  下列範例示範如何將使用者資訊指派給群組連線，並假設應用程式會在呼叫這段程式碼之前設定 *UserName*、*SecurelyStoredPassword* 和 *Domain* 變數，且 *UserName* 為唯一。  
   
 ### <a name="to-assign-user-information-to-a-group-connection"></a>將使用者資訊指派給群組連線  
   
-1.  建立連線群組名稱。  
+1. 建立連線群組名稱。  
   
     ```csharp  
     SHA1Managed Sha1 = new SHA1Managed();  
@@ -33,7 +32,7 @@ ms.locfileid: "54607994"
     Dim secureGroupName As [String] = Encoding.Default.GetString(updHash)  
     ```  
   
-2.  建立特定 URL 的要求。 例如，下列程式碼會建立 URL `http://www.contoso.com.` 的要求  
+2. 建立特定 URL 的要求。 例如，下列程式碼會建立以下 URL 的要求： `http://www.contoso.com.`  
   
     ```csharp  
     WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
@@ -43,7 +42,7 @@ ms.locfileid: "54607994"
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3.  設定 Web 要求的認證和連線群組名稱，並呼叫 **GetResponse** 來擷取 **WebResponse** 物件。  
+3. 設定 Web 要求的認證和連線群組名稱，並呼叫 **GetResponse** 來擷取 **WebResponse** 物件。  
   
     ```csharp  
     myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
@@ -59,7 +58,7 @@ ms.locfileid: "54607994"
     Dim myWebResponse As WebResponse = myWebRequest.GetResponse()  
     ```  
   
-4.  使用 WebRespose 物件之後，關閉回應資料流。  
+4. 使用 WebRespose 物件之後，關閉回應資料流。  
   
     ```csharp  
     MyWebResponse.Close();  
@@ -109,5 +108,6 @@ MyWebResponse.Close()
 ```  
   
 ## <a name="see-also"></a>另請參閱
-- [管理連線](../../../docs/framework/network-programming/managing-connections.md)
-- [連線群組](../../../docs/framework/network-programming/connection-grouping.md)
+
+- [管理連接](../../../docs/framework/network-programming/managing-connections.md)
+- [連接群組](../../../docs/framework/network-programming/connection-grouping.md)

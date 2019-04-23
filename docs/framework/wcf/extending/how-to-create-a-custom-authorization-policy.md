@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
 ms.openlocfilehash: 05130e809356369ee2b43d9af86acf69fe527e9a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295415"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>HOW TO：建立自訂授權原則
@@ -78,6 +78,6 @@ ms.locfileid: "59295415"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [HOW TO：比較宣告](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [HOW TO：為服務建立自訂授權管理員](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [如何：比較宣告](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [如何：建立自訂授權管理員服務](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [授權原則](../../../../docs/framework/wcf/samples/authorization-policy.md)

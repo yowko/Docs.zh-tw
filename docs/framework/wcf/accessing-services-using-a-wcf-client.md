@@ -8,10 +8,10 @@ helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
 ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297248"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>使用 WCF 用戶端存取服務
@@ -178,22 +178,22 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 許多由 WCF 用戶端擲回的例外狀況是由服務上的例外狀況造成的。 以下提供一些這類範例：
 
--   <xref:System.Net.Sockets.SocketException>:遠端主機已強制關閉現有的連接。
+-   <xref:System.Net.Sockets.SocketException>：遠端主機已強制關閉現有的連接。
 
--   <xref:System.ServiceModel.CommunicationException>:基礎連接意外關閉。
+-   <xref:System.ServiceModel.CommunicationException>：基礎連接意外關閉。
 
--   <xref:System.ServiceModel.CommunicationObjectAbortedException>:通訊端連線已中止。 這種情況可能是處理訊息時發生錯誤、遠端主機超過接收逾時時間，或基礎網路資源問題所造成。
+-   <xref:System.ServiceModel.CommunicationObjectAbortedException>：通訊端連線已中止。 這種情況可能是處理訊息時發生錯誤、遠端主機超過接收逾時時間，或基礎網路資源問題所造成。
 
 發生這類例外狀況時，最佳的解決方式是開啟服務端的追蹤功能，並且判斷該處發生哪種例外狀況。 如需有關追蹤的詳細資訊，請參閱 <<c0> [ 追蹤](../../../docs/framework/wcf/diagnostics/tracing/index.md)並[使用追蹤疑難排解您的應用程式](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [HOW TO：使用雙面合約存取服務](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [HOW TO：以非同步方式呼叫服務作業](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [HOW TO：使用單向和要求-回覆合約來存取服務](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [HOW TO：存取 WSE 3.0 服務](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [如何：Access Services 搭配雙工合約](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [如何：以非同步方式呼叫服務作業](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [如何：存取服務使用單向和要求-回覆合約](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [如何：存取 WSE 3.0 服務](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [了解產生的用戶端程式碼](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [HOW TO：使用 XmlSerializer 改善 WCF 用戶端應用程式的啟動時間](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
-- [指定用戶端執行階段行為](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [如何：改善啟動時間的 WCF 用戶端應用程式的使用 XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [指定用端執行階段行為](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [設定用戶端行為](../../../docs/framework/wcf/configuring-client-behaviors.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
 ms.openlocfilehash: c63b249cf16100f0b18d622fdecd7cd375df83d8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297755"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>HOW TO：在受控的 Windows 服務中裝載 WCF 服務
@@ -51,7 +51,7 @@ Windows 服務可以透過 Microsoft Management Console (MMC) 中的 Microsoft.M
      [!code-csharp[c_HowTo_HostInNTService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#2)]
      [!code-vb[c_HowTo_HostInNTService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#2)]
 
-8. 建立繼承自 `CalculatorWindowsService` 類別的新類別，名為 <xref:System.ServiceProcess.ServiceBase>。 加入名為 `serviceHost` 的區域變數，以參考 <xref:System.ServiceModel.ServiceHost> 執行個體。 定義`Main`呼叫的方法 `ServiceBase.Run(new CalculatorWindowsService)`
+8. 建立繼承自 `CalculatorWindowsService` 類別的新類別，名為 <xref:System.ServiceProcess.ServiceBase>。 加入名為 `serviceHost` 的區域變數，以參考 <xref:System.ServiceModel.ServiceHost> 執行個體。 定義 `Main` 方法來呼叫 `ServiceBase.Run(new CalculatorWindowsService)`。
 
      [!code-csharp[c_HowTo_HostInNTService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#3)]
      [!code-vb[c_HowTo_HostInNTService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#3)]
@@ -135,7 +135,7 @@ Windows 服務可以透過 Microsoft Management Console (MMC) 中的 Microsoft.M
 
 ## <a name="see-also"></a>另請參閱
 
-- [簡化的組態](../../../../docs/framework/wcf/simplified-configuration.md)
+- [簡化設定](../../../../docs/framework/wcf/simplified-configuration.md)
 - [在 Managed 應用程式中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)
 - [裝載服務](../../../../docs/framework/wcf/hosting-services.md)
 - [Windows Server AppFabric 裝載功能](https://go.microsoft.com/fwlink/?LinkId=201276)

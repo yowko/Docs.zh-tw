@@ -29,10 +29,10 @@ helpviewer_keywords:
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
 ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296117"
 ---
 # <a name="wpf-windows-overview"></a>WPF 視窗概觀
@@ -272,7 +272,7 @@ ms.locfileid: "59296117"
   
 -   主應用程式視窗已關閉並<xref:System.Windows.Application.ShutdownMode%2A>是<xref:System.Windows.ShutdownMode.OnMainWindowClose>。  
   
--   <xref:System.Windows.Application.Shutdown%2A> 會呼叫。  
+-   呼叫 <xref:System.Windows.Application.Shutdown%2A>。  
   
 > [!NOTE]
 >  在關閉之後就無法重新開啟視窗。  
@@ -293,7 +293,7 @@ ms.locfileid: "59296117"
   
  您也可以指定的初始位置<xref:System.Windows.Window>第一次出現時藉由設定<xref:System.Windows.Window.WindowStartupLocation%2A>具有下列其中一種屬性<xref:System.Windows.WindowStartupLocation>列舉值：  
   
--   <xref:System.Windows.WindowStartupLocation.CenterOwner> (預設值)  
+-   <xref:System.Windows.WindowStartupLocation.CenterOwner> (預設)  
   
 -   <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -325,13 +325,13 @@ ms.locfileid: "59296117"
   
  如果您想要視窗的高度與寬度，調整成視窗大小的大小的內容，您可以使用<xref:System.Windows.Window.SizeToContent%2A>屬性，它具有下列值：  
   
--   <xref:System.Windows.SizeToContent.Manual>。 無效果 (預設值)。  
+-   <xref:System.Windows.SizeToContent.Manual>. 無效果 (預設值)。  
   
--   <xref:System.Windows.SizeToContent.Width>。 調整成內容的寬度，具有相同的效果設定兩者<xref:System.Windows.FrameworkElement.MinWidth%2A>和<xref:System.Windows.FrameworkElement.MaxWidth%2A>內容的寬度。  
+-   <xref:System.Windows.SizeToContent.Width>. 調整成內容的寬度，具有相同的效果設定兩者<xref:System.Windows.FrameworkElement.MinWidth%2A>和<xref:System.Windows.FrameworkElement.MaxWidth%2A>內容的寬度。  
   
--   <xref:System.Windows.SizeToContent.Height>。 調整成內容的高度，具有相同的效果設定兩者<xref:System.Windows.FrameworkElement.MinHeight%2A>和<xref:System.Windows.FrameworkElement.MaxHeight%2A>內容的高度。  
+-   <xref:System.Windows.SizeToContent.Height>. 調整成內容的高度，具有相同的效果設定兩者<xref:System.Windows.FrameworkElement.MinHeight%2A>和<xref:System.Windows.FrameworkElement.MaxHeight%2A>內容的高度。  
   
--   <xref:System.Windows.SizeToContent.WidthAndHeight>。 調整成內容的寬度和高度，設定兩者相同的效果<xref:System.Windows.FrameworkElement.MinHeight%2A>並<xref:System.Windows.FrameworkElement.MaxHeight%2A>內容，以及設定這兩個高度<xref:System.Windows.FrameworkElement.MinWidth%2A>和<xref:System.Windows.FrameworkElement.MaxWidth%2A>內容的寬度。  
+-   <xref:System.Windows.SizeToContent.WidthAndHeight>. 調整成內容的寬度和高度，設定兩者相同的效果<xref:System.Windows.FrameworkElement.MinHeight%2A>並<xref:System.Windows.FrameworkElement.MaxHeight%2A>內容，以及設定這兩個高度<xref:System.Windows.FrameworkElement.MinWidth%2A>和<xref:System.Windows.FrameworkElement.MaxWidth%2A>內容的寬度。  
   
  下列範例顯示自動調整垂直和水平大小以符合其內容的視窗，第一次顯示時的樣子。  
   
@@ -381,7 +381,7 @@ ms.locfileid: "59296117"
   
  視窗的狀態可以透過設定來設定其<xref:System.Windows.Window.WindowState%2A>屬性，它可以有下列其中一種<xref:System.Windows.WindowState>列舉值：  
   
--   <xref:System.Windows.WindowState.Normal> (預設值)  
+-   <xref:System.Windows.WindowState.Normal> (預設)  
   
 -   <xref:System.Windows.WindowState.Maximized>  
   
@@ -409,7 +409,7 @@ ms.locfileid: "59296117"
   
 -   <xref:System.Windows.ResizeMode.CanMinimize>  
   
--   <xref:System.Windows.ResizeMode.CanResize> (預設值)  
+-   <xref:System.Windows.ResizeMode.CanResize> (預設)  
   
 -   <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
@@ -427,7 +427,7 @@ ms.locfileid: "59296117"
   
 -   <xref:System.Windows.WindowStyle.None>  
   
--   <xref:System.Windows.WindowStyle.SingleBorderWindow> (預設值)  
+-   <xref:System.Windows.WindowStyle.SingleBorderWindow> (預設)  
   
 -   <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
 ms.openlocfilehash: 7b284a8f085ab7e93651c829ac16e47fb63a8b51
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297775"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>從 XML Web Service 使用資料集
@@ -263,9 +263,9 @@ ms.locfileid: "59297775"
 
 - [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
 - [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [從 DataAdapter 填入資料集](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
+- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [從 DataAdapter 填入 DataSet](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
 - [使用 DataAdapter 更新資料來源](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [DataAdapter 的參數](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
+- [DataAdapter 參數](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
 - [Web 服務描述語言工具 (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

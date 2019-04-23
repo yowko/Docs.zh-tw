@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
 ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296091"
 ---
 # <a name="ws-transaction-flow"></a>WS 交易流程
@@ -188,7 +188,7 @@ Console.WriteLine("Transaction committed");
   
 -   第二個 `Subtract` 要求會在以 `TransactionScopeOption.Suppress` 選項宣告的新交易範圍內執行。 這樣做會隱藏用戶端的初始外部異動，而且要求不會將異動流動至服務。 這個方法可讓用戶端明確地不參與，並在不需要將交易流動至服務時，防止進行此動作。 會在新的和未連接的異動範圍內發生服務動作。  
   
--   `Multiply`要求不會流動至服務的交易，因為用戶端產生的定義`ICalculator`介面包括<xref:System.ServiceModel.TransactionFlowAttribute>設定為<xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`。  
+-   `Multiply` 要求不會將異動流動至服務，因為用戶端產生之 `ICalculator` 介面的定義包含設定為 <xref:System.ServiceModel.TransactionFlowAttribute><xref:System.ServiceModel.TransactionFlowOption> 的 `NotAllowed`。  
   
 -   `Divide` 要求不會將交易流動至服務，因為用戶端產生之 `ICalculator` 介面的定義再次不包含 `TransactionFlowAttribute`。 再次會在其他新的和未連接的異動範圍內發生服務動作。  
   
@@ -225,7 +225,7 @@ Press <ENTER> to terminate the service.
   
 1. 若要建置方案的 C# 或 Visual Basic.NET 版本，請依照下列中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
-2. 確定您已安裝 SQL Server Express Edition 或 SQL Server，而且已在服務的應用程式組態檔中正確設定連接字串。 若要執行範例但不使用資料庫時，設定`usingSql`服務的應用程式組態檔中的值 `false`  
+2. 確定您已安裝 SQL Server Express Edition 或 SQL Server，而且已在服務的應用程式組態檔中正確設定連接字串。 若要在不使用資料庫的情況下執行範例，請將服務之應用程式組態檔中的 `usingSql` 值設定為 `false`。  
   
 3. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   

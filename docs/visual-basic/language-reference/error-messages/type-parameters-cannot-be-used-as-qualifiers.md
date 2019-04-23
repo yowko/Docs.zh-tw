@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
 ms.openlocfilehash: ba7348ae50965ffcf2719b20934451916c8fa95a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296351"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>類型參數不能當做限定詞使用
@@ -40,6 +40,6 @@ End Function
   
 ## <a name="see-also"></a>另請參閱
 
-- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Visual Basic 中的泛型類型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Type List](../../../visual-basic/language-reference/statements/type-list.md)
+- [對已宣告項目的參考](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [類型清單](../../../visual-basic/language-reference/statements/type-list.md)

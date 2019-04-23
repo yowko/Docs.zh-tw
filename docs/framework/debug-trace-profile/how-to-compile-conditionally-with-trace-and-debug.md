@@ -13,10 +13,10 @@ ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298574"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>HOW TO：使用追蹤和偵錯進行條件式編譯
@@ -97,10 +97,10 @@ ms.locfileid: "59298574"
   
 ## <a name="see-also"></a>另請參閱
 
-- [追蹤和稽核應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [HOW TO：建立、初始化和設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [追蹤和檢測應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [如何：建立、 初始化和設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [追蹤接聽項](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [HOW TO：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [HOW TO：為 Visual Studio 命令列設定環境變數](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [HOW TO：叫用命令列編譯器](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+- [如何：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [如何：為 Visual Studio 命令列設定環境變數](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [如何：叫用命令列編譯器](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

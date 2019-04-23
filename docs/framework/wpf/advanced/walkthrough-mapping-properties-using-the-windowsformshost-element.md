@@ -9,10 +9,10 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
 ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296520"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>逐步解說：使用 WindowsFormsHost 項目對應屬性
@@ -145,7 +145,7 @@ ms.locfileid: "59296520"
 
      `WindowLoaded`方法會處理<xref:System.Windows.FrameworkElement.Loaded>事件，並執行下列初始化。
 
-    -   建立[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox>控制項。
+    -   會建立[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox>控制項。
 
     -   呼叫您稍早在本逐步解說中所定義的方法來設定屬性對應。
 
@@ -158,6 +158,6 @@ ms.locfileid: "59296520"
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Windows Form 和 WPF 屬性對應](windows-forms-and-wpf-property-mapping.md)
+- [Windows Forms 和 WPF 屬性對應](windows-forms-and-wpf-property-mapping.md)
 - [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [逐步解說：將 Windows Forms 控制項裝載在 WPF 中](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [逐步解說：裝載在 WPF 中的 Windows Forms 控制項](walkthrough-hosting-a-windows-forms-control-in-wpf.md)

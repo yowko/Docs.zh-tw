@@ -3,10 +3,10 @@ title: SQL Server 功能和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
 ms.openlocfilehash: 4f2d93ca2abc15e4c7af8489d5b875c0a46d7185
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294895"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server 功能和 ADO.NET
@@ -28,7 +28,7 @@ ms.locfileid: "59294895"
  [SQL Server Express 使用者執行個體](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
  說明對 SQL Server Express 使用者執行個體的支援。  
   
- [在 SQL Server 中建立資料庫鏡像](../../../../../docs/framework/data/adonet/sql/database-mirroring-in-sql-server.md)  
+ [SQL Server 中的資料庫鏡像](../../../../../docs/framework/data/adonet/sql/database-mirroring-in-sql-server.md)  
  說明資料庫鏡像功能。  
   
  [SQL Server Common Language Runtime 整合](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)  
@@ -49,7 +49,7 @@ ms.locfileid: "59294895"
 ## <a name="see-also"></a>另請參閱
 
 - [ADO.NET 中的 SQL Server 資料作業](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [在 ADO.NET 中傳送和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [在 ADO.NET 中擷取和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
 - [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,5 +1,5 @@
 ---
-title: 作法：覆寫 ToString 方法 - C# 程式設計手冊
+title: HOW TO：覆寫 ToString 方法 - C# 程式設計手冊
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
 ms.openlocfilehash: 18734627e299c696e23bb0ec9bc63ed37fe3e601
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294973"
 ---
-# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>作法：覆寫 ToString 方法 (C# 程式設計手冊)
+# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>HOW TO：覆寫 ToString 方法 (C# 程式設計手冊)
 C# 中的每個類別或結構都會隱含地繼承 <xref:System.Object> 類別。 因此，C# 中的每個物件都會取得 <xref:System.Object.ToString%2A> 方法，以傳回該物件的字串表示。 例如，所有 `int` 類型的變數都有 `ToString` 方法，並讓它們以字串傳回其內容︰  
   
  [!code-csharp[csProgGuideInheritance#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#37)]  
@@ -46,11 +46,11 @@ C# 中的每個類別或結構都會隱含地繼承 <xref:System.Object> 類別�
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IFormattable>
-- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)
 - [字串](../../../csharp/programming-guide/strings/index.md)
-- [字串](../../../csharp/language-reference/keywords/string.md)
+- [string](../../../csharp/language-reference/keywords/string.md)
 - [new](../../../csharp/language-reference/keywords/new.md)
 - [override](../../../csharp/language-reference/keywords/override.md)
-- [虛擬](../../../csharp/language-reference/keywords/virtual.md)
+- [virtual](../../../csharp/language-reference/keywords/virtual.md)
 - [格式化類型](../../../standard/base-types/formatting-types.md)

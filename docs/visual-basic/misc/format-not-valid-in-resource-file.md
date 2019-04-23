@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID325
 ms.assetid: e986ab45-e3ce-430e-8704-5882e5da1104
 ms.openlocfilehash: 5285365c9ae780a8f78f11eab6705d52138fc049
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297001"
 ---
 # <a name="format-not-valid-in-resource-file"></a>資源檔中的格式無效

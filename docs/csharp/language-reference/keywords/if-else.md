@@ -11,12 +11,12 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: a205ee04d1b0b68666ca50109001e71288d7f434
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef25b3fb5657d833bbccf5bace71e049623476c9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517834"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294415"
 ---
 # <a name="if-else-c-reference"></a>if-else (C# 參考)
 
@@ -62,7 +62,7 @@ if (condition)
 
 [!code-csharp[csrefKeywordsSelection#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#3)]
 
-如果條件 `(m > 10)` 評估為 false，就會顯示 `Result2`。
+`Result2` 評估為 false，就會顯示 `(m > 10)` 。
 
 ## <a name="example"></a>範例
 
@@ -82,7 +82,7 @@ if (condition)
 
 [!code-csharp[csrefKeywordsSelection#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#6)]
 
-就像在 else 區塊或 then 區塊中的陳述式可以是任何有效的陳述式一樣，您可以為這個條件使用任何有效的布林運算式。 您可以使用邏輯運算子，例如 [&&](../operators/conditional-and-operator.md)、[&](../operators/and-operator.md)、[&#124;&#124;](../operators/conditional-or-operator.md)、[&#124;](../operators/or-operator.md) 和 [!](../operators/logical-negation-operator.md) ，並撰寫複雜的條件。 下列程式碼顯示範例。
+就像在 else 區塊或 then 區塊中的陳述式可以是任何有效的陳述式一樣，您可以為這個條件使用任何有效的布林運算式。 您可以使用[邏輯運算子](../operators/boolean-logical-operators.md) (例如 `!`、`&&`、`||`、`&`、`|` 和 `^`) 來撰寫複合條件。 下列程式碼顯示範例。
 
 ```csharp
 // NOT
@@ -138,7 +138,7 @@ if (!(m >= n || m >= p))
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 程式設計手冊](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [?:運算子](../operators/conditional-operator.md)
 - [if-else 陳述式 (C++)](/cpp/cpp/if-else-statement-cpp)

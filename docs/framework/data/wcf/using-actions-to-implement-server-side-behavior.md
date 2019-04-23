@@ -3,10 +3,10 @@ title: 使用動作實作伺服器端行為
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
 ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294934"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>使用動作實作伺服器端行為
@@ -17,7 +17,7 @@ OData 動作可實作一種行為，以依據從 OData 服務擷取的資源而�
  若要實作服務動作，您必須實作<xref:System.IServiceProvider>， [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))，以及[IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103))介面。 <xref:System.IServiceProvider> 可讓 WCF Data Services 取得您實作[IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))。 [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))可讓 WCF Data Services 建立、 尋找、 描述及叫用服務動作。 [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103))可讓您叫用實作服務動作之行為的程式碼，並取得結果，如果有的話。 請記住，WCF Data Services 是每次呼叫的 WCF 服務，亦即每次呼叫服務時，都會建立新的服務執行個體。  請確定建立服務時，不會進行任何不必要的工作。  
   
 ### <a name="iserviceprovider"></a>IServiceProvider  
- <xref:System.IServiceProvider> 包含呼叫的方法<xref:System.IServiceProvider.GetService%2A>。 WCF Data Services 會呼叫此方法來擷取許多服務提供者，包括中繼資料服務提供者和資料服務動作提供者。 當要求資料服務動作提供者時，傳回您[IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))實作。  
+ <xref:System.IServiceProvider> 包含名為 <xref:System.IServiceProvider.GetService%2A> 的方法。 WCF Data Services 會呼叫此方法來擷取許多服務提供者，包括中繼資料服務提供者和資料服務動作提供者。 當要求資料服務動作提供者時，傳回您[IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))實作。  
   
 ### <a name="idataserviceactionprovider"></a>IDataServiceActionProvider  
  [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))包含方法，可讓您擷取可用動作的相關資訊。 當您實作[IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))您會為您的服務可定義您的服務實作的擴充中繼資料[IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))動作和處理分派這些適當的動作。  
@@ -83,6 +83,6 @@ context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "PO
 ## <a name="see-also"></a>另請參閱
 
 - [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)
-- [定義 WCF 資料服務](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
-- [開發和部署 WCF Data Services](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
+- [定義 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [開發和部署 WCF 資料服務](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
 - [自訂資料服務提供者](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)

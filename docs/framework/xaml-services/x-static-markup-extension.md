@@ -11,10 +11,10 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
 ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295701"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static 標記延伸
@@ -69,7 +69,7 @@ ms.locfileid: "59295701"
 
 在.NET Framework XAML 服務實作中，這個標記延伸的處理由定義<xref:System.Windows.Markup.StaticExtension>類別。  
 
-`x:Static` 是標記延伸。 在 XAML 使用的所有標記延伸`{`和`}`字元在其屬性語法中，這是用 XAML 處理器會辨識為標記延伸必須提供值的慣例。 如需標記延伸的詳細資訊，請參閱 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)。  
+`x:Static` 是一種標記延伸。 在 XAML 使用的所有標記延伸`{`和`}`字元在其屬性語法中，這是用 XAML 處理器會辨識為標記延伸必須提供值的慣例。 如需標記延伸的詳細資訊，請參閱 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)。  
   
 ## <a name="wpf-usage-notes"></a>WPF 使用注意事項  
  您用於 WPF 程式設計的預設 XAML 命名空間不包含許多實用的靜態屬性，且大部分的有用的靜態屬性都有支援，像是可簡化使用方式，而不需要型別轉換子`{x:Static}`。 靜態屬性，您必須對應 XAML 命名空間的前置詞，如果下列其中一項為真：  
@@ -84,5 +84,5 @@ ms.locfileid: "59295701"
   
 ## <a name="see-also"></a>另請參閱
 
-- [x:Type 標記延伸](x-type-markup-extension.md)
+- [x:Type 標記延伸模組](x-type-markup-extension.md)
 - [從 WPF 移轉至 System.Xaml 的類型](types-migrated-from-wpf-to-system-xaml.md)

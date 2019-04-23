@@ -1,15 +1,15 @@
 ---
-title: HOW TO：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)
+title: 作法：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: 6143dfa43227f35eb8c74b386bee96ccec696a4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9710e5f31b9d01c5151b548c1b642293122d44b3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631794"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297950"
 ---
-# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>HOW TO：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)
+# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>作法：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)
 您可以提升[逐步解說：使用 Async 和 Await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 中非同步方案的效能 (藉由使用 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 方法)。 此方法會以非同步方式等候多個非同步作業進行，這些作業是以工作集合來表示。  
   
  您在此逐步解說中可能已注意到網站下載的速度各自不同。 有時其中一個網站的速度很慢，而導致所有其餘下載延後執行。 當您執行在此逐步解說中建立的非同步方案時，如果不想要等候，您可以輕鬆地結束程式；但更好的做法是同時啟動所有下載，並讓較快的下載繼續執行而不等候延遲的下載。  
@@ -23,7 +23,7 @@ ms.locfileid: "54631794"
   
 ### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>將 Task.WhenAll 新增至您的 GetURLContentsAsync 方案  
   
-1.  將 `ProcessURLAsync` 方法新增至在[逐步解說：使用 Async 和 Await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 中開發的第一個應用程式。  
+1. 將 `ProcessURLAsync` 方法新增至在[逐步解說：使用 Async 和 Await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 中開發的第一個應用程式。  
   
     -   如果您已從[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下載程式碼，請開啟 AsyncWalkthrough 專案，然後將 `ProcessURLAsync` 新增至 MainWindow.xaml.cs 檔案。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "54631794"
     }  
     ```  
   
-2.  將 `SumPageSizesAsync` 中的 `foreach` 迴圈註解化或刪除，如下列程式碼所示。  
+2. 將 `SumPageSizesAsync` 中的 `foreach` 迴圈註解化或刪除，如下列程式碼所示。  
   
     ```csharp  
     //var total = 0;  
@@ -61,7 +61,7 @@ ms.locfileid: "54631794"
     //}  
     ```  
   
-3.  建立工作集合。 下列程式碼定義一個[查詢](../../../../csharp/programming-guide/concepts/linq/index.md)，當 <xref:System.Linq.Enumerable.ToArray%2A> 方法執行此查詢時，會建立工作集合以下載每個網站的內容。 工作會在評估查詢之後啟動。  
+3. 建立工作集合。 下列程式碼定義一個[查詢](../../../../csharp/programming-guide/concepts/linq/index.md)，當 <xref:System.Linq.Enumerable.ToArray%2A> 方法執行此查詢時，會建立工作集合以下載每個網站的內容。 工作會在評估查詢之後啟動。  
   
      將下列程式碼新增至 `urlList` 宣告後面的 `SumPageSizesAsync` 方法。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "54631794"
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  將 `Task.WhenAll` 套用至工作集合 `downloadTasks`。 `Task.WhenAll` 會傳回當工作集合中所有工作完成後才會完成的單一工作。  
+4. 將 `Task.WhenAll` 套用至工作集合 `downloadTasks`。 `Task.WhenAll` 會傳回當工作集合中所有工作完成後才會完成的單一工作。  
   
      在下列範例中，`await` 運算式會等候 `WhenAll` 傳回的單一工作完成。 此運算式會評估為整數陣列，其中每個整數都是所下載網站的長度。 將下列程式碼新增至 `SumPageSizesAsync`，就在您於上一個步驟中新增的程式碼之後。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "54631794"
     //int[] lengths = await whenAllTask;  
     ```  
   
-5.  最後，使用 <xref:System.Linq.Enumerable.Sum%2A> 方法來計算所有網站的長度總和。 將下列程式碼行新增至 `SumPageSizesAsync`。  
+5. 最後，使用 <xref:System.Linq.Enumerable.Sum%2A> 方法來計算所有網站的長度總和。 將下列程式碼行新增至 `SumPageSizesAsync`。  
   
     ```csharp  
     int total = lengths.Sum();  
@@ -95,7 +95,7 @@ ms.locfileid: "54631794"
   
 ### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>將 Task.WhenAll 新增至 HttpClient.GetByteArrayAsync 方案  
   
-1.  將下列版本的 `ProcessURLAsync` 新增至在[逐步解說：使用 Async 和 Await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 中開發的第二個應用程式。  
+1. 將下列版本的 `ProcessURLAsync` 新增至在[逐步解說：使用 Async 和 Await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 中開發的第二個應用程式。  
   
     -   如果您已從[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下載程式碼，請開啟 AsyncWalkthrough_HttpClient 專案，然後將 `ProcessURLAsync` 新增至 MainWindow.xaml.cs 檔案。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "54631794"
     }  
     ```  
   
-2.  將 `SumPageSizesAsync` 中的 `For Each` 或 `foreach` 迴圈註解化或刪除，如下列程式碼所示。  
+2. 將 `SumPageSizesAsync` 中的 `For Each` 或 `foreach` 迴圈註解化或刪除，如下列程式碼所示。  
   
     ```csharp  
     //var total = 0;  
@@ -136,7 +136,7 @@ ms.locfileid: "54631794"
     //}  
     ```  
   
-3.  定義一個[查詢](../../../../csharp/programming-guide/concepts/linq/index.md)，當 <xref:System.Linq.Enumerable.ToArray%2A> 方法執行此查詢時，會建立工作集合以下載每個網站的內容。 工作會在評估查詢之後啟動。  
+3. 定義一個[查詢](../../../../csharp/programming-guide/concepts/linq/index.md)，當 <xref:System.Linq.Enumerable.ToArray%2A> 方法執行此查詢時，會建立工作集合以下載每個網站的內容。 工作會在評估查詢之後啟動。  
   
      將下列程式碼新增至 `client` 和 `urlList` 宣告後面的 `SumPageSizesAsync` 方法。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "54631794"
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  接下來，將 `Task.WhenAll` 套用至工作集合 `downloadTasks`。 `Task.WhenAll` 會傳回當工作集合中所有工作完成後才會完成的單一工作。  
+4. 接下來，將 `Task.WhenAll` 套用至工作集合 `downloadTasks`。 `Task.WhenAll` 會傳回當工作集合中所有工作完成後才會完成的單一工作。  
   
      在下列範例中，`await` 運算式會等候 `WhenAll` 傳回的單一工作完成。 完成時，`await` 運算式會評估為整數陣列，其中每個整數都是所下載網站的長度。 將下列程式碼新增至 `SumPageSizesAsync`，就在您於上一個步驟中新增的程式碼之後。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "54631794"
     //int[] lengths = await whenAllTask;  
     ```  
   
-5.  最後，使用 <xref:System.Linq.Enumerable.Sum%2A> 方法取得所有網站的長度總和。 將下列程式碼行新增至 `SumPageSizesAsync`。  
+5. 最後，使用 <xref:System.Linq.Enumerable.Sum%2A> 方法取得所有網站的長度總和。 將下列程式碼行新增至 `SumPageSizesAsync`。  
   
     ```csharp  
     int total = lengths.Sum();

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
 ms.openlocfilehash: 9e005d0dc7da154fbaffbf7e02c55445a1213195
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296234"
 ---
 # <a name="extension-methods-visual-basic"></a>擴充方法 (Visual Basic)
@@ -184,4 +184,4 @@ End Module
 - [選擇性參數](./optional-parameters.md)
 - [參數陣列](./parameter-arrays.md)
 - [屬性概觀](../../../../visual-basic/programming-guide/concepts/attributes/index.md)
-- [Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [在 Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

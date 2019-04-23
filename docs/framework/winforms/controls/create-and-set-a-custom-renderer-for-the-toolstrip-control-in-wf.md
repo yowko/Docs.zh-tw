@@ -11,10 +11,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
 ms.openlocfilehash: ca1a7444c029632f83b1600e5855a13c83777594
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296377"
 ---
 # <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>HOW TO：建立和設定 Windows Forms 中 ToolStrip 控制項的自訂轉譯器

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
 ms.openlocfilehash: 824d2a08ddd36317fcdb8caa1690decb2f9c432a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295883"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>HOW TO：將摘要同時公開為 Atom 和 RSS
@@ -17,7 +17,7 @@ Windows Communication Foundation (WCF) 可讓您建立公開新聞訂閱摘要�
   
 ### <a name="to-create-a-basic-syndication-service"></a>若要建立基本新聞訂閱服務  
   
-1. 使用以 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性標記的介面來定義服務合約。 每個公開為新聞訂閱摘要的作業，都會傳回 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 物件。 請注意 <xref:System.ServiceModel.Web.WebGetAttribute> 的參數。 `UriTemplate` 指定用來叫用此服務作業的 URL。 此參數的字串包含常值和變數，以大括號 ({*格式*})。 此變數對應至服務作業的 `format` 參數。 如需詳細資訊，請參閱<xref:System.UriTemplate>。 `BodyStyle` 會影響此服務作業會傳送與接收訊息的寫入方式。 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> 指定此服務作業來回傳送的資料未包裝的基礎結構定義的 XML 項目。 如需詳細資訊，請參閱<xref:System.ServiceModel.Web.WebMessageBodyStyle>。  
+1. 使用以 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性標記的介面來定義服務合約。 每個公開為新聞訂閱摘要的作業，都會傳回 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 物件。 請注意 <xref:System.ServiceModel.Web.WebGetAttribute> 的參數。 `UriTemplate` 會指定用來叫用此服務作業的 URL。 此參數的字串包含常值和變數，以大括號 ({*格式*})。 此變數對應至服務作業的 `format` 參數。 如需詳細資訊，請參閱<xref:System.UriTemplate>。 `BodyStyle` 會影響此服務作業所傳送與接收之訊息的寫入方式。 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> 會指定傳送至此服務作業，以及來自此服務作業的資料都不得透過基礎結構定義的 XML 元素來包裝。 如需詳細資訊，請參閱<xref:System.ServiceModel.Web.WebMessageBodyStyle>。  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  

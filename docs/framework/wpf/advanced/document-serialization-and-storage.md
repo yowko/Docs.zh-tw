@@ -7,10 +7,10 @@ helpviewer_keywords:
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
 ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295896"
 ---
 # <a name="document-serialization-and-storage"></a>文件序列化與儲存
@@ -39,7 +39,7 @@ Microsoft.NET Framework 會提供功能強大的環境來建立和顯示高品�
     -   可支援自訂執行階段設定和選項的使用者介面。  
   
 ### <a name="xps-print-path"></a>XPS 列印路徑  
- Microsoft.NET Framework[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]列印路徑也提供可擴充機制，來撰寫文件，透過列印輸出。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 做為這兩個文件檔案格式和原生列印多工緩衝處理格式[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件可以直接傳送至[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-相容的印表機，而不需要轉換成中繼格式。  如需列印路徑輸出選項和功能的其他資訊，請參閱[列印概觀](printing-overview.md)。  
+ Microsoft.NET Framework[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]列印路徑也提供可擴充機制，來撰寫文件，透過列印輸出。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 可同時作為文件檔案格式，以及 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的原生列印多工緩衝處理格式。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件可以直接傳送至 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 相容的印表機，而不需要轉換成中繼格式。  如需列印路徑輸出選項和功能的其他資訊，請參閱[列印概觀](printing-overview.md)。  
   
 <a name="PluginSerializers"></a>   
 ## <a name="plug-in-serializers"></a>外掛程式序列化程式  
@@ -48,7 +48,7 @@ Microsoft.NET Framework 會提供功能強大的環境來建立和顯示高品�
  外掛程式序列化程式可以協助應用程式開發人員擴充新的儲存設計和檔案格式，而不需要針對建置階段可能出現的每種格式直接撰寫程式碼。  外掛程式序列化程式同時也能夠提供協力廠商開發人員標準化的方法，來針對自訂或專屬檔案格式部署、安裝和更新可供系統存取的外掛程式。  
   
 ### <a name="using-a-plug-in-serializer"></a>使用外掛程式序列化程式  
- 外掛程式序列化程式很容易使用。  <xref:System.Windows.Documents.Serialization.SerializerProvider>類別列舉<xref:System.Windows.Documents.Serialization.SerializerDescriptor>物件中每個外掛程式安裝在系統上。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A>屬性篩選目前的組態為基礎之已安裝的外掛程式，並確認可以載入序列化程式，並由應用程式。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor>也提供其他屬性，例如<xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A>和<xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>，應用程式可以用來提示使用者選取可用的輸出格式的序列化程式。  預設外掛程式序列化程式[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]提供以.NET Framework，且一律會被列舉。  在使用者選取輸出格式之後,<xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A>方法用來建立<xref:System.Windows.Documents.Serialization.SerializerWriter>特定的格式。  <xref:System.Windows.Documents.Serialization.SerializerWriter>。<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> 然後可以呼叫方法來輸出文件資料流，資料存放區。  
+ 外掛程式序列化程式很容易使用。  <xref:System.Windows.Documents.Serialization.SerializerProvider>類別列舉<xref:System.Windows.Documents.Serialization.SerializerDescriptor>物件中每個外掛程式安裝在系統上。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A>屬性篩選目前的組態為基礎之已安裝的外掛程式，並確認可以載入序列化程式，並由應用程式。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor>也提供其他屬性，例如<xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A>和<xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>，應用程式可以用來提示使用者選取可用的輸出格式的序列化程式。  預設外掛程式序列化程式[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]提供以.NET Framework，且一律會被列舉。  在使用者選取輸出格式之後,<xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A>方法用來建立<xref:System.Windows.Documents.Serialization.SerializerWriter>特定的格式。  <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> 然後可以呼叫方法來輸出文件資料流，資料存放區。  
   
  下列範例說明使用的應用程式<xref:System.Windows.Documents.Serialization.SerializerProvider>"PlugInFileFilter"屬性中的方法。  Pluginfilefilter 會列舉已安裝的外掛程式，並建立與可用檔案選項，來篩選字串<xref:Microsoft.Win32.SaveFileDialog>。  
   
@@ -78,4 +78,4 @@ Microsoft.NET Framework 會提供功能強大的環境來建立和顯示高品�
 - <xref:System.Windows.Xps.Packaging.XpsDocument>
 - [WPF 中的文件](documents-in-wpf.md)
 - [列印概觀](printing-overview.md)
-- [XML 文件規格：總覽](https://go.microsoft.com/fwlink?LinkID=106246)
+- [XML 文件規格：概觀](https://go.microsoft.com/fwlink?LinkID=106246)

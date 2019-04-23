@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 719f71f42ac7b0c376525ab3a316a986af0b0f43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1aecd8e6dcec73ba4dc45d4bf8f365503888687e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678794"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295987"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>建立桌面應用程式的附屬組件
 資源檔在當地語系化的應用程式中扮演重要角色。 它們可讓應用程式以使用者自己的語言和文化特性顯示字串、影像和其他資料，以及在使用者自己的語言或文化特性的資源無法使用時提供替代資料。 .NET Framework 會使用中樞和支點模型來尋找並擷取當地語系化的資源。 中樞是主要組件，其中包含未當地語系化的可執行程式碼以及稱為中性或預設文化特性之單一文化特性的資源。 預設文化特性是應用程式的後援文化特性；當地語系化的資源無法使用時會使用它。 您使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性來指定應用程式之預設文化特性的文化特性。 每個支點都會連線至附屬組件，其中包含單一當地語系化文化特性但未包含任何程式碼的資源。 因為附屬組件不是主要組件的一部分，所以您可以輕鬆地更新或取代對應至特定文化特性的資源，而不需要取代應用程式的主要組件。  
@@ -52,10 +52,11 @@ ms.locfileid: "54678794"
   
 -   附屬組件文化特性的資訊必須包括在組件的中繼資料內。 若要將文化特性名稱儲存在附屬組件的中繼資料內，請在使用[組件連結器](../../../docs/framework/tools/al-exe-assembly-linker.md)將資源內嵌在附屬組件時指定 `/culture` 選項。  
   
- 下圖顯示未在[全域組件快取](../../../docs/framework/app-domains/gac.md)中安裝之應用程式的範例目錄結構和位置需求。 副檔名為 .txt 和 .resources 的項目將不會隨附最終應用程式。 這些是用來建立最終附屬資源組件的中繼資源檔。 在此範例中，您可以將 .resx 檔案取代為 .txt 檔案。 如需詳細資訊，請參閱[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。  
+ 下圖顯示未在[全域組件快取](../../../docs/framework/app-domains/gac.md)中安裝之應用程式的範例目錄結構和位置需求。 副檔名為 .txt 和 .resources 的項目將不會隨附最終應用程式。 這些是用來建立最終附屬資源組件的中繼資源檔。 在此範例中，您可以將 .resx 檔案取代為 .txt 檔案。 如需詳細資訊，請參閱[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。 
+ 
+ 下圖顯示附屬組件目錄：
   
- ![附屬組件](../../../docs/framework/resources/media/satelliteassemblydir.gif "satelliteassemblydir")  
-附屬組件目錄  
+ ![使用當地語系化文化特性 (Culture) 子目錄的附屬組件目錄。](./media/creating-satellite-assemblies-for-desktop-apps/satellite-assembly-directory.gif)
   
 ## <a name="compiling-satellite-assemblies"></a>編譯附屬組件  
  您使用[資源檔產生器 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)，將包含資源的文字檔或 XML (.resx) 檔案編譯成二進位 .resources 檔案。 您接著使用[組件連結器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 將 .resources 檔案編譯成附屬組件。 Al.exe 會從您指定的 .resources 檔案建立組件。 附屬組件只能包含資源，而不能包含任何可執行程式碼。  
@@ -87,14 +88,14 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
 ## <a name="satellite-assemblies-an-example"></a>附屬組件：範例  
  下列簡單 "Hello world" 範例會顯示包含當地語系化問候語的訊息方塊。 此範例包括英文 (美國)、法文 (法國) 和俄文 (俄國) 文化特性的資源，而其後援文化特性是英文。 若要建立範例，請執行下列動作：  
   
-1.  建立名為 Greeting.resx 或 Greeting.txt 的資源檔，以包含預設文化特性的資源。 將名為 `HelloString` 且其值為 "Hello world!" 的單一字串儲存 在此檔案中。  
+1. 建立名為 Greeting.resx 或 Greeting.txt 的資源檔，以包含預設文化特性的資源。 將名為 `HelloString` 且其值為 "Hello world!" 的單一字串儲存 在此檔案中。  
   
-2.  若要指出英文 (en) 是應用程式的預設文化特性，請將下列 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 屬性新增至應用程式的 AssemblyInfo 檔案或將編譯為應用程式主要組件的主要原始程式碼檔案。  
+2. 若要指出英文 (en) 是應用程式的預設文化特性，請將下列 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 屬性新增至應用程式的 AssemblyInfo 檔案或將編譯為應用程式主要組件的主要原始程式碼檔案。  
   
      [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
      [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
-3.  將其他文化特性 (en-US、fr-FR 和 ru-RU) 的支援新增至應用程式，如下所示：  
+3. 將其他文化特性 (en-US、fr-FR 和 ru-RU) 的支援新增至應用程式，如下所示：  
   
     -   若要支援 en-US 或英文 (美國) 文化特性，請建立名為 Greeting.en-US.resx 或 Greeting.en-US.txt 的資源檔，並在其中儲存名為 `HelloString` 且其值為 "Hi world!" 的單一字串。  
   
@@ -102,7 +103,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
     -   若要支援 ru-RU 或俄文 (俄國) 文化特性，請建立名為 Greeting.ru-RU.resx 或 Greeting.ru-RU.txt 的資源檔，並在其中儲存名為 `HelloString` 且其值為 "Всем привет!" 的單一字串。  
   
-4.  使用 [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)，將每一個文字或 XML 資源檔編譯成二進位 .resources 檔案。 輸出是根檔案名稱與 .resx 或 .txt 檔案相同的一組檔案，但副檔名為 .resources。 如果您使用 Visual Studio 建立範例，則會自動處理編譯程序。 如果您不要使用 Visual Studio，請執行下列命令將 .resx 檔案編譯為 .resources 檔案：  
+4. 使用 [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)，將每一個文字或 XML 資源檔編譯成二進位 .resources 檔案。 輸出是根檔案名稱與 .resx 或 .txt 檔案相同的一組檔案，但副檔名為 .resources。 如果您使用 Visual Studio 建立範例，則會自動處理編譯程序。 如果您不要使用 Visual Studio，請執行下列命令將 .resx 檔案編譯為 .resources 檔案：  
   
     ```console
     resgen Greeting.resx  
@@ -113,10 +114,10 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
      如果您的資源是文字檔，而非 XML 檔案，請將副檔名 .resx 取代為 .txt。  
   
-5.  將下列原始程式碼與預設文化特性的資源編譯為應用程式的主要組件：  
+5. 將下列原始程式碼與預設文化特性的資源編譯為應用程式的主要組件：  
   
     > [!IMPORTANT]
-    >  如果您使用命令列建立範例而非 Visual Studio，則應該將 <xref:System.Resources.ResourceManager> 類別建構函式的呼叫修改為下列：`ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`  
+    >  如果您使用命令列建立範例而非 Visual Studio，則應該將 <xref:System.Resources.ResourceManager> 類別建構函式的呼叫修改為下列： `ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`  
   
      [!code-csharp[Conceptual.Resources.Locating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)]
      [!code-vb[Conceptual.Resources.Locating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]  
@@ -133,9 +134,9 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
     vbc Example.vb -res:Greeting.resources  
     ```  
   
-6.  在應用程式所支援之每個當地語系化文化特性的主要應用程式目錄中，建立子目錄。 您應該建立 en-US、fr-FR 和 ru-RU 子目錄。 Visual Studio 會在編譯程序時自動建立這些子目錄。  
+6. 在應用程式所支援之每個當地語系化文化特性的主要應用程式目錄中，建立子目錄。 您應該建立 en-US、fr-FR 和 ru-RU 子目錄。 Visual Studio 會在編譯程序時自動建立這些子目錄。  
   
-7.  將個別文化特性特定 .resources 檔案內嵌到附屬組件，並將它們儲存到適當的目錄。 針對每個 .resources 檔案執行這項作業的命令為：  
+7. 將個別文化特性特定 .resources 檔案內嵌到附屬組件，並將它們儲存到適當的目錄。 針對每個 .resources 檔案執行這項作業的命令為：  
   
     ```console
     al -target:lib -embed:Greeting.culture.resources -culture:culture -out:culture\Example.resources.dll  
@@ -202,7 +203,7 @@ gacutil -i:StringLibrary.resources.dll
 ### <a name="resources-in-the-global-assembly-cache-an-example"></a>全域組件快取中的資源：範例  
  下列範例會使用 .NET Framework 類別庫中的方法，從資源檔擷取並傳回當地語系化的問候。 程式庫和其資源都會註冊在全域組件快取中。 此範例包括英文 (美國)、法文 (法國)、俄文 (俄國) 和英文文化特性的資源。 英文是預設文化特性；其資源儲存在主要組件中。 此範例一開始會使用公開金鑰來延遲簽署程式庫和其附屬組件，然後使用公開/私密金鑰組來重新簽署它們。 若要建立範例，請執行下列動作：  
   
-1.  如果您未使用 Visual Studio，請使用下列[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 命令來建立名為 ResKey.snk 的公開/私密金鑰組：  
+1. 如果您未使用 Visual Studio，請使用下列[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 命令來建立名為 ResKey.snk 的公開/私密金鑰組：  
   
     ```console
     sn –k ResKey.snk  
@@ -210,20 +211,20 @@ gacutil -i:StringLibrary.resources.dll
   
      如果您使用 Visual Studio，請使用專案 [屬性] 對話方塊的 [簽署] 索引標籤來產生金鑰檔。  
   
-2.  使用下列[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 命令來建立名為 PublicKey.snk 的公用金鑰檔案：  
+2. 使用下列[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 命令來建立名為 PublicKey.snk 的公用金鑰檔案：  
   
     ```console
     sn –p ResKey.snk PublicKey.snk  
     ```  
   
-3.  建立名為 Strings.resx 的資源檔，以包含預設文化特性的資源。 將名為 `Greeting` 且其值為 "How do you do?" 的單一字串儲存 在該檔案中。  
+3. 建立名為 Strings.resx 的資源檔，以包含預設文化特性的資源。 將名為 `Greeting` 且其值為 "How do you do?" 的單一字串儲存 在該檔案中。  
   
-4.  若要指出 "en" 是應用程式的預設文化特性，請將下列 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 屬性新增至應用程式的 AssemblyInfo 檔案或將編譯為應用程式主要組件的主要原始程式碼檔案：  
+4. 若要指出 "en" 是應用程式的預設文化特性，請將下列 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 屬性新增至應用程式的 AssemblyInfo 檔案或將編譯為應用程式主要組件的主要原始程式碼檔案：  
   
      [!code-csharp[Conceptual.Resources.Satellites#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#2)]
      [!code-vb[Conceptual.Resources.Satellites#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#2)]  
   
-5.  將其他文化特性 (en-US、fr-FR 和 ru-RU 文化特性) 的支援新增至應用程式，如下所示：  
+5. 將其他文化特性 (en-US、fr-FR 和 ru-RU 文化特性) 的支援新增至應用程式，如下所示：  
   
     -   若要支援 "en-US" 或英文 (美國) 文化特性，請建立名為 Strings.en-US.resx 或 Strings.en-US.txt 的資源檔，並在其中儲存名為 `Greeting` 且其值為 "Hello!" 的單一字串。  
   
@@ -231,7 +232,7 @@ gacutil -i:StringLibrary.resources.dll
   
     -   若要支援 "ru-RU" 或俄文 (俄國) 文化特性，請建立名為 Strings.ru-RU.resx 或 Strings.ru-RU.txt 的資源檔，並在其中儲存名為 `Greeting` 且其值為 "Привет!" 的單一字串。  
   
-6.  使用 [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)，將每一個文字或 XML 資源檔編譯成二進位 .resources 檔案。 輸出是根檔案名稱與 .resx 或 .txt 檔案相同的一組檔案，但副檔名為 .resources。 如果您使用 Visual Studio 建立範例，則會自動處理編譯程序。 如果您不要使用 Visual Studio，請執行下列命令將 .resx 檔案編譯為 .resources 檔案：  
+6. 使用 [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)，將每一個文字或 XML 資源檔編譯成二進位 .resources 檔案。 輸出是根檔案名稱與 .resx 或 .txt 檔案相同的一組檔案，但副檔名為 .resources。 如果您使用 Visual Studio 建立範例，則會自動處理編譯程序。 如果您不要使用 Visual Studio，請執行下列命令將 .resx 檔案編譯為 .resources 檔案：  
   
     ```console
     resgen filename  
@@ -239,7 +240,7 @@ gacutil -i:StringLibrary.resources.dll
   
      其中 <檔案名稱> 是 .resx 或文字檔的選擇性路徑、檔案名稱和副檔名。  
   
-7.  將 StringLibrary.vb 或 StringLibrary.cs 的下列原始程式碼以及預設文化特性的資源編譯為名為 StringLibrary.dll 的延遲簽署程式庫組件：  
+7. 將 StringLibrary.vb 或 StringLibrary.cs 的下列原始程式碼以及預設文化特性的資源編譯為名為 StringLibrary.dll 的延遲簽署程式庫組件：  
   
     > [!IMPORTANT]
     >  如果您使用命令列而非 Visual Studio 來建立範例，則應該將 <xref:System.Resources.ResourceManager> 類別建構函式的呼叫修改為 `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`。  
@@ -259,7 +260,7 @@ gacutil -i:StringLibrary.resources.dll
     vbc -t:library -resource:Strings.resources -delaysign+ -keyfile:publickey.snk StringLibrary.vb  
     ```  
   
-8.  在應用程式所支援之每個當地語系化文化特性的主要應用程式目錄中，建立子目錄。 您應該建立 en-US、fr-FR 和 ru-RU 子目錄。 Visual Studio 會在編譯程序時自動建立這些子目錄。 因為所有附屬組件都有相同的檔案名稱，所以使用子目錄來儲存個別文化特性特定附屬組件，直到使用公開/私密金鑰組簽署它們為止。  
+8. 在應用程式所支援之每個當地語系化文化特性的主要應用程式目錄中，建立子目錄。 您應該建立 en-US、fr-FR 和 ru-RU 子目錄。 Visual Studio 會在編譯程序時自動建立這些子目錄。 因為所有附屬組件都有相同的檔案名稱，所以使用子目錄來儲存個別文化特性特定附屬組件，直到使用公開/私密金鑰組簽署它們為止。  
   
 9. 將個別文化特性特定 .resources 檔案內嵌到延遲簽署的附屬組件，並將它們儲存到適當的目錄。 針對每個 .resources 檔案執行這項作業的命令為：  
   
@@ -309,6 +310,7 @@ gacutil -i:StringLibrary.resources.dll
 14. 執行 Example.exe。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
 - [延遲簽署組件](../../../docs/framework/app-domains/delay-sign-assembly.md)
 - [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)

@@ -15,10 +15,10 @@ helpviewer_keywords:
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
 ms.openlocfilehash: cf1391e88c03095e0851d75ae6d50f8e809d13e9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295610"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>HOW TO：實作 DHTML 程式碼和用戶端應用程式程式碼之間的雙向通訊

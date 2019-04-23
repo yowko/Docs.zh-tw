@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
 ms.openlocfilehash: 9d7216b3aed89dc88737cc346386d6b03929fe60
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295571"
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>HOW TO：變更 X.509 憑證私密金鑰的密碼編譯提供者
@@ -84,7 +84,7 @@ ms.locfileid: "59295571"
 - <xref:System.Security.Cryptography.AsymmetricAlgorithm>
 - <xref:System.Security.Cryptography.HashAlgorithm>
 - <xref:System.Security.Cryptography.AsymmetricSignatureFormatter>
-- [逐步解說：建立自訂用戶端與服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [HOW TO：建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [HOW TO：建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [HOW TO：建立自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+- [逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [如何：建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [如何：建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [如何：建立自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)

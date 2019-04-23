@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中接收來自序列埠的字串
+title: HOW TO：在 Visual Basic 中接收來自序列埠的字串
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports, retrieving strings
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - My.Resources object
 ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
 ms.openlocfilehash: 6c832cd9ef5df904850261f4de2d769bfc28c3cb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296715"
 ---
-# <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>作法：在 Visual Basic 中接收來自序列埠的字串
+# <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>HOW TO：在 Visual Basic 中接收來自序列埠的字串
 本主題描述如何在 Visual Basic 中使用 `My.Computer.Ports` 來接收來自電腦序列埠的字串。  
   
 ### <a name="to-receive-strings-from-the-serial-port"></a>接收來自序列埠的字串  
@@ -67,6 +67,6 @@ ms.locfileid: "59296715"
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
-- [作法：撥接與序列埠連接的數據機](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)
-- [作法：將字串傳送至序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
-- [作法：顯示可用的序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+- [如何：撥接與序列埠連接的數據機](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)
+- [如何：將字串傳送至序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
+- [如何：顯示可用的序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)

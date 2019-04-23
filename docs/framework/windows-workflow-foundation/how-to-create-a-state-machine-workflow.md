@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
 ms.openlocfilehash: 654621ab7dd74c26a7fddbd985559a713c0e9df3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294804"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>HOW TO：建立狀態機器工作流程
@@ -194,5 +194,5 @@ ms.locfileid: "59294804"
 - [Windows Workflow Foundation 程式設計](programming.md)
 - [設計工作流程](designing-workflows.md)
 - [快速入門教學課程](getting-started-tutorial.md)
-- [HOW TO：建立活動](how-to-create-an-activity.md)
-- [HOW TO：執行工作流程](how-to-run-a-workflow.md)
+- [如何：建立活動](how-to-create-an-activity.md)
+- [如何：執行工作流程](how-to-run-a-workflow.md)

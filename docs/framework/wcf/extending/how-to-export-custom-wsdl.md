@@ -3,10 +3,10 @@ title: HOW TO：匯出自訂 WSDL
 ms.date: 03/30/2017
 ms.assetid: 5c1e4b58-b76b-472b-9635-2f80d42a0734
 ms.openlocfilehash: 725e1b27f36716002ad7cd05183181da9e05fa65
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296416"
 ---
 # <a name="how-to-export-custom-wsdl"></a>HOW TO：匯出自訂 WSDL
@@ -16,7 +16,7 @@ ms.locfileid: "59296416"
   
 1. 實作 <xref:System.ServiceModel.Description.IWsdlExportExtension> 介面。 您可以在實作下列任何介面的類別上實作此介面：<xref:System.ServiceModel.Description.IOperationBehavior>、<xref:System.ServiceModel.Description.IContractBehavior> 或 <xref:System.ServiceModel.Description.IEndpointBehavior>。 您也可以在衍生自 <xref:System.ServiceModel.Channels.BindingElement> 的類別上實作此介面。 此範例在實作 <xref:System.ServiceModel.Description.IWsdlExportExtension> 的屬性類別上實作了 <xref:System.ServiceModel.Description.IContractBehavior>。  
   
-2. <xref:System.ServiceModel.Description.IWsdlExportExtension> 定義兩個方法<xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29>和<xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>。 這些方法可讓您修改或加入 (或修改和加入) 額外的資訊至 <xref:System.ServiceModel.Description.WsdlContractConversionContext>。 這個範例的 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 方法中，擷取了 <xref:System.ServiceModel.Description.OperationDescription> 物件的集合，接著並逐一查看集合，檢查是否有 `WsdlDocumentationAttribute`。 如果找到任何一個，則會擷取與屬性關聯的文字、產生摘要項目，並將摘要項目加入至作業的 `DocumentationElement`。  
+2. <xref:System.ServiceModel.Description.IWsdlExportExtension> 定義了兩個方法：<xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> 和 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>。 這些方法可讓您修改或加入 (或修改和加入) 額外的資訊至 <xref:System.ServiceModel.Description.WsdlContractConversionContext>。 這個範例的 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 方法中，擷取了 <xref:System.ServiceModel.Description.OperationDescription> 物件的集合，接著並逐一查看集合，檢查是否有 `WsdlDocumentationAttribute`。 如果找到任何一個，則會擷取與屬性關聯的文字、產生摘要項目，並將摘要項目加入至作業的 `DocumentationElement`。  
   
     ```  
             public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  

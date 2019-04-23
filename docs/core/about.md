@@ -3,12 +3,12 @@ title: 關於 .NET Core
 description: 了解 .NET Core。
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: 6c76d5e80cba6947eb5a91fb31fc3e511970d165
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 87514b476124196c835e4b22154f9bbaca7482a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675962"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296403"
 ---
 # <a name="about-net-core"></a>關於 .NET Core
 
@@ -24,7 +24,7 @@ ms.locfileid: "57675962"
 
 ## <a name="languages"></a>語言
 
-C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式庫。 這些語言已經或者能夠整合至您最慣用的文字編輯器與 IDE，包括 [Visual Studio](https://visualstudio.microsoft.com/vs/)、[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)、Sublime Text 和 Vim。 這項整合有部分由 [OmniSharp](https://www.omnisharp.net/) 及 [Ionide](http://ionide.io) 專案的優秀人士提供。
+C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式庫。 這些語言已經或者能夠整合至您最慣用的文字編輯器與 IDE，包括 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)、[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)、Sublime Text 和 Vim。 這項整合有部分由 [OmniSharp](https://www.omnisharp.net/) 及 [Ionide](http://ionide.io) 專案的優秀人士提供。
 
 ## <a name="apis"></a>API
 

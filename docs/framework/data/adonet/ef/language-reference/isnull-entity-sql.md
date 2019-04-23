@@ -3,10 +3,10 @@ title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
 ms.openlocfilehash: aaecce3ff74d64b8e07b31329ced5b5e581fca5b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295090"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
@@ -26,7 +26,7 @@ expression IS [ NOT ] NULL
  否定 IS NULL 的 EDM.Boolean 結果。  
   
 ## <a name="return-value"></a>傳回值  
- `true` 如果`expression`會傳回 null; 否則即為`false`。  
+ 如果 `true` 傳回 null 則為 `expression`；否則為 `false`。  
   
 ## <a name="remarks"></a>備註  
  使用 `IS NULL` 判斷外部連結的項目是否為 null：  

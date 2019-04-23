@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
 ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296208"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip 控制項架構
@@ -64,7 +64,7 @@ ms.locfileid: "59296208"
 -   <xref:System.Windows.Forms.ToolStripProgressBar>  
   
 ### <a name="contextmenustrip"></a>ContextMenuStrip  
- <xref:System.Windows.Forms.ContextMenuStrip> 取代<xref:System.Windows.Forms.ContextMenu>。 您可以建立關聯<xref:System.Windows.Forms.ContextMenuStrip>與任何控制項，並以滑鼠右鍵按一下自動顯示的內容功能表 （或快顯功能表）。 您可以顯示<xref:System.Windows.Forms.ContextMenuStrip>以程式設計方式使用<xref:System.Windows.Forms.ToolStripDropDown.Show%2A>方法。 <xref:System.Windows.Forms.ContextMenuStrip> 支援可取消<xref:System.Windows.Forms.ToolStripDropDown.Opening>和<xref:System.Windows.Forms.ToolStripDropDown.Closing>事件，以處理動態的母體擴展，以及多個按一下案例。 <xref:System.Windows.Forms.ContextMenuStrip> 支援映像、 功能表項目核取狀態、 文字、 存取金鑰、 捷徑和串聯功能表。  
+ <xref:System.Windows.Forms.ContextMenuStrip> 會取代 <xref:System.Windows.Forms.ContextMenu>。 您可以建立關聯<xref:System.Windows.Forms.ContextMenuStrip>與任何控制項，並以滑鼠右鍵按一下自動顯示的內容功能表 （或快顯功能表）。 您可以顯示<xref:System.Windows.Forms.ContextMenuStrip>以程式設計方式使用<xref:System.Windows.Forms.ToolStripDropDown.Show%2A>方法。 <xref:System.Windows.Forms.ContextMenuStrip> 支援可取消<xref:System.Windows.Forms.ToolStripDropDown.Opening>和<xref:System.Windows.Forms.ToolStripDropDown.Closing>事件，以處理動態的母體擴展，以及多個按一下案例。 <xref:System.Windows.Forms.ContextMenuStrip> 支援映像、 功能表項目核取狀態、 文字、 存取金鑰、 捷徑和串聯功能表。  
   
  下列項目專為與兩者都能完美合作<xref:System.Windows.Forms.ToolStripSystemRenderer>和<xref:System.Windows.Forms.ToolStripProfessionalRenderer>在所有方向。 它們是在設計階段的預設可用的<xref:System.Windows.Forms.ContextMenuStrip>控制項：  
   

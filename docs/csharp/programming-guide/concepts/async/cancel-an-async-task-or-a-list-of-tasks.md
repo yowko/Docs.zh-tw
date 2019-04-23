@@ -2,12 +2,12 @@
 title: 取消一項非同步工作或工作清單 (C#)
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 27c14a4cc67d9f7e26f053b417d36c8de4bf594a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 01557bf80f40d4197d29ab05cfb4838f5d993a82
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131517"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295740"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>取消一項非同步工作或工作清單 (C#)
 
@@ -24,17 +24,17 @@ ms.locfileid: "53131517"
 
 ### <a name="download-the-example"></a>下載範例
 
-您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。
+您可以從 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。
 
-1.  解壓縮您下載的檔案，然後啟動 Visual Studio。
+1. 解壓縮您下載的檔案，然後啟動 Visual Studio。
 
-2.  在功能表列上選擇 [檔案] >  [開啟] > [專案/解決方案]。
+2. 在功能表列上選擇 [檔案] >  [開啟] > [專案/解決方案]。
 
-3.  在 [開啟專案] 對話方塊中，開啟保存已解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningCS 的方案 (.sln) 檔案。
+3. 在 [開啟專案] 對話方塊中，開啟保存已解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningCS 的方案 (.sln) 檔案。
 
-4.  在方案總管中，開啟 **CancelATask** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。
+4. 在方案總管中，開啟 **CancelATask** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。
 
-5.  選擇 **F5** 鍵以執行專案 (或按 **Ctrl** + **F5** 以執行專案但不進行偵錯)。
+5. 選擇 **F5** 鍵以執行專案 (或按 **Ctrl** + **F5** 以執行專案但不進行偵錯)。
 
 > [!TIP]
 > 如果您不想要下載專案，則可以檢閱本主題結尾的 MainWindow.xaml.cs 檔案。
@@ -46,7 +46,7 @@ ms.locfileid: "53131517"
 
  然後將下列變更新增至該專案的 MainWindow.xaml.cs 檔案。
 
-1.  宣告 `CancellationTokenSource` 變數 `cts`，這是在存取它之所有方法的範圍內。
+1. 宣告 `CancellationTokenSource` 變數 `cts`，這是在存取它之所有方法的範圍內。
 
     ```csharp
     public partial class MainWindow : Window
@@ -55,7 +55,7 @@ ms.locfileid: "53131517"
         CancellationTokenSource cts;
     ```
 
-2.  針對 [取消] 按鈕新增下列事件處理常式。 事件處理常式會使用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法，以在使用者要求取消時通知 `cts`。
+2. 針對 [取消] 按鈕新增下列事件處理常式。 事件處理常式會使用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法，以在使用者要求取消時通知 `cts`。
 
     ```csharp
     // ***Add an event handler for the Cancel button.
@@ -68,7 +68,7 @@ ms.locfileid: "53131517"
     }
     ```
 
-3.  在 [開始] 按鈕 `startButton_Click` 的事件處理常式中進行下列變更。
+3. 在 [開始] 按鈕 `startButton_Click` 的事件處理常式中進行下列變更。
 
     -   具現化 `CancellationTokenSource`、`cts`。
 
@@ -97,7 +97,7 @@ ms.locfileid: "53131517"
         }
         ```
 
-4.  在 `AccessTheWebAsync` 中，使用 <xref:System.Net.Http.HttpClient> 型別中 `GetAsync` 方法的 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 多載來下載網站的內容。 將 `ct` (`AccessTheWebAsync` 的 <xref:System.Threading.CancellationToken> 參數) 傳遞為第二個引數。 如果使用者選擇 [取消] 按鈕，則權杖會夾帶訊息。
+4. 在 `AccessTheWebAsync` 中，使用 <xref:System.Net.Http.HttpClient> 型別中 `GetAsync` 方法的 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 多載來下載網站的內容。 將 `ct` (`AccessTheWebAsync` 的 <xref:System.Threading.CancellationToken> 參數) 傳遞為第二個引數。 如果使用者選擇 [取消] 按鈕，則權杖會夾帶訊息。
 
      下列程式碼示範 `AccessTheWebAsync` 中的變更。
 
@@ -124,7 +124,7 @@ ms.locfileid: "53131517"
     }
     ```
 
-5.  如果您未取消程式，則會產生下列輸出。
+5. 如果您未取消程式，則會產生下列輸出。
 
     ```text
     Ready to download.
@@ -144,17 +144,17 @@ ms.locfileid: "53131517"
 
 ### <a name="download-the-example"></a>下載範例
 
-您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。
+您可以從 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。
 
-1.  解壓縮您下載的檔案，然後啟動 Visual Studio。
+1. 解壓縮您下載的檔案，然後啟動 Visual Studio。
 
-2.  在功能表列上選擇 [檔案] >  [開啟] > [專案/解決方案]。
+2. 在功能表列上選擇 [檔案] >  [開啟] > [專案/解決方案]。
 
-3.  在 [開啟專案] 對話方塊中，開啟保存已解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningCS 的方案 (.sln) 檔案。
+3. 在 [開啟專案] 對話方塊中，開啟保存已解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningCS 的方案 (.sln) 檔案。
 
-4.  在方案總管中，開啟 **CancelAListOfTasks** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。
+4. 在方案總管中，開啟 **CancelAListOfTasks** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。
 
-5.  選擇 **F5** 鍵以執行專案。
+5. 選擇 **F5** 鍵以執行專案。
 
      選擇 **Ctrl** + **F5** 鍵以執行專案，而不進行偵錯。
 
@@ -164,7 +164,7 @@ ms.locfileid: "53131517"
 
 若要自行逐步擴充範例，請遵循＜下載範例＞一節中的指示，但選擇 [CancelATask] 作為 [啟始專案]。 將下列變更新增至該專案。 星號會標記程式中的變更。
 
-1.  新增方法以建立網址清單。
+1. 新增方法以建立網址清單。
 
     ```csharp
     // ***Add a method that creates a list of web addresses.
@@ -184,14 +184,14 @@ ms.locfileid: "53131517"
     }
     ```
 
-2.  在 `AccessTheWebAsync` 中呼叫方法。
+2. 在 `AccessTheWebAsync` 中呼叫方法。
 
     ```csharp
     // ***Call SetUpURLList to make a list of web addresses.
     List<string> urlList = SetUpURLList();
     ```
 
-3.  在 `AccessTheWebAsync` 中新增下列迴圈，以處理清單中的每個網址。
+3. 在 `AccessTheWebAsync` 中新增下列迴圈，以處理清單中的每個網址。
 
     ```csharp
     // ***Add a loop to process the list of web addresses.
@@ -210,7 +210,7 @@ ms.locfileid: "53131517"
     }
     ```
 
-4.  因為 `AccessTheWebAsync` 顯示長度，所以此方法不需要傳回任何項目。 請移除 return 陳述式，並將方法的傳回型別變更為 <xref:System.Threading.Tasks.Task>，而非 <xref:System.Threading.Tasks.Task%601>。
+4. 因為 `AccessTheWebAsync` 顯示長度，所以此方法不需要傳回任何項目。 請移除 return 陳述式，並將方法的傳回型別變更為 <xref:System.Threading.Tasks.Task>，而非 <xref:System.Threading.Tasks.Task%601>。
 
     ```csharp
     async Task AccessTheWebAsync(CancellationToken ct)
@@ -222,7 +222,7 @@ ms.locfileid: "53131517"
     await AccessTheWebAsync(cts.Token);
     ```
 
-5.  如果您未取消程式，則會產生下列輸出。
+5. 如果您未取消程式，則會產生下列輸出。
 
     ```text
     Length of the downloaded string: 35939.
@@ -258,7 +258,7 @@ ms.locfileid: "53131517"
 
 下列各節包含每個先前範例的程式碼。 請注意，您必須新增 <xref:System.Net.Http> 的參考。
 
-您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。
+您可以從 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。
 
 ### <a name="example---cancel-a-task"></a>範例 - 取消工作
 
@@ -523,4 +523,4 @@ namespace CancelAListOfTasks
 - <xref:System.Threading.CancellationToken>
 - [使用 Async 和 Await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [微調非同步應用程式 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [非同步範例：微調應用程式 (英文)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [非同步範例：微調您的應用程式](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

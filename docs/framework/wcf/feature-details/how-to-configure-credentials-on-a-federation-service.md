@@ -9,10 +9,10 @@ helpviewer_keywords:
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
 ms.openlocfilehash: 33df685b4d14130ae00d59012706b7637924c9be
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295428"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>HOW TO：設定同盟服務的認證
@@ -74,10 +74,10 @@ ms.locfileid: "59295428"
 ## <a name="see-also"></a>另請參閱
 
 - [同盟](../../../../docs/framework/wcf/feature-details/federation.md)
-- [聯合與信任](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)
-- [聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [HOW TO：在 WSFederationHttpBinding 上停用安全工作階段](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
-- [HOW TO：建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [HOW TO：建立同盟用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [同盟和信任](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)
+- [同盟範例](../../../../docs/framework/wcf/samples/federation-sample.md)
+- [如何：停用安全工作階段在 WSFederationHttpBinding 上](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [如何：建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [如何：建立聯合用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [SecurityBindingElement 驗證模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)

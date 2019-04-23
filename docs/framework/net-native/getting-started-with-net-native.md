@@ -5,10 +5,10 @@ ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f72a1d6a10c5899a02019bf826dc3cc9d5457bed
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298470"
 ---
 # <a name="getting-started-with-net-native"></a>.NET Native 使用者入門
@@ -106,17 +106,17 @@ ms.locfileid: "59298470"
   
  如需處理測試應用程式時所發生之例外狀況和其他問題的一些特定範例，請參閱：  
   
--   [範例：處理繫結資料時所發生的例外狀況](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [例如：資料繫結時處理例外狀況](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
--   [範例：針對動態程式設計進行疑難排解](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
+-   [例如：動態程式設計疑難排解](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
--   [.NET 原生 App 中的執行階段例外狀況](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
+-   [.NET Native 應用程式中的執行階段例外狀況](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>另請參閱
 
 - [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [.NET Native 設定和組態](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
-- [.NET 原生和編譯](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [.NET native 設定和組態](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [.NET Native 和編譯](../../../docs/framework/net-native/net-native-and-compilation.md)
 - [反映和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [依賴反映的 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
 - [序列化和中繼資料](../../../docs/framework/net-native/serialization-and-metadata.md)

@@ -3,10 +3,10 @@ title: HOW TO：在組態中指定用戶端繫結
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
 ms.openlocfilehash: 633bb0feeb0f9354bd6ff8ee6637f123d3e3cbf4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295129"
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>HOW TO：在組態中指定用戶端繫結
@@ -52,4 +52,4 @@ ms.locfileid: "59295129"
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用繫結來設定服務和用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [使用繫結設定服務與用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

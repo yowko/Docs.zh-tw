@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
 ms.openlocfilehash: 5de918f71f4361af3409c8382781844824747c83
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296598"
 ---
 # <a name="concurrency"></a>並行
@@ -22,11 +22,11 @@ ms.locfileid: "59296598"
   
  其中提供三種可用的並行模式：  
   
--   `Single`:每個服務執行個體一次處理一個訊息。 這是預設的並行模式。  
+-   `Single`：每個服務執行個體一次處理一個訊息。 這是預設的並行模式。  
   
--   `Multiple`:每個服務執行個體同時處理多個訊息。 此服務實作必須是安全執行緒，才能使用這種並行模式。  
+-   `Multiple`：每個服務執行個體同時處理多個訊息。 此服務實作必須是安全執行緒，才能使用這種並行模式。  
   
--   `Reentrant`:每個服務執行個體一次處理一個訊息，但接受可重新進入的呼叫。 服務只有在對外呼叫時才會接受這些呼叫。可重新進入所示[ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md)範例。  
+-   `Reentrant`：每個服務執行個體一次處理一個訊息，但接受可重新進入的呼叫。 服務只有在對外呼叫時才會接受這些呼叫。可重新進入所示[ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md)範例。  
   
  並存的使用與執行個體模式有關。 在 <xref:System.ServiceModel.InstanceContextMode.PerCall> 執行個體中，並行模式沒有任何相關，因為每個訊息都是由新的服務執行個體處理。 在 <xref:System.ServiceModel.InstanceContextMode.Single> 執行個體中，只有 <xref:System.ServiceModel.ConcurrencyMode.Single> 或 <xref:System.ServiceModel.ConcurrencyMode.Multiple>，並行模式才相關，這點會依單一執行個體是循序處理或並行處理訊息而定。 在 <xref:System.ServiceModel.InstanceContextMode.PerSession> 執行個體中，任何並行模式都可能相關。  
   

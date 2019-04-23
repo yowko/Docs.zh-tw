@@ -6,10 +6,10 @@ helpviewer_keywords:
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
 ms.openlocfilehash: 5495d8198d30f4462fa9772f7d663664c82c6dee
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296338"
 ---
 # <a name="working-with-nats-and-firewalls"></a>使用 NAT 與防火牆
@@ -32,7 +32,7 @@ ms.locfileid: "59296338"
  家庭使用者防火牆的常見組態是禁止傳入的連線 (除非先前已對該電腦進行傳出的連線)。 商務使用者防火牆的常見組態是禁止所有連接埠上的傳入連線 (除了特別指定的群組之外)。 範例：會禁止所有連接埠 (連接埠 80 與 443 除外) 上的連線以提供 HTTP 和 HTTPS 服務的防火牆。 家庭與商務使用者同時透過管理防火牆，允許電腦上受信任的使用者或處理序變更防火牆組態。 對於不具備企業原則來控管網路使用的家庭使用者而言，管理防火牆是常見的選擇。  
   
 ## <a name="using-teredo"></a>使用 Teredo  
- Teredo 是一種 IPv6 轉換技術，可讓 NAT 後面的電腦具備直接可定址性。 Teredo 仰賴可公開且全域路由的伺服器，通告潛在的連線。 Teredo 伺服器會提供應用程式用戶端與伺服器一個共同的會議點，讓彼此交換連線資訊。 接著這些機器會要求暫時的 Teredo 位址，並透過現有的網路通道來傳送封包。 在 WCF 中的 teredo 支援需要啟用 IPv6 和 Teredo 的支援作業系統中。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和更新版本的作業系統都支援 Teredo。 [!INCLUDE[wv](../../../../includes/wv-md.md)] 和更新版本的作業系統預設支援 IPv6，而只需要使用者啟用 Teredo。 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 和[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]要求使用者在啟用 IPv6 和 Teredo。 如需詳細資訊，請參閱 < [Teredo 概觀](https://go.microsoft.com/fwlink/?LinkId=87571)。  
+ Teredo 是一種 IPv6 轉換技術，可讓 NAT 後面的電腦具備直接可定址性。 Teredo 仰賴可公開且全域路由的伺服器，通告潛在的連線。 Teredo 伺服器會提供應用程式用戶端與伺服器一個共同的會議點，讓彼此交換連線資訊。 接著這些機器會要求暫時的 Teredo 位址，並透過現有的網路通道來傳送封包。 在 WCF 中的 teredo 支援需要啟用 IPv6 和 Teredo 的支援作業系統中。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] (含) 以後版本的作業系統都支援 Teredo。 [!INCLUDE[wv](../../../../includes/wv-md.md)] (含) 以後版本的作業系統預設支援 IPv6，而且使用者只需要啟用 Teredo 即可。 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 都需要使用者同時啟用 IPv6 與 Teredo。 如需詳細資訊，請參閱 < [Teredo 概觀](https://go.microsoft.com/fwlink/?LinkId=87571)。  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>選擇傳輸與訊息交換模式  
  選取傳輸與 MEP 需經過三個步驟的處理序：  
@@ -56,9 +56,9 @@ ms.locfileid: "59296338"
 |可定址性|直接伺服器|使用 NAT 周遊功能的直接伺服器|伺服器 NAT|使用 NAT 周遊功能的伺服器 NAT|  
 |--------------------|-------------------|--------------------------------------|----------------|-----------------------------------|  
 |直接用戶端|任何傳輸和 MEP|任何傳輸和 MEP|不支援。|不支援。|  
-|使用 NAT 周遊功能的直接用戶端|任何傳輸和 MEP。|任何傳輸和 MEP。|不支援。|包含 Teredo 的 TCP 與任何 MEP。 [!INCLUDE[wv](../../../../includes/wv-md.md)] 具有整部電腦的設定選項，以支援包含 Teredo 的 HTTP。|  
+|使用 NAT 周遊功能的直接用戶端|任何傳輸和 MEP。|任何傳輸和 MEP。|不支援。|包含 Teredo 的 TCP 與任何 MEP。 [!INCLUDE[wv](../../../../includes/wv-md.md)] 具有整部機器的組態選項以支援包含 Teredo 的 HTTP。|  
 |用戶端 NAT|任何非雙重傳輸和 MEP。 雙工 MEP 需要 TCP 傳輸。|任何非雙重傳輸和 MEP。 雙工 MEP 需要 TCP 傳輸。|不支援。|不支援。|  
-|使用 NAT 周遊功能的用戶端 NAT|任何非雙重傳輸和 MEP。 雙工 MEP 需要 TCP 傳輸。|除了雙重 HTTP 與任何 MEP 以外。 雙工 MEP 需要 TCP 傳輸。 雙重 TCP 傳輸需要 Teredo。 [!INCLUDE[wv](../../../../includes/wv-md.md)] 具有整部電腦的設定選項，以支援包含 Teredo 的 HTTP。|不支援。|包含 Teredo 的 TCP 與任何 MEP。 [!INCLUDE[wv](../../../../includes/wv-md.md)] 具有整部電腦的設定選項，以支援包含 Teredo 的 HTTP。|  
+|使用 NAT 周遊功能的用戶端 NAT|任何非雙重傳輸和 MEP。 雙工 MEP 需要 TCP 傳輸。|除了雙重 HTTP 與任何 MEP 以外。 雙工 MEP 需要 TCP 傳輸。 雙重 TCP 傳輸需要 Teredo。 [!INCLUDE[wv](../../../../includes/wv-md.md)] 具有整部機器的組態選項以支援包含 Teredo 的 HTTP。|不支援。|包含 Teredo 的 TCP 與任何 MEP。 [!INCLUDE[wv](../../../../includes/wv-md.md)] 具有整部機器的組態選項以支援包含 Teredo 的 HTTP。|  
   
 |防火牆限制|開放性伺服器|使用管理防火牆的伺服器|使用僅限 HTTP 防火牆的伺服器|使用僅限傳出流量防火牆的伺服器|  
 |---------------------------|-----------------|----------------------------------|-------------------------------------|-----------------------------------------|  

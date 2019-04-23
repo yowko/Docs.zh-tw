@@ -3,10 +3,10 @@ title: 追蹤記錄
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
 ms.openlocfilehash: 46b52f6b774d1d692c0e7dec400d369428a9607e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298353"
 ---
 # <a name="tracking-records"></a>追蹤記錄
@@ -50,15 +50,15 @@ ms.locfileid: "59298353"
   
  例如，若有包含 <xref:System.Activities.Statements.Sequence> 作業的簡單 <xref:System.Activities.Statements.WriteLine> 活動，其追蹤記錄是按下列順序發出的：  
   
-1. <xref:System.Activities.Tracking.WorkflowInstanceRecord> 表示正在啟動工作流程。  
+1. <xref:System.Activities.Tracking.WorkflowInstanceRecord> 表示工作流程正在啟動。  
   
 2. <xref:System.Activities.Tracking.ActivityScheduledRecord> 表示活動已排程。 在此種情況下，這是 <xref:System.Activities.Statements.Sequence> 活動。  
   
-3. <xref:System.Activities.Tracking.ActivityScheduledRecord> 代表<xref:System.Activities.Statements.WriteLine>活動。  
+3. <xref:System.Activities.Tracking.ActivityScheduledRecord> 代表 <xref:System.Activities.Statements.WriteLine> 活動。  
   
 4. 有兩個 <xref:System.Activities.Tracking.ActivityStateRecord> 記錄，代表兩個即將完成的活動。  
   
-5. <xref:System.Activities.Tracking.WorkflowInstanceRecord> 表示即將完成的工作流程。  
+5. <xref:System.Activities.Tracking.WorkflowInstanceRecord> 表示工作流程正在完成。  
   
 ## <a name="see-also"></a>另請參閱
 

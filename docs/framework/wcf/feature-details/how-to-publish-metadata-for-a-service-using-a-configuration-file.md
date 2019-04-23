@@ -3,10 +3,10 @@ title: HOW TO：使用組態檔發行服務的中繼資料
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
 ms.openlocfilehash: 367ebeee5c12d809a758f1bee73dfaadda85788d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295532"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>HOW TO：使用組態檔發行服務的中繼資料
@@ -98,7 +98,7 @@ namespace Metadata.Samples
 
 3. 將 `<behavior>` 項目新增至 `<serviceBehaviors>` 項目，並指定 `name` 項目的  `<behavior>` 屬性值。  
 
-4. 將 `<serviceMetadata>` 項目加入至 `<behavior>` 項目。 將 `httpGetEnabled` 屬性設為 `true` 並將 `policyVersion` 屬性設為 Policy15。 `httpGetEnabled` 允許服務回應 HTTP GET 要求所做的中繼資料要求。 `policyVersion` 會告知服務符合 Ws-policy 1.5，產生中繼資料時。  
+4. 將 `<serviceMetadata>` 項目加入至 `<behavior>` 項目。 將 `httpGetEnabled` 屬性設為 `true` 並將 `policyVersion` 屬性設為 Policy15。 `httpGetEnabled` 允許服務回應由 HTTP GET 要求所提出的中繼資料要求。 `policyVersion` 會在產生中繼資料時，要求服務符合 WS-Policy 1.5 規定。  
 
 5. 將 `behaviorConfiguration` 屬性加入至 `<service>` 項目，並指定 `name` 項目的 `<behavior>` 屬性 (於步驟 1 中加入)，如下列程式碼範例所示。  
   
@@ -140,13 +140,13 @@ namespace Metadata.Samples
   
 7. 針對上一個步驟中加入的中繼資料端點，將 `binding` 屬性設為下列其中一項：  
   
-    -   `mexHttpBinding` HTTP 發行集。  
+    -   `mexHttpBinding` (適用 HTTP 發行)。  
   
-    -   `mexHttpsBinding` 適用 HTTPS 發行。  
+    -   `mexHttpsBinding` (適用 HTTPS 發行)。  
   
-    -   `mexNamedPipeBinding` 具名的管道發行集。  
+    -   `mexNamedPipeBinding` (適用具名管道發行)。  
   
-    -   `mexTcpBinding` 適用 TCP 發行。  
+    -   `mexTcpBinding` (適用 TCP 發行)。  
   
 8. 針對上一個步驟中加入的中繼資料端點，將位址設為與下列項目相等：  
   
@@ -256,8 +256,8 @@ namespace Metadata.Samples
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
-- [HOW TO：在受控應用程式中裝載 WCF 服務](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [如何：裝載 WCF 服務中的受管理的應用程式](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [自我裝載](../../../../docs/framework/wcf/samples/self-host.md)
 - [中繼資料架構概觀](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [使用中繼資料](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [HOW TO：使用程式碼發行服務的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [如何：發行服務，使用程式碼的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

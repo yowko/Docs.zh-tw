@@ -11,10 +11,10 @@ helpviewer_keywords:
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
 ms.openlocfilehash: 44b96218e674c754a1985f2f22a36707cd1776b6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294908"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>HOW TO：公開組成控制項的屬性
@@ -60,5 +60,5 @@ public Color ButtonColor
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.UserControl>
-- [Windows Form 控制項中的屬性](properties-in-windows-forms-controls.md)
+- [Windows Forms 控制項中的屬性](properties-in-windows-forms-controls.md)
 - [各種自訂控制項](varieties-of-custom-controls.md)

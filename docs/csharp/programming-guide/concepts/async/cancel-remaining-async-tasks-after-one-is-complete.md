@@ -2,12 +2,12 @@
 title: 當其中一項工作完成時，取消剩餘的非同步工作 (C#)
 ms.date: 07/20/2015
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-ms.openlocfilehash: c4998733fbfe4cdc6730d2433828f5ea996ff6a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: baf757f7f7a71528dd5dc36b0f807eb452577a38
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529420"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298665"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>當其中一項工作完成時，取消剩餘的非同步工作 (C#)
 搭配使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法與 <xref:System.Threading.CancellationToken>，即可在其中一個工作完成時取消所有剩餘的工作。 `WhenAny` 方法會接受本身為一組工作的引數。 這個方法會啟動所有工作，並傳回單一工作。 集合中的任何工作完成時，單一工作即完成。  
@@ -20,19 +20,19 @@ ms.locfileid: "54529420"
 ## <a name="downloading-the-example"></a>下載範例  
  您可以從 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。  
   
-1.  解壓縮您下載的檔案，然後啟動 Visual Studio。  
+1. 解壓縮您下載的檔案，然後啟動 Visual Studio。  
   
-2.  在功能表列上，依序選擇 [檔案] 、[開啟舊檔] 及 [專案/方案] 。  
+2. 在功能表列上，依序選擇 [檔案] 、[開啟舊檔] 及 [專案/方案] 。  
   
-3.  在 [開啟專案] 對話方塊中，開啟保存已解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningCS 的方案 (.sln) 檔案。  
+3. 在 [開啟專案] 對話方塊中，開啟保存已解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningCS 的方案 (.sln) 檔案。  
   
-4.  在方案總管中，開啟 **CancelAfterOneTask** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。  
+4. 在方案總管中，開啟 **CancelAfterOneTask** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。  
   
-5.  選擇 F5 鍵以執行專案。  
+5. 選擇 F5 鍵以執行專案。  
   
      選擇 CTRL+F5 鍵以執行專案，而不進行偵錯。  
   
-6.  執行程式數次，確認先完成不同的下載。  
+6. 執行程式數次，確認先完成不同的下載。  
   
  如果您不想要下載專案，則可以檢閱本主題結尾的 MainWindow.xaml.cs 檔案。  
   
@@ -61,9 +61,9 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
  在 `AccessTheWebAsync` 中進行下列變更。 星號會標記程式碼檔中的變更。  
   
-1.  註解化或刪除迴圈。  
+1. 註解化或刪除迴圈。  
   
-2.  建立查詢，而查詢在執行時會產生一組泛型工作。 每個 `ProcessURLAsync` 呼叫都會傳回 `TResult` 為整數的 <xref:System.Threading.Tasks.Task%601>。  
+2. 建立查詢，而查詢在執行時會產生一組泛型工作。 每個 `ProcessURLAsync` 呼叫都會傳回 `TResult` 為整數的 <xref:System.Threading.Tasks.Task%601>。  
   
     ```csharp  
     // ***Create a query that, when executed, returns a collection of tasks.  
@@ -71,14 +71,14 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
         from url in urlList select ProcessURLAsync(url, client, ct);  
     ```  
   
-3.  呼叫 `ToArray` 來執行查詢，並開始工作。 在下一個步驟中套用 `WhenAny` 方法會執行查詢並啟動工作，而不使用 `ToArray`，但其他方法可能為否。 最安全的做法是明確地強制執行查詢。  
+3. 呼叫 `ToArray` 來執行查詢，並開始工作。 在下一個步驟中套用 `WhenAny` 方法會執行查詢並啟動工作，而不使用 `ToArray`，但其他方法可能為否。 最安全的做法是明確地強制執行查詢。  
   
     ```csharp  
     // ***Use ToArray to execute the query and start the download tasks.   
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  對這組工作呼叫 `WhenAny`。 `WhenAny` 會傳回 `Task(Of Task(Of Integer))` 或 `Task<Task<int>>`。  亦即，`WhenAny` 會傳回評估為單一 `Task(Of Integer)` 或 `Task<int>` 的等候中工作。 該單一工作是完成集合中的第一項工作。 先完成的工作會指派給 `firstFinishedTask`。 `firstFinishedTask` 的型別是 `TResult` 為整數的 <xref:System.Threading.Tasks.Task%601>，因為這是 `ProcessURLAsync` 的傳回型別。  
+4. 對這組工作呼叫 `WhenAny`。 `WhenAny` 會傳回 `Task(Of Task(Of Integer))` 或 `Task<Task<int>>`。  亦即，`WhenAny` 會傳回評估為單一 `Task(Of Integer)` 或 `Task<int>` 的等候中工作。 該單一工作是完成集合中的第一項工作。 先完成的工作會指派給 `firstFinishedTask`。 `firstFinishedTask` 的型別是 `TResult` 為整數的 <xref:System.Threading.Tasks.Task%601>，因為這是 `ProcessURLAsync` 的傳回型別。  
   
     ```csharp  
     // ***Call WhenAny and then await the result. The task that finishes   
@@ -86,14 +86,14 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
     Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);  
     ```  
   
-5.  在此範例中，您只想要知道先完成的工作。 因此，請使用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 取消剩餘的工作。  
+5. 在此範例中，您只想要知道先完成的工作。 因此，請使用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 取消剩餘的工作。  
   
     ```csharp  
     // ***Cancel the rest of the downloads. You just want the first one.  
     cts.Cancel();  
     ```  
   
-6.  最後，等候 `firstFinishedTask` 擷取所下載內容的長度。  
+6. 最後，等候 `firstFinishedTask` 擷取所下載內容的長度。  
   
     ```csharp  
     var length = await firstFinishedTask;  

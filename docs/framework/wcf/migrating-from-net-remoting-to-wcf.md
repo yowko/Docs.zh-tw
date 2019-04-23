@@ -3,10 +3,10 @@ title: 從 .NET 遠端處理移轉到 WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
 ms.openlocfilehash: c6bc16e97a87461be7b2c4877777329a0005a497
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296195"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>從 .NET 遠端處理移轉到 WCF
@@ -101,9 +101,9 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
   
  設定及裝載 WCF 服務的方法有許多種。 這只是其中一個範例，稱為「自我裝載」。 如需詳細資訊，請參閱下列主題：  
   
--   [HOW TO：定義服務合約](how-to-define-a-wcf-service-contract.md)  
+-   [如何：定義服務合約](how-to-define-a-wcf-service-contract.md)  
   
--   [使用組態檔設定服務](configuring-services-using-configuration-files.md)  
+-   [使用設定檔設定服務](configuring-services-using-configuration-files.md)  
   
 -   [裝載服務](hosting-services.md)  
   
@@ -144,7 +144,7 @@ Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received
   
 -   [用戶端通道層級的程式設計](./extending/client-channel-level-programming.md)  
   
--   [HOW TO：新增、 更新或移除服務參考](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
+-   [如何：新增、 更新或移除服務參考](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   
 ### <a name="serialization-usage"></a>序列化使用方式  
  雖然 .NET 遠端處理與 WCF 都是使用序列化在用戶端與伺服器之間傳送物件，但是它們在下列幾個重要方面有所不同：  
@@ -286,9 +286,9 @@ catch (FaultException<CustomerServiceFault> fault)
   
 -   **.NET 遠端處理是舊版產品。** 中所述[.NET 遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29)，它會被視為舊版產品，並不建議用於新的開發。 建議針對新的和現有的應用程式使用 WCF 或 ASP.NET Web API。  
   
--   **WCF 使用跨平台標準。** WCF 的設計將跨平台互通性納入考量，並支援許多業界標準 (SOAP、WS-Security、WS-Trust 等)。 WCF 服務可以與在非 Windows 作業系統上執行的用戶端互通。 遠端處理的設計主要是針對在 Windows 作業系統上使用 .NET Framework 執行伺服器和用戶端應用程式的環境。  
+-   **WCF 會使用跨平台標準。** WCF 的設計將跨平台互通性納入考量，並支援許多業界標準 (SOAP、WS-Security、WS-Trust 等)。 WCF 服務可以與在非 Windows 作業系統上執行的用戶端互通。 遠端處理的設計主要是針對在 Windows 作業系統上使用 .NET Framework 執行伺服器和用戶端應用程式的環境。  
   
--   **WCF 具有內建安全性。** WCF 的設計將安全性納入考量，並提供驗證、傳輸層級安全性、訊息層級安全性等許多選項。遠端處理的設計是為了讓應用程式輕鬆地互通，而不是為了確保在未受信任環境中的安全性。 WCF 的設計是為了在受信任和未受信任的環境中都能夠正常運作。  
+-   **WCF 具有內建的安全性。** WCF 的設計將安全性納入考量，並提供驗證、傳輸層級安全性、訊息層級安全性等許多選項。遠端處理的設計是為了讓應用程式輕鬆地互通，而不是為了確保在未受信任環境中的安全性。 WCF 的設計是為了在受信任和未受信任的環境中都能夠正常運作。  
   
 ### <a name="migration-recommendations"></a>移轉建議  
  以下是從 .NET 遠端處理移轉至 WCF 的建議步驟：  
@@ -297,7 +297,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 -   **建立資料合約。** 定義要在伺服器與用戶端之間交換的資料類型，並以 [DataContract] 屬性標記這些類型。 將用戶端可搭配 [DataMember] 使用之所有欄位和屬性都加以標記。  
   
--   **建立錯誤合約 (選擇性)。** 建立遇到錯誤時，要在伺服器與用戶端之間交換的類型。 以 [DataContract] 和 [DataMember] 標記這些類型，使這些類型可序列化。 針對已標記為 [OperationContract] 的所有服務作業，您也應該將它們標記為 [FaultContract]，以指出這些服務作業可能傳回的錯誤。  
+-   **建立錯誤合約 （選擇性）。** 建立遇到錯誤時，要在伺服器與用戶端之間交換的類型。 以 [DataContract] 和 [DataMember] 標記這些類型，使這些類型可序列化。 針對已標記為 [OperationContract] 的所有服務作業，您也應該將它們標記為 [FaultContract]，以指出這些服務作業可能傳回的錯誤。  
   
 -   **設定及裝載服務。** 建立服務合約之後，下一個步驟是設定繫結，以公開端點上的服務。 如需詳細資訊，請參閱[端點：位址、 繫結和合約](./feature-details/endpoints-addresses-bindings-and-contracts.md)。  
   
@@ -305,7 +305,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 -   **停用 MarshalByRefObject。** MarshalByRefObject 類型只適用於遠端處理，而且不會由 WCF 使用。 任何具有子類別 MarshalByRefObject 的應用程式類型都應予以移除或變更。  
   
--   **停用 [Serializable] 與 ISerializable。** [Serializable] 屬性與 ISerializable 介面原本是為了在信任的環境中序列化類型所設計，而且由遠端處理使用。 WCF 序列化必須以 [DataContract] 與 [DataMember] 來標記類型。 應用程式所使用的資料類型應該修改為使用 [DataContract]，而不是使用 ISerializable 或 [Serializable]。  
+-   **停止使用 [Serializable] 與 ISerializable。** [Serializable] 屬性與 ISerializable 介面原本是為了在信任的環境中序列化類型所設計，而且由遠端處理使用。 WCF 序列化必須以 [DataContract] 與 [DataMember] 來標記類型。 應用程式所使用的資料類型應該修改為使用 [DataContract]，而不是使用 ISerializable 或 [Serializable]。  
   
 ### <a name="migration-scenarios"></a>移轉案例  
  現在我們來看看如何在 WCF 中完成下列常見的遠端處理案例：  
