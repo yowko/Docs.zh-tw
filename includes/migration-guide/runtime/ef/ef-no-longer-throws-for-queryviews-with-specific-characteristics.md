@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 705e1a22b8a5791c1103dd374a8bab19356cadfb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236620"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774247"
 ---
 ### <a name="ef-no-longer-throws-for-queryviews-with-specific-characteristics"></a>針對具有特定字元的 QueryView，不再擲回 EF
 

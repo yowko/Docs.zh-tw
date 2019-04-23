@@ -13,11 +13,11 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
 ms.openlocfilehash: 1de835bda5ac906837ac3fbd97b87f68f14d1953
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333921"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771526"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>HOW TO：設定 Windows Forms 控制項所顯示的影像
 數個 Windows Form 控制項來顯示影像。 這些映像可以是用途的控制項，例如按鈕，表示磁碟片圖示的圖示**儲存**命令。 或者，圖示可以提供給控制項的外觀和行為，您想要的背景影像。  

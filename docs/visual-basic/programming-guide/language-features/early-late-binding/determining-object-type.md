@@ -10,10 +10,10 @@ helpviewer_keywords:
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
 ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302708"
 ---
 # <a name="determining-object-type-visual-basic"></a>決定物件類型 (Visual Basic)
@@ -48,7 +48,7 @@ ms.locfileid: "59302708"
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [使用字串名稱呼叫屬性或方法](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [If...Then...Else 陳述式](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
 - [String 資料類型](../../../../visual-basic/language-reference/data-types/string-data-type.md)
 - [Integer 資料類型](../../../../visual-basic/language-reference/data-types/integer-data-type.md)

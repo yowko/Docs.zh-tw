@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 946096cb9510ca12bbd2cecd00099142308b072a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236116"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803446"
 ---
 ### <a name="keytips-behavior-improved-in-wpf"></a>已改進 WPF 中的按鍵提示行為
 

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
 ms.openlocfilehash: 78497de3a9aea55320639c55a151a1260a960159
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303085"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>HOW TO：指派一個陣列至另一個陣列 (Visual Basic)
@@ -45,6 +45,6 @@ ms.locfileid: "59303085"
 ## <a name="see-also"></a>另請參閱
 
 - [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [針對陣列進行疑難排解](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+- [陣列的疑難排解](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
 - [Enum 陳述式](../../../../visual-basic/language-reference/statements/enum-statement.md)
 - [陣列轉換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)

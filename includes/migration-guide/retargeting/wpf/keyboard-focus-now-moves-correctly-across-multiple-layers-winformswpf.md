@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 3bde64b80e5dcfe98bbf598700b6d7004e3c3c9d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59233931"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774003"
 ---
 ### <a name="keyboard-focus-now-moves-correctly-across-multiple-layers-of-winformswpf-hosting"></a>鍵盤焦點現在可在 WinForms/WPF 裝載的多個圖層中正確移動
 

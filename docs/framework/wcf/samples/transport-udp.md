@@ -3,11 +3,11 @@ title: 傳輸：UDP
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
 ms.openlocfilehash: 8d72ab5c7d8c461cd2ce4d4003d449ac9fe7e807
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334662"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772007"
 ---
 # <a name="transport-udp"></a>傳輸：UDP
 UDP 傳輸範例示範如何實作 UDP 單點傳播與多點傳送做為自訂的 Windows Communication Foundation (WCF) 傳輸。 此範例描述，以建立自訂傳輸在 WCF 中，使用通道架構並遵循 WCF 的最佳做法建議的程序。 建立自訂傳輸的步驟如下：  

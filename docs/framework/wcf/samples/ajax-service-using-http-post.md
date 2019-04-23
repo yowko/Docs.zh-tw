@@ -3,11 +3,11 @@ title: 使用 HTTP POST 的 AJAX 服務
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
 ms.openlocfilehash: 2bc1722056af4fc71f5f93d92ecd12accd99548f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59343242"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772124"
 ---
 # <a name="ajax-service-using-http-post"></a>使用 HTTP POST 的 AJAX 服務
 這個範例會示範如何使用 Windows Communication Foundation (WCF) 建立[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Asynchronous JavaScript and XML (AJAX) 服務會使用 HTTP POST。 AJAX 是可從 Web 瀏覽器用戶端使用基本 JavaScript 程式碼存取的一種服務。 這個範例是根據[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例; 兩個範例唯一的差別是使用 HTTP POST，而不是 HTTP GET。  

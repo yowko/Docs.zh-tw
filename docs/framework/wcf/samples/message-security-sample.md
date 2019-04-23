@@ -3,10 +3,10 @@ title: 訊息安全性範例
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
 ms.openlocfilehash: ad579705fa30e9b5179f2de4b829bd7f4a5817c2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302955"
 ---
 # <a name="message-security-sample"></a>訊息安全性範例
@@ -143,7 +143,7 @@ Press <ENTER> to terminate client.
   
 5. 在伺服器上執行 `setup.bat service`。 執行`setup.bat`與`service`引數會建立具有機器完整網域名稱的服務憑證，並將服務憑證匯出為名為 Service.cer 的檔案。  
   
-6. 編輯 Service.exe.config 以反映新的憑證名稱 (在`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)項目) 做為機器的完整網域名稱相同。 也會變更指定完整機器名稱而不使用 localhost 基底位址的值`.`  
+6. 編輯 Service.exe.config 以反映新的憑證名稱 (在`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)項目) 做為機器的完整網域名稱相同。 同時將基底位址的值變更成指定完整機器名稱，而不要指定 localhost`.`。  
   
 7. 從服務目錄中將 Service.cer 檔案複製至用戶端機器上的用戶端目錄。  
   

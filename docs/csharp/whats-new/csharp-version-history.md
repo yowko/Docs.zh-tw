@@ -3,12 +3,12 @@ title: C# 的歷史 - C# 指南
 description: 最早的語言版本有哪些內容，而在之後有什麼演變？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 84274f8ddfd8295d5db1e861c790c134ba30c6e2
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126145"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303358"
 ---
 # <a name="the-history-of-c"></a>C\# 的歷史
 
@@ -20,11 +20,11 @@ ms.locfileid: "58126145"
 C# 建置工具將最新的主要語言版本視為預設語言版本。 主要版本之間可能存在單點發行版本，此節的其他文章對此進行了詳細介紹。 若要使用小數點版本中的最新功能，您需要[設定編譯器語言版本](../language-reference/configure-language-version.md)並選取該版本。 自 C# 7.0 以來已經有三個單點發行版本：
 
 * [C# 7.3](csharp-7-3.md)：
-  - [Visual Studio 2017 15.7 版](https://visualstudio.microsoft.com/vs/whatsnew/)和 [.NET Core 2.1 SDK 2.1.300 RC1](../../core/whats-new/index.md) 目前提供 C# 7.3。
+  - 從 [Visual Studio 2017 版本 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 和 [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md) 開始，可以使用 C# 7.3。
 * [C# 7.2](csharp-7-2.md):
-  - [Visual Studio 2017 15.5 版](https://visualstudio.microsoft.com/vs/whatsnew/)和 [.NET Core 2.0 SDK](../../core/whats-new/index.md) 目前提供 C# 7.2。
+  - 從 [Visual Studio 2017 version 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 和 [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) 開始，可以使用 C# 7.2。
 * [C# 7.1](csharp-7-1.md)：
-  - [Visual Studio 2017 15.3 版](https://visualstudio.microsoft.com/vs/whatsnew/)和 [.NET Core 2.0 SDK](../../core/whats-new/index.md) 已新增這些功能。
+  - 從 [Visual Studio 2017 version 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 和 [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) 開始，可以使用 C# 7.1。
 
 ## <a name="c-version-10"></a>C# 1.0 版
 
@@ -107,8 +107,8 @@ C# 4.0 版要堅守 3.0 版的奠基狀態會很困難。 3.0 版開始，C# 讓
 
 - [動態繫結](../language-reference/keywords/dynamic.md)
 - [具名/選擇性引數](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
-- [泛型 covariant 和 contravariant](../../standard/generics/covariance-and-contravariance.md)
-- [內嵌 Interop 型別](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
+- [泛型 Covariant 和 Contravariant](../../standard/generics/covariance-and-contravariance.md)
+- [內嵌的 Interop 型別](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
 
 內嵌 interop 型別能減輕部署痛苦。 泛型 covariance 和 contravariance 可讓您有更強大的功能來使用泛型，但它們有點學術，可能最受架構和程式庫作者欣賞。 具名和選擇性參數可讓您消除許多方法多載，並提供方便性。 但這些功能沒有一項能完全改變典範。
 
@@ -125,7 +125,7 @@ C# 5.0 版是該語言的一個聚焦版本。 幾乎該版本的所有心血都
 
 ### <a name="see-also"></a>請參閱
 
-* [Code Project：C# 5.0 的呼叫端資訊屬性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+* [程式碼專案：C# 5.0 的呼叫端資訊屬性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 呼叫端資訊屬性可讓您輕鬆地擷取您正在執行的內容，而不必依賴大量的未定案反映程式碼。 它在診斷和記錄工作方面有許多用途。
 
@@ -135,12 +135,12 @@ C# 5.0 版是該語言的一個聚焦版本。 幾乎該版本的所有心血都
 
 在 3.0 和 5.0 版本中，C# 在物件導向語言中新增了一些重大的新功能。 在 6.0 版中，它不再作為主控的殺手級功能，而是改為發表讓 C# 程式設計更具生產力的許多較小功能。 這裡列出其中一些：
 
-- [動態匯入](./csharp-6.md#using-static)
+- [靜態匯入](./csharp-6.md#using-static)
 - [例外狀況篩選條件](./csharp-6.md#exception-filters)
 - [Auto 屬性初始設定式](./csharp-6.md#auto-property-initializers)
 - [運算式主體的成員](./csharp-6.md#expression-bodied-function-members)
 - [Null 傳播程式](./csharp-6.md#null-conditional-operators)
-- [字串內插補點](./csharp-6.md#string-interpolation)
+- [字串插補](./csharp-6.md#string-interpolation)
 - [nameof 運算子](./csharp-6.md#the-nameof-expression)
 - [索引初始設定式](csharp-6.md#extension-add-methods-in-collection-initializers)
 

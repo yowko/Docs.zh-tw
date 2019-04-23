@@ -7,11 +7,11 @@ helpviewer_keywords:
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
 ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336651"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773359"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>逐步解說：建立 Windows 架構的協助工具應用程式
 建立協助工具應用程式具有重要的商業含意， 許多政府對於市售軟體訂定有協助工具法規， 而擁有「Windows 憑證」標誌就表示符合有關協助工具的要求。 據估計光是美國便有約三千萬居民受到軟體協助工具的影響，而其中大部分是潛在客戶。  

@@ -16,11 +16,11 @@ ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33af618ac3971df76683fd64346e1aa1e5977177
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334610"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773411"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>HOW TO：存取硬體加密裝置
 您可以使用 <xref:System.Security.Cryptography.CspParameters> 類別來存取硬體加密裝置。 例如，您可以使用這個類別來整合應用程式與智慧卡、硬體亂數產生器或特定密碼編譯演算法的硬體實作。  

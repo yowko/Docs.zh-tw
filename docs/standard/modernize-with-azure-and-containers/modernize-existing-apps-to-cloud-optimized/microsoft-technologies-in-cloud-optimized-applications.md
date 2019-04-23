@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 45eeee165a1dcbfc7b6dbc5146ce2c4b2be2e643
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59296247"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773257"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>雲端最佳化應用程式中的 Microsoft 技術
 

@@ -3,11 +3,11 @@ title: 執行個體編碼選項
 ms.date: 03/30/2017
 ms.assetid: 89e4b029-4f68-438c-8117-9b21fe094ef4
 ms.openlocfilehash: c4de7c45d899f45a7b5b71d563257d9accb8fdbb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59315617"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773840"
 ---
 # <a name="instance-encoding-option"></a>執行個體編碼選項
 **執行個體編碼選項**SQL 工作流程執行個體存放區的屬性可讓您指定 SQL 持續性提供者是否應該壓縮使用 GZip 演算法才能儲存工作流程執行個體狀態資訊將持續性資料庫的資訊。 此屬性允許的值為：GZip 和 None。 預設值為 None。 下列清單描述這些選項。  

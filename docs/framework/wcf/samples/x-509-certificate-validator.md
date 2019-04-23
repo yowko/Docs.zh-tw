@@ -3,11 +3,11 @@ title: X.509 憑證驗證程式
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
 ms.openlocfilehash: 88364aabf5df3a4f41d83613c0c4328b2d5979a0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59302552"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772150"
 ---
 # <a name="x509-certificate-validator"></a>X.509 憑證驗證程式
 這個範例會示範如何實作自訂 X.509 憑證驗證程式。 當內建的 X.509 憑證驗證程式模式都不符合應用程式需求時，這個驗證程式就很有用。 這個範例示範的服務具有可接受自動發行之憑證的自訂驗證程式。 用戶端會使用這類憑證來向服務驗證。

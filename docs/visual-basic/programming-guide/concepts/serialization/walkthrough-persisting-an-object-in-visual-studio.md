@@ -3,10 +3,10 @@ title: 保存物件在 Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
 ms.openlocfilehash: 55ad2049003baaed26f4db909ae466aefdd161e1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303345"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>逐步解說：保存物件在 Visual Studio (Visual Basic)

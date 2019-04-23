@@ -3,10 +3,10 @@ title: 區塊處理通道
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
 ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302695"
 ---
 # <a name="chunking-channel"></a>區塊處理通道
@@ -205,7 +205,7 @@ as the ChunkingStart message.
   
  ![此圖顯示區塊處理通道傳送架構。](./media/chunking-channel/chunking-channel-send.gif)  
   
- 在接收端上，`ChunkingChannel` 會從內部通道提取訊息，並將這些訊息傳遞給自訂 <xref:System.Xml.XmlDictionaryReader> (稱為 `ChunkingReader`)，而這個項目會將傳入的區塊重新構成原始訊息。 `ChunkingChannel` 包裝這`ChunkingReader`在自訂`Message`稱為實作`ChunkingMessage`和此訊息傳回上一層。 `ChunkingReader` 和 `ChunkingMessage` 的組合可讓您在上一層讀取原始訊息本文時，進行取消區塊處理，而不需要緩衝處理整個原始訊息本文。 `ChunkingReader` 擁有的佇列中，緩衝傳入的區塊，最大的可設定緩衝處理的區塊數目。 達到此上限時，讀取器會等待讓上一層清空佇列中的訊息 (也就是只從原始訊息本文讀取)，或直到到達接收逾時上限為止。  
+ 在接收端上，`ChunkingChannel` 會從內部通道提取訊息，並將這些訊息傳遞給自訂 <xref:System.Xml.XmlDictionaryReader> (稱為 `ChunkingReader`)，而這個項目會將傳入的區塊重新構成原始訊息。 `ChunkingChannel` 會將此 `ChunkingReader` 包裝在自訂 `Message` 實作 (稱為 `ChunkingMessage`)，並將此訊息傳回上一層。 `ChunkingReader` 和 `ChunkingMessage` 的組合可讓您在上一層讀取原始訊息本文時，進行取消區塊處理，而不需要緩衝處理整個原始訊息本文。 您可在 `ChunkingReader` 擁有的佇列中，緩衝處理傳入的區塊，最多為已緩衝處理區塊可設定數目的最大值。 達到此上限時，讀取器會等待讓上一層清空佇列中的訊息 (也就是只從原始訊息本文讀取)，或直到到達接收逾時上限為止。  
   
  ![此圖顯示區塊處理通道接收架構。](./media/chunking-channel/chunking-channel-receive.gif)  
   
@@ -268,13 +268,13 @@ interface ITestService
 ## <a name="communicationobject-overrides"></a>CommunicationObject 覆寫  
   
 ### <a name="onopen"></a>OnOpen  
- `OnOpen` 呼叫`innerChannel.Open`開啟內部通道。  
+ `OnOpen` 會呼叫 `innerChannel.Open`，以開啟內部通道。  
   
 ### <a name="onclose"></a>OnClose  
- `OnClose` 第一次設定`stopReceive`要`true`來表示暫止`ReceiveChunkLoop`停止。 接著會等待`receiveStopped` <xref:System.Threading.ManualResetEvent>，此值會設定當`ReceiveChunkLoop`會停止。 假設在指定的逾時內停止 `ReceiveChunkLoop`，`OnClose` 會利用剩下的逾時呼叫 `innerChannel.Close`。  
+ `OnClose` 會先將 `stopReceive` 設定為 `true`，以將擱置的 `ReceiveChunkLoop` 標示為停止。 接著會等待`receiveStopped` <xref:System.Threading.ManualResetEvent>，此值會設定當`ReceiveChunkLoop`會停止。 假設在指定的逾時內停止 `ReceiveChunkLoop`，`OnClose` 會利用剩下的逾時呼叫 `innerChannel.Close`。  
   
 ### <a name="onabort"></a>OnAbort  
- `OnAbort` 呼叫`innerChannel.Abort`以中止內部通道。 如果有擱置的 `ReceiveChunkLoop`，會從擱置的 `innerChannel.Receive` 呼叫中收到例外狀況。  
+ `OnAbort` 會呼叫 `innerChannel.Abort`，以中止內部通道。 如果有擱置的 `ReceiveChunkLoop`，會從擱置的 `innerChannel.Receive` 呼叫中收到例外狀況。  
   
 ### <a name="onfaulted"></a>OnFaulted  
  通道發生錯誤時，`ChunkingChannel` 不需要特殊行為，因此不會覆寫 `OnFaulted`。  
@@ -282,7 +282,7 @@ interface ITestService
 ## <a name="implementing-channel-factory"></a>實作通道處理站  
  `ChunkingChannelFactory` 會負責建立 `ChunkingDuplexSessionChannel` 的執行個體，並負責將狀態轉換串聯 (Cascade) 至內部通道處理站。  
   
- `OnCreateChannel` 若要建立使用內部通道處理站`IDuplexSessionChannel`內部通道。 接著會建立新的 `ChunkingDuplexSessionChannel`，傳遞此內部通道和要區塊處理的訊息動作清單，以及接收時要緩衝處理的區塊數上限。 要區塊處理的訊息動作清單以及要緩衝處理的區塊數上限，是在其建構函式中傳遞至 `ChunkingChannelFactory` 的兩個參數。 `ChunkingBindingElement` 上的區段會描述取得這些值的位置。  
+ `OnCreateChannel` 會使用內部通道處理站來建立 `IDuplexSessionChannel` 內部通道。 接著會建立新的 `ChunkingDuplexSessionChannel`，傳遞此內部通道和要區塊處理的訊息動作清單，以及接收時要緩衝處理的區塊數上限。 要區塊處理的訊息動作清單以及要緩衝處理的區塊數上限，是在其建構函式中傳遞至 `ChunkingChannelFactory` 的兩個參數。 `ChunkingBindingElement` 上的區段會描述取得這些值的位置。  
   
  `OnOpen`、`OnClose`、`OnAbort` 與其非同步對等項目，會在內部通道處理站上呼叫相對應的狀態轉換方法。  
   
@@ -290,15 +290,15 @@ interface ITestService
  `ChunkingChannelListener` 是內部通道接聽程式周圍的包裝函式。 除了該內部通道接聽程式的委派呼叫以外，其主要函式會包裝新的 `ChunkingDuplexSessionChannels` (從內部通道接聽程式接受之通道的周圍)。 會在 `OnAcceptChannel` 和 `OnEndAcceptChannel` 中進行此動作。 新建立的 `ChunkingDuplexSessionChannel` 會傳遞內部通道，以及先前描述的其他參數。  
   
 ## <a name="implementing-binding-element-and-binding"></a>實作繫結項目和繫結  
- `ChunkingBindingElement` 負責建立`ChunkingChannelFactory`和`ChunkingChannelListener`。 `ChunkingBindingElement`檢查是否在 T `CanBuildChannelFactory` \<T > 和`CanBuildChannelListener` \<T > 的類型`IDuplexSessionChannel`（僅支援區塊處理通道的通道） 和繫結中的其他繫結項目支援此通道型別。  
+ `ChunkingBindingElement` 會負責建立 `ChunkingChannelFactory` 和 `ChunkingChannelListener`。 `ChunkingBindingElement`檢查是否在 T `CanBuildChannelFactory` \<T > 和`CanBuildChannelListener` \<T > 的類型`IDuplexSessionChannel`（僅支援區塊處理通道的通道） 和繫結中的其他繫結項目支援此通道型別。  
   
  `BuildChannelFactory`\<T > 先檢查要求的通道型別可以建置，然後取得要區塊處理的訊息動作清單。 如需詳細資訊，請參閱下列章節。 接著會建立新的 `ChunkingChannelFactory`，並傳遞內部通道處理站 (從 `context.BuildInnerChannelFactory<IDuplexSessionChannel>` 傳回)、訊息動作清單和要緩衝處理的區塊數上限。 從 `MaxBufferedChunks` 屬性取得的區塊數上限會由 `ChunkingBindingElement` 公開。  
   
- `BuildChannelListener<T>` 已建立的相似實作`ChunkingChannelListener`並將其傳遞內部通道接聽程式。  
+ `BuildChannelListener<T>` 擁有可建立 `ChunkingChannelListener` 並傳遞至內部通道接聽程式的相似實作。  
   
  此範例中包含範例繫結，名稱為 `TcpChunkingBinding`。 此繫結是由兩個繫結項目所組成：`TcpTransportBindingElement` 和 `ChunkingBindingElement`。 除了公開 `MaxBufferedChunks` 屬性以外，繫結也會設定一些 `TcpTransportBindingElement` 屬性，例如 `MaxReceivedMessageSize` (針對標頭將它設定為 `ChunkingUtils.ChunkSize` + 100KB 位元組)。  
   
- `TcpChunkingBinding` 也會實作`IBindingRuntimePreferences`，並傳回 true 從`ReceiveSynchronously`指出會實作同步接收呼叫的方法。  
+ `TcpChunkingBinding` 也會實作 `IBindingRuntimePreferences`，並從 `ReceiveSynchronously` 方法傳回 true，而這個方法指出只會實作同步接收呼叫。  
   
 ### <a name="determining-which-messages-to-chunk"></a>判斷要區塊處理的訊息  
  區塊處理通道只會區塊處理透過 `ChunkingBehavior` 屬性識別的訊息。 `ChunkingBehavior` 類別會實作 `IOperationBehavior`，並可透過呼叫 `AddBindingParameter` 方法來實作。 在此方法中，`ChunkingBehavior` 會檢查其 `AppliesTo` 屬性的值 (`InMessage`、`OutMessage` 或這兩者)，以判斷應該區塊處理的訊息。 接著會取得每個訊息的動作 (從 `OperationDescription` 上的訊息集合)，並將該動作新增至 `ChunkingBindingParameter` 執行個體中所含的字串集合。 接著會將此 `ChunkingBindingParameter` 新增至提供的 `BindingParameterCollection`。  

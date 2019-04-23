@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: a70aca33d0830f3b23ff985f17c469cb7c4ff35c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234649"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774398"
 ---
 ### <a name="two-way-data-binding-to-a-property-with-a-non-public-setter-is-not-supported"></a>不支援具有非公用 setter 之屬性的雙向資料繫結
 

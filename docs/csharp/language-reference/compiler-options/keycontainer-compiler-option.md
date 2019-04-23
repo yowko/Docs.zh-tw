@@ -8,12 +8,12 @@ helpviewer_keywords:
 - keycontainer compiler option [C#]
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
-ms.openlocfilehash: 06a714bf9140ac793e8d853183047ca7255d565e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf51bccc98f04c38149ec821b7064a4844d7e804
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728982"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302773"
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer (C# 編譯器選項)
 指定密碼編譯金鑰容器的名稱。  
@@ -41,7 +41,7 @@ ms.locfileid: "54728982"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  Visual Studio 開發環境無法使用這個編譯器選項。  
+1. Visual Studio 開發環境無法使用這個編譯器選項。  
   
  您可以使用 <xref:VSLangProj.ProjectProperties.AssemblyKeyContainerName%2A>，以程式設計方式存取這個編譯器選項。  
   

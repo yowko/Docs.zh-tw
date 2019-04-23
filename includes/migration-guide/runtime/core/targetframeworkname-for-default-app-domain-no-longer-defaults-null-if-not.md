@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: cbe1b32fa40e509f620845866c7a584e37f49a80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234156"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774139"
 ---
 ### <a name="targetframeworkname-for-default-app-domain-no-longer-defaults-to-null-if-not-set"></a>預設應用程式定義域的 TargetFrameworkName 若未設定，不會再預設為 Null
 

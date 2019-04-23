@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: be9933e177954dc0aced81a550ef92f2c2ca08f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235376"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803453"
 ---
 ### <a name="xslt-style-sheet-exception-message-changed"></a>XSLT 樣式表例外狀況訊息已變更
 

@@ -1,33 +1,33 @@
 ---
-title: HOW TO：實作和呼叫自訂擴充方法 - C# 程式設計手冊
+title: 作法：實作和呼叫自訂擴充方法 - C# 程式設計手冊
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: e4b77bf0a44ce58db632e0c58982dba7178f9272
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 2d3f6ec66a13638f0106537ad8b21bff801a53b3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203424"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303332"
 ---
-# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>HOW TO：實作和呼叫自訂擴充方法 (C# 程式設計手冊)
+# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>作法：實作和呼叫自訂擴充方法 (C# 程式設計手冊)
 本主題示範如何針對任何 .NET 類型實作您自己的延伸模組方法。 用戶端程式碼可以使用您的擴充方法，方法是將參考新增至包含這些方法的 DLL，然後新增 [using](../../../csharp/language-reference/keywords/using-directive.md) 指示詞，以指定會在其中定義擴充方法的命名空間。  
   
 ## <a name="to-define-and-call-the-extension-method"></a>定義和呼叫擴充方法  
   
-1.  定義靜態[類別](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)以包含擴充方法。  
+1. 定義靜態[類別](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)以包含擴充方法。  
   
      此類別對用戶端程式碼而言必須是可見的。 如需存取範圍規則的詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
-2.  將擴充方法實作為其可見度至少等同於包含類別的靜態方法。  
+2. 將擴充方法實作為其可見度至少等同於包含類別的靜態方法。  
   
-3.  方法的第一個參數會指定方法的作業類型，前面必須加上 [this](../../../csharp/language-reference/keywords/this.md) 修飾詞。  
+3. 方法的第一個參數會指定方法的作業類型，前面必須加上 [this](../../../csharp/language-reference/keywords/this.md) 修飾詞。  
   
-4.  在呼叫程式碼中，新增 `using` 指示詞以指定包含擴充方法類別的[命名空間](../../../csharp/language-reference/keywords/namespace.md)。  
+4. 在呼叫程式碼中，新增 `using` 指示詞以指定包含擴充方法類別的[命名空間](../../../csharp/language-reference/keywords/namespace.md)。  
   
-5.  將方法當做是類型上的執行個體方法進行呼叫。  
+5. 將方法當做是類型上的執行個體方法進行呼叫。  
   
      請注意，呼叫程式碼未指定第一個參數，因為它代表要套用運算子的類型，而且編譯器已知物件類型。 您只需要針對參數 2 到 `n` 提供引數。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "57203424"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)
 - [擴充方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
 - [LINQ (Language-Integrated Query)](../../../csharp/linq/linq-in-csharp.md)
 - [靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)

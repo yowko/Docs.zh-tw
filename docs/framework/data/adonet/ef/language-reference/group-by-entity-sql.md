@@ -3,10 +3,10 @@ title: GROUP BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
 ms.openlocfilehash: 574d952e0183eb65c88864f2788eb7d698c9f2ec
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302942"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
@@ -20,7 +20,7 @@ ms.locfileid: "59302942"
   
 ## <a name="arguments"></a>引數  
  `aliasedExpression`  
- 在其中執行群組作業的任何有效查詢運算式。 `expression` 可以是屬性或參考 FROM 子句所傳回之屬性的非彙總運算式。 GROUP BY 子句中的每一個運算式都必評估為可以比較是否相等的型別 這些型別通常是純量基本型別，例如數值、字串和日期。 您不可依集合來群組。  
+ 在其中執行群組作業的任何有效查詢運算式。 `expression` 可以是屬性，或參考 FROM 子句所傳回之屬性的非彙總運算式。 GROUP BY 子句中的每一個運算式都必評估為可以比較是否相等的型別 這些型別通常是純量基本型別，例如數值、字串和日期。 您不可依集合來群組。  
   
 ## <a name="remarks"></a>備註  
  如果彙總函式都包含 SELECT 子句中\<選取清單 >，GROUP BY 會計算每個群組的摘要值。 當指定 GROUP BY 時，GROUP BY 清單應該包括選取清單中之任何非彙總運算式中的每一個屬性名稱，否則，GROUP BY 運算式必須完全符合選取清單運算式。  

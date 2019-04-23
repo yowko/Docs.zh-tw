@@ -3,11 +3,11 @@ title: 服務偵錯行為
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
 ms.openlocfilehash: bfed164093e10c070b24832cf5a3be362ad3bc56
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59330401"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772046"
 ---
 # <a name="service-debug-behavior"></a>服務偵錯行為
 這個範例會示範如何設定服務偵錯行為設定。 此樣本根據[快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它會實作`ICalculator`服務合約。 這個範例會在組態檔中明確地定義服務偵錯行為。 這個行為也可以透過程式碼，以命令方式定義。  

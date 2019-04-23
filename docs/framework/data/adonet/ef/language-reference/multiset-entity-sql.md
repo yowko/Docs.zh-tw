@@ -3,10 +3,10 @@ title: MULTISET (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: eb90a377-e47a-43a5-b308-e993b6d611e6
 ms.openlocfilehash: 44e411b8ae2f43bf3a729ac091ffd1eb4c462c63
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303033"
 ---
 # <a name="multiset-entity-sql"></a>MULTISET (Entity SQL)
@@ -28,7 +28,7 @@ or
  集合的型別 MULTISET\<T >。  
   
 ## <a name="remarks"></a>備註  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供三種類型的建構函式： 資料列建構函式、 物件建構函式和多重集 （或集合） 建構函式。 如需詳細資訊，請參閱 <<c0> [ 建構類型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供三種建構函式：資料列建構函式、物件建構函式和多重集 (或集合) 建構函式。 如需詳細資訊，請參閱 <<c0> [ 建構類型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)。  
   
  多重集建構函式會從值清單建立多重集的例項。 該建構函式中的所有值都必須是相容型別。  
   

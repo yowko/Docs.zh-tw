@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 347b6ccb3e986d820514159179c824c28907fc62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236409"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803473"
 ---
 ### <a name="aspnet-accessibility-improvements-in-net-framework-471"></a>.NET Framework 4.7.1 中的 ASP.NET 協助工具改進功能
 
