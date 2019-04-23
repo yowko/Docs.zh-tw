@@ -1,48 +1,25 @@
-items:
 - name: .NET Compiler Platform SDK (Roslyn API)
   href: index.md
   items:
-  - name: 了解編譯器 API 模型
-    href: compiler-api-model.md
-  - name: 使用語法
-    href: work-with-syntax.md
-  - name: 使用語意
-    href: work-with-semantics.md
-  - name: 使用工作區
-    href: work-with-workspace.md
-  - name: 利用語法視覺化檢視探索程式碼
-    href: syntax-visualizer.md
-  - name: 快速入門
-    items:
-    - name: 語法分析
-      href: get-started/syntax-analysis.md
-    - name: 語意分析
-      href: get-started/semantic-analysis.md
-    - name: 語法轉換
-      href: get-started/syntax-transformation.md
-  - name: 教學課程
-    items:
-    - name: 建置您的第一個分析器和程式碼修正
-      href: tutorials/how-to-write-csharp-analyzer-code-fix.md
-    - name: 開始撰寫自訂分析器和程式碼修正
-  - name: 教學課程
-    items:
-    - name: 建置您的第一個分析器
-    - name: 建置您的第一個程式碼修正
-    - name: 將您的分析器部署為 VSIX
-    - name: 將您的分析器部署為 NuGet 套件
-- name: 範例
-  items:
-  - name: 非同步套件
-  - name: 主控台分類器
-  - name: 轉換為 Auto 屬性
-  - name: 格式化方案
-  - name: 實作通知屬性變更
-  - name: 設為常數
-  - name: 操作指南
-ms.openlocfilehash: cd4a028bc393f99ef3da5277430276b1094682a8
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468301"
+    - name: 了解編譯器 API 模型
+      href: compiler-api-model.md
+    - name: 使用語法
+      href: work-with-syntax.md
+    - name: 使用語意
+      href: work-with-semantics.md
+    - name: 使用工作區
+      href: work-with-workspace.md
+    - name: 利用語法視覺化檢視探索程式碼
+      href: syntax-visualizer.md
+    - name: 快速入門
+      items:
+        - name: 語法分析
+          href: get-started/syntax-analysis.md
+        - name: 語意分析
+          href: get-started/semantic-analysis.md
+        - name: 語法轉換
+          href: get-started/syntax-transformation.md
+    - name: 教學課程
+      items:
+        - name: 建置您的第一個分析器和程式碼修正
+          href: tutorials/how-to-write-csharp-analyzer-code-fix.md

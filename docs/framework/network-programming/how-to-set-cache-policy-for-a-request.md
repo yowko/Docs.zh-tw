@@ -1,5 +1,5 @@
 ---
-title: HOW TO：設定要求的快取原則
+title: 作法：設定要求的快取原則
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 11f36065c02c5ec513e66bff2541536e9290b5c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3da60366ec1a8e2e0242cf78e0418fe76e18da68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563557"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226569"
 ---
-# <a name="how-to-set-cache-policy-for-a-request"></a><span data-ttu-id="4ac3b-102">HOW TO：設定要求的快取原則</span><span class="sxs-lookup"><span data-stu-id="4ac3b-102">How to: Set Cache Policy for a Request</span></span>
-<span data-ttu-id="4ac3b-103">下列範例示範如何設定要求的快取原則。</span><span class="sxs-lookup"><span data-stu-id="4ac3b-103">The following example demonstrates setting a cache policy for a request.</span></span> <span data-ttu-id="4ac3b-104">範例的輸入是如 `http://www.contoso.com/` 之類的 URI。</span><span class="sxs-lookup"><span data-stu-id="4ac3b-104">The example input is a URI such as `http://www.contoso.com/`.</span></span>  
+# <a name="how-to-set-cache-policy-for-a-request"></a><span data-ttu-id="2059f-102">作法：設定要求的快取原則</span><span class="sxs-lookup"><span data-stu-id="2059f-102">How to: Set Cache Policy for a Request</span></span>
+<span data-ttu-id="2059f-103">下列範例示範如何設定要求的快取原則。</span><span class="sxs-lookup"><span data-stu-id="2059f-103">The following example demonstrates setting a cache policy for a request.</span></span> <span data-ttu-id="2059f-104">範例的輸入是如 `http://www.contoso.com/` 之類的 URI。</span><span class="sxs-lookup"><span data-stu-id="2059f-104">The example input is a URI such as `http://www.contoso.com/`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4ac3b-105">範例</span><span class="sxs-lookup"><span data-stu-id="4ac3b-105">Example</span></span>  
- <span data-ttu-id="4ac3b-106">下列程式碼範例會建立一個快取原則，允許所要求的資源在快取中的時間尚未超過一天時，從快取使用該資源。</span><span class="sxs-lookup"><span data-stu-id="4ac3b-106">The following code example creates a cache policy that allows the requested resource to be used from the cache if it has not been in the cache for longer than one day.</span></span> <span data-ttu-id="4ac3b-107">此範例會顯示一個訊息，指出是否已從快取使用資源 (例如，`"The response was retrieved from the cache : False."`)，然後顯示該資源。</span><span class="sxs-lookup"><span data-stu-id="4ac3b-107">The example displays a message that indicates whether the resource was used from the cache—for example, `"The response was retrieved from the cache : False."`—and then displays the resource.</span></span> <span data-ttu-id="4ac3b-108">用戶端與伺服器之間的任何快取都可以滿足要求。</span><span class="sxs-lookup"><span data-stu-id="4ac3b-108">A request can be fulfilled by any cache between the client and server.</span></span>  
+## <a name="example"></a><span data-ttu-id="2059f-105">範例</span><span class="sxs-lookup"><span data-stu-id="2059f-105">Example</span></span>  
+ <span data-ttu-id="2059f-106">下列程式碼範例會建立一個快取原則，允許所要求的資源在快取中的時間尚未超過一天時，從快取使用該資源。</span><span class="sxs-lookup"><span data-stu-id="2059f-106">The following code example creates a cache policy that allows the requested resource to be used from the cache if it has not been in the cache for longer than one day.</span></span> <span data-ttu-id="2059f-107">此範例會顯示一個訊息，指出是否已從快取使用資源 (例如，`"The response was retrieved from the cache : False."`)，然後顯示該資源。</span><span class="sxs-lookup"><span data-stu-id="2059f-107">The example displays a message that indicates whether the resource was used from the cache—for example, `"The response was retrieved from the cache : False."`—and then displays the resource.</span></span> <span data-ttu-id="2059f-108">用戶端與伺服器之間的任何快取都可以滿足要求。</span><span class="sxs-lookup"><span data-stu-id="2059f-108">A request can be fulfilled by any cache between the client and server.</span></span>  
   
 ```csharp  
 using System;  
@@ -105,9 +105,10 @@ Namespace Examples.System.Net.Cache
 End Namespace  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4ac3b-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4ac3b-109">See also</span></span>
-- [<span data-ttu-id="4ac3b-110">網路應用程式的快取管理</span><span class="sxs-lookup"><span data-stu-id="4ac3b-110">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [<span data-ttu-id="4ac3b-111">快取原則</span><span class="sxs-lookup"><span data-stu-id="4ac3b-111">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)
-- [<span data-ttu-id="4ac3b-112">以位置為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="4ac3b-112">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [<span data-ttu-id="4ac3b-113">以時間為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="4ac3b-113">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [<span data-ttu-id="4ac3b-114">\<requestCaching> 項目 (網路設定)</span><span class="sxs-lookup"><span data-stu-id="4ac3b-114">\<requestCaching> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a><span data-ttu-id="2059f-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2059f-109">See also</span></span>
+
+- [<span data-ttu-id="2059f-110">網路應用程式的快取管理</span><span class="sxs-lookup"><span data-stu-id="2059f-110">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [<span data-ttu-id="2059f-111">快取原則</span><span class="sxs-lookup"><span data-stu-id="2059f-111">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)
+- [<span data-ttu-id="2059f-112">以位置為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="2059f-112">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [<span data-ttu-id="2059f-113">以時間為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="2059f-113">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [<span data-ttu-id="2059f-114">\<requestCaching> 項目 (網路設定)</span><span class="sxs-lookup"><span data-stu-id="2059f-114">\<requestCaching> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
