@@ -12,18 +12,18 @@ ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 422fdfef6bea40e0f4bcc7447df8dba1eab2896e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146090"
 ---
-# <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a><span data-ttu-id="ccfc1-102">ICorProfilerInfo7::GetInMemorySymbolsLength 方法</span><span class="sxs-lookup"><span data-stu-id="ccfc1-102">ICorProfilerInfo7::GetInMemorySymbolsLength Method</span></span>
-<span data-ttu-id="ccfc1-103">[在 .NET Framework 4.6.1 及更新版本中支援]</span><span class="sxs-lookup"><span data-stu-id="ccfc1-103">[Supported in the .NET Framework 4.6.1 and later versions]</span></span>  
+# <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a><span data-ttu-id="321e8-102">ICorProfilerInfo7::GetInMemorySymbolsLength 方法</span><span class="sxs-lookup"><span data-stu-id="321e8-102">ICorProfilerInfo7::GetInMemorySymbolsLength Method</span></span>
+<span data-ttu-id="321e8-103">[在 .NET Framework 4.6.1 及更新版本中支援]</span><span class="sxs-lookup"><span data-stu-id="321e8-103">[Supported in the .NET Framework 4.6.1 and later versions]</span></span>  
   
- <span data-ttu-id="ccfc1-104">傳回記憶體中的符號資料流的長度。</span><span class="sxs-lookup"><span data-stu-id="ccfc1-104">Returns the length of an in-memory symbol stream.</span></span>  
+ <span data-ttu-id="321e8-104">傳回記憶體中的符號資料流的長度。</span><span class="sxs-lookup"><span data-stu-id="321e8-104">Returns the length of an in-memory symbol stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ccfc1-105">語法</span><span class="sxs-lookup"><span data-stu-id="ccfc1-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="321e8-105">語法</span><span class="sxs-lookup"><span data-stu-id="321e8-105">Syntax</span></span>  
   
 ```  
 HRESULT GetInMemorySymbolsLength(  
@@ -32,33 +32,33 @@ HRESULT GetInMemorySymbolsLength(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ccfc1-106">參數</span><span class="sxs-lookup"><span data-stu-id="ccfc1-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="321e8-106">參數</span><span class="sxs-lookup"><span data-stu-id="321e8-106">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="ccfc1-107">[in]包含記憶體中資料流之模組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="ccfc1-107">[in] The identifier of the module containing the in-memory stream.</span></span>  
+ <span data-ttu-id="321e8-107">[in]包含記憶體中資料流之模組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="321e8-107">[in] The identifier of the module containing the in-memory stream.</span></span>  
   
- <span data-ttu-id="ccfc1-108">pCountSymbolBytes</span><span class="sxs-lookup"><span data-stu-id="ccfc1-108">pCountSymbolBytes</span></span>  
- <span data-ttu-id="ccfc1-109">[out]指標`DWORD`值，這個方法傳回時，包含以位元組為單位的資料流的長度值。</span><span class="sxs-lookup"><span data-stu-id="ccfc1-109">[out] A pointer to a `DWORD` value that, when the method returns, contains the length of the stream in bytes.</span></span>  
+ <span data-ttu-id="321e8-108">pCountSymbolBytes</span><span class="sxs-lookup"><span data-stu-id="321e8-108">pCountSymbolBytes</span></span>  
+ <span data-ttu-id="321e8-109">[out]指標`DWORD`值，這個方法傳回時，包含以位元組為單位的資料流的長度值。</span><span class="sxs-lookup"><span data-stu-id="321e8-109">[out] A pointer to a `DWORD` value that, when the method returns, contains the length of the stream in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ccfc1-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="ccfc1-110">Return Value</span></span>  
- <span data-ttu-id="ccfc1-111">此方法會傳回`S_OK`如果記憶體資料流的長度可以判斷，即使它是零 (0)。</span><span class="sxs-lookup"><span data-stu-id="ccfc1-111">The method returns `S_OK` if the length of the memory stream can be determined, even if it is zero (0).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="321e8-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="321e8-110">Return Value</span></span>  
+ <span data-ttu-id="321e8-111">此方法會傳回`S_OK`如果記憶體資料流的長度可以判斷，即使它是零 (0)。</span><span class="sxs-lookup"><span data-stu-id="321e8-111">The method returns `S_OK` if the length of the memory stream can be determined, even if it is zero (0).</span></span>  
   
- <span data-ttu-id="ccfc1-112">此方法會傳回`CORPROF_E_MODULE_IS_DYNAMIC`如果方法使用建立<xref:System.Reflection.Emit?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="ccfc1-112">The method returns `CORPROF_E_MODULE_IS_DYNAMIC` if the method was created using <xref:System.Reflection.Emit?displayProperty=nameWithType>.</span></span>  
+ <span data-ttu-id="321e8-112">此方法會傳回`CORPROF_E_MODULE_IS_DYNAMIC`如果方法使用建立<xref:System.Reflection.Emit?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="321e8-112">The method returns `CORPROF_E_MODULE_IS_DYNAMIC` if the method was created using <xref:System.Reflection.Emit?displayProperty=nameWithType>.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ccfc1-113">備註</span><span class="sxs-lookup"><span data-stu-id="ccfc1-113">Remarks</span></span>  
- <span data-ttu-id="ccfc1-114">如果模組有記憶體中的符號，要將資料流的長度放在`pCountSymbolBytes`。</span><span class="sxs-lookup"><span data-stu-id="ccfc1-114">If the module has in-memory symbols, the length of the stream is placed in `pCountSymbolBytes`.</span></span> <span data-ttu-id="ccfc1-115">如果模組沒有記憶體中的符號， `*pCountSymbolBytes = 0`。</span><span class="sxs-lookup"><span data-stu-id="ccfc1-115">If the module doesn't have in-memory     symbols, `*pCountSymbolBytes = 0`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="321e8-113">備註</span><span class="sxs-lookup"><span data-stu-id="321e8-113">Remarks</span></span>  
+ <span data-ttu-id="321e8-114">如果模組有記憶體中的符號，要將資料流的長度放在`pCountSymbolBytes`。</span><span class="sxs-lookup"><span data-stu-id="321e8-114">If the module has in-memory symbols, the length of the stream is placed in `pCountSymbolBytes`.</span></span> <span data-ttu-id="321e8-115">如果模組沒有記憶體中的符號， `*pCountSymbolBytes = 0`。</span><span class="sxs-lookup"><span data-stu-id="321e8-115">If the module doesn't have in-memory     symbols, `*pCountSymbolBytes = 0`.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ccfc1-116">目前的實作不支援這些事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="ccfc1-116">The current implementation does not support Reflection.Emit.</span></span> <span data-ttu-id="ccfc1-117">如果使用 Reflection.Emit 建立模組，則方法會傳回`CORPROF_E_MODULE_IS_DYNAMIC`。</span><span class="sxs-lookup"><span data-stu-id="ccfc1-117">If the module was created by using Reflection.Emit, the method returns `CORPROF_E_MODULE_IS_DYNAMIC`.</span></span>  
+>  <span data-ttu-id="321e8-116">目前的實作不支援這些事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="321e8-116">The current implementation does not support Reflection.Emit.</span></span> <span data-ttu-id="321e8-117">如果使用 Reflection.Emit 建立模組，則方法會傳回`CORPROF_E_MODULE_IS_DYNAMIC`。</span><span class="sxs-lookup"><span data-stu-id="321e8-117">If the module was created by using Reflection.Emit, the method returns `CORPROF_E_MODULE_IS_DYNAMIC`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ccfc1-118">需求</span><span class="sxs-lookup"><span data-stu-id="ccfc1-118">Requirements</span></span>  
- <span data-ttu-id="ccfc1-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ccfc1-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="321e8-118">需求</span><span class="sxs-lookup"><span data-stu-id="321e8-118">Requirements</span></span>  
+ <span data-ttu-id="321e8-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="321e8-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ccfc1-120">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ccfc1-120">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="321e8-120">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="321e8-120">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ccfc1-121">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ccfc1-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="321e8-121">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="321e8-121">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="ccfc1-122">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="ccfc1-122">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ <span data-ttu-id="321e8-122">**.NET framework 版本：**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="321e8-122">**.NET Framework Versions:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ccfc1-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ccfc1-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="321e8-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="321e8-123">See also</span></span>
 
-- [<span data-ttu-id="ccfc1-124">ICorProfilerInfo7 介面</span><span class="sxs-lookup"><span data-stu-id="ccfc1-124">ICorProfilerInfo7 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)
+- [<span data-ttu-id="321e8-124">ICorProfilerInfo7 介面</span><span class="sxs-lookup"><span data-stu-id="321e8-124">ICorProfilerInfo7 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)

@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 63c3ecd0ae0d9e1df62d73eb05b759093583f652
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142879"
 ---
-# <a name="notifyfilter-enumeration"></a><span data-ttu-id="d6ad9-102">NOTIFY_FILTER 列舉</span><span class="sxs-lookup"><span data-stu-id="d6ad9-102">NOTIFY_FILTER Enumeration</span></span>
-<span data-ttu-id="d6ad9-103">識別偵錯工具的函式的回呼。</span><span class="sxs-lookup"><span data-stu-id="d6ad9-103">Identifies callbacks for debugger functions.</span></span> <span data-ttu-id="d6ad9-104">如需詳細資訊，請參閱 < [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="d6ad9-104">For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.</span></span>  
+# <a name="notifyfilter-enumeration"></a><span data-ttu-id="8de10-102">NOTIFY_FILTER 列舉</span><span class="sxs-lookup"><span data-stu-id="8de10-102">NOTIFY_FILTER Enumeration</span></span>
+<span data-ttu-id="8de10-103">識別偵錯工具的函式的回呼。</span><span class="sxs-lookup"><span data-stu-id="8de10-103">Identifies callbacks for debugger functions.</span></span> <span data-ttu-id="8de10-104">如需詳細資訊，請參閱 < [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="8de10-104">For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d6ad9-105">語法</span><span class="sxs-lookup"><span data-stu-id="d6ad9-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8de10-105">語法</span><span class="sxs-lookup"><span data-stu-id="8de10-105">Syntax</span></span>  
   
 ```  
 enum tagNOTIFY_FILTER  
@@ -41,21 +41,21 @@ enum tagNOTIFY_FILTER
 };  
 ```  
   
-## <a name="members"></a><span data-ttu-id="d6ad9-106">成員</span><span class="sxs-lookup"><span data-stu-id="d6ad9-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="8de10-106">成員</span><span class="sxs-lookup"><span data-stu-id="8de10-106">Members</span></span>  
   
-|<span data-ttu-id="d6ad9-107">成員</span><span class="sxs-lookup"><span data-stu-id="d6ad9-107">Member</span></span>|<span data-ttu-id="d6ad9-108">描述</span><span class="sxs-lookup"><span data-stu-id="d6ad9-108">Description</span></span>|  
+|<span data-ttu-id="8de10-107">成員</span><span class="sxs-lookup"><span data-stu-id="8de10-107">Member</span></span>|<span data-ttu-id="8de10-108">描述</span><span class="sxs-lookup"><span data-stu-id="8de10-108">Description</span></span>|  
 |------------|-----------------|  
-|`NOTIFY_FILTER_ONSYNCCALLOUT`|<span data-ttu-id="d6ad9-109">指出[INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)應該叫用方法。</span><span class="sxs-lookup"><span data-stu-id="d6ad9-109">Indicates that the [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) method should be invoked.</span></span>|  
-|`NOTIFY_FILTER_ONSYNCCALLENTER`|<span data-ttu-id="d6ad9-110">指出[INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)應該叫用方法。</span><span class="sxs-lookup"><span data-stu-id="d6ad9-110">Indicates that the [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) method should be invoked.</span></span>|  
-|`NOTIFY_FILTER_ONSYNCCALLEXIT`|<span data-ttu-id="d6ad9-111">指出[INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)應該叫用方法。</span><span class="sxs-lookup"><span data-stu-id="d6ad9-111">Indicates that the [INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) method should be invoked.</span></span>|  
-|`NOTIFY_FILTER_ONSYNCCALLRETURN`|<span data-ttu-id="d6ad9-112">指出[INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)應該叫用方法。</span><span class="sxs-lookup"><span data-stu-id="d6ad9-112">Indicates that the [INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) method should be invoked.</span></span>|  
-|`NOTIFY_FILTER_ALLSYNC`|<span data-ttu-id="d6ad9-113">表示所有[INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)應該叫用方法。</span><span class="sxs-lookup"><span data-stu-id="d6ad9-113">Indicates that all of the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) methods should be invoked.</span></span>|  
-|`NOTIFY_FILTER_ALL`|<span data-ttu-id="d6ad9-114">啟動所有現有和未來的通知。</span><span class="sxs-lookup"><span data-stu-id="d6ad9-114">Activates all existing and future notifications.</span></span>|  
-|`NOTIFY_FILTER_NONE`|<span data-ttu-id="d6ad9-115">表示不應該叫用沒有通知方法。</span><span class="sxs-lookup"><span data-stu-id="d6ad9-115">Indicates that no notification methods should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ONSYNCCALLOUT`|<span data-ttu-id="8de10-109">指出[INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)應該叫用方法。</span><span class="sxs-lookup"><span data-stu-id="8de10-109">Indicates that the [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) method should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ONSYNCCALLENTER`|<span data-ttu-id="8de10-110">指出[INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)應該叫用方法。</span><span class="sxs-lookup"><span data-stu-id="8de10-110">Indicates that the [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) method should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ONSYNCCALLEXIT`|<span data-ttu-id="8de10-111">指出[INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)應該叫用方法。</span><span class="sxs-lookup"><span data-stu-id="8de10-111">Indicates that the [INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) method should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ONSYNCCALLRETURN`|<span data-ttu-id="8de10-112">指出[INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)應該叫用方法。</span><span class="sxs-lookup"><span data-stu-id="8de10-112">Indicates that the [INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) method should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ALLSYNC`|<span data-ttu-id="8de10-113">表示所有[INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)應該叫用方法。</span><span class="sxs-lookup"><span data-stu-id="8de10-113">Indicates that all of the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) methods should be invoked.</span></span>|  
+|`NOTIFY_FILTER_ALL`|<span data-ttu-id="8de10-114">啟動所有現有和未來的通知。</span><span class="sxs-lookup"><span data-stu-id="8de10-114">Activates all existing and future notifications.</span></span>|  
+|`NOTIFY_FILTER_NONE`|<span data-ttu-id="8de10-115">表示不應該叫用沒有通知方法。</span><span class="sxs-lookup"><span data-stu-id="8de10-115">Indicates that no notification methods should be invoked.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d6ad9-116">需求</span><span class="sxs-lookup"><span data-stu-id="d6ad9-116">Requirements</span></span>  
- <span data-ttu-id="d6ad9-117">**標頭：** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="d6ad9-117">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8de10-116">需求</span><span class="sxs-lookup"><span data-stu-id="8de10-116">Requirements</span></span>  
+ <span data-ttu-id="8de10-117">**標頭：** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="8de10-117">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d6ad9-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d6ad9-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8de10-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8de10-118">See also</span></span>
 
-- [<span data-ttu-id="d6ad9-119">診斷符號存放區列舉</span><span class="sxs-lookup"><span data-stu-id="d6ad9-119">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [<span data-ttu-id="8de10-119">診斷符號存放區列舉</span><span class="sxs-lookup"><span data-stu-id="8de10-119">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

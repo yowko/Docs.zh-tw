@@ -12,35 +12,35 @@ helpviewer_keywords:
 - views [WPF], grouping data
 ms.assetid: 145c8c3f-dbdd-4d0d-816f-90b35eba7eda
 ms.openlocfilehash: ca4439b574264ebebfda745f0765f750099bc95f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144517"
 ---
-# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a><span data-ttu-id="cd88c-102">HOW TO：使用 XAML 中的檢視排序和分組資料</span><span class="sxs-lookup"><span data-stu-id="cd88c-102">How to: Sort and Group Data Using a View in XAML</span></span>
-<span data-ttu-id="cd88c-103">此範例示範如何建立資料集合中的檢視[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="cd88c-103">This example shows how to create a view of a data collection in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="cd88c-104">檢視允許的分組、 排序、 篩選、 功能和目前的項目的概念。</span><span class="sxs-lookup"><span data-stu-id="cd88c-104">Views allow for the functionalities of grouping, sorting, filtering, and the notion of a current item.</span></span>  
+# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a><span data-ttu-id="62fb4-102">HOW TO：使用 XAML 中的檢視排序和分組資料</span><span class="sxs-lookup"><span data-stu-id="62fb4-102">How to: Sort and Group Data Using a View in XAML</span></span>
+<span data-ttu-id="62fb4-103">此範例示範如何建立資料集合中的檢視[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="62fb4-103">This example shows how to create a view of a data collection in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="62fb4-104">檢視允許的分組、 排序、 篩選、 功能和目前的項目的概念。</span><span class="sxs-lookup"><span data-stu-id="62fb4-104">Views allow for the functionalities of grouping, sorting, filtering, and the notion of a current item.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cd88c-105">範例</span><span class="sxs-lookup"><span data-stu-id="cd88c-105">Example</span></span>  
- <span data-ttu-id="cd88c-106">在下列範例中，靜態資源的名稱*放置*做為集合定義*位置*物件，其中每一個*位置*物件組成的縣 （市） 名稱，狀態。</span><span class="sxs-lookup"><span data-stu-id="cd88c-106">In the following example, the static resource named *places* is defined as a collection of *Place* objects, in which each *Place* object is consisted of a city name and the state.</span></span> <span data-ttu-id="cd88c-107">前置詞*src*對應至命名空間位置的資料來源*上的芳鄰*定義。</span><span class="sxs-lookup"><span data-stu-id="cd88c-107">The prefix *src* is mapped to the namespace where the data source *Places* is defined.</span></span> <span data-ttu-id="cd88c-108">前置詞*scm*對應至`"clr-namespace:System.ComponentModel;assembly=WindowsBase"`並*dat*對應至`"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`。</span><span class="sxs-lookup"><span data-stu-id="cd88c-108">The prefix *scm* maps to `"clr-namespace:System.ComponentModel;assembly=WindowsBase"` and *dat* maps to `"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`.</span></span>  
+## <a name="example"></a><span data-ttu-id="62fb4-105">範例</span><span class="sxs-lookup"><span data-stu-id="62fb4-105">Example</span></span>  
+ <span data-ttu-id="62fb4-106">在下列範例中，靜態資源的名稱*放置*做為集合定義*位置*物件，其中每一個*位置*物件組成的縣 （市） 名稱，狀態。</span><span class="sxs-lookup"><span data-stu-id="62fb4-106">In the following example, the static resource named *places* is defined as a collection of *Place* objects, in which each *Place* object is consisted of a city name and the state.</span></span> <span data-ttu-id="62fb4-107">前置詞*src*對應至命名空間位置的資料來源*上的芳鄰*定義。</span><span class="sxs-lookup"><span data-stu-id="62fb4-107">The prefix *src* is mapped to the namespace where the data source *Places* is defined.</span></span> <span data-ttu-id="62fb4-108">前置詞*scm*對應至`"clr-namespace:System.ComponentModel;assembly=WindowsBase"`並*dat*對應至`"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`。</span><span class="sxs-lookup"><span data-stu-id="62fb4-108">The prefix *scm* maps to `"clr-namespace:System.ComponentModel;assembly=WindowsBase"` and *dat* maps to `"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`.</span></span>  
   
- <span data-ttu-id="cd88c-109">下列範例會建立依城市名稱排序和依狀態分組的資料集合的檢視。</span><span class="sxs-lookup"><span data-stu-id="cd88c-109">The following example creates a view of the data collection that is sorted by the city name and grouped by the state.</span></span>  
+ <span data-ttu-id="62fb4-109">下列範例會建立依城市名稱排序和依狀態分組的資料集合的檢視。</span><span class="sxs-lookup"><span data-stu-id="62fb4-109">The following example creates a view of the data collection that is sorted by the city name and grouped by the state.</span></span>  
   
  [!code-xaml[CollectionViewSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#1)]  
   
- <span data-ttu-id="cd88c-110">檢視即可繫結來源，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="cd88c-110">The view can then be a binding source, as in the following example:</span></span>  
+ <span data-ttu-id="62fb4-110">檢視即可繫結來源，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="62fb4-110">The view can then be a binding source, as in the following example:</span></span>  
   
  [!code-xaml[CollectionViewSource#2](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#2)]  
   
- <span data-ttu-id="cd88c-111">XML 資料中定義的繫結<xref:System.Windows.Data.XmlDataProvider>資源，與 XML 名稱前面加上 @ 符號。</span><span class="sxs-lookup"><span data-stu-id="cd88c-111">For bindings to XML data defined in an <xref:System.Windows.Data.XmlDataProvider> resource, precede the XML name with an @ symbol.</span></span>  
+ <span data-ttu-id="62fb4-111">XML 資料中定義的繫結<xref:System.Windows.Data.XmlDataProvider>資源，與 XML 名稱前面加上 @ 符號。</span><span class="sxs-lookup"><span data-stu-id="62fb4-111">For bindings to XML data defined in an <xref:System.Windows.Data.XmlDataProvider> resource, precede the XML name with an @ symbol.</span></span>  
   
  [!code-xaml[CollectionViewSource#XDPChunk](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#xdpchunk)]  
   
  [!code-xaml[CollectionViewSource#Attribute](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#attribute)]  
   
-## <a name="see-also"></a><span data-ttu-id="cd88c-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cd88c-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="62fb4-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="62fb4-112">See also</span></span>
 
 - <xref:System.Windows.Data.CollectionViewSource>
-- [<span data-ttu-id="cd88c-113">取得資料集合的預設檢視</span><span class="sxs-lookup"><span data-stu-id="cd88c-113">Get the Default View of a Data Collection</span></span>](how-to-get-the-default-view-of-a-data-collection.md)
-- [<span data-ttu-id="cd88c-114">資料繫結概觀</span><span class="sxs-lookup"><span data-stu-id="cd88c-114">Data Binding Overview</span></span>](data-binding-overview.md)
-- [<span data-ttu-id="cd88c-115">HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="cd88c-115">How-to Topics</span></span>](data-binding-how-to-topics.md)
+- [<span data-ttu-id="62fb4-113">取得資料集合的預設檢視</span><span class="sxs-lookup"><span data-stu-id="62fb4-113">Get the Default View of a Data Collection</span></span>](how-to-get-the-default-view-of-a-data-collection.md)
+- [<span data-ttu-id="62fb4-114">資料繫結概觀</span><span class="sxs-lookup"><span data-stu-id="62fb4-114">Data Binding Overview</span></span>](data-binding-overview.md)
+- [<span data-ttu-id="62fb4-115">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="62fb4-115">How-to Topics</span></span>](data-binding-how-to-topics.md)
