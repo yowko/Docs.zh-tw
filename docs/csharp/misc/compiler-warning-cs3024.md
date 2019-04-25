@@ -7,11 +7,11 @@ helpviewer_keywords:
 - CS3024
 ms.assetid: fef9db31-9a7f-42d5-ad37-3e7faf661f95
 ms.openlocfilehash: 7515fdd7bc8f57890e3f1aac6303ed4607cc2249
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61688250"
 ---
 # <a name="compiler-warning-cs3024"></a>編譯器警告 CS3024
 條件約束類型 'type' 不符合 CLS 標準。  

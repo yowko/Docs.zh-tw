@@ -1,5 +1,5 @@
 ---
-title: 融合 (Unmanaged API 參考)
+title: 融合 (非受控 API 參考)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - unmanaged API reference [.NET Framework], fusion
@@ -9,24 +9,24 @@ ms.assetid: f8f20967-ea17-4900-bf05-87a078095fe6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7bc6c9079b6f233946fa38979800e28097e849f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946116"
 ---
-# <a name="fusion-unmanaged-api-reference"></a>融合 (Unmanaged API 參考)
-融合 API 可讓執行階段主應用程式會存取應用程式的資源的內容，以便找出這些資源的應用程式的正確版本。  
+# <a name="fusion-unmanaged-api-reference"></a>融合 (非受控 API 參考)
+融合 API 可讓執行階段主機存取應用程式資源的屬性，以為應用程式找出這些資源的正確版本。  
   
 ## <a name="in-this-section"></a>本節內容  
  [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- 描述融合 API 使用的 unmanaged 的介面。  
+ 說明融合 API 所使用的非受控介面。  
   
  [融合全域靜態函式](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
- 描述的 unmanaged 全域靜態函式融合 API 使用。  
+ 說明融合 API 使用的非受控全域靜態函式。  
   
  [融合列舉](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)  
- 描述融合 API 使用的 unmanaged 的列舉。  
+ 說明融合 API 所使用的非受控列舉。  
   
  [融合結構](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
- 描述融合 API 使用的 unmanaged 的結構。
+ 說明融合 API 所使用的非受控結構。

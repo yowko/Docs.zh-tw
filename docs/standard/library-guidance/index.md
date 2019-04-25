@@ -5,15 +5,15 @@ author: jamesnk
 ms.author: mairaw
 ms.date: 10/17/2018
 ms.openlocfilehash: a656094066eb43ffe64ab405784f4577621b5c46
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910126"
 ---
-# <a name="open-source-library-guidance"></a>開放原始碼程式庫指導方針
+# <a name="open-source-library-guidance"></a>開放原始碼程式庫指導
 
-此指導方針提供協助開發人員建立高品質 .NET 程式庫的最佳做法建議。 此文件件的重點在於建置 .NET 程式庫時的「內容」與「原因」，而不是「方法」。
+這份指導提供協助開發人員建立高品質 .NET 程式庫的最佳做法建議。 本文件的重點在於建置 .NET 程式庫時的「內容」與「原因」，而不是「方法」。
 
 高品質開放原始碼 .NET 程式庫的各個層面：
 
@@ -35,7 +35,7 @@ ms.locfileid: "53128066"
 
 **✔️ 優先**使用 NuGet 套件散發您的程式庫。
 
-至於**考慮**建議則通常應該遵循，但也會有不符合規則的例外，而您不必因為沒有遵循指導方針而感到自責：
+至於**考慮**建議則通常應該遵循，但也會有不符合規則的例外，而您不必因為沒有遵循指導而感到自責：
 
 **✔️ 考慮**使用 [SemVer 2.0.0](https://semver.org/) 來設定 NuGet 套件的版本。
 

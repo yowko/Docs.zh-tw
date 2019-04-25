@@ -29,11 +29,11 @@ ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 104a0018896eb95255cf4054f9402ce5160b95f7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683297"
 ---
 # <a name="generics-in-net"></a>.NET 的泛型
 
@@ -71,9 +71,9 @@ ms.locfileid: "48584139"
 ### <a name="generics-terminology"></a>泛型術語  
  下列詞彙會用於討論在 .NET 中的泛型：  
   
--   *「泛型類型定義」* (generic type definition)，是做為範本的類別、結構或介面宣告，且具有可包含或使用之類型的預留位置。 例如，<xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 類別可包含兩種類型：索引鍵和值。 因為泛型類型定義是只是範本，您無法建立泛型類型定義之類別、結構或介面的執行個體。  
+-   *「泛型類型定義」* (generic type definition)，是做為範本的類別、結構或介面宣告，且具有可包含或使用之類型的預留位置。 例如， <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 類別可包含兩種類型：索引鍵和值。 因為泛型類型定義是只是範本，您無法建立泛型類型定義之類別、結構或介面的執行個體。  
   
--   「泛型型別參數」或「型別參數」，是泛型型別或方法定義中的預留位置。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 泛型類型有兩個類型參數，`TKey` 和 `TValue`，分別代表其索引鍵和值的類型。  
+-   「泛型型別參數」或「型別參數」，是泛型型別或方法定義中的預留位置。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 泛型類型有兩個類型參數， `TKey` 和 `TValue`，分別代表其索引鍵和值的類型。  
   
 -   *「建構的泛型類型」*(constructed generic type) 或 *「建構的類型」*(constructed type)，是為泛型類型定義的泛型類型參數所指定之類型的結果。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48584139"
   
 -   泛型委派讓類型安全回呼不需要建立多個委派類別。 例如， <xref:System.Predicate%601> 泛型委派可讓您建立一種方法，為特定類型實作您自己的搜尋條件，以及讓您搭配 <xref:System.Array> 類型的方法 (例如 <xref:System.Array.Find%2A>、 <xref:System.Array.FindLast%2A>和 <xref:System.Array.FindAll%2A>) 使用方法。  
   
--   泛型簡化了動態產生的程式碼。 當您搭配動態產生的程式碼使用泛型時，不需要產生類型。 這會增加您使用輕量動態方法而非產生整個組件的時機。 如需詳細資訊，請參閱[如何：定義與執行動態方法](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)及<xref:System.Reflection.Emit.DynamicMethod>。  
+-   泛型簡化了動態產生的程式碼。 當您搭配動態產生的程式碼使用泛型時，不需要產生類型。 這會增加您使用輕量動態方法而非產生整個組件的時機。 如需詳細資訊，請參閱[如何：定義和執行動態方法](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) 與 <xref:System.Reflection.Emit.DynamicMethod>。  
   
  下列是泛型的一些限制：  
   
@@ -161,7 +161,7 @@ ms.locfileid: "48584139"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|標題|說明|  
 |-----------|-----------------|  
 |[.NET 中的泛型集合](../../../docs/standard/generics/collections.md)|描述 .NET 中的泛型集合類別以及其他泛型類型。|  
 |[管理陣列和清單的泛型委派](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|描述轉換、搜尋述詞以及要在陣列或集合的元素上採取之動作的泛型委派。|  
@@ -169,7 +169,7 @@ ms.locfileid: "48584139"
 |[共變數和反變數](../../../docs/standard/generics/covariance-and-contravariance.md)|描述泛型類型參數的共變數和反變數。|  
 |[常用的集合類型](../../../docs/standard/collections/commonly-used-collection-types.md)|提供 .NET 中集合類型的特性和使用方式案例的摘要資訊，包括泛型類型。|  
 |[何時使用泛型集合](../../../docs/standard/collections/when-to-use-generic-collections.md)|描述一般的規則，以判斷何時使用泛型集合類型。|  
-|[操作說明：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|說明如何產生包括泛型類型和方法的動態組件。|  
+|[如何：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|說明如何產生包括泛型類型和方法的動態組件。|  
 |[Generic Types in Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|為 Visual Basic 使用者描述泛型功能，包括使用及定義泛型類型的「操作說明」主題。|  
 |[泛型簡介](~/docs/csharp/programming-guide/generics/introduction-to-generics.md)|為 C# 使用者提供定義和使用泛型類型的概觀。|  
 |[Visual C++ 中的泛型概觀](/cpp/windows/overview-of-generics-in-visual-cpp)|描述 C++ 使用者的泛型功能，包括泛型和範本之間的差異。|  

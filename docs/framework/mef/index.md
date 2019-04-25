@@ -11,11 +11,11 @@ ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872842"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -34,7 +34,7 @@ Managed Extensibility Framework 或 MEF 是用來建立輕量型可擴充應用�
 
  稍微複雜一點的方法是提供擴充點或介面，以允許應用程式與其元件之間的去耦合。 在此模型中，您可能會提供元件可以實作的介面，以及提供 API 讓它與您的應用程式互動。 這樣可以解決需要原始程式碼存取權的問題，但仍有其困難度。
 
- 因為應用程式沒有任何能力可以自行探索元件，所以還是必須明確告知可用以及應該載入的元件。 這通常是透過在組態檔中明確地註冊可用的元件來達成。 這就表示，確保元件正確已成為維護問題，特別是當它是終端使用者，而不是預期進行更新的開發人員時。
+ 因為應用程式沒有任何能力可以自行探索元件，所以還是必須明確告知可用以及應該載入的元件。 這通常是透過在組態檔中明確地註冊可用的元件來達成。 這就表示，確保元件正確已成為維護問題，特別是當它是使用者，而不是預期進行更新的開發人員時。
 
  此外，元件無法彼此通訊，但透過應用程式本身嚴格定義的通道除外。 如果應用程式架構設計人員不需要進行特定通訊，通常是不可能辦到的。
 
@@ -62,7 +62,7 @@ Managed Extensibility Framework 或 MEF 是用來建立輕量型可擴充應用�
 
 <a name="simplecalculator_an_example_application"></a>
 
-## <a name="simplecalculator-an-example-application"></a>SimpleCalculator：範例應用程式
+## <a name="simplecalculator-an-example-application"></a>SimpleCalculator：應用程式範例
 
 了解 MEF 用途的最簡單方式是建置一個簡單的 MEF 應用程式。 在這個範例中，您建置一個十分簡單的計算機 (名稱為 SimpleCalculator)。 SimpleCalculator 的目標是建立一個接受基本算術命令 (格式為 "5+3" 或 "6-2") 的主控台應用程式，並傳回正確的答案。 使用 MEF，您可以新增運算子，而不需要變更應用程式程式碼。
 
@@ -205,7 +205,7 @@ class MySimpleCalculator : ICalculator
 
  使用者介面層 (`Program`) 不需要知道任何其他項目。 因此，您可以在 `Main` 方法中填入其餘的使用者介面邏輯。
 
- 將下列程式碼加入至 `Main` 方法中：
+ 將下列程式碼加入 `Main` 方法：
 
 ```vb
 Sub Main()
@@ -439,7 +439,7 @@ catalog.Catalogs.Add(New DirectoryCatalog("C:\SimpleCalculator\SimpleCalculator\
 catalog.Catalogs.Add(new DirectoryCatalog("C:\\SimpleCalculator\\SimpleCalculator\\Extensions"));
 ```
 
- 請將範例路徑取代為 Extensions 目錄的路徑 。 (這個絕對路徑僅供偵錯用途。 在生產應用程式中，您將會使用相對路徑。)<xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> 現在會將 Extensions 目錄之任何組件 (assembly) 中找到的任何組件 (part) 加入組合容器。
+ 請將範例路徑取代為 Extensions 目錄的路徑 。 (這個絕對路徑僅供偵錯用途使用。 在生產應用程式中，您將會使用相對路徑。)<xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> 現在會將 Extensions 目錄之任何組件 (assembly) 中找到的任何組件 (part) 加入組合容器。
 
  在 ExtendedOperations 專案中，加入 SimpleCalculator 和 System.ComponentModel.Composition 的參考。 在 ExtendedOperations 類別檔案中，針對 System.ComponentModel.Composition 加入 `Imports` 或 `using` 陳述式。 在 Visual Basic 中，也會針對 SimpleCalculator 加入 `Imports` 陳述式。 然後將下列類別加入 ExtendedOperations 類別檔案：
 
