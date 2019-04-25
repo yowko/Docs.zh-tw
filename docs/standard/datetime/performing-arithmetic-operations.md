@@ -76,7 +76,7 @@ A<xref:System.DateTimeOffset>值包含不只一個日期和時間，還能明確
 
 * <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>和<xref:System.TimeZoneInfo.ConvertTimeToUtc%2A>方法，將特定的時區時間轉換成 UTC，或將 UTC 轉換為特定時區的時間。
 
-如需詳細資訊，請參閱 <<c0> [ 各時區間轉換時間](../../../docs/standard/datetime/converting-between-time-zones.md)。
+如需詳細資訊，請參閱 <c0> [ 各時區間轉換時間](../../../docs/standard/datetime/converting-between-time-zones.md)。
 
 <xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)>類別不提供任何自動套用調整規則，當您執行日期和時間運算的方法。 不過，作法是將時區時間轉換為 UTC，並執行算術運算，然後從 UTC 轉換回時區時間。 如需詳細資訊，請參閱[How to:在日期和時間運算中使用時區](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)。
 
