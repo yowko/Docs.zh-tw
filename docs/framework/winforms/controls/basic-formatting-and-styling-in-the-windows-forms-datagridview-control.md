@@ -6,17 +6,17 @@ helpviewer_keywords:
 - data grids [Windows Forms], formatting
 ms.assetid: b9b90836-1f56-4aa9-8db8-edc78fe830e8
 ms.openlocfilehash: 5e967c1bbe54095cc11e48b014600158da7fe6a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011680"
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的基本格式化和樣式設定
 `DataGridView`控制項可讓您輕鬆地定義儲存格的基本外觀和顯示格式的資料格的值。 您可以定義外觀和格式樣式的個別儲存格、 特定的資料行和資料列中的資料格或控制項中的所有儲存格所設定的屬性`DataGridViewCellStyle`透過各種存取物件`DataGridView`控制屬性。 此外，您可以修改這些樣式，以動態方式會根據所處理的因素，例如儲存格的值`CellFormatting`事件。  
   
 ## <a name="in-this-section"></a>本節內容  
- [如何：變更 [框線] 及 [Windows Form DataGridView 控制項中的格線樣式](change-the-border-and-gridline-styles-in-the-datagrid.md)  
+ [如何：變更 [框線] 及 Windows Form DataGridView 控制項中的格線樣式](change-the-border-and-gridline-styles-in-the-datagrid.md)  
  描述如何設定`DataGridView`定義控制項的框線和儲存格之間的界限行的外觀屬性。  
   
  [Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)  
