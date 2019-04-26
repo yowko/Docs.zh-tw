@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 864cb893511bceabd61ce0064065b3866ce01dfe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986748"
 ---
 # <a name="icordebugvariablehomegetoffset-method"></a>ICorDebugVariableHome::GetOffset 方法
 取得從基底的暫存器變數的位移。  
@@ -37,7 +37,7 @@ HRESULT GetOffset(
   
 ## <a name="parameters"></a>參數  
  `pOffset`  
- [out]從 [基底的暫存器的位移。  
+ [out]從 基底的暫存器的位移。  
   
 ## <a name="return-value"></a>傳回值  
  方法會傳回下列值：  

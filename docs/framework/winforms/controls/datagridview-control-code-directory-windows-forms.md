@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], code directory
 ms.assetid: ea8bd66a-5ed6-491b-b9da-63873e275a0a
 ms.openlocfilehash: 55c57d123cfcd2861b12b522ff6d09577b6f64c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909606"
 ---
 # <a name="datagridview-control-code-directory-windows-forms"></a>DataGridView 控制項程式碼目錄 (Windows Form)
 本主題提供的連結<xref:System.Windows.Forms.DataGridView>-相關文件中的程式碼範例。  
@@ -66,7 +66,7 @@ ms.locfileid: "59151654"
   
 ## <a name="appearance-customization-examples"></a>外觀自訂範例  
   
--   [如何：變更 [框線] 及 [Windows Form DataGridView 控制項中的格線樣式](change-the-border-and-gridline-styles-in-the-datagrid.md)  
+-   [如何：變更 [框線] 及 Windows Form DataGridView 控制項中的格線樣式](change-the-border-and-gridline-styles-in-the-datagrid.md)  
   
 -   [如何：設定 Windows Form DataGridView 控制項中的 字型和色彩樣式](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
   
