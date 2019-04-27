@@ -22,22 +22,22 @@ helpviewer_keywords:
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
 ms.openlocfilehash: 59570af89e6236e3c13866d45dc5361d52b84274
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013084"
 ---
-# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a><span data-ttu-id="4865e-102">HOW TO：設定 Windows Forms 控制項所顯示的文字</span><span class="sxs-lookup"><span data-stu-id="4865e-102">How to: Set the Text Displayed by a Windows Forms Control</span></span>
-<span data-ttu-id="4865e-103">Windows Form 控制項通常會顯示與控制項主要功能相關的一些文字。</span><span class="sxs-lookup"><span data-stu-id="4865e-103">Windows Forms controls usually display some text that is related to the primary function of the control.</span></span> <span data-ttu-id="4865e-104">例如，<xref:System.Windows.Forms.Button> 控制項通常會顯示一個標題，指出當按下按鈕時，就會執行什麼動作。</span><span class="sxs-lookup"><span data-stu-id="4865e-104">For example, a <xref:System.Windows.Forms.Button> control usually displays a caption indicating what action will be performed when the button is clicked.</span></span> <span data-ttu-id="4865e-105">針對所有控制項，您都可以使用 <xref:System.Windows.Forms.Control.Text%2A> 屬性來設定或傳回該文字。</span><span class="sxs-lookup"><span data-stu-id="4865e-105">For all controls, you can set or return the text by using the <xref:System.Windows.Forms.Control.Text%2A> property.</span></span> <span data-ttu-id="4865e-106">您可以使用 <xref:System.Windows.Forms.Control.Font%2A> 屬性來變更字型。</span><span class="sxs-lookup"><span data-stu-id="4865e-106">You can change the font by using the <xref:System.Windows.Forms.Control.Font%2A> property.</span></span> <span data-ttu-id="4865e-107">您也可以使用設計工具來設定文字。</span><span class="sxs-lookup"><span data-stu-id="4865e-107">You can also set the text using the designer.</span></span>  <span data-ttu-id="4865e-108">另請參閱[How to:建立 Windows form 控制項使用設計工具的便捷鍵](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md)， [How to:設定所顯示之文字的 Windows Form 控制項使用設計工具](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md)， [How to:設定所顯示的映像的 Windows Form 控制項使用設計工具](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md)。</span><span class="sxs-lookup"><span data-stu-id="4865e-108">Also see [How to: Create Access Keys for Windows Forms Controls Using the Designer](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [How to: Set the Text Displayed by a Windows Forms Control Using the Designer](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [How to: Set the Image Displayed by a Windows Forms Control Using the Designer](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).</span></span>  
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a><span data-ttu-id="b2ff7-102">HOW TO：設定 Windows Forms 控制項所顯示的文字</span><span class="sxs-lookup"><span data-stu-id="b2ff7-102">How to: Set the Text Displayed by a Windows Forms Control</span></span>
+<span data-ttu-id="b2ff7-103">Windows Form 控制項通常會顯示與控制項主要功能相關的一些文字。</span><span class="sxs-lookup"><span data-stu-id="b2ff7-103">Windows Forms controls usually display some text that is related to the primary function of the control.</span></span> <span data-ttu-id="b2ff7-104">例如，<xref:System.Windows.Forms.Button> 控制項通常會顯示一個標題，指出當按下按鈕時，就會執行什麼動作。</span><span class="sxs-lookup"><span data-stu-id="b2ff7-104">For example, a <xref:System.Windows.Forms.Button> control usually displays a caption indicating what action will be performed when the button is clicked.</span></span> <span data-ttu-id="b2ff7-105">針對所有控制項，您都可以使用 <xref:System.Windows.Forms.Control.Text%2A> 屬性來設定或傳回該文字。</span><span class="sxs-lookup"><span data-stu-id="b2ff7-105">For all controls, you can set or return the text by using the <xref:System.Windows.Forms.Control.Text%2A> property.</span></span> <span data-ttu-id="b2ff7-106">您可以使用 <xref:System.Windows.Forms.Control.Font%2A> 屬性來變更字型。</span><span class="sxs-lookup"><span data-stu-id="b2ff7-106">You can change the font by using the <xref:System.Windows.Forms.Control.Font%2A> property.</span></span> <span data-ttu-id="b2ff7-107">您也可以使用設計工具來設定文字。</span><span class="sxs-lookup"><span data-stu-id="b2ff7-107">You can also set the text using the designer.</span></span>  <span data-ttu-id="b2ff7-108">另請參閱[How to:建立 Windows form 控制項使用設計工具的便捷鍵](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md)， [How to:設定所顯示之文字的 Windows Form 控制項使用設計工具](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md)， [How to:設定所顯示的映像的 Windows Form 控制項使用設計工具](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md)。</span><span class="sxs-lookup"><span data-stu-id="b2ff7-108">Also see [How to: Create Access Keys for Windows Forms Controls Using the Designer](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [How to: Set the Text Displayed by a Windows Forms Control Using the Designer](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [How to: Set the Image Displayed by a Windows Forms Control Using the Designer](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).</span></span>  
   
-### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a><span data-ttu-id="4865e-109">以程式設計方式來設定控制項所顯示的文字</span><span class="sxs-lookup"><span data-stu-id="4865e-109">To set the text displayed by a control programmatically</span></span>  
+### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a><span data-ttu-id="b2ff7-109">以程式設計方式來設定控制項所顯示的文字</span><span class="sxs-lookup"><span data-stu-id="b2ff7-109">To set the text displayed by a control programmatically</span></span>  
   
-1. <span data-ttu-id="4865e-110">將 <xref:System.Windows.Forms.Control.Text%2A> 屬性設為字串。</span><span class="sxs-lookup"><span data-stu-id="4865e-110">Set the <xref:System.Windows.Forms.Control.Text%2A> property to a string.</span></span>  
+1. <span data-ttu-id="b2ff7-110">將 <xref:System.Windows.Forms.Control.Text%2A> 屬性設為字串。</span><span class="sxs-lookup"><span data-stu-id="b2ff7-110">Set the <xref:System.Windows.Forms.Control.Text%2A> property to a string.</span></span>  
   
-     <span data-ttu-id="4865e-111">若要建立加上底線的便捷鍵，包括連字號 (&) 要存取的索引鍵的字母前面。</span><span class="sxs-lookup"><span data-stu-id="4865e-111">To create an underlined access key, includes an ampersand (&) before the letter that will be the access key.</span></span>  
+     <span data-ttu-id="b2ff7-111">若要建立加上底線的便捷鍵，包括連字號 (&) 要存取的索引鍵的字母前面。</span><span class="sxs-lookup"><span data-stu-id="b2ff7-111">To create an underlined access key, includes an ampersand (&) before the letter that will be the access key.</span></span>  
   
-2. <span data-ttu-id="4865e-112">將 <xref:System.Windows.Forms.Control.Font%2A> 屬性設為 <xref:System.Drawing.Font> 類型的物件。</span><span class="sxs-lookup"><span data-stu-id="4865e-112">Set the <xref:System.Windows.Forms.Control.Font%2A> property to an object of type <xref:System.Drawing.Font>.</span></span>  
+2. <span data-ttu-id="b2ff7-112">將 <xref:System.Windows.Forms.Control.Font%2A> 屬性設為 <xref:System.Drawing.Font> 類型的物件。</span><span class="sxs-lookup"><span data-stu-id="b2ff7-112">Set the <xref:System.Windows.Forms.Control.Font%2A> property to an object of type <xref:System.Drawing.Font>.</span></span>  
   
     ```vb  
     Button1.Text = "Click here to save changes"  
@@ -57,7 +57,7 @@ ms.locfileid: "59308519"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="4865e-113">您可以在使用者介面項目中使用逸出字元來顯示特殊字元，這些使用者介面項目 (例如功能表項目) 通常會以不同方式來解譯該字元。</span><span class="sxs-lookup"><span data-stu-id="4865e-113">You can use an escape character to display a special character in user-interface elements that would normally interpret them differently, such as menu items.</span></span> <span data-ttu-id="4865e-114">例如，下列程式碼行設定要讀取的功能表項目的文字"& Now For Something 截然不同 」:</span><span class="sxs-lookup"><span data-stu-id="4865e-114">For example, the following line of code sets the menu item's text to read "& Now For Something Completely Different":</span></span>  
+    >  <span data-ttu-id="b2ff7-113">您可以在使用者介面項目中使用逸出字元來顯示特殊字元，這些使用者介面項目 (例如功能表項目) 通常會以不同方式來解譯該字元。</span><span class="sxs-lookup"><span data-stu-id="b2ff7-113">You can use an escape character to display a special character in user-interface elements that would normally interpret them differently, such as menu items.</span></span> <span data-ttu-id="b2ff7-114">例如，下列程式碼行設定要讀取的功能表項目的文字"& Now For Something 截然不同 」:</span><span class="sxs-lookup"><span data-stu-id="b2ff7-114">For example, the following line of code sets the menu item's text to read "& Now For Something Completely Different":</span></span>  
   
     ```vb  
     MPMenuItem.Text = "&& Now For Something Completely Different"  
@@ -71,8 +71,8 @@ ms.locfileid: "59308519"
     mpMenuItem->Text = "&& Now For Something Completely Different";  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="4865e-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4865e-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b2ff7-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b2ff7-115">See also</span></span>
 
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="4865e-116">如何：建立 Windows Form 控制項的便捷鍵</span><span class="sxs-lookup"><span data-stu-id="4865e-116">How to: Create Access Keys for Windows Forms Controls</span></span>](how-to-create-access-keys-for-windows-forms-controls.md)
-- [<span data-ttu-id="4865e-117">如何：回應 Windows Form Button 按一下動作</span><span class="sxs-lookup"><span data-stu-id="4865e-117">How to: Respond to Windows Forms Button Clicks</span></span>](how-to-respond-to-windows-forms-button-clicks.md)
+- [<span data-ttu-id="b2ff7-116">如何：建立 Windows Form 控制項的便捷鍵</span><span class="sxs-lookup"><span data-stu-id="b2ff7-116">How to: Create Access Keys for Windows Forms Controls</span></span>](how-to-create-access-keys-for-windows-forms-controls.md)
+- [<span data-ttu-id="b2ff7-117">如何：回應 Windows Form Button 按一下動作</span><span class="sxs-lookup"><span data-stu-id="b2ff7-117">How to: Respond to Windows Forms Button Clicks</span></span>](how-to-respond-to-windows-forms-button-clicks.md)

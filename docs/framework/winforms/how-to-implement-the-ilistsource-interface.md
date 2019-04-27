@@ -9,17 +9,17 @@ helpviewer_keywords:
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
 ms.openlocfilehash: bd4e554b7e4be51847496307b50be3084d0115d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801760"
 ---
-# <a name="how-to-implement-the-ilistsource-interface"></a><span data-ttu-id="a289f-102">HOW TO：實作 IListSource 介面</span><span class="sxs-lookup"><span data-stu-id="a289f-102">How to: Implement the IListSource Interface</span></span>
-<span data-ttu-id="a289f-103">實作<xref:System.ComponentModel.IListSource>介面來建立可繫結的類別未實作<xref:System.Collections.IList>而是提供來自另一個位置的清單。</span><span class="sxs-lookup"><span data-stu-id="a289f-103">Implement the <xref:System.ComponentModel.IListSource> interface to create a bindable class that does not implement <xref:System.Collections.IList> but instead provides a list from another location.</span></span>  
+# <a name="how-to-implement-the-ilistsource-interface"></a><span data-ttu-id="15e03-102">HOW TO：實作 IListSource 介面</span><span class="sxs-lookup"><span data-stu-id="15e03-102">How to: Implement the IListSource Interface</span></span>
+<span data-ttu-id="15e03-103">實作<xref:System.ComponentModel.IListSource>介面來建立可繫結的類別未實作<xref:System.Collections.IList>而是提供來自另一個位置的清單。</span><span class="sxs-lookup"><span data-stu-id="15e03-103">Implement the <xref:System.ComponentModel.IListSource> interface to create a bindable class that does not implement <xref:System.Collections.IList> but instead provides a list from another location.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a289f-104">範例</span><span class="sxs-lookup"><span data-stu-id="a289f-104">Example</span></span>  
- <span data-ttu-id="a289f-105">下列程式碼範例示範如何實作<xref:System.ComponentModel.IListSource>介面。</span><span class="sxs-lookup"><span data-stu-id="a289f-105">The following code example demonstrates how to implement the <xref:System.ComponentModel.IListSource> interface.</span></span> <span data-ttu-id="a289f-106">名為元件`EmployeeListSource`公開<xref:System.Collections.IList>藉由實作的資料繫結<xref:System.ComponentModel.IListSource.GetList%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="a289f-106">A component named `EmployeeListSource` exposes an <xref:System.Collections.IList> for data binding by implementing the <xref:System.ComponentModel.IListSource.GetList%2A> method.</span></span>  
+## <a name="example"></a><span data-ttu-id="15e03-104">範例</span><span class="sxs-lookup"><span data-stu-id="15e03-104">Example</span></span>  
+ <span data-ttu-id="15e03-105">下列程式碼範例示範如何實作<xref:System.ComponentModel.IListSource>介面。</span><span class="sxs-lookup"><span data-stu-id="15e03-105">The following code example demonstrates how to implement the <xref:System.ComponentModel.IListSource> interface.</span></span> <span data-ttu-id="15e03-106">名為元件`EmployeeListSource`公開<xref:System.Collections.IList>藉由實作的資料繫結<xref:System.ComponentModel.IListSource.GetList%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="15e03-106">A component named `EmployeeListSource` exposes an <xref:System.Collections.IList> for data binding by implementing the <xref:System.ComponentModel.IListSource.GetList%2A> method.</span></span>  
   
  [!code-csharp[System.ComponentModel.IListSource#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.IListSource/CS/EmployeeListSource.cs#1)]
  [!code-vb[System.ComponentModel.IListSource#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.IListSource/VB/EmployeeListSource.vb#1)]  
@@ -33,15 +33,15 @@ ms.locfileid: "59159779"
  [!code-csharp[System.ComponentModel.IListSource#1000](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.IListSource/CS/Form1.cs#1000)]
  [!code-vb[System.ComponentModel.IListSource#1000](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.IListSource/VB/Form1.vb#1000)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="a289f-107">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="a289f-107">Compiling the Code</span></span>  
- <span data-ttu-id="a289f-108">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="a289f-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="15e03-107">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="15e03-107">Compiling the Code</span></span>  
+ <span data-ttu-id="15e03-108">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="15e03-108">This example requires:</span></span>  
   
--   <span data-ttu-id="a289f-109">System.Drawing 和 System.Windows.Forms 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="a289f-109">References to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="15e03-109">System.Drawing 和 System.Windows.Forms 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="15e03-109">References to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a289f-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a289f-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="15e03-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="15e03-110">See also</span></span>
 
 - <xref:System.ComponentModel.IListSource>
 - <xref:System.ComponentModel.ITypedList>
 - <xref:System.ComponentModel.BindingList%601>
 - <xref:System.ComponentModel.IBindingList>
-- [<span data-ttu-id="a289f-111">資料繫結和 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a289f-111">Data Binding and Windows Forms</span></span>](data-binding-and-windows-forms.md)
+- [<span data-ttu-id="15e03-111">資料繫結和 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="15e03-111">Data Binding and Windows Forms</span></span>](data-binding-and-windows-forms.md)

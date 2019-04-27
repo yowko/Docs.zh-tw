@@ -3,32 +3,32 @@ title: 迴圈：for...to 運算式
 description: 請參閱如何F#for...in...運算式用來在迴圈中逐一查看某個範圍的迴圈變數的值。
 ms.date: 05/16/2016
 ms.openlocfilehash: 041e98fa4bcc140aa3cd699f6ed35bf52c8b4175
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904029"
 ---
-# <a name="loops-forto-expression"></a><span data-ttu-id="5e240-103">迴圈：for...to 運算式</span><span class="sxs-lookup"><span data-stu-id="5e240-103">Loops: for...to Expression</span></span>
+# <a name="loops-forto-expression"></a><span data-ttu-id="3cfd0-103">迴圈：for...to 運算式</span><span class="sxs-lookup"><span data-stu-id="3cfd0-103">Loops: for...to Expression</span></span>
 
-<span data-ttu-id="5e240-104">`for...to`運算式用來在迴圈中逐一查看某個範圍的迴圈變數的值。</span><span class="sxs-lookup"><span data-stu-id="5e240-104">The `for...to` expression is used to iterate in a loop over a range of values of a loop variable.</span></span>
+<span data-ttu-id="3cfd0-104">`for...to`運算式用來在迴圈中逐一查看某個範圍的迴圈變數的值。</span><span class="sxs-lookup"><span data-stu-id="3cfd0-104">The `for...to` expression is used to iterate in a loop over a range of values of a loop variable.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="5e240-105">語法</span><span class="sxs-lookup"><span data-stu-id="5e240-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="3cfd0-105">語法</span><span class="sxs-lookup"><span data-stu-id="3cfd0-105">Syntax</span></span>
 
 ```fsharp
 for identifier = start [ to | downto ] finish do
     body-expression
 ```
 
-## <a name="remarks"></a><span data-ttu-id="5e240-106">備註</span><span class="sxs-lookup"><span data-stu-id="5e240-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="3cfd0-106">備註</span><span class="sxs-lookup"><span data-stu-id="3cfd0-106">Remarks</span></span>
 
-<span data-ttu-id="5e240-107">識別項型別推斷的型別*開始*並*完成*運算式。</span><span class="sxs-lookup"><span data-stu-id="5e240-107">The type of the identifier is inferred from the type of the *start* and *finish* expressions.</span></span> <span data-ttu-id="5e240-108">這些運算式的類型必須是 32 位元整數。</span><span class="sxs-lookup"><span data-stu-id="5e240-108">Types for these expressions must be 32-bit integers.</span></span>
+<span data-ttu-id="3cfd0-107">識別項型別推斷的型別*開始*並*完成*運算式。</span><span class="sxs-lookup"><span data-stu-id="3cfd0-107">The type of the identifier is inferred from the type of the *start* and *finish* expressions.</span></span> <span data-ttu-id="3cfd0-108">這些運算式的類型必須是 32 位元整數。</span><span class="sxs-lookup"><span data-stu-id="3cfd0-108">Types for these expressions must be 32-bit integers.</span></span>
 
-<span data-ttu-id="5e240-109">雖然技術上的運算式，`for...to`則更像傳統的陳述式，在命令式程式設計語言。</span><span class="sxs-lookup"><span data-stu-id="5e240-109">Although technically an expression, `for...to` is more like a traditional statement in an imperative programming language.</span></span> <span data-ttu-id="5e240-110">傳回型別*主體運算式*必須是`unit`。</span><span class="sxs-lookup"><span data-stu-id="5e240-110">The return type for the *body-expression* must be `unit`.</span></span> <span data-ttu-id="5e240-111">下列範例顯示的各種用法`for...to`運算式。</span><span class="sxs-lookup"><span data-stu-id="5e240-111">The following examples show various uses of the `for...to` expression.</span></span>
+<span data-ttu-id="3cfd0-109">雖然技術上的運算式，`for...to`則更像傳統的陳述式，在命令式程式設計語言。</span><span class="sxs-lookup"><span data-stu-id="3cfd0-109">Although technically an expression, `for...to` is more like a traditional statement in an imperative programming language.</span></span> <span data-ttu-id="3cfd0-110">傳回型別*主體運算式*必須是`unit`。</span><span class="sxs-lookup"><span data-stu-id="3cfd0-110">The return type for the *body-expression* must be `unit`.</span></span> <span data-ttu-id="3cfd0-111">下列範例顯示的各種用法`for...to`運算式。</span><span class="sxs-lookup"><span data-stu-id="3cfd0-111">The following examples show various uses of the `for...to` expression.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5101.fs)]
 
-<span data-ttu-id="5e240-112">上述程式碼的輸出如下。</span><span class="sxs-lookup"><span data-stu-id="5e240-112">The output of the previous code is as follows.</span></span>
+<span data-ttu-id="3cfd0-112">上述程式碼的輸出如下。</span><span class="sxs-lookup"><span data-stu-id="3cfd0-112">The output of the previous code is as follows.</span></span>
 
 ```
 1 2 3 4 5 6 7 8 9 10
@@ -36,8 +36,8 @@ for identifier = start [ to | downto ] finish do
 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
 ```
 
-## <a name="see-also"></a><span data-ttu-id="5e240-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5e240-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3cfd0-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3cfd0-113">See also</span></span>
 
-- [<span data-ttu-id="5e240-114">F# 語言參考</span><span class="sxs-lookup"><span data-stu-id="5e240-114">F# Language Reference</span></span>](index.md)
-- [<span data-ttu-id="5e240-115">迴圈：`for...in` 運算式</span><span class="sxs-lookup"><span data-stu-id="5e240-115">Loops: `for...in` Expression</span></span>](loops-for-in-expression.md)
-- [<span data-ttu-id="5e240-116">迴圈：`while...do` 運算式</span><span class="sxs-lookup"><span data-stu-id="5e240-116">Loops: `while...do` Expression</span></span>](loops-while-do-expression.md)
+- [<span data-ttu-id="3cfd0-114">F# 語言參考</span><span class="sxs-lookup"><span data-stu-id="3cfd0-114">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="3cfd0-115">迴圈：`for...in` 運算式</span><span class="sxs-lookup"><span data-stu-id="3cfd0-115">Loops: `for...in` Expression</span></span>](loops-for-in-expression.md)
+- [<span data-ttu-id="3cfd0-116">迴圈：`while...do` 運算式</span><span class="sxs-lookup"><span data-stu-id="3cfd0-116">Loops: `while...do` Expression</span></span>](loops-while-do-expression.md)

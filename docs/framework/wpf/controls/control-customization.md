@@ -8,22 +8,22 @@ helpviewer_keywords:
 - controls [WPF], customization
 ms.assetid: a3d9930e-5597-470e-a636-dcf65eac500b
 ms.openlocfilehash: b70a6654e5c3722ad1ef1d926ee3a441d24d9e68
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017692"
 ---
-# <a name="control-customization"></a><span data-ttu-id="580b3-102">控制項自訂</span><span class="sxs-lookup"><span data-stu-id="580b3-102">Control Customization</span></span>
-<span data-ttu-id="580b3-103">這個類別涵蓋了各種不同的基底類別、 介面和其他項目和用來建立功能完整的概念[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]控制項。</span><span class="sxs-lookup"><span data-stu-id="580b3-103">This category covers the various base classes, interfaces and other elements and concepts used in creating a fully functional [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] control.</span></span>  
+# <a name="control-customization"></a><span data-ttu-id="c9719-102">控制項自訂</span><span class="sxs-lookup"><span data-stu-id="c9719-102">Control Customization</span></span>
+<span data-ttu-id="c9719-103">這個類別涵蓋了各種不同的基底類別、 介面和其他項目和用來建立功能完整的概念[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]控制項。</span><span class="sxs-lookup"><span data-stu-id="c9719-103">This category covers the various base classes, interfaces and other elements and concepts used in creating a fully functional [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="580b3-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="580b3-104">In This Section</span></span>  
- [<span data-ttu-id="580b3-105">控制項撰寫概觀</span><span class="sxs-lookup"><span data-stu-id="580b3-105">Control Authoring Overview</span></span>](control-authoring-overview.md)  
- [<span data-ttu-id="580b3-106">設計可設定樣式控制項的方針</span><span class="sxs-lookup"><span data-stu-id="580b3-106">Guidelines for Designing Stylable Controls</span></span>](guidelines-for-designing-stylable-controls.md)  
- [<span data-ttu-id="580b3-107">裝飾項</span><span class="sxs-lookup"><span data-stu-id="580b3-107">Adorners</span></span>](adorners.md)  
- [<span data-ttu-id="580b3-108">控制項的樣式和範本</span><span class="sxs-lookup"><span data-stu-id="580b3-108">Control Styles and Templates</span></span>](control-styles-and-templates.md)  
- [<span data-ttu-id="580b3-109">WPF 自訂控制項的 UI 自動化</span><span class="sxs-lookup"><span data-stu-id="580b3-109">UI Automation of a WPF Custom Control</span></span>](ui-automation-of-a-wpf-custom-control.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c9719-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="c9719-104">In This Section</span></span>  
+ [<span data-ttu-id="c9719-105">控制項撰寫概觀</span><span class="sxs-lookup"><span data-stu-id="c9719-105">Control Authoring Overview</span></span>](control-authoring-overview.md)  
+ [<span data-ttu-id="c9719-106">設計可設定樣式控制項的方針</span><span class="sxs-lookup"><span data-stu-id="c9719-106">Guidelines for Designing Stylable Controls</span></span>](guidelines-for-designing-stylable-controls.md)  
+ [<span data-ttu-id="c9719-107">裝飾項</span><span class="sxs-lookup"><span data-stu-id="c9719-107">Adorners</span></span>](adorners.md)  
+ [<span data-ttu-id="c9719-108">控制項的樣式和範本</span><span class="sxs-lookup"><span data-stu-id="c9719-108">Control Styles and Templates</span></span>](control-styles-and-templates.md)  
+ [<span data-ttu-id="c9719-109">WPF 自訂控制項的 UI 自動化</span><span class="sxs-lookup"><span data-stu-id="c9719-109">UI Automation of a WPF Custom Control</span></span>](ui-automation-of-a-wpf-custom-control.md)  
   
-## <a name="see-also"></a><span data-ttu-id="580b3-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="580b3-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c9719-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c9719-110">See also</span></span>
 
-- [<span data-ttu-id="580b3-111">樣式設定和範本化</span><span class="sxs-lookup"><span data-stu-id="580b3-111">Styling and Templating</span></span>](styling-and-templating.md)
+- [<span data-ttu-id="c9719-111">樣式設定和範本化</span><span class="sxs-lookup"><span data-stu-id="c9719-111">Styling and Templating</span></span>](styling-and-templating.md)

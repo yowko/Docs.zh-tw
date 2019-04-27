@@ -8,27 +8,27 @@ helpviewer_keywords:
 - BC42015
 ms.assetid: 658c070a-113e-4bd8-b294-12c243191160
 ms.openlocfilehash: 64bd7771820c2a4073350b7a5189d3a32c4775be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921325"
 ---
-# <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a><span data-ttu-id="cc1c5-103">'\<介面名稱 >。\<成員名稱 >' 已經由基底類別的實作\<基 >'。</span><span class="sxs-lookup"><span data-stu-id="cc1c5-103">'\<interfacename>.\<membername>' is already implemented by the base class '\<baseclassname>'.</span></span> <span data-ttu-id="cc1c5-104">重新實作\<類型 > 假設</span><span class="sxs-lookup"><span data-stu-id="cc1c5-104">Re-implementation of \<type> assumed</span></span>
-<span data-ttu-id="cc1c5-105">屬性、 程序或在衍生類別中的事件使用`Implements`子句指定的基底類別中已實作介面成員。</span><span class="sxs-lookup"><span data-stu-id="cc1c5-105">A property, procedure, or event in a derived class uses an `Implements` clause specifying an interface member that is already implemented in the base class.</span></span>  
+# <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a><span data-ttu-id="6bfa4-103">'\<介面名稱 >。\<成員名稱 >' 已經由基底類別的實作\<基 >'。</span><span class="sxs-lookup"><span data-stu-id="6bfa4-103">'\<interfacename>.\<membername>' is already implemented by the base class '\<baseclassname>'.</span></span> <span data-ttu-id="6bfa4-104">重新實作\<類型 > 假設</span><span class="sxs-lookup"><span data-stu-id="6bfa4-104">Re-implementation of \<type> assumed</span></span>
+<span data-ttu-id="6bfa4-105">屬性、 程序或在衍生類別中的事件使用`Implements`子句指定的基底類別中已實作介面成員。</span><span class="sxs-lookup"><span data-stu-id="6bfa4-105">A property, procedure, or event in a derived class uses an `Implements` clause specifying an interface member that is already implemented in the base class.</span></span>  
   
- <span data-ttu-id="cc1c5-106">衍生類別可以重新實作透過其基底類別所實作的介面成員。</span><span class="sxs-lookup"><span data-stu-id="cc1c5-106">A derived class can reimplement an interface member that is implemented by its base class.</span></span> <span data-ttu-id="cc1c5-107">這與覆寫基底類別實作不同。</span><span class="sxs-lookup"><span data-stu-id="cc1c5-107">This is not the same as overriding the base class implementation.</span></span> <span data-ttu-id="cc1c5-108">如需詳細資訊，請參閱 [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="cc1c5-108">For more information, see [Implements](../../../visual-basic/language-reference/statements/implements-clause.md).</span></span>  
+ <span data-ttu-id="6bfa4-106">衍生類別可以重新實作透過其基底類別所實作的介面成員。</span><span class="sxs-lookup"><span data-stu-id="6bfa4-106">A derived class can reimplement an interface member that is implemented by its base class.</span></span> <span data-ttu-id="6bfa4-107">這與覆寫基底類別實作不同。</span><span class="sxs-lookup"><span data-stu-id="6bfa4-107">This is not the same as overriding the base class implementation.</span></span> <span data-ttu-id="6bfa4-108">如需詳細資訊，請參閱 [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="6bfa4-108">For more information, see [Implements](../../../visual-basic/language-reference/statements/implements-clause.md).</span></span>  
   
- <span data-ttu-id="cc1c5-109">根據預設，這個訊息是一個警告。</span><span class="sxs-lookup"><span data-stu-id="cc1c5-109">By default, this message is a warning.</span></span> <span data-ttu-id="cc1c5-110">如需隱藏警告或將警告視為錯誤的相關資訊，請參閱 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="cc1c5-110">For information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
+ <span data-ttu-id="6bfa4-109">根據預設，這個訊息是一個警告。</span><span class="sxs-lookup"><span data-stu-id="6bfa4-109">By default, this message is a warning.</span></span> <span data-ttu-id="6bfa4-110">如需隱藏警告或將警告視為錯誤的相關資訊，請參閱 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="6bfa4-110">For information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- <span data-ttu-id="cc1c5-111">**錯誤 ID:** BC42015</span><span class="sxs-lookup"><span data-stu-id="cc1c5-111">**Error ID:** BC42015</span></span>  
+ <span data-ttu-id="6bfa4-111">**錯誤 ID:** BC42015</span><span class="sxs-lookup"><span data-stu-id="6bfa4-111">**Error ID:** BC42015</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="cc1c5-112">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="cc1c5-112">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6bfa4-112">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="6bfa4-112">To correct this error</span></span>  
   
--   <span data-ttu-id="cc1c5-113">如果您要重新實作介面成員，則不需要採取任何動作。</span><span class="sxs-lookup"><span data-stu-id="cc1c5-113">If you intend to reimplement the interface member, you do not need to take any action.</span></span> <span data-ttu-id="cc1c5-114">在衍生類別中的程式碼會存取重新實作的成員，除非您使用`MyBase`關鍵字存取基底類別實作。</span><span class="sxs-lookup"><span data-stu-id="cc1c5-114">Code in your derived class accesses the reimplemented member unless you use the `MyBase` keyword to access the base class implementation.</span></span>  
+-   <span data-ttu-id="6bfa4-113">如果您要重新實作介面成員，則不需要採取任何動作。</span><span class="sxs-lookup"><span data-stu-id="6bfa4-113">If you intend to reimplement the interface member, you do not need to take any action.</span></span> <span data-ttu-id="6bfa4-114">在衍生類別中的程式碼會存取重新實作的成員，除非您使用`MyBase`關鍵字存取基底類別實作。</span><span class="sxs-lookup"><span data-stu-id="6bfa4-114">Code in your derived class accesses the reimplemented member unless you use the `MyBase` keyword to access the base class implementation.</span></span>  
   
--   <span data-ttu-id="cc1c5-115">如果您不要重新實作介面成員，請從屬性、程序或事件宣告中移除 `Implements` 子句。</span><span class="sxs-lookup"><span data-stu-id="cc1c5-115">If you do not intend to reimplement the interface member, remove the `Implements` clause from the property, procedure, or event declaration.</span></span>  
+-   <span data-ttu-id="6bfa4-115">如果您不要重新實作介面成員，請從屬性、程序或事件宣告中移除 `Implements` 子句。</span><span class="sxs-lookup"><span data-stu-id="6bfa4-115">If you do not intend to reimplement the interface member, remove the `Implements` clause from the property, procedure, or event declaration.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cc1c5-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cc1c5-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6bfa4-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6bfa4-116">See also</span></span>
 
-- [<span data-ttu-id="cc1c5-117">介面</span><span class="sxs-lookup"><span data-stu-id="cc1c5-117">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [<span data-ttu-id="6bfa4-117">介面</span><span class="sxs-lookup"><span data-stu-id="6bfa4-117">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

@@ -8,72 +8,72 @@ helpviewer_keywords:
 - libraries [WPF], controls
 ms.assetid: c1b33289-c389-4ac2-b153-3cbb0d8324ad
 ms.openlocfilehash: f5d69a1743941a235b3a1fda38023b11b3f26809
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912310"
 ---
-# <a name="control-library"></a><span data-ttu-id="f4b2a-102">控制項程式庫</span><span class="sxs-lookup"><span data-stu-id="f4b2a-102">Control Library</span></span>
-<span data-ttu-id="f4b2a-103">Windows Presentation Foundation (WPF) 控制項程式庫包含提供的 Windows Presentation Foundation (WPF)，依字母順序列出之控制項的資訊。</span><span class="sxs-lookup"><span data-stu-id="f4b2a-103">The Windows Presentation Foundation (WPF) control library contains information on the controls provided by Windows Presentation Foundation (WPF), listed alphabetically.</span></span>  
+# <a name="control-library"></a><span data-ttu-id="d772e-102">控制項程式庫</span><span class="sxs-lookup"><span data-stu-id="d772e-102">Control Library</span></span>
+<span data-ttu-id="d772e-103">Windows Presentation Foundation (WPF) 控制項程式庫包含提供的 Windows Presentation Foundation (WPF)，依字母順序列出之控制項的資訊。</span><span class="sxs-lookup"><span data-stu-id="d772e-103">The Windows Presentation Foundation (WPF) control library contains information on the controls provided by Windows Presentation Foundation (WPF), listed alphabetically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f4b2a-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="f4b2a-104">In This Section</span></span>  
- [<span data-ttu-id="f4b2a-105">Border</span><span class="sxs-lookup"><span data-stu-id="f4b2a-105">Border</span></span>](border.md)  
- [<span data-ttu-id="f4b2a-106">BulletDecorator</span><span class="sxs-lookup"><span data-stu-id="f4b2a-106">BulletDecorator</span></span>](bulletdecorator.md)  
- [<span data-ttu-id="f4b2a-107">Button</span><span class="sxs-lookup"><span data-stu-id="f4b2a-107">Button</span></span>](button.md)  
- [<span data-ttu-id="f4b2a-108">Calendar</span><span class="sxs-lookup"><span data-stu-id="f4b2a-108">Calendar</span></span>](calendar.md)  
- [<span data-ttu-id="f4b2a-109">Canvas</span><span class="sxs-lookup"><span data-stu-id="f4b2a-109">Canvas</span></span>](canvas.md)  
- [<span data-ttu-id="f4b2a-110">CheckBox</span><span class="sxs-lookup"><span data-stu-id="f4b2a-110">CheckBox</span></span>](checkbox.md)  
- [<span data-ttu-id="f4b2a-111">ComboBox</span><span class="sxs-lookup"><span data-stu-id="f4b2a-111">ComboBox</span></span>](combobox.md)  
- [<span data-ttu-id="f4b2a-112">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="f4b2a-112">ContextMenu</span></span>](contextmenu.md)  
- [<span data-ttu-id="f4b2a-113">DataGrid</span><span class="sxs-lookup"><span data-stu-id="f4b2a-113">DataGrid</span></span>](datagrid.md)  
- [<span data-ttu-id="f4b2a-114">DatePicker</span><span class="sxs-lookup"><span data-stu-id="f4b2a-114">DatePicker</span></span>](datepicker.md)  
- [<span data-ttu-id="f4b2a-115">DockPanel</span><span class="sxs-lookup"><span data-stu-id="f4b2a-115">DockPanel</span></span>](dockpanel.md)  
- [<span data-ttu-id="f4b2a-116">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="f4b2a-116">DocumentViewer</span></span>](documentviewer.md)  
- [<span data-ttu-id="f4b2a-117">Expander</span><span class="sxs-lookup"><span data-stu-id="f4b2a-117">Expander</span></span>](expander.md)  
- [<span data-ttu-id="f4b2a-118">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="f4b2a-118">FlowDocumentPageViewer</span></span>](flowdocumentpageviewer.md)  
- [<span data-ttu-id="f4b2a-119">FlowDocumentReader</span><span class="sxs-lookup"><span data-stu-id="f4b2a-119">FlowDocumentReader</span></span>](flowdocumentreader.md)  
- [<span data-ttu-id="f4b2a-120">FlowDocumentScrollViewer</span><span class="sxs-lookup"><span data-stu-id="f4b2a-120">FlowDocumentScrollViewer</span></span>](flowdocumentscrollviewer.md)  
- [<span data-ttu-id="f4b2a-121">Frame</span><span class="sxs-lookup"><span data-stu-id="f4b2a-121">Frame</span></span>](frame.md)  
- [<span data-ttu-id="f4b2a-122">格線</span><span class="sxs-lookup"><span data-stu-id="f4b2a-122">Grid</span></span>](grid.md)  
- [<span data-ttu-id="f4b2a-123">GridSplitter</span><span class="sxs-lookup"><span data-stu-id="f4b2a-123">GridSplitter</span></span>](gridsplitter.md)  
- [<span data-ttu-id="f4b2a-124">GroupBox</span><span class="sxs-lookup"><span data-stu-id="f4b2a-124">GroupBox</span></span>](groupbox.md)  
- [<span data-ttu-id="f4b2a-125">影像</span><span class="sxs-lookup"><span data-stu-id="f4b2a-125">Image</span></span>](image.md)  
- [<span data-ttu-id="f4b2a-126">Label</span><span class="sxs-lookup"><span data-stu-id="f4b2a-126">Label</span></span>](label.md)  
- [<span data-ttu-id="f4b2a-127">ListBox</span><span class="sxs-lookup"><span data-stu-id="f4b2a-127">ListBox</span></span>](listbox.md)  
- [<span data-ttu-id="f4b2a-128">ListView</span><span class="sxs-lookup"><span data-stu-id="f4b2a-128">ListView</span></span>](listview.md)  
- [<span data-ttu-id="f4b2a-129">Menu</span><span class="sxs-lookup"><span data-stu-id="f4b2a-129">Menu</span></span>](menu.md)  
- [<span data-ttu-id="f4b2a-130">Panel</span><span class="sxs-lookup"><span data-stu-id="f4b2a-130">Panel</span></span>](panel.md)  
- [<span data-ttu-id="f4b2a-131">PasswordBox</span><span class="sxs-lookup"><span data-stu-id="f4b2a-131">PasswordBox</span></span>](passwordbox.md)  
- [<span data-ttu-id="f4b2a-132">Popup</span><span class="sxs-lookup"><span data-stu-id="f4b2a-132">Popup</span></span>](popup.md)  
- [<span data-ttu-id="f4b2a-133">ProgressBar</span><span class="sxs-lookup"><span data-stu-id="f4b2a-133">ProgressBar</span></span>](progressbar.md)  
- [<span data-ttu-id="f4b2a-134">PrintDialog</span><span class="sxs-lookup"><span data-stu-id="f4b2a-134">PrintDialog</span></span>](printdialog.md)  
- [<span data-ttu-id="f4b2a-135">RadioButton</span><span class="sxs-lookup"><span data-stu-id="f4b2a-135">RadioButton</span></span>](radiobutton.md)  
- [<span data-ttu-id="f4b2a-136">RepeatButton</span><span class="sxs-lookup"><span data-stu-id="f4b2a-136">RepeatButton</span></span>](repeatbutton.md)  
- [<span data-ttu-id="f4b2a-137">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="f4b2a-137">RichTextBox</span></span>](richtextbox.md)  
- [<span data-ttu-id="f4b2a-138">ScrollBar</span><span class="sxs-lookup"><span data-stu-id="f4b2a-138">ScrollBar</span></span>](scrollbar.md)  
- [<span data-ttu-id="f4b2a-139">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="f4b2a-139">ScrollViewer</span></span>](scrollviewer.md)  
- [<span data-ttu-id="f4b2a-140">Separator</span><span class="sxs-lookup"><span data-stu-id="f4b2a-140">Separator</span></span>](separator.md)  
- [<span data-ttu-id="f4b2a-141">Slider</span><span class="sxs-lookup"><span data-stu-id="f4b2a-141">Slider</span></span>](slider.md)  
- [<span data-ttu-id="f4b2a-142">StackPanel</span><span class="sxs-lookup"><span data-stu-id="f4b2a-142">StackPanel</span></span>](stackpanel.md)  
- [<span data-ttu-id="f4b2a-143">StatusBar</span><span class="sxs-lookup"><span data-stu-id="f4b2a-143">StatusBar</span></span>](statusbar.md)  
- [<span data-ttu-id="f4b2a-144">TabControl</span><span class="sxs-lookup"><span data-stu-id="f4b2a-144">TabControl</span></span>](tabcontrol.md)  
- [<span data-ttu-id="f4b2a-145">TextBlock</span><span class="sxs-lookup"><span data-stu-id="f4b2a-145">TextBlock</span></span>](textblock.md)  
- [<span data-ttu-id="f4b2a-146">TextBox</span><span class="sxs-lookup"><span data-stu-id="f4b2a-146">TextBox</span></span>](textbox.md)  
- [<span data-ttu-id="f4b2a-147">ToolBar</span><span class="sxs-lookup"><span data-stu-id="f4b2a-147">ToolBar</span></span>](toolbar.md)  
- [<span data-ttu-id="f4b2a-148">ToolTip</span><span class="sxs-lookup"><span data-stu-id="f4b2a-148">ToolTip</span></span>](tooltip.md)  
- [<span data-ttu-id="f4b2a-149">TreeView</span><span class="sxs-lookup"><span data-stu-id="f4b2a-149">TreeView</span></span>](treeview.md)  
- [<span data-ttu-id="f4b2a-150">WrapPanel</span><span class="sxs-lookup"><span data-stu-id="f4b2a-150">WrapPanel</span></span>](wrappanel.md)  
- [<span data-ttu-id="f4b2a-151">Viewbox</span><span class="sxs-lookup"><span data-stu-id="f4b2a-151">Viewbox</span></span>](viewbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d772e-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="d772e-104">In This Section</span></span>  
+ [<span data-ttu-id="d772e-105">Border</span><span class="sxs-lookup"><span data-stu-id="d772e-105">Border</span></span>](border.md)  
+ [<span data-ttu-id="d772e-106">BulletDecorator</span><span class="sxs-lookup"><span data-stu-id="d772e-106">BulletDecorator</span></span>](bulletdecorator.md)  
+ [<span data-ttu-id="d772e-107">Button</span><span class="sxs-lookup"><span data-stu-id="d772e-107">Button</span></span>](button.md)  
+ [<span data-ttu-id="d772e-108">Calendar</span><span class="sxs-lookup"><span data-stu-id="d772e-108">Calendar</span></span>](calendar.md)  
+ [<span data-ttu-id="d772e-109">Canvas</span><span class="sxs-lookup"><span data-stu-id="d772e-109">Canvas</span></span>](canvas.md)  
+ [<span data-ttu-id="d772e-110">CheckBox</span><span class="sxs-lookup"><span data-stu-id="d772e-110">CheckBox</span></span>](checkbox.md)  
+ [<span data-ttu-id="d772e-111">ComboBox</span><span class="sxs-lookup"><span data-stu-id="d772e-111">ComboBox</span></span>](combobox.md)  
+ [<span data-ttu-id="d772e-112">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="d772e-112">ContextMenu</span></span>](contextmenu.md)  
+ [<span data-ttu-id="d772e-113">DataGrid</span><span class="sxs-lookup"><span data-stu-id="d772e-113">DataGrid</span></span>](datagrid.md)  
+ [<span data-ttu-id="d772e-114">DatePicker</span><span class="sxs-lookup"><span data-stu-id="d772e-114">DatePicker</span></span>](datepicker.md)  
+ [<span data-ttu-id="d772e-115">DockPanel</span><span class="sxs-lookup"><span data-stu-id="d772e-115">DockPanel</span></span>](dockpanel.md)  
+ [<span data-ttu-id="d772e-116">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="d772e-116">DocumentViewer</span></span>](documentviewer.md)  
+ [<span data-ttu-id="d772e-117">Expander</span><span class="sxs-lookup"><span data-stu-id="d772e-117">Expander</span></span>](expander.md)  
+ [<span data-ttu-id="d772e-118">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="d772e-118">FlowDocumentPageViewer</span></span>](flowdocumentpageviewer.md)  
+ [<span data-ttu-id="d772e-119">FlowDocumentReader</span><span class="sxs-lookup"><span data-stu-id="d772e-119">FlowDocumentReader</span></span>](flowdocumentreader.md)  
+ [<span data-ttu-id="d772e-120">FlowDocumentScrollViewer</span><span class="sxs-lookup"><span data-stu-id="d772e-120">FlowDocumentScrollViewer</span></span>](flowdocumentscrollviewer.md)  
+ [<span data-ttu-id="d772e-121">Frame</span><span class="sxs-lookup"><span data-stu-id="d772e-121">Frame</span></span>](frame.md)  
+ [<span data-ttu-id="d772e-122">格線</span><span class="sxs-lookup"><span data-stu-id="d772e-122">Grid</span></span>](grid.md)  
+ [<span data-ttu-id="d772e-123">GridSplitter</span><span class="sxs-lookup"><span data-stu-id="d772e-123">GridSplitter</span></span>](gridsplitter.md)  
+ [<span data-ttu-id="d772e-124">GroupBox</span><span class="sxs-lookup"><span data-stu-id="d772e-124">GroupBox</span></span>](groupbox.md)  
+ [<span data-ttu-id="d772e-125">影像</span><span class="sxs-lookup"><span data-stu-id="d772e-125">Image</span></span>](image.md)  
+ [<span data-ttu-id="d772e-126">Label</span><span class="sxs-lookup"><span data-stu-id="d772e-126">Label</span></span>](label.md)  
+ [<span data-ttu-id="d772e-127">ListBox</span><span class="sxs-lookup"><span data-stu-id="d772e-127">ListBox</span></span>](listbox.md)  
+ [<span data-ttu-id="d772e-128">ListView</span><span class="sxs-lookup"><span data-stu-id="d772e-128">ListView</span></span>](listview.md)  
+ [<span data-ttu-id="d772e-129">Menu</span><span class="sxs-lookup"><span data-stu-id="d772e-129">Menu</span></span>](menu.md)  
+ [<span data-ttu-id="d772e-130">Panel</span><span class="sxs-lookup"><span data-stu-id="d772e-130">Panel</span></span>](panel.md)  
+ [<span data-ttu-id="d772e-131">PasswordBox</span><span class="sxs-lookup"><span data-stu-id="d772e-131">PasswordBox</span></span>](passwordbox.md)  
+ [<span data-ttu-id="d772e-132">Popup</span><span class="sxs-lookup"><span data-stu-id="d772e-132">Popup</span></span>](popup.md)  
+ [<span data-ttu-id="d772e-133">ProgressBar</span><span class="sxs-lookup"><span data-stu-id="d772e-133">ProgressBar</span></span>](progressbar.md)  
+ [<span data-ttu-id="d772e-134">PrintDialog</span><span class="sxs-lookup"><span data-stu-id="d772e-134">PrintDialog</span></span>](printdialog.md)  
+ [<span data-ttu-id="d772e-135">RadioButton</span><span class="sxs-lookup"><span data-stu-id="d772e-135">RadioButton</span></span>](radiobutton.md)  
+ [<span data-ttu-id="d772e-136">RepeatButton</span><span class="sxs-lookup"><span data-stu-id="d772e-136">RepeatButton</span></span>](repeatbutton.md)  
+ [<span data-ttu-id="d772e-137">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="d772e-137">RichTextBox</span></span>](richtextbox.md)  
+ [<span data-ttu-id="d772e-138">ScrollBar</span><span class="sxs-lookup"><span data-stu-id="d772e-138">ScrollBar</span></span>](scrollbar.md)  
+ [<span data-ttu-id="d772e-139">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="d772e-139">ScrollViewer</span></span>](scrollviewer.md)  
+ [<span data-ttu-id="d772e-140">Separator</span><span class="sxs-lookup"><span data-stu-id="d772e-140">Separator</span></span>](separator.md)  
+ [<span data-ttu-id="d772e-141">Slider</span><span class="sxs-lookup"><span data-stu-id="d772e-141">Slider</span></span>](slider.md)  
+ [<span data-ttu-id="d772e-142">StackPanel</span><span class="sxs-lookup"><span data-stu-id="d772e-142">StackPanel</span></span>](stackpanel.md)  
+ [<span data-ttu-id="d772e-143">StatusBar</span><span class="sxs-lookup"><span data-stu-id="d772e-143">StatusBar</span></span>](statusbar.md)  
+ [<span data-ttu-id="d772e-144">TabControl</span><span class="sxs-lookup"><span data-stu-id="d772e-144">TabControl</span></span>](tabcontrol.md)  
+ [<span data-ttu-id="d772e-145">TextBlock</span><span class="sxs-lookup"><span data-stu-id="d772e-145">TextBlock</span></span>](textblock.md)  
+ [<span data-ttu-id="d772e-146">TextBox</span><span class="sxs-lookup"><span data-stu-id="d772e-146">TextBox</span></span>](textbox.md)  
+ [<span data-ttu-id="d772e-147">ToolBar</span><span class="sxs-lookup"><span data-stu-id="d772e-147">ToolBar</span></span>](toolbar.md)  
+ [<span data-ttu-id="d772e-148">ToolTip</span><span class="sxs-lookup"><span data-stu-id="d772e-148">ToolTip</span></span>](tooltip.md)  
+ [<span data-ttu-id="d772e-149">TreeView</span><span class="sxs-lookup"><span data-stu-id="d772e-149">TreeView</span></span>](treeview.md)  
+ [<span data-ttu-id="d772e-150">WrapPanel</span><span class="sxs-lookup"><span data-stu-id="d772e-150">WrapPanel</span></span>](wrappanel.md)  
+ [<span data-ttu-id="d772e-151">Viewbox</span><span class="sxs-lookup"><span data-stu-id="d772e-151">Viewbox</span></span>](viewbox.md)  
   
-## <a name="reference"></a><span data-ttu-id="f4b2a-152">參考資料</span><span class="sxs-lookup"><span data-stu-id="f4b2a-152">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d772e-152">參考資料</span><span class="sxs-lookup"><span data-stu-id="d772e-152">Reference</span></span>  
  <xref:System.Windows.Controls>  
   
  <xref:System.Windows.Controls.Primitives>  
   
-## <a name="related-sections"></a><span data-ttu-id="f4b2a-153">相關章節</span><span class="sxs-lookup"><span data-stu-id="f4b2a-153">Related Sections</span></span>  
- [<span data-ttu-id="f4b2a-154">控制項自訂</span><span class="sxs-lookup"><span data-stu-id="f4b2a-154">Control Customization</span></span>](control-customization.md)  
+## <a name="related-sections"></a><span data-ttu-id="d772e-153">相關章節</span><span class="sxs-lookup"><span data-stu-id="d772e-153">Related Sections</span></span>  
+ [<span data-ttu-id="d772e-154">控制項自訂</span><span class="sxs-lookup"><span data-stu-id="d772e-154">Control Customization</span></span>](control-customization.md)  
   
- [<span data-ttu-id="f4b2a-155">依分類列出控制項</span><span class="sxs-lookup"><span data-stu-id="f4b2a-155">Controls by Category</span></span>](controls-by-category.md)  
+ [<span data-ttu-id="d772e-155">依分類列出控制項</span><span class="sxs-lookup"><span data-stu-id="d772e-155">Controls by Category</span></span>](controls-by-category.md)  
   
- [<span data-ttu-id="f4b2a-156">WPF 內容模型</span><span class="sxs-lookup"><span data-stu-id="f4b2a-156">WPF Content Model</span></span>](wpf-content-model.md)
+ [<span data-ttu-id="d772e-156">WPF 內容模型</span><span class="sxs-lookup"><span data-stu-id="d772e-156">WPF Content Model</span></span>](wpf-content-model.md)

@@ -9,54 +9,54 @@ helpviewer_keywords:
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
 ms.openlocfilehash: febea73ddbc45276f97835eb4af7ee0d0d68dda5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674333"
 ---
-# <a name="systemnet-element-network-settings"></a><span data-ttu-id="3c38e-102">\<system.Net> 項目 (網路設定)</span><span class="sxs-lookup"><span data-stu-id="3c38e-102">\<system.Net> Element (Network Settings)</span></span>
-<span data-ttu-id="3c38e-103">包含會指定 .NET Framework 如何連接至網路的設定。</span><span class="sxs-lookup"><span data-stu-id="3c38e-103">Contains settings that specify how the .NET Framework connects to the network.</span></span>  
+# <a name="systemnet-element-network-settings"></a><span data-ttu-id="03146-102">\<system.Net> 項目 (網路設定)</span><span class="sxs-lookup"><span data-stu-id="03146-102">\<system.Net> Element (Network Settings)</span></span>
+<span data-ttu-id="03146-103">包含會指定 .NET Framework 如何連接至網路的設定。</span><span class="sxs-lookup"><span data-stu-id="03146-103">Contains settings that specify how the .NET Framework connects to the network.</span></span>  
   
- <span data-ttu-id="3c38e-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="3c38e-104">\<configuration></span></span>  
-<span data-ttu-id="3c38e-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="3c38e-105">\<system.net></span></span>  
+ <span data-ttu-id="03146-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="03146-104">\<configuration></span></span>  
+<span data-ttu-id="03146-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="03146-105">\<system.net></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3c38e-106">語法</span><span class="sxs-lookup"><span data-stu-id="3c38e-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="03146-106">語法</span><span class="sxs-lookup"><span data-stu-id="03146-106">Syntax</span></span>  
   
 ```xml  
 <system.net>   
 </system.net>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="3c38e-107">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="3c38e-107">Attributes and Elements</span></span>  
- <span data-ttu-id="3c38e-108">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="3c38e-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="03146-107">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="03146-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="03146-108">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="03146-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="3c38e-109">屬性</span><span class="sxs-lookup"><span data-stu-id="3c38e-109">Attributes</span></span>  
- <span data-ttu-id="3c38e-110">無。</span><span class="sxs-lookup"><span data-stu-id="3c38e-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="03146-109">屬性</span><span class="sxs-lookup"><span data-stu-id="03146-109">Attributes</span></span>  
+ <span data-ttu-id="03146-110">無。</span><span class="sxs-lookup"><span data-stu-id="03146-110">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="3c38e-111">子元素</span><span class="sxs-lookup"><span data-stu-id="3c38e-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="03146-111">子元素</span><span class="sxs-lookup"><span data-stu-id="03146-111">Child Elements</span></span>  
   
-|<span data-ttu-id="3c38e-112">**目**</span><span class="sxs-lookup"><span data-stu-id="3c38e-112">**Element**</span></span>|<span data-ttu-id="3c38e-113">**描述**</span><span class="sxs-lookup"><span data-stu-id="3c38e-113">**Description**</span></span>|  
+|<span data-ttu-id="03146-112">**目**</span><span class="sxs-lookup"><span data-stu-id="03146-112">**Element**</span></span>|<span data-ttu-id="03146-113">**描述**</span><span class="sxs-lookup"><span data-stu-id="03146-113">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="3c38e-114">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="3c38e-114">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="3c38e-115">指定用來驗證網際網路要求的模組。</span><span class="sxs-lookup"><span data-stu-id="3c38e-115">Specifies modules used to authenticate Internet requests.</span></span>|  
-|[<span data-ttu-id="3c38e-116">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="3c38e-116">connectionManagement</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|<span data-ttu-id="3c38e-117">指定連線到網際網路主機的最大數目。</span><span class="sxs-lookup"><span data-stu-id="3c38e-117">Specifies the maximum number of connections to an Internet host.</span></span>|  
-|[<span data-ttu-id="3c38e-118">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="3c38e-118">defaultProxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|<span data-ttu-id="3c38e-119">設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。</span><span class="sxs-lookup"><span data-stu-id="3c38e-119">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
-|[<span data-ttu-id="3c38e-120">mailSettings</span><span class="sxs-lookup"><span data-stu-id="3c38e-120">mailSettings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|<span data-ttu-id="3c38e-121">設定 Simple Mail Transport Protocol (SMTP) 郵件傳送選項。</span><span class="sxs-lookup"><span data-stu-id="3c38e-121">Configures Simple Mail Transport Protocol (SMTP) mail sending options.</span></span>|  
-|[<span data-ttu-id="3c38e-122">requestCaching</span><span class="sxs-lookup"><span data-stu-id="3c38e-122">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="3c38e-123">控制網路要求的快取機制。</span><span class="sxs-lookup"><span data-stu-id="3c38e-123">Controls the caching mechanism for network requests.</span></span>|  
-|[<span data-ttu-id="3c38e-124">settings</span><span class="sxs-lookup"><span data-stu-id="3c38e-124">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="3c38e-125">會設定基本的網路中的類別選項<xref:System.Net>和相關的子命名空間。</span><span class="sxs-lookup"><span data-stu-id="3c38e-125">Configures basic network options for classes in the <xref:System.Net> and related child namespaces.</span></span>|  
-|[<span data-ttu-id="3c38e-126">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="3c38e-126">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="3c38e-127">指定用於來自網際網路主機要求資訊的模組。</span><span class="sxs-lookup"><span data-stu-id="3c38e-127">Specifies modules to use to request information from Internet hosts.</span></span>|  
+|[<span data-ttu-id="03146-114">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="03146-114">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="03146-115">指定用來驗證網際網路要求的模組。</span><span class="sxs-lookup"><span data-stu-id="03146-115">Specifies modules used to authenticate Internet requests.</span></span>|  
+|[<span data-ttu-id="03146-116">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="03146-116">connectionManagement</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|<span data-ttu-id="03146-117">指定連線到網際網路主機的最大數目。</span><span class="sxs-lookup"><span data-stu-id="03146-117">Specifies the maximum number of connections to an Internet host.</span></span>|  
+|[<span data-ttu-id="03146-118">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="03146-118">defaultProxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|<span data-ttu-id="03146-119">設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。</span><span class="sxs-lookup"><span data-stu-id="03146-119">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
+|[<span data-ttu-id="03146-120">mailSettings</span><span class="sxs-lookup"><span data-stu-id="03146-120">mailSettings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|<span data-ttu-id="03146-121">設定 Simple Mail Transport Protocol (SMTP) 郵件傳送選項。</span><span class="sxs-lookup"><span data-stu-id="03146-121">Configures Simple Mail Transport Protocol (SMTP) mail sending options.</span></span>|  
+|[<span data-ttu-id="03146-122">requestCaching</span><span class="sxs-lookup"><span data-stu-id="03146-122">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="03146-123">控制網路要求的快取機制。</span><span class="sxs-lookup"><span data-stu-id="03146-123">Controls the caching mechanism for network requests.</span></span>|  
+|[<span data-ttu-id="03146-124">settings</span><span class="sxs-lookup"><span data-stu-id="03146-124">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="03146-125">會設定基本的網路中的類別選項<xref:System.Net>和相關的子命名空間。</span><span class="sxs-lookup"><span data-stu-id="03146-125">Configures basic network options for classes in the <xref:System.Net> and related child namespaces.</span></span>|  
+|[<span data-ttu-id="03146-126">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="03146-126">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="03146-127">指定用於來自網際網路主機要求資訊的模組。</span><span class="sxs-lookup"><span data-stu-id="03146-127">Specifies modules to use to request information from Internet hosts.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="3c38e-128">父項目</span><span class="sxs-lookup"><span data-stu-id="3c38e-128">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="03146-128">父項目</span><span class="sxs-lookup"><span data-stu-id="03146-128">Parent Elements</span></span>  
   
-|<span data-ttu-id="3c38e-129">**目**</span><span class="sxs-lookup"><span data-stu-id="3c38e-129">**Element**</span></span>|<span data-ttu-id="3c38e-130">**描述**</span><span class="sxs-lookup"><span data-stu-id="3c38e-130">**Description**</span></span>|  
+|<span data-ttu-id="03146-129">**目**</span><span class="sxs-lookup"><span data-stu-id="03146-129">**Element**</span></span>|<span data-ttu-id="03146-130">**描述**</span><span class="sxs-lookup"><span data-stu-id="03146-130">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="3c38e-131">configuration</span><span class="sxs-lookup"><span data-stu-id="3c38e-131">configuration</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="3c38e-132">包含的所有命名空間的設定。</span><span class="sxs-lookup"><span data-stu-id="3c38e-132">Contains settings for all namespaces.</span></span>|  
+|[<span data-ttu-id="03146-131">configuration</span><span class="sxs-lookup"><span data-stu-id="03146-131">configuration</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="03146-132">包含的所有命名空間的設定。</span><span class="sxs-lookup"><span data-stu-id="03146-132">Contains settings for all namespaces.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3c38e-133">備註</span><span class="sxs-lookup"><span data-stu-id="3c38e-133">Remarks</span></span>  
- <span data-ttu-id="3c38e-134">[ \<System.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)項目包含設定中的類別<xref:System.Net>和相關的子命名空間。</span><span class="sxs-lookup"><span data-stu-id="3c38e-134">The [\<system.net>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) element contains settings for classes in the <xref:System.Net> and related child namespaces.</span></span> <span data-ttu-id="3c38e-135">這些設定會設定驗證模組、 連線的管理、 郵件設定、 proxy 伺服器和接收來自網際網路主機的資訊適用於網際網路要求模組。</span><span class="sxs-lookup"><span data-stu-id="3c38e-135">The settings configure authentication modules, connection management, mail settings, the proxy server, and Internet request modules for receiving information from Internet hosts.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="03146-133">備註</span><span class="sxs-lookup"><span data-stu-id="03146-133">Remarks</span></span>  
+ <span data-ttu-id="03146-134">[ \<System.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)項目包含設定中的類別<xref:System.Net>和相關的子命名空間。</span><span class="sxs-lookup"><span data-stu-id="03146-134">The [\<system.net>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) element contains settings for classes in the <xref:System.Net> and related child namespaces.</span></span> <span data-ttu-id="03146-135">這些設定會設定驗證模組、 連線的管理、 郵件設定、 proxy 伺服器和接收來自網際網路主機的資訊適用於網際網路要求模組。</span><span class="sxs-lookup"><span data-stu-id="03146-135">The settings configure authentication modules, connection management, mail settings, the proxy server, and Internet request modules for receiving information from Internet hosts.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3c38e-136">範例</span><span class="sxs-lookup"><span data-stu-id="3c38e-136">Example</span></span>  
- <span data-ttu-id="3c38e-137">下列範例顯示所使用的一般組態<xref:System.Net>類別。</span><span class="sxs-lookup"><span data-stu-id="3c38e-137">The following example shows a typical configuration used by <xref:System.Net> classes.</span></span>  
+## <a name="example"></a><span data-ttu-id="03146-136">範例</span><span class="sxs-lookup"><span data-stu-id="03146-136">Example</span></span>  
+ <span data-ttu-id="03146-137">下列範例顯示所使用的一般組態<xref:System.Net>類別。</span><span class="sxs-lookup"><span data-stu-id="03146-137">The following example shows a typical configuration used by <xref:System.Net> classes.</span></span>  
   
 ```xml  
 <configuration>  
@@ -92,6 +92,6 @@ ms.locfileid: "59095266"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3c38e-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3c38e-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03146-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="03146-138">See also</span></span>
 
-- [<span data-ttu-id="3c38e-139">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="3c38e-139">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="03146-139">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="03146-139">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

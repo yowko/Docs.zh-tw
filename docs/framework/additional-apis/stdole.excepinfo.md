@@ -10,20 +10,20 @@ api_location:
 api_type:
 - Assembly
 ms.openlocfilehash: 258ce5e63c9095e5a451d807d588f31512f5e5fd
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58635537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675282"
 ---
-# <a name="excepinfo-structure"></a><span data-ttu-id="feb1b-102">EXCEPINFO 結構</span><span class="sxs-lookup"><span data-stu-id="feb1b-102">EXCEPINFO Structure</span></span>
+# <a name="excepinfo-structure"></a><span data-ttu-id="38b71-102">EXCEPINFO 結構</span><span class="sxs-lookup"><span data-stu-id="38b71-102">EXCEPINFO Structure</span></span>
 
 ```csharp
 public struct EXCEPINFO
 ```
 
-## <a name="requirements"></a><span data-ttu-id="feb1b-103">需求</span><span class="sxs-lookup"><span data-stu-id="feb1b-103">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="38b71-103">需求</span><span class="sxs-lookup"><span data-stu-id="38b71-103">Requirements</span></span>
 
-<span data-ttu-id="feb1b-104">**命名空間︰** `stdole`</span><span class="sxs-lookup"><span data-stu-id="feb1b-104">**Namespace:** `stdole`</span></span>
+<span data-ttu-id="38b71-104">**命名空間︰** `stdole`</span><span class="sxs-lookup"><span data-stu-id="38b71-104">**Namespace:** `stdole`</span></span>
 
-<span data-ttu-id="feb1b-105">**組件：** stdole （在 stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="feb1b-105">**Assembly:** stdole (in stdole.dll)</span></span>
+<span data-ttu-id="38b71-105">**組件：** stdole （在 stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="38b71-105">**Assembly:** stdole (in stdole.dll)</span></span>

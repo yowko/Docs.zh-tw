@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4e78b8a2069671d0fe790956ca914225325a78bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916613"
 ---
-# <a name="icordebugmdagetxml-method"></a><span data-ttu-id="32b5e-102">ICorDebugMDA::GetXML 方法</span><span class="sxs-lookup"><span data-stu-id="32b5e-102">ICorDebugMDA::GetXML Method</span></span>
-<span data-ttu-id="32b5e-103">取得由 managed 偵錯助理 (MDA) 相關聯的完整 XML 資料流[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="32b5e-103">Gets the full XML stream associated with the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span></span>  
+# <a name="icordebugmdagetxml-method"></a><span data-ttu-id="71fc8-102">ICorDebugMDA::GetXML 方法</span><span class="sxs-lookup"><span data-stu-id="71fc8-102">ICorDebugMDA::GetXML Method</span></span>
+<span data-ttu-id="71fc8-103">取得由 managed 偵錯助理 (MDA) 相關聯的完整 XML 資料流[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="71fc8-103">Gets the full XML stream associated with the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="32b5e-104">語法</span><span class="sxs-lookup"><span data-stu-id="32b5e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="71fc8-104">語法</span><span class="sxs-lookup"><span data-stu-id="71fc8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetXML (  
@@ -38,29 +38,29 @@ HRESULT GetXML (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="32b5e-105">參數</span><span class="sxs-lookup"><span data-stu-id="32b5e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="71fc8-105">參數</span><span class="sxs-lookup"><span data-stu-id="71fc8-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="32b5e-106">[in] `szName` 陣列的大小。</span><span class="sxs-lookup"><span data-stu-id="32b5e-106">[in] The size of the `szName` array.</span></span>  
+ <span data-ttu-id="71fc8-106">[in] `szName` 陣列的大小。</span><span class="sxs-lookup"><span data-stu-id="71fc8-106">[in] The size of the `szName` array.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="32b5e-107">[out]XML 資料流的長度指標。</span><span class="sxs-lookup"><span data-stu-id="32b5e-107">[out] A pointer to the length of the XML stream.</span></span>  
+ <span data-ttu-id="71fc8-107">[out]XML 資料流的長度指標。</span><span class="sxs-lookup"><span data-stu-id="71fc8-107">[out] A pointer to the length of the XML stream.</span></span>  
   
  `szName`  
- <span data-ttu-id="32b5e-108">[out]用來儲存 XML 資料流的陣列。</span><span class="sxs-lookup"><span data-stu-id="32b5e-108">[out] An array in which to store the XML stream.</span></span> <span data-ttu-id="32b5e-109">陣列可以是空的。</span><span class="sxs-lookup"><span data-stu-id="32b5e-109">The array may be empty.</span></span>  
+ <span data-ttu-id="71fc8-108">[out]用來儲存 XML 資料流的陣列。</span><span class="sxs-lookup"><span data-stu-id="71fc8-108">[out] An array in which to store the XML stream.</span></span> <span data-ttu-id="71fc8-109">陣列可以是空的。</span><span class="sxs-lookup"><span data-stu-id="71fc8-109">The array may be empty.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="32b5e-110">備註</span><span class="sxs-lookup"><span data-stu-id="32b5e-110">Remarks</span></span>  
- <span data-ttu-id="32b5e-111">`GetXML`方法可能會影響效能，取決於相關聯的 XML 資料流的大小。</span><span class="sxs-lookup"><span data-stu-id="32b5e-111">The `GetXML` method can potentially affect performance, depending on the size of the associated XML stream.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="71fc8-110">備註</span><span class="sxs-lookup"><span data-stu-id="71fc8-110">Remarks</span></span>  
+ <span data-ttu-id="71fc8-111">`GetXML`方法可能會影響效能，取決於相關聯的 XML 資料流的大小。</span><span class="sxs-lookup"><span data-stu-id="71fc8-111">The `GetXML` method can potentially affect performance, depending on the size of the associated XML stream.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="32b5e-112">需求</span><span class="sxs-lookup"><span data-stu-id="32b5e-112">Requirements</span></span>  
- <span data-ttu-id="32b5e-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="32b5e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="71fc8-112">需求</span><span class="sxs-lookup"><span data-stu-id="71fc8-112">Requirements</span></span>  
+ <span data-ttu-id="71fc8-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="71fc8-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="32b5e-114">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="32b5e-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="71fc8-114">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="71fc8-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="32b5e-115">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="32b5e-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="71fc8-115">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="71fc8-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="32b5e-116">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="32b5e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="71fc8-116">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="71fc8-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="32b5e-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="32b5e-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="71fc8-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="71fc8-117">See also</span></span>
 
-- [<span data-ttu-id="32b5e-118">ICorDebugMDA 介面</span><span class="sxs-lookup"><span data-stu-id="32b5e-118">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
-- [<span data-ttu-id="32b5e-119">診斷 Managed 偵錯助理的錯誤</span><span class="sxs-lookup"><span data-stu-id="32b5e-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="71fc8-118">ICorDebugMDA 介面</span><span class="sxs-lookup"><span data-stu-id="71fc8-118">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [<span data-ttu-id="71fc8-119">診斷 Managed 偵錯助理的錯誤</span><span class="sxs-lookup"><span data-stu-id="71fc8-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

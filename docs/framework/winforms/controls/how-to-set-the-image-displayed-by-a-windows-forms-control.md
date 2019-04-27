@@ -13,20 +13,20 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
 ms.openlocfilehash: 1de835bda5ac906837ac3fbd97b87f68f14d1953
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013136"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a><span data-ttu-id="d4952-102">HOW TO：設定 Windows Forms 控制項所顯示的影像</span><span class="sxs-lookup"><span data-stu-id="d4952-102">How to: Set the Image Displayed by a Windows Forms Control</span></span>
-<span data-ttu-id="d4952-103">數個 Windows Form 控制項來顯示影像。</span><span class="sxs-lookup"><span data-stu-id="d4952-103">Several Windows Forms controls can display images.</span></span> <span data-ttu-id="d4952-104">這些映像可以是用途的控制項，例如按鈕，表示磁碟片圖示的圖示**儲存**命令。</span><span class="sxs-lookup"><span data-stu-id="d4952-104">These images can be icons that clarify the purpose of the control, such as a diskette icon on a button denoting the **Save** command.</span></span> <span data-ttu-id="d4952-105">或者，圖示可以提供給控制項的外觀和行為，您想要的背景影像。</span><span class="sxs-lookup"><span data-stu-id="d4952-105">Alternatively, the icons can be background images to give the control the appearance and behavior you want.</span></span>  
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a><span data-ttu-id="223b6-102">HOW TO：設定 Windows Forms 控制項所顯示的影像</span><span class="sxs-lookup"><span data-stu-id="223b6-102">How to: Set the Image Displayed by a Windows Forms Control</span></span>
+<span data-ttu-id="223b6-103">數個 Windows Form 控制項來顯示影像。</span><span class="sxs-lookup"><span data-stu-id="223b6-103">Several Windows Forms controls can display images.</span></span> <span data-ttu-id="223b6-104">這些映像可以是用途的控制項，例如按鈕，表示磁碟片圖示的圖示**儲存**命令。</span><span class="sxs-lookup"><span data-stu-id="223b6-104">These images can be icons that clarify the purpose of the control, such as a diskette icon on a button denoting the **Save** command.</span></span> <span data-ttu-id="223b6-105">或者，圖示可以提供給控制項的外觀和行為，您想要的背景影像。</span><span class="sxs-lookup"><span data-stu-id="223b6-105">Alternatively, the icons can be background images to give the control the appearance and behavior you want.</span></span>  
   
-### <a name="to-set-the-image-displayed-by-a-control"></a><span data-ttu-id="d4952-106">若要設定控制項所顯示的影像</span><span class="sxs-lookup"><span data-stu-id="d4952-106">To set the image displayed by a control</span></span>  
+### <a name="to-set-the-image-displayed-by-a-control"></a><span data-ttu-id="223b6-106">若要設定控制項所顯示的影像</span><span class="sxs-lookup"><span data-stu-id="223b6-106">To set the image displayed by a control</span></span>  
   
-1. <span data-ttu-id="d4952-107">將控制項的`Image`或是`BackgroundImage`型別的物件的屬性<xref:System.Drawing.Image>。</span><span class="sxs-lookup"><span data-stu-id="d4952-107">Set the control's `Image` or `BackgroundImage` property to an object of type <xref:System.Drawing.Image>.</span></span> <span data-ttu-id="d4952-108">一般而言，您將會載入映像從檔案使用<xref:System.Drawing.Image.FromFile%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="d4952-108">Generally, you will be loading the image from a file by using the <xref:System.Drawing.Image.FromFile%2A> method.</span></span>  
+1. <span data-ttu-id="223b6-107">將控制項的`Image`或是`BackgroundImage`型別的物件的屬性<xref:System.Drawing.Image>。</span><span class="sxs-lookup"><span data-stu-id="223b6-107">Set the control's `Image` or `BackgroundImage` property to an object of type <xref:System.Drawing.Image>.</span></span> <span data-ttu-id="223b6-108">一般而言，您將會載入映像從檔案使用<xref:System.Drawing.Image.FromFile%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="223b6-108">Generally, you will be loading the image from a file by using the <xref:System.Drawing.Image.FromFile%2A> method.</span></span>  
   
-     <span data-ttu-id="d4952-109">在下列程式碼範例中，將路徑設為映像的位置**My Pictures**資料夾。</span><span class="sxs-lookup"><span data-stu-id="d4952-109">In the following code example, the path set for the location of the image is the **My Pictures** folder.</span></span> <span data-ttu-id="d4952-110">執行 Windows 作業系統的大部分電腦都會包含此目錄。</span><span class="sxs-lookup"><span data-stu-id="d4952-110">Most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="d4952-111">這也可讓具有最少的系統存取層級的使用者安全地執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="d4952-111">This also enables users with minimal system access levels to run the application safely.</span></span> <span data-ttu-id="d4952-112">下列程式碼範例需要您已有表單<xref:System.Windows.Forms.PictureBox>加入控制項。</span><span class="sxs-lookup"><span data-stu-id="d4952-112">The following code example requires that you already have a form with a <xref:System.Windows.Forms.PictureBox> control added.</span></span>  
+     <span data-ttu-id="223b6-109">在下列程式碼範例中，將路徑設為映像的位置**My Pictures**資料夾。</span><span class="sxs-lookup"><span data-stu-id="223b6-109">In the following code example, the path set for the location of the image is the **My Pictures** folder.</span></span> <span data-ttu-id="223b6-110">執行 Windows 作業系統的大部分電腦都會包含此目錄。</span><span class="sxs-lookup"><span data-stu-id="223b6-110">Most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="223b6-111">這也可讓具有最少的系統存取層級的使用者安全地執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="223b6-111">This also enables users with minimal system access levels to run the application safely.</span></span> <span data-ttu-id="223b6-112">下列程式碼範例需要您已有表單<xref:System.Windows.Forms.PictureBox>加入控制項。</span><span class="sxs-lookup"><span data-stu-id="223b6-112">The following code example requires that you already have a form with a <xref:System.Windows.Forms.PictureBox> control added.</span></span>  
   
     ```vb  
     ' Replace the image named below  
@@ -56,7 +56,7 @@ ms.locfileid: "59771526"
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="d4952-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d4952-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="223b6-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="223b6-113">See also</span></span>
 
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>

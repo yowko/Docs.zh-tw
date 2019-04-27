@@ -9,24 +9,24 @@ helpviewer_keywords:
 - Border control [WPF]
 ms.assetid: 51739f83-b5a2-489b-854b-30607e74a502
 ms.openlocfilehash: 922b4b90f3f8bc74d0465691386fa1a2422c6573
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912466"
 ---
-# <a name="border"></a><span data-ttu-id="f6cf8-102">Border</span><span class="sxs-lookup"><span data-stu-id="f6cf8-102">Border</span></span>
-<span data-ttu-id="f6cf8-103">下列範例示範如何以動態方式變更內容<xref:System.Windows.Controls.Border>項目。</span><span class="sxs-lookup"><span data-stu-id="f6cf8-103">The following sample demonstrates how to dynamically change properties of the <xref:System.Windows.Controls.Border> element.</span></span>  
+# <a name="border"></a><span data-ttu-id="83d63-102">Border</span><span class="sxs-lookup"><span data-stu-id="83d63-102">Border</span></span>
+<span data-ttu-id="83d63-103">下列範例示範如何以動態方式變更內容<xref:System.Windows.Controls.Border>項目。</span><span class="sxs-lookup"><span data-stu-id="83d63-103">The following sample demonstrates how to dynamically change properties of the <xref:System.Windows.Controls.Border> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f6cf8-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="f6cf8-104">In This Section</span></span>  
- [<span data-ttu-id="f6cf8-105">建立 BorderThickness 值的動畫</span><span class="sxs-lookup"><span data-stu-id="f6cf8-105">Animate a BorderThickness Value</span></span>](how-to-animate-a-borderthickness-value.md)  
+## <a name="in-this-section"></a><span data-ttu-id="83d63-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="83d63-104">In This Section</span></span>  
+ [<span data-ttu-id="83d63-105">建立 BorderThickness 值的動畫</span><span class="sxs-lookup"><span data-stu-id="83d63-105">Animate a BorderThickness Value</span></span>](how-to-animate-a-borderthickness-value.md)  
   
-## <a name="reference"></a><span data-ttu-id="f6cf8-106">參考資料</span><span class="sxs-lookup"><span data-stu-id="f6cf8-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="83d63-106">參考資料</span><span class="sxs-lookup"><span data-stu-id="83d63-106">Reference</span></span>  
  <xref:System.Windows.Controls.Decorator>  
   
  <xref:System.Windows.Controls.Border>  
   
-## <a name="related-sections"></a><span data-ttu-id="f6cf8-107">相關章節</span><span class="sxs-lookup"><span data-stu-id="f6cf8-107">Related Sections</span></span>  
- [<span data-ttu-id="f6cf8-108">面板概觀</span><span class="sxs-lookup"><span data-stu-id="f6cf8-108">Panels Overview</span></span>](panels-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="83d63-107">相關章節</span><span class="sxs-lookup"><span data-stu-id="83d63-107">Related Sections</span></span>  
+ [<span data-ttu-id="83d63-108">面板概觀</span><span class="sxs-lookup"><span data-stu-id="83d63-108">Panels Overview</span></span>](panels-overview.md)  
   
- [<span data-ttu-id="f6cf8-109">對齊、邊界和填補概觀</span><span class="sxs-lookup"><span data-stu-id="f6cf8-109">Alignment, Margins, and Padding Overview</span></span>](../advanced/alignment-margins-and-padding-overview.md)
+ [<span data-ttu-id="83d63-109">對齊、邊界和填補概觀</span><span class="sxs-lookup"><span data-stu-id="83d63-109">Alignment, Margins, and Padding Overview</span></span>](../advanced/alignment-margins-and-padding-overview.md)
