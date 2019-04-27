@@ -3,14 +3,14 @@ title: 追蹤類型摘要
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
 ms.openlocfilehash: 73777df2b58b14947c416ce409bcb42d439499ec
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925147"
 ---
 # <a name="trace-type-summary"></a>追蹤類型摘要
-[來源層級](https://go.microsoft.com/fwlink/?LinkID=94943)定義不同的追蹤層級： 嚴重、 錯誤、 警告、 資訊和詳細資訊，並提供描述`ActivityTracing`旗標，它的輸出會切換追蹤界限與活動傳輸事件。  
+[來源層級](https://go.microsoft.com/fwlink/?LinkID=94943)定義不同的追蹤層級：嚴重、 錯誤、 警告、 資訊和詳細資訊，並提供描述`ActivityTracing`旗標，它的輸出會切換追蹤界限與活動傳輸事件。  
   
  您也可以檢閱[TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169)可以從發出的追蹤類型<xref:System.Diagnostics>。  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
 ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876274"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 使用者執行個體
 Microsoft SQL Server Express Edition (SQL Server Express) 支援使用者執行個體功能，只有在使用 .NET Framework Data Provider for SQL Server (`SqlClient`) 時才提供此功能。 使用者執行個體是 SQL Server Express Database Engine 的獨立執行個體，由父執行個體所產生。 不是系統管理員的使用者可以透過使用者執行個體，從本機電腦附加及連接至 SQL Server Express 資料庫。 每個執行個體都會依照「每個使用者一個執行個體」的基礎，在個別使用者的安全性內容下執行。  

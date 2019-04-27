@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control types, Separator
 ms.assetid: 89f42247-c699-4afa-91e1-2baaf0d86c9d
 ms.openlocfilehash: fa7a446c07960d226d73ae36ec3224c87c008f5a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996667"
 ---
 # <a name="ui-automation-support-for-the-separator-control-type"></a>Separator 控制項類型的 UI 自動化支援
 > [!NOTE]

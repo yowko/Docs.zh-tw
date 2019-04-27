@@ -3,11 +3,11 @@ title: 字串函式
 ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
 ms.openlocfilehash: 6da257cad90232426c71221dfd9d418265479bbe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879111"
 ---
 # <a name="string-functions"></a>字串函式
 .NET Framework Data Provider for SQL Server (SqlClient) 提供了 `String` 函式，這些函式會針對輸入 `String` 執行作業，並傳回 `String` 或數值結果。 這些函式位於您使用 SqlClient 時可以使用的 SqlServer 命名空間 (Namespace) 內。 提供者命名空間屬性可以讓 Entity Framework 了解此提供者對特定建構 (例如型別和函式) 所使用的前置詞。  

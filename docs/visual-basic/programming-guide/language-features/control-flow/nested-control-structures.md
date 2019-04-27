@@ -11,11 +11,11 @@ helpviewer_keywords:
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
 ms.openlocfilehash: c016722332dafa3d3be91a1e9e98cc0ce9a49717
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907984"
 ---
 # <a name="nested-control-structures-visual-basic"></a>巢狀控制結構 (Visual Basic)
 您也可以放置控制項陳述式內部的其他控制陳述式，例如`If...Then...Else`區塊`For...Next`迴圈。 控制陳述式置於另一個控制項陳述式即為*巢狀*。  

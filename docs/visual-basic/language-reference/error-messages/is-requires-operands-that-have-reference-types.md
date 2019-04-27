@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30020
 ms.assetid: 228afebd-1203-4bd3-8d7a-c5c56f3cedc4
 ms.openlocfilehash: b828de196a12128a9f34ee1f9ff1e57fee22c687
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61799180"
 ---
 # <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a>'Is' 需要有參考類型的運算元，但此運算元擁有實值型別 '\<類型名稱 >'
 `Is`比較運算子會判斷兩個物件變數是否參考相同的執行個體。 這項比較未定義實值型別。  

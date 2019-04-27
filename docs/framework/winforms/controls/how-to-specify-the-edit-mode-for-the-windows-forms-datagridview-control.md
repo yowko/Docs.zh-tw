@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
 ms.openlocfilehash: 7cb9278cd311d211ef95df238b930970ae472d05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012941"
 ---
 # <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>HOW TO：指定 Windows Forms DataGridView 控制項的編輯模式
 根據預設，使用者可以編輯的目前內容<xref:System.Windows.Forms.DataGridView>文字 方塊中儲存格，在其中輸入，或按下 f2 鍵。 在編輯模式中，如果符合所有下列條件，這會使儲存格：  

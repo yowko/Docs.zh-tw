@@ -3,11 +3,11 @@ title: SQL Server 中的應用程式安全性案例
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
 ms.openlocfilehash: 96c9f48cbf2e2ade2ff1688573a83fd86d613f2c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877886"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server 中的應用程式安全性案例
 並不只有一種正確方式可以建立安全的 SQL Server 用戶端應用程式。 每個應用程式的需求、部署環境及使用者對象都有其獨特性。 初次部署時還相當安全的應用程式，隨著時間流逝，也可能變得不再那麼安全。 要精確預測未來可能發生什麼威脅是不可能的事。  

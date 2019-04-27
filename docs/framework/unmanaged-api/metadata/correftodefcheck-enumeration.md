@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 82abeb0ce3db075d794787bb1fcd5bc18321bef2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906174"
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck 列舉
 指定旗標，以控制哪些參考的項目已轉換成其定義，以便最佳化程式碼。  

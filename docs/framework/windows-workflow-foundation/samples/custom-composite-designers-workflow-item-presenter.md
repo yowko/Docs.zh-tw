@@ -3,11 +3,11 @@ title: 自訂複合設計工具 - 工作流程項目展示器
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
 ms.openlocfilehash: f3c7620f719b8412b6b34bda7be5d607dccda75f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005225"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>自訂複合設計工具 - 工作流程項目展示器
 <xref:System.Activities.Presentation.WorkflowItemPresenter>是 WF 設計工具程式設計模型，可讓您建立的 「 卸除區 」 可以放置任意活動的索引鍵類型。 這個範例示範如何建立活動設計工具會呈現這類 「 卸除區。 」

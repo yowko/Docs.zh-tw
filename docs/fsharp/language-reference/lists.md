@@ -3,11 +3,11 @@ title: 清單
 description: 深入了解F#清單、 排序、 不可變的系列相同類型的元素。
 ms.date: 05/16/2016
 ms.openlocfilehash: cc4e292280cca0dca37f69cf5a46ec2822d08d5c
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904120"
 ---
 # <a name="lists"></a>清單
 
@@ -416,7 +416,7 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 `List.fold` 並[List.scan](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8)的差異在於，`List.fold`傳回最後的值的額外的參數，但`List.scan`傳回額外的參數 （以及最終的值） 的中間值的清單。
 
-所有這些函式都會包含一個反向的變化，例如[List.foldBack](https://msdn.microsoft.com/library/b9a58e66-efe1-445f-a90c-ac9ffb9d40c7)，其不同的順序，在其中周遊 list 和引數的順序。 此外，`List.fold`並`List.foldBack`會有變化， [List.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343)並[List.foldBack2](https://msdn.microsoft.com/library/56371d3e-5271-4183-9e8c-15a02eda9aa2)，可接受兩個長度相同。 對每個元素執行的函式，皆可使用兩個 list 的對應元素執行特定動作。 如下列範例所示，兩個 list 的元素類型可以不同，其中一個 list 包含銀行帳戶的交易金額，另一個 list 則包含交易的類型 (存款或提款)。
+所有這些函式都會包含一個反向的變化，例如[List.foldBack](https://msdn.microsoft.com/library/b9a58e66-efe1-445f-a90c-ac9ffb9d40c7)，其不同的順序，在其中周遊 list 和引數的順序。 此外，`List.fold`並`List.foldBack`會有變化， [List.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343)並[List.foldBack2](https://msdn.microsoft.com/library/56371d3e-5271-4183-9e8c-15a02eda9aa2)，可接受兩個長度相同。 對每個元素執行的函式，皆可使用兩個 list 的對應元素執行特定動作。 如下列範例所示，兩個 list 的元素類型可以不同，其中一個 list 包含銀行帳戶的異動金額，另一個 list 則包含異動的類型 (存款或提款)。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet29.fs)]
 
@@ -424,7 +424,7 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet30.fs)]
 
-下列範例會回到銀行帳戶範例。 這次會新增「利息運算」交易類型。 最終結餘取決於異動的順序。
+下列範例會回到銀行帳戶範例。 這次會新增「利息運算」異動類型。 最終結餘取決於異動的順序。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet34.fs)]
 

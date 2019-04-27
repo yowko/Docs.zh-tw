@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], detecting changes in cells
 ms.assetid: 7fa44d01-97f4-4ccb-a149-bc72628d2c36
 ms.openlocfilehash: 0573199e9afb7e52c7542d36a2f3e39730dacdc4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012668"
 ---
 # <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a>HOW TO：根據 Windows Forms DataGridView 控制項儲存格的變更執行自訂動作
 <xref:System.Windows.Forms.DataGridView>控制項具有可用來偵測變更的狀態中的事件數目<xref:System.Windows.Forms.DataGridView>資料格。 最常使用的兩個是<xref:System.Windows.Forms.DataGridView.CellValueChanged>和<xref:System.Windows.Forms.DataGridView.CellStateChanged>事件。  

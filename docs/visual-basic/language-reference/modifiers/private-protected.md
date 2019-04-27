@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Private Protected keyword [Visual Basic]
 - Private Protected keyword [Visual Basic], syntax
 ms.openlocfilehash: fea43558ac0fe8181f2786b69f2621346d446b2e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920493"
 ---
 # <a name="private-protected-visual-basic"></a>Private Protected (Visual Basic)
 
@@ -40,8 +40,7 @@ ms.locfileid: "57376386"
 
 - **存取修飾詞。** 指定存取層級的關鍵字稱為*存取修飾詞*。 如需存取修飾詞的比較，請參閱 <<c0> [ 存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。
 
-
-  `Private Protected` 修飾詞可用於以下內容：
+`Private Protected` 修飾詞可用於以下內容：
 
 - [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)的巢狀類別
 

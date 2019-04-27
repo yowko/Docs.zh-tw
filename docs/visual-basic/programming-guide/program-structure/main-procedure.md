@@ -9,11 +9,11 @@ helpviewer_keywords:
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
 ms.openlocfilehash: 641edd2d0e0dde5f509c8fa77ccf65358fa76a31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920110"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic 中的 Main 程序
 每個 Visual Basic 應用程式必須包含呼叫的程序`Main`。 起始點和應用程式的整體控制，就會作為此程序。 .NET Framework 會呼叫您`Main`時它已載入您的應用程式，並已準備好將控制權傳給它的程序。 除非您要建立的 Windows Forms 應用程式，您必須撰寫`Main`上執行自己的應用程式的程序。  

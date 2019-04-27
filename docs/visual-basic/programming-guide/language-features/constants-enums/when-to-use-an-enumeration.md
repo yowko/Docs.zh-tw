@@ -5,11 +5,11 @@ helpviewer_keywords:
 - enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
 ms.openlocfilehash: ff2d8c324aee8bbccef050c020e5392368b05b1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907305"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>何時使用列舉 (Visual Basic)
 列舉型別能夠讓您輕鬆使用相關常數組。 列舉，或`Enum`，是一組值的符號名稱。 列舉型別會被視為資料類型，您可以使用它們來建立變數和屬性集之常數的使用。  

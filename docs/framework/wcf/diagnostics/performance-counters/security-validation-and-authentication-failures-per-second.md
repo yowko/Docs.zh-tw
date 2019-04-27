@@ -3,14 +3,14 @@ title: 每秒的安全性驗證和驗證失敗數
 ms.date: 03/30/2017
 ms.assetid: 266c3bd3-2ffc-4471-94b7-3675443be1ac
 ms.openlocfilehash: e3db8cb20399bdff9b73a428ea2a53909da4eee1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50088763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915768"
 ---
 # <a name="security-validation-and-authentication-failures-per-second"></a>每秒的安全性驗證和驗證失敗數
-計數器名稱：每秒的安全性驗證和驗證失敗。  
+計數器名稱：安全性驗證和每秒的驗證失敗。  
   
 ## <a name="description"></a>描述  
  每當因為「未授權的安全性呼叫數」計數器所未涵蓋的安全性問題而拒絕訊息時，這個計數器就會遞增。 這類問題包括：  

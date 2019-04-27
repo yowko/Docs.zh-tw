@@ -3,11 +3,11 @@ title: 訊息安全性中的活動追蹤
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
 ms.openlocfilehash: c3bd36598fd903dc016959149e563174624d084b
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912648"
 ---
 # <a name="activity-tracing-in-message-security"></a>訊息安全性中的活動追蹤
 此主題將說明安全性處理中的活動追蹤 (將於下列三個階段中發生)。  
@@ -19,7 +19,7 @@ ms.locfileid: "50982837"
 -   授權與驗證 這個情況會在本機或於端點之間進行通訊時發生。  
   
 ## <a name="negotiationsct-exchange"></a>交涉/SCT 交換  
- 在交涉/SCT 交換階段，會在用戶端上建立兩種活動類型：「設定安全工作階段」與「關閉安全工作階段」。 「設定安全工作階段」涵蓋了 RST/RSTR/SCT 訊息交換的追蹤，而「關閉安全工作階段」則包含了取消訊息的追蹤。  
+ 在交涉 /SCT 交換階段中，用戶端上建立兩個活動類型：「 設定安全工作階段 」 和 「 關閉安全工作階段 」。 「設定安全工作階段」涵蓋了 RST/RSTR/SCT 訊息交換的追蹤，而「關閉安全工作階段」則包含了取消訊息的追蹤。  
   
  在伺服器上，RST/RSTR/SCT 的每個要求/回覆都會出現在自己的活動中。 如果`propagateActivity` = `true`同時在伺服器與用戶端，在伺服器上的活動有相同的識別碼，並一起出現在 「 設定安全工作階段 」 時透過服務追蹤檢視器檢視中。  
   

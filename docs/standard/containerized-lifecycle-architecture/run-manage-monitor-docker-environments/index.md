@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 7c470a2d24b8807bdda10e1816bc5a430a5c63f1
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56834936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921520"
 ---
 # <a name="run-manage-and-monitor-docker-production-environments"></a>執行、管理和監視 Docker 生產環境
 

@@ -1,17 +1,17 @@
 ---
-title: 若要在內部部署 Windows 容器的時機 IaaS VM 基礎結構
+title: 在內部部署 IaaS VM 基礎結構中部署 Windows 容器的時機
 description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |若要在內部部署 Windows 容器的時機 IaaS VM 基礎結構
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: ed9b64927372837c3ecf9377261150d4ee29d323
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011992"
 ---
-# <a name="when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure"></a>若要在內部部署 Windows 容器的時機 IaaS VM 基礎結構
+# <a name="when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure"></a>在內部部署 IaaS VM 基礎結構中部署 Windows 容器的時機
 
 -   您的組織可能不會準備好移往雲端，或它可能無法移至雲端的商務理由。 但是，您仍然可以取得自己的資料中心中使用 Windows 容器的優點。
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - certificates [WCF], service certificate validation
 ms.assetid: 9dffcab2-70a9-40f0-99fd-d3a0b296028f
 ms.openlocfilehash: 0bced548cdc9423d1907de09e8b52ebe078d7c19
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857697"
 ---
 # <a name="differences-between-service-certificate-validation-done-by-internet-explorer-and-wcf"></a>Internet Explorer 與 WCF 執行之服務憑證驗證之間的差異
 Internet Explorer 和 Windows Communication Foundation (WCF) 驗證服務憑證使用 HTTPS 時的方法不同，因為它是 Internet Explorer 將不會無法存取 [說明] 頁面或 Web 服務描述語言(WSDL) 的服務即使 WCF 用戶端能夠成功地將訊息傳送至服務端點。 這是因為 Internet Explorer 會檢查是否有服務憑證`ServerAuthentication`物件識別項 (OID) 在增強的用途旗標，而 WCF 不會強制這類條件約束。 如果 Internet Explorer 無法存取服務說明網頁或服務的 WSDL，請使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)來存取服務中繼資料。  

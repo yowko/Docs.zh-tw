@@ -3,11 +3,11 @@ title: 教學課程：延後的執行 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c80d53a8-1a30-4115-b232-52f0d089fec5
 ms.openlocfilehash: d78d298f7691c4f1df291fa865c92894414ead58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907747"
 ---
 # <a name="tutorial-deferred-execution-visual-basic"></a>教學課程：延後的執行 (Visual Basic)
 此教學課程說明將查詢鏈結在一起時的處理模型。 將查詢鏈結在一起是撰寫功能性轉換的重要部分。 確實了解鏈結的查詢如何運作相當重要。  

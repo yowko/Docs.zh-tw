@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Merging [Windows Forms], automatic menu
 ms.assetid: 55e32cad-1141-4a56-aa33-d9543ca3d393
 ms.openlocfilehash: 33e07bb655d81c6a802ebdce871a2fed845a5c96
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013019"
 ---
 # <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>HOW TO：設定 MDI 應用程式的自動功能表合併功能
 下列程序提供的基本步驟來設定在多重文件介面 (MDI) 應用程式中使用的自動合併<xref:System.Windows.Forms.MenuStrip>。  
