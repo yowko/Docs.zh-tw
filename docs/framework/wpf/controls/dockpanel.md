@@ -8,19 +8,19 @@ helpviewer_keywords:
 - DockPanel control [WPF]
 ms.assetid: 8d3d290b-d38c-47d0-918e-cee2baeb92ae
 ms.openlocfilehash: 92dc0d9982e8ef92f4aa99e2bdd694a8585237cf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911868"
 ---
-# <a name="dockpanel"></a><span data-ttu-id="4adea-102">DockPanel</span><span class="sxs-lookup"><span data-stu-id="4adea-102">DockPanel</span></span>
-<span data-ttu-id="4adea-103"><xref:System.Windows.Controls.DockPanel>元素用來放置子內容的版面配置容器的邊緣。</span><span class="sxs-lookup"><span data-stu-id="4adea-103">The <xref:System.Windows.Controls.DockPanel> element is used to position child content along the edge of a layout container.</span></span>  
+# <a name="dockpanel"></a><span data-ttu-id="fe6c2-102">DockPanel</span><span class="sxs-lookup"><span data-stu-id="fe6c2-102">DockPanel</span></span>
+<span data-ttu-id="fe6c2-103"><xref:System.Windows.Controls.DockPanel>元素用來放置子內容的版面配置容器的邊緣。</span><span class="sxs-lookup"><span data-stu-id="fe6c2-103">The <xref:System.Windows.Controls.DockPanel> element is used to position child content along the edge of a layout container.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4adea-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="4adea-104">In This Section</span></span>  
- [<span data-ttu-id="4adea-105">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="4adea-105">How-to Topics</span></span>](dockpanel-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="fe6c2-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="fe6c2-104">In This Section</span></span>  
+ [<span data-ttu-id="fe6c2-105">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="fe6c2-105">How-to Topics</span></span>](dockpanel-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="4adea-106">參考資料</span><span class="sxs-lookup"><span data-stu-id="4adea-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="fe6c2-106">參考資料</span><span class="sxs-lookup"><span data-stu-id="fe6c2-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -35,9 +35,9 @@ ms.locfileid: "57361872"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="4adea-107">相關章節</span><span class="sxs-lookup"><span data-stu-id="4adea-107">Related Sections</span></span>  
- [<span data-ttu-id="4adea-108">版面配置</span><span class="sxs-lookup"><span data-stu-id="4adea-108">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="fe6c2-107">相關章節</span><span class="sxs-lookup"><span data-stu-id="fe6c2-107">Related Sections</span></span>  
+ [<span data-ttu-id="fe6c2-108">版面配置</span><span class="sxs-lookup"><span data-stu-id="fe6c2-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="4adea-109">逐步解說：我的第一個 WPF 傳統型應用程式</span><span class="sxs-lookup"><span data-stu-id="4adea-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="fe6c2-109">逐步解說：我的第一個 WPF 傳統型應用程式</span><span class="sxs-lookup"><span data-stu-id="fe6c2-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="4adea-110">ScrollViewer 概觀</span><span class="sxs-lookup"><span data-stu-id="4adea-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="fe6c2-110">ScrollViewer 概觀</span><span class="sxs-lookup"><span data-stu-id="fe6c2-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
