@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
 ms.openlocfilehash: 122c20e7c3e48eaa4b4986ce2cb45411dae00723
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011004"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>HOW TO：使用 Windows Forms 中的對齊線和格線排列控制項
 使用 Visual Studio 的版面配置功能，您可以精確地指出控制項在表單上放置的位置。 加入至表單，或移到表單上的控制項可以自動對齊的資料列和資料行的 Windows Form 設計工具方格中，或您可以使用對齊線 」 功能來對齊控制項。  

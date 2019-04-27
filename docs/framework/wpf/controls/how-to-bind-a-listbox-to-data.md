@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binding data [WPF], to ListBox control
 ms.assetid: de93a907-709a-44a7-84bf-578b846a3d8b
 ms.openlocfilehash: 4dea53a524247d18628b3e7e7b2c06906dced53d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911153"
 ---
 # <a name="how-to-bind-a-listbox-to-data"></a>HOW TO：將 ListBox 繫結至資料
 應用程式開發人員可以建立<xref:System.Windows.Controls.ListBox>不使用指定的每個內容控制項<xref:System.Windows.Controls.ListBoxItem>分開。 您可以使用資料繫結至資料繫結至個別的項目。  

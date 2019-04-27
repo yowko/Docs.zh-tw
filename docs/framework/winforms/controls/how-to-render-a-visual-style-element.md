@@ -11,11 +11,11 @@ helpviewer_keywords:
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
 ms.openlocfilehash: 57c2bc5722f77338225d70b514345344211656dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913115"
 ---
 # <a name="how-to-render-a-visual-style-element"></a>HOW TO：呈現視覺化樣式項目
 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType>命名空間會公開<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>物件表示 Windows 使用者介面 (UI) 項目支援視覺化樣式。 本主題示範如何使用<xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>類別呈現<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>表示**登出**並**關機**的 [開始] 功能表的按鈕。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: cc255524-1534-4fae-b83c-250933d5a72b
 ms.openlocfilehash: 3bd2293f02e77ab2db5c3ba245596021e08b04c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875897"
 ---
 # <a name="how-to-define-entity-relationships-wcf-data-services"></a>HOW TO：定義實體關聯性 (WCF Data Services)
 當您在 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 中加入新的實體時，並不會自動定義新實體與相關實體之間的任何關聯性。 您可以建立和變更實體執行個體之間的關聯性，而且可以讓用戶端程式庫在資料服務中反映這些變更。 如需詳細資訊，請參閱 <<c0> [ 更新資料服務](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  

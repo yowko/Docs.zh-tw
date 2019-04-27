@@ -13,11 +13,11 @@ helpviewer_keywords:
 - RichTextBox control [WPF], loading
 ms.assetid: ffb113d3-c68a-47ca-8ac0-882283f38326
 ms.openlocfilehash: 90581bee7815dafd44c3cae18a8af7394fee1e9a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910594"
 ---
 # <a name="how-to-save-load-and-print-richtextbox-content"></a>HOW TO：儲存、載入和列印 RichTextBox 內容
 下列範例示範如何將儲存的內容<xref:System.Windows.Controls.RichTextBox>檔案，以載入該內容的恢復為<xref:System.Windows.Controls.RichTextBox>，以及列印內容。  

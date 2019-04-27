@@ -26,11 +26,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
 ms.openlocfilehash: f14cc28960af28530bda9a78c1309dea10c18b8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864345"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>多載化程序的考慮因素 (Visual Basic)
 當您多載程序時，您必須使用不同*簽章*針對每個多載版本。 這通常表示每個版本必須指定不同的參數清單。 如需詳細資訊，請參閱 「 不同的簽章 」 中[程序多載](./procedure-overloading.md)。  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ListView controls [WPF], horizontal alignment [WPF]
 ms.assetid: b9573e44-9dad-4d14-939c-7859ca372758
 ms.openlocfilehash: 528a711c1cf7992bb32c0aa4d6e81d71744c9f80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911062"
 ---
 # <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>HOW TO：變更 ListView 中資料行的水平對齊
 根據預設，每個資料行的內容<xref:System.Windows.Controls.ListViewItem>靠左對齊。 您可以藉由提供變更的每個資料行對齊<xref:System.Windows.DataTemplate>並設定<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>內的項目上的屬性<xref:System.Windows.DataTemplate>。 本主題說明如何<xref:System.Windows.Controls.ListView>其內容的預設值，以及如何變更一個資料行中的對齊方式對齊<xref:System.Windows.Controls.ListView>。  

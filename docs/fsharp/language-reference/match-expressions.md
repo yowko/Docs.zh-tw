@@ -3,11 +3,11 @@ title: 比對運算式
 description: 了解如何F#比對運算式提供分支運算式的比較，使用一組模式為基礎的控制項。
 ms.date: 04/19/2018
 ms.openlocfilehash: 8972cc012d2746cb720eeed1acee403948941425
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903951"
 ---
 # <a name="match-expressions"></a>比對運算式
 

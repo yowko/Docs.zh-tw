@@ -3,11 +3,11 @@ title: 加入上線與離線狀態
 ms.date: 03/30/2017
 ms.assetid: 05e5f51d-81b6-4c17-b364-9dda447a5fce
 ms.openlocfilehash: 15a963d4de0dcf1d7f0162b0a3266e17d4073ecd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857736"
 ---
 # <a name="adding-online-and-offline-status"></a>加入上線與離線狀態
 在許多情況下，應用程式監視對等通道連線狀態的特定詳細資訊是很重要的工作。 您可以在 `GetProperty` 介面實作上呼叫 <xref:System.ServiceModel.IOnlineStatus> 方法，以取得此項資訊。 含有此介面實作的物件可以監視連線狀態或註冊事件處理常式 (例如 `OnOnline` 和 `OnOffline`)，並且在發生上線狀態變更時立即做出反應。  

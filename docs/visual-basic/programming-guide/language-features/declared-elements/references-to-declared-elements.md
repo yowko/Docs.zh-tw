@@ -7,11 +7,11 @@ helpviewer_keywords:
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
 ms.openlocfilehash: 0fca02ab2dcb507c1129f18f31a25c7809fc9710
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917952"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>已宣告之項目的參考 (Visual Basic)
 當您的程式碼參考宣告的項目時，Visual Basic 編譯器會符合您適當的宣告該名稱的參考中的名稱。 如果多個項目宣告具有相同名稱時，您可以控制這些項目所要參考即*合格*它的名稱。  

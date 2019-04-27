@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
 ms.openlocfilehash: e0852536a86dd415334f95a47ceb800ed2c591ad
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924016"
 ---
 # <a name="type-of-parameter-parametername-is-not-cls-compliant"></a>參數的型別 '\<參數名稱 >' 不符合 CLS 標準
 程序標示為`<CLSCompliant(True)>`但宣告參數的類型會標示為`<CLSCompliant(False)>`、 未標示，或因為它不符合規範的型別不符合資格。  

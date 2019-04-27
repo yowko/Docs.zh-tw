@@ -3,11 +3,11 @@ title: 診斷追蹤
 ms.date: 03/30/2017
 ms.assetid: 28e77a63-d20d-4b6a-9caf-ddad86550427
 ms.openlocfilehash: 56f79fb9140785188996cc413eca4dd530037ccd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934793"
 ---
 # <a name="diagnostic-traces"></a>診斷追蹤
 追蹤就是在應用程式執行期間，所產生的特定訊息之發行動作。 使用追蹤功能時，您必須具有收集和記錄所傳送訊息的機制。 追蹤訊息由「接聽項」負責接收。 接聽項的用途是收集、儲存和傳送追蹤訊息。 接聽項會將追蹤輸出導向至適當的目標，例如記錄檔、視窗或文字檔。  
@@ -39,34 +39,34 @@ ms.locfileid: "33363463"
   
 |追蹤層級|描述|  
 |-----------------|-----------------|  
-|Critical|已發生如下列所述的嚴重失敗情況：<br /><br /> -使用者功能可能會導致立即的遺失發生錯誤。<br />-需要事件的系統管理員可採取動作避免遺失的功能。<br />程式碼停止回應。<br />-此追蹤層級也可以提供足夠的內容，用於解譯其他重要的追蹤。 如此便可協助找出導致嚴重失敗的作業序列。|  
+|Critical|已發生如下列所述的嚴重失敗情況：<br /><br /> -使用者功能可能會導致立即的遺失時發生錯誤。<br />-需要採取行動來避免功能喪失的系統管理員的事件。<br />程式碼會停止回應。<br />-此追蹤層級也可以提供足夠的內容解譯其他關鍵追蹤。 如此便可協助找出導致嚴重失敗的作業序列。|  
 |錯誤|已經發生可導致使用者功能喪失的錯誤 (例如，無效的組態或網路行為)。|  
 |警告|存在一個可間接導致錯誤或嚴重失敗的狀況 (例如，配置失敗或到達上限)。 對使用者程式碼錯誤的正常處理 (例如，交易中止、逾時、驗證失敗) 也可能產生警告。|  
 |資訊|會產生對監控與診斷系統狀態、衡量效能，或描述分析有幫助的訊息。 這些訊息包含交易與登記存留期事件，例如正在建立或認可的交易、重要界限的跨越，或是重要資源的配置。 這時開發人員可以使用此類資訊來進行容量規劃與效能管理。|  
   
 ## <a name="trace-codes"></a>追蹤程式碼  
- 下表列出由 <xref:System.Transactions> 基礎結構所產生的追蹤程式碼。 其中包含資料表中的追蹤程式碼識別項，<xref:System.Diagnostics.EventTypeFilter.EventType%2A>列舉型別層級追蹤，並中包含的額外資料**TraceRecord**追蹤。 此外，對應的追蹤層級的追蹤也會儲存在**TraceRecord**。  
+ 下表列出由 <xref:System.Transactions> 基礎結構所產生的追蹤程式碼。 包含資料表中的追蹤程式碼識別項，<xref:System.Diagnostics.EventTypeFilter.EventType%2A>列舉型別層級追蹤，以及額外的資料中包含**TraceRecord**追蹤。 此外，對應的追蹤的追蹤層級也會儲存在**TraceRecord**。  
   
 |TraceCode|EventType|TraceRecord 中的額外資料|  
 |---------------|---------------|-------------------------------|  
-|TransactionCreated|Info|TransactionTraceId|  
-|TransactionPromoted|Info|本機 TransactionTraceId、Distributed TransactionTraceId|  
-|EnlistmentCreated|Info|TransactionTraceId、EnlistmentTraceId、EnlistmentType (永久性/變動性)、EnlistmentOptions|  
+|TransactionCreated|資訊|TransactionTraceId|  
+|TransactionPromoted|資訊|本機 TransactionTraceId、Distributed TransactionTraceId|  
+|EnlistmentCreated|資訊|TransactionTraceId、EnlistmentTraceId、EnlistmentType (永久性/變動性)、EnlistmentOptions|  
 |EnlistmentCallbackNegative|警告|TransactionTraceId、EnlistmentTraceId、<br /><br /> 回呼 (forcerollback/中止/indoubt)|  
 |TransactionRollbackCalled|警告|TransactionTraceId|  
 |TransactionAborted|警告|TransactionTraceId|  
 |TransactionInDoubt|警告|TransactionTraceId|  
-|TransactionScopeCreated|Info|TransactionScopeResult，可能為下列各項：<br /><br /> -新的交易。<br />傳遞的交易。<br />-相依交易傳遞。<br />-使用目前的交易。<br />-沒有交易。<br /><br /> 目前新 TransactionTraceId|  
+|TransactionScopeCreated|資訊|TransactionScopeResult，可能為下列各項：<br /><br /> -新的交易。<br />傳遞的交易。<br />-相依交易已通過。<br />-使用目前的交易。<br />-無交易。<br /><br /> 目前新 TransactionTraceId|  
 |TransactionScopeDisposed|資訊|TransactionTraceId 範圍的 「 預期 」 目前的交易。|  
 |TransactionScopeIncomplete|警告|TransactionTraceId 範圍的 「 預期 」 目前的交易。|  
 |TransactionScopeNestedIncorrectly|警告|TransactionTraceId 範圍的 「 預期 」 目前的交易。|  
 |TransactionScopeCurrentTransactionChanged|警告|目前舊有 TransactionTraceId、其他 TransactionTraceId|  
 |TransactionScopeTimeout|警告|TransactionTraceId 範圍的 「 預期 」 目前的交易。|  
-|DependentCloneCreated|Info|TransactionTraceId、所建立的相依交易型別 (RollbackIfNotComplete/BlockCommitUntilComplete)|  
-|DependentCloneComplete|Info|TransactionTraceId|  
-|RecoveryComplete|Info|資源管理員 GUID (從基底)|  
-|Reenlist|Info|資源管理員 GUID (從基底)|  
-|TransactionSerialized|Info|TransactionTraceId。|  
+|DependentCloneCreated|資訊|TransactionTraceId、所建立的相依交易型別 (RollbackIfNotComplete/BlockCommitUntilComplete)|  
+|DependentCloneComplete|資訊|TransactionTraceId|  
+|RecoveryComplete|資訊|資源管理員 GUID (從基底)|  
+|Reenlist|資訊|資源管理員 GUID (從基底)|  
+|TransactionSerialized|資訊|TransactionTraceId。|  
 |TransactionException|錯誤|例外狀況訊息|  
 |InvalidOperationException|錯誤|例外狀況訊息|  
 |InternalError|Critical|例外狀況訊息|  
@@ -134,4 +134,4 @@ ms.locfileid: "33363463"
  `</ResourceManagerId>`  
   
 ## <a name="security-issues-for-tracing"></a>追蹤安全性問題  
- 當您以系統管理員身分開啟追蹤時，機密資訊可能會公開可檢視的追蹤記錄檔寫入預設。 若要減輕任何可能的安全性威脅，您應該考慮將追蹤記錄檔儲存在安全的位置共用和檔案系統存取權限所控制。
+ 當您以系統管理員身分開啟追蹤時，機密資訊可能會寫入追蹤記錄檔可公開檢視預設。 若要解決任何可能的安全性威脅，您應該考慮將追蹤記錄檔儲存在安全的位置共用和檔案系統存取權限所控制。

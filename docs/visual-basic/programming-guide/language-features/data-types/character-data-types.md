@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
 ms.openlocfilehash: 14085172a8f9f9d60af0495a36dd4ba7592213fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907227"
 ---
 # <a name="character-data-types-visual-basic"></a>字元資料類型 (Visual Basic)
 Visual Basic 提供*字元資料類型*應付可顯示的可列印字元。 雖然兩者都使用 Unicode 字元處理`Char`保留的單一字元，而`String`包含不限數目的字元。  

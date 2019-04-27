@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID385
 ms.assetid: 69ec6d59-ffc4-48ac-8a28-fe6853389843
 ms.openlocfilehash: c68e134237c0dfa4642a1e528c58c98a49ad8b74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918381"
 ---
 # <a name="need-property-array-index"></a>須提供屬性陣列索引
 這個屬性值包含陣列，而不是單一值。 您未指定嘗試存取之屬性陣列的索引。  

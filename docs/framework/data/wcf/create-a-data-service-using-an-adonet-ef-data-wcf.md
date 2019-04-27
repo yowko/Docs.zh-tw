@@ -6,17 +6,17 @@ helpviewer_keywords:
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
 ms.openlocfilehash: b2adf4fe0d510f65db5bded715f084a4d7e016b6
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935768"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>HOW TO：建立資料服務，使用 ADO.NET Entity Framework 資料來源 (WCF Data Services)
 
 WCF Data Services 會將實體資料公開為資料服務。 當資料來源為關聯式資料庫時，這個實體資料會由 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供。 本主題說明如何建立[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-架構根據現有的資料庫並使用此資料模型來建立新的資料服務的 Visual Studio Web 應用程式中的資料模型。
 
-[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]也提供命令列工具可以產生[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]模型之外的 Visual Studio 專案。 如需詳細資訊，請參閱[＜How to：使用 EdmGen.exe 產生模型和對應檔](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。
+[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]也提供命令列工具可以產生[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]模型之外的 Visual Studio 專案。 如需詳細資訊，請參閱[如何：使用 EdmGen.exe 產生模型和對應檔](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。
 
 ## <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>若要將以現有資料庫為基礎的 Entity Framework 模型加入至現有的 Web 應用程式
 
@@ -26,8 +26,7 @@ WCF Data Services 會將實體資料公開為資料服務。 當資料來源為�
 
 3. 輸入模型名稱，然後按一下**新增**。
 
-     
-  [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] 精靈的第一頁隨即出現。
+     [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] 精靈的第一頁隨即出現。
 
 4. 在 **選擇模型內容**對話方塊中，選取**從資料庫產生**。 然後按 [下一步] 。
 
@@ -46,8 +45,7 @@ WCF Data Services 會將實體資料公開為資料服務。 當資料來源為�
 
 9. 按一下 **完成**以完成精靈。
 
-     這樣會根據特定資料庫建立預設資料模型。 
-  [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 可讓您自訂資料模型。 如需詳細資訊，請參閱 <<c0> [ 實體資料模型工具工作](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100))。
+     這樣會根據特定資料庫建立預設資料模型。 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 可讓您自訂資料模型。 如需詳細資訊，請參閱 <<c0> [ 實體資料模型工具工作](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100))。
 
 ## <a name="to-create-the-data-service-by-using-the-new-data-model"></a>若要使用新的資料模型建立資料服務
 

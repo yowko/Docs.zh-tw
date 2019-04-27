@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control types, Spinner
 ms.assetid: 3a29d185-65d8-42e3-bcc3-7f43e96f40c5
 ms.openlocfilehash: c2e2c016da104119be564003196ccb3e3dd73959
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996615"
 ---
 # <a name="ui-automation-support-for-the-spinner-control-type"></a>Spinner 控制項類型的 UI 自動化支援
 > [!NOTE]

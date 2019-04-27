@@ -1,17 +1,17 @@
 ---
-title: 邁向容器為基礎的新式應用程式
+title: 邁向以容器為基礎的新式應用程式
 description: 了解，Docker、 容器和微服務架構不是一體適用的解決方案。 您將在這裡找到一些可協助您決定的參考。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
 ms.openlocfilehash: 94f7bc27409048ec80a4e485cea4a16d30e7c1e2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922612"
 ---
-# <a name="road-to-modern-applications-based-on-containers"></a>邁向容器為基礎的新式應用程式
+# <a name="road-to-modern-applications-based-on-containers"></a>邁向以容器為基礎的新式應用程式
 
 因為您打算開發新的應用程式，或您要評估使用 Docker、 容器和微服務等公司中的新方法的影響，您可能正在閱讀這本書。
 

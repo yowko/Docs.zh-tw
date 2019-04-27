@@ -6,11 +6,11 @@ helpviewer_keywords:
 - toolbars [Windows Forms], positioning items
 ms.assetid: 11fd7c5b-ee5c-4993-9a11-89127ff0aa7a
 ms.openlocfilehash: 7379c09d430f498add746cfb14422e63d0a45149
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913272"
 ---
 # <a name="how-to-position-a-toolstripitem-on-a-toolstrip"></a>HOW TO：將 ToolStripItem 放在 ToolStrip 上
 您可以移動，或新增<xref:System.Windows.Forms.ToolStripItem>向左或右側<xref:System.Windows.Forms.ToolStrip>。  

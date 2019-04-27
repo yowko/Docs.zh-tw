@@ -3,11 +3,11 @@ title: 在 SQL Server 中加密資料
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
 ms.openlocfilehash: 1acb720b8a4f8beb27bb1a5236efdb6f2bb44383
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877873"
 ---
 # <a name="data-encryption-in-sql-server"></a>在 SQL Server 中加密資料
 SQL Server 提供使用憑證、非對稱金鑰或對稱金鑰來加密及解密資料的功能， 而且可在內部的憑證存放區內管理上述所有項目。 此存放區會使用加密階層，藉由階層中的上層層級來確保下層層級的憑證及金鑰。 SQL Server 的此功能區也稱為「秘密儲存區」(Secret Storage)。  

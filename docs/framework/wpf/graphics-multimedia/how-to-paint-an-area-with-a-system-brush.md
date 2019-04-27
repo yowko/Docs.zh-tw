@@ -7,11 +7,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
 ms.openlocfilehash: e713903e2cfbb63cb64ceb94621317f9e76dea70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921715"
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>HOW TO：使用系統筆刷繪製區域
 <xref:System.Windows.SystemColors>類別提供存取系統筆刷和色彩，例如<xref:System.Windows.SystemColors.ControlBrush%2A>， <xref:System.Windows.SystemColors.ControlBrushKey%2A>，和<xref:System.Windows.SystemColors.DesktopBrush%2A>。 系統筆刷是<xref:System.Windows.Media.SolidColorBrush>使用指定的系統色彩繪製區域的物件。 系統筆刷只能產生純色填滿，因此無法用於產生漸層。  

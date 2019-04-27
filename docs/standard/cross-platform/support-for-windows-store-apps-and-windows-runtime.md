@@ -12,11 +12,11 @@ ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 750bddce508a72c6aaac659feac90b7c17e53137
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921858"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 支援多個 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 的軟體開發案例。 這些案例可分成三個類別︰
@@ -133,8 +133,7 @@ ms.locfileid: "57708401"
 
  下列各節提供常見案例的範例。
 
-### <a name="application-logic-for-a-includewin8appnamelongincludeswin8-appname-long-mdmd-app-with-javascript"></a>
-  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式的應用程式邏輯與 JavaScript
+### <a name="application-logic-for-a-includewin8appnamelongincludeswin8-appname-long-mdmd-app-with-javascript"></a>[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式的應用程式邏輯與 JavaScript
  當您使用 JavaScript 為 Windows 開發 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式時，您可能會發現應用程式邏輯的某些部分在 Managed 程式碼中，有較佳的效能或較容易開發。 JavaScript 不能直接使用 .NET Framework 類別庫，但是您可以將類別庫作為 .WinMD 檔案。 在此案例中，[!INCLUDE[wrt](../../../includes/wrt-md.md)] 元件是應用程式中不可或缺的一部分，因此並不需要提供版本屬性。
 
 ### <a name="reusable-includewin8appnamelongincludeswin8-appname-long-mdmd-ui-controls"></a>可重複使用的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] UI 控制項

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
 ms.openlocfilehash: 9c532858ba3b93d427e5c0455f953db2499ebd6a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918875"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>資料合約序列化程式支援的型別
 Windows Communication Foundation (WCF) 會使用<xref:System.Runtime.Serialization.DataContractSerializer>為其預設的序列化引擎將資料轉換成 XML，並將 XML 轉換成原來的資料。 <xref:System.Runtime.Serialization.DataContractSerializer> 主要是用來序列化「 *資料合約* 」(Data Contract) 型別。 但是，它支援其他許多型別，而您可將這些視為擁有隱含資料合約。 下列是可以序列化的完整型別清單：  

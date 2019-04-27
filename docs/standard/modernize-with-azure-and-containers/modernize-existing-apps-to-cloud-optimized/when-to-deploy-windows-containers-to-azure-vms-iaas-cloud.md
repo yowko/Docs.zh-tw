@@ -1,17 +1,17 @@
 ---
-title: 將 Windows 容器部署至 Azure Vm （IaaS 雲端） 的時機
+title: 將 Windows 容器部署至 Azure VM 的時機 (IaaS 雲端)
 description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |將 Windows 容器部署至 Azure Vm （IaaS 雲端） 的時機
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 51217e2c94fd9727c8f7907e791cdebaec98f14f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011953"
 ---
-# <a name="when-to-deploy-windows-containers-to-azure-vms-iaas-cloud"></a>將 Windows 容器部署至 Azure Vm （IaaS 雲端） 的時機
+# <a name="when-to-deploy-windows-containers-to-azure-vms-iaas-cloud"></a>將 Windows 容器部署至 Azure VM 的時機 (IaaS 雲端)
 
 如果您的組織使用 Azure Vm，即使您也正在使用 Windows 容器，但您仍是使用 IaaS 時的處理。 當您需要部署負載平衡的基礎結構中的多個 vm 時，這表示可高度擴充的應用程式的該處理基礎結構作業、 VM OS 修補程式和基礎結構的複雜性。 在 Azure VM 中使用 Windows 容器的主要案例包括：
 

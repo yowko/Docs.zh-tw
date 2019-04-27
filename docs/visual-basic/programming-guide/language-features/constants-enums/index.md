@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
 ms.openlocfilehash: dfd9330210dd748d739cd8da2985795099beacd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907292"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Visual Basic 的常數和列舉類型
 常數是指使用有意義的名稱來取代維持不變的值。 如同它的名稱所示，常數用來儲存應用程式執行過程中維持不變的值。 您可以使用常數來提供有意義的名稱，而不是數字，讓程式碼更容易讀取。  

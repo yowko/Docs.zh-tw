@@ -9,11 +9,11 @@ helpviewer_keywords:
 - TextBox control [WPF], setting focus
 ms.assetid: 24b61b45-dc2d-425e-9839-b017af7ab86f
 ms.openlocfilehash: f4ba367ea9bdfcd6dbab7a5015472ec33adfe46f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024348"
 ---
 # <a name="how-to-set-focus-in-a-textbox-control"></a>HOW TO：在 TextBox 控制項中設定焦點
 此範例示範如何使用<xref:System.Windows.UIElement.Focus%2A>方法，以將焦點設定在<xref:System.Windows.Controls.TextBox>控制項。  

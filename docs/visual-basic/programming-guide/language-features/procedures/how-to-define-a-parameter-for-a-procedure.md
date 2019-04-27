@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
 ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863697"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>HOW TO：將參數定義程序 (Visual Basic)
 A*參數*可讓呼叫端的程式碼呼叫它時，將值傳遞至程序。 宣告程序的每個參數相同的方式，您宣告一個變數，指定其名稱和資料型別。 您也可以指定傳遞機制，以及參數是否為選擇性。  

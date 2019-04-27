@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 339ec145-826c-46d2-8cf2-3acd252cd072
 ms.openlocfilehash: c1bc8e18f2e3b0c67b98713e67fc261649a6a0e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877366"
 ---
 # <a name="determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition"></a>判斷序列中的任何或所有項目是否全都符合條件
 如果序列中所有的項目都符合條件，則 <xref:System.Linq.Enumerable.All%2A> 運算子會傳回 `true`。  

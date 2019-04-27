@@ -3,11 +3,11 @@ title: 排序資料 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
 ms.openlocfilehash: ad39aca6a53221f077a6b8313262d508744ff5ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908101"
 ---
 # <a name="sorting-data-visual-basic"></a>排序資料 (Visual Basic)
 排序作業會根據一個或多個屬性來排序序列的項目。 第一個排序準則會執行元素的主要排序； 您可以藉由指定第二個排序準則來排序每一個主要排序群組內的元素。  

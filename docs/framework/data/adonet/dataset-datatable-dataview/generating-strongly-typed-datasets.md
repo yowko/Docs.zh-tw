@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
 ms.openlocfilehash: 25883b7be10c68e527e4e04182b7162574b994d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880044"
 ---
 # <a name="generating-strongly-typed-datasets"></a>產生強類型資料集
 如果 XML 結構描述是採用 XML 結構描述定義語言 (XSD) 標準進行編譯，則可以使用 <xref:System.Data.DataSet> 所提供的 XSD.exe 工具產生強型別 [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)]。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
 ms.openlocfilehash: 24d48a9dfdf10601099333e52073bb7fa3579beb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800765"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Windows Form 中事件的順序
 關於 Windows Form 應用程式中被引發的事件，程式開發人員會特別關注他們的順序，並且盡力依次處理每個事件。 當遇到需要謹慎處理事件的狀況，例如當您重新繪製部分表單時，對於在執行階段時被引發的事件，感知其精確的順序是必需的。 本主題提供一些有關在應用程式以及控制項存留期中，幾個重要階段裡事件順序的詳細資料。 滑鼠輸入事件的順序有關的特定詳細資訊，請參閱[Windows Form 中的滑鼠事件](mouse-events-in-windows-forms.md)。 如需 Windows Form 中事件的概觀，請參閱 <<c0> [ 事件概觀](events-overview-windows-forms.md)。 如需結構的事件處理常式的詳細資訊，請參閱[事件處理常式概觀](event-handlers-overview-windows-forms.md)。  

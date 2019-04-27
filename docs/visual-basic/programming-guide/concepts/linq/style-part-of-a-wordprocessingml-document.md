@@ -3,11 +3,11 @@ title: 樣式的 WordprocessingML Document2 的組件
 ms.date: 07/20/2015
 ms.assetid: 292cc094-9483-4192-ac3b-a5dc51fbac12
 ms.openlocfilehash: 2e5e0e570fa842fb8a4df59d4b1c02e1169c6878
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907851"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>WordprocessingML 文件的樣式部分
 這個主題顯示 Office Open XML WordprocessingML 文件樣式部分的範例。  

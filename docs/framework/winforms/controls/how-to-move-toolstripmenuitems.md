@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
 ms.openlocfilehash: 2203511e91254c270c59b5d298dd87a5b3737109
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913623"
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>HOW TO：移動 ToolStripMenuItems
 在設計階段，您可以移動整個最上層的功能表與他們的功能表項目到不同位置<xref:System.Windows.Forms.MenuStrip>。 您也可以最上層的功能表間移動個別的功能表項目，或變更功能表中功能表項目的位置。  

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - BitmapSource objects [WPF], converting to palettized pixel format
 ms.assetid: ccb03a83-8c72-4353-89da-48312d16548b
 ms.openlocfilehash: 69ccf82a42f6ec640106f554a10e7d2c86754220
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910009"
 ---
 # <a name="how-to-convert-a-bitmapsource-to-an-indexed-pixel-format"></a>HOW TO：將 BitmapSource 轉換為索引像素格式
 此範例示範如何將轉換<xref:System.Windows.Media.Imaging.BitmapSource>為索引像素格式。  

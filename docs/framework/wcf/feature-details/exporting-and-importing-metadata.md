@@ -5,11 +5,11 @@ helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
 ms.openlocfilehash: 39b964584cde42e6569da35f8653042f6d7432cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856462"
 ---
 # <a name="exporting-and-importing-metadata"></a>匯出和匯入中繼資料
 在 Windows Communication Foundation (WCF) 中，匯出中繼資料是描述服務端點，並將其投射至並行標準化表示法，用戶端可以用來了解如何使用服務的程序。 匯入服務中繼資料是從服務中繼資料產生 <xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體或組件的程序。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], customization
 ms.assetid: a3d9930e-5597-470e-a636-dcf65eac500b
 ms.openlocfilehash: b70a6654e5c3722ad1ef1d926ee3a441d24d9e68
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017692"
 ---
 # <a name="control-customization"></a>控制項自訂
 這個類別涵蓋了各種不同的基底類別、 介面和其他項目和用來建立功能完整的概念[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]控制項。  

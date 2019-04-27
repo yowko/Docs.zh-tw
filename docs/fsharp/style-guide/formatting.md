@@ -3,11 +3,11 @@ title: F#程式碼格式化方針
 description: 了解格式的指導方針F#程式碼。
 ms.date: 02/08/2019
 ms.openlocfilehash: 259d4bb2147d1fc8bc5d35d7ff2e3c34ec2185d0
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902586"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#程式碼格式化方針
 

@@ -11,8 +11,8 @@ ms.openlocfilehash: 6feabadff17538f4a7368c348f7b72226e2d678e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59980651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800148"
 ---
 # <a name="windows-forms-coordinates"></a>Windows Form 座標
 在 Windows Form 座標系統根據裝置座標和量值在 Windows Form 中描繪時的基本單位是裝置單位 （一般而言，像素）。 在螢幕上的點的 x 和 y 座標組說明增加到右並增加從上往下 y 座標的 x 座標。 相對於畫面中，原點的位置會因您指定螢幕或用戶端座標。  

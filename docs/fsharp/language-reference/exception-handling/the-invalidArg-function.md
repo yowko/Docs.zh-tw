@@ -3,11 +3,11 @@ title: '例外狀況: invalidArg 函式'
 description: 了解如何F#'invalidArg' 函式會產生引數例外狀況。
 ms.date: 05/16/2016
 ms.openlocfilehash: 7fd8d48b80970dbbafc0c23a478b4ccf3490f3ee
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996876"
 ---
 # <a name="exceptions-the-invalidarg-function"></a>例外狀況: invalidArg 函式
 

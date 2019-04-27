@@ -12,11 +12,11 @@ helpviewer_keywords:
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
 ms.openlocfilehash: a69b956c7cffcc2a26916d6fc92f23dd4e2322d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864243"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>參數和引數之間的差異 (Visual Basic)
 在大部分情況下，程序必須有一些情況在其中呼叫的相關資訊。 執行重複或共用工作的程序會針對每個呼叫中使用不同的資訊。 這項資訊是由變數、 常數和您傳遞至程序時呼叫它的運算式所組成。  

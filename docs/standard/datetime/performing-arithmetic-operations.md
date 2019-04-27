@@ -17,11 +17,11 @@ ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2d5f807481468b61365c8b4d8412f12a4741ebb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912752"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>使用日期和時間執行算術運算
 
@@ -36,7 +36,7 @@ ms.locfileid: "54503149"
 
 <xref:System.DateTime.CompareTo%28System.DateTime%29>方法會報告本地時間早於 (或小於) UTC 時間，且減法運算會指出 UTC 與本地時間的系統之間的差異，在美國太平洋標準時間時區系統來說相差七個小時。 但因為這兩個值提供單一時間點的不同表示，所以在此情況下，此時間間隔很明顯地完全歸因於當地時區與 UTC 的位移。
 
-更廣泛地<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>屬性不會影響所傳回的結果<xref:System.DateTime.Kind>比較和算術方法 （如比較的兩個相同時間點表示），不過它可能會影響這些結果的解譯。 例如: 
+更廣泛地<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>屬性不會影響所傳回的結果<xref:System.DateTime.Kind>比較和算術方法 （如比較的兩個相同時間點表示），不過它可能會影響這些結果的解譯。 例如：
 
 * 任何算術運算的結果上執行兩個日期和時間值的<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>屬性等於<xref:System.DateTimeKind>會反映兩個值之間的實際時間間隔。 同樣地，兩個這類日期和時間值的比較會精確地反映時間的關聯性。
 
@@ -76,9 +76,9 @@ A<xref:System.DateTimeOffset>值包含不只一個日期和時間，還能明確
 
 * <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>和<xref:System.TimeZoneInfo.ConvertTimeToUtc%2A>方法，將特定的時區時間轉換成 UTC，或將 UTC 轉換為特定時區的時間。
 
-如需詳細資訊，請參閱 <c0> [ 各時區間轉換時間](../../../docs/standard/datetime/converting-between-time-zones.md)。
+如需詳細資訊，請參閱 <<c0> [ 各時區間轉換時間](../../../docs/standard/datetime/converting-between-time-zones.md)。
 
-<xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)>類別不提供任何自動套用調整規則，當您執行日期和時間運算的方法。 不過，作法是將時區時間轉換為 UTC，並執行算術運算，然後從 UTC 轉換回時區時間。 如需詳細資訊，請參閱[How to:在日期和時間運算中使用時區](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)。
+<xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)>類別不提供任何自動套用調整規則，當您執行日期和時間運算的方法。 不過，作法是將時區時間轉換為 UTC，並執行算術運算，然後從 UTC 轉換回時區時間。 如需詳細資訊，請參閱[如何：在日期和時間運算中使用時區](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)。
 
 例如，下列程式碼與前面的程式碼類似，也是將 2008 年 3 月 9 日 凌晨 2:00 加上兩個半小時。 不過，因為它會先將美加中部標準時間轉換為 UTC，再執行日期和時間運算，然後將 UTC 的結果轉換回美加中部標準時間，所以產生的時間會反映美加中部標準時區到日光節約時間的轉換。
 

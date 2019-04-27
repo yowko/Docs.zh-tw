@@ -3,11 +3,11 @@ title: 在 Managed 應用程式中裝載
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
 ms.openlocfilehash: 415a6fef511d7d7397a38882801e5848e2998a11
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855825"
 ---
 # <a name="hosting-in-a-managed-application"></a>在 Managed 應用程式中裝載
 Windows Communication Foundation (WCF) 服務可以裝載於任何[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]應用程式。 自我裝載服務是最彈性的裝載選項，因為它只需要最基本的基礎結構就可部署。 不過，也很最不穩固的裝載選項，因為受管理的應用程式不會提供的進階裝載和其他裝載選項在 WCF 中，例如 Internet Information Services (IIS) 和 Windows 服務的管理功能。  

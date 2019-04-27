@@ -3,11 +3,11 @@ title: XML 文件 (F#)
 description: 了解支援F#從註解產生文件。
 ms.date: 05/16/2016
 ms.openlocfilehash: c5305dea8832112644710b2863269ef00feddd10
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902170"
 ---
 # <a name="xml-documentation"></a>XML 文件
 

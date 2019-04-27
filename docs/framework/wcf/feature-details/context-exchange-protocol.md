@@ -3,11 +3,11 @@ title: 內容交換通訊協定
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
 ms.openlocfilehash: a6bc0ac45282d94a6aea8dbbdb5a7d34163c692e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857346"
 ---
 # <a name="context-exchange-protocol"></a>內容交換通訊協定
 本節說明 Windows Communication Foundation (WCF) 版本.NET Framework 3.5 版中導入的內容交換通訊協定。 這項通訊協定可讓用戶端通道接受服務所提供的內容，並透過相同的用戶端通道執行個體將之套用到該服務的後續所有要求。 內容交換通訊協定的實作可以使用下列兩個機制其中之一來傳播內容伺服器與用戶端之間：HTTP cookie 或 SOAP 標頭。  

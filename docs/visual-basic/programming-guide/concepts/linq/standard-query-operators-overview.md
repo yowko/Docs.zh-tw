@@ -3,11 +3,11 @@ title: 標準查詢運算子概觀 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
 ms.openlocfilehash: 9bfdf2163be52d9016a800d65006bbc4fbf560a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908137"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>標準查詢運算子概觀 (Visual Basic)
 「標準查詢運算子」是形成 LINQ 模式的方法。 這些方法大多會在序列上運作，而序列是指其類型會實作 <xref:System.Collections.Generic.IEnumerable%601> 介面或 <xref:System.Linq.IQueryable%601> 介面的物件。 標準查詢運算子所提供的查詢功能包括篩選、投影、彙總、排序等等。  

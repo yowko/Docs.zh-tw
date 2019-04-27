@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
 ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61839394"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic 程式的結構
 從標準建置組塊，已建立 Visual Basic 程式。 A*解決方案*可以包含一或多個專案。 A*專案*又可以包含一或多個組件。 每個*組件*編譯一或多個原始程式檔。 A*原始程式檔*提供定義和實作的類別、 結構、 模組和介面，最後會包含所有的程式碼。  

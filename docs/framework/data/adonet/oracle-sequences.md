@@ -3,11 +3,11 @@ title: Oracle 序列
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
 ms.openlocfilehash: 8fe7513093d06f3928540f2de8cba902ce62b56e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878445"
 ---
 # <a name="oracle-sequences"></a>Oracle 序列
 .NET Framework Data Provider for Oracle 藉由使用 <xref:System.Data.OracleClient.OracleDataAdapter>，支援在執行插入後擷取伺服器所產生的「Oracle 序列」索引鍵值。  

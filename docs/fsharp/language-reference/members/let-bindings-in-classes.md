@@ -3,11 +3,11 @@ title: 類別中的 let 繫結
 description: 了解如何定義私用欄位和私用的函式，如F#類別使用 'let' 在類別定義的繫結。
 ms.date: 05/16/2016
 ms.openlocfilehash: 03dd583a141971284e6a8ddaad02272236cd1e4c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903760"
 ---
 # <a name="let-bindings-in-classes"></a>類別中的 let 繫結
 
@@ -53,4 +53,4 @@ A`let`繫結，不是靜態的執行個體稱為`let`繫結。 執行個體`let`
 
 - [成員](index.md)
 - [類別中的 `do` 繫結](do-bindings-in-classes.md)
-- [`let` 繫結](../functions/let-bindings.md)
+- [`let` Bindings](../functions/let-bindings.md)

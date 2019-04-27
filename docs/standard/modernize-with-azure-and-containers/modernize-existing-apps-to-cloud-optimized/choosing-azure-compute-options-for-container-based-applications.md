@@ -1,17 +1,17 @@
 ---
-title: 選擇容器型應用程式的 Azure 計算平台
+title: 選擇容器應用程式的 Azure 計算平台
 description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |選擇容器型應用程式的 Azure 計算平台
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/04/2018
 ms.openlocfilehash: f251aecfeaf2421a5cecf218577369963bc736fb
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811747"
 ---
-# <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>選擇容器型應用程式的 Azure 計算平台
+# <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>選擇容器應用程式的 Azure 計算平台
 
 閱讀前幾節之後，您已經注意到，則 Azure 會是開放式的雲端，可提供多個選項。 您可以使用最適合您的需求，不過，它也會呈現有關容器化應用程式，您應該使用哪些產品/技術問題。
 

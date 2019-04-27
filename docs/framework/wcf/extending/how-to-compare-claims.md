@@ -9,11 +9,11 @@ helpviewer_keywords:
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
 ms.openlocfilehash: 932ad347730b35a936e040e116e5aa6af36cd3dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857753"
 ---
 # <a name="how-to-compare-claims"></a>HOW TO：比較宣告
 身分識別模型基礎結構在 Windows Communication Foundation (WCF) 用來執行授權檢查。 因此，比較授權內容中的宣告與執行所要求動作或存取所要求資源所需要的宣告，屬於常見的工作。 本主題將描述如何比較宣告，包括內建和自訂的宣告類型。 如需識別模型基礎結構的詳細資訊，請參閱[管理宣告與授權身分識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  

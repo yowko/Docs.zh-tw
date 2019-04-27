@@ -5,11 +5,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
 ms.openlocfilehash: 892168ec282fbf168c43515e0718fe5486a345a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011610"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView 控制項架構 (Windows Form)
 <xref:System.Windows.Forms.DataGridView>控制項以及與其相關的類別都是設計成有彈性、 可擴充的系統，來顯示和編輯表格式資料。 這些類別包含在<xref:System.Windows.Forms?displayProperty=nameWithType>命名空間，而且它們所有以"DataGridView"前置詞命名。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
 ms.openlocfilehash: 222ce575d9e977cc8b68862385b4a1b147c6394a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902690"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a>HOW TO：將變更提交至資料庫
 不論對物件進行多少的變更，都只會變更記憶體中的複本。 並不會變更到資料庫中的實際資料。 在 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 上明確呼叫 <xref:System.Data.Linq.DataContext> 之前，變更都不會傳輸至伺服器。  

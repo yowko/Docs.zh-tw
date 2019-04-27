@@ -8,11 +8,11 @@ helpviewer_keywords:
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
 ms.openlocfilehash: b13fd85ae01fd0b6f3c963d87a372add930be99d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61975295"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>逐步解說：在 Visual Basic 中實作 IEnumerable(Of T)
 <xref:System.Collections.Generic.IEnumerable%601>可以一次傳回的值的一個項目序列的類別會實作介面。 傳回的資料一次的一個項目是您沒有將一組完整的資料載入記憶體，才能使用它的優點。 您只需要使用足夠的記憶體載入資料的單一項目。 類別實作`IEnumerable(T)`介面可與`For Each`迴圈或 LINQ 查詢。  

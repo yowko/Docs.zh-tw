@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
 ms.openlocfilehash: 8d7ae8c807b8c5347a455b81c2c1a1b0897430c2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013006"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>標記個別 Windows Form 控制項並提供其捷徑
 加入 Windows Form 的控制項具有可用來進一步特製化使用者經驗的屬性和方法。 對於設計良好的 Windows 應用程式而言，依使用者的需要自訂使用者介面是非常重要的。  

@@ -3,11 +3,11 @@ title: Multiple Active Result Sets (MARS)
 ms.date: 03/30/2017
 ms.assetid: c90ef863-bac7-44cf-adc1-f05c36fcf57d
 ms.openlocfilehash: bb00fbfec32a9d64fd6661cd5cdfd06fe3aa7410
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922352"
 ---
 # <a name="multiple-active-result-sets-mars"></a>Multiple Active Result Sets (MARS)
 Multiple Active Result Set (MARS) 是允許在單一連接中執行多個批次作業的功能。 在先前版本中，在單一連接上一次只能執行一個批次作業。 以 MARS 執行多個批次作業並不表示同時執行作業。  

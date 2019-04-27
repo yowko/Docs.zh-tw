@@ -3,11 +3,11 @@ title: 診斷交易式應用程式
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
 ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856735"
 ---
 # <a name="diagnosing-transactional-applications"></a>診斷交易式應用程式
 本主題描述如何使用 Windows Communication Foundation (WCF) 管理和診斷功能，交易式應用程式進行疑難排解。  

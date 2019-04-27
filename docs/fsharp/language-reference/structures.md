@@ -3,11 +3,11 @@ title: 結構
 description: 深入了解F#結構，通常是精簡的物件類型比具有少量資料且行為簡單類型的類別更有效率。
 ms.date: 05/16/2016
 ms.openlocfilehash: c091dc91765d6e828426de21e9bc5f79bfdebc6c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925875"
 ---
 # <a name="structures"></a>結構
 
@@ -38,7 +38,7 @@ type [accessibility-modifier] type-name =
 
 結構無法參與繼承、不能包含 `let` 或 `do` 繫結，且不得以遞迴方式包含其本身類型的欄位 (不過它們可以包含參考其本身類型的參考儲存格)。
 
-因為結構不允許 `let` 繫結，因此您必須使用 `val` 關鍵字來宣告結構中的欄位。 `val` 關鍵字會定義欄位及其類型，但不允許進行初始化。 相反地，`val` 宣告會初始化為零或 null。 基於這個理由，具有隱含建構函式 (也就是緊接在宣告中結構名稱後的指定參數) 的結構，需要 `val` 宣告加上 `DefaultValue` 屬性的附註。 具有已定義的建構函式之結構，仍然支援零初始化。 因此，`DefaultValue` 屬性是一種零值對於欄位有效的宣告。 結構的隱含建構函式不會執行任何動作，因為類型上不允許 `let` 和 `do` 繫結，但傳入的隱含建構函式參數值均可用作為私用欄位。
+因為結構不允許 `let` 繫結，因此您必須使用 `val` 關鍵字來宣告結構中的欄位。 `val` 關鍵字會定義欄位及其類型，但不允許進行初始化。 相反地，`val` 宣告會初始化為零或 null。 基於這個理由，具有隱含建構函式 (也就是緊接在宣告中結構名稱後的指定參數) 的結構，需要 `val` 宣告標註 `DefaultValue` 屬性。 具有已定義的建構函式之結構，仍然支援零初始化。 因此，`DefaultValue` 屬性是一種零值對於欄位有效的宣告。 結構的隱含建構函式不會執行任何動作，因為類型上不允許 `let` 和 `do` 繫結，但傳入的隱含建構函式參數值均可用作為私用欄位。
 
 明確建構函式可能會牽涉到欄位值的初始化。 當您的結構有明確的建構函式時，它仍然可以支援零初始化。不過，請勿在 `DefaultValue` 宣告上使用 `val` 屬性，因為它與明確建構函式相衝突。 如需詳細資訊`val`宣告，請參閱[明確欄位：`val`關鍵字](members/explicit-fields-the-val-keyword.md)。
 
@@ -75,7 +75,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 ## <a name="readonly-structs"></a>唯讀結構
 
-您可以標註結構與<xref:System.Runtime.CompilerServices.IsReadOnlyAttribute>屬性。 例如: 
+您可以標註結構與<xref:System.Runtime.CompilerServices.IsReadOnlyAttribute>屬性。 例如：
 
 ```fsharp
 [<IsReadOnly; Struct>]

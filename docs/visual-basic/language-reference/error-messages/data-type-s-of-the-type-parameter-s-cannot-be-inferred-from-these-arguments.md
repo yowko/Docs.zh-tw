@@ -11,11 +11,11 @@ helpviewer_keywords:
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
 ms.openlocfilehash: 91ee4bf9242df822890b0a171061f375a3b24cbc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803866"
 ---
 # <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>無法從這些引數推斷類型參數的資料類型
 無法從這些引數推斷類型參數的資料類型。 明確指定資料類型或許可以更正這個錯誤。  

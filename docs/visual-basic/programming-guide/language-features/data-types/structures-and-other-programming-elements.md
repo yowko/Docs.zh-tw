@@ -9,11 +9,11 @@ helpviewer_keywords:
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
 ms.openlocfilehash: a943bbdec617ba6c95685df3a4fcdb36b52def22
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906447"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>結構和其他程式設計項目 (Visual Basic)
 您可以使用結構搭配使用陣列、 物件和程序，以及彼此。 因為這些項目使用個別的互動會使用相同的語法。  

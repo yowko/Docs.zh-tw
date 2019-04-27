@@ -3,11 +3,11 @@ title: 推斷項目文字
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
 ms.openlocfilehash: 6ffe8f2fbf01fbe8dfa9d78f3dfb9e39b6e80b16
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879628"
 ---
 # <a name="inferring-element-text"></a>推斷項目文字
 如果項目包含文字，而且沒有任何子項目，來推斷為資料表 （具有屬性的項目） 或重複的項目，例如新的資料行同名**TableName_Text**會加入項目，推斷的資料表。 項目中包含的文字會加入資料表中的資料列，並儲存在新資料行內。 **ColumnMapping**的新資料行的屬性會設定為**MappingType.SimpleContent**。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
 ms.openlocfilehash: 79e13e65938252015e43b59a962d40f20963a5df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902664"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的選取模式
 有時候您想要根據使用者選取項目內執行動作的應用程式<xref:System.Windows.Forms.DataGridView>控制項。 根據動作，您可能要限制可能的選取項目類型。 例如，假設您的應用程式可以列印報表，以針對目前選取的記錄。 在此情況下，您可能想要設定<xref:System.Windows.Forms.DataGridView>控制項，以便一律任意處按一下資料列中選取整個資料列，並因此可以選取一次該只有一個資料列。  

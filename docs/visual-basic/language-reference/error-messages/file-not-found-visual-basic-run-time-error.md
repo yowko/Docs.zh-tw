@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID53
 ms.assetid: 57addb16-6f9a-444d-8af8-dda52431daca
 ms.openlocfilehash: cac84c3fa549760ee92601bbb07a379ea102b6dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801383"
 ---
 # <a name="file-not-found-visual-basic-run-time-error"></a>找不到檔案 (Visual Basic 執行階段錯誤)
 檔案已找不到指定之處。 此錯誤有下列可能的原因：  

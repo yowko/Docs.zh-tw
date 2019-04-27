@@ -5,11 +5,11 @@ ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c304606a27552e604bf40953f49a30a794026281
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866908"
 ---
 # <a name="namespace-element-net-native"></a>\<命名空間 > 項目 (.NET Native)
 將執行階段反映原則套用至指定命名空間中的所有類型。  

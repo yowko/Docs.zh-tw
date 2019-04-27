@@ -16,11 +16,11 @@ helpviewer_keywords:
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
 ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917835"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic 中的範圍
 *領域*的宣告的項目是 所有程式碼都可以參考它，而不需要限定其名稱，或使其能透過一組[Imports 陳述式 （.NET 命名空間和類型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。 元素可能具有其中一個下列層級的範圍：  

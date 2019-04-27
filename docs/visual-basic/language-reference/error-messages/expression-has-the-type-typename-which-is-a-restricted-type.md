@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
 ms.openlocfilehash: 017a2458562068727674bd3fd9cda8c33d989e8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803164"
 ---
 # <a name="expression-has-the-type-typename-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-object-or-valuetype"></a>運算式包含類型 '\<類型名稱 >' 其為受限制的類型，且不能用來存取繼承自 'Object' 或 'ValueType' 的成員
 運算式評估為 common language runtime (CLR) 無法 box 處理的類型，但是會存取需要 boxing 處理的成員。  

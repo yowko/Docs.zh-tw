@@ -3,11 +3,11 @@ title: 聯結作業 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
 ms.openlocfilehash: c7bd81f729558c8ec41baacda99765eb2f862b29
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61834365"
 ---
 # <a name="join-operations-visual-basic"></a>聯結作業 (Visual Basic)
 兩個資料來源的「聯結」，就是某個資料來源中的物件，和另一個資料來源中共用通用屬性的物件的關聯。  
@@ -18,7 +18,7 @@ ms.locfileid: "58411144"
   
  以下概念圖示範兩個集合，以及兩個集合中包含在內部聯結或左外部聯結中的項目。  
   
- ![顯示內部的兩個重疊圓形&#47;外部。](./media/join-operations/join-method-overlapping-circles.png)  
+ ![顯示內部&#47;外部的兩個重疊圓形。](./media/join-operations/join-method-overlapping-circles.png)  
   
 ## <a name="methods"></a>方法  
   

@@ -14,8 +14,8 @@ ms.openlocfilehash: e887747a3f036d10e5e5fec6c0cadaf9f34050df
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59978246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674294"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<Appcontextswitchoverrides> > 項目
 定義一或多個由 <xref:System.AppContext> 類別所使用的參數，以提供新功能的退出機制。  

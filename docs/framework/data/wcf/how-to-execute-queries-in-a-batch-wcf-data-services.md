@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, batch requests
 ms.assetid: 3b4db7df-bd33-43a1-8ea4-63a18e131f97
 ms.openlocfilehash: e5cd44ee7c3b2c2744e87ebf66973b637961893c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876261"
 ---
 # <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>HOW TO：批次 (WCF Data Services) 中執行查詢
 使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫，您可以在單一批次執行一個以上的查詢，針對資料服務。 如需詳細資訊，請參閱 <<c0> [ 批次作業](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)。  

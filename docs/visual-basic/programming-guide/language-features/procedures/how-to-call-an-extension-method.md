@@ -6,11 +6,11 @@ helpviewer_keywords:
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
 ms.openlocfilehash: 5cb0684637a716dfec947740ba345c62eaabddd7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863671"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>HOW TO：呼叫擴充方法 (Visual Basic)
 擴充方法可讓您將方法加入至現有的類別。 擴充方法宣告，然後帶入範圍之後，您可以呼叫它，如擴充類型的執行個體方法。 如需如何撰寫擴充方法的詳細資訊，請參閱[How to:撰寫擴充方法](./how-to-write-an-extension-method.md)。  

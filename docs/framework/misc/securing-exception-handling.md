@@ -12,11 +12,11 @@ ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc8cd20a4183ffd002f1399b6b50c8956208a21b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868794"
 ---
 # <a name="securing-exception-handling"></a>設定例外狀況處理的安全性
 在視覺效果C++和 Visual Basic 中，執行任何之前的堆疊中往上的進一步篩選條件運算式**最後**陳述式。 **攔截**相關聯的區塊之後執行的該篩選條件**最後**陳述式。 如需詳細資訊，請參閱 <<c0> [ 使用使用者篩選例外狀況](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)。 本節將探討此順序的安全性含意。 請考慮下列虛擬程式碼範例說明中的篩選陳述式的順序並**最後**執行的陳述式。  
@@ -60,7 +60,7 @@ Finally
 Catch  
 ```  
   
- 篩選條件之前執行**最後**陳述式，所以安全性問題會造成任何項目會變更其中執行的其他程式碼無法充分利用的狀態。 例如：  
+ 篩選條件之前執行**最後**陳述式，所以安全性問題會造成任何項目會變更其中執行的其他程式碼無法充分利用的狀態。 例如:   
   
 ```cpp  
 try   

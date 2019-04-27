@@ -12,11 +12,11 @@ helpviewer_keywords:
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
 ms.openlocfilehash: 012ad8e6229958575030ee820a3b0b79cc50facc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863437"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>HOW TO：將引數傳遞至程序 (Visual Basic)
 當您呼叫程序時，您會遵循括號括住的引數清單的程序名稱。 您提供的程序定義，對應至每個必要參數的引數，您可以選擇性地提供的引數`Optional`參數。 如果您未提供`Optional`呼叫中的參數，您必須包含逗號來標示其引數清單中的位置，如果您提供的任何後續的引數。  

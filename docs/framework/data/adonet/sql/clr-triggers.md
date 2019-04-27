@@ -3,11 +3,11 @@ title: CLR 觸發程序
 ms.date: 03/30/2017
 ms.assetid: defe379c-30c7-487f-9abd-9c5e12ff49be
 ms.openlocfilehash: 70ba8e072761df561f94c7343fa75c0398f1b5e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878212"
 ---
 # <a name="clr-triggers"></a>CLR 觸發程序
 觸發程序是一種特殊型別的預存程序，它會在執行語言事件時自動執行。 因為 Microsoft SQL Server 已與 .NET Framework Common Language Runtime (CLR) 整合，所以您可以使用任何 .NET Framework 語言建立 CLR 觸發程序。  

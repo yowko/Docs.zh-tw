@@ -5,11 +5,11 @@ ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ca8cf76745190bd9819dde522c34e57952cd1ca
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906317"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>執行階段指示詞 (rd.xml) 組態檔參考
 
@@ -365,8 +365,7 @@ ms.locfileid: "58410455"
 
 #### <a name="the-effect-of-serialize-policy"></a>序列化原則的效果
 
-
-  `Serialize` 原則可以啟用一般反映型序列化程式。 不過，由於 Microsoft 並不清楚非 Microsoft 序列化程式的確切反映存取模式，所以此原則可能不是全面有效。
+`Serialize` 原則可以啟用一般反映型序列化程式。 不過，由於 Microsoft 並不清楚非 Microsoft 序列化程式的確切反映存取模式，所以此原則可能不是全面有效。
 
 將 `Serialize` 原則套用至類型牽涉到下列原則變更：
 

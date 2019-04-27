@@ -5,11 +5,11 @@ helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
 ms.openlocfilehash: 645d19219481d22ade90f44aaecb62471eb915d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801988"
 ---
 # <a name="string-functions-visual-basic"></a>字串函式 (Visual Basic)
 下表列出 Visual Basic 提供用來搜尋和操作字串的函式。  

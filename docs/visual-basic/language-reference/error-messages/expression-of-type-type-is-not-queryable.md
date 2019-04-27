@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
 ms.openlocfilehash: 121c0a95a3a6bb695d9c73347c733cba215a0de4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801617"
 ---
 # <a name="expression-of-type-type-is-not-queryable"></a>型別的運算式\<類型 > 不是可查詢
 型別的運算式\<類型 > 不是可供查詢。 請確定您未遺漏組件參考和/或命名空間匯入 LINQ 提供者。  

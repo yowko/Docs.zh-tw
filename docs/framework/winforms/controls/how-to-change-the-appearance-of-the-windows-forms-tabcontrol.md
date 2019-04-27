@@ -12,11 +12,11 @@ helpviewer_keywords:
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
 ms.openlocfilehash: 05df05a52914f27a4b62cf7bde92e5d942b6ea06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904263"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>HOW TO：變更 Windows Forms TabControl 的外觀
 您可以使用的屬性來變更 Windows Form 中的索引標籤的外觀<xref:System.Windows.Forms.TabControl>而<xref:System.Windows.Forms.TabPage>組成控制項的個別索引標籤的物件。 藉由設定這些屬性，，您可以索引標籤上顯示的映像、 顯示垂直方式而非水平索引標籤，顯示多個資料列的索引標籤，並啟用或以程式設計方式停用索引標籤。  

@@ -3,11 +3,11 @@ title: 內建活動
 ms.date: 03/30/2017
 ms.assetid: 31e1b8c2-7f74-458a-b2e2-fddc5b10eac1
 ms.openlocfilehash: 7f497ff3dafd8615066bbae6ba1020d96d73b30c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913831"
 ---
 # <a name="built-in-activities"></a>內建活動
 本節包含示範內建的 Windows Workflow Foundation (WF) 活動的範例。  

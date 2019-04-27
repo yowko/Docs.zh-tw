@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 93b3ae8c83973c4d981fc42d4a8f616c62b1b28a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672857"
 ---
 # <a name="itypenamebuilderaddbyref-method"></a>ITypeNameBuilder::AddByRef 方法
 
@@ -40,7 +40,7 @@ HRESULT AddByRef ( );
 
 **標頭：** MSCorEE.h
 
-**程式庫：** 包含做為 MSCorEE.dll 中的資源
+**LIBRARY:** 包含做為 MSCorEE.dll 中的資源
 
 **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 

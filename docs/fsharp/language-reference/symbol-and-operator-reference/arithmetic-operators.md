@@ -3,11 +3,11 @@ title: 算術運算子
 description: 深入了解可用於算術運算子F#程式設計語言。
 ms.date: 04/04/2018
 ms.openlocfilehash: 826f334125a542855bf2fda43465618403d49d4c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925849"
 ---
 # <a name="arithmetic-operators"></a>算術運算子
 
@@ -17,7 +17,7 @@ ms.locfileid: "53614580"
 
 下表摘要說明適用於 unboxed 整數和浮點數類型的二進位算術運算子。
 
-|二元運算子|備註|
+|二元運算子|注意|
 |---------------|-----|
 |`+` (此外，再加上)|未選取。 數字加在一起時，可能的溢位狀況和總和超過類型支援的最大絕對值。|
 |`-` (減法、 減號)|未選取。 可能的反向溢位條件，或不帶正負號的類型減去時，浮點值太小，表示由型別時。|

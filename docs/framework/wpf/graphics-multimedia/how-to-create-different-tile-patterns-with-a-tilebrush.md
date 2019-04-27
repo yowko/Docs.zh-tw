@@ -10,11 +10,11 @@ helpviewer_keywords:
 - creating [WPF], tile patterns with TileBrush
 ms.assetid: 5aa46632-3527-4668-9d8d-0375c8af28aa
 ms.openlocfilehash: c1051b234961eee9ae740af2abac3d64c523656c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905124"
 ---
 # <a name="how-to-create-different-tile-patterns-with-a-tilebrush"></a>HOW TO：使用 TileBrush 建立不同的拼貼模式
 此範例示範如何使用<xref:System.Windows.Media.TileBrush.TileMode%2A>屬性<xref:System.Windows.Media.TileBrush>建立模式。  

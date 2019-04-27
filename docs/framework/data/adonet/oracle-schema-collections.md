@@ -3,11 +3,11 @@ title: Oracle 結構描述集合
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
 ms.openlocfilehash: 016a21b2106e955fd9806c5fb62833bc37da1f2f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878471"
 ---
 # <a name="oracle-schema-collections"></a>Oracle 結構描述集合
 
@@ -15,7 +15,7 @@ ms.locfileid: "57371641"
 
 - 資料行
 
-- Indexes
+- 索引
 
 - IndexColumns
 
@@ -56,14 +56,14 @@ ms.locfileid: "57371641"
 |OWNER|String|資料表、檢視表或叢集的擁有人。|
 |TABLE_NAME|String|資料表、檢視表或叢集名稱。|
 |COLUMN_NAME|String|資料行名稱。|
-|ID|Decimal|所建立之資料行的序號。|
+|識別碼|Decimal|所建立之資料行的序號。|
 |資料型別|String|資料行的資料型別。|
 |LENGTH|Decimal|資料行的長度 (以位元組為單位)。|
 |PRECISION|Decimal|若為 NUMBER 資料型別，則是十進位精確度；若為 FLOAT 資料型別，則是二進位精確度；若為所有其他資料型別，則是 NULL。|
 |SCALE|Decimal|數字中小數點右邊的位數。|
 |NULLABLE|String|指定資料行是否允許 NULL。 若資料行沒有 NOT UNLL 條件約束，或者資料行是 PRIMARY KEY 的一部分，則此值為 N。|
 
-## <a name="indexes"></a>Indexes
+## <a name="indexes"></a>索引
 
 |ColumnName|DataType|描述|
 |----------------|--------------|-----------------|
@@ -77,8 +77,8 @@ ms.locfileid: "57371641"
 |COMPRESSION|String|索引是 ENABLED 還是 DISABLED。|
 |PREFIX_LENGTH|Decimal|壓縮金鑰前置詞中的資料行數目。|
 |TABLESPACE_NAME|String|包含索引的表格區名稱。|
-|INI_TRANS|Decimal|交易的初始次數。|
-|MAX_TRANS|Decimal|交易的最大次數。|
+|INI_TRANS|Decimal|異動的初始次數。|
+|MAX_TRANS|Decimal|異動的最大次數。|
 |INITIAL_EXTENT|Decimal|初始範圍的大小。|
 |NEXT_EXTENT|Decimal|次要範圍的大小。|
 |MIN_EXTENTS|Decimal|區段中允許的範圍最小數目。|
@@ -187,7 +187,7 @@ ms.locfileid: "57371641"
 |ColumnName|DataType|描述|
 |----------------|--------------|-----------------|
 |NAME|String|使用者名稱。|
-|ID|Decimal|使用者的識別碼。|
+|識別碼|Decimal|使用者的識別碼。|
 |CREATEDATE|DateTime|使用者建立日期。|
 
 ## <a name="views"></a>檢視

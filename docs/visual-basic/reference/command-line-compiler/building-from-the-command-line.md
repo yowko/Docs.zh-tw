@@ -14,11 +14,11 @@ helpviewer_keywords:
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
 ms.openlocfilehash: 798baa90308c83e42b335635fb23a9983f5180fb
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61839380"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>從命令列建置 (Visual Basic)
 Visual Basic 專案組成的一或多個不同的來源檔案。 在稱為編譯過程中，這些檔案會結合成一個套件，可以為應用程式執行單一可執行檔。  
@@ -28,7 +28,7 @@ Visual Basic 專案組成的一或多個不同的來源檔案。 在稱為編譯
   若要編譯原始程式檔從 Visual Studio IDE 中的，選擇**建置**命令**建置**功能表。  
   
 > [!TIP]
->  當您使用 Visual Studio IDE 建置專案檔時，您可以顯示相關聯的相關資訊**vbc**命令和其參數，在 [輸出] 視窗中的。 若要顯示這項資訊，請開啟[選項對話方塊、 專案和解決方案、 建置和執行](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)，然後將**MSBuild 專案建置輸出詳細等級**來**一般**或較高層級的詳細資訊。 如需詳細資訊，請參閱[＜How to：檢視、 儲存和設定組建記錄檔](/visualstudio/ide/how-to-view-save-and-configure-build-log-files)。  
+>  當您使用 Visual Studio IDE 建置專案檔時，您可以顯示相關聯的相關資訊**vbc**命令和其參數，在 [輸出] 視窗中的。 若要顯示這項資訊，請開啟[選項對話方塊、 專案和解決方案、 建置和執行](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)，然後將**MSBuild 專案建置輸出詳細等級**來**一般**或較高層級的詳細資訊。 如需詳細資訊，請參閱[如何：檢視、 儲存和設定組建記錄檔](/visualstudio/ide/how-to-view-save-and-configure-build-log-files)。  
   
  您可以使用 MSBuild 編譯專案 (.vbproj) 檔，在命令提示字元。 如需詳細資訊，請參閱 <<c0> [ 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)和[逐步解說：使用 MSBuild](/visualstudio/msbuild/walkthrough-using-msbuild)。  
   

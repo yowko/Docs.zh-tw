@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
 ms.openlocfilehash: 18681935d0380f9be3970fdb5d17ffb089152f59
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802540"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 指定一或多個宣告的程式設計元素，只能從包含其宣告的組件內加以存取。  

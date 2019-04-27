@@ -3,11 +3,11 @@ title: F#編碼慣例
 description: 了解一般的指導方針和慣例撰寫時F#程式碼。
 ms.date: 05/14/2018
 ms.openlocfilehash: 1ef016184180eb8d233295e8985903e07693ad26
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902131"
 ---
 # <a name="f-coding-conventions"></a>F#編碼慣例
 
@@ -189,7 +189,7 @@ type MyParametricApi(dep1, dep2, dep3) =
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>代表錯誤案例和您的網域內建函式的型別中不合法的狀態
 
-具有[差別聯集](../language-reference/discriminated-unions.md)，F#可讓您能夠代表您的型別系統中的錯誤的程式狀態。 例如: 
+具有[差別聯集](../language-reference/discriminated-unions.md)，F#可讓您能夠代表您的型別系統中的錯誤的程式狀態。 例如：
 
 ```fsharp
 type MoneyWithdrawalResult =

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ListBoxItem [WPF]
 ms.assetid: da877c6f-5fd8-40cb-8909-225cbfd99aa5
 ms.openlocfilehash: 27a435feb4a941c77af221ab25bd63ea98b16e92
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910321"
 ---
 # <a name="how-to-get-a-listboxitem"></a>HOW TO：取得 ListBoxItem
 若要取得特定<xref:System.Windows.Controls.ListBoxItem>中的特定索引處<xref:System.Windows.Controls.ListBox>，您可以使用<xref:System.Windows.Controls.ItemContainerGenerator>。  

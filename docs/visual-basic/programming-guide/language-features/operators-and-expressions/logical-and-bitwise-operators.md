@@ -22,11 +22,11 @@ helpviewer_keywords:
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
 ms.openlocfilehash: ac47b6d7fa4861d18646a23f442caccc4062852f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864490"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic 中的邏輯運算子和位元運算子
 邏輯運算子會比較`Boolean`運算式，並傳回`Boolean`結果。 `And`， `Or`， `AndAlso`， `OrElse`，並`Xor`運算子*二進位*因為它們會使用兩個運算元，而`Not`運算子是*一元*因為這會在單一運算元。 其中有些運算子也可以執行位元整數值上的邏輯作業。  

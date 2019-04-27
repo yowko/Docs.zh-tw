@@ -5,11 +5,11 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 ms.assetid: 6885d426-fa87-4e1c-881f-f0e9ec8d98af
 ms.openlocfilehash: d3884f99a79a66ed8f8b25975b25a110c7341849
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802982"
 ---
 # <a name="control-flow-summary-visual-basic"></a>控制流程摘要 (Visual Basic)
 Visual Basic 語言關鍵字和執行階段程式庫成員依用途組織，並使用。  

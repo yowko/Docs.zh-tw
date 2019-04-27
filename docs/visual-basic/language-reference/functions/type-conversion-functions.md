@@ -82,11 +82,11 @@ helpviewer_keywords:
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
 ms.openlocfilehash: 56dad921b2900061dbe2db0d8f1faaf759641f87
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802293"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>類型轉換函式 (Visual Basic)
 這些函式是編譯的內嵌，這表示，轉換程式碼評估運算式的程式碼的一部分。 有時是沒有呼叫程序來完成轉換，進而改善效能。 每個函式強制轉型為特定的資料類型的運算式。  

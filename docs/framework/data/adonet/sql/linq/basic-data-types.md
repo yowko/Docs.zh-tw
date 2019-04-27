@@ -3,11 +3,11 @@ title: 基本資料類型
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
 ms.openlocfilehash: 00d5c6d866453fe9ece7f2e22a579aa43c09c23e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903366"
 ---
 # <a name="basic-data-types"></a>基本資料類型
 由於 LINQ to SQL 查詢會先轉譯成 Transact-SQL，然後才能在 Microsoft SQL Server 上執行。 因此，在基本資料型別方面，LINQ to SQL 所支援的許多內建功能都與 SQL Server 相同。  

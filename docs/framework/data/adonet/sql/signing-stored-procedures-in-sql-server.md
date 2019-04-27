@@ -3,11 +3,11 @@ title: 在 SQL Server 中簽署預存程序
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
 ms.openlocfilehash: 2c2076294c0e06ec411ceb1f5b1238dc3d7eb304
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922183"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>在 SQL Server 中簽署預存程序
  數位簽章是指使用簽署者之私密金鑰 (Private Key) 加密的資料摘要。 私密金鑰可確保數位簽章對於其 Bearer 或擁有者而言是唯一的。 您可以簽署預存程序、 函式 （除了內嵌資料表值函式）、 觸發程序，以及組件。  

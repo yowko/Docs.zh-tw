@@ -3,11 +3,11 @@ title: 迴圈：for...in 運算式
 description: 請參閱如何F#for...in...在運算式中迴圈建構來逐一查看的可列舉集合中的模式的相符項目。
 ms.date: 05/16/2016
 ms.openlocfilehash: adaf448a49cf53c63c41f9156d40ee5d1ad3caeb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024439"
 ---
 # <a name="loops-forin-expression"></a>迴圈：for...in 運算式
 
@@ -28,11 +28,11 @@ for pattern in enumerable-expression do
 
 當您使用，表示範圍`..`運算子，您可以使用下列語法。
 
-*啟動*... *[完成]*
+*啟動*... *finish*
 
 您也可以使用的版本，包括呼叫遞增值*略過*，如下列程式碼。
 
-*啟動*... *略過*... *[完成]*
+*啟動*... *skip* .. *finish*
 
 當您使用整數類資料的範圍和簡單的計數器變數模式時，問題通常是在每個反覆項目，以 1 遞增計數器變數，但如果範圍包含略過值，此計數器會遞增所略過值改為。
 

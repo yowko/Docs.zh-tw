@@ -8,11 +8,11 @@ helpviewer_keywords:
 - constants [Visual Basic], enumerated
 ms.assetid: bbb5c3cc-7cdb-4814-8d6a-a6d91546ed1e
 ms.openlocfilehash: e9ea359d58dfa11f7bba7fec3d31955e18d24953
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907591"
 ---
 # <a name="how-to-refer-to-an-enumeration-member-visual-basic"></a>HOW TO：參考列舉成員 (Visual Basic)
 列舉型別提供便利的方式來使用相關常數組和名稱相關聯的常數值。 例如，您可以宣告列舉來當作一組與當週的日次建立關聯的整數常數，接著在程式碼中使用日次的名稱而不是它們的整數值。  

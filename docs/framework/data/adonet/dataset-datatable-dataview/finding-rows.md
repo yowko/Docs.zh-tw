@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
 ms.openlocfilehash: 72af4b049153ce647cc1ceb2d40c3b17cc7ed988
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880057"
 ---
 # <a name="finding-rows"></a>尋找資料列
 您可以使用 <xref:System.Data.DataView.Find%2A> 的 <xref:System.Data.DataView.FindRows%2A> 和 <xref:System.Data.DataView> 方法，依照資料列的排序索引鍵值來搜尋資料列。 中值的搜尋區分大小寫**尋找**並**FindRows**取決於方法**CaseSensitive**基礎屬性<xref:System.Data.DataTable>。 搜尋值必須完全符合現有的排序索引鍵值，才能傳回結果。  

@@ -3,11 +3,11 @@ title: Windows Workflow Foundation 4 效能
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
 ms.openlocfilehash: f7590591bfac374f6de637f57fad9853b82ca20c
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006838"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 效能
 
@@ -48,7 +48,7 @@ ms.locfileid: "57845731"
 ### <a name="asynchronous-programming"></a>非同步程式設計
  應用程式針對長時間執行的封鎖作業 (例如 I/O) 或分散式運算作業採用非同步程式設計時，通常可展現較佳的效能和延展性。 WF4 會透過基礎活動型別 <xref:System.Activities.AsyncCodeActivity> 和 <xref:System.Activities.AsyncCodeActivity%601> 提供非同步支援。 執行階段原本即了解非同步活動，因此可以在非同步工作未處理完畢時，自動將執行個體放入不保存區域中。 您可以從這些類型衍生自訂活動，以執行非同步工作；如此就不會佔用工作流程排程器執行緒，也不會阻擋任何可平行執行的活動。
 
-### <a name="messaging"></a>傳訊
+### <a name="messaging"></a>訊息
  WF3 一開始僅透過外部事件或叫用 Web 服務提供相當有限的傳訊支援。 在.NET 3.5 中，工作流程可以實作為 WCF 用戶端或公開為 WCF 服務，透過<xref:System.Workflow.Activities.SendActivity>和<xref:System.Workflow.Activities.ReceiveActivity>。 在 WF4 中，工作流程為基礎的傳訊程式設計概念有已進一步加強透過 WCF 至 WF 傳訊邏輯緊密整合。
 
  在.NET 4 WCF 中提供的統一的訊息處理管線可協助有大幅提升效能和延展性，比 WF3 的 WF4 服務。 WF4 還提供更豐富的傳訊程式設計支援，可建立複雜的訊息交換模式 (MEP) 模型。 開發人員可以使用具型別的服務合約輕鬆進行程式設計，或使用不具型別的服務合約獲得更佳的效能，而不必付出序列化成本。 WF4 中透過 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 類別提供的用戶端通道快取支援，可幫助開發人員執行最少的工作來建置快速的應用程式。 如需詳細資訊，請參閱 <<c0> [ 變更傳送活動的快取共用層級](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)。
@@ -114,7 +114,7 @@ ms.locfileid: "57845731"
  這項測試的目的在於顯示依序執行數個活動的效果。  序列中有五個活動。
 
 ### <a name="transaction-scope"></a>交易範圍
- 與其他測試稍為不同的是，交易範圍測試不會針對每個反覆項目建立新的工作流程執行個體。  工作流程會以 while 迴圈建構，該迴圈包含的 <xref:System.Activities.Statements.TransactionScope> 活動中會有一個不執行任何工作的活動。  每次透過 while 迴圈執行一批包含 50 個反覆項目的作業，都會計算為單一作業。
+ 與其他測試稍為不同的是，異動範圍測試不會針對每個反覆項目建立新的工作流程執行個體。  工作流程會以 while 迴圈建構，該迴圈包含的 <xref:System.Activities.Statements.TransactionScope> 活動中會有一個不執行任何工作的活動。  每次透過 while 迴圈執行一批包含 50 個反覆項目的作業，都會計算為單一作業。
 
 ### <a name="compensation"></a>補償
  WF3 工作流程具有名為 `WorkScope` 的單一可補償活動。  此活動只會實作 <xref:System.Workflow.ComponentModel.ICompensatableActivity> 介面：
@@ -209,8 +209,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  ![WF4 相互關聯範圍的工作流程](./media/performance/wf4-correlationscope-workflow.gif)
 
- 
-  <xref:System.ServiceModel.Activities.Receive> 活動會建立工作流程執行個體。  接收的訊息中傳遞的值會重複在回覆訊息中。  回覆之後的序列包含工作流程的其餘部分。  上述案例中只會顯示一個註解活動。  註解活動的數量會變更，以模擬工作流程的複雜度。  註解活動相當於不執行任何工作的 WF3 <xref:System.Workflow.Activities.CodeActivity>。 如需有關註解活動的詳細資訊，請參閱本文稍早 < 元件層級效能比較 > 一節。
+ <xref:System.ServiceModel.Activities.Receive> 活動會建立工作流程執行個體。  接收的訊息中傳遞的值會重複在回覆訊息中。  回覆之後的序列包含工作流程的其餘部分。  上述案例中只會顯示一個註解活動。  註解活動的數量會變更，以模擬工作流程的複雜度。  註解活動相當於不執行任何工作的 WF3 <xref:System.Workflow.Activities.CodeActivity>。 如需有關註解活動的詳細資訊，請參閱本文稍早 < 元件層級效能比較 > 一節。
 
 ##### <a name="test-results"></a>測試結果
 
@@ -294,8 +293,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  ![WF3 和 WF4 的複雜工作流程](./media/performance/complex-workflow-wf3-wf4.gif)
 
- 在上面所示的 WF3 工作流程中，會使用空的 <xref:System.Workflow.Activities.CodeActivity> 活動。  上面的 WF4 工作流程則會使用 `Comment` 活動。  
-  `Comment` 活動已在本文前段的＜元件層級的效能比較＞一節中說明。
+ 在上面所示的 WF3 工作流程中，會使用空的 <xref:System.Workflow.Activities.CodeActivity> 活動。  上面的 WF4 工作流程則會使用 `Comment` 活動。  `Comment` 活動已在本文前段的＜元件層級的效能比較＞一節中說明。
 
  ![直條圖顯示 WF3 和 WF4 工作流程的複雜工作流程的記憶體使用量](./media/performance/complex-memory-usage-wf3-wf4.gif)
 
@@ -452,5 +450,5 @@ public class Workflow1 : Activity
 
  直接透過 WF3 使用 Interop 在效能上有顯著提升。  不過，與 WF4 活動相較之下，這項提升就顯得微不足道。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>總結
  WF4 中對效能的大量投資已在許多重要的方面獲得成效。  在某些情況下，WF4 中個別工作流程元件的效能比 WF3 快上數百倍，因為 WF4 擁有較精簡的 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 執行階段。  延遲數據同樣大為改善。  這表示使用的效能損失[!INCLUDE[wf1](../../../includes/wf1-md.md)]而不是手動編碼的 WCF 協調流程服務是非常小考慮使用的新增的功能[!INCLUDE[wf1](../../../includes/wf1-md.md)]。  持續性效能已提升 2.5 至 3.0 倍。  現在透過工作流程追蹤進行健康監視的負荷已相當低。  若您考慮從 WF3 移至 WF4，我們提供了一套完整的移轉指南。  這些都將使 WF4 成為撰寫複雜應用程式的理想選擇。

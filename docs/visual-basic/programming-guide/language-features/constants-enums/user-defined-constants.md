@@ -10,11 +10,11 @@ helpviewer_keywords:
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
 ms.openlocfilehash: f0196457235ad77df545a367573f62b43209269d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906980"
 ---
 # <a name="user-defined-constants-visual-basic"></a>使用者定義常數 (Visual Basic)
 常數是有意義的名稱來取代數字或字串，不會變更。 如同它的名稱所示，常數用來儲存應用程式執行過程中維持不變的值。 您可以使用常數所定義的控制項或元件使用，或建立您自己。 您可以建立自己的常數會被稱為*使用者定義*。  

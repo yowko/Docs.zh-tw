@@ -5,11 +5,11 @@ ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 67da51ae900a0b2d1c0728b22e58aa83e789684f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61861227"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>撰寫大型、可回應的 .NET Framework 應用程式
 本文針對大型 .NET Framework 應用程式或處理大量資料 (例如檔案或資料庫) 的應用程式，提供可提升其效能的提示。 這些提示來自於以 Managed 程式碼重寫 C# 和 Visual Basic 編譯器，本文包含數個 C# 編譯器的實際範例。 
@@ -21,7 +21,7 @@ ms.locfileid: "57358167"
   
  Visual Studio 使用編譯器應用程式開發介面建置使用者偏好的所有 IntelliSense 功能，例如以顏色標示識別項和關鍵字、語法完成清單、錯誤波浪線、參數提示、程式碼問題和程式碼動作。 Visual Studio 會在開發人員輸入及變更其程式碼時提供此說明，並且 Visual Studio 必須在編譯器持續模型化開發人員編輯的程式碼時保持回應。 
   
- 當您的使用者與您的應用程式互動時，他們期望應用程式會有回應。 因此，請不要封鎖輸入或命令處理等動作。 說明應該迅速快顯，或在使用者繼續輸入時放棄顯示。 您的應用程式應該避免冗長的運算使得應用程式緩慢，而導致封鎖 UI 執行緒。 
+ 當您的終端使用者與您的應用程式互動時，他們期望應用程式會有回應。 因此，請不要封鎖輸入或命令處理等動作。 說明應該迅速快顯，或在使用者繼續輸入時放棄顯示。 您的應用程式應該避免冗長的運算使得應用程式緩慢，而導致封鎖 UI 執行緒。 
   
  如需 Roslyn 編譯器的詳細資訊，請參閱[.NET 編譯器平台 SDK](../../csharp/roslyn-sdk/index.md)。
   
@@ -408,7 +408,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- 您會看到新程式碼具有內含名為 `SyntaxTree` 之 `cachedResult` 欄位的快取。 當此欄位為 null 時，`GetSyntaxTreeAsync()` 會執行工作並將結果儲存在快取中。 `GetSyntaxTreeAsync()` 會傳回 `SyntaxTree` 物件。 問題在於當您具有 `async` 類型的 `Task<SyntaxTree>` 函式，並傳回 `SyntaxTree` 類型的值時，編譯器會發出程式碼，配置一項 Task 以保存結果 (透過使用 `Task<SyntaxTree>.FromResult()`)。 此 Task 會標記為已完成，並會立即提供結果。 在新編譯器的程式碼中，已完成的 <xref:System.Threading.Tasks.Task> 物件經常出現，使得修正這些配置可大幅提升回應能力。 
+ 您會看到新程式碼具有內含名為 `SyntaxTree` 之 `cachedResult` 欄位的快取。 當此欄位為 null 時，`GetSyntaxTreeAsync()` 會執行工作並將結果儲存在快取中。 `GetSyntaxTreeAsync()` 傳回`SyntaxTree`物件。 問題在於當您具有 `async` 類型的 `Task<SyntaxTree>` 函式，並傳回 `SyntaxTree` 類型的值時，編譯器會發出程式碼，配置一項 Task 以保存結果 (透過使用 `Task<SyntaxTree>.FromResult()`)。 此 Task 會標記為已完成，並會立即提供結果。 在新編譯器的程式碼中，已完成的 <xref:System.Threading.Tasks.Task> 物件經常出現，使得修正這些配置可大幅提升回應能力。 
   
  **範例 6 的修正**  
   

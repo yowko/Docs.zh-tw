@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: 99863e79-5b00-467e-a105-4ffa42de3ff7
 ms.openlocfilehash: 30e50ae171ec9733e222c55e98d1cfcfa535d4e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879368"
 ---
 # <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a>使用一個或多個 REF CURSOR 填入資料集
 此 Microsoft Visual Basic 範例執行可傳回兩個 REF CURSOR 參數的 PL/SQL 預存程序，並使用傳回的資料列來填入 <xref:System.Data.DataSet>。  

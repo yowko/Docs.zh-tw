@@ -6,11 +6,11 @@ helpviewer_keywords:
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
 ms.openlocfilehash: 1eefd82a149d0bc215ca441e92c7d737a744b1e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856553"
 ---
 # <a name="data-transfer-and-serialization"></a>資料傳輸與序列化
 在連線系統中，服務與用戶端會仰賴資料交換來完成任何工作。 身為開發人員的服務或用戶端中，您也必須了解 Windows Communication Foundation (WCF) 如何處理資料與資料序列化以建立有效率且容易維護的應用程式。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
 ms.openlocfilehash: 7ce759de004d479f5162d2ce3a965f5c40afa450
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917598"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL 物件模型
 在  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，以開發人員的程式語言表示的物件模型對應到關聯式資料庫的資料模型。 然後就會根據物件模型對資料執行作業。  

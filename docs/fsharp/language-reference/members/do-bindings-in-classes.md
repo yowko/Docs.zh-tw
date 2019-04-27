@@ -3,11 +3,11 @@ title: 類別中的 do 繫結
 description: 了解如何使用F#'do' 在類別定義中，這會執行動作，或第一次使用的型別時，物件建構的繫結。
 ms.date: 05/16/2016
 ms.openlocfilehash: 0ddf2b5ca458d0950c2e07bf2c37c205877e2173
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904585"
 ---
 # <a name="do-bindings-in-classes"></a>類別中的 do 繫結
 
@@ -50,4 +50,4 @@ Initializing object 1 2 2 4 8 16
 - [類別](../classes.md)
 - [建構函式](constructors.md)
 - [類別中的 `let` 繫結](let-bindings-in-classes.md)
-- [`do` 繫結](../functions/do-Bindings.md)
+- [`do` Bindings](../functions/do-Bindings.md)

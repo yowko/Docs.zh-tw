@@ -10,11 +10,11 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
 ms.openlocfilehash: 7c26e00acd4278ced53ad29c748ac076e0215a23
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913207"
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>HOW TO：提供控制項的工具箱點陣圖
 如果您想要有特殊的圖示，為您的控制項就會出現在**工具箱**，您可以使用，以便指定特定的映像<xref:System.Drawing.ToolboxBitmapAttribute>。 此類別是一個「屬性」，一種您可以附加至其他類別的特殊類別。 如需有關屬性的詳細資訊，請參閱 <<c0> [ 屬性概觀 (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)適用於 Visual Basic 或[屬性 (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)適用於 C#。  

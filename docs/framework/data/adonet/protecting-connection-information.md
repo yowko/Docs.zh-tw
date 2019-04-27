@@ -3,11 +3,11 @@ title: 保護連接資訊
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
 ms.openlocfilehash: ccb039a79c76c31b905783b81710571d8c5ab82b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878926"
 ---
 # <a name="protecting-connection-information"></a>保護連接資訊
 保護應用程式時的最重要目標之一就是保護資料來源的存取。 連接字串如果沒有受到保護，就可能造成安全性漏洞。 以純文字儲存連接資訊，或在記憶體中保存連接資訊，都會危及整個系統的安全性。 內嵌在原始程式碼中的連接字串可使用讀取[Ildasm.exe （IL 反組譯工具）](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md)若要檢視已編譯的組件中的 Microsoft intermediate language (MSIL)。  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 ms.assetid: b3ec38cb-f509-4d0b-bd79-9f3611259c62
 ms.openlocfilehash: a174b6ae60f87e91e6f97e8fa7f8ad3892ef017a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913467"
 ---
 # <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a>HOW TO：使用 WebBrowser 控制項巡覽至 URL
 下列程式碼範例示範如何瀏覽<xref:System.Windows.Forms.WebBrowser>至特定 URL 的控制項。  

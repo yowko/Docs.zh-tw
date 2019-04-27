@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
 ms.openlocfilehash: 499949d1f4c20e1f465355bd076ba39f1496779b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920714"
 ---
 # <a name="iterator-visual-basic"></a>Iterator (Visual Basic)
 指定函式或`Get`存取子是迭代器。  

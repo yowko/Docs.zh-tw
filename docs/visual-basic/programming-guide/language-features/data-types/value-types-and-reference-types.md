@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
 ms.openlocfilehash: 4e0831a045da5eb5798d10aeb977981ecae20040
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869663"
 ---
 # <a name="value-types-and-reference-types"></a>Value Types and Reference Types
 在 Visual Basic 中的資料類型是根據其分類所實作的。 Visual Basic 資料類型可以根據自己的資料或資料指標，特定類型的變數是否儲存分類。 它會儲存它自己的資料是否*實值型別*; 如果它是的記憶體中其他位置的資料會保留指標*參考型別*。  

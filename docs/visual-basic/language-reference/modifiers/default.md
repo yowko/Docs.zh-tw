@@ -11,11 +11,11 @@ helpviewer_keywords:
 - default properties
 ms.assetid: 45fce9b9-d212-4b2d-ab86-6e359b8b57af
 ms.openlocfilehash: f78ffe42a9d618d44da2a50c0de831396576430c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800928"
 ---
 # <a name="default-visual-basic"></a>Default (Visual Basic)
 將屬性識別為其類別、 結構或介面的預設屬性。  

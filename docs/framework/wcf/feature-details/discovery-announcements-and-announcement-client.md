@@ -3,11 +3,11 @@ title: 探索公告與公告用戶端
 ms.date: 03/30/2017
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
 ms.openlocfilehash: c32aca5e6deab01423d61c516ee924d00bc041ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856581"
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>探索公告與公告用戶端
 WCF 探索功能可讓元件公告其可用性。 如果進行此設定，服務會傳送 Hello 和 Bye 公告。 用戶端或其他元件可以接聽此類公告訊息，然後採取行動。 此方法是讓用戶端注意服務存在的替代方法。 公告功能具有多種用途，例如，如果服務頻繁進出網路，公告便可能會是較搜尋服務更好的方法。 透過此方法，除了可降低網路流量之外，用戶端也會在收到公告的同時得知服務的出現或離開。  

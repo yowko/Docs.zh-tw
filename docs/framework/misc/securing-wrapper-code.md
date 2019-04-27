@@ -10,11 +10,11 @@ ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e4d8497d17e1a82791f4dd6ca8f91c9a012db167
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868928"
 ---
 # <a name="securing-wrapper-code"></a>設定包裝函式程式碼的安全性
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  

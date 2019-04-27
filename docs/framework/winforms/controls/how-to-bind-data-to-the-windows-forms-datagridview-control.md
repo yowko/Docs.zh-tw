@@ -12,11 +12,11 @@ ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e147109a64687177f201ad1e312fab56ea61d604
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010926"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>HOW TO：將資料繫結至 Windows Form DataGridView 控制項
 

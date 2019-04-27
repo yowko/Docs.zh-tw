@@ -15,11 +15,11 @@ helpviewer_keywords:
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
 ms.openlocfilehash: de4800e23519c2cc1c8b2b219287b9fa018b9bbf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864570"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Visual Basic 中屬性和變數的差別
 變數和屬性都代表您可以存取的值。 不過，有儲存體和實作差異。  

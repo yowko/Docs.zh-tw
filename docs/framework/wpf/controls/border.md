@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Border control [WPF]
 ms.assetid: 51739f83-b5a2-489b-854b-30607e74a502
 ms.openlocfilehash: 922b4b90f3f8bc74d0465691386fa1a2422c6573
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912466"
 ---
 # <a name="border"></a>Border
 下列範例示範如何以動態方式變更內容<xref:System.Windows.Controls.Border>項目。  

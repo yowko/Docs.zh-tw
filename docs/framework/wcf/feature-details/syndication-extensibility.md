@@ -3,11 +3,11 @@ title: 新聞訂閱擴充性
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
 ms.openlocfilehash: 226ea682d8b17a818e6d5be2097a19315d106bda
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915560"
 ---
 # <a name="syndication-extensibility"></a>新聞訂閱擴充性
 新聞訂閱 API 主要是提供格式中性的程式設計模型，以允許以各種格式將新聞訂閱內容寫入網路中。 抽象資料模型包含下列類別：  

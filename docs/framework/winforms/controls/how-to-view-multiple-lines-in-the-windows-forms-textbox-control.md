@@ -12,11 +12,11 @@ helpviewer_keywords:
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
 ms.openlocfilehash: 47404f02a753fe143dd573bdf73143416872af9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012915"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>HOW TO：檢視 Windows Forms TextBox 控制項中的多行
 根據預設，Windows Forms<xref:System.Windows.Forms.TextBox>控制項顯示單行文字，並不會顯示捲軸。 如果文字是超過可用的空間，只有部分的文字會顯示。 您可以設定來變更此預設行為<xref:System.Windows.Forms.TextBox.Multiline%2A>， <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>，和<xref:System.Windows.Forms.TextBox.ScrollBars%2A>屬性，以適當的值。  

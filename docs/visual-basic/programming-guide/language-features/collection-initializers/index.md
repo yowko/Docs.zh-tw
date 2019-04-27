@@ -7,11 +7,11 @@ helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
 ms.openlocfilehash: 538efc11e477a4e90b7bca286da4ed56105d7ecb
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906824"
 ---
 # <a name="collection-initializers-visual-basic"></a>集合初始設定式 (Visual Basic)
 
@@ -75,7 +75,7 @@ ms.locfileid: "57675456"
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|標題|說明|
 |---|---|
 |[如何：建立新增為集合初始設定式所使用的擴充方法](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|示範如何建立稱為 `Add` 的擴充方法，以用來將集合初始設定式中的值填入集合。|
 |[如何：建立集合，集合初始設定式使用](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|示範如何將 `Add` 方法包括在可實作 `IEnumerable` 的集合類別中，以啟用集合初始設定式。|

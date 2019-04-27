@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31084
 ms.assetid: 6111c5ca-d30b-490a-812e-dd422e221c7d
 ms.openlocfilehash: fbdd85cfc1852afb2e174ac8b94fd63f9d07b796
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803411"
 ---
 # <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a>事件不可以宣告為具有傳回類型的委派類型
 委派指定的函式程序。  

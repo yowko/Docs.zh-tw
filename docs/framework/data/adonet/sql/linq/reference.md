@@ -3,11 +3,11 @@ title: 參考資料
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
 ms.openlocfilehash: 467bc9f482fa24e679814de3be0fdb7d9363320c
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877132"
 ---
 # <a name="reference"></a>參考資料
 本節提供參考資訊給 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 開發人員。  
@@ -40,8 +40,8 @@ ms.locfileid: "56093355"
  [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  提供 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 主題的入口網站。  
   
- [Language Integrated Query (LINQ)C#](../../../../../csharp/programming-guide/concepts/linq/index.md)  
- [語言整合式的查詢 (LINQ)-Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ [Language-Integrated Query (LINQ) - C#](../../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [Language-Integrated Query (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  提供用於入口網站[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]主題。  
   
  [LinqDataSource Web 伺服器控制項概觀](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  

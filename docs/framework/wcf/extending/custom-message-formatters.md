@@ -3,11 +3,11 @@ title: 自訂訊息格式器
 ms.date: 03/30/2017
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
 ms.openlocfilehash: af1596c65fc87a68bc3dc2ab5ab2d82133e0fed4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857970"
 ---
 # <a name="custom-message-formatters"></a>自訂訊息格式器
 訊息中的內容常使用 XML 格式，這對於應用程式通常並不方便。 應用程式會操作物件，取得及設定其屬性。 Windows Communication Foundation (WCF) 會使用*資料合約*轉換<xref:System.ServiceModel.Channels.Message>成容易處理的應用程式物件的物件。 這些處理程序稱為序列化和還原序列化。 請注意，這些相同的詞彙用於描述由傳輸層在往來訊息 Wire 格式之間進行的序列化和還原序列化，是不相關的處理程序。  

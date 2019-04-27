@@ -3,11 +3,11 @@ title: 選擇訊息交換模式
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
 ms.openlocfilehash: 98788fb89fc68dc1220d9bf8d9ad89df5ca69e6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922839"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>選擇訊息交換模式
 撰寫自訂傳輸的第一個步驟是決定哪一種*訊息交換模式*（又稱為 Mep） 所需的通道所開發。 本主題會說明可用的選項，並討論各種需求。 這是通道開發工作清單中所述的第一個工作[開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  

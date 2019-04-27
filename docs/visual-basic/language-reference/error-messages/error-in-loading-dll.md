@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
 ms.openlocfilehash: c3f88a5a3c37c89d23055aa413957b2add38ed67
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803463"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>載入 DLL 時發生錯誤 (Visual Basic)
 動態連結程式庫 (DLL) 是程式庫中指定`Lib`子句`Declare`陳述式。 此錯誤的可能原因包括：  

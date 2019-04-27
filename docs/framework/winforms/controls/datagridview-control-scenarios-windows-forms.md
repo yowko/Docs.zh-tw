@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
 ms.openlocfilehash: 52c448f21be056e6166334785943356039baf3ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909296"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>DataGridView 控制項案例 (Windows Form)
 使用<xref:System.Windows.Forms.DataGridView>控制項，您可以顯示各種資料來源的表格式資料。 如需簡單的用法，您可以手動填入<xref:System.Windows.Forms.DataGridView>和操作直接透過控制項的資料。 一般而言，不過，您會將資料儲存在外部資料來源並將控制項繫結至其透過<xref:System.Windows.Forms.BindingSource>元件。  

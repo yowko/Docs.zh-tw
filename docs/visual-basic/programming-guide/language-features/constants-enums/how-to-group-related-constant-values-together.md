@@ -6,11 +6,11 @@ helpviewer_keywords:
 - constants [Visual Basic], grouping together
 ms.assetid: 09d61da5-c940-4126-a79f-ba93c36653dc
 ms.openlocfilehash: a4f74e48cfdd5c0bc0f745d0f32eb39442f5bd83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906759"
 ---
 # <a name="how-to-group-related-constant-values-together-visual-basic"></a>HOW TO：群組相關聯的常值放在一起 (Visual Basic)
 列舉是相關的常數群組在一起的最佳方式。 您建立的列舉`Enum`「 宣告 」 區段中的類別或模組的陳述式。 如需詳細資訊，請參閱[如何：宣告列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)。  

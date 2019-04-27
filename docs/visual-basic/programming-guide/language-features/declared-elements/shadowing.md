@@ -19,11 +19,11 @@ helpviewer_keywords:
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
 ms.openlocfilehash: 9ad992a53618fa2f410e0b0fb23886c30136384f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917893"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic 中的遮蔽功能
 當兩個程式設計項目共用相同的名稱時，可以隱藏其中一個，或是*陰影*，另一個。 在這種情況下，遮蔽的項目不是可供參考。相反地，當您的程式碼使用的項目名稱時，Visual Basic 編譯器解析遮蔽的項目。  

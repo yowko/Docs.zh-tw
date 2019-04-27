@@ -5,13 +5,14 @@ helpviewer_keywords:
 - security [WCF], custom tokens
 ms.assetid: 8b2dbe29-dec2-4652-8e34-fb21bc1437b5
 ms.openlocfilehash: 5a5cfe939e1f8448e7ed256bc64403dbb841bc46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857996"
 ---
 # <a name="custom-tokens"></a>自訂權杖
-如果 Windows Communication Foundation (WCF) 的 X.509 憑證、 安全性內容權杖、 Kerberos 票證和使用者名稱權杖當做認證原生支援，卻是有足夠的彈性，可讓您使用您自己自訂的認證。  
+雖然 Windows Communication Foundation (WCF) 原本就支援 X.509 憑證、 安全性內容權杖、 Kerberos 票證和使用者名稱權杖當做認證，但也有足夠的彈性，可讓您使用您自己自訂的認證。  
   
 ## <a name="in-this-section"></a>本節內容  
  [如何：建立自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)  

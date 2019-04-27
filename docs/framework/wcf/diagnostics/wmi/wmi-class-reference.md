@@ -3,17 +3,17 @@ title: WMI 類別參考
 ms.date: 03/30/2017
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
 ms.openlocfilehash: 73b36bfc3df917982a2cc9071bdb31f42b3b2dff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915652"
 ---
 # <a name="wmi-class-reference"></a>WMI 類別參考
 此區段會列出所有的 Windows Communication Foundation (WCF) WMI 提供者所公開的 WMI 類別。  
   
 ## <a name="accessing-wmi-instances"></a>存取 WMI 執行個體  
- WMI 物件參考中列出的所有類別都無法直接產生，除了 Service、AppDomain、Contract、ServiceAppDomain、ServiceToEndpointAssociation 和 Endpoint。 如果要存取其他執行個體，您可以存取先前所述最上層類別的屬性。 例如，您可以從 [端點執行個體] -> [繫結] -> [BindingElements] 來存取 TransportBindingElement 執行個體。  
+ WMI 物件參考中列出的所有類別都無法直接產生，除了 Service、AppDomain、Contract、ServiceAppDomain、ServiceToEndpointAssociation 和 Endpoint。 如果要存取其他執行個體，您可以存取先前所述最上層類別的屬性。 例如，您可以在其中存取 TransportBindingElement 執行個體從執行個體]-> [的端點繫結]-> [BindingElements。  
   
 ## <a name="in-this-section"></a>本節內容  
  [ActivityTransfer](../../../../../docs/framework/wcf/diagnostics/wmi/activitytransfer.md)  

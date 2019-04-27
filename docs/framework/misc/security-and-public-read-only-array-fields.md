@@ -7,11 +7,11 @@ ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 19b5ad73150697c1442056642a1b11d504ecc426
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869742"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>安全及公開唯讀陣列欄位
 定義界限的行為或應用程式的安全性，因為可以修改公用唯讀陣列欄位，從 managed 程式庫永遠不會使用公用唯讀陣列欄位。  
