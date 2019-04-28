@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID459
 ms.assetid: 785df3f3-2aae-4a25-af36-1f9879d4e5fd
 ms.openlocfilehash: ad9176b5332a75f03968e742501c3fce541055de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925758"
 ---
-# <a name="object-or-class-does-not-support-the-set-of-events"></a><span data-ttu-id="7e78d-102">物件或類別不支援事件的設定</span><span class="sxs-lookup"><span data-stu-id="7e78d-102">Object or class does not support the set of events</span></span>
-<span data-ttu-id="7e78d-103">您嘗試使用`WithEvents`變數無法為指定的事件集的事件來源的元件。</span><span class="sxs-lookup"><span data-stu-id="7e78d-103">You tried to use a `WithEvents` variable with a component that cannot work as an event source for the specified set of events.</span></span> <span data-ttu-id="7e78d-104">例如，您要接收事件的物件，然後建立另一個物件`Implements`的第一個物件。</span><span class="sxs-lookup"><span data-stu-id="7e78d-104">For example, you wanted to sink the events of an object, then create another object that `Implements` the first object.</span></span> <span data-ttu-id="7e78d-105">您可能會認為您可以從實作的物件來接收事件，但這不一定如此。</span><span class="sxs-lookup"><span data-stu-id="7e78d-105">Although you might think you could sink the events from the implemented object, this is not always the case.</span></span> <span data-ttu-id="7e78d-106">`Implements` 只會實作的介面方法和屬性。</span><span class="sxs-lookup"><span data-stu-id="7e78d-106">`Implements` only implements an interface for methods and properties.</span></span> <span data-ttu-id="7e78d-107">`WithEvents` 不支援私用`UserControls`，因為型別資訊才能引發`ObjectEvent`不在執行階段。</span><span class="sxs-lookup"><span data-stu-id="7e78d-107">`WithEvents` is not supported for private `UserControls`, because the type info needed to raise the `ObjectEvent` is not available at run time.</span></span>  
+# <a name="object-or-class-does-not-support-the-set-of-events"></a><span data-ttu-id="f1882-102">物件或類別不支援事件的設定</span><span class="sxs-lookup"><span data-stu-id="f1882-102">Object or class does not support the set of events</span></span>
+<span data-ttu-id="f1882-103">您嘗試使用`WithEvents`變數無法為指定的事件集的事件來源的元件。</span><span class="sxs-lookup"><span data-stu-id="f1882-103">You tried to use a `WithEvents` variable with a component that cannot work as an event source for the specified set of events.</span></span> <span data-ttu-id="f1882-104">例如，您要接收事件的物件，然後建立另一個物件`Implements`的第一個物件。</span><span class="sxs-lookup"><span data-stu-id="f1882-104">For example, you wanted to sink the events of an object, then create another object that `Implements` the first object.</span></span> <span data-ttu-id="f1882-105">您可能會認為您可以從實作的物件來接收事件，但這不一定如此。</span><span class="sxs-lookup"><span data-stu-id="f1882-105">Although you might think you could sink the events from the implemented object, this is not always the case.</span></span> <span data-ttu-id="f1882-106">`Implements` 只會實作的介面方法和屬性。</span><span class="sxs-lookup"><span data-stu-id="f1882-106">`Implements` only implements an interface for methods and properties.</span></span> <span data-ttu-id="f1882-107">`WithEvents` 不支援私用`UserControls`，因為型別資訊才能引發`ObjectEvent`不在執行階段。</span><span class="sxs-lookup"><span data-stu-id="f1882-107">`WithEvents` is not supported for private `UserControls`, because the type info needed to raise the `ObjectEvent` is not available at run time.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="7e78d-108">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="7e78d-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f1882-108">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="f1882-108">To correct this error</span></span>  
   
-1. <span data-ttu-id="7e78d-109">您不能接收事件的來源元件。</span><span class="sxs-lookup"><span data-stu-id="7e78d-109">You cannot sink events for a component that does not source events.</span></span>  
+1. <span data-ttu-id="f1882-109">您不能接收事件的來源元件。</span><span class="sxs-lookup"><span data-stu-id="f1882-109">You cannot sink events for a component that does not source events.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7e78d-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7e78d-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f1882-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f1882-110">See also</span></span>
 
-- [<span data-ttu-id="7e78d-111">WithEvents</span><span class="sxs-lookup"><span data-stu-id="7e78d-111">WithEvents</span></span>](../../../visual-basic/language-reference/modifiers/withevents.md)
-- [<span data-ttu-id="7e78d-112">Implements 陳述式</span><span class="sxs-lookup"><span data-stu-id="7e78d-112">Implements Statement</span></span>](../../../visual-basic/language-reference/statements/implements-statement.md)
+- [<span data-ttu-id="f1882-111">WithEvents</span><span class="sxs-lookup"><span data-stu-id="f1882-111">WithEvents</span></span>](../../../visual-basic/language-reference/modifiers/withevents.md)
+- [<span data-ttu-id="f1882-112">Implements 陳述式</span><span class="sxs-lookup"><span data-stu-id="f1882-112">Implements Statement</span></span>](../../../visual-basic/language-reference/statements/implements-statement.md)

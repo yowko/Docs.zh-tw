@@ -13,80 +13,80 @@ helpviewer_keywords:
 - Overloads keyword [Visual Basic], overloaded members
 ms.assetid: b686fb97-e7d7-4001-afaa-6650cba08f0d
 ms.openlocfilehash: 8d7341370d9770d2e57f786ac7c68277e66a9bbd
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864867"
 ---
-# <a name="overloaded-properties-and-methods-visual-basic"></a><span data-ttu-id="87782-102">多載的屬性和方法 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="87782-102">Overloaded properties and methods (Visual Basic)</span></span>
+# <a name="overloaded-properties-and-methods-visual-basic"></a><span data-ttu-id="322c9-102">多載的屬性和方法 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="322c9-102">Overloaded properties and methods (Visual Basic)</span></span>
 
-<span data-ttu-id="87782-103">多載會建立一個以上的程序、 執行個體建構函式或具有相同名稱但不同的引數類型的類別中的屬性。</span><span class="sxs-lookup"><span data-stu-id="87782-103">Overloading is the creation of more than one procedure, instance constructor, or property in a class with the same name but different argument types.</span></span>
+<span data-ttu-id="322c9-103">多載會建立一個以上的程序、 執行個體建構函式或具有相同名稱但不同的引數類型的類別中的屬性。</span><span class="sxs-lookup"><span data-stu-id="322c9-103">Overloading is the creation of more than one procedure, instance constructor, or property in a class with the same name but different argument types.</span></span>
 
-## <a name="overloading-usage"></a><span data-ttu-id="87782-104">多載的使用方式</span><span class="sxs-lookup"><span data-stu-id="87782-104">Overloading usage</span></span>
+## <a name="overloading-usage"></a><span data-ttu-id="322c9-104">多載的使用方式</span><span class="sxs-lookup"><span data-stu-id="322c9-104">Overloading usage</span></span>
 
-<span data-ttu-id="87782-105">物件模型會要求您採用相同的名稱，在不同的資料類型上運作的程序時，多載會特別有用。</span><span class="sxs-lookup"><span data-stu-id="87782-105">Overloading is especially useful when your object model dictates that you employ identical names for procedures that operate on different data types.</span></span> <span data-ttu-id="87782-106">例如，可以顯示數種不同的資料類型的類別可能會有`Display`看起來像這樣的程序：</span><span class="sxs-lookup"><span data-stu-id="87782-106">For example, a class that can display several different data types could have `Display` procedures that look like this:</span></span>
+<span data-ttu-id="322c9-105">物件模型會要求您採用相同的名稱，在不同的資料類型上運作的程序時，多載會特別有用。</span><span class="sxs-lookup"><span data-stu-id="322c9-105">Overloading is especially useful when your object model dictates that you employ identical names for procedures that operate on different data types.</span></span> <span data-ttu-id="322c9-106">例如，可以顯示數種不同的資料類型的類別可能會有`Display`看起來像這樣的程序：</span><span class="sxs-lookup"><span data-stu-id="322c9-106">For example, a class that can display several different data types could have `Display` procedures that look like this:</span></span>
 
 [!code-vb[VbVbalrOOP#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#64)]
 
-<span data-ttu-id="87782-107">沒有多載，您必須建立不同的名稱，每個程序，即使它們是一樣，如下所示：</span><span class="sxs-lookup"><span data-stu-id="87782-107">Without overloading, you would need to create distinct names for each procedure, even though they do the same thing, as shown next:</span></span>
+<span data-ttu-id="322c9-107">沒有多載，您必須建立不同的名稱，每個程序，即使它們是一樣，如下所示：</span><span class="sxs-lookup"><span data-stu-id="322c9-107">Without overloading, you would need to create distinct names for each procedure, even though they do the same thing, as shown next:</span></span>
 
 [!code-vb[VbVbalrOOP#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#65)]
 
-<span data-ttu-id="87782-108">多載可讓您更輕鬆地使用屬性或方法，因為它提供了可用的資料類型的選擇。</span><span class="sxs-lookup"><span data-stu-id="87782-108">Overloading makes it easier to use properties or methods because it provides a choice of data types that can be used.</span></span> <span data-ttu-id="87782-109">例如，多載`Display`所討論的方法之前可以呼叫任何的下列程式碼行：</span><span class="sxs-lookup"><span data-stu-id="87782-109">For example, the overloaded `Display` method discussed previously can be called with any of the following lines of code:</span></span>
+<span data-ttu-id="322c9-108">多載可讓您更輕鬆地使用屬性或方法，因為它提供了可用的資料類型的選擇。</span><span class="sxs-lookup"><span data-stu-id="322c9-108">Overloading makes it easier to use properties or methods because it provides a choice of data types that can be used.</span></span> <span data-ttu-id="322c9-109">例如，多載`Display`所討論的方法之前可以呼叫任何的下列程式碼行：</span><span class="sxs-lookup"><span data-stu-id="322c9-109">For example, the overloaded `Display` method discussed previously can be called with any of the following lines of code:</span></span>
 
 [!code-vb[VbVbalrOOP#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#66)]
 
-<span data-ttu-id="87782-110">在執行階段，Visual Basic 會呼叫正確的程序，根據您指定的參數資料類型。</span><span class="sxs-lookup"><span data-stu-id="87782-110">At run time, Visual Basic calls the correct procedure based on the data types of the parameters you specify.</span></span>
+<span data-ttu-id="322c9-110">在執行階段，Visual Basic 會呼叫正確的程序，根據您指定的參數資料類型。</span><span class="sxs-lookup"><span data-stu-id="322c9-110">At run time, Visual Basic calls the correct procedure based on the data types of the parameters you specify.</span></span>
 
-## <a name="overloading-rules"></a><span data-ttu-id="87782-111">多載規則</span><span class="sxs-lookup"><span data-stu-id="87782-111">Overloading rules</span></span>
+## <a name="overloading-rules"></a><span data-ttu-id="322c9-111">多載規則</span><span class="sxs-lookup"><span data-stu-id="322c9-111">Overloading rules</span></span>
 
- <span data-ttu-id="87782-112">您可以新增兩個或多個屬性具有相同名稱的方法，以建立類別的多載的成員。</span><span class="sxs-lookup"><span data-stu-id="87782-112">You create an overloaded member for a class by adding two or more properties or methods with the same name.</span></span> <span data-ttu-id="87782-113">除了多載衍生的成員，每個多載的成員必須具有不同的參數清單，而多載屬性或程序時，無法做為區別的功能使用下列項目：</span><span class="sxs-lookup"><span data-stu-id="87782-113">Except for overloaded derived members, each overloaded member must have different parameter lists, and the following items cannot be used as a differentiating feature when overloading a property or procedure:</span></span>
+ <span data-ttu-id="322c9-112">您可以新增兩個或多個屬性具有相同名稱的方法，以建立類別的多載的成員。</span><span class="sxs-lookup"><span data-stu-id="322c9-112">You create an overloaded member for a class by adding two or more properties or methods with the same name.</span></span> <span data-ttu-id="322c9-113">除了多載衍生的成員，每個多載的成員必須具有不同的參數清單，而多載屬性或程序時，無法做為區別的功能使用下列項目：</span><span class="sxs-lookup"><span data-stu-id="322c9-113">Except for overloaded derived members, each overloaded member must have different parameter lists, and the following items cannot be used as a differentiating feature when overloading a property or procedure:</span></span>
 
-- <span data-ttu-id="87782-114">修飾詞，例如`ByVal`或`ByRef`，套用到成員或成員的參數。</span><span class="sxs-lookup"><span data-stu-id="87782-114">Modifiers, such as `ByVal` or `ByRef`, that apply to a member, or parameters of the member.</span></span>
+- <span data-ttu-id="322c9-114">修飾詞，例如`ByVal`或`ByRef`，套用到成員或成員的參數。</span><span class="sxs-lookup"><span data-stu-id="322c9-114">Modifiers, such as `ByVal` or `ByRef`, that apply to a member, or parameters of the member.</span></span>
 
-- <span data-ttu-id="87782-115">參數的名稱</span><span class="sxs-lookup"><span data-stu-id="87782-115">Names of parameters</span></span>
+- <span data-ttu-id="322c9-115">參數的名稱</span><span class="sxs-lookup"><span data-stu-id="322c9-115">Names of parameters</span></span>
 
-- <span data-ttu-id="87782-116">程序的傳回型別</span><span class="sxs-lookup"><span data-stu-id="87782-116">Return types of procedures</span></span>
+- <span data-ttu-id="322c9-116">程序的傳回型別</span><span class="sxs-lookup"><span data-stu-id="322c9-116">Return types of procedures</span></span>
 
-<span data-ttu-id="87782-117">`Overloads`多載時，關鍵字是選擇性，但如果有多載成員使用`Overloads`關鍵字，則所有其他多載的成員，具有相同名稱也必須指定此關鍵字。</span><span class="sxs-lookup"><span data-stu-id="87782-117">The `Overloads` keyword is optional when overloading, but if any overloaded member uses the `Overloads` keyword, then all other overloaded members with the same name must also specify this keyword.</span></span>
+<span data-ttu-id="322c9-117">`Overloads`多載時，關鍵字是選擇性，但如果有多載成員使用`Overloads`關鍵字，則所有其他多載的成員，具有相同名稱也必須指定此關鍵字。</span><span class="sxs-lookup"><span data-stu-id="322c9-117">The `Overloads` keyword is optional when overloading, but if any overloaded member uses the `Overloads` keyword, then all other overloaded members with the same name must also specify this keyword.</span></span>
 
-<span data-ttu-id="87782-118">在衍生的類別可以多載繼承的成員與具有相同參數和參數型別，這道程序的成員*依名稱和簽章，以遮蔽*。</span><span class="sxs-lookup"><span data-stu-id="87782-118">Derived classes can overload inherited members with members that have identical parameters and parameter types, a process known as *shadowing by name and signature*.</span></span> <span data-ttu-id="87782-119">如果`Overloads`遮蔽依名稱和簽章，衍生的類別實作的成員會用而不是在基底類別中，實作並為該成員的其他所有多載可使用的執行個體時，會使用關鍵字在衍生的類別。</span><span class="sxs-lookup"><span data-stu-id="87782-119">If the `Overloads` keyword is used when shadowing by name and signature, the derived class's implementation of the member will be used instead of the implementation in the base class, and all other overloads for that member will be available to instances of the derived class.</span></span>
+<span data-ttu-id="322c9-118">在衍生的類別可以多載繼承的成員與具有相同參數和參數型別，這道程序的成員*依名稱和簽章，以遮蔽*。</span><span class="sxs-lookup"><span data-stu-id="322c9-118">Derived classes can overload inherited members with members that have identical parameters and parameter types, a process known as *shadowing by name and signature*.</span></span> <span data-ttu-id="322c9-119">如果`Overloads`遮蔽依名稱和簽章，衍生的類別實作的成員會用而不是在基底類別中，實作並為該成員的其他所有多載可使用的執行個體時，會使用關鍵字在衍生的類別。</span><span class="sxs-lookup"><span data-stu-id="322c9-119">If the `Overloads` keyword is used when shadowing by name and signature, the derived class's implementation of the member will be used instead of the implementation in the base class, and all other overloads for that member will be available to instances of the derived class.</span></span>
 
-<span data-ttu-id="87782-120">如果`Overloads`多載繼承的成員與具有相同參數和參數類型的成員時省略關鍵字，則多載會呼叫*以名稱遮蔽*。</span><span class="sxs-lookup"><span data-stu-id="87782-120">If the `Overloads` keyword is omitted when overloading an inherited member with a member that has identical parameters and parameter types, then the overloading is called *shadowing by name*.</span></span> <span data-ttu-id="87782-121">以名稱遮蔽取代繼承的成員，實作，它會使其他所有多載無法供衍生的類別和及其子系的執行個體。</span><span class="sxs-lookup"><span data-stu-id="87782-121">Shadowing by name replaces the inherited implementation of a member, and it makes all other overloads unavailable to instances of the derived class and its decedents.</span></span>
+<span data-ttu-id="322c9-120">如果`Overloads`多載繼承的成員與具有相同參數和參數類型的成員時省略關鍵字，則多載會呼叫*以名稱遮蔽*。</span><span class="sxs-lookup"><span data-stu-id="322c9-120">If the `Overloads` keyword is omitted when overloading an inherited member with a member that has identical parameters and parameter types, then the overloading is called *shadowing by name*.</span></span> <span data-ttu-id="322c9-121">以名稱遮蔽取代繼承的成員，實作，它會使其他所有多載無法供衍生的類別和及其子系的執行個體。</span><span class="sxs-lookup"><span data-stu-id="322c9-121">Shadowing by name replaces the inherited implementation of a member, and it makes all other overloads unavailable to instances of the derived class and its decedents.</span></span>
 
-<span data-ttu-id="87782-122">`Overloads`和`Shadows`修飾詞不能同時搭配相同的屬性或方法。</span><span class="sxs-lookup"><span data-stu-id="87782-122">The `Overloads` and `Shadows` modifiers cannot both be used with the same property or method.</span></span>
+<span data-ttu-id="322c9-122">`Overloads`和`Shadows`修飾詞不能同時搭配相同的屬性或方法。</span><span class="sxs-lookup"><span data-stu-id="322c9-122">The `Overloads` and `Shadows` modifiers cannot both be used with the same property or method.</span></span>
 
-### <a name="example"></a><span data-ttu-id="87782-123">範例</span><span class="sxs-lookup"><span data-stu-id="87782-123">Example</span></span>
+### <a name="example"></a><span data-ttu-id="322c9-123">範例</span><span class="sxs-lookup"><span data-stu-id="322c9-123">Example</span></span>
 
-<span data-ttu-id="87782-124">下列範例會建立多載的方法可接受任一`String`或`Decimal`金額和傳回包含營業稅的字串表示。</span><span class="sxs-lookup"><span data-stu-id="87782-124">The following example creates overloaded methods that accept either a `String` or `Decimal` representation of a dollar amount and return a string containing the sales tax.</span></span>
+<span data-ttu-id="322c9-124">下列範例會建立多載的方法可接受任一`String`或`Decimal`金額和傳回包含營業稅的字串表示。</span><span class="sxs-lookup"><span data-stu-id="322c9-124">The following example creates overloaded methods that accept either a `String` or `Decimal` representation of a dollar amount and return a string containing the sales tax.</span></span>
 
-#### <a name="to-use-this-example-to-create-an-overloaded-method"></a><span data-ttu-id="87782-125">若要使用此範例來建立多載的方法</span><span class="sxs-lookup"><span data-stu-id="87782-125">To use this example to create an overloaded method</span></span>
+#### <a name="to-use-this-example-to-create-an-overloaded-method"></a><span data-ttu-id="322c9-125">若要使用此範例來建立多載的方法</span><span class="sxs-lookup"><span data-stu-id="322c9-125">To use this example to create an overloaded method</span></span>
 
-1. <span data-ttu-id="87782-126">開啟新的專案，並加入名為類別`TaxClass`。</span><span class="sxs-lookup"><span data-stu-id="87782-126">Open a new project and add a class named `TaxClass`.</span></span>
+1. <span data-ttu-id="322c9-126">開啟新的專案，並加入名為類別`TaxClass`。</span><span class="sxs-lookup"><span data-stu-id="322c9-126">Open a new project and add a class named `TaxClass`.</span></span>
 
-2. <span data-ttu-id="87782-127">將下列程式碼加入 `TaxClass` 類別。</span><span class="sxs-lookup"><span data-stu-id="87782-127">Add the following code to the `TaxClass` class.</span></span>
+2. <span data-ttu-id="322c9-127">將下列程式碼加入 `TaxClass` 類別。</span><span class="sxs-lookup"><span data-stu-id="322c9-127">Add the following code to the `TaxClass` class.</span></span>
 
     [!code-vb[VbVbalrOOP#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#67)]
 
-3. <span data-ttu-id="87782-128">將下列程序新增至您的表單。</span><span class="sxs-lookup"><span data-stu-id="87782-128">Add the following procedure to your form.</span></span>
+3. <span data-ttu-id="322c9-128">將下列程序新增至您的表單。</span><span class="sxs-lookup"><span data-stu-id="322c9-128">Add the following procedure to your form.</span></span>
 
     [!code-vb[VbVbalrOOP#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#68)]
 
-4. <span data-ttu-id="87782-129">將按鈕新增至您的表單並呼叫`ShowTax`程序從`Button1_Click`按鈕的事件。</span><span class="sxs-lookup"><span data-stu-id="87782-129">Add a button to your form and call the `ShowTax` procedure from the `Button1_Click` event of the button.</span></span>
+4. <span data-ttu-id="322c9-129">將按鈕新增至您的表單並呼叫`ShowTax`程序從`Button1_Click`按鈕的事件。</span><span class="sxs-lookup"><span data-stu-id="322c9-129">Add a button to your form and call the `ShowTax` procedure from the `Button1_Click` event of the button.</span></span>
 
-5. <span data-ttu-id="87782-130">執行專案，然後按一下要測試的多載表單上的按鈕`ShowTax`程序。</span><span class="sxs-lookup"><span data-stu-id="87782-130">Run the project and click the button on the form to test the overloaded `ShowTax` procedure.</span></span>
+5. <span data-ttu-id="322c9-130">執行專案，然後按一下要測試的多載表單上的按鈕`ShowTax`程序。</span><span class="sxs-lookup"><span data-stu-id="322c9-130">Run the project and click the button on the form to test the overloaded `ShowTax` procedure.</span></span>
 
-<span data-ttu-id="87782-131">在執行階段，編譯器會選擇符合所使用之參數的適當多載函式。</span><span class="sxs-lookup"><span data-stu-id="87782-131">At run time, the compiler chooses the appropriate overloaded function that matches the parameters being used.</span></span> <span data-ttu-id="87782-132">當您按一下按鈕時，使用第一次呼叫多載的方法`Price`參數是字串和訊息，「 價格會是字串。</span><span class="sxs-lookup"><span data-stu-id="87782-132">When you click the button, the overloaded method is called first with a `Price` parameter that is a string and the message, "Price is a String.</span></span> <span data-ttu-id="87782-133">稅務為 $5.12 」 顯示。</span><span class="sxs-lookup"><span data-stu-id="87782-133">Tax is $5.12" is displayed.</span></span> <span data-ttu-id="87782-134">`TaxAmount` 使用呼叫`Decimal`值第二次和訊息，「 價格會是十進位數。</span><span class="sxs-lookup"><span data-stu-id="87782-134">`TaxAmount` is called with a `Decimal` value the second time and the message, "Price is a Decimal.</span></span> <span data-ttu-id="87782-135">稅務為 $5.12 」 顯示。</span><span class="sxs-lookup"><span data-stu-id="87782-135">Tax is $5.12" is displayed.</span></span>
+<span data-ttu-id="322c9-131">在執行階段，編譯器會選擇符合所使用之參數的適當多載函式。</span><span class="sxs-lookup"><span data-stu-id="322c9-131">At run time, the compiler chooses the appropriate overloaded function that matches the parameters being used.</span></span> <span data-ttu-id="322c9-132">當您按一下按鈕時，使用第一次呼叫多載的方法`Price`參數是字串和訊息，「 價格會是字串。</span><span class="sxs-lookup"><span data-stu-id="322c9-132">When you click the button, the overloaded method is called first with a `Price` parameter that is a string and the message, "Price is a String.</span></span> <span data-ttu-id="322c9-133">稅務為 $5.12 」 顯示。</span><span class="sxs-lookup"><span data-stu-id="322c9-133">Tax is $5.12" is displayed.</span></span> <span data-ttu-id="322c9-134">`TaxAmount` 使用呼叫`Decimal`值第二次和訊息，「 價格會是十進位數。</span><span class="sxs-lookup"><span data-stu-id="322c9-134">`TaxAmount` is called with a `Decimal` value the second time and the message, "Price is a Decimal.</span></span> <span data-ttu-id="322c9-135">稅務為 $5.12 」 顯示。</span><span class="sxs-lookup"><span data-stu-id="322c9-135">Tax is $5.12" is displayed.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="87782-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="87782-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="322c9-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="322c9-136">See also</span></span>
 
-- [<span data-ttu-id="87782-137">物件和類別</span><span class="sxs-lookup"><span data-stu-id="87782-137">Objects and Classes</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [<span data-ttu-id="87782-138">Visual Basic 中的遮蔽功能</span><span class="sxs-lookup"><span data-stu-id="87782-138">Shadowing in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [<span data-ttu-id="87782-139">Sub 陳述式</span><span class="sxs-lookup"><span data-stu-id="87782-139">Sub Statement</span></span>](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [<span data-ttu-id="87782-140">繼承的基本概念</span><span class="sxs-lookup"><span data-stu-id="87782-140">Inheritance Basics</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
-- [<span data-ttu-id="87782-141">Shadows</span><span class="sxs-lookup"><span data-stu-id="87782-141">Shadows</span></span>](../../../../visual-basic/language-reference/modifiers/shadows.md)
-- [<span data-ttu-id="87782-142">ByVal</span><span class="sxs-lookup"><span data-stu-id="87782-142">ByVal</span></span>](../../../../visual-basic/language-reference/modifiers/byval.md)
-- [<span data-ttu-id="87782-143">ByRef</span><span class="sxs-lookup"><span data-stu-id="87782-143">ByRef</span></span>](../../../../visual-basic/language-reference/modifiers/byref.md)
-- [<span data-ttu-id="87782-144">多載</span><span class="sxs-lookup"><span data-stu-id="87782-144">Overloads</span></span>](../../../../visual-basic/language-reference/modifiers/overloads.md)
-- [<span data-ttu-id="87782-145">Shadows</span><span class="sxs-lookup"><span data-stu-id="87782-145">Shadows</span></span>](../../../../visual-basic/language-reference/modifiers/shadows.md)
+- [<span data-ttu-id="322c9-137">物件和類別</span><span class="sxs-lookup"><span data-stu-id="322c9-137">Objects and Classes</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [<span data-ttu-id="322c9-138">Visual Basic 中的遮蔽功能</span><span class="sxs-lookup"><span data-stu-id="322c9-138">Shadowing in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [<span data-ttu-id="322c9-139">Sub 陳述式</span><span class="sxs-lookup"><span data-stu-id="322c9-139">Sub Statement</span></span>](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [<span data-ttu-id="322c9-140">繼承的基本概念</span><span class="sxs-lookup"><span data-stu-id="322c9-140">Inheritance Basics</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [<span data-ttu-id="322c9-141">Shadows</span><span class="sxs-lookup"><span data-stu-id="322c9-141">Shadows</span></span>](../../../../visual-basic/language-reference/modifiers/shadows.md)
+- [<span data-ttu-id="322c9-142">ByVal</span><span class="sxs-lookup"><span data-stu-id="322c9-142">ByVal</span></span>](../../../../visual-basic/language-reference/modifiers/byval.md)
+- [<span data-ttu-id="322c9-143">ByRef</span><span class="sxs-lookup"><span data-stu-id="322c9-143">ByRef</span></span>](../../../../visual-basic/language-reference/modifiers/byref.md)
+- [<span data-ttu-id="322c9-144">多載</span><span class="sxs-lookup"><span data-stu-id="322c9-144">Overloads</span></span>](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [<span data-ttu-id="322c9-145">Shadows</span><span class="sxs-lookup"><span data-stu-id="322c9-145">Shadows</span></span>](../../../../visual-basic/language-reference/modifiers/shadows.md)
