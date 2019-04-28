@@ -3,20 +3,20 @@ title: System.ServiceModel.PortSharing.ReadNetTcpConfig
 ms.date: 03/30/2017
 ms.assetid: c0d3350f-9d70-4529-a958-eb56a277e401
 ms.openlocfilehash: b0a9a1a98a2a8359b24f6d11cb2794e4e8f94d85
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904523"
 ---
-# <a name="systemservicemodelportsharingreadnettcpconfig"></a><span data-ttu-id="8ccd4-102">System.ServiceModel.PortSharing.ReadNetTcpConfig</span><span class="sxs-lookup"><span data-stu-id="8ccd4-102">System.ServiceModel.PortSharing.ReadNetTcpConfig</span></span>
-<span data-ttu-id="8ccd4-103">System.ServiceModel.PortSharing.ReadNetTcpConfig</span><span class="sxs-lookup"><span data-stu-id="8ccd4-103">System.ServiceModel.PortSharing.ReadNetTcpConfig</span></span>  
+# <a name="systemservicemodelportsharingreadnettcpconfig"></a><span data-ttu-id="4f225-102">System.ServiceModel.PortSharing.ReadNetTcpConfig</span><span class="sxs-lookup"><span data-stu-id="4f225-102">System.ServiceModel.PortSharing.ReadNetTcpConfig</span></span>
+<span data-ttu-id="4f225-103">System.ServiceModel.PortSharing.ReadNetTcpConfig</span><span class="sxs-lookup"><span data-stu-id="4f225-103">System.ServiceModel.PortSharing.ReadNetTcpConfig</span></span>  
   
-## <a name="description"></a><span data-ttu-id="8ccd4-104">描述</span><span class="sxs-lookup"><span data-stu-id="8ccd4-104">Description</span></span>  
- <span data-ttu-id="8ccd4-105">NetTcpSection 的組態資料已和指定的資料一起讀取：listenBacklog、maxConnectionsPendingDispatch、maxPendingAccepts、receiveTimeout 和 teredoEnabled。</span><span class="sxs-lookup"><span data-stu-id="8ccd4-105">Configuration data for the NetTcpSection has been read with the specified data:  listenBacklog, maxConnectionsPendingDispatch, maxPendingAccepts, receiveTimeout, and teredoEnabled.</span></span>  
+## <a name="description"></a><span data-ttu-id="4f225-104">描述</span><span class="sxs-lookup"><span data-stu-id="4f225-104">Description</span></span>  
+ <span data-ttu-id="4f225-105">NetTcpSection 的組態資料已和指定的資料一起讀取：listenBacklog、maxConnectionsPendingDispatch、maxPendingAccepts、receiveTimeout 和 teredoEnabled。</span><span class="sxs-lookup"><span data-stu-id="4f225-105">Configuration data for the NetTcpSection has been read with the specified data:  listenBacklog, maxConnectionsPendingDispatch, maxPendingAccepts, receiveTimeout, and teredoEnabled.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8ccd4-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8ccd4-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4f225-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4f225-106">See also</span></span>
 
-- [<span data-ttu-id="8ccd4-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="8ccd4-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="8ccd4-108">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="8ccd4-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="8ccd4-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="8ccd4-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="4f225-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="4f225-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="4f225-108">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="4f225-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="4f225-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="4f225-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

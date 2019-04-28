@@ -18,33 +18,33 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1c7b3c3ea5e976645c265b34327caa38ef6a28fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914780"
 ---
-# <a name="icorprofilercallbackruntimeresumefinished-method"></a><span data-ttu-id="2e3e7-102">ICorProfilerCallback::RuntimeResumeFinished 方法</span><span class="sxs-lookup"><span data-stu-id="2e3e7-102">ICorProfilerCallback::RuntimeResumeFinished Method</span></span>
-<span data-ttu-id="2e3e7-103">執行階段已繼續執行階段的所有執行緒，並回到正常的作業，請通知分析工具。</span><span class="sxs-lookup"><span data-stu-id="2e3e7-103">Notifies the profiler that the runtime has resumed all runtime threads and has returned to normal operation.</span></span>  
+# <a name="icorprofilercallbackruntimeresumefinished-method"></a><span data-ttu-id="d06f0-102">ICorProfilerCallback::RuntimeResumeFinished 方法</span><span class="sxs-lookup"><span data-stu-id="d06f0-102">ICorProfilerCallback::RuntimeResumeFinished Method</span></span>
+<span data-ttu-id="d06f0-103">執行階段已繼續執行階段的所有執行緒，並回到正常的作業，請通知分析工具。</span><span class="sxs-lookup"><span data-stu-id="d06f0-103">Notifies the profiler that the runtime has resumed all runtime threads and has returned to normal operation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2e3e7-104">語法</span><span class="sxs-lookup"><span data-stu-id="2e3e7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d06f0-104">語法</span><span class="sxs-lookup"><span data-stu-id="d06f0-104">Syntax</span></span>  
   
 ```  
 HRESULT RuntimeResumeFinished();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="2e3e7-105">備註</span><span class="sxs-lookup"><span data-stu-id="2e3e7-105">Remarks</span></span>  
- <span data-ttu-id="2e3e7-106">`RuntimeResumeFinished`不保證在相同的執行緒上進行回呼[icorprofilercallback:: Runtimesuspendstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md)回呼。</span><span class="sxs-lookup"><span data-stu-id="2e3e7-106">The `RuntimeResumeFinished` callback is not guaranteed to occur on the same thread as the [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback.</span></span> <span data-ttu-id="2e3e7-107">不過，一定會與相同的執行緒上發生[icorprofilercallback:: Runtimeresumestarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md)回呼。</span><span class="sxs-lookup"><span data-stu-id="2e3e7-107">However, it is guaranteed to occur on the same thread as the [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d06f0-105">備註</span><span class="sxs-lookup"><span data-stu-id="d06f0-105">Remarks</span></span>  
+ <span data-ttu-id="d06f0-106">`RuntimeResumeFinished`不保證在相同的執行緒上進行回呼[icorprofilercallback:: Runtimesuspendstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md)回呼。</span><span class="sxs-lookup"><span data-stu-id="d06f0-106">The `RuntimeResumeFinished` callback is not guaranteed to occur on the same thread as the [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback.</span></span> <span data-ttu-id="d06f0-107">不過，一定會與相同的執行緒上發生[icorprofilercallback:: Runtimeresumestarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md)回呼。</span><span class="sxs-lookup"><span data-stu-id="d06f0-107">However, it is guaranteed to occur on the same thread as the [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2e3e7-108">需求</span><span class="sxs-lookup"><span data-stu-id="2e3e7-108">Requirements</span></span>  
- <span data-ttu-id="2e3e7-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2e3e7-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d06f0-108">需求</span><span class="sxs-lookup"><span data-stu-id="d06f0-108">Requirements</span></span>  
+ <span data-ttu-id="d06f0-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d06f0-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2e3e7-110">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2e3e7-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d06f0-110">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d06f0-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="2e3e7-111">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2e3e7-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d06f0-111">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d06f0-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2e3e7-112">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2e3e7-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d06f0-112">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d06f0-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2e3e7-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2e3e7-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d06f0-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d06f0-113">See also</span></span>
 
-- [<span data-ttu-id="2e3e7-114">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="2e3e7-114">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="d06f0-114">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="d06f0-114">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
