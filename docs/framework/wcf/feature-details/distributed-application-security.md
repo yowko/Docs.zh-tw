@@ -6,11 +6,11 @@ helpviewer_keywords:
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
 ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856528"
 ---
 # <a name="distributed-application-security"></a>分散式應用程式安全性
 Windows Communication Foundation (WCF) 安全性分為三個主要的功能區域： 傳輸安全性、 存取控制和稽核。 傳輸安全性提供完整性、機密性與驗證。 傳輸安全性是由下列其中一項提供：傳輸安全性、訊息安全性或 `TransportWithMessageCredential`。  
@@ -20,11 +20,11 @@ Windows Communication Foundation (WCF) 安全性分為三個主要的功能區�
 ## <a name="transfer-security-scenarios"></a>傳輸安全性案例  
  採用 WCF 傳輸安全性的常見案例包括下列各項：  
   
--   使用 Windows 保護傳輸。 WCF 用戶端和服務部署在 Windows 網域 （或 Windows 樹系）。 由於訊息包含個人資料，因此要求會包括用戶端和服務的雙向驗證、訊息完整性及訊息機密性。 此外，特殊交易發生時需要證明，例如訊息接收者應記錄簽章資訊。  
+- 使用 Windows 保護傳輸。 WCF 用戶端和服務部署在 Windows 網域 （或 Windows 樹系）。 由於訊息包含個人資料，因此要求會包括用戶端和服務的雙向驗證、訊息完整性及訊息機密性。 此外，特殊交易發生時需要證明，例如訊息接收者應記錄簽章資訊。  
   
--   使用 `UserName` 和 HTTPS 保護傳輸。 WCF 用戶端和服務需要經過開發才能跨網際網路運作。 用戶端認證會根據使用者名稱/密碼組的資料庫進行驗證。 服務會使用受信任的安全通訊端層 (SSL) 憑證部署在 HTTPS 位址。 由於訊息會透過網際網路傳輸，因此用戶端和服務需要經過雙向驗證，而且必須維持傳輸期間訊息的機密性與完整性。  
+- 使用 `UserName` 和 HTTPS 保護傳輸。 WCF 用戶端和服務需要經過開發才能跨網際網路運作。 用戶端認證會根據使用者名稱/密碼組的資料庫進行驗證。 服務會使用受信任的安全通訊端層 (SSL) 憑證部署在 HTTPS 位址。 由於訊息會透過網際網路傳輸，因此用戶端和服務需要經過雙向驗證，而且必須維持傳輸期間訊息的機密性與完整性。  
   
--   使用憑證保護傳輸。 WCF 用戶端和服務需要經過開發才能透過公用網際網路運作。 用戶端和服務都有憑證，可以用來保護訊息的安全。 用戶端和服務會使用網際網路彼此通訊，以及執行要求有訊息完整性、機密性與雙向驗證的高價值交易。  
+- 使用憑證保護傳輸。 WCF 用戶端和服務需要經過開發才能透過公用網際網路運作。 用戶端和服務都有憑證，可以用來保護訊息的安全。 用戶端和服務會使用網際網路彼此通訊，以及執行要求有訊息完整性、機密性與雙向驗證的高價值交易。  
   
 ## <a name="integrity-confidentiality-and-authentication"></a>完整性、機密性與驗證  
  完整性、機密性及驗證這三項功能合稱為傳輸安全性。 傳輸安全性所提供的各種功能，會協助減少分散式應用程式的威脅。 下表簡要說明構成傳輸安全性的這三項功能。  

@@ -3,11 +3,11 @@ title: HOW TO：實作以探索 Proxy 註冊的可探索服務
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
 ms.openlocfilehash: 31c89aeed2577c5dd11ae59ee4a4d692210e5f37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856488"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>HOW TO：實作以探索 Proxy 註冊的可探索服務
 本主題是四個主題中的第二個，討論如何實作探索 Proxy。 在上一個主題中， [How to:實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)，實作探索 proxy。 本主題中，您會建立 WCF 服務，以傳送公告訊息 (`Hello`和`Bye`) 至探索 proxy，使其註冊和取消註冊其本身以探索 proxy。
@@ -18,9 +18,9 @@ ms.locfileid: "59302179"
 
 2. 加入下列組件的參考：
 
-    1.  System.ServiceModel
+    1. System.ServiceModel
 
-    2.  System.ServiceModel.Discovery
+    2. System.ServiceModel.Discovery
 
 3. 將新的類別加入至名為 `CalculatorService` 的專案。
 

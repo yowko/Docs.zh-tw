@@ -6,11 +6,11 @@ helpviewer_keywords:
 - interaction functions [Visual Basic]
 ms.assetid: 6e698461-e944-4c0f-ae48-87429f1fe740
 ms.openlocfilehash: 1157462f743396f8fb4b4304c0529db5377bd41e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802748"
 ---
 # <a name="information-and-interaction-summary-visual-basic"></a>資訊和互動摘要 (Visual Basic)
 Visual Basic 語言關鍵字和執行階段程式庫成員依用途組織，並使用。  

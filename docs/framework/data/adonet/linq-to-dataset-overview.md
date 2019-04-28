@@ -3,11 +3,11 @@ title: LINQ to DataSet 概觀
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
 ms.openlocfilehash: 635f1c17da40095990c238912f9e09ad398e6637
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878588"
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ to DataSet 概觀
 <xref:System.Data.DataSet> 是其中一個常用的 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 元件。 它是 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 所依據之中斷連接程式撰寫模型 (Programming Model) 的重要項目，而且可讓您明確快取來自不同資料來源的資料。 若為展示層，<xref:System.Data.DataSet> 會與 GUI 控制項緊密整合，以便進行資料繫結 (Data Binding)。 若為中介層 (Middle Tier)，它會提供保留關聯式資料圖案的快取，而且包含快速簡易查詢和階層導覽服務。 較低的資料庫上的要求數目常用的技巧是使用<xref:System.Data.DataSet>的中介層中的快取。 例如，請考慮資料驅動[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 應用程式。 通常，應用程式資料的重要部分不會經常變更，而且在工作階段 (Session) 或使用者之間是通用的。 這項資料可以保留在 Web 伺服器的記憶體中，以便減少針對資料庫所進行的要求數目並加快使用者互動的速度。 另一個有用的層面<xref:System.Data.DataSet>是它可讓應用程式從一或多個資料來源的資料子集帶入應用程式空間。 然後，此應用程式就可以管理記憶體中資料，同時保留其關聯式圖案。  

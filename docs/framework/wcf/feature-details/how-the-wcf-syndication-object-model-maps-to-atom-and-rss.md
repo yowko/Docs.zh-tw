@@ -6,30 +6,30 @@ dev_langs:
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
 ms.openlocfilehash: b5a7f68edc49a02bb99ca05765d4582b798e72ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855201"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF 新聞訂閱物件模型對應到 Atom 和 RSS 的方式
 開發 Windows Communication Foundation (WCF) 的新聞訂閱服務時，您可以建立摘要與項目使用下列類別：  
   
--   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
+- <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationItem>  
+- <xref:System.ServiceModel.Syndication.SyndicationItem>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationPerson>  
+- <xref:System.ServiceModel.Syndication.SyndicationPerson>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationLink>  
+- <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationCategory>  
+- <xref:System.ServiceModel.Syndication.SyndicationCategory>  
   
--   <xref:System.ServiceModel.Syndication.TextSyndicationContent>  
+- <xref:System.ServiceModel.Syndication.TextSyndicationContent>  
   
--   <xref:System.ServiceModel.Syndication.UrlSyndicationContent>  
+- <xref:System.ServiceModel.Syndication.UrlSyndicationContent>  
   
--   <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
+- <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
   
  <xref:System.ServiceModel.Syndication.SyndicationFeed> 可以序列化為任何一種用來定義格式器的同步發佈格式。 WCF 隨附兩個格式器：<xref:System.ServiceModel.Syndication.Atom10FeedFormatter>和<xref:System.ServiceModel.Syndication.Rss20FeedFormatter>。  
   

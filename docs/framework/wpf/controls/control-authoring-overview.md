@@ -9,11 +9,11 @@ helpviewer_keywords:
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
 ms.openlocfilehash: bb35a4d47f583aad710e178bdb12cb9adf6321e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017679"
 ---
 # <a name="control-authoring-overview"></a>控制項撰寫概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 控制項模型由於具有擴充性，因此大幅減少了建立新控制項的需求。 不過，在某些情況下，您可能還是需要建立自訂控制項。 本主題將討論可讓您建立自訂控制項的需求降到最低的一些功能，以及 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的不同控制項撰寫模型。 本主題也將示範如何建立新的控制項。  
@@ -22,18 +22,18 @@ ms.locfileid: "59340018"
 ## <a name="alternatives-to-writing-a-new-control"></a>撰寫新控制項的替代方案  
  在過去，若要從現有控制項自訂控制項，只能變更控制項的標準屬性，例如背景色彩、框線寬度和字型大小。 除了這些預先定義的參數外，若還想擴充控制項的外觀或行為，就需要建立新的控制項，建立的方式通常是繼承現有控制項並覆寫負責繪製控制項。  雖然您現在還是可以使用前述方式，但 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可以讓您藉由使用其豐富的內容模型、樣式、範本和觸發程序來自訂現有的控制項。 下列清單提供的範例說明如何在不建立新控制項的情況下，使用這些功能來建立自訂且一致的控制項。  
   
--   **豐富內容。** 許多標準的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項都支援豐富內容。 例如，內容屬性的<xref:System.Windows.Controls.Button>屬於型別<xref:System.Object>，所以理論上的任何項目可以顯示在<xref:System.Windows.Controls.Button>。  若要讓按鈕顯示影像和文字，您可以新增映像和<xref:System.Windows.Controls.TextBlock>要<xref:System.Windows.Controls.StackPanel>並指派<xref:System.Windows.Controls.StackPanel>到<xref:System.Windows.Controls.ContentControl.Content%2A>屬性。 因為控制項可以顯示 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 視覺化項目和任意資料，就比較不需要建立新控制項或修改現有控制項來支援複雜的視覺效果。 如需有關的內容模型<xref:System.Windows.Controls.Button>和其他內容模型中工作流程[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，請參閱[WPF 內容模型](wpf-content-model.md)。  
+- **豐富內容。** 許多標準的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項都支援豐富內容。 例如，內容屬性的<xref:System.Windows.Controls.Button>屬於型別<xref:System.Object>，所以理論上的任何項目可以顯示在<xref:System.Windows.Controls.Button>。  若要讓按鈕顯示影像和文字，您可以新增映像和<xref:System.Windows.Controls.TextBlock>要<xref:System.Windows.Controls.StackPanel>並指派<xref:System.Windows.Controls.StackPanel>到<xref:System.Windows.Controls.ContentControl.Content%2A>屬性。 因為控制項可以顯示 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 視覺化項目和任意資料，就比較不需要建立新控制項或修改現有控制項來支援複雜的視覺效果。 如需有關的內容模型<xref:System.Windows.Controls.Button>和其他內容模型中工作流程[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，請參閱[WPF 內容模型](wpf-content-model.md)。  
   
--   **樣式。** A<xref:System.Windows.Style>是集合，代表控制項屬性的值。 藉由使用樣式，您可以針對所要的控制項外觀和行為，建立可重複使用的表示方式，而不需要撰寫新的控制項。 例如，假設您想要所有您<xref:System.Windows.Controls.TextBlock>控制項都具有紅色新細明體字型字型大小為 14。 您可以建立樣式作為資源，並對應地設定適當的屬性。 然後每隔<xref:System.Windows.Controls.TextBlock>，您將新增至您的應用程式會有相同的外觀。  
+- **樣式。** A<xref:System.Windows.Style>是集合，代表控制項屬性的值。 藉由使用樣式，您可以針對所要的控制項外觀和行為，建立可重複使用的表示方式，而不需要撰寫新的控制項。 例如，假設您想要所有您<xref:System.Windows.Controls.TextBlock>控制項都具有紅色新細明體字型字型大小為 14。 您可以建立樣式作為資源，並對應地設定適當的屬性。 然後每隔<xref:System.Windows.Controls.TextBlock>，您將新增至您的應用程式會有相同的外觀。  
   
--   **資料範本。** A<xref:System.Windows.DataTemplate>可讓您自訂控制項上顯示資料的方式。 例如，<xref:System.Windows.DataTemplate>可用來指定如何將資料顯示在<xref:System.Windows.Controls.ListBox>。  如需此作業的範例，請參閱[資料範本化概觀](../data/data-templating-overview.md)。  除了自訂的資料、 外觀<xref:System.Windows.DataTemplate>可以包含 UI 項目，可在自訂 Ui 讓您很大的彈性。  例如，藉由使用<xref:System.Windows.DataTemplate>，您可以建立<xref:System.Windows.Controls.ComboBox>的每個項目都包含核取方塊。  
+- **資料範本。** A<xref:System.Windows.DataTemplate>可讓您自訂控制項上顯示資料的方式。 例如，<xref:System.Windows.DataTemplate>可用來指定如何將資料顯示在<xref:System.Windows.Controls.ListBox>。  如需此作業的範例，請參閱[資料範本化概觀](../data/data-templating-overview.md)。  除了自訂的資料、 外觀<xref:System.Windows.DataTemplate>可以包含 UI 項目，可在自訂 Ui 讓您很大的彈性。  例如，藉由使用<xref:System.Windows.DataTemplate>，您可以建立<xref:System.Windows.Controls.ComboBox>的每個項目都包含核取方塊。  
   
--   **控制項範本。** 中的許多控制項[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用<xref:System.Windows.Controls.ControlTemplate>來定義控制項的結構和外觀，控制項的外觀分開控制項的功能。 您可以重新定義，以大幅變更控制項的外觀及其<xref:System.Windows.Controls.ControlTemplate>。  例如，假設您希望控制項看起來像號誌燈。 這個控制項具有簡單的使用者介面和功能。  控制項是三個圓圈，每次只會亮其中一個。 一些反映之後, 您可能會發現<xref:System.Windows.Controls.RadioButton>提供的功能只能選取一個時間，但預設外觀的<xref:System.Windows.Controls.RadioButton>看起來不像號誌燈的亮燈。  因為<xref:System.Windows.Controls.RadioButton>使用控制項範本定義其外觀時，就可以輕鬆地重新定義<xref:System.Windows.Controls.ControlTemplate>容納控制項的需求，並使用選項按鈕製作號誌燈。  
+- **控制項範本。** 中的許多控制項[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用<xref:System.Windows.Controls.ControlTemplate>來定義控制項的結構和外觀，控制項的外觀分開控制項的功能。 您可以重新定義，以大幅變更控制項的外觀及其<xref:System.Windows.Controls.ControlTemplate>。  例如，假設您希望控制項看起來像號誌燈。 這個控制項具有簡單的使用者介面和功能。  控制項是三個圓圈，每次只會亮其中一個。 一些反映之後, 您可能會發現<xref:System.Windows.Controls.RadioButton>提供的功能只能選取一個時間，但預設外觀的<xref:System.Windows.Controls.RadioButton>看起來不像號誌燈的亮燈。  因為<xref:System.Windows.Controls.RadioButton>使用控制項範本定義其外觀時，就可以輕鬆地重新定義<xref:System.Windows.Controls.ControlTemplate>容納控制項的需求，並使用選項按鈕製作號誌燈。  
   
     > [!NOTE]
     >  雖然<xref:System.Windows.Controls.RadioButton>可以使用<xref:System.Windows.DataTemplate>、<xref:System.Windows.DataTemplate>不足，無法在此範例中。  <xref:System.Windows.DataTemplate>定義控制項內容的外觀。 若是<xref:System.Windows.Controls.RadioButton>，內容是任何顯示於右側的圓形，指出是否<xref:System.Windows.Controls.RadioButton>已選取。  在號誌燈的範例中，選項按鈕只需要是可以發亮的圓圈。 因為號誌燈的外觀需求是如此的不同的預設外觀<xref:System.Windows.Controls.RadioButton>，就必須重新定義<xref:System.Windows.Controls.ControlTemplate>。  一般而言<xref:System.Windows.DataTemplate>用來定義的內容 （或資料） 的控制項，以及<xref:System.Windows.Controls.ControlTemplate>用於定義控制項的結構方式。  
   
--   **觸發程序。** A<xref:System.Windows.Trigger>可讓您以動態方式變更的外觀和行為的控制項，而不需要建立新的控制項。 例如，假設您有多個<xref:System.Windows.Controls.ListBox>應用程式中的控制項和想要在每個項目<xref:System.Windows.Controls.ListBox>選取時，其中是粗體的紅色。 您的第一個想法可能是建立繼承自類別<xref:System.Windows.Controls.ListBox>，並覆寫<xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A>方法，以變更選取的項目，但更好的方法的外觀是將觸發程序加入至樣式<xref:System.Windows.Controls.ListBoxItem>變更其外觀的選取的項目。 觸發程序可讓您變更屬性值，或是依據屬性值採取動作。 <xref:System.Windows.EventTrigger>可讓您在事件發生時採取的動作。  
+- **觸發程序。** A<xref:System.Windows.Trigger>可讓您以動態方式變更的外觀和行為的控制項，而不需要建立新的控制項。 例如，假設您有多個<xref:System.Windows.Controls.ListBox>應用程式中的控制項和想要在每個項目<xref:System.Windows.Controls.ListBox>選取時，其中是粗體的紅色。 您的第一個想法可能是建立繼承自類別<xref:System.Windows.Controls.ListBox>，並覆寫<xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A>方法，以變更選取的項目，但更好的方法的外觀是將觸發程序加入至樣式<xref:System.Windows.Controls.ListBoxItem>變更其外觀的選取的項目。 觸發程序可讓您變更屬性值，或是依據屬性值採取動作。 <xref:System.Windows.EventTrigger>可讓您在事件發生時採取的動作。  
   
  如需樣式、範本和觸發程序的詳細資訊，請參閱[設定樣式和範本](styling-and-templating.md)。  
   
@@ -51,11 +51,11 @@ ms.locfileid: "59340018"
 #### <a name="benefits-of-deriving-from-usercontrol"></a>從 UserControl 衍生的優點  
  請考慮衍生自<xref:System.Windows.Controls.UserControl>如果下列所有項目套用：  
   
--   您想要以類似建置應用程式的方式來建置控制項。  
+- 您想要以類似建置應用程式的方式來建置控制項。  
   
--   您的控制項只包含現有的元件。  
+- 您的控制項只包含現有的元件。  
   
--   您不需要支援複雜的自訂作業。  
+- 您不需要支援複雜的自訂作業。  
   
 ### <a name="deriving-from-control"></a>衍生自 Control  
  衍生自<xref:System.Windows.Controls.Control>類別是使用大部分現有的模型[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項。 當您建立的控制項繼承自<xref:System.Windows.Controls.Control>使用範本欄位定義其外觀類別。 這樣做您便可以將作業邏輯與視覺表示方式分開處理。 您也可以確保使用命令和繫結，而不是事件並避免參考的項目中的 UI 和邏輯分離<xref:System.Windows.Controls.ControlTemplate>盡可能。  如果 UI 和控制項的邏輯適當分開處理，則控制項的使用者可以重新定義控制項的<xref:System.Windows.Controls.ControlTemplate>以自訂其外觀。 雖然建置自訂<xref:System.Windows.Controls.Control>不是簡單，只要建置<xref:System.Windows.Controls.UserControl>，自訂<xref:System.Windows.Controls.Control>提供最大的彈性。  
@@ -63,9 +63,9 @@ ms.locfileid: "59340018"
 #### <a name="benefits-of-deriving-from-control"></a>從 Control 衍生的優點  
  請考慮衍生自<xref:System.Windows.Controls.Control>而不是使用<xref:System.Windows.Controls.UserControl>類別如果有的話則適用下列步驟：  
   
--   您想要透過可自訂控制項外觀<xref:System.Windows.Controls.ControlTemplate>。  
+- 您想要透過可自訂控制項外觀<xref:System.Windows.Controls.ControlTemplate>。  
   
--   您想要控制項支援不同的佈景主題。  
+- 您想要控制項支援不同的佈景主題。  
   
 ### <a name="deriving-from-frameworkelement"></a>衍生自 FrameworkElement  
  控制項是衍生自<xref:System.Windows.Controls.UserControl>或<xref:System.Windows.Controls.Control>需要撰寫現有的項目。 對於許多案例中，這是可接受的解決方案，因為任何物件，繼承自<xref:System.Windows.FrameworkElement>可以是<xref:System.Windows.Controls.ControlTemplate>。 然而，有時候控制項外觀需要的不僅止於簡單項目組合的功能。 針對這些案例中，為基礎的元件<xref:System.Windows.FrameworkElement>是正確的選擇。  
@@ -75,11 +75,11 @@ ms.locfileid: "59340018"
 #### <a name="benefits-of-deriving-from-frameworkelement"></a>從 FrameworkElement 衍生的優點  
  請考慮衍生自<xref:System.Windows.FrameworkElement>如果有的話則適用下列步驟：  
   
--   您想要精確控制控制項的外觀，而這超出了簡單項目組合所能提供的控制。  
+- 您想要精確控制控制項的外觀，而這超出了簡單項目組合所能提供的控制。  
   
--   您想要藉由定義自己的轉譯邏輯，來定義控制項的外觀。  
+- 您想要藉由定義自己的轉譯邏輯，來定義控制項的外觀。  
   
--   您想要超越了全新方式撰寫現有的項目<xref:System.Windows.Controls.UserControl>和<xref:System.Windows.Controls.Control>。  
+- 您想要超越了全新方式撰寫現有的項目<xref:System.Windows.Controls.UserControl>和<xref:System.Windows.Controls.Control>。  
   
 <a name="control_authoring_basics"></a>   
 ## <a name="control-authoring-basics"></a>控制項撰寫基本概念  
@@ -88,33 +88,33 @@ ms.locfileid: "59340018"
 ### <a name="use-dependency-properties"></a>使用相依性屬性  
  當屬性是相依性屬性時，有可能會進行下列作業：  
   
--   設定樣式中的屬性。  
+- 設定樣式中的屬性。  
   
--   將屬性繫結至資料來源。  
+- 將屬性繫結至資料來源。  
   
--   使用動態資源作為屬性值。  
+- 使用動態資源作為屬性值。  
   
--   顯示屬性的動畫。  
+- 顯示屬性的動畫。  
   
  若希望控制項屬性可以支援這些任一功能，就應該將控制項實作為相依性屬性。 下列範例會藉由執行下列動作，定義名為 `Value` 的相依性屬性：  
   
--   定義<xref:System.Windows.DependencyProperty>名為的識別項`ValueProperty`作為`public` `static` `readonly`欄位。  
+- 定義<xref:System.Windows.DependencyProperty>名為的識別項`ValueProperty`作為`public` `static` `readonly`欄位。  
   
--   向屬性系統中的屬性名稱，藉由呼叫<xref:System.Windows.DependencyProperty.Register%2A?displayProperty=nameWithType>，以指定下列項目：  
+- 向屬性系統中的屬性名稱，藉由呼叫<xref:System.Windows.DependencyProperty.Register%2A?displayProperty=nameWithType>，以指定下列項目：  
   
-    -   屬性的名稱。  
+    - 屬性的名稱。  
   
-    -   屬性的類型。  
+    - 屬性的類型。  
   
-    -   擁有屬性的類型。  
+    - 擁有屬性的類型。  
   
-    -   屬性的中繼資料。 中繼資料包含屬性的預設值，<xref:System.Windows.CoerceValueCallback>和<xref:System.Windows.PropertyChangedCallback>。  
+    - 屬性的中繼資料。 中繼資料包含屬性的預設值，<xref:System.Windows.CoerceValueCallback>和<xref:System.Windows.PropertyChangedCallback>。  
   
--   藉由實作屬性的 `get` 和 `set` 存取子，定義名為 `Value` 的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 包裝函式屬性，這個名稱與註冊相依性屬性所使用的名稱相同。 請注意，`get`並`set`存取子只呼叫<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>分別。 建議是因為，相依性屬性的存取子不包含額外的邏輯用戶端和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]存取子和呼叫就可以略過<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>直接。 例如，在屬性繫結到資料來源時，就不會呼叫屬性的 `set` 存取子。  而不是將其他邏輯新增至 get 和 set 存取子，請使用<xref:System.Windows.ValidateValueCallback>， <xref:System.Windows.CoerceValueCallback>，和<xref:System.Windows.PropertyChangedCallback>回應，或變更時，請檢查值的委派。  如需這些回呼的詳細資訊，請參閱[相依性屬性回呼和驗證](../advanced/dependency-property-callbacks-and-validation.md)。  
+- 藉由實作屬性的 `get` 和 `set` 存取子，定義名為 `Value` 的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 包裝函式屬性，這個名稱與註冊相依性屬性所使用的名稱相同。 請注意，`get`並`set`存取子只呼叫<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>分別。 建議是因為，相依性屬性的存取子不包含額外的邏輯用戶端和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]存取子和呼叫就可以略過<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>直接。 例如，在屬性繫結到資料來源時，就不會呼叫屬性的 `set` 存取子。  而不是將其他邏輯新增至 get 和 set 存取子，請使用<xref:System.Windows.ValidateValueCallback>， <xref:System.Windows.CoerceValueCallback>，和<xref:System.Windows.PropertyChangedCallback>回應，或變更時，請檢查值的委派。  如需這些回呼的詳細資訊，請參閱[相依性屬性回呼和驗證](../advanced/dependency-property-callbacks-and-validation.md)。  
   
--   定義方法<xref:System.Windows.CoerceValueCallback>名為`CoerceValue`。 `CoerceValue` 可以確保 `Value` 大於或等於 `MinValue`，且小於或等於 `MaxValue`。  
+- 定義方法<xref:System.Windows.CoerceValueCallback>名為`CoerceValue`。 `CoerceValue` 可以確保 `Value` 大於或等於 `MinValue`，且小於或等於 `MaxValue`。  
   
--   定義方法<xref:System.Windows.PropertyChangedCallback>具名`OnValueChanged`。 `OnValueChanged` 會建立<xref:System.Windows.RoutedPropertyChangedEventArgs%601>物件，並準備引發`ValueChanged`路由的事件。 下一節中將討論路由事件。  
+- 定義方法<xref:System.Windows.PropertyChangedCallback>具名`OnValueChanged`。 `OnValueChanged` 會建立<xref:System.Windows.RoutedPropertyChangedEventArgs%601>物件，並準備引發`ValueChanged`路由的事件。 下一節中將討論路由事件。  
   
  [!code-csharp[UserControlNumericUpDown#DependencyProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#dependencyproperty)]
  [!code-vb[UserControlNumericUpDown#DependencyProperty](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#dependencyproperty)]  
@@ -124,29 +124,29 @@ ms.locfileid: "59340018"
 ### <a name="use-routed-events"></a>使用路由事件  
  就如同相依性屬性會使用其他功能擴充 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 屬性的概念，路由事件也同樣擴充了標準 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件的概念。 建立新的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項時，最好也能將事件實作為路由事件，因為路由事件支援下列行為：  
   
--   事件可以對多個控制項的父項進行處理。 若事件是反昇事件，項目樹狀結構中的單一父項可以訂閱事件。 然後應用程式作者可以使用一個處理常式，以回應多個控制項的事件。 例如，如果您的控制項是在每個項目一部分<xref:System.Windows.Controls.ListBox>(因為它包含在<xref:System.Windows.DataTemplate>)，應用程式開發人員可以定義您的控制項事件的事件處理常式上<xref:System.Windows.Controls.ListBox>。 每當任一控制項上發生事件時，就會呼叫事件處理常式。  
+- 事件可以對多個控制項的父項進行處理。 若事件是反昇事件，項目樹狀結構中的單一父項可以訂閱事件。 然後應用程式作者可以使用一個處理常式，以回應多個控制項的事件。 例如，如果您的控制項是在每個項目一部分<xref:System.Windows.Controls.ListBox>(因為它包含在<xref:System.Windows.DataTemplate>)，應用程式開發人員可以定義您的控制項事件的事件處理常式上<xref:System.Windows.Controls.ListBox>。 每當任一控制項上發生事件時，就會呼叫事件處理常式。  
   
--   路由的事件可用於<xref:System.Windows.EventSetter>，可讓應用程式開發人員指定樣式內的事件處理常式。  
+- 路由的事件可用於<xref:System.Windows.EventSetter>，可讓應用程式開發人員指定樣式內的事件處理常式。  
   
--   路由的事件可用於<xref:System.Windows.EventTrigger>，這是用於建立屬性動畫使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 如需詳細資訊，請參閱 [動畫概觀](../graphics-multimedia/animation-overview.md)。  
+- 路由的事件可用於<xref:System.Windows.EventTrigger>，這是用於建立屬性動畫使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 如需詳細資訊，請參閱 [動畫概觀](../graphics-multimedia/animation-overview.md)。  
   
  下列範例會藉由執行下列動作，定義路由事件：  
   
--   定義<xref:System.Windows.RoutedEvent>名為的識別項`ValueChangedEvent`作為`public` `static` `readonly`欄位。  
+- 定義<xref:System.Windows.RoutedEvent>名為的識別項`ValueChangedEvent`作為`public` `static` `readonly`欄位。  
   
--   藉由呼叫註冊路由的事件<xref:System.Windows.EventManager.RegisterRoutedEvent%2A?displayProperty=nameWithType>方法。 呼叫時，此範例會指定下列資訊<xref:System.Windows.EventManager.RegisterRoutedEvent%2A>:  
+- 藉由呼叫註冊路由的事件<xref:System.Windows.EventManager.RegisterRoutedEvent%2A?displayProperty=nameWithType>方法。 呼叫時，此範例會指定下列資訊<xref:System.Windows.EventManager.RegisterRoutedEvent%2A>:  
   
-    -   事件名稱是 `ValueChanged`。  
+    - 事件名稱是 `ValueChanged`。  
   
-    -   路由策略是<xref:System.Windows.RoutingStrategy.Bubble>，這表示，在來源 （引發事件的物件） 上的事件處理常式會呼叫第一次，然後接續，開始在最接近的事件處理常式呼叫來源的父項目上的事件處理常式父項目。  
+    - 路由策略是<xref:System.Windows.RoutingStrategy.Bubble>，這表示，在來源 （引發事件的物件） 上的事件處理常式會呼叫第一次，然後接續，開始在最接近的事件處理常式呼叫來源的父項目上的事件處理常式父項目。  
   
-    -   事件處理常式的類型是<xref:System.Windows.RoutedPropertyChangedEventHandler%601>，以建構<xref:System.Decimal>型別。  
+    - 事件處理常式的類型是<xref:System.Windows.RoutedPropertyChangedEventHandler%601>，以建構<xref:System.Decimal>型別。  
   
-    -   事件的擁有者類型是 `NumericUpDown`。  
+    - 事件的擁有者類型是 `NumericUpDown`。  
   
--   宣告名為 `ValueChanged` 的公用事件，並包含事件存取子宣告。 此範例會呼叫<xref:System.Windows.UIElement.AddHandler%2A>中`add`存取子宣告並<xref:System.Windows.UIElement.RemoveHandler%2A>中`remove`存取子宣告，以使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件服務。  
+- 宣告名為 `ValueChanged` 的公用事件，並包含事件存取子宣告。 此範例會呼叫<xref:System.Windows.UIElement.AddHandler%2A>中`add`存取子宣告並<xref:System.Windows.UIElement.RemoveHandler%2A>中`remove`存取子宣告，以使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件服務。  
   
--   建立名為 `OnValueChanged` 的受保護虛擬方法，該方法會引發 `ValueChanged` 事件。  
+- 建立名為 `OnValueChanged` 的受保護虛擬方法，該方法會引發 `ValueChanged` 事件。  
   
  [!code-csharp[UserControlNumericUpDown#RoutedEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#routedevent)]
  [!code-vb[UserControlNumericUpDown#RoutedEvent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#routedevent)]  
@@ -178,11 +178,11 @@ ms.locfileid: "59340018"
 #### <a name="attached-properties"></a>附加屬性  
  請使用下列方針，實作自訂控制項上的附加屬性：  
   
--   已`public` `static` `readonly` <xref:System.Windows.DependencyProperty>的形式*PropertyName* `Property` ，建立使用<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法。 屬性名稱傳遞給<xref:System.Windows.DependencyProperty.RegisterAttached%2A>必須符合*PropertyName*。  
+- 已`public` `static` `readonly` <xref:System.Windows.DependencyProperty>的形式*PropertyName* `Property` ，建立使用<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法。 屬性名稱傳遞給<xref:System.Windows.DependencyProperty.RegisterAttached%2A>必須符合*PropertyName*。  
   
--   實作一組 `public` `static` CLR 方法，分別名為 `Set`<屬性名稱> 和 `Get`<屬性名稱>。 這兩種方法應接受衍生自<xref:System.Windows.DependencyProperty>做為其第一個引數。 `Set`*PropertyName* 方法也接受其型別與屬性之已註冊資料型別相符的引數。 <屬性名稱>`Get` 方法應傳回相同類型的值。 若遺漏 <屬性名稱>`Set` 方法，屬性就會標示為唯讀。  
+- 實作一組 `public` `static` CLR 方法，分別名為 `Set`<屬性名稱> 和 `Get`<屬性名稱>。 這兩種方法應接受衍生自<xref:System.Windows.DependencyProperty>做為其第一個引數。 `Set`*PropertyName* 方法也接受其型別與屬性之已註冊資料型別相符的引數。 <屬性名稱>`Get` 方法應傳回相同類型的值。 若遺漏 <屬性名稱>`Set` 方法，屬性就會標示為唯讀。  
   
--   `Set` *PropertyName*並`Get` *PropertyName*必須直接路由傳送<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>分別於目標相依性的方法物件。 藉由呼叫方法包裝函式，或直接呼叫目標相依性物件，設計工具可以存取附加屬性。  
+- `Set` *PropertyName*並`Get` *PropertyName*必須直接路由傳送<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>分別於目標相依性的方法物件。 藉由呼叫方法包裝函式，或直接呼叫目標相依性物件，設計工具可以存取附加屬性。  
   
  如需附加屬性的詳細資訊，請參閱[附加屬性概觀](../advanced/attached-properties-overview.md)。  
   

@@ -12,11 +12,11 @@ ms.assetid: 295c16e0-641b-4771-94b3-39c1ffa98c13
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5355666b95d75fc18d0188c978c186690ee9ccca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61819700"
 ---
 # <a name="dates-times-and-time-zones"></a>日期、時間和時區
 
@@ -44,35 +44,35 @@ ms.locfileid: "33575423"
 
 [尋找定義於本機系統的時區](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md) - 描述如何列舉在本機系統上找到的時區。
 
-[如何：列舉電腦上既有的時區](../../../docs/standard/datetime/enumerate-time-zones.md)提供範例，以列舉電腦登錄中所定義的時區，並讓使用者從清單中選取預先定義的時區。
+[如何：列舉電腦上展示的時區](../../../docs/standard/datetime/enumerate-time-zones.md)提供的範例，以列舉電腦登錄中所定義的時區，並讓使用者從清單中選取預先定義的時區。
 
-[如何：存取預先定義的 UTC 和當地時區物件](../../../docs/standard/datetime/access-utc-and-local.md) - 描述如何存取國際標準時間和當地時區。
+[如何：存取預先定義的 UTC 和當地時區物件](../../../docs/standard/datetime/access-utc-and-local.md)說明如何存取國際標準時間和當地時區。
 
-[如何：具現化 TimeZoneInfo 物件](../../../docs/standard/datetime/instantiate-time-zone-info.md) - 描述如何從本機系統登錄具現化 <xref:System.TimeZoneInfo> 物件。
+[如何：將 TimeZoneInfo 物件具現化](../../../docs/standard/datetime/instantiate-time-zone-info.md)描述如何具現化<xref:System.TimeZoneInfo>從本機系統登錄的物件。
 
 [具現化 DateTimeOffset 物件](../../../docs/standard/datetime/instantiating-a-datetimeoffset-object.md) - 討論可以具現化 <xref:System.DateTimeOffset> 物件的方式，以及 <xref:System.DateTime> 值可以轉換為 <xref:System.DateTimeOffset> 值的方式。
 
-[如何：建立沒有調整規則的時區](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) - 描述如何建立不支援日光節約時間轉換的自訂時區。
+[如何：建立沒有調整規則的時區](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)說明如何建立自訂的時區，不支援轉換自日光節約時間。
 
-[如何：建立有調整規則的時區](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md) - 描述如何建立支援一或多種日光節約時間轉換的自訂時區。
+[如何：建立有調整規則的時區](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)說明如何建立支援一或多個轉換自日光節約時間的自訂時區。
 
 [儲存和還原時區](../../../docs/standard/datetime/saving-and-restoring-time-zones.md) - 描述 <xref:System.TimeZoneInfo> 對時區資料之序列化和還原序列化的支援，並說明可使用這些功能的一些案例。
 
-[如何：將時區儲存到內嵌資源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) - 描述如何建立自訂時區，並將它的資訊儲存在資源檔中。
+[如何：將時區儲存到內嵌資源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)說明如何建立自訂時區，並將其資訊儲存在資源檔。
 
-[如何：從內嵌資源還原時區](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) - 描述如何具現化已儲存至內嵌資源檔的自訂時區。
+[如何：從內嵌資源還原時區](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)描述如何具現化已儲存至內嵌的資源檔的自訂時區。
 
 [使用日期和時間執行算術運算](../../../docs/standard/datetime/performing-arithmetic-operations.md) - 討論如何加上、減去和比較 <xref:System.DateTime> 與 <xref:System.DateTimeOffset> 值的相關問題。
 
-[如何：在日期和時間運算中使用時區](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md) - 討論如何執行反映時區調整規則的日期和時間運算。
+[如何：在日期和時間運算中使用時區](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)討論如何執行日期和時間運算，以反映時區調整規則。
 
 [在 DateTime 和 DateTimeOffset 之間轉換](../../../docs/standard/datetime/converting-between-datetime-and-offset.md) - 描述如何在 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值之間轉換。
 
 [在各時區間轉換時間](../../../docs/standard/datetime/converting-between-time-zones.md) - 描述如何將時間從某個時區轉換為另一個時區。
 
-[如何：解決不明確的時間](../../../docs/standard/datetime/resolve-ambiguous-times.md) - 描述如何將不明確的時間對應至時區的標準時間，來解決不明確的時間問題。
+[如何：解決模稜兩可的時間](../../../docs/standard/datetime/resolve-ambiguous-times.md)說明如何將它對應至時區標準時間來解決模稜兩可的時間。
 
-[如何：讓使用者解決不明確的時間](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md) - 描述如何讓使用者決定不明確的當地時間與國際標準時間之間的對應。
+[如何：讓使用者解決模稜兩可的時間](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md)描述如何讓使用者決定模稜兩可的當地時間與國際標準時間之間的對應。
 
 ## <a name="reference"></a>參考資料
 

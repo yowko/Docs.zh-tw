@@ -6,47 +6,47 @@ dev_langs:
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
 ms.openlocfilehash: a2227b33c7caacdd04c7bf50082bb0cfab7f3302
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877613"
 ---
 # <a name="enabling-query-notifications"></a>啟用查詢通知
 使用查詢通知的應用程式具有通用要求集。 您必須正確設定資料來源才能支援 SQL 查詢通知，而且使用者必須具有正確的用戶端及伺服器端權限。  
   
  若要使用查詢通知，您必須：  
   
--   啟用資料庫的查詢通知。  
+- 啟用資料庫的查詢通知。  
   
--   確保用於連接至資料庫的使用者 ID 具有必要的使用權限。  
+- 確保用於連接至資料庫的使用者 ID 具有必要的使用權限。  
   
--   將可執行有效 SELECT 陳述式的 <xref:System.Data.SqlClient.SqlCommand> 物件，與關聯的通知物件 (<xref:System.Data.SqlClient.SqlDependency> 或 <xref:System.Data.Sql.SqlNotificationRequest>) 搭配使用。  
+- 將可執行有效 SELECT 陳述式的 <xref:System.Data.SqlClient.SqlCommand> 物件，與關聯的通知物件 (<xref:System.Data.SqlClient.SqlDependency> 或 <xref:System.Data.Sql.SqlNotificationRequest>) 搭配使用。  
   
--   受監視的資料變更時，提供處理通知的程式碼。  
+- 受監視的資料變更時，提供處理通知的程式碼。  
   
 ## <a name="query-notifications-requirements"></a>查詢通知需求  
  查詢通知僅支援符合特定需求清單的 SELECT 陳述式。 下表將提供《SQL Server 線上叢書》中 Service Broker 和查詢通知文件的連結。  
   
  **SQL Server 文件**  
   
--   [建立查詢通知](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [建立查詢通知](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [Service Broker 的安全性考量](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
+- [Service Broker 的安全性考量](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
   
--   [安全性與保護 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
+- [安全性與保護 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
   
--   [Notification Services 的安全性考量](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
+- [Notification Services 的安全性考量](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
   
--   [查詢通知權限](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
+- [查詢通知權限](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
   
--   [Service Broker 的國際性考量](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
+- [Service Broker 的國際性考量](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
   
--   [解決方案設計考量 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
+- [解決方案設計考量 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
   
--   [Service Broker 開發人員資訊中心](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [Service Broker 開發人員資訊中心](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [開發人員指南 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [開發人員指南 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>啟用查詢通知來執行範例程式碼  
  若要在啟用 Service Broker **AdventureWorks**資料庫使用 SQL Server Management Studio，請執行下列 TRANSACT-SQL 陳述式：  

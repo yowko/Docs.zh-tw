@@ -10,11 +10,11 @@ helpviewer_keywords:
 - list boxes
 ms.assetid: b0172473-c5f2-411e-aaa4-c8f17cb5eed4
 ms.openlocfilehash: 09b58bb0440f8ec187c4fa047e280d802747cd3c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012811"
 ---
 # <a name="listbox-control-windows-forms"></a>ListBox 控制項 (Windows Form)
 Windows Form`ListBox`控制項會顯示使用者可以從中選取一或多個項目清單。  

@@ -3,11 +3,11 @@ title: 在 Windows 服務應用程式中裝載
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
 ms.openlocfilehash: 8e50c39955f9ab72dfa1d52cbc37ab90f1ab0a8a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855949"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>在 Windows 服務應用程式中裝載
 Windows 服務 (之前稱為 Windows NT 服務) 所提供的處理序模型特別適合那些必須駐留在長時間執行的可執行檔中，且不會顯示任何使用者介面形式的應用程式使用。 Windows 服務應用程式的處理序存留期是由服務控制管理員 (SCM) 負責管理，可讓您啟動、停止與暫停 Windows 服務應用程式。 您可以設定為啟動電腦，因此合適的裝載環境為 「 永遠開啟 」 應用程式時自動啟動 Windows 服務處理程序。 如需有關 Windows 服務應用程式的詳細資訊，請參閱 < [Windows 服務應用程式](https://go.microsoft.com/fwlink/?LinkId=89450)。  
@@ -16,11 +16,11 @@ Windows 服務 (之前稱為 Windows NT 服務) 所提供的處理序模型特�
   
  通常，WCF 開發人員必須決定是否要裝載 WCF 應用程式到 Windows 服務應用程式，或在 Internet Information Services (IIS) 或 Windows Process Activation Service (WAS) 裝載環境內。 在下列情況中，您應該考慮使用 Windows 服務應用程式：  
   
--   您的應用程式需要明確的啟動。 例如，您的應用程式必須在伺服器啟動時自動啟動，而非為了回應第一個傳入訊息才動態啟動時，您就應該使用 Windows 服務。  
+- 您的應用程式需要明確的啟動。 例如，您的應用程式必須在伺服器啟動時自動啟動，而非為了回應第一個傳入訊息才動態啟動時，您就應該使用 Windows 服務。  
   
--   裝載應用程式的處理序一旦啟動，就必須維持在執行狀態。 一旦啟動，Windows 服務處理序就會維持在執行狀態，除非伺服器管理員透過服務控制管理員明確地加以關閉。 裝載在 IIS 或 WAS 的應用程式可以動態啟動與停止，以便充分運用系統資源。 需要對自身裝載處理序存留期擁有明確掌控權的應用程式，應該使用 Windows 服務，而不要使用 IIS 或 WAS。  
+- 裝載應用程式的處理序一旦啟動，就必須維持在執行狀態。 一旦啟動，Windows 服務處理序就會維持在執行狀態，除非伺服器管理員透過服務控制管理員明確地加以關閉。 裝載在 IIS 或 WAS 的應用程式可以動態啟動與停止，以便充分運用系統資源。 需要對自身裝載處理序存留期擁有明確掌控權的應用程式，應該使用 Windows 服務，而不要使用 IIS 或 WAS。  
   
--   您的 WCF 服務必須在 Windows Server 2003 上執行，並使用 HTTP 以外的傳輸。 在 Windows Server 2003 上，會將 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 裝載環境限為僅適用 HTTP 通訊。 Windows 服務應用程式不會受限於這項限制，而且可以使用任何傳輸 WCF 支援，包括 net.tcp、 net.pipe 和 net.msmq。  
+- 您的 WCF 服務必須在 Windows Server 2003 上執行，並使用 HTTP 以外的傳輸。 在 Windows Server 2003 上，會將 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 裝載環境限為僅適用 HTTP 通訊。 Windows 服務應用程式不會受限於這項限制，而且可以使用任何傳輸 WCF 支援，包括 net.tcp、 net.pipe 和 net.msmq。  
   
 ### <a name="to-host-wcf-inside-of-a-windows-service-application"></a>若要在 Windows 服務應用程式中裝載 WCF  
   
@@ -28,11 +28,11 @@ Windows 服務 (之前稱為 Windows NT 服務) 所提供的處理序模型特�
   
 2. 連結的 Windows 服務應用程式存留期的 WCF 服務的存留期間。 一般而言，您會想要成為作用中裝載的服務啟動時，請停止接聽訊息時停止，並關閉裝載處理序，當發生錯誤時的 WCF 服務主控的服務 Windows 服務應用程式中裝載的 WCF 服務。 執行下列工作即可達成這點：  
   
-    -   覆寫 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 以開啟一或多個 <xref:System.ServiceModel.ServiceHost> 執行個體。 單一的 Windows 服務應用程式可以裝載多個 WCF 服務的啟動和停止做為群組。  
+    - 覆寫 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 以開啟一或多個 <xref:System.ServiceModel.ServiceHost> 執行個體。 單一的 Windows 服務應用程式可以裝載多個 WCF 服務的啟動和停止做為群組。  
   
-    -   覆寫<xref:System.ServiceProcess.ServiceBase.OnStop%2A>來呼叫<xref:System.ServiceModel.Channels.CommunicationObject.Closed>上<xref:System.ServiceModel.ServiceHost>期間所啟動的任何執行 WCF 服務<xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>。  
+    - 覆寫<xref:System.ServiceProcess.ServiceBase.OnStop%2A>來呼叫<xref:System.ServiceModel.Channels.CommunicationObject.Closed>上<xref:System.ServiceModel.ServiceHost>期間所啟動的任何執行 WCF 服務<xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>。  
   
-    -   訂閱 <xref:System.ServiceModel.Channels.CommunicationObject.Faulted> 的 <xref:System.ServiceModel.ServiceHost> 事件，並在發生錯誤時，使用 <xref:System.ServiceProcess.ServiceController> 類別來關閉 Windows 服務應用程式。  
+    - 訂閱 <xref:System.ServiceModel.Channels.CommunicationObject.Faulted> 的 <xref:System.ServiceModel.ServiceHost> 事件，並在發生錯誤時，使用 <xref:System.ServiceProcess.ServiceController> 類別來關閉 Windows 服務應用程式。  
   
      裝載 WCF 服務的 Windows 服務應用程式部署與管理方式相同，因為不會進行 Windows 服務應用程式使用 WCF。  
   

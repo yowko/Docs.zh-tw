@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
 ms.openlocfilehash: 42980aa4691d8ecb9868336ecb270c9ad937b5a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876105"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>更新資料服務 (WCF 資料服務)
 當您使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫來取用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]換行字元、 程式庫會轉譯成用戶端資料服務類別的執行個體摘要中的項目。 這些資料服務類別會使用 <xref:System.Data.Services.Client.DataServiceContext> 所屬的 <xref:System.Data.Services.Client.DataServiceQuery%601> 來追蹤。 用戶端會追蹤您使用 <xref:System.Data.Services.Client.DataServiceContext> 上的方法所報告之實體的變更。 這些方法會讓用戶端追蹤所新增及刪除的實體，以及您對屬性值所做的變更或是您對實體執行個體之間的關聯性所做的變更。 當您呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法時，這些追蹤的變更會當做 REST 型作業傳回資料服務。  
@@ -54,13 +54,13 @@ ms.locfileid: "59517105"
   
  下列考量適用於附加物件時：  
   
--   附加的物件處於 <xref:System.Data.Services.Client.EntityStates.Unchanged> 狀態。  
+- 附加的物件處於 <xref:System.Data.Services.Client.EntityStates.Unchanged> 狀態。  
   
--   附加物件時，不會一併附加與該附加物件相關的物件。  
+- 附加物件時，不會一併附加與該附加物件相關的物件。  
   
--   如果實體已依內容進行追蹤，則無法附加物件。  
+- 如果實體已依內容進行追蹤，則無法附加物件。  
   
--   當您附加與 eTag 值一起收到的實體物件時，會使用已採用 <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> 參數的 `etag` 方法多載。 當儲存已附加之物件的變更時，這個 eTag 值可用來檢查並行存取。  
+- 當您附加與 eTag 值一起收到的實體物件時，會使用已採用 <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> 參數的 `etag` 方法多載。 當儲存已附加之物件的變更時，這個 eTag 值可用來檢查並行存取。  
   
  如需詳細資訊，請參閱[如何：將現有實體附加至 DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)。  
   

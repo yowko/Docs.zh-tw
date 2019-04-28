@@ -12,8 +12,8 @@ ms.openlocfilehash: 2d323566aa211ced9ed76302756ed5dc82c5d2c3
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857112"
 ---
 # <a name="data-member-default-values"></a>資料成員預設值
 在  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，類型具有的概念*預設值*。 例如，任何參考型別的預設值為 `null`，整數型別則為零。 有時候資料成員設為預設值時，會需要從序列化資料中省略該成員。 因為此成員為預設值，而實際值不需要序列化，因此這樣做可促進效能。  
@@ -50,9 +50,9 @@ ms.locfileid: "59973716"
 ### <a name="schema-representation"></a>結構描述表示  
  資料成員的 XML 結構描述定義語言 (XSD) 結構描述表示法的詳細資料時`EmitDefaultValue`屬性設定為`false`討論[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。 不過，以下提供簡要的概觀。  
   
--   當<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>設為`false`，在結構描述中表示為特定的 Windows Communication Foundation (WCF) 的註釋。 目前沒有可互通的方式能表示這項資訊。 特別是結構描述中的 "default" 屬性 (Attribute) 不是用於此目的時，`minOccurs` 屬性只會受到 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 設定的影響，而 `nillable` 屬性只會受到資料成員的型別影響。  
+- 當<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>設為`false`，在結構描述中表示為特定的 Windows Communication Foundation (WCF) 的註釋。 目前沒有可互通的方式能表示這項資訊。 特別是結構描述中的 "default" 屬性 (Attribute) 不是用於此目的時，`minOccurs` 屬性只會受到 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 設定的影響，而 `nillable` 屬性只會受到資料成員的型別影響。  
   
--   實際使用的預設值不會在結構描述中表示。 端看接收端點如何適當地解譯遺失的項目而定。  
+- 實際使用的預設值不會在結構描述中表示。 端看接收端點如何適當地解譯遺失的項目而定。  
   
  結構描述匯入時<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>屬性會自動設為`false`每當所提到的 WCF 特定註解先前偵測到。 針對 `false` 屬性設為 `nillable` 的參考型別，此屬性也會設為 `false`，以支援常在使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務時發生的特定互通性案例。  
   

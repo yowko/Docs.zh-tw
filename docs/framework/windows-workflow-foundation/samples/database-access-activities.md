@@ -3,11 +3,11 @@ title: 資料庫存取活動
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
 ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005203"
 ---
 # <a name="database-access-activities"></a>資料庫存取活動
 資料庫存取活動可讓您存取工作流程內的資料庫。 這些活動可讓您存取資料庫以擷取或修改資訊以及使用[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)來存取資料庫。  
@@ -247,7 +247,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 ## <a name="configuring-connection-information"></a>設定連接資訊
  所有 DbActivities 會共用相同的組態參數。 您可以透過兩種方式加以設定：
 
--   `ConnectionString + InvariantName`：設定 ADO.NET 提供者非變異名稱和連接字串。
+- `ConnectionString + InvariantName`：設定 ADO.NET 提供者非變異名稱和連接字串。
 
     ```
     Activity dbSelectCount = new DbQueryScalar<DateTime>()
@@ -260,7 +260,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };
     ```
 
--   `ConfigName`：設定包含連接資訊的組態區段名稱。
+- `ConfigName`：設定包含連接資訊的組態區段名稱。
 
     ```xml
     <connectionStrings>
@@ -270,7 +270,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
       </connectionStrings>
     ```
 
--   在活動中：
+- 在活動中：
 
     ```
     Activity dbSelectCount = new DbQueryScalar<int>()
@@ -287,15 +287,15 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
  Setup.cmd 指令碼會叫用 CreateDb.sql 指令碼檔，該檔案中包含的 SQL 命令會執行下列操作：
 
--   建立名為 DbActivitiesSample 的資料庫。
+- 建立名為 DbActivitiesSample 的資料庫。
 
--   建立 Roles 資料表。
+- 建立 Roles 資料表。
 
--   建立 Employees 資料表。
+- 建立 Employees 資料表。
 
--   將三個記錄插入至 Roles 資料表。
+- 將三個記錄插入至 Roles 資料表。
 
--   將十二個記錄插入至 Employees 資料表。
+- 將十二個記錄插入至 Employees 資料表。
 
 ##### <a name="to-run-setupcmd"></a>若要執行 Setup.cmd
 

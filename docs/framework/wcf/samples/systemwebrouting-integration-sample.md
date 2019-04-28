@@ -3,11 +3,11 @@ title: SystemWebRouting 整合範例
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
 ms.openlocfilehash: f4f9772583bbd66d19cc59f453489965aabf74b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007756"
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting 整合範例
 這個範例示範裝載層與 <xref:System.Web.Routing> 命名空間中的類別整合。 <xref:System.Web.Routing> 命名空間中的類別可讓應用程式使用不會直接回應實體資源的 URL。 使用 Web 路由可讓開發人員建立的虛擬位址會接著對應回實際的 WCF 服務的 http。 當 WCF 服務必須在不需要實體檔案或資源的情況下裝載，或是服務必須使用不包含 .html 或 .aspx 等檔案的 URL 存取時，這種方式會相當實用。 這個範例將示範如何使用 <xref:System.Web.Routing.RouteTable> 類別來建立虛擬 URI，以便對應至 global.asax 中所定義的執行中服務。 
@@ -58,13 +58,13 @@ ms.locfileid: "59302233"
   
 3. 在 [Internet Information Services (IIS) 管理員] 中建立 Web 應用程式。  
   
-    1.  在 [IIS 管理員] 中，以滑鼠右鍵按一下**Default Web Site** ，然後選取**新增應用程式**。  
+    1. 在 [IIS 管理員] 中，以滑鼠右鍵按一下**Default Web Site** ，然後選取**新增應用程式**。  
   
-    2.  針對**別名**，輸入`WebRoutingIntegration`。  
+    2. 針對**別名**，輸入`WebRoutingIntegration`。  
   
-    3.  針對**實體路徑**，選取專案內的 [服務] 資料夾。  
+    3. 針對**實體路徑**，選取專案內的 [服務] 資料夾。  
   
-    4.  按 [確定]。  
+    4. 按 [確定]。  
   
 4. 啟動應用程式，以滑鼠右鍵按一下 Web 應用程式，然後選取**管理的應用程式**，然後**瀏覽**。  
   

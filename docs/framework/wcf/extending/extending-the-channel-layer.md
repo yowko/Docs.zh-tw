@@ -5,11 +5,11 @@ helpviewer_keywords:
 - extending channels [WCF]
 ms.assetid: 4238db74-2fb6-4dc8-a326-f58527230810
 ms.openlocfilehash: e60d8ef1a5191c6407b01eb1a2456a06aeeb1914
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857905"
 ---
 # <a name="extending-the-channel-layer"></a>擴充通道層
 通道層負責在用戶端與服務之間交換訊息。 通道擴充可以實作新的通訊協定功能，例如安全性，或者實作傳輸功能，例如實作新的網路傳輸以傳送 SOAP 訊息。  

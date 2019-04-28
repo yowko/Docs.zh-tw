@@ -1,17 +1,17 @@
 ---
-title: 現代化您的應用程式生命週期 CI/CD 管線與雲端中的 DevOps 工具
+title: 在雲端中使用 CI/CD 管線和 DevOps 工具將應用程式生命週期現代化
 description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |現代化您的應用程式生命週期 CI/CD 管線與雲端中的 DevOps 工具
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: c4eeb5606d3ea93b76efee58ddfecae0abbbd743
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012164"
 ---
-# <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>現代化您的應用程式生命週期 CI/CD 管線與雲端中的 DevOps 工具
+# <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>在雲端中使用 CI/CD 管線和 DevOps 工具將應用程式生命週期現代化
 
 現今的企業需要速度很快即可具競爭力的市場中發揮創意。 交付高品質、 現代化應用程式需要 DevOps 工具和程序會實作這個持續的循環的創新的關鍵。 使用適當的 DevOps 工具，開發人員可以簡化持續部署，並更快速創新的應用程式傳遞給的使用者。
 
@@ -19,11 +19,11 @@ ms.locfileid: "53128176"
 
 Azure 的 DevOps 服務支援持續整合和多容器應用程式部署到各種不同的環境，透過的官方 Azure DevOps 服務部署工作：
 
--   [部署為獨立部署 Docker 主機 VM](https://docs.microsoft.com/azure/devops/build-release/apps/cd/deploy-docker-windowsvm) （Linux 或 Windows Server 2016 或更新版本）
+- [部署為獨立部署 Docker 主機 VM](https://docs.microsoft.com/azure/devops/build-release/apps/cd/deploy-docker-windowsvm) （Linux 或 Windows Server 2016 或更新版本）
 
--   [部署到 Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-tutorial-deploy-app-with-cicd-vsts)
+- [部署到 Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-tutorial-deploy-app-with-cicd-vsts)
 
--   [部署至 Azure Container Service-Kubernetes](https://docs.microsoft.com/azure/devops/build-release/apps/cd/azure/deploy-container-kubernetes)
+- [部署至 Azure Container Service-Kubernetes](https://docs.microsoft.com/azure/devops/build-release/apps/cd/azure/deploy-container-kubernetes)
 
 但是您也可以部署到[Docker Swarm](https://blogs.msdn.microsoft.com/jcorioland/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services/)或 DC/OS 使用 Azure DevOps 服務指令碼為基礎的工作。
 

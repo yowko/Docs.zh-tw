@@ -8,11 +8,11 @@ helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
 ms.openlocfilehash: 6aecad3719fff98a2e834cff6eee9cfe39a699aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858451"
 ---
 # <a name="endpoint-creation-overview"></a>端點建立概觀
 使用 Windows Communication Foundation (WCF) 服務的所有通訊都都會透過*端點*的服務。 端點可讓用戶端存取 WCF 服務提供的功能。 本章節說明端點的結構，並且摘要說明如何透過組態與程式碼來定義端點。  
@@ -20,11 +20,11 @@ ms.locfileid: "59106531"
 ## <a name="the-structure-of-an-endpoint"></a>端點結構  
  每個端點都包含一個位址用以指出該到何處尋找端點、一個指定用戶端與端點如何進行通訊的繫結，以及一個可識別可用方法的合約。  
   
--   **地址**。 位址會唯一識別端點並告訴潛在取用者服務的位置。 它由 WCF 物件模型中代表<xref:System.ServiceModel.EndpointAddress>位址，其中包含統一資源識別元 (URI) 和位址屬性，包括身分識別、 一些 Web 服務描述語言 (WSDL) 項目，以及選用的集合標頭。 選用標頭會提供額外的詳細位址資訊來識別端點或與端點互動。 如需詳細資訊，請參閱 <<c0> [ 指定端點位址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)。  
+- **地址**。 位址會唯一識別端點並告訴潛在取用者服務的位置。 它由 WCF 物件模型中代表<xref:System.ServiceModel.EndpointAddress>位址，其中包含統一資源識別元 (URI) 和位址屬性，包括身分識別、 一些 Web 服務描述語言 (WSDL) 項目，以及選用的集合標頭。 選用標頭會提供額外的詳細位址資訊來識別端點或與端點互動。 如需詳細資訊，請參閱 <<c0> [ 指定端點位址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)。  
   
--   **繫結**。 繫結會指定與端點的通訊方式。 繫結程序會指定端點與世界的通訊方式，包括要使用的傳輸通訊協定 (例如，TCP 或 HTTP)、訊息使用的編碼 (例如，文字或二進位)，以及必要的安全性要求有哪些 (例如，Secure Sockets Layer [SSL] 或 SOAP 訊息安全性)。 如需詳細資訊，請參閱 <<c0> [ 使用的繫結設定服務及用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
+- **繫結**。 繫結會指定與端點的通訊方式。 繫結程序會指定端點與世界的通訊方式，包括要使用的傳輸通訊協定 (例如，TCP 或 HTTP)、訊息使用的編碼 (例如，文字或二進位)，以及必要的安全性要求有哪些 (例如，Secure Sockets Layer [SSL] 或 SOAP 訊息安全性)。 如需詳細資訊，請參閱 <<c0> [ 使用的繫結設定服務及用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
   
--   **服務合約**。 服務合約會概略說明端點公開哪些功能給用戶端。 合約指定了用戶端可以呼叫的作業、訊息格式與輸入參數型別或是呼叫作業時必要的資料，以及用戶端能夠預期的處理或回應訊息類型。 三種基本合約型別都對應至基本的訊息交換模式 (MEP)：資料包 (單向)、要求/回覆，與雙工 (雙向)。 當服務合約遭到存取，也能使用資料與訊息合約來要求特定資料類型與訊息格式。 如需如何定義服務合約的詳細資訊，請參閱[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)。 請注意，用戶端可能也會被要求實作服務定義合約 (稱為回呼合約)，以便在雙工 MEP 中從服務接收訊息。 如需詳細資訊，請參閱 <<c0> [ 雙工服務](../../../docs/framework/wcf/feature-details/duplex-services.md)。  
+- **服務合約**。 服務合約會概略說明端點公開哪些功能給用戶端。 合約指定了用戶端可以呼叫的作業、訊息格式與輸入參數型別或是呼叫作業時必要的資料，以及用戶端能夠預期的處理或回應訊息類型。 三種基本合約型別都對應至基本的訊息交換模式 (MEP)：資料包 (單向)、要求/回覆，與雙工 (雙向)。 當服務合約遭到存取，也能使用資料與訊息合約來要求特定資料類型與訊息格式。 如需如何定義服務合約的詳細資訊，請參閱[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)。 請注意，用戶端可能也會被要求實作服務定義合約 (稱為回呼合約)，以便在雙工 MEP 中從服務接收訊息。 如需詳細資訊，請參閱 <<c0> [ 雙工服務](../../../docs/framework/wcf/feature-details/duplex-services.md)。  
   
  您可以透過命令式程式碼或是宣告式組態來指定服務端點。 如果沒有指定端點，則執行階段會針對服務所實作的每個服務合約，為每個基底位址加入一個預設端點，藉以提供預設端點。 在程式碼中定義端點通常不太實用，因為部署之服務的繫結和位址通常與開發服務時所使用的繫結和位址不同。 一般來說，透過組態來定義服務端點會比透過程式碼來得實際一些。 將繫結和位址資訊留在程式碼外面可讓它們直接進行變更，而不需要重新編譯或重新部署應用程式。  
   
@@ -34,13 +34,13 @@ ms.locfileid: "59106531"
 ## <a name="defining-endpoints-in-code"></a>在程式碼中定義端點  
  下列範例將說明如何使用下列各項在程式碼中指定端點：  
   
--   定義服務合約`IEcho`接受某人名稱以及與回應的服務類型的"Hello\<名稱 > ！"。  
+- 定義服務合約`IEcho`接受某人名稱以及與回應的服務類型的"Hello\<名稱 > ！"。  
   
--   實作由 `Echo` 合約定義的 `IEcho` 服務型別。  
+- 實作由 `Echo` 合約定義的 `IEcho` 服務型別。  
   
--   指定的端點位址`http://localhost:8000/Echo`服務。  
+- 指定的端點位址`http://localhost:8000/Echo`服務。  
   
--   使用 `Echo` 繫結來設定 <xref:System.ServiceModel.WSHttpBinding> 服務。  
+- 使用 `Echo` 繫結來設定 <xref:System.ServiceModel.WSHttpBinding> 服務。  
   
 ```csharp  
 Namespace Echo  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
 ms.openlocfilehash: 02d0417bc05f8585dc469d365089c8123d395f64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877119"
 ---
 # <a name="remote-vs-local-execution"></a>遠端與本機執行的比較
 您可以決定執行查詢的方式為遠端 (也就是，資料庫引擎對資料庫執行查詢) 或本機 ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 對本機快取執行查詢)。  
@@ -23,18 +23,18 @@ ms.locfileid: "59164511"
   
  如果資料庫有數千列訂單，當您只要處理一小部分的訂單時，您不會想要擷取出所有訂單。 在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，<xref:System.Data.Linq.EntitySet%601> 類別 (Class) 會實作 <xref:System.Linq.IQueryable> 介面。 這種方法可以確認這類查詢可以遠端執行。 這項技術的兩個主要優點是：  
   
--   不會擷取不必要的資料。  
+- 不會擷取不必要的資料。  
   
--   因為利用資料庫索引，所以資料庫引擎執行的查詢通常會較具效率。  
+- 因為利用資料庫索引，所以資料庫引擎執行的查詢通常會較具效率。  
   
 ## <a name="local-execution"></a>本機執行的比較  
  在其他情況下，您可能會想要擁有本機快取中的完整一組相關實體 (Entity)。 因此，<xref:System.Data.Linq.EntitySet%601> 提供 <xref:System.Data.Linq.EntitySet%601.Load%2A> 方法，可以明確載入 <xref:System.Data.Linq.EntitySet%601> 的所有成員。  
   
  如果已載入 <xref:System.Data.Linq.EntitySet%601>，則會在本機執行後續查詢。 這種方法有兩項優點：  
   
--   如果必須在本機或多次使用完整集合，則可以避免遠端查詢和相關的延遲時間。  
+- 如果必須在本機或多次使用完整集合，則可以避免遠端查詢和相關的延遲時間。  
   
--   實體可以序列化為完整實體。  
+- 實體可以序列化為完整實體。  
   
  下列程式碼片段說明如何取得本機執行：  
   

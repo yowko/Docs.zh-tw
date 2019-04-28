@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control types, Text
 ms.assetid: ab0d0ada-8a71-4547-9c03-aadf675938f2
 ms.openlocfilehash: f98477117981504b9c4df43626c7bcb8c4088922
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996550"
 ---
 # <a name="ui-automation-support-for-the-text-control-type"></a>Text 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -33,11 +33,11 @@ ms.locfileid: "59103775"
   
  控制項可以單獨用來當做標籤或當做表單上的靜態文字。 它也可以包含下列結構內：  
   
--   ListItem  
+- ListItem  
   
--   TreeItem  
+- TreeItem  
   
--   DataItem  
+- DataItem  
   
  文字控制項可能不在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視，因為文字通常是透過另一個控制項的 `NameProperty` 顯示。 例如，用來標示下拉式方塊控制項的文字會透過控制項的 `NameProperty` 值公開。 因為下拉式方塊控制項是在使用者介面自動化樹狀結構的內容檢視中，所以文字控制項不需要在那個檢視中。 文字控制項在內容檢視中一律有 0 個子系  
   

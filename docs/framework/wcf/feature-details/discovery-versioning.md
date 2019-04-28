@@ -3,11 +3,11 @@ title: 探索版本控制
 ms.date: 03/30/2017
 ms.assetid: f91c6d0a-3af2-45c5-9a5c-e75390619836
 ms.openlocfilehash: 18c160e5e08ed9b6733bed9d5e40a4dde00dfd1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856644"
 ---
 # <a name="discovery-versioning"></a>探索版本控制
 本主題簡要概述部分新探索功能的實作， 同時也概要說明如何選取要使用的探索版本。  
@@ -17,19 +17,19 @@ ms.locfileid: "33489176"
   
  下列探索類別現在具有 <xref:System.ServiceModel.Discovery.DiscoveryVersion> 屬性，並且會在其建構函式中採用 <xref:System.ServiceModel.Discovery.DiscoveryVersion> 引數：  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
   
 ### <a name="discoveryversionwsdiscoveryapril2005"></a>DiscoveryVersion.WSDiscoveryApril2005  
- 提供<xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryApril2005>是建構函式參數，會使實作使用 April2005 版 Ws-discovery 通訊協定。 這個版本對應至所發行的 WS-Discovery 通訊協定規格版本。 請使用這個版本與採用 April2005 版 WS-Discovery 的舊版應用程式交互操作。  
+ 提供<xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryApril2005>為建構函式參數會使實作使用 April2005 版 Ws-discovery 通訊協定。 這個版本對應至所發行的 WS-Discovery 通訊協定規格版本。 請使用這個版本與採用 April2005 版 WS-Discovery 的舊版應用程式交互操作。  
   
 ### <a name="discoveryversionwsdiscovery11"></a>DiscoveryVersion.WSDiscovery11  
- 應用程式開發介面所使用的預設探索版本是<xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscovery11>。 這是最新的標準版 WS-Discovery 通訊協定。  
+ Api 所使用的預設探索版本是<xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscovery11>。 這是最新的標準版 WS-Discovery 通訊協定。  
   
 ## <a name="discoveryversionwsdiscoverycd1"></a>DiscoveryVersion.WSDiscoveryCD1  
  若提供 <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryCD1> 做為建構函式參數，會使實作使用 WS-Discovery 通訊協定的 Committee Draft 1 版。 請使用這個版本的通訊協定與執行 CD1 版 WS-Discovery 的實作交互操作。  

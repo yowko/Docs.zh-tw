@@ -9,18 +9,18 @@ helpviewer_keywords:
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
 ms.openlocfilehash: de85a3aca629582e79712b71ae2e3413b919ab28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875156"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>使用二進位資料 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫可讓您擷取及更新中的二進位資料[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要在下列方面：  
   
--   當做實體的基本型別屬性。 如果要處理可以輕鬆載入記憶體的小型二進位資料物件，建議使用這個方法。 在此情況下，二進位屬性是資料模型所公開的實體屬性，而資料服務會將二進位資料序列化成為回應訊息中的 base-64 二進位編碼 XML。  
+- 當做實體的基本型別屬性。 如果要處理可以輕鬆載入記憶體的小型二進位資料物件，建議使用這個方法。 在此情況下，二進位屬性是資料模型所公開的實體屬性，而資料服務會將二進位資料序列化成為回應訊息中的 base-64 二進位編碼 XML。  
   
--   當做個別的二進位資源資料流。 如果要存取及變更可能代表相片、影片或是其他任何類型之二進位編碼資料的二進位大型物件 (BLOB) 資料，建議使用這個方法。  
+- 當做個別的二進位資源資料流。 如果要存取及變更可能代表相片、影片或是其他任何類型之二進位編碼資料的二進位大型物件 (BLOB) 資料，建議使用這個方法。  
   
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 實作資料的二進位資料流中所定義，使用 HTTP [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]。 在此機制中，二進位資料會視為不同的媒體資源，但與實體稱為媒體連結項目。 如需詳細資訊，請參閱 <<c0> [ 資料流處理提供者](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)。  
   

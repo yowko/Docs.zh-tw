@@ -12,11 +12,11 @@ helpviewer_keywords:
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
 ms.openlocfilehash: 33184d9be275f5e777ffd79c6dd4e3182d865de7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864673"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>HOW TO：計算數值 (Visual Basic)
 您可以計算數字的值，透過使用數值運算式。 A*數值運算式*運算式包含常值、 常數和變數表示數字的值，並處理那些值的運算子。  
@@ -25,7 +25,7 @@ ms.locfileid: "58825746"
   
 #### <a name="to-calculate-a-numeric-value"></a>若要計算數值的值  
   
--   結合的數值運算式的一或多個數值常值、 常數和變數。 下列範例顯示一些有效的數值運算式。  
+- 結合的數值運算式的一或多個數值常值、 常數和變數。 下列範例顯示一些有效的數值運算式。  
   
      `93.217`  
   
@@ -41,7 +41,7 @@ ms.locfileid: "58825746"
   
 #### <a name="to-store-a-numeric-value"></a>若要儲存的數值  
   
--   若要指派給變數，數值運算式所表示的值，如下列範例所示，您可以使用指派陳述式。  
+- 若要指派給變數，數值運算式所表示的值，如下列範例所示，您可以使用指派陳述式。  
   
      [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
@@ -54,7 +54,7 @@ ms.locfileid: "58825746"
   
 #### <a name="to-override-normal-operator-precedence"></a>若要覆寫正常的運算子優先順序  
   
--   您可以使用括號來括住您想要優先執行的作業。 下列範例顯示兩個不同的結果，以相同的運算元和運算子。  
+- 您可以使用括號來括住您想要優先執行的作業。 下列範例顯示兩個不同的結果，以相同的運算元和運算子。  
   
      [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   

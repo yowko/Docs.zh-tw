@@ -12,11 +12,11 @@ helpviewer_keywords:
 - toolbars [Windows Forms], customizing
 ms.assetid: 46acef3e-9844-4ae8-9a2e-3006fe99cadf
 ms.openlocfilehash: 857d5ea3771b098d4edcbd7b24f1e6feaf3ec2cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013032"
 ---
 # <a name="how-to-set-the-toolstrip-renderer-for-an-application"></a>HOW TO：設定應用程式的 ToolStrip 轉譯器
 您可以針對個別的 <xref:System.Windows.Forms.ToolStrip> 控制項，或是應用程式中的所有 <xref:System.Windows.Forms.ToolStrip> 控制項自訂外觀。  
@@ -40,7 +40,7 @@ ms.locfileid: "59083072"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   System.Design、System.Drawing 和 System.Windows.Forms 組件的參考。  
+- System.Design、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
 ms.openlocfilehash: 6e3ce2a184ca5411a6a016929a16bf3d67e669ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864230"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>HOW TO：呼叫程序不會傳回值 (Visual Basic)
 A`Sub`程序不會傳回呼叫程式碼的值。 明確呼叫它，以獨立的呼叫陳述式。 您無法直接使用其名稱，在運算式內呼叫它。  

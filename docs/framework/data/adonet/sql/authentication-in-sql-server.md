@@ -3,18 +3,18 @@ title: 在 SQL Server 中進行驗證
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
 ms.openlocfilehash: f7fac0756da3bcc19ee6370468f0e0e65c428d35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879006"
 ---
 # <a name="authentication-in-sql-server"></a>在 SQL Server 中進行驗證
 SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。  
   
--   Windows 驗證是預設設定，也經常稱為整合式安全性，因為這個 SQL Server 安全性模型會與 Windows 緊密整合。 特定的 Windows 使用者和群組帳戶會受信任而可登入 SQL Server。 已經過驗證的 Windows 使用者不必再提供額外認證資料。  
+- Windows 驗證是預設設定，也經常稱為整合式安全性，因為這個 SQL Server 安全性模型會與 Windows 緊密整合。 特定的 Windows 使用者和群組帳戶會受信任而可登入 SQL Server。 已經過驗證的 Windows 使用者不必再提供額外認證資料。  
   
--   混合模式支援 Windows 和 SQL Server 提供的驗證。 使用者名稱和密碼組會在 SQL Server 內進行維護。  
+- 混合模式支援 Windows 和 SQL Server 提供的驗證。 使用者名稱和密碼組會在 SQL Server 內進行維護。  
   
 > [!IMPORTANT]
 >  建議盡量使用「Windows 驗證」。 Windows 驗證會使用一系列的加密訊息在 SQL Server 中驗證使用者。 SQL Server 登入使用時，SQL Server 登入名稱及加密的密碼會透過網路，使其成為較不安全傳遞。  
@@ -31,19 +31,19 @@ SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。
 ## <a name="authentication-scenarios"></a>驗證案例  
  在下列情況中，Windows 驗證通常是最佳選擇：  
   
--   有網域控制站存在。  
+- 有網域控制站存在。  
   
--   應用程式和資料庫位於相同的電腦。  
+- 應用程式和資料庫位於相同的電腦。  
   
--   您正在使用 SQL Server Express 或 LocalDB 執行的個體。  
+- 您正在使用 SQL Server Express 或 LocalDB 執行的個體。  
   
  SQL Server 登入通常用於以下狀況：  
   
--   如果您擁有工作群組。  
+- 如果您擁有工作群組。  
   
--   使用者是自不同的非受信任網域進行連接。  
+- 使用者是自不同的非受信任網域進行連接。  
   
--   網際網路應用程式，例如 [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]。  
+- 網際網路應用程式，例如 [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]。  
   
 > [!NOTE]
 >  指定 Windows 驗證並不會停用 SQL Server 登入。 使用 ALTER LOGIN DISABLE[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]陳述式停用高特殊權限的 SQL Server 登入。  
@@ -51,11 +51,11 @@ SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。
 ## <a name="login-types"></a>登入類型  
  SQL Server 支援三種類型的登入：  
   
--   本機 Windows 使用者帳戶或受信任的網域帳戶。 SQL Server 會仰賴 Windows 來驗證 Windows 使用者帳戶。  
+- 本機 Windows 使用者帳戶或受信任的網域帳戶。 SQL Server 會仰賴 Windows 來驗證 Windows 使用者帳戶。  
   
--   Windows 群組。 如果授與存取權給 Windows 群組，則也會授權給全部該群組成員的 Windows 使用者登入。  
+- Windows 群組。 如果授與存取權給 Windows 群組，則也會授權給全部該群組成員的 Windows 使用者登入。  
   
--   SQL Server 登入。 SQL Server 會將使用者名稱和密碼雜湊儲存在 master 資料庫，並使用內部驗證方法確認登入作業。  
+- SQL Server 登入。 SQL Server 會將使用者名稱和密碼雜湊儲存在 master 資料庫，並使用內部驗證方法確認登入作業。  
   
 > [!NOTE]
 >  SQL Server 提供從憑證或非對稱金鑰只能用於程式碼簽署所建立的登入。 而不會用來連接至 SQL Server。  

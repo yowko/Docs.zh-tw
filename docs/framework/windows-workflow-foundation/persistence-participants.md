@@ -3,11 +3,11 @@ title: 持續性參與者
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
 ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672649"
 ---
 # <a name="persistence-participants"></a>持續性參與者
 持續性參與者可參與由應用程式主機所觸發的持續性作業 (「儲存」或「載入」)。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]隨附兩個抽象類別， **PersistenceParticipant**並**PersistenceIOParticipant**，這可用來建立持續性參與者。 持續性參與者會衍生自這些類別的其中一個、實作感興趣的方法，然後將類別的執行個體加入至 <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> 上的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 集合。 應用程式主機保存工作流程執行個體時，可能會尋找此類工作流程擴充功能，並且在適當的時間於持續性參與者上叫用適當的方法。  
@@ -48,17 +48,17 @@ ms.locfileid: "59316358"
   
  載入工作流程執行個體時，持續性提供者會建立該執行個體的鎖定。 這可防止在多節點的案例中，多個主機載入執行個體。 如果您嘗試載入已鎖定的工作流程執行個體，您會看到類似下列的例外狀況：例外狀況"System.ServiceModel.Persistence.InstanceLockException:要求的作業無法完成，因為鎖定執行個體 ' 00000000-0000-0000-0000-000000000000' 無法取得"。 當下列任一情形發生時，就會發生這個錯誤：  
   
--   在多節點的案例中，執行個體是由另一個主機載入。  有幾個不同的方法來解決這些類型的衝突：將處理轉送到擁有鎖定的節點然後重試，或是強制載入，這會導致其他主機無法儲存它們的工作。  
+- 在多節點的案例中，執行個體是由另一個主機載入。  有幾個不同的方法來解決這些類型的衝突：將處理轉送到擁有鎖定的節點然後重試，或是強制載入，這會導致其他主機無法儲存它們的工作。  
   
--   在單一節點的案例中且主機毀損。  當主機再次啟動時 (處理序回收或建立新的持續性提供者處理站)，新主機嘗試載入執行個體，但此執行個體仍被舊主機鎖定，因為鎖定尚未到期。  
+- 在單一節點的案例中且主機毀損。  當主機再次啟動時 (處理序回收或建立新的持續性提供者處理站)，新主機嘗試載入執行個體，但此執行個體仍被舊主機鎖定，因為鎖定尚未到期。  
   
--   在單一節點的案例中，出現問題的執行個體已在某個時間點中止，新的持續性提供者執行個體已建立，其具有不同的主機 ID。  
+- 在單一節點的案例中，出現問題的執行個體已在某個時間點中止，新的持續性提供者執行個體已建立，其具有不同的主機 ID。  
   
  鎖定逾時值預設為 5 分鐘，您可以在呼叫 <xref:System.ServiceModel.Persistence.PersistenceProvider.Load%2A> 時指定不同的逾時值。  
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [如何：建立自訂持續性參與者](how-to-create-a-custom-persistence-participant.md)  
+- [如何：建立自訂持續性參與者](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>另請參閱
 

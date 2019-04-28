@@ -3,11 +3,11 @@ title: F# Interactive (fsi.exe) 參考
 description: 了解如何F#Interactive (fsi.exe) 用來執行F#程式碼以互動方式在主控台上或執行F#指令碼。
 ms.date: 05/16/2016
 ms.openlocfilehash: 9ec780ca51eaa5ae0aa791eb509d8ad0865dc26f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982734"
 ---
 # <a name="interactive-programming-with-f"></a>F # 互動式程式設計\#
 

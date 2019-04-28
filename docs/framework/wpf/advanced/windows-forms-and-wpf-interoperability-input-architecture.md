@@ -14,22 +14,22 @@ helpviewer_keywords:
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
 ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007093"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Form 和 WPF 互通性輸入架構
 互通性之間[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]需要這兩種技術都有適當的鍵盤輸入的處理。 本主題會說明這些技術的實作方式鍵盤和訊息處理，以達到在混合式應用程式中的平順互通性。  
   
  本主題包含下列子章節：  
   
--   非強制回應表單和對話方塊  
+- 非強制回應表單和對話方塊  
   
--   WindowsFormsHost 鍵盤和訊息處理  
+- WindowsFormsHost 鍵盤和訊息處理  
   
--   ElementHost 鍵盤和訊息處理  
+- ElementHost 鍵盤和訊息處理  
   
 ## <a name="modeless-forms-and-dialog-boxes"></a>非強制回應表單和對話方塊  
  呼叫<xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>方法<xref:System.Windows.Forms.Integration.WindowsFormsHost>以開啟從非強制回應表單或對話方塊中的項目[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-應用程式。  
@@ -39,13 +39,13 @@ ms.locfileid: "59335715"
 ## <a name="windowsformshost-keyboard-and-message-processing"></a>WindowsFormsHost 鍵盤和訊息處理  
  當所裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-應用程式使用，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]鍵盤和訊息處理包含下列：  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost>類別會取得來自[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]訊息迴圈，藉由<xref:System.Windows.Interop.ComponentDispatcher>類別。  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>類別會取得來自[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]訊息迴圈，藉由<xref:System.Windows.Interop.ComponentDispatcher>類別。  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost>類別會建立代理[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]訊息迴圈，以確保該一般[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]鍵盤處理，就會發生。  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>類別會建立代理[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]訊息迴圈，以確保該一般[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]鍵盤處理，就會發生。  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost>類別會實作<xref:System.Windows.Interop.IKeyboardInputSink>介面，以協調與焦點管理[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>類別會實作<xref:System.Windows.Interop.IKeyboardInputSink>介面，以協調與焦點管理[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項自行註冊，並啟動其訊息迴圈。  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項自行註冊，並啟動其訊息迴圈。  
   
  下列各節說明這些部分的更多詳細資料中的程序。  
   
@@ -88,13 +88,13 @@ ms.locfileid: "59335715"
 ## <a name="elementhost-keyboard-and-message-processing"></a>ElementHost 鍵盤和訊息處理  
  當所裝載[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]鍵盤和訊息處理包含下列：  
   
--   <xref:System.Windows.Interop.HwndSource><xref:System.Windows.Interop.IKeyboardInputSink>，和<xref:System.Windows.Interop.IKeyboardInputSite>介面實作。  
+- <xref:System.Windows.Interop.HwndSource><xref:System.Windows.Interop.IKeyboardInputSink>，和<xref:System.Windows.Interop.IKeyboardInputSite>介面實作。  
   
--   按下 tab 鍵和鍵。  
+- 按下 tab 鍵和鍵。  
   
--   命令的索引鍵與對話方塊按鍵。  
+- 命令的索引鍵與對話方塊按鍵。  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 快速鍵對應處理程序。  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 快速鍵對應處理程序。  
   
  下列各節說明這些組件都更多詳細資料。  
   
@@ -118,11 +118,11 @@ ms.locfileid: "59335715"
   
  因為預設值<xref:System.Windows.Interop.HwndSource>實作<xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A>方法會傳回`false`，使用下列邏輯處理 WM_CHAR 訊息：  
   
--   <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType>方法會覆寫以確保所有的 WM_CHAR 訊息會轉送至裝載的項目。  
+- <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType>方法會覆寫以確保所有的 WM_CHAR 訊息會轉送至裝載的項目。  
   
--   如果按下 ALT 鍵時，訊息就會是 WM_SYSCHAR。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 不會前置處理此訊息透過<xref:System.Windows.Forms.Control.IsInputChar%2A>方法。 因此，<xref:System.Windows.Forms.Control.ProcessMnemonic%2A>會覆寫方法來查詢[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Input.AccessKeyManager>的已註冊的快速鍵。 如果找到已註冊的快速鍵，<xref:System.Windows.Input.AccessKeyManager>加以處理。  
+- 如果按下 ALT 鍵時，訊息就會是 WM_SYSCHAR。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 不會前置處理此訊息透過<xref:System.Windows.Forms.Control.IsInputChar%2A>方法。 因此，<xref:System.Windows.Forms.Control.ProcessMnemonic%2A>會覆寫方法來查詢[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Input.AccessKeyManager>的已註冊的快速鍵。 如果找到已註冊的快速鍵，<xref:System.Windows.Input.AccessKeyManager>加以處理。  
   
--   如果未按下 ALT 鍵時， [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager>類別處理未處理的輸入。 如果輸入是加速器，<xref:System.Windows.Input.AccessKeyManager>加以處理。 <xref:System.Windows.Input.InputManager.PostProcessInput>的未處理的 WM_CHAR 訊息處理事件。  
+- 如果未按下 ALT 鍵時， [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager>類別處理未處理的輸入。 如果輸入是加速器，<xref:System.Windows.Input.AccessKeyManager>加以處理。 <xref:System.Windows.Input.InputManager.PostProcessInput>的未處理的 WM_CHAR 訊息處理事件。  
   
  當使用者按下 ALT 鍵時，則加速器視覺提示會顯示整個表單上。 若要支援此行為，所有<xref:System.Windows.Forms.Integration.ElementHost>作用中的表單上的控制項接收 WM_SYSKEYDOWN 訊息，不論哪個控制項具有焦點。  
   

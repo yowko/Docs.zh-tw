@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30957
 ms.assetid: 561e593a-f50a-4b72-a708-4cab60ec7b28
 ms.openlocfilehash: bc4d05e52434cf62fa90671d29b407c83114b5d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801942"
 ---
 # <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a>函式評估已停用，因為先前的函式評估逾時
 函式評估已停用，因為先前的函式評估逾時。若要重新啟用函式評估，再次逐步執行或重新啟動偵錯。  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
 ms.openlocfilehash: 21a297208be045eea79d6f5ca6c8eac016d26345
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61804009"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>HOW TO：使用子時間表簡化動畫
 此範例示範如何使用子簡化動畫<xref:System.Windows.Media.Animation.ParallelTimeline>物件。 A<xref:System.Windows.Media.Animation.Storyboard>是一種<xref:System.Windows.Media.Animation.Timeline>，提供它所包含的時間軸目標資訊。 使用<xref:System.Windows.Media.Animation.Storyboard>提供時間軸目標資訊，包括物件和屬性的資訊。  

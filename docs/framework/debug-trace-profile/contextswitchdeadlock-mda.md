@@ -15,11 +15,11 @@ ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 43404ba24f6308d8da17b03df9997e893799c8d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875000"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 
@@ -39,11 +39,11 @@ ms.locfileid: "54643139"
 
 在符合下列所有條件的情況下，有可能會錯誤地啟用此 MDA：
 
--   應用程式直接或間接透過程式庫，從 STA 執行緒建立 COM 元件。
+- 應用程式直接或間接透過程式庫，從 STA 執行緒建立 COM 元件。
 
--   已在偵錯工具中停止應用程式，而使用者繼續應用程式，或執行步驟作業。
+- 已在偵錯工具中停止應用程式，而使用者繼續應用程式，或執行步驟作業。
 
--   未啟用 Unmanaged 偵錯。
+- 未啟用 Unmanaged 偵錯。
 
 若要判斷是否錯誤地啟用 MDA，請停用所有中斷點、重新啟動應用程式，並且讓它不間斷地執行。 如果未啟用 MDA，則可能初始啟用時發生錯誤。 若是如此，請停用 MDA，以避免阻礙偵錯工作階段。
 
@@ -58,7 +58,7 @@ ms.locfileid: "54643139"
 
 此 MDA 對 CLR 沒有影響。 它只會提報 COM 內容的相關資料。
 
-## <a name="output"></a>輸出
+## <a name="output"></a>Output
 
 描述目前內容和目標內容的訊息。
 
