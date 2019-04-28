@@ -11,11 +11,11 @@ helpviewer_keywords:
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
 ms.openlocfilehash: 5dea238629b282776cb45f7b388e655fa557d084
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674593"
 ---
 # <a name="clear-element-for-webrequestmodules-network-settings"></a>\<清除 > webRequestModules （網路設定） 的項目
 移除應用程式中的所有已註冊的 Web 要求模組。  

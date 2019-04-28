@@ -3,11 +3,11 @@ title: 屬性方格擴充性-WF 範例
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
 ms.openlocfilehash: f1cb64cb10e8d88359e8f94b57602ab127314cff
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57509547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004870"
 ---
 # <a name="property-grid-extensibility"></a>屬性方格擴充性
 

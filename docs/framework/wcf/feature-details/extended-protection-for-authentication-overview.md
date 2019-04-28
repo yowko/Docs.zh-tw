@@ -3,11 +3,11 @@ title: 驗證的延伸保護概觀
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
 ms.openlocfilehash: b171644c3869df119f09ee4815a06563c4f2c160
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856722"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>驗證的延伸保護概觀
 驗證的延伸保護有助於防範中間人 (MITM) 攻擊，以免用戶端的認證遭攻擊者攔截後再轉送至伺服器。  
@@ -24,11 +24,11 @@ ms.locfileid: "59183673"
   
  伺服器可以具備下列保護層級：  
   
--   無。 未執行通道繫結程序驗證。 此乃所有未更新之伺服器的行為。  
+- 無。 未執行通道繫結程序驗證。 此乃所有未更新之伺服器的行為。  
   
--   部分。 所有已更新的用戶端都必須向伺服器提供通道繫結資訊。 尚未更新的用戶端則沒有這個必要。 此乃顧及應用程式相容性的中繼選項。  
+- 部分。 所有已更新的用戶端都必須向伺服器提供通道繫結資訊。 尚未更新的用戶端則沒有這個必要。 此乃顧及應用程式相容性的中繼選項。  
   
--   完整。 所有用戶端都必須提供通道繫結資訊。 用戶端若未提供此資訊，伺服器會拒絕其驗證要求。  
+- 完整。 所有用戶端都必須提供通道繫結資訊。 用戶端若未提供此資訊，伺服器會拒絕其驗證要求。  
   
  如需詳細資訊，請參閱「Win7 CBT/延伸保護」範例。  
   

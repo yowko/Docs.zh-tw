@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5ad12f94-7459-4a93-a421-4160d1a90715
 ms.openlocfilehash: 405a82c625853d242ca68088ffdf81b6bcd7c518
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922209"
 ---
 # <a name="multiple-bulk-copy-operations"></a>多項大量複製作業
 您可以使用 <xref:System.Data.SqlClient.SqlBulkCopy> 類別的單一執行個體，執行多項大量複製作業。 如果複製 （例如，目的地資料表的名稱） 之間變更的作業參數，您必須先更新它們進行的任何後續呼叫**WriteToServer**方法，如下列範例所示。 除非明確地變更，否則所有屬性值都會保持與給定執行個體之前次大量複製作業時的值相同。  

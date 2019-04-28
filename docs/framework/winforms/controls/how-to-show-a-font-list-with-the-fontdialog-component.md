@@ -14,11 +14,11 @@ helpviewer_keywords:
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
 ms.openlocfilehash: 40679136ea62a437009b308a8b206cf251b46222
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012980"
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>HOW TO：使用 FontDialog 元件顯示字型清單
 [FontDialog](fontdialog-component-windows-forms.md)元件可讓使用者選取的字型，以及變更其顯示的層面，例如其加權和大小。  

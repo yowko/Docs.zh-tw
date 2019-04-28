@@ -3,11 +3,11 @@ title: LINQ to SQL 查詢
 ms.date: 03/30/2017
 ms.assetid: f4897aaa-7f44-4c20-a471-b948c2971aae
 ms.openlocfilehash: 49106502dc58eef36ea0c910c627c9cf397f419e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902872"
 ---
 # <a name="linq-to-sql-queries"></a>LINQ to SQL 查詢
 使用與 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 相同的語法，就可以定義 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 查詢。 唯一的差別在於查詢中參考的物件會對應至資料庫中的項目。 如需詳細資訊，請參閱 [LINQ 查詢簡介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。  

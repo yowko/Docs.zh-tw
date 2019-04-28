@@ -6,8 +6,8 @@ ms.openlocfilehash: cc13696cfd8eb2dcdf22fdc067518c8bd55ca32d
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004922"
 ---
 # <a name="linq-message-query-correlation"></a>LINQ 訊息查詢相互關聯
 這個範例示範如何使用自訂 <xref:System.ServiceModel.Dispatcher.MessageQuery> 實作 (而不是系統提供的 <xref:System.ServiceModel.XPathMessageQuery>) 來執行以內容為主的相互關聯。  
@@ -28,11 +28,11 @@ ms.locfileid: "59973313"
   
 2. 一旦加入 URL ACL，請使用下列步驟。  
   
-    1.  建置方案。  
+    1. 建置方案。  
   
-    2.  設定多個啟始專案，以滑鼠右鍵按一下方案，然後選取**設定啟始專案**。 新增**服務**並**用戶端**（依此順序） 做為多個啟始專案。  
+    2. 設定多個啟始專案，以滑鼠右鍵按一下方案，然後選取**設定啟始專案**。 新增**服務**並**用戶端**（依此順序） 做為多個啟始專案。  
   
-    3.  執行應用程式。 用戶端主控台會顯示傳送訂單及接收採購單識別碼、後續確認訂單的工作流程。 服務視窗會顯示正在處理的要求。  
+    3. 執行應用程式。 用戶端主控台會顯示傳送訂單及接收採購單識別碼、後續確認訂單的工作流程。 服務視窗會顯示正在處理的要求。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

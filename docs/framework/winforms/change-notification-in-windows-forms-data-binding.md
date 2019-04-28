@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
 ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011875"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Windows Form 資料繫結中的變更告知
 其中一個最重要的 Windows Form 資料繫結的概念是*變更通知*。 若要確保您的資料來源和繫結的控制項一律有最新的資料，您必須新增為資料繫結的變更通知。 具體來說，您想要確保繫結的控制項，會通知對他們的資料來源所做的變更，而且對控制項的繫結的屬性所做的變更會通知資料來源。  
   
  有不同類型的變更通知，根據資料繫結的類型：  
   
--   簡單繫結，在其中的單一控制項屬性繫結至物件的單一執行個體。  
+- 簡單繫結，在其中的單一控制項屬性繫結至物件的單一執行個體。  
   
--   清單架構繫結，其中可以包含單一的控制項屬性繫結到清單中項目的屬性或控制項屬性繫結至物件的清單。  
+- 清單架構繫結，其中可以包含單一的控制項屬性繫結到清單中項目的屬性或控制項屬性繫結至物件的清單。  
   
  此外，如果您要建立您想要用於資料繫結的 Windows Form 控制項，您必須套用*PropertyName*控制項，變更模式，使控制項的繫結屬性的變更會傳播至資料來源。  
   

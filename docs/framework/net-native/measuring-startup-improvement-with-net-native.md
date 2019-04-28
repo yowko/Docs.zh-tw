@@ -5,31 +5,31 @@ ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1484d50df51ea85a94da0aad1ebaab54b80a6ecb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866791"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>評估使用 .NET Native 的啟動改善
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 可大幅改善應用程式的啟動時間。 在可攜式、低電源的裝置上，以及用於複雜的應用程式時，這項改良功能尤其明顯。 本主題將協助您著手進行測量這項啟動改良功能所需的基本檢測。  
   
  為加速效能調查，.NET Framework 和 Windows 使用一個名為 Windows 事件追蹤 (ETW) 的事件架構，可讓您的應用程式在事件發生時通知工具。 然後您可以使用名為 PerfView 的工具，輕鬆檢視及分析 ETW 事件。 本主題將說明如何：  
   
--   使用 <xref:System.Diagnostics.Tracing.EventSource> 類別來發出事件。  
+- 使用 <xref:System.Diagnostics.Tracing.EventSource> 類別來發出事件。  
   
--   使用 PerfView 來收集這些事件。  
+- 使用 PerfView 來收集這些事件。  
   
--   使用 PerfView 來顯示這些事件。  
+- 使用 PerfView 來顯示這些事件。  
   
 ## <a name="using-eventsource-to-emit-events"></a>使用 EventSource 來發出事件  
  <xref:System.Diagnostics.Tracing.EventSource> 提供可用來建立自訂事件提供者的基底類別。 一般而言，您會建立 <xref:System.Diagnostics.Tracing.EventSource> 的子類別，並以您自己的事件方法來包裝 `Write*` 方法。 通常會為每個 <xref:System.Diagnostics.Tracing.EventSource> 使用單一子句模式。  
   
  例如，下列範例中的類別可以用來測量兩項效能特性：  
   
--   到呼叫 `App` 類別建構函式之前的時間。  
+- 到呼叫 `App` 類別建構函式之前的時間。  
   
--   到呼叫 `MainPage` 建構函式之前的時間。  
+- 到呼叫 `MainPage` 建構函式之前的時間。  
   
  [!code-csharp[ProjectN_ETW#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw1.cs#1)]  
   
@@ -39,13 +39,13 @@ ms.locfileid: "59088284"
   
  例如，假設您正在建立 RSS 閱讀程式。 幾個記錄事件的有趣位置是：  
   
--   第一次呈現主頁面時。  
+- 第一次呈現主頁面時。  
   
--   從本機儲存體將舊的 RSS 報導還原序列化時。  
+- 從本機儲存體將舊的 RSS 報導還原序列化時。  
   
--   您的應用程式開始同步處理新的報導時。  
+- 您的應用程式開始同步處理新的報導時。  
   
--   您的應用程式已經完成同步處理新的報導時。  
+- 您的應用程式已經完成同步處理新的報導時。  
   
  檢測應用程式很簡單：只要在衍生類別上呼叫適當的方法。 使用先前範例中的 `AppEventSource`，您可以檢測應用程式，如下所示：  
   
@@ -78,20 +78,20 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  啟動 PerfView 之後，請執行您的應用程式。 執行您的應用程式時，要記得幾件事：  
   
--   使用發行組建，而不是偵錯組建。 偵錯組建通常會包含額外的錯誤檢查和錯誤處理程式碼，可能會使您的應用程式執行速度比預期慢。  
+- 使用發行組建，而不是偵錯組建。 偵錯組建通常會包含額外的錯誤檢查和錯誤處理程式碼，可能會使您的應用程式執行速度比預期慢。  
   
--   附加偵錯工具來執行您的應用程式會影響應用程式的效能。  
+- 附加偵錯工具來執行您的應用程式會影響應用程式的效能。  
   
--   Windows 會使用多個快取策略來加速應用程式啟動時間。 如果您的應用程式目前快取在記憶體中，而且不必從磁碟載入，則啟動速度會較快。 若要確保一致性，請在開始測量之前，將您的應用程式開始並關閉數次。  
+- Windows 會使用多個快取策略來加速應用程式啟動時間。 如果您的應用程式目前快取在記憶體中，而且不必從磁碟載入，則啟動速度會較快。 若要確保一致性，請在開始測量之前，將您的應用程式開始並關閉數次。  
   
  如果您已經執行您的應用程式，而 PerfView 可以收集發出的事件，請選擇 [停止收集] 按鈕。 一般而言，您應該先停止收集，再關閉應用程式，這樣才不會收集到無關的事件。 不過，如果您要測量關機或暫停效能，您就會想要繼續收集。  
   
 ## <a name="displaying-the-events"></a>顯示事件  
  若要檢視已收集的事件，請使用 PerfView 來開啟您建立的 .etl 或 .etl.zip 檔案，然後選擇 [事件]。 ETW 將已經收集大量事件的相關資訊，包括來自其他處理序的事件。 若要專注您的調查，請在 [事件] 檢視中填寫下列文字方塊：  
   
--   在 [Process Filter] (處理序篩選) 方塊中，指定您的應用程式名稱 (不含 ".exe")。  
+- 在 [Process Filter] (處理序篩選) 方塊中，指定您的應用程式名稱 (不含 ".exe")。  
   
--   在 [Event Types Filter] (事件類型篩選) 方塊中，指定 `Process/Start | MyCompany-MyApp`。 這會從 MyCompany-MyApp 和 Windows 核心/處理/開始事件設定事件的篩選。  
+- 在 [Event Types Filter] (事件類型篩選) 方塊中，指定 `Process/Start | MyCompany-MyApp`。 這會從 MyCompany-MyApp 和 Windows 核心/處理/開始事件設定事件的篩選。  
   
  選取左窗格中列出的所有事件 (Ctrl-A)，然後選擇 **Enter** 鍵。 現在，您應該可以看到每個事件的時間戳記。 這些時間戳記相對於追蹤的開始，所以您必須處理序的開始時間減去每個事件的時間，以識別自啟動後所耗用的時間。 如果您使用 Ctrl+按一下的方式來選取兩個時間戳記，您會看到其之間的差異顯示在頁面底部的狀態列中。 這樣可以讓您很容易在顯示器中查看任何兩個事件之間的經歷時間 (包括處理開始)。 您可以開啟檢視的快顯功能表，並從一些有用的選項中選取，像是匯出至 CSV 檔案，或是開啟 Microsoft Excel 來儲存或處理資料。  
   

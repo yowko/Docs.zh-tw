@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
 ms.openlocfilehash: 95bfa3da5499c518dad0c235b539784fee2bb522
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61975971"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>HOW TO：宣告常數 (Visual Basic)
 您使用`Const`陳述式來宣告常數，並將其值設定。 藉由宣告為常數，您可以指派有意義的名稱的值。 一旦宣告為常數，它無法修改或指派新值。  
@@ -41,7 +41,7 @@ ms.locfileid: "58843405"
   
 ### <a name="to-declare-a-constant"></a>若要宣告常數  
   
--   撰寫包含存取規範，宣告`Const`關鍵字，且運算式，如下列範例所示：  
+- 撰寫包含存取規範，宣告`Const`關鍵字，且運算式，如下列範例所示：  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
@@ -51,7 +51,7 @@ ms.locfileid: "58843405"
   
 ### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>若要宣告具有明確陳述的資料類型的常數  
   
--   撰寫包含宣告`As`關鍵字和明確的資料類型，如下列範例所示：  
+- 撰寫包含宣告`As`關鍵字和明確的資料類型，如下列範例所示：  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
@@ -59,7 +59,7 @@ ms.locfileid: "58843405"
   
 ### <a name="to-declare-multiple-constants-on-a-single-line"></a>若要在單一行中宣告多個常數  
   
--   分隔的宣告，使用逗號和空格，如下列範例所示：  
+- 分隔的宣告，使用逗號和空格，如下列範例所示：  
   
     ```  
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  

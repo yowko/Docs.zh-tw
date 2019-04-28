@@ -3,11 +3,11 @@ title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
 ms.openlocfilehash: 9353b143a328e0fb183b7870332462a0a2c91b10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879056"
 ---
 # <a name="facet"></a>facet
 A *facet*用以基本型別屬性定義中加入詳細資料。 A[屬性](../../../../docs/framework/data/adonet/property.md)定義包含有關屬性型別資訊，但通常是需要更多詳細資料。 例如，概念模型中的實體類型可能會有 `String` 型別的屬性，其值不可設為 null。 Facet 可讓您指定此詳細層級。  

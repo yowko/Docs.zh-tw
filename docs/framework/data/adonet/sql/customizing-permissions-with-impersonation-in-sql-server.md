@@ -3,11 +3,11 @@ title: 在 SQL Server 中使用模擬來自訂權限
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
 ms.openlocfilehash: dd7fb4c94c5a0a9bca0cd36b8d76864158072d4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877900"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>在 SQL Server 中使用模擬來自訂權限
 許多應用程式會使用預存程序 (Stored Procedure) 來存取資料，並仰賴擁有權鏈結來限制基底資料表的存取。 您可以授與預存程序的 EXECUTE 權限，並撤銷或拒絕基底資料表的權限。 如果預存程序和資料表具有相同的擁有者，SQL Server 就不會檢查呼叫端的權限。 不過，如果物件具有不同的擁有者或在動態 SQL 的情況中，擁有權鏈結便沒有作用。  
@@ -59,11 +59,11 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="specifying-the-execution-context"></a>指定執行內容  
  除了指定使用者以外，您也可以使用 EXECUTE AS 搭配下列任何關鍵字。  
   
--   CALLER： 以 CALLER 的身分執行是預設值。如果沒有指定任何其他選項，此程序就會在呼叫端的安全性內容中執行。  
+- CALLER： 以 CALLER 的身分執行是預設值。如果沒有指定任何其他選項，此程序就會在呼叫端的安全性內容中執行。  
   
--   OWNER： 以 OWNER 的身分執行會在程序擁有者的內容中執行此程序。 如果此程序建立於 `dbo` 或資料庫擁有者所擁有的結構描述中，此程序將以不受限制的權限執行。  
+- OWNER： 以 OWNER 的身分執行會在程序擁有者的內容中執行此程序。 如果此程序建立於 `dbo` 或資料庫擁有者所擁有的結構描述中，此程序將以不受限制的權限執行。  
   
--   SELF： 以 SELF 的身分執行會在預存程序之建立者的安全性內容中執行。 這相當於以指定之使用者的身分執行，而該指定的使用者是建立或更改程序的人員。  
+- SELF： 以 SELF 的身分執行會在預存程序之建立者的安全性內容中執行。 這相當於以指定之使用者的身分執行，而該指定的使用者是建立或更改程序的人員。  
   
 ## <a name="see-also"></a>另請參閱
 

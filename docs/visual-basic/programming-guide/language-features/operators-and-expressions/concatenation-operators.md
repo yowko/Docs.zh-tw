@@ -10,11 +10,11 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
 ms.openlocfilehash: 124f0ca0cd01d7fd218fd89dfb78e70fe8aad9e4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864927"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Visual Basic 中的串連運算子
 串連運算子會將多個字串連成單一字串。 串連運算子有兩種：`+` 和 `&`。 兩者都會進行基本的串連作業，如下例所示。  

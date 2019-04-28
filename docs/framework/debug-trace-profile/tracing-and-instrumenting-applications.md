@@ -16,24 +16,24 @@ ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876144"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>追蹤和稽核應用程式
 追蹤可讓您在應用程式執行時，監視應用程式的執行。 您可以在開發 .NET Framework 應用程式時，加入追蹤和偵錯檢測，當您在開發應用程式時，以及將其部署之後，都可以使用該檢測。 您可以使用 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType> 和 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 類別，將錯誤和應用程式執行的相關資訊，記錄在記錄檔、文字檔案或其他裝置中，以供稍後進行分析。  
   
  「檢測」一詞是指監視或測量產品效能層級，以及診斷錯誤的能力。 在程式設計中，這表示應用程式納入下列項目的能力：  
   
--   **程式碼追蹤** - 接收在執行階段有關應用程式執行的參考訊息。  
+- **程式碼追蹤** - 接收在執行階段有關應用程式執行的參考訊息。  
   
--   **偵錯** - 追蹤並修正開發中之應用程式的程式設計錯誤。 如需詳細資訊，請參閱[偵錯](/visualstudio/debugger/debugging-in-visual-studio)。  
+- **偵錯** - 追蹤並修正開發中之應用程式的程式設計錯誤。 如需詳細資訊，請參閱[偵錯](/visualstudio/debugger/debugging-in-visual-studio)。  
   
--   **效能計數器** - 可讓您追蹤應用程式效能的元件。 如需詳細資訊，請參閱[效能計數器](../../../docs/framework/debug-trace-profile/performance-counters.md)。  
+- **效能計數器** - 可讓您追蹤應用程式效能的元件。 如需詳細資訊，請參閱[效能計數器](../../../docs/framework/debug-trace-profile/performance-counters.md)。  
   
--   **事件記錄檔** - 這些元件可讓您接收和追蹤應用程式執行時的主要事件。 如需詳細資訊，請參閱 <xref:System.Diagnostics.EventLog> 類別。  
+- **事件記錄檔** - 這些元件可讓您接收和追蹤應用程式執行時的主要事件。 如需詳細資訊，請參閱 <xref:System.Diagnostics.EventLog> 類別。  
   
  在程式碼的策略性位置上放置追蹤陳述式來檢測應用程式，特別適用於分散式應用程式。 使用追蹤陳述式可讓您檢測應用程式，不僅可以在發生錯誤時顯示資訊，還可以監視應用程式執行的效能。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "59298901"
  <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 類別提供方法來監視及檢查開發期間或部署後的應用程式效能。 例如，您可使用 <xref:System.Diagnostics.Trace> 類別來追蹤出現於部署應用程式中的特定動作類型 (例如，建立新的資料庫連接)，並藉此監視應用程式的效率。  
   
 ## <a name="code-tracing-and-debugging"></a>程式碼追蹤和偵錯  
- 在開發期間，您可以使用 <xref:System.Diagnostics.Debug> 類別的輸出方法，在 Visual Studio 整合式開發環境 (IDE) 的 [輸出] 視窗中顯示訊息。 例如:   
+ 在開發期間，您可以使用 <xref:System.Diagnostics.Debug> 類別的輸出方法，在 Visual Studio 整合式開發環境 (IDE) 的 [輸出] 視窗中顯示訊息。 例如：  
   
 ```vb  
 Trace.WriteLine("Hello World!")  
@@ -91,11 +91,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 6. 使用下列其中一個程序，將應用程式編譯為可執行的程式碼：  
   
-    -   使用 [建置] 功能表，以及方案總管中 [屬性頁] 對話方塊的 [偵錯] 頁面。 在 Visual Studio 中進行編譯時，請使用此選項。  
+    - 使用 [建置] 功能表，以及方案總管中 [屬性頁] 對話方塊的 [偵錯] 頁面。 在 Visual Studio 中進行編譯時，請使用此選項。  
   
          \-或-  
   
-    -   使用**追蹤**和**偵錯**編譯器指示詞來進行命令列方法的編譯。 如需詳細資訊，請參閱[使用追蹤和偵錯進行條件式編譯](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。 從命令列編譯時，請使用此選項。  
+    - 使用**追蹤**和**偵錯**編譯器指示詞來進行命令列方法的編譯。 如需詳細資訊，請參閱[使用追蹤和偵錯進行條件式編譯](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。 從命令列編譯時，請使用此選項。  
   
 7. 如果在執行階段期間發生問題，請開啟適當的追蹤參數。 如需詳細資訊，請參閱[設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。  
   

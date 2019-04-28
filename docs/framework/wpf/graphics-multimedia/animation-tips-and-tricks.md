@@ -15,11 +15,11 @@ helpviewer_keywords:
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
 ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020266"
 ---
 # <a name="animation-tips-and-tricks"></a>動畫秘訣和訣竅
 使用中的動畫時[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、 有一些秘訣和技巧，讓動畫有較佳，並減少您的挫折。  
@@ -41,11 +41,11 @@ ms.locfileid: "59295948"
   
  針對<xref:System.Windows.Media.Animation.Timeline>以反映變更，其時鐘必須重新產生並用以取代先前建立的時鐘。 時鐘不會自動產生。 以下是幾種可套用時間軸變更的方式︰  
   
--   如果時間軸是或屬於<xref:System.Windows.Media.Animation.Storyboard>，您可以將它重新套用其分鏡腳本的使用，以反映變更<xref:System.Windows.Media.Animation.BeginStoryboard>或<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>方法。 這也會一併重新啟動動畫。 在程式碼中，您可以使用<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>方法將分鏡腳本回它先前的位置。  
+- 如果時間軸是或屬於<xref:System.Windows.Media.Animation.Storyboard>，您可以將它重新套用其分鏡腳本的使用，以反映變更<xref:System.Windows.Media.Animation.BeginStoryboard>或<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>方法。 這也會一併重新啟動動畫。 在程式碼中，您可以使用<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>方法將分鏡腳本回它先前的位置。  
   
--   如果您直接將屬性套用動畫<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法中，呼叫<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法一次，並將它傳遞已修改的動畫。  
+- 如果您直接將屬性套用動畫<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法中，呼叫<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法一次，並將它傳遞已修改的動畫。  
   
--   如果您直接在時鐘層級運作，請建立並套用一組新的時鐘，並使用它們來取代前一組產生的時鐘。  
+- 如果您直接在時鐘層級運作，請建立並套用一組新的時鐘，並使用它們來取代前一組產生的時鐘。  
   
  如需有關時間軸和時鐘的詳細資訊，請參閱[動畫和計時系統概觀](animation-and-timing-system-overview.md)。  
   
@@ -105,13 +105,13 @@ ms.locfileid: "59295948"
   
  移除動畫有許多不同的方式。 下列技術可用來移除屬於動畫<xref:System.Windows.Media.Animation.Storyboard>。  
   
--   若要移除<xref:System.Windows.Media.Animation.Storyboard>您開始使用事件觸發程序，請參閱[How to:移除分鏡腳本](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90))。  
+- 若要移除<xref:System.Windows.Media.Animation.Storyboard>您開始使用事件觸發程序，請參閱[How to:移除分鏡腳本](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90))。  
   
--   若要使用程式碼來移除<xref:System.Windows.Media.Animation.Storyboard>，請參閱<xref:System.Windows.Media.Animation.Storyboard.Remove%2A>方法。  
+- 若要使用程式碼來移除<xref:System.Windows.Media.Animation.Storyboard>，請參閱<xref:System.Windows.Media.Animation.Storyboard.Remove%2A>方法。  
   
  不論啟動動畫的方式為何，都可以使用下一個技術。  
   
--   若要移除的特定屬性的動畫，請使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29>方法。 指定的第一個參數，要繪製之屬性和`null`作為第二個。 這將會從屬性移除所有動畫時鐘。  
+- 若要移除的特定屬性的動畫，請使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29>方法。 指定的第一個參數，要繪製之屬性和`null`作為第二個。 這將會從屬性移除所有動畫時鐘。  
   
  如需以動畫顯示屬性的不同方式的詳細資訊，請參閱[屬性動畫技術概觀](property-animation-techniques-overview.md)。  
   
@@ -120,9 +120,9 @@ ms.locfileid: "59295948"
   
  若要避免發生效能問題，當您套用大量時鐘使用<xref:System.Windows.Media.Animation.HandoffBehavior.Compose>，完成之後，您應該從動畫屬性移除組成的時鐘。 有幾個方式可移除時鐘。  
   
--   若要從屬性移除所有時鐘，請使用<xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29>或<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29>動畫物件的方法。 指定的第一個參數，要繪製之屬性和`null`作為第二個。 這將會從屬性移除所有動畫時鐘。  
+- 若要從屬性移除所有時鐘，請使用<xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29>或<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29>動畫物件的方法。 指定的第一個參數，要繪製之屬性和`null`作為第二個。 這將會從屬性移除所有動畫時鐘。  
   
--   若要移除特定<xref:System.Windows.Media.Animation.AnimationClock>從時鐘清單，使用<xref:System.Windows.Media.Animation.Clock.Controller%2A>屬性<xref:System.Windows.Media.Animation.AnimationClock>擷取<xref:System.Windows.Media.Animation.ClockController>，然後呼叫<xref:System.Windows.Media.Animation.ClockController.Remove%2A>方法<xref:System.Windows.Media.Animation.ClockController>。 這通常是<xref:System.Windows.Media.Animation.Clock.Completed>時鐘的事件處理常式。 請注意，只有根時鐘可以控制<xref:System.Windows.Media.Animation.ClockController>;<xref:System.Windows.Media.Animation.Clock.Controller%2A>的子系時鐘的屬性會傳回`null`。 也請注意，<xref:System.Windows.Media.Animation.Clock.Completed>是否有效的持續時間的時鐘永遠不會呼叫事件。  在此情況下，使用者必須決定何時要呼叫<xref:System.Windows.Media.Animation.ClockController.Remove%2A>。  
+- 若要移除特定<xref:System.Windows.Media.Animation.AnimationClock>從時鐘清單，使用<xref:System.Windows.Media.Animation.Clock.Controller%2A>屬性<xref:System.Windows.Media.Animation.AnimationClock>擷取<xref:System.Windows.Media.Animation.ClockController>，然後呼叫<xref:System.Windows.Media.Animation.ClockController.Remove%2A>方法<xref:System.Windows.Media.Animation.ClockController>。 這通常是<xref:System.Windows.Media.Animation.Clock.Completed>時鐘的事件處理常式。 請注意，只有根時鐘可以控制<xref:System.Windows.Media.Animation.ClockController>;<xref:System.Windows.Media.Animation.Clock.Controller%2A>的子系時鐘的屬性會傳回`null`。 也請注意，<xref:System.Windows.Media.Animation.Clock.Completed>是否有效的持續時間的時鐘永遠不會呼叫事件。  在此情況下，使用者必須決定何時要呼叫<xref:System.Windows.Media.Animation.ClockController.Remove%2A>。  
   
  這主要是在存留期較長的物件才會發生的動畫問題。  記憶體回收物件時，也會中斷連接並記憶體回收其時鐘。  
   

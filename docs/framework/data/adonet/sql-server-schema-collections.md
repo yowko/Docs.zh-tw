@@ -3,11 +3,11 @@ title: SQL Server 結構描述集合
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
 ms.openlocfilehash: 79bf9f1253b64863d3eabddff8c33b6ffab70f41
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878456"
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server 結構描述集合
 除了通用結構描述集合之外，Microsoft .NET Framework Data Provider for SQL Server 還支援其他結構描述集合。 這些結構描述集合會因您目前使用的 SQL Server 版本而稍微不同。 若要判斷支援的結構描述集合清單，請呼叫**GetSchema**方法沒有引數，或以結構描述集合名稱"MetaDataCollections"。 這會傳回 <xref:System.Data.DataTable>，包括支援的結構描述集合清單、每個集合所支援的限制數目，以及集合所使用之識別項部分的數目。  

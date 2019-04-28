@@ -15,11 +15,11 @@ ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 85a1a017197826717280f53995ed98f26f1d80bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61873856"
 ---
 # <a name="trace-switches"></a>追蹤參數
 追蹤參數可讓您啟用、停用和篩選追蹤輸出。 它們是存在於您的程式碼中的物件，並可透過 .config 檔案在外部設定。 .NET Framework 中提供三種類型的追蹤參數： <xref:System.Diagnostics.BooleanSwitch> 類別、 <xref:System.Diagnostics.TraceSwitch> 類別和 <xref:System.Diagnostics.SourceSwitch> 類別。 <xref:System.Diagnostics.BooleanSwitch> 類別是做為切換參數，可啟用或停用各種追蹤陳述式。 <xref:System.Diagnostics.TraceSwitch> 和 <xref:System.Diagnostics.SourceSwitch> 類別可讓您針對特定追蹤層級啟用追蹤參數，以顯示針對該層級及其下所有層級指定的 <xref:System.Diagnostics.Trace> 或 <xref:System.Diagnostics.TraceSource> 訊息。 如果您停用此參數，就不會顯示追蹤訊息。 所有這些類別都是衍生自抽象 (**MustInherit**) 類別 **Switch**，如同任何使用者開發的參數。  
@@ -33,13 +33,13 @@ ms.locfileid: "59132661"
 ## <a name="trace-levels"></a>追蹤層級  
  當您使用 **TraceSwitch**時，還有其他考量。 **TraceSwitch** 物件有四個會傳回 **布林** 值的屬性，指出該參數是否至少設定為某個特定層級：  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=nameWithType>  
   
  層級可讓您將所接收的追蹤資訊量，僅限於解決問題所需的資訊。 您可以將追蹤參數設為適當的追蹤層級，以指定您想要的追蹤輸出詳細程度。 您可以接收錯誤訊息、警告訊息、告知性訊息、詳細的追蹤訊息，或沒有任何訊息。  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
 ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857788"
 ---
 # <a name="bindings-and-security"></a>繫結和安全性
 包含與 Windows Communication Foundation (WCF) 的系統提供繫結會提供程式 WCF 應用程式的快速方法。 除了一個例外狀況以外，所有繫結預設都會啟用安全性配置。 本主題將根據您的安全性需求，協助您選取正確的繫結。  
@@ -35,21 +35,21 @@ ms.locfileid: "59611899"
   
  這個繫結是設計用來與一系列現有技術搭配使用的，包括下列各項：  
   
--   ASP.NET Web 服務 (ASMX) 第 1 版。  
+- ASP.NET Web 服務 (ASMX) 第 1 版。  
   
--   Web Service Enhancements (WSE) 應用程式。  
+- Web Service Enhancements (WSE) 應用程式。  
   
--   基本設定檔中的 Web 服務互通性所定義 (WS-我) 規格 (<https://go.microsoft.com/fwlink/?LinkId=38955>)。  
+- 基本設定檔中的 Web 服務互通性所定義 (WS-我) 規格 (<https://go.microsoft.com/fwlink/?LinkId=38955>)。  
   
--   如 WS-I 中定義的 Basic Security Profile。  
+- 如 WS-I 中定義的 Basic Security Profile。  
   
  根據預設，這個繫結是不安全的。 它是針對與 ASMX 服務相互操作所設計的。 啟用安全性時，繫結是設計成可用來與 Internet Information Services (IIS) 安全性機制進行順暢互通的，例如：基本的驗證、摘要和整合式 Windows 安全性。 如需詳細資訊，請參閱 <<c0> [ 傳輸安全性概觀](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。 這個繫結支援下列各項：  
   
--   HTTPS 傳輸安全性。  
+- HTTPS 傳輸安全性。  
   
--   HTTP 基本驗證。  
+- HTTP 基本驗證。  
   
--   WS-Security。  
+- WS-Security。  
   
  如需詳細資訊，請參閱<xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType>和<xref:System.ServiceModel.BasicHttpSecurityMode>.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "59611899"
   
  根據預設，這個繫結會實作 WS-Security 規格，並提供與實作 WS-* 規格之服務的互通性。 它支援下列各項：  
   
--   HTTPS 傳輸安全性。  
+- HTTPS 傳輸安全性。  
   
--   WS-Security。  
+- WS-Security。  
   
--   用於驗證呼叫者的 HTTPS 傳輸保護 (具 SOAP 訊息認證安全性)。  
+- 用於驗證呼叫者的 HTTPS 傳輸保護 (具 SOAP 訊息認證安全性)。  
   
  如需詳細資訊，請參閱 < <xref:System.ServiceModel.WSHttpSecurity>， <xref:System.ServiceModel.MessageSecurityOverHttp>， <xref:System.ServiceModel.MessageCredentialType>， <xref:System.ServiceModel.SecurityMode>， <xref:System.ServiceModel.HttpTransportSecurity>， <xref:System.ServiceModel.HttpClientCredentialType>，和<xref:System.ServiceModel.HttpProxyCredentialType>。  
   
@@ -71,23 +71,23 @@ ms.locfileid: "59611899"
   
  這個繫結設計的目的，是為了要提供雙工服務應用程式。 這個繫結實作了 WS-Security 規格，以提供訊息傳輸安全性。 傳輸安全性在此無法使用。 根據預設，這個繫結提供了下列功能：  
   
--   實作 WS-Reliable 訊息以提供可靠性。  
+- 實作 WS-Reliable 訊息以提供可靠性。  
   
--   實作 WS-Security 以提供傳輸安全性和驗證。  
+- 實作 WS-Security 以提供傳輸安全性和驗證。  
   
--   使用 HTTP 傳遞訊息。  
+- 使用 HTTP 傳遞訊息。  
   
--   使用 text/XML 訊息編碼。  
+- 使用 text/XML 訊息編碼。  
   
  使用 WS-Security (訊息層安全性) 時，繫結可讓您設定下列參數：  
   
--   安全性演算法組合，用於判斷密碼編譯演算法。  
+- 安全性演算法組合，用於判斷密碼編譯演算法。  
   
--   可供下列項目運用的繫結選項：  
+- 可供下列項目運用的繫結選項：  
   
-    -   經由超出範圍的方式，提供可在用戶端使用的服務認證。  
+    - 經由超出範圍的方式，提供可在用戶端使用的服務認證。  
   
-    -   提供通道設定期間之服務交涉的服務認證。  
+    - 提供通道設定期間之服務交涉的服務認證。  
   
  如需詳細資訊，請參閱 <xref:System.ServiceModel.WSDualHttpSecurity> 與 <xref:System.ServiceModel.WSDualHttpSecurityMode>。  
   
@@ -96,21 +96,21 @@ ms.locfileid: "59611899"
   
  這個繫結已針對跨電腦通訊進行最佳化。 根據預設，這個繫結具有下列特性：  
   
--   實作傳輸層安全性。  
+- 實作傳輸層安全性。  
   
--   以 Windows 安全性提供傳輸安全性和驗證。  
+- 以 Windows 安全性提供傳輸安全性和驗證。  
   
--   使用 TCP 進行傳輸。  
+- 使用 TCP 進行傳輸。  
   
--   實作二進位訊息編碼。  
+- 實作二進位訊息編碼。  
   
--   實作 WS-Reliable 訊息。  
+- 實作 WS-Reliable 訊息。  
   
  包括下列選項：  
   
--   訊息層安全性 (使用 WS-Security)。  
+- 訊息層安全性 (使用 WS-Security)。  
   
--   使用訊息認證的傳輸安全性，其機密性和完整性是由透過 TCP 之上的傳輸層安全性 (TLS) 所提供，而授權的認證則是由 WS-Security 提供。  
+- 使用訊息認證的傳輸安全性，其機密性和完整性是由透過 TCP 之上的傳輸層安全性 (TLS) 所提供，而授權的認證則是由 WS-Security 提供。  
   
  如需詳細資訊，請參閱 < <xref:System.ServiceModel.NetTcpSecurity>， <xref:System.ServiceModel.TcpTransportSecurity>， <xref:System.ServiceModel.TcpClientCredentialType>， <xref:System.ServiceModel.MessageSecurityOverTcp>，和<xref:System.ServiceModel.MessageCredentialType>。  
   
@@ -119,17 +119,17 @@ ms.locfileid: "59611899"
   
  這個繫結已針對跨處理序通訊進行最佳化 (通常是在同一部電腦上)。 根據預設，這個繫結具有下列特性：  
   
--   使用傳輸安全性進行訊息傳輸和驗證。  
+- 使用傳輸安全性進行訊息傳輸和驗證。  
   
--   使用具名管道 (Named Pipe) 傳遞訊息。  
+- 使用具名管道 (Named Pipe) 傳遞訊息。  
   
--   實作二進位訊息編碼。  
+- 實作二進位訊息編碼。  
   
--   加密和訊息簽署。  
+- 加密和訊息簽署。  
   
  包括下列選項：  
   
--   使用 Windows 安全性進行驗證。  
+- 使用 Windows 安全性進行驗證。  
   
  如需詳細資訊，請參閱<xref:System.ServiceModel.NetNamedPipeSecurity>、<xref:System.ServiceModel.NetNamedPipeSecurityMode>和<xref:System.ServiceModel.NamedPipeTransportSecurity>。  
   
@@ -140,9 +140,9 @@ ms.locfileid: "59611899"
   
  根據預設，這個繫結會使用傳輸安全性，並提供下列安全性特性：  
   
--   可以停用安全性 (無)。  
+- 可以停用安全性 (無)。  
   
--   MSMQ 傳輸安全性 (傳輸)。  
+- MSMQ 傳輸安全性 (傳輸)。  
   
  如需詳細資訊，請參閱 <xref:System.ServiceModel.NetMsmqSecurity> 與 <xref:System.ServiceModel.NetMsmqSecurityMode>。  
   
@@ -153,15 +153,15 @@ ms.locfileid: "59611899"
   
  根據預設，這個繫結會使用傳輸安全性，並提供下列安全性特性：  
   
--   可以停用安全性 (無)。  
+- 可以停用安全性 (無)。  
   
--   MSMQ 傳輸安全性 (傳輸)。  
+- MSMQ 傳輸安全性 (傳輸)。  
   
--   SOAP 訊息安全性 (訊息)。  
+- SOAP 訊息安全性 (訊息)。  
   
--   同時具有傳輸和訊息安全性 (兩者並存)。  
+- 同時具有傳輸和訊息安全性 (兩者並存)。  
   
--   支援的用戶端認證類型：無、 Windows、 UserName、 憑證、 IssuedToken。  
+- 支援的用戶端認證類型：無、 Windows、 UserName、 憑證、 IssuedToken。  
   
  只有在將安全性模式設定為 <xref:System.ServiceModel.MessageCredentialType.Certificate> 或 <xref:System.ServiceModel.NetMsmqSecurityMode.Both> 時，才會支援 <xref:System.ServiceModel.NetMsmqSecurityMode.Message> 認證。  
   

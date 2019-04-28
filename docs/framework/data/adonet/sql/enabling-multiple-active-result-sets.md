@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
 ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877678"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>啟用 Multiple Active Result Sets
 Multiple Active Result Set (MARS) 是與 SQL Server 搭配使用的功能，它允許在單一連接中執行多個批次作業。 啟用 MARS 以與 SQL Server 搭配使用時，使用的每個命令物件都會在連接中加入工作階段。  
@@ -75,15 +75,15 @@ string connectionString = "Data Source=MSSQL1;" +
   
  批次執行環境包含下列元件：  
   
--   設定選項 (例如，ANSI_NULLS、DATE_FORMAT、LANGUAGE、TEXTSIZE)  
+- 設定選項 (例如，ANSI_NULLS、DATE_FORMAT、LANGUAGE、TEXTSIZE)  
   
--   安全性內容 (使用者/應用程式角色)  
+- 安全性內容 (使用者/應用程式角色)  
   
--   資料庫內容 (目前資料庫)  
+- 資料庫內容 (目前資料庫)  
   
--   執行狀態變數 (例如，@@ERROR，@@ROWCOUNT，@@FETCH_STATUS @@IDENTITY)  
+- 執行狀態變數 (例如，@@ERROR，@@ROWCOUNT，@@FETCH_STATUS @@IDENTITY)  
   
--   最上層暫存資料表  
+- 最上層暫存資料表  
   
  使用 MARS，預設的執行環境可與連接產生關聯。 在指定連接下開始執行的每個新批次作業，都會收到預設環境的複本。 每當程式碼在指定批次作業下執行時，對環境所做的所有變更都只限於該特定批次作業。 執行一旦完成，便會將執行設定複製到預設環境中。 當單一批次作業發出要在同一異動下循序執行的數個命令時，其語意與舊版用戶端或伺服器相關的連接所公開的語意相同。  
   

@@ -13,11 +13,11 @@ ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9ecdfd708217f260b0c02383159fab88948029c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874207"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance MDA
 
@@ -44,7 +44,7 @@ ms.locfileid: "54512312"
 
 強制所有平台叫用呼叫採用 CLR 中未最佳化的路徑。
 
-## <a name="output"></a>輸出
+## <a name="output"></a>Output
 
 MDA 訊息會提供使堆疊失去平衡之平台叫用方法呼叫的名稱。 `SampleMethod` 方法之平台叫用呼叫的範例訊息為：
 

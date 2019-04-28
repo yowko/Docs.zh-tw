@@ -3,18 +3,18 @@ title: 1023 - CompleteBookmarkWorkItem
 ms.date: 03/30/2017
 ms.assetid: fc5dac57-b3eb-4826-b505-c6d269e4774d
 ms.openlocfilehash: 8677f25057486247e64879298755fe972bd373d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33510318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008846"
 ---
 # <a name="1023---completebookmarkworkitem"></a>1023 - CompleteBookmarkWorkItem
 ## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
-|ID|1023|  
+|識別碼|1023|  
 |關鍵字|WFRuntime|  
 |層級|詳細資訊|  
 |通道|Microsoft-Windows-Application Server-Applications/Debug|  

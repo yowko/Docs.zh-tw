@@ -6,22 +6,22 @@ dev_langs:
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
 ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005637"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>自訂複合設計工具 - 工作流程項目展示器
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 是 WF 設計工具程式撰寫模型中的關鍵類型，允許編輯包含的項目集合。 這個範例示範如何建置會呈現這類可編輯集合的活動設計工具。
 
  這個範例會示範下列情況：
 
--   建立具有 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 的自訂活動設計工具。
+- 建立具有 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 的自訂活動設計工具。
 
--   使用 「 摺疊 」 和 「 展開 」 檢視中建立活動設計工具。
+- 使用 「 摺疊 」 和 「 展開 」 檢視中建立活動設計工具。
 
--   覆寫重新裝載應用程式中的預設設計工具。
+- 覆寫重新裝載應用程式中的預設設計工具。
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
@@ -32,15 +32,15 @@ ms.locfileid: "59344867"
 ## <a name="sample-highlights"></a>範例重點
  這個範例的程式碼示範下列操作：
 
--   設計工具建置的目標活動：`Parallel`
+- 設計工具建置的目標活動：`Parallel`
 
--   建立具有 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 的自訂活動設計工具 請注意下列幾點事項：
+- 建立具有 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 的自訂活動設計工具 請注意下列幾點事項：
 
-    -   請注意繫結至 `ModelItem.Branches` 的 WPF 資料繫結用法。 `ModelItem` 是 `WorkflowElementDesigner` 上的屬性，它會參考設計工具的目標基礎物件，在這個範例中為 `Parallel`。
+    - 請注意繫結至 `ModelItem.Branches` 的 WPF 資料繫結用法。 `ModelItem` 是 `WorkflowElementDesigner` 上的屬性，它會參考設計工具的目標基礎物件，在這個範例中為 `Parallel`。
 
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> 可用來放置視覺效果，在集合中的個別項目之間顯示。
+    - <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> 可用來放置視覺效果，在集合中的個別項目之間顯示。
 
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> 是範本，可供判斷集合中的項目配置。 在這個範例中，會使用水平堆疊面板。
+    - <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> 是範本，可供判斷集合中的項目配置。 在這個範例中，會使用水平堆疊面板。
 
  下列範例程式碼會示範這點。
 
@@ -60,9 +60,9 @@ ms.locfileid: "59344867"
   </sad:WorkflowItemsPresenter>
 ```
 
--   執行 `DesignerAttribute` 與 `Parallel` 類型的關聯，然後輸出回報的屬性。
+- 執行 `DesignerAttribute` 與 `Parallel` 類型的關聯，然後輸出回報的屬性。
 
-    -   首先，註冊所有預設設計工具。
+    - 首先，註冊所有預設設計工具。
 
  以下是程式碼範例。
 
@@ -80,7 +80,7 @@ metadata.Register()
 RegisterCustomMetadata()
 ```
 
-    -   接著覆寫 `RegisterCustomMetadata` 方法中的 parallel。
+    - 接著覆寫 `RegisterCustomMetadata` 方法中的 parallel。
 
  下列 C# 和 Visual Basic 程式碼會示範這點。
 
@@ -101,7 +101,7 @@ Sub RegisterCustomMetadata()
 End Sub
 ```
 
--   最後，請注意不同資料範本和觸發程序根據 `IsRootDesigner` 屬性來選取適當範本的用法。
+- 最後，請注意不同資料範本和觸發程序根據 `IsRootDesigner` 屬性來選取適當範本的用法。
 
  以下是程式碼範例。
 

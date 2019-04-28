@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
 ms.openlocfilehash: badcfea4f24ba3858071e02ba47b8f77ab557f88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802371"
 ---
 # <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>函式 '\<程序名稱 >' 並未傳回有關所有程式碼路徑的值
 函式 '\<程序名稱 >' 並未傳回有關所有程式碼路徑的值。 您是否遺漏了 'Return' 陳述式？  
@@ -21,11 +21,11 @@ ms.locfileid: "58824828"
   
  您可以傳回值，以從`Function`程序，在下列任一方式：  
   
--   包含值[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)。  
+- 包含值[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)。  
   
--   將值指派給`Function`程序名稱，然後再執行`Exit Function`陳述式。  
+- 將值指派給`Function`程序名稱，然後再執行`Exit Function`陳述式。  
   
--   將值指派給`Function`程序名稱，然後再執行`End Function`陳述式。  
+- 將值指派給`Function`程序名稱，然後再執行`End Function`陳述式。  
   
  如果控制權傳遞給`Exit Function`或`End Function`和您不指派任何值給程序名稱、 程序傳回的傳回資料類型的預設值。 如需詳細資訊，請參閱 「 行為 」 中[Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "58824828"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   檢查控制項流程邏輯，並確定您指定的值會導致傳回每個陳述式之前。  
+- 檢查控制項流程邏輯，並確定您指定的值會導致傳回每個陳述式之前。  
   
      很容易就能保證每一次從程序傳回將傳回值，如果您總是使用`Return`陳述式。 如果您這麼做，最後一個陳述式前面`End Function`應該是`Return`陳述式。  
   

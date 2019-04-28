@@ -3,11 +3,11 @@ title: CLR 預存程序
 ms.date: 03/30/2017
 ms.assetid: fd7eea9b-218a-4988-8c9a-8abcc6031c66
 ms.openlocfilehash: 9b31d93c1ebc0af9aa8e41b3a4c328af62da7e23
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878327"
 ---
 # <a name="clr-stored-procedures"></a>CLR 預存程序
 預存程序是無法在純量運算式中使用的常式。 它們可將表格式結果及訊息傳回到用戶端、叫用資料定義語言 (DDL) 及資料操作語言 (DML) 陳述式，並傳回輸出參數。  

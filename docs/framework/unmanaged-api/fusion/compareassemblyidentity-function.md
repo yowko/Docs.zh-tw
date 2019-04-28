@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 652000367c19572f73296c704047830ce1c74574
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914518"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity 函式
 比較兩個組件身分識別，以判斷它們是否相等。  
@@ -65,11 +65,11 @@ STDAPI CompareAssemblyIdentity (
 ## <a name="remarks"></a>備註  
  `CompareAssemblyIdentity` 檢查是否`pwzAssemblyIdentity1`和`pwzAssemblyIdentity2`相等。 `pfEquivalent` 設定為`true`下有一或多個下列條件：  
   
--   兩個組件身分識別是相等的。 針對強式名稱組件，對應項會需要的組件名稱、 版本、 公開金鑰語彙基元和文化特性相同。 針對簡單名稱的組件，相等的條件比對的組件名稱和文化特性。  
+- 兩個組件身分識別是相等的。 針對強式名稱組件，對應項會需要的組件名稱、 版本、 公開金鑰語彙基元和文化特性相同。 針對簡單名稱的組件，相等的條件比對的組件名稱和文化特性。  
   
--   這兩個組件身分識別，請參閱.NET Framework 執行的組件。 這種狀況傳回`true`即使組件版本號碼不相符。  
+- 這兩個組件身分識別，請參閱.NET Framework 執行的組件。 這種狀況傳回`true`即使組件版本號碼不相符。  
   
--   兩個組件不是 managed 組件，但`fUnified1`或是`fUnified2`已設為`true`。  
+- 兩個組件不是 managed 組件，但`fUnified1`或是`fUnified2`已設為`true`。  
   
  `fUnified`旗標表示強式名稱組件的版本號碼的所有版本號碼都都視為相等的強式名稱組件。 比方說，如果值`pwzAssemblyIndentity1`是"MyAssembly，版本 version=3.0.0.0，culture = neutral，publicKeyToken =...」，和值`fUnified1`是`true`，這表示，應該是 MyAssembly 從 0.0.0.0 到 3.0.0.0 版開始的所有版本視為對等項目。 在此情況下，如果`pwzAssemblyIndentity2`相同的組件是指`pwzAssemblyIndentity1`，不同之處在於它有較低的版本號碼，`pfEquivalent`設定為`true`。 如果`pwzAssemblyIdentity2`更高的版本號碼，是指`pfEquivalent`設為`true`才的值`fUnified2`是`true`。  
   

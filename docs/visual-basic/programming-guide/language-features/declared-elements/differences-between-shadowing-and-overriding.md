@@ -6,11 +6,11 @@ helpviewer_keywords:
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
 ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61827940"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>遮蔽和覆寫的差異 (Visual Basic)
 當您定義繼承自基底類別的類別時，您有時會想要重新定義一或多個基底類別中的項目衍生的類別。 遮蔽和覆寫都可針對此目的。  
@@ -41,15 +41,15 @@ ms.locfileid: "58827922"
 ## <a name="guidelines"></a>方針  
  您通常會使用覆寫在下列情況：  
   
--   您會定義多型的衍生的類別。  
+- 您會定義多型的衍生的類別。  
   
--   您想讓編譯器強制的完全相同的項目類型和呼叫順序的安全。  
+- 您想讓編譯器強制的完全相同的項目類型和呼叫順序的安全。  
   
  您通常會使用下列案例中的遮蔽功能：  
   
--   您預期可能會修改基底類別，並定義為您使用相同名稱的項目。  
+- 您預期可能會修改基底類別，並定義為您使用相同名稱的項目。  
   
--   您想要能夠變更的項目類型，或呼叫順序。  
+- 您想要能夠變更的項目類型，或呼叫順序。  
   
 ## <a name="see-also"></a>另請參閱
 

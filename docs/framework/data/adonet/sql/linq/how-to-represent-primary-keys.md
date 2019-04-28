@@ -3,11 +3,11 @@ title: HOW TO：表示主索引鍵
 ms.date: 03/30/2017
 ms.assetid: 63c65289-6539-42b2-8493-891c232018fa
 ms.openlocfilehash: dcb8929c9cd9a7b88f19d760b70117a1092760f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877197"
 ---
 # <a name="how-to-represent-primary-keys"></a>HOW TO：表示主索引鍵
 使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>屬性上的<xref:System.Data.Linq.Mapping.ColumnAttribute>屬性來指定屬性或欄位來表示資料庫資料行的主索引鍵。  

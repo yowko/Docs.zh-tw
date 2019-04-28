@@ -6,11 +6,11 @@ helpviewer_keywords:
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
 ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858074"
 ---
 # <a name="best-practices-for-queued-communication"></a>佇列通訊的最佳做法
 本主題會提供佇列通訊中 Windows Communication Foundation (WCF) 的建議的做法。 下列各節由案例的觀點來討論建議的做法。  
@@ -48,11 +48,11 @@ ms.locfileid: "59230092"
 ## <a name="achieving-high-throughput"></a>達到高輸送量  
  若要在單一端點上達到高輸送量，可以使用下列幾項：  
   
--   交易的批次處理。 異動的批次處理確保可以在單一異動中讀取多則訊息。 這樣可以最佳化異動認可，因此增加了整體效能。 批次處理的代價在於，如果批次內的一則訊息中發生失敗，整個批次都要復原，而且必須一次處理一則訊息，直到再度對批次而言是安全的為止。 在大部分情況中，傾向於使用批次處理增加系統效能，特別是當您有參與異動的其他資源管理員時。 如需詳細資訊，請參閱 <<c0> [ 異動中批次處理的訊息](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)。  
+- 交易的批次處理。 異動的批次處理確保可以在單一異動中讀取多則訊息。 這樣可以最佳化異動認可，因此增加了整體效能。 批次處理的代價在於，如果批次內的一則訊息中發生失敗，整個批次都要復原，而且必須一次處理一則訊息，直到再度對批次而言是安全的為止。 在大部分情況中，傾向於使用批次處理增加系統效能，特別是當您有參與異動的其他資源管理員時。 如需詳細資訊，請參閱 <<c0> [ 異動中批次處理的訊息](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)。  
   
--   並行。 並行可以增加輸送量，但也會影響對共用資源的爭用。 如需詳細資訊，請參閱 <<c0> [ 並行](../../../../docs/framework/wcf/samples/concurrency.md)。  
+- 並行。 並行可以增加輸送量，但也會影響對共用資源的爭用。 如需詳細資訊，請參閱 <<c0> [ 並行](../../../../docs/framework/wcf/samples/concurrency.md)。  
   
--   節流。 為了得到最佳效能，控制在發送器管線中的訊息數目。 如需如何執行這項操作的範例，請參閱 <<c0> [ 節流](../../../../docs/framework/wcf/samples/throttling.md)。  
+- 節流。 為了得到最佳效能，控制在發送器管線中的訊息數目。 如需如何執行這項操作的範例，請參閱 <<c0> [ 節流](../../../../docs/framework/wcf/samples/throttling.md)。  
   
  使用批次處理時，注意轉換為並行批次的並行與節流。  
   
@@ -75,11 +75,11 @@ ms.locfileid: "59230092"
   
  使用 `MsmqIntegrationBinding` 時，請注意下列各點：  
   
--   WCF 訊息內文不是 MSMQ 訊息內文相同。 傳送 WCF 訊息時使用的佇列繫結，則會將 WCF 訊息內文放置內部 MSMQ 訊息。 MSMQ 基礎結構未注意到此額外資訊，它只看到 MSMQ 訊息。  
+- WCF 訊息內文不是 MSMQ 訊息內文相同。 傳送 WCF 訊息時使用的佇列繫結，則會將 WCF 訊息內文放置內部 MSMQ 訊息。 MSMQ 基礎結構未注意到此額外資訊，它只看到 MSMQ 訊息。  
   
--   `MsmqIntegrationBinding` 支援常見的序列化類型。 根據序列化類型、泛型訊息的本文類型、<xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>，採用不同類型的參數。 例如，<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> 需要 `MsmqMessage\<byte[]>`，而 <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> 需要 `MsmqMessage<Stream>`。  
+- `MsmqIntegrationBinding` 支援常見的序列化類型。 根據序列化類型、泛型訊息的本文類型、<xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>，採用不同類型的參數。 例如，<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> 需要 `MsmqMessage\<byte[]>`，而 <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> 需要 `MsmqMessage<Stream>`。  
   
--   使用 XML 序列化，您可以指定已知型別使用`KnownTypes`屬性[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)之後要用來決定如何將 XML 訊息還原序列化的項目。  
+- 使用 XML 序列化，您可以指定已知型別使用`KnownTypes`屬性[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)之後要用來決定如何將 XML 訊息還原序列化的項目。  
   
 ## <a name="see-also"></a>另請參閱
 

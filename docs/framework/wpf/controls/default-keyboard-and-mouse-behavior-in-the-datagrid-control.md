@@ -8,11 +8,11 @@ helpviewer_keywords:
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
 ms.openlocfilehash: 6be464ce85bd3ba91dd6e6cc810ec7d04edc0c3d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911842"
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>DataGrid 控制項中的預設鍵盤和滑鼠行為
 本主題描述使用者可以互動<xref:System.Windows.Controls.DataGrid>使用鍵盤和滑鼠的控制項。  
@@ -55,21 +55,21 @@ ms.locfileid: "59083318"
   
  下列的選取項目索引鍵修改多重資料列選取項目。  
   
--   SHIFT+向下鍵  
+- SHIFT+向下鍵  
   
--   SHIFT+向上鍵  
+- SHIFT+向上鍵  
   
--   SHIFT+PAGE DOWN  
+- SHIFT+PAGE DOWN  
   
--   SHIFT+PAGE UP  
+- SHIFT+PAGE UP  
   
--   CTRL+SHIFT+向下鍵  
+- CTRL+SHIFT+向下鍵  
   
--   CTRL+SHIFT+向上鍵  
+- CTRL+SHIFT+向上鍵  
   
--   CTRL + SHIFT + HOME  
+- CTRL + SHIFT + HOME  
   
--   CTRL + SHIFT + END  
+- CTRL + SHIFT + END  
   
 ## <a name="default-mouse-behavior"></a>預設滑鼠行為  
  下表列出的預設滑鼠行為<xref:System.Windows.Controls.DataGrid>。  

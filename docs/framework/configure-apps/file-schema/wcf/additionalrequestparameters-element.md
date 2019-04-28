@@ -3,11 +3,11 @@ title: <additionalRequestParameters> 項目
 ms.date: 03/30/2017
 ms.assetid: da8109fb-581c-48f4-b718-3bbda1edc47d
 ms.openlocfilehash: bbd6f5ef78d26417a926140ba9eacb2b2eeffb77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673559"
 ---
 # <a name="additionalrequestparameters-element"></a>\<additionalRequestParameters > 項目
 這會包含指定其他要求參數的組態項目集合。  

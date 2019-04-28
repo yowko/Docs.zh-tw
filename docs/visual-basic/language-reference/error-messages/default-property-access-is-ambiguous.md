@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
 ms.openlocfilehash: 5f058c8e7d480b9145452ae85f186a6ac2ed0d56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803726"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>預設屬性存取模稜兩可繼承的介面成員\<defaultpropertyname >' 的介面 '\<介面名稱 1>.< >' 和'\<defaultpropertyname >' 的介面 '\<介面名稱 2&gt >'
 介面繼承自兩個介面，其中每個宣告預設屬性具有相同名稱。 編譯器無法解析此預設屬性，但是不限定存取。 下列範例將說明這點。  
@@ -41,7 +41,7 @@ End Class
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   避免繼承任何具有相同名稱的成員。 在上述範例中，如果`testObj`不需要任何的成員，例如， `Iface2`，然後將它宣告，如下所示：  
+- 避免繼承任何具有相同名稱的成員。 在上述範例中，如果`testObj`不需要任何的成員，例如， `Iface2`，然後將它宣告，如下所示：  
   
     ```  
     Dim testObj As Iface1  
@@ -49,7 +49,7 @@ End Class
   
      -或-  
   
--   在類別中實作繼承的介面。 然後您可以實作每個具有不同名稱的繼承屬性。 不過，其中只有一個元件可以實作類別的預設屬性。 下列範例將說明這點。  
+- 在類別中實作繼承的介面。 然後您可以實作每個具有不同名稱的繼承屬性。 不過，其中只有一個元件可以實作類別的預設屬性。 下列範例將說明這點。  
   
     ```  
     Public Class useIface3  

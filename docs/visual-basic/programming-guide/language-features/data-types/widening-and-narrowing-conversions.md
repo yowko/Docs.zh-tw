@@ -20,11 +20,11 @@ helpviewer_keywords:
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
 ms.openlocfilehash: 9f1a71e8e2e3e4ebb9b412be74b5ea8702eb164f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61827152"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>擴展和縮小轉換 (Visual Basic)
 使用類型轉換的重要考量是轉換的結果是否在目的地資料類型的範圍內。  
@@ -68,15 +68,15 @@ ms.locfileid: "58842547"
 ## <a name="narrowing-conversions"></a>縮小轉換  
  標準的縮小轉換包括下列各項：  
   
--   在上述的擴展轉換的反向資料表 （不同之處在於每個類型可擴展為本身）  
+- 在上述的擴展轉換的反向資料表 （不同之處在於每個類型可擴展為本身）  
   
--   在任一方向之間的轉換[布林](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)和任何數值類型  
+- 在任一方向之間的轉換[布林](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)和任何數值類型  
   
--   從任何數值類型轉換為任何列舉型別 (`Enum`)  
+- 從任何數值類型轉換為任何列舉型別 (`Enum`)  
   
--   在任一方向之間的轉換[字串](../../../../visual-basic/language-reference/data-types/string-data-type.md)任何數值類型，以及`Boolean`，或[日期](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
+- 在任一方向之間的轉換[字串](../../../../visual-basic/language-reference/data-types/string-data-type.md)任何數值類型，以及`Boolean`，或[日期](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
   
--   從資料型別或物件型別轉換成從其衍生類型  
+- 從資料型別或物件型別轉換成從其衍生類型  
   
  縮小轉換執行不一定成功在執行階段，並可能會失敗或者會造成資料遺失。 如果目的地資料類型無法接收轉換的值，就會發生錯誤。 例如，數值轉換可能會導致溢位。 編譯器不允許以隱含方式執行縮小轉換，除非[Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)設定類型檢查參數以`Off`。  
   
@@ -89,9 +89,9 @@ ms.locfileid: "58842547"
 ## <a name="exceptions-during-conversion"></a>在轉換期間的例外狀況  
  因為一律擴展轉換成功，則不會擲回例外狀況。 縮小轉換，失敗時，通常會擲回下列例外狀況：  
   
--   <xref:System.InvalidCastException> -如果任何轉換不定義兩個類型之間  
+- <xref:System.InvalidCastException> -如果任何轉換不定義兩個類型之間  
   
--   <xref:System.OverflowException> -（只有整數類型） 如果已轉換的值太大的目標型別  
+- <xref:System.OverflowException> -（只有整數類型） 如果已轉換的值太大的目標型別  
   
  如果類別或結構定義[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)做為與該類別或結構，轉換運算子，`CType`可能會擲回它認為適當的任何例外狀況。 此外，所`CType`可能會呼叫 Visual Basic 函式或[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]接著可能會擲回例外狀況的各種不同的方法。  
   

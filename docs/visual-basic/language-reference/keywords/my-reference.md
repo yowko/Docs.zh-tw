@@ -6,11 +6,11 @@ helpviewer_keywords:
 - My reference
 ms.assetid: 6f803bd7-21ff-4569-b1fe-b00a6678b1e3
 ms.openlocfilehash: accf2464f7d8ead8bcd73c9704bea4fd5d2e410b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802380"
 ---
 # <a name="my-reference-visual-basic"></a>My 參考 (Visual Basic)
 `My`功能可讓程式設計更快且更輕鬆，讓您的直覺式存取常用的方法、 屬性和事件。 下表列出在所包含的物件`My`，以及與每個可執行的動作。  

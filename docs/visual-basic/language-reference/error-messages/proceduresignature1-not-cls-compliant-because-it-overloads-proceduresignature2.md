@@ -1,5 +1,5 @@
 ---
-title: <proceduresignature1> 不符合 CLS 標準，因為它多載 <proceduresignature2>，而此兩者的差別只在於陣列參數類型的陣列，或是陣列參數類型的陣序規範
+title: <proceduresignature1> 不符合 CLS 標準，因為它多載<proceduresignature2>的差別只在於陣列參數類型的陣列，或是陣列參數類型的陣序規範
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40035
@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40035
 ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
 ms.openlocfilehash: 0bda4ad6a4d5368d93e2ca603b78bf9db6aca858
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920909"
 ---
 # <a name="proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>\<proceduresignature1 > 不符合 CLS 標準，因為它多載\<proceduresignature2 > 的差別只在於陣列參數類型的陣列，或是陣列參數類型的陣序規範
 程序或屬性會標示為`<CLSCompliant(True)>`時它會覆寫另一個程序或屬性和其參數清單之間唯一的差別是巢狀層級的不規則陣列陣序。  
@@ -37,9 +37,9 @@ ms.locfileid: "55269558"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   如果您需要 cls 符合性，定義您的多載方面與彼此不同，在更多的方法，只將這個說明網頁所述的變更。  
+- 如果您需要 cls 符合性，定義您的多載方面與彼此不同，在更多的方法，只將這個說明網頁所述的變更。  
   
--   如果您需要多載的差別只能由引用此說明的變更頁面上，移除<xref:System.CLSCompliantAttribute>從其定義或將它們標記為`<CLSCompliant(False)>`。  
+- 如果您需要多載的差別只能由引用此說明的變更頁面上，移除<xref:System.CLSCompliantAttribute>從其定義或將它們標記為`<CLSCompliant(False)>`。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
 ms.openlocfilehash: efb7b86c3add99e596e6798c8267c09689899d56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923925"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>LINQ to SQL 的功能
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援 SQL 開發人員需要的所有重要功能。 您可以查詢資訊，以及在資料表中插入、更新和刪除資訊。  

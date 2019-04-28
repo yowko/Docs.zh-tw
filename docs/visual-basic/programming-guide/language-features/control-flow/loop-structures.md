@@ -11,11 +11,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
 ms.openlocfilehash: 56165eecce5e73c4e06235dac1691774fb39b794
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906853"
 ---
 # <a name="loop-structures-visual-basic"></a>迴圈結構 (Visual Basic)
 Visual Basic 迴圈結構可讓您重複執行一或多行程式碼。 您可以重複迴圈結構中的陳述式，直到條件為`True`，直到條件為`False`，集合中指定的次數，或是每個項目都執行過一次。  

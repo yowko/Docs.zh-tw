@@ -5,43 +5,43 @@ ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1d14e4ad45a4d5805187b993f2fc622a16dac09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61867093"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>將您的 Windows 市集應用程式移轉至 .NET Native
 .NET 原生提供靜態編譯的應用程式在 Windows 市集或開發人員的電腦上。 這不同於 just-in-time (JIT) 編譯器或裝置上的 [原生映像產生器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 為 Windows 市集應用程式執行的動態編譯。 儘管有所差異，.NET Native 會嘗試維持與相容性[適用於 Windows 市集應用程式](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)。 大部分的情況下，在適用於 Windows 市集應用程式運作的項目也適用於.NET 原生。  不過，在某些情況下，您可能會遇到行為上的變更。 本文將探討這些差異適用於 Windows 市集應用程式的標準和.NET Native 在下列區域：  
   
--   [一般執行階段的差異](#Runtime)  
+- [一般執行階段的差異](#Runtime)  
   
--   [動態程式設計的差異](#Dynamic)  
+- [動態程式設計的差異](#Dynamic)  
   
--   [其他與反映相關的差異](#Reflection)  
+- [其他與反映相關的差異](#Reflection)  
   
--   [不支援的案例和 API](#Unsupported)  
+- [不支援的案例和 API](#Unsupported)  
   
--   [Visual Studio 的差異](#VS)  
+- [Visual Studio 的差異](#VS)  
   
 <a name="Runtime"></a>   
 ## <a name="general-runtime-differences"></a>一般執行階段的差異  
   
--   例外狀況，例如<xref:System.TypeLoadException>，所擲回由 JIT 編譯器是根據一般的應用程式執行時語言執行平台 (CLR) 通常會導致編譯時期錯誤時由.NET 原生處理。  
+- 例外狀況，例如<xref:System.TypeLoadException>，所擲回由 JIT 編譯器是根據一般的應用程式執行時語言執行平台 (CLR) 通常會導致編譯時期錯誤時由.NET 原生處理。  
   
--   請勿從應用程式的 UI 執行緒呼叫 <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> 方法。 這會導致鎖死.NET 原生。  
+- 請勿從應用程式的 UI 執行緒呼叫 <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> 方法。 這會導致鎖死.NET 原生。  
   
--   請不要依賴靜態類別建構函式引動過程順序。 在.NET 原生，引動過程順序是不同於標準執行階段上的順序。 (即使是使用標準執行階段，也不應該依賴靜態類別建構函式的執行順序。)  
+- 請不要依賴靜態類別建構函式引動過程順序。 在.NET 原生，引動過程順序是不同於標準執行階段上的順序。 (即使是使用標準執行階段，也不應該依賴靜態類別建構函式的執行順序。)  
   
--   在任何執行緒上無限迴圈，而不進行呼叫 (例如 `while(true);`) 可能會導致應用程式中止。 同樣地，長時間或無限等待可能也會導致應用程式中止。  
+- 在任何執行緒上無限迴圈，而不進行呼叫 (例如 `while(true);`) 可能會導致應用程式中止。 同樣地，長時間或無限等待可能也會導致應用程式中止。  
   
--   某些泛型初始化循環不會擲回例外狀況在.NET 原生。 例如，下列程式碼會在標準 CLR 上擲回 <xref:System.TypeLoadException> 例外狀況。 在.NET 原生，它不會。  
+- 某些泛型初始化循環不會擲回例外狀況在.NET 原生。 例如，下列程式碼會在標準 CLR 上擲回 <xref:System.TypeLoadException> 例外狀況。 在.NET 原生，它不會。  
   
      [!code-csharp[ProjectN#8](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat1.cs#8)]  
   
--   在某些情況下，.NET Native，請提供不同的.NET Framework 類別庫的實作。 從方法傳回的物件一律會實作傳回類型的成員。 不過，由於其支援實作不同，所以您可能無法將其轉換成像在其他 .NET Framework 平台上轉換的相同類型集。 例如，在某些情況下，您可能無法將 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> 這類方法傳回的 <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> 介面物件轉換成 `T[]`。  
+- 在某些情況下，.NET Native，請提供不同的.NET Framework 類別庫的實作。 從方法傳回的物件一律會實作傳回類型的成員。 不過，由於其支援實作不同，所以您可能無法將其轉換成像在其他 .NET Framework 平台上轉換的相同類型集。 例如，在某些情況下，您可能無法將 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> 這類方法傳回的 <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> 介面物件轉換成 `T[]`。  
   
--   適用於 Windows 市集應用程式，預設不啟用 WinInet 快取，但已排入.NET 原生。 這可以改善效能，但有工作集含意。 開發人員不需任何動作。  
+- 適用於 Windows 市集應用程式，預設不啟用 WinInet 快取，但已排入.NET 原生。 這可以改善效能，但有工作集含意。 開發人員不需任何動作。  
   
 <a name="Dynamic"></a>   
 ## <a name="dynamic-programming-differences"></a>動態程式設計的差異  
@@ -58,9 +58,9 @@ ms.locfileid: "59163133"
   
  .NET 原生的預設組態已足以應付大部分的開發人員，但有些開發人員可能想要微調其組態使用執行階段指示詞 (。 rd.xml) 檔案。 此外，在某些情況下，.NET Native 編譯器會無法判斷中繼資料必須可供反映，而依賴提示，特別是在下列情況下：  
   
--   無法以靜態方式判斷某些結構，例如 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 。  
+- 無法以靜態方式判斷某些結構，例如 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 。  
   
--   由於編譯器無法判斷具現化，所以必須以執行階段指示詞來指定您想要反映的泛型類型。 這不只是因為所有的程式碼必須包含在內，也因為反映在泛型類型上會形成無限循環 (例如，在泛型類型上叫用泛型方法時)。  
+- 由於編譯器無法判斷具現化，所以必須以執行階段指示詞來指定您想要反映的泛型類型。 這不只是因為所有的程式碼必須包含在內，也因為反映在泛型類型上會形成無限循環 (例如，在泛型類型上叫用泛型方法時)。  
   
 > [!NOTE]
 >  執行階段指示詞中定義在執行階段指示詞 (.rd.xml) 檔案中。 如需使用此檔案的一般資訊，請參閱[使用者入門](../../../docs/framework/net-native/getting-started-with-net-native.md)。 如需執行階段指示詞的詳細資訊，請參閱 [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。  
@@ -73,67 +73,67 @@ ms.locfileid: "59163133"
   
  在.NET 原生：  
   
--   不支援 .NET Framework 類別庫中，透過類型和成員的私用反映。 不過，您可以透過自己的私用類型和成員，以及協力廠商程式庫中的類型和成員來進行反映。  
+- 不支援 .NET Framework 類別庫中，透過類型和成員的私用反映。 不過，您可以透過自己的私用類型和成員，以及協力廠商程式庫中的類型和成員來進行反映。  
   
--   <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> 屬性針對表示傳回值的 `false` 物件，正確地傳回 <xref:System.Reflection.ParameterInfo> 。 在適用於 Windows 市集應用程式的 .NET 中，它會傳回 `true`。 中繼語言 (IL) 不會直接支援此作業，而是將解譯工作留給語言。  
+- <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> 屬性針對表示傳回值的 `false` 物件，正確地傳回 <xref:System.Reflection.ParameterInfo> 。 在適用於 Windows 市集應用程式的 .NET 中，它會傳回 `true`。 中繼語言 (IL) 不會直接支援此作業，而是將解譯工作留給語言。  
   
--   不支援 <xref:System.RuntimeFieldHandle> 和 <xref:System.RuntimeMethodHandle> 結構上的公用成員。 只有針對 LINQ、運算式樹狀架構和靜態陣列初始設定，才會支援這些類型。  
+- 不支援 <xref:System.RuntimeFieldHandle> 和 <xref:System.RuntimeMethodHandle> 結構上的公用成員。 只有針對 LINQ、運算式樹狀架構和靜態陣列初始設定，才會支援這些類型。  
   
--   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> 將隱藏的成員包含基底類別中，因此可能會在非明確覆寫的情況下被覆寫。 針對其他 [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) 方法也是如此。  
+- <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> 將隱藏的成員包含基底類別中，因此可能會在非明確覆寫的情況下被覆寫。 針對其他 [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) 方法也是如此。  
   
--   當您嘗試建立特定的組合 (例如 byref 的陣列) 時，<xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 和 <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> 不會失敗。  
+- 當您嘗試建立特定的組合 (例如 byref 的陣列) 時，<xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 和 <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> 不會失敗。  
   
--   您不能使用反映來叫用具有指標參數的成員。  
+- 您不能使用反映來叫用具有指標參數的成員。  
   
--   您不能使用反映來取得或設定指標欄位。  
+- 您不能使用反映來取得或設定指標欄位。  
   
--   當引數計數是錯誤的其中一個引數類型不正確，.NET Native 會擲回<xref:System.ArgumentException>而不是<xref:System.Reflection.TargetParameterCountException>。  
+- 當引數計數是錯誤的其中一個引數類型不正確，.NET Native 會擲回<xref:System.ArgumentException>而不是<xref:System.Reflection.TargetParameterCountException>。  
   
--   通常不支援例外狀況的二進位序列化。 因此，可以將不可序列化的物件加入 <xref:System.Exception.Data%2A?displayProperty=nameWithType> 字典。  
+- 通常不支援例外狀況的二進位序列化。 因此，可以將不可序列化的物件加入 <xref:System.Exception.Data%2A?displayProperty=nameWithType> 字典。  
   
 <a name="Unsupported"></a>   
 ## <a name="unsupported-scenarios-and-apis"></a>不支援的案例和 API  
  下列各節會針對一般開發、interop 以及 HTTPClient 和 Windows Communication Foundation (WCF) 等技術，列出不支援的案例和 API：  
   
--   [一般開發](#General)  
+- [一般開發](#General)  
   
--   [HttpClient](#HttpClient)  
+- [HttpClient](#HttpClient)  
   
--   [Interop](#Interop)  
+- [Interop](#Interop)  
   
--   [不支援的 API](#APIs)  
+- [不支援的 API](#APIs)  
   
 <a name="General"></a>   
 ### <a name="general-development-differences"></a>一般開發的差異  
  **值類型**  
   
--   如果您覆寫 <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> 和 <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> 方法的值類型，請勿呼叫基底類別實作。 在適用於 Windows 市集應用程式的 .NET 中，這些方法會依賴反映。 在編譯時期，.NET Native 會產生不依賴執行階段反映的實作。 這表示，如果您不覆寫這兩種方法，它們會如預期般運作，因為.NET Native 會產生編譯時期的實作。 不過，覆寫這些方法，但又呼叫基底類別實作，將會導致例外狀況。  
+- 如果您覆寫 <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> 和 <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> 方法的值類型，請勿呼叫基底類別實作。 在適用於 Windows 市集應用程式的 .NET 中，這些方法會依賴反映。 在編譯時期，.NET Native 會產生不依賴執行階段反映的實作。 這表示，如果您不覆寫這兩種方法，它們會如預期般運作，因為.NET Native 會產生編譯時期的實作。 不過，覆寫這些方法，但又呼叫基底類別實作，將會導致例外狀況。  
   
--   不支援大於 1 MB 的值類型。  
+- 不支援大於 1 MB 的值類型。  
   
--   實值型別不能有預設建構函式，在.NET 原生。 (C# 和 Visual Basic 禁止值類型上有預設建構函式。 不過，可以在 IL 中建立這些預設建構函式)。  
+- 實值型別不能有預設建構函式，在.NET 原生。 (C# 和 Visual Basic 禁止值類型上有預設建構函式。 不過，可以在 IL 中建立這些預設建構函式)。  
   
  **陣列**  
   
--   不支援下限不是零的陣列。 一般而言，可以呼叫 <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> 多載來建立這些陣列。  
+- 不支援下限不是零的陣列。 一般而言，可以呼叫 <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> 多載來建立這些陣列。  
   
--   不支援動態建立多維陣列。 這類陣列的建立，通常是藉由呼叫包含 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 參數之 `lengths` 方法的多載，或是呼叫 <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> 方法。  
+- 不支援動態建立多維陣列。 這類陣列的建立，通常是藉由呼叫包含 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 參數之 `lengths` 方法的多載，或是呼叫 <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> 方法。  
   
--   不支援具有 4 個 (含) 以上維度的多維陣列，意即，其 <xref:System.Array.Rank%2A?displayProperty=nameWithType> 屬性值為 4 (含) 以上。 請改用 [不規則陣列](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (陣列的陣列)。 例如， `array[x,y,z]` 無效，但 `array[x][y][z]` 有效。  
+- 不支援具有 4 個 (含) 以上維度的多維陣列，意即，其 <xref:System.Array.Rank%2A?displayProperty=nameWithType> 屬性值為 4 (含) 以上。 請改用 [不規則陣列](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (陣列的陣列)。 例如， `array[x,y,z]` 無效，但 `array[x][y][z]` 有效。  
   
--   不支援多維陣列的變異數，它會在執行階段導致 <xref:System.InvalidCastException> 例外狀況。  
+- 不支援多維陣列的變異數，它會在執行階段導致 <xref:System.InvalidCastException> 例外狀況。  
   
  **泛型**  
   
--   無限的泛型類型擴充會導致編譯器錯誤。 例如，此程式碼無法編譯：  
+- 無限的泛型類型擴充會導致編譯器錯誤。 例如，此程式碼無法編譯：  
   
      [!code-csharp[ProjectN#9](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat2.cs#9)]  
   
  **Pointers**  
   
--   不支援指標的陣列。  
+- 不支援指標的陣列。  
   
--   您不能使用反映來取得或設定指標欄位。  
+- 您不能使用反映來取得或設定指標欄位。  
   
  **序列化**  
   
@@ -149,19 +149,19 @@ ms.locfileid: "59163133"
   
  **其他 API**  
   
--   [TypeInfo.GUID](xref:System.Type.GUID)屬性會擲回<xref:System.PlatformNotSupportedException>例外狀況如果<xref:System.Runtime.InteropServices.GuidAttribute>屬性不會套用至型別。 GUID 主要用於 COM 支援。  
+- [TypeInfo.GUID](xref:System.Type.GUID)屬性會擲回<xref:System.PlatformNotSupportedException>例外狀況如果<xref:System.Runtime.InteropServices.GuidAttribute>屬性不會套用至型別。 GUID 主要用於 COM 支援。  
   
--   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>方法正確地剖析包含在.NET 原生的簡短日期的字串。 不過，它不會維護 Microsoft 知識庫文章 [KB2803771](https://support.microsoft.com/kb/2803771) 和 [KB2803755](https://support.microsoft.com/kb/2803755)中描述之日期和時間剖析變更的相容性。  
+- <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>方法正確地剖析包含在.NET 原生的簡短日期的字串。 不過，它不會維護 Microsoft 知識庫文章 [KB2803771](https://support.microsoft.com/kb/2803771) 和 [KB2803755](https://support.microsoft.com/kb/2803755)中描述之日期和時間剖析變更的相容性。  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` 正確地在.NET 原生四捨五入。 在某些版本的 CLR 中，會將結果字串無條件捨去，而不是四捨五入。  
+- <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` 正確地在.NET 原生四捨五入。 在某些版本的 CLR 中，會將結果字串無條件捨去，而不是四捨五入。  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>HttpClient 差異  
  在.NET Native<xref:System.Net.Http.HttpClientHandler>類別在內部使用 WinINet (透過<xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter>類別) 而非<xref:System.Net.WebRequest>和<xref:System.Net.WebResponse>標準適用於 Windows 市集應用程式中使用的類別。  WinINet 並未支援 <xref:System.Net.Http.HttpClientHandler> 類別支援的所有組態選項。  因此：  
   
--   部分功能屬性會在<xref:System.Net.Http.HttpClientHandler>會傳回`false`.NET native，則會傳回`true`適用於 Windows 市集應用程式的標準。  
+- 部分功能屬性會在<xref:System.Net.Http.HttpClientHandler>會傳回`false`.NET native，則會傳回`true`適用於 Windows 市集應用程式的標準。  
   
--   某些組態屬性`get`存取子一律會傳回固定的值在.NET Native 上將會不同於適用於 Windows 市集應用程式中的預設設定值。  
+- 某些組態屬性`get`存取子一律會傳回固定的值在.NET Native 上將會不同於適用於 Windows 市集應用程式中的預設設定值。  
   
  下列各小節會說明一些其他的行為差異。  
   
@@ -189,13 +189,13 @@ ms.locfileid: "59163133"
   
  在.NET 原生：  
   
--   <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> 屬性的值一律為 <xref:System.Net.Http.ClientCertificateOption.Automatic>。  在適用於 Windows 市集應用程式的 .NET 中，預設值為 <xref:System.Net.Http.ClientCertificateOption.Manual>。  
+- <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> 屬性的值一律為 <xref:System.Net.Http.ClientCertificateOption.Automatic>。  在適用於 Windows 市集應用程式的 .NET 中，預設值為 <xref:System.Net.Http.ClientCertificateOption.Manual>。  
   
--   <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A?displayProperty=nameWithType> 屬性不可設定。  
+- <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A?displayProperty=nameWithType> 屬性不可設定。  
   
--   <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A?displayProperty=nameWithType> 屬性一律為 `true`。  在適用於 Windows 市集應用程式的 .NET 中，預設值為 `false`。  
+- <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A?displayProperty=nameWithType> 屬性一律為 `true`。  在適用於 Windows 市集應用程式的 .NET 中，預設值為 `false`。  
   
--   系統會將回應中的 `SetCookie2` 標頭視為過時而將它忽略。  
+- 系統會將回應中的 `SetCookie2` 標頭視為過時而將它忽略。  
   
 <a name="Interop"></a>   
 ### <a name="interop-differences"></a>Interop 的差異  
@@ -262,59 +262,59 @@ ms.locfileid: "59163133"
   
  大部分的平台叫用和 COM interop 案例仍在.NET 原生支援。 特別是仍支援與 Windows 執行階段 (WinRT) API 的所有交互操作性，以及 Windows 執行階段需要的所有封送處理。 其中包括對下列項目的封送處理支援：  
   
--   陣列 (包括 <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>)  
+- 陣列 (包括 <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>)  
   
--   `BStr`  
+- `BStr`  
   
--   委派  
+- 委派  
   
--   字串 (Unicode、Ansi 和 HSTRING)  
+- 字串 (Unicode、Ansi 和 HSTRING)  
   
--   結構 (`byref` 和 `byval`)  
+- 結構 (`byref` 和 `byval`)  
   
--   等位  
+- 等位  
   
--   Win32 控制代碼  
+- Win32 控制代碼  
   
--   所有 WinRT 結構  
+- 所有 WinRT 結構  
   
--   部分支援封送處理變異數類型。 支援的項目如下：  
+- 部分支援封送處理變異數類型。 支援的項目如下：  
   
-    -   <xref:System.Boolean>  
+    - <xref:System.Boolean>  
   
-    -   <xref:System.Byte>  
+    - <xref:System.Byte>  
   
-    -   <xref:System.Decimal>  
+    - <xref:System.Decimal>  
   
-    -   <xref:System.Double>  
+    - <xref:System.Double>  
   
-    -   <xref:System.Int16>  
+    - <xref:System.Int16>  
   
-    -   <xref:System.Int32>  
+    - <xref:System.Int32>  
   
-    -   <xref:System.Int64>  
+    - <xref:System.Int64>  
   
-    -   <xref:System.SByte>  
+    - <xref:System.SByte>  
   
-    -   <xref:System.Single>  
+    - <xref:System.Single>  
   
-    -   <xref:System.UInt16>  
+    - <xref:System.UInt16>  
   
-    -   <xref:System.UInt32>  
+    - <xref:System.UInt32>  
   
-    -   <xref:System.UInt64>  
+    - <xref:System.UInt64>  
   
-    -   `BStr`  
+    - `BStr`  
   
-    -   [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)  
+    - [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)  
   
  不過，.NET 原生不支援下列功能：  
   
--   使用傳統 COM 事件  
+- 使用傳統 COM 事件  
   
--   在 Managed 類型上實作 <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> 介面  
+- 在 Managed 類型上實作 <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> 介面  
   
--   透過 [屬性，在 Managed 類型上實作](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) IDispatch <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> 介面。 不過，請注意您不能透過 `IDispatch`來呼叫 COM 物件，而且您的 Managed 物件不能實作 `IDispatch`。  
+- 透過 [屬性，在 Managed 類型上實作](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) IDispatch <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> 介面。 不過，請注意您不能透過 `IDispatch`來呼叫 COM 物件，而且您的 Managed 物件不能實作 `IDispatch`。  
   
  不支援使用反映來叫用平台叫用方法。 若要解除決這項限制，您可以將此方法呼叫包裝在另一個方法中，並改用反映來呼叫包裝函式。  
   
@@ -568,57 +568,57 @@ ms.locfileid: "59163133"
 ### <a name="differences-in-serializers"></a>序列化程式的差異  
  下列差異與使用 <xref:System.Runtime.Serialization.DataContractSerializer>、 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>和 <xref:System.Xml.Serialization.XmlSerializer> 類別來進行序列化和還原序列化有關。  
   
--   在.NET Native<xref:System.Runtime.Serialization.DataContractSerializer>和<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>無法序列化或還原序列化衍生的類別具有其類型不是根序列化類型的基底類別成員。 例如，在下列程式碼中，嘗試序列化或還原序列化 `Y` 會產生錯誤：  
+- 在.NET Native<xref:System.Runtime.Serialization.DataContractSerializer>和<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>無法序列化或還原序列化衍生的類別具有其類型不是根序列化類型的基底類別成員。 例如，在下列程式碼中，嘗試序列化或還原序列化 `Y` 會產生錯誤：  
   
      [!code-csharp[ProjectN#10](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat3.cs#10)]  
   
      序列化程式無法識別 `InnerType` 類型，因為在序列化期間，並未周遊基底類別的成員。  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 無法將實作 <xref:System.Collections.Generic.IEnumerable%601> 介面的類別或結構序列化。 例如，下列的類型無法序列化或還原序列化：  
+- <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 無法將實作 <xref:System.Collections.Generic.IEnumerable%601> 介面的類別或結構序列化。 例如，下列的類型無法序列化或還原序列化：  
 
--   <xref:System.Xml.Serialization.XmlSerializer> 無法將下列物件值序列化，因為它不知道要序列化之物件的確切類型：  
+- <xref:System.Xml.Serialization.XmlSerializer> 無法將下列物件值序列化，因為它不知道要序列化之物件的確切類型：  
 
--   如果已序列化物件的類型是<xref:System.Xml.Serialization.XmlSerializer> ，則 <xref:System.Xml.XmlQualifiedName>無法序列化或還原序列化。  
+- 如果已序列化物件的類型是<xref:System.Xml.Serialization.XmlSerializer> ，則 <xref:System.Xml.XmlQualifiedName>無法序列化或還原序列化。  
   
--   所有序列化程式 (<xref:System.Runtime.Serialization.DataContractSerializer>、 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>和 <xref:System.Xml.Serialization.XmlSerializer>) 都無法為 <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> 類型或是包含 <xref:System.Xml.Linq.XElement>的類型產生序列化程式碼， 而會顯示建置時間錯誤。  
+- 所有序列化程式 (<xref:System.Runtime.Serialization.DataContractSerializer>、 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>和 <xref:System.Xml.Serialization.XmlSerializer>) 都無法為 <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> 類型或是包含 <xref:System.Xml.Linq.XElement>的類型產生序列化程式碼， 而會顯示建置時間錯誤。  
   
--   無法保證序列化類型的下列建構函式能夠如預期般運作：  
+- 無法保證序列化類型的下列建構函式能夠如預期般運作：  
   
-    -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.DataContractSerializerSettings%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.DataContractSerializerSettings%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Xml.XmlDictionaryString%2CSystem.Xml.XmlDictionaryString%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Xml.XmlDictionaryString%2CSystem.Xml.XmlDictionaryString%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.Json.DataContractJsonSerializerSettings%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.Json.DataContractJsonSerializerSettings%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.String%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.String%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlRootAttribute%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlRootAttribute%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>  
   
--   如果類型中有使用下列任何屬性的方法，則<xref:System.Xml.Serialization.XmlSerializer> 無法為該類型產生程式碼：  
+- 如果類型中有使用下列任何屬性的方法，則<xref:System.Xml.Serialization.XmlSerializer> 無法為該類型產生程式碼：  
   
-    -   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
+    - <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
-    -   <xref:System.Runtime.Serialization.OnSerializedAttribute>  
+    - <xref:System.Runtime.Serialization.OnSerializedAttribute>  
   
-    -   <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+    - <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
   
-    -   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
+    - <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> 不接受 <xref:System.Xml.Serialization.IXmlSerializable> 自訂序列化介面。 如果您有實作這個介面的類別， <xref:System.Xml.Serialization.XmlSerializer> 會將該類型視為簡單的 CLR 物件 (POCO) 類型，並且只將其公開屬性序列化。  
+- <xref:System.Xml.Serialization.XmlSerializer> 不接受 <xref:System.Xml.Serialization.IXmlSerializable> 自訂序列化介面。 如果您有實作這個介面的類別， <xref:System.Xml.Serialization.XmlSerializer> 會將該類型視為簡單的 CLR 物件 (POCO) 類型，並且只將其公開屬性序列化。  
   
--   序列化純<xref:System.Exception>不適用於物件<xref:System.Runtime.Serialization.DataContractSerializer>和<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。
+- 序列化純<xref:System.Exception>不適用於物件<xref:System.Runtime.Serialization.DataContractSerializer>和<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。
 
 <a name="VS"></a>   
 ## <a name="visual-studio-differences"></a>Visual Studio 的差異  
@@ -626,9 +626,9 @@ ms.locfileid: "59163133"
   
  當您執行偵錯工具中使用.NET 原生編譯的應用程式時，如下列的例外狀況類型啟用 first-chance 例外狀況：  
   
--   <xref:System.MemberAccessException>  
+- <xref:System.MemberAccessException>  
   
--   <xref:System.TypeAccessException>  
+- <xref:System.TypeAccessException>  
   
  **建置應用程式**  
   
@@ -636,11 +636,11 @@ ms.locfileid: "59163133"
   
  **分析工具**  
   
--   Visual Studio CPU 分析工具和 XAML 記憶體分析工具不會正確顯示 Just-My-Code。  
+- Visual Studio CPU 分析工具和 XAML 記憶體分析工具不會正確顯示 Just-My-Code。  
   
--   XAML 記憶體分析工具不會準確地顯示 Managed 堆積資料。  
+- XAML 記憶體分析工具不會準確地顯示 Managed 堆積資料。  
   
--   CPU 分析工具不會正確地識別模組，並且會顯示具有前置詞的函式名稱。  
+- CPU 分析工具不會正確地識別模組，並且會顯示具有前置詞的函式名稱。  
   
  **單元測試程式庫專案**  
   

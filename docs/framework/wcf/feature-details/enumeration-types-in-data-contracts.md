@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
 ms.openlocfilehash: 1837a3630424ff2a9ee4a84e9ed63f44a06bbecf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856436"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>資料合約中的列舉型別
 列舉可以在資料合約模型中表示。 本主題將逐步介紹幾個範例，說明程式設計模型。  
@@ -43,9 +43,9 @@ ms.locfileid: "59309637"
   
  這種情形有兩個例外狀況：  
   
--   旗標列舉 (本主題稍後說明)。  
+- 旗標列舉 (本主題稍後說明)。  
   
--   <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 屬性設定為 `false` 的列舉資料成員 (在這種情況中，只會從序列化的資料中省略值為零的列舉)。  
+- <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 屬性設定為 `false` 的列舉資料成員 (在這種情況中，只會從序列化的資料中省略值為零的列舉)。  
   
 ### <a name="customizing-enumeration-member-values"></a>自訂列舉成員值  
  您可以使用 <xref:System.Runtime.Serialization.EnumMemberAttribute.Value%2A> 屬性 (Attribute) 的 <xref:System.Runtime.Serialization.EnumMemberAttribute> 屬性 (Property) 來自訂列舉成員值，該值會成為資料合約的一部分。  

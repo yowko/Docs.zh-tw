@@ -9,11 +9,11 @@ helpviewer_keywords:
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
 ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856709"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>使用 WCF 的委派和模擬
 「*模擬* 」(Impersonation) 是服務用來限制用戶端存取服務網域資源的常用技術。 服務網域資源可以是像是本機檔案 (模擬) 的電腦資源，或是在另一部電腦上的資源，例如檔案共用 (委派)。 如需範例應用程式，請參閱 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)。 如需如何使用模擬的範例，請參閱[How to:服務上模擬用戶端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)。  
@@ -37,22 +37,22 @@ ms.locfileid: "59345517"
 ### <a name="cached-token-impersonation"></a>快取權杖模擬  
  您可以用下列項目來執行快取權杖模擬：  
   
--   具有 Windows 用戶端認證的<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>及 <xref:System.ServiceModel.NetTcpBinding> 。  
+- 具有 Windows 用戶端認證的<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>及 <xref:System.ServiceModel.NetTcpBinding> 。  
   
--   <xref:System.ServiceModel.BasicHttpBinding> ，其 <xref:System.ServiceModel.BasicHttpSecurityMode> 設定為 <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> 認證或是其他任何標準繫結，繫結是指用戶端會在其中提供可由服務用來對應至有效 Windows 帳戶的使用者名稱認證。  
+- <xref:System.ServiceModel.BasicHttpBinding> ，其 <xref:System.ServiceModel.BasicHttpSecurityMode> 設定為 <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> 認證或是其他任何標準繫結，繫結是指用戶端會在其中提供可由服務用來對應至有效 Windows 帳戶的使用者名稱認證。  
   
--   任何使用 Windows 用戶端認證，而且 <xref:System.ServiceModel.Channels.CustomBinding> 已設定為 `requireCancellation` 的 `true`  (此屬性可在下列類別上使用：<xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>、<xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> 及 <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>)。如果此繫結上有使用安全對話，這時也必須將 `requireCancellation` 屬性設定為 `true`。  
+- 任何使用 Windows 用戶端認證，而且 <xref:System.ServiceModel.Channels.CustomBinding> 已設定為 `requireCancellation` 的 `true`  (此屬性可在下列類別上使用：<xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>、<xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> 及 <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>)。如果此繫結上有使用安全對話，這時也必須將 `requireCancellation` 屬性設定為 `true`。  
   
--   用戶端在其中提供使用者名稱認證的任何 <xref:System.ServiceModel.Channels.CustomBinding> 。 如果此繫結上有使用安全對話，這時也必須將 `requireCancellation` 屬性設定為 `true`。  
+- 用戶端在其中提供使用者名稱認證的任何 <xref:System.ServiceModel.Channels.CustomBinding> 。 如果此繫結上有使用安全對話，這時也必須將 `requireCancellation` 屬性設定為 `true`。  
   
 ### <a name="s4u-based-impersonation"></a>S4U 架構模擬  
  您可以用下列項目來執行 S4U 架構模擬：  
   
--   <xref:System.ServiceModel.WSHttpBinding>、 <xref:System.ServiceModel.WSDualHttpBinding>及 <xref:System.ServiceModel.NetTcpBinding> ，包含可讓服務用來對應至有效 Windows 帳戶的憑證用戶端認證。  
+- <xref:System.ServiceModel.WSHttpBinding>、 <xref:System.ServiceModel.WSDualHttpBinding>及 <xref:System.ServiceModel.NetTcpBinding> ，包含可讓服務用來對應至有效 Windows 帳戶的憑證用戶端認證。  
   
--   任何使用 Windows 用戶端認證，而且 <xref:System.ServiceModel.Channels.CustomBinding> 屬性已設定為 `requireCancellation` 的 `false`。  
+- 任何使用 Windows 用戶端認證，而且 <xref:System.ServiceModel.Channels.CustomBinding> 屬性已設定為 `requireCancellation` 的 `false`。  
   
--   任何使用使用者名稱或 Windows 用戶端認證以及安全對話，而且 <xref:System.ServiceModel.Channels.CustomBinding> 屬性已設定為 `requireCancellation` 的 `false`。  
+- 任何使用使用者名稱或 Windows 用戶端認證以及安全對話，而且 <xref:System.ServiceModel.Channels.CustomBinding> 屬性已設定為 `requireCancellation` 的 `false`。  
   
  服務可以模擬用戶端的程度，取決於服務在嘗試模擬時所擁有的權限、所使用的模擬類型，以及用戶端允許的可能模擬程度。  
   
@@ -201,9 +201,9 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
  如需設定限制委派的詳細指示，請參閱 MSDN 的下列主題：  
   
--   [疑難排解 Kerberos 委派](https://go.microsoft.com/fwlink/?LinkId=36724)  
+- [疑難排解 Kerberos 委派](https://go.microsoft.com/fwlink/?LinkId=36724)  
   
--   [Kerberos 通訊協定轉換與限制委派 (英文)](https://go.microsoft.com/fwlink/?LinkId=36725)  
+- [Kerberos 通訊協定轉換與限制委派 (英文)](https://go.microsoft.com/fwlink/?LinkId=36725)  
   
 ## <a name="see-also"></a>另請參閱
 
