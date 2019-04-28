@@ -3,29 +3,29 @@ title: 不支援的功能
 ms.date: 03/30/2017
 ms.assetid: e480cfb5-697e-42c8-bed5-9264c945c4f9
 ms.openlocfilehash: 18a1a8f33a9360b4299648bcd329f4c5f2e7de88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917554"
 ---
-# <a name="unsupported-functionality"></a><span data-ttu-id="f54f3-102">不支援的功能</span><span class="sxs-lookup"><span data-stu-id="f54f3-102">Unsupported Functionality</span></span>
-<span data-ttu-id="f54f3-103">在 LINQ to SQL 中，下列 SQL 功能無法透過轉譯現有 Common Language Runtime (CLR) 和 .NET Framework 建構來公開 (Expose)：</span><span class="sxs-lookup"><span data-stu-id="f54f3-103">In LINQ to SQL, the following SQL functionality cannot be exposed through translation of existing common language runtime (CLR) and .NET Framework constructs:</span></span>  
+# <a name="unsupported-functionality"></a><span data-ttu-id="4e97f-102">不支援的功能</span><span class="sxs-lookup"><span data-stu-id="4e97f-102">Unsupported Functionality</span></span>
+<span data-ttu-id="4e97f-103">在 LINQ to SQL 中，下列 SQL 功能無法透過轉譯現有 Common Language Runtime (CLR) 和 .NET Framework 建構來公開 (Expose)：</span><span class="sxs-lookup"><span data-stu-id="4e97f-103">In LINQ to SQL, the following SQL functionality cannot be exposed through translation of existing common language runtime (CLR) and .NET Framework constructs:</span></span>  
   
--   `STDDEV`  
+- `STDDEV`  
   
--   `LIKE`  
+- `LIKE`  
   
-     <span data-ttu-id="f54f3-104">雖然 `LIKE` 並非透過直接轉譯提供支援，但是類似的功能存在 <xref:System.Data.Linq.SqlClient.SqlMethods> 類別 (Class) 中。</span><span class="sxs-lookup"><span data-stu-id="f54f3-104">Although `LIKE` is not supported through direct translation, similar functionality exists in the <xref:System.Data.Linq.SqlClient.SqlMethods> class.</span></span> <span data-ttu-id="f54f3-105">如需詳細資訊，請參閱<xref:System.Data.Linq.SqlClient.SqlMethods.Like%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="f54f3-105">For more information, see <xref:System.Data.Linq.SqlClient.SqlMethods.Like%2A?displayProperty=nameWithType>.</span></span>  
+     <span data-ttu-id="4e97f-104">雖然 `LIKE` 並非透過直接轉譯提供支援，但是類似的功能存在 <xref:System.Data.Linq.SqlClient.SqlMethods> 類別 (Class) 中。</span><span class="sxs-lookup"><span data-stu-id="4e97f-104">Although `LIKE` is not supported through direct translation, similar functionality exists in the <xref:System.Data.Linq.SqlClient.SqlMethods> class.</span></span> <span data-ttu-id="4e97f-105">如需詳細資訊，請參閱<xref:System.Data.Linq.SqlClient.SqlMethods.Like%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="4e97f-105">For more information, see <xref:System.Data.Linq.SqlClient.SqlMethods.Like%2A?displayProperty=nameWithType>.</span></span>  
   
--   `DATEDIFF`  
+- `DATEDIFF`  
   
-     <span data-ttu-id="f54f3-106">LINQ to SQL 對於 `DATEDIFF` 的支援有限。</span><span class="sxs-lookup"><span data-stu-id="f54f3-106">LINQ to SQL has limited support for `DATEDIFF`.</span></span> <span data-ttu-id="f54f3-107">類似的功能存在 <xref:System.Data.Linq.SqlClient.SqlMethods> 類別中。</span><span class="sxs-lookup"><span data-stu-id="f54f3-107">Similar functionality exists in the <xref:System.Data.Linq.SqlClient.SqlMethods> class.</span></span>  
+     <span data-ttu-id="4e97f-106">LINQ to SQL 對於 `DATEDIFF` 的支援有限。</span><span class="sxs-lookup"><span data-stu-id="4e97f-106">LINQ to SQL has limited support for `DATEDIFF`.</span></span> <span data-ttu-id="4e97f-107">類似的功能存在 <xref:System.Data.Linq.SqlClient.SqlMethods> 類別中。</span><span class="sxs-lookup"><span data-stu-id="4e97f-107">Similar functionality exists in the <xref:System.Data.Linq.SqlClient.SqlMethods> class.</span></span>  
   
--   `ROUND`  
+- `ROUND`  
   
-     <span data-ttu-id="f54f3-108">LINQ to SQL 對於 `ROUND` 的支援有限。</span><span class="sxs-lookup"><span data-stu-id="f54f3-108">LINQ to SQL has limited support for `ROUND`.</span></span> <span data-ttu-id="f54f3-109">如需詳細資訊，請參閱 < [System.Math 方法](system-math-methods.md)。</span><span class="sxs-lookup"><span data-stu-id="f54f3-109">For more information, see [System.Math Methods](system-math-methods.md).</span></span>  
+     <span data-ttu-id="4e97f-108">LINQ to SQL 對於 `ROUND` 的支援有限。</span><span class="sxs-lookup"><span data-stu-id="4e97f-108">LINQ to SQL has limited support for `ROUND`.</span></span> <span data-ttu-id="4e97f-109">如需詳細資訊，請參閱 < [System.Math 方法](system-math-methods.md)。</span><span class="sxs-lookup"><span data-stu-id="4e97f-109">For more information, see [System.Math Methods](system-math-methods.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f54f3-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f54f3-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4e97f-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4e97f-110">See also</span></span>
 
-- [<span data-ttu-id="f54f3-111">資料類型和函式</span><span class="sxs-lookup"><span data-stu-id="f54f3-111">Data Types and Functions</span></span>](data-types-and-functions.md)
+- [<span data-ttu-id="4e97f-111">資料類型和函式</span><span class="sxs-lookup"><span data-stu-id="4e97f-111">Data Types and Functions</span></span>](data-types-and-functions.md)

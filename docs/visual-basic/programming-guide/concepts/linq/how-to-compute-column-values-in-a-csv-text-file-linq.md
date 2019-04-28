@@ -3,18 +3,18 @@ title: HOW TO：計算 CSV 文字檔案 (LINQ) (Visual Basic) 中的資料行值
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
 ms.openlocfilehash: b226d981dd0cd61789e88ab06e602dd619f3f6c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855011"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a><span data-ttu-id="def51-102">HOW TO：計算 CSV 文字檔案 (LINQ) (Visual Basic) 中的資料行值</span><span class="sxs-lookup"><span data-stu-id="def51-102">How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="def51-103">本例示範如何在 .csv 檔案的資料行上執行彙總計算，例如總和、平均、最小值和最大值。</span><span class="sxs-lookup"><span data-stu-id="def51-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="def51-104">此處顯示的範例準則可以套用至其他類型的結構化文字。</span><span class="sxs-lookup"><span data-stu-id="def51-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a><span data-ttu-id="4bf24-102">HOW TO：計算 CSV 文字檔案 (LINQ) (Visual Basic) 中的資料行值</span><span class="sxs-lookup"><span data-stu-id="4bf24-102">How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="4bf24-103">本例示範如何在 .csv 檔案的資料行上執行彙總計算，例如總和、平均、最小值和最大值。</span><span class="sxs-lookup"><span data-stu-id="4bf24-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="4bf24-104">此處顯示的範例準則可以套用至其他類型的結構化文字。</span><span class="sxs-lookup"><span data-stu-id="4bf24-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  
   
-### <a name="to-create-the-source-file"></a><span data-ttu-id="def51-105">建立來源檔案</span><span class="sxs-lookup"><span data-stu-id="def51-105">To create the source file</span></span>  
+### <a name="to-create-the-source-file"></a><span data-ttu-id="4bf24-105">建立來源檔案</span><span class="sxs-lookup"><span data-stu-id="4bf24-105">To create the source file</span></span>  
   
-1. <span data-ttu-id="def51-106">將下列各行複製到名為 scores.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。</span><span class="sxs-lookup"><span data-stu-id="def51-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="def51-107">假設第一個資料行代表學號，後續的資料行代表四項測驗的分數。</span><span class="sxs-lookup"><span data-stu-id="def51-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
+1. <span data-ttu-id="4bf24-106">將下列各行複製到名為 scores.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。</span><span class="sxs-lookup"><span data-stu-id="4bf24-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="4bf24-107">假設第一個資料行代表學號，後續的資料行代表四項測驗的分數。</span><span class="sxs-lookup"><span data-stu-id="4bf24-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -31,7 +31,7 @@ ms.locfileid: "59344217"
     122, 94, 92, 91, 91  
     ```  
   
-## <a name="example"></a><span data-ttu-id="def51-108">範例</span><span class="sxs-lookup"><span data-stu-id="def51-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="4bf24-108">範例</span><span class="sxs-lookup"><span data-stu-id="4bf24-108">Example</span></span>  
   
 ```vb  
 Class SumColumns  
@@ -140,12 +140,12 @@ End Class
 ' Exam #4 Average: 76.92 High Score: 94 Low Score: 39  
 ```  
   
- <span data-ttu-id="def51-109">查詢的運作方式是使用 <xref:System.String.Split%2A> 方法，將每一行文字轉換成陣列。</span><span class="sxs-lookup"><span data-stu-id="def51-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="def51-110">每個陣列項目表示一個資料行。</span><span class="sxs-lookup"><span data-stu-id="def51-110">Each array element represents a column.</span></span> <span data-ttu-id="def51-111">最後，每個資料行中的文字都會轉換成其數值表示法。</span><span class="sxs-lookup"><span data-stu-id="def51-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="def51-112">如果您的檔案是以定位鍵分隔的檔案，只需要將 `Split` 方法中的引數更新成 `\t` 即可。</span><span class="sxs-lookup"><span data-stu-id="def51-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
+ <span data-ttu-id="4bf24-109">查詢的運作方式是使用 <xref:System.String.Split%2A> 方法，將每一行文字轉換成陣列。</span><span class="sxs-lookup"><span data-stu-id="4bf24-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="4bf24-110">每個陣列項目表示一個資料行。</span><span class="sxs-lookup"><span data-stu-id="4bf24-110">Each array element represents a column.</span></span> <span data-ttu-id="4bf24-111">最後，每個資料行中的文字都會轉換成其數值表示法。</span><span class="sxs-lookup"><span data-stu-id="4bf24-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="4bf24-112">如果您的檔案是以定位鍵分隔的檔案，只需要將 `Split` 方法中的引數更新成 `\t` 即可。</span><span class="sxs-lookup"><span data-stu-id="4bf24-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="def51-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="def51-113">Compiling the Code</span></span>  
- <span data-ttu-id="def51-114">建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="def51-114">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="4bf24-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="4bf24-113">Compiling the Code</span></span>  
+ <span data-ttu-id="4bf24-114">建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="4bf24-114">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="def51-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="def51-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4bf24-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4bf24-115">See also</span></span>
 
-- [<span data-ttu-id="def51-116">LINQ 和字串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="def51-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="def51-117">LINQ 與檔案目錄 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="def51-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="4bf24-116">LINQ 和字串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4bf24-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="4bf24-117">LINQ 與檔案目錄 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4bf24-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

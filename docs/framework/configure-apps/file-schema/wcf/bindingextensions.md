@@ -3,18 +3,18 @@ title: <bindingExtensions>
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
 ms.openlocfilehash: ed55701e45d8580e37cf4776de6b9c5241e0548c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673468"
 ---
-# <a name="bindingextensions"></a><span data-ttu-id="f8c9b-101">\<bindingExtensions></span><span class="sxs-lookup"><span data-stu-id="f8c9b-101">\<bindingExtensions></span></span>
-<span data-ttu-id="f8c9b-102">這個區段會啟用電腦或應用程式組態檔中使用者定義繫結的使用。</span><span class="sxs-lookup"><span data-stu-id="f8c9b-102">This section enables the use of a user defined binding from a machine or application configuration file.</span></span> <span data-ttu-id="f8c9b-103">您可以透過使用 `add` 關鍵字，將項目的 `type` 屬性設定為使用者定義繫結，並將 `name` 屬性設定為使用者定義繫結的名稱，來將使用者定義繫結加入至這個集合。</span><span class="sxs-lookup"><span data-stu-id="f8c9b-103">You can add a user defined binding to this collection by using the `add` keyword, and setting the `type` attribute of the element to a user defined binding, as well as the `name` attribute to the name of the user defined binding.</span></span>  
+# <a name="bindingextensions"></a><span data-ttu-id="faa87-101">\<bindingExtensions></span><span class="sxs-lookup"><span data-stu-id="faa87-101">\<bindingExtensions></span></span>
+<span data-ttu-id="faa87-102">這個區段會啟用電腦或應用程式組態檔中使用者定義繫結的使用。</span><span class="sxs-lookup"><span data-stu-id="faa87-102">This section enables the use of a user defined binding from a machine or application configuration file.</span></span> <span data-ttu-id="faa87-103">您可以透過使用 `add` 關鍵字，將項目的 `type` 屬性設定為使用者定義繫結，並將 `name` 屬性設定為使用者定義繫結的名稱，來將使用者定義繫結加入至這個集合。</span><span class="sxs-lookup"><span data-stu-id="faa87-103">You can add a user defined binding to this collection by using the `add` keyword, and setting the `type` attribute of the element to a user defined binding, as well as the `name` attribute to the name of the user defined binding.</span></span>  
   
- <span data-ttu-id="f8c9b-104">繫結延伸可讓使用者建立使用者定義繫結，做為端點組態的一部分。</span><span class="sxs-lookup"><span data-stu-id="f8c9b-104">Binding extensions enable the user to create user-defined bindings for use as part an endpoint configuration.</span></span> <span data-ttu-id="f8c9b-105">就程式設計角度而言，繫結延伸是實作抽象類別 (Abstract Class) <xref:System.ServiceModel.Channels.Binding> 的型別。</span><span class="sxs-lookup"><span data-stu-id="f8c9b-105">Programmatically, a binding extension is a type that implements the abstract class <xref:System.ServiceModel.Channels.Binding>.</span></span>  
+ <span data-ttu-id="faa87-104">繫結延伸可讓使用者建立使用者定義繫結，做為端點組態的一部分。</span><span class="sxs-lookup"><span data-stu-id="faa87-104">Binding extensions enable the user to create user-defined bindings for use as part an endpoint configuration.</span></span> <span data-ttu-id="faa87-105">就程式設計角度而言，繫結延伸是實作抽象類別 (Abstract Class) <xref:System.ServiceModel.Channels.Binding> 的型別。</span><span class="sxs-lookup"><span data-stu-id="faa87-105">Programmatically, a binding extension is a type that implements the abstract class <xref:System.ServiceModel.Channels.Binding>.</span></span>  
   
- <span data-ttu-id="f8c9b-106">下列範例使用 `add` 項目，以及 `name` 屬性，將繫結延伸加入至組態檔的 `bindingElementExtensions` 區段中。</span><span class="sxs-lookup"><span data-stu-id="f8c9b-106">The following example uses the `add` element, as well as the `name` attribute to add a binding extension to the `bindingElementExtensions` section of the configuration file.</span></span>  
+ <span data-ttu-id="faa87-106">下列範例使用 `add` 項目，以及 `name` 屬性，將繫結延伸加入至組態檔的 `bindingElementExtensions` 區段中。</span><span class="sxs-lookup"><span data-stu-id="faa87-106">The following example uses the `add` element, as well as the `name` attribute to add a binding extension to the `bindingElementExtensions` section of the configuration file.</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -28,9 +28,9 @@ ms.locfileid: "59113031"
 </system.serviceModel>
 ```  
   
- <span data-ttu-id="f8c9b-107">若要將組態功能加入至項目，使用者必須寫入並註冊 `bindingSection` 項目。</span><span class="sxs-lookup"><span data-stu-id="f8c9b-107">To add configuration abilities to the element, the user needs to write and register a `bindingSection` element.</span></span> <span data-ttu-id="f8c9b-108">如需這方面的詳細資訊，請參閱 <xref:System.Configuration>。</span><span class="sxs-lookup"><span data-stu-id="f8c9b-108">For more information on this, see the <xref:System.Configuration> documentation.</span></span>  
+ <span data-ttu-id="faa87-107">若要將組態功能加入至項目，使用者必須寫入並註冊 `bindingSection` 項目。</span><span class="sxs-lookup"><span data-stu-id="faa87-107">To add configuration abilities to the element, the user needs to write and register a `bindingSection` element.</span></span> <span data-ttu-id="faa87-108">如需這方面的詳細資訊，請參閱 <xref:System.Configuration>。</span><span class="sxs-lookup"><span data-stu-id="faa87-108">For more information on this, see the <xref:System.Configuration> documentation.</span></span>  
   
- <span data-ttu-id="f8c9b-109">在定義項目及其組態型別後，延伸即可做為端點的一部分，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="f8c9b-109">After the element and its configuration type are defined, the extension can be used as part of an endpoint as shown in the following example.</span></span>  
+ <span data-ttu-id="faa87-109">在定義項目及其組態型別後，延伸即可做為端點的一部分，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="faa87-109">After the element and its configuration type are defined, the extension can be used as part of an endpoint as shown in the following example.</span></span>  
   
 ```xml  
 <services>
@@ -41,6 +41,6 @@ ms.locfileid: "59113031"
 </services>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f8c9b-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f8c9b-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="faa87-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="faa87-110">See also</span></span>
 
-- [<span data-ttu-id="f8c9b-111">擴充繫結</span><span class="sxs-lookup"><span data-stu-id="f8c9b-111">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [<span data-ttu-id="faa87-111">擴充繫結</span><span class="sxs-lookup"><span data-stu-id="faa87-111">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)

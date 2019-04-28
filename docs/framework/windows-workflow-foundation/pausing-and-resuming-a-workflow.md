@@ -3,17 +3,17 @@ title: 暫止和繼續流程
 ms.date: 03/30/2017
 ms.assetid: 11f38339-79c7-4295-b610-24a7223bbf6d
 ms.openlocfilehash: aa0431b18f6d0e4b96d7494ec2e65acd355992c7
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61860954"
 ---
-# <a name="pausing-and-resuming-a-workflow"></a><span data-ttu-id="a5627-102">暫止和繼續流程</span><span class="sxs-lookup"><span data-stu-id="a5627-102">Pausing and Resuming a Workflow</span></span>
-<span data-ttu-id="a5627-103">工作流程將會暫停並繼續來回應書籤和封鎖的活動 (例如 <xref:System.Activities.Statements.Delay>)，但是也可以使用持續性來明確暫停、卸載及繼續執行工作流程。</span><span class="sxs-lookup"><span data-stu-id="a5627-103">Workflows will pause and resume in response to bookmarks and blocking activities such as <xref:System.Activities.Statements.Delay>, but a workflow can also be explicitly paused, unloaded, and resumed by using persistence.</span></span>  
+# <a name="pausing-and-resuming-a-workflow"></a><span data-ttu-id="fbd8b-102">暫止和繼續流程</span><span class="sxs-lookup"><span data-stu-id="fbd8b-102">Pausing and Resuming a Workflow</span></span>
+<span data-ttu-id="fbd8b-103">工作流程將會暫停並繼續來回應書籤和封鎖的活動 (例如 <xref:System.Activities.Statements.Delay>)，但是也可以使用持續性來明確暫停、卸載及繼續執行工作流程。</span><span class="sxs-lookup"><span data-stu-id="fbd8b-103">Workflows will pause and resume in response to bookmarks and blocking activities such as <xref:System.Activities.Statements.Delay>, but a workflow can also be explicitly paused, unloaded, and resumed by using persistence.</span></span>  
   
-## <a name="pausing-a-workflow"></a><span data-ttu-id="a5627-104">暫停工作流程</span><span class="sxs-lookup"><span data-stu-id="a5627-104">Pausing a Workflow</span></span>  
- <span data-ttu-id="a5627-105">若要暫停工作流程，請使用 <xref:System.Activities.WorkflowApplication.Unload%2A>。</span><span class="sxs-lookup"><span data-stu-id="a5627-105">To pause a workflow, use <xref:System.Activities.WorkflowApplication.Unload%2A>.</span></span>  <span data-ttu-id="a5627-106">這個方法會要求工作流程持續及卸載，如果工作流程未在 30 秒內卸載將會擲回 <xref:System.TimeoutException>。</span><span class="sxs-lookup"><span data-stu-id="a5627-106">This method requests that the workflow persist and unload, and will throw a <xref:System.TimeoutException> if the workflow does not unload in 30 seconds.</span></span>  
+## <a name="pausing-a-workflow"></a><span data-ttu-id="fbd8b-104">暫停工作流程</span><span class="sxs-lookup"><span data-stu-id="fbd8b-104">Pausing a Workflow</span></span>  
+ <span data-ttu-id="fbd8b-105">若要暫停工作流程，請使用 <xref:System.Activities.WorkflowApplication.Unload%2A>。</span><span class="sxs-lookup"><span data-stu-id="fbd8b-105">To pause a workflow, use <xref:System.Activities.WorkflowApplication.Unload%2A>.</span></span>  <span data-ttu-id="fbd8b-106">這個方法會要求工作流程持續及卸載，如果工作流程未在 30 秒內卸載將會擲回 <xref:System.TimeoutException>。</span><span class="sxs-lookup"><span data-stu-id="fbd8b-106">This method requests that the workflow persist and unload, and will throw a <xref:System.TimeoutException> if the workflow does not unload in 30 seconds.</span></span>  
   
 ```csharp  
 try  
@@ -27,8 +27,8 @@ catch (TimeoutException e)
 }  
 ```  
   
-## <a name="resuming-a-workflow"></a><span data-ttu-id="a5627-107">繼續工作流程</span><span class="sxs-lookup"><span data-stu-id="a5627-107">Resuming a Workflow</span></span>  
- <span data-ttu-id="a5627-108">若要繼續之前已暫停及卸載的工作流程，請使用 <xref:System.Activities.WorkflowApplication.Load%2A>。</span><span class="sxs-lookup"><span data-stu-id="a5627-108">To resume a previously paused and unloaded workflow, use <xref:System.Activities.WorkflowApplication.Load%2A>.</span></span> <span data-ttu-id="a5627-109">這個方法會將工作流程從持續性存放區載入記憶體中。</span><span class="sxs-lookup"><span data-stu-id="a5627-109">This method loads a workflow from a persistence store into memory.</span></span>  
+## <a name="resuming-a-workflow"></a><span data-ttu-id="fbd8b-107">繼續工作流程</span><span class="sxs-lookup"><span data-stu-id="fbd8b-107">Resuming a Workflow</span></span>  
+ <span data-ttu-id="fbd8b-108">若要繼續之前已暫停及卸載的工作流程，請使用 <xref:System.Activities.WorkflowApplication.Load%2A>。</span><span class="sxs-lookup"><span data-stu-id="fbd8b-108">To resume a previously paused and unloaded workflow, use <xref:System.Activities.WorkflowApplication.Load%2A>.</span></span> <span data-ttu-id="fbd8b-109">這個方法會將工作流程從持續性存放區載入記憶體中。</span><span class="sxs-lookup"><span data-stu-id="fbd8b-109">This method loads a workflow from a persistence store into memory.</span></span>  
   
 ```csharp  
 WorkflowApplication application = new WorkflowApplication(activity);  
@@ -36,8 +36,8 @@ application.InstanceStore = instanceStore;
 application.Load(id);  
 ```  
   
-## <a name="example"></a><span data-ttu-id="a5627-110">範例</span><span class="sxs-lookup"><span data-stu-id="a5627-110">Example</span></span>  
- <span data-ttu-id="a5627-111">下列程式碼範例示範如何使用持續性來暫停及繼續執行工作流程。</span><span class="sxs-lookup"><span data-stu-id="a5627-111">The following code sample demonstrates how to pause and resume a workflow by using persistence.</span></span>  
+## <a name="example"></a><span data-ttu-id="fbd8b-110">範例</span><span class="sxs-lookup"><span data-stu-id="fbd8b-110">Example</span></span>  
+ <span data-ttu-id="fbd8b-111">下列程式碼範例示範如何使用持續性來暫停及繼續執行工作流程。</span><span class="sxs-lookup"><span data-stu-id="fbd8b-111">The following code sample demonstrates how to pause and resume a workflow by using persistence.</span></span>  
   
 ```csharp  
 static string bkName = "bkName";  
