@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
 ms.openlocfilehash: ba7348ae50965ffcf2719b20934451916c8fa95a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923717"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>類型參數不能當做限定詞使用
 限定性條件字串，包含型別參數被限定的程式設計項目。  

@@ -3,11 +3,11 @@ title: 推斷關聯性
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
 ms.openlocfilehash: f8a9aba493dfe82466608ea60932ddfec5ef64f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879667"
 ---
 # <a name="inferring-relationships"></a>推斷關聯性
 若被推斷為資料表的項目具有子項目，且子項目也被推斷為資料表，則兩個資料表間會建立 <xref:System.Data.DataRelation>。 新的資料行名稱取代**ParentTableName_Id**會新增至父元素中，建立的資料表和子元素所建立的資料表。 **ColumnMapping**此識別欄位的屬性會設定為**MappingType.Hidden**。 將會自動遞增主索引鍵的父資料表，資料行，並將用於**DataRelation**兩個資料表之間。 新增的身分識別資料行的資料型別會**System.Int32**，其他所有推斷的資料行的資料型別，即**System.String**。 A<xref:System.Data.ForeignKeyConstraint>具有**DeleteRule** = **Cascade**也會建立在父和子資料表中使用新的資料行。  

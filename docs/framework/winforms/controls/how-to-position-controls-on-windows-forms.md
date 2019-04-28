@@ -16,11 +16,11 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
 ms.openlocfilehash: a0b97073b2f9363a64bfc4a4ede7ffa69e2bce42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913259"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>HOW TO：定位 Windows Forms 的控制項
 若要調整控制項的位置，使用 Windows Form 設計工具中，或指定<xref:System.Windows.Forms.Control.Location%2A>屬性。  
@@ -30,7 +30,7 @@ ms.locfileid: "59333999"
   
 ### <a name="to-position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a>若要將控制項放置在 Windows Form 設計工具的設計介面上  
   
--   將控制項拖曳至適當的位置，使用滑鼠。  
+- 將控制項拖曳至適當的位置，使用滑鼠。  
   
     > [!NOTE]
     >  選取的控制項，然後移動它具有箭號將它放在更精確索引鍵。 此外，*對齊線*協助您放置在表單上精確的控制項。 如需詳細資訊，請參閱[逐步解說：排列控制項，在 Windows Form 使用對齊線](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。  

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1cff5b7fadf4345b7a1d09911dc7061adc925e7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992611"
 ---
 # <a name="iceegengetilsection-method"></a>ICeeGen::GetIlSection 方法
 取得指定的控制代碼所參考的基底中繼語言程式碼區段。  

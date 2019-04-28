@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Panel control [Windows Forms]
 ms.assetid: 37c69803-5084-4347-b035-54cfbabdc310
 ms.openlocfilehash: 752f64b2430c1fc7df4f3fd724fc12fe535ecb70
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012655"
 ---
 # <a name="panel-control-windows-forms"></a>Panel 控制項 (Windows Form)
 Windows Form`Panel`控制項可用來提供其他控制項的可識別分組。 一般而言，您可以使用面板細分函式的表單。 `Panel`控制項是類似於<xref:System.Windows.Forms.GroupBox>控制; 不過，只有`Panel`控制項有捲軸，並只<xref:System.Windows.Forms.GroupBox>控制項顯示標題。  

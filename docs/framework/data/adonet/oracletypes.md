@@ -3,11 +3,11 @@ title: OracleType
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
 ms.openlocfilehash: 3762fdaee1312a7cb008386bb1f6b7bf7cb4316e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878419"
 ---
 # <a name="oracletypes"></a>OracleType
 Oracle 的 .NET Framework 資料提供者包括數個可讓您使用 Oracle 資料型別的結構。 這些結構包括 <xref:System.Data.OracleClient.OracleNumber> 及 <xref:System.Data.OracleClient.OracleString>。  
@@ -17,9 +17,9 @@ Oracle 的 .NET Framework 資料提供者包括數個可讓您使用 Oracle 資�
   
  下列 C# 範例：  
   
--   建立 Oracle 資料表並為其載入資料。  
+- 建立 Oracle 資料表並為其載入資料。  
   
--   使用 <xref:System.Data.OracleClient.OracleDataReader> 存取資料，並使用數個 <xref:System.Data.OracleClient.OracleType> 結構顯示資料。  
+- 使用 <xref:System.Data.OracleClient.OracleDataReader> 存取資料，並使用數個 <xref:System.Data.OracleClient.OracleType> 結構顯示資料。  
   
 ## <a name="creating-an-oracle-table"></a>建立 Oracle 資料表  
  此範例建立 Oracle 資料表並為其載入資料。 您必須先執行此範例，才能執行下一個範例。  

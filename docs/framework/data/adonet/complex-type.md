@@ -3,30 +3,30 @@ title: 複雜類型
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
 ms.openlocfilehash: 9d63660c441192bbc9ecb48bb3a86030b46461cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880002"
 ---
 # <a name="complex-type"></a>複雜類型
 A*複雜型別*是上定義豐富結構化屬性的範本[實體類型](../../../../docs/framework/data/adonet/entity-type.md)或其他複雜類型。 每個範本包含下列資訊：  
   
--   唯一名稱。 (必要項)  
+- 唯一名稱。 (必要項)  
   
     > [!NOTE]
     >  複雜類型的名稱不可以與同一個命名空間中的實體類型名稱相同。  
   
--   一或多個表單中的資料[屬性](../../../../docs/framework/data/adonet/property.md)。 (選擇性。)  
+- 一或多個表單中的資料[屬性](../../../../docs/framework/data/adonet/property.md)。 (選擇性。)  
   
     > [!NOTE]
     >  複雜類型的屬性可以是另一個複雜類型。  
   
  複雜類型與實體類型相似之處在於，複雜類型可以包含基本型別屬性或其他複雜類型形式的資料承載。 不過，複雜型別和實體類型之間還是有些重大的差異：  
   
--   複雜類型不具有識別，因此無法獨立存在。 複雜類型只能以實體類型或其他複雜類型的屬性形式存在。  
+- 複雜類型不具有識別，因此無法獨立存在。 複雜類型只能以實體類型或其他複雜類型的屬性形式存在。  
   
--   複雜型別不能參與[關聯](../../../../docs/framework/data/adonet/association-type.md)。 關聯的兩個端點可以是複雜類型，因此[導覽屬性](../../../../docs/framework/data/adonet/navigation-property.md)不能定義於複雜型別。  
+- 複雜型別不能參與[關聯](../../../../docs/framework/data/adonet/association-type.md)。 關聯的兩個端點可以是複雜類型，因此[導覽屬性](../../../../docs/framework/data/adonet/navigation-property.md)不能定義於複雜型別。  
   
 ## <a name="example"></a>範例  
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)會使用稱為概念結構定義語言的特定領域語言 (DSL) ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 來定義概念模型。 下列 CSDL 以基底類型屬性 `StreetAddress`、`City`、`StateOrProvince`、`Country` 和 `PostalCode` 定義複雜類型 Address。  

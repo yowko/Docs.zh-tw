@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
 ms.openlocfilehash: 06eaf68fef167d63e6f8404dd5049f5445881d24
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912869"
 ---
 # <a name="how-to-set-the-input-mask"></a>HOW TO：設定輸入遮罩
 遮罩的文字方塊控制項是支援的宣告式語法，以接受或拒絕使用者輸入增強的文字方塊控制項。 藉由設定 [遮罩] 屬性，您可以指定允許使用者輸入，而不需要撰寫任何自訂驗證邏輯應用程式中。 如需詳細資訊，請參閱的 < 備註 > 一節<xref:System.Windows.Forms.MaskedTextBox>類別。  
@@ -34,15 +34,15 @@ ms.locfileid: "59331464"
   
 1. 在 **設計**檢視中，選取<xref:System.Windows.Forms.MaskedTextBox>。  
   
-    1.  按一下以開啟的智慧標籤**MaskedTextBox 工作**面板。  
+    1. 按一下以開啟的智慧標籤**MaskedTextBox 工作**面板。  
   
-    2.  按一下 **設定遮罩**。  
+    2. 按一下 **設定遮罩**。  
   
      \-或-  
   
-    1.  在 **屬性**視窗中，選取<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>屬性。  
+    1. 在 **屬性**視窗中，選取<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>屬性。  
   
-    2.  按一下省略符號按鈕，在屬性資料行。  
+    2. 按一下省略符號按鈕，在屬性資料行。  
   
      **輸入遮罩** 對話方塊隨即出現。  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 ms.openlocfilehash: 6b131d073e10f99feaf770fe5fd3c393551fa5a3
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907165"
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic 中的陣列
 
@@ -219,7 +219,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 ## <a name="zero-length-arrays"></a>長度為零的陣列
 
-Visual Basic 會區別未初始化的陣列 (其值是的陣列`Nothing`) 和*長度為零的陣列*或空陣列 （陣列沒有任何項目。）未初始化的陣列是不被建立維度，或已指派給它的任何值。 例如: 
+Visual Basic 會區別未初始化的陣列 (其值是的陣列`Nothing`) 和*長度為零的陣列*或空陣列 （陣列沒有任何項目。）未初始化的陣列是不被建立維度，或已指派給它的任何值。 例如：
 
 ```vb
 Dim arr() As String

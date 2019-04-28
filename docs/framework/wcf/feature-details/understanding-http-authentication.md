@@ -3,11 +3,11 @@ title: 了解 HTTP 驗證
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
 ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918901"
 ---
 # <a name="understanding-http-authentication"></a>了解 HTTP 驗證
 驗證是一種識別用戶端是否具備存取資源之資格的程序。 HTTP 通訊協定支援驗證作為存取安全資源的交涉方法。  
@@ -29,11 +29,11 @@ ms.locfileid: "59206391"
 ## <a name="choosing-an-authentication-scheme"></a>選擇驗證配置  
  為 HTTP 伺服器選擇潛在驗證配置時，必須考量一些項目，包括：  
   
--   考量資源是否需要保護。 使用 HTTP 驗證需要傳輸更多資料，並且可限制與用戶端的互通性。 允許匿名存取不需要保護的資源。  
+- 考量資源是否需要保護。 使用 HTTP 驗證需要傳輸更多資料，並且可限制與用戶端的互通性。 允許匿名存取不需要保護的資源。  
   
--   如果資源需要保護，則考慮何種驗證配置提供所需的安全性等級。 這裡所討論的驗證配置，最低標準是基礎驗證。 基礎驗證不會保護使用者的認證資訊。 最高標準驗證配置為交涉驗證，也就是 Kerberos 通訊協定。  
+- 如果資源需要保護，則考慮何種驗證配置提供所需的安全性等級。 這裡所討論的驗證配置，最低標準是基礎驗證。 基礎驗證不會保護使用者的認證資訊。 最高標準驗證配置為交涉驗證，也就是 Kerberos 通訊協定。  
   
--   伺服器不應存在任何 (以 WWW-Authentication 標頭表示) 不預備接受或未能提供保護資源適當安全的配置。 用戶端可自行選擇任何伺服器提供的驗證配置。 有些用戶端預設選擇最薄弱的驗證配置，或是伺服器清單中第一項驗證配置。  
+- 伺服器不應存在任何 (以 WWW-Authentication 標頭表示) 不預備接受或未能提供保護資源適當安全的配置。 用戶端可自行選擇任何伺服器提供的驗證配置。 有些用戶端預設選擇最薄弱的驗證配置，或是伺服器清單中第一項驗證配置。  
   
 ## <a name="see-also"></a>另請參閱
 

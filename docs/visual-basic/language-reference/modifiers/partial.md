@@ -15,11 +15,11 @@ helpviewer_keywords:
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
 ms.openlocfilehash: 0f74935d58d47e65b5eb614abc86a3fc9c8e6c42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920610"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 表示類別宣告為類型的部分定義。  
@@ -68,15 +68,15 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 ## <a name="best-practices"></a>最佳作法  
   
--   在正常情況下，您不該將單一類型的開發分成兩個或多個宣告。 因此，在大部分情況下您不需要 `Partial` 關鍵字。  
+- 在正常情況下，您不該將單一類型的開發分成兩個或多個宣告。 因此，在大部分情況下您不需要 `Partial` 關鍵字。  
   
--   為了便於閱讀，類型的每個部分宣告都應該包含 `Partial` 關鍵字。 編譯器最多允許一個部分宣告省略關鍵字；如果有兩個或多個部分宣告省略關鍵字，則編譯器會發出錯誤訊號。  
+- 為了便於閱讀，類型的每個部分宣告都應該包含 `Partial` 關鍵字。 編譯器最多允許一個部分宣告省略關鍵字；如果有兩個或多個部分宣告省略關鍵字，則編譯器會發出錯誤訊號。  
   
 ## <a name="behavior"></a>行為  
   
--   **宣告的聯集。** 編譯器會將此類型視為其所有部分宣告的等位。 每個部分定義的每個修飾詞都會套用至整個類型，而每個部分定義的每個成員均可用於整個類型。  
+- **宣告的聯集。** 編譯器會將此類型視為其所有部分宣告的等位。 每個部分定義的每個修飾詞都會套用至整個類型，而每個部分定義的每個成員均可用於整個類型。  
   
--   **在模組中的部分類型不允許的型別提升。** 如果部分定義在某個模組內，則該類型的類型提升會自動失效。 在這種情況下，一組部分定義可能會導致非預期的結果，甚至是編譯器錯誤。 如需詳細資訊，請參閱 <<c0> [ 型別提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)。  
+- **在模組中的部分類型不允許的型別提升。** 如果部分定義在某個模組內，則該類型的類型提升會自動失效。 在這種情況下，一組部分定義可能會導致非預期的結果，甚至是編譯器錯誤。 如需詳細資訊，請參閱 <<c0> [ 型別提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)。  
   
      只有在完整路徑相同時，編譯器才會合併部分定義。  
   

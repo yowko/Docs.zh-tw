@@ -3,11 +3,11 @@ title: 類型定義 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
 ms.openlocfilehash: 2e068db0ce202c26cad36c8ed7adf0acdfb8e363
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879550"
 ---
 # <a name="type-definitions-entity-sql"></a>類型定義 (Entity SQL)
 型別定義用於 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 內嵌函式中的宣告陳述式。  
@@ -19,25 +19,25 @@ ms.locfileid: "59096019"
   
  型別定義可以是下面其中一項：  
   
--   識別項的型別 (例如 "Int32" 或 "AdventureWorks.Order")。  
+- 識別項的型別 (例如 "Int32" 或 "AdventureWorks.Order")。  
   
--   關鍵字 `COLLECTION` 後面接以括號括住的其他型別定義 (例如 "Collection(AdventureWorks.Order)")。  
+- 關鍵字 `COLLECTION` 後面接以括號括住的其他型別定義 (例如 "Collection(AdventureWorks.Order)")。  
   
--   關鍵字 ROW 後面接以括號括住的屬性定義清單 (例如 "Row(x AdventureWorks.Order)")。 屬性定義都有一種格式如"`identifier type_definition`， `identifier type_definition`，..."。  
+- 關鍵字 ROW 後面接以括號括住的屬性定義清單 (例如 "Row(x AdventureWorks.Order)")。 屬性定義都有一種格式如"`identifier type_definition`， `identifier type_definition`，..."。  
   
--   關鍵字 REF 後面接以括號括住的識別項型別 (例如 "Ref(AdventureWorks.Order)")。 REF 型別定義運算子需要實體類型做為引數。 您不能指定基本型別做為引數。  
+- 關鍵字 REF 後面接以括號括住的識別項型別 (例如 "Ref(AdventureWorks.Order)")。 REF 型別定義運算子需要實體類型做為引數。 您不能指定基本型別做為引數。  
   
  您也可以巢狀化型別定義 (例如 "Collection(Row(x Ref(AdventureWorks.Order)))")。  
   
  型別定義的選項是：  
   
--   `IdentifierName supported_type`或  
+- `IdentifierName supported_type`或  
   
--   `IdentifierName` COLLECTION(`type_definition`)，或  
+- `IdentifierName` COLLECTION(`type_definition`)，或  
   
--   `IdentifierName` ROW(`property_definition`)，或  
+- `IdentifierName` ROW(`property_definition`)，或  
   
--   `IdentifierName` REF(`supported_entity_type`)  
+- `IdentifierName` REF(`supported_entity_type`)  
   
  屬性定義的選項是 `IdentifierName type_definition`。  
   

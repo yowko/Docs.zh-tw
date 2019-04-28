@@ -12,11 +12,11 @@ helpviewer_keywords:
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
 ms.openlocfilehash: ea719b60a6bcd40494666d4923fad296a8ddae70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907383"
 ---
 # <a name="composite-data-types-visual-basic"></a>複合資料類型 (Visual Basic)
 除了提供基本資料型別 Visual Basic，您也可以組合來建立不同類型的項目*複合資料型別*結構、 陣列等類別。 從基本型別，以及從其他複合類型，您可以建置複合資料類型。 比方說，您可以定義陣列的結構項目或結構的陣列成員。  
@@ -36,11 +36,11 @@ Tuple 是輕量級的結構，其中包含的類型預先定義的兩個或多�
 ## <a name="array-types"></a>陣列類型  
  沒有單一的資料類型可包含所有的陣列。 陣列的特定執行個體的資料類型是由下列決定：  
   
--   屬於陣列的這個事實  
+- 屬於陣列的這個事實  
   
--   陣列陣序 （維度數目）  
+- 陣列陣序 （維度數目）  
   
--   陣列的項目類型  
+- 陣列的項目類型  
   
  特別是，指定維度的長度不是執行個體的資料類型的一部分。 下列範例將說明這點。  
   

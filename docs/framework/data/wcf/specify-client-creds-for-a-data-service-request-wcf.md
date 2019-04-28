@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
 ms.openlocfilehash: ca2ed1fcf113e06535c8900e5836eb64f9b23958
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875578"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>HOW TO：指定用戶端認證，資料服務要求 (WCF Data Services)
 預設情況下，將要求傳送至 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服務時，用戶端程式庫不提供認證。 不過，您可以透過為 <xref:System.Net.NetworkCredential> 的 <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> 屬性提供 <xref:System.Data.Services.Client.DataServiceContext>，藉以指定要傳送的認證來驗證要求。 如需詳細資訊，請參閱 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)。 本主題中的範例會示範如何在從資料服務要求資料時，明確地提供 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端所使用的認證。  
@@ -44,11 +44,11 @@ ms.locfileid: "59518132"
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  下列安全性考量適用於本主題中的範例：  
   
--   若要驗證此範例中提供的認證有效，Northwind 資料服務必須使用匿名存取以外的驗證配置。 否則，主控資料服務的網站將不會要求認證。  
+- 若要驗證此範例中提供的認證有效，Northwind 資料服務必須使用匿名存取以外的驗證配置。 否則，主控資料服務的網站將不會要求認證。  
   
--   使用者認證只有在執行期間才會要求，而且不得快取。 認證永遠必須以安全的方式儲存。  
+- 使用者認證只有在執行期間才會要求，而且不得快取。 認證永遠必須以安全的方式儲存。  
   
--   使用基本與摘要式驗證傳送的資料不會經過加密，因此敵人可以看到資料。 此外，基本驗證認證 (使用者名稱和密碼) 會以純文字傳送，而且可以被攔截。  
+- 使用基本與摘要式驗證傳送的資料不會經過加密，因此敵人可以看到資料。 此外，基本驗證認證 (使用者名稱和密碼) 會以純文字傳送，而且可以被攔截。  
   
  如需詳細資訊，請參閱 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)。  
   

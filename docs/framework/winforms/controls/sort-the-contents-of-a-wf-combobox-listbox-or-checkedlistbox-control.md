@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], sorting contents
 ms.assetid: c268e387-3d1d-4d86-a940-19f6673c8d06
 ms.openlocfilehash: bd26d396c238bfc53858320b8f4487df84b3436a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902989"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>HOW TO：排序 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項內容
 在資料繫結時，請不要排序 Windows Form 控制項。 若要顯示已排序的資料，請使用支援排序的資料來源，則有 排序的資料來源。 支援排序的資料來源是資料的檢視，檢視管理員，與排序陣列的資料。  

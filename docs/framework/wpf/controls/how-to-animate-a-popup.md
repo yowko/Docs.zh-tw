@@ -6,11 +6,11 @@ helpviewer_keywords:
 - animation [WPF], Popup controls
 ms.assetid: acaa2a0a-6137-4efd-9cd1-75ece222e390
 ms.openlocfilehash: b70d9c4cb1bca26a6c77d3a7c50add517ca8ef92
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911283"
 ---
 # <a name="how-to-animate-a-popup"></a>HOW TO：建立 Popup 的動畫
 此範例示範兩種方式來以動畫顯示<xref:System.Windows.Controls.Primitives.Popup>控制項。  

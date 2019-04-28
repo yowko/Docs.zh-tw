@@ -21,11 +21,11 @@ helpviewer_keywords:
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
 ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904415"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 控制項概觀 (Windows Form)
 > [!NOTE]
@@ -57,13 +57,13 @@ ms.locfileid: "59304726"
   
  <xref:System.Windows.Forms.DataGrid> 的有效資料來源包括：  
   
--   <xref:System.Data.DataTable> 類別  
+- <xref:System.Data.DataTable> 類別  
   
--   <xref:System.Data.DataView> 類別  
+- <xref:System.Data.DataView> 類別  
   
--   <xref:System.Data.DataSet> 類別  
+- <xref:System.Data.DataSet> 類別  
   
--   <xref:System.Data.DataViewManager> 類別  
+- <xref:System.Data.DataViewManager> 類別  
   
  如果您的來源是資料集，資料集可能是表單中的物件，或是由 XML Web 服務傳遞至表單的物件。 您可以繫結至具類型資料集或不具類型的資料集。  
   
@@ -71,11 +71,11 @@ ms.locfileid: "59304726"
   
  如果下列結構的項目公開公用屬性，您就可以繫結至這些結構：  
   
--   實作 <xref:System.Collections.IList> 介面的任何元件。 這包括一維陣列。  
+- 實作 <xref:System.Collections.IList> 介面的任何元件。 這包括一維陣列。  
   
--   實作 <xref:System.ComponentModel.IListSource> 介面的任何元件。  
+- 實作 <xref:System.ComponentModel.IListSource> 介面的任何元件。  
   
--   實作 <xref:System.ComponentModel.IBindingList> 介面的任何元件。  
+- 實作 <xref:System.ComponentModel.IBindingList> 介面的任何元件。  
   
  如需可能資料來源的詳細資訊，請參閱 [Windows Forms 支援的資料來源](../data-sources-supported-by-windows-forms.md)。  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
 ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912570"
 ---
 # <a name="configuring-tracing"></a>設定追蹤
 本主題將說明如何啟用追蹤、設定追蹤來源以發出追蹤並設定追蹤層級、設定活動追蹤與傳播以支援端對端追蹤相互關聯，以及設定追蹤接聽項來存取追蹤。  
@@ -22,9 +22,9 @@ ms.locfileid: "59162877"
 ## <a name="enabling-tracing"></a>啟用追蹤  
  Windows Communication Foundation (WCF) 會輸出下列進行診斷追蹤資料：  
   
--   所有應用程式元件的處理過程里程碑追蹤，例如作業呼叫、程式碼例外狀況、警告和其他重大處理事件。  
+- 所有應用程式元件的處理過程里程碑追蹤，例如作業呼叫、程式碼例外狀況、警告和其他重大處理事件。  
   
--   追蹤功能故障時出現的 Windows 錯誤事件。 請參閱[事件記錄](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)。  
+- 追蹤功能故障時出現的 Windows 錯誤事件。 請參閱[事件記錄](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)。  
   
  WCF 追蹤之上的<xref:System.Diagnostics>。 若要使用追蹤，您應該透過組態檔或程式碼來定義追蹤來源。 WCF 會針對每個 WCF 組件定義追蹤來源。 `System.ServiceModel`追蹤來源是最普遍的 WCF 追蹤來源，並跨 WCF 通訊堆疊，從進入/離開傳輸到進入/離開使用者程式碼會記錄處理里程碑。 `System.ServiceModel.MessageLogging` 追蹤來源會記錄在系統之間來回傳送的所有訊息。  
   
@@ -58,19 +58,19 @@ ms.locfileid: "59162877"
 ## <a name="configuring-trace-sources-to-emit-traces"></a>設定追蹤來源來發出追蹤  
  WCF 會針對每個組件定義追蹤來源。 組件中產生的追蹤是由針對該來源而定義的接聽項所存取。 下列為定義的追蹤來源：  
   
--   System.ServiceModel:記錄所有階段的 WCF 處理，每當在讀取組態、 已處理訊息傳輸、 安全性處理，訊息會分派在使用者程式碼，並依此類推。  
+- System.ServiceModel:記錄所有階段的 WCF 處理，每當在讀取組態、 已處理訊息傳輸、 安全性處理，訊息會分派在使用者程式碼，並依此類推。  
   
--   System.ServiceModel.MessageLogging:流經系統的所有訊息都記錄。  
+- System.ServiceModel.MessageLogging:流經系統的所有訊息都記錄。  
   
--   System.IdentityModel。  
+- System.IdentityModel。  
   
--   System.ServiceModel.Activation。  
+- System.ServiceModel.Activation。  
   
--   System.IO.Log:.NET Framework 介面以通用記錄檔系統 (CLFS) 記錄。  
+- System.IO.Log:.NET Framework 介面以通用記錄檔系統 (CLFS) 記錄。  
   
--   System.Runtime.Serialization:記錄檔讀取或寫入物件時。  
+- System.Runtime.Serialization:記錄檔讀取或寫入物件時。  
   
--   CardSpace。  
+- CardSpace。  
   
  您可以設定每個追蹤來源來使用相同 (共用) 的接聽項，如下列組態範例所示。  
   

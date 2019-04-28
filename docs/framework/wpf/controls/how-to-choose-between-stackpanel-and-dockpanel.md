@@ -12,11 +12,11 @@ helpviewer_keywords:
 - controls [WPF], StackPanel
 ms.assetid: f9239086-451f-42e6-81f7-ef89ef349742
 ms.openlocfilehash: 8338421dfb1bea856c15edf9d324cec955584f9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911233"
 ---
 # <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>HOW TO：在 StackPanel 和 DockPanel 之間選擇
 此範例示範如何使用之間選擇<xref:System.Windows.Controls.StackPanel>或是<xref:System.Windows.Controls.DockPanel>堆疊內容中的當<xref:System.Windows.Controls.Panel>。  

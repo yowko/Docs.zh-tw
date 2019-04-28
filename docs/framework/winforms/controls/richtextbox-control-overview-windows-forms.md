@@ -8,11 +8,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
 ms.openlocfilehash: 0827c1919597e9eb85bfa41721676008b76564d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902495"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>RichTextBox 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.RichTextBox>控制項用來顯示、 輸入和操作具有格式的文字。 <xref:System.Windows.Forms.RichTextBox>控制一切<xref:System.Windows.Forms.TextBox>控制項，但它也顯示字型、 色彩和連結; 從檔案載入文字和內嵌的影像即可尋找指定的字元。 <xref:System.Windows.Forms.RichTextBox>控制項通常用來提供文字操作和顯示功能類似於文書處理應用程式，例如 Microsoft Word。 像是<xref:System.Windows.Forms.TextBox>控制項中，<xref:System.Windows.Forms.RichTextBox>控制項可以顯示捲軸，但不同於<xref:System.Windows.Forms.TextBox>視需要顯示水平與垂直捲軸的控制項，其預設值是和它具有其他捲軸設定。  

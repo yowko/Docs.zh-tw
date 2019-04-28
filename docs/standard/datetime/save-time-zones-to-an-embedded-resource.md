@@ -13,11 +13,11 @@ ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c67a97193d186275e6a788f6b18bbc17c535f367
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912700"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>HOW TO：將時區儲存到內嵌資源
 
@@ -39,7 +39,7 @@ ms.locfileid: "54592870"
 
    若要擷取現有的時區，請參閱[How to:存取預先定義的 UTC 和當地時區物件](../../../docs/standard/datetime/access-utc-and-local.md)和[How to:將 TimeZoneInfo 物件具現化](../../../docs/standard/datetime/instantiate-time-zone-info.md)。
 
-   若要建立新的時區，請呼叫其中一個多載<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法。 如需詳細資訊，請參閱[＜How to：建立沒有調整規則的時區](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)和[How to:建立有調整規則的時區](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)。
+   若要建立新的時區，請呼叫其中一個多載<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法。 如需詳細資訊，請參閱[如何：建立沒有調整規則的時區](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)和[How to:建立有調整規則的時區](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)。
 
 2. 呼叫<xref:System.TimeZoneInfo.ToSerializedString%2A>方法用來建立字串，包含時區的資料。
 

@@ -3,11 +3,11 @@ title: 詳細語法
 description: 了解的差異詳細資訊和輕量型語法，在F#程式設計語言。
 ms.date: 05/16/2016
 ms.openlocfilehash: c770f2843276619cb2878198a537dcfb9c054b6b
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902300"
 ---
 # <a name="verbose-syntax"></a>詳細語法
 

@@ -3,11 +3,11 @@ title: 事件
 description: 了解如何F#事件可讓您在函式呼叫相關聯使用者的動作，也就是很重要的 GUI 程式設計。
 ms.date: 05/16/2016
 ms.openlocfilehash: 8972d9ab358ff9ff903e8bbbe42b74beea683233
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903925"
 ---
 # <a name="events"></a>事件
 

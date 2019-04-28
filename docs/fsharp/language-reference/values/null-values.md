@@ -3,11 +3,11 @@ title: Null 值
 description: 了解如何將 null 值會在F#程式設計語言。
 ms.date: 03/22/2019
 ms.openlocfilehash: 93ac48eddf36981b9df550e76405c3175ae92e0a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902274"
 ---
 # <a name="null-values"></a>Null 值
 

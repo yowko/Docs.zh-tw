@@ -6,20 +6,20 @@ dev_langs:
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
 ms.openlocfilehash: 401d445e49e3712b8c59fa9bc9a2e53500a5db16
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903899"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>HOW TO：從資料庫刪除資料列
 您可以刪除資料列，在資料庫中的移除對應[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]從其資料表相關集合的物件。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會轉譯成適當的 SQL 變更`DELETE`命令。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援或辨識串聯 (Cascade) 刪除作業。 如果您要刪除有條件約束之資料表中的資料列，必須完成下列其中一項工作：  
   
--   在資料庫的外部索引鍵條件約束中設定 `ON DELETE CASCADE` 規則。  
+- 在資料庫的外部索引鍵條件約束中設定 `ON DELETE CASCADE` 規則。  
   
--   使用您自己的程式碼，先刪除使父物件無法刪除的子物件。  
+- 使用您自己的程式碼，先刪除使父物件無法刪除的子物件。  
   
  否則，會擲回例外狀況。 請參閱本主題稍後的第二個程式碼範例。  
   

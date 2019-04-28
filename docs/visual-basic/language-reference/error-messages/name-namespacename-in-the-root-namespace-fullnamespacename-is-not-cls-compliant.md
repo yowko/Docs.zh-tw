@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
 ms.openlocfilehash: 84706719d151ea8df478f88610df34842f6f8702
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918355"
 ---
 # <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>名稱\<命名空間名稱 > 中的根命名空間\<fullnamespacename > 不符合 CLS 標準
 組件標示為`<CLSCompliant(True)>`，但根命名空間名稱的項目開頭為底線 (`_`)。  
@@ -29,9 +29,9 @@ ms.locfileid: "58841533"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   如果您需要 cls 符合性，變更根命名空間名稱，使它的所有元素開頭為底線。  
+- 如果您需要 cls 符合性，變更根命名空間名稱，使它的所有元素開頭為底線。  
   
--   如果您需要的命名空間名稱保持不變，然後移除<xref:System.CLSCompliantAttribute>從組件或將其標記為`<CLSCompliant(False)>`。  
+- 如果您需要的命名空間名稱保持不變，然後移除<xref:System.CLSCompliantAttribute>從組件或將其標記為`<CLSCompliant(False)>`。  
   
 ## <a name="see-also"></a>另請參閱
 

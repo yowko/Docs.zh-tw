@@ -3,11 +3,11 @@ title: XElement 和 XDocument Objects2 的有效內容
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
 ms.openlocfilehash: bb5dda6bee0863a2ef951975e92c55184df9d516
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907578"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement 和 XDocument 物件的有效內容
 本主題說明可以傳遞給用於將內容加入至項目和文件之建構函式 (Constructor) 和方法的有效引數。  
@@ -17,35 +17,35 @@ ms.locfileid: "58828795"
   
  加入簡單內容時，可以將各種型別傳遞到這個方法。 有效的型別包括：  
   
--   <xref:System.String>  
+- <xref:System.String>  
   
--   <xref:System.Double>  
+- <xref:System.Double>  
   
--   <xref:System.Single>  
+- <xref:System.Single>  
   
--   <xref:System.Decimal>  
+- <xref:System.Decimal>  
   
--   <xref:System.Boolean>  
+- <xref:System.Boolean>  
   
--   <xref:System.DateTime>  
+- <xref:System.DateTime>  
   
--   <xref:System.TimeSpan>  
+- <xref:System.TimeSpan>  
   
--   <xref:System.DateTimeOffset>  
+- <xref:System.DateTimeOffset>  
   
--   任何實作 `Object.ToString` 的型別。  
+- 任何實作 `Object.ToString` 的型別。  
   
--   任何實作 <xref:System.Collections.Generic.IEnumerable%601> 的型別。  
+- 任何實作 <xref:System.Collections.Generic.IEnumerable%601> 的型別。  
   
  加入複雜內容時，可以將各種型別傳遞到這個方法：  
   
--   <xref:System.Xml.Linq.XObject>  
+- <xref:System.Xml.Linq.XObject>  
   
--   <xref:System.Xml.Linq.XNode>  
+- <xref:System.Xml.Linq.XNode>  
   
--   <xref:System.Xml.Linq.XAttribute>  
+- <xref:System.Xml.Linq.XAttribute>  
   
--   任何實作 <xref:System.Collections.Generic.IEnumerable%601> 的型別  
+- 任何實作 <xref:System.Collections.Generic.IEnumerable%601> 的型別  
   
  如果物件實作 <xref:System.Collections.Generic.IEnumerable%601>，系統列舉物件中的集合，並加入集合中的所有項目。 如果集合包含 <xref:System.Xml.Linq.XNode> 或 <xref:System.Xml.Linq.XAttribute> 物件，系統會個別加入集合中的每個項目。 如果集合包含文字 (或轉換為文字的物件)，集合中的文字會遭到串連，並加入為單一文字節點。  
   
@@ -62,15 +62,15 @@ ms.locfileid: "58828795"
   
  有效的文件內容包括：  
   
--   零或一個 <xref:System.Xml.Linq.XDocumentType> 物件。 文件型別必須在項目之前。  
+- 零或一個 <xref:System.Xml.Linq.XDocumentType> 物件。 文件型別必須在項目之前。  
   
--   零或一個項目。  
+- 零或一個項目。  
   
--   零或多個註解。  
+- 零或多個註解。  
   
--   零或多個處理指示。  
+- 零或多個處理指示。  
   
--   只包含一個空白字元的零或多個節點。  
+- 只包含一個空白字元的零或多個節點。  
   
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>允許加入內容的建構函式與函式  
  下列方法可讓您將子內容加入到 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument>：  

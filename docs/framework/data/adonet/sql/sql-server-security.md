@@ -3,11 +3,11 @@ title: SQL Server 安全性
 ms.date: 03/30/2017
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
 ms.openlocfilehash: 4aa4feadb6305f8a0ea6f99c2add780d6fca95cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61927597"
 ---
 # <a name="sql-server-security"></a>SQL Server 安全性
 SQL Server 具有許多功能，可支援安全資料庫應用程式的建立。  

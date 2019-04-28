@@ -3,11 +3,11 @@ title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
 ms.openlocfilehash: 532813f68c0996337ce3bed8172a826425db1ec0
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902599"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 為 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 3.5 版的元件，它所提供的執行階段基礎結構可將關聯式資料當作物件管理。  
@@ -38,15 +38,14 @@ ms.locfileid: "56092224"
  [Language Integrated Query (LINQ)C#](../../../../../csharp/programming-guide/concepts/linq/index.md)\
  提供中的 LINQ 技術的概觀， C#。
  
- [語言整合式的查詢 (LINQ)-Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ [Language-Integrated Query (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  提供在 Visual Basic 中的 LINQ 技術的概觀。
   
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  描述[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]Visual Basic 使用者的技術。  
   
  [LINQ 和 ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
- 
-  [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 入口網站的連結。  
+ [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 入口網站的連結。  
   
  [LINQ to SQL 逐步解說](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))  
  列出 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可用的逐步解說。  

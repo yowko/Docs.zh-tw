@@ -3,24 +3,24 @@ title: 實體索引鍵
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
 ms.openlocfilehash: 1484a73450d5a435f795f18f122c7fe8494cf197
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879176"
 ---
 # <a name="entity-key"></a>實體索引鍵
 *實體索引鍵*是[屬性](../../../../docs/framework/data/adonet/property.md)或屬性的一組[實體類型](../../../../docs/framework/data/adonet/entity-type.md)，用於判斷識別。 構成實體索引鍵的屬性是在設計階段選取的。 實體索引鍵屬性的值必須唯一識別實體類型執行個體[實體集](../../../../docs/framework/data/adonet/entity-set.md)在執行階段。 您應選取構成實體索引鍵的屬性，以保證執行個體在實體集中的唯一性。  
   
  屬性集若要成為實體索引鍵，需求如下：  
   
--   實體集中的任兩個實體索引鍵均不可完全相同。 也就是說，以實體集中任兩個實體來說，構成索引鍵的所有屬性的值不可完全相同。 不過，構成實體索引鍵的部分 (非所有) 值可以相同。  
+- 實體集中的任兩個實體索引鍵均不可完全相同。 也就是說，以實體集中任兩個實體來說，構成索引鍵的所有屬性的值不可完全相同。 不過，構成實體索引鍵的部分 (非所有) 值可以相同。  
   
--   實體索引鍵必須包含一組不可為 null 且不可變[基本型別屬性](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)。  
+- 實體索引鍵必須包含一組不可為 null 且不可變[基本型別屬性](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)。  
   
--   構成指定實體類型之實體索引鍵的屬性不可變更。 您不能允許指定的實體類型擁有多個可能的實體索引鍵，不支援 Surrogate 索引鍵。  
+- 構成指定實體類型之實體索引鍵的屬性不可變更。 您不能允許指定的實體類型擁有多個可能的實體索引鍵，不支援 Surrogate 索引鍵。  
   
--   實體與繼承階層相關時，根實體必須包含構成實體索引鍵的所有屬性，而且必須在根實體類型定義該實體索引鍵。 如需詳細資訊，請參閱[實體資料模型：繼承](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)。  
+- 實體與繼承階層相關時，根實體必須包含構成實體索引鍵的所有屬性，而且必須在根實體類型定義該實體索引鍵。 如需詳細資訊，請參閱[實體資料模型：繼承](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)。  
   
 ## <a name="example"></a>範例  
  下圖顯示包含三種實體類型 (`Book`、`Publisher` 和 `Author`) 的概念模型。 構成實體索引鍵之每個實體類型的屬性皆加註「(索引鍵)」。 請注意，`Author` 實體類型的實體索引鍵包含兩個屬性：`Name` 和 `Address`。  
