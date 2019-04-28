@@ -11,79 +11,79 @@ helpviewer_keywords:
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
 ms.openlocfilehash: 2c0372e0176ea54a975e787631ba2849f79e5493
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47083728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803177"
 ---
-# <a name="visual-basic-language-reference"></a><span data-ttu-id="8366b-102">Visual Basic 語言參考</span><span class="sxs-lookup"><span data-stu-id="8366b-102">Visual Basic Language Reference</span></span>
-<span data-ttu-id="8366b-103">本節中的各個層面的 Visual Basic 語言的參考資訊。</span><span class="sxs-lookup"><span data-stu-id="8366b-103">This section provides reference information for various aspects of the Visual Basic language.</span></span>  
+# <a name="visual-basic-language-reference"></a><span data-ttu-id="1c0dc-102">Visual Basic 語言參考</span><span class="sxs-lookup"><span data-stu-id="1c0dc-102">Visual Basic Language Reference</span></span>
+<span data-ttu-id="1c0dc-103">本節中的各個層面的 Visual Basic 語言的參考資訊。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-103">This section provides reference information for various aspects of the Visual Basic language.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8366b-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="8366b-104">In This Section</span></span>  
- [<span data-ttu-id="8366b-105">印刷樣式與程式碼慣例</span><span class="sxs-lookup"><span data-stu-id="8366b-105">Typographic and Code Conventions</span></span>](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
- <span data-ttu-id="8366b-106">摘要說明格式化關鍵字、 預留位置和語言的其他項目，在 Visual Basic 文件中的方式。</span><span class="sxs-lookup"><span data-stu-id="8366b-106">Summarizes the way that keywords, placeholders, and other elements of the language are formatted in the Visual Basic documentation.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="1c0dc-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="1c0dc-104">In This Section</span></span>  
+ [<span data-ttu-id="1c0dc-105">印刷樣式與程式碼慣例</span><span class="sxs-lookup"><span data-stu-id="1c0dc-105">Typographic and Code Conventions</span></span>](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
+ <span data-ttu-id="1c0dc-106">摘要說明格式化關鍵字、 預留位置和語言的其他項目，在 Visual Basic 文件中的方式。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-106">Summarizes the way that keywords, placeholders, and other elements of the language are formatted in the Visual Basic documentation.</span></span>  
   
- [<span data-ttu-id="8366b-107">Visual Basic 執行階段程式庫成員</span><span class="sxs-lookup"><span data-stu-id="8366b-107">Visual Basic Runtime Library Members</span></span>](../../visual-basic/language-reference/runtime-library-members.md)  
- <span data-ttu-id="8366b-108">列出 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 命名空間的類別和模組，以及其成員函式、方法、屬性、常數和列舉的連結。</span><span class="sxs-lookup"><span data-stu-id="8366b-108">Lists the classes and modules of the <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace, with links to their member functions, methods, properties, constants, and enumerations.</span></span>  
+ [<span data-ttu-id="1c0dc-107">Visual Basic 執行階段程式庫成員</span><span class="sxs-lookup"><span data-stu-id="1c0dc-107">Visual Basic Runtime Library Members</span></span>](../../visual-basic/language-reference/runtime-library-members.md)  
+ <span data-ttu-id="1c0dc-108">列出 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 命名空間的類別和模組，以及其成員函式、方法、屬性、常數和列舉的連結。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-108">Lists the classes and modules of the <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace, with links to their member functions, methods, properties, constants, and enumerations.</span></span>  
   
- [<span data-ttu-id="8366b-109">關鍵字</span><span class="sxs-lookup"><span data-stu-id="8366b-109">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)  
- <span data-ttu-id="8366b-110">列出所有 Visual Basic 關鍵字，並提供更多資訊的連結。</span><span class="sxs-lookup"><span data-stu-id="8366b-110">Lists all Visual Basic keywords and provides links to more information.</span></span>  
+ [<span data-ttu-id="1c0dc-109">關鍵字</span><span class="sxs-lookup"><span data-stu-id="1c0dc-109">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)  
+ <span data-ttu-id="1c0dc-110">列出所有 Visual Basic 關鍵字，並提供更多資訊的連結。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-110">Lists all Visual Basic keywords and provides links to more information.</span></span>  
   
- [<span data-ttu-id="8366b-111">屬性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8366b-111">Attributes (Visual Basic)</span></span>](../../visual-basic/language-reference/attributes.md)  
- <span data-ttu-id="8366b-112">文件可以使用 Visual Basic 中的屬性。</span><span class="sxs-lookup"><span data-stu-id="8366b-112">Documents the attributes available in Visual Basic.</span></span>  
+ [<span data-ttu-id="1c0dc-111">屬性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1c0dc-111">Attributes (Visual Basic)</span></span>](../../visual-basic/language-reference/attributes.md)  
+ <span data-ttu-id="1c0dc-112">文件可以使用 Visual Basic 中的屬性。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-112">Documents the attributes available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="8366b-113">常數和列舉</span><span class="sxs-lookup"><span data-stu-id="8366b-113">Constants and Enumerations</span></span>](../../visual-basic/language-reference/constants-and-enumerations.md)  
- <span data-ttu-id="8366b-114">文件的常數和列舉可以在 Visual Basic 中使用。</span><span class="sxs-lookup"><span data-stu-id="8366b-114">Documents the constants and enumerations available in Visual Basic.</span></span>  
+ [<span data-ttu-id="1c0dc-113">常數和列舉</span><span class="sxs-lookup"><span data-stu-id="1c0dc-113">Constants and Enumerations</span></span>](../../visual-basic/language-reference/constants-and-enumerations.md)  
+ <span data-ttu-id="1c0dc-114">文件的常數和列舉可以在 Visual Basic 中使用。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-114">Documents the constants and enumerations available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="8366b-115">資料類型</span><span class="sxs-lookup"><span data-stu-id="8366b-115">Data Types</span></span>](../../visual-basic/language-reference/data-types/index.md)  
- <span data-ttu-id="8366b-116">說明在 Visual Basic 中可用的資料類型。</span><span class="sxs-lookup"><span data-stu-id="8366b-116">Documents the data types available in Visual Basic.</span></span>  
+ [<span data-ttu-id="1c0dc-115">資料類型</span><span class="sxs-lookup"><span data-stu-id="1c0dc-115">Data Types</span></span>](../../visual-basic/language-reference/data-types/index.md)  
+ <span data-ttu-id="1c0dc-116">說明在 Visual Basic 中可用的資料類型。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-116">Documents the data types available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="8366b-117">指示詞</span><span class="sxs-lookup"><span data-stu-id="8366b-117">Directives</span></span>](../../visual-basic/language-reference/directives/index.md)  
- <span data-ttu-id="8366b-118">文件提供在 Visual Basic 中的編譯器指示詞。</span><span class="sxs-lookup"><span data-stu-id="8366b-118">Documents the compiler directives available in Visual Basic.</span></span>  
+ [<span data-ttu-id="1c0dc-117">指示詞</span><span class="sxs-lookup"><span data-stu-id="1c0dc-117">Directives</span></span>](../../visual-basic/language-reference/directives/index.md)  
+ <span data-ttu-id="1c0dc-118">文件提供在 Visual Basic 中的編譯器指示詞。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-118">Documents the compiler directives available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="8366b-119">函式</span><span class="sxs-lookup"><span data-stu-id="8366b-119">Functions</span></span>](../../visual-basic/language-reference/functions/index.md)  
- <span data-ttu-id="8366b-120">文件提供在 Visual Basic 中的執行階段函式。</span><span class="sxs-lookup"><span data-stu-id="8366b-120">Documents the run-time functions available in Visual Basic.</span></span>  
+ [<span data-ttu-id="1c0dc-119">函式</span><span class="sxs-lookup"><span data-stu-id="1c0dc-119">Functions</span></span>](../../visual-basic/language-reference/functions/index.md)  
+ <span data-ttu-id="1c0dc-120">文件提供在 Visual Basic 中的執行階段函式。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-120">Documents the run-time functions available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="8366b-121">修飾詞</span><span class="sxs-lookup"><span data-stu-id="8366b-121">Modifiers</span></span>](../../visual-basic/language-reference/modifiers/index.md)  
- <span data-ttu-id="8366b-122">列出 Visual Basic 執行階段修飾詞，並提供更多資訊的連結。</span><span class="sxs-lookup"><span data-stu-id="8366b-122">Lists the Visual Basic run-time modifiers and provides links to more information.</span></span>  
+ [<span data-ttu-id="1c0dc-121">修飾詞</span><span class="sxs-lookup"><span data-stu-id="1c0dc-121">Modifiers</span></span>](../../visual-basic/language-reference/modifiers/index.md)  
+ <span data-ttu-id="1c0dc-122">列出 Visual Basic 執行階段修飾詞，並提供更多資訊的連結。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-122">Lists the Visual Basic run-time modifiers and provides links to more information.</span></span>  
   
- [<span data-ttu-id="8366b-123">模組</span><span class="sxs-lookup"><span data-stu-id="8366b-123">Modules</span></span>](../../visual-basic/language-reference/modules.md)  
- <span data-ttu-id="8366b-124">文件適用於 Visual Basic 和其成員的模組。</span><span class="sxs-lookup"><span data-stu-id="8366b-124">Documents the modules available in Visual Basic and their members.</span></span>  
+ [<span data-ttu-id="1c0dc-123">模組</span><span class="sxs-lookup"><span data-stu-id="1c0dc-123">Modules</span></span>](../../visual-basic/language-reference/modules.md)  
+ <span data-ttu-id="1c0dc-124">文件適用於 Visual Basic 和其成員的模組。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-124">Documents the modules available in Visual Basic and their members.</span></span>  
   
- [<span data-ttu-id="8366b-125">Nothing</span><span class="sxs-lookup"><span data-stu-id="8366b-125">Nothing</span></span>](../../visual-basic/language-reference/nothing.md)  
- <span data-ttu-id="8366b-126">描述任何資料類型的預設值。</span><span class="sxs-lookup"><span data-stu-id="8366b-126">Describes the default value of any data type.</span></span>  
+ [<span data-ttu-id="1c0dc-125">Nothing</span><span class="sxs-lookup"><span data-stu-id="1c0dc-125">Nothing</span></span>](../../visual-basic/language-reference/nothing.md)  
+ <span data-ttu-id="1c0dc-126">描述任何資料類型的預設值。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-126">Describes the default value of any data type.</span></span>  
   
- [<span data-ttu-id="8366b-127">物件</span><span class="sxs-lookup"><span data-stu-id="8366b-127">Objects</span></span>](../../visual-basic/language-reference/objects/index.md)  
- <span data-ttu-id="8366b-128">文件適用於 Visual Basic 和其成員的物件。</span><span class="sxs-lookup"><span data-stu-id="8366b-128">Documents the objects available in Visual Basic and their members.</span></span>  
+ [<span data-ttu-id="1c0dc-127">物件</span><span class="sxs-lookup"><span data-stu-id="1c0dc-127">Objects</span></span>](../../visual-basic/language-reference/objects/index.md)  
+ <span data-ttu-id="1c0dc-128">文件適用於 Visual Basic 和其成員的物件。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-128">Documents the objects available in Visual Basic and their members.</span></span>  
   
- [<span data-ttu-id="8366b-129">運算子</span><span class="sxs-lookup"><span data-stu-id="8366b-129">Operators</span></span>](../../visual-basic/language-reference/operators/index.md)  
- <span data-ttu-id="8366b-130">說明在 Visual Basic 中可用的運算子。</span><span class="sxs-lookup"><span data-stu-id="8366b-130">Documents the operators available in Visual Basic.</span></span>  
+ [<span data-ttu-id="1c0dc-129">運算子</span><span class="sxs-lookup"><span data-stu-id="1c0dc-129">Operators</span></span>](../../visual-basic/language-reference/operators/index.md)  
+ <span data-ttu-id="1c0dc-130">說明在 Visual Basic 中可用的運算子。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-130">Documents the operators available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="8366b-131">屬性</span><span class="sxs-lookup"><span data-stu-id="8366b-131">Properties</span></span>](../../visual-basic/language-reference/properties.md)  
- <span data-ttu-id="8366b-132">說明在 Visual Basic 中可用的屬性。</span><span class="sxs-lookup"><span data-stu-id="8366b-132">Documents the properties available in Visual Basic.</span></span>  
+ [<span data-ttu-id="1c0dc-131">屬性</span><span class="sxs-lookup"><span data-stu-id="1c0dc-131">Properties</span></span>](../../visual-basic/language-reference/properties.md)  
+ <span data-ttu-id="1c0dc-132">說明在 Visual Basic 中可用的屬性。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-132">Documents the properties available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="8366b-133">查詢</span><span class="sxs-lookup"><span data-stu-id="8366b-133">Queries</span></span>](../../visual-basic/language-reference/queries/index.md)  
- <span data-ttu-id="8366b-134">提供在程式碼中使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 運算式的參考資訊。</span><span class="sxs-lookup"><span data-stu-id="8366b-134">Provides reference information about using [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.</span></span>  
+ [<span data-ttu-id="1c0dc-133">查詢</span><span class="sxs-lookup"><span data-stu-id="1c0dc-133">Queries</span></span>](../../visual-basic/language-reference/queries/index.md)  
+ <span data-ttu-id="1c0dc-134">提供在程式碼中使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 運算式的參考資訊。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-134">Provides reference information about using [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.</span></span>  
   
- [<span data-ttu-id="8366b-135">陳述式</span><span class="sxs-lookup"><span data-stu-id="8366b-135">Statements</span></span>](../../visual-basic/language-reference/statements/index.md)  
- <span data-ttu-id="8366b-136">文件的宣告和可執行陳述式可以在 Visual Basic 中使用。</span><span class="sxs-lookup"><span data-stu-id="8366b-136">Documents the declaration and executable statements available in Visual Basic.</span></span>  
+ [<span data-ttu-id="1c0dc-135">陳述式</span><span class="sxs-lookup"><span data-stu-id="1c0dc-135">Statements</span></span>](../../visual-basic/language-reference/statements/index.md)  
+ <span data-ttu-id="1c0dc-136">文件的宣告和可執行陳述式可以在 Visual Basic 中使用。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-136">Documents the declaration and executable statements available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="8366b-137">XML 註解標記</span><span class="sxs-lookup"><span data-stu-id="8366b-137">XML Comment Tags</span></span>](../../visual-basic/language-reference/xmldoc/index.md)  
- <span data-ttu-id="8366b-138">描述 IntelliSense 會提供在 Visual Basic 程式碼編輯器中的文件註解。</span><span class="sxs-lookup"><span data-stu-id="8366b-138">Describes the documentation comments for which IntelliSense is provided in the Visual Basic Code Editor.</span></span>  
+ [<span data-ttu-id="1c0dc-137">XML 註解標記</span><span class="sxs-lookup"><span data-stu-id="1c0dc-137">XML Comment Tags</span></span>](../../visual-basic/language-reference/xmldoc/index.md)  
+ <span data-ttu-id="1c0dc-138">描述 IntelliSense 會提供在 Visual Basic 程式碼編輯器中的文件註解。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-138">Describes the documentation comments for which IntelliSense is provided in the Visual Basic Code Editor.</span></span>  
   
- [<span data-ttu-id="8366b-139">XML 軸屬性</span><span class="sxs-lookup"><span data-stu-id="8366b-139">XML Axis Properties</span></span>](../../visual-basic/language-reference/xml-axis/index.md)  
- <span data-ttu-id="8366b-140">提供使用 XML 軸屬性直接在程式碼中存取 XML 之資訊的連結。</span><span class="sxs-lookup"><span data-stu-id="8366b-140">Provides links to information about using XML axis properties to access XML directly in your code.</span></span>  
+ [<span data-ttu-id="1c0dc-139">XML 軸屬性</span><span class="sxs-lookup"><span data-stu-id="1c0dc-139">XML Axis Properties</span></span>](../../visual-basic/language-reference/xml-axis/index.md)  
+ <span data-ttu-id="1c0dc-140">提供使用 XML 軸屬性直接在程式碼中存取 XML 之資訊的連結。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-140">Provides links to information about using XML axis properties to access XML directly in your code.</span></span>  
   
- [<span data-ttu-id="8366b-141">XML 常值</span><span class="sxs-lookup"><span data-stu-id="8366b-141">XML Literals</span></span>](../../visual-basic/language-reference/xml-literals/index.md)  
- <span data-ttu-id="8366b-142">提供使用 XML 常值直接在程式碼中包含 XML 之資訊的連結。</span><span class="sxs-lookup"><span data-stu-id="8366b-142">Provides links to information about using XML literals to incorporate XML directly in your code.</span></span>  
+ [<span data-ttu-id="1c0dc-141">XML 常值</span><span class="sxs-lookup"><span data-stu-id="1c0dc-141">XML Literals</span></span>](../../visual-basic/language-reference/xml-literals/index.md)  
+ <span data-ttu-id="1c0dc-142">提供使用 XML 常值直接在程式碼中包含 XML 之資訊的連結。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-142">Provides links to information about using XML literals to incorporate XML directly in your code.</span></span>  
   
- [<span data-ttu-id="8366b-143">錯誤訊息</span><span class="sxs-lookup"><span data-stu-id="8366b-143">Error Messages</span></span>](../../visual-basic/language-reference/error-messages/index.md)  
- <span data-ttu-id="8366b-144">提供的清單，Visual Basic 編譯器和執行階段錯誤訊息以及說明如何處理它們。</span><span class="sxs-lookup"><span data-stu-id="8366b-144">Provides a listing of Visual Basic compiler and run-time error messages and help on how to handle them.</span></span>  
+ [<span data-ttu-id="1c0dc-143">錯誤訊息</span><span class="sxs-lookup"><span data-stu-id="1c0dc-143">Error Messages</span></span>](../../visual-basic/language-reference/error-messages/index.md)  
+ <span data-ttu-id="1c0dc-144">提供的清單，Visual Basic 編譯器和執行階段錯誤訊息以及說明如何處理它們。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-144">Provides a listing of Visual Basic compiler and run-time error messages and help on how to handle them.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="8366b-145">相關章節</span><span class="sxs-lookup"><span data-stu-id="8366b-145">Related Sections</span></span>  
- [<span data-ttu-id="8366b-146">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8366b-146">Visual Basic</span></span>](../../visual-basic/index.md)  
- <span data-ttu-id="8366b-147">在 Visual Basic 語言中的所有區域中提供完整的說明。</span><span class="sxs-lookup"><span data-stu-id="8366b-147">Provides comprehensive help on all areas of the Visual Basic language.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="1c0dc-145">相關章節</span><span class="sxs-lookup"><span data-stu-id="1c0dc-145">Related Sections</span></span>  
+ [<span data-ttu-id="1c0dc-146">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1c0dc-146">Visual Basic</span></span>](../../visual-basic/index.md)  
+ <span data-ttu-id="1c0dc-147">在 Visual Basic 語言中的所有區域中提供完整的說明。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-147">Provides comprehensive help on all areas of the Visual Basic language.</span></span>  
   
- [<span data-ttu-id="8366b-148">Visual Basic 命令列編譯器</span><span class="sxs-lookup"><span data-stu-id="8366b-148">Visual Basic Command-Line Compiler</span></span>](../../visual-basic/reference/command-line-compiler/index.md)  
- <span data-ttu-id="8366b-149">描述如何使用命令列編譯器作為從 Visual Studio 整合式的開發環境 (IDE) 內編譯程式的替代方案。</span><span class="sxs-lookup"><span data-stu-id="8366b-149">Describes how to use the command-line compiler as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE).</span></span>
+ [<span data-ttu-id="1c0dc-148">Visual Basic 命令列編譯器</span><span class="sxs-lookup"><span data-stu-id="1c0dc-148">Visual Basic Command-Line Compiler</span></span>](../../visual-basic/reference/command-line-compiler/index.md)  
+ <span data-ttu-id="1c0dc-149">描述如何使用命令列編譯器作為從 Visual Studio 整合式的開發環境 (IDE) 內編譯程式的替代方案。</span><span class="sxs-lookup"><span data-stu-id="1c0dc-149">Describes how to use the command-line compiler as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE).</span></span>

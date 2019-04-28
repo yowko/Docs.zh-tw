@@ -18,41 +18,41 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 122a621552b49f476f219216ac0a52011c1542ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61860928"
 ---
-# <a name="icorprofilerinfoseteventmask-method"></a><span data-ttu-id="3a3fa-102">ICorProfilerInfo::SetEventMask 方法</span><span class="sxs-lookup"><span data-stu-id="3a3fa-102">ICorProfilerInfo::SetEventMask Method</span></span>
-<span data-ttu-id="3a3fa-103">設定一個值，以指定分析工具想要從通用語言執行平台 (CLR) 接收其通知的事件類型。</span><span class="sxs-lookup"><span data-stu-id="3a3fa-103">Sets a value that specifies the types of events for which the profiler wants to receive notification from the common language runtime (CLR).</span></span>  
+# <a name="icorprofilerinfoseteventmask-method"></a><span data-ttu-id="236a0-102">ICorProfilerInfo::SetEventMask 方法</span><span class="sxs-lookup"><span data-stu-id="236a0-102">ICorProfilerInfo::SetEventMask Method</span></span>
+<span data-ttu-id="236a0-103">設定一個值，以指定分析工具想要從通用語言執行平台 (CLR) 接收其通知的事件類型。</span><span class="sxs-lookup"><span data-stu-id="236a0-103">Sets a value that specifies the types of events for which the profiler wants to receive notification from the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3a3fa-104">語法</span><span class="sxs-lookup"><span data-stu-id="3a3fa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="236a0-104">語法</span><span class="sxs-lookup"><span data-stu-id="236a0-104">Syntax</span></span>  
   
 ```  
 HRESULT SetEventMask(  
     [in] DWORD dwEvents);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3a3fa-105">參數</span><span class="sxs-lookup"><span data-stu-id="3a3fa-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="236a0-105">參數</span><span class="sxs-lookup"><span data-stu-id="236a0-105">Parameters</span></span>  
  `dwEvents`  
- <span data-ttu-id="3a3fa-106">[in] 4 個位元組的值，可指定事件的分類。</span><span class="sxs-lookup"><span data-stu-id="3a3fa-106">[in] A 4-byte value that specifies the categories of events.</span></span> <span data-ttu-id="3a3fa-107">每個位元各控制事件的不同功能、行為或類型。</span><span class="sxs-lookup"><span data-stu-id="3a3fa-107">Each bit controls a different capability, behavior, or type of event.</span></span> <span data-ttu-id="3a3fa-108">位元所述[COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)列舉型別。</span><span class="sxs-lookup"><span data-stu-id="3a3fa-108">The bits are described in the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="236a0-106">[in] 4 個位元組的值，可指定事件的分類。</span><span class="sxs-lookup"><span data-stu-id="236a0-106">[in] A 4-byte value that specifies the categories of events.</span></span> <span data-ttu-id="236a0-107">每個位元各控制事件的不同功能、行為或類型。</span><span class="sxs-lookup"><span data-stu-id="236a0-107">Each bit controls a different capability, behavior, or type of event.</span></span> <span data-ttu-id="236a0-108">位元所述[COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)列舉型別。</span><span class="sxs-lookup"><span data-stu-id="236a0-108">The bits are described in the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3a3fa-109">備註</span><span class="sxs-lookup"><span data-stu-id="3a3fa-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="236a0-109">備註</span><span class="sxs-lookup"><span data-stu-id="236a0-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="3a3fa-110">您應該呼叫[SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)而不是這個方法的方法。</span><span class="sxs-lookup"><span data-stu-id="3a3fa-110">You should call the [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) method instead of this method.</span></span> <span data-ttu-id="3a3fa-111">雖然`SetEventMask`方法會繼續受到支援， [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)提供額外的功能。</span><span class="sxs-lookup"><span data-stu-id="3a3fa-111">Although the `SetEventMask` method continues to be supported, [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) provides additional functionality.</span></span>  
+>  <span data-ttu-id="236a0-110">您應該呼叫[SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)而不是這個方法的方法。</span><span class="sxs-lookup"><span data-stu-id="236a0-110">You should call the [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) method instead of this method.</span></span> <span data-ttu-id="236a0-111">雖然`SetEventMask`方法會繼續受到支援， [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)提供額外的功能。</span><span class="sxs-lookup"><span data-stu-id="236a0-111">Although the `SetEventMask` method continues to be supported, [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) provides additional functionality.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3a3fa-112">需求</span><span class="sxs-lookup"><span data-stu-id="3a3fa-112">Requirements</span></span>  
- <span data-ttu-id="3a3fa-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3a3fa-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="236a0-112">需求</span><span class="sxs-lookup"><span data-stu-id="236a0-112">Requirements</span></span>  
+ <span data-ttu-id="236a0-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="236a0-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3a3fa-114">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3a3fa-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="236a0-114">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="236a0-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="3a3fa-115">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3a3fa-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="236a0-115">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="236a0-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3a3fa-116">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3a3fa-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="236a0-116">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="236a0-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3a3fa-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3a3fa-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="236a0-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="236a0-117">See also</span></span>
 
-- [<span data-ttu-id="3a3fa-118">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="3a3fa-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="3a3fa-119">SetEventMask2 方法</span><span class="sxs-lookup"><span data-stu-id="3a3fa-119">SetEventMask2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
+- [<span data-ttu-id="236a0-118">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="236a0-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="236a0-119">SetEventMask2 方法</span><span class="sxs-lookup"><span data-stu-id="236a0-119">SetEventMask2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
