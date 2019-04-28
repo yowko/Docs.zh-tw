@@ -3,11 +3,11 @@ title: 部署已裝載網際網路資訊服務的 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
 ms.openlocfilehash: 99ed9ce5304717073057f6712a2b96d910d43bea
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858311"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署已裝載網際網路資訊服務的 WCF 服務
 
@@ -23,7 +23,7 @@ ms.locfileid: "47170174"
 
 - 設定 WCF 服務。
 
-建立 IIS 裝載的 WCF 服務的詳細逐步解說，請參閱 <<c0> [ 如何： 將 WCF 服務裝載於 IIS](how-to-host-a-wcf-service-in-iis.md)。
+建立 IIS 裝載的 WCF 服務的詳細逐步解說，請參閱[How to:將 WCF 服務裝載於 IIS](how-to-host-a-wcf-service-in-iis.md)。
 
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>確定 IIS、ASP.NET 和 WCF 已正確安裝及註冊
 
@@ -35,9 +35,9 @@ WCF、 IIS 和 ASP.NET 必須安裝 IIS 裝載的 WCF 服務，才能正確運�
 
 如果 IIS 已經存在於電腦上.NET Framework 的安裝程序會自動向 IIS 註冊 WCF。 如果 IIS 已安裝.NET Framework 之後，額外的步驟，才能向 IIS 和 ASP.NET 的 WCF。 請依據您的作業系統，採取下列適當的步驟：
 
-- Windows 7 和 Windows Server 2003： 使用[ServiceModel 註冊工具 (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md)向 IIS 註冊 WCF 的工具。 若要使用此工具，輸入**ServiceModelReg.exe /i /x**中[Visual Studio 的開發人員命令提示字元](../../tools/developer-command-prompt-for-vs.md)。
+- Windows 7 和 Windows Server 2003:使用[ServiceModel 註冊工具 (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md)向 IIS 註冊 WCF 的工具。 若要使用此工具，輸入**ServiceModelReg.exe /i /x**中[Visual Studio 的開發人員命令提示字元](../../tools/developer-command-prompt-for-vs.md)。
 
-- Windows 7： 最後，您必須確認 ASP.NET 已設定為使用.NET Framework 4 或更新版本的版本。 您可以執行 ASPNET_Regiis 工具，搭配`–i`選項。 如需詳細資訊，請參閱 < [ASP.NET IIS 註冊工具](https://go.microsoft.com/fwlink/?LinkId=201186)。
+- Windows 7：最後，您必須確認 ASP.NET 已設定為使用.NET Framework 4 或更新版本的版本。 您可以執行 ASPNET_Regiis 工具，搭配`–i`選項。 如需詳細資訊，請參閱 < [ASP.NET IIS 註冊工具](https://go.microsoft.com/fwlink/?LinkId=201186)。
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>建立新的 IIS 應用程式或是重複使用現有的 ASP.NET 應用程式
 
@@ -115,4 +115,4 @@ IIS 裝載的 WCF 服務可以利用 HTTP 傳輸安全性 （例如，HTTPS 和 
 
 - [在 Internet Information Services 中裝載](hosting-in-internet-information-services.md)
 - [Internet Information Services 裝載最佳做法](internet-information-services-hosting-best-practices.md)
-- [Windows Server App Fabric 主控功能](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Windows Server AppFabric 裝載功能](https://go.microsoft.com/fwlink/?LinkId=201276)

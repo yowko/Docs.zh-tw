@@ -12,11 +12,11 @@ ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868754"
 ---
 # <a name="security-transparent-code-level-1"></a>安全性透明程式碼，層級 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,11 +28,11 @@ ms.locfileid: "59161066"
   
  此主題包括下列章節：  
   
--   [層級 1 透明度模型](#the_level_1_transparency_model)  
+- [層級 1 透明度模型](#the_level_1_transparency_model)  
   
--   [透明度屬性](#transparency_attributes)  
+- [透明度屬性](#transparency_attributes)  
   
--   [安全性透明度範例](#security_transparency_examples)  
+- [安全性透明度範例](#security_transparency_examples)  
   
 <a name="the_level_1_transparency_model"></a>   
 ## <a name="the-level-1-transparency-model"></a>層級 1 透明度模型  
@@ -40,11 +40,11 @@ ms.locfileid: "59161066"
   
  您可以將整個組件、組件中的某些類別，或是類別中的某些方法標記為安全性透明。 安全性透明程式碼無法提高權限。 這項限制有三個後果：  
   
--   安全性透明的程式碼無法執行 <xref:System.Security.Permissions.SecurityAction.Assert> 動作。  
+- 安全性透明的程式碼無法執行 <xref:System.Security.Permissions.SecurityAction.Assert> 動作。  
   
--   由安全性程式碼所滿足的任何連結要求，都會變成完整的要求。  
+- 由安全性程式碼所滿足的任何連結要求，都會變成完整的要求。  
   
--   必須在安全性透明程式碼中執行的任何不安全 (無法驗證) 的程式碼，都會導致 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> 安全性權限的完整要求。  
+- 必須在安全性透明程式碼中執行的任何不安全 (無法驗證) 的程式碼，都會導致 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> 安全性權限的完整要求。  
   
  這些規則是在執行期間由 Common Language Runtime (CLR) 強制執行。 安全性透明程式碼會將它所回呼的程式碼之所有安全性需求傳遞給呼叫端。 流經安全性透明程式碼的需求，無法提高權限。 如果低度信任的應用程式呼叫安全性透明程式碼，並產生高權限的需求，則此需求會流回低度信任程式碼且失敗。 安全性透明程式碼無法停止此需求，因為它不能執行判斷提示動作。 從完全信任程式碼呼叫的同一個安全性透明程式碼，會產生成功的需求。  
   

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - IBindingList interface
 ms.assetid: 834cc15c-50bc-4a8b-a610-313d6a217357
 ms.openlocfilehash: 2463a9c77a9836ff251e799056cc5131bf6c99e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800851"
 ---
 # <a name="how-to-implement-the-itypedlist-interface"></a>HOW TO：實作 ITypedList 介面
 實作<xref:System.ComponentModel.ITypedList>介面，以讓您探索可繫結清單的結構描述。  
@@ -35,7 +35,7 @@ ms.locfileid: "59084906"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   System.Drawing 和 System.Windows.Forms 組件的參考。  
+- System.Drawing 和 System.Windows.Forms 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
 

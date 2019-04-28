@@ -1,17 +1,17 @@
 ---
-title: 建置開始使用雲端的復原服務。 利用在雲端中的暫時性失敗
-description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |建置開始使用雲端的復原服務。 利用在雲端中的暫時性失敗
+title: 建置開始使用雲端的復原服務。 接受雲端中的暫時性失敗
+description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |建置開始使用雲端的復原服務。 接受雲端中的暫時性失敗
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811825"
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>建置開始使用雲端的復原服務：利用在雲端中的暫時性失敗
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>建置準備好在雲端執行的彈性服務：接受雲端中的暫時性失敗
 
 「復原」是指能夠從失敗中復原並繼續運作的能力。 復原不是關於避免失敗，但接受，將會失敗，事實，然後回應它們以避免停機或資料遺失的方式。 復原的目標是在失敗後將應用程式返回完全運作的狀態。
 
@@ -43,19 +43,19 @@ ms.locfileid: "56971828"
 
 ### <a name="additional-resources"></a>其他資源
 
--   **實作具有恢復功能的通訊，來處理部分失敗**
+- **實作具有恢復功能的通訊，來處理部分失敗**
 
     [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](../../microservices-architecture/implement-resilient-applications/partial-failure-strategies.md)
 
--   **Entity Framework 連接恢復功能和重試邏輯 （6 或更新版本）**
+- **Entity Framework 連接恢復功能和重試邏輯 （6 或更新版本）**
 
     [https://docs.microsoft.com/ef/ef6/fundamentals/connection-resiliency/retry-logic](/ef/ef6/fundamentals/connection-resiliency/retry-logic)
 
--   **暫時性錯誤處理應用程式區塊**
+- **暫時性錯誤處理應用程式區塊**
 
--   <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
+- <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
 
--   **Polly 程式庫，適用於具有恢復功能的 HTTP 通訊**
+- **Polly 程式庫，適用於具有恢復功能的 HTTP 通訊**
 
     https://github.com/App-vNext/Polly
 

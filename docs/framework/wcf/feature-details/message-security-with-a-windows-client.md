@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
 ms.openlocfilehash: 794a3d8e118cadd2a2752e1bbf85ef930deb2f27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922784"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows 用戶端的訊息安全性
 這個案例示範 Windows Communication Foundation (WCF) 用戶端與受保護的訊息安全性模式的伺服器。 此用戶端和伺服器會以 Windows 認證進行驗證。  
@@ -31,9 +31,9 @@ ms.locfileid: "59138641"
 ## <a name="service"></a>服務  
  下列程式碼和組態要獨立執行。 執行下列任一步驟：  
   
--   使用不含組態的程式碼建立獨立服務。  
+- 使用不含組態的程式碼建立獨立服務。  
   
--   使用提供的組態建立服務，但不要定義任何端點。  
+- 使用提供的組態建立服務，但不要定義任何端點。  
   
 ### <a name="code"></a>程式碼  
  下列程式碼會示範如何建立服務端點，而這個服務端點會使用訊息安全性來建立 Windows 電腦的安全內容。  
@@ -75,9 +75,9 @@ ms.locfileid: "59138641"
 ## <a name="client"></a>用戶端  
  下列程式碼和組態要獨立執行。 執行下列任一步驟：  
   
--   使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
+- 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
   
--   建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如:   
+- 建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如:   
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

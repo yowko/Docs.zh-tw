@@ -3,11 +3,11 @@ title: 112 - WorkflowInstanceSuspendedRecord
 ms.date: 03/30/2017
 ms.assetid: bc825c7c-8c90-48f7-9336-9a978a8246c6
 ms.openlocfilehash: 53ceec38973d2e964733736e6297007cdba66398
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924081"
 ---
 # <a name="112---workflowinstancesuspendedrecord"></a>112 - WorkflowInstanceSuspendedRecord
 ## <a name="properties"></a>屬性  
@@ -34,7 +34,7 @@ ms.locfileid: "33512410"
 |EventTime|xs:dateTime|發出事件時的 UTC 時間。|  
 |ActivityDefinitionId|xs:string|工作流程中根活動的名稱。|  
 |原因|xs:string|工作流程暫止的原因。|  
-|標註|xs:string|加入至此事件中的附註。  值會儲存在 xml 中的項目格式\<項目 >\<項目名稱 ="annotationName"type ="> annotationValue\</項目 > \< /i >。  如果沒有指定的註釋的字串，包含\<項目 / >。 ETW 事件大小會受到 ETW 緩衝區大小或 ETW 事件的最大承載所限制。 如果事件大小超過 ETW 限制，則事件會捨棄註釋，並取代具有註釋值截斷\<項目 >... \< /i >。|  
+|標註|xs:string|加入至此事件中的附註。  值會儲存在 xml 中的項目格式\<項目 >\<項目名稱 ="annotationName"t"> 以\</項目 > \< /i >。  如果沒有註釋指定的字串包含\<項目 / >。 ETW 事件大小會受到 ETW 緩衝區大小或 ETW 事件的最大承載所限制。 如果事件大小超過 ETW 限制，則捨棄註釋，並取代註釋值來截斷事件\<項目 >... \< /i >。|  
 |ProfileName|xs:string|造成發送這個事件的名稱或追蹤設定檔。|  
-|HostReference|xs:string|若為 Web 主控服務，此欄位會唯一識別 Web 階層架構中的服務。  其格式定義為 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName' 範例:' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'|  
+|HostReference|xs:string|若為 Web 主控服務，此欄位會唯一識別 Web 階層架構中的服務。  其格式定義為 ' Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName' 範例：'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'|  
 |AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。|

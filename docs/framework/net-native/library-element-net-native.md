@@ -5,11 +5,11 @@ ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eda4f8d3819af05b022e0633d6883cca940f67e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866849"
 ---
 # <a name="library-element-net-native"></a>\<文件庫 > 項目 (.NET Native)
 定義包含類型和類型成員的組件，這些類型和類型成員的中繼資料可在執行階段用於反映。  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
 ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017814"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>透過建立 ControlTemplate 自訂現有控制項的外觀
 <a name="introduction"></a> A<xref:System.Windows.Controls.ControlTemplate>指定的視覺結構和控制項的視覺行為。 您可以藉由提供新自訂控制項的外觀<xref:System.Windows.Controls.ControlTemplate>。 當您建立<xref:System.Windows.Controls.ControlTemplate>，您會取代現有控制項的外觀，而不變更其功能。 例如，您可以讓按鈕在您的應用程式而不是預設的方形，round，但仍會引發按鈕<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
@@ -64,11 +64,11 @@ ms.locfileid: "59098958"
   
  在此範例中，視覺結構是由下列部分所組成：  
   
--   A<xref:System.Windows.Controls.Border>名為`RootElement`做為範本的根<xref:System.Windows.FrameworkElement>。  
+- A<xref:System.Windows.Controls.Border>名為`RootElement`做為範本的根<xref:System.Windows.FrameworkElement>。  
   
--   A<xref:System.Windows.Controls.Grid>也就是子系`RootElement`。  
+- A<xref:System.Windows.Controls.Grid>也就是子系`RootElement`。  
   
--   A<xref:System.Windows.Controls.ContentPresenter>顯示按鈕的內容。 <xref:System.Windows.Controls.ContentPresenter>可讓任何類型的物件可顯示。  
+- A<xref:System.Windows.Controls.ContentPresenter>顯示按鈕的內容。 <xref:System.Windows.Controls.ContentPresenter>可讓任何類型的物件可顯示。  
   
  [!code-xaml[VSMButtonTemplate#BasicTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
   
@@ -85,9 +85,9 @@ ms.locfileid: "59098958"
   
  <xref:System.Windows.Controls.Control>類別會定義數個屬性，必須使用控制項範本，來設定時，有在控制項上的效果。 如何<xref:System.Windows.Controls.ControlTemplate>屬性取決於屬性的使用。 <xref:System.Windows.Controls.ControlTemplate>必須使用其中一種以下列方式的屬性：  
   
--   中的項目<xref:System.Windows.Controls.ControlTemplate>範本繫結至屬性。  
+- 中的項目<xref:System.Windows.Controls.ControlTemplate>範本繫結至屬性。  
   
--   中的項目<xref:System.Windows.Controls.ControlTemplate>繼承自父代的屬性<xref:System.Windows.FrameworkElement>。  
+- 中的項目<xref:System.Windows.Controls.ControlTemplate>繼承自父代的屬性<xref:System.Windows.FrameworkElement>。  
   
  下表列出由從控制項繼承的視覺屬性<xref:System.Windows.Controls.Control>類別。 它同時也指出控制項的預設控制項範本是否使用繼承的屬性值，或是否必須以範本方式繫結。  
   
@@ -167,11 +167,11 @@ ms.locfileid: "59098958"
   
  您可以指定發生順暢轉換從某個狀態到另一個控制項，加上動畫所花費的時間量<xref:System.Windows.VisualTransition>物件至<xref:System.Windows.Controls.ControlTemplate>。 當您建立<xref:System.Windows.VisualTransition>，您指定一或多個項目：  
   
--   狀態之間進行轉換所需的時間。  
+- 狀態之間進行轉換所需的時間。  
   
--   在轉換時發生的其他控制項外觀變更。  
+- 在轉換時發生的其他控制項外觀變更。  
   
--   何種狀態<xref:System.Windows.VisualTransition>套用至。  
+- 何種狀態<xref:System.Windows.VisualTransition>套用至。  
   
 ### <a name="specifying-the-duration-of-a-transition"></a>指定轉換的持續時間  
  您可以指定多久轉換會藉由設定<xref:System.Windows.VisualTransition.GeneratedDuration%2A>屬性。 上述範例具有<xref:System.Windows.VisualState>指定按鈕的框線變成透明的按下按鈕時，但動畫耗費太多時間會很明顯的如果快速地按下並釋放按鍵時。 您可以使用<xref:System.Windows.VisualTransition>至指定的時間花費控制項轉換為已按下的狀態。 下列範例會指定控制項需要 1/100 秒的時間來進入已按下狀態。  
@@ -201,13 +201,13 @@ ms.locfileid: "59098958"
   
  下列範例所示<xref:System.Windows.VisualStateGroup>針對`CommonStates`。 此範例會定義<xref:System.Windows.VisualTransition>針對每個按鈕的下列轉換。  
   
--   轉換到 `Pressed` 狀態。  
+- 轉換到 `Pressed` 狀態。  
   
--   轉換到 `MouseOver` 狀態。  
+- 轉換到 `MouseOver` 狀態。  
   
--   從 `Pressed` 狀態轉換到 `MouseOver` 狀態。  
+- 從 `Pressed` 狀態轉換到 `MouseOver` 狀態。  
   
--   從 `MouseOver` 狀態轉換到 `Normal` 狀態。  
+- 從 `MouseOver` 狀態轉換到 `Normal` 狀態。  
   
  [!code-xaml[VSMButtonTemplate#VisualTransitions](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
   
@@ -217,11 +217,11 @@ ms.locfileid: "59098958"
   
  控制項合約有三個元素：  
   
--   控制項邏輯所使用的視覺元素。  
+- 控制項邏輯所使用的視覺元素。  
   
--   控制項的狀態及每個狀態所屬的群組。  
+- 控制項的狀態及每個狀態所屬的群組。  
   
--   在視覺上影響控制項的公用屬性。  
+- 在視覺上影響控制項的公用屬性。  
   
 ### <a name="visual-elements-in-the-control-contract"></a>控制項合約中的視覺元素  
  有時，控制項的邏輯互動<xref:System.Windows.FrameworkElement>位於<xref:System.Windows.Controls.ControlTemplate>。 例如，控制項可能會處理它其中一個元素的事件。 當控制項預期要尋找特定<xref:System.Windows.FrameworkElement>中<xref:System.Windows.Controls.ControlTemplate>，它必須該資訊傳達給<xref:System.Windows.Controls.ControlTemplate>作者。 控制項使用<xref:System.Windows.TemplatePartAttribute>來傳達所預期的項目和項目的名稱應該是類型。 <xref:System.Windows.Controls.Button>沒有<xref:System.Windows.FrameworkElement>中控制項合約，但其他控制項，例如組件<xref:System.Windows.Controls.ComboBox>，執行。  
@@ -250,9 +250,9 @@ ms.locfileid: "59098958"
   
  建立時<xref:System.Windows.Controls.ControlTemplate>，通常是最簡單的方式開始與現有<xref:System.Windows.Controls.ControlTemplate>並對它進行變更。 您可以執行下列動作，以變更現有的其中一項<xref:System.Windows.Controls.ControlTemplate>:  
   
--   使用設計工具 (例如 Expression Blend)，這會提供可用來建立控制項範本的圖形化使用者介面。 如需詳細資訊，請參閱[設定支援範本之控制項的樣式](https://go.microsoft.com/fwlink/?LinkId=161153)。  
+- 使用設計工具 (例如 Expression Blend)，這會提供可用來建立控制項範本的圖形化使用者介面。 如需詳細資訊，請參閱[設定支援範本之控制項的樣式](https://go.microsoft.com/fwlink/?LinkId=161153)。  
   
--   取得預設<xref:System.Windows.Controls.ControlTemplate>並加以編輯。 若要尋找 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 隨附的預設控制項範本，請參閱[預設 WPF 佈景主題](https://go.microsoft.com/fwlink/?LinkID=158252)。  
+- 取得預設<xref:System.Windows.Controls.ControlTemplate>並加以編輯。 若要尋找 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 隨附的預設控制項範本，請參閱[預設 WPF 佈景主題](https://go.microsoft.com/fwlink/?LinkID=158252)。  
   
 <a name="complete_example"></a>   
 ## <a name="complete-example"></a>完整範例  

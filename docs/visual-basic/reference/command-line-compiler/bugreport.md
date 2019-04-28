@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
 ms.openlocfilehash: e7b4ebc58b6fe9850b92ef945cb0d715e4369efe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61839562"
 ---
 # <a name="-bugreport"></a>-bugreport
 建立您提出錯誤報告時，您可以使用的檔案。  
@@ -31,17 +31,17 @@ ms.locfileid: "58820903"
 ## <a name="remarks"></a>備註  
  下列資訊會新增至`file`:  
   
--   在編譯中的所有原始程式碼檔案的複本。  
+- 在編譯中的所有原始程式碼檔案的複本。  
   
--   在編譯中使用的編譯器選項的清單。  
+- 在編譯中使用的編譯器選項的清單。  
   
--   您的編譯器、 通用語言執行平台，以及作業系統的版本資訊。  
+- 您的編譯器、 通用語言執行平台，以及作業系統的版本資訊。  
   
--   編譯器輸出 (如果有的話)。  
+- 編譯器輸出 (如果有的話)。  
   
--   問題是，系統會提示您的描述。  
+- 問題是，系統會提示您的描述。  
   
--   描述您認為問題該如何應該解決，會提示您輸入。  
+- 描述您認為問題該如何應該解決，會提示您輸入。  
   
  因為所有原始程式檔的複本包含在`file`，您可能想要重現 （可疑的） 的程式碼缺失最短的程式中。  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
 ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879810"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>資料集和 XmlDataDocument 同步處理
 ADO.NET <xref:System.Data.DataSet> 提供資料的關聯式表示。 若要存取階層式資料，可以使用 .NET Framework 中提供的 XML 類別。 過去，這兩個資料表示一直是分開使用； 不過，.NET Framework 可讓您透過資料的關聯式和階層式表示的即時、 同步存取**資料集**物件和<xref:System.Xml.XmlDataDocument>物件，分別。  
@@ -19,7 +19,7 @@ ADO.NET <xref:System.Data.DataSet> 提供資料的關聯式表示。 若要存�
   
  有數種方式，您可以同步處理**資料集**具有**XmlDataDocument**。 您可以：  
   
--   填入**資料集**結構描述 （也就是關聯式結構） 和資料，然後使用新的同步處理**XmlDataDocument**。 如此便能提供現有關聯式資料的階層式檢視。 例如:   
+- 填入**資料集**結構描述 （也就是關聯式結構） 和資料，然後使用新的同步處理**XmlDataDocument**。 如此便能提供現有關聯式資料的階層式檢視。 例如:   
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -37,7 +37,7 @@ ADO.NET <xref:System.Data.DataSet> 提供資料的關聯式表示。 若要存�
     XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);  
     ```  
   
--   填入**資料集**只含結構描述 (例如強型別**資料集**)，同步處理搭配**XmlDataDocument**，然後載入**XmlDataDocument**從 XML 文件。 如此能提供現有階層式資料的關聯式檢視。 資料表名稱和資料行名稱，在您**資料集**結構描述必須符合您想要與一起同步處理之 XML 項目的名稱。 這項比對是區分大小寫的。  
+- 填入**資料集**只含結構描述 (例如強型別**資料集**)，同步處理搭配**XmlDataDocument**，然後載入**XmlDataDocument**從 XML 文件。 如此能提供現有階層式資料的關聯式檢視。 資料表名稱和資料行名稱，在您**資料集**結構描述必須符合您想要與一起同步處理之 XML 項目的名稱。 這項比對是區分大小寫的。  
   
      請注意，結構描述**資料集**只需要以符合您想要公開在關聯式檢視中的 XML 項目。 如此，您可能會有非常大的 XML 文件，但文件中可能會有非常小的關聯式「視窗」。 **XmlDataDocument**會保留整個 XML 文件時，即使**DataSet**只會公開它的一小部分。 (如這個詳細的範例，請參閱[將 DataSet 與 XmlDataDocument 同步處理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)。)  
   
@@ -63,7 +63,7 @@ ADO.NET <xref:System.Data.DataSet> 提供資料的關聯式表示。 若要存�
   
      無法載入**XmlDataDocument**如果它與同步處理**DataSet**包含資料。 且會擲回例外狀況。  
   
--   建立新**XmlDataDocument**並將它從 XML 文件，載入，然後存取 使用資料的關聯式檢視**資料集**屬性**XmlDataDocument**。 您需要設定的結構描述**資料集**您可以檢視任何資料之前**XmlDataDocument**使用**資料集**。 同樣地，資料表名稱和資料行名稱在您**資料集**結構描述必須符合您想要與一起同步處理之 XML 項目的名稱。 這項比對是區分大小寫的。  
+- 建立新**XmlDataDocument**並將它從 XML 文件，載入，然後存取 使用資料的關聯式檢視**資料集**屬性**XmlDataDocument**。 您需要設定的結構描述**資料集**您可以檢視任何資料之前**XmlDataDocument**使用**資料集**。 同樣地，資料表名稱和資料行名稱在您**資料集**結構描述必須符合您想要與一起同步處理之 XML 項目的名稱。 這項比對是區分大小寫的。  
   
      下列程式碼範例示範如何存取中的資料的關聯式檢視**XmlDataDocument**。  
   

@@ -3,11 +3,11 @@ title: 互通物件參考
 ms.date: 04/15/2019
 ms.assetid: cb8da4c8-08ca-4220-a16b-e04c8f527f1b
 ms.openlocfilehash: ada9084f6ac3c97dc641571c0cb8379a2fac68a8
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918966"
 ---
 # <a name="interoperable-object-references"></a>互通物件參考
 根據預設，<xref:System.Runtime.Serialization.DataContractSerializer>將物件序列化的值。 您可以使用<xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>屬性，指示資料合約序列化程式，將物件序列化時保留物件參考。  

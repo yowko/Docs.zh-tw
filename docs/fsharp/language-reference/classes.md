@@ -3,11 +3,11 @@ title: 類別
 description: 了解如何F#類別是代表其屬性、 方法和事件物件的型別。
 ms.date: 05/16/2016
 ms.openlocfilehash: 6bf838e98acecb89436d3e87809d9eb6da0c66d5
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61870288"
 ---
 # <a name="classes"></a>類別
 
@@ -71,7 +71,7 @@ and [access-modifier] type-name2 ...
 
 ## <a name="self-identifiers"></a>自我識別項
 
-A*自我識別項*是代表目前的執行個體的名稱。 自我識別項類似`this`C# 或 c + + 中的關鍵字或`Me`Visual Basic 中。 您可以在兩個不同的方式，取決於您是在範圍內的整個類別定義，或只是個別的方法本身的識別項定義自我識別項。
+A*自我識別項*是代表目前的執行個體的名稱。 自我識別項類似`this`關鍵字，在C#或C++或`Me`在 Visual Basic 中。 您可以在兩個不同的方式，取決於您是在範圍內的整個類別定義，或只是個別的方法本身的識別項定義自我識別項。
 
 若要定義整個類別的自我識別項，請使用`as`關鍵字之後的左括號的建構函式參數清單，並指定識別項名稱。
 
@@ -92,7 +92,7 @@ type MyClass2(dataIn) as self =
 
 自我識別項宣告`as`之前沒有初始化關鍵字之後`let`執行繫結。 因此，它不能在`let`繫結。 您可以使用中的自我識別項`do`繫結區段。
 
-## <a name="generic-type-parameters"></a>泛型型別參數
+## <a name="generic-type-parameters"></a>泛型類型參數
 
 角括號中指定泛型型別參數 (`<`和`>`)、 單引號後面接著識別項的形式。 以逗號分隔多個泛型型別參數。 泛型型別參數是在範圍中宣告。 下列程式碼範例示範如何指定泛型型別參數。
 

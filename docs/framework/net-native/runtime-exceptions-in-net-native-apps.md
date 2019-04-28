@@ -5,11 +5,11 @@ ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 06e07c41d398c0792094b4481a38c69b2ba73004
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866778"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>.NET 原生 App 中的執行階段例外狀況
 因為偵錯和發行組態完全不同，所以請務必在目標平台上測試通用 Windows 平台 App 的發行組建。 根據預設，偵錯組態會使用 .NET Core 執行階段來編譯 App，但此發行組態會使用 .NET 原生將 App 編譯為原生程式碼。  
@@ -24,11 +24,11 @@ ms.locfileid: "59208276"
   
  當您偵錯使用 .NET 原生編譯的發行組建：  
   
--   您會使用不同於一般 .NET 偵錯工具的 .NET 原生偵錯引擎。  
+- 您會使用不同於一般 .NET 偵錯工具的 .NET 原生偵錯引擎。  
   
--   會盡可能減少可執行檔的大小。 .NET 原生降低可執行檔大小的其中一種方式，是大幅修剪執行階段例外狀況訊息，這也是在 [Runtime exception messages](#Messages) 一節中更詳細討論的主題。  
+- 會盡可能減少可執行檔的大小。 .NET 原生降低可執行檔大小的其中一種方式，是大幅修剪執行階段例外狀況訊息，這也是在 [Runtime exception messages](#Messages) 一節中更詳細討論的主題。  
   
--   您的程式碼已徹底最佳化。 這代表會盡可能使用內嵌。 (內嵌將程式碼從外部常式移動至呼叫常式。) .NET 原生提供特製化執行階段並實作主動內嵌的事實，會影響在偵錯時顯示的呼叫堆疊。  如需詳細資訊，請參閱 [Runtime call stack](#CallStack) 一節。  
+- 您的程式碼已徹底最佳化。 這代表會盡可能使用內嵌。 (內嵌將程式碼從外部常式移動至呼叫常式。) .NET 原生提供特製化執行階段並實作主動內嵌的事實，會影響在偵錯時顯示的呼叫堆疊。  如需詳細資訊，請參閱 [Runtime call stack](#CallStack) 一節。  
   
 > [!NOTE]
 >  您可以控制偵錯和發行組建是否以 .NET 原生工具鏈編譯，方法是選取或取消選取 [使用 .NET 原生工具鏈編譯]  方塊。   不過請注意，Windows 市集一律會編譯 App 的 .NET 原生工具鏈生產環境版本。  

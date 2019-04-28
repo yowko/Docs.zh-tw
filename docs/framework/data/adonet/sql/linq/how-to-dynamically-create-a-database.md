@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
 ms.openlocfilehash: ab5e2867ce85fcc82e1114696c129aae878bbee6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877262"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>HOW TO：動態建立資料庫
 在 LINQ to SQL 中，物件模型 (Object Model) 會對應至關聯式資料庫。 對應的啟用方式是使用以屬性 (Attribute) 為基礎的對應或外部對應檔案來描述關聯式資料庫的結構。 在這兩種情況中，系統會提供足夠的關聯式資料庫相關資訊，可讓您使用 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法來建立新的資料庫執行個體 (Instance)。  
@@ -19,9 +19,9 @@ ms.locfileid: "59072385"
   
  您可以將 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法用在許多情況下，特別是在已知的資料提供者 (Data Provider) (如 Microsoft SQL Server 2008) 可用時。 典型情況包括：  
   
--   建置應用程式，這個應用程式會自動將它自己安裝在客戶系統上。  
+- 建置應用程式，這個應用程式會自動將它自己安裝在客戶系統上。  
   
--   建置用戶端應用程式，這個用戶端應用程式需要本機資料庫來儲存它的離線狀態。  
+- 建置用戶端應用程式，這個用戶端應用程式需要本機資料庫來儲存它的離線狀態。  
   
  根據連接字串，您也可以使用 .mdf 檔案或目錄名稱來搭配使用 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法與 SQL Server。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會使用連接字串來定義要建立的資料庫，以及要在其上建立資料庫的伺服器。  
   

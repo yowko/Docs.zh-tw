@@ -3,20 +3,20 @@ title: HOW TO：比較兩個資料夾內容 (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
 ms.openlocfilehash: 668f72e2a891a9332093b97ebc927c156ad2087c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855708"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>HOW TO：比較兩個資料夾內容 (LINQ) (Visual Basic)
 本例示範三種比較兩個檔案清單的方式︰  
   
--   查詢指定兩個檔案清單是否完全相同的布林值。  
+- 查詢指定兩個檔案清單是否完全相同的布林值。  
   
--   查詢交集，以擷取這兩個資料夾都有的檔案。  
+- 查詢交集，以擷取這兩個資料夾都有的檔案。  
   
--   查詢集合差異，以擷取一個資料夾中有而另一個沒有的檔案。  
+- 查詢集合差異，以擷取一個資料夾中有而另一個沒有的檔案。  
   
     > [!NOTE]
     >  這裡顯示的技巧可用於比較任何類型的物件序列。  

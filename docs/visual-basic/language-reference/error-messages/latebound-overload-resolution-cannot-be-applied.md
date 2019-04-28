@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
 ms.openlocfilehash: 7f2ae3bb0e7c09d966c53fb17b1cbe675dfce8b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921104"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>晚期繫結多載解析無法套用至 '\<程序名稱 >' 因為進行存取的執行個體為介面類型
 編譯器嘗試解析其參考的多載的屬性或程序，但參考會失敗，因為引數的型別是`Object`和參考的物件具有介面的資料類型。 `Object`引數會強制編譯器解析為晚期繫結參考。  
@@ -24,7 +24,7 @@ ms.locfileid: "58814051"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   使用`CType`要轉型的引數，從`Object`您想要呼叫的多載簽章所指定的型別。  
+- 使用`CType`要轉型的引數，從`Object`您想要呼叫的多載簽章所指定的型別。  
   
      請注意，它無法協助參考將物件轉換為基礎的介面。 您必須轉換為避免此錯誤的引數。  
   

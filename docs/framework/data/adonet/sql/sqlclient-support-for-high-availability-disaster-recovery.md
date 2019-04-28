@@ -3,11 +3,11 @@ title: 高可用性、嚴重損壞修復的 SqlClient 支援
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876081"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>高可用性、嚴重損壞修復的 SqlClient 支援
 本主題討論高可用性、嚴重損壞修復 (AlwaysOn 可用性群組) 的 SqlClient 支援 (在 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 中新增)。  AlwaysOn 可用性群組功能已新增至 SQL Server 2012。 如需 AlwaysOn 可用性群組的詳細資訊，請參閱 SQL Server 線上叢書 》。  
@@ -21,9 +21,9 @@ ms.locfileid: "59307588"
   
  [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 中的 SqlClient 新增了下列連接屬性：  
   
--   `ApplicationIntent`  
+- `ApplicationIntent`  
   
--   `MultiSubnetFailover`  
+- `MultiSubnetFailover`  
   
  您可以利用程式設計方式修改這些連接字串關鍵字：  
   
@@ -45,17 +45,17 @@ ms.locfileid: "59307588"
   
  您可以使用下列指導方針，連接到可用性群組中的伺服器或 SQL Server 2012 容錯移轉叢集執行個體：  
   
--   連接至單一子網路或多重子網路時，使用 `MultiSubnetFailover` 連接屬性可以提高兩者的效能。  
+- 連接至單一子網路或多重子網路時，使用 `MultiSubnetFailover` 連接屬性可以提高兩者的效能。  
   
--   若要連接到可用性群組，請在連接字串中將該可用性群組的可用性群組接聽程式指定為伺服器。  
+- 若要連接到可用性群組，請在連接字串中將該可用性群組的可用性群組接聽程式指定為伺服器。  
   
--   連接到 SQL Server 使用超過 64 個 IP 位址設定的執行個體，將會導致連接失敗。  
+- 連接到 SQL Server 使用超過 64 個 IP 位址設定的執行個體，將會導致連接失敗。  
   
--   使用的應用程式的行為`MultiSubnetFailover`連接屬性不會影響基礎的驗證類型：SQL Server 驗證、 Kerberos 驗證或 Windows 驗證。  
+- 使用的應用程式的行為`MultiSubnetFailover`連接屬性不會影響基礎的驗證類型：SQL Server 驗證、 Kerberos 驗證或 Windows 驗證。  
   
--   提高 `Connect Timeout` 的值可延長容錯移轉時間並減少應用程式重試連接的次數。  
+- 提高 `Connect Timeout` 的值可延長容錯移轉時間並減少應用程式重試連接的次數。  
   
--   不支援分散式異動。  
+- 不支援分散式異動。  
   
  如果唯讀路由沒有作用，在下列情況下連接到次要複本位置會失敗：  
   

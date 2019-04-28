@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
 ms.openlocfilehash: beb5d2db898df1c98662d53190ac1432acc746e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878217"
 ---
 # <a name="performing-catalog-operations"></a>執行資料庫目錄作業
 若要執行的命令來修改資料庫或目錄，例如 CREATE TABLE 或 CREATE PROCEDURE 陳述式中，建立**命令**物件使用適當的 SQL 陳述式並**連線**物件。 執行命令**ExecuteNonQuery**方法**命令**物件。  

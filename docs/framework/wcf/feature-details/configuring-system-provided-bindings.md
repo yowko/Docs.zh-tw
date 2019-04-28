@@ -7,20 +7,20 @@ helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
 ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857411"
 ---
 # <a name="configuring-system-provided-bindings"></a>設定系統提供的繫結
 在與端點對話時，繫結會指定要使用的通訊機制，並指出如何連接至端點。 繫結是由定義如何 Windows Communication Foundation (WCF) 通道的分層處理提供所需的通訊功能的項目所組成。 繫結包含三種項目型別：  
   
--   通訊協定通道繫結項目，可決定要與傳送至端點的訊息搭配使用的安全性、可靠性、內容流量設定，或是使用者定義的通訊協定。  
+- 通訊協定通道繫結項目，可決定要與傳送至端點的訊息搭配使用的安全性、可靠性、內容流量設定，或是使用者定義的通訊協定。  
   
--   傳輸通道繫結項目，則決定了在傳送訊息給端點時要使用的基礎傳輸通訊協定，例如 TCP 或 HTTP。  
+- 傳輸通道繫結項目，則決定了在傳送訊息給端點時要使用的基礎傳輸通訊協定，例如 TCP 或 HTTP。  
   
--   訊息編碼繫結項目，對於傳送至端點的訊息來說，這些項目決定了要使用的 Wire 編碼，例如，文字/XML、二進位，或是訊息傳輸最佳化機制 (MTOM)。  
+- 訊息編碼繫結項目，對於傳送至端點的訊息來說，這些項目決定了要使用的 Wire 編碼，例如，文字/XML、二進位，或是訊息傳輸最佳化機制 (MTOM)。  
   
  本主題提供所有的系統提供的 Windows Communication Foundation (WCF) 繫結。 如果這些項目都不能完全符合應用程式的需求，您可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 類別來建立繫結程序。 如需建立自訂繫結的詳細資訊，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   

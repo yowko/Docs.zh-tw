@@ -9,22 +9,22 @@ helpviewer_keywords:
 - 3-D scenes
 ms.assetid: adb4a598-71a2-4dd5-b677-ea3fc11b78b2
 ms.openlocfilehash: 8e176cb437055787da86d56770dd71323134fa33
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910178"
 ---
 # <a name="how-to-create-a-3-d-scene"></a>HOW TO：建立立體場景
 此範例示範如何建立 3d 物件看起來像一般的工作表的已旋轉的紙張。 A<xref:System.Windows.Controls.Viewport3D>搭配下列元件用來建立這個簡單的 3d 場景：  
   
--   使用建立相機<xref:System.Windows.Media.Media3D.PerspectiveCamera>。 將觀景窗指定可檢視 3d 場景的哪個部分。  
+- 使用建立相機<xref:System.Windows.Media.Media3D.PerspectiveCamera>。 將觀景窗指定可檢視 3d 場景的哪個部分。  
   
--   網格會建立以指定的 3d 物件 （單張紙） 使用的形狀<xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A>屬性<xref:System.Windows.Media.Media3D.GeometryModel3D>。  
+- 網格會建立以指定的 3d 物件 （單張紙） 使用的形狀<xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A>屬性<xref:System.Windows.Media.Media3D.GeometryModel3D>。  
   
--   要顯示物件 （在此範例中的線性漸層） 使用的介面上指定材質<xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A>屬性<xref:System.Windows.Media.Media3D.GeometryModel3D>。  
+- 要顯示物件 （在此範例中的線性漸層） 使用的介面上指定材質<xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A>屬性<xref:System.Windows.Media.Media3D.GeometryModel3D>。  
   
--   光建立物件的使用平台<xref:System.Windows.Media.Media3D.DirectionalLight>。  
+- 光建立物件的使用平台<xref:System.Windows.Media.Media3D.DirectionalLight>。  
   
 ## <a name="example"></a>範例  
  下列程式碼示範如何在 XAML 中的 3d 場景。  

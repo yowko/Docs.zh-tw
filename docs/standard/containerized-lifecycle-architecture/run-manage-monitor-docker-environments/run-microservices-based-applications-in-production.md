@@ -1,17 +1,17 @@
 ---
-title: 在生產環境中執行撰寫和以微服務為基礎的應用程式
+title: 在生產環境中執行已撰寫和以微服務為基礎的應用程式
 description: 了解在生產環境中執行容器化應用程式的主要元件
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 52cf273194bff10192b06d236bda7c1cbea1abd8
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921585"
 ---
-# <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>在生產環境中執行撰寫和以微服務為基礎的應用程式
+# <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>在生產環境中執行已撰寫和以微服務為基礎的應用程式
 
 由多個微服務組成的應用程式需要部署到 orchestrator 叢集，以簡化部署的複雜性，並使其從 IT 觀點來看變為可用。 協調器叢集，不會很難部署和複雜的微服務應用程式相應放大。
 

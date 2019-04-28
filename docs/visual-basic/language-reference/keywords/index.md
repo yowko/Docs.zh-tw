@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
 ms.openlocfilehash: e00cb8579ba2692acdfbf3fd349e08bb8647e2d0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801553"
 ---
 # <a name="keywords-visual-basic"></a>關鍵字 (Visual Basic)
 下表列出所有的 Visual Basic 語言關鍵字。  

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
 ms.openlocfilehash: 553868ae82501e479acadd04b3d5e4447bcea36e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61867131"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>物件存留期：物件如何建立和終結 (Visual Basic)
 您可以使用 `New` 關鍵字來建立類別的執行個體，即物件。 在使用新物件之前，經常必須在新物件上執行初始設定工作。 常見的初始設定工作包括開啟檔案、連線到資料庫，以及讀取登錄機碼的值。 Visual Basic 控制項的使用程序呼叫的新物件初始化*建構函式*（允許控制初始化的特殊方法）。  
@@ -84,13 +84,13 @@ ms.locfileid: "58839817"
 ### <a name="implementing-idisposable"></a>實作 IDisposable  
  實作 <xref:System.IDisposable> 介面的類別應該包含以下幾段程式碼：  
   
--   追蹤是否已處置物件的欄位：  
+- 追蹤是否已處置物件的欄位：  
   
     ```  
     Protected disposed As Boolean = False  
     ```  
   
--   <xref:System.IDisposable.Dispose%2A> 多載，會釋放該類別的資源。 這個方法應該由基底類別的 <xref:System.IDisposable.Dispose%2A> 和 `Finalize` 方法呼叫：  
+- <xref:System.IDisposable.Dispose%2A> 多載，會釋放該類別的資源。 這個方法應該由基底類別的 <xref:System.IDisposable.Dispose%2A> 和 `Finalize` 方法呼叫：  
   
     ```  
     Protected Overridable Sub Dispose(ByVal disposing As Boolean)  
@@ -104,7 +104,7 @@ ms.locfileid: "58839817"
     End Sub  
     ```  
   
--   僅包含下列程式碼的 <xref:System.IDisposable.Dispose%2A> 實作：  
+- 僅包含下列程式碼的 <xref:System.IDisposable.Dispose%2A> 實作：  
   
     ```  
     Public Sub Dispose() Implements IDisposable.Dispose  
@@ -113,7 +113,7 @@ ms.locfileid: "58839817"
     End Sub  
     ```  
   
--   僅包含下列程式碼的 `Finalize` 方法置換：  
+- 僅包含下列程式碼的 `Finalize` 方法置換：  
   
     ```  
     Protected Overrides Sub Finalize()  

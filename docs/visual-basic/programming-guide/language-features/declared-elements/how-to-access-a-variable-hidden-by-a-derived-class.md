@@ -10,11 +10,11 @@ helpviewer_keywords:
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
 ms.openlocfilehash: a97a51d4570d87eaa873fb3152ad810f528dff46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61829656"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>HOW TO：存取衍生類別 (Visual Basic) 所隱藏的變數
 當在衍生類別中的程式碼存取的變數時，編譯器通常會將參考解析最接近的可存取版本，也就是可存取的版本的最少衍生步驟回溯正在存取的類別。 如果變數定義在衍生類別中，程式碼通常會存取該定義。  
@@ -23,7 +23,7 @@ ms.locfileid: "58832173"
   
 ### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>若要存取衍生類別所隱藏的基底類別變數  
   
--   在運算式或指派陳述式中，變數名稱前加`MyBase`關鍵字和句號 (`.`)。  
+- 在運算式或指派陳述式中，變數名稱前加`MyBase`關鍵字和句號 (`.`)。  
   
      編譯器會解析變數的基底類別版本的參考。  
   

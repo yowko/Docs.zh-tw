@@ -5,11 +5,11 @@ ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20657e0a583890b851ab8e15c50bce791a3641b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866765"
 ---
 # <a name="property-element-net-native"></a>\<屬性 > 項目 (.NET Native)
 將執行階段反映原則套用至屬性。  
@@ -81,9 +81,9 @@ ms.locfileid: "59094485"
   
  不過，編譯和執行此範例會擲回 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 例外狀況。 雖然我們已經讓 `Book` 類型的中繼資料可供使用，但我們無法讓屬性 getter 的實作供動態使用。 我們可以用下列兩種方法之一來更正這個錯誤：  
   
--   在 `Book` 類型的 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 項目中定義其 `Dynamic` 原則。  
+- 在 `Book` 類型的 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 項目中定義其 `Dynamic` 原則。  
   
--   針對我們要叫用其 getter 的每個屬性，新增巢狀 [\<Property>](../../../docs/framework/net-native/property-element-net-native.md) 項目，如下列 default.rd.xml 檔案所示。  
+- 針對我們要叫用其 getter 的每個屬性，新增巢狀 [\<Property>](../../../docs/framework/net-native/property-element-net-native.md) 項目，如下列 default.rd.xml 檔案所示。  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

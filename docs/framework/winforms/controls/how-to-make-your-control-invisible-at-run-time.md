@@ -12,11 +12,11 @@ helpviewer_keywords:
 - run time [Windows Forms], making controls invisible
 ms.assetid: 69eb2e72-32f5-4f79-a157-c2c5f60c1628
 ms.openlocfilehash: e9af529541a40a951d6defea180dbbef04c8f3be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913701"
 ---
 # <a name="how-to-make-your-control-invisible-at-run-time"></a>HOW TO：在執行階段隱藏控制項
 有些的時候您可能想要建立在執行階段不會察覺的使用者控制項。 例如，警示時鐘控制項可能除了警示已響起時不可見。 這可以輕鬆地藉由設定<xref:System.Windows.Forms.Control.Visible%2A>屬性。 如果<xref:System.Windows.Forms.Control.Visible%2A>屬性是`true`，您的控制項將會出現如往常。 如果`false`，將隱藏控制項。 雖然在控制項中的程式碼仍可能在隱藏時執行，但是您不能透過使用者介面控制項互動。 如果您想要建立不可見的控制項，仍會回應使用者輸入 （例如滑鼠點按），您應該建立透明的控制項。 如需詳細資訊，請參閱 <<c0> [ 為您的控制項提供透明背景](how-to-give-your-control-a-transparent-background.md)。  

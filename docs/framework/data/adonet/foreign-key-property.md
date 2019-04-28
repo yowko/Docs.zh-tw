@@ -3,11 +3,11 @@ title: 外部索引鍵屬性
 ms.date: 03/30/2017
 ms.assetid: 23cb6729-544d-4f67-9ee7-44e8a6545587
 ms.openlocfilehash: 74117b30ca54f7c57bd970003fc6f5dcc54d553f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879072"
 ---
 # <a name="foreign-key-property"></a>外部索引鍵屬性
 A*外部索引鍵屬性*Entity Data Model (EDM) 中是基本型別[屬性](../../../../docs/framework/data/adonet/property.md)（或一組基本型別屬性） 上[實體類型](../../../../docs/framework/data/adonet/entity-type.md)包含[實體索引鍵](../../../../docs/framework/data/adonet/entity-key.md)另一個實體類型。  
