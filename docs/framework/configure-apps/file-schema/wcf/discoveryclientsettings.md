@@ -3,11 +3,11 @@ title: <discoveryClientSettings>
 ms.date: 03/30/2017
 ms.assetid: 02e1b823-a8bb-4074-90d5-8599f71e8f9d
 ms.openlocfilehash: 0b014a9d797ded61949a374486824ee3ebc34661
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673474"
 ---
 # <a name="discoveryclientsettings"></a>\<discoveryClientSettings>
 包含應用程式參與服務探索處理序做為用戶端所需的設定。  
