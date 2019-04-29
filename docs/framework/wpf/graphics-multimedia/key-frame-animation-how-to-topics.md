@@ -8,37 +8,37 @@ helpviewer_keywords:
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
 ms.openlocfilehash: 6b4f5de92f19223a6692236fb3496a1dbbddef5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785641"
 ---
-# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="b59e5-102">主要畫面格動畫 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="b59e5-102">Key-Frame Animation How-to Topics</span></span>
-<span data-ttu-id="b59e5-103">在本節中的主題將示範如何使用主要畫面格動畫來以動畫顯示超過兩個屬性值和控制項內插補點。</span><span class="sxs-lookup"><span data-stu-id="b59e5-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
+# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="ef1b0-102">主要畫面格動畫 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="ef1b0-102">Key-Frame Animation How-to Topics</span></span>
+<span data-ttu-id="ef1b0-103">在本節中的主題將示範如何使用主要畫面格動畫來以動畫顯示超過兩個屬性值和控制項內插補點。</span><span class="sxs-lookup"><span data-stu-id="ef1b0-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b59e5-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="b59e5-104">In This Section</span></span>  
- [<span data-ttu-id="b59e5-105">使用主要畫面格建立物件的動畫</span><span class="sxs-lookup"><span data-stu-id="b59e5-105">Animate an Object by Using Key Frames</span></span>](how-to-animate-an-object-by-using-key-frames.md)  
- [<span data-ttu-id="b59e5-106">使用主要畫面格建立布林值的動畫</span><span class="sxs-lookup"><span data-stu-id="b59e5-106">Animate a Boolean by Using Key Frames</span></span>](how-to-animate-a-boolean-by-using-key-frames.md)  
- [<span data-ttu-id="b59e5-107">使用主要畫面格建立雙精度浮點數的動畫</span><span class="sxs-lookup"><span data-stu-id="b59e5-107">Animate a Double by Using Key Frames</span></span>](how-to-animate-a-double-by-using-key-frames.md)  
- [<span data-ttu-id="b59e5-108">使用主要畫面格建立矩陣的動畫</span><span class="sxs-lookup"><span data-stu-id="b59e5-108">Animate a Matrix by Using Key Frames</span></span>](how-to-animate-a-matrix-by-using-key-frames.md)  
- [<span data-ttu-id="b59e5-109">使用主要畫面格建立點的動畫</span><span class="sxs-lookup"><span data-stu-id="b59e5-109">Animate a Point by Using Key Frames</span></span>](how-to-animate-a-point-by-using-key-frames.md)  
- [<span data-ttu-id="b59e5-110">使用主要畫面格建立矩形幾何的動畫</span><span class="sxs-lookup"><span data-stu-id="b59e5-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
- [<span data-ttu-id="b59e5-111">使用主要畫面格建立字串的動畫</span><span class="sxs-lookup"><span data-stu-id="b59e5-111">Animate a String by Using Key Frames</span></span>](how-to-animate-a-string-by-using-key-frames.md)  
- [<span data-ttu-id="b59e5-112">使用主要畫面格建立色彩的動畫</span><span class="sxs-lookup"><span data-stu-id="b59e5-112">Animate Color by Using Key Frames</span></span>](how-to-animate-color-by-using-key-frames.md)  
- [<span data-ttu-id="b59e5-113">使用主要畫面格建立大小變更的動畫</span><span class="sxs-lookup"><span data-stu-id="b59e5-113">Animate Size Changes by Using Key Frames</span></span>](how-to-animate-size-changes-by-using-key-frames.md)  
- [<span data-ttu-id="b59e5-114">使用主要畫面格建立框線粗細的動畫</span><span class="sxs-lookup"><span data-stu-id="b59e5-114">Animate the Thickness of a Border by Using Key Frames</span></span>](how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
- [<span data-ttu-id="b59e5-115">控制主要畫面格動畫執行時間</span><span class="sxs-lookup"><span data-stu-id="b59e5-115">Control Key-Frame Animation Timing</span></span>](how-to-control-key-frame-animation-timing.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ef1b0-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="ef1b0-104">In This Section</span></span>  
+ [<span data-ttu-id="ef1b0-105">使用主要畫面格建立物件的動畫</span><span class="sxs-lookup"><span data-stu-id="ef1b0-105">Animate an Object by Using Key Frames</span></span>](how-to-animate-an-object-by-using-key-frames.md)  
+ [<span data-ttu-id="ef1b0-106">使用主要畫面格建立布林值的動畫</span><span class="sxs-lookup"><span data-stu-id="ef1b0-106">Animate a Boolean by Using Key Frames</span></span>](how-to-animate-a-boolean-by-using-key-frames.md)  
+ [<span data-ttu-id="ef1b0-107">使用主要畫面格建立雙精度浮點數的動畫</span><span class="sxs-lookup"><span data-stu-id="ef1b0-107">Animate a Double by Using Key Frames</span></span>](how-to-animate-a-double-by-using-key-frames.md)  
+ [<span data-ttu-id="ef1b0-108">使用主要畫面格建立矩陣的動畫</span><span class="sxs-lookup"><span data-stu-id="ef1b0-108">Animate a Matrix by Using Key Frames</span></span>](how-to-animate-a-matrix-by-using-key-frames.md)  
+ [<span data-ttu-id="ef1b0-109">使用主要畫面格建立點的動畫</span><span class="sxs-lookup"><span data-stu-id="ef1b0-109">Animate a Point by Using Key Frames</span></span>](how-to-animate-a-point-by-using-key-frames.md)  
+ [<span data-ttu-id="ef1b0-110">使用主要畫面格建立矩形幾何的動畫</span><span class="sxs-lookup"><span data-stu-id="ef1b0-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
+ [<span data-ttu-id="ef1b0-111">使用主要畫面格建立字串的動畫</span><span class="sxs-lookup"><span data-stu-id="ef1b0-111">Animate a String by Using Key Frames</span></span>](how-to-animate-a-string-by-using-key-frames.md)  
+ [<span data-ttu-id="ef1b0-112">使用主要畫面格建立色彩的動畫</span><span class="sxs-lookup"><span data-stu-id="ef1b0-112">Animate Color by Using Key Frames</span></span>](how-to-animate-color-by-using-key-frames.md)  
+ [<span data-ttu-id="ef1b0-113">使用主要畫面格建立大小變更的動畫</span><span class="sxs-lookup"><span data-stu-id="ef1b0-113">Animate Size Changes by Using Key Frames</span></span>](how-to-animate-size-changes-by-using-key-frames.md)  
+ [<span data-ttu-id="ef1b0-114">使用主要畫面格建立框線粗細的動畫</span><span class="sxs-lookup"><span data-stu-id="ef1b0-114">Animate the Thickness of a Border by Using Key Frames</span></span>](how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
+ [<span data-ttu-id="ef1b0-115">控制主要畫面格動畫執行時間</span><span class="sxs-lookup"><span data-stu-id="ef1b0-115">Control Key-Frame Animation Timing</span></span>](how-to-control-key-frame-animation-timing.md)  
   
-## <a name="reference"></a><span data-ttu-id="b59e5-116">參考資料</span><span class="sxs-lookup"><span data-stu-id="b59e5-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="ef1b0-116">參考資料</span><span class="sxs-lookup"><span data-stu-id="ef1b0-116">Reference</span></span>  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a><span data-ttu-id="b59e5-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b59e5-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ef1b0-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ef1b0-117">See also</span></span>
 
-- [<span data-ttu-id="b59e5-118">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="b59e5-118">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="b59e5-119">動畫概觀</span><span class="sxs-lookup"><span data-stu-id="b59e5-119">Animation Overview</span></span>](animation-overview.md)
-- [<span data-ttu-id="b59e5-120">主要畫面格動畫概觀</span><span class="sxs-lookup"><span data-stu-id="b59e5-120">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)
+- [<span data-ttu-id="ef1b0-118">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="ef1b0-118">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="ef1b0-119">動畫概觀</span><span class="sxs-lookup"><span data-stu-id="ef1b0-119">Animation Overview</span></span>](animation-overview.md)
+- [<span data-ttu-id="ef1b0-120">主要畫面格動畫概觀</span><span class="sxs-lookup"><span data-stu-id="ef1b0-120">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)

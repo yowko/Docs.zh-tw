@@ -3,32 +3,32 @@ title: 訊息記錄
 ms.date: 03/30/2017
 ms.assetid: 6bce0682-75ef-4d65-a659-b328fba4a8b5
 ms.openlocfilehash: e189b6c2997c7d4d7422e61fa22be95678aeb911
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797432"
 ---
-# <a name="message-logging"></a><span data-ttu-id="1fde1-102">訊息記錄</span><span class="sxs-lookup"><span data-stu-id="1fde1-102">Message Logging</span></span>
-<span data-ttu-id="1fde1-103">Windows Communication Foundation (WCF) 提供讓您記錄傳入和傳出訊息以便離線使用。</span><span class="sxs-lookup"><span data-stu-id="1fde1-103">Windows Communication Foundation (WCF) provides the capability to log incoming and outgoing messages for offline consumption.</span></span> <span data-ttu-id="1fde1-104">訊息記錄功能可讓您看到訊息與訊息本文的樣貌。</span><span class="sxs-lookup"><span data-stu-id="1fde1-104">Message logging enables you to see what the message and message body looks like.</span></span> <span data-ttu-id="1fde1-105">這種記錄類型特別適合用來讓您了解傳入了哪些引數，以及接收端點以何種方式來理解以 XML 表示的引數。</span><span class="sxs-lookup"><span data-stu-id="1fde1-105">This type of logging is particularly helpful in letting you know what arguments were passed in and how the receiving endpoint saw the arguments expressed as XML.</span></span> <span data-ttu-id="1fde1-106">此外，記錄收到的訊息可讓您診斷格式不正確的訊息並查看訊息的抵達方式。</span><span class="sxs-lookup"><span data-stu-id="1fde1-106">In addition, logging the message as it was received allows you to diagnose malformed messages as well as to see how the message arrived.</span></span> <span data-ttu-id="1fde1-107">您也可以檢查所使用的安全性權杖、加密與簽署的部分，以及保留不變的部分。</span><span class="sxs-lookup"><span data-stu-id="1fde1-107">You can also examine the security tokens used, parts encrypted and signed, and parts left intact.</span></span>  
+# <a name="message-logging"></a><span data-ttu-id="e13e0-102">訊息記錄</span><span class="sxs-lookup"><span data-stu-id="e13e0-102">Message Logging</span></span>
+<span data-ttu-id="e13e0-103">Windows Communication Foundation (WCF) 提供讓您記錄傳入和傳出訊息以便離線使用。</span><span class="sxs-lookup"><span data-stu-id="e13e0-103">Windows Communication Foundation (WCF) provides the capability to log incoming and outgoing messages for offline consumption.</span></span> <span data-ttu-id="e13e0-104">訊息記錄功能可讓您看到訊息與訊息本文的樣貌。</span><span class="sxs-lookup"><span data-stu-id="e13e0-104">Message logging enables you to see what the message and message body looks like.</span></span> <span data-ttu-id="e13e0-105">這種記錄類型特別適合用來讓您了解傳入了哪些引數，以及接收端點以何種方式來理解以 XML 表示的引數。</span><span class="sxs-lookup"><span data-stu-id="e13e0-105">This type of logging is particularly helpful in letting you know what arguments were passed in and how the receiving endpoint saw the arguments expressed as XML.</span></span> <span data-ttu-id="e13e0-106">此外，記錄收到的訊息可讓您診斷格式不正確的訊息並查看訊息的抵達方式。</span><span class="sxs-lookup"><span data-stu-id="e13e0-106">In addition, logging the message as it was received allows you to diagnose malformed messages as well as to see how the message arrived.</span></span> <span data-ttu-id="e13e0-107">您也可以檢查所使用的安全性權杖、加密與簽署的部分，以及保留不變的部分。</span><span class="sxs-lookup"><span data-stu-id="e13e0-107">You can also examine the security tokens used, parts encrypted and signed, and parts left intact.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1fde1-108">本節內容</span><span class="sxs-lookup"><span data-stu-id="1fde1-108">In This Section</span></span>  
- [<span data-ttu-id="1fde1-109">訊息流程概觀</span><span class="sxs-lookup"><span data-stu-id="1fde1-109">Message Flow Overview</span></span>](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e13e0-108">本節內容</span><span class="sxs-lookup"><span data-stu-id="e13e0-108">In This Section</span></span>  
+ [<span data-ttu-id="e13e0-109">訊息流程概觀</span><span class="sxs-lookup"><span data-stu-id="e13e0-109">Message Flow Overview</span></span>](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  
   
- <span data-ttu-id="1fde1-110">本主題描述如何將事件記錄檔訊息對應至用戶端和服務事件。</span><span class="sxs-lookup"><span data-stu-id="1fde1-110">This topic describes how event log messages correspond to client and service events.</span></span>  
+ <span data-ttu-id="e13e0-110">本主題描述如何將事件記錄檔訊息對應至用戶端和服務事件。</span><span class="sxs-lookup"><span data-stu-id="e13e0-110">This topic describes how event log messages correspond to client and service events.</span></span>  
   
- [<span data-ttu-id="1fde1-111">設定訊息記錄</span><span class="sxs-lookup"><span data-stu-id="1fde1-111">Configuring Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
+ [<span data-ttu-id="e13e0-111">設定訊息記錄</span><span class="sxs-lookup"><span data-stu-id="e13e0-111">Configuring Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
   
- <span data-ttu-id="1fde1-112">本主題描述如何針對不同的案例設定訊息記錄。</span><span class="sxs-lookup"><span data-stu-id="1fde1-112">This topic describes how you can configure message logging for different scenarios.</span></span>  
+ <span data-ttu-id="e13e0-112">本主題描述如何針對不同的案例設定訊息記錄。</span><span class="sxs-lookup"><span data-stu-id="e13e0-112">This topic describes how you can configure message logging for different scenarios.</span></span>  
   
- [<span data-ttu-id="1fde1-113">檢視訊息記錄</span><span class="sxs-lookup"><span data-stu-id="1fde1-113">Viewing Message Logs</span></span>](../../../../docs/framework/wcf/diagnostics/viewing-message-logs.md)  
+ [<span data-ttu-id="e13e0-113">檢視訊息記錄</span><span class="sxs-lookup"><span data-stu-id="e13e0-113">Viewing Message Logs</span></span>](../../../../docs/framework/wcf/diagnostics/viewing-message-logs.md)  
   
- <span data-ttu-id="1fde1-114">此主題描述如何檢視訊息記錄。</span><span class="sxs-lookup"><span data-stu-id="1fde1-114">This topic describes how you can view message logs.</span></span>  
+ <span data-ttu-id="e13e0-114">此主題描述如何檢視訊息記錄。</span><span class="sxs-lookup"><span data-stu-id="e13e0-114">This topic describes how you can view message logs.</span></span>  
   
- [<span data-ttu-id="1fde1-115">訊息記錄的安全性考量</span><span class="sxs-lookup"><span data-stu-id="1fde1-115">Security Concerns for Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/security-concerns-for-message-logging.md)  
+ [<span data-ttu-id="e13e0-115">訊息記錄的安全性考量</span><span class="sxs-lookup"><span data-stu-id="e13e0-115">Security Concerns for Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/security-concerns-for-message-logging.md)  
   
- <span data-ttu-id="1fde1-116">此主題描述如何保護訊息記錄以及記錄訊息時所產生之事件中的敏感性資料，使其不會被公開。</span><span class="sxs-lookup"><span data-stu-id="1fde1-116">This topic describes how you can protect sensitive data from being exposed in message logs, as well as events generated by message logging.</span></span>  
+ <span data-ttu-id="e13e0-116">此主題描述如何保護訊息記錄以及記錄訊息時所產生之事件中的敏感性資料，使其不會被公開。</span><span class="sxs-lookup"><span data-stu-id="e13e0-116">This topic describes how you can protect sensitive data from being exposed in message logs, as well as events generated by message logging.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1fde1-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1fde1-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e13e0-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e13e0-117">See also</span></span>
 
-- [<span data-ttu-id="1fde1-118">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="1fde1-118">Administration and Diagnostics</span></span>](../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="e13e0-118">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="e13e0-118">Administration and Diagnostics</span></span>](../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - dropping ink [WPF]
 ms.assetid: 932dc410-2bf3-4486-ab31-13487ba59f60
 ms.openlocfilehash: d562a0a9b483e7fa24cf412a1735c96cd896aaf5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776177"
 ---
-# <a name="how-to-drag-and-drop-ink"></a><span data-ttu-id="025c2-102">HOW TO：拖放筆墨</span><span class="sxs-lookup"><span data-stu-id="025c2-102">How to: Drag and Drop Ink</span></span>
-## <a name="example"></a><span data-ttu-id="025c2-103">範例</span><span class="sxs-lookup"><span data-stu-id="025c2-103">Example</span></span>  
- <span data-ttu-id="025c2-104">下列範例會建立應用程式，可讓使用者從其中一個拖曳選取的筆劃<xref:System.Windows.Controls.InkCanvas>之間。</span><span class="sxs-lookup"><span data-stu-id="025c2-104">The following example creates an application that enables the user to drag selected strokes from one <xref:System.Windows.Controls.InkCanvas> to the other.</span></span>  
+# <a name="how-to-drag-and-drop-ink"></a><span data-ttu-id="52a34-102">HOW TO：拖放筆墨</span><span class="sxs-lookup"><span data-stu-id="52a34-102">How to: Drag and Drop Ink</span></span>
+## <a name="example"></a><span data-ttu-id="52a34-103">範例</span><span class="sxs-lookup"><span data-stu-id="52a34-103">Example</span></span>  
+ <span data-ttu-id="52a34-104">下列範例會建立應用程式，可讓使用者從其中一個拖曳選取的筆劃<xref:System.Windows.Controls.InkCanvas>之間。</span><span class="sxs-lookup"><span data-stu-id="52a34-104">The following example creates an application that enables the user to drag selected strokes from one <xref:System.Windows.Controls.InkCanvas> to the other.</span></span>  
   
  [!code-xaml[InkDragDrop#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkDragDrop/CSharp/Window1.xaml#1)]  
   

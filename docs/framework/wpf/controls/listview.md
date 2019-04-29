@@ -8,28 +8,28 @@ helpviewer_keywords:
 - ListView control [WPF]
 ms.assetid: fc3784a7-c9e8-4e2b-909a-7af37cef9b43
 ms.openlocfilehash: c90849c27f7bbef2338ef255350a7dccd40c99e3
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932575"
 ---
-# <a name="listview"></a><span data-ttu-id="589ea-102">ListView</span><span class="sxs-lookup"><span data-stu-id="589ea-102">ListView</span></span>
-<span data-ttu-id="589ea-103"><xref:System.Windows.Controls.ListView>控制項提供的基礎結構，以顯示不同的版面配置或檢視表中的一組資料的項目。</span><span class="sxs-lookup"><span data-stu-id="589ea-103">The <xref:System.Windows.Controls.ListView> control provides the infrastructure to display a set of data items in different layouts or views.</span></span>  
+# <a name="listview"></a><span data-ttu-id="4cebf-102">ListView</span><span class="sxs-lookup"><span data-stu-id="4cebf-102">ListView</span></span>
+<span data-ttu-id="4cebf-103"><xref:System.Windows.Controls.ListView>控制項提供的基礎結構，以顯示不同的版面配置或檢視表中的一組資料的項目。</span><span class="sxs-lookup"><span data-stu-id="4cebf-103">The <xref:System.Windows.Controls.ListView> control provides the infrastructure to display a set of data items in different layouts or views.</span></span>  
   
- <span data-ttu-id="589ea-104">下圖顯示<xref:System.Windows.Controls.ListView>。</span><span class="sxs-lookup"><span data-stu-id="589ea-104">The following illustration shows a <xref:System.Windows.Controls.ListView>.</span></span>  
+ <span data-ttu-id="4cebf-104">下圖顯示<xref:System.Windows.Controls.ListView>。</span><span class="sxs-lookup"><span data-stu-id="4cebf-104">The following illustration shows a <xref:System.Windows.Controls.ListView>.</span></span>  
   
  ![螢幕擷取畫面，顯示 ListView 與 GridView 輸出。](./media/gridview-overview/listview-gridview-output.jpg)  
   
-## <a name="in-this-section"></a><span data-ttu-id="589ea-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="589ea-106">In This Section</span></span>  
- [<span data-ttu-id="589ea-107">概觀</span><span class="sxs-lookup"><span data-stu-id="589ea-107">Overviews</span></span>](listview-overviews.md)  
- [<span data-ttu-id="589ea-108">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="589ea-108">How-to Topics</span></span>](listview-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4cebf-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="4cebf-106">In This Section</span></span>  
+ [<span data-ttu-id="4cebf-107">概觀</span><span class="sxs-lookup"><span data-stu-id="4cebf-107">Overviews</span></span>](listview-overviews.md)  
+ [<span data-ttu-id="4cebf-108">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="4cebf-108">How-to Topics</span></span>](listview-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="589ea-109">參考資料</span><span class="sxs-lookup"><span data-stu-id="589ea-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4cebf-109">參考資料</span><span class="sxs-lookup"><span data-stu-id="4cebf-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListView>  
   <xref:System.Windows.Controls.ListViewItem>  
   <xref:System.Windows.Controls.GridView>  
   
-## <a name="related-sections"></a><span data-ttu-id="589ea-110">相關章節</span><span class="sxs-lookup"><span data-stu-id="589ea-110">Related Sections</span></span>  
- [<span data-ttu-id="589ea-111">資料繫結概觀</span><span class="sxs-lookup"><span data-stu-id="589ea-111">Data Binding Overview</span></span>](../data/data-binding-overview.md)  
-  [<span data-ttu-id="589ea-112">資料範本化概觀</span><span class="sxs-lookup"><span data-stu-id="589ea-112">Data Templating Overview</span></span>](../data/data-templating-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="4cebf-110">相關章節</span><span class="sxs-lookup"><span data-stu-id="4cebf-110">Related Sections</span></span>  
+ [<span data-ttu-id="4cebf-111">資料繫結概觀</span><span class="sxs-lookup"><span data-stu-id="4cebf-111">Data Binding Overview</span></span>](../data/data-binding-overview.md)  
+  [<span data-ttu-id="4cebf-112">資料範本化概觀</span><span class="sxs-lookup"><span data-stu-id="4cebf-112">Data Templating Overview</span></span>](../data/data-templating-overview.md)

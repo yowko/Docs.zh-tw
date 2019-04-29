@@ -3,22 +3,22 @@ title: <issuerMetadata>
 ms.date: 03/30/2017
 ms.assetid: e7eae2c0-cc17-4281-af59-e4eb8d54f92a
 ms.openlocfilehash: 0dffad6a17720dd0506acbcd60efe4aafe24ed28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761672"
 ---
-# <a name="issuermetadata"></a><span data-ttu-id="144d1-101">\<issuerMetadata></span><span class="sxs-lookup"><span data-stu-id="144d1-101">\<issuerMetadata></span></span>
-<span data-ttu-id="144d1-102">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="144d1-102">\<system.serviceModel></span></span>  
-<span data-ttu-id="144d1-103">\<bindings></span><span class="sxs-lookup"><span data-stu-id="144d1-103">\<bindings></span></span>  
-<span data-ttu-id="144d1-104">\<wsFederationHttpBinding></span><span class="sxs-lookup"><span data-stu-id="144d1-104">\<wsFederationHttpBinding></span></span>  
-<span data-ttu-id="144d1-105">\<binding></span><span class="sxs-lookup"><span data-stu-id="144d1-105">\<binding></span></span>  
-<span data-ttu-id="144d1-106">\<安全性 ></span><span class="sxs-lookup"><span data-stu-id="144d1-106">\<security></span></span>  
-<span data-ttu-id="144d1-107">\<message></span><span class="sxs-lookup"><span data-stu-id="144d1-107">\<message></span></span>  
-<span data-ttu-id="144d1-108">\<issuerMetadata></span><span class="sxs-lookup"><span data-stu-id="144d1-108">\<issuerMetadata></span></span>  
+# <a name="issuermetadata"></a><span data-ttu-id="f02ca-101">\<issuerMetadata></span><span class="sxs-lookup"><span data-stu-id="f02ca-101">\<issuerMetadata></span></span>
+<span data-ttu-id="f02ca-102">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="f02ca-102">\<system.serviceModel></span></span>  
+<span data-ttu-id="f02ca-103">\<bindings></span><span class="sxs-lookup"><span data-stu-id="f02ca-103">\<bindings></span></span>  
+<span data-ttu-id="f02ca-104">\<wsFederationHttpBinding></span><span class="sxs-lookup"><span data-stu-id="f02ca-104">\<wsFederationHttpBinding></span></span>  
+<span data-ttu-id="f02ca-105">\<binding></span><span class="sxs-lookup"><span data-stu-id="f02ca-105">\<binding></span></span>  
+<span data-ttu-id="f02ca-106">\<安全性 ></span><span class="sxs-lookup"><span data-stu-id="f02ca-106">\<security></span></span>  
+<span data-ttu-id="f02ca-107">\<message></span><span class="sxs-lookup"><span data-stu-id="f02ca-107">\<message></span></span>  
+<span data-ttu-id="f02ca-108">\<issuerMetadata></span><span class="sxs-lookup"><span data-stu-id="f02ca-108">\<issuerMetadata></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="144d1-109">語法</span><span class="sxs-lookup"><span data-stu-id="144d1-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f02ca-109">語法</span><span class="sxs-lookup"><span data-stu-id="f02ca-109">Syntax</span></span>  
   
 ```xml  
 <issuerMetadata address="String">
@@ -41,33 +41,33 @@ ms.locfileid: "59090104"
 </issuerMetadata>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="144d1-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="144d1-110">Attributes and Elements</span></span>  
- <span data-ttu-id="144d1-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="144d1-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f02ca-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="f02ca-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="f02ca-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="f02ca-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="144d1-112">屬性</span><span class="sxs-lookup"><span data-stu-id="144d1-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f02ca-112">屬性</span><span class="sxs-lookup"><span data-stu-id="f02ca-112">Attributes</span></span>  
   
-|<span data-ttu-id="144d1-113">屬性</span><span class="sxs-lookup"><span data-stu-id="144d1-113">Attribute</span></span>|<span data-ttu-id="144d1-114">描述</span><span class="sxs-lookup"><span data-stu-id="144d1-114">Description</span></span>|  
+|<span data-ttu-id="f02ca-113">屬性</span><span class="sxs-lookup"><span data-stu-id="f02ca-113">Attribute</span></span>|<span data-ttu-id="f02ca-114">描述</span><span class="sxs-lookup"><span data-stu-id="f02ca-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="144d1-115">位址</span><span class="sxs-lookup"><span data-stu-id="144d1-115">address</span></span>|<span data-ttu-id="144d1-116">必要的 `string` 屬性。</span><span class="sxs-lookup"><span data-stu-id="144d1-116">Required `string` attribute.</span></span><br /><br /> <span data-ttu-id="144d1-117">指定端點的位址。</span><span class="sxs-lookup"><span data-stu-id="144d1-117">Specifies the address of the endpoint.</span></span> <span data-ttu-id="144d1-118">位址必須是絕對 URI。</span><span class="sxs-lookup"><span data-stu-id="144d1-118">The address must be an absolute URI.</span></span> <span data-ttu-id="144d1-119">預設值為空字串。</span><span class="sxs-lookup"><span data-stu-id="144d1-119">The default value is an empty string.</span></span>|  
+|<span data-ttu-id="f02ca-115">位址</span><span class="sxs-lookup"><span data-stu-id="f02ca-115">address</span></span>|<span data-ttu-id="f02ca-116">必要的 `string` 屬性。</span><span class="sxs-lookup"><span data-stu-id="f02ca-116">Required `string` attribute.</span></span><br /><br /> <span data-ttu-id="f02ca-117">指定端點的位址。</span><span class="sxs-lookup"><span data-stu-id="f02ca-117">Specifies the address of the endpoint.</span></span> <span data-ttu-id="f02ca-118">位址必須是絕對 URI。</span><span class="sxs-lookup"><span data-stu-id="f02ca-118">The address must be an absolute URI.</span></span> <span data-ttu-id="f02ca-119">預設值為空字串。</span><span class="sxs-lookup"><span data-stu-id="f02ca-119">The default value is an empty string.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="144d1-120">子元素</span><span class="sxs-lookup"><span data-stu-id="144d1-120">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f02ca-120">子元素</span><span class="sxs-lookup"><span data-stu-id="f02ca-120">Child Elements</span></span>  
   
-|<span data-ttu-id="144d1-121">項目</span><span class="sxs-lookup"><span data-stu-id="144d1-121">Element</span></span>|<span data-ttu-id="144d1-122">描述</span><span class="sxs-lookup"><span data-stu-id="144d1-122">Description</span></span>|  
+|<span data-ttu-id="f02ca-121">項目</span><span class="sxs-lookup"><span data-stu-id="f02ca-121">Element</span></span>|<span data-ttu-id="f02ca-122">描述</span><span class="sxs-lookup"><span data-stu-id="f02ca-122">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="144d1-123">\<headers></span><span class="sxs-lookup"><span data-stu-id="144d1-123">\<headers></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|<span data-ttu-id="144d1-124">位址標頭的集合。</span><span class="sxs-lookup"><span data-stu-id="144d1-124">A collection of address headers.</span></span>|  
-|[<span data-ttu-id="144d1-125">\<identity></span><span class="sxs-lookup"><span data-stu-id="144d1-125">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="144d1-126">身分識別，可讓其他端點與此端點交換訊息，以啟用端點的驗證。</span><span class="sxs-lookup"><span data-stu-id="144d1-126">An identity that enables the authentication of an endpoint by other endpoints exchanging messages with it.</span></span>|  
+|[<span data-ttu-id="f02ca-123">\<headers></span><span class="sxs-lookup"><span data-stu-id="f02ca-123">\<headers></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|<span data-ttu-id="f02ca-124">位址標頭的集合。</span><span class="sxs-lookup"><span data-stu-id="f02ca-124">A collection of address headers.</span></span>|  
+|[<span data-ttu-id="f02ca-125">\<identity></span><span class="sxs-lookup"><span data-stu-id="f02ca-125">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="f02ca-126">身分識別，可讓其他端點與此端點交換訊息，以啟用端點的驗證。</span><span class="sxs-lookup"><span data-stu-id="f02ca-126">An identity that enables the authentication of an endpoint by other endpoints exchanging messages with it.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="144d1-127">父項目</span><span class="sxs-lookup"><span data-stu-id="144d1-127">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f02ca-127">父項目</span><span class="sxs-lookup"><span data-stu-id="f02ca-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="144d1-128">項目</span><span class="sxs-lookup"><span data-stu-id="144d1-128">Element</span></span>|<span data-ttu-id="144d1-129">描述</span><span class="sxs-lookup"><span data-stu-id="144d1-129">Description</span></span>|  
+|<span data-ttu-id="f02ca-128">項目</span><span class="sxs-lookup"><span data-stu-id="f02ca-128">Element</span></span>|<span data-ttu-id="f02ca-129">描述</span><span class="sxs-lookup"><span data-stu-id="f02ca-129">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="144d1-130">\<message></span><span class="sxs-lookup"><span data-stu-id="144d1-130">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|<span data-ttu-id="144d1-131">定義訊息層級安全性設定[ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)項目。</span><span class="sxs-lookup"><span data-stu-id="144d1-131">Defines the settings for the message-level security for the [\<wsFederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) element.</span></span>|  
+|[<span data-ttu-id="f02ca-130">\<message></span><span class="sxs-lookup"><span data-stu-id="f02ca-130">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|<span data-ttu-id="f02ca-131">定義訊息層級安全性設定[ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)項目。</span><span class="sxs-lookup"><span data-stu-id="f02ca-131">Defines the settings for the message-level security for the [\<wsFederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) element.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="144d1-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="144d1-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f02ca-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f02ca-132">See also</span></span>
 
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.IssuerMetadata%2A>
-- [<span data-ttu-id="144d1-133">服務身分識別和驗證</span><span class="sxs-lookup"><span data-stu-id="144d1-133">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [<span data-ttu-id="144d1-134">同盟與發行的權杖</span><span class="sxs-lookup"><span data-stu-id="144d1-134">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [<span data-ttu-id="144d1-135">自訂繫結的安全性功能</span><span class="sxs-lookup"><span data-stu-id="144d1-135">Security Capabilities with Custom Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [<span data-ttu-id="144d1-136">同盟與發行的權杖</span><span class="sxs-lookup"><span data-stu-id="144d1-136">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [<span data-ttu-id="f02ca-133">服務身分識別和驗證</span><span class="sxs-lookup"><span data-stu-id="f02ca-133">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [<span data-ttu-id="f02ca-134">同盟與發行的權杖</span><span class="sxs-lookup"><span data-stu-id="f02ca-134">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [<span data-ttu-id="f02ca-135">自訂繫結的安全性功能</span><span class="sxs-lookup"><span data-stu-id="f02ca-135">Security Capabilities with Custom Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [<span data-ttu-id="f02ca-136">同盟與發行的權杖</span><span class="sxs-lookup"><span data-stu-id="f02ca-136">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

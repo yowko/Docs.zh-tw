@@ -6,79 +6,79 @@ dev_langs:
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
 ms.openlocfilehash: 3945d4fc92bea2c4212da0507618203603ae8aba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780535"
 ---
-# <a name="known-issues-and-considerations-in-linq-to-entities"></a><span data-ttu-id="4e8f3-102">LINQ to Entities 中的已知問題和考量</span><span class="sxs-lookup"><span data-stu-id="4e8f3-102">Known Issues and Considerations in LINQ to Entities</span></span>
-<span data-ttu-id="4e8f3-103">本節提供有關 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢已知問題的資訊。</span><span class="sxs-lookup"><span data-stu-id="4e8f3-103">This section provides information about known issues with [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] queries.</span></span>  
+# <a name="known-issues-and-considerations-in-linq-to-entities"></a><span data-ttu-id="9d78c-102">LINQ to Entities 中的已知問題和考量</span><span class="sxs-lookup"><span data-stu-id="9d78c-102">Known Issues and Considerations in LINQ to Entities</span></span>
+<span data-ttu-id="9d78c-103">本節提供有關 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢已知問題的資訊。</span><span class="sxs-lookup"><span data-stu-id="9d78c-103">This section provides information about known issues with [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] queries.</span></span>  
   
--   [<span data-ttu-id="4e8f3-104">無法快取的 LINQ 查詢</span><span class="sxs-lookup"><span data-stu-id="4e8f3-104">LINQ Queries That cannot be Cached</span></span>](#LINQQueriesThatAreNotCached)  
+- [<span data-ttu-id="9d78c-104">無法快取的 LINQ 查詢</span><span class="sxs-lookup"><span data-stu-id="9d78c-104">LINQ Queries That cannot be Cached</span></span>](#LINQQueriesThatAreNotCached)  
   
--   [<span data-ttu-id="4e8f3-105">排序資訊遺失</span><span class="sxs-lookup"><span data-stu-id="4e8f3-105">Ordering Information Lost</span></span>](#OrderingInfoLost)  
+- [<span data-ttu-id="9d78c-105">排序資訊遺失</span><span class="sxs-lookup"><span data-stu-id="9d78c-105">Ordering Information Lost</span></span>](#OrderingInfoLost)  
   
--   [<span data-ttu-id="4e8f3-106">不支援不帶正負號的整數</span><span class="sxs-lookup"><span data-stu-id="4e8f3-106">Unsigned Integers Not Supported</span></span>](#UnsignedIntsUnsupported)  
+- [<span data-ttu-id="9d78c-106">不支援不帶正負號的整數</span><span class="sxs-lookup"><span data-stu-id="9d78c-106">Unsigned Integers Not Supported</span></span>](#UnsignedIntsUnsupported)  
   
--   [<span data-ttu-id="4e8f3-107">型別轉換錯誤</span><span class="sxs-lookup"><span data-stu-id="4e8f3-107">Type Conversion Errors</span></span>](#TypeConversionErrors)  
+- [<span data-ttu-id="9d78c-107">型別轉換錯誤</span><span class="sxs-lookup"><span data-stu-id="9d78c-107">Type Conversion Errors</span></span>](#TypeConversionErrors)  
   
--   [<span data-ttu-id="4e8f3-108">不支援參考非純量變數</span><span class="sxs-lookup"><span data-stu-id="4e8f3-108">Referencing Non-Scalar Variables Not Supported</span></span>](#RefNonScalarClosures)  
+- [<span data-ttu-id="9d78c-108">不支援參考非純量變數</span><span class="sxs-lookup"><span data-stu-id="9d78c-108">Referencing Non-Scalar Variables Not Supported</span></span>](#RefNonScalarClosures)  
   
--   [<span data-ttu-id="4e8f3-109">使用 SQL Server 2000 的巢狀的查詢可能會失敗</span><span class="sxs-lookup"><span data-stu-id="4e8f3-109">Nested Queries May Fail with SQL Server 2000</span></span>](#NestedQueriesSQL2000)  
+- [<span data-ttu-id="9d78c-109">使用 SQL Server 2000 的巢狀的查詢可能會失敗</span><span class="sxs-lookup"><span data-stu-id="9d78c-109">Nested Queries May Fail with SQL Server 2000</span></span>](#NestedQueriesSQL2000)  
   
--   [<span data-ttu-id="4e8f3-110">投影至匿名型別</span><span class="sxs-lookup"><span data-stu-id="4e8f3-110">Projecting to an Anonymous Type</span></span>](#ProjectToAnonymousType)  
+- [<span data-ttu-id="9d78c-110">投影至匿名型別</span><span class="sxs-lookup"><span data-stu-id="9d78c-110">Projecting to an Anonymous Type</span></span>](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
-## <a name="linq-queries-that-cannot-be-cached"></a><span data-ttu-id="4e8f3-111">不能快取的 LINQ 查詢</span><span class="sxs-lookup"><span data-stu-id="4e8f3-111">LINQ Queries That cannot be Cached</span></span>  
- <span data-ttu-id="4e8f3-112">從 .NET Framework 4.5 開始會自動快取 LINQ to Entities 查詢。</span><span class="sxs-lookup"><span data-stu-id="4e8f3-112">Starting with .NET Framework 4.5, LINQ to Entities queries are automatically cached.</span></span> <span data-ttu-id="4e8f3-113">不過，不會自動快取將 `Enumerable.Contains`運算子套用至記憶體中集合的 LINQ to Entities 查詢。</span><span class="sxs-lookup"><span data-stu-id="4e8f3-113">However, LINQ to Entities queries that apply the `Enumerable.Contains` operator to in-memory collections are not automatically cached.</span></span> <span data-ttu-id="4e8f3-114">此外也不允許在已編譯的 LINQ 查詢中參數化記憶體中的集合。</span><span class="sxs-lookup"><span data-stu-id="4e8f3-114">Also parameterizing in-memory collections in compiled LINQ queries is not allowed.</span></span>  
+## <a name="linq-queries-that-cannot-be-cached"></a><span data-ttu-id="9d78c-111">不能快取的 LINQ 查詢</span><span class="sxs-lookup"><span data-stu-id="9d78c-111">LINQ Queries That cannot be Cached</span></span>  
+ <span data-ttu-id="9d78c-112">從 .NET Framework 4.5 開始會自動快取 LINQ to Entities 查詢。</span><span class="sxs-lookup"><span data-stu-id="9d78c-112">Starting with .NET Framework 4.5, LINQ to Entities queries are automatically cached.</span></span> <span data-ttu-id="9d78c-113">不過，不會自動快取將 `Enumerable.Contains`運算子套用至記憶體中集合的 LINQ to Entities 查詢。</span><span class="sxs-lookup"><span data-stu-id="9d78c-113">However, LINQ to Entities queries that apply the `Enumerable.Contains` operator to in-memory collections are not automatically cached.</span></span> <span data-ttu-id="9d78c-114">此外也不允許在已編譯的 LINQ 查詢中參數化記憶體中的集合。</span><span class="sxs-lookup"><span data-stu-id="9d78c-114">Also parameterizing in-memory collections in compiled LINQ queries is not allowed.</span></span>  
   
 <a name="OrderingInfoLost"></a>   
-## <a name="ordering-information-lost"></a><span data-ttu-id="4e8f3-115">排序資訊遺失</span><span class="sxs-lookup"><span data-stu-id="4e8f3-115">Ordering Information Lost</span></span>  
- <span data-ttu-id="4e8f3-116">在針對相容性層級設定為 "80" 的 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] 資料庫執行的某些查詢中，將資料行投影到匿名型別將會造成排序資訊遺失。</span><span class="sxs-lookup"><span data-stu-id="4e8f3-116">Projecting columns into an anonymous type will cause ordering information to be lost in some queries that are executed against a [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] database set to a compatibility level of "80".</span></span>  <span data-ttu-id="4e8f3-117">如果 order-by 清單中的資料行名稱與 selector 中的資料行名稱相符，就會發生這種情況，如以下範例所示：</span><span class="sxs-lookup"><span data-stu-id="4e8f3-117">This occurs when a column name in the order-by list matches a column name in the selector, as shown in the following example:</span></span>  
+## <a name="ordering-information-lost"></a><span data-ttu-id="9d78c-115">排序資訊遺失</span><span class="sxs-lookup"><span data-stu-id="9d78c-115">Ordering Information Lost</span></span>  
+ <span data-ttu-id="9d78c-116">在針對相容性層級設定為 "80" 的 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] 資料庫執行的某些查詢中，將資料行投影到匿名型別將會造成排序資訊遺失。</span><span class="sxs-lookup"><span data-stu-id="9d78c-116">Projecting columns into an anonymous type will cause ordering information to be lost in some queries that are executed against a [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] database set to a compatibility level of "80".</span></span>  <span data-ttu-id="9d78c-117">如果 order-by 清單中的資料行名稱與 selector 中的資料行名稱相符，就會發生這種情況，如以下範例所示：</span><span class="sxs-lookup"><span data-stu-id="9d78c-117">This occurs when a column name in the order-by list matches a column name in the selector, as shown in the following example:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  
   
 <a name="UnsignedIntsUnsupported"></a>   
-## <a name="unsigned-integers-not-supported"></a><span data-ttu-id="4e8f3-118">不支援不帶正負號的整數</span><span class="sxs-lookup"><span data-stu-id="4e8f3-118">Unsigned Integers Not Supported</span></span>  
- <span data-ttu-id="4e8f3-119">不支援在 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢中指定不帶正負號的整數型別，因為 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 不支援不帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="4e8f3-119">Specifying an unsigned integer type in a [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] query is not supported because the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] does not support unsigned integers.</span></span> <span data-ttu-id="4e8f3-120">如果您指定的不帶正負號的整數，<xref:System.ArgumentException>將會擲回例外狀況在查詢運算式轉譯期間，在下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="4e8f3-120">If you specify an unsigned integer, an <xref:System.ArgumentException> exception will be thrown during the query expression translation, as shown in the following example.</span></span> <span data-ttu-id="4e8f3-121">此範例會查詢 ID 為 48000 的訂單。</span><span class="sxs-lookup"><span data-stu-id="4e8f3-121">This example queries for an order with ID 48000.</span></span>  
+## <a name="unsigned-integers-not-supported"></a><span data-ttu-id="9d78c-118">不支援不帶正負號的整數</span><span class="sxs-lookup"><span data-stu-id="9d78c-118">Unsigned Integers Not Supported</span></span>  
+ <span data-ttu-id="9d78c-119">不支援在 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢中指定不帶正負號的整數型別，因為 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 不支援不帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="9d78c-119">Specifying an unsigned integer type in a [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] query is not supported because the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] does not support unsigned integers.</span></span> <span data-ttu-id="9d78c-120">如果您指定的不帶正負號的整數，<xref:System.ArgumentException>將會擲回例外狀況在查詢運算式轉譯期間，在下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="9d78c-120">If you specify an unsigned integer, an <xref:System.ArgumentException> exception will be thrown during the query expression translation, as shown in the following example.</span></span> <span data-ttu-id="9d78c-121">此範例會查詢 ID 為 48000 的訂單。</span><span class="sxs-lookup"><span data-stu-id="9d78c-121">This example queries for an order with ID 48000.</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  
   
 <a name="TypeConversionErrors"></a>   
-## <a name="type-conversion-errors"></a><span data-ttu-id="4e8f3-122">型別轉換錯誤</span><span class="sxs-lookup"><span data-stu-id="4e8f3-122">Type Conversion Errors</span></span>  
- <span data-ttu-id="4e8f3-123">在 Visual Basic 中，使用 `CByte` 函式將屬性對應到值為 1 的 SQL Server 位元型別資料行時，將會擲回 <xref:System.Data.SqlClient.SqlException> 並且顯示「算術溢位錯誤」訊息。</span><span class="sxs-lookup"><span data-stu-id="4e8f3-123">In Visual Basic, when a property is mapped to a column of SQL Server bit type with a value of 1 using the `CByte` function, a <xref:System.Data.SqlClient.SqlException> is thrown with an "Arithmetic overflow error" message.</span></span> <span data-ttu-id="4e8f3-124">以下範例會查詢 AdventureWorks 範例資料庫中的 `Product.MakeFlag` 資料行，並且在重複處理查詢結果時擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="4e8f3-124">The following example queries the `Product.MakeFlag` column in the AdventureWorks sample database and an exception is thrown when the query results are iterated over.</span></span>  
+## <a name="type-conversion-errors"></a><span data-ttu-id="9d78c-122">型別轉換錯誤</span><span class="sxs-lookup"><span data-stu-id="9d78c-122">Type Conversion Errors</span></span>  
+ <span data-ttu-id="9d78c-123">在 Visual Basic 中，使用 `CByte` 函式將屬性對應到值為 1 的 SQL Server 位元型別資料行時，將會擲回 <xref:System.Data.SqlClient.SqlException> 並且顯示「算術溢位錯誤」訊息。</span><span class="sxs-lookup"><span data-stu-id="9d78c-123">In Visual Basic, when a property is mapped to a column of SQL Server bit type with a value of 1 using the `CByte` function, a <xref:System.Data.SqlClient.SqlException> is thrown with an "Arithmetic overflow error" message.</span></span> <span data-ttu-id="9d78c-124">以下範例會查詢 AdventureWorks 範例資料庫中的 `Product.MakeFlag` 資料行，並且在重複處理查詢結果時擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="9d78c-124">The following example queries the `Product.MakeFlag` column in the AdventureWorks sample database and an exception is thrown when the query results are iterated over.</span></span>  
   
  [!code-vb[DP L2E Conceptual Examples#SBUDT544355](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt544355)]  
   
 <a name="RefNonScalarClosures"></a>   
-## <a name="referencing-non-scalar-variables-not-supported"></a><span data-ttu-id="4e8f3-125">不支援參考非純量變數</span><span class="sxs-lookup"><span data-stu-id="4e8f3-125">Referencing Non-Scalar Variables Not Supported</span></span>  
- <span data-ttu-id="4e8f3-126">不支援在查詢中參考非純量變數，例如實體。</span><span class="sxs-lookup"><span data-stu-id="4e8f3-126">Referencing a non-scalar variables, such as an entity, in a query is not supported.</span></span> <span data-ttu-id="4e8f3-127">執行這類查詢時，系統會擲回 <xref:System.NotSupportedException> 例外狀況，並且顯示一則訊息，表示「無法建立 `EntityType` 型別的常數值。</span><span class="sxs-lookup"><span data-stu-id="4e8f3-127">When such a query executes, a <xref:System.NotSupportedException> exception is thrown with a message that states "Unable to create a constant value of type `EntityType`.</span></span> <span data-ttu-id="4e8f3-128">在此僅支援基本型別 (『例如 Int32、String 和 Guid』)」。</span><span class="sxs-lookup"><span data-stu-id="4e8f3-128">Only primitive types ('such as Int32, String, and Guid') are supported in this context."</span></span>  
+## <a name="referencing-non-scalar-variables-not-supported"></a><span data-ttu-id="9d78c-125">不支援參考非純量變數</span><span class="sxs-lookup"><span data-stu-id="9d78c-125">Referencing Non-Scalar Variables Not Supported</span></span>  
+ <span data-ttu-id="9d78c-126">不支援在查詢中參考非純量變數，例如實體。</span><span class="sxs-lookup"><span data-stu-id="9d78c-126">Referencing a non-scalar variables, such as an entity, in a query is not supported.</span></span> <span data-ttu-id="9d78c-127">執行這類查詢時，系統會擲回 <xref:System.NotSupportedException> 例外狀況，並且顯示一則訊息，表示「無法建立 `EntityType` 型別的常數值。</span><span class="sxs-lookup"><span data-stu-id="9d78c-127">When such a query executes, a <xref:System.NotSupportedException> exception is thrown with a message that states "Unable to create a constant value of type `EntityType`.</span></span> <span data-ttu-id="9d78c-128">在此僅支援基本型別 (『例如 Int32、String 和 Guid』)」。</span><span class="sxs-lookup"><span data-stu-id="9d78c-128">Only primitive types ('such as Int32, String, and Guid') are supported in this context."</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="4e8f3-129">支援參考純量變數的集合。</span><span class="sxs-lookup"><span data-stu-id="4e8f3-129">Referencing a collection of scalar variables is supported.</span></span>  
+>  <span data-ttu-id="9d78c-129">支援參考純量變數的集合。</span><span class="sxs-lookup"><span data-stu-id="9d78c-129">Referencing a collection of scalar variables is supported.</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt555877)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt555877)]  
   
 <a name="NestedQueriesSQL2000"></a>   
-## <a name="nested-queries-may-fail-with-sql-server-2000"></a><span data-ttu-id="4e8f3-130">使用 SQL Server 2000 的巢狀查詢可能失敗</span><span class="sxs-lookup"><span data-stu-id="4e8f3-130">Nested Queries May Fail with SQL Server 2000</span></span>  
- <span data-ttu-id="4e8f3-131">使用 SQL Server 2000 時，如果 LINQ to Entities 查詢產生三層或更多層深度的巢狀 Transact-SQL 查詢，則查詢可能會失敗。</span><span class="sxs-lookup"><span data-stu-id="4e8f3-131">With SQL Server 2000, LINQ to Entities queries may fail if they produce nested Transact-SQL queries that are three or more levels deep.</span></span>  
+## <a name="nested-queries-may-fail-with-sql-server-2000"></a><span data-ttu-id="9d78c-130">使用 SQL Server 2000 的巢狀查詢可能失敗</span><span class="sxs-lookup"><span data-stu-id="9d78c-130">Nested Queries May Fail with SQL Server 2000</span></span>  
+ <span data-ttu-id="9d78c-131">使用 SQL Server 2000 時，如果 LINQ to Entities 查詢產生三層或更多層深度的巢狀 Transact-SQL 查詢，則查詢可能會失敗。</span><span class="sxs-lookup"><span data-stu-id="9d78c-131">With SQL Server 2000, LINQ to Entities queries may fail if they produce nested Transact-SQL queries that are three or more levels deep.</span></span>  
   
 <a name="ProjectToAnonymousType"></a>   
-## <a name="projecting-to-an-anonymous-type"></a><span data-ttu-id="4e8f3-132">投影至匿名型別</span><span class="sxs-lookup"><span data-stu-id="4e8f3-132">Projecting to an Anonymous Type</span></span>  
- <span data-ttu-id="4e8f3-133">如果您透過在 <xref:System.Data.Objects.ObjectQuery%601.Include%2A> 上使用 <xref:System.Data.Objects.ObjectQuery%601> 方法，將初始查詢路徑定義為包括相關物件，然後使用 LINQ 將傳回的物件投影至匿名型別，則包括方法中所指定的物件不會包括在查詢結果中。</span><span class="sxs-lookup"><span data-stu-id="4e8f3-133">If you define your initial query path to include related objects by using the <xref:System.Data.Objects.ObjectQuery%601.Include%2A> method on the <xref:System.Data.Objects.ObjectQuery%601> and then use LINQ to project the returned objects to an anonymous type, the objects specified in the include method are not included in the query results.</span></span>  
+## <a name="projecting-to-an-anonymous-type"></a><span data-ttu-id="9d78c-132">投影至匿名型別</span><span class="sxs-lookup"><span data-stu-id="9d78c-132">Projecting to an Anonymous Type</span></span>  
+ <span data-ttu-id="9d78c-133">如果您透過在 <xref:System.Data.Objects.ObjectQuery%601.Include%2A> 上使用 <xref:System.Data.Objects.ObjectQuery%601> 方法，將初始查詢路徑定義為包括相關物件，然後使用 LINQ 將傳回的物件投影至匿名型別，則包括方法中所指定的物件不會包括在查詢結果中。</span><span class="sxs-lookup"><span data-stu-id="9d78c-133">If you define your initial query path to include related objects by using the <xref:System.Data.Objects.ObjectQuery%601.Include%2A> method on the <xref:System.Data.Objects.ObjectQuery%601> and then use LINQ to project the returned objects to an anonymous type, the objects specified in the include method are not included in the query results.</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#ProjToAnonType1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#projtoanontype1)]
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype1)]  
   
- <span data-ttu-id="4e8f3-134">若要取得相關物件，請不要將傳回的型別投影至匿名型別。</span><span class="sxs-lookup"><span data-stu-id="4e8f3-134">To get related objects, do not project returned types to an anonymous type.</span></span>  
+ <span data-ttu-id="9d78c-134">若要取得相關物件，請不要將傳回的型別投影至匿名型別。</span><span class="sxs-lookup"><span data-stu-id="9d78c-134">To get related objects, do not project returned types to an anonymous type.</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#projtoanontype2)]
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype2)]  
   
-## <a name="see-also"></a><span data-ttu-id="4e8f3-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4e8f3-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9d78c-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9d78c-135">See also</span></span>
 
-- [<span data-ttu-id="4e8f3-136">LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="4e8f3-136">LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- [<span data-ttu-id="9d78c-136">LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="9d78c-136">LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

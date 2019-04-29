@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 99aea385cf5e3c8bcf7cf39b7cc5618f99f8a631
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777581"
 ---
-# <a name="imetadataimportgetpinvokemap-method"></a><span data-ttu-id="86aea-102">IMetaDataImport::GetPinvokeMap 方法</span><span class="sxs-lookup"><span data-stu-id="86aea-102">IMetaDataImport::GetPinvokeMap Method</span></span>
-<span data-ttu-id="86aea-103">取得 ModuleRef 語彙基元以代表 PInvoke 呼叫的目標組件。</span><span class="sxs-lookup"><span data-stu-id="86aea-103">Gets a ModuleRef token to represent the target assembly of a PInvoke call.</span></span>  
+# <a name="imetadataimportgetpinvokemap-method"></a><span data-ttu-id="f9447-102">IMetaDataImport::GetPinvokeMap 方法</span><span class="sxs-lookup"><span data-stu-id="f9447-102">IMetaDataImport::GetPinvokeMap Method</span></span>
+<span data-ttu-id="f9447-103">取得 ModuleRef 語彙基元以代表 PInvoke 呼叫的目標組件。</span><span class="sxs-lookup"><span data-stu-id="f9447-103">Gets a ModuleRef token to represent the target assembly of a PInvoke call.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="86aea-104">語法</span><span class="sxs-lookup"><span data-stu-id="86aea-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f9447-104">語法</span><span class="sxs-lookup"><span data-stu-id="f9447-104">Syntax</span></span>  
   
 ```  
 HRESULT GetPinvokeMap (  
@@ -40,35 +40,35 @@ HRESULT GetPinvokeMap (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="86aea-105">參數</span><span class="sxs-lookup"><span data-stu-id="86aea-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f9447-105">參數</span><span class="sxs-lookup"><span data-stu-id="f9447-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="86aea-106">[in]若要取得 PInvoke 對應中繼資料的 fielddef 語彙或 MethodDef 語彙基元。</span><span class="sxs-lookup"><span data-stu-id="86aea-106">[in] A FieldDef or MethodDef token to get the PInvoke mapping metadata for.</span></span>  
+ <span data-ttu-id="f9447-106">[in]若要取得 PInvoke 對應中繼資料的 fielddef 語彙或 MethodDef 語彙基元。</span><span class="sxs-lookup"><span data-stu-id="f9447-106">[in] A FieldDef or MethodDef token to get the PInvoke mapping metadata for.</span></span>  
   
  `pdwMappingFlags`  
- <span data-ttu-id="86aea-107">[out]指標，用於對應的旗標。</span><span class="sxs-lookup"><span data-stu-id="86aea-107">[out] A pointer to flags used for mapping.</span></span> <span data-ttu-id="86aea-108">這個值是從位元遮罩[CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md)列舉型別。</span><span class="sxs-lookup"><span data-stu-id="86aea-108">This value is a bitmask from the [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="f9447-107">[out]指標，用於對應的旗標。</span><span class="sxs-lookup"><span data-stu-id="f9447-107">[out] A pointer to flags used for mapping.</span></span> <span data-ttu-id="f9447-108">這個值是從位元遮罩[CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md)列舉型別。</span><span class="sxs-lookup"><span data-stu-id="f9447-108">This value is a bitmask from the [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeration.</span></span>  
   
  `szImportName`  
- <span data-ttu-id="86aea-109">[out]未受管理的目標 DLL 的名稱。</span><span class="sxs-lookup"><span data-stu-id="86aea-109">[out] The name of the unmanaged target DLL.</span></span>  
+ <span data-ttu-id="f9447-109">[out]未受管理的目標 DLL 的名稱。</span><span class="sxs-lookup"><span data-stu-id="f9447-109">[out] The name of the unmanaged target DLL.</span></span>  
   
  `cchImportName`  
- <span data-ttu-id="86aea-110">[in]寬字元大小`szImportName`。</span><span class="sxs-lookup"><span data-stu-id="86aea-110">[in] The size in wide characters of `szImportName`.</span></span>  
+ <span data-ttu-id="f9447-110">[in]寬字元大小`szImportName`。</span><span class="sxs-lookup"><span data-stu-id="f9447-110">[in] The size in wide characters of `szImportName`.</span></span>  
   
  `pchImportName`  
- <span data-ttu-id="86aea-111">[out]中傳回的寬字元數目`szImportName`。</span><span class="sxs-lookup"><span data-stu-id="86aea-111">[out] The number of wide characters returned in `szImportName`.</span></span>  
+ <span data-ttu-id="f9447-111">[out]中傳回的寬字元數目`szImportName`。</span><span class="sxs-lookup"><span data-stu-id="f9447-111">[out] The number of wide characters returned in `szImportName`.</span></span>  
   
  `pmrImportDLL`  
- <span data-ttu-id="86aea-112">[out]表示未受管理的目標物件程式庫 ModuleRef 語彙基元指標。</span><span class="sxs-lookup"><span data-stu-id="86aea-112">[out] A pointer to a ModuleRef token that represents the unmanaged target object library.</span></span>  
+ <span data-ttu-id="f9447-112">[out]表示未受管理的目標物件程式庫 ModuleRef 語彙基元指標。</span><span class="sxs-lookup"><span data-stu-id="f9447-112">[out] A pointer to a ModuleRef token that represents the unmanaged target object library.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="86aea-113">需求</span><span class="sxs-lookup"><span data-stu-id="86aea-113">Requirements</span></span>  
- <span data-ttu-id="86aea-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="86aea-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f9447-113">需求</span><span class="sxs-lookup"><span data-stu-id="f9447-113">Requirements</span></span>  
+ <span data-ttu-id="f9447-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f9447-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="86aea-115">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="86aea-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f9447-115">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f9447-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="86aea-116">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="86aea-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f9447-116">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="f9447-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="86aea-117">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="86aea-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f9447-117">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9447-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="86aea-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="86aea-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f9447-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f9447-118">See also</span></span>
 
-- [<span data-ttu-id="86aea-119">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="86aea-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="86aea-120">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="86aea-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="f9447-119">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="f9447-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="f9447-120">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="f9447-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

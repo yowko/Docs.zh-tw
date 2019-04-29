@@ -10,43 +10,43 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
 ms.openlocfilehash: 8e5c7cab1f977bef0570b2e540d7bf3a630aceb0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781393"
 ---
-# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a><span data-ttu-id="4d10a-102">HOW TO：在矩形中繪製換行文字</span><span class="sxs-lookup"><span data-stu-id="4d10a-102">How to: Draw Wrapped Text in a Rectangle</span></span>
-<span data-ttu-id="4d10a-103">您也可以使用在矩形中繪製換行的文字<xref:System.Drawing.Graphics.DrawString%2A>方法的多載化<xref:System.Drawing.Graphics>類別<xref:System.Drawing.Rectangle>或<xref:System.Drawing.RectangleF>參數。</span><span class="sxs-lookup"><span data-stu-id="4d10a-103">You can draw wrapped text in a rectangle by using the <xref:System.Drawing.Graphics.DrawString%2A> overloaded method of the <xref:System.Drawing.Graphics> class that takes a <xref:System.Drawing.Rectangle> or <xref:System.Drawing.RectangleF> parameter.</span></span> <span data-ttu-id="4d10a-104">您也會使用<xref:System.Drawing.Brush>和<xref:System.Drawing.Font>。</span><span class="sxs-lookup"><span data-stu-id="4d10a-104">You will also use a <xref:System.Drawing.Brush> and a <xref:System.Drawing.Font>.</span></span>  
+# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a><span data-ttu-id="856ab-102">HOW TO：在矩形中繪製換行文字</span><span class="sxs-lookup"><span data-stu-id="856ab-102">How to: Draw Wrapped Text in a Rectangle</span></span>
+<span data-ttu-id="856ab-103">您也可以使用在矩形中繪製換行的文字<xref:System.Drawing.Graphics.DrawString%2A>方法的多載化<xref:System.Drawing.Graphics>類別<xref:System.Drawing.Rectangle>或<xref:System.Drawing.RectangleF>參數。</span><span class="sxs-lookup"><span data-stu-id="856ab-103">You can draw wrapped text in a rectangle by using the <xref:System.Drawing.Graphics.DrawString%2A> overloaded method of the <xref:System.Drawing.Graphics> class that takes a <xref:System.Drawing.Rectangle> or <xref:System.Drawing.RectangleF> parameter.</span></span> <span data-ttu-id="856ab-104">您也會使用<xref:System.Drawing.Brush>和<xref:System.Drawing.Font>。</span><span class="sxs-lookup"><span data-stu-id="856ab-104">You will also use a <xref:System.Drawing.Brush> and a <xref:System.Drawing.Font>.</span></span>  
   
- <span data-ttu-id="4d10a-105">您也可以繪製的矩形中換行的文字，使用<xref:System.Windows.Forms.TextRenderer.DrawText%2A>方法的多載化<xref:System.Windows.Forms.TextRenderer>採用<xref:System.Drawing.Rectangle>和<xref:System.Windows.Forms.TextFormatFlags>參數。</span><span class="sxs-lookup"><span data-stu-id="4d10a-105">You can also draw wrapped text in a rectangle by using the <xref:System.Windows.Forms.TextRenderer.DrawText%2A> overloaded method of the <xref:System.Windows.Forms.TextRenderer> that takes a <xref:System.Drawing.Rectangle> and a <xref:System.Windows.Forms.TextFormatFlags> parameter.</span></span> <span data-ttu-id="4d10a-106">您也會使用<xref:System.Drawing.Color>和<xref:System.Drawing.Font>。</span><span class="sxs-lookup"><span data-stu-id="4d10a-106">You will also use a <xref:System.Drawing.Color> and a <xref:System.Drawing.Font>.</span></span>  
+ <span data-ttu-id="856ab-105">您也可以繪製的矩形中換行的文字，使用<xref:System.Windows.Forms.TextRenderer.DrawText%2A>方法的多載化<xref:System.Windows.Forms.TextRenderer>採用<xref:System.Drawing.Rectangle>和<xref:System.Windows.Forms.TextFormatFlags>參數。</span><span class="sxs-lookup"><span data-stu-id="856ab-105">You can also draw wrapped text in a rectangle by using the <xref:System.Windows.Forms.TextRenderer.DrawText%2A> overloaded method of the <xref:System.Windows.Forms.TextRenderer> that takes a <xref:System.Drawing.Rectangle> and a <xref:System.Windows.Forms.TextFormatFlags> parameter.</span></span> <span data-ttu-id="856ab-106">您也會使用<xref:System.Drawing.Color>和<xref:System.Drawing.Font>。</span><span class="sxs-lookup"><span data-stu-id="856ab-106">You will also use a <xref:System.Drawing.Color> and a <xref:System.Drawing.Font>.</span></span>  
   
- <span data-ttu-id="4d10a-107">下圖顯示當您使用的矩形中繪製的文字輸出<xref:System.Drawing.Graphics.DrawString%2A>方法：</span><span class="sxs-lookup"><span data-stu-id="4d10a-107">The following illustration shows the output of text drawn in the rectangle when you use the <xref:System.Drawing.Graphics.DrawString%2A> method:</span></span>
+ <span data-ttu-id="856ab-107">下圖顯示當您使用的矩形中繪製的文字輸出<xref:System.Drawing.Graphics.DrawString%2A>方法：</span><span class="sxs-lookup"><span data-stu-id="856ab-107">The following illustration shows the output of text drawn in the rectangle when you use the <xref:System.Drawing.Graphics.DrawString%2A> method:</span></span>
   
  ![如果螢幕擷取畫面顯示時使用 DrawString 方法的輸出。](./media/how-to-draw-wrapped-text-in-a-rectangle/drawstring-method-font-text.png)  
   
-### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a><span data-ttu-id="4d10a-109">若要繪製被包圍的文字中使用 GDI + 的矩形</span><span class="sxs-lookup"><span data-stu-id="4d10a-109">To draw wrapped text in a rectangle with GDI+</span></span>  
+### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a><span data-ttu-id="856ab-109">若要繪製被包圍的文字中使用 GDI + 的矩形</span><span class="sxs-lookup"><span data-stu-id="856ab-109">To draw wrapped text in a rectangle with GDI+</span></span>  
   
-1. <span data-ttu-id="4d10a-110">使用<xref:System.Drawing.Graphics.DrawString%2A>多載方法，傳遞您想要的文字<xref:System.Drawing.Rectangle>或是<xref:System.Drawing.RectangleF>，<xref:System.Drawing.Font>和<xref:System.Drawing.Brush>。</span><span class="sxs-lookup"><span data-stu-id="4d10a-110">Use the <xref:System.Drawing.Graphics.DrawString%2A> overloaded method, passing the text you want, <xref:System.Drawing.Rectangle> or <xref:System.Drawing.RectangleF>, <xref:System.Drawing.Font> and <xref:System.Drawing.Brush>.</span></span>  
+1. <span data-ttu-id="856ab-110">使用<xref:System.Drawing.Graphics.DrawString%2A>多載方法，傳遞您想要的文字<xref:System.Drawing.Rectangle>或是<xref:System.Drawing.RectangleF>，<xref:System.Drawing.Font>和<xref:System.Drawing.Brush>。</span><span class="sxs-lookup"><span data-stu-id="856ab-110">Use the <xref:System.Drawing.Graphics.DrawString%2A> overloaded method, passing the text you want, <xref:System.Drawing.Rectangle> or <xref:System.Drawing.RectangleF>, <xref:System.Drawing.Font> and <xref:System.Drawing.Brush>.</span></span>  
   
      [!code-csharp[System.Drawing.AlignDrawnText#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#50)]
      [!code-vb[System.Drawing.AlignDrawnText#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#50)]  
   
-### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a><span data-ttu-id="4d10a-111">若要繪製被包圍的文字中使用 GDI 矩形</span><span class="sxs-lookup"><span data-stu-id="4d10a-111">To draw wrapped text in a rectangle with GDI</span></span>  
+### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a><span data-ttu-id="856ab-111">若要繪製被包圍的文字中使用 GDI 矩形</span><span class="sxs-lookup"><span data-stu-id="856ab-111">To draw wrapped text in a rectangle with GDI</span></span>  
   
-1. <span data-ttu-id="4d10a-112">使用<xref:System.Windows.Forms.TextFormatFlags>列舉值，以指定的文字應該以包裝<xref:System.Windows.Forms.TextRenderer.DrawText%2A>多載方法，傳遞您想要的文字<xref:System.Drawing.Rectangle>，<xref:System.Drawing.Font>和<xref:System.Drawing.Color>。</span><span class="sxs-lookup"><span data-stu-id="4d10a-112">Use the <xref:System.Windows.Forms.TextFormatFlags> enumeration value to specify the text should be wrapped with the <xref:System.Windows.Forms.TextRenderer.DrawText%2A> overloaded method, passing the text you want, <xref:System.Drawing.Rectangle>, <xref:System.Drawing.Font> and <xref:System.Drawing.Color>.</span></span>  
+1. <span data-ttu-id="856ab-112">使用<xref:System.Windows.Forms.TextFormatFlags>列舉值，以指定的文字應該以包裝<xref:System.Windows.Forms.TextRenderer.DrawText%2A>多載方法，傳遞您想要的文字<xref:System.Drawing.Rectangle>，<xref:System.Drawing.Font>和<xref:System.Drawing.Color>。</span><span class="sxs-lookup"><span data-stu-id="856ab-112">Use the <xref:System.Windows.Forms.TextFormatFlags> enumeration value to specify the text should be wrapped with the <xref:System.Windows.Forms.TextRenderer.DrawText%2A> overloaded method, passing the text you want, <xref:System.Drawing.Rectangle>, <xref:System.Drawing.Font> and <xref:System.Drawing.Color>.</span></span>  
   
      [!code-csharp[System.Drawing.AlignDrawnText#60](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#60)]
      [!code-vb[System.Drawing.AlignDrawnText#60](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#60)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="4d10a-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="4d10a-113">Compiling the Code</span></span>  
- <span data-ttu-id="4d10a-114">先前的範例需要：</span><span class="sxs-lookup"><span data-stu-id="4d10a-114">The previous examples require:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="856ab-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="856ab-113">Compiling the Code</span></span>  
+ <span data-ttu-id="856ab-114">先前的範例需要：</span><span class="sxs-lookup"><span data-stu-id="856ab-114">The previous examples require:</span></span>  
   
--   <span data-ttu-id="4d10a-115"><xref:System.Windows.Forms.PaintEventArgs> `e`這是參數的<xref:System.Windows.Forms.PaintEventHandler>。</span><span class="sxs-lookup"><span data-stu-id="4d10a-115"><xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
+- <span data-ttu-id="856ab-115"><xref:System.Windows.Forms.PaintEventArgs> `e`這是參數的<xref:System.Windows.Forms.PaintEventHandler>。</span><span class="sxs-lookup"><span data-stu-id="856ab-115"><xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4d10a-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4d10a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="856ab-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="856ab-116">See also</span></span>
 
-- [<span data-ttu-id="4d10a-117">如何：使用 GDI 繪製文字</span><span class="sxs-lookup"><span data-stu-id="4d10a-117">How to: Draw Text with GDI</span></span>](how-to-draw-text-with-gdi.md)
-- [<span data-ttu-id="4d10a-118">使用字型和文字</span><span class="sxs-lookup"><span data-stu-id="4d10a-118">Using Fonts and Text</span></span>](using-fonts-and-text.md)
-- [<span data-ttu-id="4d10a-119">如何：建構字型系列和字型</span><span class="sxs-lookup"><span data-stu-id="4d10a-119">How to: Construct Font Families and Fonts</span></span>](how-to-construct-font-families-and-fonts.md)
-- [<span data-ttu-id="4d10a-120">如何：在指定的位置繪製文字</span><span class="sxs-lookup"><span data-stu-id="4d10a-120">How to: Draw Text at a Specified Location</span></span>](how-to-draw-text-at-a-specified-location.md)
+- [<span data-ttu-id="856ab-117">如何：使用 GDI 繪製文字</span><span class="sxs-lookup"><span data-stu-id="856ab-117">How to: Draw Text with GDI</span></span>](how-to-draw-text-with-gdi.md)
+- [<span data-ttu-id="856ab-118">使用字型和文字</span><span class="sxs-lookup"><span data-stu-id="856ab-118">Using Fonts and Text</span></span>](using-fonts-and-text.md)
+- [<span data-ttu-id="856ab-119">如何：建構字型系列和字型</span><span class="sxs-lookup"><span data-stu-id="856ab-119">How to: Construct Font Families and Fonts</span></span>](how-to-construct-font-families-and-fonts.md)
+- [<span data-ttu-id="856ab-120">如何：在指定的位置繪製文字</span><span class="sxs-lookup"><span data-stu-id="856ab-120">How to: Draw Text at a Specified Location</span></span>](how-to-draw-text-at-a-specified-location.md)

@@ -10,27 +10,27 @@ helpviewer_keywords:
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
 ms.openlocfilehash: f14c99b1c5f624fcebf2c08f0889903f258e5c68
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785719"
 ---
-# <a name="images"></a><span data-ttu-id="83584-102">影像</span><span class="sxs-lookup"><span data-stu-id="83584-102">Images</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="83584-103">針對多種影像格式、高畫質影像轉譯和轉碼器擴充性提供內建支援。</span><span class="sxs-lookup"><span data-stu-id="83584-103">provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
+# <a name="images"></a><span data-ttu-id="a5e81-102">影像</span><span class="sxs-lookup"><span data-stu-id="a5e81-102">Images</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="a5e81-103">針對多種影像格式、高畫質影像轉譯和轉碼器擴充性提供內建支援。</span><span class="sxs-lookup"><span data-stu-id="a5e81-103">provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="83584-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="83584-104">In This Section</span></span>  
- [<span data-ttu-id="83584-105">影像處理概觀</span><span class="sxs-lookup"><span data-stu-id="83584-105">Imaging Overview</span></span>](imaging-overview.md)  
- [<span data-ttu-id="83584-106">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="83584-106">How-to Topics</span></span>](imaging-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a5e81-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="a5e81-104">In This Section</span></span>  
+ [<span data-ttu-id="a5e81-105">影像處理概觀</span><span class="sxs-lookup"><span data-stu-id="a5e81-105">Imaging Overview</span></span>](imaging-overview.md)  
+ [<span data-ttu-id="a5e81-106">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="a5e81-106">How-to Topics</span></span>](imaging-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="83584-107">參考資料</span><span class="sxs-lookup"><span data-stu-id="83584-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a5e81-107">參考資料</span><span class="sxs-lookup"><span data-stu-id="a5e81-107">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="83584-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="83584-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a5e81-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a5e81-108">See also</span></span>
 
-- [<span data-ttu-id="83584-109">2D 圖形和影像處理</span><span class="sxs-lookup"><span data-stu-id="83584-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="83584-110">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="83584-110">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="a5e81-109">2D 圖形和影像處理</span><span class="sxs-lookup"><span data-stu-id="a5e81-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="a5e81-110">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="a5e81-110">Graphics and Multimedia</span></span>](index.md)

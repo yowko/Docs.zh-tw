@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 63afd82ca88e1a7c61913ec7fcc4d77d03ae9927
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777926"
 ---
-# <a name="imetadataimportfindmember-method"></a><span data-ttu-id="db2bb-102">IMetaDataImport::FindMember 方法</span><span class="sxs-lookup"><span data-stu-id="db2bb-102">IMetaDataImport::FindMember Method</span></span>
-<span data-ttu-id="db2bb-103">取得的 memberdef 語彙基元指標的欄位或方法是由指定<xref:System.Type>且具有指定的名稱和中繼資料簽章。</span><span class="sxs-lookup"><span data-stu-id="db2bb-103">Gets a pointer to the MemberDef token for field or method that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.</span></span>  
+# <a name="imetadataimportfindmember-method"></a><span data-ttu-id="6d973-102">IMetaDataImport::FindMember 方法</span><span class="sxs-lookup"><span data-stu-id="6d973-102">IMetaDataImport::FindMember Method</span></span>
+<span data-ttu-id="6d973-103">取得的 memberdef 語彙基元指標的欄位或方法是由指定<xref:System.Type>且具有指定的名稱和中繼資料簽章。</span><span class="sxs-lookup"><span data-stu-id="6d973-103">Gets a pointer to the MemberDef token for field or method that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db2bb-104">語法</span><span class="sxs-lookup"><span data-stu-id="db2bb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6d973-104">語法</span><span class="sxs-lookup"><span data-stu-id="6d973-104">Syntax</span></span>  
   
 ```  
 HRESULT FindMember (  
@@ -39,42 +39,42 @@ HRESULT FindMember (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="db2bb-105">參數</span><span class="sxs-lookup"><span data-stu-id="db2bb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6d973-105">參數</span><span class="sxs-lookup"><span data-stu-id="6d973-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="db2bb-106">[in]類別或介面，包含要搜尋的成員 TypeDef 語彙基元。</span><span class="sxs-lookup"><span data-stu-id="db2bb-106">[in] The TypeDef token for the class or interface that encloses the member to search for.</span></span> <span data-ttu-id="db2bb-107">如果此值為`mdTokenNil`，全域變數或全域函式完成的查詢。</span><span class="sxs-lookup"><span data-stu-id="db2bb-107">If this value is `mdTokenNil`, the lookup is done for a global-variable or global-function.</span></span>  
+ <span data-ttu-id="6d973-106">[in]類別或介面，包含要搜尋的成員 TypeDef 語彙基元。</span><span class="sxs-lookup"><span data-stu-id="6d973-106">[in] The TypeDef token for the class or interface that encloses the member to search for.</span></span> <span data-ttu-id="6d973-107">如果此值為`mdTokenNil`，全域變數或全域函式完成的查詢。</span><span class="sxs-lookup"><span data-stu-id="6d973-107">If this value is `mdTokenNil`, the lookup is done for a global-variable or global-function.</span></span>  
   
  `szName`  
- <span data-ttu-id="db2bb-108">[in]要搜尋的成員名稱。</span><span class="sxs-lookup"><span data-stu-id="db2bb-108">[in] The name of the member to search for.</span></span>  
+ <span data-ttu-id="6d973-108">[in]要搜尋的成員名稱。</span><span class="sxs-lookup"><span data-stu-id="6d973-108">[in] The name of the member to search for.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="db2bb-109">[in]二進位中繼資料簽章的成員指標。</span><span class="sxs-lookup"><span data-stu-id="db2bb-109">[in] A pointer to the binary metadata signature of the member.</span></span>  
+ <span data-ttu-id="6d973-109">[in]二進位中繼資料簽章的成員指標。</span><span class="sxs-lookup"><span data-stu-id="6d973-109">[in] A pointer to the binary metadata signature of the member.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="db2bb-110">[in]以位元組為單位的大小`pvSigBlob`。</span><span class="sxs-lookup"><span data-stu-id="db2bb-110">[in] The size in bytes of `pvSigBlob`.</span></span>  
+ <span data-ttu-id="6d973-110">[in]以位元組為單位的大小`pvSigBlob`。</span><span class="sxs-lookup"><span data-stu-id="6d973-110">[in] The size in bytes of `pvSigBlob`.</span></span>  
   
  `pmb`  
- <span data-ttu-id="db2bb-111">[out]比對的 MemberDef 語彙基元指標。</span><span class="sxs-lookup"><span data-stu-id="db2bb-111">[out] A pointer to the matching MemberDef token.</span></span>  
+ <span data-ttu-id="6d973-111">[out]比對的 MemberDef 語彙基元指標。</span><span class="sxs-lookup"><span data-stu-id="6d973-111">[out] A pointer to the matching MemberDef token.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="db2bb-112">備註</span><span class="sxs-lookup"><span data-stu-id="db2bb-112">Remarks</span></span>  
- <span data-ttu-id="db2bb-113">指定使用其封入類別或介面的成員 (`td`)，其名稱 (`szName`)，和 （選擇性） 其簽章 (`pvSigBlob`)。</span><span class="sxs-lookup"><span data-stu-id="db2bb-113">You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).</span></span> <span data-ttu-id="db2bb-114">可能有多個具有相同名稱的類別或介面中的成員。</span><span class="sxs-lookup"><span data-stu-id="db2bb-114">There might be multiple members with the same name in a class or interface.</span></span> <span data-ttu-id="db2bb-115">在此情況下，傳遞該成員的簽章，以尋找唯一相符項目。</span><span class="sxs-lookup"><span data-stu-id="db2bb-115">In that case, pass the member's signature to find the unique match.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6d973-112">備註</span><span class="sxs-lookup"><span data-stu-id="6d973-112">Remarks</span></span>  
+ <span data-ttu-id="6d973-113">指定使用其封入類別或介面的成員 (`td`)，其名稱 (`szName`)，和 （選擇性） 其簽章 (`pvSigBlob`)。</span><span class="sxs-lookup"><span data-stu-id="6d973-113">You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).</span></span> <span data-ttu-id="6d973-114">可能有多個具有相同名稱的類別或介面中的成員。</span><span class="sxs-lookup"><span data-stu-id="6d973-114">There might be multiple members with the same name in a class or interface.</span></span> <span data-ttu-id="6d973-115">在此情況下，傳遞該成員的簽章，以尋找唯一相符項目。</span><span class="sxs-lookup"><span data-stu-id="6d973-115">In that case, pass the member's signature to find the unique match.</span></span>  
   
- <span data-ttu-id="db2bb-116">簽章傳遞至`FindMember`必須已產生在目前的範圍內，因為簽章會繫結至特定的範圍。</span><span class="sxs-lookup"><span data-stu-id="db2bb-116">The signature passed to `FindMember` must have been generated in the current scope, because signatures are bound to a particular scope.</span></span> <span data-ttu-id="db2bb-117">簽章可以內嵌識別封入類別或實值類型的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="db2bb-117">A signature can embed a token that identifies the enclosing class or value type.</span></span> <span data-ttu-id="db2bb-118">語彙基元是本機 TypeDef 資訊表內的索引。</span><span class="sxs-lookup"><span data-stu-id="db2bb-118">The token is an index into the local TypeDef table.</span></span> <span data-ttu-id="db2bb-119">您無法建置目前範圍的內容以外的執行階段簽章，並使用該簽章為輸入至輸入`FindMember`。</span><span class="sxs-lookup"><span data-stu-id="db2bb-119">You cannot build a run-time signature outside the context of the current scope and use that signature as input to input to `FindMember`.</span></span>  
+ <span data-ttu-id="6d973-116">簽章傳遞至`FindMember`必須已產生在目前的範圍內，因為簽章會繫結至特定的範圍。</span><span class="sxs-lookup"><span data-stu-id="6d973-116">The signature passed to `FindMember` must have been generated in the current scope, because signatures are bound to a particular scope.</span></span> <span data-ttu-id="6d973-117">簽章可以內嵌識別封入類別或實值類型的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="6d973-117">A signature can embed a token that identifies the enclosing class or value type.</span></span> <span data-ttu-id="6d973-118">語彙基元是本機 TypeDef 資訊表內的索引。</span><span class="sxs-lookup"><span data-stu-id="6d973-118">The token is an index into the local TypeDef table.</span></span> <span data-ttu-id="6d973-119">您無法建置目前範圍的內容以外的執行階段簽章，並使用該簽章為輸入至輸入`FindMember`。</span><span class="sxs-lookup"><span data-stu-id="6d973-119">You cannot build a run-time signature outside the context of the current scope and use that signature as input to input to `FindMember`.</span></span>  
   
- <span data-ttu-id="db2bb-120">`FindMember` 尋找直接在類別或介面中所定義的成員找不到繼承的成員。</span><span class="sxs-lookup"><span data-stu-id="db2bb-120">`FindMember` finds only members that were defined directly in the class or interface; it does not find inherited members.</span></span>  
+ <span data-ttu-id="6d973-120">`FindMember` 尋找直接在類別或介面中所定義的成員找不到繼承的成員。</span><span class="sxs-lookup"><span data-stu-id="6d973-120">`FindMember` finds only members that were defined directly in the class or interface; it does not find inherited members.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="db2bb-121">`FindMember` 是 helper 方法。</span><span class="sxs-lookup"><span data-stu-id="db2bb-121">`FindMember` is a helper method.</span></span> <span data-ttu-id="db2bb-122">它會呼叫[imetadataimport:: Findmethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); 如果該呼叫找不到相符項目，`FindMember`然後呼叫[imetadataimport:: Findfield](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md)。</span><span class="sxs-lookup"><span data-stu-id="db2bb-122">It calls [IMetaDataImport::FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); if that call does not find a match, `FindMember` then calls [IMetaDataImport::FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).</span></span>  
+>  <span data-ttu-id="6d973-121">`FindMember` 是 helper 方法。</span><span class="sxs-lookup"><span data-stu-id="6d973-121">`FindMember` is a helper method.</span></span> <span data-ttu-id="6d973-122">它會呼叫[imetadataimport:: Findmethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); 如果該呼叫找不到相符項目，`FindMember`然後呼叫[imetadataimport:: Findfield](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md)。</span><span class="sxs-lookup"><span data-stu-id="6d973-122">It calls [IMetaDataImport::FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); if that call does not find a match, `FindMember` then calls [IMetaDataImport::FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="db2bb-123">需求</span><span class="sxs-lookup"><span data-stu-id="db2bb-123">Requirements</span></span>  
- <span data-ttu-id="db2bb-124">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="db2bb-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6d973-123">需求</span><span class="sxs-lookup"><span data-stu-id="6d973-123">Requirements</span></span>  
+ <span data-ttu-id="6d973-124">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6d973-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="db2bb-125">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="db2bb-125">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6d973-125">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6d973-125">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="db2bb-126">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="db2bb-126">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="6d973-126">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="6d973-126">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="db2bb-127">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="db2bb-127">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6d973-127">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6d973-127">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="db2bb-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="db2bb-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6d973-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6d973-128">See also</span></span>
 
-- [<span data-ttu-id="db2bb-129">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="db2bb-129">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="db2bb-130">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="db2bb-130">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="6d973-129">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="6d973-129">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="6d973-130">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="6d973-130">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

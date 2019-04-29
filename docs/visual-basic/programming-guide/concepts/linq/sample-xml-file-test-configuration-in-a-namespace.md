@@ -3,16 +3,16 @@ title: 範例 XML 檔：3 中的測試組態
 ms.date: 07/20/2015
 ms.assetid: aff02614-30ee-45e1-bc0f-d64b193d20b8
 ms.openlocfilehash: aef70e1ff7a7d61a1730588cc9e2ad26e6b67007
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786941"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="8cf54-102">範例 XML 檔：測試命名空間中的組態</span><span class="sxs-lookup"><span data-stu-id="8cf54-102">Sample XML File: Test Configuration in a Namespace</span></span>
-<span data-ttu-id="8cf54-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="8cf54-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="8cf54-104">這是測試組態檔案。</span><span class="sxs-lookup"><span data-stu-id="8cf54-104">This is a test configuration file.</span></span> <span data-ttu-id="8cf54-105">XML 位於命名空間中。</span><span class="sxs-lookup"><span data-stu-id="8cf54-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="cdabf-102">範例 XML 檔：測試命名空間中的組態</span><span class="sxs-lookup"><span data-stu-id="cdabf-102">Sample XML File: Test Configuration in a Namespace</span></span>
+<span data-ttu-id="cdabf-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="cdabf-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="cdabf-104">這是測試組態檔案。</span><span class="sxs-lookup"><span data-stu-id="cdabf-104">This is a test configuration file.</span></span> <span data-ttu-id="cdabf-105">XML 位於命名空間中。</span><span class="sxs-lookup"><span data-stu-id="cdabf-105">The XML is in a namespace.</span></span>  
   
-## <a name="testconfiginnamespacexml"></a><span data-ttu-id="8cf54-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="8cf54-106">TestConfigInNamespace.xml</span></span>  
+## <a name="testconfiginnamespacexml"></a><span data-ttu-id="cdabf-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="cdabf-106">TestConfigInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -56,6 +56,6 @@ ms.locfileid: "58821310"
 </Tests>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8cf54-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8cf54-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cdabf-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cdabf-107">See also</span></span>
 
-- [<span data-ttu-id="8cf54-108">範例 XML 文件 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8cf54-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="cdabf-108">範例 XML 文件 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="cdabf-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

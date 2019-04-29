@@ -3,23 +3,23 @@ title: 使用介面中的變異數，針對泛型集合 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
 ms.openlocfilehash: 3c7cde2baf6d8b163c6765b87d6bebef803eb6ee
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787240"
 ---
-# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a><span data-ttu-id="70471-102">使用介面中的變異數，針對泛型集合 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="70471-102">Using Variance in Interfaces for Generic Collections (Visual Basic)</span></span>
+# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a><span data-ttu-id="1790a-102">使用介面中的變異數，針對泛型集合 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1790a-102">Using Variance in Interfaces for Generic Collections (Visual Basic)</span></span>
 
-<span data-ttu-id="70471-103">Covariant 介面允許其方法傳回與介面中指定的類型相比，其衍生程度較大的類型。</span><span class="sxs-lookup"><span data-stu-id="70471-103">A covariant interface allows its methods to return more derived types than those specified in the interface.</span></span> <span data-ttu-id="70471-104">Contravariant 介面允許其方法接受與介面中指定的參數相比，其類型衍生程度較小的參數。</span><span class="sxs-lookup"><span data-stu-id="70471-104">A contravariant interface allows its methods to accept parameters of less derived types than those specified in the interface.</span></span>
+<span data-ttu-id="1790a-103">Covariant 介面允許其方法傳回與介面中指定的類型相比，其衍生程度較大的類型。</span><span class="sxs-lookup"><span data-stu-id="1790a-103">A covariant interface allows its methods to return more derived types than those specified in the interface.</span></span> <span data-ttu-id="1790a-104">Contravariant 介面允許其方法接受與介面中指定的參數相比，其類型衍生程度較小的參數。</span><span class="sxs-lookup"><span data-stu-id="1790a-104">A contravariant interface allows its methods to accept parameters of less derived types than those specified in the interface.</span></span>
 
-<span data-ttu-id="70471-105">在 .NET Framework 4 中，有數個現有介面已變成 Covariant 和 Contravariant。</span><span class="sxs-lookup"><span data-stu-id="70471-105">In .NET Framework 4, several existing interfaces became covariant and contravariant.</span></span> <span data-ttu-id="70471-106">這些結構包括 <xref:System.Collections.Generic.IEnumerable%601> 及 <xref:System.IComparable%601>。</span><span class="sxs-lookup"><span data-stu-id="70471-106">These include <xref:System.Collections.Generic.IEnumerable%601> and <xref:System.IComparable%601>.</span></span> <span data-ttu-id="70471-107">因此，您可以針對衍生類型的集合，重複使用搭配基底類型之泛型集合運作的方法。</span><span class="sxs-lookup"><span data-stu-id="70471-107">This enables you to reuse methods that operate with generic collections of base types for collections of derived types.</span></span>
+<span data-ttu-id="1790a-105">在 .NET Framework 4 中，有數個現有介面已變成 Covariant 和 Contravariant。</span><span class="sxs-lookup"><span data-stu-id="1790a-105">In .NET Framework 4, several existing interfaces became covariant and contravariant.</span></span> <span data-ttu-id="1790a-106">這些結構包括 <xref:System.Collections.Generic.IEnumerable%601> 及 <xref:System.IComparable%601>。</span><span class="sxs-lookup"><span data-stu-id="1790a-106">These include <xref:System.Collections.Generic.IEnumerable%601> and <xref:System.IComparable%601>.</span></span> <span data-ttu-id="1790a-107">因此，您可以針對衍生類型的集合，重複使用搭配基底類型之泛型集合運作的方法。</span><span class="sxs-lookup"><span data-stu-id="1790a-107">This enables you to reuse methods that operate with generic collections of base types for collections of derived types.</span></span>
 
-<span data-ttu-id="70471-108">如需.NET Framework 中的 variant 介面的清單，請參閱 <<c0> [ 泛型介面 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。</span><span class="sxs-lookup"><span data-stu-id="70471-108">For a list of variant interfaces in the .NET Framework, see [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).</span></span>
+<span data-ttu-id="1790a-108">如需.NET Framework 中的 variant 介面的清單，請參閱 <<c0> [ 泛型介面 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。</span><span class="sxs-lookup"><span data-stu-id="1790a-108">For a list of variant interfaces in the .NET Framework, see [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).</span></span>
 
-## <a name="converting-generic-collections"></a><span data-ttu-id="70471-109">轉換泛型集合</span><span class="sxs-lookup"><span data-stu-id="70471-109">Converting Generic Collections</span></span>
+## <a name="converting-generic-collections"></a><span data-ttu-id="1790a-109">轉換泛型集合</span><span class="sxs-lookup"><span data-stu-id="1790a-109">Converting Generic Collections</span></span>
 
-<span data-ttu-id="70471-110">下列範例說明在 <xref:System.Collections.Generic.IEnumerable%601> 介面中支援共變數的好處。</span><span class="sxs-lookup"><span data-stu-id="70471-110">The following example illustrates the benefits of covariance support in the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="70471-111">`PrintFullName` 方法接受 `IEnumerable(Of Person)` 類型的集合作為參數。</span><span class="sxs-lookup"><span data-stu-id="70471-111">The `PrintFullName` method accepts a collection of the `IEnumerable(Of Person)` type as a parameter.</span></span> <span data-ttu-id="70471-112">不過，您可以重複用於 `IEnumerable(Of Person)` 類型的集合，因為 `Employee` 會繼承 `Person`。</span><span class="sxs-lookup"><span data-stu-id="70471-112">However, you can reuse it for a collection of the `IEnumerable(Of Person)` type because `Employee` inherits `Person`.</span></span>
+<span data-ttu-id="1790a-110">下列範例說明在 <xref:System.Collections.Generic.IEnumerable%601> 介面中支援共變數的好處。</span><span class="sxs-lookup"><span data-stu-id="1790a-110">The following example illustrates the benefits of covariance support in the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="1790a-111">`PrintFullName` 方法接受 `IEnumerable(Of Person)` 類型的集合作為參數。</span><span class="sxs-lookup"><span data-stu-id="1790a-111">The `PrintFullName` method accepts a collection of the `IEnumerable(Of Person)` type as a parameter.</span></span> <span data-ttu-id="1790a-112">不過，您可以重複用於 `IEnumerable(Of Person)` 類型的集合，因為 `Employee` 會繼承 `Person`。</span><span class="sxs-lookup"><span data-stu-id="1790a-112">However, you can reuse it for a collection of the `IEnumerable(Of Person)` type because `Employee` inherits `Person`.</span></span>
 
 ```vb
 ' Simple hierarchy of classes.
@@ -51,9 +51,9 @@ Sub Main()
 End Sub
 ```
 
-## <a name="comparing-generic-collections"></a><span data-ttu-id="70471-113">比較泛型集合</span><span class="sxs-lookup"><span data-stu-id="70471-113">Comparing Generic Collections</span></span>
+## <a name="comparing-generic-collections"></a><span data-ttu-id="1790a-113">比較泛型集合</span><span class="sxs-lookup"><span data-stu-id="1790a-113">Comparing Generic Collections</span></span>
 
-<span data-ttu-id="70471-114">下列範例說明在 <xref:System.Collections.Generic.IComparer%601> 介面中支援反變數的好處。</span><span class="sxs-lookup"><span data-stu-id="70471-114">The following example illustrates the benefits of contravariance support in the <xref:System.Collections.Generic.IComparer%601> interface.</span></span> <span data-ttu-id="70471-115">`PersonComparer` 類別會實作 `IComparer(Of Person)` 介面。</span><span class="sxs-lookup"><span data-stu-id="70471-115">The `PersonComparer` class implements the `IComparer(Of Person)` interface.</span></span> <span data-ttu-id="70471-116">不過，您可以重複使用此類別來比較一連串類型為 `Employee` 的物件，因為 `Employee` 會繼承 `Person`。</span><span class="sxs-lookup"><span data-stu-id="70471-116">However, you can reuse this class to compare a sequence of objects of the `Employee` type because `Employee` inherits `Person`.</span></span>
+<span data-ttu-id="1790a-114">下列範例說明在 <xref:System.Collections.Generic.IComparer%601> 介面中支援反變數的好處。</span><span class="sxs-lookup"><span data-stu-id="1790a-114">The following example illustrates the benefits of contravariance support in the <xref:System.Collections.Generic.IComparer%601> interface.</span></span> <span data-ttu-id="1790a-115">`PersonComparer` 類別會實作 `IComparer(Of Person)` 介面。</span><span class="sxs-lookup"><span data-stu-id="1790a-115">The `PersonComparer` class implements the `IComparer(Of Person)` interface.</span></span> <span data-ttu-id="1790a-116">不過，您可以重複使用此類別來比較一連串類型為 `Employee` 的物件，因為 `Employee` 會繼承 `Person`。</span><span class="sxs-lookup"><span data-stu-id="1790a-116">However, you can reuse this class to compare a sequence of objects of the `Employee` type because `Employee` inherits `Person`.</span></span>
 
 ```vb
 ' Simple hierarchy of classes.
@@ -112,6 +112,6 @@ Sub Main()
 End Sub
 ```
 
-## <a name="see-also"></a><span data-ttu-id="70471-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="70471-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1790a-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1790a-117">See also</span></span>
 
-- [<span data-ttu-id="70471-118">泛型介面中的變異數 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="70471-118">Variance in Generic Interfaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [<span data-ttu-id="1790a-118">泛型介面中的變異數 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1790a-118">Variance in Generic Interfaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
