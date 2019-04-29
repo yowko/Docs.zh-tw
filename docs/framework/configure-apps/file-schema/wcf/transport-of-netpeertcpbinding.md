@@ -3,11 +3,11 @@ title: <transport> 的 <netPeerTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
 ms.openlocfilehash: 157637615abafbd5913e4d90b702bb0224d5f121
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788319"
 ---
 # <a name="transport-of-netpeertcpbinding"></a>\<transport> of \<netPeerTcpBinding>
 使用時，指定傳輸層級安全性設定[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。  

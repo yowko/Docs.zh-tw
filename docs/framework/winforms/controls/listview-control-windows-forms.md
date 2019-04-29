@@ -12,11 +12,11 @@ helpviewer_keywords:
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
 ms.openlocfilehash: d826fe0a64ad226db62e01259b0466f7f495f8e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757858"
 ---
 # <a name="listview-control-windows-forms"></a>ListView 控制項 (Windows Form)
 Windows Form `ListView` 控制項顯示具有圖示的項目清單。 若要建立像 Windows 檔案總管右窗格的使用者介面，您可以使用清單檢視。  
@@ -58,15 +58,15 @@ Windows Form `ListView` 控制項顯示具有圖示的項目清單。 若要建�
  [如何：將搜尋功能加入至 ListView 控制項](how-to-add-search-capabilities-to-a-listview-control.md)  
  描述如何使用文字搜尋或螢幕座標，以程式設計的方式尋找項目。  
   
--   [如何：啟用並排顯示檢視中使用設計工具將 Windows Forms ListView 控制項](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
+- [如何：啟用並排顯示檢視中使用設計工具將 Windows Forms ListView 控制項](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
   
--   [如何：新增和移除項目時使用設計工具在 Windows Form ListView 控制項](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
+- [如何：新增和移除項目時使用設計工具在 Windows Form ListView 控制項](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
   
--   [如何：資料行加入 Windows Form ListView 控制項使用設計工具](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
+- [如何：資料行加入 Windows Form ListView 控制項使用設計工具](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
   
--   [如何：使用設計工具將 Windows Forms ListView 控制項中的群組項目](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
+- [如何：使用設計工具將 Windows Forms ListView 控制項中的群組項目](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
   
--   [逐步解說：以 ListView 和 TreeView 控制項使用設計工具建立檔案總管樣式介面](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
+- [逐步解說：以 ListView 和 TreeView 控制項使用設計工具建立檔案總管樣式介面](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.ListView> 類別  

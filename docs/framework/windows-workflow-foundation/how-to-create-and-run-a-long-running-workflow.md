@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773359"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>HOW TO：建立及執行長時間執行的工作流程
 其中一項集中功能的 Windows Workflow Foundation (WF) 是保存和卸載閒置的工作流程，以資料庫的執行階段的功能。 中的步驟[How to:執行工作流程](how-to-run-a-workflow.md)所示範的工作流程裝載的主控台應用程式基本概念。 範例包括啟動工作流程、工作流程開發週期處理常式，以及繼續使用書籤。 為有效示範工作流程持續性，必須要有較複雜的工作流程主機，以支援啟動與繼續使用多個工作流程執行個體。 教學課程中的這個步驟，示範如何建立 Windows 表單主應用程式，以支援啟動與繼續使用多個工作流程執行個體、工作流程持續性，並且為後續教學課程步驟中示範的追蹤和版本設定等進階功能提供基礎。  
@@ -23,25 +23,25 @@ ms.locfileid: "59320043"
   
 ## <a name="in-this-topic"></a>本主題內容  
   
--   [若要建立持續性資料庫](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
+- [若要建立持續性資料庫](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
   
--   [若要加入至 DurableInstancing 組件參考](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
+- [若要加入至 DurableInstancing 組件參考](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
--   [若要建立工作流程主表單](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
+- [若要建立工作流程主表單](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [若要新增的屬性和 helper 方法的表單](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+- [若要新增的屬性和 helper 方法的表單](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [若要設定的執行個體存放區、 工作流程開發週期處理常式和延伸模組](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+- [若要設定的執行個體存放區、 工作流程開發週期處理常式和延伸模組](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [若要啟用啟動與繼續使用多個工作流程類型](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+- [若要啟用啟動與繼續使用多個工作流程類型](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
--   [若要啟動新的工作流程](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+- [若要啟動新的工作流程](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
--   [若要繼續工作流程](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
+- [若要繼續工作流程](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
--   [終止工作流程](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
+- [終止工作流程](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [若要建置並執行應用程式](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+- [若要建置並執行應用程式](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
 ### <a name="BKMK_CreatePersistenceDatabase"></a> 若要建立持續性資料庫  
   
@@ -54,9 +54,9 @@ ms.locfileid: "59320043"
   
      選取下列兩個檔案，然後按一下**開啟**。  
   
-    -   SqlWorkflowInstanceStoreLogic.sql  
+    - SqlWorkflowInstanceStoreLogic.sql  
   
-    -   SqlWorkflowInstanceStoreSchema.sql  
+    - SqlWorkflowInstanceStoreSchema.sql  
   
 3. 選擇**SqlWorkflowInstanceStoreSchema.sql**從**視窗**功能表。 請確認**WF45GettingStartedTutorial**中選取**可用的資料庫**下拉式清單，然後選擇**Execute**從**查詢**功能表。  
   

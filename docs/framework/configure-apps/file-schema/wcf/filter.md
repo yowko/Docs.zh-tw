@@ -3,11 +3,11 @@ title: <filter>
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
 ms.openlocfilehash: bff19f106d86c73dea80b8b57bb73442eaa2cf9f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704033"
 ---
 # <a name="filter"></a>\<filter>
 
@@ -39,7 +39,7 @@ ms.locfileid: "55278781"
 | customType | 字串，其中包含要做為篩選之自訂類型的完整類型名稱。 如果`filterType`設為`custom`，這個屬性包含要建立之類別的完整型別名稱。  `filterData` 也可包含評估自訂型別篩選條件期間要使用的值。 |
 | filterData | 包含篩選資料的字串。 如需如何指定這個屬性的詳細資訊，請參閱 <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>。 |
 | filterType | 包含篩選條件類型的字串。 此屬性的型別為 <xref:System.ServiceModel.Routing.Configuration.FilterType>。  如需此屬性與 `filterData` 屬性如何搭配運作的詳細資訊，請參閱 <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>。 |
-| name       | 字串，其中包含這個篩選項目的唯一名稱。 |
+| 名稱       | 字串，其中包含這個篩選項目的唯一名稱。 |
 
 ### <a name="child-elements"></a>子元素
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - RadioButton control [Windows Forms]
 ms.assetid: e895b2a5-9bcb-4486-b165-eaf4c3ea9644
 ms.openlocfilehash: cf2da32dd286e03b89cfa59e09d38eceb030f5ea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755398"
 ---
 # <a name="radiobutton-control-windows-forms"></a>RadioButton 控制項 (Windows Form)
 Windows Form`RadioButton`控制項呈現給使用者的一組的兩個或多個互斥的選項。 選項按鈕和核取方塊可能看起來運作同樣地，雖然還有一項重要差異： 當使用者選取的選項按鈕，不能也選取相同的群組中的其他選項按鈕。  

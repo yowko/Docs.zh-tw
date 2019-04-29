@@ -14,11 +14,11 @@ helpviewer_keywords:
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
 ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779419"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>GDI+ 中的筆刷和填滿的形狀
 封閉的形狀，例如矩形或橢圓形，是由外框和內部所組成。 使用畫筆繪製外框，並使用筆刷填滿內部。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供來填滿的封閉的形狀內部的筆刷的數個類別： <xref:System.Drawing.SolidBrush>， <xref:System.Drawing.Drawing2D.HatchBrush>， <xref:System.Drawing.TextureBrush>， <xref:System.Drawing.Drawing2D.LinearGradientBrush>，和<xref:System.Drawing.Drawing2D.PathGradientBrush>。 所有這些類別繼承自<xref:System.Drawing.Brush>類別。 下圖顯示使用實心筆刷填滿的矩形和橢圓形填滿影線筆刷。  

@@ -15,26 +15,26 @@ helpviewer_keywords:
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
 ms.openlocfilehash: 105a44f90c1c654a21fc8920a149ad63b2dabc99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928704"
 ---
 # <a name="creating-an-ink-input-control"></a>建立筆墨輸入控制項
 您可以建立自訂控制項，以動態方式，並以靜態方式呈現筆墨。 當使用者繪製筆劃，導致出現 「 順著 」 tablet 畫筆，和顯示筆墨之後加入至控制項，透過 tablet 畫筆，從剪貼簿 貼上或從檔案載入的筆墨，也就是呈現筆墨。 若要動態轉譯筆跡，必須使用您的控制項<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>。 若要以靜態方式轉譯筆跡，您必須覆寫的手寫筆事件方法 (<xref:System.Windows.UIElement.OnStylusDown%2A>， <xref:System.Windows.UIElement.OnStylusMove%2A>，和<xref:System.Windows.UIElement.OnStylusUp%2A>) 來收集<xref:System.Windows.Input.StylusPoint>資料，建立筆劃，並將其新增<xref:System.Windows.Controls.InkPresenter>（會呈現在控制項上的筆墨）。  
   
  本主題包含下列子章節：  
   
--   [如何：收集手寫筆點資料，並建立筆墨筆劃](#CollectingStylusPointDataAndCreatingInkStrokes)  
+- [如何：收集手寫筆點資料，並建立筆墨筆劃](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [如何：啟用您的控制項為接受來自滑鼠輸入](#EnablingYourControlToAcceptInputTromTheMouse)  
+- [如何：啟用您的控制項為接受來自滑鼠輸入](#EnablingYourControlToAcceptInputTromTheMouse)  
   
--   [將它放在一起](#PuttingItTogether)  
+- [將它放在一起](#PuttingItTogether)  
   
--   [使用額外的外掛程式和 DynamicRenderers](#UsingAdditionalPluginsAndDynamicRenderers)  
+- [使用額外的外掛程式和 DynamicRenderers](#UsingAdditionalPluginsAndDynamicRenderers)  
   
--   [結論](#AdvancedInkHandling_Conclusion)  
+- [結論](#AdvancedInkHandling_Conclusion)  
   
 <a name="CollectingStylusPointDataAndCreatingInkStrokes"></a>   
 ## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>HOW TO：收集手寫筆點資料，並建立筆墨筆劃  

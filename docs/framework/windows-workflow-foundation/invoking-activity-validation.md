@@ -3,11 +3,11 @@ title: 叫用活動驗證
 ms.date: 03/30/2017
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
 ms.openlocfilehash: 19c2d4773cf15245ba20ff8523ebd7e67d5b9c1d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791075"
 ---
 # <a name="invoking-activity-validation"></a>叫用活動驗證
 活動驗證提供的方法可在活動執行前識別及報告任何活動之組態中的錯誤。 在工作流程設計工具中修改工作流程時，若工作流程設計工具中顯示任何驗證錯誤或警告，就會進行驗證。 叫用工作流程時，也會在執行階段進行驗證，而且如果發生任何驗證錯誤，預設驗證邏輯會擲回 <xref:System.Activities.InvalidWorkflowException>。 Windows Workflow Foundation (WF) 提供<xref:System.Activities.Validation.ActivityValidationServices>可以由工作流程應用程式和工具開發人員用來明確驗證活動的類別。 本主題描述如何使用 <xref:System.Activities.Validation.ActivityValidationServices> 執行活動驗證。  
@@ -234,7 +234,7 @@ else
 >  自訂活動作者可以在活動的 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 覆寫中提供驗證邏輯。 從 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 擲回的任何例外狀況都不會被視為驗證錯誤。 這些例外狀況會從 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 的呼叫中逸出，而且必須由呼叫端處理。  
   
 ## <a name="using-validationsettings"></a>使用 ValidationSettings  
- 根據預設，當 <xref:System.Activities.Validation.ActivityValidationServices> 叫用驗證時，會評估活動樹狀結構中的所有活動。 <xref:System.Activities.Validation.ValidationSettings> 允許透過設定驗證的三個屬性，以數種不同的方式自訂驗證。 <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> 指定驗證程式是否應逐一查核整個活動樹狀結構，或者只需將驗證邏輯套用於所提供的活動。 此值的預設值為 `false`。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 會指定從型別至條件約束清單的其他條件約束對應。 為取得要驗證之活動樹狀結構中每個活動的基底型別，會查詢 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>。 如果找到相符的條件約束清單，會為該活動評估清單中的所有條件約束。 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 指定驗證程式是否應評估所有條件約束，或者只需評估 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 中指定的條件約束。 預設值是 `false`。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>和 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 適合讓工作流程主機作者用來新增額外的工作流程驗證，例如 FxCop 等工具的原則條件約束。 如需有關條件約束的詳細資訊，請參閱[宣告式條件約束](declarative-constraints.md)。  
+ 根據預設，當 <xref:System.Activities.Validation.ActivityValidationServices> 叫用驗證時，會評估活動樹狀結構中的所有活動。 <xref:System.Activities.Validation.ValidationSettings> 允許透過設定驗證的三個屬性，以數種不同的方式自訂驗證。 <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> 指定驗證程式是否應逐一查核整個活動樹狀，或者只需將驗證邏輯套用於所提供的活動。 此值的預設值為 `false`。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 會指定從型別至條件約束清單的其他條件約束對應。 為取得要驗證之活動樹狀結構中每個活動的基底型別，會查詢 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>。 如果找到相符的條件約束清單，會為該活動評估清單中的所有條件約束。 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 指定驗證程式是否應評估所有條件約束，或者只需評估 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 中指定的條件約束。 預設值為 `false`。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>和 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 適合讓工作流程主機作者用來新增額外的工作流程驗證，例如 FxCop 等工具的原則條件約束。 如需有關條件約束的詳細資訊，請參閱[宣告式條件約束](declarative-constraints.md)。  
   
  若要使用 <xref:System.Activities.Validation.ValidationSettings>，請設定所需的屬性，然後在對 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 的呼叫中傳遞它。 在此範例中，會驗證包含 <xref:System.Activities.Statements.Sequence> 的活動 (該活動具有 `Add` 活動)。 `Add` 活動具有兩個必要引數。  
   

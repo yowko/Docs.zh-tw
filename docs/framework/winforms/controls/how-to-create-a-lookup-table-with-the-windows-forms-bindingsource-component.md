@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
 ms.openlocfilehash: 481774e9127531bb38df0cc71ac8e7eab76da695
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747053"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>HOW TO：使用 Windows Forms BindingSource 元件建立查閱資料表
 查閱資料表是具有資料行的資料表，而此資料行會從相關資料表的記錄中顯示資料。 在下列程序中，會使用 <xref:System.Windows.Forms.ComboBox> 控制項顯示從父資料表到子資料表具有外部索引鍵關聯性的欄位。  
@@ -37,13 +37,13 @@ ms.locfileid: "59321896"
   
  [ComboBox 控制項](combobox-control-windows-forms.md)上設定了四個重要的屬性，以供建立查閱資料表。  
   
--   <xref:System.Windows.Forms.ComboBox.DataSource%2A> 屬性包含資料表的名稱。  
+- <xref:System.Windows.Forms.ComboBox.DataSource%2A> 屬性包含資料表的名稱。  
   
--   <xref:System.Windows.Forms.ListControl.DisplayMember%2A> 屬性包含該資料表中您想要為控制項文字 (客戶姓名) 顯示的資料行。  
+- <xref:System.Windows.Forms.ListControl.DisplayMember%2A> 屬性包含該資料表中您想要為控制項文字 (客戶姓名) 顯示的資料行。  
   
--   <xref:System.Windows.Forms.ListControl.ValueMember%2A> 屬性包含該資料表中具有儲存之資訊 (父資料表中的 ID 編號) 的資料行。  
+- <xref:System.Windows.Forms.ListControl.ValueMember%2A> 屬性包含該資料表中具有儲存之資訊 (父資料表中的 ID 編號) 的資料行。  
   
--   <xref:System.Windows.Forms.ListControl.SelectedValue%2A> 屬性提供子資料表的查閱值 (根據 <xref:System.Windows.Forms.ListControl.ValueMember%2A>)。  
+- <xref:System.Windows.Forms.ListControl.SelectedValue%2A> 屬性提供子資料表的查閱值 (根據 <xref:System.Windows.Forms.ListControl.ValueMember%2A>)。  
   
  以下程序向您示範如何將表單配置為查閱資料表，並將資料繫結至其控制項。 為了成功完成此這些程序，您必須要有具有外部索引鍵關聯性之父資料表和子資料表的資料來源 (如上所述)。  
   
@@ -65,21 +65,21 @@ ms.locfileid: "59321896"
   
 3. 按一下 [資料來源] 下拉式方塊旁邊的箭頭。 若之前已為專案或表單設定過資料來源，則會顯示；若無設定，請完成下列步驟 (此範例使用 Northwind 範例資料庫的 Customers 及 Orders 資料表，並在引用時使用括號)。  
   
-    1.  按一下 [新增專案資料來源] 以連接至資料，並建立資料來源。  
+    1. 按一下 [新增專案資料來源] 以連接至資料，並建立資料來源。  
   
-    2.  在 [資料來源組態精靈] 歡迎頁面上，按 [下一步]。  
+    2. 在 [資料來源組態精靈] 歡迎頁面上，按 [下一步]。  
   
-    3.  選取 [選擇資料來源類型] 頁面中的 [資料庫]。  
+    3. 選取 [選擇資料來源類型] 頁面中的 [資料庫]。  
   
-    4.  從 [選擇資料連接] 頁面中的可用連接清單，選取資料連接。 若您想要的資料連接無法使用，請選取 [新增連接] 以建立新資料連接。  
+    4. 從 [選擇資料連接] 頁面中的可用連接清單，選取資料連接。 若您想要的資料連接無法使用，請選取 [新增連接] 以建立新資料連接。  
   
-    5.  按一下 [是，將連接儲存為]，將連接字串儲存至應用程式組態檔。  
+    5. 按一下 [是，將連接儲存為]，將連接字串儲存至應用程式組態檔。  
   
-    6.  選取要帶入應用程式中的資料庫物件。 在此情況中，請選取具有外部索引鍵關聯性的父資料表和子資料表 (例如 Customers 和 Orders)。  
+    6. 選取要帶入應用程式中的資料庫物件。 在此情況中，請選取具有外部索引鍵關聯性的父資料表和子資料表 (例如 Customers 和 Orders)。  
   
-    7.  您可以視需要更換預設資料集名稱。  
+    7. 您可以視需要更換預設資料集名稱。  
   
-    8.  按一下 [ **完成**]。  
+    8. 按一下 [ **完成**]。  
   
 4. 在 [顯示成員] 下拉式方塊中，選取要顯示在下拉式方塊中的資料行名稱 (例如 ContactName)。  
   

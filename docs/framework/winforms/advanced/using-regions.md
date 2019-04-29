@@ -6,11 +6,11 @@ helpviewer_keywords:
 - regions [Windows Forms], using
 ms.assetid: 7809295b-870f-4107-a8b5-8386c298acd5
 ms.openlocfilehash: ec11b8c7d2eeb153eb4a8c8772fef24977310e13
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791101"
 ---
 # <a name="using-regions"></a>使用區域
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Region>類別可讓您定義自訂形狀。 圖形可以組成線條、 多邊形和曲線。  

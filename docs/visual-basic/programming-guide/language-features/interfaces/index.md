@@ -8,24 +8,24 @@ helpviewer_keywords:
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
 ms.openlocfilehash: 5f85eca1026d05d8dc3d862559ee48440edf2c4b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775930"
 ---
 # <a name="interfaces-visual-basic"></a>介面 (Visual Basic)
 「介面」可定義類別可實作的屬性、方法和事件。 介面可讓您將功能定義為一小組緊密相關的屬性、方法和事件；這會降低相容性問題，因為您可以為您的介面開發增強的實作，而不會危及現有程式碼。 只要開發額外的介面和實作，您就可以隨時加入新功能。  
   
  另有幾個原因，會讓您想要使用介面而非類別繼承：  
   
--   介面是較適用於，當您的應用程式需要許多可能不相關的物件類型來提供特定功能時。  
+- 介面是較適用於，當您的應用程式需要許多可能不相關的物件類型來提供特定功能時。  
   
--   介面比基底類別更有彈性，因為您可以定義可實作多個介面的單一實作。  
+- 介面比基底類別更有彈性，因為您可以定義可實作多個介面的單一實作。  
   
--   介面較適合不必從基底類別繼承實作的情況。  
+- 介面較適合不必從基底類別繼承實作的情況。  
   
--   當您無法使用類別繼承時，介面相當有用。 例如，結構不能從類別繼承，但它們可以實作介面。  
+- 當您無法使用類別繼承時，介面相當有用。 例如，結構不能從類別繼承，但它們可以實作介面。  
   
 ## <a name="declaring-interfaces"></a>宣告介面  
  介面定義內含於 `Interface` 和 `End Interface` 陳述式之間。 遵循 `Interface` 陳述式，您可以新增選擇性的 `Inherits` 陳述式，其中列出一或多個繼承的介面。 `Inherits` 陳述式必須在宣告中所有其他陳述式之前 (註解除外)。 介面定義中剩餘的陳述式應該是 `Event`、`Sub`、`Function`、`Property`、`Interface`、`Class`、`Structure` 和 `Enum` 陳述式。 介面不能包含任何實作程式碼，或實作程式碼相關聯的陳述式，例如 `End Sub` 或 `End Property`。  

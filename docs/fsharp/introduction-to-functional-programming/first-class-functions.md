@@ -3,11 +3,11 @@ title: 第一級函式
 description: 深入了解第一級函式以及它們的重要函式程式設計的方式F#。
 ms.date: 10/29/2018
 ms.openlocfilehash: 505ad686614b53d779cb617fc04ac74c2a88b31b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772754"
 ---
 # <a name="first-class-functions"></a>第一級函式
 
@@ -193,5 +193,5 @@ F#提供對應方法的大部分集合型別，包括[列出](../language-refere
 - [清單](../language-reference/lists.md)
 - [元組](../language-reference/tuples.md)
 - [函式](../language-reference/functions/index.md)
-- [`let` 繫結](../language-reference/functions/let-bindings.md)
-- [Lambda 運算式：`fun`關鍵字](../language-reference/functions/lambda-expressions-the-fun-keyword.md)
+- [`let` Bindings](../language-reference/functions/let-bindings.md)
+- [Lambda 運算式：`fun` 關鍵字](../language-reference/functions/lambda-expressions-the-fun-keyword.md)

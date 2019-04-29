@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
 ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791972"
 ---
 # <a name="operator-procedures-visual-basic"></a>運算子程序 (Visual Basic)
 運算子程序是一系列的 Visual Basic 陳述式可定義標準運算式的行為 (例如`*`， `<>`，或`And`) 上類別或您已定義的結構。 這也稱為*多載的運算子*。  
@@ -31,13 +31,13 @@ ms.locfileid: "59175015"
 ## <a name="types-of-operator-procedure"></a>類型的運算子程序  
  運算子程序可以是下列類型之一：  
   
--   一元運算子的引數會是您的類別或結構的類型定義。  
+- 一元運算子的引數會是您的類別或結構的類型定義。  
   
--   二元運算子，其中至少一個引數是您自己的類別或結構之型別的定義。  
+- 二元運算子，其中至少一個引數是您自己的類別或結構之型別的定義。  
   
--   轉換運算子，其中的引數是類別或結構的類型定義。  
+- 轉換運算子，其中的引數是類別或結構的類型定義。  
   
--   轉換運算子會傳回您類別或結構的型別定義。  
+- 轉換運算子會傳回您類別或結構的型別定義。  
   
  轉換運算子一律是一元 （unary），且一律使用`CType`做為您正在定義的運算子。  
   

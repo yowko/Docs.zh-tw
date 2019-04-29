@@ -3,11 +3,11 @@ title: 實體資料模型：基本資料類型
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
 ms.openlocfilehash: 044a0ed981bb9cda3550fb3a3a9f1cb9bff96f25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667128"
 ---
 # <a name="entity-data-model-primitive-data-types"></a>實體資料模型：基本資料類型
 Entity Data Model (EDM) 支援一組用來定義的抽象基本資料類型 （例如字串、 布林值、 Int32 等） 的[屬性](../../../../docs/framework/data/adonet/property.md)概念模型中。 這些基本資料型別是實際基本資料型別的 Proxy，無論在 SQL Server 資料庫或 Common Language Runtime (CLR) 等儲存或裝載環境中皆可支援。 EDM 不會定義基本資料型別作業或慣例的語意，這些語意是由儲存或裝載環境定義的。 一般來說，EDM 中的基本資料型別對應於儲存或裝載環境中相對應的基本資料型別。 如需 Entity Framework 到 SQL Server 資料型別所對應的 edm 基本類型的資訊，請參閱[適用於 Entity framework 的 sqlclient 類型 SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)。  

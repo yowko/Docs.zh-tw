@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63d4b885b6968b800bc965a9be1ec6b795a42220
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771497"
 ---
 # <a name="iclrstrongnamestrongnamecompareassemblies-method"></a>ICLRStrongName::StrongNameCompareAssemblies 方法
 判斷兩個組件是否只有強制名稱簽章不同。  
@@ -47,11 +47,11 @@ HRESULT StrongNameCompareAssemblies (
  `pdwResult`  
  [out]下列值之一：  
   
--   `SN_CMP_DIFFERENT` (0): 指定組件包含不同的資料。  
+- `SN_CMP_DIFFERENT` (0): 指定組件包含不同的資料。  
   
--   `SN_CMP_IDENTICAL` (1)-指定的組件完全相同，包括其簽章和總和檢查碼。  
+- `SN_CMP_IDENTICAL` (1)-指定的組件完全相同，包括其簽章和總和檢查碼。  
   
--   `SN_CMP_SIGONLY` (2)-指定只要簽章與總和檢查碼不同組件。  
+- `SN_CMP_SIGONLY` (2)-指定只要簽章與總和檢查碼不同組件。  
   
 ## <a name="return-value"></a>傳回值  
  `S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。  

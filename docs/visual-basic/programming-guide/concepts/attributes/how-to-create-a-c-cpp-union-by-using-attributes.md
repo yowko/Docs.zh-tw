@@ -3,11 +3,11 @@ title: HOW TO：建立 C-C++聯集，使用屬性 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
 ms.openlocfilehash: 0c3ebf248f5d2f20e2fff25fb8326a294b51d153
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789086"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>HOW TO：建立 C /C++聯集，使用屬性 (Visual Basic)
 您可以使用屬性，自訂如何在記憶體中配置結構。 例如，您可以使用 `StructLayout(LayoutKind.Explicit)` 和 `FieldOffset` 屬性，以 C/C++ 建立所謂的等位。  

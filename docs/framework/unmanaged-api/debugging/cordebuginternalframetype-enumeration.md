@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 05184ceb3b32eb003951fff5cfdfbfb813992552
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792856"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType 列舉
 識別堆疊框架的類型。 這個列舉型別由[icordebuginternalframe:: Getframetype](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)方法。  

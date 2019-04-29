@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
 ms.openlocfilehash: 775c40cbb62272f913297d5a58914a0c82c5a7d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780831"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>HOW TO：宣告物件使用物件初始設定式 (Visual Basic)
 物件初始設定式可讓您宣告並具現化類別，以單一陳述式的執行個體。 此外，您可以在此同時，初始化執行個體的一或多個成員，而不叫用的參數化建構函式。  

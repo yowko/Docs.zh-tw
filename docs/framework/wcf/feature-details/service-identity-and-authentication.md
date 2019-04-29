@@ -8,11 +8,11 @@ helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
 ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748261"
 ---
 # <a name="service-identity-and-authentication"></a>服務身分識別和驗證
 服務的*端點身分識別*是從服務 Web 服務描述語言 (WSDL) 產生的值。 這個值會傳播至任何用戶端上，用來驗證服務。 在用戶端初始化對某個端點的通訊，且服務也向用戶端進行自我驗證之後，用戶端就會比較端點身分識別值與端點驗證處理序傳回的實際值。 如果兩者相符，則可確定用戶端已聯繫所需的服務端點。 這可當作防範*網路釣魚*藉由防止用戶端重新導向至惡意服務所裝載的端點。  
@@ -26,9 +26,9 @@ ms.locfileid: "59145622"
   
  身分識別處理包含下列階段：  
   
--   在設計階段，用戶端開發人員會從端點的中繼資料 (透過 WSDL 公開) 來決定服務的身分識別。  
+- 在設計階段，用戶端開發人員會從端點的中繼資料 (透過 WSDL 公開) 來決定服務的身分識別。  
   
--   在執行階段，用戶端應用程式會先檢查服務安全性認證的宣告，再將訊息傳送至服務。  
+- 在執行階段，用戶端應用程式會先檢查服務安全性認證的宣告，再將訊息傳送至服務。  
   
  用戶端上的身分識別處理與服務上的用戶端驗證很類似。 安全服務會等到用戶端認證經過驗證之後，才會執行程式碼。 同理，用戶端會等到服務認證根據事先從服務中繼資料得知的內容經過驗證之後，才會將訊息傳送至服務。  
   
@@ -78,21 +78,21 @@ ms.locfileid: "59145622"
   
  如果通道已設為使用具有 X.509 憑證的訊息層級或傳輸層級 Secure Sockets Layer (SSL) 來進行驗證，則下列身分識別值有效：  
   
--   DNS： WCF 可確保在 SSL 交換期間提供的憑證包含 DNS 或`CommonName`(CN) 屬性等於在用戶端之 DNS 身分識別中指定的值。 請注意，除了判斷伺服器憑證是否有效，系統也會進行這些檢查。 根據預設，WCF 會驗證伺服器憑證由受信任的根授權單位發出。  
+- DNS： WCF 可確保在 SSL 交換期間提供的憑證包含 DNS 或`CommonName`(CN) 屬性等於在用戶端之 DNS 身分識別中指定的值。 請注意，除了判斷伺服器憑證是否有效，系統也會進行這些檢查。 根據預設，WCF 會驗證伺服器憑證由受信任的根授權單位發出。  
   
--   憑證。 在 SSL 交握期間，WCF 可確保遠端端點提供身分識別中指定正確的憑證值。  
+- 憑證。 在 SSL 交握期間，WCF 可確保遠端端點提供身分識別中指定正確的憑證值。  
   
--   憑證參考： 與「憑證」相同。  
+- 憑證參考： 與「憑證」相同。  
   
--   RSA： 在 SSL 交握期間，WCF 可確保遠端端點提供正確的身分識別中指定的 RSA 金鑰。  
+- RSA： 在 SSL 交握期間，WCF 可確保遠端端點提供正確的身分識別中指定的 RSA 金鑰。  
   
  如果服務使用具有 Windows 認證的訊息層級或傳輸層級 SSL 來進行驗證並交涉認證，則下列身分識別值有效：  
   
--   DNS： 交涉會傳遞服務的 SPN，以便檢查 DNS 名稱。 SPN 的形式為 `host/<dns name>`。  
+- DNS： 交涉會傳遞服務的 SPN，以便檢查 DNS 名稱。 SPN 的形式為 `host/<dns name>`。  
   
--   SPN： 會傳回明確的服務 SPN，例如 `host/myservice`。  
+- SPN： 會傳回明確的服務 SPN，例如 `host/myservice`。  
   
--   UPN： 服務帳戶的 UPN。 UPN 的格式`username` @ `domain`。 例如，當服務在使用者帳戶底下執行時，UPN 可能為 `username@contoso.com`。  
+- UPN： 服務帳戶的 UPN。 UPN 的格式`username` @ `domain`。 例如，當服務在使用者帳戶底下執行時，UPN 可能為 `username@contoso.com`。  
   
  您可以選擇以程式設計方式指定身分識別 (透過 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 屬性)。 如果未指定任何身分識別，且用戶端認證類型為 Windows，則預設值為 SPN (其值設為服務端點位址的主機名稱部分，並於前面加上 "host/" 常值)。 如果未指定任何身分識別，且用戶端認證類型為憑證，則預設為 `Certificate`， 訊息層級與傳輸層級安全性都適用這個預設值。  
   

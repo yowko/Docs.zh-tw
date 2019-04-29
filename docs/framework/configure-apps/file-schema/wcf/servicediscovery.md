@@ -3,11 +3,11 @@ title: <serviceDiscovery>
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
 ms.openlocfilehash: 54a9833f56927568af711a103bd3831b767711e4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788410"
 ---
 # <a name="servicediscovery"></a>\<serviceDiscovery>
 指定服務端點的探索能力。  

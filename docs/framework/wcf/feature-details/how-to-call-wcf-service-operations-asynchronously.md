@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
 ms.openlocfilehash: 2815757bf9b00375f763673f18180bfbf51a165a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779219"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>HOW TO：以非同步方式呼叫 WCF 服務作業
 本主題涵蓋用戶端如何能夠非同步地存取服務作業。 本主題中的服務會實作 `ICalculator` 介面。 用戶端可以透過使用事件驅動的非同步呼叫模型，以非同步方式在這個介面上呼叫作業。 (如需事件架構非同步呼叫模型的詳細資訊，請參閱[使用 「 事件架構非同步模式的多執行緒程式設計](https://go.microsoft.com/fwlink/?LinkId=248184))。 如需示範如何在服務中以非同步方式實作作業的範例，請參閱[How to:實作非同步服務作業](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)。 如需有關同步和非同步作業的詳細資訊，請參閱 <<c0> [ 同步和非同步作業](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。  
@@ -30,17 +30,17 @@ ms.locfileid: "59317438"
   
      這會產生，除了同步作業和標準委派架構非同步作業，WCF 用戶端類別，其中包含：  
   
-    -   兩個 <`operationName` > `Async`與事件架構非同步呼叫方法搭配使用的作業。 例如：  
+    - 兩個 <`operationName` > `Async`與事件架構非同步呼叫方法搭配使用的作業。 例如：  
   
          [!code-csharp[EventAsync#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#1)]
          [!code-vb[EventAsync#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#1)]  
   
-    -   作業已完成事件表單的 <`operationName` > `Completed`與事件架構非同步呼叫方法搭配使用。 例如：  
+    - 作業已完成事件表單的 <`operationName` > `Completed`與事件架構非同步呼叫方法搭配使用。 例如:   
   
          [!code-csharp[EventAsync#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#2)]
          [!code-vb[EventAsync#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#2)]  
   
-    -   <xref:System.EventArgs?displayProperty=nameWithType> 每個作業的類型 (表單的 <`operationName`>`CompletedEventArgs`) 與事件架構非同步呼叫方法搭配使用。 例如:   
+    - <xref:System.EventArgs?displayProperty=nameWithType> 每個作業的類型 (表單的 <`operationName`>`CompletedEventArgs`) 與事件架構非同步呼叫方法搭配使用。 例如:   
   
          [!code-csharp[EventAsync#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#3)]
          [!code-vb[EventAsync#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#3)]  

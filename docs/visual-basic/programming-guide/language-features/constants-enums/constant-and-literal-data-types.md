@@ -10,11 +10,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
 ms.openlocfilehash: 50e36aa13439bafcca27a7153a8c5d6043f03975
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906967"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>常數和常值資料類型 (Visual Basic)
 常值是表示為本身，而不是為變數的值或運算式，例如數字 3 或字串"Hello"的結果值。 常數是有意義的名稱，會取代常值，並保留在整個程式，而不是變數，可能會變更其值，這個相同的值。  

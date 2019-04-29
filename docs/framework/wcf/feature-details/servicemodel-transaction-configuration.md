@@ -5,11 +5,11 @@ helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
 ms.openlocfilehash: d5bb81c618e3b27df32763948dbe56c9b37995e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747702"
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel 交易組態
 Windows Communication Foundation (WCF) 提供三個屬性來設定服務的異動： `transactionFlow`， `transactionProtocol`，和`transactionTimeout`。  

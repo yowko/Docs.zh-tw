@@ -3,11 +3,11 @@ title: 變數及引數追蹤
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
 ms.openlocfilehash: 7062e44a18cfd4b07cc63f4b490c08fbbfeeb8a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755515"
 ---
 # <a name="variable-and-argument-tracking"></a>變數及引數追蹤
 追蹤工作流程的執行時，擷取資料通常很實用。 它可在存取追蹤記錄後期執行時，提供額外的內容。 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中，您可以在使用追蹤的工作流程中的任何活動範圍內擷取任何可見的變數或引數。 追蹤設定檔讓擷取資料變得非常容易。  
@@ -15,9 +15,9 @@ ms.locfileid: "59300888"
 ## <a name="variables-and-arguments"></a>變數與引數  
  變數和引數的擷取會在活動發出 ActivityStateRecord 時進行。  如果變數在活動的範圍內，則僅供擷取使用。 要在活動內擷取的變數會以下列方式指定：  
   
--   如果以變數名稱指定變數，則追蹤會在目前所追蹤的活動及父活動內尋找該變數。 追蹤會在目前活動範圍及父範圍中搜尋變數。  
+- 如果以變數名稱指定變數，則追蹤會在目前所追蹤的活動及父活動內尋找該變數。 追蹤會在目前活動範圍及父範圍中搜尋變數。  
   
--   如果要擷取的變數會指定利用名稱 ="*"，則會擷取目前追蹤之活動內的所有變數。 在此情況下，則不會擷取在範圍內但未在父活動中定義的變數。  
+- 如果要擷取的變數會指定利用名稱 ="*"，則會擷取目前追蹤之活動內的所有變數。 在此情況下，則不會擷取在範圍內但未在父活動中定義的變數。  
   
  擷取引數時，會根據活動的狀態擷取引數。 當活動的狀態是 Executing 時，則只有 `InArguments` 可供擷取。 若為其他任何活動狀態 (Closed、Faulted、Canceled)，則 InArgument 和 OutArgument 皆可供擷取。  
   

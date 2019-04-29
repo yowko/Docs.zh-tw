@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
 ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757596"
 ---
 # <a name="building-a-wpf-application-wpf"></a>建置 WPF 應用程式 (WPF)
 Windows Presentation Foundation (WPF) 應用程式可以建置為[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]可執行檔 (.exe)、 程式庫 (.dll) 或這兩種類型的組件的組合。 本主題介紹如何建置 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式，並說明建置流程中的主要步驟。  
@@ -21,11 +21,11 @@ Windows Presentation Foundation (WPF) 應用程式可以建置為[!INCLUDE[dnprd
 ## <a name="building-a-wpf-application"></a>建置 WPF 應用程式  
  WPF 應用程式可透過下列方式編譯：  
   
--   命令列。 應用程式只能包含程式碼 (沒有 XAML) 和一個應用程式定義檔。 如需詳細資訊，請參閱[使用 csc.exe 建置命令列](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)或[從命令列建置 (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。  
+- 命令列。 應用程式只能包含程式碼 (沒有 XAML) 和一個應用程式定義檔。 如需詳細資訊，請參閱[使用 csc.exe 建置命令列](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)或[從命令列建置 (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。  
   
--   Microsoft Build Engine (MSBuild)。 除了程式碼和 XAML 檔案，應用程式還必須包含 MSBuild 專案檔。 如需詳細資訊，請參閱＜MSBuild＞。  
+- Microsoft Build Engine (MSBuild)。 除了程式碼和 XAML 檔案，應用程式還必須包含 MSBuild 專案檔。 如需詳細資訊，請參閱＜MSBuild＞。  
   
--   Visual Studio。 Visual Studio 是整合式開發環境，可使用 MSBuild 編譯 WPF 應用程式，並包含用於建立 UI 的視覺化設計工具。 如需詳細資訊，請參閱 <<c0> [ 撰寫並管理使用 Visual Studio 的程式碼](/visualstudio/ide/index-writing-code)並[在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)。  
+- Visual Studio。 Visual Studio 是整合式開發環境，可使用 MSBuild 編譯 WPF 應用程式，並包含用於建立 UI 的視覺化設計工具。 如需詳細資訊，請參閱 <<c0> [ 撰寫並管理使用 Visual Studio 的程式碼](/visualstudio/ide/index-writing-code)並[在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)。  
   
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>   
 ## <a name="wpf-build-pipeline"></a>WPF 組建管線  
@@ -37,13 +37,13 @@ Windows Presentation Foundation (WPF) 應用程式可以建置為[!INCLUDE[dnprd
 ### <a name="pre-build-initializations"></a>建置前初始化  
  建置之前，[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 會判斷重要工具和程式庫的位置，包括：  
   
--   .NET Framework。  
+- .NET Framework。  
   
--   [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] 目錄。  
+- [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] 目錄。  
   
--   [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 參考組件的位置。  
+- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 參考組件的位置。  
   
--   組件搜尋路徑的屬性。  
+- 組件搜尋路徑的屬性。  
   
  [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 搜尋組件的第一個位置是參考組件目錄 (%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.0\\)。 在此步驟期間，建置流程也會初始化各種屬性和項目群組，並執行任何必要的清除工作。  
   
@@ -129,41 +129,41 @@ End Sub
 ## <a name="incremental-build-support"></a>累加建置支援  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 建置系統提供累加建置支援。 該系統對於偵測標記或程式碼中所做的變更相當明確，而且只會編譯受變更影響的成品。 累加建置機制使用下列檔案：  
   
--   $(*組件名稱*)_MarkupCompiler.Cache 檔案，用於維護目前的編譯器狀態。  
+- $(*組件名稱*)_MarkupCompiler.Cache 檔案，用於維護目前的編譯器狀態。  
   
--   $(*組件名稱*)_MarkupCompiler.lref 檔案，用於快取具有本機定義之類型參考的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案。  
+- $(*組件名稱*)_MarkupCompiler.lref 檔案，用於快取具有本機定義之類型參考的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案。  
   
  以下是管理累加建置的一組規則：  
   
--   檔案是建置系統偵測變更的最小單位。 因此對於程式碼檔，建置系統無法得知是否變更類型或是否新增程式碼。 同樣的情況也適用於專案檔。  
+- 檔案是建置系統偵測變更的最小單位。 因此對於程式碼檔，建置系統無法得知是否變更類型或是否新增程式碼。 同樣的情況也適用於專案檔。  
   
--   累加建置機制必須認定 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面有定義類別或使用其他類別。  
+- 累加建置機制必須認定 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面有定義類別或使用其他類別。  
   
--   如果 `Reference` 項目變更，則會重新編譯所有頁面。  
+- 如果 `Reference` 項目變更，則會重新編譯所有頁面。  
   
--   如果程式碼檔變更，則會重新編譯所有具有本機定義之類型參考的頁面。  
+- 如果程式碼檔變更，則會重新編譯所有具有本機定義之類型參考的頁面。  
   
--   如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案變更：  
+- 如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案變更：  
   
-    -   如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 在專案中宣告為 `Page`：如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 沒有本機定義的類型參考，請重新編譯該 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，再加上所有具有本機參考的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面；如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 有本機參考，請重新編譯所有具有本機參考的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面。  
+    - 如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 在專案中宣告為 `Page`：如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 沒有本機定義的類型參考，請重新編譯該 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，再加上所有具有本機參考的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面；如果 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 有本機參考，請重新編譯所有具有本機參考的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面。  
   
-    -   如果[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]宣告為`ApplicationDefinition`專案中： 重新編譯所有[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面 (原因： 每個[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]具有參考<xref:System.Windows.Application>可能已變更的型別)。  
+    - 如果[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]宣告為`ApplicationDefinition`專案中： 重新編譯所有[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面 (原因： 每個[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]具有參考<xref:System.Windows.Application>可能已變更的型別)。  
   
--   如果專案檔將程式碼檔宣告為應用程式定義，而不是 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案：  
+- 如果專案檔將程式碼檔宣告為應用程式定義，而不是 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案：  
   
-    -   檢查專案檔中的 `ApplicationClassName` 值是否已變更 (是否有新的應用程式類型)。 如果是，請重新編譯整個應用程式。  
+    - 檢查專案檔中的 `ApplicationClassName` 值是否已變更 (是否有新的應用程式類型)。 如果是，請重新編譯整個應用程式。  
   
-    -   否則，請重新編譯所有具有本機參考的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面。  
+    - 否則，請重新編譯所有具有本機參考的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面。  
   
--   如果專案檔變更︰請套用所有前述規則，並查看哪些項目需要重新編譯。 對下列屬性的變更會觸發完整的重新編譯：`AssemblyName`、`IntermediateOutputPath`、`RootNamespace` 和 `HostInBrowser`。  
+- 如果專案檔變更︰請套用所有前述規則，並查看哪些項目需要重新編譯。 對下列屬性的變更會觸發完整的重新編譯：`AssemblyName`、`IntermediateOutputPath`、`RootNamespace` 和 `HostInBrowser`。  
   
  以下是可能發生的重新編譯情節：  
   
--   重新編譯整個應用程式。  
+- 重新編譯整個應用程式。  
   
--   只重新編譯具有本機定義之類型參考的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案。  
+- 只重新編譯具有本機定義之類型參考的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案。  
   
--   不重新編譯任何項目 (如果專案中沒有任何變更)。  
+- 不重新編譯任何項目 (如果專案中沒有任何變更)。  
   
 ## <a name="see-also"></a>另請參閱
 

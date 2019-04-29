@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ed32fe643a7722eaf1af38e6079096194690e950
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771887"
 ---
 # <a name="iclrruntimehost-interface"></a>ICLRRuntimeHost 介面
 提供的功能類似於[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) .NET Framework 第 1 版，以下列變更所提供的介面：  
   
--   新增[SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)來設定主應用程式控制項介面的方法。  
+- 新增[SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)來設定主應用程式控制項介面的方法。  
   
--   略過其中所提供的一些方法`ICorRuntimeHost`。  
+- 略過其中所提供的一些方法`ICorRuntimeHost`。  
   
 ## <a name="methods"></a>方法  
   

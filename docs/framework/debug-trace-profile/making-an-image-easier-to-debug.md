@@ -10,17 +10,17 @@ ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5bab707afb059d4fcbd46a9ee54edead991be523
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754215"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>使您更輕鬆地在.NET 中偵錯映像
 
 當編譯 Unmanaged 程式碼時，您可以設定 IDE 參數或命令列選項，設定可執行映像進行偵錯。 例如，您可以在 Visual C++ 中使用 /**Zi** 命令列選項，要求它發出偵錯符號檔 (副檔名為 .pdb)。 同樣地，/**Od** 命令列選項會通知編譯器停用最佳化。 產生的程式碼的執行速度較慢，但很容易偵錯，要是此為必要。
 
-當編譯.NET Framework managed 程式碼時，例如 Visual c + +、 Visual Basic 和 C# 編譯器會其原始程式編譯成 Microsoft 中間語言 (MSIL)。 MSIL 就 JIT 編譯，剛好執行前，為原生機器碼。 如同使用 Unmanaged 程式碼一樣，您可以設定 IDE 參數或命令列選項，設定可執行映像進行偵錯。 您也可以設定相同的方式中的偵錯 JIT 編譯。
+當編譯.NET Framework managed 程式碼，編譯器，例如視覺效果C++，Visual Basic 和C#其原始程式編譯成 Microsoft 中間語言 (MSIL)。 MSIL 就 JIT 編譯，剛好執行前，為原生機器碼。 如同使用 Unmanaged 程式碼一樣，您可以設定 IDE 參數或命令列選項，設定可執行映像進行偵錯。 您也可以設定相同的方式中的偵錯 JIT 編譯。
 
 JIT 組態有兩個層面：
 

@@ -3,11 +3,11 @@ title: <activityScheduledQueries> WCF 的
 ms.date: 03/30/2017
 ms.assetid: e351329f-9676-4f11-9b19-f4bac82f36fc
 ms.openlocfilehash: 1c9c292080016d7a2d0014ed07be371c0e247621
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701121"
 ---
 # <a name="activityscheduledqueries-of-wcf"></a>\<activityScheduledQueries > 的 WCF
 代表查詢的集合，可用來追蹤已排程且由父活動執行的活動。 追蹤參與者必須要具備查詢，才能訂閱活動排程記錄。  

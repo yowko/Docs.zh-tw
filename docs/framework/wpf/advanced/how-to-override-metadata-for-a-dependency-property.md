@@ -10,11 +10,11 @@ helpviewer_keywords:
 - overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
 ms.openlocfilehash: 7f20708722660aa4f86462efd50939935f840613
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768624"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>HOW TO：覆寫相依性屬性的中繼資料
 此範例示範如何覆寫預設相依性屬性中繼資料來自繼承的類別，藉由呼叫<xref:System.Windows.DependencyProperty.OverrideMetadata%2A>方法，並提供特定類型的中繼資料。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
 ms.openlocfilehash: 0d1aee4650ea29083348af482e445011289e9581
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794962"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>控制 XML 序列化的屬性
 您可以將下表中的屬性套用到類別和類別成員，以便控制 <xref:System.Xml.Serialization.XmlSerializer> 序列化或還原序列化類別之執行個體的方式。 若要了解這些屬性如何控制 XML 序列化，請參閱[使用屬性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)。  

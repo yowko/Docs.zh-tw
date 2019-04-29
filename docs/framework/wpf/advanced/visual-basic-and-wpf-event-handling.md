@@ -6,11 +6,11 @@ helpviewer_keywords:
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
 ms.openlocfilehash: c6e1863850ebf04408c7ffc7b784e9ca3ca12cf5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778988"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic 和 WPF 事件處理
 Microsoft Visual Basic.NET 語言的具體來說，您可以使用語言特有`Handles`關鍵字加入事件處理常式關聯執行個體，而不是附加屬性的事件處理常式，或使用<xref:System.Windows.UIElement.AddHandler%2A>方法。 不過，將處理常式附加至執行個體的 `Handles` 技術有一些限制，因為 `Handles` 語法無法支援 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件系統中某些特定的路由事件功能。  

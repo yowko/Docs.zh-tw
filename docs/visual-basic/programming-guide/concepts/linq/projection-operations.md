@@ -3,11 +3,11 @@ title: 投影作業 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
 ms.openlocfilehash: e2af45f9cbbed9eb88095a30e2b77a7730740898
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766685"
 ---
 # <a name="projection-operations-visual-basic"></a>投影作業 (Visual Basic)
 投影是指將物件轉換成新形式的作業，而這個形式通常僅包含後續即將使用的屬性。 透過使用投影，您可以建構根據每個物件所建立的新型別。 您可以投影屬性並對其執行數學函式。 您也可以投影原始物件，而不進行任何變更。  

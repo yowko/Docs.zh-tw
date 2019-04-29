@@ -16,11 +16,11 @@ ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: aff2dd26db4abb892b2fc775052b6e833aa25267
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754696"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>使用偵錯工具顯示屬性增強偵錯功能
 
@@ -45,11 +45,11 @@ class MyHashtable
 ## <a name="using-the-debuggerbrowsableattribute"></a>使用 DebuggerBrowsableAttribute
  將 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 套用至欄位或屬性，以指定欄位或屬性在偵錯工具視窗中的顯示方式。 這個屬性的建構函式會使用其中一個 <xref:System.Diagnostics.DebuggerBrowsableState> 列舉值，指定下列狀態之一：
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Never> 指出成員未顯示在資料視窗中。  例如，對欄位的 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 使用此值，會從階層中移除欄位；當您按一下類型執行個體的加號 (+) 展開封入類型時，不會顯示欄位。
+- <xref:System.Diagnostics.DebuggerBrowsableState.Never> 指出成員未顯示在資料視窗中。  例如，對欄位的 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 使用此值，會從階層中移除欄位；當您按一下類型執行個體的加號 (+) 展開封入類型時，不會顯示欄位。
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> 指出已顯示成員，但預設不展開。  這是預設行為。
+- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> 指出已顯示成員，但預設不展開。  這是預設行為。
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> 指出成員本身不會顯示，但如果它是陣列或集合，則會顯示其組成物件。
+- <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> 指出成員本身不會顯示，但如果它是陣列或集合，則會顯示其組成物件。
 
 > [!NOTE]
 >  .NET Framework 2.0 版中的 Visual Basic 不支援 <xref:System.Diagnostics.DebuggerBrowsableAttribute>。

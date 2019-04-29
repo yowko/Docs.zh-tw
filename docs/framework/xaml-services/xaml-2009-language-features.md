@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
 ms.openlocfilehash: 05f811cd0d95f7605963dae851430fb6bf0e9f7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938798"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009 語言功能
 XAML 2009 是新 XAML 語言功能的縮寫詞彙，可擴充現有的 XAML 語言規格。 XAML 2009 引進了數個新的指示詞和建構。 其中包括[X:arguments 指示詞](x-arguments-directive.md); [X:factorymethod 指示詞](x-factorymethod-directive.md); [X:reference 標記延伸](x-reference-markup-extension.md); [X:typearguments 指示詞](x-typearguments-directive.md); 和通用語言基本類型的內建類型 (例如`x:Char`)。  

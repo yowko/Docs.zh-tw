@@ -3,11 +3,11 @@ title: 設計模式：以清單為基礎的發行訂閱
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
 ms.openlocfilehash: e98fab5c8e7570917a4ba755fa372832fe0b26b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773057"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>設計模式：以清單為基礎的發行訂閱
 這個範例說明實作 Windows Communication Foundation (WCF) 程式的清單架構發行訂閱模式。  
@@ -130,23 +130,23 @@ public class PriceChangeEventArgs : EventArgs
   
 1. 設定服務機器：  
   
-    1.  在服務機器上，建立一個名稱為 ServiceModelSamples 的虛擬目錄。 批次檔 Setupvroot.bat [Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)可用來建立磁碟目錄與虛擬目錄。  
+    1. 在服務機器上，建立一個名稱為 ServiceModelSamples 的虛擬目錄。 批次檔 Setupvroot.bat [Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)可用來建立磁碟目錄與虛擬目錄。  
   
-    2.  將服務程式檔案從 %SystemDrive%\Inetpub\wwwroot\servicemodelsamples 複製到服務機器上的 ServiceModelSamples 虛擬目錄。 請務必將檔案放在 \bin 目錄中。  
+    2. 將服務程式檔案從 %SystemDrive%\Inetpub\wwwroot\servicemodelsamples 複製到服務機器上的 ServiceModelSamples 虛擬目錄。 請務必將檔案放在 \bin 目錄中。  
   
-    3.  測試您是否能夠使用瀏覽器，從用戶端機器存取服務。  
+    3. 測試您是否能夠使用瀏覽器，從用戶端機器存取服務。  
   
 2. 設定用戶端機器：  
   
-    1.  將語言特定資料夾下 \client\bin\ 資料夾中的用戶端程式檔案複製到用戶端機器。  
+    1. 將語言特定資料夾下 \client\bin\ 資料夾中的用戶端程式檔案複製到用戶端機器。  
   
-    2.  在每個用戶端組態檔中，將端點定義的位址值變更成符合服務的新位址。 以位址中的完整網域名稱取代 "localhost" 的任何參考。  
+    2. 在每個用戶端組態檔中，將端點定義的位址值變更成符合服務的新位址。 以位址中的完整網域名稱取代 "localhost" 的任何參考。  
   
 3. 設定資料來源機器：  
   
-    1.  將語言特定資料夾下 \datasource\bin\ 資料夾中的資料來源程式檔複製到資料來源機器中。  
+    1. 將語言特定資料夾下 \datasource\bin\ 資料夾中的資料來源程式檔複製到資料來源機器中。  
   
-    2.  在資料來源組態檔中，將端點定義的位址值變更成符合服務的新位址。 以位址中的完整網域名稱取代 "localhost" 的任何參考。  
+    2. 在資料來源組態檔中，將端點定義的位址值變更成符合服務的新位址。 以位址中的完整網域名稱取代 "localhost" 的任何參考。  
   
 4. 在用戶端機器上，從命令提示字元啟動 Client.exe。  
   

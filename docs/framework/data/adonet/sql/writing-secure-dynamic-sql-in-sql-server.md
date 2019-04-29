@@ -3,11 +3,11 @@ title: 在 SQL Server 中撰寫安全的動態 SQL
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
 ms.openlocfilehash: 236fd925740d37c2cccabfcebfb7fcb46361489d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757712"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>在 SQL Server 中撰寫安全的動態 SQL
 「SQL 插入」(SQL Injection) 是指惡意的使用者用來輸入 Transact-SQL 陳述式 (而非有效輸入) 的流程。 如果該輸入未經驗證而直接傳遞至伺服器，而且應用程式不慎執行了插入的程式碼，則攻擊就可能會危及或損毀資料。  
@@ -21,34 +21,34 @@ ms.locfileid: "59107350"
   
  下面是一些有用的方針：  
   
--   絕對不要直接根據使用者輸入來建立 Transact-SQL 陳述式，請使用預存程序 (Stored Procedure) 來驗證使用者輸入。  
+- 絕對不要直接根據使用者輸入來建立 Transact-SQL 陳述式，請使用預存程序 (Stored Procedure) 來驗證使用者輸入。  
   
--   透過測試型別、長度、格式和範圍，驗證使用者輸入。 請使用 Transact-SQL QUOTENAME() 函式來逸出系統名稱或使用 REPLACE() 函式來逸出字串中的任何字元。  
+- 透過測試型別、長度、格式和範圍，驗證使用者輸入。 請使用 Transact-SQL QUOTENAME() 函式來逸出系統名稱或使用 REPLACE() 函式來逸出字串中的任何字元。  
   
--   在每個應用程式層中實作多個驗證層。  
+- 在每個應用程式層中實作多個驗證層。  
   
--   測試輸入的大小和資料型別並強制執行適當的限制。 這樣做有助於防止故意的緩衝區滿溢。  
+- 測試輸入的大小和資料型別並強制執行適當的限制。 這樣做有助於防止故意的緩衝區滿溢。  
   
--   測試字串變數的內容並僅接受預期的值。 請拒絕包含二進位資料、逸出序列 (Escape Sequence) 和註解字元的項目。  
+- 測試字串變數的內容並僅接受預期的值。 請拒絕包含二進位資料、逸出序列 (Escape Sequence) 和註解字元的項目。  
   
--   如果您要使用 XML 文件，請在資料進入時，針對結構描述來驗證所有資料。  
+- 如果您要使用 XML 文件，請在資料進入時，針對結構描述來驗證所有資料。  
   
--   在多層環境中，所有資料都應該先進行驗證，然後才能進入受信任的區域。  
+- 在多層環境中，所有資料都應該先進行驗證，然後才能進入受信任的區域。  
   
--   在可從中建構檔案名稱的欄位中，請勿接受下列字串：AUX、CLOCK$、COM1 到 COM8、CON、CONFIG$、LPT1 到 LPT8、NUL 和 PRN。  
+- 在可從中建構檔案名稱的欄位中，請勿接受下列字串：AUX、CLOCK$、COM1 到 COM8、CON、CONFIG$、LPT1 到 LPT8、NUL 和 PRN。  
   
--   請使用 <xref:System.Data.SqlClient.SqlParameter> 物件搭配預存程序和命令來提供型別檢查 (Type Checking) 和長度驗證。  
+- 請使用 <xref:System.Data.SqlClient.SqlParameter> 物件搭配預存程序和命令來提供型別檢查 (Type Checking) 和長度驗證。  
   
--   請在用戶端程式碼中使用 <xref:System.Text.RegularExpressions.Regex> 運算式來篩選無效的字元。  
+- 請在用戶端程式碼中使用 <xref:System.Text.RegularExpressions.Regex> 運算式來篩選無效的字元。  
   
 ## <a name="dynamic-sql-strategies"></a>動態 SQL 策略  
  在程序性程式碼中執行動態建立的 SQL 陳述式會中斷擁有權鏈結，進而導致 SQL Server 針對動態 SQL 所存取的物件，檢查呼叫端的權限。  
   
  SQL Server 提供兩種方法，可使用執行動態 SQL 的預存程序和使用者定義函式，來授與資料存取權給使用者。  
   
--   使用模擬搭配 Transact-SQL EXECUTE AS 子句，如[在 SQL Server 中使用模擬來自訂權限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)中所述。  
+- 使用模擬搭配 Transact-SQL EXECUTE AS 子句，如[在 SQL Server 中使用模擬來自訂權限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)中所述。  
   
--   使用憑證簽署預存程序，如[在 SQL Server 中簽署預存程序](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)中所述。  
+- 使用憑證簽署預存程序，如[在 SQL Server 中簽署預存程序](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)中所述。  
   
 ### <a name="execute-as"></a>EXECUTE AS  
  EXECUTE AS 子句會將呼叫端的權限取代成 EXECUTE AS 子句中指定之使用者的權限。 巢狀預存程序或觸發程序 (Trigger) 會在 Proxy 使用者的安全性內容底下執行。 這樣會中斷仰賴列層級安全性或需要稽核的應用程式。 傳回使用者識別的某些函式會傳回 EXECUTE AS 子句中指定的使用者，而非原始呼叫端。 只有在執行此程序之後，或發出 REVERT 陳述式時，執行內容才會還原成原始呼叫端。  

@@ -3,11 +3,11 @@ title: 指定未巢狀放置之項目間的關聯
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
 ms.openlocfilehash: 4b7b216e58f36302db29c4b4b5176339521b0f17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607913"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>指定未巢狀放置之項目間的關聯
 項目未巢狀化時，不會建立任何隱含關聯， 不過，您可以明確指定不使用巢狀的項目之間的關聯**msdata: relationship**註釋。  

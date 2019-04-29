@@ -8,11 +8,11 @@ helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
 ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788814"
 ---
 # <a name="structured-navigation-overview"></a>結構化巡覽概觀
 可由裝載的內容[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]，則<xref:System.Windows.Controls.Frame>，或<xref:System.Windows.Navigation.NavigationWindow>是可由組件識別的頁面所組成[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]和超連結巡覽至。 頁面的結構及其可被巡覽的方式，如超連結所定義，稱之為巡覽拓撲。 這種拓撲適合各種不同的應用程式類型，尤其是巡覽文件的應用程式。 針對這類應用程式，使用者可以從一頁巡覽到另一頁，頁面彼此間不需要了解。  
@@ -25,15 +25,15 @@ ms.locfileid: "59320067"
 ## <a name="structured-navigation"></a>結構化巡覽  
  當一個頁面在結構化巡覽中呼叫另一個頁面時，需要下列部分或全部行為︰  
   
--   呼叫端頁面會巡覽至呼叫的頁面，並選擇性地傳遞被呼叫頁面所需的參數。  
+- 呼叫端頁面會巡覽至呼叫的頁面，並選擇性地傳遞被呼叫頁面所需的參數。  
   
--   當使用者用完呼叫端頁面時，呼叫的頁面會選擇性特別傳回給呼叫端頁面︰  
+- 當使用者用完呼叫端頁面時，呼叫的頁面會選擇性特別傳回給呼叫端頁面︰  
   
-    -   傳回狀態資訊，說明如何完成呼叫端頁面 (例如，使用者按下 [確定] 按鈕或 [取消] 按鈕)。  
+    - 傳回狀態資訊，說明如何完成呼叫端頁面 (例如，使用者按下 [確定] 按鈕或 [取消] 按鈕)。  
   
-    -   傳回收集的使用者資料 (例如，新進員工的詳細資料)。  
+    - 傳回收集的使用者資料 (例如，新進員工的詳細資料)。  
   
--   當呼叫端頁面傳回被呼叫的頁面時，巡覽記錄會移除呼叫的頁面，隔離呼叫頁面中的各個執行個體。  
+- 當呼叫端頁面傳回被呼叫的頁面時，巡覽記錄會移除呼叫的頁面，隔離呼叫頁面中的各個執行個體。  
   
  下圖說明這些行為：  
   
@@ -115,17 +115,17 @@ ms.locfileid: "59320067"
   
  您不需要將參數傳遞給呼叫的頁面。 您反而可以執行下列作業︰  
   
--   從呼叫端頁面︰  
+- 從呼叫端頁面︰  
   
-    1.  具現化被呼叫<xref:System.Windows.Navigation.PageFunction%601>使用預設建構函式。  
+    1. 具現化被呼叫<xref:System.Windows.Navigation.PageFunction%601>使用預設建構函式。  
   
-    2.  存放區中的參數<xref:System.Windows.Application.Properties%2A>。  
+    2. 存放區中的參數<xref:System.Windows.Application.Properties%2A>。  
   
-    3.  瀏覽至 被呼叫<xref:System.Windows.Navigation.PageFunction%601>。  
+    3. 瀏覽至 被呼叫<xref:System.Windows.Navigation.PageFunction%601>。  
   
--   從被呼叫<xref:System.Windows.Navigation.PageFunction%601>:  
+- 從被呼叫<xref:System.Windows.Navigation.PageFunction%601>:  
   
-    -   擷取並使用儲存在參數<xref:System.Windows.Application.Properties%2A>。  
+    - 擷取並使用儲存在參數<xref:System.Windows.Application.Properties%2A>。  
   
  但是，您很快就會發現，您還是需要使用程式碼來具現化並巡覽至呼叫的頁面，才能收集呼叫的頁面所傳回的資料。 基於這個理由，<xref:System.Windows.Navigation.PageFunction%601>需求保持運作; 否則下次您瀏覽至<xref:System.Windows.Navigation.PageFunction%601>，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]具現化<xref:System.Windows.Navigation.PageFunction%601>使用預設建構函式。  
   

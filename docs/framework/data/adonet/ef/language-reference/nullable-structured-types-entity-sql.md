@@ -3,11 +3,11 @@ title: 可為 Null 的結構類型 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
 ms.openlocfilehash: 632b092e1d0d99a2a40cc3cd4b323e234de6232b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760320"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>可為 Null 的結構類型 (Entity SQL)
 結構化型別的 `null` 執行個體是不存在的執行個體。 這與現有的執行個體 (所有的屬性都有 `null` 值) 不同。  
@@ -17,28 +17,28 @@ ms.locfileid: "59127851"
 ## <a name="kinds-of-nullable-structured-types"></a>可為 Null 的結構化型別種類  
  可為 Null 的結構化型別有三種：  
   
--   資料列型別。  
+- 資料列型別。  
   
--   複雜類型。  
+- 複雜類型。  
   
--   實體類型。  
+- 實體類型。  
   
 ## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a>產生結構化型別之 Null 執行個體的程式碼模式  
  下列案例會產生 `null` 執行個體：  
   
--   將 `null` 定形為結構化型別：  
+- 將 `null` 定形為結構化型別：  
   
     ```  
     TREAT (NULL AS StructuredType)  
     ```  
   
--   將基底型別向上轉型成衍生型別：  
+- 將基底型別向上轉型成衍生型別：  
   
     ```  
     TREAT (BaseType AS DerivedType)  
     ```  
   
--   false 條件上的外部聯結 (Outer Join)：  
+- false 條件上的外部聯結 (Outer Join)：  
   
     ```  
     Collection1 LEFT OUTER JOIN Collection2  
@@ -59,19 +59,19 @@ ms.locfileid: "59127851"
     ON FalseCondition  
     ```  
   
--   為 `null` 參考取值：  
+- 為 `null` 參考取值：  
   
     ```  
     DEREF(NullRef)  
     ```  
   
--   從空的集合中取得 ANYELEMENT：  
+- 從空的集合中取得 ANYELEMENT：  
   
     ```  
     ANYELEMENT(EmptyCollection)  
     ```  
   
--   檢查是否有結構化型別的 `null` 執行個體：  
+- 檢查是否有結構化型別的 `null` 執行個體：  
   
     ```csharp  
     ...  

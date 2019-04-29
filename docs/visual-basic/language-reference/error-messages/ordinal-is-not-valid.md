@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
 ms.openlocfilehash: 28f78161e14604c1f59872801855ccc918faec58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772485"
 ---
 # <a name="ordinal-is-not-valid"></a>無效的序數
 您的動態連結程式庫 (DLL) 的呼叫表示使用的數字，而不是程序名稱，使用`#num`語法。 此錯誤有下列可能的原因：  
   
--   嘗試將轉換`#num`失敗為序數的運算式。  
+- 嘗試將轉換`#num`失敗為序數的運算式。  
   
--   `#num`指定 DLL 中未指定任何函式。  
+- `#num`指定 DLL 中未指定任何函式。  
   
--   類型程式庫有無效的宣告，因而導致無效的序數數字的內部使用。  
+- 類型程式庫有無效的宣告，因而導致無效的序數數字的內部使用。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   

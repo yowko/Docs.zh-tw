@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bc8d936ac4fca704e7e3069209d8ff75d46b044d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763454"
 ---
 # <a name="iclrtaskyieldtask-method"></a>ICLRTask::YieldTask 方法
 要求 common language runtime (CLR) 擱置在一旁把工作的目前[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)執行個體表示，並提供其他工作的處理器時間。  

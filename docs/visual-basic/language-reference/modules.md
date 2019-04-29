@@ -5,11 +5,11 @@ helpviewer_keywords:
 - modules, Visual Basic
 ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
 ms.openlocfilehash: 0bb33b102358fd2d0290fd413b09448255522856
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778647"
 ---
 # <a name="modules-visual-basic"></a>模組 (Visual Basic)
 Visual Basic 提供數個模組，可讓您簡化一般工作包括管理字串，執行數學計算，取得系統資訊、 執行檔案和目錄的作業，在您的程式碼等等。 下表列出 Visual Basic 所提供的模組。  

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5865935af96260982d47b778d208f4235f6245e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775020"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply 方法
 通知分析工具的遠端呼叫的伺服器端部分已完成，而且用戶端正在接收以及有關處理回覆。  
@@ -39,11 +39,11 @@ HRESULT RemotingClientReceivingReply(
  `pCookie`  
  [in]值，這個值會對應中提供的價值[icorprofilercallback:: Remotingserversendingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)在這些情況下：  
   
--   遠端處理 GUID cookie 在作用中。  
+- 遠端處理 GUID cookie 在作用中。  
   
--   成功的訊息傳輸通道。  
+- 成功的訊息傳輸通道。  
   
--   GUID cookie 上為作用中伺服器端處理序。  
+- GUID cookie 上為作用中伺服器端處理序。  
   
  這可讓您輕易地配對的遠端呼叫。  
   

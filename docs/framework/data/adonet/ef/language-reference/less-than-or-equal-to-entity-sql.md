@@ -3,11 +3,11 @@ title: < = （小於或等於） (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 7c46da5c-fa09-4d90-adcc-c7e1b769d8e6
 ms.openlocfilehash: 7a65984da22d125bdbdd5cfadb5a2051fa3dafdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780272"
 ---
 # <a name="-less-than-or-equal-to-entity-sql"></a>\<= (小於或等於) (Entity SQL)
 比較兩個運算式來判斷左運算式的值是否小於或等於右運算式。  

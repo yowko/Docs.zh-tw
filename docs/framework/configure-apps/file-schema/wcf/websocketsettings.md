@@ -3,11 +3,11 @@ title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
 ms.openlocfilehash: 1101d021f3c7436c4f45a22a48e50f6d1553f753
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769742"
 ---
 # <a name="websocketsettings"></a>\<webSocketSettings>
 用來指定 Web 通訊端設定的組態元素。  

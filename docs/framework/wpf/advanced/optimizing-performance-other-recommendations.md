@@ -12,28 +12,28 @@ helpviewer_keywords:
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
 ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773096"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>最佳化效能：其他建議
 <a name="introduction"></a> 本主題提供[最佳化 WPF 應用程式效能](optimizing-wpf-application-performance.md)一節中主題所涵蓋內容以外的效能建議。  
   
  此主題包括下列章節：  
   
--   [筆刷透明度與項目透明度的比較](#Opacity)  
+- [筆刷透明度與項目透明度的比較](#Opacity)  
   
--   [物件瀏1覽](#Navigation_Objects)  
+- [物件瀏1覽](#Navigation_Objects)  
   
--   [大型立體表面的點擊測試](#Hit_Testing)  
+- [大型立體表面的點擊測試](#Hit_Testing)  
   
--   [CompositionTarget.Rendering 事件](#CompositionTarget_Rendering_Event)  
+- [CompositionTarget.Rendering 事件](#CompositionTarget_Rendering_Event)  
   
--   [避免使用 ScrollBarVisibility = Auto](#Avoid_Using_ScrollBarVisibility)  
+- [避免使用 ScrollBarVisibility = Auto](#Avoid_Using_ScrollBarVisibility)  
   
--   [設定字型快取服務以縮短啟動時間](#FontCache)  
+- [設定字型快取服務以縮短啟動時間](#FontCache)  
   
 <a name="Opacity"></a>   
 ## <a name="opacity-on-brushes-versus-opacity-on-elements"></a>筆刷透明度與項目透明度的比較  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
 author: KrzysztofCwalina
 ms.openlocfilehash: 441dc2777cd8d221300c526b6b31a647af60ca71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756854"
 ---
 # <a name="operator-overloads"></a>運算子多載
 運算子多載可讓顯示如同它們是內建語言基本類型的 framework 型別。  

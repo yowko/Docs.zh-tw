@@ -13,11 +13,11 @@ ms.assetid: 2f5d9e7c-ae51-4155-a435-54347aa1f091
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2399f72b6efcdf69d8ff4bb3bce541073063c750
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753929"
 ---
 # <a name="marshalcleanuperror-mda"></a>marshalCleanupError MDA
 如果通用語言執行平台 (CLR) 在嘗試清除用來封送處理本機與 Managed 程式碼界限間之資料類型的暫存結構和記憶體時，發生錯誤，就會啟用 `marshalCleanupError` Managed 偵錯助理 (MDA)。  

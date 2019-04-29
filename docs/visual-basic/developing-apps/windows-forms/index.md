@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 ms.openlocfilehash: 99aa61d921217ab5638172a54697054e8421fd5c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768523"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Form 應用程式基本概念 (Visual Basic)
 Visual Basic 中很重要的一部分是建立本機使用者的電腦執行的 Windows Forms 應用程式的能力。 您可以使用 Visual Studio 來建立使用 Windows Form 的應用程式和使用者介面。 在 Windows Forms 應用程式的基礎類別<xref:System.Windows.Forms>命名空間。  
@@ -18,11 +18,11 @@ Visual Basic 中很重要的一部分是建立本機使用者的電腦執行的 
 ## <a name="designing-windows-forms-applications"></a>設計 Windows Forms 應用程式  
  您可以使用 Visual Studio 建立 Windows Form 和 Windows 服務應用程式。 如需詳細資訊，請參閱下列主題：  
   
--   [開始使用 Windows Form](../../../framework/winforms/getting-started-with-windows-forms.md)。 提供有關如何建立和撰寫 Windows Forms 的資訊。  
+- [開始使用 Windows Form](../../../framework/winforms/getting-started-with-windows-forms.md)。 提供有關如何建立和撰寫 Windows Forms 的資訊。  
    
--   [Windows Form 控制項](../../../framework/winforms/controls/index.md)。 主題詳細說明使用 Windows Form 控制項的集合。  
+- [Windows Form 控制項](../../../framework/winforms/controls/index.md)。 主題詳細說明使用 Windows Form 控制項的集合。  
   
--   [Windows 服務應用程式](../../../framework/windows-services/index.md)。 列出主題，說明如何建立 Windows 服務。  
+- [Windows 服務應用程式](../../../framework/windows-services/index.md)。 列出主題，說明如何建立 Windows 服務。  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>建置豐富、互動式的使用者介面  
  Windows Form 是智慧型用戶端元件[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，一組 managed 程式庫可讓一般的應用程式工作，例如讀取和寫入至檔案系統。 使用像是 Visual Studio 的開發環境，您可以建立 Windows Form 應用程式來顯示資訊、 要求使用者，輸入，並進行通訊與遠端電腦透過網路。  
@@ -46,7 +46,7 @@ Visual Basic 中很重要的一部分是建立本機使用者的電腦執行的 
   
 |以|請參閱|  
 |--------|---------|  
-|使用 Visual Studio 中建立新的 Windows Forms 應用程式|[教學課程 1:建立圖片檢視器](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|  
+|使用 Visual Studio 中建立新的 Windows Forms 應用程式|[教學課程 1：建立圖片檢視器](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|  
 |使用在表單上控制項|[如何：將控制項新增至 Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |建立使用圖形 <xref:System.Drawing>|[圖形程式設計入門](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |建立自訂控制項|[如何：繼承自 UserControl 類別](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
@@ -54,8 +54,7 @@ Visual Basic 中很重要的一部分是建立本機使用者的電腦執行的 
 ## <a name="displaying-and-manipulating-data"></a>顯示和操作資料  
  許多應用程式必須顯示來自資料庫、XML 檔案、XML Web 服務或其他資料來源的資料。 Windows Form 提供彈性的控制項稱為<xref:System.Windows.Forms.DataGridView>呈現傳統資料列和資料行格式，這類表格式資料，使每一項資料佔有自己的儲存格的控制項。 使用<xref:System.Windows.Forms.DataGridView>您可以自訂個別儲存格的外觀、 鎖定任意的資料列和資料行就位，並顯示在儲存格中，至於其他功能的複雜控制項。  
   
- 利用 Windows Form 智慧型用戶端，透過網路連接到資料來源是一項簡單的工作。 <xref:System.Windows.Forms.BindingSource>元件，新的 Visual Studio 2005 中的 Windows Form 和[!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]，代表資料來源的連接，並公開將資料繫結至控制項，巡覽至上一頁和下一頁記錄、 編輯記錄，以及儲存的方法變更回原始的來源。 
-  <xref:System.Windows.Forms.BindingNavigator> 控制項透過 <xref:System.Windows.Forms.BindingSource> 元件提供一個簡單的介面，可讓使用者在記錄之間巡覽。  
+ 利用 Windows Form 智慧型用戶端，透過網路連接到資料來源是一項簡單的工作。 <xref:System.Windows.Forms.BindingSource>元件，新的 Visual Studio 2005 中的 Windows Form 和[!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]，代表資料來源的連接，並公開將資料繫結至控制項，巡覽至上一頁和下一頁記錄、 編輯記錄，以及儲存的方法變更回原始的來源。 <xref:System.Windows.Forms.BindingNavigator> 控制項透過 <xref:System.Windows.Forms.BindingSource> 元件提供一個簡單的介面，可讓使用者在記錄之間巡覽。  
   
 ### <a name="data-bound-controls"></a>資料繫結控制項  
  您可以建立資料繫結控制項輕鬆地使用資料來源視窗中，顯示您的專案中的資料來源，例如資料庫、 Web 服務和物件。 將項目從這個視窗拖曳到專案中的表單上，即可建立資料繫結控制項。 您也可以將物件從 [資料來源] 視窗拖曳至現有的控制項，以將現有的控制項繫結至資料。  

@@ -10,11 +10,11 @@ ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: ad3ac93b2a7f92cd33787620fc0caa2b632aa072
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705359"
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<清除 > NameValueSectionHandler 和 DictionarySectionHandler 的項目
 
@@ -32,7 +32,7 @@ ms.locfileid: "55281871"
 
 ## <a name="attributes"></a>屬性
 
-無
+None
 
 ## <a name="parent-element"></a>父項目
 
@@ -42,7 +42,7 @@ ms.locfileid: "55281871"
 
 ## <a name="child-elements"></a>子元素
 
-無
+None
 
 ## <a name="remarks"></a>備註
 

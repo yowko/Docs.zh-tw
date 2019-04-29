@@ -3,17 +3,17 @@ title: 補償
 ms.date: 03/30/2017
 ms.assetid: 722e9766-48d7-456c-9496-d7c5c8f0fa76
 ms.openlocfilehash: af29ba61ff5bede9208f2ab706f5e0ce1ff12274
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774279"
 ---
 # <a name="compensation"></a>補償
 補償中 Windows Workflow Foundation (WF) 是一種機制，藉由讓先前完成的工作可以復原或得到補償 （依照應用程式定義的邏輯） 發生後續失敗時。 本節描述如何在工作流程中使用補償。  
   
 ## <a name="compensation-vs-transactions"></a>補償與異動  
- 交易可讓您將多項作業結合成單一工作單位。 如果交易處理序的任何部分中發生錯誤，使用交易可讓應用程式中止 (回復) 在交易內部執行的所有變更。 然而，如果屬於長期執行的工作，可能就不適合使用交易。 例如，假設有一項旅遊計劃應用程式實作為工作流程。 工作流程的步驟包括預訂班機、等待經理核准，然後繳交班機費用。 這些處理程序可能要耗費許多天，因此讓預定班機與繳交班機費用的步驟都在同一個交易中，會是一個不實際的選擇。 在此類型案例中，如果處理程序稍後失敗，則可以使用補償復原工作流程的預定班機步驟。  
+ 異動可讓您將多項作業結合成單一工作單位。 如果異動處理序的任何部分中發生錯誤，使用異動可讓應用程式中止 (回復) 在異動內部執行的所有變更。 然而，如果屬於長期執行的工作，可能就不適合使用異動。 例如，假設有一項旅遊計劃應用程式實作為工作流程。 工作流程的步驟包括預訂班機、等待經理核准，然後繳交班機費用。 這些處理程序可能要耗費許多天，因此讓預定班機與繳交班機費用的步驟都在同一個異動中，會是一個不實際的選擇。 在此類型案例中，如果處理程序稍後失敗，則可以使用補償復原工作流程的預定班機步驟。  
   
 > [!NOTE]
 >  本主題介紹工作流程中的補償。 如需在工作流程中的交易的詳細資訊，請參閱[交易](workflow-transactions.md)和<xref:System.Activities.Statements.TransactionScope>。 如需有關交易的詳細資訊，請參閱<xref:System.Transactions?displayProperty=nameWithType>和<xref:System.Transactions.Transaction?displayProperty=nameWithType>。  

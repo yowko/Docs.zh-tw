@@ -12,22 +12,22 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
 ms.openlocfilehash: 9366c7ebe2e5b347f4795b15e6f2c2d0f3835482
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747509"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>逐步解說：示範視覺化繼承
 視覺化繼承可讓您查看基底表單上的控制項，並加入新的控制項。 在本逐步解說中，您將建立基底表單，並編譯為類別庫。 您將匯入此類別庫至另一個專案，並建立繼承自基底表單的新表單。 在這個逐步解說期間，您將了解如何：  
   
--   建立包含基底表單的類別庫專案。  
+- 建立包含基底表單的類別庫專案。  
   
--   加入屬性可由基底表單衍生類別修改的按鈕。  
+- 加入屬性可由基底表單衍生類別修改的按鈕。  
   
--   加入無法由基底表單繼承者修改的按鈕。  
+- 加入無法由基底表單繼承者修改的按鈕。  
   
--   建立包含繼承自 `BaseForm` 表單的專案。  
+- 建立包含繼承自 `BaseForm` 表單的專案。  
   
  最後，本逐步解說將示範繼承的表單上私用和受保護控制項之間的差異。  
   
@@ -76,11 +76,11 @@ ms.locfileid: "59307592"
   
 3. 在屬性視窗中設定下列按鈕屬性：  
   
-    -   設定**文字**屬性設**Say Hello**。  
+    - 設定**文字**屬性設**Say Hello**。  
   
-    -   設定 **（名稱）** 屬性設**為 btnProtected**。  
+    - 設定 **（名稱）** 屬性設**為 btnProtected**。  
   
-    -   設定**修飾詞**屬性設**受保護**。 這可讓繼承的表單**Form1**若要修改的屬性**為 btnProtected**。  
+    - 設定**修飾詞**屬性設**受保護**。 這可讓繼承的表單**Form1**若要修改的屬性**為 btnProtected**。  
   
 4. 按兩下**Say Hello**按鈕以新增事件處理常式**按一下**事件。  
   
@@ -100,11 +100,11 @@ ms.locfileid: "59307592"
   
 2. 加入第二個按鈕，並設定其屬性，如下所示：  
   
-    -   設定**文字**屬性設**Say Goodbye**。  
+    - 設定**文字**屬性設**Say Goodbye**。  
   
-    -   設定 **（名稱）** 屬性設**為 btnPrivate**。  
+    - 設定 **（名稱）** 屬性設**為 btnPrivate**。  
   
-    -   設定**修飾詞**屬性設**私人**。 這無法讓繼承的表單**Form1**若要修改的屬性**為 btnPrivate**。  
+    - 設定**修飾詞**屬性設**私人**。 這無法讓繼承的表單**Form1**若要修改的屬性**為 btnPrivate**。  
   
 3. 按兩下**Say Goodbye**按鈕以新增事件處理常式**按一下**事件。 將下列這行程式碼放在事件程序：  
   
@@ -148,9 +148,9 @@ ms.locfileid: "59307592"
   
 8. 如果您使用的 Visual C#:  
   
-    1.  在 **方案總管**，以滑鼠右鍵按一下**Form1**中**InheritanceTest**專案，然後選擇**刪除**。 在隨即出現訊息方塊中，按一下**確定**以確認刪除。  
+    1. 在 **方案總管**，以滑鼠右鍵按一下**Form1**中**InheritanceTest**專案，然後選擇**刪除**。 在隨即出現訊息方塊中，按一下**確定**以確認刪除。  
   
-    2.  開啟 Program.cs 檔案並變更 `Application.Run(new Form1());` 為 `Application.Run(new Form2());`。  
+    2. 開啟 Program.cs 檔案並變更 `Application.Run(new Form1());` 為 `Application.Run(new Form2());`。  
   
 9. 在 **方案總管**，以滑鼠右鍵按一下**InheritanceTest**專案，然後選取**設定為啟始專案**。  
   

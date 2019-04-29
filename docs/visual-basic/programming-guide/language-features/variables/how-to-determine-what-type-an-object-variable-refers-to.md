@@ -7,11 +7,11 @@ helpviewer_keywords:
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
 ms.openlocfilehash: 6499dfce880cc9ce16e5d77887afc0598692f48e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938199"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>HOW TO：決定物件變數參考 (Visual Basic) 的類型
 物件變數包含儲存在其他地方的資料指標。 在執行階段，可以變更該資料型別。 在任何時刻，您可以使用<xref:System.Type.GetTypeCode%2A>方法，以判斷目前的執行階段類型，或有[TypeOf 運算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)來找出是否有目前的執行階段類型是與指定的型別相容。  
@@ -37,7 +37,7 @@ ms.locfileid: "59342865"
   
 ### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a>若要判斷物件是否相容於指定的型別變數的類型是  
   
--   使用`TypeOf`運算子結合[Is 運算子](../../../../visual-basic/language-reference/operators/is-operator.md)若要測試的物件`TypeOf`...`Is`運算式。  
+- 使用`TypeOf`運算子結合[Is 運算子](../../../../visual-basic/language-reference/operators/is-operator.md)若要測試的物件`TypeOf`...`Is`運算式。  
   
     ```  
     If TypeOf objA Is System.Windows.Forms.Control Then  

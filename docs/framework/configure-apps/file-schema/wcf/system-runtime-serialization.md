@@ -3,11 +3,11 @@ title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
 ms.openlocfilehash: c34eba2614a354f1753d8da077f8653f2c260a97
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757907"
 ---
 # <a name="systemruntimeserialization"></a>\<system.runtime.serialization>
 代表 <xref:System.Runtime.Serialization> 命名空間區段的根項目，而且包含用來設定 <xref:System.Runtime.Serialization.DataContractSerializer> 選項的項目。  

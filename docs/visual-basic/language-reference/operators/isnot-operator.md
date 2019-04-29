@@ -7,11 +7,11 @@ helpviewer_keywords:
 - IsNot operator [Visual Basic]
 ms.assetid: 8dd2bcdb-0166-48a2-9094-60dfb448f36c
 ms.openlocfilehash: e07a775eec003a3e488f6909181aed3f742b4b91
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768340"
 ---
 # <a name="isnot-operator-visual-basic"></a>IsNot 運算子 (Visual Basic)
 比較兩個物件參考變數。  

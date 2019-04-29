@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
 ms.openlocfilehash: 5ab90e44e2809c1e71d7f100970b7be73af4a732
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784198"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 會導致目前的類別或介面從另一個類別或介面集合繼承屬性、 變數、 屬性、 程序和事件。  
@@ -37,11 +37,11 @@ Inherits basetypenames
   
 ## <a name="rules"></a>規則  
   
--   **類別繼承。** 如果類別會使用`Inherits`陳述式中，您可以指定只有一個基底類別。  
+- **類別繼承。** 如果類別會使用`Inherits`陳述式中，您可以指定只有一個基底類別。  
   
      類別無法繼承自巢狀類別。  
   
--   **介面繼承。** 如果介面使用`Inherits`陳述式中，您可以指定一或多個基底介面。 您可以繼承自兩個介面，即使它們都各自定義具有相同名稱的成員。 如果您這樣做時，實作程式碼必須使用名稱限定性條件來指定它所實作的成員。  
+- **介面繼承。** 如果介面使用`Inherits`陳述式中，您可以指定一或多個基底介面。 您可以繼承自兩個介面，即使它們都各自定義具有相同名稱的成員。 如果您這樣做時，實作程式碼必須使用名稱限定性條件來指定它所實作的成員。  
   
      介面無法繼承自另一個介面具有更嚴格的存取層級。 例如，`Public`介面無法繼承自`Friend`介面。  
   

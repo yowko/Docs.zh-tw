@@ -6,11 +6,11 @@ helpviewer_keywords:
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
 ms.openlocfilehash: 20db0ef427a5e791bd6b8dcef90bf7911ae0d4a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772953"
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>HOW TO：啟用 Net.TCP 連接埠共用服務
 Windows Communication Foundation (WCF) 會使用名為 Net.TCP Port Sharing Service 的 Windows 服務，以促進跨多個處理序的 TCP 連接埠共用。 此服務已安裝 WCF 的一部分，但服務為了安全起見預設不會啟用，因此必須手動啟用第一次使用之前。 本主題說明如何使用 Microsoft Management Console (MMC) 嵌入式管理單元，來設定 Net TCP Port Sharing Service。  

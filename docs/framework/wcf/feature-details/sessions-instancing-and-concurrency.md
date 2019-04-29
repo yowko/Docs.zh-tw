@@ -3,11 +3,11 @@ title: 工作階段、執行個體與並行
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
 ms.openlocfilehash: 994b95bb8ebc14a9997e1e9510389fdf16098d12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748014"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>工作階段、執行個體與並行
 「 *工作階段* 」(Session) 是兩個端點之間所傳送之所有訊息的相互關聯。 「*執行個體* 」(Instancing) 是指控制使用者定義之服務物件的存留時間，以及其相關的 <xref:System.ServiceModel.InstanceContext> 物件。 「*並行* 」(Concurrency) 是指控制在 <xref:System.ServiceModel.InstanceContext> 中同時執行的執行緒數目。  
@@ -19,21 +19,21 @@ ms.locfileid: "59229065"
   
  WCF 工作階段具有下列主要概念的功能：  
   
--   工作階段是由呼叫的應用程式明確地初始化及終止。  
+- 工作階段是由呼叫的應用程式明確地初始化及終止。  
   
--   工作階段期間傳遞的訊息是依其接收的順序進行處理。  
+- 工作階段期間傳遞的訊息是依其接收的順序進行處理。  
   
--   工作階段會將一群訊息互相關聯為對話。 此相互關聯的意義是一種抽象概念。 例如，某個工作階段架構通道可能會根據共用的網路連線將訊息相互關聯，而另一個工作階段架構通道可能會根據訊息本文內的共用標記將訊息相互關聯。 這些可以衍生自工作階段的功能視相互關聯的本質而定。  
+- 工作階段會將一群訊息互相關聯為對話。 此相互關聯的意義是一種抽象概念。 例如，某個工作階段架構通道可能會根據共用的網路連線將訊息相互關聯，而另一個工作階段架構通道可能會根據訊息本文內的共用標記將訊息相互關聯。 這些可以衍生自工作階段的功能視相互關聯的本質而定。  
   
--   沒有與 WCF 工作階段相關聯的一般資料存放區。  
+- 沒有與 WCF 工作階段相關聯的一般資料存放區。  
   
  如果您熟悉<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>類別中[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式和功能提供，您可能會注意到這種種類的工作階段和 WCF 工作階段的下列差異：  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作階段一律由伺服器啟動。  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作階段一律由伺服器啟動。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作階段具有隱含未排序特性。  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作階段具有隱含未排序特性。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作階段提供了跨要求的一般資料儲存機制。  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作階段提供了跨要求的一般資料儲存機制。  
   
  用戶端應用程式和服務應用程式會以不同的方式與工作階段互動。 用戶端應用程式會初始化工作階段，接著並接收及處理在工作階段內傳送的訊息。 服務應用程式可以將工作階段當做擴充點使用，以便加入其他行為。 其做法是直接使用 <xref:System.ServiceModel.InstanceContext> 或實作自訂的執行個體內容提供者。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "59229065"
   
  以下為可用的執行個體模式：  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>：新<xref:System.ServiceModel.InstanceContext>（並因此為服務物件） 會針對每個用戶端要求建立。  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>：新<xref:System.ServiceModel.InstanceContext>（並因此為服務物件） 會針對每個用戶端要求建立。  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>：新<xref:System.ServiceModel.InstanceContext>（並因此為服務物件） 就會針對每個新的用戶端工作階段建立，並且維持 （這需要支援工作階段的繫結） 該工作階段的存留期。  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>：新<xref:System.ServiceModel.InstanceContext>（並因此為服務物件） 就會針對每個新的用戶端工作階段建立，並且維持 （這需要支援工作階段的繫結） 該工作階段的存留期。  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>：單一<xref:System.ServiceModel.InstanceContext>（並因此為服務物件） 的應用程式存留期會處理所有的用戶端要求。  
+- <xref:System.ServiceModel.InstanceContextMode.Single>：單一<xref:System.ServiceModel.InstanceContext>（並因此為服務物件） 的應用程式存留期會處理所有的用戶端要求。  
   
  下列程式碼範例示範預設的 <xref:System.ServiceModel.InstanceContextMode> 值，在服務類別上會明確地設定 <xref:System.ServiceModel.InstanceContextMode.PerSession> 。  
   
@@ -75,11 +75,11 @@ public class CalculatorService : ICalculatorInstance
   
  以下為可用的三種並行模式：  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Single>：每個執行個體內容可包含最多一次處理訊息的執行個體內容中的一個執行緒。 其他希望使用相同執行個體內容的執行緒必須封鎖，直到原始的執行緒結束執行個體內容為止。  
+- <xref:System.ServiceModel.ConcurrencyMode.Single>：每個執行個體內容可包含最多一次處理訊息的執行個體內容中的一個執行緒。 其他希望使用相同執行個體內容的執行緒必須封鎖，直到原始的執行緒結束執行個體內容為止。  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Multiple>：每個服務執行個體可以有多個執行緒同時處理訊息。 此服務實作必須是安全執行緒，才能使用這種並行模式。  
+- <xref:System.ServiceModel.ConcurrencyMode.Multiple>：每個服務執行個體可以有多個執行緒同時處理訊息。 此服務實作必須是安全執行緒，才能使用這種並行模式。  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>：每個服務執行個體一次處理一個訊息，但接受可重新進入作業呼叫。 服務會在向外呼叫透過 WCF 用戶端物件時，只接受這些呼叫。  
+- <xref:System.ServiceModel.ConcurrencyMode.Reentrant>：每個服務執行個體一次處理一個訊息，但接受可重新進入作業呼叫。 服務會在向外呼叫透過 WCF 用戶端物件時，只接受這些呼叫。  
   
 > [!NOTE]
 >  您應該了解，開發能夠安全地使用一個以上之執行緒的程式碼，可能會很難順利地撰寫。 在使用 <xref:System.ServiceModel.ConcurrencyMode.Multiple> 或 <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 值之前，請確定已適當地設計您的服務以使用這些模式 如需詳細資訊，請參閱<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>。  

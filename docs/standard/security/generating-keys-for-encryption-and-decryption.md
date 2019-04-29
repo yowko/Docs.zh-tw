@@ -17,11 +17,11 @@ ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c566c54343f1dd7c3da2701c2b7ea9f815e22e7b
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795208"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>產生加密和解密金鑰
 建立和管理金鑰是密碼編譯程序中很重要的一部分。 對稱演算法需要建立金鑰和初始化向量 (IV)。 務必不要對不該解密您資料的任何人透露金鑰。 IV 不需要加密，但是應該針對每個工作階段變更。 非對稱演算法需要建立公開金鑰和私密金鑰。 公開金鑰可以公開給任何人，但私密金鑰必須只有將解密以公開金鑰加密之資料的一方知道。 本節描述如何產生及管理對稱和非對稱演算法的金鑰。  
@@ -64,9 +64,9 @@ tdes.GenerateKey();
   
  每當建立非對稱式演算法類別的新執行個體時，就會產生公開/私密金鑰組。 建立類別的新執行個體之後，可以使用兩種方法之一擷取金鑰資訊：  
   
--   <xref:System.Security.Cryptography.RSA.ToXmlString%2A> 方法，會傳回金鑰資訊的 XML 表示法。  
+- <xref:System.Security.Cryptography.RSA.ToXmlString%2A> 方法，會傳回金鑰資訊的 XML 表示法。  
   
--   <xref:System.Security.Cryptography.RSACryptoServiceProvider.ExportParameters%2A> 方法，它會傳回 <xref:System.Security.Cryptography.RSAParameters> 結構，可保存金鑰資訊。  
+- <xref:System.Security.Cryptography.RSACryptoServiceProvider.ExportParameters%2A> 方法，它會傳回 <xref:System.Security.Cryptography.RSAParameters> 結構，可保存金鑰資訊。  
   
  這兩種方法都接受布林值，表示是否只傳回公用金鑰資訊，還是同時傳回公開金鑰和私密金鑰資訊。 **RSACryptoServiceProvider** 類別可以使用 **方法，初始化為** RSAParameters <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A> 結構的值。  
   

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
 ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768496"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>HOW TO：從遠端調查印表機的狀態
 在任何時候，中型和大型公司都可能有多部印表機因為夾紙或紙張用完或一些其他問題狀況而無法運作。 一組豐富印表機屬性中公開的[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]Microsoft.NET framework 提供一種方法來執行印表機狀態的快速問卷調查。  
@@ -39,9 +39,9 @@ ms.locfileid: "59340785"
   
  然後此範例使用<xref:System.Printing.PrintServer.GetPrintQueues%2A>建立集合的所有伺服器的佇列，並開始循環使用它們。 此內部迴圈包含一個分支結構，其對應於檢查印表機狀態的兩種方法︰  
   
--   您可以閱讀的旗標<xref:System.Printing.PrintQueue.QueueStatus%2A>類型的屬性<xref:System.Printing.PrintQueueStatus>。  
+- 您可以閱讀的旗標<xref:System.Printing.PrintQueue.QueueStatus%2A>類型的屬性<xref:System.Printing.PrintQueueStatus>。  
   
--   您可以讀取每個相關的屬性，例如<xref:System.Printing.PrintQueue.IsOutOfPaper%2A>，和<xref:System.Printing.PrintQueue.IsPaperJammed%2A>。  
+- 您可以讀取每個相關的屬性，例如<xref:System.Printing.PrintQueue.IsOutOfPaper%2A>，和<xref:System.Printing.PrintQueue.IsPaperJammed%2A>。  
   
  此範例會示範這兩種方法，所以使用者先前已提示要使用的方法，且如果他或她想要使用的旗標，回應"y"<xref:System.Printing.PrintQueue.QueueStatus%2A>屬性。 請參閱以下兩種方法的詳細資訊。  
   

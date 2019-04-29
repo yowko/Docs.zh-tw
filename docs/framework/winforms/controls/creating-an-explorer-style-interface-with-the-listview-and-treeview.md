@@ -14,11 +14,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
 ms.openlocfilehash: 8192151aa7cd5eddd99d39adb485e460074fdb99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768585"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>逐步解說：使用設計工具以 ListView 和 TreeView 控制項建立檔案總管風格的介面
 Visual Studio 的優點之一是時間的能夠建立專業的 Windows Forms 應用程式在短量。 常見的案例建立使用者介面 (UI) 與<xref:System.Windows.Forms.ListView>和<xref:System.Windows.Forms.TreeView>類似於 Windows 作業系統的 Windows 檔案總管功能的控制項。 Windows 檔案總管會顯示使用者的電腦上的檔案和資料夾的階層式結構。  
@@ -32,9 +32,9 @@ Visual Studio 的優點之一是時間的能夠建立專業的 Windows Forms 應
   
 2. 在 **新的專案**對話方塊方塊中，執行下列動作：  
   
-    1.  在類別，選擇**Visual Basic**或是**Visual C#**。  
+    1. 在類別，選擇**Visual Basic**或是**Visual C#**。  
   
-    2.  在範本清單中，選擇**Windows Forms 應用程式**。  
+    2. 在範本清單中，選擇**Windows Forms 應用程式**。  
   
 3. 按一下 [確定] 。 建立新的 Windows Forms 專案。  
   
@@ -44,19 +44,19 @@ Visual Studio 的優點之一是時間的能夠建立專業的 Windows Forms 應
   
 6. 新增<xref:System.Windows.Forms.TreeView>控制項，名為`treeview1`至表單，並將它的左邊<xref:System.Windows.Forms.SplitContainer>控制項。 在 [屬性] 視窗中`treeView1`執行下列動作：  
   
-    1.  將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設定為 <xref:System.Windows.Forms.DockStyle.Fill>。  
+    1. 將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設定為 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
-    2.  將 <xref:System.Windows.Forms.TreeView.ImageList%2A> 屬性設定為 `imagelist1.`  
+    2. 將 <xref:System.Windows.Forms.TreeView.ImageList%2A> 屬性設定為 `imagelist1.`  
   
 7. 新增<xref:System.Windows.Forms.ListView>控制項，名為`listView1`至表單，並將其放置在右邊<xref:System.Windows.Forms.SplitContainer>控制項。 在 [屬性] 視窗中`listview1`執行下列動作：  
   
-    1.  將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設定為 <xref:System.Windows.Forms.DockStyle.Fill>。  
+    1. 將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設定為 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
-    2.  將 <xref:System.Windows.Forms.ListView.View%2A> 屬性設定為 <xref:System.Windows.Forms.View.Details>。  
+    2. 將 <xref:System.Windows.Forms.ListView.View%2A> 屬性設定為 <xref:System.Windows.Forms.View.Details>。  
   
-    3.  開啟 [ColumnHeader 集合編輯器] 中，依序按一下省略符號 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 中<xref:System.Windows.Forms.ListView.Columns%2A>屬性 **。** 新增三個資料行並設定其<xref:System.Windows.Forms.ColumnHeader.Text%2A>屬性，以`Name`， `Type`，和`Last Modified`分別。 按一下 [確定]  關閉對話方塊。  
+    3. 開啟 [ColumnHeader 集合編輯器] 中，依序按一下省略符號 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 中<xref:System.Windows.Forms.ListView.Columns%2A>屬性 **。** 新增三個資料行並設定其<xref:System.Windows.Forms.ColumnHeader.Text%2A>屬性，以`Name`， `Type`，和`Last Modified`分別。 按一下 [確定]  關閉對話方塊。  
   
-    4.  將 <xref:System.Windows.Forms.ListView.SmallImageList%2A> 屬性設定為 `imageList1.`  
+    4. 將 <xref:System.Windows.Forms.ListView.SmallImageList%2A> 屬性設定為 `imageList1.`  
   
 8. 實作程式碼來填入<xref:System.Windows.Forms.TreeView>節點與子節點。 新增下列程式碼`Form1`類別。  
   
@@ -87,18 +87,18 @@ Visual Studio 的優點之一是時間的能夠建立專業的 Windows Forms 應
   
 #### <a name="to-test-the-form"></a>若要測試表單  
   
--   按 F5 執行應用程式。  
+- 按 F5 執行應用程式。  
   
      您會看到一個分割形式，其中包含<xref:System.Windows.Forms.TreeView>左側，顯示您的專案目錄的控制項和<xref:System.Windows.Forms.ListView>具有三個資料行右側的控制項。 您可以周遊<xref:System.Windows.Forms.TreeView>藉由選取的目錄節點和<xref:System.Windows.Forms.ListView>會填入所選目錄的內容。  
   
 ## <a name="next-steps"></a>後續步驟  
  此應用程式可讓您的方式，您可以使用範例<xref:System.Windows.Forms.TreeView>和<xref:System.Windows.Forms.ListView>一起控制。 如需有關這些控制項的詳細資訊，請參閱下列主題：  
   
--   [如何：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Form)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+- [如何：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Form)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
--   [如何：將搜尋功能加入至 ListView 控制項](how-to-add-search-capabilities-to-a-listview-control.md)  
+- [如何：將搜尋功能加入至 ListView 控制項](how-to-add-search-capabilities-to-a-listview-control.md)  
   
--   [如何：將捷徑功能表附加至 TreeView 節點](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
+- [如何：將捷徑功能表附加至 TreeView 節點](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
 ## <a name="see-also"></a>另請參閱
 

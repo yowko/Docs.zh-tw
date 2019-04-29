@@ -10,11 +10,11 @@ helpviewer_keywords:
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
 ms.openlocfilehash: adcfff0196bd0430ec1ae563fbd5489062de11f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776060"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>HOW TO：列舉列印佇列的子集
 管理印表機的全公司組的資訊技術 (IT) 專業人員所面臨的常見情況是產生一份具有特定特性的印表機。 此功能會由<xref:System.Printing.PrintServer.GetPrintQueues%2A>方法<xref:System.Printing.PrintServer>物件和<xref:System.Printing.EnumeratedPrintQueueTypes>列舉型別。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - adorners [WPF], removing
 ms.assetid: fe5303a3-b76e-4643-aafb-51419032b47b
 ms.openlocfilehash: 8504bb1ec70de188033b2b092bbb66cf9da3dc11
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770769"
 ---
 # <a name="how-to-remove-all-adorners-from-an-element"></a>HOW TO：從元素移除所有 Adorner
 此範例示範如何以程式設計方式移除所有裝飾指定<xref:System.Windows.UIElement>。  

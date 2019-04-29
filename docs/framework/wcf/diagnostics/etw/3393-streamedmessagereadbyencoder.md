@@ -3,17 +3,18 @@ title: 3393 - StreamedMessageReadByEncoder
 ms.date: 03/30/2017
 ms.assetid: 70ebde45-9e46-4adb-9020-c17e9c6786e4
 ms.openlocfilehash: 1840fa38c641529d2a3bd3d6ca865236e8599cd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753340"
 ---
 # <a name="3393---streamedmessagereadbyencoder"></a>3393 - StreamedMessageReadByEncoder
 ## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
-|ID|3393|  
+|識別碼|3393|  
 |關鍵字|通道|  
 |層級|資訊|  
 |通道|Microsoft-Windows-Application Server-Applications/Debug|  

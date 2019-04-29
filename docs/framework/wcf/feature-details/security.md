@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
 ms.openlocfilehash: 58bec40f197dd1f2b104607a65c3ad456b95f69d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748457"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation 安全性
 在本節中的主題會描述 Windows Communication Foundation (WCF) 安全性功能，以及如何使用它們來保護訊息。  

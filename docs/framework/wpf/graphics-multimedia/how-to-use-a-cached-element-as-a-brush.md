@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CacheMode [WPF], using
 ms.assetid: d36e944a-866e-4baf-98c4-fd6a75f6fdd0
 ms.openlocfilehash: 78df242c7f00b69e36ea4ab6751f51509d9e2220
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769248"
 ---
 # <a name="how-to-use-a-cached-element-as-a-brush"></a>HOW TO：使用快取的項目作為筆刷
 使用<xref:System.Windows.Media.BitmapCacheBrush>類別，以有效率地重複使用的快取的項目。 若要快取項目，建立的新執行個體<xref:System.Windows.Media.BitmapCache>類別，並將它指派給項目的<xref:System.Windows.UIElement.CacheMode%2A>屬性。  

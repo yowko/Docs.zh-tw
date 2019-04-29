@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
 ms.openlocfilehash: f55c9790b8300a1a3f26e031a17a0982638b562b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765514"
 ---
 # <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>HOW TO：自訂資料繫結行為 (WCF Data Services)
 使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，在從繫結集合新增或移除物件，或偵測到屬性變更時，您可以提供由 <xref:System.Data.Services.Client.DataServiceCollection%601> 呼叫的自訂邏輯。 這個自訂邏輯做為參考的方法<xref:System.Func%602>傳回值的委派`false`時的預設行為仍應執行的自訂方法完成時和`true`當後續處理請停止事件。  

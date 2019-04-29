@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 695f69c8d9c3a295a705971743733339cf8aab13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765215"
 ---
 # <a name="malloctype-enumeration"></a>MALLOC_TYPE 列舉
 包含值，指定要配置的記憶體的特性。  

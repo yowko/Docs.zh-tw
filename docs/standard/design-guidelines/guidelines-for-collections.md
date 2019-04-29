@@ -5,11 +5,11 @@ ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
 author: KrzysztofCwalina
 ms.openlocfilehash: a8e8672d71500478dbbe28512e413e8ada501f45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669040"
 ---
 # <a name="guidelines-for-collections"></a>集合方針
 任何型別，專門設計來管理一組具有一些共同的特性的物件可以視為一個集合。 幾乎都是實作這種類型的適當<xref:System.Collections.IEnumerable>或<xref:System.Collections.Generic.IEnumerable%601>，所以在本節中，我們只考慮實作一個或多個這些介面的型別是集合。  

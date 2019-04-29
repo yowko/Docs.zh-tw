@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
 ms.openlocfilehash: a0400ce32dc6dab2585a8d5e76ff8d416fae24c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764922"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF 圖形轉譯概觀
 本主題提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 視覺圖層的概觀。 它著重於所扮演的角色<xref:System.Windows.Media.Visual>類別來呈現中的支援[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]模型。  
@@ -24,27 +24,27 @@ ms.locfileid: "59101363"
   
  <xref:System.Windows.Media.Visual>物件是核心[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]物件，其主要角色是提供轉譯支援。 使用者介面控制項，例如<xref:System.Windows.Controls.Button>並<xref:System.Windows.Controls.TextBox>，衍生自<xref:System.Windows.Media.Visual>類別，並使用它來保存其轉譯資料。 <xref:System.Windows.Media.Visual>物件提供下列支援：  
   
--   輸出顯示：轉譯保存、 序列化 visual 的繪圖內容。  
+- 輸出顯示：轉譯保存、 序列化 visual 的繪圖內容。  
   
--   轉換：在 視覺效果上執行轉換。  
+- 轉換：在 視覺效果上執行轉換。  
   
--   裁剪：提供視覺效果的裁剪區域支援。  
+- 裁剪：提供視覺效果的裁剪區域支援。  
   
--   點擊測試：判斷座標或幾何是否包含視覺項目的界限內。  
+- 點擊測試：判斷座標或幾何是否包含視覺項目的界限內。  
   
--   週框方塊計算：判斷視覺效果的週框矩形。  
+- 週框方塊計算：判斷視覺效果的週框矩形。  
   
  不過，<xref:System.Windows.Media.Visual>物件不包含支援非轉譯功能，例如：  
   
--   事件處理  
+- 事件處理  
   
--   配置  
+- 配置  
   
--   樣式  
+- 樣式  
   
--   資料繫結  
+- 資料繫結  
   
--   全球化  
+- 全球化  
   
  <xref:System.Windows.Media.Visual> 會公開為公用抽象類別必須從中衍生子類別。 下圖顯示 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中公開之視覺物件的階層。  
   
@@ -127,13 +127,13 @@ DrawingGroup 作業的順序
   
  關於視覺物件的階層和向量圖形指示清單，有幾點需要注意：  
   
--   階層中的順序代表繪製資訊的轉譯順序。 子元素會由左至右、由上而下從根視覺元素周遊。 如果某元素具有視覺化子元素，則會在元素的同層級元素之前周遊這些子元素。  
+- 階層中的順序代表繪製資訊的轉譯順序。 子元素會由左至右、由上而下從根視覺元素周遊。 如果某元素具有視覺化子元素，則會在元素的同層級元素之前周遊這些子元素。  
   
--   非分葉節點項目，在階層中，例如<xref:System.Windows.Controls.ContentPresenter>，用來包含子元素 — 它們不包含指示清單。  
+- 非分葉節點項目，在階層中，例如<xref:System.Windows.Controls.ContentPresenter>，用來包含子元素 — 它們不包含指示清單。  
   
--   如果視覺元素同時包含向量圖形指示清單與視覺子元素，父系視覺元素中的指示清單就會在任何視覺子元素物件中的繪圖之前轉譯。  
+- 如果視覺元素同時包含向量圖形指示清單與視覺子元素，父系視覺元素中的指示清單就會在任何視覺子元素物件中的繪圖之前轉譯。  
   
--   向量圖形指示清單中的項目會由左至右轉譯。  
+- 向量圖形指示清單中的項目會由左至右轉譯。  
   
 <a name="visual_tree"></a>   
 ## <a name="visual-tree"></a>視覺化樹狀結構  

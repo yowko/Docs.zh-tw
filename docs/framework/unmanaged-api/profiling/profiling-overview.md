@@ -30,11 +30,11 @@ ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 598722c44d8d20adab9ce7d624edb820f67c0fa4
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757546"
 ---
 # <a name="profiling-overview"></a>分析概觀
 <a name="top"></a> 分析工具是監視另一個應用程式執行的工具。 Common Language Runtime (CLR) 分析工具是動態連結程式庫 (DLL) 由數個函式所組成，可使用分析 API，從 CLR 接收訊息，以及傳送訊息至 CLR。 CLR 會在執行階段載入分析工具 DLL。  
@@ -47,25 +47,25 @@ ms.locfileid: "58654090"
   
  本概觀包含下列各節：  
   
--   [分析 API](#profiling_api)  
+- [分析 API](#profiling_api)  
   
--   [支援的功能](#support)  
+- [支援的功能](#support)  
   
--   [通知執行緒](#notification_threads)  
+- [通知執行緒](#notification_threads)  
   
--   [安全性](#security)  
+- [安全性](#security)  
   
--   [結合 Managed 和 Unmanaged 程式碼 Profiler 中的程式碼](#combining_managed_unmanaged)  
+- [結合 Managed 和 Unmanaged 程式碼 Profiler 中的程式碼](#combining_managed_unmanaged)  
   
--   [分析 Unmanaged 程式碼](#unmanaged)  
+- [分析 Unmanaged 程式碼](#unmanaged)  
   
--   [使用 COM](#com)  
+- [使用 COM](#com)  
   
--   [呼叫堆疊](#call_stacks)  
+- [呼叫堆疊](#call_stacks)  
   
--   [回呼和堆疊深度](#callbacks)  
+- [回呼和堆疊深度](#callbacks)  
   
--   [相關主題](#related_topics)  
+- [相關主題](#related_topics)  
   
 <a name="profiling_api"></a>   
 ## <a name="the-profiling-api"></a>程式碼剖析 API  
@@ -96,33 +96,33 @@ ms.locfileid: "58654090"
   
  分析 API 會擷取 CLR 中發生之下列動作和事件的相關資訊：  
   
--   CLR 啟動和關閉事件。  
+- CLR 啟動和關閉事件。  
   
--   應用程式定義域建立和關閉事件。  
+- 應用程式定義域建立和關閉事件。  
   
--   組件載入與卸載事件。  
+- 組件載入與卸載事件。  
   
--   模組載入與卸載事件。  
+- 模組載入與卸載事件。  
   
--   COM vtable 建立和解構事件。  
+- COM vtable 建立和解構事件。  
   
--   Just-In-Time (JIT) 編譯和 code-pitching 事件。  
+- Just-In-Time (JIT) 編譯和 code-pitching 事件。  
   
--   類別載入和卸載事件。  
+- 類別載入和卸載事件。  
   
--   執行緒建立和解構事件。  
+- 執行緒建立和解構事件。  
   
--   函式進入和結束事件。  
+- 函式進入和結束事件。  
   
--   例外狀況。  
+- 例外狀況。  
   
--   Managed 和 Unmanaged 程式碼執行之間的轉換。  
+- Managed 和 Unmanaged 程式碼執行之間的轉換。  
   
--   不同執行階段內容之間的轉換。  
+- 不同執行階段內容之間的轉換。  
   
--   執行階段暫止的相關資訊。  
+- 執行階段暫止的相關資訊。  
   
--   執行階段記憶體堆積和記憶體回收活動的相關資訊。  
+- 執行階段記憶體堆積和記憶體回收活動的相關資訊。  
   
  您可以從任何 (非 Managed) COM 相容語言呼叫分析 API 。  
   
@@ -133,19 +133,19 @@ ms.locfileid: "58654090"
 ### <a name="unsupported-functionality"></a>不支援的功能  
  分析 API 不支援下列功能：  
   
--   Unmanaged 程式碼，這必須使用傳統 Win32 方法來分析。 不過，CLR 分析工具包含轉換事件，可判斷 Managed 與 Unmanaged 程式碼之間的界限。  
+- Unmanaged 程式碼，這必須使用傳統 Win32 方法來分析。 不過，CLR 分析工具包含轉換事件，可判斷 Managed 與 Unmanaged 程式碼之間的界限。  
   
--   自我修改的應用程式，它會針對外觀導向程式設計之類的目的，修改自己的程式碼。  
+- 自我修改的應用程式，它會針對外觀導向程式設計之類的目的，修改自己的程式碼。  
   
--   繫結檢查，因為分析 API 並未提供這項資訊。 CLR 為所有 Managed 程式碼的繫結檢查提供內建支援。  
+- 繫結檢查，因為分析 API 並未提供這項資訊。 CLR 為所有 Managed 程式碼的繫結檢查提供內建支援。  
   
--   遠端分析，不支援的原因如下：  
+- 遠端分析，不支援的原因如下：  
   
-    -   遠端分析會延長執行時間。 當您使用分析介面時，您必須盡量減少執行時間，使分析結果不要受到過度影響。 當執行效能受到監視時，特別是這樣。 不過，使用分析介面來監視記憶體使用量，或取得有關堆疊框架、物件等等的執行階段資訊時，遠端分析並不是個限制。  
+    - 遠端分析會延長執行時間。 當您使用分析介面時，您必須盡量減少執行時間，使分析結果不要受到過度影響。 當執行效能受到監視時，特別是這樣。 不過，使用分析介面來監視記憶體使用量，或取得有關堆疊框架、物件等等的執行階段資訊時，遠端分析並不是個限制。  
   
-    -   CLR 程式碼分析工具必須向執行所分析應用程式之本機電腦上的執行階段，註冊一個或多個回呼介面。 這會限制建立遠端程式碼分析工具的能力。  
+    - CLR 程式碼分析工具必須向執行所分析應用程式之本機電腦上的執行階段，註冊一個或多個回呼介面。 這會限制建立遠端程式碼分析工具的能力。  
   
--   在具有高可用性需求的生產環境中的分析。 分析 API 是為了支援開發階段診斷而建立。 尚未經過支援生產環境所需的嚴格測試。  
+- 在具有高可用性需求的生產環境中的分析。 分析 API 是為了支援開發階段診斷而建立。 尚未經過支援生產環境所需的嚴格測試。  
   
  [回到頁首](#top)  
   
@@ -185,9 +185,9 @@ ms.locfileid: "58654090"
 ## <a name="profiling-unmanaged-code"></a>分析 Unmanaged 程式碼  
  Common Language Runtime (CLR) 分析 API 為分析 Unmanaged 程式碼提供最小支援。 提供下列功能：  
   
--   堆疊鏈結的列舉。 這項功能可讓程式碼分析工具判斷 Managed 程式碼與 Unmanaged 程式碼之間的界限。  
+- 堆疊鏈結的列舉。 這項功能可讓程式碼分析工具判斷 Managed 程式碼與 Unmanaged 程式碼之間的界限。  
   
--   判斷堆疊鏈結是對應至 Managed 程式碼或原生程式碼。  
+- 判斷堆疊鏈結是對應至 Managed 程式碼或原生程式碼。  
   
  在 .NET Framework 1.0 和 1.1 版中，這些方法可用於 CLR 偵錯 API 的整個同處理序子集。 其定義在 CorDebug.idl 檔案中。  
   

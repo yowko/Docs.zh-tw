@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
 ms.openlocfilehash: dd5e67d573176a6b1a011b3191fca9607af85538
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766619"
 ---
 # <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>XML 命名空間 URI `http://www.w3.org/XML/1998/namespace`; 可以繫結至 'xmlns'
 URI `http://www.w3.org/XML/1998/namespace` XML 命名空間宣告中使用。 此 URI 是保留的命名空間，並不能包含在 XML 命名空間宣告。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
 ms.openlocfilehash: 0c53e3a15bcbe61db7da1edb31ecd3fd562603f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785459"
 ---
 # <a name="loading-a-dataset-from-xml"></a>從 XML 載入資料集
 可以從 XML 資料流或文件建立 ADO.NET <xref:System.Data.DataSet> 的內容。 此外，使用 .NET Framework 可讓您在決定從 XML 載入何種資訊，以及如何建立 <xref:System.Data.DataSet> 的結構描述或關聯式結構時，擁有相當大的彈性。  
@@ -100,7 +100,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 > [!NOTE]
->  如果的 XSD 結構描述您<xref:System.Data.DataSet>包含**targetNamespace**，可能不會讀取資料，並呼叫時，您可能會遇到例外狀況**ReadXml**載入<xref:System.Data.DataSet>包含的 xml非限定命名空間的項目。 若要在此情況下讀取不合格的項目，設定**elementFormDefault**等於"qualified"中的 XSD 結構描述。 例如：  
+>  如果的 XSD 結構描述您<xref:System.Data.DataSet>包含**targetNamespace**，可能不會讀取資料，並呼叫時，您可能會遇到例外狀況**ReadXml**載入<xref:System.Data.DataSet>包含的 xml非限定命名空間的項目。 若要在此情況下讀取不合格的項目，設定**elementFormDefault**等於"qualified"中的 XSD 結構描述。 例如:   
   
 ```xml  
 <xsd:schema id="customDataSet"   

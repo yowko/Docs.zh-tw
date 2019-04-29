@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
 ms.openlocfilehash: 8e6ddab16c59d7ce95d96b377e3f372f6ebe5278
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751601"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>透過執行個體存取共用成員。將不會評估合格的運算式
 使用類別或結構的執行個體變數存取`Shared`變數、 屬性、 程序或該類別或結構中定義的事件。 如果執行個體變數用來存取的類別或結構，例如常數或列舉型別，或巢狀的類別或結構的隱含共用的成員，也會發生這個警告。  
@@ -29,7 +29,7 @@ ms.locfileid: "58843561"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   使用類別或結構，其定義的名稱`Shared`成員，才能存取它，如下列範例所示。  
+- 使用類別或結構，其定義的名稱`Shared`成員，才能存取它，如下列範例所示。  
   
 ```vb  
 Public Class testClass  

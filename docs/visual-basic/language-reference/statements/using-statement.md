@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
 ms.openlocfilehash: fe53ea58dc98a4de793fe9dad1c3ceeac71622fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698651"
 ---
 # <a name="using-statement-visual-basic"></a>Using 陳述式 (Visual Basic)
 宣告的開頭`Using`封鎖，並選擇性地取得區塊所控制的系統資源。  
@@ -61,11 +61,11 @@ End Using
   
  A`Using`區塊有三個部分︰ 取得、 使用量以及各種可供使用。  
   
--   *取得*表示建立變數，並初始化參考的系統資源。 `Using`陳述式可以取得一或多個資源，或您可以輸入區塊之前，先取得一個資源，並提供它`Using`陳述式。 如果您提供`resourceexpression`，您必須先取得資源，將控制項傳遞至`Using`陳述式。  
+- *取得*表示建立變數，並初始化參考的系統資源。 `Using`陳述式可以取得一或多個資源，或您可以輸入區塊之前，先取得一個資源，並提供它`Using`陳述式。 如果您提供`resourceexpression`，您必須先取得資源，將控制項傳遞至`Using`陳述式。  
   
--   *使用量*表示的資源存取和使用它們執行動作。 之間的陳述式`Using`和`End Using`代表資源的使用量。  
+- *使用量*表示的資源存取和使用它們執行動作。 之間的陳述式`Using`和`End Using`代表資源的使用量。  
   
--   *處置*方法呼叫<xref:System.IDisposable.Dispose%2A>方法中的物件上`resourcename`。 這可讓物件完全終止其資源。 `End Using`陳述式處置的資源下`Using`區塊的控制項。  
+- *處置*方法呼叫<xref:System.IDisposable.Dispose%2A>方法中的物件上`resourcename`。 這可讓物件完全終止其資源。 `End Using`陳述式處置的資源下`Using`區塊的控制項。  
   
 ## <a name="behavior"></a>行為  
  A`Using`區塊的行為類似`Try`...`Finally`所在的建構`Try`區塊中使用的資源和`Finally`區塊處置它們。 因為這個緣故，`Using`區塊都保證會處置的資源，無論您如何結束區塊。 即使發生例外狀況，則為 true，這是除了<xref:System.StackOverflowException>。  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cb9aa09447acf28f1ed10ba409ce936cdb4f84a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752304"
 ---
 # <a name="icordebugcode3-interface"></a>ICorDebugCode3 介面
 提供可擴充"ICorDebugCode"和"ICorDebugCode2 」 可以提供 managed 傳回值的相關資訊的方法。  

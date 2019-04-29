@@ -3,11 +3,11 @@ title: 彙總作業 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
 ms.openlocfilehash: 72268e27fdf6d573279e98438fd884a076e0c8a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669016"
 ---
 # <a name="aggregation-operations-visual-basic"></a>彙總作業 (Visual Basic)
 彙總運算會計算值集合中的單一值。 彙總運算的一個範例是，當您使用一個月中每天的溫度值來計算每天平均溫度時。  

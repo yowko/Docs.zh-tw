@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
 ms.openlocfilehash: 828edf2e5491394f5ac802b5c9babfb3df359e59
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758453"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Visual Basic 中的條件式編譯
 在 *條件式編譯*，而忽略其他特定的程式中的程式碼區塊會選擇性地編譯。  
@@ -29,11 +29,11 @@ ms.locfileid: "56967843"
 ## <a name="declaring-conditional-compilation-constants"></a>宣告條件式編譯常數  
  您可以使用三種方式之一來設定條件式編譯常數：  
   
--   在 **專案設計工具**  
+- 在 **專案設計工具**  
   
--   在命令列使用命令列編譯器時  
+- 在命令列使用命令列編譯器時  
   
--   在您的程式碼  
+- 在您的程式碼  
   
  條件式編譯常數有特殊的範圍，並不能從標準的程式碼存取。 條件式編譯常數的範圍是取決於它的設定方式。 下表列出使用每個先前所述的三種方式宣告的常數的範圍。  
   

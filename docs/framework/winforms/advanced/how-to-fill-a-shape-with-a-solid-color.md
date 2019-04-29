@@ -9,11 +9,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling
 ms.assetid: 06088b31-bac9-4ef3-9ebe-06c2c764d6df
 ms.openlocfilehash: d6fe7a252029ff80f21d99f7342fabb1d29fbe24
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781286"
 ---
 # <a name="how-to-fill-a-shape-with-a-solid-color"></a>HOW TO：使用單色填滿形狀
 若要使用純色，填滿形狀，建立<xref:System.Drawing.SolidBrush>物件，然後再將它傳遞<xref:System.Drawing.SolidBrush>物件做為其中一個的 fill 方法的引數為<xref:System.Drawing.Graphics>類別。 下列範例示範如何使用紅色的色彩填滿橢圓形。  

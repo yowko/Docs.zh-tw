@@ -3,11 +3,11 @@ title: <state> WCF 的 <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
 ms.openlocfilehash: 1615c83ffe0735d9e55e822f2651da41d02b1610
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757959"
 ---
 # <a name="state-of-wcf-workflowinstancequery"></a>\<狀態 > 的 WCF， \<workflowInstanceQuery >
 表示建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態集合。  
@@ -78,11 +78,11 @@ ms.locfileid: "55270842"
 |閒置|工作流程執行個體閒置中。|  
 |已保存|工作流程執行個體已保存。|  
 |已繼續|工作流程執行個體已繼續。|  
-|已啟動|工作流程執行個體已啟動。|  
+|自|工作流程執行個體已啟動。|  
 |未處理的例外狀況|工作流程執行個體發生未處理的例外狀況。|  
-|Unloaded|工作流程執行個體已卸載。|  
+|已卸載|工作流程執行個體已卸載。|  
 |已取消|工作流程執行個體已取消。|  
-|暫停|工作流程執行個體已暫停。|  
+|擱置|工作流程執行個體已暫停。|  
 |已終止|工作流程執行個體已終止。|  
 |Unsuspended|工作流程執行個體已取消暫停。|  
   

@@ -16,11 +16,11 @@ ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754529"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>HOW TO：將追蹤陳述式新增至應用程式程式碼
 追蹤最常使用的方法是將輸出寫入至接聽程式的方法：**撰寫**， **WriteIf**， **WriteLine**， **WriteLineIf**， **Assert**，以及**失敗**。 這些方法可以分為兩類：**撰寫**， **WriteLine**，以及**失敗**所有無條件地發出輸出，而**WriteIf**， **WriteLineIf**，以及**判斷提示**測試布林條件，並寫入或不會寫入根據條件的值。 如果條件為 `true`，**WriteIf** 與 **WriteLineIf** 會發出輸出，而如果條件為 `false`，則 **Assert** 會發出輸出。  

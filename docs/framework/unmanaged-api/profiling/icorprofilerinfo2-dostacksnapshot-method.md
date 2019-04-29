@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 12ef215253ca02048a5a3fc2c7c682823233929f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779811"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot 方法
 引導指定的執行緒的堆疊上的 managed 的框架，並將資訊傳送到透過回呼程式碼剖析工具。  
@@ -91,11 +91,11 @@ HRESULT DoStackSnapshot(
   
  非同步的堆疊查核行程可以輕易地會造成死結 （deadlock），或存取違規，除非您遵循這些指導方針：  
   
--   當您直接暫停執行緒時，請記得從未執行 managed 程式碼的執行緒可以暫停另一個執行緒。  
+- 當您直接暫停執行緒時，請記得從未執行 managed 程式碼的執行緒可以暫停另一個執行緒。  
   
--   會一直封鎖您[icorprofilercallback:: Threaddestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)回呼，直到該執行緒的堆疊查核行程完成為止。  
+- 會一直封鎖您[icorprofilercallback:: Threaddestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)回呼，直到該執行緒的堆疊查核行程完成為止。  
   
--   請勿保留鎖定，而您的程式碼剖析工具呼叫可以觸發記憶體回收的 CLR 函式。 也就是說，如果擁有的執行緒可能會觸發記憶體回收的呼叫請勿保留鎖定。  
+- 請勿保留鎖定，而您的程式碼剖析工具呼叫可以觸發記憶體回收的 CLR 函式。 也就是說，如果擁有的執行緒可能會觸發記憶體回收的呼叫請勿保留鎖定。  
   
  另外還有死結的風險。 如果您呼叫`DoStackSnapshot`從您的程式碼剖析工具，讓您可以將個別的目標執行緒的堆疊查核行程，已建立的執行緒。 第一次在您建立的執行緒進入特定`ICorProfilerInfo*`方法 (包括`DoStackSnapshot`)，CLR 會執行每個執行緒，在該執行緒上的 CLR 特定的初始化。 如果您的分析工具已暫止的目標執行緒嘗試查核行程的堆疊，而且該目標執行緒發生擁有鎖定所需執行這項每個執行緒初始化，則會發生死結。 若要避免這個死結，讓初始呼叫`DoStackSnapshot`個別目標執行緒，但並不會擱置目標執行緒先從引導您程式碼剖析工具建立的執行緒。 此初始呼叫可確保每個執行緒初始化可以完成不包含死結。 如果`DoStackSnapshot`成功，而且至少一個框架時，會報告該動作之後，將會暫止任何目標執行緒和呼叫該程式碼剖析工具建立執行緒安全`DoStackSnapshot`到該目標執行緒的堆疊查核行程。  
   

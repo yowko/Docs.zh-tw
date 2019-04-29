@@ -9,11 +9,11 @@ helpviewer_keywords:
 - DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
 ms.openlocfilehash: 01e10a4b0f0bf4959850caf3951ad4ea915edb4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762107"
 ---
 # <a name="using-drawingvisual-objects"></a>使用 DrawingVisual 物件
 本主題提供使用方式的概觀<xref:System.Windows.Media.DrawingVisual>中的物件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]視覺圖層。  
@@ -51,9 +51,9 @@ ms.locfileid: "59121715"
   
  下列清單說明您必須覆寫的兩個成員︰  
   
--   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>：傳回指定之索引處的子系集合中的項目子系。  
+- <xref:System.Windows.FrameworkElement.GetVisualChild%2A>：傳回指定之索引處的子系集合中的項目子系。  
   
--   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>：取得這個項目內的視覺化子項目數。  
+- <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>：取得這個項目內的視覺化子項目數。  
   
  在下列範例中，覆寫這兩個<xref:System.Windows.FrameworkElement>成員實作。  
   

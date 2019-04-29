@@ -10,11 +10,11 @@ helpviewer_keywords:
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
 ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703834"
 ---
 # <a name="flow-document-overview"></a>非固定格式文件概觀
 非固定格式文件的設計是為最佳化檢視和可讀性。 非固定格式文件並不會設為某種預先定義的配置，而是會根據執行階段變數 (例如視窗大小、裝置解析度和選擇性的使用者喜好設定)，動態調整及自動重排其內容。 此外，非固定格式文件提供進階文件功能，例如編頁和資料行。 本主題提供非固定格式文件和建立方式的概觀。  
@@ -42,13 +42,13 @@ ms.locfileid: "59303488"
   
  上圖中反白顯示，有數個內建固定格式文件的功能：
   
--   搜尋: 可讓使用者執行全文檢索搜尋的整份文件。  
+- 搜尋: 可讓使用者執行全文檢索搜尋的整份文件。  
   
--   檢視模式：使用者可以選取其慣用的檢視模式，包括單一頁面 （頁面-一次） 檢視模式中，兩個-頁面-一次 （書本閱讀格式） 檢視模式，以及連續捲動 （無底邊） 檢視模式。  如需這些檢視模式的詳細資訊，請參閱<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>。  
+- 檢視模式：使用者可以選取其慣用的檢視模式，包括單一頁面 （頁面-一次） 檢視模式中，兩個-頁面-一次 （書本閱讀格式） 檢視模式，以及連續捲動 （無底邊） 檢視模式。  如需這些檢視模式的詳細資訊，請參閱<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>。  
   
--   頁面導覽控制項︰如果文件的檢視模式使用頁面，頁面導覽控制項包括按鈕以移至下一頁 （向下箭號） 或上一頁 （向上箭頭），以及目前的頁碼和總頁數的指示器。 使用鍵盤方向鍵也可以翻頁。  
+- 頁面導覽控制項︰如果文件的檢視模式使用頁面，頁面導覽控制項包括按鈕以移至下一頁 （向下箭號） 或上一頁 （向上箭頭），以及目前的頁碼和總頁數的指示器。 使用鍵盤方向鍵也可以翻頁。  
   
--   縮放:縮放控制項可讓使用者以增加或減少的縮放層級，按一下加號或減號按鈕，分別。 縮放控制項也包括調整縮放層級的滑桿。 如需詳細資訊，請參閱<xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>。  
+- 縮放:縮放控制項可讓使用者以增加或減少的縮放層級，按一下加號或減號按鈕，分別。 縮放控制項也包括調整縮放層級的滑桿。 如需詳細資訊，請參閱<xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>。  
   
  您可以根據裝載非固定格式內容所用的控制項來修改這些功能。 下一節說明不同的控制項。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "59303488"
 ## <a name="creating-flow-content"></a>建立非固定格式內容  
  非固定格式內容可以是複雜，其中包含各種項目，包括文字、 影像、 表格、 甚至<xref:System.Windows.UIElement>衍生類別，如控制項。 若要了解如何建立複雜的非固定格式內容，下列幾點很重要︰  
   
--   **非固定格式相關的類別**:非固定格式內容中使用的每個類別都有特定用途。 此外，非固定格式類別之間的階層式關聯性可協助您了解如何使用它們。 例如，衍生自<xref:System.Windows.Documents.Block>類別來包含其他物件，而類別衍生自<xref:System.Windows.Documents.Inline>包含顯示的物件。  
+- **非固定格式相關的類別**:非固定格式內容中使用的每個類別都有特定用途。 此外，非固定格式類別之間的階層式關聯性可協助您了解如何使用它們。 例如，衍生自<xref:System.Windows.Documents.Block>類別來包含其他物件，而類別衍生自<xref:System.Windows.Documents.Inline>包含顯示的物件。  
   
--   **內容結構描述**:非固定格式文件可能需要大量的巢狀項目。 內容結構描述指定項目之間可能的父/子關聯性。  
+- **內容結構描述**:非固定格式文件可能需要大量的巢狀項目。 內容結構描述指定項目之間可能的父/子關聯性。  
   
  下列各節會一一詳細介紹這些區域。  
   
@@ -196,19 +196,19 @@ ms.locfileid: "59303488"
   
  **圖表：**  
   
--   可以位於：您可以設定其水平和垂直錨點上，以將它固定相對於頁面、 內容、 資料行或段落。 您也可以使用其<xref:System.Windows.Documents.Figure.HorizontalOffset%2A>和<xref:System.Windows.Documents.Figure.VerticalOffset%2A>屬性來指定任意位移。  
+- 可以位於：您可以設定其水平和垂直錨點上，以將它固定相對於頁面、 內容、 資料行或段落。 您也可以使用其<xref:System.Windows.Documents.Figure.HorizontalOffset%2A>和<xref:System.Windows.Documents.Figure.VerticalOffset%2A>屬性來指定任意位移。  
   
--   可調整為多個資料行項目：您可以設定<xref:System.Windows.Documents.Figure>高度和寬度的頁面、 內容或資料行的高度或寬度的倍數。 請注意，如果是頁面及內容，倍數不能大於 1。 例如，您可以在這裡設定的寬度<xref:System.Windows.Documents.Figure>是 「 0.5 倍頁面 」 或 「 0.25 倍內容 」 或 「 2 個資料行 」。 您也可以將高度和寬度設為絕對像素值。  
+- 可調整為多個資料行項目：您可以設定<xref:System.Windows.Documents.Figure>高度和寬度的頁面、 內容或資料行的高度或寬度的倍數。 請注意，如果是頁面及內容，倍數不能大於 1。 例如，您可以在這裡設定的寬度<xref:System.Windows.Documents.Figure>是 「 0.5 倍頁面 」 或 「 0.25 倍內容 」 或 「 2 個資料行 」。 您也可以將高度和寬度設為絕對像素值。  
   
--   不分頁︰如果內的內容<xref:System.Windows.Documents.Figure>未符合內部<xref:System.Windows.Documents.Figure>，它會轉譯任何符合最適大小，其餘的內容會遺失  
+- 不分頁︰如果內的內容<xref:System.Windows.Documents.Figure>未符合內部<xref:System.Windows.Documents.Figure>，它會轉譯任何符合最適大小，其餘的內容會遺失  
   
  **Floater：**  
   
--   無法定位，但會轉譯任何可用的空間。 您不能設定位移或錨點<xref:System.Windows.Documents.Floater>。  
+- 無法定位，但會轉譯任何可用的空間。 您不能設定位移或錨點<xref:System.Windows.Documents.Floater>。  
   
--   無法調整為多個資料行：根據預設，<xref:System.Windows.Documents.Floater>為一個資料行的大小。 它有<xref:System.Windows.Documents.Floater.Width%2A>屬性可以設定為絕對像素值，但此值是否大於一個資料行寬度，則會忽略它，且 floater 大小為一個資料行。 大小不超過一個資料行藉由設定正確的像素寬度，但調整大小不是資料行相關，所以 「 0.5 個"不是有效的運算式<xref:System.Windows.Documents.Floater>寬度。 <xref:System.Windows.Documents.Floater> 沒有高度屬性，而且無法設定高度，其高度取決於內容  
+- 無法調整為多個資料行：根據預設，<xref:System.Windows.Documents.Floater>為一個資料行的大小。 它有<xref:System.Windows.Documents.Floater.Width%2A>屬性可以設定為絕對像素值，但此值是否大於一個資料行寬度，則會忽略它，且 floater 大小為一個資料行。 大小不超過一個資料行藉由設定正確的像素寬度，但調整大小不是資料行相關，所以 「 0.5 個"不是有效的運算式<xref:System.Windows.Documents.Floater>寬度。 <xref:System.Windows.Documents.Floater> 沒有高度屬性，而且無法設定高度，其高度取決於內容  
   
--   <xref:System.Windows.Documents.Floater> 編頁：如果指定寬度的內容延伸到 1 個以上的資料行高度，floater 會中斷並分頁至下一個資料行的下一個頁面上，依此類推。  
+- <xref:System.Windows.Documents.Floater> 編頁：如果指定寬度的內容延伸到 1 個以上的資料行高度，floater 會中斷並分頁至下一個資料行的下一個頁面上，依此類推。  
   
  <xref:System.Windows.Documents.Figure> 是您想要用來控制大小的好地方放置獨立內容位置，並確定內容可納入指定的大小。 <xref:System.Windows.Documents.Floater> 是放置自由的更多內容，類似於主頁面內容，但會分開的好地方。  
   

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
 ms.openlocfilehash: 42276a9b450b6f0664901747239195ab13f7c44d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933649"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Windows Communication Foundation 異動概觀
 異動提供了將一組動作或作業分組為單一個不可分割的執行單位。 交易就是具有下列屬性的作業集合：  
   
--   單元性 (Atomicity)。 這可確保在特定異動下完成的所有更新會被認可並變成永久性的，或確保所有更新會被取消並還原至先前的狀態。  
+- 單元性 (Atomicity)。 這可確保在特定異動下完成的所有更新會被認可並變成永久性的，或確保所有更新會被取消並還原至先前的狀態。  
   
--   一致性 (Consistency)。 這可保證在異動下完成的變更會呈現從某個一致狀態轉換至另一個狀態。 例如，從支票帳戶轉帳到存款帳戶的異動並不會變更整個銀行帳戶內的總金額。  
+- 一致性 (Consistency)。 這可保證在異動下完成的變更會呈現從某個一致狀態轉換至另一個狀態。 例如，從支票帳戶轉帳到存款帳戶的異動並不會變更整個銀行帳戶內的總金額。  
   
--   隔離性。 這可避免異動觀察屬於其他並行異動的未經認可變更。 隔離性可提供抽象的並行，同時確保單一異動不會對其他異動的執行造成非預期的影響。  
+- 隔離性。 這可避免異動觀察屬於其他並行異動的未經認可變更。 隔離性可提供抽象的並行，同時確保單一異動不會對其他異動的執行造成非預期的影響。  
   
--   持續性 (Durability)。 這個屬性表示在經過認可之後，對於 Managed 資源 (例如資料庫記錄) 的更新在遇到失敗時仍會持續。  
+- 持續性 (Durability)。 這個屬性表示在經過認可之後，對於 Managed 資源 (例如資料庫記錄) 的更新在遇到失敗時仍會持續。  
   
  Windows Communication Foundation (WCF) 提供一組豐富的功能，可讓您在 Web 服務應用程式中建立分散式的交易。  
   
@@ -32,11 +32,11 @@ ms.locfileid: "59223104"
   
  <xref:System.ServiceModel> 命名空間 (Namespace) 中的異動屬性可讓您完成下列工作：  
   
--   使用 <xref:System.ServiceModel.ServiceBehaviorAttribute> 屬性，以設定異動逾時和隔離等級的過濾。  
+- 使用 <xref:System.ServiceModel.ServiceBehaviorAttribute> 屬性，以設定異動逾時和隔離等級的過濾。  
   
--   使用 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性，即可啟用交易功能並設定交易完成行為。  
+- 使用 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性，即可啟用交易功能並設定交易完成行為。  
   
--   使用合約方法上的 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 屬性，即可要求、允許或拒絕交易流程。  
+- 使用合約方法上的 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 屬性，即可要求、允許或拒絕交易流程。  
   
  如需詳細資訊，請參閱 < [ServiceModel 異動屬性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)。  
   

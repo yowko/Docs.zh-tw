@@ -9,11 +9,11 @@ helpviewer_keywords:
 - dependency properties [WPF], adding classes as owners of
 ms.assetid: edcce050-0576-4edb-a31a-3f909637b452
 ms.openlocfilehash: 1b1f2b241868b02e430af82bac8e9f6a617e511b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777113"
 ---
 # <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>HOW TO：新增相依性屬性的擁有者類型
 此範例示範如何將類別新增為相依性屬性註冊不同類型的擁有者。 這樣做， [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]讀取器和屬性系統都能夠辨識為其他屬性的擁有者的類別。 （選擇性） 新增為擁有者，可讓新增的類別，以提供特定類型的中繼資料。  

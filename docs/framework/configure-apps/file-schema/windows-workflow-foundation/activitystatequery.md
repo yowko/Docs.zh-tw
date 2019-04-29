@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 9f8c3e4f-e2e3-4402-9760-03bf918ece7b
 ms.openlocfilehash: 539ce0ba72ae7a8d568cdea3a1a3aab3eec1001b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790386"
 ---
 # <a name="activitystatequery"></a>\<activityStateQuery>
 代表查詢，可用來追蹤活動的生命週期之變更，這些活動將構成工作流程執行個體。 例如，您可能要追蹤的每次在 「 傳送電子郵件 」 活動完成的工作流程執行個體內。 追蹤參與者必須要具備這個查詢，才能訂閱活動狀態記錄物件。 可供訂閱的狀態可於 ActivityStates 中指定。  

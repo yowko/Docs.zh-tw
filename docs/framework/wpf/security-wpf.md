@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
 ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696791"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a> 在開發 Windows Presentation Foundation (WPF) 獨立和瀏覽器裝載的應用程式時，您必須考量的安全性模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 獨立應用程式使用不受限制的權限執行 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**權限集合)，不論部署使用 Windows Installer (.msi)、 XCopy 或[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]。 不支援使用 ClickOnce 部署部分信任的獨立 WPF 應用程式。 不過，完全信任主應用程式可以建立部分信任<xref:System.AppDomain>使用.NET Framework 增益集模型。 如需詳細資訊，請參閱 < [WPF 增益集概觀](./app-development/wpf-add-ins-overview.md)。  
@@ -31,17 +31,17 @@ ms.locfileid: "59313563"
   
  此主題包括下列章節：  
   
--   [安全巡覽](#SafeTopLevelNavigation)  
+- [安全巡覽](#SafeTopLevelNavigation)  
   
--   [Web 瀏覽軟體安全性設定](#InternetExplorerSecuritySettings)  
+- [Web 瀏覽軟體安全性設定](#InternetExplorerSecuritySettings)  
   
--   [WebBrowser 控制項和功能控制項](#webbrowser_control_and_feature_controls)  
+- [WebBrowser 控制項和功能控制項](#webbrowser_control_and_feature_controls)  
   
--   [停用部分信任用戶端應用程式的 APTCA 組件](#APTCA)  
+- [停用部分信任用戶端應用程式的 APTCA 組件](#APTCA)  
   
--   [鬆散 XAML 檔案的沙箱行為](#LooseContentSandboxing)  
+- [鬆散 XAML 檔案的沙箱行為](#LooseContentSandboxing)  
   
--   [用於開發可提高安全性的 WPF 應用程式的資源](#BestPractices)  
+- [用於開發可提高安全性的 WPF 應用程式的資源](#BestPractices)  
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>安全巡覽  
@@ -69,19 +69,19 @@ ms.locfileid: "59313563"
   
  使用者或透過程式設計方式可以巡覽到這些內容類型的檔案︰  
   
--   **使用者巡覽**。 使用者瀏覽，即可<xref:System.Windows.Documents.Hyperlink>項目。  
+- **使用者巡覽**。 使用者瀏覽，即可<xref:System.Windows.Documents.Hyperlink>項目。  
   
--   **程式設計巡覽**。 應用程式即可在不需要使用者，例如，藉由設定<xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>屬性。  
+- **程式設計巡覽**。 應用程式即可在不需要使用者，例如，藉由設定<xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>屬性。  
   
 <a name="Browser_Navigation_Security"></a>   
 ### <a name="browser-navigation-security"></a>瀏覽器巡覽安全性  
  只有在下列情況下，才會將瀏覽器巡覽視為安全：  
   
--   **使用者巡覽**。 使用者瀏覽，即可<xref:System.Windows.Documents.Hyperlink>項目，位於主要<xref:System.Windows.Navigation.NavigationWindow>而不是巢狀<xref:System.Windows.Controls.Frame>。  
+- **使用者巡覽**。 使用者瀏覽，即可<xref:System.Windows.Documents.Hyperlink>項目，位於主要<xref:System.Windows.Navigation.NavigationWindow>而不是巢狀<xref:System.Windows.Controls.Frame>。  
   
--   **區域**。 所要巡覽的內容位在網際網路或近端內部網路。  
+- **區域**。 所要巡覽的內容位在網際網路或近端內部網路。  
   
--   **通訊協定**. 可能是正在使用的通訊協定**http**， **https**，**檔案**，或**mailto**。  
+- **通訊協定**. 可能是正在使用的通訊協定**http**， **https**，**檔案**，或**mailto**。  
   
  如果[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]嘗試瀏覽至內容的方式不符合這些條件，<xref:System.Security.SecurityException>就會擲回。  
   
@@ -91,15 +91,15 @@ ms.locfileid: "59313563"
   
  [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 提供一個機制，您可以設定的功能，允許或從中執行[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]，包括下列：  
   
--   .NET framework 相依元件  
+- .NET framework 相依元件  
   
--   ActiveX 控制項和外掛程式  
+- ActiveX 控制項和外掛程式  
   
--   下載  
+- 下載  
   
--   正在處理指令碼  
+- 正在處理指令碼  
   
--   使用者驗證  
+- 使用者驗證  
   
  您可以在這種方式保護的功能集合已設定為針對每個區域為基礎**網際網路**，**內部網路**，**信任的網站**，和**限制的網站**區域。 下列步驟描述如何設定安全性設定：  
   
@@ -122,9 +122,9 @@ ms.locfileid: "59313563"
   
  從開始[!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)]，特別針對.NET Framework 的下列安全性設定會包含：  
   
--   **鬆散 XAML**。 控制項是否[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]可以瀏覽至並鬆散[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]檔案。 ([啟用]、[停用] 和 [提示] 選項)。  
+- **鬆散 XAML**。 控制項是否[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]可以瀏覽至並鬆散[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]檔案。 ([啟用]、[停用] 和 [提示] 選項)。  
   
--   **XAML 瀏覽器應用程式**。 控制項是否[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]可以瀏覽至並執行[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 ([啟用]、[停用] 和 [提示] 選項)。  
+- **XAML 瀏覽器應用程式**。 控制項是否[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]可以瀏覽至並執行[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 ([啟用]、[停用] 和 [提示] 選項)。  
   
  根據預設，這些設定所有啟用**網際網路**，**近端內部網路**，並**信任的網站**區域，並停用**限制的網站**區域。  
   
@@ -232,11 +232,11 @@ ms.locfileid: "59313563"
   
  此機碼會為 APTCA 組件建立一個項目。 您也必須在這個機碼中建立啟用或停用組件的數值。 數值的詳細資料如下︰  
   
--   值名稱：**APTCA_FLAG**。  
+- 值名稱：**APTCA_FLAG**。  
   
--   實值型別：**REG_DWORD**。  
+- 實值型別：**REG_DWORD**。  
   
--   數值資料：**1**停用;**0**啟用。  
+- 數值資料：**1**停用;**0**啟用。  
   
  如果必須停用部分信任用戶端應用程式的組件，您可以撰寫可建立登錄機碼和值的更新。  
   

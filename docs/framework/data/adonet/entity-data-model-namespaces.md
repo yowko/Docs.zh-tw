@@ -3,11 +3,11 @@ title: 實體資料模型：命名空間
 ms.date: 03/30/2017
 ms.assetid: 98ab4226-bb9f-44e7-af46-61a9b1a4e47c
 ms.openlocfilehash: 7772172512d35b9ce9cf07a992c1c5f0ecd8c55b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667154"
 ---
 # <a name="entity-data-model-namespaces"></a>實體資料模型：命名空間
 在 Entity Data Model (EDM) 中的命名空間是抽象的容器，如[實體類型](../../../../docs/framework/data/adonet/entity-type.md)，[複雜型別](../../../../docs/framework/data/adonet/complex-type.md)，並[關聯](../../../../docs/framework/data/adonet/association-type.md)。 EDM 中的命名空間類似於程式設計語言中的命名空間：針對它們所包含的物件提供內容，並且提供方法讓名稱相同 (但包含在不同命名空間中) 的物件意義清楚。  

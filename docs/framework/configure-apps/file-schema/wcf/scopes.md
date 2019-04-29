@@ -3,11 +3,11 @@ title: <scopes>
 ms.date: 03/30/2017
 ms.assetid: 9a0dd3ce-e383-4ac3-b7be-7d604388304a
 ms.openlocfilehash: 8bc720238ca3039106345783381cd26134fc46b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670621"
 ---
 # <a name="scopes"></a>\<scopes>
 包含組態項目的集合，這些項目會指定可用於在查詢期間篩選服務端點的自訂範圍 URI。  

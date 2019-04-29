@@ -3,11 +3,11 @@ title: <idn> 項目 (URI 設定)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 ms.openlocfilehash: 2d2729f9120d6b6fe673904ad2bf6d005ddf5469
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705099"
 ---
 # <a name="idn-element-uri-settings"></a>\<idn > 項目 （Uri 設定）
 指定是否國際化網域名稱 (IDN) 剖析套用至網域名稱。  
@@ -60,15 +60,15 @@ ms.locfileid: "59321749"
   
  有三個可能的值進行 IDN 根據所使用的 DNS 伺服器：  
   
--   啟用 idn = All  
+- 啟用 idn = All  
   
      這個值會將任何 Unicode 網域名稱轉換成 Punycode 的對等名稱 （IDN 名稱）。  
   
--   啟用 idn = AllExceptIntranet  
+- 啟用 idn = AllExceptIntranet  
   
      這個值會轉換不是在本機的內部網路使用 Punycode 的對等名稱 （IDN 名稱） 上的所有 Unicode 網域名稱。 在此情況下，若要處理在本機的內部網路上的國際性名稱，用於內部網路的 DNS 伺服器應該支援 Unicode 名稱解析。  
   
--   啟用 idn = 無  
+- 啟用 idn = 無  
   
      此值不會轉換任何 Unicode 網域名稱，即可使用 Punycode。 這是預設值是與.NET Framework 2.0 行為一致。  
   

@@ -3,11 +3,11 @@ title: <serviceCertificate> 項目的 <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
 ms.openlocfilehash: 4fe196ef8737c7abde939e36c2bb7afd5a0d86b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670296"
 ---
 # <a name="servicecertificate-of-clientcredentials-element"></a>\<serviceCertificate > 的\<clientCredentials > 項目
 指定對用戶端驗證服務時所使用的憑證。  

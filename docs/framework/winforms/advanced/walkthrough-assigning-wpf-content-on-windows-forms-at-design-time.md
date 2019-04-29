@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
 ms.openlocfilehash: b4efef869c96ddb4e58445e45ecad12b5658f9f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748886"
 ---
 # <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>逐步解說：在設計階段指派 Windows Forms 的 WPF 內容
 本逐步解說示範如何選取要在表單上顯示的 Windows Presentation Foundation (WPF) 控制項類型。 您可以選取包含在專案中的任何 WPF 控制項類型。
 
  在這個逐步解說中，您將執行下列工作：
 
--   建立專案。
+- 建立專案。
 
--   建立 WPF 控制項類型。
+- 建立 WPF 控制項類型。
 
--   選取 WPF 控制項。
+- 選取 WPF 控制項。
 
 > [!NOTE]
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -32,7 +32,7 @@ ms.locfileid: "59343340"
 ## <a name="prerequisites"></a>必要條件  
  您需要下列元件才能完成此逐步解說：  
   
--   Visual Studio 2012.  
+- Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>建立專案  
  第一個步驟是建立 Windows Form 專案。  
@@ -42,7 +42,7 @@ ms.locfileid: "59343340"
   
 #### <a name="to-create-the-project"></a>若要建立專案  
   
--   建立新的 Windows Forms 應用程式專案在 Visual Basic 或 Visual C# 中名為`SelectingWpfContent`。  
+- 建立新的 Windows Forms 應用程式專案在 Visual Basic 或 Visual C# 中名為`SelectingWpfContent`。  
   
 ## <a name="creating-the-wpf-control-types"></a>建立 WPF 控制項類型  
  當您將 WPF 控制項類型加入專案之後，即可在不同的 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中裝載這些類型。  

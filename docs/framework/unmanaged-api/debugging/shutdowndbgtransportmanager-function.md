@@ -19,14 +19,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 213ca658e7a84f03b15f97cf07aa1ed7cb39205b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765332"
 ---
 # <a name="shutdowndbgtransportmanager-function"></a>ShutdownDbgTransportManager 函式
-關閉傳輸管理員，以便與遠端目標電腦連接。  
+關閉要與遠端目標電腦連接的傳輸管理員。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,7 +35,7 @@ void InitDbgTransportManager ();
 ```  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CoreClrRemoteDebuggingInterfaces.h  
   

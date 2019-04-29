@@ -13,20 +13,20 @@ helpviewer_keywords:
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
 ms.openlocfilehash: 4ae2366552426af0107c8d7a35bb5368fe30c8a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791959"
 ---
 # <a name="optional-parameters-visual-basic"></a>選擇性參數 (Visual Basic)
 您可以將程序參數指定為選擇項，當該程序被呼叫時就不必提供引數。 *選擇性參數*由`Optional`程序定義中的關鍵字。 可套用下列規則：  
   
--   程序定義中的每一個選擇性參數都必須指定一個預設值。  
+- 程序定義中的每一個選擇性參數都必須指定一個預設值。  
   
--   選擇性參數的預設值必須是常數運算式。  
+- 選擇性參數的預設值必須是常數運算式。  
   
--   在程序定義中，每一個跟在選擇性參數之後的參數也必須是選擇項。  
+- 在程序定義中，每一個跟在選擇性參數之後的參數也必須是選擇項。  
   
  以下的語法顯示具有選擇性參數的程序宣告：  
   

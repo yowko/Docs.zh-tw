@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID322
 ms.assetid: 53617b5b-eb06-4188-b4c2-8607cb9fbc79
 ms.openlocfilehash: 658c2ab1dc210bf472646bce529ae5ffd7f67bc5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649981"
 ---
 # <a name="cant-create-necessary-temporary-file"></a>無法建立必要的暫存檔
 磁碟機已滿，包含 TEMP 環境變數所指定的目錄或 TEMP 環境變數指定的無效或唯讀磁碟機或目錄。  

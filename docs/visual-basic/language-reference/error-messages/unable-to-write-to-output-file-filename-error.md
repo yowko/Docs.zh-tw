@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
 ms.openlocfilehash: f29eb628c079f65a520cf5e1ccd8afed549f7cad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787409"
 ---
 # <a name="unable-to-write-to-output-file-filename-error"></a>無法寫入輸出檔 '\<檔案名稱 >':\<錯誤 >
 建立檔案時發生問題。  
@@ -21,9 +21,9 @@ ms.locfileid: "59318217"
   
  以獨佔方式開啟檔案的常見狀況有：  
   
--   應用程式已在執行中，且正在使用其檔案。 若要解決此問題，請確定應用程式不在執行中。  
+- 應用程式已在執行中，且正在使用其檔案。 若要解決此問題，請確定應用程式不在執行中。  
   
--   另一個應用程式已開啟該檔案。 若要解決此問題，請確定沒有其他應用程式正在存取檔案。 您不一定能顯而易見地分辨出是哪個應用程式在存取您的檔案；在這種情況下，重新啟動電腦可能是終止該應用程式最容易的方法。  
+- 另一個應用程式已開啟該檔案。 若要解決此問題，請確定沒有其他應用程式正在存取檔案。 您不一定能顯而易見地分辨出是哪個應用程式在存取您的檔案；在這種情況下，重新啟動電腦可能是終止該應用程式最容易的方法。  
   
  即使是其中一個專案輸出檔被標為唯讀，都會擲回這個例外狀況。  
   

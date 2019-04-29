@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: 86921b610b4b42cfc0393af2966b70870bc650f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773767"
 ---
 # <a name="opentype-font-features"></a>OpenType 字型功能
 
@@ -26,15 +26,15 @@ ms.locfileid: "59104477"
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型格式解決下列開發人員難題︰  
   
--   更廣泛的多平台支援。  
+- 更廣泛的多平台支援。  
   
--   更好的國際字元集支援。  
+- 更好的國際字元集支援。  
   
--   更好的字型資料保護。  
+- 更好的字型資料保護。  
   
--   較小的檔案大小，讓字型發佈更有效率。  
+- 較小的檔案大小，讓字型發佈更有效率。  
   
--   進階印刷樣式控制項的廣泛支援。  
+- 進階印刷樣式控制項的廣泛支援。  
   
 > [!NOTE]
 >  此 Windows SDK 包含一組範例 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型，可與 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式搭配使用。 本主題後文會說明這些字型提供的大部分功能。 如需詳細資訊，請參閱[範例 OpenType 字型套件](sample-opentype-font-pack.md)。  
@@ -44,11 +44,11 @@ ms.locfileid: "59104477"
 ### <a name="advanced-typographic-extensions"></a>進階的印刷樣式延伸模組  
  進階印刷樣式資料表 ([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 版面配置表格) 使用 [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] 或 CFF 外框來擴充字型功能。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 版面配置字型包含延伸字型功能的其他資訊，支援高品質的國際印刷樣式。 大部分 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型只公開總計的 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 可用功能子集。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型提供下列功能。  
   
--   字元與字符之間的豐富對應，支援連音符號、位置形式、替代項目，以及其他字型替代項目。  
+- 字元與字符之間的豐富對應，支援連音符號、位置形式、替代項目，以及其他字型替代項目。  
   
--   支援二維定位與字符附件。  
+- 支援二維定位與字符附件。  
   
--   字型中包含明確的指令碼和語言資訊，因此文字處理應用程式可據以調整其行為。  
+- 字型中包含明確的指令碼和語言資訊，因此文字處理應用程式可據以調整其行為。  
   
  在 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 規格的[字型檔案表格＞](https://www.microsoft.com/typography/otspec/otff.htm)一節中，會詳細說明 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 版面配置表格。  
   
@@ -120,13 +120,13 @@ ms.locfileid: "59104477"
 ## <a name="ligatures"></a>連音符號  
  連音符號是兩個或以上的字符，形成單一字符以建立更清晰或更美觀的文字。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型支援四種連音符號︰  
   
--   **標準連音符號**。 設計目的旨在增進可讀性。 標準連音符號包括 "fi"、"fl" 和 "ff"。  
+- **標準連音符號**。 設計目的旨在增進可讀性。 標準連音符號包括 "fi"、"fl" 和 "ff"。  
   
--   **內容連音符號**。 設計目的旨在提供組成連音符號的字元間更好的聯結行為，以提升可讀性。  
+- **內容連音符號**。 設計目的旨在提供組成連音符號的字元間更好的聯結行為，以提升可讀性。  
   
--   **Discretionary 連音符號**。 設計成裝飾之用，並不是特別針對可讀性設計。  
+- **Discretionary 連音符號**。 設計成裝飾之用，並不是特別針對可讀性設計。  
   
--   **過往連音符號**。 設計成記錄之用，並不是特別針對可讀性所設計。  
+- **過往連音符號**。 設計成記錄之用，並不是特別針對可讀性所設計。  
   
  下列文字顯示 Pericles 字型的標準連音符號字符。  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
 ms.openlocfilehash: 4588f6f606f0f479aeae1d143f23175ec4be32a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779116"
 ---
 # <a name="cardinal-splines-in-gdi"></a>GDI+ 中的基本曲線
 基本曲線是一連串個別加入形成更大的曲線的曲線。 指定曲線的點和張力參數陣列。 中的陣列; 每個點順利通過的基本曲線有沒有尖角和中的曲線 tightness 任何突然的變更。 下圖顯示一組點和通過集合中的每個點的基本曲線。  

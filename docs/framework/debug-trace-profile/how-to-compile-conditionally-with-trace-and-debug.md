@@ -13,11 +13,11 @@ ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754553"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>HOW TO：使用追蹤和偵錯進行條件式編譯
 當您於開發期間偵錯應用程式時，追蹤及偵錯輸出都會移至 Visual Studio 中的 [輸出] 視窗。 然而，若要在已部署的應用程式中包含追蹤功能，您必須在啟用 **TRACE** 編譯器指示詞的情況下編譯已經過檢測的應用程式。 這可將追蹤程式碼編譯成應用程式的發行版本。 如果您沒有啟用 **TRACE** 指示詞，則在編譯期間會忽略所有的追蹤程式碼，並且不會在您將部署的可執行程式碼中包含追蹤程式碼。  
@@ -28,11 +28,11 @@ ms.locfileid: "59298574"
   
  您可用數種方式來指定應用程式的編譯器設定：  
   
--   屬性頁  
+- 屬性頁  
   
--   命令列  
+- 命令列  
   
--   **#CONST** (若為 Visual Basic) 和 **#define** (若為 C#)  
+- **#CONST** (若為 Visual Basic) 和 **#define** (若為 C#)  
   
 ### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a>從屬性頁對話方塊變更編譯設定  
   
@@ -40,9 +40,9 @@ ms.locfileid: "59298574"
   
 2. 從捷徑功能表中選擇 [屬性]。  
   
-    -   在 Visual Basic 中，按一下屬性頁左窗格內的 [編譯] 索引標籤，然後按一下 [進階編譯選項] 按鈕，即可顯示 [進階編譯器設定] 對話方塊。 請選取您想要啟用之編譯器設定的核取方塊。 清除您想要停用之設定值的核取方塊。  
+    - 在 Visual Basic 中，按一下屬性頁左窗格內的 [編譯] 索引標籤，然後按一下 [進階編譯選項] 按鈕，即可顯示 [進階編譯器設定] 對話方塊。 請選取您想要啟用之編譯器設定的核取方塊。 清除您想要停用之設定值的核取方塊。  
   
-    -   在 C# 中，按一下屬性頁左窗格內的 [建置] 索引標籤，然後選取您想要啟用之編譯器設定的核取方塊。 清除您想要停用之設定值的核取方塊。  
+    - 在 C# 中，按一下屬性頁左窗格內的 [建置] 索引標籤，然後選取您想要啟用之編譯器設定的核取方塊。 清除您想要停用之設定值的核取方塊。  
   
 ### <a name="to-compile-instrumented-code-using-the-command-line"></a>使用命令列來編譯已經過檢測的程式碼  
   

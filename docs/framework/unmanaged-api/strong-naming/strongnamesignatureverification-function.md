@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c398663b84637d2551b0d94bd59b9e0994721ba5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792622"
 ---
 # <a name="strongnamesignatureverification-function"></a>StrongNameSignatureVerification 函式
 取得指出位於所指定路徑之組件資訊清單是否包含強式名稱簽章的值 (會根據指定的旗標驗證此值)。  
@@ -45,22 +45,22 @@ BOOLEAN StrongNameSignatureVerification (
  `dwInFlags`  
  [in]若要修改的驗證行為的旗標。 支援下列值：  
   
--   `SN_INFLAG_FORCE_VER` (0x00000001)-強制執行驗證，即使它是需要覆寫登錄設定。  
+- `SN_INFLAG_FORCE_VER` (0x00000001)-強制執行驗證，即使它是需要覆寫登錄設定。  
   
--   `SN_INFLAG_INSTALL` (0x00000002)-指定驗證資訊清單的第一次。  
+- `SN_INFLAG_INSTALL` (0x00000002)-指定驗證資訊清單的第一次。  
   
--   `SN_INFLAG_ADMIN_ACCESS` (0x00000004)-指定快取可讓具有系統管理權限的使用者存取。  
+- `SN_INFLAG_ADMIN_ACCESS` (0x00000004)-指定快取可讓具有系統管理權限的使用者存取。  
   
--   `SN_INFLAG_USER_ACCESS` (0x00000008)-指定的組件都是僅供目前的使用者存取。  
+- `SN_INFLAG_USER_ACCESS` (0x00000008)-指定的組件都是僅供目前的使用者存取。  
   
--   `SN_INFLAG_ALL_ACCESS` (0x00000010)-指定快取會提供任何保證的存取限制。  
+- `SN_INFLAG_ALL_ACCESS` (0x00000010)-指定快取會提供任何保證的存取限制。  
   
--   `SN_INFLAG_RUNTIME` (0x80000000)-保留給內部偵錯。  
+- `SN_INFLAG_RUNTIME` (0x80000000)-保留給內部偵錯。  
   
  `pdwOutFlags`  
  [out]旗標，指出是否已驗證的強式名稱簽章。 支援下列值：  
   
--   `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-此值設為`false`，指定驗證成功，因為登錄設定。  
+- `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-此值設為`false`，指定驗證成功，因為登錄設定。  
   
 ## <a name="return-value"></a>傳回值  
  `true` 如果驗證成功;否則， `false`。  

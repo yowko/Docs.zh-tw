@@ -5,11 +5,11 @@ helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
 ms.openlocfilehash: 829d6485acdca22fbf10160c734e5c7f931dd855
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938251"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>逐步解說：驗證密碼確實複雜 (Visual Basic)
 這個方法會檢查一些強式密碼的特性，並以了解哪種檢查密碼失敗的資訊更新字串參數。  
@@ -28,20 +28,20 @@ ms.locfileid: "58824932"
   
  這個範例需要：  
   
--   <xref:System.Text.RegularExpressions> 命名空間成員的存取權。 新增 `Imports` 陳述式 (如果未在程式碼中完整限定成員名稱)。 如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
+- <xref:System.Text.RegularExpressions> 命名空間成員的存取權。 新增 `Imports` 陳述式 (如果未在程式碼中完整限定成員名稱)。 如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
   
 ## <a name="security"></a>安全性  
  如果您要透過網路移動的密碼，您需要將資料傳輸會使用安全的方法。 如需詳細資訊，請參閱 < [ASP.NET Web 應用程式安全性](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))。
   
  您可以改善的精確度`ValidatePassword`加上額外的複雜性檢查函式：  
   
--   密碼和使用者的名稱、 使用者識別碼和應用程式定義的字典的子字串比較。 執行比較時，此外，將視為對等項目看起來類似的字元。 比方說，視為字母"l"和"e"等於"1"和"3"的數字。  
+- 密碼和使用者的名稱、 使用者識別碼和應用程式定義的字典的子字串比較。 執行比較時，此外，將視為對等項目看起來類似的字元。 比方說，視為字母"l"和"e"等於"1"和"3"的數字。  
   
--   如果只有一個大寫字元，請確定它不是密碼的第一個字元。  
+- 如果只有一個大寫字元，請確定它不是密碼的第一個字元。  
   
--   請確定密碼的最後兩個字元的字母字元。  
+- 請確定密碼的最後兩個字元的字母字元。  
   
--   不允許在其中從鍵盤上方資料列輸入所有符號的密碼。  
+- 不允許在其中從鍵盤上方資料列輸入所有符號的密碼。  
   
 ## <a name="see-also"></a>另請參閱
 

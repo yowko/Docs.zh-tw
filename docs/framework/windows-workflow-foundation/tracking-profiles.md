@@ -3,11 +3,11 @@ title: 追蹤設定檔
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
 ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699668"
 ---
 # <a name="tracking-profiles"></a>追蹤設定檔
 
@@ -67,8 +67,7 @@ TrackingProfile profile = new TrackingProfile()
 
 不過，如果`implementationVisibility`屬性 (attribute) 的追蹤設定檔設定為`All`，則不只發出追蹤記錄*MyActivity*，，而且還可活動*Activity1*並*Activity2*。
 
-
-  `implementationVisibility` 旗標適用於下列追蹤記錄類型：
+`implementationVisibility` 旗標適用於下列追蹤記錄類型：
 
 - ActivityStateRecord
 
@@ -151,8 +150,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     };
     ```
 
-- <xref:System.Activities.Tracking.ActivityStateQuery> - 使用這個查詢，即可追蹤組成工作流程執行個體之活動的生命週期變更。 例如，您可能要追蹤的每次在 「 傳送電子郵件 」 活動完成的工作流程執行個體內。 
-  <xref:System.Activities.Tracking.TrackingParticipant> 訂閱 <xref:System.Activities.Tracking.ActivityStateRecord> 物件時，必須要有這個查詢。 可供訂閱的狀態可於 <xref:System.Activities.Tracking.ActivityStates> 中指定。
+- <xref:System.Activities.Tracking.ActivityStateQuery> - 使用這個查詢，即可追蹤組成工作流程執行個體之活動的生命週期變更。 例如，您可能要追蹤的每次在 「 傳送電子郵件 」 活動完成的工作流程執行個體內。 <xref:System.Activities.Tracking.TrackingParticipant> 訂閱 <xref:System.Activities.Tracking.ActivityStateRecord> 物件時，必須要有這個查詢。 可供訂閱的狀態可於 <xref:System.Activities.Tracking.ActivityStates> 中指定。
 
     下列範例示範訂閱使用 <xref:System.Activities.Tracking.ActivityStateQuery> 做為 `SendEmailActivity` 活動之活動狀態追蹤記錄的組態和程式碼。
 
@@ -234,8 +232,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     };
     ```
 
-- <xref:System.Activities.Tracking.CancelRequestedQuery> - 使用這個查詢，即可追蹤父活動取消子活動的要求。 
-  <xref:System.Activities.Tracking.TrackingParticipant> 訂閱 <xref:System.Activities.Tracking.CancelRequestedRecord> 物件時，必須要有這個查詢。
+- <xref:System.Activities.Tracking.CancelRequestedQuery> - 使用這個查詢，即可追蹤父活動取消子活動的要求。 <xref:System.Activities.Tracking.TrackingParticipant> 訂閱 <xref:System.Activities.Tracking.CancelRequestedRecord> 物件時，必須要有這個查詢。
 
     用來訂閱記錄的程式碼與組態相關活動取消使用<xref:System.Activities.Tracking.CancelRequestedQuery>下列範例所示。
 

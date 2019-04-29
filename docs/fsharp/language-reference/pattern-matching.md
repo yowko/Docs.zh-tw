@@ -3,11 +3,11 @@ title: 模式比對
 description: 了解模式可用於F#來比較具有邏輯結構的資料，將資料分解為構成部分，或從資料擷取資訊。
 ms.date: 05/16/2016
 ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795456"
 ---
 # <a name="pattern-matching"></a>模式比對
 
@@ -38,14 +38,14 @@ match expression with
 |或模式|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
 |和模式|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
 |Cons 模式|*識別項*::*清單識別碼*|`h :: t`|
-|清單模式|[ *pattern_1*;...&lt;*pattern_n* ]|`[ a; b; c ]`|
-|陣列模式|[&#124; *pattern_1*;..;*pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
-|括號模式|(*模式*)|`( a )`|
+|清單模式|[ *pattern_1*; ... ; *pattern_n* ]|`[ a; b; c ]`|
+|陣列模式|[&#124; *pattern_1*; ..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
+|括號模式|( *pattern* )|`( a )`|
 |Tuple 模式|( *pattern_1*，...， *pattern_n* )|`( a, b )`|
-|記錄模式|{ *identifier1* = *pattern_1*;...&lt;*identifier_n* = *pattern_n* }|`{ Name = name; }`|
+|記錄模式|{ *identifier1* = *pattern_1*; ... ; *identifier_n* = *pattern_n* }|`{ Name = name; }`|
 |萬用字元模式|_|`_`|
-|搭配類型附註的模式|*圖樣*:*類型*|`a : int`|
-|類型測試模式|:? *型別*[做為*識別碼*]|`:? System.DateTime as dt`|
+|搭配類型附註的模式|*pattern* : *type*|`a : int`|
+|類型測試模式|:? *type* [ as *identifier* ]|`:? System.DateTime as dt`|
 |Null 模式|null|`null`|
 
 ## <a name="constant-patterns"></a>常數模式

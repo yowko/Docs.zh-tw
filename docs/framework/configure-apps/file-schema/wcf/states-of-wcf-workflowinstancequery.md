@@ -3,11 +3,11 @@ title: <states> WCF 的 <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
 ms.openlocfilehash: fad6f9c8871f79e4a1e26c893eed86ba168f6d01
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757946"
 ---
 # <a name="states-of-wcf-workflowinstancequery"></a>\<狀態 > 的 WCF， \<workflowInstanceQuery >
 
@@ -69,7 +69,7 @@ ms.locfileid: "55281459"
   
 下表說明可能的狀態值。  
   
-|狀態|描述|  
+|狀況|描述|  
 |-----------|-----------------|  
 |已中止|工作流程執行個體已中止。|  
 |已完成|工作流程執行個體已完成。|  
@@ -77,11 +77,11 @@ ms.locfileid: "55281459"
 |閒置|工作流程執行個體閒置中。|  
 |已保存|工作流程執行個體已保存。|  
 |已繼續|工作流程執行個體已繼續。|  
-|已啟動|工作流程執行個體已啟動。|  
+|自|工作流程執行個體已啟動。|  
 |未處理的例外狀況|工作流程執行個體發生未處理的例外狀況。|  
-|Unloaded|工作流程執行個體已卸載。|  
+|已卸載|工作流程執行個體已卸載。|  
 |已取消|工作流程執行個體已取消。|  
-|暫停|工作流程執行個體已暫停。|  
+|擱置|工作流程執行個體已暫停。|  
 |已終止|工作流程執行個體已終止。|  
 |Unsuspended|工作流程執行個體已取消暫停。|  
   

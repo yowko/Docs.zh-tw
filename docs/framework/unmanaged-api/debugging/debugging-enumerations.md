@@ -9,11 +9,11 @@ ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5edd6dfb3dac05ce4614c43949f2ec4c19b5f742
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698508"
 ---
 # <a name="debugging-enumerations"></a>偵錯列舉
 本節說明偵錯 API 所使用的 Unmanaged 列舉。  
@@ -53,7 +53,7 @@ ms.locfileid: "54415945"
  表示一種從進行的回呼[ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)事件。  
   
  [CorDebugExceptionFlags 列舉](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)  
- 提供例外狀況的其他相關資訊。  
+ 提供例外狀況的其他資訊。  
   
  CorDebugExceptionUnwindCallbackType  
  指出回呼在回溯階段期間通知的事件。  

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用事件建立變化效果
+title: HOW TO：使用事件建立變換效果
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - element colors [WPF], changing
 ms.assetid: 3b20d028-6f1c-4b25-95d2-fa68cefbdb4c
 ms.openlocfilehash: 87740a215136863199d962a2704cf691f27fc3bc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776645"
 ---
-# <a name="how-to-create-a-rollover-effect-using-events"></a>HOW TO：使用事件建立變化效果
+# <a name="how-to-create-a-rollover-effect-using-events"></a>HOW TO：使用事件建立變換效果
 此範例示範如何變更項目的色彩，當滑鼠指標進入及離開項目所佔用的區域。  
   
  此範例中組成[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]檔案和程式碼後置檔案。  

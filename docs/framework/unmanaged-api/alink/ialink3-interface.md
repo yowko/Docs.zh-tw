@@ -9,18 +9,18 @@ ms.assetid: a96bf3cc-75a0-49c9-bf5e-4d7ad5dab716
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16c787d865313f77417093555ea0cedb72aeb042
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753656"
 ---
 # <a name="ialink3-interface"></a>IALink3 介面
-提供單一方法`SetManifestFile`，可讓您指定或重設連結器會在建立組件時使用的資訊清單檔。  
+提供單一方法`SetManifestFile`，可讓您指定或重設連結器會使用當它建立的組件資訊清單檔案。  
   
 ## <a name="in-this-section"></a>本節內容  
  [SetManifestFile 方法](../../../../docs/framework/unmanaged-api/alink/setmanifestfile-method.md)  
- 可讓您指定或重設連結器會在建立組件時使用的資訊清單檔案。  
+ 可讓您指定或重設連結器建立組件時，會使用資訊清單檔案。  
   
 ## <a name="related-sections"></a>相關章節  
  [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)  
@@ -30,4 +30,4 @@ ms.locfileid: "33402128"
  可協助建構.NET Framework 組件。  
   
  [Al.exe (組件連結器)](../../../../docs/framework/tools/al-exe-assembly-linker.md)  
- 產生檔案包含組件資訊清單從一或多個模組的檔案或資源檔。
+ 產生包含組件資訊清單，從一或多個屬於模組的檔案或資源檔。

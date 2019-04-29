@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Margin property [Windows Forms]
 ms.assetid: bac7ed4d-a163-4259-98bd-155a36345890
 ms.openlocfilehash: e3bbf43dbe45e675df172a6c3e1db16a3ba9caa8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746820"
 ---
 # <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a>HOW TO：使用邊框間距在 Windows Forms 控制項周圍建立框線
 下列程式碼範例示範如何建立框線或外框<xref:System.Windows.Forms.RichTextBox>控制項。 範例設定的值<xref:System.Windows.Forms.Panel>控制項的<xref:System.Windows.Forms.Padding>屬性設為 5 並設定<xref:System.Windows.Forms.Control.Dock%2A>屬性的子系<xref:System.Windows.Forms.RichTextBox>若要控制<xref:System.Windows.Forms.DockStyle.Fill>。 <xref:System.Windows.Forms.Control.BackColor%2A>的<xref:System.Windows.Forms.Panel>控制設為<xref:System.Drawing.Color.Blue%2A>，這會建立藍色框線<xref:System.Windows.Forms.RichTextBox>控制項。  

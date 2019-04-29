@@ -9,11 +9,11 @@ helpviewer_keywords:
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
 ms.openlocfilehash: 50566422c5e28585e93171c991144cf12a6866eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59131946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698495"
 ---
 # <a name="systemweb-element-web-settings"></a>\<system.web > 項目 （Web 設定）
 包含 ASP.NET 裝載層管理整個處理序行為的方式的相關資訊。  

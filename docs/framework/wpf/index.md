@@ -15,14 +15,14 @@ helpviewer_keywords:
 - WPF [WPF]
 ms.assetid: f667bd15-2134-41e9-b4af-5ced6fafab5d
 ms.openlocfilehash: 35a936cbc34bf10219099090e1af8c145d7fb23d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764539"
 ---
 # <a name="windows-presentation-foundation"></a>Windows Presentation Foundation
-Windows Presentation Foundation (WPF) 在 Visual Studio 中開發人員提供了統一的程式設計模型建置在 Windows 上的特定業務桌面應用程式。  
+Windows Presentation Foundation (WPF) 在 Visual Studio 提供開發人員統一的程式設計模型，建置在 Windows 上的特定業務桌面應用程式。  
   
  [使用 Windows Presentation Foundation 建立桌面應用程式](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 

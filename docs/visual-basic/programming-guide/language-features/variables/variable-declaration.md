@@ -18,11 +18,11 @@ helpviewer_keywords:
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
 ms.openlocfilehash: 699737ffbe0b136af8862931fadacec26772b928
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756997"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic 中的變數宣告
 您宣告變數，以指定其名稱和特性。 變數的宣告陳述式是[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)。 其位置及內容會決定變數的特性。  
@@ -42,15 +42,15 @@ ms.locfileid: "58833278"
 ## <a name="declaring-data-type"></a>宣告的資料類型  
  [做為](../../../../visual-basic/language-reference/statements/as-clause.md)宣告陳述式中的子句可讓您定義資料型別或物件類型所宣告的變數。 您可以指定任何下列類型的變數：  
   
--   基本資料類型，例如`Boolean`， `Long`，或 `Decimal`  
+- 基本資料類型，例如`Boolean`， `Long`，或 `Decimal`  
   
--   複合資料類型，例如陣列或結構  
+- 複合資料類型，例如陣列或結構  
   
--   物件類型或在您的應用程式或另一個應用程式中所定義的類別  
+- 物件類型或在您的應用程式或另一個應用程式中所定義的類別  
   
--   A[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]類別，例如<xref:System.Windows.Forms.Label>或 <xref:System.Windows.Forms.TextBox>  
+- A[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]類別，例如<xref:System.Windows.Forms.Label>或 <xref:System.Windows.Forms.TextBox>  
   
--   介面類型，例如<xref:System.IComparable>或 <xref:System.IDisposable>  
+- 介面類型，例如<xref:System.IComparable>或 <xref:System.IDisposable>  
   
  您可以宣告一個陳述式中的數個變數，而不必重複的資料類型。 下列陳述式的變數`i`， `j`，和`k`宣告為類型`Integer`，`l`並`m`做為`Long`，並`x`和`y`為`Single`:  
   

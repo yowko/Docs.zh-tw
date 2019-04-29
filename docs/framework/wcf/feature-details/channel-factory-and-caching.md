@@ -3,22 +3,22 @@ title: 通道處理站和快取
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
 ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784302"
 ---
 # <a name="channel-factory-and-caching"></a>通道處理站和快取
 WCF 用戶端應用程式會使用 <xref:System.ServiceModel.ChannelFactory%601> 類別來建立與 WCF 服務的通訊通道。  建立 <xref:System.ServiceModel.ChannelFactory%601> 執行個體會產生額外負荷，因為這涉及到下列作業：  
   
--   建構 <xref:System.ServiceModel.Description.ContractDescription> 樹狀  
+- 建構 <xref:System.ServiceModel.Description.ContractDescription> 樹狀  
   
--   反映所有必要的 CLR 型別  
+- 反映所有必要的 CLR 型別  
   
--   建構通道堆疊  
+- 建構通道堆疊  
   
--   處置資源  
+- 處置資源  
   
  為了盡量減少這種負荷，WCF 可以在您使用 WCF 用戶端 Proxy 時快取通道處理站。  
   

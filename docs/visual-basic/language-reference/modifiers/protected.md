@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
 ms.openlocfilehash: 88e13fcd03c6a10cf1450cec90f9ca60aedc3eb1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778706"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
 成員存取修飾詞，指定一或多個宣告的程式設計項目都可以存取只會從自己的類別或從衍生類別中。  
@@ -30,15 +30,15 @@ ms.locfileid: "58819160"
   
 ## <a name="rules"></a>規則  
   
--   **宣告內容。** 您可以使用`Protected`只能在類別層級。 這表示的宣告內容`Protected`項目必須是類別，，而且不能是原始程式檔、 命名空間、 介面、 模組、 結構或程序。  
+- **宣告內容。** 您可以使用`Protected`只能在類別層級。 這表示的宣告內容`Protected`項目必須是類別，，而且不能是原始程式檔、 命名空間、 介面、 模組、 結構或程序。  
 
 ## <a name="behavior"></a>行為  
   
--   **存取層級。** 在類別中的所有程式碼可以存取其項目。 在任何衍生自基底類別的類別中的程式碼可以存取所有`Protected`基底類別的項目。 這是衍生的所有層代，則為 true。 這表示的類別可以存取`Protected`基底類別的基底類別等的項目。  
+- **存取層級。** 在類別中的所有程式碼可以存取其項目。 在任何衍生自基底類別的類別中的程式碼可以存取所有`Protected`基底類別的項目。 這是衍生的所有層代，則為 true。 這表示的類別可以存取`Protected`基底類別的基底類別等的項目。  
   
      受保護的存取不是超集或 friend 存取權限的子集。  
   
--   **存取修飾詞。** 指定存取層級的關鍵字稱為*存取修飾詞*。 如需存取修飾詞的比較，請參閱 <<c0> [ 存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+- **存取修飾詞。** 指定存取層級的關鍵字稱為*存取修飾詞*。 如需存取修飾詞的比較，請參閱 <<c0> [ 存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `Protected` 修飾詞可用於以下內容：  
   

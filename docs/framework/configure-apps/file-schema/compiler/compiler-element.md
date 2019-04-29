@@ -11,11 +11,11 @@ helpviewer_keywords:
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
 ms.openlocfilehash: 34753d538ff37ac4ae621f653d47ac92ac6749a0
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705372"
 ---
 # <a name="compiler-element"></a>\<編譯器 > 項目
 
@@ -45,7 +45,7 @@ ms.locfileid: "55674460"
 |---------------|-----------------|
 |`compilerOptions`|選擇性屬性。<br /><br /> 指定編譯的其他編譯器特定引數。 值`compilerOptions`屬性通常詳列於編譯器的編譯器選項主題。|
 |`extension`|必要屬性。<br /><br /> 提供以分號分隔的原始程式檔使用的語言提供者的檔案名稱副檔名清單。 例如，".cs"。|
-|`language`|必要屬性。<br /><br /> 提供語言提供者所支援的語言名稱以分號分隔的清單。 例如，"C#; cs; csharp"。|
+|`language`|必要屬性。<br /><br /> 提供語言提供者所支援的語言名稱以分號分隔的清單。 例如，"c#; cs; csharp"。|
 |`type`|必要屬性。<br /><br /> 指定的語言提供者，包括包含的提供者實作的組件名稱的型別名稱。 型別名稱必須符合中定義的需求[指定完整的型別名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|
 |`warningLevel`|選擇性屬性。<br /><br /> 指定預設編譯器警告層級;判斷的語言提供者會將編譯警告視為錯誤的層級。|
 

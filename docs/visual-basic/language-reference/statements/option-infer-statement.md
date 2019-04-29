@@ -12,11 +12,11 @@ helpviewer_keywords:
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 ms.openlocfilehash: 59766999c5b03aac7aec13b293feaa8c17f2ced0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784095"
 ---
 # <a name="option-infer-statement"></a>Option Infer 陳述式
 可讓您在宣告變數時使用區域類型推斷。  
@@ -73,7 +73,7 @@ Option Infer { On | Off }
   
 #### <a name="to-set-option-infer-on-the-command-line"></a>在命令列上設定 Option Infer  
   
--   包含[/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)中的編譯器選項**vbc**命令。  
+- 包含[/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)中的編譯器選項**vbc**命令。  
   
 ## <a name="default-data-types-and-values"></a>預設資料類型和值  
  下表說明在 `Dim` 陳述式中指定資料類型和初始設定式的各種組合結果。  

@@ -3,11 +3,11 @@ title: WCF 分析追蹤
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723351"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析追蹤
 這個範例會示範如何將您自己的追蹤事件加入至 Windows Communication Foundation (WCF) 寫入至 ETW 的分析追蹤的資料流[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。 分析追蹤的用意在於輕鬆取得服務的可視性，而不必付出高效能的代價。 此範例示範如何使用<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>Api 來與 WCF 服務整合的寫入事件。  
@@ -22,11 +22,11 @@ ms.locfileid: "59332309"
 ## <a name="self-hosting-vs-web-hosting"></a>自我裝載與Web 裝載  
  為 Web 託管服務，WCF 的分析追蹤會提供名為"HostReference"，用以識別發出追蹤服務的欄位。 可延伸的使用者追蹤可以參與這個模型，而且此範例會示範其最佳作法。 格式的 Web 主機參考當管道 '&#124;' 字元實際出現在產生字串可以是下列任一項：  
   
--   如果應用程式不在根目錄：  
+- 如果應用程式不在根目錄：  
   
      \<SiteName>\<ApplicationVirtualPath>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
--   如果應用程式在根目錄：  
+- 如果應用程式在根目錄：  
   
      \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
@@ -77,13 +77,13 @@ ms.locfileid: "59332309"
   
 10. 使用 WCF 測試用戶端測試此服務。  
   
-    1.  在 WCF 測試用戶端中，按兩下**add （)** ICalculator 服務節點底下。  
+    1. 在 WCF 測試用戶端中，按兩下**add （)** ICalculator 服務節點底下。  
   
          **Add （)** 方法會出現在右窗格具有兩個參數。  
   
-    2.  輸入 2 供第一個參數使用，並輸入 3 供第二個參數使用。  
+    2. 輸入 2 供第一個參數使用，並輸入 3 供第二個參數使用。  
   
-    3.  按一下  **Invoke**叫用方法。  
+    3. 按一下  **Invoke**叫用方法。  
   
 11. 移至**事件檢視器**您已經開啟的視窗。 瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**，**應用程式伺服器-應用程式**。  
   

@@ -5,11 +5,11 @@ ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0c8befed8bc810344b2a3344212a6a4a854300e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763818"
 ---
 # <a name="icordebugdatatarget2createvirtualunwinder-method"></a>ICorDebugDataTarget2::CreateVirtualUnwinder 方法
 建立新的堆疊 unwinder，以從初始內容 (不一定是執行緒的分葉) 開始回溯。  

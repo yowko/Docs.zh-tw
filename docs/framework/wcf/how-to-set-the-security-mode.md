@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
 ms.openlocfilehash: 5a4550e4c914dcdbc9908e766c67a2efa53e6e9e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928891"
 ---
 # <a name="how-to-set-the-security-mode"></a>HOW TO：設定安全性模式
 Windows Communication Foundation (WCF) 安全性有三種常見的安全性模式，最預先定義繫結上找到： 傳輸、 訊息和 「 傳輸與訊息認證 」。 另外有兩種額外的模式適用於下列兩種繫結：<xref:System.ServiceModel.BasicHttpBinding> 上的「僅限傳輸-認證」以及 <xref:System.ServiceModel.NetMsmqBinding> 上的「兩者並存」模式。 然而，此主題將著重在三種常見的安全性模式：<xref:System.ServiceModel.SecurityMode.Transport>、<xref:System.ServiceModel.SecurityMode.Message> 與 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>。  

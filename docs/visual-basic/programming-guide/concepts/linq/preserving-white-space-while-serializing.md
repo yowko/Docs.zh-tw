@@ -3,11 +3,11 @@ title: Serializing2 時保留空白字元
 ms.date: 07/20/2015
 ms.assetid: 2d7abbd4-37f4-422b-89dd-0a694b5edc17
 ms.openlocfilehash: a8903268f5ae1c2bc6c71a0998ba7d932f01e0ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666114"
 ---
 # <a name="preserving-white-space-while-serializing"></a>序列化時保留空白字元
 本主題描述如何在序列化 XML 樹狀結構時控制空白字元。  
@@ -19,13 +19,13 @@ ms.locfileid: "58814467"
 ## <a name="white-space-behavior-of-methods-that-serialize-xml-trees"></a>序列化 XML 樹狀結構之方法的空白字元行為  
  下列 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 類別中的方法會序列化 XML 樹狀結構。 您可以將 XML 樹狀結構序列化至檔案、<xref:System.IO.TextReader> 或 <xref:System.Xml.XmlReader>。 `ToString` 方法會序列化至字串。  
   
--   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>  
   
--   [XElement.ToString()](xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType)
+- [XElement.ToString()](xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType)
   
--   [XDocument.ToString()](xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType)
+- [XDocument.ToString()](xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType)
   
  如果此方法不採用 <xref:System.Xml.Linq.SaveOptions> 當做引數，該方法將會格式化 (縮排) 序列化的 XML。 在此情況下，會宣告 XML 樹狀結構中的所有有效空白字元。  
   

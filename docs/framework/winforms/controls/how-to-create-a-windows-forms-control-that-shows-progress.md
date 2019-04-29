@@ -11,26 +11,26 @@ helpviewer_keywords:
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
 ms.openlocfilehash: 1f457d6e2b0eb73da7a16dc93ea80a14ddb4b2c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746684"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>HOW TO：建立顯示進度的 Windows Forms 控制項
 下列程式碼範例會顯示稱為 `FlashTrackBar` 的自訂控制項，其可用來對使用者顯示應用程式的層級或進度。 它會使用漸層來以視覺方式表示進度。  
   
  `FlashTrackBar` 控制項可說明下列概念︰  
   
--   定義自訂屬性。  
+- 定義自訂屬性。  
   
--   定義自訂事件。 (`FlashTrackBar` 會定義 `ValueChanged` 事件。)  
+- 定義自訂事件。 (`FlashTrackBar` 會定義 `ValueChanged` 事件。)  
   
--   覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>方法，以提供繪製控制項的邏輯。  
+- 覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>方法，以提供繪製控制項的邏輯。  
   
--   計算區域可用於繪製控制項使用其<xref:System.Windows.Forms.Control.ClientRectangle%2A>屬性。 `FlashTrackBar` 會在其 `OptimizedInvalidate` 方法中執行此作業。  
+- 計算區域可用於繪製控制項使用其<xref:System.Windows.Forms.Control.ClientRectangle%2A>屬性。 `FlashTrackBar` 會在其 `OptimizedInvalidate` 方法中執行此作業。  
   
--   在 Windows Forms 設計工具中變更屬性時，請實作該屬性的序列化或持續性。 `FlashTrackBar` 會定義 `ShouldSerializeStartColor` 和 `ShouldSerializeEndColor` 方法，以便將其 `StartColor` 和`EndColor` 屬性序列化。  
+- 在 Windows Forms 設計工具中變更屬性時，請實作該屬性的序列化或持續性。 `FlashTrackBar` 會定義 `ShouldSerializeStartColor` 和 `ShouldSerializeEndColor` 方法，以便將其 `StartColor` 和`EndColor` 屬性序列化。  
   
  下表顯示 `FlashTrackBar` 所定義的自訂屬性。  
   
@@ -59,23 +59,23 @@ ms.locfileid: "59202010"
   
  為了處理對應*EventName*事件`FlashTrackBar`覆寫下列方法，它繼承自<xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   
--   <xref:System.Windows.Forms.Control.OnPaint%2A>  
+- <xref:System.Windows.Forms.Control.OnPaint%2A>  
   
--   <xref:System.Windows.Forms.Control.OnMouseDown%2A>  
+- <xref:System.Windows.Forms.Control.OnMouseDown%2A>  
   
--   <xref:System.Windows.Forms.Control.OnMouseMove%2A>  
+- <xref:System.Windows.Forms.Control.OnMouseMove%2A>  
   
--   <xref:System.Windows.Forms.Control.OnMouseUp%2A>  
+- <xref:System.Windows.Forms.Control.OnMouseUp%2A>  
   
--   <xref:System.Windows.Forms.Control.OnResize%2A>  
+- <xref:System.Windows.Forms.Control.OnResize%2A>  
   
  為了處理對應的屬性變更事件，`FlashTrackBar`覆寫下列方法，它繼承自<xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   
--   <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
+- <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
   
--   <xref:System.Windows.Forms.Control.OnBackgroundImageChanged%2A>  
+- <xref:System.Windows.Forms.Control.OnBackgroundImageChanged%2A>  
   
--   <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
+- <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
   
 ## <a name="example"></a>範例  
  `FlashTrackBar` 控制項會定義兩個 UI 類型編輯器：`FlashTrackBarValueEditor` 和 `FlashTrackBarDarkenByEditor`，兩者均顯示於下列程式碼清單中。 `HostApp` 類別會在 Windows Form 上使用 `FlashTrackBar` 控制項。  

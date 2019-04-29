@@ -3,11 +3,11 @@ title: 存放區擴充性
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
 ms.openlocfilehash: 46c1ea40925a5c79180171da9a705d7e6b7c8b89
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641602"
 ---
 # <a name="store-extensibility"></a>存放區擴充性
 
@@ -15,7 +15,7 @@ ms.locfileid: "57703256"
 
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 類別具有 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A> 方法，可讓您將屬性提升為可在查詢中使用的屬性。 下列範例為存放區擴充性的端對端範例。
 
-1. 在這個範例案例中，文件處理 (DP) 應用程式具有工作流程，其中每個工作流程均使用自訂活動來處理文件。 這些工作流程具有一組狀態變數，需要向使用者顯示。 為了達到這個目的，DP 應用程式提供型別 <xref:System.Activities.Persistence.PersistenceParticipant> 的執行個體擴充，可由任何活動用於提供狀態變數。
+1. 在這個範例案例中，文件處理 (DP) 應用程式具有工作流程，其中每個工作流程均使用自訂活動來處理文件。 這些工作流程具有一組狀態變數，需要向終端使用者顯示。 為了達到這個目的，DP 應用程式提供型別 <xref:System.Activities.Persistence.PersistenceParticipant> 的執行個體擴充，可由任何活動用於提供狀態變數。
 
     ```csharp
     class DocumentStatusExtension : PersistenceParticipant

@@ -3,11 +3,11 @@ title: ORDER BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
 ms.openlocfilehash: 4cf65637603fd6c20a33b1ae6ecd8b6ded36a246
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760294"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
 指定 SELECT 陳述式所傳回物件使用的排序順序。  
@@ -79,23 +79,23 @@ ORDER BY ...
 ## <a name="restricted-keywords"></a>限制關鍵字  
  使用於 `ORDER BY` 子句時，下列關鍵字必須括在引號內：  
   
--   CROSS  
+- CROSS  
   
--   FULL  
+- FULL  
   
--   KEY  
+- KEY  
   
--   LEFT  
+- LEFT  
   
--   ORDER  
+- ORDER  
   
--   OUTER  
+- OUTER  
   
--   RIGHT  
+- RIGHT  
   
--   ROW  
+- ROW  
   
--   VALUE  
+- VALUE  
   
 ## <a name="ordering-nested-queries"></a>排序巢狀查詢  
  在 Entity Framework 中，巢狀運算式可放在查詢中的任何地方；巢狀查詢的順序並不會保留。  

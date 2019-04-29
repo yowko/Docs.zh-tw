@@ -3,11 +3,11 @@ title: 指定自訂的加密演算法
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
 ms.openlocfilehash: b365c3c8e74adcad03246a227d6593c49f8b3993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768702"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>指定自訂的加密演算法
 WCF 可讓您指定加密資料或計算數位簽章時使用的自訂密碼編譯演算法。 其步驟如下：  

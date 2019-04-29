@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
 ms.openlocfilehash: b3d3afdd1e3fba2a77186d1cd644d723c445600c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767165"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>HOW TO：匯出自訂原則判斷提示
 原則判斷提示描述服務端點的功能與需求。 服務應用程式可使用服務中繼資料中的自訂原則判斷提示，與用戶端應用程式進行端點、繫結或合約自訂資訊的通訊。 若要匯出 WSDL 繫結程序端點、 作業或功能或您要溝通的需求而定的訊息主體以附加原則運算式中的判斷提示，您可以使用 Windows Communication Foundation (WCF)。  

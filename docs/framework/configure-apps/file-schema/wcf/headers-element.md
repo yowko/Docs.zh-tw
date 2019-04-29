@@ -3,11 +3,11 @@ title: <headers> 項目
 ms.date: 03/30/2017
 ms.assetid: 040f7a8c-bb57-4db6-bdb0-cfb92a1b01af
 ms.openlocfilehash: 90d6d7f981f176348a14ddc6b0af39378239eebd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704150"
 ---
 # <a name="headers-element"></a>\<標頭 > 項目
 這個項目包含為了可正確定址本機簽發者而需要使用的位址標頭集合。 您可以使用 `add` 關鍵字將標頭加入這個集合。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - SolidColorBrush [WPF], animating opacity of
 ms.assetid: d9154354-843f-4713-bad1-35bb0ba6eaeb
 ms.openlocfilehash: e440cf49b8b16051361650f9659dc6006c2e7b56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789242"
 ---
 # <a name="how-to-animate-the-color-or-opacity-of-a-solidcolorbrush"></a>HOW TO：建立 SolidColorBrush 色彩或不透明效果的動畫
 此範例示範如何建立動畫<xref:System.Windows.Media.SolidColorBrush.Color%2A>並<xref:System.Windows.Media.Brush.Opacity%2A>的<xref:System.Windows.Media.SolidColorBrush>。  
@@ -22,11 +22,11 @@ ms.locfileid: "59072155"
 ## <a name="example"></a>範例  
  下列範例會使用三個動畫以動畫顯示<xref:System.Windows.Media.SolidColorBrush.Color%2A>並<xref:System.Windows.Media.Brush.Opacity%2A>的<xref:System.Windows.Media.SolidColorBrush>。  
   
--   第一次的動畫<xref:System.Windows.Media.Animation.ColorAnimation>，將筆刷的色彩變更為<xref:System.Windows.Media.Colors.Gray%2A>當滑鼠進入矩形。  
+- 第一次的動畫<xref:System.Windows.Media.Animation.ColorAnimation>，將筆刷的色彩變更為<xref:System.Windows.Media.Colors.Gray%2A>當滑鼠進入矩形。  
   
--   下一個動畫為另一個<xref:System.Windows.Media.Animation.ColorAnimation>，將筆刷的色彩變更為<xref:System.Windows.Media.Colors.Orange%2A>當滑鼠離開矩形。  
+- 下一個動畫為另一個<xref:System.Windows.Media.Animation.ColorAnimation>，將筆刷的色彩變更為<xref:System.Windows.Media.Colors.Orange%2A>當滑鼠離開矩形。  
   
--   最終的動畫， <xref:System.Windows.Media.Animation.DoubleAnimation>，筆刷的不透明度變更為 0.0，當按下滑鼠左鍵時。  
+- 最終的動畫， <xref:System.Windows.Media.Animation.DoubleAnimation>，筆刷的不透明度變更為 0.0，當按下滑鼠左鍵時。  
   
  [!code-csharp[brushanimations_snip#SolidColorBrushAnimationExample](~/samples/snippets/csharp/VS_Snippets_Wpf/brushanimations_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushanimationexample)]  
   

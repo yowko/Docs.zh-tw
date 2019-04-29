@@ -12,11 +12,11 @@ ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2d96de43d258e4a7ff925e0c5b1702727e67d737
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754514"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>HOW TO：建立和初始化追蹤來源
 應用程式會使用 <xref:System.Diagnostics.TraceSource> 類別產生能夠與應用程式相關聯的追蹤。 <xref:System.Diagnostics.TraceSource> 提供了追蹤方法，能讓您輕鬆地追蹤事件、追蹤資料和問題資訊追蹤。 不論是否使用組態檔，都可以從 <xref:System.Diagnostics.TraceSource> 建立及初始化追蹤輸出。 本主題提供這兩個選項的指示。 不過，建議您使用組態檔來協助重新設定追蹤來源於執行階段所產生的追蹤。  
@@ -73,7 +73,7 @@ ms.locfileid: "59339433"
   
 ### <a name="to-initialize-trace-sources-listeners-and-filters-without-a-configuration-file"></a>若要在不使用組態檔的情況下初始化追蹤來源、接聽項和篩選條件  
   
--   使用下列範例程式碼可透過追蹤來源進行追蹤，而不需要使用組態檔。 這不是建議的做法，但是在您不想要根據組態檔來確保追蹤作業的情況下，可以採取這個做法。  
+- 使用下列範例程式碼可透過追蹤來源進行追蹤，而不需要使用組態檔。 這不是建議的做法，但是在您不想要根據組態檔來確保追蹤作業的情況下，可以採取這個做法。  
   
      [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  

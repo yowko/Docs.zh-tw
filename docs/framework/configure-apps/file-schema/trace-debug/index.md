@@ -12,11 +12,11 @@ helpviewer_keywords:
 - elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
 ms.openlocfilehash: 79054ba450dcab1a18562aaadd71b9171896c1e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701394"
 ---
 # <a name="trace-and-debug-settings-schema"></a>追蹤和偵錯設定結構描述
 追蹤和偵錯設定會指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UIElements [WPF], flipping
 ms.assetid: 02c6730f-65c0-40d5-a553-4cb663721882
 ms.openlocfilehash: 6b3da322493d17e4f8e36a35b9a0e40fdc9dc685
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767025"
 ---
 # <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>HOW TO：水平或垂直翻轉 UIElement
 此範例示範如何使用<xref:System.Windows.Media.ScaleTransform>翻轉<xref:System.Windows.UIElement>水平或垂直。 在此範例中，<xref:System.Windows.Controls.Button>控制項 (一種<xref:System.Windows.UIElement>) 已藉由套用翻轉<xref:System.Windows.Media.ScaleTransform>至其<xref:System.Windows.UIElement.RenderTransform%2A>屬性。  

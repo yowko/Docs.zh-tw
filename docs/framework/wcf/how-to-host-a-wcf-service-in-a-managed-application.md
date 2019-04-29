@@ -1,18 +1,18 @@
 ---
-title: HOW TO：在 Managed 應用程式中裝載 WCF 服務
+title: HOW TO：在受控應用程式中裝載 WCF 服務
 ms.date: 09/17/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
 ms.openlocfilehash: 131d99457427e0818f78076d987f550a99ad7cf0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929307"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>如何： 將 WCF 服務裝載於受管理的應用程式
+# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>HOW TO：將 WCF 服務裝載於受管理的應用程式
 
 若要將服務裝載於 Managed 應用程式中，請將服務的程式碼嵌入 Managed 應用程式的程式碼，再以命令式程式碼或透過組態以宣告方式定義服務的端點 (亦可使用預設端點)，然後建立 <xref:System.ServiceModel.ServiceHost> 的執行個體。
 
@@ -50,7 +50,7 @@ ms.locfileid: "47196846"
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]
 
     > [!NOTE]
-    > 如需如何定義和實作服務介面的詳細資訊，請參閱[如何： 定義服務合約](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)並[如何： 實作服務合約](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)。
+    > 如需如何定義和實作服務介面的詳細資訊，請參閱[How to:定義服務合約](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)和[How to:實作服務合約](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)。
 
 5. 在 `Main` 方法頂端使用服務的基底位址，建立 <xref:System.Uri> 類別的執行個體。
 
@@ -99,11 +99,11 @@ ms.locfileid: "47196846"
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>
 - <xref:System.Configuration.ConfigurationManager>
-- [如何：在 IIS 中裝載 WCF 服務](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [如何：裝載在 IIS 中的 WCF 服務](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
 - [自我裝載](../../../docs/framework/wcf/samples/self-host.md)
 - [裝載服務](../../../docs/framework/wcf/hosting-services.md)
 - [如何：定義服務合約](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
-- [如何：履行服務合約](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
+- [如何：實作服務合約](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
 - [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [使用繫結設定服務與用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [系統提供的繫結](../../../docs/framework/wcf/system-provided-bindings.md)

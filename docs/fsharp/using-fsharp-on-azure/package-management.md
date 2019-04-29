@@ -4,11 +4,11 @@ description: 使用 Paket 或 Nuget 來管理F#Azure 相依性
 author: sylvanc
 ms.date: 09/20/2016
 ms.openlocfilehash: fd9c4a15ab0741d44d6d5cf909b7219d310affb0
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33566963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756529"
 ---
 # <a name="package-management-for-f-azure-dependencies"></a>F# Azure 相依性的套件管理
 
@@ -16,7 +16,7 @@ ms.locfileid: "33566963"
 
 ## <a name="using-paket"></a>使用 Paket
 
-如果您使用[Paket](https://fsprojects.github.io/Paket/)為您的相依性管理員，您可以使用`paket.exe`加入 Azure 的相依性的工具。 例如: 
+如果您使用[Paket](https://fsprojects.github.io/Paket/)為您的相依性管理員，您可以使用`paket.exe`加入 Azure 的相依性的工具。 例如：
 
     > paket add nuget WindowsAzure.Storage
 
@@ -68,7 +68,7 @@ ms.locfileid: "33566963"
 
 ## <a name="referencing-assemblies"></a>參考組件
 
-若要使用您的套件，在您F#指令碼中，您必須參考包含在封裝中使用的組件`#r`指示詞。 例如: 
+若要使用您的套件，在您F#指令碼中，您必須參考包含在封裝中使用的組件`#r`指示詞。 例如：
 
     > #r "packages/WindowsAzure.Storage/lib/net40/Microsoft.WindowsAzure.Storage.dll"
 

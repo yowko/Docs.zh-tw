@@ -5,14 +5,14 @@ helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
 ms.openlocfilehash: 0f8b4c15f2afefbc62b98dca66dcf3ccc31b1dc0
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753032"
 ---
 # <a name="analytic-trace-event-reference"></a>分析的追蹤事件參考
-下表定義事件層級、 識別碼和與 WCF 分析追蹤關聯的訊息。  
+下表定義事件層級、 識別碼和相關聯 WCF 分析追蹤的訊息。  
   
 ## <a name="event-reference"></a>事件參考  
   
@@ -259,18 +259,18 @@ ms.locfileid: "33808633"
 |[3807 - RoutingServiceCompletingTwoWay](../../../../../docs/framework/wcf/diagnostics/etw/3807-routingservicecompletingtwoway.md)|資訊|路由服務要求回覆訊息即將完成。|RoutingServices|  
 |[3809 - RoutingServiceMessageRoutedToEndpoints](../../../../../docs/framework/wcf/diagnostics/etw/3809-routingservicemessageroutedtoendpoints.md)|詳細資訊|路由服務將 ID：'%1' 的訊息傳送到 %2 端點清單。|RoutingServices|  
 |[3810 - RoutingServiceConfigurationApplied](../../../../../docs/framework/wcf/diagnostics/etw/3810-routingserviceconfigurationapplied.md)|資訊|已對路由服務套用新的 RoutingConfiguration。|RoutingServices|  
-|[3815 - RoutingServiceProcessingMessage](../../../../../docs/framework/wcf/diagnostics/etw/3815-routingserviceprocessingmessage.md)|資訊|路由服務正在處理訊息，ID：'%1'，動作：'%2'，輸入 URL：'%3'，接收於交易：%4。|RoutingServices|  
+|[3815 - RoutingServiceProcessingMessage](../../../../../docs/framework/wcf/diagnostics/etw/3815-routingserviceprocessingmessage.md)|資訊|路由服務正在處理訊息，ID：'%1'，動作：'%2'，輸入 URL：'%3'，接收於異動：%4。|RoutingServices|  
 |[3816 - RoutingServiceTransmittingMessage](../../../../../docs/framework/wcf/diagnostics/etw/3816-routingservicetransmittingmessage.md)|資訊|路由服務正在將 ID 為：'%1' [作業%2] 的訊息傳輸至 '%3'。|RoutingServices|  
-|[3817 - RoutingServiceCommittingTransaction](../../../../../docs/framework/wcf/diagnostics/etw/3817-routingservicecommittingtransaction.md)|資訊|路由服務正在認可下列 ID 的交易：'%1'。|RoutingServices|  
+|[3817 - RoutingServiceCommittingTransaction](../../../../../docs/framework/wcf/diagnostics/etw/3817-routingservicecommittingtransaction.md)|資訊|路由服務正在認可下列 ID 的異動：'%1'。|RoutingServices|  
 |[3818 - RoutingServiceDuplexCallbackException](../../../../../docs/framework/wcf/diagnostics/etw/3818-routingserviceduplexcallbackexception.md)|錯誤|路由服務元件 %1 遇到雙工回呼例外狀況。|RoutingServices|  
 |[3819 - RoutingServiceMovedToBackup](../../../../../docs/framework/wcf/diagnostics/etw/3819-routingservicemovedtobackup.md)|資訊|ID：'%1' 的路由服務訊息 [作業 %2] 已移到備份端點 '%3'。|RoutingServices|  
-|[3820 - RoutingServiceCreatingTransaction](../../../../../docs/framework/wcf/diagnostics/etw/3820-routingservicecreatingtransaction.md)|資訊|路由服務為處理訊息，已建立 ID 為 '%1' 的新交易。|RoutingServices|  
+|[3820 - RoutingServiceCreatingTransaction](../../../../../docs/framework/wcf/diagnostics/etw/3820-routingservicecreatingtransaction.md)|資訊|路由服務為處理訊息，已建立 ID 為 '%1' 的新異動。|RoutingServices|  
 |[3821 - RoutingServiceCloseFailed](../../../../../docs/framework/wcf/diagnostics/etw/3821-routingserviceclosefailed.md)|警告|關閉傳出用戶端 '%1' 時路由服務失敗。|RoutingServices|  
 |[3822 - RoutingServiceSendingResponse](../../../../../docs/framework/wcf/diagnostics/etw/3822-routingservicesendingresponse.md)|資訊|路由服務正在傳回動作為 '%1' 的回應訊息。|RoutingServices|  
 |[3823 - RoutingServiceSendingFaultResponse](../../../../../docs/framework/wcf/diagnostics/etw/3823-routingservicesendingfaultresponse.md)|警告|路由服務正在傳回動作為 '%1' 的錯誤回應訊息。|RoutingServices|  
 |[3824 - RoutingServiceCompletingReceiveContext](../../../../../docs/framework/wcf/diagnostics/etw/3824-routingservicecompletingreceivecontext.md)|詳細資訊|路由服務正在為 ID：'%1' 的訊息呼叫 ReceiveContext.Complete。|RoutingServices|  
 |[3825 - RoutingServiceAbandoningReceiveContext](../../../../../docs/framework/wcf/diagnostics/etw/3825-routingserviceabandoningreceivecontext.md)|警告|路由服務正在為 ID 為 '%1' 的訊息呼叫 ReceiveContext.Abandon。|RoutingServices|  
-|[3826 - RoutingServiceUsingExistingTransaction](../../../../../docs/framework/wcf/diagnostics/etw/3826-routingserviceusingexistingtransaction.md)|詳細資訊|路由服務會使用現有的交易 '%1' 傳送訊息。|RoutingServices|  
+|[3826 - RoutingServiceUsingExistingTransaction](../../../../../docs/framework/wcf/diagnostics/etw/3826-routingserviceusingexistingtransaction.md)|詳細資訊|路由服務會使用現有的異動 '%1' 傳送訊息。|RoutingServices|  
 |[3827 - RoutingServiceTransmitFailed](../../../../../docs/framework/wcf/diagnostics/etw/3827-routingservicetransmitfailed.md)|警告|傳送至 '%1' 時，路由服務失敗。|RoutingServices|  
 |[3828 - RoutingServiceFilterTableMatchStart](../../../../../docs/framework/wcf/diagnostics/etw/3828-routingservicefiltertablematchstart.md)|資訊|路由服務 MessageFilterTable 比對開始。|RoutingServices|  
 |[3829 - RoutingServiceFilterTableMatchStop](../../../../../docs/framework/wcf/diagnostics/etw/3829-routingservicefiltertablematchstop.md)|資訊|路由服務 MessageFilterTable 比對停止。|RoutingServices|  

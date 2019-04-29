@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
 ms.openlocfilehash: 55d0fdcdbed4f994e50e83e5a25baf83c3ad79cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756750"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>在 Visual Basic 中為變數進行疑難排解
 此頁面會列出一些常見的問題，使用 Visual Basic 中的變數時，可能會發生。  
@@ -18,9 +18,9 @@ ms.locfileid: "58831120"
 ## <a name="unable-to-access-members-of-an-object"></a>無法存取物件的成員  
  如果您的程式碼嘗試存取物件的屬性或方法，可能會發生兩種錯誤結果：  
   
--   如果您宣告物件變數屬於特定類型，然後參考該類型未定義的成員，編譯器可能會產生錯誤訊息。  
+- 如果您宣告物件變數屬於特定類型，然後參考該類型未定義的成員，編譯器可能會產生錯誤訊息。  
   
--   當指派給物件變數的物件未公開您的程式碼嘗試存取的成員時，就會發生執行階段 <xref:System.MemberAccessException> 。 如果變數屬於 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)，您也可能會在成員不是 `Public`中使用變數時可能發生的一些常見問題。 這是因為晚期繫結只允許存取 `Public` 成員。  
+- 當指派給物件變數的物件未公開您的程式碼嘗試存取的成員時，就會發生執行階段 <xref:System.MemberAccessException> 。 如果變數屬於 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)，您也可能會在成員不是 `Public`中使用變數時可能發生的一些常見問題。 這是因為晚期繫結只允許存取 `Public` 成員。  
   
  當 [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 將類型檢查設定為 `On`時，物件變數只能存取您用以宣告之類別的方法和屬性。 下列範例將說明這點。  
 

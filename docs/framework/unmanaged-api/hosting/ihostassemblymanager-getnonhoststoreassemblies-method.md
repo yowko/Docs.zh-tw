@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ae9a8e9e26f05675611ac4c6acd8ecfe5704b0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760190"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>IHostAssemblyManager::GetNonHostStoreAssemblies 方法
 取得的介面指標[ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)表示主機預期的 common language runtime (CLR) 載入的組件清單。  
@@ -54,13 +54,13 @@ HRESULT GetNonHostStoreAssemblies (
 ## <a name="remarks"></a>備註  
  CLR 解析參考使用下列的指導方針：  
   
--   首先，它會查詢所傳回的組件參考清單`GetNonHostStoreAssemblies`。  
+- 首先，它會查詢所傳回的組件參考清單`GetNonHostStoreAssemblies`。  
   
--   如果組件出現在清單中，CLR 繫結至它正常。  
+- 如果組件出現在清單中，CLR 繫結至它正常。  
   
--   如果組件不會出現在清單中，而且主應用程式已提供實作[IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)，CLR 會呼叫[ihostassemblystore:: Provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) ，讓主機提供要繫結至組件。  
+- 如果組件不會出現在清單中，而且主應用程式已提供實作[IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)，CLR 會呼叫[ihostassemblystore:: Provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) ，讓主機提供要繫結至組件。  
   
--   否則，CLR 就會繫結至組件失敗。  
+- 否則，CLR 就會繫結至組件失敗。  
   
  如果主應用程式設定`ppReferenceList`為 null，CLR 的第一個探查全域組件快取中，會呼叫`ProvideAssembly`，並接著會探查應用程式基底，解析組件參考。  
   

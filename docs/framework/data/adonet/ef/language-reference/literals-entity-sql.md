@@ -3,11 +3,11 @@ title: 常值 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
 ms.openlocfilehash: bff9b1907d3424dc2e3df80480b6ab12f5ab9261
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760658"
 ---
 # <a name="literals-entity-sql"></a>常值 (Entity SQL)
 本主題將描述常值 (Literal) 的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援。  

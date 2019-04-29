@@ -9,11 +9,11 @@ helpviewer_keywords:
 - image encoders [Windows Forms], listing
 ms.assetid: 49e8e4e9-7a67-42d9-86bf-08821cdc282e
 ms.openlocfilehash: ce297cb6d183bc63c8b276e30100aa4e864cd90d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61722948"
 ---
 # <a name="how-to-list-installed-encoders"></a>HOW TO：列出已安裝的編碼器
 若要列出可用的電腦上，影像編碼器，以判斷是否能省下您的應用程式特定的影像檔案格式。 <xref:System.Drawing.Imaging.ImageCodecInfo>類別提供<xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A>靜態方法，讓您可以判斷哪一個映像編碼器可用。 <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> 傳回的陣列<xref:System.Drawing.Imaging.ImageCodecInfo>物件。  
@@ -27,9 +27,9 @@ ms.locfileid: "59078807"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   Windows Forms 應用程式。  
+- Windows Forms 應用程式。  
   
--   A <xref:System.Windows.Forms.PaintEventArgs>，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。  
+- A <xref:System.Windows.Forms.PaintEventArgs>，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。  
   
 ## <a name="see-also"></a>另請參閱
 

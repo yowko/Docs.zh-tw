@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
 ms.openlocfilehash: 10f8e0899e61d5d54589c910bdcbcd92d8ee947c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777061"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>HOW TO：使用程式碼新增事件處理常式
 此範例示範如何使用程式碼，將事件處理常式新增至項目。  
@@ -25,9 +25,9 @@ ms.locfileid: "59129352"
   
  C#範例會使用`+=`運算子來指派到的事件處理常式。 這是用來指派中的處理常式的相同運算子[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]事件處理模型。 Microsoft Visual Basic 不支援這個運算子，來加入事件處理常式。 它需要使用兩種技術之一：  
   
--   使用<xref:System.Windows.UIElement.AddHandler%2A>方法，連同`AddressOf`運算子，以便參考事件處理常式實作。  
+- 使用<xref:System.Windows.UIElement.AddHandler%2A>方法，連同`AddressOf`運算子，以便參考事件處理常式實作。  
   
--   使用`Handles`關鍵字做為事件處理常式定義的一部分。 這項技術不討論;請參閱[Visual Basic 和 WPF 事件處理](visual-basic-and-wpf-event-handling.md)。  
+- 使用`Handles`關鍵字做為事件處理常式定義的一部分。 這項技術不討論;請參閱[Visual Basic 和 WPF 事件處理](visual-basic-and-wpf-event-handling.md)。  
   
  [!code-xaml[RoutedEventAddRemoveHandler#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
   

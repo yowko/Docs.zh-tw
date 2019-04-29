@@ -3,11 +3,11 @@ title: 針對 Func 與 Action 泛型委派 (Visual Basic) 中使用變異數
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
 ms.openlocfilehash: f2f45a9b6536859499f882b4cd585595176208f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787266"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>針對 Func 與 Action 泛型委派 (Visual Basic) 中使用變異數
 下列範例示範如何在 `Func` 和 `Action` 泛型委派中使用共變數和反變數，以便在您的程式碼中重複使用方法並提供更多彈性。  

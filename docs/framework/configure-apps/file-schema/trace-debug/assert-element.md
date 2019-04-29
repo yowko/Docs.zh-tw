@@ -9,11 +9,11 @@ helpviewer_keywords:
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
 ms.openlocfilehash: 2f3823265e358976f970cdfa36772d2251894280
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701355"
 ---
 # <a name="assert-element"></a>\<判斷提示 > 項目
 指定呼叫 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 方法時是否要顯示訊息方塊，此外也會指定寫入訊息之目的地檔案的名稱。  

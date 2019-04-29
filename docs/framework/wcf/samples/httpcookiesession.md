@@ -3,24 +3,24 @@ title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
 ms.openlocfilehash: 801fc6baed623c920e5a20163782bc9d6551a6da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752733"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 這個範例會示範如何建置自訂通訊協定通道，以便在工作階段管理使用 HTTP Cookie。 這個通道可以啟用 Windows Communication Foundation (WCF) 服務和 ASMX 用戶端之間或 WCF 用戶端和 ASMX 服務之間的通訊。  
   
  當用戶端在工作階段架構 ASMX Web 服務中呼叫 Web 方法時，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 引擎會執行下列動作：  
   
--   產生唯一 ID (工作階段 ID)。  
+- 產生唯一 ID (工作階段 ID)。  
   
--   產生工作階段物件，並使該物件與唯一 ID 產生關聯。  
+- 產生工作階段物件，並使該物件與唯一 ID 產生關聯。  
   
--   將唯一 ID 新增至 Set-Cookie HTTP 回應標頭，並傳送至用戶端。  
+- 將唯一 ID 新增至 Set-Cookie HTTP 回應標頭，並傳送至用戶端。  
   
--   根據傳送至用戶端的工作階段 ID，識別後續呼叫上的用戶端。  
+- 根據傳送至用戶端的工作階段 ID，識別後續呼叫上的用戶端。  
   
  用戶端會在傳送至伺服器的後續要求中，加入這個工作階段 ID。 伺服器則會使用來自用戶端的工作階段 ID，為目前的 HTTP 內容載入適當的工作階段物件。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "59772982"
 ## <a name="service-channel"></a>服務通道  
  範例會在 `HttpCookieReplySessionChannelListener` 類別中提供服務通道。 這個類別會實作 <xref:System.ServiceModel.Channels.IChannelListener> 介面，並將通道堆疊中較低的 <xref:System.ServiceModel.Channels.IReplyChannel> 通道轉換為 <xref:System.ServiceModel.Channels.IReplySessionChannel>。 這個處理序可以分成下列幾個部分：  
   
--   通道接聽程式開啟時，會接受來自內部接聽程式的內部通道。 因為內部接聽程式為資料包 (Datagram) 接聽程式，而且所接受通道的時間範圍會少於接聽程式的時間範圍，因此我們可以關閉內部接聽程式而只保留內部通道。  
+- 通道接聽程式開啟時，會接受來自內部接聽程式的內部通道。 因為內部接聽程式為資料包 (Datagram) 接聽程式，而且所接受通道的時間範圍會少於接聽程式的時間範圍，因此我們可以關閉內部接聽程式而只保留內部通道。  
   
     ```  
                 this.innerChannelListener.Open(timeoutHelper.RemainingTime());  
@@ -48,7 +48,7 @@ ms.locfileid: "59772982"
     this.innerChannelListener.Close(timeoutHelper.RemainingTime());  
     ```  
   
--   完成開啟的處理序時，我們會設定訊息迴圈以接收來自內部通道的訊息。  
+- 完成開啟的處理序時，我們會設定訊息迴圈以接收來自內部通道的訊息。  
   
     ```  
     IAsyncResult result = BeginInnerReceiveRequest();  
@@ -63,7 +63,7 @@ ms.locfileid: "59772982"
     }  
     ```  
   
--   訊息抵達時，服務通道會檢查工作階段識別碼，並將信號分離至適當的工作階段通道。 通道接聽程式所維護的字典，會將工作階段識別碼對應至工作階段通道執行個體。  
+- 訊息抵達時，服務通道會檢查工作階段識別碼，並將信號分離至適當的工作階段通道。 通道接聽程式所維護的字典，會將工作階段識別碼對應至工作階段通道執行個體。  
   
     ```  
     Dictionary<string, IReplySessionChannel> channelMapping;  

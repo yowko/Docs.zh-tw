@@ -9,11 +9,11 @@ helpviewer_keywords:
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
 ms.openlocfilehash: 3dc2083e5b4fd06250a1387c32f0eba28e879b30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758492"
 ---
 # <a name="anonymous-types-visual-basic"></a>匿名類型 (Visual Basic)
 Visual Basic 支援可讓您建立物件，而不需要撰寫的資料類型的類別定義的匿名型別。 編譯器 (Compiler) 會自動幫您建立類別 (Class)。 類別沒有可使用的名稱、 直接繼承自<xref:System.Object>，並包含您指定在宣告物件的屬性。 未指定資料類型的名稱，因為它指*匿名型別*。  
@@ -53,22 +53,22 @@ Visual Basic 支援可讓您建立物件，而不需要撰寫的資料類型的�
 ## <a name="key-properties"></a>索引鍵內容  
  從非索引鍵屬性的索引鍵屬性是數個基本的方式不同：  
   
--   只有索引鍵屬性的值會比較以判斷兩個執行個體是否相等。  
+- 只有索引鍵屬性的值會比較以判斷兩個執行個體是否相等。  
   
--   索引鍵屬性的值都是唯讀的而且無法變更。  
+- 索引鍵屬性的值都是唯讀的而且無法變更。  
   
--   只有索引鍵屬性值包含編譯器所產生的雜湊程式碼演算法的匿名型別。  
+- 只有索引鍵屬性值包含編譯器所產生的雜湊程式碼演算法的匿名型別。  
   
 ### <a name="equality"></a>相等  
  匿名型別的執行個體可以有相同的匿名型別的執行個體才相等。 編譯器會將兩個執行個體視為相同類型的執行個體如果符合下列條件：  
   
--   在相同的組件中宣告。  
+- 在相同的組件中宣告。  
   
--   其屬性具有相同名稱，也就是相同的推斷型別，並宣告順序相同。 名稱比較不區分大小寫。  
+- 其屬性具有相同名稱，也就是相同的推斷型別，並宣告順序相同。 名稱比較不區分大小寫。  
   
--   在每個相同的屬性會標示為索引鍵屬性。  
+- 在每個相同的屬性會標示為索引鍵屬性。  
   
--   每個宣告中的至少一個屬性是索引鍵的屬性。  
+- 每個宣告中的至少一個屬性是索引鍵的屬性。  
   
  匿名型別沒有索引鍵屬性的執行個體等於只有本身。  
   
@@ -86,11 +86,11 @@ Visual Basic 支援可讓您建立物件，而不需要撰寫的資料類型的�
 ## <a name="anonymous-types-from-query-expressions"></a>從查詢運算式的匿名型別  
  查詢運算式不一定需要建立匿名型別。 如果可能的話，它們會使用現有的型別來保存資料行的資料。 會發生這種情況是當查詢傳回整筆記錄，從資料來源或從每一筆記錄只能有一個欄位。 在下列程式碼範例中，`customers`是物件的集合`Customer`類別。 類別具有許多屬性，而且您可以在查詢結果中，依任何順序包含一或多個。 在前兩個範例中，任何匿名型別不是必要的因為查詢選取的具名類型的項目：  
   
--   `custs1` 包含字串的集合，因為`cust.Name`是一個字串。  
+- `custs1` 包含字串的集合，因為`cust.Name`是一個字串。  
   
      [!code-vb[VbVbalrAnonymousTypes#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#30)]  
   
--   `custs2` 包含的集合`Customer`物件，因為每個項目的`customers`是`Customer`查詢所選取物件，而整個項目。  
+- `custs2` 包含的集合`Customer`物件，因為每個項目的`customers`是`Customer`查詢所選取物件，而整個項目。  
   
      [!code-vb[VbVbalrAnonymousTypes#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#31)]  
   

@@ -3,11 +3,11 @@ title: <windows> 項目的 <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
 ms.openlocfilehash: b5e92745b9e39534d2a0bc35504c2dbc8346d2ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769716"
 ---
 # <a name="windows-of-clientcredentials-element"></a>\<windows > 的\<clientCredentials > 項目
 指定要用於代表用戶端的 Windows 認證的設定。  

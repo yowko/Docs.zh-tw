@@ -10,11 +10,11 @@ helpviewer_keywords:
 - drag-and-drop [WPF], open a dropped file
 ms.assetid: 6bb8bb54-f576-41db-a9a7-24102ddeb490
 ms.openlocfilehash: 8ffa4c9919788060dc4524e127c181ee8282e6f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768598"
 ---
 # <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>HOW TO：開啟置放在 RichTextBox 控制項上的檔案
 在  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，則<xref:System.Windows.Controls.TextBox>， <xref:System.Windows.Controls.RichTextBox>，和<xref:System.Windows.Documents.FlowDocument>控制項都會有內建的拖放功能。 內建功能可讓拖放在與控制項之間的文字。 不過，它不會啟用拖放控制項上的檔案來開啟檔案。 這些控制項也標記為已處理的拖放事件。 如此一來，根據預設，您無法新增您自己的事件處理常式，以提供功能來開啟已卸除的檔案。  

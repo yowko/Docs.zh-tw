@@ -10,11 +10,11 @@ ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: 548d93e5447c06480629658b13b673aa3d15fc86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705463"
 ---
 # <a name="app-settings-schema"></a>應用程式設定結構描述
 
@@ -26,7 +26,7 @@ ms.locfileid: "54620366"
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md)   
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<remove>**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md)
 
-| 元素 | 描述 |
+| 項目 | 描述 |
 | ------- | ----------- |
 | [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | 包含 **\<add>**、**\<clear>** 和 **\<remove>** 標記以控制應用程式設定。 具有選擇性 **file** 屬性。 |
 | [**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | 定義設定。 **\<appSettings>** 的子系。 需要 **key** 和 **value** 屬性。 |

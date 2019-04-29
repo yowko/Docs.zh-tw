@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
 ms.openlocfilehash: de4f67fc5b60de48383a8ca886cff02b03830318
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781182"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
 指定一或多個宣告的區域變數會繼續存在，並在其宣告的程序終止之後保留最後的值。  
@@ -22,13 +22,13 @@ ms.locfileid: "58814165"
   
 ## <a name="rules"></a>規則  
   
--   **宣告內容。** 您可以使用`Static`只對本機變數。 這表示的宣告內容`Static`變數必須程序或程序中的區塊，而且它不能是原始程式檔、 命名空間、 類別、 結構或模組。  
+- **宣告內容。** 您可以使用`Static`只對本機變數。 這表示的宣告內容`Static`變數必須程序或程序中的區塊，而且它不能是原始程式檔、 命名空間、 類別、 結構或模組。  
   
      您無法使用`Static`結構程序內。  
   
--   資料類型的`Static`無法推斷區域變數。 如需詳細資訊，請參閱 <<c0> [ 區域型別推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
+- 資料類型的`Static`無法推斷區域變數。 如需詳細資訊，請參閱 <<c0> [ 區域型別推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
   
--   **結合的修飾詞。** 您無法指定`Static`連同`ReadOnly`， `Shadows`，或`Shared`相同宣告中。  
+- **結合的修飾詞。** 您無法指定`Static`連同`ReadOnly`， `Shadows`，或`Shared`相同宣告中。  
   
 ## <a name="behavior"></a>行為  
  當您宣告中的靜態變數`Shared`程序的靜態變數只有一個複本是適用於整個應用程式。 您呼叫`Shared`使用類別的程序，不為變數命名，以指向類別的執行個體。  
