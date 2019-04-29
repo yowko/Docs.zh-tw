@@ -5,11 +5,11 @@ ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
 author: KrzysztofCwalina
 ms.openlocfilehash: f0ef8ab378fb3898f2d2e134f0b38668f6794ef3
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650150"
 ---
 # <a name="serialization"></a>序列化
 序列化是將物件轉換成的格式，可以輕易地保存或傳輸的程序。 例如，您可以將物件序列化、 傳輸，使用 HTTP 和還原序列化該在目的地電腦在網際網路上。  

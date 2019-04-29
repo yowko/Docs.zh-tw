@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787851"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>HOW TO：使用 SecurityBindingElement 建立自訂繫結
 Windows Communication Foundation (WCF) 包含數個系統提供繫結，您可以設定，但不是能提供充分的彈性設定 WCF 支援的所有安全性選項時。 本主題示範如何直接從個別的繫結元素建立自訂繫結，並強調一些可在建立這類繫結時指定的安全設定。 如需建立自訂繫結的詳細資訊，請參閱[擴充繫結](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
@@ -32,22 +32,22 @@ Windows Communication Foundation (WCF) 包含數個系統提供繫結，您可�
   
  當傳輸層提供安全性時，會使用其他的類別：  
   
--   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
 ## <a name="required-binding-elements"></a>必要的繫結項目  
  有很多可能的繫結項目可以與任一繫結進行結合。 但是並非所有的組合都有效。 本節會說明安全性繫結中必須要有的項目。  
   
  有效的安全性繫結會因為許多因素而異，包括：  
   
--   安全性模式。  
+- 安全性模式。  
   
--   傳輸通訊協定。  
+- 傳輸通訊協定。  
   
--   合約中指定的訊息交換模式 (MEP)。  
+- 合約中指定的訊息交換模式 (MEP)。  
   
  下表針對前述的因素，列出每一個組合的有效繫結項目堆疊組態。 請注意，這些都是基本需求。 您可以將其他繫結項目加入繫結中，如訊息編碼繫結項目、交易繫結項目以及其他繫結項目。  
   

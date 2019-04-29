@@ -13,11 +13,11 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
 ms.openlocfilehash: b127c50f3319d4fe7c4890fc3bffb295baa37466
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936665"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 運算子 (Visual Basic)
 兩個數目相除，然後只傳回餘數。  
@@ -70,9 +70,9 @@ End Module
   
  相關的運算子包括：  
   
--   [\ 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)傳回除法的整數商數。 例如，運算式`14 \ 4`評估結果為 3。  
+- [\ 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)傳回除法的整數商數。 例如，運算式`14 \ 4`評估結果為 3。  
   
--   [/ 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)傳回完整商數，包括其餘部分，做為浮點數。 例如，運算式`14 / 4`會評估為 3.5。  
+- [/ 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)傳回完整商數，包括其餘部分，做為浮點數。 例如，運算式`14 / 4`會評估為 3.5。  
   
 ## <a name="attempted-division-by-zero"></a>嘗試的除以零  
  如果`number2`評估為零，就會有的行為`Mod`運算子的運算元資料類型而定。 整數的除法就會擲回<xref:System.DivideByZeroException>例外狀況。 傳回浮點除法<xref:System.Double.NaN>。  

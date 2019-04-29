@@ -27,11 +27,11 @@ helpviewer_keywords:
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
 ms.openlocfilehash: 8f5f3172eaa6b43d9b07aefa0036708b26087777
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783951"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim 陳述式 (Visual Basic)
 重新配置陣列變數的儲存空間。  
@@ -59,31 +59,31 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="rules"></a>規則  
   
--   **多個變數。** 您可以調整相同宣告陳述式中數個陣列變數的大小，並為每個變數指定 `name` 和 `boundlist` 組件。 以逗號分隔多個變數。  
+- **多個變數。** 您可以調整相同宣告陳述式中數個陣列變數的大小，並為每個變數指定 `name` 和 `boundlist` 組件。 以逗號分隔多個變數。  
   
--   **陣列界限。** `boundlist` 中的每個項目都可以指定該維度的上下限。 下限一律為 0 (零)。 上限是該維度可能的最高索引值，不是維度長度 (上限加 1)。 每個維度的索引從 0 到上限值不等。  
+- **陣列界限。** `boundlist` 中的每個項目都可以指定該維度的上下限。 下限一律為 0 (零)。 上限是該維度可能的最高索引值，不是維度長度 (上限加 1)。 每個維度的索引從 0 到上限值不等。  
   
      `boundlist` 中的維度數目必須符合陣列的原始維度 (陣序) 數目。  
   
--   **資料類型。** `ReDim` 陳述式不能變更其項目陣列變數的資料類型。  
+- **資料類型。** `ReDim` 陳述式不能變更其項目陣列變數的資料類型。  
   
--   **初始化。** `ReDim` 陳述式不能提供陣列項目的新初始化值。  
+- **初始化。** `ReDim` 陳述式不能提供陣列項目的新初始化值。  
   
--   **順位。** `ReDim` 陳述式不能變更陣列的陣序 (維度數目)。  
+- **順位。** `ReDim` 陳述式不能變更陣列的陣序 (維度數目)。  
   
--   **以 Preserve 調整大小。** 如果使用 `Preserve`，您也可以只調整陣列的最後一個維度。 至於其他每個維度，您必須指定現有陣列的界限。  
+- **以 Preserve 調整大小。** 如果使用 `Preserve`，您也可以只調整陣列的最後一個維度。 至於其他每個維度，您必須指定現有陣列的界限。  
   
      例如，如果您的陣列只有一個維度，您可以調整該維度的大小，但仍保留陣列的所有內容，因為您變更的只有最後一個維度。 不過，如果您的陣列有兩個或以上的維度，如果使用 `Preserve`，就只能變更最後一個維度的大小。  
   
--   **屬性。** `ReDim` 可以用在保存值陣列的屬性。  
+- **屬性。** `ReDim` 可以用在保存值陣列的屬性。  
   
 ## <a name="behavior"></a>行為  
   
--   **陣列取代。** `ReDim` 釋放現有的陣列，並使用相同的陣序建立新的陣列。 新的陣列會取代陣列變數中已釋放的陣列。  
+- **陣列取代。** `ReDim` 釋放現有的陣列，並使用相同的陣序建立新的陣列。 新的陣列會取代陣列變數中已釋放的陣列。  
   
--   **不使用 Preserve 的初始化。** 如果不指定 `Preserve`，`ReDim` 會使用其資料類型的預設值，初始化新的陣列項目。  
+- **不使用 Preserve 的初始化。** 如果不指定 `Preserve`，`ReDim` 會使用其資料類型的預設值，初始化新的陣列項目。  
   
--   **使用 Preserve 的初始化。** 如果指定 `Preserve`，Visual Basic 會將現有陣列的項目複製到新陣列。  
+- **使用 Preserve 的初始化。** 如果指定 `Preserve`，Visual Basic 會將現有陣列的項目複製到新陣列。  
   
 ## <a name="example"></a>範例  
  下列範例會增加動態陣列最後一個維度的大小，但不會遺失陣列現有的任何資料，再以遺失部分資料的方式減少大小。 最後，大小減少回其原始值，並重新初始化所有陣列項目。  

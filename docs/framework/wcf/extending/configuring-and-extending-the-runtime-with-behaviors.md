@@ -5,11 +5,11 @@ helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
 ms.openlocfilehash: 71057ec219f46cb8b51eb9b44d8b93af540d1b01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923275"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>使用行為來設定與擴充執行階段
 行為可讓您修改預設行為，並新增自訂延伸模組，檢查及驗證服務組態或修改在 Windows Communication Foundation (WCF) 用戶端和服務應用程式的執行階段行為。 本主題會說明行為介面、如何實作這些介面，以及如何透過程式設計方式或組態檔來將它們新增到服務描述 (在服務應用程式中) 或端點 (在用戶端應用程式中)。 如需使用系統提供行為的詳細資訊，請參閱 <<c0> [ 指定服務執行階段行為](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)並[指定用戶端執行階段行為](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)。  
@@ -20,11 +20,11 @@ ms.locfileid: "59768191"
 ### <a name="behavior-methods"></a>行為方法  
  所有的行為有`AddBindingParameters`方法中，`ApplyDispatchBehavior`方法，`Validate`方法，和`ApplyClientBehavior`有一個例外狀況的方法：因為<xref:System.ServiceModel.Description.IServiceBehavior>無法執行在用戶端，它不會實作`ApplyClientBehavior`。  
   
--   使用 `AddBindingParameters` 方法來修改自訂物件，或將其加入至自訂繫結可在執行階段建構時存取以供自己使用的集合中。 例如，在這種情況下，通道開發人員不知道實際影響通道建置方式的保護需求指定方式。  
+- 使用 `AddBindingParameters` 方法來修改自訂物件，或將其加入至自訂繫結可在執行階段建構時存取以供自己使用的集合中。 例如，在這種情況下，通道開發人員不知道實際影響通道建置方式的保護需求指定方式。  
   
--   使用 `Validate` 方法來檢查描述樹狀目錄和對應的執行階段物件，以確定該物件符合一些準則。  
+- 使用 `Validate` 方法來檢查描述樹狀目錄和對應的執行階段物件，以確定該物件符合一些準則。  
   
--   使用 `ApplyDispatchBehavior` 和 `ApplyClientBehavior` 方法來檢查描述樹狀目錄，以及修改服務或用戶端上之特定範圍的執行階段。 您也可以插入擴充物件。  
+- 使用 `ApplyDispatchBehavior` 和 `ApplyClientBehavior` 方法來檢查描述樹狀目錄，以及修改服務或用戶端上之特定範圍的執行階段。 您也可以插入擴充物件。  
   
     > [!NOTE]
     >  雖然在這些方法中有提供描述樹狀目錄，但它僅供檢查用途。 如果描述樹狀目錄遭到修改，該行為便屬於未定義的。  
@@ -38,13 +38,13 @@ ms.locfileid: "59768191"
   
  有四種 WCF 中的行為：  
   
--   服務行為 (<xref:System.ServiceModel.Description.IServiceBehavior> 類型) 讓整個服務執行階段 (包括 <xref:System.ServiceModel.ServiceHostBase>) 能夠進行自訂。  
+- 服務行為 (<xref:System.ServiceModel.Description.IServiceBehavior> 類型) 讓整個服務執行階段 (包括 <xref:System.ServiceModel.ServiceHostBase>) 能夠進行自訂。  
   
--   端點行為 (<xref:System.ServiceModel.Description.IEndpointBehavior> 類型) 讓服務端點及其關聯的 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> 物件能夠進行自訂。  
+- 端點行為 (<xref:System.ServiceModel.Description.IEndpointBehavior> 類型) 讓服務端點及其關聯的 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> 物件能夠進行自訂。  
   
--   合約行為 (<xref:System.ServiceModel.Description.IContractBehavior> 類型) 讓 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 與 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 類別能夠分別在用戶端及服務應用程式中進行自訂。  
+- 合約行為 (<xref:System.ServiceModel.Description.IContractBehavior> 類型) 讓 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 與 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 類別能夠分別在用戶端及服務應用程式中進行自訂。  
   
--   作業行為 (<xref:System.ServiceModel.Description.IOperationBehavior> 類型) 同樣地讓 <xref:System.ServiceModel.Dispatcher.ClientOperation> 與 <xref:System.ServiceModel.Dispatcher.DispatchOperation> 類別能在用戶端及服務上進行自訂。  
+- 作業行為 (<xref:System.ServiceModel.Description.IOperationBehavior> 類型) 同樣地讓 <xref:System.ServiceModel.Dispatcher.ClientOperation> 與 <xref:System.ServiceModel.Dispatcher.DispatchOperation> 類別能在用戶端及服務上進行自訂。  
   
  將這些行為新增到各種描述物件的作業，可以透過實作自訂屬性、使用應用程式組態檔來完成，或是將這些行為直接新增到適當描述物件的行為集合中。 不過，在呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ServiceHost><xref:System.ServiceModel.ChannelFactory%601>上的  之前，這些行為一定要先新增到服務描述或服務端點描述物件。  
   

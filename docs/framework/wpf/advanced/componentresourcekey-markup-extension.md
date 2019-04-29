@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
 ms.openlocfilehash: 5f72d6c3273cfda4276383cfe72f90196e5d4340
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037748"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey 標記延伸
 定義和參考會從外部組件載入的資源索引鍵。 這可讓組件，而不是明確的資源字典的組件中，或在類別上指定目標類型的資源查閱。  
@@ -52,9 +52,9 @@ ms.locfileid: "59169750"
 ## <a name="remarks"></a>備註  
  上述的使用方式中所示 {`ComponentResourceKey`} 標記延伸使用方式在兩個地方找到：  
   
--   內的佈景主題資源字典，控制項作者所提供的索引鍵定義。  
+- 內的佈景主題資源字典，控制項作者所提供的索引鍵定義。  
   
--   從組件存取佈景主題資源，當您是重新範本化控制項，但想要使用來自控制項的佈景主題所提供的資源的屬性值。  
+- 從組件存取佈景主題資源，當您是重新範本化控制項，但想要使用來自控制項的佈景主題所提供的資源的屬性值。  
   
  參考來自佈景主題的元件資源，通常建議您改用`{DynamicResource}`而非`{StaticResource}`。 這會顯示使用方式。 `{DynamicResource}` 建議，因為使用者可以變更佈景主題本身。 如果您想 懽搰 支援佈景主題的控制項作者的意圖元件資源時，您應該啟用您的元件資源參考也是動態。  
   
