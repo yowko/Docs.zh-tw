@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 37e4abeebce155a4c332e864b4dfb6cf5a1141ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940331"
 ---
-# <a name="inotifysource2setnotifyfilter-method"></a><span data-ttu-id="42b52-102">INotifySource2::SetNotifyFilter 方法</span><span class="sxs-lookup"><span data-stu-id="42b52-102">INotifySource2::SetNotifyFilter Method</span></span>
-<span data-ttu-id="42b52-103">會指定與此來源使用的通知篩選器。</span><span class="sxs-lookup"><span data-stu-id="42b52-103">Assigns a notification filter for use with this source.</span></span>  
+# <a name="inotifysource2setnotifyfilter-method"></a><span data-ttu-id="527ba-102">INotifySource2::SetNotifyFilter 方法</span><span class="sxs-lookup"><span data-stu-id="527ba-102">INotifySource2::SetNotifyFilter Method</span></span>
+<span data-ttu-id="527ba-103">會指定與此來源使用的通知篩選器。</span><span class="sxs-lookup"><span data-stu-id="527ba-103">Assigns a notification filter for use with this source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="42b52-104">語法</span><span class="sxs-lookup"><span data-stu-id="42b52-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="527ba-104">語法</span><span class="sxs-lookup"><span data-stu-id="527ba-104">Syntax</span></span>  
   
 ```  
 HRESULT SetNotifyFilter  
@@ -37,21 +37,21 @@ HRESULT SetNotifyFilter
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="42b52-105">參數</span><span class="sxs-lookup"><span data-stu-id="42b52-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="527ba-105">參數</span><span class="sxs-lookup"><span data-stu-id="527ba-105">Parameters</span></span>  
  `in_NotifyFilter`  
- <span data-ttu-id="42b52-106">[in]位元組合[NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)識別回呼偵錯工具 API 的列舉值。</span><span class="sxs-lookup"><span data-stu-id="42b52-106">[in] A bitwise combination of the [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) enumeration values that identify callbacks for the debugger API.</span></span>  
+ <span data-ttu-id="527ba-106">[in]位元組合[NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)識別回呼偵錯工具 API 的列舉值。</span><span class="sxs-lookup"><span data-stu-id="527ba-106">[in] A bitwise combination of the [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) enumeration values that identify callbacks for the debugger API.</span></span>  
   
  `in_pUserThreadFilter`  
- <span data-ttu-id="42b52-107">[in]指標[USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)識別執行緒偵錯工具 API 的結構。</span><span class="sxs-lookup"><span data-stu-id="42b52-107">[in] A pointer to a [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) structure that identifies threads for the debugger API.</span></span>  
+ <span data-ttu-id="527ba-107">[in]指標[USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)識別執行緒偵錯工具 API 的結構。</span><span class="sxs-lookup"><span data-stu-id="527ba-107">[in] A pointer to a [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) structure that identifies threads for the debugger API.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="42b52-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="42b52-108">Return Value</span></span>  
- <span data-ttu-id="42b52-109">如果方法成功為 S_OK。</span><span class="sxs-lookup"><span data-stu-id="42b52-109">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="527ba-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="527ba-108">Return Value</span></span>  
+ <span data-ttu-id="527ba-109">如果方法成功為 S_OK。</span><span class="sxs-lookup"><span data-stu-id="527ba-109">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="42b52-110">需求</span><span class="sxs-lookup"><span data-stu-id="42b52-110">Requirements</span></span>  
- <span data-ttu-id="42b52-111">**標頭：** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="42b52-111">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="527ba-110">需求</span><span class="sxs-lookup"><span data-stu-id="527ba-110">Requirements</span></span>  
+ <span data-ttu-id="527ba-111">**標頭：** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="527ba-111">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="42b52-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="42b52-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="527ba-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="527ba-112">See also</span></span>
 
-- [<span data-ttu-id="42b52-113">INotifySource2 介面</span><span class="sxs-lookup"><span data-stu-id="42b52-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="42b52-114">INotifyConnection2 介面</span><span class="sxs-lookup"><span data-stu-id="42b52-114">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [<span data-ttu-id="42b52-115">INotifySink2 介面</span><span class="sxs-lookup"><span data-stu-id="42b52-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="527ba-113">INotifySource2 介面</span><span class="sxs-lookup"><span data-stu-id="527ba-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="527ba-114">INotifyConnection2 介面</span><span class="sxs-lookup"><span data-stu-id="527ba-114">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="527ba-115">INotifySink2 介面</span><span class="sxs-lookup"><span data-stu-id="527ba-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)

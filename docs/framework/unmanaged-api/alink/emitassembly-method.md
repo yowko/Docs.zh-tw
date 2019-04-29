@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bf7b54ab7a2318e8194bf39dbe41b864633ddb43
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790061"
 ---
-# <a name="emitassembly-method"></a><span data-ttu-id="13897-102">EmitAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="13897-102">EmitAssembly Method</span></span>
-<span data-ttu-id="13897-103">建立組件。</span><span class="sxs-lookup"><span data-stu-id="13897-103">Creates the assembly.</span></span> <span data-ttu-id="13897-104">之後的組件檔案除外的其他所有檔案都已都關閉，請呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="13897-104">Call this method after all other files are closed except for the assembly file.</span></span> <span data-ttu-id="13897-105">產生未繫結的模組時，請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="13897-105">Do not call this method when producing unbound modules.</span></span>  
+# <a name="emitassembly-method"></a><span data-ttu-id="0c514-102">EmitAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="0c514-102">EmitAssembly Method</span></span>
+<span data-ttu-id="0c514-103">建立組件。</span><span class="sxs-lookup"><span data-stu-id="0c514-103">Creates the assembly.</span></span> <span data-ttu-id="0c514-104">之後的組件檔案除外的其他所有檔案都已都關閉，請呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="0c514-104">Call this method after all other files are closed except for the assembly file.</span></span> <span data-ttu-id="0c514-105">產生未繫結的模組時，請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="0c514-105">Do not call this method when producing unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="13897-106">語法</span><span class="sxs-lookup"><span data-stu-id="13897-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0c514-106">語法</span><span class="sxs-lookup"><span data-stu-id="0c514-106">Syntax</span></span>  
   
 ```  
 HRESULT EmitAssembly(  
@@ -35,18 +35,18 @@ HRESULT EmitAssembly(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="13897-107">參數</span><span class="sxs-lookup"><span data-stu-id="13897-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0c514-107">參數</span><span class="sxs-lookup"><span data-stu-id="0c514-107">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="13897-108">組件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="13897-108">ID of the assembly.</span></span>  
+ <span data-ttu-id="0c514-108">組件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="0c514-108">ID of the assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="13897-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="13897-109">Return Value</span></span>  
- <span data-ttu-id="13897-110">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="13897-110">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0c514-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="0c514-109">Return Value</span></span>  
+ <span data-ttu-id="0c514-110">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="0c514-110">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="13897-111">需求</span><span class="sxs-lookup"><span data-stu-id="13897-111">Requirements</span></span>  
- <span data-ttu-id="13897-112">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="13897-112">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0c514-111">需求</span><span class="sxs-lookup"><span data-stu-id="0c514-111">Requirements</span></span>  
+ <span data-ttu-id="0c514-112">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="0c514-112">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="13897-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="13897-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0c514-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0c514-113">See also</span></span>
 
-- [<span data-ttu-id="13897-114">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="13897-114">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="13897-115">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="13897-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="13897-116">ALink API</span><span class="sxs-lookup"><span data-stu-id="13897-116">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="0c514-114">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="0c514-114">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="0c514-115">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="0c514-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="0c514-116">ALink API</span><span class="sxs-lookup"><span data-stu-id="0c514-116">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

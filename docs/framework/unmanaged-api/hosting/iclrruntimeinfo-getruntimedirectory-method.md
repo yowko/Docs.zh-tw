@@ -18,18 +18,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c09f57ad805b4ba17b4bdafd3ced533199277a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771695"
 ---
-# <a name="iclrruntimeinfogetruntimedirectory-method"></a><span data-ttu-id="392b1-102">ICLRRuntimeInfo::GetRuntimeDirectory 方法</span><span class="sxs-lookup"><span data-stu-id="392b1-102">ICLRRuntimeInfo::GetRuntimeDirectory Method</span></span>
-<span data-ttu-id="392b1-103">取得 common language runtime (CLR) 與此介面相關聯的安裝目錄。</span><span class="sxs-lookup"><span data-stu-id="392b1-103">Gets the installation directory of the common language runtime (CLR) associated with this interface.</span></span>  
+# <a name="iclrruntimeinfogetruntimedirectory-method"></a><span data-ttu-id="af982-102">ICLRRuntimeInfo::GetRuntimeDirectory 方法</span><span class="sxs-lookup"><span data-stu-id="af982-102">ICLRRuntimeInfo::GetRuntimeDirectory Method</span></span>
+<span data-ttu-id="af982-103">取得 common language runtime (CLR) 與此介面相關聯的安裝目錄。</span><span class="sxs-lookup"><span data-stu-id="af982-103">Gets the installation directory of the common language runtime (CLR) associated with this interface.</span></span>  
   
- <span data-ttu-id="392b1-104">這個方法會取代[GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md)在.NET framework 2.0、 3.0 和 3.5 提供的函式。</span><span class="sxs-lookup"><span data-stu-id="392b1-104">This method supersedes the [GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md) function provided in the .NET Framework versions 2.0, 3.0, and 3.5.</span></span>  
+ <span data-ttu-id="af982-104">這個方法會取代[GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md)在.NET framework 2.0、 3.0 和 3.5 提供的函式。</span><span class="sxs-lookup"><span data-stu-id="af982-104">This method supersedes the [GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md) function provided in the .NET Framework versions 2.0, 3.0, and 3.5.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="392b1-105">語法</span><span class="sxs-lookup"><span data-stu-id="392b1-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="af982-105">語法</span><span class="sxs-lookup"><span data-stu-id="af982-105">Syntax</span></span>  
   
 ```  
 HRESULT GetRuntimeDirectory(  
@@ -37,33 +37,33 @@ HRESULT GetRuntimeDirectory(
 [in, out]  DWORD *pcchBuffer);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="392b1-106">參數</span><span class="sxs-lookup"><span data-stu-id="392b1-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="af982-106">參數</span><span class="sxs-lookup"><span data-stu-id="af982-106">Parameters</span></span>  
  `pwzBuffer`  
- <span data-ttu-id="392b1-107">[out]傳回 CLR 安裝目錄。</span><span class="sxs-lookup"><span data-stu-id="392b1-107">[out] Returns the CLR installation directory.</span></span> <span data-ttu-id="392b1-108">安裝路徑是完整名稱;例如，"c:\windows\microsoft.net\framework\v1.0.3705\\"。</span><span class="sxs-lookup"><span data-stu-id="392b1-108">The installation path is fully qualified; for example, "c:\windows\microsoft.net\framework\v1.0.3705\\".</span></span>  
+ <span data-ttu-id="af982-107">[out]傳回 CLR 安裝目錄。</span><span class="sxs-lookup"><span data-stu-id="af982-107">[out] Returns the CLR installation directory.</span></span> <span data-ttu-id="af982-108">安裝路徑是完整名稱;例如，"c:\windows\microsoft.net\framework\v1.0.3705\\"。</span><span class="sxs-lookup"><span data-stu-id="af982-108">The installation path is fully qualified; for example, "c:\windows\microsoft.net\framework\v1.0.3705\\".</span></span>  
   
  `pchBuffer`  
- <span data-ttu-id="392b1-109">[in、 out]指定的大小`pwzBuffer`以避免緩衝區滿溢。</span><span class="sxs-lookup"><span data-stu-id="392b1-109">[in, out] Specifies the size of `pwzBuffer` to avoid buffer overruns.</span></span> <span data-ttu-id="392b1-110">如果`pwzBuffer`為 null，`pchBuffer`傳回的所需的大小`pwzBuffer`。</span><span class="sxs-lookup"><span data-stu-id="392b1-110">If `pwzBuffer` is null, `pchBuffer` returns the required size of `pwzBuffer`.</span></span>  
+ <span data-ttu-id="af982-109">[in、 out]指定的大小`pwzBuffer`以避免緩衝區滿溢。</span><span class="sxs-lookup"><span data-stu-id="af982-109">[in, out] Specifies the size of `pwzBuffer` to avoid buffer overruns.</span></span> <span data-ttu-id="af982-110">如果`pwzBuffer`為 null，`pchBuffer`傳回的所需的大小`pwzBuffer`。</span><span class="sxs-lookup"><span data-stu-id="af982-110">If `pwzBuffer` is null, `pchBuffer` returns the required size of `pwzBuffer`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="392b1-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="392b1-111">Return Value</span></span>  
- <span data-ttu-id="392b1-112">這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="392b1-112">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="af982-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="af982-111">Return Value</span></span>  
+ <span data-ttu-id="af982-112">這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="af982-112">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="392b1-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="392b1-113">HRESULT</span></span>|<span data-ttu-id="392b1-114">描述</span><span class="sxs-lookup"><span data-stu-id="392b1-114">Description</span></span>|  
+|<span data-ttu-id="af982-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="af982-113">HRESULT</span></span>|<span data-ttu-id="af982-114">描述</span><span class="sxs-lookup"><span data-stu-id="af982-114">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="392b1-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="392b1-115">S_OK</span></span>|<span data-ttu-id="392b1-116">已成功完成命令。</span><span class="sxs-lookup"><span data-stu-id="392b1-116">The method completed successfully.</span></span>|  
-|<span data-ttu-id="392b1-117">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="392b1-117">E_POINTER</span></span>|<span data-ttu-id="392b1-118">`pwzBuffer` 或 `pchBuffer` 為 null。</span><span class="sxs-lookup"><span data-stu-id="392b1-118">`pwzBuffer` or `pchBuffer` is null.</span></span>|  
+|<span data-ttu-id="af982-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="af982-115">S_OK</span></span>|<span data-ttu-id="af982-116">已成功完成命令。</span><span class="sxs-lookup"><span data-stu-id="af982-116">The method completed successfully.</span></span>|  
+|<span data-ttu-id="af982-117">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="af982-117">E_POINTER</span></span>|<span data-ttu-id="af982-118">`pwzBuffer` 或 `pchBuffer` 為 null。</span><span class="sxs-lookup"><span data-stu-id="af982-118">`pwzBuffer` or `pchBuffer` is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="392b1-119">備註</span><span class="sxs-lookup"><span data-stu-id="392b1-119">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="af982-119">備註</span><span class="sxs-lookup"><span data-stu-id="af982-119">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="392b1-120">需求</span><span class="sxs-lookup"><span data-stu-id="392b1-120">Requirements</span></span>  
- <span data-ttu-id="392b1-121">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="392b1-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="af982-120">需求</span><span class="sxs-lookup"><span data-stu-id="af982-120">Requirements</span></span>  
+ <span data-ttu-id="af982-121">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="af982-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="392b1-122">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="392b1-122">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="af982-122">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="af982-122">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="392b1-123">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="392b1-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="af982-123">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="af982-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="392b1-124">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="392b1-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="af982-124">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="af982-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="392b1-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="392b1-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="af982-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="af982-125">See also</span></span>
 
-- [<span data-ttu-id="392b1-126">ICLRRuntimeInfo 介面</span><span class="sxs-lookup"><span data-stu-id="392b1-126">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="392b1-127">裝載</span><span class="sxs-lookup"><span data-stu-id="392b1-127">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="af982-126">ICLRRuntimeInfo 介面</span><span class="sxs-lookup"><span data-stu-id="af982-126">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="af982-127">裝載</span><span class="sxs-lookup"><span data-stu-id="af982-127">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

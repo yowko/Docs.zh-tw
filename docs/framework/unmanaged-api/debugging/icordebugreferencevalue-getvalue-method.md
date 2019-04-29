@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e52ef20f2b8e3937911dc37e68f8a338ab0d85d9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782963"
 ---
-# <a name="icordebugreferencevaluegetvalue-method"></a><span data-ttu-id="469e1-102">ICorDebugReferenceValue::GetValue 方法</span><span class="sxs-lookup"><span data-stu-id="469e1-102">ICorDebugReferenceValue::GetValue Method</span></span>
-<span data-ttu-id="469e1-103">取得參考物件的目前記憶體位址。</span><span class="sxs-lookup"><span data-stu-id="469e1-103">Gets the current memory address of the referenced object.</span></span>  
+# <a name="icordebugreferencevaluegetvalue-method"></a><span data-ttu-id="18b29-102">ICorDebugReferenceValue::GetValue 方法</span><span class="sxs-lookup"><span data-stu-id="18b29-102">ICorDebugReferenceValue::GetValue Method</span></span>
+<span data-ttu-id="18b29-103">取得參考物件的目前記憶體位址。</span><span class="sxs-lookup"><span data-stu-id="18b29-103">Gets the current memory address of the referenced object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="469e1-104">語法</span><span class="sxs-lookup"><span data-stu-id="469e1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="18b29-104">語法</span><span class="sxs-lookup"><span data-stu-id="18b29-104">Syntax</span></span>  
   
 ```  
 HRESULT GetValue (  
@@ -35,15 +35,15 @@ HRESULT GetValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="469e1-105">參數</span><span class="sxs-lookup"><span data-stu-id="469e1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="18b29-105">參數</span><span class="sxs-lookup"><span data-stu-id="18b29-105">Parameters</span></span>  
  `pValue`  
- <span data-ttu-id="469e1-106">[out]指標`CORDB_ADDRESS`值，指定這個 ICorDebugReferenceValue 物件指向的物件的位址。</span><span class="sxs-lookup"><span data-stu-id="469e1-106">[out] A pointer to a `CORDB_ADDRESS` value that specifies the address of the object to which this ICorDebugReferenceValue object points.</span></span>  
+ <span data-ttu-id="18b29-106">[out]指標`CORDB_ADDRESS`值，指定這個 ICorDebugReferenceValue 物件指向的物件的位址。</span><span class="sxs-lookup"><span data-stu-id="18b29-106">[out] A pointer to a `CORDB_ADDRESS` value that specifies the address of the object to which this ICorDebugReferenceValue object points.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="469e1-107">需求</span><span class="sxs-lookup"><span data-stu-id="469e1-107">Requirements</span></span>  
- <span data-ttu-id="469e1-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="469e1-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="18b29-107">需求</span><span class="sxs-lookup"><span data-stu-id="18b29-107">Requirements</span></span>  
+ <span data-ttu-id="18b29-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="18b29-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="469e1-109">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="469e1-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="18b29-109">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="18b29-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="469e1-110">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="469e1-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="18b29-110">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="18b29-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="469e1-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="469e1-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="18b29-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="18b29-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3d7ac84971f7d0e97f7ccd26710151d1aeefe729
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939499"
 ---
-# <a name="isymunmanagednamespacegetnamespaces-method"></a><span data-ttu-id="672e8-102">ISymUnmanagedNamespace::GetNamespaces 方法</span><span class="sxs-lookup"><span data-stu-id="672e8-102">ISymUnmanagedNamespace::GetNamespaces Method</span></span>
-<span data-ttu-id="672e8-103">取得這個命名空間的子系。</span><span class="sxs-lookup"><span data-stu-id="672e8-103">Gets the children of this namespace.</span></span>  
+# <a name="isymunmanagednamespacegetnamespaces-method"></a><span data-ttu-id="81d9e-102">ISymUnmanagedNamespace::GetNamespaces 方法</span><span class="sxs-lookup"><span data-stu-id="81d9e-102">ISymUnmanagedNamespace::GetNamespaces Method</span></span>
+<span data-ttu-id="81d9e-103">取得這個命名空間的子系。</span><span class="sxs-lookup"><span data-stu-id="81d9e-103">Gets the children of this namespace.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="672e8-104">語法</span><span class="sxs-lookup"><span data-stu-id="672e8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="81d9e-104">語法</span><span class="sxs-lookup"><span data-stu-id="81d9e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNamespaces(  
@@ -37,22 +37,22 @@ HRESULT GetNamespaces(
         ISymUnmanagedNamespace* namespaces[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="672e8-105">參數</span><span class="sxs-lookup"><span data-stu-id="672e8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="81d9e-105">參數</span><span class="sxs-lookup"><span data-stu-id="81d9e-105">Parameters</span></span>  
  `cNameSpaces`  
- <span data-ttu-id="672e8-106">[in]A`ULONG32`表示的大小`namespaces`陣列。</span><span class="sxs-lookup"><span data-stu-id="672e8-106">[in] A `ULONG32` that indicates the size of the `namespaces` array.</span></span>  
+ <span data-ttu-id="81d9e-106">[in]A`ULONG32`表示的大小`namespaces`陣列。</span><span class="sxs-lookup"><span data-stu-id="81d9e-106">[in] A `ULONG32` that indicates the size of the `namespaces` array.</span></span>  
   
  `pcNameSpaces`  
- <span data-ttu-id="672e8-107">[out]指標`ULONG32`接收大小，以字元為單位，以包含命名空間所需的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="672e8-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespaces.</span></span>  
+ <span data-ttu-id="81d9e-107">[out]指標`ULONG32`接收大小，以字元為單位，以包含命名空間所需的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="81d9e-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespaces.</span></span>  
   
  `namespaces`  
- <span data-ttu-id="672e8-108">[out]包含命名空間緩衝區的指標。</span><span class="sxs-lookup"><span data-stu-id="672e8-108">[out] A pointer to the buffer that contains the namespaces.</span></span>  
+ <span data-ttu-id="81d9e-108">[out]包含命名空間緩衝區的指標。</span><span class="sxs-lookup"><span data-stu-id="81d9e-108">[out] A pointer to the buffer that contains the namespaces.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="672e8-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="672e8-109">Return Value</span></span>  
- <span data-ttu-id="672e8-110">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="672e8-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="81d9e-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="81d9e-109">Return Value</span></span>  
+ <span data-ttu-id="81d9e-110">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="81d9e-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="672e8-111">需求</span><span class="sxs-lookup"><span data-stu-id="672e8-111">Requirements</span></span>  
- <span data-ttu-id="672e8-112">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="672e8-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="81d9e-111">需求</span><span class="sxs-lookup"><span data-stu-id="81d9e-111">Requirements</span></span>  
+ <span data-ttu-id="81d9e-112">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="81d9e-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="672e8-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="672e8-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81d9e-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="81d9e-113">See also</span></span>
 
-- [<span data-ttu-id="672e8-114">ISymUnmanagedNamespace 介面</span><span class="sxs-lookup"><span data-stu-id="672e8-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [<span data-ttu-id="81d9e-114">ISymUnmanagedNamespace 介面</span><span class="sxs-lookup"><span data-stu-id="81d9e-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

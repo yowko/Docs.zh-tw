@@ -18,29 +18,29 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2717a279abf7fb1b704a769d54654d97949cc0a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939856"
 ---
-# <a name="isymunmanageddocumentgetsourcelength-method"></a><span data-ttu-id="d645c-102">ISymUnmanagedDocument::GetSourceLength 方法</span><span class="sxs-lookup"><span data-stu-id="d645c-102">ISymUnmanagedDocument::GetSourceLength Method</span></span>
-<span data-ttu-id="d645c-103">取得內嵌來源的長度 (以位元組為單位)。</span><span class="sxs-lookup"><span data-stu-id="d645c-103">Gets the length, in bytes, of the embedded source.</span></span>  
+# <a name="isymunmanageddocumentgetsourcelength-method"></a><span data-ttu-id="6f154-102">ISymUnmanagedDocument::GetSourceLength 方法</span><span class="sxs-lookup"><span data-stu-id="6f154-102">ISymUnmanagedDocument::GetSourceLength Method</span></span>
+<span data-ttu-id="6f154-103">取得內嵌來源的長度 (以位元組為單位)。</span><span class="sxs-lookup"><span data-stu-id="6f154-103">Gets the length, in bytes, of the embedded source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d645c-104">語法</span><span class="sxs-lookup"><span data-stu-id="d645c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6f154-104">語法</span><span class="sxs-lookup"><span data-stu-id="6f154-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSourceLength(  
     [out, retval]  ULONG32*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d645c-105">參數</span><span class="sxs-lookup"><span data-stu-id="d645c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6f154-105">參數</span><span class="sxs-lookup"><span data-stu-id="6f154-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="d645c-106">[out]表示內嵌來源的長度，以位元組為單位，變數的指標。</span><span class="sxs-lookup"><span data-stu-id="d645c-106">[out] A pointer to a variable that indicates the length, in bytes, of the embedded source.</span></span>  
+ <span data-ttu-id="6f154-106">[out]表示內嵌來源的長度，以位元組為單位，變數的指標。</span><span class="sxs-lookup"><span data-stu-id="6f154-106">[out] A pointer to a variable that indicates the length, in bytes, of the embedded source.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d645c-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="d645c-107">Return Value</span></span>  
- <span data-ttu-id="d645c-108">如果方法成功為 S_OK。</span><span class="sxs-lookup"><span data-stu-id="d645c-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6f154-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="6f154-107">Return Value</span></span>  
+ <span data-ttu-id="6f154-108">如果方法成功為 S_OK。</span><span class="sxs-lookup"><span data-stu-id="6f154-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d645c-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d645c-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6f154-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6f154-109">See also</span></span>
 
-- [<span data-ttu-id="d645c-110">ISymUnmanagedDocument 介面</span><span class="sxs-lookup"><span data-stu-id="d645c-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="6f154-110">ISymUnmanagedDocument 介面</span><span class="sxs-lookup"><span data-stu-id="6f154-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

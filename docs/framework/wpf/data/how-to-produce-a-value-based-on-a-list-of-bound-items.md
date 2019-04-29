@@ -9,32 +9,32 @@ helpviewer_keywords:
 - Multibinding [WPF]
 ms.assetid: b3d06378-b511-4181-95aa-316d60c9229b
 ms.openlocfilehash: c2ec5ff26c89649294df266e790445e5aa5d08ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931379"
 ---
-# <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a><span data-ttu-id="4b581-102">HOW TO：根據繫結項目的清單產生值</span><span class="sxs-lookup"><span data-stu-id="4b581-102">How to: Produce a Value Based on a List of Bound Items</span></span>
-<span data-ttu-id="4b581-103"><xref:System.Windows.Data.MultiBinding> 可讓您將繫結目標屬性繫結來源屬性的清單，然後套用邏輯以產生具有指定的輸入值。</span><span class="sxs-lookup"><span data-stu-id="4b581-103"><xref:System.Windows.Data.MultiBinding> allows you to bind a binding target property to a list of source properties and then apply logic to produce a value with the given inputs.</span></span> <span data-ttu-id="4b581-104">此範例示範如何使用<xref:System.Windows.Data.MultiBinding>。</span><span class="sxs-lookup"><span data-stu-id="4b581-104">This example demonstrates how to use <xref:System.Windows.Data.MultiBinding>.</span></span>  
+# <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a><span data-ttu-id="396f2-102">HOW TO：根據繫結項目的清單產生值</span><span class="sxs-lookup"><span data-stu-id="396f2-102">How to: Produce a Value Based on a List of Bound Items</span></span>
+<span data-ttu-id="396f2-103"><xref:System.Windows.Data.MultiBinding> 可讓您將繫結目標屬性繫結來源屬性的清單，然後套用邏輯以產生具有指定的輸入值。</span><span class="sxs-lookup"><span data-stu-id="396f2-103"><xref:System.Windows.Data.MultiBinding> allows you to bind a binding target property to a list of source properties and then apply logic to produce a value with the given inputs.</span></span> <span data-ttu-id="396f2-104">此範例示範如何使用<xref:System.Windows.Data.MultiBinding>。</span><span class="sxs-lookup"><span data-stu-id="396f2-104">This example demonstrates how to use <xref:System.Windows.Data.MultiBinding>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4b581-105">範例</span><span class="sxs-lookup"><span data-stu-id="4b581-105">Example</span></span>  
- <span data-ttu-id="4b581-106">在下列範例中，`NameListData` 參考 `PersonName` 物件的集合，這些物件都包含兩個屬性：`firstName` 和 `lastName`。</span><span class="sxs-lookup"><span data-stu-id="4b581-106">In the following example, `NameListData` refers to a collection of `PersonName` objects, which are objects that contain two properties, `firstName` and `lastName`.</span></span> <span data-ttu-id="4b581-107">下列範例會產生<xref:System.Windows.Controls.TextBlock>，會顯示第一個和最後一個名稱的個人姓氏第一個。</span><span class="sxs-lookup"><span data-stu-id="4b581-107">The following example produces a <xref:System.Windows.Controls.TextBlock> that shows the first and last names of a person with the last name first.</span></span>  
+## <a name="example"></a><span data-ttu-id="396f2-105">範例</span><span class="sxs-lookup"><span data-stu-id="396f2-105">Example</span></span>  
+ <span data-ttu-id="396f2-106">在下列範例中，`NameListData` 參考 `PersonName` 物件的集合，這些物件都包含兩個屬性：`firstName` 和 `lastName`。</span><span class="sxs-lookup"><span data-stu-id="396f2-106">In the following example, `NameListData` refers to a collection of `PersonName` objects, which are objects that contain two properties, `firstName` and `lastName`.</span></span> <span data-ttu-id="396f2-107">下列範例會產生<xref:System.Windows.Controls.TextBlock>，會顯示第一個和最後一個名稱的個人姓氏第一個。</span><span class="sxs-lookup"><span data-stu-id="396f2-107">The following example produces a <xref:System.Windows.Controls.TextBlock> that shows the first and last names of a person with the last name first.</span></span>  
   
  [!code-xaml[MultiBinding#Resources1](~/samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/Window1.xaml#resources1)]  
 [!code-xaml[MultiBinding#Resources2](~/samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/Window1.xaml#resources2)]  
 [!code-xaml[MultiBinding#MultiBindingTextBox2](~/samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/Window1.xaml#multibindingtextbox2)]  
 [!code-xaml[MultiBinding#Window](~/samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/Window1.xaml#window)]  
   
- <span data-ttu-id="4b581-108">為了解姓氏-名字格式是如何產生，我們一起看看 `NameConverter` 的實作：</span><span class="sxs-lookup"><span data-stu-id="4b581-108">To understand how the last-name-first format is produced, let's take a look at the implementation of the `NameConverter`:</span></span>  
+ <span data-ttu-id="396f2-108">為了解姓氏-名字格式是如何產生，我們一起看看 `NameConverter` 的實作：</span><span class="sxs-lookup"><span data-stu-id="396f2-108">To understand how the last-name-first format is produced, let's take a look at the implementation of the `NameConverter`:</span></span>  
   
  [!code-csharp[MultiBinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/NameConverter.cs#3)]
  [!code-vb[MultiBinding#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MultiBinding/VisualBasic/NameConverter.vb#3)]  
   
- <span data-ttu-id="4b581-109">`NameConverter` 會實作 <xref:System.Windows.Data.IMultiValueConverter> 介面。</span><span class="sxs-lookup"><span data-stu-id="4b581-109">`NameConverter` implements the <xref:System.Windows.Data.IMultiValueConverter> interface.</span></span> <span data-ttu-id="4b581-110">`NameConverter` 會從個別繫結取得值，然後將這些值儲存在 values 物件陣列中。</span><span class="sxs-lookup"><span data-stu-id="4b581-110">`NameConverter` takes the values from the individual bindings and stores them in the values object array.</span></span> <span data-ttu-id="4b581-111">順序<xref:System.Windows.Data.Binding>項目會出現在<xref:System.Windows.Data.MultiBinding>項目是陣列中儲存這些值的順序。</span><span class="sxs-lookup"><span data-stu-id="4b581-111">The order in which the <xref:System.Windows.Data.Binding> elements appear under the <xref:System.Windows.Data.MultiBinding> element is the order in which those values are stored in the array.</span></span> <span data-ttu-id="4b581-112">值<xref:System.Windows.Data.MultiBinding.ConverterParameter%2A>的 [參數] 引數所參考屬性<xref:System.Windows.Data.MultiBinding.Converter%2A>方法，對參數以決定如何格式化名稱的參數。</span><span class="sxs-lookup"><span data-stu-id="4b581-112">The value of the <xref:System.Windows.Data.MultiBinding.ConverterParameter%2A> attribute is referenced by the parameter argument of the <xref:System.Windows.Data.MultiBinding.Converter%2A> method, which performs a switch on the parameter to determine how to format the name.</span></span>  
+ <span data-ttu-id="396f2-109">`NameConverter` 會實作 <xref:System.Windows.Data.IMultiValueConverter> 介面。</span><span class="sxs-lookup"><span data-stu-id="396f2-109">`NameConverter` implements the <xref:System.Windows.Data.IMultiValueConverter> interface.</span></span> <span data-ttu-id="396f2-110">`NameConverter` 會從個別繫結取得值，然後將這些值儲存在 values 物件陣列中。</span><span class="sxs-lookup"><span data-stu-id="396f2-110">`NameConverter` takes the values from the individual bindings and stores them in the values object array.</span></span> <span data-ttu-id="396f2-111">順序<xref:System.Windows.Data.Binding>項目會出現在<xref:System.Windows.Data.MultiBinding>項目是陣列中儲存這些值的順序。</span><span class="sxs-lookup"><span data-stu-id="396f2-111">The order in which the <xref:System.Windows.Data.Binding> elements appear under the <xref:System.Windows.Data.MultiBinding> element is the order in which those values are stored in the array.</span></span> <span data-ttu-id="396f2-112">值<xref:System.Windows.Data.MultiBinding.ConverterParameter%2A>的 [參數] 引數所參考屬性<xref:System.Windows.Data.MultiBinding.Converter%2A>方法，對參數以決定如何格式化名稱的參數。</span><span class="sxs-lookup"><span data-stu-id="396f2-112">The value of the <xref:System.Windows.Data.MultiBinding.ConverterParameter%2A> attribute is referenced by the parameter argument of the <xref:System.Windows.Data.MultiBinding.Converter%2A> method, which performs a switch on the parameter to determine how to format the name.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4b581-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4b581-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="396f2-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="396f2-113">See also</span></span>
 
-- [<span data-ttu-id="4b581-114">轉換繫結的資料</span><span class="sxs-lookup"><span data-stu-id="4b581-114">Convert Bound Data</span></span>](how-to-convert-bound-data.md)
-- [<span data-ttu-id="4b581-115">資料繫結概觀</span><span class="sxs-lookup"><span data-stu-id="4b581-115">Data Binding Overview</span></span>](data-binding-overview.md)
-- [<span data-ttu-id="4b581-116">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="4b581-116">How-to Topics</span></span>](data-binding-how-to-topics.md)
+- [<span data-ttu-id="396f2-114">轉換繫結的資料</span><span class="sxs-lookup"><span data-stu-id="396f2-114">Convert Bound Data</span></span>](how-to-convert-bound-data.md)
+- [<span data-ttu-id="396f2-115">資料繫結概觀</span><span class="sxs-lookup"><span data-stu-id="396f2-115">Data Binding Overview</span></span>](data-binding-overview.md)
+- [<span data-ttu-id="396f2-116">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="396f2-116">How-to Topics</span></span>](data-binding-how-to-topics.md)

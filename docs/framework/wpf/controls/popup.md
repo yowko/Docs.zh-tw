@@ -10,25 +10,25 @@ helpviewer_keywords:
 - controls [WPF], Popup
 ms.assetid: 36a4320f-91ce-4f5f-9621-7934de3eff77
 ms.openlocfilehash: 3b43456de1b161763c6197956003c9e7f07135fc
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770597"
 ---
-# <a name="popup"></a><span data-ttu-id="1c123-102">快顯</span><span class="sxs-lookup"><span data-stu-id="1c123-102">Popup</span></span>
-<span data-ttu-id="1c123-103"><xref:System.Windows.Controls.Primitives.Popup>控制項會以漂浮在目前的應用程式視窗的另一個視窗中顯示內容。</span><span class="sxs-lookup"><span data-stu-id="1c123-103">The <xref:System.Windows.Controls.Primitives.Popup> control displays content in a separate window that floats over the current application window.</span></span>  
+# <a name="popup"></a><span data-ttu-id="1fe5a-102">快顯</span><span class="sxs-lookup"><span data-stu-id="1fe5a-102">Popup</span></span>
+<span data-ttu-id="1fe5a-103"><xref:System.Windows.Controls.Primitives.Popup>控制項會以漂浮在目前的應用程式視窗的另一個視窗中顯示內容。</span><span class="sxs-lookup"><span data-stu-id="1fe5a-103">The <xref:System.Windows.Controls.Primitives.Popup> control displays content in a separate window that floats over the current application window.</span></span>  
   
- <span data-ttu-id="1c123-104">如下圖所示<xref:System.Windows.Controls.Primitives.Popup>位於相對於控制項<xref:System.Windows.Controls.Button>也就是其父代：</span><span class="sxs-lookup"><span data-stu-id="1c123-104">The following illustration shows a <xref:System.Windows.Controls.Primitives.Popup> control that is positioned with respect to a <xref:System.Windows.Controls.Button> that is its parent:</span></span>  
+ <span data-ttu-id="1fe5a-104">如下圖所示<xref:System.Windows.Controls.Primitives.Popup>位於相對於控制項<xref:System.Windows.Controls.Button>也就是其父代：</span><span class="sxs-lookup"><span data-stu-id="1fe5a-104">The following illustration shows a <xref:System.Windows.Controls.Primitives.Popup> control that is positioned with respect to a <xref:System.Windows.Controls.Button> that is its parent:</span></span>  
   
  ![Popup 圖例](./media/popup/popup-picture-button.jpg)  
   
-## <a name="in-this-section"></a><span data-ttu-id="1c123-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="1c123-106">In This Section</span></span>  
- [<span data-ttu-id="1c123-107">快顯功能表概觀</span><span class="sxs-lookup"><span data-stu-id="1c123-107">Popup Overview</span></span>](popup-overview.md)  
- [<span data-ttu-id="1c123-108">快顯功能表放置行為</span><span class="sxs-lookup"><span data-stu-id="1c123-108">Popup Placement Behavior</span></span>](popup-placement-behavior.md)  
- [<span data-ttu-id="1c123-109">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="1c123-109">How-to Topics</span></span>](popup-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1fe5a-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="1fe5a-106">In This Section</span></span>  
+ [<span data-ttu-id="1fe5a-107">快顯功能表概觀</span><span class="sxs-lookup"><span data-stu-id="1fe5a-107">Popup Overview</span></span>](popup-overview.md)  
+ [<span data-ttu-id="1fe5a-108">快顯功能表放置行為</span><span class="sxs-lookup"><span data-stu-id="1fe5a-108">Popup Placement Behavior</span></span>](popup-placement-behavior.md)  
+ [<span data-ttu-id="1fe5a-109">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="1fe5a-109">How-to Topics</span></span>](popup-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="1c123-110">參考資料</span><span class="sxs-lookup"><span data-stu-id="1c123-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="1fe5a-110">參考資料</span><span class="sxs-lookup"><span data-stu-id="1fe5a-110">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="1c123-111">相關章節</span><span class="sxs-lookup"><span data-stu-id="1c123-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="1fe5a-111">相關章節</span><span class="sxs-lookup"><span data-stu-id="1fe5a-111">Related Sections</span></span>

@@ -8,25 +8,25 @@ helpviewer_keywords:
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
 ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790906"
 ---
-# <a name="styles-and-templates"></a><span data-ttu-id="dccf1-102">樣式和範本</span><span class="sxs-lookup"><span data-stu-id="dccf1-102">Styles and Templates</span></span>
-<span data-ttu-id="dccf1-103">Windows Presentation Foundation (WPF) 設定樣式和範本指一套功能 （樣式、 範本、 觸發程序和分鏡腳本），讓應用程式、 文件或使用者介面 (UI) 設計工具建立引人注目的應用程式，標準化其產品的特定外觀。</span><span class="sxs-lookup"><span data-stu-id="dccf1-103">Windows Presentation Foundation (WPF) styling and templating refer to a suite of features (styles, templates, triggers, and storyboards) that allow an application, document, or user interface (UI) designer to create visually compelling applications and to standardize on a particular look for their product.</span></span>  
+# <a name="styles-and-templates"></a><span data-ttu-id="27a80-102">樣式和範本</span><span class="sxs-lookup"><span data-stu-id="27a80-102">Styles and Templates</span></span>
+<span data-ttu-id="27a80-103">Windows Presentation Foundation (WPF) 設定樣式和範本指一套功能 （樣式、 範本、 觸發程序和分鏡腳本），讓應用程式、 文件或使用者介面 (UI) 設計工具建立引人注目的應用程式，標準化其產品的特定外觀。</span><span class="sxs-lookup"><span data-stu-id="27a80-103">Windows Presentation Foundation (WPF) styling and templating refer to a suite of features (styles, templates, triggers, and storyboards) that allow an application, document, or user interface (UI) designer to create visually compelling applications and to standardize on a particular look for their product.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="dccf1-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="dccf1-104">In This Section</span></span>  
- [<span data-ttu-id="dccf1-105">樣式設定和範本化</span><span class="sxs-lookup"><span data-stu-id="dccf1-105">Styling and Templating</span></span>](styling-and-templating.md)  
-  [<span data-ttu-id="dccf1-106">如何：尋找 ControlTemplate 產生的項目</span><span class="sxs-lookup"><span data-stu-id="dccf1-106">How to: Find ControlTemplate-Generated Elements</span></span>](how-to-find-controltemplate-generated-elements.md)  
+## <a name="in-this-section"></a><span data-ttu-id="27a80-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="27a80-104">In This Section</span></span>  
+ [<span data-ttu-id="27a80-105">樣式設定和範本化</span><span class="sxs-lookup"><span data-stu-id="27a80-105">Styling and Templating</span></span>](styling-and-templating.md)  
+  [<span data-ttu-id="27a80-106">如何：尋找 ControlTemplate 產生的項目</span><span class="sxs-lookup"><span data-stu-id="27a80-106">How to: Find ControlTemplate-Generated Elements</span></span>](how-to-find-controltemplate-generated-elements.md)  
   
-## <a name="reference"></a><span data-ttu-id="dccf1-107">參考資料</span><span class="sxs-lookup"><span data-stu-id="dccf1-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="27a80-107">參考資料</span><span class="sxs-lookup"><span data-stu-id="27a80-107">Reference</span></span>  
  <xref:System.Windows.Style>  
   <xref:System.Windows.Controls.ControlTemplate>  
   <xref:System.Windows.DataTemplate>  
   
-## <a name="related-sections"></a><span data-ttu-id="dccf1-108">相關章節</span><span class="sxs-lookup"><span data-stu-id="dccf1-108">Related Sections</span></span>  
- [<span data-ttu-id="dccf1-109">進階</span><span class="sxs-lookup"><span data-stu-id="dccf1-109">Advanced</span></span>](../advanced/index.md)  
-  [<span data-ttu-id="dccf1-110">控制項自訂</span><span class="sxs-lookup"><span data-stu-id="dccf1-110">Control Customization</span></span>](control-customization.md)  
-  [<span data-ttu-id="dccf1-111">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="dccf1-111">Graphics and Multimedia</span></span>](../graphics-multimedia/index.md)
+## <a name="related-sections"></a><span data-ttu-id="27a80-108">相關章節</span><span class="sxs-lookup"><span data-stu-id="27a80-108">Related Sections</span></span>  
+ [<span data-ttu-id="27a80-109">進階</span><span class="sxs-lookup"><span data-stu-id="27a80-109">Advanced</span></span>](../advanced/index.md)  
+  [<span data-ttu-id="27a80-110">控制項自訂</span><span class="sxs-lookup"><span data-stu-id="27a80-110">Control Customization</span></span>](control-customization.md)  
+  [<span data-ttu-id="27a80-111">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="27a80-111">Graphics and Multimedia</span></span>](../graphics-multimedia/index.md)

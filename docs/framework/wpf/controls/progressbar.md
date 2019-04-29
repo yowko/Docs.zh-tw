@@ -8,23 +8,23 @@ helpviewer_keywords:
 - ProgressBar control [WPF]
 ms.assetid: 4545b358-b93c-47df-88e4-9946d7db9e3f
 ms.openlocfilehash: 27a2f54edac2add67b938300dc342744475466cc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770538"
 ---
-# <a name="progressbar"></a><span data-ttu-id="432f4-102">進度列</span><span class="sxs-lookup"><span data-stu-id="432f4-102">ProgressBar</span></span>
-<span data-ttu-id="432f4-103">A<xref:System.Windows.Controls.ProgressBar>指出作業的進度。</span><span class="sxs-lookup"><span data-stu-id="432f4-103">A <xref:System.Windows.Controls.ProgressBar> indicates the progress of an operation.</span></span> <span data-ttu-id="432f4-104"><xref:System.Windows.Controls.ProgressBar>控制項所組成的視窗會填滿系統的醒目提示色彩隨著作業的進度。</span><span class="sxs-lookup"><span data-stu-id="432f4-104">The <xref:System.Windows.Controls.ProgressBar> control consists of a window that is filled with the system highlight color as an operation progresses.</span></span>  
+# <a name="progressbar"></a><span data-ttu-id="3fe25-102">進度列</span><span class="sxs-lookup"><span data-stu-id="3fe25-102">ProgressBar</span></span>
+<span data-ttu-id="3fe25-103">A<xref:System.Windows.Controls.ProgressBar>指出作業的進度。</span><span class="sxs-lookup"><span data-stu-id="3fe25-103">A <xref:System.Windows.Controls.ProgressBar> indicates the progress of an operation.</span></span> <span data-ttu-id="3fe25-104"><xref:System.Windows.Controls.ProgressBar>控制項所組成的視窗會填滿系統的醒目提示色彩隨著作業的進度。</span><span class="sxs-lookup"><span data-stu-id="3fe25-104">The <xref:System.Windows.Controls.ProgressBar> control consists of a window that is filled with the system highlight color as an operation progresses.</span></span>  
   
- <span data-ttu-id="432f4-105">下圖顯示典型<xref:System.Windows.Controls.ProgressBar>。</span><span class="sxs-lookup"><span data-stu-id="432f4-105">The following illustration shows a typical <xref:System.Windows.Controls.ProgressBar>.</span></span>  
+ <span data-ttu-id="3fe25-105">下圖顯示典型<xref:System.Windows.Controls.ProgressBar>。</span><span class="sxs-lookup"><span data-stu-id="3fe25-105">The following illustration shows a typical <xref:System.Windows.Controls.ProgressBar>.</span></span>  
   
- <span data-ttu-id="432f4-106">![進度列](./media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")</span><span class="sxs-lookup"><span data-stu-id="432f4-106">![Progress bar](./media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")</span></span>  
+ <span data-ttu-id="3fe25-106">![進度列](./media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")</span><span class="sxs-lookup"><span data-stu-id="3fe25-106">![Progress bar](./media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="432f4-107">本節內容</span><span class="sxs-lookup"><span data-stu-id="432f4-107">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="3fe25-107">本節內容</span><span class="sxs-lookup"><span data-stu-id="3fe25-107">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="432f4-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="432f4-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="3fe25-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="3fe25-108">Reference</span></span>  
  <xref:System.Windows.Controls.ProgressBar>  
   <xref:System.Windows.Controls.Primitives.StatusBar>  
   
-## <a name="related-sections"></a><span data-ttu-id="432f4-109">相關章節</span><span class="sxs-lookup"><span data-stu-id="432f4-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="3fe25-109">相關章節</span><span class="sxs-lookup"><span data-stu-id="3fe25-109">Related Sections</span></span>

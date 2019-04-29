@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 79d4c5b2b2bbe821ff546324fd3af04cb3472e4c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796652"
 ---
-# <a name="ihosttaskmanagersetlocale-method"></a><span data-ttu-id="981ef-102">IHostTaskManager::SetLocale 方法</span><span class="sxs-lookup"><span data-stu-id="981ef-102">IHostTaskManager::SetLocale Method</span></span>
-<span data-ttu-id="981ef-103">Common language runtime (CLR) 已變更的地區設定或在目前執行之工作的文化特性，會告知主應用程式。</span><span class="sxs-lookup"><span data-stu-id="981ef-103">Notifies the host that the common language runtime (CLR) has changed the locale, or culture, on the currently executing task.</span></span>  
+# <a name="ihosttaskmanagersetlocale-method"></a><span data-ttu-id="3f38c-102">IHostTaskManager::SetLocale 方法</span><span class="sxs-lookup"><span data-stu-id="3f38c-102">IHostTaskManager::SetLocale Method</span></span>
+<span data-ttu-id="3f38c-103">Common language runtime (CLR) 已變更的地區設定或在目前執行之工作的文化特性，會告知主應用程式。</span><span class="sxs-lookup"><span data-stu-id="3f38c-103">Notifies the host that the common language runtime (CLR) has changed the locale, or culture, on the currently executing task.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="981ef-104">語法</span><span class="sxs-lookup"><span data-stu-id="981ef-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3f38c-104">語法</span><span class="sxs-lookup"><span data-stu-id="3f38c-104">Syntax</span></span>  
   
 ```  
 HRESULT SetLocale (  
@@ -35,38 +35,38 @@ HRESULT SetLocale (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="981ef-105">參數</span><span class="sxs-lookup"><span data-stu-id="981ef-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3f38c-105">參數</span><span class="sxs-lookup"><span data-stu-id="3f38c-105">Parameters</span></span>  
  `lcid`  
- <span data-ttu-id="981ef-106">[in]可對應到新指派的地理文化特性和語言的地區設定識別碼值。</span><span class="sxs-lookup"><span data-stu-id="981ef-106">[in] The locale identifier value that maps to the newly assigned geographical culture and language.</span></span>  
+ <span data-ttu-id="3f38c-106">[in]可對應到新指派的地理文化特性和語言的地區設定識別碼值。</span><span class="sxs-lookup"><span data-stu-id="3f38c-106">[in] The locale identifier value that maps to the newly assigned geographical culture and language.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="981ef-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="981ef-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3f38c-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="3f38c-107">Return Value</span></span>  
   
-|<span data-ttu-id="981ef-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="981ef-108">HRESULT</span></span>|<span data-ttu-id="981ef-109">描述</span><span class="sxs-lookup"><span data-stu-id="981ef-109">Description</span></span>|  
+|<span data-ttu-id="3f38c-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3f38c-108">HRESULT</span></span>|<span data-ttu-id="3f38c-109">描述</span><span class="sxs-lookup"><span data-stu-id="3f38c-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="981ef-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="981ef-110">S_OK</span></span>|<span data-ttu-id="981ef-111">`SetLocale` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="981ef-111">`SetLocale` returned successfully.</span></span>|  
-|<span data-ttu-id="981ef-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="981ef-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="981ef-113">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="981ef-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="981ef-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="981ef-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="981ef-115">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="981ef-115">The call timed out.</span></span>|  
-|<span data-ttu-id="981ef-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="981ef-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="981ef-117">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="981ef-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="981ef-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="981ef-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="981ef-119">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="981ef-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="981ef-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="981ef-120">E_FAIL</span></span>|<span data-ttu-id="981ef-121">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="981ef-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="981ef-122">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="981ef-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="981ef-123">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="981ef-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="981ef-124">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="981ef-124">E_NOTIMPL</span></span>|<span data-ttu-id="981ef-125">主機不允許受管理的使用者程式碼，以修改的地區設定。</span><span class="sxs-lookup"><span data-stu-id="981ef-125">The host does not allow managed user code to modify the locale.</span></span>|  
+|<span data-ttu-id="3f38c-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="3f38c-110">S_OK</span></span>|<span data-ttu-id="3f38c-111">`SetLocale` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="3f38c-111">`SetLocale` returned successfully.</span></span>|  
+|<span data-ttu-id="3f38c-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="3f38c-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="3f38c-113">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="3f38c-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="3f38c-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="3f38c-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="3f38c-115">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="3f38c-115">The call timed out.</span></span>|  
+|<span data-ttu-id="3f38c-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="3f38c-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="3f38c-117">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="3f38c-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="3f38c-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="3f38c-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="3f38c-119">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="3f38c-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="3f38c-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="3f38c-120">E_FAIL</span></span>|<span data-ttu-id="3f38c-121">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="3f38c-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="3f38c-122">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="3f38c-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="3f38c-123">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="3f38c-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="3f38c-124">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="3f38c-124">E_NOTIMPL</span></span>|<span data-ttu-id="3f38c-125">主機不允許受管理的使用者程式碼，以修改的地區設定。</span><span class="sxs-lookup"><span data-stu-id="3f38c-125">The host does not allow managed user code to modify the locale.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="981ef-126">備註</span><span class="sxs-lookup"><span data-stu-id="981ef-126">Remarks</span></span>  
- <span data-ttu-id="981ef-127">執行階段會呼叫`SetLocale`時的值<xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>屬性變更時，managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="981ef-127">The runtime calls `SetLocale` when the value of the <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> property is changed by managed code.</span></span> <span data-ttu-id="981ef-128">這個方法便有機會執行同步處理的地區設定中可能會有任何機制主機。</span><span class="sxs-lookup"><span data-stu-id="981ef-128">This method provides an opportunity for the host to execute any mechanisms it might have for synchronization of locales.</span></span> <span data-ttu-id="981ef-129">若主機不允許從 managed 程式碼變更的地區設定，或未實作的機制來同步處理地區設定，應從這個方法會傳回 E_NOTIMPL。</span><span class="sxs-lookup"><span data-stu-id="981ef-129">If a host does not allow the locale to be changed from managed code, or does not implement a mechanism to synchronize locales, it should return E_NOTIMPL from this method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3f38c-126">備註</span><span class="sxs-lookup"><span data-stu-id="3f38c-126">Remarks</span></span>  
+ <span data-ttu-id="3f38c-127">執行階段會呼叫`SetLocale`時的值<xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>屬性變更時，managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="3f38c-127">The runtime calls `SetLocale` when the value of the <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> property is changed by managed code.</span></span> <span data-ttu-id="3f38c-128">這個方法便有機會執行同步處理的地區設定中可能會有任何機制主機。</span><span class="sxs-lookup"><span data-stu-id="3f38c-128">This method provides an opportunity for the host to execute any mechanisms it might have for synchronization of locales.</span></span> <span data-ttu-id="3f38c-129">若主機不允許從 managed 程式碼變更的地區設定，或未實作的機制來同步處理地區設定，應從這個方法會傳回 E_NOTIMPL。</span><span class="sxs-lookup"><span data-stu-id="3f38c-129">If a host does not allow the locale to be changed from managed code, or does not implement a mechanism to synchronize locales, it should return E_NOTIMPL from this method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="981ef-130">需求</span><span class="sxs-lookup"><span data-stu-id="981ef-130">Requirements</span></span>  
- <span data-ttu-id="981ef-131">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="981ef-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f38c-130">需求</span><span class="sxs-lookup"><span data-stu-id="3f38c-130">Requirements</span></span>  
+ <span data-ttu-id="3f38c-131">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3f38c-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="981ef-132">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="981ef-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="3f38c-132">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3f38c-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="981ef-133">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="981ef-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3f38c-133">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="3f38c-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="981ef-134">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="981ef-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="3f38c-134">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f38c-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="981ef-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="981ef-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3f38c-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3f38c-135">See also</span></span>
 
-- [<span data-ttu-id="981ef-136">ICLRTask 介面</span><span class="sxs-lookup"><span data-stu-id="981ef-136">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="981ef-137">ICLRTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="981ef-137">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="981ef-138">IHostTask 介面</span><span class="sxs-lookup"><span data-stu-id="981ef-138">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="981ef-139">IHostTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="981ef-139">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
-- [<span data-ttu-id="981ef-140">SetUILocale 方法</span><span class="sxs-lookup"><span data-stu-id="981ef-140">SetUILocale Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setuilocale-method.md)
+- [<span data-ttu-id="3f38c-136">ICLRTask 介面</span><span class="sxs-lookup"><span data-stu-id="3f38c-136">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="3f38c-137">ICLRTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="3f38c-137">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="3f38c-138">IHostTask 介面</span><span class="sxs-lookup"><span data-stu-id="3f38c-138">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="3f38c-139">IHostTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="3f38c-139">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="3f38c-140">SetUILocale 方法</span><span class="sxs-lookup"><span data-stu-id="3f38c-140">SetUILocale Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setuilocale-method.md)

@@ -10,51 +10,51 @@ helpviewer_keywords:
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
 ms.openlocfilehash: c6c36641463a45b79d437ae3910bbe7474d425cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929294"
 ---
-# <a name="how-to-examine-the-security-context"></a><span data-ttu-id="60a2a-102">HOW TO：檢查資訊安全內容</span><span class="sxs-lookup"><span data-stu-id="60a2a-102">How to: Examine the Security Context</span></span>
-<span data-ttu-id="60a2a-103">當程式設計 Windows Communication Foundation (WCF) 服務，服務安全性內容可讓您判斷有關用戶端認證及宣告用來向服務驗證的詳細資料。</span><span class="sxs-lookup"><span data-stu-id="60a2a-103">When programming Windows Communication Foundation (WCF) services, the service security context enables you to determine details about the client credentials and claims used to authenticate with the service.</span></span> <span data-ttu-id="60a2a-104">這可藉由使用 <xref:System.ServiceModel.ServiceSecurityContext> 類別的屬性達成。</span><span class="sxs-lookup"><span data-stu-id="60a2a-104">This is done by using the properties of the <xref:System.ServiceModel.ServiceSecurityContext> class.</span></span>  
+# <a name="how-to-examine-the-security-context"></a><span data-ttu-id="eacbd-102">HOW TO：檢查資訊安全內容</span><span class="sxs-lookup"><span data-stu-id="eacbd-102">How to: Examine the Security Context</span></span>
+<span data-ttu-id="eacbd-103">當程式設計 Windows Communication Foundation (WCF) 服務，服務安全性內容可讓您判斷有關用戶端認證及宣告用來向服務驗證的詳細資料。</span><span class="sxs-lookup"><span data-stu-id="eacbd-103">When programming Windows Communication Foundation (WCF) services, the service security context enables you to determine details about the client credentials and claims used to authenticate with the service.</span></span> <span data-ttu-id="eacbd-104">這可藉由使用 <xref:System.ServiceModel.ServiceSecurityContext> 類別的屬性達成。</span><span class="sxs-lookup"><span data-stu-id="eacbd-104">This is done by using the properties of the <xref:System.ServiceModel.ServiceSecurityContext> class.</span></span>  
   
- <span data-ttu-id="60a2a-105">例如，您可以使用 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> 或 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 屬性擷取目前用戶端的識別。</span><span class="sxs-lookup"><span data-stu-id="60a2a-105">For example, you can retrieve the identity of the current client by using the <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> or the <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> property.</span></span> <span data-ttu-id="60a2a-106">若要判斷用戶端是否為匿名，請使用 <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="60a2a-106">To determine whether the client is anonymous, use the <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> property.</span></span>  
+ <span data-ttu-id="eacbd-105">例如，您可以使用 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> 或 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 屬性擷取目前用戶端的識別。</span><span class="sxs-lookup"><span data-stu-id="eacbd-105">For example, you can retrieve the identity of the current client by using the <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> or the <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> property.</span></span> <span data-ttu-id="eacbd-106">若要判斷用戶端是否為匿名，請使用 <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="eacbd-106">To determine whether the client is anonymous, use the <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> property.</span></span>  
   
- <span data-ttu-id="60a2a-107">您也可以透過逐一查看 <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A> 屬性中的宣告集合，以判斷代表用戶端所進行的宣告為何。</span><span class="sxs-lookup"><span data-stu-id="60a2a-107">You can also determine what claims are being made on behalf of the client by iterating through the collection of claims in the <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A> property.</span></span>  
+ <span data-ttu-id="eacbd-107">您也可以透過逐一查看 <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A> 屬性中的宣告集合，以判斷代表用戶端所進行的宣告為何。</span><span class="sxs-lookup"><span data-stu-id="eacbd-107">You can also determine what claims are being made on behalf of the client by iterating through the collection of claims in the <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A> property.</span></span>  
   
-### <a name="to-get-the-current-security-context"></a><span data-ttu-id="60a2a-108">取得目前的安全性內容</span><span class="sxs-lookup"><span data-stu-id="60a2a-108">To get the current security context</span></span>  
+### <a name="to-get-the-current-security-context"></a><span data-ttu-id="eacbd-108">取得目前的安全性內容</span><span class="sxs-lookup"><span data-stu-id="eacbd-108">To get the current security context</span></span>  
   
--   <span data-ttu-id="60a2a-109">存取靜態屬性 <xref:System.ServiceModel.ServiceSecurityContext.Current%2A>，取得目前的安全性內容。</span><span class="sxs-lookup"><span data-stu-id="60a2a-109">Access the static property <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> to get the current security context.</span></span> <span data-ttu-id="60a2a-110">檢視來自參考之目前內容的任一屬性。</span><span class="sxs-lookup"><span data-stu-id="60a2a-110">Examine any of the properties of the current context from the reference.</span></span>  
+- <span data-ttu-id="eacbd-109">存取靜態屬性 <xref:System.ServiceModel.ServiceSecurityContext.Current%2A>，取得目前的安全性內容。</span><span class="sxs-lookup"><span data-stu-id="eacbd-109">Access the static property <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> to get the current security context.</span></span> <span data-ttu-id="eacbd-110">檢視來自參考之目前內容的任一屬性。</span><span class="sxs-lookup"><span data-stu-id="eacbd-110">Examine any of the properties of the current context from the reference.</span></span>  
   
-### <a name="to-determine-the-identity-of-the-caller"></a><span data-ttu-id="60a2a-111">判斷呼叫端的識別</span><span class="sxs-lookup"><span data-stu-id="60a2a-111">To determine the identity of the caller</span></span>  
+### <a name="to-determine-the-identity-of-the-caller"></a><span data-ttu-id="eacbd-111">判斷呼叫端的識別</span><span class="sxs-lookup"><span data-stu-id="eacbd-111">To determine the identity of the caller</span></span>  
   
-1. <span data-ttu-id="60a2a-112">列印 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> 和 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 屬性的值。</span><span class="sxs-lookup"><span data-stu-id="60a2a-112">Print the value of the <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> and <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> properties.</span></span>  
+1. <span data-ttu-id="eacbd-112">列印 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> 和 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 屬性的值。</span><span class="sxs-lookup"><span data-stu-id="eacbd-112">Print the value of the <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> and <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> properties.</span></span>  
   
-### <a name="to-parse-the-claims-of-a-caller"></a><span data-ttu-id="60a2a-113">剖析呼叫端的宣告</span><span class="sxs-lookup"><span data-stu-id="60a2a-113">To parse the claims of a caller</span></span>  
+### <a name="to-parse-the-claims-of-a-caller"></a><span data-ttu-id="eacbd-113">剖析呼叫端的宣告</span><span class="sxs-lookup"><span data-stu-id="eacbd-113">To parse the claims of a caller</span></span>  
   
-1. <span data-ttu-id="60a2a-114">傳回目前的 <xref:System.IdentityModel.Policy.AuthorizationContext> 類別。</span><span class="sxs-lookup"><span data-stu-id="60a2a-114">Return the current <xref:System.IdentityModel.Policy.AuthorizationContext> class.</span></span> <span data-ttu-id="60a2a-115">使用 <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> 屬性傳回目前的服務安全性內容，然後使用 `AuthorizationContext` 屬性傳回 <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A>。</span><span class="sxs-lookup"><span data-stu-id="60a2a-115">Use the <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> property to return the current service security context, then return the `AuthorizationContext` using the <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A> property.</span></span>  
+1. <span data-ttu-id="eacbd-114">傳回目前的 <xref:System.IdentityModel.Policy.AuthorizationContext> 類別。</span><span class="sxs-lookup"><span data-stu-id="eacbd-114">Return the current <xref:System.IdentityModel.Policy.AuthorizationContext> class.</span></span> <span data-ttu-id="eacbd-115">使用 <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> 屬性傳回目前的服務安全性內容，然後使用 `AuthorizationContext` 屬性傳回 <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A>。</span><span class="sxs-lookup"><span data-stu-id="eacbd-115">Use the <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> property to return the current service security context, then return the `AuthorizationContext` using the <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A> property.</span></span>  
   
-2. <span data-ttu-id="60a2a-116">剖析 <xref:System.IdentityModel.Claims.ClaimSet> 類別的 <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> 屬性所傳回的 <xref:System.IdentityModel.Policy.AuthorizationContext> 物件集合。</span><span class="sxs-lookup"><span data-stu-id="60a2a-116">Parse the collection of <xref:System.IdentityModel.Claims.ClaimSet> objects returned by the <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> property of the <xref:System.IdentityModel.Policy.AuthorizationContext> class.</span></span>  
+2. <span data-ttu-id="eacbd-116">剖析 <xref:System.IdentityModel.Claims.ClaimSet> 類別的 <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> 屬性所傳回的 <xref:System.IdentityModel.Policy.AuthorizationContext> 物件集合。</span><span class="sxs-lookup"><span data-stu-id="eacbd-116">Parse the collection of <xref:System.IdentityModel.Claims.ClaimSet> objects returned by the <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> property of the <xref:System.IdentityModel.Policy.AuthorizationContext> class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="60a2a-117">範例</span><span class="sxs-lookup"><span data-stu-id="60a2a-117">Example</span></span>  
- <span data-ttu-id="60a2a-118">以下範例會列印目前安全性內容以及 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 屬性的 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> 和 <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 屬性值、宣告的資源值，以及目前安全性內容中的每一項 <xref:System.IdentityModel.Claims.Claim.Right%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="60a2a-118">The following example prints the values of the <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> and <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> properties of the current security context and the <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> property, the resource value of the claim, and the <xref:System.IdentityModel.Claims.Claim.Right%2A> property of every claim in the current security context.</span></span>  
+## <a name="example"></a><span data-ttu-id="eacbd-117">範例</span><span class="sxs-lookup"><span data-stu-id="eacbd-117">Example</span></span>  
+ <span data-ttu-id="eacbd-118">以下範例會列印目前安全性內容以及 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 屬性的 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> 和 <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 屬性值、宣告的資源值，以及目前安全性內容中的每一項 <xref:System.IdentityModel.Claims.Claim.Right%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="eacbd-118">The following example prints the values of the <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> and <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> properties of the current security context and the <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> property, the resource value of the claim, and the <xref:System.IdentityModel.Claims.Claim.Right%2A> property of every claim in the current security context.</span></span>  
   
  [!code-csharp[c_PrincipalPermissionAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#4)]
  [!code-vb[c_PrincipalPermissionAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#4)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="60a2a-119">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="60a2a-119">Compiling the Code</span></span>  
- <span data-ttu-id="60a2a-120">程式碼會使用下列命名空間：</span><span class="sxs-lookup"><span data-stu-id="60a2a-120">The code uses the following namespaces:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="eacbd-119">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="eacbd-119">Compiling the Code</span></span>  
+ <span data-ttu-id="eacbd-120">程式碼會使用下列命名空間：</span><span class="sxs-lookup"><span data-stu-id="eacbd-120">The code uses the following namespaces:</span></span>  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.IdentityModel.Policy>  
+- <xref:System.IdentityModel.Policy>  
   
--   <xref:System.IdentityModel.Claims>  
+- <xref:System.IdentityModel.Claims>  
   
-## <a name="see-also"></a><span data-ttu-id="60a2a-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="60a2a-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eacbd-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="eacbd-121">See also</span></span>
 
-- [<span data-ttu-id="60a2a-122">保護服務安全</span><span class="sxs-lookup"><span data-stu-id="60a2a-122">Securing Services</span></span>](../../../docs/framework/wcf/securing-services.md)
-- [<span data-ttu-id="60a2a-123">服務身分識別和驗證</span><span class="sxs-lookup"><span data-stu-id="60a2a-123">Service Identity and Authentication</span></span>](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [<span data-ttu-id="eacbd-122">保護服務安全</span><span class="sxs-lookup"><span data-stu-id="eacbd-122">Securing Services</span></span>](../../../docs/framework/wcf/securing-services.md)
+- [<span data-ttu-id="eacbd-123">服務身分識別和驗證</span><span class="sxs-lookup"><span data-stu-id="eacbd-123">Service Identity and Authentication</span></span>](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

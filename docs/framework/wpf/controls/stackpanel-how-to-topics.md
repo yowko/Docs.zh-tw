@@ -8,21 +8,21 @@ helpviewer_keywords:
 - controls [WPF], StackPanel
 ms.assetid: c9849df3-d000-4cdf-8345-5edcd053919d
 ms.openlocfilehash: b7456eeb4fc248998730a21f757699497c83f4e9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791062"
 ---
-# <a name="stackpanel-how-to-topics"></a><span data-ttu-id="49c01-102">StackPanel HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="49c01-102">StackPanel How-to Topics</span></span>
-<span data-ttu-id="49c01-103">在本節中的主題描述如何使用<xref:System.Windows.Controls.StackPanel>水平或垂直堆疊內容的項目。</span><span class="sxs-lookup"><span data-stu-id="49c01-103">The topics in this section describe how to use the <xref:System.Windows.Controls.StackPanel> element to stack content horizontally or vertically.</span></span>  
+# <a name="stackpanel-how-to-topics"></a><span data-ttu-id="21e1c-102">StackPanel HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="21e1c-102">StackPanel How-to Topics</span></span>
+<span data-ttu-id="21e1c-103">在本節中的主題描述如何使用<xref:System.Windows.Controls.StackPanel>水平或垂直堆疊內容的項目。</span><span class="sxs-lookup"><span data-stu-id="21e1c-103">The topics in this section describe how to use the <xref:System.Windows.Controls.StackPanel> element to stack content horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="49c01-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="49c01-104">In This Section</span></span>  
- [<span data-ttu-id="49c01-105">在 StackPanel 和 DockPanel 之間選擇</span><span class="sxs-lookup"><span data-stu-id="49c01-105">Choose Between StackPanel and DockPanel</span></span>](how-to-choose-between-stackpanel-and-dockpanel.md)  
- [<span data-ttu-id="49c01-106">建立 StackPanel</span><span class="sxs-lookup"><span data-stu-id="49c01-106">Create a StackPanel</span></span>](how-to-create-a-stackpanel.md)  
- [<span data-ttu-id="49c01-107">水平或垂直對齊 StackPanel 中的內容</span><span class="sxs-lookup"><span data-stu-id="49c01-107">Horizontally or Vertically Align Content in a StackPanel</span></span>](how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
+## <a name="in-this-section"></a><span data-ttu-id="21e1c-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="21e1c-104">In This Section</span></span>  
+ [<span data-ttu-id="21e1c-105">在 StackPanel 和 DockPanel 之間選擇</span><span class="sxs-lookup"><span data-stu-id="21e1c-105">Choose Between StackPanel and DockPanel</span></span>](how-to-choose-between-stackpanel-and-dockpanel.md)  
+ [<span data-ttu-id="21e1c-106">建立 StackPanel</span><span class="sxs-lookup"><span data-stu-id="21e1c-106">Create a StackPanel</span></span>](how-to-create-a-stackpanel.md)  
+ [<span data-ttu-id="21e1c-107">水平或垂直對齊 StackPanel 中的內容</span><span class="sxs-lookup"><span data-stu-id="21e1c-107">Horizontally or Vertically Align Content in a StackPanel</span></span>](how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
   
-## <a name="reference"></a><span data-ttu-id="49c01-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="49c01-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="21e1c-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="21e1c-108">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -37,9 +37,9 @@ ms.locfileid: "57351264"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="49c01-109">相關章節</span><span class="sxs-lookup"><span data-stu-id="49c01-109">Related Sections</span></span>  
- [<span data-ttu-id="49c01-110">版面配置</span><span class="sxs-lookup"><span data-stu-id="49c01-110">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="21e1c-109">相關章節</span><span class="sxs-lookup"><span data-stu-id="21e1c-109">Related Sections</span></span>  
+ [<span data-ttu-id="21e1c-110">版面配置</span><span class="sxs-lookup"><span data-stu-id="21e1c-110">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="49c01-111">逐步解說：我的第一個 WPF 傳統型應用程式</span><span class="sxs-lookup"><span data-stu-id="49c01-111">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="21e1c-111">逐步解說：我的第一個 WPF 傳統型應用程式</span><span class="sxs-lookup"><span data-stu-id="21e1c-111">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="49c01-112">ScrollViewer 概觀</span><span class="sxs-lookup"><span data-stu-id="49c01-112">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="21e1c-112">ScrollViewer 概觀</span><span class="sxs-lookup"><span data-stu-id="21e1c-112">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
