@@ -23,7 +23,7 @@ ms.locfileid: "58826063"
 |方法名稱|說明|C# 查詢運算式語法|更多資訊|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |OfType|根據可轉換為所指定類型的能力來選取值。|不適用。|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
-|位置|根據述詞函式來選取值。|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
+|Where|根據述詞函式來選取值。|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>查詢運算式語法範例  
  下列範例使用 `where` 子句從陣列篩選出具有特定長度的字串。  
