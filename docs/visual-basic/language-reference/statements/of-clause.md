@@ -18,17 +18,17 @@ helpviewer_keywords:
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
 ms.openlocfilehash: 880570c714292b0c11eef4e2cd4c4b410bb075f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784146"
 ---
-# <a name="of-clause-visual-basic"></a><span data-ttu-id="c3a66-102">Of 子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c3a66-102">Of Clause (Visual Basic)</span></span>
-<span data-ttu-id="c3a66-103">導入了`Of`子句中，用來識別*型別參數*上*泛型*類別、 結構、 介面、 委派或程序。</span><span class="sxs-lookup"><span data-stu-id="c3a66-103">Introduces an `Of` clause, which identifies a *type parameter* on a *generic* class, structure, interface, delegate, or procedure.</span></span> <span data-ttu-id="c3a66-104">如需泛型型別資訊，請參閱[在 Visual Basic 中的泛型型別](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。</span><span class="sxs-lookup"><span data-stu-id="c3a66-104">For information on generic types, see [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).</span></span>  
+# <a name="of-clause-visual-basic"></a><span data-ttu-id="bfa61-102">Of 子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bfa61-102">Of Clause (Visual Basic)</span></span>
+<span data-ttu-id="bfa61-103">導入了`Of`子句中，用來識別*型別參數*上*泛型*類別、 結構、 介面、 委派或程序。</span><span class="sxs-lookup"><span data-stu-id="bfa61-103">Introduces an `Of` clause, which identifies a *type parameter* on a *generic* class, structure, interface, delegate, or procedure.</span></span> <span data-ttu-id="bfa61-104">如需泛型型別資訊，請參閱[在 Visual Basic 中的泛型型別](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。</span><span class="sxs-lookup"><span data-stu-id="bfa61-104">For information on generic types, see [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).</span></span>  
   
-## <a name="using-the-of-keyword"></a><span data-ttu-id="c3a66-105">使用的關鍵字</span><span class="sxs-lookup"><span data-stu-id="c3a66-105">Using the Of Keyword</span></span>  
- <span data-ttu-id="c3a66-106">下列程式碼範例使用`Of`關鍵字來定義外框的兩個類型參數的類別。</span><span class="sxs-lookup"><span data-stu-id="c3a66-106">The following code example uses the `Of` keyword to define the outline of a class that takes two type parameters.</span></span> <span data-ttu-id="c3a66-107">它*限制*`keyType`參數<xref:System.IComparable>介面，這表示使用的程式碼必須提供實作的類型引數<xref:System.IComparable>。</span><span class="sxs-lookup"><span data-stu-id="c3a66-107">It *constrains* the `keyType` parameter by the <xref:System.IComparable> interface, which means the consuming code must supply a type argument that implements <xref:System.IComparable>.</span></span> <span data-ttu-id="c3a66-108">這是必要的讓`add`程序可以呼叫<xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="c3a66-108">This is necessary so that the `add` procedure can call the <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c3a66-109">如需條件約束的詳細資訊，請參閱 [Type List](../../../visual-basic/language-reference/statements/type-list.md)。</span><span class="sxs-lookup"><span data-stu-id="c3a66-109">For more information on constraints, see [Type List](../../../visual-basic/language-reference/statements/type-list.md).</span></span>  
+## <a name="using-the-of-keyword"></a><span data-ttu-id="bfa61-105">使用的關鍵字</span><span class="sxs-lookup"><span data-stu-id="bfa61-105">Using the Of Keyword</span></span>  
+ <span data-ttu-id="bfa61-106">下列程式碼範例使用`Of`關鍵字來定義外框的兩個類型參數的類別。</span><span class="sxs-lookup"><span data-stu-id="bfa61-106">The following code example uses the `Of` keyword to define the outline of a class that takes two type parameters.</span></span> <span data-ttu-id="bfa61-107">它*限制*`keyType`參數<xref:System.IComparable>介面，這表示使用的程式碼必須提供實作的類型引數<xref:System.IComparable>。</span><span class="sxs-lookup"><span data-stu-id="bfa61-107">It *constrains* the `keyType` parameter by the <xref:System.IComparable> interface, which means the consuming code must supply a type argument that implements <xref:System.IComparable>.</span></span> <span data-ttu-id="bfa61-108">這是必要的讓`add`程序可以呼叫<xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="bfa61-108">This is necessary so that the `add` procedure can call the <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="bfa61-109">如需條件約束的詳細資訊，請參閱 [Type List](../../../visual-basic/language-reference/statements/type-list.md)。</span><span class="sxs-lookup"><span data-stu-id="bfa61-109">For more information on constraints, see [Type List](../../../visual-basic/language-reference/statements/type-list.md).</span></span>  
   
 ```  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
@@ -42,32 +42,32 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- <span data-ttu-id="c3a66-110">如果您完成上述的類別定義，您可以建構各種`dictionary`從它的類別。</span><span class="sxs-lookup"><span data-stu-id="c3a66-110">If you complete the preceding class definition, you can construct a variety of `dictionary` classes from it.</span></span> <span data-ttu-id="c3a66-111">您提供的型別`entryType`和`keyType`判斷何種項目類別保存，而且它與每個項目關聯的索引鍵類型。</span><span class="sxs-lookup"><span data-stu-id="c3a66-111">The types you supply to `entryType` and `keyType` determine what type of entry the class holds and what type of key it associates with each entry.</span></span> <span data-ttu-id="c3a66-112">將條件約束，因為您必須提供給`keyType`可實作型別<xref:System.IComparable>。</span><span class="sxs-lookup"><span data-stu-id="c3a66-112">Because of the constraint, you must supply to `keyType` a type that implements <xref:System.IComparable>.</span></span>  
+ <span data-ttu-id="bfa61-110">如果您完成上述的類別定義，您可以建構各種`dictionary`從它的類別。</span><span class="sxs-lookup"><span data-stu-id="bfa61-110">If you complete the preceding class definition, you can construct a variety of `dictionary` classes from it.</span></span> <span data-ttu-id="bfa61-111">您提供的型別`entryType`和`keyType`判斷何種項目類別保存，而且它與每個項目關聯的索引鍵類型。</span><span class="sxs-lookup"><span data-stu-id="bfa61-111">The types you supply to `entryType` and `keyType` determine what type of entry the class holds and what type of key it associates with each entry.</span></span> <span data-ttu-id="bfa61-112">將條件約束，因為您必須提供給`keyType`可實作型別<xref:System.IComparable>。</span><span class="sxs-lookup"><span data-stu-id="bfa61-112">Because of the constraint, you must supply to `keyType` a type that implements <xref:System.IComparable>.</span></span>  
   
- <span data-ttu-id="c3a66-113">下列程式碼範例會建立物件，持有`String`項目並將相關聯`Integer`每個索引鍵。</span><span class="sxs-lookup"><span data-stu-id="c3a66-113">The following code example creates an object that holds `String` entries and associates an `Integer` key with each one.</span></span> <span data-ttu-id="c3a66-114">`Integer` 會實作<xref:System.IComparable>因此在符合條件約束和`keyType`。</span><span class="sxs-lookup"><span data-stu-id="c3a66-114">`Integer` implements <xref:System.IComparable> and therefore satisfies the constraint on `keyType`.</span></span>  
+ <span data-ttu-id="bfa61-113">下列程式碼範例會建立物件，持有`String`項目並將相關聯`Integer`每個索引鍵。</span><span class="sxs-lookup"><span data-stu-id="bfa61-113">The following code example creates an object that holds `String` entries and associates an `Integer` key with each one.</span></span> <span data-ttu-id="bfa61-114">`Integer` 會實作<xref:System.IComparable>因此在符合條件約束和`keyType`。</span><span class="sxs-lookup"><span data-stu-id="bfa61-114">`Integer` implements <xref:System.IComparable> and therefore satisfies the constraint on `keyType`.</span></span>  
   
 ```  
 Dim d As New dictionary(Of String, Integer)  
 ```  
   
- <span data-ttu-id="c3a66-115">`Of` 關鍵字可用於以下內容：</span><span class="sxs-lookup"><span data-stu-id="c3a66-115">The `Of` keyword can be used in these contexts:</span></span>  
+ <span data-ttu-id="bfa61-115">`Of` 關鍵字可用於以下內容：</span><span class="sxs-lookup"><span data-stu-id="bfa61-115">The `Of` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="c3a66-116">Class 陳述式</span><span class="sxs-lookup"><span data-stu-id="c3a66-116">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="bfa61-116">Class 陳述式</span><span class="sxs-lookup"><span data-stu-id="bfa61-116">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
   
- [<span data-ttu-id="c3a66-117">Delegate 陳述式</span><span class="sxs-lookup"><span data-stu-id="c3a66-117">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [<span data-ttu-id="bfa61-117">Delegate 陳述式</span><span class="sxs-lookup"><span data-stu-id="bfa61-117">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
- [<span data-ttu-id="c3a66-118">Function 陳述式</span><span class="sxs-lookup"><span data-stu-id="c3a66-118">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="bfa61-118">Function 陳述式</span><span class="sxs-lookup"><span data-stu-id="bfa61-118">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [<span data-ttu-id="c3a66-119">Interface 陳述式</span><span class="sxs-lookup"><span data-stu-id="c3a66-119">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [<span data-ttu-id="bfa61-119">Interface 陳述式</span><span class="sxs-lookup"><span data-stu-id="bfa61-119">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [<span data-ttu-id="c3a66-120">Structure 陳述式</span><span class="sxs-lookup"><span data-stu-id="c3a66-120">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [<span data-ttu-id="bfa61-120">Structure 陳述式</span><span class="sxs-lookup"><span data-stu-id="bfa61-120">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
- [<span data-ttu-id="c3a66-121">Sub 陳述式</span><span class="sxs-lookup"><span data-stu-id="c3a66-121">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="bfa61-121">Sub 陳述式</span><span class="sxs-lookup"><span data-stu-id="bfa61-121">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="c3a66-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c3a66-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bfa61-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bfa61-122">See also</span></span>
 
 - <xref:System.IComparable>
-- [<span data-ttu-id="c3a66-123">類型清單</span><span class="sxs-lookup"><span data-stu-id="c3a66-123">Type List</span></span>](../../../visual-basic/language-reference/statements/type-list.md)
-- [<span data-ttu-id="c3a66-124">Generic Types in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c3a66-124">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [<span data-ttu-id="c3a66-125">In</span><span class="sxs-lookup"><span data-stu-id="c3a66-125">In</span></span>](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
-- [<span data-ttu-id="c3a66-126">Out</span><span class="sxs-lookup"><span data-stu-id="c3a66-126">Out</span></span>](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+- [<span data-ttu-id="bfa61-123">類型清單</span><span class="sxs-lookup"><span data-stu-id="bfa61-123">Type List</span></span>](../../../visual-basic/language-reference/statements/type-list.md)
+- [<span data-ttu-id="bfa61-124">Generic Types in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bfa61-124">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [<span data-ttu-id="bfa61-125">In</span><span class="sxs-lookup"><span data-stu-id="bfa61-125">In</span></span>](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [<span data-ttu-id="bfa61-126">Out</span><span class="sxs-lookup"><span data-stu-id="bfa61-126">Out</span></span>](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

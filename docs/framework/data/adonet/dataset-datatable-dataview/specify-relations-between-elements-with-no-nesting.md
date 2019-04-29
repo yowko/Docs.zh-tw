@@ -3,16 +3,16 @@ title: 指定未巢狀放置之項目間的關聯
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
 ms.openlocfilehash: 4b7b216e58f36302db29c4b4b5176339521b0f17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607913"
 ---
-# <a name="specify-relations-between-elements-with-no-nesting"></a><span data-ttu-id="a6493-102">指定未巢狀放置之項目間的關聯</span><span class="sxs-lookup"><span data-stu-id="a6493-102">Specify Relations Between Elements with No Nesting</span></span>
-<span data-ttu-id="a6493-103">項目未巢狀化時，不會建立任何隱含關聯，</span><span class="sxs-lookup"><span data-stu-id="a6493-103">When elements are not nested, no implicit relations are created.</span></span> <span data-ttu-id="a6493-104">不過，您可以明確指定不使用巢狀的項目之間的關聯**msdata: relationship**註釋。</span><span class="sxs-lookup"><span data-stu-id="a6493-104">You can, however, explicitly specify relations between elements that are not nested by using the **msdata:Relationship** annotation.</span></span>  
+# <a name="specify-relations-between-elements-with-no-nesting"></a><span data-ttu-id="a03e6-102">指定未巢狀放置之項目間的關聯</span><span class="sxs-lookup"><span data-stu-id="a03e6-102">Specify Relations Between Elements with No Nesting</span></span>
+<span data-ttu-id="a03e6-103">項目未巢狀化時，不會建立任何隱含關聯，</span><span class="sxs-lookup"><span data-stu-id="a03e6-103">When elements are not nested, no implicit relations are created.</span></span> <span data-ttu-id="a03e6-104">不過，您可以明確指定不使用巢狀的項目之間的關聯**msdata: relationship**註釋。</span><span class="sxs-lookup"><span data-stu-id="a03e6-104">You can, however, explicitly specify relations between elements that are not nested by using the **msdata:Relationship** annotation.</span></span>  
   
- <span data-ttu-id="a6493-105">下列範例顯示 XML 結構描述所在**msdata: relationship**註解會指定之間**順序**並**OrderDetail**項目，不是巢狀結構。</span><span class="sxs-lookup"><span data-stu-id="a6493-105">The following example shows an XML Schema in which the **msdata:Relationship** annotation is specified between the **Order** and **OrderDetail** elements, which are not nested.</span></span> <span data-ttu-id="a6493-106">**Msdata: relationship**註解會指定為的子元素**結構描述**項目。</span><span class="sxs-lookup"><span data-stu-id="a6493-106">The **msdata:Relationship** annotation is specified as the child element of the **Schema** element.</span></span>  
+ <span data-ttu-id="a03e6-105">下列範例顯示 XML 結構描述所在**msdata: relationship**註解會指定之間**順序**並**OrderDetail**項目，不是巢狀結構。</span><span class="sxs-lookup"><span data-stu-id="a03e6-105">The following example shows an XML Schema in which the **msdata:Relationship** annotation is specified between the **Order** and **OrderDetail** elements, which are not nested.</span></span> <span data-ttu-id="a03e6-106">**Msdata: relationship**註解會指定為的子元素**結構描述**項目。</span><span class="sxs-lookup"><span data-stu-id="a03e6-106">The **msdata:Relationship** annotation is specified as the child element of the **Schema** element.</span></span>  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -53,7 +53,7 @@ ms.locfileid: "59157748"
 </xs:schema>  
 ```  
   
- <span data-ttu-id="a6493-107">XML 結構描述定義語言 (XSD) 結構描述對應處理會建立<xref:System.Data.DataSet>具有**順序**並**OrderDetail**資料表和關聯性，如下所示，指定兩個資料表之間。</span><span class="sxs-lookup"><span data-stu-id="a6493-107">The XML Schema definition language (XSD) schema mapping process creates a <xref:System.Data.DataSet> with **Order** and **OrderDetail** tables and a relationship specified between these two tables, as shown below.</span></span>  
+ <span data-ttu-id="a03e6-107">XML 結構描述定義語言 (XSD) 結構描述對應處理會建立<xref:System.Data.DataSet>具有**順序**並**OrderDetail**資料表和關聯性，如下所示，指定兩個資料表之間。</span><span class="sxs-lookup"><span data-stu-id="a03e6-107">The XML Schema definition language (XSD) schema mapping process creates a <xref:System.Data.DataSet> with **Order** and **OrderDetail** tables and a relationship specified between these two tables, as shown below.</span></span>  
   
 ```  
 RelationName: OrdOrderDetailRelation  
@@ -64,8 +64,8 @@ ChildColumns: OrderNo
 Nested: False  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a6493-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a6493-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a03e6-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a03e6-108">See also</span></span>
 
-- [<span data-ttu-id="a6493-109">從 XML 結構描述 (XSD) 產生資料集關聯</span><span class="sxs-lookup"><span data-stu-id="a6493-109">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [<span data-ttu-id="a6493-110">將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束</span><span class="sxs-lookup"><span data-stu-id="a6493-110">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [<span data-ttu-id="a6493-111">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="a6493-111">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="a03e6-109">從 XML 結構描述 (XSD) 產生資料集關聯</span><span class="sxs-lookup"><span data-stu-id="a03e6-109">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [<span data-ttu-id="a03e6-110">將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束</span><span class="sxs-lookup"><span data-stu-id="a03e6-110">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [<span data-ttu-id="a03e6-111">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="a03e6-111">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

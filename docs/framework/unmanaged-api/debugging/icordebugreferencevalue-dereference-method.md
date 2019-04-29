@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b436fa14322d444a6c8b515ba8e50698eecb95ba
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783015"
 ---
-# <a name="icordebugreferencevaluedereference-method"></a><span data-ttu-id="71e7e-102">ICorDebugReferenceValue::Dereference 方法</span><span class="sxs-lookup"><span data-stu-id="71e7e-102">ICorDebugReferenceValue::Dereference Method</span></span>
-<span data-ttu-id="71e7e-103">取得參考的物件。</span><span class="sxs-lookup"><span data-stu-id="71e7e-103">Gets the object that is referenced.</span></span>  
+# <a name="icordebugreferencevaluedereference-method"></a><span data-ttu-id="488bf-102">ICorDebugReferenceValue::Dereference 方法</span><span class="sxs-lookup"><span data-stu-id="488bf-102">ICorDebugReferenceValue::Dereference Method</span></span>
+<span data-ttu-id="488bf-103">取得參考的物件。</span><span class="sxs-lookup"><span data-stu-id="488bf-103">Gets the object that is referenced.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="71e7e-104">語法</span><span class="sxs-lookup"><span data-stu-id="71e7e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="488bf-104">語法</span><span class="sxs-lookup"><span data-stu-id="488bf-104">Syntax</span></span>  
   
 ```  
 HRESULT Dereference (  
@@ -35,18 +35,18 @@ HRESULT Dereference (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="71e7e-105">參數</span><span class="sxs-lookup"><span data-stu-id="71e7e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="488bf-105">參數</span><span class="sxs-lookup"><span data-stu-id="488bf-105">Parameters</span></span>  
  `ppValue`  
- <span data-ttu-id="71e7e-106">[out]ICorDebugValue，表示這個 ICorDebugReferenceValue 物件指向的物件的位址指標。</span><span class="sxs-lookup"><span data-stu-id="71e7e-106">[out] A pointer to the address of an ICorDebugValue that represents the object to which this ICorDebugReferenceValue object points.</span></span>  
+ <span data-ttu-id="488bf-106">[out]ICorDebugValue，表示這個 ICorDebugReferenceValue 物件指向的物件的位址指標。</span><span class="sxs-lookup"><span data-stu-id="488bf-106">[out] A pointer to the address of an ICorDebugValue that represents the object to which this ICorDebugReferenceValue object points.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="71e7e-107">備註</span><span class="sxs-lookup"><span data-stu-id="71e7e-107">Remarks</span></span>  
- <span data-ttu-id="71e7e-108">`ICorDebugValue`物件是有效的只有當尚未停其參考時。</span><span class="sxs-lookup"><span data-stu-id="71e7e-108">The `ICorDebugValue` object is valid only while its reference has not yet been disabled.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="488bf-107">備註</span><span class="sxs-lookup"><span data-stu-id="488bf-107">Remarks</span></span>  
+ <span data-ttu-id="488bf-108">`ICorDebugValue`物件是有效的只有當尚未停其參考時。</span><span class="sxs-lookup"><span data-stu-id="488bf-108">The `ICorDebugValue` object is valid only while its reference has not yet been disabled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="71e7e-109">需求</span><span class="sxs-lookup"><span data-stu-id="71e7e-109">Requirements</span></span>  
- <span data-ttu-id="71e7e-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="71e7e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="488bf-109">需求</span><span class="sxs-lookup"><span data-stu-id="488bf-109">Requirements</span></span>  
+ <span data-ttu-id="488bf-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="488bf-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="71e7e-111">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="71e7e-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="488bf-111">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="488bf-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="71e7e-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="71e7e-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="488bf-112">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="488bf-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="71e7e-113">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="71e7e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="488bf-113">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="488bf-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

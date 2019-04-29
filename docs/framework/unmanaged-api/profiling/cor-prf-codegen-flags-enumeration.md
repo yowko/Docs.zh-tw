@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 321318b63368ed6e57d235cf97d94485352f8686
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775124"
 ---
-# <a name="corprfcodegenflags-enumeration"></a><span data-ttu-id="fcaa8-102">COR_PRF_CODEGEN_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="fcaa8-102">COR_PRF_CODEGEN_FLAGS Enumeration</span></span>
-<span data-ttu-id="fcaa8-103">定義可以使用設定的程式碼產生旗標[icorprofilerfunctioncontrol:: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="fcaa8-103">Defines the code generation flags that can be set with the [ICorProfilerFunctionControl::SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) method.</span></span>  
+# <a name="corprfcodegenflags-enumeration"></a><span data-ttu-id="e6f7c-102">COR_PRF_CODEGEN_FLAGS 列舉</span><span class="sxs-lookup"><span data-stu-id="e6f7c-102">COR_PRF_CODEGEN_FLAGS Enumeration</span></span>
+<span data-ttu-id="e6f7c-103">定義可以使用設定的程式碼產生旗標[icorprofilerfunctioncontrol:: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="e6f7c-103">Defines the code generation flags that can be set with the [ICorProfilerFunctionControl::SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fcaa8-104">語法</span><span class="sxs-lookup"><span data-stu-id="fcaa8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e6f7c-104">語法</span><span class="sxs-lookup"><span data-stu-id="e6f7c-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -35,25 +35,25 @@ typedef enum {
 } COR_PRF_CODEGEN_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="fcaa8-105">成員</span><span class="sxs-lookup"><span data-stu-id="fcaa8-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e6f7c-105">成員</span><span class="sxs-lookup"><span data-stu-id="e6f7c-105">Members</span></span>  
   
-|<span data-ttu-id="fcaa8-106">成員</span><span class="sxs-lookup"><span data-stu-id="fcaa8-106">Member</span></span>|<span data-ttu-id="fcaa8-107">描述</span><span class="sxs-lookup"><span data-stu-id="fcaa8-107">Description</span></span>|  
+|<span data-ttu-id="e6f7c-106">成員</span><span class="sxs-lookup"><span data-stu-id="e6f7c-106">Member</span></span>|<span data-ttu-id="e6f7c-107">描述</span><span class="sxs-lookup"><span data-stu-id="e6f7c-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_CODEGEN_DISABLE_INLINING`|<span data-ttu-id="fcaa8-108">沒有任何函式會內嵌於此函式主體。</span><span class="sxs-lookup"><span data-stu-id="fcaa8-108">No functions will be inlined into this function’s body.</span></span> <span data-ttu-id="fcaa8-109">不過，您可能會內嵌至其呼叫端函式本身。</span><span class="sxs-lookup"><span data-stu-id="fcaa8-109">However, the function itself may be inlined into its callers.</span></span>|  
-|`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|<span data-ttu-id="fcaa8-110">將停用此函式主體的所有最佳化項目。</span><span class="sxs-lookup"><span data-stu-id="fcaa8-110">All optimizations will be disabled for this function’s body.</span></span> <span data-ttu-id="fcaa8-111">不過，函式本身仍可能會內嵌至其呼叫者。</span><span class="sxs-lookup"><span data-stu-id="fcaa8-111">However, the function itself may still be inlined into its callers.</span></span>|  
+|`COR_PRF_CODEGEN_DISABLE_INLINING`|<span data-ttu-id="e6f7c-108">沒有任何函式會內嵌於此函式主體。</span><span class="sxs-lookup"><span data-stu-id="e6f7c-108">No functions will be inlined into this function’s body.</span></span> <span data-ttu-id="e6f7c-109">不過，您可能會內嵌至其呼叫端函式本身。</span><span class="sxs-lookup"><span data-stu-id="e6f7c-109">However, the function itself may be inlined into its callers.</span></span>|  
+|`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|<span data-ttu-id="e6f7c-110">將停用此函式主體的所有最佳化項目。</span><span class="sxs-lookup"><span data-stu-id="e6f7c-110">All optimizations will be disabled for this function’s body.</span></span> <span data-ttu-id="e6f7c-111">不過，函式本身仍可能會內嵌至其呼叫者。</span><span class="sxs-lookup"><span data-stu-id="e6f7c-111">However, the function itself may still be inlined into its callers.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fcaa8-112">備註</span><span class="sxs-lookup"><span data-stu-id="fcaa8-112">Remarks</span></span>  
- <span data-ttu-id="fcaa8-113">`COR_PRF_CODEGEN_FLAGS`列舉由[icorprofilerfunctioncontrol:: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md)方法來啟用分析工具，來控制 JIT 重新編譯函式的程式碼產生。</span><span class="sxs-lookup"><span data-stu-id="fcaa8-113">The `COR_PRF_CODEGEN_FLAGS` enumeration is used by the [ICorProfilerFunctionControl::SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) method to enable the profiler to control the code generation for the JIT-recompiled function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e6f7c-112">備註</span><span class="sxs-lookup"><span data-stu-id="e6f7c-112">Remarks</span></span>  
+ <span data-ttu-id="e6f7c-113">`COR_PRF_CODEGEN_FLAGS`列舉由[icorprofilerfunctioncontrol:: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md)方法來啟用分析工具，來控制 JIT 重新編譯函式的程式碼產生。</span><span class="sxs-lookup"><span data-stu-id="e6f7c-113">The `COR_PRF_CODEGEN_FLAGS` enumeration is used by the [ICorProfilerFunctionControl::SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) method to enable the profiler to control the code generation for the JIT-recompiled function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fcaa8-114">需求</span><span class="sxs-lookup"><span data-stu-id="fcaa8-114">Requirements</span></span>  
- <span data-ttu-id="fcaa8-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fcaa8-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e6f7c-114">需求</span><span class="sxs-lookup"><span data-stu-id="e6f7c-114">Requirements</span></span>  
+ <span data-ttu-id="e6f7c-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e6f7c-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fcaa8-116">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="fcaa8-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="e6f7c-116">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e6f7c-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="fcaa8-117">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fcaa8-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e6f7c-117">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e6f7c-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fcaa8-118">**.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fcaa8-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="e6f7c-118">**.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e6f7c-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fcaa8-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fcaa8-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e6f7c-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e6f7c-119">See also</span></span>
 
-- [<span data-ttu-id="fcaa8-120">分析列舉</span><span class="sxs-lookup"><span data-stu-id="fcaa8-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="e6f7c-120">分析列舉</span><span class="sxs-lookup"><span data-stu-id="e6f7c-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

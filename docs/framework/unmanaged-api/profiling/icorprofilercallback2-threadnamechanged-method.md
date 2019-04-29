@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dbd9374decdce171d45e57512470c652abc24882
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782625"
 ---
-# <a name="icorprofilercallback2threadnamechanged-method"></a><span data-ttu-id="6a056-102">ICorProfilerCallback2::ThreadNameChanged 方法</span><span class="sxs-lookup"><span data-stu-id="6a056-102">ICorProfilerCallback2::ThreadNameChanged Method</span></span>
-<span data-ttu-id="6a056-103">通知程式碼剖析工具，執行緒的名稱已變更。</span><span class="sxs-lookup"><span data-stu-id="6a056-103">Notifies the code profiler that the name of a thread has changed.</span></span>  
+# <a name="icorprofilercallback2threadnamechanged-method"></a><span data-ttu-id="9e0ed-102">ICorProfilerCallback2::ThreadNameChanged 方法</span><span class="sxs-lookup"><span data-stu-id="9e0ed-102">ICorProfilerCallback2::ThreadNameChanged Method</span></span>
+<span data-ttu-id="9e0ed-103">通知程式碼剖析工具，執行緒的名稱已變更。</span><span class="sxs-lookup"><span data-stu-id="9e0ed-103">Notifies the code profiler that the name of a thread has changed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6a056-104">語法</span><span class="sxs-lookup"><span data-stu-id="6a056-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9e0ed-104">語法</span><span class="sxs-lookup"><span data-stu-id="9e0ed-104">Syntax</span></span>  
   
 ```  
 HRESULT ThreadNameChanged(  
@@ -36,26 +36,26 @@ HRESULT ThreadNameChanged(
     [in] WCHAR name[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6a056-105">參數</span><span class="sxs-lookup"><span data-stu-id="6a056-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9e0ed-105">參數</span><span class="sxs-lookup"><span data-stu-id="9e0ed-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="6a056-106">[in]執行緒識別碼。</span><span class="sxs-lookup"><span data-stu-id="6a056-106">[in] The ID of the thread.</span></span>  
+ <span data-ttu-id="9e0ed-106">[in]執行緒識別碼。</span><span class="sxs-lookup"><span data-stu-id="9e0ed-106">[in] The ID of the thread.</span></span>  
   
  `cchName`  
- <span data-ttu-id="6a056-107">[in]執行緒的新名稱的長度。</span><span class="sxs-lookup"><span data-stu-id="6a056-107">[in] The length of the new name of the thread.</span></span>  
+ <span data-ttu-id="9e0ed-107">[in]執行緒的新名稱的長度。</span><span class="sxs-lookup"><span data-stu-id="9e0ed-107">[in] The length of the new name of the thread.</span></span>  
   
  `name`  
- <span data-ttu-id="6a056-108">[in]執行緒的新名稱。</span><span class="sxs-lookup"><span data-stu-id="6a056-108">[in] The new name of the thread.</span></span> <span data-ttu-id="6a056-109">名稱不是 null 終止的。</span><span class="sxs-lookup"><span data-stu-id="6a056-109">The name is not null-terminated.</span></span>  
+ <span data-ttu-id="9e0ed-108">[in]執行緒的新名稱。</span><span class="sxs-lookup"><span data-stu-id="9e0ed-108">[in] The new name of the thread.</span></span> <span data-ttu-id="9e0ed-109">名稱不是 null 終止的。</span><span class="sxs-lookup"><span data-stu-id="9e0ed-109">The name is not null-terminated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6a056-110">需求</span><span class="sxs-lookup"><span data-stu-id="6a056-110">Requirements</span></span>  
- <span data-ttu-id="6a056-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6a056-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9e0ed-110">需求</span><span class="sxs-lookup"><span data-stu-id="9e0ed-110">Requirements</span></span>  
+ <span data-ttu-id="9e0ed-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9e0ed-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6a056-112">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6a056-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="9e0ed-112">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9e0ed-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="6a056-113">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6a056-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9e0ed-113">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9e0ed-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6a056-114">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6a056-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9e0ed-114">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e0ed-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6a056-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6a056-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9e0ed-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9e0ed-115">See also</span></span>
 
-- [<span data-ttu-id="6a056-116">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="6a056-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="6a056-117">ICorProfilerCallback2 介面</span><span class="sxs-lookup"><span data-stu-id="6a056-117">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [<span data-ttu-id="9e0ed-116">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="9e0ed-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="9e0ed-117">ICorProfilerCallback2 介面</span><span class="sxs-lookup"><span data-stu-id="9e0ed-117">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

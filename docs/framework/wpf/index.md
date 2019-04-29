@@ -1,14 +1,6 @@
 ---
 title: Windows Presentation Foundation
-ms.custom: ''
 ms.date: 01/25/2018
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 applies_to:
 - Windows 10
 - Windows 7
@@ -22,23 +14,18 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF]
 - WPF [WPF]
 ms.assetid: f667bd15-2134-41e9-b4af-5ced6fafab5d
-caps.latest.revision: 97
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a6d4596ad10c518a4ddcb9b295393b57ffb243b0
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 35a936cbc34bf10219099090e1af8c145d7fb23d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764539"
 ---
-# <a name="windows-presentation-foundation"></a><span data-ttu-id="b6ac1-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="b6ac1-102">Windows Presentation Foundation</span></span>
-<span data-ttu-id="b6ac1-103">Windows Presentation Foundation (WPF) 在 Visual Studio 中開發人員提供了統一的程式設計模型建置在 Windows 上的特定業務桌面應用程式。</span><span class="sxs-lookup"><span data-stu-id="b6ac1-103">Windows Presentation Foundation (WPF) in Visual Studio provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>  
+# <a name="windows-presentation-foundation"></a><span data-ttu-id="b5090-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="b5090-102">Windows Presentation Foundation</span></span>
+<span data-ttu-id="b5090-103">Windows Presentation Foundation (WPF) 在 Visual Studio 提供開發人員統一的程式設計模型，建置在 Windows 上的特定業務桌面應用程式。</span><span class="sxs-lookup"><span data-stu-id="b5090-103">Windows Presentation Foundation (WPF) in Visual Studio provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>  
   
- [<span data-ttu-id="b6ac1-104">使用 Windows Presentation Foundation 建立桌面應用程式</span><span class="sxs-lookup"><span data-stu-id="b6ac1-104">Create Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [<span data-ttu-id="b5090-104">使用 Windows Presentation Foundation 建立桌面應用程式</span><span class="sxs-lookup"><span data-stu-id="b5090-104">Create Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
- [<span data-ttu-id="b6ac1-105">在 Visual Studio 和 Blend for Visual Studio 中設計 XAML</span><span class="sxs-lookup"><span data-stu-id="b6ac1-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
+ [<span data-ttu-id="b5090-105">在 Visual Studio 和 Blend for Visual Studio 中設計 XAML</span><span class="sxs-lookup"><span data-stu-id="b5090-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [<span data-ttu-id="b6ac1-106">取得 Visual Studio</span><span class="sxs-lookup"><span data-stu-id="b6ac1-106">Get Visual Studio</span></span>](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+ [<span data-ttu-id="b5090-106">取得 Visual Studio</span><span class="sxs-lookup"><span data-stu-id="b5090-106">Get Visual Studio</span></span>](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)

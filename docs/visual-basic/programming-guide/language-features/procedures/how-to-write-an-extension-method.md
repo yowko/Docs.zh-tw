@@ -7,32 +7,32 @@ helpviewer_keywords:
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
 ms.openlocfilehash: 00d62d275f7afc06e066a375dc1ffcd74b23c9ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665997"
 ---
-# <a name="how-to-write-an-extension-method-visual-basic"></a><span data-ttu-id="a44ab-102">HOW TO：撰寫擴充方法 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a44ab-102">How to: Write an Extension Method (Visual Basic)</span></span>
-<span data-ttu-id="a44ab-103">擴充方法可讓您將方法加入至現有的類別。</span><span class="sxs-lookup"><span data-stu-id="a44ab-103">Extension methods enable you to add methods to an existing class.</span></span> <span data-ttu-id="a44ab-104">可以呼叫擴充方法，如同它是該類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="a44ab-104">The extension method can be called as if it were an instance of that class.</span></span>  
+# <a name="how-to-write-an-extension-method-visual-basic"></a><span data-ttu-id="de124-102">HOW TO：撰寫擴充方法 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="de124-102">How to: Write an Extension Method (Visual Basic)</span></span>
+<span data-ttu-id="de124-103">擴充方法可讓您將方法加入至現有的類別。</span><span class="sxs-lookup"><span data-stu-id="de124-103">Extension methods enable you to add methods to an existing class.</span></span> <span data-ttu-id="de124-104">可以呼叫擴充方法，如同它是該類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="de124-104">The extension method can be called as if it were an instance of that class.</span></span>  
   
-### <a name="to-define-an-extension-method"></a><span data-ttu-id="a44ab-105">若要定義擴充方法</span><span class="sxs-lookup"><span data-stu-id="a44ab-105">To define an extension method</span></span>  
+### <a name="to-define-an-extension-method"></a><span data-ttu-id="de124-105">若要定義擴充方法</span><span class="sxs-lookup"><span data-stu-id="de124-105">To define an extension method</span></span>  
   
-1. <span data-ttu-id="a44ab-106">Visual Studio 中開啟新的或現有的 Visual Basic 應用程式。</span><span class="sxs-lookup"><span data-stu-id="a44ab-106">Open a new or existing Visual Basic application in Visual Studio.</span></span>  
+1. <span data-ttu-id="de124-106">Visual Studio 中開啟新的或現有的 Visual Basic 應用程式。</span><span class="sxs-lookup"><span data-stu-id="de124-106">Open a new or existing Visual Basic application in Visual Studio.</span></span>  
   
-2. <span data-ttu-id="a44ab-107">在您要在其中定義擴充方法的檔案頂端，加入下列 import 陳述式：</span><span class="sxs-lookup"><span data-stu-id="a44ab-107">At the top of the file in which you want to define an extension method, include the following import statement:</span></span>  
+2. <span data-ttu-id="de124-107">在您要在其中定義擴充方法的檔案頂端，加入下列 import 陳述式：</span><span class="sxs-lookup"><span data-stu-id="de124-107">At the top of the file in which you want to define an extension method, include the following import statement:</span></span>  
   
     ```  
     Imports System.Runtime.CompilerServices  
     ```  
   
-3. <span data-ttu-id="a44ab-108">在新的或現有應用程式中的模組，開始以擴充屬性的方法定義：</span><span class="sxs-lookup"><span data-stu-id="a44ab-108">Within a module in your new or existing application, begin the method definition with the extension attribute:</span></span>  
+3. <span data-ttu-id="de124-108">在新的或現有應用程式中的模組，開始以擴充屬性的方法定義：</span><span class="sxs-lookup"><span data-stu-id="de124-108">Within a module in your new or existing application, begin the method definition with the extension attribute:</span></span>  
   
     ```  
     <Extension()>  
     ```  
   
-4. <span data-ttu-id="a44ab-109">不同之處在於第一個參數的型別必須是您想要擴充的資料類型，請以一般方式，宣告您的方法。</span><span class="sxs-lookup"><span data-stu-id="a44ab-109">Declare your method in the ordinary way, except that the type of the first parameter must be the data type you want to extend.</span></span>  
+4. <span data-ttu-id="de124-109">不同之處在於第一個參數的型別必須是您想要擴充的資料類型，請以一般方式，宣告您的方法。</span><span class="sxs-lookup"><span data-stu-id="de124-109">Declare your method in the ordinary way, except that the type of the first parameter must be the data type you want to extend.</span></span>  
   
     ```  
     <Extension()>   
@@ -41,8 +41,8 @@ ms.locfileid: "59313758"
     End Sub  
     ```  
   
-## <a name="example"></a><span data-ttu-id="a44ab-110">範例</span><span class="sxs-lookup"><span data-stu-id="a44ab-110">Example</span></span>  
- <span data-ttu-id="a44ab-111">下列範例會宣告模組中的擴充方法`StringExtensions`。</span><span class="sxs-lookup"><span data-stu-id="a44ab-111">The following example declares an extension method in module `StringExtensions`.</span></span> <span data-ttu-id="a44ab-112">第二個模組中， `Module1`，匯入`StringExtensions`並呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="a44ab-112">A second module, `Module1`, imports `StringExtensions` and calls the method.</span></span> <span data-ttu-id="a44ab-113">當呼叫它時，擴充方法必須在範圍內。</span><span class="sxs-lookup"><span data-stu-id="a44ab-113">The extension method must be in scope when it is called.</span></span> <span data-ttu-id="a44ab-114">擴充方法`PrintAndPunctuate`擴充<xref:System.String>類別的方法，顯示的字串執行個體後面的標點符號中做為參數傳送的文字字串。</span><span class="sxs-lookup"><span data-stu-id="a44ab-114">Extension method `PrintAndPunctuate` extends the <xref:System.String> class with a method that displays the string instance followed by a string of punctuation symbols sent in as a parameter.</span></span>  
+## <a name="example"></a><span data-ttu-id="de124-110">範例</span><span class="sxs-lookup"><span data-stu-id="de124-110">Example</span></span>  
+ <span data-ttu-id="de124-111">下列範例會宣告模組中的擴充方法`StringExtensions`。</span><span class="sxs-lookup"><span data-stu-id="de124-111">The following example declares an extension method in module `StringExtensions`.</span></span> <span data-ttu-id="de124-112">第二個模組中， `Module1`，匯入`StringExtensions`並呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="de124-112">A second module, `Module1`, imports `StringExtensions` and calls the method.</span></span> <span data-ttu-id="de124-113">當呼叫它時，擴充方法必須在範圍內。</span><span class="sxs-lookup"><span data-stu-id="de124-113">The extension method must be in scope when it is called.</span></span> <span data-ttu-id="de124-114">擴充方法`PrintAndPunctuate`擴充<xref:System.String>類別的方法，顯示的字串執行個體後面的標點符號中做為參數傳送的文字字串。</span><span class="sxs-lookup"><span data-stu-id="de124-114">Extension method `PrintAndPunctuate` extends the <xref:System.String> class with a method that displays the string instance followed by a string of punctuation symbols sent in as a parameter.</span></span>  
   
 ```vb  
 ' Declarations will typically be in a separate module.  
@@ -75,16 +75,16 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="a44ab-115">請注意此方法時，定義具有兩個參數，而且呼叫只會與一個。</span><span class="sxs-lookup"><span data-stu-id="a44ab-115">Notice that the method is defined with two parameters and called with only one.</span></span> <span data-ttu-id="a44ab-116">第一個參數， `aString`，在方法中定義繫結至`example`，執行個體`String`所呼叫的方法。</span><span class="sxs-lookup"><span data-stu-id="a44ab-116">The first parameter, `aString`, in the method definition is bound to `example`, the instance of `String` that calls the method.</span></span> <span data-ttu-id="a44ab-117">此範例的輸出如下：</span><span class="sxs-lookup"><span data-stu-id="a44ab-117">The output of the example is as follows:</span></span>  
+ <span data-ttu-id="de124-115">請注意此方法時，定義具有兩個參數，而且呼叫只會與一個。</span><span class="sxs-lookup"><span data-stu-id="de124-115">Notice that the method is defined with two parameters and called with only one.</span></span> <span data-ttu-id="de124-116">第一個參數， `aString`，在方法中定義繫結至`example`，執行個體`String`所呼叫的方法。</span><span class="sxs-lookup"><span data-stu-id="de124-116">The first parameter, `aString`, in the method definition is bound to `example`, the instance of `String` that calls the method.</span></span> <span data-ttu-id="de124-117">此範例的輸出如下：</span><span class="sxs-lookup"><span data-stu-id="de124-117">The output of the example is as follows:</span></span>  
   
  `Hello?`  
   
  `Hello!!!!`  
   
-## <a name="see-also"></a><span data-ttu-id="a44ab-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a44ab-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="de124-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="de124-118">See also</span></span>
 
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
-- [<span data-ttu-id="a44ab-119">擴充方法</span><span class="sxs-lookup"><span data-stu-id="a44ab-119">Extension Methods</span></span>](./extension-methods.md)
-- [<span data-ttu-id="a44ab-120">Module 陳述式</span><span class="sxs-lookup"><span data-stu-id="a44ab-120">Module Statement</span></span>](../../../../visual-basic/language-reference/statements/module-statement.md)
-- [<span data-ttu-id="a44ab-121">程序參數和引數</span><span class="sxs-lookup"><span data-stu-id="a44ab-121">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)
-- [<span data-ttu-id="a44ab-122">在 Visual Basic 中的範圍</span><span class="sxs-lookup"><span data-stu-id="a44ab-122">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [<span data-ttu-id="de124-119">擴充方法</span><span class="sxs-lookup"><span data-stu-id="de124-119">Extension Methods</span></span>](./extension-methods.md)
+- [<span data-ttu-id="de124-120">Module 陳述式</span><span class="sxs-lookup"><span data-stu-id="de124-120">Module Statement</span></span>](../../../../visual-basic/language-reference/statements/module-statement.md)
+- [<span data-ttu-id="de124-121">程序參數和引數</span><span class="sxs-lookup"><span data-stu-id="de124-121">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)
+- [<span data-ttu-id="de124-122">在 Visual Basic 中的範圍</span><span class="sxs-lookup"><span data-stu-id="de124-122">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

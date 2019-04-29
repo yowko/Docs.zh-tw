@@ -9,19 +9,19 @@ helpviewer_keywords:
 - controls [WPF], StackPanel
 ms.assetid: a82b824c-1b98-49a9-b7fd-2d9c154dd002
 ms.openlocfilehash: df78e1037f0bc444d5ae3820eda5d461a415e265
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791023"
 ---
-# <a name="stackpanel"></a><span data-ttu-id="7f3b3-102">StackPanel</span><span class="sxs-lookup"><span data-stu-id="7f3b3-102">StackPanel</span></span>
-<span data-ttu-id="7f3b3-103"><xref:System.Windows.Controls.StackPanel>元素用來水平或垂直堆疊子元素。</span><span class="sxs-lookup"><span data-stu-id="7f3b3-103">The <xref:System.Windows.Controls.StackPanel> element is used to stack child elements horizontally or vertically.</span></span>  
+# <a name="stackpanel"></a><span data-ttu-id="1cc20-102">StackPanel</span><span class="sxs-lookup"><span data-stu-id="1cc20-102">StackPanel</span></span>
+<span data-ttu-id="1cc20-103"><xref:System.Windows.Controls.StackPanel>元素用來水平或垂直堆疊子元素。</span><span class="sxs-lookup"><span data-stu-id="1cc20-103">The <xref:System.Windows.Controls.StackPanel> element is used to stack child elements horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7f3b3-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="7f3b3-104">In This Section</span></span>  
- [<span data-ttu-id="7f3b3-105">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="7f3b3-105">How-to Topics</span></span>](stackpanel-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1cc20-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="1cc20-104">In This Section</span></span>  
+ [<span data-ttu-id="1cc20-105">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="1cc20-105">How-to Topics</span></span>](stackpanel-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="7f3b3-106">參考資料</span><span class="sxs-lookup"><span data-stu-id="7f3b3-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="1cc20-106">參考資料</span><span class="sxs-lookup"><span data-stu-id="1cc20-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -36,9 +36,9 @@ ms.locfileid: "57361224"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="7f3b3-107">相關章節</span><span class="sxs-lookup"><span data-stu-id="7f3b3-107">Related Sections</span></span>  
- [<span data-ttu-id="7f3b3-108">版面配置</span><span class="sxs-lookup"><span data-stu-id="7f3b3-108">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="1cc20-107">相關章節</span><span class="sxs-lookup"><span data-stu-id="1cc20-107">Related Sections</span></span>  
+ [<span data-ttu-id="1cc20-108">版面配置</span><span class="sxs-lookup"><span data-stu-id="1cc20-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="7f3b3-109">逐步解說：我的第一個 WPF 傳統型應用程式</span><span class="sxs-lookup"><span data-stu-id="7f3b3-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="1cc20-109">逐步解說：我的第一個 WPF 傳統型應用程式</span><span class="sxs-lookup"><span data-stu-id="1cc20-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="7f3b3-110">ScrollViewer 概觀</span><span class="sxs-lookup"><span data-stu-id="7f3b3-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="1cc20-110">ScrollViewer 概觀</span><span class="sxs-lookup"><span data-stu-id="1cc20-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

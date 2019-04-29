@@ -3,80 +3,80 @@ title: 命名空間
 description: 了解如何F#命名空間可讓您將組織成相關功能的程式碼，方法是讓您將名稱附加到的程式項目群組。
 ms.date: 12/08/2018
 ms.openlocfilehash: 526d7a07e4804751811c15fa91b0c74c1954d591
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666387"
 ---
-# <a name="namespaces"></a><span data-ttu-id="e44f1-103">命名空間</span><span class="sxs-lookup"><span data-stu-id="e44f1-103">Namespaces</span></span>
+# <a name="namespaces"></a><span data-ttu-id="90587-103">命名空間</span><span class="sxs-lookup"><span data-stu-id="90587-103">Namespaces</span></span>
 
-<span data-ttu-id="e44f1-104">命名空間可讓您將程式碼組織成相關功能，方法是讓您將名稱附加至的群組F#的程式項目。</span><span class="sxs-lookup"><span data-stu-id="e44f1-104">A namespace lets you organize code into areas of related functionality by enabling you to attach a name to a grouping of F# program elements.</span></span> <span data-ttu-id="e44f1-105">命名空間是通常最上層的項目，在F#檔案。</span><span class="sxs-lookup"><span data-stu-id="e44f1-105">Namespaces are typically top-level elements in F# files.</span></span>
+<span data-ttu-id="90587-104">命名空間可讓您將程式碼組織成相關功能，方法是讓您將名稱附加至的群組F#的程式項目。</span><span class="sxs-lookup"><span data-stu-id="90587-104">A namespace lets you organize code into areas of related functionality by enabling you to attach a name to a grouping of F# program elements.</span></span> <span data-ttu-id="90587-105">命名空間是通常最上層的項目，在F#檔案。</span><span class="sxs-lookup"><span data-stu-id="90587-105">Namespaces are typically top-level elements in F# files.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="e44f1-106">語法</span><span class="sxs-lookup"><span data-stu-id="e44f1-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="90587-106">語法</span><span class="sxs-lookup"><span data-stu-id="90587-106">Syntax</span></span>
 
 ```fsharp
 namespace [rec] [parent-namespaces.]identifier
 ```
 
-## <a name="remarks"></a><span data-ttu-id="e44f1-107">備註</span><span class="sxs-lookup"><span data-stu-id="e44f1-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="90587-107">備註</span><span class="sxs-lookup"><span data-stu-id="90587-107">Remarks</span></span>
 
-<span data-ttu-id="e44f1-108">如果您想要將程式碼放在命名空間，檔案中的第一個宣告必須宣告命名空間。</span><span class="sxs-lookup"><span data-stu-id="e44f1-108">If you want to put code in a namespace, the first declaration in the file must declare the namespace.</span></span> <span data-ttu-id="e44f1-109">然後將整個檔案的內容會成為命名空間的一部分，提供其他的命名空間宣告存在進一步檔案中。</span><span class="sxs-lookup"><span data-stu-id="e44f1-109">The contents of the entire file then become part of the namespace, provided no other namespaces declaration exists further in the file.</span></span> <span data-ttu-id="e44f1-110">如果這種情況，第一個命名空間內被視為下一個命名空間宣告為止的所有程式碼。</span><span class="sxs-lookup"><span data-stu-id="e44f1-110">If that is the case, then all code up until the next namespace declaration is considered to be within the first namespace.</span></span>
+<span data-ttu-id="90587-108">如果您想要將程式碼放在命名空間，檔案中的第一個宣告必須宣告命名空間。</span><span class="sxs-lookup"><span data-stu-id="90587-108">If you want to put code in a namespace, the first declaration in the file must declare the namespace.</span></span> <span data-ttu-id="90587-109">然後將整個檔案的內容會成為命名空間的一部分，提供其他的命名空間宣告存在進一步檔案中。</span><span class="sxs-lookup"><span data-stu-id="90587-109">The contents of the entire file then become part of the namespace, provided no other namespaces declaration exists further in the file.</span></span> <span data-ttu-id="90587-110">如果這種情況，第一個命名空間內被視為下一個命名空間宣告為止的所有程式碼。</span><span class="sxs-lookup"><span data-stu-id="90587-110">If that is the case, then all code up until the next namespace declaration is considered to be within the first namespace.</span></span>
 
-<span data-ttu-id="e44f1-111">值和函式，不能直接包含命名空間。</span><span class="sxs-lookup"><span data-stu-id="e44f1-111">Namespaces cannot directly contain values and functions.</span></span> <span data-ttu-id="e44f1-112">而值和函式必須包含在模組中，模組會包含命名空間中。</span><span class="sxs-lookup"><span data-stu-id="e44f1-112">Instead, values and functions must be included in modules, and modules are included in namespaces.</span></span> <span data-ttu-id="e44f1-113">命名空間可以包含類型，模組。</span><span class="sxs-lookup"><span data-stu-id="e44f1-113">Namespaces can contain types, modules.</span></span>
+<span data-ttu-id="90587-111">值和函式，不能直接包含命名空間。</span><span class="sxs-lookup"><span data-stu-id="90587-111">Namespaces cannot directly contain values and functions.</span></span> <span data-ttu-id="90587-112">而值和函式必須包含在模組中，模組會包含命名空間中。</span><span class="sxs-lookup"><span data-stu-id="90587-112">Instead, values and functions must be included in modules, and modules are included in namespaces.</span></span> <span data-ttu-id="90587-113">命名空間可以包含類型，模組。</span><span class="sxs-lookup"><span data-stu-id="90587-113">Namespaces can contain types, modules.</span></span>
 
-<span data-ttu-id="e44f1-114">XML 文件註解可以宣告上方的命名空間，但會忽略它們。</span><span class="sxs-lookup"><span data-stu-id="e44f1-114">XML doc comments can be declared above a namespace, but they're ignored.</span></span> <span data-ttu-id="e44f1-115">編譯器指示詞也可以在上面的命名空間宣告。</span><span class="sxs-lookup"><span data-stu-id="e44f1-115">Compiler directives can also be declared above a namespace.</span></span>
+<span data-ttu-id="90587-114">XML 文件註解可以宣告上方的命名空間，但會忽略它們。</span><span class="sxs-lookup"><span data-stu-id="90587-114">XML doc comments can be declared above a namespace, but they're ignored.</span></span> <span data-ttu-id="90587-115">編譯器指示詞也可以在上面的命名空間宣告。</span><span class="sxs-lookup"><span data-stu-id="90587-115">Compiler directives can also be declared above a namespace.</span></span>
 
-<span data-ttu-id="e44f1-116">命名空間可以明確宣告命名空間關鍵字，或以隱含方式宣告模組時。</span><span class="sxs-lookup"><span data-stu-id="e44f1-116">Namespaces can be declared explicitly with the namespace keyword, or implicitly when declaring a module.</span></span> <span data-ttu-id="e44f1-117">若要明確宣告命名空間，使用命名空間關鍵字後面加上命名空間名稱。</span><span class="sxs-lookup"><span data-stu-id="e44f1-117">To declare a namespace explicitly, use the namespace keyword followed by the namespace name.</span></span> <span data-ttu-id="e44f1-118">下列範例示範宣告命名空間的程式碼檔案`Widgets`類型與包含該命名空間中的模組。</span><span class="sxs-lookup"><span data-stu-id="e44f1-118">The following example shows a code file that declares a namespace `Widgets` with a type and a module included in that namespace.</span></span>
+<span data-ttu-id="90587-116">命名空間可以明確宣告命名空間關鍵字，或以隱含方式宣告模組時。</span><span class="sxs-lookup"><span data-stu-id="90587-116">Namespaces can be declared explicitly with the namespace keyword, or implicitly when declaring a module.</span></span> <span data-ttu-id="90587-117">若要明確宣告命名空間，使用命名空間關鍵字後面加上命名空間名稱。</span><span class="sxs-lookup"><span data-stu-id="90587-117">To declare a namespace explicitly, use the namespace keyword followed by the namespace name.</span></span> <span data-ttu-id="90587-118">下列範例示範宣告命名空間的程式碼檔案`Widgets`類型與包含該命名空間中的模組。</span><span class="sxs-lookup"><span data-stu-id="90587-118">The following example shows a code file that declares a namespace `Widgets` with a type and a module included in that namespace.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6406.fs)]
 
-<span data-ttu-id="e44f1-119">如果其中一個模組中之檔案的整個內容，您也可以宣告命名空間會隱含地使用`module`關鍵字並提供新的命名空間名稱，在完整的模組名稱。</span><span class="sxs-lookup"><span data-stu-id="e44f1-119">If the entire contents of the file are in one module, you can also declare namespaces implicitly by using the `module` keyword and providing the new namespace name in the fully qualified module name.</span></span> <span data-ttu-id="e44f1-120">下列範例示範宣告命名空間的程式碼檔案`Widgets`和模組`WidgetsModule`，其中包含函式。</span><span class="sxs-lookup"><span data-stu-id="e44f1-120">The following example shows a code file that declares a namespace `Widgets` and a module `WidgetsModule`, which contains a function.</span></span>
+<span data-ttu-id="90587-119">如果其中一個模組中之檔案的整個內容，您也可以宣告命名空間會隱含地使用`module`關鍵字並提供新的命名空間名稱，在完整的模組名稱。</span><span class="sxs-lookup"><span data-stu-id="90587-119">If the entire contents of the file are in one module, you can also declare namespaces implicitly by using the `module` keyword and providing the new namespace name in the fully qualified module name.</span></span> <span data-ttu-id="90587-120">下列範例示範宣告命名空間的程式碼檔案`Widgets`和模組`WidgetsModule`，其中包含函式。</span><span class="sxs-lookup"><span data-stu-id="90587-120">The following example shows a code file that declares a namespace `Widgets` and a module `WidgetsModule`, which contains a function.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6401.fs)]
 
-<span data-ttu-id="e44f1-121">下列程式碼相當於上述程式碼，但此模組是在本機的模組宣告。</span><span class="sxs-lookup"><span data-stu-id="e44f1-121">The following code is equivalent to the preceding code, but the module is a local module declaration.</span></span> <span data-ttu-id="e44f1-122">在此情況下，命名空間必須出現的那一行。</span><span class="sxs-lookup"><span data-stu-id="e44f1-122">In that case, the namespace must appear on its own line.</span></span>
+<span data-ttu-id="90587-121">下列程式碼相當於上述程式碼，但此模組是在本機的模組宣告。</span><span class="sxs-lookup"><span data-stu-id="90587-121">The following code is equivalent to the preceding code, but the module is a local module declaration.</span></span> <span data-ttu-id="90587-122">在此情況下，命名空間必須出現的那一行。</span><span class="sxs-lookup"><span data-stu-id="90587-122">In that case, the namespace must appear on its own line.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/namespaces/snippet6402.fs)]
 
-<span data-ttu-id="e44f1-123">如果在一或多個命名空間中相同的檔案需要多個模組，您必須使用本機模組宣告。</span><span class="sxs-lookup"><span data-stu-id="e44f1-123">If more than one module is required in the same file in one or more namespaces, you must use local module declarations.</span></span> <span data-ttu-id="e44f1-124">當您使用本機模組宣告時，您無法使用限定的命名空間模組宣告中。</span><span class="sxs-lookup"><span data-stu-id="e44f1-124">When you use local module declarations, you cannot use the qualified namespace in the module declarations.</span></span> <span data-ttu-id="e44f1-125">下列程式碼會顯示具有命名空間宣告和兩個本機模組宣告的檔案。</span><span class="sxs-lookup"><span data-stu-id="e44f1-125">The following code shows a file that has a namespace declaration and two local module declarations.</span></span> <span data-ttu-id="e44f1-126">在此情況下，模組會直接包含在命名空間;沒有任何隱含建立的模組檔案具有相同的名稱。</span><span class="sxs-lookup"><span data-stu-id="e44f1-126">In this case, the modules are contained directly in the namespace; there is no implicitly created module that has the same name as the file.</span></span> <span data-ttu-id="e44f1-127">任何其他程式碼在檔案中，這類`do`繫結，是在命名空間，但不是在內部的模組中，因此您必須限定的模組成員`widgetFunction`所使用的模組名稱。</span><span class="sxs-lookup"><span data-stu-id="e44f1-127">Any other code in the file, such as a `do` binding, is in the namespace but not in the inner modules, so you need to qualify the module member `widgetFunction` by using the module name.</span></span>
+<span data-ttu-id="90587-123">如果在一或多個命名空間中相同的檔案需要多個模組，您必須使用本機模組宣告。</span><span class="sxs-lookup"><span data-stu-id="90587-123">If more than one module is required in the same file in one or more namespaces, you must use local module declarations.</span></span> <span data-ttu-id="90587-124">當您使用本機模組宣告時，您無法使用限定的命名空間模組宣告中。</span><span class="sxs-lookup"><span data-stu-id="90587-124">When you use local module declarations, you cannot use the qualified namespace in the module declarations.</span></span> <span data-ttu-id="90587-125">下列程式碼會顯示具有命名空間宣告和兩個本機模組宣告的檔案。</span><span class="sxs-lookup"><span data-stu-id="90587-125">The following code shows a file that has a namespace declaration and two local module declarations.</span></span> <span data-ttu-id="90587-126">在此情況下，模組會直接包含在命名空間;沒有任何隱含建立的模組檔案具有相同的名稱。</span><span class="sxs-lookup"><span data-stu-id="90587-126">In this case, the modules are contained directly in the namespace; there is no implicitly created module that has the same name as the file.</span></span> <span data-ttu-id="90587-127">任何其他程式碼在檔案中，這類`do`繫結，是在命名空間，但不是在內部的模組中，因此您必須限定的模組成員`widgetFunction`所使用的模組名稱。</span><span class="sxs-lookup"><span data-stu-id="90587-127">Any other code in the file, such as a `do` binding, is in the namespace but not in the inner modules, so you need to qualify the module member `widgetFunction` by using the module name.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6403.fs)]
 
-<span data-ttu-id="e44f1-128">此範例的輸出如下所示。</span><span class="sxs-lookup"><span data-stu-id="e44f1-128">The output of this example is as follows.</span></span>
+<span data-ttu-id="90587-128">此範例的輸出如下所示。</span><span class="sxs-lookup"><span data-stu-id="90587-128">The output of this example is as follows.</span></span>
 
 ```fsharp
 Module1 10 20
 Module2 5 6
 ```
 
-<span data-ttu-id="e44f1-129">如需詳細資訊，請參閱 <<c0> [ 模組](modules.md)。</span><span class="sxs-lookup"><span data-stu-id="e44f1-129">For more information, see [Modules](modules.md).</span></span>
+<span data-ttu-id="90587-129">如需詳細資訊，請參閱 <<c0> [ 模組](modules.md)。</span><span class="sxs-lookup"><span data-stu-id="90587-129">For more information, see [Modules](modules.md).</span></span>
 
-## <a name="nested-namespaces"></a><span data-ttu-id="e44f1-130">巢狀命名空間</span><span class="sxs-lookup"><span data-stu-id="e44f1-130">Nested Namespaces</span></span>
+## <a name="nested-namespaces"></a><span data-ttu-id="90587-130">巢狀命名空間</span><span class="sxs-lookup"><span data-stu-id="90587-130">Nested Namespaces</span></span>
 
-<span data-ttu-id="e44f1-131">當您建立巢狀命名空間時，您必須完整限定。</span><span class="sxs-lookup"><span data-stu-id="e44f1-131">When you create a nested namespace, you must fully qualify it.</span></span> <span data-ttu-id="e44f1-132">否則，您會建立新的最上層命名空間。</span><span class="sxs-lookup"><span data-stu-id="e44f1-132">Otherwise, you create a new top-level namespace.</span></span> <span data-ttu-id="e44f1-133">命名空間宣告中，會忽略縮排。</span><span class="sxs-lookup"><span data-stu-id="e44f1-133">Indentation is ignored in namespace declarations.</span></span>
+<span data-ttu-id="90587-131">當您建立巢狀命名空間時，您必須完整限定。</span><span class="sxs-lookup"><span data-stu-id="90587-131">When you create a nested namespace, you must fully qualify it.</span></span> <span data-ttu-id="90587-132">否則，您會建立新的最上層命名空間。</span><span class="sxs-lookup"><span data-stu-id="90587-132">Otherwise, you create a new top-level namespace.</span></span> <span data-ttu-id="90587-133">命名空間宣告中，會忽略縮排。</span><span class="sxs-lookup"><span data-stu-id="90587-133">Indentation is ignored in namespace declarations.</span></span>
 
-<span data-ttu-id="e44f1-134">下列範例示範如何宣告巢狀命名空間。</span><span class="sxs-lookup"><span data-stu-id="e44f1-134">The following example shows how to declare a nested namespace.</span></span>
+<span data-ttu-id="90587-134">下列範例示範如何宣告巢狀命名空間。</span><span class="sxs-lookup"><span data-stu-id="90587-134">The following example shows how to declare a nested namespace.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6404.fs)]
 
-## <a name="namespaces-in-files-and-assemblies"></a><span data-ttu-id="e44f1-135">檔案和組件中的命名空間</span><span class="sxs-lookup"><span data-stu-id="e44f1-135">Namespaces in Files and Assemblies</span></span>
+## <a name="namespaces-in-files-and-assemblies"></a><span data-ttu-id="90587-135">檔案和組件中的命名空間</span><span class="sxs-lookup"><span data-stu-id="90587-135">Namespaces in Files and Assemblies</span></span>
 
-<span data-ttu-id="e44f1-136">命名空間可以跨多個檔案中的單一專案或編譯。</span><span class="sxs-lookup"><span data-stu-id="e44f1-136">Namespaces can span multiple files in a single project or compilation.</span></span> <span data-ttu-id="e44f1-137">詞彙*命名空間片段*描述包含在一個檔案的命名空間的一部分。</span><span class="sxs-lookup"><span data-stu-id="e44f1-137">The term *namespace fragment* describes the part of a namespace that is included in one file.</span></span> <span data-ttu-id="e44f1-138">命名空間也能橫跨多個組件。</span><span class="sxs-lookup"><span data-stu-id="e44f1-138">Namespaces can also span multiple assemblies.</span></span> <span data-ttu-id="e44f1-139">比方說，`System`命名空間包含整個.NET Framework 中，這會跨越許多組件，並包含許多巢狀命名空間。</span><span class="sxs-lookup"><span data-stu-id="e44f1-139">For example, the `System` namespace includes the whole .NET Framework, which spans many assemblies and contains many nested namespaces.</span></span>
+<span data-ttu-id="90587-136">命名空間可以跨多個檔案中的單一專案或編譯。</span><span class="sxs-lookup"><span data-stu-id="90587-136">Namespaces can span multiple files in a single project or compilation.</span></span> <span data-ttu-id="90587-137">詞彙*命名空間片段*描述包含在一個檔案的命名空間的一部分。</span><span class="sxs-lookup"><span data-stu-id="90587-137">The term *namespace fragment* describes the part of a namespace that is included in one file.</span></span> <span data-ttu-id="90587-138">命名空間也能橫跨多個組件。</span><span class="sxs-lookup"><span data-stu-id="90587-138">Namespaces can also span multiple assemblies.</span></span> <span data-ttu-id="90587-139">比方說，`System`命名空間包含整個.NET Framework 中，這會跨越許多組件，並包含許多巢狀命名空間。</span><span class="sxs-lookup"><span data-stu-id="90587-139">For example, the `System` namespace includes the whole .NET Framework, which spans many assemblies and contains many nested namespaces.</span></span>
 
-## <a name="global-namespace"></a><span data-ttu-id="e44f1-140">全域命名空間</span><span class="sxs-lookup"><span data-stu-id="e44f1-140">Global Namespace</span></span>
+## <a name="global-namespace"></a><span data-ttu-id="90587-140">全域命名空間</span><span class="sxs-lookup"><span data-stu-id="90587-140">Global Namespace</span></span>
 
-<span data-ttu-id="e44f1-141">您使用預先定義的命名空間`global`將.NET 的最上層命名空間中的名稱。</span><span class="sxs-lookup"><span data-stu-id="e44f1-141">You use the predefined namespace `global` to put names in the .NET top-level namespace.</span></span>
+<span data-ttu-id="90587-141">您使用預先定義的命名空間`global`將.NET 的最上層命名空間中的名稱。</span><span class="sxs-lookup"><span data-stu-id="90587-141">You use the predefined namespace `global` to put names in the .NET top-level namespace.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6407.fs)]
 
-<span data-ttu-id="e44f1-142">您也可以使用全域參考最上層的.NET 命名空間，例如，若要解決與其他命名空間的名稱衝突。</span><span class="sxs-lookup"><span data-stu-id="e44f1-142">You can also use global to reference the top-level .NET namespace, for example, to resolve name conflicts with other namespaces.</span></span>
+<span data-ttu-id="90587-142">您也可以使用全域參考最上層的.NET 命名空間，例如，若要解決與其他命名空間的名稱衝突。</span><span class="sxs-lookup"><span data-stu-id="90587-142">You can also use global to reference the top-level .NET namespace, for example, to resolve name conflicts with other namespaces.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6408.fs)]
 
-## <a name="recursive-namespaces"></a><span data-ttu-id="e44f1-143">遞迴命名空間</span><span class="sxs-lookup"><span data-stu-id="e44f1-143">Recursive namespaces</span></span>
+## <a name="recursive-namespaces"></a><span data-ttu-id="90587-143">遞迴命名空間</span><span class="sxs-lookup"><span data-stu-id="90587-143">Recursive namespaces</span></span>
 
-<span data-ttu-id="e44f1-144">命名空間也可以宣告為遞迴，以便能夠相互遞迴所有內含的程式碼。</span><span class="sxs-lookup"><span data-stu-id="e44f1-144">Namespaces can also be declared as recursive to allow for all contained code to be mutually recursive.</span></span>  <span data-ttu-id="e44f1-145">這透過完成`namespace rec`。</span><span class="sxs-lookup"><span data-stu-id="e44f1-145">This is done via `namespace rec`.</span></span> <span data-ttu-id="e44f1-146">使用`namespace rec`可以減輕不能夠撰寫相互參考的程式碼類型和模組之間的一些難題。</span><span class="sxs-lookup"><span data-stu-id="e44f1-146">Use of `namespace rec` can alleviate some pains in not being able to write mutually referential code between types and modules.</span></span> <span data-ttu-id="e44f1-147">這個範例如下：</span><span class="sxs-lookup"><span data-stu-id="e44f1-147">The following is an example of this:</span></span>
+<span data-ttu-id="90587-144">命名空間也可以宣告為遞迴，以便能夠相互遞迴所有內含的程式碼。</span><span class="sxs-lookup"><span data-stu-id="90587-144">Namespaces can also be declared as recursive to allow for all contained code to be mutually recursive.</span></span>  <span data-ttu-id="90587-145">這透過完成`namespace rec`。</span><span class="sxs-lookup"><span data-stu-id="90587-145">This is done via `namespace rec`.</span></span> <span data-ttu-id="90587-146">使用`namespace rec`可以減輕不能夠撰寫相互參考的程式碼類型和模組之間的一些難題。</span><span class="sxs-lookup"><span data-stu-id="90587-146">Use of `namespace rec` can alleviate some pains in not being able to write mutually referential code between types and modules.</span></span> <span data-ttu-id="90587-147">這個範例如下：</span><span class="sxs-lookup"><span data-stu-id="90587-147">The following is an example of this:</span></span>
 
 ```fsharp
 namespace rec MutualReferences
@@ -117,12 +117,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-<span data-ttu-id="e44f1-148">請注意，例外狀況`DontSqueezeTheBananaException`和類別`Banana`都會指向彼此。</span><span class="sxs-lookup"><span data-stu-id="e44f1-148">Note that the exception `DontSqueezeTheBananaException` and the class `Banana` both refer to each other.</span></span>  <span data-ttu-id="e44f1-149">此外，模組`BananaHelpers`和類別`Banana`也彼此參考。</span><span class="sxs-lookup"><span data-stu-id="e44f1-149">Additionally, the module `BananaHelpers` and the class `Banana` also refer to each other.</span></span> <span data-ttu-id="e44f1-150">這不是可表達F#如果您移除了`rec`從的關鍵字`MutualReferences`命名空間。</span><span class="sxs-lookup"><span data-stu-id="e44f1-150">This wouldn't be possible to express in F# if you removed the `rec` keyword from the `MutualReferences` namespace.</span></span>
+<span data-ttu-id="90587-148">請注意，例外狀況`DontSqueezeTheBananaException`和類別`Banana`都會指向彼此。</span><span class="sxs-lookup"><span data-stu-id="90587-148">Note that the exception `DontSqueezeTheBananaException` and the class `Banana` both refer to each other.</span></span>  <span data-ttu-id="90587-149">此外，模組`BananaHelpers`和類別`Banana`也彼此參考。</span><span class="sxs-lookup"><span data-stu-id="90587-149">Additionally, the module `BananaHelpers` and the class `Banana` also refer to each other.</span></span> <span data-ttu-id="90587-150">這不是可表達F#如果您移除了`rec`從的關鍵字`MutualReferences`命名空間。</span><span class="sxs-lookup"><span data-stu-id="90587-150">This wouldn't be possible to express in F# if you removed the `rec` keyword from the `MutualReferences` namespace.</span></span>
 
-<span data-ttu-id="e44f1-151">這項功能也是適用於最上層[模組](modules.md)。</span><span class="sxs-lookup"><span data-stu-id="e44f1-151">This feature is also available for top-level [Modules](modules.md).</span></span>
+<span data-ttu-id="90587-151">這項功能也是適用於最上層[模組](modules.md)。</span><span class="sxs-lookup"><span data-stu-id="90587-151">This feature is also available for top-level [Modules](modules.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="e44f1-152">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e44f1-152">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="90587-152">另請參閱</span><span class="sxs-lookup"><span data-stu-id="90587-152">See also</span></span>
 
-- [<span data-ttu-id="e44f1-153">F# 語言參考</span><span class="sxs-lookup"><span data-stu-id="e44f1-153">F# Language Reference</span></span>](index.md)
-- [<span data-ttu-id="e44f1-154">模組</span><span class="sxs-lookup"><span data-stu-id="e44f1-154">Modules</span></span>](modules.md)
-- [<span data-ttu-id="e44f1-155">F#RFC FS-1009-允許透過檔案內的較大範圍的相互參考的類型和模組</span><span class="sxs-lookup"><span data-stu-id="e44f1-155">F# RFC FS-1009 - Allow mutually referential types and modules over larger scopes within files</span></span>](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [<span data-ttu-id="90587-153">F# 語言參考</span><span class="sxs-lookup"><span data-stu-id="90587-153">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="90587-154">模組</span><span class="sxs-lookup"><span data-stu-id="90587-154">Modules</span></span>](modules.md)
+- [<span data-ttu-id="90587-155">F#RFC FS-1009-允許透過檔案內的較大範圍的相互參考的類型和模組</span><span class="sxs-lookup"><span data-stu-id="90587-155">F# RFC FS-1009 - Allow mutually referential types and modules over larger scopes within files</span></span>](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

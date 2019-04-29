@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7c6f06ff4fc7d855ea07f1f572a2b7ea948efc51
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777653"
 ---
-# <a name="imetadataimportgetparamformethodindex-method"></a><span data-ttu-id="a6d99-102">IMetaDataImport::GetParamForMethodIndex 方法</span><span class="sxs-lookup"><span data-stu-id="a6d99-102">IMetaDataImport::GetParamForMethodIndex Method</span></span>
-<span data-ttu-id="a6d99-103">取得表示指定的參數，指定 MethodDef 語彙基元所代表之方法的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="a6d99-103">Gets the token that represents a specified parameter of the method represented by the specified MethodDef token.</span></span>  
+# <a name="imetadataimportgetparamformethodindex-method"></a><span data-ttu-id="9dee0-102">IMetaDataImport::GetParamForMethodIndex 方法</span><span class="sxs-lookup"><span data-stu-id="9dee0-102">IMetaDataImport::GetParamForMethodIndex Method</span></span>
+<span data-ttu-id="9dee0-103">取得表示指定的參數，指定 MethodDef 語彙基元所代表之方法的語彙基元。</span><span class="sxs-lookup"><span data-stu-id="9dee0-103">Gets the token that represents a specified parameter of the method represented by the specified MethodDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a6d99-104">語法</span><span class="sxs-lookup"><span data-stu-id="a6d99-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9dee0-104">語法</span><span class="sxs-lookup"><span data-stu-id="9dee0-104">Syntax</span></span>  
   
 ```  
 HRESULT GetParamForMethodIndex (  
@@ -37,26 +37,26 @@ HRESULT GetParamForMethodIndex (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a6d99-105">參數</span><span class="sxs-lookup"><span data-stu-id="a6d99-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9dee0-105">參數</span><span class="sxs-lookup"><span data-stu-id="9dee0-105">Parameters</span></span>  
  `md`  
- <span data-ttu-id="a6d99-106">[in]語彙基元，表示這個方法傳回的參數 token。</span><span class="sxs-lookup"><span data-stu-id="a6d99-106">[in] A token that represents the method to return the parameter token for.</span></span>  
+ <span data-ttu-id="9dee0-106">[in]語彙基元，表示這個方法傳回的參數 token。</span><span class="sxs-lookup"><span data-stu-id="9dee0-106">[in] A token that represents the method to return the parameter token for.</span></span>  
   
  `ulParamSeq`  
- <span data-ttu-id="a6d99-107">[in]參數清單中要發生要求的參數序數的位置。</span><span class="sxs-lookup"><span data-stu-id="a6d99-107">[in] The ordinal position in the parameter list where the requested parameter occurs.</span></span> <span data-ttu-id="a6d99-108">參數編號從一方法的傳回值在位置零開始。</span><span class="sxs-lookup"><span data-stu-id="a6d99-108">Parameters are numbered starting from one, with the method's return value in position zero.</span></span>  
+ <span data-ttu-id="9dee0-107">[in]參數清單中要發生要求的參數序數的位置。</span><span class="sxs-lookup"><span data-stu-id="9dee0-107">[in] The ordinal position in the parameter list where the requested parameter occurs.</span></span> <span data-ttu-id="9dee0-108">參數編號從一方法的傳回值在位置零開始。</span><span class="sxs-lookup"><span data-stu-id="9dee0-108">Parameters are numbered starting from one, with the method's return value in position zero.</span></span>  
   
  `ppd`  
- <span data-ttu-id="a6d99-109">[out]表示要求的參數 ParamDef 語彙基元指標。</span><span class="sxs-lookup"><span data-stu-id="a6d99-109">[out] A pointer to a ParamDef token that represents the requested parameter.</span></span>  
+ <span data-ttu-id="9dee0-109">[out]表示要求的參數 ParamDef 語彙基元指標。</span><span class="sxs-lookup"><span data-stu-id="9dee0-109">[out] A pointer to a ParamDef token that represents the requested parameter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a6d99-110">需求</span><span class="sxs-lookup"><span data-stu-id="a6d99-110">Requirements</span></span>  
- <span data-ttu-id="a6d99-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a6d99-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9dee0-110">需求</span><span class="sxs-lookup"><span data-stu-id="9dee0-110">Requirements</span></span>  
+ <span data-ttu-id="9dee0-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9dee0-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a6d99-112">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a6d99-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9dee0-112">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9dee0-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a6d99-113">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="a6d99-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9dee0-113">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="9dee0-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="a6d99-114">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a6d99-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9dee0-114">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9dee0-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a6d99-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a6d99-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9dee0-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9dee0-115">See also</span></span>
 
-- [<span data-ttu-id="a6d99-116">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="a6d99-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="a6d99-117">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="a6d99-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="9dee0-116">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="9dee0-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="9dee0-117">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="9dee0-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

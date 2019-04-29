@@ -7,38 +7,38 @@ helpviewer_keywords:
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
 ms.openlocfilehash: 075eeccc7d80943d2757a97b9a355bbea3ef9d4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663241"
 ---
-# <a name="-imports-visual-basic"></a><span data-ttu-id="9a140-102">-匯入 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9a140-102">-imports (Visual Basic)</span></span>
-<span data-ttu-id="9a140-103">從指定的組件，匯入命名空間。</span><span class="sxs-lookup"><span data-stu-id="9a140-103">Imports namespaces from a specified assembly.</span></span>  
+# <a name="-imports-visual-basic"></a><span data-ttu-id="605ca-102">-匯入 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="605ca-102">-imports (Visual Basic)</span></span>
+<span data-ttu-id="605ca-103">從指定的組件，匯入命名空間。</span><span class="sxs-lookup"><span data-stu-id="605ca-103">Imports namespaces from a specified assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a140-104">語法</span><span class="sxs-lookup"><span data-stu-id="9a140-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="605ca-104">語法</span><span class="sxs-lookup"><span data-stu-id="605ca-104">Syntax</span></span>  
   
 ```  
 -imports:namespaceList  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="9a140-105">引數</span><span class="sxs-lookup"><span data-stu-id="9a140-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="605ca-105">引數</span><span class="sxs-lookup"><span data-stu-id="605ca-105">Arguments</span></span>  
   
-|<span data-ttu-id="9a140-106">詞彙</span><span class="sxs-lookup"><span data-stu-id="9a140-106">Term</span></span>|<span data-ttu-id="9a140-107">定義</span><span class="sxs-lookup"><span data-stu-id="9a140-107">Definition</span></span>|  
+|<span data-ttu-id="605ca-106">詞彙</span><span class="sxs-lookup"><span data-stu-id="605ca-106">Term</span></span>|<span data-ttu-id="605ca-107">定義</span><span class="sxs-lookup"><span data-stu-id="605ca-107">Definition</span></span>|  
 |---|---|  
-|`namespaceList`|<span data-ttu-id="9a140-108">必要項。</span><span class="sxs-lookup"><span data-stu-id="9a140-108">Required.</span></span> <span data-ttu-id="9a140-109">要匯入的命名空間的逗號分隔清單。</span><span class="sxs-lookup"><span data-stu-id="9a140-109">Comma-delimited list of namespaces to be imported.</span></span>|  
+|`namespaceList`|<span data-ttu-id="605ca-108">必要項。</span><span class="sxs-lookup"><span data-stu-id="605ca-108">Required.</span></span> <span data-ttu-id="605ca-109">要匯入的命名空間的逗號分隔清單。</span><span class="sxs-lookup"><span data-stu-id="605ca-109">Comma-delimited list of namespaces to be imported.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9a140-110">備註</span><span class="sxs-lookup"><span data-stu-id="9a140-110">Remarks</span></span>  
- <span data-ttu-id="9a140-111">`-imports`選項匯入目前的資料集的原始程式檔，或從任何參考的組件內定義的命名空間。</span><span class="sxs-lookup"><span data-stu-id="9a140-111">The `-imports` option imports any namespace defined within the current set of source files or from any referenced assembly.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="605ca-110">備註</span><span class="sxs-lookup"><span data-stu-id="605ca-110">Remarks</span></span>  
+ <span data-ttu-id="605ca-111">`-imports`選項匯入目前的資料集的原始程式檔，或從任何參考的組件內定義的命名空間。</span><span class="sxs-lookup"><span data-stu-id="605ca-111">The `-imports` option imports any namespace defined within the current set of source files or from any referenced assembly.</span></span>  
   
- <span data-ttu-id="9a140-112">使用指定的命名空間中的成員`-imports`可用於在編譯中的所有原始程式碼檔案。</span><span class="sxs-lookup"><span data-stu-id="9a140-112">The members in a namespace specified with `-imports` are available to all source-code files in the compilation.</span></span> <span data-ttu-id="9a140-113">使用  [Imports 陳述式 （.NET 命名空間和類型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)單一原始程式檔中使用命名空間。</span><span class="sxs-lookup"><span data-stu-id="9a140-113">Use the [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to use a namespace in a single source-code file.</span></span>  
+ <span data-ttu-id="605ca-112">使用指定的命名空間中的成員`-imports`可用於在編譯中的所有原始程式碼檔案。</span><span class="sxs-lookup"><span data-stu-id="605ca-112">The members in a namespace specified with `-imports` are available to all source-code files in the compilation.</span></span> <span data-ttu-id="605ca-113">使用  [Imports 陳述式 （.NET 命名空間和類型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)單一原始程式檔中使用命名空間。</span><span class="sxs-lookup"><span data-stu-id="605ca-113">Use the [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to use a namespace in a single source-code file.</span></span>  
   
-|<span data-ttu-id="9a140-114">若要設定/匯入 Visual Studio 整合式的開發環境</span><span class="sxs-lookup"><span data-stu-id="9a140-114">To set /imports in the Visual Studio integrated development environment</span></span>|  
+|<span data-ttu-id="605ca-114">若要設定/匯入 Visual Studio 整合式的開發環境</span><span class="sxs-lookup"><span data-stu-id="605ca-114">To set /imports in the Visual Studio integrated development environment</span></span>|  
 |---|  
-|<span data-ttu-id="9a140-115">1.在 **方案總管**中選取專案。</span><span class="sxs-lookup"><span data-stu-id="9a140-115">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="9a140-116">在 [專案] 功能表上，按一下 [屬性]。</span><span class="sxs-lookup"><span data-stu-id="9a140-116">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="9a140-117">2.按一下 [參考] 節點。</span><span class="sxs-lookup"><span data-stu-id="9a140-117">2.  Click the **References** tab.</span></span><br /><span data-ttu-id="9a140-118">3.輸入命名空間名稱旁的方塊**新增使用者匯入** 按鈕。</span><span class="sxs-lookup"><span data-stu-id="9a140-118">3.  Enter the namespace name in the box beside the **Add User Import** button.</span></span><br /><span data-ttu-id="9a140-119">4.按一下 [**新增使用者匯入**] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="9a140-119">4.  Click the **Add User Import** button.</span></span>|  
+|<span data-ttu-id="605ca-115">1.在 **方案總管**中選取專案。</span><span class="sxs-lookup"><span data-stu-id="605ca-115">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="605ca-116">在 [專案] 功能表上，按一下 [屬性]。</span><span class="sxs-lookup"><span data-stu-id="605ca-116">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="605ca-117">2.按一下 [參考] 節點。</span><span class="sxs-lookup"><span data-stu-id="605ca-117">2.  Click the **References** tab.</span></span><br /><span data-ttu-id="605ca-118">3.輸入命名空間名稱旁的方塊**新增使用者匯入** 按鈕。</span><span class="sxs-lookup"><span data-stu-id="605ca-118">3.  Enter the namespace name in the box beside the **Add User Import** button.</span></span><br /><span data-ttu-id="605ca-119">4.按一下 [**新增使用者匯入**] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="605ca-119">4.  Click the **Add User Import** button.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="9a140-120">範例</span><span class="sxs-lookup"><span data-stu-id="9a140-120">Example</span></span>  
- <span data-ttu-id="9a140-121">下列程式碼會編譯時`/imports:system.globalization`指定。</span><span class="sxs-lookup"><span data-stu-id="9a140-121">The following code compiles when `/imports:system.globalization` is specified.</span></span> <span data-ttu-id="9a140-122">未安裝，成功編譯需要任一`Imports System.Globalization`陳述式是包含在開頭的原始程式碼檔，或為完整限定屬性`System.Globalization.CultureInfo.CurrentCulture.Name`。</span><span class="sxs-lookup"><span data-stu-id="9a140-122">Without it, successful compilation requires either that an `Imports System.Globalization` statement be included at the beginning of the source code file, or that the property be fully qualified as `System.Globalization.CultureInfo.CurrentCulture.Name`.</span></span>
+## <a name="example"></a><span data-ttu-id="605ca-120">範例</span><span class="sxs-lookup"><span data-stu-id="605ca-120">Example</span></span>  
+ <span data-ttu-id="605ca-121">下列程式碼會編譯時`/imports:system.globalization`指定。</span><span class="sxs-lookup"><span data-stu-id="605ca-121">The following code compiles when `/imports:system.globalization` is specified.</span></span> <span data-ttu-id="605ca-122">未安裝，成功編譯需要任一`Imports System.Globalization`陳述式是包含在開頭的原始程式碼檔，或為完整限定屬性`System.Globalization.CultureInfo.CurrentCulture.Name`。</span><span class="sxs-lookup"><span data-stu-id="605ca-122">Without it, successful compilation requires either that an `Imports System.Globalization` statement be included at the beginning of the source code file, or that the property be fully qualified as `System.Globalization.CultureInfo.CurrentCulture.Name`.</span></span>
 
 ```vb
 Module Example
@@ -48,8 +48,8 @@ Module Example
 End Module
 ```
 
-## <a name="see-also"></a><span data-ttu-id="9a140-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9a140-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="605ca-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="605ca-123">See also</span></span>
 
-- [<span data-ttu-id="9a140-124">Visual Basic 命令列編譯器</span><span class="sxs-lookup"><span data-stu-id="9a140-124">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="9a140-125">參考和 Imports 陳述式</span><span class="sxs-lookup"><span data-stu-id="9a140-125">References and the Imports Statement</span></span>](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
-- [<span data-ttu-id="9a140-126">編譯命令列範例</span><span class="sxs-lookup"><span data-stu-id="9a140-126">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="605ca-124">Visual Basic 命令列編譯器</span><span class="sxs-lookup"><span data-stu-id="605ca-124">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="605ca-125">參考和 Imports 陳述式</span><span class="sxs-lookup"><span data-stu-id="605ca-125">References and the Imports Statement</span></span>](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
+- [<span data-ttu-id="605ca-126">編譯命令列範例</span><span class="sxs-lookup"><span data-stu-id="605ca-126">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

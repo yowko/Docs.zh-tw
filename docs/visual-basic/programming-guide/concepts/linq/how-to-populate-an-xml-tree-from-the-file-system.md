@@ -3,17 +3,17 @@ title: HOW TO：填入 XML 樹狀結構從檔案系統 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
 ms.openlocfilehash: 55c182134e0cc1a7472cfaa6bb4355e9457a6977
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789060"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a><span data-ttu-id="db192-102">HOW TO：填入 XML 樹狀結構從檔案系統 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="db192-102">How to: Populate an XML Tree from the File System (Visual Basic)</span></span>
-<span data-ttu-id="db192-103">XML 樹狀的常用與實用應用為當做階層式名稱/值資料存放區使用。</span><span class="sxs-lookup"><span data-stu-id="db192-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="db192-104">您可以利用階層式資料填入 XML 樹狀結構，然後進行查詢、轉換，並在必要時，進行序列化。</span><span class="sxs-lookup"><span data-stu-id="db192-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="db192-105">在這個使用案例中，許多 XML 專用語意 (Semantics) (例如，命名空間與空白字元行為) 都不重要。</span><span class="sxs-lookup"><span data-stu-id="db192-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="db192-106">反之，您會使用 XML 樹狀當做記憶體中的小型單一使用者階層式資料庫。</span><span class="sxs-lookup"><span data-stu-id="db192-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a><span data-ttu-id="29381-102">HOW TO：填入 XML 樹狀結構從檔案系統 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="29381-102">How to: Populate an XML Tree from the File System (Visual Basic)</span></span>
+<span data-ttu-id="29381-103">XML 樹狀的常用與實用應用為當做階層式名稱/值資料存放區使用。</span><span class="sxs-lookup"><span data-stu-id="29381-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="29381-104">您可以利用階層式資料填入 XML 樹狀結構，然後進行查詢、轉換，並在必要時，進行序列化。</span><span class="sxs-lookup"><span data-stu-id="29381-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="29381-105">在這個使用案例中，許多 XML 專用語意 (Semantics) (例如，命名空間與空白字元行為) 都不重要。</span><span class="sxs-lookup"><span data-stu-id="29381-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="29381-106">反之，您會使用 XML 樹狀當做記憶體中的小型單一使用者階層式資料庫。</span><span class="sxs-lookup"><span data-stu-id="29381-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="db192-107">範例</span><span class="sxs-lookup"><span data-stu-id="db192-107">Example</span></span>  
- <span data-ttu-id="db192-108">下列範例會使用遞迴，從本機檔案系統填入 XML 樹狀。</span><span class="sxs-lookup"><span data-stu-id="db192-108">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="db192-109">接著，它會查詢樹狀結構，計算樹狀結構中，所有檔案大小的總數。</span><span class="sxs-lookup"><span data-stu-id="db192-109">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
+## <a name="example"></a><span data-ttu-id="29381-107">範例</span><span class="sxs-lookup"><span data-stu-id="29381-107">Example</span></span>  
+ <span data-ttu-id="29381-108">下列範例會使用遞迴，從本機檔案系統填入 XML 樹狀。</span><span class="sxs-lookup"><span data-stu-id="29381-108">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="29381-109">接著，它會查詢樹狀結構，計算樹狀結構中，所有檔案大小的總數。</span><span class="sxs-lookup"><span data-stu-id="29381-109">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
   
 ```vb  
 Module Module1  
@@ -44,7 +44,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="db192-110">此範例會產生與下列類似的輸出：</span><span class="sxs-lookup"><span data-stu-id="db192-110">This example produces output similar to the following:</span></span>  
+ <span data-ttu-id="29381-110">此範例會產生與下列類似的輸出：</span><span class="sxs-lookup"><span data-stu-id="29381-110">This example produces output similar to the following:</span></span>  
   
 ```xml  
 <Dir Name="Tmp">  
@@ -114,6 +114,6 @@ End Module
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="db192-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="db192-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="29381-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="29381-111">See also</span></span>
 
-- [<span data-ttu-id="db192-112">進階查詢技術 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="db192-112">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [<span data-ttu-id="29381-112">進階查詢技術 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="29381-112">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

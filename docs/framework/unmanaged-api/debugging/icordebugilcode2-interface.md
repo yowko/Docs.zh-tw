@@ -13,35 +13,35 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3a27dbd8b5013937bb97f37113687405c988c1fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645213"
 ---
-# <a name="icordebugilcode2-interface"></a><span data-ttu-id="fd242-102">ICorDebugILCode2 介面</span><span class="sxs-lookup"><span data-stu-id="fd242-102">ICorDebugILCode2 Interface</span></span>
-<span data-ttu-id="fd242-103">[.NET Framework 4.5.2 與更新版本提供支援]</span><span class="sxs-lookup"><span data-stu-id="fd242-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilcode2-interface"></a><span data-ttu-id="9faad-102">ICorDebugILCode2 介面</span><span class="sxs-lookup"><span data-stu-id="9faad-102">ICorDebugILCode2 Interface</span></span>
+<span data-ttu-id="9faad-103">[.NET Framework 4.5.2 與更新版本提供支援]</span><span class="sxs-lookup"><span data-stu-id="9faad-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="fd242-104">以邏輯方式擴充[ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)介面，以提供的方法，傳回的語彙基元函式的區域變數簽章，而且，它將對應的分析工具檢測中繼語言 (IL) 位移到原始方法 IL位移。</span><span class="sxs-lookup"><span data-stu-id="fd242-104">Logically extends the [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) interface to provide methods that return the token for a function's local variable signature, and that map a profiler's instrumented intermediate language (IL) offsets to original method IL offsets.</span></span>  
+ <span data-ttu-id="9faad-104">以邏輯方式擴充[ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)介面，以提供的方法，傳回的語彙基元函式的區域變數簽章，而且，它將對應的分析工具檢測中繼語言 (IL) 位移到原始方法 IL位移。</span><span class="sxs-lookup"><span data-stu-id="9faad-104">Logically extends the [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) interface to provide methods that return the token for a function's local variable signature, and that map a profiler's instrumented intermediate language (IL) offsets to original method IL offsets.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="fd242-105">方法</span><span class="sxs-lookup"><span data-stu-id="fd242-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="9faad-105">方法</span><span class="sxs-lookup"><span data-stu-id="9faad-105">Methods</span></span>  
   
-|<span data-ttu-id="fd242-106">方法</span><span class="sxs-lookup"><span data-stu-id="fd242-106">Method</span></span>|<span data-ttu-id="fd242-107">描述</span><span class="sxs-lookup"><span data-stu-id="fd242-107">Description</span></span>|  
+|<span data-ttu-id="9faad-106">方法</span><span class="sxs-lookup"><span data-stu-id="9faad-106">Method</span></span>|<span data-ttu-id="9faad-107">描述</span><span class="sxs-lookup"><span data-stu-id="9faad-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="fd242-108">GetInstrumentedILMap 方法</span><span class="sxs-lookup"><span data-stu-id="fd242-108">GetInstrumentedILMap Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)|<span data-ttu-id="fd242-109">將分析工具中的已檢測 IL 位移對應傳回至此執行個體的原始方法 IL 位移。</span><span class="sxs-lookup"><span data-stu-id="fd242-109">Returns a map from profiler instrumented IL offsets to original method IL offsets for this instance.</span></span>|  
-|[<span data-ttu-id="fd242-110">GetLocalVarSigToken 方法</span><span class="sxs-lookup"><span data-stu-id="fd242-110">GetLocalVarSigToken Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getlocalvarsigtoken-method.md)|<span data-ttu-id="fd242-111">針對此執行個體表示的函式，取得區域變數簽章的中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="fd242-111">Gets the metadata token for the local variable signature for the function that is represented by this instance.</span></span>|  
+|[<span data-ttu-id="9faad-108">GetInstrumentedILMap 方法</span><span class="sxs-lookup"><span data-stu-id="9faad-108">GetInstrumentedILMap Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)|<span data-ttu-id="9faad-109">將分析工具中的已檢測 IL 位移對應傳回至此執行個體的原始方法 IL 位移。</span><span class="sxs-lookup"><span data-stu-id="9faad-109">Returns a map from profiler instrumented IL offsets to original method IL offsets for this instance.</span></span>|  
+|[<span data-ttu-id="9faad-110">GetLocalVarSigToken 方法</span><span class="sxs-lookup"><span data-stu-id="9faad-110">GetLocalVarSigToken Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getlocalvarsigtoken-method.md)|<span data-ttu-id="9faad-111">針對此執行個體表示的函式，取得區域變數簽章的中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="9faad-111">Gets the metadata token for the local variable signature for the function that is represented by this instance.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="fd242-112">需求</span><span class="sxs-lookup"><span data-stu-id="fd242-112">Requirements</span></span>  
- <span data-ttu-id="fd242-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fd242-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9faad-112">需求</span><span class="sxs-lookup"><span data-stu-id="9faad-112">Requirements</span></span>  
+ <span data-ttu-id="9faad-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9faad-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fd242-114">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fd242-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9faad-114">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9faad-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="fd242-115">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fd242-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9faad-115">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9faad-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fd242-116">**.NET framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fd242-116">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="9faad-116">**.NET framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9faad-116">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fd242-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fd242-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9faad-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9faad-117">See also</span></span>
 
-- [<span data-ttu-id="fd242-118">ICorDebugILCode 介面</span><span class="sxs-lookup"><span data-stu-id="fd242-118">ICorDebugILCode Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)
-- [<span data-ttu-id="fd242-119">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="fd242-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="fd242-120">偵錯</span><span class="sxs-lookup"><span data-stu-id="fd242-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="9faad-118">ICorDebugILCode 介面</span><span class="sxs-lookup"><span data-stu-id="9faad-118">ICorDebugILCode Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)
+- [<span data-ttu-id="9faad-119">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="9faad-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="9faad-120">偵錯</span><span class="sxs-lookup"><span data-stu-id="9faad-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
