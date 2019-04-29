@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03ce77dd7407db8289abfefba13d71a9af053e10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609512"
 ---
-# <a name="cordebugiltonativemap-structure"></a><span data-ttu-id="f16b1-102">COR_DEBUG_IL_TO_NATIVE_MAP 結構</span><span class="sxs-lookup"><span data-stu-id="f16b1-102">COR_DEBUG_IL_TO_NATIVE_MAP Structure</span></span>
-<span data-ttu-id="f16b1-103">包含用來將 Microsoft 中繼語言 (MSIL) 程式碼對應至機器碼的位移。</span><span class="sxs-lookup"><span data-stu-id="f16b1-103">Contains the offsets that are used to map Microsoft intermediate language (MSIL) code to native code.</span></span>  
+# <a name="cordebugiltonativemap-structure"></a><span data-ttu-id="0629c-102">COR_DEBUG_IL_TO_NATIVE_MAP 結構</span><span class="sxs-lookup"><span data-stu-id="0629c-102">COR_DEBUG_IL_TO_NATIVE_MAP Structure</span></span>
+<span data-ttu-id="0629c-103">包含用來將 Microsoft 中繼語言 (MSIL) 程式碼對應至機器碼的位移。</span><span class="sxs-lookup"><span data-stu-id="0629c-103">Contains the offsets that are used to map Microsoft intermediate language (MSIL) code to native code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f16b1-104">語法</span><span class="sxs-lookup"><span data-stu-id="f16b1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0629c-104">語法</span><span class="sxs-lookup"><span data-stu-id="0629c-104">Syntax</span></span>  
   
 ```  
 typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {  
@@ -36,26 +36,26 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
 } COR_DEBUG_IL_TO_NATIVE_MAP;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="f16b1-105">成員</span><span class="sxs-lookup"><span data-stu-id="f16b1-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0629c-105">成員</span><span class="sxs-lookup"><span data-stu-id="0629c-105">Members</span></span>  
   
-|<span data-ttu-id="f16b1-106">成員</span><span class="sxs-lookup"><span data-stu-id="f16b1-106">Member</span></span>|<span data-ttu-id="f16b1-107">描述</span><span class="sxs-lookup"><span data-stu-id="f16b1-107">Description</span></span>|  
+|<span data-ttu-id="0629c-106">成員</span><span class="sxs-lookup"><span data-stu-id="0629c-106">Member</span></span>|<span data-ttu-id="0629c-107">描述</span><span class="sxs-lookup"><span data-stu-id="0629c-107">Description</span></span>|  
 |------------|-----------------|  
-|`ilOffset`|<span data-ttu-id="f16b1-108">MSIL 程式碼的位移。</span><span class="sxs-lookup"><span data-stu-id="f16b1-108">The offset of the MSIL code.</span></span>|  
-|`nativeStartOffset`|<span data-ttu-id="f16b1-109">原生程式碼開頭的位移。</span><span class="sxs-lookup"><span data-stu-id="f16b1-109">The offset of the start of the native code.</span></span>|  
-|`nativeEndOffset`|<span data-ttu-id="f16b1-110">原生程式碼結尾的位移。</span><span class="sxs-lookup"><span data-stu-id="f16b1-110">The offset of the end of the native code.</span></span>|  
+|`ilOffset`|<span data-ttu-id="0629c-108">MSIL 程式碼的位移。</span><span class="sxs-lookup"><span data-stu-id="0629c-108">The offset of the MSIL code.</span></span>|  
+|`nativeStartOffset`|<span data-ttu-id="0629c-109">原生程式碼開頭的位移。</span><span class="sxs-lookup"><span data-stu-id="0629c-109">The offset of the start of the native code.</span></span>|  
+|`nativeEndOffset`|<span data-ttu-id="0629c-110">原生程式碼結尾的位移。</span><span class="sxs-lookup"><span data-stu-id="0629c-110">The offset of the end of the native code.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f16b1-111">需求</span><span class="sxs-lookup"><span data-stu-id="f16b1-111">Requirements</span></span>  
- <span data-ttu-id="f16b1-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f16b1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0629c-111">需求</span><span class="sxs-lookup"><span data-stu-id="0629c-111">Requirements</span></span>  
+ <span data-ttu-id="0629c-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0629c-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f16b1-113">**標頭：** CorProf.idl CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="f16b1-113">**Header:** CorProf.idl, CorDebug.idl</span></span>  
+ <span data-ttu-id="0629c-113">**標頭：** CorProf.idl CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="0629c-113">**Header:** CorProf.idl, CorDebug.idl</span></span>  
   
- <span data-ttu-id="f16b1-114">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f16b1-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0629c-114">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0629c-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f16b1-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f16b1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0629c-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0629c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f16b1-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f16b1-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0629c-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0629c-116">See also</span></span>
 
-- [<span data-ttu-id="f16b1-117">GetILToNativeMapping 方法</span><span class="sxs-lookup"><span data-stu-id="f16b1-117">GetILToNativeMapping Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)
-- [<span data-ttu-id="f16b1-118">GetILToNativeMapping 方法</span><span class="sxs-lookup"><span data-stu-id="f16b1-118">GetILToNativeMapping Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
-- [<span data-ttu-id="f16b1-119">偵錯結構</span><span class="sxs-lookup"><span data-stu-id="f16b1-119">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="f16b1-120">偵錯</span><span class="sxs-lookup"><span data-stu-id="f16b1-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="0629c-117">GetILToNativeMapping 方法</span><span class="sxs-lookup"><span data-stu-id="0629c-117">GetILToNativeMapping Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)
+- [<span data-ttu-id="0629c-118">GetILToNativeMapping 方法</span><span class="sxs-lookup"><span data-stu-id="0629c-118">GetILToNativeMapping Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
+- [<span data-ttu-id="0629c-119">偵錯結構</span><span class="sxs-lookup"><span data-stu-id="0629c-119">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="0629c-120">偵錯</span><span class="sxs-lookup"><span data-stu-id="0629c-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

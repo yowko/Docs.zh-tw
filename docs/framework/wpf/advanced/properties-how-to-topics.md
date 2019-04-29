@@ -9,20 +9,20 @@ helpviewer_keywords:
 - dependency properties [WPF]
 ms.assetid: e16dd710-1530-4462-81a2-43719b973970
 ms.openlocfilehash: 78bf1dbe9c9c95a3ae1afe2515adbd8bc65a7d44
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628609"
 ---
-# <a name="properties-how-to-topics"></a><span data-ttu-id="10697-102">屬性 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="10697-102">Properties How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="10697-103">本節內容</span><span class="sxs-lookup"><span data-stu-id="10697-103">In This Section</span></span>  
- [<span data-ttu-id="10697-104">實作相依性屬性</span><span class="sxs-lookup"><span data-stu-id="10697-104">Implement a Dependency Property</span></span>](how-to-implement-a-dependency-property.md)  
- [<span data-ttu-id="10697-105">加入相依性屬性的擁有者類型</span><span class="sxs-lookup"><span data-stu-id="10697-105">Add an Owner Type for a Dependency Property</span></span>](how-to-add-an-owner-type-for-a-dependency-property.md)  
- [<span data-ttu-id="10697-106">註冊附加屬性</span><span class="sxs-lookup"><span data-stu-id="10697-106">Register an Attached Property</span></span>](how-to-register-an-attached-property.md)  
- [<span data-ttu-id="10697-107">覆寫相依性屬性的中繼資料</span><span class="sxs-lookup"><span data-stu-id="10697-107">Override Metadata for a Dependency Property</span></span>](how-to-override-metadata-for-a-dependency-property.md)  
+# <a name="properties-how-to-topics"></a><span data-ttu-id="52932-102">屬性 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="52932-102">Properties How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="52932-103">本節內容</span><span class="sxs-lookup"><span data-stu-id="52932-103">In This Section</span></span>  
+ [<span data-ttu-id="52932-104">實作相依性屬性</span><span class="sxs-lookup"><span data-stu-id="52932-104">Implement a Dependency Property</span></span>](how-to-implement-a-dependency-property.md)  
+ [<span data-ttu-id="52932-105">加入相依性屬性的擁有者類型</span><span class="sxs-lookup"><span data-stu-id="52932-105">Add an Owner Type for a Dependency Property</span></span>](how-to-add-an-owner-type-for-a-dependency-property.md)  
+ [<span data-ttu-id="52932-106">註冊附加屬性</span><span class="sxs-lookup"><span data-stu-id="52932-106">Register an Attached Property</span></span>](how-to-register-an-attached-property.md)  
+ [<span data-ttu-id="52932-107">覆寫相依性屬性的中繼資料</span><span class="sxs-lookup"><span data-stu-id="52932-107">Override Metadata for a Dependency Property</span></span>](how-to-override-metadata-for-a-dependency-property.md)  
   
-## <a name="reference"></a><span data-ttu-id="10697-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="10697-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="52932-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="52932-108">Reference</span></span>  
  <xref:System.Windows.DependencyProperty>  
   
  <xref:System.Windows.PropertyMetadata>  
@@ -31,5 +31,5 @@ ms.locfileid: "57368489"
   
  <xref:System.Windows.DependencyObject>  
   
-## <a name="related-sections"></a><span data-ttu-id="10697-109">相關章節</span><span class="sxs-lookup"><span data-stu-id="10697-109">Related Sections</span></span>  
- [<span data-ttu-id="10697-110">屬性</span><span class="sxs-lookup"><span data-stu-id="10697-110">Properties</span></span>](properties-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="52932-109">相關章節</span><span class="sxs-lookup"><span data-stu-id="52932-109">Related Sections</span></span>  
+ [<span data-ttu-id="52932-110">屬性</span><span class="sxs-lookup"><span data-stu-id="52932-110">Properties</span></span>](properties-wpf.md)

@@ -13,16 +13,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b3b4906f988d09f7b01aee40e8f63b589da5f33d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609200"
 ---
-# <a name="cordebugcodeinvokekind-enumeration"></a><span data-ttu-id="b9e07-102">CorDebugCodeInvokeKind 列舉</span><span class="sxs-lookup"><span data-stu-id="b9e07-102">CorDebugCodeInvokeKind Enumeration</span></span>
-<span data-ttu-id="b9e07-103">描述匯出函式如何叫用 Managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="b9e07-103">Describes how an exported function invokes managed code.</span></span>  
+# <a name="cordebugcodeinvokekind-enumeration"></a><span data-ttu-id="90f8d-102">CorDebugCodeInvokeKind 列舉</span><span class="sxs-lookup"><span data-stu-id="90f8d-102">CorDebugCodeInvokeKind Enumeration</span></span>
+<span data-ttu-id="90f8d-103">描述匯出函式如何叫用 Managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="90f8d-103">Describes how an exported function invokes managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b9e07-104">語法</span><span class="sxs-lookup"><span data-stu-id="b9e07-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="90f8d-104">語法</span><span class="sxs-lookup"><span data-stu-id="90f8d-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugCodeInvokeKind  
@@ -33,30 +33,30 @@ typedef enum CorDebugCodeInvokeKind
 } CorDebugCodeInvokeKind;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b9e07-105">成員</span><span class="sxs-lookup"><span data-stu-id="b9e07-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="90f8d-105">成員</span><span class="sxs-lookup"><span data-stu-id="90f8d-105">Members</span></span>  
   
-|<span data-ttu-id="b9e07-106">成員</span><span class="sxs-lookup"><span data-stu-id="b9e07-106">Member</span></span>|<span data-ttu-id="b9e07-107">描述</span><span class="sxs-lookup"><span data-stu-id="b9e07-107">Description</span></span>|  
+|<span data-ttu-id="90f8d-106">成員</span><span class="sxs-lookup"><span data-stu-id="90f8d-106">Member</span></span>|<span data-ttu-id="90f8d-107">描述</span><span class="sxs-lookup"><span data-stu-id="90f8d-107">Description</span></span>|  
 |------------|-----------------|  
-|`CODE_INVOKE_KIND_NONE`|<span data-ttu-id="b9e07-108">如果這個方法叫用任何 Managed 程式碼，明確事件或中斷點稍後必須找到這些程式碼。</span><span class="sxs-lookup"><span data-stu-id="b9e07-108">If any managed code is invoked by this method, it will have to be located by explicit events or breakpoints later.</span></span><br /><br /> <span data-ttu-id="b9e07-109">-或-</span><span class="sxs-lookup"><span data-stu-id="b9e07-109">--or--</span></span><br /><br /> <span data-ttu-id="b9e07-110">我們可能只是遺漏這個方法呼叫的一些 Managed 程式碼，因為沒有簡單的方法可以在其上停止。</span><span class="sxs-lookup"><span data-stu-id="b9e07-110">We may just miss some of the managed code this method calls because there is no easy way to stop on it.</span></span><br /><br /> <span data-ttu-id="b9e07-111">-或-</span><span class="sxs-lookup"><span data-stu-id="b9e07-111">--or--</span></span><br /><br /> <span data-ttu-id="b9e07-112">這個方法可能永遠不會叫用 Managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="b9e07-112">The method may never invoke managed code.</span></span>|  
-|`CODE_INVOKE_KIND_RETURN`|<span data-ttu-id="b9e07-113">這個方法會透過傳回指令叫用 Managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="b9e07-113">This method will invoke managed code via a return instruction.</span></span> <span data-ttu-id="b9e07-114">跳離應該會抵達下一個 Managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="b9e07-114">Stepping out should arrive at the next managed code.</span></span>|  
-|`CODE_INVOKE_KIND_TAILCALL`|<span data-ttu-id="b9e07-115">這個方法會透過 tail 呼叫叫用 Managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="b9e07-115">This method will invoke managed code via a tail-call.</span></span> <span data-ttu-id="b9e07-116">逐步執行和不進入任何呼叫指令應該會抵達 Managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="b9e07-116">Single-stepping and stepping over any call instructions should arrive at managed code.</span></span>|  
+|`CODE_INVOKE_KIND_NONE`|<span data-ttu-id="90f8d-108">如果這個方法叫用任何 Managed 程式碼，明確事件或中斷點稍後必須找到這些程式碼。</span><span class="sxs-lookup"><span data-stu-id="90f8d-108">If any managed code is invoked by this method, it will have to be located by explicit events or breakpoints later.</span></span><br /><br /> <span data-ttu-id="90f8d-109">-或-</span><span class="sxs-lookup"><span data-stu-id="90f8d-109">--or--</span></span><br /><br /> <span data-ttu-id="90f8d-110">我們可能只是遺漏這個方法呼叫的一些 Managed 程式碼，因為沒有簡單的方法可以在其上停止。</span><span class="sxs-lookup"><span data-stu-id="90f8d-110">We may just miss some of the managed code this method calls because there is no easy way to stop on it.</span></span><br /><br /> <span data-ttu-id="90f8d-111">-或-</span><span class="sxs-lookup"><span data-stu-id="90f8d-111">--or--</span></span><br /><br /> <span data-ttu-id="90f8d-112">這個方法可能永遠不會叫用 Managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="90f8d-112">The method may never invoke managed code.</span></span>|  
+|`CODE_INVOKE_KIND_RETURN`|<span data-ttu-id="90f8d-113">這個方法會透過傳回指令叫用 Managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="90f8d-113">This method will invoke managed code via a return instruction.</span></span> <span data-ttu-id="90f8d-114">跳離應該會抵達下一個 Managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="90f8d-114">Stepping out should arrive at the next managed code.</span></span>|  
+|`CODE_INVOKE_KIND_TAILCALL`|<span data-ttu-id="90f8d-115">這個方法會透過 tail 呼叫叫用 Managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="90f8d-115">This method will invoke managed code via a tail-call.</span></span> <span data-ttu-id="90f8d-116">逐步執行和不進入任何呼叫指令應該會抵達 Managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="90f8d-116">Single-stepping and stepping over any call instructions should arrive at managed code.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b9e07-117">備註</span><span class="sxs-lookup"><span data-stu-id="b9e07-117">Remarks</span></span>  
- <span data-ttu-id="b9e07-118">這個列舉型別由[ICorDebugProcess6::GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md)方法，以提供資訊逐步執行 managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="b9e07-118">This enumeration is used by the [ICorDebugProcess6::GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) method to provide information about stepping through managed code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="90f8d-117">備註</span><span class="sxs-lookup"><span data-stu-id="90f8d-117">Remarks</span></span>  
+ <span data-ttu-id="90f8d-118">這個列舉型別由[ICorDebugProcess6::GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md)方法，以提供資訊逐步執行 managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="90f8d-118">This enumeration is used by the [ICorDebugProcess6::GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) method to provide information about stepping through managed code.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b9e07-119">這個列舉僅適用於 .NET Native 偵錯案例。</span><span class="sxs-lookup"><span data-stu-id="b9e07-119">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
+>  <span data-ttu-id="90f8d-119">這個列舉僅適用於 .NET Native 偵錯案例。</span><span class="sxs-lookup"><span data-stu-id="90f8d-119">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b9e07-120">需求</span><span class="sxs-lookup"><span data-stu-id="b9e07-120">Requirements</span></span>  
- <span data-ttu-id="b9e07-121">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b9e07-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="90f8d-120">需求</span><span class="sxs-lookup"><span data-stu-id="90f8d-120">Requirements</span></span>  
+ <span data-ttu-id="90f8d-121">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="90f8d-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b9e07-122">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b9e07-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="90f8d-122">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="90f8d-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b9e07-123">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b9e07-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="90f8d-123">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="90f8d-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b9e07-124">**.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b9e07-124">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="90f8d-124">**.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="90f8d-124">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b9e07-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b9e07-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="90f8d-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="90f8d-125">See also</span></span>
 
-- [<span data-ttu-id="b9e07-126">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="b9e07-126">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [<span data-ttu-id="b9e07-127">偵錯</span><span class="sxs-lookup"><span data-stu-id="b9e07-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="90f8d-126">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="90f8d-126">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="90f8d-127">偵錯</span><span class="sxs-lookup"><span data-stu-id="90f8d-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

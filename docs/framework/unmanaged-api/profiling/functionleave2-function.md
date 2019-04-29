@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3efee2e2b595f1e0d9116dcac3fdaa99aa4659d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598892"
 ---
-# <a name="functionleave2-function"></a><span data-ttu-id="3e86b-102">FunctionLeave2 函式</span><span class="sxs-lookup"><span data-stu-id="3e86b-102">FunctionLeave2 Function</span></span>
-<span data-ttu-id="3e86b-103">函式傳回給呼叫者，並提供堆疊框架和函式傳回值的相關資訊，請通知分析工具。</span><span class="sxs-lookup"><span data-stu-id="3e86b-103">Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value.</span></span>  
+# <a name="functionleave2-function"></a><span data-ttu-id="ca8f3-102">FunctionLeave2 函式</span><span class="sxs-lookup"><span data-stu-id="ca8f3-102">FunctionLeave2 Function</span></span>
+<span data-ttu-id="ca8f3-103">函式傳回給呼叫者，並提供堆疊框架和函式傳回值的相關資訊，請通知分析工具。</span><span class="sxs-lookup"><span data-stu-id="ca8f3-103">Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3e86b-104">語法</span><span class="sxs-lookup"><span data-stu-id="3e86b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ca8f3-104">語法</span><span class="sxs-lookup"><span data-stu-id="ca8f3-104">Syntax</span></span>  
   
 ```  
 void __stdcall FunctionLeave2 (  
@@ -37,50 +37,50 @@ void __stdcall FunctionLeave2 (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3e86b-105">參數</span><span class="sxs-lookup"><span data-stu-id="3e86b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ca8f3-105">參數</span><span class="sxs-lookup"><span data-stu-id="ca8f3-105">Parameters</span></span>  
  `funcId`  
- <span data-ttu-id="3e86b-106">[in]函式傳回的識別項。</span><span class="sxs-lookup"><span data-stu-id="3e86b-106">[in] The identifier of the function that is returning.</span></span>  
+ <span data-ttu-id="ca8f3-106">[in]函式傳回的識別項。</span><span class="sxs-lookup"><span data-stu-id="ca8f3-106">[in] The identifier of the function that is returning.</span></span>  
   
  `clientData`  
- <span data-ttu-id="3e86b-107">[in]重新對應的函式識別項，透過先前指定的程式碼剖析工具[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)函式。</span><span class="sxs-lookup"><span data-stu-id="3e86b-107">[in] The remapped function identifier, which the profiler previously specified via the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function.</span></span>  
+ <span data-ttu-id="ca8f3-107">[in]重新對應的函式識別項，透過先前指定的程式碼剖析工具[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)函式。</span><span class="sxs-lookup"><span data-stu-id="ca8f3-107">[in] The remapped function identifier, which the profiler previously specified via the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function.</span></span>  
   
  `func`  
- <span data-ttu-id="3e86b-108">[in]A`COR_PRF_FRAME_INFO`指向堆疊框架的相關資訊的值。</span><span class="sxs-lookup"><span data-stu-id="3e86b-108">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>  
+ <span data-ttu-id="ca8f3-108">[in]A`COR_PRF_FRAME_INFO`指向堆疊框架的相關資訊的值。</span><span class="sxs-lookup"><span data-stu-id="ca8f3-108">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>  
   
- <span data-ttu-id="3e86b-109">分析工具應該將這視為不透明的控制代碼可傳遞給在執行引擎[ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="3e86b-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
+ <span data-ttu-id="ca8f3-109">分析工具應該將這視為不透明的控制代碼可傳遞給在執行引擎[ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="ca8f3-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
   
  `retvalRange`  
- <span data-ttu-id="3e86b-110">[in]指標[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)結構，指定函式的傳回值的記憶體位置。</span><span class="sxs-lookup"><span data-stu-id="3e86b-110">[in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that specifies the memory location of the function's return value.</span></span>  
+ <span data-ttu-id="ca8f3-110">[in]指標[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)結構，指定函式的傳回值的記憶體位置。</span><span class="sxs-lookup"><span data-stu-id="ca8f3-110">[in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that specifies the memory location of the function's return value.</span></span>  
   
- <span data-ttu-id="3e86b-111">若要存取傳回值的詳細資訊，`COR_PRF_ENABLE_FUNCTION_RETVAL`旗標必須設定。</span><span class="sxs-lookup"><span data-stu-id="3e86b-111">In order to access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set.</span></span> <span data-ttu-id="3e86b-112">可以使用分析工具[icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法來設定事件旗標。</span><span class="sxs-lookup"><span data-stu-id="3e86b-112">The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags.</span></span>  
+ <span data-ttu-id="ca8f3-111">若要存取傳回值的詳細資訊，`COR_PRF_ENABLE_FUNCTION_RETVAL`旗標必須設定。</span><span class="sxs-lookup"><span data-stu-id="ca8f3-111">In order to access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set.</span></span> <span data-ttu-id="ca8f3-112">可以使用分析工具[icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法來設定事件旗標。</span><span class="sxs-lookup"><span data-stu-id="ca8f3-112">The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3e86b-113">備註</span><span class="sxs-lookup"><span data-stu-id="3e86b-113">Remarks</span></span>  
- <span data-ttu-id="3e86b-114">值`func`並`retvalRange`參數都不是有效之後`FunctionLeave2`函式會傳回，因為可能會變更的值，或被終結。</span><span class="sxs-lookup"><span data-stu-id="3e86b-114">The values of the `func` and `retvalRange` parameters are not valid after the `FunctionLeave2` function returns because the values may change or be destroyed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ca8f3-113">備註</span><span class="sxs-lookup"><span data-stu-id="ca8f3-113">Remarks</span></span>  
+ <span data-ttu-id="ca8f3-114">值`func`並`retvalRange`參數都不是有效之後`FunctionLeave2`函式會傳回，因為可能會變更的值，或被終結。</span><span class="sxs-lookup"><span data-stu-id="ca8f3-114">The values of the `func` and `retvalRange` parameters are not valid after the `FunctionLeave2` function returns because the values may change or be destroyed.</span></span>  
   
- <span data-ttu-id="3e86b-115">`FunctionLeave2`函式是回呼; 您必須實作它。</span><span class="sxs-lookup"><span data-stu-id="3e86b-115">The `FunctionLeave2` function is a callback; you must implement it.</span></span> <span data-ttu-id="3e86b-116">的實作必須使用`__declspec`(`naked`) 儲存類別屬性。</span><span class="sxs-lookup"><span data-stu-id="3e86b-116">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
+ <span data-ttu-id="ca8f3-115">`FunctionLeave2`函式是回呼; 您必須實作它。</span><span class="sxs-lookup"><span data-stu-id="ca8f3-115">The `FunctionLeave2` function is a callback; you must implement it.</span></span> <span data-ttu-id="ca8f3-116">的實作必須使用`__declspec`(`naked`) 儲存類別屬性。</span><span class="sxs-lookup"><span data-stu-id="ca8f3-116">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
   
- <span data-ttu-id="3e86b-117">呼叫此函式之前，執行引擎不會儲存任何暫存器。</span><span class="sxs-lookup"><span data-stu-id="3e86b-117">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="ca8f3-117">呼叫此函式之前，執行引擎不會儲存任何暫存器。</span><span class="sxs-lookup"><span data-stu-id="ca8f3-117">The execution engine does not save any registers before calling this function.</span></span>  
   
--   <span data-ttu-id="3e86b-118">項目，您必須儲存所有您使用，包括與浮點單位 (FPU) 中的暫存器。</span><span class="sxs-lookup"><span data-stu-id="3e86b-118">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+- <span data-ttu-id="ca8f3-118">項目，您必須儲存所有您使用，包括與浮點單位 (FPU) 中的暫存器。</span><span class="sxs-lookup"><span data-stu-id="ca8f3-118">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
--   <span data-ttu-id="3e86b-119">結束時，您必須還原堆疊驅離其呼叫端所推送的所有參數。</span><span class="sxs-lookup"><span data-stu-id="3e86b-119">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+- <span data-ttu-id="ca8f3-119">結束時，您必須還原堆疊驅離其呼叫端所推送的所有參數。</span><span class="sxs-lookup"><span data-stu-id="ca8f3-119">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
- <span data-ttu-id="3e86b-120">實作`FunctionLeave2`應該不會封鎖，因為它將會延遲記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="3e86b-120">The implementation of `FunctionLeave2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="3e86b-121">實作不應嘗試進行記憶體回收，因為堆疊可能無法在記憶體回收方便集合的狀態。</span><span class="sxs-lookup"><span data-stu-id="3e86b-121">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="3e86b-122">如果嘗試進行記憶體回收，則執行階段將會封鎖直到`FunctionLeave2`傳回。</span><span class="sxs-lookup"><span data-stu-id="3e86b-122">If a garbage collection is attempted, the runtime will block until `FunctionLeave2` returns.</span></span>  
+ <span data-ttu-id="ca8f3-120">實作`FunctionLeave2`應該不會封鎖，因為它將會延遲記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="ca8f3-120">The implementation of `FunctionLeave2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="ca8f3-121">實作不應嘗試進行記憶體回收，因為堆疊可能無法在記憶體回收方便集合的狀態。</span><span class="sxs-lookup"><span data-stu-id="ca8f3-121">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="ca8f3-122">如果嘗試進行記憶體回收，則執行階段將會封鎖直到`FunctionLeave2`傳回。</span><span class="sxs-lookup"><span data-stu-id="ca8f3-122">If a garbage collection is attempted, the runtime will block until `FunctionLeave2` returns.</span></span>  
   
- <span data-ttu-id="3e86b-123">此外，`FunctionLeave2`函式不能呼叫至 managed 程式碼，或以任何方式造成 managed 的記憶體配置。</span><span class="sxs-lookup"><span data-stu-id="3e86b-123">Also, the `FunctionLeave2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
+ <span data-ttu-id="ca8f3-123">此外，`FunctionLeave2`函式不能呼叫至 managed 程式碼，或以任何方式造成 managed 的記憶體配置。</span><span class="sxs-lookup"><span data-stu-id="ca8f3-123">Also, the `FunctionLeave2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3e86b-124">需求</span><span class="sxs-lookup"><span data-stu-id="3e86b-124">Requirements</span></span>  
- <span data-ttu-id="3e86b-125">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3e86b-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ca8f3-124">需求</span><span class="sxs-lookup"><span data-stu-id="ca8f3-124">Requirements</span></span>  
+ <span data-ttu-id="ca8f3-125">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ca8f3-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3e86b-126">**標頭：** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="3e86b-126">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="ca8f3-126">**標頭：** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="ca8f3-126">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="3e86b-127">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3e86b-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ca8f3-127">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ca8f3-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3e86b-128">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3e86b-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ca8f3-128">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ca8f3-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3e86b-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3e86b-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ca8f3-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ca8f3-129">See also</span></span>
 
-- [<span data-ttu-id="3e86b-130">FunctionEnter2 函式</span><span class="sxs-lookup"><span data-stu-id="3e86b-130">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [<span data-ttu-id="3e86b-131">FunctionTailcall2 函式</span><span class="sxs-lookup"><span data-stu-id="3e86b-131">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [<span data-ttu-id="3e86b-132">SetEnterLeaveFunctionHooks2 方法</span><span class="sxs-lookup"><span data-stu-id="3e86b-132">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [<span data-ttu-id="3e86b-133">分析全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="3e86b-133">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [<span data-ttu-id="ca8f3-130">FunctionEnter2 函式</span><span class="sxs-lookup"><span data-stu-id="ca8f3-130">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [<span data-ttu-id="ca8f3-131">FunctionTailcall2 函式</span><span class="sxs-lookup"><span data-stu-id="ca8f3-131">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
+- [<span data-ttu-id="ca8f3-132">SetEnterLeaveFunctionHooks2 方法</span><span class="sxs-lookup"><span data-stu-id="ca8f3-132">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [<span data-ttu-id="ca8f3-133">分析全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="ca8f3-133">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

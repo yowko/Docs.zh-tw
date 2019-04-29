@@ -3,24 +3,24 @@ title: 工作 3：建立工具箱與 PropertyGrid 窗格
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
 ms.openlocfilehash: 15e5b4ea08b6bc243484b6963c1c06f448bb985b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641527"
 ---
-# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a><span data-ttu-id="dc500-102">工作 3：建立工具箱與 PropertyGrid 窗格</span><span class="sxs-lookup"><span data-stu-id="dc500-102">Task 3: Create the Toolbox and PropertyGrid Panes</span></span>
-<span data-ttu-id="dc500-103">在這個工作中，您將建立**工具箱**並**PropertyGrid**窗格並將其新增至重新裝載[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="dc500-103">In this task, you will create the **Toolbox** and **PropertyGrid** panes and add them to the rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span></span>  
+# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a><span data-ttu-id="367f8-102">工作 3：建立工具箱與 PropertyGrid 窗格</span><span class="sxs-lookup"><span data-stu-id="367f8-102">Task 3: Create the Toolbox and PropertyGrid Panes</span></span>
+<span data-ttu-id="367f8-103">在這個工作中，您將建立**工具箱**並**PropertyGrid**窗格並將其新增至重新裝載[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="367f8-103">In this task, you will create the **Toolbox** and **PropertyGrid** panes and add them to the rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span></span>  
   
- <span data-ttu-id="dc500-104">如需參考之後完成三個, 進行的 MainWindow.xaml.cs 檔案中的程式碼中的工作[重新裝載工作流程設計工具](rehosting-the-workflow-designer.md)系列的主題提供在本主題結尾處。</span><span class="sxs-lookup"><span data-stu-id="dc500-104">For reference, the code that should be in the MainWindow.xaml.cs file after completing the three tasks in the [Rehosting the Workflow Designer](rehosting-the-workflow-designer.md) series of topics is provided at the end of this topic.</span></span>  
+ <span data-ttu-id="367f8-104">如需參考之後完成三個, 進行的 MainWindow.xaml.cs 檔案中的程式碼中的工作[重新裝載工作流程設計工具](rehosting-the-workflow-designer.md)系列的主題提供在本主題結尾處。</span><span class="sxs-lookup"><span data-stu-id="367f8-104">For reference, the code that should be in the MainWindow.xaml.cs file after completing the three tasks in the [Rehosting the Workflow Designer](rehosting-the-workflow-designer.md) series of topics is provided at the end of this topic.</span></span>  
   
-### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a><span data-ttu-id="dc500-105">若要建立工具箱，並將它加入至方格</span><span class="sxs-lookup"><span data-stu-id="dc500-105">To create the Toolbox and add it to the grid</span></span>  
+### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a><span data-ttu-id="367f8-105">若要建立工具箱，並將它加入至方格</span><span class="sxs-lookup"><span data-stu-id="367f8-105">To create the Toolbox and add it to the grid</span></span>  
   
-1. <span data-ttu-id="dc500-106">開啟您依照所述的程序取得的 HostingApplication 專案[工作 2:裝載工作流程設計工具](task-2-host-the-workflow-designer.md)。</span><span class="sxs-lookup"><span data-stu-id="dc500-106">Open the HostingApplication project you obtained by following the procedure described in [Task 2: Host the Workflow Designer](task-2-host-the-workflow-designer.md).</span></span>  
+1. <span data-ttu-id="367f8-106">開啟您依照所述的程序取得的 HostingApplication 專案[工作 2:裝載工作流程設計工具](task-2-host-the-workflow-designer.md)。</span><span class="sxs-lookup"><span data-stu-id="367f8-106">Open the HostingApplication project you obtained by following the procedure described in [Task 2: Host the Workflow Designer](task-2-host-the-workflow-designer.md).</span></span>  
   
-2. <span data-ttu-id="dc500-107">在 **方案總管**窗格中，以滑鼠右鍵按一下 MainWindow.xaml 檔案，然後選取**檢視程式碼**。</span><span class="sxs-lookup"><span data-stu-id="dc500-107">In the **Solution Explorer** pane, right-click the MainWindow.xaml file and select **View Code**.</span></span>  
+2. <span data-ttu-id="367f8-107">在 **方案總管**窗格中，以滑鼠右鍵按一下 MainWindow.xaml 檔案，然後選取**檢視程式碼**。</span><span class="sxs-lookup"><span data-stu-id="367f8-107">In the **Solution Explorer** pane, right-click the MainWindow.xaml file and select **View Code**.</span></span>  
   
-3. <span data-ttu-id="dc500-108">新增`GetToolboxControl`方法，以`MainWindow`建立的類別<xref:System.Activities.Presentation.Toolbox.ToolboxControl>，將新**工具箱**類別**工具箱**，並指派<xref:System.Activities.Statements.Assign>和<xref:System.Activities.Statements.Sequence>活動類型轉換成該類別。</span><span class="sxs-lookup"><span data-stu-id="dc500-108">Add a `GetToolboxControl` method to the `MainWindow` class that creates a <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, adds a new **Toolbox** category to the **Toolbox**, and assigns the <xref:System.Activities.Statements.Assign> and <xref:System.Activities.Statements.Sequence> activity types to that category.</span></span>  
+3. <span data-ttu-id="367f8-108">新增`GetToolboxControl`方法，以`MainWindow`建立的類別<xref:System.Activities.Presentation.Toolbox.ToolboxControl>，將新**工具箱**類別**工具箱**，並指派<xref:System.Activities.Statements.Assign>和<xref:System.Activities.Statements.Sequence>活動類型轉換成該類別。</span><span class="sxs-lookup"><span data-stu-id="367f8-108">Add a `GetToolboxControl` method to the `MainWindow` class that creates a <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, adds a new **Toolbox** category to the **Toolbox**, and assigns the <xref:System.Activities.Statements.Assign> and <xref:System.Activities.Statements.Sequence> activity types to that category.</span></span>  
   
     ```csharp  
     private ToolboxControl GetToolboxControl()  
@@ -49,7 +49,7 @@ ms.locfileid: "59305999"
     }  
     ```  
   
-4. <span data-ttu-id="dc500-109">新增私用`AddToolbox`方法，以`MainWindow`類別會將放**工具箱**左側的資料行在方格中。</span><span class="sxs-lookup"><span data-stu-id="dc500-109">Add a private `AddToolbox` method to the `MainWindow` class that places the **Toolbox** in the left column on the grid.</span></span>  
+4. <span data-ttu-id="367f8-109">新增私用`AddToolbox`方法，以`MainWindow`類別會將放**工具箱**左側的資料行在方格中。</span><span class="sxs-lookup"><span data-stu-id="367f8-109">Add a private `AddToolbox` method to the `MainWindow` class that places the **Toolbox** in the left column on the grid.</span></span>  
   
     ```csharp  
     private void AddToolBox()  
@@ -60,7 +60,7 @@ ms.locfileid: "59305999"
     }  
     ```  
   
-5. <span data-ttu-id="dc500-110">在 `AddToolBox` 類別建構函式中加入 `MainWindow()` 方法的呼叫，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="dc500-110">Add a call to the `AddToolBox` method in the `MainWindow()` class constructor as shown in the following code.</span></span>  
+5. <span data-ttu-id="367f8-110">在 `AddToolBox` 類別建構函式中加入 `MainWindow()` 方法的呼叫，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="367f8-110">Add a call to the `AddToolBox` method in the `MainWindow()` class constructor as shown in the following code.</span></span>  
   
     ```csharp  
     public MainWindow()  
@@ -73,13 +73,13 @@ ms.locfileid: "59305999"
     }  
     ```  
   
-6. <span data-ttu-id="dc500-111">按 F5 以建置及執行您的方案。</span><span class="sxs-lookup"><span data-stu-id="dc500-111">Press F5 to build and run your solution.</span></span> <span data-ttu-id="dc500-112">**工具箱**包含<xref:System.Activities.Statements.Assign>和<xref:System.Activities.Statements.Sequence>活動應該會顯示。</span><span class="sxs-lookup"><span data-stu-id="dc500-112">The **Toolbox** containing the <xref:System.Activities.Statements.Assign> and <xref:System.Activities.Statements.Sequence> activities should be displayed.</span></span>  
+6. <span data-ttu-id="367f8-111">按 F5 以建置及執行您的方案。</span><span class="sxs-lookup"><span data-stu-id="367f8-111">Press F5 to build and run your solution.</span></span> <span data-ttu-id="367f8-112">**工具箱**包含<xref:System.Activities.Statements.Assign>和<xref:System.Activities.Statements.Sequence>活動應該會顯示。</span><span class="sxs-lookup"><span data-stu-id="367f8-112">The **Toolbox** containing the <xref:System.Activities.Statements.Assign> and <xref:System.Activities.Statements.Sequence> activities should be displayed.</span></span>  
   
-### <a name="to-create-the-propertygrid"></a><span data-ttu-id="dc500-113">若要建立 PropertyGrid</span><span class="sxs-lookup"><span data-stu-id="dc500-113">To create the PropertyGrid</span></span>  
+### <a name="to-create-the-propertygrid"></a><span data-ttu-id="367f8-113">若要建立 PropertyGrid</span><span class="sxs-lookup"><span data-stu-id="367f8-113">To create the PropertyGrid</span></span>  
   
-1. <span data-ttu-id="dc500-114">在 **方案總管**窗格中，以滑鼠右鍵按一下 MainWindow.xaml 檔案，然後選取**檢視程式碼**。</span><span class="sxs-lookup"><span data-stu-id="dc500-114">In the **Solution Explorer** pane, right-click the MainWindow.xaml file and select **View Code**.</span></span>  
+1. <span data-ttu-id="367f8-114">在 **方案總管**窗格中，以滑鼠右鍵按一下 MainWindow.xaml 檔案，然後選取**檢視程式碼**。</span><span class="sxs-lookup"><span data-stu-id="367f8-114">In the **Solution Explorer** pane, right-click the MainWindow.xaml file and select **View Code**.</span></span>  
   
-2. <span data-ttu-id="dc500-115">新增`AddPropertyInspector`方法，以`MainWindow`類別，以放置**PropertyGrid**中最右邊的資料行在方格窗格。</span><span class="sxs-lookup"><span data-stu-id="dc500-115">Add the `AddPropertyInspector` method to the `MainWindow` class to place the **PropertyGrid** pane in the rightmost column on the grid.</span></span>  
+2. <span data-ttu-id="367f8-115">新增`AddPropertyInspector`方法，以`MainWindow`類別，以放置**PropertyGrid**中最右邊的資料行在方格窗格。</span><span class="sxs-lookup"><span data-stu-id="367f8-115">Add the `AddPropertyInspector` method to the `MainWindow` class to place the **PropertyGrid** pane in the rightmost column on the grid.</span></span>  
   
     ```csharp  
     private void AddPropertyInspector()  
@@ -89,7 +89,7 @@ ms.locfileid: "59305999"
     }  
     ```  
   
-3. <span data-ttu-id="dc500-116">在 `AddPropertyInspector` 類別建構函式中加入 `MainWindow()` 方法的呼叫，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="dc500-116">Add a call to the `AddPropertyInspector` method in the `MainWindow()` class constructor as shown in the following code.</span></span>  
+3. <span data-ttu-id="367f8-116">在 `AddPropertyInspector` 類別建構函式中加入 `MainWindow()` 方法的呼叫，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="367f8-116">Add a call to the `AddPropertyInspector` method in the `MainWindow()` class constructor as shown in the following code.</span></span>  
   
     ```csharp  
     public MainWindow()  
@@ -103,10 +103,10 @@ ms.locfileid: "59305999"
     }  
     ```  
   
-4. <span data-ttu-id="dc500-117">按 F5 以建置及執行方案。</span><span class="sxs-lookup"><span data-stu-id="dc500-117">Press F5 to build and run the solution.</span></span> <span data-ttu-id="dc500-118">**工具箱**，工作流程設計畫布，並**PropertyGrid**窗格應會全部顯示，以及當您拖曳<xref:System.Activities.Statements.Assign>活動或<xref:System.Activities.Statements.Sequence>活動拖曳至設計畫布，屬性方格應該更新根據反白顯示的活動。</span><span class="sxs-lookup"><span data-stu-id="dc500-118">The **Toolbox**, workflow design canvas, and **PropertyGrid** panes should all be displayed, and when you drag an <xref:System.Activities.Statements.Assign> activity or a <xref:System.Activities.Statements.Sequence> activity onto the design canvas, the property grid should update depending on the highlighted activity.</span></span>  
+4. <span data-ttu-id="367f8-117">按 F5 以建置及執行方案。</span><span class="sxs-lookup"><span data-stu-id="367f8-117">Press F5 to build and run the solution.</span></span> <span data-ttu-id="367f8-118">**工具箱**，工作流程設計畫布，並**PropertyGrid**窗格應會全部顯示，以及當您拖曳<xref:System.Activities.Statements.Assign>活動或<xref:System.Activities.Statements.Sequence>活動拖曳至設計畫布，屬性方格應該更新根據反白顯示的活動。</span><span class="sxs-lookup"><span data-stu-id="367f8-118">The **Toolbox**, workflow design canvas, and **PropertyGrid** panes should all be displayed, and when you drag an <xref:System.Activities.Statements.Assign> activity or a <xref:System.Activities.Statements.Sequence> activity onto the design canvas, the property grid should update depending on the highlighted activity.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dc500-119">範例</span><span class="sxs-lookup"><span data-stu-id="dc500-119">Example</span></span>  
- <span data-ttu-id="dc500-120">MainWindow.xaml.cs 檔案現在應該會包含下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="dc500-120">The MainWindow.xaml.cs file should now contain the following code.</span></span>  
+## <a name="example"></a><span data-ttu-id="367f8-119">範例</span><span class="sxs-lookup"><span data-stu-id="367f8-119">Example</span></span>  
+ <span data-ttu-id="367f8-120">MainWindow.xaml.cs 檔案現在應該會包含下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="367f8-120">The MainWindow.xaml.cs file should now contain the following code.</span></span>  
   
 ```  
 using System;  
@@ -212,8 +212,8 @@ namespace HostingApplication
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="dc500-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dc500-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="367f8-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="367f8-121">See also</span></span>
 
-- [<span data-ttu-id="dc500-122">重新裝載工作流程設計工具</span><span class="sxs-lookup"><span data-stu-id="dc500-122">Rehosting the Workflow Designer</span></span>](rehosting-the-workflow-designer.md)
-- [<span data-ttu-id="dc500-123">工作 1:建立新的 Windows Presentation Foundation 應用程式</span><span class="sxs-lookup"><span data-stu-id="dc500-123">Task 1: Create a New Windows Presentation Foundation Application</span></span>](task-1-create-a-new-wpf-app.md)
-- [<span data-ttu-id="dc500-124">工作 2:裝載工作流程設計工具</span><span class="sxs-lookup"><span data-stu-id="dc500-124">Task 2: Host the Workflow Designer</span></span>](task-2-host-the-workflow-designer.md)
+- [<span data-ttu-id="367f8-122">重新裝載工作流程設計工具</span><span class="sxs-lookup"><span data-stu-id="367f8-122">Rehosting the Workflow Designer</span></span>](rehosting-the-workflow-designer.md)
+- [<span data-ttu-id="367f8-123">工作 1:建立新的 Windows Presentation Foundation 應用程式</span><span class="sxs-lookup"><span data-stu-id="367f8-123">Task 1: Create a New Windows Presentation Foundation Application</span></span>](task-1-create-a-new-wpf-app.md)
+- [<span data-ttu-id="367f8-124">工作 2:裝載工作流程設計工具</span><span class="sxs-lookup"><span data-stu-id="367f8-124">Task 2: Host the Workflow Designer</span></span>](task-2-host-the-workflow-designer.md)

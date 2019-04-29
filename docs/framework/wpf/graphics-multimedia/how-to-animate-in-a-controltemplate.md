@@ -6,20 +6,20 @@ helpviewer_keywords:
 - ControlTemplates [WPF], animating within
 ms.assetid: 97abb5d9-4dc7-4085-a011-54bd8bcb497b
 ms.openlocfilehash: a82cd68196382d541f1085b03f2e199a1bd0145f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755905"
 ---
-# <a name="how-to-animate-in-a-controltemplate"></a><span data-ttu-id="e42c8-102">HOW TO：在 ControlTemplate 中建立動畫</span><span class="sxs-lookup"><span data-stu-id="e42c8-102">How to: Animate in a ControlTemplate</span></span>
-<span data-ttu-id="e42c8-103">此範例示範如何使用<xref:System.Windows.Media.Animation.Storyboard>， <xref:System.Windows.EventTrigger>，並<xref:System.Windows.Trigger>物件來以動畫顯示內<xref:System.Windows.Controls.ControlTemplate>。</span><span class="sxs-lookup"><span data-stu-id="e42c8-103">This example shows how to use <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.EventTrigger>, and <xref:System.Windows.Trigger> objects to animate within a <xref:System.Windows.Controls.ControlTemplate>.</span></span>  
+# <a name="how-to-animate-in-a-controltemplate"></a><span data-ttu-id="dac7a-102">HOW TO：在 ControlTemplate 中建立動畫</span><span class="sxs-lookup"><span data-stu-id="dac7a-102">How to: Animate in a ControlTemplate</span></span>
+<span data-ttu-id="dac7a-103">此範例示範如何使用<xref:System.Windows.Media.Animation.Storyboard>， <xref:System.Windows.EventTrigger>，並<xref:System.Windows.Trigger>物件來以動畫顯示內<xref:System.Windows.Controls.ControlTemplate>。</span><span class="sxs-lookup"><span data-stu-id="dac7a-103">This example shows how to use <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.EventTrigger>, and <xref:System.Windows.Trigger> objects to animate within a <xref:System.Windows.Controls.ControlTemplate>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e42c8-104">範例</span><span class="sxs-lookup"><span data-stu-id="e42c8-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="dac7a-104">範例</span><span class="sxs-lookup"><span data-stu-id="dac7a-104">Example</span></span>  
  [!code-xaml[AnimatePropertyStoryboards#GraphicsMMControlTemplateStoryboardExample](~/samples/snippets/xaml/VS_Snippets_Wpf/AnimatePropertyStoryboards/XAML/ControlTemplateStoryboardExample.xaml#graphicsmmcontroltemplatestoryboardexample)]  
   
- <span data-ttu-id="e42c8-105">如需有關如何建立使用分鏡腳本的屬性動畫的詳細資訊，請參閱[分鏡腳本概觀](storyboards-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="e42c8-105">For more information about animating properties with storyboards, see [Storyboards Overview](storyboards-overview.md).</span></span>  
+ <span data-ttu-id="dac7a-105">如需有關如何建立使用分鏡腳本的屬性動畫的詳細資訊，請參閱[分鏡腳本概觀](storyboards-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="dac7a-105">For more information about animating properties with storyboards, see [Storyboards Overview](storyboards-overview.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e42c8-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e42c8-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dac7a-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dac7a-106">See also</span></span>
 
 - <xref:System.Windows.Controls.ControlTemplate>

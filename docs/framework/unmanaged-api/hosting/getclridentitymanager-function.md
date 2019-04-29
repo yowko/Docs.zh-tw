@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84f71266d84cc98c2a5deb4aa8639e36808315a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628024"
 ---
-# <a name="getclridentitymanager-function"></a><span data-ttu-id="2f612-102">GetCLRIdentityManager 函式</span><span class="sxs-lookup"><span data-stu-id="2f612-102">GetCLRIdentityManager Function</span></span>
-<span data-ttu-id="2f612-103">取得可讓 common language runtime (CLR) 管理身分識別的介面指標。</span><span class="sxs-lookup"><span data-stu-id="2f612-103">Gets a pointer to an interface that allows the common language runtime (CLR) to manage identities.</span></span>  
+# <a name="getclridentitymanager-function"></a><span data-ttu-id="0b2f9-102">GetCLRIdentityManager 函式</span><span class="sxs-lookup"><span data-stu-id="0b2f9-102">GetCLRIdentityManager Function</span></span>
+<span data-ttu-id="0b2f9-103">取得可讓 common language runtime (CLR) 管理身分識別的介面指標。</span><span class="sxs-lookup"><span data-stu-id="0b2f9-103">Gets a pointer to an interface that allows the common language runtime (CLR) to manage identities.</span></span>  
   
- <span data-ttu-id="2f612-104">此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="2f612-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="0b2f9-104">此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="0b2f9-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2f612-105">語法</span><span class="sxs-lookup"><span data-stu-id="2f612-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0b2f9-105">語法</span><span class="sxs-lookup"><span data-stu-id="0b2f9-105">Syntax</span></span>  
   
 ```  
 STDAPI GetCLRIdentityManager(  
@@ -37,25 +37,25 @@ STDAPI GetCLRIdentityManager(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2f612-106">參數</span><span class="sxs-lookup"><span data-stu-id="2f612-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0b2f9-106">參數</span><span class="sxs-lookup"><span data-stu-id="0b2f9-106">Parameters</span></span>  
  `riid`  
- <span data-ttu-id="2f612-107">[in]A `REFIID` （介面識別項），指定要取得的介面。</span><span class="sxs-lookup"><span data-stu-id="2f612-107">[in] A `REFIID` (an interface identifier) that specifies which interface to get.</span></span> <span data-ttu-id="2f612-108">此值必須是 IID_ICLRAssemblyIdentityManager 或 IID_ICLRHostBindingPolicyManager。</span><span class="sxs-lookup"><span data-stu-id="2f612-108">This value must be either IID_ICLRAssemblyIdentityManager or IID_ICLRHostBindingPolicyManager.</span></span>  
+ <span data-ttu-id="0b2f9-107">[in]A `REFIID` （介面識別項），指定要取得的介面。</span><span class="sxs-lookup"><span data-stu-id="0b2f9-107">[in] A `REFIID` (an interface identifier) that specifies which interface to get.</span></span> <span data-ttu-id="0b2f9-108">此值必須是 IID_ICLRAssemblyIdentityManager 或 IID_ICLRHostBindingPolicyManager。</span><span class="sxs-lookup"><span data-stu-id="0b2f9-108">This value must be either IID_ICLRAssemblyIdentityManager or IID_ICLRHostBindingPolicyManager.</span></span>  
   
  `ppManager`  
- <span data-ttu-id="2f612-109">[out]任一個的位址指標[ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)該[ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)物件。</span><span class="sxs-lookup"><span data-stu-id="2f612-109">[out] A pointer to the address of either an [ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md) or an [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) object.</span></span>  
+ <span data-ttu-id="0b2f9-109">[out]任一個的位址指標[ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)該[ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)物件。</span><span class="sxs-lookup"><span data-stu-id="0b2f9-109">[out] A pointer to the address of either an [ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md) or an [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2f612-110">備註</span><span class="sxs-lookup"><span data-stu-id="2f612-110">Remarks</span></span>  
- <span data-ttu-id="2f612-111">呼叫[GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md)函式可取得的指標`GetCLRIdentityManager`函式。</span><span class="sxs-lookup"><span data-stu-id="2f612-111">Call the [GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md) function to get a pointer to the `GetCLRIdentityManager` function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0b2f9-110">備註</span><span class="sxs-lookup"><span data-stu-id="0b2f9-110">Remarks</span></span>  
+ <span data-ttu-id="0b2f9-111">呼叫[GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md)函式可取得的指標`GetCLRIdentityManager`函式。</span><span class="sxs-lookup"><span data-stu-id="0b2f9-111">Call the [GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md) function to get a pointer to the `GetCLRIdentityManager` function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2f612-112">需求</span><span class="sxs-lookup"><span data-stu-id="2f612-112">Requirements</span></span>  
- <span data-ttu-id="2f612-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2f612-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0b2f9-112">需求</span><span class="sxs-lookup"><span data-stu-id="0b2f9-112">Requirements</span></span>  
+ <span data-ttu-id="0b2f9-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0b2f9-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2f612-114">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2f612-114">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="0b2f9-114">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0b2f9-114">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="2f612-115">**LIBRARY:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="2f612-115">**Library:** MSCorWks.dll</span></span>  
+ <span data-ttu-id="0b2f9-115">**LIBRARY:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="0b2f9-115">**Library:** MSCorWks.dll</span></span>  
   
- <span data-ttu-id="2f612-116">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2f612-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0b2f9-116">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0b2f9-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2f612-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2f612-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b2f9-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0b2f9-117">See also</span></span>
 
-- [<span data-ttu-id="2f612-118">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="2f612-118">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="0b2f9-118">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="0b2f9-118">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

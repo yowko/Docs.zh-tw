@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1e6805dc67f7ec5ceb8c67d77462a0200b6c0317
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59205900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641420"
 ---
-# <a name="iclrruntimehostexecuteindefaultappdomain-method"></a><span data-ttu-id="5fc13-102">ICLRRuntimeHost::ExecuteInDefaultAppDomain 方法</span><span class="sxs-lookup"><span data-stu-id="5fc13-102">ICLRRuntimeHost::ExecuteInDefaultAppDomain Method</span></span>
-<span data-ttu-id="5fc13-103">指定 managed 組件中會呼叫指定之型別的指定的方法。</span><span class="sxs-lookup"><span data-stu-id="5fc13-103">Calls the specified method of the specified type in the specified managed assembly.</span></span>  
+# <a name="iclrruntimehostexecuteindefaultappdomain-method"></a><span data-ttu-id="611d8-102">ICLRRuntimeHost::ExecuteInDefaultAppDomain 方法</span><span class="sxs-lookup"><span data-stu-id="611d8-102">ICLRRuntimeHost::ExecuteInDefaultAppDomain Method</span></span>
+<span data-ttu-id="611d8-103">指定 managed 組件中會呼叫指定之型別的指定的方法。</span><span class="sxs-lookup"><span data-stu-id="611d8-103">Calls the specified method of the specified type in the specified managed assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5fc13-104">語法</span><span class="sxs-lookup"><span data-stu-id="5fc13-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="611d8-104">語法</span><span class="sxs-lookup"><span data-stu-id="611d8-104">Syntax</span></span>  
   
 ```  
 HRESULT ExecuteInDefaultAppDomain (  
@@ -39,51 +39,51 @@ HRESULT ExecuteInDefaultAppDomain (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5fc13-105">參數</span><span class="sxs-lookup"><span data-stu-id="5fc13-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="611d8-105">參數</span><span class="sxs-lookup"><span data-stu-id="611d8-105">Parameters</span></span>  
  `pwzAssemblyPath`  
- <span data-ttu-id="5fc13-106">[in]通往<xref:System.Reflection.Assembly>定義<xref:System.Type>其方法是叫用。</span><span class="sxs-lookup"><span data-stu-id="5fc13-106">[in] The path to the <xref:System.Reflection.Assembly> that defines the <xref:System.Type> whose method is to be invoked.</span></span>  
+ <span data-ttu-id="611d8-106">[in]通往<xref:System.Reflection.Assembly>定義<xref:System.Type>其方法是叫用。</span><span class="sxs-lookup"><span data-stu-id="611d8-106">[in] The path to the <xref:System.Reflection.Assembly> that defines the <xref:System.Type> whose method is to be invoked.</span></span>  
   
  `pwzTypeName`  
- <span data-ttu-id="5fc13-107">[in]名稱<xref:System.Type>定義叫用的方法。</span><span class="sxs-lookup"><span data-stu-id="5fc13-107">[in] The name of the <xref:System.Type> that defines the method to invoke.</span></span>  
+ <span data-ttu-id="611d8-107">[in]名稱<xref:System.Type>定義叫用的方法。</span><span class="sxs-lookup"><span data-stu-id="611d8-107">[in] The name of the <xref:System.Type> that defines the method to invoke.</span></span>  
   
  `pwzMethodName`  
- <span data-ttu-id="5fc13-108">[in]若要叫用方法的名稱。</span><span class="sxs-lookup"><span data-stu-id="5fc13-108">[in] The name of the method to invoke.</span></span>  
+ <span data-ttu-id="611d8-108">[in]若要叫用方法的名稱。</span><span class="sxs-lookup"><span data-stu-id="611d8-108">[in] The name of the method to invoke.</span></span>  
   
  `pwzArgument`  
- <span data-ttu-id="5fc13-109">[in]要傳遞至方法的字串參數。</span><span class="sxs-lookup"><span data-stu-id="5fc13-109">[in] The string parameter to pass to the method.</span></span>  
+ <span data-ttu-id="611d8-109">[in]要傳遞至方法的字串參數。</span><span class="sxs-lookup"><span data-stu-id="611d8-109">[in] The string parameter to pass to the method.</span></span>  
   
  `pReturnValue`  
- <span data-ttu-id="5fc13-110">[out]叫用方法所傳回的整數值。</span><span class="sxs-lookup"><span data-stu-id="5fc13-110">[out] The integer value returned by the invoked method.</span></span>  
+ <span data-ttu-id="611d8-110">[out]叫用方法所傳回的整數值。</span><span class="sxs-lookup"><span data-stu-id="611d8-110">[out] The integer value returned by the invoked method.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5fc13-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="5fc13-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="611d8-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="611d8-111">Return Value</span></span>  
   
-|<span data-ttu-id="5fc13-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5fc13-112">HRESULT</span></span>|<span data-ttu-id="5fc13-113">描述</span><span class="sxs-lookup"><span data-stu-id="5fc13-113">Description</span></span>|  
+|<span data-ttu-id="611d8-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="611d8-112">HRESULT</span></span>|<span data-ttu-id="611d8-113">描述</span><span class="sxs-lookup"><span data-stu-id="611d8-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="5fc13-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="5fc13-114">S_OK</span></span>|<span data-ttu-id="5fc13-115">`ExecuteInDefaultAppDomain` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="5fc13-115">`ExecuteInDefaultAppDomain` returned successfully.</span></span>|  
-|<span data-ttu-id="5fc13-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="5fc13-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="5fc13-117">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="5fc13-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="5fc13-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="5fc13-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="5fc13-119">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="5fc13-119">The call timed out.</span></span>|  
-|<span data-ttu-id="5fc13-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="5fc13-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="5fc13-121">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="5fc13-121">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="5fc13-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="5fc13-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="5fc13-123">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="5fc13-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="5fc13-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="5fc13-124">E_FAIL</span></span>|<span data-ttu-id="5fc13-125">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="5fc13-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="5fc13-126">如果方法會傳回 E_FAIL，CRL 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="5fc13-126">If a method returns E_FAIL, the CRL is no longer usable within the process.</span></span> <span data-ttu-id="5fc13-127">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="5fc13-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="611d8-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="611d8-114">S_OK</span></span>|<span data-ttu-id="611d8-115">`ExecuteInDefaultAppDomain` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="611d8-115">`ExecuteInDefaultAppDomain` returned successfully.</span></span>|  
+|<span data-ttu-id="611d8-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="611d8-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="611d8-117">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="611d8-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="611d8-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="611d8-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="611d8-119">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="611d8-119">The call timed out.</span></span>|  
+|<span data-ttu-id="611d8-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="611d8-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="611d8-121">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="611d8-121">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="611d8-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="611d8-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="611d8-123">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="611d8-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="611d8-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="611d8-124">E_FAIL</span></span>|<span data-ttu-id="611d8-125">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="611d8-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="611d8-126">如果方法會傳回 E_FAIL，CRL 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="611d8-126">If a method returns E_FAIL, the CRL is no longer usable within the process.</span></span> <span data-ttu-id="611d8-127">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="611d8-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5fc13-128">備註</span><span class="sxs-lookup"><span data-stu-id="5fc13-128">Remarks</span></span>  
- <span data-ttu-id="5fc13-129">叫用的方法必須具有下列簽章：</span><span class="sxs-lookup"><span data-stu-id="5fc13-129">The invoked method must have the following signature:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="611d8-128">備註</span><span class="sxs-lookup"><span data-stu-id="611d8-128">Remarks</span></span>  
+ <span data-ttu-id="611d8-129">叫用的方法必須具有下列簽章：</span><span class="sxs-lookup"><span data-stu-id="611d8-129">The invoked method must have the following signature:</span></span>  
   
 ```  
 static int pwzMethodName (String pwzArgument)  
 ```  
   
- <span data-ttu-id="5fc13-130">何處`pwzMethodName`表示叫用的方法，名稱和`pwzArgument`表示的字串值做為參數傳遞至該方法。</span><span class="sxs-lookup"><span data-stu-id="5fc13-130">where `pwzMethodName` represents the name of the invoked method, and `pwzArgument` represents the string value passed as a parameter to that method.</span></span> <span data-ttu-id="5fc13-131">如果 HRESULT 值設定為 S_OK，`pReturnValue`設為 已叫用方法所傳回的整數值。</span><span class="sxs-lookup"><span data-stu-id="5fc13-131">If the HRESULT value is set to S_OK, `pReturnValue` is set to the integer value returned by the invoked method.</span></span> <span data-ttu-id="5fc13-132">否則，`pReturnValue`未設定。</span><span class="sxs-lookup"><span data-stu-id="5fc13-132">Otherwise, `pReturnValue` is not set.</span></span>  
+ <span data-ttu-id="611d8-130">何處`pwzMethodName`表示叫用的方法，名稱和`pwzArgument`表示的字串值做為參數傳遞至該方法。</span><span class="sxs-lookup"><span data-stu-id="611d8-130">where `pwzMethodName` represents the name of the invoked method, and `pwzArgument` represents the string value passed as a parameter to that method.</span></span> <span data-ttu-id="611d8-131">如果 HRESULT 值設定為 S_OK，`pReturnValue`設為 已叫用方法所傳回的整數值。</span><span class="sxs-lookup"><span data-stu-id="611d8-131">If the HRESULT value is set to S_OK, `pReturnValue` is set to the integer value returned by the invoked method.</span></span> <span data-ttu-id="611d8-132">否則，`pReturnValue`未設定。</span><span class="sxs-lookup"><span data-stu-id="611d8-132">Otherwise, `pReturnValue` is not set.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5fc13-133">需求</span><span class="sxs-lookup"><span data-stu-id="5fc13-133">Requirements</span></span>  
- <span data-ttu-id="5fc13-134">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5fc13-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="611d8-133">需求</span><span class="sxs-lookup"><span data-stu-id="611d8-133">Requirements</span></span>  
+ <span data-ttu-id="611d8-134">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="611d8-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5fc13-135">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5fc13-135">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="611d8-135">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="611d8-135">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="5fc13-136">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="5fc13-136">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="611d8-136">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="611d8-136">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5fc13-137">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5fc13-137">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="611d8-137">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="611d8-137">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5fc13-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5fc13-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="611d8-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="611d8-138">See also</span></span>
 
-- [<span data-ttu-id="5fc13-139">ICLRRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="5fc13-139">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [<span data-ttu-id="611d8-139">ICLRRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="611d8-139">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
