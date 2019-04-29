@@ -8,27 +8,27 @@ helpviewer_keywords:
 - adorners [WPF], removing
 ms.assetid: 97cf4d9f-0596-429e-8526-32a30aa4ae99
 ms.openlocfilehash: 256dd6fa0117f88aec2ef6b60c6dcd4c33b57855
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770756"
 ---
-# <a name="how-to-remove-an-adorner-from-an-element"></a><span data-ttu-id="d479a-102">HOW TO：從元素移除 Adorner</span><span class="sxs-lookup"><span data-stu-id="d479a-102">How to: Remove an Adorner from an Element</span></span>
-<span data-ttu-id="d479a-103">此範例示範如何以程式設計方式從指定中移除特定的裝飾項<xref:System.Windows.UIElement>。</span><span class="sxs-lookup"><span data-stu-id="d479a-103">This example shows how to programmatically remove a specific adorner from a specified <xref:System.Windows.UIElement>.</span></span>  
+# <a name="how-to-remove-an-adorner-from-an-element"></a><span data-ttu-id="1a6a1-102">HOW TO：從元素移除 Adorner</span><span class="sxs-lookup"><span data-stu-id="1a6a1-102">How to: Remove an Adorner from an Element</span></span>
+<span data-ttu-id="1a6a1-103">此範例示範如何以程式設計方式從指定中移除特定的裝飾項<xref:System.Windows.UIElement>。</span><span class="sxs-lookup"><span data-stu-id="1a6a1-103">This example shows how to programmatically remove a specific adorner from a specified <xref:System.Windows.UIElement>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d479a-104">範例</span><span class="sxs-lookup"><span data-stu-id="d479a-104">Example</span></span>  
- <span data-ttu-id="d479a-105">此詳細的程式碼範例所傳回的裝飾項的陣列中移除第一個裝飾項<xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A>。</span><span class="sxs-lookup"><span data-stu-id="d479a-105">This verbose code example removes the first adorner in the array of adorners returned by <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A>.</span></span>  <span data-ttu-id="d479a-106">此範例會擷取上的裝飾項<xref:System.Windows.UIElement>名為*myTextBox*。</span><span class="sxs-lookup"><span data-stu-id="d479a-106">This example happens to retrieve the adorners on a <xref:System.Windows.UIElement> named *myTextBox*.</span></span>  <span data-ttu-id="d479a-107">呼叫中指定的項目<xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A>有任何裝飾項，`null`會傳回。</span><span class="sxs-lookup"><span data-stu-id="d479a-107">If the element specified in the call to <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A> has no adorners, `null` is returned.</span></span>  <span data-ttu-id="d479a-108">此程式碼明確檢查有 null 的陣列，最適合應用程式的 null 陣列應該在其中應該相當常見。</span><span class="sxs-lookup"><span data-stu-id="d479a-108">This code explicitly checks for a null array, and is best suited for applications where a null array is expected to be relatively common.</span></span>  
+## <a name="example"></a><span data-ttu-id="1a6a1-104">範例</span><span class="sxs-lookup"><span data-stu-id="1a6a1-104">Example</span></span>  
+ <span data-ttu-id="1a6a1-105">此詳細的程式碼範例所傳回的裝飾項的陣列中移除第一個裝飾項<xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A>。</span><span class="sxs-lookup"><span data-stu-id="1a6a1-105">This verbose code example removes the first adorner in the array of adorners returned by <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A>.</span></span>  <span data-ttu-id="1a6a1-106">此範例會擷取上的裝飾項<xref:System.Windows.UIElement>名為*myTextBox*。</span><span class="sxs-lookup"><span data-stu-id="1a6a1-106">This example happens to retrieve the adorners on a <xref:System.Windows.UIElement> named *myTextBox*.</span></span>  <span data-ttu-id="1a6a1-107">呼叫中指定的項目<xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A>有任何裝飾項，`null`會傳回。</span><span class="sxs-lookup"><span data-stu-id="1a6a1-107">If the element specified in the call to <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A> has no adorners, `null` is returned.</span></span>  <span data-ttu-id="1a6a1-108">此程式碼明確檢查有 null 的陣列，最適合應用程式的 null 陣列應該在其中應該相當常見。</span><span class="sxs-lookup"><span data-stu-id="1a6a1-108">This code explicitly checks for a null array, and is best suited for applications where a null array is expected to be relatively common.</span></span>  
   
  [!code-csharp[AdornersMiscCode#_RemoveSpecificAdornerLong](~/samples/snippets/csharp/VS_Snippets_Wpf/AdornersMiscCode/CSharp/Window1.xaml.cs#_removespecificadornerlong)]
  [!code-vb[AdornersMiscCode#_RemoveSpecificAdornerLong](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removespecificadornerlong)]  
   
-## <a name="example"></a><span data-ttu-id="d479a-109">範例</span><span class="sxs-lookup"><span data-stu-id="d479a-109">Example</span></span>  
- <span data-ttu-id="d479a-110">此壓縮之程式碼範例是功能上相當於上面顯示的詳細資訊的範例。</span><span class="sxs-lookup"><span data-stu-id="d479a-110">This condensed code example is functionally equivalent to the verbose example shown above.</span></span> <span data-ttu-id="d479a-111">此程式碼不會明確檢查 null 的陣列，所以有可能，<xref:System.NullReferenceException>可能會引發例外狀況。</span><span class="sxs-lookup"><span data-stu-id="d479a-111">This code does not explicitly check for a null array, so it is possible that a <xref:System.NullReferenceException> exception may be raised.</span></span>  <span data-ttu-id="d479a-112">此程式碼最適合用於應用程式，使用 null 陣列應該很少見。</span><span class="sxs-lookup"><span data-stu-id="d479a-112">This code is best suited for applications where a null array is expected to be rare.</span></span>  
+## <a name="example"></a><span data-ttu-id="1a6a1-109">範例</span><span class="sxs-lookup"><span data-stu-id="1a6a1-109">Example</span></span>  
+ <span data-ttu-id="1a6a1-110">此壓縮之程式碼範例是功能上相當於上面顯示的詳細資訊的範例。</span><span class="sxs-lookup"><span data-stu-id="1a6a1-110">This condensed code example is functionally equivalent to the verbose example shown above.</span></span> <span data-ttu-id="1a6a1-111">此程式碼不會明確檢查 null 的陣列，所以有可能，<xref:System.NullReferenceException>可能會引發例外狀況。</span><span class="sxs-lookup"><span data-stu-id="1a6a1-111">This code does not explicitly check for a null array, so it is possible that a <xref:System.NullReferenceException> exception may be raised.</span></span>  <span data-ttu-id="1a6a1-112">此程式碼最適合用於應用程式，使用 null 陣列應該很少見。</span><span class="sxs-lookup"><span data-stu-id="1a6a1-112">This code is best suited for applications where a null array is expected to be rare.</span></span>  
   
  [!code-csharp[AdornersMiscCode#_RemoveSpecificAdornerShort](~/samples/snippets/csharp/VS_Snippets_Wpf/AdornersMiscCode/CSharp/Window1.xaml.cs#_removespecificadornershort)]
  [!code-vb[AdornersMiscCode#_RemoveSpecificAdornerShort](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removespecificadornershort)]  
   
-## <a name="see-also"></a><span data-ttu-id="d479a-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d479a-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1a6a1-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1a6a1-113">See also</span></span>
 
-- [<span data-ttu-id="d479a-114">裝飾項概觀</span><span class="sxs-lookup"><span data-stu-id="d479a-114">Adorners Overview</span></span>](adorners-overview.md)
+- [<span data-ttu-id="1a6a1-114">裝飾項概觀</span><span class="sxs-lookup"><span data-stu-id="1a6a1-114">Adorners Overview</span></span>](adorners-overview.md)

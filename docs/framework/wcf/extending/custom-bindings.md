@@ -6,77 +6,77 @@ helpviewer_keywords:
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
 ms.openlocfilehash: 314409f5ac4ecb4b18f3b8d3f2aeb08a507ec9e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696167"
 ---
-# <a name="custom-bindings"></a><span data-ttu-id="34c31-102">自訂繫結</span><span class="sxs-lookup"><span data-stu-id="34c31-102">Custom Bindings</span></span>
-<span data-ttu-id="34c31-103">當系統提供的其中一個繫結不符合服務的需求時，您可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 類別。</span><span class="sxs-lookup"><span data-stu-id="34c31-103">You can use the <xref:System.ServiceModel.Channels.CustomBinding> class when one of the system-provided bindings does not meet the requirements of your service.</span></span> <span data-ttu-id="34c31-104">所有繫結都是根據已排序的繫結項目組所建構。</span><span class="sxs-lookup"><span data-stu-id="34c31-104">All bindings are constructed from an ordered set of binding elements.</span></span> <span data-ttu-id="34c31-105">自訂的繫結可以從系統提供的繫結項目建置，或是可以包含使用者定義的自訂繫結項目。</span><span class="sxs-lookup"><span data-stu-id="34c31-105">Custom bindings can be built from a set of system-provided binding elements or can include user-defined custom binding elements.</span></span> <span data-ttu-id="34c31-106">例如，您可以使用自訂繫結項目，以便在服務端點使用新的傳輸或編碼器。</span><span class="sxs-lookup"><span data-stu-id="34c31-106">You can use custom binding elements, for example, to enable the use of new transports or encoders at a service endpoint.</span></span> <span data-ttu-id="34c31-107">如需實用範例，請參閱[自訂繫結範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90))。</span><span class="sxs-lookup"><span data-stu-id="34c31-107">For working examples, see [Custom Binding Samples](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90)).</span></span> <span data-ttu-id="34c31-108">如需詳細資訊，請參閱 < [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。</span><span class="sxs-lookup"><span data-stu-id="34c31-108">For more information, see [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).</span></span>  
+# <a name="custom-bindings"></a><span data-ttu-id="d2ae1-102">自訂繫結</span><span class="sxs-lookup"><span data-stu-id="d2ae1-102">Custom Bindings</span></span>
+<span data-ttu-id="d2ae1-103">當系統提供的其中一個繫結不符合服務的需求時，您可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 類別。</span><span class="sxs-lookup"><span data-stu-id="d2ae1-103">You can use the <xref:System.ServiceModel.Channels.CustomBinding> class when one of the system-provided bindings does not meet the requirements of your service.</span></span> <span data-ttu-id="d2ae1-104">所有繫結都是根據已排序的繫結項目組所建構。</span><span class="sxs-lookup"><span data-stu-id="d2ae1-104">All bindings are constructed from an ordered set of binding elements.</span></span> <span data-ttu-id="d2ae1-105">自訂的繫結可以從系統提供的繫結項目建置，或是可以包含使用者定義的自訂繫結項目。</span><span class="sxs-lookup"><span data-stu-id="d2ae1-105">Custom bindings can be built from a set of system-provided binding elements or can include user-defined custom binding elements.</span></span> <span data-ttu-id="d2ae1-106">例如，您可以使用自訂繫結項目，以便在服務端點使用新的傳輸或編碼器。</span><span class="sxs-lookup"><span data-stu-id="d2ae1-106">You can use custom binding elements, for example, to enable the use of new transports or encoders at a service endpoint.</span></span> <span data-ttu-id="d2ae1-107">如需實用範例，請參閱[自訂繫結範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90))。</span><span class="sxs-lookup"><span data-stu-id="d2ae1-107">For working examples, see [Custom Binding Samples](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90)).</span></span> <span data-ttu-id="d2ae1-108">如需詳細資訊，請參閱 < [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。</span><span class="sxs-lookup"><span data-stu-id="d2ae1-108">For more information, see [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).</span></span>  
   
-## <a name="construction-of-a-custom-binding"></a><span data-ttu-id="34c31-109">建構自訂繫結</span><span class="sxs-lookup"><span data-stu-id="34c31-109">Construction of a Custom Binding</span></span>  
- <span data-ttu-id="34c31-110">在建構自訂繫結時，會使用依特定順序堆疊的繫結項目集合中的 <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> 建構函式：</span><span class="sxs-lookup"><span data-stu-id="34c31-110">A custom binding is constructed using the <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> constructor from a collection of binding elements that are "stacked" in a specific order:</span></span>  
+## <a name="construction-of-a-custom-binding"></a><span data-ttu-id="d2ae1-109">建構自訂繫結</span><span class="sxs-lookup"><span data-stu-id="d2ae1-109">Construction of a Custom Binding</span></span>  
+ <span data-ttu-id="d2ae1-110">在建構自訂繫結時，會使用依特定順序堆疊的繫結項目集合中的 <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> 建構函式：</span><span class="sxs-lookup"><span data-stu-id="d2ae1-110">A custom binding is constructed using the <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> constructor from a collection of binding elements that are "stacked" in a specific order:</span></span>  
   
--   <span data-ttu-id="34c31-111">在最上方為允許流動異動的選擇性 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 類別。</span><span class="sxs-lookup"><span data-stu-id="34c31-111">At the top is an optional <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> class that allows flowing transactions.</span></span>  
+- <span data-ttu-id="d2ae1-111">在最上方為允許流動異動的選擇性 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 類別。</span><span class="sxs-lookup"><span data-stu-id="d2ae1-111">At the top is an optional <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> class that allows flowing transactions.</span></span>  
   
--   <span data-ttu-id="34c31-112">接下來是選擇性 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> 類別，它會提供 WS-ReliableMessaging 規格中所定義的工作階段和排序機制。</span><span class="sxs-lookup"><span data-stu-id="34c31-112">Next is an optional <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> class that provides a session and ordering mechanisms as defined in the WS-ReliableMessaging specification.</span></span> <span data-ttu-id="34c31-113">工作階段可以跨 SOAP 和傳輸媒介。</span><span class="sxs-lookup"><span data-stu-id="34c31-113">A session can cross SOAP and transport intermediaries.</span></span>  
+- <span data-ttu-id="d2ae1-112">接下來是選擇性 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> 類別，它會提供 WS-ReliableMessaging 規格中所定義的工作階段和排序機制。</span><span class="sxs-lookup"><span data-stu-id="d2ae1-112">Next is an optional <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> class that provides a session and ordering mechanisms as defined in the WS-ReliableMessaging specification.</span></span> <span data-ttu-id="d2ae1-113">工作階段可以跨 SOAP 和傳輸媒介。</span><span class="sxs-lookup"><span data-stu-id="d2ae1-113">A session can cross SOAP and transport intermediaries.</span></span>  
   
--   <span data-ttu-id="34c31-114">下一個是選擇性的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別，它會提供如授權、驗證、保護和機密性等安全性功能。</span><span class="sxs-lookup"><span data-stu-id="34c31-114">Next is an optional <xref:System.ServiceModel.Channels.SecurityBindingElement> class that provides security features such as authorization, authentication, protection, and confidentiality.</span></span>  
+- <span data-ttu-id="d2ae1-114">下一個是選擇性的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別，它會提供如授權、驗證、保護和機密性等安全性功能。</span><span class="sxs-lookup"><span data-stu-id="d2ae1-114">Next is an optional <xref:System.ServiceModel.Channels.SecurityBindingElement> class that provides security features such as authorization, authentication, protection, and confidentiality.</span></span>  
   
--   <span data-ttu-id="34c31-115">下一個是選擇性的 <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> 類別，它可以與傳輸通訊協定進行雙向的雙工通訊，HTTP 之類的通訊協定原本並不支援雙工通訊。</span><span class="sxs-lookup"><span data-stu-id="34c31-115">Next is an optional <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> class that provides the ability to have two way duplex communication with a transport protocol that does not support duplex communication natively, such as HTTP.</span></span>  
+- <span data-ttu-id="d2ae1-115">下一個是選擇性的 <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> 類別，它可以與傳輸通訊協定進行雙向的雙工通訊，HTTP 之類的通訊協定原本並不支援雙工通訊。</span><span class="sxs-lookup"><span data-stu-id="d2ae1-115">Next is an optional <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> class that provides the ability to have two way duplex communication with a transport protocol that does not support duplex communication natively, such as HTTP.</span></span>  
   
--   <span data-ttu-id="34c31-116">下一個是選擇性的 <xref:System.ServiceModel.Channels.OneWayBindingElement> 類別，它提供單向通訊。</span><span class="sxs-lookup"><span data-stu-id="34c31-116">Next is an optional <xref:System.ServiceModel.Channels.OneWayBindingElement>) class that provides one-way communication.</span></span>  
+- <span data-ttu-id="d2ae1-116">下一個是選擇性的 <xref:System.ServiceModel.Channels.OneWayBindingElement> 類別，它提供單向通訊。</span><span class="sxs-lookup"><span data-stu-id="d2ae1-116">Next is an optional <xref:System.ServiceModel.Channels.OneWayBindingElement>) class that provides one-way communication.</span></span>  
   
--   <span data-ttu-id="34c31-117">下一個是選擇性的資料流安全性繫結項目，這個項目可以是下列其中一種。</span><span class="sxs-lookup"><span data-stu-id="34c31-117">Next is an optional stream security binding element which can be one of the following.</span></span>  
+- <span data-ttu-id="d2ae1-117">下一個是選擇性的資料流安全性繫結項目，這個項目可以是下列其中一種。</span><span class="sxs-lookup"><span data-stu-id="d2ae1-117">Next is an optional stream security binding element which can be one of the following.</span></span>  
   
-    -   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+    - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
-    -   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+    - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
--   <span data-ttu-id="34c31-118">再來是必要的訊息編碼繫結項目。</span><span class="sxs-lookup"><span data-stu-id="34c31-118">Next is a required message encoding binding element.</span></span> <span data-ttu-id="34c31-119">您可以使用自己的訊息編碼器，或是三個訊息編碼繫結的其中一個：</span><span class="sxs-lookup"><span data-stu-id="34c31-119">You can use your own message encoder or one of the three message encoding bindings:</span></span>  
+- <span data-ttu-id="d2ae1-118">再來是必要的訊息編碼繫結項目。</span><span class="sxs-lookup"><span data-stu-id="d2ae1-118">Next is a required message encoding binding element.</span></span> <span data-ttu-id="d2ae1-119">您可以使用自己的訊息編碼器，或是三個訊息編碼繫結的其中一個：</span><span class="sxs-lookup"><span data-stu-id="d2ae1-119">You can use your own message encoder or one of the three message encoding bindings:</span></span>  
   
-    -   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
+    - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
   
-    -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
+    - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
   
-    -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
+    - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
- <span data-ttu-id="34c31-120">最下方是必要的傳輸項目。</span><span class="sxs-lookup"><span data-stu-id="34c31-120">At the bottom is a required transport element.</span></span> <span data-ttu-id="34c31-121">您可以使用自己的傳輸或其中一個 Windows Communication Foundation (WCF) 提供下列傳輸繫結項目：</span><span class="sxs-lookup"><span data-stu-id="34c31-121">You can use your own transport or one of the following transport binding elements Windows Communication Foundation (WCF) provides:</span></span>  
+ <span data-ttu-id="d2ae1-120">最下方是必要的傳輸項目。</span><span class="sxs-lookup"><span data-stu-id="d2ae1-120">At the bottom is a required transport element.</span></span> <span data-ttu-id="d2ae1-121">您可以使用自己的傳輸或其中一個 Windows Communication Foundation (WCF) 提供下列傳輸繫結項目：</span><span class="sxs-lookup"><span data-stu-id="d2ae1-121">You can use your own transport or one of the following transport binding elements Windows Communication Foundation (WCF) provides:</span></span>  
   
--   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
   
--   <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
   
- <span data-ttu-id="34c31-122">下表摘要列出每一層的選項。</span><span class="sxs-lookup"><span data-stu-id="34c31-122">The following table summarizes the options for each layer.</span></span>  
+ <span data-ttu-id="d2ae1-122">下表摘要列出每一層的選項。</span><span class="sxs-lookup"><span data-stu-id="d2ae1-122">The following table summarizes the options for each layer.</span></span>  
   
-|<span data-ttu-id="34c31-123">圖層</span><span class="sxs-lookup"><span data-stu-id="34c31-123">Layer</span></span>|<span data-ttu-id="34c31-124">選項</span><span class="sxs-lookup"><span data-stu-id="34c31-124">Options</span></span>|<span data-ttu-id="34c31-125">必要</span><span class="sxs-lookup"><span data-stu-id="34c31-125">Required</span></span>|  
+|<span data-ttu-id="d2ae1-123">圖層</span><span class="sxs-lookup"><span data-stu-id="d2ae1-123">Layer</span></span>|<span data-ttu-id="d2ae1-124">選項</span><span class="sxs-lookup"><span data-stu-id="d2ae1-124">Options</span></span>|<span data-ttu-id="d2ae1-125">必要</span><span class="sxs-lookup"><span data-stu-id="d2ae1-125">Required</span></span>|  
 |-----------|-------------|--------------|  
-|<span data-ttu-id="34c31-126">異動</span><span class="sxs-lookup"><span data-stu-id="34c31-126">Transactions</span></span>|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|<span data-ttu-id="34c31-127">否</span><span class="sxs-lookup"><span data-stu-id="34c31-127">No</span></span>|  
-|<span data-ttu-id="34c31-128">可靠性</span><span class="sxs-lookup"><span data-stu-id="34c31-128">Reliability</span></span>|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|<span data-ttu-id="34c31-129">否</span><span class="sxs-lookup"><span data-stu-id="34c31-129">No</span></span>|  
-|<span data-ttu-id="34c31-130">安全性</span><span class="sxs-lookup"><span data-stu-id="34c31-130">Security</span></span>|<xref:System.ServiceModel.Channels.SecurityBindingElement>|<span data-ttu-id="34c31-131">否</span><span class="sxs-lookup"><span data-stu-id="34c31-131">No</span></span>|  
-|<span data-ttu-id="34c31-132">編碼</span><span class="sxs-lookup"><span data-stu-id="34c31-132">Encoding</span></span>|<span data-ttu-id="34c31-133">文字、二進位、訊息傳輸最佳化機制 (MTOM)、自訂</span><span class="sxs-lookup"><span data-stu-id="34c31-133">Text, binary, Message Transmission Optimization Mechanism (MTOM), custom</span></span>|<span data-ttu-id="34c31-134">是</span><span class="sxs-lookup"><span data-stu-id="34c31-134">Yes</span></span>|  
-|<span data-ttu-id="34c31-135">Transport</span><span class="sxs-lookup"><span data-stu-id="34c31-135">Transport</span></span>|<span data-ttu-id="34c31-136">TCP、HTTP、HTTPS、具名管道 (也稱為 IPC)、對等式 (P2P)、訊息佇列 (也稱為 MSMQ)、自訂</span><span class="sxs-lookup"><span data-stu-id="34c31-136">TCP, HTTP, HTTPS, named pipes (also known as IPC), Peer-to-Peer (P2P), Message Queuing (also known as MSMQ), Custom</span></span>|<span data-ttu-id="34c31-137">是</span><span class="sxs-lookup"><span data-stu-id="34c31-137">Yes</span></span>|  
+|<span data-ttu-id="d2ae1-126">異動</span><span class="sxs-lookup"><span data-stu-id="d2ae1-126">Transactions</span></span>|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|<span data-ttu-id="d2ae1-127">否</span><span class="sxs-lookup"><span data-stu-id="d2ae1-127">No</span></span>|  
+|<span data-ttu-id="d2ae1-128">可靠性</span><span class="sxs-lookup"><span data-stu-id="d2ae1-128">Reliability</span></span>|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|<span data-ttu-id="d2ae1-129">否</span><span class="sxs-lookup"><span data-stu-id="d2ae1-129">No</span></span>|  
+|<span data-ttu-id="d2ae1-130">安全性</span><span class="sxs-lookup"><span data-stu-id="d2ae1-130">Security</span></span>|<xref:System.ServiceModel.Channels.SecurityBindingElement>|<span data-ttu-id="d2ae1-131">否</span><span class="sxs-lookup"><span data-stu-id="d2ae1-131">No</span></span>|  
+|<span data-ttu-id="d2ae1-132">編碼</span><span class="sxs-lookup"><span data-stu-id="d2ae1-132">Encoding</span></span>|<span data-ttu-id="d2ae1-133">文字、二進位、訊息傳輸最佳化機制 (MTOM)、自訂</span><span class="sxs-lookup"><span data-stu-id="d2ae1-133">Text, binary, Message Transmission Optimization Mechanism (MTOM), custom</span></span>|<span data-ttu-id="d2ae1-134">是</span><span class="sxs-lookup"><span data-stu-id="d2ae1-134">Yes</span></span>|  
+|<span data-ttu-id="d2ae1-135">Transport</span><span class="sxs-lookup"><span data-stu-id="d2ae1-135">Transport</span></span>|<span data-ttu-id="d2ae1-136">TCP、HTTP、HTTPS、具名管道 (也稱為 IPC)、對等式 (P2P)、訊息佇列 (也稱為 MSMQ)、自訂</span><span class="sxs-lookup"><span data-stu-id="d2ae1-136">TCP, HTTP, HTTPS, named pipes (also known as IPC), Peer-to-Peer (P2P), Message Queuing (also known as MSMQ), Custom</span></span>|<span data-ttu-id="d2ae1-137">是</span><span class="sxs-lookup"><span data-stu-id="d2ae1-137">Yes</span></span>|  
   
- <span data-ttu-id="34c31-138">此外，您也可以定義自己的繫結項目，並將其插入上述任何定義層之間。</span><span class="sxs-lookup"><span data-stu-id="34c31-138">In addition, you can define your own binding elements and insert them between any of the preceding defined layers.</span></span>  
+ <span data-ttu-id="d2ae1-138">此外，您也可以定義自己的繫結項目，並將其插入上述任何定義層之間。</span><span class="sxs-lookup"><span data-stu-id="d2ae1-138">In addition, you can define your own binding elements and insert them between any of the preceding defined layers.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="34c31-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="34c31-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d2ae1-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d2ae1-139">See also</span></span>
 
-- [<span data-ttu-id="34c31-140">建立端點概觀</span><span class="sxs-lookup"><span data-stu-id="34c31-140">Endpoint Creation Overview</span></span>](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [<span data-ttu-id="34c31-141">使用繫結設定服務與用戶端</span><span class="sxs-lookup"><span data-stu-id="34c31-141">Using Bindings to Configure Services and Clients</span></span>](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [<span data-ttu-id="34c31-142">系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="34c31-142">System-Provided Bindings</span></span>](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [<span data-ttu-id="34c31-143">如何：自訂系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="34c31-143">How to: Customize a System-Provided Binding</span></span>](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
-- [<span data-ttu-id="34c31-144">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="34c31-144">\<customBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [<span data-ttu-id="34c31-145">自訂繫結</span><span class="sxs-lookup"><span data-stu-id="34c31-145">Custom Binding</span></span>](../../../../docs/framework/wcf/samples/custom-binding.md)
+- [<span data-ttu-id="d2ae1-140">建立端點概觀</span><span class="sxs-lookup"><span data-stu-id="d2ae1-140">Endpoint Creation Overview</span></span>](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [<span data-ttu-id="d2ae1-141">使用繫結設定服務與用戶端</span><span class="sxs-lookup"><span data-stu-id="d2ae1-141">Using Bindings to Configure Services and Clients</span></span>](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [<span data-ttu-id="d2ae1-142">系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="d2ae1-142">System-Provided Bindings</span></span>](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [<span data-ttu-id="d2ae1-143">如何：自訂系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="d2ae1-143">How to: Customize a System-Provided Binding</span></span>](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
+- [<span data-ttu-id="d2ae1-144">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="d2ae1-144">\<customBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [<span data-ttu-id="d2ae1-145">自訂繫結</span><span class="sxs-lookup"><span data-stu-id="d2ae1-145">Custom Binding</span></span>](../../../../docs/framework/wcf/samples/custom-binding.md)

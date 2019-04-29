@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0cf0065f1ed12ad3a37819b0a15d734a2b51ff5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697773"
 ---
-# <a name="icordebugcanlaunchorattach-method"></a><span data-ttu-id="b5ca4-102">ICorDebug::CanLaunchOrAttach 方法</span><span class="sxs-lookup"><span data-stu-id="b5ca4-102">ICorDebug::CanLaunchOrAttach Method</span></span>
-<span data-ttu-id="b5ca4-103">會傳回 HRESULT，指出是否有可能在目前的電腦以及執行階段組態的內容中啟動新的處理序，或附加至指定的現有處理序。</span><span class="sxs-lookup"><span data-stu-id="b5ca4-103">Returns an HRESULT that indicates whether launching a new process or attaching to the specified existing process is possible within the context of the current machine and runtime configuration.</span></span>  
+# <a name="icordebugcanlaunchorattach-method"></a><span data-ttu-id="42c35-102">ICorDebug::CanLaunchOrAttach 方法</span><span class="sxs-lookup"><span data-stu-id="42c35-102">ICorDebug::CanLaunchOrAttach Method</span></span>
+<span data-ttu-id="42c35-103">會傳回 HRESULT，指出是否有可能在目前的電腦以及執行階段組態的內容中啟動新的處理序，或附加至指定的現有處理序。</span><span class="sxs-lookup"><span data-stu-id="42c35-103">Returns an HRESULT that indicates whether launching a new process or attaching to the specified existing process is possible within the context of the current machine and runtime configuration.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b5ca4-104">語法</span><span class="sxs-lookup"><span data-stu-id="b5ca4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="42c35-104">語法</span><span class="sxs-lookup"><span data-stu-id="42c35-104">Syntax</span></span>  
   
 ```  
 HRESULT CanLaunchOrAttach (  
@@ -36,38 +36,38 @@ HRESULT CanLaunchOrAttach (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b5ca4-105">參數</span><span class="sxs-lookup"><span data-stu-id="b5ca4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="42c35-105">參數</span><span class="sxs-lookup"><span data-stu-id="42c35-105">Parameters</span></span>  
  `dwProcessId`  
- <span data-ttu-id="b5ca4-106">[in]現有的處理序的識別碼。</span><span class="sxs-lookup"><span data-stu-id="b5ca4-106">[in] The ID of an existing process.</span></span>  
+ <span data-ttu-id="42c35-106">[in]現有的處理序的識別碼。</span><span class="sxs-lookup"><span data-stu-id="42c35-106">[in] The ID of an existing process.</span></span>  
   
  `win32DebuggingEnabled`  
- <span data-ttu-id="b5ca4-107">[in]傳入`true`如果您計劃使用 Win32 啟用偵錯，來啟動或附加啟用，否則，偵錯 Win32 傳遞`false`。</span><span class="sxs-lookup"><span data-stu-id="b5ca4-107">[in] Pass in `true` if you plan to launch with Win32 debugging enabled, or to attach with Win32 debugging enabled; otherwise, pass `false`.</span></span>  
+ <span data-ttu-id="42c35-107">[in]傳入`true`如果您計劃使用 Win32 啟用偵錯，來啟動或附加啟用，否則，偵錯 Win32 傳遞`false`。</span><span class="sxs-lookup"><span data-stu-id="42c35-107">[in] Pass in `true` if you plan to launch with Win32 debugging enabled, or to attach with Win32 debugging enabled; otherwise, pass `false`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b5ca4-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="b5ca4-108">Return Value</span></span>  
- <span data-ttu-id="b5ca4-109">如果偵錯服務判斷啟動新的處理序，或附加至指定的處理序，為 S_OK 是可行的指定目前的電腦和執行階段組態的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="b5ca4-109">S_OK if the debugging services determine that launching a new process or attaching to the given process is possible, given the information about the current machine and runtime configuration.</span></span> <span data-ttu-id="b5ca4-110">可能的 HRESULT 值為：</span><span class="sxs-lookup"><span data-stu-id="b5ca4-110">Possible HRESULT values are:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="42c35-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="42c35-108">Return Value</span></span>  
+ <span data-ttu-id="42c35-109">如果偵錯服務判斷啟動新的處理序，或附加至指定的處理序，為 S_OK 是可行的指定目前的電腦和執行階段組態的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="42c35-109">S_OK if the debugging services determine that launching a new process or attaching to the given process is possible, given the information about the current machine and runtime configuration.</span></span> <span data-ttu-id="42c35-110">可能的 HRESULT 值為：</span><span class="sxs-lookup"><span data-stu-id="42c35-110">Possible HRESULT values are:</span></span>  
   
--   <span data-ttu-id="b5ca4-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="b5ca4-111">S_OK</span></span>  
+- <span data-ttu-id="42c35-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="42c35-111">S_OK</span></span>  
   
--   <span data-ttu-id="b5ca4-112">CORDBG_E_DEBUGGING_NOT_POSSIBLE</span><span class="sxs-lookup"><span data-stu-id="b5ca4-112">CORDBG_E_DEBUGGING_NOT_POSSIBLE</span></span>  
+- <span data-ttu-id="42c35-112">CORDBG_E_DEBUGGING_NOT_POSSIBLE</span><span class="sxs-lookup"><span data-stu-id="42c35-112">CORDBG_E_DEBUGGING_NOT_POSSIBLE</span></span>  
   
--   <span data-ttu-id="b5ca4-113">CORDBG_E_KERNEL_DEBUGGER_PRESENT</span><span class="sxs-lookup"><span data-stu-id="b5ca4-113">CORDBG_E_KERNEL_DEBUGGER_PRESENT</span></span>  
+- <span data-ttu-id="42c35-113">CORDBG_E_KERNEL_DEBUGGER_PRESENT</span><span class="sxs-lookup"><span data-stu-id="42c35-113">CORDBG_E_KERNEL_DEBUGGER_PRESENT</span></span>  
   
--   <span data-ttu-id="b5ca4-114">CORDBG_E_KERNEL_DEBUGGER_ENABLED</span><span class="sxs-lookup"><span data-stu-id="b5ca4-114">CORDBG_E_KERNEL_DEBUGGER_ENABLED</span></span>  
+- <span data-ttu-id="42c35-114">CORDBG_E_KERNEL_DEBUGGER_ENABLED</span><span class="sxs-lookup"><span data-stu-id="42c35-114">CORDBG_E_KERNEL_DEBUGGER_ENABLED</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b5ca4-115">備註</span><span class="sxs-lookup"><span data-stu-id="b5ca4-115">Remarks</span></span>  
- <span data-ttu-id="b5ca4-116">這個方法僅供參考。</span><span class="sxs-lookup"><span data-stu-id="b5ca4-116">This method is purely informational.</span></span> <span data-ttu-id="b5ca4-117">介面不會停止您無法啟動或附加至處理序，不論值傳回`CanLaunchOrAttach`。</span><span class="sxs-lookup"><span data-stu-id="b5ca4-117">The interface will not stop you from launching or attaching to a process, regardless of the value returned by `CanLaunchOrAttach`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="42c35-115">備註</span><span class="sxs-lookup"><span data-stu-id="42c35-115">Remarks</span></span>  
+ <span data-ttu-id="42c35-116">這個方法僅供參考。</span><span class="sxs-lookup"><span data-stu-id="42c35-116">This method is purely informational.</span></span> <span data-ttu-id="42c35-117">介面不會停止您無法啟動或附加至處理序，不論值傳回`CanLaunchOrAttach`。</span><span class="sxs-lookup"><span data-stu-id="42c35-117">The interface will not stop you from launching or attaching to a process, regardless of the value returned by `CanLaunchOrAttach`.</span></span>  
   
- <span data-ttu-id="b5ca4-118">若要啟動已啟用偵錯的 Win32 或附加啟用 Win32 偵錯，則會傳遞`true`針對`win32DebuggingEnabled`。</span><span class="sxs-lookup"><span data-stu-id="b5ca4-118">If you plan to launch with Win32 debugging enabled or attach with Win32 debugging enabled, pass `true` for `win32DebuggingEnabled`.</span></span> <span data-ttu-id="b5ca4-119">所傳回的 HRESULT`CanLaunchOrAttach`如果您使用此選項可能會不同。</span><span class="sxs-lookup"><span data-stu-id="b5ca4-119">The HRESULT returned by `CanLaunchOrAttach` might differ if you use this option.</span></span>  
+ <span data-ttu-id="42c35-118">若要啟動已啟用偵錯的 Win32 或附加啟用 Win32 偵錯，則會傳遞`true`針對`win32DebuggingEnabled`。</span><span class="sxs-lookup"><span data-stu-id="42c35-118">If you plan to launch with Win32 debugging enabled or attach with Win32 debugging enabled, pass `true` for `win32DebuggingEnabled`.</span></span> <span data-ttu-id="42c35-119">所傳回的 HRESULT`CanLaunchOrAttach`如果您使用此選項可能會不同。</span><span class="sxs-lookup"><span data-stu-id="42c35-119">The HRESULT returned by `CanLaunchOrAttach` might differ if you use this option.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b5ca4-120">需求</span><span class="sxs-lookup"><span data-stu-id="b5ca4-120">Requirements</span></span>  
- <span data-ttu-id="b5ca4-121">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b5ca4-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="42c35-120">需求</span><span class="sxs-lookup"><span data-stu-id="42c35-120">Requirements</span></span>  
+ <span data-ttu-id="42c35-121">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="42c35-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b5ca4-122">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b5ca4-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="42c35-122">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="42c35-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b5ca4-123">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b5ca4-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="42c35-123">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="42c35-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b5ca4-124">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b5ca4-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="42c35-124">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="42c35-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b5ca4-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b5ca4-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="42c35-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="42c35-125">See also</span></span>
 
-- [<span data-ttu-id="b5ca4-126">ICorDebug 介面</span><span class="sxs-lookup"><span data-stu-id="b5ca4-126">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="42c35-126">ICorDebug 介面</span><span class="sxs-lookup"><span data-stu-id="42c35-126">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

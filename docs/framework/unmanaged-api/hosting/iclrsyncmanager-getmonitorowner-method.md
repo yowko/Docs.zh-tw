@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4b14421bbe71b68ca677cf712512a7f10aa30583
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763616"
 ---
-# <a name="iclrsyncmanagergetmonitorowner-method"></a><span data-ttu-id="88726-102">ICLRSyncManager::GetMonitorOwner 方法</span><span class="sxs-lookup"><span data-stu-id="88726-102">ICLRSyncManager::GetMonitorOwner Method</span></span>
-<span data-ttu-id="88726-103">取得[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)擁有所指定的 cookie 識別監視器的執行個體。</span><span class="sxs-lookup"><span data-stu-id="88726-103">Gets the [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance that owns the monitor identified by the specified cookie.</span></span>  
+# <a name="iclrsyncmanagergetmonitorowner-method"></a><span data-ttu-id="5d7b4-102">ICLRSyncManager::GetMonitorOwner 方法</span><span class="sxs-lookup"><span data-stu-id="5d7b4-102">ICLRSyncManager::GetMonitorOwner Method</span></span>
+<span data-ttu-id="5d7b4-103">取得[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)擁有所指定的 cookie 識別監視器的執行個體。</span><span class="sxs-lookup"><span data-stu-id="5d7b4-103">Gets the [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance that owns the monitor identified by the specified cookie.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="88726-104">語法</span><span class="sxs-lookup"><span data-stu-id="88726-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5d7b4-104">語法</span><span class="sxs-lookup"><span data-stu-id="5d7b4-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMonitorOwner (  
@@ -36,42 +36,42 @@ HRESULT GetMonitorOwner (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="88726-105">參數</span><span class="sxs-lookup"><span data-stu-id="88726-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5d7b4-105">參數</span><span class="sxs-lookup"><span data-stu-id="5d7b4-105">Parameters</span></span>  
  `cookie`  
- <span data-ttu-id="88726-106">[in]與監視相關聯的 cookie。</span><span class="sxs-lookup"><span data-stu-id="88726-106">[in] The cookie associated with the monitor.</span></span>  
+ <span data-ttu-id="5d7b4-106">[in]與監視相關聯的 cookie。</span><span class="sxs-lookup"><span data-stu-id="5d7b4-106">[in] The cookie associated with the monitor.</span></span>  
   
  `ppOwnerHostTask`  
- <span data-ttu-id="88726-107">[out]指標`IHostTask`目前擁有監視器，則為 null 如果沒有工作具有擁有權。</span><span class="sxs-lookup"><span data-stu-id="88726-107">[out] A pointer to the `IHostTask` that currently owns the monitor, or null if no task has ownership.</span></span>  
+ <span data-ttu-id="5d7b4-107">[out]指標`IHostTask`目前擁有監視器，則為 null 如果沒有工作具有擁有權。</span><span class="sxs-lookup"><span data-stu-id="5d7b4-107">[out] A pointer to the `IHostTask` that currently owns the monitor, or null if no task has ownership.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="88726-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="88726-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5d7b4-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="5d7b4-108">Return Value</span></span>  
   
-|<span data-ttu-id="88726-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="88726-109">HRESULT</span></span>|<span data-ttu-id="88726-110">描述</span><span class="sxs-lookup"><span data-stu-id="88726-110">Description</span></span>|  
+|<span data-ttu-id="5d7b4-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5d7b4-109">HRESULT</span></span>|<span data-ttu-id="5d7b4-110">描述</span><span class="sxs-lookup"><span data-stu-id="5d7b4-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="88726-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="88726-111">S_OK</span></span>|<span data-ttu-id="88726-112">`GetMonitorOwner` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="88726-112">`GetMonitorOwner` returned successfully.</span></span>|  
-|<span data-ttu-id="88726-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="88726-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="88726-114">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="88726-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="88726-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="88726-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="88726-116">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="88726-116">The call timed out.</span></span>|  
-|<span data-ttu-id="88726-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="88726-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="88726-118">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="88726-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="88726-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="88726-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="88726-120">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="88726-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="88726-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="88726-121">E_FAIL</span></span>|<span data-ttu-id="88726-122">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="88726-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="88726-123">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="88726-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="88726-124">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="88726-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="5d7b4-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="5d7b4-111">S_OK</span></span>|<span data-ttu-id="5d7b4-112">`GetMonitorOwner` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="5d7b4-112">`GetMonitorOwner` returned successfully.</span></span>|  
+|<span data-ttu-id="5d7b4-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="5d7b4-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="5d7b4-114">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="5d7b4-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="5d7b4-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="5d7b4-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="5d7b4-116">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="5d7b4-116">The call timed out.</span></span>|  
+|<span data-ttu-id="5d7b4-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="5d7b4-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="5d7b4-118">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="5d7b4-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="5d7b4-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="5d7b4-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="5d7b4-120">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="5d7b4-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="5d7b4-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="5d7b4-121">E_FAIL</span></span>|<span data-ttu-id="5d7b4-122">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="5d7b4-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="5d7b4-123">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="5d7b4-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="5d7b4-124">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="5d7b4-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="88726-125">備註</span><span class="sxs-lookup"><span data-stu-id="88726-125">Remarks</span></span>  
- <span data-ttu-id="88726-126">主機通常會呼叫`GetMonitorOwner`死結偵測機制的一部分。</span><span class="sxs-lookup"><span data-stu-id="88726-126">The host typically calls `GetMonitorOwner` as part of a deadlock-detection mechanism.</span></span> <span data-ttu-id="88726-127">建立藉由呼叫時，cookie 是與監視相關聯[ihostsyncmanager:: Createmonitorevent](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmonitorevent-method.md)。</span><span class="sxs-lookup"><span data-stu-id="88726-127">The cookie is associated with a monitor when it is created by using a call to [IHostSyncManager::CreateMonitorEvent](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmonitorevent-method.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5d7b4-125">備註</span><span class="sxs-lookup"><span data-stu-id="5d7b4-125">Remarks</span></span>  
+ <span data-ttu-id="5d7b4-126">主機通常會呼叫`GetMonitorOwner`死結偵測機制的一部分。</span><span class="sxs-lookup"><span data-stu-id="5d7b4-126">The host typically calls `GetMonitorOwner` as part of a deadlock-detection mechanism.</span></span> <span data-ttu-id="5d7b4-127">建立藉由呼叫時，cookie 是與監視相關聯[ihostsyncmanager:: Createmonitorevent](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmonitorevent-method.md)。</span><span class="sxs-lookup"><span data-stu-id="5d7b4-127">The cookie is associated with a monitor when it is created by using a call to [IHostSyncManager::CreateMonitorEvent](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmonitorevent-method.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="88726-128">可能會封鎖呼叫釋放基準監視的事件，但不是會鎖死，如果此方法的呼叫正在目前作用中與該監視器相關聯的 cookie。</span><span class="sxs-lookup"><span data-stu-id="88726-128">A call to release the event underlying the monitor might block—but will not deadlock—if a call to this method is currently in effect on the cookie associated with that monitor.</span></span> <span data-ttu-id="88726-129">如果嘗試取得此監視，也可能會封鎖其他工作。</span><span class="sxs-lookup"><span data-stu-id="88726-129">Other tasks might also block if they attempt to acquire this monitor.</span></span>  
+>  <span data-ttu-id="5d7b4-128">可能會封鎖呼叫釋放基準監視的事件，但不是會鎖死，如果此方法的呼叫正在目前作用中與該監視器相關聯的 cookie。</span><span class="sxs-lookup"><span data-stu-id="5d7b4-128">A call to release the event underlying the monitor might block—but will not deadlock—if a call to this method is currently in effect on the cookie associated with that monitor.</span></span> <span data-ttu-id="5d7b4-129">如果嘗試取得此監視，也可能會封鎖其他工作。</span><span class="sxs-lookup"><span data-stu-id="5d7b4-129">Other tasks might also block if they attempt to acquire this monitor.</span></span>  
   
- <span data-ttu-id="88726-130">`GetMonitorOwner` 一律會立即傳回，而且可以在呼叫之後任何時間呼叫`CreateMonitorEvent`。</span><span class="sxs-lookup"><span data-stu-id="88726-130">`GetMonitorOwner` always returns immediately and can be called any time after a call to `CreateMonitorEvent`.</span></span> <span data-ttu-id="88726-131">主應用程式不需要等候，直到工作在等候事件。</span><span class="sxs-lookup"><span data-stu-id="88726-131">The host does not need to wait until a task is waiting on the event.</span></span>  
+ <span data-ttu-id="5d7b4-130">`GetMonitorOwner` 一律會立即傳回，而且可以在呼叫之後任何時間呼叫`CreateMonitorEvent`。</span><span class="sxs-lookup"><span data-stu-id="5d7b4-130">`GetMonitorOwner` always returns immediately and can be called any time after a call to `CreateMonitorEvent`.</span></span> <span data-ttu-id="5d7b4-131">主應用程式不需要等候，直到工作在等候事件。</span><span class="sxs-lookup"><span data-stu-id="5d7b4-131">The host does not need to wait until a task is waiting on the event.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="88726-132">需求</span><span class="sxs-lookup"><span data-stu-id="88726-132">Requirements</span></span>  
- <span data-ttu-id="88726-133">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="88726-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5d7b4-132">需求</span><span class="sxs-lookup"><span data-stu-id="5d7b4-132">Requirements</span></span>  
+ <span data-ttu-id="5d7b4-133">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5d7b4-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="88726-134">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="88726-134">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="5d7b4-134">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5d7b4-134">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="88726-135">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="88726-135">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5d7b4-135">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="5d7b4-135">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="88726-136">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="88726-136">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5d7b4-136">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5d7b4-136">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="88726-137">另請參閱</span><span class="sxs-lookup"><span data-stu-id="88726-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d7b4-137">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5d7b4-137">See also</span></span>
 
-- [<span data-ttu-id="88726-138">ICLRSyncManager 介面</span><span class="sxs-lookup"><span data-stu-id="88726-138">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="88726-139">IHostSyncManager 介面</span><span class="sxs-lookup"><span data-stu-id="88726-139">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [<span data-ttu-id="5d7b4-138">ICLRSyncManager 介面</span><span class="sxs-lookup"><span data-stu-id="5d7b4-138">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="5d7b4-139">IHostSyncManager 介面</span><span class="sxs-lookup"><span data-stu-id="5d7b4-139">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
