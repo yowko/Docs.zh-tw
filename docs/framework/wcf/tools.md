@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
 ms.openlocfilehash: 27a18d436d4ee63cb6e65ed5981b65d55aadf036
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791478"
 ---
 # <a name="windows-communication-foundation-tools"></a>Windows Communication Foundation 工具
-Microsoft Windows Communication Foundation (WCF) 工具被為了讓您更輕鬆地建立、 部署和管理 WCF 應用程式。 本章節內容包含工具的詳細資訊。 請注意，並不支援這些工具。  
+Microsoft Windows Communication Foundation (WCF) 工具旨在讓您更輕鬆地建立、 部署和管理 WCF 應用程式。 本章節內容包含工具的詳細資訊。 請注意，並不支援這些工具。  
   
  您可以從命令列執行所有工具。  
   

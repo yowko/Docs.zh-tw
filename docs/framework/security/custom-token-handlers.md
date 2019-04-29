@@ -7,8 +7,8 @@ ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792765"
 ---
 # <a name="custom-token-handlers"></a>自訂權杖處理常式
 本主題討論 WIF 中的權杖處理常式以及如何使用它們來處理權杖。 本主題也涵蓋建立權杖類型的自訂權杖處理常式所需的作業，而 WIF 中預設不支援這些權杖類型。  
@@ -19,23 +19,23 @@ ms.locfileid: "59975672"
 ## <a name="built-in-security-token-handlers-in-wif"></a>WIF 中的內建安全性權杖處理常式  
  WIF 4.5 包含衍生自抽象基底類別 <xref:System.IdentityModel.Tokens.SecurityTokenHandler> 的九個安全性權杖處理常式類別：  
   
--   <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.UserNameSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.UserNameSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
   
 ## <a name="adding-a-custom-token-handler"></a>新增自訂權杖處理常式  
  部分權杖類型 (例如簡單 Web 權杖 (SWT) 和 JSON Web 權杖 (JWT)) 沒有 WIF 所提供的內建權杖處理常式。 針對這些權杖類型以及沒有內建處理常式的權杖類型，您需要執行下列步驟來建立自訂權杖處理常式。  
@@ -46,17 +46,17 @@ ms.locfileid: "59975672"
   
 2. 覆寫下列方法，並提供您自己的實作：  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.WriteToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.WriteToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanValidateToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanValidateToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
 3. 在 *Web.config* 或 *App.config* 檔案中套用 WIF 的 **\<system.identityModel>** 區段內，新增新自訂權杖處理常式的參考。 例如，下列組態標記會指定名為 **MyCustomTokenHandler** 且位在 **CustomToken** 命名空間中的新權杖處理常式。  
   

@@ -3,11 +3,11 @@ title: 傳訊活動-WCF
 ms.date: 03/30/2017
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
 ms.openlocfilehash: 7670a6694e15f0a9e25152102d6237ef1ed60941
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771432"
 ---
 # <a name="messaging-activities"></a>訊息活動
 
@@ -109,7 +109,7 @@ Visual Studio 2012 時從工作流程應用程式呼叫工作流程服務，會�
 
 ## <a name="messaging-activities-and-transactions"></a>傳訊活動和交易
 
-呼叫工作流程服務時，您可能想要讓異動流向服務作業。 若要執行這項操作，請將 <xref:System.ServiceModel.Activities.Receive> 活動放置到 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動內。 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動包含 `Receive` 活動和主體。 流向服務的交易會在執行 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 主體的整個過程中維持環境。 當主體執行完成時，異動即完成。 如需工作流程和交易的詳細資訊，請參閱[工作流程交易](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)。
+呼叫工作流程服務時，您可能想要讓異動流向服務作業。 若要執行這項操作，請將 <xref:System.ServiceModel.Activities.Receive> 活動放置到 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動內。 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動包含 `Receive` 活動和主體。 流向服務的異動會在執行 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 主體的整個過程中維持環境。 當主體執行完成時，異動即完成。 如需工作流程和交易的詳細資訊，請參閱[工作流程交易](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)。
 
 ## <a name="see-also"></a>另請參閱
 

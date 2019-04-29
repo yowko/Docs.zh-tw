@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
 ms.openlocfilehash: 0e173f71201d5f98a04d2ad922469e4ff6666681
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929281"
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>HOW TO：在服務合約中宣告錯誤
 在 Managed 程式碼中，發生錯誤狀況時會擲回例外狀況。 在 Windows Communication Foundation (WCF) 應用程式，不過，服務合約會指定哪些資訊時發生錯誤，會藉由宣告服務合約中的 SOAP 錯誤傳回給用戶端。 如需例外狀況和錯誤之間的關聯性的概觀，請參閱 <<c0> [ 指定及處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  

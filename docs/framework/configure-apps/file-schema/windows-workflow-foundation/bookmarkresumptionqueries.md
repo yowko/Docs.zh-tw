@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8ed61a7f-4254-439c-bdd8-b474971533f7
 ms.openlocfilehash: 186990577ec4eedc7cae3710c455816c3162fc94
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790282"
 ---
 # <a name="bookmarkresumptionqueries"></a>\<bookmarkResumptionQueries>
 代表查詢的集合，這個集合可用來追蹤工作流程執行個體中的書籤繼續。 追蹤參與者必須要具備查詢，才能訂閱書籤繼續記錄。  

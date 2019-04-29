@@ -6,8 +6,8 @@ ms.openlocfilehash: e8dd0835735a2467820c2e2c98f4fd9d80f0b49e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59980469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940695"
 ---
 # <a name="access-denied-to-name"></a>若要拒絕存取 '\<名稱 >'
 裝置、檔案或磁碟無法存取，因為您的電腦安全性權限不足。  

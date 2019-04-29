@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: e3f2d71d-434c-4e98-91c3-95adae4702b6
 ms.openlocfilehash: 511a9bc5352e208697460364e463330fc0ef611a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793389"
 ---
 # <a name="how-to-attach-an-existing-entity-to-the-dataservicecontext-wcf-data-services"></a>HOW TO：將現有實體附加至 DataServiceContext (WCF Data Services)
 當實體已經存在於資料服務時，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫可讓您附加物件，表示實體直接<xref:System.Data.Services.Client.DataServiceContext>且不需先執行查詢。 如需詳細資訊，請參閱 <<c0> [ 更新資料服務](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  

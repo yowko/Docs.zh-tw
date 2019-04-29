@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
 ms.openlocfilehash: 16b93126157ff129d5e0b815bc951873e7fa760d
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778348"
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>HOW TO：建立 WSFederationHttpBinding
 
@@ -26,11 +26,11 @@ ms.locfileid: "46525535"
     > [!NOTE]
     > <xref:System.ServiceModel.WSFederationHttpBinding> 也支援 `None` 做為安全性模式。 這個模式並不安全，主要目的僅用於偵錯。 如果部署的服務端點<xref:System.ServiceModel.WSFederationHttpBinding>其安全性模式設定為`None`，產生的用戶端繫結 (所產生[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)) 是<xref:System.ServiceModel.WSHttpBinding>與安全性模式`None`。
 
-     和其他系統提供的繫結不一樣，在您使用 `WSFederationHttpBinding` 時不需要選取用戶端認證類型。 這是因為用戶端認證類型一律為已發行的權杖。 WCF 會從指定的簽發者取得權杖，並對服務驗證用戶端呈現該權杖。
+     和其他系統提供的繫結程序不一樣，在您使用 `WSFederationHttpBinding` 時不需要選取用戶端認證類型。 這是因為用戶端認證類型一律為已發行的權杖。 WCF 會從指定的簽發者取得權杖，並對服務驗證用戶端呈現該權杖。
 
 2. 在聯合用戶端上，請將 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> 屬性設定為安全性權杖服務的 URL。 將 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding%2A> 設定為繫結，以用來與安全性權杖服務進行通訊。
 
-3. 選擇項。 將 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> 屬性設定成權杖型別統一資源識別元 (URI)。 在聯合服務上，指定服務預期的權杖型別。 在聯合用戶端上，指定用戶端從安全性權杖服務中所要求的權杖型別。
+3. 選擇性。 將 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> 屬性設定成權杖型別統一資源識別元 (URI)。 在聯合服務上，指定服務預期的權杖型別。 在聯合用戶端上，指定用戶端從安全性權杖服務中所要求的權杖型別。
 
      如果沒有指定權杖型別，用戶端會產生不具權杖型別 URI 的 WS-Trust 要求安全性權杖 (Request Security Token，RST)，而根據預設，服務會預期使用安全性判斷提示標記語言 (Security Assertions Markup Language，SAML) 1.1 權杖來進行用戶端驗證。
 
@@ -45,7 +45,7 @@ ms.locfileid: "46525535"
 
 ## <a name="to-configure-a-wsfederationhttpbinding-in-code"></a>在程式碼中設定 WSFederationHttpBinding
 
-1. 建立 <xref:System.ServiceModel.WSFederationHttpBinding> 的執行個體。
+1. 建立 <xref:System.ServiceModel.WSFederationHttpBinding>的執行個體。
 
 2. 依需求將 <xref:System.ServiceModel.WSFederationHttpSecurity.Mode%2A> 屬性設定為 <xref:System.ServiceModel.WSFederationHttpSecurityMode> 或 <xref:System.ServiceModel.WSFederationHttpSecurityMode.Message>。 如果演算法套件，以外<xref:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256%2A>是必要的設定<xref:System.ServiceModel.FederatedMessageSecurityOverHttp.AlgorithmSuite%2A>屬性設為值取自<xref:System.ServiceModel.Security.SecurityAlgorithmSuite>。
 
@@ -77,25 +77,25 @@ ms.locfileid: "46525535"
 
 5. 建立 `<message>` 項目做為 `<security>` 項目的子項。
 
-6. 選擇項。 以適當的值設定 `algorithmSuite` 項目上的 `<message>` 屬性。 預設為 `Basic256`。
+6. 選擇性。 以適當的值設定 `algorithmSuite` 項目上的 `<message>` 屬性。 預設為 `Basic256`。
 
-7. 選擇項。 如果需要非對稱證明金鑰，請將 `issuedKeyType` 項目的 `<message>` 屬性設定為 `AsymmetricKey`。 預設為 `SymmetricKey`。
+7. 選擇性。 如果需要非對稱證明金鑰，請將 `issuedKeyType` 項目的 `<message>` 屬性設定為 `AsymmetricKey`。 預設為 `SymmetricKey`。
 
-8. 選擇項。 設定 `issuedTokenType` 項目上的 `<message>` 屬性。
+8. 選擇性。 設定 `issuedTokenType` 項目上的 `<message>` 屬性。
 
 9. 如果未指定本機簽發者，則在用戶端上為必要項；在服務上則為選擇項。 建立 `<issuer>` 項目以做為 `<message>` 項目的子項。
 
 10. 將 `address` 屬性設定為 `<issuer>` 項目，並指定安全性權杖服務會接受權杖要求的位址。
 
-11. 選擇項。 加入 `<identity>` 子項目，並指定安全性權杖服務的識別。
+11. 選擇性。 加入 `<identity>` 子項目，並指定安全性權杖服務的識別。
 
 12. 如需詳細資訊，請參閱 <<c0> [ 服務身分識別和驗證](service-identity-and-authentication.md)。
 
-13. 如果未指定本機簽發者，則在用戶端上為必要項；在服務上則不要使用。 建立[\<繫結 >](../../../../docs/framework/misc/binding.md)可用來與安全性權杖服務通訊的繫結區段中的項目。 如需建立繫結的詳細資訊，請參閱[如何： 在組態中指定服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。
+13. 如果未指定本機簽發者，則在用戶端上為必要項；在服務上則不要使用。 建立[\<繫結 >](../../../../docs/framework/misc/binding.md)可用來與安全性權杖服務通訊的繫結區段中的項目。 如需建立繫結的詳細資訊，請參閱[How to:在組態中指定的服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。
 
 14. 藉由設定 `binding` 項目的 `bindingConfiguration` 和 `<issuer>` 屬性，指定在前面的步驟中所建立的繫結。
 
-15. 在用戶端上不要使用，在服務上則為選擇項。 建立 `<issuerMetadata>` 項目以做為 <`message`> 項目的子項。 接著，在 `address` 項目的 `<issuerMetadata>` 屬性上，指定安全性權杖服務要發行其中繼資料的位址。 您也可以選擇性地新增 `<identity>` 子項目，並指定安全性權杖服務的身分識別。
+15. 在用戶端上不要使用，在服務上則為選擇項。 建立`<issuerMetadata>`的子系的項目 <`message`> 項目。 接著，在 `address` 項目的 `<issuerMetadata>` 屬性上，指定安全性權杖服務要發行其中繼資料的位址。 您也可以選擇性地新增 `<identity>` 子項目，並指定安全性權杖服務的身分識別。
 
 16. 在用戶端和服務上都是選擇項。 新增 `<claimTypeRequirements>` 項目以做為 `<message>` 項目的子項。 指定必要和選擇性宣告服務依賴加[\<新增 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-claimtyperequirements.md)項目`<claimTypeRequirements>`項目和指定的宣告型別`claimType`屬性。 透過設定 `isOptional` 屬性，指定提供的宣告為必要項或選擇項。
 
@@ -110,4 +110,4 @@ ms.locfileid: "46525535"
 
 - [同盟](federation.md)
 - [同盟範例](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [如何：在 WSFederationHttpBinding 上停用安全工作階段](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [如何：停用安全工作階段在 WSFederationHttpBinding 上](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)

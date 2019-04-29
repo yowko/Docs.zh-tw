@@ -12,11 +12,11 @@ ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 422fdfef6bea40e0f4bcc7447df8dba1eab2896e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61919083"
 ---
 # <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>ICorProfilerInfo7::GetInMemorySymbolsLength 方法
 [在 .NET Framework 4.6.1 及更新版本中支援]  

@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 474ac625-8770-43ba-8320-d3315ea9530f
 ms.openlocfilehash: 4b0646c2ad45a86691b86b1dd5f112f598ee2dfd
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788735"
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>HOW TO：專案查詢結果 (WCF Data Services)
 投影提供一種機制，可藉由指定回應中僅傳回特定實體屬性的方式降低查詢傳回的資料量。 您可以執行的結果投影[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]查詢藉由使用`$select`查詢選項或使用[選取](~/docs/csharp/language-reference/keywords/select-clause.md)子句 ([選取](~/docs/visual-basic/language-reference/queries/select-clause.md)Visual Basic 中) 在 LINQ 查詢中。 如需詳細資訊，請參閱 <<c0> [ 查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  

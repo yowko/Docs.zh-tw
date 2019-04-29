@@ -9,11 +9,11 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms], providing Help in Windows applications
 ms.assetid: 2a96a278-432c-41fc-9e3c-5bfedf5e1267
 ms.openlocfilehash: 1a02271d59a59f0a6e06a652a34922ba5dcdf1f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937939"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Windows Form 應用程式中的說明系統
 其中一個最重要的優待的您的應用程式，開發人員可以提供您的使用者是裁判的 [說明] 系統。 這是他們將會在其中開啟時使用者感到混淆、 求助對象。 提供以 Windows 為基礎的應用程式中的 [說明] 系統很容易，利用[HelpProvider 元件](../controls/helpprovider-component-windows-forms.md)。  

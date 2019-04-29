@@ -3,11 +3,11 @@ title: AttributeUsage (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
 ms.openlocfilehash: 1841171f2f3fc26ba9244c72c69960b765d39807
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789112"
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 決定如何使用自訂屬性類別。 `AttributeUsage` 是一個屬性，可套用至自訂屬性定義來控制如何套用新屬性。 明確套用時，預設設定看起來會像這樣︰  

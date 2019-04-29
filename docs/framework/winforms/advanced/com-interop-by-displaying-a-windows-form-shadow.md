@@ -9,20 +9,20 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
 ms.openlocfilehash: 81220ad4c0bf00a38abfe7257d5fc61e92e8d885
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779089"
 ---
 # <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>HOW TO：使用 ShowDialog 方法顯示 Windows Form 以支援 COM Interop
 您可以藉由在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 訊息迴圈上顯示 Windows Forms 來解決元件物件模型 (COM) 互通性問題，而此訊息迴圈是使用 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法建立而成。  
   
  為了讓表單能夠在 COM 用戶端應用程式中正確運作，您必須在 Windows Forms 訊息迴圈上執行它。 若要執行此工作，請使用下列的其中一個方法：  
   
--   使用 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法，以顯示 Windows Forms。  
+- 使用 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法，以顯示 Windows Forms。  
   
--   在個別執行緒上顯示每個 Windows Form。 如需詳細資訊，請參閱[如何：在它自己的執行緒上顯示每個 Windows Form 以支援 COM Interop](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)。  
+- 在個別執行緒上顯示每個 Windows Form。 如需詳細資訊，請參閱[如何：在它自己的執行緒上顯示每個 Windows Form 以支援 COM Interop](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)。  
   
 ## <a name="procedure"></a>程序  
  若要在 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 訊息迴圈上顯示表單，最簡單的方式是使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 方法，因為在所有方法中，它所需實作的程式碼最少。  
@@ -35,7 +35,7 @@ ms.locfileid: "59206443"
   
 #### <a name="to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>若要使用 ShowDialog 方法來顯示 Windows 表單以支援 COM Interop  
   
--   在 <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> 元件中，將所有對 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法的呼叫取代為對 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 方法的呼叫。  
+- 在 <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> 元件中，將所有對 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法的呼叫取代為對 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 方法的呼叫。  
   
 ## <a name="see-also"></a>另請參閱
 

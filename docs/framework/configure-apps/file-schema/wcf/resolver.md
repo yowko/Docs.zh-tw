@@ -3,11 +3,11 @@ title: <resolver>
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
 ms.openlocfilehash: 39dcb868bd3ff25451509616e1dac7d41f94cfa1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783119"
 ---
 # <a name="resolver"></a>\<resolver>
 指定對等解析程式，用於將對等網狀結構 ID 解析成一組對等節點位址，這組位址可表示參與網狀結構的數個節點。  

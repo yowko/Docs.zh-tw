@@ -5,18 +5,18 @@ f1_keywords:
 - vbrArgument_LengthGTZero1
 ms.assetid: 709bc232-f8fe-4864-9842-e064795da0f5
 ms.openlocfilehash: 94720ceafcd99b699fab5769abc5b70f0f637fba
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790555"
 ---
 # <a name="length-of-argument-argumentname-must-be-greater-than-zero"></a>引數的長度 '\<引數名稱 >' 必須是小於或等於零
 引數的值等於或小於零。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   請提供大於零的整數。  
+- 請提供大於零的整數。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3a574a04e5746a8b2c9c32160e82aa503b392729
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792635"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap 方法
 設定使用指定的 Microsoft intermediate language (MSIL) 對應項目指定的函式的程式碼對應。  
@@ -58,11 +58,11 @@ HRESULT SetILInstrumentedCodeMap(
   
  偵錯工具會假設每個舊位移是指原始、 未修改的 MSIL 程式碼中的 MSIL 位移，而每個新的位移是指在新的已檢測的程式碼的 MSIL 位移。 此對應應該以遞增的順序排序。 逐步執行才能正常運作，請遵循這些指導方針：  
   
--   無法重新排序已檢測的 MSIL 程式碼。  
+- 無法重新排序已檢測的 MSIL 程式碼。  
   
--   請勿移除原始的 MSIL 程式碼。  
+- 請勿移除原始的 MSIL 程式碼。  
   
--   包含在對應中的程式資料庫 (PDB) 檔案中的所有序列點的項目。 對應不會插補遺漏的項目。 因此，假設下列對應：  
+- 包含在對應中的程式資料庫 (PDB) 檔案中的所有序列點的項目。 對應不會插補遺漏的項目。 因此，假設下列對應：  
   
      (0，0 新)  
   
@@ -70,17 +70,17 @@ HRESULT SetILInstrumentedCodeMap(
   
      (9，-20 新)  
   
-    -   0、 1、 2、 3 或 4 的舊位移會對應至新的位移 0。  
+    - 0、 1、 2、 3 或 4 的舊位移會對應至新的位移 0。  
   
-    -   5、 6、 7 或 8 的舊位移會對應至 10 的新位移。  
+    - 5、 6、 7 或 8 的舊位移會對應至 10 的新位移。  
   
-    -   9 或更新版本的舊位移會對應至新的位移 20。  
+    - 9 或更新版本的舊位移會對應至新的位移 20。  
   
-    -   0、 1、 2、 3、 4、 5、 6、 7、 8 或 9 新位移會對應至舊的位移 0。  
+    - 0、 1、 2、 3、 4、 5、 6、 7、 8 或 9 新位移會對應至舊的位移 0。  
   
-    -   新的位移，10、 11、 12、 13、 14、 15、 16、 17、 18 或 19 的會對應至舊位移 5。  
+    - 新的位移，10、 11、 12、 13、 14、 15、 16、 17、 18 或 19 的會對應至舊位移 5。  
   
-    -   20 或更高版本的新位移會對應至舊位移 9。  
+    - 20 或更高版本的新位移會對應至舊位移 9。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

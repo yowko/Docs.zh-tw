@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
 ms.openlocfilehash: 13a17473388582e5fa72cd8d335b6a05204ea509
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792870"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>建置第一個宣告感知 WCF 服務
 ## <a name="applies-to"></a>適用於  
   
--   Windows Identity Foundation (WIF)  
+- Windows Identity Foundation (WIF)  
   
--   Windows Communication Foundation (WCF)  
+- Windows Communication Foundation (WCF)  
   
 ## <a name="overview"></a>總覽  
  本主題概述使用 WIF 建置宣告感知 WCF 服務的案例。 在一個宣告感知 Web 服務案例中，通常會有三個參與者：Web 服務本身、使用者和 Security Token Service (STS)。 下列圖將說明這個案例：  
@@ -32,9 +32,9 @@ ms.locfileid: "59306608"
   
  STS 服務會在驗證成功後發行權杖。 Microsoft 提供兩項業界標準 STS：  
   
--   [Active Directory Federation Services (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
+- [Active Directory Federation Services (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
--   [Windows Azure 存取控制服務 (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
+- [Windows Azure 存取控制服務 (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
   
  AD FS 2.0 是 Windows Server R2 的一部分，可以當做供內部部署案例使用的 STS； Azure Active Directory 存取控制 (也稱為存取控制服務或 ACS) 是一項隨著 Microsoft Azure 提供的雲端服務。 此外，基於測試或教育目的，您也可以使用其他 STS 建立專屬宣告感知應用程式。 例如，您可以使用屬於本機開發 STS [Identity and Access Tool for Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849)這就是線上免費提供。  
   

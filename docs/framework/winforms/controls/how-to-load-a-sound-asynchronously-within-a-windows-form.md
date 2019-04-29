@@ -10,11 +10,11 @@ helpviewer_keywords:
 - threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
 ms.openlocfilehash: 1d710f1e6d3b208365d5b1eb2524fbeeaa673c2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941046"
 ---
 # <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>HOW TO：在 Windows Forms 中以非同步方式載入音效
 下列程式碼範例會以非同步方式從 URL 載入音效，然後在新的執行緒上播放。  
@@ -26,9 +26,9 @@ ms.locfileid: "59185753"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   本系統和 System.Windows.Forms 組件的參考。  
+- 本系統和 System.Windows.Forms 組件的參考。  
   
--   您將檔案名稱 `"http://www.tailspintoys.com/sounds/stop.wav"` 取代為有效的檔案名稱。  
+- 您將檔案名稱 `"http://www.tailspintoys.com/sounds/stop.wav"` 取代為有效的檔案名稱。  
   
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
@@ -37,17 +37,17 @@ ms.locfileid: "59185753"
   
  以下條件可能會造成例外狀況：  
   
--   路徑名稱的格式不正確。 例如，其包含的字元無效，或只有空格 (<xref:System.ArgumentException> 類別)。  
+- 路徑名稱的格式不正確。 例如，其包含的字元無效，或只有空格 (<xref:System.ArgumentException> 類別)。  
   
--   路徑是唯讀的 (<xref:System.IO.IOException> 類別)。  
+- 路徑是唯讀的 (<xref:System.IO.IOException> 類別)。  
   
--   路徑名稱是 `Nothing` (<xref:System.ArgumentNullException> 類別)。  
+- 路徑名稱是 `Nothing` (<xref:System.ArgumentNullException> 類別)。  
   
--   路徑名稱過長 (<xref:System.IO.PathTooLongException> 類別)。  
+- 路徑名稱過長 (<xref:System.IO.PathTooLongException> 類別)。  
   
--   此路徑無效 (<xref:System.IO.DirectoryNotFoundException> 類別)。  
+- 此路徑無效 (<xref:System.IO.DirectoryNotFoundException> 類別)。  
   
--   此路徑只是一個冒號 ":" (<xref:System.NotSupportedException> 類別)。  
+- 此路徑只是一個冒號 ":" (<xref:System.NotSupportedException> 類別)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  請勿根據檔案名稱來判斷檔案內容。 例如，`Form1.vb` 檔案可能不是 Visual Basic 來源檔案。 在應用程式中使用這些資料之前，請先驗證所有輸入值。  

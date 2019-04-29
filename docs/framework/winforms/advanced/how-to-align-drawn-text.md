@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows Forms, aligning drawn text
 ms.assetid: 83c10a81-1a90-4b5c-98aa-2c6c4b280079
 ms.openlocfilehash: 0e77e4d8eeb9d7a07115b89525ac80074afeb6e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937809"
 ---
 # <a name="how-to-align-drawn-text"></a>HOW TO：對齊繪製的文字
 當您執行自訂繪圖時，您通常可以在表單或控制項上的繪製的文字置中對齊。 您可以輕鬆地將以繪製文字的對齊<xref:System.Drawing.Graphics.DrawString%2A>或<xref:System.Windows.Forms.TextRenderer.DrawText%2A>方法藉由建立正確的格式物件，並設定適當的格式旗標。  

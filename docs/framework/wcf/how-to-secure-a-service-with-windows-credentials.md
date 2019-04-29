@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
 ms.openlocfilehash: 5fb175bdd255af1b506dacb973a778b1f6f515f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928943"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>HOW TO：使用 Windows 認證來確保服務安全
 本主題說明如何啟用位於 Windows 網域，而且由相同的網域中的用戶端呼叫的 Windows Communication Foundation (WCF) 服務上的傳輸安全性。 如需有關此案例的詳細資訊，請參閱 < [Windows 驗證的傳輸安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 範例應用程式，請參閱[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)範例。  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS-AT protocol [WCF]
 ms.assetid: 04a4c200-0af0-4c5d-a3d9-87cb7339e054
 ms.openlocfilehash: 8a8265873e4287e1455659aa4d9fae7e1d570a00
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932843"
 ---
 # <a name="using-ws-atomictransaction"></a>使用 WS-AtomicTransaction
 WS-AtomicTransaction (WS-AT) 是一種互通的異動通訊協定， 可讓您使用 Web 服務訊息來流動分散式交易，並且以互通的方式在異質性交易基礎結構之間進行協調。 WS-AT 使用兩階段的認可通訊協定，能夠在分散型應用程式、異動管理員和資源管理員之間促成不可部分完成的結果。  
@@ -20,9 +20,9 @@ WS-AtomicTransaction (WS-AT) 是一種互通的異動通訊協定， 可讓您�
   
  選擇的通訊協定會影響：  
   
--   用來將交易從用戶端流動至伺服器的訊息標頭格式。  
+- 用來將交易從用戶端流動至伺服器的訊息標頭格式。  
   
--   用來在用戶端異動管理員和伺服器異動之間執行兩階段認可通訊協定的網路通訊協定，能夠解析異動的結果。  
+- 用來在用戶端異動管理員和伺服器異動之間執行兩階段認可通訊協定的網路通訊協定，能夠解析異動的結果。  
   
  如果伺服器和用戶端，撰寫使用 WCF，您不需要使用 WS-AT。 您可以改為使用已啟用 `NetTcpBinding` 屬性的 `TransactionFlow` 預設值，這樣就會使用 `OleTransactions` 通訊協定來替代。 如需詳細資訊，請參閱 < [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。 否則，如果您要流動異動至使用協力廠商技術建置的 Web 服務，就必須使用 WS-AT。  
   

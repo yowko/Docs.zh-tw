@@ -3,17 +3,17 @@ title: 下載 JSON Web 語彙基元處理常式套件
 ms.date: 10/10/2018
 ms.assetid: d12b3f5b-f1f1-4a9d-a159-0c13e5976c90
 ms.openlocfilehash: 8f878d23afd76488de7da03f16f72cbfa43c17d7
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792746"
 ---
 # <a name="download-the-json-web-token-handler-package"></a>下載 JSON Web 權杖處理常式套件
 
 本主題討論如何在您的專案中下載並使用 JSON Web 權杖處理常式。
 
-JSON Web 權杖處理常式延伸模組以 NuGet 套件的形式供您使用，會將必要的組件和參考新增至您的專案。 如果尚未安裝 NuGet，請移至 [nuget.org](https://nuget.org) 安裝它。 您可以在 NuGet 前往其頁面，查看延伸模組的版本控制記錄：[JSON Web Token Handler on NuGet](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/) (NuGet 上的 JSON Web 權杖處理常式)。
+JSON Web 權杖處理常式延伸模組以 NuGet 套件的形式供您使用，會將必要的組件和參考新增至您的專案。 如果尚未安裝 NuGet，請移至 [nuget.org](https://nuget.org) 安裝它。 在 NuGet 前往其頁面，您可以看到延伸模組的版本歷程記錄：[JSON Web 權杖處理常式在 NuGet 上](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/)
 
 ## <a name="use-the-package-manager-gui"></a>使用套件管理員 GUI
 

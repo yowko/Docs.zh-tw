@@ -17,13 +17,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9cac00ff96d0c7007bdd6135282c3f767217385e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935612"
 ---
-# <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi function
+# <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi 函式
 
 執行查詢以接收事件。 呼叫會立即傳回，並到達，呼叫端可以輪詢事件傳回的列舉值。 釋放傳回的列舉值會取消查詢。
 

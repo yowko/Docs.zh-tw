@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: e570375d-2a68-44ba-b4f7-c781af2d20e8
 ms.openlocfilehash: e8bc4aa4ecd2bff2981b7d4faf1e270337f346e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937770"
 ---
 # <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>HOW TO：在設計階段複製和貼上 ElementHost 控制項
 此程序會示範如何複製 Windows Form 上的 Windows Presentation Foundation (WPF) 控制項。  

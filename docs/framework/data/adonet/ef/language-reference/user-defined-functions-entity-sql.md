@@ -3,11 +3,11 @@ title: 使用者定義函式 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 3f9e6bbd-8e5a-43e1-809f-f8a61338e522
 ms.openlocfilehash: 4922e7fada676a6c26042236ccdb6315d6d455ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879745"
 ---
 # <a name="user-defined-functions-entity-sql"></a>使用者定義函式 (Entity SQL)
 Entity SQL 支援呼叫查詢中的使用者定義函式。 您可以定義這些函式內嵌在查詢 (請參閱[How to:呼叫使用者定義函式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))) 或做為概念模型的一部分 (請參閱[How to:概念模型中定義自訂函式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)))。 概念模型函式會定義為 Entity SQL 命令中[DefiningExpression](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#definingexpression-element-csdl)項目[函式](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#function-element-csdl)概念模型中的項目。  

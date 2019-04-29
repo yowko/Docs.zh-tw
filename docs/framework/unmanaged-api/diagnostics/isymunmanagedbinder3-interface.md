@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fdfd8e8fc419809a3a490639ada1c533f286fe8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939993"
 ---
 # <a name="isymunmanagedbinder3-interface"></a>ISymUnmanagedBinder3 介面
 擴充的符號繫結器介面。 取得這個介面，藉由呼叫`QueryInterface`實作的物件上`ISymUnmanagedBinder`介面。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - white-space processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
 ms.openlocfilehash: d15bab1ad9234959048fa7b7c3fa2bbbeca5fe6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938719"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>XAML 中的 xml:space 處理
 `xml:space`屬性是宣告為物件項目內的顯著泛空白字元處理行為的 XML 定義的屬性。 此行為會與相關的項目內所包含的所有內容 （內部文字） 其中`xml:space`宣告，因此也會設定至子項目。  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91c7235fb8790783b05b217cad755d8eedc88971
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763525"
 ---
 # <a name="iclrtaskneedspriorityscheduling-method"></a>ICLRTask::NeedsPriorityScheduling 方法
 取得值，指出目前的工作中，正在切換移出，是否需要標示為高優先順序的重新排程。  

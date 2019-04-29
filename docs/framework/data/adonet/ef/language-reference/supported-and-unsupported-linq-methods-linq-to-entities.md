@@ -3,11 +3,11 @@ title: 支援與不支援的 LINQ 方法 (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
 ms.openlocfilehash: 74b3973f931fa6f0d1f5b380833b8d5e5566563b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797679"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>支援與不支援的 LINQ 方法 (LINQ to Entities)
 本章節提供的資訊是有關 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢所支援或不支援的 Language-Integrated Query (LINQ) 標準查詢運算子。 許多 LINQ 標準查詢運算子都有一個可接受整數引數的多載版本。 整數引數對應至所操作，序列中以零為起始的索引<xref:System.Collections.Generic.IEqualityComparer%601>，或<xref:System.Collections.Generic.IComparer%601>。 除非另外指定，否則不支援 LINQ 標準查詢運算子的這些多載版本，而且嘗試使用它們將會擲回例外狀況。  

@@ -5,11 +5,11 @@ f1_keywords:
 - vbrTextFieldParser_FieldWidthsMustPositive
 ms.assetid: 41d8c661-a749-4c89-be56-905c6e7c3c9d
 ms.openlocfilehash: 806dcef7b7a29afa8804a581659023c817662434
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58024550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940656"
 ---
 # <a name="all-field-widths-except-the-last-element-must-be-greater-than-zero"></a>除了最後項目以外的所有欄位寬度都必須大於零
 除了最後項目以外的所有欄位寬度都必須大於零。 最後項目的欄位寬度小於或等於零，表示最後欄位是可變長度。  
@@ -18,7 +18,7 @@ ms.locfileid: "58024550"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   將欄位寬度設定為正確的長度。  
+- 將欄位寬度設定為正確的長度。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - curves [Windows Forms], drawing
 ms.assetid: 76e92623-4130-4644-b867-faca58bdb3a2
 ms.openlocfilehash: 92e7b1e8b4ce37db633b5dafe212a252b854d1af
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935443"
 ---
 # <a name="constructing-and-drawing-curves"></a>建構和繪製曲線
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 支援數種類型的曲線： 省略符號，弧線、 基線曲線和貝茲曲線。 橢圓形是由其周框; 定義弧形，是橢圓形的由開始角度和掃掠角度所定義的一部分。 基線曲線的點和張力參數陣列所定義，陣列中的每個點順利通過曲線和張力參數會影響曲線的彎曲的方式。 貝茲曲線由兩個端點和定義曲線的控制點，透過未通過的兩個控制點，但控制點影響方向，並當曲線會在各個端點之間彎曲。  

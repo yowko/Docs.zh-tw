@@ -5,11 +5,11 @@ helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
 ms.openlocfilehash: ad7e713ac4cbbe5bf227f4ab93e8f88684dcb0d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785017"
 ---
 # <a name="designing-and-implementing-services"></a>設計與實作服務
 本節將說明如何定義及實作 WCF 合約。 服務合約會指定端點與外界溝通的內容。 更具體來說，這是關於一組會組織到基本訊息交換模式 (MEP) 之特定訊息的聲明，而這些交換模式包括要求/回覆、單向和雙工。 如果服務合約為一組邏輯相關的訊息交換，則服務作業就是單一的訊息交換。 例如，`Hello` 作業一定會明確地接收一個訊息 (這樣呼叫端才能宣告歡迎畫面)，但卻不一定會傳回訊息 (需視作業的禮節而定)。  
@@ -19,22 +19,22 @@ ms.locfileid: "59319673"
 ## <a name="overview"></a>總覽  
  本主題提供設計與實作 WCF 服務的高層級概念方向。 副標題則提供設計和實作之細節的詳細資訊。 設計和實作之前 WCF 應用程式，建議您：  
   
--   瞭解服務合約是什麼、如何使用它，以及如何建立它。  
+- 瞭解服務合約是什麼、如何使用它，以及如何建立它。  
   
--   瞭解合約會聲明執行階段組態或裝載環境不一定會支援的最低需求。  
+- 瞭解合約會聲明執行階段組態或裝載環境不一定會支援的最低需求。  
   
 ## <a name="service-contracts"></a>服務合約  
  服務合約會指定下列項目：  
   
--   合約所公開的作業。  
+- 合約所公開的作業。  
   
--   依據所交換訊息的作業簽章。  
+- 依據所交換訊息的作業簽章。  
   
--   這些訊息的資料型別。  
+- 這些訊息的資料型別。  
   
--   作業的位置。  
+- 作業的位置。  
   
--   用於支援與服務的成功通訊的特定通訊協定和序列化格式。  
+- 用於支援與服務的成功通訊的特定通訊協定和序列化格式。  
   
  例如，採購單合約可能會有 `CreateOrder` 作業，該作業會接受訂單資訊輸入並傳回成功或失敗資訊 (包括訂單識別碼)。 它也可能會有 `GetOrderStatus` 作業，該作業會接受訂單識別碼並傳回訂單狀態資訊。 這類服務合約會指定：  
   

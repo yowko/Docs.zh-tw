@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
 ms.openlocfilehash: 0c575e02862884e8f7ecf062138c36fe731f8e19
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793766"
 ---
 # <a name="sessiontokenrequirement"></a>\<sessionTokenRequirement>
 提供組態<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>類別或衍生的類別。  
@@ -44,7 +44,7 @@ ms.locfileid: "55271898"
 |存留期|指定工作階段權杖的存留期。|  
   
 ### <a name="child-elements"></a>子元素  
- 無  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   

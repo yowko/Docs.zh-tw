@@ -11,11 +11,11 @@ helpviewer_keywords:
 - properties [WPF], change notifications
 ms.assetid: 30b59d9e-8c3a-4349-aa82-4be837e841cf
 ms.openlocfilehash: d37d468acc94470be8c2afdc495b40168932ec83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931439"
 ---
 # <a name="how-to-implement-property-change-notification"></a>HOW TO：實作屬性變更通知
 若要支援<xref:System.Windows.Data.BindingMode.OneWay>或<xref:System.Windows.Data.BindingMode.TwoWay>繫結而讓您能自動反映繫結來源 （例如，將會自動更新，當使用者編輯表單的 [預覽] 窗格），動態變更的繫結目標屬性類別必須提供適當的屬性變更通知。 此範例示範如何建立可實作類別<xref:System.ComponentModel.INotifyPropertyChanged>。  

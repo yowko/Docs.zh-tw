@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 10d12e5cab41f016ddee78089dc1df1f5c942ecd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789439"
 ---
 # <a name="ihosttaskmanagerenddelayabort-method"></a>IHostTaskManager::EndDelayAbort 方法
 通知主機 managed 程式碼正在結束的期間，在其中必須不會中止目前的工作，遵循之前呼叫[ihosttaskmanager:: Begindelayabort](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-begindelayabort-method.md)。  

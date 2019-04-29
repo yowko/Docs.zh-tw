@@ -3,11 +3,11 @@ title: HOW TO：在可靠的工作階段內交換訊息
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
 ms.openlocfilehash: aad4eae870e3ba603c56a28a620fe8bc0e31ceb6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778361"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>HOW TO：在可靠的工作階段內交換訊息
 

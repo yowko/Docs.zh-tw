@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30203
 ms.assetid: c05162ee-55d0-4d7f-84bb-e7758d4c5081
 ms.openlocfilehash: 11a305581ba498715f7f24ecb75f737acdf12bfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936314"
 ---
 # <a name="identifier-expected"></a>必須是識別項
 不是可辨識的宣告項目名稱的程式設計項目就會發生在內容需要的項目名稱。 一個可能的原因是屬性已指定的位置以外的陳述式開頭。  
@@ -21,9 +21,9 @@ ms.locfileid: "58843548"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   請確認該陳述式中的任何屬性全部放置在開頭。  
+- 請確認該陳述式中的任何屬性全部放置在開頭。  
   
--   請確認陳述式中的所有項目名稱拼寫正確。  
+- 請確認陳述式中的所有項目名稱拼寫正確。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -3,11 +3,11 @@ title: HOW TO：執行大型 XML 文件 (Visual Basic) 的資料流轉換
 ms.date: 07/20/2015
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
 ms.openlocfilehash: 8761f5fbf4e6137c1ae6b202b6717579c6f78d4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789125"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>HOW TO：執行大型 XML 文件 (Visual Basic) 的資料流轉換
 有時候您必須轉換大型 XML 檔案並撰寫您的應用程式，讓應用程式的記憶體使用量可以預測。 如果您嘗試使用非常大的 XML 檔案填入 XML 樹狀結構，您的記憶體使用量將與檔案大小成正比 (也就是，變成過度)。 因此，您應該改用資料流技術。  

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 ms.openlocfilehash: ecc62292b2b064219127c369f43141a31ffe606d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780064"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory 和 WSTrustChannel
 如果您已熟悉 Windows Communication Foundation (WCF)，則應該知道 WCF 已是同盟感知用戶端。 若以 <xref:System.ServiceModel.WSFederationHttpBinding> 或類似的自訂繫結設定 WCF 用戶端，您就可以啟用對服務的同盟驗證。
@@ -25,7 +25,7 @@ ms.locfileid: "48839414"
 
 - 單獨使用 WIF 從 STS 取得權杖，然後讓 WCF 用戶端使用此權杖進行驗證。 如需詳細資訊，請參閱 [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406) 範例。
 
- 第一個案例本身即已說明：現有的 WCF 用戶端將繼續使用 WIF 信賴憑證者和 STS。 本主題將討論其餘兩種情節。
+ 第一個案例都簡單易懂的：現有的 WCF 用戶端將繼續使用 WIF 信賴憑證者的合作對象和 Sts。 本主題將討論其餘兩種情節。
 
 ## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>使用 ActAs / OnBehalfOf 增強現有的 WCF 用戶端
 在典型的身分識別委派情節中，用戶端會呼叫中層服務，而中層服務接著會呼叫後端服務。 中層服務會作為用戶端或以用戶端的身分執行。

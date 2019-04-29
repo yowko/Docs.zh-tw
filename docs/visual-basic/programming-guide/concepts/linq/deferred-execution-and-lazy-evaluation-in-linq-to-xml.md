@@ -3,11 +3,11 @@ title: 延後的執行和延遲評估，在 LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 31998eed-b95e-47fb-a865-9de1f337d1fb
 ms.openlocfilehash: b5c3e2a484aa16df22742ddf77d6438ec2a699bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790529"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-visual-basic"></a>延後的執行和延遲評估，在 LINQ to XML (Visual Basic)
 若要使用延後執行，通常會實作查詢和座標軸運算。 本主題說明延後執行的條件與優點以及一些實作考量。  
@@ -20,16 +20,16 @@ ms.locfileid: "58839029"
 ## <a name="eager-vs-lazy-evaluation"></a>急切評估與延遲評估之比較  
  當您撰寫實作延後執行的方法時，您也必須決定要使用延遲評估或急切評估來實作方法。  
   
--   若為「延遲評估」，來源集合的單一項目會在每次呼叫 Iterator 時進行處理。 這是實作 Iterator 的一般方式。  
+- 若為「延遲評估」，來源集合的單一項目會在每次呼叫 Iterator 時進行處理。 這是實作 Iterator 的一般方式。  
   
--   若為「急切評估」，第一次呼叫 Iterator 時，就會處理整個集合。 同時，可能也需要來源集合的暫存副本。 例如，<xref:System.Linq.Enumerable.OrderBy%2A> 方法必須在傳回第一個項目前，排序整個集合。  
+- 若為「急切評估」，第一次呼叫 Iterator 時，就會處理整個集合。 同時，可能也需要來源集合的暫存副本。 例如，<xref:System.Linq.Enumerable.OrderBy%2A> 方法必須在傳回第一個項目前，排序整個集合。  
   
  延遲評估通常會產生較好的效能，因為它會平均分散整個集合評估的負荷處理，並將暫存資料的使用率降到最低。 當然，對於某些運算而言，沒有具體化中繼結果之外的其他選擇。  
   
 ## <a name="next-steps"></a>後續步驟  
  此教學課程中的下一個主題說明延後執行：  
   
--   [延後的執行範例 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)  
+- [延後的執行範例 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)  
   
 ## <a name="see-also"></a>另請參閱
 

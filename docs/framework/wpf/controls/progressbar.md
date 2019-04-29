@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ProgressBar control [WPF]
 ms.assetid: 4545b358-b93c-47df-88e4-9946d7db9e3f
 ms.openlocfilehash: 27a2f54edac2add67b938300dc342744475466cc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770538"
 ---
 # <a name="progressbar"></a>進度列
 A<xref:System.Windows.Controls.ProgressBar>指出作業的進度。 <xref:System.Windows.Controls.ProgressBar>控制項所組成的視窗會填滿系統的醒目提示色彩隨著作業的進度。  

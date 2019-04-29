@@ -19,11 +19,11 @@ ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08b46d96f9fb950602766639559a375a25747010
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869004"
 ---
 # <a name="using-the-assert-method"></a>使用 Assert 方法
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -43,19 +43,19 @@ ms.locfileid: "59073724"
   
  下圖顯示當您使用時，會發生什麼事**Assert**。 假設以下有關組件 A、B、C、E 和 F，以及 P1 和 P1A 兩個權限的陳述成立：  
   
--   P1A 代表讀取 C 磁碟機上 .txt 檔案的權限。  
+- P1A 代表讀取 C 磁碟機上 .txt 檔案的權限。  
   
--   P1 代表讀取 C 磁碟機上所有檔案的權限。  
+- P1 代表讀取 C 磁碟機上所有檔案的權限。  
   
--   P1A 和 P1 都**FileIOPermission**類型，且 P1A 為 P1 的子集。  
+- P1A 和 P1 都**FileIOPermission**類型，且 P1A 為 P1 的子集。  
   
--   組件 E 和 F 已被授與 P1A 權限。  
+- 組件 E 和 F 已被授與 P1A 權限。  
   
--   組件 C 已被授與 P1 權限。  
+- 組件 C 已被授與 P1 權限。  
   
--   組件 A 和 B 未被授與 P1 或 P1A 權限。  
+- 組件 A 和 B 未被授與 P1 或 P1A 權限。  
   
--   方法 A 包含在組件 A 中，方法 B 包含在組件 B 中，依此類推。  
+- 方法 A 包含在組件 A 中，方法 B 包含在組件 B 中，依此類推。  
   
  ![此圖顯示判斷提示方法組件。](./media/using-the-assert-method/assert-method-assemblies.gif)    
   

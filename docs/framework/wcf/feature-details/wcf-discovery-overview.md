@@ -3,11 +3,11 @@ title: WCF 探索概觀
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
 ms.openlocfilehash: cb1eb52e0996a03709a755ff2f148152e2625c58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784250"
 ---
 # <a name="wcf-discovery-overview"></a>WCF 探索概觀
 探索 API 為使用 WS-Discovery 通訊協定動態發行和探索 Web 服務的作業，提供了統一的程式設計模型。 這些 API 可讓服務自行發行，並且讓用戶端尋找發行的服務。 一旦服務變成可探索，就能夠傳送公告訊息，以及接聽和回應探索要求。 可探索的服務可以傳送 Hello 訊息，公告服務抵達網路，以及傳送 Bye 訊息，公告服務離開網路。 若要尋找服務，用戶端可傳送包含特定準則的 `Probe` 要求，例如服務合約型別、關鍵字以及在網路上的範圍。 服務會接收 `Probe` 要求並判斷是否符合準則。 如果服務符合準則，則會將 `ProbeMatch` 訊息傳回至用戶端做為回應，其中包含連絡服務所需的資訊。 用戶端也可以傳送 `Resolve` 要求，以尋找可能已變更其端點位址的服務。 相符的服務會透過將 `Resolve` 訊息傳回用戶端的方式回應 `ResolveMatch` 要求。  
@@ -15,11 +15,11 @@ ms.locfileid: "59768406"
 ## <a name="ad-hoc-and-managed-modes"></a>特定和 Managed 模式  
  探索 API 支援兩種不同的模式：管理和臨機操作。 Managed 模式中會有稱為探索 Proxy 的集中式伺服器，用於維護可用服務的相關資訊。 探索 Proxy 中可以透過各種方式填入有關服務的資訊。 例如，服務可以在啟動時傳送公告訊息至探索 Proxy，或者 Proxy 可從資料庫或組態檔讀取資料，以判斷哪些服務可用。 填入探索 Proxy 的方式完全取決於開發人員。 用戶端會使用探索 Proxy 擷取可用服務的相關資訊。 當用戶端搜尋服務時，會傳送 `Probe` 訊息給探索 Proxy，而 Proxy 會判斷已知的任何服務中，是否有符合用戶端所搜尋的服務。 如果有符合的服務，探索 Proxy 就會傳送 `ProbeMatch` 回應至用戶端。 接著，用戶端就可以使用從 Proxy 傳回的服務資訊直接連絡服務。 Managed 模式背後的主要原則是：探索要求以單點傳送的方式傳送至一個授權單位，也就是探索 Proxy。 .NET Framework 中包含的主要元件可讓您建立自己的 Proxy。 用戶端和服務可以透過許多種方法尋找 Proxy：  
   
--   Proxy 可以回應特定訊息。  
+- Proxy 可以回應特定訊息。  
   
--   Proxy 可以在啟動時傳送公告訊息。  
+- Proxy 可以在啟動時傳送公告訊息。  
   
--   用戶端和服務可以撰寫為尋找特定的已知端點。  
+- 用戶端和服務可以撰寫為尋找特定的已知端點。  
   
  特定模式中沒有集中式伺服器。 所有探索訊息 (例如服務公告和用戶端要求) 都是以多點傳送的方式傳送。 根據預設，.NET Framework 包含透過 UDP 通訊協定支援特定探索的能力。 例如，如果服務設定為在啟動時送出 Hello 公告，則會透過使用 UDP 通訊協定的已知多點傳送位址送出該公告。 用戶端必須主動接聽這些公告，並且進行對應的處理。 當用戶端傳送服務的 `Probe` 訊息時，會透過使用多點傳送通訊協定的網路進行傳送。 每一項接收要求的服務都會判斷本身是否符合 `Probe` 訊息中的準則，而如果服務符合 `ProbeMatch` 訊息中指定的準則，就會以 `Probe` 訊息直接回應用戶端。  
   

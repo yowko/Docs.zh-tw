@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
 ms.openlocfilehash: 41794c5ecadbcdc0b38c7c73afc7c010a4ea6989
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939141"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的儲存格樣式
 每個資料格內<xref:System.Windows.Forms.DataGridView>控制項可以有它自己的樣式，例如文字格式、 背景色彩、 前景色彩和字型。 一般而言，不過，多個資料格會共用特定樣式特性。  
@@ -21,23 +21,23 @@ ms.locfileid: "59300017"
 ## <a name="the-datagridviewcellstyle-class"></a>DataGridViewCellStyle 類別  
  <xref:System.Windows.Forms.DataGridViewCellStyle>類別包含視覺化樣式的相關的下列屬性：  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A>  
   
  這個類別也包含與格式相關的下列屬性：  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.Alignment%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.Alignment%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.Padding%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.Padding%2A>  
   
  如需有關這些屬性和其他儲存格樣式屬性的詳細資訊，請參閱<xref:System.Windows.Forms.DataGridViewCellStyle>另請參閱下一節中列出的參考文件和主題。  
   

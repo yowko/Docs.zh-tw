@@ -3,11 +3,11 @@ title: 簽章檔案
 description: 了解如何使用F#來保存一組的公開金鑰的簽章的相關資訊的簽章檔案F#的程式項目，例如類型、 命名空間和模組。
 ms.date: 06/15/2018
 ms.openlocfilehash: 88938309a7c2bd12428f06ba8088141fd5349e80
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770444"
 ---
 # <a name="signatures"></a>簽章
 

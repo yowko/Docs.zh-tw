@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
 ms.openlocfilehash: 4464100012fe9b3e1f0e8743707b1dc9a477c3d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59205884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787864"
 ---
 # <a name="how-to-create-a-secure-session"></a>HOW TO：建立安全工作階段
 除了[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)繫結時，系統提供繫結 Windows Communication Foundation (WCF) 中自動使用訊息安全性啟用時的安全工作階段。  
@@ -21,7 +21,7 @@ ms.locfileid: "59205884"
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a>使用其中一個系統提供的繫結來指定服務使用安全工作階段  
   
--   請將服務設定為使用支援訊息安全性之系統提供的繫結。  
+- 請將服務設定為使用支援訊息安全性之系統提供的繫結。  
   
      除了[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)繫結，當系統提供繫結會設定為自動使用訊息安全性時，WCF 會使用安全工作階段。 下表列出了支援訊息安全性之系統提供的繫結，以及訊息安全性是否為預設的安全性機制。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "59205884"
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-a-custom-binding"></a>使用自訂繫結來指定服務使用安全工作階段  
   
--   請建立自訂繫結，指定 SOAP 訊息受到安全工作階段的保護。  
+- 請建立自訂繫結，指定 SOAP 訊息受到安全工作階段的保護。  
   
      如需建立自訂繫結的詳細資訊，請參閱[How to:自訂系統提供的繫結](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。  
   

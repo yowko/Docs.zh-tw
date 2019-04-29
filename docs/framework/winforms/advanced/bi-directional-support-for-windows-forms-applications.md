@@ -10,11 +10,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f494d3176d72563a82b50fd5e077917e46045b91
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779180"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>對 Windows Forms 應用程式的雙向支援
 您可以使用 Visual Studio 建立以 Windows 為基礎的應用程式，支援阿拉伯文和希伯來文等雙向 （由右至左） 語言。 這包括標準表單、對話方塊、MDI 表單，以及您可以在這些表單中使用的所有控制項，也就是 <xref:System.Windows.Forms.Control> 命名空間中的所有物件。  
@@ -67,7 +67,7 @@ ms.locfileid: "57712274"
 |<xref:System.Windows.Forms.SaveFileDialog>|不受影響；視作業系統的語言而定|無效果|否|  
 |<xref:System.Windows.Forms.SplitContainer>|面板配置反轉；垂直捲軸出現在左側；水平捲軸從右邊開始|使用 <xref:System.Windows.Forms.TableLayoutPanel> 來鏡像處理子控制項的順序|否|  
 |<xref:System.Windows.Forms.Splitter>|不支援|無效果|否|  
-|<xref:System.Windows.Forms.StatusBar>|不支援；請改用 <xref:System.Windows.Forms.StatusStrip>|無效果 ；請改用 <xref:System.Windows.Forms.StatusStrip>|否|  
+|<xref:System.Windows.Forms.StatusBar>|不支援；請改用 <xref:System.Windows.Forms.StatusStrip>|無效果；請改用 <xref:System.Windows.Forms.StatusStrip>|否|  
 |<xref:System.Windows.Forms.TabControl>|不受這個屬性影響|將控制項鏡像處理|是|  
 |<xref:System.Windows.Forms.TextBox>|文字由右至左顯示，且讀取順序為 RTL (由右至左)|無效果|否|  
 |<xref:System.Windows.Forms.Timer>|非必要|非必要|否|  
@@ -101,19 +101,19 @@ ms.locfileid: "57712274"
   
  您可以建立下列控制項的鏡像版本：  
   
--   <xref:System.Windows.Forms.ColumnHeader.ListView%2A>  
+- <xref:System.Windows.Forms.ColumnHeader.ListView%2A>  
   
--   <xref:System.Windows.Forms.Panel>  
+- <xref:System.Windows.Forms.Panel>  
   
--   <xref:System.Windows.Forms.StatusBar>  
+- <xref:System.Windows.Forms.StatusBar>  
   
--   <xref:System.Windows.Forms.TabControl>  
+- <xref:System.Windows.Forms.TabControl>  
   
--   <xref:System.Windows.Forms.TabPage>  
+- <xref:System.Windows.Forms.TabPage>  
   
--   <xref:System.Windows.Forms.ToolBar>  
+- <xref:System.Windows.Forms.ToolBar>  
   
--   <xref:System.Windows.Forms.TreeView>  
+- <xref:System.Windows.Forms.TreeView>  
   
  有些控制項已密封。 因此，您不能從其衍生新的控制項。 其中包括 <xref:System.Windows.Forms.ImageList> 和 <xref:System.Windows.Forms.ProgressBar> 控制項。  
   

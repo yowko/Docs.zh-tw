@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
 ms.openlocfilehash: 3b4f00617418d5f84a0da5d0e531e1f671b58bb1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791374"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>使用繫結來設定服務和用戶端
 繫結是指定連接端點所需要之通訊詳細資料的物件。 更明確的說，繫結包含藉由定義傳輸、網路格式 (訊息編碼) 的細節，用於建立用戶端或服務執行階段的組態資訊，以及用於個別端點或用戶端通道的通訊協定。 若要建立可運作的 Windows Communication Foundation (WCF) 服務，在服務中的每個端點都需要繫結。 本主題將說明什麼是繫結、如何定義繫結，以及如何為端點指定特定繫結。  
@@ -29,13 +29,13 @@ ms.locfileid: "59323144"
 ## <a name="system-provided-bindings"></a>系統提供的繫結  
  WCF 包含一組系統提供繫結是設計用來涵蓋大部分的應用程式的需求和案例。 下列類別則表示系統提供之繫結的一些範例：  
   
--   <xref:System.ServiceModel.BasicHttpBinding>：HTTP 通訊協定繫結，適用於連線至 Web 服務，符合 WS-I-Basic Profile 1.1 規格 (比方說，將 ASP.NET Web 服務 [ASMX] 為基礎的服務)。  
+- <xref:System.ServiceModel.BasicHttpBinding>：HTTP 通訊協定繫結，適用於連線至 Web 服務，符合 WS-I-Basic Profile 1.1 規格 (比方說，將 ASP.NET Web 服務 [ASMX] 為基礎的服務)。  
   
--   <xref:System.ServiceModel.WSHttpBinding>：HTTP 通訊協定繫結適合用來連接到端點符合 Web 服務規格通訊協定。  
+- <xref:System.ServiceModel.WSHttpBinding>：HTTP 通訊協定繫結適合用來連接到端點符合 Web 服務規格通訊協定。  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>：使用.NET 二進位編碼和框架技術搭配使用 Windows 具名管道傳輸來連接至同一部電腦上的其他 WCF 端點。  
+- <xref:System.ServiceModel.NetNamedPipeBinding>：使用.NET 二進位編碼和框架技術搭配使用 Windows 具名管道傳輸來連接至同一部電腦上的其他 WCF 端點。  
   
--   <xref:System.ServiceModel.NetMsmqBinding>：使用.NET 二進位編碼和框架技術搭配訊息佇列 (也稱為 MSMQ) 來建立佇列的訊息連線與其他 WCF 端點。  
+- <xref:System.ServiceModel.NetMsmqBinding>：使用.NET 二進位編碼和框架技術搭配訊息佇列 (也稱為 MSMQ) 來建立佇列的訊息連線與其他 WCF 端點。  
   
  如需完整的系統提供繫結，和描述，請參閱[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "59323144"
 ## <a name="code-and-configuration"></a>程式碼和組態  
  您可以透過程式碼或組態來定義或設定繫結。 這兩種方法與所使用的繫結型別無關，例如，您是否使用系統提供的或 <xref:System.ServiceModel.Channels.CustomBinding> 繫結。 一般來說，使用程式碼可讓您在編譯時完全控制繫結的定義。 使用組態，相反地，可讓系統管理員或使用者的 WCF 服務或用戶端變更繫結的參數。 這種彈性通常是理想的因為沒有辦法預測特定機器需求和網路的 WCF 應用程式是部署到其中的狀況。 將繫結 (和位址) 資訊和程式碼分開可讓系統管理員變更繫結詳細資料，而不需要重新編譯或重新部署應用程式。 請注意，如果繫結是以程式碼定義的，它會覆寫組態檔中任何以組態為基礎所做的定義。 如需這些方法的範例，請參閱下列主題：  
   
--   [如何：裝載 WCF 服務在受管理的應用程式中](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)提供的範例程式碼建立繫結。  
+- [如何：裝載 WCF 服務在受管理的應用程式中](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)提供的範例程式碼建立繫結。  
   
--   [教學課程：建立 Windows Communication Foundation 用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)提供使用組態建立用戶端的範例。  
+- [教學課程：建立 Windows Communication Foundation 用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)提供使用組態建立用戶端的範例。  
   
 ## <a name="see-also"></a>另請參閱
 

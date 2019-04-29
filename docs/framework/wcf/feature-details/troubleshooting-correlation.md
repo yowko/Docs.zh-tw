@@ -3,11 +3,11 @@ title: 疑難排解相互關聯
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
 ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932817"
 ---
 # <a name="troubleshooting-correlation"></a>疑難排解相互關聯
 相互關聯用於讓工作流程服務訊息彼此之間產生關聯，以及讓工作流程服務訊息和正確的工作流程執行個體產生關聯，但是，如果設定錯誤，將不會收到訊息，而且應用程式將不會正確運作。 本主題提供數個疑難排解相互關聯問題方法的概觀，同時也列出使用相互關聯時可能發生的部分常見問題。
@@ -161,7 +161,7 @@ SendReply ReplyToStartOrder = new SendReply
 // Construct a workflow using StartOrder and ReplyToStartOrder.
 ```
 
- 之間，不允許持續性<xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>配對或<xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply>組。 系統會建立不保存區域，這個區域會持續直到兩個活動都完成為止。 如果某個活動 (例如延遲活動) 位於這個不保存區域中，並且導致工作流程變成閒置，工作流程將不會保存，即使主機設定為在工作流程變成閒置時保存它們也一樣。 如果某個活動 (例如持續活動) 嘗試明確保存在不保存區域中，系統就會擲回嚴重的例外狀況、工作流程會中止，而且 <xref:System.ServiceModel.FaultException> 會傳回給呼叫端。 嚴重的例外狀況訊息為「System.InvalidOperationException: 持續活動不能包含在無持續性區塊中」。 此例外狀況不會傳回給呼叫端，不過如果啟用了追蹤，就可以觀察此例外狀況。 傳回給呼叫端之 <xref:System.ServiceModel.FaultException> 的訊息為「無法執行作業，因為 WorkflowInstance '5836145b-7da2-49d0-a052-a49162adeab6' 已完成」。
+ 之間，不允許持續性<xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>配對或<xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply>組。 系統會建立不保存區域，這個區域會持續直到兩個活動都完成為止。 如果某個活動 (例如延遲活動) 位於這個不保存區域中，並且導致工作流程變成閒置，工作流程將不會保存，即使主機設定為在工作流程變成閒置時保存它們也一樣。 如果某個活動 (例如持續活動) 嘗試明確保存在不保存區域中，系統就會擲回嚴重的例外狀況、工作流程會中止，而且 <xref:System.ServiceModel.FaultException> 會傳回給呼叫端。 嚴重的例外狀況訊息為 「 System.InvalidOperationException:保存活動不能包含在無持續性區塊。 」。 此例外狀況不會傳回給呼叫端，不過如果啟用了追蹤，就可以觀察此例外狀況。 傳回給呼叫端之 <xref:System.ServiceModel.FaultException> 的訊息為「無法執行作業，因為 WorkflowInstance '5836145b-7da2-49d0-a052-a49162adeab6' 已完成」。
 
  如需有關要求-回覆相互關聯的詳細資訊，請參閱[要求-回覆](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)。
 
@@ -188,7 +188,7 @@ MessageQuerySet = new MessageQuerySet
 }
 ```
 
- 如果 XPath 查詢的設定不正確，因而無法擷取任何相互關聯資料，系統就會傳回錯誤並顯示下列訊息：「相互關聯查詢產生空白的結果集。 請確定已正確設定端點的相互關聯查詢」。 其中一種快速疑難排解此問題的方式為，將 XPath 查詢取代成常值，如上一節所述。 如果您使用 XPath 查詢產生器中的，會發生此問題**加入相互關聯初始設定式**或是**CorrelatesOn 定義**對話方塊和您的工作流程服務使用訊息合約。 在下列範例中，系統會定義訊息合約類別。
+ 如果 XPath 查詢會設定不正確，會擷取任何相互關聯資料，會傳回錯誤，並出現下列訊息：「 相互關聯查詢會產生空的結果集。 請確定已正確設定端點的相互關聯查詢」。 其中一種快速疑難排解此問題的方式為，將 XPath 查詢取代成常值，如上一節所述。 如果您使用 XPath 查詢產生器中的，會發生此問題**加入相互關聯初始設定式**或是**CorrelatesOn 定義**對話方塊和您的工作流程服務使用訊息合約。 在下列範例中，系統會定義訊息合約類別。
 
 ```csharp
 [MessageContract]

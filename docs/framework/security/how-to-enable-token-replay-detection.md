@@ -4,39 +4,39 @@ ms.date: 03/30/2017
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 author: BrucePerlerMS
 ms.openlocfilehash: a357f153d61b6a8e1e105639bd68647dabdc26f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940474"
 ---
 # <a name="how-to-enable-token-replay-detection"></a>如何：啟用權杖重新執行偵測
 ## <a name="applies-to"></a>適用於  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web Forms  
+- ASP.NET® Web Forms  
   
 ## <a name="summary"></a>總結  
  此操作說明提供了在使用 WIF 的 ASP.NET 應用程式中啟用權杖重新執行偵測的詳細逐步程序。 還提供了一些指示，說明如何測試應用程式來確認已啟用權杖重新執行偵測。 這篇使用方法文章並沒有提供建立 Security Token Service (STS) 的詳細指示，而是使用識別和存取工具隨附的「開發 STS」。 「開發 STS」並不會執行實際的驗證，而只是用於測試用途。 您必須安裝識別和存取工具才能完成這篇使用方法文章。 它可以從下列位置下載：[身分識別和存取工具](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>內容  
   
--   目標  
+- 目標  
   
--   總覽  
+- 總覽  
   
--   步驟摘要  
+- 步驟摘要  
   
--   步驟 1 – 建立簡單的 ASP.NET Web Forms 應用程式並啟用重新執行偵測  
+- 步驟 1 – 建立簡單的 ASP.NET Web Forms 應用程式並啟用重新執行偵測  
   
--   步驟 2 – 測試方案  
+- 步驟 2 – 測試方案  
   
 ## <a name="objectives"></a>目標  
   
--   建立從身分識別與存取工具使用 WIF 和開發 STS 的簡單 ASP.NET 應用程式  
+- 建立從身分識別與存取工具使用 WIF 和開發 STS 的簡單 ASP.NET 應用程式  
   
--   啟用權杖重新執行偵測，並確認它能夠正常運作  
+- 啟用權杖重新執行偵測，並確認它能夠正常運作  
   
 ## <a name="overview"></a>總覽  
  當用戶端嘗試以用戶端已使用之 STS 權杖向信賴憑證者進行驗證時，就會發生重新執行攻擊。 為了協助避免這種攻擊，WIF 會包含先前所使用之 STS 權杖的重新執行偵測快取。 啟用時，重新執行偵測會檢查傳入要求的權杖，並確認先前是否已使用該權杖。 如果已使用該權杖，就會拒絕要求並擲回 <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> 例外狀況。  
@@ -45,9 +45,9 @@ ms.locfileid: "59772917"
   
 ## <a name="summary-of-steps"></a>步驟摘要  
   
--   步驟 1 – 建立簡單的 ASP.NET Web Forms 應用程式並啟用重新執行偵測  
+- 步驟 1 – 建立簡單的 ASP.NET Web Forms 應用程式並啟用重新執行偵測  
   
--   步驟 2 – 測試方案  
+- 步驟 2 – 測試方案  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application-and-enable-replay-detection"></a>步驟 1 – 建立簡單的 ASP.NET Web Forms 應用程式並啟用重新執行偵測  
  在此步驟中，您將建立新的 ASP.NET Web Forms 應用程式，並修改 *Web.config* 檔案以啟用重新執行偵測。  

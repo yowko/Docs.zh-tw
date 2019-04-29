@@ -7,18 +7,18 @@ helpviewer_keywords:
 - tooltips [Windows Forms], adding
 ms.assetid: c5d86024-a7c5-44ee-8b3f-2daf53d80d3e
 ms.openlocfilehash: ffaf859fafc87131de525f7bf2f52db421a208c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785745"
 ---
 # <a name="how-to-use-tooltips-in-toolstrip-controls"></a>HOW TO：在 ToolStrip 控制項使用工具提示
 您可以顯示<xref:System.Windows.Forms.ToolTip>for<xref:System.Windows.Forms.ToolStrip>您想要藉由設定控制項的控制項<xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>屬性設`true`。  
   
 ### <a name="to-display-a-tooltip"></a>若要顯示工具提示  
   
--   設定<xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>屬性來控制`true`。  
+- 設定<xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>屬性來控制`true`。  
   
      預設值<xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A?displayProperty=nameWithType>已`true`，和預設值<xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A?displayProperty=nameWithType>並<xref:System.Windows.Forms.StatusStrip.ShowItemToolTips%2A?displayProperty=nameWithType>是`false`。  
   

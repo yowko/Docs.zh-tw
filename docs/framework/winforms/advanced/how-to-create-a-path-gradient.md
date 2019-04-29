@@ -13,8 +13,8 @@ ms.openlocfilehash: a04465c31b160f97568ed88c434e7e3a5126ebb6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938012"
 ---
 # <a name="how-to-create-a-path-gradient"></a>HOW TO：建立路徑漸層
 <xref:System.Drawing.Drawing2D.PathGradientBrush>類別可讓您自訂您逐漸變更色彩填滿圖形的方式。 例如，您可以指定路徑的中心的一種色彩和路徑的界限的另一種色彩。 您也可以指定不同的色彩，每個界限的數個點的路徑。  
@@ -26,7 +26,7 @@ ms.locfileid: "59975750"
 
 ### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>若要使用的路徑漸層填滿橢圓形  
   
--   下列範例會填滿橢圓形使用路徑漸層筆刷。 之中心色彩設定為藍色，邊界色彩設定為青色。 下圖顯示實心的橢圓形。  
+- 下列範例會填滿橢圓形使用路徑漸層筆刷。 之中心色彩設定為藍色，邊界色彩設定為青色。 下圖顯示實心的橢圓形。  
   
      ![漸層停駐的路徑會填滿橢圓形。](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
   
@@ -43,12 +43,12 @@ ms.locfileid: "59975750"
   
 ### <a name="to-specify-points-on-the-boundary"></a>若要指定點的界限  
   
--   下列範例會建構路徑漸層筆刷從星形的路徑。 程式碼集<xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A>屬性，設定在為紅色星號的距心的色彩。 然後程式碼集<xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A>屬性來指定各種色彩 (儲存在`colors`陣列) 在個別的點`points`陣列。 最後的程式碼陳述式會填滿星形路徑與路徑漸層筆刷。  
+- 下列範例會建構路徑漸層筆刷從星形的路徑。 程式碼集<xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A>屬性，設定在為紅色星號的距心的色彩。 然後程式碼集<xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A>屬性來指定各種色彩 (儲存在`colors`陣列) 在個別的點`points`陣列。 最後的程式碼陳述式會填滿星形路徑與路徑漸層筆刷。  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
--   下列範例會繪製路徑漸層，而不需要<xref:System.Drawing.Drawing2D.GraphicsPath>程式碼中的物件。 特定<xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A>建構函式，在範例中會收到一個點的陣列，但不需要<xref:System.Drawing.Drawing2D.GraphicsPath>物件。 另請注意，<xref:System.Drawing.Drawing2D.PathGradientBrush>用來填滿矩形，而不是路徑。 矩形大於封閉的路徑，用來定義筆刷，因此部分矩形將不會繪製筆刷。 下圖顯示矩形 （虛線） 和路徑的漸層筆刷繪製之矩形的部分： 
+- 下列範例會繪製路徑漸層，而不需要<xref:System.Drawing.Drawing2D.GraphicsPath>程式碼中的物件。 特定<xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A>建構函式，在範例中會收到一個點的陣列，但不需要<xref:System.Drawing.Drawing2D.GraphicsPath>物件。 另請注意，<xref:System.Drawing.Drawing2D.PathGradientBrush>用來填滿矩形，而不是路徑。 矩形大於封閉的路徑，用來定義筆刷，因此部分矩形將不會繪製筆刷。 下圖顯示矩形 （虛線） 和路徑的漸層筆刷繪製之矩形的部分： 
   
      ![路徑漸層筆刷繪製漸層的部分。](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "59975750"
   
 ### <a name="to-customize-a-path-gradient"></a>若要自訂路徑漸層  
   
--   自訂路徑漸層筆刷的一種方法是設定其<xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A>屬性。 焦點標尺指定內部路徑位於內的主要路徑。 內部路徑中，而不是只在 center 點時，會到處都顯示在中心色彩。  
+- 自訂路徑漸層筆刷的一種方法是設定其<xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A>屬性。 焦點標尺指定內部路徑位於內的主要路徑。 內部路徑中，而不是只在 center 點時，會到處都顯示在中心色彩。  
   
      下列範例會建立路徑的漸層筆刷，根據橢圓形的路徑。 程式碼界限色彩設定為藍色，中心色彩設定為青色、，然後再使用路徑漸層筆刷填滿橢圓形的路徑。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "59975750"
   
 ### <a name="to-customize-with-interpolation"></a>若要自訂內插補點  
   
--   若要自訂路徑漸層筆刷的另一種方式是指定插補色彩的陣列和陣列的內插補點位置。  
+- 若要自訂路徑漸層筆刷的另一種方式是指定插補色彩的陣列和陣列的內插補點位置。  
   
      下列範例會建立路徑漸層筆刷的三角形為基礎。 程式碼集<xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A>路徑漸層筆刷指定深綠色、 青色 （藍） 的插補色彩的陣列和陣列的內插補點位置 （0，0.25，1） 的屬性。 當您移動三角形的界限從中心點時，色彩會逐漸從深綠色為青綠色，然後從青色藍色。 深綠色 aqua 的變更會在 25%的深綠色和藍色之間的距離。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "59975750"
   
 ### <a name="to-set-the-center-point"></a>若要設定的中心點  
   
--   根據預設，路徑漸層筆刷的中心點位於用來建構筆刷的路徑的距心。 您可以藉由設定變更的中心點的位置<xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A>屬性<xref:System.Drawing.Drawing2D.PathGradientBrush>類別。  
+- 根據預設，路徑漸層筆刷的中心點位於用來建構筆刷的路徑的距心。 您可以藉由設定變更的中心點的位置<xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A>屬性<xref:System.Drawing.Drawing2D.PathGradientBrush>類別。  
   
      下列範例會建立路徑的漸層筆刷，根據一個橢圓形。 橢圓形的中心是 70 (35），但會設定路徑漸層筆刷的中心點為 （120，40）。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "59975750"
   
      ![漸層填滿橢圓形和中心點的路徑。](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
   
--   您可以設定路徑漸層筆刷的中心點，用來建構筆刷在路徑外的位置。 下列範例會將呼叫以設定<xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A>前面的程式碼的屬性。  
+- 您可以設定路徑漸層筆刷的中心點，用來建構筆刷在路徑外的位置。 下列範例會將呼叫以設定<xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A>前面的程式碼的屬性。  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  

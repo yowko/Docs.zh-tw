@@ -8,11 +8,11 @@ helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
 ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932791"
 ---
 # <a name="using-message-contracts"></a>使用訊息合約
 通常當建置 Windows Communication Foundation (WCF) 應用程式，開發人員密切注意資料結構與序列化的問題，並不需要顧慮傳送資料的訊息結構。 針對這類應用程式，建立參數的資料合約或傳回值是很明確的。 (如需詳細資訊，請參閱 < [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
@@ -244,11 +244,11 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>SOAP 標頭屬性  
  SOAP 標準會定義下列可能存在於標頭的屬性：  
   
--   `Actor/Role` (在 SOAP 1.1 中為 `Actor`，在 SOAP 1.2 中為 `Role`)  
+- `Actor/Role` (在 SOAP 1.1 中為 `Actor`，在 SOAP 1.2 中為 `Role`)  
   
--   `MustUnderstand`  
+- `MustUnderstand`  
   
--   `Relay`  
+- `Relay`  
   
  `Actor` 或 `Role` 屬性會定義指定標頭想要之節點的統一資源識別元 (URI)。 `MustUnderstand` 屬性會指定處理標頭的節點是否必須識別它。 `Relay` 屬性會指定標頭是否要轉送至下游節點。 WCF 不會執行任何處理傳入訊息上的這些屬性除了`MustUnderstand`屬性，如本主題稍後的 「 訊息合約版本控制 」 一節中所指定。 但是，它允許您依需要讀取和寫入這些屬性，如同下列所描述。  
   
@@ -323,9 +323,9 @@ public class BankingTransaction
   
  下列規則會套用至版本控制標頭：  
   
--   WCF 不會拒絕處理缺少標頭，對應的成員會保留其預設值。  
+- WCF 不會拒絕處理缺少標頭，對應的成員會保留其預設值。  
   
--   此外，WCF 也會忽略未預期的額外標頭。 這個規則的其中一個例外狀況是，如果在傳入 SOAP 訊息中的額外標頭將 `MustUnderstand` 屬性設定為 `true`，在這樣的情況下，因為無法處理必須解讀的標頭而會發生例外狀況。  
+- 此外，WCF 也會忽略未預期的額外標頭。 這個規則的其中一個例外狀況是，如果在傳入 SOAP 訊息中的額外標頭將 `MustUnderstand` 屬性設定為 `true`，在這樣的情況下，因為無法處理必須解讀的標頭而會發生例外狀況。  
   
  訊息本文有類似的版本控制規則：缺少與額外的訊息本文部分都會受到忽略。  
   
@@ -334,9 +334,9 @@ public class BankingTransaction
   
  當使用繼承自其他訊息合約類型的訊息合約類型建立或存取訊息時，則適用下列規則：  
   
--   繼承階層架構中的所有訊息標頭都會收集在一起，以形成訊息標頭的完整集合。  
+- 繼承階層架構中的所有訊息標頭都會收集在一起，以形成訊息標頭的完整集合。  
   
--   繼承階層架構中的所有訊息本文部分都會收集在一起，以形成完整的訊息本文。 本文部分會根據常用排序規則 (根據 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> 屬性，然後再根據字母順序) 進行排序，並且與它們在繼承階層架構中的位置無關。 強烈建議不要在繼承樹狀之多個層級中發生訊息本文部分的情況下，使用訊息合約繼承。 如果基底類別和衍生類別使用相同名稱定義標頭或本文部分，則會使用來自最底層類別的成員儲存該標頭或本文部分的值。  
+- 繼承階層架構中的所有訊息本文部分都會收集在一起，以形成完整的訊息本文。 本文部分會根據常用排序規則 (根據 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> 屬性，然後再根據字母順序) 進行排序，並且與它們在繼承階層架構中的位置無關。 強烈建議不要在繼承樹狀之多個層級中發生訊息本文部分的情況下，使用訊息合約繼承。 如果基底類別和衍生類別使用相同名稱定義標頭或本文部分，則會使用來自最底層類別的成員儲存該標頭或本文部分的值。  
   
  請考量下列程式碼範例中的類別。  
   
@@ -361,26 +361,26 @@ public class PatientRecord : PersonRecord
 ## <a name="wsdl-considerations"></a>WSDL 考慮事項  
  當從使用訊息合約的服務產生 Web 服務描述語言 (WSDL) 合約時，重要的是並非所有訊息合約功能都會反應在產生的 WSDL 中。 請考慮下列各點：  
   
--   WSDL 無法表達標頭陣列的概念。 當使用 <xref:System.ServiceModel.MessageHeaderArrayAttribute> 建立搭配標頭陣列的訊息時，產生的 WSDL 只會反應一個標頭而不是陣列。  
+- WSDL 無法表達標頭陣列的概念。 當使用 <xref:System.ServiceModel.MessageHeaderArrayAttribute> 建立搭配標頭陣列的訊息時，產生的 WSDL 只會反應一個標頭而不是陣列。  
   
--   產生的 WSDL 文件可能不會反應某些保護層級資訊。  
+- 產生的 WSDL 文件可能不會反應某些保護層級資訊。  
   
--   WSDL 中產生的訊息類型名稱，與訊息合約類型的類別名稱相同。  
+- WSDL 中產生的訊息類型名稱，與訊息合約類型的類別名稱相同。  
   
--   當您在多個作業中使用相同的訊息合約時，在 WSDL 文件中會產生多個訊息類型。 藉由在後續使用時新增數字 "2"、"3" 等等，可以讓名稱具有唯一性。 當匯回 WSDL 時，會建立多個訊息合約類型，並且除了名稱以外都完全相同。  
+- 當您在多個作業中使用相同的訊息合約時，在 WSDL 文件中會產生多個訊息類型。 藉由在後續使用時新增數字 "2"、"3" 等等，可以讓名稱具有唯一性。 當匯回 WSDL 時，會建立多個訊息合約類型，並且除了名稱以外都完全相同。  
   
 ## <a name="soap-encoding-considerations"></a>SOAP 編碼考量  
  WCF 可讓您使用舊版 SOAP 編碼樣式的 XML，不過，它不是建議使用。 當使用這個樣式時 (藉由將套用至服務合約之 `Use` 的 `Encoded` 屬性設定為 <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>)，則適用下列其他考量：  
   
--   不支援訊息標頭，這表示屬性 <xref:System.ServiceModel.MessageHeaderAttribute> 和陣列屬性 <xref:System.ServiceModel.MessageHeaderArrayAttribute> 與 SOAP 編碼不相容。  
+- 不支援訊息標頭，這表示屬性 <xref:System.ServiceModel.MessageHeaderAttribute> 和陣列屬性 <xref:System.ServiceModel.MessageHeaderArrayAttribute> 與 SOAP 編碼不相容。  
   
--   如果訊息合約並未包裝，也就是說如果屬性 <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> 設定為 `false`，訊息合約就只能有一個本文部分。  
+- 如果訊息合約並未包裝，也就是說如果屬性 <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> 設定為 `false`，訊息合約就只能有一個本文部分。  
   
--   要求訊息合約的包裝函式項目名稱必須符合作業名稱。 對此請使用訊息合約的 `WrapperName` 屬性。  
+- 要求訊息合約的包裝函式項目名稱必須符合作業名稱。 對此請使用訊息合約的 `WrapperName` 屬性。  
   
--   回應訊息合約的包裝函式項目名稱必須與後置字元為 'Response' 的作業名稱相同。 對此請使用訊息合約的 <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> 屬性。  
+- 回應訊息合約的包裝函式項目名稱必須與後置字元為 'Response' 的作業名稱相同。 對此請使用訊息合約的 <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> 屬性。  
   
--   SOAP 編碼會保留物件參考。 例如，試想下列程式碼。  
+- SOAP 編碼會保留物件參考。 例如，試想下列程式碼。  
   
     ```csharp  
     [MessageContract(WrapperName="updateChangeRecord")]  

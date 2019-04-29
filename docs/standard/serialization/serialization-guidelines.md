@@ -9,11 +9,11 @@ helpviewer_keywords:
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
 ms.openlocfilehash: 05cbe8b18a0d9635091b373d0acddb2ba665cc37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794300"
 ---
 # <a name="serialization-guidelines"></a>序列化方針
 本文件列出在設計要序列化的 API 時所要考量的指導方針。  
@@ -32,22 +32,22 @@ ms.locfileid: "59317333"
   
 ## <a name="guidelines"></a>方針  
   
--   當您設計新的型別時，請務必考量序列化。  
+- 當您設計新的型別時，請務必考量序列化。  
   
      對任何型別而言，序列化都是重要的設計考量，因為程式可能需要保存或傳輸該型別的執行個體。  
   
 ### <a name="choosing-the-right-serialization-technology-to-support"></a>選擇要支援的正確序列化技術  
  任何給定型別都可以支援零個、一個或多個序列化技術。  
   
--   如果可能需要在 Web 服務中持續保存或使用類型的執行個體，請考慮支援「資料合約序列化」。  
+- 如果可能需要在 Web 服務中持續保存或使用類型的執行個體，請考慮支援「資料合約序列化」。  
   
--   如果您需要針對序列化類型時所產生之 XML 格式的更大控制權，請考慮支援「XML 序列化」來取代資料合約序列化，或是兩者都支援。  
+- 如果您需要針對序列化類型時所產生之 XML 格式的更大控制權，請考慮支援「XML 序列化」來取代資料合約序列化，或是兩者都支援。  
   
      在您需要使用資料合約序列化所不支援的 XML 建構的某些互通性情況下 (例如，為了產生 XML 屬性)，就可能需要這樣的處理方式。  
   
--   如果類別的執行個體需要橫跨 .NET 遠端處理界限，請考慮支援「執行階段序列化」。  
+- 如果類別的執行個體需要橫跨 .NET 遠端處理界限，請考慮支援「執行階段序列化」。  
   
--   請避免針對一般持續性理由來支援執行階段序列化或 XML 序列化。 請改用資料合約序列化。  
+- 請避免針對一般持續性理由來支援執行階段序列化或 XML 序列化。 請改用資料合約序列化。  
   
 #### <a name="supporting-data-contract-serialization"></a>支援資料合約序列化  
  類型可以將 <xref:System.Runtime.Serialization.DataContractAttribute> 套用至類型，並將 <xref:System.Runtime.Serialization.DataMemberAttribute> 套用至類型的成員 (欄位和屬性) 來支援資料合約序列化。  

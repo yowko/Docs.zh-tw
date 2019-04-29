@@ -5,11 +5,11 @@ helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
 ms.openlocfilehash: 4960740af9637a1743dc86965d7831b76828e58a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772433"
 ---
 # <a name="msmqintegrationbinding"></a>\<msmqIntegrationBinding>
 定義繫結，此繫結可透過 MSMQ 傳遞訊息來提供查詢支援。  

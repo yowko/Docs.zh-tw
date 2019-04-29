@@ -7,38 +7,38 @@ ms.openlocfilehash: 6af0336e19df4ba2a99a52f8726e78ed92f5a79e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940461"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>如何：啟用 WCF Web 服務應用程式的 WIF
 ## <a name="applies-to"></a>適用於  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Microsoft® Windows® Communication Foundation (WCF)  
+- Microsoft® Windows® Communication Foundation (WCF)  
   
 ## <a name="summary"></a>總結  
  這篇使用方法文章提供了在 WCF Web 服務中啟用 WIF 的詳細逐步程序。 此外，它還提供如何測試應用程式以確認應用程式執行時 Web 服務可正確提出宣告的指示。 這篇使用方法文章並沒有提供建立 Security Token Service (STS) 的詳細指示，而是使用識別和存取工具隨附的「開發 STS」。 「開發 STS」並不會執行實際的驗證，而只是用於測試用途。 您必須安裝識別和存取工具才能完成這篇使用方法文章。 它可以從下列位置下載：[身分識別和存取工具](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>內容  
   
--   目標  
+- 目標  
   
--   總覽  
+- 總覽  
   
--   步驟摘要  
+- 步驟摘要  
   
--   步驟 1 – 建立簡單的 WCF 服務  
+- 步驟 1 – 建立簡單的 WCF 服務  
   
--   步驟 2 – 建立 WCF 服務的用戶端應用程式  
+- 步驟 2 – 建立 WCF 服務的用戶端應用程式  
   
--   步驟 3 – 測試方案  
+- 步驟 3 – 測試方案  
   
 ## <a name="objectives"></a>目標  
   
--   建立必須使用已發行權杖的 WCF 服務  
+- 建立必須使用已發行權杖的 WCF 服務  
   
--   建立會從 STS 要求權杖並將它傳遞至 WCF 服務的 WCF 用戶端  
+- 建立會從 STS 要求權杖並將它傳遞至 WCF 服務的 WCF 用戶端  
   
 ## <a name="overview"></a>總覽  
  這篇使用方法文章的目的是要示範開發人員如何在開發 WCF 服務時使用同盟驗證。 在 WCF 服務中使用同盟的其中一些優點包括：  
@@ -55,11 +55,11 @@ ms.locfileid: "59977427"
   
 ## <a name="summary-of-steps"></a>步驟摘要  
   
--   步驟 1 – 建立簡單的 WCF 服務  
+- 步驟 1 – 建立簡單的 WCF 服務  
   
--   步驟 2 – 建立 WCF 服務的用戶端應用程式  
+- 步驟 2 – 建立 WCF 服務的用戶端應用程式  
   
--   步驟 3 – 測試方案  
+- 步驟 3 – 測試方案  
   
 ## <a name="step-1--create-a-simple-wcf-service"></a>步驟 1 – 建立簡單的 WCF 服務  
  在這個步驟中，您要建立一個新的 WCF 服務，該服務使用識別和存取工具所隨附的「開發 STS」。  

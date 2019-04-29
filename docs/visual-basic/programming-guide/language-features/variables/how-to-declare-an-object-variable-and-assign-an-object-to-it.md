@@ -6,11 +6,11 @@ helpviewer_keywords:
 - declaring object variables [Visual Basic]
 ms.assetid: 2fa77dde-1fb2-439a-80d4-3e9787649fad
 ms.openlocfilehash: fb6411efc190dce335422369a8d2bbff564b9523
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938212"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>HOW TO：宣告物件變數，並在 Visual Basic 中將物件指派給它
 宣告的變數[Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)藉由指定`As Object`中[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)。 將物件指派給這類變數的藉由將物件放在等號 (`=`) 在指派陳述式或初始化子句中。  
@@ -32,11 +32,11 @@ Dim thisObject As Object= "This is an Object"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   <xref:System> 命名空間的參考。  
+- <xref:System> 命名空間的參考。  
   
--   類別、 結構或模組要放入`Dim`陳述式。  
+- 類別、 結構或模組要放入`Dim`陳述式。  
   
--   中要放的指派陳述式的程序。  
+- 中要放的指派陳述式的程序。  
   
 ## <a name="see-also"></a>另請參閱
 

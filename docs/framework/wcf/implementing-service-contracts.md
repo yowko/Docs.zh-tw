@@ -5,11 +5,11 @@ helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
 ms.openlocfilehash: 766e0c4d30a4fa0eed9ce154ca932f5371a43211
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928626"
 ---
 # <a name="implementing-service-contracts"></a>實作服務合約
 服務是一種類別，會在一或多個端點公開可供用戶端使用的功能。 若要建立服務時，撰寫實作 Windows Communication Foundation (WCF) 合約的類別。 您可以使用下列其中一種作法： 您可以將合約另外定義為介面，然後建立實作該介面的類別。 或者，您可以將 <xref:System.ServiceModel.ServiceContractAttribute> 屬性置於類別本身，而將 <xref:System.ServiceModel.OperationContractAttribute> 屬性置於可供服務之用戶端使用的方法上，以直接建立類別和合約。  

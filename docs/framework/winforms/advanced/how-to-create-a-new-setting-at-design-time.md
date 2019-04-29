@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
 ms.openlocfilehash: e371c60e3fb674e4243cec008e1098172725d4cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937718"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>如何：在設計階段建立新設定
 您可以使用設定設計工具，在設計階段建立新的設定。 設定設計工具是可讓您建立新的設定，並指定這些設定的屬性方格樣式介面。 您必須指定名稱、 值、 類型和您的新設定的範圍。 一旦建立一項設定時，就可在程式碼中存取。  

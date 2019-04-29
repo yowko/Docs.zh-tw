@@ -11,11 +11,11 @@ helpviewer_keywords:
 - AnalysisHintNode objects [WPF]
 ms.assetid: d4421ed4-77f5-4640-829e-9f1de50b2ff2
 ms.openlocfilehash: a4c38ddf52e9054fe9126df4b7e172548617b90d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776996"
 ---
 # <a name="how-to-analyze-ink-with-analysis-hints"></a>HOW TO：以分析提示分析筆墨
 [System.Windows.Ink.AnalysisHintNode](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms610344(v=vs.90))提供的提示[會由 System.Windows.Ink.InkAnalyzer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms616754(v=vs.90))它所連接。  提示可套用至所指定的區域[System.Windows.Ink.ContextNode.Location%2A](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms594508(v=vs.90))屬性[System.Windows.Ink.AnalysisHintNode](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms610344(v=vs.90))和提供額外的內容，供筆跡分析 」，增進辨識準確度。 [會由 System.Windows.Ink.InkAnalyzer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms616754(v=vs.90))分析筆墨的提示區域內從取得時，適用於此內容資訊。  

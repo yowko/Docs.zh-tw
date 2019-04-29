@@ -3,11 +3,11 @@ title: 使用 Windows 市集用戶端應用程式存取 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
 ms.openlocfilehash: a7d87e6014f26842c35b0d1bf5028682a4cf69e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784315"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>使用 Windows 市集用戶端應用程式存取 WCF 服務
 Windows 8 引入新的應用程式型別，稱為 Windows 市集應用程式。 這些應用程式都是以觸控式螢幕介面為設計主軸。 .NET Framework 4.5 可讓 Windows 市集應用程式呼叫 WCF 服務。  

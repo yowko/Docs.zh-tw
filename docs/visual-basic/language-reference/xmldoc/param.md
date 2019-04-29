@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
 ms.openlocfilehash: 4bcfe96361de9e196cb684ac4ba734f82442e25c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940890"
 ---
 # <a name="param-visual-basic"></a>\<param > (Visual Basic)
 定義的參數名稱和描述。  
@@ -33,9 +33,9 @@ ms.locfileid: "58825556"
   
  文字`<param>`標籤將會出現在下列位置：  
   
--   IntelliSense 的 參數資訊。 如需詳細資訊，請參閱[使用 IntelliSense](/visualstudio/ide/using-intellisense)。  
+- IntelliSense 的 參數資訊。 如需詳細資訊，請參閱[使用 IntelliSense](/visualstudio/ide/using-intellisense)。  
   
--   物件瀏覽器。 如需詳細資訊，請參閱[檢視程式碼的結構](/visualstudio/ide/viewing-the-structure-of-code)。  
+- 物件瀏覽器。 如需詳細資訊，請參閱[檢視程式碼的結構](/visualstudio/ide/viewing-the-structure-of-code)。  
   
  編譯搭配 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 可處理檔案的文件註解。  
   

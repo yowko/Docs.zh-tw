@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data type conversion [Visual Basic]
 ms.assetid: 646ae263-94d3-40a2-b0cc-64f619292f56
 ms.openlocfilehash: d7d43d4f5f931881d5c8b663c719fe7f92559799
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778660"
 ---
 # <a name="widening-visual-basic"></a>Widening (Visual Basic)
 表示轉換運算子 (`CType`) 將類別或結構轉換成的型別，可以保留原始的類別或結構的所有可能的值。  

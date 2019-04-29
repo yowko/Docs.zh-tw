@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XML namespace prefixes [Visual Basic]
 ms.assetid: 4292e1d9-eb8f-49d6-a3aa-f05a5fbe24d1
 ms.openlocfilehash: 244329058624bebb03440961c1dda4a50b4efb8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791777"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>HOW TO：宣告和使用 XML 命名空間前置詞 (Visual Basic)
 此範例示範如何匯入的 XML 命名空間前置詞`ns`並用它在 XML 常值和 XML 軸屬性。  
@@ -21,7 +21,7 @@ ms.locfileid: "58818655"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   <xref:System.Xml.Linq> 命名空間的參考。  
+- <xref:System.Xml.Linq> 命名空間的參考。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -3,11 +3,11 @@ title: 必要引數與多載群組
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
 ms.openlocfilehash: b5006a201ce5db68e925bd5764fadde308bbccb4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937783"
 ---
 # <a name="required-arguments-and-overload-groups"></a>必要引數與多載群組
 您可以設定活動，讓繫結活動所需的某些引數有效，以便用於執行。 `RequiredArgument` 屬性用於指出活動的特定引數是必要的，而 `OverloadGroup` 屬性則用於群組必要引數的分類。 透過使用屬性，活動作者可以提供簡單或複雜的活動驗證組態。  
@@ -144,19 +144,19 @@ Public class DbUpdate: AsyncCodeActivity
   
  定義多載群組時：  
   
--   多載群組不得為其他多載群組的子集或對等的多載群組。  
+- 多載群組不得為其他多載群組的子集或對等的多載群組。  
   
     > [!NOTE]
     >  這個規則只有一個例外。 如果多載群組是另一個多載群組的子集，且該子集只包含 `RequiredArgument` 是 `false` 的引數，則該多載群組是有效的。  
   
--   多載群組可以重疊，但是如果群組交集範圍內包含一個或兩個多載群組所需的全部引數，則會是錯誤。 在上一個範例中，`G2` 和 `G3` 多載群組是重疊的，但因為交集不包含這兩個群組之一或兩者的所有引數，所以這樣有效。  
+- 多載群組可以重疊，但是如果群組交集範圍內包含一個或兩個多載群組所需的全部引數，則會是錯誤。 在上一個範例中，`G2` 和 `G3` 多載群組是重疊的，但因為交集不包含這兩個群組之一或兩者的所有引數，所以這樣有效。  
   
  繫結多載群組中的引數時：  
   
--   如果群組中所有的 `RequiredArgument` 引數已繫結，則將多載群組視為已繫結。  
+- 如果群組中所有的 `RequiredArgument` 引數已繫結，則將多載群組視為已繫結。  
   
--   如果群組沒有任何 `RequiredArgument` 引數，而且至少有一個引數已繫結，則將群組視為已繫結。  
+- 如果群組沒有任何 `RequiredArgument` 引數，而且至少有一個引數已繫結，則將群組視為已繫結。  
   
--   如果所有多載群組均未繫結，則會是驗證錯誤，除非有一個多載群組之中未包含任何 `RequiredArgument` 引數。  
+- 如果所有多載群組均未繫結，則會是驗證錯誤，除非有一個多載群組之中未包含任何 `RequiredArgument` 引數。  
   
--   繫結多個多載群組 (也就是說，一個多載群組中所需的所有引數皆已繫結，而且其他多載群組中所有引數也已繫結) 是錯誤的。
+- 繫結多個多載群組 (也就是說，一個多載群組中所需的所有引數皆已繫結，而且其他多載群組中所有引數也已繫結) 是錯誤的。

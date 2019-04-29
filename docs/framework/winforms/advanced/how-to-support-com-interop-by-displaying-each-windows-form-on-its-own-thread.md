@@ -11,20 +11,20 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
 ms.openlocfilehash: 39a9793f3046960032da32795e60314ea05a00fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779050"
 ---
 # <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>HOW TO：在自己的執行緒上顯示每個 Windows Form 以支援 COM Interop
 您可以藉由在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 訊息迴圈上顯示表單來解決 COM 互通性問題，這可使用 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法來建立。  
   
  若要讓 Windows Form 在 COM 用戶端應用程式正確運作，您必須在 Windows Form 訊息迴圈上執行表單。 若要執行此工作，請使用下列的其中一個方法：  
   
--   使用 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法，以顯示 Windows Form。 如需詳細資訊，請參閱[如何：顯示 Windows Form 和 ShowDialog 方法以支援 COM Interop](com-interop-by-displaying-a-windows-form-shadow.md)。  
+- 使用 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法，以顯示 Windows Form。 如需詳細資訊，請參閱[如何：顯示 Windows Form 和 ShowDialog 方法以支援 COM Interop](com-interop-by-displaying-a-windows-form-shadow.md)。  
   
--   在個別執行緒上顯示每個 Windows Form。  
+- 在個別執行緒上顯示每個 Windows Form。  
   
  沒有這項功能在 Visual Studio 中的廣泛支援。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "59072671"
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
--   請將 `COMForm`、 `Form1`和 `FormManager` 類型編譯至稱為 `COMWinform.dll`的組件中。 請使用 [Packaging an Assembly for COM](../../interop/packaging-an-assembly-for-com.md)所述的其中一種方法來登錄 COM Interop 組件。 您現在可以在 Unmanaged 應用程式中使用該組件和對應的類型程式庫 (.tlb) 檔案。 例如，您可以使用類型程式庫做為 Visual Basic 6.0 可執行檔專案中的參考。  
+- 請將 `COMForm`、 `Form1`和 `FormManager` 類型編譯至稱為 `COMWinform.dll`的組件中。 請使用 [Packaging an Assembly for COM](../../interop/packaging-an-assembly-for-com.md)所述的其中一種方法來登錄 COM Interop 組件。 您現在可以在 Unmanaged 應用程式中使用該組件和對應的類型程式庫 (.tlb) 檔案。 例如，您可以使用類型程式庫做為 Visual Basic 6.0 可執行檔專案中的參考。  
   
 ## <a name="see-also"></a>另請參閱
 

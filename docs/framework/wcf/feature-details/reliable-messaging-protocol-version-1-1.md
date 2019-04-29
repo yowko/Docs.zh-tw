@@ -3,11 +3,11 @@ title: Reliable Messaging Protocol 1.1 版
 ms.date: 03/30/2017
 ms.assetid: 0da47b82-f8eb-42da-8bfe-e56ce7ba6f59
 ms.openlocfilehash: 6b8732e0b48797c219b53bb8bf70e1ba57e25c42
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55073222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933987"
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>Reliable Messaging Protocol 1.1 版
 本主題涵蓋 Windows Communication Foundation (WCF) 實作細節的 WS-ReliableMessaging February 2007 （1.1 版） 通訊協定所需的互通性，使用 HTTP 傳輸。 WCF 會遵循條件約束和釐清這個主題所述 WS-ReliableMessaging 規格。 請注意開始實作 WS-ReliableMessaging 1.1 版通訊協定[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]。  

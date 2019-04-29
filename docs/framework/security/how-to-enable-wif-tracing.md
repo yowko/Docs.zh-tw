@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
 ms.openlocfilehash: 83382a8375538acc04d293ee938a4e845d5e8820
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940448"
 ---
 # <a name="how-to-enable-wif-tracing"></a>如何：啟用 WIF 追蹤
 ## <a name="applies-to"></a>適用於  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web Forms  
+- ASP.NET® Web Forms  
   
 ## <a name="summary"></a>總結  
  這個操作說明提供了在 ASP.NET 應用程式中啟用 WIF 追蹤的詳細逐步程序。 還提供了一些指示，說明如何測試應用程式以確認追蹤接聽項和記錄檔正常運作。 這篇使用方法文章並沒有提供建立 Security Token Service (STS) 的詳細指示，而是使用識別和存取工具隨附的「開發 STS」。 「開發 STS」並不會執行實際的驗證，而只是用於測試用途。 您必須安裝識別和存取工具才能完成這篇使用方法文章。 它可以從下列位置下載：[身分識別和存取工具](https://go.microsoft.com/fwlink/?LinkID=245849)  
@@ -25,30 +25,30 @@ ms.locfileid: "59769030"
   
 ## <a name="contents"></a>內容  
   
--   目標  
+- 目標  
   
--   總覽  
+- 總覽  
   
--   步驟摘要  
+- 步驟摘要  
   
--   步驟 1 – 建立簡單的 ASP.NET Web Form 應用程式並啟用追蹤  
+- 步驟 1 – 建立簡單的 ASP.NET Web Form 應用程式並啟用追蹤  
   
--   步驟 2 – 測試方案  
+- 步驟 2 – 測試方案  
   
 ## <a name="objectives"></a>目標  
   
--   建立從身分識別與存取工具使用 WIF 和開發 STS 的簡單 ASP.NET 應用程式  
+- 建立從身分識別與存取工具使用 WIF 和開發 STS 的簡單 ASP.NET 應用程式  
   
--   啟用追蹤，並確認它能夠正常運作  
+- 啟用追蹤，並確認它能夠正常運作  
   
 ## <a name="overview"></a>總覽  
  追蹤可讓您對 WIF 的許多類型問題進行偵錯和疑難排解，包括權杖、Cookie、宣告、通訊協定訊息等等。 WIF 追蹤類似於 WCF 追蹤；例如，您可以選擇追蹤的詳細資訊來顯示從重大訊息到所有訊息的一切項目。 WIF 追蹤是在 **.xml** 檔案或 **.svclog** 檔案中產生，而您可以使用服務追蹤檢視器工具來檢視這些檔案。 此工具位於**bin** Windows SDK 目錄路徑在電腦上安裝，例如：**C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**.  
   
 ## <a name="summary-of-steps"></a>步驟摘要  
   
--   步驟 1 – 建立簡單的 ASP.NET Web Form 應用程式並啟用追蹤  
+- 步驟 1 – 建立簡單的 ASP.NET Web Form 應用程式並啟用追蹤  
   
--   步驟 2 – 測試方案  
+- 步驟 2 – 測試方案  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application-and-enable-tracing"></a>步驟 1 – 建立簡單的 ASP.NET Web Form 應用程式並啟用追蹤  
  在此步驟中，您將建立新的 ASP.NET Web Form 應用程式，並修改 *Web.config* 檔案以啟用追蹤。  

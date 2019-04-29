@@ -11,11 +11,11 @@ ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ac7cf92fb9c57491ff45e664513c0e82f22db9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941608"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>CertTimestampAuthenticodeLicense 函式
 為 Authenticode XrML 授權加上時間戳記。  

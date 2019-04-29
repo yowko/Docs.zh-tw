@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bf7b54ab7a2318e8194bf39dbe41b864633ddb43
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790061"
 ---
 # <a name="emitassembly-method"></a>EmitAssembly 方法
 建立組件。 之後的組件檔案除外的其他所有檔案都已都關閉，請呼叫這個方法。 產生未繫結的模組時，請勿呼叫這個方法。  

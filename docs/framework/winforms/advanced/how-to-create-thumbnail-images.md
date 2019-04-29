@@ -9,11 +9,11 @@ helpviewer_keywords:
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
 ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937630"
 ---
 # <a name="how-to-create-thumbnail-images"></a>HOW TO：建立縮圖影像
 縮圖的影像是影像的縮小版本。 您可以藉由呼叫建立縮圖影像<xref:System.Drawing.Image.GetThumbnailImage%2A>方法的<xref:System.Drawing.Image>物件。  

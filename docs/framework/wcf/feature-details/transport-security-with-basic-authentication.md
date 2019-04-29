@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
 ms.openlocfilehash: 5c2ff8ac3b424a2541ba7604b5952b2a3ed0a21a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933046"
 ---
 # <a name="transport-security-with-basic-authentication"></a>基本驗證的傳輸安全性
 下圖顯示 Windows Communication Foundation (WCF) 服務和用戶端。 伺服器需要可用於 Secure Sockets Layer (SSL) 的有效 X.509 憑證，而用戶端必須信任伺服器的憑證。 此外，Web 服務已經有可以使用的 SSL 實作。 如需啟用基本驗證在網際網路資訊服務 (IIS)，請參閱<https://go.microsoft.com/fwlink/?LinkId=83822>。  
@@ -30,9 +30,9 @@ ms.locfileid: "59611051"
 ## <a name="service"></a>服務  
  下列程式碼和組態要獨立執行。 執行下列任一步驟：  
   
--   使用不含組態的程式碼建立獨立服務。  
+- 使用不含組態的程式碼建立獨立服務。  
   
--   使用提供的組態建立服務，但不要定義任何端點。  
+- 使用提供的組態建立服務，但不要定義任何端點。  
   
 ### <a name="code"></a>程式碼  
  下列程式碼顯示如何為傳輸安全性建立使用 Windows 網域使用者名稱和密碼的服務端點。 請注意，服務需要 X.509 憑證來驗證用戶端。 如需詳細資訊，請參閱 < [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)和[How to:使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  

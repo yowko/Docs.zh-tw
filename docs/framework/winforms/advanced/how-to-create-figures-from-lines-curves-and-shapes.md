@@ -9,11 +9,11 @@ helpviewer_keywords:
 - figures [Windows Forms], creating from lines
 ms.assetid: 82fd56c7-b443-4765-9b7c-62ce030656ec
 ms.openlocfilehash: eeaf478375e08734b20d83b6f3c8030732495013
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937692"
 ---
 # <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>HOW TO：從直線、曲線和形狀建立圖形
 若要建立圖表，建構<xref:System.Drawing.Drawing2D.GraphicsPath>，然後呼叫方法，例如<xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A>和<xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>，以新增至路徑的基本項目。  
@@ -21,9 +21,9 @@ ms.locfileid: "59224906"
 ## <a name="example"></a>範例  
  下列程式碼範例會建立含有圖形的路徑：  
   
--   第一個範例會建立包含單一圖形的路徑。 此圖是由單一弧形所組成。弧線有的掃掠角度-180 度，也就是預設座標系統中的 逆時鐘方向。  
+- 第一個範例會建立包含單一圖形的路徑。 此圖是由單一弧形所組成。弧線有的掃掠角度-180 度，也就是預設座標系統中的 逆時鐘方向。  
   
--   第二個範例會建立具有兩個圖形的路徑。 第一個圖形是後面接著行弧形。 第二張圖是後面接著曲線，後面接著行。 第一個圖形會處於開啟狀態，而且第二張圖會關閉。  
+- 第二個範例會建立具有兩個圖形的路徑。 第一個圖形是後面接著行弧形。 第二張圖是後面接著曲線，後面接著行。 第一個圖形會處於開啟狀態，而且第二張圖會關閉。  
   
  [!code-csharp[System.Drawing.ConstructingDrawingPaths#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ConstructingDrawingPaths#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#21)]  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
 ms.openlocfilehash: 256b9a3d8842aaa4b032e67ebac9ca6a9e1ef34a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59293751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937848"
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>HOW TO：完成 Windows Forms 列印工作
 通常，文書處理器和其他應用程式牽涉到列印會提供對列印工作已完成的使用者顯示一則訊息的選項。 您可以在 Windows Forms 中提供這項功能，藉由處理<xref:System.Drawing.Printing.PrintDocument.EndPrint>事件的<xref:System.Drawing.Printing.PrintDocument>元件。  

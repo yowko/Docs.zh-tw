@@ -16,11 +16,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
 ms.openlocfilehash: 6399fb853162174895d892399fd3eb5226101515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792193"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>逐步解說：實作使用背景作業的表單
 如果您有會花費很長的時間才能完成，且不想您的使用者介面 (UI) 停止回應或 「 擱置 」，您可以使用<xref:System.ComponentModel.BackgroundWorker>類別，以另一個執行緒上執行作業。  
@@ -29,13 +29,13 @@ ms.locfileid: "59343398"
   
  這個逐步解說中所述的工作包括：  
   
--   建立以 Windows 為基礎的應用程式  
+- 建立以 Windows 為基礎的應用程式  
   
--   建立<xref:System.ComponentModel.BackgroundWorker>在表單中  
+- 建立<xref:System.ComponentModel.BackgroundWorker>在表單中  
   
--   新增非同步事件處理常式  
+- 新增非同步事件處理常式  
   
--   新增進度報告和支援取消作業  
+- 新增進度報告和支援取消作業  
   
  如需在此範例中使用的程式碼的完整清單，請參閱[How to:實作使用背景作業的表單](how-to-implement-a-form-that-uses-a-background-operation.md)。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "59343398"
   
 #### <a name="to-create-a-backgroundworker-with-the-designer"></a>若要使用設計工具建立 BackgroundWorker  
   
--   從**元件**索引標籤**工具箱**，拖曳<xref:System.ComponentModel.BackgroundWorker>拖曳至表單。  
+- 從**元件**索引標籤**工具箱**，拖曳<xref:System.ComponentModel.BackgroundWorker>拖曳至表單。  
   
 ## <a name="adding-asynchronous-event-handlers"></a>新增非同步事件處理常式  
  您現在已準備好新增事件處理常式<xref:System.ComponentModel.BackgroundWorker>元件的非同步事件。 將會在背景執行的耗費時間作業 (計算 Fibonacci 數字)，會由其中一個事件處理常式呼叫。  
@@ -145,7 +145,7 @@ ms.locfileid: "59343398"
   
 #### <a name="to-test-your-project"></a>若要測試專案  
   
--   按 F5 編譯和執行應用程式。  
+- 按 F5 編譯和執行應用程式。  
   
      在背景執行計算時，您會看到<xref:System.Windows.Forms.ProgressBar>顯示計算完成的進度。 您也可以取消暫止的作業。  
   
@@ -154,11 +154,11 @@ ms.locfileid: "59343398"
 ## <a name="next-steps"></a>後續步驟  
  既然您已實作使用的表單<xref:System.ComponentModel.BackgroundWorker>元件來執行計算，在背景中，您可以探索非同步作業的其他可能性：  
   
--   使用多個<xref:System.ComponentModel.BackgroundWorker>數個同時作業的物件。  
+- 使用多個<xref:System.ComponentModel.BackgroundWorker>數個同時作業的物件。  
   
--   若要偵錯多執行緒的應用程式，請參閱[How to:使用執行緒視窗](/visualstudio/debugger/how-to-use-the-threads-window)。  
+- 若要偵錯多執行緒的應用程式，請參閱[How to:使用執行緒視窗](/visualstudio/debugger/how-to-use-the-threads-window)。  
   
--   實作您自己的元件，支援非同步程式設計模型。 如需詳細資訊，請參閱[事件架構非同步模式概觀](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)。  
+- 實作您自己的元件，支援非同步程式設計模型。 如需詳細資訊，請參閱[事件架構非同步模式概觀](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)。  
   
     > [!CAUTION]
     >  無論使用何種多執行緒作業，您都可能會面臨嚴重而複雜的錯誤。 請在實作使用多執行緒的任何解決方案之前參閱 [Managed 執行緒最佳做法](../../../standard/threading/managed-threading-best-practices.md)。  

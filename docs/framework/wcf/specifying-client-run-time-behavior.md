@@ -8,11 +8,11 @@ helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
 ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935456"
 ---
 # <a name="specifying-client-run-time-behavior"></a>指定用戶端執行階段行為
 Windows Communication Foundation (WCF) 用戶端，例如 Windows Communication Foundation (WCF) 服務，可以設定以修改以符合用戶端應用程式的執行階段行為。 指定用戶端執行階段行為時有三個屬性可供使用。 雙工用戶端回呼物件可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 和 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 屬性來修改其執行階段行為。 而另一個屬性 <xref:System.ServiceModel.Description.ClientViaBehavior> 則可用來區隔邏輯目的和立即網路目的。 此外，雙工用戶端回呼類型也可使用一些服務端的行為。 如需詳細資訊，請參閱 <<c0> [ 指定服務執行階段行為](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。  
@@ -32,9 +32,9 @@ Windows Communication Foundation (WCF) 用戶端，例如 Windows Communication 
   
  由於牽涉到安全性議題，我們強烈建議您：  
   
--   使用應用程式的組態檔將 <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> 屬性的值設定為 `true`。  
+- 使用應用程式的組態檔將 <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> 屬性的值設定為 `true`。  
   
--   您只能在受控制的偵錯狀況下這樣做。  
+- 您只能在受控制的偵錯狀況下這樣做。  
   
  下列程式碼範例示範的用戶端會指示 WCF 在傳回 managed 例外狀況資訊從用戶端回呼物件的 SOAP 訊息中的組態檔。  
   

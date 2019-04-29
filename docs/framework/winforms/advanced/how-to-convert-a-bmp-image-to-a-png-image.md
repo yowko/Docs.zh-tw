@@ -9,11 +9,11 @@ helpviewer_keywords:
 - image formats [Windows Forms], converting between
 ms.assetid: 9d4a692d-73ac-4ce3-9e05-9ec321e8fbd6
 ms.openlocfilehash: 3072c07781a8e8e57b64b48e5b4c304c2a0a0efb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937757"
 ---
 # <a name="how-to-convert-a-bmp-image-to-a-png-image"></a>HOW TO：將 BMP 影像轉換為 PNG 影像
 有時候，您想要從一個影像檔案格式轉換成另一個。 藉由呼叫 <xref:System.Drawing.Image> 類別的 <xref:System.Drawing.Image.Save%2A> 方法，並指定 <xref:System.Drawing.Imaging.ImageFormat> 為所需的影像檔案格式，您可以輕鬆地執行這項轉換。  
@@ -27,9 +27,9 @@ ms.locfileid: "59217012"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   Windows Forms 應用程式。  
+- Windows Forms 應用程式。  
   
--   `System.Drawing.Imaging` 命名空間的參考。  
+- `System.Drawing.Imaging` 命名空間的參考。  
   
 ## <a name="see-also"></a>另請參閱
 

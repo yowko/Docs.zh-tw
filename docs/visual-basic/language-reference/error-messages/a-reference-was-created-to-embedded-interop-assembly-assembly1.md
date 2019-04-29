@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
 ms.openlocfilehash: c0b4f56e3d1613486dd1198976557831ce657e1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774855"
 ---
 # <a name="a-reference-was-created-to-embedded-interop-assembly-assembly1-because-of-an-indirect-reference-to-that-assembly-from-assembly-assembly2"></a>已建立內嵌 interop 組件參考 '\<assembly1 >' 因為該組件的間接參考來自組件'\<assembly2 >'
 已建立內嵌 Interop 組件 '\<assembly1>' 的參考，因為該組件的間接參考來自組件 '\<assembly2>'。 請考慮變更其中任何一個組件上的 [內嵌 Interop 類型] 屬性。  
@@ -27,9 +27,9 @@ ms.locfileid: "58837542"
   
 ### <a name="to-address-this-warning"></a>解決這個警告  
   
--   若要同時內嵌這兩個組件的 Interop 類型資訊，請將所有 assembly1 參考的 `Embed Interop Types` 屬性都設定為 `True`。  
+- 若要同時內嵌這兩個組件的 Interop 類型資訊，請將所有 assembly1 參考的 `Embed Interop Types` 屬性都設定為 `True`。  
   
--   若要移除警告，您可以將 assembly1 的 `Embed Interop Types` 屬性設定為 `False`。 在此情況下，主要 interop 組件 (PIA) 所提供的 interop 類型資訊。  
+- 若要移除警告，您可以將 assembly1 的 `Embed Interop Types` 屬性設定為 `False`。 在此情況下，主要 interop 組件 (PIA) 所提供的 interop 類型資訊。  
   
 ## <a name="see-also"></a>另請參閱
 

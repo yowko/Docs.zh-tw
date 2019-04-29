@@ -5,34 +5,34 @@ f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
 ms.openlocfilehash: d3d0ebd003f178567ec9e9b19d6baccb8bc15f60
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935235"
 ---
 # <a name="bad-file-mode"></a>不正確的檔案模式
 用於管理檔案內容的陳述式必須是適用於開啟檔案的模式。 可能的原因包括：  
   
--   A`FilePutObject`或`FileGetObject`陳述式指定循序檔案。  
+- A`FilePutObject`或`FileGetObject`陳述式指定循序檔案。  
   
--   A`Print`陳述式會指定檔案，而不開啟以供存取模式`Output`或`Append`。  
+- A`Print`陳述式會指定檔案，而不開啟以供存取模式`Output`或`Append`。  
   
--   `Input`陳述式會指定檔案，而不開啟以供存取模式 `Input`  
+- `Input`陳述式會指定檔案，而不開啟以供存取模式 `Input`  
   
--   嘗試寫入唯讀檔案。  
+- 嘗試寫入唯讀檔案。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   請確定`FilePutObject`並`FileGetObject`只會參考到開啟的檔案`Random`或`Binary`存取。  
+- 請確定`FilePutObject`並`FileGetObject`只會參考到開啟的檔案`Random`或`Binary`存取。  
   
--   請確定`Print`指定的其中一個開啟的檔案`Output`或`Append`存取模式。 如果不是，將資料放在檔案中，使用不同的陳述式，或重新開啟適當的模式中的檔案。  
+- 請確定`Print`指定的其中一個開啟的檔案`Output`或`Append`存取模式。 如果不是，將資料放在檔案中，使用不同的陳述式，或重新開啟適當的模式中的檔案。  
   
--   請確定`Input`指定檔案，開啟以供`Input`。 否則，請使用不同的陳述式來將資料放在檔案或重新開啟適當的模式中的檔案。  
+- 請確定`Input`指定檔案，開啟以供`Input`。 否則，請使用不同的陳述式來將資料放在檔案或重新開啟適當的模式中的檔案。  
   
--   如果您要寫入唯讀檔案，變更檔案的讀取/寫入狀態，或請勿嘗試將寫入其中。  
+- 如果您要寫入唯讀檔案，變更檔案的讀取/寫入狀態，或請勿嘗試將寫入其中。  
   
--   使用 `My.Computer.FileSystem` 物件中可用的功能。  
+- 使用 `My.Computer.FileSystem` 物件中可用的功能。  
   
 ## <a name="see-also"></a>另請參閱
 

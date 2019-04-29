@@ -3,17 +3,17 @@ title: 下載驗證簽發者名稱登錄套件
 ms.date: 10/10/2018
 ms.assetid: ff8b0014-c5d4-4614-90f0-13fcc0ba777a
 ms.openlocfilehash: 833a0722fdd27df4e488ed7fac99444c6d9b8905
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940578"
 ---
 # <a name="download-the-validating-issuer-name-registry-package"></a>下載驗證簽發者名稱登錄套件
 
 本主題討論如何在您的專案中下載與使用驗證簽發者名稱登錄 (VINR)。
 
-VINR 以 NuGet 套件的形式供您使用，會將必要的組件和參考新增至您的專案。 如果尚未安裝 NuGet，請移至 [nuget.org](https://nuget.org) 安裝它。 您可以在 NuGet 前往其頁面，查看延伸模組的版本控制記錄：[Microsoft Validating Issuer Name Registry on NuGet](https://nuget.org/packages/System.IdentityModel.Tokens.ValidatingIssuerNameRegistry/) (NuGet 上的 Microsoft 驗證簽發者名稱登錄)。
+VINR 以 NuGet 套件的形式供您使用，會將必要的組件和參考新增至您的專案。 如果尚未安裝 NuGet，請移至 [nuget.org](https://nuget.org) 安裝它。 在 NuGet 前往其頁面，您可以看到延伸模組的版本歷程記錄：[Microsoft 驗證簽發者名稱登錄在 NuGet 上](https://nuget.org/packages/System.IdentityModel.Tokens.ValidatingIssuerNameRegistry/)
 
 ## <a name="use-the-package-manager-gui"></a>使用套件管理員 GUI
 

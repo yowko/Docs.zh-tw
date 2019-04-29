@@ -3,11 +3,11 @@ title: <transport> 的 <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
 ms.openlocfilehash: 3126618eca6e8317968c6eb568a04615ec8de884
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788358"
 ---
 # <a name="transport-of-msmqintegrationbinding"></a>\<傳輸 > 的\<msmqIntegrationBinding >
 定義訊息佇列整合傳輸的安全性設定。  

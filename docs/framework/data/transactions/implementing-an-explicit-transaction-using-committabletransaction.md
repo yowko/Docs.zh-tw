@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
 ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793714"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>使用 CommittableTransaction 實作明確交易
 <xref:System.Transactions.CommittableTransaction> 類別為應用程式提供使用交易的明確方式，而非隱含地使用 <xref:System.Transactions.TransactionScope> 類別。 這個方法對想要跨多個函式呼叫或多個執行緒呼叫來使用相同交易的應用程式也很有用處。 與 <xref:System.Transactions.TransactionScope> 類別不同的是，應用程式寫入器需要特別呼叫 <xref:System.Transactions.CommittableTransaction.Commit%2A> 和 <xref:System.Transactions.Transaction.Rollback%2A> 方法，才能認可或中止交易。  
@@ -22,9 +22,9 @@ ms.locfileid: "59105413"
   
  使用 <xref:System.Transactions.CommittableTransaction> 類別時，您應該注意下列事項。  
   
--   建立 <xref:System.Transactions.CommittableTransaction> 交易不會設定環境交易。 您需要特別設定及重設環境交易，以確保資源管理員在適當時機，於正確的交易內容下作業。 您可以在全域 <xref:System.Transactions.Transaction.Current%2A> 物件上設定靜態 <xref:System.Transactions.Transaction> 屬性，來設定目前的環境交易。  
+- 建立 <xref:System.Transactions.CommittableTransaction> 交易不會設定環境交易。 您需要特別設定及重設環境交易，以確保資源管理員在適當時機，於正確的交易內容下作業。 您可以在全域 <xref:System.Transactions.Transaction.Current%2A> 物件上設定靜態 <xref:System.Transactions.Transaction> 屬性，來設定目前的環境交易。  
   
--   您無法重複使用 <xref:System.Transactions.CommittableTransaction> 物件， 一旦 <xref:System.Transactions.CommittableTransaction> 物件已經認可或復原，將無法重複使用在交易中。 亦即，您無法將其設為目前的環境交易內容。  
+- 您無法重複使用 <xref:System.Transactions.CommittableTransaction> 物件， 一旦 <xref:System.Transactions.CommittableTransaction> 物件已經認可或復原，將無法重複使用在交易中。 亦即，您無法將其設為目前的環境交易內容。  
   
 ## <a name="creating-a-committabletransaction"></a>建立 CommittableTransaction  
  下列範例會建立新的 <xref:System.Transactions.CommittableTransaction> 並加以認可。  

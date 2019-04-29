@@ -3,11 +3,11 @@ title: System.ServiceModel.MessageProcessingPaused
 ms.date: 03/30/2017
 ms.assetid: 36b5302a-93cc-478a-9bb2-8a1601fba1df
 ms.openlocfilehash: ac1dacef94d6446aa407e4a390b9561d033af1bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61927019"
 ---
 # <a name="systemservicemodelmessageprocessingpaused"></a>System.ServiceModel.MessageProcessingPaused
 System.ServiceModel.MessageProcessingPaused  
@@ -17,11 +17,11 @@ System.ServiceModel.MessageProcessingPaused
   
  訊息處理可能會因為下列原因而暫停：  
   
--   ConcurrencyMode 是單一或可重新進入，且服務正在處理另一個訊息。  
+- ConcurrencyMode 是單一或可重新進入，且服務正在處理另一個訊息。  
   
--   交易已啟用且服務正在處理另一個交易。  
+- 交易已啟用且服務正在處理另一個交易。  
   
--   同步處理內容不是最新的。  
+- 同步處理內容不是最新的。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -21,11 +21,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8ddef35b1b707cc5c962402e880923dca7d4d9d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789645"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM 函式
 強制 common language runtime (CLR) 版本所有的介面指標，它就會保存於執行階段可呼叫包裝函式 (RCW)。 這有釋放 RCW 的所有快取的效果。 此全域函式已被取代[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。 相反地，針對特定執行階段使用的進入點。  

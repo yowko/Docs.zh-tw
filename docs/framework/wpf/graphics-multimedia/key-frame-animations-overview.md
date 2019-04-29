@@ -7,11 +7,11 @@ helpviewer_keywords:
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
 ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785798"
 ---
 # <a name="key-frame-animations-overview"></a>主要畫面格動畫概觀
 本主題介紹主要畫面格動畫。 主要畫面格動畫可讓您使用兩個以上的目標值來建立動畫，並且控制動畫的插補方法。  
@@ -28,11 +28,11 @@ ms.locfileid: "59316735"
   
  若要以主要畫面格動畫建立動畫，您必須完成下列步驟。  
   
--   宣告動畫並指定其<xref:System.Windows.Media.Animation.Timeline.Duration%2A>，就像您一樣的 from/to/by 動畫。  
+- 宣告動畫並指定其<xref:System.Windows.Media.Animation.Timeline.Duration%2A>，就像您一樣的 from/to/by 動畫。  
   
--   每個目標值，建立適當型別的主要畫面格，請將其值和<xref:System.Windows.Media.Animation.KeyTime>，並將它加入至動畫的<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A>集合。  
+- 每個目標值，建立適當型別的主要畫面格，請將其值和<xref:System.Windows.Media.Animation.KeyTime>，並將它加入至動畫的<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A>集合。  
   
--   如同 From/To/By 動畫，建立動畫與屬性的關聯。 如需使用分鏡腳本將動畫套用至屬性的詳細資訊，請參閱[分鏡腳本概觀](storyboards-overview.md)。  
+- 如同 From/To/By 動畫，建立動畫與屬性的關聯。 如需使用分鏡腳本將動畫套用至屬性的詳細資訊，請參閱[分鏡腳本概觀](storyboards-overview.md)。  
   
  下列範例會使用<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>來以動畫顯示<xref:System.Windows.Shapes.Rectangle>四個不同位置的項目。  
   
@@ -85,33 +85,33 @@ ms.locfileid: "59316735"
   
  主要畫面格的主要目的是指定<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>和<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>。 每個主要畫面格型別都提供下列兩個屬性。  
   
--   <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>屬性會指定該主要畫面格的目標值。  
+- <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>屬性會指定該主要畫面格的目標值。  
   
--   <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>屬性會指定何時 (在動畫<xref:System.Windows.Media.Animation.Timeline.Duration%2A>) 主要畫面格的<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>為止。  
+- <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>屬性會指定何時 (在動畫<xref:System.Windows.Media.Animation.Timeline.Duration%2A>) 主要畫面格的<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>為止。  
   
  主要畫面格動畫開始時，逐一查看主要畫面格所定義的順序及其<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>屬性。  
   
--   如果在時間 0 有沒有主要畫面格動畫可建立目標屬性的目前值之間的轉換和<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>的第一個主要畫面格; 否則動畫的輸出值會變成第一個主要畫面格的值。  
+- 如果在時間 0 有沒有主要畫面格動畫可建立目標屬性的目前值之間的轉換和<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>的第一個主要畫面格; 否則動畫的輸出值會變成第一個主要畫面格的值。  
   
--   動畫建立之間的轉換<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>第一個和第二個主要畫面格使用指定的第二個主要畫面格的插補方法。 在轉換開始第一個主要畫面格的<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>時結束，第二個主要畫面格的<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>為止。  
+- 動畫建立之間的轉換<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>第一個和第二個主要畫面格使用指定的第二個主要畫面格的插補方法。 在轉換開始第一個主要畫面格的<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>時結束，第二個主要畫面格的<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>為止。  
   
--   動畫會繼續在後續每個主要畫面格與其前一個主要畫面格之間建立轉換。  
+- 動畫會繼續在後續每個主要畫面格與其前一個主要畫面格之間建立轉換。  
   
--   最後，主要畫面格的最大的索引鍵時間，動畫會轉換成的值就等於或小於動畫的<xref:System.Windows.Media.Animation.Timeline.Duration%2A>。  
+- 最後，主要畫面格的最大的索引鍵時間，動畫會轉換成的值就等於或小於動畫的<xref:System.Windows.Media.Animation.Timeline.Duration%2A>。  
   
  如果動畫<xref:System.Windows.Media.Animation.Timeline.Duration%2A>已<xref:System.Windows.Duration.Automatic%2A>或其<xref:System.Windows.Media.Animation.Timeline.Duration%2A>等於最後一個主要畫面格，在動畫結束時間。 否則，如果動畫<xref:System.Windows.Duration>大於最後一個主要畫面格，主要畫面格的值，直到它到達結尾動畫保存的關鍵時間其<xref:System.Windows.Duration>。 如同所有動畫，主要畫面格動畫會使用其<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>屬性來判斷是否它會保留其最終值到達它的作用期結束時。 如需詳細資訊，請參閱[計時行為概觀](timing-behaviors-overview.md)。  
   
  下列範例會使用<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>物件，定義在上述範例中示範如何<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>和<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>屬性運作。  
   
--   第一個主要畫面格會立即將動畫的輸出值設定為 0。  
+- 第一個主要畫面格會立即將動畫的輸出值設定為 0。  
   
--   第二個主要畫面格會從 0 展示動畫至 350。 它會在第一個主要畫面格結束 (時間等於 0 秒) 後開始播放 2 秒，並且在時間等於 0:0:2 時結束。  
+- 第二個主要畫面格會從 0 展示動畫至 350。 它會在第一個主要畫面格結束 (時間等於 0 秒) 後開始播放 2 秒，並且在時間等於 0:0:2 時結束。  
   
--   第三個主要畫面格會從 350 展示動畫至 50。 它會在第二個主要畫面格結束 (時間等於 2 秒) 時開始播放 5 秒，並且在時間等於 0:0:7 時結束。  
+- 第三個主要畫面格會從 350 展示動畫至 50。 它會在第二個主要畫面格結束 (時間等於 2 秒) 時開始播放 5 秒，並且在時間等於 0:0:7 時結束。  
   
--   第四個主要畫面格會從 50 展示動畫至 200。 它會在第三個主要畫面格結束 (時間等於 7 秒) 時開始播放 1 秒，並且在時間等於 0:0:8 時結束。  
+- 第四個主要畫面格會從 50 展示動畫至 200。 它會在第三個主要畫面格結束 (時間等於 7 秒) 時開始播放 1 秒，並且在時間等於 0:0:8 時結束。  
   
--   因為<xref:System.Windows.Media.Animation.Timeline.Duration%2A>動畫的屬性設定為 10 秒，則動畫會保留其最終的值為兩秒，然後結束時間等於 0:0:10。  
+- 因為<xref:System.Windows.Media.Animation.Timeline.Duration%2A>動畫的屬性設定為 10 秒，則動畫會保留其最終的值為兩秒，然後結束時間等於 0:0:10。  
   
  [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
@@ -204,26 +204,26 @@ ms.locfileid: "59316735"
 ### <a name="timespan-values"></a>TimeSpan 值  
  您可以使用<xref:System.TimeSpan>值來指定<xref:System.Windows.Media.Animation.KeyTime>。 此值應該大於或等於 0，並且小於或等於動畫的持續期間。 下列範例顯示的動畫具有 10 秒的持續期間和四個主要畫面格，其中每個主要畫面格的關鍵時間都是以時間值指定。  
   
--   第一個主要畫面格會在前 3 秒顯示從基底值至 100 的動畫，並且在時間等於 0:0:03 時結束。  
+- 第一個主要畫面格會在前 3 秒顯示從基底值至 100 的動畫，並且在時間等於 0:0:03 時結束。  
   
--   第二個主要畫面格會從 100 展示動畫至 200。 它會在第一個主要畫面格結束 (時間等於 3 秒) 後開始播放 5 秒，並且在時間等於 0:0:8 時結束。  
+- 第二個主要畫面格會從 100 展示動畫至 200。 它會在第一個主要畫面格結束 (時間等於 3 秒) 後開始播放 5 秒，並且在時間等於 0:0:8 時結束。  
   
--   第三個主要畫面格會從 200 展示動畫至 500。 它會在第二個主要畫面格結束 (時間等於 8 秒) 時開始播放 1 秒，並且在時間等於 0:0:9 時結束。  
+- 第三個主要畫面格會從 200 展示動畫至 500。 它會在第二個主要畫面格結束 (時間等於 8 秒) 時開始播放 1 秒，並且在時間等於 0:0:9 時結束。  
   
--   第四個主要畫面格會從 500 展示動畫至 600。 它會在第三個主要畫面格結束 (時間等於 9 秒) 時開始播放 1 秒，並且在時間等於 0:0:10 時結束。  
+- 第四個主要畫面格會從 500 展示動畫至 600。 它會在第三個主要畫面格結束 (時間等於 9 秒) 時開始播放 1 秒，並且在時間等於 0:0:10 時結束。  
   
  [!code-xaml[keyframes_ovw_snippet#TimeSpanKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#timespankeytimeexample)]  
   
 ### <a name="percentage-values"></a>百分比值  
  百分比值，指定主要畫面格結尾的動畫的某個百分比<xref:System.Windows.Media.Animation.Timeline.Duration%2A>。 在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，百分比的指定方式為在數字後面加上 `%` 符號。 在程式碼中，您會使用<xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A>方法並將它傳遞<xref:System.Double>指出的百分比。 值必須大於或等於 0 且小於或等於 100%。 下列範例顯示的動畫具有 10 秒的持續期間和四個主要畫面格，其中每個主要畫面格的關鍵時間都是以百分比指定。  
   
--   第一個主要畫面格會在前 3 秒顯示從基底值至 100 的動畫，並且在時間等於 0:0:3 時結束。  
+- 第一個主要畫面格會在前 3 秒顯示從基底值至 100 的動畫，並且在時間等於 0:0:3 時結束。  
   
--   第二個主要畫面格會從 100 展示動畫至 200。 它會在第一個主要畫面格結束 (時間等於 3 秒) 後開始播放 5 秒，並且在時間等於 0:0:8 (0.8 * 10 = 8) 時結束。  
+- 第二個主要畫面格會從 100 展示動畫至 200。 它會在第一個主要畫面格結束 (時間等於 3 秒) 後開始播放 5 秒，並且在時間等於 0:0:8 (0.8 * 10 = 8) 時結束。  
   
--   第三個主要畫面格會從 200 展示動畫至 500。 它會在第二個主要畫面格結束 (時間等於 8 秒) 時開始播放 1 秒，並且在時間等於 0:0:9 (0.9 * 10 = 9) 時結束。  
+- 第三個主要畫面格會從 200 展示動畫至 500。 它會在第二個主要畫面格結束 (時間等於 8 秒) 時開始播放 1 秒，並且在時間等於 0:0:9 (0.9 * 10 = 9) 時結束。  
   
--   第四個主要畫面格會從 500 展示動畫至 600。 它會在第三個主要畫面格結束 (時間等於 9 秒) 時開始播放 1 秒，並且在時間等於 0:0:10 (1 * 10 = 10) 時結束。  
+- 第四個主要畫面格會從 500 展示動畫至 600。 它會在第三個主要畫面格結束 (時間等於 9 秒) 時開始播放 1 秒，並且在時間等於 0:0:10 (1 * 10 = 10) 時結束。  
   
  [!code-xaml[keyframes_ovw_snippet#PercentageKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  
   
@@ -232,13 +232,13 @@ ms.locfileid: "59316735"
   
  A<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>關鍵時間將可用時間平均除以來判斷每個主要畫面格的結束時間的主要畫面格數目。 下列範例顯示的動畫具有 10 秒的持續時間，並指定為索引鍵時間的四個主要畫面格<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>。  
   
--   第一個主要畫面格會在前 2.5 秒顯示從基底值至 100 的動畫，並且在時間等於 0:0:2.5 時結束。  
+- 第一個主要畫面格會在前 2.5 秒顯示從基底值至 100 的動畫，並且在時間等於 0:0:2.5 時結束。  
   
--   第二個主要畫面格會從 100 展示動畫至 200。 它會在第一個主要畫面格結束 (時間等於 2.5 秒) 後開始播放 2.5 秒，並且在時間等於 0:0:5 時結束。  
+- 第二個主要畫面格會從 100 展示動畫至 200。 它會在第一個主要畫面格結束 (時間等於 2.5 秒) 後開始播放 2.5 秒，並且在時間等於 0:0:5 時結束。  
   
--   第三個主要畫面格會從 200 展示動畫至 500。 它會在第二個主要畫面格結束 (時間等於 5 秒) 時開始播放 2.5 秒，並且在時間等於 0:0:7.5 時結束。  
+- 第三個主要畫面格會從 200 展示動畫至 500。 它會在第二個主要畫面格結束 (時間等於 5 秒) 時開始播放 2.5 秒，並且在時間等於 0:0:7.5 時結束。  
   
--   第四個主要畫面格會從 500 展示動畫至 600。 它會在第二個主要畫面格結束 (時間等於 7.5 秒) 時開始播放 2.5 秒，並且在時間等於 0:0:1 時結束。  
+- 第四個主要畫面格會從 500 展示動畫至 600。 它會在第二個主要畫面格結束 (時間等於 7.5 秒) 時開始播放 2.5 秒，並且在時間等於 0:0:1 時結束。  
   
  [!code-xaml[keyframes_ovw_snippet#UniformKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  
   
@@ -263,11 +263,11 @@ ms.locfileid: "59316735"
   
 2. 決定動畫的「總插補時間」，也就是主要畫面格動畫用於完成向前逐一查看的總時間。  
   
-    1.  如果動畫<xref:System.Windows.Media.Animation.Timeline.Duration%2A>不是<xref:System.Windows.Duration.Automatic%2A>或是<xref:System.Windows.Duration.Forever%2A>，總插補時間為動畫的<xref:System.Windows.Media.Animation.Timeline.Duration%2A>屬性。  
+    1. 如果動畫<xref:System.Windows.Media.Animation.Timeline.Duration%2A>不是<xref:System.Windows.Duration.Automatic%2A>或是<xref:System.Windows.Duration.Forever%2A>，總插補時間為動畫的<xref:System.Windows.Media.Animation.Timeline.Duration%2A>屬性。  
   
-    2.  否則，總插補時間是最大<xref:System.TimeSpan><xref:System.Windows.Media.Animation.KeyTime>如果有的話，在其主要畫面中，指定的值。  
+    2. 否則，總插補時間是最大<xref:System.TimeSpan><xref:System.Windows.Media.Animation.KeyTime>如果有的話，在其主要畫面中，指定的值。  
   
-    3.  否則，總插補時間為 1 秒。  
+    3. 否則，總插補時間為 1 秒。  
   
 3. 使用總插補時間值來解決<xref:System.Windows.Media.Animation.KeyTimeType.Percent><xref:System.Windows.Media.Animation.KeyTime>值。  
   

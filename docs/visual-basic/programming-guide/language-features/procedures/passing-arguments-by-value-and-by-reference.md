@@ -10,11 +10,11 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
 ms.openlocfilehash: c23ca51322f57dc13a85c3ea94e0d335dc50ca13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791920"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>以傳值和傳址方式傳遞引數 (Visual Basic)
 在 Visual Basic 中，您可以將引數傳遞至程序*值所*或是*傳址*。 這就所謂*傳遞機制*，它決定程序是否可以修改基礎呼叫程式碼中的引數的程式設計項目。 程序宣告會決定每個參數的傳遞機制，藉由指定[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或是[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)關鍵字。  
@@ -22,22 +22,22 @@ ms.locfileid: "58830353"
 ## <a name="distinctions"></a>差異  
  將引數傳遞至程序時, 留意彼此互動的數個不同差異：  
   
--   基礎的程式設計項目是否為可修改  
+- 基礎的程式設計項目是否為可修改  
   
--   引數本身是否為可修改  
+- 引數本身是否為可修改  
   
--   傳值或傳址是否傳遞引數  
+- 傳值或傳址是否傳遞引數  
   
--   引數資料類型是否為實值類型或參考型別  
+- 引數資料類型是否為實值類型或參考型別  
   
  如需詳細資訊，請參閱 <<c0> [ 修改之間的差異和不可修改引數](./differences-between-modifiable-and-nonmodifiable-arguments.md)並[差異之間傳遞的引數的值和傳址](./differences-between-passing-an-argument-by-value-and-by-reference.md)。  
   
 ## <a name="choice-of-passing-mechanism"></a>選擇的傳遞機制  
  您應該選擇仔細的每個引數的傳遞機制。  
   
--   **保護**。 在選擇兩種傳遞機制之間，最重要的準則會是呼叫來變更變數的風險。 傳遞引數的好處`ByRef`是程序可以傳回呼叫的程式碼，透過該引數的值。 傳遞引數的好處`ByVal`是無法變更程序所保護的變數。  
+- **保護**。 在選擇兩種傳遞機制之間，最重要的準則會是呼叫來變更變數的風險。 傳遞引數的好處`ByRef`是程序可以傳回呼叫的程式碼，透過該引數的值。 傳遞引數的好處`ByVal`是無法變更程序所保護的變數。  
   
--   **效能**。 雖然的傳遞機制可能會影響您的程式碼的效能，差別在於通常並不顯著。 唯一的例外是傳遞實值型別`ByVal`。 在此情況下，Visual Basic 會複製整個資料內容的引數。 因此，對於大數值類型，例如結構，它可能會更有效率，將它傳遞`ByRef`。  
+- **效能**。 雖然的傳遞機制可能會影響您的程式碼的效能，差別在於通常並不顯著。 唯一的例外是傳遞實值型別`ByVal`。 在此情況下，Visual Basic 會複製整個資料內容的引數。 因此，對於大數值類型，例如結構，它可能會更有效率，將它傳遞`ByRef`。  
   
      若是參考類型，資料指標是複製 （四位元組在 32 位元平台，在 64 位元平台上的八個位元組）。 因此，您可以在其中傳遞的型別引數`String`或`Object`值而不損害效能。  
   
@@ -50,15 +50,15 @@ ms.locfileid: "58830353"
   
 ## <a name="when-to-pass-an-argument-by-value"></a>傳值方式傳遞引數的時機  
   
--   如果引數呼叫的程式碼項目是不可修改的項目，將宣告對應的參數[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)。 程式碼不可以變更不可修改元素的值。  
+- 如果引數呼叫的程式碼項目是不可修改的項目，將宣告對應的參數[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)。 程式碼不可以變更不可修改元素的值。  
   
--   如果對應的項目是可修改，但您不想要能夠將其值變更的程序，將參數宣告`ByVal`。 呼叫程式碼可以變更可修改的項目，以傳值方式傳遞的值。  
+- 如果對應的項目是可修改，但您不想要能夠將其值變更的程序，將參數宣告`ByVal`。 呼叫程式碼可以變更可修改的項目，以傳值方式傳遞的值。  
   
 ## <a name="when-to-pass-an-argument-by-reference"></a>傳址方式傳遞引數的時機  
   
--   如果程序確實需要變更呼叫程式碼對應的項目，將對應的參數宣告[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)。  
+- 如果程序確實需要變更呼叫程式碼對應的項目，將對應的參數宣告[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)。  
   
--   如果正確執行的程式碼相依於程序來變更呼叫程式碼對應的項目，將參數宣告`ByRef`。 如果您傳遞的值，或如果呼叫程式碼會覆寫`ByRef`傳遞機制，藉由將引數括在括號中的程序呼叫可能會產生非預期的結果。  
+- 如果正確執行的程式碼相依於程序來變更呼叫程式碼對應的項目，將參數宣告`ByRef`。 如果您傳遞的值，或如果呼叫程式碼會覆寫`ByRef`傳遞機制，藉由將引數括在括號中的程序呼叫可能會產生非預期的結果。  
   
 ## <a name="example"></a>範例  
   

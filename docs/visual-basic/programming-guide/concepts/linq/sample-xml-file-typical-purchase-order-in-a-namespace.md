@@ -3,11 +3,11 @@ title: 範例 XML 檔：在 3 中的典型採購訂單
 ms.date: 07/20/2015
 ms.assetid: 38260901-c9f9-4240-9cbf-652c8b05021d
 ms.openlocfilehash: de0ac574b0f7b086592bc2d6afa3db3fdcebda78
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786915"
 ---
 # <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>範例 XML 檔：命名空間中的典型採購訂單
 下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。 這個檔案是典型的採購訂單。 XML 位於命名空間中。  

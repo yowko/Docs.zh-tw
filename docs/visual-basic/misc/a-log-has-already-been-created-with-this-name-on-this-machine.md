@@ -3,20 +3,20 @@ title: 已在這部電腦上建立具有這個名稱的記錄檔。
 ms.date: 07/20/2015
 ms.assetid: 3dd78d9f-890e-4409-bebb-048fdf34711b
 ms.openlocfilehash: b3a488b668c00b8e9e77f6db6d99ea5b3f82c070
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58038161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940721"
 ---
 # <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a>已在這部電腦上建立具有這個名稱的記錄檔。
 嘗試使用已在使用的名稱來建立記錄檔。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   移除衝突的記錄檔。  
+- 移除衝突的記錄檔。  
   
--   使用不同的記錄檔名稱。  
+- 使用不同的記錄檔名稱。  
   
 ## <a name="see-also"></a>另請參閱
 

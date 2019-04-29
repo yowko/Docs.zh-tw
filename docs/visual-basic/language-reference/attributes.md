@@ -5,11 +5,11 @@ helpviewer_keywords:
 - attributes [Visual Basic]
 ms.assetid: 5deb2b8a-1afd-4dbd-8ee8-f093d74ad0eb
 ms.openlocfilehash: b3f93cfdde8e5063c5bf0503857dfc149ee90026
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797042"
 ---
 # <a name="attributes-visual-basic"></a>屬性 (Visual Basic)
 Visual Basic 提供數個屬性，允許物件相互操作 unmanaged 程式碼，並可讓模組成員的模組名稱不能存取的一個屬性。 下表列出 Visual Basic 所使用的屬性。  

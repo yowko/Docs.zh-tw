@@ -11,11 +11,11 @@ helpviewer_keywords:
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
 ms.openlocfilehash: 44b96218e674c754a1985f2f22a36707cd1776b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941371"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>HOW TO：公開組成控制項的屬性
 組成複合控制項的控制項稱為*組成控制項*。 這些控制項通常宣告為私用，因此開發人員無法存取。 如果您想要讓未來的使用者都可以使用這些控制項的屬性，您必須將它們公開給使用者。 組成控制項的屬性會公開在使用者控制項中，建立屬性，並使用`get`和`set`該屬性的存取子中組成控制項的私用屬性的變更生效。  

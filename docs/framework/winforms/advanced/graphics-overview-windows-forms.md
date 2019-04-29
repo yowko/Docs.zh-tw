@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
 ms.openlocfilehash: fce756fc9c6a22372bd849c8bd60f0e416f3031e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938186"
 ---
 # <a name="graphics-overview-windows-forms"></a>圖形概觀 (Windows Form)
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 是可讓程式設計人員撰寫與裝置無關的應用程式的圖形裝置介面。 服務[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]透過一組受管理的類別公開。  

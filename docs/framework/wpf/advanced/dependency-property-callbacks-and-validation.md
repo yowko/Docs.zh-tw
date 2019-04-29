@@ -12,11 +12,11 @@ helpviewer_keywords:
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
 ms.openlocfilehash: 95a40b4a357b1a601eced6c8e5214871b95fcbd2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59219807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928553"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>相依性屬性回呼和驗證
 本主題說明如何針對屬性相關的功能建立使用替代自訂實作的相依性屬性，例如：驗證判斷、每當屬性有效值變更時叫用的回撥，以及覆寫值決策的可能外在影響。 本主題也會討論適合使用這些技術在展開預設屬性系統行為的案例。  

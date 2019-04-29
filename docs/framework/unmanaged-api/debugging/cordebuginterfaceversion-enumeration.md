@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: df57cd5a2121c216fc23b9c608de091b002147e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792908"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion 列舉
 指定介面、.NET Framework 版本，或是已引進介面的 .NET Framework 版本。  
@@ -227,15 +227,15 @@ typedef enum CorDebugInterfaceVersion {
 ## <a name="interface-names"></a>介面名稱  
  在偵錯 API (例如，`ICorDebugThread3` 中的 "3") 中，出現在介面名稱結尾的號碼是指定介面版本，而不是 .NET Framework 的版本。 偵錯 API 中的所有介面名稱都有包含版本號碼，但 .NET Framework 第 1 版中導入的介面除外。 介面版本號碼與 .NET Framework 版本號碼之間的任何對應都是巧合。  
   
--   .NET Framework 1.0 版中導入的介面沒有包含號碼，因為全都隱含為第 1 版。  
+- .NET Framework 1.0 版中導入的介面沒有包含號碼，因為全都隱含為第 1 版。  
   
--   .NET Framework 1.1 版使用 1.0 版介面，而且沒有導入任何新偵錯介面。  
+- .NET Framework 1.1 版使用 1.0 版介面，而且沒有導入任何新偵錯介面。  
   
--   在 .NET Framework 2.0 版中導入的 14 個偵錯介面是其第 1 版相對版本的邏輯擴充功能，並且在其名稱中包含數字 "2"。  
+- 在 .NET Framework 2.0 版中導入的 14 個偵錯介面是其第 1 版相對版本的邏輯擴充功能，並且在其名稱中包含數字 "2"。  
   
--   .NET Framework 3.0 和 3.5 版使用現有的 .NET Framework 2.0 介面，而且沒有導入任何新介面。  
+- .NET Framework 3.0 和 3.5 版使用現有的 .NET Framework 2.0 介面，而且沒有導入任何新介面。  
   
--   [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]導入混合的介面版本。 例如，`ICorDebugThread3` 和 `ICorDebugThread4` 會以 `ICorDebugThread` 介面的第三和第四版出現。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]也引進了第一版`ICorDebugStackWalk`介面和第二版`ICorDebugNativeFrame`介面 (`ICorDebugNativeFrame2`)。  
+- [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]導入混合的介面版本。 例如，`ICorDebugThread3` 和 `ICorDebugThread4` 會以 `ICorDebugThread` 介面的第三和第四版出現。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]也引進了第一版`ICorDebugStackWalk`介面和第二版`ICorDebugNativeFrame`介面 (`ICorDebugNativeFrame2`)。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

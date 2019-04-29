@@ -3,11 +3,11 @@ title: WCF 測試用戶端 (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
 ms.openlocfilehash: cd6f0d7a98ca5bc5f6bee45ad296341a5b91b2a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791192"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 測試用戶端 (WcfTestClient.exe)
 Windows Communication Foundation (WCF) 測試用戶端 (WcfTestClient.exe) 是一種 GUI 工具，可讓使用者輸入測試參數，請將該服務中，輸入送出，並檢視服務傳回的回應。 它提供了完善的服務測試經驗搭配 WCF 服務主機。  
@@ -136,34 +136,34 @@ Windows Communication Foundation (WCF) 測試用戶端 (WcfTestClient.exe) 是�
 ## <a name="features-supported-by-wcf-test-client"></a>WCF 測試用戶端支援的功能  
  下列是 WCF 測試用戶端支援的功能清單：  
   
--   服務引動過程：要求/回覆和單向訊息。  
+- 服務引動過程：要求/回覆和單向訊息。  
   
--   繫結：Svcutil.exe 支援的所有繫結。  
+- 繫結：Svcutil.exe 支援的所有繫結。  
   
--   控制工作階段。  
+- 控制工作階段。  
   
--   訊息合約。  
+- 訊息合約。  
   
--   XML 序列化。  
+- XML 序列化。  
   
  下列是 WCF 測試用戶端不支援的功能清單：  
   
--   型別：<xref:System.IO.Stream>、<xref:System.ServiceModel.Channels.Message>、<xref:System.Xml.XmlElement>、<xref:System.Xml.XmlAttribute>、<xref:System.Xml.XmlNode>、實作 <xref:System.Xml.Serialization.IXmlSerializable> 介面的型別，包括相關 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 屬性、<xref:System.Xml.Linq.XDocument> 和 <xref:System.Xml.Linq.XElement> 型別，以及 ADO.NET <xref:System.Data.DataTable> 型別。  
+- 型別：<xref:System.IO.Stream>、<xref:System.ServiceModel.Channels.Message>、<xref:System.Xml.XmlElement>、<xref:System.Xml.XmlAttribute>、<xref:System.Xml.XmlNode>、實作 <xref:System.Xml.Serialization.IXmlSerializable> 介面的型別，包括相關 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 屬性、<xref:System.Xml.Linq.XDocument> 和 <xref:System.Xml.Linq.XElement> 型別，以及 ADO.NET <xref:System.Data.DataTable> 型別。  
   
--   雙工合約。  
+- 雙工合約。  
   
--   異動。  
+- 異動。  
   
--   安全性：[!INCLUDE[infocard](../../../includes/infocard-md.md)]、憑證和使用者名稱/密碼。  
+- 安全性：[!INCLUDE[infocard](../../../includes/infocard-md.md)]、憑證和使用者名稱/密碼。  
   
--   繫結：WSFederationbinding、 任何內容繫結和 Https 繫結、 WebHttpbinding （Json 回應訊息支援）。  
+- 繫結：WSFederationbinding、 任何內容繫結和 Https 繫結、 WebHttpbinding （Json 回應訊息支援）。  
   
 ## <a name="closing-wcf-test-client"></a>關閉 WCF 測試用戶端  
  您可以透過下列方式來關閉 WCF 測試用戶端：  
   
--   在 **[檔案]** 功能表上按一下 **[結束]**。 或者，在 WCF 測試用戶端主視窗中，按一下**關閉**。 同時這些動作也關閉 WCF 服務自動主機並停止 Visual Studio 偵錯程序，如果 Visual Studio 啟動 WCF 測試用戶端。  
+- 在 **[檔案]** 功能表上按一下 **[結束]**。 或者，在 WCF 測試用戶端主視窗中，按一下**關閉**。 同時這些動作也關閉 WCF 服務自動主機並停止 Visual Studio 偵錯程序，如果 Visual Studio 啟動 WCF 測試用戶端。  
   
--   以滑鼠右鍵按一下**WCF 服務主機**圖示，在通知區域中，然後按一下**結束。** 這會關閉 WCF 服務自動主機和 WCF 測試用戶端，並停止 Visual Studio 偵錯程序。  
+- 以滑鼠右鍵按一下**WCF 服務主機**圖示，在通知區域中，然後按一下**結束。** 這會關閉 WCF 服務自動主機和 WCF 測試用戶端，並停止 Visual Studio 偵錯程序。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8a4e4214-fc51-4f4d-b968-0427c37a9520
 ms.openlocfilehash: 8601f1c7f4e1dbf911020c328652c371bf039124
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794429"
 ---
 # <a name="sqlworkflowinstancestore"></a>\<sqlWorkflowInstanceStore>
 可讓您設定的服務行為<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>功能，支援的狀態資訊保存在 SQL Server 2005 或 SQL Server 2008 資料庫的工作流程服務執行個體。 如需有關這項功能的詳細資訊，請參閱 < [SQL 工作流程執行個體存放區](../../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。  

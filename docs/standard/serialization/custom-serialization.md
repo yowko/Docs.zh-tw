@@ -18,11 +18,11 @@ helpviewer_keywords:
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
 ms.openlocfilehash: 83538dc971419ad7918c16c5ccbd2003d16e2c6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931738"
 ---
 # <a name="custom-serialization"></a>自訂序列化
 自訂序列化是控制型別序列化與還原序列化的程序。 控制序列化就可確保序列化相容性，也就是在類型版本之間進行序列化與還原序列化的作業，而不違反類型的核心功能性。 例如，在第一版的型別中，可能只有兩個欄位。 在型別的下一版中，加入了更多的欄位。 然而第二版的應用程式必須對這兩種型別進行序列化及還原序列化。 下列章節會說明控制序列化的方法。
@@ -35,13 +35,13 @@ ms.locfileid: "54627979"
 ## <a name="running-custom-methods-during-and-after-serialization"></a>序列化期間及序列化之後執行自訂方法  
  最佳做法與最簡單方式 (引入至 .NET Framework 2.0 版) 是套用下列屬性至用來在序列化期間及之後修正資料的方法：  
   
--   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
   
--   <xref:System.Runtime.Serialization.OnSerializedAttribute>  
+- <xref:System.Runtime.Serialization.OnSerializedAttribute>  
   
--   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
+- <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
  這些屬性允許型別參與序列化及還原序列化程序的任何一個或所有四個階段。 屬性指定應在每個階段叫用的型別方法。 這些方法並不存取序列化資料流，而是允許您在序列化前後或還原序列化前後變更物件。 屬性可套用在所有層級的型別繼承階層，且會呼叫從基本到最具衍生性之階層中的每個方法。 此機制避開實作 <xref:System.Runtime.Serialization.ISerializable> 介面的複雜性以及任何產生的問題，方法是將序列化與還原序列化的責任賦予最具衍生性的實作。 除此之外，此機制允許格式子忽略欄位填入以及自序列化資料流的擷取。 如需控制序列化與還原序列化的詳細資訊以及範例，請按一下任何一個先前的連結。  
   

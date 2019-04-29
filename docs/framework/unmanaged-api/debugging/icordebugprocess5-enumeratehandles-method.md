@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b3cc158c48e8bb9f833429bbddaa74ed459f1b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61930269"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles 方法
 取得處理序中物件控制代碼的列舉值。  
@@ -46,11 +46,11 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
  `types`參數會指定要包含在集合中的控制代碼類型。 `types` 可以是下列三個成員的任何[CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)列舉型別：  
   
--   `CorHandleStrongOnly` （僅限使用強式參考至控點）。  
+- `CorHandleStrongOnly` （僅限使用強式參考至控點）。  
   
--   `CorHandleWeakOnly` （僅限弱式參考以控點）。  
+- `CorHandleWeakOnly` （僅限弱式參考以控點）。  
   
--   `CorHandleAll` （所有控制代碼）。  
+- `CorHandleAll` （所有控制代碼）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

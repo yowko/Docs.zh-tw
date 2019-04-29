@@ -3,11 +3,11 @@ title: 資料錄
 description: 了解如何F#記錄代表具名的值，並選擇性地使用成員的簡單彙總。
 ms.date: 05/16/2016
 ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795417"
 ---
 # <a name="records"></a>資料錄
 
@@ -150,5 +150,5 @@ The records are equal.
 - [F# 類型](fsharp-types.md)
 - [類別](classes.md)
 - [F# 語言參考](index.md)
-- [參考相等](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
+- [Reference-Equality](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
 - [模式比對](pattern-matching.md)

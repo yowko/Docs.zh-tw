@@ -5,11 +5,11 @@ helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
 ms.openlocfilehash: ace1b40b25bd12ff7092459e468a90f382434bf4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938758"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>自訂類型和程式庫的 XAML 相關 CLR 屬性
 本主題描述由.NET Framework XAML 服務所定義的通用語言執行平台 (CLR) 屬性。 它也會說明其他 CLR 屬性定義在.NET Framework 組件或類型的應用程式的 XAML 相關案例。 屬性的組件、 類型或成員設定這些 CLR 屬性提供 XAML 類型系統資訊與您的型別。 處理 XAML 節點資料流直接或透過專用的 XAML 讀取器和 XAML 寫入器會使用.NET Framework XAML 服務任何 XAML 取用者會提供資訊。  
@@ -90,9 +90,9 @@ ms.locfileid: "59086204"
   
  **引數：** 支援兩種形式的屬性：  
   
--   屬性化類型指定的屬性名稱的字串。  
+- 屬性化類型指定的屬性名稱的字串。  
   
--   字串，指定名稱的屬性，以及<xref:System.Type>用於定義具名的屬性的型別。 此表單是用來指定可附加成員的 XAML 名稱範圍屬性。  
+- 字串，指定名稱的屬性，以及<xref:System.Type>用於定義具名的屬性的型別。 此表單是用來指定可附加成員的 XAML 名稱範圍屬性。  
   
  <xref:System.Windows.Markup.NameScopePropertyAttribute> 指定提供 XAML namescope 值屬性化類別的屬性。 XAML 名稱範圍屬性應參考該物件會實作<xref:System.Windows.Markup.INameScope>並保留實際 XAML 名稱範圍，其存放區，其行為。  
   
@@ -219,9 +219,9 @@ ms.locfileid: "59086204"
   
  **引數：**  
   
--   字串，指定要包含的 XAML 命名空間的識別項。  
+- 字串，指定要包含的 XAML 命名空間的識別項。  
   
--   字串，指定可以包含從先前的引數的 XAML 命名空間的 XAML 命名空間的識別碼。  
+- 字串，指定可以包含從先前的引數的 XAML 命名空間的 XAML 命名空間的識別碼。  
   
  <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute> 指定可以在另一個 XAML 命名空間建立小計的 XAML 命名空間。 一般會在預先定義的 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 中指出建立小計的 XAML 命名空間。 這種方式可用於版本控制 XAML 詞彙的文件庫中，並讓它與先前定義的標記，針對稍早的版本控制詞彙相容。  
   
@@ -230,40 +230,40 @@ ms.locfileid: "59086204"
   
  **引數：**  
   
--   字串，指定定義的 XAML 命名空間的識別碼。  
+- 字串，指定定義的 XAML 命名空間的識別碼。  
   
--   字串，可命名 CLR 命名空間。 CLR 命名空間應該在您的組件中定義公用型別，並至少一個 CLR 命名空間型別應該適合 XAML 用法。  
+- 字串，可命名 CLR 命名空間。 CLR 命名空間應該在您的組件中定義公用型別，並至少一個 CLR 命名空間型別應該適合 XAML 用法。  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 指定 XAML 命名空間與 CLR 命名空間，然後用於類型解析的 XAML 物件寫入器或 XAML 結構描述內容之間以每個組件為基礎的對應。  
   
  多個<xref:System.Windows.Markup.XmlnsDefinitionAttribute>可以套用至組件。 達成此目的任何組合的原因如下：  
   
--   程式庫設計包含多個 CLR 命名空間，針對邏輯組織的執行階段 API 存取權限;不過，您會想要由 XAML 可參考相同的 XAML 命名空間在這些命名空間中的所有型別。 在此情況下，套用數個<xref:System.Windows.Markup.XmlnsDefinitionAttribute>屬性使用相同<xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A>值但不同<xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A>值。 這是特別有用，如果您要定義 framework 或應用程式想要預設 XAML 命名空間中常見的用法的 XAML 命名空間的對應。  
+- 程式庫設計包含多個 CLR 命名空間，針對邏輯組織的執行階段 API 存取權限;不過，您會想要由 XAML 可參考相同的 XAML 命名空間在這些命名空間中的所有型別。 在此情況下，套用數個<xref:System.Windows.Markup.XmlnsDefinitionAttribute>屬性使用相同<xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A>值但不同<xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A>值。 這是特別有用，如果您要定義 framework 或應用程式想要預設 XAML 命名空間中常見的用法的 XAML 命名空間的對應。  
   
--   程式庫設計包含多個 CLR 命名空間，而且您想在審慎 XAML 命名空間之間的分隔的這些 CLR 命名空間中類型的使用方式。  
+- 程式庫設計包含多個 CLR 命名空間，而且您想在審慎 XAML 命名空間之間的分隔的這些 CLR 命名空間中類型的使用方式。  
   
--   您定義的 CLR 命名空間的組件，而您希望它可透過一個以上的 XAML 命名空間。 若要支援具有相同的程式碼基底的多個詞彙，就會發生這種情況。  
+- 您定義的 CLR 命名空間的組件，而您希望它可透過一個以上的 XAML 命名空間。 若要支援具有相同的程式碼基底的多個詞彙，就會發生這種情況。  
   
--   您可以定義 XAML 語言支援一或多個 CLR 命名空間中。 對於這些<xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A>值應該是`http://schemas.microsoft.com/winfx/2006/xaml`。  
+- 您可以定義 XAML 語言支援一或多個 CLR 命名空間中。 對於這些<xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A>值應該是`http://schemas.microsoft.com/winfx/2006/xaml`。  
   
 ### <a name="xmlnsprefixattribute"></a>XmlnsPrefixAttribute  
  **參考文件：**  <xref:System.Windows.Markup.XmlnsPrefixAttribute>  
   
  **引數：**  
   
--   字串，指定的 XAML 命名空間識別項。  
+- 字串，指定的 XAML 命名空間識別項。  
   
--   字串，指定建議的前置詞。  
+- 字串，指定建議的前置詞。  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 指定要用於 XAML 命名空間的建議前置詞。 寫入項目和屬性的 XAML 檔案中，序列化的.NET Framework XAML 服務時很有用的前置詞，是<xref:System.Xaml.XamlXmlWriter>，或當 XAML 實作的程式庫互動的設計環境具有 XAML 編輯功能。  
   
  多個<xref:System.Windows.Markup.XmlnsPrefixAttribute>可以套用至組件。 達成此目的任何組合的原因如下：  
   
--   您的組件會定義一個以上的 XAML 命名空間的類型。 在此情況下，您應該定義每個 XAML 命名空間的不同前置詞值。  
+- 您的組件會定義一個以上的 XAML 命名空間的類型。 在此情況下，您應該定義每個 XAML 命名空間的不同前置詞值。  
   
--   您要支援多個詞彙，而且您使用不同的前置詞為每個詞彙和 XAML 命名空間。  
+- 您要支援多個詞彙，而且您使用不同的前置詞為每個詞彙和 XAML 命名空間。  
   
--   您定義組件中的 XAML 語言支援，並讓<xref:System.Windows.Markup.XmlnsDefinitionAttribute>針對`http://schemas.microsoft.com/winfx/2006/xaml`。 在此情況下，您通常應該升級前置詞`x`。  
+- 您定義組件中的 XAML 語言支援，並讓<xref:System.Windows.Markup.XmlnsDefinitionAttribute>針對`http://schemas.microsoft.com/winfx/2006/xaml`。 在此情況下，您通常應該升級前置詞`x`。  
   
 > [!NOTE]
 >  .NET framework XAML 服務也會定義的 XAML 相關屬性<xref:System.Windows.Markup.RootNamespaceAttribute>。 這個屬性是專案系統支援的組件層級屬性，並不是與 XAML 自訂型別相關。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - animation [WPF], text
 ms.assetid: eec3d26c-0a21-420f-8012-671621c47089
 ms.openlocfilehash: 38aa432fecc5b5e10d8eb90be9c1c596728ed613
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776874"
 ---
 # <a name="how-to-apply-animations-to-text"></a>HOW TO：對文字套用動畫
 動畫可以變更應用程式中文字的顯示和外觀。 下列範例會使用不同類型的動畫來影響中的文字顯示<xref:System.Windows.Controls.TextBlock>控制項。  

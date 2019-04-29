@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
 ms.openlocfilehash: 17c4d4289cf90b66d52986c054d4807ecff2b3d8
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793883"
 ---
 # <a name="remove"></a>\<remove>
 從權杖處理常式集合中移除指定的安全性權杖處理常式。  
@@ -41,7 +41,7 @@ ms.locfileid: "55758413"
 |類型|要移除的權杖處理常式的 CLR 型別名稱。 如需有關如何指定`type`屬性，請參閱[自訂型別參考](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references)。 必要項。|  
   
 ### <a name="child-elements"></a>子元素  
- 無  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   

@@ -3,11 +3,11 @@ title: 使用 XSLT 轉換 XML 樹狀結構 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3390ca68-c270-4e1d-b64b-6a063a77017c
 ms.openlocfilehash: a013e042bcaab321d8a5596368c349f296240d0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908150"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a>使用 XSLT 轉換 XML 樹狀結構 (Visual Basic)
 您可以建立 XML 樹狀結構、從 XML 樹狀結構建立 <xref:System.Xml.XmlReader>、建立新文件，然後建立將寫入新文件中的 <xref:System.Xml.XmlWriter>。 然後，您可以叫用 (Invoke) XSLT 轉換，將 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 傳遞至轉換。 轉換成功完成後，系統會使用轉換的結果填入新的 XML 樹狀結構。  

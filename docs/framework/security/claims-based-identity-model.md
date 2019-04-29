@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
 ms.openlocfilehash: 3313b2ad36260415d0ac505e01523dd999f85424
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792807"
 ---
 # <a name="claims-based-identity-model"></a>宣告式身分識別模型
 當您建置宣告感知應用程式時，使用者識別會在應用程式中以一組宣告表示。 一個宣告可以是使用者的名稱，另一個可能是電子郵件地址。 這個概念是外部識別系統設定為提供應用程式一切必要資訊，使其了解是哪位使用者在提出要求，並且確保會使用密碼編譯您自受信任來源取得的識別資料。  
   
  單一登入在這個模型中可以更輕鬆達成，而且應用程式也不必再對下列項目負責：  
   
--   驗證使用者。  
+- 驗證使用者。  
   
--   儲存使用者帳戶和密碼。  
+- 儲存使用者帳戶和密碼。  
   
--   呼叫企業目錄以查詢使用者識別詳細資料。  
+- 呼叫企業目錄以查詢使用者識別詳細資料。  
   
--   與來自其他平台或公司的識別系統整合。  
+- 與來自其他平台或公司的識別系統整合。  
   
  在這個模型中，應用程式將根據用來驗證您使用者的系統所提供的宣告，制定與識別相關的決策。 從利用使用者名字的簡單應用程式個人化，到授權使用者存取應用程式中價值更高的功能和資源，這些決策可以是任何項目。  
   
  本主題提供下列資訊：  
   
--   [宣告式身分識別簡介](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
+- [宣告式身分識別簡介](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
   
--   [宣告式身分識別模型的基本案例](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
+- [宣告式身分識別模型的基本案例](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
   
 <a name="BKMK_1"></a>   
 ## <a name="introduction-to-claims-based-identity"></a>宣告型識別簡介  

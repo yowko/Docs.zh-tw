@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: KrzysztofCwalina
 ms.openlocfilehash: a47e43b2387362500d46c8e531f16d004d823c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778777"
 ---
 # <a name="choosing-between-class-and-struct"></a>在類別和結構之間選擇
 每個 framework 設計工具所面臨的基本設計決策之一是設計為型別，做為類別 （參考型別） 或結構 （實值型別）。 深入了解的參考型別和實值類型的行為差異是非常重要的做此選擇。  
@@ -39,13 +39,13 @@ ms.locfileid: "54565861"
   
  **X AVOID** 定義結構，除非該類型具有所有下列特性：  
   
--   它以邏輯方式表示的單一值，類似於基本型別 (`int`， `double`，依此類推。)。  
+- 它以邏輯方式表示的單一值，類似於基本型別 (`int`， `double`，依此類推。)。  
   
--   它具有執行個體大小小於 16 個位元組。  
+- 它具有執行個體大小小於 16 個位元組。  
   
--   它永遠不變。  
+- 它永遠不變。  
   
--   它不會經常 boxed。  
+- 它不會經常 boxed。  
   
  在其他情況下，您應該做為類別定義您的型別。  
   

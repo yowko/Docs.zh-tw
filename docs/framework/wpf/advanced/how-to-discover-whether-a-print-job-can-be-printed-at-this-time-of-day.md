@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
 ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776216"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>HOW TO：得知每天此時可否列印列印工作
 列印佇列並不一定可為一天 24 小時。 還可以設定讓它們無法使用在一天的特定時間的開始和結束時間屬性。 這項功能可用，例如，保留獨佔使用的特定部門下午 5 點後的印表機。 該部門會有不同的佇列服務的印表機，比其他部門使用。 其他部門的佇列會被設定為無法使用下午 5 點後，而佇列為偏好的部門可能被設定為隨時可供使用。  
@@ -41,9 +41,9 @@ ms.locfileid: "59326862"
   
  **ReportQueueAndJobAvailability**方法一開始會檢查是否有佇列或列印工作無法使用這一次。 如果其中任一無法使用，接著它會檢查是否無法使用的佇列。 如果無法使用，方法會報告此事實和佇列何時會提供一次的時間。 接著它會檢查作業和無法使用時，它會報告的下一個時間範圍時它可進行列印。 最後，方法會報告工作可以列印時的最早時間。 這是遵循兩次的更新版本。  
   
--   列印佇列下一個可用的時間。  
+- 列印佇列下一個可用的時間。  
   
--   列印工作下一個可用的時間。  
+- 列印工作下一個可用的時間。  
   
  報告時間的日、 時<xref:System.DateTime.ToShortTimeString%2A>因為這個方法會隱藏，年、 月和日從輸出中，也會呼叫方法。 您無法限制列印佇列或列印工作的可用性以特定的年、 月或日。  
   

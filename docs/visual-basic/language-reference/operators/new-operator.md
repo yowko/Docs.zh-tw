@@ -12,11 +12,11 @@ helpviewer_keywords:
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
 ms.openlocfilehash: 630b0c48def77449f426b287a26f95af7cfb930e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936626"
 ---
 # <a name="new-operator-visual-basic"></a>New 運算子 (Visual Basic)
 導入了`New`子句，以建立新的物件執行個體，指定型別參數的建構函式條件約束，或識別`Sub`類別建構函式與程序。  

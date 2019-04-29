@@ -1,5 +1,5 @@
 ---
-title: HOW TO：時鐘的狀態變更時接收通知
+title: HOW TO：在時鐘的狀態變更時接收通知
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - notifications [WPF], clocks' state changes
 ms.assetid: ecb10fc9-d0c2-45c3-b0a1-7b11baa733da
 ms.openlocfilehash: dc3fffb88ce59ceb908d6febd2f078820513b641
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942128"
 ---
-# <a name="how-to-receive-notification-when-a-clocks-state-changes"></a>HOW TO：時鐘的狀態變更時接收通知
+# <a name="how-to-receive-notification-when-a-clocks-state-changes"></a>HOW TO：在時鐘的狀態變更時接收通知
 時鐘<xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated>就會發生事件時其<xref:System.Windows.Media.Animation.Clock.CurrentState%2A>就會變成無效，例如當時鐘啟動或停止。 您可以直接使用這個事件註冊<xref:System.Windows.Media.Animation.Clock>，或您可以註冊使用<xref:System.Windows.Media.Animation.Timeline>。  
   
  在下列範例中，<xref:System.Windows.Media.Animation.Storyboard>並將兩個<xref:System.Windows.Media.Animation.DoubleAnimation>物件用來以動畫顯示兩個矩形的寬度。 <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated>事件用來接聽的時鐘狀態變更。  

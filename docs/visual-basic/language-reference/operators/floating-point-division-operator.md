@@ -17,11 +17,11 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
 ms.openlocfilehash: af2316f92e2904eee1e8c046b34b8147e40cb513
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778478"
 ---
 # <a name="-operator-visual-basic"></a>/ 運算子 (Visual Basic)
 兩數相除並傳回浮點結果。  

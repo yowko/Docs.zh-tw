@@ -5,51 +5,51 @@ ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
 ms.openlocfilehash: b07a8930255786686fb1e587b2a29bbc708eff63
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940500"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>如何：使用 WIF 顯示登入的狀態
 ## <a name="applies-to"></a>適用於  
   
--   Microsoft® Windows® Identity Foundation (WIF) 4.5  
+- Microsoft® Windows® Identity Foundation (WIF) 4.5  
   
--   ASP.NET® Web Forms  
+- ASP.NET® Web Forms  
   
 ## <a name="summary"></a>總結  
  本主題描述如何在啟用 WIF 的 ASP.NET 應用程式中顯示登入狀態。 WIF 提供了一些機制，可讓您的應用程式成為宣告感知，以及管理應用程式資源的驗證和授權。  
   
 ## <a name="contents"></a>內容  
   
--   總覽  
+- 總覽  
   
--   步驟摘要  
+- 步驟摘要  
   
--   步驟 1 – 安裝識別身分與存取延伸模組  
+- 步驟 1 – 安裝識別身分與存取延伸模組  
   
--   步驟 2 – 建立信賴憑證者的 ASP.NET 應用程式  
+- 步驟 2 – 建立信賴憑證者的 ASP.NET 應用程式  
   
--   步驟 3 – 啟用本機開發 STS 以驗證使用者  
+- 步驟 3 – 啟用本機開發 STS 以驗證使用者  
   
--   步驟 4 – 修改 ASP.NET 應用程式以顯示登入狀態  
+- 步驟 4 – 修改 ASP.NET 應用程式以顯示登入狀態  
   
--   步驟 5 – 測試 WIF 與 ASP.NET 應用程式之間的整合  
+- 步驟 5 – 測試 WIF 與 ASP.NET 應用程式之間的整合  
   
 ## <a name="overview"></a>總覽  
  本主題示範如何使用 WIF 建立簡單的宣告感知應用程式，以及如何輕鬆顯示使用者是否已登入。 下列步驟會使用 Visual Studio 身分識別與存取延伸模組所隨附的本機開發 STS 。 本機開發 STS 是用來測試和開發環境，可提供簡單的方法，將宣告整合到您的應用程式。 它永遠不應該用於生產環境中，因為它不會執行實際的驗證，而且不需要認證。 不過，對於使用實際的驗證準備好用於生產環境的應用程式而言，下列步驟中的命令式程式碼都相同。  
   
 ## <a name="summary-of-steps"></a>步驟摘要  
   
--   步驟 1 – 安裝識別身分與存取延伸模組  
+- 步驟 1 – 安裝識別身分與存取延伸模組  
   
--   步驟 2 – 建立信賴憑證者的 ASP.NET 應用程式  
+- 步驟 2 – 建立信賴憑證者的 ASP.NET 應用程式  
   
--   步驟 3 – 啟用本機開發 STS 以驗證使用者  
+- 步驟 3 – 啟用本機開發 STS 以驗證使用者  
   
--   步驟 4 – 修改 ASP.NET 應用程式以顯示登入狀態  
+- 步驟 4 – 修改 ASP.NET 應用程式以顯示登入狀態  
   
--   步驟 5 – 測試 WIF 與 ASP.NET 應用程式之間的整合  
+- 步驟 5 – 測試 WIF 與 ASP.NET 應用程式之間的整合  
   
 ## <a name="step-1--install-the-identity-and-access-extension"></a>步驟 1 – 安裝識別身分與存取延伸模組  
  此步驟描述如何設定 Visual Studio 2012 的身分識別與存取延伸模組。 這項延伸模組會將設定您的應用程式與 STS 端點進行通訊的程序自動化。  

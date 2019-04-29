@@ -7,11 +7,11 @@ helpviewer_keywords:
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
 ms.openlocfilehash: 31c597a0e2cbf41484f19c8d4179823e9fb929ba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941202"
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>HOW TO：使用設計工具隱藏 ToolStripMenuItems
 隱藏功能表項目是用來控制您的應用程式的使用者介面 (UI)，並限制使用者命令。 通常，您要隱藏整個功能表無法使用時，所有在其上的功能表項目。 這代表使用者分心。 此外，您可能想要隱藏和停用功能表或功能表項目，為單獨的隱藏不會防止使用者使用攠摝坫存取功能表命令。 如需有關如何停用功能表項目的詳細資訊，請參閱[How to:使用設計工具停用 ToolStripMenuItems](how-to-disable-toolstripmenuitems-using-the-designer.md)。  

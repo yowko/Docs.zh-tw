@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
 ms.openlocfilehash: 9728f3caee4dba367e4fc4a3e68213b1055cc3d1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793779"
 ---
 # <a name="systemidentitymodelservices"></a>\<system.identityModel.services>
 使用 WS-同盟通訊協定進行驗證的組態區段。  
@@ -28,7 +28,7 @@ ms.locfileid: "57362951"
  下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
- 無  
+ None  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -37,7 +37,7 @@ ms.locfileid: "57362951"
 |[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|包含設定的設定<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) HTTP 模組。|  
   
 ### <a name="parent-elements"></a>父項目  
- 無  
+ None  
   
 ## <a name="remarks"></a>備註  
  新增`<system.identityModel.services>`SAM 和 WSFAM 提供設定您的應用程式組態檔的區段。  

@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c29656a4787c674886505a3be2508470460dfc10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939525"
 ---
 # <a name="isymunmanagedmethod-interface"></a>ISymUnmanagedMethod 介面
 代表符號存放區內的方法。 這個介面會提供屬性的權限只與符號相關的方法，而不是型別相關的屬性。  

@@ -3,11 +3,11 @@ title: 執行個體存放區
 ms.date: 03/30/2017
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
 ms.openlocfilehash: 352ffad56c77d0bd16f7e3b9aa1d82090f3a29b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791166"
 ---
 # <a name="instance-stores"></a>執行個體存放區
 執行個體存放區是執行個體的邏輯容器者。 這是儲存執行個體資料和中繼資料的位置。 執行個體存放區並不是指專用的實際儲存區。 執行個體存放區可包含 SQL Server 資料庫中的耐久資訊，或記憶體中的非耐久狀態資訊。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 隨附於 SQL 工作流程執行個體存放區，是執行個體存放區的具體實作，可讓工作流程將執行個體資料與中繼資料保存在 SQL Server 2005 或 SQL Server 2008 資料庫中。 此外，Windows Server App Fabric 還提供執行個體存放區的 concrete 實作。 如需詳細資訊，請參閱 < [Windows Server App Fabric 執行個體存放區、 查詢和控制提供者](https://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409)。  

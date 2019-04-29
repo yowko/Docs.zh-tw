@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
 ms.openlocfilehash: fb2a7c8e1cf3fbae4c6417dab492343ead991204
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793430"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>將資料繫結至控制項 (WCF 資料服務)
 有了 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以將類似 `ComboBox` 和 `ListView` 的控制項繫結至 <xref:System.Data.Services.Client.DataServiceCollection%601> 類別的執行個體。 這個集合 (繼承自 <xref:System.Collections.ObjectModel.ObservableCollection%601> 類別) 包含 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 摘要中的資料。 此類別表示動態資料集合會在加入或移除項目時提供通知。 當您使用的執行個體<xref:System.Data.Services.Client.DataServiceCollection%601>的資料繫結[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫會處理這些事件，以確保所追蹤的物件<xref:System.Data.Services.Client.DataServiceContext>與繫結 UI 項目中的資料保持同步。  
@@ -73,17 +73,17 @@ ms.locfileid: "59517872"
 ## <a name="customizing-data-binding-behaviors"></a>自訂資料繫結行為  
  <xref:System.Data.Services.Client.DataServiceCollection%601> 類別可讓您攔截變更集合時所引發的事件，例如加入或移除物件，以及變更集合中物件的屬性時所引發的事件。 您可以修改資料繫結事件以覆寫預設的行為，包括下列條件約束：  
   
--   委派內未執行驗證。  
+- 委派內未執行驗證。  
   
--   加入實體時會自動加入相關的實體。  
+- 加入實體時會自動加入相關的實體。  
   
--   刪除實體時不會刪除相關的實體。  
+- 刪除實體時不會刪除相關的實體。  
   
  當您建立新的 <xref:System.Data.Services.Client.DataServiceCollection%601> 執行個體時，您可以選擇指定下列參數，這些參數會定義處理變更繫結物件時引發之事件的方法委派。  
   
--   `entityChanged`：繫結物件變更時會呼叫此方法。 此 <xref:System.Func%602> 委派接受 <xref:System.Data.Services.Client.EntityChangedParams> 物件並傳回布林值，指出是否仍應發生預設行為 (呼叫 <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 的 <xref:System.Data.Services.Client.DataServiceContext>)。  
+- `entityChanged`：繫結物件變更時會呼叫此方法。 此 <xref:System.Func%602> 委派接受 <xref:System.Data.Services.Client.EntityChangedParams> 物件並傳回布林值，指出是否仍應發生預設行為 (呼叫 <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 的 <xref:System.Data.Services.Client.DataServiceContext>)。  
   
--   `entityCollectionChanged`：在繫結集合中加入或移除物件時會呼叫此方法。 此 <xref:System.Func%602> 委派接受 <xref:System.Data.Services.Client.EntityCollectionChangedParams> 物件並傳回布林值，指出是否仍應發生預設行為 (呼叫 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> 動作的 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add>，或在 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 呼叫 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> 動作的 <xref:System.Data.Services.Client.DataServiceContext>)。  
+- `entityCollectionChanged`：在繫結集合中加入或移除物件時會呼叫此方法。 此 <xref:System.Func%602> 委派接受 <xref:System.Data.Services.Client.EntityCollectionChangedParams> 物件並傳回布林值，指出是否仍應發生預設行為 (呼叫 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> 動作的 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add>，或在 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 呼叫 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> 動作的 <xref:System.Data.Services.Client.DataServiceContext>)。  
   
 > [!NOTE]
 >  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 不會針對您在這些委派中實作的自訂行為執行驗證。  
@@ -101,15 +101,15 @@ ms.locfileid: "59517872"
 ## <a name="data-binding-with-custom-client-data-classes"></a>使用自訂用戶端資料類別資料繫結  
  若要將物件載入至 <xref:System.Data.Services.Client.DataServiceCollection%601>，物件本身必須實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面。 資料服務使用時產生的用戶端類別**加入服務參考** 對話方塊或[DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)工具實作此介面。 如果您自行提供用戶端資料類別，則必須使用另一種集合類型進行資料繫結。 物件變更時，您必須在資料繫結控制項中處理事件，以呼叫 <xref:System.Data.Services.Client.DataServiceContext> 類別的下列方法：  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>：將新的物件加入至集合中時。  
+- <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>：將新的物件加入至集合中時。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A>：自集合移除物件時。  
+- <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A>：自集合移除物件時。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A>：集合中的物件屬性變更時。  
+- <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A>：集合中的物件屬性變更時。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>：將物件加入至相關物件集合中時。  
+- <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>：將物件加入至相關物件集合中時。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>：將物件加入至相關物件集合中時。  
+- <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>：將物件加入至相關物件集合中時。  
   
  如需詳細資訊，請參閱 <<c0> [ 更新資料服務](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  
   

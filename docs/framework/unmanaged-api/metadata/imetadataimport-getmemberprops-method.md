@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 83dec9b6ed3b1e538e0f1b7d13a33b8bdbc1cf54
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777724"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps 方法
 取得儲存在指定的成員定義，包括名稱、 二進位簽章和相對虛擬位址的中繼資料中的資訊<xref:System.Type>指定之中繼資料語彙基元所參考的成員。 這是一個簡單的 helper 方法： 如果*mb*就的 MethodDef **GetMethodProps**呼叫; 如果*mb*就的 fielddef 語彙**GetFieldProps**會呼叫。 請參閱這些其他方法，如需詳細資訊。 

@@ -5,13 +5,13 @@ author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 8ad354e1708eb88f016130f8235f534b967eb122
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776008"
 ---
-# <a name="durable-azure-functions"></a>長期的 Azure 函式
+# <a name="durable-azure-functions"></a>永久的 Azure 函式
 
 當使用 Azure Functions 建立無伺服器應用程式，您的作業將通常設計成無狀態的方式執行。 這種設計選擇的原因是因為平台的規模而調整，但是很難知道哪些伺服器執行的程式碼。 也就很難知道多少個執行個體是在任何指定的時間點作用中。 不過，有一些需要知道處理程序的目前狀態的應用程式的類別。 請考慮提交訂單的線上商店的程序。 簽出作業可能需要知道處理序狀態的多個作業所組成的工作流程。 這類資訊可能包含產品存貨，如果客戶有任何信用額度他們的帳戶，以及處理信用卡的結果。 這些作業很可能他們自己的內部工作流程或甚至是協力廠商系統服務。
 

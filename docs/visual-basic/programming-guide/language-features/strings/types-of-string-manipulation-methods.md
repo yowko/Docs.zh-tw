@@ -6,11 +6,11 @@ helpviewer_keywords:
 - string manipulation
 ms.assetid: 905055cd-7f50-48fb-9eed-b0995af1dc1f
 ms.openlocfilehash: 44eb101ebdfeb316958a659107190ef1fc84df44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938264"
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a>Visual Basic 中字串管理方法的類型
 有數個不同的方式，來分析及管理您的字串。 某些方法屬於 Visual Basic 語言的有些則是內在`String`類別。  

@@ -5,18 +5,18 @@ f1_keywords:
 - vbrTextFieldParser_DelimiterNothing
 ms.assetid: 8885fcd1-c201-409d-9a32-6ff2b13c0c13
 ms.openlocfilehash: ff21545bfe12fb8f6eccd50fd00c138bbab92b97
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58032102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940708"
 ---
 # <a name="a-delimiter-cannot-be-nothing-or-an-empty-string"></a>分隔符號不可以是 Nothing 或空字串
 `TextFieldParser` 無法讀取自檔案，因為 `Delimiters` 屬性設定為 `Nothing` 或為空白 `String` ("")。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   請提供 `Delimiters`的有效值。  
+- 請提供 `Delimiters`的有效值。  
   
 ## <a name="see-also"></a>另請參閱
 

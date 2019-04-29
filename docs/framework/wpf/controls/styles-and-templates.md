@@ -8,11 +8,11 @@ helpviewer_keywords:
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
 ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790906"
 ---
 # <a name="styles-and-templates"></a>樣式和範本
 Windows Presentation Foundation (WPF) 設定樣式和範本指一套功能 （樣式、 範本、 觸發程序和分鏡腳本），讓應用程式、 文件或使用者介面 (UI) 設計工具建立引人注目的應用程式，標準化其產品的特定外觀。  

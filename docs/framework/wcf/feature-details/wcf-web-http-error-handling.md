@@ -3,11 +3,11 @@ title: WCF Web HTTP 錯誤處理
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
 ms.openlocfilehash: 834c642e36e1551081dbe1f14529ed7596df1360
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935482"
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF Web HTTP 錯誤處理
 Windows Communication Foundation (WCF) Web HTTP 錯誤處理可讓您從指定的 HTTP 狀態碼，並傳回錯誤詳細資料，使用相同的格式與作業 （例如 XML 或 JSON） 的 WCF Web HTTP 服務傳回錯誤。  
@@ -39,11 +39,11 @@ Public string Operation2()
   
  前一個程式碼會傳回 HTTP 回應，附上禁止狀態碼與本文，而本文中會包含 `MyErrorDetails` 物件的執行個體。 `MyErrorDetails` 物件的格式取決於：  
   
--   服務作業所指定 `ResponseFormat` 或 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性之 <xref:System.ServiceModel.Web.WebInvokeAttribute> 參數的值。  
+- 服務作業所指定 `ResponseFormat` 或 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性之 <xref:System.ServiceModel.Web.WebInvokeAttribute> 參數的值。  
   
--   <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> 的值。  
+- <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> 的值。  
   
--   透過存取 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> 之 <xref:System.ServiceModel.Web.OutgoingWebResponseContext> 屬性的值。  
+- 透過存取 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> 之 <xref:System.ServiceModel.Web.OutgoingWebResponseContext> 屬性的值。  
   
  如需有關這些值如何影響作業的格式設定的詳細資訊，請參閱[WCF Web HTTP 格式化](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)。  
   

@@ -3,11 +3,11 @@ title: 基本序列化技術範例
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795014"
 ---
 # <a name="basic-serialization-technology-sample"></a>基本序列化技術範例
 [下載範例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -62,21 +62,21 @@ ms.locfileid: "59315006"
   
  下面幾點簡短說明了此範例所使用的類別和技術。  
   
--   執行階段序列化  
+- 執行階段序列化  
   
-    -   <xref:System.Runtime.Serialization.IFormatter> 用來參考<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>或<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>物件。  
+    - <xref:System.Runtime.Serialization.IFormatter> 用來參考<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>或<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>物件。  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 用來序列化中一種二進位格式的資料流的連結的清單。 二進位格式子使用的格式只有 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型別才了解。 不過，資料相當簡明。  
+    - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 用來序列化中一種二進位格式的資料流的連結的清單。 二進位格式子使用的格式只有 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型別才了解。 不過，資料相當簡明。  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 用來序列化至 SOAP 格式的資料流的連結的清單。 SOAP 是一種標準格式。  
+    - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 用來序列化至 SOAP 格式的資料流的連結的清單。 SOAP 是一種標準格式。  
   
--   資料流 I/O  
+- 資料流 I/O  
   
-    -   <xref:System.IO.Stream> 用來執行序列化及還原序列化。 這個範例所用的特定資料流型別是 <xref:System.IO.FileStream> 型別。 不過，序列化可以使用衍生自 <xref:System.IO.Stream> 的任何型別。  
+    - <xref:System.IO.Stream> 用來執行序列化及還原序列化。 這個範例所用的特定資料流型別是 <xref:System.IO.FileStream> 型別。 不過，序列化可以使用衍生自 <xref:System.IO.Stream> 的任何型別。  
   
-    -   <xref:System.IO.File> 用來建立 <xref:System.IO.FileStream> 物件，以便在磁碟上讀取及建立檔案。  
+    - <xref:System.IO.File> 用來建立 <xref:System.IO.FileStream> 物件，以便在磁碟上讀取及建立檔案。  
   
-    -   <xref:System.IO.FileStream> 用來將連結串列序列化及還原序列化。  
+    - <xref:System.IO.FileStream> 用來將連結串列序列化及還原序列化。  
   
 ## <a name="see-also"></a>另請參閱
 

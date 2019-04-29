@@ -9,32 +9,32 @@ helpviewer_keywords:
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
 ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937965"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>HOW TO：建構字型家族和字型
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 分組的字型系列字樣相同但不同的字型。 比方說，新細明體字型系列包含下列字型：  
   
--   新細明體的一般  
+- 新細明體的一般  
   
--   新細明體粗體  
+- 新細明體粗體  
   
--   新細明體斜體  
+- 新細明體斜體  
   
--   新細明體  
+- 新細明體  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 使用表單系列的四個樣式： 一般、 粗體、 斜體和粗體斜體。 這類的形容詞*縮小*並*捨入*不會被視為樣式; 而是它們屬於的系列名稱。 比方說，新細明體窄時，為字型家族，具有下列成員：  
   
--   新細明體窄一般  
+- 新細明體窄一般  
   
--   粗體的新細明體  
+- 粗體的新細明體  
   
--   新細明體窄斜體  
+- 新細明體窄斜體  
   
--   窄的新細明體  
+- 窄的新細明體  
   
  您可以繪製的文字之前[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您必須建構<xref:System.Drawing.FontFamily>物件和<xref:System.Drawing.Font>物件。 <xref:System.Drawing.FontFamily>物件會指定 （例如，新細明體），字樣和<xref:System.Drawing.Font>物件指定大小、 樣式和單位。  
   

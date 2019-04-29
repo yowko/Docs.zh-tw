@@ -11,28 +11,28 @@ helpviewer_keywords:
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
 ms.openlocfilehash: c9a43065210f5ef0fffcae01cc7eb88349696b6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938130"
 ---
 # <a name="graphics-paths-in-gdi"></a>GDI+ 中的圖形路徑
 路徑被形成藉由結合線條、 矩形和簡單的曲線。 回想一下[向量圖形概觀](vector-graphics-overview.md)是最適合繪製圖片證明了下列的基本建置組塊：  
   
--   線條  
+- 線條  
   
--   矩形  
+- 矩形  
   
--   省略符號  
+- 省略符號  
   
--   Arcs  
+- Arcs  
   
--   多邊形  
+- 多邊形  
   
--   基線曲線  
+- 基線曲線  
   
--   貝茲曲線  
+- 貝茲曲線  
   
  在 GDI + 中，<xref:System.Drawing.Drawing2D.GraphicsPath>物件可讓您收集成一個單位的一連串的這些建置組塊。 然後可以有一個呼叫繪製一連串完整的線條、 矩形、 多邊形和曲線<xref:System.Drawing.Graphics.DrawPath%2A>方法的<xref:System.Drawing.Graphics>類別。 下圖顯示一條線，弧形、 貝茲曲線的基線曲線相結合所產生的路徑。  
   

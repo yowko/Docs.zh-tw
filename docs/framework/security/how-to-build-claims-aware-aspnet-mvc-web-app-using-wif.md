@@ -4,49 +4,49 @@ ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
 ms.openlocfilehash: 04861b8c3f2673a5cd093be1351928b1da487147
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940513"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>如何：使用 WIF 建置宣告感知 ASP.NET MVC Web 應用程式
 ## <a name="applies-to"></a>適用於  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® MVC  
+- ASP.NET® MVC  
   
 ## <a name="summary"></a>總結  
  此操作說明提供詳細逐步程序，以建立簡單宣告感知 ASP.NET MVC 應用程式。 還提供了一些指示，說明如何測試簡單宣告感知 ASP.NET MVC Web 應用程式成功實作宣告型驗證。 此操作說明沒有提供建立安全性權杖服務 (STS) 的詳細指示，並假設您已設定 STS。  
   
 ## <a name="contents"></a>內容  
   
--   目標  
+- 目標  
   
--   步驟摘要  
+- 步驟摘要  
   
--   步驟 1 – 建立簡單的 ASP.NET MVC 應用程式  
+- 步驟 1 – 建立簡單的 ASP.NET MVC 應用程式  
   
--   步驟 2 – 設定宣告型驗證的 ASP.NET MVC 應用程式  
+- 步驟 2 – 設定宣告型驗證的 ASP.NET MVC 應用程式  
   
--   步驟 3 – 測試方案  
+- 步驟 3 – 測試方案  
   
--   相關項目:  
+- 相關項目:  
   
 ## <a name="objectives"></a>目標  
   
--   設定宣告型驗證的 ASP.NET MVC Web 應用程式  
+- 設定宣告型驗證的 ASP.NET MVC Web 應用程式  
   
--   測試成功宣告感知 ASP.NET MVC Web 應用程式  
+- 測試成功宣告感知 ASP.NET MVC Web 應用程式  
   
 ## <a name="summary-of-steps"></a>步驟摘要  
   
--   步驟 1 – 建立簡單的 ASP.NET MVC 應用程式  
+- 步驟 1 – 建立簡單的 ASP.NET MVC 應用程式  
   
--   步驟 2 – 設定宣告型驗證的 ASP.NET MVC 應用程式  
+- 步驟 2 – 設定宣告型驗證的 ASP.NET MVC 應用程式  
   
--   步驟 3 – 測試方案  
+- 步驟 3 – 測試方案  
   
 ## <a name="step-1--create-simple-aspnet-mvc-application"></a>步驟 1 – 建立簡單的 ASP.NET MVC 應用程式  
  在此步驟中，您將建立新的 ASP.NET MVC 應用程式。  
@@ -218,4 +218,4 @@ ms.locfileid: "59335663"
   
 ## <a name="related-items"></a>相關項目:  
   
--   [如何：建置宣告感知 ASP.NET Web Form 應用程式使用 WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+- [如何：建置宣告感知 ASP.NET Web Form 應用程式使用 WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

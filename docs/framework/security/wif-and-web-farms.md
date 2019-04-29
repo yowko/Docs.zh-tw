@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
 ms.openlocfilehash: 2f95213390187648c9f58b9b2bf2d5e3f49fb860
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796100"
 ---
 # <a name="wif-and-web-farms"></a>WIF 和 Web 伺服陣列
 當您使用 Windows Identity Foundation (WIF) 來保護部署於 Web 伺服陣列中的信賴憑證者 (RP) 應用程式的資源時，必須採取特定的步驟，以確保 WIF 可以處理伺服陣列中不同電腦上所執行之 RP 應用程式執行個體的權杖。 這項處理包含驗證工作階段權杖簽章、加密和解密工作階段權杖、快取工作階段權杖，以及偵測重新執行的安全性權杖。  
@@ -17,21 +17,21 @@ ms.locfileid: "59135352"
   
  使用預設值時，WIF 會執行下列作業：  
   
--   它會使用 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> 類別的執行個體來讀寫工作階段權杖 (<xref:System.IdentityModel.Tokens.SessionSecurityToken> 類別的執行個體)，而工作階段權杖中含有宣告和用於驗證之安全性權杖的其他相關資訊，以及工作階段本身的相關資訊。 工作階段權杖會封裝並儲存在工作階段 Cookie 中。 根據預設，<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> 會使用採用資料保護 API (DPAPI) 的 <xref:System.IdentityModel.ProtectedDataCookieTransform> 類別來保護工作階段權杖。 DPAPI 透過使用者或電腦認證來提供保護，並將金鑰資料儲存在使用者設定檔中。  
+- 它會使用 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> 類別的執行個體來讀寫工作階段權杖 (<xref:System.IdentityModel.Tokens.SessionSecurityToken> 類別的執行個體)，而工作階段權杖中含有宣告和用於驗證之安全性權杖的其他相關資訊，以及工作階段本身的相關資訊。 工作階段權杖會封裝並儲存在工作階段 Cookie 中。 根據預設，<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> 會使用採用資料保護 API (DPAPI) 的 <xref:System.IdentityModel.ProtectedDataCookieTransform> 類別來保護工作階段權杖。 DPAPI 透過使用者或電腦認證來提供保護，並將金鑰資料儲存在使用者設定檔中。  
   
--   它會使用 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 類別的記憶體內部實作 (預設值)，來儲存和處理工作階段權杖。  
+- 它會使用 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 類別的記憶體內部實作 (預設值)，來儲存和處理工作階段權杖。  
   
  這些預設值適用於在單一電腦上部署 RP 應用程式的情節；不過，若部署在 Web 伺服陣列，每個 HTTP 要求可能會傳送到在不同電腦上執行的不同 RP 應用程式執行個體，並由這些不同的 RP 應用程式執行個體進行處理。 在此情節中，上述的 WIF 預設值無效，因為權杖保護和權杖快取都依存於特定電腦。  
   
  若要在 Web 伺服陣列中部署 RP 應用程式，您必須確定工作階段權杖 (以及重新執行的權杖) 的處理不依存於特定電腦上執行的應用程式。 執行此操作的方法之一是實作 RP 應用程式，使其使用 ASP.NET `<machineKey>` 組態元素所提供的功能，並提供分散式快取來處理工作階段權杖和重新執行的權杖。 `<machineKey>` 元素可讓您在組態檔中指定驗證、加密和解密權杖所需的金鑰，藉此便能讓您在 Web 伺服陣列的不同電腦上指定相同的金鑰。 WIF 提供了一個專用的工作階段權杖處理常式 <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>其可使用 `<machineKey>` 元素中指定的金鑰來保護權杖。 若要實作此策略，您可以遵循下列指導方針：  
   
--   在組態中使用 ASP.NET `<machineKey>` 元素，以明確指定可在伺服陣列中不同電腦上使用的簽署和加密金鑰。 下列 XML 顯示組態檔中 `<system.web>` 元素下之 `<machineKey>` 元素的指定內容。  
+- 在組態中使用 ASP.NET `<machineKey>` 元素，以明確指定可在伺服陣列中不同電腦上使用的簽署和加密金鑰。 下列 XML 顯示組態檔中 `<system.web>` 元素下之 `<machineKey>` 元素的指定內容。  
   
     ```xml  
     <machineKey compatibilityMode="Framework45" decryptionKey="CC510D … 8925E6" validationKey="BEAC8 … 6A4B1DE" />  
     ```  
   
--   設定應用程式以使用 <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>，做法為將它加入到權杖處理常式集合。 如果已有這類處理常式，您必須先從權杖處理常式集合中移除 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> (或任何衍生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> 類別的處理常式)。 <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> 會使用 <xref:System.IdentityModel.Services.MachineKeyTransform> 類別，這可透過使用 `<machineKey>` 元素中指定的加密編譯內容，保護工作階段 Cookie 資料 。 下列 XML 示範如何將 <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> 新增到權杖處理常式集合。  
+- 設定應用程式以使用 <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>，做法為將它加入到權杖處理常式集合。 如果已有這類處理常式，您必須先從權杖處理常式集合中移除 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> (或任何衍生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> 類別的處理常式)。 <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> 會使用 <xref:System.IdentityModel.Services.MachineKeyTransform> 類別，這可透過使用 `<machineKey>` 元素中指定的加密編譯內容，保護工作階段 Cookie 資料 。 下列 XML 示範如何將 <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> 新增到權杖處理常式集合。  
   
     ```xml  
     <securityTokenHandlers>  
@@ -40,7 +40,7 @@ ms.locfileid: "59135352"
     </securityTokenHandlers>  
     ```  
   
--   衍生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 並實作分散式快取，也就是可從伺服陣列中所有可能執行 RP 的電腦上存取的快取。 設定 RP 以使用分散式快取，做法為在組態檔中指定 [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 元素。 您可以覆寫衍生類別中的 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> 方法，來實作所需之 `<sessionSecurityTokenCache>` 元素的子元素。  
+- 衍生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 並實作分散式快取，也就是可從伺服陣列中所有可能執行 RP 的電腦上存取的快取。 設定 RP 以使用分散式快取，做法為在組態檔中指定 [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 元素。 您可以覆寫衍生類別中的 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> 方法，來實作所需之 `<sessionSecurityTokenCache>` 元素的子元素。  
   
     ```xml  
     <caches>  
@@ -52,7 +52,7 @@ ms.locfileid: "59135352"
   
      實作分散式快取的方法之一，是為您的自訂快取提供 WCF 前端。 如需實作 WCF 快取服務的詳細資訊，請參閱 [WCF 快取服務](#BKMK_TheWCFCachingService)。 如需實作 RP 應用程式可用來呼叫快取服務之 WCF 用戶端的詳細資訊，請參閱 [WCF 快取用戶端](#BKMK_TheWCFClient)。  
   
--   如果您的應用程式偵測到重新執行的權杖，您必須針對權杖重新執行快取遵循類似的分散式快取策略，做法是衍生自 <xref:System.IdentityModel.Tokens.TokenReplayCache>，並指向 [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 組態元素中的權杖重新執行快取服務。  
+- 如果您的應用程式偵測到重新執行的權杖，您必須針對權杖重新執行快取遵循類似的分散式快取策略，做法是衍生自 <xref:System.IdentityModel.Tokens.TokenReplayCache>，並指向 [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 組態元素中的權杖重新執行快取服務。  
   
 > [!IMPORTANT]
 >  所有的範例 XML 和本主題中的程式碼取自[ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408)範例。  

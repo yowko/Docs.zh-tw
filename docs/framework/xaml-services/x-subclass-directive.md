@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
 ms.openlocfilehash: 850fe8acf9e47149bd385e78b30e04ba77d7a8b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938862"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass 指示詞
 修改 XAML 標記編譯行為時`x:Class`也會提供。 而不是建立部分類別為基礎`x:Class`，提供`x:Class`會建立為中繼類別，並提供衍生的類別然後是根據預期`x:Class`。  

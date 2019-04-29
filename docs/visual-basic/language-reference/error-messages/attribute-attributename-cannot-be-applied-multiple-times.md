@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30663
 ms.assetid: 3760e7ff-7238-40a1-8676-77d858a64fc0
 ms.openlocfilehash: da4a766e2617308cb33b9673a88db9e7a954152a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935313"
 ---
 # <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>屬性 '\<屬性名稱 >' 不可套用多次
 屬性只能套用一次。 `AttributeUsage`屬性會決定是否可以多次套用屬性。  

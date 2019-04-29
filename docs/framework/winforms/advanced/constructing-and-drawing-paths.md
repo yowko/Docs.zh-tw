@@ -9,11 +9,11 @@ helpviewer_keywords:
 - examples [Windows Forms], drawing paths
 ms.assetid: f16ec921-56cf-46d1-9741-d7316ad06b23
 ms.openlocfilehash: a698b93aac29a0a7f5c959b29a3feb41eb447e8c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935404"
 ---
 # <a name="constructing-and-drawing-paths"></a>建構和繪製路徑
 路徑是一連串的基本圖形 （線條、 矩形、 曲線、 文字，以及類似），可操作並繪製為單一單位。 路徑可以分成*數據*為開啟或關閉。 圖形可以包含數個基本項目。  

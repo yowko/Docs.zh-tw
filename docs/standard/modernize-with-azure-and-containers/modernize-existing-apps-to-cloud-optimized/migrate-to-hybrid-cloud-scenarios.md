@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: b04c6edecf5b63f191cb2e0f808fb1d0f801d0a3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936720"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>移轉至混合式雲端案例
 
@@ -33,9 +33,9 @@ Azure Stack 是混合式雲端平台，可讓您從貴組織的資料中心提�
 
 Azure Stack 提供以下兩種部署選項，以符合您需求：
 
--   Azure Stack 整合系統
+- Azure Stack 整合系統
 
--   Azure Stack 開發套件
+- Azure Stack 開發套件
 
 ### <a name="azure-stack-integrated-systems"></a>Azure Stack 整合系統
 
@@ -47,23 +47,23 @@ Microsoft Azure Stack 開發套件是 Azure Stack，您可以使用來評估和�
 
 ### <a name="additional-resources"></a>其他資源
 
--   **Azure 的混合式雲端**
+- **Azure 的混合式雲端**
 
     <https://azure.microsoft.com/overview/hybrid-cloud/>
 
--   **Azure Stack**
+- **Azure Stack**
 
     <https://azure.microsoft.com/overview/azure-stack/>
 
--   **適用於 Windows 容器的 active Directory 服務帳戶**
+- **適用於 Windows 容器的 active Directory 服務帳戶**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts>
 
--   **使用 Active Directory 支援來建立容器**
+- **使用 Active Directory 支援來建立容器**
 
     <https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/>
 
--   **Azure Hybrid Benefit 授權**
+- **Azure Hybrid Benefit 授權**
 
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 

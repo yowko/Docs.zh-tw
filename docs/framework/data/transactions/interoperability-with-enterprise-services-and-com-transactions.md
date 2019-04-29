@@ -3,11 +3,11 @@ title: 與 Enterprise Services 和 COM+ 交易的互通性
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
 ms.openlocfilehash: 8b86a032e7cbc27332864c9cc96009f12b72c53d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793649"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>與 Enterprise Services 和 COM+ 交易的互通性
 <xref:System.Transactions> 命名空間支援以此命名空間建立的交易物件，以及透過 COM+ 建立的交易兩者之間的互通性。  
@@ -29,9 +29,9 @@ ms.locfileid: "59301902"
   
  <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> 指定了下列需求：  
   
--   在檢查過 <xref:System.Transactions.Transaction.Current%2A> 之後，如果 <xref:System.Transactions> 偵測到自己正於預設內容以外的內容中執行時，就會支援 COM+ 內容中的所有交易。 請注意，預設內容無法包含交易。 因此，在預設內容中，就算包含了 <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>，儲存在 <xref:System.Transactions> 使用的執行緒區域儲存區中的交易就會傳回至 <xref:System.Transactions.Transaction.Current%2A>。  
+- 在檢查過 <xref:System.Transactions.Transaction.Current%2A> 之後，如果 <xref:System.Transactions> 偵測到自己正於預設內容以外的內容中執行時，就會支援 COM+ 內容中的所有交易。 請注意，預設內容無法包含交易。 因此，在預設內容中，就算包含了 <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>，儲存在 <xref:System.Transactions> 使用的執行緒區域儲存區中的交易就會傳回至 <xref:System.Transactions.Transaction.Current%2A>。  
   
--   如果建立了新的 <xref:System.Transactions.TransactionScope> 物件，而建立作業發生在預設內容以外的內容之中，則 <xref:System.Transactions.TransactionScope> 物件的目前交易應該會反映在 COM+ 中。 在此情況下，<xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> 會有如 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 的反應 (好像它建立了新的 COM+ 內容一樣)。  
+- 如果建立了新的 <xref:System.Transactions.TransactionScope> 物件，而建立作業發生在預設內容以外的內容之中，則 <xref:System.Transactions.TransactionScope> 物件的目前交易應該會反映在 COM+ 中。 在此情況下，<xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> 會有如 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 的反應 (好像它建立了新的 COM+ 內容一樣)。  
   
  此外，當 <xref:System.Transactions.Transaction.Current%2A> 與 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 同時設定為 <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>，則兩種模式同時將意味著無法直接設定 <xref:System.Transactions.Transaction.Current%2A>。  任何嘗試直接設定 <xref:System.Transactions.Transaction.Current%2A> (而不是建立 <xref:System.Transactions.TransactionScope>) 的動作將導致產生 <xref:System.InvalidOperationException>。 <xref:System.Transactions.EnterpriseServicesInteropOption> 列舉型別值將由未明確指定使用值的新交易範圍所繼承。 例如，如果您使用 <xref:System.Transactions.TransactionScope> 來建立新的 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 物件，然後建立了第二個 <xref:System.Transactions.TransactionScope> 物件 (但卻未指定 <xref:System.Transactions.EnterpriseServicesInteropOption> 值)，則第二個 <xref:System.Transactions.TransactionScope> 物件同樣具有 <xref:System.Transactions.EnterpriseServicesInteropOption.Full>。  
   
@@ -39,11 +39,11 @@ ms.locfileid: "59301902"
   
 1. <xref:System.Transactions.Transaction.Current%2A> 會檢查以查看是否有交易。 檢查結果為：  
   
-    -   檢查是否有範圍。  
+    - 檢查是否有範圍。  
   
-    -   如果有範圍，則會檢查初次建立範圍時所傳入的 <xref:System.Transactions.EnterpriseServicesInteropOption> 列舉型別值。  
+    - 如果有範圍，則會檢查初次建立範圍時所傳入的 <xref:System.Transactions.EnterpriseServicesInteropOption> 列舉型別值。  
   
-    -   如果 <xref:System.Transactions.EnterpriseServicesInteropOption> 列舉型別設為 <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>，則 COM+ 交易 (<xref:System.EnterpriseServices> 交易) 的優先順序將高於 Managed 執行緒區域儲存區中的 <xref:System.Transactions> 交易。  
+    - 如果 <xref:System.Transactions.EnterpriseServicesInteropOption> 列舉型別設為 <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>，則 COM+ 交易 (<xref:System.EnterpriseServices> 交易) 的優先順序將高於 Managed 執行緒區域儲存區中的 <xref:System.Transactions> 交易。  
   
          如果值設為 <xref:System.Transactions.EnterpriseServicesInteropOption.None>，則 Managed 執行緒區域儲存區中的 <xref:System.Transactions> 交易將具有較高的優先順序。  
   
@@ -53,11 +53,11 @@ ms.locfileid: "59301902"
   
 3. 如果需要建立新的交易，則下列各項 <xref:System.Transactions.EnterpriseServicesInteropOption> 值將產生：  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>：會建立與 COM+ 內容相關聯的交易。  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.Full>：會建立與 COM+ 內容相關聯的交易。  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.None>:<xref:System.Transactions>會建立交易。  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.None>:<xref:System.Transactions>會建立交易。  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>： 如果沒有 COM + 內容，建立並附加至內容交易。  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>： 如果沒有 COM + 內容，建立並附加至內容交易。  
   
  下表說明了 Enterprise Services (ES) 內容，以及需要使用 <xref:System.Transactions.EnterpriseServicesInteropOption> 列舉型別之交易的交易式範圍。  
   
@@ -75,6 +75,6 @@ ms.locfileid: "59301902"
   
  在上一個表格：  
   
--   ST 表示範圍的環境交易受到 <xref:System.Transactions> 管理 (有別於可能存在的任何 <xref:System.EnterpriseServices> 內容的交易)。  
+- ST 表示範圍的環境交易受到 <xref:System.Transactions> 管理 (有別於可能存在的任何 <xref:System.EnterpriseServices> 內容的交易)。  
   
--   ES 表示範圍的環境交易與 <xref:System.EnterpriseServices> 內容的交易完全一樣。
+- ES 表示範圍的環境交易與 <xref:System.EnterpriseServices> 內容的交易完全一樣。

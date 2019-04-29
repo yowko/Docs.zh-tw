@@ -3,20 +3,20 @@ title: 訊息流程概觀
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
 ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797474"
 ---
 # <a name="message-flow-overview"></a>訊息流程概觀
 在包含互連服務的分散式系統中，您必須判斷服務之間的因果關係。 請務必了解屬於要求流程一部分的各種元件，以便支援重要案例，例如健康監視、疑難排解和根本原因分析。 為了讓各種服務之間的追蹤相互關聯，我們透過下列功能，在 .NET Framework 4 中加入了支援：
 
--   分析追蹤：高效能、 低詳細等級追蹤功能使用 Windows 事件追蹤 (ETW)。
+- 分析追蹤：高效能、 低詳細等級追蹤功能使用 Windows 事件追蹤 (ETW)。
 
--   WCF/WF 服務的端對端活動模型：這項功能支援追蹤所產生的相互關聯<xref:System.ServiceModel>和<xref:System.Workflow.ComponentModel>命名空間。
+- WCF/WF 服務的端對端活動模型：這項功能支援追蹤所產生的相互關聯<xref:System.ServiceModel>和<xref:System.Workflow.ComponentModel>命名空間。
 
--   WF 的 ETW 追蹤：這項功能會使用 WF 服務所產生的追蹤記錄，來提供工作流程的目前狀態和進度的可視性。
+- WF 的 ETW 追蹤：這項功能會使用 WF 服務所產生的追蹤記錄，來提供工作流程的目前狀態和進度的可視性。
 
  在追蹤或追蹤記錄中記錄的錯誤可用來尋找程式碼缺失或格式錯誤的訊息。 在事件的訊息標頭中，Correlation 節點的 ActivityId 屬性可用來判斷錯誤的活動。 若要啟用訊息流程追蹤的活動識別碼，請參閱[Configuring Message Flow Tracing](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)。 本主題將示範如何在＜使用者入門教學課程＞中建立的專案內啟用訊息流程追蹤。
 

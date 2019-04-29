@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
 ms.openlocfilehash: d25c8500250411083e9fb6b33b3f743e5cd103c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796522"
 ---
 # <a name="xname-directive"></a>x:Name 指示詞
 可唯一識別 XAML 定義 XAML 名稱範圍中的項目。 XAML 名稱範圍和其唯一性模型可以套用至具現化的物件，當架構提供的 Api，或實作在執行階段存取 XAML 建立的物件圖形的行為。  

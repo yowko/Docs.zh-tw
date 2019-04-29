@@ -14,20 +14,20 @@ helpviewer_keywords:
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
 ms.openlocfilehash: 47e93ee17f160ce5cd701fd0a12ec16b3997ce9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791855"
 ---
 # <a name="property-procedures-visual-basic"></a>屬性程序 (Visual Basic)
 屬性程序是一系列的 Visual Basic 陳述式，以操作上的模組、 類別或結構的自訂屬性。 屬性程序是也稱為*屬性存取子*。  
   
  Visual Basic 提供下列屬性程序：  
   
--   A`Get`程序會傳回屬性的值。 它會呼叫存取在運算式中的屬性時。  
+- A`Get`程序會傳回屬性的值。 它會呼叫存取在運算式中的屬性時。  
   
--   A`Set`程序會將屬性設定值，包括物件參考。 當您指派給屬性的值時，被呼叫它。  
+- A`Set`程序會將屬性設定值，包括物件參考。 當您指派給屬性的值時，被呼叫它。  
   
  您通常是定義屬性程序中使用的組`Get`並`Set`陳述式，但是您可以定義其中一個單獨的程序如果屬性為唯讀 ([Get 陳述式](../../../../visual-basic/language-reference/statements/get-statement.md)) 或唯寫 ([設定陳述式](../../../../visual-basic/language-reference/statements/set-statement.md))。  
   

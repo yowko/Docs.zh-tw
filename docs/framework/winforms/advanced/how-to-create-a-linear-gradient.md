@@ -14,8 +14,8 @@ ms.openlocfilehash: b836659821b54698b675d48acd4e46466001d654
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937883"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>HOW TO：建立線形漸層
 GDI + 提供水平、 垂直和對角線形漸層。 根據預設，線性漸層色彩一致變更。 不過，您可以自訂的線性漸層，以便的色彩會變更以非統一的方式。  
@@ -35,7 +35,7 @@ GDI + 提供水平、 垂直和對角線形漸層。 根據預設，線性漸層
   
 ### <a name="to-use-horizontal-linear-gradients"></a>若要使用水平的線性漸層  
   
--   傳入的不透明的紅色及不透明藍色分別做為第三個和第四個引數。  
+- 傳入的不透明的紅色及不透明藍色分別做為第三個和第四個引數。  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
      [!code-vb[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
@@ -60,7 +60,7 @@ GDI + 提供水平、 垂直和對角線形漸層。 根據預設，線性漸層
 
 ### <a name="to-customize-linear-gradients"></a>若要自訂線性漸層  
   
--   傳入的不透明黑色及不透明的紅色分別做為第三個和第四個引數。  
+- 傳入的不透明黑色及不透明的紅色分別做為第三個和第四個引數。  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
      [!code-vb[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
@@ -75,7 +75,7 @@ GDI + 提供水平、 垂直和對角線形漸層。 根據預設，線性漸層
   
 ### <a name="to-create-diagonal-linear-gradients"></a>若要建立對角線的線性漸層  
   
--   傳入的不透明的藍色及不透明綠色分別做為第三個和第四個引數。  
+- 傳入的不透明的藍色及不透明綠色分別做為第三個和第四個引數。  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
      [!code-vb[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  

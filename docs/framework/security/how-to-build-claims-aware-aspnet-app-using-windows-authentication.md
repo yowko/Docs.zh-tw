@@ -4,41 +4,41 @@ ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
 ms.openlocfilehash: 48b1b4715e9e2613757a981ba692d84ad06a1ec6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940539"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>如何：使用 Windows 驗證建置宣告感知 ASP.NET 應用程式
 ## <a name="applies-to"></a>適用於  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web Forms  
+- ASP.NET® Web Forms  
   
 ## <a name="summary"></a>總結  
  此操作說明提供詳細逐步程序，以建立使用 Windows 驗證的簡單宣告感知 ASP.NET Web Forms 應用程式。 還提供了一些指示，說明如何測試應用程式，以確認在使用者使用 Windows 驗證登入時會呈現宣告。  
   
 ## <a name="contents"></a>內容  
   
--   目標  
+- 目標  
   
--   總覽  
+- 總覽  
   
--   步驟摘要  
+- 步驟摘要  
   
--   步驟 1 - 建立簡單 ASP.NET Web Forms 應用程式  
+- 步驟 1 - 建立簡單 ASP.NET Web Forms 應用程式  
   
--   步驟 2 – 設定使用 Windows 驗證之宣告的 ASP.NET Web Forms 應用程式  
+- 步驟 2 – 設定使用 Windows 驗證之宣告的 ASP.NET Web Forms 應用程式  
   
--   步驟 3 – 測試方案  
+- 步驟 3 – 測試方案  
   
 ## <a name="objectives"></a>目標  
   
--   設定使用 Windows 驗證之宣告的 ASP.NET Web Forms 應用程式  
+- 設定使用 Windows 驗證之宣告的 ASP.NET Web Forms 應用程式  
   
--   測試 ASP.NET Web Forms 應用程式以查看它是否正常運作  
+- 測試 ASP.NET Web Forms 應用程式以查看它是否正常運作  
   
 ## <a name="overview"></a>總覽  
  在 .NET 4.5 中，WIF 和其宣告型授權已包含為 Framework 的不可或缺部分。 以前，如果您想要來自 ASP.NET 使用者的宣告，需要安裝 WIF，然後將介面轉換為主體物件，例如 `Thread.CurrentPrincipal` 或 `HttpContext.Current.User`。 現在，這些主體物件會自動提供宣告。  
@@ -47,11 +47,11 @@ ms.locfileid: "59767964"
   
 ## <a name="summary-of-steps"></a>步驟摘要  
   
--   步驟 1 - 建立簡單 ASP.NET Web Forms 應用程式  
+- 步驟 1 - 建立簡單 ASP.NET Web Forms 應用程式  
   
--   步驟 2 – 設定使用 Windows 驗證之宣告的 ASP.NET Web Forms 應用程式  
+- 步驟 2 – 設定使用 Windows 驗證之宣告的 ASP.NET Web Forms 應用程式  
   
--   步驟 3 – 測試方案  
+- 步驟 3 – 測試方案  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>步驟 1 - 建立簡單 ASP.NET Web Forms 應用程式  
  在此步驟中，您將建立新的 ASP.NET Web Forms 應用程式。  

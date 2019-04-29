@@ -16,39 +16,39 @@ helpviewer_keywords:
 - cells [Windows Forms], text alignment
 ms.assetid: 8c33543c-9c08-4636-a65a-fdf714a529b7
 ms.openlocfilehash: 62701edfdb3cf2729cb401ad12a12ee4f524287b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941407"
 ---
 # <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>HOW TO：格式化 Windows Forms DataGridView 控制項中的資料
 下列程序將示範基本的資料格的值使用的格式<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>屬性<xref:System.Windows.Forms.DataGridView>控制項和控制項中的特定資料行。 如需進階的資料格式資訊，請參閱[How to:自訂 Windows Form DataGridView 控制項中的資料格式](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)。  
   
 ### <a name="to-format-currency-and-date-values"></a>若要將貨幣格式化數值和日期值  
   
--   設定 <xref:System.Windows.Forms.DataGridViewCellStyle> 的 <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 屬性。 下列程式碼範例會設定使用的特定資料行的格式<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>的資料行的屬性。 中的值`UnitPrice`資料行出現在目前的特定文化特性的貨幣格式，與括號括住的負數值。 中的值`ShipDate`目前文化特性的簡短日期格式顯示資料行。 如需詳細資訊<xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>值，請參閱[格式化型別](../../../standard/base-types/formatting-types.md)。  
+- 設定 <xref:System.Windows.Forms.DataGridViewCellStyle> 的 <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 屬性。 下列程式碼範例會設定使用的特定資料行的格式<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>的資料行的屬性。 中的值`UnitPrice`資料行出現在目前的特定文化特性的貨幣格式，與括號括住的負數值。 中的值`ShipDate`目前文化特性的簡短日期格式顯示資料行。 如需詳細資訊<xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>值，請參閱[格式化型別](../../../standard/base-types/formatting-types.md)。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#071](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#071)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#071](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#071)]  
   
 ### <a name="to-customize-the-display-of-null-database-values"></a>若要自訂資料庫 null 值的顯示  
   
--   設定 <xref:System.Windows.Forms.DataGridViewCellStyle> 的 <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> 屬性。 下列程式碼範例會使用<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>屬性來顯示 「 沒有項目 」 中所有的資料格包含值等於<xref:System.DBNull.Value?displayProperty=nameWithType>。  
+- 設定 <xref:System.Windows.Forms.DataGridViewCellStyle> 的 <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> 屬性。 下列程式碼範例會使用<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>屬性來顯示 「 沒有項目 」 中所有的資料格包含值等於<xref:System.DBNull.Value?displayProperty=nameWithType>。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#073](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#073)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#073](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#073)]  
   
 ### <a name="to-enable-wordwrap-in-text-based-cells"></a>若要啟用自動換行中以文字為基礎的資料格  
   
--   設定<xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>的屬性<xref:System.Windows.Forms.DataGridViewCellStyle>的其中一個<xref:System.Windows.Forms.DataGridViewTriState>列舉值。 下列程式碼範例使用<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>屬性來設定整個控制項的自動換行模式。  
+- 設定<xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>的屬性<xref:System.Windows.Forms.DataGridViewCellStyle>的其中一個<xref:System.Windows.Forms.DataGridViewTriState>列舉值。 下列程式碼範例使用<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>屬性來設定整個控制項的自動換行模式。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#074](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#074)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#074](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#074)]  
   
 ### <a name="to-specify-the-text-alignment-of-datagridview-cells"></a>若要指定 DataGridView 儲存格中的文字對齊方式  
   
--   設定<xref:System.Windows.Forms.DataGridViewCellStyle.Alignment%2A>的屬性<xref:System.Windows.Forms.DataGridViewCellStyle>的其中一個<xref:System.Windows.Forms.DataGridViewContentAlignment>列舉值。 下列程式碼範例會設定特定的資料行，使用的對齊方式<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>資料行屬性。  
+- 設定<xref:System.Windows.Forms.DataGridViewCellStyle.Alignment%2A>的屬性<xref:System.Windows.Forms.DataGridViewCellStyle>的其中一個<xref:System.Windows.Forms.DataGridViewContentAlignment>列舉值。 下列程式碼範例會設定特定的資料行，使用的對齊方式<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>資料行屬性。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#072](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#072)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#072](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#072)]  
@@ -60,9 +60,9 @@ ms.locfileid: "59221296"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這些範例需要：  
   
--   A<xref:System.Windows.Forms.DataGridView>控制項，名為`dataGridView1`，其中包含名為的資料行`UnitPrice`，為的資料行`ShipDate`，和名為資料行`CustomerName`。  
+- A<xref:System.Windows.Forms.DataGridView>控制項，名為`dataGridView1`，其中包含名為的資料行`UnitPrice`，為的資料行`ShipDate`，和名為資料行`CustomerName`。  
   
--   <xref:System?displayProperty=nameWithType>、<xref:System.Drawing?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
+- <xref:System?displayProperty=nameWithType>、<xref:System.Drawing?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  最大延展性，您應該共用<xref:System.Windows.Forms.DataGridViewCellStyle>跨多個資料列、 資料行或使用相同的樣式，而不是分別設定每個項目之樣式屬性的資料格的物件。 如需詳細資訊，請參閱 <<c0> [ 縮放 Windows Form DataGridView 控制項的最佳作法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  

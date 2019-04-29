@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
 ms.openlocfilehash: 5555f83107a40b40c7f05c7cc5729f721727f67c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793935"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
 建立與 Managed 資源的連結。  

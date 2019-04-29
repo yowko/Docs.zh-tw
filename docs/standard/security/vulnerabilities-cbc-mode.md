@@ -1,17 +1,17 @@
 ---
-title: 使用 CBC 模式的對稱式解密使用邊框間距的計時弱點
+title: 使用填補進行 CBC 模式對稱解密的時間弱點
 description: 了解如何偵測及降低計時弱點與 Cipher Block Chaining (CBC) 模式對稱式解密使用的填補。
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
 ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933896"
 ---
-# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>使用 CBC 模式的對稱式解密使用邊框間距的計時弱點
+# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>使用填補進行 CBC 模式對稱解密的時間弱點
 
 Microsoft 認為它是無法再解密資料加密使用對稱式加密 Cipher Block Chaining (CBC) 模式，而不先確保完整性的密碼文字，除了已套用可驗證的填補時的安全非常特定情況。 此判斷是以目前已知的密碼編譯研究為基礎。 
 
@@ -93,7 +93,7 @@ Oracle 指的是 「 告訴 」 讓它們執行的動作是否為正確的攻擊
 - 閘道評估的解密呼叫水輥計時訊號：
   - 等候時間的計算必須解密作業會針對包含填補的任何資料 」 區段所需的時間的最大數量超過最小值。
   - 時間計算應該根據中的指導方針[取得高解析度的時間戳記](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps)，不是使用<xref:System.Environment.TickCount?displayProperty=nameWithType>（受限於向前復原移轉/溢位） 上或減去兩個系統的時間戳記，（受限於 NTP 調整錯誤）。
-  - 時間計算必須包括在所有可能的例外狀況解密作業包含管理或 c + + 應用程式，不只是加在尾端填補。
+  - 時間計算必須包括在所有可能的例外狀況解密作業包含管理或C++應用程式，不只是加在尾端填補。
   - 如果已尚未決定成功或失敗，計時閘道需要它過期時傳回失敗。
 - 監視機制來偵測已通過的 「 無效 」 訊息時，應該執行未經驗證的解密的服務。
   - 請記住此訊號會誤肯定 （合法的損毀的資料） 和誤否定 （經過一段夠長的時間來規避偵測攻擊散佈）。

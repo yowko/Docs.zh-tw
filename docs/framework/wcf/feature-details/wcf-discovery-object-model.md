@@ -3,11 +3,11 @@ title: WCF 探索物件模型
 ms.date: 03/30/2017
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
 ms.openlocfilehash: b337eda40fc70a6d0e7b3aeccfc125e6e6bacf8f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935534"
 ---
 # <a name="wcf-discovery-object-model"></a>WCF 探索物件模型
 WCF 探索是由一組型別所組成，可提供統一的程式設計模型，讓您撰寫可在執行階段探索的服務，以及尋找和使用這些服務的用戶端。  
@@ -22,49 +22,49 @@ WCF 探索是由一組型別所組成，可提供統一的程式設計模型，�
 ## <a name="object-model"></a>物件模型  
  WCF 探索 API 會定義下列類別：  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementClient>  
+- <xref:System.ServiceModel.Discovery.AnnouncementClient>  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementService>  
+- <xref:System.ServiceModel.Discovery.AnnouncementService>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryClient>  
+- <xref:System.ServiceModel.Discovery.DiscoveryClient>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>  
+- <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator>  
+- <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator>  
   
--   <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>  
+- <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryProxy>  
+- <xref:System.ServiceModel.Discovery.DiscoveryProxy>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryService>  
+- <xref:System.ServiceModel.Discovery.DiscoveryService>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryVersion>  
+- <xref:System.ServiceModel.Discovery.DiscoveryVersion>  
   
--   <xref:System.ServiceModel.Discovery.DynamicEndpoint>  
+- <xref:System.ServiceModel.Discovery.DynamicEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>  
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>  
   
--   <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>  
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>  
   
--   <xref:System.ServiceModel.Discovery.FindCriteria>  
+- <xref:System.ServiceModel.Discovery.FindCriteria>  
   
--   <xref:System.ServiceModel.Discovery.FindRequestContext>  
+- <xref:System.ServiceModel.Discovery.FindRequestContext>  
   
--   <xref:System.ServiceModel.Discovery.FindResponse>  
+- <xref:System.ServiceModel.Discovery.FindResponse>  
   
--   <xref:System.ServiceModel.Discovery.ResolveCriteria>  
+- <xref:System.ServiceModel.Discovery.ResolveCriteria>  
   
--   <xref:System.ServiceModel.Discovery.ResolveResponse>  
+- <xref:System.ServiceModel.Discovery.ResolveResponse>  
   
--   <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>  
+- <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>  
  
--   <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
   
 ## <a name="announcementclient"></a>AnnouncementClient  
  <xref:System.ServiceModel.Discovery.AnnouncementClient> 類別會提供傳送公告訊息的同步和非同步方法。 公告訊息有兩種：Hello 和 Bye。 傳送 Hello 訊息表示服務可以使用，傳送 Bye 訊息則表示現有服務無法使用。 開發人員會建立 <xref:System.ServiceModel.Discovery.AnnouncementClient> 執行個體，傳遞 <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> 的執行個體做為建構函式參數。  

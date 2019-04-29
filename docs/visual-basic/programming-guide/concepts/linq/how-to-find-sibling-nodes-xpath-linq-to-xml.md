@@ -3,11 +3,11 @@ title: HOW TO：尋找同層級節點 (XPATH-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 73082738-2113-4438-8545-98d5df0927cb
 ms.openlocfilehash: dad211c9c3716f760d28e4a18a61c885fc4dd58f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780389"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>HOW TO：尋找同層級節點 (XPATH-LINQ to XML) (Visual Basic)
 您可能想要尋找具有特定名稱之節點的所有同層級。 如果內容節點也有特定的名稱，所產生的集合可能包含內容節點。  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
 ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794728"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>HOW TO：控制的範圍變數 (Visual Basic)
 一般而言，變數會處於*範圍*，或顯示供您參考，在宣告它的區域。 在某些情況下，變數的*存取層級*可能會影響其範圍。  
@@ -28,13 +28,13 @@ ms.locfileid: "59324314"
   
 #### <a name="to-make-a-variable-visible-only-within-a-block"></a>若要將變數的區塊內才可見  
   
--   地方[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)之間的初始和之間，例如終止宣告陳述式，該區塊中，變數`For`並`Next`陳述式的`For`迴圈。  
+- 地方[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)之間的初始和之間，例如終止宣告陳述式，該區塊中，變數`For`並`Next`陳述式的`For`迴圈。  
   
      您可以參考此變數只在區塊內。  
   
 #### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>若要在程序內才可見變數  
   
--   地方`Dim`程序內，但任何區塊外部變數的陳述式 (例如`With`...`End With`區塊)。  
+- 地方`Dim`程序內，但任何區塊外部變數的陳述式 (例如`With`...`End With`區塊)。  
   
      您可以參考此變數只會從程序，包括任何程序中所含的區塊內。  
   

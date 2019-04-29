@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
 ms.openlocfilehash: 618fc88a2ca92ec911a3fbd82de580403d924430
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774838"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>在 Lambda 運算式中使用反覆運算變數可能會產生非預期的結果
 Lambda 運算式中使用反覆運算變數可能會非預期的結果。 相反地，建立迴圈內的區域變數，並將它指派反覆項目變數的值。  
@@ -63,7 +63,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   反覆項目變數的值指派給本機變數，並使用 lambda 運算式中的區域變數。  
+- 反覆項目變數的值指派給本機變數，並使用 lambda 運算式中的區域變數。  
   
 ```vb  
 Module Module1  

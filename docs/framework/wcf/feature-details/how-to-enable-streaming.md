@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
 ms.openlocfilehash: 0d8428487c3c320a634914b99219e23befb70d55
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773018"
 ---
 # <a name="how-to-enable-streaming"></a>HOW TO：啟用資料流
 Windows Communication Foundation (WCF) 可以傳送使用緩衝或資料流傳輸的訊息。 在預設的緩衝傳輸模式中，必須完整傳遞訊息，接收者才能讀取。 在資料流傳輸模式中，接收者不需等到訊息完全送達，就可以開始處理訊息。 當資訊的傳遞很漫長，但是可依序列處理時，使用資料流模式將十分有幫助。 當訊息太龐大而無法完整加以緩衝時，資料流模式也很有用處。  
@@ -21,9 +21,9 @@ Windows Communication Foundation (WCF) 可以傳送使用緩衝或資料流傳�
   
 1. 若要以資料流方式處理資料，服務的 `OperationContract` 必須滿足兩項需求：  
   
-    1.  用來存放要進行資料流處理之資料的參數，必須是方法中的唯一參數。 例如，如果輸入訊息是要處理成資料流的訊息，這項處理作業就必須剛好只有一個輸入參數。 同樣地，如果要將輸出訊息處理成資料流，這項作業也必須剛好只有一個輸出參數或傳回值。  
+    1. 用來存放要進行資料流處理之資料的參數，必須是方法中的唯一參數。 例如，如果輸入訊息是要處理成資料流的訊息，這項處理作業就必須剛好只有一個輸入參數。 同樣地，如果要將輸出訊息處理成資料流，這項作業也必須剛好只有一個輸出參數或傳回值。  
   
-    2.  至少有一個參數型別與傳回值必須是 <xref:System.IO.Stream>、<xref:System.ServiceModel.Channels.Message> 或 <xref:System.Xml.Serialization.IXmlSerializable>。  
+    2. 至少有一個參數型別與傳回值必須是 <xref:System.IO.Stream>、<xref:System.ServiceModel.Channels.Message> 或 <xref:System.Xml.Serialization.IXmlSerializable>。  
   
      下列為資料流處理資料合約的範例。  
   
@@ -34,28 +34,28 @@ Windows Communication Foundation (WCF) 可以傳送使用緩衝或資料流傳�
   
 2. 繫結必須啟用資料流處理。 您可以設定 `TransferMode` 屬性，並採用下列其中一個值：  
   
-    1.  `Buffered`,  
+    1. `Buffered`,  
   
-    2.  `Streamed`，可啟用雙向資料流通訊。  
+    2. `Streamed`，可啟用雙向資料流通訊。  
   
-    3.  `StreamedRequest`，只會啟用要求的資料流處理。  
+    3. `StreamedRequest`，只會啟用要求的資料流處理。  
   
-    4.  `StreamedResponse`，只會啟用回應的資料流處理。  
+    4. `StreamedResponse`，只會啟用回應的資料流處理。  
   
      `BasicHttpBinding` 會公開繫結上的 `TransferMode` 屬性，就像 `NetTcpBinding` 和 `NetNamedPipeBinding` 一樣。 `TransferMode` 屬性也可以在傳輸繫結項目上設定，並用於自訂繫結。  
   
      下列範例說明如何透過程式碼與藉由變更組態檔來設定 `TransferMode`。 這些範例同時都會將 `maxReceivedMessageSize` 屬性設為 64 MB，以限制允許接收的最大訊息大小。 預設的 `maxReceivedMessageSize` 是 64 KB，但這對資料流案例來說，通常是過低的。 適當的配額設定取決於您的應用程式預期接收的最大訊息大小。 同時請注意，`maxBufferSize` 會控制緩衝處理的最大大小，請適當設定。  
   
-    1.  範例中的下列組態片段示範將 `TransferMode` 屬性設定為會在 `basicHttpBinding` 和自訂 HTTP 繫結上進行資料流處理。  
+    1. 範例中的下列組態片段示範將 `TransferMode` 屬性設定為會在 `basicHttpBinding` 和自訂 HTTP 繫結上進行資料流處理。  
   
          [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]   
   
-    2.  下列程式碼片段示範將 `TransferMode` 屬性設定為會在 `basicHttpBinding` 和自訂 HTTP 繫結上進行資料流處理。  
+    2. 下列程式碼片段示範將 `TransferMode` 屬性設定為會在 `basicHttpBinding` 和自訂 HTTP 繫結上進行資料流處理。  
   
          [!code-csharp[c_HowTo_EnableStreaming_code#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming_code/cs/c_howto_enablestreaming_code.cs#2)]
          [!code-vb[c_HowTo_EnableStreaming_code#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming_code/vb/c_howto_enablestreaming_code.vb#2)]  
   
-    3.  下列程式碼片段示範將 `TransferMode` 屬性設定為會在自訂 TCP 繫結上進行資料流處理。  
+    3. 下列程式碼片段示範將 `TransferMode` 屬性設定為會在自訂 TCP 繫結上進行資料流處理。  
   
          [!code-csharp[c_HowTo_EnableStreaming_code#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming_code/cs/c_howto_enablestreaming_code.cs#3)]
          [!code-vb[c_HowTo_EnableStreaming_code#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming_code/vb/c_howto_enablestreaming_code.vb#3)]  

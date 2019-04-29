@@ -3,17 +3,17 @@ title: 工作流程中的模型化取消行為
 ms.date: 03/30/2017
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
 ms.openlocfilehash: 8bbd746d40e9114eacd5a752481d5316c3f30e57
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934702"
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>工作流程中的模型化取消行為
 活動可以在工作流程內部取消，例如，由 <xref:System.Activities.Statements.Parallel> 活動在它的 <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> 評估為 `true` 時來取消不完整的分支，或是從工作流程外部取消 (如果主機呼叫 <xref:System.Activities.WorkflowApplication.Cancel%2A>)。 若要提供取消處理，工作流程作者可以使用 <xref:System.Activities.Statements.CancellationScope> 活動、<xref:System.Activities.Statements.CompensableActivity> 活動或是建立可提供取消邏輯的自訂活動。 本主題提供工作流程取消的概觀。  
   
-## <a name="cancellation-compensation-and-transactions"></a>取消、補償和交易  
- 如果交易程序的任何部分發生錯誤，交易可讓應用程式中止 (回復) 在交易內部執行的所有變更。 但是，並非所有可能需要取消或復原的工作都適合交易使用，例如長時間執行的工作或是未牽涉到交易資源的工作。 補償會提供一個模型，可在工作流程發生後續失敗時，復原之前完成的非交易式工作。 取消會提供一個模型給工作流程和活動的作者使用，以便處理尚未完成的非交易式工作。 如果活動尚未完成執行而且遭到取消，則會叫用它的取消邏輯 (如果有的話)。  
+## <a name="cancellation-compensation-and-transactions"></a>取消、補償和異動  
+ 如果交易程序的任何部分發生錯誤，交易可讓應用程式中止 (回復) 在交易內部執行的所有變更。 但是，並非所有可能需要取消或復原的工作都適合異動使用，例如長時間執行的工作或是未牽涉到異動資源的工作。 補償會提供一個模型，可在工作流程發生後續失敗時，復原之前完成的非交易式工作。 取消會提供一個模型給工作流程和活動的作者使用，以便處理尚未完成的非異動式工作。 如果活動尚未完成執行而且遭到取消，則會叫用它的取消邏輯 (如果有的話)。  
   
 > [!NOTE]
 >  如需有關交易與補償的詳細資訊，請參閱 <<c0> [ 交易](workflow-transactions.md)並[補償](compensation.md)。  

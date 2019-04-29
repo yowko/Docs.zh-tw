@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
 ms.openlocfilehash: b0279c5ac658c7d0749f62066abbd705d0a271af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793896"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 指定將包含此模組的組件名稱。  
@@ -33,9 +33,9 @@ ms.locfileid: "58832398"
   
  `-moduleassemblyname`只有在下列條件成立時，才需要選項：  
   
--   此模組中的資料類型必須能夠存取`Friend`參考的組件中的型別。  
+- 此模組中的資料類型必須能夠存取`Friend`參考的組件中的型別。  
   
--   參考的組件具有 friend 組件存取權限授與將在其中建置模組的組件。  
+- 參考的組件具有 friend 組件存取權限授與將在其中建置模組的組件。  
   
  如需建立模組的詳細資訊，請參閱[/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)。 如需 friend 組件的詳細資訊，請參閱[Friend 組件](../../../standard/assembly/friend-assemblies.md)。  
   

@@ -3,11 +3,11 @@ title: <transport> 的 <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
 ms.openlocfilehash: 9b6f548515afbba5068659bd5c6f7f2b33f80cda
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788280"
 ---
 # <a name="transport-of-peertransport"></a>\<傳輸 > 的\<peerTransport >
 指定使用這個繫結設定之對等所傳送安全訊息的傳輸類型。  

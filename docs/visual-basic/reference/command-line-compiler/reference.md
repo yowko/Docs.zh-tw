@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
 ms.openlocfilehash: 21efca701eb16898dd291d73bf0431641ba75d12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788878"
 ---
 # <a name="-reference-visual-basic"></a>-參考 (Visual Basic)
 可讓編譯器進行指定的組件中的類型資訊提供給您目前編譯的專案。  
@@ -38,9 +38,9 @@ ms.locfileid: "58826115"
   
  如果您參考的組件 （組件 A） 本身參考另一個組件 (組件 B)，如果您需要參考 B 組件：  
   
--   組件 A 的類型繼承自組件 B 的類型，或是實作組件 B 的介面。  
+- 組件 A 的類型繼承自組件 B 的類型，或是實作組件 B 的介面。  
   
--   所叫用的欄位、屬性、事件或方法具有組件 B 的傳回型別或參數類型。  
+- 所叫用的欄位、屬性、事件或方法具有組件 B 的傳回型別或參數類型。  
   
  使用[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)指定一或多個組件參考所在的目錄。  
   

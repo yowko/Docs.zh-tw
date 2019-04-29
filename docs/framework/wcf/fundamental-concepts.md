@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
 ms.openlocfilehash: f0802365ed07bdb57111d1b28e8d7ddfd800d41b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929593"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 的主要概念
 本文件提供 Windows Communication Foundation (WCF) 架構的高階檢視。 以說明重要概念，以及如何搭配運用這些概念。 如需建立 WCF 服務和用戶端的最簡單版本的教學課程，請參閱 <<c0> [ 入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要深入了解 WCF 程式設計，請參閱[基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)。  
@@ -34,11 +34,11 @@ ms.locfileid: "59122300"
   
  通訊堆疊中的另一個必要元素是編碼方式，這會指定要以何種方式格式化任何給定訊息。 WCF 會提供下列編碼方式：  
   
--   文字編碼方式，互通的編碼方式。  
+- 文字編碼方式，互通的編碼方式。  
   
--   訊息傳輸最佳化機制 (MTOM) 編碼方式，可在服務上有效傳送或接收無結構二進位資料的互通方式。  
+- 訊息傳輸最佳化機制 (MTOM) 編碼方式，可在服務上有效傳送或接收無結構二進位資料的互通方式。  
   
--   二進位編碼方式，可有效進行傳輸。  
+- 二進位編碼方式，可有效進行傳輸。  
   
  可以使用 WCF 的內建擴充點來新增更多的編碼機制 （例如，壓縮編碼）。  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
 ms.openlocfilehash: 56054216dc6e90e789c230acb3d56565a9ba3d69
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928670"
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>使用 WCF 開發以服務為導向的應用程式
 文件的這一節提供 Windows Communication Foundation (WCF) 的詳細資訊，這是用於建置服務導向應用程式的統一程式設計模型。 開發人員可運用它來建置安全、可靠與可交易性的方案，且這些方案會跨平台進行整合，並與現有投資交互操作。

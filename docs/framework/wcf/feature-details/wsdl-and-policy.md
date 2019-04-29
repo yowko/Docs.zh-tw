@@ -3,11 +3,11 @@ title: WSDL 與原則
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
 ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929658"
 ---
 # <a name="wsdl-and-policy"></a>WSDL 與原則
 本主題涵蓋 Windows Communication Foundation (WCF) WSDL 1.1、 Ws-policy 和 Ws-policyattachment 實作詳細資料，以及其他 Ws-policy 判斷提示和 WSDL 1.1 延伸 WCF 所引進。  

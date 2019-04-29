@@ -3,30 +3,30 @@ title: 權杖驗證器
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
 ms.openlocfilehash: 501f1801c1cb475a87c586f8bbc14146b9141047
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779167"
 ---
 # <a name="token-authenticator"></a>權杖驗證器
 這個範例示範如何實作自訂權杖驗證器。 Windows Communication Foundation (WCF) 中的權杖驗證器用來驗證語彙基元，用訊息，確認它是前後一致，而且驗證身分識別相關聯的語彙基元。
 
  自訂權杖驗證器適用於各種情況，例如：
 
--   您想要覆寫與權杖有關聯的預設驗證機制。
+- 您想要覆寫與權杖有關聯的預設驗證機制。
 
--   您正在建置自訂權杖。
+- 您正在建置自訂權杖。
 
  本範例示範以下項目:
 
--   用戶端如何透過使用者名稱/密碼組進行驗證。
+- 用戶端如何透過使用者名稱/密碼組進行驗證。
 
--   伺服器如何使用自訂權杖驗證器驗證用戶端認證。
+- 伺服器如何使用自訂權杖驗證器驗證用戶端認證。
 
--   如何使用自訂權杖驗證器繫結的 WCF 服務程式碼。
+- 如何使用自訂權杖驗證器繫結的 WCF 服務程式碼。
 
--   如何使用伺服器的 X.509 憑證來驗證伺服器。
+- 如何使用伺服器的 X.509 憑證來驗證伺服器。
 
  這個範例也示範如何呼叫者身分識別是可以由存取 WCF 自訂權杖驗證程序之後。
 
@@ -297,7 +297,7 @@ static void DisplayIdentityInformation()
 
  下面提供批次檔的各區段簡要概觀，讓您將批次檔修改為可在適當的組態下執行。
 
--   建立伺服器憑證。
+- 建立伺服器憑證。
 
      下列 Setup.bat 批次檔中的程式行會建立要使用的伺服器憑證。 `%SERVER_NAME%` 變數會指定伺服器名稱。 您可以變更這個變數來指定自己的伺服器名稱。 這個批次檔中的預設值為 localhost。
 
@@ -311,7 +311,7 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   將伺服器憑證安裝至用戶端的受信任憑證存放區中。
+- 將伺服器憑證安裝至用戶端的受信任憑證存放區中。
 
      Setup.bat 批次檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證存放區的步驟。
 

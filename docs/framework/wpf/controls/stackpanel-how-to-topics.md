@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], StackPanel
 ms.assetid: c9849df3-d000-4cdf-8345-5edcd053919d
 ms.openlocfilehash: b7456eeb4fc248998730a21f757699497c83f4e9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791062"
 ---
 # <a name="stackpanel-how-to-topics"></a>StackPanel HOW TO 主題
 在本節中的主題描述如何使用<xref:System.Windows.Controls.StackPanel>水平或垂直堆疊內容的項目。  
