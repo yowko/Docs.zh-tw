@@ -9,11 +9,11 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
 ms.openlocfilehash: 6c87b3d29a1c55b2a7517da78a1951d94676dd68
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756815"
 ---
 # <a name="effects-of-modifying-a-base-forms-appearance"></a>修改基底表單外觀的效果
 在應用程式開發期間，您通常可能需要變更專案中 (或其他專案中) 的其他表單所繼承之基底表單的外觀。  

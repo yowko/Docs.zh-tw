@@ -10,11 +10,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
 ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778842"
 ---
 # <a name="how-to-validate-application-settings"></a>HOW TO：驗證應用程式設定
 本主題示範如何在保存應用程式設定之前先行驗證。  
@@ -34,11 +34,11 @@ ms.locfileid: "59317881"
   
  當事件處理常式偵測到無效值時，它通常會執行下列其中一個動作︰  
   
--   自動提供已知正確的值，例如預設值。  
+- 自動提供已知正確的值，例如預設值。  
   
--   重新查詢伺服器程式碼的使用者以獲得資訊。  
+- 重新查詢伺服器程式碼的使用者以獲得資訊。  
   
--   事件引發之前其相關聯的動作，例如<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>並<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>，會使用<xref:System.ComponentModel.CancelEventArgs>取消作業的引數。  
+- 事件引發之前其相關聯的動作，例如<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>並<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>，會使用<xref:System.ComponentModel.CancelEventArgs>取消作業的引數。  
   
  如需處理事件的詳細資訊，請參閱[事件處理常式概觀](../event-handlers-overview-windows-forms.md)。  
   
@@ -46,9 +46,9 @@ ms.locfileid: "59317881"
   
 ### <a name="to-obtain-the-application-settings-object"></a>取得應用程式設定物件  
   
--   請完成下列其中一項來取得應用程式設定物件 (包裝函式執行個體) 的參考︰  
+- 請完成下列其中一項來取得應用程式設定物件 (包裝函式執行個體) 的參考︰  
   
-    -   如果您是使用**屬性編輯器**中的 [Visual Studio 應用程式設定] 對話方塊來建立您的設定，您可以透過下列運算式擷取針對您的語言所產生的預設設定物件。  
+    - 如果您是使用**屬性編輯器**中的 [Visual Studio 應用程式設定] 對話方塊來建立您的設定，您可以透過下列運算式擷取針對您的語言所產生的預設設定物件。  
   
         ```csharp  
         Configuration.Settings.Default   
@@ -60,11 +60,11 @@ ms.locfileid: "59317881"
   
          -或-  
   
-    -   如果您是 Visual Basic 開發人員，並且使用專案設計工具來建立應用程式設定，您可以使用 [My.Settings 物件](~/docs/visual-basic/language-reference/objects/my-settings-object.md)來擷取您的設定。  
+    - 如果您是 Visual Basic 開發人員，並且使用專案設計工具來建立應用程式設定，您可以使用 [My.Settings 物件](~/docs/visual-basic/language-reference/objects/my-settings-object.md)來擷取您的設定。  
   
          -或-  
   
-    -   如果您建立您的設定，藉由衍生自<xref:System.Configuration.ApplicationSettingsBase>直接，您需要以手動方式將您的類別具現化。  
+    - 如果您建立您的設定，藉由衍生自<xref:System.Configuration.ApplicationSettingsBase>直接，您需要以手動方式將您的類別具現化。  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  

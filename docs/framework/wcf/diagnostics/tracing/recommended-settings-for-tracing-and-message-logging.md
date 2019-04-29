@@ -3,11 +3,11 @@ title: 追蹤與訊息記錄的建議設定
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
 ms.openlocfilehash: fa6dc74a26f6a76591a15c549a892f31a65c521e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779726"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>追蹤與訊息記錄的建議設定
 本主題將說明不同作業環境中，建議的追蹤和訊息記錄設定。  

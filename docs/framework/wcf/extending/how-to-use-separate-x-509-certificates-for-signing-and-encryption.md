@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
 ms.openlocfilehash: f95274861f58d1581e4c5439861ebf186b1b3489
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766939"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>HOW TO：使用個別 X.509 憑證簽署與加密
 本主題說明如何設定 Windows Communication Foundation (WCF) 訊息簽章和加密用戶端和服務上的使用不同的憑證。  
@@ -23,15 +23,15 @@ ms.locfileid: "59332556"
   
  下方圖表會顯示所使用的主要類別、它們繼承的來源類別 (以上指標示)，以及特定方向和屬性所傳回的類別。  
   
--   `MyClientCredentials` 為 <xref:System.ServiceModel.Description.ClientCredentials> 的自訂實作。  
+- `MyClientCredentials` 為 <xref:System.ServiceModel.Description.ClientCredentials> 的自訂實作。  
   
-    -   它在圖表中所顯示的屬性都會傳回 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 的執行個體。  
+    - 它在圖表中所顯示的屬性都會傳回 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 的執行個體。  
   
-    -   它的方法 <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> 會傳回 `MyClientCredentialsSecurityTokenManager` 的執行個體。  
+    - 它的方法 <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> 會傳回 `MyClientCredentialsSecurityTokenManager` 的執行個體。  
   
--   `MyClientCredentialsSecurityTokenManager` 為 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 的自訂實作。  
+- `MyClientCredentialsSecurityTokenManager` 為 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 的自訂實作。  
   
-    -   它的方法 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> 會傳回 <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider> 的執行個體。  
+    - 它的方法 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> 會傳回 <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider> 的執行個體。  
   
  ![顯示如何使用用戶端認證的圖表](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")  
   

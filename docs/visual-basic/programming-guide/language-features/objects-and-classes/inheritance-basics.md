@@ -21,40 +21,40 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
 ms.openlocfilehash: 5e4b8511145e758bf3d6328141be0e526965dccf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758466"
 ---
 # <a name="inheritance-basics-visual-basic"></a>繼承基本概念 (Visual Basic)
 `Inherits`陳述式用來宣告新的類別，叫做*衍生類別*根據現有的類別，稱為*基底類別*。 在衍生的類別繼承，且可以擴充，屬性、 方法、 事件、 欄位和基底類別中定義的常數。 下節描述一些繼承規則，以及修飾詞，可用來變更方法的類別繼承，或會繼承：  
   
--   根據預設，除非標記為可繼承的所有類別都都會`NotInheritable`關鍵字。 類別可以繼承自其他類別，在您的專案，或從您的專案參考其他組件中的類別。  
+- 根據預設，除非標記為可繼承的所有類別都都會`NotInheritable`關鍵字。 類別可以繼承自其他類別，在您的專案，或從您的專案參考其他組件中的類別。  
   
--   不同於允許多個繼承的語言，Visual Basic，請允許類別; 中的只有單一繼承也就是在衍生的類別可以有只有一個基底類別。 雖然在類別中不允許多重繼承，類別可以實作多個介面，可以有效地達成相同的目的。  
+- 不同於允許多個繼承的語言，Visual Basic，請允許類別; 中的只有單一繼承也就是在衍生的類別可以有只有一個基底類別。 雖然在類別中不允許多重繼承，類別可以實作多個介面，可以有效地達成相同的目的。  
   
--   若要避免公開受限制的項目中的基底類別，衍生類別的存取類型必須等於或限制性大於其基底類別。 例如，`Public`類別無法繼承`Friend`或`Private`類別，和`Friend`類別無法繼承`Private`類別。  
+- 若要避免公開受限制的項目中的基底類別，衍生類別的存取類型必須等於或限制性大於其基底類別。 例如，`Public`類別無法繼承`Friend`或`Private`類別，和`Friend`類別無法繼承`Private`類別。  
   
 ## <a name="inheritance-modifiers"></a>繼承修飾詞  
  下列類別層級的陳述式和修飾詞，以支援繼承，導入了 Visual Basic:  
   
--   `Inherits` 陳述式，指定基底類別。  
+- `Inherits` 陳述式，指定基底類別。  
   
--   `NotInheritable` 修飾詞，可讓程式設計人員使用類別作為基底類別。  
+- `NotInheritable` 修飾詞，可讓程式設計人員使用類別作為基底類別。  
   
--   `MustInherit` 修飾詞，指定類別，適用於做為基底類別。 執行個體`MustInherit`類別不能直接建立; 他們只能建立衍生的類別為基底類別執行個體。 (其他程式設計語言，例如C++和C#，使用詞彙*抽象類別*來說明這種類別。)  
+- `MustInherit` 修飾詞，指定類別，適用於做為基底類別。 執行個體`MustInherit`類別不能直接建立; 他們只能建立衍生的類別為基底類別執行個體。 (其他程式設計語言，例如C++和C#，使用詞彙*抽象類別*來說明這種類別。)  
   
 ## <a name="overriding-properties-and-methods-in-derived-classes"></a>屬性和方法在衍生類別中的覆寫  
  根據預設，在衍生的類別會從其基底類別繼承屬性和方法。 如果繼承的屬性或方法的衍生類別中有不同的行為很*覆寫*。 也就是說，您可以定義新的實作方法的衍生類別中。 下列修飾詞是用來控制如何覆寫屬性及方法：  
   
--   `Overridable` — 可讓衍生類別中覆寫類別中的屬性或方法。  
+- `Overridable` — 可讓衍生類別中覆寫類別中的屬性或方法。  
   
--   `Overrides` -覆寫`Overridable`屬性或方法的基底類別中定義。  
+- `Overrides` -覆寫`Overridable`屬性或方法的基底類別中定義。  
   
--   `NotOverridable` 可防止遭到覆寫繼承的類別中的屬性或方法。 根據預設，`Public`方法都是`NotOverridable`。  
+- `NotOverridable` 可防止遭到覆寫繼承的類別中的屬性或方法。 根據預設，`Public`方法都是`NotOverridable`。  
   
--   `MustOverride` -需要在衍生的類別覆寫屬性或方法。 當`MustOverride`關鍵字時，包含方法定義只`Sub`， `Function`，或`Property`陳述式。 不允許使用任何其他陳述式，而且特別是沒有任何`End Sub`或`End Function`陳述式。 `MustOverride` 方法必須宣告在`MustInherit`類別。  
+- `MustOverride` -需要在衍生的類別覆寫屬性或方法。 當`MustOverride`關鍵字時，包含方法定義只`Sub`， `Function`，或`Property`陳述式。 不允許使用任何其他陳述式，而且特別是沒有任何`End Sub`或`End Function`陳述式。 `MustOverride` 方法必須宣告在`MustInherit`類別。  
   
  假設您想要定義類別，來處理薪資。 您可以定義為泛型`Payroll`類別，其中包含`RunPayroll`計算薪資典型的一週的方法。 您接著可以使用`Payroll`更具特製化的基底類別為`BonusPayroll`散發員工加分時可以使用的類別。  
   
@@ -73,38 +73,38 @@ ms.locfileid: "58826570"
   
  下列清單描述限制使用`MyBase`:  
   
--   `MyBase` 是指直接基底類別和其繼承的成員。 它不能用來存取`Private`類別中的成員。  
+- `MyBase` 是指直接基底類別和其繼承的成員。 它不能用來存取`Private`類別中的成員。  
   
--   `MyBase` 是關鍵字，而不是真正的物件。 `MyBase` 無法指派給變數，傳遞至程序，或用於`Is`比較。  
+- `MyBase` 是關鍵字，而不是真正的物件。 `MyBase` 無法指派給變數，傳遞至程序，或用於`Is`比較。  
   
--   此方法，`MyBase`限定並沒有直接的基底類別; 中定義它可能會改為在間接繼承的基底類別中定義。 為了讓所限定的參考`MyBase`正確編譯，某些基底類別必須包含比對出現在呼叫的參數類型與名稱的方法。  
+- 此方法，`MyBase`限定並沒有直接的基底類別; 中定義它可能會改為在間接繼承的基底類別中定義。 為了讓所限定的參考`MyBase`正確編譯，某些基底類別必須包含比對出現在呼叫的參數類型與名稱的方法。  
   
--   您無法使用`MyBase`呼叫`MustOverride`基底類別方法。  
+- 您無法使用`MyBase`呼叫`MustOverride`基底類別方法。  
   
--   `MyBase` 不用來限定本身。 因此，下列程式碼不是有效的：  
+- `MyBase` 不用來限定本身。 因此，下列程式碼不是有效的：  
   
      `MyBase.MyBase.BtnOK_Click()`  
   
--   `MyBase` 不能在模組中。  
+- `MyBase` 不能在模組中。  
   
--   `MyBase` 不能用來存取基底類別成員標記為`Friend`如果基底類別位於不同的組件。  
+- `MyBase` 不能用來存取基底類別成員標記為`Friend`如果基底類別位於不同的組件。  
   
  如需詳細資訊和另一個範例，請參閱[How to:存取衍生類別所隱藏的變數](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)。  
   
 ## <a name="the-myclass-keyword"></a>MyClass 關鍵字  
  `MyClass`關鍵字的行為就像以原始實作類別的目前執行個體是指的物件變數。 `MyClass` 類似於`Me`，但每個方法和屬性上呼叫`MyClass`會被視為方法或屬性所[NotOverridable](../../../../visual-basic/language-reference/modifiers/notoverridable.md)。 因此，不會影響方法或屬性藉由衍生類別中覆寫。  
   
--   `MyClass` 是關鍵字，而不是真正的物件。 `MyClass` 無法指派給變數，傳遞至程序，或用於`Is`比較。  
+- `MyClass` 是關鍵字，而不是真正的物件。 `MyClass` 無法指派給變數，傳遞至程序，或用於`Is`比較。  
   
--   `MyClass` 是指包含類別和其繼承的成員。  
+- `MyClass` 是指包含類別和其繼承的成員。  
   
--   `MyClass` 可用來當做限定詞`Shared`成員。  
+- `MyClass` 可用來當做限定詞`Shared`成員。  
   
--   `MyClass` 不能在`Shared`方法，但是可以在執行個體方法內用來存取共用的成員的類別。  
+- `MyClass` 不能在`Shared`方法，但是可以在執行個體方法內用來存取共用的成員的類別。  
   
--   `MyClass` 不能在標準模組。  
+- `MyClass` 不能在標準模組。  
   
--   `MyClass` 可用來限定，定義於基底類別，而該類別中提供的方法沒有實作的方法。 這類參考具有相同的意義`MyBase.`*方法*。  
+- `MyClass` 可用來限定，定義於基底類別，而該類別中提供的方法沒有實作的方法。 這類參考具有相同的意義`MyBase.`*方法*。  
   
  下列範例會比較`Me`和`MyClass`。  
   

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
 ms.openlocfilehash: 9b70824670b8f47a2346135cb31ad39bd55694d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937549"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>HOW TO：決定作用中的 MDI 子系
 在某些情況下，您要在目前作用中的子表單具有焦點的控制項上提供作業的命令。 例如，假設您想要選取的文字複製到剪貼簿的子表單的文字方塊。 您會建立一個程序，將選取的文字複製到剪貼簿使用<xref:System.Windows.Forms.Control.Click>的複製功能表項目，標準的 [編輯] 功能表上的事件。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
 ms.openlocfilehash: 45dcc80ee791da1c2731ba32f0ebd34564faf806
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778556"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>運算子結果的資料類型 (Visual Basic)
 Visual Basic 決定結果資料類型的運算元資料類型為基礎的作業。 在某些情況下，這可能是較大的範圍以外的任一個運算元的資料類型。  
@@ -22,21 +22,21 @@ Visual Basic 決定結果資料類型的運算元資料類型為基礎的作業�
 ## <a name="data-type-ranges"></a>資料類型範圍  
  相關的資料類型，順序從最小到最大，範圍如下所示：  
   
--   [布林](../../../visual-basic/language-reference/data-types/boolean-data-type.md)— 兩個可能的值  
+- [布林](../../../visual-basic/language-reference/data-types/boolean-data-type.md)— 兩個可能的值  
   
--   [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)，[位元組](../../../visual-basic/language-reference/data-types/byte-data-type.md)— 256 個可能的整數值  
+- [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)，[位元組](../../../visual-basic/language-reference/data-types/byte-data-type.md)— 256 個可能的整數值  
   
--   [簡短](../../../visual-basic/language-reference/data-types/short-data-type.md)， [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) — 65,536 (6.5...E + 4) 可能的整數值  
+- [簡短](../../../visual-basic/language-reference/data-types/short-data-type.md)， [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) — 65,536 (6.5...E + 4) 可能的整數值  
   
--   [整數](../../../visual-basic/language-reference/data-types/integer-data-type.md)， [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) -4294967296 (4.2...E + 9) 可能的整數值  
+- [整數](../../../visual-basic/language-reference/data-types/integer-data-type.md)， [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) -4294967296 (4.2...E + 9) 可能的整數值  
   
--   [長](../../../visual-basic/language-reference/data-types/long-data-type.md)， [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) -18446744073709551615 (1.8...E + 19) 可能的整數值  
+- [長](../../../visual-basic/language-reference/data-types/long-data-type.md)， [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) -18446744073709551615 (1.8...E + 19) 可能的整數值  
   
--   [十進位](../../../visual-basic/language-reference/data-types/decimal-data-type.md)-1.5...E + 29 可能整數的值，最大範圍 7.9...E + 28 （絕對值）  
+- [十進位](../../../visual-basic/language-reference/data-types/decimal-data-type.md)-1.5...E + 29 可能整數的值，最大範圍 7.9...E + 28 （絕對值）  
   
--   [單一](../../../visual-basic/language-reference/data-types/single-data-type.md)— 最大範圍向...3.4 E + 38 （絕對值）  
+- [單一](../../../visual-basic/language-reference/data-types/single-data-type.md)— 最大範圍向...3.4 E + 38 （絕對值）  
   
--   [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) — 最大範圍向...1.7 E + 308 （絕對值）  
+- [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) — 最大範圍向...1.7 E + 308 （絕對值）  
   
  如需有關 Visual Basic 資料類型的詳細資訊，請參閱 <<c0> [ 資料型別](../../../visual-basic/language-reference/data-types/index.md)。  
   
@@ -68,11 +68,11 @@ Visual Basic 決定結果資料類型的運算元資料類型為基礎的作業�
 ## <a name="integer-arithmetic"></a>整數算術  
  整數運算的結果資料類型取決於資料類型的運算元。 一般情況下，Visual Basic 會使用下列原則來決定結果資料類型：  
   
--   如果二元運算子的兩個運算元具有相同的結果資料類型，擁有該資料型別。 例外狀況是`Boolean`，這要強制`Short`。  
+- 如果二元運算子的兩個運算元具有相同的結果資料類型，擁有該資料型別。 例外狀況是`Boolean`，這要強制`Short`。  
   
--   如果帶正負號的運算元，參與的不帶正負號的運算元，結果的帶正負號的類型至少有最大範圍做為任一個運算元。  
+- 如果帶正負號的運算元，參與的不帶正負號的運算元，結果的帶正負號的類型至少有最大範圍做為任一個運算元。  
   
--   否則，結果通常會具有較大的兩個運算元資料類型。  
+- 否則，結果通常會具有較大的兩個運算元資料類型。  
   
  請注意結果資料類型可能不會做為任一個運算元資料類型相同。  
   

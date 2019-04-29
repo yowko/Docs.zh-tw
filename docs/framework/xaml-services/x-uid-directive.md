@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
 ms.openlocfilehash: c8f0580c987b87193b5b6a38559043e50fc7cb89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938836"
 ---
 # <a name="xuid-directive"></a>x:Uid 指示詞
 提供標記項目的唯一識別碼。 在許多情況下，這個唯一識別碼使用 XAML 的當地語系化程序和工具。  

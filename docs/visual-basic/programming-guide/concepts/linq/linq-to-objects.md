@@ -3,11 +3,11 @@ title: LINQ to Objects (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: dd4c30bc-1c9b-4781-a482-b5eada38deb2
 ms.openlocfilehash: c1e2e8fbaaf984fec69322a459fc7c55890965ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791985"
 ---
 # <a name="linq-to-objects-visual-basic"></a>LINQ to Objects (Visual Basic)
 詞彙 "LINQ to Objects" 是指直接搭配使用 LINQ 查詢與任何 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 集合，而不要使用中繼 LINQ 提供者或 API (例如 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) 或 [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md))。 您可以使用 LINQ 查詢任何可列舉的集合，例如 <xref:System.Collections.Generic.List%601>、<xref:System.Array> 或 <xref:System.Collections.Generic.Dictionary%602>。 這類集合可以是使用者定義，或由 .NET Framework API 所傳回。  

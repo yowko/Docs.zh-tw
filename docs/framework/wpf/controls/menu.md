@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], Menu
 ms.assetid: 4317fb80-408c-47c7-9223-b29e4742c4ee
 ms.openlocfilehash: 93152861ff3a2ab1782b86b1de0951d89a8cc85d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770720"
 ---
 # <a name="menu"></a>功能表
 A<xref:System.Windows.Controls.Menu>是允許的命令或事件處理常式相關聯的項目階層式組織的控制項。 每個<xref:System.Windows.Controls.Menu>可以包含多個<xref:System.Windows.Controls.MenuItem>控制項。 每個<xref:System.Windows.Controls.MenuItem>可以叫用命令，或叫用`Click`事件處理常式。 A<xref:System.Windows.Controls.MenuItem>也可以有多個<xref:System.Windows.Controls.MenuItem>做為子系，形成子功能表項目。  

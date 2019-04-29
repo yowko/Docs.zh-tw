@@ -1,5 +1,5 @@
 ---
-title: 如何：在執行階段撰寫使用者設定C#
+title: 如何：在執行階段使用 C# 撰寫使用者設定
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], run time
@@ -7,11 +7,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], C#
 ms.assetid: 9d061c7d-b33b-470f-a36d-edccb1d6f9a3
 ms.openlocfilehash: 264fa9706f9255d7324cad6d02c36cc424e28995
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778829"
 ---
 # <a name="how-to-write-user-settings-at-run-time-with-c"></a>如何：在執行階段使用 c# 撰寫使用者設定\#
 

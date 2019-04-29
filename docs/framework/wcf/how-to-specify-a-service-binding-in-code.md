@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 67ab5dd8-79c1-4e62-aa75-828ea918a53a
 ms.openlocfilehash: 9f3320b031141246a394191a1924509204707dc1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928800"
 ---
 # <a name="how-to-specify-a-service-binding-in-code"></a>HOW TO：在程式碼中指定服務繫結
 在此範例中，已為計算機服務定義了 `ICalculator` 合約、在 `CalculatorService` 類別中實作了服務，並於程式碼中定義其端點，同時指定服務必須使用 <xref:System.ServiceModel.BasicHttpBinding> 類別。  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
 ms.openlocfilehash: 6194ef288bd43267c2b00fa6d7c6250e90b37c75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778855"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>HOW TO：使用修飾詞和 GenerateMember 屬性
 當您將元件放在 Windows Form 上時，在設計環境所提供兩個屬性：`GenerateMember`和`Modifiers`。 `GenerateMember`屬性會指定當 Windows Form 設計工具產生元件的成員變數。 `Modifiers`屬性是指派給該成員變數的存取修飾詞。 如果值`GenerateMember`屬性是`false`，值`Modifiers`屬性沒有任何作用。  

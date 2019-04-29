@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4618f7ea08aa304ff5e77800cf3c0a90dd88fdbd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796657"
 ---
 # <a name="ihosttaskmanagersleep-method"></a>IHostTaskManager::Sleep 方法
 將目前的工作會進入睡眠會告知主應用程式。  

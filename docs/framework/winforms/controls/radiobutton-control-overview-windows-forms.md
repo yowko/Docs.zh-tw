@@ -10,11 +10,11 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
 ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755944"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>RadioButton 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.RadioButton>控制項呈現給使用者的一組的兩個或多個互斥的選項。 選項按鈕和核取方塊可能看起來運作同樣地，雖然還有一項重要差異： 當使用者選取的選項按鈕，不能也選取相同的群組中的其他選項按鈕。 相反地，您可以選取任意數目的核取方塊。 定義選項按鈕群組會告知使用者，「 此處 」 一組的其中之一，您可以選擇的選項。  

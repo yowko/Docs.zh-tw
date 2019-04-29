@@ -10,11 +10,11 @@ helpviewer_keywords:
 - retrieving text [WPF]
 ms.assetid: d5793172-1e11-4a39-9be0-73f336ed858d
 ms.openlocfilehash: b7f0b9ee02a7ace717787fc8eeb6e15649829a49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770782"
 ---
 # <a name="how-to-retrieve-a-text-selection"></a>HOW TO：擷取文字選取項目
 此範例示範使用一種方式<xref:System.Windows.Controls.TextBox.SelectedText%2A>屬性，以擷取使用者已在選取的文字<xref:System.Windows.Controls.TextBox>控制項。  

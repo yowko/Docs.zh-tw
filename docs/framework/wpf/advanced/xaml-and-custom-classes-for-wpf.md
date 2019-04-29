@@ -7,11 +7,11 @@ helpviewer_keywords:
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
 ms.openlocfilehash: e71946ec06eb1b4c75f30084dfdb863d8e3b093e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759930"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF 的 XAML 和自訂類別
 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 架構中所實作的 XAML 支援使用任何 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 語言定義自訂類別或結構，然後使用 XAML 標記來存取該類別。 您可以在相同的標記檔案內混用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定義的類型與您的自訂類型，方法一般是透過將自訂類型對應至 XAML 命名空間前置詞。 本主題討論自訂類別必須滿足才能用作 XAML 項目的需求。  
@@ -20,19 +20,19 @@ ms.locfileid: "59122352"
 ## <a name="custom-classes-in-applications-or-assemblies"></a>應用程式或組件中的自訂類別  
  可以使用兩種不同的方式來定義 XAML 中所使用的自訂類別︰在程式碼後置或產生主要 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式的其他程式碼內，或作為不同組件中的類別，例如用作類別庫的可執行檔或 DLL。 所有這些方法都會有特定優缺點。  
   
--   建立類別庫的優點是可以跨許多不同的可能應用程式來共用任何這類自訂類別。 不同的程式庫也方便控制應用程式的版本控制問題，並簡化如何建立所要類別用法作為 XAML 頁面上根項目的類別。  
+- 建立類別庫的優點是可以跨許多不同的可能應用程式來共用任何這類自訂類別。 不同的程式庫也方便控制應用程式的版本控制問題，並簡化如何建立所要類別用法作為 XAML 頁面上根項目的類別。  
   
--   在應用程式中定義自訂類別的優點在於這項技巧相當簡單，並將在引進主要應用程式可執行檔以外的個別組件時所遇到的部署和測試問題降到最少。  
+- 在應用程式中定義自訂類別的優點在於這項技巧相當簡單，並將在引進主要應用程式可執行檔以外的個別組件時所遇到的部署和測試問題降到最少。  
   
--   不論定義於相同或不同組件中，都需要在 CLR 命名空間與 XML 命名空間之間對應自訂類別，才能當成項目用於 XAML 中。 請參閱 [WPF XAML 的 XAML 命名空間和命名空間對應](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
+- 不論定義於相同或不同組件中，都需要在 CLR 命名空間與 XML 命名空間之間對應自訂類別，才能當成項目用於 XAML 中。 請參閱 [WPF XAML 的 XAML 命名空間和命名空間對應](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
 <a name="Requirements_for_a_Custom_Class_as_a_XAML_Element"></a>   
 ## <a name="requirements-for-a-custom-class-as-a-xaml-element"></a>作為 XAML 項目之自訂類別的需求  
  若要可具現化為物件項目，您的類別必須符合下列需求︰  
   
--   自訂類別必須是公用，並支援預設 (無參數) 公用建構函式 (如需結構相關附註，請參閱下節)。  
+- 自訂類別必須是公用，並支援預設 (無參數) 公用建構函式 (如需結構相關附註，請參閱下節)。  
   
--   自訂類別不能是巢狀類別。 巢狀類別以及其在具有其他 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 (或) XAML 功能之一般 CLR 使用語法介面中的「點」，例如附加屬性。  
+- 自訂類別不能是巢狀類別。 巢狀類別以及其在具有其他 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 (或) XAML 功能之一般 CLR 使用語法介面中的「點」，例如附加屬性。  
   
  除了啟用物件項目語法之外，您的物件定義也會啟用採用該物件作為值類型之任何其他公用屬性的屬性項目語法。 這是因為物件現在可以具現化為物件項目，並且可以填入這類屬性的屬性項目值。  
   
@@ -75,19 +75,19 @@ ms.locfileid: "59122352"
 ## <a name="writing-collection-properties"></a>撰寫集合屬性  
  採用集合類型的屬性具有 XAML 語法，可讓您指定新增至集合的物件。 此語法有兩個值得注意的功能。  
   
--   本身為集合物件的物件不需要指定於物件項目語法中。 只要在 XAML 中指定採用集合類型的屬性，該集合類型的存在就是隱含的。  
+- 本身為集合物件的物件不需要指定於物件項目語法中。 只要在 XAML 中指定採用集合類型的屬性，該集合類型的存在就是隱含的。  
   
--   標記中集合屬性的子項目會處理成集合的成員。 一般而言，是透過 `Add` 這類清單/字典方法，或透過索引子，執行對集合成員的程式碼存取。 但是 XAML 語法不支援方法或索引子 (例外狀況：XAML 2009 可支援的方法，但使用 XAML 2009 限制可能的 WPF 用法;請參閱[XAML 2009 語言功能](../../xaml-services/xaml-2009-language-features.md))。 集合很明顯是建置項目樹狀結構的很常見需求，而且您需要某個方法在宣告式 XAML 中填入這些集合。 因此，會處理集合屬性的子項目，方法是將它們新增至為集合屬性類型值的集合。  
+- 標記中集合屬性的子項目會處理成集合的成員。 一般而言，是透過 `Add` 這類清單/字典方法，或透過索引子，執行對集合成員的程式碼存取。 但是 XAML 語法不支援方法或索引子 (例外狀況：XAML 2009 可支援的方法，但使用 XAML 2009 限制可能的 WPF 用法;請參閱[XAML 2009 語言功能](../../xaml-services/xaml-2009-language-features.md))。 集合很明顯是建置項目樹狀結構的很常見需求，而且您需要某個方法在宣告式 XAML 中填入這些集合。 因此，會處理集合屬性的子項目，方法是將它們新增至為集合屬性類型值的集合。  
   
  .NET Framework XAML 服務實作，因此 WPF XAML 處理器會使用下列構成集合屬性的定義。 屬性的屬性類型必須實作下列其中一項：  
   
--   實作<xref:System.Collections.IList>。  
+- 實作<xref:System.Collections.IList>。  
   
--   Implements<xref:System.Collections.IDictionary>或泛型對等項目 (<xref:System.Collections.Generic.IDictionary%602>)。  
+- Implements<xref:System.Collections.IDictionary>或泛型對等項目 (<xref:System.Collections.Generic.IDictionary%602>)。  
   
--   衍生自<xref:System.Array>(如需 XAML 中陣列的詳細資訊，請參閱[X:array 標記延伸](../../xaml-services/x-array-markup-extension.md)。)  
+- 衍生自<xref:System.Array>(如需 XAML 中陣列的詳細資訊，請參閱[X:array 標記延伸](../../xaml-services/x-array-markup-extension.md)。)  
   
--   Implements <xref:System.Windows.Markup.IAddChild> (所定義的介面[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)])。  
+- Implements <xref:System.Windows.Markup.IAddChild> (所定義的介面[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)])。  
   
  CLR 中的所有這些類型都會有 `Add` 方法，而 XAML 處理器使用此方法，在建立物件圖形時，將項目新增至基礎集合。  
   

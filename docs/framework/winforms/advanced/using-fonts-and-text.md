@@ -9,11 +9,11 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing in Windows Forms
 ms.assetid: d43640f3-da94-4df2-a29d-a9d021a1c069
 ms.openlocfilehash: c9fe16752223203806c7d3828f632aad0cab0c28
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769407"
 ---
 # <a name="using-fonts-and-text"></a>使用字型和文字
 所提供的許多類別[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]和[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]Windows Form 上繪製文字。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics>類別有數個<xref:System.Drawing.Graphics.DrawString%2A>方法，可讓您指定的文字，例如地點、 週框矩形、 字型和格式的各種功能。 此外，您可以在其中繪製並測量的文字[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]使用靜態<xref:System.Windows.Forms.TextRenderer.DrawText%2A>並<xref:System.Windows.Forms.TextRenderer.MeasureText%2A>方法所提供`TextRenderer`類別。 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]方法也可讓您指定的位置、 字型和格式。 您可以選擇[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]或是[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]的文字呈現; 不過，[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]通常提供較佳的效能和更精確測量的文字。 用於文字轉譯的其他類別包含`FontFamily`， `Font`， <xref:System.Drawing.StringFormat>，和`TextFormatFlags`。  

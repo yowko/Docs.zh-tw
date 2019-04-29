@@ -5,11 +5,11 @@ helpviewer_keywords:
 - errors [Visual Basic]
 ms.assetid: 2557da60-c6dc-4e99-8128-fceb6f8a0736
 ms.openlocfilehash: 6df4a446e5dbd5ae73c860c86b5a881225d8be1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803100"
 ---
 # <a name="errors-summary-visual-basic"></a>錯誤摘要 (Visual Basic)
 Visual Basic 語言關鍵字和執行階段程式庫成員依用途組織，並使用。  

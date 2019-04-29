@@ -3,23 +3,23 @@ title: 啟用資料來源以進行 LINQ Querying2
 ms.date: 07/20/2015
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
 ms.openlocfilehash: f705db90f4838479621117bd9303f5a374d33d4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781026"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>啟用資料來源以進行 LINQ 查詢
 
 您可以使用各種方式來擴充 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，以啟用要在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式下進行查詢的任何資料來源。 資料來源可能是資料結構、Web 服務、檔案系統或資料庫等等。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式可以讓用戶端輕鬆查詢已啟用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的資料來源，因為查詢的語法和模式並未改變。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 可以擴充至這些資料來源的方式包括：
 
--   在類型中實作 <xref:System.Collections.Generic.IEnumerable%601> 介面，以啟用該類型的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 查詢功能。
+- 在類型中實作 <xref:System.Collections.Generic.IEnumerable%601> 介面，以啟用該類型的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 查詢功能。
 
--   建立可擴充類型的標準查詢運算子方法 (例如 <xref:System.Linq.Enumerable.Where%2A> 和 <xref:System.Linq.Enumerable.Select%2A>)，以啟用該類型的自訂 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢功能。
+- 建立可擴充類型的標準查詢運算子方法 (例如 <xref:System.Linq.Enumerable.Where%2A> 和 <xref:System.Linq.Enumerable.Select%2A>)，以啟用該類型的自訂 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢功能。
 
--   為資料來源建立實作 <xref:System.Linq.IQueryable%601> 介面的提供者。 實作此介面的提供者是以運算式樹狀架構的形式接收 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢，而它可以自訂方式 (例如從遠端) 執行這些查詢。
+- 為資料來源建立實作 <xref:System.Linq.IQueryable%601> 介面的提供者。 實作此介面的提供者是以運算式樹狀架構的形式接收 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢，而它可以自訂方式 (例如從遠端) 執行這些查詢。
 
--   為利用現有 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 技術的資料來源建立提供者。 這種提供者不只會啟用查詢功能，也會插入、更新及刪除使用者定義類型的作業和對應。
+- 為利用現有 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 技術的資料來源建立提供者。 這種提供者不只會啟用查詢功能，也會插入、更新及刪除使用者定義類型的作業和對應。
 
 本主題將討論這些選項。
 

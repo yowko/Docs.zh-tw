@@ -7,51 +7,51 @@ ms.openlocfilehash: f836356125f1462f302b7e9f45a841c869c9a690
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940435"
 ---
 # <a name="how-to-transform-incoming-claims"></a>如何：轉換傳入宣告
 ## <a name="applies-to"></a>適用於  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web Forms  
+- ASP.NET® Web Forms  
   
 ## <a name="summary"></a>總結  
  此操作說明提供詳細逐步程序，以建立簡單宣告感知 ASP.NET Web Forms 應用程式和轉換傳入宣告。 此外，還提供一些指示，說明如何測試應用程式，以確認應用程式執行時會呈現宣告。  
   
 ## <a name="contents"></a>內容  
   
--   目標  
+- 目標  
   
--   總覽  
+- 總覽  
   
--   步驟摘要  
+- 步驟摘要  
   
--   步驟 1 - 建立簡單 ASP.NET Web Forms 應用程式  
+- 步驟 1 - 建立簡單 ASP.NET Web Forms 應用程式  
   
--   步驟 2 – 使用自訂的 ClaimsAuthenticationManager 實作宣告轉換  
+- 步驟 2 – 使用自訂的 ClaimsAuthenticationManager 實作宣告轉換  
   
--   步驟 3 – 測試方案  
+- 步驟 3 – 測試方案  
   
 ## <a name="objectives"></a>目標  
   
--   設定宣告型驗證的 ASP.NET Web Forms 應用程式  
+- 設定宣告型驗證的 ASP.NET Web Forms 應用程式  
   
--   藉由新增系統管理員角色宣告來轉換傳入宣告  
+- 藉由新增系統管理員角色宣告來轉換傳入宣告  
   
--   測試 ASP.NET Web Forms 應用程式以查看它是否正常運作  
+- 測試 ASP.NET Web Forms 應用程式以查看它是否正常運作  
   
 ## <a name="overview"></a>總覽  
  WIF 會公開一個名為 <xref:System.Security.Claims.ClaimsAuthenticationManager> 類別，其可讓使用者在向信賴憑證者 (RP) 應用程式呈現宣告之前，修改這些宣告。 <xref:System.Security.Claims.ClaimsAuthenticationManager> 可用來分隔驗證與基礎應用程式程式碼之間的問題。 下列範例示範如何在 RP 可能需要的傳入 <xref:System.Security.Claims.ClaimsPrincipal> 宣告中加入角色。  
   
 ## <a name="summary-of-steps"></a>步驟摘要  
   
--   步驟 1 - 建立簡單 ASP.NET Web Forms 應用程式  
+- 步驟 1 - 建立簡單 ASP.NET Web Forms 應用程式  
   
--   步驟 2 – 使用自訂的 ClaimsAuthenticationManager 實作宣告轉換  
+- 步驟 2 – 使用自訂的 ClaimsAuthenticationManager 實作宣告轉換  
   
--   步驟 3 – 測試方案  
+- 步驟 3 – 測試方案  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>步驟 1 - 建立簡單 ASP.NET Web Forms 應用程式  
  在此步驟中，您將建立新的 ASP.NET Web Forms 應用程式。  

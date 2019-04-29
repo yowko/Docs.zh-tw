@@ -3,11 +3,11 @@ title: Entity Framework 詞彙
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
 ms.openlocfilehash: a4befe4c45f11a59982edc9f976258f795a18cde
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764331"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework 詞彙
 本主題定義中最常參考的詞彙[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]文件。 而為相關主題提供的連結表示有其他可用的資訊。  

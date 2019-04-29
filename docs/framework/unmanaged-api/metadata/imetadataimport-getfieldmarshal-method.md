@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 35e780c330d0184d40bd99f34c3454f83075c1e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777776"
 ---
 # <a name="imetadataimportgetfieldmarshal-method"></a>IMetaDataImport::GetFieldMarshal 方法
 取得指定的欄位中繼資料語彙基元所表示之欄位的原生、 unmanaged 類型的指標。  

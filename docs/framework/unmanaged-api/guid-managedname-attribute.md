@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 48ad6e4d1d03d8362123e65f16907880b18893f9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777906"
 ---
 # <a name="guidmanagedname-attribute"></a>GUID_ManagedName 屬性
 定義自訂介面屬性，指定 「 元件物件模型 (COM) 程式庫的受管理的命名空間名稱。  
@@ -51,7 +51,7 @@ EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1,
   
  使用<xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType>或<xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType>從屬性擷取受管理的名稱。  
   
- 如需詳細資訊，請參閱 <<c0> [ 介面屬性](/cpp/windows/interface-attributes)Visual c + + 參考文件。  
+ 如需詳細資訊，請參閱 <<c0> [ 介面屬性](/cpp/windows/interface-attributes)在視覺效果C++參考文件。</c0>  
   
 ## <a name="example"></a>範例  
  下列範例顯示使用程式庫定義`GUID_ManagedName`屬性。  

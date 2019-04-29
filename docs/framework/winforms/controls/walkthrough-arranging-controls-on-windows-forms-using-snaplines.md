@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 ms.openlocfilehash: 15ff9ad710b49caf35767acf498a8e55b238d84c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759917"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>逐步解說：使用對齊線排列 Windows Forms 的控制項
 對許多應用程式而言，控制項在表單上的精確位置是高優先順序。 Windows Form 設計工具會提供您許多版面配置工具，來完成這項作業。 其中一個最重要的是<xref:System.Windows.Forms.Design.Behavior.SnapLine>功能。  
@@ -23,27 +23,27 @@ ms.locfileid: "59343034"
   
  這個逐步解說中所述的工作包括：  
   
--   建立 Windows Forms 專案  
+- 建立 Windows Forms 專案  
   
--   間距，以及對齊這些控制項使用對齊線  
+- 間距，以及對齊這些控制項使用對齊線  
   
--   對齊表單及容器的邊界  
+- 對齊表單及容器的邊界  
   
--   群組的控制項對齊  
+- 群組的控制項對齊  
   
--   使用對齊線來放置控制項框大小  
+- 使用對齊線來放置控制項框大小  
   
--   從 [工具箱] 拖曳控制項時，使用對齊線  
+- 從 [工具箱] 拖曳控制項時，使用對齊線  
   
--   使用對齊線的控制項調整大小  
+- 使用對齊線的控制項調整大小  
   
--   對齊控制項的文字標籤  
+- 對齊控制項的文字標籤  
   
--   使用對齊線，使用鍵盤巡覽  
+- 使用對齊線，使用鍵盤巡覽  
   
--   對齊線和版面配置面板  
+- 對齊線和版面配置面板  
   
--   停用的對齊線  
+- 停用的對齊線  
   
  當您完成時，您將了解的版面配置功能所扮演角色對齊線。  
   
@@ -216,7 +216,7 @@ ms.locfileid: "59343034"
   
 #### <a name="to-selectively-disable-snaplines"></a>若要選擇性地停用對齊線  
   
--   按 ALT 鍵並同時移動周圍的表單控制項。  
+- 按 ALT 鍵並同時移動周圍的表單控制項。  
   
      請注意，沒有對齊線出現的控制項不會貼齊至任何潛在的對齊位置。  
   
@@ -233,9 +233,9 @@ ms.locfileid: "59343034"
 ## <a name="next-steps"></a>後續步驟  
  對齊線提供易用的工具，來調整您的表單上的控制項。 進一步的探索建議包括：  
   
--   請嘗試巢狀<xref:System.Windows.Forms.GroupBox>在另一個控制項<xref:System.Windows.Forms.GroupBox>控制項。 地方<xref:System.Windows.Forms.Button>內的子控制項<xref:System.Windows.Forms.GroupBox>控制項，以及另一個父代內<xref:System.Windows.Forms.GroupBox>控制項。 移動<xref:System.Windows.Forms.Button>大約是若要查看如何對齊線跨容器界限的控制項。  
+- 請嘗試巢狀<xref:System.Windows.Forms.GroupBox>在另一個控制項<xref:System.Windows.Forms.GroupBox>控制項。 地方<xref:System.Windows.Forms.Button>內的子控制項<xref:System.Windows.Forms.GroupBox>控制項，以及另一個父代內<xref:System.Windows.Forms.GroupBox>控制項。 移動<xref:System.Windows.Forms.Button>大約是若要查看如何對齊線跨容器界限的控制項。  
   
--   建立的資料行<xref:System.Windows.Forms.TextBox>控制項和對應的資料行的<xref:System.Windows.Forms.Label>控制項。 設定的值<xref:System.Windows.Forms.Label>控制項的<xref:System.Windows.Forms.Control.AutoSize%2A>屬性設`true`。 使用對齊線來移動<xref:System.Windows.Forms.Label>控制項，其顯示的文字中的文字與對齊<xref:System.Windows.Forms.TextBox>控制項。  
+- 建立的資料行<xref:System.Windows.Forms.TextBox>控制項和對應的資料行的<xref:System.Windows.Forms.Label>控制項。 設定的值<xref:System.Windows.Forms.Label>控制項的<xref:System.Windows.Forms.Control.AutoSize%2A>屬性設`true`。 使用對齊線來移動<xref:System.Windows.Forms.Label>控制項，其顯示的文字中的文字與對齊<xref:System.Windows.Forms.TextBox>控制項。  
   
  Windows 使用者介面設計的相關資訊，請參閱本書*Microsoft Windows 使用者經驗、 使用者介面開發人員和設計人員的正式方針*Redmond，WA:Microsoft Press，1999年。 (USBN:0-7356-0566-1).  
   

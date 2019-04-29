@@ -3,11 +3,11 @@ title: 無效的模式字串
 ms.date: 07/20/2015
 ms.assetid: ec1aecdb-5339-4a93-be71-eec56b1d7438
 ms.openlocfilehash: 7390b9b32eea248969813b52f8d9799798718de0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790594"
 ---
 # <a name="invalid-pattern-string"></a>無效的模式字串
 在搜尋的 `Like` 作業中指定的模式字串無效。  

@@ -3,11 +3,11 @@ title: MSMQ 整合傳輸
 ms.date: 03/30/2017
 ms.assetid: 2bf9893a-fbd1-41fc-b6de-a41a44279936
 ms.openlocfilehash: 52fd98354ded57bd7d7c075d4f08ca543760e598
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33473369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777360"
 ---
 # <a name="msmq-integration-transport"></a>MSMQ 整合傳輸
 此主題會列出 MSMQ 整合傳輸產生的所有例外狀況。  

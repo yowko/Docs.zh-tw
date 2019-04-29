@@ -5,18 +5,18 @@ f1_keywords:
 - vbrTextFieldParser_MalFormedDelimitedLine
 ms.assetid: 1f8d4c2d-0334-4da8-acff-5460159835b3
 ms.openlocfilehash: 776cf7ed231f63ec9ad4308305fe77d500a4fc1b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790542"
 ---
 # <a name="line-number-cannot-be-parsed-using-the-current-delimiters"></a>行\<數字 > 無法使用目前的分隔符號剖析
 無法剖析指定的行，因為使用了未指定的分隔符號。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   調整 `Delimiters` 以便正確地剖析此行，或插入例外狀況處理程式碼以便處理此行。  
+- 調整 `Delimiters` 以便正確地剖析此行，或插入例外狀況處理程式碼以便處理此行。  
   
 ## <a name="see-also"></a>另請參閱
 

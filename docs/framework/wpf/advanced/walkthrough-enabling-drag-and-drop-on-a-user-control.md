@@ -9,11 +9,11 @@ helpviewer_keywords:
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
 ms.openlocfilehash: a628665ccfa0a423667344b1fe81f132d6691b12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778898"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>逐步解說：在使用者控制項上啟用拖放功能
 
@@ -23,13 +23,13 @@ ms.locfileid: "59321675"
 
 這個逐步解說將說明下列工作：
 
--   建立自訂使用者控制項。
+- 建立自訂使用者控制項。
 
--   可讓使用者控制項成為拖曳來源。
+- 可讓使用者控制項成為拖曳來源。
 
--   讓使用者控制項成為置放目標。
+- 讓使用者控制項成為置放目標。
 
--   啟用面板，以接收從使用者控制項置放的資料。
+- 啟用面板，以接收從使用者控制項置放的資料。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -108,17 +108,17 @@ ms.locfileid: "59321675"
 
      這<xref:System.Windows.UIElement.OnMouseMove%2A>覆寫會執行下列工作：
 
-    -   檢查是否在滑鼠移動時按下滑鼠左鍵。
+    - 檢查是否在滑鼠移動時按下滑鼠左鍵。
 
-    -   將 Circle 資料封裝成<xref:System.Windows.DataObject>。 在此情況下，Circle 控制項會封裝三個資料項目：其填滿色彩的字串表示、高度的 double 表示和其本身的複本。
+    - 將 Circle 資料封裝成<xref:System.Windows.DataObject>。 在此情況下，Circle 控制項會封裝三個資料項目：其填滿色彩的字串表示、高度的 double 表示和其本身的複本。
 
-    -   呼叫靜態<xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType>方法來啟始拖放作業。 傳遞下列三個參數，以<xref:System.Windows.DragDrop.DoDragDrop%2A>方法：
+    - 呼叫靜態<xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType>方法來啟始拖放作業。 傳遞下列三個參數，以<xref:System.Windows.DragDrop.DoDragDrop%2A>方法：
 
-        -   `dragSource` – 此控制項的參考。
+        - `dragSource` – 此控制項的參考。
 
-        -   `data` –<xref:System.Windows.DataObject>在先前的程式碼中建立。
+        - `data` –<xref:System.Windows.DataObject>在先前的程式碼中建立。
 
-        -   `allowedEffects` – 允許的拖放作業，也就是<xref:System.Windows.DragDropEffects.Copy>或<xref:System.Windows.DragDropEffects.Move>。
+        - `allowedEffects` – 允許的拖放作業，也就是<xref:System.Windows.DragDropEffects.Copy>或<xref:System.Windows.DragDropEffects.Move>。
 
 3. 按 **F5** 鍵建置並執行應用程式。
 
@@ -143,9 +143,9 @@ ms.locfileid: "59321675"
 
      這<xref:System.Windows.UIElement.OnGiveFeedback%2A>覆寫會執行下列工作：
 
-    -   會檢查<xref:System.Windows.GiveFeedbackEventArgs.Effects%2A>置放目標中所設定的值<xref:System.Windows.UIElement.DragOver>事件處理常式。
+    - 會檢查<xref:System.Windows.GiveFeedbackEventArgs.Effects%2A>置放目標中所設定的值<xref:System.Windows.UIElement.DragOver>事件處理常式。
 
-    -   設定自訂游標根據<xref:System.Windows.GiveFeedbackEventArgs.Effects%2A>值。 游標用於將資料置放效果的視覺化回饋提供給使用者。
+    - 設定自訂游標根據<xref:System.Windows.GiveFeedbackEventArgs.Effects%2A>值。 游標用於將資料置放效果的視覺化回饋提供給使用者。
 
 3. 按 **F5** 鍵建置並執行應用程式。
 
@@ -181,15 +181,15 @@ ms.locfileid: "59321675"
 
      這<xref:System.Windows.UIElement.OnDrop%2A>覆寫會執行下列工作：
 
-    -   使用<xref:System.Windows.DataObject.GetDataPresent%2A>方法來檢查所拖曳的資料是否包含字串物件。
+    - 使用<xref:System.Windows.DataObject.GetDataPresent%2A>方法來檢查所拖曳的資料是否包含字串物件。
 
-    -   使用<xref:System.Windows.DataObject.GetData%2A>方法來擷取字串資料，如果有的話。
+    - 使用<xref:System.Windows.DataObject.GetData%2A>方法來擷取字串資料，如果有的話。
 
-    -   會使用<xref:System.Windows.Media.BrushConverter>嘗試將字串轉換為<xref:System.Windows.Media.Brush>。
+    - 會使用<xref:System.Windows.Media.BrushConverter>嘗試將字串轉換為<xref:System.Windows.Media.Brush>。
 
-    -   如果轉換成功，會套用到筆刷<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Ellipse>提供 Circle 控制項的 UI。
+    - 如果轉換成功，會套用到筆刷<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Ellipse>提供 Circle 控制項的 UI。
 
-    -   標記<xref:System.Windows.UIElement.Drop>為已處理的事件。 您應該將置放事件標示為已處理，讓收到此事件的其他項目知道 Circle 使用者控制項已處理過它。
+    - 標記<xref:System.Windows.UIElement.Drop>為已處理的事件。 您應該將置放事件標示為已處理，讓收到此事件的其他項目知道 Circle 使用者控制項已處理過它。
 
 3. 按 **F5** 鍵建置並執行應用程式。
 
@@ -222,11 +222,11 @@ ms.locfileid: "59321675"
 
      這<xref:System.Windows.UIElement.OnDragOver%2A>覆寫會執行下列工作：
 
-    -   將 <xref:System.Windows.DragEventArgs.Effects%2A> 屬性設定為 <xref:System.Windows.DragDropEffects.None>。
+    - 將 <xref:System.Windows.DragEventArgs.Effects%2A> 屬性設定為 <xref:System.Windows.DragDropEffects.None>。
 
-    -   執行中執行的相同檢查<xref:System.Windows.UIElement.OnDrop%2A>方法，以判斷 Circle 使用者控制項是否可以處理所拖曳的資料。
+    - 執行中執行的相同檢查<xref:System.Windows.UIElement.OnDrop%2A>方法，以判斷 Circle 使用者控制項是否可以處理所拖曳的資料。
 
-    -   如果使用者控制項可以處理資料，設定<xref:System.Windows.DragEventArgs.Effects%2A>屬性，以<xref:System.Windows.DragDropEffects.Copy>或<xref:System.Windows.DragDropEffects.Move>。
+    - 如果使用者控制項可以處理資料，設定<xref:System.Windows.DragEventArgs.Effects%2A>屬性，以<xref:System.Windows.DragDropEffects.Copy>或<xref:System.Windows.DragDropEffects.Move>。
 
 3. 按 **F5** 鍵建置並執行應用程式。
 
@@ -252,11 +252,11 @@ ms.locfileid: "59321675"
 
      這<xref:System.Windows.UIElement.OnDragEnter%2A>覆寫會執行下列工作：
 
-    -   節省<xref:System.Windows.Shapes.Shape.Fill%2A>的屬性<xref:System.Windows.Shapes.Ellipse>在`_previousFill`變數。
+    - 節省<xref:System.Windows.Shapes.Shape.Fill%2A>的屬性<xref:System.Windows.Shapes.Ellipse>在`_previousFill`變數。
 
-    -   執行中執行的相同檢查<xref:System.Windows.UIElement.OnDrop%2A>方法，以判斷資料是否可轉換成<xref:System.Windows.Media.Brush>。
+    - 執行中執行的相同檢查<xref:System.Windows.UIElement.OnDrop%2A>方法，以判斷資料是否可轉換成<xref:System.Windows.Media.Brush>。
 
-    -   如果資料轉換成有效<xref:System.Windows.Media.Brush>，它套用至<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Ellipse>。
+    - 如果資料轉換成有效<xref:System.Windows.Media.Brush>，它套用至<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Ellipse>。
 
 4. 新增下列<xref:System.Windows.UIElement.OnDragLeave%2A>覆寫，以提供類別處理<xref:System.Windows.UIElement.DragLeave>事件。
 
@@ -265,7 +265,7 @@ ms.locfileid: "59321675"
 
      這<xref:System.Windows.UIElement.OnDragLeave%2A>覆寫會執行下列工作：
 
-    -   適用於<xref:System.Windows.Media.Brush>存入`_previousFill`變數加入<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Ellipse>提供 Circle 使用者控制項的 UI。
+    - 適用於<xref:System.Windows.Media.Brush>存入`_previousFill`變數加入<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Ellipse>提供 Circle 使用者控制項的 UI。
 
 5. 按 **F5** 鍵建置並執行應用程式。
 
@@ -296,11 +296,11 @@ ms.locfileid: "59321675"
 
      這<xref:System.Windows.UIElement.DragOver>事件處理常式會執行下列工作：
 
-    -   檢查所拖曳的資料包含已封裝在 「 物件 」 資料<xref:System.Windows.DataObject>Circle 使用者控制項所傳入的呼叫和<xref:System.Windows.DragDrop.DoDragDrop%2A>。
+    - 檢查所拖曳的資料包含已封裝在 「 物件 」 資料<xref:System.Windows.DataObject>Circle 使用者控制項所傳入的呼叫和<xref:System.Windows.DragDrop.DoDragDrop%2A>。
 
-    -   「 物件 」 資料是否存在，檢查是否**Ctrl**按下按鍵。
+    - 「 物件 」 資料是否存在，檢查是否**Ctrl**按下按鍵。
 
-    -   如果**Ctrl**按鍵，集合<xref:System.Windows.DragEventArgs.Effects%2A>屬性設<xref:System.Windows.DragDropEffects.Copy>。 否則，請設定<xref:System.Windows.DragEventArgs.Effects%2A>屬性設<xref:System.Windows.DragDropEffects.Move>。
+    - 如果**Ctrl**按鍵，集合<xref:System.Windows.DragEventArgs.Effects%2A>屬性設<xref:System.Windows.DragDropEffects.Copy>。 否則，請設定<xref:System.Windows.DragEventArgs.Effects%2A>屬性設<xref:System.Windows.DragDropEffects.Move>。
 
 5. 新增下列程式碼<xref:System.Windows.UIElement.Drop>事件處理常式。
 
@@ -309,15 +309,15 @@ ms.locfileid: "59321675"
 
      這<xref:System.Windows.UIElement.Drop>事件處理常式會執行下列工作：
 
-    -   檢查是否<xref:System.Windows.UIElement.Drop>已處理事件。 比方說，如果一個圓圈卸除另一個圓圈，其控制代碼<xref:System.Windows.UIElement.Drop>事件，您不想包含也處理它 Circle 的面板。
+    - 檢查是否<xref:System.Windows.UIElement.Drop>已處理事件。 比方說，如果一個圓圈卸除另一個圓圈，其控制代碼<xref:System.Windows.UIElement.Drop>事件，您不想包含也處理它 Circle 的面板。
 
-    -   如果<xref:System.Windows.UIElement.Drop>未處理事件，檢查是否**Ctrl**按下按鍵。
+    - 如果<xref:System.Windows.UIElement.Drop>未處理事件，檢查是否**Ctrl**按下按鍵。
 
-    -   如果**Ctrl**按下按鍵時<xref:System.Windows.UIElement.Drop>發生時，發出的圓形複本控制，並將它加入<xref:System.Windows.Controls.Panel.Children%2A>集合<xref:System.Windows.Controls.StackPanel>。
+    - 如果**Ctrl**按下按鍵時<xref:System.Windows.UIElement.Drop>發生時，發出的圓形複本控制，並將它加入<xref:System.Windows.Controls.Panel.Children%2A>集合<xref:System.Windows.Controls.StackPanel>。
 
-    -   如果**Ctrl**未按下按鍵時，將從圓形<xref:System.Windows.Controls.Panel.Children%2A>集合，以其父面板的<xref:System.Windows.Controls.Panel.Children%2A>面板，它已卸除的集合。
+    - 如果**Ctrl**未按下按鍵時，將從圓形<xref:System.Windows.Controls.Panel.Children%2A>集合，以其父面板的<xref:System.Windows.Controls.Panel.Children%2A>面板，它已卸除的集合。
 
-    -   設定組<xref:System.Windows.DragEventArgs.Effects%2A>屬性，以通知<xref:System.Windows.DragDrop.DoDragDrop%2A>方法是否執行移動或複製作業。
+    - 設定組<xref:System.Windows.DragEventArgs.Effects%2A>屬性，以通知<xref:System.Windows.DragDrop.DoDragDrop%2A>方法是否執行移動或複製作業。
 
 6. 按 **F5** 鍵建置並執行應用程式。
 

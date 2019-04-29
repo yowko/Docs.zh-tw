@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: KrzysztofCwalina
 ms.openlocfilehash: 7cf98b8ed1957352f357c7a9d580b4fd567a1634
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757491"
 ---
 # <a name="names-of-type-members"></a>類型成員名稱
 類型由成員組成：方法、屬性、事件、建構函式及欄位。 下列各節會描述為類型成員命名的方針。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - figures [Windows Forms], filling
 ms.assetid: 5a36b0e4-f1f4-46c0-a85a-22ae98491950
 ms.openlocfilehash: addcf959e429974b9306353abb743bb2bb3114e4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781419"
 ---
 # <a name="how-to-fill-open-figures"></a>HOW TO：填滿開放圖形
 您可以藉由傳遞填滿的路徑<xref:System.Drawing.Drawing2D.GraphicsPath>物件至<xref:System.Drawing.Graphics.FillPath%2A>方法。 <xref:System.Drawing.Graphics.FillPath%2A>方法填入填滿模式 （替代或捲繞） 根據目前設定路徑的路徑。 如果路徑中有任何開啟的數字，如同這些數字都已關閉，會填滿的路徑。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 關閉圖表，藉由透過其結束點繪製一條直線，到它的起點。  

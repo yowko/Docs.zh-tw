@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1baeac5db41aa64380d694ebab5419229d8adb4c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763538"
 ---
 # <a name="iclrtask-interface"></a>ICLRTask 介面
 提供方法，可讓主應用程式提出要求的 common language runtime (CLR)，或以用於 CLR 有關相關聯的工作提供通知。  

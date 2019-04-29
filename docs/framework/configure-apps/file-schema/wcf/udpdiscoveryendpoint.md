@@ -3,11 +3,11 @@ title: <udpDiscoveryEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 1f485329-2771-43bc-88de-df8f2faa3bb7
 ms.openlocfilehash: 180763404ee9070e9ed6e5476d4568a0a018dcb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788150"
 ---
 # <a name="udpdiscoveryendpoint"></a>\<udpDiscoveryEndpoint>
 這個組態項目會定義標準端點，此端點是針對透過 UDP 多點傳送繫結進行探索作業而預先設定的。 此端點具備固定合約，而且支援兩種 WS-Discovery 通訊協定版本。 此外，它擁有固定的 UDP 繫結和預設位址，如 WS-Discovery 規格 (WS-Discovery 2005 年 4 月或 WS-Discovery V1.1) 中所指定。  

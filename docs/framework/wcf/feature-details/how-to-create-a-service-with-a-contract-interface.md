@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7b6803f6-d6f9-4cc2-9f1b-6f4c920475d5
 ms.openlocfilehash: 0aa5429d771aeda0b392b89ec4cc1a07de30973f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787617"
 ---
 # <a name="how-to-create-a-service-with-a-contract-interface"></a>HOW TO：使用合約介面來建立服務
 若要建立 Windows Communication Foundation (WCF) 合約的慣用的方法是使用介面。 此合約可指定存取服務提供之作業時所需的訊息集合與結構。 此介面可將 <xref:System.ServiceModel.ServiceContractAttribute> 類別套用到介面，並將 <xref:System.ServiceModel.OperationContractAttribute> 類別套用到您想要公開的方法上，藉此定義輸入與輸出類型。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
 ms.openlocfilehash: 67fecb95ea373e88e5428251151cc30bfeb580a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759943"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>逐步解說：撰寫使用 Visual c# 複合控制項\#
 複合控制項提供可以建立及重複使用自訂圖形介面的方法。 複合控制項基本上是具有視覺表示的元件。 因此，它可能包含一或多個 Windows Forms 控制項、元件或程式碼區塊，可以藉由驗證使用者輸入、修改顯示屬性，或執行作者需要的其他工作來擴充功能。 複合控制項可以放在 Windows Forms 上，與其他控制項的方式相同。 在本逐步解說的第一個部分中，您可以建立簡單的複合控制項，稱為 `ctlClock`。 在逐步解說的第二個部分中，您透過繼承擴充 `ctlClock` 的功能。  

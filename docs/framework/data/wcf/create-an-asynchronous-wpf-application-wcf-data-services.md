@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 ms.assetid: 834614df-1427-4839-b0be-90f68e5afffd
 ms.openlocfilehash: c5dc4e34711cdb128eb012633bad104d0060be71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765843"
 ---
 # <a name="how-to-create-an-asynchronous-windows-presentation-framework-application-wcf-data-services"></a>HOW TO：建立非同步 Windows Presentation Framework 應用程式 (WCF Data Services)
 使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 時，您可以將從資料服務取得的資料繫結至 Windows Presentation Framework (WPF) 應用程式的 UI 項目。 如需詳細資訊，請參閱 <<c0> [ 將資料繫結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。您也可以執行資料服務的作業，以非同步方式，可讓應用程式繼續在等候資料服務要求的回應時回應。 若要透過非同步方式存取資料服務，則需要 Silverlight 應用程式。 如需詳細資訊，請參閱 <<c0> [ 非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)。  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f83b9796bb692ce234a03c596387960bd879ebf3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763733"
 ---
 # <a name="icordebugstepper-interface"></a>ICorDebugStepper 介面
 表示偵錯工具在程式碼執行作業中所執行的步驟，做為命令的發出和完成之間的識別項，並可提供方法來取消步驟。  
@@ -42,11 +42,11 @@ ms.locfileid: "59212514"
 ## <a name="remarks"></a>備註  
  `ICorDebugStepper`介面會提供下列用途：  
   
--   它會充當之間逐步執行 命令發出和完成該命令的識別項。  
+- 它會充當之間逐步執行 命令發出和完成該命令的識別項。  
   
--   它提供可執行的封裝所有逐步執行的中央介面。  
+- 它提供可執行的封裝所有逐步執行的中央介面。  
   
--   它提供方法來提前取消 逐步執行的作業。  
+- 它提供方法來提前取消 逐步執行的作業。  
   
  可以有一個以上的步進，每個執行緒。 比方說，可能會叫用中斷點時不進入函式，使用者可能想要開始新的逐步執行作業，在此函式。 這是由偵錯工具來判斷如何處理這種情況。 偵錯工具可能會想要取消原始逐步執行的作業，或巢狀化的兩項作業。 `ICorDebugStepper`介面支援這兩種選項。  
   

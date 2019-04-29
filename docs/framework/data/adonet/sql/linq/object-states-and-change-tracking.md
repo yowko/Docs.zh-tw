@@ -3,11 +3,11 @@ title: 物件狀態和變更追蹤
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
 ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794390"
 ---
 # <a name="object-states-and-change-tracking"></a>物件狀態和變更追蹤
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 物件一律會處於某種*狀態*。 例如，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 建立新物件時，該物件會是 `Unchanged` 狀態。 您自己建立的新物件不知道<xref:System.Data.Linq.DataContext>且位於`Untracked`狀態。 順利執行 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 之後，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 得知的所有物件都會是 `Unchanged` 狀態  (唯一的例外是已順利從資料庫中刪除的物件，這些物件是 `Deleted` 狀態，而且無法在該 <xref:System.Data.Linq.DataContext> 執行個體中使用)。  
@@ -38,11 +38,11 @@ ms.locfileid: "59191151"
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 執行下列的處理時刪除物件 (<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) 從其資料表：  
   
--   呼叫 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 時，會對該物件執行 `DELETE` 作業。  
+- 呼叫 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 時，會對該物件執行 `DELETE` 作業。  
   
--   不論是否已載入相關物件，移除作業都不會擴及相關物件。 具體來說，並不會載入相關物件來更新關聯性屬性。  
+- 不論是否已載入相關物件，移除作業都不會擴及相關物件。 具體來說，並不會載入相關物件來更新關聯性屬性。  
   
--   順利執行 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 之後，物件會設為 `Deleted` 狀態。 因此，您無法使用該物件也無法使用其在該 `id` 中的 <xref:System.Data.Linq.DataContext>。 由 <xref:System.Data.Linq.DataContext> 執行個體維護的內部快取並不會刪除已擷取或新加入的物件，即使物件已從資料庫中刪除也一樣。  
+- 順利執行 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 之後，物件會設為 `Deleted` 狀態。 因此，您無法使用該物件也無法使用其在該 `id` 中的 <xref:System.Data.Linq.DataContext>。 由 <xref:System.Data.Linq.DataContext> 執行個體維護的內部快取並不會刪除已擷取或新加入的物件，即使物件已從資料庫中刪除也一樣。  
   
  您只可以對 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> 所追蹤的物件呼叫 <xref:System.Data.Linq.DataContext>。 至於 `Untracked` 物件，您必須先呼叫 <xref:System.Data.Linq.Table%601.Attach%2A>，然後再呼叫 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>。 對 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> 物件呼叫 `Untracked` 會擲回例外狀況。  
   

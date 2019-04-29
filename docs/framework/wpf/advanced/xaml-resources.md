@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
 ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757075"
 ---
 # <a name="xaml-resources"></a>XAML 資源
 資源是可在應用程式中不同位置重複使用的物件。 資源的範例包括筆刷和樣式。 本概觀說明如何使用中的資源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 您也可以建立及存取資源，使用程式碼，或是交換使用程式碼之間和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 資源和程式碼](resources-and-code.md)。  
@@ -44,28 +44,28 @@ ms.locfileid: "59344919"
   
  當您參考資源時，下列考量可能會影響您使用靜態資源參考或動態資源參考：  
   
--   如何為您的應用程式來建立資源的整體設計 (每頁、 在應用程式，在鬆散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，在資源專用組件中)。  
+- 如何為您的應用程式來建立資源的整體設計 (每頁、 在應用程式，在鬆散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，在資源專用組件中)。  
   
--   應用程式功能︰應用程式是否需要即時更新資源？  
+- 應用程式功能︰應用程式是否需要即時更新資源？  
   
--   該資源參考型別的相關查閱行為。  
+- 該資源參考型別的相關查閱行為。  
   
--   特定屬性或資源類型，以及這些類型的原生行為。  
+- 特定屬性或資源類型，以及這些類型的原生行為。  
   
 ### <a name="static-resources"></a>靜態資源  
  靜態資源參考最適用於下列情況：  
   
--   應用程式設計將其大部分資源集中到頁面或應用程式層級資源字典中。 由於靜態資源參考不會根據執行階段行為 (例如重新載入頁面) 重新評估，因此當根據資源和應用程式設計不需要動態資源參考時，可避免使用大量動態資源參考，藉此提升一些效能。  
+- 應用程式設計將其大部分資源集中到頁面或應用程式層級資源字典中。 由於靜態資源參考不會根據執行階段行為 (例如重新載入頁面) 重新評估，因此當根據資源和應用程式設計不需要動態資源參考時，可避免使用大量動態資源參考，藉此提升一些效能。  
   
--   您要設定不在屬性的值<xref:System.Windows.DependencyObject>或<xref:System.Windows.Freezable>。  
+- 您要設定不在屬性的值<xref:System.Windows.DependencyObject>或<xref:System.Windows.Freezable>。  
   
--   您要建立編譯成 DLL 並封裝成應用程式一部分或在應用程式之間共用的資源字典。  
+- 您要建立編譯成 DLL 並封裝成應用程式一部分或在應用程式之間共用的資源字典。  
   
--   您要建立自訂控制項的佈景主題，然後定義用於佈景主題的資源。 在此情況下，您通常不需要動態資源參考查閱行為，而需要靜態資源參考行為，以便佈景主題可預測並內封查閱。 使用動態資源參考時，甚至是佈景主題內的參考也會在執行階段之前保持未評估，在套用佈景主題時，有些區域項目可能會重新定義佈景主題嘗試參考的索引鍵，而且區域項目將會落在查閱中的佈景主題本身之前。 如果發生此情況，您的佈景主題將不會如預期般運作。  
+- 您要建立自訂控制項的佈景主題，然後定義用於佈景主題的資源。 在此情況下，您通常不需要動態資源參考查閱行為，而需要靜態資源參考行為，以便佈景主題可預測並內封查閱。 使用動態資源參考時，甚至是佈景主題內的參考也會在執行階段之前保持未評估，在套用佈景主題時，有些區域項目可能會重新定義佈景主題嘗試參考的索引鍵，而且區域項目將會落在查閱中的佈景主題本身之前。 如果發生此情況，您的佈景主題將不會如預期般運作。  
   
--   您要使用資源來設定大量相依性屬性。 相依性屬性具有屬性系統已啟用的有效值快取，因此如果您將值提供給可在載入時評估的相依性屬性，相依性屬性不必檢查是否有重新評估的運算式，而且可能傳回最後一個有效值。 這項技術可能會提升效能。  
+- 您要使用資源來設定大量相依性屬性。 相依性屬性具有屬性系統已啟用的有效值快取，因此如果您將值提供給可在載入時評估的相依性屬性，相依性屬性不必檢查是否有重新評估的運算式，而且可能傳回最後一個有效值。 這項技術可能會提升效能。  
   
--   您想要變更的基礎資源的所有取用者，或您想要使用不同的可寫入執行個體維護每個取用者[x： 共用屬性](../../xaml-services/x-shared-attribute.md)。  
+- 您想要變更的基礎資源的所有取用者，或您想要使用不同的可寫入執行個體維護每個取用者[x： 共用屬性](../../xaml-services/x-shared-attribute.md)。  
   
 #### <a name="static-resource-lookup-behavior"></a>靜態資源查閱行為  
   
@@ -84,28 +84,28 @@ ms.locfileid: "59344919"
 ### <a name="dynamic-resources"></a>動態資源  
  動態資源最適用於下列情況：  
   
--   資源的值取決於執行階段之後才知道的狀況。 這包括系統資源或使用者可設定的資源。 例如，您可以建立參考系統屬性的 setter 值所公開之<xref:System.Windows.SystemColors>， <xref:System.Windows.SystemFonts>，或<xref:System.Windows.SystemParameters>。 由於這些值最終是來自使用者和作業系統的執行階段環境，因此是真正動態的。 您也可能有會變更的應用程式層級佈景主題，其中的頁面層級資源存取也必須擷取該變更。  
+- 資源的值取決於執行階段之後才知道的狀況。 這包括系統資源或使用者可設定的資源。 例如，您可以建立參考系統屬性的 setter 值所公開之<xref:System.Windows.SystemColors>， <xref:System.Windows.SystemFonts>，或<xref:System.Windows.SystemParameters>。 由於這些值最終是來自使用者和作業系統的執行階段環境，因此是真正動態的。 您也可能有會變更的應用程式層級佈景主題，其中的頁面層級資源存取也必須擷取該變更。  
   
--   您要建立或參考自訂控制項的佈景主題樣式。  
+- 您要建立或參考自訂控制項的佈景主題樣式。  
   
--   您想要調整的內容<xref:System.Windows.ResourceDictionary>應用程式存留期間。  
+- 您想要調整的內容<xref:System.Windows.ResourceDictionary>應用程式存留期間。  
   
--   您有內含相互依存性的複雜資源結構，可能需要向前參考。 靜態資源參考不支援向前參考，但動態資源參考則支援，因為資源不需要執行階段之前評估，因此向前參考並不相關的概念。  
+- 您有內含相互依存性的複雜資源結構，可能需要向前參考。 靜態資源參考不支援向前參考，但動態資源參考則支援，因為資源不需要執行階段之前評估，因此向前參考並不相關的概念。  
   
--   您所參考的資源從編譯或工作集的觀點來看特別大，因此當頁面載入時，可能無法立即使用資源。 靜態資源參考一律從載入[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]當頁面載入; 不過，動態資源參考不會載入直到實際使用。  
+- 您所參考的資源從編譯或工作集的觀點來看特別大，因此當頁面載入時，可能無法立即使用資源。 靜態資源參考一律從載入[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]當頁面載入; 不過，動態資源參考不會載入直到實際使用。  
   
--   您要建立樣式，其中的 setter 值可能來自受到佈景主題或其他使用者設定影響的其他值。  
+- 您要建立樣式，其中的 setter 值可能來自受到佈景主題或其他使用者設定影響的其他值。  
   
--   您要將資源套用至可能在應用程式存留期間於邏輯樹狀結構中重設父代的項目。 變更父代也可能會變更資源查閱範圍，因此如果您想要根據新範圍重新評估重設父代項目的資源，請一律使用動態資源參考。  
+- 您要將資源套用至可能在應用程式存留期間於邏輯樹狀結構中重設父代的項目。 變更父代也可能會變更資源查閱範圍，因此如果您想要根據新範圍重新評估重設父代項目的資源，請一律使用動態資源參考。  
   
 #### <a name="dynamic-resource-lookup-behavior"></a>動態資源查閱行為  
  動態資源參考的資源查閱行為平行程式碼中的查閱行為，如果您呼叫<xref:System.Windows.FrameworkElement.FindResource%2A>或<xref:System.Windows.FrameworkElement.SetResourceReference%2A>。  
   
 1. 查閱程序會檢查設定屬性之項目所定義的資源字典內，是否有要求的索引鍵。  
   
-    -   如果項目定義<xref:System.Windows.FrameworkElement.Style%2A>屬性，<xref:System.Windows.Style.Resources%2A>字典內<xref:System.Windows.Style>已核取。  
+    - 如果項目定義<xref:System.Windows.FrameworkElement.Style%2A>屬性，<xref:System.Windows.Style.Resources%2A>字典內<xref:System.Windows.Style>已核取。  
   
-    -   如果項目定義<xref:System.Windows.Controls.Control.Template%2A>屬性，<xref:System.Windows.FrameworkTemplate.Resources%2A>字典內<xref:System.Windows.FrameworkTemplate>已核取。  
+    - 如果項目定義<xref:System.Windows.Controls.Control.Template%2A>屬性，<xref:System.Windows.FrameworkTemplate.Resources%2A>字典內<xref:System.Windows.FrameworkTemplate>已核取。  
   
 2. 查閱程序接著會在邏輯樹狀結構中，向上周游到父項目及其資源字典。 這會繼續直到到達根項目。  
   
@@ -117,20 +117,20 @@ ms.locfileid: "59344919"
   
  例外狀況行為 (如果有的話) 則有所不同：  
   
--   如果所要求資源<xref:System.Windows.FrameworkElement.FindResource%2A>呼叫，並找不到，會引發例外狀況。  
+- 如果所要求資源<xref:System.Windows.FrameworkElement.FindResource%2A>呼叫，並找不到，會引發例外狀況。  
   
--   如果所要求資源<xref:System.Windows.FrameworkElement.TryFindResource%2A>呼叫，並找不到，會引發任何例外狀況，但傳回的值是`null`。 如果要設定的屬性不接受`null`，則仍有可能，會引發更深入的例外狀況 （這取決於所設定的個別屬性）。  
+- 如果所要求資源<xref:System.Windows.FrameworkElement.TryFindResource%2A>呼叫，並找不到，會引發任何例外狀況，但傳回的值是`null`。 如果要設定的屬性不接受`null`，則仍有可能，會引發更深入的例外狀況 （這取決於所設定的個別屬性）。  
   
--   如果中的動態資源參考要求資源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，並找不到，則其行為取決於一般屬性系統中，但一般行為會如同資源所在的層級發生任何屬性設定作業。 例如，如果您嘗試使用無法評估的資源來設定個別按鈕項目的背景，則沒有值會設定結果，但有效值仍然可能來自屬性系統和值優先順序中的其他參與值。 例如，背景值仍然可能來自本機定義的按鈕樣式，或來自佈景主題樣式。 針對不是由佈景主題樣式定義的屬性，資源評估失敗後的有效值可能來自屬性中繼資料內的預設值。  
+- 如果中的動態資源參考要求資源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，並找不到，則其行為取決於一般屬性系統中，但一般行為會如同資源所在的層級發生任何屬性設定作業。 例如，如果您嘗試使用無法評估的資源來設定個別按鈕項目的背景，則沒有值會設定結果，但有效值仍然可能來自屬性系統和值優先順序中的其他參與值。 例如，背景值仍然可能來自本機定義的按鈕樣式，或來自佈景主題樣式。 針對不是由佈景主題樣式定義的屬性，資源評估失敗後的有效值可能來自屬性中繼資料內的預設值。  
   
 #### <a name="restrictions"></a>限制  
  動態資源參考有一些值得注意的限制。 至少必須符合下列其中一個情況：  
   
--   要設定的屬性必須是屬性上<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。 屬性都必須受<xref:System.Windows.DependencyProperty>。  
+- 要設定的屬性必須是屬性上<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。 屬性都必須受<xref:System.Windows.DependencyProperty>。  
   
--   參考中的值是<xref:System.Windows.Style> <xref:System.Windows.Setter>。  
+- 參考中的值是<xref:System.Windows.Style> <xref:System.Windows.Setter>。  
   
--   所設定的屬性必須是屬性上<xref:System.Windows.Freezable>提供的值為<xref:System.Windows.FrameworkElement>或是<xref:System.Windows.FrameworkContentElement>屬性，或<xref:System.Windows.Setter>值。  
+- 所設定的屬性必須是屬性上<xref:System.Windows.Freezable>提供的值為<xref:System.Windows.FrameworkElement>或是<xref:System.Windows.FrameworkContentElement>屬性，或<xref:System.Windows.Setter>值。  
   
  由於所設定的屬性必須是<xref:System.Windows.DependencyProperty>或<xref:System.Windows.Freezable>屬性，大部分的屬性變更可以傳播至 UI，因為屬性變更 （變更的動態資源值） 由屬性系統認可。 大多數控制項所包含邏輯，會強制另一個控制項的配置，如果<xref:System.Windows.DependencyProperty>變更和屬性可能會影響版面配置。 然而，並非所有的屬性具有[DynamicResource 標記延伸](dynamicresource-markup-extension.md)做為其值會保證提供的方式，更新在 UI 中的即時值。 該功能仍然可能會依屬性、擁有屬性的類型，甚至是應用程式的邏輯結構而有所不同。  
   

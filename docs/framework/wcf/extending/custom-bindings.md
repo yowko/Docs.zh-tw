@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
 ms.openlocfilehash: 314409f5ac4ecb4b18f3b8d3f2aeb08a507ec9e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696167"
 ---
 # <a name="custom-bindings"></a>自訂繫結
 當系統提供的其中一個繫結不符合服務的需求時，您可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 類別。 所有繫結都是根據已排序的繫結項目組所建構。 自訂的繫結可以從系統提供的繫結項目建置，或是可以包含使用者定義的自訂繫結項目。 例如，您可以使用自訂繫結項目，以便在服務端點使用新的傳輸或編碼器。 如需實用範例，請參閱[自訂繫結範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90))。 如需詳細資訊，請參閱 < [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
@@ -18,47 +18,47 @@ ms.locfileid: "59207262"
 ## <a name="construction-of-a-custom-binding"></a>建構自訂繫結  
  在建構自訂繫結時，會使用依特定順序堆疊的繫結項目集合中的 <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> 建構函式：  
   
--   在最上方為允許流動異動的選擇性 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 類別。  
+- 在最上方為允許流動異動的選擇性 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 類別。  
   
--   接下來是選擇性 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> 類別，它會提供 WS-ReliableMessaging 規格中所定義的工作階段和排序機制。 工作階段可以跨 SOAP 和傳輸媒介。  
+- 接下來是選擇性 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> 類別，它會提供 WS-ReliableMessaging 規格中所定義的工作階段和排序機制。 工作階段可以跨 SOAP 和傳輸媒介。  
   
--   下一個是選擇性的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別，它會提供如授權、驗證、保護和機密性等安全性功能。  
+- 下一個是選擇性的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別，它會提供如授權、驗證、保護和機密性等安全性功能。  
   
--   下一個是選擇性的 <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> 類別，它可以與傳輸通訊協定進行雙向的雙工通訊，HTTP 之類的通訊協定原本並不支援雙工通訊。  
+- 下一個是選擇性的 <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> 類別，它可以與傳輸通訊協定進行雙向的雙工通訊，HTTP 之類的通訊協定原本並不支援雙工通訊。  
   
--   下一個是選擇性的 <xref:System.ServiceModel.Channels.OneWayBindingElement> 類別，它提供單向通訊。  
+- 下一個是選擇性的 <xref:System.ServiceModel.Channels.OneWayBindingElement> 類別，它提供單向通訊。  
   
--   下一個是選擇性的資料流安全性繫結項目，這個項目可以是下列其中一種。  
+- 下一個是選擇性的資料流安全性繫結項目，這個項目可以是下列其中一種。  
   
-    -   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+    - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
-    -   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+    - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
--   再來是必要的訊息編碼繫結項目。 您可以使用自己的訊息編碼器，或是三個訊息編碼繫結的其中一個：  
+- 再來是必要的訊息編碼繫結項目。 您可以使用自己的訊息編碼器，或是三個訊息編碼繫結的其中一個：  
   
-    -   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
+    - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
   
-    -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
+    - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
   
-    -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
+    - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
  最下方是必要的傳輸項目。 您可以使用自己的傳輸或其中一個 Windows Communication Foundation (WCF) 提供下列傳輸繫結項目：  
   
--   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
   
--   <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
   
  下表摘要列出每一層的選項。  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - geometry classes [WPF]
 ms.assetid: 83873331-b013-472e-8197-8ba993dd242f
 ms.openlocfilehash: 3afee770e36b7daea754775f64dd7f1030659267
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762237"
 ---
 # <a name="geometries-how-to-topics"></a>幾何 HOW TO 主題
 在本節中的主題將示範如何使用<xref:System.Windows.Media.Geometry>應用程式中的物件。  

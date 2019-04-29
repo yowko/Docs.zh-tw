@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 313d3d74356a378351270916e1043a1cc4d799ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61927317"
 ---
 # <a name="icordebugmodulecreatebreakpoint-method"></a>ICorDebugModule::CreateBreakpoint 方法
-這個方法尚未實作.NET Framework 目前版本中。  
+不在目前版本的.NET framework 中實作這個方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,4 +36,4 @@ HRESULT CreateBreakpoint(
 ```  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorDebug.idl、 CorDebug.h
+ **標頭：** CorDebug.idl、CorDebug.h

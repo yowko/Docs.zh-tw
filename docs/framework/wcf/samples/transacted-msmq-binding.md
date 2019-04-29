@@ -3,11 +3,11 @@ title: 交易 MSMQ 繫結
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
 ms.openlocfilehash: 259ca8059ac1c4f62636a2320d5eb64daa7f56cf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759982"
 ---
 # <a name="transacted-msmq-binding"></a>交易 MSMQ 繫結
 
@@ -92,7 +92,7 @@ MSMQ 佇列名稱是指定在組態檔的 appSettings 區段中，如下面的�
 > [!NOTE]
 > 使用 <xref:System.Messaging> 來建立佇列時，佇列會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 Windows Communication Foundation (WCF) 端點會使用包含 net.msmq 配置的佇列位址、 使用"localhost"代表本機電腦，並在其路徑中使用正斜線。
 
-用戶端會建立一個交易範圍。 與佇列的通訊會發生在交易範圍內，導致其被視為原子單位 (Atomic Unit)，其中會將所有訊息都傳送至佇列，或是不傳送任何訊息至佇列。 呼叫異動範圍上的 <xref:System.Transactions.TransactionScope.Complete%2A>，即可認可異動。
+用戶端會建立一個交易範圍。 與佇列的通訊會發生在異動範圍內，導致其被視為原子單位 (Atomic Unit)，其中會將所有訊息都傳送至佇列，或是不傳送任何訊息至佇列。 呼叫異動範圍上的 <xref:System.Transactions.TransactionScope.Complete%2A>，即可認可異動。
 
 ```csharp
 // Create a client.

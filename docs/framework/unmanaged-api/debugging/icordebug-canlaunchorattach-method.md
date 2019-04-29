@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0cf0065f1ed12ad3a37819b0a15d734a2b51ff5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697773"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach 方法
 會傳回 HRESULT，指出是否有可能在目前的電腦以及執行階段組態的內容中啟動新的處理序，或附加至指定的現有處理序。  
@@ -46,13 +46,13 @@ HRESULT CanLaunchOrAttach (
 ## <a name="return-value"></a>傳回值  
  如果偵錯服務判斷啟動新的處理序，或附加至指定的處理序，為 S_OK 是可行的指定目前的電腦和執行階段組態的詳細資訊。 可能的 HRESULT 值為：  
   
--   S_OK  
+- S_OK  
   
--   CORDBG_E_DEBUGGING_NOT_POSSIBLE  
+- CORDBG_E_DEBUGGING_NOT_POSSIBLE  
   
--   CORDBG_E_KERNEL_DEBUGGER_PRESENT  
+- CORDBG_E_KERNEL_DEBUGGER_PRESENT  
   
--   CORDBG_E_KERNEL_DEBUGGER_ENABLED  
+- CORDBG_E_KERNEL_DEBUGGER_ENABLED  
   
 ## <a name="remarks"></a>備註  
  這個方法僅供參考。 介面不會停止您無法啟動或附加至處理序，不論值傳回`CanLaunchOrAttach`。  

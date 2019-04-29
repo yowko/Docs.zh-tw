@@ -3,11 +3,11 @@ title: OLE DB 結構描述集合
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
 ms.openlocfilehash: 6dc187b0a876d9e167a74f2381db156dde2764fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771991"
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB 結構描述集合
 本節將討論 Microsoft SQL Server、Oracle 和 Microsoft Jet 之 OLE DB 提供者的結構描述集合支援。  
@@ -15,17 +15,17 @@ ms.locfileid: "59164680"
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Microsoft SQL Server OLE DB 提供者  
  Microsoft SQL Server OLE DB 驅動程式支援下列特定結構描述集合除了通用結構描述集合：  
   
--   資料表  
+- 資料表  
   
--   資料行  
+- 資料行  
   
--   程序  
+- 程序  
   
--   ProcedureParameters  
+- ProcedureParameters  
   
--   Catalog  
+- Catalog  
   
--   索引  
+- 索引  
   
 ### <a name="tables"></a>資料表  
   
@@ -154,19 +154,19 @@ ms.locfileid: "59164680"
 ## <a name="microsoft-oracle-ole-db-provider"></a>Microsoft Oracle OLE DB 提供者  
  除了通用結構描述集合之外，Microsoft Oracle OLE DB 驅動程式還支援下列特定的結構描述集合：  
   
--   資料表  
+- 資料表  
   
--   資料行  
+- 資料行  
   
--   程序  
+- 程序  
   
--   ProcedureColumns  
+- ProcedureColumns  
   
--   ProcedureParameters  
+- ProcedureParameters  
   
--   檢視  
+- 檢視  
   
--   索引  
+- 索引  
   
 ### <a name="tables"></a>資料表  
   
@@ -297,15 +297,15 @@ ms.locfileid: "59164680"
 ## <a name="microsoft-jet-ole-db-provider"></a>Microsoft Jet OLE DB 提供者  
  除了通用結構描述集合之外，Microsoft Jet OLE DB 驅動程式還支援下列特定的結構描述集合：  
   
--   資料表  
+- 資料表  
   
--   資料行  
+- 資料行  
   
--   程序  
+- 程序  
   
--   檢視  
+- 檢視  
   
--   索引  
+- 索引  
   
 ### <a name="tables"></a>資料表  
   

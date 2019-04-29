@@ -10,26 +10,26 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 ms.openlocfilehash: 306c042fe432f0c087ceb1b5ff6b5aec0fe0bbc7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748248"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>逐步解說：在設計階段排列 Windows Forms 的 WPF 內容
 本逐步解說示範如何使用 Windows Form 的配置功能 (例如錨定和對齊線)，來排列 Windows Presentation Foundation (WPF) 控制項。
 
  在這個逐步解說中，您將執行下列工作：
 
--   建立專案。
+- 建立專案。
 
--   建立 WPF 控制項。
+- 建立 WPF 控制項。
 
--   將 WPF 控制項裝載到配置面板中。
+- 將 WPF 控制項裝載到配置面板中。
 
--   使用對齊線來對齊 WPF 控制項。
+- 使用對齊線來對齊 WPF 控制項。
 
--   錨定和停駐 WPF 控制項。
+- 錨定和停駐 WPF 控制項。
 
 > [!NOTE]
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -37,7 +37,7 @@ ms.locfileid: "59327304"
 ## <a name="prerequisites"></a>必要條件  
  您需要下列元件才能完成此逐步解說：  
   
--   Visual Studio 2012.  
+- Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>建立專案  
  第一個步驟是建立 Windows Form 專案。  
@@ -47,7 +47,7 @@ ms.locfileid: "59327304"
   
 #### <a name="to-create-the-project"></a>若要建立專案  
   
--   建立新的 Windows Forms 應用程式專案在 Visual Basic 或 Visual C# 中名為`ArrangeElementHost`。  
+- 建立新的 Windows Forms 應用程式專案在 Visual Basic 或 Visual C# 中名為`ArrangeElementHost`。  
   
 ## <a name="creating-the-wpf-control"></a>建立 WPF 控制項  
  在將 WPF 控制項加入專案後，即可在表單上予以排列。  

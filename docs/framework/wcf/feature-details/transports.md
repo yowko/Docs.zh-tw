@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, transports
 ms.assetid: 005c894b-af70-48aa-a1c1-c99338083c27
 ms.openlocfilehash: 6bb8e8b90c26533661684bd403b9ec439f1bb37e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933727"
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Windows Communication Foundation 中的傳輸
-傳輸層 (Transport Layer) 屬於通道堆疊中的最底層。 使用 Windows Communication Foundation (WCF) 的主要傳輸是 HTTP、 HTTPS、 TCP 及具名的管道。 本節中的主題將討論如何在這些傳輸之間進行選擇、設定傳輸，以及設定調整屬性。  
+傳輸層 (Transport Layer) 屬於通道堆疊中的最底層。 使用 Windows Communication Foundation (WCF) 中的主要傳輸是 HTTP、 HTTPS、 TCP 和具名的管道。 本節中的主題將討論如何在這些傳輸之間進行選擇、設定傳輸，以及設定調整屬性。  
   
  WCF 包含額外的傳輸。 如需訊息佇列 (也稱為 MSMQ) 傳輸的資訊，請參閱[佇列和可靠工作階段](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)。 如需端對端傳輸的資訊，請參閱[對等網路](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "33498120"
  [設定 HTTP 和 HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)  
  說明如何設定 HTTP 和 HTTPS 傳輸繫結項目。  
   
- [如何：將 WCF URL 保留項目取代為受限保留項目](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
+ [如何：使用受限的保留項目取代 WCF URL 保留項目](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
  描述如何使用受限制的 WCFURL 保留項目。  
   
  [傳輸配額](../../../../docs/framework/wcf/feature-details/transport-quotas.md)  

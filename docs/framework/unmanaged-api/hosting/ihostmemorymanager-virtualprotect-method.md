@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 62aa6b1d9be86a9b60abf894d67555f706e6a8ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760152"
 ---
 # <a name="ihostmemorymanagervirtualprotect-method"></a>IHostMemoryManager::VirtualProtect 方法
 可做為對應的 Win32 函式的邏輯包裝函式。 Win32 實作`VirtualProtect`變更區域上的認可頁面呼叫處理序虛擬位址空間中的保護。  

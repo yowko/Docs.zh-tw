@@ -11,11 +11,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
 ms.openlocfilehash: 43fdb023f19aa988dfef3dcd68443d6f59808472
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746624"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>HOW TO：控制 Windows Forms TextBox 控制項的插入點
 當 Windows Forms<xref:System.Windows.Forms.TextBox>控制項第一次收到焦點時，文字方塊內的預設值插入至任何現有的文字的左邊。 使用者可以移動與鍵盤或滑鼠的插入點。 如果文字方塊將會遺失，並重新取得焦點，將會插入點，使用者最後放置的任一處它。  
@@ -59,7 +59,7 @@ ms.locfileid: "59341318"
   
 #### <a name="to-make-the-text-box-insertion-point-visible-by-default-on-a-new-form"></a>若要依預設，新的表單上顯示文字 方塊中的插入點  
   
--   設定<xref:System.Windows.Forms.TextBox>控制項的<xref:System.Windows.Forms.Control.TabIndex%2A>屬性設`0`。  
+- 設定<xref:System.Windows.Forms.TextBox>控制項的<xref:System.Windows.Forms.Control.TabIndex%2A>屬性設`0`。  
   
 ## <a name="see-also"></a>另請參閱
 

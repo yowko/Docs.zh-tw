@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [WPF], animation
 ms.assetid: 767b9b6e-9cb7-482e-b6c2-fee7750c3995
 ms.openlocfilehash: 0f8174a2144435c9ad65904ee587355e8b38e935
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760918"
 ---
 # <a name="how-to-animate-an-ellipsegeometry"></a>HOW TO：建立 EllipseGeometry 的動畫
 此範例示範如何建立動畫<xref:System.Windows.Media.Geometry>內<xref:System.Windows.Shapes.Path>項目。 在下列範例中，<xref:System.Windows.Media.Animation.PointAnimation>用來建立動畫<xref:System.Windows.Media.EllipseGeometry.Center%2A>的<xref:System.Windows.Media.EllipseGeometry>。  

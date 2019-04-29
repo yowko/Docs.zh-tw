@@ -3,11 +3,11 @@ title: 單一並行模式中訊息的已排序處理
 ms.date: 03/30/2017
 ms.assetid: a90f5662-a796-46cd-ae33-30a4072838af
 ms.openlocfilehash: 785c2953e57eaf967209b0d9e52ab85a3a99c450
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769443"
 ---
 # <a name="ordered-processing-of-messages-in-single-concurrency-mode"></a>單一並行模式中訊息的已排序處理
 WCF 不保證訊息會處理的順序，除非基礎通道具有工作階段。  比方說，WCF 服務使用 MsmqInputChannel，不是工作階段通道，將無法處理訊息順序。 有某些情況下，開發人員可能想要在訂單處理行為，但不是想要使用工作階段。 本主題說明當服務在單一並行模式中執行時，如何設定這種行為。  

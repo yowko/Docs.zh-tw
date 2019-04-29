@@ -3,11 +3,11 @@ title: ODBC 結構描述集合
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
 ms.openlocfilehash: ffe80120ceffbe29c0a117cf1194860c5782be8c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772043"
 ---
 # <a name="odbc-schema-collections"></a>ODBC 結構描述集合
 
@@ -19,7 +19,7 @@ Microsoft SQL Server ODBC 驅動程式支援下列特定結構描述集合除了
 
 - 資料表
 
-- Indexes
+- 索引
 
 - 資料行
 
@@ -41,7 +41,7 @@ Microsoft SQL Server ODBC 驅動程式支援下列特定結構描述集合除了
 |TABLE_TYPE|String|
 |REMARKS|String|
 
-### <a name="indexes"></a>Indexes
+### <a name="indexes"></a>索引
 
 |ColumnName|DataType|
 |----------------|--------------|
@@ -170,7 +170,7 @@ Microsoft SQL Server Oracle ODBC 驅動程式支援下列特定結構描述集�
 
 - 檢視
 
-- Indexes
+- 索引
 
 ### <a name="tables-and-views"></a>Tables 與 Views
 
@@ -239,7 +239,7 @@ Microsoft SQL Server Oracle ODBC 驅動程式支援下列特定結構描述集�
 
 - 資料表
 
-- Indexes
+- 索引
 
 - 資料行
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
 ms.openlocfilehash: dbe1c0325499e7b925d504fc80f9034f9e387475
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936353"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>合併 Windows Form MenuStrip 控制項中的功能表項目
 如果您有多個文件介面 (MDI) 應用程式時，您可以合併到父表單的功能表的功能表項目或從子表單的整個功能表。  
@@ -20,9 +20,9 @@ ms.locfileid: "59231561"
 ## <a name="general-concepts"></a>一般概念  
  合併的程序牽涉到的目標和原始檔控制：  
   
--   目標是<xref:System.Windows.Forms.MenuStrip>main 或 MDI 父表單的項目，其中您要合併的功能表項目上的控制項。  
+- 目標是<xref:System.Windows.Forms.MenuStrip>main 或 MDI 父表單的項目，其中您要合併的功能表項目上的控制項。  
   
--   來源是<xref:System.Windows.Forms.MenuStrip>MDI 子表單，其中包含您想要合併到目標 功能表的功能表項目上的控制項。  
+- 來源是<xref:System.Windows.Forms.MenuStrip>MDI 子表單，其中包含您想要合併到目標 功能表的功能表項目上的控制項。  
   
  <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>屬性會識別您將會填入目前的 MDI 標題的下拉式清單中父表單的 MDI 子視窗的功能表項目。 比方說，您通常會列出在目前開啟的 MDI 子系**視窗**功能表。  
   

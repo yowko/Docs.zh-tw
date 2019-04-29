@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
 ms.openlocfilehash: d9afa49525f03c06f94b1b7b704fb3d9caa9e19d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748001"
 ---
 # <a name="serialization-and-deserialization"></a>序列化和還原序列化
 Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 <xref:System.Runtime.Serialization.DataContractSerializer> 會在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件與 XML 之間轉譯 (雙向)。 本主題會說明序列化程式的運作方式。  
@@ -109,11 +109,11 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
   
  但是，這種方法具有下列特性，而這些特性有時候可能會造成反效果：  
   
--   效能。 複寫資料沒有效率。  
+- 效能。 複寫資料沒有效率。  
   
--   循環參照。 如果物件參照到它們，就算是經由其他物件來參照，藉由複寫作業來序列化會導致無限的迴圈 (如果發生這種情況的話，序列化程式會擲回 <xref:System.Runtime.Serialization.SerializationException> )。  
+- 循環參照。 如果物件參照到它們，就算是經由其他物件來參照，藉由複寫作業來序列化會導致無限的迴圈 (如果發生這種情況的話，序列化程式會擲回 <xref:System.Runtime.Serialization.SerializationException> )。  
   
--   語意。 有時候兩個參照是針對同一個物件，而不是針對兩個一樣的物件，這點要特別注意。  
+- 語意。 有時候兩個參照是針對同一個物件，而不是針對兩個一樣的物件，這點要特別注意。  
   
  因此，某些 `DataContractSerializer` 建構函式多載包含有 `preserveObjectReferences` 參數 (預設為 `false`)。 當此參數設定為`true`，使用編碼物件的參考，其中唯一的 WCF 了解，特殊方法。 設定為 `true`時，XML 程式碼範例就會類似如下所示。  
   
@@ -131,11 +131,11 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
   
  了解此模式的限制是很重要的：  
   
--   `DataContractSerializer` 產生的 XML ( `preserveObjectReferences` 設定為 `true` ) 無法與其他任何技術互通，而且只能由另一個 `DataContractSerializer` 執行個體存取 ( `preserveObjectReferences` 同樣設定為 `true`)。  
+- `DataContractSerializer` 產生的 XML ( `preserveObjectReferences` 設定為 `true` ) 無法與其他任何技術互通，而且只能由另一個 `DataContractSerializer` 執行個體存取 ( `preserveObjectReferences` 同樣設定為 `true`)。  
   
--   此功能不支援中繼資料 (結構描述)。 產生的結構描述只有在 `preserveObjectReferences` 設定為 `false`時，才會有效。  
+- 此功能不支援中繼資料 (結構描述)。 產生的結構描述只有在 `preserveObjectReferences` 設定為 `false`時，才會有效。  
   
--   這項功能會導致序列化與還原序列化處理序執行得較慢。 雖然不需要複製資料，還是需要透過此模式來執行額外的物件比較。  
+- 這項功能會導致序列化與還原序列化處理序執行得較慢。 雖然不需要複製資料，還是需要透過此模式來執行額外的物件比較。  
   
 > [!CAUTION]
 >  啟用 `preserveObjectReferences` 模式時，請將 `maxItemsInObjectGraph` 值設定為正確的配額，這點請您要特別注意。 因為陣列在此模式中的處理方式不同，攻擊者很容易就能夠建構小型的惡意訊息，導致大量的記憶體取用只受到 `maxItemsInObjectGraph` 配額的限制。  
@@ -230,29 +230,29 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
   
  但是，還是會發生一些問題：  
   
--   安全性： 在還原序列化的 XML 中找到的任何型別會被載入。 攻擊者會利用這個漏洞來強制載入惡意型別。 只有在使用「 `NetDataContractSerializer` 序列化繫結器 *」(Serialization Binder) 時，才應該針對不受信任的資料使用* (透過 <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> 屬性或建構函式參數)。 繫結器只允許載入安全型別。 繫結器機制與 <xref:System.Runtime.Serialization> 命名空間用途中的型別相同。  
+- 安全性： 在還原序列化的 XML 中找到的任何型別會被載入。 攻擊者會利用這個漏洞來強制載入惡意型別。 只有在使用「 `NetDataContractSerializer` 序列化繫結器 *」(Serialization Binder) 時，才應該針對不受信任的資料使用* (透過 <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> 屬性或建構函式參數)。 繫結器只允許載入安全型別。 繫結器機制與 <xref:System.Runtime.Serialization> 命名空間用途中的型別相同。  
   
--   版本控制。 在 XML 中使用完整的型別與組件名稱會嚴格限制型別的版本設定。 下列為無法變更的項目：型別名稱、命名空間、組件名稱以及組件版本。 將 <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> 屬性或建構函式設定為 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> (而不是 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> 的預設值) 可允許組件版本變更，但不適用於泛型參數型別。  
+- 版本控制。 在 XML 中使用完整的型別與組件名稱會嚴格限制型別的版本設定。 下列為無法變更的項目：型別名稱、命名空間、組件名稱以及組件版本。 將 <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> 屬性或建構函式設定為 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> (而不是 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> 的預設值) 可允許組件版本變更，但不適用於泛型參數型別。  
   
--   互通性。 由於 XML 包含了 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別和組件名稱， [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 以外的平台將無法存取最後資料。  
+- 互通性。 由於 XML 包含了 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別和組件名稱， [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 以外的平台將無法存取最後資料。  
   
--   效能。 寫出型別和組件名稱會大幅增加最後 XML 的大小。  
+- 效能。 寫出型別和組件名稱會大幅增加最後 XML 的大小。  
   
  這項機制與 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 遠端處理 (特別是 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>) 所使用的二進位或 SOAP 序列化很類似。  
   
  使用 `NetDataContractSerializer` 類似於使用 `DataContractSerializer`，除了下列幾點差異以外：  
   
--   建構函式不會要求您指定根型別。 您可以使用相同的 `NetDataContractSerializer`執行個體來序列化任何型別。  
+- 建構函式不會要求您指定根型別。 您可以使用相同的 `NetDataContractSerializer`執行個體來序列化任何型別。  
   
--   建構函式不接收已知型別清單。 如果型別名稱已經序列化為 XML，就不需要建構函式機制。  
+- 建構函式不接收已知型別清單。 如果型別名稱已經序列化為 XML，就不需要建構函式機制。  
   
--   建構函式不接受資料合約代理。 反之，它們接受名為 <xref:System.Runtime.Serialization.ISurrogateSelector> (對應至 `surrogateSelector` 屬性) 的 <xref:System.Runtime.Serialization.NetDataContractSerializer.SurrogateSelector%2A> 參數。 這是一項傳統的代理機制。  
+- 建構函式不接受資料合約代理。 反之，它們接受名為 <xref:System.Runtime.Serialization.ISurrogateSelector> (對應至 `surrogateSelector` 屬性) 的 <xref:System.Runtime.Serialization.NetDataContractSerializer.SurrogateSelector%2A> 參數。 這是一項傳統的代理機制。  
   
--   建構函式接受 `assemblyFormat` 中 (對應至 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> 屬性) 名為 <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> 的參數。 如先前所述，它可用來加強序列化程式的版本控制功能。 這與二進位或 SOAP 序列化中的 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> 機制相同。  
+- 建構函式接受 `assemblyFormat` 中 (對應至 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> 屬性) 名為 <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> 的參數。 如先前所述，它可用來加強序列化程式的版本控制功能。 這與二進位或 SOAP 序列化中的 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> 機制相同。  
   
--   建構函式接受稱為 <xref:System.Runtime.Serialization.StreamingContext> (對應至 `context` 屬性) 的 <xref:System.Runtime.Serialization.NetDataContractSerializer.Context%2A> 參數。 您可以透過這項參數將資訊傳遞至正要序列化的型別中。 這項用法與其他 <xref:System.Runtime.Serialization.StreamingContext> 類別使用的 <xref:System.Runtime.Serialization> 機制用法相同。  
+- 建構函式接受稱為 <xref:System.Runtime.Serialization.StreamingContext> (對應至 `context` 屬性) 的 <xref:System.Runtime.Serialization.NetDataContractSerializer.Context%2A> 參數。 您可以透過這項參數將資訊傳遞至正要序列化的型別中。 這項用法與其他 <xref:System.Runtime.Serialization.StreamingContext> 類別使用的 <xref:System.Runtime.Serialization> 機制用法相同。  
   
--   <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> 方法都是 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> 和 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 方法的別名。 這些都是為了在使用二進位或 SOAP 序列化時提供更一致的程式設計模型而存在的。  
+- <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> 方法都是 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> 和 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 方法的別名。 這些都是為了在使用二進位或 SOAP 序列化時提供更一致的程式設計模型而存在的。  
   
  如需這些功能的詳細資訊，請參閱[二進位序列化](../../../../docs/standard/serialization/binary-serialization.md)。  
   

@@ -5,18 +5,18 @@ f1_keywords:
 - vbrID463
 ms.assetid: 40c4c622-41d8-4005-9303-c30abe0707bb
 ms.openlocfilehash: ddd87510885c308f54f4d5ff3a126ff09cf059fa
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58040298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769963"
 ---
 # <a name="class-not-registered-on-local-machine"></a>尚未在本機電腦上登錄類別
 這個錯誤通常是檔案損毀所造成。 您可能需要重新安裝 Visual Studio。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   請重新安裝 Visual Studio。  
+- 請重新安裝 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
 

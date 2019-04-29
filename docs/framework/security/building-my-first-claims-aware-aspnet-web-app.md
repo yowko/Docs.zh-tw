@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
 ms.openlocfilehash: 5a24a2117a031bfe49d0c27dbcefae6db00e6045
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792936"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>建置第一個宣告感知 ASP.NET Web 應用程式
 ## <a name="applies-to"></a>適用於  
   
--   Windows Identity Foundation (WIF)  
+- Windows Identity Foundation (WIF)  
   
--   ASP.NET  
+- ASP.NET  
   
  本主題概述使用 WIF 建置宣告感知 ASP.NET Web 應用程式的案例。 在一個宣告感知應用程式案例中，通常會有三個參與者：應用程式本身、使用者和 Security Token Service (STS)。 下列圖將說明這個案例：  
   
@@ -33,19 +33,19 @@ ms.locfileid: "59314551"
   
  STS 服務會在驗證成功後發行權杖。 Microsoft 提供兩項業界標準 STS：  
   
--   [Active Directory Federation Services (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
+- [Active Directory Federation Services (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
--   [Windows Azure 存取控制服務 (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
+- [Windows Azure 存取控制服務 (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
   
  AD FS 2.0 是 Windows Server R2 的一部分，可以當做供內部部署案例使用的 STS； ACS 則是當做 Microsoft Azure 平台的一部分而提供的雲端服務。 此外，基於測試或教育目的，您也可以使用其他 STS 建立專屬宣告感知應用程式。 例如，您可以使用屬於本機開發 STS [Identity and Access Tool for Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849)這就是線上免費提供。  
   
  若要使用 WIF 建立您的第一個宣告感知 ASP.NET 應用程式，請遵循下列其中一項指示執行：  
   
--   [如何：建置宣告感知 ASP.NET MVC Web 應用程式使用 WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+- [如何：建置宣告感知 ASP.NET MVC Web 應用程式使用 WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
--   [如何：建置宣告感知 ASP.NET Web Form 應用程式使用 WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+- [如何：建置宣告感知 ASP.NET Web Form 應用程式使用 WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
--   [如何：建置宣告感知 ASP.NET 應用程式使用表單型驗證](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+- [如何：建置宣告感知 ASP.NET 應用程式使用表單型驗證](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
 ## <a name="see-also"></a>另請參閱
 
