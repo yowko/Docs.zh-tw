@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.Request object
 ms.assetid: 93d5f0e2-6b60-4a2c-8652-d90216f6ad10
 ms.openlocfilehash: 08212dc5fe563ce84be02ab706b56195a0636894
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788631"
 ---
 # <a name="myrequest-object"></a>My.Request 物件
 取得所要求頁面的 <xref:System.Web.HttpRequest> 物件。  

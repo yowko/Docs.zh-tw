@@ -9,8 +9,8 @@ ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938784"
 ---
 # <a name="xaml-security-considerations"></a>XAML 安全性考量
 本主題描述在應用程式中的安全性最佳作法，當您使用 XAML 和.NET Framework XAML 服務 API。  
@@ -34,9 +34,9 @@ ms.locfileid: "59973439"
 ## <a name="xaml-namespaces-and-assembly-trust"></a>XAML 命名空間和組件的信任  
  基本不合格的語法與定義 XAML 如何解譯自訂的 XAML 命名空間對應至組件就不會區分之間受信任和未受信任的組件，以載入應用程式定義域中。 因此，就技術上來說可能不受信任的組件來證明其信任的組件的預定的 XAML 命名空間對應，並擷取 XAML 來源的宣告的物件和屬性資訊。 如果您有安全性需求，以避免這種情況下，您想要的 XAML 命名空間對應應在使用其中一種下列技術：  
   
--   使用您的應用程式的 XAML 所做的任何 XAML 命名空間對應中的強式名稱的完整組件名稱。  
+- 使用您的應用程式的 XAML 所做的任何 XAML 命名空間對應中的強式名稱的完整組件名稱。  
   
--   限制對應至一組固定的參考組件，藉由建構特定的組件<xref:System.Xaml.XamlSchemaContext>您 XAML 讀取器和 XAML 物件寫入器。 請參閱 <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>。  
+- 限制對應至一組固定的參考組件，藉由建構特定的組件<xref:System.Xaml.XamlSchemaContext>您 XAML 讀取器和 XAML 物件寫入器。 請參閱 <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>。  
   
 ## <a name="xaml-type-mapping-and-type-system-access"></a>XAML 型別對應和型別系統的存取權  
  XAML 支援它自己的型別系統，這在許多方面是 CLR 如何實作基本的 CLR 型別系統之對等。 不過，您會在其中進行信任決策，根據其類型資訊的型別相關的類型感知的特定部分，您應該延後至支援型別在 CLR 中的類型資訊。 這是因為一些 XAML 類型系統的特定報告功能會保持在開啟為虛擬方法，因此，並不是完全在原始的.NET Framework XAML 服務實作的控制之下。 這些擴充點存在，因為 XAML 型別系統可延伸，以符合 XAML 本身的擴充性和其可能的替代類型對應策略與預設 XAML 結構描述內容與預設 CLR 為基礎的實作。 詳細資訊，請參閱特定的附註，數個屬性上<xref:System.Xaml.XamlType>和<xref:System.Xaml.XamlMember>。  

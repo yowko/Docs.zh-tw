@@ -11,11 +11,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
 ms.openlocfilehash: 651f08812032aa1c5aacc04fdb3d7f491f12b607
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784003"
 ---
 # <a name="parameter-list-visual-basic"></a>參數清單 (Visual Basic)
 指定呼叫時，必須要有一個程序的參數。 以逗號分隔多個參數。 以下是一個參數的語法。  
@@ -63,23 +63,23 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
   
 ## <a name="rules"></a>規則  
   
--   **括號。** 如果您指定的參數清單時，您必須將它括在括號中。 如果沒有任何參數，您仍然可以使用括號括住空白清單。 這可以釐清的項目一個程序，以改善您的程式碼的可讀性。  
+- **括號。** 如果您指定的參數清單時，您必須將它括在括號中。 如果沒有任何參數，您仍然可以使用括號括住空白清單。 這可以釐清的項目一個程序，以改善您的程式碼的可讀性。  
   
--   **選擇性參數。** 如果您使用`Optional`參數的修飾詞，所有後續的參數清單中必須也是選擇性的並會宣告可透過`Optional`修飾詞。  
+- **選擇性參數。** 如果您使用`Optional`參數的修飾詞，所有後續的參數清單中必須也是選擇性的並會宣告可透過`Optional`修飾詞。  
   
      每個選擇性參數宣告必須提供`defaultvalue`子句。  
   
      如需詳細資訊，請參閱 <<c0> [ 選擇性參數](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)。  
   
--   **參數陣列。** 您必須指定`ByVal`針對`ParamArray`參數。  
+- **參數陣列。** 您必須指定`ByVal`針對`ParamArray`參數。  
   
      您無法同時使用`Optional`和`ParamArray`相同的參數清單中。  
   
      如需詳細資訊，請參閱 <<c0> [ 參數陣列](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)。  
   
--   **傳遞機制。** 每個引數的預設機制是`ByVal`，這表示程序無法變更基礎變數的項目。 不過，如果項目是參考類型，程序可以修改內容或成員的基礎物件，即使它不能取代或重新指派物件本身。  
+- **傳遞機制。** 每個引數的預設機制是`ByVal`，這表示程序無法變更基礎變數的項目。 不過，如果項目是參考類型，程序可以修改內容或成員的基礎物件，即使它不能取代或重新指派物件本身。  
   
--   **參數名稱。** 如果參數的資料類型是陣列，請遵循`parametername`立即以括號。 如需有關參數名稱的詳細資訊，請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+- **參數名稱。** 如果參數的資料類型是陣列，請遵循`parametername`立即以括號。 如需有關參數名稱的詳細資訊，請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
 ## <a name="example"></a>範例  
  下列範例所示`Function`定義兩個參數的程序。  

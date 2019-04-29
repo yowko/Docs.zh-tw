@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
 ms.openlocfilehash: 911c13b2a24c1906fe3da787460209f12296c993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928574"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>HOW TO：在組態中指定服務繫結
 在此範例中會定義基本計算機服務的 `ICalculator` 合約，該服務會在 `CalculatorService` 類別中實作，然後會在 Web.config 檔案中設定其端點，其中會指定服務使用 <xref:System.ServiceModel.BasicHttpBinding>。 如需如何設定此服務，而非組態中使用程式碼的說明，請參閱[How to:在程式碼中指定的服務繫結](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)。  

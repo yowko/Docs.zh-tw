@@ -15,11 +15,11 @@ ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 93344e1c5aa62e86d29a0110a9d8cffc3cea66ff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775098"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 分析工具和 Windows 市集應用程式
 
@@ -66,7 +66,7 @@ ms.locfileid: "57358544"
 
 整份文件、 範例程式碼會假設：
 
-- Profiler DLL 是以 c + + 撰寫的因為它必須是原生 DLL，根據 CLR Profiling API 的需求。
+- Profiler DLL 以C++，因為它必須是原生 DLL，根據 CLR Profiling API 的需求。
 
 - Profiler UI 是以 C# 撰寫的。 這並非必要，但因為沒有任何需求 Profiler UI 的程序的語言，為什麼不選擇精簡、 簡單的語言？
 
@@ -159,7 +159,7 @@ pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
 
      何處`-p 1336`表示的 Windows 市集應用程式處理序識別碼 1336，和`-tid 1424`表示執行緒 ID 1424 是暫止的執行緒。 虛擬偵錯工具會剖析從命令列 ThreadID，繼續執行該執行緒，，然後結束。
 
-     以下是一些範例來執行這項操作的 c + + 程式碼 （請務必加入錯誤檢查） ！:
+     以下是一些範例C++若要這樣做的程式碼 （請務必加入錯誤檢查） ！:
 
     ```cpp
     int wmain(int argc, wchar_t* argv[])
@@ -346,7 +346,7 @@ Profiler DLL 應該是它會記錄資訊。 基於效能考量，您可能想要
 
 如果開發人員會使用 Visual Studio 來建立新的 Windows 執行階段元件專案，該專案的組建會產生 WinMD 檔案，描述開發人員所撰寫的中繼資料 （型別描述的類別、 介面等）。 如果這個專案是以 C# 或 VB 撰寫的 managed 的語言專案，該相同的 WinMD 檔案也會包含這些類型 （亦即，它包含所有由開發人員的原始程式碼所編譯的 IL） 的實作。 這類檔案稱為受管理的 WinMD 檔案。 它們有趣，因為它們包含 Windows 執行階段中繼資料和基礎實作。
 
-相反地，如果開發人員的 c + + 建立 Windows 執行階段元件專案，該專案的組建產生 WinMD 檔案，僅包含中繼資料，並實作會編譯成不同的原生 DLL。 同樣地，隨附於 Windows SDK 的 WinMD 檔案會包含只有中繼資料，實作編譯成不同的原生 Dll 隨附為 Windows 的一部分。
+相反地，如果開發人員建立 Windows 執行階段元件專案的C++，該專案的組建產生 WinMD 檔案，僅包含中繼資料，並實作會編譯成不同的原生 DLL。 同樣地，隨附於 Windows SDK 的 WinMD 檔案會包含只有中繼資料，實作編譯成不同的原生 Dll 隨附為 Windows 的一部分。
 
 以下資訊適用於這兩個受管理的 Winmd，包含中繼資料和實作，以及未受管理的 Winmd，包含只有中繼資料。
 

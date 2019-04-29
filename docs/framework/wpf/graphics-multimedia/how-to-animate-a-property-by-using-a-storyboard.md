@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用腳本建立屬性的動畫
+title: HOW TO：使用分鏡腳本建立屬性的動畫
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - Storyboards [WPF], animation
 ms.assetid: f4a314e9-1da2-4367-85fc-1232487efa7a
 ms.openlocfilehash: f6064368b4f5e4fa8324b4039d734d4430cd9174
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761204"
 ---
-# <a name="how-to-animate-a-property-by-using-a-storyboard"></a>HOW TO：使用腳本建立屬性的動畫
+# <a name="how-to-animate-a-property-by-using-a-storyboard"></a>HOW TO：使用分鏡腳本建立屬性的動畫
 此範例示範如何使用<xref:System.Windows.Media.Animation.Storyboard>以動畫顯示屬性。 若要建立屬性動畫使用<xref:System.Windows.Media.Animation.Storyboard>，建立您想要建立動畫，並建立每一個屬性的動畫<xref:System.Windows.Media.Animation.Storyboard>以包含動畫。  
   
  屬性類型會決定要使用的動畫類型。 例如，若要建立採用屬性的動畫<xref:System.Double>值，會使用<xref:System.Windows.Media.Animation.DoubleAnimation>。 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>和<xref:System.Windows.Media.Animation.Storyboard.TargetProperty>附加的屬性指定的物件和要套用動畫的屬性。  

@@ -15,26 +15,26 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
 ms.openlocfilehash: 62e137df53d06f5aedb2701b5727c25e52f35614
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759881"
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>逐步解說：建立具有功能表合併和 ToolStrip 控制項的 MDI 表單
 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空間支援多重文件介面 (MDI) 應用程式，而 <xref:System.Windows.Forms.MenuStrip> 控制項則支援功能表合併。 MDI 表單也可以由 <xref:System.Windows.Forms.ToolStrip> 控制項建立。  
   
  本逐步解說示範如何使用<xref:System.Windows.Forms.ToolStripPanel>控制項搭配 MDI 表單。 這個表單也支援子功能表的功能表合併。 本逐步解說會說明下列工作：  
   
--   建立 Windows Forms 專案。  
+- 建立 Windows Forms 專案。  
   
--   建立主功能表為您的表單。 [] 功能表中的實際名稱而有所不同。  
+- 建立主功能表為您的表單。 [] 功能表中的實際名稱而有所不同。  
   
--   新增<xref:System.Windows.Forms.ToolStripPanel>若要控制**工具箱**。  
+- 新增<xref:System.Windows.Forms.ToolStripPanel>若要控制**工具箱**。  
   
--   建立子表單。  
+- 建立子表單。  
   
--   排列<xref:System.Windows.Forms.ToolStripPanel>依 z 軸順序的控制項。  
+- 排列<xref:System.Windows.Forms.ToolStripPanel>依 z 軸順序的控制項。  
   
  當您完成時，您必須支援功能表合併和可移動的 MDI 表單<xref:System.Windows.Forms.ToolStrip>控制項。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "59319062"
 ## <a name="prerequisites"></a>必要條件  
  若要完成這個逐步解說，您將需要：  
   
--   若要能夠建立和安裝 Visual Studio 的電腦上執行 Windows Form 應用程式專案有足夠的權限。  
+- 若要能夠建立和安裝 Visual Studio 的電腦上執行 Windows Form 應用程式專案有足夠的權限。  
   
 ## <a name="creating-the-project"></a>建立專案  
  第一個步驟是建立專案並設定表單。  
@@ -198,11 +198,11 @@ ms.locfileid: "59319062"
 ## <a name="next-steps"></a>後續步驟  
  在本逐步解說中，您已建立 MDI 父表單與<xref:System.Windows.Forms.ToolStrip>控制項和功能表合併。 您可以使用<xref:System.Windows.Forms.ToolStrip>用於許多其他用途的控制項系列：  
   
--   建立您的控制項使用的快顯功能表<xref:System.Windows.Forms.ContextMenuStrip>。 如需詳細資訊，請參閱 < [ContextMenu 元件概觀](contextmenu-component-overview-windows-forms.md)。  
+- 建立您的控制項使用的快顯功能表<xref:System.Windows.Forms.ContextMenuStrip>。 如需詳細資訊，請參閱 < [ContextMenu 元件概觀](contextmenu-component-overview-windows-forms.md)。  
   
--   使用自動填入的標準功能表中建立的表單。 如需詳細資訊，請參閱[逐步解說：對表單提供標準功能表項目](walkthrough-providing-standard-menu-items-to-a-form.md)。  
+- 使用自動填入的標準功能表中建立的表單。 如需詳細資訊，請參閱[逐步解說：對表單提供標準功能表項目](walkthrough-providing-standard-menu-items-to-a-form.md)。  
   
--   提供您<xref:System.Windows.Forms.ToolStrip>控制項專業外觀。 如需詳細資訊，請參閱[如何：設定應用程式的 ToolStrip 產生器](how-to-set-the-toolstrip-renderer-for-an-application.md)。  
+- 提供您<xref:System.Windows.Forms.ToolStrip>控制項專業外觀。 如需詳細資訊，請參閱[如何：設定應用程式的 ToolStrip 產生器](how-to-set-the-toolstrip-renderer-for-an-application.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

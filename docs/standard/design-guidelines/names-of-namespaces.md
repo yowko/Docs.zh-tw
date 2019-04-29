@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: KrzysztofCwalina
 ms.openlocfilehash: 0099c5c8a863023099b377e139461606de3e1e1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940981"
 ---
 # <a name="names-of-namespaces"></a>命名空間的名稱
 做為其他命名指導方針，命名的命名空間時的目標建立足夠的清晰度給程式設計人員立即知道命名空間的內容可能是使用架構。 下列範本指定為命名空間進行的一般規則：  
@@ -49,7 +49,7 @@ ms.locfileid: "54665132"
   
  有避免不同類別的命名空間的型別名稱衝突的特定方針。  
   
--   **應用程式模型命名空間**  
+- **應用程式模型命名空間**  
   
      屬於單一應用程式模型的命名空間會經常一起使用，但幾乎不會搭配其他應用程式模型的命名空間。 例如，<xref:System.Windows.Forms?displayProperty=nameWithType>命名空間很少可搭配使用<xref:System.Web.UI?displayProperty=nameWithType>命名空間。 以下是已知的應用程式模型命名空間群組的清單：  
   
@@ -60,11 +60,11 @@ ms.locfileid: "54665132"
   
      比方說，不會將名為的型別`Page`要<xref:System.Web.UI.Adapters?displayProperty=nameWithType>命名空間，因為<xref:System.Web.UI?displayProperty=nameWithType>命名空間已經包含名為的型別`Page`。  
   
--   **基礎結構命名空間**  
+- **基礎結構命名空間**  
   
      此群組包含很少的常見的應用程式開發期間匯入的命名空間。 比方說，`.Design`命名空間主要是用來開發程式工具。 避免衝突，這些命名空間中的類型並不重要。  
   
--   **核心命名空間**  
+- **核心命名空間**  
   
      核心命名空間包含所有`System`命名空間，但不包括應用程式模型的命名空間和基礎結構命名空間。 包含核心命名空間，其中， `System`， `System.IO`， `System.Xml`，和`System.Net`。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "54665132"
   
      比方說，永遠不會使用`Stream`做為型別名稱。 它會和衝突<xref:System.IO.Stream?displayProperty=nameWithType>、 相當常用的型別。  
   
--   **技術命名空間群組**  
+- **技術命名空間群組**  
   
      這個分類包括具有相同的前兩個命名空間節點的所有命名空間`(<Company>.<Technology>*`)，例如`Microsoft.Build.Utilities`和`Microsoft.Build.Tasks`。 很重要，彼此不衝突類型屬於單一技術。  
   

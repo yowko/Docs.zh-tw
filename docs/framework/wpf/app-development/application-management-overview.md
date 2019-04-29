@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757327"
 ---
 # <a name="application-management-overview"></a>應用程式管理概觀
 所有應用程式通常會共用一組適用於應用程式實作和管理的通用功能。 本主題提供中的功能概觀<xref:System.Windows.Application>類別來建立及管理應用程式。  
@@ -20,17 +20,17 @@ ms.locfileid: "59100076"
 ## <a name="the-application-class"></a>Application 類別  
  在 WPF 中，應用程式範圍的常見功能封裝在<xref:System.Windows.Application>類別。 <xref:System.Windows.Application>類別包括下列功能：  
   
--   追蹤應用程式存留期並與其互動。  
+- 追蹤應用程式存留期並與其互動。  
   
--   擷取及處理命令列參數。  
+- 擷取及處理命令列參數。  
   
--   偵測及回應未處理的例外狀況。  
+- 偵測及回應未處理的例外狀況。  
   
--   共用應用程式範圍的屬性和資源。  
+- 共用應用程式範圍的屬性和資源。  
   
--   管理獨立應用程式中的視窗。  
+- 管理獨立應用程式中的視窗。  
   
--   追蹤及管理瀏覽。  
+- 追蹤及管理瀏覽。  
   
 <a name="The_Application_Class"></a>   
 ## <a name="how-to-perform-common-tasks-using-the-application-class"></a>如何使用 Application 類別執行一般工作  
@@ -71,7 +71,7 @@ ms.locfileid: "59100076"
   
 - 在標記中，`Application`元素必須包含`x:Class`屬性。 應用程式建置時是否存在`x:Class`標記中的檔案時，MSBuild 會建立`partial`類別衍生自<xref:System.Windows.Application>，並具有所指定的名稱`x:Class`屬性。 這需要 XAML 結構描述的 XML 命名空間宣告 (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`)。
   
--   類別必須是在程式碼後置`partial`類別所指定的同名`x:Class`標記中的屬性，而且必須衍生自<xref:System.Windows.Application>。 這可讓程式碼後置檔案相關聯`partial`建置應用程式時，會將標記檔案產生的類別 (請參閱 <<c2> [ 建置 WPF 應用程式](building-a-wpf-application-wpf.md))。  
+- 類別必須是在程式碼後置`partial`類別所指定的同名`x:Class`標記中的屬性，而且必須衍生自<xref:System.Windows.Application>。 這可讓程式碼後置檔案相關聯`partial`建置應用程式時，會將標記檔案產生的類別 (請參閱 <<c2> [ 建置 WPF 應用程式](building-a-wpf-application-wpf.md))。  
   
 > [!NOTE]
 >  當您建立新的 WPF 應用程式專案或 WPF 瀏覽器應用程式專案使用 Visual Studio 時，應用程式定義預設會包含，並使用標記和程式碼後置定義。  
@@ -195,17 +195,17 @@ ms.locfileid: "59100076"
 ### <a name="application-activation-and-deactivation"></a>應用程式啟用和停用  
  Windows 可讓使用者應用程式之間切換。 最常見的做法是使用 ALT+TAB 按鍵組合。 應用程式可以只切換是否顯示<xref:System.Windows.Window>，使用者可以選取。 目前所選<xref:System.Windows.Window>已*作用中視窗*(也稱為*前景視窗*)，而且<xref:System.Windows.Window>接收使用者輸入。 用於作用中視窗的應用程式*作用中的應用程式*(或*前景應用程式*)。 在下列情況中，應用程式會變成使用中應用程式：  
   
--   它已啟動並顯示<xref:System.Windows.Window>。  
+- 它已啟動並顯示<xref:System.Windows.Window>。  
   
--   使用者從另一個應用程式切換選取<xref:System.Windows.Window>應用程式中。  
+- 使用者從另一個應用程式切換選取<xref:System.Windows.Window>應用程式中。  
   
  您可以偵測應用程式何時變成作用中處理<xref:System.Windows.Application.Activated?displayProperty=nameWithType>事件。  
   
  同樣地，在下列情況中，應用程式會變成非使用中：  
   
--   使用者從目前的應用程式切換至另一個應用程式。  
+- 使用者從目前的應用程式切換至另一個應用程式。  
   
--   應用程式關閉時。  
+- 應用程式關閉時。  
   
  您可以偵測應用程式何時變成非使用中處理<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType>事件。  
   
@@ -225,13 +225,13 @@ ms.locfileid: "59100076"
 ### <a name="application-shutdown"></a>應用程式關閉  
  應用程式一旦關閉，其存留期間便告結束，而應用程式關閉的可能原因包括：  
   
--   在使用者關閉每個<xref:System.Windows.Window>。  
+- 在使用者關閉每個<xref:System.Windows.Window>。  
   
--   使用者關閉主<xref:System.Windows.Window>。  
+- 使用者關閉主<xref:System.Windows.Window>。  
   
--   使用者透過登出或關機結束 Windows 工作階段。  
+- 使用者透過登出或關機結束 Windows 工作階段。  
   
--   已符合應用程式特定條件。  
+- 已符合應用程式特定條件。  
   
  若要可協助您管理應用程式關閉<xref:System.Windows.Application>提供<xref:System.Windows.Application.Shutdown%2A>方法，<xref:System.Windows.Application.ShutdownMode%2A>屬性，而<xref:System.Windows.Application.SessionEnding>和<xref:System.Windows.Application.Exit>事件。  
   
@@ -241,11 +241,11 @@ ms.locfileid: "59100076"
 #### <a name="shutdown-mode"></a>程式關閉模式  
  大多數應用程式會在所有視窗關閉或主視窗關閉時一併關閉。 不過有時候，應用程式關閉的時機可能是由其他應用程式特定條件決定。 您可以指定在其下您的應用程式將會關閉設定的條件<xref:System.Windows.Application.ShutdownMode%2A>具有下列其中一種<xref:System.Windows.ShutdownMode>列舉值：  
   
--   <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
+- <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
   
--   <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
+- <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
   
--   <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
+- <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
   
  預設值<xref:System.Windows.Application.ShutdownMode%2A>是<xref:System.Windows.ShutdownMode.OnLastWindowClose>，也就是說，應用程式會自動關閉應用程式的最後一個視窗由使用者關閉時。 不過，如果您的應用程式，應關閉主視窗關閉時，WPF 會自動執行，如果您設定<xref:System.Windows.Application.ShutdownMode%2A>至<xref:System.Windows.ShutdownMode.OnMainWindowClose>。 這在下列範例中顯示。  
   
@@ -259,13 +259,13 @@ ms.locfileid: "59100076"
 #### <a name="session-ending"></a>工作階段結束  
  所描述的關閉條件<xref:System.Windows.Application.ShutdownMode%2A>屬性專屬於應用程式。 不過在某些情況下，應用程式可能會因為外部狀況而關閉。 最常見的外部狀況發生於當使用者結束 Windows 工作階段，透過下列動作：  
   
--   登出  
+- 登出  
   
--   關機  
+- 關機  
   
--   重新啟動  
+- 重新啟動  
   
--   休眠  
+- 休眠  
   
  若要偵測 Windows 工作階段結束時，您可以處理<xref:System.Windows.Application.SessionEnding>事件，如下列範例所示。  
   
@@ -291,11 +291,11 @@ ms.locfileid: "59100076"
   
  <xref:System.Windows.Application.Exit> 獨立應用程式，Xbap 可以處理。 Xbap，<xref:System.Windows.Application.Exit>會在下列情況中引發：  
   
--   XBAP 已巡覽以外的位置。  
+- XBAP 已巡覽以外的位置。  
   
--   在  [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]，當裝載 XBAP [] 索引標籤已關閉。  
+- 在  [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]，當裝載 XBAP [] 索引標籤已關閉。  
   
--   關閉瀏覽器時。  
+- 關閉瀏覽器時。  
   
 #### <a name="exit-code"></a>結束代碼  
  應用程式大部分是由作業系統啟動，以回應使用者要求。 不過，應用程式可由另一個應用程式啟動，以執行某項特定工作。 關閉已啟動的應用程式時，正在啟動的應用程式可能需要知道已啟動之應用程式的關閉條件。 在這些情況下，Windows 會讓應用程式在關閉傳回的應用程式結束代碼。 根據預設，WPF 應用程式會傳回結束代碼值為 0。  
@@ -325,11 +325,11 @@ ms.locfileid: "59100076"
   
  從使用者體驗的觀點來看，應用程式最好能夠藉由執行下列部分或所有動作，來避免此預設行為：  
   
--   顯示方便使用的資訊。  
+- 顯示方便使用的資訊。  
   
--   嘗試繼續執行應用程式。  
+- 嘗試繼續執行應用程式。  
   
--   記錄詳細，Windows 事件記錄檔中的開發人員易用的例外狀況資訊。  
+- 記錄詳細，Windows 事件記錄檔中的開發人員易用的例外狀況資訊。  
   
  實作這項支援取決於能夠偵測未處理的例外狀況，這是什麼<xref:System.Windows.Application.DispatcherUnhandledException>都會引發事件。  
   

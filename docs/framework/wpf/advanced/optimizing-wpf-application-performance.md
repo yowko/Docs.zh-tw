@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
 ms.openlocfilehash: 53291a0e428b723cd7a6e7b1184639a7b3c3b972
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772979"
 ---
 # <a name="optimizing-wpf-application-performance"></a>最佳化 WPF 應用程式效能
 本節的目的要當做參考[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式開發人員所需的方法，來改進其應用程式的效能。 如果您是開發人員而言是 Microsoft.NET Framework 的新功能和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，您應該先熟悉這兩個平台。 本章節的同時的操作知識，並撰寫的程式設計人員已經知道如何取得其應用程式啟動並執行。  

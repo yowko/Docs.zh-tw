@@ -16,38 +16,38 @@ helpviewer_keywords:
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
 ms.openlocfilehash: 456308e37bddc1df86b49085139a3810c4959a58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763049"
 ---
 # <a name="easing-functions"></a>Easing 函式
 Easing 函式可讓您將自訂的數學公式套用至動畫。 例如，您可能想要物件實際表現出反彈或像是在彈簧上一樣。 您可以使用主要畫面格或甚至 From/To/By 動畫來模擬這些效果，但所需的工作量可能很大，而且和使用數學公式相比，動畫會較不精確。  
   
  除了建立您自己自訂的 easing 函式，藉由繼承自<xref:System.Windows.Media.Animation.EasingFunctionBase>，您可以使用其中一個執行階段所提供的數個 easing 函式來建立常見效果。  
   
--   <xref:System.Windows.Media.Animation.BackEase>：會開始指定的路徑顯示動畫之前稍微撤回動畫的動作。  
+- <xref:System.Windows.Media.Animation.BackEase>：會開始指定的路徑顯示動畫之前稍微撤回動畫的動作。  
   
--   <xref:System.Windows.Media.Animation.BounceEase>：建立彈跳效果。  
+- <xref:System.Windows.Media.Animation.BounceEase>：建立彈跳效果。  
   
--   <xref:System.Windows.Media.Animation.CircleEase>：用來建立加速和/或減速使用循環函式的動畫。  
+- <xref:System.Windows.Media.Animation.CircleEase>：用來建立加速和/或減速使用循環函式的動畫。  
   
--   <xref:System.Windows.Media.Animation.CubicEase>：來建立加速和/或減速使用公式的動畫*f*(*t*) = *t*<sup>3</sup>。  
+- <xref:System.Windows.Media.Animation.CubicEase>：來建立加速和/或減速使用公式的動畫*f*(*t*) = *t*<sup>3</sup>。  
   
--   <xref:System.Windows.Media.Animation.ElasticEase>：建立類似彈簧來回擺動直到來回的動畫。  
+- <xref:System.Windows.Media.Animation.ElasticEase>：建立類似彈簧來回擺動直到來回的動畫。  
   
--   <xref:System.Windows.Media.Animation.ExponentialEase>：用來建立加速和/或減速使用指數公式的動畫。  
+- <xref:System.Windows.Media.Animation.ExponentialEase>：用來建立加速和/或減速使用指數公式的動畫。  
   
--   <xref:System.Windows.Media.Animation.PowerEase>：來建立加速和/或減速使用公式的動畫*f*(*t*) = *t*<sup>p</sup>其中 p 等於<xref:System.Windows.Media.Animation.PowerEase.Power%2A>屬性。  
+- <xref:System.Windows.Media.Animation.PowerEase>：來建立加速和/或減速使用公式的動畫*f*(*t*) = *t*<sup>p</sup>其中 p 等於<xref:System.Windows.Media.Animation.PowerEase.Power%2A>屬性。  
   
--   <xref:System.Windows.Media.Animation.QuadraticEase>：來建立加速和/或減速使用公式的動畫*f*(*t*) = *t*<sup>2</sup>。  
+- <xref:System.Windows.Media.Animation.QuadraticEase>：來建立加速和/或減速使用公式的動畫*f*(*t*) = *t*<sup>2</sup>。  
   
--   <xref:System.Windows.Media.Animation.QuarticEase>：來建立加速和/或減速使用公式的動畫*f*(*t*) = *t*<sup>4</sup>。  
+- <xref:System.Windows.Media.Animation.QuarticEase>：來建立加速和/或減速使用公式的動畫*f*(*t*) = *t*<sup>4</sup>。  
   
--   <xref:System.Windows.Media.Animation.QuinticEase>：建立可加速和/或減速使用公式的動畫*f*(*t*) = *t*<sup>5</sup>。  
+- <xref:System.Windows.Media.Animation.QuinticEase>：建立可加速和/或減速使用公式的動畫*f*(*t*) = *t*<sup>5</sup>。  
   
--   <xref:System.Windows.Media.Animation.SineEase>：用來建立加速和/或減速使用正弦公式的動畫。  
+- <xref:System.Windows.Media.Animation.SineEase>：用來建立加速和/或減速使用正弦公式的動畫。  
   
  若要套用至動畫的 easing 函式，使用`EasingFunction`動畫的屬性會指定要套用至動畫的 easing 函式。 下列範例會套用<xref:System.Windows.Media.Animation.BounceEase>easing 函式以<xref:System.Windows.Media.Animation.DoubleAnimation>建立彈跳效果。  
   
@@ -59,11 +59,11 @@ Easing 函式可讓您將自訂的數學公式套用至動畫。 例如，您可
   
  您可以使用<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>屬性來改變 easing 函式的運作方式，也就是變更動畫插入的方式。 有三個可能的值，您可以為<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseIn>：插補會遵循相關聯的 easing 函式的數學公式。  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseIn>：插補會遵循相關聯的 easing 函式的數學公式。  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseOut>：插補會遵循 100%插補減去輸出相關聯的 easing 函式的公式。  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseOut>：插補會遵循 100%插補減去輸出相關聯的 easing 函式的公式。  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>：內插補點會使用<xref:System.Windows.Media.Animation.EasingMode.EaseIn>動畫的前半和<xref:System.Windows.Media.Animation.EasingMode.EaseOut>的後半部。  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>：內插補點會使用<xref:System.Windows.Media.Animation.EasingMode.EaseIn>動畫的前半和<xref:System.Windows.Media.Animation.EasingMode.EaseOut>的後半部。  
   
  下圖示範不同的值<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>何處*f*(*x*) 代表動畫進度並*t*代表時間。  
   

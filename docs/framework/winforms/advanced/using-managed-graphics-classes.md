@@ -7,11 +7,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], managed classes
 ms.assetid: e6d1a42d-2100-46aa-97e6-a5ddc0baaae5
 ms.openlocfilehash: 86f6b3fff1937694f4b7890249e36d5e12b769dc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766164"
 ---
 # <a name="using-managed-graphics-classes"></a>使用 Managed 圖形類別
 下列主題說明如何使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]managed 的類別 framework 中的 API。  

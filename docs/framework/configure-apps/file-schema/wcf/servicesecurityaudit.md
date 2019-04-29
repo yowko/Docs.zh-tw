@@ -3,11 +3,11 @@ title: <serviceSecurityAudit>
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
 ms.openlocfilehash: 384a1cdb6d39f4d6ecd2353a15c0da7c6d2e82bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758115"
 ---
 # <a name="servicesecurityaudit"></a>\<serviceSecurityAudit>
 指定在服務作業期間啟用安全性事件稽核的設定。  

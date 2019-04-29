@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: KrzysztofCwalina
 ms.openlocfilehash: c8aeb5ce3d93755f30bf68732592a08d7af54957
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762055"
 ---
 # <a name="sealing"></a>密封
 物件導向的架構功能之一是開發人員可以擴充並自訂它們以非預期的架構設計人員的方式。 這是設計的電源和可延伸的危險。 當您設計您的架構時，它，因此它是時需要它，則應該仔細設計擴充性，以及限制擴充性，會有問題時非常重要。  
@@ -27,13 +27,13 @@ ms.locfileid: "54646655"
   
  很好的理由，用於密封類別包括下列各項：  
   
--   類別是靜態類別。 請參閱[靜態類別設計](../../../docs/standard/design-guidelines/static-class.md)。  
+- 類別是靜態類別。 請參閱[靜態類別設計](../../../docs/standard/design-guidelines/static-class.md)。  
   
--   此類別會繼承的 protected 成員中儲存安全性敏感密碼。  
+- 此類別會繼承的 protected 成員中儲存安全性敏感密碼。  
   
--   類別繼承許多虛擬成員，而且個別密封它們的成本會超過保留的未密封的類別的優點。  
+- 類別繼承許多虛擬成員，而且個別密封它們的成本會超過保留的未密封的類別的優點。  
   
--   此類別是需要非常快速的執行階段查閱的屬性。 密封的屬性會有較高的效能層級，於未密封的。 請參閱[屬性](../../../docs/standard/design-guidelines/attributes.md)。  
+- 此類別是需要非常快速的執行階段查閱的屬性。 密封的屬性會有較高的效能層級，於未密封的。 請參閱[屬性](../../../docs/standard/design-guidelines/attributes.md)。  
   
  **X DO NOT** 在密封類型上宣告受保護或虛擬的成員。  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
 ms.openlocfilehash: 492a7474a38a7e41b7e3b3f59dfa118c30256ea4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791790"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>疑難排解程序 (Visual Basic)
 此頁面會列出處理程序時所發生的一些常見問題。  
@@ -46,9 +46,9 @@ ms.locfileid: "58830132"
 ## <a name="argument-not-being-modified-by-procedure-call"></a>引數不修改程序呼叫  
  如果您想要允許的程序來變更基礎呼叫程式碼中的引數的程式設計項目，您必須將它傳遞的參考。 但一個程序可以存取的參考型別引數的項目，即使您傳值方式傳遞。  
   
--   **基礎變數**。 若要允許的程序來取代基礎變數項目本身的值，此程序必須宣告的參數[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)。 此外，呼叫程式碼必須沒有引數括號括住，因為，將會覆寫`ByRef`傳遞機制。  
+- **基礎變數**。 若要允許的程序來取代基礎變數項目本身的值，此程序必須宣告的參數[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)。 此外，呼叫程式碼必須沒有引數括號括住，因為，將會覆寫`ByRef`傳遞機制。  
   
--   **參考型別項目**。 如果您宣告的參數[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)，程序無法修改基礎變數項目本身。 不過，如果引數是參考類型，程序可以修改它所指向，物件的成員即使它不能取代變數的值。 比方說，如果引數陣列變數，程序無法將新的陣列指派給它，但它可以變更一或多個子項目。 已變更的項目會反映在呼叫程式碼中的陣列變數。  
+- **參考型別項目**。 如果您宣告的參數[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)，程序無法修改基礎變數項目本身。 不過，如果引數是參考類型，程序可以修改它所指向，物件的成員即使它不能取代變數的值。 比方說，如果引數陣列變數，程序無法將新的陣列指派給它，但它可以變更一或多個子項目。 已變更的項目會反映在呼叫程式碼中的陣列變數。  
   
  下列範例會定義兩個程序，以傳值方式取得陣列變數和操作其項目上。 程序`increase`直接新增至每個項目。 程序`replace`將新的陣列指派給參數`a()`，然後新增一個每個項目。 不過，重新指派不會影響呼叫端程式碼中的陣列變數因為`a()`宣告`ByVal`。  
   
@@ -75,13 +75,13 @@ ms.locfileid: "58830132"
   
  下列項目，即使它們屬於 [參數] 清單中，不是元件的程序的簽章：  
   
--   程序修飾詞關鍵字，例如`Public`， `Shared`，及 `Static`  
+- 程序修飾詞關鍵字，例如`Public`， `Shared`，及 `Static`  
   
--   參數名稱  
+- 參數名稱  
   
--   參數修飾詞關鍵字，例如`ByRef`和 `Optional`  
+- 參數修飾詞關鍵字，例如`ByRef`和 `Optional`  
   
--   傳回值 （除了轉換運算子） 的資料類型  
+- 傳回值 （除了轉換運算子） 的資料類型  
   
  若要多載程序，不能只改變一個或多個先前的項目。  
   
@@ -95,11 +95,11 @@ ms.locfileid: "58830132"
   
  當您已經決定您想要呼叫哪個多的載時，請務必遵守下列規則：  
   
--   請提供正確數目的引數，並以正確的順序。  
+- 請提供正確數目的引數，並以正確的順序。  
   
--   在理想情況下，您的引數應該完全相同的資料類型與對應的參數。 在任何情況下，每個引數的資料類型必須擴展為，其對應參數。 這是 true，即使[Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)設定為`Off`。 如果多載都需要任何引數清單，請多載的縮小轉換不符合資格，來呼叫。  
+- 在理想情況下，您的引數應該完全相同的資料類型與對應的參數。 在任何情況下，每個引數的資料類型必須擴展為，其對應參數。 這是 true，即使[Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)設定為`Off`。 如果多載都需要任何引數清單，請多載的縮小轉換不符合資格，來呼叫。  
   
--   如果您提供需要擴展的引數，請為對應的參數資料類型，盡可能接近其資料類型。 如果兩個或多個多載會接受引數的資料型別，編譯器會解析您最少擴展的呼叫多載的呼叫。  
+- 如果您提供需要擴展的引數，請為對應的參數資料類型，盡可能接近其資料類型。 如果兩個或多個多載會接受引數的資料型別，編譯器會解析您最少擴展的呼叫多載的呼叫。  
   
  您可以使用，以降低可能發生的資料類型不符[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)轉換關鍵字，準備您的引數時。  
   

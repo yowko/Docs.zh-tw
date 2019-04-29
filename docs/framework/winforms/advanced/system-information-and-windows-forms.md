@@ -11,11 +11,11 @@ helpviewer_keywords:
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
 ms.openlocfilehash: eeb469dbf4553634aa50d0a9ea17e9b2464defb4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934689"
 ---
 # <a name="system-information-and-windows-forms"></a>系統資訊和 Windows Form
 有時候就必須蒐集電腦上執行您的應用程式以在您的程式碼中進行決策的相關資訊。 例如，您可能只是適用於連線到特定的網路網域; 函式在此情況下，您必須判斷網域和停用此函式，如果網域不存在的方法。  

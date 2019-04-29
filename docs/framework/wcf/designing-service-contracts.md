@@ -8,11 +8,11 @@ helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
 ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785030"
 ---
 # <a name="designing-service-contracts"></a>設計服務合約
 本主題說明何謂服務合約、如何定義服務合約、能夠進行哪些作業 (以及對基礎訊息交換的影響)、使用哪些資料型別以及其他問題，協助您設計能夠適當滿足情況需求的作業。  
@@ -24,28 +24,28 @@ ms.locfileid: "59102735"
   
  本主題將說明設計服務合約時的決策點：  
   
--   使用類別或介面。  
+- 使用類別或介面。  
   
--   如何指定要交換的資料型別。  
+- 如何指定要交換的資料型別。  
   
--   您可以使用的交換模式類型。  
+- 您可以使用的交換模式類型。  
   
--   是否可以在合約中加入明確的安全性需求。  
+- 是否可以在合約中加入明確的安全性需求。  
   
--   作業輸入和輸出的限制。  
+- 作業輸入和輸出的限制。  
   
 ## <a name="classes-or-interfaces"></a>類別或介面  
  類別和介面，代表功能的群組，因此，兩者都可以用來定義 WCF 服務合約。 不過，建議您使用介面，因為介面會直接建立服務合約的模型。 在沒有實作的情況下，介面的功能不過就是定義包含特定簽章的方法群組。 實作服務合約介面，並已實作的 WCF 服務。  
   
  Managed 介面的所有優勢都會套用至服務合約介面：  
   
--   服務合約介面可擴充任意數目的其他服務合約介面。  
+- 服務合約介面可擴充任意數目的其他服務合約介面。  
   
--   單一類別可藉由實作服務合約介面的方式，實作任意數目的服務合約。  
+- 單一類別可藉由實作服務合約介面的方式，實作任意數目的服務合約。  
   
--   您可以藉由變更介面實作的方式修改服務合約的實作，同時讓服務合約維持不變。  
+- 您可以藉由變更介面實作的方式修改服務合約的實作，同時讓服務合約維持不變。  
   
--   您只要實作舊介面和新介面，就能設定服務的版本。 舊的用戶端可連接到原始版本，而新的用戶端則可連接到新版本。  
+- 您只要實作舊介面和新介面，就能設定服務的版本。 舊的用戶端可連接到原始版本，而新的用戶端則可連接到新版本。  
   
 > [!NOTE]
 >  繼承自其他服務合約介面時，無法覆寫如名稱或命名空間這類作業屬性。 如果您嘗試這樣做，則會在目前的服務合約中建立新作業。  
@@ -251,11 +251,11 @@ End Interface
   
  實作此 `IExplicitProtectionLevelSampleService` 合約且擁有使用預設 <xref:System.ServiceModel.WSHttpBinding> (預設的 <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType>，也就是 <xref:System.ServiceModel.SecurityMode.Message>) 之端點的服務會有下列行為：  
   
--   `GetString` 作業訊息會經過加密及簽署。  
+- `GetString` 作業訊息會經過加密及簽署。  
   
--   `GetInt` 作業訊息會以未加密且未簽署的文字 (也就是純文字) 傳送。  
+- `GetInt` 作業訊息會以未加密且未簽署的文字 (也就是純文字) 傳送。  
   
--   `GetGuid` 作業 <xref:System.Guid?displayProperty=nameWithType> 會在加密且簽署的訊息中傳回。  
+- `GetGuid` 作業 <xref:System.Guid?displayProperty=nameWithType> 會在加密且簽署的訊息中傳回。  
   
  如需保護層級和使用方式的詳細資訊，請參閱[了解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)。 如需有關安全性的詳細資訊，請參閱 < [Securing Services](../../../docs/framework/wcf/securing-services.md)。  
   

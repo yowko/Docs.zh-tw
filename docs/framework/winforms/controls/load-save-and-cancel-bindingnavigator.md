@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
 ms.openlocfilehash: 4d5cc91ca8bf71b2d5893f591652d777041e1a4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757364"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>HOW TO：將 [載入]、[儲存] 和 [取消] 按鈕新增至 Windows Forms BindingNavigator 控制項
 <xref:System.Windows.Forms.BindingNavigator>控制項是特殊用途<xref:System.Windows.Forms.ToolStrip>適用於瀏覽和操作您的表單上繫結至資料的控制項的控制項。  
@@ -40,15 +40,15 @@ ms.locfileid: "59304775"
   
 7. 在 **項目集合編輯器**，完成下列步驟：  
   
-    1.  新增<xref:System.Windows.Forms.ToolStripSeparator>和三個<xref:System.Windows.Forms.ToolStripButton>藉由選取適當類型的項目<xref:System.Windows.Forms.ToolStripItem>，然後按一下**新增** 按鈕。  
+    1. 新增<xref:System.Windows.Forms.ToolStripSeparator>和三個<xref:System.Windows.Forms.ToolStripButton>藉由選取適當類型的項目<xref:System.Windows.Forms.ToolStripItem>，然後按一下**新增** 按鈕。  
   
-    2.  設定<xref:System.Windows.Forms.ToolStripItem.Name%2A> 按鈕的屬性**LoadButton**， **SaveButton**，和**CancelButton**分別。  
+    2. 設定<xref:System.Windows.Forms.ToolStripItem.Name%2A> 按鈕的屬性**LoadButton**， **SaveButton**，和**CancelButton**分別。  
   
-    3.  設定<xref:System.Windows.Forms.ToolStripItem.Text%2A> 按鈕的屬性**負載**，**儲存**，和**取消**。  
+    3. 設定<xref:System.Windows.Forms.ToolStripItem.Text%2A> 按鈕的屬性**負載**，**儲存**，和**取消**。  
   
-    4.  設定<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 按鈕的每個屬性**文字**。 或者，您可以設定此屬性，**映像**或是**ImageAndText**，並設定要顯示在影像<xref:System.Windows.Forms.ToolStripItem.Image%2A>屬性。  
+    4. 設定<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 按鈕的每個屬性**文字**。 或者，您可以設定此屬性，**映像**或是**ImageAndText**，並設定要顯示在影像<xref:System.Windows.Forms.ToolStripItem.Image%2A>屬性。  
   
-    5.  按一下 **確定**以關閉對話方塊。按鈕會新增至<xref:System.Windows.Forms.ToolStrip>。  
+    5. 按一下 **確定**以關閉對話方塊。按鈕會新增至<xref:System.Windows.Forms.ToolStrip>。  
   
 8. 以滑鼠右鍵按一下表單，然後選擇 **檢視程式碼**。  
   

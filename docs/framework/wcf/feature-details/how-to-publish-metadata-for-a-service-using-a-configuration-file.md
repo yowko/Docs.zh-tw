@@ -3,11 +3,11 @@ title: HOW TO：使用組態檔發行服務的中繼資料
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
 ms.openlocfilehash: 367ebeee5c12d809a758f1bee73dfaadda85788d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761451"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>HOW TO：使用組態檔發行服務的中繼資料
 這是其中兩個示範 Windows Communication Foundation (WCF) 服務發行中繼資料的使用說明主題。 有兩種方法可以指定服務發行中繼資料的方式，分別是使用組態檔和使用程式碼。 本主題說明如何使用組態檔發行服務的中繼資料。  
@@ -140,21 +140,21 @@ namespace Metadata.Samples
   
 7. 針對上一個步驟中加入的中繼資料端點，將 `binding` 屬性設為下列其中一項：  
   
-    -   `mexHttpBinding` (適用 HTTP 發行)。  
+    - `mexHttpBinding` (適用 HTTP 發行)。  
   
-    -   `mexHttpsBinding` (適用 HTTPS 發行)。  
+    - `mexHttpsBinding` (適用 HTTPS 發行)。  
   
-    -   `mexNamedPipeBinding` (適用具名管道發行)。  
+    - `mexNamedPipeBinding` (適用具名管道發行)。  
   
-    -   `mexTcpBinding` (適用 TCP 發行)。  
+    - `mexTcpBinding` (適用 TCP 發行)。  
   
 8. 針對上一個步驟中加入的中繼資料端點，將位址設為與下列項目相等：  
   
-    -   如果基底位址與中繼資料繫結相同，則設定空字串以使用主應用程式的基底位址做為發行點。  
+    - 如果基底位址與中繼資料繫結相同，則設定空字串以使用主應用程式的基底位址做為發行點。  
   
-    -   如果主應用程式具有基底位址，則設為相對位址。  
+    - 如果主應用程式具有基底位址，則設為相對位址。  
   
-    -   絕對位址。  
+    - 絕對位址。  
   
 9. 建置並執行主控台應用程式。  
   

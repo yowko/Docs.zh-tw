@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
 ms.openlocfilehash: 69f93b902fc3c35749871a187e57d45a404c6602
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59055049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766973"
 ---
 # <a name="listbox"></a>ListBox
 A<xref:System.Windows.Controls.ListBox>控制項可讓使用者可選取的項目清單。  

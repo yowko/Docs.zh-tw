@@ -8,11 +8,11 @@ helpviewer_keywords:
 - flow content reference [WPF]
 ms.assetid: d32501af-0bac-4b80-8a20-61a6996753fe
 ms.openlocfilehash: 47bdc48eb6f2fcb0ffd73f06a58bd01d716e56fc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789294"
 ---
 # <a name="flow-content"></a>非固定格式內容
 非固定格式內容項目提供了建置組塊來建立非固定格式內容適用於裝載在<xref:System.Windows.Documents.FlowDocument>。  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
 ms.openlocfilehash: 8ea4c77056701b8f61c1ed5a53cf20d98ae913bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791946"
 ---
 # <a name="parameter-arrays-visual-basic"></a>參數陣列 (Visual Basic)
 通常，您無法呼叫多個引數數目比程序宣告指定的程序。 當您需要不定數目的引數時，您可以宣告*參數陣列*，可讓程序以接受參數值的陣列。 您不必知道參數陣列中的項目數，當您定義的程序。 陣列大小取決於個別的程序的每個呼叫。  
@@ -23,22 +23,22 @@ ms.locfileid: "58834152"
 ## <a name="declaring-a-paramarray"></a>宣告參數陣列  
  您使用[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)關鍵字來表示參數清單中的參數陣列。 可套用下列規則：  
   
--   程序可以定義只有一個參數陣列，而且必須是程序定義中的最後一個參數。  
+- 程序可以定義只有一個參數陣列，而且必須是程序定義中的最後一個參數。  
   
--   參數陣列必須傳值方式傳遞。 它是良好的程式設計做法明確納入[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)程序定義中的關鍵字。  
+- 參數陣列必須傳值方式傳遞。 它是良好的程式設計做法明確納入[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)程序定義中的關鍵字。  
   
--   參數陣列會自動為選擇性的。 其預設值是空的一維陣列，參數陣列的項目型別。  
+- 參數陣列會自動為選擇性的。 其預設值是空的一維陣列，參數陣列的項目型別。  
   
--   之前參數陣列的所有參數必須都是必要的。 參數陣列必須是唯一的選擇性參數。  
+- 之前參數陣列的所有參數必須都是必要的。 參數陣列必須是唯一的選擇性參數。  
   
 ## <a name="calling-a-paramarray"></a>呼叫的參數陣列  
  當您呼叫定義的參數陣列的程序時，您可以在任何一種以下列方式提供引數：  
   
--   執行任何動作，也就是您可以省略[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)引數。 在此情況下，空的陣列會傳遞至程序。 您也可以傳遞[Nothing](../../../../visual-basic/language-reference/nothing.md)關鍵字，使用相同的效果。  
+- 執行任何動作，也就是您可以省略[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)引數。 在此情況下，空的陣列會傳遞至程序。 您也可以傳遞[Nothing](../../../../visual-basic/language-reference/nothing.md)關鍵字，使用相同的效果。  
   
--   任意數目的引數，並以逗號分隔清單。 每個引數的資料類型必須是隱含地轉換成`ParamArray`項目型別。  
+- 任意數目的引數，並以逗號分隔清單。 每個引數的資料類型必須是隱含地轉換成`ParamArray`項目型別。  
   
--   具有相同的項目型別，做為參數陣列的項目類型的陣列。  
+- 具有相同的項目型別，做為參數陣列的項目類型的陣列。  
   
  在所有情況下，此程序中的程式碼，請將視為具有相同的資料類型之項目的一維陣列的參數陣列`ParamArray`資料型別。  
   

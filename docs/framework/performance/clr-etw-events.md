@@ -9,18 +9,18 @@ ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cb7520518497b244be8be3751ca8a3063a02717a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788007"
 ---
 # <a name="clr-etw-events"></a>CLR ETW 事件
 本節中的主題描述 Windows (ETW) 事件的事件追蹤。 每個事件都有相關聯的關鍵字和層級，如 [CLR ETW 關鍵字和層級](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)主題中所述。 CLR 具有事件的兩個提供者：  
   
--   執行階段提供者，以根據啟用哪些關鍵字 (事件的類別) 來引發事件。 CLR 執行階段提供者 GUID 是 e13c0d23-ccbc-4e12-931b-d9cc2eee27e4。  
+- 執行階段提供者，以根據啟用哪些關鍵字 (事件的類別) 來引發事件。 CLR 執行階段提供者 GUID 是 e13c0d23-ccbc-4e12-931b-d9cc2eee27e4。  
   
--   具有特殊用途的取消提供者。 CLR 取消提供者 GUID 是 a669021c-c450-4609-a035-5af59af4df18。  
+- 具有特殊用途的取消提供者。 CLR 取消提供者 GUID 是 a669021c-c450-4609-a035-5af59af4df18。  
   
  如需提供者的詳細資訊，請參閱 [CLR ETW 提供者](../../../docs/framework/performance/clr-etw-providers.md)。  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
 ms.openlocfilehash: 3d7e44a468388f6d9a8f30d7fea29ec465cd8664
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935508"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和非同步作業
 本主題討論實作和呼叫非同步服務作業。  
@@ -27,24 +27,24 @@ ms.locfileid: "59770863"
   
  服務合約與服務或用戶端實作無關，而這樣的獨立性可在 WCF 應用程式中進行下列形式的非同步執行：  
   
--   用戶端可以使用同步訊息交換，以非同步方式叫用要求/回應作業。  
+- 用戶端可以使用同步訊息交換，以非同步方式叫用要求/回應作業。  
   
--   服務可以使用同步訊息交換，來以非同步方式實作要求/回應作業。  
+- 服務可以使用同步訊息交換，來以非同步方式實作要求/回應作業。  
   
--   不管用戶端或服務的實作如何，訊息交換可以是單向。  
+- 不管用戶端或服務的實作如何，訊息交換可以是單向。  
   
 ### <a name="suggested-asynchronous-scenarios"></a>建議的非同步案例  
  如果作業服務實作發出封鎖呼叫 (例如進行 I/O 工作)，這時請在服務作業實作中使用非同步方法。 當您處於非同步作業實作中時，請嘗試呼叫非同步作業和方法，盡可能地延伸非同步呼叫路徑。 例如，從 `BeginOperationTwo()` 內呼叫 `BeginOperationOne()`。  
   
--   在下列情況中，在用戶端中使用非同步化方法或呼叫應用程式：  
+- 在下列情況中，在用戶端中使用非同步化方法或呼叫應用程式：  
   
--   如果您是從中介層應用程式叫用作業。 (如需此類案例的詳細資訊，請參閱[中介層用戶端應用程式](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md))。  
+- 如果您是從中介層應用程式叫用作業。 (如需此類案例的詳細資訊，請參閱[中介層用戶端應用程式](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md))。  
   
--   如果您是叫用 ASP.NET 頁面內的作業，請使用非同步頁面。  
+- 如果您是叫用 ASP.NET 頁面內的作業，請使用非同步頁面。  
   
--   如果您是從任何為單一執行緒的應用程式叫用作業，例如 Windows Forms 或 Windows Presentation Foundation (WPF)。 使用事件架構非同步呼叫模型時，結果事件會在 UI 執行緒上引發，並將回應新增至應用程式中，而不需要您自己去處理多個執行緒。  
+- 如果您是從任何為單一執行緒的應用程式叫用作業，例如 Windows Forms 或 Windows Presentation Foundation (WPF)。 使用事件架構非同步呼叫模型時，結果事件會在 UI 執行緒上引發，並將回應新增至應用程式中，而不需要您自己去處理多個執行緒。  
   
--   一般而言，如果您在同步與非同步呼叫之間有選擇，請選擇非同步呼叫。  
+- 一般而言，如果您在同步與非同步呼叫之間有選擇，請選擇非同步呼叫。  
   
 ### <a name="implementing-an-asynchronous-service-operation"></a>實作非同步服務作業  
  您可以使用下列三個方法的其中一個來實作非同步服務作業：  
@@ -118,11 +118,11 @@ public class AsyncExample
   
  若不管在用戶端應用程式中呼叫合約作業的方式，而要定義以非同步方式執行的合約作業 `X`：  
   
--   使用模式 `BeginOperation` 和 `EndOperation` 定義兩種方法。  
+- 使用模式 `BeginOperation` 和 `EndOperation` 定義兩種方法。  
   
--   `BeginOperation` 方法包含用於作業的 `in` 和 `ref` 參數，並會傳回 <xref:System.IAsyncResult> 型別。  
+- `BeginOperation` 方法包含用於作業的 `in` 和 `ref` 參數，並會傳回 <xref:System.IAsyncResult> 型別。  
   
--   `EndOperation` 方法包含 <xref:System.IAsyncResult> 參數、`out` 和 `ref` 參數，並會傳回作業的傳回型別。  
+- `EndOperation` 方法包含 <xref:System.IAsyncResult> 參數、`out` 和 `ref` 參數，並會傳回作業的傳回型別。  
   
  以下列方法為例：  
   

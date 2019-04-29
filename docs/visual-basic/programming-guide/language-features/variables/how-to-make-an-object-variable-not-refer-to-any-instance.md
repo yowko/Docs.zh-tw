@@ -6,18 +6,18 @@ helpviewer_keywords:
 - object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
 ms.openlocfilehash: 373d4ae84c44b212ad02b0b4266af75921e40423
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769053"
 ---
 # <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>HOW TO：讓物件變數不參考任何執行個體 (Visual Basic)
 您可以藉由將它設定為取消關聯的物件變數，從任何物件執行個體[Nothing](../../../../visual-basic/language-reference/nothing.md)。  
   
 ### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>若要解除關聯的物件變數，從任何物件執行個體  
   
--   將變數設定為`Nothing`指派陳述式中。  
+- 將變數設定為`Nothing`指派陳述式中。  
   
     ```  
     ' Assume account is a defined class  

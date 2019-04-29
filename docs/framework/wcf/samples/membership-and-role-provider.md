@@ -3,11 +3,11 @@ title: 成員資格和角色提供者
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
 ms.openlocfilehash: b5cb743fb3533d2f3a8016c9357d6ead498a5878
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756113"
 ---
 # <a name="membership-and-role-provider"></a>成員資格和角色提供者
 「成員資格和角色提供者」範例會示範服務如何使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成員資格和角色提供者來驗證及授權用戶端。  
@@ -19,15 +19,15 @@ ms.locfileid: "59768159"
   
  此範例會示範：  
   
--   用戶端可以使用使用者名稱-密碼組合進行驗證。  
+- 用戶端可以使用使用者名稱-密碼組合進行驗證。  
   
--   伺服器可以對 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成員資格提供者驗證用戶端認證。  
+- 伺服器可以對 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成員資格提供者驗證用戶端認證。  
   
--   您可以使用伺服器的 X.509 憑證來驗證伺服器。  
+- 您可以使用伺服器的 X.509 憑證來驗證伺服器。  
   
--   伺服器可以使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供者，將驗證的用戶端對應至角色。  
+- 伺服器可以使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供者，將驗證的用戶端對應至角色。  
   
--   伺服器可以使用 `PrincipalPermissionAttribute` 來控制對服務所公開特定方法的存取。  
+- 伺服器可以使用 `PrincipalPermissionAttribute` 來控制對服務所公開特定方法的存取。  
   
  成員資格和角色提供者會設定為使用 SQL Server 所支援的存放區。 服務組態檔中會指定連接字串和各種選項。 成員資料提供者的名稱會指定為 `SqlMembershipProvider`，而角色提供者的名稱會指定為 `SqlRoleProvider`。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "59768159"
   
 ### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
--   當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
+- 當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
 > [!NOTE]
 >  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 Windows Communication Foundation (WCF) 範例，請務必清除已安裝在 CurrentUser-TrustedPeople 存放區的服務憑證。 若要這樣做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
@@ -174,7 +174,7 @@ ms.locfileid: "59768159"
   
  下面提供批次檔的各區段簡要概觀，讓將批次檔得以修改為在適當的組態下執行。  
   
--   建立伺服器憑證。  
+- 建立伺服器憑證。  
   
      下列 Setup.bat 批次檔中的程式行會建立要使用的伺服器憑證。 %SERVER_NAME% 變數會指定伺服器名稱。 您可以變更這個變數來指定自己的伺服器名稱。 這個批次檔的預設為 localhost。  
   
@@ -190,7 +190,7 @@ ms.locfileid: "59768159"
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
--   將伺服器憑證安裝至用戶端的受信任憑證存放區中。  
+- 將伺服器憑證安裝至用戶端的受信任憑證存放區中。  
   
      Setup.bat 批次檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證的步驟。  
   

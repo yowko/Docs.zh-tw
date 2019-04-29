@@ -12,11 +12,11 @@ helpviewer_keywords:
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
 ms.openlocfilehash: 12c81a9a0651088a348afeaff3b71935d289da53
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778738"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 指定一或多個宣告的程式設計項目與類別或結構的大規模，而非與該類別或結構的特定執行個體相關聯。  
@@ -30,25 +30,25 @@ ms.locfileid: "58816275"
   
 ## <a name="rules"></a>規則  
   
--   **宣告內容。** 您只能在模組層級使用 `Shared`。 這表示的宣告內容`Shared`項目必須是類別或結構，並不能是原始程式檔、 命名空間或程序。  
+- **宣告內容。** 您只能在模組層級使用 `Shared`。 這表示的宣告內容`Shared`項目必須是類別或結構，並不能是原始程式檔、 命名空間或程序。  
   
--   **結合的修飾詞。** 您無法指定`Shared`連同[覆寫](../../../visual-basic/language-reference/modifiers/overrides.md)， [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)， [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)， [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)，或[靜態](../../../visual-basic/language-reference/modifiers/static.md)相同宣告中。  
+- **結合的修飾詞。** 您無法指定`Shared`連同[覆寫](../../../visual-basic/language-reference/modifiers/overrides.md)， [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)， [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)， [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)，或[靜態](../../../visual-basic/language-reference/modifiers/static.md)相同宣告中。  
   
--   **存取。** 您可以限定其名稱與其類別或結構的名稱，而非與特定的執行個體，其類別或結構的變數名稱，以存取共用的項目。 您甚至不必建立的類別或結構，以存取其共用的成員執行個體。  
+- **存取。** 您可以限定其名稱與其類別或結構的名稱，而非與特定的執行個體，其類別或結構的變數名稱，以存取共用的項目。 您甚至不必建立的類別或結構，以存取其共用的成員執行個體。  
   
      下列範例會呼叫共用的程序<xref:System.Double.IsNaN%2A>由<xref:System.Double>結構。  
   
      `If Double.IsNaN(result) Then MsgBox("Result is mathematically undefined.")`  
   
--   **隱含的共用。** 您無法使用`Shared`修飾詞[Const 陳述式](../../../visual-basic/language-reference/statements/const-statement.md)，但是常數會以隱含方式共用。 同樣地，您無法在此宣告的模組或介面成員，才能被`Shared`，但它們會以隱含方式共用。  
+- **隱含的共用。** 您無法使用`Shared`修飾詞[Const 陳述式](../../../visual-basic/language-reference/statements/const-statement.md)，但是常數會以隱含方式共用。 同樣地，您無法在此宣告的模組或介面成員，才能被`Shared`，但它們會以隱含方式共用。  
   
 ## <a name="behavior"></a>行為  
   
--   **儲存體。** 共用的變數或事件會儲存在記憶體中一次，不論多少個執行個體建立其類別或結構。 同樣地，共用的程序或屬性會保留只有一組本機變數。  
+- **儲存體。** 共用的變數或事件會儲存在記憶體中一次，不論多少個執行個體建立其類別或結構。 同樣地，共用的程序或屬性會保留只有一組本機變數。  
   
--   **透過執行個體變數存取。** 可以限定其名稱的變數，包含其類別或結構的特定執行個體的名稱來存取共用的項目。 雖然這通常在如預期般運作，編譯器會產生一則警告訊息，並可透過類別或結構名稱，而不是變數的存取權。  
+- **透過執行個體變數存取。** 可以限定其名稱的變數，包含其類別或結構的特定執行個體的名稱來存取共用的項目。 雖然這通常在如預期般運作，編譯器會產生一則警告訊息，並可透過類別或結構名稱，而不是變數的存取權。  
   
--   **透過執行個體運算式的存取。** 如果您透過該運算式會傳回其類別或結構的執行個體存取共用的項目，編譯器就會進行與存取的類別或結構的名稱，而不是評估運算式。 如果您想要執行其他動作，以及傳回執行個體的運算式，這會產生非預期的結果。 下列範例將說明這點。  
+- **透過執行個體運算式的存取。** 如果您透過該運算式會傳回其類別或結構的執行個體存取共用的項目，編譯器就會進行與存取的類別或結構的名稱，而不是評估運算式。 如果您想要執行其他動作，以及傳回執行個體的運算式，這會產生非預期的結果。 下列範例將說明這點。  
   
     ```vb
     Sub main()  

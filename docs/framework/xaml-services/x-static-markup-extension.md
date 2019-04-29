@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
 ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938930"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static 標記延伸
 參考任何靜態值的程式碼實體中定義[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– 符合規範的方式。 參考的靜態屬性可用來提供的 XAML 中的屬性值。  
@@ -38,10 +38,10 @@ ms.locfileid: "59295701"
 
 參考的程式碼實體必須是下列其中一項：  
   
--   常數  
--   靜態屬性  
--   欄位  
--   列舉值
+- 常數  
+- 靜態屬性  
+- 欄位  
+- 列舉值
 
 指定任何其他程式碼實體，例如非靜態屬性，會導致編譯時期錯誤，如果 XAML 標記編譯或 XAML 載入時間剖析例外狀況。  
 
@@ -74,11 +74,11 @@ ms.locfileid: "59295701"
 ## <a name="wpf-usage-notes"></a>WPF 使用注意事項  
  您用於 WPF 程式設計的預設 XAML 命名空間不包含許多實用的靜態屬性，且大部分的有用的靜態屬性都有支援，像是可簡化使用方式，而不需要型別轉換子`{x:Static}`。 靜態屬性，您必須對應 XAML 命名空間的前置詞，如果下列其中一項為真：  
   
--   您要參考存在於 WPF，但不是 WPF 預設 XAML 命名空間的一部分的型別 ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)])。 這是很常見的案例，使用`x:Static`。 例如，您可以使用`x:Static`XAML 命名空間對應至參考<xref:System>若要參考的靜態屬性的 CLR 命名空間和 mscorlib 組件<xref:System.Environment>類別。  
+- 您要參考存在於 WPF，但不是 WPF 預設 XAML 命名空間的一部分的型別 ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)])。 這是很常見的案例，使用`x:Static`。 例如，您可以使用`x:Static`XAML 命名空間對應至參考<xref:System>若要參考的靜態屬性的 CLR 命名空間和 mscorlib 組件<xref:System.Environment>類別。  
   
--   您從自訂組件參考的型別。  
+- 您從自訂組件參考的型別。  
   
--   但是該類型是 CLR 命名空間的未對應到屬於 WPF 預設 XAML 命名空間內，您要參考存在於 WPF 組件的類型。 所對應的 CLR 命名空間至預設 XAML 命名空間的 WPF 藉由各種不同的 WPF 組件中的定義 (如需有關這個概念的詳細資訊，請參閱 < [XAML 命名空間和 WPF XAML 命名空間對應](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md))。 如果該 CLR 命名空間包含大部分的類別定義，通常不適用於 XAML，這類非對應的 CLR 命名空間中可以存在<xref:System.Windows.Threading>。  
+- 但是該類型是 CLR 命名空間的未對應到屬於 WPF 預設 XAML 命名空間內，您要參考存在於 WPF 組件的類型。 所對應的 CLR 命名空間至預設 XAML 命名空間的 WPF 藉由各種不同的 WPF 組件中的定義 (如需有關這個概念的詳細資訊，請參閱 < [XAML 命名空間和 WPF XAML 命名空間對應](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md))。 如果該 CLR 命名空間包含大部分的類別定義，通常不適用於 XAML，這類非對應的 CLR 命名空間中可以存在<xref:System.Windows.Threading>。  
   
  如需有關如何使用 wpf 的前置詞和 XAML 命名空間的詳細資訊，請參閱 < [XAML 命名空間和命名空間對應 WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   

@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
 ms.openlocfilehash: 2e5d4a3ddd66df85dc4758e22b36ac1ed495659a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935222"
 ---
 # <a name="bad-file-name-or-number"></a>不正確的檔名或數目
 嘗試存取指定的檔案時發生錯誤。 此錯誤的可能原因包括：  
   
--   陳述式所參考的檔案中未指定檔案名稱或數字`FileOpen`中指定陳述式或`FileOpen`陳述式，但卻是之後關閉。  
+- 陳述式所參考的檔案中未指定檔案名稱或數字`FileOpen`中指定陳述式或`FileOpen`陳述式，但卻是之後關閉。  
   
--   陳述式所參考的檔案，以超出範圍的檔案數字的數字。  
+- 陳述式所參考的檔案，以超出範圍的檔案數字的數字。  
   
--   陳述式參考的檔案名稱或不是有效的數字。  
+- 陳述式參考的檔案名稱或不是有效的數字。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   

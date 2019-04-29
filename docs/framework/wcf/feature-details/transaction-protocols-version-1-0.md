@@ -3,11 +3,11 @@ title: 異動通訊協定 1.0 版
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
 ms.openlocfilehash: a1501bbd5364773359f9b62602ba4bb684f076ba
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764620"
 ---
 # <a name="transaction-protocols-version-10"></a>異動通訊協定 1.0 版
 Windows Communication Foundation (WCF) 第 1 版實作了 Ws-atomic Transaction 和 Ws-coordination 通訊協定 1.0 版。 如需有關版本 1.1 的詳細資訊，請參閱[交易通訊協定](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)。  
@@ -45,13 +45,13 @@ Windows Communication Foundation (WCF) 第 1 版實作了 Ws-atomic Transaction 
   
  圖形與表格會從安全性觀點顯示四種訊息類別：  
   
--   啟動訊息 (CreateCoordinationContext 和 CreateCoordinationContextResponse)。  
+- 啟動訊息 (CreateCoordinationContext 和 CreateCoordinationContextResponse)。  
   
--   登錄訊息 (Register 和 RegisterResponse)  
+- 登錄訊息 (Register 和 RegisterResponse)  
   
--   通訊協定訊息 (準備、復原、認可和中止等等)。  
+- 通訊協定訊息 (準備、復原、認可和中止等等)。  
   
--   應用程式訊息  
+- 應用程式訊息  
   
  前三個訊息類別會視為異動管理員訊息，並且在此主題稍後的「應用程式訊息交換」中會描述其繫結程序組態。 第四個訊息類別是應用程式對應用程式訊息，並且在此主題稍後的「訊息範例」一節中會描述。 本章節描述使用這些類別的每個 WCF 的通訊協定繫結。  
   
@@ -78,9 +78,9 @@ Windows Communication Foundation (WCF) 第 1 版實作了 Ws-atomic Transaction 
 #### <a name="https-transport-configuration"></a>HTTPS 傳輸組態  
  X.509 憑證會用來建立交易管理員身分識別。 需要用戶端/伺服器驗證，而用戶端/伺服器授權則留待實作詳細資料中說明：  
   
--   R1111:透過網路提供的 X.509 憑證必須有符合起始電腦的完整的網域名稱 (FQDN) 的主體名稱。  
+- R1111:透過網路提供的 X.509 憑證必須有符合起始電腦的完整的網域名稱 (FQDN) 的主體名稱。  
   
--   B1112:DNS 必須成功 X.509 主體名稱檢查系統中的每個傳送者與接收者組之間的功能。  
+- B1112:DNS 必須成功 X.509 主體名稱檢查系統中的每個傳送者與接收者組之間的功能。  
   
 #### <a name="activation-and-registration-binding-configuration"></a>啟動和登錄繫結組態  
  WCF 要求透過 HTTPS 的要求/回覆相互關聯的雙工繫結。 (如需有關相互關聯與要求/回覆訊息交換模式描述的詳細資訊，請參閱第 8 節的「WS-Atomic 交易」)。  
@@ -103,9 +103,9 @@ Windows Communication Foundation (WCF) 第 1 版實作了 Ws-atomic Transaction 
   
  第 8 節的 WS-Atomic 異動規格進一步描述有關相互關聯與訊息交換模式的詳細資料。  
   
--   R1222:在收到`CreateCoordinationContext`，協調器必須發出`SecurityContextToken`與相關聯的祕密`STx`。 在符合 WS-Trust 規格的 `t:IssuedTokens` 標頭中會傳回這個權杖。  
+- R1222:在收到`CreateCoordinationContext`，協調器必須發出`SecurityContextToken`與相關聯的祕密`STx`。 在符合 WS-Trust 規格的 `t:IssuedTokens` 標頭中會傳回這個權杖。  
   
--   R1223:如果啟動發生在現有的協調內容`t:IssuedTokens`標頭`SecurityContextToken`聯現有的內容必須在流程`CreateCoordinationContext`訊息。  
+- R1223:如果啟動發生在現有的協調內容`t:IssuedTokens`標頭`SecurityContextToken`聯現有的內容必須在流程`CreateCoordinationContext`訊息。  
   
  新`t:IssuedTokens`應產生標頭附加至傳出`wscoor:CreateCoordinationContextResponse`訊息。  
   
@@ -126,9 +126,9 @@ Windows Communication Foundation (WCF) 第 1 版實作了 Ws-atomic Transaction 
 ## <a name="application-message-exchange"></a>應用程式訊息交換  
  應用程式可以隨意使用應用程式之間訊息的任何特定繫結程序，只要繫結程序符合下列安全性需求：  
   
--   R2001:應用程式訊息必須流動`t:IssuedTokens`標頭與`CoordinationContext`訊息的標頭中。  
+- R2001:應用程式訊息必須流動`t:IssuedTokens`標頭與`CoordinationContext`訊息的標頭中。  
   
--   R2002:完整性與機密性`t:IssuedToken`必須提供。  
+- R2002:完整性與機密性`t:IssuedToken`必須提供。  
   
  `CoordinationContext` 標頭包含 `wscoor:Identifier`。 雖然定義`xsd:AnyURI`允許使用絕對和相對 Uri，WCF 只支援`wscoor:Identifiers`，絕對 uri。  
   

@@ -3,11 +3,11 @@ title: 現用模式
 description: 了解如何使用作用中的模式來定義細分輸入的資料中的具名資料分割F#程式設計語言。
 ms.date: 05/16/2016
 ms.openlocfilehash: 0f1f57de425836738201d2d8f84ab67a0df142ee
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772745"
 ---
 # <a name="active-patterns"></a>現用模式
 

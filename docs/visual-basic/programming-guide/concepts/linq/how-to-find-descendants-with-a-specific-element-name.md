@@ -3,11 +3,11 @@ title: HOW TO：尋找具有特定的項目名稱 (Visual Basic) 的子系
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
 ms.openlocfilehash: c7dadec961420988a7f4cc1d6be72d7cdba5c047
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780493"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>HOW TO：尋找具有特定的項目名稱 (Visual Basic) 的子系
 有時候您會想要尋找具有特定名稱的所有子代。 您可以撰寫程式碼來逐一查看所有子代，但是使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸比較容易。  

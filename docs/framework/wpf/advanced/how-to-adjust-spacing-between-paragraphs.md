@@ -1,5 +1,5 @@
 ---
-title: HOW TO：調整段落之間的間距
+title: HOW TO：調整段落的間距
 ms.date: 03/30/2017
 helpviewer_keywords:
 - spacing between paragraphs [WPF]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - documents [WPF], adjusting spacing between paragraphs
 ms.assetid: 7cd2f2ac-0e19-4587-bfb6-7f5b18c9536e
 ms.openlocfilehash: e2a6ba34e3ab15eb316671fef7c11bea03d53c73
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777009"
 ---
-# <a name="how-to-adjust-spacing-between-paragraphs"></a>HOW TO：調整段落之間的間距
+# <a name="how-to-adjust-spacing-between-paragraphs"></a>HOW TO：調整段落的間距
 此範例示範如何調整或排除在非固定格式內容中的段落之間的間距。  
   
  在非固定格式內容中顯示段落之間的額外空間是這些段落; 上設定的邊界的結果因此，可以藉由調整邊界的段落控制段落之間的間距。  若要完全排除這兩個段落的額外間距，設定 針對至段落的邊界**0**。  若要達到統一整個段落之間的間距<xref:System.Windows.Documents.FlowDocument>，使用設為統一的邊界值中的所有段落的樣式<xref:System.Windows.Documents.FlowDocument>。  

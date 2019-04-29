@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3f3643bf4880532a46fe7f9f57b8077032013728
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796032"
 ---
 # <a name="econtexttype-enumeration"></a>EContextType 列舉
 描述目前執行中執行緒的安全性內容。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
 ms.openlocfilehash: 6d4a6c19dc0af8a2950754f32890ae9c3bcbad21
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769524"
 ---
 # <a name="listview-overview"></a>ListView 概觀
 <xref:System.Windows.Controls.ListView>控制項提供的基礎結構，以顯示不同的版面配置或檢視表中的一組資料的項目。 例如，使用者可能會想要以表格顯示資料項目，還要排序其資料行。  
@@ -58,9 +58,9 @@ ms.locfileid: "59186494"
 ## <a name="styling-a-listview-that-implements-a-gridview"></a>為實作 GridView 的 ListView 設定樣式  
  <xref:System.Windows.Controls.ListView>控制項包含<xref:System.Windows.Controls.ListViewItem>物件，代表顯示資料項目。 您可以使用下列屬性來定義資料項目的內容和樣式：  
   
--   在 <xref:System.Windows.Controls.ListView>控制，請使用<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>， <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>，和<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>屬性。  
+- 在 <xref:System.Windows.Controls.ListView>控制，請使用<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>， <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>，和<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>屬性。  
   
--   在 <xref:System.Windows.Controls.ListViewItem>控制，請使用<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>和<xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>屬性。  
+- 在 <xref:System.Windows.Controls.ListViewItem>控制，請使用<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>和<xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>屬性。  
   
  若要避免發生對齊問題中儲存格之間<xref:System.Windows.Controls.GridView>，請勿使用<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>來設定屬性，或將影響該寬度的項目中的內容新增<xref:System.Windows.Controls.ListView>。 比方說，當您設定時可能會發生對齊問題<xref:System.Windows.FrameworkElement.Margin%2A>屬性中的<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>。 若要指定屬性或定義會影響該寬度的項目中的內容<xref:System.Windows.Controls.GridView>，使用的屬性<xref:System.Windows.Controls.GridView>類別和其相關的類別，例如<xref:System.Windows.Controls.GridViewColumn>。  
   

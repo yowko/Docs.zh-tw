@@ -3,11 +3,11 @@ title: 預計採用 Windows Communication Foundation：簡化未來移轉
 ms.date: 03/30/2017
 ms.assetid: f49664d9-e9e0-425c-a259-93f0a569d01b
 ms.openlocfilehash: 4492626c2cb0958f8aa79fa2b511d9aa9e90b16a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769508"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>預計採用 Windows Communication Foundation：簡化未來移轉
 若要確保更容易未來新 ASP.NET 應用程式移轉至 WCF，請遵循上述建議，以及下列建議。  
@@ -32,9 +32,9 @@ ms.locfileid: "59176380"
 ## <a name="service-development"></a>服務開發  
  WCF 可讓您定義服務合約，藉由套用<xref:System.ServiceModel.ServiceContractAttribute>介面或類別。 建議將此屬性套用至介面而非類別，因為這樣做會建立可由任意類別數目以各種方式實作的合約定義。 ASP.NET 2.0 支援將 <xref:System.Web.Services.WebService> 屬性套用至介面和類別。 不過，如上述，ASP.NET 2.0 中有缺失，當 <xref:System.Web.Services.WebService> 屬性套用至介面而非類別時，該屬性的 Namespace 參數會沒有作用。 因為它是一般建議修改預設值，從服務命名空間`http://tempuri.org`，使用的命名空間參數<xref:System.Web.Services.WebService>屬性，所以應該可以繼續定義 ASP.NET Web 服務，藉由套用<xref:System.ServiceModel.ServiceContractAttribute>介面或類別的屬性。  
   
--   在定義這些介面的方法中，盡可能不使用程式碼。 將它們的工作委派至其他類別。 新的 WCF 服務類型可能再也委派它們的實質性工作到這些類別。  
+- 在定義這些介面的方法中，盡可能不使用程式碼。 將它們的工作委派至其他類別。 新的 WCF 服務類型可能再也委派它們的實質性工作到這些類別。  
   
--   使用 `MessageName` 的 <xref:System.Web.Services.WebMethodAttribute> 參數，為服務的作業提供明確名稱。  
+- 使用 `MessageName` 的 <xref:System.Web.Services.WebMethodAttribute> 參數，為服務的作業提供明確名稱。  
   
     ```csharp  
     [WebMethod(MessageName="ExplicitName")]  
@@ -43,9 +43,9 @@ ms.locfileid: "59176380"
   
      如此一來很重要，因為 ASP.NET 中作業的預設名稱是由 WCF 所提供的預設名稱不同。 藉由提供明確名稱，可以避免依賴預設名稱。  
   
--   不會實作 ASP.NET Web 服務作業使用多型方法，因為 WCF 不支援使用多型方法的實作的作業。  
+- 不會實作 ASP.NET Web 服務作業使用多型方法，因為 WCF 不支援使用多型方法的實作的作業。  
   
--   使用 <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>，為用來將 HTTP 要求傳送至方法的 SOAPAction HTTP 標頭，提供明確值。  
+- 使用 <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>，為用來將 HTTP 要求傳送至方法的 SOAPAction HTTP 標頭，提供明確值。  
   
     ```csharp  
     [WebMethod]  
@@ -55,7 +55,7 @@ ms.locfileid: "59176380"
   
      這種方式會避免依賴預設使用 ASP.NET 和 WCF 相同的 SOAPAction 值。  
   
--   避免使用 SOAP 擴充功能。 如果 SOAP 擴充功能是必要的然後判斷它們會被視為的目的是已由 WCF 所提供的功能。 如果是這種情況，請重新考慮不立即採用 WCF 的選擇。  
+- 避免使用 SOAP 擴充功能。 如果 SOAP 擴充功能是必要的然後判斷它們會被視為的目的是已由 WCF 所提供的功能。 如果是這種情況，請重新考慮不立即採用 WCF 的選擇。  
   
 ## <a name="state-management"></a>狀態管理  
  避免在服務中維護狀態。 不只會維護狀態容易損害應用程式的延展性，但 ASP.NET 和 WCF 的狀態管理機制也非常不同，雖然 WCF 在 ASP.NET 相容性模式中支援 ASP.NET 機制。  
@@ -118,11 +118,11 @@ throw new SoapException(
 ## <a name="security"></a>安全性  
  以下是一些安全性考量事項：  
   
--   避免使用 ASP.NET 2.0 設定檔，以使用它們會限制使用 ASP.NET 整合模式，如果服務已移轉至 WCF。  
+- 避免使用 ASP.NET 2.0 設定檔，以使用它們會限制使用 ASP.NET 整合模式，如果服務已移轉至 WCF。  
   
--   請避免使用 Acl 來控制存取服務，ASP.NET Web 服務支援 Acl 使用 Internet Information Services (IIS)，WCF 則否，因為 ASP.NET Web 服務仰賴 IIS 進行裝載，而 WCF 不一定要裝載在 IIS 中。  
+- 請避免使用 Acl 來控制存取服務，ASP.NET Web 服務支援 Acl 使用 Internet Information Services (IIS)，WCF 則否，因為 ASP.NET Web 服務仰賴 IIS 進行裝載，而 WCF 不一定要裝載在 IIS 中。  
   
--   考慮使用 ASP.NET 2.0 角色提供者，來授權存取服務資源。  
+- 考慮使用 ASP.NET 2.0 角色提供者，來授權存取服務資源。  
   
 ## <a name="see-also"></a>另請參閱
 

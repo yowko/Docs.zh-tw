@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
 ms.openlocfilehash: db137eb84108c6adbbf04a380934bb6da6936d61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771419"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>逐步解說：建立自訂用戶端與服務認證
 此主題顯示如何實作自訂用戶端和服務認證，以及如何使用來自應用程式碼的自訂認證。  
@@ -18,9 +18,9 @@ ms.locfileid: "59343047"
 ## <a name="credentials-extensibility-classes"></a>認證擴充性類別  
  <xref:System.ServiceModel.Description.ClientCredentials>和<xref:System.ServiceModel.Description.ServiceCredentials>類別是 Windows Communication Foundation (WCF) 安全性擴充性的主要進入點。 這些認證類別提供能夠讓應用程式碼設定認證資訊，以及將認證類型轉換為安全性權杖的 API  (*安全性權杖*是用來傳送 SOAP 訊息內部的認證資訊。)這些認證類別的責任可以分為兩部分：  
   
--   提供 API 讓應用程式設定認證資訊。  
+- 提供 API 讓應用程式設定認證資訊。  
   
--   執行當做 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 實作的處理站。  
+- 執行當做 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 實作的處理站。  
   
  <xref:System.ServiceModel.Description.ClientCredentials> 和 <xref:System.ServiceModel.Description.ServiceCredentials> 類別都繼承自定義傳回 <xref:System.ServiceModel.Security.SecurityCredentialsManager> 之合約的抽象 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 類別。  
   
@@ -29,22 +29,22 @@ ms.locfileid: "59343047"
 ## <a name="reasons-to-customize"></a>自訂原因  
  有幾項自訂用戶端或服務認證類別的原因。 首先是關於處理系統提供的認證類型，特別是基於下列原因的預設 WCF 安全性行為變更的需求：  
   
--   使用其他擴充點無法進行若干變更。  
+- 使用其他擴充點無法進行若干變更。  
   
--   為了加入新的認證類型。  
+- 為了加入新的認證類型。  
   
--   為了加入新的自訂安全性權杖類型。  
+- 為了加入新的自訂安全性權杖類型。  
   
  此主題描述如何實作自訂用戶端和服務認證，以及如何在應用程式碼使用它們。  
   
 ## <a name="first-in-a-series"></a>第一步  
  建立自訂認證類別是只有第一個步驟，因為自訂認證的原因是要變更關於認證佈建、 安全性權杖序列化或驗證的 WCF 行為。 本章節中的其他主題描述如何建立自訂序列化程式和驗證器。 就這一點而言，建立自訂認證類別是所有步驟的第一個主題。 只有在建立自訂認證後才能完成後續動作 (建立自訂序列化程式和驗證器)。 建構在此主題上的其他主題包含：  
   
--   [如何：建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+- [如何：建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
--   [如何：建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+- [如何：建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
   
--   [如何：建立自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
+- [如何：建立自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
   
 ## <a name="procedures"></a>程序  
   

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
 ms.openlocfilehash: e3d1c2b681e98dc7c45467683924dd4022eb377e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937744"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>HOW TO：複製像素以減少 Windows Forms 的閃爍
 當您以動畫顯示簡單的圖形時，使用者可以有時會遇到，閃爍或其他不想要的視覺效果。 限制此問題的一個方法是在圖形上使用 「 bitblt 」 程序。 Bitblt 是位元區塊傳輸 的色彩資料從像素原始矩形到目的地矩形的像素為單位。  

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
 ms.openlocfilehash: 15cb111a68cedaec011e88fa4916c292786d16b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779025"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>HOW TO：使用複合模式控制 Alpha 透明混色
 可能有您想来建立一個幕外的點陣圖，具有下列特性：  
   
--   色彩必須是小於 255 的 alpha 值。  
+- 色彩必須是小於 255 的 alpha 值。  
   
--   色彩不 alpha 混色彼此，當您在建立點陣圖。  
+- 色彩不 alpha 混色彼此，當您在建立點陣圖。  
   
--   當您顯示完成的點陣圖時，點陣圖中的色彩會是 alpha 混色與顯示裝置上的背景色彩。  
+- 當您顯示完成的點陣圖時，點陣圖中的色彩會是 alpha 混色與顯示裝置上的背景色彩。  
   
  若要建立這種點陣圖，建構空白<xref:System.Drawing.Bitmap>物件，然後再建構<xref:System.Drawing.Graphics>物件會根據該點陣圖。 設定的複合 （compositing） 模式<xref:System.Drawing.Graphics>物件至<xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>。  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
 ms.openlocfilehash: b88cba4d16c5a770a72b47868d11b16cbba6cae8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788956"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 指定如何進行字串比較。  
@@ -46,7 +46,7 @@ ms.locfileid: "59340434"
   
 ### <a name="to-set--optioncompare-programmatically"></a>以程式設計方式設定-optioncompare  
   
--   請參閱[Option Compare 陳述式](../../../visual-basic/language-reference/statements/option-compare-statement.md)。  
+- 請參閱[Option Compare 陳述式](../../../visual-basic/language-reference/statements/option-compare-statement.md)。  
   
 ## <a name="example"></a>範例  
  下列程式碼編譯`ProjFile.vb`，並使用二進位字串比較。  

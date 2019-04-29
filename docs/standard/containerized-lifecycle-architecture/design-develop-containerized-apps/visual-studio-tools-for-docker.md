@@ -6,11 +6,11 @@ ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795538"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>在 Windows 上的 Visual Studio 2017 中使用 Docker 工具
 
@@ -29,7 +29,7 @@ ms.locfileid: "57844245"
 
 **新增 > Docker 支援**並**新增 > 容器協調器支援**命令位於 ASP.NET Core 專案的專案節點的右鍵操作功能表 （或操作功能表） 中**方案總管] 中**，如 [圖 4-31 的所示：
 
-![在 Visual Studio 中新增 Docker 支援 功能表選項](./media/add-docker-support-menu.png)
+![Visual Studio 中的 [新增 Docker 支援] 功能表選項](./media/add-docker-support-menu.png)
 
 **圖 4-31**。 將 Docker 支援新增至 Visual Studio 2017 的專案
 
@@ -37,7 +37,7 @@ ms.locfileid: "57844245"
 
 您也可以選取現有的 ASP.NET Core 專案新增 Docker 支援**新增** > **Docker 支援**中**方案總管 中**。 您也可以啟用 Docker 支援在專案建立期間選取**啟用 Docker 支援**中**新的 ASP.NET Core Web 應用程式**按一下之後開啟的對話方塊**確定**中**新的專案**對話方塊中，顯示 圖 4-32。
 
-![Visual Studio 中的新 ASP.NET Core web 應用程式中啟用 Docker 支援](./media/enable-docker-support-visual-studio.png)
+![在 Visual Studio 中為新的 ASP.NET Core Web 應用程式啟用 Docker 支援](./media/enable-docker-support-visual-studio.png)
 
 **圖 4-32**。 在 Visual Studio 2017 中的專案建立期間啟用 Docker 支援
 
@@ -46,7 +46,7 @@ ms.locfileid: "57844245"
 > [!NOTE]
 > 圖 4-33 示，您可以啟用 ASP.NET 專案 (.NET Framework，.NET Core 專案) 的專案建立期間的 Docker Compose 的支援，也會加入容器協調流程支援。
 
-![啟用 Docker compose 的 ASP.NET 專案的支援](media/enable-docker-compose-support.png)
+![針對 ASP.NET 專案啟用 Docker Compose 支援](media/enable-docker-compose-support.png)
 
 **圖 4-33**。 啟用 Docker Compose 的 ASP.NET 專案中 Visual Studio 2017 的支援
 
@@ -58,11 +58,11 @@ ms.locfileid: "57844245"
 
 協調流程的容器支援新增至您的專案之後，您會看到加入至專案的 Dockerfile 並**docker compose**加入至方案中的資料夾**方案總管] 中**所示，[圖 4-34:
 
-![在 Visual Studio 中的 [方案總管] 中的 docker 檔案](media/docker-support-solution-explorer.png)
+![Visual Studio 中 [方案總管] 中的 Docker 檔案](media/docker-support-solution-explorer.png)
 
 **圖 4-34**。 Visual Studio 2017 中的 [方案總管] 中的 docker 檔案
 
-如果*docker compose.yml*已經存在，Visual Studio 只會將必要的組態程式碼的行加入至它。
+如果 *docker-compose.yml* 已存在，則 Visual Studio 只會向其新增所需的組態程式碼行。
 
 ## <a name="configure-docker-tools"></a>設定 Docker 工具
 

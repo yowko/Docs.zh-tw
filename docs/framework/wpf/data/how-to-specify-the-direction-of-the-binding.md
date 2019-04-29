@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
 ms.openlocfilehash: 4334ed178e7f2ed90928db6b434eb8c9fee77bf7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931477"
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a>HOW TO：指定繫結的方向
 本範例顯示如何指定繫結只更新繫結目標 (目標) 屬性、繫結來源 (來源) 屬性，或同時更新目標屬性與來源屬性。  
@@ -19,15 +19,15 @@ ms.locfileid: "59206430"
 ## <a name="example"></a>範例  
  您使用<xref:System.Windows.Data.Binding.Mode%2A>屬性來指定繫結的方向。 下列列舉清單顯示繫結更新的可用選項：  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay> 目標屬性或 [來源] 屬性變更時，請更新目標屬性。  
+- <xref:System.Windows.Data.BindingMode.TwoWay> 目標屬性或 [來源] 屬性變更時，請更新目標屬性。  
   
--   <xref:System.Windows.Data.BindingMode.OneWay> [來源] 屬性變更時才會更新目標屬性。  
+- <xref:System.Windows.Data.BindingMode.OneWay> [來源] 屬性變更時才會更新目標屬性。  
   
--   <xref:System.Windows.Data.BindingMode.OneTime> 更新目標屬性，只有在應用程式啟動時或<xref:System.Windows.FrameworkElement.DataContext%2A>; 歷經變更。  
+- <xref:System.Windows.Data.BindingMode.OneTime> 更新目標屬性，只有在應用程式啟動時或<xref:System.Windows.FrameworkElement.DataContext%2A>; 歷經變更。  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource> 當目標屬性變更時，請更新來源屬性。  
+- <xref:System.Windows.Data.BindingMode.OneWayToSource> 當目標屬性變更時，請更新來源屬性。  
   
--   <xref:System.Windows.Data.BindingMode.Default> 讓預設<xref:System.Windows.Data.Binding.Mode%2A>要使用的目標屬性的值。  
+- <xref:System.Windows.Data.BindingMode.Default> 讓預設<xref:System.Windows.Data.Binding.Mode%2A>要使用的目標屬性的值。  
   
  如需詳細資訊，請參閱 <xref:System.Windows.Data.BindingMode> 列舉。  
   

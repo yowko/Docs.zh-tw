@@ -3,11 +3,11 @@ title: 條件約束
 description: 深入了解F#條件約束套用至泛型型別參數的泛型型別或函式中指定的類型引數的需求。
 ms.date: 05/16/2016
 ms.openlocfilehash: b253ce50707512a0d46c41bba2dde34adcc24d0e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937510"
 ---
 # <a name="constraints"></a>條件約束
 
@@ -25,15 +25,15 @@ type-parameter-list when constraint1 [ and constraint2]
 
 |條件約束|語法|描述|
 |----------|------|-----------|
-|類型條件約束|*型別參數*:&gt; *類型*|提供的型別必須等於或衍生自指定型別，或者，如果類型是介面，提供的型別必須實作介面。|
-|Null 條件約束|*型別參數*: null|提供的型別必須支援 null 常值。 這包括所有的.NET 物件類型而非F#清單、 tuple、 函式、 類別、 記錄或等位型別。|
+|類型條件約束|*type-parameter* :&gt; *type*|提供的型別必須等於或衍生自指定型別，或者，如果類型是介面，提供的型別必須實作介面。|
+|Null 條件約束|*type-parameter* : null|提供的型別必須支援 null 常值。 這包括所有的.NET 物件類型而非F#清單、 tuple、 函式、 類別、 記錄或等位型別。|
 |明確成員的條件約束|[（]*型別參數*[或...或*型別參數*)]: (*成員簽章*)|至少其中一個提供的型別引數必須具有指定的簽章; 的成員不適用於一般用途。 成員必須是明確定義型別或隱含型別延伸模組的一部分，是明確的成員限制式的有效目標。|
 |建構函式條件約束|*型別參數*: (新： 單位-&gt; ')|提供的型別必須具有預設建構函式。|
 |實值類型條件約束|： 結構|提供的型別必須是.NET 實值型別。|
 |參考類型條件約束|： 不結構|提供的型別必須是.NET 參考型別。|
-|列舉型別條件約束|: enum&lt;*基礎類型*&gt;|提供的型別必須是列舉的類型，具有指定的基礎類型，不適用於一般用途。|
-|委派條件約束|： 將委派&lt;*tuple 參數型別*，*傳回型別*&gt;|提供的型別必須是委派類型具有指定的引數和傳回值;不適用於一般用途。|
-|比較條件約束|： 比較|提供的型別必須支援的比較。|
+|列舉型別條件約束|: enum&lt;*underlying-type*&gt;|提供的型別必須是列舉的類型，具有指定的基礎類型，不適用於一般用途。|
+|委派條件約束|: delegate&lt;*tuple-parameter-type*, *return-type*&gt;|提供的型別必須是委派類型具有指定的引數和傳回值;不適用於一般用途。|
+|比較條件約束|: comparison|提供的型別必須支援的比較。|
 |等號比較條件約束|： 等號比較|提供的型別必須支援等號比較。|
 |未受管理的條件約束|： 未受管理|提供的型別必須是 unmanaged 型別。 未受管理的類型為特定基本型別 (`sbyte`， `byte`， `char`， `nativeint`， `unativeint`， `float32`， `float`， `int16`， `uint16`， `int32`， `uint32`， `int64`， `uint64`，或`decimal`)，列舉型別`nativeptr<_>`，或其欄位為未受管理的所有類型的非泛型結構。|
 

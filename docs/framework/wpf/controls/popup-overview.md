@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
 ms.openlocfilehash: 370970c80221e371db5a97303ef2650d14300b14
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770561"
 ---
 # <a name="popup-overview"></a>快顯功能表概觀
 <xref:System.Windows.Controls.Primitives.Popup>控制項可用來顯示不同的視窗以漂浮在目前的應用程式視窗相對於指定的項目或螢幕座標中的內容。 本主題將介紹<xref:System.Windows.Controls.Primitives.Popup>控制項，並提供其用法的相關資訊。  
@@ -34,13 +34,13 @@ ms.locfileid: "59102774"
 ## <a name="controls-that-implement-a-popup"></a>實作快顯的控制項  
  您可以建置<xref:System.Windows.Controls.Primitives.Popup>到其他控制項的控制項。 下列控制項會實作<xref:System.Windows.Controls.Primitives.Popup>適用於特定用途的控制項：  
   
--   <xref:System.Windows.Controls.ToolTip>. 如果您想要建立項目的工具提示，使用<xref:System.Windows.Controls.ToolTip>和<xref:System.Windows.Controls.ToolTipService>類別。 如需詳細資訊，請參閱 [ToolTip 概觀](tooltip-overview.md)。  
+- <xref:System.Windows.Controls.ToolTip>. 如果您想要建立項目的工具提示，使用<xref:System.Windows.Controls.ToolTip>和<xref:System.Windows.Controls.ToolTipService>類別。 如需詳細資訊，請參閱 [ToolTip 概觀](tooltip-overview.md)。  
   
--   <xref:System.Windows.Controls.ContextMenu>. 如果您想要建立項目的內容功能表中，使用<xref:System.Windows.Controls.ContextMenu>控制項。 如需詳細資訊，請參閱 [ContextMenu 概觀](contextmenu-overview.md)。  
+- <xref:System.Windows.Controls.ContextMenu>. 如果您想要建立項目的內容功能表中，使用<xref:System.Windows.Controls.ContextMenu>控制項。 如需詳細資訊，請參閱 [ContextMenu 概觀](contextmenu-overview.md)。  
   
--   <xref:System.Windows.Controls.ComboBox>. 如果您想要建立具有可顯示或隱藏的使用下拉式清單方塊的選取項目控制項<xref:System.Windows.Controls.ComboBox>控制項。  
+- <xref:System.Windows.Controls.ComboBox>. 如果您想要建立具有可顯示或隱藏的使用下拉式清單方塊的選取項目控制項<xref:System.Windows.Controls.ComboBox>控制項。  
   
--   <xref:System.Windows.Controls.Expander>. 如果您想要建立顯示具有可摺疊區域的標頭的控制項，會顯示內容，請使用<xref:System.Windows.Controls.Expander>控制項。 如需詳細資訊，請參閱 [Expander 概觀](expander-overview.md)。  
+- <xref:System.Windows.Controls.Expander>. 如果您想要建立顯示具有可摺疊區域的標頭的控制項，會顯示內容，請使用<xref:System.Windows.Controls.Expander>控制項。 如需詳細資訊，請參閱 [Expander 概觀](expander-overview.md)。  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>快顯行為和外觀  

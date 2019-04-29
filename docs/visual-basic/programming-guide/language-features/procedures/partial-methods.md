@@ -12,11 +12,11 @@ helpviewer_keywords:
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
 ms.openlocfilehash: 765a667f18340c53909c3ff1e9fcc5f2ffc0f9bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791933"
 ---
 # <a name="partial-methods-visual-basic"></a>部分方法 (Visual Basic)
 部分方法可讓開發人員程式碼中插入自訂邏輯。 一般而言，程式碼會是類別的一部分的設計工具所產生。 部分方法中所建立的程式碼產生器中，部分類別定義，它們通常用來提供的項目已變更的通知。 它們可讓開發人員指定自訂的行為變更的回應。  
@@ -33,11 +33,11 @@ End Sub
   
  定義必須符合下列條件：  
   
--   這個方法必須是`Sub`，而非`Function`。  
+- 這個方法必須是`Sub`，而非`Function`。  
   
--   方法的主體必須是空白。  
+- 方法的主體必須是空白。  
   
--   存取修飾詞必須是`Private`。  
+- 存取修飾詞必須是`Private`。  
   
 ## <a name="implementation"></a>實作  
  實作主要包含填入部分方法的主體。 實作通常是在不同的部分類別定義，並寫入由開發人員想要擴充產生的程式碼。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
 ms.openlocfilehash: 3a12c3ac7250ee2904d571406d5008d451c9dc35
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783821"
 ---
 # <a name="synclock-statement"></a>SyncLock 陳述式
 執行區塊之前會取得獨佔鎖定陳述式區塊。  
@@ -46,25 +46,25 @@ End SyncLock
   
 ## <a name="rules"></a>規則  
   
--   分支。 您無法分支到`SyncLock`封鎖區塊外。  
+- 分支。 您無法分支到`SyncLock`封鎖區塊外。  
   
--   鎖定物件的值。 值`lockobject`不能是`Nothing`。 您必須先將它用於建立之鎖定物件`SyncLock`陳述式。  
+- 鎖定物件的值。 值`lockobject`不能是`Nothing`。 您必須先將它用於建立之鎖定物件`SyncLock`陳述式。  
   
      您無法變更的值`lockobject`執行時`SyncLock`區塊。 這個機制需要之鎖定物件維持不變。  
   
--   您無法使用[Await](../../../visual-basic/language-reference/operators/await-operator.md)中的運算子`SyncLock`區塊。  
+- 您無法使用[Await](../../../visual-basic/language-reference/operators/await-operator.md)中的運算子`SyncLock`區塊。  
   
 ## <a name="behavior"></a>行為  
   
--   機制。 當執行緒到達`SyncLock`陳述式，它會評估`lockobject`運算式並暫止執行，直到它取得的運算式所傳回的物件上的獨佔鎖定。 當另一個執行緒到達`SyncLock`陳述式，它不會取得鎖定之前的第一個執行緒執行`End SyncLock`陳述式。  
+- 機制。 當執行緒到達`SyncLock`陳述式，它會評估`lockobject`運算式並暫止執行，直到它取得的運算式所傳回的物件上的獨佔鎖定。 當另一個執行緒到達`SyncLock`陳述式，它不會取得鎖定之前的第一個執行緒執行`End SyncLock`陳述式。  
   
--   受保護的資料。 如果`lockobject`已`Shared`變數的獨佔鎖定可防止任何類別執行個體中的執行緒執行`SyncLock`封鎖任何其他執行緒執行它時。 這將保護的所有執行個體之間共用的資料。  
+- 受保護的資料。 如果`lockobject`已`Shared`變數的獨佔鎖定可防止任何類別執行個體中的執行緒執行`SyncLock`封鎖任何其他執行緒執行它時。 這將保護的所有執行個體之間共用的資料。  
   
      如果`lockobject`是執行個體變數 (不`Shared`)，鎖定會防止執行目前的執行個體中執行的執行緒`SyncLock`與相同的執行個體中的另一個執行緒同時的區塊。 這可保護由個別的執行個體所維護的資料。  
   
--   取得和釋放。 A`SyncLock`區塊的行為類似`Try...Finally`在其中建構`Try`區塊上取得的獨佔鎖定`lockobject`而`Finally`區塊釋放它。 因為這個緣故，`SyncLock`區塊保證會鎖定，而不論您如何結束區塊的版本。 這是即使發生未處理的例外狀況，則為 true。  
+- 取得和釋放。 A`SyncLock`區塊的行為類似`Try...Finally`在其中建構`Try`區塊上取得的獨佔鎖定`lockobject`而`Finally`區塊釋放它。 因為這個緣故，`SyncLock`區塊保證會鎖定，而不論您如何結束區塊的版本。 這是即使發生未處理的例外狀況，則為 true。  
   
--   架構會呼叫。 `SyncLock`區塊會取得和釋放獨佔鎖定，藉由呼叫`Enter`並`Exit`種`Monitor`類別<xref:System.Threading>命名空間。  
+- 架構會呼叫。 `SyncLock`區塊會取得和釋放獨佔鎖定，藉由呼叫`Enter`並`Exit`種`Monitor`類別<xref:System.Threading>命名空間。  
   
 ## <a name="programming-practices"></a>程式設計做法  
  `lockobject`運算式應該一律評估為專屬於您類別的物件。 您應該宣告`Private`物件變數，以保護資料屬於目前的執行個體，或`Private Shared`物件變數，以保護通用於所有執行個體的資料。  

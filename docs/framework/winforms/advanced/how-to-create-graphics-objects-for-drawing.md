@@ -11,11 +11,11 @@ helpviewer_keywords:
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
 ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937679"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>HOW TO：建立繪製的圖形物件
 您可以繪製線條與圖形之前，呈現文字，或顯示和管理映像[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您需要建立<xref:System.Drawing.Graphics>物件。 <xref:System.Drawing.Graphics>物件代表[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]繪圖介面，而是用來建立圖形影像物件。  
@@ -31,15 +31,15 @@ ms.locfileid: "59324197"
   
 #### <a name="to-create-a-graphics-object"></a>若要建立圖形物件  
   
--   接收圖形物件的參考的一部分<xref:System.Windows.Forms.PaintEventArgs>在<xref:System.Windows.Forms.Control.Paint>的表單或控制項的事件。 這通常是取得圖形物件的參考，建立控制項的繪製程式碼時。 您也可以做的屬性取得圖形物件的同樣地，<xref:System.Drawing.Printing.PrintPageEventArgs>處理時<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件<xref:System.Drawing.Printing.PrintDocument>。  
+- 接收圖形物件的參考的一部分<xref:System.Windows.Forms.PaintEventArgs>在<xref:System.Windows.Forms.Control.Paint>的表單或控制項的事件。 這通常是取得圖形物件的參考，建立控制項的繪製程式碼時。 您也可以做的屬性取得圖形物件的同樣地，<xref:System.Drawing.Printing.PrintPageEventArgs>處理時<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件<xref:System.Drawing.Printing.PrintDocument>。  
   
      -或-  
   
--   呼叫<xref:System.Windows.Forms.Control.CreateGraphics%2A>方法的控制項或表單，以取得參考<xref:System.Drawing.Graphics>物件，表示該控制項或表單的繪圖介面。 如果您想要在表單或已經存在的控制項上繪製，請使用這個方法。  
+- 呼叫<xref:System.Windows.Forms.Control.CreateGraphics%2A>方法的控制項或表單，以取得參考<xref:System.Drawing.Graphics>物件，表示該控制項或表單的繪圖介面。 如果您想要在表單或已經存在的控制項上繪製，請使用這個方法。  
   
      -或-  
   
--   建立<xref:System.Drawing.Graphics>從繼承自任何物件的物件<xref:System.Drawing.Image>。 當您想要變更現有的映像時，這個方法很有用。  
+- 建立<xref:System.Drawing.Graphics>從繼承自任何物件的物件<xref:System.Drawing.Image>。 當您想要變更現有的映像時，這個方法很有用。  
   
      下列各節提供有關這些程序的詳細資料。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "59324197"
   
 #### <a name="to-create-a-graphics-object-with-the-creategraphics-method"></a>若要建立 Graphics 物件，包含 CreateGraphics 方法  
   
--   呼叫<xref:System.Windows.Forms.Control.CreateGraphics%2A>表單或控制項的項目，您想要呈現圖形的方法。  
+- 呼叫<xref:System.Windows.Forms.Control.CreateGraphics%2A>表單或控制項的項目，您想要呈現圖形的方法。  
   
     ```vb  
     Dim g as Graphics  
@@ -122,7 +122,7 @@ ms.locfileid: "59324197"
   
 #### <a name="to-create-a-graphics-object-from-an-image"></a>若要建立 Graphics 物件，從映像  
   
--   呼叫<xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType>方法，並提供您想要建立的映像變數名稱<xref:System.Drawing.Graphics>物件。  
+- 呼叫<xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType>方法，並提供您想要建立的映像變數名稱<xref:System.Drawing.Graphics>物件。  
   
      下列範例示範如何使用<xref:System.Drawing.Bitmap>物件：  
   
@@ -149,17 +149,17 @@ ms.locfileid: "59324197"
 ## <a name="drawing-and-manipulating-shapes-and-images"></a>繪圖和圖案和影像操作  
  在建立之後，<xref:System.Drawing.Graphics>物件可能會用來繪製線條和形狀、 呈現文字，或顯示和操作的映像。 搭配使用的主體物件<xref:System.Drawing.Graphics>物件：  
   
--   <xref:System.Drawing.Pen>類別，用於繪製線條、 大綱圖形，或轉譯其他幾何表示相互轉換。  
+- <xref:System.Drawing.Pen>類別，用於繪製線條、 大綱圖形，或轉譯其他幾何表示相互轉換。  
   
--   <xref:System.Drawing.Brush>類別，用於填滿圖形，例如 填滿的圖案、 影像或文字的區域。  
+- <xref:System.Drawing.Brush>類別，用於填滿圖形，例如 填滿的圖案、 影像或文字的區域。  
   
--   <xref:System.Drawing.Font>類別 — 提供什麼圖形來轉譯文字時使用的描述。  
+- <xref:System.Drawing.Font>類別 — 提供什麼圖形來轉譯文字時使用的描述。  
   
--   <xref:System.Drawing.Color>結構，表示要顯示的不同色彩。  
+- <xref:System.Drawing.Color>結構，表示要顯示的不同色彩。  
   
 #### <a name="to-use-the-graphics-object-you-have-created"></a>若要使用您已建立的圖形物件  
   
--   使用適當的物件來繪製您的需要上面所列。  
+- 使用適當的物件來繪製您的需要上面所列。  
   
      如需詳細資訊，請參閱下列主題：  
   

@@ -3,11 +3,11 @@ title: 針對巢狀項目指定的關聯進行對應
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
 ms.openlocfilehash: 9772f077991c758be65bbb44b9474f1ad341371f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785381"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>針對巢狀項目指定的關聯進行對應
 結構描述可以包含**msdata: relationship**註釋，明確指定結構描述中任何兩個項目之間的對應。 中指定的兩個元素**msdata: relationship**可以巢狀方式置於結構描述，但並不需要。 對應處理會使用**msdata: relationship**結構描述產生主索引鍵/外部索引鍵關聯性之間的兩個資料行中。  
@@ -54,14 +54,14 @@ ms.locfileid: "59203141"
   
  XML 結構描述對應處理序會在 <xref:System.Data.DataSet> 內建立下列各項：  
   
--   **順序**並**OrderDetail**資料表。  
+- **順序**並**OrderDetail**資料表。  
   
     ```  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
--   之間的關聯性**順序**並**OrderDetail**資料表。 **巢狀**此關聯性的屬性設定為 **，則為 True**因為**Order**並**OrderDetail**元素的巢狀結構描述中.  
+- 之間的關聯性**順序**並**OrderDetail**資料表。 **巢狀**此關聯性的屬性設定為 **，則為 True**因為**Order**並**OrderDetail**元素的巢狀結構描述中.  
   
     ```  
     ParentTable: Order  

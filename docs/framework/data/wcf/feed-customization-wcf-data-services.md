@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
 ms.openlocfilehash: 51da86d6c0f565d1baa58452a661ccbaa321538c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765683"
 ---
 # <a name="feed-customization-wcf-data-services"></a>自訂摘要 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]將資料公開為摘要。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支援資料摘要的 Atom 和 「 JavaScript 物件標記法 (JSON) 格式。 當您使用 Atom 摘要時，[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]提供標準的方法，用來序列化資料，例如實體和關聯性，為 XML 格式，可以包含在 HTTP 訊息的本文。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 定義包含在實體內的資料與 Atom 項目之間的預設實體屬性對應。 如需詳細資訊，請參閱[OData:Atom 格式](https://go.microsoft.com/fwlink/?LinkID=185794)。  
@@ -83,12 +83,12 @@ ms.locfileid: "59517313"
 ## <a name="feed-customization-considerations"></a>摘要自訂考量  
  定義自訂摘要對應時，您應該考慮下列事項。  
   
--   [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端會將對應的項目摘要中為空白時，它們只包含空白字元。 基於這個原因，只包含空白字元的對應項目不會以相同的空白字元在用戶端上具體化。 若要保留此空白字元在用戶端上，您必須設定的值`KeepInContext`至`true`摘要的對應屬性中。  
+- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端會將對應的項目摘要中為空白時，它們只包含空白字元。 基於這個原因，只包含空白字元的對應項目不會以相同的空白字元在用戶端上具體化。 若要保留此空白字元在用戶端上，您必須設定的值`KeepInContext`至`true`摘要的對應屬性中。  
   
 ## <a name="versioning-requirements"></a>版本控制需求  
  摘要自訂具有下列 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 通訊協定版本控制需求：  
   
--   摘要自訂要求用戶端和資料服務都支援 2.0 版的 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 通訊協定和更新版本。  
+- 摘要自訂要求用戶端和資料服務都支援 2.0 版的 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 通訊協定和更新版本。  
   
  如需詳細資訊，請參閱 <<c0> [ 資料服務版本控制](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。  
   

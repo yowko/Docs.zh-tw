@@ -3,24 +3,24 @@ title: 通用屬性 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
 ms.openlocfilehash: e001c9a637d2e5e34e77158704e4ad81d6973a50
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794026"
 ---
 # <a name="common-attributes-visual-basic"></a>通用屬性 (Visual Basic)
 本主題說明在 Visual Basic 程式中最常用的屬性。  
   
--   [全域屬性](#Global)  
+- [全域屬性](#Global)  
   
--   [Obsolete 屬性](#Obsolete)  
+- [Obsolete 屬性](#Obsolete)  
   
--   [條件式屬性](#Conditional)  
+- [條件式屬性](#Conditional)  
   
--   [呼叫端資訊屬性](#CallerInfo)  
+- [呼叫端資訊屬性](#CallerInfo)  
   
--   [Visual Basic 屬性](#VB)  
+- [Visual Basic 屬性](#VB)  
   
 ## <a name="Global"></a> 全域屬性  
  大部分屬性會套用至特定語言項目 (例如類別或方法)；不過，有些屬性是全域屬性，其套用至整個組件或模組。 例如，<xref:System.Reflection.AssemblyVersionAttribute> 屬性可以用來將版本資訊內嵌到組件，與下面類似：  
@@ -33,11 +33,11 @@ ms.locfileid: "58834529"
   
  組件屬性是提供組件相關資訊的值。 它們的分類如下：  
   
--   組件識別屬性  
+- 組件識別屬性  
   
--   資訊屬性  
+- 資訊屬性  
   
--   組件資訊清單屬性  
+- 組件資訊清單屬性  
   
 ### <a name="assembly-identity-attributes"></a>組件識別屬性  
  三個具有強式名稱 (如果適用) 的屬性會判斷組件的識別：名稱、版本與文化特性。 這些屬性會形成組件的完整名稱，且在程式碼中參考組件時需要用到。 您可以使用屬性來設定組件的版本和文化特性。 不過，名稱值乃是根據包含組件資訊清單的檔案來由編譯器、[組件資訊對話方塊](/visualstudio/ide/reference/assembly-information-dialog-box) 中的 Visual Studio IDE 或在建立組件時的組件連結器 (Al.exe) 所設定。 <xref:System.Reflection.AssemblyFlagsAttribute> 屬性指定組件的多個複本是否可以並存。  
@@ -75,7 +75,7 @@ ms.locfileid: "58834529"
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|定義組件資訊清單的易記預設別名。|  
   
 ## <a name="Obsolete"></a> Obsolete 屬性  
- `Obsolete` 屬性會將程式實體標記為不再建議使用的標記。 每次使用標記為已淘汰的實體都會接著產生警告或錯誤 (視屬性的設定方式而定)。 例如：  
+ `Obsolete` 屬性會將程式實體標記為不再建議使用的標記。 每次使用標記為已淘汰的實體都會接著產生警告或錯誤 (視屬性的設定方式而定)。 例如:   
   
 ```vb  
 <System.Obsolete("use class B")>   

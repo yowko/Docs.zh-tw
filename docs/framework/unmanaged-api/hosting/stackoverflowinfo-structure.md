@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ac0f5d522a24394369583692f8c564254529bf13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796022"
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo 結構
 因為溢位而擲回的例外狀況，會儲存發生溢位和資訊的類型。  

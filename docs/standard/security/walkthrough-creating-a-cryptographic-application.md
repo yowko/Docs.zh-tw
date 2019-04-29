@@ -13,20 +13,20 @@ ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f141f21f80275a592caf3f87a5cbe0def6869c0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795001"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>逐步解說：建立密碼編譯應用程式
 本逐步解說示範如何加密和解密內容。 程式碼範例是針對 Windows Form 應用程式所設計。 此應用程式不會示範真實世界案例，例如使用智慧卡。 相反地，它會示範加密和解密的基本概念。  
   
  本逐步解說針對加密使用下列指導方針：  
   
--   使用 <xref:System.Security.Cryptography.RijndaelManaged> 類別 (一個對稱算法) 來加密和解密資料，使用其自動產生的 <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> 和 <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>。  
+- 使用 <xref:System.Security.Cryptography.RijndaelManaged> 類別 (一個對稱算法) 來加密和解密資料，使用其自動產生的 <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> 和 <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>。  
   
--   使用 <xref:System.Security.Cryptography.RSACryptoServiceProvider> (一個非對稱式演算法)，加密和解密由 <xref:System.Security.Cryptography.RijndaelManaged> 加密之資料的金鑰。 非對稱演算法最適合用於較少量的資料，例如金鑰。  
+- 使用 <xref:System.Security.Cryptography.RSACryptoServiceProvider> (一個非對稱式演算法)，加密和解密由 <xref:System.Security.Cryptography.RijndaelManaged> 加密之資料的金鑰。 非對稱演算法最適合用於較少量的資料，例如金鑰。  
   
     > [!NOTE]
     >  如果您想要保護電腦上的資料，而不與其他人交換加密的內容，請考慮使用 <xref:System.Security.Cryptography.ProtectedData> 或 <xref:System.Security.Cryptography.ProtectedMemory> 類別。  
@@ -48,7 +48,7 @@ ms.locfileid: "59341760"
 ## <a name="prerequisites"></a>必要條件  
  您需要下列元件才能完成此逐步解說：  
   
--   <xref:System.IO> 和 <xref:System.Security.Cryptography> 命名空間的參考。  
+- <xref:System.IO> 和 <xref:System.Security.Cryptography> 命名空間的參考。  
   
 ## <a name="creating-a-windows-forms-application"></a>建立 Windows Forms 應用程式  
  在此逐步解說中的大部分程式碼範例，已設計為按鈕控制項的事件處理常式。 下表列出範例應用程式所需的控制項，及其必要名稱以符合程式碼範例。  
@@ -100,15 +100,15 @@ ms.locfileid: "59341760"
   
  加密套件使用下列格式：  
   
--   金鑰長度，位元組 0 - 3  
+- 金鑰長度，位元組 0 - 3  
   
--   IV 長度，位元組 4 - 7  
+- IV 長度，位元組 4 - 7  
   
--   加密的金鑰  
+- 加密的金鑰  
   
--   IV  
+- IV  
   
--   加密文字  
+- 加密文字  
   
  您可以使用金鑰和 IV 的長度來決定加密套件所有部分的起始點和長度，這些可以用來解密檔案。  
   

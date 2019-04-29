@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
 ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791712"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 會設定<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) 時使用同盟驗證透過 WS-同盟通訊協定。 會設定<xref:System.Security.Claims.ClaimsAuthorizationManager>使用時<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>類別提供的宣告型存取控制。  
@@ -52,9 +52,9 @@ ms.locfileid: "59297483"
 ## <a name="remarks"></a>備註  
  \<Federationconfiguration> > 項目會提供兩種不同案例中的設定：  
   
--   項目時使用 WS-同盟被動式 Web 應用程式中，包含設定的設定<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM)。 它也會參考用來設定安全性權杖處理常式和憑證，以及元件，例如宣告授權管理員和宣告驗證管理員的身分識別組態。  
+- 項目時使用 WS-同盟被動式 Web 應用程式中，包含設定的設定<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM)。 它也會參考用來設定安全性權杖處理常式和憑證，以及元件，例如宣告授權管理員和宣告驗證管理員的身分識別組態。  
   
--   使用時<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>類別提供您的程式碼中的宣告型存取控制，項目會參考的識別組態，以設定宣告授權管理員和用來進行授權的原則決策。 這是為 true，即使在不是被動的 Web 案例; 的案例比方說，Windows Communication Foundation (WCF) 應用程式或不是以 Web 為基礎的應用程式。 如果應用程式不是被動的 Web 應用程式中， [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)項目 （和其子原則項目，如果有的話） 所參考的識別組態的`<federationConfiguration>`項目唯一的設定會套用。 其他所有項目都會被忽略。  
+- 使用時<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>類別提供您的程式碼中的宣告型存取控制，項目會參考的識別組態，以設定宣告授權管理員和用來進行授權的原則決策。 這是為 true，即使在不是被動的 Web 案例; 的案例比方說，Windows Communication Foundation (WCF) 應用程式或不是以 Web 為基礎的應用程式。 如果應用程式不是被動的 Web 應用程式中， [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)項目 （和其子原則項目，如果有的話） 所參考的識別組態的`<federationConfiguration>`項目唯一的設定會套用。 其他所有項目都會被忽略。  
   
  此案例中，不論執行階段會載入預設的同盟設定。 定義行為，如下所示：  
   

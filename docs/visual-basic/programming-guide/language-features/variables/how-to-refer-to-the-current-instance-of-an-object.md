@@ -9,11 +9,11 @@ helpviewer_keywords:
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
 ms.openlocfilehash: 3c44748798d5ed554fc9fbded9c3a4d981a66d2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769027"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>HOW TO：參考目前的執行個體的物件 (Visual Basic)
 *目前的執行個體*物件是目前執行所在的程式碼的執行個體。  
@@ -22,7 +22,7 @@ ms.locfileid: "58823359"
   
 ### <a name="to-refer-to-the-current-instance"></a>若要參考之目前執行個體  
   
--   使用`Me`關鍵字，您通常會使用物件變數的名稱。  
+- 使用`Me`關鍵字，您通常會使用物件變數的名稱。  
   
     ```  
     Me.ForeColor = System.Drawing.Color.Crimson  

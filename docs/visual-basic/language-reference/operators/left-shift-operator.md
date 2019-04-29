@@ -9,11 +9,11 @@ helpviewer_keywords:
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
 ms.openlocfilehash: 75c16c27dc919ba365cbe3c28c61a1e46496b0ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768286"
 ---
 # <a name="-operator-visual-basic"></a>\<\< 運算子 (Visual Basic)
 位元模式中執行算術左的移位。  
@@ -60,15 +60,15 @@ result = pattern << amount
   
  上述範例的結果如下所示：  
   
--   `result1` 為 192 (0000 0000 1100年 0000)。  
+- `result1` 為 192 (0000 0000 1100年 0000)。  
   
--   `result2` 是 3072 (0000 1100年 0000 0000)。  
+- `result2` 是 3072 (0000 1100年 0000 0000)。  
   
--   `result3` 是介於-32768 (1000年 0000 0000 0000)。  
+- `result3` 是介於-32768 (1000年 0000 0000 0000)。  
   
--   `result4` 為 384 (0000 0001 1000年 0000)。  
+- `result4` 為 384 (0000 0001 1000年 0000)。  
   
--   `result5` 為 0 （左邊的移位 15 位數）。  
+- `result5` 為 0 （左邊的移位 15 位數）。  
   
  移位量的`result4`的計算方式為 17 和 15，等於 1。  
   

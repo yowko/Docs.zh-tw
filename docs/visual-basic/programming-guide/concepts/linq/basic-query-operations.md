@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
 ms.openlocfilehash: ed5ed56366911c3676c4413711207ac0a8f85765
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925644"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本查詢作業 (Visual Basic)
 本主題提供簡介[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]運算式在 Visual Basic 中，以及一些典型的一種您在查詢中執行的作業。 如需詳細資訊，請參閱下列主題：  
@@ -81,7 +81,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  若要選取多個欄位從資料來源，您會有兩個選擇：  
   
--   在 `Select`子句，指定您想要包含在結果中的欄位。 編譯器會定義匿名型別具有為其屬性的這些欄位。 如需詳細資訊，請參閱[匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
+- 在 `Select`子句，指定您想要包含在結果中的欄位。 編譯器會定義匿名型別具有為其屬性的這些欄位。 如需詳細資訊，請參閱[匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
   
      因為傳回的項目，在下列範例中是匿名型別執行個體，您無法為型別依名稱參考其他位置中您的程式碼。 編譯器指定類型名稱包含在一般的 Visual Basic 程式碼中無效的字元。 在下列範例中，在集合中的查詢所傳回的項目`londonCusts4`匿名類型的執行個體  
   
@@ -89,7 +89,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      -或-  
   
--   定義具名型別，其中包含您想要包含在結果中，以及建立和初始化中的型別之執行個體的特定欄位`Select`子句。 只有當您必須使用個別的結果，會傳回這些，集合之外，或如果您必須將它們傳遞為方法呼叫中的參數，請使用此選項。 型別`londonCusts5`在下列範例中是 IEnumerable (Of NamePhone)。  
+- 定義具名型別，其中包含您想要包含在結果中，以及建立和初始化中的型別之執行個體的特定欄位`Select`子句。 只有當您必須使用個別的結果，會傳回這些，集合之外，或如果您必須將它們傳遞為方法呼叫中的參數，請使用此選項。 型別`londonCusts5`在下列範例中是 IEnumerable (Of NamePhone)。  
   
      [!code-vb[VbLINQBasicOps#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#7)]  
   

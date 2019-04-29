@@ -8,26 +8,26 @@ ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2bb2b0dd95877fc6492f6d23a19c14688cd78f7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788059"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>應用程式定義域資源監視 (ARM) ETW 事件
 <a name="top"></a> 這些事件可提供有關應用程式網域狀態的詳細診斷資訊。 您可以使用這些事件或使用應用程式網域資源監視 (ARM) 功能，取得相同的資訊。  
   
  這個類別包含下列事件：  
   
--   [ThreadCreated 事件](#threadcreated_event)  
+- [ThreadCreated 事件](#threadcreated_event)  
   
--   [AppDomainMemAllocated 事件](#appdomainmemallocated_event)  
+- [AppDomainMemAllocated 事件](#appdomainmemallocated_event)  
   
--   [AppDomainMemSurvived 事件](#appdomainmemsurvived_event)  
+- [AppDomainMemSurvived 事件](#appdomainmemsurvived_event)  
   
--   [ThreadAppDomainEnter 事件](#threadappdomainenter_event)  
+- [ThreadAppDomainEnter 事件](#threadappdomainenter_event)  
   
--   [ThreadTerminated 事件](#threadterminated_event)  
+- [ThreadTerminated 事件](#threadterminated_event)  
   
 <a name="threadcreated_event"></a>   
 ## <a name="threadcreated-event"></a>ThreadCreated 事件  

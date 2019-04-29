@@ -3,28 +3,28 @@ title: 泛型介面 (Visual Basic) 中的變異數
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
 ms.openlocfilehash: 50a1aeb5c17a0f193b9e90ca2167ef298f7ed237
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787214"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>泛型介面 (Visual Basic) 中的變異數
 .NET Framework 4 引入了對於數個現有泛型介面的變異數支援。 差異支援可讓實作這些介面的類別以隱含方式轉換。 下列介面現在都是 Variant︰  
   
--   <xref:System.Collections.Generic.IEnumerable%601> (T 是 Covariant)  
+- <xref:System.Collections.Generic.IEnumerable%601> (T 是 Covariant)  
   
--   <xref:System.Collections.Generic.IEnumerator%601> (T 是 Covariant)  
+- <xref:System.Collections.Generic.IEnumerator%601> (T 是 Covariant)  
   
--   <xref:System.Linq.IQueryable%601> (T 是 Covariant)  
+- <xref:System.Linq.IQueryable%601> (T 是 Covariant)  
   
--   <xref:System.Linq.IGrouping%602> (`TKey` 和 `TElement` 都是 Covariant)  
+- <xref:System.Linq.IGrouping%602> (`TKey` 和 `TElement` 都是 Covariant)  
   
--   <xref:System.Collections.Generic.IComparer%601> (T 是 Contravariant)  
+- <xref:System.Collections.Generic.IComparer%601> (T 是 Contravariant)  
   
--   <xref:System.Collections.Generic.IEqualityComparer%601> (T 是 Contravariant)  
+- <xref:System.Collections.Generic.IEqualityComparer%601> (T 是 Contravariant)  
   
--   <xref:System.IComparable%601> (T 是 Contravariant)  
+- <xref:System.IComparable%601> (T 是 Contravariant)  
   
  共變數允許方法具有比介面泛型型別參數所定義之衍生程度更大的傳回型別。 若要示範共變數功能，請考慮這些泛型介面︰`IEnumerable(Of Object)` 和 `IEnumerable(Of String)`。 `IEnumerable(Of String)` 介面不會繼承 `IEnumerable(Of Object)` 介面。 不過，`String` 型別確實會繼承`Object` 型別，而且在某些情況下，您可能希望將這些介面的物件指派給彼此。 這會顯示在以下程式碼範例中。  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
 ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929840"
 ---
 # <a name="working-with-certificates"></a>使用憑證
 在針對 Windows Communication Foundation (WCF) 安全性設計程式時，通常會採用 X.509 數位憑證來驗證用戶端與伺服器、加密，以及數位簽署訊息。 本主題將簡要說明 X.509 數位憑證功能及如何在 WCF 中使用這些憑證，同時針對這些概念的進一步說明以及如何運用 WCF 與憑證來完成一般工作的主題說明提供連結。  
@@ -29,27 +29,27 @@ ms.locfileid: "59331711"
 ## <a name="certificate-stores"></a>憑證存放區  
  您可以在存放區中找到憑證。 兩個主要的存放區位置還可進一步細分為子存放區。 如果您是電腦的系統管理員，就可以使用 MMC 嵌入式管理單元工具來同時檢視兩個主要的存放區。 非系統管理員只能檢視目前使用者的存放區。  
   
--   **本機電腦存放區**。 裡面包含了電腦處理序所存取的憑證，例如 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。 請使用此位置來存放可對用戶端驗證伺服器的憑證。  
+- **本機電腦存放區**。 裡面包含了電腦處理序所存取的憑證，例如 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。 請使用此位置來存放可對用戶端驗證伺服器的憑證。  
   
--   **目前使用者的存放區**。 一般來說，互動性應用程式會將電腦目前使用者的憑證放在此處。 如果您正在建立用戶端應用程式，通常會將用來向服務驗證使用者的憑證放在此處。  
+- **目前使用者的存放區**。 一般來說，互動性應用程式會將電腦目前使用者的憑證放在此處。 如果您正在建立用戶端應用程式，通常會將用來向服務驗證使用者的憑證放在此處。  
   
  這兩個存放區還可進一步細分為子存放區。 使用 WCF 來設計程式時，其中最重要的存放區為：  
   
--   **可信任的根憑證授權單位**。 您可以使用此存放區中的憑證來建立憑證鏈結，並藉由這些憑證回溯追蹤到此存放區中某個憑證授權單位的憑證。  
+- **可信任的根憑證授權單位**。 您可以使用此存放區中的憑證來建立憑證鏈結，並藉由這些憑證回溯追蹤到此存放區中某個憑證授權單位的憑證。  
   
     > [!IMPORTANT]
     >  本機電腦會隱含地信任放在此存放區中的任何憑證，就算此憑證並未來自受信任的協力廠商憑證授權單位也是一樣。 因此，除非您充分信任簽發者並了解其相關影響，否則請勿將任何憑證放在此存放區。  
   
--   **個人**。 此存放區可用來存放與電腦使用者相關聯的憑證。 一般來說，此存放區是用來存放 [受信任的根憑證授權單位] 存放區中所找到的其中一個憑證授權單位所發行的憑證。 另外，此處找到的憑證可能是自動發行並由某個應用程式所信任。  
+- **個人**。 此存放區可用來存放與電腦使用者相關聯的憑證。 一般來說，此存放區是用來存放 [受信任的根憑證授權單位] 存放區中所找到的其中一個憑證授權單位所發行的憑證。 另外，此處找到的憑證可能是自動發行並由某個應用程式所信任。  
   
  如需憑證存放區的詳細資訊，請參閱[憑證存放區](/windows/desktop/secauthn/certificate-stores)。  
   
 ### <a name="selecting-a-store"></a>選取存放區  
  選取存放憑證的位置時，必須考量服務或用戶端執行的方式與時機， 並套用下列一般規則：  
   
--   如果 WCF 服務是裝載在 Windows 服務中，請使用 [本機電腦] 存放區。 請注意，您需要系統管理員權限將憑證安裝到本機電腦存放區。  
+- 如果 WCF 服務是裝載在 Windows 服務中，請使用 [本機電腦] 存放區。 請注意，您需要系統管理員權限將憑證安裝到本機電腦存放區。  
   
--   如果服務或用戶端是透過使用者帳戶執行的應用程式，則請使用 [目前使用者] 存放區。  
+- 如果服務或用戶端是透過使用者帳戶執行的應用程式，則請使用 [目前使用者] 存放區。  
   
 ### <a name="accessing-stores"></a>存取存放區  
  存放區會受到存取控制清單 (ACL) 的保護，就像電腦上的資料夾一樣。 當您建立由網際網路資訊服務 (IIS) 所裝載的服務時，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 處理序會透過 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 帳戶來執行。 該帳戶必須能夠存取包含服務所使用之憑證的存放區。 每一個主要存放區都會以預設的存取清單加以保護，但是您可以修改此清單。 如果您建立個別的角色來存取存放區，則必須授予該角色存取權限。 若要了解如何修改存取清單中，使用 WinHttpCertConfig.exe 工具，請參閱[How to:用於建立暫時憑證，在開發期間](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。 如需將用戶端憑證搭配 IIS 一起使用的詳細資訊，請參閱[如何在 ASP.NET Web 應用程式中使用用戶端憑證呼叫 Web 服務進行驗證](https://go.microsoft.com/fwlink/?LinkId=88914)。  
@@ -74,11 +74,11 @@ ms.locfileid: "59331711"
   
  您也可以使用組態來設定屬性。 下列項目可用來指定驗證模式：  
   
--   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+- [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
--   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
+- [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
--   [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
+- [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>自訂驗證  
  `CertificateValidationMode` 屬性同時可讓您自訂憑證的驗證方式。 根據預設，層級會設為 `ChainTrust`。 若要使用 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> 值，您必須同時將 `CustomCertificateValidatorType` 屬性 (Attribute) 設為可用來驗證憑證的組件與型別。 若要建立自訂驗證程式，您必須繼承自抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 類別。  

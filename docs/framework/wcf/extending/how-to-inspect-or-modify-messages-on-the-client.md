@@ -3,11 +3,11 @@ title: HOW TO：檢查或修改用戶端上的訊息
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
 ms.openlocfilehash: 67fa0e092e6494ff55d71e666b5137cfc9a3069e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766834"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>HOW TO：檢查或修改用戶端上的訊息
 您可以檢查或修改整個 WCF 用戶端的傳入或傳出訊息，藉由實作<xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>並將它插入用戶端執行階段。 如需詳細資訊，請參閱 <<c0> [ 擴充用戶端](../../../../docs/framework/wcf/extending/extending-clients.md)。 服務上對等的功能為 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>。 如需完整的程式碼範例，請參閱[訊息偵測器](../../../../docs/framework/wcf/samples/message-inspectors.md)範例。  
@@ -23,13 +23,13 @@ ms.locfileid: "59343294"
 ## <a name="example"></a>範例  
  下列程式碼範例會依序顯示：  
   
--   用戶端偵測器實作。  
+- 用戶端偵測器實作。  
   
--   插入偵測器的端點行為。  
+- 插入偵測器的端點行為。  
   
--   <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 衍生類別，允許您在組態檔中加入行為。  
+- <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 衍生類別，允許您在組態檔中加入行為。  
   
--   加入端點行為的組態檔，這個行為會將用戶端訊息偵測器插入用戶端執行階段中。  
+- 加入端點行為的組態檔，這個行為會將用戶端訊息偵測器插入用戶端執行階段中。  
   
 ```csharp  
 // Client message inspector  

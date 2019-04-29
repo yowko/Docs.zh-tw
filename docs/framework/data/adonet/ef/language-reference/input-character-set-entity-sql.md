@@ -3,11 +3,11 @@ title: 輸入字元集 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
 ms.openlocfilehash: 3795660cf6086aa67596f31e49c4d950aa653d86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780415"
 ---
 # <a name="input-character-set-entity-sql"></a>輸入字元集 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 接受以 UTF-16 編碼的 UNICODE 字元。  

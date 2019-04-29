@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d6575acfb1f75cbc8e3d59ddca5fea0953274cf2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782950"
 ---
 # <a name="icordebugreferencevalue-interface"></a>ICorDebugReferenceValue 介面
 提供方法，可管理的參考物件的值。 （也就是這個介面提供管理指標的方法）。這個介面會實作 「 ICorDebugValue"。  

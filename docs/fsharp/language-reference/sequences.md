@@ -3,11 +3,11 @@ title: 序列
 description: 了解如何使用F#序列，當您使用較大，已排序的資料的集合，但不一定會預期要使用的所有項目。
 ms.date: 02/19/2019
 ms.openlocfilehash: a7791be5e8bd07d81fe9e890fc5896b181f0cb39
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770470"
 ---
 # <a name="sequences"></a>序列
 

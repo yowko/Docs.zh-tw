@@ -3,11 +3,11 @@ title: WCF 錯誤處理
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
 ms.openlocfilehash: d70edacd2447fbe0b0b6db42b93f699ce7c17003
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791218"
 ---
 # <a name="wcf-error-handling"></a>WCF 錯誤處理
 WCF 應用程式遇到的錯誤屬於下列其中一個群組：  
@@ -26,13 +26,13 @@ WCF 應用程式遇到的錯誤屬於下列其中一個群組：
   
  WCF 中的錯誤處理包括下列其中一種或多種執行方式：  
   
--   直接處理擲回的例外狀況。 系統只會針對通訊和 Proxy/通道錯誤進行這種處理方式。  
+- 直接處理擲回的例外狀況。 系統只會針對通訊和 Proxy/通道錯誤進行這種處理方式。  
   
--   使用錯誤合約  
+- 使用錯誤合約  
   
--   實作 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 介面  
+- 實作 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 介面  
   
--   處理 <xref:System.ServiceModel.ServiceHost> 事件  
+- 處理 <xref:System.ServiceModel.ServiceHost> 事件  
   
 ## <a name="fault-contracts"></a>錯誤合約  
  錯誤合約可讓您以獨立於平台的方式定義服務作業期間可能會發生的錯誤。 根據預設，從服務作業內部擲回的所有例外狀況都會當做 <xref:System.ServiceModel.FaultException> 物件傳回給用戶端。 <xref:System.ServiceModel.FaultException> 物件所包含的資訊非常少。 您可以定義錯誤合約並將錯誤當做 <xref:System.ServiceModel.FaultException%601> 傳回，藉以控制傳送至用戶端的資訊。 如需詳細資訊，請參閱 <<c0> [ 指定及處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
@@ -41,7 +41,7 @@ WCF 應用程式遇到的錯誤屬於下列其中一個群組：
  <xref:System.ServiceModel.Dispatcher.IErrorHandler> 介面可讓您進一步控制 WCF 應用程式如何回應錯誤。  它不僅能讓您完全控制傳送至用戶端的錯誤訊息，還能讓您執行自訂錯誤處理，例如記錄。  如需詳細資訊<xref:System.ServiceModel.Dispatcher.IErrorHandler>和[擴充控制項透過錯誤處理和報告](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
   
 ## <a name="servicehost-events"></a>ServiceHost 事件  
- <xref:System.ServiceModel.ServiceHost> 類別會裝載服務並定義許多處理錯誤可能需要的事件。 例如:   
+ <xref:System.ServiceModel.ServiceHost> 類別會裝載服務並定義許多處理錯誤可能需要的事件。 例如：  
   
 1. <xref:System.ServiceModel.Channels.CommunicationObject.Faulted>
   

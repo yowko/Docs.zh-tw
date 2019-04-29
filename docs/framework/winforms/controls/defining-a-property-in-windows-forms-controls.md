@@ -9,20 +9,20 @@ helpviewer_keywords:
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
 ms.openlocfilehash: 905578454b0bc6b5e74202d15c91645fed0fd461
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780649"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>定義 Windows Form 控制項中的屬性
 如需屬性的概觀，請參閱[屬性概觀](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120))。 定義屬性時，有一些重要的考量︰  
   
--   您必須將屬性 (Attribute) 套用至您所定義的屬性 (Property)。 屬性 (Attribute) 指定設計工具如何顯示屬性 (Property)。 如需詳細資料，請參閱[元件的設計階段屬性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))。  
+- 您必須將屬性 (Attribute) 套用至您所定義的屬性 (Property)。 屬性 (Attribute) 指定設計工具如何顯示屬性 (Property)。 如需詳細資料，請參閱[元件的設計階段屬性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))。  
   
--   如果變更的屬性會影響控制項的視覺顯示，請呼叫<xref:System.Windows.Forms.Control.Invalidate%2A>方法 (您的控制項繼承自<xref:System.Windows.Forms.Control>) 從`set`存取子。 <xref:System.Windows.Forms.Control.Invalidate%2A> 接著會呼叫<xref:System.Windows.Forms.Control.OnPaint%2A>方法，以重新繪製控制項。 多次呼叫<xref:System.Windows.Forms.Control.Invalidate%2A>的單一呼叫會導致<xref:System.Windows.Forms.Control.OnPaint%2A>為了提高效率。  
+- 如果變更的屬性會影響控制項的視覺顯示，請呼叫<xref:System.Windows.Forms.Control.Invalidate%2A>方法 (您的控制項繼承自<xref:System.Windows.Forms.Control>) 從`set`存取子。 <xref:System.Windows.Forms.Control.Invalidate%2A> 接著會呼叫<xref:System.Windows.Forms.Control.OnPaint%2A>方法，以重新繪製控制項。 多次呼叫<xref:System.Windows.Forms.Control.Invalidate%2A>的單一呼叫會導致<xref:System.Windows.Forms.Control.OnPaint%2A>為了提高效率。  
   
--   .NET Framework Class Library 提供一般資料型別的轉換器，例如整數、十進位數字、布林值和其他型別。 型別轉換器的用途通常是將字串轉換成值 (從字串資料至其他資料型別)。 一般資料型別與預設型別轉換器相關聯，可將值轉換成字串，也可將字串轉換成適當的資料型別。 如果您定義的屬性 (Property) 是自訂 (亦即非標準) 資料型別，您必須套用屬性 (Attribute)，指定要與該屬性 (Property) 相關聯的型別轉換器。 您也可以使用屬性 (Attribute)，將自訂 UI 類型編輯器與屬性 (Property) 相關聯。 UI 類型編輯器提供使用者介面來編輯屬性或資料型別。 色彩選擇器是 UI 類型編輯器的一個例子。 本主題最後會提供屬性的範例。  
+- .NET Framework Class Library 提供一般資料型別的轉換器，例如整數、十進位數字、布林值和其他型別。 型別轉換器的用途通常是將字串轉換成值 (從字串資料至其他資料型別)。 一般資料型別與預設型別轉換器相關聯，可將值轉換成字串，也可將字串轉換成適當的資料型別。 如果您定義的屬性 (Property) 是自訂 (亦即非標準) 資料型別，您必須套用屬性 (Attribute)，指定要與該屬性 (Property) 相關聯的型別轉換器。 您也可以使用屬性 (Attribute)，將自訂 UI 類型編輯器與屬性 (Property) 相關聯。 UI 類型編輯器提供使用者介面來編輯屬性或資料型別。 色彩選擇器是 UI 類型編輯器的一個例子。 本主題最後會提供屬性的範例。  
   
     > [!NOTE]
     >  如果型別轉換器或 UI 類型編輯器不適用於您的自訂屬性，您可以如[擴充設計階段支援](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))所述自行實作。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
 ms.openlocfilehash: 06b20b4f61741f2174654d749df55c3c4348c547
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787461"
 ---
 # <a name="name-membername-is-not-cls-compliant"></a>名稱\<成員名稱 > 不符合 CLS 標準
 組件標示為`<CLSCompliant(True)>`但公開的成員名稱開頭為底線 (`_`)。  
@@ -29,9 +29,9 @@ ms.locfileid: "58824620"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   如果您有原始程式碼控制，變更成員名稱，使它不是以底線開頭。  
+- 如果您有原始程式碼控制，變更成員名稱，使它不是以底線開頭。  
   
--   如果您需要的成員名稱維持不變，移除<xref:System.CLSCompliantAttribute>從其定義或將其標記為`<CLSCompliant(False)>`。 您仍然可以將標記為組件`<CLSCompliant(True)>`。  
+- 如果您需要的成員名稱維持不變，移除<xref:System.CLSCompliantAttribute>從其定義或將其標記為`<CLSCompliant(False)>`。 您仍然可以將標記為組件`<CLSCompliant(True)>`。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b98746be189e211572e5517aac1f06825973b39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779778"
 ---
 # <a name="icorprofilerinfo2getclassidinfo2-method"></a>ICorProfilerInfo2::GetClassIDInfo2 方法
 取得父模組和中繼資料語彙基元的指定類別中，開啟泛型定義`ClassID`其父類別和`ClassID`如果有的話，類別的每個類型引數。  

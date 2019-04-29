@@ -8,11 +8,11 @@ helpviewer_keywords:
 - RadioButton control [Windows Forms], grouping
 ms.assetid: 58f8fe34-50b7-49d8-a2be-c271be3c6b32
 ms.openlocfilehash: 857e61bc89e072aebcf34793d7e8504ece3318c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941306"
 ---
 # <a name="how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set"></a>HOW TO：將 Windows Forms RadioButton 控制項分組成函式集
 Windows Form<xref:System.Windows.Forms.RadioButton>控制項的設計，讓使用者在兩個或多個設定，其中只有一個可以指派給程序或物件之間的選擇。 比方說，一群<xref:System.Windows.Forms.RadioButton>控制項可能會顯示各種套件電訊廠商的訂單，但將使用的電訊廠商的其中之一。 因此只有一個<xref:System.Windows.Forms.RadioButton>一次可被選取，即使它是功能群組的一部分。  

@@ -3,11 +3,11 @@ title: WCF 服務發行
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
 ms.openlocfilehash: 33725c2f393529a7e59ed0b3ae1db01a359fb9a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791205"
 ---
 # <a name="wcf-service-publishing"></a>WCF 服務發行
 
@@ -17,19 +17,19 @@ Windows Communication Foundation (WCF) 服務的發行可協助您進行從提�
 
 WCF 服務發行支援發佈的 WCF 服務建立的一組 WCF 服務庫範本和其對應的項目範本，其中包括下列：
 
--   WCF 服務庫範本，包含項目範本。
+- WCF 服務庫範本，包含項目範本。
 
--   新聞訂閱服務程式庫。
+- 新聞訂閱服務程式庫。
 
 您可以找到這些範本選擇**檔案** > **新專案**> [**Visual Basic**或是**Visual C#** ] > **WCF**。 其他 WCF 中的範本 （包括 WCF 工作流程服務應用程式和 WCF 服務應用程式） 的這個位置，您可以使用發佈[單鍵發佈的 web 應用程式](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))。
 
 此服務可以發行至下列目標位置。
 
--   本機 IIS。
+- 本機 IIS。
 
--   檔案系統。
+- 檔案系統。
 
--   FTP 站台。
+- FTP 站台。
 
 ## <a name="using-wcf-service-publishing"></a>使用 WCF 服務發行
 
@@ -63,9 +63,9 @@ WCF 服務發行支援發佈的 WCF 服務建立的一組 WCF 服務庫範本和
 
  產生的 Web.config 檔案包含可用於裝載的 Web 和 WCF 服務程式庫，以下列變更 App.config 內容的 Web 區段：
 
--   已排除基底位址 (Base Address)。
+- 已排除基底位址 (Base Address)。
 
--   已排除 `<diagnostics>` 項目中的設定，以保留目標平台的追蹤設定。
+- 已排除 `<diagnostics>` 項目中的設定，以保留目標平台的追蹤設定。
 
 ## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>將包含非 HTTP 繫結的 WCF 服務發行至 IIS
  如果您使用的是 IIS7.0 或更新版本中，您可以發佈 WCF 服務使用非 HTTP 繫結至 IIS。 不過，您必須進行一些預先組態設定。 如需詳細資訊，請參閱主題[在 Windows Process Activation Service 中裝載](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。

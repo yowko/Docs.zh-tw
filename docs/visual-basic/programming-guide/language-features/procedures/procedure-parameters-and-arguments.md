@@ -19,11 +19,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
 ms.openlocfilehash: 80065cabcacdcf44b04fef7bacb978ca9c8077ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791897"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>程序參數和引數 (Visual Basic)
 在大部分情況下，程序會需要一些資訊在其中呼叫的情況。 執行重複或共用工作的程序會針對每個呼叫中使用不同的資訊。 這項資訊是由變數、 常數和您傳遞至程序時呼叫它的運算式所組成。  
@@ -49,11 +49,11 @@ ms.locfileid: "58825452"
   
  如果呼叫程式碼必須要有這類資料類型不同，其對應的參數提供引數`Byte`至`String`參數，它必須執行下列其中一項：  
   
--   提供引數會擴展為參數的資料型別; 的資料類型  
+- 提供引數會擴展為參數的資料型別; 的資料類型  
   
--   設定`Option Strict Off`允許隱含的縮小轉換; 或  
+- 設定`Option Strict Off`允許隱含的縮小轉換; 或  
   
--   您可以使用轉換關鍵字，明確轉換成資料類型。  
+- 您可以使用轉換關鍵字，明確轉換成資料類型。  
   
 ### <a name="type-parameters"></a>類型參數  
  A*泛型程序*也會定義一或多個*型別參數*除了其一般的參數。 泛型程序可讓呼叫端的程式碼，來傳遞不同的資料類型每次呼叫此程序，讓它可以調整資料類型需求的每個個別的呼叫。 請參閱 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)。  

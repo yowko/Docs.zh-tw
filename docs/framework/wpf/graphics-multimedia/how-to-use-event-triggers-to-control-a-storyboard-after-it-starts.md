@@ -7,28 +7,28 @@ helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
 ms.openlocfilehash: d444349f8bc9236e1d15f484f35b1326c77e2425
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769287"
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>HOW TO：在分鏡腳本開始後使用事件觸發程序進行控制
 此範例示範如何控制<xref:System.Windows.Media.Animation.Storyboard>啟動之後。 若要啟動<xref:System.Windows.Media.Animation.Storyboard>利用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，使用<xref:System.Windows.Media.Animation.BeginStoryboard>，這會對物件和屬性，它們建立動畫，然後啟動 分鏡腳本將動畫的散發。 如果您賦予<xref:System.Windows.Media.Animation.BeginStoryboard>藉由指定的名稱及其<xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>屬性，讓它可控制的分鏡腳本。 然後您可以以互動方式控制分鏡腳本開始後。  
   
  使用下列的分鏡腳本動作，並搭配<xref:System.Windows.EventTrigger>物件來控制分鏡腳本。  
   
--   <xref:System.Windows.Media.Animation.PauseStoryboard>：暫停分鏡腳本。  
+- <xref:System.Windows.Media.Animation.PauseStoryboard>：暫停分鏡腳本。  
   
--   <xref:System.Windows.Media.Animation.ResumeStoryboard>：繼續已暫停的分鏡腳本。  
+- <xref:System.Windows.Media.Animation.ResumeStoryboard>：繼續已暫停的分鏡腳本。  
   
--   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>：變更分鏡腳本的速度。  
+- <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>：變更分鏡腳本的速度。  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>：如果有的話，請前進到其填滿期間中，結尾的分鏡腳本。  
+- <xref:System.Windows.Media.Animation.SkipStoryboardToFill>：如果有的話，請前進到其填滿期間中，結尾的分鏡腳本。  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>：停止分鏡腳本。  
+- <xref:System.Windows.Media.Animation.StopStoryboard>：停止分鏡腳本。  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>：移除分鏡腳本，釋放資源。  
+- <xref:System.Windows.Media.Animation.RemoveStoryboard>：移除分鏡腳本，釋放資源。  
   
 ## <a name="example"></a>範例  
  下列範例會使用可控制的分鏡腳本動作以互動方式控制分鏡腳本。  

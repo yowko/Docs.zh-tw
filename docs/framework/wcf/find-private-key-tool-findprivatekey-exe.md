@@ -3,18 +3,18 @@ title: 尋找私密金鑰工具 (FindPrivateKey.exe)
 ms.date: 09/11/2017
 ms.assetid: b8846a95-3fcc-4e8c-b9c0-128d975a6307
 ms.openlocfilehash: 8f156cbb2f4fad8d51e356bd4dee2d72d9397ffb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929580"
 ---
 # <a name="find-private-key-tool-findprivatekeyexe"></a>尋找私密金鑰工具 (FindPrivateKey.exe)
 
-這個命令列工具可用於擷取憑證存放區的私密金鑰。 例如， *FindPrivateKey.exe*可用來尋找與特定 X.509 憑證的憑證存放區相關聯的私密金鑰檔案的名稱與位置。
+這個命令列工具可用於擷取憑證存放區的私密金鑰。 例如， *FindPrivateKey.exe*可用來尋找與特定 X.509 憑證的憑證存放區相關聯的私用金鑰檔的名稱與位置。
 
 > [!IMPORTANT]
-> FindPrivateKey 工具隨附做為 WCF 範例。 如需如何尋找範例以及如何建立它的詳細資訊，請參閱[FindPrivateKey](./samples/findprivatekey.md)。
+> FindPrivateKey 工具隨附做為 WCF 範例。 如需有關尋找範例的位置，以及如何建置它的詳細資訊，請參閱[FindPrivateKey](./samples/findprivatekey.md)。
 
 ## <a name="syntax"></a>語法
 

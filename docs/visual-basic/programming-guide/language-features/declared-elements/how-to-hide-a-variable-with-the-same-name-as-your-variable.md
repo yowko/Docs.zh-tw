@@ -13,18 +13,18 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
 ms.openlocfilehash: 744c7aed50690d5591d1e8248e121cb66ef39108
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794702"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>HOW TO：隱藏與您的變數 (Visual Basic) 同名的變數
 您可以隱藏變數*遮蔽*它，也就是藉由重新定義它，以相同名稱的變數。 您可以遮蔽您想要隱藏有兩種的變數：  
   
--   **透過範圍遮蔽。** 您可以透過範圍遮蔽它的宣告包含您想要隱藏的變數的區域的子區域內。  
+- **透過範圍遮蔽。** 您可以透過範圍遮蔽它的宣告包含您想要隱藏的變數的區域的子區域內。  
   
--   **透過繼承遮蔽。** 如果您想要隱藏的變數定義在類別層級，您可以透過繼承來遮蔽藉由宣告它與[Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)衍生類別中的關鍵字。  
+- **透過繼承遮蔽。** 如果您想要隱藏的變數定義在類別層級，您可以透過繼承來遮蔽藉由宣告它與[Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)衍生類別中的關鍵字。  
   
 ## <a name="two-ways-to-hide-a-variable"></a>若要隱藏變數的兩種方式  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
 ms.openlocfilehash: a57489af2f2af59f128f5d86be844b43c9c49840
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788137"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework 應用程式中的快取
 快取可讓您將資料儲存在記憶體中，以進行快速存取。 重新存取資料時，應用程式可以從快取中取得資料，而不是從原始來源進行擷取。 這可以改善效能和延展性。 此外，暫時無法使用資料來源時，快取可讓資料可用。  
@@ -24,17 +24,17 @@ ms.locfileid: "59085775"
 ## <a name="caching-data"></a>快取資料  
  您可以使用 <xref:System.Runtime.Caching> 命名空間中的類別來快取資訊。 這個命名空間中的快取類別提供下列功能：  
   
--   提供建立自訂快取實作之基礎的抽象類型。  
+- 提供建立自訂快取實作之基礎的抽象類型。  
   
--   具體記憶體內部物件快取實作。  
+- 具體記憶體內部物件快取實作。  
   
  抽象基底快取類別 (<xref:System.Runtime.Caching.ObjectCache>) 會定義下列快取工作：  
   
--   建立和管理快取項目。  
+- 建立和管理快取項目。  
   
--   指定到期和收回資訊。  
+- 指定到期和收回資訊。  
   
--   觸發回應快取項目變更所引發的事件。  
+- 觸發回應快取項目變更所引發的事件。  
   
  <xref:System.Runtime.Caching.MemoryCache> 類別是 <xref:System.Runtime.Caching.ObjectCache> 類別的記憶體內部物件快取實作。 您可以使用大部分快取工作的 <xref:System.Runtime.Caching.MemoryCache> 類別。  
   
@@ -67,11 +67,11 @@ ms.locfileid: "59085775"
   
  若要擴充快取，您可執行下列動作：  
   
--   建立衍生自 <xref:System.Runtime.Caching.ObjectCache> 類別的自訂類別，然後在衍生類別中提供自訂快取實作。  
+- 建立衍生自 <xref:System.Runtime.Caching.ObjectCache> 類別的自訂類別，然後在衍生類別中提供自訂快取實作。  
   
--   建立衍生自 <xref:System.Runtime.Caching.MemoryCache> 類別的類別，以及自訂或擴充衍生類別。 如需如何執行這項作業的範例，請參閱[在 ASP.NET 應用程式使用多個快取物件來快取應用程式資料](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx)。  
+- 建立衍生自 <xref:System.Runtime.Caching.MemoryCache> 類別的類別，以及自訂或擴充衍生類別。 如需如何執行這項作業的範例，請參閱[在 ASP.NET 應用程式使用多個快取物件來快取應用程式資料](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx)。  
   
--   建立衍生自 <xref:System.Web.Caching.OutputCacheProvider> 類別的類別，並設定應用程式使用自訂輸出快取提供者。  
+- 建立衍生自 <xref:System.Web.Caching.OutputCacheProvider> 類別的類別，並設定應用程式使用自訂輸出快取提供者。  
   
  如需詳細資訊，請參閱 Scott Guthrie 部落格上的 [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](https://go.microsoft.com/fwlink/?LinkId=185772)(ASP.NET 4 (VS 2010 和 .NET 4.0 系列) 中的可擴充輸出快取) 一文。  
   

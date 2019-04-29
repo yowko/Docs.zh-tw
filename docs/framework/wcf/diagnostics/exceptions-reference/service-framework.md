@@ -3,11 +3,11 @@ title: 服務架構
 ms.date: 03/30/2017
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
 ms.openlocfilehash: 859e718a56ab63c8e012e1851c0730f53cb707be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780753"
 ---
 # <a name="service-framework"></a>服務架構
 此主題會列出服務架構資料產生的所有例外狀況。  
@@ -25,7 +25,7 @@ ms.locfileid: "33474918"
 |BaseAddressCannotHaveUserInfo|起始位址無法包含統一資源識別元使用者資訊區段。|  
 |BaseAddressDuplicateScheme|此集合已包含具有指定配置的位址。 在此集合中，每個配置只允許一個位址。|  
 |BaseAddressMustBeAbsolute|只有一個絕對的統一資源識別元可以用來當做起始位址。|  
-|BindingDoesnTSupportAnyChannelTypes1|指定的繫結不支援建立任何通道類型。 自訂繫結中的繫結項目堆疊方式有誤或堆疊順序不正確。 傳輸是堆疊最下方的必要項。 繫結程序項目的建議順序為：TransactionFlow、ReliableSession、Security、CompositeDuplex、OneWay、StreamSecurity、MessageEncoding、Transport。|  
+|BindingDoesnTSupportAnyChannelTypes1|指定的繫結不支援建立任何通道類型。 自訂繫結中的繫結項目堆疊方式有誤或堆疊順序不正確。 傳輸是堆疊最下方的必要項。 繫結項目的建議的順序為：TransactionFlow、 ReliableSession、 Security、 CompositeDuplex、 OneWay、 StreamSecurity、 MessageEncoding、 傳輸。|  
 |BindingDoesnTSupportDuplexButContractRequires1|合約需要 Duplex。 指定的繫結不支援它，或是未正確設定來支援它。|  
 |BindingDoesnTSupportOneWayButContractRequires1|合約需要 OneWay。 指定的繫結不支援它，或是未正確設定來支援它。|  
 |BindingDoesnTSupportRequestReplyButContract1|合約需要 Request/Reply。 指定的繫結不支援它，或是未正確設定來支援它。|  
@@ -42,13 +42,13 @@ ms.locfileid: "33474918"
 |CouldnTCreateChannelForChannelType2|已要求指定的通道類型，但是指定的繫結不支援它或是未正確設定來支援它。|  
 |DispatchRuntimeRequiresFormatter0|指定的 DispatchOperation 需要格式器，因為 DeserializeRequest 和 SerializeReply 並非同為 false。|  
 |EndMethodsCannotBeDecoratedWithOperationContractAttribute|使用 IAsyncResult 設計模式時，不可將 End 方法與 OperationContractAttribute 一起使用。 只有對應的 Begin 方法可以和 OperationContractAttribute 一起使用。 該屬性會套用至方法的 Begin-End 配對。|  
-|EndpointListenerRequirementsCannotBeMetBy3|由於合約需要對這些指定的通道類型之一提供支援，指定之繫結的 IChannelListener 將無法滿足 ChannelDispatcher 需求。 但是繫結僅支援這些指定的通道類型。|  
+|EndpointListenerRequirementsCannotBeMetBy3|由於合約需要對這些指定的通道類型之一提供支援，指定之繫結程序的 IChannelListener 將無法滿足 ChannelDispatcher 需求。 但是繫結僅支援這些指定的通道類型。|  
 |EndpointsMustHaveAValidBinding0|端點必須具備有效繫結。|  
 |InvalidOrUnrecognizedAction|因為指定的動作無效或無法辨識，因此無法處理訊息。|  
 |MultipleMebesInParameters|在 BindingContext 的 BindingParameters 中找到一個以上的 MessageEncodingBindingElement。 CustomBinding 無法包含多個 MessageEncodingBindingElements。 請移除全部項目，只留下其中一個項目。|  
 |MultipleStreamUpgradeProvidersInParameters|在 BindingContext 的 BindingParameters 中找到一個以上的 IStreamUpgradeProviderElement。 CustomBinding 只能包含一個 IStreamUpgradeProviderElements。 請移除全部項目，只留下其中一個項目。|  
 |NoChannelBuilderAvailable|由於繫結並未包含 TransportBindingElement，因此無法用來建立通道處理站或通道接聽項。 每一個繫結都至少必須有一個衍生自 TransportBindingElement 的繫結項目。|  
-|NotAllBindingElementsBuilt|在建置通道處理站與通道接聽項時，並未採用此繫結中的某些繫結項目。 繫結項目的順序不正確。 繫結程序項目的建議順序為：TransactionFlow、ReliableSession、Security、CompositeDuplex、OneWay、StreamSecurity、MessageEncoding、Transport。  請注意，TransportBindingElement 必須排在最後一個。 尚未建置指定的繫結項目。|  
+|NotAllBindingElementsBuilt|在建置通道處理站與通道接聽項時，並未採用此繫結中的某些繫結項目。 繫結項目的順序不正確。 繫結項目的建議的順序為：TransactionFlow、 ReliableSession、 Security、 CompositeDuplex、 OneWay、 StreamSecurity、 MessageEncoding、 傳輸。  請注意，TransportBindingElement 必須排在最後一個。 尚未建置指定的繫結項目。|  
 |RuntimeRequiresInvoker0|分派作業需要 Invoker。|  
 |ServiceHasZeroAppEndpoints|指定的 Service 不包含應用程式 (非基礎結構) 端點。 這是因為找不到應用程式的任何組態檔，或者因為組態檔中找不到任何符合服務名稱的服務項目，又或因為服務項目中未定義任何端點所導致。|  
 |SFxActionMismatch|因為動作不符而無法建立具型別的訊息。 預期發生指定的動作但卻發生另一個動作。|  
@@ -145,7 +145,7 @@ ms.locfileid: "33474918"
 |SFxSchemaDoesNotContainType|具有指定之目標命名空間的配置未包含具有指定名稱的類型。|  
 |SfxServiceContractAttributeNotFound|指定的合約類型未以 ServiceContractAttribute 賦予屬性。 若要定義有效合約，指定的類型必須以 ServiceContractAttribute 賦予屬性。 此類型可以是合約介面或是服務類別。|  
 |SFxServiceContractGeneratorConfigRequired|為了使用 GenerateServiceEndpoint 方法來產生組態資訊，必須以有效 Configuration 物件來初始化 ServiceContractGenerator 執行個體。|  
-|SFxServiceHostBaseCannotAddEndpointAfterOpen|當 ServiceHost 處於下列其中一種狀態之後，就無法新增端點：<br /><br /> 開啟<br />-發生錯誤<br />終止<br />關閉|  
+|SFxServiceHostBaseCannotAddEndpointAfterOpen|當 ServiceHost 處於下列其中一種狀態之後，就無法新增端點：<br /><br /> 開啟<br />-發生錯誤<br />終止<br />-關閉|  
 |SFxServiceHostBaseCannotAddEndpointWithoutDescription|在初始化 Description 屬性之前，無法新增端點。|  
 |SFxServiceMetadataBehaviorNoHttpBaseAddress|ServiceMetadataBehavior 的 HttpGetEnabled 屬性已設為 true 而 HttpGetUrl 屬性則是相對位址，但是不包含 HTTP 初始位址。 請提供 HTTP 初始位址，或是將 HttpGetUrl 設為絕對位址。|  
 |SFxServiceMetadataBehaviorNoHttpsBaseAddress|ServiceMetadataBehavior 的 HttpsGetEnabled 屬性已設為 true 而 HttpsGetUrl 屬性則是相對位址，但是不包含 HTTPS 初始位址。 請提供 HTTPS 初始位址，或是將 HttpsGetUrl 設為絕對位址。|  

@@ -3,11 +3,11 @@ title: 222 - OperationFailed
 ms.date: 03/30/2017
 ms.assetid: 6b530ded-8f20-4d78-8bfe-1875276df6ba
 ms.openlocfilehash: c49aad0f93ce47b66306d75741267530dc6d3fe5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781637"
 ---
 # <a name="222---operationfailed"></a>222 - OperationFailed
 ## <a name="properties"></a>屬性  
@@ -31,5 +31,5 @@ ms.locfileid: "33460731"
 |--------------------|--------------------|-----------------|  
 |方法名稱|`xs:string`|`OperationInvoker` 叫用之方法的 CLR 名稱。|  
 |持續期間|`xs:long`|`OperationInvoker` 叫用方法所花費的時間，以毫秒為單位。|  
-|HostReference|`xs:string`|若為 Web 託管服務，此欄位會唯一識別 Web 階層架構中的服務。 其格式定義為 ' Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'。 範例: ' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'。|  
+|HostReference|`xs:string`|若為 Web 託管服務，此欄位會唯一識別 Web 階層架構中的服務。 其格式定義為 ' Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'。 範例：' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'。|  
 |AppDomain|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。|

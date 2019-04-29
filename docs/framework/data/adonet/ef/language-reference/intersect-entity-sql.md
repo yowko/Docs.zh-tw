@@ -3,11 +3,11 @@ title: INTERSECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 93c6fe33-f341-4b52-911e-adf503891951
 ms.openlocfilehash: 85b0abb03161b2df0cfc4ddf6cafc92fb7de9d95
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780376"
 ---
 # <a name="intersect-entity-sql"></a>INTERSECT (Entity SQL)
 傳回 INTERSECT 運算元左右兩側之查詢運算式都會傳回的任何相異值集合。 所有運算式都必須具有與 `expression`相同的型別或是共同基底型別或衍生型別。  

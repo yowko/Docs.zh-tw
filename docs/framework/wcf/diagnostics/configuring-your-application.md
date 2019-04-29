@@ -3,20 +3,20 @@ title: 設定您的應用程式
 ms.date: 03/30/2017
 ms.assetid: a2f995b0-669d-4721-b00f-4561ec7eb6a4
 ms.openlocfilehash: 94bf5f4bbee8bb8bb462c4bf91be75d1627ec567
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784991"
 ---
 # <a name="configuring-your-application"></a>設定您的應用程式
 Windows Communication Foundation (WCF) 會使用.NET 組態系統，並可讓您設定電腦和應用程式範圍的服務。  
   
  WCF 所定義的組態設定位於`<system.serviceModel>`區段群組。 如需如何設定 WCF 服務的詳細資訊，請參閱下列主題：  
   
--   [設定服務](../../../../docs/framework/wcf/configuring-services.md)  
+- [設定服務](../../../../docs/framework/wcf/configuring-services.md)  
   
--   [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
+- [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
   
  應用程式定義的組態設定會定義在 `<appSettings>` 節群組中。 如需有關.NET 組態檔中的應用程式設定的詳細資訊，請參閱[ \<appSettings >](https://go.microsoft.com/fwlink/?LinkId=95159)。  
   

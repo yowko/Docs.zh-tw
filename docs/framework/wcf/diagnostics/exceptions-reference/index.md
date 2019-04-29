@@ -3,14 +3,14 @@ title: 例外狀況參考
 ms.date: 03/30/2017
 ms.assetid: adc19950-5f79-4045-8403-bf6310118ee3
 ms.openlocfilehash: 7034c3bbc25ab7ae6fea1d03c42ecde2e0130ee0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777386"
 ---
 # <a name="exceptions-reference"></a>例外狀況參考
-此區段會列出產生 Windows Communication Foundation (WCF) 的下列區域中的所有例外狀況：  
+此區段會列出下列區域產生 Windows Communication Foundation (WCF) 中的所有例外狀況：  
   
  [IdentityModel](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/identitymodel-exceptions.md)  
   
@@ -24,9 +24,9 @@ ms.locfileid: "33474463"
   
  核心通訊：HTTP/HTTPS 傳輸通道  
   
- [核心通訊：內部雙面傳輸通道](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
+ [核心通訊：內部雙工傳輸通道](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
   
- [核心通訊：具名管道傳輸通道](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
+ [核心通訊：具名的管道傳輸通道](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
   
  [核心通訊：TCP 傳輸通道](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
   

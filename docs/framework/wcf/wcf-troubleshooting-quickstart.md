@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
 ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780818"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 疑難排解快速入門
 本主題列出客戶在開發 WCF 用戶端和服務時會碰到的幾個已知問題。 如果您遇到的問題不在此清單中，建議您為您的服務設定追蹤。 這會產生一個追蹤檔案，您可以使用追蹤檔案檢視器檢視這個檔案，並取得服務中可能會發生之例外狀況的詳細資訊。 如需有關如何設定追蹤的詳細資訊，請參閱：[設定追蹤](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。 如需有關追蹤檔案檢視器的詳細資訊，請參閱：[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
@@ -98,15 +98,15 @@ public class MyServiceHost : ServiceHost
 ## <a name="my-service-and-client-work-great-but-i-cant-get-them-to-work-when-the-client-is-on-another-computer-whats-happening"></a>我的服務和用戶端運作良好，但是當用戶端在另一台電腦上時，它們就無法運作。 發生什麼事？  
  根據例外狀況，可能有幾個問題：  
   
--   您可能需要將用戶端端點位址變更為主機名稱而非 "localhost"。  
+- 您可能需要將用戶端端點位址變更為主機名稱而非 "localhost"。  
   
--   您可能需要對應用程式開放連接埠。 如需詳細資料，請參閱 SDK 範例的 [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) 。  
+- 您可能需要對應用程式開放連接埠。 如需詳細資料，請參閱 SDK 範例的 [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) 。  
   
--   如需其他可能的問題，請參閱範例主題[執行 Windows Communication Foundation 範例](./samples/running-the-samples.md)。  
+- 如需其他可能的問題，請參閱範例主題[執行 Windows Communication Foundation 範例](./samples/running-the-samples.md)。  
   
--   如果您的用戶端是使用 Windows 認證，且例外狀況為 <xref:System.ServiceModel.Security.SecurityNegotiationException>，請設定 Kerberos 如下。  
+- 如果您的用戶端是使用 Windows 認證，且例外狀況為 <xref:System.ServiceModel.Security.SecurityNegotiationException>，請設定 Kerberos 如下。  
   
-    1.  將身分識別認證新增至用戶端的 App.config 檔案中的端點項目：  
+    1. 將身分識別認證新增至用戶端的 App.config 檔案中的端點項目：  
   
         ```xml
         <endpoint   
@@ -122,33 +122,33 @@ public class MyServiceHost : ServiceHost
         </endpoint>  
         ```  
   
-    2.  在 System 或 NetworkService 帳戶下執行自我主控的服務。 您可以執行這個命令，在 System 帳戶下建立命令視窗：  
+    2. 在 System 或 NetworkService 帳戶下執行自我主控的服務。 您可以執行這個命令，在 System 帳戶下建立命令視窗：  
   
         ```console
         at 12:36 /interactive "cmd.exe"  
         ```  
   
-    3.  在網際網路資訊服務 (IIS) 下主控服務，根據預設，它會使用服務主要名稱 (SPN) 帳戶。  
+    3. 在網際網路資訊服務 (IIS) 下主控服務，根據預設，它會使用服務主要名稱 (SPN) 帳戶。  
   
-    4.  使用 SetSPN 向網域註冊新的 SPN。 請注意，您必須是網域系統管理員才能執行這項操作。  
+    4. 使用 SetSPN 向網域註冊新的 SPN。 請注意，您必須是網域系統管理員才能執行這項操作。  
   
  如需有關 Kerberos 通訊協定的詳細資訊，請參閱 < [Security Concepts Used in WCF](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)和：  
   
--   [偵錯 Windows 驗證錯誤](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
+- [偵錯 Windows 驗證錯誤](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
--   [使用 Http.sys 登錄 Kerberos 服務主要名稱](https://go.microsoft.com/fwlink/?LinkId=86943)  
+- [使用 Http.sys 登錄 Kerberos 服務主要名稱](https://go.microsoft.com/fwlink/?LinkId=86943)  
   
--   [Kerberos 說明](https://go.microsoft.com/fwlink/?LinkId=86946)  
+- [Kerberos 說明](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
 ## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>當我擲回 FaultException\<例外狀況 > 其中型別是例外狀況，我一定會收到一般的 FaultException 型別，用戶端上並不是泛型類型。 發生什麼事？  
  強烈建議您建議自己的自訂錯誤資料型別，並宣告為您的錯誤合約中的詳細型別。 原因是使用系統提供的例外狀況類型：  
   
--   建立類型依存性，移除服務導向應用程式的其中一個最大的強度。  
+- 建立類型依存性，移除服務導向應用程式的其中一個最大的強度。  
   
--   無法依存以標準方式序列化的例外狀況。 有些 (例如 <xref:System.Security.SecurityException>) 可能完全不能序列化。  
+- 無法依存以標準方式序列化的例外狀況。 有些 (例如 <xref:System.Security.SecurityException>) 可能完全不能序列化。  
   
--   對用戶端公開內部實作詳細資料。 如需詳細資訊，請參閱 <<c0> [ 指定及處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
+- 對用戶端公開內部實作詳細資料。 如需詳細資訊，請參閱 <<c0> [ 指定及處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
   
  然而，如果您是對應用程式進行偵錯，可以使用 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 類別來序列化例外狀況資訊，並傳回用戶端。  
   
@@ -237,7 +237,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BK_MK99"></a>   
 ## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>從 WCF SOAP 應用程式呼叫 WCF Web HTTP 應用程式時，服務就會傳回下列錯誤：405 不允許的方法  
- 呼叫 WCF Web HTTP 應用程式 (使用的服務<xref:System.ServiceModel.WebHttpBinding>和<xref:System.ServiceModel.Description.WebHttpBehavior>) 從 WCF 服務可能會產生下列例外狀況：`Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]:遠端伺服器傳回未預期的回應：(405) 方法不允許。 ' 發生這個例外狀況，因為 WCF 覆寫傳出<xref:System.ServiceModel.OperationContext>以傳入<xref:System.ServiceModel.OperationContext>。 若要解決這個問題，請在 WCF Web HTTP 服務作業中建立 <xref:System.ServiceModel.OperationContextScope> 。 例如:   
+ 呼叫 WCF Web HTTP 應用程式 (使用的服務<xref:System.ServiceModel.WebHttpBinding>和<xref:System.ServiceModel.Description.WebHttpBehavior>) 從 WCF 服務可能會產生下列例外狀況：`Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]:遠端伺服器傳回未預期的回應：(405) 方法不允許。 ' 發生這個例外狀況，因為 WCF 覆寫傳出<xref:System.ServiceModel.OperationContext>以傳入<xref:System.ServiceModel.OperationContext>。 若要解決這個問題，請在 WCF Web HTTP 服務作業中建立 <xref:System.ServiceModel.OperationContextScope> 。 例如：  
   
 ```csharp
 public string Echo(string input)  

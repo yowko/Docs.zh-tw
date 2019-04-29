@@ -5,11 +5,11 @@ helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
 ms.openlocfilehash: 198b664ff52b42b7f393eec3e8162f3a12037d9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935521"
 ---
 # <a name="wcf-syndication"></a>WCF 新聞訂閱
 Windows Communication Foundation (WCF) 提供支援，輕鬆地使用新聞訂閱摘要以 Atom、 RSS 或其他自訂格式，這可讓您讀取和建立它們，以及將它們公開服務端點上。 本節的各主題會詳細描述新聞訂閱的程式設計模型。  

@@ -3,11 +3,11 @@ title: 自動一般化
 description: 了解如何F#，讓它們能夠具有多個類型，可能的話，會自動一般化的引數和類型的函式。
 ms.date: 05/16/2016
 ms.openlocfilehash: 15ecf8e6f07da19bb015fd028a7465ba8b837190
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937536"
 ---
 # <a name="automatic-generalization"></a>自動一般化
 

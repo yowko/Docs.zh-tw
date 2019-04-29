@@ -6,28 +6,28 @@ dev_langs:
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
 ms.openlocfilehash: 3945d4fc92bea2c4212da0507618203603ae8aba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780535"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities 中的已知問題和考量
 本節提供有關 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢已知問題的資訊。  
   
--   [無法快取的 LINQ 查詢](#LINQQueriesThatAreNotCached)  
+- [無法快取的 LINQ 查詢](#LINQQueriesThatAreNotCached)  
   
--   [排序資訊遺失](#OrderingInfoLost)  
+- [排序資訊遺失](#OrderingInfoLost)  
   
--   [不支援不帶正負號的整數](#UnsignedIntsUnsupported)  
+- [不支援不帶正負號的整數](#UnsignedIntsUnsupported)  
   
--   [型別轉換錯誤](#TypeConversionErrors)  
+- [型別轉換錯誤](#TypeConversionErrors)  
   
--   [不支援參考非純量變數](#RefNonScalarClosures)  
+- [不支援參考非純量變數](#RefNonScalarClosures)  
   
--   [使用 SQL Server 2000 的巢狀的查詢可能會失敗](#NestedQueriesSQL2000)  
+- [使用 SQL Server 2000 的巢狀的查詢可能會失敗](#NestedQueriesSQL2000)  
   
--   [投影至匿名型別](#ProjectToAnonymousType)  
+- [投影至匿名型別](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
 ## <a name="linq-queries-that-cannot-be-cached"></a>不能快取的 LINQ 查詢  

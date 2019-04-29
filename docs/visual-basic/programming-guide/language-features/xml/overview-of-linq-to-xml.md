@@ -6,11 +6,11 @@ helpviewer_keywords:
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
 ms.openlocfilehash: 91f622b9eecdd1aec8b9361493095e92a851988e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761818"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Visual Basic 中的 LINQ to XML 概觀
 Visual Basic 提供的支援[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]透過 XML 常值和 XML 軸屬性。 這可讓您使用熟悉、 便利的語法，在 Visual Basic 程式碼中使用的 XML。 *XML 常值*可讓您直接在您的程式碼中包含 XML。 *XML 軸屬性*讓您存取子節點、 子代節點和 XML 常值的屬性。 如需詳細資訊，請參閱 < [XML 常值概觀](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)並[Visual Basic 中的存取 XML](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)。  

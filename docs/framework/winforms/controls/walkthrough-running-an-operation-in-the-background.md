@@ -14,11 +14,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
 ms.openlocfilehash: c1881ffa1c6fca546b086efea59d2263af853949
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792167"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>逐步解說：在背景執行作業
 如果您有要花費較長時間才能完成的作業，但您不想導致使用者介面發生延遲，就可以使用 <xref:System.ComponentModel.BackgroundWorker> 類別在另一個執行緒上執行該作業。  
@@ -96,9 +96,9 @@ ms.locfileid: "59308441"
   
 ## <a name="next-steps"></a>後續步驟  
   
--   實作非同步作業進行時，報告進度的表單。 如需詳細資訊，請參閱[如何：實作使用背景作業的表單](how-to-implement-a-form-that-uses-a-background-operation.md)。  
+- 實作非同步作業進行時，報告進度的表單。 如需詳細資訊，請參閱[如何：實作使用背景作業的表單](how-to-implement-a-form-that-uses-a-background-operation.md)。  
   
--   實作元件支援非同步模式的類別。 如需詳細資訊，請參閱 <<c0> [ 實作事件架構非同步模式](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)。  
+- 實作元件支援非同步模式的類別。 如需詳細資訊，請參閱 <<c0> [ 實作事件架構非同步模式](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

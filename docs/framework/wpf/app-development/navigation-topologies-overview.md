@@ -10,11 +10,11 @@ helpviewer_keywords:
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
 ms.openlocfilehash: 716cfbe7d12ccc2233d018f0346f84cf2fc5e733
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794616"
 ---
 # <a name="navigation-topologies-overview"></a>巡覽拓撲概觀
 <a name="introduction"></a> 本概觀介紹中的巡覽拓撲[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 並接著說明三種常見的巡覽拓撲及其範例。  
@@ -24,15 +24,15 @@ ms.locfileid: "59230859"
   
  此主題包括下列章節：  
   
--   [巡覽拓撲](#Navigation_Topologies)  
+- [巡覽拓撲](#Navigation_Topologies)  
   
--   [結構化巡覽拓撲](#Structured_Navigation_Topologies)  
+- [結構化巡覽拓撲](#Structured_Navigation_Topologies)  
   
--   [透過固定線性拓撲進行巡覽](#Navigation_over_a_Fixed_Linear_Topology)  
+- [透過固定線性拓撲進行巡覽](#Navigation_over_a_Fixed_Linear_Topology)  
   
--   [透過固定的階層式拓撲進行動態巡覽](#Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology)  
+- [透過固定的階層式拓撲進行動態巡覽](#Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology)  
   
--   [透過動態產生的拓撲進行巡覽](#Navigation_over_a_Dynamically_Generated_Topology)  
+- [透過動態產生的拓撲進行巡覽](#Navigation_over_a_Dynamically_Generated_Topology)  
   
 <a name="Navigation_Topologies"></a>   
 ## <a name="navigation-topologies"></a>巡覽拓撲  
@@ -52,9 +52,9 @@ ms.locfileid: "59230859"
 ## <a name="structured-navigation-topologies"></a>結構化巡覽拓撲  
  巡覽拓撲有下列兩種廣泛的類型：  
   
--   **固定拓撲**：在編譯時期定義，且不會在執行階段變更。 固定拓撲適用於以線性或階層式順序的固定順序來瀏覽頁面。  
+- **固定拓撲**：在編譯時期定義，且不會在執行階段變更。 固定拓撲適用於以線性或階層式順序的固定順序來瀏覽頁面。  
   
--   **動態拓撲**：根據從使用者、應用程式，或系統收集而得的輸入，在執行階段定義。 如果要以不同的順序瀏覽頁面，動態拓撲就十分實用。  
+- **動態拓撲**：根據從使用者、應用程式，或系統收集而得的輸入，在執行階段定義。 如果要以不同的順序瀏覽頁面，動態拓撲就十分實用。  
   
  雖然您可以使用頁面來建立巡覽拓撲，但本範例會使用頁面函式來提供額外的支援，藉此簡化透過拓撲頁面傳遞和傳回資料的支援。  
   
@@ -66,21 +66,21 @@ ms.locfileid: "59230859"
   
  透過固定線性拓撲進行巡覽的一般行為包括以下：  
   
--   從呼叫頁面巡覽至啟動器頁面，其可初始化精靈，並巡覽至精靈的第一頁。 啟動器頁面 ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-較少<xref:System.Windows.Navigation.PageFunction%601>) 是不必要的因為呼叫端頁面可以直接呼叫第一個精靈頁面。 不過，如果精靈的初始化作業特別複雜，則可以使用啟動程式頁面來簡化這項作業。  
+- 從呼叫頁面巡覽至啟動器頁面，其可初始化精靈，並巡覽至精靈的第一頁。 啟動器頁面 ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-較少<xref:System.Windows.Navigation.PageFunction%601>) 是不必要的因為呼叫端頁面可以直接呼叫第一個精靈頁面。 不過，如果精靈的初始化作業特別複雜，則可以使用啟動程式頁面來簡化這項作業。  
   
--   使用者可以利用 [向後] 和 [向前] 按鈕 (或超連結)，在頁面之間巡覽。  
+- 使用者可以利用 [向後] 和 [向前] 按鈕 (或超連結)，在頁面之間巡覽。  
   
--   使用者可以利用日誌，在頁面之間巡覽。  
+- 使用者可以利用日誌，在頁面之間巡覽。  
   
--   使用者可以按 [取消] 按鈕，取消任何精靈頁面中的精靈。  
+- 使用者可以按 [取消] 按鈕，取消任何精靈頁面中的精靈。  
   
--   使用者可以按 [結束] 按鈕，接受最後一個精靈頁面中的精靈。  
+- 使用者可以按 [結束] 按鈕，接受最後一個精靈頁面中的精靈。  
   
--   如果取消精靈，精靈會傳回適當的結果，但不會傳回任何資料。  
+- 如果取消精靈，精靈會傳回適當的結果，但不會傳回任何資料。  
   
--   如果使用者接受精靈，精靈會傳回適當的結果，並傳回它所收集的資料。  
+- 如果使用者接受精靈，精靈會傳回適當的結果，並傳回它所收集的資料。  
   
--   完成精靈時 (已接受或取消)，即會從日誌中移除精靈所含的頁面。 這可將精靈的每個執行個體隔離，以避免潛在的資料或狀態異常。  
+- 完成精靈時 (已接受或取消)，即會從日誌中移除精靈所含的頁面。 這可將精靈的每個執行個體隔離，以避免潛在的資料或狀態異常。  
   
 <a name="Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology"></a>   
 ## <a name="dynamic-navigation-over-a-fixed-hierarchical-topology"></a>透過固定的階層式拓撲進行動態巡覽  
@@ -94,23 +94,23 @@ ms.locfileid: "59230859"
   
  雖然固定階層式結構中的頁面巡覽順序是在執行階段決定，但使用者體驗仍和固定線性拓撲的使用者體驗相同：  
   
--   從呼叫頁面巡覽至啟動器頁面，其可初始化精靈，並巡覽至精靈的第一頁。 啟動器頁面 ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-較少<xref:System.Windows.Navigation.PageFunction%601>) 是不必要的因為呼叫端頁面可以直接呼叫第一個精靈頁面。 不過，如果精靈的初始化作業特別複雜，則可以使用啟動程式頁面來簡化這項作業。  
+- 從呼叫頁面巡覽至啟動器頁面，其可初始化精靈，並巡覽至精靈的第一頁。 啟動器頁面 ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-較少<xref:System.Windows.Navigation.PageFunction%601>) 是不必要的因為呼叫端頁面可以直接呼叫第一個精靈頁面。 不過，如果精靈的初始化作業特別複雜，則可以使用啟動程式頁面來簡化這項作業。  
   
--   使用者可以利用 [向後] 和 [向前] 按鈕 (或超連結)，在頁面之間巡覽。  
+- 使用者可以利用 [向後] 和 [向前] 按鈕 (或超連結)，在頁面之間巡覽。  
   
--   使用者可以利用日誌，在頁面之間巡覽。  
+- 使用者可以利用日誌，在頁面之間巡覽。  
   
--   如果使用者向後巡覽日誌，即可變更巡覽順序。  
+- 如果使用者向後巡覽日誌，即可變更巡覽順序。  
   
--   使用者可以按 [取消] 按鈕，取消任何精靈頁面中的精靈。  
+- 使用者可以按 [取消] 按鈕，取消任何精靈頁面中的精靈。  
   
--   使用者可以按 [結束] 按鈕，接受最後一個精靈頁面中的精靈。  
+- 使用者可以按 [結束] 按鈕，接受最後一個精靈頁面中的精靈。  
   
--   如果取消精靈，精靈會傳回適當的結果，但不會傳回任何資料。  
+- 如果取消精靈，精靈會傳回適當的結果，但不會傳回任何資料。  
   
--   如果使用者接受精靈，精靈會傳回適當的結果，並傳回它所收集的資料。  
+- 如果使用者接受精靈，精靈會傳回適當的結果，並傳回它所收集的資料。  
   
--   完成精靈時 (已接受或取消)，即會從日誌中移除精靈所含的頁面。 這可將精靈的每個執行個體隔離，以避免潛在的資料或狀態異常。  
+- 完成精靈時 (已接受或取消)，即會從日誌中移除精靈所含的頁面。 這可將精靈的每個執行個體隔離，以避免潛在的資料或狀態異常。  
   
 <a name="Navigation_over_a_Dynamically_Generated_Topology"></a>   
 ## <a name="navigation-over-a-dynamically-generated-topology"></a>透過動態產生的拓撲進行巡覽  
@@ -124,21 +124,21 @@ ms.locfileid: "59230859"
   
  巡覽順序也稱為動態產生的拓撲。 對使用者來說，即使使用另一種巡覽拓撲，其使用者體驗和上一個拓撲是一樣的：  
   
--   從呼叫頁面巡覽至啟動器頁面，其可初始化精靈，並巡覽至精靈的第一頁。 啟動器頁面 ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-較少<xref:System.Windows.Navigation.PageFunction%601>) 是不必要的因為呼叫端頁面可以直接呼叫第一個精靈頁面。 不過，如果精靈的初始化作業特別複雜，則可以使用啟動程式頁面來簡化這項作業。  
+- 從呼叫頁面巡覽至啟動器頁面，其可初始化精靈，並巡覽至精靈的第一頁。 啟動器頁面 ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-較少<xref:System.Windows.Navigation.PageFunction%601>) 是不必要的因為呼叫端頁面可以直接呼叫第一個精靈頁面。 不過，如果精靈的初始化作業特別複雜，則可以使用啟動程式頁面來簡化這項作業。  
   
--   使用者可以利用 [向後] 和 [向前] 按鈕 (或超連結)，在頁面之間巡覽。  
+- 使用者可以利用 [向後] 和 [向前] 按鈕 (或超連結)，在頁面之間巡覽。  
   
--   使用者可以利用日誌，在頁面之間巡覽。  
+- 使用者可以利用日誌，在頁面之間巡覽。  
   
--   使用者可以按 [取消] 按鈕，取消任何精靈頁面中的精靈。  
+- 使用者可以按 [取消] 按鈕，取消任何精靈頁面中的精靈。  
   
--   使用者可以按 [結束] 按鈕，接受最後一個精靈頁面中的精靈。  
+- 使用者可以按 [結束] 按鈕，接受最後一個精靈頁面中的精靈。  
   
--   如果取消精靈，精靈會傳回適當的結果，但不會傳回任何資料。  
+- 如果取消精靈，精靈會傳回適當的結果，但不會傳回任何資料。  
   
--   如果使用者接受精靈，精靈會傳回適當的結果，並傳回它所收集的資料。  
+- 如果使用者接受精靈，精靈會傳回適當的結果，並傳回它所收集的資料。  
   
--   完成精靈時 (已接受或取消)，即會從日誌中移除精靈所含的頁面。 這可將精靈的每個執行個體隔離，以避免潛在的資料或狀態異常。  
+- 完成精靈時 (已接受或取消)，即會從日誌中移除精靈所含的頁面。 這可將精靈的每個執行個體隔離，以避免潛在的資料或狀態異常。  
   
 ## <a name="see-also"></a>另請參閱
 

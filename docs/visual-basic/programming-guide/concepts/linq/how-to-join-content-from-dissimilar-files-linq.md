@@ -3,11 +3,11 @@ title: HOW TO：將內容從不同的檔案 (LINQ) (Visual Basic)
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
 ms.openlocfilehash: 91337e6a20329cbf3d4d6f0d30a2d604e80474a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778062"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>HOW TO：將內容從不同的檔案 (LINQ) (Visual Basic)
 

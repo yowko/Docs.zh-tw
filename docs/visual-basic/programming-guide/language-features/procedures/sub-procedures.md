@@ -12,11 +12,11 @@ helpviewer_keywords:
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
 ms.openlocfilehash: b70594e002bbf08f0890586e78df901ccb26c7ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791816"
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub 程序 (Visual Basic)
 A`Sub`程序是一系列的 Visual Basic 陳述式加上`Sub`和`End Sub`陳述式。 `Sub`程序執行的工作，然後將控制權傳回呼叫的程式碼，但它不會傳回呼叫程式碼的值。  

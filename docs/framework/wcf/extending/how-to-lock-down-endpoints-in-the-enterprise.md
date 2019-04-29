@@ -3,11 +3,11 @@ title: HOW TO：鎖定企業的端點
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
 ms.openlocfilehash: da90c2e9d096d32c819590058f1e513224fd9242
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766827"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>HOW TO：鎖定企業的端點
 大型企業通常需要在遵循企業安全性原則的環境中開發應用程式。 下列主題討論如何開發與安裝用戶端端點驗證器，可用來驗證所有安裝在電腦上的 Windows Communication Foundation (WCF) 用戶端應用程式。  
@@ -43,15 +43,15 @@ ms.locfileid: "59305951"
   
 3. 使用 <xref:System.Configuration?displayProperty=nameWithType> 命名空間型別以：  
   
-    1.  將延伸加入至[ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md)區段使用完整類型名稱，並鎖定項目。  
+    1. 將延伸加入至[ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md)區段使用完整類型名稱，並鎖定項目。  
   
          [!code-csharp[LockdownValidation#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#5)]  
   
-    2.  新增行為項目加入`EndpointBehaviors`的屬性[ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)區段，並鎖定項目。 (若要在服務上安裝驗證器，驗證器必須是 <xref:System.ServiceModel.Description.IServiceBehavior> 並加入至 `ServiceBehaviors` 屬性)。下列程式碼範例將示範如何在步驟 a. 和 b. 後進行適當的設定，唯一的例外是沒有強式名稱時。  
+    2. 新增行為項目加入`EndpointBehaviors`的屬性[ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)區段，並鎖定項目。 (若要在服務上安裝驗證器，驗證器必須是 <xref:System.ServiceModel.Description.IServiceBehavior> 並加入至 `ServiceBehaviors` 屬性)。下列程式碼範例將示範如何在步驟 a. 和 b. 後進行適當的設定，唯一的例外是沒有強式名稱時。  
   
          [!code-csharp[LockdownValidation#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#6)]  
   
-    3.  儲存 machine.config 檔。 下列程式碼範例執行步驟 3 中所有的工作，但將修改過的 machine.config 檔案複本儲存在本機上。  
+    3. 儲存 machine.config 檔。 下列程式碼範例執行步驟 3 中所有的工作，但將修改過的 machine.config 檔案複本儲存在本機上。  
   
          [!code-csharp[LockdownValidation#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#7)]  
   

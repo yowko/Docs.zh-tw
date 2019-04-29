@@ -5,11 +5,11 @@ f1_keywords:
 - vbrInvalidCast_FromStringTo
 ms.assetid: a7382c0a-e8a4-4125-9690-db3fa030a06a
 ms.openlocfilehash: 6ce6f9a6f29b29ba3404ffee61f4baf962bba316
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941657"
 ---
 # <a name="cast-from-string-quotstringquot-to-type-typename-is-not-valid"></a>從字串轉換&quot;\<字串 >&quot;輸入 '\<類型名稱 >' 無效
 嘗試將字串變數轉換成另一種類型不正確。  

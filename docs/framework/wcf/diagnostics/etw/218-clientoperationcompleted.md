@@ -3,11 +3,11 @@ title: 218 - ClientOperationCompleted
 ms.date: 03/30/2017
 ms.assetid: b069bced-7bb2-4e01-8227-e5dbda17af09
 ms.openlocfilehash: 83f39be84a8d62962b85652b0e39b537c92e612c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781757"
 ---
 # <a name="218---clientoperationcompleted"></a>218 - ClientOperationCompleted
 ## <a name="properties"></a>屬性  
@@ -32,5 +32,5 @@ ms.locfileid: "33457970"
 |動作|xs:string|傳出訊息的 SOAP 動作標頭。|  
 |合約名稱|`xs:string`|合約的名稱。 範例：ICalculator。|  
 |目的地|`xs:string`|訊息傳送至該處的服務端點位址。|  
-|HostReference|`xs:string`|若為 Web 託管服務，此欄位會唯一識別 Web 階層架構中的服務。 其格式定義為 ' Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'。 範例: ' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'。|  
+|HostReference|`xs:string`|若為 Web 託管服務，此欄位會唯一識別 Web 階層架構中的服務。 其格式定義為 ' Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'。 範例：' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'。|  
 |AppDomain|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。|

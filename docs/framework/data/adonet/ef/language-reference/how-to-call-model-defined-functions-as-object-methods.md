@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
 ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774604"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>HOW TO：將模型定義函式當作物件方法來呼叫
 本主題描述如何呼叫模型定義函式做為 <xref:System.Data.Objects.ObjectContext> 物件上的方法，或做為自訂類別上的靜態方法。 A*模型定義函式*是概念模型中所定義的函式。 本主題的程序說明如何直接呼叫這些函式，而不是從 LINQ to Entities 查詢呼叫函式。 呼叫 LINQ to Entities 查詢的模型定義的函式的相關資訊，請參閱[How to:在查詢中呼叫模型定義函式](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)。  
@@ -25,9 +25,9 @@ ms.locfileid: "59304827"
   
 2. 將 Common Language Runtime (CLR) 方法加入至執行下列工作的 <xref:System.Data.Objects.ObjectContext> 類別：  
   
-    -   對應至概念模型中定義的函式。 若要對應方法，您必須將 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> 套用至方法。 請注意，屬性的 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> 和 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> 參數分別是概念模型的命名空間名稱和概念模型中的函式名稱。 LINQ 的函式名稱解析是區分大小寫的。  
+    - 對應至概念模型中定義的函式。 若要對應方法，您必須將 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> 套用至方法。 請注意，屬性的 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> 和 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> 參數分別是概念模型的命名空間名稱和概念模型中的函式名稱。 LINQ 的函式名稱解析是區分大小寫的。  
   
-    -   由 <xref:System.Linq.IQueryProvider.Execute%2A> 屬性傳回的方法會傳回 <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> 的結果。  
+    - 由 <xref:System.Linq.IQueryProvider.Execute%2A> 屬性傳回的方法會傳回 <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> 的結果。  
   
 3. 呼叫方法做為 <xref:System.Data.Objects.ObjectContext> 類別之執行個體上的成員。  
   
@@ -35,11 +35,11 @@ ms.locfileid: "59304827"
   
 1. 使用執行下列工作的靜態方法，將類別加入至您的應用程式：  
   
-    -   對應至概念模型中定義的函式。 若要對應方法，您必須將 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> 套用至方法。 請注意，屬性的 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> 和 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> 參數分別是概念模型的命名空間名稱和概念模型中的函式名稱。  
+    - 對應至概念模型中定義的函式。 若要對應方法，您必須將 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> 套用至方法。 請注意，屬性的 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> 和 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> 參數分別是概念模型的命名空間名稱和概念模型中的函式名稱。  
   
-    -   接受 <xref:System.Linq.IQueryable> 引數。  
+    - 接受 <xref:System.Linq.IQueryable> 引數。  
   
-    -   由 <xref:System.Linq.IQueryProvider.Execute%2A> 屬性傳回的方法會傳回 <xref:System.Linq.IQueryable.Provider%2A> 的結果。  
+    - 由 <xref:System.Linq.IQueryProvider.Execute%2A> 屬性傳回的方法會傳回 <xref:System.Linq.IQueryable.Provider%2A> 的結果。  
   
 2. 呼叫方法做為自訂類別上之靜態方法的成員  
   

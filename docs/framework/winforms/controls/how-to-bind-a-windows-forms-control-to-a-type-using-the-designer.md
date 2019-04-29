@@ -7,11 +7,11 @@ helpviewer_keywords:
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
 ms.openlocfilehash: b298efb0494994659673f9bf9893b667f7eb0f8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761386"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>HOW TO：使用設計工具將 Windows Forms 控制項繫結至類型
 當您在建立與資料互動的控制項時，有時需要將控制項繫結至類型，而非物件。 您在設計階段通常需要將控制項繫結至類型，當時資料可能無法使用，但您仍希望資料繫結的控制項顯示類型公用介面中的資料。 下列程序示範如何建立新<xref:System.Windows.Forms.BindingSource>也就是繫結至型別，以及如何將其中一個類型的屬性，以繫結<xref:System.Windows.Forms.TextBox.Text%2A>屬性<xref:System.Windows.Forms.TextBox>。  
@@ -30,11 +30,11 @@ ms.locfileid: "59304204"
   
 6. 選取要繫結的類型︰  
   
-    -   如果您想要繫結的類型是在目前專案中，或包含此類型的組件已新增為參考，請展開節點以找出您想要的類型，然後選取它。  
+    - 如果您想要繫結的類型是在目前專案中，或包含此類型的組件已新增為參考，請展開節點以找出您想要的類型，然後選取它。  
   
          -或-  
   
-    -   如果您想要繫結的類型是在另一個組件中，目前不在參考清單中，請按一下 [新增參考]，然後按一下 [專案] 索引標籤。選取包含您想要之商務物件的專案，然後按一下 [確定]。 此專案會出現在組件清單中，所以您可展開節點以找出您想要的類型，然後選取它。  
+    - 如果您想要繫結的類型是在另一個組件中，目前不在參考清單中，請按一下 [新增參考]，然後按一下 [專案] 索引標籤。選取包含您想要之商務物件的專案，然後按一下 [確定]。 此專案會出現在組件清單中，所以您可展開節點以找出您想要的類型，然後選取它。  
   
         > [!NOTE]
         >  如果您想要繫結至架構或 Microsoft 組件中的類型，請清除 [隱藏以 Microsoft 或 System 開頭的組件] 核取方塊。  

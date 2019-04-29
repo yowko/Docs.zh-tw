@@ -3,11 +3,11 @@ title: WCF Web HTTP 格式化
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
 ms.openlocfilehash: f3d3a2d992f234c690f3fb87514b700a6596a5fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935469"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web HTTP 格式化
 WCF Web HTTP 程式設計模型可讓您動態決定服務作業傳回回應所使用的最佳格式。 兩種可用來判斷最適合格式的方法分別為：自動和明確。  
@@ -125,15 +125,15 @@ public class Service : IService
   
  如果您需要支援 XML 或 JSON 以外的格式，請定義讓作業使用傳回型別 <xref:System.ServiceModel.Channels.Message>。 請在作業程式碼內決定要使用的適當格式，然後使用下列其中一個方法建立 <xref:System.ServiceModel.Channels.Message> 物件：  
   
--   `WebOperationContext.CreateAtom10Response`  
+- `WebOperationContext.CreateAtom10Response`  
   
--   `WebOperationContext.CreateJsonResponse`  
+- `WebOperationContext.CreateJsonResponse`  
   
--   `WebOperationContext.CreateStreamResponse`  
+- `WebOperationContext.CreateStreamResponse`  
   
--   `WebOperationContext.CreateTextResponse`  
+- `WebOperationContext.CreateTextResponse`  
   
--   `WebOperationContext.CreateXmlResponse`  
+- `WebOperationContext.CreateXmlResponse`  
   
  每個方法都會以適當的格式取得內容並且建立訊息。 `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` 方法可用來取得用戶端慣用的格式清單，並依照由高到低的順序排列偏好設定。 下列程式碼顯示如何使用 `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` 決定要使用的格式，然後使用適當的建立回應方法建立回應訊息。  
   

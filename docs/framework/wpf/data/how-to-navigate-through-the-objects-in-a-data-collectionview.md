@@ -10,11 +10,11 @@ helpviewer_keywords:
 - navigating through objects in data CollectionView [WPF]
 ms.assetid: fcd37590-bce1-4ac9-8b74-3b96c7458b8a
 ms.openlocfilehash: 1507ab4db0c91b670d8bca754f6fd67d887c7041
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931495"
 ---
 # <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a>HOW TO：巡覽資料 CollectionView 中的所有物件
 檢視可讓在不同的方式，取決於排序、 篩選或群組中檢視相同的資料收集。 檢視也會提供目前記錄指標的概念，並啟用移動指標。 此範例示範如何取得目前的物件，以及透過使用中提供的功能資料集合中的物件巡覽<xref:System.Windows.Data.CollectionView>類別。  

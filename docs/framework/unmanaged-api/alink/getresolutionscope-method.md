@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6c6d298c84b801b87832c56026b05f647cb5a9dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789827"
 ---
 # <a name="getresolutionscope-method"></a>GetResolutionScope 方法
 擷取指定型別的範圍。  

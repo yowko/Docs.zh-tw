@@ -3,11 +3,11 @@ title: 識別項 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
 ms.openlocfilehash: 702a9c69c37b572fde18dd57c44608678174fb15
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774656"
 ---
 # <a name="identifiers-entity-sql"></a>識別項 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中使用識別項表示查詢運算式別名、變數參考、物件的屬性、函式等。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供兩種識別項： 簡單識別項和引號識別項。  
@@ -20,15 +20,15 @@ ms.locfileid: "59204896"
   
  引號識別項不能包含下列字元：  
   
--   新行 (Newline)。  
+- 新行 (Newline)。  
   
--   歸位字元 (Carriage Return)。  
+- 歸位字元 (Carriage Return)。  
   
--   定位點。  
+- 定位點。  
   
--   退格鍵。  
+- 退格鍵。  
   
--   其他方括弧 (也就是方括弧內描寫識別項的方括弧)。  
+- 其他方括弧 (也就是方括弧內描寫識別項的方括弧)。  
   
  引號識別項可包含 Unicode 字元。  
   
@@ -53,13 +53,13 @@ ms.locfileid: "59204896"
 ## <a name="aliasing-rules"></a>別名規則  
  我們建議您指定的別名[!INCLUDE[esql](../../../../../../includes/esql-md.md)]查詢只要有需要包括下列[!INCLUDE[esql](../../../../../../includes/esql-md.md)]建構：  
   
--   資料列建構函式 (Constructor) 的欄位。  
+- 資料列建構函式 (Constructor) 的欄位。  
   
--   查詢運算式之 FROM 子句中的項目。  
+- 查詢運算式之 FROM 子句中的項目。  
   
--   查詢運算式之 SELECT 子句中的項目。  
+- 查詢運算式之 SELECT 子句中的項目。  
   
--   查詢運算式之 GROUP BY 子句中的項目。  
+- 查詢運算式之 GROUP BY 子句中的項目。  
   
 ### <a name="valid-aliases"></a>有效的別名  
  有效的別名中[!INCLUDE[esql](../../../../../../includes/esql-md.md)]任何簡單識別項或引號識別項。  
@@ -67,9 +67,9 @@ ms.locfileid: "59204896"
 ### <a name="alias-generation"></a>別名產生  
  如果未指定別名中[!INCLUDE[esql](../../../../../../includes/esql-md.md)]查詢運算式，[!INCLUDE[esql](../../../../../../includes/esql-md.md)]嘗試產生下列簡單的規則為基礎的別名：  
   
--   如果查詢運算式 (未指定別名) 是簡單識別項或引號識別項，會使用該識別項當做別名。 例如，`ROW(a, [b])` 會成為 `ROW(a AS a, [b] AS [b])`。  
+- 如果查詢運算式 (未指定別名) 是簡單識別項或引號識別項，會使用該識別項當做別名。 例如，`ROW(a, [b])` 會成為 `ROW(a AS a, [b] AS [b])`。  
   
--   如果查詢運算式是比較複雜的運算式，但是該查詢運算式的最後一個元件是簡單識別項，則會使用該識別項當做別名。 例如，`ROW(a.a1, b.[b1])` 會成為 `ROW(a.a1 AS a1, b.[b1] AS [b1])`。  
+- 如果查詢運算式是比較複雜的運算式，但是該查詢運算式的最後一個元件是簡單識別項，則會使用該識別項當做別名。 例如，`ROW(a.a1, b.[b1])` 會成為 `ROW(a.a1 AS a1, b.[b1] AS [b1])`。  
   
  如果您想要在稍後使用別名名稱，建議您不要使用隱含別名。 任何時候發生別名 (隱含或明確) 衝突或是在相同的範圍內重複別名時，都會發生編譯錯誤。 即使有同名的明確或隱含別名，隱含別名還是會通過編譯程序。  
   
@@ -107,11 +107,11 @@ SELECT 1 AS X, 2 AS X …
   
  下列是有關範圍的一些其他注意事項：  
   
--   SELECT 清單可以將新的名稱依序導入此範圍。 右邊的投影運算式可能會參考左邊投影的名稱。  
+- SELECT 清單可以將新的名稱依序導入此範圍。 右邊的投影運算式可能會參考左邊投影的名稱。  
   
--   ORDER BY 子句可參考 SELECT 清單中指定的名稱 (別名)。  
+- ORDER BY 子句可參考 SELECT 清單中指定的名稱 (別名)。  
   
--   SELECT 運算式內子句的評估順序會決定名稱導入範圍中的順序。 FROM 子句會先評估，接著是 WHERE 子句、GROUP BY 子句、HAVING 子句、SELECT 子句，最後是 ORDER BY 子句。  
+- SELECT 運算式內子句的評估順序會決定名稱導入範圍中的順序。 FROM 子句會先評估，接著是 WHERE 子句、GROUP BY 子句、HAVING 子句、SELECT 子句，最後是 ORDER BY 子句。  
   
 ### <a name="aggregate-handling"></a>彙總處理  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援兩種形式的彙總： 以集合為基礎的彙總以及以群組為基礎的彙總。 以集合為基礎的彙總是 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中偏好的建構，以群組為基礎的彙總則是為了與 SQL 相容而支援。  

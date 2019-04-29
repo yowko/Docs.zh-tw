@@ -10,11 +10,11 @@ helpviewer_keywords:
 - columns [Windows Forms], hiding
 ms.assetid: 3f94143a-2ef0-49a5-a22a-b2e6f9289642
 ms.openlocfilehash: 40fccee551e7840ef474e7775873d4e7178748fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941254"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control"></a>HOW TO：隱藏 Windows Forms DataGridView 控制項的資料行
 有時候您會想要只顯示 Windows Form <xref:System.Windows.Forms.DataGridView> 控制項中某些可用的資料行。 例如，您可能會想要對具有管理認證的使用者顯示員工薪資資料行，而對其他使用者隱藏該資料行。 或者，您可能會想要將控制項繫結至包含許多資料行的資料來源，但您只想要顯示其中部分資料行。 在此情況下，您通常會移除不想顯示的資料行，而不是加以隱藏。  
@@ -25,7 +25,7 @@ ms.locfileid: "59194314"
   
 ### <a name="to-hide-a-column-programmatically"></a>以程式設計方式隱藏資料行  
   
--   將 <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType> 屬性設定為 `false`。 若要隱藏在資料繫結期間自動產生的 `CustomerID` 資料行，請將下列程式碼範例放在 <xref:System.Windows.Forms.DataGridView.DataBindingComplete> 事件處理常式中。  
+- 將 <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType> 屬性設定為 `false`。 若要隱藏在資料繫結期間自動產生的 `CustomerID` 資料行，請將下列程式碼範例放在 <xref:System.Windows.Forms.DataGridView.DataBindingComplete> 事件處理常式中。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#063](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#063)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#063](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#063)]  
@@ -33,9 +33,9 @@ ms.locfileid: "59194314"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項 ，包含名為 `CustomerID` 的資料行。  
+- 名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項 ，包含名為 `CustomerID` 的資料行。  
   
--   <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
+- <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
 

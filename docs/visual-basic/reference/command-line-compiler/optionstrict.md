@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
 ms.openlocfilehash: e18fe451ea4a80ac959ed61b66394920f8bf177f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788930"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 會強制執行嚴格類型語意來限制隱含類型轉換。  
@@ -47,7 +47,7 @@ ms.locfileid: "59336079"
   
 ### <a name="to-set--optionstrict-programmatically"></a>以程式設計方式設定-optionstrict  
   
--   請參閱[Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)。  
+- 請參閱[Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)。  
   
 ## <a name="example"></a>範例  
  下列程式碼編譯`Test.vb`使用嚴格的類型語意。  

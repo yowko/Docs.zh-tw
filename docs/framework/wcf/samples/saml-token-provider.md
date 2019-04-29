@@ -3,32 +3,32 @@ title: SAML 權杖提供者
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
 ms.openlocfilehash: e662d9b84bbc43178946fdadc8ddbec6f6b6e042
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787500"
 ---
 # <a name="saml-token-provider"></a>SAML 權杖提供者
 這個範例會示範如何實作自訂的用戶端 SAML 權杖提供者。 Windows Communication Foundation (WCF) 中的權杖提供者用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附預設的 「 認證管理員權杖提供者。 WCF 也隨附[!INCLUDE[infocard](../../../../includes/infocard-md.md)]權杖提供者。 自訂權杖提供者適用於下列情況：
 
--   如果您有這些權杖提供者無法使用的認證存放區。
+- 如果您有這些權杖提供者無法使用的認證存放區。
 
--   如果您想要提供您自己自訂的機制，來轉換認證從使用者提供詳細資訊，以 WCF 用戶端架構時使用的認證時。
+- 如果您想要提供您自己自訂的機制，來轉換認證從使用者提供詳細資訊，以 WCF 用戶端架構時使用的認證時。
 
--   如果您要建置自訂權杖。
+- 如果您要建置自訂權杖。
 
  此範例示範如何建置自訂權杖提供者可從用於 WCF 用戶端架構外部取得的 SAML 權杖。
 
  簡而言之，這個範例示範下面的情形：
 
--   如何使用自訂權杖提供者設定用戶端。
+- 如何使用自訂權杖提供者設定用戶端。
 
--   如何將 SAML 權杖傳遞至自訂用戶端認證。
+- 如何將 SAML 權杖傳遞至自訂用戶端認證。
 
--   如何將 SAML 權杖提供給 WCF 用戶端架構。
+- 如何將 SAML 權杖提供給 WCF 用戶端架構。
 
--   用戶端如何使用伺服器的 X.509 憑證來驗證伺服器。
+- 用戶端如何使用伺服器的 X.509 憑證來驗證伺服器。
 
  服務會公開兩個端點，以便與使用組態檔 App.config 定義的服務進行通訊。每個端點是由位址、繫結及合約所組成。 繫結已設定成會使用訊息安全性的標準 `wsFederationHttpBinding`。 其中一個端點會預期用戶端經由使用對稱式證明金鑰的 SAML 權杖驗證，而另一個端點則預期用戶端經由使用非對稱式證明金鑰的 SAML 權杖驗證。 服務也會使用 `serviceCredentials` 行為來設定服務憑證。 `serviceCredentials` 行為可以讓您設定服務憑證。 服務憑證是由用戶端用來驗證服務並提供訊息保護。 下列組態會參考在安裝範例期間所安裝的 localhost 憑證，如本主題結尾處的安裝指示所述。 `serviceCredentials` 行為也會允許您設定受信任可簽署 SAML 權杖的憑證。 下列組態會參考在範例期間安裝的 'Alice' 憑證。
 
@@ -303,7 +303,7 @@ ms.locfileid: "59771097"
 
  下面提供批次檔的各區段簡要概觀，讓將批次檔得以修改為在適當的組態下執行。
 
--   建立伺服器憑證：
+- 建立伺服器憑證：
 
      下列 Setup.bat 批次檔中的程式行會建立要使用的伺服器憑證。 `%SERVER_NAME%` 變數會指定伺服器名稱。 您可以變更這個變數來指定自己的伺服器名稱。 這個批次檔中的預設值為 localhost。
 
@@ -319,7 +319,7 @@ ms.locfileid: "59771097"
     makecert.exe -sr LocalMachine -ss My -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   將伺服器憑證安裝至用戶端的受信任憑證存放區中。
+- 將伺服器憑證安裝至用戶端的受信任憑證存放區中。
 
      Setup.bat 批次檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證的步驟。
 
@@ -327,7 +327,7 @@ ms.locfileid: "59771097"
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
--   建立簽發者憑證。
+- 建立簽發者憑證。
 
      下列 Setup.bat 批次檔中的程式行會建立要使用的簽發者憑證。 `%USER_NAME%` 變數會指定簽發者名稱。 您可以變更這個變數來指定自己的簽發者名稱。 這個批次檔中的預設值為 Alice。
 
@@ -343,7 +343,7 @@ ms.locfileid: "59771097"
     makecert.exe -sr CurrentUser -ss My -a sha1 -n CN=%USER_NAME% -sky exchange -pe
     ```
 
--   將簽發者憑證安裝至伺服器的受信任憑證存放區中。
+- 將簽發者憑證安裝至伺服器的受信任憑證存放區中。
 
      Setup.bat 批次檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將簽發者憑證填入伺服器憑證的步驟。
 

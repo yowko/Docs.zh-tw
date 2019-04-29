@@ -20,11 +20,11 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
 ms.openlocfilehash: 56b97170884ef31004b06b0eb50a8d79ad1d041c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757197"
 ---
 # <a name="xaml-overview-wpf"></a>XAML 概觀 (WPF)
 本主題說明 XAML 語言的功能，並示範如何使用 XAML 撰寫 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式。 本主題特別針對以 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作的 XAML 進行描述。 就語言概念而言，XAML 本身涵蓋的範圍比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 還要廣。  
@@ -115,11 +115,11 @@ ms.locfileid: "59102826"
 ### <a name="text-content"></a>文字內容  
  少數 XAML 元素可以直接將文字作為其內容加以處理。 若要啟用這項功能，必須符合下列其中一種情況：  
   
--   類別必須宣告為內容屬性，而且該內容屬性必須是指派給字串的型別 (型別可能是<xref:System.Object>)。 比方說，任何<xref:System.Windows.Controls.ContentControl>會使用<xref:System.Windows.Controls.ContentControl.Content%2A>做為其內容的屬性，而且它是型別<xref:System.Object>，這在實務上支援下列的使用方式並<xref:System.Windows.Controls.ContentControl>這類<xref:System.Windows.Controls.Button>: `<Button>Hello</Button>`。  
+- 類別必須宣告為內容屬性，而且該內容屬性必須是指派給字串的型別 (型別可能是<xref:System.Object>)。 比方說，任何<xref:System.Windows.Controls.ContentControl>會使用<xref:System.Windows.Controls.ContentControl.Content%2A>做為其內容的屬性，而且它是型別<xref:System.Object>，這在實務上支援下列的使用方式並<xref:System.Windows.Controls.ContentControl>這類<xref:System.Windows.Controls.Button>: `<Button>Hello</Button>`。  
   
--   該型別必須宣告型別轉換子，此時，文字內容便會作為該型別轉換子的初始設定文字。 例如， `<Brush>Blue</Brush>` 。 這種案例在實務中較不常見。  
+- 該型別必須宣告型別轉換子，此時，文字內容便會作為該型別轉換子的初始設定文字。 例如， `<Brush>Blue</Brush>` 。 這種案例在實務中較不常見。  
   
--   型別必須是已知的 XAML 語言基本型別。  
+- 型別必須是已知的 XAML 語言基本型別。  
   
 ### <a name="content-properties-and-collection-syntax-combined"></a>內容的屬性和集合語法合併  
  請考量以下範例：  
@@ -133,9 +133,9 @@ ms.locfileid: "59102826"
   
  在這裡，每個<xref:System.Windows.Controls.Button>是子項目<xref:System.Windows.Controls.StackPanel>。 這段有效率而直覺化的標記 (Markup)，是基於兩個不同理由省略兩個標記 (Tag)。  
   
--   **省略的 StackPanel.Children 屬性元素：** <xref:System.Windows.Controls.StackPanel>衍生自<xref:System.Windows.Controls.Panel>。 <xref:System.Windows.Controls.Panel> 定義<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>作為其 XAML 內容屬性。  
+- **省略的 StackPanel.Children 屬性元素：** <xref:System.Windows.Controls.StackPanel>衍生自<xref:System.Windows.Controls.Panel>。 <xref:System.Windows.Controls.Panel> 定義<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>作為其 XAML 內容屬性。  
   
--   **省略的 UIElementCollection 物件元素：**<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>屬性會採用型別<xref:System.Windows.Controls.UIElementCollection>，它會實作<xref:System.Collections.IList>。 集合的元素標記可以省略，根據這類處理集合的 XAML 規則<xref:System.Collections.IList>。 (在此情況下，<xref:System.Windows.Controls.UIElementCollection>實際上無法執行個體化，因為它不會公開預設建構函式，這就是為什麼<xref:System.Windows.Controls.UIElementCollection>物件項目會顯示標成註解)。  
+- **省略的 UIElementCollection 物件元素：**<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>屬性會採用型別<xref:System.Windows.Controls.UIElementCollection>，它會實作<xref:System.Collections.IList>。 集合的元素標記可以省略，根據這類處理集合的 XAML 規則<xref:System.Collections.IList>。 (在此情況下，<xref:System.Windows.Controls.UIElementCollection>實際上無法執行個體化，因為它不會公開預設建構函式，這就是為什麼<xref:System.Windows.Controls.UIElementCollection>物件項目會顯示標成註解)。  
   
 ```xaml  
 <StackPanel>  
@@ -210,15 +210,15 @@ ms.locfileid: "59102826"
 ### <a name="the-x-prefix"></a>X： 前置詞  
  在先前的根元素範例中，前置詞 `x:` 會用於對應 XAML 命名空間 [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)]，它是支援 XAML 語言建構的專屬 XAML 命名空間。 這個 `x:` 前置詞會用於對應範例中專案範本的這個 XAML 命名空間，同時整份 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 說明文件中也會使用這個前置詞。 XAML 語言的 XAML 命名空間包含數種您在 XAML 中會經常使用的程式設計建構。 下列清單是您最常使用的 `x:` 前置詞程式設計建構：  
   
--   [X:key](../../xaml-services/x-key-directive.md):設定中每個資源的唯一索引鍵<xref:System.Windows.ResourceDictionary>（或其他架構中類似字典的概念）。 您通常在 WPF 應用程式標記中看到的 `x:`，大概有 90% 都是 `x:Key`。  
+- [X:key](../../xaml-services/x-key-directive.md):設定中每個資源的唯一索引鍵<xref:System.Windows.ResourceDictionary>（或其他架構中類似字典的概念）。 您通常在 WPF 應用程式標記中看到的 `x:`，大概有 90% 都是 `x:Key`。  
   
--   [X:class](../../xaml-services/x-class-directive.md):指定[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]提供 XAML 頁面程式碼後置類別的命名空間和類別名稱。 依據 WPF 程式撰寫模型，您必須有這類支援程式碼後置的類別，因此您幾乎都會看到 `x:` 對應，即使沒有資源也一樣。  
+- [X:class](../../xaml-services/x-class-directive.md):指定[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]提供 XAML 頁面程式碼後置類別的命名空間和類別名稱。 依據 WPF 程式撰寫模型，您必須有這類支援程式碼後置的類別，因此您幾乎都會看到 `x:` 對應，即使沒有資源也一樣。  
   
--   [X:name](../../xaml-services/x-name-directive.md):處理物件項目之後，請在執行階段程式碼中指定存在於執行個體的執行階段物件名稱。 一般而言，您經常會使用 WPF 針對 [x:Name](../../xaml-services/x-name-directive.md) 所定義的對等屬性。 這類屬性專門對應至 CLR 支援屬性，因此對於您經常會使用執行階段程式碼來尋找已初始化 XAML 中的具名元素的應用程式設計情境而言，會更方便。 最常見這種屬性是<xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>。 您仍可使用[X:name](../../xaml-services/x-name-directive.md)當對等 WPF 架構層級<xref:System.Windows.FrameworkElement.Name%2A>特定型別中不支援屬性。 這會發生在某些動畫案例中。  
+- [X:name](../../xaml-services/x-name-directive.md):處理物件項目之後，請在執行階段程式碼中指定存在於執行個體的執行階段物件名稱。 一般而言，您經常會使用 WPF 針對 [x:Name](../../xaml-services/x-name-directive.md) 所定義的對等屬性。 這類屬性專門對應至 CLR 支援屬性，因此對於您經常會使用執行階段程式碼來尋找已初始化 XAML 中的具名元素的應用程式設計情境而言，會更方便。 最常見這種屬性是<xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>。 您仍可使用[X:name](../../xaml-services/x-name-directive.md)當對等 WPF 架構層級<xref:System.Windows.FrameworkElement.Name%2A>特定型別中不支援屬性。 這會發生在某些動畫案例中。  
   
--   [x:Static](../../xaml-services/x-static-markup-extension.md):啟用會傳回靜態值，否則不是相容的 XAML 屬性的參考。  
+- [x:Static](../../xaml-services/x-static-markup-extension.md):啟用會傳回靜態值，否則不是相容的 XAML 屬性的參考。  
   
--   [X:type](../../xaml-services/x-type-markup-extension.md):建構<xref:System.Type>參考根據型別名稱。 這用來指定需要的屬性<xref:System.Type>，這類<xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>，雖然屬性經常具有原生字串-至-<xref:System.Type>轉換的方式， [X:type](../../xaml-services/x-type-markup-extension.md)是標記延伸使用方式選擇性的。  
+- [X:type](../../xaml-services/x-type-markup-extension.md):建構<xref:System.Type>參考根據型別名稱。 這用來指定需要的屬性<xref:System.Type>，這類<xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>，雖然屬性經常具有原生字串-至-<xref:System.Type>轉換的方式， [X:type](../../xaml-services/x-type-markup-extension.md)是標記延伸使用方式選擇性的。  
   
  `x:` 前置詞/XAML 命名空間中還有其他的程式設計建構，但並不常用。 如需詳細資訊，請參閱[XAML 命名空間 （x:）語言功能](../../xaml-services/xaml-namespace-x-language-features.md)。  
   

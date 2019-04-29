@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32039
 ms.assetid: 1d8b6560-c9eb-4b71-a038-24c6f5a5ce46
 ms.openlocfilehash: bee3bcd3701945f5cf77f6761defc8be77acf49f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935378"
 ---
 # <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a>宣告為 for 迴圈控制變數的陣列不能宣告它的初始大小
 A`For Each`迴圈會使用陣列做為其*項目*反覆運算變數但初始化該陣列。  
@@ -31,7 +31,7 @@ For Each listElement(1) As Integer In arrayList
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   從宣告中移除初始化*項目*反覆運算變數。  
+- 從宣告中移除初始化*項目*反覆運算變數。  
   
 ## <a name="see-also"></a>另請參閱
 

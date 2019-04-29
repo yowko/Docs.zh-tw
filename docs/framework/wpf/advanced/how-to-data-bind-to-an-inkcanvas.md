@@ -1,18 +1,18 @@
 ---
-title: HOW TO：將資料繫結至 InkCanvas
+title: HOW TO：繫結至 InkCanvas 的資料
 ms.date: 03/30/2017
 helpviewer_keywords:
 - InkCanvas [WPF], binding data to
 - binding data [WPF], to InkCanvas
 ms.assetid: 8d6b4d9e-ea7f-4412-ba83-3feccec5a515
 ms.openlocfilehash: 5d3fc0ed7b6176d7bc68bf20af42c311b5563908
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776463"
 ---
-# <a name="how-to-data-bind-to-an-inkcanvas"></a>HOW TO：將資料繫結至 InkCanvas
+# <a name="how-to-data-bind-to-an-inkcanvas"></a>HOW TO：繫結至 InkCanvas 的資料
 ## <a name="example"></a>範例  
  下列範例示範如何將繫結<xref:System.Windows.Controls.InkCanvas.Strokes%2A>的屬性<xref:System.Windows.Controls.InkCanvas>到另一個<xref:System.Windows.Controls.InkCanvas>。  
   

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 5f723345-7270-49e2-b638-b3a34bd40517
 author: BrucePerlerMS
 ms.openlocfilehash: 6165dbf32b777a8d82e756f84ed2415d6ed3d774
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780090"
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Windows Identity Foundation 4.5 概觀
 Windows Identity Foundation 4.5 是一組 .NET Framework 類別，可在應用程式中用來實作宣告型識別。 透過它，您可以更容易享受到宣告感知應用程式和服務的優點。 只要是使用 .NET Framework 4.5 (含) 以上版本的所有 Web 應用程式或 Web 服務，WIF 4.5 都適用。 WIF 只是 Microsoft 同盟識別身分軟體系列的一部分，可以根據開放標準達成業界共同的願景。 同盟識別身分包含三個元件：[Active Directory® Federation Services](https://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0 中， [Microsoft Azure Access Control Services](https://go.microsoft.com/fwlink/?LinkID=247517) (ACS) 和 WIF。 這三個元件同時也形成了 Microsoft 新的宣告型雲端識別和存取平台的核心。  
@@ -20,22 +20,22 @@ Windows Identity Foundation 4.5 是一組 .NET Framework 類別，可在應用�
   
  WIF 4.5 具有下列主要功能：  
   
--   建置宣告感知應用程式 (信賴憑證者應用程式)： WIF 可協助開發人員建置宣告感知應用程式。 除了提供宣告模型以外，它還提供應用程式開發人員一組豐富的 API，協助根據宣告制定使用者存取決策。  此外，無論開發人員選擇在 ASP.NET 還是 WCF 環境中建置應用程式，WIF 都能提供一致的程式設計經驗。  
+- 建置宣告感知應用程式 (信賴憑證者應用程式)： WIF 可協助開發人員建置宣告感知應用程式。 除了提供宣告模型以外，它還提供應用程式開發人員一組豐富的 API，協助根據宣告制定使用者存取決策。  此外，無論開發人員選擇在 ASP.NET 還是 WCF 環境中建置應用程式，WIF 都能提供一致的程式設計經驗。  
   
--   將識別委派支援加入至宣告感知應用程式：  WIF 可跨多個服務界限保留原始要求者的識別。 這項功能可以透過架構中的 "ActAs" 或 "OnBehalfOf" 功能達成，讓開發人員能夠在宣告感知應用程式中加入識別委派支援。  
+- 將識別委派支援加入至宣告感知應用程式：  WIF 可跨多個服務界限保留原始要求者的識別。 這項功能可以透過架構中的 "ActAs" 或 "OnBehalfOf" 功能達成，讓開發人員能夠在宣告感知應用程式中加入識別委派支援。  
   
--   建置自訂 STS：  使用 WIF 可讓開發人員更容易建置支援 WS-Trust 通訊協定的自訂 STS。 這類 STS 也稱為主動式 STS。  
+- 建置自訂 STS：  使用 WIF 可讓開發人員更容易建置支援 WS-Trust 通訊協定的自訂 STS。 這類 STS 也稱為主動式 STS。  
   
      此外，這個架構還可用來建置支援 WS-Federation 的 STS，讓 Web 瀏覽器用戶端也可以使用。 這類 STS 也稱為被動式 STS。  
   
--   適用於 Visual Studio 11 的新識別和存取工具可讓您透過宣告型識別確保應用程式安全無虞，並且能接受使用者來自多個識別提供者。 您可以從下列 URL 下載此 WIF 工具：<https://go.microsoft.com/fwlink/?LinkID=245849>或直接從 Visual Studio 11，藉由搜尋 「 識別 」，直接在延伸模組管理員中。 如需詳細資訊，請參閱 [Visual Studio 2012 的身分識別與存取工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)。  
+- 適用於 Visual Studio 11 的新識別和存取工具可讓您透過宣告型識別確保應用程式安全無虞，並且能接受使用者來自多個識別提供者。 您可以從下列 URL 下載此 WIF 工具：<https://go.microsoft.com/fwlink/?LinkID=245849>或直接從 Visual Studio 11，藉由搜尋 「 識別 」，直接在延伸模組管理員中。 如需詳細資訊，請參閱 [Visual Studio 2012 的身分識別與存取工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)。  
   
  WIF 支援下列主要案例：  
   
--   同盟：  WIF 可讓兩個或多個合作夥伴建立同盟。 它支援建置宣告感知應用程式 (RP) 和自訂 STS，可協助開發人員落實此案例。  
+- 同盟：  WIF 可讓兩個或多個合作夥伴建立同盟。 它支援建置宣告感知應用程式 (RP) 和自訂 STS，可協助開發人員落實此案例。  
   
--   識別委派：  WIF 讓跨服務界限保留識別更為容易，方便開發人員落實識別委派案例。  
+- 識別委派：  WIF 讓跨服務界限保留識別更為容易，方便開發人員落實識別委派案例。  
   
--   加強驗證： 應用程式中不同資源的驗證需求可能都不同。 WIF 可讓開發人員建置能要求累加式驗證需求的應用程式 (例如，透過使用者名稱/密碼驗證進行初次登入，接著使用智慧卡來加強驗證)。  
+- 加強驗證： 應用程式中不同資源的驗證需求可能都不同。 WIF 可讓開發人員建置能要求累加式驗證需求的應用程式 (例如，透過使用者名稱/密碼驗證進行初次登入，接著使用智慧卡來加強驗證)。  
   
  使用 WIF，您可以更容易享受到宣告型識別模型的優點。 如需詳細資訊，請參閱[適用於開發人員的 Windows Identity Foundation 白皮書](https://download.microsoft.com/download/7/d/0/7d0b5166-6a8a-418a-addd-95ee9b046994/windowsidentityfoundationwhitepaperfordevelopers-rtw.pdf)。

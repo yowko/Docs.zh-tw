@@ -17,11 +17,11 @@ helpviewer_keywords:
 - baseline type [WPF]
 ms.assetid: cf3cb4e7-782a-4be7-b2d4-e0935e21e4e0
 ms.openlocfilehash: d586eef8d1308070da38a0a54c63c3ba64d30c8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776611"
 ---
 # <a name="how-to-create-a-text-decoration"></a>HOW TO：建立文字裝飾
 A<xref:System.Windows.TextDecoration>物件是您可以新增至文字的視覺裝飾。 有四種類型的文字裝飾： 底線、 基準、 刪除線和頂線。 下列範例顯示的文字裝飾，相對於文字的位置。  

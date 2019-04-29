@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
 ms.openlocfilehash: 184970d33aae4af135153f9d6f6755770bdf84f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784055"
 ---
 # <a name="operator-statement"></a>Operator Statement
 宣告運算子符號、 運算元與類別或結構定義的運算子程序的程式碼。  
@@ -114,28 +114,28 @@ End Operator
 ## <a name="matched-pairs"></a>相符的配對  
  您必須定義特定的運算子為相符的配對。 如果您定義這類組的其中一個運算子，您必須將另也定義。 相符的配對，如下所示：  
   
--   `=` 和 `<>`  
+- `=` 和 `<>`  
   
--   `>` 和 `<`  
+- `>` 和 `<`  
   
--   `>=` 和 `<=`  
+- `>=` 和 `<=`  
   
--   `IsTrue` 和 `IsFalse`  
+- `IsTrue` 和 `IsFalse`  
   
 ## <a name="data-type-restrictions"></a>資料類型限制  
  您定義每個運算子必須投入您定義它所在的類別或結構。 這表示類別或結構必須顯示為下列資料類型：  
   
--   一元運算子的運算元。  
+- 一元運算子的運算元。  
   
--   至少其中一個二元運算子的運算元。  
+- 至少其中一個二元運算子的運算元。  
   
--   運算元或轉換運算子的傳回型別。  
+- 運算元或轉換運算子的傳回型別。  
   
  某些運算子具有其他資料型別限制，如下所示：  
   
--   如果您定義`IsTrue`並`IsFalse`運算子，它們必須都傳回`Boolean`型別。  
+- 如果您定義`IsTrue`並`IsFalse`運算子，它們必須都傳回`Boolean`型別。  
   
--   如果您定義`<<`並`>>`運算子，它們必須同時指定`Integer`類型`operandtype`的`operand2`。  
+- 如果您定義`<<`並`>>`運算子，它們必須同時指定`Integer`類型`operandtype`的`operand2`。  
   
  傳回的型別沒有對應至其中一個運算元的類型。 比方說，這類的比較運算子`=`或是`<>`可能會傳回`Boolean`即使兩個運算元是`Boolean`。  
   
@@ -144,11 +144,11 @@ End Operator
   
  您不能定義`AndAlso`直接與運算子`Operator`陳述式。 不過，您可以使用`AndAlso`如果您已符合下列條件：  
   
--   您已定義`And`在您想要使用的相同運算元類型`AndAlso`。  
+- 您已定義`And`在您想要使用的相同運算元類型`AndAlso`。  
   
--   您定義`And`傳回相同的類型為類別或結構的項目，在其上已定義它。  
+- 您定義`And`傳回相同的類型為類別或結構的項目，在其上已定義它。  
   
--   您已定義`IsFalse`上類別或結構的項目，您已定義的運算子`And`。  
+- 您已定義`IsFalse`上類別或結構的項目，您已定義的運算子`And`。  
   
  同樣地，您可以使用`OrElse`如果您已定義`Or`相同的運算元，使用類別或結構，而您的傳回型別已定義`IsTrue`類別或結構上。  
   
@@ -157,11 +157,11 @@ End Operator
   
  如果您宣告轉換程序，才能`Widening`，您的程序程式碼必須產生任何失敗。 這表示：  
   
--   它必須一律傳回有效的值型別的`type`。  
+- 它必須一律傳回有效的值型別的`type`。  
   
--   它必須處理所有可能的例外狀況或其他錯誤狀況。  
+- 它必須處理所有可能的例外狀況或其他錯誤狀況。  
   
--   它必須處理傳回的任何程序，它會呼叫任何錯誤。  
+- 它必須處理傳回的任何程序，它會呼叫任何錯誤。  
   
  如果已轉換程序可能不會成功，或是它可能會造成未處理的例外狀況，您必須將它宣告`Narrowing`。  
   

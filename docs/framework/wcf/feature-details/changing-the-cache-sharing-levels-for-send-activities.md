@@ -3,11 +3,11 @@ title: 變更傳送活動的快取共用層級
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
 ms.openlocfilehash: e439edc14183c2ba2bf9af67e177dddb52c43708
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784289"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>變更傳送活動的快取共用層級
 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 擴充可讓您為使用 <xref:System.ServiceModel.Activities.Send> 傳訊活動傳送訊息至服務端點的工作流程自訂快取共用層級、通道處理站快取的設定，以及通道快取的設定。 這些工作流程通常是用戶端工作流程，但也可以是裝載於 <xref:System.ServiceModel.WorkflowServiceHost> 中的工作流程服務。 通道處理站快取會包含快取的 <xref:System.ServiceModel.ChannelFactory%601> 物件。 通道快取則包含快取的通道。  
@@ -20,11 +20,11 @@ ms.locfileid: "53127052"
   
  以下是工作流程中的 <xref:System.ServiceModel.Activities.Send> 活動適用的不同快取共用層級，以及其建議用法：  
   
--   **主機層級**:在主機共用層級中，快取是僅適用於裝載工作流程服務主機中的工作流程執行個體。 整個處理序快取中的工作流程服務主機間也可以共用快取。  
+- **主機層級**:在主機共用層級中，快取是僅適用於裝載工作流程服務主機中的工作流程執行個體。 整個處理序快取中的工作流程服務主機間也可以共用快取。  
   
--   **執行個體層級**:在共用層級的執行個體，快取是適用於特定工作流程執行個體，其整個存留期，但沒有其他工作流程執行個體可用的快取。  
+- **執行個體層級**:在共用層級的執行個體，快取是適用於特定工作流程執行個體，其整個存留期，但沒有其他工作流程執行個體可用的快取。  
   
--   **無快取**:關閉快取是預設情況下如果您有使用端點組態中定義的工作流程。 在此情況下，建議保持關閉快取，因為開啟快取可能不安全。 例如，如果每次傳送都需要不同的識別 (不同的認證或使用模擬)。  
+- **無快取**:關閉快取是預設情況下如果您有使用端點組態中定義的工作流程。 在此情況下，建議保持關閉快取，因為開啟快取可能不安全。 例如，如果每次傳送都需要不同的識別 (不同的認證或使用模擬)。  
   
 ## <a name="changing-the-cache-sharing-level-for-a-client-workflow"></a>變更用戶端工作流程的快取共用層級  
  若要在用戶端工作流程中設定快取共用，請將 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 類別的執行個體做為擴充，加入所需的一組工作流程執行個體。 這樣會跨所有工作流程執行個體共用快取。 下列程式碼範例示範如何執行這些步驟。  

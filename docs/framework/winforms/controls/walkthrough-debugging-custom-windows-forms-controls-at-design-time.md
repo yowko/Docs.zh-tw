@@ -16,11 +16,11 @@ helpviewer_keywords:
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
 ms.openlocfilehash: db6266f30c4fb62364f3c40a75a4a11ef853c1cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792284"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>逐步解說：在設計階段偵錯自訂 Windows Forms 控制項
 當您建立自訂控制項時，通常會發現它需要偵錯它的設計階段行為。 這是特別有用，如果您撰寫自訂的設計工具為您的自訂控制項。 如需詳細資訊，請參閱[逐步解說：建立 Windows Form 會充分利用 Visual Studio 設計階段功能的控制項](creating-a-wf-control-design-time-features.md)。  
@@ -29,17 +29,17 @@ ms.locfileid: "59325354"
   
  這個逐步解說中所述的工作包括：  
   
--   建立 Windows Forms 專案來裝載您的自訂控制項  
+- 建立 Windows Forms 專案來裝載您的自訂控制項  
   
--   建立控制項程式庫專案  
+- 建立控制項程式庫專案  
   
--   將屬性加入至您的自訂控制項  
+- 將屬性加入至您的自訂控制項  
   
--   將您的自訂控制項加入至主應用程式表單  
+- 將您的自訂控制項加入至主應用程式表單  
   
--   設定設計階段偵錯的專案  
+- 設定設計階段偵錯的專案  
   
--   在設計階段偵錯您的自訂控制項  
+- 在設計階段偵錯您的自訂控制項  
   
  當您完成時，您將了解偵錯自訂控制項的設計階段行為的必要工作。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "59325354"
   
 #### <a name="to-create-the-project"></a>若要建立專案  
   
--   建立 Windows 應用程式專案，稱為 「 DebuggingExample"(**檔案** > **新增** > **專案** >  **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**)。  
+- 建立 Windows 應用程式專案，稱為 「 DebuggingExample"(**檔案** > **新增** > **專案** >  **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**)。  
   
 ## <a name="creating-a-control-library-project"></a>建立控制項程式庫專案  
  下一個步驟是建立控制項程式庫專案並設定自訂的控制項。  
@@ -71,7 +71,7 @@ ms.locfileid: "59325354"
   
 #### <a name="to-check-your-progress"></a>若要檢查您的進度  
   
--   找到稱為 [新增] 索引標籤**DebugControlLibrary 元件**並按一下以選取它。 當它開啟時，您會看到控制項列為**DebugControl**與它旁邊的預設圖示。  
+- 找到稱為 [新增] 索引標籤**DebugControlLibrary 元件**並按一下以選取它。 當它開啟時，您會看到控制項列為**DebugControl**與它旁邊的預設圖示。  
   
 ## <a name="adding-a-property-to-your-custom-control"></a>將屬性加入至您的自訂控制項  
  若要示範自訂控制項的程式碼會執行設計階段，您會將屬性加入，並實作屬性的程式碼中設定中斷點。  
@@ -149,9 +149,9 @@ ms.locfileid: "59325354"
   
 2. 按下 f5 鍵啟動偵錯工作階段。 請注意，已建立 Visual Studio 的新執行個體。 您可以區分兩種方式中的執行個體：  
   
-    -   偵錯的執行個體中包含文字**執行**其標題列中  
+    - 偵錯的執行個體中包含文字**執行**其標題列中  
   
-    -   偵錯的執行個體已**開始**按鈕及其**偵錯**停用工具列  
+    - 偵錯的執行個體已**開始**按鈕及其**偵錯**停用工具列  
   
      在 偵錯的執行個體已設定您的中斷點。  
   
@@ -166,11 +166,11 @@ ms.locfileid: "59325354"
 ## <a name="next-steps"></a>後續步驟  
  現在，您可以在設計階段進行偵錯您的自訂控制項，有許多可能性，擴充您的控制項與 Visual Studio IDE 之間的互動。  
   
--   您可以使用<xref:System.ComponentModel.Component.DesignMode%2A>屬性<xref:System.ComponentModel.Component>類別來撰寫程式碼，只會在設計階段執行。 如需詳細資訊，請參閱 <xref:System.ComponentModel.Component.DesignMode%2A>。  
+- 您可以使用<xref:System.ComponentModel.Component.DesignMode%2A>屬性<xref:System.ComponentModel.Component>類別來撰寫程式碼，只會在設計階段執行。 如需詳細資訊，請參閱 <xref:System.ComponentModel.Component.DesignMode%2A>。  
   
--   有幾個屬性可套用至控制項的屬性，來操作您的自訂控制項互動與設計工具。 您可以找到這些屬性在<xref:System.ComponentModel?displayProperty=nameWithType>命名空間。  
+- 有幾個屬性可套用至控制項的屬性，來操作您的自訂控制項互動與設計工具。 您可以找到這些屬性在<xref:System.ComponentModel?displayProperty=nameWithType>命名空間。  
   
--   您可以撰寫自訂的設計工具為您的自訂控制項。 這可讓您使用 Visual Studio 所公開的可擴充設計工具基礎結構的設計經驗的完整控制。 如需詳細資訊，請參閱[逐步解說：建立 Windows Form 會充分利用 Visual Studio 設計階段功能的控制項](creating-a-wf-control-design-time-features.md)。  
+- 您可以撰寫自訂的設計工具為您的自訂控制項。 這可讓您使用 Visual Studio 所公開的可擴充設計工具基礎結構的設計經驗的完整控制。 如需詳細資訊，請參閱[逐步解說：建立 Windows Form 會充分利用 Visual Studio 設計階段功能的控制項](creating-a-wf-control-design-time-features.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

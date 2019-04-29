@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91bb1a9416e577dbb5cc96e8be87033c53232811
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765267"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 函式
 可讓主機判斷哪個版本的 common language runtime (CLR) 會在程序中使用之前先明確初始化 CLR。  
@@ -72,15 +72,15 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
 3. 所指定的函數`hostCallback`接著會將下列呼叫順序：  
   
-    -   所指定的函數`pBeginHostSetup`參數。  
+    - 所指定的函數`pBeginHostSetup`參數。  
   
-    -   `CorBindToRuntimeEx` （或另一個執行階段初始化函式）。  
+    - `CorBindToRuntimeEx` （或另一個執行階段初始化函式）。  
   
-    -   [Iclrruntimehost:: Sethostcontrol](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)。  
+    - [Iclrruntimehost:: Sethostcontrol](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)。  
   
-    -   [Iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)。  
+    - [Iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)。  
   
-    -   所指定的函數`pEndHostSetup`參數。  
+    - 所指定的函數`pEndHostSetup`參數。  
   
  所有的來電`pBeginHostSetup`至`pEndHostSetup`必須發生在單一執行緒或 fiber，使用相同的邏輯堆疊。 這個執行緒可以不同的執行緒`hostCallback`呼叫。  
   

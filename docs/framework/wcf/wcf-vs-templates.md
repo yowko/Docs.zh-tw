@@ -3,11 +3,11 @@ title: WCF Visual Studio 範本
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
 ms.openlocfilehash: b0cca0cd585a45b795db4d573659e0d19ecd78dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780662"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio 範本
 Windows Communication Foundation (WCF) Visual Studio 範本是預先定義的專案和項目範本，您可以使用 Visual Studio 中，快速建置 WCF 服務和相關的應用程式。  
@@ -20,11 +20,11 @@ Windows Communication Foundation (WCF) Visual Studio 範本是預先定義的專
   
  當您建立新的專案使用**WCF 服務**範本，新的專案會自動包含下列三個檔案：  
   
--   服務合約檔案 (IService1.cs 或 IService1.vb)。 服務合約檔案是已套用的 WCF 服務屬性的介面。 這個檔案提供簡單服務的定義以示範如何定義服務，而其中也包含以參數為基礎的作業和簡單的資料合約範例。 這是建立 WCF 服務專案後的程式碼編輯器中顯示的預設檔案。  
+- 服務合約檔案 (IService1.cs 或 IService1.vb)。 服務合約檔案是已套用的 WCF 服務屬性的介面。 這個檔案提供簡單服務的定義以示範如何定義服務，而其中也包含以參數為基礎的作業和簡單的資料合約範例。 這是建立 WCF 服務專案後的程式碼編輯器中顯示的預設檔案。  
   
--   服務實作檔案 (Service1.cs 或 Service1.vb)。 服務實作檔案會實作服務合約檔案中定義的合約。  
+- 服務實作檔案 (Service1.cs 或 Service1.vb)。 服務實作檔案會實作服務合約檔案中定義的合約。  
   
--   應用程式組態檔案 (App.config)。 組態檔會提供安全的 HTTP 繫結中的 WCF 服務模型的基本項目。 它也包含服務的端點，並會啟用中繼資料交換。  
+- 應用程式組態檔案 (App.config)。 組態檔會提供安全的 HTTP 繫結中的 WCF 服務模型的基本項目。 它也包含服務的端點，並會啟用中繼資料交換。  
   
 > [!NOTE]
 >  Visual Studio 已設定為執行使用時，會將 App.config 檔案識別為專案的組態檔[WCF 服務主機 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)，這是預設組態。 如果是在可執行檔中裝載服務程式庫，您必須將組態程式碼移至該可執行檔的組態檔，因為 DLL 的組態檔是無效的。  
@@ -34,13 +34,13 @@ Windows Communication Foundation (WCF) Visual Studio 範本是預先定義的專
   
  當您建立新的專案使用**WCF Web 應用程式服務**範本，專案會包含下列四個檔案：  
   
--   服務主機檔案 (service1.svc)。  
+- 服務主機檔案 (service1.svc)。  
   
--   服務合約檔案 (IService1.cs 或 IService1.vb)。  
+- 服務合約檔案 (IService1.cs 或 IService1.vb)。  
   
--   服務實作檔案 (Service1.svc.cs 或 Service1.svc.vb)。  
+- 服務實作檔案 (Service1.svc.cs 或 Service1.svc.vb)。  
   
--   Web 組態檔案 (Web.config)。  
+- Web 組態檔案 (Web.config)。  
   
  範本會自動建立網站 (這會部署到虛擬目錄中) 並在其中裝載服務。  
   

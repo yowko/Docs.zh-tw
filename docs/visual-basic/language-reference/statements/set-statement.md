@@ -11,11 +11,11 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
 ms.openlocfilehash: 0a8d95ffbabf03a0e6c9d88edb28c248b60f3252
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783873"
 ---
 # <a name="set-statement-visual-basic"></a>Set 陳述式 (Visual Basic)
 宣告`Set`用來將值指派給屬性的屬性程序。  
@@ -35,13 +35,13 @@ End Set
  `accessmodifier`  
  上最多一個的選擇性`Get`和`Set`這個屬性中的陳述式。 可以是下列其中一項：  
   
--   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
--   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
--   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
--   `Protected Friend`  
+- `Protected Friend`  
   
  請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
@@ -70,13 +70,13 @@ End Set
   
 ## <a name="rules"></a>規則  
   
--   **混合的存取層級。** 如果您正在定義的讀寫屬性，您可以選擇性地針對指定不同的存取層級`Get`或`Set`程序，但非兩者。 如果您這麼做時，程序的存取層級必須比屬性的存取層級更具限制性。 例如，如果屬性宣告`Friend`，您可以宣告`Set`程序`Private`，而非`Public`。  
+- **混合的存取層級。** 如果您正在定義的讀寫屬性，您可以選擇性地針對指定不同的存取層級`Get`或`Set`程序，但非兩者。 如果您這麼做時，程序的存取層級必須比屬性的存取層級更具限制性。 例如，如果屬性宣告`Friend`，您可以宣告`Set`程序`Private`，而非`Public`。  
   
      如果您要定義`WriteOnly`屬性，`Set`程序都代表整個屬性。 您無法宣告不同的存取層級`Set`，因為，則會設定屬性的兩個存取層級。  
   
 ## <a name="behavior"></a>行為  
   
--   **傳回從屬性程序。** 當`Set`程序傳回給呼叫程式碼，會繼續執行下列陳述式，提供要儲存的值。  
+- **傳回從屬性程序。** 當`Set`程序傳回給呼叫程式碼，會繼續執行下列陳述式，提供要儲存的值。  
   
      `Set` 屬性程序可以傳回使用[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)或[Exit 陳述式](../../../visual-basic/language-reference/statements/exit-statement.md)。  
   

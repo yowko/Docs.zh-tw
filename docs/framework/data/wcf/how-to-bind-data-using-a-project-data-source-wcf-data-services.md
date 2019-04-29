@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
 ms.openlocfilehash: e1111077a407dc32475976b15ff71170978e3184
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765501"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>HOW TO：使用專案資料來源 (WCF Data Services) 的資料繫結
 
@@ -31,19 +31,19 @@ ms.locfileid: "59517066"
 
      這會在視窗的 XAML 檔案中，建立下列物件項目：
 
-    -   <xref:System.Windows.Data.CollectionViewSource> 物件，名為 `customersViewSource`。 最上層 <xref:System.Windows.FrameworkElement.DataContext%2A> 物件項目的 <xref:System.Windows.Controls.Grid> 屬性會設成這個新的 <xref:System.Windows.Data.CollectionViewSource>。
+    - <xref:System.Windows.Data.CollectionViewSource> 物件，名為 `customersViewSource`。 最上層 <xref:System.Windows.FrameworkElement.DataContext%2A> 物件項目的 <xref:System.Windows.Controls.Grid> 屬性會設成這個新的 <xref:System.Windows.Data.CollectionViewSource>。
 
-    -   資料繫結 <xref:System.Windows.Controls.ComboBox>，名為 `CustomerID`。
+    - 資料繫結 <xref:System.Windows.Controls.ComboBox>，名為 `CustomerID`。
 
-    -   <xref:System.Windows.Controls.Label>。
+    - <xref:System.Windows.Controls.Label>。
 
 4. 拖曳**訂單**加入設計工具中的導覽屬性。
 
      這會在視窗的 XAML 檔案中，建立下列其他物件項目：
 
-    -   第二個 <xref:System.Windows.Data.CollectionViewSource> 物件，名為 `customersOrdersViewSource`，其資料來源是 `customerViewSource`。
+    - 第二個 <xref:System.Windows.Data.CollectionViewSource> 物件，名為 `customersOrdersViewSource`，其資料來源是 `customerViewSource`。
 
-    -   資料繫結 <xref:System.Windows.Controls.DataGrid> 控制項，名為 `ordersDataGrid`。
+    - 資料繫結 <xref:System.Windows.Controls.DataGrid> 控制項，名為 `ordersDataGrid`。
 
 5. （選擇性）拖曳其他項目從**客戶**加入設計工具中的節點。
 
@@ -82,13 +82,13 @@ ms.locfileid: "59517066"
 
      這會在表單上建立下列控制項：
 
-    -   <xref:System.Windows.Forms.BindingSource> 執行個體，名為 `customersBindingSource`。
+    - <xref:System.Windows.Forms.BindingSource> 執行個體，名為 `customersBindingSource`。
 
-    -   <xref:System.Windows.Forms.BindingNavigator> 執行個體，名為 `customersBindingNavigator`。 您可以刪除這個不再需要的控制項。
+    - <xref:System.Windows.Forms.BindingNavigator> 執行個體，名為 `customersBindingNavigator`。 您可以刪除這個不再需要的控制項。
 
-    -   資料繫結 <xref:System.Windows.Forms.ComboBox>，名為 `CustomerID`。
+    - 資料繫結 <xref:System.Windows.Forms.ComboBox>，名為 `CustomerID`。
 
-    -   <xref:System.Windows.Forms.Label>。
+    - <xref:System.Windows.Forms.Label>。
 
 3. 拖曳**訂單**導覽屬性到表單。
 

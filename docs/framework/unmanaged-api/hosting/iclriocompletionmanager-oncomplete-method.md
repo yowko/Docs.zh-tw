@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0d9d4336b79b60e69f980b6d5931e2994732f30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792687"
 ---
 # <a name="iclriocompletionmanageroncomplete-method"></a>ICLRIoCompletionManager::OnComplete 方法
 狀態的 I/O 要求所使用的呼叫會告知 common language runtime (CLR) [ihostiocompletionmanager:: Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md)方法。  
@@ -41,11 +41,11 @@ HRESULT OnComplete (
  `dwErrorCode`  
  [in]HRESULT 值，指出繫結作業的狀態。  
   
--   S_OK 表示作業已順利完成。  
+- S_OK 表示作業已順利完成。  
   
--   HOST_E_INTERRUPTED 指出呼叫結束之前完成。  
+- HOST_E_INTERRUPTED 指出呼叫結束之前完成。  
   
--   E_FAIL 表示未知，無法復原，災難性的失敗發生。  
+- E_FAIL 表示未知，無法復原，災難性的失敗發生。  
   
  `NumberOfBytesTransferred`  
  [in]I/O 要求處理期間，傳輸的位元組數目。  

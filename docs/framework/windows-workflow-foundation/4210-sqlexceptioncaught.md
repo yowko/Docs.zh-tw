@@ -3,18 +3,18 @@ title: 4210 - SqlExceptionCaught
 ms.date: 03/30/2017
 ms.assetid: f0ce8af3-eb4c-48c8-b3d9-dd2f94b5574b
 ms.openlocfilehash: 2493014e80e79ac2935c1bcc685147a74e48fb47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774253"
 ---
 # <a name="4210---sqlexceptioncaught"></a>4210 - SqlExceptionCaught
 ## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
-|ID|4210|  
+|識別碼|4210|  
 |關鍵字|WFInstanceStore|  
 |層級|警告|  
 |通道|Microsoft-Windows-Application Server-Applications/Debug|  

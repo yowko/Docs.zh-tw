@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
 ms.openlocfilehash: 149bbac6d301a9c2f166d05698e3780171126cb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938641"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML 註解常值 (Visual Basic)
 常值代表<xref:System.Xml.Linq.XComment>物件。  
@@ -39,9 +39,9 @@ ms.locfileid: "58827272"
 ## <a name="remarks"></a>備註  
  XML 註解常值不包含文件內容;它們包含文件的相關資訊。 XML 註解區段結尾序列 」-->"。 這表示下列各點：  
   
--   因為內嵌的運算式分隔符號是有效的 XML 註解內容，您無法在 XML 註解常值中使用內嵌的運算式。  
+- 因為內嵌的運算式分隔符號是有效的 XML 註解內容，您無法在 XML 註解常值中使用內嵌的運算式。  
   
--   XML 註解區段不可為巢狀，因為`content`不能包含值"-->"。  
+- XML 註解區段不可為巢狀，因為`content`不能包含值"-->"。  
   
  您可以將 XML 註解常值指派給變數，或將它包含在 XML 元素常值。  
   

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f88c22f88aa9e1aaa777f12d8b230e7ba92dffeb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774578"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost 函式
 可讓主機以指定的 common language runtime (CLR) 版本載入處理序。  

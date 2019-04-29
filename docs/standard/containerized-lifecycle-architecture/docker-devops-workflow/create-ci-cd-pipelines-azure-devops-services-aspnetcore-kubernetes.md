@@ -1,17 +1,17 @@
 ---
-title: Docker 應用程式的外部迴圈 DevOps 工作流程中的步驟
+title: Docker 應用程式之外部迴圈 DevOps 工作流程中的步驟
 description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 2cd769ce9013a8521c53f36b44ea260ceccd48b7
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56834962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795357"
 ---
-# <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>在.NET Core 2.0 上的應用程式容器和部署至 Kubernetes 叢集的 Azure DevOps 服務中建立 CI/CD 管線
+# <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>在 Azure DevOps Services 中為容器上的 .NET Core 2.0 應用程式建立 CI/CD 管線並部署到 Kubernetes 叢集
 
 圖 5-12，您可以看到的端對端 DevOps 案例，涵蓋的程式碼管理程式碼編譯、 建置 Docker 映像、 Docker 映像推送到 Docker 登錄及最後部署至 Azure 中的 Kubernetes 叢集。
 

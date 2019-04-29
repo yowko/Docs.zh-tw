@@ -3,11 +3,11 @@ title: 程式碼引號
 description: 深入了解F#程式碼引號，可讓您產生及使用的語言功能F#程式碼運算式以程式設計的方式。
 ms.date: 05/16/2016
 ms.openlocfilehash: aa8a17eb8f9837ca4023abc552a6aac063117e96
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766112"
 ---
 # <a name="code-quotations"></a>程式碼引號
 
@@ -71,7 +71,7 @@ F# PowerPack 支援用於評估和執行F#運算式物件。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet601.fs)]
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```fsharp
 fun (x:System.Int32) -> x + 1
@@ -93,7 +93,7 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet701.fs)]
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```fsharp
 1 + Module1.add(2,Module1.add(3,4))

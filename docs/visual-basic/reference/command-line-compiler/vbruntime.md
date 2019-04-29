@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
 ms.openlocfilehash: a1988fcd19c6629d85ae0e739681fd39fe033c0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796126"
 ---
 # <a name="-vbruntime"></a>-vbruntime
 指定編譯器在編譯時不應使用 Visual Basic 執行階段程式庫的參考，或應使用特定執行階段程式庫的參考。  
@@ -50,35 +50,35 @@ ms.locfileid: "58843860"
   
  下列執行階段成員會內嵌：  
   
--   <xref:Microsoft.VisualBasic.CompilerServices.Conversions> 類別  
+- <xref:Microsoft.VisualBasic.CompilerServices.Conversions> 類別  
   
--   <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29> 方法  
+- <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29> 方法  
   
--   <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29> 方法  
+- <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29> 方法  
   
--   <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29> 方法  
+- <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29> 方法  
   
--   <xref:Microsoft.VisualBasic.Constants.vbBack> 常數  
+- <xref:Microsoft.VisualBasic.Constants.vbBack> 常數  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCr> 常數  
+- <xref:Microsoft.VisualBasic.Constants.vbCr> 常數  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCrLf> 常數  
+- <xref:Microsoft.VisualBasic.Constants.vbCrLf> 常數  
   
--   <xref:Microsoft.VisualBasic.Constants.vbFormFeed> 常數  
+- <xref:Microsoft.VisualBasic.Constants.vbFormFeed> 常數  
   
--   <xref:Microsoft.VisualBasic.Constants.vbLf> 常數  
+- <xref:Microsoft.VisualBasic.Constants.vbLf> 常數  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNewLine> 常數  
+- <xref:Microsoft.VisualBasic.Constants.vbNewLine> 常數  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullChar> 常數  
+- <xref:Microsoft.VisualBasic.Constants.vbNullChar> 常數  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullString> 常數  
+- <xref:Microsoft.VisualBasic.Constants.vbNullString> 常數  
   
--   <xref:Microsoft.VisualBasic.Constants.vbTab> 常數  
+- <xref:Microsoft.VisualBasic.Constants.vbTab> 常數  
   
--   <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> 常數  
+- <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> 常數  
   
--   某些物件`My`類型  
+- 某些物件`My`類型  
   
  如果您編譯使用`-vbruntime*`選項和您的程式碼參考的成員，就不會內嵌的核心功能與 Visual Basic 執行階段程式庫從，編譯器會傳回錯誤，指出成員無法使用。  
   

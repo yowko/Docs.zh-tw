@@ -3,27 +3,27 @@ title: 關聯 End
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
 ms.openlocfilehash: e549254533f8362ce3475fb3aa5dbaffb3e900e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769602"
 ---
 # <a name="association-end"></a>關聯 End
 *關聯 end*識別[實體型別](../../../../docs/framework/data/adonet/entity-type.md)某一端上[關聯](../../../../docs/framework/data/adonet/association-type.md)和關聯的該結尾處，輸入執行個體可以存在的實體數目。 關聯 End 會定義為關聯的部分。關聯必須具有兩個關聯 End。 [導覽屬性](../../../../docs/framework/data/adonet/navigation-property.md)允許針對至另一個關聯端的導覽。  
   
  關聯 End 定義包含下列資訊：  
   
--   關聯中相關的其中一個屬性類型。 (必要項)  
+- 關聯中相關的其中一個屬性類型。 (必要項)  
   
     > [!NOTE]
     >  若為指定關聯，各關聯的指定實體類型可以相同。 這樣會建立自我關聯。  
   
--   [關聯 end 多重性](../../../../docs/framework/data/adonet/association-end-multiplicity.md)表示可以是位於關聯某一端的實體類型執行個體數目。 關聯 end 多重性可以有值為一 (1)、 零或一個 (0..1)，或多個 (\*)。  
+- [關聯 end 多重性](../../../../docs/framework/data/adonet/association-end-multiplicity.md)表示可以是位於關聯某一端的實體類型執行個體數目。 關聯 end 多重性可以有值為一 (1)、 零或一個 (0..1)，或多個 (\*)。  
   
--   關聯 End 的名稱。 (選擇項)  
+- 關聯 End 的名稱。 (選擇項)  
   
--   在關聯 End 中所執行的作業相關資訊，例如刪除時的重疊顯示。 (選擇項)  
+- 在關聯 End 中所執行的作業相關資訊，例如刪除時的重疊顯示。 (選擇項)  
   
 ## <a name="example"></a>範例  
  下圖顯示包含兩個關聯 (`PublishedBy` 和 `WrittenBy`) 的概念模型。 `PublishedBy` 關聯的關聯 End 為 `Book` 和 `Publisher` 實體類型。 端點的多重性`Publisher`結尾是一 (1) 和端點的多重性`Book`端是許多 (\*)，表示一個發行者發行許多書籍，以及一本書籍由一個發行者發行。  

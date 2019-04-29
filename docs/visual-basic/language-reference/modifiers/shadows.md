@@ -12,11 +12,11 @@ helpviewer_keywords:
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
 ms.openlocfilehash: c314db90a1a0f89613e20897387bdec8ec534837
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778725"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 指定宣告的程式設計項目會重新宣告並隱藏同名的項目或一組多載的項目，基底類別中。  
@@ -28,19 +28,19 @@ ms.locfileid: "58834136"
   
 ## <a name="rules"></a>規則  
   
--   **宣告內容。** 您可以使用`Shadows`只能在類別層級。 這表示的宣告內容`Shadows`項目必須是類別，，而且不能是原始程式檔、 命名空間、 介面、 模組、 結構或程序。  
+- **宣告內容。** 您可以使用`Shadows`只能在類別層級。 這表示的宣告內容`Shadows`項目必須是類別，，而且不能是原始程式檔、 命名空間、 介面、 模組、 結構或程序。  
   
      您可以宣告一個宣告陳述式中只能有一個遮蔽的項目。  
   
--   **結合的修飾詞。** 您無法指定`Shadows`連同`Overloads`， `Overrides`，或`Static`相同宣告中。  
+- **結合的修飾詞。** 您無法指定`Shadows`連同`Overloads`， `Overrides`，或`Static`相同宣告中。  
   
--   **項目型別。** 您可以使用任何其他類型遮蔽任何一種已宣告的項目。 如果您遮蔽的屬性或程序與另一個屬性或程序，參數和傳回型別沒有以符合那些在基底類別屬性或程序。  
+- **項目型別。** 您可以使用任何其他類型遮蔽任何一種已宣告的項目。 如果您遮蔽的屬性或程序與另一個屬性或程序，參數和傳回型別沒有以符合那些在基底類別屬性或程序。  
   
--   **存取。** 無法從遮蔽的衍生類別內通常使用遮蔽基底類別中的項目。 不過，適用下列考量。  
+- **存取。** 無法從遮蔽的衍生類別內通常使用遮蔽基底類別中的項目。 不過，適用下列考量。  
   
-    -   如果遮蔽的項目不能從參考它的程式碼存取，則參考會解析為遮蔽的項目中。 例如，如果`Private`項目會遮蔽基底類別的項目，並沒有存取權限的程式碼`Private`項目改為存取基底類別項目。  
+    - 如果遮蔽的項目不能從參考它的程式碼存取，則參考會解析為遮蔽的項目中。 例如，如果`Private`項目會遮蔽基底類別的項目，並沒有存取權限的程式碼`Private`項目改為存取基底類別項目。  
   
-    -   如果遮蔽的項目時，您仍然可以透過使用基底類別的型別宣告的物件存取遮蔽的項目。 您也可以存取透過`MyBase`。  
+    - 如果遮蔽的項目時，您仍然可以透過使用基底類別的型別宣告的物件存取遮蔽的項目。 您也可以存取透過`MyBase`。  
   
  `Shadows` 修飾詞可用於以下內容：  
   

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
 ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773228"
 ---
 # <a name="packaging-fonts-with-applications"></a>將字型與應用程式一起封裝
 本主題提供的概觀與封裝字型您[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式。  
@@ -158,17 +158,17 @@ ms.locfileid: "59123784"
 ## <a name="limitations-on-font-usage"></a>字型使用限制  
  下列清單描述上的封裝和使用字型中的幾項限制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式：  
   
--   **字型內嵌權限位元：**[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式不會檢查或強制執行任何字型內嵌權限位元。 請參閱[封裝字型簡介](#introduction_to_packaging_fonts)節的詳細資訊。  
+- **字型內嵌權限位元：**[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式不會檢查或強制執行任何字型內嵌權限位元。 請參閱[封裝字型簡介](#introduction_to_packaging_fonts)節的詳細資訊。  
   
--   **原始字型的網站：** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式不允許 http 或 ftp 的字型參考[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]。  
+- **原始字型的網站：** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式不允許 http 或 ftp 的字型參考[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]。  
   
--   **使用組件的絕對 URI： 標記法：** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式不允許您建立<xref:System.Windows.Media.FontFamily>物件以程式設計方式使用 「 組件:"一部分絕對[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]字型參考。 比方說，`"pack://application:,,,/resources/#Pericles Light"`是無效的字型參考。  
+- **使用組件的絕對 URI： 標記法：** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式不允許您建立<xref:System.Windows.Media.FontFamily>物件以程式設計方式使用 「 組件:"一部分絕對[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]字型參考。 比方說，`"pack://application:,,,/resources/#Pericles Light"`是無效的字型參考。  
   
--   **自動字型內嵌：** 在設計階段期間沒有支援搜尋的應用程式使用的字型和自動將字型內嵌在應用程式的資源。  
+- **自動字型內嵌：** 在設計階段期間沒有支援搜尋的應用程式使用的字型和自動將字型內嵌在應用程式的資源。  
   
--   **字型子集︰**[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式不支援為非固定文件建立字型子集。  
+- **字型子集︰**[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式不支援為非固定文件建立字型子集。  
   
--   萬一其中含有不正確的參考，應用程式就會回復以使用可用字型。  
+- 萬一其中含有不正確的參考，應用程式就會回復以使用可用字型。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f2a7a29ef1dc85c2ad554995286e5137fcb104be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757634"
 ---
 # <a name="ihostmalloc-interface"></a>IHostMalloc 介面
 提供方法，可讓 common language runtime (CLR) 會從透過主控件堆積要求更細緻的配置。  

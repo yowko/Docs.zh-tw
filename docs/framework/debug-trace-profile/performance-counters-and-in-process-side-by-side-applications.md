@@ -13,11 +13,11 @@ ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bf8a5a7c97969fb0018bb1dba4ea027fe7afd2c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775852"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>效能計數器與同處理序並存應用程式
 使用效能監視器 (Perfmon.exe)，可以區分個別執行階段的效能計數器。 本主題描述啟用這項功能所需的登錄變更。  
@@ -25,9 +25,9 @@ ms.locfileid: "33392014"
 ## <a name="the-default-behavior"></a>預設行為  
  根據預設，效能監視器會顯示個別應用程式的效能計數器。 不過，這在兩種案例下會發生問題：  
   
--   當您監視兩個同名的應用程式時。 例如，如果兩個應用程式的名稱都是 myapp.exe，則在 [執行個體] 資料行中，一個會顯示為 **myapp**，另一個則會顯示為 **myapp#1**。 在此情況下，很難符合特定應用程式的效能計數器。 不確定針對 **myapp#1** 所收集的資料指的是第一個 myapp.exe 還是第二個 myapp.exe。  
+- 當您監視兩個同名的應用程式時。 例如，如果兩個應用程式的名稱都是 myapp.exe，則在 [執行個體] 資料行中，一個會顯示為 **myapp**，另一個則會顯示為 **myapp#1**。 在此情況下，很難符合特定應用程式的效能計數器。 不確定針對 **myapp#1** 所收集的資料指的是第一個 myapp.exe 還是第二個 myapp.exe。  
   
--   應用程式使用多個 Common Language Runtime 執行個體時。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 支援同處理序並存裝載案例；亦即，單一處理序或應用程式可以載入多個 Common Language Runtime 執行個體。 如果名為 myapp.exe 的單一應用程式載入兩個執行階段執行個體，則會根據預設在 [執行個體] 資料行中將它們指定為 **myapp** 和 **myapp#1**。 在此情況下，不確定 **myapp** 和 **myapp#1** 指的是兩個同名的應用程式，還是含有兩個執行階段的相同應用程式。 如果多個同名的應用程式載入多個執行階段，則模稜兩可甚至會更高。  
+- 應用程式使用多個 Common Language Runtime 執行個體時。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 支援同處理序並存裝載案例；亦即，單一處理序或應用程式可以載入多個 Common Language Runtime 執行個體。 如果名為 myapp.exe 的單一應用程式載入兩個執行階段執行個體，則會根據預設在 [執行個體] 資料行中將它們指定為 **myapp** 和 **myapp#1**。 在此情況下，不確定 **myapp** 和 **myapp#1** 指的是兩個同名的應用程式，還是含有兩個執行階段的相同應用程式。 如果多個同名的應用程式載入多個執行階段，則模稜兩可甚至會更高。  
   
  您可以設定登錄機碼，以消除這項模稜兩可。 針對使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 所開發的應用程式，這項登錄變更會將後接執行階段執行個體識別碼的處理序識別碼新增至 [執行個體] 資料行中的應用程式名稱。 在 [執行個體] 資料行中，現在會將應用程式識別為 *application*_`p`*processID*\_`r`*runtimeID*，而不是 *application* 或 *application*#1。 如果應用程式是使用舊版 Common Language Runtime 所開發，則在已安裝 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的情況下，該執行個體會表示為 *application\_*`p`*processID*。  
   

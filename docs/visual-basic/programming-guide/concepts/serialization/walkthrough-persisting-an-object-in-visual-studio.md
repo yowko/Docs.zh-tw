@@ -3,11 +3,11 @@ title: 保存物件在 Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
 ms.openlocfilehash: 55ad2049003baaed26f4db909ae466aefdd161e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783470"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>逐步解說：保存物件在 Visual Studio (Visual Basic)
 雖然您可以在設計階段將物件的屬性設為預設值，但當物件終結時，於執行階段輸入的任何值都會遺失。 您可以使用序列化來保存執行個體之間的物件資料，藉此儲存值，並在下次將物件具現化時加以擷取。  
@@ -127,7 +127,7 @@ ms.locfileid: "59303345"
   
 ### <a name="to-mark-a-class-as-serializable"></a>若要將類別標示為可序列化  
   
--   變更 Loan 類別的類別宣告，如下所示：  
+- 變更 Loan 類別的類別宣告，如下所示：  
   
     ```vb  
     <Serializable()>  
@@ -138,7 +138,7 @@ ms.locfileid: "59303345"
   
 ### <a name="to-prevent-a-member-from-being-serialized"></a>若要避免將成員序列化  
   
--   變更 `PropertyChanged` 事件的宣告，如下所示：  
+- 變更 `PropertyChanged` 事件的宣告，如下所示：  
   
     ```vb  
     <NonSerialized()>  
@@ -150,7 +150,7 @@ ms.locfileid: "59303345"
   
 ### <a name="to-add-references-to-namespaces"></a>若要新增命名空間的參考  
   
--   在 `Form1` 類別最上方新增下列陳述式：  
+- 在 `Form1` 類別最上方新增下列陳述式：  
   
     ```vb  
     Imports System.IO  
@@ -197,7 +197,7 @@ ms.locfileid: "59303345"
   
 ### <a name="to-save-the-data-and-serialize-the-class"></a>若要儲存資料以及序列化類別  
   
--   將下列程式碼新增至 `Form1_FormClosing` 事件程序中：  
+- 將下列程式碼新增至 `Form1_FormClosing` 事件程序中：  
   
     ```vb  
     Private Sub Form1_FormClosing() Handles MyBase.FormClosing  

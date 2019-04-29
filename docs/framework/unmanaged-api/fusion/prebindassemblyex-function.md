@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8251d21fe535f85cc6abd0a7bc6c96ab320007f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778036"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx 函式
 取得組件的原則後顯示名稱。  

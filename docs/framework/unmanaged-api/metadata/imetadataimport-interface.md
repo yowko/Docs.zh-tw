@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c6a65eae91bf3b44fc2b49588ead5ed178d7326f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777451"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport 介面
 提供從可攜式執行檔 (PE) 或其他來源匯入及管理現有中繼資料的方法，例如類型程式庫或獨立的執行階段中繼資料二進位檔。  
@@ -96,13 +96,13 @@ ms.locfileid: "59180397"
 ## <a name="remarks"></a>備註  
  `IMetaDataImport` 介面的設計主要是讓工具和服務使用，這些會匯入類型資訊 (例如開發工具) 或管理已部署的元件 (例如解析/啟用服務)。 `IMetaDataImport` 中的方法可分成下列工作分類：  
   
--   列舉中繼資料範圍內的項目集合。  
+- 列舉中繼資料範圍內的項目集合。  
   
--   尋找具有一組特定特性的項目。  
+- 尋找具有一組特定特性的項目。  
   
--   取得指定項目的屬性。  
+- 取得指定項目的屬性。  
   
--   Get 方法是專門用來傳回中繼資料項目的單一值屬性。 當屬性為另一個項目的參考時，則會傳回該項目的語彙基元。 任何指標輸入類型都可以是 NULL，表示未要求特定的值。 若要取得基本上是集合物件的屬性 (例如類別實作的介面集合)，請使用列舉方法。  
+- Get 方法是專門用來傳回中繼資料項目的單一值屬性。 當屬性為另一個項目的參考時，則會傳回該項目的語彙基元。 任何指標輸入類型都可以是 NULL，表示未要求特定的值。 若要取得基本上是集合物件的屬性 (例如類別實作的介面集合)，請使用列舉方法。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

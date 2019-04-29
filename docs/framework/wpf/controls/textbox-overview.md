@@ -6,11 +6,11 @@ helpviewer_keywords:
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
 ms.openlocfilehash: 577a12a0c04e5e3bfbfecb2c45263b684f0ffc17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790985"
 ---
 # <a name="textbox-overview"></a>TextBox 概觀
 <xref:System.Windows.Controls.TextBox>類別可讓您顯示或編輯未格式化的文字。 常見用法<xref:System.Windows.Controls.TextBox>編輯表單中的未格式化的文字。 例如，要求使用者的名稱、 電話號碼格式等會使用<xref:System.Windows.Controls.TextBox>文字輸入控制項。 本主題將介紹<xref:System.Windows.Controls.TextBox>類別，並提供範例，示範如何使用它在這兩[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和C#。  

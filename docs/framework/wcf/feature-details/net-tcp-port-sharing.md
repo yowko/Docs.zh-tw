@@ -6,11 +6,11 @@ helpviewer_keywords:
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
 ms.openlocfilehash: b04266b15f786e3a5a93ac1e9fff1754c397ccd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762747"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP Port Sharing
 Windows Communication Foundation (WCF) 的高效能通訊提供全新的 TCP 架構網路通訊協定 (net.tcp://)。 WCF 也引進全新的系統元件，可讓多個使用者處理序共用 net.tcp 連接埠的 Net.TCP Port Sharing Service。  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF) 的高效能通訊提供全新的 TCP 架
 ## <a name="port-sharing-architecture"></a>連接埠共用架構  
  在 WCF 中的連接埠共用架構有三個主要元件：  
   
--   工作者處理序：任何透過 net.tcp:// 使用共用連接埠進行通訊的程序。  
+- 工作者處理序：任何透過 net.tcp:// 使用共用連接埠進行通訊的程序。  
   
--   WCF TCP 傳輸：實作 net.tcp:// 通訊協定。  
+- WCF TCP 傳輸：實作 net.tcp:// 通訊協定。  
   
--   Net.TCP Port Sharing Service:可讓許多背景工作處理序共用相同的 TCP 連接埠。  
+- Net.TCP Port Sharing Service:可讓許多背景工作處理序共用相同的 TCP 連接埠。  
   
  Net.TCP 連接埠共用服務一項使用者模式的 Windows 服務，可代表透過它進行連線的背景工作處理序接受 net.tcp:// 連線。 當通訊端連線抵達時，連接埠共用服務就會檢查傳入的訊息資料流以取得其目的地位址。 連接埠共用服務會根據這個位址，將資料流路由至最終會處理資料的應用程式中。  
   

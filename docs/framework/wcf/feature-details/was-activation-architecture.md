@@ -3,11 +3,11 @@ title: WAS 啟動架構
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
 ms.openlocfilehash: 9c1af21782b377a9fb01cbd05e4fe61f6a69f3ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932703"
 ---
 # <a name="was-activation-architecture"></a>WAS 啟動架構
 本主題將條列說明並討論 Windows Process Activation Service (亦稱為 WAS) 的元件。  
@@ -15,15 +15,15 @@ ms.locfileid: "59134052"
 ## <a name="activation-components"></a>啟動元件  
  WAS 包含好幾個架構元件：  
   
--   接聽項配接器： Windows 服務，可在特定網路通訊協定上接收訊息，並與 WAS 通訊以將傳入訊息路由至正確的背景工作處理序。  
+- 接聽項配接器： Windows 服務，可在特定網路通訊協定上接收訊息，並與 WAS 通訊以將傳入訊息路由至正確的背景工作處理序。  
   
--   WAS： Windows 服務，可管理背景工作處理序的建立與存留期。  
+- WAS： Windows 服務，可管理背景工作處理序的建立與存留期。  
   
--   泛型背景工作處理序可執行檔 (w3wp.exe)。  
+- 泛型背景工作處理序可執行檔 (w3wp.exe)。  
   
--   應用程式管理員： 針對可在背景工作處理序中裝載應用程式的應用程式定義域，管理其建立與存留期。  
+- 應用程式管理員： 針對可在背景工作處理序中裝載應用程式的應用程式定義域，管理其建立與存留期。  
   
--   通訊協定處理常式： 特定於通訊協定的元件，可在背景工作處理序中執行並管理背景工作處理序與個別接聽項配接器之間的通訊。 通訊協定處理常式共有兩種類型：處理序通訊協定處理常式和 AppDomain 通訊協定處理常式。  
+- 通訊協定處理常式： 特定於通訊協定的元件，可在背景工作處理序中執行並管理背景工作處理序與個別接聽項配接器之間的通訊。 通訊協定處理常式共有兩種類型：處理序通訊協定處理常式和 AppDomain 通訊協定處理常式。  
   
  當 WAS 啟動背景工作處理序執行個體時，會將所需的處理序通訊協定處理常式載入背景工作處理序，然後透過應用程式管理員建立可裝載應用程式的應用程式定義域。 應用程式定義域會依據應用程式需求，同時載入應用程式的程式碼與使用的 AppDomain 通訊協定處理常式。  
   

@@ -3,11 +3,11 @@ title: 可執行的執行個體偵測週期
 ms.date: 03/30/2017
 ms.assetid: 4ea5c787-b638-47fd-bfc8-ede8c2898ce6
 ms.openlocfilehash: 9652dd811f64e5324219b8aa0700ab8219edeeb0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937952"
 ---
 # <a name="runnable-instances-detection-period"></a>可執行的執行個體偵測週期
 SQL 工作流程執行個體存放區會執行內部工作，該工作會定期喚醒及偵測持續性資料庫中可執行或可啟動的執行個體。 **可執行的執行個體偵測週期**SQL 工作流程執行個體存放區的屬性會指定時間週期之後，SQL 工作流程執行個體存放區會執行偵測工作，以偵測任何可執行或可啟動的工作流程在上一個偵測循環之後持續性資料庫中的執行個體。  

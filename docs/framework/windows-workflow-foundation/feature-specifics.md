@@ -3,11 +3,11 @@ title: Windows Workflow Foundation 功能內容
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
 ms.openlocfilehash: fae42332c19a8b39070d9922b6fec4aadd73505b
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773676"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能內容
 
@@ -43,9 +43,9 @@ A`BestPriceFinder`服務會呼叫多個航空公司服務，以便尋找最佳�
 
 - 您可以在下列章節中找到 <xref:System.ServiceModel.WorkflowServiceHost> 的範例：
 
-    - [執行](./samples/execution.md)
+  - [執行](./samples/execution.md)
 
-    - 應用程式：[暫停的執行個體管理](./samples/suspended-instance-management.md)
+  - 應用程式：[暫停的執行個體管理](./samples/suspended-instance-management.md)
 
 - [裝載工作流程服務概觀](../wcf/feature-details/hosting-workflow-services-overview.md)
 
@@ -67,13 +67,13 @@ BestPriceFinder 服務會呼叫多個航空公司服務，以便尋找最佳票�
 
 - 用來將訊息群組在一起之相互關聯的範例就是，將訊息群組在一起的要求-回覆相互關聯。
 
-    - 在 <xref:System.ServiceModel.Activities.Receive>活動上，按一下<xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A>屬性，並新增<xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>使用 CorrelationHandle 上述的第一個步驟中建立。
+  - 在 <xref:System.ServiceModel.Activities.Receive>活動上，按一下<xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A>屬性，並新增<xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>使用 CorrelationHandle 上述的第一個步驟中建立。
 
-    - 建立<xref:System.ServiceModel.Activities.SendReply>活動上按一下滑鼠右鍵<xref:System.ServiceModel.Activities.Receive>，然後按一下 「 建立 SendReply。 接著，將它貼入工作流程中 <xref:System.ServiceModel.Activities.Receive> 活動的後面。
+  - 建立<xref:System.ServiceModel.Activities.SendReply>活動上按一下滑鼠右鍵<xref:System.ServiceModel.Activities.Receive>，然後按一下 「 建立 SendReply。 接著，將它貼入工作流程中 <xref:System.ServiceModel.Activities.Receive> 活動的後面。
 
 - 將資料片段對應至服務執行個體的範例就是內容架構的相互關聯，它會將資料片段 (例如訂單 ID) 對應至特定工作流程執行個體。
 
-    - 在任何傳訊活動上，按一下 `CorrelationInitializers` 屬性，然後使用您在上述步驟中建立的 <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> 變數來加入 <xref:System.ServiceModel.Activities.CorrelationHandle>。 在下拉式功能表中，按兩下所需的訊息屬性 (例如 OrderID)。 接著，將 `CorrelatesWith` 屬性設定為上述使用的 <xref:System.ServiceModel.Activities.CorrelationHandle> 變數。
+  - 在任何傳訊活動上，按一下 `CorrelationInitializers` 屬性，然後使用您在上述步驟中建立的 <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> 變數來加入 <xref:System.ServiceModel.Activities.CorrelationHandle>。 在下拉式功能表中，按兩下所需的訊息屬性 (例如 OrderID)。 接著，將 `CorrelatesWith` 屬性設定為上述使用的 <xref:System.ServiceModel.Activities.CorrelationHandle> 變數。
 
 - [相互關聯概念文件](../wcf/feature-details/correlation.md)
 
@@ -131,9 +131,9 @@ WCF 組態結構描述很複雜，而且使用者提供許多不易發現的功�
 
 - 範例：
 
-    - [DataContractResolver](../wcf/samples/datacontractresolver.md)
+  - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
-    - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
+  - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
 
 ### <a name="data-contract-resolver-scenarios"></a>資料合約解析程式案例
 
@@ -151,25 +151,25 @@ WCF 組態結構描述很複雜，而且使用者提供許多不易發現的功�
 
 - 流程圖功能會使用下列類別：
 
-    - <xref:System.Activities.Statements.Flowchart>
+  - <xref:System.Activities.Statements.Flowchart>
 
-    - <xref:System.Activities.Statements.FlowNode>
+  - <xref:System.Activities.Statements.FlowNode>
 
-    - <xref:System.Activities.Statements.FlowDecision>
+  - <xref:System.Activities.Statements.FlowDecision>
 
-    - <xref:System.Activities.Statements.FlowStep>
+  - <xref:System.Activities.Statements.FlowStep>
 
-    - <xref:System.Activities.Statements.FlowSwitch%601>
+  - <xref:System.Activities.Statements.FlowSwitch%601>
 
 - 範例：
 
-    - [使用 TryCatch 錯誤處理流程圖活動](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+  - [使用 TryCatch 錯誤處理流程圖活動](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-    - [招聘程序](./samples/hiring-process.md)
+  - [招聘程序](./samples/hiring-process.md)
 
 - 設計工具文件：
 
-    - [Flowchart 活動設計工具](/visualstudio/workflow-designer/flowchart-activity-designers)
+  - [Flowchart 活動設計工具](/visualstudio/workflow-designer/flowchart-activity-designers)
 
 ### <a name="flowchart-scenarios"></a>流程圖案例
 
@@ -197,21 +197,21 @@ WCF 組態結構描述很複雜，而且使用者提供許多不易發現的功�
 
 - 範例：
 
-    - [招聘程序](./samples/hiring-process.md)
+  - [招聘程序](./samples/hiring-process.md)
 
-    - [公司購買程序](./samples/corporate-purchase-process.md)
+  - [公司購買程序](./samples/corporate-purchase-process.md)
 
 - 設計工具文件：
 
-    - [Parallel 活動設計工具](/visualstudio/workflow-designer/parallel-activity-designer)
+  - [Parallel 活動設計工具](/visualstudio/workflow-designer/parallel-activity-designer)
 
-    - [ParallelForEach\<T > 活動設計工具](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
+  - [ParallelForEach\<T > 活動設計工具](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
 
 ### <a name="procedural-activity-scenarios"></a>程序性活動案例
 
 - <xref:System.Activities.Statements.Parallel>：內部網路文件管理系統具有文件核准工作流程。 文件必須先由數個部門的人員核准，然後才能發行至內部網路。 沒有已建立的訂單核准;文件處於 「 待核准 」 階段時可能發生在任何時間。 當使用者送出文件以供檢閱時，其直屬經理、內部網路管理員和內部通訊經理就必須核准該份文件。
 
-- <xref:System.Activities.Statements.ParallelForEach%601>：WF 應用程式管理的大型公司內部的企業採購。 企業規則表示，規劃任何採購作業之前，需要三家不同廠商的估價。 採購部門的員工會從公司的廠商清單中選取三家廠商。 選取並通知這些廠商之後，公司將等候其經濟提案。 這些提案可以按照任何順序提出。 為了在 WF 中實作此案例，我們使用了 <xref:System.Activities.Statements.ParallelForEach%601>，以便逐一查看廠商的集合並且要求其經濟提案。 蒐集所有提案之後，系統會選取並顯示最佳提案。
+- <xref:System.Activities.Statements.ParallelForEach%601>：WF 應用程式管理的大型公司內部的企業採購。 企業規則表示，規劃任何採購作業之前，需要三家不同廠商的估價。 採購部門的員工會從公司的廠商清單中選取三家廠商。 選取並通知這些廠商之後，公司將等候其經濟提案。 這些提案可以按照任何順序提出。 為了在 WF 中實作此案例，我們使用了 <xref:System.Activities.Statements.ParallelForEach%601>，以便逐一查看廠商的集合並且要求其經濟提案。 蒐集所有供應項目之後，系統會選取並顯示最佳提案。
 
 ## <a name="invokemethod"></a>InvokeMethod
 
@@ -275,7 +275,7 @@ WCF 組態結構描述很複雜，而且使用者提供許多不易發現的功�
 
 1. 以內容為基礎的路由 (<xref:System.ServiceModel.Dispatcher.MessageFilter> 物件會檢查訊息來判斷應該傳送的目的地)。
 
-2. 通訊協定橋接 (傳輸與訊息)。
+2. 通訊協定橋接 （傳輸與訊息）
 
 3. 錯誤處理 (路由器會攔截通訊例外狀況並容錯移轉至備份端點)。
 

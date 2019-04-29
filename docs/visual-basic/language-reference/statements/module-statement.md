@@ -14,11 +14,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
 ms.openlocfilehash: f546498e5282bcf58d07a06968bb4303e4e6d7b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784159"
 ---
 # <a name="module-statement"></a>Module 陳述式
 宣告模組的名稱，並引進變數、 屬性、 事件和組成模組的程序的定義。  
@@ -38,9 +38,9 @@ End Module
  `accessmodifier`  
  選擇性。 可以是下列其中一項：  
   
--   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
+- [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
--   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
  請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
@@ -67,31 +67,31 @@ End Module
 ## <a name="classes-and-modules"></a>類別和模組  
  這些項目有許多相似之處，但有一些重要的差異。  
   
--   **術語。** 舊版的 Visual Basic 會辨識兩種模組類型：*類別的模組*（.cls 檔案） 和*標準模組*（.bas 檔案）。 目前的版本會呼叫這些*類別*並*模組*分別。  
+- **術語。** 舊版的 Visual Basic 會辨識兩種模組類型：*類別的模組*（.cls 檔案） 和*標準模組*（.bas 檔案）。 目前的版本會呼叫這些*類別*並*模組*分別。  
   
--   **共用的成員。** 您可以控制類別的成員是否共用，或執行個體成員。  
+- **共用的成員。** 您可以控制類別的成員是否共用，或執行個體成員。  
   
--   **物件導向。** 類別是物件導向，但模組不是。 因此唯一的類別可以具現化為物件。 如需詳細資訊，請參閱 <<c0> [ 物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
+- **物件導向。** 類別是物件導向，但模組不是。 因此唯一的類別可以具現化為物件。 如需詳細資訊，請參閱 <<c0> [ 物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
   
 ## <a name="rules"></a>規則  
   
--   **修飾詞。** 模組的所有成員都是隱含[共用](../../../visual-basic/language-reference/modifiers/shared.md)。 您無法使用`Shared`關鍵字宣告成員，而且您無法改變任何成員的共用的狀態。  
+- **修飾詞。** 模組的所有成員都是隱含[共用](../../../visual-basic/language-reference/modifiers/shared.md)。 您無法使用`Shared`關鍵字宣告成員，而且您無法改變任何成員的共用的狀態。  
   
--   **繼承**： 模組無法而非繼承自任何型別<xref:System.Object>，繼承的所有模組。 特別是，一個模組無法繼承自另一個。  
+- **繼承**： 模組無法而非繼承自任何型別<xref:System.Object>，繼承的所有模組。 特別是，一個模組無法繼承自另一個。  
   
      您無法使用[Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)在模組定義中，甚至指定<xref:System.Object>。  
   
--   **預設屬性。** 您無法在模組中定義任何預設屬性。 如需詳細資訊，請參閱 <<c0> [ 預設](../../../visual-basic/language-reference/modifiers/default.md)。  
+- **預設屬性。** 您無法在模組中定義任何預設屬性。 如需詳細資訊，請參閱 <<c0> [ 預設](../../../visual-basic/language-reference/modifiers/default.md)。  
   
 ## <a name="behavior"></a>行為  
   
--   **存取層級。** 在模組內，您可以宣告具有它自己的存取層級的每個成員。 模組成員預設為[公開金鑰](../../../visual-basic/language-reference/modifiers/public.md)變數和常數，除了存取哪些預設[私人](../../../visual-basic/language-reference/modifiers/private.md)存取。 當模組有限制存取比多個成員時，指定的模組的存取層級的優先順序較高。  
+- **存取層級。** 在模組內，您可以宣告具有它自己的存取層級的每個成員。 模組成員預設為[公開金鑰](../../../visual-basic/language-reference/modifiers/public.md)變數和常數，除了存取哪些預設[私人](../../../visual-basic/language-reference/modifiers/private.md)存取。 當模組有限制存取比多個成員時，指定的模組的存取層級的優先順序較高。  
   
--   **範圍。** 模組是在其命名空間的範圍中。  
+- **範圍。** 模組是在其命名空間的範圍中。  
   
      每個模組成員的範圍是整個模組。 請注意，所有成員都進行*類型提升*，因而導致其升級為包含模組的命名空間的範圍。 如需詳細資訊，請參閱 <<c0> [ 型別提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)。  
   
--   **限定性條件。** 您可以在專案中，有多個模組，您可以宣告具有相同名稱在兩個或多個模組中的成員。 不過，您必須限定這類成員的適當的模組名稱的任何參考，如果參考是從該模組外。 如需詳細資訊，請參閱 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
+- **限定性條件。** 您可以在專案中，有多個模組，您可以宣告具有相同名稱在兩個或多個模組中的成員。 不過，您必須限定這類成員的適當的模組名稱的任何參考，如果參考是從該模組外。 如需詳細資訊，請參閱 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
 ## <a name="example"></a>範例  
  [!code-vb[VbVbalrStatements#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#69)]  

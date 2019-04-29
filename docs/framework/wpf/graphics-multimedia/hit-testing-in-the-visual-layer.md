@@ -9,11 +9,11 @@ helpviewer_keywords:
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
 ms.openlocfilehash: 0cb8d0656765e5bc2c2a54ef5f282a67d8579f20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762422"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>視覺分層中的點擊測試
 本主題提供視覺分層所提供點擊測試功能的概觀。 點擊測試支援可讓您判斷幾何或點的值是否落在呈現的內容<xref:System.Windows.Media.Visual>，可讓您實作使用者介面行為，例如選取矩形來選取多個物件。  
@@ -22,13 +22,13 @@ ms.locfileid: "59082174"
 ## <a name="hit-testing-scenarios"></a>點擊測試案例  
  <xref:System.Windows.UIElement>類別提供<xref:System.Windows.UIElement.InputHitTest%2A>方法，可讓您進行點擊測試使用指定的座標值的項目。 在許多情況下，<xref:System.Windows.UIElement.InputHitTest%2A>方法提供實作點擊測試的項目所需的功能。 不過，有幾個案例，您可能需要在視覺分層實作點擊測試。  
   
--   點擊測試非<xref:System.Windows.UIElement>物件：這適用於您進行點擊測試非<xref:System.Windows.UIElement>物件，例如<xref:System.Windows.Media.DrawingVisual>或圖形物件。  
+- 點擊測試非<xref:System.Windows.UIElement>物件：這適用於您進行點擊測試非<xref:System.Windows.UIElement>物件，例如<xref:System.Windows.Media.DrawingVisual>或圖形物件。  
   
--   叫用使用幾何進行測試：這適用於您要使用 geometry 物件，而不是點的座標值進行點擊測試。  
+- 叫用使用幾何進行測試：這適用於您要使用 geometry 物件，而不是點的座標值進行點擊測試。  
   
--   點擊測試多個物件：這適用於當您需要對多個物件，例如重疊的物件進行點擊測試。 您可以取得和幾何或點交集的所有視覺效果結果，不只有第一個結果。  
+- 點擊測試多個物件：這適用於當您需要對多個物件，例如重疊的物件進行點擊測試。 您可以取得和幾何或點交集的所有視覺效果結果，不只有第一個結果。  
   
--   忽略<xref:System.Windows.UIElement>點擊測試原則：這適用於當您需要忽略<xref:System.Windows.UIElement>點擊測試原則，會考慮為項目是否已停用或隱藏像之類的因素。  
+- 忽略<xref:System.Windows.UIElement>點擊測試原則：這適用於當您需要忽略<xref:System.Windows.UIElement>點擊測試原則，會考慮為項目是否已停用或隱藏像之類的因素。  
   
 > [!NOTE]
 >  如需示範在視覺分層進行點擊測試的完整程式碼範例，請參閱[使用 DrawingVisuals 進行點擊測試範例 (英文)](https://go.microsoft.com/fwlink/?LinkID=159994) 和[使用 Win32 交互操作進行點擊測試範例 (英文)](https://go.microsoft.com/fwlink/?LinkID=159995)。  

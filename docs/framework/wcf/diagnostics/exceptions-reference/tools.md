@@ -3,11 +3,11 @@ title: 工具
 ms.date: 03/30/2017
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
 ms.openlocfilehash: 6c4ada74c2fc6aba84eb1fe46f4d7cdee9978d13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780740"
 ---
 # <a name="tools"></a>工具
 本主題列出 Windows Communication Foundation (WCF) 工具所產生的所有例外狀況。  
@@ -75,8 +75,8 @@ ms.locfileid: "33474601"
 |ErrInputConflictsWithMode|從指定項目讀取的輸入與其他選項不一致。|  
 |ErrDuplicateValuePassedToTypeArg|指定值已經多次傳送至指定選項。 每種型別只能指定一次。|  
 |ErrInputEPRFileParseError|無法從指定項目讀取端點參照。 請驗證 XML 格式正確而且有效。|  
-|ErrCouldNotCreateCodeProvider|程式碼提供者無法建立與指定的值，傳遞給 /{1}引數。 請驗證程式碼提供者已安裝且設定妥當。|  
-|ErrPathTooLongDirOnly|結果指定路徑太長。 請檢閱指定引數。|  
+|ErrCouldNotCreateCodeProvider|無法為指定的值，傳遞給建立程式碼提供者 /{1}引數。 請驗證程式碼提供者已安裝且設定妥當。|  
+|ErrPathTooLongDirOnly|結果指定路徑太長。 請檢視指定引數。|  
 |HelpDataContractSerializer|產生使用 DataContract 序列化程式以進行序列化與還原序列化的資料型別。|  
 |ErrUnableToExportEndpoint|匯出指定命名空間之指定端點名稱時發生錯誤，此命名空間可在組件所載入的組態檔之指定服務型別中找到。|  
 |HelpUsage1|顯示說明用法。|  
@@ -91,7 +91,7 @@ ms.locfileid: "33474601"
 |ErrDirectoryInsteadOfFile|指定的輸入路徑可能是目錄。 輸入必須是 URL 或檔案路徑。|  
 |HelpConfig|指示工具使用提供的名稱來產生組態檔。 預設：output.config。|  
 |ErrSingleUseSwitch|您無法多次指定選項。|  
-|警告|警告:|  
+|警告|警告：|  
 |WrnAmbiguousServiceConfig|找到包含指定組態名稱的多個服務組態，且下列組件已指定。|  
 |ErrInvalidInputPath|指定的輸入路徑並未參照到任何現有檔案，而且可能不是有效的 URI。|  
 |ErrUnableToLoadInputs|讀取載入的中繼資料時發生錯誤。|  
@@ -110,11 +110,11 @@ ms.locfileid: "33474601"
 |ErrCannotDisambiguateSpecifiedTypes|一個以上具有相同名稱的型別存在參照的組件集中。 請使用符合組件規格的名稱來區分指定選項的各個指定型別。|  
 |RetreivingMetadataWithMexOnly|使用 WS-Metadata Exchange 嘗試從指定位置下載中繼資料。 這個 URL 不支援 DISCO。|  
 |ErrInvalidTarget|使用指定項目來指定時，指定目標將失效。 已指定支援目標。|  
-|ErrPathTooLong|結果路徑太長。 請檢閱指定引數。|  
+|ErrPathTooLong|結果路徑太長。 請檢視指定引數。|  
 |HelpCommonOptionsCategory|-= 常見問題 =-|  
 |ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|未指定有效的輸入檔。 請指定中繼資料文件或組件檔。|  
-|ParametersLanguage|\<語言 >|  
+|ParametersLanguage|\<language>|  
 |ErrUnableToLoadMetadataDocument|從其中一個載入的文件讀取中繼資料時發生錯誤。 已指定文件識別項。|  
 |ErrConflictingInputs|指定的輸入引數與指定項目衝突，因為它們意指不同的工具作業模式。|  
 |WrnUnableToLoadContractForValidation|載入合約類型時發生錯誤。 指定了型別和詳細資料。|  
@@ -142,7 +142,7 @@ ms.locfileid: "33474601"
 |ErrCodegenError|以指定語言產生程式碼時發生錯誤。<br /><br /> 該語言不支援所有正在產生的程式碼項目。 您應該使用其他語言。|  
 |ErrInputWsdlParseError|讀取指定項目時發生 WSDL 剖析錯誤。 請驗證 XML 格式正確而且有效。|  
 |ErrCouldNotCreateInstance|無法針對已傳送至指定引數的指定型別建立其執行個體。|  
-|ParametersNamespace|\<字串、 字串 >|  
+|ParametersNamespace|\<string,string>|  
 |HelpNostdlib|請勿參照標準程式庫 (根據預設會參照 mscorlib.dll 與 system.servicemodel.dll)。|  
 |WrnCannotLoadConfigFileForExport|在處理從指定位置載入的組態檔時發生錯誤。 無法載入在此組態檔中定義的服務。|  
 |WrnUnableToLoadContractForExport|載入合約類型時發生錯誤。 無法匯出這個指定型別。|

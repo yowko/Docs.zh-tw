@@ -3,11 +3,11 @@ title: 219 - ServiceException
 ms.date: 03/30/2017
 ms.assetid: 81e2efac-39aa-4ed2-85a9-97eb8793b844
 ms.openlocfilehash: eb4289c0346c9e1d9481347d69db8c5f007e4325
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781728"
 ---
 # <a name="219---serviceexception"></a>219 - ServiceException
 ## <a name="properties"></a>屬性  
@@ -31,5 +31,5 @@ ms.locfileid: "33460511"
 |--------------------|--------------------|-----------------|  
 |ExceptionToString|`xs:string`|在 CLR 例外狀況上呼叫 `ToString`() 的結果。|  
 |ExceptionTypeName|`xs:string`|例外狀況型別的 CLR FullName。|  
-|HostReference|`xs:string`|若為 Web 託管服務，此欄位會唯一識別 Web 階層架構中的服務。 其格式定義為 ' Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'。 範例: ' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'。|  
+|HostReference|`xs:string`|若為 Web 託管服務，此欄位會唯一識別 Web 階層架構中的服務。 其格式定義為 ' Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'。 範例：' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'。|  
 |AppDomain|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。|

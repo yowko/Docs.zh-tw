@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
 ms.openlocfilehash: ea6994e653b3a06239634f5a0fddea84a07086e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777178"
 ---
 # <a name="using-application-settings-and-user-settings"></a>使用應用程式設定和使用者設定
 從.NET Framework 2.0 開始，您可以建立並存取應用程式執行的工作階段之間保存的值。 這些值稱為*設定*。 設定可以代表使用者喜好設定，或需要使用應用程式的重要資訊。 例如，您可能會建立一系列的 儲存色彩配置的應用程式的使用者喜好設定的設定。 或者，您可能會儲存連接字串，指定您的應用程式使用的資料庫。 設定可讓您保留很重要應用程式外部程式碼，並建立儲存個別使用者的喜好設定的設定檔的資訊。  

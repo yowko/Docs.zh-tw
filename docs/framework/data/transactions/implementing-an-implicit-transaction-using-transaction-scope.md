@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
 ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793675"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>使用交易範圍實作隱含交易
 <xref:System.Transactions.TransactionScope> 類別提供一個簡單的方式，讓您不用與交易互動，即可將一段程式碼標記為參與交易。 交易範圍可以自動選取並管理環境交易。 由於 <xref:System.Transactions.TransactionScope> 類別非常容易使用且很有效率，在您開發交易應用程式時，建議您善加利用。  
@@ -71,11 +71,11 @@ void SomeMethod()
   
  <xref:System.Transactions.TransactionScope> 物件包含三個選項：  
   
--   聯結環境交易，如果環境交易不存在的話，則建立新的環境交易。  
+- 聯結環境交易，如果環境交易不存在的話，則建立新的環境交易。  
   
--   成為新的根範圍，意思就是開始新的交易並讓交易成為本身範圍中的新環境交易。  
+- 成為新的根範圍，意思就是開始新的交易並讓交易成為本身範圍中的新環境交易。  
   
--   完全不會參與交易。 最後也不會產生環境交易。  
+- 完全不會參與交易。 最後也不會產生環境交易。  
   
  如果使用 <xref:System.Transactions.TransactionScopeOption.Required> 來具現化範圍，且存在環境交易，則範圍會聯結該交易。 另一方面，如果不存在環境交易，則範圍會建立新的交易並成為根範圍。 這是預設值。 如果使用 <xref:System.Transactions.TransactionScopeOption.Required>，則範圍內的程式碼不管本身是否為根，或僅僅聯結環境交易，都不需要做出不一樣的行為。 在兩種情況中，程式碼的行為應該完全一樣。  
   

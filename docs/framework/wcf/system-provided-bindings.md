@@ -6,11 +6,11 @@ helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
 ms.openlocfilehash: 3c6c6b628d208aede8c547dcfa66fc189a26ae01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791504"
 ---
 # <a name="system-provided-bindings"></a>系統提供的繫結
 
@@ -27,7 +27,7 @@ ms.locfileid: "54569596"
  一個安全、互通，且可支援 WS-Federation 通訊協定的繫結，此繫結可讓聯合組織有效率地驗證並授權使用者。
 
 > [!IMPORTANT]
-> 請務必選取包含安全性的繫結。 根據預設，除了 [\<basicHttpBinding>](../configure-apps/file-schema/wcf/basichttpbinding.md) 項目之外，所有繫結都會啟用安全性。 如果您沒有選取安全繫結程序或是停用了安全性，請記得透過某種方式來保護您的資料，例如儲存在安全的資料中心或是另外放在隔離的網路上。
+> 請務必選取包含安全性的繫結。 根據預設，除了 [\<basicHttpBinding>](../configure-apps/file-schema/wcf/basichttpbinding.md) 項目之外，所有繫結都會啟用安全性。 如果您沒有選取安全繫結或是停用了安全性，請記得透過某種方式來保護您的資料，例如儲存在安全的資料中心或是另外放在隔離的網路上。
 
 > [!IMPORTANT]
 > 請勿使用不支援或已停用安全性的繫結來搭配雙工合約一起使用，除非您能夠以其他方式來保護資料的安全。
@@ -61,8 +61,8 @@ ms.locfileid: "54569596"
 |<xref:System.ServiceModel.WSHttpBinding>|WS|傳輸、(訊息)、混合|(無)、可靠工作階段、安全性工作階段|(無)、是|N/A|(文字)、MTOM|否|
 |<xref:System.ServiceModel.WSDualHttpBinding>|WS|(訊息)、無|(可靠工作階段)、安全性工作階段|(無)、是|是|(文字)、MTOM|否|
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|(訊息)、混合、無|(無)、可靠工作階段、安全性工作階段|(無)、是|否|(文字)、MTOM|否|
-|<xref:System.ServiceModel.NetHttpBinding>|.NET|(無)、傳輸、訊息、TransportWithMessageCredential、TransportCredentialOnly|請參閱下列注意事項|無|請參閱下列注意事項|(二進位)、文字、MTOM|是 (緩衝)|
-|<xref:System.ServiceModel.NetHttpsBinding>|.NET|(傳輸)、TransportWithMessageCredential|請參閱下列注意事項|無|請參閱下列注意事項|(二進位)、文字、MTOM|是<br />(緩衝)|
+|<xref:System.ServiceModel.NetHttpBinding>|.NET|(無)、傳輸、訊息、TransportWithMessageCredential、TransportCredentialOnly|請參閱下列注意事項|None|請參閱下列注意事項|(二進位)、文字、MTOM|是 (緩衝)|
+|<xref:System.ServiceModel.NetHttpsBinding>|.NET|(傳輸)、TransportWithMessageCredential|請參閱下列注意事項|None|請參閱下列注意事項|(二進位)、文字、MTOM|是<br />(緩衝)|
 |<xref:System.ServiceModel.NetTcpBinding>|.NET|(傳輸)、訊息、無、混合|(傳輸)、可靠工作階段、安全性工作階段|(無)、是|是|二元|是<br />(緩衝)|
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|(傳輸)、無|無、(傳輸)|(無)、是|是|二元|是<br />(緩衝)|
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|訊息、(傳輸)、無|(無)、傳輸|無、(是)|否|二元|否|

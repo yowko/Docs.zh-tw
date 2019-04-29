@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Windows Forms, drawing text with GDI
 ms.assetid: 2a19fe5d-2ace-451c-94db-01cb1118ef7b
 ms.openlocfilehash: d4bf72998c798040451b814a7f0287bca65f5300
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781481"
 ---
 # <a name="how-to-draw-text-with-gdi"></a>HOW TO：使用 GDI 繪製文字
 具有<xref:System.Windows.Forms.TextRenderer.DrawText%2A>方法中的<xref:System.Windows.Forms.TextRenderer>類別，您可以存取[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]表單或控制項上繪製文字的功能。 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 文字轉譯通常提供較佳的效能和更精確的文字比測量[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  
@@ -40,6 +40,5 @@ ms.locfileid: "59073321"
 
 - <xref:System.Windows.Forms.TextRenderer>
 - <xref:System.Drawing.Font>
-- <xref:System.Drawing.Color>
 - <xref:System.Drawing.Color>
 - [使用字型和文字](using-fonts-and-text.md)

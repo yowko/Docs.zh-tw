@@ -19,14 +19,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 74cb2c7d1f79d23e1331cc7192ba2d6acfd9835c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761646"
 ---
 # <a name="initdbgtransportmanager-function"></a>InitDbgTransportManager 函式
-針對處理序和執行階段列舉，對要與遠端目標連接的傳輸管理員初始化。  
+針對處理序和執行階段列舉，初始化要與遠端目標連接的傳輸管理員。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +45,7 @@ HRESULT InitDbgTransportManager ();
  其他失敗。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CoreClrRemoteDebuggingInterfaces.h  
   

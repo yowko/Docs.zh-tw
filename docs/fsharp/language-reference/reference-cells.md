@@ -3,11 +3,11 @@ title: 參考儲存格
 description: 了解如何F#參考儲存格是可讓您以參考語意建立可變值的儲存位置。
 ms.date: 05/16/2016
 ms.openlocfilehash: e4fcd3cf1abcf5f5e3b4d5439c9215b79ff8dbcd
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795393"
 ---
 # <a name="reference-cells"></a>參考儲存格
 
@@ -54,8 +54,8 @@ let ref x = { contents = x }
 |--------------------------|-----------|----|----------|
 |`!` (取值運算子)|傳回基礎值。|`'a ref -> 'a`|`let (!) r = r.contents`|
 |`:=` (指派運算子)|變更基礎值。|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|
-|`ref` (運算子)|將值封裝至新的參考儲存格。|`'a -> 'a ref`|`let ref x = { contents = x }`|
-|`Value` (屬性)|取得或設定基礎值。|`unit -> 'a`|`member x.Value = x.contents`|
+|`ref` （運算子）|將值封裝至新的參考儲存格。|`'a -> 'a ref`|`let ref x = { contents = x }`|
+|`Value` （屬性）|取得或設定基礎值。|`unit -> 'a`|`member x.Value = x.contents`|
 |`contents` (記錄欄位)|取得或設定基礎值。|`'a`|`let ref x = { contents = x }`|
 
 有數個方式可以存取基礎值。 取值運算子 (`!`) 傳回的值不是可指派的值。 因此如果您要修改基礎值，則必須改用指派運算子 (`:=`)。

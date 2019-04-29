@@ -13,11 +13,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
 ms.openlocfilehash: ab446319a9e0ef295387d0d6768e813a158939c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783860"
 ---
 # <a name="structure-statement"></a>Structure 陳述式
 宣告結構的名稱，並引進變數、 屬性、 事件和結構包含的程序的定義。  
@@ -61,31 +61,31 @@ End Structure
   
 ## <a name="rules"></a>規則  
   
--   **巢狀結構。** 您可以定義在另一個結構。 外部結構稱為*包含結構*，而內部結構稱為*巢狀結構*。 不過，您無法存取巢狀的結構的成員透過包含的結構。 相反地，您必須宣告巢狀的結構的資料類型的變數。  
+- **巢狀結構。** 您可以定義在另一個結構。 外部結構稱為*包含結構*，而內部結構稱為*巢狀結構*。 不過，您無法存取巢狀的結構的成員透過包含的結構。 相反地，您必須宣告巢狀的結構的資料類型的變數。  
   
--   **成員宣告。** 您必須宣告結構的每個成員。 結構成員不可[Protected](../../../visual-basic/language-reference/modifiers/protected.md)或`Protected Friend`因為不可以繼承結構。 結構本身，不過，可以是`Protected`或`Protected Friend`。  
+- **成員宣告。** 您必須宣告結構的每個成員。 結構成員不可[Protected](../../../visual-basic/language-reference/modifiers/protected.md)或`Protected Friend`因為不可以繼承結構。 結構本身，不過，可以是`Protected`或`Protected Friend`。  
   
      您可以在結構中宣告零個或多個非共用變數，或非共用、非自訂的事件。 您不能有常數、 屬性和程序，即使其中一些非共用。  
   
--   **初始化。** 您無法初始化其宣告結構的任何非共用的資料成員的值。 您必須透過參數化建構函式的結構，初始化資料成員或指派給成員的值之後您已建立結構的執行個體。  
+- **初始化。** 您無法初始化其宣告結構的任何非共用的資料成員的值。 您必須透過參數化建構函式的結構，初始化資料成員或指派給成員的值之後您已建立結構的執行個體。  
   
--   **繼承**： 結構無法而非繼承自任何型別<xref:System.ValueType>，繼承的所有結構。 特別是，一個結構無法繼承自另一個。  
+- **繼承**： 結構無法而非繼承自任何型別<xref:System.ValueType>，繼承的所有結構。 特別是，一個結構無法繼承自另一個。  
   
      您無法使用[Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)在結構定義中，甚至指定<xref:System.ValueType>。  
   
--   **實作。** 如果使用結構[Implements 陳述式](../../../visual-basic/language-reference/statements/implements-statement.md)，您必須實作由您指定在每個介面所定義的每個成員`interfacenames`。  
+- **實作。** 如果使用結構[Implements 陳述式](../../../visual-basic/language-reference/statements/implements-statement.md)，您必須實作由您指定在每個介面所定義的每個成員`interfacenames`。  
   
--   **預設屬性。** 結構可以指定最多一個屬性作為其*屬性預設*，並使用[預設](../../../visual-basic/language-reference/modifiers/default.md)修飾詞。 如需詳細資訊，請參閱 <<c0> [ 預設](../../../visual-basic/language-reference/modifiers/default.md)。  
+- **預設屬性。** 結構可以指定最多一個屬性作為其*屬性預設*，並使用[預設](../../../visual-basic/language-reference/modifiers/default.md)修飾詞。 如需詳細資訊，請參閱 <<c0> [ 預設](../../../visual-basic/language-reference/modifiers/default.md)。  
   
 ## <a name="behavior"></a>行為  
   
--   **存取層級。** 在結構內，您可以宣告具有它自己的存取層級的每個成員。 所有的結構成員預設為[公開](../../../visual-basic/language-reference/modifiers/public.md)存取。 請注意，是否結構本身具有更具限制性的存取層級，這會自動限制存取其成員，即使您調整它們的存取層級，使用存取修飾詞。  
+- **存取層級。** 在結構內，您可以宣告具有它自己的存取層級的每個成員。 所有的結構成員預設為[公開](../../../visual-basic/language-reference/modifiers/public.md)存取。 請注意，是否結構本身具有更具限制性的存取層級，這會自動限制存取其成員，即使您調整它們的存取層級，使用存取修飾詞。  
   
--   **範圍。** 結構是在其包含命名空間、 類別、 結構或模組的範圍中。  
+- **範圍。** 結構是在其包含命名空間、 類別、 結構或模組的範圍中。  
   
      每個結構成員的範圍是整個結構。  
   
--   **存留期。** 結構本身沒有存留期。 相反地，該結構的每個執行個體都獨立於其他所有執行個體的存留期間。  
+- **存留期。** 結構本身沒有存留期。 相反地，該結構的每個執行個體都獨立於其他所有執行個體的存留期間。  
   
      執行個體的存留期開始時就會建立[New 運算子](../../../visual-basic/language-reference/operators/new-operator.md)子句。 保存之變數的存留期結束時結束。  
   
@@ -93,11 +93,11 @@ End Structure
   
      結構成員的存留期取決於它們所宣告的方式和位置。 如需詳細資訊，請參閱 「 存留期 」 中[Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)。  
   
--   **限定性條件。** 結構之外的程式碼必須限定成員名稱，該結構的名稱。  
+- **限定性條件。** 結構之外的程式碼必須限定成員名稱，該結構的名稱。  
   
      如果巢狀結構內的程式碼進行程式設計的項目參考未限定，Visual Basic 搜尋項目第一次在巢狀結構中，然後在其包含的結構，等到最外層的包含項目。 如需詳細資訊，請參閱 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
--   **記憶體耗用量。** 如同所有的複合資料類型，您無法合併其成員的名義上的儲存體配置，安全地計算結構的總記憶體耗用量。 此外，您無法安全地假設在記憶體中的儲存體的順序是您宣告的順序相同。 如果您需要控制結構的儲存體配置，您可以申請<xref:System.Runtime.InteropServices.StructLayoutAttribute>屬性設定為`Structure`陳述式。  
+- **記憶體耗用量。** 如同所有的複合資料類型，您無法合併其成員的名義上的儲存體配置，安全地計算結構的總記憶體耗用量。 此外，您無法安全地假設在記憶體中的儲存體的順序是您宣告的順序相同。 如果您需要控制結構的儲存體配置，您可以申請<xref:System.Runtime.InteropServices.StructLayoutAttribute>屬性設定為`Structure`陳述式。  
   
 ## <a name="example"></a>範例  
  下列範例會使用`Structure`陳述式來定義一組相關資料的員工。 它示範如何使用`Public`， `Friend`，和`Private`成員，以反映的敏感性資料的項目。 它也會顯示程序、 屬性和事件的成員。  

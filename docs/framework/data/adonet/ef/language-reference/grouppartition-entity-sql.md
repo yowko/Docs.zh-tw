@@ -3,11 +3,11 @@ title: GROUPPARTITION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d0482e9b-086c-451c-9dfa-ccb024a9efb6
 ms.openlocfilehash: 9f0f917380e6422da753282216529580f87f1a1a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774721"
 ---
 # <a name="grouppartition-entity-sql"></a>GROUPPARTITION (Entity SQL)
 傳回引數值的集合，該集合會將目前的群組分割投影至其相關的彙總。 `GroupPartition` 彙總是以群組為基礎的彙總，不具有以集合為基礎的形式。  
@@ -41,7 +41,7 @@ select p, Sum(ol.Quantity) from LOB.OrderLines as ol
   
  `GROUPPARTITION` 運算子可以搭配使用者定義的彙總函式使用。  
   
- `GROUPPARTITION` 是特殊的彙總運算子，可保留群組輸入集的參考。 若 GROUP BY 在範圍內，即可在查詢中任何位置使用此參考。 例如：  
+ `GROUPPARTITION` 是特殊的彙總運算子，可保留群組輸入集的參考。 若 GROUP BY 在範圍內，即可在查詢中任何位置使用此參考。 例如，套用至物件的  
   
 ```  
 select p, GroupPartition(ol.Quantity) from LOB.OrderLines as ol group by ol.Product as p  
