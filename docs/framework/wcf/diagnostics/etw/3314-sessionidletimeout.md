@@ -3,18 +3,18 @@ title: 3314 - SessionIdleTimeout
 ms.date: 03/30/2017
 ms.assetid: a00f104e-3bea-4185-b7b0-ec1ed8212a74
 ms.openlocfilehash: 1abebab7a31f1d07d424cadc7b008395fcf5d21a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596532"
 ---
 # <a name="3314---sessionidletimeout"></a>3314 - SessionIdleTimeout
 ## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
-|ID|3314|  
+|識別碼|3314|  
 |關鍵字|ServiceModel|  
 |層級|錯誤|  
 |通道|Microsoft-Windows-Application Server-Applications/Analytic|  

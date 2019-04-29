@@ -3,11 +3,11 @@ title: <serviceAuthorization> 項目
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
 ms.openlocfilehash: 7099c5eca9cf28624153a705e4e16136628214a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670348"
 ---
 # <a name="serviceauthorization-element"></a>\<serviceAuthorization > 項目
 指定設定，這些設定會將存取權授權給服務作業。  

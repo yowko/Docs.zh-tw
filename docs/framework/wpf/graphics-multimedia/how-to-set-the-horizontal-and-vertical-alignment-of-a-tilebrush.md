@@ -11,20 +11,20 @@ helpviewer_keywords:
 - horizontal alignment of Tilebrushes [WPF]
 ms.assetid: 65ae89bd-9246-4c9e-bde4-2fb991d4060d
 ms.openlocfilehash: ddef63bba7fce1bfb8d50b4f2dbaaddfa76709ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651283"
 ---
 # <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>HOW TO：設定 TileBrush 的水平和垂直對齊
 本範例示範如何控制並排顯示中內容的水平和垂直對齊。 若要控制的水平和垂直對齊<xref:System.Windows.Media.TileBrush>，使用其<xref:System.Windows.Media.TileBrush.AlignmentX%2A>和<xref:System.Windows.Media.TileBrush.AlignmentY%2A>屬性。  
   
  <xref:System.Windows.Media.TileBrush.AlignmentX%2A>和<xref:System.Windows.Media.TileBrush.AlignmentY%2A>屬性的<xref:System.Windows.Media.TileBrush>會使用其中一個下列條件為 true 時：  
   
--   <xref:System.Windows.Media.TileBrush.Stretch%2A>屬性是<xref:System.Windows.Media.Stretch.Uniform>或是<xref:System.Windows.Media.Stretch.UniformToFill>而<xref:System.Windows.Media.TileBrush.Viewbox%2A>和<xref:System.Windows.Media.TileBrush.Viewport%2A>有不同的外觀比例。  
+- <xref:System.Windows.Media.TileBrush.Stretch%2A>屬性是<xref:System.Windows.Media.Stretch.Uniform>或是<xref:System.Windows.Media.Stretch.UniformToFill>而<xref:System.Windows.Media.TileBrush.Viewbox%2A>和<xref:System.Windows.Media.TileBrush.Viewport%2A>有不同的外觀比例。  
   
--   <xref:System.Windows.Media.TileBrush.Stretch%2A>屬性是<xref:System.Windows.Media.Stretch.None>並<xref:System.Windows.Media.TileBrush.Viewbox%2A>和<xref:System.Windows.Media.TileBrush.Viewport%2A>大小不同。  
+- <xref:System.Windows.Media.TileBrush.Stretch%2A>屬性是<xref:System.Windows.Media.Stretch.None>並<xref:System.Windows.Media.TileBrush.Viewbox%2A>和<xref:System.Windows.Media.TileBrush.Viewport%2A>大小不同。  
   
 ## <a name="example"></a>範例  
  下列範例會將的內容對齊<xref:System.Windows.Media.DrawingBrush>，這是一種<xref:System.Windows.Media.TileBrush>，至其並排顯示的左上角。 將內容中，範例會設定對齊<xref:System.Windows.Media.TileBrush.AlignmentX%2A>屬性<xref:System.Windows.Media.DrawingBrush>來<xref:System.Windows.Media.AlignmentX.Left>和<xref:System.Windows.Media.TileBrush.AlignmentY%2A>屬性設<xref:System.Windows.Media.AlignmentY.Top>。 此範例會產生下列輸出。  

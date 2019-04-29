@@ -3,11 +3,11 @@ title: 串連作業 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 4021e019-a8f7-477b-879e-07dd7f44feb9
 ms.openlocfilehash: 90e848b21c79278f81507831025045224c4cf634
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663556"
 ---
 # <a name="concatenation-operations-visual-basic"></a>串連作業 (Visual Basic)
 串連指的是將某個序列附加到另一個序列的作業。  

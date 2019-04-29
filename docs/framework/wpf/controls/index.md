@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
 ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696352"
 ---
 # <a name="controls"></a>控制項
 <a name="introduction"></a>
@@ -33,11 +33,11 @@ ms.locfileid: "59154410"
 ## <a name="changing-the-appearance-of-a-control"></a>變更控制項的外觀  
  變更控制項的外觀以符合您應用程式的外觀及操作，是很常見的做法。 您可以根據想要達成的目的，執行下列其中一項操作來變更控制項的外觀：  
   
--   變更控制項的屬性值。  
+- 變更控制項的屬性值。  
   
--   建立<xref:System.Windows.Style>控制項。  
+- 建立<xref:System.Windows.Style>控制項。  
   
--   建立新<xref:System.Windows.Controls.ControlTemplate>控制項。  
+- 建立新<xref:System.Windows.Controls.ControlTemplate>控制項。  
   
 ### <a name="changing-a-controls-property-value"></a>變更控制項的屬性值  
  許多控制項都有屬性，可讓您變更控制項的顯示方式，例如<xref:System.Windows.Controls.Control.Background%2A>的<xref:System.Windows.Controls.Button>。 您可以設定的值屬性中同時[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]和程式碼。 下列範例會設定<xref:System.Windows.Controls.Control.Background%2A>， <xref:System.Windows.Controls.Control.FontSize%2A>，並<xref:System.Windows.Controls.Control.FontWeight%2A>上的屬性<xref:System.Windows.Controls.Button>在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
@@ -87,13 +87,13 @@ ms.locfileid: "59154410"
 ## <a name="rich-content-in-controls"></a>控制項中的多格式內容  
  大部分的類別繼承自<xref:System.Windows.Controls.Control>類別都能夠包含多格式內容。 例如，<xref:System.Windows.Controls.Label>可以包含任何物件，例如字串， <xref:System.Windows.Controls.Image>，或<xref:System.Windows.Controls.Panel>。  下列類別支援豐富的內容並做為基底類別中的控制項中的大多數[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
   
--   <xref:System.Windows.Controls.ContentControl>，繼承自這個類別的類別部分範例如下<xref:System.Windows.Controls.Label>， <xref:System.Windows.Controls.Button>，和<xref:System.Windows.Controls.ToolTip>。  
+- <xref:System.Windows.Controls.ContentControl>，繼承自這個類別的類別部分範例如下<xref:System.Windows.Controls.Label>， <xref:System.Windows.Controls.Button>，和<xref:System.Windows.Controls.ToolTip>。  
   
--   <xref:System.Windows.Controls.ItemsControl>，繼承自這個類別的類別部分範例如下<xref:System.Windows.Controls.ListBox>， <xref:System.Windows.Controls.Menu>，和<xref:System.Windows.Controls.Primitives.StatusBar>。  
+- <xref:System.Windows.Controls.ItemsControl>，繼承自這個類別的類別部分範例如下<xref:System.Windows.Controls.ListBox>， <xref:System.Windows.Controls.Menu>，和<xref:System.Windows.Controls.Primitives.StatusBar>。  
   
--   <xref:System.Windows.Controls.HeaderedContentControl>，繼承自這個類別的類別部分範例如下<xref:System.Windows.Controls.TabItem>， <xref:System.Windows.Controls.GroupBox>，和<xref:System.Windows.Controls.Expander>。  
+- <xref:System.Windows.Controls.HeaderedContentControl>，繼承自這個類別的類別部分範例如下<xref:System.Windows.Controls.TabItem>， <xref:System.Windows.Controls.GroupBox>，和<xref:System.Windows.Controls.Expander>。  
   
--   <xref:System.Windows.Controls.HeaderedItemsControl>，繼承自這個類別的類別部分範例如下<xref:System.Windows.Controls.MenuItem>， <xref:System.Windows.Controls.TreeViewItem>，和<xref:System.Windows.Controls.ToolBar>。  
+- <xref:System.Windows.Controls.HeaderedItemsControl>，繼承自這個類別的類別部分範例如下<xref:System.Windows.Controls.MenuItem>， <xref:System.Windows.Controls.TreeViewItem>，和<xref:System.Windows.Controls.ToolBar>。  
 
  如需有關這些基底類別的詳細資訊，請參閱 < [WPF 內容模型](wpf-content-model.md)。  
   

@@ -3,11 +3,11 @@ title: 運算子多載
 description: 了解如何多載算術的運算子，在類別或記錄類型，然後在全域層級F#。
 ms.date: 05/16/2016
 ms.openlocfilehash: c4b52b02522b750aa55ca6cf4097295e35ab1739
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666244"
 ---
 # <a name="operator-overloading"></a>運算子多載
 

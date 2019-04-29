@@ -11,11 +11,11 @@ helpviewer_keywords:
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
 ms.openlocfilehash: a46942188fd417b46ba4feb44d436800e1362098
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764643"
 ---
 # <a name="wpf-xaml-namescopes"></a>WPF XAML 名稱範圍
 XAML 名稱範圍是識別 XAML 中所定義物件的概念。 XAML 名稱範圍中的名稱可以用來建立物件的 XAML 定義名稱與其在物件樹狀結構中的執行個體對等項目之間的關聯性。 一般而言，載入 XAML 應用程式的個別 XAML 頁面根時，會建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Managed 程式碼中的 XAML 名稱範圍。 作為程式設計物件的 XAML 名稱範圍由<xref:System.Windows.Markup.INameScope>介面，並由實際的類別也會實作<xref:System.Windows.NameScope>。  
@@ -76,13 +76,13 @@ XAML 名稱範圍是識別 XAML 中所定義物件的概念。 XAML 名稱範圍
 ### <a name="xaml-namescope-implementations"></a>XAML 名稱範圍實作  
  下列類別會實作<xref:System.Windows.Markup.INameScope>直接：  
   
--   <xref:System.Windows.NameScope>  
+- <xref:System.Windows.NameScope>  
   
--   <xref:System.Windows.Style>  
+- <xref:System.Windows.Style>  
   
--   <xref:System.Windows.ResourceDictionary>  
+- <xref:System.Windows.ResourceDictionary>  
   
--   <xref:System.Windows.FrameworkTemplate>  
+- <xref:System.Windows.FrameworkTemplate>  
   
  <xref:System.Windows.ResourceDictionary> 不使用 XAML 名稱範圍;它會改用索引鍵，因為它是一個字典實作。 唯一原因<xref:System.Windows.ResourceDictionary>會實作<xref:System.Windows.Markup.INameScope>是讓它可以引發例外狀況給使用者程式碼協助釐清，則為 true 的 XAML 名稱範圍之間的差異，以及如何<xref:System.Windows.ResourceDictionary>處理按鍵，並也確保 XAML 名稱範圍不會套用至<xref:System.Windows.ResourceDictionary>父項目。  
   
@@ -90,9 +90,9 @@ XAML 名稱範圍是識別 XAML 中所定義物件的概念。 XAML 名稱範圍
   
  下列類別定義其專屬 XAML 名稱範圍中，使用<xref:System.Windows.NameScope?displayProperty=nameWithType>協助程式類別，並連接到它的 XAML 名稱範圍實作透過<xref:System.Windows.NameScope.NameScope%2A?displayProperty=nameWithType>附加屬性：  
   
--   <xref:System.Windows.FrameworkElement>  
+- <xref:System.Windows.FrameworkElement>  
   
--   <xref:System.Windows.FrameworkContentElement>  
+- <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>另請參閱
 

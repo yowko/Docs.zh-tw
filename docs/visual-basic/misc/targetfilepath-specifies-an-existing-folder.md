@@ -3,18 +3,18 @@ title: TargetFilePath 指定現有資料夾
 ms.date: 07/20/2015
 ms.assetid: 2334f49e-d080-4ee2-b036-f95c7f76c3ec
 ms.openlocfilehash: fcf8f9a8172ccece2175fc27bbc96aa421d853ca
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58027385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593875"
 ---
 # <a name="targetfilepath-specifies-an-existing-folder"></a>TargetFilePath 指定現有資料夾
 `TargetFilePath` 參數指定現有目錄，但必須指定新目錄的名稱。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   請變更 `TargetFilePath` 來指定新的目錄，而非現有目錄。  
+- 請變更 `TargetFilePath` 來指定新的目錄，而非現有目錄。  
   
 ## <a name="see-also"></a>另請參閱
 

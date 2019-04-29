@@ -7,11 +7,11 @@ helpviewer_keywords:
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
 ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669354"
 ---
 # <a name="weak-event-patterns"></a>弱式事件模式
 在應用程式，它可能會附加到事件來源的處理常式不會終結協調的方式處理常式附加至來源接聽程式物件。 這種情況可能會導致記憶體流失無關。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 導入了可用來解決這個問題，提供的專用的管理員類別的特定事件，並針對該事件的接聽程式上實作介面的設計模式。 這種設計模式就所謂*弱式事件模式*。  
@@ -40,13 +40,13 @@ ms.locfileid: "59316163"
 
  下列各節說明如何實作弱式事件模式。  基於本文的討論，要訂閱事件具有下列特性。  
   
--   事件名稱是`SomeEvent`。  
+- 事件名稱是`SomeEvent`。  
   
--   引發事件`EventSource`類別。  
+- 引發事件`EventSource`類別。  
   
--   事件處理常式都已型別： `SomeEventEventHandler` (或`EventHandler<SomeEventEventArgs>`)。  
+- 事件處理常式都已型別： `SomeEventEventHandler` (或`EventHandler<SomeEventEventArgs>`)。  
   
--   這個事件會傳遞為參數的型別`SomeEventEventArgs`的事件處理常式。  
+- 這個事件會傳遞為參數的型別`SomeEventEventArgs`的事件處理常式。  
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>使用現有的弱式事件管理員類別  
   

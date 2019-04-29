@@ -3,11 +3,11 @@ title: 變數與引數
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
 ms.openlocfilehash: 29ce5222435b68ed13cbc967e58e72a937625e8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669481"
 ---
 # <a name="variables-and-arguments"></a>變數與引數
 在 Windows Workflow Foundation (WF) 中，變數表示資料的儲存體，而引數表示資料流程傳入和傳出活動。 活動有一組引數，且它們會構成活動的簽章。 此外，活動也包含變數的清單，開發人員可在設計工作流程時加入或移除其中的變數。 引數會使用傳回值的運算式來繫結。  

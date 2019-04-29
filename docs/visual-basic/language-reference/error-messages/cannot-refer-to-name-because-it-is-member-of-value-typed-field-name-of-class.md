@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30310
 ms.assetid: 2aeb8872-7c87-4f01-98ef-9714ba3eebbe
 ms.openlocfilehash: 78b0a3131b6e77ed257f200523ecebd4dfce3691
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649929"
 ---
 # <a name="cannot-refer-to-name-because-it-is-a-member-of-the-value-typed-field-name-of-class-classname-which-has-systemmarshalbyrefobject-as-a-base-class"></a>無法參考 '\<名稱 >' 因為它是實值類型欄位的成員'\<名稱 >' 的類別\<類別名稱 >' 'system.marshalbyrefobject' 當做基底類別
 `System.MarshalByRefObject`類別可讓您跨應用程式定義域界限支援遠端物件的存取權的應用程式。 類型必須繼承自`MarshalByRejectObject`類別，在跨應用程式定義域界限使用的型別。 因為物件的成員不是他們所建立的應用程式定義域外使用，必須不會複製物件的狀態。  

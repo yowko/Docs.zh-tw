@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
 ms.openlocfilehash: 46551a917aeb794c8d35985076b67a315386f628
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766723"
 ---
 # <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>變數 '\<變數名稱 >' 已在指派值之前使用
 變數 '\<變數名稱 >' 已在指派值之前使用。 可能會在執行階段產生 null 參考例外狀況。  
@@ -27,9 +27,9 @@ ms.locfileid: "58819355"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   檢查控制項流程邏輯，並確定該變數具有有效的值，控制權會傳遞給讀取它的任何陳述式之前。  
+- 檢查控制項流程邏輯，並確定該變數具有有效的值，控制權會傳遞給讀取它的任何陳述式之前。  
   
--   保證變數一律擁有有效的值的一個方式是初始化為其宣告的一部分。 請參閱中的 「 初始化 」 [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)。  
+- 保證變數一律擁有有效的值的一個方式是初始化為其宣告的一部分。 請參閱中的 「 初始化 」 [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

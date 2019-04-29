@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1e31e95473136bf7e7c196eacc278fa8a1caab2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609446"
 ---
 # <a name="corgcreference-structure"></a>COR_GC_REFERENCE 結構
 包含要進行記憶體回收之物件的相關資訊。  
@@ -49,19 +49,19 @@ typedef struct _COR_GC_REFERENCE {
 ## <a name="remarks"></a>備註  
  `type`欄位是[CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)列舉值，指出參考的來源。 特定`COR_GC_REFERENCE`值可反映出任何下列類型的受管理物件：  
   
--   從所有受管理的堆疊物件 (`CorGCReferenceType.CorReferenceStack`)。 這包括即時參考，在 managed 程式碼，以及 common language runtime 所建立的物件。  
+- 從所有受管理的堆疊物件 (`CorGCReferenceType.CorReferenceStack`)。 這包括即時參考，在 managed 程式碼，以及 common language runtime 所建立的物件。  
   
--   控制代碼資料表中的物件 (`CorGCReferenceType.CorHandle*`)。 這包括強式參考 (`HNDTYPE_STRONG`和`HNDTYPE_REFCOUNT`) 和模組中的靜態變數。  
+- 控制代碼資料表中的物件 (`CorGCReferenceType.CorHandle*`)。 這包括強式參考 (`HNDTYPE_STRONG`和`HNDTYPE_REFCOUNT`) 和模組中的靜態變數。  
   
--   完成項佇列中的物件 (`CorGCReferenceType.CorReferenceFinalizer`)。 完成項佇列根物件，直到執行完成項。  
+- 完成項佇列中的物件 (`CorGCReferenceType.CorReferenceFinalizer`)。 完成項佇列根物件，直到執行完成項。  
   
  `extraData`欄位包含額外的資料，取決於參考的來源 （或類型）。 可能的值為：  
   
--   `DependentSource`. 如果`type`已`CorGCREferenceType.CorHandleStrongDependent`，這個欄位是物件，如果保持運作，根目錄的物件進行記憶體回收在`COR_GC_REFERENCE.Location`。  
+- `DependentSource`. 如果`type`已`CorGCREferenceType.CorHandleStrongDependent`，這個欄位是物件，如果保持運作，根目錄的物件進行記憶體回收在`COR_GC_REFERENCE.Location`。  
   
--   `RefCount`. 如果`type`是`CorGCREferenceType.CorHandleStrongRefCount`，這個欄位是控制代碼的參考計數。  
+- `RefCount`. 如果`type`是`CorGCREferenceType.CorHandleStrongRefCount`，這個欄位是控制代碼的參考計數。  
   
--   `Size`. 如果`type`是`CorGCREferenceType.CorHandleStrongSizedByref`，這個欄位是記憶體回收行程，導出物件根物件樹狀結構的最後大小。 請注意，這項計算不一定是最新狀態。  
+- `Size`. 如果`type`是`CorGCREferenceType.CorHandleStrongSizedByref`，這個欄位是記憶體回收行程，導出物件根物件樹狀結構的最後大小。 請注意，這項計算不一定是最新狀態。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

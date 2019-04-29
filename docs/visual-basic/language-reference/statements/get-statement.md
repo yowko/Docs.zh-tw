@@ -12,11 +12,11 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
 ms.openlocfilehash: 245d2cc36abde76a8f8bd73bae5d7ede183d4d03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638021"
 ---
 # <a name="get-statement"></a>Get 陳述式
 宣告`Get`屬性程序用來擷取屬性的值。  
@@ -49,23 +49,23 @@ End Get
   
 ## <a name="rules"></a>規則  
   
--   **混合的存取層級。** 如果您正在定義的讀寫屬性，您可以選擇性地針對指定不同的存取層級`Get`或`Set`程序，但非兩者。 如果您這麼做時，程序的存取層級必須比屬性的存取層級更具限制性。 例如，如果屬性宣告`Friend`，您可以宣告`Get`程序`Private`，而非`Public`。  
+- **混合的存取層級。** 如果您正在定義的讀寫屬性，您可以選擇性地針對指定不同的存取層級`Get`或`Set`程序，但非兩者。 如果您這麼做時，程序的存取層級必須比屬性的存取層級更具限制性。 例如，如果屬性宣告`Friend`，您可以宣告`Get`程序`Private`，而非`Public`。  
   
      如果您要定義`ReadOnly`屬性，`Get`程序都代表整個屬性。 您無法宣告不同的存取層級`Get`，因為，則會設定屬性的兩個存取層級。  
   
--   **傳回型別。** [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)可以宣告其傳回值的資料類型。 `Get`程序會自動傳回資料類型。 您可以指定任何資料類型或列舉、 結構、 類別或介面的名稱。  
+- **傳回型別。** [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)可以宣告其傳回值的資料類型。 `Get`程序會自動傳回資料類型。 您可以指定任何資料類型或列舉、 結構、 類別或介面的名稱。  
   
      如果`Property`陳述式未指定`returntype`，此程序傳回`Object`。  
   
 ## <a name="behavior"></a>行為  
   
--   **傳回從程序。** 當`Get`程序傳回給呼叫程式碼，會繼續執行要求的屬性值的陳述式中。  
+- **傳回從程序。** 當`Get`程序傳回給呼叫程式碼，會繼續執行要求的屬性值的陳述式中。  
   
      `Get` 屬性程序可以傳回值，使用[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)或傳回值，指派給屬性名稱。 如需詳細資訊，請參閱 「 傳回的值 」 中[Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)。  
   
      `Exit Property`和`Return`陳述式造成屬性程序立即結束。 任意數目的`Exit Property`並`Return`陳述式可以出現在任何位置的程序中，您可以混合`Exit Property`和`Return`陳述式。  
   
--   **傳回值。** 要傳回的值`Get`程序中，您可以將值指派給屬性名稱，或將它併入[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)。 `Return`陳述式同時指派`Get`程序傳回值，並結束程序。  
+- **傳回值。** 要傳回的值`Get`程序中，您可以將值指派給屬性名稱，或將它併入[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)。 `Return`陳述式同時指派`Get`程序傳回值，並結束程序。  
   
      如果您使用`Exit Property`而不指派值給屬性名稱，`Get`程序會傳回屬性的資料類型的預設值。 如需詳細資訊，請參閱 「 傳回的值 」 中[Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)。  
   

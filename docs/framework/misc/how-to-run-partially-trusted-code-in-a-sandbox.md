@@ -11,11 +11,11 @@ ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752967"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>HOW TO：在沙箱中執行部分信任的程式碼
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -92,15 +92,15 @@ AppDomain.CreateDomain( string friendlyName,
   
      其他資訊：  
   
-    -   這是採用 <xref:System.Security.PermissionSet> 做為參數的 <xref:System.AppDomain.CreateDomain%2A> 方法之唯一多載，因此也是讓您在部分信任設定中載入應用程式的唯一多載。  
+    - 這是採用 <xref:System.Security.PermissionSet> 做為參數的 <xref:System.AppDomain.CreateDomain%2A> 方法之唯一多載，因此也是讓您在部分信任設定中載入應用程式的唯一多載。  
   
-    -   `evidence` 參數不用來計算權限集合；它由 .NET Framework 的其他功能用來進行識別。  
+    - `evidence` 參數不用來計算權限集合；它由 .NET Framework 的其他功能用來進行識別。  
   
-    -   設定 `info` 參數的 <xref:System.AppDomainSetup.ApplicationBase%2A> 屬性對於這個多載而言是強制的。  
+    - 設定 `info` 參數的 <xref:System.AppDomainSetup.ApplicationBase%2A> 屬性對於這個多載而言是強制的。  
   
-    -   `fullTrustAssemblies` 參數具有 `params` 關鍵字，這表示不需要建立 <xref:System.Security.Policy.StrongName> 陣列。 允許將 0、1 或更多的強式名稱當做參數傳遞。  
+    - `fullTrustAssemblies` 參數具有 `params` 關鍵字，這表示不需要建立 <xref:System.Security.Policy.StrongName> 陣列。 允許將 0、1 或更多的強式名稱當做參數傳遞。  
   
-    -   若要建立應用程式定義域的程式碼是：  
+    - 若要建立應用程式定義域的程式碼是：  
   
     ```csharp
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
@@ -108,15 +108,15 @@ AppDomain.CreateDomain( string friendlyName,
   
 5. 將程式碼載入您所建立的沙箱 <xref:System.AppDomain> 中。 有兩種方法可以達到這個目的：  
   
-    -   呼叫組件的 <xref:System.AppDomain.ExecuteAssembly%2A> 方法。  
+    - 呼叫組件的 <xref:System.AppDomain.ExecuteAssembly%2A> 方法。  
   
-    -   使用 <xref:System.Activator.CreateInstanceFrom%2A> 方法在新的 <xref:System.AppDomain> 建立衍生自 <xref:System.MarshalByRefObject> 類別的執行個體。  
+    - 使用 <xref:System.Activator.CreateInstanceFrom%2A> 方法在新的 <xref:System.AppDomain> 建立衍生自 <xref:System.MarshalByRefObject> 類別的執行個體。  
   
      第二種方法更合適，因為它讓您更輕鬆地將參數傳遞給新的 <xref:System.AppDomain> 執行個體。 <xref:System.Activator.CreateInstanceFrom%2A> 方法提供兩個重要功能：  
   
-    -   您可使用會指向不包含組件位置的程式碼基底。  
+    - 您可使用會指向不包含組件位置的程式碼基底。  
   
-    -   您可以在 <xref:System.Security.CodeAccessPermission.Assert%2A> 之下建立完全信任 (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>)，這可讓您建立關鍵類別的執行個體。 (每當您的組件不具有透明度標記，且以完全信任方式載入時就會發生)。因此您應特別小心，只能建立您信任此函式的程式碼，我們建議您在新的應用程式定義域中只建立完全信任類別的執行個體。  
+    - 您可以在 <xref:System.Security.CodeAccessPermission.Assert%2A> 之下建立完全信任 (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>)，這可讓您建立關鍵類別的執行個體。 (每當您的組件不具有透明度標記，且以完全信任方式載入時就會發生)。因此您應特別小心，只能建立您信任此函式的程式碼，我們建議您在新的應用程式定義域中只建立完全信任類別的執行個體。  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  

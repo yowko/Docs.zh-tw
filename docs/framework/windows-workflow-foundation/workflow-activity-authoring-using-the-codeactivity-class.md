@@ -3,11 +3,11 @@ title: 使用 CodeActivity 類別撰寫工作流程活動
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
 ms.openlocfilehash: 549acec8b8101312d48bd20e63a4a988b798ff38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669442"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>使用 CodeActivity 類別撰寫工作流程活動
 繼承自 <xref:System.Activities.CodeActivity> 所建立的活動可藉由覆寫 <xref:System.Activities.CodeActivity.Execute%2A> 方法來實作基本命令式行為。
@@ -15,11 +15,11 @@ ms.locfileid: "59767392"
 ## <a name="using-codeactivitycontext"></a>使用 CodeActivityContext
  工作流程執行階段的功能可透過 <xref:System.Activities.CodeActivity.Execute%2A> 方法內部存取，方法是使用 `context` 參數的成員 (型別為 <xref:System.Activities.CodeActivityContext>)。 透過 <xref:System.Activities.CodeActivityContext> 可使用的功能如下：
 
--   取得與設定引數和變數的值。
+- 取得與設定引數和變數的值。
 
--   使用 <xref:System.Activities.CodeActivityContext.Track%2A> 自訂追蹤功能。
+- 使用 <xref:System.Activities.CodeActivityContext.Track%2A> 自訂追蹤功能。
 
--   使用 <xref:System.Activities.CodeActivityContext.GetProperty%2A> 存取活動的執行屬性。
+- 使用 <xref:System.Activities.CodeActivityContext.GetProperty%2A> 存取活動的執行屬性。
 
 #### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a>若要建立繼承自 CodeActivity 的自訂活動
 

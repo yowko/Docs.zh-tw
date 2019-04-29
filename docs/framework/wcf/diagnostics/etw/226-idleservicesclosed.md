@@ -3,18 +3,18 @@ title: 226 - IdleServicesClosed
 ms.date: 03/30/2017
 ms.assetid: b5e72de3-33c6-46a2-998a-3809b520bb30
 ms.openlocfilehash: d41cf1b4d4bfd59bfac99afa9a2fe5d5ebbaffac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596567"
 ---
 # <a name="226---idleservicesclosed"></a>226 - IdleServicesClosed
 ## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
-|ID|226|  
+|識別碼|226|  
 |關鍵字|HealthMonitoring, WebHost|  
 |層級|LogAlways|  
 |通道|Microsoft-Windows-Application Server-Applications/Analytic|  

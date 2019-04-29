@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
 ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669198"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF 和 Direct3D9 互通
 您可以在 Windows Presentation Foundation (WPF) 應用程式中包含 Direct3D9 內容。 本主題描述如何建立 Direct3D9 內容，以便有效率地交互操作使用 WPF。  
@@ -32,9 +32,9 @@ ms.locfileid: "59307726"
   
  藉由呼叫其中一種下列方法建立裝置。  
   
--   `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
+- `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
   
--   `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
+- `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
   
  在 Windows Vista 或更新版本的作業系統上，使用`Direct3DCreate9Ex`與顯示設定為使用 Windows 顯示驅動程式模型 (WDDM) 的方法。 使用`Direct3DCreate9`任何其他平台上的方法。  
   
@@ -97,11 +97,11 @@ ms.locfileid: "59307726"
   
  有三種可能的方法，來處理調整大小。  
   
--   參與版面配置系統，並建立新的介面，大小變更時。 因為您可能會耗盡或分割的視訊記憶體，請不要建立太多的介面。  
+- 參與版面配置系統，並建立新的介面，大小變更時。 因為您可能會耗盡或分割的視訊記憶體，請不要建立太多的介面。  
   
--   請等候調整大小事件發生的一段固定時間來建立新的介面。  
+- 請等候調整大小事件發生的一段固定時間來建立新的介面。  
   
--   建立<xref:System.Windows.Threading.DispatcherTimer>檢查每秒數次的容器大小。  
+- 建立<xref:System.Windows.Threading.DispatcherTimer>檢查每秒數次的容器大小。  
   
 ## <a name="multi-monitor-optimization"></a>多重監視器最佳化  
  呈現系統移動時，會造成效能大幅降低<xref:System.Windows.Interop.D3DImage>到另一個監視器。  
@@ -132,11 +132,11 @@ ms.locfileid: "59307726"
 ## <a name="wpf-software-rendering"></a>WPF 軟體呈現  
  WPF 會在下列情況中的軟體在 UI 執行緒上以同步方式呈現。  
   
--   列印  
+- 列印  
   
--   <xref:System.Windows.Media.Effects.BitmapEffect>  
+- <xref:System.Windows.Media.Effects.BitmapEffect>  
   
--   <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
+- <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
   
  當其中一種情況發生時，會呈現系統呼叫<xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A>方法，以將硬體緩衝區複製到的軟體。 預設實作會呼叫`GetRenderTargetData`方法與您的介面。 因為這個呼叫發生鎖定/解除鎖定模式之外，它可能會失敗。 在此情況下，`CopyBackBuffer`方法會傳回`null`並不會顯示影像。  
   

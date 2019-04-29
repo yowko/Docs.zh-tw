@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 825da3a09f8b8013ffecaedfee0dce2362c8a7b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598970"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 函式
 控制項已傳遞至函式，並提供資訊堆疊框架和函式的引數，請通知分析工具。 這個函數會取代[FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)函式。  
@@ -61,9 +61,9 @@ void __stdcall FunctionEnter2 (
   
  呼叫此函式之前，執行引擎不會儲存任何暫存器。  
   
--   項目，您必須儲存所有您使用，包括與浮點單位 (FPU) 中的暫存器。  
+- 項目，您必須儲存所有您使用，包括與浮點單位 (FPU) 中的暫存器。  
   
--   結束時，您必須還原堆疊驅離其呼叫端所推送的所有參數。  
+- 結束時，您必須還原堆疊驅離其呼叫端所推送的所有參數。  
   
  實作`FunctionEnter2`應該不會封鎖，因為它將會延遲記憶體回收。 實作不應嘗試進行記憶體回收，因為堆疊可能無法在記憶體回收方便集合的狀態。 如果嘗試進行記憶體回收，則執行階段將會封鎖直到`FunctionEnter2`傳回。  
   

@@ -3,11 +3,11 @@ title: HOW TO：查詢字串 (LINQ) (Visual Basic) 中的字元
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
 ms.openlocfilehash: 3f460f635c581eef5655c5707e3dd356e7986d74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644380"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>HOW TO：查詢字串 (LINQ) (Visual Basic) 中的字元
 因為 <xref:System.String> 類別會實作泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面，所以可以用字元序列的形式查詢任何字串。 不過，這不是常見的 LINQ 用法。 對於複雜的模式比對作業，使用 <xref:System.Text.RegularExpressions.Regex> 類別。  

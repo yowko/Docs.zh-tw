@@ -3,11 +3,11 @@ title: <add> 的 <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 763c7b1f-e7b0-4d99-a42c-4506fcb8da00
 ms.openlocfilehash: 1c6764b37b2aa5349b8ccf63e6b7c2bc580b69b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701134"
 ---
 # <a name="add-of-allowaccounts"></a>\<新增 > 的\<a d d >
 指定處理序裝載 WCF 服務，且已授權可連線共用服務的存取權的使用者的帳戶。  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - SysTray icons
 ms.assetid: 20312268-1d67-494a-8601-5c43b7f1b513
 ms.openlocfilehash: b1237a1280142cf65002ca307179b054a8fb7dd2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61627807"
 ---
 # <a name="notifyicon-component-windows-forms"></a>NotifyIcon 元件 (Windows Form)
 Windows Form`NotifyIcon`元件會顯示在工作列的狀態通知區域圖示處理程序在背景執行，否則不會有使用者介面。 防毒保護程式即為一例，您可以在工作列的狀態通知區域中，按一下圖示來存取這個程式。  

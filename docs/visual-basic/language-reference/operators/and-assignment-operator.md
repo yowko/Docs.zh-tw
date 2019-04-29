@@ -11,11 +11,11 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
 ms.openlocfilehash: a79e779d8fcf549daeabc494e0a55deee30b5d22
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608433"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;= 運算子 (Visual Basic)
 串連`String`運算式`String`變數或屬性，並將結果指派給變數或屬性。  

@@ -3,11 +3,11 @@ title: 追蹤事件參考
 ms.date: 03/30/2017
 ms.assetid: c1c1ee87-f80a-449b-acd0-50d81eef116e
 ms.openlocfilehash: 5b3bba83b3c6c7ab27c9470213b7675f7e107c7e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699873"
 ---
 # <a name="tracking-events-reference"></a>追蹤事件參考
 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中執行工作流程期間，會引發追蹤事件，因為工作流程會通過生命週期的各種階段。 主機可訂閱這些事件，並保持工作流程在其生命週期時的進度狀態更新。 本節中將討論引發的追蹤事件。  
@@ -73,8 +73,8 @@ ms.locfileid: "57712210"
 |[1033 - StartRuntimeWorkItem](1033-startruntimeworkitem.md)|詳細資訊|開始執行活動 '%1'、DisplayName：'%2'、InstanceId：'%3' 的執行階段工作項目。|WFRuntime|  
 |[1034 - CompleteRuntimeWorkItem](1034-completeruntimeworkitem.md)|詳細資訊|已完成活動 '%1'、DisplayName：'%2'、InstanceId：'%3' 的執行階段工作項目。|WFRuntime|  
 |[1035 - RuntimeTransactionSet](1035-runtimetransactionset.md)|詳細資訊|執行階段異動已預先設定活動 '%1'，DisplayName: '%2'、 InstanceId: '%3'。  執行已隔離到活動 '%4'，DisplayName: '%5'、 InstanceId: '%6'。|WFRuntime|  
-|[1036 - RuntimeTransactionCompletionRequested](1036-runtimetransactioncompletionrequested.md)|詳細資訊|活動 '%1'、DisplayName：'%2'、InstanceId：'%3' 已排程完成執行階段交易。|WFRuntime|  
-|[1037 - RuntimeTransactionComplete](1037-runtimetransactioncomplete.md)|詳細資訊|執行階段交易已完成，狀態為 '%1'。|WFRuntime|  
+|[1036 - RuntimeTransactionCompletionRequested](1036-runtimetransactioncompletionrequested.md)|詳細資訊|活動 '%1'、DisplayName：'%2'、InstanceId：'%3' 已排程完成執行階段異動。|WFRuntime|  
+|[1037 - RuntimeTransactionComplete](1037-runtimetransactioncomplete.md)|詳細資訊|執行階段異動已完成，狀態為 '%1'。|WFRuntime|  
 |[1038 - EnterNoPersistBlock](1038-enternopersistblock.md)|詳細資訊|正在進入無持續性區塊。|WFRuntime|  
 |[1039 - ExitNoPersistBlock](1039-exitnopersistblock.md)|詳細資訊|正在結束無持續性區塊。|WFRuntime|  
 |[1040 - InArgumentBound](1040-inargumentbound.md)|詳細資訊|活動 '%2'、DisplayName：'%3'、InstanceId：'%4' 中的引數 '%1' 已與值 %5 繫結。|WFActivities|  

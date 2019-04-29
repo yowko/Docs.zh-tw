@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 6c54c704-b55e-4631-88ff-4d4a5621554c
 author: BrucePerlerMS
 ms.openlocfilehash: 7b8823d792e3f15846a9483d670994be4b368980
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667349"
 ---
 # <a name="certificatevalidation"></a>\<certificateValidation>
 控制權杖處理常式用來驗證憑證的設定。 如果特定的處理常式設定為使用自己的驗證程式，則會覆寫這些設定。  

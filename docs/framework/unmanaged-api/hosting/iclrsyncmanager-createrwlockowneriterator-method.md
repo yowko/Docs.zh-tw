@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c742410da8e7dbce53b53978516ab94243455849
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763707"
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>ICLRSyncManager::CreateRWLockOwnerIterator 方法
 Common language runtime (CLR) 建立迭代器，用來判斷一組工作正在等候讀取器-寫入器鎖定主機的要求。  
@@ -58,9 +58,9 @@ HRESULT CreateRWLockOwnerIterator (
 ## <a name="remarks"></a>備註  
  主機通常會呼叫`CreateRWLockOwnerIterator`， `DeleteRWLockOwnerIterator`，和`GetRWLockOwnerNext`死結偵測期間的方法。 主應用程式會負責確保 reader-writer 鎖定仍然有效，因為 CLR 並不會嘗試維持 reader-writer 鎖定。 數種策略可供主應用程式，以確保有效性的鎖定：  
   
--   主應用程式可能會封鎖讀取器-寫入器鎖定上發行的呼叫 (例如[ihostsemaphore:: Releasesemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) 同時確保此區塊不會造成死結。  
+- 主應用程式可能會封鎖讀取器-寫入器鎖定上發行的呼叫 (例如[ihostsemaphore:: Releasesemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) 同時確保此區塊不會造成死結。  
   
--   主機可以封鎖等候讀取器-寫入器鎖定相關聯的事件物件上的結束，確定此區塊不會造成死結。  
+- 主機可以封鎖等候讀取器-寫入器鎖定相關聯的事件物件上的結束，確定此區塊不會造成死結。  
   
 > [!NOTE]
 >  `CreateRWLockOwnerIterator` 必須只能在目前正在執行 unmanaged 程式碼的執行緒上呼叫。  

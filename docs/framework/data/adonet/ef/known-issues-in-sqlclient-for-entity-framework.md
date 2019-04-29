@@ -3,11 +3,11 @@ title: 適用於 Entity Framework 的 SqlClient 已知問題
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
 ms.openlocfilehash: a3df5a42b40e1851875c35165301af082f5d3269
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607730"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>適用於 Entity Framework 的 SqlClient 已知問題
 本節說明與 .NET Framework Data Provider for SQL Server (SqlClient) 相關的已知問題。  
@@ -25,15 +25,15 @@ ms.locfileid: "59073802"
   
  下列是可能會導致輸出查詢中出現 CROSS APPLY 和 (或) OUTER APPLY 運算子的部分典型案例：  
   
--   具有分頁的相互關聯子查詢。  
+- 具有分頁的相互關聯子查詢。  
   
--   相互關聯子查詢或巡覽產生的集合上的 `AnyElement`。  
+- 相互關聯子查詢或巡覽產生的集合上的 `AnyElement`。  
   
--   使用接受元素選擇器的群組方法的 LINQ 查詢。  
+- 使用接受元素選擇器的群組方法的 LINQ 查詢。  
   
--   當中有明確指定 CROSS APPLY 或 OUTER APPLY 的查詢。  
+- 當中有明確指定 CROSS APPLY 或 OUTER APPLY 的查詢。  
   
--   具有 DEREF 建構對 REF 建構的查詢。  
+- 具有 DEREF 建構對 REF 建構的查詢。  
   
 ## <a name="skip-operator"></a>SKIP 運算子  
  如果您使用[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]，SKIP 搭配 ORDER BY 使用非索引鍵資料行上可能會傳回不正確的結果。 如果非索引鍵資料行中有重複的資料，可能會略過超過所指定數目的資料行。 這是因為 SKIP 針對 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]轉譯的方式所造成的。 例如，在下列查詢中，五個以上的資料列可能會略過如果`E.NonKeyColumn`有重複的值：  

@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a731df84af0991f80c560db417df0ffe053a5e2b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598931"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 函式
 通知分析工具的控制項傳遞至函式。  
@@ -43,9 +43,9 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   
  呼叫此函式之前，執行引擎不會儲存任何暫存器。  
   
--   項目，您必須儲存所有您使用，包括與浮點單位 (FPU) 中的暫存器。  
+- 項目，您必須儲存所有您使用，包括與浮點單位 (FPU) 中的暫存器。  
   
--   結束時，您必須還原堆疊驅離其呼叫端所推送的所有參數。  
+- 結束時，您必須還原堆疊驅離其呼叫端所推送的所有參數。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

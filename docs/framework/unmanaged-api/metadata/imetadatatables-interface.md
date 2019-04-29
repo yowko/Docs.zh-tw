@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2b2298e2d67e8a50e11d53d864f0e78f3b549e45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59131413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645173"
 ---
 # <a name="imetadatatables-interface"></a>IMetaDataTables 介面
 提供儲存和擷取資料表中的中繼資料資訊的方法。  

@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 83c72704ccb01baf68a3cacb6252367e07909fa8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638401"
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2 介面
 提供 common language runtime (CLR) 來通知分析工具已訂閱的事件發生時的程式碼剖析工具的方法。 `ICorProfilerCallback2`介面是擴充功能[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)介面。 也就是說，它提供.NET Framework 2.0 版中導入新的回撥。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
 ms.openlocfilehash: c43739e098a91d54d300fa7074d1563da179c0e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665789"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda 運算式 (Visual Basic)
 A *lambda 運算式*函式或副程式沒有可用於委派是有效的名稱。 Lambda 運算式可以是函式或副程式，它可以是單行或多行。 您可以從目前的範圍將值傳遞至 lambda 運算式中。  
@@ -43,27 +43,27 @@ A *lambda 運算式*函式或副程式沒有可用於委派是有效的名稱。
 ## <a name="lambda-expression-syntax"></a>Lambda 運算式語法  
  Lambda 運算式的語法類似於標準函式或副程式。 差異如下所示：  
   
--   Lambda 運算式沒有名稱。  
+- Lambda 運算式沒有名稱。  
   
--   Lambda 運算式不能有修飾詞，例如`Overloads`或`Overrides`。  
+- Lambda 運算式不能有修飾詞，例如`Overloads`或`Overrides`。  
   
--   單行 lambda 函式就不會使用`As`子句來指定傳回型別。 相反地，從 lambda 運算式的主體會評估為值推斷型別。 例如，如果 lambda 運算式的主體是`cust.City = "London"`，其傳回類型是`Boolean`。  
+- 單行 lambda 函式就不會使用`As`子句來指定傳回型別。 相反地，從 lambda 運算式的主體會評估為值推斷型別。 例如，如果 lambda 運算式的主體是`cust.City = "London"`，其傳回類型是`Boolean`。  
   
--   在多行 lambda 函式中，您可以指定傳回型別使用`As`子句，或省略`As`子句，以便推斷傳回型別。 當`As`省略子句對於多行 lambda 函式，傳回的型別推斷為主控項的型別，從所有`Return`多行 lambda 函式中的陳述式。 *主類型*是所有其他類型可以擴展為唯一類型。 如果無法判斷此唯一類型，主控項的型別是陣列中的所有其他類型可以縮小至的唯一類型。 如果這些類型皆無法決定，則主類型為 `Object`。 在此情況下，如果`Option Strict`設為`On`，就會發生編譯器錯誤。  
+- 在多行 lambda 函式中，您可以指定傳回型別使用`As`子句，或省略`As`子句，以便推斷傳回型別。 當`As`省略子句對於多行 lambda 函式，傳回的型別推斷為主控項的型別，從所有`Return`多行 lambda 函式中的陳述式。 *主類型*是所有其他類型可以擴展為唯一類型。 如果無法判斷此唯一類型，主控項的型別是陣列中的所有其他類型可以縮小至的唯一類型。 如果這些類型皆無法決定，則主類型為 `Object`。 在此情況下，如果`Option Strict`設為`On`，就會發生編譯器錯誤。  
   
      比方說，如果運算式提供給`Return`陳述式包含類型的值`Integer`， `Long`，以及`Double`，產生的陣列會屬於型別`Double`。 兩者`Integer`並`Long`擴展為`Double`和 僅限`Double`。 因此， `Double` 是主類型。 如需詳細資訊，請參閱 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
   
--   單行函式的主體必須是傳回值，而不是陳述式的運算式。 沒有任何`Return`單行函式的陳述式。 單行函式所傳回的值是函式主體中的運算式的值。  
+- 單行函式的主體必須是傳回值，而不是陳述式的運算式。 沒有任何`Return`單行函式的陳述式。 單行函式所傳回的值是函式主體中的運算式的值。  
   
--   單行副程式的主體必須是單行陳述式。  
+- 單行副程式的主體必須是單行陳述式。  
   
--   不包含單行函式和副程式`End Function`或`End Sub`陳述式。  
+- 不包含單行函式和副程式`End Function`或`End Sub`陳述式。  
   
--   您可以使用，以指定的 lambda 運算式參數的資料型別`As`關鍵字或參數的資料類型來推斷。 可能是所有的參數必須必須推斷資料類型或全部指定。  
+- 您可以使用，以指定的 lambda 運算式參數的資料型別`As`關鍵字或參數的資料類型來推斷。 可能是所有的參數必須必須推斷資料類型或全部指定。  
   
--   `Optional` 和`Paramarray`不允許使用參數。  
+- `Optional` 和`Paramarray`不允許使用參數。  
   
--   不允許泛型參數。  
+- 不允許泛型參數。  
   
 ## <a name="async-lambdas"></a>非同步 Lambda  
  您可以輕鬆地建立 lambda 運算式和陳述式結合非同步處理使用[非同步](../../../../visual-basic/language-reference/modifiers/async.md)並[Await 運算子](../../../../visual-basic/language-reference/operators/await-operator.md)關鍵字。 例如，下列 Windows Form 範例包含呼叫並等候非同步方法 `ExampleMethodAsync`的事件處理常式。  
@@ -118,15 +118,15 @@ End Class
   
  下列範例會示範各種巢狀的 lambda 運算式的存取權限。 從執行傳回的 lambda 運算式時`Main`做為`aDel`，它會存取這些項目：  
   
--   在其中定義類別的欄位： `aField`  
+- 在其中定義類別的欄位： `aField`  
   
--   在其中定義類別的屬性： `aProp`  
+- 在其中定義類別的屬性： `aProp`  
   
--   方法的參數`functionWithNestedLambda`，其定義中： `level1`  
+- 方法的參數`functionWithNestedLambda`，其定義中： `level1`  
   
--   區域變數的`functionWithNestedLambda`: `localVar`  
+- 區域變數的`functionWithNestedLambda`: `localVar`  
   
--   在它巢狀 lambda 運算式的參數： `level2`  
+- 在它巢狀 lambda 運算式的參數： `level2`  
   
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]  
   
@@ -143,11 +143,11 @@ End Class
   
 ## <a name="examples"></a>範例  
   
--   下列範例會定義可傳回的 lambda 運算式`True`可為 null 的引數是否為指派的值，並`False`如果其值為`Nothing`。  
+- 下列範例會定義可傳回的 lambda 運算式`True`可為 null 的引數是否為指派的值，並`False`如果其值為`Nothing`。  
   
      [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]  
   
--   下列範例會定義 lambda 運算式的傳回陣列中的最後一個項目的索引。  
+- 下列範例會定義 lambda 運算式的傳回陣列中的最後一個項目的索引。  
   
      [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]  
   

@@ -3,11 +3,11 @@ title: TraceListener
 ms.date: 03/30/2017
 ms.assetid: c2c0b595-a384-4eb3-b94d-1b3be7cc7a5c
 ms.openlocfilehash: 1bd15aafc85e5553a4b4acef6901beb9a0f1745e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703461"
 ---
 # <a name="tracelistener"></a>TraceListener
 TraceListener。  
@@ -36,7 +36,7 @@ class TraceListener
  追蹤接聽項的名稱。  
   
 ### <a name="tracelistenerarguments"></a>TraceListenerArguments  
- 資料型別：TraceListenerArgument 陣列  
+ 資料類型：TraceListenerArgument 陣列  
   
  存取類型：唯讀  
   

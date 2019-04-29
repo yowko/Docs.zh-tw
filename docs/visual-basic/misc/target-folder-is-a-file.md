@@ -3,18 +3,18 @@ title: 目標資料夾是一個檔案
 ms.date: 07/20/2015
 ms.assetid: c5e40bcb-2414-4484-b2b9-a9c391ad0029
 ms.openlocfilehash: 3189b6284939fabaaff923b80e6e767b89df50b2
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58035085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593927"
 ---
 # <a name="target-folder-is-a-file"></a>目標資料夾是一個檔案
 嘗試執行資料夾相關動作時，您將指定檔案。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   請檢查所提供的路徑，確定您將指定資料夾，而非檔案。  
+- 請檢查所提供的路徑，確定您將指定資料夾，而非檔案。  
   
 ## <a name="see-also"></a>另請參閱
 

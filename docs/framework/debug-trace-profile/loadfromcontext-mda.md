@@ -10,11 +10,11 @@ ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 01b2cf06a5ab921f5ae89da4856e8164b6f57db5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754254"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext MDA
 如果組件載入到 `LoadFrom` 內容中，就會啟動 `loadFromContext` Managed 偵錯助理 (MDA)。 這種情況可能是因為呼叫 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 或其他類似方法而發生。  
@@ -28,11 +28,11 @@ ms.locfileid: "59098600"
 ## <a name="resolution"></a>解決方式  
  設定應用程式，因此不再需要 <xref:System.Reflection.Assembly.LoadFrom%2A> 呼叫。 您可以使用下列技巧執行該作業：  
   
--   在全域組件快取中安裝組件。  
+- 在全域組件快取中安裝組件。  
   
--   將組件放置在 <xref:System.AppDomain> 的 <xref:System.AppDomainSetup.ApplicationBase%2A>目錄中。 如果是預設網域，<xref:System.AppDomainSetup.ApplicationBase%2A> 目錄會包含啟動處理序的可執行檔。 如果移動組件不方便，可能也需要建立新的 <xref:System.AppDomain>。  
+- 將組件放置在 <xref:System.AppDomain> 的 <xref:System.AppDomainSetup.ApplicationBase%2A>目錄中。 如果是預設網域，<xref:System.AppDomainSetup.ApplicationBase%2A> 目錄會包含啟動處理序的可執行檔。 如果移動組件不方便，可能也需要建立新的 <xref:System.AppDomain>。  
   
--   如果相依組件位在可執行檔的相對子目錄中，請將探查路徑新增至應用程式組態檔 (.config) 或次要應用程式網域。  
+- 如果相依組件位在可執行檔的相對子目錄中，請將探查路徑新增至應用程式組態檔 (.config) 或次要應用程式網域。  
   
  每個案例都可以變更程式碼，以使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法。  
   

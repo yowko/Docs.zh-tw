@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
 ms.openlocfilehash: d325c09516b4ce03facedce86f17ea49480b997a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666010"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>HOW TO：呼叫多載程序 (Visual Basic)
 多載化程序的優點是在呼叫的彈性。 呼叫端程式碼可以取得它需要傳遞至程序，並接著呼叫單一程序名稱，不論它傳遞引數的資訊。  

@@ -3,22 +3,22 @@ title: 將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
 ms.openlocfilehash: a1690e99aeaeb7ed9c85fd28697ae22d34bb2018
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607889"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 XML 結構描述定義語言 (XSD) 允許在其定義的項目和屬性上指定條件約束。 對應 XML 結構描述中的關聯式結構描述時<xref:System.Data.DataSet>，XML 結構描述條件約束會對應到資料表和資料行內的適當關聯式條件約束**資料集**。  
   
  本節討論下列 XML 結構描述條件約束的對應：  
   
--   使用指定的唯一性條件約束**唯一**項目。  
+- 使用指定的唯一性條件約束**唯一**項目。  
   
--   使用指定的索引鍵條件約束**金鑰**項目。  
+- 使用指定的索引鍵條件約束**金鑰**項目。  
   
--   使用指定的 keyref 條件約束**keyref**項目。  
+- 使用指定的 keyref 條件約束**keyref**項目。  
   
  您可以在項目或屬性上使用條件約束，為文件內任何執行個體項目的值指定特定限制。 例如，索引鍵條件約束**CustomerID**子項目**客戶**結構描述中的項目表示的值**CustomerID**子元素必須是在任何文件執行個體中是唯一而且不允許 null 值。  
   

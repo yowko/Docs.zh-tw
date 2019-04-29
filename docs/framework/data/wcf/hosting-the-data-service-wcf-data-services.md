@@ -9,32 +9,32 @@ helpviewer_keywords:
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
 ms.openlocfilehash: e738fa1feebdd91bdb84484340b31e599d7f5f76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765568"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>裝載資料服務 (WCF 資料服務)
 使用 WCF Data Services，您可以建立資料公開為服務[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 這個資料服務會定義為繼承自 <xref:System.Data.Services.DataService%601> 的類別。 這個類別會提供處理要求訊息、 執行更新，針對資料來源，以及產生所需的 OData 回應訊息所需的功能。 不過，無法繫結至資料服務，而且網路通訊端上接聽內送的 HTTP 要求。 對於這個必要的功能而言，資料服務會依賴裝載的元件。
 
  資料服務主機會代表資料服務執行下列工作：
 
--   接聽要求，並將這些要求路由傳送到資料服務。
+- 接聽要求，並將這些要求路由傳送到資料服務。
 
--   為每一個要求建立資料服務的執行個體。
+- 為每一個要求建立資料服務的執行個體。
 
--   要求資料服務處理傳入的要求。
+- 要求資料服務處理傳入的要求。
 
--   代表資料服務傳送回應。
+- 代表資料服務傳送回應。
 
  若要簡化裝載資料服務，WCF Data Services 可整合使用 Windows Communication Foundation (WCF)。 資料服務提供做為資料服務主機中的預設 WCF 實作[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式。 因此，您可以透過下列其中一個方法來裝載資料服務：
 
--   在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式中。
+- 在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式中。
 
--   在支援自我裝載之 WCF 服務的 Managed 應用程式中。
+- 在支援自我裝載之 WCF 服務的 Managed 應用程式中。
 
--   在某個其他自訂資料服務主機中。
+- 在某個其他自訂資料服務主機中。
 
 ## <a name="hosting-a-data-service-in-an-aspnet-application"></a>在 ASP.NET 應用程式中裝載資料服務
 
@@ -65,13 +65,13 @@ ms.locfileid: "59517937"
 ## <a name="defining-a-custom-data-service-host"></a>定義自訂資料服務主機
  如果是 WCF 主機實作太具限制性的情況，您也可以為資料服務定義自訂主機。 實作 <xref:System.Data.Services.IDataServiceHost> 介面的任何類別都可以當做資料服務的網路主機使用。 自訂主機必須實作 <xref:System.Data.Services.IDataServiceHost> 介面，而且必須能夠處理資料服務主機的下列基本責任：
 
--   為資料服務提供服務根路徑。
+- 為資料服務提供服務根路徑。
 
--   針對適當的 <xref:System.Data.Services.IDataServiceHost> 成員實作處理要求和回應標頭資訊。
+- 針對適當的 <xref:System.Data.Services.IDataServiceHost> 成員實作處理要求和回應標頭資訊。
 
--   處理資料服務所引發的例外狀況。
+- 處理資料服務所引發的例外狀況。
 
--   驗證查詢字串中的參數。
+- 驗證查詢字串中的參數。
 
 ## <a name="see-also"></a>另請參閱
 

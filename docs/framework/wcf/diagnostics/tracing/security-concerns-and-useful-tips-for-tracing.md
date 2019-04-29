@@ -3,11 +3,11 @@ title: 追蹤的安全性考量及實用秘訣
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 ms.openlocfilehash: 72d35230820e8466cd9c63a76b26c7a23bdfe024
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663709"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>追蹤的安全性考量及實用秘訣
 此主題描述如何保護敏感資訊以防公開，以及使用 WebHost 時的實用秘訣。  
@@ -22,11 +22,11 @@ ms.locfileid: "59130790"
   
  下列秘訣有助於防止無意間公開追蹤檔內容：  
   
--   確定在 WebHost 和自我裝載的情況下，記錄檔都受到存取控制清單 (ACL) 的保護。  
+- 確定在 WebHost 和自我裝載的情況下，記錄檔都受到存取控制清單 (ACL) 的保護。  
   
--   您選擇的副檔名不可讓人透過 Web 要求就輕而易舉地取得檔案。 例如，.xml 副檔名就不是安全的選擇。 請參閱 IIS 管理手冊，查看可服務的副檔名清單。  
+- 您選擇的副檔名不可讓人透過 Web 要求就輕而易舉地取得檔案。 例如，.xml 副檔名就不是安全的選擇。 請參閱 IIS 管理手冊，查看可服務的副檔名清單。  
   
--   指定絕對路徑做為記錄檔位置，此位置應該位於 WebHost vroot 公用目錄之外，以防止外部人員使用網頁瀏覽器存取記錄檔。  
+- 指定絕對路徑做為記錄檔位置，此位置應該位於 WebHost vroot 公用目錄之外，以防止外部人員使用網頁瀏覽器存取記錄檔。  
   
  根據預設，金鑰和個人可識別資訊 (PII)，例如使用者名稱和密碼，不會記錄在追蹤和記錄訊息中。 不過，電腦的系統管理員還是可以使用 Machine.config 檔案中 `enableLoggingKnownPII` 項目的 `machineSettings` 屬性，來允許電腦上執行的應用程式記錄已知的個人可識別資訊 (PII)，如下列所示：  
   

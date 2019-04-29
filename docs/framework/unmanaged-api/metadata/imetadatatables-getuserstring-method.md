@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0fefbab6b2ea9fbbfd90e03c41578a924f99c7a0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645197"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>IMetaDataTables::GetUserString 方法
 
@@ -55,7 +55,7 @@ HRESULT GetUserString (
 
 **標頭：** Cor.h
 
-**程式庫：** 做為 MsCorEE.dll 中的資源
+**LIBRARY:** 做為 MsCorEE.dll 中的資源
 
 **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 

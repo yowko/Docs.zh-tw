@@ -11,11 +11,11 @@ helpviewer_keywords:
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
 ms.openlocfilehash: 9ca9a0ccdac3ac13429928233a0c09d58427ce74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665763"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>HOW TO：宣告，並在 Visual Basic 中呼叫預設屬性
 A*屬性預設*是類別或結構的屬性，不需要指定它可以存取您的程式碼。 在呼叫程式碼命名類別或結構，但不是屬性，與內容允許存取屬性時，Visual Basic 會解析成該類別或結構的預設屬性存取若有的話。  

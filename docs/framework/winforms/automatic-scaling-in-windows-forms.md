@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
 ms.openlocfilehash: d3981be7977b56af0b60f9796519b78dc9ac5db3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640504"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>自動縮放 Windows Form
 
 自動縮放功能允許某部電腦上以特定顯示解析度或系統字型所設計的表單和其控制項，可以在另一部電腦上以不同的顯示解析度或系統字型正確地顯示。 如此可確保表單和其控制項利用智慧方式調整大小，以便與使用者和其他開發人員電腦上的原生視窗和其他應用程式保持一致。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 對自動縮放和視覺化樣式的支援，可以讓 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 應用程式在與每個使用者電腦上的原生 Windows 應用程式相較下，都能保有一致的外觀和風格。
 
-在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 (含) 更新版本中，自動調整大部分會如預期運作。 不過，字型配置變更可能會造成問題。 如需如何解決此問題的範例，請參閱 <<c0> [ 如何： 回應 Windows Forms 應用程式中的字型配置變更](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md)。
+在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 (含) 更新版本中，自動調整大部分會如預期運作。 不過，字型配置變更可能會造成問題。 如需如何解決此問題的範例，請參閱[How to:回應 Windows Forms 應用程式中的字型配置變更](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md)。
 
 ## <a name="need-for-automatic-scaling"></a>自動縮放的需求
 
@@ -78,7 +78,7 @@ Windows Form 現在使用下列邏輯來自動縮放表單和其內容：
 
 1. 在設計階段，每個 <xref:System.Windows.Forms.ContainerControl> 會記錄縮放模式，以及各自在 <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> 和 <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> 中的目前解析度。
 
-2. 在執行階段，實際的解析度會儲存在 <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> 屬性中。 <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A> 屬性會動態計算在執行階段和設計階段縮放解析度之間的比例。
+2. 在執行階段，實際的解析度會儲存在 <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> 屬性中。 <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A> 屬性動態計算執行階段縮放解析和設計階段縮放解析間的比率。
 
 3. 當表單載入時，如果 <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> 和 <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> 的值不同，則會呼叫 <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> 方法以縮放控制項和其子系。 這個方法會暫止配置並呼叫 <xref:System.Windows.Forms.Control.Scale%2A> 方法，以執行實際的縮放。 之後，<xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> 的值會更新以避免繼續縮放。
 
@@ -105,4 +105,4 @@ Windows Form 現在使用下列邏輯來自動縮放表單和其內容：
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>
 - [使用視覺化樣式呈現控制項](./controls/rendering-controls-with-visual-styles.md)
-- [操作說明：避免自動縮放以提高效能](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)
+- [如何：避免自動縮放來改善效能](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)

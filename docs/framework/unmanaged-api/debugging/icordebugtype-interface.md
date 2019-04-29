@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 74863af1096f8600b8095e593c1f3c820c512e9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663852"
 ---
 # <a name="icordebugtype-interface"></a>ICorDebugType 介面
 表示型別，基本或複雜 （也就是，使用者定義）。 如果是泛型類型，則 `ICorDebugType` 表示具現化的泛型類型。  

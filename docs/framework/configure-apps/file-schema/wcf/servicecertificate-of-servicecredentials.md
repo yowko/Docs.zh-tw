@@ -3,11 +3,11 @@ title: <serviceCertificate> 的 <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 597ae6d5-4938-4950-9f5e-b2280e816182
 ms.openlocfilehash: 086b700b94198aa36e61289178ebbed75d33da98
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670309"
 ---
 # <a name="servicecertificate-of-servicecredentials"></a>\<serviceCertificate> of \<serviceCredentials>
 指定 X.509 憑證，而此憑證將用以驗證使用訊息安全性模式的用戶端服務。  

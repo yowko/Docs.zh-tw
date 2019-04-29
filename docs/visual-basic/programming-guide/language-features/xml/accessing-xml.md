@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: c47f88b2-3cbc-4bb1-b4b9-be60f71ffc6a
 ms.openlocfilehash: 0540c52cf3e4cd7594f051c10832ea99cf58a34e
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44078891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756958"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>在 Visual Basic 中存取 XML
 Visual Basic 提供的 XML 軸屬性，用於存取和瀏覽[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]結構。 這些屬性會使用特殊的語法，可讓您指定的 XML 名稱來存取元素和屬性。  
@@ -28,10 +28,10 @@ Visual Basic 提供的 XML 軸屬性，用於存取和瀏覽[!INCLUDE[sqltecxlin
 |*屬性軸*|`phone.@type`|取得所有`type`屬性的`phone`項目。|  
 |*descendant 軸*|`contacts...<name>`|取得所有`name`的項目`contacts`項目，不論發生的階層中深度。|  
 |*擴充索引子*|`contacts...<name>(0)`|取得第一個`name`序列中的項目。|  
-|*值*|`contacts...<name>.Value`|取得第一個物件的字串表示，在順序中，或`Nothing`如果序列是空的。|  
+|*value*|`contacts...<name>.Value`|取得第一個物件的字串表示，在順序中，或`Nothing`如果序列是空的。|  
   
 ## <a name="in-this-section"></a>本節內容  
- [如何：存取 XML 子系項目](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
+ [如何：存取 XML 子代項目](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
  示範如何使用 descendant 軸屬性來存取所有的 XML 項目中具有指定的名稱，以及包含在指定的 XML 項目。  
   
  [如何：存取 XML 子項目](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-child-elements.md)  

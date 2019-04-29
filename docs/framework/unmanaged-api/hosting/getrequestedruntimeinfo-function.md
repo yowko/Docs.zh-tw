@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1290aa864a3f65e549bc26173dcd23648b8dee90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61627975"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo 函式
 取得 common language runtime (CLR) 應用程式所要求的版本和目錄資訊。  
@@ -94,25 +94,25 @@ HRESULT GetRequestedRuntimeInfo (
   
  在.NET Framework 2.0 版中，您可以取得最新的安裝版本的相關資訊，使用`GetRequestedRuntimeInfo`方法，如下所示：  
   
--   指定`pExe`， `pwszVersion`，和`pConfigurationFile`參數為 null。  
+- 指定`pExe`， `pwszVersion`，和`pConfigurationFile`參數為 null。  
   
--   指定在 RUNTIME_INFO_UPGRADE_VERSION 旗標`RUNTIME_INFO_FLAGS`列舉型別供`runtimeInfoFlags`參數。  
+- 指定在 RUNTIME_INFO_UPGRADE_VERSION 旗標`RUNTIME_INFO_FLAGS`列舉型別供`runtimeInfoFlags`參數。  
   
  `GetRequestedRuntimeInfo`方法不會傳回最新的 CLR 版本，在下列情況：  
   
--   指定正在載入特定的 CLR 版本的應用程式組態檔存在。 請注意 .NET Framework 會使用組態檔，即使您指定 null`pConfigurationFile`參數。  
+- 指定正在載入特定的 CLR 版本的應用程式組態檔存在。 請注意 .NET Framework 會使用組態檔，即使您指定 null`pConfigurationFile`參數。  
   
--   [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)方法受呼叫時指定較早的 CLR 版本。  
+- [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)方法受呼叫時指定較早的 CLR 版本。  
   
--   針對較早的 CLR 版本所編譯的應用程式目前正在執行。  
+- 針對較早的 CLR 版本所編譯的應用程式目前正在執行。  
   
  針對`runtimeInfoFlags`參數，您可以指定其中一個架構的常數`RUNTIME_INFO_FLAGS`列舉一次：  
   
--   RUNTIME_INFO_REQUEST_IA64  
+- RUNTIME_INFO_REQUEST_IA64  
   
--   RUNTIME_INFO_REQUEST_AMD64  
+- RUNTIME_INFO_REQUEST_AMD64  
   
--   RUNTIME_INFO_REQUEST_X86  
+- RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

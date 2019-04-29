@@ -3,11 +3,11 @@ title: 方法
 description: 了解如何F#方法是用來公開及實作的功能和行為的物件與型別的型別相關聯的函式。
 ms.date: 05/16/2016
 ms.openlocfilehash: 03150cc67f79bfde58cf27e4a9d4dfa9e9ff3f55
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666491"
 ---
 # <a name="methods"></a>方法
 

@@ -3,11 +3,11 @@ title: SQL Server 中的授權和權限
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
 ms.openlocfilehash: 398041d678ba3e4ae5a36dd7714fd2a9bfee1b40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663956"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server 中的授權和權限
 當您建立資料庫物件時，必須明確地授與權限，讓使用者能夠存取這些物件。 每個安全性實體物件都具有可利用權限陳述式來授與主體的權限。  
@@ -37,7 +37,7 @@ ms.locfileid: "59185857"
 |REVOKE|撤銷權限。 這是新物件的預設狀態。 從某個使用者或角色中撤銷的權限仍然可以繼承自被指派主體的其他群組或角色。|  
 |DENY|DENY 會撤銷權限，讓它無法被繼承。 DENY 的優先順序高於所有權限，但是 DENY 無法套用至物件擁有者或 `sysadmin` 的成員。 如果您針對 `public` 角色拒絕 (DENY) 某個物件的權限，就會一併拒絕所有使用者和角色，但物件擁有者和 `sysadmin` 成員除外。|  
   
--   GRANT 陳述式可以指派權限給某個群組或角色，而資料庫角色可以繼承這些權限。 不過，DENY 陳述式的優先順序高於所有其他權限陳述式。 因此，已經被拒絕某個權限的使用者無法從另一個角色繼承該權限。  
+- GRANT 陳述式可以指派權限給某個群組或角色，而資料庫角色可以繼承這些權限。 不過，DENY 陳述式的優先順序高於所有其他權限陳述式。 因此，已經被拒絕某個權限的使用者無法從另一個角色繼承該權限。  
   
 > [!NOTE]
 >  `sysadmin` 固定伺服器角色的成員和物件擁有者無法被拒絕權限。  

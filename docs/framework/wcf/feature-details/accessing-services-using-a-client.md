@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
 ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696219"
 ---
 # <a name="accessing-services-using-a-client"></a>使用用戶端存取服務
 用戶端應用程式必須建立、 設定及使用 WCF 用戶端或通道物件來與服務通訊。 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)主題提供的物件 」 和 「 建立基本的用戶端和通道物件，並運用所需的步驟的概觀。  
@@ -20,13 +20,13 @@ ms.locfileid: "59314876"
 ## <a name="overview"></a>總覽  
  本主題將說明下列項目的相關行為和問題：  
   
--   通道和工作階段存留期 (Lifetime)。  
+- 通道和工作階段存留期 (Lifetime)。  
   
--   處理例外狀況。  
+- 處理例外狀況。  
   
--   瞭解封鎖問題。  
+- 瞭解封鎖問題。  
   
--   以互動方式初始化通道。  
+- 以互動方式初始化通道。  
   
 ### <a name="channel-and-session-lifetimes"></a>通道和工作階段存留期。  
  Windows Communication Foundation (WCF) 應用程式包含兩種通道： 資料包和工作階段。  

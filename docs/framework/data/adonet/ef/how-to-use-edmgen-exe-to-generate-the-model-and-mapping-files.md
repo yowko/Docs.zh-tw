@@ -3,24 +3,24 @@ title: HOW TO：使用 EdmGen.exe 產生模型和對應檔
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
 ms.openlocfilehash: 915a9f3c53dba355480a3869602f963b195d53fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605981"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>HOW TO：使用 EdmGen.exe 產生模型和對應檔
 本主題示範如何使用 EDM 產生器 (EdmGen.exe) 工具依據 School 資料庫產生下列檔案：  
   
--   概念模型 (.csdl 檔)。  
+- 概念模型 (.csdl 檔)。  
   
--   儲存體模型 (.ssdl 檔)。  
+- 儲存體模型 (.ssdl 檔)。  
   
--   概念模型和儲存模型之間的對應 (.msl 檔)。  
+- 概念模型和儲存模型之間的對應 (.msl 檔)。  
   
--   Visual Basic 或 C# 中的物件層程式碼。  
+- Visual Basic 或 C# 中的物件層程式碼。  
   
--   檢視檔案。  
+- 檢視檔案。  
   
  EdmGen.exe 工具使用 /mode:FullGeneration 產生以上所列檔案。 如需 EdmGen.exe 命令的詳細資訊，請參閱[EDM 產生器 (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md)。  
   

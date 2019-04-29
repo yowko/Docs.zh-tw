@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 44a84b03c85cc1332c07ffbaf53187b7f01d0236
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609044"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 函式
 將一個原始效能資料值轉換為指定的格式，或轉換為兩個原始效能資料值 (若格式轉換是以時間為基礎)。 
@@ -91,7 +91,7 @@ int FormatFromRawValue (
 
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
 
- **程式庫：** PerfCounter.dll
+ **LIBRARY:** PerfCounter.dll
 
  **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

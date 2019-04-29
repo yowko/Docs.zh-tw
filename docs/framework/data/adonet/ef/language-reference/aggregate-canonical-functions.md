@@ -3,11 +3,11 @@ title: 彙總標準函式
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
 ms.openlocfilehash: f5d3584c6e9d35c9eb69b4f54cad45187416ee59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607449"
 ---
 # <a name="aggregate-canonical-functions"></a>彙總標準函式
 
@@ -74,8 +74,7 @@ ms.locfileid: "57372798"
 
 **引數**
 
-
-  `Byte`、`Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double`、`Decimal`、`DateTime`、`DateTimeOffset`、`Time`、`String`、`Binary`。
+`Byte`、`Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double`、`Decimal`、`DateTime`、`DateTimeOffset`、`Time`、`String`、`Binary`。
 
 **傳回值**
 
@@ -92,8 +91,7 @@ ms.locfileid: "57372798"
 
 **引數**
 
-
-  `Byte`、`Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double`、`Decimal`、`DateTime`、`DateTimeOffset`、`Time`、`String`、`Binary`。
+`Byte`、`Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double`、`Decimal`、`DateTime`、`DateTimeOffset`、`Time`、`String`、`Binary`。
 
 **傳回值**
 
@@ -110,8 +108,7 @@ ms.locfileid: "57372798"
 
 **引數**
 
-
-  `Int32`、`Int64`、`Double`、`Decimal`。
+`Int32`、`Int64`、`Double`、`Decimal`。
 
 **傳回值**
 
@@ -128,8 +125,7 @@ ms.locfileid: "57372798"
 
 **引數**
 
-
-  `Int32`、`Int64`、`Double`、`Decimal`。
+`Int32`、`Int64`、`Double`、`Decimal`。
 
 **傳回值**
 
@@ -146,8 +142,7 @@ A `Double`，或`null`如果所有輸入的值為`null`值。
 
 **引數**
 
-
-  `Int32`、`Int64`、`Double`、`Decimal`。
+`Int32`、`Int64`、`Double`、`Decimal`。
 
 **傳回值**
 
@@ -164,8 +159,7 @@ A `Double`，或`null`如果所有輸入的值為`null`值。
 
 **引數**
 
-
-  `Int32`、`Int64`、`Double`、`Decimal`。
+`Int32`、`Int64`、`Double`、`Decimal`。
 
 **傳回值**
 
@@ -182,8 +176,7 @@ A `Double`，或`null`如果所有輸入的值為`null`值。
 
 **引數**
 
-
-  `Int32`、`Int64`、`Double`、`Decimal`。
+`Int32`、`Int64`、`Double`、`Decimal`。
 
 **傳回值**
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
 ms.openlocfilehash: 2e1389392c6465ed56b2c71e53b2e3c1947acbe2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651099"
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>HOW TO：使用分鏡腳本建立屬性的動畫後對該屬性進行設定
 在某些情況下，它可能會出現，您就無法變更屬性的值之後已顯示動畫。  
@@ -30,11 +30,11 @@ ms.locfileid: "59188307"
   
  先前的程式碼不採取任何動作會出現： 所提供的筆刷維持黃色，也就是值<xref:System.Windows.Media.Animation.ColorAnimation>，以動畫顯示筆刷。 基礎的屬性值 （基底值） 會實際變更為藍色。 不過，有效，或最新狀態，值仍然維持黃色因為<xref:System.Windows.Media.Animation.ColorAnimation>仍然在覆寫基底值。 如果您想要再次變成有效的值的基底值，您必須停止的動畫屬性的影響。 有三種方式，若要使用分鏡腳本動畫：  
   
--   設定動畫的<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>屬性 <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
+- 設定動畫的<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>屬性 <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
   
--   移除整個分鏡腳本。  
+- 移除整個分鏡腳本。  
   
--   移除個別屬性的動畫。  
+- 移除個別屬性的動畫。  
   
 ## <a name="set-the-animations-fillbehavior-property-to-stop"></a>設定為 停止的動畫的 FillBehavior 屬性  
  藉由設定<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>至<xref:System.Windows.Media.Animation.FillBehavior.Stop>，告訴停止作用期結束後，會影響其目標屬性的動畫。  

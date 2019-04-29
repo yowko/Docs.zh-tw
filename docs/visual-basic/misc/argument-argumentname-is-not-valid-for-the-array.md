@@ -5,18 +5,18 @@ f1_keywords:
 - vbrArgument_InvalidRank1
 ms.assetid: 2c931ede-9c41-4ad3-8dfd-d649617f567c
 ms.openlocfilehash: 4be82f26885d077e0b6539a59fa00640660b72aa
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58024322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666569"
 ---
 # <a name="argument-argumentname-is-not-valid-for-the-array"></a>引數 '\<引數名稱 >' 不是有效的陣列
 陣列包含無效的引數。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   請檢查運算式中的引數拼法。 拼錯的變數名稱可能會隱含地建立初始化為零的數值變數。  
+- 請檢查運算式中的引數拼法。 拼錯的變數名稱可能會隱含地建立初始化為零的數值變數。  
   
 ## <a name="see-also"></a>另請參閱
 

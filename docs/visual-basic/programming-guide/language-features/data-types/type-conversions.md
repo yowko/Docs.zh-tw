@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
 ms.openlocfilehash: 026b2a250abfac0782feb0946bc50a94f504f7ed
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663280"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Visual Basic 中的類型轉換
 值從一種資料類型變更為另一種類型的程序稱為*轉換*。 轉換為*widening*或是*縮小*，取決於相關類型的資料容量。 它們也是*隱含*或是*明確*，取決於在原始程式碼中的語法。  
@@ -30,7 +30,7 @@ ms.locfileid: "44084464"
  [字串與其他類型之間的轉換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  說明轉換字串和數字，介於`Boolean`，或日期/時間值。  
   
- [如何： 將物件轉換成 Visual Basic 中的另一個類型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ [如何：將物件轉換成 Visual Basic 中的另一個類型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
  示範如何轉換`Object`變數設為任何其他資料類型。  
   
  [陣列轉換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  

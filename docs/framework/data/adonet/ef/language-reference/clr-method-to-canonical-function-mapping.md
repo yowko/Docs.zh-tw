@@ -3,11 +3,11 @@ title: 標準函式的對應 CLR 方法
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
 ms.openlocfilehash: 16d447e82959f5ade7210b36dcf9d06bed9c9b00
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605713"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>標準函式的對應 CLR 方法
 
@@ -38,12 +38,12 @@ Entity Framework 提供一組標準函式，可實作在許多資料庫系統常
 
 ## <a name="systemstring-method-instance-mapping"></a>System.String 方法 (執行個體) 對應
 
-|System.String 方法 (執行個體)|標準函式|備註|
+|System.String 方法 (執行個體)|標準函式|注意|
 |---------------------------------------|------------------------|-----------|
-|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|如果 `value` 不是一個常數，則這會對應至 IndexOf(`this`, `value`) > 0|
+|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|如果`value`不是一個常數，則這會對應至 IndexOf (`this`， `value`) > 0|
 |Boolean EndsWith(String `value`)|`this` 像是`'` % `value`'|如果 `value` 不是一個常數，則這會對應至 Right(`this`, length(`value`)) = `value`。|
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|如果 `value` 不是一個常數，則這會對應至 IndexOf(`this`, `value`) = 1。|
-|長度|Length(`this`)||
+|Length|Length(`this`)||
 |Int32 IndexOf(String `value`)|IndexOf(`this`, `value`) - 1||
 |System.String Insert(Int32 `startIndex`, String `value`)|Concat(Concat(Substring(`this`, 1, `startIndex`), `value`), Substring(`this`, `startIndex`+1, Length(`this`) - `startIndex`))||
 |System.String Remove(Int32 `startIndex`)|Substring(`this`, 1, `startIndex`)||
@@ -60,17 +60,17 @@ Entity Framework 提供一組標準函式，可實作在許多資料庫系統常
 
 ## <a name="systemdatetime-method-static-mapping"></a>System.DateTime 方法 (靜態) 對應
 
-|System.DateTime 方法 (靜態)|標準函式|備註|
+|System.DateTime 方法 (靜態)|標準函式|注意|
 |---------------------------------------|------------------------|-----------|
 |Boolean Equals(DateTime `t1`, DateTime `t2`)|= 運算子||
 |System.DateTime.Now|CurrentDateTime()||
 |System.DateTime.UtcNow|CurrentUtcDateTime()||
 |Boolean op_Equality(DateTime `d1`, DateTime `d2`)|= 運算子||
 |Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)|> 運算子||
-|Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|>= 運算子||
+|Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|> = 運算子||
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!= 運算子||
 |布林 op_LessThan (DateTime `t1`，DateTime `t2`)|< 運算子||
-|Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|<= 運算子||
+|Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|< = 運算子||
 |Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal`Interval`為 DateInterval， \_<br /><br /> ByVal`DateValue`為 DateTime， \_<br /><br /> 選擇性 ByVal`FirstDayOfWeekValue`為 FirstDayOfWeek = 使用， \_<br /><br /> 選擇性 ByVal`FirstWeekOfYearValue`為 FirstWeekOfYear = VbFirstJan1 \_<br /><br /> ) As Integer||如需詳細資訊，請參閱「DatePart 函式」一節。|
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||
@@ -97,7 +97,7 @@ Entity Framework 提供一組標準函式，可實作在許多資料庫系統常
 
 為列出之屬性上的 `get` 方法顯示的對應。
 
-|System.DateTimeOffset 方法 (執行個體)|標準函式|備註|
+|System.DateTimeOffset 方法 (執行個體)|標準函式|注意|
 |-----------------------------------------------|------------------------|-----------|
 |Day|Day(`this`)|對 SQL Server 2005 不支援。|
 |Hour|Hour(`this`)|對 SQL Server 2005 不支援。|
@@ -114,7 +114,7 @@ Entity Framework 提供一組標準函式，可實作在許多資料庫系統常
 
 為列出之屬性上的 `get` 方法顯示的對應。
 
-|System.DateTimeOffset 方法 (靜態)|標準函式|備註|
+|System.DateTimeOffset 方法 (靜態)|標準函式|注意|
 |---------------------------------------------|------------------------|-----------|
 |System.DateTimeOffset.Now()|CurrentDateTimeOffset()|對 SQL Server 2005 不支援。|
 
@@ -122,7 +122,7 @@ Entity Framework 提供一組標準函式，可實作在許多資料庫系統常
 
 為列出之屬性上的 `get` 方法顯示的對應。
 
-|System.TimeSpan 方法 (執行個體)|標準函式|備註|
+|System.TimeSpan 方法 (執行個體)|標準函式|注意|
 |-----------------------------------------|------------------------|-----------|
 |小時|Hour(`this`)|對 SQL Server 2005 不支援。|
 |Milliseconds|Millisecond(`this`)|對 SQL Server 2005 不支援。|

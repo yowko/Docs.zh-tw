@@ -3,11 +3,11 @@ title: HOW TO：撰寫 LINQ to XML 座標軸方法 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
 ms.openlocfilehash: f10ee90076a71aa44f480639d3bc460ea59044ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614592"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>HOW TO：撰寫 LINQ to XML 座標軸方法 (Visual Basic)
 您可以撰寫自己的座標軸方法來擷取 XML 樹狀結構中的集合。 其中一個最好的方式是，撰寫可傳回項目或屬性集合的擴充方法。 您可以根據您應用程式的需求，撰寫您的擴充方法來傳回項目或屬性的特定子集。  

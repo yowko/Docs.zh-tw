@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
 ms.openlocfilehash: dc979a66c73fdf15a4349a003680156e0ce27ed3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764357"
 ---
 # <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>'\<類型名稱 >' 無法繼承自\<類型 >'\<基 >' 因為它會展開基底存取\<類型 > 外部組件
 類別或介面繼承自基底類別或介面，但具有較不嚴格的存取層級。  
@@ -23,11 +23,11 @@ ms.locfileid: "58838946"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   變更衍生的類別或介面，以最少的基底類別或介面限制的存取層級。  
+- 變更衍生的類別或介面，以最少的基底類別或介面限制的存取層級。  
   
      -或-  
   
--   如果您需要較不嚴格的存取層級時，移除`Inherits`陳述式。 您無法繼承自更具限制性的基底類別或介面。  
+- 如果您需要較不嚴格的存取層級時，移除`Inherits`陳述式。 您無法繼承自更具限制性的基底類別或介面。  
   
 ## <a name="see-also"></a>另請參閱
 

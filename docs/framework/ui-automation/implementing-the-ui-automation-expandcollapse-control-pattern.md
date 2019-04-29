@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
 ms.openlocfilehash: ff07f5264ccb3ec699e3676a2e9ba64443b2875f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61610006"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>實作 UI 自動化 ExpandCollapse 控制項模式
 > [!NOTE]
@@ -25,24 +25,24 @@ ms.locfileid: "59211656"
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
  實作 ExpandCollapse 控制項模式時，請注意下列方針和慣例：  
   
--   彙總控制項 - 以提供 UI 展開/摺疊功能的子物件建置 — 必須支援 <xref:System.Windows.Automation.ExpandCollapsePattern> 控制項模式，而其子項目並不支援。 例如，使用清單方塊、按鈕和編輯控制項組合所建置的下拉式方塊控制項，但是它只是必須支援 <xref:System.Windows.Automation.ExpandCollapsePattern>的父下拉式方塊。  
+- 彙總控制項 - 以提供 UI 展開/摺疊功能的子物件建置 — 必須支援 <xref:System.Windows.Automation.ExpandCollapsePattern> 控制項模式，而其子項目並不支援。 例如，使用清單方塊、按鈕和編輯控制項組合所建置的下拉式方塊控制項，但是它只是必須支援 <xref:System.Windows.Automation.ExpandCollapsePattern>的父下拉式方塊。  
   
     > [!NOTE]
     >  例外狀況是功能表控制項，也就是個別 MenuItem 物件的彙總。 MenuItem 物件可以支援 <xref:System.Windows.Automation.ExpandCollapsePattern> 控制項模式，但是父功能表控制項無法支援。 樹狀結構和樹狀目錄項目控制項適用類似的例外狀況。  
   
--   當控制項的 <xref:System.Windows.Automation.ExpandCollapseState> 設為 <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>時，控制項的任何 <xref:System.Windows.Automation.ExpandCollapsePattern> 功能目前非使用中，可以使用此控制項模式取得的唯一資訊是 <xref:System.Windows.Automation.ExpandCollapseState>。 如果後續新增任何子物件， <xref:System.Windows.Automation.ExpandCollapseState> 會變更且 <xref:System.Windows.Automation.ExpandCollapsePattern> 功能會啟動。  
+- 當控制項的 <xref:System.Windows.Automation.ExpandCollapseState> 設為 <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>時，控制項的任何 <xref:System.Windows.Automation.ExpandCollapsePattern> 功能目前非使用中，可以使用此控制項模式取得的唯一資訊是 <xref:System.Windows.Automation.ExpandCollapseState>。 如果後續新增任何子物件， <xref:System.Windows.Automation.ExpandCollapseState> 會變更且 <xref:System.Windows.Automation.ExpandCollapsePattern> 功能會啟動。  
   
--   <xref:System.Windows.Automation.ExpandCollapseState> 是指僅限直屬子物件的可見度，而非所有子系物件的可見度。  
+- <xref:System.Windows.Automation.ExpandCollapseState> 是指僅限直屬子物件的可見度，而非所有子系物件的可見度。  
   
--   展開和摺疊功能是控制項專屬功能。 以下是此行為的範例：  
+- 展開和摺疊功能是控制項專屬功能。 以下是此行為的範例：  
   
-    -   Office 個人功能表可以是三種狀態 MenuItem (<xref:System.Windows.Automation.ExpandCollapseState.Expanded>、 <xref:System.Windows.Automation.ExpandCollapseState.Collapsed> 和 <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>)，其中控制項會指定當呼叫 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 或 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 時要採用的狀態。  
+    - Office 個人功能表可以是三種狀態 MenuItem (<xref:System.Windows.Automation.ExpandCollapseState.Expanded>、 <xref:System.Windows.Automation.ExpandCollapseState.Collapsed> 和 <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>)，其中控制項會指定當呼叫 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 或 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 時要採用的狀態。  
   
-    -   在 TreeItem 上呼叫 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 可能會顯示所有子代或只顯示直屬子系。  
+    - 在 TreeItem 上呼叫 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 可能會顯示所有子代或只顯示直屬子系。  
   
-    -   如果在控制項上呼叫 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 或 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 會維護其子代的狀態，應該會傳送可見度變更事件，如果父控制項在摺疊時不會維護其子代的狀態，則不是狀態變更事件，控制項可能會終結所有不再顯示的子代，並引發已終結事件，或者它可能會針對每個子代變更 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> 並且引發可見度變更事件。  
+    - 如果在控制項上呼叫 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 或 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 會維護其子代的狀態，應該會傳送可見度變更事件，如果父控制項在摺疊時不會維護其子代的狀態，則不是狀態變更事件，控制項可能會終結所有不再顯示的子代，並引發已終結事件，或者它可能會針對每個子代變更 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> 並且引發可見度變更事件。  
   
--   若要保證導覽功能，物件最好是位於 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構中 (具有適當的可見度狀態)，不論其父系 <xref:System.Windows.Automation.ExpandCollapseState>為何。 如果子代是隨選產生，則它們只有在第一次顯示或可見時，才會出現在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構中。  
+- 若要保證導覽功能，物件最好是位於 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構中 (具有適當的可見度狀態)，不論其父系 <xref:System.Windows.Automation.ExpandCollapseState>為何。 如果子代是隨選產生，則它們只有在第一次顯示或可見時，才會出現在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構中。  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iexpandcollapseprovider"></a>IExpandCollapseProvider 的必要成員  

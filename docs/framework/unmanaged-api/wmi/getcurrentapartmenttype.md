@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ead1c1a91b910e7cfbb09f17ba823fc7a77ce0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609005"
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType 函式
 擷取呼叫者在其中執行之 Apartment 的型別。   

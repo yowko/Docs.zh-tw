@@ -3,11 +3,11 @@ title: HOW TO：撰寫具有複雜的篩選 (Visual Basic) 的查詢
 ms.date: 07/20/2015
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
 ms.openlocfilehash: ac58394619b83e2b862e87926f0b6a722fdc3c7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614840"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>HOW TO：撰寫具有複雜的篩選 (Visual Basic) 的查詢
 有時候您會想要利用複雜篩選撰寫 LINQ to XML 查詢。 例如，您可能必須尋找其子項目包含特定名稱和值的所有項目。 本主題提供利用複雜篩選撰寫查詢的範例。  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - GradientStop objects [WPF], animating position of
 ms.assetid: 6f5b8b47-6c32-4b8e-98ee-fdf6515ec843
 ms.openlocfilehash: eeaea4732855155bf711912644f2f5b3f5a4f8d0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651359"
 ---
 # <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>HOW TO：建立漸層停駐點位置或色彩的動畫
 此範例示範如何建立動畫<xref:System.Windows.Media.GradientStop.Color%2A>並<xref:System.Windows.Media.GradientStop.Offset%2A>的<xref:System.Windows.Media.GradientStop>物件。  
@@ -25,11 +25,11 @@ ms.locfileid: "59134806"
 ## <a name="example"></a>範例  
  下列範例以動畫顯示在三個漸層停駐<xref:System.Windows.Media.LinearGradientBrush>。 此範例使用三個動畫，其中每一個以動畫顯示不同的漸層停駐：  
   
--   第一次的動畫<xref:System.Windows.Media.Animation.DoubleAnimation>，以動畫顯示的第一個漸層停駐<xref:System.Windows.Media.GradientStop.Offset%2A>從 0.0 到 1.0，然後再回到 0.0。 如此一來，第一個色彩在左側能漸層停駐會轉移至矩形右側，然後再設回左側。  
+- 第一次的動畫<xref:System.Windows.Media.Animation.DoubleAnimation>，以動畫顯示的第一個漸層停駐<xref:System.Windows.Media.GradientStop.Offset%2A>從 0.0 到 1.0，然後再回到 0.0。 如此一來，第一個色彩在左側能漸層停駐會轉移至矩形右側，然後再設回左側。  
   
--   將第二個動畫<xref:System.Windows.Media.Animation.ColorAnimation>，以動畫顯示第二個漸層停駐<xref:System.Windows.Media.GradientStop.Color%2A>從<xref:System.Windows.Media.Colors.Purple%2A>來<xref:System.Windows.Media.Colors.Yellow%2A>，然後再回到<xref:System.Windows.Media.Colors.Purple%2A>。 如此一來，在漸層的中間色彩從變更為紫色為黃色，再回到紫色。  
+- 將第二個動畫<xref:System.Windows.Media.Animation.ColorAnimation>，以動畫顯示第二個漸層停駐<xref:System.Windows.Media.GradientStop.Color%2A>從<xref:System.Windows.Media.Colors.Purple%2A>來<xref:System.Windows.Media.Colors.Yellow%2A>，然後再回到<xref:System.Windows.Media.Colors.Purple%2A>。 如此一來，在漸層的中間色彩從變更為紫色為黃色，再回到紫色。  
   
--   第三個的動畫，另一個<xref:System.Windows.Media.Animation.ColorAnimation>，以動畫顯示的第三個漸層停駐的不透明度<xref:System.Windows.Media.GradientStop.Color%2A>-1，然後重新開機。 如此一來，漸層中的第三個色彩或淡出，然後再次不透明。  
+- 第三個的動畫，另一個<xref:System.Windows.Media.Animation.ColorAnimation>，以動畫顯示的第三個漸層停駐的不透明度<xref:System.Windows.Media.GradientStop.Color%2A>-1，然後重新開機。 如此一來，漸層中的第三個色彩或淡出，然後再次不透明。  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/GradientStopAnimationExample.cs#graphicsmmgradientanimationexampleswholepage)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/gradientstopanimationexample.vb#graphicsmmgradientanimationexampleswholepage)]

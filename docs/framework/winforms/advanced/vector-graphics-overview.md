@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
 ms.openlocfilehash: d424254839db6c403bafe779f475c0e344918a5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748422"
 ---
 # <a name="vector-graphics-overview"></a>向量圖形概觀
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 座標系統上繪製線條、 矩形和其他形狀。 您可以選擇各式各樣的座標系統，但預設座標系統具有原點左上角的 x 軸指向右側和 y 軸指向下方。 預設座標系統中的測量單位為像素。  
@@ -32,19 +32,19 @@ ms.locfileid: "59087959"
   
  經過一段時間，某些基本的建置組塊證明為十分最適用於建立二維的圖片。 這些建置組塊，所有支援的[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]下, 面清單中指定：  
   
--   線條  
+- 線條  
   
--   矩形  
+- 矩形  
   
--   省略符號  
+- 省略符號  
   
--   Arcs  
+- Arcs  
   
--   多邊形  
+- 多邊形  
   
--   基線曲線  
+- 基線曲線  
   
--   貝茲曲線  
+- 貝茲曲線  
   
 ## <a name="methods-for-drawing-with-a-graphics-object"></a>繪製圖形物件的方法  
  <xref:System.Drawing.Graphics>類別內[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供下列方法來繪製上述清單中的項目： <xref:System.Drawing.Graphics.DrawLine%2A>， <xref:System.Drawing.Graphics.DrawRectangle%2A>， <xref:System.Drawing.Graphics.DrawEllipse%2A>， <xref:System.Drawing.Graphics.DrawPolygon%2A>， <xref:System.Drawing.Graphics.DrawArc%2A>， <xref:System.Drawing.Graphics.DrawCurve%2A> （適用於基本曲線），以及<xref:System.Drawing.Graphics.DrawBezier%2A>. 每一種方法多載;也就是說，每一種方法支援數個不同的參數清單。 比方說，一個變化<xref:System.Drawing.Graphics.DrawLine%2A>方法會接收<xref:System.Drawing.Pen>物件和四個整數，另一種變化的同時<xref:System.Drawing.Graphics.DrawLine%2A>方法會接收<xref:System.Drawing.Pen>物件和兩個<xref:System.Drawing.Point>物件。  

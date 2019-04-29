@@ -3,11 +3,11 @@ title: 從命令樹產生 SQL - 最佳作法
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
 ms.openlocfilehash: 6ac46b577f071bca6c79e23b8b77f9b267ac879b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606663"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>從命令樹產生 SQL - 最佳作法
 
@@ -117,7 +117,7 @@ ON b.y = d.z
 
 為了說明輸入別名重新導向，請考量關聯運算式的結構，例如 DbFilterExpression、DbProjectExpression、DbCrossJoinExpression、DbJoinExpression、DbSortExpression、DbGroupByExpression、DbApplyExpression 和 DbSkipExpression。
 
-其中每一個型別都具有一個或多個描述輸入集合的 Input 屬性，而且對應至每個輸入的繫結變數會在集合周遊期間用來代表該輸入的每個項目。 例如，參考 DbFilterExpression 之 Predicate 屬性或 DbProjectExpression 之 Projection 屬性中的輸入項目時，就會使用此繫結變數。
+其中每一個型別都具有一個或多個描述輸入集合的 Input 屬性，而且對應至每個輸入的繫結變數會在集合周遊期間用來代表該輸入的每個項目。 例如，參考 DbFilterExpression 之 Predicate 屬性或 DbProjectExpression 之 Projection 屬性中的輸入項目時，就會使用此繫結程序變數。
 
 將多個關聯運算式節點彙總成單一 SQL SELECT 陳述式，並且評估屬於關聯運算式一部分的運算式 (例如，屬於 DbProjectExpression 之 Projection 屬性的一部分) 時，它所使用的繫結變數可能不會與輸入的別名相同，因為多個運算式繫結必須重新導向至單一範圍。  這個問題就稱為別名重新命名。
 

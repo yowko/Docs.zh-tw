@@ -3,11 +3,11 @@ title: 選擇訊息編碼器
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
 ms.openlocfilehash: 0c960505d6c8368396cddebe37c76c8d95550727
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608381"
 ---
 # <a name="choosing-a-message-encoder"></a>選擇訊息編碼器
 本主題將討論 Windows Communication Foundation (WCF) 中包含之訊息編碼器之間選擇的準則： 二進位、 文字和訊息傳輸最佳化機制 (MTOM)。  
@@ -21,11 +21,11 @@ ms.locfileid: "58409480"
 ## <a name="system-provided-encoders"></a>系統提供的編碼器  
  WCF 包含三種訊息編碼器，都由下列三個類別：  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 即文字訊息編碼器，支援純 XML 編碼方式和 SOAP 編碼方式。 文字訊息編碼器的純 XML 編碼模式稱為 "plain old XML" (POX)，與文字為主的 SOAP 編碼方式有所區別。 若要啟用 POX，請將 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> 屬性設定為 <xref:System.ServiceModel.Channels.MessageVersion.None%2A>。 您可以使用文字訊息編碼器，與非 WCF 端點相互操作。  
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 即文字訊息編碼器，支援純 XML 編碼方式和 SOAP 編碼方式。 文字訊息編碼器的純 XML 編碼模式稱為 "plain old XML" (POX)，與文字為主的 SOAP 編碼方式有所區別。 若要啟用 POX，請將 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> 屬性設定為 <xref:System.ServiceModel.Channels.MessageVersion.None%2A>。 您可以使用文字訊息編碼器，與非 WCF 端點相互操作。  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>二進位訊息編碼器，會使用壓縮的二進位格式和最適合用於 WCF 對 WCF 通訊，因此不具互通性。 這也是 WCF 提供的所有編碼器的大部分具效能的編碼器。  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>二進位訊息編碼器，會使用壓縮的二進位格式和最適合用於 WCF 對 WCF 通訊，因此不具互通性。 這也是 WCF 提供的所有編碼器的大部分具效能的編碼器。  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 即繫結項目，會指定以 MTOM 編碼訊息的字元編碼和訊息版本處理。 MTOM 是在 WCF 訊息中傳輸二進位資料的有效技術。 MTOM 編碼器會嘗試在效率和互通性之間建立平衡。 MTOM 編碼方式會以文字格式傳輸大部分的 XML，但是在傳輸大型區塊的二進位資料時，會依照原狀來傳送 (不轉換成文字)，好讓這些資料最佳化。 就效率而言，WCF 會提供的編碼器之間 MTOM 是介於文字 （最慢） 和二進位檔 （最快）。  
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 即繫結項目，會指定以 MTOM 編碼訊息的字元編碼和訊息版本處理。 MTOM 是在 WCF 訊息中傳輸二進位資料的有效技術。 MTOM 編碼器會嘗試在效率和互通性之間建立平衡。 MTOM 編碼方式會以文字格式傳輸大部分的 XML，但是在傳輸大型區塊的二進位資料時，會依照原狀來傳送 (不轉換成文字)，好讓這些資料最佳化。 就效率而言，WCF 會提供的編碼器之間 MTOM 是介於文字 （最慢） 和二進位檔 （最快）。  
   
 ## <a name="how-to-choose-a-message-encoder"></a>如何選擇訊息編碼器  
  下表說明選擇訊息編碼器時的通用因素。 將對您應用程式最重要的因素設定優先權，然後選擇最適合這些因素的訊息編碼器。 請務必考慮表格中所未列出的任何其他因素，以及應用程式可能需要的任何自訂訊息編碼器。  

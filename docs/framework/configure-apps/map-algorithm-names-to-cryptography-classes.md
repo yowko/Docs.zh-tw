@@ -8,22 +8,22 @@ helpviewer_keywords:
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
 ms.openlocfilehash: 6ec98aabd92a7a0fed11482bdf6e5e8ddc045a7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700799"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>將演算法名稱對應至密碼編譯類別
 有四種方式，開發人員可以建立密碼編譯物件，使用[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
   
--   使用建立的物件**新**運算子。  
+- 使用建立的物件**新**運算子。  
   
--   建立藉由呼叫實作特定的密碼編譯演算法的物件**建立**該演算法的抽象類別上的方法。  
+- 建立藉由呼叫實作特定的密碼編譯演算法的物件**建立**該演算法的抽象類別上的方法。  
   
--   建立藉由呼叫實作特定的密碼編譯演算法的物件<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法。  
+- 建立藉由呼叫實作特定的密碼編譯演算法的物件<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法。  
   
--   建立物件，實作密碼編譯演算法 （例如對稱區塊編碼器） 藉由呼叫**Create**方法的抽象類別上該類型的演算法 (例如<xref:System.Security.Cryptography.SymmetricAlgorithm>)。  
+- 建立物件，實作密碼編譯演算法 （例如對稱區塊編碼器） 藉由呼叫**Create**方法的抽象類別上該類型的演算法 (例如<xref:System.Security.Cryptography.SymmetricAlgorithm>)。  
   
  例如，假設開發人員想要計算一組位元組的 SHA1 雜湊。 <xref:System.Security.Cryptography>命名空間包含兩個 SHA1 演算法，其中一個純粹是 managed 的實作，另一個包裝 CryptoAPI 實作。 開發人員可以選擇要具現化特定的 SHA1 實作 (例如<xref:System.Security.Cryptography.SHA1Managed>) 藉由呼叫**新**運算子。 不過，如果它並不重要，只要此類別會實作的 SHA1 雜湊演算法，common language runtime 載入哪一個類別，開發人員可以建立物件藉由呼叫<xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>方法。 這個方法會呼叫**System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")**，它必須傳回 SHA1 雜湊演算法的實作。  
   

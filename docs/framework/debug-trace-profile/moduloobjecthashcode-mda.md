@@ -13,11 +13,11 @@ ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6d8f6975d117d9920d2199c3996246822d1fdb6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753798"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode MDA
 `moduloObjectHashcode` Managed 偵錯助理 (MDA) 會變更 <xref:System.Object> 類別對 <xref:System.Object.GetHashCode%2A> 方法所傳回之雜湊碼執行模數作業的行為。 此 MDA 的預設模數是 1，讓 <xref:System.Object.GetHashCode%2A> 針對所有物件都傳回 0。  
@@ -25,13 +25,13 @@ ms.locfileid: "59170763"
 ## <a name="symptoms"></a>徵兆  
  移至新版的 Common Language Runtime (CLR) 之後，就無法再正確地執行程式：  
   
--   程式會從 <xref:System.Collections.Hashtable> 取得錯誤的物件。  
+- 程式會從 <xref:System.Collections.Hashtable> 取得錯誤的物件。  
   
--   <xref:System.Collections.Hashtable> 中的列舉順序包含中斷程式的變更。  
+- <xref:System.Collections.Hashtable> 中的列舉順序包含中斷程式的變更。  
   
--   兩個相等的物件不再相等。  
+- 兩個相等的物件不再相等。  
   
--   兩個不相等的物件現在相等。  
+- 兩個不相等的物件現在相等。  
   
 ## <a name="cause"></a>原因  
  您的程式可能從 <xref:System.Collections.Hashtable> 取得錯誤物件，因為 <xref:System.Collections.Hashtable> 中索引鍵類別上的 <xref:System.Object.Equals%2A> 方法實作會比較 <xref:System.Object.GetHashCode%2A> 方法呼叫的結果，來測試物件是否相等。 雜湊碼不應該用來測試物件是否相等，因為兩個物件可能有相同的雜湊碼，即使其個別欄位具有不同的值也是一樣。 雖然實務上十分罕見，但確實會發生這些雜湊碼衝突。 這對 <xref:System.Collections.Hashtable> 查閱的影響是兩個不相等的索引鍵顯示為相等，並且從 <xref:System.Collections.Hashtable> 傳回錯誤的物件。 基於效能考量，<xref:System.Object.GetHashCode%2A> 實作可以在執行階段版本之間變更，因此某個版本可能不會發生的衝突可能會在後續版本上發生。 讓此 MDA 測試在雜湊碼衝突時，您的程式碼是否有 Bug。 啟用時，此 MDA 會讓 <xref:System.Object.GetHashCode%2A> 方法傳回 0，因而導致所有雜湊碼衝突。 啟用此 MDA 對程式的唯一影響，在於您程式的執行速度會變慢。  

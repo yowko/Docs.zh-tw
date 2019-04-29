@@ -23,11 +23,11 @@ helpviewer_keywords:
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 ms.openlocfilehash: 5081f80ad0da738ebb950bcd649af7a593582356
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638073"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next 陳述式 (Visual Basic)
 每個項目集合中，會重複一組陳述式。  
@@ -92,11 +92,11 @@ Next [ element ]
   
  `Exit For` 在某些狀況中，評估後通常用在`If`...`Then`...`Else`結構。 您可能想要使用`Exit For`下列條件：  
   
--   繼續向逐一查看是不必要或不可能。 這可能被造成錯誤的數值或終止要求。  
+- 繼續向逐一查看是不必要或不可能。 這可能被造成錯誤的數值或終止要求。  
   
--   在攔截到例外狀況`Try`...`Catch`...`Finally`.您可以使用`Exit For`結尾的`Finally`區塊。  
+- 在攔截到例外狀況`Try`...`Catch`...`Finally`.您可以使用`Exit For`結尾的`Finally`區塊。  
   
--   該處永無止盡的迴圈，也就是無法執行大型或甚至是無限次數的迴圈。 如果您偵測到這種情況，您可以使用`Exit For`來逸出迴圈。 如需詳細資訊，請參閱[執行...迴圈陳述式](../../../visual-basic/language-reference/statements/do-loop-statement.md)。  
+- 該處永無止盡的迴圈，也就是無法執行大型或甚至是無限次數的迴圈。 如果您偵測到這種情況，您可以使用`Exit For`來逸出迴圈。 如需詳細資訊，請參閱[執行...迴圈陳述式](../../../visual-basic/language-reference/statements/do-loop-statement.md)。  
   
 ## <a name="iterators"></a>迭代器  
  您使用*迭代器*若要在集合上執行自訂反覆項目。 迭代器可以是函式或`Get`存取子。 它會使用`Yield`陳述式來傳回一次一個集合的每個項目。  

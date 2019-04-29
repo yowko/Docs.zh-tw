@@ -10,11 +10,11 @@ helpviewer_keywords:
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
 ms.openlocfilehash: 8df19e69ff3be06704878ea290a3f4a2997127eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703308"
 ---
 # <a name="freezable-objects-overview"></a>Freezable 物件概觀
 本主題說明如何有效地使用，並建立<xref:System.Windows.Freezable>提供特殊功能，可協助您改善應用程式效能的物件。 Freezable 物件的範例包括筆刷、 畫筆、 轉換、 幾何和動畫。  
@@ -63,11 +63,11 @@ ms.locfileid: "59224256"
   
  Freezable**無法**凍結如果下列任一項成立：  
   
--   它具有動畫，或資料繫結屬性。  
+- 它具有動畫，或資料繫結屬性。  
   
--   它的動態資源所設定的屬性。 (請參閱[XAML 資源](xaml-resources.md)的動態資源的詳細資訊。)  
+- 它的動態資源所設定的屬性。 (請參閱[XAML 資源](xaml-resources.md)的動態資源的詳細資訊。)  
   
--   它包含<xref:System.Windows.Freezable>無法凍結的子物件。  
+- 它包含<xref:System.Windows.Freezable>無法凍結的子物件。  
   
  如果這些條件都為 false，而且您不想要修改<xref:System.Windows.Freezable>，則您應該凍結它獲得稍早所述的效能優勢。  
   
@@ -122,13 +122,13 @@ mc:Ignorable="PresentationOptions"
 ## <a name="creating-your-own-freezable-class"></a>建立您自己的 Freezable 類別  
  類別衍生自<xref:System.Windows.Freezable>獲得下列功能。  
   
--   特殊的狀態： 唯讀 （凍結） 和可寫入的狀態。  
+- 特殊的狀態： 唯讀 （凍結） 和可寫入的狀態。  
   
--   執行緒安全： 凍結<xref:System.Windows.Freezable>可以跨執行緒共用。  
+- 執行緒安全： 凍結<xref:System.Windows.Freezable>可以跨執行緒共用。  
   
--   詳細的變更通知：不同於其他<xref:System.Windows.DependencyObject>s，Freezable 物件變更通知時提供子屬性值變更。  
+- 詳細的變更通知：不同於其他<xref:System.Windows.DependencyObject>s，Freezable 物件變更通知時提供子屬性值變更。  
   
--   輕鬆複製： Freezable 的類別已實作數種方法，產生深層複製品。  
+- 輕鬆複製： Freezable 的類別已實作數種方法，產生深層複製品。  
   
  A<xref:System.Windows.Freezable>是一種<xref:System.Windows.DependencyObject>，並因此會使用相依性屬性系統。 您的類別屬性不必是相依性屬性，但使用相依性屬性，則會減少您必須撰寫，因為程式碼數量<xref:System.Windows.Freezable>類別的設計在心的相依性屬性。 如需有關相依性屬性系統的詳細資訊，請參閱[相依性屬性概觀](dependency-properties-overview.md)。  
   
@@ -136,23 +136,23 @@ mc:Ignorable="PresentationOptions"
   
  如果您的類別包含非相依性屬性資料成員，您也必須覆寫下列方法：  
   
--   <xref:System.Windows.Freezable.CloneCore%2A>  
+- <xref:System.Windows.Freezable.CloneCore%2A>  
   
--   <xref:System.Windows.Freezable.CloneCurrentValueCore%2A>  
+- <xref:System.Windows.Freezable.CloneCurrentValueCore%2A>  
   
--   <xref:System.Windows.Freezable.GetAsFrozenCore%2A>  
+- <xref:System.Windows.Freezable.GetAsFrozenCore%2A>  
   
--   <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A>  
+- <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A>  
   
--   <xref:System.Windows.Freezable.FreezeCore%2A>  
+- <xref:System.Windows.Freezable.FreezeCore%2A>  
   
  您也必須遵守下列規則來存取和寫入資料成員不是相依性屬性：  
   
--   在任何開頭[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]它會讀取非相依性屬性資料成員，請呼叫<xref:System.Windows.Freezable.ReadPreamble%2A>方法。  
+- 在任何開頭[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]它會讀取非相依性屬性資料成員，請呼叫<xref:System.Windows.Freezable.ReadPreamble%2A>方法。  
   
--   將寫入非相依性屬性資料成員的任何 API 開頭呼叫<xref:System.Windows.Freezable.WritePreamble%2A>方法。 (一旦您呼叫了<xref:System.Windows.Freezable.WritePreamble%2A>中[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]，您不需要進行額外的呼叫<xref:System.Windows.Freezable.ReadPreamble%2A>如果您也可以讀取非相依性屬性資料成員。)  
+- 將寫入非相依性屬性資料成員的任何 API 開頭呼叫<xref:System.Windows.Freezable.WritePreamble%2A>方法。 (一旦您呼叫了<xref:System.Windows.Freezable.WritePreamble%2A>中[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]，您不需要進行額外的呼叫<xref:System.Windows.Freezable.ReadPreamble%2A>如果您也可以讀取非相依性屬性資料成員。)  
   
--   呼叫<xref:System.Windows.Freezable.WritePostscript%2A>方法，然後再結束寫入非相依性屬性資料成員的方法。  
+- 呼叫<xref:System.Windows.Freezable.WritePostscript%2A>方法，然後再結束寫入非相依性屬性資料成員的方法。  
   
  如果您的類別會包含非相依性屬性資料成員，則<xref:System.Windows.DependencyObject>物件，您還必須呼叫<xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A>方法每次您變更其中一個其值，即使您正在設定之成員`null`。  
   

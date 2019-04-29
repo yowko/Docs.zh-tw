@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
 ms.openlocfilehash: db0e4acc76f758004948857fc0b23a9cbc62f244
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669328"
 ---
 # <a name="workflow-persistence"></a>工作流程持續性
 工作流程持續性是永久擷取工作流程執行個體的狀態，與處理序或電腦資訊無關。 這麼做是為了在發生系統故障時提供已知的工作流程執行個體復原點，或者藉由卸載非正在進行工作的工作流程執行個體來保留記憶體，或者將工作流程執行個體的狀態從某個節點移到伺服器陣列中的另一個節點。  
@@ -27,30 +27,30 @@ ms.locfileid: "57715538"
 ## <a name="implicit-persistence-points"></a>隱含的保存點  
  下列清單包含當執行個體存放區與工作流程相關時，保存工作流程的條件範例。  
   
--   當**TransactionScope**活動完成或有**TransactedReceiveScope**活動完成。  
+- 當**TransactionScope**活動完成或有**TransactedReceiveScope**活動完成。  
   
--   當工作流程執行個體變成閒置並**WorkflowIdleBehavior**設定工作流程主機上。 發生這種情況，例如，當您使用傳訊活動或**延遲**活動。  
+- 當工作流程執行個體變成閒置並**WorkflowIdleBehavior**設定工作流程主機上。 發生這種情況，例如，當您使用傳訊活動或**延遲**活動。  
   
--   當 WorkflowApplication 變成閒置並**PersistableIdle**應用程式的屬性設定為**PersistableIdleAction.Persist**。  
+- 當 WorkflowApplication 變成閒置並**PersistableIdle**應用程式的屬性設定為**PersistableIdleAction.Persist**。  
   
--   當指示主應用程式保存或卸載工作流程執行個體時。  
+- 當指示主應用程式保存或卸載工作流程執行個體時。  
   
--   當工作流程執行個體終止或完成時。  
+- 當工作流程執行個體終止或完成時。  
   
--   當**Persist**活動執行。  
+- 當**Persist**活動執行。  
   
--   當使用舊版 Windows Workflow Foundation 開發的工作流程執行個體在互通的執行期間遇到保存點時。  
+- 當使用舊版 Windows Workflow Foundation 開發的工作流程執行個體在互通的執行期間遇到保存點時。  
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [SQL 工作流程執行個體存放區](sql-workflow-instance-store.md)  
+- [SQL 工作流程執行個體存放區](sql-workflow-instance-store.md)  
   
--   [執行個體存放區](instance-stores.md)  
+- [執行個體存放區](instance-stores.md)  
   
--   [持續性參與者](persistence-participants.md)  
+- [持續性參與者](persistence-participants.md)  
   
--   [持續性最佳做法](persistence-best-practices.md)  
+- [持續性最佳做法](persistence-best-practices.md)  
   
--   [非持續性工作流程執行個體](non-persisted-workflow-instances.md)  
+- [非持續性工作流程執行個體](non-persisted-workflow-instances.md)  
   
--   [暫停及繼續工作流程](pausing-and-resuming-a-workflow.md)
+- [暫停及繼續工作流程](pausing-and-resuming-a-workflow.md)

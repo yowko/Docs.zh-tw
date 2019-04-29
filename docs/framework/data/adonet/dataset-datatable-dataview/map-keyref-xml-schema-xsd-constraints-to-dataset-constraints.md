@@ -3,11 +3,11 @@ title: 將 keyref XML 結構描述 (XSD) 條件約束對應至資料集條件約
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
 ms.openlocfilehash: dcb295aef6d93222e682ef7f720c83963036e795
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607484"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>將 keyref XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 **Keyref**元素可讓您建立文件內的項目之間的連結。 這與關聯式資料庫中的外部索引鍵關聯性很類似。 如果指定了結構描述**keyref**項目，項目會轉換至對應外部索引鍵條件約束的資料表中的資料行的結構描述對應程序<xref:System.Data.DataSet>。 根據預設， **keyref**項目也會產生關聯，以**ParentTable**， **ChildTable**， **ParentColumn**，以及**ChildColumn**在關聯上指定的屬性。  
@@ -75,7 +75,7 @@ Order(OrderNumber, EmpNumber)
   
  颾魤 ㄛ**資料集**定義下列條件約束：  
   
--   Unique 條件約束**順序**資料表。  
+- Unique 條件約束**順序**資料表。  
   
     ```  
               Table: Order  
@@ -85,7 +85,7 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
--   之間的關聯性**順序**並**OrderDetail**資料表。 **巢狀**屬性設定為**False**因為兩個項目無巢狀結構描述中。  
+- 之間的關聯性**順序**並**OrderDetail**資料表。 **巢狀**屬性設定為**False**因為兩個項目無巢狀結構描述中。  
   
     ```  
               ParentTable: Order  
@@ -98,7 +98,7 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
--   上的外部索引鍵條件約束**OrderDetail**資料表。  
+- 上的外部索引鍵條件約束**OrderDetail**資料表。  
   
     ```  
               ConstraintName: OrderNoRef  

@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID387
 ms.assetid: 809f6768-7dd7-4632-b4dd-83856edfdb48
 ms.openlocfilehash: 231dd322fd0eadb6fa13d58b527c0b047cc0e3f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61594803"
 ---
 # <a name="set-not-permitted"></a>不允許使用 Set
 您嘗試要變更無法在執行階段設定其設定的屬性，或是只能在某些情況下設定其設定的屬性。 例如，您可能嘗試在執行階段變更表單的 `Appearance`、 `ControlBox`、`MinButton`或 `MaxButton` 屬性設定，或是您可能嘗試針對父功能表上最後一個剩餘可見的子功能表，將 `Visible` 屬性設為 `False` 。  

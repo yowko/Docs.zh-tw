@@ -3,11 +3,11 @@ title: ADO.NET Entity Framework 中的連接字串
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
 ms.openlocfilehash: 55097e4977111c56cb06c590e305e31ed681fd31
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606767"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>ADO.NET Entity Framework 中的連接字串
 
@@ -28,7 +28,7 @@ EntityClient 提供者會在存取模型和對應中繼資料，以及連接至�
 |關鍵字|描述|
 |-------------|-----------------|
 |`Provider`|如果沒有指定 `Name` 關鍵字，就是必要項。 用來擷取基礎提供者之 <xref:System.Data.Common.DbProviderFactory> 物件的提供者名稱。 這個值是常數。<br /><br /> 當 `Name` 關鍵字未包含在實體連接字串中時，需要 `Provider` 關鍵字的非空白值。 此關鍵字與 `Name` 關鍵字互斥。|
-|`Provider Connection String`|選擇項。 指定傳給基礎資料來源的提供者特定連接字串。 此連接字串包含有效關鍵字/值組的資料提供者。 無效的 `Provider Connection String` 會在資料來源對其進行評估時導致執行階段錯誤。<br /><br /> 此關鍵字與 `Name` 關鍵字互斥。<br /><br /> 請確定逸出值，根據一般的語法[ADO.NET 連接字串](../../../../../docs/framework/data/adonet/connection-strings.md)。 請考慮，例如下列連接字串： `Server=serverName; User ID = userID`。 因為它包含分號，它必須是逸出。 因為它不包含雙引號，則他們可能會用於逸出：<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|
+|`Provider Connection String`|選擇性。 指定傳給基礎資料來源的提供者特定連接字串。 此連接字串包含有效關鍵字/值組的資料提供者。 無效的 `Provider Connection String` 會在資料來源對其進行評估時導致執行階段錯誤。<br /><br /> 此關鍵字與 `Name` 關鍵字互斥。<br /><br /> 請確定逸出值，根據一般的語法[ADO.NET 連接字串](../../../../../docs/framework/data/adonet/connection-strings.md)。 請考慮，例如下列連接字串： `Server=serverName; User ID = userID`。 因為它包含分號，它必須是逸出。 因為它不包含雙引號，則他們可能會用於逸出：<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|
 |`Metadata`|如果沒有指定 `Name` 關鍵字，就是必要項。 目錄、檔案和資源位置的垂直線分隔清單，您可在其中尋找中繼資料和對應資訊。 以下是一個範例：<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> 忽略垂直線分隔符號兩端的空白。<br /><br /> 此關鍵字與 `Name` 關鍵字互斥。|
 |`Name`|應用程式可選擇性的在應用程式組態檔中指定連接名稱，以提供必要的關鍵字/值連接字串值。 在此情況下，您不能在連接字串中直接提供這些值。 在組態檔中不允許 `Name` 關鍵字。<br /><br /> 當 `Name` 關鍵字未包含在連接字串中時，需要 Provider 關鍵字的非空白值。<br /><br /> 此關鍵字與所有其他連接字串關鍵字互斥。|
 

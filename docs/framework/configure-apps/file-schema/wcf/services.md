@@ -3,11 +3,11 @@ title: <services>
 ms.date: 03/30/2017
 ms.assetid: 80d76ba9-2058-48ad-9b91-5e4be7e5c113
 ms.openlocfilehash: 2db168d48e3959a7d80a10ca27134f58e3fcb2de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758154"
 ---
 # <a name="services"></a>\<services>
 服務定義於組態檔的 `services` 區段中。 各服務都有自己的 `service` 組態區段。  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703682"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 繫結概觀
 繫結是用來指定連接到 Windows Communication Foundation (WCF) 服務的端點所需之通訊詳細資料的物件。 WCF 服務中的每個端點都需要正確指定的繫結。 本主題概述通訊詳細資料所定義的繫結的繫結、 哪些繫結會包含在 WCF 中，以及如何指定繫結的端點項目的類型。  
@@ -32,13 +32,13 @@ ms.locfileid: "59325055"
 ## <a name="system-provided-bindings"></a>系統提供的繫結  
  繫結中的資訊可能很複雜，而有些設定也可能彼此不相容。 基於這個理由，WCF 會包含一組系統提供繫結。 這些繫結程序設計為滿足大多數應用程式需求。 下列類別則表示系統提供之繫結的一些範例：  
   
--   <xref:System.ServiceModel.BasicHttpBinding>：HTTP 通訊協定繫結適合用來連接到 Web 服務符合 WS-Basic Profile 規格 （例如，ASP.NET Web 服務為基礎服務）。  
+- <xref:System.ServiceModel.BasicHttpBinding>：HTTP 通訊協定繫結適合用來連接到 Web 服務符合 WS-Basic Profile 規格 （例如，ASP.NET Web 服務為基礎服務）。  
   
--   <xref:System.ServiceModel.WSHttpBinding>：互通的繫結適合用來連接到端點符合 WS-* 通訊協定。  
+- <xref:System.ServiceModel.WSHttpBinding>：互通的繫結適合用來連接到端點符合 WS-* 通訊協定。  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>：使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]連接至同一部電腦上的其他 WCF 端點。  
+- <xref:System.ServiceModel.NetNamedPipeBinding>：使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]連接至同一部電腦上的其他 WCF 端點。  
   
--   <xref:System.ServiceModel.NetMsmqBinding>：使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]與其他 WCF 端點建立佇列的訊息連線。  
+- <xref:System.ServiceModel.NetMsmqBinding>：使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]與其他 WCF 端點建立佇列的訊息連線。  
 
 - <xref:System.ServiceModel.NetTcpBinding>：這個繫結提供更高的效能比 HTTP 繫結，而且非常適用於區域網路。
   

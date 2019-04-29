@@ -9,18 +9,18 @@ ms.assetid: e2cf98b7-40c1-4f74-86c7-8a76dd9da677
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec2fd3b309820f2bfb7f6091cc3db720db497408
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697663"
 ---
 # <a name="fusion-interfaces"></a>融合介面
-本章節描述融合 API 會使用來存取應用程式的資源的內容，並找出正確的版本的應用程式資源的 unmanaged 的介面。  
+本章節描述融合 API 會使用存取的應用程式資源的屬性，並找出這些資源的應用程式的正確版本的 unmanaged 的介面。  
   
 ## <a name="in-this-section"></a>本節內容  
  [IAppIdAuthority 介面](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)  
- 提供方法，產生並比較應用程式的身分識別與參考的索引鍵。  
+ 提供方法，產生及比較應用程式身分識別和參考的索引鍵。  
   
  [IAssemblyCache 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)  
  提供全域組件快取的表示法。  
@@ -29,16 +29,16 @@ ms.locfileid: "33434889"
  表示在全域組件快取中的單一組件。  
   
  [IAssemblyEnum 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)  
- 表示陣列的列舉值`IAssemblyName`物件。  
+ 表示陣列的列舉程式`IAssemblyName`物件。  
   
  [IAssemblyName 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- 提供方法來描述及使用組件的唯一識別。  
+ 提供方法來描述和使用組件的唯一身分識別。  
   
  [IDefinitionAppId 介面](../../../../docs/framework/unmanaged-api/fusion/idefinitionappid-interface.md)  
- 代表目前範圍中定義的應用程式的程式碼的唯一識別碼。  
+ 代表目前範圍中定義應用程式的程式碼的唯一識別碼。  
   
  [IDefinitionIdentity 介面](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)  
- 代表目前範圍中定義的應用程式的程式碼的唯一的簽章。  
+ 代表目前範圍中定義應用程式的程式碼的唯一的簽章。  
   
  [IEnumDefinitionIdentity 介面](../../../../docs/framework/unmanaged-api/fusion/ienumdefinitionidentity-interface.md)  
  做為集合的列舉值`IDefinitionIdentity`物件。  
@@ -47,13 +47,13 @@ ms.locfileid: "33434889"
  可做為目前範圍中的程式碼物件的屬性的列舉值。  
   
  [IEnumReferenceIdentity 介面](../../../../docs/framework/unmanaged-api/fusion/ienumreferenceidentity-interface.md)  
- 做為集合的列舉值`IReferenceIdentity`物件。  
+ 做為集合的列舉程式`IReferenceIdentity`物件。  
   
  [IIdentityAuthority 介面](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md)  
  管理程式碼物件的識別索引鍵。  
   
  [IInstallReferenceEnum 介面](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)  
- 代表安裝在全域組件快取的參考組件的列舉值。  
+ 表示參考的組件安裝在全域組件快取的列舉值。  
   
  [IInstallReferenceItem 介面](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)  
  代表安裝在全域組件快取的項目。  

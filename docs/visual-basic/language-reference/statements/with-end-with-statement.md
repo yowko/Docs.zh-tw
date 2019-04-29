@@ -16,11 +16,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
 ms.openlocfilehash: de2edc6b16689673c3be6703ff1a201febe73526
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698638"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With 陳述式 (Visual Basic)
 執行一系列重複參考單一物件或結構的陳述式，使陳述式在存取物件或結構的成員時，可以使用簡化的語法。  使用結構時，您可以只讀取成員的值或叫用方法，如果嘗試指派值給 `With...End With` 陳述式中使用的結構成員，將會收到錯誤。  
@@ -48,9 +48,9 @@ End With
   
  如果您的程式碼會在多個陳述式中存取相同物件，使用 `With` 陳述式有下列好處：  
   
--   您不需要多次評估複雜的運算式或指派結果給暫存變數，以多次參考其成員。  
+- 您不需要多次評估複雜的運算式或指派結果給暫存變數，以多次參考其成員。  
   
--   您可以讓程式碼更容易讀取，方法是排除重複的限定運算式。  
+- 您可以讓程式碼更容易讀取，方法是排除重複的限定運算式。  
   
  `objectExpression` 的資料類型可以是任何類別或結構類型，甚至是如 `Integer` 這類的 Visual Basic 基礎類型。  如果 `objectExpression` 會產生除了物件以外的任何項目，您可以只讀取其成員的值或叫用方法，如果嘗試指派值給 `With...End With` 陳述式中使用的結構成員，將會收到錯誤。  如果您叫用傳回結構的方法，並且立即存取和指派值給函式結果的成員 (例如 `GetAPoint().x = 1`)，便會收到這種相同錯誤。  這兩種情況下的問題是結構只存在於呼叫堆疊中，且在這些情況下沒有方法可以將修改過的結構成員寫入程式中其他程式碼可以觀察到變更的位置。  
   

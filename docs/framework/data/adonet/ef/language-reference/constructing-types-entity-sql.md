@@ -3,11 +3,11 @@ title: 建構類型 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
 ms.openlocfilehash: 53aa7fcc82a476c8b8bd87b059e08bee6741c0d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605820"
 ---
 # <a name="constructing-types-entity-sql"></a>建構類型 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供三種類型的建構函式： 資料列建構函式、 具名的類型建構函式和集合建構函式。  
@@ -21,9 +21,9 @@ ms.locfileid: "59073776"
   
  下列規則適用於資料列建構函式中的運算式別名：  
   
--   資料列建構函式中的運算式不可參考同一個建構函式中的其他別名。  
+- 資料列建構函式中的運算式不可參考同一個建構函式中的其他別名。  
   
--   同一個資料列建構函式中的兩個運算式不能有相同的別名。  
+- 同一個資料列建構函式中的兩個運算式不能有相同的別名。  
   
  如需有關資料列建構函式的詳細資訊，請參閱[資料列](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)。  
   

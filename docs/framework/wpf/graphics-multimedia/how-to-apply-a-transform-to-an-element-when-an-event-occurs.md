@@ -12,20 +12,20 @@ helpviewer_keywords:
 - LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
 ms.openlocfilehash: 973b9267eaef5d55176633ee80a1dc7f8b043909
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698989"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>HOW TO：在事件發生時將轉換套用至元素
 此範例示範如何套用<xref:System.Windows.Media.ScaleTransform>事件發生時。 這裡所示範的概念，與您用來套用其他類型轉換的概念相同。 如需可用的轉換類型的詳細資訊，請參閱<xref:System.Windows.Media.Transform>類別或[轉換概觀](transforms-overview.md)。  
   
  您可以透過下列兩種方式其中之一，將轉換套用至元素：  
   
--   如果您這樣做*未*希望轉換影響版面配置，請使用<xref:System.Windows.UIElement.RenderTransform%2A>項目的屬性。  
+- 如果您這樣做*未*希望轉換影響版面配置，請使用<xref:System.Windows.UIElement.RenderTransform%2A>項目的屬性。  
   
--   如果您希望轉換影響版面配置，使用<xref:System.Windows.FrameworkElement.LayoutTransform%2A>項目的屬性。  
+- 如果您希望轉換影響版面配置，使用<xref:System.Windows.FrameworkElement.LayoutTransform%2A>項目的屬性。  
   
  下列範例會套用<xref:System.Windows.Media.ScaleTransform>至<xref:System.Windows.UIElement.RenderTransform%2A>按鈕的屬性。 當滑鼠移至按鈕，<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>並<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>的屬性<xref:System.Windows.Media.ScaleTransform>設定為`2`，這會使按鈕變得越來越大。 當滑鼠移動按鈕，關閉<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>並<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>設定為`1`，這會使按鈕回到其原始大小。  
   

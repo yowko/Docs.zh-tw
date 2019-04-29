@@ -9,11 +9,11 @@ helpviewer_keywords:
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
 ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674385"
 ---
 # <a name="socket-element-network-settings"></a>\<通訊端 > 項目 （網路設定）
 指定通訊端作業是否使用完成通訊埠。  
@@ -64,9 +64,9 @@ ms.locfileid: "59160156"
   
  這`ipProtectionLevel`屬性設定會影響初始的連入流量：  
   
--   TCP 伺服器接聽的通訊端上的連入連線。  
+- TCP 伺服器接聽的通訊端上的連入連線。  
   
--   接收通訊端上的封包的 UDP 應用程式。  
+- 接收通訊端上的封包的 UDP 應用程式。  
   
  此組態設定不會影響已經建立的 TCP 連線 （流量不受限制的兩個方向），而且不會影響應用程式會傳送 UDP 封包。  
   

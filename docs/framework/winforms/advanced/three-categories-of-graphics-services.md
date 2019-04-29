@@ -9,20 +9,20 @@ helpviewer_keywords:
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
 ms.openlocfilehash: ccbd5e236b47d1d870c9b77cfa2b3880619cf3cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651515"
 ---
 # <a name="three-categories-of-graphics-services"></a>圖形服務的三個分類
 在 Windows Form 中的圖形供應項目可分為下列三個廣泛的類別：  
   
--   二維 (2-d) 向量圖形  
+- 二維 (2-d) 向量圖形  
   
--   映像  
+- 映像  
   
--   印刷樣式  
+- 印刷樣式  
   
 ## <a name="2-d-vector-graphics"></a>2d 向量圖形  
  二維向量圖形是基本型別;例如線條、 曲線和圖形;由組點座標系統上所指定。 比方說，一條直線由其兩個端點，並讓其左上角，以及提供其寬度和高度的數字的一組的位置點所指定的矩形。 連接的直線，線條的點陣列所指定簡單的路徑。 貝茲曲線是由四個控制點的複雜的曲線。  

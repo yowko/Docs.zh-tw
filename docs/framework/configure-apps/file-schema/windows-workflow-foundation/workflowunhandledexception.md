@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 57adeab5-f06a-44b2-916b-0e177cf0f4a6
 ms.openlocfilehash: cfe3350ac42d1e0e837b79f25753f62dc2051dd2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613387"
 ---
 # <a name="workflowunhandledexception"></a>\<workflowUnhandledException>
 這個服務行為可讓您指定工作流程服務內發生未處理的例外狀況時要採取的動作。  

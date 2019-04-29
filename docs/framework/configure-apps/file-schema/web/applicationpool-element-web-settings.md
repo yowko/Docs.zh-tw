@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
 ms.openlocfilehash: 16207c3f3c711d06b71cafb2b67c5d29f3f14e39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698573"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > 項目 （Web 設定）
 指定 asp.net 用於 ASP.NET 應用程式上執行整合模式中時，管理整個處理序行為的組態設定[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更新版本。  
@@ -66,11 +66,11 @@ ms.locfileid: "59184726"
 ## <a name="example"></a>範例  
  下列範例會示範如何在下列情況中 aspnet.config 檔案設定 ASP.NET 全處理序行為：  
   
--   應用程式裝載於[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]應用程式集區。  
+- 應用程式裝載於[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]應用程式集區。  
   
--   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 以整合模式執行。  
+- [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 以整合模式執行。  
   
--   應用程式使用[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]或更新版本。  
+- 應用程式使用[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]或更新版本。  
   
  在範例中的值是預設值。  
   

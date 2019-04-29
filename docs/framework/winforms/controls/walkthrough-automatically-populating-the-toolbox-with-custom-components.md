@@ -7,33 +7,33 @@ helpviewer_keywords:
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
 ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759904"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>逐步解說：自動將自訂元件填入工具箱
 如果您的元件會定義目前開啟的方案中的專案，它們會自動顯示，在**工具箱**，您需要採取任何動作。 您可以手動填入**工具箱**以使用您自訂元件[選擇工具箱項目對話方塊 (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))，但**工具箱**考慮您的方案中的項目建置輸出具有所有下列特性：  
   
--   實作<xref:System.ComponentModel.IComponent>;  
+- 實作<xref:System.ComponentModel.IComponent>;  
   
--   沒有<xref:System.ComponentModel.ToolboxItemAttribute>設定為`false`;  
+- 沒有<xref:System.ComponentModel.ToolboxItemAttribute>設定為`false`;  
   
--   沒有<xref:System.ComponentModel.DesignTimeVisibleAttribute>設定為`false`。  
+- 沒有<xref:System.ComponentModel.DesignTimeVisibleAttribute>設定為`false`。  
   
 > [!NOTE]
 >  **工具箱**並未遵循參考鏈結，所以它不會顯示由您方案中的專案未建置的項目。  
   
  本逐步解說示範如何自訂元件會自動出現在**工具箱**建立元件之後。 這個逐步解說中所述的工作包括：  
   
--   建立 Windows Forms 專案。  
+- 建立 Windows Forms 專案。  
   
--   建立自訂元件。  
+- 建立自訂元件。  
   
--   建立自訂元件的執行個體。  
+- 建立自訂元件的執行個體。  
   
--   卸載並重新載入自訂元件。  
+- 卸載並重新載入自訂元件。  
   
  當您完成時，您會看到**工具箱**會填入您所建立的元件。  
   
@@ -96,6 +96,6 @@ ms.locfileid: "59338094"
 ## <a name="see-also"></a>另請參閱
 
 - [選項對話方塊、 Windows Form 設計工具、 一般](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
-- [如何：操作工具箱索引標籤](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100))
+- [如何：Manipulate Toolbox Tabs](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100)) (如何：操作工具箱索引標籤)
 - [選擇工具箱項目對話方塊 (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
 - [將控制項加入 Windows Forms](putting-controls-on-windows-forms.md)

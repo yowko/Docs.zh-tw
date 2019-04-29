@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Yield statement [Visual Basic]
 ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
 ms.openlocfilehash: fea91731694f18625e43c5545b353851e72234a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698612"
 ---
 # <a name="yield-statement-visual-basic"></a>Yield 陳述式 (Visual Basic)
 傳送至集合的下一個項目`For Each...Next`陳述式。  
@@ -46,11 +46,11 @@ Yield expression
 ## <a name="iterator-functions-and-get-accessors"></a>迭代器函式和 Get 存取子  
  迭代器函式宣告或`Get`存取子必須符合下列需求：  
   
--   它必須包含[迭代器](../../../visual-basic/language-reference/modifiers/iterator.md)修飾詞。  
+- 它必須包含[迭代器](../../../visual-basic/language-reference/modifiers/iterator.md)修飾詞。  
   
--   傳回類型必須是 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601>。  
+- 傳回類型必須是 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601>。  
   
--   它不能有任何`ByRef`參數。  
+- 它不能有任何`ByRef`參數。  
   
  迭代器函式不能出現在事件、 執行個體建構函式、 靜態的建構函式或靜態解構函式。  
   

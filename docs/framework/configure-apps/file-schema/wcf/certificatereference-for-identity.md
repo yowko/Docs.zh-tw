@@ -3,11 +3,11 @@ title: <certificateReference> 的 <identity>
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
 ms.openlocfilehash: 3b7779ac00c2fca6300c12ac18ff2d5f6b868424
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704332"
 ---
 # <a name="certificatereference-for-identity"></a>\<certificateReference > 針對\<身分識別 >
 指定 X.509 憑證驗證的設定。 連接至使用這個身分識別端點的安全 Windows Communication Foundation (WCF) 用戶端會確認伺服器提供的宣告，包含用來建構這個身分識別的身分識別宣告。  

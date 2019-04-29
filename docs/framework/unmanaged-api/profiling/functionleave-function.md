@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b1fe219c4c852792390b48b0ea4d38adb702281
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598866"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 函式
 通知分析工具函式會傳回給呼叫者。  
@@ -46,9 +46,9 @@ void __stdcall FunctionLeave (
   
  呼叫此函式之前，執行引擎不會儲存任何暫存器。  
   
--   項目，您必須儲存所有您使用，包括與浮點單位 (FPU) 中的暫存器。  
+- 項目，您必須儲存所有您使用，包括與浮點單位 (FPU) 中的暫存器。  
   
--   結束時，您必須還原堆疊驅離其呼叫端所推送的所有參數。  
+- 結束時，您必須還原堆疊驅離其呼叫端所推送的所有參數。  
   
  實作`FunctionLeave`應該不會封鎖，因為它將會延遲記憶體回收。 實作不應嘗試進行記憶體回收，因為堆疊可能無法在記憶體回收方便集合的狀態。 如果嘗試進行記憶體回收，則執行階段將會封鎖直到`FunctionLeave`傳回。  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
 ms.openlocfilehash: 17b7c93effe9338a9e2d6cb207a948a956d9b666
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640421"
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>HOW TO：存取 Windows Forms DataGridViewComboBoxCell 下拉式清單中的物件
 像是<xref:System.Windows.Forms.ComboBox>控制<xref:System.Windows.Forms.DataGridViewComboBoxColumn>和<xref:System.Windows.Forms.DataGridViewComboBoxCell>類型可讓您加入他們的下拉式清單中的任意物件。 利用此功能，您可以表示複雜的狀態，下拉式清單中，而不必將對應的物件儲存在個別的集合中。  
@@ -44,7 +44,7 @@ ms.locfileid: "59334272"
   
 ### <a name="to-retrieve-the-currently-selected-business-object"></a>若要擷取目前選取的商務物件  
   
--   取得儲存格<xref:System.Windows.Forms.DataGridViewCell.Value%2A>屬性並將其轉換至商務物件類型。  
+- 取得儲存格<xref:System.Windows.Forms.DataGridViewCell.Value%2A>屬性並將其轉換至商務物件類型。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#120)]  
@@ -66,7 +66,7 @@ ms.locfileid: "59334272"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   System 和 System.Windows.Forms 組件的參考。  
+- System 和 System.Windows.Forms 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
 

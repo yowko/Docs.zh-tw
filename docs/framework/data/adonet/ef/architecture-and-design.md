@@ -3,20 +3,20 @@ title: 架構與設計
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
 ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606839"
 ---
 # <a name="architecture-and-design"></a>架構與設計
 中的 SQL 產生模組[範例提供者](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)會實作成運算式樹狀架構表示的命令樹上的造訪者。 此產生作業是透過運算式樹狀結構，在單一行程中完成。  
   
  樹狀結構節點的處理方式是由下而上。 首先，會產生中繼結構：: SqlSelectStatement 或 SqlBuilder，這兩個實作 ISqlFragment。 接著，系統會根據該結構產生 SQL 陳述式字串。 使用中繼結構的原因有兩個：  
   
--   就邏輯上來說，SQL SELECT 陳述式會以不按照順序的方式擴展。 系統會先造訪參與 FROM 子句的節點，然後再造訪參與 WHERE、GROUP BY 和 ORDER BY 子句的節點。  
+- 就邏輯上來說，SQL SELECT 陳述式會以不按照順序的方式擴展。 系統會先造訪參與 FROM 子句的節點，然後再造訪參與 WHERE、GROUP BY 和 ORDER BY 子句的節點。  
   
--   若要重新命名別名，您必須識別所有使用的別名，才能避免在重新命名期間發生衝突。 若要在 SqlBuilder 中延後重新命名選擇，請使用 Symbol 物件來代表成為重新命名候選的資料行。  
+- 若要重新命名別名，您必須識別所有使用的別名，才能避免在重新命名期間發生衝突。 若要在 SqlBuilder 中延後重新命名選擇，請使用 Symbol 物件來代表成為重新命名候選的資料行。  
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
@@ -30,9 +30,9 @@ ms.locfileid: "59307570"
 ### <a name="isqlfragment"></a>ISqlFragment  
  本節內容涵蓋了實作 ISqlFragment 介面的類別，而這個介面具有兩種用途：  
   
--   當做所有造訪者方法的一般傳回型別。  
+- 當做所有造訪者方法的一般傳回型別。  
   
--   提供寫入最終 SQL 字串的方法。  
+- 提供寫入最終 SQL 字串的方法。  
   
 ```  
 internal interface ISqlFragment {  
@@ -194,11 +194,11 @@ private bool IsParentAJoin{get}
   
  一般而言，如果 SQL 陳述式子句是在考慮要合併之節點不是空的子句之後進行評估，此節點就無法加入至目前的陳述式。 例如，如果下一個節點是篩選，只有當下列條件成立時，該節點才能併入目前的 SqlSelectStatement：  
   
--   SELECT 清單是空的。 如果 SELECT 清單不是空的，就表示 SELECT 清單是由篩選前面的節點所產生，而且述詞可能會參考該 SELECT 清單所產生的資料行。  
+- SELECT 清單是空的。 如果 SELECT 清單不是空的，就表示 SELECT 清單是由篩選前面的節點所產生，而且述詞可能會參考該 SELECT 清單所產生的資料行。  
   
--   GROUPBY 是空的。 如果 GROUPBY 不是空的，加入篩選就表示在分組之前篩選，而這是不正確的作法。  
+- GROUPBY 是空的。 如果 GROUPBY 不是空的，加入篩選就表示在分組之前篩選，而這是不正確的作法。  
   
--   TOP 子句是空的。 如果 TOP 子句不是空的，加入篩選就表示在進行 TOP 之前篩選，而這是不正確的作法。  
+- TOP 子句是空的。 如果 TOP 子句不是空的，加入篩選就表示在進行 TOP 之前篩選，而這是不正確的作法。  
   
  這不會套用至 DbConstantExpression 或算術運算式等非關聯節點，因為這些節點一定會包含在現有的 SqlSelectStatement 中。  
   
@@ -236,35 +236,35 @@ private bool IsParentAJoin{get}
 ### <a name="relational-non-join-nodes"></a>關聯 (非聯結) 節點  
  下列運算式型別支援非聯結節點：  
   
--   DbDistinctExpression  
+- DbDistinctExpression  
   
--   DbFilterExpression  
+- DbFilterExpression  
   
--   DbGroupByExpression  
+- DbGroupByExpression  
   
--   DbLimitExpession  
+- DbLimitExpession  
   
--   DbProjectExpression  
+- DbProjectExpression  
   
--   DbSkipExpression  
+- DbSkipExpression  
   
--   DbSortExpression  
+- DbSortExpression  
   
  造訪這些節點的作業會遵循下列模式：  
   
 1. 造訪關聯輸入並取得產生的 SqlSelectStatement。 關聯節點的輸入可能是下列其中一項：  
   
-    -   關聯節點，包括範圍 (例如 DbScanExpression)。 造訪這類節點會傳回 SqlSelectStatement。  
+    - 關聯節點，包括範圍 (例如 DbScanExpression)。 造訪這類節點會傳回 SqlSelectStatement。  
   
-    -   設定作業運算式 (例如 UNION ALL)。 其結果必須用括弧包裝並且放入新 SqlSelectStatement 的 FROM 子句中。  
+    - 設定作業運算式 (例如 UNION ALL)。 其結果必須用括弧包裝並且放入新 SqlSelectStatement 的 FROM 子句中。  
   
 2. 檢查目前的節點是否能夠加入至輸入所產生的 SqlSelectStatement。 ＜將運算式組成 SQL 陳述式＞一節將詳細說明這點。 如果無法加入，則  
   
-    -   推出目前的 SqlSelectStatement 物件。  
+    - 推出目前的 SqlSelectStatement 物件。  
   
-    -   建立新的 SqlSelectStatement 物件並加入推出的 SqlSelectStatement 做為新 SqlSelectStatement 物件的 FROM。  
+    - 建立新的 SqlSelectStatement 物件並加入推出的 SqlSelectStatement 做為新 SqlSelectStatement 物件的 FROM。  
   
-    -   將新物件放在堆疊的頂端。  
+    - 將新物件放在堆疊的頂端。  
   
 3. 將輸入運算式繫結重新導向至輸入中的正確符號。 這項資訊會在 SqlSelectStatement 物件中維護。  
   
@@ -289,11 +289,11 @@ ORDER BY sk1, sk2, ...
 ### <a name="join-expressions"></a>聯結運算式  
  下列運算式會被視為聯結運算式，而且它們是以常見的方式進行處理 (透過 VisitJoinExpression 方法)：  
   
--   DbApplyExpression  
+- DbApplyExpression  
   
--   DbJoinExpression  
+- DbJoinExpression  
   
--   DbCrossJoinExpression  
+- DbCrossJoinExpression  
   
  下面是造訪步驟：  
   
@@ -305,15 +305,15 @@ ORDER BY sk1, sk2, ...
   
 2. 透過叫用 ProcessJoinInputResult，後置處理造訪輸入的結果，而這個方法會在造訪聯結運算式的子系以及可能完成子系所產生的 SqlSelectStatement 之後負責維護符號表。 子系的結果可能是下列其中一項：  
   
-    -   與即將加入父系之陳述式不同的 SqlSelectStatement。 在這種情況下，它可能必須透過加入預設資料行完成。 如果輸入是聯結，您就必須建立新的聯結符號。 否則，請建立一般符號。  
+    - 與即將加入父系之陳述式不同的 SqlSelectStatement。 在這種情況下，它可能必須透過加入預設資料行完成。 如果輸入是聯結，您就必須建立新的聯結符號。 否則，請建立一般符號。  
   
-    -   範圍 (例如 DbScanExpression)，在此情況下，它只會加入至父系之 SqlSelectStatement 的輸入清單。  
+    - 範圍 (例如 DbScanExpression)，在此情況下，它只會加入至父系之 SqlSelectStatement 的輸入清單。  
   
-    -   非 SqlSelectStatement，在此情況下，它會用括弧包裝。  
+    - 非 SqlSelectStatement，在此情況下，它會用括弧包裝。  
   
-    -   加入父系的相同 SqlSelectStatement。 在這種情況下，FromExtents 清單中的符號都必須取代成代表所有符號的單一新 JoinSymbol。  
+    - 加入父系的相同 SqlSelectStatement。 在這種情況下，FromExtents 清單中的符號都必須取代成代表所有符號的單一新 JoinSymbol。  
   
-    -   在前三種情況中，系統會呼叫 AddFromSymbol 來加入 AS 子句，並且更新符號表。  
+    - 在前三種情況中，系統會呼叫 AddFromSymbol 來加入 AS 子句，並且更新符號表。  
   
  第三步，造訪聯結條件 (如果有的話)。  
   
@@ -337,18 +337,18 @@ ORDER BY sk1, sk2, ...
   
  系統會先造訪 Instance 屬性，而且其結果為 Symbol、JoinSymbol 或 SymbolPair。 下面是這三種情況的處理方式：  
   
--   如果傳回了 JoinSymbol，則其 NameToExtent 屬性會包含代表所需屬性的符號。 如果此聯結符號代表巢狀聯結，就會傳回具有聯結符號的新符號配對，以便追蹤當做執行個體別名使用的符號，以及代表要進一步解析之實際屬性的符號。  
+- 如果傳回了 JoinSymbol，則其 NameToExtent 屬性會包含代表所需屬性的符號。 如果此聯結符號代表巢狀聯結，就會傳回具有聯結符號的新符號配對，以便追蹤當做執行個體別名使用的符號，以及代表要進一步解析之實際屬性的符號。  
   
--   如果傳回了 SymbolPair 而且 Column 部分是聯結符號，就會再次傳回聯結符號，但是這次 Column 屬性會更新為指向目前屬性運算式所代表的屬性。 否則，就會傳回 SqlBuilder，並將 SymbolPair 來源當做別名，而將目前屬性的符號當做資料行。  
+- 如果傳回了 SymbolPair 而且 Column 部分是聯結符號，就會再次傳回聯結符號，但是這次 Column 屬性會更新為指向目前屬性運算式所代表的屬性。 否則，就會傳回 SqlBuilder，並將 SymbolPair 來源當做別名，而將目前屬性的符號當做資料行。  
   
--   如果傳回了 Symbol，Visit 方法就會傳回 SqlBuilder 方法，並將該執行個體當做別名，而將屬性名稱當做資料行名稱。  
+- 如果傳回了 Symbol，Visit 方法就會傳回 SqlBuilder 方法，並將該執行個體當做別名，而將屬性名稱當做資料行名稱。  
   
 ### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
  將 DbNewInstanceExpression 當做 DbProjectExpression 的 Projection 屬性使用時，它會產生引數的逗號分隔清單，代表投影的資料行。  
   
  當 DbNewInstanceExpression 具有集合傳回型別，而且定義當做引數提供之運算式的新集合時，就會個別處理下列三種情況：  
   
--   如果 DbNewInstanceExpression 具有 DbElementExpression 當做唯一的引數，它就會轉譯成：  
+- 如果 DbNewInstanceExpression 具有 DbElementExpression 當做唯一的引數，它就會轉譯成：  
   
     ```  
     NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X  

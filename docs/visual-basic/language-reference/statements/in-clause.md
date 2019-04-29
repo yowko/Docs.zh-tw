@@ -7,11 +7,11 @@ helpviewer_keywords:
 - In keyword [Visual Basic]
 ms.assetid: 2f003a85-8fb6-4280-822b-6ac12839b915
 ms.openlocfilehash: 6826489970137605bf2b07f88b5a64f2ec6bfc2e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638281"
 ---
 # <a name="in-clause-visual-basic"></a>In 子句 (Visual Basic)
 指定迴圈變數来周遊的群組`For Each`迴圈，或指定的集合中查詢`From`， `Join`，或`Group Join`子句。  

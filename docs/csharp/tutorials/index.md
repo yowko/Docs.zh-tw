@@ -2,12 +2,12 @@
 title: C# 教學課程
 description: 探索這些 C# 教學課程以了解如何建置 C# 程式，並了解 C# 語言功能。
 ms.date: 10/25/2018
-ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 72f159311397a0f4891709c16a4a6ecc937b5952
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706308"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773909"
 ---
 # <a name="c-tutorials"></a>C# 教學課程
 
@@ -50,6 +50,7 @@ ms.locfileid: "61706308"
 * [可為 Null 的參考型別](nullable-reference-types.md)：示範如何使用可為 Null 的參考型別來表示您的 Null 參考意圖。
 * [更新專案以使用可為 Null 的參考型別](upgrade-to-nullable-references.md)：示範升級現有專案以使用可為 Null 之參考型別的技術。
 * [使用模式比對延伸資料功能](pattern-matching.md)：示範如何使用模式比對來將型別延伸到其核心功能之外。
+* [使用索引與範圍處理資料序列](ranges-indexes.md)：示範一種新的方便語法，此語法可用來存取單一元素或一個範圍的循序資料容器。
 
 ## <a name="general-tutorials"></a>一般教學課程
 

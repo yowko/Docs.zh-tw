@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 5477b8c4531780fdebf194e4f798564e59cd2953
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640228"
 ---
-# <a name="architecture-deployment-approaches"></a>架構的部署方法
+# <a name="architecture-deployment-approaches"></a>架構部署方法
 
 不管架構為何方法用來設計商務應用程式，實作或部署這些應用程式可能會有所不同。 企業會裝載在實體硬體的所有項目上的應用程式，無伺服器函式。
 
@@ -139,8 +139,8 @@ PaaS 的主要缺點一直都廠商鎖定中。 比方說，有些 PaaS 提供�
 |         |IaaS     |PaaS     |容器|無伺服器|
 |---------|---------|---------|---------|----------|
 |**縮放**|VM       |執行個體 |應用程式      |功能  |
-|**摘要**|硬體|Platform|作業系統的主機|執行階段   |
-|**單位** |VM       |專案  |Image    |程式碼      |
+|**Abstracts**|硬體|Platform|作業系統的主機|執行階段   |
+|**Unit** |VM       |專案  |Image    |程式碼      |
 |**存留期**|幾個月|月份的天數|天前的分鐘|分鐘的時間 （毫秒)|
 |**責任**|應用程式、 相依性、 執行階段和作業系統|應用程式和相依性|應用程式、 相依性，以及執行階段|功能
 
@@ -159,7 +159,7 @@ PaaS 的主要缺點一直都廠商鎖定中。 比方說，有些 PaaS 提供�
 * [Azure SQL](https://docs.microsoft.com/azure/sql-database)
 * [多層式架構模式](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
 * [在 Azure 上的 Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes)
-* [微服務](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
+* [Microservices](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
 * [虛擬機器的多層式架構參考架構](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
 * [虛擬機器](https://docs.microsoft.com/azure/virtual-machines/)
 * [什麼是 Docker？](../microservices-architecture/container-docker-introduction/docker-defined.md)

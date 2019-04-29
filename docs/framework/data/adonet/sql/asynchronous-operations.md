@@ -3,11 +3,11 @@ title: 非同步作業
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
 ms.openlocfilehash: 72c2cc33185cb7fba5b8c8ce8d3805a6bb76f8d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663969"
 ---
 # <a name="asynchronous-operations"></a>非同步作業
 某些資料庫作業 (如命令執行) 要花費相當長的時間才能完成。 在此情況下，單一執行緒應用程式必須封鎖其他作業並等待命令完成後，才能繼續它們自己的作業。 相反的，將長期執行作業指派給背景執行緒，可讓前景執行緒在作業過程中保持作用中狀態。 例如，若在 Windows 應用程式中將長期執行作業委派給背景執行緒，可讓使用者介面執行緒在作業執行時保持回應狀態。  

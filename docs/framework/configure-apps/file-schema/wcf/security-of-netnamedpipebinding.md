@@ -3,11 +3,11 @@ title: <security> 的 <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
 ms.openlocfilehash: fa31dda3274c9768694bdf5232f31554899e1d82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670517"
 ---
 # <a name="security-of-netnamedpipebinding"></a>\<安全性 > 的\<netNamedPipeBinding >
 定義繫結的安全性設定。  

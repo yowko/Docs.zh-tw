@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC2012
 ms.assetid: 73270fe4-a638-42c7-be21-5e156e2b18f6
 ms.openlocfilehash: b92a2c6f3de02a1a31ad131004dd613b15f01f19
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649968"
 ---
 # <a name="cant-open-filename-for-writing"></a>無法開啟 '\<檔案名稱 >' 進行寫入
 無法開啟指定的檔案進行寫入，可能因為它已經開啟。  

@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7532218728aead72186b5156da87db6d3bc0a8c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698209"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs 函式
 提供在處理程序中列舉 CLRs 的機制。  
@@ -68,7 +68,7 @@ HRESULT EnumerateCLRs (
 ## <a name="remarks"></a>備註  
  所識別之目標處理序 `debuggeePID`，此函式會傳回路徑的陣列，`ppStringArrayOut`，至 CLRs 載入到處理序；事件控制代碼陣列 `ppHandleArrayOut`，其中可能包含在相同的索引為 CLR 的繼續啟動事件；以及陣列的大小，`pdwArrayLengthOut`，指定 CLRs 載入的數目。  
   
- 在 Windows 作業系統上，`debuggeePID` 對應至 OS 處理識別碼。  
+ 在 Windows 作業系統上，`debuggeePID` 對應至 OS 處理序識別碼。  
   
  記憶體 `ppHandleArrayOut` 和 `ppStringArrayOut` 由此函式所配置。 若要釋放配置的記憶體，您必須呼叫[CloseCLREnumeration 函式](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)。  
   

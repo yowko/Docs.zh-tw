@@ -7,11 +7,11 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 ms.assetid: 330178e0-a375-4742-b662-b3080c89fa54
 ms.openlocfilehash: da76f528ea6087fd973bd267c67952ce8687dc86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608407"
 ---
 # <a name="arithmetic-operators-visual-basic"></a>算術運算子 (Visual Basic)
 以下是定義在 Visual Basic 中的算術運算子。  

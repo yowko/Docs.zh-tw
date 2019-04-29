@@ -3,11 +3,11 @@ title: LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f7386556-a6b9-40d5-92b6-e8701dc2c63e
 ms.openlocfilehash: 1ed438b87d2b53e7e811c22e614c60c759fa07f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650917"
 ---
 # <a name="linq-to-xml-visual-basic"></a>LINQ to XML (Visual Basic)
 LINQ to XML 提供運用 .NET Language-Integrated Query (LINQ) Framework 的記憶體中 XML 程式開發介面。 LINQ to XML 使用最新的 .NET Framework 語言功能，其相當於重新設計的更新版文件物件模型 (DOM) XML 程式開發介面。  

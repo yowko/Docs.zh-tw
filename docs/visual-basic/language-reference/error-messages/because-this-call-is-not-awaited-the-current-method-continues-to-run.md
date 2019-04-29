@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
 ms.openlocfilehash: ba0838d562ac0ec0ea531161c437dec5ce66c3f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649994"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>因為未等候此呼叫，所以在呼叫完成之前會繼續執行目前方法
 因為未等候此呼叫，所以在呼叫完成之前會繼續執行目前的方法。 請考慮將 'Await' 運算子套用至呼叫的結果。  
@@ -29,7 +29,7 @@ ms.locfileid: "59304226"
   
 ### <a name="to-address-this-warning"></a>解決這個警告  
   
--   只有在您確定不要等候非同步呼叫完成，而且被呼叫的方法不會引發任何例外狀況時，才應考慮隱藏警告。 在這種情況下，您可以藉由將呼叫的工作結果指定至變數來隱藏警告。  
+- 只有在您確定不要等候非同步呼叫完成，而且被呼叫的方法不會引發任何例外狀況時，才應考慮隱藏警告。 在這種情況下，您可以藉由將呼叫的工作結果指定至變數來隱藏警告。  
   
      下列範例將示範如何產生警告、如何隱藏警告，以及如何等候呼叫。  
   

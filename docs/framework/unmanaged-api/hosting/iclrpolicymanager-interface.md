@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2eeccc4dfd7a7147fe791444eeeca2bd3a844305
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638862"
 ---
 # <a name="iclrpolicymanager-interface"></a>ICLRPolicyManager 介面
 提供方法，可讓主應用程式指定原則發生失敗和逾時所要採取的動作。  

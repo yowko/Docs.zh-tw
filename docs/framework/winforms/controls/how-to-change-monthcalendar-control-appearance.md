@@ -10,18 +10,18 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
 ms.openlocfilehash: 233143099996759cc006b3f28b984938554a0d18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666507"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>HOW TO：變更 Windows Forms MonthCalendar 控制項的外觀
 Windows Form<xref:System.Windows.Forms.MonthCalendar>控制項可讓您自訂在許多方面的行事曆的外觀。 例如，您可以設定色彩配置，以及選擇要顯示或隱藏週數和目前的日期。  
   
 ### <a name="to-change-the-month-calendars-color-scheme"></a>若要變更的月份行事曆的色彩配置  
   
--   設定屬性，例如<xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>，<xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>和<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>。 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>屬性也會決定的字型色彩的一周天數。 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>屬性決定的日期，優先於並遵循顯示的月或幾個月的色彩。  
+- 設定屬性，例如<xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>，<xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>和<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>。 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>屬性也會決定的字型色彩的一周天數。 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>屬性決定的日期，優先於並遵循顯示的月或幾個月的色彩。  
   
     ```vb  
     MonthCalendar1.TitleBackColor = System.Drawing.Color.Blue  
@@ -46,7 +46,7 @@ Windows Form<xref:System.Windows.Forms.MonthCalendar>控制項可讓您自訂在
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>若要在控制項底部顯示目前的日期  
   
--   將 <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> 屬性設定為 `true`。 下列範例將顯示和省略表單時按兩下今天的日期之間切換。  
+- 將 <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> 屬性設定為 `true`。 下列範例將顯示和省略表單時按兩下今天的日期之間切換。  
   
     ```vb  
     Private Sub Form1_DoubleClick(ByVal sender As Object, _  
@@ -87,7 +87,7 @@ Windows Form<xref:System.Windows.Forms.MonthCalendar>控制項可讓您自訂在
   
 ### <a name="to-display-week-numbers"></a>若要顯示週數  
   
--   將 <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> 屬性設定為 `true`。 在程式碼中或在 [屬性] 視窗中，您可以設定這個屬性。  
+- 將 <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> 屬性設定為 `true`。 在程式碼中或在 [屬性] 視窗中，您可以設定這個屬性。  
   
      週數字會出現在個別的資料行左邊的一週的第一天。  
   

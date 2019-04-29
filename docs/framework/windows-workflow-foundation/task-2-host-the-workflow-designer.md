@@ -3,11 +3,11 @@ title: 工作 2：裝載工作流程設計工具
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
 ms.openlocfilehash: 3f7964e907fe513679e60c18292f07c84128590b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641561"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>工作 2：裝載工作流程設計工具
 本主題說明的程序裝載的執行個體[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]Windows Presentation Foundation (WPF) 應用程式中。  
@@ -42,7 +42,7 @@ ms.locfileid: "59299263"
   
 8. 在 **方案總管**，以滑鼠右鍵按一下 MainWindow.xaml，然後選取**檢視程式碼**。 遵循下列步驟修改程式碼：  
   
-    1.  加入下列命名空間：  
+    1. 加入下列命名空間：  
   
         ```csharp  
         using System.Activities;  
@@ -54,7 +54,7 @@ ms.locfileid: "59299263"
         using System.ComponentModel;  
         ```  
   
-    2.  若要宣告私用成員欄位以保留 <xref:System.Activities.Presentation.WorkflowDesigner> 的執行個體，請將下列程式碼加入至 `MainWindow` 類別。  
+    2. 若要宣告私用成員欄位以保留 <xref:System.Activities.Presentation.WorkflowDesigner> 的執行個體，請將下列程式碼加入至 `MainWindow` 類別。  
   
         ```csharp  
         public partial class MainWindow : Window  
@@ -68,7 +68,7 @@ ms.locfileid: "59299263"
         }  
         ```  
   
-    3.  將下列 `AddDesigner` 方法加入至 `MainWindow` 類別。 這個實作會建立的執行個體<xref:System.Activities.Presentation.WorkflowDesigner>，將<xref:System.Activities.Statements.Sequence>活動，並將它放在中間的資料行的 grid1**格線**。  
+    3. 將下列 `AddDesigner` 方法加入至 `MainWindow` 類別。 這個實作會建立的執行個體<xref:System.Activities.Presentation.WorkflowDesigner>，將<xref:System.Activities.Statements.Sequence>活動，並將它放在中間的資料行的 grid1**格線**。  
   
         ```csharp  
         private void AddDesigner()  
@@ -87,7 +87,7 @@ ms.locfileid: "59299263"
         }  
         ```  
   
-    4.  註冊設計工具中繼資料，為所有內建活動加入設計工具支援。 這樣可讓您從工具箱將活動放置於 <xref:System.Activities.Statements.Sequence> 中的原始 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 活動。 若要執行這項操作，請將 `RegisterMetadata` 方法加入至 `MainWindow` 類別。  
+    4. 註冊設計工具中繼資料，為所有內建活動加入設計工具支援。 這樣可讓您從工具箱將活動放置於 <xref:System.Activities.Statements.Sequence> 中的原始 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 活動。 若要執行這項操作，請將 `RegisterMetadata` 方法加入至 `MainWindow` 類別。  
   
         ```csharp  
         private void RegisterMetadata()  
@@ -99,7 +99,7 @@ ms.locfileid: "59299263"
   
          如需有關如何註冊活動設計工具的詳細資訊，請參閱[How to:建立自訂活動設計工具](how-to-create-a-custom-activity-designer.md)。  
   
-    5.  在 `MainWindow` 類別建構函式中，將呼叫加入至先前宣告的方法，為中繼資料註冊設計工具支援，以建立 <xref:System.Activities.Presentation.WorkflowDesigner>。  
+    5. 在 `MainWindow` 類別建構函式中，將呼叫加入至先前宣告的方法，為中繼資料註冊設計工具支援，以建立 <xref:System.Activities.Presentation.WorkflowDesigner>。  
   
         ```csharp  
         public MainWindow()  

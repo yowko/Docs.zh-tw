@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
 ms.openlocfilehash: 83fdc77bd17115f9952f2ca6c494ed0eb873cd9c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608771"
 ---
 # <a name="configuring-client-behaviors"></a>設定用戶端行為
 Windows Communication Foundation (WCF) 設定行為以兩種方式： 藉由參考行為組態，是定義於`<behavior>`用戶端應用程式組態檔-，或以程式設計方式呼叫中的區段應用程式。 這個主題將描述這兩種方法。  

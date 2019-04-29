@@ -11,11 +11,11 @@ ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: 58f823ce0c128f30e361b4a631d41286533b5f0f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701498"
 ---
 # <a name="section-element"></a>\<區段 > 項目
 
@@ -67,7 +67,7 @@ ms.locfileid: "55259211"
 
 ## <a name="child-elements"></a>子元素
 
-無
+None
 
 ## <a name="remarks"></a>備註
 

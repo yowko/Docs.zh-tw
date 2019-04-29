@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2f05da1e-845b-4f14-83e4-c6353a850553
 ms.openlocfilehash: 08ae5722267ef781ed6bee59c7895269f63a75e5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606186"
 ---
 # <a name="how-to-execute-a-polymorphic-query"></a>HOW TO：執行多型查詢
 

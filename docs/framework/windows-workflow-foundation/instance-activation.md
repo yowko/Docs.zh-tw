@@ -3,11 +3,11 @@ title: 執行個體啟動
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
 ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641657"
 ---
 # <a name="instance-activation"></a>執行個體啟動
 SQL 工作流程執行個體存放區會執行內部工作，定期喚醒及偵測持續性資料庫中可執行或可啟動的工作流程執行個體。 如果找到可執行的工作流程執行個體，就會通知工作流程主機，表示主機可以啟動該執行個體。 如果執行個體存放區找到可啟動的工作流程執行個體，則會通知啟動工作流程主機的泛型主機，再由該主機執行工作流程執行個體。 本主題中的下列章節詳細說明執行個體啟動處理序。  
@@ -15,11 +15,11 @@ SQL 工作流程執行個體存放區會執行內部工作，定期喚醒及偵�
 ## <a name="RunnableSection"></a> 偵測與啟動可執行工作流程執行個體  
  SQL 工作流程執行個體存放區會考慮工作流程執行個體*可執行*如果執行個體不是處於暫停的狀態或已完成的狀態，而且滿足以下條件：  
   
--   執行個體已解除鎖定，並具有已過期的暫止計時器。  
+- 執行個體已解除鎖定，並具有已過期的暫止計時器。  
   
--   執行個體上有過期的鎖定。  
+- 執行個體上有過期的鎖定。  
   
--   執行個體已解除鎖定，且其狀態為**Executing**。  
+- 執行個體已解除鎖定，且其狀態為**Executing**。  
   
  當 SQL 工作流程執行個體存放區找到可執行的執行個體時，會引發 <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>。 之後，SqlWorkflowInstanceStore 就會停止監視，直到在存放區呼叫 <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand> 一次為止。  
   

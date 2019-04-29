@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8f83d2ac9ca96145fa89b283fec42c71858097f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651619"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>ICorDebugGCReferenceEnum 介面
 為將要記憶體回收的物件提供列舉值。  
@@ -39,11 +39,11 @@ ms.locfileid: "59080822"
   
  [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)以此方式填入集合中的物件代表三種類型的物件：  
   
--   從所有受管理的堆疊物件。 這包括即時參考，在 managed 程式碼，以及 common language runtime 所建立的物件。  
+- 從所有受管理的堆疊物件。 這包括即時參考，在 managed 程式碼，以及 common language runtime 所建立的物件。  
   
--   控制代碼資料表中的物件。 這包括強式參考 (`HNDTYPE_STRONG`和`HNDTYPE_REFCOUNT`) 和模組中的靜態變數。  
+- 控制代碼資料表中的物件。 這包括強式參考 (`HNDTYPE_STRONG`和`HNDTYPE_REFCOUNT`) 和模組中的靜態變數。  
   
--   完成項佇列中的物件。 完成項佇列根物件，直到執行完成項。  
+- 完成項佇列中的物件。 完成項佇列根物件，直到執行完成項。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

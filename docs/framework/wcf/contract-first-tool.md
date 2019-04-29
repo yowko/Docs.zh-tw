@@ -6,8 +6,8 @@ ms.openlocfilehash: ad0566eaff08d27e8368f091388adda7376a37ef
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59978909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608604"
 ---
 # <a name="contract-first-tool"></a>Contract-First 工具
 服務合約通常必須從現有的服務來建立。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，可以使用合約優先 (Contract-First) 工具自動從現有的服務建立資料合約類別。 若要使用合約優先工具，必須將 XML 結構描述定義 (XSD) 檔案下載至本機，這個工具無法透過 HTTP 匯入遠端資料合約。
@@ -69,31 +69,31 @@ ms.locfileid: "59978909"
 
  您可以設定下列適用於從合約產生程式碼的進階設定。 這些設定只能針對專案中的所有檔案進行，目前尚無法對個別檔案進行設定。
 
--   **序列化程式模式**:此設定會決定哪種序列化程式用來讀取服務合約檔案。 當**XML 序列化程式**選取時，**集合型別**並**重複使用型別**選項已停用。 這些選項僅適用於**資料合約序列化程式**。
+- **序列化程式模式**:此設定會決定哪種序列化程式用來讀取服務合約檔案。 當**XML 序列化程式**選取時，**集合型別**並**重複使用型別**選項已停用。 這些選項僅適用於**資料合約序列化程式**。
 
--   **重複使用型別**:此設定指定哪些程式庫會用於型別重複使用。 此設定僅適用於**序列化程式模式**設為**資料合約序列化程式**。
+- **重複使用型別**:此設定指定哪些程式庫會用於型別重複使用。 此設定僅適用於**序列化程式模式**設為**資料合約序列化程式**。
 
--   **集合型別**:此設定會指定要使用集合資料型別的完整限定或組件限定的類型。 此設定僅適用於**序列化程式模式**設為**資料合約序列化程式**。
+- **集合型別**:此設定會指定要使用集合資料型別的完整限定或組件限定的類型。 此設定僅適用於**序列化程式模式**設為**資料合約序列化程式**。
 
--   **字典型別**:此設定會指定完整限定或組件限定型別，用於字典資料型別。
+- **字典型別**:此設定會指定完整限定或組件限定型別，用於字典資料型別。
 
--   **EnableDataBinding**:此設定指定是否要實作<xref:System.ComponentModel.INotifyPropertyChanged>實作資料繫結的所有資料型別上的介面。
+- **EnableDataBinding**:此設定指定是否要實作<xref:System.ComponentModel.INotifyPropertyChanged>實作資料繫結的所有資料型別上的介面。
 
--   **ExcludedTypes**： 此設定會指定要排除參考的組件的完整限定或組件限定類型的清單。 此設定僅適用於**序列化程式模式**設為**資料合約序列化程式**。
+- **ExcludedTypes**： 此設定會指定要排除參考的組件的完整限定或組件限定類型的清單。 此設定僅適用於**序列化程式模式**設為**資料合約序列化程式**。
 
--   **GenerateInternalTypes**:此設定指定是否要產生標示為內部的類別。 此設定僅適用於**序列化程式模式**設為**資料合約序列化程式**。
+- **GenerateInternalTypes**:此設定指定是否要產生標示為內部的類別。 此設定僅適用於**序列化程式模式**設為**資料合約序列化程式**。
 
--   **GenerateSerializableTypes**:此設定指定是否要產生類別<xref:System.SerializableAttribute>屬性。 此設定僅適用於**序列化程式模式**設為**資料合約序列化程式**。
+- **GenerateSerializableTypes**:此設定指定是否要產生類別<xref:System.SerializableAttribute>屬性。 此設定僅適用於**序列化程式模式**設為**資料合約序列化程式**。
 
--   **/Importxmltypes**:此設定指定是否要將設定資料合約序列化程式，套用<xref:System.SerializableAttribute>屬性設定為不具類別<xref:System.Runtime.Serialization.DataContractAttribute>屬性。  此設定僅適用於**序列化程式模式**設為**資料合約序列化程式**。
+- **/Importxmltypes**:此設定指定是否要將設定資料合約序列化程式，套用<xref:System.SerializableAttribute>屬性設定為不具類別<xref:System.Runtime.Serialization.DataContractAttribute>屬性。  此設定僅適用於**序列化程式模式**設為**資料合約序列化程式**。
 
--   **SupportFx35TypedDataSets**:此設定指定是否要建立適用於.NET Framework 3.5 的具類型資料集提供額外的功能。 當**序列化程式模式**設為**XML 序列化程式**，則<xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35>延伸模組會新增至 XML 結構描述匯入工具，當此值設定為 True。 當**序列化程式模式**設為**資料合約序列化程式**，型別<xref:System.DateTimeOffset>時這個值設為 False，會從參考排除以便<xref:System.DateTimeOffset>一定會產生對於較舊 framework 版本。
+- **SupportFx35TypedDataSets**:此設定指定是否要建立適用於.NET Framework 3.5 的具類型資料集提供額外的功能。 當**序列化程式模式**設為**XML 序列化程式**，則<xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35>延伸模組會新增至 XML 結構描述匯入工具，當此值設定為 True。 當**序列化程式模式**設為**資料合約序列化程式**，型別<xref:System.DateTimeOffset>時這個值設為 False，會從參考排除以便<xref:System.DateTimeOffset>一定會產生對於較舊 framework 版本。
 
--   **InputXsdFiles**:此設定指定輸入檔清單。 每個檔案都必須包含有效的 XML 結構描述。
+- **InputXsdFiles**:此設定指定輸入檔清單。 每個檔案都必須包含有效的 XML 結構描述。
 
--   **語言**:此設定會指定產生的合約程式碼語言。 這個設定必須可以由 <xref:System.CodeDom.Compiler.CodeDomProvider> 辨識。
+- **語言**:此設定會指定產生的合約程式碼語言。 這個設定必須可以由 <xref:System.CodeDom.Compiler.CodeDomProvider> 辨識。
 
--   **NamespaceMappings**:此設定會指定從 XSD 目標命名空間到 CLR 命名空間的對應。 每個對應都要使用下列格式：
+- **NamespaceMappings**:此設定會指定從 XSD 目標命名空間到 CLR 命名空間的對應。 每個對應都要使用下列格式：
 
     ```xml
     "<Schema Namespace>, <CLR Namespace>"
@@ -105,7 +105,7 @@ ms.locfileid: "59978909"
     "*, <CLR Namespace>"
     ```
 
--   **OutputDirectory**:此設定會指定將產生的程式碼檔案的目錄。
+- **OutputDirectory**:此設定會指定將產生的程式碼檔案的目錄。
 
  建置專案時，將會使用這些設定從服務合約檔案產生服務合約型別。
 

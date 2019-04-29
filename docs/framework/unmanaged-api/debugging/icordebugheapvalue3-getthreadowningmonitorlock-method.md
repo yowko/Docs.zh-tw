@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1678f1de7c23387f028348dadbc7b61e2cdc035c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701017"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock 方法
 傳回擁有此物件的監視器鎖定的 managed 的執行緒。  
@@ -56,9 +56,9 @@ HRESULT GetThreadOwningMonitorLock (
 ## <a name="remarks"></a>備註  
  如果 managed 的執行緒擁有此物件的監視器鎖定：  
   
--   方法會傳回 S_OK。  
+- 方法會傳回 S_OK。  
   
--   執行緒物件是有效的直到執行緒結束為止。  
+- 執行緒物件是有效的直到執行緒結束為止。  
   
  如果沒有任何受管理的執行緒擁有這個物件的監視器鎖定`ppThread`和`pAcquisitionCount`維持不變，而方法會傳回 S_FALSE。  
   

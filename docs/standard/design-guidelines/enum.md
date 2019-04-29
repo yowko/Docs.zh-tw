@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
 author: KrzysztofCwalina
 ms.openlocfilehash: c0645ba1179c4c6fd961b871b3061cd51174f427
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669091"
 ---
 # <a name="enum-design"></a>列舉設計
 列舉都是一種特殊的實值型別。 有兩種類型的列舉： 簡單列舉和旗標的列舉。  
@@ -48,17 +48,17 @@ ms.locfileid: "54675178"
   
  **✓ CONSIDER** 使用 <xref:System.Int32> （大部分的程式設計語言中的預設值） 列舉的基礎類型為除非有下列情況：  
   
--   列舉是旗標列舉，而且您有 32 個以上的旗標，或希望有更多在未來。  
+- 列舉是旗標列舉，而且您有 32 個以上的旗標，或希望有更多在未來。  
   
--   基礎類型必須是不同於<xref:System.Int32>更容易與預期不同大小列舉的 unmanaged 程式碼的互通性。  
+- 基礎類型必須是不同於<xref:System.Int32>更容易與預期不同大小列舉的 unmanaged 程式碼的互通性。  
   
--   較小的基礎類型會導致大量節省空間。 如果您預期的列舉，主要是做為控制流程的引數，則大小會將些許差異。 節省大小可能會很大如果：  
+- 較小的基礎類型會導致大量節省空間。 如果您預期的列舉，主要是做為控制流程的引數，則大小會將些許差異。 節省大小可能會很大如果：  
   
-    -   您預期的列舉，用於經常執行個體化的結構或類別中的欄位。  
+    - 您預期的列舉，用於經常執行個體化的結構或類別中的欄位。  
   
-    -   您預期使用者建立大型陣列或集合的列舉執行個體。  
+    - 您預期使用者建立大型陣列或集合的列舉執行個體。  
   
-    -   您預期大量的列舉，可序列化的執行個體。  
+    - 您預期大量的列舉，可序列化的執行個體。  
   
  記憶體使用量，請留意，受管理的物件都`DWORD`-對齊，因此您實際上需要多個列舉或其他封裝具有較小的列舉，而以深遠的影響，因為總執行個體的大小一律為執行個體中的小型結構要無條件進位至`DWORD`。  
   

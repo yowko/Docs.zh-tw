@@ -24,11 +24,11 @@ helpviewer_keywords:
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
 ms.openlocfilehash: 5d47d57b75005d5c13dbf8633981dfb2d57d3e90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638050"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next 陳述式 (Visual Basic)
 一組陳述式會重複指定的次數。  
@@ -98,11 +98,11 @@ Next [ counter ]
   
  `Exit For` 通常用在您評估某些條件後 (例如，在`If`...`Then`...`Else`結構)。 您可能想要使用`Exit For`下列條件：  
   
--   繼續向逐一查看是不必要或不可能。 錯誤的數值或終止要求可能會建立這種情況。  
+- 繼續向逐一查看是不必要或不可能。 錯誤的數值或終止要求可能會建立這種情況。  
   
--   A `Try`...`Catch`...`Finally`陳述式攔截到例外狀況。 您可以使用`Exit For`結尾的`Finally`區塊。  
+- A `Try`...`Catch`...`Finally`陳述式攔截到例外狀況。 您可以使用`Exit For`結尾的`Finally`區塊。  
   
--   您有無止盡的迴圈，也就是無法執行大型或甚至是無限次數的迴圈。 如果您偵測到這種情況，您可以使用`Exit For`來逸出迴圈。 如需詳細資訊，請參閱[執行...迴圈陳述式](../../../visual-basic/language-reference/statements/do-loop-statement.md)。  
+- 您有無止盡的迴圈，也就是無法執行大型或甚至是無限次數的迴圈。 如果您偵測到這種情況，您可以使用`Exit For`來逸出迴圈。 如需詳細資訊，請參閱[執行...迴圈陳述式](../../../visual-basic/language-reference/statements/do-loop-statement.md)。  
   
 ## <a name="technical-implementation"></a>技術實作  
  當`For`...`Next`迴圈開始，Visual Basic 會評估`start`， `end`，和`step`。 Visual Basic 會評估這些值只能在此時間，然後指派`start`至`counter`。 之前的陳述式區塊會執行，Visual Basic 比較`counter`至`end`。 如果`counter`已經是大於`end`值 (或較小的 if`step`為負數)，則`For`迴圈結束，並控制傳遞到後面的陳述式`Next`陳述式。 否則，會執行陳述式區塊。  
@@ -137,13 +137,13 @@ Next [ counter ]
   
  資料類型`counter`決定反覆項目，必須是下列類型的其中一種：  
   
--   A `Byte`， `SByte`， `UShort`， `Short`， `UInteger`， `Integer`， `ULong`， `Long`， `Decimal`， `Single`，或`Double`。  
+- A `Byte`， `SByte`， `UShort`， `Short`， `UInteger`， `Integer`， `ULong`， `Long`， `Decimal`， `Single`，或`Double`。  
   
--   您使用宣告列舉[Enum 陳述式](../../../visual-basic/language-reference/statements/enum-statement.md)。  
+- 您使用宣告列舉[Enum 陳述式](../../../visual-basic/language-reference/statements/enum-statement.md)。  
   
--   `Object`。  
+- `Object`。  
   
--   型別`T`具有下列的運算子，其中`B`是類型，可用於`Boolean`運算式。  
+- 型別`T`具有下列的運算子，其中`B`是類型，可用於`Boolean`運算式。  
   
      `Public Shared Operator >= (op1 As T, op2 As T) As B`  
   

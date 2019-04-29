@@ -3,20 +3,20 @@ title: 資料流訊息傳輸
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
 ms.openlocfilehash: e58b0ce698df310a5e18bcd24201fb2e27a9c1aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747572"
 ---
 # <a name="streaming-message-transfer"></a>資料流訊息傳輸
 Windows Communication Foundation (WCF) 傳輸的傳輸訊息支援兩種模式：  
   
--   緩衝處理的傳輸會將整個訊息保留在記憶體緩衝區中，直到完成傳輸作業為止。 必須等到緩衝處理的訊息完全傳送出去後，接收者才能開始讀取。  
+- 緩衝處理的傳輸會將整個訊息保留在記憶體緩衝區中，直到完成傳輸作業為止。 必須等到緩衝處理的訊息完全傳送出去後，接收者才能開始讀取。  
   
--   資料流處理的傳輸會將訊息公開為資料流。 在訊息完全傳送出去之前，接收者就可開始處理訊息。  
+- 資料流處理的傳輸會將訊息公開為資料流。 在訊息完全傳送出去之前，接收者就可開始處理訊息。  
   
--   資料流處理的傳輸可以藉由消除大量記憶體緩衝區的需求來改善服務的延展性 (Scalability)。 變更傳輸模式是否能夠改善延展性，需視所傳輸的訊息大小而定。 大型訊息適合使用資料流處理傳輸方式來傳輸。  
+- 資料流處理的傳輸可以藉由消除大量記憶體緩衝區的需求來改善服務的延展性 (Scalability)。 變更傳輸模式是否能夠改善延展性，需視所傳輸的訊息大小而定。 大型訊息適合使用資料流處理傳輸方式來傳輸。  
   
  根據預設，HTTP、TCP/IP 和具名管道等傳輸都使用緩衝處理的傳輸方式。 本文件將說明如何從緩衝處理的傳輸模式切換到資料流處理的傳輸模式，以及這麼做將有何影響。  
   

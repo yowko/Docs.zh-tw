@@ -12,11 +12,11 @@ helpviewer_keywords:
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
 ms.openlocfilehash: 9ab01755d75c91ce87acf83e7f406b26c466aef6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663501"
 ---
 # <a name="if-operator-visual-basic"></a>If 運算子 (Visual Basic)
 使用最少運算評估，有條件地傳回兩個值之一。 `If`與三個引數或兩個引數，就可以呼叫運算子。  

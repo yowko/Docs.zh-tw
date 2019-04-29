@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
 ms.openlocfilehash: 829df66f49d5df5f5c8cf8d2b6cfa74f0a2172dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609889"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI 自動化用戶端的控制項模式對應
 > [!NOTE]
@@ -20,11 +20,11 @@ ms.locfileid: "59101129"
   
  下表將控制項模式整理為下列類別：  
   
--   支援。 控制項必定支援此控制項模式。  
+- 支援。 控制項必定支援此控制項模式。  
   
--   有條件支援。 控制項可依據控制項的狀態決定是否支援此控制項模式。  
+- 有條件支援。 控制項可依據控制項的狀態決定是否支援此控制項模式。  
   
--   不支援。 控制項不支援此控制項模式；自訂控制項可能支援此控制項模式。  
+- 不支援。 控制項不支援此控制項模式；自訂控制項可能支援此控制項模式。  
   
 > [!NOTE]
 >  有些控制項會依據其功能，有條件支援多種控制項模式。 例如，功能表項目控制項即依據其在功能表控制項中的功能，有條件支援 <xref:System.Windows.Automation.InvokePattern>、 <xref:System.Windows.Automation.ExpandCollapsePattern>、 <xref:System.Windows.Automation.TogglePattern>或 <xref:System.Windows.Automation.SelectionItemPattern> 控制項模式。  
