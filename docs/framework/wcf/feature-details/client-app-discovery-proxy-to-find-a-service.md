@@ -3,11 +3,11 @@ title: HOW TO：實作使用探索 Proxy 的用戶端應用程式來尋找服務
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
 ms.openlocfilehash: 12b3fa03a1f259df8ee8c970463fa9ccee7267fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784263"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>HOW TO：實作使用探索 Proxy 的用戶端應用程式來尋找服務
 本主題是三個主題中的第三個，討論如何實作探索 Proxy。 在上一個主題中， [How to:實作以探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)，實作使用探索 proxy 註冊其本身的 WCF 服務。 本主題中，您會建立使用探索 proxy 來尋找 WCF 服務的 WCF 用戶端。  
@@ -18,9 +18,9 @@ ms.locfileid: "59320991"
   
 2. 加入下列組件的參考：  
   
-    1.  System.ServiceModel  
+    1. System.ServiceModel  
   
-    2.  System.ServiceModel.Discovery  
+    2. System.ServiceModel.Discovery  
   
 3. 將在此主題底部找到的 GeneratedClient.cs 加入至專案。  
   

@@ -3,11 +3,11 @@ title: 篩選
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
 ms.openlocfilehash: 7051e69f6a38d536251c26365a634d4ffbc46f1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856696"
 ---
 # <a name="filtering"></a>篩選
 Windows Communication Foundation (WCF) 的篩選系統可以使用宣告式篩選條件來比對訊息，並做出作業決策。 您可以使用篩選條件檢查訊息的部分，以判斷如何處理訊息。 例如，佇列處理序可以使用 XPath 1.0 查詢檢查已知標頭的優先順序項目，以便決定是否要將訊息移到佇列前頭。  
@@ -36,9 +36,9 @@ Windows Communication Foundation (WCF) 的篩選系統可以使用宣告式篩�
 ### <a name="endpoint-address-filters"></a>端點位址篩選條件  
  <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 會根據端點位址篩選訊息和訊息緩衝區 (如標頭集合中所示)。 訊息若要通過這類篩選條件，必須符合下列條件：  
   
--   篩選器位址的統一資源識別項 (URI) 必須與訊息 To 標頭中的位址 URI 相同。  
+- 篩選器位址的統一資源識別項 (URI) 必須與訊息 To 標頭中的位址 URI 相同。  
   
--   篩選條件 (`address.Headers` 條件) 位址中的每個端點參數必須在要對應的訊息中找出標頭。 不過，為了使符合項目維持為 `true`，仍接受訊息或訊息緩衝區中的額外標頭。  
+- 篩選條件 (`address.Headers` 條件) 位址中的每個端點參數必須在要對應的訊息中找出標頭。 不過，為了使符合項目維持為 `true`，仍接受訊息或訊息緩衝區中的額外標頭。  
   
 ### <a name="prefix-endpoint-address-filters"></a>前置詞端點位址篩選條件  
   
@@ -79,9 +79,9 @@ Windows Communication Foundation (WCF) 的篩選系統可以使用宣告式篩�
 ### <a name="de-multiplexing"></a>分離信號  
  當多個端點從網路外的相同 `ServiceListener` 上散開時，要分離訊息信號並確認這些端點是否屬於特定端點位址的唯一方法就是使用 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>，它會查詢儲存在標頭中的資訊，藉此選取送往已註冊之端點的訊息。 在這些篩選條件中，只有通過的訊息具有對應至下列兩者的所有必要標頭：  
   
--   `EndpointAddress` 中的 URI。  
+- `EndpointAddress` 中的 URI。  
   
--   如 `EndpointAddress` 所指定，<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 中的其餘端點參數。  
+- 如 `EndpointAddress` 所指定，<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 中的其餘端點參數。  
   
 ## <a name="see-also"></a>另請參閱
 

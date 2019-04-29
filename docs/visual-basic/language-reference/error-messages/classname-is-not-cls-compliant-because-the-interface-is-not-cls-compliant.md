@@ -11,8 +11,8 @@ ms.openlocfilehash: 063c42249abbfb506fd15311659599b4777d397f
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649877"
 ---
 # <a name="classname-is-not-cls-compliant-because-the-interface-interfacename-it-implements-is-not-cls-compliant"></a>'\<類別名稱 >' 不符合 CLS 標準，因為介面'\<介面名稱 >' 它會實作不符合 CLS 標準
 當類別或介面衍生自或實作標記為 `<CLSCompliant(True)>` 或未標記的類型時，則標記為 `<CLSCompliant(False)>` 。  
@@ -29,6 +29,6 @@ ms.locfileid: "59975542"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   如果您必須符合 CLS 標準，請在不同的繼承階層或實作配置內定義這個類型。  
+- 如果您必須符合 CLS 標準，請在不同的繼承階層或實作配置內定義這個類型。  
   
--   如果您想要將這個類型保留在其目前繼承階層或實作配置內，請從其定義移除 <xref:System.CLSCompliantAttribute> 或將其標記為 `<CLSCompliant(False)>`。  
+- 如果您想要將這個類型保留在其目前繼承階層或實作配置內，請從其定義移除 <xref:System.CLSCompliantAttribute> 或將其標記為 `<CLSCompliant(False)>`。  

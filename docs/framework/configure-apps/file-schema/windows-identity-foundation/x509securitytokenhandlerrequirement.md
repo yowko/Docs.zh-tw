@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: aca22c2c-5ae7-42af-9bbd-15c2524692ce
 author: BrucePerlerMS
 ms.openlocfilehash: 6e8267f170dbb26381564be7b66df5f617156885
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790438"
 ---
 # <a name="x509securitytokenhandlerrequirement"></a>\<x509SecurityTokenHandlerRequirement>
 提供選擇性組態<xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>類別或衍生的類別。  
@@ -53,7 +53,7 @@ ms.locfileid: "55271937"
 |certificateValidator|自訂型別衍生自<xref:System.IdentityModel.Selectors.X509CertificateValidator>。 如果`certificateValidationMode`屬性是 「 自訂 」，此類型的執行個體使用的簽發者憑證驗證。|  
   
 ### <a name="child-elements"></a>子元素  
- 無  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
