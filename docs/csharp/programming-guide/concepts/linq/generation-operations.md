@@ -20,8 +20,8 @@ ms.locfileid: "54586185"
 |-----------------|-----------------|---------------------------------|----------------------|  
 |DefaultIfEmpty|以預設值的單一集合取代空集合。|不適用。|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=nameWithType>|  
 |Empty|傳回空集合。|不適用。|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=nameWithType>|  
-|範圍|產生包含數字序列的集合。|不適用。|<xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType>|  
-|重複|產生包含一個重複值的集合。|不適用。|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=nameWithType>|  
+|Range|產生包含數字序列的集合。|不適用。|<xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType>|  
+|Repeat|產生包含一個重複值的集合。|不適用。|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>另請參閱
 
