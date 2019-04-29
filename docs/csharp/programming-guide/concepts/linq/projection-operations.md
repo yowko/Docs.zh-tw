@@ -18,12 +18,12 @@ ms.locfileid: "58411209"
   
 |方法名稱|說明|C# 查詢運算式語法|更多資訊|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|選用版|投影以轉換函式為基礎的值。|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
+|Select|投影以轉換函式為基礎的值。|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
 |SelectMany|投影一連串以轉換函式為基礎的值，然後將這些值壓平合併成一個序列。|使用多個 `from` 子句|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>查詢運算式語法範例  
   
-### <a name="select"></a>選用版  
+### <a name="select"></a>Select  
  下列範例使用 `select` 子句，來投影字串清單中每個字串的第一個字母。  
   
 ```csharp  
