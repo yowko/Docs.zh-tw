@@ -17,24 +17,24 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d13d8226d944b170bd84ce3d069ca79099c6417d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697820"
 ---
-# <a name="idebugautoattach-interface"></a><span data-ttu-id="c9920-102">IDebugAutoAttach 介面</span><span class="sxs-lookup"><span data-stu-id="c9920-102">IDebugAutoAttach Interface</span></span>
-<span data-ttu-id="c9920-103">針對伺服器叫用偵錯工具自動附加，請定義的介面。</span><span class="sxs-lookup"><span data-stu-id="c9920-103">Defines the interface for server-invoked debugger auto attach.</span></span>  
+# <a name="idebugautoattach-interface"></a><span data-ttu-id="3eb15-102">IDebugAutoAttach 介面</span><span class="sxs-lookup"><span data-stu-id="3eb15-102">IDebugAutoAttach Interface</span></span>
+<span data-ttu-id="3eb15-103">針對伺服器叫用偵錯工具自動附加，請定義的介面。</span><span class="sxs-lookup"><span data-stu-id="3eb15-103">Defines the interface for server-invoked debugger auto attach.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="c9920-104">方法</span><span class="sxs-lookup"><span data-stu-id="c9920-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="3eb15-104">方法</span><span class="sxs-lookup"><span data-stu-id="3eb15-104">Methods</span></span>  
   
-|<span data-ttu-id="c9920-105">方法</span><span class="sxs-lookup"><span data-stu-id="c9920-105">Method</span></span>|<span data-ttu-id="c9920-106">描述</span><span class="sxs-lookup"><span data-stu-id="c9920-106">Description</span></span>|  
+|<span data-ttu-id="3eb15-105">方法</span><span class="sxs-lookup"><span data-stu-id="3eb15-105">Method</span></span>|<span data-ttu-id="3eb15-106">描述</span><span class="sxs-lookup"><span data-stu-id="3eb15-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="c9920-107">AutoAttach 方法</span><span class="sxs-lookup"><span data-stu-id="c9920-107">AutoAttach Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|<span data-ttu-id="c9920-108">執行伺服器叫用偵錯工具自動附加。</span><span class="sxs-lookup"><span data-stu-id="c9920-108">Performs server-invoked debugger auto attach.</span></span>|  
+|[<span data-ttu-id="3eb15-107">AutoAttach 方法</span><span class="sxs-lookup"><span data-stu-id="3eb15-107">AutoAttach Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|<span data-ttu-id="3eb15-108">執行伺服器叫用偵錯工具自動附加。</span><span class="sxs-lookup"><span data-stu-id="3eb15-108">Performs server-invoked debugger auto attach.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c9920-109">需求</span><span class="sxs-lookup"><span data-stu-id="c9920-109">Requirements</span></span>  
- <span data-ttu-id="c9920-110">**標頭：** DbgAutoAttach.idl</span><span class="sxs-lookup"><span data-stu-id="c9920-110">**Header:** DbgAutoAttach.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3eb15-109">需求</span><span class="sxs-lookup"><span data-stu-id="3eb15-109">Requirements</span></span>  
+ <span data-ttu-id="3eb15-110">**標頭：** DbgAutoAttach.idl</span><span class="sxs-lookup"><span data-stu-id="3eb15-110">**Header:** DbgAutoAttach.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9920-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c9920-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3eb15-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3eb15-111">See also</span></span>
 
-- [<span data-ttu-id="c9920-112">診斷符號存放區介面</span><span class="sxs-lookup"><span data-stu-id="c9920-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="3eb15-112">診斷符號存放區介面</span><span class="sxs-lookup"><span data-stu-id="3eb15-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

@@ -10,58 +10,58 @@ ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b1aa958e15449949a1b7ca740198fff71295b2ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704958"
 ---
-# <a name="enforcefipspolicy-element"></a><span data-ttu-id="2adc3-102">\<enforceFIPSPolicy > 項目</span><span class="sxs-lookup"><span data-stu-id="2adc3-102">\<enforceFIPSPolicy> Element</span></span>
-<span data-ttu-id="2adc3-103">指定是否強制執行電腦設定需求，以便讓密碼編譯演算法符合美國聯邦資訊處理標準 (FIPS) 的規範。</span><span class="sxs-lookup"><span data-stu-id="2adc3-103">Specifies whether to enforce a computer configuration requirement that cryptographic algorithms must comply with the Federal Information Processing Standards (FIPS).</span></span>  
+# <a name="enforcefipspolicy-element"></a><span data-ttu-id="66556-102">\<enforceFIPSPolicy > 項目</span><span class="sxs-lookup"><span data-stu-id="66556-102">\<enforceFIPSPolicy> Element</span></span>
+<span data-ttu-id="66556-103">指定是否強制執行電腦設定需求，以便讓密碼編譯演算法符合美國聯邦資訊處理標準 (FIPS) 的規範。</span><span class="sxs-lookup"><span data-stu-id="66556-103">Specifies whether to enforce a computer configuration requirement that cryptographic algorithms must comply with the Federal Information Processing Standards (FIPS).</span></span>  
   
- <span data-ttu-id="2adc3-104">\<組態 > 項目</span><span class="sxs-lookup"><span data-stu-id="2adc3-104">\<configuration> Element</span></span>  
-<span data-ttu-id="2adc3-105">\<執行階段 > 項目</span><span class="sxs-lookup"><span data-stu-id="2adc3-105">\<runtime> Element</span></span>  
-<span data-ttu-id="2adc3-106">\<enforceFIPSPolicy > 項目</span><span class="sxs-lookup"><span data-stu-id="2adc3-106">\<enforceFIPSPolicy> Element</span></span>  
+ <span data-ttu-id="66556-104">\<組態 > 項目</span><span class="sxs-lookup"><span data-stu-id="66556-104">\<configuration> Element</span></span>  
+<span data-ttu-id="66556-105">\<執行階段 > 項目</span><span class="sxs-lookup"><span data-stu-id="66556-105">\<runtime> Element</span></span>  
+<span data-ttu-id="66556-106">\<enforceFIPSPolicy > 項目</span><span class="sxs-lookup"><span data-stu-id="66556-106">\<enforceFIPSPolicy> Element</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2adc3-107">語法</span><span class="sxs-lookup"><span data-stu-id="2adc3-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="66556-107">語法</span><span class="sxs-lookup"><span data-stu-id="66556-107">Syntax</span></span>  
   
 ```xml  
 <enforceFIPSPolicy enabled="true|false" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="2adc3-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="2adc3-108">Attributes and Elements</span></span>  
- <span data-ttu-id="2adc3-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="2adc3-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="66556-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="66556-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="66556-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="66556-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="2adc3-110">屬性</span><span class="sxs-lookup"><span data-stu-id="2adc3-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="66556-110">屬性</span><span class="sxs-lookup"><span data-stu-id="66556-110">Attributes</span></span>  
   
-|<span data-ttu-id="2adc3-111">屬性</span><span class="sxs-lookup"><span data-stu-id="2adc3-111">Attribute</span></span>|<span data-ttu-id="2adc3-112">描述</span><span class="sxs-lookup"><span data-stu-id="2adc3-112">Description</span></span>|  
+|<span data-ttu-id="66556-111">屬性</span><span class="sxs-lookup"><span data-stu-id="66556-111">Attribute</span></span>|<span data-ttu-id="66556-112">描述</span><span class="sxs-lookup"><span data-stu-id="66556-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="2adc3-113">enabled</span><span class="sxs-lookup"><span data-stu-id="2adc3-113">enabled</span></span>|<span data-ttu-id="2adc3-114">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="2adc3-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="2adc3-115">指定是否要啟用 強制執行密碼編譯演算法必須是符合 FIPS 規範的電腦設定需求。</span><span class="sxs-lookup"><span data-stu-id="2adc3-115">Specifies whether to enable the enforcement of a computer configuration requirement that cryptographic algorithms must be compliant with FIPS.</span></span>|  
+|<span data-ttu-id="66556-113">enabled</span><span class="sxs-lookup"><span data-stu-id="66556-113">enabled</span></span>|<span data-ttu-id="66556-114">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="66556-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="66556-115">指定是否要啟用 強制執行密碼編譯演算法必須是符合 FIPS 規範的電腦設定需求。</span><span class="sxs-lookup"><span data-stu-id="66556-115">Specifies whether to enable the enforcement of a computer configuration requirement that cryptographic algorithms must be compliant with FIPS.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="2adc3-116">啟用屬性</span><span class="sxs-lookup"><span data-stu-id="2adc3-116">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="66556-116">啟用屬性</span><span class="sxs-lookup"><span data-stu-id="66556-116">enabled Attribute</span></span>  
   
-|<span data-ttu-id="2adc3-117">值</span><span class="sxs-lookup"><span data-stu-id="2adc3-117">Value</span></span>|<span data-ttu-id="2adc3-118">描述</span><span class="sxs-lookup"><span data-stu-id="2adc3-118">Description</span></span>|  
+|<span data-ttu-id="66556-117">值</span><span class="sxs-lookup"><span data-stu-id="66556-117">Value</span></span>|<span data-ttu-id="66556-118">描述</span><span class="sxs-lookup"><span data-stu-id="66556-118">Description</span></span>|  
 |-----------|-----------------|  
-|`true`|<span data-ttu-id="2adc3-119">如果您的電腦設定為需要與 FIPS 相容的密碼編譯演算法，會強制執行這項需求。</span><span class="sxs-lookup"><span data-stu-id="2adc3-119">If your computer is configured to require cryptographic algorithms to be FIPS compliant, that requirement is enforced.</span></span> <span data-ttu-id="2adc3-120">如果類別實作不符合 FIPS，建構函式是演算法或`Create`在該電腦上執行時，該類別的方法擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="2adc3-120">If a class implements an algorithm that is not compliant with FIPS, the constructors or `Create` methods for that class throw exceptions when they are run on that computer.</span></span> <span data-ttu-id="2adc3-121">這是預設值。</span><span class="sxs-lookup"><span data-stu-id="2adc3-121">This is the default.</span></span>|  
-|`false`|<span data-ttu-id="2adc3-122">密碼編譯演算法所使用的應用程式不一定要符合 FIPS 規範，不論電腦設定。</span><span class="sxs-lookup"><span data-stu-id="2adc3-122">Cryptographic algorithms that are used by the application are not required to be compliant with FIPS, regardless of computer configuration.</span></span>|  
+|`true`|<span data-ttu-id="66556-119">如果您的電腦設定為需要與 FIPS 相容的密碼編譯演算法，會強制執行這項需求。</span><span class="sxs-lookup"><span data-stu-id="66556-119">If your computer is configured to require cryptographic algorithms to be FIPS compliant, that requirement is enforced.</span></span> <span data-ttu-id="66556-120">如果類別實作不符合 FIPS，建構函式是演算法或`Create`在該電腦上執行時，該類別的方法擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="66556-120">If a class implements an algorithm that is not compliant with FIPS, the constructors or `Create` methods for that class throw exceptions when they are run on that computer.</span></span> <span data-ttu-id="66556-121">這是預設值。</span><span class="sxs-lookup"><span data-stu-id="66556-121">This is the default.</span></span>|  
+|`false`|<span data-ttu-id="66556-122">密碼編譯演算法所使用的應用程式不一定要符合 FIPS 規範，不論電腦設定。</span><span class="sxs-lookup"><span data-stu-id="66556-122">Cryptographic algorithms that are used by the application are not required to be compliant with FIPS, regardless of computer configuration.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="2adc3-123">子元素</span><span class="sxs-lookup"><span data-stu-id="2adc3-123">Child Elements</span></span>  
- <span data-ttu-id="2adc3-124">無。</span><span class="sxs-lookup"><span data-stu-id="2adc3-124">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="66556-123">子元素</span><span class="sxs-lookup"><span data-stu-id="66556-123">Child Elements</span></span>  
+ <span data-ttu-id="66556-124">無。</span><span class="sxs-lookup"><span data-stu-id="66556-124">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="2adc3-125">父項目</span><span class="sxs-lookup"><span data-stu-id="2adc3-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="66556-125">父項目</span><span class="sxs-lookup"><span data-stu-id="66556-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="2adc3-126">項目</span><span class="sxs-lookup"><span data-stu-id="2adc3-126">Element</span></span>|<span data-ttu-id="2adc3-127">描述</span><span class="sxs-lookup"><span data-stu-id="2adc3-127">Description</span></span>|  
+|<span data-ttu-id="66556-126">項目</span><span class="sxs-lookup"><span data-stu-id="66556-126">Element</span></span>|<span data-ttu-id="66556-127">描述</span><span class="sxs-lookup"><span data-stu-id="66556-127">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="2adc3-128">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="2adc3-128">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="2adc3-129">包含有關組件繫結和記憶體回收的資訊。</span><span class="sxs-lookup"><span data-stu-id="2adc3-129">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="66556-128">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="66556-128">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="66556-129">包含有關組件繫結和記憶體回收的資訊。</span><span class="sxs-lookup"><span data-stu-id="66556-129">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2adc3-130">備註</span><span class="sxs-lookup"><span data-stu-id="2adc3-130">Remarks</span></span>  
- <span data-ttu-id="2adc3-131">從.NET Framework 2.0 開始，實作密碼編譯演算法之類別的建立是由電腦的設定所控制。</span><span class="sxs-lookup"><span data-stu-id="2adc3-131">Starting with the .NET Framework 2.0, the creation of classes that implement cryptographic algorithms is controlled by the configuration of the computer.</span></span> <span data-ttu-id="2adc3-132">如果電腦已設定為需要演算法，以符合 FIPS，類別會實作不會符合 FIPS 規範的演算法，任何嘗試建立該類別的執行個體就會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="2adc3-132">If the computer is configured to require algorithms to be compliant with FIPS, and a class implements an algorithm that is not compliant with FIPS, any attempt to create an instance of that class throws an exception.</span></span> <span data-ttu-id="2adc3-133">建構函式會擲回<xref:System.InvalidOperationException>例外狀況，並`Create`方法會擲回<xref:System.Reflection.TargetInvocationException>例外狀況，並傳回內部<xref:System.InvalidOperationException>例外狀況。</span><span class="sxs-lookup"><span data-stu-id="2adc3-133">Constructors throw an <xref:System.InvalidOperationException> exception, and `Create` methods throw a <xref:System.Reflection.TargetInvocationException> exception with an inner <xref:System.InvalidOperationException> exception.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="66556-130">備註</span><span class="sxs-lookup"><span data-stu-id="66556-130">Remarks</span></span>  
+ <span data-ttu-id="66556-131">從.NET Framework 2.0 開始，實作密碼編譯演算法之類別的建立是由電腦的設定所控制。</span><span class="sxs-lookup"><span data-stu-id="66556-131">Starting with the .NET Framework 2.0, the creation of classes that implement cryptographic algorithms is controlled by the configuration of the computer.</span></span> <span data-ttu-id="66556-132">如果電腦已設定為需要演算法，以符合 FIPS，類別會實作不會符合 FIPS 規範的演算法，任何嘗試建立該類別的執行個體就會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="66556-132">If the computer is configured to require algorithms to be compliant with FIPS, and a class implements an algorithm that is not compliant with FIPS, any attempt to create an instance of that class throws an exception.</span></span> <span data-ttu-id="66556-133">建構函式會擲回<xref:System.InvalidOperationException>例外狀況，並`Create`方法會擲回<xref:System.Reflection.TargetInvocationException>例外狀況，並傳回內部<xref:System.InvalidOperationException>例外狀況。</span><span class="sxs-lookup"><span data-stu-id="66556-133">Constructors throw an <xref:System.InvalidOperationException> exception, and `Create` methods throw a <xref:System.Reflection.TargetInvocationException> exception with an inner <xref:System.InvalidOperationException> exception.</span></span>  
   
- <span data-ttu-id="2adc3-134">如果您的應用程式在其組態需要 fips，合規性的電腦上執行您的應用程式會使用與 FIPS 不相容的演算法，您可以使用您的組態檔的這個項目以防止從的 common language runtime (CLR)強制執行的 FIPS 合規性。</span><span class="sxs-lookup"><span data-stu-id="2adc3-134">If your application runs on computers whose configurations require compliance with FIPS, and your application uses an algorithm that is not compliant with FIPS, you can use this element in your configuration file to prevent the common language runtime (CLR) from enforcing FIPS compliance.</span></span> <span data-ttu-id="2adc3-135">這個項目中導入[!INCLUDE[net_v20SP1_long](../../../../../includes/net-v20sp1-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="2adc3-135">This element was introduced in the [!INCLUDE[net_v20SP1_long](../../../../../includes/net-v20sp1-long-md.md)].</span></span>  
+ <span data-ttu-id="66556-134">如果您的應用程式在其組態需要 fips，合規性的電腦上執行您的應用程式會使用與 FIPS 不相容的演算法，您可以使用您的組態檔的這個項目以防止從的 common language runtime (CLR)強制執行的 FIPS 合規性。</span><span class="sxs-lookup"><span data-stu-id="66556-134">If your application runs on computers whose configurations require compliance with FIPS, and your application uses an algorithm that is not compliant with FIPS, you can use this element in your configuration file to prevent the common language runtime (CLR) from enforcing FIPS compliance.</span></span> <span data-ttu-id="66556-135">這個項目中導入[!INCLUDE[net_v20SP1_long](../../../../../includes/net-v20sp1-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="66556-135">This element was introduced in the [!INCLUDE[net_v20SP1_long](../../../../../includes/net-v20sp1-long-md.md)].</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2adc3-136">範例</span><span class="sxs-lookup"><span data-stu-id="2adc3-136">Example</span></span>  
- <span data-ttu-id="2adc3-137">下列範例示範如何防止 CLR 強制 FIPS 合規性。</span><span class="sxs-lookup"><span data-stu-id="2adc3-137">The following example shows how to prevent the CLR from enforcing FIPS compliance.</span></span>  
+## <a name="example"></a><span data-ttu-id="66556-136">範例</span><span class="sxs-lookup"><span data-stu-id="66556-136">Example</span></span>  
+ <span data-ttu-id="66556-137">下列範例示範如何防止 CLR 強制 FIPS 合規性。</span><span class="sxs-lookup"><span data-stu-id="66556-137">The following example shows how to prevent the CLR from enforcing FIPS compliance.</span></span>  
   
 ```xml  
 <configuration>  
@@ -71,8 +71,8 @@ ms.locfileid: "59114829"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2adc3-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2adc3-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="66556-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="66556-138">See also</span></span>
 
-- [<span data-ttu-id="2adc3-139">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="2adc3-139">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="2adc3-140">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="2adc3-140">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="2adc3-141">加密模型</span><span class="sxs-lookup"><span data-stu-id="2adc3-141">Cryptography Model</span></span>](../../../../../docs/standard/security/cryptography-model.md)
+- [<span data-ttu-id="66556-139">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="66556-139">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="66556-140">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="66556-140">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="66556-141">加密模型</span><span class="sxs-lookup"><span data-stu-id="66556-141">Cryptography Model</span></span>](../../../../../docs/standard/security/cryptography-model.md)

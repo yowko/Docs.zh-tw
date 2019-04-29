@@ -19,15 +19,15 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 785defaa69609fc30852be9996531e6063586ceb
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750172"
 ---
-# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="84ac8-102">ICorDebugCode::GetEnCRemapSequencePoints 方法</span><span class="sxs-lookup"><span data-stu-id="84ac8-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
-<span data-ttu-id="84ac8-103">在目前版本的.NET framework 不實作這個方法。</span><span class="sxs-lookup"><span data-stu-id="84ac8-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="d6a46-102">ICorDebugCode::GetEnCRemapSequencePoints 方法</span><span class="sxs-lookup"><span data-stu-id="d6a46-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
+<span data-ttu-id="d6a46-103">在目前版本的.NET framework 不實作這個方法。</span><span class="sxs-lookup"><span data-stu-id="d6a46-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="84ac8-104">語法</span><span class="sxs-lookup"><span data-stu-id="84ac8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d6a46-104">語法</span><span class="sxs-lookup"><span data-stu-id="d6a46-104">Syntax</span></span>  
   
 ```  
 HRESULT GetEnCRemapSequencePoints(  
@@ -38,4 +38,4 @@ HRESULT GetEnCRemapSequencePoints(
 );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="84ac8-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="84ac8-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d6a46-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d6a46-105">See also</span></span>

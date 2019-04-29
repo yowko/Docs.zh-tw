@@ -8,17 +8,17 @@ helpviewer_keywords:
 - elements [WPF], finding by name
 ms.assetid: cfa7cf35-8aa2-4060-9454-872ed4af3f0e
 ms.openlocfilehash: 7405f9ba8db5d4db0ce35ca250f13e456685f39b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757842"
 ---
-# <a name="how-to-find-an-element-by-its-name"></a><span data-ttu-id="6ed25-102">HOW TO：依名稱尋找項目</span><span class="sxs-lookup"><span data-stu-id="6ed25-102">How to: Find an Element by Its Name</span></span>
-<span data-ttu-id="6ed25-103">此範例說明如何使用<xref:System.Windows.FrameworkElement.FindName%2A>方法來尋找項目由其<xref:System.Windows.FrameworkElement.Name%2A>值。</span><span class="sxs-lookup"><span data-stu-id="6ed25-103">This example describes how to use the <xref:System.Windows.FrameworkElement.FindName%2A> method to find an element by its <xref:System.Windows.FrameworkElement.Name%2A> value.</span></span>  
+# <a name="how-to-find-an-element-by-its-name"></a><span data-ttu-id="3cfb4-102">HOW TO：依名稱尋找項目</span><span class="sxs-lookup"><span data-stu-id="3cfb4-102">How to: Find an Element by Its Name</span></span>
+<span data-ttu-id="3cfb4-103">此範例說明如何使用<xref:System.Windows.FrameworkElement.FindName%2A>方法來尋找項目由其<xref:System.Windows.FrameworkElement.Name%2A>值。</span><span class="sxs-lookup"><span data-stu-id="3cfb4-103">This example describes how to use the <xref:System.Windows.FrameworkElement.FindName%2A> method to find an element by its <xref:System.Windows.FrameworkElement.Name%2A> value.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6ed25-104">範例</span><span class="sxs-lookup"><span data-stu-id="6ed25-104">Example</span></span>  
- <span data-ttu-id="6ed25-105">在此範例中，會以按鈕的事件處理常式寫入方法來依名稱尋找特定的項目。</span><span class="sxs-lookup"><span data-stu-id="6ed25-105">In this example, the method to find a particular element by its name is written as the event handler of a button.</span></span> <span data-ttu-id="6ed25-106">`stackPanel` 是<xref:System.Windows.FrameworkElement.Name%2A>的根目錄<xref:System.Windows.FrameworkElement>所搜尋範例方法然後以視覺方式表示找到的項目轉換成<xref:System.Windows.Controls.TextBlock>和變更的其中一個<xref:System.Windows.Controls.TextBlock>可見[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]屬性。</span><span class="sxs-lookup"><span data-stu-id="6ed25-106">`stackPanel` is the <xref:System.Windows.FrameworkElement.Name%2A> of the root <xref:System.Windows.FrameworkElement> being searched, and the example method then visually indicates the found element by casting it as <xref:System.Windows.Controls.TextBlock> and changing one of the <xref:System.Windows.Controls.TextBlock> visible [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] properties.</span></span>  
+## <a name="example"></a><span data-ttu-id="3cfb4-104">範例</span><span class="sxs-lookup"><span data-stu-id="3cfb4-104">Example</span></span>  
+ <span data-ttu-id="3cfb4-105">在此範例中，會以按鈕的事件處理常式寫入方法來依名稱尋找特定的項目。</span><span class="sxs-lookup"><span data-stu-id="3cfb4-105">In this example, the method to find a particular element by its name is written as the event handler of a button.</span></span> <span data-ttu-id="3cfb4-106">`stackPanel` 是<xref:System.Windows.FrameworkElement.Name%2A>的根目錄<xref:System.Windows.FrameworkElement>所搜尋範例方法然後以視覺方式表示找到的項目轉換成<xref:System.Windows.Controls.TextBlock>和變更的其中一個<xref:System.Windows.Controls.TextBlock>可見[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]屬性。</span><span class="sxs-lookup"><span data-stu-id="3cfb4-106">`stackPanel` is the <xref:System.Windows.FrameworkElement.Name%2A> of the root <xref:System.Windows.FrameworkElement> being searched, and the example method then visually indicates the found element by casting it as <xref:System.Windows.Controls.TextBlock> and changing one of the <xref:System.Windows.Controls.TextBlock> visible [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] properties.</span></span>  
   
  [!code-csharp[FEFindName#Find](~/samples/snippets/csharp/VS_Snippets_Wpf/FEFindName/CSharp/default.xaml.cs#find)]
  [!code-vb[FEFindName#Find](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FEFindName/VisualBasic/default.xaml.vb#find)]

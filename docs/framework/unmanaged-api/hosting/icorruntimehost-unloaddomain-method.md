@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 492a60d3c8d18bec4e99ae778686fec6e8724248
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700237"
 ---
-# <a name="icorruntimehostunloaddomain-method"></a><span data-ttu-id="360ad-102">ICorRuntimeHost::UnloadDomain 方法</span><span class="sxs-lookup"><span data-stu-id="360ad-102">ICorRuntimeHost::UnloadDomain Method</span></span>
-<span data-ttu-id="360ad-103">卸載指定的應用程式定義域，從目前的處理序。</span><span class="sxs-lookup"><span data-stu-id="360ad-103">Unloads the specified application domain from the current process.</span></span>  
+# <a name="icorruntimehostunloaddomain-method"></a><span data-ttu-id="55a88-102">ICorRuntimeHost::UnloadDomain 方法</span><span class="sxs-lookup"><span data-stu-id="55a88-102">ICorRuntimeHost::UnloadDomain Method</span></span>
+<span data-ttu-id="55a88-103">卸載指定的應用程式定義域，從目前的處理序。</span><span class="sxs-lookup"><span data-stu-id="55a88-103">Unloads the specified application domain from the current process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="360ad-104">語法</span><span class="sxs-lookup"><span data-stu-id="360ad-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="55a88-104">語法</span><span class="sxs-lookup"><span data-stu-id="55a88-104">Syntax</span></span>  
   
 ```  
 HRESULT UnloadDomain (  
@@ -35,30 +35,30 @@ HRESULT UnloadDomain (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="360ad-105">參數</span><span class="sxs-lookup"><span data-stu-id="360ad-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="55a88-105">參數</span><span class="sxs-lookup"><span data-stu-id="55a88-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="360ad-106">[in]型別的指標<xref:System._AppDomain?displayProperty=nameWithType>，代表要卸載的網域。</span><span class="sxs-lookup"><span data-stu-id="360ad-106">[in] A pointer of type <xref:System._AppDomain?displayProperty=nameWithType> that represents the domain to be unloaded.</span></span>  
+ <span data-ttu-id="55a88-106">[in]型別的指標<xref:System._AppDomain?displayProperty=nameWithType>，代表要卸載的網域。</span><span class="sxs-lookup"><span data-stu-id="55a88-106">[in] A pointer of type <xref:System._AppDomain?displayProperty=nameWithType> that represents the domain to be unloaded.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="360ad-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="360ad-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="55a88-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="55a88-107">Return Value</span></span>  
   
-|<span data-ttu-id="360ad-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="360ad-108">HRESULT</span></span>|<span data-ttu-id="360ad-109">描述</span><span class="sxs-lookup"><span data-stu-id="360ad-109">Description</span></span>|  
+|<span data-ttu-id="55a88-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="55a88-108">HRESULT</span></span>|<span data-ttu-id="55a88-109">描述</span><span class="sxs-lookup"><span data-stu-id="55a88-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="360ad-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="360ad-110">S_OK</span></span>|<span data-ttu-id="360ad-111">此作業成功。</span><span class="sxs-lookup"><span data-stu-id="360ad-111">The operation was successful.</span></span>|  
-|<span data-ttu-id="360ad-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="360ad-112">S_FALSE</span></span>|<span data-ttu-id="360ad-113">作業無法完成。</span><span class="sxs-lookup"><span data-stu-id="360ad-113">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="360ad-114">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="360ad-114">E_FAIL</span></span>|<span data-ttu-id="360ad-115">發生不明、 重大失敗。</span><span class="sxs-lookup"><span data-stu-id="360ad-115">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="360ad-116">如果方法會傳回 E_FAIL，common language runtime (CLR) 不再使用舊處理序中。</span><span class="sxs-lookup"><span data-stu-id="360ad-116">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="360ad-117">任何裝載 api 的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="360ad-117">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="360ad-118">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="360ad-118">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="360ad-119">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="360ad-119">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="55a88-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="55a88-110">S_OK</span></span>|<span data-ttu-id="55a88-111">此作業成功。</span><span class="sxs-lookup"><span data-stu-id="55a88-111">The operation was successful.</span></span>|  
+|<span data-ttu-id="55a88-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="55a88-112">S_FALSE</span></span>|<span data-ttu-id="55a88-113">作業無法完成。</span><span class="sxs-lookup"><span data-stu-id="55a88-113">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="55a88-114">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="55a88-114">E_FAIL</span></span>|<span data-ttu-id="55a88-115">發生不明、 重大失敗。</span><span class="sxs-lookup"><span data-stu-id="55a88-115">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="55a88-116">如果方法會傳回 E_FAIL，common language runtime (CLR) 不再使用舊處理序中。</span><span class="sxs-lookup"><span data-stu-id="55a88-116">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="55a88-117">任何裝載 api 的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="55a88-117">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="55a88-118">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="55a88-118">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="55a88-119">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="55a88-119">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="360ad-120">需求</span><span class="sxs-lookup"><span data-stu-id="360ad-120">Requirements</span></span>  
- <span data-ttu-id="360ad-121">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="360ad-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="55a88-120">需求</span><span class="sxs-lookup"><span data-stu-id="55a88-120">Requirements</span></span>  
+ <span data-ttu-id="55a88-121">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="55a88-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="360ad-122">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="360ad-122">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="55a88-122">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="55a88-122">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="360ad-123">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="360ad-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="55a88-123">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="55a88-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="360ad-124">**.NET framework 版本：** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="360ad-124">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="55a88-124">**.NET framework 版本：** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="55a88-124">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="360ad-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="360ad-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="55a88-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="55a88-125">See also</span></span>
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [<span data-ttu-id="360ad-126">ICorRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="360ad-126">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="55a88-126">ICorRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="55a88-126">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

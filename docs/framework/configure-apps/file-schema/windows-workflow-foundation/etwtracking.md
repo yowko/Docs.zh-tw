@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
 ms.openlocfilehash: e7614f158826e3522ac8e17d60c1ea65fefc8612
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790191"
 ---
-# <a name="etwtracking"></a><span data-ttu-id="2f3b7-101">\<etwTracking></span><span class="sxs-lookup"><span data-stu-id="2f3b7-101">\<etwTracking></span></span>
-<span data-ttu-id="2f3b7-102">這個服務行為可讓服務能夠利用 ETW 追蹤使用<xref:System.Activities.Tracking.EtwTrackingParticipant>。</span><span class="sxs-lookup"><span data-stu-id="2f3b7-102">A service behavior that allows a service to utilize ETW tracking using an <xref:System.Activities.Tracking.EtwTrackingParticipant>.</span></span>  
+# <a name="etwtracking"></a><span data-ttu-id="72fe7-101">\<etwTracking></span><span class="sxs-lookup"><span data-stu-id="72fe7-101">\<etwTracking></span></span>
+<span data-ttu-id="72fe7-102">這個服務行為可讓服務能夠利用 ETW 追蹤使用<xref:System.Activities.Tracking.EtwTrackingParticipant>。</span><span class="sxs-lookup"><span data-stu-id="72fe7-102">A service behavior that allows a service to utilize ETW tracking using an <xref:System.Activities.Tracking.EtwTrackingParticipant>.</span></span>  
   
-<span data-ttu-id="2f3b7-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="2f3b7-103">\<system.ServiceModel></span></span>  
-<span data-ttu-id="2f3b7-104">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="2f3b7-104">\<behaviors></span></span>  
-<span data-ttu-id="2f3b7-105">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="2f3b7-105">\<serviceBehaviors></span></span>  
-<span data-ttu-id="2f3b7-106">\<behavior></span><span class="sxs-lookup"><span data-stu-id="2f3b7-106">\<behavior></span></span>  
-<span data-ttu-id="2f3b7-107">\<etwTracking></span><span class="sxs-lookup"><span data-stu-id="2f3b7-107">\<etwTracking></span></span>  
+<span data-ttu-id="72fe7-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="72fe7-103">\<system.ServiceModel></span></span>  
+<span data-ttu-id="72fe7-104">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="72fe7-104">\<behaviors></span></span>  
+<span data-ttu-id="72fe7-105">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="72fe7-105">\<serviceBehaviors></span></span>  
+<span data-ttu-id="72fe7-106">\<behavior></span><span class="sxs-lookup"><span data-stu-id="72fe7-106">\<behavior></span></span>  
+<span data-ttu-id="72fe7-107">\<etwTracking></span><span class="sxs-lookup"><span data-stu-id="72fe7-107">\<etwTracking></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2f3b7-108">語法</span><span class="sxs-lookup"><span data-stu-id="2f3b7-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="72fe7-108">語法</span><span class="sxs-lookup"><span data-stu-id="72fe7-108">Syntax</span></span>  
   
 ```xml  
 <behaviors>
@@ -31,33 +31,33 @@ ms.locfileid: "59174443"
 </behaviors>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="2f3b7-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="2f3b7-109">Attributes and Elements</span></span>  
- <span data-ttu-id="2f3b7-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="2f3b7-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="72fe7-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="72fe7-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="72fe7-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="72fe7-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="2f3b7-111">屬性</span><span class="sxs-lookup"><span data-stu-id="2f3b7-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="72fe7-111">屬性</span><span class="sxs-lookup"><span data-stu-id="72fe7-111">Attributes</span></span>  
   
-|<span data-ttu-id="2f3b7-112">屬性</span><span class="sxs-lookup"><span data-stu-id="2f3b7-112">Attribute</span></span>|<span data-ttu-id="2f3b7-113">描述</span><span class="sxs-lookup"><span data-stu-id="2f3b7-113">Description</span></span>|  
+|<span data-ttu-id="72fe7-112">屬性</span><span class="sxs-lookup"><span data-stu-id="72fe7-112">Attribute</span></span>|<span data-ttu-id="72fe7-113">描述</span><span class="sxs-lookup"><span data-stu-id="72fe7-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="2f3b7-114">profileName</span><span class="sxs-lookup"><span data-stu-id="2f3b7-114">profileName</span></span>|<span data-ttu-id="2f3b7-115">可指定與這個行為相關聯的追蹤設定檔名稱的字串。</span><span class="sxs-lookup"><span data-stu-id="2f3b7-115">A string that specifies the name of the tracking profile associated with this behavior.</span></span>|  
+|<span data-ttu-id="72fe7-114">profileName</span><span class="sxs-lookup"><span data-stu-id="72fe7-114">profileName</span></span>|<span data-ttu-id="72fe7-115">可指定與這個行為相關聯的追蹤設定檔名稱的字串。</span><span class="sxs-lookup"><span data-stu-id="72fe7-115">A string that specifies the name of the tracking profile associated with this behavior.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="2f3b7-116">子元素</span><span class="sxs-lookup"><span data-stu-id="2f3b7-116">Child Elements</span></span>  
- <span data-ttu-id="2f3b7-117">無。</span><span class="sxs-lookup"><span data-stu-id="2f3b7-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="72fe7-116">子元素</span><span class="sxs-lookup"><span data-stu-id="72fe7-116">Child Elements</span></span>  
+ <span data-ttu-id="72fe7-117">無。</span><span class="sxs-lookup"><span data-stu-id="72fe7-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="2f3b7-118">父項目</span><span class="sxs-lookup"><span data-stu-id="2f3b7-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="72fe7-118">父項目</span><span class="sxs-lookup"><span data-stu-id="72fe7-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="2f3b7-119">項目</span><span class="sxs-lookup"><span data-stu-id="2f3b7-119">Element</span></span>|<span data-ttu-id="2f3b7-120">描述</span><span class="sxs-lookup"><span data-stu-id="2f3b7-120">Description</span></span>|  
+|<span data-ttu-id="72fe7-119">項目</span><span class="sxs-lookup"><span data-stu-id="72fe7-119">Element</span></span>|<span data-ttu-id="72fe7-120">描述</span><span class="sxs-lookup"><span data-stu-id="72fe7-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="2f3b7-121">\<行為 > 的\<v ></span><span class="sxs-lookup"><span data-stu-id="2f3b7-121">\<behavior> of \<serviceBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|<span data-ttu-id="2f3b7-122">指定行為項目。</span><span class="sxs-lookup"><span data-stu-id="2f3b7-122">Specifies a behavior element.</span></span>|  
+|[<span data-ttu-id="72fe7-121">\<行為 > 的\<v ></span><span class="sxs-lookup"><span data-stu-id="72fe7-121">\<behavior> of \<serviceBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|<span data-ttu-id="72fe7-122">指定行為項目。</span><span class="sxs-lookup"><span data-stu-id="72fe7-122">Specifies a behavior element.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2f3b7-123">備註</span><span class="sxs-lookup"><span data-stu-id="2f3b7-123">Remarks</span></span>  
- <span data-ttu-id="2f3b7-124">加入至服務的行為組態時，這個組態項目會在工作流程服務中，設定追蹤參與者。</span><span class="sxs-lookup"><span data-stu-id="2f3b7-124">When added to the service’s behavior configuration, this configuration element configures a tracking participant on a workflow service.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="72fe7-123">備註</span><span class="sxs-lookup"><span data-stu-id="72fe7-123">Remarks</span></span>  
+ <span data-ttu-id="72fe7-124">加入至服務的行為組態時，這個組態項目會在工作流程服務中，設定追蹤參與者。</span><span class="sxs-lookup"><span data-stu-id="72fe7-124">When added to the service’s behavior configuration, this configuration element configures a tracking participant on a workflow service.</span></span>  
   
- <span data-ttu-id="2f3b7-125">追蹤參與者是用來取得自工作流程發出的追蹤資料，然後將資料儲存至不同的媒體。</span><span class="sxs-lookup"><span data-stu-id="2f3b7-125">Tracking participants are used to get the tracking data emitted from the workflow and store it into different mediums.</span></span> <span data-ttu-id="2f3b7-126">同樣地，追蹤記錄的任何後期處理也可在追蹤參與者之中完成。</span><span class="sxs-lookup"><span data-stu-id="2f3b7-126">Likewise, any post processing on the tracking Records can also be done within the tracking participant.</span></span>  
+ <span data-ttu-id="72fe7-125">追蹤參與者是用來取得自工作流程發出的追蹤資料，然後將資料儲存至不同的媒體。</span><span class="sxs-lookup"><span data-stu-id="72fe7-125">Tracking participants are used to get the tracking data emitted from the workflow and store it into different mediums.</span></span> <span data-ttu-id="72fe7-126">同樣地，追蹤記錄的任何後期處理也可在追蹤參與者之中完成。</span><span class="sxs-lookup"><span data-stu-id="72fe7-126">Likewise, any post processing on the tracking Records can also be done within the tracking participant.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2f3b7-127">範例</span><span class="sxs-lookup"><span data-stu-id="2f3b7-127">Example</span></span>  
- <span data-ttu-id="2f3b7-128">以下組態範例顯示在 Web.config 檔案中設定的標準 ETW 追蹤參與者。</span><span class="sxs-lookup"><span data-stu-id="2f3b7-128">The following configuration example shows the standard ETW tracking participant being configured in the Web.config file.</span></span>  
+## <a name="example"></a><span data-ttu-id="72fe7-127">範例</span><span class="sxs-lookup"><span data-stu-id="72fe7-127">Example</span></span>  
+ <span data-ttu-id="72fe7-128">以下組態範例顯示在 Web.config 檔案中設定的標準 ETW 追蹤參與者。</span><span class="sxs-lookup"><span data-stu-id="72fe7-128">The following configuration example shows the standard ETW tracking participant being configured in the Web.config file.</span></span>  
   
- <span data-ttu-id="2f3b7-129">ETW 追蹤參與者用來寫入追蹤記錄到 ETW 提供者識別碼會定義在 **\<診斷>** 一節。</span><span class="sxs-lookup"><span data-stu-id="2f3b7-129">The Provider Id that the ETW Tracking Participant uses for writing the Tracking Records to ETW is defined in the **\<diagnostics>** section.</span></span> <span data-ttu-id="2f3b7-130">追蹤參與者擁有與其相關聯的設定檔，以指定已經訂閱的追蹤記錄。</span><span class="sxs-lookup"><span data-stu-id="2f3b7-130">The tracking participant has a profile associated with it to specify the tracking records it has subscribed to.</span></span> <span data-ttu-id="2f3b7-131">這由定義 **profileName** 屬性 **\<新增>** 項目。</span><span class="sxs-lookup"><span data-stu-id="2f3b7-131">This is defined by the **profileName** attribute of the **\<add>** element.</span></span> <span data-ttu-id="2f3b7-132">一旦這些定義加入追蹤參與者 **\<etwTracking >** 服務行為。</span><span class="sxs-lookup"><span data-stu-id="2f3b7-132">Once these are defined, the Tracking Participant is added to the **\<etwTracking>** service behavior.</span></span> <span data-ttu-id="2f3b7-133">如此會將選取的追蹤參與者加入至工作流程執行個體的擴充，因此，追蹤參與者可開始接收追蹤記錄。</span><span class="sxs-lookup"><span data-stu-id="2f3b7-133">This will add the selected Tracking Participants to the Workflow instance’s extensions, so that they begin to receive the Tracking Records.</span></span>  
+ <span data-ttu-id="72fe7-129">ETW 追蹤參與者用來寫入追蹤記錄到 ETW 提供者識別碼會定義在 **\<診斷>** 一節。</span><span class="sxs-lookup"><span data-stu-id="72fe7-129">The Provider Id that the ETW Tracking Participant uses for writing the Tracking Records to ETW is defined in the **\<diagnostics>** section.</span></span> <span data-ttu-id="72fe7-130">追蹤參與者擁有與其相關聯的設定檔，以指定已經訂閱的追蹤記錄。</span><span class="sxs-lookup"><span data-stu-id="72fe7-130">The tracking participant has a profile associated with it to specify the tracking records it has subscribed to.</span></span> <span data-ttu-id="72fe7-131">這由定義 **profileName** 屬性 **\<新增>** 項目。</span><span class="sxs-lookup"><span data-stu-id="72fe7-131">This is defined by the **profileName** attribute of the **\<add>** element.</span></span> <span data-ttu-id="72fe7-132">一旦這些定義加入追蹤參與者 **\<etwTracking >** 服務行為。</span><span class="sxs-lookup"><span data-stu-id="72fe7-132">Once these are defined, the Tracking Participant is added to the **\<etwTracking>** service behavior.</span></span> <span data-ttu-id="72fe7-133">如此會將選取的追蹤參與者加入至工作流程執行個體的擴充，因此，追蹤參與者可開始接收追蹤記錄。</span><span class="sxs-lookup"><span data-stu-id="72fe7-133">This will add the selected Tracking Participants to the Workflow instance’s extensions, so that they begin to receive the Tracking Records.</span></span>  
   
 ```xml  
 <configuration>   
@@ -84,9 +84,9 @@ ms.locfileid: "59174443"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2f3b7-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2f3b7-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="72fe7-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="72fe7-134">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
-- [<span data-ttu-id="2f3b7-135">工作流程追蹤及追蹤</span><span class="sxs-lookup"><span data-stu-id="2f3b7-135">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="2f3b7-136">追蹤參與者</span><span class="sxs-lookup"><span data-stu-id="2f3b7-136">Tracking Participants</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+- [<span data-ttu-id="72fe7-135">工作流程追蹤及追蹤</span><span class="sxs-lookup"><span data-stu-id="72fe7-135">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="72fe7-136">追蹤參與者</span><span class="sxs-lookup"><span data-stu-id="72fe7-136">Tracking Participants</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

@@ -8,29 +8,29 @@ helpviewer_keywords:
 - Image control [WPF]
 ms.assetid: e6e51cf9-8fa1-457e-856b-a5e513bc5caf
 ms.openlocfilehash: 5c300df2c63f4fa852c8cce318a5461f3be5f226
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696115"
 ---
-# <a name="image-how-to-topics"></a><span data-ttu-id="37dc1-102">影像 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="37dc1-102">Image How-to Topics</span></span>
-<span data-ttu-id="37dc1-103">在本節中的主題描述如何使用<xref:System.Windows.Controls.Image>項目。</span><span class="sxs-lookup"><span data-stu-id="37dc1-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Image> element.</span></span>  
+# <a name="image-how-to-topics"></a><span data-ttu-id="e4e03-102">影像 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="e4e03-102">Image How-to Topics</span></span>
+<span data-ttu-id="e4e03-103">在本節中的主題描述如何使用<xref:System.Windows.Controls.Image>項目。</span><span class="sxs-lookup"><span data-stu-id="e4e03-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Image> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="37dc1-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="37dc1-104">In This Section</span></span>  
- [<span data-ttu-id="37dc1-105">使用 Image 元素</span><span class="sxs-lookup"><span data-stu-id="37dc1-105">Use the Image Element</span></span>](how-to-use-the-image-element.md)  
-  [<span data-ttu-id="37dc1-106">將影像轉換為灰階</span><span class="sxs-lookup"><span data-stu-id="37dc1-106">Convert an Image to Greyscale</span></span>](how-to-convert-an-image-to-greyscale.md)  
-  [<span data-ttu-id="37dc1-107">裁剪影像</span><span class="sxs-lookup"><span data-stu-id="37dc1-107">Crop an Image</span></span>](how-to-crop-an-image.md)  
-  [<span data-ttu-id="37dc1-108">旋轉影像</span><span class="sxs-lookup"><span data-stu-id="37dc1-108">Rotate an Image</span></span>](how-to-rotate-an-image.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e4e03-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="e4e03-104">In This Section</span></span>  
+ [<span data-ttu-id="e4e03-105">使用 Image 元素</span><span class="sxs-lookup"><span data-stu-id="e4e03-105">Use the Image Element</span></span>](how-to-use-the-image-element.md)  
+  [<span data-ttu-id="e4e03-106">將影像轉換為灰階</span><span class="sxs-lookup"><span data-stu-id="e4e03-106">Convert an Image to Greyscale</span></span>](how-to-convert-an-image-to-greyscale.md)  
+  [<span data-ttu-id="e4e03-107">裁剪影像</span><span class="sxs-lookup"><span data-stu-id="e4e03-107">Crop an Image</span></span>](how-to-crop-an-image.md)  
+  [<span data-ttu-id="e4e03-108">旋轉影像</span><span class="sxs-lookup"><span data-stu-id="e4e03-108">Rotate an Image</span></span>](how-to-rotate-an-image.md)  
   
-## <a name="reference"></a><span data-ttu-id="37dc1-109">參考資料</span><span class="sxs-lookup"><span data-stu-id="37dc1-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e4e03-109">參考資料</span><span class="sxs-lookup"><span data-stu-id="e4e03-109">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="37dc1-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="37dc1-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e4e03-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e4e03-110">See also</span></span>
 
-- [<span data-ttu-id="37dc1-111">影像處理概觀</span><span class="sxs-lookup"><span data-stu-id="37dc1-111">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
-- [<span data-ttu-id="37dc1-112">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="37dc1-112">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)
+- [<span data-ttu-id="e4e03-111">影像處理概觀</span><span class="sxs-lookup"><span data-stu-id="e4e03-111">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
+- [<span data-ttu-id="e4e03-112">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="e4e03-112">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)

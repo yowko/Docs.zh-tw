@@ -3,25 +3,25 @@ title: <scopedCertificates> 項目
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
 ms.openlocfilehash: 73e78a6ca27ed45e1eadc7121987b75f79bc6aa5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670634"
 ---
-# <a name="scopedcertificates-element"></a><span data-ttu-id="2e1b1-102">\<scopedCertificates > 項目</span><span class="sxs-lookup"><span data-stu-id="2e1b1-102">\<scopedCertificates> Element</span></span>
-<span data-ttu-id="2e1b1-103">表示特定服務 (範圍服務) 為驗證所提供之 X.509 憑證的集合。</span><span class="sxs-lookup"><span data-stu-id="2e1b1-103">Represents a collection of X.509 certificates provided by specific services (scoped) for authentication.</span></span> <span data-ttu-id="2e1b1-104">這個集合通常用來指定聯合案例中安全性權杖服務的服務憑證。</span><span class="sxs-lookup"><span data-stu-id="2e1b1-104">This collection is typically used to specify the service certificates for Security Token Services in a federated scenario.</span></span>  
+# <a name="scopedcertificates-element"></a><span data-ttu-id="ed8e1-102">\<scopedCertificates > 項目</span><span class="sxs-lookup"><span data-stu-id="ed8e1-102">\<scopedCertificates> Element</span></span>
+<span data-ttu-id="ed8e1-103">表示特定服務 (範圍服務) 為驗證所提供之 X.509 憑證的集合。</span><span class="sxs-lookup"><span data-stu-id="ed8e1-103">Represents a collection of X.509 certificates provided by specific services (scoped) for authentication.</span></span> <span data-ttu-id="ed8e1-104">這個集合通常用來指定聯合案例中安全性權杖服務的服務憑證。</span><span class="sxs-lookup"><span data-stu-id="ed8e1-104">This collection is typically used to specify the service certificates for Security Token Services in a federated scenario.</span></span>  
   
- <span data-ttu-id="2e1b1-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="2e1b1-105">\<system.ServiceModel></span></span>  
-<span data-ttu-id="2e1b1-106">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="2e1b1-106">\<behaviors></span></span>  
-<span data-ttu-id="2e1b1-107">endpointBehaviors 區段</span><span class="sxs-lookup"><span data-stu-id="2e1b1-107">endpointBehaviors section</span></span>  
-<span data-ttu-id="2e1b1-108">\<behavior></span><span class="sxs-lookup"><span data-stu-id="2e1b1-108">\<behavior></span></span>  
-<span data-ttu-id="2e1b1-109">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="2e1b1-109">\<clientCredentials></span></span>  
-<span data-ttu-id="2e1b1-110">\<serviceCertificate></span><span class="sxs-lookup"><span data-stu-id="2e1b1-110">\<serviceCertificate></span></span>  
-<span data-ttu-id="2e1b1-111">\<scopedCertificates > 項目</span><span class="sxs-lookup"><span data-stu-id="2e1b1-111">\<scopedCertificates> Element</span></span>  
-<span data-ttu-id="2e1b1-112">\<add> element for \<scopedCertificates></span><span class="sxs-lookup"><span data-stu-id="2e1b1-112">\<add> element for \<scopedCertificates></span></span>  
+ <span data-ttu-id="ed8e1-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="ed8e1-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="ed8e1-106">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="ed8e1-106">\<behaviors></span></span>  
+<span data-ttu-id="ed8e1-107">endpointBehaviors 區段</span><span class="sxs-lookup"><span data-stu-id="ed8e1-107">endpointBehaviors section</span></span>  
+<span data-ttu-id="ed8e1-108">\<behavior></span><span class="sxs-lookup"><span data-stu-id="ed8e1-108">\<behavior></span></span>  
+<span data-ttu-id="ed8e1-109">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="ed8e1-109">\<clientCredentials></span></span>  
+<span data-ttu-id="ed8e1-110">\<serviceCertificate></span><span class="sxs-lookup"><span data-stu-id="ed8e1-110">\<serviceCertificate></span></span>  
+<span data-ttu-id="ed8e1-111">\<scopedCertificates > 項目</span><span class="sxs-lookup"><span data-stu-id="ed8e1-111">\<scopedCertificates> Element</span></span>  
+<span data-ttu-id="ed8e1-112">\<add> element for \<scopedCertificates></span><span class="sxs-lookup"><span data-stu-id="ed8e1-112">\<add> element for \<scopedCertificates></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2e1b1-113">語法</span><span class="sxs-lookup"><span data-stu-id="2e1b1-113">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ed8e1-113">語法</span><span class="sxs-lookup"><span data-stu-id="ed8e1-113">Syntax</span></span>  
   
 ```xml  
 <scopedCertificates>
@@ -33,33 +33,33 @@ ms.locfileid: "59145196"
 </scopedCertificates>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="2e1b1-114">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="2e1b1-114">Attributes and Elements</span></span>  
- <span data-ttu-id="2e1b1-115">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="2e1b1-115">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ed8e1-114">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="ed8e1-114">Attributes and Elements</span></span>  
+ <span data-ttu-id="ed8e1-115">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="ed8e1-115">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="2e1b1-116">屬性</span><span class="sxs-lookup"><span data-stu-id="2e1b1-116">Attributes</span></span>  
- <span data-ttu-id="2e1b1-117">無。</span><span class="sxs-lookup"><span data-stu-id="2e1b1-117">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="ed8e1-116">屬性</span><span class="sxs-lookup"><span data-stu-id="ed8e1-116">Attributes</span></span>  
+ <span data-ttu-id="ed8e1-117">無。</span><span class="sxs-lookup"><span data-stu-id="ed8e1-117">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="2e1b1-118">子元素</span><span class="sxs-lookup"><span data-stu-id="2e1b1-118">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="ed8e1-118">子元素</span><span class="sxs-lookup"><span data-stu-id="ed8e1-118">Child Elements</span></span>  
   
-|<span data-ttu-id="2e1b1-119">項目</span><span class="sxs-lookup"><span data-stu-id="2e1b1-119">Element</span></span>|<span data-ttu-id="2e1b1-120">描述</span><span class="sxs-lookup"><span data-stu-id="2e1b1-120">Description</span></span>|  
+|<span data-ttu-id="ed8e1-119">項目</span><span class="sxs-lookup"><span data-stu-id="ed8e1-119">Element</span></span>|<span data-ttu-id="ed8e1-120">描述</span><span class="sxs-lookup"><span data-stu-id="ed8e1-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="2e1b1-121">\<add></span><span class="sxs-lookup"><span data-stu-id="2e1b1-121">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)|<span data-ttu-id="2e1b1-122">將 X.509 憑證加入至範圍憑證的集合。</span><span class="sxs-lookup"><span data-stu-id="2e1b1-122">Adds an X.509 certificate to the collection of scoped certificates.</span></span>|  
+|[<span data-ttu-id="ed8e1-121">\<add></span><span class="sxs-lookup"><span data-stu-id="ed8e1-121">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)|<span data-ttu-id="ed8e1-122">將 X.509 憑證加入至範圍憑證的集合。</span><span class="sxs-lookup"><span data-stu-id="ed8e1-122">Adds an X.509 certificate to the collection of scoped certificates.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="2e1b1-123">父項目</span><span class="sxs-lookup"><span data-stu-id="2e1b1-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="ed8e1-123">父項目</span><span class="sxs-lookup"><span data-stu-id="ed8e1-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="2e1b1-124">項目</span><span class="sxs-lookup"><span data-stu-id="2e1b1-124">Element</span></span>|<span data-ttu-id="2e1b1-125">描述</span><span class="sxs-lookup"><span data-stu-id="2e1b1-125">Description</span></span>|  
+|<span data-ttu-id="ed8e1-124">項目</span><span class="sxs-lookup"><span data-stu-id="ed8e1-124">Element</span></span>|<span data-ttu-id="ed8e1-125">描述</span><span class="sxs-lookup"><span data-stu-id="ed8e1-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="2e1b1-126">\<serviceCertificate></span><span class="sxs-lookup"><span data-stu-id="2e1b1-126">\<serviceCertificate></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|<span data-ttu-id="2e1b1-127">指定對用戶端驗證服務時所使用的憑證。</span><span class="sxs-lookup"><span data-stu-id="2e1b1-127">Specifies a certificate to use when authenticating a service to the client.</span></span>|  
+|[<span data-ttu-id="ed8e1-126">\<serviceCertificate></span><span class="sxs-lookup"><span data-stu-id="ed8e1-126">\<serviceCertificate></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|<span data-ttu-id="ed8e1-127">指定對用戶端驗證服務時所使用的憑證。</span><span class="sxs-lookup"><span data-stu-id="ed8e1-127">Specifies a certificate to use when authenticating a service to the client.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2e1b1-128">備註</span><span class="sxs-lookup"><span data-stu-id="2e1b1-128">Remarks</span></span>  
- <span data-ttu-id="2e1b1-129">這個集合可讓用戶端根據與其進行通訊之服務的 URL 設定要使用的服務憑證。</span><span class="sxs-lookup"><span data-stu-id="2e1b1-129">This collection enables the client to configure the service certificates to use based on the URL of the service it communicates with.</span></span> <span data-ttu-id="2e1b1-130">在用戶端可以與多重服務 (終端服務以及中繼安全性權杖服務) 進行通訊的已核發權杖情況中，這個屬性特別有用。</span><span class="sxs-lookup"><span data-stu-id="2e1b1-130">This is especially useful in issued token scenarios where a client can be communicating to multiple services (the end service as well as intermediary security token services).</span></span> <span data-ttu-id="2e1b1-131">對於使用以憑證為基礎之訊息安全性的繫結，這個憑證會用來加密傳送給服務的訊息，而且預期會被服務用來簽署對用戶端的回覆。</span><span class="sxs-lookup"><span data-stu-id="2e1b1-131">For bindings that use certificate-based message security, this certificate is used to encrypt messages to the service, and is expected to be used by the service for signing replies to the client.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ed8e1-128">備註</span><span class="sxs-lookup"><span data-stu-id="ed8e1-128">Remarks</span></span>  
+ <span data-ttu-id="ed8e1-129">這個集合可讓用戶端根據與其進行通訊之服務的 URL 設定要使用的服務憑證。</span><span class="sxs-lookup"><span data-stu-id="ed8e1-129">This collection enables the client to configure the service certificates to use based on the URL of the service it communicates with.</span></span> <span data-ttu-id="ed8e1-130">在用戶端可以與多重服務 (終端服務以及中繼安全性權杖服務) 進行通訊的已核發權杖情況中，這個屬性特別有用。</span><span class="sxs-lookup"><span data-stu-id="ed8e1-130">This is especially useful in issued token scenarios where a client can be communicating to multiple services (the end service as well as intermediary security token services).</span></span> <span data-ttu-id="ed8e1-131">對於使用以憑證為基礎之訊息安全性的繫結，這個憑證會用來加密傳送給服務的訊息，而且預期會被服務用來簽署對用戶端的回覆。</span><span class="sxs-lookup"><span data-stu-id="ed8e1-131">For bindings that use certificate-based message security, this certificate is used to encrypt messages to the service, and is expected to be used by the service for signing replies to the client.</span></span>  
   
- <span data-ttu-id="2e1b1-132">如果繫結需要服務的憑證，但是在 ScopedCertificates 中找不到服務 URL 的專屬憑證，則會使用預設的憑證。</span><span class="sxs-lookup"><span data-stu-id="2e1b1-132">If a binding requires a certificate for the service and no specific certificate for the service URL is found in the ScopedCertificates, the default certificate is used.</span></span>  
+ <span data-ttu-id="ed8e1-132">如果繫結需要服務的憑證，但是在 ScopedCertificates 中找不到服務 URL 的專屬憑證，則會使用預設的憑證。</span><span class="sxs-lookup"><span data-stu-id="ed8e1-132">If a binding requires a certificate for the service and no specific certificate for the service URL is found in the ScopedCertificates, the default certificate is used.</span></span>  
   
- <span data-ttu-id="2e1b1-133">如需詳細資訊，請參閱的 < 範圍憑證 > 一節[How to:建立聯合用戶端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)。</span><span class="sxs-lookup"><span data-stu-id="2e1b1-133">For more information, see the "Scoped Certificates" section of [How to: Create a Federated Client](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).</span></span>  
+ <span data-ttu-id="ed8e1-133">如需詳細資訊，請參閱的 < 範圍憑證 > 一節[How to:建立聯合用戶端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)。</span><span class="sxs-lookup"><span data-stu-id="ed8e1-133">For more information, see the "Scoped Certificates" section of [How to: Create a Federated Client](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2e1b1-134">範例</span><span class="sxs-lookup"><span data-stu-id="2e1b1-134">Example</span></span>  
- <span data-ttu-id="2e1b1-135">下列範例會指定網域名稱與端點通訊時要使用用戶端的服務憑證 `http://www.contoso.com` 透過 HTTP 通訊協定。</span><span class="sxs-lookup"><span data-stu-id="2e1b1-135">The following example specifies a service certificate for the client to use when communicating with endpoints whose domain name is `http://www.contoso.com` over the HTTP protocol.</span></span>  
+## <a name="example"></a><span data-ttu-id="ed8e1-134">範例</span><span class="sxs-lookup"><span data-stu-id="ed8e1-134">Example</span></span>  
+ <span data-ttu-id="ed8e1-135">下列範例會指定網域名稱與端點通訊時要使用用戶端的服務憑證 `http://www.contoso.com` 透過 HTTP 通訊協定。</span><span class="sxs-lookup"><span data-stu-id="ed8e1-135">The following example specifies a service certificate for the client to use when communicating with endpoints whose domain name is `http://www.contoso.com` over the HTTP protocol.</span></span>  
   
 ```xml  
 <serviceCertificate>
@@ -73,15 +73,15 @@ ms.locfileid: "59145196"
 </serviceCertificate>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2e1b1-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2e1b1-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ed8e1-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ed8e1-136">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
-- [<span data-ttu-id="2e1b1-137">使用憑證</span><span class="sxs-lookup"><span data-stu-id="2e1b1-137">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [<span data-ttu-id="2e1b1-138">如何：建立聯合用戶端</span><span class="sxs-lookup"><span data-stu-id="2e1b1-138">How to: Create a Federated Client</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [<span data-ttu-id="2e1b1-139">\<add></span><span class="sxs-lookup"><span data-stu-id="2e1b1-139">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)
-- [<span data-ttu-id="2e1b1-140">保護用戶端安全</span><span class="sxs-lookup"><span data-stu-id="2e1b1-140">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)
-- [<span data-ttu-id="2e1b1-141">保護服務和用戶端的安全</span><span class="sxs-lookup"><span data-stu-id="2e1b1-141">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [<span data-ttu-id="ed8e1-137">使用憑證</span><span class="sxs-lookup"><span data-stu-id="ed8e1-137">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [<span data-ttu-id="ed8e1-138">如何：建立聯合用戶端</span><span class="sxs-lookup"><span data-stu-id="ed8e1-138">How to: Create a Federated Client</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [<span data-ttu-id="ed8e1-139">\<add></span><span class="sxs-lookup"><span data-stu-id="ed8e1-139">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)
+- [<span data-ttu-id="ed8e1-140">保護用戶端安全</span><span class="sxs-lookup"><span data-stu-id="ed8e1-140">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)
+- [<span data-ttu-id="ed8e1-141">保護服務和用戶端的安全</span><span class="sxs-lookup"><span data-stu-id="ed8e1-141">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

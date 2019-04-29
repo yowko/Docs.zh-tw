@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0178e2a7877803644bb25e6700306d7ac2ef2d4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775072"
 ---
-# <a name="corprfgcgeneration-enumeration"></a><span data-ttu-id="6e007-102">COR_PRF_GC_GENERATION 列舉</span><span class="sxs-lookup"><span data-stu-id="6e007-102">COR_PRF_GC_GENERATION Enumeration</span></span>
-<span data-ttu-id="6e007-103">識別記憶體回收層代。</span><span class="sxs-lookup"><span data-stu-id="6e007-103">Identifies a garbage-collection generation.</span></span>  
+# <a name="corprfgcgeneration-enumeration"></a><span data-ttu-id="9aed9-102">COR_PRF_GC_GENERATION 列舉</span><span class="sxs-lookup"><span data-stu-id="9aed9-102">COR_PRF_GC_GENERATION Enumeration</span></span>
+<span data-ttu-id="9aed9-103">識別記憶體回收層代。</span><span class="sxs-lookup"><span data-stu-id="9aed9-103">Identifies a garbage-collection generation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6e007-104">語法</span><span class="sxs-lookup"><span data-stu-id="6e007-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9aed9-104">語法</span><span class="sxs-lookup"><span data-stu-id="9aed9-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -37,31 +37,31 @@ typedef enum {
 } COR_PRF_GC_GENERATION;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="6e007-105">成員</span><span class="sxs-lookup"><span data-stu-id="6e007-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="9aed9-105">成員</span><span class="sxs-lookup"><span data-stu-id="9aed9-105">Members</span></span>  
   
-|<span data-ttu-id="6e007-106">成員</span><span class="sxs-lookup"><span data-stu-id="6e007-106">Member</span></span>|<span data-ttu-id="6e007-107">描述</span><span class="sxs-lookup"><span data-stu-id="6e007-107">Description</span></span>|  
+|<span data-ttu-id="9aed9-106">成員</span><span class="sxs-lookup"><span data-stu-id="9aed9-106">Member</span></span>|<span data-ttu-id="9aed9-107">描述</span><span class="sxs-lookup"><span data-stu-id="9aed9-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_GC_GEN_0`|<span data-ttu-id="6e007-108">此物件會儲存成層代 0。</span><span class="sxs-lookup"><span data-stu-id="6e007-108">The object is stored as generation 0.</span></span>|  
-|`COR_PRF_GC_GEN_1`|<span data-ttu-id="6e007-109">物件會儲存為第 1 代。</span><span class="sxs-lookup"><span data-stu-id="6e007-109">The object is stored as generation 1.</span></span>|  
-|`COR_PRF_GC_GEN_2`|<span data-ttu-id="6e007-110">此物件會儲存為第 2 代。</span><span class="sxs-lookup"><span data-stu-id="6e007-110">The object is stored as generation 2.</span></span>|  
-|`COR_PRF_GC_LARGE_OBJECT_HEAP`|<span data-ttu-id="6e007-111">此物件會儲存大型物件堆積中。</span><span class="sxs-lookup"><span data-stu-id="6e007-111">The object is stored in the large-object heap.</span></span>|  
+|`COR_PRF_GC_GEN_0`|<span data-ttu-id="9aed9-108">此物件會儲存成層代 0。</span><span class="sxs-lookup"><span data-stu-id="9aed9-108">The object is stored as generation 0.</span></span>|  
+|`COR_PRF_GC_GEN_1`|<span data-ttu-id="9aed9-109">物件會儲存為第 1 代。</span><span class="sxs-lookup"><span data-stu-id="9aed9-109">The object is stored as generation 1.</span></span>|  
+|`COR_PRF_GC_GEN_2`|<span data-ttu-id="9aed9-110">此物件會儲存為第 2 代。</span><span class="sxs-lookup"><span data-stu-id="9aed9-110">The object is stored as generation 2.</span></span>|  
+|`COR_PRF_GC_LARGE_OBJECT_HEAP`|<span data-ttu-id="9aed9-111">此物件會儲存大型物件堆積中。</span><span class="sxs-lookup"><span data-stu-id="9aed9-111">The object is stored in the large-object heap.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6e007-112">備註</span><span class="sxs-lookup"><span data-stu-id="6e007-112">Remarks</span></span>  
- <span data-ttu-id="6e007-113">記憶體回收行程會提高成根據年齡層代將物件的記憶體管理效能。</span><span class="sxs-lookup"><span data-stu-id="6e007-113">The garbage collector improves memory management performance by dividing objects into generations based on age.</span></span> <span data-ttu-id="6e007-114">記憶體回收行程目前使用三個層代，編號 0、 1 和 2，以及用於大型物件堆積的特殊區段。</span><span class="sxs-lookup"><span data-stu-id="6e007-114">The garbage collector currently uses three generations, numbered 0, 1, and 2, plus a special heap segment that is used for large objects.</span></span> <span data-ttu-id="6e007-115">其大小大於特定值的物件會儲存在大型物件堆積。</span><span class="sxs-lookup"><span data-stu-id="6e007-115">Objects whose size is larger than a particular value are stored in the large-object heap.</span></span> <span data-ttu-id="6e007-116">其他已配置的物件屬於層代 0 開始。</span><span class="sxs-lookup"><span data-stu-id="6e007-116">Other allocated objects start out belonging to generation 0.</span></span> <span data-ttu-id="6e007-117">發生在層代 0 記憶體回收後存在的所有物件會都提升至層代 1。</span><span class="sxs-lookup"><span data-stu-id="6e007-117">All objects that exist after garbage collection occurs in generation 0 are promoted to generation 1.</span></span> <span data-ttu-id="6e007-118">存在之後發生在第 1 代記憶體回收的物件將移至第 2 代。</span><span class="sxs-lookup"><span data-stu-id="6e007-118">Objects that exist after garbage collection occurs in generation 1 move into generation 2.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9aed9-112">備註</span><span class="sxs-lookup"><span data-stu-id="9aed9-112">Remarks</span></span>  
+ <span data-ttu-id="9aed9-113">記憶體回收行程會提高成根據年齡層代將物件的記憶體管理效能。</span><span class="sxs-lookup"><span data-stu-id="9aed9-113">The garbage collector improves memory management performance by dividing objects into generations based on age.</span></span> <span data-ttu-id="9aed9-114">記憶體回收行程目前使用三個層代，編號 0、 1 和 2，以及用於大型物件堆積的特殊區段。</span><span class="sxs-lookup"><span data-stu-id="9aed9-114">The garbage collector currently uses three generations, numbered 0, 1, and 2, plus a special heap segment that is used for large objects.</span></span> <span data-ttu-id="9aed9-115">其大小大於特定值的物件會儲存在大型物件堆積。</span><span class="sxs-lookup"><span data-stu-id="9aed9-115">Objects whose size is larger than a particular value are stored in the large-object heap.</span></span> <span data-ttu-id="9aed9-116">其他已配置的物件屬於層代 0 開始。</span><span class="sxs-lookup"><span data-stu-id="9aed9-116">Other allocated objects start out belonging to generation 0.</span></span> <span data-ttu-id="9aed9-117">發生在層代 0 記憶體回收後存在的所有物件會都提升至層代 1。</span><span class="sxs-lookup"><span data-stu-id="9aed9-117">All objects that exist after garbage collection occurs in generation 0 are promoted to generation 1.</span></span> <span data-ttu-id="9aed9-118">存在之後發生在第 1 代記憶體回收的物件將移至第 2 代。</span><span class="sxs-lookup"><span data-stu-id="9aed9-118">Objects that exist after garbage collection occurs in generation 1 move into generation 2.</span></span>  
   
- <span data-ttu-id="6e007-119">層代的使用，表示記憶體回收行程必須一次使用的配置的物件子集。</span><span class="sxs-lookup"><span data-stu-id="6e007-119">The use of generations means that the garbage collector has to work with only a subset of the allocated objects at any one time.</span></span>  
+ <span data-ttu-id="9aed9-119">層代的使用，表示記憶體回收行程必須一次使用的配置的物件子集。</span><span class="sxs-lookup"><span data-stu-id="9aed9-119">The use of generations means that the garbage collector has to work with only a subset of the allocated objects at any one time.</span></span>  
   
- <span data-ttu-id="6e007-120">`COR_PRF_GC_GENERATION`列舉由[COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)結構。</span><span class="sxs-lookup"><span data-stu-id="6e007-120">The `COR_PRF_GC_GENERATION` enumeration is used by the [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure.</span></span>  
+ <span data-ttu-id="9aed9-120">`COR_PRF_GC_GENERATION`列舉由[COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)結構。</span><span class="sxs-lookup"><span data-stu-id="9aed9-120">The `COR_PRF_GC_GENERATION` enumeration is used by the [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6e007-121">需求</span><span class="sxs-lookup"><span data-stu-id="6e007-121">Requirements</span></span>  
- <span data-ttu-id="6e007-122">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6e007-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9aed9-121">需求</span><span class="sxs-lookup"><span data-stu-id="9aed9-121">Requirements</span></span>  
+ <span data-ttu-id="9aed9-122">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9aed9-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6e007-123">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6e007-123">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="9aed9-123">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9aed9-123">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="6e007-124">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6e007-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9aed9-124">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9aed9-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6e007-125">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6e007-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9aed9-125">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9aed9-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6e007-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6e007-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9aed9-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9aed9-126">See also</span></span>
 
-- [<span data-ttu-id="6e007-127">分析列舉</span><span class="sxs-lookup"><span data-stu-id="6e007-127">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="9aed9-127">分析列舉</span><span class="sxs-lookup"><span data-stu-id="9aed9-127">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

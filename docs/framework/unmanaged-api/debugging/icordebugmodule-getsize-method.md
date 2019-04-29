@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 540288f83de9c3c6ff2111330c77ded48abd6d5f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761659"
 ---
-# <a name="icordebugmodulegetsize-method"></a><span data-ttu-id="6d6cb-102">ICorDebugModule::GetSize 方法</span><span class="sxs-lookup"><span data-stu-id="6d6cb-102">ICorDebugModule::GetSize Method</span></span>
-<span data-ttu-id="6d6cb-103">取得大小，以位元組為單位的模組。</span><span class="sxs-lookup"><span data-stu-id="6d6cb-103">Gets the size, in bytes, of the module.</span></span>  
+# <a name="icordebugmodulegetsize-method"></a><span data-ttu-id="742d8-102">ICorDebugModule::GetSize 方法</span><span class="sxs-lookup"><span data-stu-id="742d8-102">ICorDebugModule::GetSize Method</span></span>
+<span data-ttu-id="742d8-103">取得大小，以位元組為單位的模組。</span><span class="sxs-lookup"><span data-stu-id="742d8-103">Gets the size, in bytes, of the module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6d6cb-104">語法</span><span class="sxs-lookup"><span data-stu-id="6d6cb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="742d8-104">語法</span><span class="sxs-lookup"><span data-stu-id="742d8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSize(  
@@ -35,17 +35,17 @@ HRESULT GetSize(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6d6cb-105">參數</span><span class="sxs-lookup"><span data-stu-id="6d6cb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="742d8-105">參數</span><span class="sxs-lookup"><span data-stu-id="742d8-105">Parameters</span></span>  
  `pcBytes`  
- <span data-ttu-id="6d6cb-106">[out]該模組，以位元組為單位的大小。</span><span class="sxs-lookup"><span data-stu-id="6d6cb-106">[out] The size of the module in bytes.</span></span>  
+ <span data-ttu-id="742d8-106">[out]該模組，以位元組為單位的大小。</span><span class="sxs-lookup"><span data-stu-id="742d8-106">[out] The size of the module in bytes.</span></span>  
   
- <span data-ttu-id="6d6cb-107">如果從原生映像產生器 (NGen.exe) 產生的模組，模組的大小會是零。</span><span class="sxs-lookup"><span data-stu-id="6d6cb-107">If the module was produced from the native image generator (NGen.exe), the size of the module will be zero.</span></span>  
+ <span data-ttu-id="742d8-107">如果從原生映像產生器 (NGen.exe) 產生的模組，模組的大小會是零。</span><span class="sxs-lookup"><span data-stu-id="742d8-107">If the module was produced from the native image generator (NGen.exe), the size of the module will be zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6d6cb-108">需求</span><span class="sxs-lookup"><span data-stu-id="6d6cb-108">Requirements</span></span>  
- <span data-ttu-id="6d6cb-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6d6cb-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="742d8-108">需求</span><span class="sxs-lookup"><span data-stu-id="742d8-108">Requirements</span></span>  
+ <span data-ttu-id="742d8-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="742d8-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6d6cb-110">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6d6cb-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="742d8-110">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="742d8-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6d6cb-111">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6d6cb-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="742d8-111">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="742d8-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6d6cb-112">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6d6cb-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="742d8-112">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="742d8-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

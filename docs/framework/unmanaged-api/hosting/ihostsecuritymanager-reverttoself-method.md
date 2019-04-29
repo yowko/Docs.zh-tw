@@ -18,46 +18,46 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d282f6d37a2be8a41f4fbda579b3b467b9bfc8ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696687"
 ---
-# <a name="ihostsecuritymanagerreverttoself-method"></a><span data-ttu-id="3d9d5-102">IHostSecurityManager::RevertToSelf 方法</span><span class="sxs-lookup"><span data-stu-id="3d9d5-102">IHostSecurityManager::RevertToSelf Method</span></span>
-<span data-ttu-id="3d9d5-103">終止目前的使用者身分識別模擬，並傳回原始的執行緒 token。</span><span class="sxs-lookup"><span data-stu-id="3d9d5-103">Terminates impersonation of the current user identity and returns the original thread token.</span></span>  
+# <a name="ihostsecuritymanagerreverttoself-method"></a><span data-ttu-id="c6ca7-102">IHostSecurityManager::RevertToSelf 方法</span><span class="sxs-lookup"><span data-stu-id="c6ca7-102">IHostSecurityManager::RevertToSelf Method</span></span>
+<span data-ttu-id="c6ca7-103">終止目前的使用者身分識別模擬，並傳回原始的執行緒 token。</span><span class="sxs-lookup"><span data-stu-id="c6ca7-103">Terminates impersonation of the current user identity and returns the original thread token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3d9d5-104">語法</span><span class="sxs-lookup"><span data-stu-id="3d9d5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c6ca7-104">語法</span><span class="sxs-lookup"><span data-stu-id="c6ca7-104">Syntax</span></span>  
   
 ```  
 HRESULT RevertToSelf ();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="3d9d5-105">傳回值</span><span class="sxs-lookup"><span data-stu-id="3d9d5-105">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c6ca7-105">傳回值</span><span class="sxs-lookup"><span data-stu-id="c6ca7-105">Return Value</span></span>  
   
-|<span data-ttu-id="3d9d5-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3d9d5-106">HRESULT</span></span>|<span data-ttu-id="3d9d5-107">描述</span><span class="sxs-lookup"><span data-stu-id="3d9d5-107">Description</span></span>|  
+|<span data-ttu-id="c6ca7-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c6ca7-106">HRESULT</span></span>|<span data-ttu-id="c6ca7-107">描述</span><span class="sxs-lookup"><span data-stu-id="c6ca7-107">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="3d9d5-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="3d9d5-108">S_OK</span></span>|<span data-ttu-id="3d9d5-109">`RevertToSelf` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="3d9d5-109">`RevertToSelf` returned successfully.</span></span>|  
-|<span data-ttu-id="3d9d5-110">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="3d9d5-110">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="3d9d5-111">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="3d9d5-111">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="3d9d5-112">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="3d9d5-112">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="3d9d5-113">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="3d9d5-113">The call timed out.</span></span>|  
-|<span data-ttu-id="3d9d5-114">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="3d9d5-114">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="3d9d5-115">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="3d9d5-115">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="3d9d5-116">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="3d9d5-116">HOST_E_ABANDONED</span></span>|<span data-ttu-id="3d9d5-117">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="3d9d5-117">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="3d9d5-118">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="3d9d5-118">E_FAIL</span></span>|<span data-ttu-id="3d9d5-119">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="3d9d5-119">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="3d9d5-120">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="3d9d5-120">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="3d9d5-121">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="3d9d5-121">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="c6ca7-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="c6ca7-108">S_OK</span></span>|<span data-ttu-id="c6ca7-109">`RevertToSelf` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="c6ca7-109">`RevertToSelf` returned successfully.</span></span>|  
+|<span data-ttu-id="c6ca7-110">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="c6ca7-110">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="c6ca7-111">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="c6ca7-111">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="c6ca7-112">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="c6ca7-112">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="c6ca7-113">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="c6ca7-113">The call timed out.</span></span>|  
+|<span data-ttu-id="c6ca7-114">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="c6ca7-114">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="c6ca7-115">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="c6ca7-115">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="c6ca7-116">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="c6ca7-116">HOST_E_ABANDONED</span></span>|<span data-ttu-id="c6ca7-117">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="c6ca7-117">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="c6ca7-118">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="c6ca7-118">E_FAIL</span></span>|<span data-ttu-id="c6ca7-119">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="c6ca7-119">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="c6ca7-120">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="c6ca7-120">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="c6ca7-121">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="c6ca7-121">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3d9d5-122">備註</span><span class="sxs-lookup"><span data-stu-id="3d9d5-122">Remarks</span></span>  
- <span data-ttu-id="3d9d5-123">`RevertToSelf` 呼叫以傳回至原始的執行緒 token，在先前呼叫後[ImpersonateLoggedOnUser](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="3d9d5-123">`RevertToSelf` is called to return to the original thread token, after an earlier call to the [ImpersonateLoggedOnUser](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c6ca7-122">備註</span><span class="sxs-lookup"><span data-stu-id="c6ca7-122">Remarks</span></span>  
+ <span data-ttu-id="c6ca7-123">`RevertToSelf` 呼叫以傳回至原始的執行緒 token，在先前呼叫後[ImpersonateLoggedOnUser](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="c6ca7-123">`RevertToSelf` is called to return to the original thread token, after an earlier call to the [ImpersonateLoggedOnUser](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3d9d5-124">需求</span><span class="sxs-lookup"><span data-stu-id="3d9d5-124">Requirements</span></span>  
- <span data-ttu-id="3d9d5-125">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3d9d5-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c6ca7-124">需求</span><span class="sxs-lookup"><span data-stu-id="c6ca7-124">Requirements</span></span>  
+ <span data-ttu-id="c6ca7-125">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c6ca7-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3d9d5-126">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3d9d5-126">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="c6ca7-126">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c6ca7-126">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="3d9d5-127">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="3d9d5-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="c6ca7-127">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="c6ca7-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3d9d5-128">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3d9d5-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c6ca7-128">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6ca7-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3d9d5-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3d9d5-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c6ca7-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c6ca7-129">See also</span></span>
 
-- [<span data-ttu-id="3d9d5-130">IHostSecurityContext 介面</span><span class="sxs-lookup"><span data-stu-id="3d9d5-130">IHostSecurityContext Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
-- [<span data-ttu-id="3d9d5-131">IHostSecurityManager 介面</span><span class="sxs-lookup"><span data-stu-id="3d9d5-131">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
-- [<span data-ttu-id="3d9d5-132">ImpersonateLoggedOnUser 方法</span><span class="sxs-lookup"><span data-stu-id="3d9d5-132">ImpersonateLoggedOnUser Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md)
+- [<span data-ttu-id="c6ca7-130">IHostSecurityContext 介面</span><span class="sxs-lookup"><span data-stu-id="c6ca7-130">IHostSecurityContext Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
+- [<span data-ttu-id="c6ca7-131">IHostSecurityManager 介面</span><span class="sxs-lookup"><span data-stu-id="c6ca7-131">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
+- [<span data-ttu-id="c6ca7-132">ImpersonateLoggedOnUser 方法</span><span class="sxs-lookup"><span data-stu-id="c6ca7-132">ImpersonateLoggedOnUser Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md)
