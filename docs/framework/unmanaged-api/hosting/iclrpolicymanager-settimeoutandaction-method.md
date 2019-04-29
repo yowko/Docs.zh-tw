@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 18b896cebea83071bb2a8756157b48c62dcfda7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638706"
 ---
 # <a name="iclrpolicymanagersettimeoutandaction-method"></a>ICLRPolicyManager::SetTimeoutAndAction 方法
 設定指定之作業的逾時值，並指定發生作業時，應該採取 common language runtime (CLR) 的原則動作。  
@@ -41,13 +41,13 @@ HRESULT SetTimeoutAndAction (
  `operation`  
  [in]其中一個[EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)值，表示要設定的逾時和原則作業`action`。 支援下列值：  
   
--   OPR_AppDomainUnload  
+- OPR_AppDomainUnload  
   
--   OPR_ProcessExit  
+- OPR_ProcessExit  
   
--   OPR_ThreadRudeAbortInCriticalRegion  
+- OPR_ThreadRudeAbortInCriticalRegion  
   
--   OPR_ThreadRudeAbortInNonCriticalRegion  
+- OPR_ThreadRudeAbortInNonCriticalRegion  
   
  `dwMilliseconds`  
  [in]新逾時值，以毫秒為單位。 值是無限的可能原因`operation`永遠不會以逾時。  

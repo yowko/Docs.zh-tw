@@ -3,11 +3,11 @@ title: <announcementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
 ms.openlocfilehash: 4f3cf2748acc75b0ec83732664c5f97114f3663a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701251"
 ---
 # <a name="announcementendpoint"></a>\<announcementEndpoint>
 這個組態項目會定義具有固定公告合約的標準端點。 服務可以選擇性地公告其可用性，方法是分別在開啟與關閉該服務時傳送線上及離線公告訊息。 Windows Communication Foundation (WCF) 服務指定公告端點，在[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)項目，並且使用 AnnouncementClient 來執行公告。 想要從其他服務公告所接聽的用戶端實際上做為 WCF 服務;因此您必須在該用戶端設定公告端點[ \<services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)一節。  

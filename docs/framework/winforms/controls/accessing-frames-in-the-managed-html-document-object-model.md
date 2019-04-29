@@ -10,22 +10,22 @@ helpviewer_keywords:
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
 ms.openlocfilehash: 9b2719ca000ab86b9ca40f9e78af46cbf598d16e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640525"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>存取 Managed HTML 文件物件模型中的框架
 某些 HTML 文件包含*框架*，或可以保存自己的相異 HTML 文件的 windows。 使用框架可讓您輕鬆地建立 HTML 網頁，該 HTML 網頁的其中一個或多個頁面片段維持靜態，例如導覽列，而其他框架則不斷變更其內容。  
   
  HTML 作者可以用兩種方法之一來建立框架：  
   
--   使用 `FRAMESET` 和 `FRAME` 標記，這會建立固定的視窗。  
+- 使用 `FRAMESET` 和 `FRAME` 標記，這會建立固定的視窗。  
   
  -或-  
   
--   使用 `IFRAME` 標記，這會建立可以在執行階段中重新定位的浮動視窗。  
+- 使用 `IFRAME` 標記，這會建立可以在執行階段中重新定位的浮動視窗。  
   
 1. 因為框架包含 HTML 文件，它們會在文件物件模型 (DOM) 中顯示為視窗項目和框架項目。  
   

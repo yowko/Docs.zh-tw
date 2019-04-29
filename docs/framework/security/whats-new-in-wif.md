@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
 ms.openlocfilehash: 07e1aee85e22f6dd5257cdd49e8af99b423cb17f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645873"
 ---
 # <a name="whats-new-in-windows-identity-foundation-45"></a>Windows Identity Foundation 4.5 的新功能
 第一版的 Windows Identity Foundation (WIF) 是發行為獨立下載的版本，稱為 WIF 3.5，因為它是在 .NET 3.5 SP1 的期間內所引入的。 從 .NET 4.5 開始，WIF 就成為 .NET Framework 的一部分。 在架構中直接提供 WIF 類別可讓 .NET 中的宣告式身分識別的整合更加深入，讓您更容易使用宣告。 您需要修改為 WIF 3.5 所撰寫的應用程式，才能利用新的模型；如需詳細資訊，請參閱[將使用 WIF 3.5 建置的應用程式移轉至 WIF 4.5 的方針](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)。  
@@ -23,29 +23,29 @@ ms.locfileid: "59195523"
   
 ## <a name="changes-to-the-wif-45-visual-studio-experience"></a>對 WIF 4.5 Visual Studio 經驗的變更  
   
--   **新增 STS 參考...** Visual Studio 功能 (cmdline 公用程式 FedUtil) 已不存在；您可以改為使用新的 Visual Studio 延伸模組 **Visual Studio 2012 的身分識別與存取工具**。 這可讓您與現有的 STS 建立同盟或使用 LocalSTS 來測試方案。 安裝此延伸模組之後，您可以用滑鼠右鍵按一下專案，然後尋找操作功能表上的 [身分識別與存取]。  
+- **新增 STS 參考...** Visual Studio 功能 (cmdline 公用程式 FedUtil) 已不存在；您可以改為使用新的 Visual Studio 延伸模組 **Visual Studio 2012 的身分識別與存取工具**。 這可讓您與現有的 STS 建立同盟或使用 LocalSTS 來測試方案。 安裝此延伸模組之後，您可以用滑鼠右鍵按一下專案，然後尋找操作功能表上的 [身分識別與存取]。  
   
--   ASP.NET 和 STS 範本已不再提供，因為現有的 ASP.NET、網站和 WCF 專案範本中可以直接使用宣告。  
+- ASP.NET 和 STS 範本已不再提供，因為現有的 ASP.NET、網站和 WCF 專案範本中可以直接使用宣告。  
   
--   WIF 4.5 不再延續使用 `Microsoft.IdentityModel.Web.Controls` 命名空間中的控制項 (`SignInControl`、`FederatedPassiveSignInControl` 和 `FederatedPassiveSignInStatus`)。  
+- WIF 4.5 不再延續使用 `Microsoft.IdentityModel.Web.Controls` 命名空間中的控制項 (`SignInControl`、`FederatedPassiveSignInControl` 和 `FederatedPassiveSignInStatus`)。  
   
 ## <a name="changes-to-the-wif-45-api"></a>WIF 4.5 應用程式開發介面的變更  
   
--   一般而言，宣告相關類別是位於 <xref:System.Security.Claims?displayProperty=nameWithType> 命名空間中；WCF 相關類別 (用於 WS-Trust 情節的服務合約、通道、通道處理站和服務主機) 是位於 <xref:System.ServiceModel.Security?displayProperty=nameWithType> 中；而所有其他 WIF 類別則是散佈在各種 [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004) 命名空間中 (這些類別包括，例如，表示 WS-* 和 SAML 成品的類別、權杖處理常式和相關類別，以及用於 WS-同盟情節的類別)。 如需詳細資訊，請參閱 [WIF 3.5 和 WIF 4.5 之間的命名空間對應](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)和 [WIF API 參考](../../../docs/framework/security/wif-api-reference.md)。  
+- 一般而言，宣告相關類別是位於 <xref:System.Security.Claims?displayProperty=nameWithType> 命名空間中；WCF 相關類別 (用於 WS-Trust 情節的服務合約、通道、通道處理站和服務主機) 是位於 <xref:System.ServiceModel.Security?displayProperty=nameWithType> 中；而所有其他 WIF 類別則是散佈在各種 [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004) 命名空間中 (這些類別包括，例如，表示 WS-* 和 SAML 成品的類別、權杖處理常式和相關類別，以及用於 WS-同盟情節的類別)。 如需詳細資訊，請參閱 [WIF 3.5 和 WIF 4.5 之間的命名空間對應](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)和 [WIF API 參考](../../../docs/framework/security/wif-api-reference.md)。  
   
--   電腦金鑰已可用於 Web 伺服陣列情節中的工作階段 Cookie 中。 如需詳細資訊，請參閱 [WIF 和 Web 伺服陣列](../../../docs/framework/security/wif-and-web-farms.md)。  
+- 電腦金鑰已可用於 Web 伺服陣列情節中的工作階段 Cookie 中。 如需詳細資訊，請參閱 [WIF 和 Web 伺服陣列](../../../docs/framework/security/wif-and-web-farms.md)。  
   
--   您現在以宣告方式設定 [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 和 [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 元素下的 WIF。 如需 WIF 組態的詳細資訊，請參閱 [WIF 組態參考](../../../docs/framework/security/wif-configuration-reference.md)。  
+- 您現在以宣告方式設定 [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 和 [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 元素下的 WIF。 如需 WIF 組態的詳細資訊，請參閱 [WIF 組態參考](../../../docs/framework/security/wif-configuration-reference.md)。  
   
 ## <a name="other-notable-net-changes-or-features-that-are-caused-by-the-integration-of-wif-into-net"></a>將 WIF 整合到 .NET 中所造成的其他值得注意的 .NET 變更或功能  
   
--   執行宣告式授權 (CBAC) 的可能性現在已整合至 .NET Framework。 您可以設定 <xref:System.Security.Claims.ClaimsAuthorizationManager> 物件，然後使用 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> 和 <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> 類別在您的程式碼中執行命令式和宣告式存取檢查。 CBAC 比傳統的角色式存取檢查 (RBAC) 提供更多的彈性和更佳的細微性。 它也可以讓授權原則更有效地從商務邏輯分離，因為商務邏輯可以根據特定宣告或宣告集進行存取檢查，而這些宣告的授權原則可以用宣告的方式設定在 [\<claimsAuthorizationManager>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) 元素下。  
+- 執行宣告式授權 (CBAC) 的可能性現在已整合至 .NET Framework。 您可以設定 <xref:System.Security.Claims.ClaimsAuthorizationManager> 物件，然後使用 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> 和 <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> 類別在您的程式碼中執行命令式和宣告式存取檢查。 CBAC 比傳統的角色式存取檢查 (RBAC) 提供更多的彈性和更佳的細微性。 它也可以讓授權原則更有效地從商務邏輯分離，因為商務邏輯可以根據特定宣告或宣告集進行存取檢查，而這些宣告的授權原則可以用宣告的方式設定在 [\<claimsAuthorizationManager>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) 元素下。  
   
 ## <a name="wcf-changes-as-a-result-of-wif-integration"></a>由 WIF 整合所造成的 WCF 變更：  
   
--   WIF 已取代 WCF 宣告式識別模型。 這表示應該捨棄 <xref:System.IdentityModel.Claims?displayProperty=nameWithType>、<xref:System.IdentityModel.Policy?displayProperty=nameWithType> 和 <xref:System.IdentityModel.Selectors?displayProperty=nameWithType> 命名空間中的類別，改為使用 WIF 類別。  
+- WIF 已取代 WCF 宣告式識別模型。 這表示應該捨棄 <xref:System.IdentityModel.Claims?displayProperty=nameWithType>、<xref:System.IdentityModel.Policy?displayProperty=nameWithType> 和 <xref:System.IdentityModel.Selectors?displayProperty=nameWithType> 命名空間中的類別，改為使用 WIF 類別。  
   
--   WCF 服務現在可以使用 WIF，只需指定 `<system.serviceModel>`/`<behaviors>`/`<serviceBehaviors>`/`<serviceCredentials>` 元素的 `useIdentityConfiguration` 屬性，如下面 XML 所示：  
+- WCF 服務現在可以使用 WIF，只需指定 `<system.serviceModel>`/`<behaviors>`/`<serviceBehaviors>`/`<serviceCredentials>` 元素的 `useIdentityConfiguration` 屬性，如下面 XML 所示：  
   
     ```xml  
     <serviceCredentials useIdentityConfiguration="true">  

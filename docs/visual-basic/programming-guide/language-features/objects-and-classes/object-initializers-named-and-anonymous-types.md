@@ -11,11 +11,11 @@ helpviewer_keywords:
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
 ms.openlocfilehash: 6602a68555e37bf793ba41076ba8f484b4a0dbc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760749"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>物件初始設定式：具名和匿名類型 (Visual Basic)
 物件初始設定式可讓您使用單一運算式中指定的複雜物件的屬性。 它們可用來建立執行個體的具名型別和匿名型別。  
@@ -63,11 +63,11 @@ ms.locfileid: "58821349"
   
 ### <a name="remarks-about-named-types"></a>具名類型的相關註解  
   
--   類別成員無法初始化物件初始設定式清單中一個以上的時間。 Deklarace`cust7`會造成錯誤。  
+- 類別成員無法初始化物件初始設定式清單中一個以上的時間。 Deklarace`cust7`會造成錯誤。  
   
      [!code-vb[VbVbalrObjectInit#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#9)]  
   
--   成員可以用來初始化本身或另一個欄位中。 如果它已初始化以前，如下列宣告所示，存取成員`cust8`，將會使用預設值。 請記住，處理會使用物件初始設定式的宣告時，會發生第一件事是適當的建構函式會叫用。 在那之後，會初始化初始設定式清單中的個別欄位。 在下列範例中，預設值`Name`指派給`cust8`，並初始化的值指派在`cust9`。  
+- 成員可以用來初始化本身或另一個欄位中。 如果它已初始化以前，如下列宣告所示，存取成員`cust8`，將會使用預設值。 請記住，處理會使用物件初始設定式的宣告時，會發生第一件事是適當的建構函式會叫用。 在那之後，會初始化初始設定式清單中的個別欄位。 在下列範例中，預設值`Name`指派給`cust8`，並初始化的值指派在`cust9`。  
   
      [!code-vb[VbVbalrObjectInit#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#10)]  
   
@@ -75,17 +75,17 @@ ms.locfileid: "58821349"
   
      [!code-vb[VbVbalrObjectInit#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#11)]  
   
--   物件初始設定式可以是巢狀。 在下列範例中，`AddressClass`是具有兩個屬性的類別`City`並`State`，而`Customer`類別具有`Address`的執行個體的屬性`AddressClass`。  
+- 物件初始設定式可以是巢狀。 在下列範例中，`AddressClass`是具有兩個屬性的類別`City`並`State`，而`Customer`類別具有`Address`的執行個體的屬性`AddressClass`。  
   
      [!code-vb[VbVbalrObjectInit#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#12)]  
   
--   在初始設定清單不可為空白。  
+- 在初始設定清單不可為空白。  
   
--   正在初始化的執行個體不能屬於類型物件。  
+- 正在初始化的執行個體不能屬於類型物件。  
   
--   要初始化的類別成員不能共用的成員、 唯讀成員、 常數或方法呼叫。  
+- 要初始化的類別成員不能共用的成員、 唯讀成員、 常數或方法呼叫。  
   
--   要初始化的類別成員無法編製索引，或限定。 下列範例會產生編譯器錯誤：  
+- 要初始化的類別成員無法編製索引，或限定。 下列範例會產生編譯器錯誤：  
   
      `'' Not valid.`  
   
@@ -109,19 +109,19 @@ ms.locfileid: "58821349"
   
 ### <a name="remarks-about-anonymous-types"></a>匿名型別的備註  
   
--   一般來說，所有或大部分的匿名類型宣告中的屬性會是索引鍵屬性，由輸入關鍵字`Key`屬性名稱前面。  
+- 一般來說，所有或大部分的匿名類型宣告中的屬性會是索引鍵屬性，由輸入關鍵字`Key`屬性名稱前面。  
   
      [!code-vb[VbVbalrObjectInit#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#14)]  
   
      如需有關索引鍵屬性的詳細資訊，請參閱[金鑰](../../../../visual-basic/language-reference/modifiers/key.md)。  
   
--   匿名型別定義都必須宣告至少一個屬性，例如具名類型初始設定式清單。  
+- 匿名型別定義都必須宣告至少一個屬性，例如具名類型初始設定式清單。  
   
      [!code-vb[VbVbalrObjectInit#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#2)]  
   
--   宣告匿名類型的執行個體時，編譯器會產生相符的匿名型別定義。 名稱和資料類型的屬性會從執行個體宣告，而且會包含在定義中，編譯器。 屬性不是名為和具名型別，其方式時，預先定義。 會推斷其類型。 您無法使用，以指定屬性的資料型別`As`子句。  
+- 宣告匿名類型的執行個體時，編譯器會產生相符的匿名型別定義。 名稱和資料類型的屬性會從執行個體宣告，而且會包含在定義中，編譯器。 屬性不是名為和具名型別，其方式時，預先定義。 會推斷其類型。 您無法使用，以指定屬性的資料型別`As`子句。  
   
--   匿名型別也可以建立的名稱和其屬性的值以數種其他方式。 例如，匿名型別屬性可能需要的名稱和變數，或名稱的值與另一個物件的屬性的值。  
+- 匿名型別也可以建立的名稱和其屬性的值以數種其他方式。 例如，匿名型別屬性可能需要的名稱和變數，或名稱的值與另一個物件的屬性的值。  
   
      [!code-vb[VbVbalrObjectInit#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#15)]  
   

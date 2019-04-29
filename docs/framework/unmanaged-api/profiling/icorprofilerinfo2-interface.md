@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3476a338191a4af9cc01b7e44456f1bd20f52a10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796535"
 ---
 # <a name="icorprofilerinfo2-interface"></a>ICorProfilerInfo2 介面
 提供程式碼分析工具使用與通用語言執行平台 (CLR)，以控制事件監視以及要求資訊進行通訊的方法。 `ICorProfilerInfo2`介面是擴充功能[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)介面。 也就是說，它提供.NET Framework 2.0 版及更新版本中支援的新方法。  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
 ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696489"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信任安全性
 <a name="introduction"></a> 一般而言，網際網路應用程式應該限制不得直接存取重要的系統資源，以防止惡意損害。 根據預設，[!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)]和用戶端指令碼語言都不能存取重要的系統資源。 您可以從瀏覽器中啟動 Windows Presentation Foundation (WPF) 瀏覽器裝載的應用程式，因為它們應該符合一組類似的限制。 若要強制執行這些限制，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]同時依賴[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]並[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)](請參閱[WPF 安全性策略 – 平台安全性](wpf-security-strategy-platform-security.md))。 根據預設，瀏覽器裝載的應用程式會要求網際網路區域[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]組權限，無論是否啟動從網際網路、 近端內部網路或在本機電腦。 使用少於完整權限集執行的應用程式便是以部分信任執行。  
@@ -29,11 +29,11 @@ ms.locfileid: "59218377"
   
  此主題包括下列章節：  
   
--   [WPF 功能部分信任支援](#WPF_Feature_Partial_Trust_Support)  
+- [WPF 功能部分信任支援](#WPF_Feature_Partial_Trust_Support)  
   
--   [部分信任程式設計](#Partial_Trust_Programming)  
+- [部分信任程式設計](#Partial_Trust_Programming)  
   
--   [管理權限](#Managing_Permissions)  
+- [管理權限](#Managing_Permissions)  
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>WPF 功能部分信任支援  
@@ -52,19 +52,19 @@ ms.locfileid: "59218377"
   
  下表涵蓋[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]高的層級功能。 如需詳細資訊，請[!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)]文件中的每個成員所需的權限[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。 此外，下列功能有關於部分信任執行的更詳細資訊，包括特殊考量。  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (請參閱[XAML 概觀 (WPF)](./advanced/xaml-overview-wpf.md))。  
+- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (請參閱[XAML 概觀 (WPF)](./advanced/xaml-overview-wpf.md))。  
   
--   快顯視窗 (請參閱<xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>)。  
+- 快顯視窗 (請參閱<xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>)。  
   
--   將拖放 (請參閱[拖放概觀](./advanced/drag-and-drop-overview.md))。  
+- 將拖放 (請參閱[拖放概觀](./advanced/drag-and-drop-overview.md))。  
   
--   剪貼簿 (請參閱<xref:System.Windows.Clipboard?displayProperty=nameWithType>)。  
+- 剪貼簿 (請參閱<xref:System.Windows.Clipboard?displayProperty=nameWithType>)。  
   
--   映像 (請參閱<xref:System.Windows.Controls.Image?displayProperty=nameWithType>)。  
+- 映像 (請參閱<xref:System.Windows.Controls.Image?displayProperty=nameWithType>)。  
   
--   序列化 (請參閱<xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>， <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>)。  
+- 序列化 (請參閱<xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>， <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>)。  
   
--   開啟檔案對話方塊 (請參閱<xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>)。  
+- 開啟檔案對話方塊 (請參閱<xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>)。  
   
  下表列出[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]無法安全地在網際網路的限制範圍內執行的功能區域權限集。  
   
@@ -153,11 +153,11 @@ ms.locfileid: "59218377"
   
  如果您需要提高權限，您需要變更專案設定和 ClickOnce 應用程式資訊清單。 如需詳細資訊，請參閱 [WPF XAML 瀏覽器應用程式概觀](./app-development/wpf-xaml-browser-applications-overview.md)。 下列文件可能有用。  
   
--   [Mage.exe (資訊清單產生和編輯工具)](../tools/mage-exe-manifest-generation-and-editing-tool.md)。  
+- [Mage.exe (資訊清單產生和編輯工具)](../tools/mage-exe-manifest-generation-and-editing-tool.md)。  
   
--   [MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)。  
+- [MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)。  
   
--   [保護 ClickOnce 應用程式](/visualstudio/deployment/securing-clickonce-applications)。  
+- [保護 ClickOnce 應用程式](/visualstudio/deployment/securing-clickonce-applications)。  
   
  如果您[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]需要完全信任，您可以使用相同的工具，以增加要求的權限。 雖然[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]如果它是安裝在並從本機電腦，也就是內部網路，或從受信任或允許的網站，在瀏覽器中列出的 URL 啟動，則只會得到完全信任。 如果應用程式是從內部網路或受信任的網站安裝，使用者會收到標準 ClickOnce 提示，通知他們權限已提高。 使用者可以選擇繼續或取消安裝。  
   

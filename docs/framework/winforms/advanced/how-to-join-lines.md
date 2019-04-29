@@ -15,11 +15,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], joining lines
 ms.assetid: 9fc480c2-3c75-4fd1-8ab5-296a99e820e2
 ms.openlocfilehash: 445d7f12f57137c6b06a074eeaf0574eb027a723
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723285"
 ---
 # <a name="how-to-join-lines"></a>HOW TO：聯結線條
 線條聯結是指的常見區域由其結束符合或重疊的兩行所構成。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供三個線條聯結樣式： 儀表、 斜面，和捨入。 線條聯結樣式是屬性<xref:System.Drawing.Pen>類別。 當您指定的線條聯結樣式<xref:System.Drawing.Pen>物件，將會聯結樣式套用到所有連接的直線，任何<xref:System.Drawing.Drawing2D.GraphicsPath>使用該畫筆繪製的物件。  

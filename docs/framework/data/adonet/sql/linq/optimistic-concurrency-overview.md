@@ -3,11 +3,11 @@ title: 開放式並行存取：總覽
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
 ms.openlocfilehash: 8f3bd35cc1391339d99d5aa0a4021e29fa81756c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767484"
 ---
 # <a name="optimistic-concurrency-overview"></a>開放式並行存取：總覽
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援開放式並行存取 (Optimistic Concurrency) 控制。 下表描述中的開放式並行存取的條款[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件：  
@@ -22,9 +22,9 @@ ms.locfileid: "59106544"
   
  在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]物件模型*開放式並行存取衝突*下列兩個條件都成立時，就會發生：  
   
--   用戶端嘗試將變更送出給資料庫。  
+- 用戶端嘗試將變更送出給資料庫。  
   
--   資料庫中的一個或多個更新檢查值，自用戶端最後一次讀取之後已更新過。  
+- 資料庫中的一個或多個更新檢查值，自用戶端最後一次讀取之後已更新過。  
   
  解決這項衝突包括探索哪些物件成員發生衝突，然後決定要採取的動作。  
   
@@ -49,44 +49,44 @@ ms.locfileid: "59106544"
 ## <a name="conflict-detection-and-resolution-checklist"></a>衝突偵測和解決檢查清單  
  您可以偵測和解決任何精細度等級的衝突。 其中一種極端的做法是，使用三種方式的其中一種方式來解決所有的衝突 (請參閱 <xref:System.Data.Linq.RefreshMode>)，而不考慮其他事項。 另一種極端的做法是，指定每個衝突成員之每種衝突類型的特定動作。  
   
--   指定或修訂物件模型中的 <xref:System.Data.Linq.Mapping.UpdateCheck> 選項。  
+- 指定或修訂物件模型中的 <xref:System.Data.Linq.Mapping.UpdateCheck> 選項。  
   
      如需詳細資訊，請參閱[如何：指定的成員會用於測試並行衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)。  
   
--   在 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 呼叫的 try/catch 區塊中，指定何時擲回例外狀況。  
+- 在 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 呼叫的 try/catch 區塊中，指定何時擲回例外狀況。  
   
      如需詳細資訊，請參閱[如何：指定時的並行存取例外狀況的擲回](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)。  
   
--   決定想要擷取的衝突詳細資料量，並據此將程式碼併入 try/catch 區域。  
+- 決定想要擷取的衝突詳細資料量，並據此將程式碼併入 try/catch 區域。  
   
      如需詳細資訊，請參閱[如何：擷取實體衝突資訊](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md)和[How to:擷取成員衝突資訊](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)。  
   
--   包含在您`try` / `catch`您要如何解決發現之各種衝突的程式碼。  
+- 包含在您`try` / `catch`您要如何解決發現之各種衝突的程式碼。  
   
      如需詳細資訊，請參閱[如何：保留資料庫值來解決衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)， [How to:覆寫資料庫值來解決衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)，和[How to:與資料庫值合併來解決衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)。  
   
 ## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>支援衝突探索和解決的 LINQ to SQL 型別  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中支援開放式並行存取衝突解決的類別和功能包括：  
   
--   <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.MemberChangeConflict?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.MemberChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictException?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.ChangeConflictException?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>另請參閱
 

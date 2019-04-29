@@ -9,11 +9,11 @@ ms.assetid: 8d5f9570-9853-4ce8-8101-df235d5b258e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 996352637f34b0b6c0d12e611a6d9e70ab85230e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757569"
 ---
 # <a name="profiling-enumerations"></a>分析列舉
 本節描述分析 API 所使用的 Unmanaged 列舉。  
@@ -23,7 +23,7 @@ ms.locfileid: "33461756"
  指出剛輸入或留下的程式碼的 exception 子句類型。  
   
  [COR_PRF_CODEGEN_FLAGS 列舉](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md)  
- 定義的程式碼產生旗標可以設定的[icorprofilerfunctioncontrol:: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md)方法。  
+ 定義可以使用設定的程式碼產生旗標[icorprofilerfunctioncontrol:: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md)方法。  
   
  [COR_PRF_FINALIZER_FLAGS 列舉](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md)  
  描述物件的完成項。  
@@ -38,10 +38,10 @@ ms.locfileid: "33461756"
  指出記憶體回收行程根目錄的屬性。  
   
  [COR_PRF_GC_ROOT_KIND 列舉](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md)  
- 表示記憶體回收行程根目錄所公開的種類[icorprofilercallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)回呼。  
+ 表示記憶體回收行程根目錄所公開的種類[ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)回呼。  
   
  [COR_PRF_HIGH_MONITOR 列舉](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)  
- 提供除了中找到的旗標[COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)列舉型別，可以指定程式碼剖析工具[icorprofilerinfo5:: Seteventmask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)方法在載入時。  
+ 提供旗標，除了那些常見於[COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)列舉型別，可以指定程式碼剖析工具，以[ICorProfilerInfo5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)方法載入時。  
   
  [COR_PRF_JIT_CACHE 列舉](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md)  
  指出快取的函式搜尋結果。  

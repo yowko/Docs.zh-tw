@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
 ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761365"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>HOW TO：將資料繫結至 MaskedTextBox 控制項
 您可以繫結至資料<xref:System.Windows.Forms.MaskedTextBox>控制一樣，您可以為任何其他的 Windows Form 控制項。 不過，如果您在資料庫中的資料格式不符遮罩定義所預期的格式，您必須重新格式化資料。 下列程序示範如何使用執行此動作<xref:System.Windows.Forms.Binding.Format>並<xref:System.Windows.Forms.Binding.Parse>事件的<xref:System.Windows.Forms.Binding>類別，以顯示不同的電話號碼和電話做為單一的可編輯欄位的延伸模組的資料庫欄位。  
@@ -239,15 +239,15 @@ ms.locfileid: "59342228"
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
--   建立視覺效果C#或 Visual Basic 專案。  
+- 建立視覺效果C#或 Visual Basic 專案。  
   
--   新增<xref:System.Windows.Forms.TextBox>和<xref:System.Windows.Forms.MaskedTextBox>控制項至表單，如先前程序中所述。  
+- 新增<xref:System.Windows.Forms.TextBox>和<xref:System.Windows.Forms.MaskedTextBox>控制項至表單，如先前程序中所述。  
   
--   開啟專案的預設表單的原始程式碼檔。  
+- 開啟專案的預設表單的原始程式碼檔。  
   
--   上的 「 程式碼 」 一節中所列的程式碼取代此檔案中的原始程式碼。  
+- 上的 「 程式碼 」 一節中所列的程式碼取代此檔案中的原始程式碼。  
   
--   編譯應用程式。  
+- 編譯應用程式。  
   
 ## <a name="see-also"></a>另請參閱
 

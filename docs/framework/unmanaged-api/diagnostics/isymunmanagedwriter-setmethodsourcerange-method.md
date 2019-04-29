@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 734857428c205b6d806a4279213afb1193f914c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650762"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange 方法
 指定的則為 true 的開始和結束的原始程式檔內的方法。 使用這個方法可指定獨立存在的方法中序列點之方法的範圍。  

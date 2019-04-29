@@ -3,11 +3,11 @@ title: 安全性例外狀況
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
 ms.openlocfilehash: c1eeca9111837b9833de54ecafbc981d1c2b6343
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780857"
 ---
 # <a name="security-exceptions"></a>安全性例外狀況
 本主題會列出所有安全性例外狀況。  
@@ -29,8 +29,8 @@ ms.locfileid: "50201370"
 |CachedNegotiationStateQuotaReached|由於已達到指定的容量，因此服務無法快取交涉狀態。 請重試要求。|  
 |CacheQuotaReached|無法新增此項目。 已指定最大快取大小。|  
 |CannotDetermineSPNBasedOnAddress|用戶端無法根據指定之目標位址中的身分識別判斷服務主要名稱，以用於 SspiNegotiation/Kerberos。 目標位址身分識別必須是 UPN 身分識別 (像是 acmedomain\\\alice) 或 SPN 身分識別 （像是主機/bobs-machine)。|  
-|CannotFindCert|使用指定的搜尋條件 StoreName、StoreLocation、FindType、FindValue 時，找不到 X.509 憑證。|  
-|CannotFindCertForTarget|針對指定的目標使用指定的搜尋條件 StoreName、StoreLocation、FindType、FindValue 時，找不到 X.509 憑證。|  
+|CannotFindCert|找不到 X.509 憑證使用指定的搜尋準則：StoreName、 StoreLocation、 FindType、 FindValue。|  
+|CannotFindCertForTarget|找不到 X.509 憑證使用指定的搜尋準則：StoreName、 StoreLocation、 FindType、 FindValue 針對指定的目標。|  
 |CannotFindCorrelationStateForApplyingSecurity|找不到將安全性套用至回應程式之回覆的交互關聯狀態。|  
 |CannotFindNegotiationState|找不到指定之內容的交涉狀態。|  
 |CannotFindSecuritySession|找不到指定之 ID 的安全性工作階段。|  
@@ -55,8 +55,8 @@ ms.locfileid: "50201370"
 |ExportOfBindingWithAsymmetricAndTransportSecurityNotSupported|安全性原則匯出失敗。 繫結包含 AsymmetricSecurityBindingElement 與安全傳輸繫結項目。 不支援此類繫結的原則匯出。|  
 |ExportOfBindingWithSymmetricAndTransportSecurityNotSupported|安全性原則匯出失敗。 繫結包含 SymmetricSecurityBindingElement 與安全傳輸繫結項目。 不支援此類繫結的原則匯出。|  
 |ExportOfBindingWithTransportSecurityBindingElementAndNoTransportSecurityNotSupported|安全性原則匯出失敗。 繫結包含 TransportSecurityBindingElement，但是不包含可實作 ITransportTokenAssertionProvider 的傳輸繫結項目。 不支援此類繫結的原則匯出。 請確定繫結中的傳輸繫結項目可實作 ITransportTokenAssertionProvider 介面。|  
-|FoundMultipleCerts|使用指定的搜尋條件 StoreName、StoreLocation、FindType、FindValue 時，找到多個 X.509 憑證。 請提供更精確的尋找值。|  
-|FoundMultipleCertsForTarget|針對指定的目標使用指定的搜尋條件 StoreName、StoreLocation、FindType、FindValue 時，找到多個 X.509 憑證。 請提供更精確的尋找值。|  
+|FoundMultipleCerts|找到多個 X.509 憑證使用指定的搜尋準則：StoreName、 StoreLocation、 FindType、 FindValue。 請提供更精確的尋找值。|  
+|FoundMultipleCertsForTarget|找到多個 X.509 憑證使用指定的搜尋準則：StoreName、 StoreLocation、 FindType、 FindValue 針對指定的目標。 請提供更精確的尋找值。|  
 |HeaderDecryptionNotSupportedInWsSecurityJan2004|SecurityVersion.WSSecurityJan2004 不支援標頭解密。 請使用 SecurityVersion.WsSecurityXXX2005 與更新版本或使用傳輸安全性來加密完整訊息。|  
 |IdentityCheckFailedForIncomingMessage|傳入訊息的身分識別檢查失敗。 已指定目標端點的預期身分識別。|  
 |IdentityCheckFailedForOutgoingMessage|傳出訊息的身分識別檢查失敗。 已指定目標端點的預期身分識別。|  
@@ -66,7 +66,7 @@ ms.locfileid: "50201370"
 |InvalidQName|QName 無效。|  
 |InvalidRenewResponseAction|收到含有指定之無效動作的安全性工作階段更新回應。|  
 |InvalidSspiNegotiation|安全性支援提供者介面交涉失敗。|  
-|IssuerBindingNotPresentInTokenRequirement|安全性權杖管理員要求在描述安全對話的權杖需求中，指定啟動安裝安全性繫結項目。 下列為指定的權杖需求。|  
+|IssuerBindingNotPresentInTokenRequirement|安全性權杖管理員要求在描述安全對話的權杖需求中，指定啟動安裝安全性繫結程序項目。 下列為指定的權杖需求。|  
 |KeyLengthMustBeMultipleOfEight|對稱式金鑰的指定金鑰長度不是 8 的倍數。|  
 |LsaAuthorityNotContacted|內部 SSL 錯誤 (如需詳細資訊，請參閱 Win32 狀態碼)。 請檢查伺服器憑證，判斷是否能進行金鑰交換。|  
 |MaximumPolicyRedirectionsExceeded|已達遞迴原則擷取限制。 請檢查聯合服務鏈中是否有迴圈。|  
@@ -154,5 +154,5 @@ ms.locfileid: "50201370"
 |UnknownEncodingInBinarySecurityToken|讀取二進位安全性權杖時發生無法辨識的編碼。|  
 |UnsecuredMessageFaultReceived|從另一方接收了不安全的錯誤。 如需錯誤碼及詳細資料，請參閱內部 FaultException。|  
 |UnsupportedPasswordType|指定的使用者名稱權杖具有不支援的密碼類型。|  
-|UnsupportedSecureConversationBootstrapProtectionRequirements|無法匯入安全性原則。 不支援安全交談啟動載入器繫結程序的保護需求。 安全交談啟動載入器繫結程序的保護需求強調要求及回應都必須簽署並加密。|  
+|UnsupportedSecureConversationBootstrapProtectionRequirements|無法匯入安全性原則。 不支援安全交談啟動載入器繫結的保護需求。 安全交談啟動載入器繫結程序的保護需求強調要求及回應都必須簽署並加密。|  
 |UnsupportedSecurityPolicyAssertion|指定的安全性原則匯入期間，偵測到不支援的安全性原則判斷提示。|

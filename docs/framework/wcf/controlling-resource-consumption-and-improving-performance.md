@@ -3,11 +3,11 @@ title: 控制資源使用並改善效能
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
 ms.openlocfilehash: 11d1333ed0ae8b46f8f87fa6f4643d4b31fac3ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785056"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>控制資源使用並改善效能
 本主題說明 Windows Communication Foundation (WCF) 架構的運作，以控制資源耗用量並影響效能度量資訊的不同區域中的各種屬性。
@@ -41,7 +41,7 @@ ms.locfileid: "54664157"
 > [!NOTE]
 > 預先產生的序列化程式碼只能用於用戶端應用程式中，而不能用於服務中。
 
- [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)可改善這些應用程式的啟動效能，藉由從應用程式編譯的組件產生必要的序列化程式碼。 如需詳細資訊，請參閱[＜How to：改善啟動時間的 WCF 用戶端應用程式的使用 XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)。
+ [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)可改善這些應用程式的啟動效能，藉由從應用程式編譯的組件產生必要的序列化程式碼。 如需詳細資訊，請參閱[如何：改善啟動時間的 WCF 用戶端應用程式的使用 XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)。
 
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>在 ASP.NET 下裝載 WCF 服務時的效能問題
  在 IIS 和 ASP.NET 下裝載 WCF 服務時，IIS 和 ASP.NET 的組態設定可能會影響 WCF 服務的處理量和記憶體使用量。  如需有關 ASP.NET 效能的詳細資訊，請參閱[提升 ASP.NET 效能](https://go.microsoft.com/fwlink/?LinkId=186462)。  一個可能會造成意外結果的設定是 <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 的屬性 <xref:System.Web.Configuration.ProcessModelSection>。 如果您的應用程式有固定或少量的用戶端，將 <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 設定為 2 可能會讓 CPU 使用率接近 100% 的多處理器電腦提高處理量。 但提高效能有其代價：這也會造成記憶體使用量增加，因而減少延展性。

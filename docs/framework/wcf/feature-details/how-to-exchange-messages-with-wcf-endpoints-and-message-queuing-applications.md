@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
 ms.openlocfilehash: 7463f9cfc37c2bf4f271f6e59896a7d77f3f65cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772940"
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>HOW TO：與 WCF 端點和訊息佇列應用程式交換訊息
 您可以整合現有的 Message Queuing (MSMQ) 應用程式與 Windows Communication Foundation (WCF) 應用程式，使用 MSMQ 整合繫結，將 MSMQ 訊息，與 WCF 訊息。 這可讓您呼叫 MSMQ 接收者應用程式，從 WCF 用戶端，以及從 MSMQ 傳送者應用程式呼叫 WCF 服務。  

@@ -3,11 +3,11 @@ title: 運算子優先順序 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e92e4ca5-2889-4266-9625-47f0eb01a948
 ms.openlocfilehash: 722ebe5f0ec530f8c7f86e9f9901451b060903f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760346"
 ---
 # <a name="operator-precedence-entity-sql"></a>運算子優先順序 (Entity SQL)
 當[!INCLUDE[esql](../../../../../../includes/esql-md.md)]查詢有多個運算子，運算子優先順序會決定作業的執行的順序。 執行的順序對於查詢結果有很大的影響。  

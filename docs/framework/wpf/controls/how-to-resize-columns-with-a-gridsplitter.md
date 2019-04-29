@@ -7,11 +7,11 @@ helpviewer_keywords:
 - resizing grid columns [WPF]
 ms.assetid: 47b20fe6-7adc-4aa6-9693-b4e184eef74b
 ms.openlocfilehash: f743e9ccf8a984a646a4b8f05ee99162e5bc73ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770691"
 ---
 # <a name="how-to-resize-columns-with-a-gridsplitter"></a>HOW TO：使用 GridSplitter 調整資料行的大小
 此範例示範如何建立垂直<xref:System.Windows.Controls.GridSplitter>來重新分配的空間中的兩個資料行之間<xref:System.Windows.Controls.Grid>而不需要變更的維度<xref:System.Windows.Controls.Grid>。  

@@ -11,8 +11,8 @@ ms.openlocfilehash: 7cd761697a09205294727043efc6cf73816803ce
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761361"
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>MenuStrip 控制項概觀 (Windows Form)
 功能表功能公開給您使用者按住乃依一般主題的命令。  
@@ -26,11 +26,11 @@ ms.locfileid: "59975594"
 ## <a name="ways-to-use-the-menustrip-control"></a>如何使用 MenuStrip 控制項  
  使用<xref:System.Windows.Forms.MenuStrip>控制項：  
   
--   建立容易自訂、 常採用的功能表可支援進階的使用者介面和版面配置功能，例如文字和影像的排序和對齊方式、 拖放作業、 MDI、 溢位，以及存取功能表命令的替代模式。  
+- 建立容易自訂、 常採用的功能表可支援進階的使用者介面和版面配置功能，例如文字和影像的排序和對齊方式、 拖放作業、 MDI、 溢位，以及存取功能表命令的替代模式。  
   
--   支援的一般外觀和行為的作業系統。  
+- 支援的一般外觀和行為的作業系統。  
   
--   處理事件一致地對所有容器和包含的項目，您可以在相同的方式處理其他控制項的事件。  
+- 處理事件一致地對所有容器和包含的項目，您可以在相同的方式處理其他控制項的事件。  
   
  下表顯示一些特別重要的屬性<xref:System.Windows.Forms.MenuStrip>和相關聯的類別。  
   

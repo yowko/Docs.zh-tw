@@ -6,11 +6,11 @@ helpviewer_keywords:
 - 3-D models [WPF], applying drawings to
 ms.assetid: 68357577-b7fc-446e-8be9-a8cc7df3a350
 ms.openlocfilehash: a20b89a7359fc85d9790ac02dd2b173452df8c22
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699092"
 ---
 # <a name="how-to-apply-a-drawing-to-a-3-d-model"></a>HOW TO：對立體模型套用繪圖
 此範例示範如何使用<xref:System.Windows.Media.DrawingBrush>作為<xref:System.Windows.Media.Media3D.Material>套用至[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]模型。  

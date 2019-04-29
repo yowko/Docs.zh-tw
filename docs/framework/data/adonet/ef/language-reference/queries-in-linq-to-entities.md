@@ -3,11 +3,11 @@ title: LINQ to Entities 中的查詢
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
 ms.openlocfilehash: 0e005939c8168606c7f58467f11115666cf1ef24
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760255"
 ---
 # <a name="queries-in-linq-to-entities"></a>LINQ to Entities 中的查詢
 查詢是指從資料來源中擷取資料的運算式。 查詢通常會以特定的查詢語言來表示，例如 SQL 用於關聯式資料庫，而 XQuery 用於 XML。 因此，開發人員必須針對他們所查詢的每種資料來源或資料格式，學習新的查詢語言。 Language-Integrated Query (LINQ) 提供了一種較簡單且一致的模型，可處理各種資料來源和格式的資料。 在 LINQ 查詢中，您一定會使用程式設計物件。  
@@ -24,46 +24,46 @@ ms.locfileid: "59124737"
 ### <a name="query-expression-syntax"></a>查詢運算式語法  
  查詢運算式是宣告式查詢語法。 這些語法可以讓開發人員以類似 Transact-SQL 格式的高階語言撰寫查詢。 透過使用查詢運算式語法，您就可以利用最少的程式碼，針對資料來源執行同樣複雜的篩選、排序和分組作業。 如需詳細資訊，[基本查詢作業 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。 如需示範如何使用查詢運算式語法的範例，請參閱下列主題：  
   
--   [查詢運算式語法範例：Projection](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-projection.md)  
+- [查詢運算式語法範例：Projection](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-projection.md)  
   
--   [查詢運算式語法範例：篩選](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-filtering.md)  
+- [查詢運算式語法範例：篩選](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-filtering.md)  
   
--   [查詢運算式語法範例：排序](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-ordering.md)  
+- [查詢運算式語法範例：排序](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-ordering.md)  
   
--   [查詢運算式語法範例：彙總運算子](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-aggregate-operators.md)  
+- [查詢運算式語法範例：彙總運算子](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-aggregate-operators.md)  
   
--   [查詢運算式語法範例：資料分割](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-partitioning.md)  
+- [查詢運算式語法範例：資料分割](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-partitioning.md)  
   
--   [查詢運算式語法範例：聯結運算子](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-join-operators.md)  
+- [查詢運算式語法範例：聯結運算子](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-join-operators.md)  
   
--   [查詢運算式語法範例：項目運算子](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-element-operators.md)  
+- [查詢運算式語法範例：項目運算子](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-element-operators.md)  
   
--   [查詢運算式語法範例：群組](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-grouping.md)  
+- [查詢運算式語法範例：群組](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-grouping.md)  
   
--   [查詢運算式語法範例：瀏覽關聯性](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
+- [查詢運算式語法範例：瀏覽關聯性](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
   
 ### <a name="method-based-query-syntax"></a>以方法為基礎的查詢語法  
  另一種撰寫 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢的方式是使用以方法為基礎的查詢。 以方法為基礎的查詢語法是一系列的 LINQ 運算子方法，並傳遞 lambda 運算式當做參數的直接方法呼叫。 如需詳細資訊，請參閱 [Lambda 運算式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。 如需示範如何使用以方法為基礎的語法之範例，請參閱下列主題：  
   
--   [以方法為基礎的查詢語法範例：Projection](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
+- [以方法為基礎的查詢語法範例：Projection](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
   
--   [以方法為基礎的查詢語法範例：篩選](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-filtering.md)  
+- [以方法為基礎的查詢語法範例：篩選](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-filtering.md)  
   
--   [以方法為基礎的查詢語法範例：排序](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-ordering.md)  
+- [以方法為基礎的查詢語法範例：排序](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-ordering.md)  
   
--   [以方法為基礎的查詢語法範例：彙總運算子](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-aggregate-operators.md)  
+- [以方法為基礎的查詢語法範例：彙總運算子](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-aggregate-operators.md)  
   
--   [以方法為基礎的查詢語法範例：資料分割](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-partitioning.md)  
+- [以方法為基礎的查詢語法範例：資料分割](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-partitioning.md)  
   
--   [以方法為基礎的查詢語法範例：轉換](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-conversion.md)  
+- [以方法為基礎的查詢語法範例：轉換](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-conversion.md)  
   
--   [以方法為基礎的查詢語法範例：聯結運算子](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-join-operators.md)  
+- [以方法為基礎的查詢語法範例：聯結運算子](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-join-operators.md)  
   
--   [以方法為基礎的查詢語法範例：項目運算子](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-element-operators.md)  
+- [以方法為基礎的查詢語法範例：項目運算子](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-element-operators.md)  
   
--   [以方法為基礎的查詢語法範例：群組](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-grouping.md)  
+- [以方法為基礎的查詢語法範例：群組](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-grouping.md)  
   
--   [以方法為基礎的查詢語法範例：瀏覽關聯性](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
+- [以方法為基礎的查詢語法範例：瀏覽關聯性](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
   
 ## <a name="see-also"></a>另請參閱
 

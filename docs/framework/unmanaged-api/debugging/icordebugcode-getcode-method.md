@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f396881ef16f63eaf198aec168e5e94ed887698b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750317"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode 方法
 取得指定的函式，針對 反組譯碼格式化的所有程式碼。 這個方法已被取代，在.NET Framework 2.0 版。 使用[ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)改。  

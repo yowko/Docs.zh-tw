@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
 ms.openlocfilehash: 5cb73dfeaac4f1c23724dc71b0f1f5d07fd28b5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791231"
 ---
 # <a name="wcf-client-overview"></a>WCF 用戶端概觀
 本節說明用戶端應用程式做什麼、 如何設定、 建立和使用 Windows Communication Foundation (WCF) 用戶端，以及如何保護用戶端應用程式。  
@@ -30,15 +30,15 @@ ms.locfileid: "59770382"
   
  下列各節將討論這些步驟，並簡要介紹以下問題：  
   
--   處理錯誤。  
+- 處理錯誤。  
   
--   設定和保護用戶端。  
+- 設定和保護用戶端。  
   
--   建立雙工服務的回呼物件。  
+- 建立雙工服務的回呼物件。  
   
--   非同步呼叫服務。  
+- 非同步呼叫服務。  
   
--   透過用戶端通道呼叫服務。  
+- 透過用戶端通道呼叫服務。  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>取得服務合約、繫結和位址  
  在 WCF 中，服務和用戶端模型合約會使用 managed 的屬性、 介面和方法。 若要在用戶端應用程式中連接到服務，您必須取得服務合約的類型資訊。 一般而言，您可以使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，下載中繼資料從服務中，將它轉換成在您選擇的語言中的 managed 的原始程式碼檔，並建立用戶端可用來設定您的 WCF 用戶端物件的應用程式組態檔。 例如，如果您要建立 WCF 用戶端物件來叫用`MyCalculatorService`，而且您知道該服務的中繼資料已發佈於`http://computerName/MyCalculatorService/Service.svc?wsdl`，則下列程式碼範例示範如何使用 Svcutil.exe 來取得`ClientCode.vb`檔案包含 managed 程式碼中的服務合約。  
@@ -146,11 +146,11 @@ End Interface
   
  雙工服務的用戶端必須：  
   
--   實作回呼合約類別。  
+- 實作回呼合約類別。  
   
--   建立回呼合約實作類別的執行個體，並使用它來建立<xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>您傳遞至 WCF 用戶端建構函式物件。  
+- 建立回呼合約實作類別的執行個體，並使用它來建立<xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>您傳遞至 WCF 用戶端建構函式物件。  
   
--   叫用作業和處理作業回呼。  
+- 叫用作業和處理作業回呼。  
   
  雙工的 WCF 用戶端物件函式，例如其非雙工的對應項目，與例外狀況，其會公開支援回呼，包括回呼服務的組態所需的功能。  
   

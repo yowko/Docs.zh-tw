@@ -3,11 +3,11 @@ title: 訊息佇列至 Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
 ms.openlocfilehash: c0674d23f1b4e611e8f3b51a6480a65e9b52d038
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756451"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>訊息佇列至 Windows Communication Foundation
 此範例示範訊息佇列 (MSMQ) 應用程式如何將 MSMQ 訊息傳送至 Windows Communication Foundation (WCF) 服務。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
@@ -118,15 +118,15 @@ Console.ReadLine();
 
 2. 如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。
 
-    1.  開啟 Visual Studio 2012 中的 伺服器管理員。
+    1. 開啟 Visual Studio 2012 中的 伺服器管理員。
 
-    2.  依序展開**功能** 索引標籤。
+    2. 依序展開**功能** 索引標籤。
 
-    3.  以滑鼠右鍵按一下**私用訊息佇列**，然後選取**新增**，**私用佇列**。
+    3. 以滑鼠右鍵按一下**私用訊息佇列**，然後選取**新增**，**私用佇列**。
 
-    4.  請檢查**Transactional**  方塊中。
+    4. 請檢查**Transactional**  方塊中。
 
-    5.  輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。
+    5. 輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。
 
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 

@@ -28,11 +28,11 @@ helpviewer_keywords:
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
 ms.openlocfilehash: fbb7b4e118598157e2005469f89831df50de6576
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638212"
 ---
 # <a name="declare-statement"></a>Declare Statement
 宣告實作的外部檔案中的程序的參考。  
@@ -76,55 +76,55 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 ## <a name="rules"></a>規則  
   
--   **屬性。** 您可以將屬性套用至外部參考。 只在您的專案中，在外部檔案中，您將套用的任何屬性才有效果。  
+- **屬性。** 您可以將屬性套用至外部參考。 只在您的專案中，在外部檔案中，您將套用的任何屬性才有效果。  
   
--   **修飾詞。** 外部程序都是隱含[共用](../../../visual-basic/language-reference/modifiers/shared.md)。 您無法使用`Shared`關鍵字宣告的外部參考，而且您無法變更其共用的狀態。  
+- **修飾詞。** 外部程序都是隱含[共用](../../../visual-basic/language-reference/modifiers/shared.md)。 您無法使用`Shared`關鍵字宣告的外部參考，而且您無法變更其共用的狀態。  
   
      外部程序不能參與覆寫、 實作介面成員，或處理事件。 因此，您無法使用`Overrides`， `Overridable`， `NotOverridable`， `MustOverride`， `Implements`，或`Handles`關鍵字`Declare`陳述式。  
   
--   **外部程序名稱。** 您沒有提供這個外部參考相同的名稱 (在`name`) 做為其外部檔案中的程序的進入點名稱 (`aliasname`)。 您可以使用`Alias`子句，以指定進入點名稱。 這可以是很有用，如果外部的程序與 Visual Basic 保留修飾詞、 變數、 程序或任何其他程式設計項目相同的名稱相同的範圍中。  
+- **外部程序名稱。** 您沒有提供這個外部參考相同的名稱 (在`name`) 做為其外部檔案中的程序的進入點名稱 (`aliasname`)。 您可以使用`Alias`子句，以指定進入點名稱。 這可以是很有用，如果外部的程序與 Visual Basic 保留修飾詞、 變數、 程序或任何其他程式設計項目相同的名稱相同的範圍中。  
   
     > [!NOTE]
     >  在大部分的 Dll 中的進入點名稱會區分大小寫。  
   
--   **外部程序數目。** 或者，您可以使用`Alias`子句來指定外部檔案中匯出資料表中的進入點的序號。 若要這樣做，請先`aliasname`井字號 (`#`)。 如果在 Visual Basic 中不允許外部程序名稱中的任何字元，或外部檔案匯出不含名稱的程序，這非常有用。  
+- **外部程序數目。** 或者，您可以使用`Alias`子句來指定外部檔案中匯出資料表中的進入點的序號。 若要這樣做，請先`aliasname`井字號 (`#`)。 如果在 Visual Basic 中不允許外部程序名稱中的任何字元，或外部檔案匯出不含名稱的程序，這非常有用。  
   
 ## <a name="data-type-rules"></a>資料型別規則  
   
--   **參數資料類型。** 如果`Option Strict`已`On`，您必須指定每個參數中的資料型別`parameterlist`。 這可以是任何資料類型或列舉、 結構、 類別或介面的名稱。 內`parameterlist`，您使用`As`子句來指定要傳遞至每個參數的引數的資料類型。  
+- **參數資料類型。** 如果`Option Strict`已`On`，您必須指定每個參數中的資料型別`parameterlist`。 這可以是任何資料類型或列舉、 結構、 類別或介面的名稱。 內`parameterlist`，您使用`As`子句來指定要傳遞至每個參數的引數的資料類型。  
   
     > [!NOTE]
     >  如果外部的程序不針對.NET Framework 撰寫的您必須小心的資料類型對應。 比方說，如果您宣告的外部參考到 Visual Basic 6.0 程序`Integer`參數 （16 位元 Visual Basic 6.0 中），您必須識別相對應的引數當做`Short`中`Declare`陳述式，因為這是 16-在 Visual Basic 中的位元整數類型。 同樣地，`Long`在 Visual Basic 6.0 中，會有不同的資料寬度和`Date`的實作方式不同。  
   
--   **傳回資料類型。** 如果外部程序`Function`並`Option Strict`是`On`，您必須指定值傳回給呼叫程式碼的資料類型。 這可以是任何資料類型或列舉、 結構、 類別或介面的名稱。  
+- **傳回資料類型。** 如果外部程序`Function`並`Option Strict`是`On`，您必須指定值傳回給呼叫程式碼的資料類型。 這可以是任何資料類型或列舉、 結構、 類別或介面的名稱。  
   
     > [!NOTE]
     >  Visual Basic 編譯器不會驗證您的資料類型是相容的外部程序。 如果不相符，就會產生 common language runtime<xref:System.Runtime.InteropServices.MarshalDirectiveException>在執行階段的例外狀況。  
   
--   **預設資料類型。** 如果`Option Strict`已`Off`且未指定資料類型中的參數`parameterlist`，Visual Basic 編譯器會將轉換的對應引數[Object 資料型別](../../../visual-basic/language-reference/data-types/object-data-type.md)。 同樣地，如果您未指定`returntype`，編譯器會採用要傳回的資料型別`Object`。  
+- **預設資料類型。** 如果`Option Strict`已`Off`且未指定資料類型中的參數`parameterlist`，Visual Basic 編譯器會將轉換的對應引數[Object 資料型別](../../../visual-basic/language-reference/data-types/object-data-type.md)。 同樣地，如果您未指定`returntype`，編譯器會採用要傳回的資料型別`Object`。  
   
     > [!NOTE]
     >  因為您正在處理可能在不同的平台上寫入的外部程序，是很危險做出任何假設資料類型，或允許其為預設值。 如果有的話，它是較為安全，以指定的每個參數和傳回值，資料型別。 這也可改善程式碼的可讀性。  
   
 ## <a name="behavior"></a>行為  
   
--   **範圍。** 外部參考都會在範圍中其類別、 結構或模組。  
+- **範圍。** 外部參考都會在範圍中其類別、 結構或模組。  
   
--   **存留期。** 外部參考具有相同的存留期，為類別、 結構或宣告它的模組。  
+- **存留期。** 外部參考具有相同的存留期，為類別、 結構或宣告它的模組。  
   
--   **呼叫外部程序。** 您呼叫外部程序呼叫的相同方式`Function`或`Sub`程序，使用運算式中，如果它的傳回值，或藉由指定在[Call 陳述式](../../../visual-basic/language-reference/statements/call-statement.md)如果它不會傳回值。  
+- **呼叫外部程序。** 您呼叫外部程序呼叫的相同方式`Function`或`Sub`程序，使用運算式中，如果它的傳回值，或藉由指定在[Call 陳述式](../../../visual-basic/language-reference/statements/call-statement.md)如果它不會傳回值。  
   
      您將引數傳遞至所指定的完全相同的外部程序`parameterlist`在`Declare`陳述式。 才會考慮參數原本宣告方式在外部檔案中。 同樣地，如果沒有傳回值，使用它所指定的完全相同`returntype`在`Declare`陳述式。  
   
--   **字元集。** 您可以指定`charsetmodifier`如何 Visual Basic 應封送處理字串時，它會呼叫外部程序。 `Ansi`修飾詞會指示 Visual Basic 來封送處理為 ANSI 值的所有字串和`Unicode`修飾詞會指示它封送都處理為 Unicode 值的所有字串。 `Auto`修飾詞會指示 Visual Basic，根據.NET Framework 的封送處理字串以規則為基礎的外部參考`name`，或`aliasname`如果指定。 預設值為 `Ansi`。  
+- **字元集。** 您可以指定`charsetmodifier`如何 Visual Basic 應封送處理字串時，它會呼叫外部程序。 `Ansi`修飾詞會指示 Visual Basic 來封送處理為 ANSI 值的所有字串和`Unicode`修飾詞會指示它封送都處理為 Unicode 值的所有字串。 `Auto`修飾詞會指示 Visual Basic，根據.NET Framework 的封送處理字串以規則為基礎的外部參考`name`，或`aliasname`如果指定。 預設值為 `Ansi`。  
   
      `charsetmodifier` 也會指定 Visual Basic 外部的程序，其外部檔案中所呈現的外觀。 `Ansi` 和`Unicode`兩者都直接 Visual Basic，以查閱而不需要在搜尋期間修改它的名稱。 `Auto` 會指示 Visual Basic，以判斷執行階段平台的基底字元集，並可能修改外部程序名稱，如下所示：  
   
-    -   ANSI 平台，例如 Windows 95、 Windows 98 或 Windows Millennium Edition 上第一次查閱外部的程序，與未修改的名稱。 如果失敗，將"A"附加至外部程序名稱的結尾，並一次查閱。  
+    - ANSI 平台，例如 Windows 95、 Windows 98 或 Windows Millennium Edition 上第一次查閱外部的程序，與未修改的名稱。 如果失敗，將"A"附加至外部程序名稱的結尾，並一次查閱。  
   
-    -   在 Unicode 平台，例如 Windows NT、 Windows 2000 或 Windows XP 上第一次查閱外部的程序，與未修改的名稱。 如果失敗，附加"W"結尾的外部程序的名稱，並重新查閱。  
+    - 在 Unicode 平台，例如 Windows NT、 Windows 2000 或 Windows XP 上第一次查閱外部的程序，與未修改的名稱。 如果失敗，附加"W"結尾的外部程序的名稱，並重新查閱。  
   
--   **機制。** Visual Basic 會使用.NET Framework*平台叫用*(PInvoke) 解析及存取外部程序的機制。 `Declare`陳述式和<xref:System.Runtime.InteropServices.DllImportAttribute>這兩個類別會自動使用這項機制並不需要任何 PInvoke 的知識。 如需詳細資訊，請參閱[逐步解說：呼叫 Windows Api](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。  
+- **機制。** Visual Basic 會使用.NET Framework*平台叫用*(PInvoke) 解析及存取外部程序的機制。 `Declare`陳述式和<xref:System.Runtime.InteropServices.DllImportAttribute>這兩個類別會自動使用這項機制並不需要任何 PInvoke 的知識。 如需詳細資訊，請參閱[逐步解說：呼叫 Windows Api](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。  
   
 > [!IMPORTANT]
 >  如果外部的程序執行 common language runtime (CLR) 外部，就*unmanaged 程式碼*。 當您呼叫這類的程序，例如 Windows API 函式或 COM 方法，您可能會公開您的應用程式的安全性風險。 如需詳細資訊，請參閱 < [Unmanaged 程式碼的安全程式碼撰寫指導方針](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)。  

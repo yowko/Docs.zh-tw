@@ -8,11 +8,11 @@ ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c98914f57c24dc51625564e266157731ff173337
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704566"
 ---
 # <a name="relativebindforresources-element"></a>\<Relativebindforresources> > 項目
 最佳化附屬組件的探查。  
@@ -57,19 +57,19 @@ ms.locfileid: "59157374"
 ## <a name="remarks"></a>備註  
  一般情況下，Resource Manager 來探查資源，如中所述[封裝和部署資源](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)主題。 這表示當資源管理員會探查特定資源的當地語系化版本，它可能在全域組件快取中尋找、 附屬組件，尋找應用程式的程式碼基底，查詢 Windows 安裝程式中的特定文化特性資料夾中，會引發<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。 `<relativeBindForResources>`項目最佳化資源管理員探查附屬組件的方式。 當探查資源在下列情況下，它可以改善效能：  
   
--   當附屬組件會部署在與程式碼組件相同的位置。 換句話說，如果程式碼組件會安裝在全域組件快取，附屬組件也必須安裝那里。 如果程式碼組件會安裝在應用程式的程式碼基底，也必須安裝附屬組件中的程式碼基底中的特定文化特性資料夾。  
+- 當附屬組件會部署在與程式碼組件相同的位置。 換句話說，如果程式碼組件會安裝在全域組件快取，附屬組件也必須安裝那里。 如果程式碼組件會安裝在應用程式的程式碼基底，也必須安裝附屬組件中的程式碼基底中的特定文化特性資料夾。  
   
--   當 Windows 安裝程式未使用或很少使用依需求安裝附屬組件。  
+- 當 Windows 安裝程式未使用或很少使用依需求安裝附屬組件。  
   
--   應用程式程式碼未處理的當<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。  
+- 應用程式程式碼未處理的當<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。  
   
  設定`enabled`的屬性`<relativeBindForResources>`項目`true`Resource Manager 的探查最佳化附屬組件，如下所示：  
   
--   它會使用父程式碼組件的位置來探查附屬組件。  
+- 它會使用父程式碼組件的位置來探查附屬組件。  
   
--   它不會查詢 Windows Installer 附屬組件。  
+- 它不會查詢 Windows Installer 附屬組件。  
   
--   它不會引發<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。  
+- 它不會引發<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。  
   
 ## <a name="see-also"></a>另請參閱
 

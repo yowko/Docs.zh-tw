@@ -24,11 +24,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
 ms.openlocfilehash: 5fe12d18c7f403c1a50ed548a260ba39e83280eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746716"
 ---
 # <a name="user-defined-data-type"></a>使用者定義資料類型
 在您定義的格式保存資料。 `Structure`陳述式定義的格式。  
@@ -50,15 +50,15 @@ ms.locfileid: "58814186"
   
 ## <a name="programming-tips"></a>程式設計提示  
   
--   **記憶體耗用量。** 如同所有的複合資料類型，您無法合併其成員的名義上的儲存體配置，安全地計算結構的總記憶體耗用量。 此外，您無法安全地假設在記憶體中的儲存體的順序是您宣告的順序相同。 如果您需要控制結構的儲存體配置，您可以申請<xref:System.Runtime.InteropServices.StructLayoutAttribute>屬性設定為`Structure`陳述式。  
+- **記憶體耗用量。** 如同所有的複合資料類型，您無法合併其成員的名義上的儲存體配置，安全地計算結構的總記憶體耗用量。 此外，您無法安全地假設在記憶體中的儲存體的順序是您宣告的順序相同。 如果您需要控制結構的儲存體配置，您可以申請<xref:System.Runtime.InteropServices.StructLayoutAttribute>屬性設定為`Structure`陳述式。  
   
--   **Interop 考量。** 如果您要使用的不是針對.NET Framework 撰寫的元件，例如 Automation 或 COM 物件，請記住，在其他環境中的 使用者定義型別不相容於 Visual Basic 結構類型。  
+- **Interop 考量。** 如果您要使用的不是針對.NET Framework 撰寫的元件，例如 Automation 或 COM 物件，請記住，在其他環境中的 使用者定義型別不相容於 Visual Basic 結構類型。  
   
--   **擴展。** 沒有自動轉換至或從任何結構的資料型別。 您可以定義轉換運算子，在您使用結構[Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)，而您可以宣告為每個轉換運算子`Widening`或`Narrowing`。  
+- **擴展。** 沒有自動轉換至或從任何結構的資料型別。 您可以定義轉換運算子，在您使用結構[Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)，而您可以宣告為每個轉換運算子`Widening`或`Narrowing`。  
   
--   **類型字元。** 結構的資料類型會有任何常值類型字元或識別項類型字元。  
+- **類型字元。** 結構的資料類型會有任何常值類型字元或識別項類型字元。  
   
--   **Framework 型別。** .NET Framework 中沒有任何對應的型別。 所有的結構會繼承自.NET Framework 類別<xref:System.ValueType?displayProperty=nameWithType>，但沒有個別的結構會對應至<xref:System.ValueType?displayProperty=nameWithType>。  
+- **Framework 型別。** .NET Framework 中沒有任何對應的型別。 所有的結構會繼承自.NET Framework 類別<xref:System.ValueType?displayProperty=nameWithType>，但沒有個別的結構會對應至<xref:System.ValueType?displayProperty=nameWithType>。  
   
 ## <a name="example"></a>範例  
  下列範例說明結構宣告的外框。  

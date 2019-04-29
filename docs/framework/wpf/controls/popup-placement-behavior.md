@@ -8,11 +8,11 @@ helpviewer_keywords:
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
 ms.openlocfilehash: 911c2064e34ed8d0a341ffd9a52f852eab677e0a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771208"
 ---
 # <a name="popup-placement-behavior"></a>快顯功能表放置行為
 A<xref:System.Windows.Controls.Primitives.Popup>控制項會顯示在不同的視窗會漂浮在應用程式的內容。 您可以指定的位置<xref:System.Windows.Controls.Primitives.Popup>相對於控制項、 滑鼠或使用螢幕<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>， <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>， <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>， <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>，和<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>屬性。  若要讓您靈活地指定的位置，這些屬性一起運作<xref:System.Windows.Controls.Primitives.Popup>。  
@@ -36,13 +36,13 @@ A<xref:System.Windows.Controls.Primitives.Popup>控制項會顯示在不同的�
 ## <a name="definitions-of-terms-the-anatomy-of-a-popup"></a>詞彙的定義：快顯剖析  
  下列詞彙可協助您了解如何<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>， <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>， <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>， <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>，並<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>相互關聯屬性和<xref:System.Windows.Controls.Primitives.Popup>:  
   
--   目標物件  
+- 目標物件  
   
--   目標區域  
+- 目標區域  
   
--   目標原點  
+- 目標原點  
   
--   快顯對齊點  
+- 快顯對齊點  
   
  這些詞彙提供便利的方式來參考的各個層面<xref:System.Windows.Controls.Primitives.Popup>和其相關聯的控制項。  
   
@@ -135,11 +135,11 @@ A<xref:System.Windows.Controls.Primitives.Popup>控制項會顯示在不同的�
 ## <a name="when-the-popup-encounters-the-edge-of-the-screen"></a>當快顯遇到畫面邊緣時  
  基於安全性理由，<xref:System.Windows.Controls.Primitives.Popup>無法螢幕的邊緣遮住。 下列三件事的其中一個發生時<xref:System.Windows.Controls.Primitives.Popup>遇到畫面邊緣：  
   
--   快顯視窗本身會遮蔽的畫面邊緣<xref:System.Windows.Controls.Primitives.Popup>。  
+- 快顯視窗本身會遮蔽的畫面邊緣<xref:System.Windows.Controls.Primitives.Popup>。  
   
--   快顯會使用不同的快顯對齊點。  
+- 快顯會使用不同的快顯對齊點。  
   
--   快顯會使用不同的目標原點和快顯對齊點。  
+- 快顯會使用不同的目標原點和快顯對齊點。  
   
  本節稍後會進一步說明這些選項。  
   

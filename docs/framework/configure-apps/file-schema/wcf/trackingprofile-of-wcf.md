@@ -3,11 +3,11 @@ title: <trackingProfile> WCF 的
 ms.date: 10/08/2018
 ms.assetid: 09b651c2-c0d2-4850-a101-b0e009a1dc3a
 ms.openlocfilehash: e2cbde3b7639e48e60b66ec02f5697390f573b3f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757816"
 ---
 # <a name="trackingprofile-of-wcf"></a>\<trackingProfile > 的 WCF
 表示組態區段，用於建立工作流程追蹤記錄中追蹤參與者的訂用帳戶。 追蹤設定檔包含追蹤查詢，這些查詢允許追蹤參與者訂閱工作流程執行個體狀態在執行時期變更時所發出的工作流程事件。 追蹤設定檔區段中定義的查詢會定義訂閱所傳回的事件類型。  
@@ -83,7 +83,7 @@ ms.locfileid: "55275037"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|name|指定追蹤設定檔名稱的字串。|  
+|名稱|指定追蹤設定檔名稱的字串。|  
   
 ### <a name="child-elements"></a>子元素  
   

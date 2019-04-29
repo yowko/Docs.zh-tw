@@ -10,11 +10,11 @@ helpviewer_keywords:
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
 ms.openlocfilehash: 0d899342383bdf9d262fc9a1ab5e00bbe43066e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638177"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>宣告內容和預設存取層級 (Visual Basic)
 本主題說明哪一個 Visual Basic 類型可以宣告內的其他類型，以及什麼其存取層級預設為如果未指定。  
@@ -24,11 +24,11 @@ ms.locfileid: "58821695"
   
  宣告內容的等級如下所示：  
   
--   *命名空間層級*— 在原始程式檔或命名空間內，但不是會在類別、 結構、 模組或介面  
+- *命名空間層級*— 在原始程式檔或命名空間內，但不是會在類別、 結構、 模組或介面  
   
--   *模組層級*— 類別、 結構、 模組或介面內，但不是會在程序或區塊  
+- *模組層級*— 類別、 結構、 模組或介面內，但不是會在程序或區塊  
   
--   *程序層級*— 程序或區塊內 (例如`If`或`For`)  
+- *程序層級*— 程序或區塊內 (例如`If`或`For`)  
   
  下表顯示各種宣告的程式設計元素，其宣告內容根據的預設存取層級。  
   

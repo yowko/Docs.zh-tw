@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：在設計階段建立 Windows Form 上的新 WPF 內容
+title: 逐步解說：在設計階段建立 Windows Forms 的新 WPF 內容
 ms.date: 08/18/2018
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
 ms.openlocfilehash: ed48db399ba47f0e6be96f7bca33d3892b19e433
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747675"
 ---
-# <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>逐步解說：在設計階段建立 Windows Form 上的新 WPF 內容
+# <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>逐步解說：在設計階段建立 Windows Forms 的新 WPF 內容
 
 本主題示範如何建立 Windows Presentation Foundation (WPF) 控制項，以便在 Windows Form 應用程式中使用。
 

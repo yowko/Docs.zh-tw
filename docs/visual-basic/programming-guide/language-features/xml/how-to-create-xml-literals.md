@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
 ms.openlocfilehash: 836ec4390e7675effe57c75c79768272d66925a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775904"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>HOW TO：建立 XML 常值 (Visual Basic)
 您可以直接在程式碼中建立 XML 文件、 片段中或項目，藉由使用 XML 常值。 本主題中的範例將示範如何建立 XML 項目具有三個子項目，以及如何建立 XML 文件。  
@@ -18,7 +18,7 @@ ms.locfileid: "58836855"
   
 ### <a name="to-create-an-xml-element"></a>若要建立的 XML 項目  
   
--   使用 XML 常值語法，與實際的 XML 語法相同，以建立內嵌的 XML。  
+- 使用 XML 常值語法，與實際的 XML 語法相同，以建立內嵌的 XML。  
   
      [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
@@ -36,7 +36,7 @@ ms.locfileid: "58836855"
   
 ### <a name="to-create-an-xml-document"></a>若要建立 XML 文件  
   
--   建立內嵌的 XML 文件。 下列程式碼會建立 XML 文件常值語法，XML 宣告、 處理指示、 註解，和此項目包含另一個項目。  
+- 建立內嵌的 XML 文件。 下列程式碼會建立 XML 文件常值語法，XML 宣告、 處理指示、 註解，和此項目包含另一個項目。  
   
      [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   

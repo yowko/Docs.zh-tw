@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
 ms.openlocfilehash: 11cfad81e40e76691db9f99efd1d60f5528600d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667040"
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema 和結構描述集合
 **連接**中每個.NET Framework managed 提供者實作類別**GetSchema**方法用來擷取有關目前連接的資料庫結構描述資訊和從傳回的結構描述資訊**GetSchema**方法共有的形式<xref:System.Data.DataTable>。 **GetSchema**方法是多載的方法，提供選擇性參數指定要傳回的結構描述集合及限制傳回的資訊量。  

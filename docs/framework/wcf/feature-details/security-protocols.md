@@ -5,28 +5,28 @@ helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
 ms.openlocfilehash: 5adacbc0332d104d025ea1b888b580d34fee804e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749419"
 ---
 # <a name="security-protocols"></a>安全性通訊協定
 Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有現有的企業訊息安全性需求。 本節描述 Windows Communication Foundation (WCF) 的詳細資料 (在中實作<xref:System.ServiceModel.Channels.SecurityBindingElement>) 下列 Web 服務安全性通訊協定。  
   
 |規格/文件|連結|  
 |-|-|  
-|WSS：SOAP 訊息安全性 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf|  
-|WSS：使用者名稱權杖設定檔 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
-|WSS：X509 權杖設定檔 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf|  
-|WSS：SAML 1.1 權杖設定檔 1.0|http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf|  
-|WSS：SOAP 訊息安全性 1.1|http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf|  
+|WSS:SOAP 訊息安全性 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf|  
+|WSS:使用者名稱權杖設定檔 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
+|WSS:X509 權杖設定檔 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf|  
+|WSS:SAML 1.1 權杖設定檔 1.0|http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf|  
+|WSS:SOAP 訊息安全性 1.1|http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf|  
 |WSS：使用者名稱權杖設定檔 1.1|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
-|WSS：X.509 權杖設定檔 1.1|http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf|  
-|WSS：Kerberos 權杖設定檔 1.1|http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf|  
-|WSS：SAML 1.1 權杖設定檔 1.1|http://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf|  
+|WSS:X.509 權杖設定檔 1.1|http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf|  
+|WSS:Kerberos 權杖設定檔 1.1|http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf|  
+|WSS:SAML 1.1 權杖設定檔 1.1|http://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf|  
 |WS-Secure Conversation 1.3|http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512/ws-secureconversation-1.3-os.pdf|  
-|1.1、WS-Trust 1.3|http://docs.oasis-open.org/ws-sx/ws-trust/200512/ws-trust-1.3-os.pdf|  
+|WS-Trust 1.3|http://docs.oasis-open.org/ws-sx/ws-trust/200512/ws-trust-1.3-os.pdf|  
 |應用程式注意事項：<br /><br /> 使用 WS-Trust 進行 TLS 信號交換|即將發行|  
 |應用程式注意事項：<br /><br /> 使用 WS-Trust 進行 SPNEGO|即將發行|  
 |應用程式注意事項：<br /><br /> Web 服務定址端點參考和識別|即將發行|  
@@ -34,11 +34,11 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
   
  WCF，第 1 版提供 17 可用來當做基礎 Web 服務安全性設定的驗證模式。 每個模式都已針對一組通用的部署需求最佳化，例如：  
   
--   用來驗證用戶端和服務的認證。  
+- 用來驗證用戶端和服務的認證。  
   
--   訊息或傳輸安全性保護機制。  
+- 訊息或傳輸安全性保護機制。  
   
--   訊息交換模式。  
+- 訊息交換模式。  
   
 |驗證模式|用戶端驗證|伺服器驗證|模式|  
 |-------------------------|---------------------------|---------------------------|----------|  
@@ -47,7 +47,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 |KerberosOverTransport|Windows|X509|Transport|  
 |IssuedTokenOverTransport|聯合|X509|Transport|  
 |SspiNegotiatedOverTransport|交涉的 Windows Sspi|交涉的 Windows Sspi|Transport|  
-|AnonymousForCertificate|無|X509|訊息|  
+|AnonymousForCertificate|None|X509|訊息|  
 |UserNameForCertificate|使用者名稱/密碼|X509|訊息|  
 |MutualCertificate|X509|X509|訊息|  
 |MutualCertificateDuplex|X509|X509|訊息|  
@@ -55,7 +55,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 |Kerberos|Windows|Windows|訊息|  
 |IssuedToken|聯合|聯合|訊息|  
 |SspiNegotiated|交涉的 Windows Sspi|交涉的 Windows Sspi|訊息|  
-|AnonymousForSslNegotiated|無|X509、TLS-Nego|訊息|  
+|AnonymousForSslNegotiated|None|X509、TLS-Nego|訊息|  
 |UserNameForSslNegotiated|使用者名稱/密碼|X509、TLS-Nego|訊息|  
 |MutualSslNegotiated|X509|X509、TLS-Nego|訊息|  
 |IssuedTokenForSslNegotiated|聯合|X509、TLS-Nego|訊息|  
@@ -118,7 +118,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
   
  R1204 如果 X509TokenProfile1.1 正在使用中，則 X509 安全性權杖的外部參考應使用 WS-Security 1.1 所引入的指紋。  
   
- WCF 支援 X509IssuerSerial。 不過有 x509issuerserial 的互通性問題： WCF 使用字串來比較 X509IssuerSerial 的兩個值。 因此如果其中一個的主體名稱的元件重新排序，而且會將傳送至 WCF 服務參考的憑證，它可能會找到。  
+ WCF 支援 X509IssuerSerial。 不過有 x509issuerserial 的互通性問題：WCF 會使用字串來比較 X509IssuerSerial 的兩個值。 因此如果其中一個的主體名稱的元件重新排序，而且會將傳送至 WCF 服務參考的憑證，它可能會找到。  
   
 ### <a name="13-kerberos-token"></a>1.3 Kerberos 權杖  
  WCF 支援 kerberostokenprofile1.1，但受以進行 Windows 驗證，具有下列限制：  
@@ -159,7 +159,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 |||  
 |-|-|  
 |Strict|根據「使用前宣告」的一般原則，遵循安全性原則 7.7.1 一節中所述的編號配置規則，將項目加入至安全性標頭中。|  
-|Lax|依據符合 WSS: SOAP 訊息安全性的任何順序，將項目新增至安全性標頭中。|  
+|Lax|項目會加入至安全性標頭，以任何順序符合 WSS:SOAP 訊息安全性。|  
 |LaxTimestampFirst|與 Lax 相同，除了安全性標頭中的第一個項目必須是 wsse:Timestamp|  
 |LaxTimestampLast|與 Lax 相同，除了安全性標頭中的最後一個項目必須是 wsse:Timestamp|  
   
@@ -181,7 +181,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
   
  安全性標頭配置：Strict  
   
- 演算法組合：Basic256  
+ 演算法套件：Basic256  
   
 #### <a name="311-usernameovertransport"></a>3.1.1 UsernameOverTransport  
  在這個驗證模式中，用戶端會使用使用者名稱權杖來進行驗證，這個權杖出現在 SOAP 層中做為已簽署的支援權杖，且一定會從啟動器傳送至收件者。 服務會在傳輸層上使用 X.509 憑證來進行驗證。 使用的繫結為傳輸繫結。  
@@ -300,7 +300,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 ### <a name="32-using-x509-certificates-for-service-authentication"></a>3.2 使用 X.509 憑證來驗證服務  
- 本章節描述下列驗證模式：MutualCertificate WSS1.0、Mutual CertificateDuplex、MutualCertificate WSS1.1、AnonymousForCertificate、UserNameForCertificate 和 IssuedTokenForCertificate。  
+ 本章節描述下列驗證模式：MutualCertificate WSS1.0、MUTUAL CertificateDuplex、 MutualCertificate WSS1.1、ANONYMOUSFORCERTIFICATE、USERNAMEFORCERTIFICATE、 AnonymousForCertificate、 和 issuedtokenforcertificate 全部。  
   
 #### <a name="321-mutualcertificate-wss10"></a>3.2.1 MutualCertificate WSS1.0  
  在這個驗證模式中，用戶端會使用 X.509 憑證來進行驗證，這個憑證出現在 SOAP 層中做為啟動器權杖。 服務也會使用 X.509 憑證來進行驗證。 SOAP 標頭和 SOAP 主體都會進行簽署。 對稱金鑰是使用收件者的傳輸憑證來建立和加密。  
@@ -309,7 +309,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
   
  啟動器權杖：用戶端的 X.509 憑證，其內含模式設定為 …/IncludeToken/AlwaysToRecipient  
   
- 收件者權杖：伺服器的 X.509 憑證，其內含模式設定為 …/IncludeToken/Never  
+ 收件者權杖：伺服器的 X.509 憑證，其內含模式設定.../IncludeToken/Never  
   
  權杖保護：False  
   
@@ -325,7 +325,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 <wsp:Policy wsu:Id="MutualCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:AsymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:InitiatorToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:InitiatorToken><sp:RecipientToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:RecipientToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:AsymmetricBinding><sp:Wss10 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/></wsp:Policy></sp:Wss10><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -362,9 +362,9 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
   
  使用的繫結為具有下列屬性值的非對稱式繫結：  
   
- 啟動器權杖：用戶端的 X509 憑證，其內含模式設定為 …/IncludeToken/AlwaysToRecipient  
+ 啟動器權杖：用戶端的 X509 憑證，內含模式設定為.../IncludeToken/AlwaysToRecipient  
   
- 收件者權杖：伺服器的 X509 憑證，其內含模式設定為 …/IncludeToken/AlwaysToInitiator  
+ 收件者權杖：伺服器的 X509 憑證，內含模式設定為.../IncludeToken/AlwaysToInitiator  
   
  權杖保護：False  
   
@@ -380,7 +380,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 <wsp:Policy wsu:Id="MutualCertificateDuplex_policy"><wsp:ExactlyOne><wsp:All><sp:AsymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:InitiatorToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:InitiatorToken><sp:RecipientToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToInitiator"><wsp:Policy><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:RecipientToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:AsymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><cdp:CompositeDuplex xmlns:cdp="http://schemas.microsoft.com/net/2006/06/duplex"/><ow:OneWay xmlns:ow="http://schemas.microsoft.com/ws/2005/05/routing/policy"/><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求和回應  
   
 ```xml  
@@ -407,7 +407,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
   
  驗證模式 AnonymousForCertificate、UsernameForCertificate、MutualCertificate WSS11 和 IssuedTokenForCertificate 全部都會使用類似具有下列屬性值的 sp:SymmetricBinding 執行個體：  
   
- 保護權杖：伺服器的 X509 憑證，其內含模式設定為 .../IncludeToken/Never  
+ 保護權杖：伺服器的 X509 憑證，內含模式設定為.../IncludeToken/Never  
 權杖保護：False  
   
  整個標頭和本文簽章：True  
@@ -427,7 +427,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 <wsp:Policy wsu:Id="AnonymousforCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -468,7 +468,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 <wsp:Policy wsu:Id="UserNameForCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:SignedEncryptedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssUsernameToken10/></wsp:Policy></sp:UsernameToken></wsp:Policy></sp:SignedEncryptedSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><http:BasicAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http"/><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -509,7 +509,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 <wsp:Policy wsu:Id="MutualCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -550,7 +550,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 <wsp:Policy wsu:Id="IssuedTokenForCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ...  </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -585,7 +585,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ## <a name="33-kerberos"></a>3.3 Kerberos  
  在這個驗證模式中，用戶端會使用 Kerberos 票證，向服務進行驗證。 相同的票證也會提供伺服器驗證。 使用的繫結為具有下列屬性的對稱式繫結：  
   
- 保護權杖：Kerberos 票證，其內含模式設定為 .../IncludeToken/Once  
+ 保護權杖：Kerberos 票證，其內含模式設定來.../IncludeToken/Once  
 權杖保護：False  
   
  整個標頭和本文簽章：True  
@@ -600,7 +600,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 <wsp:Policy wsu:Id="Kerberos_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:KerberosToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Once"><wsp:Policy><sp:RequireDerivedKeys/><sp:WssGssKerberosV5ApReqToken11/></wsp:Policy></sp:KerberosToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic128/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -635,7 +635,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 #### <a name="34-issuedtoken"></a>3.4 IssuedToken  
  在這個驗證模式中，用戶端本身不會向服務驗證，但用戶端會出示 STS 所發出的權杖，並證明得知共用金鑰。 服務本身也不會向用戶端驗證，但 STS 會加密共用金鑰做為已發出權杖的一部分，只有服務才能解密金鑰。 使用的繫結為具有下列屬性的對稱式繫結：  
   
- 保護權杖：發出的權杖，其內含模式設定為 .../IncludeToken/AlwaysToRecipient  
+ 保護權杖：發出的權杖，內含模式設定為.../IncludeToken/AlwaysToRecipient  
 權杖保護：False  
   
  整個標頭和本文簽章：True  
@@ -650,7 +650,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 <wsp:Policy wsu:Id="IssuedToken_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ...  </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -687,7 +687,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
   
  使用的繫結為具有下列屬性的對稱式繫結：  
   
- 保護權杖：SslContextToken，其內含模式設定為 .../IncludeToken/Never  
+ 保護權杖：Sslcontexttoken，其內含模式設定為.../IncludeToken/Never  
 權杖保護：False  
   
  整個標頭和本文簽章：True  
@@ -708,7 +708,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 <wsp:Policy wsu:Id="AnonymousForSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -749,7 +749,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 <wsp:Policy wsu:Id="UserNameForSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:SignedEncryptedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssUsernameToken10/></wsp:Policy></sp:UsernameToken></wsp:Policy></sp:SignedEncryptedSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -790,7 +790,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 <wsp:Policy wsu:Id="IssuedTokenForSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ... </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -831,7 +831,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 <wsp:Policy wsu:Id="MutualSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><mssp:RequireClientCertificate/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -866,7 +866,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ### <a name="36-sspinegotiated"></a>3.6 SspiNegotiated  
  在這個驗證模式中，交涉通訊協定是用來執行用戶端和伺服器驗證。 如果可能則會使用 Kerberos，否則會使用 NTLM。 使用的繫結為具有下列屬性的對稱式繫結：  
   
- 保護權杖：SpnegoContextToken，其內含模式設定為 .../IncludeToken/AlwaysToRecipient  
+ 保護權杖：Spnegocontexttoken，其內含模式設定為.../IncludeToken/AlwaysToRecipient  
 權杖保護：False  
   
  整個標頭和本文簽章：True  
@@ -881,7 +881,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 <wsp:Policy wsu:Id="SspiNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:SpnegoContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></sp:SpnegoContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -922,7 +922,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 <wsp:Policy wsu:Id="SecureConversation_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:SecureConversationToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireDerivedKeys/><sp:BootstrapPolicy><wsp:Policy><sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><sp:Body/><sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/></sp:SignedParts><sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><sp:Body/></sp:EncryptedParts><sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:SpnegoContextToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireDerivedKeys/></wsp:Policy></sp:SpnegoContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust10></wsp:Policy></sp:BootstrapPolicy><sp:MustNotSendAmend/></wsp:Policy></sp:SecureConversationToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 213fa9fda6b154d4548b4163cc7b5890bfcfb49c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771721"
 ---
 # <a name="iclrruntimeinfo-interface"></a>ICLRRuntimeInfo 介面
 提供傳回特定 common language runtime (CLR) 的相關資訊包括版本、 目錄和負載狀態的方法。 此介面也會提供執行階段特定功能未初始化的執行階段。 它包含執行階段相對[LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md)方法中，執行階段模組專屬[GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md)方法，並透過提供執行階段介面[GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)方法。  

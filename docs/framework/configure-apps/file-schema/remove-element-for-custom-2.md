@@ -10,11 +10,11 @@ ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: c86d231a4e3e8e15df94017a6ca461b365643ea5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705087"
 ---
 # <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<移除 > NameValueSectionHandler 和 DictionarySectionHandler 的項目
 
@@ -38,13 +38,13 @@ ms.locfileid: "55267413"
 
 ## <a name="parent-element"></a>父項目
 
-| 元素 | 描述 |
+| 項目 | 描述 |
 | ------- | ------------|
 | [**\<sectionName >** 項目](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定義設定使用的自訂組態區段<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。 |
 
 ## <a name="child-elements"></a>子元素
 
-無
+None
 
 ## <a name="remarks"></a>備註
 

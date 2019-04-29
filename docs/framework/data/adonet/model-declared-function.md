@@ -3,25 +3,25 @@ title: 模型宣告函式
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
 ms.openlocfilehash: c9abf9a3340cd22ab5d654588b1d22e10b5c05fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772108"
 ---
 # <a name="model-declared-function"></a>模型宣告函式
 A*模型宣告函式*是宣告在概念模型中，但該概念模型中未定義的函式。 該函式可能是在裝載或儲存環境中定義的。 例如，模型宣告函式可能對應到在資料庫中定義的函式，因而在概念模型中公開伺服器端的功能。  
   
  模型宣告函式的宣告包含下列資訊：  
   
--   函式的名稱。 (必要項)  
+- 函式的名稱。 (必要項)  
   
--   傳回值的型別。 (選擇項)  
+- 傳回值的型別。 (選擇項)  
   
     > [!NOTE]
     >  若未指定任何傳回值，則傳回型別為 void。  
   
--   參數資訊，包括參數名稱和型別。 (選擇項)  
+- 參數資訊，包括參數名稱和型別。 (選擇項)  
   
 ## <a name="example"></a>範例  
  [ADO.NET Entity Framework](./ef/index.md)會使用稱為概念結構定義語言的特定領域語言 (DSL) ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) 來定義概念模型。 在 CSDL 中，模型宣告函式的其中一個實作是函式匯入 (使用[FunctionImport 項目](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#functionimport-element-csdl))。 下列 CSDL 定義具有函式匯入定義的實體容器。 請注意，由於沒有指定傳回型別，因此該函式的傳回型別為 void。  

@@ -3,11 +3,11 @@ title: 搭配 WCF 使用多個驗證配置
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
 ms.openlocfilehash: b0f5da9a4c6fdfede9a86434f49f9e9821778176
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932675"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>搭配 WCF 使用多個驗證配置
 WCF 現在允許您在單一端點上指定多個驗證配置。 此外，Web 裝載服務可以直接從 IIS 繼承驗證設定。 自我裝載服務可以指定可使用的驗證配置。 如需在 IIS 中設定驗證設定的詳細資訊，請參閱[IIS 驗證](https://go.microsoft.com/fwlink/?LinkId=232458)  

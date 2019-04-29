@@ -3,11 +3,11 @@ title: WCF 指示詞語法
 ms.date: 03/30/2017
 ms.assetid: e471b042-d5e3-491c-bc81-758655016a3a
 ms.openlocfilehash: 65c972067d5c2869a9dd130d285566db81dbc0d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704670"
 ---
 # <a name="wcf-directive-syntax"></a>WCF 指示詞語法
 指定.svc 檔案中的 Windows Communication Foundation (WCF) 指示詞用來指示編譯器設定。 每個指示詞可以含有一個或多個該指示詞特有的屬性 (搭配值)。 WCF 只有[ \@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)指示詞。  

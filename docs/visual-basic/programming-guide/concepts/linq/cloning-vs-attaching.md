@@ -3,11 +3,11 @@ title: 複製與附加 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3c3bd105-c9d3-49bd-875b-27ab4e8bc7a3
 ms.openlocfilehash: 59ffedfdbb2820683f1e6cc232154688f5c29fc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789099"
 ---
 # <a name="cloning-vs-attaching-visual-basic"></a>複製與附加 (Visual Basic)
 將 <xref:System.Xml.Linq.XNode> (包括 <xref:System.Xml.Linq.XElement>) 或 <xref:System.Xml.Linq.XAttribute> 物件加入到新的樹狀結構時，如果新內容沒有父代，這些物件只會附加到 XML 樹狀結構。 如果新內容已經成為父代，而且屬於其他 XML 樹狀結構的一部分，則會複製新內容。 然後，新複製的內容會附加到新的 XML 樹狀結構。  

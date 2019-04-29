@@ -8,11 +8,11 @@ helpviewer_keywords:
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
 ms.openlocfilehash: 75165df94aa8b508ef85cf970933efb98b9d62ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772869"
 ---
 # <a name="preview-events"></a>預覽事件
 預覽事件，也就是通道事件，都是路由的事件的路由方向會從應用程式根目錄來引發事件，並報告為事件資料來源的項目傳送的位置。 並非所有的事件案例支援，或需要預覽事件;本主題描述的情況下，預覽事件存在，應用程式或元件應如何處理它們和建立自訂元件或類別中的預覽事件，可能適合的情況。  

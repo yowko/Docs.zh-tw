@@ -7,11 +7,11 @@ helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
 ms.openlocfilehash: f5d54b892f61bfb1804b3c4c561533e5aa549d0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774903"
 ---
 # <a name="typography-how-to-topics"></a>印刷樣式 HOW TO 主題
 在本節中的主題描述如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]支援豐富的呈現您的應用程式中的文字。  

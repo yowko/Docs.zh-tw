@@ -3,11 +3,11 @@ title: HOW TO：擴充非同步逐步解說使用 Task.WhenAll (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
 ms.openlocfilehash: 7ad2d9cdd85a7bdb67bbf091a38274fd20e5a66f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756503"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>HOW TO：擴充非同步逐步解說使用 Task.WhenAll (Visual Basic)
 您可以提升[逐步解說：存取 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)使用<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>方法。 此方法會以非同步方式等候多個非同步作業進行，這些作業是以工作集合來表示。  
@@ -25,9 +25,9 @@ ms.locfileid: "59331880"
   
 1. 將 `ProcessURLAsync` 方法新增至在[逐步解說：存取 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   
-    -   如果您已下載的程式碼[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)、 開啟 AsyncWalkthrough 專案，然後再新增`ProcessURLAsync`MainWindow.xaml.vb 檔案。  
+    - 如果您已下載的程式碼[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)、 開啟 AsyncWalkthrough 專案，然後再新增`ProcessURLAsync`MainWindow.xaml.vb 檔案。  
   
-    -   如果您藉由完成此逐步解說來開發程式碼，請將 `ProcessURLAsync` 新增至包含 `GetURLContentsAsync` 方法的應用程式。 此應用程式的 MainWindow.xaml.vb 檔案是 「 完整程式碼範例從逐步解說 > 一節的第一個範例。  
+    - 如果您藉由完成此逐步解說來開發程式碼，請將 `ProcessURLAsync` 新增至包含 `GetURLContentsAsync` 方法的應用程式。 此應用程式的 MainWindow.xaml.vb 檔案是 「 完整程式碼範例從逐步解說 > 一節的第一個範例。  
   
      `ProcessURLAsync` 方法會合併原始逐步解說中 `SumPageSizesAsync` 之 `For Each` 迴圈主體內的動作。 此方法會以非同步方式將指定網站的內容下載為位元組陣列，然後顯示並傳回位元組陣列的長度。  
   
@@ -98,9 +98,9 @@ ms.locfileid: "59331880"
   
 1. 將下列版本的 `ProcessURLAsync` 新增至在[逐步解說：存取 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   
-    -   如果您已下載的程式碼[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)、 開啟 AsyncWalkthrough_HttpClient 專案，然後再新增`ProcessURLAsync`MainWindow.xaml.vb 檔案。  
+    - 如果您已下載的程式碼[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)、 開啟 AsyncWalkthrough_HttpClient 專案，然後再新增`ProcessURLAsync`MainWindow.xaml.vb 檔案。  
   
-    -   如果您藉由完成此逐步解說來開發程式碼，請將 `ProcessURLAsync` 新增至使用 `HttpClient.GetByteArrayAsync` 方法的應用程式。 此應用程式的 MainWindow.xaml.vb 檔案是 「 完整程式碼範例從逐步解說 > 一節的第二個範例。  
+    - 如果您藉由完成此逐步解說來開發程式碼，請將 `ProcessURLAsync` 新增至使用 `HttpClient.GetByteArrayAsync` 方法的應用程式。 此應用程式的 MainWindow.xaml.vb 檔案是 「 完整程式碼範例從逐步解說 > 一節的第二個範例。  
   
      `ProcessURLAsync` 方法會合併原始逐步解說中 `SumPageSizesAsync` 之 `For Each` 迴圈主體內的動作。 此方法會以非同步方式將指定網站的內容下載為位元組陣列，然後顯示並傳回位元組陣列的長度。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "59331880"
   
 ### <a name="to-test-the-taskwhenall-solutions"></a>測試 Task.WhenAll 方案  
   
--   針對任一方案，選擇 F5 鍵以執行程式，然後選擇 [開始] 按鈕。 輸出應類似於[逐步解說：存取 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 不過請注意，網站每次出現的順序都不同。  
+- 針對任一方案，選擇 F5 鍵以執行程式，然後選擇 [開始] 按鈕。 輸出應類似於[逐步解說：存取 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 不過請注意，網站每次出現的順序都不同。  
   
 ## <a name="example"></a>範例  
  下列程式碼顯示專案擴充，其使用 `GetURLContentsAsync` 方法從 Web 下載內容。  

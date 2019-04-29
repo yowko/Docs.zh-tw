@@ -7,11 +7,11 @@ helpviewer_keywords:
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
 ms.openlocfilehash: aae053ae0473ed6ced0f28da3d5e5afc0be629df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769079"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>HOW TO：判斷兩個物件是否相同 (Visual Basic)
 在 Visual Basic 中，兩個變數的參考會視為相同其指標都相同，也就是說，如果兩個變數都指向相同的類別執行個體，在記憶體中。 比方說，在 Windows Forms 應用程式中，您可能想要進行比較來決定是否目前的執行個體 (`Me`) 等同於特定的執行個體，例如`Form2`。  

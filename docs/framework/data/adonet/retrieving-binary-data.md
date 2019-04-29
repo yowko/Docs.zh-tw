@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
 ms.openlocfilehash: 068b84e8704b54e6aea148ec5fc5bf9f0c4cb958
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664281"
 ---
 # <a name="retrieving-binary-data"></a>擷取二進位資料
 根據預設， **DataReader**內送資料載入的資料列，只要整列資料可用。 但是二進位大型物件 (BLOB) 需要不同的處理方式，因為它們所包含的資料可能高達數 GB，無法包含在單一資料列內。 **Command.ExecuteReader**方法有多載會採用<xref:System.Data.CommandBehavior>引數，以修改預設行為**DataReader**。 您可以傳遞<xref:System.Data.CommandBehavior.SequentialAccess>要**ExecuteReader**方法，以修改的預設行為**DataReader**以便而不是載入的資料列，它會載入資料以循序方式是在接收。 這種方式相當適於載入 BLOB 或其他大型資料結構。 請注意，這個行為取決於您的資料來源。 例如，從 Microsoft Access 傳回 BLOB 會將整個正在載入的 BLOB 載入記憶體，而不是在接收時循序載入。  

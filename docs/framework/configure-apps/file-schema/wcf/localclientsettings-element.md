@@ -3,11 +3,11 @@ title: <localClientSettings> 項目
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
 ms.openlocfilehash: c5caf183e37edda6efc79ec81f1628180379fd46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765774"
 ---
 # <a name="localclientsettings-element"></a>\<localClientSettings > 項目
 指定此繫結之本機用戶端的安全性設定。  

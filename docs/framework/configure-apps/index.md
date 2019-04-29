@@ -25,11 +25,11 @@ helpviewer_keywords:
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775865"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>使用組態檔設定應用程式
 .NET Framework 透過組態檔賦予開發人員和系統管理員對於應用程式執行方式的控制和彈性。 組態檔是可以按需要變更的 XML 檔。 系統管員能夠控制應用程式可以存取哪些受保護的資源、應用程式將使用之組件的版本為何，以及遠端應用程式和物件要位於何處。 開發人員則可以將設定值置於組態檔，排除每當設定值變更時重新編譯應用程式的需要。 本章節說明可以設定些什麼以及設定應用程式會很有用處的原因。  
@@ -66,7 +66,7 @@ ms.locfileid: "59147104"
   
  應用程式組態檔的名稱和位置取決於應用程式的主應用程式 (Host)，可以是下列其中一個：  
   
--   可執行檔裝載的應用程式。  
+- 可執行檔裝載的應用程式。  
   
      這些應用程式有兩個組態檔：一個是來源組態檔，開發人員會在開發期間修改這個組態檔，另一個是隨應用程式散發的輸出檔。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "59147104"
   
      Visual Studio 會自動將來源組態檔複製到編譯的組件所在的目錄中，以建立輸出組態檔，該組態檔會隨應用程式一起部署。 在某些情況下，Visual Studio 可能會修改輸出組態檔；如需詳細資訊，請參閱[重新導向組件版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)文件的[將應用程式層級的組件版本重新導向](../../../docs/framework/configure-apps/redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel)一節。  
   
--   ASP.NET 裝載的應用程式。  
+- ASP.NET 裝載的應用程式。  
   
      如需 ASP.NET 組態檔的詳細資訊，請參閱[ASP.NET 組態設定](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))。
   
--   Internet Explorer 裝載的應用程式。  
+- Internet Explorer 裝載的應用程式。  
   
      如果裝載於 Internet Explorer 的應用程式具有組態檔，這個檔案的位置會以下列語法在 `<link>` 標籤中指定：  
   
@@ -94,11 +94,11 @@ ms.locfileid: "59147104"
   
  安全性組態檔位於下列位置：  
   
--   企業原則組態檔：%*runtime-install-path*%\Config\Enterprisesec.config  
+- 企業原則組態檔：%*runtime-install-path*%\Config\Enterprisesec.config  
   
--   電腦原則組態檔：%*runtime-install-path*%\Config\Security.config  
+- 電腦原則組態檔：%*runtime-install-path*%\Config\Security.config  
   
--   使用者原則組態檔：%USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
+- 使用者原則組態檔：%USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>本節內容  
  [如何：使用 DEVPATH 找出組件](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  

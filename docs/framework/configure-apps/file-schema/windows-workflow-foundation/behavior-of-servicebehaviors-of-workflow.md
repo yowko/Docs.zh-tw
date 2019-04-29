@@ -1,14 +1,14 @@
 ---
-title: '工作流程<behavior> 的 <serviceBehaviors> '
+title: 工作流程<behavior> 的 <serviceBehaviors>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a4b718a-1b40-4957-935a-f6122819ab3c
 ms.openlocfilehash: 09bd54f4a7d56dc1215b1acd36ff131ba4cba12c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790308"
 ---
 # <a name="behavior-of-servicebehaviors-of-workflow"></a>\<行為 > 的\<v > 工作流程
 **行為**項目包含服務行為設定的集合。 每個行為由編製索引及其**名稱**。 服務可連結至每個透過名稱使用的行為**behaviorConfiguration**屬性[\<端點 >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)項目。 如此可允許端點共用通用行為組態，而不用重新定義設定。  
@@ -57,7 +57,7 @@ ms.locfileid: "55268258"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|name|唯一的字串，其中包含行為的組態名稱。 這個值是使用者定義的字串，它必須是唯一的，因為它會充當項目的識別字串。|  
+|名稱|唯一的字串，其中包含行為的組態名稱。 這個值是使用者定義的字串，它必須是唯一的，因為它會充當項目的識別字串。|  
   
 ### <a name="child-elements"></a>子元素  
   

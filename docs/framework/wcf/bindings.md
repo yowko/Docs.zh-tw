@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
 ms.openlocfilehash: c948c20788ae4e16e6b626a3f168cf9dcb94d718
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608875"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation 繫結
 繫結會指定 Windows Communication Foundation (WCF) 服務端點與其他端點的通訊方式。 繫結的最基本功能，就是必須指定要使用的傳輸 (例如，HTTP 或 TCP)。 此外，您也可以透過繫結程序來設定其他特性，例如安全性與異動支援。  

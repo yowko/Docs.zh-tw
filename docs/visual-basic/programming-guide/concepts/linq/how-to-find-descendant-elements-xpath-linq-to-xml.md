@@ -3,11 +3,11 @@ title: HOW TO：尋找子代項目 (XPATH-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: e7e2dc9e-bda9-420d-a5b1-4fabf1cca46b
 ms.openlocfilehash: 09f12dca7b6278327394126ffb0950682d285f88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780558"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>HOW TO：尋找子代項目 (XPATH-LINQ to XML) (Visual Basic)
 本主題顯示如何利用特定名稱取得子代項目。  

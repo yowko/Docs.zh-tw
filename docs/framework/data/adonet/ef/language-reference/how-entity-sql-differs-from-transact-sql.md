@@ -3,11 +3,11 @@ title: Entity SQL 與 Transact-SQL 的相異之處
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
 ms.openlocfilehash: 75ce0b00962526b76ea9f4b9fdfb0d1e1e564cdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774741"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL 與 Transact-SQL 的相異之處
 本主題描述之間的差異[!INCLUDE[esql](../../../../../../includes/esql-md.md)]和[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]。  
@@ -20,15 +20,15 @@ ms.locfileid: "59162733"
 ## <a name="support-for-collections"></a>集合的支援  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 您可以將集合視為第一級實體。 例如:   
   
--   集合運算式在 `from` 子句中是有效的。  
+- 集合運算式在 `from` 子句中是有效的。  
   
--   `in` 和 `exists` 子查詢已通用化，可允許任何集合。  
+- `in` 和 `exists` 子查詢已通用化，可允許任何集合。  
   
      子查詢是一種集合。 `e1 in e2` 和 `exists(e)` 是用來執行這些作業的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 建構。  
   
--   Set 作業 (如 `union`、`intersect` 和 `except`) 現在都可針對集合來操作。  
+- Set 作業 (如 `union`、`intersect` 和 `except`) 現在都可針對集合來操作。  
   
--   聯結可針對集合操作。  
+- 聯結可針對集合操作。  
   
 ## <a name="support-for-expressions"></a>運算式的支援  
  [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 具有子查詢 （資料表） 和運算式 （資料列和資料行）。  
@@ -137,13 +137,13 @@ group by b + c
 ## <a name="collection-based-aggregates"></a>以集合為基礎的彙總  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援兩種彙總。  
   
- 以集合為基礎的彙總會針對集合運作，並產生彙總的結果。 這些可以出現在查詢中的任何地方，而且不需要 `group by` 子句。 例如:   
+ 以集合為基礎的彙總會針對集合運作，並產生彙總的結果。 這些可以出現在查詢中的任何地方，而且不需要 `group by` 子句。 例如：  
   
 ```  
 select t.a as a, count({1,2,3}) as b from T as t     
 ```  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 也支援 SQL 樣式彙總。 例如：  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 也支援 SQL 樣式彙總。 例如:   
   
 ```  
 select a, sum(t.b) from T as t group by t.a as a  

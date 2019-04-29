@@ -3,22 +3,22 @@ title: 關聯 End 多重性
 ms.date: 03/30/2017
 ms.assetid: 340926ee-aefb-4bef-92cc-453e5251fd03
 ms.openlocfilehash: 59eed56204543adf405cfc7c71a49697a9e18374
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769654"
 ---
 # <a name="association-end-multiplicity"></a>關聯 End 多重性
 *關聯 end 多重性*定義的數目[實體類型](../../../../docs/framework/data/adonet/entity-type.md)其中一端的可執行個體[關聯](../../../../docs/framework/data/adonet/association-type.md)。  
   
  關聯 End 多重性可以具有下列其中一個值：  
   
--   一 (1):指出該只有一個實體類型執行個體存在於關聯 end。  
+- 一 (1):指出該只有一個實體類型執行個體存在於關聯 end。  
   
--   零或一 (0..1):表示零個或一個實體類型執行個體存在於關聯 end。  
+- 零或一 (0..1):表示零個或一個實體類型執行個體存在於關聯 end。  
   
--   許多 (\*):表示零個、 一個或多個實體類型執行個體存在於關聯 end。  
+- 許多 (\*):表示零個、 一個或多個實體類型執行個體存在於關聯 end。  
   
  關聯通常以其關聯 End 多重性來區分。 例如，如果關聯 end 具有多重性一 （1） 和許多 (\*)，該關聯稱為一對多的關聯。 在下列範例中，`PublishedBy` 關聯集為一對多關聯 (一個發行者發行許多書籍，以及一本書籍由一個發行者發行)。 `WrittenBy` 關聯式多對多關聯 (一本書可以有多位作者，一位作者可以撰寫許多本書)。  
   

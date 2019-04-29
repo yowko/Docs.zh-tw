@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
 ms.openlocfilehash: cc2e25183649f6a95e7862520ccc5719f201277a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774643"
 ---
 # <a name="how-to-call-custom-database-functions"></a>HOW TO：呼叫自訂資料庫函式
 本主題描述如何呼叫資料庫中定義的自訂資料庫函式，而資料庫是來自 LINQ to Entities 查詢。  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ListCount property
 ms.assetid: 7bcaea58-1cfa-46db-9baf-b75a69d8f9ec
 ms.openlocfilehash: 8a2429049acf1a22edde8d132ece17da4e91f1db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759826"
 ---
 # <a name="when-to-use-a-windows-forms-combobox-instead-of-a-listbox"></a>何時使用 Windows Form ComboBox 取代 ListBox
 <xref:System.Windows.Forms.ComboBox>而<xref:System.Windows.Forms.ListBox>控制項具有類似的行為，和在某些情況下可能可以互換。 有些的時候，不過，當其中一種是一項工作更適合。  

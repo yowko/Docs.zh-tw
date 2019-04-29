@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID449
 ms.assetid: 76e7bcf3-24ed-4cd5-945b-b98f1c76944b
 ms.openlocfilehash: bd5c5c498fb489f01e8a867e3400a06ef7905173
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751575"
 ---
 # <a name="argument-not-optional-visual-basic"></a>引數不是選擇性的 (Visual Basic)
 引數類型與數量必須符合所預期。 可能是沒有引數數目不正確，或省略的引數不是選擇性。 引數可以只從使用者定義的程序呼叫省略，如果它已宣告`Optional`程序定義中。  

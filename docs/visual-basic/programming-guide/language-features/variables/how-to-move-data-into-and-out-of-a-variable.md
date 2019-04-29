@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
 ms.openlocfilehash: 30d1c0ab91724ac556e59b272782513ee8b8067b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756594"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>HOW TO：將資料移入和移出變數 (Visual Basic)
 您將變數的名稱放在指派陳述式左邊值儲存在變數中。  
@@ -19,7 +19,7 @@ ms.locfileid: "58818527"
   
 #### <a name="to-store-a-value-in-a-variable"></a>若要儲存在變數中的值  
   
--   在指派陳述式左邊使用的變數名稱。  
+- 在指派陳述式左邊使用的變數名稱。  
   
      下列範例會設定變數的值`alpha`。  
   
@@ -34,11 +34,11 @@ ms.locfileid: "58818527"
   
 #### <a name="to-retrieve-a-value-from-a-variable"></a>從變數擷取值  
   
--   在運算式中使用變數的名稱。 您可以使用變數任何地方您可以使用常數或常值，除了中定義的常數值的運算式。  
+- 在運算式中使用變數的名稱。 您可以使用變數任何地方您可以使用常數或常值，除了中定義的常數值的運算式。  
   
      -或-  
   
--   使用下列相等的變數名稱 (`=`) 登入在指派陳述式。  
+- 使用下列相等的變數名稱 (`=`) 登入在指派陳述式。  
   
      下列範例會讀取變數的值`startValue`，然後使用變數的值`counter`在運算式中。  
   

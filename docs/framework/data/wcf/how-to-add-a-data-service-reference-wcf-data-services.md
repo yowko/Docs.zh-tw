@@ -1,17 +1,17 @@
 ---
-title: 如何：加入資料服務參考 (WCF 資料服務)
+title: HOW TO：加入資料服務參考 (WCF Data Services)
 ms.date: 08/24/2018
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 62c6f318-3ee1-433a-b7a3-efa234c3034c
 ms.openlocfilehash: fc1786e1c6102c702374989253cd3ce23e3f7b54
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765527"
 ---
-# <a name="how-to-add-a-data-service-reference-wcf-data-services"></a>如何： 加入資料服務參考 (WCF Data Services)
+# <a name="how-to-add-a-data-service-reference-wcf-data-services"></a>HOW TO：加入資料服務參考 (WCF Data Services)
 
 您可以使用**加入服務參考**對話方塊在 Visual Studio 中將參考加入至 WCF Data Services。 這樣可以讓您更輕鬆地在 Visual Studio 開發的用戶端應用程式中存取資料服務。 當您完成此程序時，會根據從資料服務取得的中繼資料產生資料類別。 如需詳細資訊，請參閱 <<c0> [ 產生資料服務用戶端程式庫](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)。
 

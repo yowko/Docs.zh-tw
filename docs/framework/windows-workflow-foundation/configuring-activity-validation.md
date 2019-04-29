@@ -3,20 +3,20 @@ title: 設定活動驗證
 ms.date: 03/30/2017
 ms.assetid: 25a4eccb-b8fc-4857-a01d-2683b6341219
 ms.openlocfilehash: 65928de1dc8b8d9914648463a136790c7978f53c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774169"
 ---
 # <a name="configuring-activity-validation"></a>設定活動驗證
 活動驗證可讓活動作者和使用者在執行前，先在活動的組態中識別及報告錯誤。 Windows Workflow Foundation (WF) 提供下列三種活動驗證類型：  
   
--   `RequiredArgument` 與 `OverloadGroup` 屬性。  
+- `RequiredArgument` 與 `OverloadGroup` 屬性。  
   
--   命令式的程式碼式驗證。  
+- 命令式的程式碼式驗證。  
   
--   宣告式條件約束。  
+- 宣告式條件約束。  
   
  指出活動需要特定引數的 `RequiredArgument` 和 `OverloadGroup` 屬性。 命令式的程式碼式驗證提供讓活動自我驗證的簡易方式，而宣告式條件約束則可用於驗證活動及活動與包含該活動之工作流程的關聯性。 如果未根據驗證需求正確設定活動，就會傳回驗證錯誤與警告。 如果包含該活動的工作流程是使用工作流程設計工具建立的，則任何驗證錯誤與警告都會顯示在設計工具中。 如果工作流程是在工作流程設計工具以外建立的，則會在叫用該工作流程時傳回所有驗證錯誤。 無論工作流程的建立方式為何，含驗證錯誤的工作流程永遠不能執行。 本節提供這些活動驗證類型與活動驗證叫用方式的概觀。  
   

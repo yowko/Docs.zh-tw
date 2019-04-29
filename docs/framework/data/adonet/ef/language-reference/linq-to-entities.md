@@ -3,11 +3,11 @@ title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
 ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760710"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities 提供了 Language-Integrated Query (LINQ) 支援，可讓開發人員使用 Visual Basic 或 Visual C# 針對 Entity Framework 概念模型撰寫查詢。 針對 Entity Framework 執行的查詢是以命令樹查詢來表示，每一個查詢都會針對物件內容來執行。 LINQ to Entities 會將 Language-Integrated Queries (LINQ) 查詢轉換成命令樹查詢、針對 Entity Framework 執行查詢，並傳回 Entity Framework 和 LINQ 都可以使用的物件。 下列是建立及執行 LINQ to Entities 查詢的程序：  
@@ -57,13 +57,13 @@ LINQ to Entities 提供了 Language-Integrated Query (LINQ) 支援，可讓開�
   
  查詢結果通常會以下列其中一個項目的形式來傳回：  
   
--   零個或多個具型別實體物件的集合，或是概念模型中所定義的複雜類型的投影。  
+- 零個或多個具型別實體物件的集合，或是概念模型中所定義的複雜類型的投影。  
   
--   [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 所支援的 CLR 型別。  
+- [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 所支援的 CLR 型別。  
   
--   內嵌集合。  
+- 內嵌集合。  
   
--   匿名型別。  
+- 匿名型別。  
   
  如需詳細資訊，請參閱 <<c0> [ 查詢結果](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)。  
   

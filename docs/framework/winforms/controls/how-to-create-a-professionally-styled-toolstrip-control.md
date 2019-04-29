@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: c208b2f6-8105-474b-9075-d582e1792870
 ms.openlocfilehash: 6da6e113867efed79dfcd02f3b89ee1f9ae13c4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746656"
 ---
 # <a name="how-to-create-a-professionally-styled-toolstrip-control"></a>HOW TO：建立專業樣式的 ToolStrip 控制項
 您可以藉由自行撰寫衍生自 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 類型的類別，賦與應用程式的 <xref:System.Windows.Forms.ToolStrip> 控制項專業外觀和行為 (外觀及操作)。  
@@ -33,7 +33,7 @@ ms.locfileid: "59104582"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   System.Drawing 和 System.Windows.Forms 組件的參考。  
+- System.Drawing 和 System.Windows.Forms 組件的參考。  
   
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  另請參閱[逐步解說：建立專業樣式的 ToolStrip 控制項](walkthrough-creating-a-professionally-styled-toolstrip-control.md)。  
   

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
 ms.openlocfilehash: 011bca07890e706b86f2a0b1dbf11acf77058548
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762484"
 ---
 # <a name="one-way-services"></a>單向服務
 服務作業的預設行為是要求-回覆模式。 在要求-回覆模式中，用戶端也都會等候回覆訊息，即使該服務作業已透過程式碼表示為 `void` 方法也是如此。 在單向作業中，只會傳輸一則訊息。 接收者不會傳送回覆訊息，傳送者也不會期待回覆訊息。  
   
  使用單向設計模式：  
   
--   當用戶端必須呼叫作業，而且不受作業層級之作業結果影響時。  
+- 當用戶端必須呼叫作業，而且不受作業層級之作業結果影響時。  
   
--   當使用 <xref:System.ServiceModel.NetMsmqBinding> 或 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 類別時。 (如需有關此案例的詳細資訊，請參閱 < [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。)  
+- 當使用 <xref:System.ServiceModel.NetMsmqBinding> 或 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 類別時。 (如需有關此案例的詳細資訊，請參閱 < [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。)  
   
  當作業為單向時，就不存在將錯誤資訊帶回到用戶端的回應訊息。 錯誤狀況的偵測方式，可以是透過使用基礎繫結的功能 (例如可靠工作階段)，或是設計使用兩個單向作業的雙工服務合約來進行，而前述的雙工服務會包含一個會從用戶端到服務來呼叫服務作業的單向合約，另一個介於服務與用戶端之間的單向合約，則可讓服務使用用戶端所實作的回呼來將錯誤傳回給用戶端。  
   

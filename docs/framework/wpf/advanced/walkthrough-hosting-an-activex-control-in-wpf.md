@@ -9,31 +9,31 @@ helpviewer_keywords:
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
 ms.openlocfilehash: c27449da5ee0351e472eaba7d930a774979db65f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781377"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>逐步解說：將 ActiveX 控制項裝載在 WPF 中
 若要啟用改善的瀏覽器互動，您可以使用[!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)]控制在您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-應用程式。 本逐步解說示範您可以託管[!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)]上的控制項為[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]頁面。
 
  這個逐步解說中所述的工作包括：
 
--   建立專案。
+- 建立專案。
 
--   建立 ActiveX 控制項。
+- 建立 ActiveX 控制項。
 
--   裝載 WPF 頁面上的 ActiveX 控制項。
+- 裝載 WPF 頁面上的 ActiveX 控制項。
 
  當您完成這個逐步解說中時，您將了解如何使用[!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)]控制項中您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]為基礎的應用程式。
 
 ## <a name="prerequisites"></a>必要條件
  您需要下列元件才能完成此逐步解說：
 
--   [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 安裝 Visual Studio 電腦上安裝。
+- [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 安裝 Visual Studio 電腦上安裝。
 
--   Visual Studio 2010。
+- Visual Studio 2010。
 
 ## <a name="creating-the-project"></a>建立專案
 

@@ -3,11 +3,11 @@ title: 選取認證類型
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748797"
 ---
 # <a name="selecting-a-credential-type"></a>選取認證類型
 *認證*是 Windows Communication Foundation (WCF) 建立宣告的身分識別或功能時所使用的資料。 例如，護照是政府發給的認證，以證明一個國家或地區的公民身分。 在 WCF 中，認證可以有許多形式，例如使用者名稱權杖和 X.509 憑證。 本主題將討論認證、 在 WCF 中，使用方式以及如何選擇正確的認證，您的應用程式。  
@@ -85,9 +85,9 @@ ms.locfileid: "59167839"
 ## <a name="how-client-credentials-are-used-to-authenticate-a-client-to-the-service"></a>如何使用用戶端認證對服務驗證用戶端  
  與服務通訊所需要的用戶端認證資訊是使用 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 屬性或 <xref:System.ServiceModel.ChannelFactory.Credentials%2A> 屬性來提供的。 安全性通道會使用此資訊對服務驗證用戶端。 驗證是透過兩種模式的其中之一完成的：  
   
--   用戶端認證使用一次傳送的第一個訊息，來建立安全性內容中使用 WCF 用戶端執行個體之前。 然後所有的應用程式訊息都會透過安全性內容來保護其安全。  
+- 用戶端認證使用一次傳送的第一個訊息，來建立安全性內容中使用 WCF 用戶端執行個體之前。 然後所有的應用程式訊息都會透過安全性內容來保護其安全。  
   
--   用戶端認證是用於驗證傳送到服務的每個應用程式訊息。 在這種情況中，不會在用戶端和服務之間建立內容。  
+- 用戶端認證是用於驗證傳送到服務的每個應用程式訊息。 在這種情況中，不會在用戶端和服務之間建立內容。  
   
 ### <a name="established-identities-cannot-be-changed"></a>無法變更已建立的身分識別  
  當使用第一個方法時，已建立的內容會與用戶端身分識別建立永久性的關聯。 也就是說，在建立安全性內容之後，就無法變更與用戶端有關聯的身分識別。  
@@ -108,7 +108,6 @@ ms.locfileid: "59167839"
 - <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
-- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
 - [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)

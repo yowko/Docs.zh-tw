@@ -10,11 +10,11 @@ helpviewer_keywords:
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
 ms.openlocfilehash: 7b897954cbdab461dc0305c6290e67c1af5282c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777035"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>HOW TO：新增路由事件的類別處理
 藉由類別處理常式或路由中任何指定節點上的執行個體處理常式可以處理路由的事件。 類別處理常式會先叫用，而且可以由類別實作來隱藏執行個體處理的事件，或引進其他事件的特定行為的基底類別所擁有的事件。 此範例說明兩種密切相關的技術，實作類別處理常式。  

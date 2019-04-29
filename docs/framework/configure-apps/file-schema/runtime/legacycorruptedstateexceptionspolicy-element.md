@@ -8,11 +8,11 @@ ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 777d496614435106b84b47b9aa3d35d964bc3e07
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704735"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > 項目
 指定 common language runtime 是否允許 managed 程式碼攔截存取違規和其他損毀的狀態例外狀況。  
@@ -58,11 +58,11 @@ ms.locfileid: "59115098"
   
  開頭[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]受管理的程式碼不會再會攔截這些類型中的例外狀況的`catch`區塊。 不過，您可以覆寫這項變更，並維護兩種方式中的損毀的狀態例外狀況的處理：  
   
--   設定`<legacyCorruptedStateExceptionsPolicy>`項目的`enabled`屬性設定為`true`。 此組態設定會套用的 processwide，而且會影響所有方法。  
+- 設定`<legacyCorruptedStateExceptionsPolicy>`項目的`enabled`屬性設定為`true`。 此組態設定會套用的 processwide，而且會影響所有方法。  
   
  -或-  
   
--   適用於<xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType>屬性設定為包含例外狀況的方法`catch`區塊。  
+- 適用於<xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType>屬性設定為包含例外狀況的方法`catch`區塊。  
   
  這個組態項目是僅適用於[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]和更新版本。  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - GDI+, Bezier splines
 ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
 ms.openlocfilehash: ff4e9eb18610b70c88e057d3d44020321bbb9f4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779250"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;zier GDI + 中的曲線
 貝茲曲線是由四個點指定曲線： 兩個結束點 （p1 和 p2） 和兩個控制點 （c1 和 c2）。 曲線開始 p1 和 p2 當做結尾。 曲線的控制點，透過未通過，但控制點作用類似磁鐵，曲線納入特定指示和影響曲線的彎曲的方式。 下圖顯示加上其端點和控制點貝茲曲線。  

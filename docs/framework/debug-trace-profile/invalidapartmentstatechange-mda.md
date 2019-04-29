@@ -14,30 +14,30 @@ ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c201ab51c1af8a86fc1c2c4f80738007152b3bd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754501"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
 `invalidApartmentStateChange` Managed 偵錯助理 (MDA) 是由下列兩個問題之一所啟動：  
   
--   嘗試變更執行緒的 COM Apartment 狀態，該執行緒已被 COM 初始化成不同的 Apartment 狀態。  
+- 嘗試變更執行緒的 COM Apartment 狀態，該執行緒已被 COM 初始化成不同的 Apartment 狀態。  
   
--   未預期的執行緒 COM Apartment 狀態變更。  
+- 未預期的執行緒 COM Apartment 狀態變更。  
   
 ## <a name="symptoms"></a>徵兆  
   
--   執行緒的 COM Apartment 狀態不是原來要求的。 這可能會導致 Proxy 用於執行緒模型和目前執行緒模型不同的 COM 元件。 接著，在透過未設定跨 Apartment 封送處理的介面呼叫 COM 物件時，這可能會造成 <xref:System.InvalidCastException> 被擲回。  
+- 執行緒的 COM Apartment 狀態不是原來要求的。 這可能會導致 Proxy 用於執行緒模型和目前執行緒模型不同的 COM 元件。 接著，在透過未設定跨 Apartment 封送處理的介面呼叫 COM 物件時，這可能會造成 <xref:System.InvalidCastException> 被擲回。  
   
--   執行緒的 COM Apartment 狀態與預期的不同。 在[執行階段可呼叫包裝函式](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) 上進行呼叫時，這會造成 <xref:System.Runtime.InteropServices.COMException> 具有 RPC_E_WRONG_THREAD 的 HRESULT 以及 <xref:System.InvalidCastException>。 這也會造成多個執行緒同時存取某些單一執行緒的 COM 元件，導致損毀或資料遺失。  
+- 執行緒的 COM Apartment 狀態與預期的不同。 在[執行階段可呼叫包裝函式](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) 上進行呼叫時，這會造成 <xref:System.Runtime.InteropServices.COMException> 具有 RPC_E_WRONG_THREAD 的 HRESULT 以及 <xref:System.InvalidCastException>。 這也會造成多個執行緒同時存取某些單一執行緒的 COM 元件，導致損毀或資料遺失。  
   
 ## <a name="cause"></a>原因  
   
--   執行緒先前已初始化成不同的 COM Apartment 狀態。 請注意，可以明確或隱含方式設定執行緒的 Apartment 狀態。 明確的作業包括 <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 屬性以及 <xref:System.Threading.Thread.SetApartmentState%2A> 和 <xref:System.Threading.Thread.TrySetApartmentState%2A> 方法。 使用 <xref:System.Threading.Thread.Start%2A> 方法建立的執行緒，會以隱含方式設成 <xref:System.Threading.ApartmentState.MTA>，除非啟動執行緒之前呼叫 <xref:System.Threading.Thread.SetApartmentState%2A>。 應用程式的主執行緒也會以隱含方式初始化為 <xref:System.Threading.ApartmentState.MTA>，除非在 Main 方法上指定 <xref:System.STAThreadAttribute> 屬性。  
+- 執行緒先前已初始化成不同的 COM Apartment 狀態。 請注意，可以明確或隱含方式設定執行緒的 Apartment 狀態。 明確的作業包括 <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 屬性以及 <xref:System.Threading.Thread.SetApartmentState%2A> 和 <xref:System.Threading.Thread.TrySetApartmentState%2A> 方法。 使用 <xref:System.Threading.Thread.Start%2A> 方法建立的執行緒，會以隱含方式設成 <xref:System.Threading.ApartmentState.MTA>，除非啟動執行緒之前呼叫 <xref:System.Threading.Thread.SetApartmentState%2A>。 應用程式的主執行緒也會以隱含方式初始化為 <xref:System.Threading.ApartmentState.MTA>，除非在 Main 方法上指定 <xref:System.STAThreadAttribute> 屬性。  
   
--   在執行緒上呼叫具有不同並行模型的 `CoUninitialize` 方法 (或 `CoInitializeEx` 方法)。  
+- 在執行緒上呼叫具有不同並行模型的 `CoUninitialize` 方法 (或 `CoInitializeEx` 方法)。  
   
 ## <a name="resolution"></a>解決方式  
  請先設定執行緒的 Apartment 狀態再開始執行，或將 <xref:System.STAThreadAttribute> 屬性或 <xref:System.MTAThreadAttribute> 屬性套用到應用程式的 Main 方法。  

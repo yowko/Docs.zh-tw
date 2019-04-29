@@ -13,11 +13,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
 ms.openlocfilehash: a4bf0850b28b7101ba76f1c1fedc6633eccb81a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759852"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>逐步解說：驗證 Windows Forms DataGridView 控制項的資料
 當您向使用者顯示的項目資料功能時，您經常必須驗證您的表單中輸入的資料。 <xref:System.Windows.Forms.DataGridView>類別提供便利的方式，資料就會認可到資料存放區之前先執行驗證。 您可以藉由處理驗證資料<xref:System.Windows.Forms.DataGridView.CellValidating>事件，會引發<xref:System.Windows.Forms.DataGridView>目前儲存格的變更時。  
@@ -29,7 +29,7 @@ ms.locfileid: "59346050"
 ## <a name="prerequisites"></a>必要條件  
  若要完成這個逐步解說，您將需要：  
   
--   存取權可 Northwind SQL Server 範例資料庫的伺服器。  
+- 存取權可 Northwind SQL Server 範例資料庫的伺服器。  
   
 ## <a name="creating-the-form"></a>建立表單  
   
@@ -71,22 +71,22 @@ ms.locfileid: "59346050"
   
 #### <a name="to-test-the-form"></a>若要測試表單  
   
--   編譯並執行應用程式。  
+- 編譯並執行應用程式。  
   
      您會看到<xref:System.Windows.Forms.DataGridView>填滿資料從`Customers`資料表。 當您按兩下中的資料格`CompanyName` 欄中，您可以編輯的值。 如果您刪除所有字元，然後按 TAB 鍵以結束資料格，<xref:System.Windows.Forms.DataGridView>防止您離開。 當您在儲存格中輸入非空白字串<xref:System.Windows.Forms.DataGridView>控制項可讓您結束資料格。  
   
 ## <a name="next-steps"></a>後續步驟  
  此應用程式可讓您的基本了解<xref:System.Windows.Forms.DataGridView>控制項的功能。 您可以自訂外觀和行為<xref:System.Windows.Forms.DataGridView>控制項以數種方式：  
   
--   變更框線和標題的樣式。 如需詳細資訊，請參閱[如何：變更框線和格線樣式，在 Windows Form DataGridView 控制項](change-the-border-and-gridline-styles-in-the-datagrid.md)。  
+- 變更框線和標題的樣式。 如需詳細資訊，請參閱[如何：變更框線和格線樣式，在 Windows Form DataGridView 控制項](change-the-border-and-gridline-styles-in-the-datagrid.md)。  
   
--   啟用或限制使用者的輸入<xref:System.Windows.Forms.DataGridView>控制項。 如需詳細資訊，請參閱[如何：防止資料列中新增和刪除 Windows Form DataGridView 控制項](prevent-row-addition-and-deletion-datagridview.md)，和[How to:資料行設為唯讀模式中的 Windows Form DataGridView 控制項](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)。  
+- 啟用或限制使用者的輸入<xref:System.Windows.Forms.DataGridView>控制項。 如需詳細資訊，請參閱[如何：防止資料列中新增和刪除 Windows Form DataGridView 控制項](prevent-row-addition-and-deletion-datagridview.md)，和[How to:資料行設為唯讀模式中的 Windows Form DataGridView 控制項](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)。  
   
--   檢查使用者輸入的資料庫相關的錯誤。 如需詳細資訊，請參閱[逐步解說：處理在 Windows 中的資料輸入期間所發生的錯誤 Form DataGridView 控制項](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)。  
+- 檢查使用者輸入的資料庫相關的錯誤。 如需詳細資訊，請參閱[逐步解說：處理在 Windows 中的資料輸入期間所發生的錯誤 Form DataGridView 控制項](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)。  
   
--   處理非常大型的資料集使用的虛擬模式。 如需詳細資訊，請參閱[逐步解說：實作虛擬模式中的 Windows Form DataGridView 控制項](implementing-virtual-mode-wf-datagridview-control.md)。  
+- 處理非常大型的資料集使用的虛擬模式。 如需詳細資訊，請參閱[逐步解說：實作虛擬模式中的 Windows Form DataGridView 控制項](implementing-virtual-mode-wf-datagridview-control.md)。  
   
--   自訂儲存格的外觀。 如需詳細資訊，請參閱[如何：自訂 Windows Form DataGridView 控制項中的儲存格的外觀](customize-the-appearance-of-cells-in-the-datagrid.md)和[How to:設定 Windows Form DataGridView 控制項中的 字型和色彩樣式](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)。  
+- 自訂儲存格的外觀。 如需詳細資訊，請參閱[如何：自訂 Windows Form DataGridView 控制項中的儲存格的外觀](customize-the-appearance-of-cells-in-the-datagrid.md)和[How to:設定 Windows Form DataGridView 控制項中的 字型和色彩樣式](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

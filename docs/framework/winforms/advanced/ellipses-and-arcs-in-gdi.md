@@ -13,11 +13,11 @@ helpviewer_keywords:
 - drawing [Windows Forms], arcs
 ms.assetid: 34f35133-a835-4ca4-81f6-0dfedee8b683
 ms.openlocfilehash: 8bbc2eda6450128eac55576259880e83f07099ab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756634"
 ---
 # <a name="ellipses-and-arcs-in-gdi"></a>GDI+ 中的橢圓形和弧形
 您可以輕鬆地繪製橢圓形和弧形使用<xref:System.Drawing.Graphics.DrawEllipse%2A>並<xref:System.Drawing.Graphics.DrawArc%2A>方法<xref:System.Drawing.Graphics>類別。  

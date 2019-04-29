@@ -3,14 +3,14 @@ title: <extensions> 區段
 ms.date: 03/30/2017
 ms.assetid: 53a59fb6-dede-47ec-9384-b3c2e8f0c1fa
 ms.openlocfilehash: 0f77f621bbf9bbef00b206ef43a174f6f69364d5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673000"
 ---
 # <a name="extensions-section"></a>\<擴充功能 > 一節
-這個組態區段包含延伸的集合，可讓使用者建立使用者定義的繫結程序、行為和其他方面的延伸。  
+這個組態區段包含延伸的集合，可讓使用者建立使用者定義的繫結、行為和其他方面的延伸。  
   
 \<system.ServiceModel>  
   

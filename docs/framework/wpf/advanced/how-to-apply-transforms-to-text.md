@@ -16,11 +16,11 @@ helpviewer_keywords:
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
 ms.openlocfilehash: 46a57364e0c18cc4c9fe7884642cd0b718c20f31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776934"
 ---
 # <a name="how-to-apply-transforms-to-text"></a>HOW TO：對文字套用轉換
 轉換可以變更應用程式中文字的顯示。 下列範例會使用不同類型的轉譯轉換來影響中的文字顯示<xref:System.Windows.Controls.TextBlock>控制項。  

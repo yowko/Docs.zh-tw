@@ -7,18 +7,18 @@ ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16ed4d86d64a6d3c569c7fd7ab9e9e3a3943f078
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723663"
 ---
 # <a name="controlling-net-framework-logging"></a>控制 .NET Framework 記錄
 您可以使用 Windows 事件追蹤 (ETW) 來記錄通用語言執行平台 (CLR) 事件。 您可以使用下列工具來建立和檢視追蹤：  
   
--   [Logman](/windows-server/administration/windows-commands/logman) 和 [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) 命令列工具，隨附於 Windows 作業系統。  
+- [Logman](/windows-server/administration/windows-commands/logman) 和 [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) 命令列工具，隨附於 Windows 作業系統。  
   
--   [Windows 效能工具組](/windows-hardware/test/wpt/)中的 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 工具。 如需 Xperf 的詳細資訊，請參閱 [Windows 效能部落格](https://go.microsoft.com/fwlink/?LinkId=179509)。  
+- [Windows 效能工具組](/windows-hardware/test/wpt/)中的 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 工具。 如需 Xperf 的詳細資訊，請參閱 [Windows 效能部落格](https://go.microsoft.com/fwlink/?LinkId=179509)。  
   
  若要擷取 CLR 事件資訊，您必須在電腦上安裝 CLR 提供者。 若要確認是否已安裝此提供者，請在命令提示字元中輸入 `logman query providers`。 提供者的清單隨即顯示。 此清單應該會包含 CLR 提供者的項目，如下所示。  
   
@@ -37,11 +37,11 @@ Provider                                 GUID
   
  若要開啟記錄，使用者必須指定三個項目：  
   
--   要與之通訊的提供者。  
+- 要與之通訊的提供者。  
   
--   表示一組關鍵字的 64 位元數字。 每個關鍵字各表示一組提供者可以開啟的事件。 數字綜合表示一組要開啟的關鍵字。  
+- 表示一組關鍵字的 64 位元數字。 每個關鍵字各表示一組提供者可以開啟的事件。 數字綜合表示一組要開啟的關鍵字。  
   
--   很小的數字，表示要記錄的 (詳細) 層級。 層級 1 最不詳細，而層級 5 則是最詳細。 層級 0 為預設值，意思是提供者特有的事件。  
+- 很小的數字，表示要記錄的 (詳細) 層級。 層級 1 最不詳細，而層級 5 則是最詳細。 層級 0 為預設值，意思是提供者特有的事件。  
   
 #### <a name="to-capture-clr-etw-events-using-logman"></a>若要使用 Logman 來擷取 CLR ETW 事件  
   
@@ -51,15 +51,15 @@ Provider                                 GUID
   
      其中：  
   
-    -   `-p` 參數會識別提供者 GUID。  
+    - `-p` 參數會識別提供者 GUID。  
   
-    -   `0x1CCBD` 會指定即將引發之事件的分類。  
+    - `0x1CCBD` 會指定即將引發之事件的分類。  
   
-    -   `0x5` 會設定記錄的層級 (在本例中，設為詳細資訊 (5))。  
+    - `0x5` 會設定記錄的層級 (在本例中，設為詳細資訊 (5))。  
   
-    -   `-ets` 參數會指示 Logman 傳送命令給事件追蹤工作階段。  
+    - `-ets` 參數會指示 Logman 傳送命令給事件追蹤工作階段。  
   
-    -   `-ct perf` 參數會指定要使用 `QueryPerformanceCounter` 函式來記錄每個事件的時間戳記。  
+    - `-ct perf` 參數會指定要使用 `QueryPerformanceCounter` 函式來記錄每個事件的時間戳記。  
   
 2. 若要停止記錄事件，請輸入：  
   
@@ -86,7 +86,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-tracerpt"></a>若要使用 Tracerpt 來檢視 CLR ETW 事件  
   
--   在命令提示中，輸入：  
+- 在命令提示中，輸入：  
   
      `tracerpt clrevents.etl`  
   
@@ -94,7 +94,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-xperf"></a>若要使用 Xperf 來檢視 CLR ETW 事件  
   
--   在命令提示中，輸入：  
+- 在命令提示中，輸入：  
   
      `xperf clrevents.etl`  
   
@@ -102,7 +102,7 @@ Provider                                 GUID
   
 #### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>若要將 .etl 檔案轉換為逗點分隔值檔案  
   
--   在命令提示中，輸入：  
+- 在命令提示中，輸入：  
   
      `xperf -i clrevents.etl -f clrevents.csv`  
   

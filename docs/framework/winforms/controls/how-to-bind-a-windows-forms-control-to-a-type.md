@@ -10,11 +10,11 @@ helpviewer_keywords:
 - types [Windows Forms], binding controls to
 ms.assetid: 94faeebb-d2bc-45d6-86d7-96a42661b43d
 ms.openlocfilehash: f47090f5d0765833f7ac17a947691a4693d9923b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761347"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>HOW TO：將 Windows Forms 控制項繫結至類型
 當您在建立與資料互動的控制項時，有時會發現有必要將控制項繫結至類型，而非物件。 特別是在設計階段會發生這種情況，此時資料可能無法使用，但是資料繫結控制項仍然需要顯示類型公用介面中的資訊。 例如，您可能會繫結 <xref:System.Windows.Forms.DataGridView> 控制項至 Web 服務所公開的物件，並想讓 <xref:System.Windows.Forms.DataGridView> 控制項將設計階段的資料行標記為自訂類型的成員名稱。  
@@ -30,7 +30,7 @@ ms.locfileid: "59162486"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   System 和 System.Windows.Forms 組件的參考。  
+- System 和 System.Windows.Forms 組件的參考。  
   
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   

@@ -3,11 +3,11 @@ title: 載入或剖析 XML2 時保留空白字元
 ms.date: 07/20/2015
 ms.assetid: ef6518e0-2c8d-462c-8b92-a16e9dc737ad
 ms.openlocfilehash: 4fa000d9299515101bc01923db43d442577be828
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665854"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>載入或剖析 XML 時保留空白字元
 這個主題描述如何控制 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的空白字元行為。  
@@ -21,13 +21,13 @@ ms.locfileid: "58818965"
 ## <a name="behavior-of-methods-that-populate-xml-trees"></a>填入 XML 樹狀之方法的行為  
  下列 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 類別中的方法會填入 XML 樹狀結構。 您可以從檔案、<xref:System.IO.TextReader>、<xref:System.Xml.XmlReader> 或字串填入 XML 樹狀：  
   
--   <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>  
   
  如果此方法不採用 <xref:System.Xml.Linq.LoadOptions> 當做引數，該方法將不會保留有效的空白字元。  
   

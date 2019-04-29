@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
 ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762843"
 ---
 # <a name="geometry-overview"></a>幾何概觀
 本概觀說明如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<xref:System.Windows.Media.Geometry>類別來描繪圖形。 本主題也會對照之間的差異<xref:System.Windows.Media.Geometry>物件和<xref:System.Windows.Shapes.Shape>項目。  
@@ -55,11 +55,11 @@ ms.locfileid: "59179994"
   
  簡單幾何類別包括<xref:System.Windows.Media.LineGeometry>， <xref:System.Windows.Media.RectangleGeometry>，和<xref:System.Windows.Media.EllipseGeometry>，並用來建立基本的幾何圖形，例如線條、 矩形和圓形。  
   
--   A<xref:System.Windows.Media.LineGeometry>定義藉由指定列和結束點的起始點。  
+- A<xref:System.Windows.Media.LineGeometry>定義藉由指定列和結束點的起始點。  
   
--   A<xref:System.Windows.Media.RectangleGeometry>定義<xref:System.Windows.Rect>結構，指定其相對位置及其高度和寬度。 您可以設定來建立圓角的矩形<xref:System.Windows.Media.RectangleGeometry.RadiusX%2A>和<xref:System.Windows.Media.RectangleGeometry.RadiusY%2A>屬性。  
+- A<xref:System.Windows.Media.RectangleGeometry>定義<xref:System.Windows.Rect>結構，指定其相對位置及其高度和寬度。 您可以設定來建立圓角的矩形<xref:System.Windows.Media.RectangleGeometry.RadiusX%2A>和<xref:System.Windows.Media.RectangleGeometry.RadiusY%2A>屬性。  
   
--   <xref:System.Windows.Media.EllipseGeometry>由中心點、 x 半徑和 y 半徑。  下列範例示範如何建立簡單的幾何以用於轉譯和裁剪。  
+- <xref:System.Windows.Media.EllipseGeometry>由中心點、 x 半徑和 y 半徑。  下列範例示範如何建立簡單的幾何以用於轉譯和裁剪。  
   
  這些相同的圖形，以及更複雜的圖形，您可以使用建立<xref:System.Windows.Media.PathGeometry>或藉由合併幾何物件，但這些類別提供簡單的方式來產生這些基本的幾何圖形。  
   
@@ -175,9 +175,9 @@ PathGeometry
 ## <a name="composite-geometries"></a>複合幾何  
  複合幾何物件可以使用建立<xref:System.Windows.Media.GeometryGroup>，則<xref:System.Windows.Media.CombinedGeometry>，或藉由呼叫靜態<xref:System.Windows.Media.Geometry>方法<xref:System.Windows.Media.Geometry.Combine%2A>。  
   
--   <xref:System.Windows.Media.CombinedGeometry>物件和<xref:System.Windows.Media.Geometry.Combine%2A>方法執行布林作業來結合兩個幾何所定義的區域。 <xref:System.Windows.Media.Geometry> 不含任何區域的物件會被捨棄。 只有兩個<xref:System.Windows.Media.Geometry>（雖然這兩個幾何也可能是複合幾何），就可以合併物件。  
+- <xref:System.Windows.Media.CombinedGeometry>物件和<xref:System.Windows.Media.Geometry.Combine%2A>方法執行布林作業來結合兩個幾何所定義的區域。 <xref:System.Windows.Media.Geometry> 不含任何區域的物件會被捨棄。 只有兩個<xref:System.Windows.Media.Geometry>（雖然這兩個幾何也可能是複合幾何），就可以合併物件。  
   
--   <xref:System.Windows.Media.GeometryGroup>類別會建立，就可以合併<xref:System.Windows.Media.Geometry>物件包含不需要合併其區域。 任意數目的<xref:System.Windows.Media.Geometry>可以將物件加入至<xref:System.Windows.Media.GeometryGroup>。 如需範例，請參閱[建立複合圖案](how-to-create-a-composite-shape.md)。  
+- <xref:System.Windows.Media.GeometryGroup>類別會建立，就可以合併<xref:System.Windows.Media.Geometry>物件包含不需要合併其區域。 任意數目的<xref:System.Windows.Media.Geometry>可以將物件加入至<xref:System.Windows.Media.GeometryGroup>。 如需範例，請參閱[建立複合圖案](how-to-create-a-composite-shape.md)。  
   
  由於它們不會執行合併作業，使用<xref:System.Windows.Media.GeometryGroup>物件提供的效能優於<xref:System.Windows.Media.CombinedGeometry>物件或<xref:System.Windows.Media.Geometry.Combine%2A>方法。  
   
@@ -207,11 +207,11 @@ PathGeometry
 ## <a name="other-geometry-features"></a>其他幾何功能  
  <xref:System.Windows.Media.Geometry>類別也會提供實用的公用程式方法，如下所示：  
   
--   <xref:System.Windows.Media.Geometry.GetArea%2A> -取得區域<xref:System.Windows.Media.Geometry>。  
+- <xref:System.Windows.Media.Geometry.GetArea%2A> -取得區域<xref:System.Windows.Media.Geometry>。  
   
--   <xref:System.Windows.Media.Geometry.FillContains%2A> -判斷幾何是否包含另一個<xref:System.Windows.Media.Geometry>。  
+- <xref:System.Windows.Media.Geometry.FillContains%2A> -判斷幾何是否包含另一個<xref:System.Windows.Media.Geometry>。  
   
--   <xref:System.Windows.Media.Geometry.StrokeContains%2A> -決定是否筆劃的<xref:System.Windows.Media.Geometry>包含指定的點。  
+- <xref:System.Windows.Media.Geometry.StrokeContains%2A> -決定是否筆劃的<xref:System.Windows.Media.Geometry>包含指定的點。  
   
  請參閱<xref:System.Windows.Media.Geometry>類別及其方法的完整清單。  
   

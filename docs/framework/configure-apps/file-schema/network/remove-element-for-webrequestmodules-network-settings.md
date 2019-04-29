@@ -11,11 +11,11 @@ helpviewer_keywords:
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
 ms.openlocfilehash: c57e2849d608b1706c41beca91ff8026ebd9ca45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705021"
 ---
 # <a name="remove-element-for-webrequestmodules-network-settings"></a>\<移除 > webRequestModules （網路設定） 的項目
 移除應用程式自訂的 Web 要求模組。  

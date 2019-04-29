@@ -6,11 +6,11 @@ helpviewer_keywords:
 - 3-D translations [WPF], animating
 ms.assetid: d4eece1f-0cd2-4a2c-8370-293354c380e4
 ms.openlocfilehash: 3e27c2d5f0cd44235a1d897b1b8f057808ae6bd8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762198"
 ---
 # <a name="how-to-animate-3-d-translations"></a>HOW TO：建立立體平移的動畫
 本主題示範如何以動畫顯示上設定的轉譯轉換[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]模型。  

@@ -8,11 +8,11 @@ ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 19103b2ac6e6dbba930050074fcea3cfd5a97661
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704657"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<Gcallowverylargeobjects> > 項目
 在 64 位元平台上，啟用總大小大於 2 GB 的陣列。  
@@ -57,11 +57,11 @@ ms.locfileid: "59098012"
 ## <a name="remarks"></a>備註  
  使用您的應用程式組態檔中此項目會啟用大於 2 GB 大小的陣列，但不會變更的物件大小或陣列大小的其他限制：  
   
--   陣列中的項目數目上限是<xref:System.UInt32.MaxValue?displayProperty=nameWithType>。  
+- 陣列中的項目數目上限是<xref:System.UInt32.MaxValue?displayProperty=nameWithType>。  
   
--   2,147,483,591 (0x7FFFFFC7) 的位元組陣列與單一位元組結構的陣列和其他類型的 2,146,435,071 (0X7FEFFFFF) 中任何單一維度的最大的索引。  
+- 2,147,483,591 (0x7FFFFFC7) 的位元組陣列與單一位元組結構的陣列和其他類型的 2,146,435,071 (0X7FEFFFFF) 中任何單一維度的最大的索引。  
   
--   字串和其他非陣列物件的大小上限不會變更。  
+- 字串和其他非陣列物件的大小上限不會變更。  
   
 > [!CAUTION]
 >  之前啟用這項功能，請確定您的應用程式不包含不安全的程式碼假設所有陣列都是小於 2 GB 的大小。 例如，陣列做為緩衝區的 unsafe 程式碼可能容易發生緩衝區溢位如果寫入假設陣列不會超過 2 GB。  

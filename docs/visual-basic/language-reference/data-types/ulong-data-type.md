@@ -17,11 +17,11 @@ helpviewer_keywords:
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
 ms.openlocfilehash: 82a2badc1bb22a55f753c9075562db3a5ee0d234
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747068"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong 資料類型 (Visual Basic)
 
@@ -48,7 +48,7 @@ ms.locfileid: "54522956"
 
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-從 Visual Basic 15.5 開始，您也可以使用底線字元 (`_`) 作為前置分隔符號之間的前置詞和十六進位、 二進位或八進位數字。 例如: 
+從 Visual Basic 15.5 開始，您也可以使用底線字元 (`_`) 作為前置分隔符號之間的前置詞和十六進位、 二進位或八進位數字。 例如：
 
 ```vb
 Dim number As ULong = &H_F9AC_0326_1489_D68C
@@ -64,19 +64,19 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 
 ## <a name="programming-tips"></a>程式設計提示
   
--   **負數的數字。** 因為`ULong`是不帶正負號的型別，它無法表示負數。 如果您使用一元減號 (`-`) 運算子的運算式，評估為類型`ULong`，Visual Basic 會將轉換的運算式`Decimal`第一次。  
+- **負數的數字。** 因為`ULong`是不帶正負號的型別，它無法表示負數。 如果您使用一元減號 (`-`) 運算子的運算式，評估為類型`ULong`，Visual Basic 會將轉換的運算式`Decimal`第一次。  
   
--   **CLS 合規性。** `ULong`資料類型不是屬於[Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) （cls） 標準，所以符合 CLS 標準的程式碼無法取用使用它的元件。  
+- **CLS 合規性。** `ULong`資料類型不是屬於[Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) （cls） 標準，所以符合 CLS 標準的程式碼無法取用使用它的元件。  
   
--   **Interop 考量。** 如果您要使用的元件不是撰寫.NET framework，例如 Automation 或 COM 物件，請記住，這類類型`ulong`在其他環境中可以有不同的資料寬度 （32 位元）。 如果您在這類元件傳遞 32 位元引數，將它宣告為`UInteger`而不是`ULong`中受管理的 Visual Basic 程式碼。  
+- **Interop 考量。** 如果您要使用的元件不是撰寫.NET framework，例如 Automation 或 COM 物件，請記住，這類類型`ulong`在其他環境中可以有不同的資料寬度 （32 位元）。 如果您在這類元件傳遞 32 位元引數，將它宣告為`UInteger`而不是`ULong`中受管理的 Visual Basic 程式碼。  
   
      此外，自動化不支援在 Windows 95、 Windows 98、 Windows ME，或 Windows 2000 64 位元整數。 您不能傳遞 Visual Basic`ULong`自動化元件，這些平台上的引數。  
   
--   **擴展。** `ULong`資料類型可擴展為`Decimal`， `Single`，和`Double`。 這表示您可以將轉換`ULong`任何一種類型，而不會發生<xref:System.OverflowException?displayProperty=nameWithType>時發生錯誤。  
+- **擴展。** `ULong`資料類型可擴展為`Decimal`， `Single`，和`Double`。 這表示您可以將轉換`ULong`任何一種類型，而不會發生<xref:System.OverflowException?displayProperty=nameWithType>時發生錯誤。  
   
--   **類型字元。** 將常值類型字元附加`UL`成常值會強制其成為`ULong`資料型別。 `ULong` 有任何識別項類型字元。
+- **類型字元。** 將常值類型字元附加`UL`成常值會強制其成為`ULong`資料型別。 `ULong` 有任何識別項類型字元。
   
--   **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.UInt64?displayProperty=nameWithType> 結構。  
+- **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.UInt64?displayProperty=nameWithType> 結構。  
   
 ## <a name="see-also"></a>另請參閱
 

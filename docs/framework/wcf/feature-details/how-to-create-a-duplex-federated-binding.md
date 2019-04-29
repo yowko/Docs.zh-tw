@@ -3,11 +3,11 @@ title: HOW TO：建立雙面同盟繫結
 ms.date: 03/30/2017
 ms.assetid: 4331d2bc-5455-492a-9189-634a82597726
 ms.openlocfilehash: 510faa0b1d791b1d164c55e9fa32daafa559d56c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696206"
 ---
 # <a name="how-to-create-a-duplex-federated-binding"></a>HOW TO：建立雙面同盟繫結
 <xref:System.ServiceModel.WSFederationHttpBinding> 只支援資料包以及要求/回覆訊息交換合約。 若要使用雙工訊息交換合約，必須建立自訂繫結。 下列程序示範如何在組態檔中完成這項工作、使用訊息模式安全性進行 HTTP 與 TCP 傳輸的方法以及利用混合模式安全性進行 TCP 傳輸。 這三種繫結方式的完整程式碼範例會列於本主題的結尾。  

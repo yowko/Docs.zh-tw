@@ -9,44 +9,44 @@ ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7f9bf0e309ec8c77d4b1d6afbf111e7eeae629ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61722935"
 ---
 # <a name="garbage-collection-etw-events"></a>記憶體回收 ETW 事件
 <a name="top"></a> 這些事件收集到記憶體回收的相關資訊。 它們協助診斷和偵錯，包括判斷執行多少次記憶體回收、在記憶體回收期間釋放了多少記憶體，以及其他事項。  
   
  這個類別包含下列事件：  
   
--   [GCStart_V1 事件](#gcstart_v1_event)  
+- [GCStart_V1 事件](#gcstart_v1_event)  
   
--   [GCEnd_V1 事件](#gcend_v1_event)  
+- [GCEnd_V1 事件](#gcend_v1_event)  
   
--   [GCHeapStats_V1 事件](#gcheapstats_v1_event)  
+- [GCHeapStats_V1 事件](#gcheapstats_v1_event)  
   
--   [GCCreateSegment_V1 事件](#gccreatesegment_v1_event)  
+- [GCCreateSegment_V1 事件](#gccreatesegment_v1_event)  
   
--   [GCCreateSegment_V1 事件](#gcfreesegment_v1_event)  
+- [GCCreateSegment_V1 事件](#gcfreesegment_v1_event)  
   
--   [GCRestartEEBegin_V1 事件](#gcrestarteebegin_v1_event)  
+- [GCRestartEEBegin_V1 事件](#gcrestarteebegin_v1_event)  
   
--   [GCRestartEEEnd_V1 事件](#gcrestarteeend_v1_event)  
+- [GCRestartEEEnd_V1 事件](#gcrestarteeend_v1_event)  
   
--   [GCSuspendEE_V1 事件](#gcsuspendee_v1_event)  
+- [GCSuspendEE_V1 事件](#gcsuspendee_v1_event)  
   
--   [GCSuspendEEEnd_V1 事件](#gcsuspendeeend_v1_event)  
+- [GCSuspendEEEnd_V1 事件](#gcsuspendeeend_v1_event)  
   
--   [GCAllocationTick_V2 事件](#gcallocationtick_v2_event)  
+- [GCAllocationTick_V2 事件](#gcallocationtick_v2_event)  
   
--   [GCFinalizersBegin_V1 事件](#gcfinalizersbegin_v1_event)  
+- [GCFinalizersBegin_V1 事件](#gcfinalizersbegin_v1_event)  
   
--   [GCFinalizersEnd_V1 事件](#gcfinalizersend_v1_event)  
+- [GCFinalizersEnd_V1 事件](#gcfinalizersend_v1_event)  
   
--   [GCCreateConcurrentThread_V1 事件](#gccreateconcurrentthread_v1_event)  
+- [GCCreateConcurrentThread_V1 事件](#gccreateconcurrentthread_v1_event)  
   
--   [GCTerminateConcurrentThread_V1 事件](#gcterminateconcurrentthread_v1_event)  
+- [GCTerminateConcurrentThread_V1 事件](#gcterminateconcurrentthread_v1_event)  
   
 <a name="gcstart_v1_event"></a>   
 ## <a name="gcstartv1-event"></a>GCStart_V1 事件  

@@ -3,11 +3,11 @@ title: HOW TO：使用註釋轉換 LINQ to XML 樹狀結構的 XSLT 樣式 (Visu
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
 ms.openlocfilehash: a8db5f9dc29b4053321c81c9da58e12610ef63c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613410"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>HOW TO：使用註釋轉換 LINQ to XML 樹狀結構的 XSLT 樣式 (Visual Basic)
 附註可用於簡化 XML 樹狀的轉換。  
@@ -24,21 +24,21 @@ ms.locfileid: "58824867"
   
  方法的摘要如下：  
   
--   首先，在樹狀結構中，以替代項目附註項目。  
+- 首先，在樹狀結構中，以替代項目附註項目。  
   
--   接著，逐一查看整個樹狀結構，建立您以其附註取代每個項目的新樹狀結構。 這個範本會在名稱為 `XForm` 的函式中，實作反覆運算並建立新的樹狀結構。  
+- 接著，逐一查看整個樹狀結構，建立您以其附註取代每個項目的新樹狀結構。 這個範本會在名稱為 `XForm` 的函式中，實作反覆運算並建立新的樹狀結構。  
   
  就細節而言，此方法包含：  
   
--   執行一或多個 LINQ to XML 查詢，這些查詢會傳回您要從一個組織結構轉換為另一個組織結構的項目集。 針對查詢中的每個項目，加入新的 <xref:System.Xml.Linq.XElement> 物件做為項目的附註。 這個新項目將會取代已轉換之新樹狀結構中的附註項目。 如本範例的示範，這是容易撰寫的簡單程式碼。  
+- 執行一或多個 LINQ to XML 查詢，這些查詢會傳回您要從一個組織結構轉換為另一個組織結構的項目集。 針對查詢中的每個項目，加入新的 <xref:System.Xml.Linq.XElement> 物件做為項目的附註。 這個新項目將會取代已轉換之新樹狀結構中的附註項目。 如本範例的示範，這是容易撰寫的簡單程式碼。  
   
--   加入為附註的新項目可以包含新的子節點；它可以形成具有任何所需組織結構的子樹狀結構。  
+- 加入為附註的新項目可以包含新的子節點；它可以形成具有任何所需組織結構的子樹狀結構。  
   
--   有一個特殊規則：如果新項目的子節點位於不同的命名空間中，也就是針對此目的所形成的命名空間 (在此範例中，命名空間為 `http://www.microsoft.com/LinqToXmlTransform/2007`)，則不會將該子項目複製到新的樹狀結構中。 但是，如果命名空間為上述的特殊命名空間，而且該項目的區域名稱為 `ApplyTransforms`，則會反覆運算來源樹狀結構中項目的子節點，並複製到新的樹狀結構 (除非附註的子項目會根據這些規則自我轉換) 中。  
+- 有一個特殊規則：如果新項目的子節點位於不同的命名空間中，也就是針對此目的所形成的命名空間 (在此範例中，命名空間為 `http://www.microsoft.com/LinqToXmlTransform/2007`)，則不會將該子項目複製到新的樹狀結構中。 但是，如果命名空間為上述的特殊命名空間，而且該項目的區域名稱為 `ApplyTransforms`，則會反覆運算來源樹狀結構中項目的子節點，並複製到新的樹狀結構 (除非附註的子項目會根據這些規則自我轉換) 中。  
   
--   這有點類似於 XSL 中的轉換規格。 選取一組節點的查詢類似於範本的 XPath 運算式。 建立另存為附註之新 <xref:System.Xml.Linq.XElement> 的程式碼類似於 XSL 中的序列建構函式，而 `ApplyTransforms` 項目在功能上則類似於 XSL 中的 `xsl:apply-templates` 項目。  
+- 這有點類似於 XSL 中的轉換規格。 選取一組節點的查詢類似於範本的 XPath 運算式。 建立另存為附註之新 <xref:System.Xml.Linq.XElement> 的程式碼類似於 XSL 中的序列建構函式，而 `ApplyTransforms` 項目在功能上則類似於 XSL 中的 `xsl:apply-templates` 項目。  
   
--   採取此種方法的其中一個優點是，當您編寫查詢時，您永遠都是在未修改的來源樹狀結構上撰寫查詢。 您不必擔心樹狀結構的修改會如何影響您要撰寫的查詢。  
+- 採取此種方法的其中一個優點是，當您編寫查詢時，您永遠都是在未修改的來源樹狀結構上撰寫查詢。 您不必擔心樹狀結構的修改會如何影響您要撰寫的查詢。  
   
 ## <a name="transforming-a-tree"></a>轉換樹狀結構  
  這個第一個範例會將所有 `Paragraph` 節點重新命名為 `para`。  
@@ -158,7 +158,7 @@ After Transform
 ## <a name="effecting-the-transform"></a>實行轉換  
  `XForm` 這個小函式會從原始的附註樹狀結構建立轉換的新樹狀結構。  
   
--   函式的虛擬程式碼相當簡單：  
+- 函式的虛擬程式碼相當簡單：  
   
 ```  
 The function takes an XElement as an argument and returns an XElement.   

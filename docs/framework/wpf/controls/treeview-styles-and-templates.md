@@ -10,11 +10,11 @@ helpviewer_keywords:
 - TreeView [WPF], styles and templates
 ms.assetid: a49adb77-0202-4caa-b94a-8bb110d7fa9a
 ms.openlocfilehash: 01841bb828594dd4cac0c179d70495fe392c8de5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761295"
 ---
 # <a name="treeview-styles-and-templates"></a>TreeView 樣式和範本
 本主題描述的樣式和範本<xref:System.Windows.Controls.TreeView>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>，讓控制項的獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Web pages [Windows Forms], Windows Forms controls
 ms.assetid: 12667861-5b5b-46bc-8fb5-675e25264c9f
 ms.openlocfilehash: 34194bf707cd309768b00fd903d1f46aff7dd170
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759878"
 ---
 # <a name="webbrowser-control-windows-forms"></a>WebBrowser 控制項 (Windows Form)
 Windows Form`WebBrowser`控制項裝載的網頁，並提供網頁瀏覽至您的應用程式的功能。  

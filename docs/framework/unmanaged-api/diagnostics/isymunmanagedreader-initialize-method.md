@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 661c27b9c21f77104b8a86163d3c92d44f8a85df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669971"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize 方法
 初始化符號讀取器，這個讀取器會與，以及檔案名稱的模組相關聯的中繼資料匯入工具介面。  

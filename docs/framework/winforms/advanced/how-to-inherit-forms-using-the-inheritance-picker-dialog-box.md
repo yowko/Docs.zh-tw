@@ -7,11 +7,11 @@ helpviewer_keywords:
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
 ms.openlocfilehash: 5ae1c236835141b10bc704cd39f55de6e3e974b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723120"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>HOW TO：使用繼承選取器對話方塊繼承表單
 繼承表單或其他物件的最簡單方式是使用 [繼承選取器] 對話方塊。 您可以藉助它來利用在其他方案中已建立的程式碼或使用者介面 (UI)。  

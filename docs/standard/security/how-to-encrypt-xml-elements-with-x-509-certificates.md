@@ -17,11 +17,11 @@ ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 890216fa8cc9915ffa640b6330994c5f1ee2e611
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795092"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>HOW TO：使用 X.509 憑證加密 XML 元素
 您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。  XML 加密是交換或儲存加密 XML 資料的標準方法，不必擔心資料被輕易讀取。  如需 XML 加密標準的詳細資訊，請參閱全球資訊網協會 (W3C) 規格 XML 加密位於 <https://www.w3.org/TR/xmldsig-core/>。  
@@ -109,9 +109,9 @@ ms.locfileid: "59327330"
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
--   若要編譯此範例，您需要包含 `System.Security.dll` 的參考。  
+- 若要編譯此範例，您需要包含 `System.Security.dll` 的參考。  
   
--   包含下列命名空間：<xref:System.Xml>、<xref:System.Security.Cryptography> 和 <xref:System.Security.Cryptography.Xml>。  
+- 包含下列命名空間：<xref:System.Xml>、<xref:System.Security.Cryptography> 和 <xref:System.Security.Cryptography.Xml>。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  此範例中使用的 X.509 憑證僅供測試使用。  應用程式應該使用由受信任的憑證授權單位所產生的 X.509 憑證，或使用由 Microsoft Windows 憑證伺服器所產生的憑證。  

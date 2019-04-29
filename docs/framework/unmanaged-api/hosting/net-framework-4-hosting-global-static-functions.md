@@ -9,11 +9,11 @@ ms.assetid: 07a1a6e1-db73-4555-81df-bc4054c51492
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7a372a9072d2ee18df1efd060d3fd024a92e0bc6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765137"
 ---
 # <a name="net-framework-4-hosting-global-static-functions"></a>裝載全域靜態函式的 .NET Framework 4 
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]引進一個新的匯出的方法，MSCorEE.dll 中：[CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)。  

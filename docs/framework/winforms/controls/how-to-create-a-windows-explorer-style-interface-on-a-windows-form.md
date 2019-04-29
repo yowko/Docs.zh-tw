@@ -7,11 +7,11 @@ helpviewer_keywords:
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
 ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746651"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>HOW TO：在 Windows Forms 中建立 Windows 檔案總管樣式的介面
 Windows 檔案總管會是應用程式的一般使用者介面選擇，因為其準備好的熟悉度。  
@@ -29,11 +29,11 @@ Windows 檔案總管會是應用程式的一般使用者介面選擇，因為其
   
 2. 從**工具箱**:  
   
-    1.  拖曳<xref:System.Windows.Forms.SplitContainer>控制項拖曳至表單。  
+    1. 拖曳<xref:System.Windows.Forms.SplitContainer>控制項拖曳至表單。  
   
-    2.  拖曳<xref:System.Windows.Forms.TreeView>程式控制**SplitterPanel1** (的面板<xref:System.Windows.Forms.SplitContainer>控制標記**Panel1**)。  
+    2. 拖曳<xref:System.Windows.Forms.TreeView>程式控制**SplitterPanel1** (的面板<xref:System.Windows.Forms.SplitContainer>控制標記**Panel1**)。  
   
-    3.  拖曳<xref:System.Windows.Forms.ListView>程式控制**SplitterPanel2** (的面板<xref:System.Windows.Forms.SplitContainer>控制標記**Panel2**)。  
+    3. 拖曳<xref:System.Windows.Forms.ListView>程式控制**SplitterPanel2** (的面板<xref:System.Windows.Forms.SplitContainer>控制標記**Panel2**)。  
   
 3. 按下 CTRL 鍵並依序按一下以選取所有的三個控制項。 當您選取<xref:System.Windows.Forms.SplitContainer>控制項中按一下 分隔器列，而不是面板。  
   

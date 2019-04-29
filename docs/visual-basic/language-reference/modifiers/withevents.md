@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
 ms.openlocfilehash: 75d118ee2bd4918c3a936cb341864ddc5315726b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778634"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
 指定一或多個宣告的成員變數會參照可引發事件的類別的執行個體。  
@@ -28,7 +28,7 @@ ms.locfileid: "58826609"
   
 ## <a name="rules"></a>規則  
   
--   **項目型別。** 您必須宣告`WithEvents`變數是物件變數，以便它們可以接受類別執行個體。 不過，您無法將它們宣告為`Object`。 您必須宣告為可引發事件的特定類別。  
+- **項目型別。** 您必須宣告`WithEvents`變數是物件變數，以便它們可以接受類別執行個體。 不過，您無法將它們宣告為`Object`。 您必須宣告為可引發事件的特定類別。  
   
  `WithEvents`修飾詞，請使用此內容中：[Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)  
   

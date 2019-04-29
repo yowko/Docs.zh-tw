@@ -13,11 +13,11 @@ helpviewer_keywords:
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
 ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762321"
 ---
 # <a name="transforms-overview"></a>轉換概觀
 本主題描述如何使用[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]<xref:System.Windows.Media.Transform>類別來旋轉、 縮放、 移動 （平移） 及扭曲<xref:System.Windows.FrameworkElement>物件。  
@@ -101,9 +101,9 @@ ms.locfileid: "59162193"
 ## <a name="transforming-a-frameworkelement"></a>轉換 FrameworkElement  
  若要套用的轉換<xref:System.Windows.FrameworkElement>，建立<xref:System.Windows.Media.Transform>並將它套用至其中的兩個屬性，<xref:System.Windows.FrameworkElement>類別會提供：  
   
--   <xref:System.Windows.FrameworkElement.LayoutTransform%2A> – 會在版面配置階段之前套用的轉換。 套用轉換之後，版面配置系統會處理已轉換的元素大小和位置。  
+- <xref:System.Windows.FrameworkElement.LayoutTransform%2A> – 會在版面配置階段之前套用的轉換。 套用轉換之後，版面配置系統會處理已轉換的元素大小和位置。  
   
--   <xref:System.Windows.UIElement.RenderTransform%2A> -修改項目的外觀，但是在版面配置階段完成之後套用的轉換。 藉由使用<xref:System.Windows.UIElement.RenderTransform%2A>屬性而非<xref:System.Windows.FrameworkElement.LayoutTransform%2A>屬性，您可以取得效能優勢。  
+- <xref:System.Windows.UIElement.RenderTransform%2A> -修改項目的外觀，但是在版面配置階段完成之後套用的轉換。 藉由使用<xref:System.Windows.UIElement.RenderTransform%2A>屬性而非<xref:System.Windows.FrameworkElement.LayoutTransform%2A>屬性，您可以取得效能優勢。  
   
  您應該使用哪個屬性？ 它提供的效能優勢，因為使用<xref:System.Windows.UIElement.RenderTransform%2A>屬性，只要可能，特別是當您使用以動畫顯示<xref:System.Windows.Media.Transform>物件。 使用<xref:System.Windows.FrameworkElement.LayoutTransform%2A>時調整、 旋轉，或傾斜的屬性，而您需要之項目的父代調整已轉換之項目的大小。 請注意，搭配使用時<xref:System.Windows.FrameworkElement.LayoutTransform%2A>屬性，<xref:System.Windows.Media.TranslateTransform>物件看起來不影響項目。 這是因為版面配置系統會在其處理期間將已平移元素移回到其原始位置。  
   

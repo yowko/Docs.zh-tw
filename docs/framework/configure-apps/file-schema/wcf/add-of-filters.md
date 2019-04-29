@@ -3,11 +3,11 @@ title: <add> 的 <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
 ms.openlocfilehash: 399fc4e22a9253469a5494af61dac862e33814a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704540"
 ---
 # <a name="add-of-filters"></a>\<新增 > 的\<篩選條件 >
 XPath 篩選條件，指定要記錄的訊息類型。  

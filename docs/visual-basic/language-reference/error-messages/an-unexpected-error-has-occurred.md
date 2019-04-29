@@ -5,20 +5,20 @@ f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
 ms.openlocfilehash: 9aa7ba0babe0a89942e320a76e07c05162b31700
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751614"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>發生未預期的錯誤，因為無法取得單一執行個體啟動所需要的作業系統資源
 應用程式無法取得必要的作業系統資源。 此問題的部分可能原因包括：  
   
--   應用程式沒有權限可建立具名的作業系統物件。  
+- 應用程式沒有權限可建立具名的作業系統物件。  
   
--   通用語言執行平台沒有權限可建立記憶體對應檔案。  
+- 通用語言執行平台沒有權限可建立記憶體對應檔案。  
   
--   應用程式需要存取作業系統物件，但另一個處理序正在使用它。  
+- 應用程式需要存取作業系統物件，但另一個處理序正在使用它。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   

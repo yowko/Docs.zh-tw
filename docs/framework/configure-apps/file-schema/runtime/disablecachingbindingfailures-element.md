@@ -13,11 +13,11 @@ ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4893adaf528f1a9ef8fc8eab8027406fd8520cc2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704787"
 ---
 # <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures > 項目
 指定是否要停用的繫結失敗發生因為藉由探查來找不到組件快取。  
@@ -63,11 +63,11 @@ ms.locfileid: "59159272"
   
  繫結的某些載入失敗不會受到這個項目，並一律會快取。 找不到組件，但無法載入，就會發生這些失敗。 則會擲回<xref:System.BadImageFormatException>或<xref:System.IO.FileLoadException>。 下列清單包含這類失敗的一些範例。  
   
--   如果您嘗試載入的檔案不是有效的組件，即使不正確的檔案隨即取代成正確的組件，載入組件的後續嘗試將會失敗。  
+- 如果您嘗試載入的檔案不是有效的組件，即使不正確的檔案隨即取代成正確的組件，載入組件的後續嘗試將會失敗。  
   
--   如果您嘗試載入組件鎖定的檔案系統，後續的嘗試載入組件將會失敗，即使檔案系統所發行的組件。  
+- 如果您嘗試載入組件鎖定的檔案系統，後續的嘗試載入組件將會失敗，即使檔案系統所發行的組件。  
   
--   如果您嘗試載入的組件的一或多個版本是在探查路徑中，但您所要求的特定版本不是在它們之間，後續嘗試載入該版本將會失敗，即使正確的版本會移到探查路徑。  
+- 如果您嘗試載入的組件的一或多個版本是在探查路徑中，但您所要求的特定版本不是在它們之間，後續嘗試載入該版本將會失敗，即使正確的版本會移到探查路徑。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何停用快取發生因為藉由探查來找不到組件的組件繫結失敗。  

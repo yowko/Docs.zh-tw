@@ -10,11 +10,11 @@ helpviewer_keywords:
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
 ms.openlocfilehash: 3635729705520518d4c950f8a79da7d1249285bf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751068"
 ---
 # <a name="structures-and-classes-visual-basic"></a>結構和類別 (Visual Basic)
 Visual Basic 統一的語法結構和類別，因為這兩個實體支援的大部分相同的功能。 不過，還有結構和類別的重要差異。  
@@ -26,65 +26,65 @@ Visual Basic 統一的語法結構和類別，因為這兩個實體支援的大�
 ## <a name="similarities"></a>相似之處  
  結構和類別是在下列方面類似：  
   
--   兩者都*容器*類型，這表示它們包含為成員的其他型別。  
+- 兩者都*容器*類型，這表示它們包含為成員的其他型別。  
   
--   兩者都有建構函式、 方法、 屬性、 欄位、 常數、 列舉型別、 事件和事件處理常式可以包含的成員。 不過，不會混淆與宣告這些成員*項目*的結構。  
+- 兩者都有建構函式、 方法、 屬性、 欄位、 常數、 列舉型別、 事件和事件處理常式可以包含的成員。 不過，不會混淆與宣告這些成員*項目*的結構。  
   
--   兩者的成員都有各自的存取層級。 例如，可以宣告一個成員`Public`是另一個`Private`。  
+- 兩者的成員都有各自的存取層級。 例如，可以宣告一個成員`Public`是另一個`Private`。  
   
--   兩者都可以實作介面。  
+- 兩者都可以實作介面。  
   
--   兩者都可以有共用的建構函式，使用或不含參數。  
+- 兩者都可以有共用的建構函式，使用或不含參數。  
   
--   兩者都可以公開*屬性預設*，前提是屬性會採用至少一個參數。  
+- 兩者都可以公開*屬性預設*，前提是屬性會採用至少一個參數。  
   
--   兩者都可以宣告和引發事件，而兩者都可以宣告委派。  
+- 兩者都可以宣告和引發事件，而兩者都可以宣告委派。  
   
 ## <a name="differences"></a>差異  
  結構和類別的差異如下：  
   
--   結構*實值型別*; 類別是*參考型別*。 結構類型的變數包含的結構資料，而不是未包含的資料做為類別類型的參考。  
+- 結構*實值型別*; 類別是*參考型別*。 結構類型的變數包含的結構資料，而不是未包含的資料做為類別類型的參考。  
   
--   結構會使用堆疊配置;類別會使用堆積配置。  
+- 結構會使用堆疊配置;類別會使用堆積配置。  
   
--   所有的結構項目都`Public`根據預設，類別變數和常數`Private`根據預設，其他類別成員時`Public`預設。 類別成員的此行為可提供與 Visual Basic 6.0 系統的預設值的相容性。  
+- 所有的結構項目都`Public`根據預設，類別變數和常數`Private`根據預設，其他類別成員時`Public`預設。 類別成員的此行為可提供與 Visual Basic 6.0 系統的預設值的相容性。  
   
--   結構必須有至少一個非共用變數，或將非共用，非自訂事件項目;類別可以是完全空白的。  
+- 結構必須有至少一個非共用變數，或將非共用，非自訂事件項目;類別可以是完全空白的。  
   
--   結構項目不可以宣告為`Protected`; 類別的成員可以。  
+- 結構項目不可以宣告為`Protected`; 類別的成員可以。  
   
--   結構的程序可以處理事件時才[Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub`程序，並只利用[AddHandler 陳述式](../../../../visual-basic/language-reference/statements/addhandler-statement.md); 類別中的任何程序可以處理事件，使用任一[會處理](../../../../visual-basic/language-reference/statements/handles-clause.md)關鍵字或`AddHandler`陳述式。 如需詳細資訊，請參閱[事件](../../../../visual-basic/programming-guide/language-features/events/index.md)。  
+- 結構的程序可以處理事件時才[Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub`程序，並只利用[AddHandler 陳述式](../../../../visual-basic/language-reference/statements/addhandler-statement.md); 類別中的任何程序可以處理事件，使用任一[會處理](../../../../visual-basic/language-reference/statements/handles-clause.md)關鍵字或`AddHandler`陳述式。 如需詳細資訊，請參閱[事件](../../../../visual-basic/programming-guide/language-features/events/index.md)。  
   
--   結構變數宣告不能指定初始設定式或陣列; 的初始大小可以類別變數的宣告。  
+- 結構變數宣告不能指定初始設定式或陣列; 的初始大小可以類別變數的宣告。  
   
--   結構會隱含地繼承自<xref:System.ValueType?displayProperty=nameWithType>類別，並無法繼承自任何其他型別，而非類別繼承自任何類別或類別<xref:System.ValueType?displayProperty=nameWithType>。  
+- 結構會隱含地繼承自<xref:System.ValueType?displayProperty=nameWithType>類別，並無法繼承自任何其他型別，而非類別繼承自任何類別或類別<xref:System.ValueType?displayProperty=nameWithType>。  
   
--   結構是無法繼承;類別是。  
+- 結構是無法繼承;類別是。  
   
--   結構永遠不會終止，因此 common language runtime (CLR) 永遠不會呼叫<xref:System.Object.Finalize%2A>上的任何結構; 方法類別會由記憶體回收行程 (GC)，它會呼叫終止<xref:System.Object.Finalize%2A>上時偵測到沒有作用中參考的類別剩餘的。  
+- 結構永遠不會終止，因此 common language runtime (CLR) 永遠不會呼叫<xref:System.Object.Finalize%2A>上的任何結構; 方法類別會由記憶體回收行程 (GC)，它會呼叫終止<xref:System.Object.Finalize%2A>上時偵測到沒有作用中參考的類別剩餘的。  
   
--   結構不需要建構函式類別會執行。  
+- 結構不需要建構函式類別會執行。  
   
--   結構可以具有非共用的建構函式才會顯示參數;類別可以讓它們使用或不加任何參數。  
+- 結構可以具有非共用的建構函式才會顯示參數;類別可以讓它們使用或不加任何參數。  
   
  每個結構會有不含參數的隱含公用建構函式。 這個建構函式會初始化為其預設值的所有結構的資料元素。 您無法重新定義此行為。  
   
 ## <a name="instances-and-variables"></a>執行個體與變數  
  因為結構是實值型別，則每個結構變數是永久繫結至個別的結構執行個體中。 類別是參考型別，但物件變數時，可以參考到各種不同的類別執行個體上，在不同的時間。 這項區別會以下列方式影響結構和類別的使用方式：  
   
--   **初始化。** 結構變數隱含包含項目使用該結構的無參數建構函式的初始化。 因此，`Dim s As struct1`相當於`Dim s As struct1 = New struct1()`。  
+- **初始化。** 結構變數隱含包含項目使用該結構的無參數建構函式的初始化。 因此，`Dim s As struct1`相當於`Dim s As struct1 = New struct1()`。  
   
--   **指派變數。** 當您將一個結構變數指派給另一個，或結構執行個體傳遞給程序引數時，就會將目前值的所有變數的項目複製到新的結構。 當您將一個物件變數指派給另一個，或傳遞至程序的物件變數時，只會複製參考指標。  
+- **指派變數。** 當您將一個結構變數指派給另一個，或結構執行個體傳遞給程序引數時，就會將目前值的所有變數的項目複製到新的結構。 當您將一個物件變數指派給另一個，或傳遞至程序的物件變數時，只會複製參考指標。  
   
--   **指派執行任何動作。** 您可以將值指派[Nothing](../../../../visual-basic/language-reference/nothing.md)結構變數，但執行個體將繼續與變數相關聯。 您仍然可以呼叫其方法，並存取其資料元素，但變數的項目會藉由指派而重新初始化。  
+- **指派執行任何動作。** 您可以將值指派[Nothing](../../../../visual-basic/language-reference/nothing.md)結構變數，但執行個體將繼續與變數相關聯。 您仍然可以呼叫其方法，並存取其資料元素，但變數的項目會藉由指派而重新初始化。  
   
      相反地，如果您設定物件變數`Nothing`中斷任何類別執行個體中，且您無法透過變數存取的任何成員，直到您指派給它的另一個執行個體。  
   
--   **多個執行個體。** 物件變數可以有不同的類別執行個體指派給它，在不同的時間和數個物件變數時，可以參考相同的類別執行個體上，在相同的時間。 您對類別成員的值變更會影響時透過指向相同的執行個體的另一個變數來存取這些成員。  
+- **多個執行個體。** 物件變數可以有不同的類別執行個體指派給它，在不同的時間和數個物件變數時，可以參考相同的類別執行個體上，在相同的時間。 您對類別成員的值變更會影響時透過指向相同的執行個體的另一個變數來存取這些成員。  
   
      不過，結構項目，都隔離在自己的執行個體。 其值的變更不會反映在任何其他結構變數，即使是在相同的其他執行個體`Structure`宣告。  
   
--   **相等。** 與項目依項目測試必須執行兩個結構的等號比較測試。 可以比較兩個物件變數，使用<xref:System.Object.Equals%2A>方法。 <xref:System.Object.Equals%2A> 指出兩個變數是否指向相同的執行個體。  
+- **相等。** 與項目依項目測試必須執行兩個結構的等號比較測試。 可以比較兩個物件變數，使用<xref:System.Object.Equals%2A>方法。 <xref:System.Object.Equals%2A> 指出兩個變數是否指向相同的執行個體。  
   
 ## <a name="see-also"></a>另請參閱
 

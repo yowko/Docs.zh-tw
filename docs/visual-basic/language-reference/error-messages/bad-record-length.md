@@ -6,19 +6,19 @@ f1_keywords:
 ms.assetid: 0926a3a4-177b-4452-9b33-d8a01e24cc21
 ms.openlocfilehash: 1bc75303bcc2f46e54c06e89347da28997e59786
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935248"
 ---
 # <a name="bad-record-length"></a>不正確的資料錄長度
 可能導致本錯誤的原因包括：  
   
--   中指定的記錄變數的長度`FileGet`， `FileGetObject`，`FilePut`或是`FilePutObject`陳述式與對應中指定的長度不同`FileOpen`陳述式。  
+- 中指定的記錄變數的長度`FileGet`， `FileGetObject`，`FilePut`或是`FilePutObject`陳述式與對應中指定的長度不同`FileOpen`陳述式。  
   
--   中的變數`FilePut`或`FilePutObject`陳述式或包含可變長度字串。  
+- 中的變數`FilePut`或`FilePutObject`陳述式或包含可變長度字串。  
   
--   中的變數`FilePut`或是`FilePutObject`是或包含`Variant`型別。  
+- 中的變數`FilePut`或是`FilePutObject`是或包含`Variant`型別。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   

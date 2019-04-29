@@ -3,11 +3,11 @@ title: <message> 的 <netTcpBinding> 項目
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
 ms.openlocfilehash: ac6977a8422055f998c7ed932c853992b7809911
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767555"
 ---
 # <a name="message-element-of-nettcpbinding"></a>\<訊息 > 項目\<netTcpBinding >
 定義設定之端點的訊息層級安全性需求的型別[ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。  

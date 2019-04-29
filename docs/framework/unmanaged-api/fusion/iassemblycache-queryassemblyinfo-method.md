@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 81b647032b2e9474e3b4472552ed884cec92ffc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697520"
 ---
 # <a name="iassemblycachequeryassemblyinfo-method"></a>IAssemblyCache::QueryAssemblyInfo 方法
 取得指定的組件的相關要求的資料。  
@@ -41,9 +41,9 @@ HRESULT QueryAssemblyInfo (
  `dwFlags`  
  [in]支援下列值： 旗標。 支援下列值：  
   
--   QUERYASMINFO_FLAG_VALIDATE (0x00000001)  
+- QUERYASMINFO_FLAG_VALIDATE (0x00000001)  
   
--   QUERYASMINFO_FLAG_GETSIZE (0x00000002)  
+- QUERYASMINFO_FLAG_GETSIZE (0x00000002)  
   
  `pszAssemblyName`  
  [in]將擷取資料的組件名稱。  

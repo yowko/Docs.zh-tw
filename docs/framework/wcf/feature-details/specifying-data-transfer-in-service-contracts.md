@@ -8,11 +8,11 @@ helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
 ms.openlocfilehash: 88bdfe6e659e6e83365b3d17c9067581f209d154
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748144"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>指定服務合約中的資料傳輸
 Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 服務作業可以接收訊息、處理訊息，並傳送訊息。 訊息會透過作業合約來加以描述。 例如，請參考下列合約。  

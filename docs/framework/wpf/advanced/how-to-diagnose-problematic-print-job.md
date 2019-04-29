@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
 ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776255"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>HOW TO：診斷問題列印工作
 網路系統管理經常處理使用者對於列印工作的相關抱怨 (不會列印或列印緩慢)。 一組豐富的列印工作中公開的屬性[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]Microsoft.NET framework 提供一種方法來執行列印工作的快速遠端診斷。  
@@ -25,13 +25,13 @@ ms.locfileid: "59338471"
   
 1. 找出使用者所抱怨的列印工作。 使用者通常無法準確地找出來。 他們可能不知道印表機的列印伺服器名稱。 它們可能會描述在不同的術語印表機的位置，比用於設定其<xref:System.Printing.PrintQueue.Location%2A>屬性。 因此，最好能產生使用者目前已提交的工作清單。 如果有多項工作，使用者與列印系統管理員之間的通訊則可用來指出有問題的工作。 子步驟如下所示。  
   
-    1.  取得所有列印伺服器的清單。  
+    1. 取得所有列印伺服器的清單。  
   
-    2.  對伺服器執行迴圈，以查詢其列印佇列。  
+    2. 對伺服器執行迴圈，以查詢其列印佇列。  
   
-    3.  在伺服器迴圈的每次操作中，對所有伺服器的佇列執行迴圈以查詢其工作。  
+    3. 在伺服器迴圈的每次操作中，對所有伺服器的佇列執行迴圈以查詢其工作。  
   
-    4.  在佇列迴圈的每次操作中，對其工作執行迴圈並蒐集有關抱怨使用者所提出工作的識別資訊。  
+    4. 在佇列迴圈的每次操作中，對其工作執行迴圈並蒐集有關抱怨使用者所提出工作的識別資訊。  
   
 2. 找出有問題的列印工作後，檢查相關屬性以了解問題所在。 例如，工作處於錯誤狀態，或者是為佇列提供服務的印表機在可列印工作之前離線？  
   
@@ -49,9 +49,9 @@ ms.locfileid: "59338471"
   
  此時應用程式包含一個分支結構，其對應於檢查列印工作狀態的兩種方法︰  
   
--   您可以閱讀的旗標<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>類型的屬性<xref:System.Printing.PrintJobStatus>。  
+- 您可以閱讀的旗標<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>類型的屬性<xref:System.Printing.PrintJobStatus>。  
   
--   您可以讀取每個相關的屬性，例如<xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A>和<xref:System.Printing.PrintSystemJobInfo.IsInError%2A>。  
+- 您可以讀取每個相關的屬性，例如<xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A>和<xref:System.Printing.PrintSystemJobInfo.IsInError%2A>。  
   
  此範例會示範這兩種方法，所以使用者先前已提示要使用的方法，且如果他或她想要使用的旗標，回應"Y"<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>屬性。 請參閱以下兩種方法的詳細資訊。 最後，應用程式會使用稱為 **ReportQueueAndJobAvailability** 的方法來報告是否可以在每天此時列印此工作。 [得知列印工作是否可在此時列印](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)會討論此方法。  
   

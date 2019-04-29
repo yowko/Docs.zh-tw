@@ -3,11 +3,11 @@ title: <add> 的 <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
 ms.openlocfilehash: 2a3ba6d41059a480fe610254c0407df16d149e3b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701459"
 ---
 # <a name="add-of-serviceactivations"></a>\<add> of \<serviceActivations>
 
@@ -35,7 +35,7 @@ ms.locfileid: "57673037"
 
 |屬性|描述|
 |---------------|-----------------|
-|factory|字串，指定產生服務啟動項目之處理站的 CLR 型別名稱。|
+|處理站|字串，指定產生服務啟動項目之處理站的 CLR 型別名稱。|
 |服務|實作服務的 ServiceType 可以是完整 Typename 或簡短 Typename (置於 App_Code 資料夾時)。|
 |relativeAddress|在目前 IIS 應用程式中的相對位址，例如 "Service.svc"。 在 WCF 4.0 中，此相對位址必須包含其中一個已知的副檔名 (.svc、.xamlx...)。relativeUrl 不一定要有實體檔案存在|
 

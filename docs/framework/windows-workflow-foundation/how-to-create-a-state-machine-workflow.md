@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
 ms.openlocfilehash: 654621ab7dd74c26a7fddbd985559a713c0e9df3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773512"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>HOW TO：建立狀態機器工作流程
 工作流程可以從內建活動建構，也可以從自訂活動建構。 本主題將逐步解說如何建立這類使用內建活動的工作流程<xref:System.Activities.Statements.StateMachine>活動，並從先前的自訂活動[How to:建立活動](how-to-create-an-activity.md)主題。 此工作流程會以數字猜測遊戲為模型。  

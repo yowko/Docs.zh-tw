@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, row count
 ms.assetid: 03d41a82-df95-40ac-8439-a6c327d37ba8
 ms.openlocfilehash: f723d91dd30817f6e15be11dd1bc1432a5939647
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774630"
 ---
 # <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>HOW TO：判斷查詢 （WCF 資料服務） 所傳回的實體數目
 您可以使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，判斷由查詢 URI 所指定之實體集中的實體數目。 這個計劃可能包含在查詢結果中或包含為整數值。 如需詳細資訊，請參閱 <<c0> [ 查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  

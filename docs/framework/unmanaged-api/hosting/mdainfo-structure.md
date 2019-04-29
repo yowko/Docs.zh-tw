@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3be6f2b9454ed2f74d2cc6792cd9aaa2c25215db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765202"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo 結構
 提供有關的詳細資料`Event_MDAFired`事件，這會觸發建立的 managed 偵錯助理 (MDA)。  
@@ -47,9 +47,9 @@ typedef struct _MDAInfo {
   
  觸發程序建立的 MDA 事件引發時，執行階段會採取下列步驟：  
   
--   如果主機尚未註冊[IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)藉由呼叫的執行個體[iclroneventmanager:: Registeractiononevent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md)收到的通知`Event_MDAFired`事件，執行階段會繼續進行其預設值，非託管的行為。  
+- 如果主機尚未註冊[IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)藉由呼叫的執行個體[iclroneventmanager:: Registeractiononevent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md)收到的通知`Event_MDAFired`事件，執行階段會繼續進行其預設值，非託管的行為。  
   
--   如果主機已登錄這個事件處理常式，執行階段會檢查是否要將偵錯工具附加至處理程序。 如果是，執行階段會中斷偵錯工具。 當偵錯工具繼續時，它會呼叫到主機。 如果沒有偵錯工具附加時，執行階段會呼叫`IActionOnCLREvent::OnEvent`，並將傳遞的指標`MDAInfo`執行個體做為`data`參數。  
+- 如果主機已登錄這個事件處理常式，執行階段會檢查是否要將偵錯工具附加至處理程序。 如果是，執行階段會中斷偵錯工具。 當偵錯工具繼續時，它會呼叫到主機。 如果沒有偵錯工具附加時，執行階段會呼叫`IActionOnCLREvent::OnEvent`，並將傳遞的指標`MDAInfo`執行個體做為`data`參數。  
   
  若要啟用 Mda，然後啟用 MDA 時收到通知，可以選擇主應用程式。 這會讓主機覆寫預設行為，並中止 managed 的執行緒引發事件，以避免損毀處理序狀態。 如需使用 Mda 的詳細資訊，請參閱 < [Managed 偵錯助理診斷錯誤](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)。  
   

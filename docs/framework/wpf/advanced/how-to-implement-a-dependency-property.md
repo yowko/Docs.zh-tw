@@ -9,11 +9,11 @@ helpviewer_keywords:
 - properties [WPF], backing with dependency properties
 ms.assetid: 855fd6d7-19ac-493c-bf5e-2f40b57cdc92
 ms.openlocfilehash: e2f18cb3941be2ebf4315a844c05b91ff49c6aa2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757452"
 ---
 # <a name="how-to-implement-a-dependency-property"></a>HOW TO：實作相依性屬性
 此範例示範如何備份[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]屬性與<xref:System.Windows.DependencyProperty>欄位，進而定義相依性屬性。 如果您定義自己的屬性，並想要它們支援 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 功能的許多層面 (包括樣式、資料繫結、繼承、動畫和預設值)，則應該將它們實作為相依性屬性。  

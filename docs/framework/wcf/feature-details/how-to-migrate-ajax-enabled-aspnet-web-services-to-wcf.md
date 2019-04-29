@@ -3,20 +3,20 @@ title: HOW TO：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
 ms.openlocfilehash: 6114fa90b10a5d0cacb60a7ad40f63fae776e174
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683518"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>HOW TO：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF
 本主題概述將基本的 ASP.NET AJAX 服務移轉至對等的 AJAX 啟用 Windows Communication Foundation (WCF) 服務的程序。 它示範如何建立同等功效的 WCF 版本的 ASP.NET AJAX 服務。 這兩項服務可以接著使用並排顯示，或 WCF 服務可以用來取代 ASP.NET AJAX 服務。
 
  移轉現有的 ASP.NET AJAX 的 WCF AJAX 服務的服務提供下列優點：
 
--   您可以使用最少的額外組態，將您的 AJAX 服務公開為 SOAP 服務。
+- 您可以使用最少的額外組態，將您的 AJAX 服務公開為 SOAP 服務。
 
--   您可以受益於 WCF 功能，例如追蹤等等。
+- 您可以受益於 WCF 功能，例如追蹤等等。
 
  下列程序假設您使用 Visual Studio 2012。
 
@@ -179,9 +179,9 @@ namespace ASPHello
 
  如果 ASMX Web 服務正在升級和移轉至 WCF 服務的並排顯示，以避免兩個型別對應至用戶端上相同的名稱。 如果在 <xref:System.Web.Services.WebMethodAttribute> 和 <xref:System.ServiceModel.ServiceContractAttribute> 中使用相同的型別，會造成序列化程式中的例外狀況：
 
--   第一次加入 WCF 服務時，叫用 ASMX Web 服務上的方法會導致例外狀況中的<xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29>因為 WCF 樣式定義，在 proxy 中順序的優先順序。
+- 第一次加入 WCF 服務時，叫用 ASMX Web 服務上的方法會導致例外狀況中的<xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29>因為 WCF 樣式定義，在 proxy 中順序的優先順序。
 
--   如果先新增 ASMX Web 服務，則叫用 WCF 服務上的方法會導致例外狀況中的<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>因為在 proxy 中順序的 Web 服務樣式定義會取得優先權。
+- 如果先新增 ASMX Web 服務，則叫用 WCF 服務上的方法會導致例外狀況中的<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>因為在 proxy 中順序的 Web 服務樣式定義會取得優先權。
 
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 和 ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> 之間在行為上有許多不同之處。 例如，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 會將字典表示為索引鍵/值配對的陣列，而 ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> 會將字典表示為實際的 JSON 物件。 因此下面是在 ASP.NET AJAX 中表示的字典。
 
@@ -193,9 +193,9 @@ d.Add("two", 2);
 
  這個字典在 JSON 物件中的表示如下列清單所示：
 
--   [{"Key":"one","Value":1},{"Key":"two","Value":2}]，透過 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
+- [{"Key":"one","Value":1},{"Key":"two","Value":2}]，透過 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
 
--   {"one": 1，"two": 2} 的 ASP.NET ajax <xref:System.Web.Script.Serialization.JavaScriptSerializer>
+- {"one": 1，"two": 2} 的 ASP.NET ajax <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 的功能較為強大，因為它可以處理其中金鑰類型不是字串的字典，但是 <xref:System.Web.Script.Serialization.JavaScriptSerializer> 卻無法這麼做。 然而後者較容易用來處理 JSON。
 

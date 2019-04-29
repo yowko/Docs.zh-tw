@@ -5,18 +5,18 @@ f1_keywords:
 - vbrTextFieldParser_InvalidComment
 ms.assetid: 636d4b81-00ba-4cfd-98f7-4d57036f494d
 ms.openlocfilehash: 6e55fde395cec2fcd4053e66d855750945ea1448
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751653"
 ---
 # <a name="a-double-quote-is-not-a-valid-comment-token-for-delimited-fields-where-escapequote-is-set-to-true"></a>在 EscapeQuote 設定為 True 的情況下，雙引號不是用於分隔欄位的有效註解語彙基元
 引號已提供為 `TextFieldParser`的分隔符號，但 `EscapeQuotes` 設為 `True`。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   請設定 `EscapeQuotes` 為 `False`。  
+- 請設定 `EscapeQuotes` 為 `False`。  
   
 ## <a name="see-also"></a>另請參閱
 

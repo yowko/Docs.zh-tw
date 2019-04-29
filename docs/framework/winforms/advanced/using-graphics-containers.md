@@ -7,11 +7,11 @@ helpviewer_keywords:
 - examples [Windows Forms], graphics containers
 ms.assetid: 74632f91-cefa-4f51-ab7c-f9ac91942caf
 ms.openlocfilehash: cfad7254057a31ea8268784cd4b6849850f3e2aa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766151"
 ---
 # <a name="using-graphics-containers"></a>使用圖形容器
 A<xref:System.Drawing.Graphics>物件提供方法，例如<xref:System.Drawing.Graphics.DrawLine%2A>， <xref:System.Drawing.Graphics.DrawImage%2A>，和<xref:System.Drawing.Graphics.DrawString%2A>向量影像、 點陣影像和文字顯示。 A<xref:System.Drawing.Graphics>物件也有數個屬性影響的品質和方向繪製的項目。 比方說，平滑的模式屬性會決定是否消除鋸齒套用至直線和曲線，以及全局轉換屬性影響的位置和旋轉所繪製的項目。  

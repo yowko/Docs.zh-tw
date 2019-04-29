@@ -11,11 +11,11 @@ ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0ac478644561d2aab13d10811987d8d02c8d7608
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754722"
 ---
 # <a name="failedqi-mda"></a>failedQI MDA
 當執行階段代表執行階段可呼叫包裝函式 (RCW)，在 COM 介面指標上呼叫 `QueryInterface`，而 `QueryInterface` 呼叫失敗時，就會啟動 `failedQI` Managed 偵錯助理 (MDA)。  
@@ -25,11 +25,11 @@ ms.locfileid: "59217623"
   
 ## <a name="cause"></a>原因  
   
--   從錯誤的內容進行呼叫。  
+- 從錯誤的內容進行呼叫。  
   
--   所註冊的 Proxy 導致 `QueryInterface` 呼叫失敗，因為是嘗試在錯誤的內容中呼叫。  
+- 所註冊的 Proxy 導致 `QueryInterface` 呼叫失敗，因為是嘗試在錯誤的內容中呼叫。  
   
--   OLE 擁有的 Proxy 傳回失敗 HRESULT。  
+- OLE 擁有的 Proxy 傳回失敗 HRESULT。  
   
 ## <a name="resolution"></a>解決方式  
  請參閱有關 COM 規則的 MSDN 文件。  

@@ -4,55 +4,55 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 ms.openlocfilehash: 43fa859aa84189817dffe74ecd72253ab9b82585
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940487"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>如何：使用 WIF 追蹤對宣告感知應用程式和服務進行偵錯
 ## <a name="applies-to"></a>適用於  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   服務追蹤檢視器工具 (SvcTraceViewer.exe)  
+- 服務追蹤檢視器工具 (SvcTraceViewer.exe)  
   
--   疑難排解和偵錯 WIF 應用程式  
+- 疑難排解和偵錯 WIF 應用程式  
   
 ## <a name="summary"></a>總結  
  本使用說明針對如何設定 WIF 追蹤、收集追蹤記錄檔，以及如何使用追蹤檢視器工具來分析追蹤記錄檔，說明所需的步驟。 其針對 WIF 相關問題的疑難排解，提供所需之追蹤項目對動作的一般對應。  
   
 ## <a name="contents"></a>內容  
   
--   目標  
+- 目標  
   
--   步驟摘要  
+- 步驟摘要  
   
--   步驟 1 – 使用 Web.config 組態檔來設定 WIF 追蹤  
+- 步驟 1 – 使用 Web.config 組態檔來設定 WIF 追蹤  
   
--   步驟 2 – 使用追蹤檢視器工具來分析 WIF 追蹤檔案  
+- 步驟 2 – 使用追蹤檢視器工具來分析 WIF 追蹤檔案  
   
--   步驟 3 – 識別用來修正 WIF 相關問題的方案  
+- 步驟 3 – 識別用來修正 WIF 相關問題的方案  
   
--   相關項目:  
+- 相關項目:  
   
 ## <a name="objectives"></a>目標  
   
--   設定 WIF 追蹤。  
+- 設定 WIF 追蹤。  
   
--   在追蹤檢視器工具中檢視追蹤記錄檔。  
+- 在追蹤檢視器工具中檢視追蹤記錄檔。  
   
--   在追蹤記錄檔中識別 WIF 的相關問題。  
+- 在追蹤記錄檔中識別 WIF 的相關問題。  
   
--   將更正動作套用到在追蹤記錄中發現的 WIF 相關問題。  
+- 將更正動作套用到在追蹤記錄中發現的 WIF 相關問題。  
   
 ## <a name="summary-of-steps"></a>步驟摘要  
   
--   步驟 1 – 使用 Web.config 組態檔來設定 WIF 追蹤  
+- 步驟 1 – 使用 Web.config 組態檔來設定 WIF 追蹤  
   
--   步驟 2 – 使用追蹤檢視器工具來分析 WIF 追蹤檔案  
+- 步驟 2 – 使用追蹤檢視器工具來分析 WIF 追蹤檔案  
   
--   步驟 3 – 識別用來修正 WIF 相關問題的方案  
+- 步驟 3 – 識別用來修正 WIF 相關問題的方案  
   
 ## <a name="step-1--configure-wif-tracing-using-webconfig-configuration-file"></a>步驟 1 – 使用 Web.config 組態檔來設定 WIF 追蹤  
  在此步驟中，您要將變更新增至 *Web.config* 檔案中的組態區段，讓 WIF 能夠追蹤它的事件，並將其儲存在追蹤記錄檔中。  
@@ -108,4 +108,4 @@ ms.locfileid: "59321545"
   
 ## <a name="related-items"></a>相關項目:  
   
--   [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

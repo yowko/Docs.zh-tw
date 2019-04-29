@@ -6,22 +6,22 @@ dev_langs:
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
 ms.openlocfilehash: 6f6f27eaecd760e565eeb98a286252981d6df0bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61615021"
 ---
 # <a name="initialization-expressions"></a>初始化運算式
 初始化運算式會初始化新的物件。 大多數的初始化運算式都有支援，包括最新的 C# 3.0 和 Visual Basic 9.0 初始化運算式。 以下是可由 LINQ to Entities 查詢初始化及傳回的型別：  
   
--   零或多個具型別實體物件的集合或是於概念模型中定義之複雜型別的投影。  
+- 零或多個具型別實體物件的集合或是於概念模型中定義之複雜型別的投影。  
   
--   [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 支援的 CLR 型別。  
+- [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 支援的 CLR 型別。  
   
--   內嵌集合。  
+- 內嵌集合。  
   
--   匿名型別。  
+- 匿名型別。  
   
  查詢運算式語法中的下列範例示範匿名型別初始化：  
   

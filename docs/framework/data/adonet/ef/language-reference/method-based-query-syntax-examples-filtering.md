@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e40e314c-eb30-4f44-a054-41e511e35832
 ms.openlocfilehash: 1064e4f8d4fce16d0505eb79b5e862be7c2e4ce6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760541"
 ---
 # <a name="method-based-query-syntax-examples-filtering"></a>以方法為基礎的查詢語法範例：篩選
 本主題中的範例將示範如何使用`Where`並`Where…Contains`方法來查詢[AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)使用以方法為基礎的查詢語法。 請注意，其中...`Contains` 不能做為一部分[編譯查詢](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)。  

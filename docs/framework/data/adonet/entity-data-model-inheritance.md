@@ -3,11 +3,11 @@ title: 實體資料模型：繼承
 ms.date: 03/30/2017
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
 ms.openlocfilehash: 9f77f2ebb86ea050c124fbd1c6f2b30ed9e75a1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667196"
 ---
 # <a name="entity-data-model-inheritance"></a>實體資料模型：繼承
 Entity Data Model (EDM) 支援的繼承[實體類型](../../../../docs/framework/data/adonet/entity-type.md)。 EDM 中的繼承類似於物件導向程式設計語言中的類別繼承。 像物件導向語言中的類別，，您也可以在概念模型中定義實體類型 (*衍生型別*)，繼承自另一個實體類型 (*基底型別*)。 不過，不同於物件導向程式設計中的類別，概念模型中的衍生的類型一律會繼承所有[屬性](../../../../docs/framework/data/adonet/property.md)並[導覽屬性](../../../../docs/framework/data/adonet/navigation-property.md)基底類型。 您不能覆寫衍生型別中的繼承屬性。  

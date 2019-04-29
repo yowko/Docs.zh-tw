@@ -3,20 +3,20 @@ title: 關聯集 End
 ms.date: 03/30/2017
 ms.assetid: fe4bf1d3-047a-4a37-98c5-a66e70811346
 ms.openlocfilehash: 7b6c646592c1878ea30396d98b4976dc8fa0be12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769574"
 ---
 # <a name="association-set-end"></a>關聯集 End
 *關聯集 end*識別[實體型別](../../../../docs/framework/data/adonet/entity-type.md)並[實體集](../../../../docs/framework/data/adonet/entity-set.md)結尾[關聯集](../../../../docs/framework/data/adonet/association-set.md)。 關聯集 End 會定義為關聯集的部分。一個關聯集必須擁有兩個關聯集 End。  
   
  關聯集 End 定義包含下列資訊：  
   
--   關聯集中相關的其中一個屬性類型。 (必要項)  
+- 關聯集中相關的其中一個屬性類型。 (必要項)  
   
--   關聯集中相關實體類型的實體集。 (必要項)  
+- 關聯集中相關實體類型的實體集。 (必要項)  
   
 ## <a name="example"></a>範例  
  下圖顯示包含兩個關聯 (`WrittenBy` 和 `PublishedBy`) 的概念模型。  

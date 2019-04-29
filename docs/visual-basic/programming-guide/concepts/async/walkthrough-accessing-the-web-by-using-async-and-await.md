@@ -3,11 +3,11 @@ title: 逐步解說：存取 Web 使用 Async 和 Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
 ms.openlocfilehash: 7f9b71bc76e8d17cf2fb6714070b4439265d1fda
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765917"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>逐步解說：存取 Web 使用 Async 和 Await (Visual Basic)
 您可以使用 async/await 功能，以更容易且直觀的方式撰寫非同步程式。 您可以撰寫非同步程式碼，使其看起來像是同步程式碼，讓編譯器處理困難的回呼函式和非同步程式碼通常需要的接續。  
@@ -20,29 +20,29 @@ ms.locfileid: "59335897"
   
  在這個逐步解說中，您將完成下列工作：  
   
--   [建立 WPF 應用程式](#CreateWPFApp)  
+- [建立 WPF 應用程式](#CreateWPFApp)  
   
--   [設計簡單的 WPF MainWindow](#MainWindow)  
+- [設計簡單的 WPF MainWindow](#MainWindow)  
   
--   [加入參考](#AddRef)  
+- [加入參考](#AddRef)  
   
--   [若要加入必要的 Imports 陳述式](#ImportsState)  
+- [若要加入必要的 Imports 陳述式](#ImportsState)  
   
--   [建立同步應用程式](#synchronous)  
+- [建立同步應用程式](#synchronous)  
   
--   [測試同步方案](#testSynch)  
+- [測試同步方案](#testSynch)  
   
--   [將 GetURLContents 轉換為非同步方法](#GetURLContents)  
+- [將 GetURLContents 轉換為非同步方法](#GetURLContents)  
   
--   [將 SumPageSizes 轉換為非同步方法](#SumPageSizes)  
+- [將 SumPageSizes 轉換為非同步方法](#SumPageSizes)  
   
--   [將 startButton_Click 轉換為非同步方法](#startButton)  
+- [將 startButton_Click 轉換為非同步方法](#startButton)  
   
--   [測試非同步方案](#testAsynch)  
+- [測試非同步方案](#testAsynch)  
   
--   [將方法 GetURLContentsAsync 取代為 .NET Framework 方法](#GetURLContentsAsync)  
+- [將方法 GetURLContentsAsync 取代為 .NET Framework 方法](#GetURLContentsAsync)  
   
--   [範例](#BKMK_CompleteCodeExamples)  
+- [範例](#BKMK_CompleteCodeExamples)  
   
 ## <a name="prerequisites"></a>必要條件  
  您的電腦上必須安裝 Visual Studio 2012 或更新版本。 如需詳細資訊，請參閱 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkId=235233)。  
@@ -72,19 +72,19 @@ ms.locfileid: "59335897"
   
 4. 反白顯示 **TextBox** 控制項，並在 [屬性] 視窗中，設定下列值：  
   
-    -   將 [名稱] 屬性設定為 `resultsTextBox`。  
+    - 將 [名稱] 屬性設定為 `resultsTextBox`。  
   
-    -   將 [高度] 屬性設為 250。  
+    - 將 [高度] 屬性設為 250。  
   
-    -   將 [寬度] 屬性設為 500。  
+    - 將 [寬度] 屬性設為 500。  
   
-    -   在 [文字] 索引標籤上，指定等寬字型，例如 Lucida Console 或全域等寬。  
+    - 在 [文字] 索引標籤上，指定等寬字型，例如 Lucida Console 或全域等寬。  
   
 5. 反白顯示 **Button** 控制項，並在 [屬性] 視窗中，設定下列值：  
   
-    -   將 [名稱] 屬性設定為 `startButton`。  
+    - 將 [名稱] 屬性設定為 `startButton`。  
   
-    -   將 [內容] 屬性的值從 **Button** 變更為 **Start**。  
+    - 將 [內容] 屬性的值從 **Button** 變更為 **Start**。  
   
 6. 放置文字方塊和按鈕，使兩者都出現在 [MainWindow] 視窗中。  
   
@@ -137,13 +137,13 @@ ms.locfileid: "59335897"
   
 3. 同步方案的程式碼包含下列四種方法：  
   
-    -   `SumPageSizes`，會從 `SetUpURLList` 取得網頁 URL 的清單，然後呼叫 `GetURLContents` 和 `DisplayResults` 以處理每個 URL。  
+    - `SumPageSizes`，會從 `SetUpURLList` 取得網頁 URL 的清單，然後呼叫 `GetURLContents` 和 `DisplayResults` 以處理每個 URL。  
   
-    -   `SetUpURLList`，會製作並傳回網址清單。  
+    - `SetUpURLList`，會製作並傳回網址清單。  
   
-    -   `GetURLContents`，會下載每個網站的內容，並傳回內容做為位元組陣列。  
+    - `GetURLContents`，會下載每個網站的內容，並傳回內容做為位元組陣列。  
   
-    -   `DisplayResults`，會顯示每個 URL 的位元組陣列中的位元組數目。  
+    - `DisplayResults`，會顯示每個 URL 的位元組陣列中的位元組數目。  
   
      複製下列四種方法，然後再貼入下`startButton_Click`MainWindow.xaml.vb 中的事件處理常式：  
   
@@ -286,9 +286,9 @@ ms.locfileid: "59335897"
   
 3. 由於您在上一個步驟中加入 `Await` 運算子，所以發生編譯器錯誤。 運算子只能用於方法標記著[非同步](../../../../visual-basic/language-reference/modifiers/async.md)修飾詞。 當您重複轉換步驟以將對 `CopyTo` 的呼叫取代為對 `CopyToAsync` 的呼叫時，略過錯誤。  
   
-    -   變更方法的名稱，該方法會呼叫 <xref:System.IO.Stream.CopyToAsync%2A>。  
+    - 變更方法的名稱，該方法會呼叫 <xref:System.IO.Stream.CopyToAsync%2A>。  
   
-    -   `CopyTo` 或 `CopyToAsync` 方法會將位元組複製到其引數，`content`，並不會傳回有意義的值。 在同步版本中，呼叫 `CopyTo` 是簡單的陳述式，不會傳回值。 非同步版本，`CopyToAsync`，傳回 <xref:System.Threading.Tasks.Task>。 工作函式，例如 "Task(void)"，讓方法等候。 將 `Await` 或 `await` 套用至對 `CopyToAsync` 的呼叫，如下列程式碼所示。  
+    - `CopyTo` 或 `CopyToAsync` 方法會將位元組複製到其引數，`content`，並不會傳回有意義的值。 在同步版本中，呼叫 `CopyTo` 是簡單的陳述式，不會傳回值。 非同步版本，`CopyToAsync`，傳回 <xref:System.Threading.Tasks.Task>。 工作函式，例如 "Task(void)"，讓方法等候。 將 `Await` 或 `await` 套用至對 `CopyToAsync` 的呼叫，如下列程式碼所示。  
   
         ```vb  
         Await responseStream.CopyToAsync(content)  
@@ -317,9 +317,9 @@ ms.locfileid: "59335897"
   
      方法 `GetURLContents` 有 return 陳述式，陳述式會傳回位元組陣列。 因此，非同步版本的傳回類型是 Task(T)，其中 T 是位元組陣列。 在方法簽章中進行下列變更：  
   
-    -   將傳回型別變更為 `Task(Of Byte())`。  
+    - 將傳回型別變更為 `Task(Of Byte())`。  
   
-    -   依照慣例，非同步方法的名稱會以 "Async" 結尾，所以重新命名方法 `GetURLContentsAsync`。  
+    - 依照慣例，非同步方法的名稱會以 "Async" 結尾，所以重新命名方法 `GetURLContentsAsync`。  
   
      下列程式碼會顯示這些變更。  
   
@@ -334,9 +334,9 @@ ms.locfileid: "59335897"
   
 1. 針對 `SumPageSizes` 重複上述程序的步驟。 首先，將對 `GetURLContents` 的呼叫變更為非同步呼叫。  
   
-    -   如果您尚未這麼做，請變更方法的名稱，該方法是從 `GetURLContents` 呼叫至 `GetURLContentsAsync`。  
+    - 如果您尚未這麼做，請變更方法的名稱，該方法是從 `GetURLContents` 呼叫至 `GetURLContentsAsync`。  
   
-    -   將 `Await` 套用至工作，`GetURLContentsAsync` 會傳回該工作以取得位元組陣列值。  
+    - 將 `Await` 套用至工作，`GetURLContentsAsync` 會傳回該工作以取得位元組陣列值。  
   
      下列程式碼會顯示這些變更。  
   
@@ -355,11 +355,11 @@ ms.locfileid: "59335897"
   
 2. 在方法簽章中進行下列變更：  
   
-    -   以 `Async` 修飾詞來標示方法。  
+    - 以 `Async` 修飾詞來標示方法。  
   
-    -   將 "Async" 加入至方法名稱。  
+    - 將 "Async" 加入至方法名稱。  
   
-    -   這次沒有任何工作傳回變數，T，因為 `SumPageSizesAsync` 並未傳回 T 的值。(這個方法沒有任何 `Return` 陳述式)。不過，方法必須傳回 `Task` 才可以等候。 因此，變更方法類型從`Sub`至`Function`。 函式的傳回類型是 `Task`。  
+    - 這次沒有任何工作傳回變數，T，因為 `SumPageSizesAsync` 並未傳回 T 的值。(這個方法沒有任何 `Return` 陳述式)。不過，方法必須傳回 `Task` 才可以等候。 因此，變更方法類型從`Sub`至`Function`。 函式的傳回類型是 `Task`。  
   
      下列程式碼會顯示這些變更。  
   
@@ -422,9 +422,9 @@ ms.locfileid: "59335897"
   
 2. 類似同步方案的輸出應該會顯示。 但是，請注意下列差異。  
   
-    -   處理完成之後，結果不會同時發生。 例如，這兩個程式在 `startButton_Click` 中都包含程式碼行，會清除文字方塊。 此用意是在顯示一個結果集之後、二度選擇 [開始] 按鈕時，清除執行之間的文字方塊。 在同步版本中，當下載完成且 UI 執行緒可以執行其他工作時，會在第二次顯示計數之前，清除文字方塊。 在非同步版本中，會在您選擇 [開始] 按鈕之後，立即清除文字方塊。  
+    - 處理完成之後，結果不會同時發生。 例如，這兩個程式在 `startButton_Click` 中都包含程式碼行，會清除文字方塊。 此用意是在顯示一個結果集之後、二度選擇 [開始] 按鈕時，清除執行之間的文字方塊。 在同步版本中，當下載完成且 UI 執行緒可以執行其他工作時，會在第二次顯示計數之前，清除文字方塊。 在非同步版本中，會在您選擇 [開始] 按鈕之後，立即清除文字方塊。  
   
-    -   最重要的是，不會在下載期間封鎖 UI 執行緒。 您可以移動視窗或調整其大小，同時下載、計算及顯示 Web 資源。 如果其中一個網站變慢或沒有回應，您可以選擇 [關閉] 按鈕 (右上角紅色欄位中的 x)，取消作業。  
+    - 最重要的是，不會在下載期間封鎖 UI 執行緒。 您可以移動視窗或調整其大小，同時下載、計算及顯示 Web 資源。 如果其中一個網站變慢或沒有回應，您可以選擇 [關閉] 按鈕 (右上角紅色欄位中的 x)，取消作業。  
   
 ## <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
 ### <a name="GetURLContentsAsync"></a> 將方法 GetURLContentsAsync 取代為 .NET Framework 方法  

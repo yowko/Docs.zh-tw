@@ -3,11 +3,11 @@ title: <backupLists>
 ms.date: 03/30/2017
 ms.assetid: 593b3390-f65b-4684-ad40-0596b62f0954
 ms.openlocfilehash: 6e44dbe3c0966c6d243db343b9f9b0dec2480cb1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701069"
 ---
 # <a name="backuplists"></a>\<backupLists>
 代表組態區段，用於定義錯誤處理中使用的一組備份服務。 每個子項目是備份清單會列舉一組您希望路由服務在無法找到主要端點時使用的端點。 如果清單中的第一個端點關閉，路由服務將自動容錯移轉至清單中的下一個端點。  如此可提供您快速提升應用程式可靠性的方式，而不需教導用戶端應用程式如何處理複雜的模式以及部署所有服務的位置。  

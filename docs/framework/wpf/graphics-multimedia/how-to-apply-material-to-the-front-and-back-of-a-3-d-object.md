@@ -7,11 +7,11 @@ helpviewer_keywords:
 - classes [WPF], Material
 ms.assetid: d93c8ad6-4939-4d29-9544-4d16d98093c1
 ms.openlocfilehash: 1d3f6a0622b5e0ccccf14af99782bb78dfe87ccb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698952"
 ---
 # <a name="how-to-apply-material-to-the-front-and-back-of-a-3-d-object"></a>HOW TO：對立體物件的前後套用材質
 下列範例示範如何套用<xref:System.Windows.Media.Media3D.Material>前面和背面的 3d 物件，並建立要顯示物件的兩邊的物件的動畫。 <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A>屬性<xref:System.Windows.Media.Media3D.GeometryModel3D>可用來套用紅色<xref:System.Windows.Media.Brush>至物件的正面和<xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>屬性<xref:System.Windows.Media.Media3D.GeometryModel3D>可用來套用藍色<xref:System.Windows.Media.Brush>到後端的物件。 下列程式碼顯示將材質套用至物件：  

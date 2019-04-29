@@ -3,11 +3,11 @@ title: <httpListener> 項目 (網路設定)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
 ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705073"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener > 項目 （網路設定）
 自訂所使用的參數<xref:System.Net.HttpListener>類別。  
@@ -52,9 +52,9 @@ ms.locfileid: "59099738"
   
  `http.sys`服務會公開兩個要求的 URI 字串：  
   
--   原始 URI  
+- 原始 URI  
   
--   轉換的 URI  
+- 轉換的 URI  
   
  未經處理的 URI 是<xref:System.Uri?displayProperty=nameWithType>HTTP 要求的要求行中提供：  
   
@@ -72,11 +72,11 @@ ms.locfileid: "59099738"
   
  `http.sys`服務結合了<xref:System.Uri.Host%2A?displayProperty=nameWithType>屬性值，並建立轉換的 URI 要求行中的字串。 颾魤 ㄛ`http.sys`而<xref:System.Uri?displayProperty=nameWithType>類別也會進行下列作業：  
   
--   取消-逸出所有百分比編碼的值。  
+- 取消-逸出所有百分比編碼的值。  
   
--   將百分比編碼為 utf-16 字元表示法的非 ASCII 字元。 請注意，Unicode 字元 （Unicode 編碼使用 %uxxxx 格式） 以及支援 utf-8 和 ANSI/DBCS 字元。  
+- 將百分比編碼為 utf-16 字元表示法的非 ASCII 字元。 請注意，Unicode 字元 （Unicode 編碼使用 %uxxxx 格式） 以及支援 utf-8 和 ANSI/DBCS 字元。  
   
--   執行其他的正規化步驟，例如路徑壓縮。  
+- 執行其他的正規化步驟，例如路徑壓縮。  
   
  因為要求未包含任何百分比編碼的值使用的編碼方式相關資訊，它可能無法判斷正確的編碼方式，就只是藉由剖析的百分比編碼的值。  
   

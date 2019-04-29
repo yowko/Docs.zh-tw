@@ -9,11 +9,11 @@ ms.assetid: b6297c26-7624-4431-8af4-14112d07bcd5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d939063aaefb00d4db3de604df0dbd1b2175bf95
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698417"
 ---
 # <a name="debugging-interfaces"></a>偵錯介面
 本節說明 Unmanaged 介面，這類介面會處理通用語言執行平台 (CLR) 中所執行之程式的偵錯。  
@@ -29,8 +29,7 @@ ms.locfileid: "56981604"
  提供方法與目標 CLR 處理序互動。  
   
  [ICLRDataTarget2 介面](iclrdatatarget2-interface.md)\
- 
-  `ICLRDataTarget` 的子類別，資料存取服務層會使用它來管理目標處理序中的虛擬記憶體區域。  
+ `ICLRDataTarget` 的子類別，資料存取服務層會使用它來管理目標處理序中的虛擬記憶體區域。  
   
  [ICLRDataTarget3 介面](iclrdatatarget3-interface.md)\
  子類別[ICLRDataTarget2](iclrdatatarget2-interface.md)提供例外狀況資訊的存取權。  
@@ -81,8 +80,7 @@ ms.locfileid: "56981604"
  提供列舉值，取得一份[CorDebugBlockingObject](cordebugblockingobject-structure.md)結構。  
   
  [ICorDebugBoxValue 介面](icordebugboxvalue-interface.md)\
- 
-  `ICorDebugHeapValue` 的子類別，表示 Boxed 值的類別物件。  
+ `ICorDebugHeapValue` 的子類別，表示 Boxed 值的類別物件。  
   
  [ICorDebugBreakpoint 介面](icordebugbreakpoint-interface.md)\
  表示函式中的中斷點，或是某個值上的監看點。  
@@ -193,8 +191,7 @@ ms.locfileid: "56981604"
  為對應 GUID 和其相應 `ICorDebugType` 物件的物件提供列舉值。  
   
  [ICorDebugHandleValue 介面](icordebughandlevalue-interface.md)\
- 
-  `ICorDebugReferenceValue` 的子類別，表示偵錯工具已建立記憶體回收控制代碼的參考值。  
+ `ICorDebugReferenceValue` 的子類別，表示偵錯工具已建立記憶體回收控制代碼的參考值。  
   
  [ICorDebugHeapEnum 介面](icordebugheapenum-interface.md)\
  為 Managed 堆積上的物件提供列舉值。  
@@ -203,12 +200,10 @@ ms.locfileid: "56981604"
  為 Managed 堆積的記憶體區域提供列舉值。  
   
  [ICorDebugHeapValue 介面](icordebugheapvalue-interface.md)\
- 
-  `ICorDebugValue` 的子類別，表示 CLR 記憶體回收行程所回收的物件。  
+ `ICorDebugValue` 的子類別，表示 CLR 記憶體回收行程所回收的物件。  
   
  [ICorDebugHeapValue2 介面](icordebugheapvalue2-interface1.md)\
- 
-  `ICorDebugHeapValue` 的擴充，其支援執行階段控制代碼。  
+ `ICorDebugHeapValue` 的擴充，其支援執行階段控制代碼。  
   
  [ICorDebugHeapValue3 介面](icordebugheapvalue3-interface.md)\
  公開物件的監視器鎖定屬性。  
@@ -223,8 +218,7 @@ ms.locfileid: "56981604"
  表示 MSIL 程式碼的堆疊框架。  
   
  [ICorDebugILFrame2 介面](icordebugilframe2-interface.md)\
- 
-  `ICorDebugILFrame` 的邏輯擴充。  
+ `ICorDebugILFrame` 的邏輯擴充。  
   
  [ICorDebugILFrame3 介面](icordebugilframe3-interface.md)\
  提供封裝函式傳回值的方法。  
@@ -296,8 +290,7 @@ ms.locfileid: "56981604"
  實作 `ICorDebugEnum` 方法，並根據物件陣列的相對虛擬位址 (RVA) 來列舉物件陣列。  
   
  [ICorDebugObjectValue 介面](icordebugobjectvalue-interface.md)\
- 
-  `ICorDebugValue` 的子類別，表示包含物件的值。  
+ `ICorDebugValue` 的子類別，表示包含物件的值。  
   
  [ICorDebugObjectValue2 介面](icordebugobjectvalue2-interface.md)\
  擴充 `ICorDebugObjectValue` 來支援繼承和覆寫。  
@@ -306,8 +299,7 @@ ms.locfileid: "56981604"
  表示執行 Managed 程式碼的處理序。  
   
  [ICorDebugProcess2 介面](icordebugprocess2-interface1.md)\
- 
-  `ICorDebugProcess` 的邏輯擴充。  
+ `ICorDebugProcess` 的邏輯擴充。  
   
  [ICorDebugProcess3 介面](icordebugprocess3-interface.md)\
  控制自訂偵錯工具通知。
@@ -373,8 +365,7 @@ ms.locfileid: "56981604"
  以邏輯方式擴充[ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)來擷取其他偵錯符號資訊的介面。 **適用於僅限.NET Native。**  
   
  [ICorDebugThread 介面](icordebugthread-interface.md)\
- 表示處理序中的執行緒。 
-  `ICorDebugThread` 執行個體的存留期與其所表示的執行緒之存留期相同。  
+ 表示處理序中的執行緒。 `ICorDebugThread` 執行個體的存留期與其所表示的執行緒之存留期相同。  
   
  [ICorDebugThread2 介面](icordebugthread2-interface.md)\
  當做 `ICorDebugThread` 的邏輯擴充。  

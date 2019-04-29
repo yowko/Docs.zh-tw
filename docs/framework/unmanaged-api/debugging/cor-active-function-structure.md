@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c0400da0cd29d642a1be42be7e2b22213ae54b94
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609656"
 ---
 # <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION 結構
 包含目前執行緒框架中正在作用的函式相關資訊。 此結構由[ICorDebugThread2::GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md)方法。  

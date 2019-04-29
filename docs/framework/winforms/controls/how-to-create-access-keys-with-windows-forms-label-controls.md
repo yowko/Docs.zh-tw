@@ -18,11 +18,11 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
 ms.openlocfilehash: ffe4bf6fb29e82b04938e2ba9a2d9d21e5eabcde
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747104"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>HOW TO：使用 Windows Forms Label 控制項建立便捷鍵
 Windows Form<xref:System.Windows.Forms.Label>控制項可以用來定義其他控制項的便捷鍵。 當您在標籤控制項中定義的存取金鑰時，使用者可以按 ALT 鍵加上您指定要將焦點移至之控制項的定位順序中接在後面的字元。 因為標籤不會收到焦點，焦點就會自動移至定位順序中的下一個控制項中。 您可以使用這項技術，將文字方塊、 下拉式方塊、 清單方塊和資料格的存取金鑰。  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
 ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785849"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>HOW TO：使用背景執行緒搜尋檔案
 <xref:System.ComponentModel.BackgroundWorker>元件會取代並且將功能加入<xref:System.Threading>命名空間; 然而，<xref:System.Threading>命名空間會保留回溯相容性和未來使用，如果您選擇。 如需詳細資訊，請參閱 < [BackgroundWorker 元件概觀](backgroundworker-component-overview.md)。  
@@ -28,13 +28,13 @@ ms.locfileid: "59157732"
   
  下列範例 (`DirectorySearcher`) 顯示多執行緒的 Windows Form 控制項背景執行緒以遞迴方式搜尋目錄以用於符合指定的搜尋字串的檔案，然後填入清單方塊中的，搜尋結果。 此範例所說明的重要概念如下所示：  
   
--   `DirectorySearcher` 啟動新的執行緒來執行搜尋。 執行緒會執行`ThreadProcedure`接著會呼叫 helper 方法`RecurseDirectory`方法以執行實際搜尋，並填入清單方塊。 不過，填入清單方塊需要跨執行緒呼叫時下, 面兩個項目符號項目中所述。  
+- `DirectorySearcher` 啟動新的執行緒來執行搜尋。 執行緒會執行`ThreadProcedure`接著會呼叫 helper 方法`RecurseDirectory`方法以執行實際搜尋，並填入清單方塊。 不過，填入清單方塊需要跨執行緒呼叫時下, 面兩個項目符號項目中所述。  
   
--   `DirectorySearcher` 定義`AddFiles`方法，以將檔案新增至清單方塊中，不過，`RecurseDirectory`不能直接叫用`AddFiles`因為`AddFiles`只能建立在 STA 執行緒可以執行`DirectorySearcher`。  
+- `DirectorySearcher` 定義`AddFiles`方法，以將檔案新增至清單方塊中，不過，`RecurseDirectory`不能直接叫用`AddFiles`因為`AddFiles`只能建立在 STA 執行緒可以執行`DirectorySearcher`。  
   
--   唯有`RecurseDirectory`可以呼叫`AddFiles`是透過跨執行緒呼叫 — 也就藉由呼叫<xref:System.Windows.Forms.Control.Invoke%2A>或<xref:System.Windows.Forms.Control.BeginInvoke%2A>封送處理`AddFiles`建立執行緒`DirectorySearcher`。 `RecurseDirectory` 使用<xref:System.Windows.Forms.Control.BeginInvoke%2A>，以便可以非同步方式進行呼叫。  
+- 唯有`RecurseDirectory`可以呼叫`AddFiles`是透過跨執行緒呼叫 — 也就藉由呼叫<xref:System.Windows.Forms.Control.Invoke%2A>或<xref:System.Windows.Forms.Control.BeginInvoke%2A>封送處理`AddFiles`建立執行緒`DirectorySearcher`。 `RecurseDirectory` 使用<xref:System.Windows.Forms.Control.BeginInvoke%2A>，以便可以非同步方式進行呼叫。  
   
--   封送處理方法需要相當於函式指標或回呼。 這是在.NET Framework 中使用委派。 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 會接受委派做為引數。 `DirectorySearcher` 因此定義的委派 (`FileListDelegate`)，將繫結`AddFiles`的執行個體`FileListDelegate`在其建構函式，並傳遞此委派執行個體<xref:System.Windows.Forms.Control.BeginInvoke%2A>。 `DirectorySearcher` 也會定義當搜尋完成時，封送處理的事件委派。  
+- 封送處理方法需要相當於函式指標或回呼。 這是在.NET Framework 中使用委派。 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 會接受委派做為引數。 `DirectorySearcher` 因此定義的委派 (`FileListDelegate`)，將繫結`AddFiles`的執行個體`FileListDelegate`在其建構函式，並傳遞此委派執行個體<xref:System.Windows.Forms.Control.BeginInvoke%2A>。 `DirectorySearcher` 也會定義當搜尋完成時，封送處理的事件委派。  
   
 ```vb  
 Option Strict  

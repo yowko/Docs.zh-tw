@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0d4a7f41-c758-4059-8f83-d2e9c2745593
 ms.openlocfilehash: 2133ae7902cc4746e00be75e7a801296073041e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614280"
 ---
 # <a name="query-expression-syntax-examples-navigating-relationships"></a>查詢運算式語法範例：巡覽關聯性
 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 中的導覽屬性是用來尋找位於關聯兩端之實體的捷徑屬性。 導覽屬性可讓使用者在不同實體之間巡覽，或是透過關聯集從某個實體巡覽至相關的實體。 本主題提供的查詢運算式語法範例將說明如何透過 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢中的導覽屬性來巡覽關聯性。  

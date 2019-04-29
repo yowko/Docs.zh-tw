@@ -3,11 +3,11 @@ title: <scopedCertificates> 項目
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
 ms.openlocfilehash: 73e78a6ca27ed45e1eadc7121987b75f79bc6aa5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670634"
 ---
 # <a name="scopedcertificates-element"></a>\<scopedCertificates > 項目
 表示特定服務 (範圍服務) 為驗證所提供之 X.509 憑證的集合。 這個集合通常用來指定聯合案例中安全性權杖服務的服務憑證。  

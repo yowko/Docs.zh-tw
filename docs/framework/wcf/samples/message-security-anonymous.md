@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
 ms.openlocfilehash: fe248c6fcb9db80b0ab8f62cc78a480e70803633
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756035"
 ---
 # <a name="message-security-anonymous"></a>訊息安全性匿名
 訊息安全性匿名範例示範如何實作 Windows Communication Foundation (WCF) 應用程式所使用的訊息層級安全性沒有用戶端驗證，但需要使用伺服器的 X.509 伺服器驗證憑證。 用戶端與伺服器之間的所有應用程式訊息都會經過簽署及加密。 此樣本根據[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)範例。 這個範例是由用戶端主控台程式 (.exe) 和網際網路資訊服務 (IIS) 所裝載的服務程式庫 (.dll) 所組成。 服務會實作定義要求-回覆通訊模式的合約。
@@ -148,7 +148,7 @@ Press <ENTER> to terminate client.
 
  下面會提供批次檔之不同區段的簡短概觀。
 
--   建立伺服器憑證。
+- 建立伺服器憑證。
 
      下列 Setup.bat 批次檔中的程式行會建立要使用的伺服器憑證。
 
@@ -164,7 +164,7 @@ Press <ENTER> to terminate client.
 
      %SERVER_NAME% 變數會指定伺服器名稱。 憑證是儲存在 LocalMachine 存放區中。 如果使用 service 引數執行安裝批次檔 (例如 `setup.bat service`)，%SERVER_NAME% 就會包含電腦的完整網域名稱。 否則，預設為 localhost。
 
--   將伺服器憑證安裝至用戶端的受信任憑證存放區中。
+- 將伺服器憑證安裝至用戶端的受信任憑證存放區中。
 
      下列程式行會將伺服器憑證複製到用戶端受信任人的存放區中。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證的步驟。
 
@@ -172,7 +172,7 @@ Press <ENTER> to terminate client.
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   授與憑證私密金鑰的權限。
+- 授與憑證私密金鑰的權限。
 
      在 Setup.bat 批次檔中的下列程式行，會讓儲存在 LocalMachine 存放區的伺服器憑證可由 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 背景工作處理序帳戶存取。
 
@@ -234,7 +234,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
--   當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
+- 當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
 > [!NOTE]
 >  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 Windows Communication Foundation (WCF) 範例，請務必清除已安裝在 CurrentUser-TrustedPeople 存放區的服務憑證。 若要這樣做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`

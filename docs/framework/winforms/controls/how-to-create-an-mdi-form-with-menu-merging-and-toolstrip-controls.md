@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 ms.assetid: 64992ed9-44af-4baf-b45f-863e6ab35711
 ms.openlocfilehash: a67298614b1985152c42577de14d2c5d295f672f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746611"
 ---
 # <a name="how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>HOW TO：建立具有功能表合併和 ToolStrip 控制項的 MDI 表單
 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空間支援多重文件介面 (MDI) 應用程式，而 <xref:System.Windows.Forms.MenuStrip> 控制項則支援功能表合併。 MDI 表單也可以由 <xref:System.Windows.Forms.ToolStrip> 控制項建立。  
@@ -33,7 +33,7 @@ ms.locfileid: "59157518"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個程式碼範例需要：  
   
--   System.Drawing 和 System.Windows.Forms 組件的參考。  
+- System.Drawing 和 System.Windows.Forms 組件的參考。  
   
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   

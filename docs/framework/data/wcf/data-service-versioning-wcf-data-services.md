@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
 ms.openlocfilehash: 818495cd2f7100f416280ce019321fed3f26aee8
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765735"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>資料服務版本控制 (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]可讓您建立資料服務，讓用戶端可以存取資料，為使用 Uri 以資料模型為基礎的資源。 OData 也支援服務作業的定義。 初始部署並在其存留期期間潛在進行數次之後，可能會因為各種原因而需要變更這些資料服務 (例如變更商務需要、資訊技術需求) 或處理其他問題。 當您針對現有的資料服務進行變更時，必須考慮是否要定義新的資料服務版本，以及如何妥善地將對於現有用戶端應用程式的影響降至最低。 本主題提供建立新資料服務版本時機和方式的指引。 它也會描述 WCF Data Services 的用戶端和支援的 OData 通訊協定的不同版本的資料服務之間交換的處理方式。
@@ -22,9 +22,9 @@ ms.locfileid: "56092913"
 ### <a name="data-model-changes-that-recommend-a-new-data-service-version"></a>建議新資料服務版本的資料模型變更
  考慮是否要發行新資料服務版本時，最好先了解不同種類的變更影響用戶端應用程式的方式。 對於可能要求您建立新資料服務版本之資料服務的變更可分成下列兩種類別：
 
--   對於服務合約的變更—其中包括服務作業的更新、對於實體集 (摘要) 存取範圍的變更、版本變更，以及對於服務行為的其他變更。
+- 對於服務合約的變更—其中包括服務作業的更新、對於實體集 (摘要) 存取範圍的變更、版本變更，以及對於服務行為的其他變更。
 
--   對於資料合約的變更—其中包括對於資料模型、摘要格式或摘要自訂的變更。
+- 對於資料合約的變更—其中包括對於資料模型、摘要格式或摘要自訂的變更。
 
  下表詳細說明您應該考慮發行新資料服務版本的哪些變更種類：
 
@@ -44,9 +44,9 @@ ms.locfileid: "56092913"
 ### <a name="how-to-version-a-data-service"></a>如何進行資料服務的版本控制
  必要時，您可以使用更新的服務合約或資料模型建立新的服務執行個體，藉以定義新的資料服務版本。 接著，您要使用新的 URI 端點公開這個新服務，以區別舊版本。 例如：
 
--   舊版本：`http://services.odata.org/Northwind/v1/Northwind.svc/`
+- 舊版本：`http://services.odata.org/Northwind/v1/Northwind.svc/`
 
--   新版本：`http://services.odata.org/Northwind/v2/Northwind.svc/`
+- 新版本：`http://services.odata.org/Northwind/v2/Northwind.svc/`
 
  升級資料服務時，用戶端也需要根據新的資料服務中繼資料進行更新，並使用新的根 URI。 如果可能，您應該維護資料服務的舊版本，以支援尚未進行升級以使用新版本的用戶端。 不再需要舊版本的資料服務時，可以將其移除。 您應該考慮在外部組態檔中維護資料服務端點 URI。
 

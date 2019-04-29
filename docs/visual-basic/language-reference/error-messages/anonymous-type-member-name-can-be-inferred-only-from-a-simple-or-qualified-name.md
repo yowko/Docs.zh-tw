@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36556
 ms.assetid: e3ba1f33-3a71-4f03-9b04-ed5ec17de17c
 ms.openlocfilehash: b798f296b62b51de34a7ec5ce5a8b608273f5748
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751523"
 ---
 # <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>只能從不含引數的簡單或限定名稱來推斷匿名類型成員名稱
 您無法推斷匿名類型成員名稱，從複雜的運算式。  
@@ -29,7 +29,7 @@ Dim numbers() As Integer = {1, 2, 3, 4, 5}
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   為成員的名稱，指派運算式，如下列程式碼所示：  
+- 為成員的名稱，指派運算式，如下列程式碼所示：  
   
     ```  
     Dim instanceName2 = New With {.number = numbers(3)}  

@@ -3,11 +3,11 @@ title: 效能考量
 ms.date: 03/30/2017
 ms.assetid: 83082d4a-7350-4b04-ab2d-1fa5ffd643f5
 ms.openlocfilehash: 46e5b5c392ff3a0d401bb709b21637b3d2e784ab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650501"
 ---
 # <a name="performance-considerations"></a>效能考量
 建置應用程式時，效能是很重要的考量。 本章節包含與效能和安全性相關的項目。  

@@ -3,11 +3,11 @@ title: HOW TO：尋找具有特定屬性 (XPATH-LINQ to XML) 項目 (Visual Basi
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
 ms.openlocfilehash: 17c5e9abf607df7311ff2552b7e9c54cbf30fd59
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780480"
 ---
 # <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>HOW TO：尋找具有特定屬性 (XPATH-LINQ to XML) 項目 (Visual Basic)
 有時候您會想要尋找具有特定屬性的所有項目。 您並不關心屬性的內容。 但是，您想要根據屬性的存在與否來選擇。  

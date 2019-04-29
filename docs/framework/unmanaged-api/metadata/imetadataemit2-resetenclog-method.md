@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bae4dccacfa092243c7e0b1a2e6daad92b51d933
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937081"
 ---
 # <a name="imetadataemit2resetenclog-method"></a>IMetaDataEmit2::ResetENCLog 方法
 重設的編輯後繼續的記錄檔，並啟動新的工作階段。  

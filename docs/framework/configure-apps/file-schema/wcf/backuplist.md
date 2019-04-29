@@ -3,11 +3,11 @@ title: <backupList>
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
 ms.openlocfilehash: b0a6c604b5741c1355c35fca510cd10544dab9f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704423"
 ---
 # <a name="backuplist"></a>\<backupList>
 代表定義備份清單會列舉一組您希望路由服務在無法找到主要端點時使用的端點組態區段。 如果清單中的第一個端點關閉，路由服務將自動容錯移轉至清單中的下一個端點。  如此可提供您快速提升應用程式可靠性的方式，而不需教導用戶端應用程式如何處理複雜的模式以及部署所有服務的位置。  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: KrzysztofCwalina
 ms.openlocfilehash: 5a0f6e0fab5d0f2fe8574e348fc6b8ae726eeb99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757400"
 ---
 # <a name="parameter-design"></a>參數設計
 本章節會提供廣泛的指導方針，在參數的設計，包括各節來檢查引數的指導方針。 此外，您應該參閱中所述的指導方針[命名的參數](../../../docs/standard/design-guidelines/naming-parameters.md)。  
@@ -69,7 +69,7 @@ ms.locfileid: "54617209"
 ### <a name="parameter-passing"></a>參數傳遞  
  從架構設計師的觀點來看，有三個參數的主要群組： 藉由值參數`ref`參數，和`out`參數。  
   
- 透過傳值參數傳遞的引數時，該成員就會收到一份在傳遞的實際引數。 如果引數是實值型別，會將引數的複本放在堆疊上。 如果引數是參考型別，參考的複本放在堆疊上。 最受歡迎 CLR 語言，例如 C#、 VB.NET 和 c + +，以傳值方式傳遞參數的預設值。  
+ 透過傳值參數傳遞的引數時，該成員就會收到一份在傳遞的實際引數。 如果引數是實值型別，會將引數的複本放在堆疊上。 如果引數是參考型別，參考的複本放在堆疊上。 最受歡迎的 CLR 語言，例如C#、 VB.NET，和C++，以傳值方式傳遞參數的預設值。  
   
  引數傳遞時`ref`參數，該成員收到傳入的實質引數的參考。 引數是實值型別，引數的參考會放在堆疊上。 引數是參考型別，參考的參考會放在堆疊上。 `Ref` 參數可用來允許修改由呼叫端傳遞的引數的成員。  
   
@@ -138,7 +138,7 @@ public class String {
   
  **X DO NOT** 使用 `varargs` 方法，否則會以省略符號。  
   
- 某些 CLR 語言，例如 c + + 支援替代的慣例來傳遞呼叫的變數參數清單`varargs`方法。 慣例不應在架構，因為它不符合 CLS 標準。  
+ 某些 CLR 語言，例如C++，支援替代的慣例傳遞呼叫的變數參數清單`varargs`方法。 慣例不應在架構，因為它不符合 CLS 標準。  
   
 ### <a name="pointer-parameters"></a>指標參數  
  一般情況下，指標不應該出現在設計良好的 managed 程式碼架構的公用表面區域。 大部分的情況下，應該封裝的指標。 不過，在某些情況下，指標所需的互通性考量，並且適合在此情況下使用指標。  

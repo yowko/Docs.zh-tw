@@ -10,10 +10,10 @@ helpviewer_keywords:
 ms.assetid: ad04a801-5682-4d88-92c5-26eb9cdb209a
 ms.openlocfilehash: 6bb9b4f30a88ece93b17ff2510087b220d538738
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757647"
 ---
 # <a name="power-management-in-windows-forms"></a>Windows Form 中的電源管理
 Windows Forms 應用程式可以利用電源管理功能的 Windows 作業系統中。 您的應用程式可以監視電腦的電源狀態，並採取動作，發生狀態變更時。 比方說，如果您的應用程式正在執行的可攜式電腦上，您可能要停用您的應用程式中的特定功能，當電腦的電池電力低於特定層級。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
 ms.openlocfilehash: 9d3956c10467e80f370188138d6c50b39986ba76
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723000"
 ---
 # <a name="menustrip-control-windows-forms"></a>MenuStrip 控制項 (Windows Form)
 此控制項會將應用程式的命令分組，並使其容易存取。  
@@ -55,19 +55,19 @@ ms.locfileid: "57707582"
  [如何：設定 MDI 應用程式的自動功能表合併](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
  描述如何在執行階段自動合併功能表項目。  
   
--   [MenuStrip 項目集合編輯器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
+- [MenuStrip 項目集合編輯器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [如何：複製 ToolStripMenuItems](how-to-copy-toolstripmenuitems.md)  
+- [如何：複製 ToolStripMenuItems](how-to-copy-toolstripmenuitems.md)  
   
--   [如何：使用設計工具隱藏 ToolStripMenuItems](how-to-hide-toolstripmenuitems-using-the-designer.md)  
+- [如何：使用設計工具隱藏 ToolStripMenuItems](how-to-hide-toolstripmenuitems-using-the-designer.md)  
   
--   [如何：使用設計工具停用 ToolStripMenuItems](how-to-disable-toolstripmenuitems-using-the-designer.md)  
+- [如何：使用設計工具停用 ToolStripMenuItems](how-to-disable-toolstripmenuitems-using-the-designer.md)  
   
--   [如何：移動 ToolStripMenuItems](how-to-move-toolstripmenuitems.md)  
+- [如何：移動 ToolStripMenuItems](how-to-move-toolstripmenuitems.md)  
   
--   [逐步解說：對表單提供標準功能表項目](walkthrough-providing-standard-menu-items-to-a-form.md)  
+- [逐步解說：對表單提供標準功能表項目](walkthrough-providing-standard-menu-items-to-a-form.md)  
   
--   [MenuStrip 工作對話方塊](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
+- [MenuStrip 工作對話方塊](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.MenuStrip>  

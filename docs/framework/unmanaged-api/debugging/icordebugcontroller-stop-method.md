@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 724db8c5c8dbb5bf3ff8bc7202a60397180b7b38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749057"
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop 方法
 在此程序中執行 managed 程式碼的所有執行緒上執行合作式的停駐點。  

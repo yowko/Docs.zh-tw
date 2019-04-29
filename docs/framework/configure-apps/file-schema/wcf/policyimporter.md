@@ -3,11 +3,11 @@ title: <policyImporter>
 ms.date: 03/30/2017
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
 ms.openlocfilehash: 81f38d2a163163ca7255ca546bbddbbb58fa3a1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783175"
 ---
 # <a name="policyimporter"></a>\<policyImporter>
 指定原則匯入工具，此工具會控制匯入有關繫結的自訂原則判斷提示 (Assertion)。  

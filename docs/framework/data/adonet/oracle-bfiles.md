@@ -3,11 +3,11 @@ title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
 ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771965"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
 Oracle 的 .NET Framework 資料提供者包括 <xref:System.Data.OracleClient.OracleBFile> 類別，可用來與 Oracle <xref:System.Data.OracleClient.OracleType.BFile> 資料型別搭配使用。  
@@ -16,11 +16,11 @@ Oracle 的 .NET Framework 資料提供者包括 <xref:System.Data.OracleClient.O
   
  其他特性**BFILE**資料類型，使其有別**LOB**資料類型包括：  
   
--   包含非結構化資料。  
+- 包含非結構化資料。  
   
--   支援伺服器端區塊。  
+- 支援伺服器端區塊。  
   
--   使用參考複製語意。 例如，如果您在執行複製作業**BFILE**，則僅**BFILE**複製 （也就是檔案的參考） 的定位器。 而不會複製檔案中的資料。  
+- 使用參考複製語意。 例如，如果您在執行複製作業**BFILE**，則僅**BFILE**複製 （也就是檔案的參考） 的定位器。 而不會複製檔案中的資料。  
   
  **BFILE**資料類型應該用於參考中的大型的 Lob，因此，不實際儲存在資料庫中。 使用時，會牽涉到更多的用戶端、 伺服器及通訊額外負荷**BFILE**相較於資料類型**LOB**資料型別。 若要存取更有效率**BFILE**如果您只需要取得少量的資料。 如果您需要取得整個物件，則存取常駐於資料庫的 LOB 會更有效率。  
   

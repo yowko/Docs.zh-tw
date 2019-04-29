@@ -3,11 +3,11 @@ title: 編譯器選項
 description: 使用F#編譯器的命令列選項，以控制編譯您F#應用程式和程式庫。
 ms.date: 12/10/2018
 ms.openlocfilehash: fa639fe37ed336ad9f990e01bf2645c5a86498e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766086"
 ---
 # <a name="compiler-options"></a>編譯器選項
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f4d86667-3392-470d-a076-5ca6cbb660f6
 ms.openlocfilehash: c0bc66bfe78a52fe092890c070c339df1a89199d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637670"
 ---
 # <a name="query-expression-syntax-examples-join-operators-linq-to-dataset"></a>查詢運算式語法範例：聯結運算子 (LINQ to DataSet)
 在以彼此沒有可瀏覽關聯性之資料來源 (例如關聯式資料庫資料表) 為目標的查詢中，聯結 (Join) 是一項重要的作業。 兩個資料來源的聯結是指某個資料來源中的物件與另一個資料來源中共用相同屬性之物件的關聯。 如需詳細資訊，請參閱 <<c0> [ 標準查詢運算子概觀 (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)或是[標準查詢運算子概觀 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。</c0>  

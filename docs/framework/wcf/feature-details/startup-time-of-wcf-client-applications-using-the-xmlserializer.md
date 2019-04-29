@@ -3,11 +3,11 @@ title: HOW TO：使用 XmlSerializer 改善 WCF 用戶端應用程式的啟動�
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
 ms.openlocfilehash: b6f010cb5edc3111f05c78f5d27cf178bd501ef9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747624"
 ---
 # <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>HOW TO：使用 XmlSerializer 改善 WCF 用戶端應用程式的啟動時間
 使用資料型別 (可使用 <xref:System.Xml.Serialization.XmlSerializer> 加以序列化) 的服務和用戶端應用程式會在執行階段針對這些資料型別產生和編譯序列化程式碼，這可能會導致啟動的效能變慢。  
@@ -37,11 +37,11 @@ ms.locfileid: "59326420"
   
 4. 使用下列其中一個選項，將產生的序列化程式碼提供給應用程式使用：  
   
-    1.  產生的序列化程式碼編譯成名稱的不同組件 [*原始組件*].Xmlserializers.dll (例如，MyApp.XmlSerializers.dll)。 您的應用程式必須能夠載入這個組件，而這個組件必須使用與原始組件相同的金鑰來簽署。 如果要重新編譯原始組件，則必須重新產生序列化組件。  
+    1. 產生的序列化程式碼編譯成名稱的不同組件 [*原始組件*].Xmlserializers.dll (例如，MyApp.XmlSerializers.dll)。 您的應用程式必須能夠載入這個組件，而這個組件必須使用與原始組件相同的金鑰來簽署。 如果要重新編譯原始組件，則必須重新產生序列化組件。  
   
-    2.  將產生的序列化程式碼編譯至不同的組件，並使用可使用 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> 的服務合約上的 <xref:System.ServiceModel.XmlSerializerFormatAttribute>。 將 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> 或 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> 屬性設定為指向已編譯的序列化組件。  
+    2. 將產生的序列化程式碼編譯至不同的組件，並使用可使用 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> 的服務合約上的 <xref:System.ServiceModel.XmlSerializerFormatAttribute>。 將 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> 或 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> 屬性設定為指向已編譯的序列化組件。  
   
-    3.  將產生的序列化程式碼編譯至應用程式組件，並將 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> 加入至可使用 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 的服務合約。 請勿設定 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> 或 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> 屬性。 預設的序列化組件會假設為目前的組件。  
+    3. 將產生的序列化程式碼編譯至應用程式組件，並將 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> 加入至可使用 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 的服務合約。 請勿設定 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> 或 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> 屬性。 預設的序列化組件會假設為目前的組件。  
   
 ### <a name="to-generate-xmlserializer-serialization-code-in-visual-studio"></a>若要在 Visual Studio 中產生 XmlSerializer 序列化程式碼  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - container tags, <configuration> element
 ms.assetid: 2ec1c9dc-2e5c-4ef0-9958-81670ab88449
 ms.openlocfilehash: 9a7b25c74763c020c0e19c3f6099db9001acf773
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705411"
 ---
 # <a name="configuration-element"></a>\<組態 > 項目
 
@@ -31,11 +31,11 @@ ms.locfileid: "55675045"
 
 ## <a name="attributes"></a>屬性
 
-無
+None
 
 ## <a name="parent-element"></a>父項目
 
-無
+None
 
 ## <a name="child-elements"></a>子元素
 

@@ -3,11 +3,11 @@ title: 工作流程服務
 ms.date: 03/30/2017
 ms.assetid: 7b05c766-f181-425d-9a3d-2a5e150c85f7
 ms.openlocfilehash: e7295041fe4b17e7e2b1560704badf20992d4b92
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929697"
 ---
 # <a name="workflow-services"></a>工作流程服務
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 可讓您在 XAML 中以宣告方式完整描述以工作流程為基礎的服務。 您可以定義實作服務的工作流程並且描述服務所公開的端點，這些作業都可在 XAML 中完成。 本節中的主題會詳細說明，可支援以宣告方式撰寫服務的程式設計模型。  
@@ -19,7 +19,7 @@ ms.locfileid: "47397237"
  [傳訊活動](../../../../docs/framework/wcf/feature-details/messaging-activities.md)  
  討論可讓工作流程傳送和接收訊息的活動。  
   
- [如何：使用傳訊活動建立工作流程服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
+ [如何：搭配訊息活動建立工作流程服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
  說明如何使用訊息活動建立工作流程服務。  
   
  [如何：從工作流程應用程式存取服務](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)  

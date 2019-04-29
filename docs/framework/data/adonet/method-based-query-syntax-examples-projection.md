@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0fc2c8f0-1967-4f30-8b20-39b8dccfb82f
 ms.openlocfilehash: 3b35fcfe2a713b18b25c30690ef012848898b8e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772189"
 ---
 # <a name="method-based-query-syntax-examples-projection-linq-to-dataset"></a>以方法為基礎的查詢語法範例：投影 (LINQ to DataSet)
 此主題中的範例將示範如何使用 <xref:System.Linq.Enumerable.Select%2A> 和 <xref:System.Linq.Enumerable.SelectMany%2A> 方法並搭配以方法為基礎的查詢語法來查詢 <xref:System.Data.DataSet>。  

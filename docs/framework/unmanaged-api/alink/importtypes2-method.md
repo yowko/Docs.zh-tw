@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f14822a58f3982d6f9fee1328c10b960657c056f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753500"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2 方法
 會起始匯入的類型。 呼叫這個方法，以開始匯入類型，從透過匯入每個領域[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)。  

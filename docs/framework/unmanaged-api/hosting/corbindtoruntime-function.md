@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eb5c05a88c12b5124c77b0d0a7f834b405dd289f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697416"
 ---
 # <a name="corbindtoruntime-function"></a>CorBindToRuntime 函式
 可讓 unmanaged 主應用程式將 common language runtime (CLR) 載入程序。  
@@ -77,9 +77,9 @@ HRESULT CorBindToRuntime (
   
 2. 藉由處理程序的預設模式變更為 「 第 1 版相容性模式中，其中<xref:System.Security.Principal.WindowsIdentity>物件不會流經任何非同步點，無論<xref:System.Threading.ExecutionContext>目前執行緒上的設定。 您要如何變更預設的模式取決於您是使用 managed 可執行檔或未受管理的裝載介面載入 CLR:  
   
-    1.  受管理的可執行檔，您必須設定`enabled`的屬性[ \<legacyImpersonationPolicy >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)項目`true`。  
+    1. 受管理的可執行檔，您必須設定`enabled`的屬性[ \<legacyImpersonationPolicy >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)項目`true`。  
   
-    2.  Unmanaged 裝載介面，設定`STARTUP_LEGACY_IMPERSONATION`中的旗標`flags`參數呼叫時`CorBindToRuntimeEx`函式。  
+    2. Unmanaged 裝載介面，設定`STARTUP_LEGACY_IMPERSONATION`中的旗標`flags`參數呼叫時`CorBindToRuntimeEx`函式。  
   
      第 1 版相容性模式適用於整個程序和程序中的所有應用程式定義域。  
   

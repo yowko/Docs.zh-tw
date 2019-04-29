@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
 ms.openlocfilehash: 548e374fbabee57e756d06e5cb56a59f8e97a47c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756269"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>使用 DataAdapter 更新資料來源
 呼叫 `Update` 的 <xref:System.Data.Common.DataAdapter> 方法，可將 <xref:System.Data.DataSet> 的變更解析回資料來源。 `Update` 方法類似 `Fill` 方法，會將 `DataSet` 的執行個體以及選擇性 (Optional) <xref:System.Data.DataTable> 物件或 `DataTable` 名稱做為引數。 `DataSet` 執行個體是包含已進行之變更的 `DataSet`，而 `DataTable` 則識別要從中擷取變更的資料表。 如果沒有指定任何 `DataTable`，就會使用 `DataTable` 中的第一個 `DataSet`。  
@@ -98,13 +98,13 @@ adapter.Update(table.Select(null, null, DataViewRowState.Added));
 ## <a name="use-a-dataadapter-to-retrieve-and-update-data"></a>使用 DataAdapter 擷取和更新資料  
  您可以使用 DataAdapter 擷取和更新資料。  
   
--   範例會使用 DataAdapter.AcceptChangesDuringFill 複製資料庫中的資料。 如果屬性設為 false，填入資料表時就不會呼叫 AcceptChanges，並會將新加入的資料列視為插入的資料列。 因此，範例會使用這些資料列，將新資料列插入資料庫。  
+- 範例會使用 DataAdapter.AcceptChangesDuringFill 複製資料庫中的資料。 如果屬性設為 false，填入資料表時就不會呼叫 AcceptChanges，並會將新加入的資料列視為插入的資料列。 因此，範例會使用這些資料列，將新資料列插入資料庫。  
   
--   範例會使用 DataAdapter.TableMappings 定義來源資料表和 DataTable 之間的對應。  
+- 範例會使用 DataAdapter.TableMappings 定義來源資料表和 DataTable 之間的對應。  
   
--   範例會使用 DataAdapter.FillLoadOption 決定配接器如何從 DbDataReader 填入 DataTable。 建立 DataTable 時，您可以將屬性設定為 LoadOption.Upsert 或 LoadOption.PreserveChanges，只將資料庫的資料寫入目前版本或原始版本。  
+- 範例會使用 DataAdapter.FillLoadOption 決定配接器如何從 DbDataReader 填入 DataTable。 建立 DataTable 時，您可以將屬性設定為 LoadOption.Upsert 或 LoadOption.PreserveChanges，只將資料庫的資料寫入目前版本或原始版本。  
   
--   範例也會使用 DbDataAdapter.UpdateBatchSize，更新資料表以執行批次作業。  
+- 範例也會使用 DbDataAdapter.UpdateBatchSize，更新資料表以執行批次作業。  
   
  在編譯和執行範例之前，您必須建立範例資料庫：  
   

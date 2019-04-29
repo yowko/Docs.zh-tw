@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30143
 ms.assetid: 319e95b5-5176-4fe1-bc04-90075594b397
 ms.openlocfilehash: c2aab9db8a74665748fba92821fcdfa97a1cec6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792076"
 ---
 # <a name="unable-to-embed-resource-file-filename-error-message"></a>無法嵌入資源檔 '\<檔案名稱 >':\<錯誤訊息 >
 Visual Basic 編譯器呼叫組件連結器 (Al.exe，也稱為 Alink)，以產生資訊清單的組件。 連結器在將原生 COM+ 資源檔案直接內嵌到組件時回報了錯誤。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - animation [WPF], handoff behavior between
 ms.assetid: 97bd6842-929b-49d9-813e-46553ae46472
 ms.openlocfilehash: d7129d6a48bdf31dc4953bb450267ad3b38fdd17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651034"
 ---
 # <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a>HOW TO：指定分鏡腳本動畫之間的 HandoffBehavior
 此範例示範如何指定分鏡腳本動畫之間的遞移式行為。 <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>屬性<xref:System.Windows.Media.Animation.BeginStoryboard>指定新動畫已套用至屬性的任何現有的互動。  

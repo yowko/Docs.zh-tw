@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
 ms.openlocfilehash: cf3ae6f47f63c545edf3d65804daa049d4541788
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703526"
 ---
 # <a name="best-practices-data-contract-versioning"></a>最佳做法：資料合約版本控制
 本主題會列出最佳做法以建立可隨時間輕鬆改進的資料合約。 如需資料合約的詳細資訊，請參閱中的主題[Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
@@ -39,9 +39,9 @@ ms.locfileid: "59334922"
   
  雖然有時候，您必須為應用程式傳送的訊息，保證具有嚴格結構描述相容性，但不能依賴傳入訊息來達到嚴格的結構描述相容性。 此案例具有一項危險性，就是傳入訊息可能會包含一些無關的資料。 沒有直接關聯的值儲存，並傳回由 WCF 因此造成傳送訊息的結構描述無效。 如果要避免這個問題，應關閉往返功能。 執行這項作業的方法有兩種。  
   
--   請勿在您任何的型別上實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面。  
+- 請勿在您任何的型別上實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面。  
   
--   將 <xref:System.ServiceModel.ServiceBehaviorAttribute> 屬性設定為 <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A>，以套用 `true` 屬性至您的服務合約。  
+- 將 <xref:System.ServiceModel.ServiceBehaviorAttribute> 屬性設定為 <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A>，以套用 `true` 屬性至您的服務合約。  
   
  如需往返的詳細資訊，請參閱[向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
@@ -66,11 +66,11 @@ ms.locfileid: "59334922"
   
 8. 在較新的版本中，可以新增新的資料成員。 它們應永遠遵循下列規則：  
   
-    1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性應永遠保持為 `false` 的預設值。  
+    1. <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性應永遠保持為 `false` 的預設值。  
   
-    2.  如果無法接受成員為 `null` 預設值或零，而成員未出現在傳入的資料流中，就應使用 <xref:System.Runtime.Serialization.OnDeserializingAttribute> 以提供合理的預設值來提供回呼方法。 如需回呼的詳細資訊，請參閱[版本相容序列化回呼](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)。  
+    2. 如果無法接受成員為 `null` 預設值或零，而成員未出現在傳入的資料流中，就應使用 <xref:System.Runtime.Serialization.OnDeserializingAttribute> 以提供合理的預設值來提供回呼方法。 如需回呼的詳細資訊，請參閱[版本相容序列化回呼](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)。  
   
-    3.  <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType>屬性應該用來確保所有新加入的資料成員都會出現在現有的資料成員之後。 執行此動作的建議的方法如下所示：資料成員中的資料合約的第一個版本都不應該有其`Order`屬性集。 資料合約第二個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 2。 資料合約第三個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 3，以此類推。 您可以將一個以上的資料成員設定為相同的 `Order` 號碼。  
+    3. <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType>屬性應該用來確保所有新加入的資料成員都會出現在現有的資料成員之後。 執行此動作的建議的方法如下所示：資料成員中的資料合約的第一個版本都不應該有其`Order`屬性集。 資料合約第二個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 2。 資料合約第三個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 3，以此類推。 您可以將一個以上的資料成員設定為相同的 `Order` 號碼。  
   
 9. 即使 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性保持為在舊版中 `false` 的預設屬性，也請不要在新版中移除資料成員。  
   

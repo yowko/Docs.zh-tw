@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
 ms.openlocfilehash: f2fc69867ae1659a342161b00dfd91852441fa5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772004"
 ---
 # <a name="optimistic-concurrency"></a>開放式並行存取
 在多使用者環境中，更新資料庫中的資料時，有兩種模型可供使用：開放式並行存取和封閉式並行存取。 <xref:System.Data.DataSet> 物件的設計是要鼓勵使用者在進行長時間的活動 (如遠端處理資料以及與資料進行互動) 時，採用開放式同步存取。  

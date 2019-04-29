@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
 ms.openlocfilehash: 7f8cca02e673339e892c16e0de99e20accdfd404
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667102"
 ---
 # <a name="establishing-the-connection"></a>建立連接
 若要連接至 Microsoft SQL Server，請使用 .NET Framework Data Provider for SQL Server 的 <xref:System.Data.SqlClient.SqlConnection> 物件。 若要連接至 OLE DB 資料來源，請使用 .NET Framework Data Provider for OLE DB 的 <xref:System.Data.OleDb.OleDbConnection> 物件。 若要連接至 ODBC 資料來源，請使用 ODBC 的 .NET Framework 資料提供者的 <xref:System.Data.Odbc.OdbcConnection> 物件。 若要連接至 Oracle 資料來源，請使用 Oracle 的 .NET Framework 資料提供者的 <xref:System.Data.OracleClient.OracleConnection> 物件。 安全地儲存及擷取連接字串，請參閱[保護連接資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)。  
@@ -58,9 +58,9 @@ using (SqlConnection connection = new SqlConnection(connectionString))
   
  對於 OLE DB 的 .NET Framework 資料提供者，連接字串格式與 ADO 中使用的連接字串格式相同，但下列情況例外：  
   
--   **提供者**則需要關鍵字。  
+- **提供者**則需要關鍵字。  
   
--   **URL**，**遠端提供者**，並**遠端伺服器**不支援的關鍵字。  
+- **URL**，**遠端提供者**，並**遠端伺服器**不支援的關鍵字。  
   
  如需 OLE DB 連接字串的詳細資訊，請參閱 <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> 主題。 您也可以使用 <xref:System.Data.OleDb.OleDbConnectionStringBuilder> 在執行階段建立連接字串。  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
 ms.openlocfilehash: 1866ba7a5419ea435a56daa63f94122d3b83473e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752746"
 ---
 # <a name="bitmap-effects-overview"></a>點陣圖效果概觀
 點陣圖效果可讓設計人員和開發人員来套用至視覺效果呈現 Windows Presentation Foundation (WPF) 內容。 例如，點陣圖效果可讓您輕鬆地套用<xref:System.Windows.Media.Effects.DropShadowBitmapEffect>效果或模糊效果影像或按鈕。  
@@ -23,15 +23,15 @@ ms.locfileid: "59166890"
   
  特殊案例，在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，效果可以為屬性上設定即時<xref:System.Windows.Media.Visual>物件，例如<xref:System.Windows.Controls.Button>或<xref:System.Windows.Controls.TextBox>。 像素處理會在執行階段套用並進行轉譯。 在此情況下，在轉譯時<xref:System.Windows.Media.Visual>會自動轉換為其<xref:System.Windows.Media.Imaging.BitmapSource>對等和做為輸入<xref:System.Windows.Media.Effects.BitmapEffect>。 輸出會取代<xref:System.Windows.Media.Visual>物件的預設轉譯行為。 這就是為什麼<xref:System.Windows.Media.Effects.BitmapEffect>物件會強制在軟體中轉譯只也就是沒有視覺效果上的硬體加速時套用效果的視覺效果。  
   
--   <xref:System.Windows.Media.Effects.BlurBitmapEffect> 模擬物件出現失焦。  
+- <xref:System.Windows.Media.Effects.BlurBitmapEffect> 模擬物件出現失焦。  
   
--   <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect> 建立物件周圍的色彩的光暈。  
+- <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect> 建立物件周圍的色彩的光暈。  
   
--   <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> 建立物件後方的陰影。  
+- <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> 建立物件後方的陰影。  
   
--   <xref:System.Windows.Media.Effects.BevelBitmapEffect> 建立根據指定的曲線影像表面的斜面。  
+- <xref:System.Windows.Media.Effects.BevelBitmapEffect> 建立根據指定的曲線影像表面的斜面。  
   
--   <xref:System.Windows.Media.Effects.EmbossBitmapEffect> 建立的凹凸貼圖<xref:System.Windows.Media.Visual>以便從人工光源創造深度和紋理的印象。  
+- <xref:System.Windows.Media.Effects.EmbossBitmapEffect> 建立的凹凸貼圖<xref:System.Windows.Media.Visual>以便從人工光源創造深度和紋理的印象。  
   
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 點陣圖效果是在軟體模式中轉譯。 套用效果的任何物件也會在軟體中轉譯。 對大型視覺物件使用點陣圖效果或為點陣圖效果的屬性建立動畫時，效能會降低最多。 這並不是說您不應該以此種方式使用點陣圖效果，而是您應特別小心並徹底測試，以確保使用者能得到預期的體驗。  

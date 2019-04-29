@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d282f6d37a2be8a41f4fbda579b3b467b9bfc8ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696687"
 ---
 # <a name="ihostsecuritymanagerreverttoself-method"></a>IHostSecurityManager::RevertToSelf 方法
 終止目前的使用者身分識別模擬，並傳回原始的執行緒 token。  

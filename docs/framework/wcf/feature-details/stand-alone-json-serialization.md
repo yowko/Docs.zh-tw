@@ -3,11 +3,11 @@ title: 獨立 JSON 序列化
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
 ms.openlocfilehash: 29c7dd6ebde07632ef7742b5e9bdd846fc632258
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747585"
 ---
 # <a name="stand-alone-json-serialization"></a>獨立 JSON 序列化
 JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 JavaScript 程式碼而設計的資料格式。 它是建立 Windows Communication Foundation (WCF) 中的 ASP.NET AJAX 服務所使用的預設資料格式。  
@@ -27,7 +27,7 @@ JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 
 |<xref:System.Enum>|number|請參閱本主題稍後的＜列舉與 JSON＞。|  
 |<xref:System.Boolean>|Boolean|--|  
 |<xref:System.String>、 <xref:System.Char>|String|--|  
-|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|在 JSON 中這些類型的格式是 XML 中相同 (本質上，以 ISO 8601 持續時間格式的時間範圍，「 12345678-ABCD-ABCD-ABCD-1234567890AB"格式的 GUID 和中的自然字串形式的 URI，例如"http://www.example.com」)。 如需精確的資訊，請參閱[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。|  
+|<xref:System.TimeSpan>、<xref:System.Guid>、<xref:System.Uri>|String|在 JSON 中這些類型的格式是 XML 中相同 (本質上，以 ISO 8601 持續時間格式的時間範圍，「 12345678-ABCD-ABCD-ABCD-1234567890AB"格式的 GUID 和中的自然字串形式的 URI，例如"http://www.example.com」)。 如需精確的資訊，請參閱[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。|  
 |<xref:System.Xml.XmlQualifiedName>|String|格式為 "name:namespace" (第一個冒號前面的就是名稱)。 名稱或命名空間可能會遺失。 如果沒有命名空間，冒號也可以省略。|  
 |型別 <xref:System.Array> 的 <xref:System.Byte>|數字陣列|每個數字代表一個位元組值。|  
 |<xref:System.DateTime>|DateTime 或字串|請參閱本主題稍後的＜日期/時間與 JSON＞。|  
@@ -42,20 +42,20 @@ JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 
 ### <a name="enumerations-and-json"></a>列舉與 JSON  
  在 JSON 中，列舉成員值會被視為數字，它處理這些值的方式與資料合約不同。在資料合約中，這些值會包含為成員名稱。 如需有關資料合約處理方式的詳細資訊，請參閱[列舉型別 Types in Data Contracts](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)。  
   
--   例如，如果您具有 `public enum Color {red, green, blue, yellow, pink}`，則序列化 `yellow` 會產生數字 3，而不是字串 "yellow"。  
+- 例如，如果您具有 `public enum Color {red, green, blue, yellow, pink}`，則序列化 `yellow` 會產生數字 3，而不是字串 "yellow"。  
   
--   所有 `enum` 成員都是可序列化的。 如果使用的話，<xref:System.Runtime.Serialization.EnumMemberAttribute> 和 <xref:System.NonSerializedAttribute> 屬性會被忽略。  
+- 所有 `enum` 成員都是可序列化的。 如果使用的話，<xref:System.Runtime.Serialization.EnumMemberAttribute> 和 <xref:System.NonSerializedAttribute> 屬性會被忽略。  
   
--   您可以還原序列化不存在的 `enum` 值，例如，值 87 可以還原序列化為先前的 Color 列舉，即使沒有定義對應的色彩名稱亦然。  
+- 您可以還原序列化不存在的 `enum` 值，例如，值 87 可以還原序列化為先前的 Color 列舉，即使沒有定義對應的色彩名稱亦然。  
   
--   `enum` 不是特殊旗標，且被視為和任何其他 `enum` 相同。  
+- `enum` 不是特殊旗標，且被視為和任何其他 `enum` 相同。  
   
 ### <a name="datestimes-and-json"></a>日期/時間與 JSON  
  JSON 格式並未直接支援日期和時間。 然而，它們相當常用，因此，ASP.NET AJAX 為這些型別提供了特別支援。 使用 ASP.NET AJAX Proxy 時，.NET 中的 <xref:System.DateTime>`DateTime`型別會完全對應至 JavaScript 中的  型別。  
   
--   不使用 ASP.NET 時，<xref:System.DateTime> 型別在 JSON 中會以具有特殊格式的字串來表示，本主題的「進階資訊」一節中會加以說明。  
+- 不使用 ASP.NET 時，<xref:System.DateTime> 型別在 JSON 中會以具有特殊格式的字串來表示，本主題的「進階資訊」一節中會加以說明。  
   
--   JSON 中的 <xref:System.DateTimeOffset> 將以複雜型別來表示：{"DateTime":dateTime,"OffsetMinutes":offsetMinutes}。 `offsetMinutes` 成員是與相關事件位置相關聯的格林威治時間 (GMT) 的本機時間位移，而格林威治時間現在也稱為 Coordinated Universal Time (UTC)。 `dateTime` 成員代表發生相關事件時的時間執行個體 (同樣地，當 ASP.NET AJAX 正在使用中時，它在 JavaScript 中會變成 `DateTime`，否則會變成字串)。 在序列化時，`dateTime` 成員永遠會序列化為 GMT。 因此，如果要描述紐約時間 3:00 AM，`dateTime` 會有 8:00 AM 的時間元件，而且 `offsetMinutes` 為 -300，即從 GMT 減去 300 分鐘或是 5 小時。  
+- JSON 中的 <xref:System.DateTimeOffset> 將以複雜型別來表示：{"DateTime":dateTime,"OffsetMinutes":offsetMinutes}。 `offsetMinutes` 成員是與相關事件位置相關聯的格林威治時間 (GMT) 的本機時間位移，而格林威治時間現在也稱為 Coordinated Universal Time (UTC)。 `dateTime` 成員代表發生相關事件時的時間執行個體 (同樣地，當 ASP.NET AJAX 正在使用中時，它在 JavaScript 中會變成 `DateTime`，否則會變成字串)。 在序列化時，`dateTime` 成員永遠會序列化為 GMT。 因此，如果要描述紐約時間 3:00 AM，`dateTime` 會有 8:00 AM 的時間元件，而且 `offsetMinutes` 為 -300，即從 GMT 減去 300 分鐘或是 5 小時。  
   
     > [!NOTE]
     >  在序列化為 JSON 時，<xref:System.DateTime> 和 <xref:System.DateTimeOffset> 物件只會保存精確度到毫秒的資訊。 次毫秒值 (微/奈秒) 會在序列化期間遺失。  
@@ -63,28 +63,28 @@ JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 
 ### <a name="xml-types-and-json"></a>XML 型別與 JSON  
  XML 型別成為 JSON 字串。  
   
--   例如，如果資料成員"q"的型別 XElement 包含\<abc / > 的 JSON 會是 {"q":"\<abc / >"}。  
+- 例如，如果資料成員"q"的型別 XElement 包含\<abc / > 的 JSON 會是 {"q":"\<abc / >"}。  
   
--   還有一些指定如何包裝 XML 的特殊規則。如需詳細資訊，請參閱本主題稍後的「進階資訊」一節。  
+- 還有一些指定如何包裝 XML 的特殊規則。如需詳細資訊，請參閱本主題稍後的「進階資訊」一節。  
   
--   如果您要使用 ASP.NET AJAX 且不想在 JavaScript 中使用字串，希望改用 XML DOM，請在 <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A><xref:System.ServiceModel.Web.WebGetAttribute>上將 <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> 屬性設定為 XML，或在 <xref:System.ServiceModel.Web.WebInvokeAttribute> 上將  屬性設定為 XML。  
+- 如果您要使用 ASP.NET AJAX 且不想在 JavaScript 中使用字串，希望改用 XML DOM，請在 <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A><xref:System.ServiceModel.Web.WebGetAttribute>上將 <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> 屬性設定為 XML，或在 <xref:System.ServiceModel.Web.WebInvokeAttribute> 上將  屬性設定為 XML。  
   
 ### <a name="collections-dictionaries-and-arrays"></a>集合、字典與陣列  
  所有的集合、字典與陣列在 JSON 中都會以陣列來表示。  
   
--   JSON 表示法會忽略任何使用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 的自訂。  
+- JSON 表示法會忽略任何使用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 的自訂。  
   
--   您不可以直接使用字典來搭配 JSON。 字典\<字串、 物件 > 可能不支援在相同的方式，在 WCF 中如預期般從其他 JSON 技術使用。 例如，如果字典中 "abc" 是對應至 "xyz" 而 "def" 是對應至 42，則 JSON 表示法不是 {"abc":"xyz","def":42}，而是 [{"Key":"abc","Value":"xyz"},{"Key":"def","Value":42}]。  
+- 您不可以直接使用字典來搭配 JSON。 字典\<字串、 物件 > 可能不支援在相同的方式，在 WCF 中如預期般從其他 JSON 技術使用。 例如，如果字典中 "abc" 是對應至 "xyz" 而 "def" 是對應至 42，則 JSON 表示法不是 {"abc":"xyz","def":42}，而是 [{"Key":"abc","Value":"xyz"},{"Key":"def","Value":42}]。  
   
--   如果您希望直接使用 JSON (動態存取索引鍵和值，而不需預先定義嚴謹的合約)，可以選擇數個選項：  
+- 如果您希望直接使用 JSON (動態存取索引鍵和值，而不需預先定義嚴謹的合約)，可以選擇數個選項：  
   
-    -   請考慮使用[弱型別 JSON 序列化 (AJAX)](../../../../docs/framework/wcf/samples/weakly-typed-json-serialization-sample.md)範例。  
+    - 請考慮使用[弱型別 JSON 序列化 (AJAX)](../../../../docs/framework/wcf/samples/weakly-typed-json-serialization-sample.md)範例。  
   
-    -   請考慮使用 <xref:System.Runtime.Serialization.ISerializable> 介面和還原序列化建構函式，這兩種機制可讓您分別在序列化和還原序列化時存取 JSON 索引鍵/值組，但不適用於部分信任案例中。  
+    - 請考慮使用 <xref:System.Runtime.Serialization.ISerializable> 介面和還原序列化建構函式，這兩種機制可讓您分別在序列化和還原序列化時存取 JSON 索引鍵/值組，但不適用於部分信任案例中。  
   
-    -   請考慮使用[Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)而不是使用序列化程式。  
+    - 請考慮使用[Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)而不是使用序列化程式。  
   
-    -   *多型*序列化的內容中是指能夠序列化衍生的型別，其基底型別所預期的位置。 以多型方式使用集合時，例如，將集合指派至 <xref:System.Object> 時，有幾個 JSON 特定的特殊規則。 在本主題稍後的「進階資訊」一節中，將會更詳細地討論這個議題。  
+    - *多型*序列化的內容中是指能夠序列化衍生的型別，其基底型別所預期的位置。 以多型方式使用集合時，例如，將集合指派至 <xref:System.Object> 時，有幾個 JSON 特定的特殊規則。 在本主題稍後的「進階資訊」一節中，將會更詳細地討論這個議題。  
   
 ## <a name="additional-details"></a>其他詳細資料  
   
@@ -124,9 +124,9 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 #### <a name="supported-and-unsupported-iserializable-types"></a>支援和不支援的 ISerializable 型別  
  一般而言，當序列化/還原序列化 JSON 時，會完全支援實作 <xref:System.Runtime.Serialization.ISerializable> 介面的型別。 然而，其中有些型別 (包括一些 .NET Framework 型別) 的實作方式會讓 JSON 特定的序列化造成它們無法正確地還原序列化：  
   
--   使用 <xref:System.Runtime.Serialization.ISerializable>，永遠無法預先知道個別資料成員的型別。 這導致多型情況與將型別還原序列化成物件很類似。 如前所述，這可能會導致遺失 JSON 中的型別資訊。 例如，在其 `enum` 實作中序列化 <xref:System.Runtime.Serialization.ISerializable> 並嘗試直接再還原序列化成 `enum` (沒有正確轉換) 的型別失敗，因為 `enum` 是使用 JSON 中的數字進行序列化，而 JSON 數字還原序列化成內建的 .NET 數字型別 (Int32、Decimal 或 Double)。 因此用於做為 `enum` 值的數字會遺失。  
+- 使用 <xref:System.Runtime.Serialization.ISerializable>，永遠無法預先知道個別資料成員的型別。 這導致多型情況與將型別還原序列化成物件很類似。 如前所述，這可能會導致遺失 JSON 中的型別資訊。 例如，在其 `enum` 實作中序列化 <xref:System.Runtime.Serialization.ISerializable> 並嘗試直接再還原序列化成 `enum` (沒有正確轉換) 的型別失敗，因為 `enum` 是使用 JSON 中的數字進行序列化，而 JSON 數字還原序列化成內建的 .NET 數字型別 (Int32、Decimal 或 Double)。 因此用於做為 `enum` 值的數字會遺失。  
   
--   依賴其還原序列化建構函式中的還原序列化特定順序的 <xref:System.Runtime.Serialization.ISerializable> 型別可能也會無法還原序列化某些 JSON 資料，因為大部分的 JSON 序列化程式都不會保證任何特定順序。  
+- 依賴其還原序列化建構函式中的還原序列化特定順序的 <xref:System.Runtime.Serialization.ISerializable> 型別可能也會無法還原序列化某些 JSON 資料，因為大部分的 JSON 序列化程式都不會保證任何特定順序。  
   
 #### <a name="factory-types"></a>處理站型別  
  雖然一般而言，在 JSON 中會支援 <xref:System.Runtime.Serialization.IObjectReference> 介面，但是不會支援任何需要「處理站型別」功能 (從與實作介面的型別不同的 <xref:System.Runtime.Serialization.IObjectReference.GetRealObject%28System.Runtime.Serialization.StreamingContext%29> 型別傳回執行個體) 的型別。  
@@ -204,11 +204,11 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 #### <a name="when-are-type-hints-emitted"></a>何時會發出型別提示  
  型別提示可能會大幅增加訊息大小 (改善這種情況的方法之一是盡量使用較短的資料合約命名空間)。 因此，下列規則會管理是否發出型別提示：  
   
--   當使用 ASP.NET AJAX 時，即使沒有基底/衍生指派 (例如，即使 Circle 指派至 Circle)，只要可以，還是永遠會發出型別提示 (如果要完整啟用從弱型別 JSON 環境至強型別 .NET 環境的呼叫處理，而不會意外遺失資訊，這是必要的)。  
+- 當使用 ASP.NET AJAX 時，即使沒有基底/衍生指派 (例如，即使 Circle 指派至 Circle)，只要可以，還是永遠會發出型別提示 (如果要完整啟用從弱型別 JSON 環境至強型別 .NET 環境的呼叫處理，而不會意外遺失資訊，這是必要的)。  
   
--   如果使用沒有 ASP.NET 整合的 AJAX 服務，只有在有基底/衍生指派時，才會發出型別提示 - 也就是說，在 Circle 指派至 Shape 或 <xref:System.Object> 但不是在指派至 Circle 時發出。 這會提供正確實作 JavaScript 用戶端所需的最少必要資訊，因而增進效能，但無法防止設計錯誤的用戶端中的型別資訊遺失。 如果您要避免在用戶端上處理這個問題，請避免在伺服器上使用基底/衍生指派。  
+- 如果使用沒有 ASP.NET 整合的 AJAX 服務，只有在有基底/衍生指派時，才會發出型別提示 - 也就是說，在 Circle 指派至 Shape 或 <xref:System.Object> 但不是在指派至 Circle 時發出。 這會提供正確實作 JavaScript 用戶端所需的最少必要資訊，因而增進效能，但無法防止設計錯誤的用戶端中的型別資訊遺失。 如果您要避免在用戶端上處理這個問題，請避免在伺服器上使用基底/衍生指派。  
   
--   當使用 <xref:System.Runtime.Serialization.DataContractSerializer> 型別時，`alwaysEmitTypeInformation` 建構函式參數可讓您在前述兩種模式中做選擇，且預設為 "`false`" (只在有需要時發出型別提示)。  
+- 當使用 <xref:System.Runtime.Serialization.DataContractSerializer> 型別時，`alwaysEmitTypeInformation` 建構函式參數可讓您在前述兩種模式中做選擇，且預設為 "`false`" (只在有需要時發出型別提示)。  
   
 #### <a name="duplicate-data-member-names"></a>重複資料成員名稱  
  衍生型別資訊會和基底型別資訊一起存在相同的 JSON 物件中，且可能會以各種順序出現。 比方說，`Shape`可能表示如下。  
@@ -245,9 +245,9 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
   
  當再還原序列化成 <xref:System.Object> 時：  
   
--   `Shape` 必須是已知型別清單。 擁有<xref:System.Collections.Generic.List%601>型別的`Shape`已知型別中沒有任何作用。 請注意，您就不必在新增`Shape`要序列化的已知型別在此情況下-這會自動完成。  
+- `Shape` 必須是已知型別清單。 擁有<xref:System.Collections.Generic.List%601>型別的`Shape`已知型別中沒有任何作用。 請注意，您就不必在新增`Shape`要序列化的已知型別在此情況下-這會自動完成。  
   
--   集合會還原序列化為<xref:System.Array>型別的<xref:System.Object>包含`Shape`執行個體。  
+- 集合會還原序列化為<xref:System.Array>型別的<xref:System.Object>包含`Shape`執行個體。  
   
 #### <a name="derived-collections-assigned-to-base-collections"></a>指派給基底集合的衍生集合  
  當將衍生集合指派給基底集合時，集合的序列化方式通常就如同基底型別的集合一般。 然而，如果無法將衍生集合的項目型別指派給基底集合的項目型別，便會擲回例外狀況。  

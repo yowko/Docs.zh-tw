@@ -9,11 +9,11 @@ helpviewer_keywords:
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
 ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770873"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>HOW TO：使用 DataGrid 控制項實作驗證
 <xref:System.Windows.Controls.DataGrid>控制項可讓您執行的資料格 」 和 「 資料列層級的驗證。 資料格層級驗證，您驗證繫結的資料物件的個別屬性，當使用者更新的值。 資料列層級驗證，您會驗證整個資料的物件，當使用者認可變更的資料列。 您也可以提供自訂的視覺化回饋，對於驗證錯誤，或使用預設的視覺化回饋，<xref:System.Windows.Controls.DataGrid>控制項提供。  
@@ -22,7 +22,7 @@ ms.locfileid: "59305946"
   
 ### <a name="to-validate-individual-cell-values"></a>若要驗證個別的資料格的值  
   
--   使用具有資料行的繫結上指定一個或多個驗證規則。 這是類似於驗證簡單的控制項中的資料中所述[資料繫結概觀](../data/data-binding-overview.md)。  
+- 使用具有資料行的繫結上指定一個或多個驗證規則。 這是類似於驗證簡單的控制項中的資料中所述[資料繫結概觀](../data/data-binding-overview.md)。  
   
      下列範例所示<xref:System.Windows.Controls.DataGrid>控制項繫結至商務物件的不同屬性的四個資料行。 三個資料行的指定<xref:System.Windows.Controls.ExceptionValidationRule>splittunneling<xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>屬性設`true`。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "59305946"
   
 ### <a name="to-customize-cell-validation-feedback"></a>若要自訂資料格驗證回應  
   
--   設定資料行的<xref:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle%2A>資料行的編輯控制項適合的樣式屬性。 因為編輯控制項建立在執行階段中，您無法使用<xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType>附加屬性，就像使用簡單的控制項。  
+- 設定資料行的<xref:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle%2A>資料行的編輯控制項適合的樣式屬性。 因為編輯控制項建立在執行階段中，您無法使用<xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType>附加屬性，就像使用簡單的控制項。  
   
      下列範例會更新先前的範例，加上共用的驗證規則的三個資料行的錯誤樣式。 當使用者輸入無效的值時，樣式會變更的資料格背景色彩，以及加入工具提示。 請注意，若要判斷是否有驗證錯誤的觸發程序使用。 這是必要的因為目前沒有資料格的專用的錯誤範本。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "59305946"
   
 ### <a name="to-customize-row-validation-feedback"></a>若要自訂的資料列驗證回應  
   
--   設定 <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType> 屬性。 這個屬性可讓您自訂個別的資料列驗證回應<xref:System.Windows.Controls.DataGrid>控制項。 您也可以使用隱含資料列樣式設定來影響多個控制項<xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType>屬性。  
+- 設定 <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType> 屬性。 這個屬性可讓您自訂個別的資料列驗證回應<xref:System.Windows.Controls.DataGrid>控制項。 您也可以使用隱含資料列樣式設定來影響多個控制項<xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType>屬性。  
   
      下列範例會將預設資料列驗證回應取代更明顯可見的指標。 當使用者輸入無效的值時，內含白色驚嘆號的紅色圓圈會出現在資料列標頭中。 發生這種情況的資料列和資料格的驗證錯誤。 相關聯的錯誤訊息會顯示在工具提示。  
   
@@ -73,17 +73,17 @@ ms.locfileid: "59305946"
   
  若要測試驗證，請嘗試下列方法：  
   
--   在課程識別碼 欄中，輸入非整數值。  
+- 在課程識別碼 欄中，輸入非整數值。  
   
--   結束日期資料行中輸入日期早於開始日期。  
+- 結束日期資料行中輸入日期早於開始日期。  
   
--   刪除在課程 ID、 開始日期或結束日期值。  
+- 刪除在課程 ID、 開始日期或結束日期值。  
   
--   若要復原無效的資料格的值，將游標放回資料格中，並按下 ESC 鍵。  
+- 若要復原無效的資料格的值，將游標放回資料格中，並按下 ESC 鍵。  
   
--   若要到目前的儲存格處於編輯模式時，請復原整個資料列的變更，請按 ESC 鍵兩次。  
+- 若要到目前的儲存格處於編輯模式時，請復原整個資料列的變更，請按 ESC 鍵兩次。  
   
--   發生驗證錯誤時，將滑鼠指標停留在指標資料列標頭，以查看相關聯的錯誤訊息。  
+- 發生驗證錯誤時，將滑鼠指標停留在指標資料列標頭，以查看相關聯的錯誤訊息。  
   
  [!code-csharp[DataGrid_Validation#FullCode](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#fullcode)]
  [!code-vb[DataGrid_Validation#FullCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#fullcode)]  

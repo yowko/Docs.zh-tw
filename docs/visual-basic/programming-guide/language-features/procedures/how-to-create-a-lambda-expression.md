@@ -6,11 +6,11 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
 ms.openlocfilehash: fc2b7ed2004b842116d051b393f00506428def61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665932"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>HOW TO：建立 Lambda 運算式 (Visual Basic)
 A *lambda 運算式*函式或副程式，並沒有名稱。 只要委派型別有效，則可以使用 lambda 運算式。  

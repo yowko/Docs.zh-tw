@@ -9,11 +9,11 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
 ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762393"
 ---
 # <a name="fromtoby-animations-overview"></a>From/To/By 動畫概觀
 本主題說明如何使用 From/To/By 動畫以動畫顯示相依性屬性。 From/To/By 動畫可建立兩個值之間的轉換。  
@@ -65,15 +65,15 @@ ms.locfileid: "59209147"
 ## <a name="target-values"></a>目標值  
  From/To/By 動畫可建立兩個目標值之間的轉換。 它會指定起始值 (使用<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>屬性) 和結束值 (使用<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>屬性)。 不過，您也可以只指定起始值、目的值或位移值。 在這些情況下，動畫會從以動畫顯示的屬性，取得遺漏的目標值。 下列清單說明指定動畫目標值的不同方式。  
   
--   **起始值**  
+- **起始值**  
   
      使用<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>屬性，當您想要明確指定動畫的起始值。 您可以使用<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>本身，或使用屬性<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>或<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性。 如果您只有指定<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>屬性，動畫從該值的基底值的轉換動畫的屬性。  
   
--   **結束值**  
+- **結束值**  
   
      若要指定動畫的結束值，請使用其<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>屬性。 如果您使用<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>本身的屬性，動畫會取得其起始值從動畫顯示屬性，或從另一個套用至相同屬性的動畫的輸出。 您可以使用<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>屬性搭配<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>來明確指定開始和結束值動畫的屬性。  
   
--   **位移值**  
+- **位移值**  
   
      <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性可讓您指定的位移，而非明確啟動或動畫的結束值。 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>動畫的屬性會指定多少動畫所變更的值在其持續期間內。 您可以使用<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性本身，或使用<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>屬性。 如果您只有指定<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性，動畫之屬性的基底值或另一個動畫的輸出，請新增位移的值。  
   
@@ -134,9 +134,9 @@ ms.locfileid: "59209147"
 ## <a name="other-animation-types"></a>其他動畫類型  
  From/To/By 動畫不是唯一的動畫類型，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供： 它也提供主要畫面格動畫和路徑動畫。  
   
--   主要畫面格動畫會沿著使用主要畫面格所描繪的任意目的數值以動畫顯示。 如需詳細資訊，請參閱 <<c0> [ 主要畫面格動畫概觀](key-frame-animations-overview.md)。  
+- 主要畫面格動畫會沿著使用主要畫面格所描繪的任意目的數值以動畫顯示。 如需詳細資訊，請參閱 <<c0> [ 主要畫面格動畫概觀](key-frame-animations-overview.md)。  
   
--   路徑動畫會產生輸出值<xref:System.Windows.Media.PathGeometry>。 如需詳細資訊，請參閱 <<c0> [ 路徑動畫概觀](path-animations-overview.md)。  
+- 路徑動畫會產生輸出值<xref:System.Windows.Media.PathGeometry>。 如需詳細資訊，請參閱 <<c0> [ 路徑動畫概觀](path-animations-overview.md)。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也可讓您建立自己的自訂動畫類型。 如需詳細資訊，請參閱 <<c0> [ 自訂動畫概觀](custom-animations-overview.md)。  
   

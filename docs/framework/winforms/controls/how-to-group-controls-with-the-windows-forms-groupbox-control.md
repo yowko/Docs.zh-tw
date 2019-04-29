@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
 ms.openlocfilehash: d2bad0020d18cd262bc2fe3489a00209308bd7b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941319"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>HOW TO：使用 Windows Forms GroupBox 控制項分組控制項
 Windows Form<xref:System.Windows.Forms.GroupBox>控制項用來分組其他控制項。 有三個群組控制項的原因：  
   
--   若要建立明確的使用者介面的相關的表單項目的視覺化群組。  
+- 若要建立明確的使用者介面的相關的表單項目的視覺化群組。  
   
--   若要建立以程式設計方式 （選項按鈕群組，例如）。  
+- 若要建立以程式設計方式 （選項按鈕群組，例如）。  
   
--   在設計階段，做為一個單位移動控制項。  
+- 在設計階段，做為一個單位移動控制項。  
   
 ### <a name="to-create-a-group-of-controls"></a>若要建立的控制項群組  
   

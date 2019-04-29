@@ -11,11 +11,11 @@ helpviewer_keywords:
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
 ms.openlocfilehash: 53ae737394d76d9f293f6e03fbf04cbb46d2adbb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778816"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>逐步解說：建立您的第一個觸控應用程式
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 讓應用程式回應觸控。 比方說，您可以使用其中一個互動應用程式或更多根手指觸控感應裝置，例如本逐步解說中建立的應用程式，可讓使用者移動觸控螢幕上調整大小，或使用觸控旋轉單一物件。  
@@ -23,9 +23,9 @@ ms.locfileid: "59326979"
 ## <a name="prerequisites"></a>必要條件  
  您需要下列元件才能完成此逐步解說：  
   
--   Visual Studio。  
+- Visual Studio。  
   
--   接受輸入，例如觸控螢幕，可支援 Windows Touch 的觸控裝置。  
+- 接受輸入，例如觸控螢幕，可支援 Windows Touch 的觸控裝置。  
   
  此外，您應該有基本的了解如何建立應用程式中的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，尤其是如何訂閱和處理事件。 如需詳細資訊，請參閱[逐步解說：我第一個 WPF 桌面應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
   
@@ -73,11 +73,11 @@ ms.locfileid: "59326979"
 ## <a name="testing-the-application"></a>測試應用程式
  若要測試應用程式，請嘗試下列操作。 請注意，您可以多個下列其中之一在相同的時間。
 
--   若要移動<xref:System.Windows.Shapes.Rectangle>，將手指放<xref:System.Windows.Shapes.Rectangle>並將手指移動螢幕上。
+- 若要移動<xref:System.Windows.Shapes.Rectangle>，將手指放<xref:System.Windows.Shapes.Rectangle>並將手指移動螢幕上。
 
--   若要調整大小<xref:System.Windows.Shapes.Rectangle>，將兩隻手指放在<xref:System.Windows.Shapes.Rectangle>，然後將手指，更接近手指或分開彼此。
+- 若要調整大小<xref:System.Windows.Shapes.Rectangle>，將兩隻手指放在<xref:System.Windows.Shapes.Rectangle>，然後將手指，更接近手指或分開彼此。
 
--   若要旋轉<xref:System.Windows.Shapes.Rectangle>，將兩隻手指放在<xref:System.Windows.Shapes.Rectangle>並旋轉手指。
+- 若要旋轉<xref:System.Windows.Shapes.Rectangle>，將兩隻手指放在<xref:System.Windows.Shapes.Rectangle>並旋轉手指。
 
  若要使慣性，快速將引發手指已離開螢幕當您執行先前的操作。 <xref:System.Windows.Shapes.Rectangle>會繼續移動、 調整大小或旋轉幾秒鐘的時間之前就會停止。
 

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 41d96c6d2024dbc3cab669f2dba2f99faef89f4b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701290"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo 方法
 傳回的資訊讓編譯器在可攜式執行檔 (PE) 檔案標頭寫入偵錯目錄項目所需。 符號寫入器填寫所有欄位，除了`TimeDateStamp`和`PointerToRawData`。 （編譯器會負責適當地設定這兩個欄位）。  

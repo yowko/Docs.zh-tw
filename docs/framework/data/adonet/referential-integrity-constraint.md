@@ -3,24 +3,24 @@ title: 參考完整性條件約束
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
 ms.openlocfilehash: a8ef035872317c6eaea0401164e7fa8c95f5f7ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665285"
 ---
 # <a name="referential-integrity-constraint"></a>參考完整性條件約束
 A*參考完整性條件約束*Entity Data Model (EDM) 中是類似於關聯式資料庫中的參考完整性條件約束。 從資料庫資料表資料行 （或資料行） 可以參考另一個資料表的主索引鍵的方式相同[屬性](../../../../docs/framework/data/adonet/property.md)（或屬性） 的[實體型別](../../../../docs/framework/data/adonet/entity-type.md)可以參考[實體索引鍵](../../../../docs/framework/data/adonet/entity-key.md)另一個實體類型。 參考的實體類型稱為*主體端點*條件約束。 參考主要端點的實體類型稱為*相依端點*條件約束。  
   
  參考完整性條件約束定義的一部分[關聯](../../../../docs/framework/data/adonet/association-type.md)兩個實體類型。 參考完整性條件約束的定義指定下列資訊：  
   
--   條件約束的主要端點。 (實體類型，相依端點會參考其實體索引鍵。)  
+- 條件約束的主要端點。 (實體類型，相依端點會參考其實體索引鍵。)  
   
--   主要端點的實體索引鍵。  
+- 主要端點的實體索引鍵。  
   
--   條件約束的相依端點。 (實體類型，具有參考主要端點之實體索引鍵的屬性。)  
+- 條件約束的相依端點。 (實體類型，具有參考主要端點之實體索引鍵的屬性。)  
   
--   相依端點的參考屬性。  
+- 相依端點的參考屬性。  
   
  在 EDM 中，參考完整性條件約束的目的在於確保有效的關聯永遠存在。 如需詳細資訊，請參閱 <<c0> [ 外部索引鍵屬性](../../../../docs/framework/data/adonet/foreign-key-property.md)。  
   

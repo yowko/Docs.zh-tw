@@ -17,11 +17,11 @@ helpviewer_keywords:
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
 ms.openlocfilehash: 8845a6bde4e1a701b5420029788259724cd0f8d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748756"
 ---
 # <a name="ushort-data-type-visual-basic"></a>UShort 資料類型 (Visual Basic)
 
@@ -64,15 +64,15 @@ Dim number = &H_5826us
 
 ## <a name="programming-tips"></a>程式設計提示
   
--   **負數的數字。** 因為`UShort`是不帶正負號的型別，它無法表示負數。 如果您使用一元減號 (`-`) 運算子的運算式，評估為類型`UShort`，Visual Basic 會將轉換的運算式`Integer`第一次。  
+- **負數的數字。** 因為`UShort`是不帶正負號的型別，它無法表示負數。 如果您使用一元減號 (`-`) 運算子的運算式，評估為類型`UShort`，Visual Basic 會將轉換的運算式`Integer`第一次。  
   
--   **CLS 合規性。** `UShort`資料類型不是屬於[Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) （cls） 標準，所以符合 CLS 標準的程式碼無法取用使用它的元件。
+- **CLS 合規性。** `UShort`資料類型不是屬於[Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) （cls） 標準，所以符合 CLS 標準的程式碼無法取用使用它的元件。
   
--   **擴展。** `UShort`資料類型可擴展為`Integer`， `UInteger`， `Long`， `ULong`， `Decimal`， `Single`，以及`Double`。 這表示您可以將轉換`UShort`任何一種類型，而不會發生<xref:System.OverflowException?displayProperty=nameWithType>時發生錯誤。  
+- **擴展。** `UShort`資料類型可擴展為`Integer`， `UInteger`， `Long`， `ULong`， `Decimal`， `Single`，以及`Double`。 這表示您可以將轉換`UShort`任何一種類型，而不會發生<xref:System.OverflowException?displayProperty=nameWithType>時發生錯誤。  
   
--   **類型字元。** 將常值類型字元附加`US`成常值會強制其成為`UShort`資料型別。 `UShort` 有任何識別項類型字元。  
+- **類型字元。** 將常值類型字元附加`US`成常值會強制其成為`UShort`資料型別。 `UShort` 有任何識別項類型字元。  
   
--   **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.UInt16?displayProperty=nameWithType> 結構。  
+- **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.UInt16?displayProperty=nameWithType> 結構。  
   
 ## <a name="see-also"></a>另請參閱
 

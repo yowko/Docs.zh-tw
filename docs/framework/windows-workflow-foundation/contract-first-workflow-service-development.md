@@ -3,47 +3,47 @@ title: 合約優先工作流程服務開發
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
 ms.openlocfilehash: c326f91bc8673180db755a91ab080bcf0ba72052
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774201"
 ---
 # <a name="contract-first-workflow-service-development"></a>合約優先工作流程服務開發
 從開始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，Windows Workflow Foundation (WF) 功能更佳的 web 服務與合約優先工作流程開發形式中的工作流程之間的整合。 合約優先工作流程開發工具可讓您在 Code First 中設計合約。 此工具會自動在合約中的作業工具箱內產生活動範本。 本主題提供工作流程服務概觀，說明如何將工作流程服務中的活動和屬性 (property) 對應至服務合約的屬性 (attribute)。 如需建立合約優先工作流程服務的逐步範例，請參閱[How to:建立會取用現有服務合約的工作流程服務](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
   
 ## <a name="in-this-topic"></a>本主題內容  
   
--   [將服務合約屬性對應至工作流程屬性](contract-first-workflow-service-development.md#MappingAttributes)  
+- [將服務合約屬性對應至工作流程屬性](contract-first-workflow-service-development.md#MappingAttributes)  
   
-    -   [服務合約屬性](contract-first-workflow-service-development.md#ServiceContract)  
+    - [服務合約屬性](contract-first-workflow-service-development.md#ServiceContract)  
   
-    -   [作業合約屬性](contract-first-workflow-service-development.md#OperationContract)  
+    - [作業合約屬性](contract-first-workflow-service-development.md#OperationContract)  
   
-    -   [訊息合約屬性](contract-first-workflow-service-development.md#MessageContract)  
+    - [訊息合約屬性](contract-first-workflow-service-development.md#MessageContract)  
   
-    -   [資料合約屬性](contract-first-workflow-service-development.md#DataContract)  
+    - [資料合約屬性](contract-first-workflow-service-development.md#DataContract)  
   
-    -   [錯誤合約屬性](contract-first-workflow-service-development.md#FaultContract)  
+    - [錯誤合約屬性](contract-first-workflow-service-development.md#FaultContract)  
   
--   [其他支援和實作資訊](contract-first-workflow-service-development.md#AdditionalSupport)  
+- [其他支援和實作資訊](contract-first-workflow-service-development.md#AdditionalSupport)  
   
-    -   [不支援的服務合約功能](contract-first-workflow-service-development.md#UnsupportedFeatures)  
+    - [不支援的服務合約功能](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
-    -   [產生的設定之傳訊活動](contract-first-workflow-service-development.md#ActivityGeneration)  
+    - [產生的設定之傳訊活動](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ## <a name="MappingAttributes"></a> 將服務合約屬性對應至工作流程屬性  
  下列各節中的表格會指定不同的 WCF 屬性 (attribute) 和屬性 (property)，以及其如何對應至合約優先工作流程中的傳訊活動和屬性 (property)。  
   
--   [服務合約屬性](contract-first-workflow-service-development.md#ServiceContract)  
+- [服務合約屬性](contract-first-workflow-service-development.md#ServiceContract)  
   
--   [作業合約屬性](contract-first-workflow-service-development.md#OperationContract)  
+- [作業合約屬性](contract-first-workflow-service-development.md#OperationContract)  
   
--   [訊息合約屬性](contract-first-workflow-service-development.md#MessageContract)  
+- [訊息合約屬性](contract-first-workflow-service-development.md#MessageContract)  
   
--   [資料合約屬性](contract-first-workflow-service-development.md#DataContract)  
+- [資料合約屬性](contract-first-workflow-service-development.md#DataContract)  
   
--   [錯誤合約屬性](contract-first-workflow-service-development.md#FaultContract)  
+- [錯誤合約屬性](contract-first-workflow-service-development.md#FaultContract)  
   
 ### <a name="ServiceContract"></a> 服務合約屬性  
   
@@ -109,25 +109,24 @@ ms.locfileid: "57721784"
   
 ## <a name="AdditionalSupport"></a> 其他支援和實作資訊  
   
--   [不支援的服務合約功能](contract-first-workflow-service-development.md#UnsupportedFeatures)  
+- [不支援的服務合約功能](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
--   [產生的設定之傳訊活動](contract-first-workflow-service-development.md#ActivityGeneration)  
+- [產生的設定之傳訊活動](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ### <a name="UnsupportedFeatures"></a> 不支援的服務合約功能  
   
--   在合約中不支援使用 TPL (工作平行程式庫) 工作。  
+- 在合約中不支援使用 TPL (工作平行程式庫) 工作。  
   
--   在服務合約中不支援繼承。  
+- 在服務合約中不支援繼承。  
   
 ### <a name="ActivityGeneration"></a> 產生的設定之傳訊活動  
  已將兩個公用靜態方法加入至 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 活動，以支援在使用合約優先工作流程服務時，產生預先設定的訊息活動。  
   
--   <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Activities.SendReply.FromOperationDescription%2A?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Activities.SendReply.FromOperationDescription%2A?displayProperty=nameWithType>  
   
- 這些方法所產生的活動應該會通過合約驗證，因此這些方法會在內部使用，以做為 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 驗證邏輯的一部分。 
-  <xref:System.ServiceModel.Activities.Receive.OperationName%2A>、<xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>、<xref:System.ServiceModel.Activities.Receive.Action%2A>、<xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>、<xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A> 和 <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> 全都已預先設定，以符合匯入的合約。 在工作流程設計工具中的活動的內容屬性 頁面**訊息**或是**參數**區段也已預先設定以符合合約。  
+ 這些方法所產生的活動應該會通過合約驗證，因此這些方法會在內部使用，以做為 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 驗證邏輯的一部分。 <xref:System.ServiceModel.Activities.Receive.OperationName%2A>、<xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>、<xref:System.ServiceModel.Activities.Receive.Action%2A>、<xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>、<xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A> 和 <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> 全都已預先設定，以符合匯入的合約。 在工作流程設計工具中的活動的內容屬性 頁面**訊息**或是**參數**區段也已預先設定以符合合約。  
   
  WCF 錯誤合約也都由傳回一組個別的設定<xref:System.ServiceModel.Activities.SendReply>出現在錯誤的每個活動<xref:System.ServiceModel.Description.OperationDescription.Faults%2A> <xref:System.ServiceModel.Description.FaultDescriptionCollection>。  
   

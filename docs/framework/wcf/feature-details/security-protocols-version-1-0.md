@@ -3,26 +3,26 @@ title: 安全性通訊協定 1.0 版
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
 ms.openlocfilehash: 684ab50b6dab4b97577acf7673ed14c53e5af13e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748573"
 ---
 # <a name="security-protocols-version-10"></a>安全性通訊協定 1.0 版
 Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有現有的企業訊息安全性需求。 本節描述 Windows Communication Foundation (WCF) 1.0 版詳細資料 (在中實作<xref:System.ServiceModel.Channels.SecurityBindingElement>) 下列 Web 服務安全性通訊協定。  
   
 |規格/文件|連結|  
 |-|-|  
-|WSS：SOAP 訊息安全性 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|
-|WSS：使用者名稱權杖設定檔 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
-|WSS：X509 權杖設定檔 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|
-|WSS：SAML 1.1 權杖設定檔 1.0|<https://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|
-|WSS：SOAP 訊息安全性 1.1|<https://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|
+|WSS:SOAP 訊息安全性 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|
+|WSS:使用者名稱權杖設定檔 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
+|WSS:X509 權杖設定檔 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|
+|WSS:SAML 1.1 權杖設定檔 1.0|<https://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|
+|WSS:SOAP 訊息安全性 1.1|<https://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|
 |WSS：使用者名稱權杖設定檔 1.1|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
-|WSS：X.509 權杖設定檔 1.1|<https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|
-|WSS：Kerberos 權杖設定檔 1.1|<https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|
-|WSS：SAML 1.1 權杖設定檔 1.1|<https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|
+|WSS:X.509 權杖設定檔 1.1|<https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|
+|WSS:Kerberos 權杖設定檔 1.1|<https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|
+|WSS:SAML 1.1 權杖設定檔 1.1|<https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|
 |WS-SecureConversation|<http://specs.xmlsoap.org/ws/2005/02/sc/WS-SecureConversation.pdf>|
 |WS-Trust|<http://specs.xmlsoap.org/ws/2005/02/trust/ws-trust.pdf>|
 |應用程式注意事項：<br /><br /> 使用 WS-Trust 進行 TLS 信號交換|即將發行|  
@@ -32,11 +32,11 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
   
  WCF，第 1 版提供 17 可用來當做基礎 Web 服務安全性設定的驗證模式。 每個模式都已針對一組通用的部署需求最佳化，例如：  
   
--   用來驗證用戶端和服務的認證。  
+- 用來驗證用戶端和服務的認證。  
   
--   訊息或傳輸安全性保護機制。  
+- 訊息或傳輸安全性保護機制。  
   
--   訊息交換模式。  
+- 訊息交換模式。  
   
 |驗證模式|用戶端驗證|伺服器驗證|模式|  
 |-------------------------|---------------------------|---------------------------|----------|  
@@ -45,7 +45,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 |KerberosOverTransport|Windows|X509|Transport|  
 |IssuedTokenOverTransport|聯合|X509|Transport|  
 |SspiNegotiatedOverTransport|交涉的 Windows Sspi|交涉的 Windows Sspi|Transport|  
-|AnonymousForCertificate|無|X509|訊息|  
+|AnonymousForCertificate|None|X509|訊息|  
 |UserNameForCertificate|使用者名稱/密碼|X509|訊息|  
 |MutualCertificate|X509|X509|訊息|  
 |MutualCertificateDuplex|X509|X509|訊息|  
@@ -53,7 +53,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 |Kerberos|Windows|Windows|訊息|  
 |IssuedToken|聯合|聯合|訊息|  
 |SspiNegotiated|交涉的 Windows Sspi|交涉的 Windows Sspi|訊息|  
-|AnonymousForSslNegotiated|無|X509、TLS-Nego|訊息|  
+|AnonymousForSslNegotiated|None|X509、TLS-Nego|訊息|  
 |UserNameForSslNegotiated|使用者名稱/密碼|X509、TLS-Nego|訊息|  
 |MutualSslNegotiated|X509|X509、TLS-Nego|訊息|  
 |IssuedTokenForSslNegotiated|聯合|X509、TLS-Nego|訊息|  
@@ -116,7 +116,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
   
  R1204 如果 X509TokenProfile1.1 正在使用中，則 X509 安全性權杖的外部參考應使用 WS-Security 1.1 所引入的指紋。  
   
- WCF 支援 X509IssuerSerial。 不過有 x509issuerserial 的互通性問題： WCF 使用字串來比較 X509IssuerSerial 的兩個值。 因此如果其中一個的主體名稱的元件重新排序，而且會將傳送至 WCF 服務參考的憑證，它可能會找到。  
+ WCF 支援 X509IssuerSerial。 不過有 x509issuerserial 的互通性問題：WCF 會使用字串來比較 X509IssuerSerial 的兩個值。 因此如果其中一個的主體名稱的元件重新排序，而且會將傳送至 WCF 服務參考的憑證，它可能會找到。  
   
 ### <a name="13-kerberos-token"></a>1.3 Kerberos 權杖  
  WCF 支援 kerberostokenprofile1.1，但受以進行 Windows 驗證，具有下列限制：  
@@ -157,7 +157,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 |||  
 |-|-|  
 |Strict|根據「使用前宣告」的一般原則，遵循安全性原則 7.7.1 一節中所述的編號配置規則，將項目加入至安全性標頭中。|  
-|Lax|依據符合 WSS: SOAP 訊息安全性的任何順序，將項目新增至安全性標頭中。|  
+|Lax|項目會加入至安全性標頭，以任何順序符合 WSS:SOAP 訊息安全性。|  
 |LaxTimestampFirst|與 Lax 相同，除了安全性標頭中的第一個項目必須是 wsse:Timestamp|  
 |LaxTimestampLast|與 Lax 相同，除了安全性標頭中的最後一個項目必須是 wsse:Timestamp|  
   
@@ -179,7 +179,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
   
  安全性標頭配置：Strict  
   
- 演算法組合：Basic256  
+ 演算法套件：Basic256  
   
 #### <a name="611-usernameovertransport"></a>6.1.1 UsernameOverTransport  
  在這個驗證模式中，用戶端會使用使用者名稱權杖來進行驗證，這個權杖出現在 SOAP 層中做為已簽署的支援權杖，且一定會從啟動器傳送至收件者。 服務會在傳輸層上使用 X.509 憑證來進行驗證。 使用的繫結為傳輸繫結。  
@@ -640,7 +640,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 ```  
   
 ### <a name="62-using-x509-certificates-for-service-authentication"></a>6.2 使用 X.509 憑證來驗證服務  
- 本章節描述下列驗證模式：MutualCertificate WSS1.0、Mutual CertificateDuplex、MutualCertificate WSS1.1、AnonymousForCertificate、UserNameForCertificate 和 IssuedTokenForCertificate。  
+ 本章節描述下列驗證模式：MutualCertificate WSS1.0、MUTUAL CertificateDuplex、 MutualCertificate WSS1.1、ANONYMOUSFORCERTIFICATE、USERNAMEFORCERTIFICATE、 AnonymousForCertificate、 和 issuedtokenforcertificate 全部。  
   
 #### <a name="621-mutualcertificate-wss10"></a>6.2.1 MutualCertificate WSS1.0  
  在這個驗證模式中，用戶端會使用 X.509 憑證來進行驗證，這個憑證出現在 SOAP 層中做為啟動器權杖。 服務也會使用 X.509 憑證來進行驗證。  
@@ -649,7 +649,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   
  啟動器權杖：用戶端的 X.509 憑證，其內含模式設定為 …/IncludeToken/AlwaysToRecipient  
   
- 收件者權杖：伺服器的 X.509 憑證，其內含模式設定為 …/IncludeToken/Never  
+ 收件者權杖：伺服器的 X.509 憑證，其內含模式設定.../IncludeToken/Never  
   
  權杖保護：False  
   
@@ -721,7 +721,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -811,9 +811,9 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  使用的繫結為具有下列屬性值的非對稱式繫結：  
   
- 啟動器權杖：用戶端的 X509 憑證，其內含模式設定為 …/IncludeToken/AlwaysToRecipient  
+ 啟動器權杖：用戶端的 X509 憑證，內含模式設定為.../IncludeToken/AlwaysToRecipient  
   
- 收件者權杖：伺服器的 X509 憑證，其內含模式設定為 …/IncludeToken/AlwaysToInitiator  
+ 收件者權杖：伺服器的 X509 憑證，內含模式設定為.../IncludeToken/AlwaysToInitiator  
   
  權杖保護：False  
   
@@ -885,7 +885,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求和回應  
   
 ```xml  
@@ -938,7 +938,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  驗證模式 AnonymousForCertificate、UsernameForCertificate、MutualCertificate WSS11 和 IssuedTokenForCertificate 全部都會使用類似具有下列屬性值的 sp:SymmetricBinding 執行個體：  
   
- 保護權杖：伺服器的 X509 憑證，其內含模式設定為 .../IncludeToken/Never  
+ 保護權杖：伺服器的 X509 憑證，內含模式設定為.../IncludeToken/Never  
 權杖保護：False  
   
  整個標頭和本文簽章：True  
@@ -1017,7 +1017,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  如需繫結的詳細資訊，請參閱上面 6.2.3 中的「原則」。  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -1138,7 +1138,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </sp:SignedSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -1262,7 +1262,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </sp:EndorsingSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -1411,7 +1411,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </sp:EndorsingSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -1536,7 +1536,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ## <a name="63-kerberos"></a>6.3 Kerberos  
  在這個驗證模式中，用戶端會使用 Kerberos 票證，向服務進行驗證。 相同的票證也會提供伺服器驗證。 使用的繫結為具有下列屬性的對稱式繫結：  
   
- 保護權杖：Kerberos 票證，其內含模式設定為 .../IncludeToken/Once  
+ 保護權杖：Kerberos 票證，其內含模式設定來.../IncludeToken/Once  
 權杖保護：False  
   
  整個標頭和本文簽章：True  
@@ -1599,7 +1599,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -1667,7 +1667,7 @@ TBD
 #### <a name="64-issuedtoken"></a>6.4 IssuedToken  
  在這個驗證模式中，用戶端本身不會向服務驗證，但用戶端會出示 STS 所發出的權杖，並證明得知共用金鑰。 服務本身也不會向用戶端驗證，但 STS 會加密共用金鑰做為已發出權杖的一部分，只有服務才能解密金鑰。 使用的繫結為具有下列屬性的對稱式繫結：  
   
- 保護權杖：發出的權杖，其內含模式設定為 .../IncludeToken/AlwaysToRecipient  
+ 保護權杖：發出的權杖，內含模式設定為.../IncludeToken/AlwaysToRecipient  
 權杖保護：False  
   
  整個標頭和本文簽章：True  
@@ -1735,7 +1735,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -1836,7 +1836,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
   
  使用的繫結為具有下列屬性的對稱式繫結：  
   
- 保護權杖：SslContextToken，其內含模式設定為 .../IncludeToken/Never  
+ 保護權杖：Sslcontexttoken，其內含模式設定為.../IncludeToken/Never  
 權杖保護：False  
   
  整個標頭和本文簽章：True  
@@ -1908,7 +1908,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
   
  如需繫結的詳細資訊，請參閱上面 6.5.1 中的「原則」。  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -2025,7 +2025,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </sp:SignedSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -2154,7 +2154,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </sp:EndorsingSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -2298,7 +2298,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </sp:EndorsingSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -2397,7 +2397,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ### <a name="66-sspinegotiated"></a>6.6 SspiNegotiated  
  在這個驗證模式中，交涉通訊協定是用來執行用戶端和伺服器驗證。 如果可能則會使用 Kerberos，否則會使用 NTLM。 使用的繫結為具有下列屬性的對稱式繫結：  
   
- 保護權杖：SpnegoContextToken，其內含模式設定為 .../IncludeToken/AlwaysToRecipient  
+ 保護權杖：Spnegocontexttoken，其內含模式設定為.../IncludeToken/AlwaysToRecipient  
 權杖保護：False  
   
  整個標頭和本文簽章：True  
@@ -2459,7 +2459,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  
@@ -2669,7 +2669,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全性標頭範例：SignBeforeEncrypt、 EncryptSignature  
  要求  
   
 ```xml  

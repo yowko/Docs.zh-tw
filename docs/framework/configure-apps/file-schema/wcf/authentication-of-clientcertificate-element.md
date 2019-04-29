@@ -3,11 +3,11 @@ title: <authentication> 項目的 <clientCertificate>
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
 ms.openlocfilehash: e232cde8f6838de734e37aeee3f52cd7f7e7502d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701329"
 ---
 # <a name="authentication-of-clientcertificate-element"></a>\<驗證 > 的\<clientCertificate > 項目
 指定服務所使用之用戶端憑證的驗證行為。  

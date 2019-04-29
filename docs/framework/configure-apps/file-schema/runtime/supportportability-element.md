@@ -8,11 +8,11 @@ ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8cc26f9721e911e05c5b5d4092be21a4e1191c84
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704748"
 ---
 # <a name="supportportability-element"></a>\<Supportportability> > 項目
 指定應用程式可以在兩個不同的 .NET Framework 實作中參考相同的組件，方法是停用將組件視為同等的預設行為 (此預設行為是基於應用程式可攜性的考量)。  

@@ -3,11 +3,11 @@ title: 介紹 LINQ (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
 ms.openlocfilehash: 2900cade8bc4166cccb62baf4381cb926cdff5f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614530"
 ---
 # <a name="introduction-to-linq-visual-basic"></a>介紹 LINQ (Visual Basic)
 Language-Integrated Query (LINQ) 是 .NET Framework 3.5 版中引進的創新技術，用來填補許多物件與資料之間的缺口。  
@@ -25,13 +25,13 @@ Language-Integrated Query (LINQ) 是 .NET Framework 3.5 版中引進的創新技
 ## <a name="next-steps"></a>後續步驟  
  若要了解 LINQ 的詳細資訊，先熟悉一些入門 > 一節中的基本概念[Getting Started with Visual Basic 中的 LINQ](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)，然後閱讀您所參與的 LINQ 技術文件想要了解：  
   
--   SQL Server 資料庫：[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
+- SQL Server 資料庫：[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
--   XML 文件：[LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
+- XML 文件：[LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
   
--   ADO.NET 資料集：[LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+- ADO.NET 資料集：[LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
--   .NET 集合、檔案、字串等：[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+- .NET 集合、檔案、字串等：[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
   
 ## <a name="see-also"></a>另請參閱
 

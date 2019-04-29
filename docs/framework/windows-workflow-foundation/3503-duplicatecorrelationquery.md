@@ -3,18 +3,18 @@ title: 3503 - DuplicateCorrelationQuery
 ms.date: 03/30/2017
 ms.assetid: b857f8e6-ce4d-4da4-bc9d-6cd63fa558a4
 ms.openlocfilehash: 37a689b30b0bcab9124472deb98627afbe30dfee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33511396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755593"
 ---
 # <a name="3503---duplicatecorrelationquery"></a>3503 - DuplicateCorrelationQuery
 ## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
-|ID|3503|  
+|識別碼|3503|  
 |關鍵字|WFServices|  
 |層級|警告|  
 |通道|Microsoft-Windows-Application Server-Applications/Analytic|  

@@ -3,11 +3,11 @@ title: 工作 1：建立新的 Windows Presentation Foundation 應用程式
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
 ms.openlocfilehash: 63b84e4fd2c88d98fbf417ee1f55ec203d295116
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641631"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>工作 1：建立新的 Windows Presentation Foundation 應用程式
 在這個工作中，您會使用 WPF 應用程式的 Visual Studio 範本建立空白的 Windows Presentation Foundation (WPF) 應用程式，並將參考加入至適當[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]工作流程組件。  
@@ -32,11 +32,11 @@ ms.locfileid: "59320375"
   
 9. 在 [**加入參考**] 對話方塊中，按一下 **.NET**索引標籤上，按住 CTRL 鍵，選取下列組件，，然後按一下**確定**:  
   
-    -   System.Activities  
+    - System.Activities  
   
-    -   System.Activities.Presentation  
+    - System.Activities.Presentation  
   
-    -   System.Activities.Core.Presentation  
+    - System.Activities.Core.Presentation  
   
 10. 按一下 [確定] 。  
   

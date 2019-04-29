@@ -7,11 +7,11 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
 ms.openlocfilehash: 0aa47fd277cfe47b3d8f08b41ffca9c547dcbfe9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778530"
 ---
 # <a name="function-expression-visual-basic"></a>函式運算式 (Visual Basic)
 宣告參數與定義的函式的 lambda 運算式的程式碼。  
@@ -40,19 +40,19 @@ End Function
 ## <a name="lambda-expression-syntax"></a>Lambda 運算式語法  
  Lambda 運算式的語法類似於標準函式。 差異如下所示：  
   
--   Lambda 運算式沒有名稱。  
+- Lambda 運算式沒有名稱。  
   
--   Lambda 運算式不能有修飾詞，例如`Overloads`或`Overrides`。  
+- Lambda 運算式不能有修飾詞，例如`Overloads`或`Overrides`。  
   
--   不使用 lambda 運算式`As`子句來指定函式的傳回型別。 相反地，從單行 lambda 運算式的主體，所評估的值或多行 lambda 運算式的傳回值推斷型別。 例如，單行 lambda 運算式的主體是否`Where cust.City = "London"`，其傳回類型是`Boolean`。  
+- 不使用 lambda 運算式`As`子句來指定函式的傳回型別。 相反地，從單行 lambda 運算式的主體，所評估的值或多行 lambda 運算式的傳回值推斷型別。 例如，單行 lambda 運算式的主體是否`Where cust.City = "London"`，其傳回類型是`Boolean`。  
   
--   單行 lambda 運算式的主體必須是運算式，不是陳述式。 主體可以包含的函式程序的呼叫，但不是呼叫子函數程序。  
+- 單行 lambda 運算式的主體必須是運算式，不是陳述式。 主體可以包含的函式程序的呼叫，但不是呼叫子函數程序。  
   
--   可能是所有的參數必須必須推斷資料類型或全部指定。  
+- 可能是所有的參數必須必須推斷資料類型或全部指定。  
   
--   不允許 Optional 和 Paramarray 參數。  
+- 不允許 Optional 和 Paramarray 參數。  
   
--   不允許泛型參數。  
+- 不允許泛型參數。  
   
 ## <a name="example"></a>範例  
  下列範例顯示兩種方式可建立簡單的 lambda 運算式。 第一個範例使用`Dim`提供函式的名稱。 若要呼叫的函式，您將會傳送參數的值。  

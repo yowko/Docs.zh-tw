@@ -7,11 +7,11 @@ helpviewer_keywords:
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
 ms.openlocfilehash: e60c4a505db42936f188354f52edd7832fb9632b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772836"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze 屬性
 設定組<xref:System.Windows.Freezable.IsFrozen%2A>狀態`true`上包含<xref:System.Windows.Freezable>項目。 預設行為<xref:System.Windows.Freezable>而不需要`PresentationOptions:Freeze`指定的屬性是<xref:System.Windows.Freezable.IsFrozen%2A>是`false`在載入時間和在一般的相依<xref:System.Windows.Freezable>在執行階段的行為。  

@@ -1,5 +1,5 @@
 ---
-title: <appSettings> 的 <configuration> 項目
+title: <configuration> 的 <appSettings> 項目
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings
@@ -10,11 +10,11 @@ ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: dcdf8d0f11ae65353da08bba1f8d2fe5ab415c6b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705554"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<appSettings > 項目\<設定 >
 
@@ -53,7 +53,7 @@ ms.locfileid: "55289584"
 
 ## <a name="remarks"></a>備註
 
-**\<AppSettings >** 項目會儲存自訂的應用程式組態資訊，例如資料庫連接字串、 檔案路徑、 XML Web 服務 Url 或任何其他自訂組態資訊應用程式。 中指定的索引鍵/值組 **\<appSettings >** 項目中的程式碼使用存取<xref:System.Configuration.ConfigurationSettings>類別。
+ **\<AppSettings >** 項目會儲存自訂的應用程式組態資訊，例如資料庫連接字串、 檔案路徑、 XML Web 服務 Url 或任何其他自訂組態資訊應用程式。 中指定的索引鍵/值組 **\<appSettings >** 項目中的程式碼使用存取<xref:System.Configuration.ConfigurationSettings>類別。
 
 您可以使用**檔案**屬性中 **\<appSettings >** 項目*Web.config*和應用程式組態檔。 這個屬性會指定組態檔中提供額外的設定或覆寫中指定的設定 **\<appSettings >** 項目。 **檔案**屬性可以用於原始檔控制小組開發案例中，例如當使用者想要覆寫應用程式組態檔中指定的專案設定。
 

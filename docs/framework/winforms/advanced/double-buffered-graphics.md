@@ -8,11 +8,11 @@ helpviewer_keywords:
 - examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
 ms.openlocfilehash: 20ec03e6b84110f7ea00c134dc18b23f233c5f58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756009"
 ---
 # <a name="double-buffered-graphics"></a>雙重緩衝的圖形
 閃爍是編寫圖形程式碼時常見的問題。 需要多個複雜繪製作業的圖形作業可能會導致轉譯的影像出現閃爍，或具有無法接受的外觀。 為了解決這些問題，.NET Framework 提供雙重緩衝的存取。  

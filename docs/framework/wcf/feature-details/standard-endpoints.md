@@ -3,17 +3,17 @@ title: 標準端點
 ms.date: 03/30/2017
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
 ms.openlocfilehash: 395d910ddabc553cca47dcdd038f44b1470b3455
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747767"
 ---
 # <a name="standard-endpoints"></a>標準端點
 端點會由位址、繫結和合約指定。 其他可能會在端點上設定的參數包括行為組態、標頭和接聽 URI。  某些端點類型的這些值不會改變。 例如，中繼資料交換端點一律會使用 <xref:System.ServiceModel.Description.IMetadataExchange> 合約。 其他端點，例如 <xref:System.ServiceModel.Description.WebHttpEndpoint>，則一律會要求指定的端點行為。 您可以讓端點針對常用的端點屬性使用預設值，以藉此提升端點的可用性。 標準端點可讓開發人員定義具有預設值的端點，或定義一個或多個端點屬性未改變的位置。  這些端點可讓您不需指定靜態性質的資訊即可使用端點。 標準端點可用於基礎結構和應用程式端點。  
   
 ## <a name="infrastructure-endpoints"></a>基礎結構端點  
- 服務可能會使用某些不是由服務作者明確實作的屬性公開端點。 例如，中繼資料交換端點會公開 <xref:System.ServiceModel.Description.IMetadataExchange> 合約，但是身為服務作者的您並未實作該介面，而是由 WCF 所實作。 此類型的基礎結構端點擁有一個或多個端點屬性的預設值，其中的某些基礎結構可能不可改變。 中繼資料交換端點的 <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A> 屬性必須為 <xref:System.ServiceModel.Description.IMetadataExchange>，而其他屬性 (例如繫結) 可由開發人員提供。 將 <xref:System.ServiceModel.Description.ServiceEndpoint.IsSystemEndpoint%2A> 屬性設定為 `true` 即可識別基礎結構端點。  
+ 服務可能會使用某些不是由服務作者明確實作的屬性公開端點。 例如，中繼資料交換端點會公開 <xref:System.ServiceModel.Description.IMetadataExchange> 合約，但是身為服務作者的您並未實作該介面，而是由 WCF 所實作。 此類型的基礎結構端點擁有一個或多個端點屬性的預設值，其中的某些基礎結構可能不可改變。 中繼資料交換端點的 <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A> 屬性必須為 <xref:System.ServiceModel.Description.IMetadataExchange>，而其他屬性 (例如繫結程序) 可由開發人員提供。 將 <xref:System.ServiceModel.Description.ServiceEndpoint.IsSystemEndpoint%2A> 屬性設定為 `true` 即可識別基礎結構端點。  
   
 ## <a name="application-endpoints"></a>應用程式端點  
  應用程式開發人員可定義其擁有的標準端點，這些端點可指定位址、繫結或合約的預設值。 您可以從 <xref:System.ServiceModel.Description.ServiceEndpoint> 衍生類別並設定正確的端點屬性以定義標準端點。 您可以提供可變更屬性的預設值。 其他屬性會有無法變更的靜態值。 下列範例示範如何實作標準端點。  
@@ -103,7 +103,7 @@ public class CustomEndpointElement : StandardEndpointElement
 }
 ```  
   
- <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602>之下的集合提供支援類型 <`standardEndpoints`> 標準端點的組態 > 一節。  下列範例示範如何實作這個類別。  
+ <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602>之下的集合提供的支援類型 <`standardEndpoints`> 標準端點的組態中的區段。  下列範例示範如何實作這個類別。  
   
 ```csharp
 public class CustomEndpointCollectionElement : StandardEndpointCollectionElement<CustomEndpoint, CustomEndpointElement>
@@ -130,7 +130,7 @@ public class CustomEndpointCollectionElement : StandardEndpointCollectionElement
 serviceHost.AddServiceEndpoint(new CustomEndpoint());  
 ```  
   
- 若要加入的標準端點組態中，加入 <`endpoint`> 項目 <`service`> 項目和任何所需的組態設定 <`standardEndpoints`> 項目。 下列範例會示範如何加入 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>，此為與 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 一起發行的標準端點之一。  
+ 若要加入的標準端點組態中，加入 <`endpoint`> 項目至 <`service`> 項目和任何必要的組態設定，在 <`standardEndpoints`> 項目。 下列範例會示範如何加入 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>，此為與 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 一起發行的標準端點之一。  
   
 ```xml  
 <services>  
@@ -145,7 +145,7 @@ serviceHost.AddServiceEndpoint(new CustomEndpoint());
 </standardEndpoints>
 ```  
   
- 標準端點的型別會指定使用中的 kind 屬性 <`endpoint`> 項目。 在設定端點 <`standardEndpoints`> 項目。 在上述範例中，<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 端點已加入且設定完成。 <`udpDiscoveryEndpoint`> 項目包含 <`standardEndpoint`> 設定<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A>屬性<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>。  
+ 標準端點的型別會指定使用中的類別屬性 <`endpoint`> 項目。 此端點設定內 <`standardEndpoints`> 項目。 在上述範例中，<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 端點已加入且設定完成。 <`udpDiscoveryEndpoint`> 元素包含 <`standardEndpoint`>，設定<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A>屬性<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>。  
   
 ## <a name="standard-endpoints-shipped-with-the-net-framework"></a>隨附於 .NET Framework 的標準端點  
  下表列出隨附於 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 的標準端點。  

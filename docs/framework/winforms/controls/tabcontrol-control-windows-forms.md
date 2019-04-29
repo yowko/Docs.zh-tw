@@ -11,11 +11,11 @@ helpviewer_keywords:
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
 ms.openlocfilehash: d00dbe1e450a2d4316709e92eff7dab488b36045
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755372"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl 控制項 (Windows Form)
 Windows Form `TabControl` 顯示多個索引標籤，像是在筆記本中的分隔線或在檔案櫃中一組資料夾的標籤。 索引標籤可以包含圖片和其他控制項。 使用 `TabControl` 建立屬性頁。  

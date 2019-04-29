@@ -3,11 +3,11 @@ title: 210 - MessageThrottleExceeded
 ms.date: 03/30/2017
 ms.assetid: 24ca08ea-c11c-4753-946e-98aa820f8711
 ms.openlocfilehash: 7ba5948b36642085ef44661b3d580e7f1c4102cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781874"
 ---
 # <a name="210---messagethrottleexceeded"></a>210 - MessageThrottleExceeded
 ## <a name="properties"></a>屬性  
@@ -31,5 +31,5 @@ ms.locfileid: "33460297"
 |--------------------|--------------------|-----------------|  
 |節流閥名稱|`xs:string`|已超出的節流閥名稱。 `MaxConcurrentCalls`、`MaxConcurrentInstances` 或 `MaxConcurrentSessions`。|  
 |限制|`xs:long`|目前設定的節流閥限制。|  
-|HostReference|`xs:string`|若為 Web 託管服務，此欄位會唯一識別 Web 階層架構中的服務。 其格式定義為 ' Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'。 範例: ' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'。|  
+|HostReference|`xs:string`|若為 Web 託管服務，此欄位會唯一識別 Web 階層架構中的服務。 其格式定義為 ' Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'。 範例：' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'。|  
 |AppDomain|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。|
