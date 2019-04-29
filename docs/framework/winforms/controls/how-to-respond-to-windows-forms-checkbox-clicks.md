@@ -13,18 +13,18 @@ helpviewer_keywords:
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
 ms.openlocfilehash: ce616f45ceaa3db117c6981d2987ac09bba7b3fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912934"
 ---
-# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a><span data-ttu-id="90127-102">HOW TO：回應 Windows Forms 核取方塊的按一下動作</span><span class="sxs-lookup"><span data-stu-id="90127-102">How to: Respond to Windows Forms CheckBox Clicks</span></span>
-<span data-ttu-id="90127-103">每當使用者按一下 Windows Form<xref:System.Windows.Forms.CheckBox>控制項，<xref:System.Windows.Forms.Control.Click>就會發生事件。</span><span class="sxs-lookup"><span data-stu-id="90127-103">Whenever a user clicks a Windows Forms <xref:System.Windows.Forms.CheckBox> control, the <xref:System.Windows.Forms.Control.Click> event occurs.</span></span> <span data-ttu-id="90127-104">您可以編寫您的應用程式，以執行某些動作的核取方塊狀態而定。</span><span class="sxs-lookup"><span data-stu-id="90127-104">You can program your application to perform some action depending upon the state of the check box.</span></span>  
+# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a><span data-ttu-id="a0f23-102">HOW TO：回應 Windows Forms 核取方塊的按一下動作</span><span class="sxs-lookup"><span data-stu-id="a0f23-102">How to: Respond to Windows Forms CheckBox Clicks</span></span>
+<span data-ttu-id="a0f23-103">每當使用者按一下 Windows Form<xref:System.Windows.Forms.CheckBox>控制項，<xref:System.Windows.Forms.Control.Click>就會發生事件。</span><span class="sxs-lookup"><span data-stu-id="a0f23-103">Whenever a user clicks a Windows Forms <xref:System.Windows.Forms.CheckBox> control, the <xref:System.Windows.Forms.Control.Click> event occurs.</span></span> <span data-ttu-id="a0f23-104">您可以編寫您的應用程式，以執行某些動作的核取方塊狀態而定。</span><span class="sxs-lookup"><span data-stu-id="a0f23-104">You can program your application to perform some action depending upon the state of the check box.</span></span>  
   
-### <a name="to-respond-to-checkbox-clicks"></a><span data-ttu-id="90127-105">若要回應 CheckBox 按一下動作</span><span class="sxs-lookup"><span data-stu-id="90127-105">To respond to CheckBox clicks</span></span>  
+### <a name="to-respond-to-checkbox-clicks"></a><span data-ttu-id="a0f23-105">若要回應 CheckBox 按一下動作</span><span class="sxs-lookup"><span data-stu-id="a0f23-105">To respond to CheckBox clicks</span></span>  
   
-1. <span data-ttu-id="90127-106">在 <xref:System.Windows.Forms.Control.Click>事件處理常式，使用<xref:System.Windows.Forms.CheckBox.Checked%2A>屬性來判斷控制項的狀態，並執行任何必要的動作。</span><span class="sxs-lookup"><span data-stu-id="90127-106">In the <xref:System.Windows.Forms.Control.Click> event handler, use the <xref:System.Windows.Forms.CheckBox.Checked%2A> property to determine the control's state, and perform any necessary action.</span></span>  
+1. <span data-ttu-id="a0f23-106">在 <xref:System.Windows.Forms.Control.Click>事件處理常式，使用<xref:System.Windows.Forms.CheckBox.Checked%2A>屬性來判斷控制項的狀態，並執行任何必要的動作。</span><span class="sxs-lookup"><span data-stu-id="a0f23-106">In the <xref:System.Windows.Forms.Control.Click> event handler, use the <xref:System.Windows.Forms.CheckBox.Checked%2A> property to determine the control's state, and perform any necessary action.</span></span>  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -71,16 +71,16 @@ ms.locfileid: "59319894"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="90127-107">如果使用者試著按兩下<xref:System.Windows.Forms.CheckBox>控制項，將會個別處理每按一下，也就是說，<xref:System.Windows.Forms.CheckBox>控制項不支援按兩下事件。</span><span class="sxs-lookup"><span data-stu-id="90127-107">If the user attempts to double-click the <xref:System.Windows.Forms.CheckBox> control, each click will be processed separately; that is, the <xref:System.Windows.Forms.CheckBox> control does not support the double-click event.</span></span>  
+    >  <span data-ttu-id="a0f23-107">如果使用者試著按兩下<xref:System.Windows.Forms.CheckBox>控制項，將會個別處理每按一下，也就是說，<xref:System.Windows.Forms.CheckBox>控制項不支援按兩下事件。</span><span class="sxs-lookup"><span data-stu-id="a0f23-107">If the user attempts to double-click the <xref:System.Windows.Forms.CheckBox> control, each click will be processed separately; that is, the <xref:System.Windows.Forms.CheckBox> control does not support the double-click event.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="90127-108">當<xref:System.Windows.Forms.CheckBox.AutoCheck%2A>屬性是`true`（預設值），<xref:System.Windows.Forms.CheckBox>自動選取或清除時按一下它。</span><span class="sxs-lookup"><span data-stu-id="90127-108">When the <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> property is `true` (the default), the <xref:System.Windows.Forms.CheckBox> is automatically selected or cleared when it is clicked.</span></span> <span data-ttu-id="90127-109">否則，您必須手動設定<xref:System.Windows.Forms.CheckBox.Checked%2A>屬性時<xref:System.Windows.Forms.Control.Click>就會發生事件。</span><span class="sxs-lookup"><span data-stu-id="90127-109">Otherwise, you must manually set the <xref:System.Windows.Forms.CheckBox.Checked%2A> property when the <xref:System.Windows.Forms.Control.Click> event occurs.</span></span>  
+    >  <span data-ttu-id="a0f23-108">當<xref:System.Windows.Forms.CheckBox.AutoCheck%2A>屬性是`true`（預設值），<xref:System.Windows.Forms.CheckBox>自動選取或清除時按一下它。</span><span class="sxs-lookup"><span data-stu-id="a0f23-108">When the <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> property is `true` (the default), the <xref:System.Windows.Forms.CheckBox> is automatically selected or cleared when it is clicked.</span></span> <span data-ttu-id="a0f23-109">否則，您必須手動設定<xref:System.Windows.Forms.CheckBox.Checked%2A>屬性時<xref:System.Windows.Forms.Control.Click>就會發生事件。</span><span class="sxs-lookup"><span data-stu-id="a0f23-109">Otherwise, you must manually set the <xref:System.Windows.Forms.CheckBox.Checked%2A> property when the <xref:System.Windows.Forms.Control.Click> event occurs.</span></span>  
   
-     <span data-ttu-id="90127-110">您也可以使用<xref:System.Windows.Forms.CheckBox>控制項來決定採取的動作。</span><span class="sxs-lookup"><span data-stu-id="90127-110">You can also use the <xref:System.Windows.Forms.CheckBox> control to determine a course of action.</span></span>  
+     <span data-ttu-id="a0f23-110">您也可以使用<xref:System.Windows.Forms.CheckBox>控制項來決定採取的動作。</span><span class="sxs-lookup"><span data-stu-id="a0f23-110">You can also use the <xref:System.Windows.Forms.CheckBox> control to determine a course of action.</span></span>  
   
-### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a><span data-ttu-id="90127-111">按一下來決定所要採取的動作時核取方塊</span><span class="sxs-lookup"><span data-stu-id="90127-111">To determine a course of action when a check box is clicked</span></span>  
+### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a><span data-ttu-id="a0f23-111">按一下來決定所要採取的動作時核取方塊</span><span class="sxs-lookup"><span data-stu-id="a0f23-111">To determine a course of action when a check box is clicked</span></span>  
   
-1. <span data-ttu-id="90127-112">若要查詢的值中使用 case 陳述式<xref:System.Windows.Forms.CheckBox.CheckState%2A>屬性來決定所要採取的動作。</span><span class="sxs-lookup"><span data-stu-id="90127-112">Use a case statement to query the value of the <xref:System.Windows.Forms.CheckBox.CheckState%2A> property to determine a course of action.</span></span> <span data-ttu-id="90127-113">當<xref:System.Windows.Forms.CheckBox.ThreeState%2A>屬性設定為`true`，則<xref:System.Windows.Forms.CheckBox.CheckState%2A>屬性可能會傳回三個可能的值，代表要核取方塊，方塊未選取，或是第三個不定狀態顯示此方塊以呈現暗灰色無法使用，表示選項的外觀。</span><span class="sxs-lookup"><span data-stu-id="90127-113">When the <xref:System.Windows.Forms.CheckBox.ThreeState%2A> property is set to `true`, the <xref:System.Windows.Forms.CheckBox.CheckState%2A> property may return three possible values, which represent the box being checked, the box being unchecked, or a third indeterminate state in which the box is displayed with a dimmed appearance to indicate the option is unavailable.</span></span>  
+1. <span data-ttu-id="a0f23-112">若要查詢的值中使用 case 陳述式<xref:System.Windows.Forms.CheckBox.CheckState%2A>屬性來決定所要採取的動作。</span><span class="sxs-lookup"><span data-stu-id="a0f23-112">Use a case statement to query the value of the <xref:System.Windows.Forms.CheckBox.CheckState%2A> property to determine a course of action.</span></span> <span data-ttu-id="a0f23-113">當<xref:System.Windows.Forms.CheckBox.ThreeState%2A>屬性設定為`true`，則<xref:System.Windows.Forms.CheckBox.CheckState%2A>屬性可能會傳回三個可能的值，代表要核取方塊，方塊未選取，或是第三個不定狀態顯示此方塊以呈現暗灰色無法使用，表示選項的外觀。</span><span class="sxs-lookup"><span data-stu-id="a0f23-113">When the <xref:System.Windows.Forms.CheckBox.ThreeState%2A> property is set to `true`, the <xref:System.Windows.Forms.CheckBox.CheckState%2A> property may return three possible values, which represent the box being checked, the box being unchecked, or a third indeterminate state in which the box is displayed with a dimmed appearance to indicate the option is unavailable.</span></span>  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -133,11 +133,11 @@ ms.locfileid: "59319894"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="90127-114">當<xref:System.Windows.Forms.CheckBox.ThreeState%2A>屬性設定為`true`，則<xref:System.Windows.Forms.CheckBox.Checked%2A>屬性會傳回`true`同時<xref:System.Windows.Forms.CheckState.Checked>和<xref:System.Windows.Forms.CheckState.Indeterminate>。</span><span class="sxs-lookup"><span data-stu-id="90127-114">When the <xref:System.Windows.Forms.CheckBox.ThreeState%2A> property is set to `true`, the <xref:System.Windows.Forms.CheckBox.Checked%2A> property returns `true` for both <xref:System.Windows.Forms.CheckState.Checked> and <xref:System.Windows.Forms.CheckState.Indeterminate>.</span></span>  
+    >  <span data-ttu-id="a0f23-114">當<xref:System.Windows.Forms.CheckBox.ThreeState%2A>屬性設定為`true`，則<xref:System.Windows.Forms.CheckBox.Checked%2A>屬性會傳回`true`同時<xref:System.Windows.Forms.CheckState.Checked>和<xref:System.Windows.Forms.CheckState.Indeterminate>。</span><span class="sxs-lookup"><span data-stu-id="a0f23-114">When the <xref:System.Windows.Forms.CheckBox.ThreeState%2A> property is set to `true`, the <xref:System.Windows.Forms.CheckBox.Checked%2A> property returns `true` for both <xref:System.Windows.Forms.CheckState.Checked> and <xref:System.Windows.Forms.CheckState.Indeterminate>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="90127-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="90127-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a0f23-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a0f23-115">See also</span></span>
 
 - <xref:System.Windows.Forms.CheckBox>
-- [<span data-ttu-id="90127-116">CheckBox 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="90127-116">CheckBox Control Overview</span></span>](checkbox-control-overview-windows-forms.md)
-- [<span data-ttu-id="90127-117">如何：設定使用 Windows Form 核取方塊控制項的選項</span><span class="sxs-lookup"><span data-stu-id="90127-117">How to: Set Options with Windows Forms CheckBox Controls</span></span>](how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [<span data-ttu-id="90127-118">CheckBox 控制項</span><span class="sxs-lookup"><span data-stu-id="90127-118">CheckBox Control</span></span>](checkbox-control-windows-forms.md)
+- [<span data-ttu-id="a0f23-116">CheckBox 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="a0f23-116">CheckBox Control Overview</span></span>](checkbox-control-overview-windows-forms.md)
+- [<span data-ttu-id="a0f23-117">如何：設定使用 Windows Form 核取方塊控制項的選項</span><span class="sxs-lookup"><span data-stu-id="a0f23-117">How to: Set Options with Windows Forms CheckBox Controls</span></span>](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [<span data-ttu-id="a0f23-118">CheckBox 控制項</span><span class="sxs-lookup"><span data-stu-id="a0f23-118">CheckBox Control</span></span>](checkbox-control-windows-forms.md)
