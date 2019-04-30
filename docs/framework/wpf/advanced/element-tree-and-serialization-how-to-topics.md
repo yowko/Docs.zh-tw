@@ -8,24 +8,24 @@ helpviewer_keywords:
 - serialization [WPF]
 ms.assetid: 2d8ef436-d559-4c3e-86de-5a160d5f87d2
 ms.openlocfilehash: 7227e61dd8140ec9b1560fbc12e4ba4dd3e0d843
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962472"
 ---
-# <a name="element-tree-and-serialization-how-to-topics"></a><span data-ttu-id="40a6d-102">項目樹狀結構和序列化 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="40a6d-102">Element Tree and Serialization How-to Topics</span></span>
-<span data-ttu-id="40a6d-103">在本節中的主題描述如何使用 WPF 元素樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="40a6d-103">The topics in this section describe how to use the WPF element tree.</span></span>  
+# <a name="element-tree-and-serialization-how-to-topics"></a><span data-ttu-id="e934c-102">項目樹狀結構和序列化 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="e934c-102">Element Tree and Serialization How-to Topics</span></span>
+<span data-ttu-id="e934c-103">在本節中的主題描述如何使用 WPF 元素樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="e934c-103">The topics in this section describe how to use the WPF element tree.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="40a6d-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="40a6d-104">In This Section</span></span>  
- [<span data-ttu-id="40a6d-105">依名稱尋找元素</span><span class="sxs-lookup"><span data-stu-id="40a6d-105">Find an Element by Its Name</span></span>](how-to-find-an-element-by-its-name.md)  
- [<span data-ttu-id="40a6d-106">覆寫邏輯樹狀結構</span><span class="sxs-lookup"><span data-stu-id="40a6d-106">Override the Logical Tree</span></span>](how-to-override-the-logical-tree.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e934c-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="e934c-104">In This Section</span></span>  
+ [<span data-ttu-id="e934c-105">依名稱尋找元素</span><span class="sxs-lookup"><span data-stu-id="e934c-105">Find an Element by Its Name</span></span>](how-to-find-an-element-by-its-name.md)  
+ [<span data-ttu-id="e934c-106">覆寫邏輯樹狀結構</span><span class="sxs-lookup"><span data-stu-id="e934c-106">Override the Logical Tree</span></span>](how-to-override-the-logical-tree.md)  
   
-## <a name="reference"></a><span data-ttu-id="40a6d-107">參考資料</span><span class="sxs-lookup"><span data-stu-id="40a6d-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e934c-107">參考資料</span><span class="sxs-lookup"><span data-stu-id="e934c-107">Reference</span></span>  
  <xref:System.Windows.LogicalTreeHelper>  
   
  <xref:System.Windows.Media.VisualTreeHelper>  
   
  <xref:System.Windows.Markup>  
   
-## <a name="related-sections"></a><span data-ttu-id="40a6d-108">相關章節</span><span class="sxs-lookup"><span data-stu-id="40a6d-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="e934c-108">相關章節</span><span class="sxs-lookup"><span data-stu-id="e934c-108">Related Sections</span></span>

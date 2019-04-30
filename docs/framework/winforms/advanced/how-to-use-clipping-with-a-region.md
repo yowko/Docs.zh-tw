@@ -9,29 +9,29 @@ helpviewer_keywords:
 - regions [Windows Forms], restricting drawing surface
 ms.assetid: 43d121b4-e14c-4901-b25c-2d6c25ba4e29
 ms.openlocfilehash: cf60b32df805a49f8da2760332dc32e34209f6dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954504"
 ---
-# <a name="how-to-use-clipping-with-a-region"></a><span data-ttu-id="3d570-102">HOW TO：使用區域的裁剪</span><span class="sxs-lookup"><span data-stu-id="3d570-102">How to: Use Clipping with a Region</span></span>
-<span data-ttu-id="3d570-103">其中一個屬性的<xref:System.Drawing.Graphics>類別是裁剪區域。</span><span class="sxs-lookup"><span data-stu-id="3d570-103">One of the properties of the <xref:System.Drawing.Graphics> class is the clip region.</span></span> <span data-ttu-id="3d570-104">所有的繪圖，即可指定<xref:System.Drawing.Graphics>物件僅限於的裁剪區域<xref:System.Drawing.Graphics>物件。</span><span class="sxs-lookup"><span data-stu-id="3d570-104">All drawing done by a given <xref:System.Drawing.Graphics> object is restricted to the clip region of that <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="3d570-105">您可以藉由呼叫設定的裁剪區域<xref:System.Drawing.Graphics.SetClip%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="3d570-105">You can set the clip region by calling the <xref:System.Drawing.Graphics.SetClip%2A> method.</span></span>  
+# <a name="how-to-use-clipping-with-a-region"></a><span data-ttu-id="8ff70-102">HOW TO：使用區域的裁剪</span><span class="sxs-lookup"><span data-stu-id="8ff70-102">How to: Use Clipping with a Region</span></span>
+<span data-ttu-id="8ff70-103">其中一個屬性的<xref:System.Drawing.Graphics>類別是裁剪區域。</span><span class="sxs-lookup"><span data-stu-id="8ff70-103">One of the properties of the <xref:System.Drawing.Graphics> class is the clip region.</span></span> <span data-ttu-id="8ff70-104">所有的繪圖，即可指定<xref:System.Drawing.Graphics>物件僅限於的裁剪區域<xref:System.Drawing.Graphics>物件。</span><span class="sxs-lookup"><span data-stu-id="8ff70-104">All drawing done by a given <xref:System.Drawing.Graphics> object is restricted to the clip region of that <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="8ff70-105">您可以藉由呼叫設定的裁剪區域<xref:System.Drawing.Graphics.SetClip%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="8ff70-105">You can set the clip region by calling the <xref:System.Drawing.Graphics.SetClip%2A> method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3d570-106">範例</span><span class="sxs-lookup"><span data-stu-id="3d570-106">Example</span></span>  
- <span data-ttu-id="3d570-107">下列範例會建構單一多邊形所組成的路徑。</span><span class="sxs-lookup"><span data-stu-id="3d570-107">The following example constructs a path that consists of a single polygon.</span></span> <span data-ttu-id="3d570-108">然後程式碼會建構一個地區，根據該路徑。</span><span class="sxs-lookup"><span data-stu-id="3d570-108">Then the code constructs a region, based on that path.</span></span> <span data-ttu-id="3d570-109">區域會傳遞至<xref:System.Drawing.Graphics.SetClip%2A>方法的<xref:System.Drawing.Graphics>繪製物件，並接著兩個字串。</span><span class="sxs-lookup"><span data-stu-id="3d570-109">The region is passed to the <xref:System.Drawing.Graphics.SetClip%2A> method of a <xref:System.Drawing.Graphics> object, and then two strings are drawn.</span></span>  
+## <a name="example"></a><span data-ttu-id="8ff70-106">範例</span><span class="sxs-lookup"><span data-stu-id="8ff70-106">Example</span></span>  
+ <span data-ttu-id="8ff70-107">下列範例會建構單一多邊形所組成的路徑。</span><span class="sxs-lookup"><span data-stu-id="8ff70-107">The following example constructs a path that consists of a single polygon.</span></span> <span data-ttu-id="8ff70-108">然後程式碼會建構一個地區，根據該路徑。</span><span class="sxs-lookup"><span data-stu-id="8ff70-108">Then the code constructs a region, based on that path.</span></span> <span data-ttu-id="8ff70-109">區域會傳遞至<xref:System.Drawing.Graphics.SetClip%2A>方法的<xref:System.Drawing.Graphics>繪製物件，並接著兩個字串。</span><span class="sxs-lookup"><span data-stu-id="8ff70-109">The region is passed to the <xref:System.Drawing.Graphics.SetClip%2A> method of a <xref:System.Drawing.Graphics> object, and then two strings are drawn.</span></span>  
   
- <span data-ttu-id="3d570-110">下圖顯示裁剪的字串。</span><span class="sxs-lookup"><span data-stu-id="3d570-110">The following illustration shows the clipped strings.</span></span>  
+ <span data-ttu-id="8ff70-110">下圖顯示裁剪的字串。</span><span class="sxs-lookup"><span data-stu-id="8ff70-110">The following illustration shows the clipped strings.</span></span>  
   
- <span data-ttu-id="3d570-111">![Clip](./media/clip1.png "clip1")</span><span class="sxs-lookup"><span data-stu-id="3d570-111">![Clip](./media/clip1.png "clip1")</span></span>  
+ <span data-ttu-id="8ff70-111">![Clip](./media/clip1.png "clip1")</span><span class="sxs-lookup"><span data-stu-id="8ff70-111">![Clip](./media/clip1.png "clip1")</span></span>  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.MiscLegacyTopics#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#41)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="3d570-112">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="3d570-112">Compiling the Code</span></span>  
- <span data-ttu-id="3d570-113">上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。</span><span class="sxs-lookup"><span data-stu-id="3d570-113">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="8ff70-112">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="8ff70-112">Compiling the Code</span></span>  
+ <span data-ttu-id="8ff70-113">上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。</span><span class="sxs-lookup"><span data-stu-id="8ff70-113">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3d570-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3d570-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8ff70-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8ff70-114">See also</span></span>
 
-- [<span data-ttu-id="3d570-115">GDI+ 中的區域</span><span class="sxs-lookup"><span data-stu-id="3d570-115">Regions in GDI+</span></span>](regions-in-gdi.md)
-- [<span data-ttu-id="3d570-116">使用區域</span><span class="sxs-lookup"><span data-stu-id="3d570-116">Using Regions</span></span>](using-regions.md)
+- [<span data-ttu-id="8ff70-115">GDI+ 中的區域</span><span class="sxs-lookup"><span data-stu-id="8ff70-115">Regions in GDI+</span></span>](regions-in-gdi.md)
+- [<span data-ttu-id="8ff70-116">使用區域</span><span class="sxs-lookup"><span data-stu-id="8ff70-116">Using Regions</span></span>](using-regions.md)

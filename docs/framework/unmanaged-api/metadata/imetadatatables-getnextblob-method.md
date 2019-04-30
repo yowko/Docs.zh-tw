@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9b8a91a2c1ef9b68dcfc293a870ce3e9b9499a8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946782"
 ---
-# <a name="imetadatatablesgetnextblob-method"></a><span data-ttu-id="fa4b5-102">IMetaDataTables::GetNextBlob 方法</span><span class="sxs-lookup"><span data-stu-id="fa4b5-102">IMetaDataTables::GetNextBlob Method</span></span>
-<span data-ttu-id="fa4b5-103">取得資料表中的下一個二進位大型物件 (BLOB) 的索引。</span><span class="sxs-lookup"><span data-stu-id="fa4b5-103">Gets the index of the next binary large object (BLOB) in the table.</span></span>  
+# <a name="imetadatatablesgetnextblob-method"></a><span data-ttu-id="59c0e-102">IMetaDataTables::GetNextBlob 方法</span><span class="sxs-lookup"><span data-stu-id="59c0e-102">IMetaDataTables::GetNextBlob Method</span></span>
+<span data-ttu-id="59c0e-103">取得資料表中的下一個二進位大型物件 (BLOB) 的索引。</span><span class="sxs-lookup"><span data-stu-id="59c0e-103">Gets the index of the next binary large object (BLOB) in the table.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fa4b5-104">語法</span><span class="sxs-lookup"><span data-stu-id="fa4b5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="59c0e-104">語法</span><span class="sxs-lookup"><span data-stu-id="59c0e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNextBlob (  
@@ -36,23 +36,23 @@ HRESULT GetNextBlob (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fa4b5-105">參數</span><span class="sxs-lookup"><span data-stu-id="fa4b5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="59c0e-105">參數</span><span class="sxs-lookup"><span data-stu-id="59c0e-105">Parameters</span></span>  
  `ixBlob`  
- <span data-ttu-id="fa4b5-106">[in]索引，傳回的資料行的 Blob。</span><span class="sxs-lookup"><span data-stu-id="fa4b5-106">[in] The index, as returned from a column of BLOBs.</span></span>  
+ <span data-ttu-id="59c0e-106">[in]索引，傳回的資料行的 Blob。</span><span class="sxs-lookup"><span data-stu-id="59c0e-106">[in] The index, as returned from a column of BLOBs.</span></span>  
   
  `pNext`  
- <span data-ttu-id="fa4b5-107">[out]索引的下一個 BLOB 的指標。</span><span class="sxs-lookup"><span data-stu-id="fa4b5-107">[out] A pointer to the index of the next BLOB.</span></span>  
+ <span data-ttu-id="59c0e-107">[out]索引的下一個 BLOB 的指標。</span><span class="sxs-lookup"><span data-stu-id="59c0e-107">[out] A pointer to the index of the next BLOB.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fa4b5-108">需求</span><span class="sxs-lookup"><span data-stu-id="fa4b5-108">Requirements</span></span>  
- <span data-ttu-id="fa4b5-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fa4b5-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="59c0e-108">需求</span><span class="sxs-lookup"><span data-stu-id="59c0e-108">Requirements</span></span>  
+ <span data-ttu-id="59c0e-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="59c0e-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fa4b5-110">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="fa4b5-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="59c0e-110">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="59c0e-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="fa4b5-111">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="fa4b5-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="59c0e-111">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="59c0e-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="fa4b5-112">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fa4b5-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="59c0e-112">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="59c0e-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fa4b5-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fa4b5-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="59c0e-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="59c0e-113">See also</span></span>
 
-- [<span data-ttu-id="fa4b5-114">IMetaDataTables 介面</span><span class="sxs-lookup"><span data-stu-id="fa4b5-114">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="fa4b5-115">IMetaDataTables2 介面</span><span class="sxs-lookup"><span data-stu-id="fa4b5-115">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="59c0e-114">IMetaDataTables 介面</span><span class="sxs-lookup"><span data-stu-id="59c0e-114">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="59c0e-115">IMetaDataTables2 介面</span><span class="sxs-lookup"><span data-stu-id="59c0e-115">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

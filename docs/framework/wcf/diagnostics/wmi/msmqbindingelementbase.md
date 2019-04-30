@@ -3,16 +3,16 @@ title: MsmqBindingElementBase
 ms.date: 03/30/2017
 ms.assetid: 210d41ab-a2a4-4d7a-afd2-0916c08a4015
 ms.openlocfilehash: 1df4b32feda246a536183a42ac11b113bc4bb259
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963432"
 ---
-# <a name="msmqbindingelementbase"></a><span data-ttu-id="c1ff5-102">MsmqBindingElementBase</span><span class="sxs-lookup"><span data-stu-id="c1ff5-102">MsmqBindingElementBase</span></span>
-<span data-ttu-id="c1ff5-103">MsmqBindingElementBase</span><span class="sxs-lookup"><span data-stu-id="c1ff5-103">MsmqBindingElementBase</span></span>  
+# <a name="msmqbindingelementbase"></a><span data-ttu-id="0a99c-102">MsmqBindingElementBase</span><span class="sxs-lookup"><span data-stu-id="0a99c-102">MsmqBindingElementBase</span></span>
+<span data-ttu-id="0a99c-103">MsmqBindingElementBase</span><span class="sxs-lookup"><span data-stu-id="0a99c-103">MsmqBindingElementBase</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c1ff5-104">語法</span><span class="sxs-lookup"><span data-stu-id="c1ff5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0a99c-104">語法</span><span class="sxs-lookup"><span data-stu-id="0a99c-104">Syntax</span></span>  
   
 ```csharp  
 class MsmqBindingElementBase : TransportBindingElement  
@@ -31,96 +31,96 @@ class MsmqBindingElementBase : TransportBindingElement
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="c1ff5-105">方法</span><span class="sxs-lookup"><span data-stu-id="c1ff5-105">Methods</span></span>  
- <span data-ttu-id="c1ff5-106">MsmqBindingElementBase 類別不會定義任何方法。</span><span class="sxs-lookup"><span data-stu-id="c1ff5-106">The MsmqBindingElementBase class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="0a99c-105">方法</span><span class="sxs-lookup"><span data-stu-id="0a99c-105">Methods</span></span>  
+ <span data-ttu-id="0a99c-106">MsmqBindingElementBase 類別不會定義任何方法。</span><span class="sxs-lookup"><span data-stu-id="0a99c-106">The MsmqBindingElementBase class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="c1ff5-107">屬性</span><span class="sxs-lookup"><span data-stu-id="c1ff5-107">Properties</span></span>  
- <span data-ttu-id="c1ff5-108">MsmqBindingElementBase 類別具有下列屬性：</span><span class="sxs-lookup"><span data-stu-id="c1ff5-108">The MsmqBindingElementBase class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="0a99c-107">屬性</span><span class="sxs-lookup"><span data-stu-id="0a99c-107">Properties</span></span>  
+ <span data-ttu-id="0a99c-108">MsmqBindingElementBase 類別具有下列屬性：</span><span class="sxs-lookup"><span data-stu-id="0a99c-108">The MsmqBindingElementBase class has the following properties:</span></span>  
   
-### <a name="customdeadletterqueue"></a><span data-ttu-id="c1ff5-109">CustomDeadLetterQueue</span><span class="sxs-lookup"><span data-stu-id="c1ff5-109">CustomDeadLetterQueue</span></span>  
- <span data-ttu-id="c1ff5-110">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="c1ff5-110">Data type: string</span></span>  
+### <a name="customdeadletterqueue"></a><span data-ttu-id="0a99c-109">CustomDeadLetterQueue</span><span class="sxs-lookup"><span data-stu-id="0a99c-109">CustomDeadLetterQueue</span></span>  
+ <span data-ttu-id="0a99c-110">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="0a99c-110">Data type: string</span></span>  
   
- <span data-ttu-id="c1ff5-111">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c1ff5-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="0a99c-111">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="0a99c-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c1ff5-112">包含每個應用程式寄不出的信件佇列位置的 URI，該佇列含有已過期、無法傳輸或延遲傳遞的訊息。</span><span class="sxs-lookup"><span data-stu-id="c1ff5-112">A URI that contains the location of the dead letter queue for each application, where messages that have expired or that have failed transfer or delivery are placed.</span></span>  
+ <span data-ttu-id="0a99c-112">包含每個應用程式寄不出的信件佇列位置的 URI，該佇列含有已過期、無法傳輸或延遲傳遞的訊息。</span><span class="sxs-lookup"><span data-stu-id="0a99c-112">A URI that contains the location of the dead letter queue for each application, where messages that have expired or that have failed transfer or delivery are placed.</span></span>  
   
-### <a name="deadletterqueue"></a><span data-ttu-id="c1ff5-113">DeadLetterQueue</span><span class="sxs-lookup"><span data-stu-id="c1ff5-113">DeadLetterQueue</span></span>  
- <span data-ttu-id="c1ff5-114">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="c1ff5-114">Data type: string</span></span>  
+### <a name="deadletterqueue"></a><span data-ttu-id="0a99c-113">DeadLetterQueue</span><span class="sxs-lookup"><span data-stu-id="0a99c-113">DeadLetterQueue</span></span>  
+ <span data-ttu-id="0a99c-114">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="0a99c-114">Data type: string</span></span>  
   
- <span data-ttu-id="c1ff5-115">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c1ff5-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="0a99c-115">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="0a99c-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c1ff5-116">代表要使用之寄不出的信件佇列類型的列舉值。</span><span class="sxs-lookup"><span data-stu-id="c1ff5-116">An enumeration value that indicates the type of dead letter queue to use.</span></span>  
+ <span data-ttu-id="0a99c-116">代表要使用之寄不出的信件佇列類型的列舉值。</span><span class="sxs-lookup"><span data-stu-id="0a99c-116">An enumeration value that indicates the type of dead letter queue to use.</span></span>  
   
-### <a name="durable"></a><span data-ttu-id="c1ff5-117">Durable</span><span class="sxs-lookup"><span data-stu-id="c1ff5-117">Durable</span></span>  
- <span data-ttu-id="c1ff5-118">資料型別：布林值</span><span class="sxs-lookup"><span data-stu-id="c1ff5-118">Data type: boolean</span></span>  
+### <a name="durable"></a><span data-ttu-id="0a99c-117">Durable</span><span class="sxs-lookup"><span data-stu-id="0a99c-117">Durable</span></span>  
+ <span data-ttu-id="0a99c-118">資料型別：布林值</span><span class="sxs-lookup"><span data-stu-id="0a99c-118">Data type: boolean</span></span>  
   
- <span data-ttu-id="c1ff5-119">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c1ff5-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="0a99c-119">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="0a99c-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c1ff5-120">代表此繫結處理之訊息為永久性或變動性的值。</span><span class="sxs-lookup"><span data-stu-id="c1ff5-120">A value that indicates whether the messages processed by this binding are durable or volatile.</span></span>  
+ <span data-ttu-id="0a99c-120">代表此繫結處理之訊息為永久性或變動性的值。</span><span class="sxs-lookup"><span data-stu-id="0a99c-120">A value that indicates whether the messages processed by this binding are durable or volatile.</span></span>  
   
-### <a name="exactlyonce"></a><span data-ttu-id="c1ff5-121">ExactlyOnce</span><span class="sxs-lookup"><span data-stu-id="c1ff5-121">ExactlyOnce</span></span>  
- <span data-ttu-id="c1ff5-122">資料型別：布林值</span><span class="sxs-lookup"><span data-stu-id="c1ff5-122">Data type: boolean</span></span>  
+### <a name="exactlyonce"></a><span data-ttu-id="0a99c-121">ExactlyOnce</span><span class="sxs-lookup"><span data-stu-id="0a99c-121">ExactlyOnce</span></span>  
+ <span data-ttu-id="0a99c-122">資料型別：布林值</span><span class="sxs-lookup"><span data-stu-id="0a99c-122">Data type: boolean</span></span>  
   
- <span data-ttu-id="c1ff5-123">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c1ff5-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="0a99c-123">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="0a99c-123">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c1ff5-124">代表由此繫結處理的訊息是否只接收一次的布林值。</span><span class="sxs-lookup"><span data-stu-id="c1ff5-124">A Boolean value that indicates whether messages processed by this binding are received exactly once.</span></span>  
+ <span data-ttu-id="0a99c-124">代表由此繫結處理的訊息是否只接收一次的布林值。</span><span class="sxs-lookup"><span data-stu-id="0a99c-124">A Boolean value that indicates whether messages processed by this binding are received exactly once.</span></span>  
   
-### <a name="maxretrycycles"></a><span data-ttu-id="c1ff5-125">MaxRetryCycles</span><span class="sxs-lookup"><span data-stu-id="c1ff5-125">MaxRetryCycles</span></span>  
- <span data-ttu-id="c1ff5-126">資料型別：sint32</span><span class="sxs-lookup"><span data-stu-id="c1ff5-126">Data type: sint32</span></span>  
+### <a name="maxretrycycles"></a><span data-ttu-id="0a99c-125">MaxRetryCycles</span><span class="sxs-lookup"><span data-stu-id="0a99c-125">MaxRetryCycles</span></span>  
+ <span data-ttu-id="0a99c-126">資料型別：sint32</span><span class="sxs-lookup"><span data-stu-id="0a99c-126">Data type: sint32</span></span>  
   
- <span data-ttu-id="c1ff5-127">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c1ff5-127">Access type: Read-only</span></span>  
+ <span data-ttu-id="0a99c-127">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="0a99c-127">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c1ff5-128">嘗試傳遞訊息至接收應用程式的重試循環次數上限。</span><span class="sxs-lookup"><span data-stu-id="c1ff5-128">The maximum number of retry cycles to attempt delivery of messages to the receiving application.</span></span>  
+ <span data-ttu-id="0a99c-128">嘗試傳遞訊息至接收應用程式的重試循環次數上限。</span><span class="sxs-lookup"><span data-stu-id="0a99c-128">The maximum number of retry cycles to attempt delivery of messages to the receiving application.</span></span>  
   
-### <a name="receiveerrorhandling"></a><span data-ttu-id="c1ff5-129">ReceiveErrorHandling</span><span class="sxs-lookup"><span data-stu-id="c1ff5-129">ReceiveErrorHandling</span></span>  
- <span data-ttu-id="c1ff5-130">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="c1ff5-130">Data type: string</span></span>  
+### <a name="receiveerrorhandling"></a><span data-ttu-id="0a99c-129">ReceiveErrorHandling</span><span class="sxs-lookup"><span data-stu-id="0a99c-129">ReceiveErrorHandling</span></span>  
+ <span data-ttu-id="0a99c-130">資料型別：字串</span><span class="sxs-lookup"><span data-stu-id="0a99c-130">Data type: string</span></span>  
   
- <span data-ttu-id="c1ff5-131">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c1ff5-131">Access type: Read-only</span></span>  
+ <span data-ttu-id="0a99c-131">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="0a99c-131">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c1ff5-132">有害訊息處理設定。</span><span class="sxs-lookup"><span data-stu-id="c1ff5-132">The settings for poison message handling.</span></span>  
+ <span data-ttu-id="0a99c-132">有害訊息處理設定。</span><span class="sxs-lookup"><span data-stu-id="0a99c-132">The settings for poison message handling.</span></span>  
   
-### <a name="receiveretrycount"></a><span data-ttu-id="c1ff5-133">ReceiveRetryCount</span><span class="sxs-lookup"><span data-stu-id="c1ff5-133">ReceiveRetryCount</span></span>  
- <span data-ttu-id="c1ff5-134">資料型別：sint32</span><span class="sxs-lookup"><span data-stu-id="c1ff5-134">Data type: sint32</span></span>  
+### <a name="receiveretrycount"></a><span data-ttu-id="0a99c-133">ReceiveRetryCount</span><span class="sxs-lookup"><span data-stu-id="0a99c-133">ReceiveRetryCount</span></span>  
+ <span data-ttu-id="0a99c-134">資料型別：sint32</span><span class="sxs-lookup"><span data-stu-id="0a99c-134">Data type: sint32</span></span>  
   
- <span data-ttu-id="c1ff5-135">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c1ff5-135">Access type: Read-only</span></span>  
+ <span data-ttu-id="0a99c-135">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="0a99c-135">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c1ff5-136">從應用程式佇列讀取之訊息的立即重試次數上限。</span><span class="sxs-lookup"><span data-stu-id="c1ff5-136">The maximum number of immediate retry attempts on a message that is read from the application queue.</span></span>  
+ <span data-ttu-id="0a99c-136">從應用程式佇列讀取之訊息的立即重試次數上限。</span><span class="sxs-lookup"><span data-stu-id="0a99c-136">The maximum number of immediate retry attempts on a message that is read from the application queue.</span></span>  
   
-### <a name="retrycycledelay"></a><span data-ttu-id="c1ff5-137">RetryCycleDelay</span><span class="sxs-lookup"><span data-stu-id="c1ff5-137">RetryCycleDelay</span></span>  
- <span data-ttu-id="c1ff5-138">資料型別：日期時間</span><span class="sxs-lookup"><span data-stu-id="c1ff5-138">Data type: datetime</span></span>  
+### <a name="retrycycledelay"></a><span data-ttu-id="0a99c-137">RetryCycleDelay</span><span class="sxs-lookup"><span data-stu-id="0a99c-137">RetryCycleDelay</span></span>  
+ <span data-ttu-id="0a99c-138">資料型別：日期時間</span><span class="sxs-lookup"><span data-stu-id="0a99c-138">Data type: datetime</span></span>  
   
- <span data-ttu-id="c1ff5-139">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c1ff5-139">Access type: Read-only</span></span>  
+ <span data-ttu-id="0a99c-139">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="0a99c-139">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c1ff5-140">代表嘗試傳遞無法立即傳遞之訊息時，重試循環之間的時間延遲值。</span><span class="sxs-lookup"><span data-stu-id="c1ff5-140">A value that indicates the time delay between retry cycles when attempting to deliver a message that could not be delivered immediately.</span></span>  
+ <span data-ttu-id="0a99c-140">代表嘗試傳遞無法立即傳遞之訊息時，重試循環之間的時間延遲值。</span><span class="sxs-lookup"><span data-stu-id="0a99c-140">A value that indicates the time delay between retry cycles when attempting to deliver a message that could not be delivered immediately.</span></span>  
   
-### <a name="timetolive"></a><span data-ttu-id="c1ff5-141">TimeToLive</span><span class="sxs-lookup"><span data-stu-id="c1ff5-141">TimeToLive</span></span>  
- <span data-ttu-id="c1ff5-142">資料型別：日期時間</span><span class="sxs-lookup"><span data-stu-id="c1ff5-142">Data type: datetime</span></span>  
+### <a name="timetolive"></a><span data-ttu-id="0a99c-141">TimeToLive</span><span class="sxs-lookup"><span data-stu-id="0a99c-141">TimeToLive</span></span>  
+ <span data-ttu-id="0a99c-142">資料型別：日期時間</span><span class="sxs-lookup"><span data-stu-id="0a99c-142">Data type: datetime</span></span>  
   
- <span data-ttu-id="c1ff5-143">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c1ff5-143">Access type: Read-only</span></span>  
+ <span data-ttu-id="0a99c-143">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="0a99c-143">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c1ff5-144">代表由此繫結所處理之訊息在到期前可保留在佇列中的時間間隔值。</span><span class="sxs-lookup"><span data-stu-id="c1ff5-144">The interval of time that indicates how long the messages processed by this binding can be in the queue before they expire.</span></span>  
+ <span data-ttu-id="0a99c-144">代表由此繫結所處理之訊息在到期前可保留在佇列中的時間間隔值。</span><span class="sxs-lookup"><span data-stu-id="0a99c-144">The interval of time that indicates how long the messages processed by this binding can be in the queue before they expire.</span></span>  
   
-### <a name="usemsmqtracing"></a><span data-ttu-id="c1ff5-145">UseMsmqTracing</span><span class="sxs-lookup"><span data-stu-id="c1ff5-145">UseMsmqTracing</span></span>  
- <span data-ttu-id="c1ff5-146">資料型別：布林值</span><span class="sxs-lookup"><span data-stu-id="c1ff5-146">Data type: boolean</span></span>  
+### <a name="usemsmqtracing"></a><span data-ttu-id="0a99c-145">UseMsmqTracing</span><span class="sxs-lookup"><span data-stu-id="0a99c-145">UseMsmqTracing</span></span>  
+ <span data-ttu-id="0a99c-146">資料型別：布林值</span><span class="sxs-lookup"><span data-stu-id="0a99c-146">Data type: boolean</span></span>  
   
- <span data-ttu-id="c1ff5-147">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c1ff5-147">Access type: Read-only</span></span>  
+ <span data-ttu-id="0a99c-147">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="0a99c-147">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c1ff5-148">代表是否應該追蹤由此繫結所處理之訊息的布林值。</span><span class="sxs-lookup"><span data-stu-id="c1ff5-148">A Boolean value that indicates whether messages processed by this binding should be traced.</span></span>  
+ <span data-ttu-id="0a99c-148">代表是否應該追蹤由此繫結所處理之訊息的布林值。</span><span class="sxs-lookup"><span data-stu-id="0a99c-148">A Boolean value that indicates whether messages processed by this binding should be traced.</span></span>  
   
-### <a name="usesourcejournal"></a><span data-ttu-id="c1ff5-149">UseSourceJournal</span><span class="sxs-lookup"><span data-stu-id="c1ff5-149">UseSourceJournal</span></span>  
- <span data-ttu-id="c1ff5-150">資料型別：布林值</span><span class="sxs-lookup"><span data-stu-id="c1ff5-150">Data type: boolean</span></span>  
+### <a name="usesourcejournal"></a><span data-ttu-id="0a99c-149">UseSourceJournal</span><span class="sxs-lookup"><span data-stu-id="0a99c-149">UseSourceJournal</span></span>  
+ <span data-ttu-id="0a99c-150">資料型別：布林值</span><span class="sxs-lookup"><span data-stu-id="0a99c-150">Data type: boolean</span></span>  
   
- <span data-ttu-id="c1ff5-151">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="c1ff5-151">Access type: Read-only</span></span>  
+ <span data-ttu-id="0a99c-151">存取類型：唯讀</span><span class="sxs-lookup"><span data-stu-id="0a99c-151">Access type: Read-only</span></span>  
   
- <span data-ttu-id="c1ff5-152">代表由此繫結所處理之訊息複本是否應該儲存在來源日誌佇列的布林值。</span><span class="sxs-lookup"><span data-stu-id="c1ff5-152">A Boolean value that indicates whether copies of messages processed by this binding should be stored in the source journal queue.</span></span>  
+ <span data-ttu-id="0a99c-152">代表由此繫結所處理之訊息複本是否應該儲存在來源日誌佇列的布林值。</span><span class="sxs-lookup"><span data-stu-id="0a99c-152">A Boolean value that indicates whether copies of messages processed by this binding should be stored in the source journal queue.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c1ff5-153">需求</span><span class="sxs-lookup"><span data-stu-id="c1ff5-153">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0a99c-153">需求</span><span class="sxs-lookup"><span data-stu-id="0a99c-153">Requirements</span></span>  
   
-|<span data-ttu-id="c1ff5-154">MOF</span><span class="sxs-lookup"><span data-stu-id="c1ff5-154">MOF</span></span>|<span data-ttu-id="c1ff5-155">於 Servicemodel.mof 中宣告。</span><span class="sxs-lookup"><span data-stu-id="c1ff5-155">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="0a99c-154">MOF</span><span class="sxs-lookup"><span data-stu-id="0a99c-154">MOF</span></span>|<span data-ttu-id="0a99c-155">於 Servicemodel.mof 中宣告。</span><span class="sxs-lookup"><span data-stu-id="0a99c-155">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="c1ff5-156">命名空間</span><span class="sxs-lookup"><span data-stu-id="c1ff5-156">Namespace</span></span>|<span data-ttu-id="c1ff5-157">於 root\ServiceModel 中定義</span><span class="sxs-lookup"><span data-stu-id="c1ff5-157">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="0a99c-156">命名空間</span><span class="sxs-lookup"><span data-stu-id="0a99c-156">Namespace</span></span>|<span data-ttu-id="0a99c-157">於 root\ServiceModel 中定義</span><span class="sxs-lookup"><span data-stu-id="0a99c-157">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="c1ff5-158">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c1ff5-158">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a99c-158">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0a99c-158">See also</span></span>
 
 - <xref:System.ServiceModel.NetMsmqBinding>
 - <xref:System.ServiceModel.MsmqBindingBase>

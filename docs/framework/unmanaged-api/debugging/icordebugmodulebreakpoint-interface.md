@@ -17,36 +17,36 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d6a43a264fcaa94ce4e629d8db504e9d416f6b89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994730"
 ---
-# <a name="icordebugmodulebreakpoint-interface"></a><span data-ttu-id="74eac-102">ICorDebugModuleBreakpoint Interface</span><span class="sxs-lookup"><span data-stu-id="74eac-102">ICorDebugModuleBreakpoint Interface</span></span>
+# <a name="icordebugmodulebreakpoint-interface"></a><span data-ttu-id="49d70-102">ICorDebugModuleBreakpoint Interface</span><span class="sxs-lookup"><span data-stu-id="49d70-102">ICorDebugModuleBreakpoint Interface</span></span>
 
-<span data-ttu-id="74eac-103">提供特定模組的存取。</span><span class="sxs-lookup"><span data-stu-id="74eac-103">Provides access to specific modules.</span></span> <span data-ttu-id="74eac-104">這個介面是 ICorDebugBreakpoint 介面的子類別。</span><span class="sxs-lookup"><span data-stu-id="74eac-104">This interface is a subclass of the ICorDebugBreakpoint interface.</span></span>  
+<span data-ttu-id="49d70-103">提供特定模組的存取。</span><span class="sxs-lookup"><span data-stu-id="49d70-103">Provides access to specific modules.</span></span> <span data-ttu-id="49d70-104">這個介面是 ICorDebugBreakpoint 介面的子類別。</span><span class="sxs-lookup"><span data-stu-id="49d70-104">This interface is a subclass of the ICorDebugBreakpoint interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="74eac-105">方法</span><span class="sxs-lookup"><span data-stu-id="74eac-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="49d70-105">方法</span><span class="sxs-lookup"><span data-stu-id="49d70-105">Methods</span></span>  
   
-|<span data-ttu-id="74eac-106">方法</span><span class="sxs-lookup"><span data-stu-id="74eac-106">Method</span></span>|<span data-ttu-id="74eac-107">描述</span><span class="sxs-lookup"><span data-stu-id="74eac-107">Description</span></span>|  
+|<span data-ttu-id="49d70-106">方法</span><span class="sxs-lookup"><span data-stu-id="49d70-106">Method</span></span>|<span data-ttu-id="49d70-107">描述</span><span class="sxs-lookup"><span data-stu-id="49d70-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="74eac-108">GetModule 方法</span><span class="sxs-lookup"><span data-stu-id="74eac-108">GetModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|<span data-ttu-id="74eac-109">取得參考的模組設定此中斷點的位置 ICorDebugModule 介面指標。</span><span class="sxs-lookup"><span data-stu-id="74eac-109">Gets an interface pointer to an ICorDebugModule that references the module where this breakpoint is set.</span></span>|  
+|[<span data-ttu-id="49d70-108">GetModule 方法</span><span class="sxs-lookup"><span data-stu-id="49d70-108">GetModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|<span data-ttu-id="49d70-109">取得參考的模組設定此中斷點的位置 ICorDebugModule 介面指標。</span><span class="sxs-lookup"><span data-stu-id="49d70-109">Gets an interface pointer to an ICorDebugModule that references the module where this breakpoint is set.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="74eac-110">備註</span><span class="sxs-lookup"><span data-stu-id="74eac-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="49d70-110">備註</span><span class="sxs-lookup"><span data-stu-id="49d70-110">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="74eac-111">這個介面不支援跨電腦或跨處理序的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="74eac-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="49d70-111">這個介面不支援跨電腦或跨處理序的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="49d70-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="74eac-112">需求</span><span class="sxs-lookup"><span data-stu-id="74eac-112">Requirements</span></span>  
- <span data-ttu-id="74eac-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="74eac-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="49d70-112">需求</span><span class="sxs-lookup"><span data-stu-id="49d70-112">Requirements</span></span>  
+ <span data-ttu-id="49d70-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="49d70-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="74eac-114">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="74eac-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="49d70-114">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="49d70-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="74eac-115">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="74eac-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="49d70-115">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="49d70-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="74eac-116">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="74eac-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="49d70-116">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="49d70-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="74eac-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="74eac-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="49d70-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="49d70-117">See also</span></span>
 
-- [<span data-ttu-id="74eac-118">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="74eac-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="49d70-118">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="49d70-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

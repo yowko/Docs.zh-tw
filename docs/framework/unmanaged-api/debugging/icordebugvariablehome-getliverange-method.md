@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7e2c9e981f431bb87df61a71389abf3d42a6a507
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986735"
 ---
-# <a name="icordebugvariablehomegetliverange-method"></a><span data-ttu-id="df81e-102">IcorDebugVariableHome::GetLiveRange 方法</span><span class="sxs-lookup"><span data-stu-id="df81e-102">IcorDebugVariableHome::GetLiveRange Method</span></span>
-<span data-ttu-id="df81e-103">取得原生的此變數是即時的範圍。</span><span class="sxs-lookup"><span data-stu-id="df81e-103">Gets the native range over which this variable is live.</span></span>  
+# <a name="icordebugvariablehomegetliverange-method"></a><span data-ttu-id="dde92-102">IcorDebugVariableHome::GetLiveRange 方法</span><span class="sxs-lookup"><span data-stu-id="dde92-102">IcorDebugVariableHome::GetLiveRange Method</span></span>
+<span data-ttu-id="dde92-103">取得原生的此變數是即時的範圍。</span><span class="sxs-lookup"><span data-stu-id="dde92-103">Gets the native range over which this variable is live.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="df81e-104">語法</span><span class="sxs-lookup"><span data-stu-id="df81e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dde92-104">語法</span><span class="sxs-lookup"><span data-stu-id="dde92-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLiveRange(  
@@ -36,22 +36,22 @@ HRESULT GetLiveRange(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="df81e-105">參數</span><span class="sxs-lookup"><span data-stu-id="df81e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dde92-105">參數</span><span class="sxs-lookup"><span data-stu-id="dde92-105">Parameters</span></span>  
  `pStartOffset`  
- <span data-ttu-id="df81e-106">[out]變數是第一個即時邏輯位移。</span><span class="sxs-lookup"><span data-stu-id="df81e-106">[out] The logical offset at which the variable is first live.</span></span>  
+ <span data-ttu-id="dde92-106">[out]變數是第一個即時邏輯位移。</span><span class="sxs-lookup"><span data-stu-id="dde92-106">[out] The logical offset at which the variable is first live.</span></span>  
   
  `pEndOffset`  
- <span data-ttu-id="df81e-107">[out]變數是最後一個即時點之後，立即邏輯的位移。</span><span class="sxs-lookup"><span data-stu-id="df81e-107">[out] The logical offset immediately after the point at which the variable is last live.</span></span>  
+ <span data-ttu-id="dde92-107">[out]變數是最後一個即時點之後，立即邏輯的位移。</span><span class="sxs-lookup"><span data-stu-id="dde92-107">[out] The logical offset immediately after the point at which the variable is last live.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="df81e-108">需求</span><span class="sxs-lookup"><span data-stu-id="df81e-108">Requirements</span></span>  
- <span data-ttu-id="df81e-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="df81e-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dde92-108">需求</span><span class="sxs-lookup"><span data-stu-id="dde92-108">Requirements</span></span>  
+ <span data-ttu-id="dde92-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dde92-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="df81e-110">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="df81e-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="dde92-110">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dde92-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="df81e-111">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="df81e-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="dde92-111">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dde92-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="df81e-112">**.NET framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="df81e-112">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="dde92-112">**.NET framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dde92-112">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="df81e-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="df81e-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dde92-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dde92-113">See also</span></span>
 
-- [<span data-ttu-id="df81e-114">ICorDebugVariableHome 介面</span><span class="sxs-lookup"><span data-stu-id="df81e-114">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [<span data-ttu-id="dde92-114">ICorDebugVariableHome 介面</span><span class="sxs-lookup"><span data-stu-id="dde92-114">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

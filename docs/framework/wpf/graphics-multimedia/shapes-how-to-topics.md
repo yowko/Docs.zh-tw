@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
 ms.openlocfilehash: d304a411a92272315506a08a714ae1a5f9b6a000
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973676"
 ---
-# <a name="shapes-how-to-topics"></a><span data-ttu-id="fbb22-102">圖案 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="fbb22-102">Shapes How-to Topics</span></span>
-<span data-ttu-id="fbb22-103">在本節中的主題將示範如何使用<xref:System.Windows.Shapes.Shape>物件基本圖形描繪至螢幕。</span><span class="sxs-lookup"><span data-stu-id="fbb22-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  
+# <a name="shapes-how-to-topics"></a><span data-ttu-id="51c2a-102">圖案 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="51c2a-102">Shapes How-to Topics</span></span>
+<span data-ttu-id="51c2a-103">在本節中的主題將示範如何使用<xref:System.Windows.Shapes.Shape>物件基本圖形描繪至螢幕。</span><span class="sxs-lookup"><span data-stu-id="51c2a-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="fbb22-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="fbb22-104">In This Section</span></span>  
- [<span data-ttu-id="fbb22-105">使用 Polygon 元素繪製封閉的圖形</span><span class="sxs-lookup"><span data-stu-id="fbb22-105">Draw a Closed Shape by Using the Polygon Element</span></span>](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
- [<span data-ttu-id="fbb22-106">繪製橢圓形或圓形</span><span class="sxs-lookup"><span data-stu-id="fbb22-106">Draw an Ellipse or a Circle</span></span>](how-to-draw-an-ellipse-or-a-circle.md)  
- [<span data-ttu-id="fbb22-107">繪製線條</span><span class="sxs-lookup"><span data-stu-id="fbb22-107">Draw a Line</span></span>](how-to-draw-a-line.md)  
- [<span data-ttu-id="fbb22-108">使用 Polyline 元素繪製聚合線</span><span class="sxs-lookup"><span data-stu-id="fbb22-108">Draw a Polyline by Using the Polyline Element</span></span>](how-to-draw-a-polyline-by-using-the-polyline-element.md)  
- [<span data-ttu-id="fbb22-109">繪製矩形</span><span class="sxs-lookup"><span data-stu-id="fbb22-109">Draw a Rectangle</span></span>](how-to-draw-a-rectangle.md)  
- [<span data-ttu-id="fbb22-110">修改線條或線段結尾的端點</span><span class="sxs-lookup"><span data-stu-id="fbb22-110">Modify the Cap at the End of a Line or Segment</span></span>](how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
+## <a name="in-this-section"></a><span data-ttu-id="51c2a-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="51c2a-104">In This Section</span></span>  
+ [<span data-ttu-id="51c2a-105">使用 Polygon 元素繪製封閉的圖形</span><span class="sxs-lookup"><span data-stu-id="51c2a-105">Draw a Closed Shape by Using the Polygon Element</span></span>](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [<span data-ttu-id="51c2a-106">繪製橢圓形或圓形</span><span class="sxs-lookup"><span data-stu-id="51c2a-106">Draw an Ellipse or a Circle</span></span>](how-to-draw-an-ellipse-or-a-circle.md)  
+ [<span data-ttu-id="51c2a-107">繪製線條</span><span class="sxs-lookup"><span data-stu-id="51c2a-107">Draw a Line</span></span>](how-to-draw-a-line.md)  
+ [<span data-ttu-id="51c2a-108">使用 Polyline 元素繪製聚合線</span><span class="sxs-lookup"><span data-stu-id="51c2a-108">Draw a Polyline by Using the Polyline Element</span></span>](how-to-draw-a-polyline-by-using-the-polyline-element.md)  
+ [<span data-ttu-id="51c2a-109">繪製矩形</span><span class="sxs-lookup"><span data-stu-id="51c2a-109">Draw a Rectangle</span></span>](how-to-draw-a-rectangle.md)  
+ [<span data-ttu-id="51c2a-110">修改線條或線段結尾的端點</span><span class="sxs-lookup"><span data-stu-id="51c2a-110">Modify the Cap at the End of a Line or Segment</span></span>](how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
-## <a name="see-also"></a><span data-ttu-id="fbb22-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fbb22-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="51c2a-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="51c2a-111">See also</span></span>
 
 - <xref:System.Windows.Shapes.Shape>
-- [<span data-ttu-id="fbb22-112">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="fbb22-112">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="51c2a-112">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="51c2a-112">Graphics and Multimedia</span></span>](index.md)
