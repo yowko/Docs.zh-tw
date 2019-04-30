@@ -3,11 +3,11 @@ title: 108 - CustomTrackingRecordInfo
 ms.date: 03/30/2017
 ms.assetid: 5bee501e-4e00-42cd-b949-e88009c3d4e8
 ms.openlocfilehash: 7398693208ca09aa1f9f56ef5354b86bb67f26a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052803"
 ---
 # <a name="108---customtrackingrecordinfo"></a>108 - CustomTrackingRecordInfo
 ## <a name="properties"></a>屬性  
@@ -37,8 +37,8 @@ ms.locfileid: "33515352"
 |ActivityId|xs:string|發出 CustomTrackingRecord 的活動 ID。|  
 |ActivityInstanceId|xs:string|發出 CustomTrackingRecord 的活動執行個體 ID。|  
 |ActivityTypeName|xs:string|發出 CustomTrackingRecord 的活動名稱。|  
-|資料|xs:string|使用此事件所追蹤的資料。  值會儲存在 xml 中的項目格式\<項目 >\<項目名稱 ="dataName"type ="> dataValue\</項目 > \< /i >。  如果不追蹤的任何資料，則此字串包含\<項目 / >。 ETW 事件大小會受到 ETW 緩衝區大小或 ETW 事件的最大承載所限制。 如果事件大小超過 ETW 限制，則事件會捨棄註釋，並取代資料值被截斷\<項目 >... \< /i >。  以下型別會儲存為由 ToString(); string,char,bool,int,short,long,uint,ushort,ulong,System.Single,float,double,System.Guid,System.DateTimeOffset,System.DateTime 傳回給它們的值。  所有其他的型別會使用 System.Runtime.Serialization.NetDataContractSerializer 序列化。|  
-|標註|xs:string|加入至此事件中的附註。  值會儲存在 xml 中的項目格式\<項目 >\<項目名稱 ="annotationName"type ="> annotationValue\</項目 > \< /i >。  如果沒有指定的註釋的字串，包含\<項目 / >。 ETW 事件大小會受到 ETW 緩衝區大小或 ETW 事件的最大承載所限制。 如果事件大小超過 ETW 限制，則事件會捨棄註釋，並取代具有註釋值截斷\<項目 >... \< /i >。|  
+|資料|xs:string|使用此事件所追蹤的資料。  值會儲存在 xml 中的項目格式\<項目 >\<項目名稱 ="dataName"t"> dataValue\</項目 > \< /i >。  如果沒有追蹤的資料，則此字串包含\<項目 / >。 ETW 事件大小會受到 ETW 緩衝區大小或 ETW 事件的最大承載所限制。 如果事件大小超過 ETW 限制，則捨棄註釋，並取代資料值來截斷事件\<項目 >... \< /i >。  以下型別會儲存為由 ToString(); string,char,bool,int,short,long,uint,ushort,ulong,System.Single,float,double,System.Guid,System.DateTimeOffset,System.DateTime 傳回給它們的值。  所有其他的型別會使用 System.Runtime.Serialization.NetDataContractSerializer 序列化。|  
+|標註|xs:string|加入至此事件中的附註。  值會儲存在 xml 中的項目格式\<項目 >\<項目名稱 ="annotationName"t"> 以\</項目 > \< /i >。  如果沒有註釋指定的字串包含\<項目 / >。 ETW 事件大小會受到 ETW 緩衝區大小或 ETW 事件的最大承載所限制。 如果事件大小超過 ETW 限制，則捨棄註釋，並取代註釋值來截斷事件\<項目 >... \< /i >。|  
 |ProfileName|xs:string|造成發送這個事件的名稱或追蹤設定檔。|  
-|HostReference|xs:string|若為 Web 主控服務，此欄位會唯一識別 Web 階層架構中的服務。  其格式定義為 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName' 範例:' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'|  
+|HostReference|xs:string|若為 Web 主控服務，此欄位會唯一識別 Web 階層架構中的服務。  其格式定義為 ' Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName' 範例：'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'|  
 |AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。|

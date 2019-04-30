@@ -5,11 +5,11 @@ helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
 ms.openlocfilehash: 51debbbcfec2fd5b82460e1dd1d6ece8e77bfc13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000775"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>HOW TO：擷取憑證的指紋
 撰寫 Windows Communication Foundation (WCF) 應用程式所使用的 X.509 憑證進行驗證，時，通常必須指定在憑證中找到的宣告。 例如，當您在 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 方法中使用 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 列舉時，就必須提供指紋宣告。 尋找宣告值時，需要兩個步驟。 首先，開啟憑證的 Microsoft Management Console (MMC) 嵌入式管理單元 (請參閱 [How to:使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。)接著，如此處所描述，尋找適當的憑證並複製其指紋 (或其他宣告值)。  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
 ms.openlocfilehash: 10b93f94a5a5193513e20eed4571aaf8f6c882a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039074"
 ---
 # <a name="metadata"></a>中繼資料
 Windows Communication Foundation (WCF) 提供基礎結構的匯出、 發行、 擷取與匯入服務中繼資料。 WCF 服務會使用中繼資料，說明如何與服務的端點互動，以便 Svcutil.exe 之類的工具，可以自動產生用戶端程式碼，來存取服務。  

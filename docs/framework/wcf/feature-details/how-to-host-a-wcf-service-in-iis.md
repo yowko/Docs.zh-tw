@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
 ms.openlocfilehash: f106ce1bca67f8b88df0835496eea0b3297ac946
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000827"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>HOW TO：在 IIS 中裝載 WCF 服務
 本主題概要說明建立 Windows Communication Foundation (WCF) 服務裝載在網際網路資訊服務 (IIS) 所需的基本步驟。 本主題假設您熟悉 IIS，而且了解如何使用 IIS 管理工具建立與管理 IIS 應用程式。 如需 IIS 的詳細資訊，請參閱[Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449)。 WCF 服務會在 IIS 環境中的執行採用完整的 IIS 功能，例如處理序回收、 閒置關機、 處理序健康狀態監控，以及訊息啟動。 這個裝載選項要求必須正確設定 IIS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 IIS 裝載只能和 HTTP 傳輸一起使用。  

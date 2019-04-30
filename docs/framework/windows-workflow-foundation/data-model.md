@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], data model
 ms.assetid: d5752e51-cfc9-4499-af71-53b6daae9879
 ms.openlocfilehash: 9b6a6b572bafc3a13c5c15e29527644b1c1a16ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945856"
 ---
 # <a name="windows-workflow-foundation-data-model"></a>Windows Workflow Foundation 資料模型
 Windows Workflow Foundation 資料模型是由三種概念組成：變數、引數和運算式。 變數表示資料的存放區，而引數表示進出活動之資料的流程。 引數會使用可參照變數的運算式來繫結 (指派值)。  

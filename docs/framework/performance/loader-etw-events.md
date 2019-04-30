@@ -8,11 +8,11 @@ ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949262"
 ---
 # <a name="loader-etw-events"></a>載入器 ETW 事件
 <a name="top"></a> 這些事件收集載入及卸載應用程式定義域、組件和模組的相關資訊。  
@@ -21,15 +21,15 @@ ms.locfileid: "59141527"
   
  載入器事件可細分為下列事件：  
   
--   [應用程式定義域事件](#application_domain_events)  
+- [應用程式定義域事件](#application_domain_events)  
   
--   [CLR 載入器組件事件](#clr_loader_assembly_events)  
+- [CLR 載入器組件事件](#clr_loader_assembly_events)  
   
--   [模組事件](#module_events)  
+- [模組事件](#module_events)  
   
--   [CLR 定義域模組事件](#clr_domain_module_events)  
+- [CLR 定義域模組事件](#clr_domain_module_events)  
   
--   [模組範圍事件](#module_range_events)  
+- [模組範圍事件](#module_range_events)  
   
 <a name="application_domain_events"></a>   
 ## <a name="application-domain-events"></a>應用程式定義域事件  
@@ -134,11 +134,11 @@ ms.locfileid: "59141527"
   
 ### <a name="remarks"></a>備註  
   
--   名稱中擁有 "Pdb" 的欄位可供程式碼剖析工具使用，以找出與剖析工作階段時載入之模組相符的 PDB。 這些欄位的值對應於寫入模組中 IMAGE_DIRECTORY_ENTRY_DEBUG 區段的資料，且通常用於偵錯工具以協助尋找符合已載入模組的 PDB。  
+- 名稱中擁有 "Pdb" 的欄位可供程式碼剖析工具使用，以找出與剖析工作階段時載入之模組相符的 PDB。 這些欄位的值對應於寫入模組中 IMAGE_DIRECTORY_ENTRY_DEBUG 區段的資料，且通常用於偵錯工具以協助尋找符合已載入模組的 PDB。  
   
--   以 "ManagedPdb" 開頭的欄位名稱表示受管理的 PDB 所對應的 MSIL 模組，其是由受管理的編譯器 (例如 C# 或 Visual Basic 的編譯器) 所產生。 這個 PDB 會使用受管理的 PDB 格式，並描述各個項目如何從原始的受管理來源程式碼 (例如檔案、行號和符號名稱) 對應至編譯成 MSIL 模組的 MSIL 項目。  
+- 以 "ManagedPdb" 開頭的欄位名稱表示受管理的 PDB 所對應的 MSIL 模組，其是由受管理的編譯器 (例如 C# 或 Visual Basic 的編譯器) 所產生。 這個 PDB 會使用受管理的 PDB 格式，並描述各個項目如何從原始的受管理來源程式碼 (例如檔案、行號和符號名稱) 對應至編譯成 MSIL 模組的 MSIL 項目。  
   
--   以 "NativePdb" 開頭的欄位名稱表示該 NGen PDB 是透過呼叫 `NGEN createPDB`而產生。 這個 PDB 會使用受管理的 PDB 格式，並描述各個項目如何從原始的受管理來源程式碼 (例如檔案、行號和符號名稱) 對應至編譯成 NGen 模組的原生項目。  
+- 以 "NativePdb" 開頭的欄位名稱表示該 NGen PDB 是透過呼叫 `NGEN createPDB`而產生。 這個 PDB 會使用受管理的 PDB 格式，並描述各個項目如何從原始的受管理來源程式碼 (例如檔案、行號和符號名稱) 對應至編譯成 NGen 模組的原生項目。  
   
  [回到頁首](#top)  
   

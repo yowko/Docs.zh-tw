@@ -3,22 +3,22 @@ title: UriTemplate 表範例
 ms.date: 03/30/2017
 ms.assetid: 5dd1d38f-1989-4c64-820d-821f5a02216a
 ms.openlocfilehash: 4543d4676344d10c3e380c3522a7ca5a6a8d6294
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59293949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006443"
 ---
 # <a name="uritemplate-table-sample"></a>UriTemplate 表範例
 <xref:System.UriTemplateTable> 類別會提供可用來處理 `UriTemplate` 執行個體集合的字典式關聯表結構。 這樣便可有效地針對表中的所有樣板比對特定的統一資源識別元 (URI)，並且擷取與符合樣板相關聯的資料。  
   
  這個範例會示範與 `UriTemplateTable` 類別有關的下列主要概念：  
   
--   具現化 `UriTemplateTable` 時的語法。  
+- 具現化 `UriTemplateTable` 時的語法。  
   
--   將索引鍵/值組集合填入 `UriTemplateTable`。  
+- 將索引鍵/值組集合填入 `UriTemplateTable`。  
   
--   使用 <xref:System.UriTemplateTable.MatchSingle%2A>，比對候選 URI 和此表。  
+- 使用 <xref:System.UriTemplateTable.MatchSingle%2A>，比對候選 URI 和此表。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   

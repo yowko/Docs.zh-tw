@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4ebd4e9beca315ef8284c915800afec6bdb78c78
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62044001"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType 方法
 建立類型定義的中繼資料簽章，會傳回`mdTypeDef`該類型中，權杖，並指定定義的類型為所參考之型別的成員`tdEncloser`參數。  

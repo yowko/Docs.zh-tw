@@ -3,11 +3,11 @@ title: 部分信任功能相容性
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
 ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039061"
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信任功能相容性
 在部分信任環境中執行時，Windows Communication Foundation (WCF) 支援有限的功能子集。 部分信任環境所支援的功能，主要是用在如 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 主題所述的特定案例中。  
@@ -15,20 +15,20 @@ ms.locfileid: "59124562"
 ## <a name="minimum-permission-requirements"></a>基本權限需求  
  WCF 中其中一個下列標準具名權限集下執行應用程式支援功能的子集：  
   
--   中度信任權限  
+- 中度信任權限  
   
--   網際網路區域權限  
+- 網際網路區域權限  
   
  嘗試在部分信任應用程式中更嚴格的權限與使用 WCF，可能會導致在執行階段的安全性例外狀況。  
   
 ## <a name="contracts"></a>合約  
  在部分信任環境中執行時，合約有下列限制：  
   
--   實作 `[ServiceContract]` 介面的服務類別必須是 `public` 且具有 `public` 建構函式。 如果此服務類別定義 `[OperationContract]` 方法，這些方法就必須是 `public`。 如果它改為實作 `[ServiceContract]` 介面，這些方法實作可以是明確或 `private`，前提是 `[ServiceContract]` 介面為 `public`。  
+- 實作 `[ServiceContract]` 介面的服務類別必須是 `public` 且具有 `public` 建構函式。 如果此服務類別定義 `[OperationContract]` 方法，這些方法就必須是 `public`。 如果它改為實作 `[ServiceContract]` 介面，這些方法實作可以是明確或 `private`，前提是 `[ServiceContract]` 介面為 `public`。  
   
--   使用 `[ServiceKnownType]` 屬性時，指定的方法必須是 `public`。  
+- 使用 `[ServiceKnownType]` 屬性時，指定的方法必須是 `public`。  
   
--   `[MessageContract]` 類別和其成員都可以是 `public`。 如果 `[MessageContract]` 類別在應用程式組件中定義，它可以是 `internal` 且具有 `internal` 成員。  
+- `[MessageContract]` 類別和其成員都可以是 `public`。 如果 `[MessageContract]` 類別在應用程式組件中定義，它可以是 `internal` 且具有 `internal` 成員。  
   
 ## <a name="system-provided-bindings"></a>系統提供的繫結  
  部分信任環境可充分支援 <xref:System.ServiceModel.BasicHttpBinding> 和 <xref:System.ServiceModel.WebHttpBinding> 。 <xref:System.ServiceModel.WSHttpBinding> 僅支援傳輸安全性模式。  
@@ -44,11 +44,11 @@ ms.locfileid: "59124562"
 ### <a name="encoders"></a>編碼器  
  允許使用下列編碼器：  
   
--   文字編碼器 (<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>)。  
+- 文字編碼器 (<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>)。  
   
--   二進位編碼器 (<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>)。  
+- 二進位編碼器 (<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>)。  
   
--   Web 訊息編碼器 (<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>)。  
+- Web 訊息編碼器 (<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>)。  
   
  不支援訊息傳輸最佳化機制 (MTOM) 編碼器。  
   
@@ -61,15 +61,15 @@ ms.locfileid: "59124562"
 ## <a name="serialization"></a>序列化  
  部分信任環境同時支援 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer> 。 然而， <xref:System.Runtime.Serialization.DataContractSerializer> 的使用需視下列情況而定：  
   
--   所有可序列化的 `[DataContract]` 型別必須是 `public`。  
+- 所有可序列化的 `[DataContract]` 型別必須是 `public`。  
   
--   `[DataMember]` 型別中所有可序列化的 `[DataContract]` 欄位或屬性必須具有公用和讀/寫性質。 序列化和還原序列化[readonly](https://go.microsoft.com/fwlink/?LinkID=98854)時在部分信任的應用程式中執行 WCF 不支援欄位。  
+- `[DataMember]` 型別中所有可序列化的 `[DataContract]` 欄位或屬性必須具有公用和讀/寫性質。 序列化和還原序列化[readonly](https://go.microsoft.com/fwlink/?LinkID=98854)時在部分信任的應用程式中執行 WCF 不支援欄位。  
   
--   部分信任的環境不支援 `[Serializable]`/ISerializable 程式撰寫模型 (Programming Model)。  
+- 部分信任的環境不支援 `[Serializable]`/ISerializable 程式撰寫模型 (Programming Model)。  
   
--   已知型別必須在程式碼或電腦層級組態 (machine.config) 中指定。 為了安全起見，已知型別無法在應用程式層級的組態中指定。  
+- 已知型別必須在程式碼或電腦層級組態 (machine.config) 中指定。 為了安全起見，已知型別無法在應用程式層級的組態中指定。  
   
--   在部分信任環境中，實作 <xref:System.Runtime.Serialization.IObjectReference> 的型別會擲回例外狀況。  
+- 在部分信任環境中，實作 <xref:System.Runtime.Serialization.IObjectReference> 的型別會擲回例外狀況。  
   
  如需在部分信任應用程式中安全使用 [Partial Trust Best Practices](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) 的詳細資訊，請參閱 <xref:System.Runtime.Serialization.DataContractSerializer> 中的＜序列化＞一節。  
   
@@ -88,9 +88,9 @@ ms.locfileid: "59124562"
 ## <a name="enabling-common-behaviors-to-run"></a>讓通用行為執行  
  服務或端點行為未標示有<xref:System.Security.AllowPartiallyTrustedCallersAttribute>屬性 (APTCA) 加入至[ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)在部分信任中執行的應用程式時，不會執行組態檔區段當發生這種情況時，就會擲回環境和任何例外狀況。 若要強制執行通用行為，您必須執行下列其中一項：  
   
--   使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 屬性標記您的通用行為，讓它可以在部署為部分信任應用程式時執行。 請注意，您可以在電腦上設定登錄項目，以防止已標記 APTCA 的組件執行。 。  
+- 使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 屬性標記您的通用行為，讓它可以在部署為部分信任應用程式時執行。 請注意，您可以在電腦上設定登錄項目，以防止已標記 APTCA 的組件執行。 。  
   
--   確定應用程式是否會部署為完全信任的應用程式，而使用者無法修改程式碼存取安全性設定以在部分信任環境中執行應用程式。 如果可以執行這項操作，行為就不會執行，也不會擲回例外狀況。 若要確保此行為，請參閱**levelfinal**選項使用[Caspol.exe （程式碼存取安全性原則工具）](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)。  
+- 確定應用程式是否會部署為完全信任的應用程式，而使用者無法修改程式碼存取安全性設定以在部分信任環境中執行應用程式。 如果可以執行這項操作，行為就不會執行，也不會擲回例外狀況。 若要確保此行為，請參閱**levelfinal**選項使用[Caspol.exe （程式碼存取安全性原則工具）](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)。  
   
  如需通用行為的範例，請參閱[How to:鎖定在企業中的端點](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)。  
   
@@ -115,25 +115,25 @@ ms.locfileid: "59124562"
   
  下列為支援的追蹤來源：  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.Runtime.Serialization>  
+- <xref:System.Runtime.Serialization>  
   
--   <xref:System.IdentityModel.Claims>、 <xref:System.IdentityModel.Policy>、 <xref:System.IdentityModel.Selectors>和 <xref:System.IdentityModel.Tokens>。  
+- <xref:System.IdentityModel.Claims>、 <xref:System.IdentityModel.Policy>、 <xref:System.IdentityModel.Selectors>和 <xref:System.IdentityModel.Tokens>。  
   
  下列為不支援的追蹤來源：  
   
--   CardSpace  
+- CardSpace  
   
--   <xref:System.IO.Log>  
+- <xref:System.IO.Log>  
 
--   [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
+- [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
   
  您不應該指定下列 <xref:System.Diagnostics.TraceOptions> 列舉成員：  
   
--   <xref:System.Diagnostics.TraceOptions.Callstack?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceOptions.Callstack?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceOptions.ProcessId?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceOptions.ProcessId?displayProperty=nameWithType>  
   
  在部分信任環境中使用追蹤時，請確定應用程式擁有足夠的權限來儲存追蹤接聽項的輸出。 例如，使用 <xref:System.Diagnostics.TextWriterTraceListener> 將追蹤輸出寫入至文字檔時，請確定應用程式具有必要的 FileIOPermission 來順利寫入追蹤檔。  
   
@@ -148,11 +148,11 @@ ms.locfileid: "59124562"
   
  在部分信任環境中執行 indigo2 時，不會啟用下列額外的功能：  
   
--   Windows Management Instrumentation (WMI)  
+- Windows Management Instrumentation (WMI)  
   
--   僅部分啟用事件記錄 (請參閱「 **診斷** 」一節中的討論)。  
+- 僅部分啟用事件記錄 (請參閱「 **診斷** 」一節中的討論)。  
   
--   效能計數器  
+- 效能計數器  
   
  不支援在部分信任環境中的 WCF 功能可能會導致在執行階段的例外狀況。  
   

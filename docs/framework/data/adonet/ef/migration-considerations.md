@@ -3,11 +3,11 @@ title: 移轉考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
 ms.openlocfilehash: b6224dcf883daef7b35ef50b7556fc568e433a46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034030"
 ---
 # <a name="migration-considerations-entity-framework"></a>移轉考量 (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework 可以為現有應用程式提供幾項優勢， 其中一項最重要的優勢，就是使用概念模型將應用程式所使用的資料結構從資料來源中的結構描述分隔。 這樣能方便您以後對儲存體模型或資料來源本身進行變更，而不必對應用程式進行補償變更。 針對使用的優點的詳細資訊[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，請參閱 < [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)並[Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)。  
@@ -17,13 +17,13 @@ ms.locfileid: "59310417"
 ## <a name="general-migration-considerations"></a>一般移轉考量  
  下列考量適用於將任何應用程式移轉至 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的情況：  
   
--   使用任何應用程式[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]開頭為 3.5 版 SP1 可以移轉至 Entity Framework，只要應用程式所使用的資料來源的資料提供者支援 Entity Framework。  
+- 使用任何應用程式[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]開頭為 3.5 版 SP1 可以移轉至 Entity Framework，只要應用程式所使用的資料來源的資料提供者支援 Entity Framework。  
   
--   Entity Framework 可能無法支援資料來源提供者的所有功能，即使那個提供者支援 Entity Framework 也一樣。  
+- Entity Framework 可能無法支援資料來源提供者的所有功能，即使那個提供者支援 Entity Framework 也一樣。  
   
--   針對大型或複雜應用程式，您不必一次將整個應用程式移轉至 Entity Framework， 但是資料來源變更時，還是要變更未使用 Entity Framework 的任何應用程式部分。  
+- 針對大型或複雜應用程式，您不必一次將整個應用程式移轉至 Entity Framework， 但是資料來源變更時，還是要變更未使用 Entity Framework 的任何應用程式部分。  
   
--   Entity Framework 所使用的資料提供者連接可以與應用程式的其他部分共用，因為 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 會使用 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 資料提供者存取資料來源。 例如，Entity Framework 是使用 SqlClient 提供者進行存取 SQL Server 資料庫。 如需詳細資訊，請參閱 < [Entity Framework 的 EntityClient 提供者](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。  
+- Entity Framework 所使用的資料提供者連接可以與應用程式的其他部分共用，因為 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 會使用 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 資料提供者存取資料來源。 例如，Entity Framework 是使用 SqlClient 提供者進行存取 SQL Server 資料庫。 如需詳細資訊，請參閱 < [Entity Framework 的 EntityClient 提供者](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。  
   
 ## <a name="common-migration-tasks"></a>通用移轉工作  
  移轉現有應用程式至 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的途徑取決於應用程式的類型以及現有資料存取策略。 不過，在將現有應用程式移轉至 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 時，一律必須執行下列工作：  

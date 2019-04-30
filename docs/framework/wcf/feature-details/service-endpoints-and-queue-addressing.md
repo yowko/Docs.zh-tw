@@ -3,11 +3,11 @@ title: 服務端點與佇列定址
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
 ms.openlocfilehash: 4064b13b00d44f90a372df5364406fb16c1da9fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050385"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>服務端點與佇列定址
 本主題將討論用戶端如何針對從佇列讀取的服務進行定址，以及服務端點如何對應至佇列。 提醒您下, 圖顯示傳統 Windows Communication Foundation (WCF) 已排入佇列的應用程式部署。  
@@ -34,11 +34,11 @@ ms.locfileid: "59172519"
   
  其中：  
   
--   \<*主機名稱*> 是裝載目標佇列的電腦名稱。  
+- \<*主機名稱*> 是裝載目標佇列的電腦名稱。  
   
--   [private] 為選擇性項目。 在您針對屬於私用佇列的目標佇列進行定址時，才會用到它。 若要針對公用佇列進行定址，您不可指定私用佇列。 請注意，與 MSMQ 路徑不同不包含"$"中的 WCF URI 形式。  
+- [private] 為選擇性項目。 在您針對屬於私用佇列的目標佇列進行定址時，才會用到它。 若要針對公用佇列進行定址，您不可指定私用佇列。 請注意，與 MSMQ 路徑不同不包含"$"中的 WCF URI 形式。  
   
--   \<*佇列名稱*> 是佇列的名稱。 佇列名稱同時也參照到子佇列。 因此， \<*佇列名稱*> = \<*名稱的佇列*> [;*次要 queue 名稱*]。  
+- \<*佇列名稱*> 是佇列的名稱。 佇列名稱同時也參照到子佇列。 因此， \<*佇列名稱*> = \<*名稱的佇列*> [;*次要 queue 名稱*]。  
   
  範例 1:若要解決的私密佇列 PurchaseOrders abc atadatum.com 電腦所裝載，URI 會是 net.msmq: //abc.adatum.com/private/purchaseorders。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "59172519"
 ### <a name="multiple-contracts-in-a-queue"></a>佇列中多個合約  
  佇列中的訊息可以實作不同的合約。 在此情況下，下列任何一項必須為真，以順利讀取並處理所有訊息：  
   
--   指定可實作所有合約的服務端點。 這是建議的處理方式。  
+- 指定可實作所有合約的服務端點。 這是建議的處理方式。  
   
--   指定多個端點使用不同的合約，但是確保所有端點都使用相同的 `NetMsmqBinding` 物件。 ServiceModel 的分派邏輯使用訊息幫浦從分派的傳輸通道中讀取訊息，最後再依據合約將訊息信號分離到不同的端點上。 訊息幫浦會針對接聽 URI/繫結對來建立。 佇列接聽項會使用接聽項位址做為接聽 URI。 讓所有端點都使用相同的繫結物件可確保使用單一訊息幫浦來讀取訊息，並依據合約將訊息信號分離到相關的端點上。  
+- 指定多個端點使用不同的合約，但是確保所有端點都使用相同的 `NetMsmqBinding` 物件。 ServiceModel 的分派邏輯使用訊息幫浦從分派的傳輸通道中讀取訊息，最後再依據合約將訊息信號分離到不同的端點上。 訊息幫浦會針對接聽 URI/繫結對來建立。 佇列接聽項會使用接聽項位址做為接聽 URI。 讓所有端點都使用相同的繫結物件可確保使用單一訊息幫浦來讀取訊息，並依據合約將訊息信號分離到相關的端點上。  
   
 ### <a name="srmp-messaging"></a>SRMP 訊息處理  
  如先前所述，您可以使用 SRMP 通訊協定來進行佇列對佇列 (queue-to-queue) 傳輸作業。 當 HTTP 傳輸需要在傳輸佇列與目標佇列之間傳輸訊息時，通常會使用這種方式。  

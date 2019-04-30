@@ -6,11 +6,11 @@ helpviewer_keywords:
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
 ms.openlocfilehash: 9028f9f99ee22dd480d817bc8aa94c7113a15c9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032301"
 ---
 # <a name="ui-automation-properties-overview"></a>UI 自動化屬性概觀
 > [!NOTE]
@@ -20,9 +20,9 @@ ms.locfileid: "59223000"
   
  本節提供 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 屬性的概觀說明。 下列各主題提供更詳細的資訊：  
   
--   [用戶端的 UI 自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+- [用戶端的 UI 自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
   
--   [伺服器端 UI 自動化提供者實作](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
+- [伺服器端 UI 自動化提供者實作](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
   
 <a name="Property_Identifiers"></a>   
 ## <a name="property-identifiers"></a>屬性識別項  
@@ -139,15 +139,15 @@ ms.locfileid: "59223000"
 ## <a name="localization"></a>當地語系化  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供者應該以作業系統所使用的語言來顯示下列屬性：  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.AccessKeyProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.AccessKeyProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
   
 <a name="Properties_and_Events"></a>   
 ## <a name="properties-and-events"></a>屬性和事件  

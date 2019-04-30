@@ -3,11 +3,11 @@ title: ADO.NET 中的連接字串
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
 ms.openlocfilehash: 1197335f3ba2a09b6e7303d31bc32383d1fd3436
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032750"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET 中的連接字串
 
@@ -21,7 +21,7 @@ ms.locfileid: "57844868"
 
 關鍵字不區分大小寫。 值，不過，可能會區分大小寫，根據資料來源。 關鍵字和值可能會包含[空白字元](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)。 前置和尾端空白字元是忽略關鍵字中並不具引號的值。
 
-如果值包含分號[Unicode 控制字元](https://en.wikipedia.org/wiki/Unicode_control_characters)，或前置或尾端空格，它必須以單引號或雙引號括起來。 例如: 
+如果值包含分號[Unicode 控制字元](https://en.wikipedia.org/wiki/Unicode_control_characters)，或前置或尾端空格，它必須以單引號或雙引號括起來。 例如：
 
     Keyword=" whitespace  ";
     Keyword='special;character';

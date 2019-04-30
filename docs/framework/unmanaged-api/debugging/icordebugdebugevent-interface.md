@@ -5,11 +5,11 @@ ms.assetid: a226737a-cb99-4e97-bd94-9a37094ded41
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 550cb6379ef0d5d17a3446b3f21120208b5a3dad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989161"
 ---
 # <a name="icordebugdebugevent-interface"></a>ICorDebugDebugEvent 介面
 定義所有 `ICorDebug` 偵錯事件衍生的來源基底介面。  
@@ -24,9 +24,9 @@ ms.locfileid: "59110184"
 ## <a name="remarks"></a>備註  
  下列介面衍生自 `ICorDebugDebugEvent` 介面：  
   
--   [ICorDebugExceptionDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)  
+- [ICorDebugExceptionDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)  
   
--   [ICorDebugModuleDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)  
+- [ICorDebugModuleDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)  
   
 > [!NOTE]
 >  這個介面僅適用於 .NET Native。 嘗試在 .NET 原生之外的 ICorDebug 案例中呼叫 `QueryInterface` 以擷取介面指標，會傳回 `E_NOINTERFACE`。  

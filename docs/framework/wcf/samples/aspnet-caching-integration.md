@@ -3,11 +3,11 @@ title: ASP.NET 快取整合
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
 ms.openlocfilehash: 8ed546459479e9986d6bbecf6eaca350d2d73c98
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002725"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET 快取整合
 這個範例示範如何使用 ASP.NET 輸出快取搭配 WCF WEB HTTP 程式設計模型。 本主題著重在 ASP.NET 輸出快取整合功能。  
@@ -34,11 +34,11 @@ ms.locfileid: "59770018"
 ## <a name="to-run-the-sample"></a>若要執行範例  
  此範例包含三個專案：  
   
--   **服務**：Web 應用程式專案包含 ASP.NET 中裝載之 WCF HTTP 服務。  
+- **服務**：Web 應用程式專案包含 ASP.NET 中裝載之 WCF HTTP 服務。  
   
--   **用戶端**:呼叫服務的主控台應用程式專案。  
+- **用戶端**:呼叫服務的主控台應用程式專案。  
   
--   **常見**:共用程式庫，其中包含用戶端和服務所使用之 Customer 類型。  
+- **常見**:共用程式庫，其中包含用戶端和服務所使用之 Customer 類型。  
   
  當用戶端主控台應用程式執行時，用戶端會對服務發出要求，然後將相關的資訊從回應寫入至主控台視窗。  
   

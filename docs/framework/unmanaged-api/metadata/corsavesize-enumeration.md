@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc36468a2016822e884ec3a36a23c75477a00a2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045379"
 ---
 # <a name="corsavesize-enumeration"></a>CorSaveSize 列舉
 包含值，這些值表示在查詢儲存作業的大小時所需的精確度等級。  

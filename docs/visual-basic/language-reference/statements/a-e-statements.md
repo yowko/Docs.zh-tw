@@ -3,11 +3,11 @@ title: A-E 陳述式 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: af97c2bf-dddb-48a8-8eb6-798cd219430b
 ms.openlocfilehash: 4135f7154a73823400d8b1698421e138650d4854
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054337"
 ---
 # <a name="a-e-statements"></a>A-E 陳述式
 下表包含 Visual Basic 語言陳述式的清單。  

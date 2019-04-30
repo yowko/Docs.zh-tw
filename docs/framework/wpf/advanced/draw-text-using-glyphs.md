@@ -7,11 +7,11 @@ helpviewer_keywords:
 - typography [WPF], Glyphs objects
 ms.assetid: 587ab17e-a419-4ad5-b6da-8933a8e83d97
 ms.openlocfilehash: 55bbc50de519d6607a843fcd633f2c07db53109f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010367"
 ---
 # <a name="draw-text-using-glyphs"></a>使用圖像繪製文字
 本主題說明如何使用低階<xref:System.Windows.Documents.Glyphs>要顯示的文字物件[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  

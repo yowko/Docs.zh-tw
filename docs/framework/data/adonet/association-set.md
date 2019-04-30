@@ -3,11 +3,11 @@ title: Association Set - 關聯集
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
 ms.openlocfilehash: af9297d9c827b12ed8611e99930234511f7f661c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034592"
 ---
 # <a name="association-set"></a>Association Set - 關聯集
 *關聯集*是邏輯容器[關聯](../../../../docs/framework/data/adonet/association-type.md)相同類型的執行個體。 關聯集不是資料模型建構，也就是說，它不會描述資料或關聯性的結構。 反之，關聯集會提供建構，讓裝載或儲存環境 (例如 Common Language Runtime 或 SQL Server 資料庫) 群組關聯執行個體，以將其對應至資料存放區。  
@@ -16,11 +16,11 @@ ms.locfileid: "59204480"
   
  關聯集的定義包含下列資訊：  
   
--   關聯集名稱。 (必要項)  
+- 關聯集名稱。 (必要項)  
   
--   將包含執行個體的關聯。 (必要項)  
+- 將包含執行個體的關聯。 (必要項)  
   
--   兩個[關聯集 end](../../../../docs/framework/data/adonet/association-set-end.md)。  
+- 兩個[關聯集 end](../../../../docs/framework/data/adonet/association-set-end.md)。  
   
 ## <a name="example"></a>範例  
  下圖顯示包含兩個關聯 (`PublishedBy` 和 `WrittenBy`) 的概念模型。 雖然圖中並未提供關聯集的相關資訊，但下圖會顯示以此模型為基礎的關聯集和實體集範例。  

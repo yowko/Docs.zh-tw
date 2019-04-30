@@ -10,11 +10,11 @@ helpviewer_keywords:
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
 ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050216"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>最佳化效能：版面配置與設計
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式的設計可能會因為在計算版面配置和驗證物件參考而產生不必要的額外負荷，進而影響其效能。 物件的建構，特別是在執行階段，可能會影響應用程式的效能特性。  
@@ -26,25 +26,25 @@ ms.locfileid: "59107064"
   
  版面配置系統會為集合中每個子成員完成兩個階段︰測量階段和排列階段。 每個子物件會提供它自己的覆寫實的作<xref:System.Windows.UIElement.Measure%2A>和<xref:System.Windows.UIElement.Arrange%2A>方法，以便提供它自己的特定版面配置行為。 簡單來說，版面配置是導致項目調整大小、定位並在螢幕上繪製的遞迴系統。  
   
--   子系<xref:System.Windows.UIElement>物件開始版面配置程序會先測量其核心屬性。  
+- 子系<xref:System.Windows.UIElement>物件開始版面配置程序會先測量其核心屬性。  
   
--   物件的<xref:System.Windows.FrameworkElement>大小，例如相關的屬性<xref:System.Windows.FrameworkElement.Width%2A>， <xref:System.Windows.FrameworkElement.Height%2A>，和<xref:System.Windows.FrameworkElement.Margin%2A>，會進行評估。  
+- 物件的<xref:System.Windows.FrameworkElement>大小，例如相關的屬性<xref:System.Windows.FrameworkElement.Width%2A>， <xref:System.Windows.FrameworkElement.Height%2A>，和<xref:System.Windows.FrameworkElement.Margin%2A>，會進行評估。  
   
--   <xref:System.Windows.Controls.Panel>-套用的特定邏輯，例如<xref:System.Windows.Controls.DockPanel.Dock%2A>的屬性<xref:System.Windows.Controls.DockPanel>，或有<xref:System.Windows.Controls.StackPanel.Orientation%2A>屬性<xref:System.Windows.Controls.StackPanel>。  
+- <xref:System.Windows.Controls.Panel>-套用的特定邏輯，例如<xref:System.Windows.Controls.DockPanel.Dock%2A>的屬性<xref:System.Windows.Controls.DockPanel>，或有<xref:System.Windows.Controls.StackPanel.Orientation%2A>屬性<xref:System.Windows.Controls.StackPanel>。  
   
--   在測量所有子物件之後，會排列 (或定位) 內容。  
+- 在測量所有子物件之後，會排列 (或定位) 內容。  
   
--   子物件的集合會繪製到螢幕。  
+- 子物件的集合會繪製到螢幕。  
   
  如果發生任何下列動作，會再次叫用配置傳遞流程︰  
   
--   子物件新增至集合。  
+- 子物件新增至集合。  
   
--   A<xref:System.Windows.FrameworkElement.LayoutTransform%2A>套用至子物件。  
+- A<xref:System.Windows.FrameworkElement.LayoutTransform%2A>套用至子物件。  
   
--   <xref:System.Windows.UIElement.UpdateLayout%2A>子物件呼叫方法。  
+- <xref:System.Windows.UIElement.UpdateLayout%2A>子物件呼叫方法。  
   
--   當發生在以中繼資料標示的相依性屬性值的變更會影響測量或排列階段時。  
+- 當發生在以中繼資料標示的相依性屬性值的變更會影響測量或排列階段時。  
   
 ### <a name="use-the-most-efficient-panel-where-possible"></a>請盡可能使用最有效率的面板  
  版面配置程序的複雜性直接根據版面配置行為<xref:System.Windows.Controls.Panel>-衍生您所使用的項目。 例如，<xref:System.Windows.Controls.Grid>或是<xref:System.Windows.Controls.StackPanel>控制項提供更多的功能比<xref:System.Windows.Controls.Canvas>控制項。 這種功能增加的代價是較高的效能成本。 不過，如果您不需要的功能，<xref:System.Windows.Controls.Grid>控制項提供，您應該使用成本更低的替代項目，例如<xref:System.Windows.Controls.Canvas>或自訂的面板。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
 ms.openlocfilehash: a16a0ccabfd0f9fbe69db1ea88d4613185f3c1da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002075"
 ---
 # <a name="tutorial-create-a-windows-communication-foundation-client"></a>教學課程：建立 Windows Communication Foundation 用戶端
 
@@ -47,7 +47,7 @@ ms.locfileid: "59174365"
 
 2. 加入參考**GettingStartedClient**專案加入<xref:System.ServiceModel>組件： 
 
-    1.  在 **方案總管 中**視窗中，選取**參考**下的資料夾**GettingStartedClient**專案，然後再選取**加入參考**快顯功能表中。 
+    1. 在 **方案總管 中**視窗中，選取**參考**下的資料夾**GettingStartedClient**專案，然後再選取**加入參考**快顯功能表中。 
 
     2. 在 [**加入參考**] 視窗底下**組件**在視窗的左側，選取**Framework**。
     

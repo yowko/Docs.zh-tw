@@ -3,18 +3,18 @@ title: 5003 - DCDeserializeWithSurrogateStart
 ms.date: 03/30/2017
 ms.assetid: 497a78ca-d4d6-4b9d-9b35-bc2db33d6e9c
 ms.openlocfilehash: 3696786bcd91e65252c486260cd30499a042b29f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33468566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048825"
 ---
 # <a name="5003---dcdeserializewithsurrogatestart"></a>5003 - DCDeserializeWithSurrogateStart
 ## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
-|ID|5003|  
+|識別碼|5003|  
 |關鍵字|序列化|  
 |層級|詳細資訊|  
 |通道|Microsoft-Windows-Application Server-Applications/Debug|  

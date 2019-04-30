@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ac0e5db4a87b49d631bad4411f03fae8c1199aea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050021"
 ---
 # <a name="imetadataemitsethandler-method"></a>IMetaDataEmit::SetHandler 方法
 設定所指定參考的方法`IUnknown`指標當做權杖的重新對應的通知回呼。  

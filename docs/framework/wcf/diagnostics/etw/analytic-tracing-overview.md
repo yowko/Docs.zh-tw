@@ -5,11 +5,11 @@ helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
 ms.openlocfilehash: 9918f07d9c26c1779a1eedfbc423c31e61659334
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44070117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048739"
 ---
 # <a name="analytic-tracing-overview"></a>分析追蹤的概觀
 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] 中的分析追蹤是一項高效能、低詳細等級的追蹤功能，設定於 Windows 事件追蹤 (ETW) 之上。 ETW 是在核心層級執行，可大幅降低追蹤作業的負荷。 它能有效率地緩衝使用者和核心模式的事件，並且允許動態啟用記錄，而不需重新啟動服務。 事件發出和接收之後，即可在事件記錄檔中使用追蹤資料。  

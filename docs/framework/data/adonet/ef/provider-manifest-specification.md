@@ -3,11 +3,11 @@ title: 提供者資訊清單規格
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033994"
 ---
 # <a name="provider-manifest-specification"></a>提供者資訊清單規格
 本節將討論資料存放區提供者如何支援資料存放區中的型別與函式。  
@@ -45,18 +45,18 @@ ms.locfileid: "59169906"
   
  您可以撰寫具有兩個區段的 XML 檔案：  
   
--   以存放區型別或函式之「EDM 對應項目」詞彙表示的提供者型別清單。 存放區型別具有對應的 EDM 型別。 存放區函式具有對應的 EDM 函式。 例如，varchar 是 SQL Server 型別，但是對應的 EDM 型別是 string。  
+- 以存放區型別或函式之「EDM 對應項目」詞彙表示的提供者型別清單。 存放區型別具有對應的 EDM 型別。 存放區函式具有對應的 EDM 函式。 例如，varchar 是 SQL Server 型別，但是對應的 EDM 型別是 string。  
   
--   提供者所支援的函式清單，其中參數和傳回型別是以 EDM 詞彙表示。  
+- 提供者所支援的函式清單，其中參數和傳回型別是以 EDM 詞彙表示。  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>使用非對稱型別對應撰寫提供者  
  撰寫 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的資料存放區提供者時，某些型別的 EDM 到提供者型別對應可能會與提供者到 EDM 型別對應不同。 例如，unbounded EDM PrimitiveTypeKind.String 可能會對應至提供者的 nvarchar(4000)，而 nvarchar(4000) 則對應至 EDM PrimitiveTypeKind.String(MaxLength=4000)。  
   
  您可以撰寫具有兩個區段的 XML 檔案：  
   
--   以 EDM 詞彙表示提供者類型的清單，並定義兩個方向的對應：EDM 到提供者和提供者到 EDM。  
+- 以 EDM 詞彙表示提供者類型的清單，並定義兩個方向的對應：EDM 到提供者和提供者到 EDM。  
   
--   提供者所支援的函式清單，其中參數和傳回型別是以 EDM 詞彙表示。  
+- 提供者所支援的函式清單，其中參數和傳回型別是以 EDM 詞彙表示。  
   
 ## <a name="provider-manifest-discoverability"></a>提供者資訊清單探索能力  
  此資訊清單會由實體服務中的許多元件類型 (例如工具或查詢) 間接使用，但是更直接由中繼資料透過資料存放區中繼資料載入器運用。  
@@ -68,7 +68,7 @@ ms.locfileid: "59169906"
 ### <a name="provider-manifest-token"></a>提供者資訊清單語彙基元  
  當開啟資料存放區連接時，提供者可以查詢資訊，以便傳回正確的資訊清單。 在離線案例中 (無法使用連接資訊或是無法連接至存放區)，可能就無法這樣做。 您可以使用 .ssdl 檔案中 `ProviderManifestToken` 項目的 `Schema` 屬性來識別資訊清單。 這個屬性沒有必要的格式。提供者會選擇識別資訊清單所需的最少資訊，而不必開啟存放區的連接。  
   
- 例如：  
+ 例如:   
   
 ```xml  
 <Schema Namespace="Northwind" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:edm="http://schemas.microsoft.com/ado/2006/04/edm/ssdl" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">  
@@ -260,7 +260,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |名稱|String|是|N/A|函式的識別碼/名稱。|  
 |ReturnType|String|否|Void|函式的 EDM 傳回型別。|  
-|彙總|Boolean|否|False|如果此函式是彙總函式，則為 True。|  
+|Aggregate|Boolean|否|False|如果此函式是彙總函式，則為 True。|  
 |BuiltIn|Boolean|否|True|如果此函式內建在資料存放區中，則為 True。|  
 |StoreFunctionName|String|否|\<名稱 >|資料存放區中的函式名稱。  允許重新導向函式名稱的層級。|  
 |NiladicFunction|Boolean|否|False|如果此函式不需要參數，而且會在不使用任何參數的情況下呼叫，則為 True。|  

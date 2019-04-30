@@ -10,11 +10,11 @@ helpviewer_keywords:
 - colored pens
 ms.assetid: a9df06f9-a6d5-4d9b-a2d1-583943540775
 ms.openlocfilehash: dc067f5a131951bf3af7adc68e11b948d40fc0ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966861"
 ---
 # <a name="how-to-set-the-color-of-a-pen"></a>HOW TO：設定畫筆顏色
 這個範例會變更預先存在的色彩<xref:System.Drawing.Pen>物件  
@@ -27,7 +27,7 @@ ms.locfileid: "59213411"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   A<xref:System.Drawing.Pen>名為物件`myPen`。  
+- A<xref:System.Drawing.Pen>名為物件`myPen`。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  您應該呼叫<xref:System.Drawing.Pen.Dispose%2A>耗用系統資源的物件 (例如<xref:System.Drawing.Pen>物件) 使用它們完畢之後。  

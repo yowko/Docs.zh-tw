@@ -7,11 +7,11 @@ helpviewer_keywords:
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
 ms.openlocfilehash: f7f1ed2fbca4ab8892cb6c439ae8841fa8828bf0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008963"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>HOW TO：建立繫結控制項並格式化顯示的資料
 Windows Form 資料繫結，您可以格式化顯示資料繫結控制項中使用的資料**格式化與進階繫結** 對話方塊。  

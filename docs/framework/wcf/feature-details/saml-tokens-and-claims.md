@@ -11,11 +11,11 @@ helpviewer_keywords:
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
 ms.openlocfilehash: 04517e5089f55c2d2b08a492439026d33ed9069d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991052"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 權杖與宣告
 安全性判斷提示標記語言 (SAML)*語彙基元*宣告的 XML 表示。 根據預設，會在聯合的安全性案例中，使用 Windows Communication Foundation (WCF) 的 SAML 權杖*發行的權杖*。  
@@ -31,7 +31,7 @@ ms.locfileid: "59339836"
 4. SAML 權杖上的簽章會告訴信賴憑證者，這是由安全性權杖服務所簽發的權杖。 使用證明金鑰所建立的訊息簽章會告訴信賴憑證者，該權杖曾簽發至用戶端。  
   
 ## <a name="from-claims-to-samlattributes"></a>從宣告到 SamlAttributes  
- 在 WCF 中，在 SAML 權杖中的陳述式會模型化為<xref:System.IdentityModel.Tokens.SamlAttribute>可以直接從填入的物件<xref:System.IdentityModel.Claims.Claim>所提供的物件<xref:System.IdentityModel.Claims.Claim>物件具有<xref:System.IdentityModel.Claims.Claim.Right%2A>屬性<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>而<xref:System.IdentityModel.Claims.Claim.Resource%2A>屬性屬於型別<xref:System.String>。 例如：  
+ 在 WCF 中，在 SAML 權杖中的陳述式會模型化為<xref:System.IdentityModel.Tokens.SamlAttribute>可以直接從填入的物件<xref:System.IdentityModel.Claims.Claim>所提供的物件<xref:System.IdentityModel.Claims.Claim>物件具有<xref:System.IdentityModel.Claims.Claim.Right%2A>屬性<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>而<xref:System.IdentityModel.Claims.Claim.Resource%2A>屬性屬於型別<xref:System.String>。 例如:   
   
  [!code-csharp[c_CreateSTS#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#8)]
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  

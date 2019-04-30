@@ -3,11 +3,11 @@ title: '例外狀況: try...with 運算式'
 description: 了解如何使用F#'try...with' 例外狀況處理的運算式。
 ms.date: 05/16/2016
 ms.openlocfilehash: 742e0b595525c69b83a55682c3c8b9b650326ac7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945531"
 ---
 # <a name="exceptions-the-trywith-expression"></a>例外狀況: try...with 運算式
 
@@ -38,9 +38,9 @@ with
 
 |模式|描述|
 |-------|-----------|
-|:? *例外狀況類型*|比對指定的.NET 例外狀況類型。|
+|:? *exception-type*|比對指定的.NET 例外狀況類型。|
 |:? *例外狀況型別*做為*識別碼*|符合指定的.NET 例外狀況類型，但可讓例外狀況的已命名的值。|
-|*例外狀況名稱*(*引數*)|相符項目F#例外狀況類型和繫結引數。|
+|*exception-name*(*arguments*)|相符項目F#例外狀況類型和繫結引數。|
 |*identifier*|符合任何例外狀況和繫結至例外狀況物件的名稱。 相當於 **： 嗎？為 System.Exception**_識別碼_|
 |*識別項*當*條件*|如果條件為 true 會比對任何例外狀況。|
 

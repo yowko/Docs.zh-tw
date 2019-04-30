@@ -3,11 +3,11 @@ title: 訊息相互關聯
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
 ms.openlocfilehash: ed6fc8f5d16ae2d604cdbdf4659ecfaaa83bfa02
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989764"
 ---
 # <a name="message-correlation"></a>訊息相互關聯
 此範例示範訊息佇列 (MSMQ) 應用程式如何將 MSMQ 訊息傳送至 Windows Communication Foundation (WCF) 服務，以及如何訊息可以相互關聯的要求/回應案例中的傳送者與接收者應用程式之間。 這個範例會使用 msmqIntegrationBinding 繫結。 本實例中的服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 K  
@@ -275,15 +275,15 @@ static void DisplayOrderStatus()
 
 2. 如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。
 
-    1.  開啟 Visual Studio 2012 中的 伺服器管理員。
+    1. 開啟 Visual Studio 2012 中的 伺服器管理員。
 
-    2.  依序展開**功能** 索引標籤。
+    2. 依序展開**功能** 索引標籤。
 
-    3.  以滑鼠右鍵按一下**私用訊息佇列**，然後選取**新增**，**私用佇列**。
+    3. 以滑鼠右鍵按一下**私用訊息佇列**，然後選取**新增**，**私用佇列**。
 
-    4.  請檢查**Transactional**  方塊中。
+    4. 請檢查**Transactional**  方塊中。
 
-    5.  輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。
+    5. 輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。
 
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
 ms.openlocfilehash: a7a93608d14bcbec316228b59467b23e9247e043
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025219"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>XML 屬性軸屬性 (Visual Basic)
 提供的屬性值存取權<xref:System.Xml.Linq.XElement>物件或集合中的第一個項目<xref:System.Xml.Linq.XElement>物件。  

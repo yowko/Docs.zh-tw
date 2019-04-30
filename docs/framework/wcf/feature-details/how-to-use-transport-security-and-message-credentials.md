@@ -8,11 +8,11 @@ helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
 ms.openlocfilehash: f9c90ac93a27f90479ee7225f62afb98a5000fe9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047165"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>HOW TO：使用傳輸安全性和訊息認證
 保護傳輸和訊息認證的服務會使用最佳的傳輸與訊息安全性模式在 Windows Communication Foundation (WCF)。 簡單地說，傳輸層安全性可提供完整性與機密性，而訊息層安全性則提供各種在嚴格的傳輸安全性機制中不可能提供的認證。 本主題將說明使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 繫結，以訊息認證來實作傳輸時的基本步驟。 如需有關如何設定安全性模式的詳細資訊，請參閱[How to:設定安全性模式](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  

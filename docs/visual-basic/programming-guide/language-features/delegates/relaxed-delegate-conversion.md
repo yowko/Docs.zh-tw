@@ -7,11 +7,11 @@ helpviewer_keywords:
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
 ms.openlocfilehash: 57e863d9781721a997ae49e1a5c9d8f3562a1bd0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973276"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>寬鬆委派轉換 (Visual Basic)
 寬鬆的委派轉換，可讓您將 sub 和函式指派給委派或處理常式，即使它們的簽章並不相同。 因此，委派繫結會變成一致與繫結中允許的方法引動過程。  
@@ -19,7 +19,7 @@ ms.locfileid: "58842716"
 ## <a name="parameters-and-return-type"></a>參數和傳回類型  
  簽章完全相符項目，取代寬鬆的轉換必須符合下列條件時`Option Strict`設為`On`:  
   
--   擴展轉換至指派的函式的對應參數的資料類型時，必須從每個委派參數的資料型別或`Sub`。 在下列範例中，委派`Del1`有一個參數， `Integer`。 參數`m`中指派的 lambda 運算式必須具有擴展轉換的資料類型`Integer`，例如`Long`或`Double`。  
+- 擴展轉換至指派的函式的對應參數的資料類型時，必須從每個委派參數的資料型別或`Sub`。 在下列範例中，委派`Del1`有一個參數， `Integer`。 參數`m`中指派的 lambda 運算式必須具有擴展轉換的資料類型`Integer`，例如`Long`或`Double`。  
   
      [!code-vb[VbVbalrRelaxedDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#1)]  
   
@@ -29,7 +29,7 @@ ms.locfileid: "58842716"
   
      [!code-vb[VbVbalrRelaxedDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#8)]  
   
--   擴展轉換必須存在於相反的方向，從指派的函式的傳回型別或`Sub`委派的傳回型別。 在下列範例中，每個指派的 lambda 運算式的主體必須評估為資料類型可擴展成`Integer`的傳回類型，因為`del1`是`Integer`。  
+- 擴展轉換必須存在於相反的方向，從指派的函式的傳回型別或`Sub`委派的傳回型別。 在下列範例中，每個指派的 lambda 運算式的主體必須評估為資料類型可擴展成`Integer`的傳回類型，因為`del1`是`Integer`。  
   
      [!code-vb[VbVbalrRelaxedDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#3)]  
   

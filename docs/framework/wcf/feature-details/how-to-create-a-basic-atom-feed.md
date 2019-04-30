@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
 ms.openlocfilehash: 11aa71f82af5a1bd764a4cc9e3514a795d559fc2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000853"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>HOW TO：建立基本 Atom 摘要
 Windows Communication Foundation (WCF) 可讓您建立公開新聞訂閱摘要的服務。 本主題討論如何建立可公開 Atom 新聞訂閱摘要的新聞訂閱服務。  

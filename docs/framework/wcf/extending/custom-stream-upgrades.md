@@ -6,8 +6,8 @@ ms.openlocfilehash: 8c769321702deb774c04613d5fe5eb2fde069063
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967904"
 ---
 # <a name="custom-stream-upgrades"></a>自訂資料流升級
 以資料流為導向的傳輸 (例如 TCP 和具名管道) 會在用戶端和伺服器之間的連續位元組資料流上進行作業。 透過 <xref:System.IO.Stream> 物件即可實現此資料流。 在資料流升級中，用戶端會想將選用通訊協定層新增至通道堆疊，並也要求其他通訊通道端也這樣執行。 資料流升級包含使用升級的物件取代原始的 <xref:System.IO.Stream> 物件。  
@@ -32,35 +32,35 @@ ms.locfileid: "59977765"
 ## <a name="how-to-implement-a-stream-upgrade"></a>如何實作資料流升級  
  Windows Communication Foundation (WCF) 提供四個`abstract`可以實作的類別：  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
   
  若要實作自訂資料流升級，請執行下列動作。 這個程序會同時在用戶端和伺服器電腦上實作最小的資料流升級處理序。  
   
 1. 建立會實作 <xref:System.ServiceModel.Channels.StreamUpgradeInitiator> 的類別。  
   
-    1.  覆寫 <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> 方法以讓資料流進行升級，並傳回升級的資料流。 這個方法會以同步方式執行，也會有使用非同步方式初始化升級的類似方法。  
+    1. 覆寫 <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> 方法以讓資料流進行升級，並傳回升級的資料流。 這個方法會以同步方式執行，也會有使用非同步方式初始化升級的類似方法。  
   
-    2.  覆寫 <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> 方法以檢查其他升級。  
+    2. 覆寫 <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> 方法以檢查其他升級。  
   
 2. 建立會實作 <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor> 的類別。  
   
-    1.  覆寫 <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> 方法以讓資料流進行升級，並傳回升級的資料流。 這個方法會以同步方式執行，也會有使用非同步方式接受升級的類似方法。  
+    1. 覆寫 <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> 方法以讓資料流進行升級，並傳回升級的資料流。 這個方法會以同步方式執行，也會有使用非同步方式接受升級的類似方法。  
   
-    2.  覆寫 <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> 方法以判斷此時升級處理序中的升級接受器是否支援所要求的升級。  
+    2. 覆寫 <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> 方法以判斷此時升級處理序中的升級接受器是否支援所要求的升級。  
   
 3. 建立會實作 <xref:System.ServiceModel.Channels.StreamUpgradeProvider> 的類別。 覆寫 <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> 和 <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A> 方法，以傳回在步驟 2 和 1 中所定義的接受器和啟動器執行個體。  
   
 4. 建立會實作 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> 的類別。  
   
-    1.  覆寫用戶端上的 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> 方法和服務上的 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> 方法。  
+    1. 覆寫用戶端上的 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> 方法和服務上的 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> 方法。  
   
-    2.  覆寫用戶端上的 <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> 方法和服務上的 <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> 方法，以將升級繫結項目新增至 <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>。  
+    2. 覆寫用戶端上的 <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> 方法和服務上的 <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> 方法，以將升級繫結項目新增至 <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>。  
   
 5. 將新資料流升級繫結項目新增至伺服器和用戶端電腦上的繫結。  
   

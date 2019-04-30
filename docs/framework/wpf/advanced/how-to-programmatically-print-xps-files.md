@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
 ms.openlocfilehash: 1d6d45289c9278271a7c7bef5225ad024a5ab0fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052439"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>HOW TO：以程式設計方式列印 XPS 檔
 您可以使用一個多載<xref:System.Printing.PrintQueue.AddJob%2A>方法來列印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]不需開啟的檔案<xref:System.Windows.Controls.PrintDialog>或基本上，任何[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]完全。  

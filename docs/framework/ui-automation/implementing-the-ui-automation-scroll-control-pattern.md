@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
 ms.openlocfilehash: bb473b7f10aa400dc42303e1acc15c2bdcd34516
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983409"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>實作 UI 自動化 Scroll 控制項模式
 > [!NOTE]
@@ -30,17 +30,17 @@ ms.locfileid: "59154527"
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
  實作捲軸控制項模式時，請注意下列方針和慣例：  
   
--   這個控制項的子系必須實作 <xref:System.Windows.Automation.Provider.IScrollItemProvider>。  
+- 這個控制項的子系必須實作 <xref:System.Windows.Automation.Provider.IScrollItemProvider>。  
   
--   容器控制項的捲軸不支援 <xref:System.Windows.Automation.ScrollPattern> 控制項模式。 捲軸必須改成支援 <xref:System.Windows.Automation.RangeValuePattern> 控制項模式。  
+- 容器控制項的捲軸不支援 <xref:System.Windows.Automation.ScrollPattern> 控制項模式。 捲軸必須改成支援 <xref:System.Windows.Automation.RangeValuePattern> 控制項模式。  
   
--   若捲動是以百分比為單位，則與捲動刻度相關的所有值或數量必須標準化為 0 到 100 之間的範圍。  
+- 若捲動是以百分比為單位，則與捲動刻度相關的所有值或數量必須標準化為 0 到 100 之間的範圍。  
   
--   <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 和 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 與 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>無關。  
+- <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 和 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 與 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>無關。  
   
--   如果 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> = `false` ，則 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 應設為 100%，而且 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 應設為 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>。 同樣地，如果 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` ，則 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 應設為 100%，而且 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 應設為 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>。 若用戶端不想捲動的方向啟動時，這可讓使用者介面自動化用戶端在 <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> 方法中使用這些屬性值，以免發生 [競爭情形](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) 。  
+- 如果 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> = `false` ，則 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 應設為 100%，而且 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 應設為 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>。 同樣地，如果 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` ，則 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 應設為 100%，而且 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 應設為 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>。 若用戶端不想捲動的方向啟動時，這可讓使用者介面自動化用戶端在 <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> 方法中使用這些屬性值，以免發生 [競爭情形](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) 。  
   
--   <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> 是地區設定特性。 設定 HorizontalScrollPercent = 100.0 時，必須將控制項的捲動位置設為由左至右語言 (如英文) 的最右側位置。 相反地，若為由右至左語言 (如阿拉伯文)，設定 HorizontalScrollPercent = 100.0 時，必須將捲動位置設為最左側位置。  
+- <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> 是地區設定特性。 設定 HorizontalScrollPercent = 100.0 時，必須將控制項的捲動位置設為由左至右語言 (如英文) 的最右側位置。 相反地，若為由右至左語言 (如阿拉伯文)，設定 HorizontalScrollPercent = 100.0 時，必須將捲動位置設為最左側位置。  
   
 <a name="Required_Members_for_IScrollProvider"></a>   
 ## <a name="required-members-for-iscrollprovider"></a>IScrollProvider 的必要成員  

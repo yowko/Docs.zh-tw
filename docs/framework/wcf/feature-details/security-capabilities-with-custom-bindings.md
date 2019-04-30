@@ -3,11 +3,11 @@ title: 自訂繫結的安全性功能
 ms.date: 03/30/2017
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
 ms.openlocfilehash: 25d203fa706eeb0d0ccf1eaf4367ffa5bd7b83aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990921"
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>自訂繫結的安全性功能
 您可以使用一種系統提供的繫結來執行常見的安全性工作。 不過，如果需要更多控制，您可以依照這些主題中的說明，使用 <xref:System.ServiceModel.Channels.SecurityBindingElement> 來建立自訂繫結。 如需有關自訂繫結的詳細資訊，請參閱 <<c0> [ 自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  

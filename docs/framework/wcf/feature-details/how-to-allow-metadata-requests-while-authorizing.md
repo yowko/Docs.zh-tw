@@ -8,11 +8,11 @@ helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
 ms.openlocfilehash: bea4f7e90df29678697fe6708bdc6a73145522db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047798"
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>如何：授權時同時允許中繼資料要求
 自訂授權期間，可能需要允許處理中繼資料的要求。 下列主題逐步解說要驗證如此要求的步驟。  

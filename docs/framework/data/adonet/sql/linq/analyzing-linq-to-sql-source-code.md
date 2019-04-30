@@ -3,11 +3,11 @@ title: 分析 LINQ to SQL 原始程式碼
 ms.date: 03/30/2017
 ms.assetid: cba3eef8-e108-4478-b588-ad59580e133e
 ms.openlocfilehash: 2d8c5a89cbf09ef3829669a3d5272f742fa6582c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033848"
 ---
 # <a name="analyzing-linq-to-sql-source-code"></a>分析 LINQ to SQL 原始程式碼
 使用下列步驟，您就可以從 Northwind 範例資料庫產生 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 原始程式碼。 您可以比較物件模型的項目與資料庫的項目，進一步了解不同項目的對應方式。  
@@ -19,9 +19,9 @@ ms.locfileid: "59317073"
   
 2. 使用 SqlMetal 命令列工具產生 Visual Basic 或 C# 原始程式檔。 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。 在命令提示字元中輸入下列命令，就可以產生內含預存程序 (Stored Procedure) 和函式的 Visual Basic 和 C# 原始程式檔：  
   
-    -   `sqlmetal /code:northwind.vb /language:vb "c:\northwnd.mdf" /sprocs /functions /pluralize`  
+    - `sqlmetal /code:northwind.vb /language:vb "c:\northwnd.mdf" /sprocs /functions /pluralize`  
   
-    -   `sqlmetal /code:northwind.cs /language:csharp "c:\northwnd.mdf" /sprocs /functions /pluralize`  
+    - `sqlmetal /code:northwind.cs /language:csharp "c:\northwnd.mdf" /sprocs /functions /pluralize`  
   
 ## <a name="see-also"></a>另請參閱
 

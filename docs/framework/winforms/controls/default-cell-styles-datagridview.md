@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
 ms.openlocfilehash: 8939a182032cfac1beac6c1e5cb3c9de9792114c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011368"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：使用設計工具設定 Windows Forms DataGridView 控制項的預設儲存格樣式和資料格式
 <xref:System.Windows.Forms.DataGridView>控制項可讓您指定預設儲存格樣式和儲存格整個控制項、 特定的資料行、 資料列和資料行的標頭，以及替代資料列，以建立分類帳效果的資料格式。 設定整個控制項的預設樣式會覆寫預設資料行和替代的資料列的樣式設定。 此外，您在個別的資料列和資料格的程式碼中設定的樣式會覆寫預設樣式。  

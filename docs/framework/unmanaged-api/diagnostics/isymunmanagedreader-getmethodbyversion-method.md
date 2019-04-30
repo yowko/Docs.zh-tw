@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d4bc763d908156f3bbf8998c13073820686903f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986371"
 ---
 # <a name="isymunmanagedreadergetmethodbyversion-method"></a>ISymUnmanagedReader::GetMethodByVersion 方法
 取得符號讀取器方法，指定方法的語彙基元和編輯複製版本號碼。 版本號碼從 1 開始，就會遞增每次編輯複製作業造成變更的方法時。  

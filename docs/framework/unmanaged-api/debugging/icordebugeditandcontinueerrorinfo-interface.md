@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7f19b6107d6da19f9799655fa86fc58b95df330d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996057"
 ---
 # <a name="icordebugeditandcontinueerrorinfo-interface"></a>ICorDebugEditAndContinueErrorInfo 介面
 `ICorDebugEditAndContinueErrorInfo` 已經過時。 請勿使用這個介面。  

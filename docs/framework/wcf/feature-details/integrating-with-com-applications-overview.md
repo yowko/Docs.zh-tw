@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
 ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047005"
 ---
 # <a name="integrating-with-com-applications-overview"></a>整合 COM 應用程式概觀
 Windows Communication Foundation (WCF) 提供豐富的環境，以建立連接的應用程式的 managed 程式碼開發人員。 不過，如果您已長期開發以 COM 為基礎的 unmanaged 程式碼，並不會想要移轉，您可以仍然 WCF Web 服務直接整合您現有的程式碼使用 WCF 服務 moniker。 服務 Moniker 可以從多種 COM 架構開發環境中使用，例如 Office VBA、Visual Basic 6.0 或 Visual C++ 6.0。  
@@ -21,11 +21,11 @@ Windows Communication Foundation (WCF) 提供豐富的環境，以建立連接�
   
  與其他 WCF 用戶端，當使用 moniker 時，應用程式，請指定位址、 繫結和合約與服務進行通訊。 可以使用下列其中一種方法指定合約：  
   
--   型別合約：合約會在用戶端電腦上註冊為 COM 可見型別。  
+- 型別合約：合約會在用戶端電腦上註冊為 COM 可見型別。  
   
--   WSDL 合約：合約會以 WSDL 文件的形式提供。  
+- WSDL 合約：合約會以 WSDL 文件的形式提供。  
   
--   MEX 合約：合約會在執行階段從中繼資料交換 (MEX) 端點擷取。  
+- MEX 合約：合約會在執行階段從中繼資料交換 (MEX) 端點擷取。  
   
 ## <a name="parameters-supported-by-the-service-moniker"></a>服務 Moniker 支援的參數  
  下表顯示服務 Moniker 所支援的參數。  

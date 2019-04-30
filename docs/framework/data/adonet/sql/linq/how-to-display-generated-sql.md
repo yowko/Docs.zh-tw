@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
 ms.openlocfilehash: 8a69b3ae83d7f701428b3183f2b80e0d44a06537
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033770"
 ---
 # <a name="how-to-display-generated-sql"></a>HOW TO：顯示產生的 SQL
 您可以檢視針對查詢所產生的 SQL 程式碼，並且使用 <xref:System.Data.Linq.DataContext.Log%2A> 屬性變更處理。 若要了解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 功能以及對特定問題進行偵錯，這個方法很實用。  

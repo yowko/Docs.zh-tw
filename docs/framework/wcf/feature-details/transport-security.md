@@ -3,11 +3,11 @@ title: 傳輸安全性
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
 ms.openlocfilehash: 036c3db96a14b6e2be299380f495f54436b5c87d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050723"
 ---
 # <a name="transport-security"></a>傳輸安全性
 傳輸安全性的 Windows Communication Foundation (WCF) 取決於選取的繫結。 繫結所實作的傳輸將決定實際的安全性機制。 本章節中的主題說明所實作的機制及其選項。  

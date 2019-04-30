@@ -14,11 +14,11 @@ helpviewer_keywords:
 - late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
 ms.openlocfilehash: 20eb96d0d9f81ec9dfa359edf63a60f72a45aa01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973221"
 ---
 # <a name="early-and-late-binding-visual-basic"></a>早期和晚期繫結 (Visual Basic)
 Visual Basic 編譯器會執行這個程序稱為`binding`當物件指派給物件變數。 將物件指派給宣告為特定物件型別的變數時，該物件即為「早期繫結」。 早期繫結物件讓編譯器能夠配置記憶體，並在應用程式執行之前執行其他最佳化。 例如，下列程式碼片段會將變數宣告為 <xref:System.IO.FileStream> 類型：  

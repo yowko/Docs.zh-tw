@@ -10,11 +10,11 @@ helpviewer_keywords:
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
 ms.openlocfilehash: 6b178ac6b93205afebb1bea45f1b7e94826cb670
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002166"
 ---
 # <a name="storyboards-overview"></a>分鏡腳本概觀
 本主題說明如何使用<xref:System.Windows.Media.Animation.Storyboard>來組織和套用動畫的物件。 說明如何以互動方式操作<xref:System.Windows.Media.Animation.Storyboard>物件，並說明間接屬性目標語法。  
@@ -29,11 +29,11 @@ ms.locfileid: "59124835"
   
  A<xref:System.Windows.Media.Animation.Storyboard>是一種容器時間軸，提供它所包含的時間軸目標資訊。 分鏡腳本可以包含任何類型的<xref:System.Windows.Media.Animation.Timeline>，包括其他容器時間軸和動畫。 <xref:System.Windows.Media.Animation.Storyboard> 物件可讓您結合成單一時間軸的樹狀結構，輕鬆地組織和控制複雜的計時行為的各種不同的物件和屬性會影響到的時間軸。 例如，假設您想讓按鈕執行下列三個動作。  
   
--   在使用者選取按鈕時放大及變更色彩。  
+- 在使用者選取按鈕時放大及變更色彩。  
   
--   按一下按鈕時縮小再放大回原本大小。  
+- 按一下按鈕時縮小再放大回原本大小。  
   
--   在停用時縮小並淡化到 50% 的不透明度。  
+- 在停用時縮小並淡化到 50% 的不透明度。  
   
  在此案例中，您有多組套用至同一個物件的動畫，並且想要視按鈕的狀態在不同時間播放。 <xref:System.Windows.Media.Animation.Storyboard> 物件可讓您組織動畫，並在群組中套用至一或多個物件。  
   
@@ -43,11 +43,11 @@ ms.locfileid: "59124835"
   
  例如，您可以使用<xref:System.Windows.Media.Animation.Storyboard>執行下列動作：  
   
--   建立動畫<xref:System.Windows.Media.SolidColorBrush>（非架構元素），其會繪製按鈕的背景 (一種<xref:System.Windows.FrameworkElement>)，  
+- 建立動畫<xref:System.Windows.Media.SolidColorBrush>（非架構元素），其會繪製按鈕的背景 (一種<xref:System.Windows.FrameworkElement>)，  
   
--   建立動畫<xref:System.Windows.Media.SolidColorBrush>（非架構元素） 繪製的填色<xref:System.Windows.Media.GeometryDrawing>使用的 （非架構元素） 顯示<xref:System.Windows.Controls.Image>(<xref:System.Windows.FrameworkElement>)。  
+- 建立動畫<xref:System.Windows.Media.SolidColorBrush>（非架構元素） 繪製的填色<xref:System.Windows.Media.GeometryDrawing>使用的 （非架構元素） 顯示<xref:System.Windows.Controls.Image>(<xref:System.Windows.FrameworkElement>)。  
   
--   在程式碼中建立動畫<xref:System.Windows.Media.SolidColorBrush>宣告的類別，其中也包含<xref:System.Windows.FrameworkElement>，如果<xref:System.Windows.Media.SolidColorBrush>註冊其名稱與<xref:System.Windows.FrameworkElement>。  
+- 在程式碼中建立動畫<xref:System.Windows.Media.SolidColorBrush>宣告的類別，其中也包含<xref:System.Windows.FrameworkElement>，如果<xref:System.Windows.Media.SolidColorBrush>註冊其名稱與<xref:System.Windows.FrameworkElement>。  
   
  不過，您無法使用<xref:System.Windows.Media.Animation.Storyboard>來建立動畫<xref:System.Windows.Media.SolidColorBrush>並未註冊使用其名稱<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>，或不用來設定的屬性<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。  
   
@@ -138,11 +138,11 @@ ms.locfileid: "59124835"
 |-|  
 |*ElementPropertyName* `.` *FreezablePropertyName*|  
   
- 位置  
+ Where  
   
--   *ElementPropertyName*的屬性<xref:System.Windows.FrameworkElement>其中<xref:System.Windows.Freezable>用來設定，以及  
+- *ElementPropertyName*的屬性<xref:System.Windows.FrameworkElement>其中<xref:System.Windows.Freezable>用來設定，以及  
   
--   *FreezablePropertyName*的屬性<xref:System.Windows.Freezable>以動畫顯示。  
+- *FreezablePropertyName*的屬性<xref:System.Windows.Freezable>以動畫顯示。  
   
  下列程式碼示範如何建立動畫<xref:System.Windows.Media.SolidColorBrush.Color%2A>的<xref:System.Windows.Media.SolidColorBrush>用來設定  
   
@@ -184,11 +184,11 @@ ms.locfileid: "59124835"
 |-|  
 |`(` *OwnerPropertyArrayIndex* `).(` *FreezablePropertyArrayIndex* `)`|  
   
- 位置  
+ Where  
   
--   *OwnerPropertyArrayIndex*的索引<xref:System.Windows.DependencyProperty>陣列，其中包含的識別項<xref:System.Windows.FrameworkElement>物件的屬性，<xref:System.Windows.Freezable>用來設定，以及  
+- *OwnerPropertyArrayIndex*的索引<xref:System.Windows.DependencyProperty>陣列，其中包含的識別項<xref:System.Windows.FrameworkElement>物件的屬性，<xref:System.Windows.Freezable>用來設定，以及  
   
--   *FreezablePropertyArrayIndex*的索引<xref:System.Windows.DependencyProperty>陣列，其中包含目標屬性的識別項。  
+- *FreezablePropertyArrayIndex*的索引<xref:System.Windows.DependencyProperty>陣列，其中包含目標屬性的識別項。  
   
  下列範例所示<xref:System.Windows.PropertyPath.Path%2A>，伴隨<xref:System.Windows.PropertyPath.PathParameters%2A>上述範例中所定義。
   
@@ -225,17 +225,17 @@ ms.locfileid: "59124835"
 ## <a name="interactively-controlling-a-storyboard-in-xaml"></a>在 XAML 中以互動方式控制分鏡腳本  
  在中啟動分鏡腳本[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，您使用<xref:System.Windows.Media.Animation.BeginStoryboard>觸發動作。 <xref:System.Windows.Media.Animation.BeginStoryboard> 會將這些物件和屬性，它們建立動畫，並啟動分鏡腳本動畫。 (如需此程序的詳細資訊，請參閱[動畫和計時系統概觀](animation-and-timing-system-overview.md)。)如果您賦予<xref:System.Windows.Media.Animation.BeginStoryboard>藉由指定的名稱及其<xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>屬性，讓它可控制的分鏡腳本。 接著在分鏡腳本啟動後，您就可能以互動方式控制它。 以下是可控制之分鏡腳本動作的清單，您可以將這些動作與事件觸發程序搭配使用以控制分鏡腳本。  
   
--   <xref:System.Windows.Media.Animation.PauseStoryboard>：暫停分鏡腳本。  
+- <xref:System.Windows.Media.Animation.PauseStoryboard>：暫停分鏡腳本。  
   
--   <xref:System.Windows.Media.Animation.ResumeStoryboard>：繼續已暫停的分鏡腳本。  
+- <xref:System.Windows.Media.Animation.ResumeStoryboard>：繼續已暫停的分鏡腳本。  
   
--   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>：變更分鏡腳本的速度。  
+- <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>：變更分鏡腳本的速度。  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>：如果有的話，請前進到其填滿期間中，結尾的分鏡腳本。  
+- <xref:System.Windows.Media.Animation.SkipStoryboardToFill>：如果有的話，請前進到其填滿期間中，結尾的分鏡腳本。  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>：停止分鏡腳本。  
+- <xref:System.Windows.Media.Animation.StopStoryboard>：停止分鏡腳本。  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>：移除分鏡腳本。  
+- <xref:System.Windows.Media.Animation.RemoveStoryboard>：移除分鏡腳本。  
   
  在下列範例中，會使用可控制的分鏡腳本動作以互動方式控制分鏡腳本。  
   
@@ -247,17 +247,17 @@ ms.locfileid: "59124835"
   
  下列清單顯示可用來操作的方法<xref:System.Windows.Media.Animation.Storyboard>啟動之後：  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Remove%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Remove%2A>  
   
  使用這些方法的優點是，您不需要建立<xref:System.Windows.Trigger>或是<xref:System.Windows.TriggerAction>物件; 您只需要參考可控制<xref:System.Windows.Media.Animation.Storyboard>您想要操作。  
   
@@ -272,13 +272,13 @@ ms.locfileid: "59124835"
 ## <a name="animate-in-a-style"></a>在樣式中建立動畫  
  您可以使用<xref:System.Windows.Media.Animation.Storyboard>物件來定義中的動畫<xref:System.Windows.Style>。 使用建立動畫<xref:System.Windows.Media.Animation.Storyboard>中<xref:System.Windows.Style>類似於使用<xref:System.Windows.Media.Animation.Storyboard>其他地方，使用下列三個例外狀況：  
   
--   您未指定<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>;<xref:System.Windows.Media.Animation.Storyboard>永遠為目標的項目<xref:System.Windows.Style>套用。 目標<xref:System.Windows.Freezable>物件，您必須使用間接目標。 如需有關間接目標的詳細資訊，請參閱 <<c0> [ 間接目標](#pathsyntaxforchangeable)一節。  
+- 您未指定<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>;<xref:System.Windows.Media.Animation.Storyboard>永遠為目標的項目<xref:System.Windows.Style>套用。 目標<xref:System.Windows.Freezable>物件，您必須使用間接目標。 如需有關間接目標的詳細資訊，請參閱 <<c0> [ 間接目標](#pathsyntaxforchangeable)一節。  
   
--   您無法指定<xref:System.Windows.EventTrigger.SourceName%2A>for<xref:System.Windows.EventTrigger>或<xref:System.Windows.Trigger>。  
+- 您無法指定<xref:System.Windows.EventTrigger.SourceName%2A>for<xref:System.Windows.EventTrigger>或<xref:System.Windows.Trigger>。  
   
--   您無法使用動態資源參考或資料繫結運算式來設定<xref:System.Windows.Media.Animation.Storyboard>或動畫屬性值。 這是因為所有東西放<xref:System.Windows.Style>必須是安全執行緒，而且計時系統必須<xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard>物件，以使它們具備執行緒安全。 A<xref:System.Windows.Media.Animation.Storyboard>如果它或它的子時間軸包含動態資源參考或資料繫結運算式不能凍結。 如需凍結和其他<xref:System.Windows.Freezable>功能，請參閱[Freezable 物件概觀](../advanced/freezable-objects-overview.md)。  
+- 您無法使用動態資源參考或資料繫結運算式來設定<xref:System.Windows.Media.Animation.Storyboard>或動畫屬性值。 這是因為所有東西放<xref:System.Windows.Style>必須是安全執行緒，而且計時系統必須<xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard>物件，以使它們具備執行緒安全。 A<xref:System.Windows.Media.Animation.Storyboard>如果它或它的子時間軸包含動態資源參考或資料繫結運算式不能凍結。 如需凍結和其他<xref:System.Windows.Freezable>功能，請參閱[Freezable 物件概觀](../advanced/freezable-objects-overview.md)。  
   
--   在  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，您不能宣告事件處理常式<xref:System.Windows.Media.Animation.Storyboard>或動畫事件。  
+- 在  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，您不能宣告事件處理常式<xref:System.Windows.Media.Animation.Storyboard>或動畫事件。  
   
  如需示範如何在樣式中定義分鏡腳本的範例，請參閱[在樣式中的建立動畫](how-to-animate-in-a-style.md)範例。  
   
@@ -286,13 +286,13 @@ ms.locfileid: "59124835"
 ## <a name="animate-in-a-controltemplate"></a>在 ControlTemplate 中建立動畫  
  您可以使用<xref:System.Windows.Media.Animation.Storyboard>物件來定義中的動畫<xref:System.Windows.Controls.ControlTemplate>。 使用建立動畫<xref:System.Windows.Media.Animation.Storyboard>中<xref:System.Windows.Controls.ControlTemplate>類似於使用<xref:System.Windows.Media.Animation.Storyboard>其他地方，使用下列兩項例外狀況：  
   
--   <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>只能參考到子物件的<xref:System.Windows.Controls.ControlTemplate>。 如果<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>未指定，動畫為目標的項目<xref:System.Windows.Controls.ControlTemplate>套用。  
+- <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>只能參考到子物件的<xref:System.Windows.Controls.ControlTemplate>。 如果<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>未指定，動畫為目標的項目<xref:System.Windows.Controls.ControlTemplate>套用。  
   
--   <xref:System.Windows.EventTrigger.SourceName%2A> For<xref:System.Windows.EventTrigger>或是<xref:System.Windows.Trigger>只能參考到子物件的<xref:System.Windows.Controls.ControlTemplate>。  
+- <xref:System.Windows.EventTrigger.SourceName%2A> For<xref:System.Windows.EventTrigger>或是<xref:System.Windows.Trigger>只能參考到子物件的<xref:System.Windows.Controls.ControlTemplate>。  
   
--   您無法使用動態資源參考或資料繫結運算式來設定<xref:System.Windows.Media.Animation.Storyboard>或動畫屬性值。 這是因為所有東西放<xref:System.Windows.Controls.ControlTemplate>必須是安全執行緒，而且計時系統必須<xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard>物件，以使它們具備執行緒安全。 A<xref:System.Windows.Media.Animation.Storyboard>如果它或它的子時間軸包含動態資源參考或資料繫結運算式不能凍結。 如需凍結和其他<xref:System.Windows.Freezable>功能，請參閱[Freezable 物件概觀](../advanced/freezable-objects-overview.md)。  
+- 您無法使用動態資源參考或資料繫結運算式來設定<xref:System.Windows.Media.Animation.Storyboard>或動畫屬性值。 這是因為所有東西放<xref:System.Windows.Controls.ControlTemplate>必須是安全執行緒，而且計時系統必須<xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard>物件，以使它們具備執行緒安全。 A<xref:System.Windows.Media.Animation.Storyboard>如果它或它的子時間軸包含動態資源參考或資料繫結運算式不能凍結。 如需凍結和其他<xref:System.Windows.Freezable>功能，請參閱[Freezable 物件概觀](../advanced/freezable-objects-overview.md)。  
   
--   在  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，您不能宣告事件處理常式<xref:System.Windows.Media.Animation.Storyboard>或動畫事件。  
+- 在  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，您不能宣告事件處理常式<xref:System.Windows.Media.Animation.Storyboard>或動畫事件。  
   
  如需範例，示範如何定義中的分鏡腳本<xref:System.Windows.Controls.ControlTemplate>，請參閱 <<c2> [ 在 ControlTemplate 中的建立動畫](how-to-animate-in-a-controltemplate.md)範例。  
   

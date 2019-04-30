@@ -3,11 +3,11 @@ title: 序列化概念
 ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
 ms.openlocfilehash: 649c4475aa8dcfc657b7591a0068dbfa4af918ca
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018108"
 ---
 # <a name="serialization-concepts"></a>序列化概念
 為何會想要使用序列化？ 最重要的兩大原因是，在儲存媒體中保持物件的狀態以便在稍後階段重建完全相同的複本，以及利用值在應用程式定義域之間傳送物件。 例如，使用序列化來儲存 ASP.NET 的工作階段狀態，並且複製物件至 Windows Forms 的剪貼簿。 它也供遠端使用，利用值在應用程式定義域之間傳遞物件。

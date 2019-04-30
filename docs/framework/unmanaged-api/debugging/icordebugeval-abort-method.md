@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 682d6684b6c86485530b9e5283d843f3b2eb7e46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995991"
 ---
 # <a name="icordebugevalabort-method"></a>ICorDebugEval::Abort 方法
 中止目前正在這個 ICorDebugEval 物件的計算。  
@@ -34,13 +34,13 @@ HRESULT Abort ();
 ```  
   
 ## <a name="remarks"></a>備註  
- 如果評估為巢狀，而且它不是最新的工作，`Abort`方法可能會失敗。  
+ 如果評估為巢狀，而且不是最新`Abort`方法可能會失敗。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

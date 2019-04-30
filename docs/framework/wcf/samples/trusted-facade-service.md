@@ -3,11 +3,11 @@ title: 信任的外觀服務
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
 ms.openlocfilehash: 4921b2746b9df362a0bb3e6048602d41f3f2faaf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007691"
 ---
 # <a name="trusted-facade-service"></a>信任的外觀服務
 此案例的範例示範如何呼叫者的身分識別資訊從一個服務到另一個使用 Windows Communication Foundation (WCF) 安全性基礎結構。  
@@ -16,11 +16,11 @@ ms.locfileid: "59768186"
   
  本範例由以下元件組成：  
   
--   計算機用戶端  
+- 計算機用戶端  
   
--   計算機外觀服務  
+- 計算機外觀服務  
   
--   計算機後端服務  
+- 計算機後端服務  
   
  外觀服務主要負責驗證要求及呼叫者。 在成功驗證之後，會使用周邊網路到內部網路之間的控制式通訊通道，將要求轉遞至後端服務。 做為轉遞要求的一部分，外觀服務會包含呼叫者身分識別的相關資訊，讓後端服務可以用此資訊進行處理。 將使用訊息 `Username` 標頭內的 `Security` 安全性權杖來傳輸呼叫者身分識別。 此範例會使用 WCF 安全性基礎結構傳輸及擷取這項資訊從`Security`標頭。  
   
@@ -234,7 +234,7 @@ Press <ENTER> to terminate client.
   
  下面會提供批次檔之不同區段的簡短概觀。  
   
--   建立伺服器憑證。  
+- 建立伺服器憑證。  
   
      下列 Setup.bat 批次檔中的程式行會建立要使用的伺服器憑證。  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate client.
   
      `%SERVER_NAME%` 變數會指定伺服器名稱，預設值為 localhost。 憑證是儲存在 LocalMachine 存放區中。  
   
--   將外觀服務的憑證安裝至用戶端信任的憑證存放區。  
+- 將外觀服務的憑證安裝至用戶端信任的憑證存放區。  
   
      下列程式行會將外觀服務的憑證複製到用戶端受信任人的存放區中。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證的步驟。  
   

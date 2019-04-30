@@ -10,11 +10,11 @@ helpviewer_keywords:
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
 ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009522"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.ToolStrip>控制項以及與其相關聯的類別提供通用的架構結合工具列、 狀態列和功能表的使用者介面項目。 <xref:System.Windows.Forms.ToolStrip> 控制項都能提供豐富的設計階段體驗，包括就地啟用和編輯、 自訂的版面配置和浮動定位，這是能夠的工具列共用水平或垂直空間。  
@@ -24,19 +24,19 @@ Windows Form<xref:System.Windows.Forms.ToolStrip>控制項以及與其相關聯�
 ## <a name="features-of-the-toolstrip-controls"></a>ToolStrip 控制項的功能  
  使用<xref:System.Windows.Forms.ToolStrip>控制項：  
   
--   跨容器提供了通用使用者介面。  
+- 跨容器提供了通用使用者介面。  
   
--   建立容易自訂、 常採用的工具列，可支援進階使用者介面和版面配置功能，例如具有文字和映像、 下拉式按鈕和控制項停駐、 浮動定位，按鈕、 溢位按鈕和執行階段時重新排列<xref:System.Windows.Forms.ToolStrip>項目。  
+- 建立容易自訂、 常採用的工具列，可支援進階使用者介面和版面配置功能，例如具有文字和映像、 下拉式按鈕和控制項停駐、 浮動定位，按鈕、 溢位按鈕和執行階段時重新排列<xref:System.Windows.Forms.ToolStrip>項目。  
   
--   支援溢位和執行階段項目重新排序。 溢位功能會移至 下拉式選單中的項目時沒有足夠的空間中顯示這些<xref:System.Windows.Forms.ToolStrip>。  
+- 支援溢位和執行階段項目重新排序。 溢位功能會移至 下拉式選單中的項目時沒有足夠的空間中顯示這些<xref:System.Windows.Forms.ToolStrip>。  
   
--   支援一般的外觀和行為的作業系統，透過一般的轉譯模型。  
+- 支援一般的外觀和行為的作業系統，透過一般的轉譯模型。  
   
--   處理事件一致地對所有容器和包含的項目，您可以在相同的方式處理其他控制項的事件。  
+- 處理事件一致地對所有容器和包含的項目，您可以在相同的方式處理其他控制項的事件。  
   
--   拖曳項目從某個<xref:System.Windows.Forms.ToolStrip>到另一個，或是在<xref:System.Windows.Forms.ToolStrip>。  
+- 拖曳項目從某個<xref:System.Windows.Forms.ToolStrip>到另一個，或是在<xref:System.Windows.Forms.ToolStrip>。  
   
--   建立下拉式清單控制項和使用者介面類型編輯器與進階的版面配置中<xref:System.Windows.Forms.ToolStripDropDown>。  
+- 建立下拉式清單控制項和使用者介面類型編輯器與進階的版面配置中<xref:System.Windows.Forms.ToolStripDropDown>。  
   
  使用 <xref:System.Windows.Forms.ToolStripControlHost>類別上使用其他控制項<xref:System.Windows.Forms.ToolStrip>，並取得<xref:System.Windows.Forms.ToolStrip>它們的功能。  
   

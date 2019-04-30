@@ -3,11 +3,11 @@ title: Internet Information Service 裝載指示
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
 ms.openlocfilehash: f5aa276bc1178f3e7c61af7505fcf54df8b934e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954852"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Internet Information Service 裝載指示
 若要執行由網際網路資訊服務 (IIS) 裝載的範例，您必須確定 IIS 已正確安裝並正在執行中。  
@@ -46,13 +46,13 @@ ms.locfileid: "59328955"
   
 8. 請確定已選取下列項目：  
   
-    1.  **.NET 擴充性**  
+    1. **.NET 擴充性**  
   
-    2.  **ASP.NET**  
+    2. **ASP.NET**  
   
-    3.  **ISAPI 擴充程式**  
+    3. **ISAPI 擴充程式**  
   
-    4.  **ISAPI 篩選器**  
+    4. **ISAPI 篩選器**  
   
 9. 項目底下標示**World Wide Web 服務**，展開**一般 Http 功能**。  
   
@@ -104,13 +104,13 @@ ms.locfileid: "59328955"
   
 8. 請確定已選取下列項目：  
   
-    1.  **.NET 擴充性**  
+    1. **.NET 擴充性**  
   
-    2.  **ASP.NET**  
+    2. **ASP.NET**  
   
-    3.  **ISAPI 擴充程式**  
+    3. **ISAPI 擴充程式**  
   
-    4.  **ISAPI 篩選器**  
+    4. **ISAPI 篩選器**  
   
 9. 展開標記為項目**Web 管理工具**，然後選取**IIS 管理主控台**。  
   

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6b3fc69b2edf611383402b13555cf33be10dbad3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000385"
 ---
 # <a name="strongnamekeyinstall-function"></a>StrongNameKeyInstall 函式
 
@@ -66,7 +66,7 @@ BOOLEAN StrongNameKeyInstall (
 
 **標頭：** StrongName.h
 
-**程式庫：** 包含做為 MsCorEE.dll 中的資源
+**LIBRARY:** 包含做為 MsCorEE.dll 中的資源
 
 **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

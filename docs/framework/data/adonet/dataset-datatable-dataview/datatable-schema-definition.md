@@ -3,11 +3,11 @@ title: DataTable 結構描述定義
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
 ms.openlocfilehash: e8710e7d92558f525a6feaedf8d0635c5ce6e2c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034342"
 ---
 # <a name="datatable-schema-definition"></a>DataTable 結構描述定義
 資料表的結構描述 (或結構) 是由資料行或條件約束來表示。 您可以使用 <xref:System.Data.DataTable> 物件以及 <xref:System.Data.DataColumn> 和 <xref:System.Data.ForeignKeyConstraint> 物件來定義 <xref:System.Data.UniqueConstraint> 的結構描述。 資料表的資料行可對應到資料來源中的資料行、包含運算式所得的值、自動累加其值或包含主索引鍵值。  

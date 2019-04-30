@@ -12,11 +12,11 @@ helpviewer_keywords:
 - views [WPF], grouping data
 ms.assetid: 145c8c3f-dbdd-4d0d-816f-90b35eba7eda
 ms.openlocfilehash: ca4439b574264ebebfda745f0765f750099bc95f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020734"
 ---
 # <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>HOW TO：使用 XAML 中的檢視排序和分組資料
 此範例示範如何建立資料集合中的檢視[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 檢視允許的分組、 排序、 篩選、 功能和目前的項目的概念。  

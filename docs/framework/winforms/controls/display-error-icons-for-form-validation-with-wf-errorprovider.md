@@ -12,11 +12,11 @@ helpviewer_keywords:
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
 ms.openlocfilehash: 9487d4f82878ffefe17c576b16f654293ef01106
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972181"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>HOW TO：使用 Windows Forms ErrorProvider 元件顯示表單驗證的錯誤圖示
 您可以使用 Windows Form<xref:System.Windows.Forms.ErrorProvider>元件，以在使用者輸入無效的資料時顯示錯誤圖示。 您必須擁有至少兩個控制項其間索引標籤，並藉此叫用的驗證程式碼以在表單上。  

@@ -3,11 +3,11 @@ title: MSMQ 啟用
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
 ms.openlocfilehash: d83759f321abe7fa7e39202daadd4ceda82d8f23
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051477"
 ---
 # <a name="msmq-activation"></a>MSMQ 啟用
 這個範例示範如何在 Windows Process Activation Service (WAS) 中裝載可從訊息佇列讀取的應用程式。 這個範例會使用`netMsmqBinding`且根據[雙向通訊](../../../../docs/framework/wcf/samples/two-way-communication.md)範例。 本例中的服務是 Web 裝載的應用程式，而用戶端則會自我裝載並輸出至主控台，以便觀察所送出採購單的狀態。  
@@ -219,15 +219,15 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 2. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。 此外，您必須安裝 WCF 非 HTTP 啟動元件：  
   
-    1.  在 [開始] 功能表內選擇 [控制台]。  
+    1. 在 [開始] 功能表內選擇 [控制台]。  
   
-    2.  選取 **程式和功能**。  
+    2. 選取 **程式和功能**。  
   
-    3.  按一下 **開啟或關閉 Windows 功能**。  
+    3. 按一下 **開啟或關閉 Windows 功能**。  
   
-    4.  底下**功能摘要**，按一下**新增功能**。  
+    4. 底下**功能摘要**，按一下**新增功能**。  
   
-    5.  依序展開**Microsoft.NET Framework 3.0**節點，並檢查**Windows Communication Foundation 非 HTTP 啟動**功能。  
+    5. 依序展開**Microsoft.NET Framework 3.0**節點，並檢查**Windows Communication Foundation 非 HTTP 啟動**功能。  
   
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
@@ -235,21 +235,21 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 5. 根據預設，MSMQ 啟動服務會以網路服務的身分執行。 因此，用來啟動應用程式的佇列必須讓「網路服務」擁有接收和查看其中訊息的權限。 您可以使用訊息佇列 MMC 來新增此權限：  
   
-    1.  從**開始**功能表上，按一下**執行**，然後輸入`Compmgmt.msc`按 ENTER 鍵。  
+    1. 從**開始**功能表上，按一下**執行**，然後輸入`Compmgmt.msc`按 ENTER 鍵。  
   
-    2.  底下**服務和應用程式**，展開**Message Queuing**。  
+    2. 底下**服務和應用程式**，展開**Message Queuing**。  
   
-    3.  按一下 **私用佇列**。  
+    3. 按一下 **私用佇列**。  
   
-    4.  以滑鼠右鍵按一下佇列 (servicemodelsamples/Service.svc)，然後選擇 **屬性**。  
+    4. 以滑鼠右鍵按一下佇列 (servicemodelsamples/Service.svc)，然後選擇 **屬性**。  
   
-    5.  在 **安全性**索引標籤上，按一下**新增**將查看和接收的網路服務的權限。  
+    5. 在 **安全性**索引標籤上，按一下**新增**將查看和接收的網路服務的權限。  
   
 6. 設定 Windows Process Activation Service (WAS) 以支援 MSMQ 啟動。  
   
      為了方便起見，下列步驟會以範例目錄中名為 AddMsmqSiteBinding.cmd 的批次檔實作。  
   
-    1.  若要支援 net.msmq 啟動，預設的網站必須先繫結至 net.msmq 通訊協定。 使用隨 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 管理工具集安裝的 appcmd.exe 即可完成此操作。 從提高權限的 (系統管理員) 命令提示字元中執行下列命令。  
+    1. 若要支援 net.msmq 啟動，預設的網站必須先繫結至 net.msmq 通訊協定。 使用隨 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 管理工具集安裝的 appcmd.exe 即可完成此操作。 從提高權限的 (系統管理員) 命令提示字元中執行下列命令。  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -261,7 +261,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
          此命令會將 net.msmq 網站繫結加入至預設網站。  
   
-    2.  雖然網站中的所有應用程式會共用一般 net.msmq 繫結，但是每個應用程式都可以個別啟用 net.msmq 支援。 若要啟用 /servicemodelsamples 應用程式的 net.msmq，請從提高權限的命令提示字元中執行下列命令。  
+    2. 雖然網站中的所有應用程式會共用一般 net.msmq 繫結，但是每個應用程式都可以個別啟用 net.msmq 支援。 若要啟用 /servicemodelsamples 應用程式的 net.msmq，請從提高權限的命令提示字元中執行下列命令。  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.msmq  
@@ -284,7 +284,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
      為了方便起見，下列步驟會以範例目錄中名為 RemoveMsmqSiteBinding.cmd 的批次檔實作：  
   
-    1.  從提高權限的命令提示字元中執行下列命令，以從啟用的通訊協定清單中移除 net.msmq。  
+    1. 從提高權限的命令提示字元中執行下列命令，以從啟用的通訊協定清單中移除 net.msmq。  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http  
@@ -293,7 +293,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  這個命令是單行文字。  
   
-    2.  從提高權限的命令提示字元中執行下列命令以移除 net.msmq 網站繫結。  
+    2. 從提高權限的命令提示字元中執行下列命令以移除 net.msmq 網站繫結。  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" --bindings.[protocol='net.msmq',bindingInformation='localhost']  
@@ -330,17 +330,17 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
      若要變更背景工作處理序用以執行的身分識別：  
   
-    1.  執行 Inetmgr.exe。  
+    1. 執行 Inetmgr.exe。  
   
-    2.  底下**應用程式集區**，以滑鼠右鍵按一下**AppPool** (通常**DefaultAppPool**)，然後選擇 **設定應用程式集區預設值...**.  
+    2. 底下**應用程式集區**，以滑鼠右鍵按一下**AppPool** (通常**DefaultAppPool**)，然後選擇 **設定應用程式集區預設值...**.  
   
-    3.  變更 Identity 屬性以使用特定的使用者帳戶。  
+    3. 變更 Identity 屬性以使用特定的使用者帳戶。  
   
      若要變更啟動服務用以執行的身分識別：  
   
-    1.  執行 Services.msc。  
+    1. 執行 Services.msc。  
   
-    2.  以滑鼠右鍵按一下**Net.MsmqListener 配接器**，然後選擇**屬性**。  
+    2. 以滑鼠右鍵按一下**Net.MsmqListener 配接器**，然後選擇**屬性**。  
   
 4. 變更此帳戶**登入** 索引標籤。  
   

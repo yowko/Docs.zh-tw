@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b05ba185a9ad4ab076d29d7d609734d41677b760
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986046"
 ---
 # <a name="isymunmanagedwriteropenmethod-method"></a>ISymUnmanagedWriter::OpenMethod 方法
 開啟到的符號資訊就會發出的方法。 指定的方法會變成目前的方法，來定義序列點、 參數和語彙範圍的呼叫。 沒有隱含的語彙範圍，整個方法。 重新開啟先前已關閉的方法，就會清除任何先前定義的符號，該方法。 一次可以有只有一個開啟的方法。  

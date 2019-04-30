@@ -10,11 +10,11 @@ helpviewer_keywords:
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
 ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966893"
 ---
 # <a name="using-keyboard-events"></a>使用鍵盤事件
 大部分的 Windows Form 程式藉由處理鍵盤事件來處理鍵盤輸入。 本主題提供鍵盤事件的概觀，包含何時使用每個事件的詳細資訊，以及提供給每個事件的資料。  另請參閱[事件處理常式概觀 (Windows Form)](event-handlers-overview-windows-forms.md)並[事件概觀 (Windows Form)](events-overview-windows-forms.md)。  
@@ -22,11 +22,11 @@ ms.locfileid: "59114266"
 ## <a name="keyboard-events"></a>鍵盤事件  
  Windows Form 提供兩個在使用者按下鍵盤按鍵時會發生的事件，也提供一個當使用者鬆開鍵盤按鍵時會發生的事件：  
   
--   <xref:System.Windows.Forms.Control.KeyDown> 事件會發生一次  
+- <xref:System.Windows.Forms.Control.KeyDown> 事件會發生一次  
   
--   當使用者按住相同按鍵時，<xref:System.Windows.Forms.Control.KeyPress> 事件可以發生多次。  
+- 當使用者按住相同按鍵時，<xref:System.Windows.Forms.Control.KeyPress> 事件可以發生多次。  
   
--   當使用者鬆開按鍵，就會發生 <xref:System.Windows.Forms.Control.KeyUp> 事件一次。  
+- 當使用者鬆開按鍵，就會發生 <xref:System.Windows.Forms.Control.KeyUp> 事件一次。  
   
  當使用者按下按鍵時，Windows Form 會依據鍵盤訊息指定字元鍵或實體鍵來決定要引發哪個事件。 如需有關字元鍵與實體鍵的詳細資訊，請參閱[鍵盤輸入的運作方式](how-keyboard-input-works.md)。  
   

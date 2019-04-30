@@ -9,11 +9,11 @@ helpviewer_keywords:
 - examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
 ms.openlocfilehash: 241d2824fc2d87a0505eb6e790c865bfa7d8ef90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967327"
 ---
 # <a name="how-to-rotate-colors"></a>HOW TO：旋轉色彩
 四維色彩空間中的旋轉很難視覺化。 我們可以輕鬆地視覺化起來要保留固定的色彩元件之一。 假設同意將固定為 1 的 alpha 元件 （完全不透明）。 然後我們可以將三維色彩空間視覺化具有紅色、 綠色和藍色的軸，如下圖所示。  

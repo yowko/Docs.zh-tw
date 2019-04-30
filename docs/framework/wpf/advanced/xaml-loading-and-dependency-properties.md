@@ -10,11 +10,11 @@ helpviewer_keywords:
 - loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
 ms.openlocfilehash: 4db87c5f266a9eed136f0651f48d11720abede65
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053856"
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>XAML 載入和相依性屬性
 目前 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作，在本質上就會感知相依性屬性。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器在載入二進位 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 和處理相依性屬性的屬性時，會使用相依性屬性的屬性系統方法。 這可有效略過屬性的包裝函式。 當您實作自訂相依性屬性時，您必須負責此行為，而且應該避免任何其他程式碼置於屬性系統方法您屬性包裝函式<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>。  

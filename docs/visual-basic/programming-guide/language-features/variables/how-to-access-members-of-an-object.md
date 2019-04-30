@@ -6,11 +6,11 @@ helpviewer_keywords:
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
 ms.openlocfilehash: de00e428cc3d9d7a5688e853b0ff4295fec5b3e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052127"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>HOW TO：存取成員的物件 (Visual Basic)
 當您參考之物件的物件變數時，您通常會想要使用該物件，例如方法、 屬性、 欄位和事件的成員。 例如，一旦您建立新<xref:System.Windows.Forms.Form>物件，您可能想要設定其<xref:System.Windows.Forms.Control.Text%2A>屬性或呼叫其<xref:System.Windows.Forms.Control.Focus%2A>方法。  
@@ -20,7 +20,7 @@ ms.locfileid: "59322754"
   
 #### <a name="to-access-members-of-an-object"></a>若要存取物件的成員  
   
--   使用成員存取運算子 (`.`) 之間的物件變數的名稱和成員名稱。  
+- 使用成員存取運算子 (`.`) 之間的物件變數的名稱和成員名稱。  
   
     ```  
     currentText = newForm.Text  

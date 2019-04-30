@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ccdc3777-b2c2-44e3-a627-abef8d79a555
 ms.openlocfilehash: dca917b3c12b0f9923cc9ea34a2568c412a09831
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033445"
 ---
 # <a name="return-the-first-element-in-a-sequence"></a>傳回序列的第一個項目
 使用 <xref:System.Linq.Enumerable.First%2A> 運算子傳回序列中的第一個項目。 使用 <xref:System.Linq.Enumerable.First%2A> 的查詢會立即執行。  

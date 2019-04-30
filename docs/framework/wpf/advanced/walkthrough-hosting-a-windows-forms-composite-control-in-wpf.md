@@ -9,11 +9,11 @@ helpviewer_keywords:
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
 ms.openlocfilehash: 90d0e2f3c6ebab070809a4813c87da3539fd14f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032184"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>逐步解說：將 Windows Forms 複合控制項裝載在 WPF 中
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，如果您已長期開發[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]程式碼，它可以更有效率地重複使用至少其中某些程式碼中您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式而不從頭重寫程式。 最常見的案例是當您有現有的 Windows Form 控制項。 在某些情況下，您甚至可能無法存取這些控制項的原始程式碼。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供簡單的程序這類控制項裝載於[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。 例如，您可以使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]適用於大部分的程式設計時裝載您特殊<xref:System.Windows.Forms.DataGridView>控制項。  
@@ -24,9 +24,9 @@ ms.locfileid: "59337847"
   
  這個逐步解說中所述的工作包括：  
   
--   實作 Windows Forms 複合控制項。  
+- 實作 Windows Forms 複合控制項。  
   
--   實作 WPF 主應用程式。  
+- 實作 WPF 主應用程式。  
   
  在此逐步解說中所述工作的完整程式碼清單，請參閱 <<c0> [ 裝載在 WPF 範例中的 Windows Forms 複合控制項](https://go.microsoft.com/fwlink/?LinkID=159999)。  
   
@@ -58,32 +58,32 @@ ms.locfileid: "59337847"
   
  您的專案應該有下列系統 DLL 的參考。 如果預設未包括所有這些 DLL，則請將它們新增至專案。  
   
--   系統  
+- 系統  
   
--   System.Data  
+- System.Data  
   
--   System.Drawing  
+- System.Drawing  
   
--   System.Windows.Forms  
+- System.Windows.Forms  
   
--   System.Xml  
+- System.Xml  
   
 ### <a name="adding-controls-to-the-form"></a>將控制項加入至表單  
  將控制項新增至表單：  
   
--   開啟`MyControl1`設計工具中。  
+- 開啟`MyControl1`設計工具中。  
   
  新增五<xref:System.Windows.Forms.Label>控制項和其對應<xref:System.Windows.Forms.TextBox>控制項、 大小和排列以其在上圖中，在表單上。 在範例中，<xref:System.Windows.Forms.TextBox>控制項命名為：  
   
--   `txtName`  
+- `txtName`  
   
--   `txtAddress`  
+- `txtAddress`  
   
--   `txtCity`  
+- `txtCity`  
   
--   `txtState`  
+- `txtState`  
   
--   `txtZip`  
+- `txtZip`  
   
  新增兩個<xref:System.Windows.Forms.Button>標示為控制項 **[確定]** 並**取消**。 在此範例中，為餂鈕晻`btnOK`和`btnCancel`分別。  
   
@@ -159,11 +159,11 @@ ms.locfileid: "59337847"
 ### <a name="implementing-the-basic-layout"></a>實作基本版面配置
  [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]主應用程式的應用程式在 MainWindow.xaml 中實作。 此檔案包含[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]定義版面配置，並裝載在 Windows Form 控制項的標記。 應用程式分為三個區域：
 
--   **控制項屬性**面板，其中包含一組選項按鈕可供您修改託管控制項的各種屬性。
+- **控制項屬性**面板，其中包含一組選項按鈕可供您修改託管控制項的各種屬性。
 
--   **Data from Control**面板中，其中包含數個<xref:System.Windows.Controls.TextBlock>傳回從裝載控制項的顯示資料的項目。
+- **Data from Control**面板中，其中包含數個<xref:System.Windows.Controls.TextBlock>傳回從裝載控制項的顯示資料的項目。
 
--   託管控制項本身。
+- 託管控制項本身。
 
  下列 XAML 會顯示基本版面配置。 需要的標記至主機`MyControl1`會略過此範例中，但將在稍後討論。
 
@@ -183,18 +183,18 @@ ms.locfileid: "59337847"
 
  XAML 中有兩個項目可處理裝載︰
 
--   `WindowsFormsHost` 代表<xref:System.Windows.Forms.Integration.WindowsFormsHost>可讓您裝載 Windows Form 控制項中的項目[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。
+- `WindowsFormsHost` 代表<xref:System.Windows.Forms.Integration.WindowsFormsHost>可讓您裝載 Windows Form 控制項中的項目[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。
 
--   `mcl:MyControl1`表示`MyControl1`，新增至<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目的子集合。 如此一來，這個 Windows Form 控制項呈現為一部分[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 視窗中，而且您可以與應用程式的來源控制項進行通訊。
+- `mcl:MyControl1`表示`MyControl1`，新增至<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目的子集合。 如此一來，這個 Windows Form 控制項呈現為一部分[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 視窗中，而且您可以與應用程式的來源控制項進行通訊。
 
 ### <a name="implementing-the-code-behind-file"></a>實作程式碼後置檔案
  程式碼後置檔案 MainWindow.xaml.vb 或 MainWindow.xaml.cs 包含實作的功能的程序性程式碼[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]上一節所述。 主要工作如下︰
 
--   附加事件處理常式`MyControl1`的`OnButtonClick`事件。
+- 附加事件處理常式`MyControl1`的`OnButtonClick`事件。
 
--   修改的各種屬性`MyControl1`根據組選項按鈕的設定方式。
+- 修改的各種屬性`MyControl1`根據組選項按鈕的設定方式。
 
--   顯示控制項所收集到的資料。
+- 顯示控制項所收集到的資料。
 
 #### <a name="initializing-the-application"></a>初始化應用程式
  初始化程式碼包含在視窗的事件處理常式<xref:System.Windows.FrameworkElement.Loaded>事件，並將事件處理常式附加至控制項的`OnButtonClick`事件。

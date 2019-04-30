@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
 ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050697"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>使用寄不出的信件佇列來處理訊息傳輸失敗
 佇列訊息可能會傳遞失敗。 這些失敗的訊息都會記錄在寄不出的信件佇列中。 造成傳遞失敗的原因可能是網路失敗、佇列已刪除、佇列已滿、驗證失敗，或是未能準時傳遞。  
@@ -30,18 +30,18 @@ ms.locfileid: "59174612"
   
  繫結具有下列寄不出的信件佇列屬性：  
   
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
   
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
   
 ## <a name="reading-messages-from-the-dead-letter-queue"></a>從寄不出的信件佇列讀取訊息  
  讀取的應用程式佇列，除了下列的細微差異的 WCF 服務應用程式，以讀取從寄不出信件佇列的訊息如下：  
   
--   為了從系統的交易式寄不出的信件佇列讀取訊息，統一資源識別元 (URI) 必須採用 net.msmq://localhost/system$;DeadXact 的格式。  
+- 為了從系統的交易式寄不出的信件佇列讀取訊息，統一資源識別元 (URI) 必須採用 net.msmq://localhost/system$;DeadXact 的格式。  
   
--   為了從系統的非交易式寄不出的信件佇列讀取訊息，URI 必須採用 net.msmq://localhost/system$;DeadLetter 的格式。  
+- 為了從系統的非交易式寄不出的信件佇列讀取訊息，URI 必須採用 net.msmq://localhost/system$;DeadLetter 的格式。  
   
--   若要從自訂的寄不出信件佇列讀取訊息，URI 必須是表單 net.msmq: //localhost/private/<\<*自訂 dlq 名稱*> 位置*自訂 dlq 名稱*是自訂名稱寄不出信件佇列。  
+- 若要從自訂的寄不出信件佇列讀取訊息，URI 必須是表單 net.msmq: //localhost/private/<\<*自訂 dlq 名稱*> 位置*自訂 dlq 名稱*是自訂名稱寄不出信件佇列。  
   
  如需如何位址佇列的詳細資訊，請參閱[服務端點與佇列定址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
   

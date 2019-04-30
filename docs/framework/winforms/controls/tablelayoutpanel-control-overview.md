@@ -12,11 +12,11 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], about TableLayoutPanel control
 ms.assetid: 337661c8-61cb-44ee-93e0-3662bddec327
 ms.openlocfilehash: 65daba0ce1a6f1c37fb257c1029396577821aad9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009626"
 ---
 # <a name="tablelayoutpanel-control-overview"></a>TableLayoutPanel 控制項概觀
 <xref:System.Windows.Forms.TableLayoutPanel> 控制項會在格線中排列其內容。 由於配置會在設計階段和執行階段執行，因此當應用程式環境變更時，配置也會隨著動態變更。 這可讓面板中的控制項按比例調整大小，以便回應變更 (例如，由於當地語系化所造成的父控制項調整大小或文字長度變更)。  

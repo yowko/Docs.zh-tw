@@ -12,11 +12,11 @@ helpviewer_keywords:
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
 ms.openlocfilehash: 8547e8e1eaf73b266d737e33acd79dd4ec539c6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051165"
 ---
 # <a name="option-strict-statement"></a>Long
 會限制僅限於擴展轉換的隱含資料類型轉換，不允許晚期繫結，不允許隱含型別，會導致`Object`型別。  
@@ -37,11 +37,11 @@ Option Strict { On | Off }
 ## <a name="remarks"></a>備註  
  當`Option Strict On`或`Option Strict`會出現在檔案中，在下列情況會造成編譯時期錯誤：  
   
--   隱含縮小轉換  
+- 隱含縮小轉換  
   
--   晚期繫結  
+- 晚期繫結  
   
--   導致 `Object` 類型的隱含類型化  
+- 導致 `Object` 類型的隱含類型化  
   
 > [!NOTE]
 >  您可以設定的警告組態[編譯的 Page，Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)，有三個設定對應至三個條件會造成編譯時期錯誤。 如需有關如何使用這些設定的資訊，請參閱[在 IDE 中設定警告組態](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions)本主題稍後的。  
@@ -52,11 +52,11 @@ Option Strict { On | Off }
   
  當您設定`Option Strict`至`On`，Visual Basic 會檢查所有的程式設計項目指定的資料類型。 資料類型可以明確地指定，或使用區域類型推斷來指定。 指定資料類型的所有程式設計項目建議，原因如下：  
   
--   它可讓您的變數和參數的 IntelliSense 支援。 這可讓您查看其屬性與其他成員，當您輸入程式碼。  
+- 它可讓您的變數和參數的 IntelliSense 支援。 這可讓您查看其屬性與其他成員，當您輸入程式碼。  
   
--   它可讓編譯器執行類型檢查。 類型檢查可協助您找出可以在執行階段失敗，因為型別轉換錯誤的陳述式。 它也會識別不支援這些方法的物件上的方法呼叫。  
+- 它可讓編譯器執行類型檢查。 類型檢查可協助您找出可以在執行階段失敗，因為型別轉換錯誤的陳述式。 它也會識別不支援這些方法的物件上的方法呼叫。  
   
--   它會加快執行的程式碼。 其原因之一是，如果您未指定資料類型的程式設計項目，則 Visual Basic 編譯器將其指派`Object`型別。 已編譯程式碼可能必須將之間來回轉換`Object`及其他資料類型，會降低效能。  
+- 它會加快執行的程式碼。 其原因之一是，如果您未指定資料類型的程式設計項目，則 Visual Basic 編譯器將其指派`Object`型別。 已編譯程式碼可能必須將之間來回轉換`Object`及其他資料類型，會降低效能。  
   
 ## <a name="implicit-narrowing-conversion-errors"></a>隱含的縮小轉換錯誤  
  隱含資料類型轉換是縮小轉換時，會發生隱含縮小轉換錯誤。  
@@ -65,15 +65,15 @@ Option Strict { On | Off }
   
  可能會導致錯誤的轉換會在運算式中包含所發生的隱含轉換。 如需詳細資訊，請參閱下列主題：  
   
--   [+ 運算子](../../../visual-basic/language-reference/operators/addition-operator.md)  
+- [+ 運算子](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
--   [+= 運算子](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
+- [+= 運算子](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
--   [\ 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+- [\ 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
--   [/ = 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+- [/ = 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
--   [Char 資料類型](../../../visual-basic/language-reference/data-types/char-data-type.md)  
+- [Char 資料類型](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
  當您使用，會在串連字串時[& 運算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)，所有轉換成字串會被都視為擴展。 因此這些轉換不會產生隱含的縮小轉換錯誤，即使`Option Strict`上。  
   
@@ -116,11 +116,11 @@ Option Strict { On | Off }
 ### <a name="conditions"></a> 在 IDE 中設定警告組態  
  當您使用[編譯的 Page，Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)而不是`Option Strict`陳述式中，您可以額外控制產生錯誤的條件。 **警告組態**一節**編譯的頁面**已對應至三個條件會造成編譯時期錯誤設定時`Option Strict`上。 以下是這些設定：  
   
--   **隱含轉換**  
+- **隱含轉換**  
   
--   **晚期繫結，執行階段時呼叫可能失敗**  
+- **晚期繫結，執行階段時呼叫可能失敗**  
   
--   **隱含類型，假設是 Object**  
+- **隱含類型，假設是 Object**  
   
  當您將 [Option Strict] 設定為 [On] 時，這三個警告組態設定都會設定為 [錯誤]。 當您將 [Option Strict] 設定為 [Off] 時，所有三個設定都會設定為 [無]。  
   

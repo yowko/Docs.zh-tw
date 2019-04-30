@@ -38,11 +38,11 @@ helpviewer_keywords:
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
 ms.openlocfilehash: 29e5cbe09026dd52811c6c5fb88e940b45b7c0bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971739"
 ---
 # <a name="data-type-summary-visual-basic"></a>資料類型摘要 (Visual Basic)
 下表顯示 Visual Basic 資料類型、 其支援的 common language runtime 類型、 其名義上的存放裝置配置和其值的範圍。  
@@ -77,16 +77,16 @@ ms.locfileid: "58821968"
 ## <a name="memory-consumption"></a>記憶體消耗量  
  當您宣告基本資料類型時，它並不安全假設它的記憶體耗用量是其名義上的儲存體配置相同。 這是因為下列考量：  
   
--   **儲存體指派。** Common language runtime 可以指派目前的應用程式執行所在的平台特性為基礎的儲存體。 如果記憶體幾乎已滿時，它可能會封裝在成接近您宣告的項目一起越好。 在其他情況下，它可能會對齊實體硬體界限，以將效能最佳化其記憶體位址。  
+- **儲存體指派。** Common language runtime 可以指派目前的應用程式執行所在的平台特性為基礎的儲存體。 如果記憶體幾乎已滿時，它可能會封裝在成接近您宣告的項目一起越好。 在其他情況下，它可能會對齊實體硬體界限，以將效能最佳化其記憶體位址。  
   
--   **平台的寬度。** 在 64 位元平台上的儲存體設定與不同的 32 位元平台上的指派。  
+- **平台的寬度。** 在 64 位元平台上的儲存體設定與不同的 32 位元平台上的指派。  
   
 ### <a name="composite-data-types"></a>複合資料類型  
  複合資料類型，例如結構或陣列的每個成員套用相同的考量。 您不能依賴只將加在一起的型別之成員的名義上的儲存體配置。 此外，也有其他考量，如下所示：  
   
--   **額外負荷。** 某些複合類型有額外的記憶體需求。 比方說，陣列的陣列本身以及每個維度會使用額外的記憶體。 在 32 位元平台上目前的耗用量是 12 個位元組，再加上每個維度的 8 個位元組。 在 64 位元平台上這項需求會增加一倍。  
+- **額外負荷。** 某些複合類型有額外的記憶體需求。 比方說，陣列的陣列本身以及每個維度會使用額外的記憶體。 在 32 位元平台上目前的耗用量是 12 個位元組，再加上每個維度的 8 個位元組。 在 64 位元平台上這項需求會增加一倍。  
   
--   **儲存體配置。** 您無法安全地假設在記憶體中的儲存體的順序是您宣告的順序相同的動作。 您甚至不能假設位元組對齊，例如 2 或 4 個位元組的界限。 如果您要定義類別或結構，而且您需要控制其成員的儲存體配置，您可以套用<xref:System.Runtime.InteropServices.StructLayoutAttribute>屬性至類別或結構。  
+- **儲存體配置。** 您無法安全地假設在記憶體中的儲存體的順序是您宣告的順序相同的動作。 您甚至不能假設位元組對齊，例如 2 或 4 個位元組的界限。 如果您要定義類別或結構，而且您需要控制其成員的儲存體配置，您可以套用<xref:System.Runtime.InteropServices.StructLayoutAttribute>屬性至類別或結構。  
   
 ### <a name="object-overhead"></a>物件的負擔  
  `Object`指的任何基本或複合資料型別會使用 4 個位元組，除了資料類型中所包含的資料。  

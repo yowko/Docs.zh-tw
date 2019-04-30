@@ -10,11 +10,11 @@ helpviewer_keywords:
 - states [WPF], RepeatButton
 ms.assetid: fd340743-f44f-4990-9077-085301469670
 ms.openlocfilehash: 86f212326bc707e4b07b8cab8d9a95d4f6ef8920
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57509587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053310"
 ---
 # <a name="repeatbutton-styles-and-templates"></a>RepeatButton 樣式和範本
 

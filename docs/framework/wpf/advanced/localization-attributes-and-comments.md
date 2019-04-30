@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
 ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62036227"
 ---
 # <a name="localization-attributes-and-comments"></a>當地語系化屬性和註解
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解是 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 原始程式碼內的屬性，並由開發人員提供以提供當地語系化的規則和提示。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解包含兩組資訊︰可當地語系化屬性和自由格式當地語系化註解。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 當地語系化 API 使用可當地語系化屬性來指出要當地語系化的資源。 自由格式註解是應用程式作者想要包含的任何資訊。  
@@ -27,11 +27,11 @@ ms.locfileid: "59301850"
   
 3. 可以指派的值如下︰  
   
-    -   **None** - 註解和屬性會保留在組件內，而且不會產生個別檔案。  
+    - **None** - 註解和屬性會保留在組件內，而且不會產生個別檔案。  
   
-    -   **CommentsOnly** - 只去除組件中的註解，並將它們放在個別 LocFile 中。  
+    - **CommentsOnly** - 只去除組件中的註解，並將它們放在個別 LocFile 中。  
   
-    -   **All** - 去除組件中的註解和屬性，並將它們放在個別 LocFile 中。  
+    - **All** - 去除組件中的註解和屬性，並將它們放在個別 LocFile 中。  
   
 4. 從 [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 擷取可當地語系化的資源時，[!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 當地語系化 API 會接受可當地語系化屬性。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "59301850"
   
  屬性有三種類型：  
   
--   **分類**. 這指定是否應該可以從當地語系化人員工具修改值。 請參閱 <xref:System.Windows.LocalizabilityAttribute.Category%2A>。  
+- **分類**. 這指定是否應該可以從當地語系化人員工具修改值。 請參閱 <xref:System.Windows.LocalizabilityAttribute.Category%2A>。  
   
--   **可讀性**. 這指定當地語系化人員工具是否應該讀取 (和顯示) 值。 請參閱 <xref:System.Windows.LocalizabilityAttribute.Readability%2A>。  
+- **可讀性**. 這指定當地語系化人員工具是否應該讀取 (和顯示) 值。 請參閱 <xref:System.Windows.LocalizabilityAttribute.Readability%2A>。  
   
--   **可修改性**. 這指定當地語系化人員工具是否允許修改值。 請參閱 <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>。  
+- **可修改性**. 這指定當地語系化人員工具是否允許修改值。 請參閱 <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>。  
   
  這些屬性可以依任何順序指定，並以空格分隔。 如果指定重複屬性，則最後一個屬性會覆寫先前的屬性。 例如，Localization.Attributes = "Unmodifiable Modifiable" 會將「可修改性」設定為「可修改」，因為它是最後一個值。  
   

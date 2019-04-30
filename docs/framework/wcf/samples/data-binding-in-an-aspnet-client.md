@@ -3,11 +3,11 @@ title: ASP.NET 用戶端中的資料繫結
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
 ms.openlocfilehash: 07e03a4580795b3424f63cec8f93fea2039b6733
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990622"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>ASP.NET 用戶端中的資料繫結
 此範例示範如何將 Web Form 應用程式中典型的 Windows Communication Foundation (WCF) 服務所傳回的資料繫結。  

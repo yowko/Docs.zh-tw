@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1988b79c-3bfc-4c5c-a08a-86cf638bbe17
 ms.openlocfilehash: 429bca7501bd58440ee894345855141a2a2ed12c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033705"
 ---
 # <a name="how-to-resolve-conflicts-by-merging-with-database-values"></a>HOW TO：藉由與資料庫值合併來解決衝突
 若要先協調預期和實際資料庫值之間的差異再重新送出變更，可以使用 <xref:System.Data.Linq.RefreshMode.KeepChanges> 來合併資料庫值與目前用戶端成員值。 如需詳細資訊，請參閱[開放式並行存取：概觀](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
 ms.openlocfilehash: e8f77a4fd1047598d51c2e0932d9c1309a305a86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003921"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>HOW TO：從剪貼簿擷取資料
 <xref:System.Windows.Forms.Clipboard>類別提供方法，您可以使用與 Windows 作業系統的剪貼簿功能互動。 許多應用程式資料做為暫存的儲存機制使用剪貼簿。 例如，文書處理器使用剪貼簿剪下和貼上作業期間。 也適用於將資訊傳送到另一個應用程式從剪貼簿。  

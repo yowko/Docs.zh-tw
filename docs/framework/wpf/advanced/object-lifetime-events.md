@@ -25,11 +25,11 @@ helpviewer_keywords:
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
 ms.openlocfilehash: 8ecc3f716061dfd08ac95652d1a9d8e06e26d949
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053219"
 ---
 # <a name="object-lifetime-events"></a>物件存留期事件
 本主題說明特定的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件，表示物件的建立、使用和解構存留期階段。  
@@ -66,11 +66,11 @@ ms.locfileid: "59175786"
 ## <a name="lifetime-events-application-model-elements"></a>存留期事件應用程式模型項目  
  建置通用的存留期事件項目為下列應用程式模型項目： <xref:System.Windows.Application>， <xref:System.Windows.Window>， <xref:System.Windows.Controls.Page>， <xref:System.Windows.Navigation.NavigationWindow>，和<xref:System.Windows.Controls.Frame>。 這些會延伸共通存留期事件及與其特定用途相關的其他事件。 下列位置對這些有詳細討論：  
   
--   <xref:System.Windows.Application>：[應用程式管理概觀](../app-development/application-management-overview.md)。  
+- <xref:System.Windows.Application>：[應用程式管理概觀](../app-development/application-management-overview.md)。  
   
--   <xref:System.Windows.Window>：[WPF Windows 概觀](../app-development/wpf-windows-overview.md)。  
+- <xref:System.Windows.Window>：[WPF Windows 概觀](../app-development/wpf-windows-overview.md)。  
   
--   <xref:System.Windows.Controls.Page><xref:System.Windows.Navigation.NavigationWindow>，和<xref:System.Windows.Controls.Frame>:[瀏覽概觀](../app-development/navigation-overview.md)。  
+- <xref:System.Windows.Controls.Page><xref:System.Windows.Navigation.NavigationWindow>，和<xref:System.Windows.Controls.Frame>:[瀏覽概觀](../app-development/navigation-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

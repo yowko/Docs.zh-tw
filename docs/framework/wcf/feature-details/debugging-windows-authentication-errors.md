@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
 ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048045"
 ---
 # <a name="debugging-windows-authentication-errors"></a>偵錯 Windows 驗證錯誤
 當使用 Windows 驗證做為安全性機制時，安全性支援提供者介面 (SSPI) 便會處理安全性程序。 當安全性錯誤發生在 SSPI 層時，它們會顯示由 Windows Communication Foundation (WCF)。 本主題會提供可協助診斷這些錯誤的架構與問題集。  
@@ -45,13 +45,13 @@ ms.locfileid: "59299445"
   
  具體而言，這四種帳戶類型包括：  
   
--   本機使用者：僅限電腦的使用者設定檔。 例如：`MachineName\Administrator` 或 `MachineName\ProfileName`。  
+- 本機使用者：僅限電腦的使用者設定檔。 例如：`MachineName\Administrator` 或 `MachineName\ProfileName`。  
   
--   本機系統：內建帳戶 SYSTEM 未加入網域的電腦上。  
+- 本機系統：內建帳戶 SYSTEM 未加入網域的電腦上。  
   
--   網域使用者：在 Windows 網域使用者帳戶。 例如：`DomainName\ProfileName`。  
+- 網域使用者：在 Windows 網域使用者帳戶。 例如：`DomainName\ProfileName`。  
   
--   網域電腦：加入 Windows 網域的機器上執行的機器身分識別與處理程序。 例如：`MachineName\Network Service`。  
+- 網域電腦：加入 Windows 網域的機器上執行的機器身分識別與處理程序。 例如：`MachineName\Network Service`。  
   
 > [!NOTE]
 >  當呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 類別的 <xref:System.ServiceModel.ServiceHost> 方法時，便會擷取服務認證。 每當用戶端傳送訊息時就會讀取此用戶端認證。  
@@ -85,15 +85,15 @@ ms.locfileid: "59299445"
   
 2. 要求 SSPI 交涉：  
   
-    1.  如果您是使用標準繫結，請將 `NegotiateServiceCredential` 屬性 (Property) 設定為 `true`。  
+    1. 如果您是使用標準繫結，請將 `NegotiateServiceCredential` 屬性 (Property) 設定為 `true`。  
   
-    2.  如果您是使用自訂繫結，請將 `AuthenticationMode` 項目的 `Security` 屬性 (Attribute) 設定為 `SspiNegotiated`。  
+    2. 如果您是使用自訂繫結，請將 `AuthenticationMode` 項目的 `Security` 屬性 (Attribute) 設定為 `SspiNegotiated`。  
   
 3. 透過拒絕使用 NTLM 來要求 SSPI 交涉使用 Kerberos：  
   
-    1.  在程式碼中使用下列陳述式來做到這點：`ChannelFactory.Credentials.Windows.AllowNtlm = false`  
+    1. 在程式碼中使用下列陳述式來做到這點：`ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
-    2.  或者，您可以將組態檔中的 `allowNtlm` 屬性設定為 `false` 來做到這點。 此屬性包含在[ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)。  
+    2. 或者，您可以將組態檔中的 `allowNtlm` 屬性設定為 `false` 來做到這點。 此屬性包含在[ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)。  
   
 ### <a name="ntlm-protocol"></a>NTLM 通訊協定  
   

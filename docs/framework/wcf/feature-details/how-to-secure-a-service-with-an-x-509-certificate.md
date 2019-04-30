@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
 ms.openlocfilehash: 75c7a0e50301ce80d51b9b2a10ed650a1600ec79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047733"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>HOW TO：使用 X.509 憑證來確保服務安全
 保護使用 X.509 憑證的服務是大部分繫結 Windows Communication Foundation (WCF) 中使用的基本技術。 此主題會介紹使用 X.509 憑證設定自我主控服務的步驟。  
@@ -70,17 +70,17 @@ ms.locfileid: "59300082"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  要編譯程式碼時，必須有下列命名空間：  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.ServiceModel.Channels>  
+- <xref:System.ServiceModel.Channels>  
   
--   <xref:System.Web.Services.Description>  
+- <xref:System.Web.Services.Description>  
   
--   <xref:System.Security.Cryptography.X509Certificates>  
+- <xref:System.Security.Cryptography.X509Certificates>  
   
--   <xref:System.Runtime.Serialization>  
+- <xref:System.Runtime.Serialization>  
   
 ## <a name="see-also"></a>另請參閱
 

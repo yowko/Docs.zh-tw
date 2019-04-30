@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
 ms.openlocfilehash: aaf2caff1e2684e08c7eb65125536f1070203d70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020851"
 ---
 # <a name="how-to-implement-prioritybinding"></a>HOW TO：實作 PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> 在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的運作方式是指定繫結的清單。 繫結清單的順序是從最高優先順序到最低優先順序。 如果最高的優先權繫結傳回值已成功處理時就永遠不需要處理清單中的其他繫結。 它可能是最高的優先權繫結需要很長的時間，要評估的情況下，優先順序較高的繫結成功地傳回值之前，都會使用下一個最高優先順序成功地傳回值。  

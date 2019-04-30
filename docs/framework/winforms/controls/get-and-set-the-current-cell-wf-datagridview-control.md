@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cells [Windows Forms], getting and setting current
 ms.assetid: b0e41e57-493a-4bd0-9376-a6f76723540c
 ms.openlocfilehash: fb71a6e3259d3007e11f528377c95a9c4cbeb023
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971323"
 ---
 # <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>HOW TO：在 Windows Forms DataGridView 控制項中取得和設定目前的儲存格
 互動<xref:System.Windows.Forms.DataGridView>通常會要求您以程式設計方式探索哪些儲存格是目前作用中。 此外，您可能也需要變更目前的儲存格。 您可以執行這些工作與<xref:System.Windows.Forms.DataGridView.CurrentCell%2A>屬性。  
@@ -26,14 +26,14 @@ ms.locfileid: "59096975"
   
 ### <a name="to-get-the-current-cell-programmatically"></a>若要以程式設計方式取得目前的儲存格  
   
--   使用<xref:System.Windows.Forms.DataGridView>控制項的<xref:System.Windows.Forms.DataGridView.CurrentCell%2A>屬性。  
+- 使用<xref:System.Windows.Forms.DataGridView>控制項的<xref:System.Windows.Forms.DataGridView.CurrentCell%2A>屬性。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#080](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#080)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#080](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#080)]  
   
 ### <a name="to-set-the-current-cell-programmatically"></a>以程式設計方式設定目前的儲存格  
   
--   設定<xref:System.Windows.Forms.DataGridView.CurrentCell%2A>屬性<xref:System.Windows.Forms.DataGridView>控制項。 在下列程式碼範例中，目前儲存格是設定為 0，資料行 1 的資料列。  
+- 設定<xref:System.Windows.Forms.DataGridView.CurrentCell%2A>屬性<xref:System.Windows.Forms.DataGridView>控制項。 在下列程式碼範例中，目前儲存格是設定為 0，資料行 1 的資料列。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#085](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#085)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#085](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#085)]  
@@ -41,11 +41,11 @@ ms.locfileid: "59096975"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   <xref:System.Windows.Forms.Button> 名為的控制項`getCurrentCellButton`和`setCurrentCellButton`。 在視覺效果C#，您必須將附加<xref:System.Windows.Forms.Control.Click>相關聯的事件處理常式的範例程式碼中的每個按鈕的事件。  
+- <xref:System.Windows.Forms.Button> 名為的控制項`getCurrentCellButton`和`setCurrentCellButton`。 在視覺效果C#，您必須將附加<xref:System.Windows.Forms.Control.Click>相關聯的事件處理常式的範例程式碼中的每個按鈕的事件。  
   
--   名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
+- 名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
   
--   <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
+- <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
 

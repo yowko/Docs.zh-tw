@@ -3,11 +3,11 @@ title: 重新執行攻擊
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
 ms.openlocfilehash: fefcb533cedb5405736ecda70c6879ebe00b8b49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991142"
 ---
 # <a name="replay-attacks"></a>重新執行攻擊
 A*重新執行攻擊*攻擊者複製兩方之間的訊息資料流，並重新執行一個或多個合作對象的資料流時，就會發生。 除非緩解攻擊，否則受到攻擊的電腦會將資料流當成合法訊息來處理，導致發生一連串負面的影響，例如項目的重複排序。  
@@ -17,11 +17,11 @@ A*重新執行攻擊*攻擊者複製兩方之間的訊息資料流，並重新�
   
  反映攻擊的緩解預設情況下，因為 WCF 服務模型會將要求訊息中的已簽署的訊息識別碼，並預期在帶正負號`relates-to`回應訊息的標頭。 如此一來，要求訊息便無法當成回應來重新執行。 在安全訊息 (RM) 案例中，反映攻擊的緩解原因為：  
   
--   建立順序與建立順序回應訊息結構描述是不一樣的。  
+- 建立順序與建立順序回應訊息結構描述是不一樣的。  
   
--   在 Simplex 順序中，用戶端所傳送的順序訊息無法返回重新執行，因為用戶端無法理解此類訊息。  
+- 在 Simplex 順序中，用戶端所傳送的順序訊息無法返回重新執行，因為用戶端無法理解此類訊息。  
   
--   在雙工順序中，兩個順序識別碼必須是唯一的。 因此，傳出的順序訊息無法返回當成傳入順序訊息來重新執行 (所有的順序標頭與本文都會一併簽署)。  
+- 在雙工順序中，兩個順序識別碼必須是唯一的。 因此，傳出的順序訊息無法返回當成傳入順序訊息來重新執行 (所有的順序標頭與本文都會一併簽署)。  
   
  唯一會受到反映攻擊影響的繫結就是不含 WS-Addressing 的繫結：已經停用 WS-Addressing 並使用對稱式金鑰安全性的自訂繫結。 <xref:System.ServiceModel.BasicHttpBinding> 依預設不會使用 WS-Addressing，但是它在使用對稱式金鑰安全性時，不會讓本身受到此攻擊的影響。  
   
@@ -32,9 +32,9 @@ A*重新執行攻擊*攻擊者複製兩方之間的訊息資料流，並重新�
   
  風險降低的方式包括：  
   
--   使用訊息模式安全性搭配具狀態的安全性內容權杖 (包含或不包含啟用的安全對話)。 如需詳細資訊，請參閱[如何：建立安全性內容權杖的安全工作階段](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
+- 使用訊息模式安全性搭配具狀態的安全性內容權杖 (包含或不包含啟用的安全對話)。 如需詳細資訊，請參閱[如何：建立安全性內容權杖的安全工作階段](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
--   設定服務使用傳輸層級安全性。  
+- 設定服務使用傳輸層級安全性。  
   
 ## <a name="see-also"></a>另請參閱
 

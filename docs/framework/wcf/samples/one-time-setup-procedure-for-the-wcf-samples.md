@@ -3,11 +3,11 @@ title: Windows Communication Foundation 範例的單次安裝程序
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
 ms.openlocfilehash: 2b9d84089cdd987f2e2b1e3d23354505520a80f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052101"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 範例的單次安裝程序
 大部分的 Windows Communication Foundation (WCF) 範例是裝載在網際網路資訊服務 (IIS)，然後執行常見的虛擬目錄中。 這個單次安裝程序會建立磁碟; 上的資料夾它也將虛擬目錄加入至名為 IIS **ServiceModelSamples**。
@@ -48,9 +48,9 @@ ms.locfileid: "59773047"
   
 9. 執行**Setupvroot.bat**批次檔。 系統會執行下列步驟：  
   
-    -   在 IIS 中建立名為 ServiceModelSamples 的虛擬目錄。  
+    - 在 IIS 中建立名為 ServiceModelSamples 的虛擬目錄。  
   
-    -   建立名為 %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples 和 %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin 的新磁碟目錄。  
+    - 建立名為 %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples 和 %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin 的新磁碟目錄。  
   
      如果您想要以手動方式設定這些目錄，請參閱[虛擬目錄安裝指示](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md)。 若要還原此步驟中完成的所有變更，請在範例使用完畢之後執行 cleanupvroot.bat。  
   
@@ -66,11 +66,11 @@ ms.locfileid: "59773047"
 
 12. 執行 Setupcerttool.bat 檔案。 此檔案位於\<InstallPath > \WF_WCF_Samples\WCF\Setup\ 資料夾。  這個指令碼會執行下列工作：
 
-    -   建立 FindPrivateKey 工具。
+    - 建立 FindPrivateKey 工具。
 
-    -   建立名為 %ProgramFiles%\ServiceModelSampleTools 的目錄。
+    - 建立名為 %ProgramFiles%\ServiceModelSampleTools 的目錄。
 
-    -   將新的 FindPrivateKey 工具複製到此目錄。
+    - 將新的 FindPrivateKey 工具複製到此目錄。
 
      使用憑證且裝載在 IIS 中的範例需要這項工具。
 

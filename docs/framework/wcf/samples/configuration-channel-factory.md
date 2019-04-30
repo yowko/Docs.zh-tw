@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
 ms.openlocfilehash: 5bee4c7cc2c2e64c6e0d8d0ec2634f9500cd9d51
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002299"
 ---
 # <a name="configuration-channel-factory"></a>組態通道處理站
 此範例涵蓋 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> 的使用方法。 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>允許從中央管理 WCF 用戶端組態。 如果在應用程式網域載入時間之後選取或變更組態，這可能也相當實用。

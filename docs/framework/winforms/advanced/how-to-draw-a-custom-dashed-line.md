@@ -10,11 +10,11 @@ helpviewer_keywords:
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
 ms.openlocfilehash: 8dc1ad41cf8067bea5b811ca126ad29f5a600f69
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004353"
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>HOW TO：繪製自訂虛線
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供數個虛線樣式中所列<xref:System.Drawing.Drawing2D.DashStyle>列舉型別。 如果這些標準的虛線樣式不符合您的需求，您可以建立自訂虛線圖樣。  

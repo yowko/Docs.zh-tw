@@ -6,20 +6,20 @@ dev_langs:
 - vb
 ms.assetid: 24e335b0-984e-4825-8721-0a91b533b7c3
 ms.openlocfilehash: 2f66b996a0e688205d61f5fca476c0335616ee38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032938"
 ---
 # <a name="compute-the-sum-of-values-in-a-numeric-sequence"></a>如何：計算數值序列中各值的總和
 使用 <xref:System.Linq.Enumerable.Sum%2A> 運算子，可以計算序列中的數值總和。  
   
  請注意，`Sum` 中的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 運算子有下列特性：  
   
--   標準查詢運算子的彙總 (Aggregate) 運算子 `Sum` 會將空序列或只包含 null 的序列評估為零。 在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，SQL 的語意 (Semantics) 則不變。 因此，`Sum` 會將空序列或只包含 null 的序列評估為 null，而不是零。  
+- 標準查詢運算子的彙總 (Aggregate) 運算子 `Sum` 會將空序列或只包含 null 的序列評估為零。 在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，SQL 的語意 (Semantics) 則不變。 因此，`Sum` 會將空序列或只包含 null 的序列評估為 null，而不是零。  
   
--   SQL 對中繼結果的限制會套用至 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的彙總。 32 位元整數量的總和不計算使用 64 位元的結果，並可能會發生溢位[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]翻譯`Sum`。 即使標準查詢運算子的實作未使對應的記憶體中序列發生溢位，這個可能性還是存在。  
+- SQL 對中繼結果的限制會套用至 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的彙總。 32 位元整數量的總和不計算使用 64 位元的結果，並可能會發生溢位[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]翻譯`Sum`。 即使標準查詢運算子的實作未使對應的記憶體中序列發生溢位，這個可能性還是存在。  
   
 ## <a name="example"></a>範例  
  下列範例會找出 `Order` 資料表中所有訂單的總運費。  

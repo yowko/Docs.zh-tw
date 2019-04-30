@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
 ms.openlocfilehash: 68890a5d86d2781e3c8079c86e941144e3796ea6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972662"
 ---
 # <a name="importing-schema-to-generate-classes"></a>匯入結構描述以產生類別
 若要從可與 Windows Communication Foundation (WCF) 的結構描述產生類別，使用<xref:System.Runtime.Serialization.XsdDataContractImporter>類別。 這個主題將說明處理程序和變化。  
@@ -148,13 +148,13 @@ ms.locfileid: "59228584"
   
 ##### <a name="design-considerations"></a>設計考量  
   
--   直接使用較弱型別的 XML 表示法可能會很困難。 請考慮使用另一種序列化引擎 (例如 <xref:System.Xml.Serialization.XmlSerializer>) 以強型別方式來使用與資料合約不相容的結構描述。 如需詳細資訊，請參閱 <<c0> [ 使用 XmlSerializer 類別](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。  
+- 直接使用較弱型別的 XML 表示法可能會很困難。 請考慮使用另一種序列化引擎 (例如 <xref:System.Xml.Serialization.XmlSerializer>) 以強型別方式來使用與資料合約不相容的結構描述。 如需詳細資訊，請參閱 <<c0> [ 使用 XmlSerializer 類別](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。  
   
--   即使 <xref:System.Runtime.Serialization.XsdDataContractImporter> 屬性設定為 <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>，有些結構描述建構仍然無法由 `true` 匯入。 請再次考慮針對此類案例使用 <xref:System.Xml.Serialization.XmlSerializer>。  
+- 即使 <xref:System.Runtime.Serialization.XsdDataContractImporter> 屬性設定為 <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>，有些結構描述建構仍然無法由 `true` 匯入。 請再次考慮針對此類案例使用 <xref:System.Xml.Serialization.XmlSerializer>。  
   
--   確切的結構描述建構將會同時支援時<xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>是`true`或是`false`所述[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
+- 確切的結構描述建構將會同時支援時<xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>是`true`或是`false`所述[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
   
--   所產生的 <xref:System.Xml.Serialization.IXmlSerializable> 型別的結構描述在匯入和匯出時不會保留逼真度。 也就是說，從產生的型別匯出結構描述然後匯入做為類別並不會傳回原始的結構描述。  
+- 所產生的 <xref:System.Xml.Serialization.IXmlSerializable> 型別的結構描述在匯入和匯出時不會保留逼真度。 也就是說，從產生的型別匯出結構描述然後匯入做為類別並不會傳回原始的結構描述。  
   
  您或許可以結合 <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> 選項與之前所述的 <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> 選項。 對於必須產生做為 <xref:System.Xml.Serialization.IXmlSerializable> 實作的型別，會在使用 <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> 功能時跳過結構檢查。  
   
@@ -175,9 +175,9 @@ ms.locfileid: "59228584"
 #### <a name="import-options-advanced-options"></a>匯入選項：進階選項  
  以下是進階匯入選項：  
   
--   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> 屬性。 請指定 <xref:System.CodeDom.Compiler.CodeDomProvider>，用於為所產生的類別產生程式碼。 匯入機制會嘗試避免 <xref:System.CodeDom.Compiler.CodeDomProvider> 不支援的功能。 如果沒有設定 <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>，使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的完整功能便沒有限制。  
+- <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> 屬性。 請指定 <xref:System.CodeDom.Compiler.CodeDomProvider>，用於為所產生的類別產生程式碼。 匯入機制會嘗試避免 <xref:System.CodeDom.Compiler.CodeDomProvider> 不支援的功能。 如果沒有設定 <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>，使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的完整功能便沒有限制。  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 屬性。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 實作可以使用這個屬性來指定。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 會自訂匯入處理程序。 如需詳細資訊，請參閱 <<c0> [ 資料合約代理](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 根據預設，不會使用 Surrogate。  
+- <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 屬性。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 實作可以使用這個屬性來指定。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 會自訂匯入處理程序。 如需詳細資訊，請參閱 <<c0> [ 資料合約代理](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 根據預設，不會使用 Surrogate。  
   
 ## <a name="see-also"></a>另請參閱
 

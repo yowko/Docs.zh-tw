@@ -3,11 +3,11 @@ title: 聯合範例
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
 ms.openlocfilehash: bc2c28300d9bfc3c30388f8d13e05a23a9f37287
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051906"
 ---
 # <a name="federation-sample"></a>聯合範例
 這個範例將示範聯合安全性。  
@@ -17,13 +17,13 @@ ms.locfileid: "59769914"
   
  本案例由 4 個部分組成：  
   
--   BookStore 服務  
+- BookStore 服務  
   
--   BookStore STS  
+- BookStore STS  
   
--   HomeRealm STS  
+- HomeRealm STS  
   
--   BookStore 用戶端  
+- BookStore 用戶端  
   
  BookStore 服務支援兩項作業：`BrowseBooks` 和 `BuyBook`。 它允許匿名存取 `BrowseBooks` 作業，但是要求必須有通過驗證的存取權才能存取 `BuyBooks` 作業。 驗證的形式採用 BookStore STS 所發行的權杖。 BookStore 服務的組態檔會使用 `wsFederationHttpBinding`，將用戶端指向 BookStore STS。  
   

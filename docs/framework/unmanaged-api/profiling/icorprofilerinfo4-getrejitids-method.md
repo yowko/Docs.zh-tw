@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9d2d48e5fb070ec0334de579d2e28146177a87b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049475"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs 方法
 傳回識別 JIT 重新編譯的所有版本指定的函式仍配置的識別碼陣列。 這包括已後續還原，但尚未釋放 （比方說，當應用程式定義域，其中包含已還原的函式是仍在使用中） 的函式的 JIT 重新編譯版本。  

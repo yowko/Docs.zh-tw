@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], displaying images in cells
 ms.assetid: 53b13d31-1b56-476d-9ab4-18bfac138a22
 ms.openlocfilehash: 90aaff419ecc2c890a8b3802f3aaf12092febb73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013396"
 ---
 # <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>HOW TO：在 Windows Forms DataGridView 控制項的儲存格中顯示影像
 圖片或圖形是其中一個值，您可以將資料列中顯示。 通常，這些圖形的形式是員工的照片或公司標誌。  
@@ -33,11 +33,11 @@ ms.locfileid: "59082991"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
+- 名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
   
--   名為內嵌的圖示資源`tree.ico`。  
+- 名為內嵌的圖示資源`tree.ico`。  
   
--   <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType> 和 <xref:System.Drawing?displayProperty=nameWithType> 組件的參考。  
+- <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType> 和 <xref:System.Drawing?displayProperty=nameWithType> 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
 

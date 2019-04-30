@@ -7,11 +7,11 @@ helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
 ms.openlocfilehash: 4dbe2e8257bfc92f354d032d7bb6e2ba7a693075
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052426"
 ---
 # <a name="documents"></a>文件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供一組多功能的元件，可讓開發人員透過進階的文件功能和改良的閱讀經驗來建置應用程式。 除了增強功能和品質，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 也針對文件封裝、安全性和儲存提供簡化的管理服務。  

@@ -3,11 +3,11 @@ title: 安全性驗證
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
 ms.openlocfilehash: 1ad52431d68af847d7c26a0a3bd42dbcb3ce51c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007938"
 ---
 # <a name="security-validation"></a>安全性驗證
 這個範例示範如何使用自訂行為驗證電腦上的服務，以確定服務符合特定條件。 在這個範例中，服務會經過驗證，其方式是自訂行為掃描服務上的每個端點，並檢查這些端點是否包含安全繫結項目。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  

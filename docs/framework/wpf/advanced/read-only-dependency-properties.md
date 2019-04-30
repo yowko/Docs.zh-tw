@@ -6,11 +6,11 @@ helpviewer_keywords:
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
 ms.openlocfilehash: 45385e3e3eb8e756008a0d9ef560e061f9a31964
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053518"
 ---
 # <a name="read-only-dependency-properties"></a>唯讀相依性屬性
 本主題說明唯讀相依性屬性，包括現有的唯讀相依性屬性，以及用於建立自訂唯讀相依性屬性的案例和技術。  
@@ -31,11 +31,11 @@ ms.locfileid: "59162419"
   
  在建立唯讀相依性屬性的處理序中，許多部分與[自訂相依性屬性](custom-dependency-properties.md)和[實作相依性屬性](how-to-implement-a-dependency-property.md)主題中所述的相同。 有三個重大差異：  
   
--   當註冊您的屬性，呼叫<xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>方法，而非標準<xref:System.Windows.DependencyProperty.Register%2A>屬性註冊的方法。  
+- 當註冊您的屬性，呼叫<xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>方法，而非標準<xref:System.Windows.DependencyProperty.Register%2A>屬性註冊的方法。  
   
--   實作 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]「包裝函式」屬性，請確定包裝函式還沒有 set 實作，如此一來，就不會在您所公開之公用包裝函式的唯讀狀態中產生不一致的情況。  
+- 實作 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]「包裝函式」屬性，請確定包裝函式還沒有 set 實作，如此一來，就不會在您所公開之公用包裝函式的唯讀狀態中產生不一致的情況。  
   
--   唯讀註冊所傳回的物件是<xref:System.Windows.DependencyPropertyKey>而非<xref:System.Windows.DependencyProperty>。 您仍應將此欄位儲存為成員，但通常不需讓它成為類型的公用成員。  
+- 唯讀註冊所傳回的物件是<xref:System.Windows.DependencyPropertyKey>而非<xref:System.Windows.DependencyProperty>。 您仍應將此欄位儲存為成員，但通常不需讓它成為類型的公用成員。  
   
  不論您必須支援的私用欄位或值為何，當然都能使用您決定的任何邏輯完整寫入您的唯讀相依性屬性。 不過，設定屬性 (不論是一開始就設定或設為執行階段邏輯一部分) 的最簡單方式是使用屬性系統的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，而不是規避屬性系統來直接設定私用支援欄位。 特別是，沒有簽章<xref:System.Windows.DependencyObject.SetValue%2A>它會接受類型參數的<xref:System.Windows.DependencyPropertyKey>。 方式和位置您設定此值以程式設計方式在應用程式邏輯，會影響您可能想要如何設定存取<xref:System.Windows.DependencyPropertyKey>您第一次註冊相依性屬性時所建立。 如果您全都在類別內處理此邏輯，您可能會讓它成為私用，或者如果您需要從組件的其他部分設定它，則可能會將它設為內部。 其中一個方法是呼叫<xref:System.Windows.DependencyObject.SetValue%2A>相關的事件，以通知類別執行個體的預存的屬性值變更時所需的類別事件處理常式內。 另一種方法是將相依性屬性在一起的繫結使用配對<xref:System.Windows.PropertyChangedCallback>和<xref:System.Windows.CoerceValueCallback>回呼，註冊期間的那些屬性中繼資料的一部分。  
   

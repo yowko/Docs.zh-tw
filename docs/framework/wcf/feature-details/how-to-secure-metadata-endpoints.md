@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
 ms.openlocfilehash: 8481048dd31652a69f9284a44145bd4abfed89bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047564"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>HOW TO：保護中繼資料端點的安全
 服務的中繼資料可能包含有關應用程式而可能會遭到惡意使用者利用的敏感資訊。 服務的取用者也可能會要求安全機制來取得關於服務的中繼資料。 因此，有時候會需要使用安全端點來發行中繼資料。  
@@ -88,9 +88,9 @@ ms.locfileid: "59307518"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  此程式碼範例會使用下列命名空間 (Namespace)：  
   
--   <xref:System.ServiceModel?displayProperty=nameWithType>  
+- <xref:System.ServiceModel?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>另請參閱
 

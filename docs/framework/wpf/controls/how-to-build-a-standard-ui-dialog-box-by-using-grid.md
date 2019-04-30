@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
 ms.openlocfilehash: 0ade908e92e552017acb9ba242ccba2c28c3c995
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051048"
 ---
 # <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>HOW TO：使用 Grid 建置標準 UI 對話方塊
 此範例示範如何建立標準[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]對話方塊中，使用<xref:System.Windows.Controls.Grid>項目。  

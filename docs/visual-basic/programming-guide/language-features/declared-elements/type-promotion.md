@@ -11,11 +11,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
 ms.openlocfilehash: f7ac6bfb944da8bd50e035ba97b2b513176dc661
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973299"
 ---
 # <a name="type-promotion-visual-basic"></a>類型提升 (Visual Basic)
 當您宣告的模組中的程式設計項目時，Visual Basic 升級其範圍包含模組的命名空間。 這就所謂*類型提升*。  
@@ -54,9 +54,9 @@ ms.locfileid: "58838868"
 ## <a name="recommendations"></a>建議  
  下列建議代表良好的程式設計作法。  
   
--   **唯一的名稱。** 當您擁有完整控制權的程式設計項目命名時，一律是個不錯的主意，到處都使用唯一的名稱。 相同的名稱需要額外的限定性條件，而且可以讓您的程式碼更難讀取。 它們也可能會導致難以察覺的錯誤和非預期的結果。  
+- **唯一的名稱。** 當您擁有完整控制權的程式設計項目命名時，一律是個不錯的主意，到處都使用唯一的名稱。 相同的名稱需要額外的限定性條件，而且可以讓您的程式碼更難讀取。 它們也可能會導致難以察覺的錯誤和非預期的結果。  
   
--   **完整的限定性條件。** 當您使用的模組和相同的命名空間中的其他項目時，最安全的方法就是一律使用完整限定性條件，針對所有的程式設計項目。 如果型別提升將無效的模組成員，而且您未完整限定該成員，您可能不小心存取不同的程式設計項目。  
+- **完整的限定性條件。** 當您使用的模組和相同的命名空間中的其他項目時，最安全的方法就是一律使用完整限定性條件，針對所有的程式設計項目。 如果型別提升將無效的模組成員，而且您未完整限定該成員，您可能不小心存取不同的程式設計項目。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -3,11 +3,11 @@ title: 使用 Windows Management Instrumentation 進行診斷
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
 ms.openlocfilehash: 9acb1b280248f8552680ea3fbba831b3de53b2c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048275"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 進行診斷
 Windows Communication Foundation (WCF) 公開服務，以在透過 WCF Windows Management Instrumentation (WMI) 提供者的執行階段檢查的資料。  
@@ -112,13 +112,13 @@ Windows Communication Foundation (WCF) 公開服務，以在透過 WCF Windows M
   
      此 PowerShell 指令碼使用 Security Descriptor Definition Language (SDDL) 授與內建的使用者群組存取"root/servicemodel"WMI 命名空間。 它指定下列 ACL：  
   
-    -   內建系統管理員 (BA) - 已經有存取權。  
+    - 內建系統管理員 (BA) - 已經有存取權。  
   
-    -   網路服務 (NS) - 已經有存取權。  
+    - 網路服務 (NS) - 已經有存取權。  
   
-    -   本機系統 (LS) - 已經有存取權。  
+    - 本機系統 (LS) - 已經有存取權。  
   
-    -   內建使用者 - 要授與存取權的目標群組。  
+    - 內建使用者 - 要授與存取權的目標群組。  
   
 #### <a name="to-grant-provider-registration-access"></a>若要授與提供者註冊存取  
   

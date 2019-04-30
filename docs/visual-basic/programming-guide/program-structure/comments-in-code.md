@@ -15,11 +15,11 @@ helpviewer_keywords:
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
 ms.openlocfilehash: a8094397ff2a076cf474d735e65298b3d2f0a9cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050532"
 ---
 # <a name="comments-in-code-visual-basic"></a>程式碼中的註解 (Visual Basic)
 當您閱讀程式碼範例時，常會遇到註解符號 (`'`)。 這個符號會告知 Visual Basic 編譯器忽略它後面的文字或*註解*。 註解是為了閱讀者方便而加入至程式碼的簡短說明。  
@@ -48,11 +48,11 @@ ms.locfileid: "59343008"
   
  請記住以下要點：  
   
--   每個重要的變數宣告之前都應該有註解，此註解會描述所宣告之變數的用途。  
+- 每個重要的變數宣告之前都應該有註解，此註解會描述所宣告之變數的用途。  
   
--   變數、控制項和程序應該清楚命名，讓註解只需用於複雜的實作細節中。  
+- 變數、控制項和程序應該清楚命名，讓註解只需用於複雜的實作細節中。  
   
--   註解不可以跟隨在同一行的行接續序列之後。  
+- 註解不可以跟隨在同一行的行接續序列之後。  
   
  您可以新增或移除程式碼區塊的註解符號，選取一或多個行程式碼，然後選擇**註解**(![在 Visual Studio 中的 [Visual Basic 註解] 按鈕](./media/comments-in-code/visual-basic-comment-button.gif)) 和**取消註解** (![Visual Studio 中的 Visual Basic 取消註解按鈕](./media/comments-in-code/visual-basic-uncomment-button.gif)) 按鈕**編輯**工具列。  
   

@@ -13,11 +13,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b46c74ec0bfc1fc44bcaca07439c472b0fd8393f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946438"
 ---
 # <a name="icordebugilframe3-interface"></a>ICorDebugILFrame3 介面
 提供封裝函式傳回值的方法。 `ICorDebugILFrame3` 是的 ICorDebugILFrame 和 ICorDebugILFrame2 介面的邏輯擴充。  

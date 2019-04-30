@@ -5,11 +5,11 @@ helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
 ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050710"
 ---
 # <a name="transport-quotas"></a>傳輸配額
 傳輸配額是用來判斷連線何時過度使用資源的原則機制。 配額是硬性限制，一旦超出配額值，就會無法使用其他資源。 傳輸配額能夠防範惡意或無意間發生的阻絕服務攻擊。  
@@ -19,11 +19,11 @@ ms.locfileid: "59773259"
 ## <a name="types-of-transport-quotas"></a>傳輸配額的類型  
  WCF 傳輸有三種配額類型：  
   
--   *逾時*降低阻絕服務攻擊依賴佔用資源一段時間。  
+- *逾時*降低阻絕服務攻擊依賴佔用資源一段時間。  
   
--   *記憶體配置限制*防止單一連線用盡系統記憶體和拒絕服務其他連線。  
+- *記憶體配置限制*防止單一連線用盡系統記憶體和拒絕服務其他連線。  
   
--   *限制集合大小*繫結的間接配置記憶體或有限供應資源耗用量。  
+- *限制集合大小*繫結的間接配置記憶體或有限供應資源耗用量。  
   
 ## <a name="transport-quota-descriptions"></a>傳輸配額描述  
  本節說明適用於標準 WCF 傳輸的傳輸配額：HTTP (S)、 TCP/IP 和具名的管道。 自訂傳輸會公開未包含在下列清單的可設定配額。 如需自訂傳輸配額的詳細資訊，請參閱自訂傳輸的相關文件。  

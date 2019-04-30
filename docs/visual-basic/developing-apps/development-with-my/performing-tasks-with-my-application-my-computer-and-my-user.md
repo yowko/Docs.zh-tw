@@ -10,11 +10,11 @@ helpviewer_keywords:
 - My.User object [Visual Basic], developing applications
 ms.assetid: c8af61bd-4dd3-4a0f-9af5-795b594b240b
 ms.openlocfilehash: 0372fbf63f6d12e266674f92225183911aa4ca30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014124"
 ---
 # <a name="performing-tasks-with-myapplication-mycomputer-and-myuser-visual-basic"></a>使用 My.Application、My.Computer 和 My.User 執行工作 (Visual Basic)
 三種中央`My`提供使用功能的存取權對資訊和常用的物件`My.Application`(<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>)， `My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)，以及`My.User`(<xref:Microsoft.VisualBasic.ApplicationServices.User>)。 您可以使用這些物件分別存取與目前的應用程式、，安裝應用程式的電腦或目前使用者的應用程式時，相關的資訊。  

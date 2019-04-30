@@ -16,11 +16,11 @@ helpviewer_keywords:
 - forms [Windows Forms], drawing ellipses
 ms.assetid: 781db806-950d-4c5b-b022-493f7fd0c4a8
 ms.openlocfilehash: 2e7be3f2c4c710bb24568dd2e70f6f5cc4706c63
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004311"
 ---
 # <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>HOW TO：在 Windows Form 上繪製實心橢圓形
 此範例會在表單上繪製實心的橢圓形。  

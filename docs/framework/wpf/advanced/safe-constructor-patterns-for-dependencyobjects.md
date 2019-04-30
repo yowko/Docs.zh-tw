@@ -7,11 +7,11 @@ helpviewer_keywords:
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
 ms.openlocfilehash: ba8b0a48b2b75a9191553392d5ec0a1f66575807
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053505"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObject 的安全建構函式模式
 一般而言，類別建構函式不應該呼叫回呼 (例如，虛擬方法或委派)，因為建構函式可以當成衍生類別之建構函式的基底初始化來呼叫。 進入虛擬項目，可能是在任何指定物件的未完成初始化狀態中完成的。 不過，屬性系統本身會在內部呼叫並公開回呼，以做為相依性屬性系統的一部分。 使用相依性屬性值設定為簡單作業<xref:System.Windows.DependencyObject.SetValue%2A>呼叫可能會包含回呼某處中決定。 基於這個理由，在建構函式的主體內設定相依性屬性值時應特別小心，如果您的類型是用來做為基底類別，這可能就會發生問題。 沒有實作的特定模式<xref:System.Windows.DependencyObject>可避免與相依性屬性狀態和繼承回呼中，特定的問題所記載的建構函式。  

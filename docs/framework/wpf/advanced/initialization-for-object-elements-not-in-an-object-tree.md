@@ -11,11 +11,11 @@ helpviewer_keywords:
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
 ms.openlocfilehash: 6f3c8611b83977431038573eb1c5c880acbefdc4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001464"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>初始化物件樹狀結構以外的物件項目
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 初始化的某些層面會延後處理，因為這些處理通常需要將該項目連接到邏輯樹狀結構或視覺化樹狀結構。 本主題說明為了初始化未連接到任一樹狀結構的項目所需的步驟。  

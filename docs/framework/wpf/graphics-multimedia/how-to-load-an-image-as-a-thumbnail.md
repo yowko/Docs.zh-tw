@@ -10,11 +10,11 @@ helpviewer_keywords:
 - thumbnails [WPF], loading images as
 ms.assetid: 02e055a0-54df-499a-b8b6-ab6ff7535cff
 ms.openlocfilehash: f984293a395e925368b20cef6aa0cd902bd6fc15
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003180"
 ---
 # <a name="how-to-load-an-image-as-a-thumbnail"></a>HOW TO：將影像作為縮圖載入
 下列範例示範如何載入<xref:System.Windows.Controls.Image>當做縮圖以節省記憶體的應用程式。  

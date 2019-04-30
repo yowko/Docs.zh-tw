@@ -8,11 +8,11 @@ helpviewer_keywords:
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
 ms.openlocfilehash: 74055ec3facb7db9145c4c0e969d57da24eccbc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053414"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>在 Win32 和 WPF 之間共用訊息迴圈
 本主題描述如何實作與互通訊息迴圈[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，藉由使用現有的訊息迴圈中的曝光度<xref:System.Windows.Threading.Dispatcher>或建立個別的訊息迴圈上[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]這邊的交互操作的程式碼。  
@@ -29,26 +29,26 @@ ms.locfileid: "59115072"
 ## <a name="writing-message-loops"></a>撰寫訊息迴圈  
  以下是一份<xref:System.Windows.Interop.ComponentDispatcher>撰寫您自己的訊息迴圈時，您將使用的成員：  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>： 您的訊息迴圈應該呼叫此選項表示執行緒為強制回應。  
+- <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>： 您的訊息迴圈應該呼叫此選項表示執行緒為強制回應。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>： 您的訊息迴圈應該呼叫此選項表示執行緒已還原成 nonmodal。  
+- <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>： 您的訊息迴圈應該呼叫此選項表示執行緒已還原成 nonmodal。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>： 您的訊息迴圈呼叫這個方法以指出<xref:System.Windows.Interop.ComponentDispatcher>應該引發<xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>事件。 <xref:System.Windows.Interop.ComponentDispatcher> 將不會引發<xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>如果<xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>是`true`，但訊息迴圈可以選擇呼叫<xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>即使<xref:System.Windows.Interop.ComponentDispatcher>處於強制回應的狀態而無法回應。  
+- <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>： 您的訊息迴圈呼叫這個方法以指出<xref:System.Windows.Interop.ComponentDispatcher>應該引發<xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>事件。 <xref:System.Windows.Interop.ComponentDispatcher> 將不會引發<xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>如果<xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>是`true`，但訊息迴圈可以選擇呼叫<xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>即使<xref:System.Windows.Interop.ComponentDispatcher>處於強制回應的狀態而無法回應。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>： 訊息迴圈應該呼叫這表示有新的訊息。 傳回值，表示是否要接聽程式<xref:System.Windows.Interop.ComponentDispatcher>事件已處理該訊息。 如果<xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>傳回`true`（處理），發送器應該執行任何進一步處理訊息。 如果傳回的值是`false`，應該發送器會呼叫[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函式`TranslateMessage`，然後呼叫`DispatchMessage`。  
+- <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>： 訊息迴圈應該呼叫這表示有新的訊息。 傳回值，表示是否要接聽程式<xref:System.Windows.Interop.ComponentDispatcher>事件已處理該訊息。 如果<xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>傳回`true`（處理），發送器應該執行任何進一步處理訊息。 如果傳回的值是`false`，應該發送器會呼叫[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函式`TranslateMessage`，然後呼叫`DispatchMessage`。  
   
 ## <a name="using-componentdispatcher-and-existing-message-handling"></a>使用 ComponentDispatcher 和現有的訊息處理  
  以下是一份<xref:System.Windows.Interop.ComponentDispatcher>如果您依賴固有，您將使用的成員[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]訊息迴圈。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>： 傳回應用程式是否已進入強制回應 （例如，強制回應的訊息迴圈已推送）。 <xref:System.Windows.Interop.ComponentDispatcher> 可以追蹤此狀態，因為該類別會維護的計數<xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>和<xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>訊息迴圈的來電。  
+- <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>： 傳回應用程式是否已進入強制回應 （例如，強制回應的訊息迴圈已推送）。 <xref:System.Windows.Interop.ComponentDispatcher> 可以追蹤此狀態，因為該類別會維護的計數<xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>和<xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>訊息迴圈的來電。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> 和<xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>事件遵循標準的規則，以便委派引動過程。 未指定的順序，會叫用委派，即使第一個會將訊息標示為已處理，會叫用所有的委派。  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> 和<xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>事件遵循標準的規則，以便委派引動過程。 未指定的順序，會叫用委派，即使第一個會將訊息標示為已處理，會叫用所有的委派。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>： 指出適當且有效的時間進行閒置處理 （沒有其他暫止執行緒的訊息）。 <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> 將不會引發如果執行緒為強制回應。  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>： 指出適當且有效的時間進行閒置處理 （沒有其他暫止執行緒的訊息）。 <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> 將不會引發如果執行緒為強制回應。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>： 訊息幫浦程序的所有訊息時都引發。  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>： 訊息幫浦程序的所有訊息時都引發。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>： 期間未處理的所有訊息時都引發<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>。  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>： 期間未處理的所有訊息時都引發<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>。  
   
  訊息會被視為已處理之後，如果<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>事件或<xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>事件`handled`事件資料中的參考所傳遞的參數是`true`。 事件處理常式應忽略該訊息，如果`handled`是`true`，因為這表示不同的處理常式會先處理訊息。 這兩個事件的事件處理常式可能會修改訊息。 修改過的訊息而不原始未變更的訊息，應該分派發送器。 <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> 傳遞給所有接聽程式，但架構的目的是只包含的 HWND 處的訊息應該叫用程式碼以回應訊息的最上層視窗。  
   

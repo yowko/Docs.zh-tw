@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -codepage compiler option [Visual Basic]
 ms.assetid: be36ec33-6800-4505-838c-4124564f5cc9
 ms.openlocfilehash: fda75383435fdff718d1d50bc8583afc9858e7e2
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944699"
 ---
 # <a name="-codepage-visual-basic"></a>-codepage (Visual Basic)
 指定編譯過程中所有原始程式碼檔使用的字碼頁。  
@@ -26,7 +26,7 @@ ms.locfileid: "46562173"
   
 |詞彙|定義|  
 |---|---|  
-|`id`|必要。 編譯器會使用指定的字碼頁`id`來解譯原始程式檔的編碼方式。|  
+|`id`|必要項。 編譯器會使用指定的字碼頁`id`來解譯原始程式檔的編碼方式。|  
   
 ## <a name="remarks"></a>備註  
  若要編譯原始程式碼，以特定的編碼方式儲存，您可以使用`-codepage`指定應該使用的字碼頁。 `-codepage`選項會套用至您所編譯的所有原始程式碼檔案。 如需詳細資訊，請參閱 < [.NET Framework 中的字元編碼](../../../standard/base-types/character-encoding.md)。  

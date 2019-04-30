@@ -3,11 +3,11 @@ title: 路由服務的 Hello World
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
 ms.openlocfilehash: 37d2eaffa1ca5a4cce27c4950d00987828a61196
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006599"
 ---
 # <a name="hello-world-with-the-routing-service"></a>路由服務的 Hello World
 這個範例會示範 Windows Communication Foundation (WCF) 路由服務。 路由服務是一種 WCF 元件，可讓您更輕鬆地在您的應用程式中加入內容為基礎的路由器。 此範例會調整標準 WCF 計算機範例，以便使用路由服務進行通訊。 在此範例中，計算機用戶端設定為傳送訊息到路由器所公開的端點。 路由服務會設定為接受傳送給它的所有訊息，並將其轉送到對應於計算機服務的端點。 因此，傳送自用戶端的訊息會由路由器接收，然後再重新路由至實際的計算機服務。 來自計算機服務的訊息會傳送回路由器，接著再將其傳遞回計算機用戶端。
@@ -21,9 +21,9 @@ ms.locfileid: "59329735"
     > [!NOTE]
     >  如果按下 F5，計算機用戶端會自動啟動。 如果您按下 CTRL+SHIFT+B (建置)，則必須自行啟動下列應用程式。
     >
-    > 1.  計算機用戶端 (./CalculatorClient/bin/client.exe)
-    > 2.  計算機服務 (./CalculatorService/bin/service.exe)
-    > 3.  路由服務 (./RoutingService/bin/RoutingService.exe)
+    > 1. 計算機用戶端 (./CalculatorClient/bin/client.exe)
+    > 2. 計算機服務 (./CalculatorService/bin/service.exe)
+    > 3. 路由服務 (./RoutingService/bin/RoutingService.exe)
 
 3. 按 ENTER 鍵以啟動用戶端。
 

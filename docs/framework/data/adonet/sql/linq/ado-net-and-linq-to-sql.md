@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
 ms.openlocfilehash: 10e60ebd71c4615354c25d3a61a04e9d12d7c800
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033822"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET 和 LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 屬於[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]系列的技術。 它是以 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 提供者模型所提供的服務為基礎。 因此您可以混合[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]與現有的程式碼[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]應用程式並移轉目前[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]解決方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]。 下圖提供關聯性 (Relationship) 的高層級檢視。  

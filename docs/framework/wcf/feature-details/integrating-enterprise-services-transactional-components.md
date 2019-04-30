@@ -3,11 +3,11 @@ title: 整合 Enterprise Services 異動元件
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
 ms.openlocfilehash: 33e09eab1d7ad24dc234cfff21e352611e0b2ef9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047031"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>整合 Enterprise Services 異動元件
 Windows Communication Foundation (WCF) 提供與 Enterprise Services 整合的自動機制 (請參閱[COM + 應用程式與整合](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md))。 不過，您可能希望能夠彈性地開發出可透過內部方式使用裝載於 Enterprise Services 之異動元件的服務。 由於 WCF 交易功能建置在<xref:System.Transactions>基礎結構，與 WCF 整合 Enterprise Services 的程序等同於可用於指定之間的互通性<xref:System.Transactions>和 Enterprise Services 中所述[與 Enterprise Services 和 COM + 交易的互通性](https://go.microsoft.com/fwlink/?LinkId=94949)。  
@@ -17,9 +17,9 @@ Windows Communication Foundation (WCF) 提供與 Enterprise Services 整合的�
 ## <a name="integrating-enterprise-services-with-a-service-operation"></a>整合 Enterprise Services 和服務作業  
  下列程式碼範例會示範一項允許異動流程的作業，這項作業會建立具有 <xref:System.Transactions.TransactionScope> 選項的 <xref:System.Transactions.EnterpriseServicesInteropOption.Full>。 下列狀況適用於本案例：  
   
--   如果用戶端流動交易，則作業 (包括 Enterprise Services 元件的呼叫) 會在該交易的範圍內執行。 使用 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 會確保交易與 <xref:System.EnterpriseServices> 內容為同步處理，也就是說 <xref:System.Transactions> 的環境交易和 <xref:System.EnterpriseServices> 會是相同的。  
+- 如果用戶端流動交易，則作業 (包括 Enterprise Services 元件的呼叫) 會在該交易的範圍內執行。 使用 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 會確保交易與 <xref:System.EnterpriseServices> 內容為同步處理，也就是說 <xref:System.Transactions> 的環境交易和 <xref:System.EnterpriseServices> 會是相同的。  
   
--   如果用戶端沒有流動異動，此時將 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 設定為 `true` 便會建立供作業使用的新異動範圍。 同樣地，使用 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 可確保作業的交易與 <xref:System.EnterpriseServices> 元件內容中所使用的交易是相同的。  
+- 如果用戶端沒有流動異動，此時將 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 設定為 `true` 便會建立供作業使用的新異動範圍。 同樣地，使用 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 可確保作業的交易與 <xref:System.EnterpriseServices> 元件內容中所使用的交易是相同的。  
   
  任何其他的方法呼叫也會發生在相同作業的交易範圍內。  
   

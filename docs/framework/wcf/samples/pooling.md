@@ -3,11 +3,11 @@ title: Pooling
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
 ms.openlocfilehash: f4df661ad5d831158da55fe3890805ccc5cd695f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007964"
 ---
 # <a name="pooling"></a>Pooling
 此範例示範如何擴充 Windows Communication Foundation (WCF) 支援物件共用。 此範例會示範如何建立語法上及語意上與 Enterprise Services 的 `ObjectPoolingAttribute` 屬性功能相似的屬性。 物件共用可以大幅提升應用程式的效能。 不過，如果不當使用，可能會產生反效果。 物件共用有助於避免重複建立常用物件的煩瑣工作，這些物件往往需要大量的初始設定。 不過，如果呼叫共用物件上的方法要花費相當長的時間才能完成，而一旦到達集區的大小上限，物件共用就得將多出的要求加入佇列中。 它可能因此無法受理某個建立物件的要求，而擲回逾時例外狀況。  
@@ -24,11 +24,11 @@ ms.locfileid: "59307206"
 ## <a name="the-iinstanceprovider"></a>IInstanceProvider  
  在 WCF 中，發送器會建立使用服務類別的執行個體<xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>，它會實作<xref:System.ServiceModel.Dispatcher.IInstanceProvider>介面。 這個介面有三個方法：  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>：當訊息抵達發送器會呼叫<xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>方法用來建立服務類別，來處理訊息的執行個體。 呼叫此方法的頻率是由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性決定。 例如，如果 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性設定為 <xref:System.ServiceModel.InstanceContextMode.PerCall>，則會建立服務類別的執行個體來處理送達的每個訊息，所以只要訊息一送達就會呼叫 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>。  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>：當訊息抵達發送器會呼叫<xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>方法用來建立服務類別，來處理訊息的執行個體。 呼叫此方法的頻率是由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性決定。 例如，如果 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性設定為 <xref:System.ServiceModel.InstanceContextMode.PerCall>，則會建立服務類別的執行個體來處理送達的每個訊息，所以只要訊息一送達就會呼叫 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>。  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%29>：這等同於前一個的方法，但這在沒有 Message 引數時叫用。  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%29>：這等同於前一個的方法，但這在沒有 Message 引數時叫用。  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>：當服務執行個體的存留期已過，發送器會呼叫<xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>方法。 就和 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> 方法一樣，呼叫這個方法的頻率是由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性決定。  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>：當服務執行個體的存留期已過，發送器會呼叫<xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>方法。 就和 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> 方法一樣，呼叫這個方法的頻率是由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性決定。  
   
 ## <a name="the-object-pool"></a>物件集區  
  自訂的 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 實作會為服務提供必要的物件共用語意 (Semantics)。 因此，這個範例具有 `ObjectPoolingInstanceProvider` 型別，可以提供進行共用所需之 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 的自訂實作。 當 `Dispatcher` 呼叫 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> 方法，而不是建立新執行個體時，自訂實作會在記憶體中集區尋找現有物件。 如果找到了，就會將物件傳回。 否則，會建立新的物件。 下列範例程式碼會示範 `GetInstance` 實作。  
@@ -85,27 +85,27 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
 ## <a name="adding-the-behavior"></a>新增行為  
  您可以使用下列行為來連結發送器層延伸：  
   
--   服務行為。 這些行為允許自訂整個服務執行階段。  
+- 服務行為。 這些行為允許自訂整個服務執行階段。  
   
--   端點行為。 這些行為允許自訂服務端點，也就是通道和端點發送器。  
+- 端點行為。 這些行為允許自訂服務端點，也就是通道和端點發送器。  
   
--   合約行為。 這些行為允許分別在用戶端和服務上自訂 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 和 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 類別。  
+- 合約行為。 這些行為允許分別在用戶端和服務上自訂 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 和 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 類別。  
   
  若要做為物件共用延伸之用，您必須建立服務行為。 服務行為是藉由實作 <xref:System.ServiceModel.Description.IServiceBehavior> 介面來建立。 有一些方法可以讓服務模型察覺自訂行為：  
   
--   使用自訂屬性。  
+- 使用自訂屬性。  
   
--   以命令方式將它加入至服務描述的行為集合。  
+- 以命令方式將它加入至服務描述的行為集合。  
   
--   延伸組態檔。  
+- 延伸組態檔。  
   
  這個範例會使用自訂屬性。 建構 <xref:System.ServiceModel.ServiceHost> 時，它會檢查服務型別定義中使用的屬性，然後將可用的行為加入至服務描述的行為集合。  
   
  <xref:System.ServiceModel.Description.IServiceBehavior> 介面中有三個方法：<xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>、<xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 和 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>。 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> 方法是用來確保行為可以套用至服務。 在這個範例中，此實作會確認服務不是透過 <xref:System.ServiceModel.InstanceContextMode.Single> 所設定。 <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 方法是用來設定服務的繫結。 這在本案例中不是必要項。 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> 是用來設定服務的發送器。 WCF 會呼叫此方法時<xref:System.ServiceModel.ServiceHost>正在初始化。 傳遞至這個方法中的參數如下：  
   
--   `Description`：此引數會提供整個服務的服務描述。 這可以用來檢查有關服務之端點、合約、繫結程序及其他資料的描述資料。  
+- `Description`：此引數會提供整個服務的服務描述。 這可以用來檢查有關服務之端點、合約、繫結程序及其他資料的描述資料。  
   
--   `ServiceHostBase`：這個引數提供<xref:System.ServiceModel.ServiceHostBase>，目前正在初始化。  
+- `ServiceHostBase`：這個引數提供<xref:System.ServiceModel.ServiceHostBase>，目前正在初始化。  
   
  在自訂 <xref:System.ServiceModel.Description.IServiceBehavior> 實作中，會產生 `ObjectPoolingInstanceProvider` 的新執行個體，然後將它指派給 ServiceHostBase 中每個 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 的 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 屬性。  
   

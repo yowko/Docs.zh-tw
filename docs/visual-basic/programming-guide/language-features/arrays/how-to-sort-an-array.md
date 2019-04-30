@@ -8,11 +8,11 @@ helpviewer_keywords:
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
 ms.openlocfilehash: 3f4dbd6dce0957de3451b1f29c3a67ccd6791045
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053656"
 ---
 # <a name="how-to-sort-an-array-in-visual-basic"></a>HOW TO：在 Visual Basic 中排序陣列
 這個範例會宣告陣列`String`命名的物件`zooAnimals`，填入它，然後依字母順序排序。  
@@ -32,16 +32,16 @@ End Sub
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   Mscorlib.dll 的存取和<xref:System>命名空間。  
+- Mscorlib.dll 的存取和<xref:System>命名空間。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  以下條件可能會造成例外狀況：  
   
--   陣列是空的 (<xref:System.ArgumentNullException>類別)  
+- 陣列是空的 (<xref:System.ArgumentNullException>類別)  
   
--   陣列是多維 (<xref:System.RankException>類別)  
+- 陣列是多維 (<xref:System.RankException>類別)  
   
--   陣列的一個或多個項目不會實作<xref:System.IComparable>介面 (<xref:System.InvalidOperationException>類別)  
+- 陣列的一個或多個項目不會實作<xref:System.IComparable>介面 (<xref:System.InvalidOperationException>類別)  
   
 ## <a name="see-also"></a>另請參閱
 

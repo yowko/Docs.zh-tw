@@ -3,11 +3,11 @@ title: 將項目、 屬性和節點加入至 XML 樹狀結構 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: e243e694-c987-43aa-8b22-1e33dace582c
 ms.openlocfilehash: 35d3bdb27342dd7a871778ad4749db4d6849bd60
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021852"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>將項目、 屬性和節點加入至 XML 樹狀結構 (Visual Basic)
 您可以將內容 (項目、屬性、註解、處理指示、文字和 CDATA) 加入到現有的 XML 樹狀結構中。  

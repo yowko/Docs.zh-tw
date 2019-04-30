@@ -12,11 +12,11 @@ helpviewer_keywords:
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
 ms.openlocfilehash: 1b8de27e872914ba59d73126d2a9a7c42609165e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051815"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
 指定可寫入屬性，但無法讀取。  
@@ -34,15 +34,15 @@ ms.locfileid: "58829018"
 > [!IMPORTANT]
 >  當您定義並使用`WriteOnly`屬性，請考慮下列的額外保護措施：  
   
--   **覆寫。** 如果屬性是類別的成員，讓它預設為[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)，並不會將宣告`Overridable`或`MustOverride`。 這可防止衍生的類別進行覆寫透過不良的存取。  
+- **覆寫。** 如果屬性是類別的成員，讓它預設為[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)，並不會將宣告`Overridable`或`MustOverride`。 這可防止衍生的類別進行覆寫透過不良的存取。  
   
--   **存取層級。** 如果您在兩個變數中有一或多個保留屬性的機密資料，請宣告這些[私人](../../../visual-basic/language-reference/modifiers/private.md)，讓其他的程式碼可以存取它們。  
+- **存取層級。** 如果您在兩個變數中有一或多個保留屬性的機密資料，請宣告這些[私人](../../../visual-basic/language-reference/modifiers/private.md)，讓其他的程式碼可以存取它們。  
   
--   **加密。** 儲存所有的機密資料，以加密形式中，而不是以純文字。 如果惡意程式碼以某種方式取得對該區域的記憶體存取，就更難進行資料的使用。 也很有用，如果必須序列化的敏感性資料加密。  
+- **加密。** 儲存所有的機密資料，以加密形式中，而不是以純文字。 如果惡意程式碼以某種方式取得對該區域的記憶體存取，就更難進行資料的使用。 也很有用，如果必須序列化的敏感性資料加密。  
   
--   **正在重設。** 正在終止類別、 結構或模組定義該屬性時，重設的敏感性資料，預設值或其他無意義的值。 釋放該記憶體區域的一般存取時，這會提供額外的保護。  
+- **正在重設。** 正在終止類別、 結構或模組定義該屬性時，重設的敏感性資料，預設值或其他無意義的值。 釋放該記憶體區域的一般存取時，這會提供額外的保護。  
   
--   **持續性。** 不會保存任何敏感性資料，例如在磁碟上，如果您可以避免它。 此外，不寫入任何機密資料到剪貼簿。  
+- **持續性。** 不會保存任何敏感性資料，例如在磁碟上，如果您可以避免它。 此外，不寫入任何機密資料到剪貼簿。  
   
  `WriteOnly`修飾詞，請使用此內容中：  
   

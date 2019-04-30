@@ -3,11 +3,11 @@ title: 大型資料與資料流
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
 ms.openlocfilehash: 25ecc1db8218dfb49f591998140d86f551c5a0d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038601"
 ---
 # <a name="large-data-and-streaming"></a>大型資料與資料流
 Windows Communication Foundation (WCF) 是一種以 XML 為基礎的通訊基礎結構。 因為 XML 資料通常編碼中定義的標準文字格式[XML 1.0 規格](https://go.microsoft.com/fwlink/?LinkId=94838)、 已連線系統開發人員和架構設計人員通常會關心傳送訊息的網路使用量 （或大小） 之間網路和以文字為基礎的編碼 XML 帶來的特殊挑戰的二進位資料的傳輸效率。  
@@ -48,11 +48,11 @@ Windows Communication Foundation (WCF) 是一種以 XML 為基礎的通訊基礎
   
  發生此類大型資料內容傳輸的最常見案例就是下列二進位資料物件的傳輸：  
   
--   無法輕易分成訊息序列。  
+- 無法輕易分成訊息序列。  
   
--   必須及時傳遞。  
+- 必須及時傳遞。  
   
--   當初始化傳輸時，無法完整提供使用。  
+- 當初始化傳輸時，無法完整提供使用。  
   
  對於沒有這些條件約束的資料，通常比一個大型訊息更能夠在一個工作階段的範圍內傳送訊息的序列。 如需詳細資訊，請參閱本主題稍後的 「 資料流資料 」 一節。  
   
@@ -112,9 +112,9 @@ class MyData
   
  當使用 MTOM 時，會根據下列規則序列化前面的資料合約：  
   
--   如果 `binaryBuffer` 不是 `null`，且當與 Base64 編碼相比時，分別包含足以證明 MTOM 外顯化額外負荷 (MIME 標頭等等) 的資料，資料便會外顯化並包含在訊息中做為二進位 MIME 部分。 如果未超過臨界值，資料便會編碼為 Base64。  
+- 如果 `binaryBuffer` 不是 `null`，且當與 Base64 編碼相比時，分別包含足以證明 MTOM 外顯化額外負荷 (MIME 標頭等等) 的資料，資料便會外顯化並包含在訊息中做為二進位 MIME 部分。 如果未超過臨界值，資料便會編碼為 Base64。  
   
--   不論大小，字串 (以及所有其他不是二進位的型別) 在訊息本文內永遠會表示為字串。  
+- 不論大小，字串 (以及所有其他不是二進位的型別) 在訊息本文內永遠會表示為字串。  
   
  不論您是否使用明確的資料合約 (如前例中所述)，在作業中使用參數清單、具備巢狀資料合約，或傳輸集合內的資料合約物件，這在 MTOM 編碼上的作用都是相同的。 位元組陣列永遠是最佳化的候選項目，如果達到最佳化臨界值，則它就是最佳選擇。  
   
@@ -129,21 +129,21 @@ class MyData
 ### <a name="restrictions"></a>限制  
  啟用資料流時，您無法使用大量的 WCF 功能：  
   
--   無法執行訊息本文的數位簽章，因為它們需要計算整個訊息內容的雜湊。 使用資料流時，由於內容在建構及傳送訊息標頭時尚未完全可供使用，因此無法計算數位簽章。  
+- 無法執行訊息本文的數位簽章，因為它們需要計算整個訊息內容的雜湊。 使用資料流時，由於內容在建構及傳送訊息標頭時尚未完全可供使用，因此無法計算數位簽章。  
   
--   加密是依賴數位簽章來確認資料已正確地重新建構。  
+- 加密是依賴數位簽章來確認資料已正確地重新建構。  
   
--   如果訊息在傳輸中遺失，可靠工作階段必須緩衝用戶端上已傳送的訊息以供重新傳遞，且在將訊息傳遞至服務實作之前，必須將它們保存在服務上來保留訊息順序，以防收到不依順序的訊息。  
+- 如果訊息在傳輸中遺失，可靠工作階段必須緩衝用戶端上已傳送的訊息以供重新傳遞，且在將訊息傳遞至服務實作之前，必須將它們保存在服務上來保留訊息順序，以防收到不依順序的訊息。  
   
  由於這些功能條件約束之故，您對資料流只能使用傳輸層級安全性選項，且無法開啟可靠工作階段。 資料流只能用於下列系統定義的繫結：  
   
--   <xref:System.ServiceModel.BasicHttpBinding>  
+- <xref:System.ServiceModel.BasicHttpBinding>  
   
--   <xref:System.ServiceModel.NetTcpBinding>  
+- <xref:System.ServiceModel.NetTcpBinding>  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>  
+- <xref:System.ServiceModel.NetNamedPipeBinding>  
   
--   <xref:System.ServiceModel.WebHttpBinding>  
+- <xref:System.ServiceModel.WebHttpBinding>  
   
  由於 <xref:System.ServiceModel.NetTcpBinding> 和 <xref:System.ServiceModel.NetNamedPipeBinding> 的基礎傳輸具有固有的可靠傳遞和連線工作階段支援，因此和 HTTP 不同的是，這兩種繫結實際上只受到這些條件約束很小的影響。  
   
@@ -160,11 +160,11 @@ class MyData
 ### <a name="enabling-streaming"></a>啟用資料流  
  您可以使用下列方法來啟用資料流：  
   
--   在資料流模式中傳送及接受要求，而在緩衝模式中接受及傳回回應 (<xref:System.ServiceModel.TransferMode.StreamedRequest>)。  
+- 在資料流模式中傳送及接受要求，而在緩衝模式中接受及傳回回應 (<xref:System.ServiceModel.TransferMode.StreamedRequest>)。  
   
--   在緩衝模式中傳送及接受要求，而在資料流模式中接受及傳回回應 (<xref:System.ServiceModel.TransferMode.StreamedResponse>)。  
+- 在緩衝模式中傳送及接受要求，而在資料流模式中接受及傳回回應 (<xref:System.ServiceModel.TransferMode.StreamedResponse>)。  
   
--   在資料流模式中雙向傳送和接收要求與回應。 (<xref:System.ServiceModel.TransferMode.Streamed>)  
+- 在資料流模式中雙向傳送和接收要求與回應。 (<xref:System.ServiceModel.TransferMode.Streamed>)  
   
  您可以將傳輸模式設定為 <xref:System.ServiceModel.TransferMode.Buffered> (這是所有繫結上的預設設定)，以停用資料流。 下列程式碼顯示如何在組態中設定傳輸模式。  
   

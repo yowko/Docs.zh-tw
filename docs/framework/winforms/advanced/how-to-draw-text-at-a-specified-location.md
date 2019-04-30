@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
 ms.openlocfilehash: f7834ea45db8dd6e971defd9c3b2b152ffddf512
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004054"
 ---
 # <a name="how-to-draw-text-at-a-specified-location"></a>HOW TO：在指定的位置繪製文字
 當您執行自訂繪圖時，您可以在單一的水平列，從指定的點開始來繪製文字。 您也可以使用這個方式繪製文字<xref:System.Drawing.Graphics.DrawString%2A>方法的多載化<xref:System.Drawing.Graphics>類別<xref:System.Drawing.Point>或<xref:System.Drawing.PointF>參數。 <xref:System.Drawing.Graphics.DrawString%2A>方法也需要<xref:System.Drawing.Brush>和 <xref:System.Drawing.Font>  
@@ -43,7 +43,7 @@ ms.locfileid: "59336404"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  先前的範例需要：  
   
--   <xref:System.Windows.Forms.PaintEventArgs>  `e`這是參數的<xref:System.Windows.Forms.PaintEventHandler>。  
+- <xref:System.Windows.Forms.PaintEventArgs>  `e`這是參數的<xref:System.Windows.Forms.PaintEventHandler>。  
   
 ## <a name="see-also"></a>另請參閱
 

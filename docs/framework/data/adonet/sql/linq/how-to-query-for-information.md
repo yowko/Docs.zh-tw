@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e538d288-2070-40ca-9da6-4fbc68cd6ad0
 ms.openlocfilehash: aedf89f1e570b34d31050fabb91842cefe351488
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033731"
 ---
 # <a name="how-to-query-for-information"></a>HOW TO：查詢資訊
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中之查詢使用的語法與 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 中的查詢相同。 唯一的差別在於中參考的物件[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]查詢都會對應到資料庫中的項目。 如需詳細資訊，請參閱 [LINQ 查詢簡介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。  

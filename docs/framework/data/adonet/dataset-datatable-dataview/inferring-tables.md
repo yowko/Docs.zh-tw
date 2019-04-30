@@ -3,20 +3,20 @@ title: 推斷資料表
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
 ms.openlocfilehash: 2c2a93d413f301dc3006b701e4bc7979a3fa7a1d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034251"
 ---
 # <a name="inferring-tables"></a>推斷資料表
 從 XML 文件推斷 <xref:System.Data.DataSet> 的結構描述時，ADO.NET 首先會決定要用哪些 XML 項目來表示資料表。 下列 XML 結構會導致資料表**資料集**結構描述：  
   
--   具有屬性的項目  
+- 具有屬性的項目  
   
--   具有項目子系的項目  
+- 具有項目子系的項目  
   
--   重複項目  
+- 重複項目  
   
 ## <a name="elements-with-attributes"></a>具有屬性的項目  
  具有指定屬性的項目會產生推斷資料表。 例如，請考量下列 XML：  

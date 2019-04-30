@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：建立自訂動畫的按鈕
+title: 逐步解說：建立自訂動畫按鈕
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom animated buttons [WPF]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
 ms.openlocfilehash: 3c601641a0eb1024722b4f449f0ab23e54fe93dd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024465"
 ---
-# <a name="walkthroughs-create-a-custom-animated-button"></a>逐步解說：建立自訂動畫的按鈕
+# <a name="walkthroughs-create-a-custom-animated-button"></a>逐步解說：建立自訂動畫按鈕
 正如其名，Windows Presentation Foundation (WPF) 也很適合讓客戶的豐富的呈現體驗。 這些逐步解說會示範如何自訂外觀和行為 （包括動畫） 的按鈕。 完成這項自訂，讓您可以套用這個自訂的按鈕輕鬆地為任何按鈕應用程式中使用的樣式和範本。 下圖顯示 [自訂] 按鈕，您將建立。  
   
  ![您將建立的自訂的按鈕](./media/custom-button-blend-intro.jpg "custom_button_blend_Intro")  

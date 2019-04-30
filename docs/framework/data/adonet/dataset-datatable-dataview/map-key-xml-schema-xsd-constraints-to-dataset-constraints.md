@@ -3,11 +3,11 @@ title: 將 key XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
 ms.openlocfilehash: 46a980f06198c6f06bb13824c65cfb5309eec154
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034225"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>將 key XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 在結構描述中，您可以指定的項目上的索引鍵條件約束，或屬性使用**金鑰**項目。 具有指定索引鍵條件約束的項目或屬性，在任何結構描述執行個體中都必須具有唯一的值，且不可具有 Null 值。  

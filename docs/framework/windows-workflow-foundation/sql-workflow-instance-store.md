@@ -3,11 +3,11 @@ title: SQL 工作流程執行個體存放區
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
 ms.openlocfilehash: 8314781f46d9cd4eddd06f6be95f8e952feef1b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004623"
 ---
 # <a name="sql-workflow-instance-store"></a>SQL 工作流程執行個體存放區
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 隨附於 SQL 工作流程執行個體存放區，可讓工作流程將有關工作流程執行個體的狀態資訊保存在 SQL Server 2005 或 SQL Server 2008 資料庫中。 這項功能主要是以 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 類別的形式實作，該類別衍生自持續性架構的抽象 <xref:System.Runtime.DurableInstancing.InstanceStore> 類別。 SQL 工作流程執行個體存放區功能會構成 SQL 持續性提供者，該提供者是持續性 API 的具象實作，主機會運用此 API 將持續性命令傳送至存放區。  
@@ -22,19 +22,19 @@ ms.locfileid: "59086568"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [SQL 工作流程執行個體屬性的存放區](properties-of-sql-workflow-instance-store.md)  
+- [SQL 工作流程執行個體屬性的存放區](properties-of-sql-workflow-instance-store.md)  
   
--   [如何：啟用 SQL 持續性工作流程與工作流程服務](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+- [如何：啟用 SQL 持續性工作流程與工作流程服務](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
--   [執行個體啟用](instance-activation.md)  
+- [執行個體啟用](instance-activation.md)  
   
--   [支援查詢](support-for-queries.md)  
+- [支援查詢](support-for-queries.md)  
   
--   [存放區擴充性](store-extensibility.md)  
+- [存放區擴充性](store-extensibility.md)  
   
--   [安全性](security.md)  
+- [安全性](security.md)  
   
--   [SQL Server 持續性資料庫](sql-server-persistence-database.md)  
+- [SQL Server 持續性資料庫](sql-server-persistence-database.md)  
   
 ## <a name="see-also"></a>另請參閱
 

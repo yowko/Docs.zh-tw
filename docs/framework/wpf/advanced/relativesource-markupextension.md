@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
 ms.openlocfilehash: a6a7d615a3a54fbc75bb86b295fdf80433a31dc5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053492"
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource 標記延伸
 
@@ -60,10 +60,8 @@ ms.locfileid: "57476330"
 |-|-|
 |`modeEnumValue`|下列其中一項：<br /><br /> -字串語彙基元`Self`; 對應至<xref:System.Windows.Data.RelativeSource>建立其<xref:System.Windows.Data.RelativeSource.Mode%2A>屬性設定為<xref:System.Windows.Data.RelativeSourceMode.Self>。<br />-字串語彙基元`TemplatedParent`; 對應至<xref:System.Windows.Data.RelativeSource>建立其<xref:System.Windows.Data.RelativeSource.Mode%2A>屬性設定為<xref:System.Windows.Data.RelativeSourceMode.TemplatedParent>。<br />-字串語彙基元`PreviousData`; 對應至<xref:System.Windows.Data.RelativeSource>建立其<xref:System.Windows.Data.RelativeSource.Mode%2A>屬性設定為<xref:System.Windows.Data.RelativeSourceMode.PreviousData>。<br />-請參閱以下的資訊上`FindAncestor`模式。|
 |`FindAncestor`|字串語彙基元 `FindAncestor`。 使用此語彙基元可進入某個模式，讓 `RelativeSource` 指定上階類型以及選擇性指定上階層級。 這相當於 <xref:System.Windows.Data.RelativeSource> 建立時將其 <xref:System.Windows.Data.RelativeSource.Mode%2A> 屬性設為 <xref:System.Windows.Data.RelativeSourceMode.FindAncestor>。|
-|`typeName`|
-  `FindAncestor` 模式的必要項。 類型的名稱，可填入 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 屬性。|
-|`intLevel`|
-  `FindAncestor` 模式的選擇項。 上階層級 (朝邏輯樹狀結構的父項目方向評估)。|
+|`typeName`|`FindAncestor` 模式的必要項。 類型的名稱，可填入 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 屬性。|
+|`intLevel`|`FindAncestor` 模式的選擇項。 上階層級 (朝邏輯樹狀結構的父項目方向評估)。|
 
 ## <a name="remarks"></a>備註
 

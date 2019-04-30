@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
 ms.openlocfilehash: 702d88f844f00b86e64404bd100fd6b3d34971c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033471"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>從識別快取擷取物件
 本主題描述 LINQ to SQL 查詢的類型，這些查詢可從 <xref:System.Data.Linq.DataContext> 所管理的識別快取傳回物件。  
@@ -24,39 +24,39 @@ ms.locfileid: "59211227"
   
  若要從識別快取擷取物件，查詢必須採用下列其中一種一般格式：  
   
--   <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`  
+- <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`  
   
--   <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`  
+- <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`  
   
  在這些一般格式中，`Function1`、`Function2` 和 `predicate` 的定義方式如下。  
   
  `Function1` 可以是下列任何項目：  
   
--   <xref:System.Linq.Queryable.Where%2A>  
+- <xref:System.Linq.Queryable.Where%2A>  
   
--   <xref:System.Linq.Queryable.First%2A>  
+- <xref:System.Linq.Queryable.First%2A>  
   
--   <xref:System.Linq.Queryable.FirstOrDefault%2A>  
+- <xref:System.Linq.Queryable.FirstOrDefault%2A>  
   
--   <xref:System.Linq.Queryable.Single%2A>  
+- <xref:System.Linq.Queryable.Single%2A>  
   
--   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
+- <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
  `Function2` 可以是下列任何項目：  
   
--   <xref:System.Linq.Queryable.First%2A>  
+- <xref:System.Linq.Queryable.First%2A>  
   
--   <xref:System.Linq.Queryable.FirstOrDefault%2A>  
+- <xref:System.Linq.Queryable.FirstOrDefault%2A>  
   
--   <xref:System.Linq.Queryable.Single%2A>  
+- <xref:System.Linq.Queryable.Single%2A>  
   
--   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
+- <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
  `predicate` 必須是物件之主索引鍵屬性設定為常數值的運算式。 如果物件具有多個屬性所定義的主索引鍵，每個主索引鍵屬性都必須設定為常數值。 下面是 `predicate` 必須採用的格式範例：  
   
--   `c => c.PK == constant_value`  
+- `c => c.PK == constant_value`  
   
--   `c => c.PK1 == constant_value1 && c=> c.PK2 == constant_value2`  
+- `c => c.PK1 == constant_value1 && c=> c.PK2 == constant_value2`  
   
 ## <a name="example"></a>範例  
  下列程式碼將提供 LINQ to SQL 查詢類型的範例，這些查詢可從識別快取擷取物件。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - content [WPF], Frame control
 ms.assetid: 1588f9bf-9001-4437-a8fc-cc57ef50561c
 ms.openlocfilehash: f530fa04e25bfa18095fc3b2a182d3d624789f54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054896"
 ---
 # <a name="frame"></a>Frame
 <xref:System.Windows.Controls.Frame>控制項支援內容導覽內容中的。 <xref:System.Windows.Controls.Frame> 可由根項目，例如<xref:System.Windows.Window>， <xref:System.Windows.Navigation.NavigationWindow>， <xref:System.Windows.Controls.Page>， <xref:System.Windows.Controls.UserControl>， <xref:System.Windows.Documents.FlowDocument>，或在內容樹狀結構中根項目屬於一座島。  

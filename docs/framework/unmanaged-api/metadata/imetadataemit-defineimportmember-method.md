@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 81acda4d395563fc8e0000e38036d1aaa0f14471
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62043210"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember 方法
 建立指定的成員類型或模組，可定義在目前的範圍之外，並定義該參考語彙基元的參考。  
@@ -72,11 +72,11 @@ HRESULT DefineImportMember (
   
  一般而言，您使用`DefineImportMember`方法，您必須建立，在目前範圍、 型別參考或目標成員的父類別、 介面或模組的模組參考。 此參考的中繼資料語彙基元然後傳入`tkParent`引數。 您不需要建立目標成員的父系的參考，如果它由編譯器或連結器將會稍後解決。 總括來說：  
   
--   如果目標成員是欄位或方法，使用任何一種[imetadataemit:: Definetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md)或[imetadataemit:: Defineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)方法來建立型別參考，在目前的範圍內，成員的父類別或父介面。  
+- 如果目標成員是欄位或方法，使用任何一種[imetadataemit:: Definetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md)或[imetadataemit:: Defineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)方法來建立型別參考，在目前的範圍內，成員的父類別或父介面。  
   
--   如果目標成員的全域變數或全域函式 （也就是不在成員的類別或介面），請使用[imetadataemit:: Definemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md)方法用來建立模組參考，在目前範圍中，成員的父系模組。  
+- 如果目標成員的全域變數或全域函式 （也就是不在成員的類別或介面），請使用[imetadataemit:: Definemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md)方法用來建立模組參考，在目前範圍中，成員的父系模組。  
   
--   如果目標成員的父系的解決方法的編譯器或連結器的更新版本，然後傳遞`mdTokenNil`在`tkParent`。 這適用的唯一案例是當全域函式或全域變數從.obj 檔案，最後會連結到目前的模組匯入和中繼資料合併。  
+- 如果目標成員的父系的解決方法的編譯器或連結器的更新版本，然後傳遞`mdTokenNil`在`tkParent`。 這適用的唯一案例是當全域函式或全域變數從.obj 檔案，最後會連結到目前的模組匯入和中繼資料合併。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

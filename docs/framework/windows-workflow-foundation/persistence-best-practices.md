@@ -3,17 +3,17 @@ title: 持續性的最佳作法
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
 ms.openlocfilehash: fdbf61e559efbd978df1c5a46fcbbbbc528ec98a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005624"
 ---
 # <a name="persistence-best-practices"></a>持續性的最佳作法
 本文件包含與工作流程持續性相關之工作流程設計與組態的最佳作法。  
   
 ## <a name="design-and-implementation-of-durable-workflows"></a>設計及實作永久性工作流程  
- 一般來說，工作流程會在時間交錯的短期內工作，因為工作流程在這段期間內正在等候事件，所以會處於閒置狀態。 這個事件可以是訊息或到期計時器等項目。 為了要能夠在工作流程執行個體閒置時將它卸載，服務主機必須保存工作流程執行個體。 只有當工作流程執行個體不在非保存區域時才可行 (例如，正在等候交易完成或等候非同步回呼)。 若要允許卸載閒置的工作流程執行個體，工作流程作者應該只針對短期的動作使用交易範圍和非同步活動。 特別是，作者應該將這些非保存區域中的延遲活動盡量縮短。  
+ 一般來說，工作流程會在時間交錯的短期內工作，因為工作流程在這段期間內正在等候事件，所以會處於閒置狀態。 這個事件可以是訊息或到期計時器等項目。 為了要能夠在工作流程執行個體閒置時將它卸載，服務主機必須保存工作流程執行個體。 只有當工作流程執行個體不在非保存區域時才可行 (例如，正在等候異動完成或等候非同步回呼)。 若要允許卸載閒置的工作流程執行個體，工作流程作者應該只針對短期的動作使用交易範圍和非同步活動。 特別是，作者應該將這些非保存區域中的延遲活動盡量縮短。  
   
  只有當工作流程所使用的所有資料型別都可序列化時，才能保存工作流程。 此外，保存之工作流程中所使用的自訂型別必須可以使用 <xref:System.Runtime.Serialization.NetDataContractSerializer> 來序列化，才能由 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 保存。  
   
@@ -26,29 +26,29 @@ ms.locfileid: "43800647"
 ## <a name="configuration-of-scalability-parameters"></a>延展性參數的組態  
  延展性和效能需求會決定以下參數的設定：  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>  
+- <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A>  
+- <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A>  
   
--   <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A>  
+- <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A>  
   
  這些參數應該根據目前的情況，依照以下方式設定。  
   
-### <a name="scenario-a-small-number-of-workflow-instances-that-require-optimal-response-time"></a>案例：需要最佳回應時間的少量工作流程執行個體  
+### <a name="scenario-a-small-number-of-workflow-instances-that-require-optimal-response-time"></a>案例：少數需要最佳回應時間的工作流程執行個體  
  在此案例中，當所有工作流程執行個體閒置時，都應該維持已載入的狀態。 請將 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> 設定為大的值。 使用這項設定會防止工作流程執行個體在電腦之間移動。 只有當下列其中一個或多個條件成立時，才能使用這項設定：  
   
--   工作流程執行個體在它的整個存留期都會收到單一訊息。  
+- 工作流程執行個體在它的整個存留期都會收到單一訊息。  
   
--   所有工作流程執行個體都在單一電腦上執行  
+- 所有工作流程執行個體都在單一電腦上執行  
   
--   工作流程執行個體所接收的所有訊息都會由同一部電腦所接收。  
+- 工作流程執行個體所接收的所有訊息都會由同一部電腦所接收。  
   
  請使用 <xref:System.Activities.Statements.Persist> 活動或是將 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> 設定為 0，以便在服務主機或電腦故障之後復原您的工作流程執行個體。  
   
-### <a name="scenario-workflow-instances-are-idle-for-long-periods-of-time"></a>案例：工作流程執行個體閒置很長的期間  
+### <a name="scenario-workflow-instances-are-idle-for-long-periods-of-time"></a>案例：工作流程執行個體閒置很長一段時間  
  在此案例中，將 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> 設定為 0 來盡快釋出資源。  
   
-### <a name="scenario-workflow-instances-receive-multiple-messages-in-a-short-period-of-time"></a>案例：工作流程執行個體在短期內收到多個訊息  
+### <a name="scenario-workflow-instances-receive-multiple-messages-in-a-short-period-of-time"></a>案例：工作流程執行個體在短時間內收到多個訊息  
  在此案例中，如果這些訊息是由同一部電腦所接收，請將 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> 設定為 60 秒。 這樣會避免卸載及載入工作流程執行個體的快速序列。 這樣也讓執行個體不會保存在記憶體中太久。  
   
  如果這些訊息可能會由不同電腦收到，請將 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> 設定為 0，並將 <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A> 設定為 BasicRetry 或 AggressiveRetry。 如此可讓工作流程執行個體由另一部電腦所載入。  

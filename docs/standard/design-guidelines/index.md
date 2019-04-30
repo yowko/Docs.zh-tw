@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
 author: KrzysztofCwalina
 ms.openlocfilehash: c20430f9cdcd71cc2e178d38aeed48f9fa4e75c5
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56834894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026376"
 ---
 # <a name="framework-design-guidelines"></a>Framework 設計方針
 本章節提供指導方針來設計擴充並與其互動 .NET Framework 的程式庫。 目標是要協助確保 API 一致性和易用性，藉由提供統一的程式設計模型，用於開發的程式設計語言無關的程式庫設計人員。 我們建議您遵循這些設計指導方針，開發可擴充.NET Framework 的類別和元件時。 不一致的程式庫設計造成不良影響開發人員的生產力，並防止採用。  

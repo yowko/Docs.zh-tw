@@ -8,11 +8,11 @@ ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c7969c0a3f5f828f1a1c0d4f33b82881130c6e15
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949249"
 ---
 # <a name="method-etw-events"></a>方法 ETW 事件
 
@@ -47,7 +47,7 @@ CLR 方法事件會進一步細分為下列：
 
 下表說明事件資訊。
 
-|事件|事件 ID|描述|
+|Event - 事件|事件 ID|描述|
 |-----------|--------------|-----------------|
 |`MethodLoad_V1`|136|在 Just-In-Time 載入 (JIT 載入) 方法或 NGEN 映像載入時引發。 動態和泛型的方法並不會使用這個版本的方法載入。 JIT Helper 永遠不會使用這個版本。|
 |`MethodUnLoad_V1`|137|在模組已卸載或應用程式定義域損毀時引發。 動態方法永遠不會使用這個版本的方法卸載。|
@@ -84,7 +84,7 @@ CLR 方法事件會進一步細分為下列：
 
 下表說明事件資訊。
 
-|事件|事件 ID|描述|
+|Event - 事件|事件 ID|描述|
 |-----------|--------------|----------------|
 |`DCStartInit_V1`|147|在啟動取消期間、列舉開始之前傳送。|
 |`DCStartComplete_V1`|145|在啟動取消期間、列舉結尾時傳送。|
@@ -114,7 +114,7 @@ CLR 方法事件會進一步細分為下列：
 
 下表說明事件資訊。
 
-|事件|事件 ID|描述|
+|Event - 事件|事件 ID|描述|
 |-----------|--------------|-----------------|
 |`MethodLoadVerbose_V1`|143|在 JIT 載入方法或 NGEN 映像載入時引發。 動態和泛型的方法一律會使用這個版本的方法載入。 JIT Helper 一律會使用這個版本。|
 |`MethodUnLoadVerbose_V1`|144|在動態方法損毀、模組已卸載或應用程式定義域損毀時引發。 動態方法永遠一律會使用這個版本的方法卸載。|
@@ -153,7 +153,7 @@ CLR 方法事件會進一步細分為下列：
 
 下表說明事件資訊。
 
-|事件|事件 ID|描述|
+|Event - 事件|事件 ID|描述|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|當某個方法正在進行 JIT 編譯時引發。|
 

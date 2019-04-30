@@ -3,11 +3,11 @@ title: 公告範例
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
 ms.openlocfilehash: 895043976fd39ac0057c8dbc1c7daf0394393984
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002751"
 ---
 # <a name="announcements-sample"></a>公告範例
 此範例示範如何使用探索功能的公告功能。 公告功能可讓服務送出包含服務相關中繼資料的公告訊息。 當服務啟動時，預設會傳送一個 Hello 公告，而當服務關閉時，則會傳送一個 Bye 公告。 這些公告可以多點傳送，也可以點對點傳送。 這個範例包含兩個專案，也就是服務和用戶端。  

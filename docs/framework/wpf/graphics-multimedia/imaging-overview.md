@@ -22,11 +22,11 @@ helpviewer_keywords:
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
 ms.openlocfilehash: dba2f8b07134560abd77832293ce2a81e55e4875
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053440"
 ---
 # <a name="imaging-overview"></a>影像處理概觀
 本主題提供 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] 的簡介。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 可讓開發人員顯示、轉換及格式化影像。  
@@ -37,19 +37,19 @@ ms.locfileid: "59209706"
   
  有兩種方式可以存取 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]，Managed 元件和 Unmanaged 元件。 Unmanaged 元件提供下列功能。  
   
--   新的或專屬影像格式的擴充性模型。  
+- 新的或專屬影像格式的擴充性模型。  
   
--   [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)]、[!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)]、[!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]、[!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]、[!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]、[!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] 和圖示 (.ico) 等原生影像格式的改善效能及安全性。  
+- [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)]、[!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)]、[!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]、[!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]、[!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]、[!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] 和圖示 (.ico) 等原生影像格式的改善效能及安全性。  
   
--   高位元深度影像資料最多可保留每色頻 8 位元 (每像素 32 位元)。  
+- 高位元深度影像資料最多可保留每色頻 8 位元 (每像素 32 位元)。  
   
--   非破壞性的影像縮放、裁剪及旋轉。  
+- 非破壞性的影像縮放、裁剪及旋轉。  
   
--   簡化的色彩管理。  
+- 簡化的色彩管理。  
   
--   支援檔案內、專屬中繼資料。  
+- 支援檔案內、專屬中繼資料。  
   
--   Managed 元件會利用 Unmanaged 基礎結構來提供影像與其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 功能 (例如 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、動畫和圖形) 的緊密整合。 受管理的元件也受益於 Windows Presentation Foundation (WPF) 影像轉碼器擴充性模型可讓新映像中的格式自動辨識[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式。  
+- Managed 元件會利用 Unmanaged 基礎結構來提供影像與其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 功能 (例如 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、動畫和圖形) 的緊密整合。 受管理的元件也受益於 Windows Presentation Foundation (WPF) 影像轉碼器擴充性模型可讓新映像中的格式自動辨識[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式。  
   
  大部分的 managed [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]位於<xref:System.Windows.Media.Imaging?displayProperty=nameWithType>命名空間，不過幾個重要型別，例如<xref:System.Windows.Media.ImageBrush>並<xref:System.Windows.Media.ImageDrawing>位於<xref:System.Windows.Media?displayProperty=nameWithType>命名空間和<xref:System.Windows.Controls.Image>位於<xref:System.Windows.Controls?displayProperty=nameWithType>命名空間。  
   
@@ -132,13 +132,13 @@ ms.locfileid: "59209706"
 #### <a name="stretching-images"></a>縮放影像  
  <xref:System.Windows.Controls.Image.Stretch%2A>屬性可讓您控制影像如何縮放以填滿容器。 <xref:System.Windows.Controls.Image.Stretch%2A>屬性可以接受下列值所定義<xref:System.Windows.Media.Stretch>列舉型別：  
   
--   <xref:System.Windows.Media.Stretch.None>：映像不會自動縮放以填滿輸出區域。 如果影像大於輸出區域，會將影像繪製到輸出區域，並裁剪超過的部分。  
+- <xref:System.Windows.Media.Stretch.None>：映像不會自動縮放以填滿輸出區域。 如果影像大於輸出區域，會將影像繪製到輸出區域，並裁剪超過的部分。  
   
--   <xref:System.Windows.Media.Stretch.Fill>：影像會縮放以符合輸出區域。 因為影像的高度和寬度是分開縮放，所以可能不會維持影像的原始外觀比例。 也就是說，影像可能會變形以完全填滿輸出容器。  
+- <xref:System.Windows.Media.Stretch.Fill>：影像會縮放以符合輸出區域。 因為影像的高度和寬度是分開縮放，所以可能不會維持影像的原始外觀比例。 也就是說，影像可能會變形以完全填滿輸出容器。  
   
--   <xref:System.Windows.Media.Stretch.Uniform>：影像會縮放，以完全符合輸出區域。 會維持影像的外觀比例。  
+- <xref:System.Windows.Media.Stretch.Uniform>：影像會縮放，以完全符合輸出區域。 會維持影像的外觀比例。  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>：影像會縮放，使它完全填滿輸出區域，同時維持影像的原始外觀比例。  
+- <xref:System.Windows.Media.Stretch.UniformToFill>：影像會縮放，使它完全填滿輸出區域，同時維持影像的原始外觀比例。  
   
  下列範例適用於每個可用<xref:System.Windows.Media.Stretch>列舉型別的<xref:System.Windows.Controls.Image>。  
   

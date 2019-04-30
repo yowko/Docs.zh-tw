@@ -13,11 +13,11 @@ ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 97b15ea2202ca410dd517db63a7145d27f62bb48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018589"
 ---
 # <a name="impersonating-and-reverting"></a>模擬和還原
 有時候您可能需要取得 Windows 帳戶權杖，才能模擬 Windows 帳戶。 例如，ASP.NET 型應用程式可能必須在不同的時間代表數個使用者。 您的應用程式可能會接受來自網際網路資訊服務 (IIS) 代表系統管理員的權杖、模擬該使用者、執行作業，然後還原成之前的身分識別。 接下來，它可能會接受來自 IIS 代表具有較少權限的使用者的權杖、執行某項作業，然後再次還原。  

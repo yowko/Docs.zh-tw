@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
 ms.openlocfilehash: 0bda03d3c01356317fbcc56d44199ff4f9484b5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053934"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 指定可用來只當做基底類別的類別，您無法直接從它建立物件。  
@@ -29,9 +29,9 @@ ms.locfileid: "58816560"
   
 ## <a name="rules"></a>規則  
   
--   **宣告內容。** 您可以使用`MustInherit`只能在`Class`陳述式。  
+- **宣告內容。** 您可以使用`MustInherit`只能在`Class`陳述式。  
   
--   **結合的修飾詞。** 您無法指定`MustInherit`搭配`NotInheritable`相同宣告中。  
+- **結合的修飾詞。** 您無法指定`MustInherit`搭配`NotInheritable`相同宣告中。  
   
 ## <a name="example"></a>範例  
  下列範例說明強制的繼承和強制覆寫。 基底類別`shape`定義的變數， `acrossLine`。 類別`circle`並`square`衍生自`shape`。 它們繼承的定義`acrossLine`，但它們必須定義函式`area`由於該計算各有不同的每一種圖形。  

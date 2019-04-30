@@ -3,11 +3,11 @@ title: WCF Web HTTP 服務說明網頁
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
 ms.openlocfilehash: 60fd909d6e7d3ba0e0c0254024ef7eb40263b59e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050401"
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP 服務說明網頁
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 會為 WCF WEB HTTP 服務提供自動說明頁面。 此說明頁面會列出每項作業、要求與回應格式和結構描述的說明。 此功能預設為關閉。 當使用者瀏覽至 WCF WEB HTTP 服務並附加在 「 / 說明 」 的 URL，例如後面 `http://localhost:8000/Customers/Help` ，一樣會顯示下列說明頁面。  

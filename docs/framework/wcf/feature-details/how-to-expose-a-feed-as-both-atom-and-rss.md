@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
 ms.openlocfilehash: 824d2a08ddd36317fcdb8caa1690decb2f9c432a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039556"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>HOW TO：將摘要同時公開為 Atom 和 RSS
 Windows Communication Foundation (WCF) 可讓您建立公開新聞訂閱摘要的服務。 本主題討論如何同時使用 Atom 1.0 和 RSS 2.0，建立可公開新聞訂閱摘要的新聞訂閱服務。 此服務會公開可傳回任何一種新聞訂閱格式的端點。 為了簡要說明，此範例中使用的服務為自我裝載。 在實際執行環境中，此類型的服務會在 IIS 或 WAS 下裝載。 如需有關不同的 WCF 裝載選項的詳細資訊，請參閱[Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)。  

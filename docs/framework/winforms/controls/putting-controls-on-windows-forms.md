@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 ms.assetid: 997508f2-87e5-4bec-a78e-9eec8f1fb15b
 ms.openlocfilehash: b9ffe797fef9e063470ef93ce73f881aed80e7f6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012486"
 ---
 # <a name="putting-controls-on-windows-forms"></a>將控制項加入 Windows Form
 有各種您可以根據您的應用程式的需求將放在 Windows Forms 的控制項。  

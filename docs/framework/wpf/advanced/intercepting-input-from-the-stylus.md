@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
 ms.openlocfilehash: 5c22c2862ae8b948787fd5e6ca16109aa2f52aef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031248"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>攔截手寫筆的輸入
 <xref:System.Windows.Input.StylusPlugIns>架構提供一個機制，透過實作的低階控制<xref:System.Windows.Input.Stylus>輸入和建立數位筆墨<xref:System.Windows.Ink.Stroke>物件。 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>類別會提供您實作自訂行為，並將它套用到來自手寫筆裝置，以獲得最佳的效能資料的資料流的機制。  
   
  本主題包含下列子章節：  
   
--   [架構](#Architecture)  
+- [架構](#Architecture)  
   
--   [實作的手寫筆外掛程式](#ImplementingStylusPlugins)  
+- [實作的手寫筆外掛程式](#ImplementingStylusPlugins)  
   
--   [將外掛程式新增至 InkCanvas](#AddingYourPluginToAnInkCanvas)  
+- [將外掛程式新增至 InkCanvas](#AddingYourPluginToAnInkCanvas)  
   
--   [結論](#Conclusion)  
+- [結論](#Conclusion)  
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>架構  

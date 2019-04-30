@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1ee737f4c6d34e77996f5ba08ce4d84132a99238
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985656"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion 函式
 取得 common language runtime (CLR) 所指定的應用程式要求的版本號碼。 如果未安裝該版本，取得要求的版本之前已安裝最新版本。  

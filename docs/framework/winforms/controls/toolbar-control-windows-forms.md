@@ -6,16 +6,15 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms]
 ms.assetid: 6b40e9ce-6a7a-4784-bfc9-7f1d36b7462e
 ms.openlocfilehash: 3f0a1b6a7f83753ccae1a129528ed320a2613122
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009541"
 ---
 # <a name="toolbar-control-windows-forms"></a>ToolBar 控制項 (Windows Form)
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.ToolStrip> 控制項會取代 `ToolBar` 控制項並加入其他功能，不過您也可以選擇保留 `ToolBar` 控制項，以提供回溯相容性及未來使用。  
+>  <xref:System.Windows.Forms.ToolStrip> 控制項會取代 `ToolBar` 控制項並加入其他功能，不過您也可以選擇保留 `ToolBar` 控制項，以提供回溯相容性及未來使用。  
   
  Windows Form `ToolBar` 控制項在表單中，是當做顯示下拉式功能表其中一列的控制列和啟動命令的點陣圖按鈕使用。 因此，按一下工具列按鈕相當於選擇功能表命令。 您可將這些按鈕設定成和按鈕、下拉式功能表或分隔符號一樣顯示和運作。 一般而言，工具列包含對應至應用程式功能表結構中項目的按鈕和功能表，可以快速存取應用程式中最常使用的功能和命令。  
   

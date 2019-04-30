@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
 ms.openlocfilehash: c20564bcf8a25b1b59887fbefe6419671e0d6c03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971859"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier 指示詞
 修改 XAML 編譯行為，以便以定義已命名的物件參考的欄位<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>而不是存取<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>預設行為。  
@@ -36,11 +36,11 @@ ms.locfileid: "59144543"
   
  值`x:FieldModifier`屬性而異的程式設計語言，與特定架構可以改變它的目的。 要使用的字串取決於各種語言的實作方式及其<xref:System.CodeDom.Compiler.CodeDomProvider>和類型轉換器，它會傳回定義的意義<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>和<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>，以及該語言是否區分大小寫。  
   
--   適用於 C#，要傳遞至指定的字串<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>是`public`。  
+- 適用於 C#，要傳遞至指定的字串<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>是`public`。  
   
--   適用於 Microsoft Visual Basic.NET，要傳遞至指定的字串<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>是`Public`。  
+- 適用於 Microsoft Visual Basic.NET，要傳遞至指定的字串<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>是`Public`。  
   
--   針對[!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]，XAML 的任何目標目前存在; 因此，要傳遞的字串未定義。  
+- 針對[!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]，XAML 的任何目標目前存在; 因此，要傳遞的字串未定義。  
   
  您也可以指定<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>(`internal`在C#， `Friend` Visual Basic 中) 但指定<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>不尋常因為`NotPublic`行為已是預設值。  
   

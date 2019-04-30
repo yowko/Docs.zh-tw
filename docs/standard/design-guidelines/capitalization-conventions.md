@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: KrzysztofCwalina
 ms.openlocfilehash: 9a4cf94ca7fcada7dfc0886422b373abc807a0fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966474"
 ---
 # <a name="capitalization-conventions"></a>大小寫慣例
 簡單的方法，使用這一章配置中的指導方針情況下，當套用一致的方式，請識別項型別、 成員和參數容易閱讀。  
@@ -23,9 +23,9 @@ ms.locfileid: "54670169"
 ## <a name="capitalization-rules-for-identifiers"></a>識別項的大小寫規則  
  若要區分識別項中的文字，利用識別項中的每個單字的第一個字母。 請勿使用底線來區分文字，或就此而言，在識別項中任何位置。 有兩個適當的方法，可以改為大寫識別碼，根據所使用的識別項：  
   
--   PascalCasing  
+- PascalCasing  
   
--   camelCasing  
+- camelCasing  
   
  參數名稱除外的所有識別項所使用的 PascalCasing 慣例轉換成大寫字母 （包括透過長度的兩個字母的縮寫） 的每個字的第一個字元，如下列範例所示：  
   
@@ -48,7 +48,7 @@ ms.locfileid: "54670169"
   
  下表描述不同類型的識別項的大小寫規則。  
   
-|識別項|大小寫|範例|  
+|識別碼|大小寫|範例|  
 |----------------|------------|-------------|  
 |命名空間|Pascal 命名法|`namespace System.Security { ... }`|  
 |類型|Pascal 命名法|`public class StreamReader { ... }`|  
@@ -67,7 +67,7 @@ ms.locfileid: "54670169"
   
  這些是寫成單字，例如端點的複合字。 大小寫的指導方針，以將關閉表單的複合字視為單一的文字。 使用目前的字典來判斷複合字以關閉表單。  
   
-|Pascal 命名法|依照 camel 命名法|not|  
+|Pascal 命名法|依照 camel 命名法|否|  
 |------------|-----------|---------|  
 |`BitFlag`|`bitFlag`|`Bitflag`|  
 |`Callback`|`callback`|`CallBack`|  

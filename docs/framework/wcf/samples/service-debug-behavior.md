@@ -3,11 +3,11 @@ title: 服務偵錯行為
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
 ms.openlocfilehash: bfed164093e10c070b24832cf5a3be362ad3bc56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007912"
 ---
 # <a name="service-debug-behavior"></a>服務偵錯行為
 這個範例會示範如何設定服務偵錯行為設定。 此樣本根據[快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它會實作`ICalculator`服務合約。 這個範例會在組態檔中明確地定義服務偵錯行為。 這個行為也可以透過程式碼，以命令方式定義。  
@@ -33,12 +33,12 @@ ms.locfileid: "59772046"
   
  [\<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md)是允許變更服務偵錯行為屬性的組態項目。 使用者可以修改這項行為以達到下列目的：  
   
--   這可允許服務傳回應用程式碼擲回的任何例外狀況，即使例外狀況未使用 <xref:System.ServiceModel.FaultContractAttribute> 宣告。 將 `includeExceptionDetailInFaults` 設定為 `true`，便可達成這個目的。 當在伺服器擲回非預期例外狀況的案例中偵錯時，這個設定非常有用。  
+- 這可允許服務傳回應用程式碼擲回的任何例外狀況，即使例外狀況未使用 <xref:System.ServiceModel.FaultContractAttribute> 宣告。 將 `includeExceptionDetailInFaults` 設定為 `true`，便可達成這個目的。 當在伺服器擲回非預期例外狀況的案例中偵錯時，這個設定非常有用。  
   
     > [!IMPORTANT]
     >  在實際執行環境中開啟這項設定是不安全的。 未預期的伺服器例外狀況可能會包含某些不想要讓用戶端檢視的資訊，所以將 `includeExceptionDetailsInFaults` 設定為 `true` 可能會導致資訊洩漏。  
   
--   [ \<ServiceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md)也可讓使用者啟用或停用 [說明] 頁面。 每個服務都可以選擇公開一份說明網頁，其中包含的服務相關資訊可以包括取得服務之 WSDL 的端點。 將 `httpHelpPageEnabled` 設定為 `true`，便可啟用這項功能。 如此就可讓說明網頁傳回至要求服務基底位址的 GET 要求。 您可以藉由設定另一個 `httpHelpPageUrl` 屬性來變更這個位址。 如果改用 HTTPS 而非 HTTP，則可以保護其安全。 設定 `httpsHelpPageEnabled` 和 `httpsHelpPageUrl`，便可達成這個目的。  
+- [ \<ServiceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md)也可讓使用者啟用或停用 [說明] 頁面。 每個服務都可以選擇公開一份說明網頁，其中包含的服務相關資訊可以包括取得服務之 WSDL 的端點。 將 `httpHelpPageEnabled` 設定為 `true`，便可啟用這項功能。 如此就可讓說明網頁傳回至要求服務基底位址的 GET 要求。 您可以藉由設定另一個 `httpHelpPageUrl` 屬性來變更這個位址。 如果改用 HTTPS 而非 HTTP，則可以保護其安全。 設定 `httpsHelpPageEnabled` 和 `httpsHelpPageUrl`，便可達成這個目的。  
   
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 前三項作業 (加法、減法以及乘法) 一定會成功。 最後一個作業 (「除法」) 會因為除數為零例外狀況而失敗。  
   

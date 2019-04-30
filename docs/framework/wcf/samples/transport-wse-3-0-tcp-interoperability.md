@@ -3,11 +3,11 @@ title: 傳輸：WSE 3.0 TCP 互通性
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
 ms.openlocfilehash: cc483e44e625534d87ea94e84fc984f0aff880f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032720"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>傳輸：WSE 3.0 TCP 互通性
 WSE 3.0 TCP 互通性傳輸範例示範如何實作 TCP 雙工工作階段做為自訂的 Windows Communication Foundation (WCF) 傳輸。 也會示範如何使用通道層的擴充性，透過網路與現有的已部署系統相連結。 下列步驟示範如何建置此自訂 WCF 傳輸：  
@@ -43,16 +43,16 @@ WSE 3.0 TCP 互通性傳輸範例示範如何實作 TCP 雙工工作階段做為
   
  基底 `WseTcpDuplexSessionChannel` 會假設是接收連線的通訊端。 基底類別接著會處理通訊端關閉。 有三個部分與通訊端關閉相關：  
   
--   OnAbort -- 以非正常程序關閉通訊端 (強制關閉)。  
+- OnAbort -- 以非正常程序關閉通訊端 (強制關閉)。  
   
--   On[Begin]Close -- 以正常程序關閉通訊端 (軟關閉)。  
+- On[Begin]Close -- 以正常程序關閉通訊端 (軟關閉)。  
   
--   session.CloseOutputSession -- 關閉傳出資料流 (半關閉)。  
+- session.CloseOutputSession -- 關閉傳出資料流 (半關閉)。  
   
 ## <a name="channel-factory"></a>通道處理站  
  撰寫 TCP 傳輸的下一個步驟為，建立用戶端通道的 <xref:System.ServiceModel.Channels.IChannelFactory> 實作。  
   
--   `WseTcpChannelFactory` 衍生自<xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >。 這是覆寫 `OnCreateChannel` 以產生用戶端通道的處理站。  
+- `WseTcpChannelFactory` 衍生自<xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >。 這是覆寫 `OnCreateChannel` 以產生用戶端通道的處理站。  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -62,11 +62,11 @@ WSE 3.0 TCP 互通性傳輸範例示範如何實作 TCP 雙工工作階段做為
   
  `}`  
   
--   `ClientWseTcpDuplexSessionChannel` 將邏輯加入至基底`WseTcpDuplexSessionChannel`連接至 TCP 伺服器在`channel.Open`時間。 首先會將主機名稱解析為 IP 位址，如下列程式碼所示。  
+- `ClientWseTcpDuplexSessionChannel` 將邏輯加入至基底`WseTcpDuplexSessionChannel`連接至 TCP 伺服器在`channel.Open`時間。 首先會將主機名稱解析為 IP 位址，如下列程式碼所示。  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
--   接著將主機名稱連接至迴圈中第一個可用的 IP 位址，如下列程式碼所示。  
+- 接著將主機名稱連接至迴圈中第一個可用的 IP 位址，如下列程式碼所示。  
   
  `IPAddress address = hostEntry.AddressList[i];`  
   
@@ -74,12 +74,12 @@ WSE 3.0 TCP 互通性傳輸範例示範如何實作 TCP 雙工工作階段做為
   
  `socket.Connect(new IPEndPoint(address, port));`  
   
--   包裝網域特定的例外狀況，例如 `SocketException` 中的 <xref:System.ServiceModel.CommunicationException>，以充當為通道合約的一部分。  
+- 包裝網域特定的例外狀況，例如 `SocketException` 中的 <xref:System.ServiceModel.CommunicationException>，以充當為通道合約的一部分。  
   
 ## <a name="channel-listener"></a>通道接聽程式  
  撰寫 TCP 傳輸的下一個步驟為，建立可接受伺服器通道的 <xref:System.ServiceModel.Channels.IChannelListener> 實作。  
   
--   `WseTcpChannelListener` 衍生自<xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > 和覆寫 [Begin] Open 和 On [Begin] Close 以控制其接聽通訊端的存留期。 在 OnOpen 中，您會建立通訊端以接聽 IP_ANY。 更進階的實作則可以建立第二個通訊端，就也可以階聽 IPv6。 這些實作也允許在主機名稱中指定 IP 位址。  
+- `WseTcpChannelListener` 衍生自<xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > 和覆寫 [Begin] Open 和 On [Begin] Close 以控制其接聽通訊端的存留期。 在 OnOpen 中，您會建立通訊端以接聽 IP_ANY。 更進階的實作則可以建立第二個通訊端，就也可以階聽 IPv6。 這些實作也允許在主機名稱中指定 IP 位址。  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -179,18 +179,18 @@ Symbols:
   
 1. 在安裝 `TcpSyncStockService` 範例之後，請執行下列步驟：  
   
-    1.  開啟 Visual Studio 中的 `TcpSyncStockService` (請注意，TcpSyncStockService 範例是隨著 WSE 3.0 一起安裝， 它不屬於此範例程式碼的一部分)。  
+    1. 開啟 Visual Studio 中的 `TcpSyncStockService` (請注意，TcpSyncStockService 範例是隨著 WSE 3.0 一起安裝， 它不屬於此範例程式碼的一部分)。  
   
-    2.  將 StockService 專案設定為啟始專案。  
+    2. 將 StockService 專案設定為啟始專案。  
   
-    3.  開啟 StockService 專案中的 StockService.cs，並將 `StockService` 類別中的 [Policy] 屬性標記為註解。 這樣就會停用範例的安全性。 雖然 WCF 與 WSE 3.0 安全端點相互操作，將此範例著重於自訂 TCP 傳輸已停用安全性。  
+    3. 開啟 StockService 專案中的 StockService.cs，並將 `StockService` 類別中的 [Policy] 屬性標記為註解。 這樣就會停用範例的安全性。 雖然 WCF 與 WSE 3.0 安全端點相互操作，將此範例著重於自訂 TCP 傳輸已停用安全性。  
   
-    4.  按 F5 以啟動 `TcpSyncStockService`。 將在新主控台視窗中啟動服務。  
+    4. 按 F5 以啟動 `TcpSyncStockService`。 將在新主控台視窗中啟動服務。  
   
-    5.  在 Visual Studio 中開啟此 TCP 傳輸範例。  
+    5. 在 Visual Studio 中開啟此 TCP 傳輸範例。  
   
-    6.  更新 TestCode.cs 中的 "hostname" 變數，以符合執行 `TcpSyncStockService` 的電腦名稱。  
+    6. 更新 TestCode.cs 中的 "hostname" 變數，以符合執行 `TcpSyncStockService` 的電腦名稱。  
   
-    7.  按 F5 以啟動 TCP 傳輸範例。  
+    7. 按 F5 以啟動 TCP 傳輸範例。  
   
-    8.  會在新主控台中啟動 TCP 傳輸測試用戶端。 用戶端要求積存會從服務進行引用，並在其主控台視窗中顯示結果。  
+    8. 會在新主控台中啟動 TCP 傳輸測試用戶端。 用戶端要求積存會從服務進行引用，並在其主控台視窗中顯示結果。  

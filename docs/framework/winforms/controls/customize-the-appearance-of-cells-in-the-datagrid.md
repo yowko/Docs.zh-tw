@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 478b20c9-625c-4116-9c5c-5a16e6f4ec67
 ms.openlocfilehash: 415cf18aa4cf01b151a414dbc26609af638a7af7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011444"
 ---
 # <a name="how-to-customize-the-appearance-of-cells-in-the-windows-forms-datagridview-control"></a>HOW TO：自訂 Windows Forms DataGridView 控制項的儲存格外觀
 您可以藉由處理自訂的任何資料格外觀<xref:System.Windows.Forms.DataGridView>控制項的<xref:System.Windows.Forms.DataGridView.CellPainting>事件。 您可以擷取<xref:System.Windows.Forms.DataGridView>控制項的<xref:System.Drawing.Graphics>從<xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.Graphics%2A>屬性<xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs>。 與這個<xref:System.Drawing.Graphics>，您可能會影響的整個外觀<xref:System.Windows.Forms.DataGridView>控制項，但是您通常會想要影響目前所繪製的儲存格的外觀。 <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.ClipBounds%2A>屬性<xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs>可讓您限制您到目前所繪製的儲存格的繪製作業。  
@@ -28,9 +28,9 @@ ms.locfileid: "59213281"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   A<xref:System.Windows.Forms.DataGridView>控制項，名為`dataGridView1`使用`ContactName`例如 Northwind 範例資料庫中的 Customers 資料表中的資料行。  
+- A<xref:System.Windows.Forms.DataGridView>控制項，名為`dataGridView1`使用`ContactName`例如 Northwind 範例資料庫中的 Customers 資料表中的資料行。  
   
--   System、System.Windows.Forms 和 System.Drawing 組件的參考。  
+- System、System.Windows.Forms 和 System.Drawing 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
 

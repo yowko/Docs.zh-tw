@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30007
 ms.assetid: 5f34cf47-6c6e-4954-bd8e-d6b020b75fb7
 ms.openlocfilehash: 54848fdbd2547fe021f0386843f9666760396cb0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013773"
 ---
 # <a name="reference-required-to-assembly-assemblyname-containing-the-base-class-classname"></a>需要組件參考 '\<組件名稱 >' 包含基底類別\<類別名稱 >'
 需要組件參考 '\<組件名稱 >' 包含基底類別\<類別名稱 >'。 請在專案中加入一個參考。  
@@ -23,7 +23,7 @@ ms.locfileid: "55273276"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   在您的專案參考中包含未參考之 DLL 或組件的名稱。  
+- 在您的專案參考中包含未參考之 DLL 或組件的名稱。  
   
 ## <a name="see-also"></a>另請參閱
 

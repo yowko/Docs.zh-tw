@@ -3,11 +3,11 @@ title: 對等通道
 ms.date: 03/30/2017
 ms.assetid: e06a2efb-8e70-4299-8b0f-bfb37efb074b
 ms.openlocfilehash: f1c0be21614ac59ba512694f981addb2e07e8ec8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33470448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969152"
 ---
 # <a name="peer-channel"></a>對等通道
 本主題列出 Windows Communication Foundation (WCF) 對等通道所產生的所有例外狀況。  

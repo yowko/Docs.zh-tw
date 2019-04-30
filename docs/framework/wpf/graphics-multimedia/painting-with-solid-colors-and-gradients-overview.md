@@ -10,11 +10,11 @@ helpviewer_keywords:
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
 ms.openlocfilehash: 7945660f40e44596fe36a6b9d53223a0e264a064
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009400"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>使用純色和漸層繪製的概觀
 本主題描述如何使用<xref:System.Windows.Media.SolidColorBrush>， <xref:System.Windows.Media.LinearGradientBrush>，和<xref:System.Windows.Media.RadialGradientBrush>物件以純色、 線形漸層及放射狀漸層。  
@@ -27,15 +27,15 @@ ms.locfileid: "59148300"
 ### <a name="using-a-solidcolorbrush-in-xaml"></a>在 "XAML" 中使用 SolidColorBrush  
  若要在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中使用純色繪製區域，請使用下列其中一個選項。  
   
--   依據名稱選取預先定義的單色筆刷。  例如，您可以設定按鈕的<xref:System.Windows.Controls.Control.Background%2A>"Red"或"MediumBlue"。  針對另一份預先定義的單色筆刷，請參閱的靜態屬性<xref:System.Windows.Media.Brushes>類別。 下列為範例。  
+- 依據名稱選取預先定義的單色筆刷。  例如，您可以設定按鈕的<xref:System.Windows.Controls.Control.Background%2A>"Red"或"MediumBlue"。  針對另一份預先定義的單色筆刷，請參閱的靜態屬性<xref:System.Windows.Media.Brushes>類別。 下列為範例。  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
--   選擇 32 位元色板的其中一個色彩，方法是指定紅色、綠色及藍色的量來混合成單一純色。  指定 32 位元色板中其中一個色彩的格式為 "*#rrggbb*"，其中 *rr* 是指定紅色相對量的兩位數十六進位數字、*gg* 指定綠色的量，而 *bb* 則指定藍色的量。  此外，色彩可以指定為 "#*aarrggbb*"，其中 *aa* 指定色彩的 *alpha* 值 (也就是透明度)。 這個方法可以讓您建立部分透明的色彩。  在下列範例中，<xref:System.Windows.Controls.Control.Background%2A>的<xref:System.Windows.Controls.Button>設為完全不透明的紅色，使用十六進位標記法。  
+- 選擇 32 位元色板的其中一個色彩，方法是指定紅色、綠色及藍色的量來混合成單一純色。  指定 32 位元色板中其中一個色彩的格式為 "*#rrggbb*"，其中 *rr* 是指定紅色相對量的兩位數十六進位數字、*gg* 指定綠色的量，而 *bb* 則指定藍色的量。  此外，色彩可以指定為 "#*aarrggbb*"，其中 *aa* 指定色彩的 *alpha* 值 (也就是透明度)。 這個方法可以讓您建立部分透明的色彩。  在下列範例中，<xref:System.Windows.Controls.Control.Background%2A>的<xref:System.Windows.Controls.Button>設為完全不透明的紅色，使用十六進位標記法。  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
--   使用屬性標記語法來描述<xref:System.Windows.Media.SolidColorBrush>。 這個語法比較複雜，但是可以讓您指定額外設定，例如筆刷的不透明度。 在下列範例中，<xref:System.Windows.Controls.Control.Background%2A>兩個屬性<xref:System.Windows.Controls.Button>元素會設定為完全不透明的紅色。 第一個筆刷的色彩是用預先定義的色彩名稱來描述。 第二個筆刷的色彩則是用十六進位標記法來描述。  
+- 使用屬性標記語法來描述<xref:System.Windows.Media.SolidColorBrush>。 這個語法比較複雜，但是可以讓您指定額外設定，例如筆刷的不透明度。 在下列範例中，<xref:System.Windows.Controls.Control.Background%2A>兩個屬性<xref:System.Windows.Controls.Button>元素會設定為完全不透明的紅色。 第一個筆刷的色彩是用預先定義的色彩名稱來描述。 第二個筆刷的色彩則是用十六進位標記法來描述。  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushPropertyTag1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushpropertytag1xaml)]  
   
@@ -43,11 +43,11 @@ ms.locfileid: "59148300"
 ### <a name="painting-with-a-solidcolorbrush-in-code"></a>在程式碼中使用 SolidColorBrush 繪製  
  若要在程式碼中使用純色繪製區域，請使用下列其中一個選項。  
   
--   使用預先定義的筆刷所提供的其中一個<xref:System.Windows.Media.Brushes>類別。 在下列範例中，<xref:System.Windows.Controls.Control.Background%2A>的<xref:System.Windows.Controls.Button>設定為<xref:System.Windows.Media.Brushes.Red%2A>。  
+- 使用預先定義的筆刷所提供的其中一個<xref:System.Windows.Media.Brushes>類別。 在下列範例中，<xref:System.Windows.Controls.Control.Background%2A>的<xref:System.Windows.Controls.Button>設定為<xref:System.Windows.Media.Brushes.Red%2A>。  
   
      [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedBrush1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedbrush1csharp)]  
   
--   建立<xref:System.Windows.Media.SolidColorBrush>並將其<xref:System.Windows.Media.SolidColorBrush.Color%2A>屬性使用<xref:System.Windows.Media.Color>結構。 您可以使用預先定義的色彩<xref:System.Windows.Media.Colors>類別，或者您可以建立<xref:System.Windows.Media.Color>使用靜態<xref:System.Windows.Media.Color.FromArgb%2A>方法。  
+- 建立<xref:System.Windows.Media.SolidColorBrush>並將其<xref:System.Windows.Media.SolidColorBrush.Color%2A>屬性使用<xref:System.Windows.Media.Color>結構。 您可以使用預先定義的色彩<xref:System.Windows.Media.Colors>類別，或者您可以建立<xref:System.Windows.Media.Color>使用靜態<xref:System.Windows.Media.Color.FromArgb%2A>方法。  
   
      下列範例示範如何設定<xref:System.Windows.Media.SolidColorBrush.Color%2A>屬性<xref:System.Windows.Media.SolidColorBrush>使用預先定義的色彩。  
   
@@ -81,9 +81,9 @@ ms.locfileid: "59148300"
   
  <xref:System.Windows.Media.GradientStop>是漸層筆刷的基本建置組塊。  指定漸層停駐<xref:System.Windows.Media.GradientStop.Color%2A>在<xref:System.Windows.Media.GradientStop.Offset%2A>沿著漸層軸。  
   
--   漸層停駐點<xref:System.Windows.Media.GradientStop.Color%2A>屬性指定漸層停駐的色彩。 您可以使用預先定義的色彩，來設定色彩 (由<xref:System.Windows.Media.Colors>類別) 或指定 ScRGB 或 ARGB 值。 在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，您也可以使用十六進位標記法來描述色彩。 如需詳細資訊，請參閱<xref:System.Windows.Media.Color>結構。  
+- 漸層停駐點<xref:System.Windows.Media.GradientStop.Color%2A>屬性指定漸層停駐的色彩。 您可以使用預先定義的色彩，來設定色彩 (由<xref:System.Windows.Media.Colors>類別) 或指定 ScRGB 或 ARGB 值。 在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，您也可以使用十六進位標記法來描述色彩。 如需詳細資訊，請參閱<xref:System.Windows.Media.Color>結構。  
   
--   漸層停駐點<xref:System.Windows.Media.GradientStop.Offset%2A>屬性會指定位置的漸層停駐的色彩漸層軸上。 位移是<xref:System.Double>，範圍從 0 到 1。 漸層停駐點的位移值越接近 0，色彩就越接近漸層起始點。 漸層的位移值越接近 1，色彩就越接近漸層結束點。  
+- 漸層停駐點<xref:System.Windows.Media.GradientStop.Offset%2A>屬性會指定位置的漸層停駐的色彩漸層軸上。 位移是<xref:System.Double>，範圍從 0 到 1。 漸層停駐點的位移值越接近 0，色彩就越接近漸層起始點。 漸層的位移值越接近 1，色彩就越接近漸層結束點。  
   
  漸層停駐點之間每個點的色彩，是以線性方式插入為兩個相鄰漸層停駐點所指定之色彩的組合。 下圖將上一個範例中的漸層停駐點醒目提示。 圓圈標記出漸層停駐點的位置，虛線則表示漸層軸。  
   

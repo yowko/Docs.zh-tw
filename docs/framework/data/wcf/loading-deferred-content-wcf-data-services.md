@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
 ms.openlocfilehash: ee7b0b40d74d908dc4f25372273f852662370df0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037124"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>載入延後內容 (WCF 資料服務)
 根據預設，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會限制查詢傳回的資料量。 不過，您可以在需要時，從資料服務明確載入其他資料，包括相關實體、分頁回應資料以及二進位資料流。 本主題描述如何將這些延後的內容載入至應用程式。  
@@ -22,14 +22,14 @@ ms.locfileid: "59518002"
 ## <a name="related-entities"></a>相關實體  
  執行查詢時，只會傳回已定址之實體集中的實體。 例如，針對 Northwind 資料服務的查詢傳回 `Customers` 實體時，即使 `Orders` 和 `Customers` 之間有關聯性，預設仍不會傳回相關的 `Orders` 實體。 另外，在資料服務中啟用分頁時，您必須從服務明確載入後續資料頁面。 有兩種方式可以載入相關實體：  
   
--   **積極式載入**:您可以使用`$expand`查詢選項，要求查詢傳回之實體的關聯性相關的實體集所要求的查詢。 請在 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 上使用 <xref:System.Data.Services.Client.DataServiceQuery%601> 方法，將 `$expand` 選項加入至傳送給資料服務的查詢。 您可以要求多個相關的實體集，並以逗號分隔這些實體集，如下列範例所示。 查詢要求的所有實體會以單一回應傳回。 下列範例會一併傳回 `Order_Details` 和 `Customers`，以及 `Orders` 實體集：  
+- **積極式載入**:您可以使用`$expand`查詢選項，要求查詢傳回之實體的關聯性相關的實體集所要求的查詢。 請在 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 上使用 <xref:System.Data.Services.Client.DataServiceQuery%601> 方法，將 `$expand` 選項加入至傳送給資料服務的查詢。 您可以要求多個相關的實體集，並以逗號分隔這些實體集，如下列範例所示。 查詢要求的所有實體會以單一回應傳回。 下列範例會一併傳回 `Order_Details` 和 `Customers`，以及 `Orders` 實體集：  
   
      [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#expandorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#expandorderdetailsspecific)]  
   
      [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會使用 `$expand` 查詢選項限制為可包含在單一查詢中的 12 個實體集數目。  
   
--   **明確式載入**:您可以呼叫<xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A>方法<xref:System.Data.Services.Client.DataServiceContext>明確載入相關的實體的執行個體。 每次呼叫 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 方法，都會對資料服務建立一個獨立的查詢。 下列範例會明確載入 `Order_Details` 實體的 `Orders`：  
+- **明確式載入**:您可以呼叫<xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A>方法<xref:System.Data.Services.Client.DataServiceContext>明確載入相關的實體的執行個體。 每次呼叫 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 方法，都會對資料服務建立一個獨立的查詢。 下列範例會明確載入 `Order_Details` 實體的 `Orders`：  
   
      [!code-csharp[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadrelatedorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadrelatedorderdetailsspecific)]  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
 ms.openlocfilehash: 079decb76b45566f354418d671145f0c284628c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007730"
 ---
 # <a name="tracing-and-message-logging"></a>追蹤和訊息記錄
 這個範例示範如何啟用追蹤和訊息記錄。 產生的追蹤和訊息記錄則會使用檢視[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -52,11 +52,11 @@ ms.locfileid: "59322130"
   
  您可以建立使用者定義的活動追蹤，來延伸 ServiceModel 所提供的追蹤。 使用者定義的活動追蹤允許使用者建立追蹤活動，以進行下列工作：  
   
--   將追蹤集合成工作邏輯單位的群組。  
+- 將追蹤集合成工作邏輯單位的群組。  
   
--   透過傳輸和傳播將活動相互關聯。  
+- 透過傳輸和傳播將活動相互關聯。  
   
--   降低 （例如，記錄檔的磁碟空間成本） 的 WCF 追蹤的效能成本。  
+- 降低 （例如，記錄檔的磁碟空間成本） 的 WCF 追蹤的效能成本。  
   
  如需有關使用者定義的活動追蹤的詳細資訊，請參閱[擴充追蹤](../../../../docs/framework/wcf/samples/extending-tracing.md)範例。  
   

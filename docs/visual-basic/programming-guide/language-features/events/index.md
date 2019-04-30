@@ -6,11 +6,11 @@ helpviewer_keywords:
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 ms.openlocfilehash: 73a740d8fa9b9f293e4babb1d2edef81aaeae8aa
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973195"
 ---
 # <a name="events-visual-basic"></a>事件 (Visual Basic)
 雖然您可能會以視覺化方式檢視 Visual Studio 專案以一系列的程序，依序執行，事實上，大部分程式都是事件驅動，這表示執行流程取決於呼叫的外部發生項目*事件*。  
@@ -53,11 +53,11 @@ ms.locfileid: "57201101"
   
  `WithEvents` 陳述式和 `Handles` 子句通常是事件處理常式的最佳選擇，因為它們使用的宣告式語法讓事件能夠更容易處理程式碼、讀取及偵錯。 不過，請注意下列有關使用 `WithEvents` 變數的限制：  
   
--   您不能使用 `WithEvents` 變數做為物件變數。 也就是說，您無法將它宣告為 `Object` - 當您宣告變數時，必須指定類別名稱。  
+- 您不能使用 `WithEvents` 變數做為物件變數。 也就是說，您無法將它宣告為 `Object` - 當您宣告變數時，必須指定類別名稱。  
   
--   由於共用的事件不會繫結到類別執行個體，您無法使用`WithEvents`以宣告方式處理共用的事件。 同樣地，您不能使用 `WithEvents` 或 `Handles`，處理來自 `Structure` 的事件。 在這兩種情況下，您可以使用 `AddHandler` 陳述式來處理這些事件。  
+- 由於共用的事件不會繫結到類別執行個體，您無法使用`WithEvents`以宣告方式處理共用的事件。 同樣地，您不能使用 `WithEvents` 或 `Handles`，處理來自 `Structure` 的事件。 在這兩種情況下，您可以使用 `AddHandler` 陳述式來處理這些事件。  
   
--   您無法建立 `WithEvents` 變數的陣列。  
+- 您無法建立 `WithEvents` 變數的陣列。  
   
  `WithEvents` 變數可讓單一事件處理常式處理一或多種事件，或者讓一或多個事件處理常式處理相同種類的事件。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "57201101"
   
  [!code-vb[VbVbalrEvents#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#28)]  
   
- `RemoveHandler` (其會中斷事件與事件處理常式的關聯) 會使用與 `AddHandler` 相同的語法。 例如:   
+ `RemoveHandler` (其會中斷事件與事件處理常式的關聯) 會使用與 `AddHandler` 相同的語法。 例如：  
   
  [!code-vb[VbVbalrEvents#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#29)]  
   
@@ -91,7 +91,7 @@ ms.locfileid: "57201101"
   
 ### <a name="to-handle-events-from-a-base-class"></a>處理來自基底類別的事件  
   
--   在衍生類別中宣告事件處理常式，方法是將 `Handles MyBase.`*eventname* 陳述式加入至事件處理常式程序的宣告行中，其中 *eventname* 為您要處理之基底類別中的事件名稱。 例如:   
+- 在衍生類別中宣告事件處理常式，方法是將 `Handles MyBase.`*eventname* 陳述式加入至事件處理常式程序的宣告行中，其中 *eventname* 為您要處理之基底類別中的事件名稱。 例如:   
   
      [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   

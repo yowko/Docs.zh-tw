@@ -9,11 +9,11 @@ helpviewer_keywords:
 - slider controls [Windows Forms], about slider controls
 ms.assetid: 95910ecb-8a4c-4776-89fa-206c89ed6973
 ms.openlocfilehash: 1606db73485944f3dfa8b9c084bffda817520c7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009262"
 ---
 # <a name="trackbar-control-overview-windows-forms"></a>TrackBar 控制項概觀 (Windows Form)
 Windows Form <xref:System.Windows.Forms.TrackBar> （有時也稱為 「 滑桿 」 控制項） 的控制項用來巡覽大量的資訊，或適用於以視覺方式調整數字設定。 <xref:System.Windows.Forms.TrackBar>控制項有兩個部分： 基本原則是，也就是滑桿和刻度標記。 基本原則是可調整的部分。 其位置與相對應<xref:System.Windows.Forms.TrackBar.Value%2A>屬性。 刻度標記會定期間距的視覺指標。 Trackbar 移動中指定，並可以在水平或垂直對齊的變化。 例如，您可能會使用追蹤列來控制系統游標閃爍頻率或滑鼠速度。  

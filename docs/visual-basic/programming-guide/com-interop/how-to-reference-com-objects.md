@@ -9,11 +9,11 @@ helpviewer_keywords:
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
 ms.openlocfilehash: 0327c497025630747e526503556f4a1705948850
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022378"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>HOW TO：從 Visual Basic 參考 COM 物件
 在 Visual Basic 中將參考加入至具有型別程式庫的 COM 物件需要建立 interop 組件的 COM 程式庫。 參考 COM 物件的成員會路由傳送至的 interop 組件，且接著轉送到實際的 COM 物件。 從 COM 物件的回應會路由傳送至的 interop 組件，並轉送至您[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]應用程式。  
@@ -38,11 +38,11 @@ ms.locfileid: "59295259"
   
 2. 呼叫 Tlbimp 從命令提示字元，提供下列資訊：  
   
-    -   包含型別程式庫的 DLL 的名稱和位置  
+    - 包含型別程式庫的 DLL 的名稱和位置  
   
-    -   名稱和命名空間的位置資訊應放置的位置  
+    - 名稱和命名空間的位置資訊應放置的位置  
   
-    -   目標的 interop 組件的名稱和位置  
+    - 目標的 interop 組件的名稱和位置  
   
      下列程式碼提供一個範例：  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - option lists in Windows Forms
 ms.assetid: 5bc064c7-bc1f-4b62-8f4b-252f864b118e
 ms.openlocfilehash: 92d5f330fbd5269e15bf52dc11ad998939aa18e4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009067"
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a>用來列出選項的 Windows Form 控制項
 如果您想要為使用者提供一份可從中選擇選項您可以加入 Windows Form 的各種控制項。 根據多少您想要限制您的使用者輸入，您可以新增<xref:System.Windows.Forms.ListBox>控制項中，<xref:System.Windows.Forms.ComboBox>控制項，或<xref:System.Windows.Forms.CheckedListBox>控制項。 使用下列連結，以判斷最佳的控制項符合需求。  

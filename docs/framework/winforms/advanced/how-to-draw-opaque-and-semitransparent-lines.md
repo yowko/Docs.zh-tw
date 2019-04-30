@@ -11,11 +11,11 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], drawing lines
 ms.assetid: 8f2508af-f495-4223-b5cc-646cbbb520eb
 ms.openlocfilehash: 7408722dc13e83828cfca3f0615a2730e3c53461
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004025"
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a>HOW TO：繪製不透明和半透明線條
 當您繪製一條線時，必須傳遞 <xref:System.Drawing.Pen> 物件至 <xref:System.Drawing.Graphics> 類別的 <xref:System.Drawing.Graphics.DrawLine%2A> 方法。 <xref:System.Drawing.Pen.%23ctor%2A> 建構函式的其中一個參數是 <xref:System.Drawing.Color> 物件。 若要繪製不透明的線條，請將色彩的 Alpha 元件設為 255。 若要繪製半透明線條，請將 Alpha 元件設為從 1 到 254 的任何值。  

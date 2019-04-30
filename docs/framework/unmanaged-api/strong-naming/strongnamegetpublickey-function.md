@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e0e38a85b688d66e9f44bd8026bb4c9e141a6eb7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000333"
 ---
 # <a name="strongnamegetpublickey-function"></a>StrongNameGetPublicKey 函式
 從私密/公開金鑰組取得公開金鑰。 可以提供的金鑰組，做為密碼編譯服務提供者 (CSP) 內的金鑰容器名稱，或是為未經處理位元組的集合。  

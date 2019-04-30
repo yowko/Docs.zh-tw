@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: 87412dd2-478f-4751-af87-dafc591fc215
 ms.openlocfilehash: 397a2c5a7879be8c1bef7e04e72cf675f25d0fb8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971401"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：使用設計工具凍結 Windows Forms DataGridView 控制項的資料行
 當使用者檢視顯示於 Windows Form <xref:System.Windows.Forms.DataGridView> 控制項的資料時，有時候需要經常參考單一資料行或資料行集合。 比方說，當您顯示客戶資訊，其中包含許多資料行的資料表時，它可用於您隨時都能在其他資料行的可見區域外捲動時顯示客戶的名稱。  

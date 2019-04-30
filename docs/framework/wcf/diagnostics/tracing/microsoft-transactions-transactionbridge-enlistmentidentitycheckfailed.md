@@ -3,11 +3,11 @@ title: Microsoft.Transactions.TransactionBridge.EnlistmentIdentityCheckFailed
 ms.date: 03/30/2017
 ms.assetid: 74aeb3e7-f9eb-4491-9e78-5f8c9cbcb434
 ms.openlocfilehash: 5bea784cfaf98d5024d5c8913243e4ff2cfa7184
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997993"
 ---
 # <a name="microsofttransactionstransactionbridgeenlistmentidentitycheckfailed"></a>Microsoft.Transactions.TransactionBridge.EnlistmentIdentityCheckFailed
 傳入訊息的傳送者身分識別與衍生自登記之端點參考的身分識別不符。  

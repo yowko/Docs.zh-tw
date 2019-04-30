@@ -3,11 +3,11 @@ title: HOW TO：尋找前面同層級項目 (XPATH-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 59055718-d0a7-4db3-8901-18dd33587703
 ms.openlocfilehash: 4584a84df0e25b451a440c33e17c14cd78fc78bf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021631"
 ---
 # <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a>HOW TO：尋找前面同層級項目 (XPATH-LINQ to XML) (Visual Basic)
 這個主題會比較 XPath `preceding-sibling` 座標軸與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 子系 <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> 座標軸。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
 ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046628"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>使用身分識別模型來管理宣告與授權
 授權就是決定哪些實體可以擁有變更、檢視或另外存取電腦資源等權限的程序。 例如，在公司裡只有經理可以存取這家公司員工的檔案。 Windows Communication Foundation (WCF) 支援兩種機制執行授權程序。 第一種機制可讓您使用現有的 Common Language Runtime (CLR) 建構來控制授權。 第二個是宣告為基礎的模型，稱為*身分識別模型*。 WCF 會使用身分識別模型來建立宣告，從內送訊息;身分識別模型類別可加以擴充以支援新的宣告類型，用於自訂授權配置。 本主題將顯示識別模型功能的主要程式設計概念概觀，以及此功能使用之最重要類別的清單。  

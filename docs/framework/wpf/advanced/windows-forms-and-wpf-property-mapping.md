@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
 ms.openlocfilehash: a7d78837a141ed322da42629501cee6dcc9143e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053128"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Windows Form 和 WPF 屬性對應
 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]技術有兩個類似但不同屬性的模型。 *屬性對應*支援的兩個架構之間的互通性，並提供下列功能：  
   
--   可讓您輕鬆地將主機環境中的相關屬性，變更對應至裝載的控制項或項目。  
+- 可讓您輕鬆地將主機環境中的相關屬性，變更對應至裝載的控制項或項目。  
   
--   提供處理對應最常用的預設屬性。  
+- 提供處理對應最常用的預設屬性。  
   
--   可讓您輕鬆移除覆寫，或擴充預設屬性。  
+- 可讓您輕鬆移除覆寫，或擴充預設屬性。  
   
--   可確保主機上的屬性值變更會自動偵測及轉譯至裝載的控制項或元素。  
+- 可確保主機上的屬性值變更會自動偵測及轉譯至裝載的控制項或元素。  
   
 > [!NOTE]
 >  屬性變更事件不會傳播裝載的控制項或項目階層架構。 如果不會變更屬性的區域數值，這是因為直接設定、 樣式、 繼承、 資料繫結或其他機制，可變更屬性的值，不會執行屬性翻譯。  
@@ -54,66 +54,66 @@ ms.locfileid: "59088817"
 ## <a name="updates-to-parent-properties"></a>更新父屬性  
  大部分的父屬性的變更會造成裝載的子控制項的通知。 下列清單描述當其值變更時不會導致通知的屬性。  
   
--   <xref:System.Windows.Controls.Control.Background%2A>  
+- <xref:System.Windows.Controls.Control.Background%2A>  
   
--   <xref:System.Windows.FrameworkElement.Cursor%2A>  
+- <xref:System.Windows.FrameworkElement.Cursor%2A>  
   
--   <xref:System.Windows.FrameworkElement.ForceCursor%2A>  
+- <xref:System.Windows.FrameworkElement.ForceCursor%2A>  
   
--   <xref:System.Windows.UIElement.Visibility%2A>  
+- <xref:System.Windows.UIElement.Visibility%2A>  
   
  例如，如果您變更的值<xref:System.Windows.Controls.Control.Background%2A>的屬性<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目，<xref:System.Windows.Forms.Control.BackColor%2A>託管控制項的屬性不會變更。  
   
 ## <a name="property-mapping-with-the-elementhost-control"></a>使用 ElementHost 控制項的屬性對應  
  下列屬性會提供內建的變更通知。 請勿呼叫<xref:System.Windows.FrameworkElement.OnPropertyChanged%2A>方法時您會將這些屬性的對應：  
   
--   AutoSize  
+- AutoSize  
   
--   BackColor  
+- BackColor  
   
--   BackgroundImage  
+- BackgroundImage  
   
--   BackgroundImageLayout  
+- BackgroundImageLayout  
   
--   BindingContext  
+- BindingContext  
   
--   CausesValidation  
+- CausesValidation  
   
--   ContextMenu  
+- ContextMenu  
   
--   ContextMenuStrip  
+- ContextMenuStrip  
   
--   Cursor  
+- Cursor  
   
--   停駐  
+- 停駐  
   
--   已啟用  
+- 已啟用  
   
--   字型  
+- 字型  
   
--   ForeColor  
+- ForeColor  
   
--   位置  
+- 位置  
   
--   邊界  
+- 邊界  
   
--   與邊框距離  
+- 與邊框距離  
   
--   父代  
+- 父代  
   
--   區域  
+- 區域  
   
--   RightToLeft  
+- RightToLeft  
   
--   大小  
+- 大小  
   
--   TabIndex  
+- TabIndex  
   
--   TabStop  
+- TabStop  
   
--   文字  
+- 文字  
   
--   Visible  
+- Visible  
   
  <xref:System.Windows.Forms.Integration.ElementHost>控制項將轉譯的預設[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]屬性，以其[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]對等項目使用下列的轉譯表。  
   

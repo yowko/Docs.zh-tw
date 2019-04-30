@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
 ms.openlocfilehash: 1aac20c3f9c421d353938a83b9e321d35abd244e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033640"
 ---
 # <a name="how-to-store-and-reuse-queries"></a>HOW TO：儲存和重複使用查詢
 當您的應用程式會多次執行結構類似的查詢時，您藉由編譯查詢一次並使用不同的參數加以執行數次，通常可以提高效能。 例如，應用程式可能必須擷取位於特定城市的所有客戶，該城市是使用者於執行階段在表單中指定。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援使用*編譯的查詢*針對此目的。  

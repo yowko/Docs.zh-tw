@@ -13,22 +13,22 @@ helpviewer_keywords:
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
 ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967033"
 ---
 # <a name="data-binding-and-windows-forms"></a>資料繫結和 Windows Form
 在 Windows Forms 中，您不只可以繫結至傳統的資料來源，也能繫結至幾乎任何包含資料的結構。 您可以繫結程序至執行階段計算、從檔案讀取，或衍生自其他控制項之值的值陣列。  
   
  此外，您也可以將任何控制項的任何屬性繫結至資料來源。 在傳統資料繫結中，您通常將顯示屬性 — 例如 <xref:System.Windows.Forms.Control.Text%2A> 控制項的 <xref:System.Windows.Forms.TextBox> 屬性 — 繫結到資料來源。 使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，您也可以選擇透過繫結程序設定其他屬性。 您可以使用繫結來執行下列工作：  
   
--   設定影像控制項的圖形。  
+- 設定影像控制項的圖形。  
   
--   設定一或多個控制項的背景色彩。  
+- 設定一或多個控制項的背景色彩。  
   
--   設定控制項的大小。  
+- 設定控制項的大小。  
   
  基本上，資料繫結是在表單上自動設定任何控制項的任何執行階段可存取屬性的方法。  
   

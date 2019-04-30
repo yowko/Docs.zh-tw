@@ -3,11 +3,11 @@ title: 延後的執行範例 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
 ms.openlocfilehash: 29f118b3e6d49840b94277f17858f1339f2fb08c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977622"
 ---
 # <a name="deferred-execution-example-visual-basic"></a>延後的執行範例 (Visual Basic)
 本主題顯示延後執行與延遲評估如何影響您 LINQ to XML 查詢的執行。  

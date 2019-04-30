@@ -13,11 +13,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
 ms.openlocfilehash: 7f6bf1703a6536f4d22b3a2fbe412579c59d39dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973767"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>逐步解說：在 Windows Forms DataGridView 控制項中實作虛擬模式
 當您想要顯示非常大量的中的表格式資料的地方<xref:System.Windows.Forms.DataGridView>控制項，您可以設定<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>屬性設`true`並明確地管理其資料存放區的控制項的互動。 這可讓您微調控制項在此情況下的效能。  
@@ -112,16 +112,16 @@ ms.locfileid: "59344321"
   
 #### <a name="to-test-the-form"></a>若要測試表單  
   
--   編譯並執行應用程式。  
+- 編譯並執行應用程式。  
   
      您會看到<xref:System.Windows.Forms.DataGridView>控制項填入三個客戶記錄。 您可以修改資料列中的多個儲存格的值，並在編輯模式中的兩倍，另一次編輯模式，以還原為其原始值的整個資料列之外，請按下 esc 鍵。 當您修改、 新增或刪除資料列，在控制項中，`Customer`修改、 新增或刪除資料存放區中的物件。  
   
 ## <a name="next-steps"></a>後續步驟  
  此應用程式可讓您實作虛擬模式中的，您必須處理的事件的基本了解<xref:System.Windows.Forms.DataGridView>控制項。 您可以改善此基本的應用程式，在數種方式：  
   
--   實作外部的資料庫中的值會快取的資料存放區。 快取應擷取並捨棄視需要的值，使其只包含所需取用少量的記憶體用戶端電腦上時顯示。  
+- 實作外部的資料庫中的值會快取的資料存放區。 快取應擷取並捨棄視需要的值，使其只包含所需取用少量的記憶體用戶端電腦上時顯示。  
   
--   微調效能的資料存放區，根據您的需求。 例如，您可以藉由使用較大的快取大小和減少資料庫的查詢數目補償低速網路連線，而不是用戶端電腦的記憶體限制。  
+- 微調效能的資料存放區，根據您的需求。 例如，您可以藉由使用較大的快取大小和減少資料庫的查詢數目補償低速網路連線，而不是用戶端電腦的記憶體限制。  
   
  如需有關快取從外部資料庫的值的詳細資訊，請參閱[How to:實作虛擬模式，以在 Just-in-time 資料載入，在 Windows Form DataGridView 控制項](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)。  
   

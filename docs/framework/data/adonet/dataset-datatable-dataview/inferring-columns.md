@@ -3,11 +3,11 @@ title: 推斷資料行
 ms.date: 03/30/2017
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
 ms.openlocfilehash: 53e77f624c5af8f61a32d5b1399d2728f32011a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034277"
 ---
 # <a name="inferring-columns"></a>推斷資料行
 ADO.NET 從 XML 文件中判斷要將哪些項目推斷成 <xref:System.Data.DataSet> 的資料表後，接著就會推斷這些資料表的資料行。 ADO.NET 2.0 導入了新結構描述推斷引擎，可推斷每個強型別的資料型別**simpleType**項目。 在舊版中中的資料型別推斷**simpleType**項目向來**xsd: string**。  

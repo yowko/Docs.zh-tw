@@ -6,35 +6,35 @@ dev_langs:
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
 ms.openlocfilehash: b6778522b5757c0ece899f7465d3ab500038fc49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037033"
 ---
 # <a name="serialization"></a>序列化
 本主題描述[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]序列化功能。 後續段落會提供有關如何在設計階段的程式碼產生期間加入序列化以及 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 類別 (Class) 的執行階段序列化行為。  
   
  您可以透過下列其中一種方法，在設計階段加入序列化程式碼：  
   
--   在  [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]，變更**序列化模式**屬性設**單向**。  
+- 在  [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]，變更**序列化模式**屬性設**單向**。  
   
--   在 SQLMetal 命令列中，新增 **/serialization**選項。 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
+- 在 SQLMetal 命令列中，新增 **/serialization**選項。 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
   
 ## <a name="overview"></a>總覽  
  產生的程式碼[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]預設會提供延後的載入功能。 在視需要透明載入資料的中介層中，延後載入非常方便。 但是，由於不論是否需要延後載入，序列化程式都會觸發延後載入，所以序列化會有問題。 事實上，序列化物件後，在所有傳出延後載入的參考之下的遞移封閉 (Transitive Closure) 也已序列化。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]序列化功能會處理這個問題，主要是透過兩種機制：  
   
--   用於關閉延後載入的 <xref:System.Data.Linq.DataContext> 模式 (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>)。 如需詳細資訊，請參閱<xref:System.Data.Linq.DataContext>。  
+- 用於關閉延後載入的 <xref:System.Data.Linq.DataContext> 模式 (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>)。 如需詳細資訊，請參閱<xref:System.Data.Linq.DataContext>。  
   
--   程式碼產生參數，用在產生的實體上產生 <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> 和 <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> 屬性 (Attribute)。 這個方面 (包含序列化之下延後載入類別的行為) 為本主題的主旨。  
+- 程式碼產生參數，用在產生的實體上產生 <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> 和 <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> 屬性 (Attribute)。 這個方面 (包含序列化之下延後載入類別的行為) 為本主題的主旨。  
   
 ### <a name="definitions"></a>定義  
   
--   *DataContract 序列化程式*:預設為.NET Framework 3.0 或更新版本的 Windows Communication Framework (WCF) 元件所使用的序列化程式。  
+- *DataContract 序列化程式*:預設為.NET Framework 3.0 或更新版本的 Windows Communication Framework (WCF) 元件所使用的序列化程式。  
   
--   *單向序列化*:包含僅單向關聯屬性 （以避免循環） 之類別的序列化的版本。 依照慣例，主索引鍵-外部索引鍵關聯性之父端上的屬性 (Poperty) 會標記為即將序列化。 雙向關聯中的另一端則不會序列化。  
+- *單向序列化*:包含僅單向關聯屬性 （以避免循環） 之類別的序列化的版本。 依照慣例，主索引鍵-外部索引鍵關聯性之父端上的屬性 (Poperty) 會標記為即將序列化。 雙向關聯中的另一端則不會序列化。  
   
      單向序列化是 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 唯一支援的序列化類型。  
   

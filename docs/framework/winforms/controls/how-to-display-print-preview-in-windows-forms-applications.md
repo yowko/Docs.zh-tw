@@ -11,11 +11,11 @@ helpviewer_keywords:
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
 ms.openlocfilehash: 22247c941eff575f0f3e5683e46376054ba13bb5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013409"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>HOW TO：在 Windows Forms 應用程式中顯示預覽列印
 您可以使用<xref:System.Windows.Forms.PrintPreviewDialog>控制項，讓使用者以顯示文件，通常要列印之前。  
@@ -29,7 +29,7 @@ ms.locfileid: "59154358"
   
 ### <a name="to-view-pages-using-the-printpreviewdialog-control"></a>若要檢視使用 PrintPreviewDialog 控制項的頁面  
   
--   使用 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 方法顯示對話方塊，並指定要使用的 <xref:System.Drawing.Printing.PrintDocument> 。  
+- 使用 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 方法顯示對話方塊，並指定要使用的 <xref:System.Drawing.Printing.PrintDocument> 。  
   
      在下列程式碼範例中，<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件處理常式會開啟的執行個體<xref:System.Windows.Forms.PrintPreviewDialog>控制項。 列印文件中指定<xref:System.Windows.Forms.PrintDialog.Document%2A>屬性。 在下列範例中，指定不列印的文件。  
   

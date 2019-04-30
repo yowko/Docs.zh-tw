@@ -3,11 +3,11 @@ title: 發行與擷取自訂繫結上的中繼資料
 ms.date: 03/30/2017
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
 ms.openlocfilehash: 33777358262465e9ecbadd75df8abf066bafcd01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991207"
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>發行與擷取自訂繫結上的中繼資料
 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 提供新增中繼資料端點到服務的支援。 這些中繼資料端點可以回應 HTTP GET 要求，在具有 URL `?wsdl` querystring 和 Ws-transfer GET 要求 Ws-metadataexchange (MEX) 規格中所定義。 MEX 端點會實作 <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> 合約。  

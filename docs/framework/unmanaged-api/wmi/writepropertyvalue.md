@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a98103367f497b18f9b8fbd61a37abf9816b8356
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62040400"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue 函式
 將指定的位元組數目寫入到屬性控制代碼所指定的屬性中。

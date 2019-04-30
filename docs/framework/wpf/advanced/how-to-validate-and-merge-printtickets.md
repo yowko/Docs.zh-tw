@@ -11,11 +11,11 @@ helpviewer_keywords:
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
 ms.openlocfilehash: be8b299c99515394bc676cfd7a715cb82ac4d58c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051100"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>HOW TO：驗證和合併 PrintTicket
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [列印結構描述](https://go.microsoft.com/fwlink/?LinkId=186397)包括有彈性且可延伸<xref:System.Printing.PrintCapabilities>和<xref:System.Printing.PrintTicket>項目。 前者的逐項列出列印裝置的功能，後者則指定裝置應該如何使用這些功能對於特定的一連串的文件、 個別的文件或個別的頁面。  

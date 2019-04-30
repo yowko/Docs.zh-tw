@@ -14,11 +14,11 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
 ms.openlocfilehash: 2c1c3d8529662c1e1f1a3d28e3853d31f5d940ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054272"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>HOW TO：定義工具列按鈕的圖示
 > [!NOTE]

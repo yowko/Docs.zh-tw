@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
 ms.openlocfilehash: b3f333f1714a66a8ff462000385af92cf343a19e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050593"
 ---
 # <a name="delegates-visual-basic"></a>委派 (Visual Basic)
 
@@ -64,7 +64,7 @@ ms.locfileid: "57674025"
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|標題|說明|
 |-----------|-----------------|
 |[如何：叫用委派方法](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)|提供範例，示範如何將方法和委派產生關聯，然後透過委派叫用該方法。|
 |[如何：傳遞至另一個程序，在 Visual Basic 中的程序](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|示範如何使用委派，將一個程序傳遞至另一個程序。|

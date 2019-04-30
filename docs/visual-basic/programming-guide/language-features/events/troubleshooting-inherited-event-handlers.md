@@ -9,11 +9,11 @@ helpviewer_keywords:
 - event handlers, troubleshooting
 ms.assetid: e1c8759f-5370-4308-8476-8c48b73509bf
 ms.openlocfilehash: 704ca667a6d14ade7be0192e872f5e40791cb864
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053804"
 ---
 # <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a>Visual Basic 中的繼承事件處理常式疑難排解
 本主題列出常見的問題所引發的繼承元件中的事件處理常式。  
@@ -22,11 +22,11 @@ ms.locfileid: "58830184"
   
 #### <a name="code-in-event-handler-executes-twice-for-every-call"></a>事件處理常式中的程式碼會執行兩次的每個呼叫  
   
--   不能包含繼承的事件處理常式[處理](../../../../visual-basic/language-reference/statements/handles-clause.md)子句。 基底類別中的方法已與事件相關聯，並據此將會引發。 移除`Handles`子句從繼承的方法。  
+- 不能包含繼承的事件處理常式[處理](../../../../visual-basic/language-reference/statements/handles-clause.md)子句。 基底類別中的方法已與事件相關聯，並據此將會引發。 移除`Handles`子句從繼承的方法。  
   
      [!code-vb[VbVbalrEvents#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#32)]  
   
--   如果繼承的方法沒有`Handles`關鍵字，確認您的程式碼不包含額外[AddHandler 陳述式](../../../../visual-basic/language-reference/statements/addhandler-statement.md)或任何其他方法處理相同的事件。  
+- 如果繼承的方法沒有`Handles`關鍵字，確認您的程式碼不包含額外[AddHandler 陳述式](../../../../visual-basic/language-reference/statements/addhandler-statement.md)或任何其他方法處理相同的事件。  
   
 ## <a name="see-also"></a>另請參閱
 

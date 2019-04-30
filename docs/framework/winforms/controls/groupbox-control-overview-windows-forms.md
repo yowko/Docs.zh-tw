@@ -8,11 +8,11 @@ helpviewer_keywords:
 - grouping controls [Windows Forms], Windows Forms
 ms.assetid: 03bd8ff9-c905-4f01-9bc6-8438b11d0881
 ms.openlocfilehash: ba3361c8477cf72031296651af022bac3ac90281
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971284"
 ---
 # <a name="groupbox-control-overview-windows-forms"></a>GroupBox 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.GroupBox>控制項可用來提供其他控制項的可識別分組。 一般而言，您可以使用群組方塊細分函式的表單。 例如，您可能會指定郵寄的選項，例如要使用哪一個隔夜承運商的訂單表單。 將群組方塊中的所有選項，可讓使用者邏輯的視覺提示，並在設計階段的所有控制項都可以輕鬆地都移動，當您移動單一<xref:System.Windows.Forms.GroupBox>控制所有其包含的控制項移動，太。  

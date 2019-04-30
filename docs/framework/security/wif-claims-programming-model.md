@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
 ms.openlocfilehash: 543db91eaa058a87cfe579a23abb710f21ec1b85
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953581"
 ---
 # <a name="wif-claims-programming-model"></a>WIF 宣告程式設計模型
 ASP.NET 和 Windows Communication Foundation (WCF) 的開發人員通常會使用身分識別和 IPrincipal 介面來處理使用者的身分識別資訊。 在 .NET 4.5 中，Windows Identity Foundation (WIF) 已經過整合，使得目前任何主體一律都存在宣告，如下圖所示：

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
 ms.openlocfilehash: 72ef84cb53c6eff1fc2fb9459b40e780869243a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023776"
 ---
 # <a name="binding-sources-overview"></a>繫結來源概觀
 在資料繫結中，繫結來源物件是指您取得資料的來源物件。 本主題討論可以當做繫結來源的物件類型。  
@@ -42,13 +42,13 @@ ms.locfileid: "59145921"
 ### <a name="other-characteristics"></a>其他特性  
  下列清單提供必須注意的其他重點：  
   
--   如果要在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中建立物件，此類別必須擁有預設建構函式。 在某些[!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)]語言，例如C#，可能會為您建立的預設建構函式。  
+- 如果要在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中建立物件，此類別必須擁有預設建構函式。 在某些[!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)]語言，例如C#，可能會為您建立的預設建構函式。  
   
--   要當做繫結之繫結來源屬性的屬性必須是類別的公用屬性。 明確定義的介面屬性不能做為繫結之用，而沒有基底實作的受保護、私用、內部或虛擬屬性同樣也不能做為繫結之用。  
+- 要當做繫結之繫結來源屬性的屬性必須是類別的公用屬性。 明確定義的介面屬性不能做為繫結之用，而沒有基底實作的受保護、私用、內部或虛擬屬性同樣也不能做為繫結之用。  
   
--   您不能繫結至公用欄位。  
+- 您不能繫結至公用欄位。  
   
--   在類別中宣告的屬性，其型別就是傳遞至繫結的型別。 不過，繫結最終使用的型別需視繫結目標屬性 (而非繫結來源屬性) 的型別而定。 如果型別不同，您可能需要撰寫轉換器來處理自訂屬性一開始傳遞到繫結的方式。 如需詳細資訊，請參閱<xref:System.Windows.Data.IValueConverter>。  
+- 在類別中宣告的屬性，其型別就是傳遞至繫結的型別。 不過，繫結最終使用的型別需視繫結目標屬性 (而非繫結來源屬性) 的型別而定。 如果型別不同，您可能需要撰寫轉換器來處理自訂屬性一開始傳遞到繫結的方式。 如需詳細資訊，請參閱<xref:System.Windows.Data.IValueConverter>。  
   
 <a name="objects"></a>   
 ## <a name="using-entire-objects-as-a-binding-source"></a>使用整個物件做為繫結來源  
@@ -80,11 +80,11 @@ ms.locfileid: "59145921"
   
  這個表格說明資料繫結中使用權限需求的下列相關重點：  
   
--   對於 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 屬性，只要繫結引擎能夠使用反映來存取繫結來源屬性，資料繫結就有作用。 否則，繫結引擎將會發出找不到屬性的警告，並使用後援值或預設值 (如果有的話)。  
+- 對於 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 屬性，只要繫結引擎能夠使用反映來存取繫結來源屬性，資料繫結就有作用。 否則，繫結引擎將會發出找不到屬性的警告，並使用後援值或預設值 (如果有的話)。  
   
--   您可以繫結至在編譯階段或執行階段定義之動態物件上的屬性。  
+- 您可以繫結至在編譯階段或執行階段定義之動態物件上的屬性。  
   
--   您永遠都可以繫結至相依性屬性。  
+- 您永遠都可以繫結至相依性屬性。  
   
  [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 繫結也有類似的使用權限需求。 在部分信任沙箱，<xref:System.Windows.Data.XmlDataProvider>它並沒有指定的資料存取權限時失敗。  
   

@@ -3,11 +3,11 @@ title: 類型擴充
 description: 了解如何F#類型擴充功能可讓您將新成員加入先前定義的物件類型。
 ms.date: 02/08/2019
 ms.openlocfilehash: 69fb3b771b5334c5771f2ac75341b38c1dad5b90
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982601"
 ---
 # <a name="type-extensions"></a>類型擴充功能
 

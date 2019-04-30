@@ -3,22 +3,22 @@ title: 自訂 WSDL 發行物
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
 ms.openlocfilehash: 2085c145a58ecaa4ad2dd8ffbd6933b92e735a6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990583"
 ---
 # <a name="custom-wsdl-publication"></a>自訂 WSDL 發行物
 這個範例會示範如何：  
   
--   實作自訂 <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 屬性 (Attribute) 上的 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>，以便將屬性 (Attribute) 的屬性 (Property) 匯出為 WSDL 附註。  
+- 實作自訂 <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 屬性 (Attribute) 上的 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>，以便將屬性 (Attribute) 的屬性 (Property) 匯出為 WSDL 附註。  
   
--   實作 <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> 以匯入自訂 WSDL 附註。  
+- 實作 <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> 以匯入自訂 WSDL 附註。  
   
--   在自訂合約行為和自訂作業行為上分別實作 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType>，將匯入的附註寫入為 CodeDOM 中的註解，以用於匯入的合約和作業。  
+- 在自訂合約行為和自訂作業行為上分別實作 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType>，將匯入的附註寫入為 CodeDOM 中的註解，以用於匯入的合約和作業。  
   
--   使用<xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>來下載 WSDL、<xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>匯入使用自訂的 WSDL 匯入工具，和<xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType>產生 Windows Communication Foundation (WCF) 用戶端程式碼具有 WSDL 附註做 / / 和 '' C# 和 Visual 中的註解基本的。  
+- 使用<xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>來下載 WSDL、<xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>匯入使用自訂的 WSDL 匯入工具，和<xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType>產生 Windows Communication Foundation (WCF) 用戶端程式碼具有 WSDL 附註做 / / 和 '' C# 和 Visual 中的註解基本的。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  

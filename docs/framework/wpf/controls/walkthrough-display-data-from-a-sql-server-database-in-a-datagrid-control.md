@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
 ms.openlocfilehash: 274ec2e8ef16190da53061bb197bc3b1a1fadcf8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024057"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>逐步解說：DataGrid 控制項中顯示資料從 SQL Server 資料庫
 
@@ -23,9 +23,9 @@ ms.locfileid: "59336105"
 
 您需要下列元件才能完成此逐步解說：
 
--   Visual Studio。
+- Visual Studio。
 
--   SQL Server 或 SQL Server Express 具有 AdventureWorks 範例資料庫會附加至它的執行個體的存取。 您可以下載的 AdventureWorks 資料庫[GitHub](https://github.com/Microsoft/sql-server-samples/releases)。
+- SQL Server 或 SQL Server Express 具有 AdventureWorks 範例資料庫會附加至它的執行個體的存取。 您可以下載的 AdventureWorks 資料庫[GitHub](https://github.com/Microsoft/sql-server-samples/releases)。
 
 ## <a name="create-entity-classes"></a>建立實體類別
 

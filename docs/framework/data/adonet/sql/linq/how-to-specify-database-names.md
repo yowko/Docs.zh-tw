@@ -3,11 +3,11 @@ title: HOW TO：指定資料庫名稱
 ms.date: 03/30/2017
 ms.assetid: b80f0fd2-7f75-45fe-9e12-496f80f183df
 ms.openlocfilehash: a43a7ac541adb984eeb8bb88b7ab96db86baf26c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037566"
 ---
 # <a name="how-to-specify-database-names"></a>HOW TO：指定資料庫名稱
 在 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 (Attribute) 上使用 <xref:System.Data.Linq.Mapping.DatabaseAttribute> 屬性 (Property)，可在連接未提供名稱時指定資料庫名稱。  

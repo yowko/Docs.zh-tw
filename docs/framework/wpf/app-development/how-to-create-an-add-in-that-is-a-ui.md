@@ -10,11 +10,11 @@ helpviewer_keywords:
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
 ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947884"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>HOW TO：建立本身為 UI 的增益集
 此範例示範如何建立增益集是 Windows Presentation Foundation (WPF) 所裝載的 WPF 獨立應用程式。  
@@ -25,9 +25,9 @@ ms.locfileid: "59100297"
   
  此範例會反白顯示 啟用此案例中，WPF 擴充功能至.NET Framework 增益集模型，並假設如下：  
   
--   .NET Framework 增益集模型，包括管線、 增益集和主應用程式開發的知識。 如果您不熟悉這些概念，請參閱[增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。 如需示範管線、 增益集，和主應用程式的實作的教學課程，請參閱[逐步解說：建立可延伸應用程式](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))。  
+- .NET Framework 增益集模型，包括管線、 增益集和主應用程式開發的知識。 如果您不熟悉這些概念，請參閱[增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。 如需示範管線、 增益集，和主應用程式的實作的教學課程，請參閱[逐步解說：建立可延伸應用程式](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))。  
   
--   .NET Framework 增益集模型的 WPF 延伸模組的知識。 請參閱[WPF 增益集概觀](wpf-add-ins-overview.md)。  
+- .NET Framework 增益集模型的 WPF 延伸模組的知識。 請參閱[WPF 增益集概觀](wpf-add-ins-overview.md)。  
   
 ## <a name="example"></a>範例  
  若要建立為 WPF UI 的增益集需要特定的程式碼的每個管線區段、 增益集，和主應用程式。  
@@ -87,9 +87,9 @@ ms.locfileid: "59100297"
   
  處理增益集 UI 互動的程式碼會執行增益集的應用程式定義域中。 這些互動包括：  
   
--   處理<xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
+- 處理<xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
   
--   顯示<xref:System.Windows.MessageBox>。  
+- 顯示<xref:System.Windows.MessageBox>。  
   
  此活動完全與主應用程式隔離。  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
 ms.openlocfilehash: e68cf69830aef88f46ff2e288c5aad548db39bdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032372"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>用戶端 UI 自動化提供者實作
 > [!NOTE]
@@ -39,13 +39,13 @@ ms.locfileid: "59224454"
   
  藉由使用 <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviders%2A>，註冊用戶端本身程式碼中實作的提供者。 這個方法會採用 <xref:System.Windows.Automation.ClientSideProviderDescription> 結構陣列做為引數，每個結構會指定下列屬性：  
   
--   回呼函式，會建立提供者物件。  
+- 回呼函式，會建立提供者物件。  
   
--   提供者將服務之控制項的類別名稱。  
+- 提供者將服務之控制項的類別名稱。  
   
--   提供者將服務之應用程式的映像名稱 (通常是可執行檔的完整名稱)。  
+- 提供者將服務之應用程式的映像名稱 (通常是可執行檔的完整名稱)。  
   
--   管理類別名稱與目標應用程式中找到之視窗類別比對方式的旗標。  
+- 管理類別名稱與目標應用程式中找到之視窗類別比對方式的旗標。  
   
  最後兩個參數為選擇性的。 當用戶端要針對不同應用程式使用不同提供者時，它可以指定目標應用程式的映像名稱。 例如，在支援多個檢視模式的已知應用程式中，用戶端可以針對 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 清單檢視控制項使用一個提供者，而在另一個不支援多個檢視模式的已知應用程式中，則針對類似控制項使用另一個提供者。  
   

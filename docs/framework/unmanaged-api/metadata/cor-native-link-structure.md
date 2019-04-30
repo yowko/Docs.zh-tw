@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7024140ed9b870b5db38dba7e9b13321dd37386a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046159"
 ---
 # <a name="cornativelink-structure"></a>COR_NATIVE_LINK 結構
 包含用來連結原生程式碼的資訊。  

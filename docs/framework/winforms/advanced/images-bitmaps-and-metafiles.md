@@ -8,16 +8,14 @@ helpviewer_keywords:
 - Windows Forms, images
 ms.assetid: 7152b45b-a55c-49bc-8c78-ae002a844f71
 ms.openlocfilehash: 2ce19642b37946db7a172e61004688059dba61db
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003934"
 ---
 # <a name="images-bitmaps-and-metafiles"></a>影像、點陣圖和中繼檔
-
-  `Image` 類別為抽象基底類別，提供使用點陣影像 (點陣圖) 和向量影像 (中繼檔) 的方法。 `Bitmap` 類別和 <xref:System.Drawing.Imaging.Metafile> 類別都是繼承自 `Image` 類別。 `Bitmap` 類別透過提供載入、儲存和管理點陣影像的其他方法，來擴充 `Image` 類別的功能。 
-  <xref:System.Drawing.Imaging.Metafile> 類別透過提供記錄和檢查向量影像的其他方法，來擴充 `Image` 類別的功能。  
+`Image` 類別為抽象基底類別，提供使用點陣影像 (點陣圖) 和向量影像 (中繼檔) 的方法。 `Bitmap` 類別和 <xref:System.Drawing.Imaging.Metafile> 類別都是繼承自 `Image` 類別。 `Bitmap` 類別透過提供載入、儲存和管理點陣影像的其他方法，來擴充 `Image` 類別的功能。 <xref:System.Drawing.Imaging.Metafile> 類別透過提供記錄和檢查向量影像的其他方法，來擴充 `Image` 類別的功能。  
   
 ## <a name="in-this-section"></a>本節內容  
  [點陣圖類型](types-of-bitmaps.md)  

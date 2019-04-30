@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 543a8015e944333942b619060059273577902a74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986332"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap 方法
 取得自訂屬性，根據其名稱。 不同於中繼資料的自訂屬性，這些屬性會保存在符號存放區。  

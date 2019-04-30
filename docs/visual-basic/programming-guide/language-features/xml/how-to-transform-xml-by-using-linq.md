@@ -6,11 +6,11 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
 ms.openlocfilehash: c34d3988c89e0ce07676e9181200fc039010b50a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028430"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>HOW TO：將 XML 轉換使用 LINQ (Visual Basic)
 [XML 常值](../../../../visual-basic/language-reference/xml-literals/index.md)輕鬆地從一個來源讀取 XML 並將其轉換為新的 XML 格式。 您可以利用 LINQ 查詢來擷取要轉換的內容，或將現有的文件中的內容變更為新的 XML 格式。  

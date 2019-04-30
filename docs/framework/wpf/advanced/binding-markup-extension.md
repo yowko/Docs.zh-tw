@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
 ms.openlocfilehash: 3455c7ccdedb432fc05c7dc9e80f0f7509f4fa0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010679"
 ---
 # <a name="binding-markup-extension"></a>繫結標記延伸
 延遲是資料繫結的值，建立中繼運算式物件，並解譯會套用至項目和其在執行階段的繫結的資料內容的屬性值。  
@@ -54,55 +54,55 @@ ms.locfileid: "59170309"
   
  有幾個屬性值需要不支援原生型別轉換的文字語法中 XAML，並因此需要標記延伸模組，以便設定做為屬性值的物件類型。 檢查 XAML 屬性使用方式區段，在.NET Framework 類別庫，針對每個屬性，如需詳細資訊;使用 XAML 屬性語法，與字串或沒有進一步的標記延伸使用方式基本上就是您在中指定的值相同`Binding`運算式，與未放置引號括住每個例外狀況`bindProp` =`value`在`Binding`運算式。  
   
--   <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>： 識別可能的繫結群組的字串。 這是相當進階的繫結的概念;請參閱參考頁面<xref:System.Windows.Data.BindingBase.BindingGroupName%2A>。  
+- <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>： 識別可能的繫結群組的字串。 這是相當進階的繫結的概念;請參閱參考頁面<xref:System.Windows.Data.BindingBase.BindingGroupName%2A>。  
   
--   <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>：布林值，可以是`true`或`false`。 預設為 `false`。  
+- <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>：布林值，可以是`true`或`false`。 預設為 `false`。  
   
--   <xref:System.Windows.Data.Binding.Converter%2A>： 可設定為`bindProp` = `value`字串，在運算式中，但若要這樣做需要物件參考的值，例如[StaticResource 標記延伸](staticresource-markup-extension.md)。 在此情況下為自訂轉換子類別的執行個體。  
+- <xref:System.Windows.Data.Binding.Converter%2A>： 可設定為`bindProp` = `value`字串，在運算式中，但若要這樣做需要物件參考的值，例如[StaticResource 標記延伸](staticresource-markup-extension.md)。 在此情況下為自訂轉換子類別的執行個體。  
   
--   <xref:System.Windows.Data.Binding.ConverterCulture%2A>： 可在運算式中的標準為基礎的識別項; 與設定請參閱參考主題<xref:System.Windows.Data.Binding.ConverterCulture%2A>。  
+- <xref:System.Windows.Data.Binding.ConverterCulture%2A>： 可在運算式中的標準為基礎的識別項; 與設定請參閱參考主題<xref:System.Windows.Data.Binding.ConverterCulture%2A>。  
   
--   <xref:System.Windows.Data.Binding.ConverterParameter%2A>： 可設定為`bindProp` = `value`字串運算式，但這是取決於所傳遞的參數類型。 這種使用方式傳遞參考型別值，如果要求物件參考，例如巢狀[StaticResource 標記延伸](staticresource-markup-extension.md)。  
+- <xref:System.Windows.Data.Binding.ConverterParameter%2A>： 可設定為`bindProp` = `value`字串運算式，但這是取決於所傳遞的參數類型。 這種使用方式傳遞參考型別值，如果要求物件參考，例如巢狀[StaticResource 標記延伸](staticresource-markup-extension.md)。  
   
--   <xref:System.Windows.Data.Binding.ElementName%2A>： 與互斥<xref:System.Windows.Data.Binding.RelativeSource%2A>和<xref:System.Windows.Data.Binding.Source%2A>; 每個這些繫結屬性代表特定的繫結方法。 請參閱[資料繫結概觀](../data/data-binding-overview.md)。  
+- <xref:System.Windows.Data.Binding.ElementName%2A>： 與互斥<xref:System.Windows.Data.Binding.RelativeSource%2A>和<xref:System.Windows.Data.Binding.Source%2A>; 每個這些繫結屬性代表特定的繫結方法。 請參閱[資料繫結概觀](../data/data-binding-overview.md)。  
   
--   <xref:System.Windows.Data.BindingBase.FallbackValue%2A>： 可設定為`bindProp` = `value`字串運算式，但這是取決於所傳遞的值類型。 如果傳遞參考類型，需要物件參考，例如巢狀[StaticResource 標記延伸](staticresource-markup-extension.md)。  
+- <xref:System.Windows.Data.BindingBase.FallbackValue%2A>： 可設定為`bindProp` = `value`字串運算式，但這是取決於所傳遞的值類型。 如果傳遞參考類型，需要物件參考，例如巢狀[StaticResource 標記延伸](staticresource-markup-extension.md)。  
   
--   <xref:System.Windows.Data.Binding.IsAsync%2A>：布林值，可以是`true`或`false`。 預設為 `false`。  
+- <xref:System.Windows.Data.Binding.IsAsync%2A>：布林值，可以是`true`或`false`。 預設為 `false`。  
   
--   <xref:System.Windows.Data.Binding.Mode%2A>:*值*是常數的名稱從<xref:System.Windows.Data.BindingMode>列舉型別。 例如， `{Binding Mode=OneWay}` 。  
+- <xref:System.Windows.Data.Binding.Mode%2A>:*值*是常數的名稱從<xref:System.Windows.Data.BindingMode>列舉型別。 例如， `{Binding Mode=OneWay}` 。  
   
--   <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>：布林值，可以是`true`或`false`。 預設為 `false`。  
+- <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>：布林值，可以是`true`或`false`。 預設為 `false`。  
   
--   <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>：布林值，可以是`true`或`false`。 預設為 `false`。  
+- <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>：布林值，可以是`true`或`false`。 預設為 `false`。  
   
--   <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>：布林值，可以是`true`或`false`。 預設為 `false`。  
+- <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>：布林值，可以是`true`或`false`。 預設為 `false`。  
   
--   <xref:System.Windows.Data.Binding.Path%2A>： 描述將資料物件或一種一般的物件模型路徑的字串。 格式會提供數個不同的慣例，可周遊無法適當地描述本主題中的物件模型。 請參閱[PropertyPath XAML 語法](propertypath-xaml-syntax.md)。  
+- <xref:System.Windows.Data.Binding.Path%2A>： 描述將資料物件或一種一般的物件模型路徑的字串。 格式會提供數個不同的慣例，可周遊無法適當地描述本主題中的物件模型。 請參閱[PropertyPath XAML 語法](propertypath-xaml-syntax.md)。  
   
--   <xref:System.Windows.Data.Binding.RelativeSource%2A>： 與互斥<xref:System.Windows.Data.Binding.ElementName%2A>和<xref:System.Windows.Data.Binding.Source%2A>; 每個這些繫結屬性代表特定的繫結方法。 請參閱[資料繫結概觀](../data/data-binding-overview.md)。 需要的巢狀[RelativeSource 標記延伸](relativesource-markupextension.md)使用量，以指定的值。  
+- <xref:System.Windows.Data.Binding.RelativeSource%2A>： 與互斥<xref:System.Windows.Data.Binding.ElementName%2A>和<xref:System.Windows.Data.Binding.Source%2A>; 每個這些繫結屬性代表特定的繫結方法。 請參閱[資料繫結概觀](../data/data-binding-overview.md)。 需要的巢狀[RelativeSource 標記延伸](relativesource-markupextension.md)使用量，以指定的值。  
   
--   <xref:System.Windows.Data.Binding.Source%2A>： 與互斥<xref:System.Windows.Data.Binding.RelativeSource%2A>和<xref:System.Windows.Data.Binding.ElementName%2A>; 每個這些繫結屬性代表特定的繫結方法。 請參閱[資料繫結概觀](../data/data-binding-overview.md)。 通常需要巢狀擴充功能使用方式[StaticResource 標記延伸](staticresource-markup-extension.md)索引鍵的資源字典中的參考物件資料來源。  
+- <xref:System.Windows.Data.Binding.Source%2A>： 與互斥<xref:System.Windows.Data.Binding.RelativeSource%2A>和<xref:System.Windows.Data.Binding.ElementName%2A>; 每個這些繫結屬性代表特定的繫結方法。 請參閱[資料繫結概觀](../data/data-binding-overview.md)。 通常需要巢狀擴充功能使用方式[StaticResource 標記延伸](staticresource-markup-extension.md)索引鍵的資源字典中的參考物件資料來源。  
   
--   <xref:System.Windows.Data.BindingBase.StringFormat%2A>： 描述繫結資料的字串格式慣例的字串。 這是相當進階的繫結的概念;請參閱參考頁面<xref:System.Windows.Data.BindingBase.StringFormat%2A>。  
+- <xref:System.Windows.Data.BindingBase.StringFormat%2A>： 描述繫結資料的字串格式慣例的字串。 這是相當進階的繫結的概念;請參閱參考頁面<xref:System.Windows.Data.BindingBase.StringFormat%2A>。  
   
--   <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>： 可設定為`bindProp` = `value`字串運算式，但這是取決於所傳遞的參數類型。 如果傳遞參考類型的值，需要物件參考，例如巢狀[StaticResource 標記延伸](staticresource-markup-extension.md)。  
+- <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>： 可設定為`bindProp` = `value`字串運算式，但這是取決於所傳遞的參數類型。 如果傳遞參考類型的值，需要物件參考，例如巢狀[StaticResource 標記延伸](staticresource-markup-extension.md)。  
   
--   <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>:*值*是常數的名稱從<xref:System.Windows.Data.UpdateSourceTrigger>列舉型別。 例如， `{Binding UpdateSourceTrigger=LostFocus}` 。 特定控制項可能會有不同的預設值，這個繫結屬性。 請參閱 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>。  
+- <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>:*值*是常數的名稱從<xref:System.Windows.Data.UpdateSourceTrigger>列舉型別。 例如， `{Binding UpdateSourceTrigger=LostFocus}` 。 特定控制項可能會有不同的預設值，這個繫結屬性。 請參閱 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>。  
   
--   <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>：布林值，可以是`true`或`false`。 預設為 `false`。 請參閱＜備註＞。  
+- <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>：布林值，可以是`true`或`false`。 預設為 `false`。 請參閱＜備註＞。  
   
--   <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>：布林值，可以是`true`或`false`。 預設為 `false`。 請參閱＜備註＞。  
+- <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>：布林值，可以是`true`或`false`。 預設為 `false`。 請參閱＜備註＞。  
   
--   <xref:System.Windows.Data.Binding.XPath%2A>： 描述 XML 資料來源的 XMLDOM 路徑的字串。 請參閱[繫結至 XML 資料使用 XMLDataProvider 和 XPath 查詢](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。  
+- <xref:System.Windows.Data.Binding.XPath%2A>： 描述 XML 資料來源的 XMLDOM 路徑的字串。 請參閱[繫結至 XML 資料使用 XMLDataProvider 和 XPath 查詢](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。  
   
  以下是屬性<xref:System.Windows.Data.Binding>，無法使用來設定`Binding`標記延伸模組 /`{Binding}`運算式格式。  
   
--   <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>： 這個屬性所預期的回呼實作的參考。 XAML 語法中不得參考非事件處理常式的回呼/方法。  
+- <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>： 這個屬性所預期的回呼實作的參考。 XAML 語法中不得參考非事件處理常式的回呼/方法。  
   
--   <xref:System.Windows.Data.Binding.ValidationRules%2A>： 此屬性會採用的泛型集合<xref:System.Windows.Controls.ValidationRule>物件。 這可以表示為屬性項目<xref:System.Windows.Data.Binding>物件項目，但已在使用沒有隨手可得屬性剖析技巧`Binding`運算式。 請參閱參考主題<xref:System.Windows.Data.Binding.ValidationRules%2A>。  
+- <xref:System.Windows.Data.Binding.ValidationRules%2A>： 此屬性會採用的泛型集合<xref:System.Windows.Controls.ValidationRule>物件。 這可以表示為屬性項目<xref:System.Windows.Data.Binding>物件項目，但已在使用沒有隨手可得屬性剖析技巧`Binding`運算式。 請參閱參考主題<xref:System.Windows.Data.Binding.ValidationRules%2A>。  
   
--   <xref:System.Windows.Data.Binding.XmlNamespaceManager%2A>  
+- <xref:System.Windows.Data.Binding.XmlNamespaceManager%2A>  
   
 ## <a name="remarks"></a>備註  
   

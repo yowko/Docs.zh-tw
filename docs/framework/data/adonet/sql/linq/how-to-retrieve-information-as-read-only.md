@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fb09e298-0b53-47e5-97fb-ab318bcd4fad
 ms.openlocfilehash: 131562e9ee0fbfde8c94f580bcb6d452918f42ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037579"
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a>HOW TO：以唯讀形式擷取資訊
 不想要變更資料時，可以搜尋唯讀結果以增加查詢效能。  

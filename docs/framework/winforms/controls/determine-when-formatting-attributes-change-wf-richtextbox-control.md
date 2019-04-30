@@ -12,11 +12,11 @@ helpviewer_keywords:
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
 ms.openlocfilehash: a90affde9de36f1c83d5b7c21b40580cdf53402e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972285"
 ---
 # <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>HOW TO：決定何時變更 Windows Forms RichTextBox 控制項的格式屬性
 Windows Form 的常見用法<xref:System.Windows.Forms.RichTextBox>控制項正在格式化文字的字型選項或段落樣式等屬性。 您的應用程式可能需要追蹤的文字格式設定用來顯示工具列，就像許多文書處理應用程式中的任何變更。  

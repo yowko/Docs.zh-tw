@@ -8,20 +8,20 @@ helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
 ms.openlocfilehash: e90e881546c12df2c8b19ff03a4d4c7304c4596c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052673"
 ---
 # <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>類型 '\<變數名稱 >' 無法推斷，因為迴圈繫結和 step 變數不會擴展為相同的型別
 您已撰寫`For...Next`下列條件成立，因為編譯器無法推斷迴圈控制變數的資料類型的迴圈：  
   
--   未使用 `As` 子句指定迴圈控制變數的資料類型。  
+- 未使用 `As` 子句指定迴圈控制變數的資料類型。  
   
--   迴圈繫結和 step 變數包含至少兩種資料類型。  
+- 迴圈繫結和 step 變數包含至少兩種資料類型。  
   
--   標準轉換存在之間的資料類型。  
+- 標準轉換存在之間的資料類型。  
   
  因此，編譯器無法推斷迴圈控制變數的資料類型。  
   
@@ -42,7 +42,7 @@ Dim n = 20
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   變更迴圈繫結和 step 變數為必要的類型，使至少一個其他擴展為的型別。 在上述範例中，將變更的型別`stepVar`至`Integer`。  
+- 變更迴圈繫結和 step 變數為必要的類型，使至少一個其他擴展為的型別。 在上述範例中，將變更的型別`stepVar`至`Integer`。  
   
     ```  
     Dim stepVar = 1  
@@ -54,7 +54,7 @@ Dim n = 20
     Dim stepVar As Integer = 1  
     ```  
   
--   您可以使用明確的轉換函式，將迴圈繫結和 step 變數轉換成適當的類型。 在上述範例中，套用`Val`函式以`stepVar`。  
+- 您可以使用明確的轉換函式，將迴圈繫結和 step 變數轉換成適當的類型。 在上述範例中，套用`Val`函式以`stepVar`。  
   
     ```  
     For i = 1 To 10 Step Val(stepVar)  

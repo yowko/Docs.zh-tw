@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03cac2b8433d6491d1fa474a0d4064ef4e260d6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993222"
 ---
 # <a name="ihostmemorymanagervirtualfree-method"></a>IHostMemoryManager::VirtualFree 方法
 可做為對應的 Win32 函式的邏輯包裝函式。 Win32 實作`VirtualFree`釋放、 取消認可，或釋出並取消認可頁面呼叫處理序虛擬位址空間內的某個區域。  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
 ms.openlocfilehash: c4a78569f6c0b14c32154611412d6b3ccd8a84ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004196"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>HOW TO：繪製包含線條頭尾圖案的線條
 您可以在其中一種稱為線條帽緣的數個圖形中繪製的開頭或行結尾。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 支援數個線條端點，例如循、 正方形、 菱形、 和箭頭。  
@@ -32,7 +32,7 @@ ms.locfileid: "59146207"
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
--   建立 Windows 表單，並處理表單的<xref:System.Windows.Forms.Control.Paint>事件。 範例程式碼到貼<xref:System.Windows.Forms.Control.Paint>傳遞的事件處理常式`e`做為<xref:System.Windows.Forms.PaintEventArgs>。  
+- 建立 Windows 表單，並處理表單的<xref:System.Windows.Forms.Control.Paint>事件。 範例程式碼到貼<xref:System.Windows.Forms.Control.Paint>傳遞的事件處理常式`e`做為<xref:System.Windows.Forms.PaintEventArgs>。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: 7ab28021-4d15-4d9c-bf2e-6ccc0daa7d1a
 ms.openlocfilehash: 74966dd1661faa43df334987b2e3b0e84eff3446
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037853"
 ---
 # <a name="how-to-represent-columns-as-class-members"></a>HOW TO：將資料行表示為類別成員
 使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute>欄位或屬性相關聯的資料庫資料行的屬性。  
   
 ### <a name="to-map-a-field-or-property-to-a-database-column"></a>若要將欄位或屬性 (Property) 對應至資料庫資料行  
   
--   將 <xref:System.Data.Linq.Mapping.ColumnAttribute> 屬性 (Attribute) 加入至屬性 (Property) 或欄位宣告。  
+- 將 <xref:System.Data.Linq.Mapping.ColumnAttribute> 屬性 (Attribute) 加入至屬性 (Property) 或欄位宣告。  
   
 ## <a name="example"></a>範例  
  下列程式碼會將 `CustomerID` 類別中的 `Customer` 欄位對應至 `CustomerID` 資料庫資料表中的 `Customers` 資料行。  

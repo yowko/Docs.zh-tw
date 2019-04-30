@@ -3,11 +3,11 @@ title: 型別提供者
 description: 了解如何F#型別提供者是提供型別、 屬性和方法，以供您在程式中的元件。
 ms.date: 04/02/2018
 ms.openlocfilehash: 39000fd1ca2af78afd1c333816fe9d5c0e2517cb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967761"
 ---
 # <a name="type-providers"></a>型別提供者
 

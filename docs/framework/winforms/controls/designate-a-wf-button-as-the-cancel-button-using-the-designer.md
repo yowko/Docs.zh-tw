@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Button control [Windows Forms], designating as cancel button
 ms.assetid: 30e77d9c-d565-4ab5-a84a-62c043af8822
 ms.openlocfilehash: f127a1a74643c975aea73b24896c098b365aa327
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972298"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button-using-the-designer"></a>HOW TO：使用設計工具將 Windows Forms 的按鈕指定為取消按鈕
 在任何 Windows 表單上，您可以指定<xref:System.Windows.Forms.Button>設為 [取消] 按鈕的控制項。 每當使用者按下 ESC 鍵，不論哪一個表單上的其他控制項具有焦點時，按一下 [取消] 按鈕。 這類按鈕通常被設計成讓使用者快速結束作業，而不需要認可至任何動作。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: cf09732a-ab54-4d98-89e2-4d0a1f28fbce
 ms.openlocfilehash: 99c52b93cee858511d50aba2f30f2b9f96d91ccd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034368"
 ---
 # <a name="creating-autoincrement-columns"></a>建立自動遞增資料行
 若要確保資料行的值是唯一的，您可以在將新資料列加入至資料表時，將資料行值設為自動累加。 若要建立自動遞增<xref:System.Data.DataColumn>，將<xref:System.Data.DataColumn.AutoIncrement%2A>屬性的資料行 **，則為 true**。 <xref:System.Data.DataColumn>開頭中定義的值，然後<xref:System.Data.DataColumn.AutoIncrementSeed%2A>屬性，加入每個資料列的值**AutoIncrement**資料行中定義的值會增加<xref:System.Data.DataColumn.AutoIncrementStep%2A>資料行屬性。  

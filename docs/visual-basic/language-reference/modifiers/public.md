@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
 ms.openlocfilehash: 0c85564503f3c83e436044cd92ee3014945f1ef3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051867"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
 指定一或多個宣告的程式設計項目有沒有存取限制。  
@@ -25,15 +25,15 @@ ms.locfileid: "58818380"
   
 ## <a name="rules"></a>規則  
   
--   **宣告內容。** 您可以使用`Public`只能在模組、 介面或命名空間層級。 這表示的宣告內容`Public`項目必須是原始程式檔、 命名空間、 介面、 模組、 類別或結構，而且不能是程序。  
+- **宣告內容。** 您可以使用`Public`只能在模組、 介面或命名空間層級。 這表示的宣告內容`Public`項目必須是原始程式檔、 命名空間、 介面、 模組、 類別或結構，而且不能是程序。  
   
 ## <a name="behavior"></a>行為  
   
--   **存取層級。** 模組、 類別或結構可以存取的所有程式碼可以存取其`Public`項目。  
+- **存取層級。** 模組、 類別或結構可以存取的所有程式碼可以存取其`Public`項目。  
   
--   **預設存取權。** 本機變數內程序預設值為公用存取，因此您無法在其上使用任何存取修飾詞。  
+- **預設存取權。** 本機變數內程序預設值為公用存取，因此您無法在其上使用任何存取修飾詞。  
   
--   **存取修飾詞。** 指定存取層級的關鍵字稱為*存取修飾詞*。 如需存取修飾詞的比較，請參閱 <<c0> [ 存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+- **存取修飾詞。** 指定存取層級的關鍵字稱為*存取修飾詞*。 如需存取修飾詞的比較，請參閱 <<c0> [ 存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `Public` 修飾詞可用於以下內容：  
   

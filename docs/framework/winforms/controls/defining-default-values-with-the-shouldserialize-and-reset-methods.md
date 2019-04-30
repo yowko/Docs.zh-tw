@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
 ms.openlocfilehash: f1f5a668c5d4f52ef7dd9f60a31c04f2173165f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972363"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>使用 ShouldSerialize 和 Reset 方法定義預設值
 `ShouldSerialize` 和`Reset`是選擇性屬性，您可以提供的方法，如果屬性未具有簡單的預設值。 如果屬性具有簡單的預設值，則應套用<xref:System.ComponentModel.DefaultValueAttribute>並改為提供屬性的類別建構函式的預設值。 是一種機制可讓設計工具中的下列功能：  
   
--   如果已修改預設值，此屬性會提供屬性瀏覽器中的視覺指示。  
+- 如果已修改預設值，此屬性會提供屬性瀏覽器中的視覺指示。  
   
--   使用者可以在屬性上按一下滑鼠右鍵，然後選擇**重設**還原為其預設值的屬性。  
+- 使用者可以在屬性上按一下滑鼠右鍵，然後選擇**重設**還原為其預設值的屬性。  
   
--   設計工具會產生更有效率的程式碼。  
+- 設計工具會產生更有效率的程式碼。  
   
     > [!NOTE]
     >  請套用<xref:System.ComponentModel.DefaultValueAttribute>，或提供`Reset` *PropertyName*並`ShouldSerialize` *PropertyName*方法。 請勿使用兩者。  

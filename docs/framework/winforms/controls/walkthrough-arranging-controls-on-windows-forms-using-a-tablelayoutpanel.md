@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
 ms.openlocfilehash: 392d548a5f89c31d94af9134b8cc3a37b28d8c6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009106"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>逐步解說：使用 TableLayoutPanel 排列 Windows Forms 的控制項
 有些應用程式需要表單能在調整表單大小或變更內容大小時，自行適當排列配置。 當需要動態配置但不想用程式碼明確處理 <xref:System.Windows.Forms.Control.Layout> 事件時，請考慮使用配置面板。  
@@ -28,21 +28,21 @@ ms.locfileid: "59341617"
   
  這個逐步解說中所述的工作包括：  
   
--   建立 Windows Forms 專案  
+- 建立 Windows Forms 專案  
   
--   在資料列和資料行中排列控制項  
+- 在資料列和資料行中排列控制項  
   
--   設定資料列和資料行屬性  
+- 設定資料列和資料行屬性  
   
--   擴展資料列和資料行與控制項  
+- 擴展資料列和資料行與控制項  
   
--   自動處理溢位  
+- 自動處理溢位  
   
--   在 [工具箱] 中按兩下控制項以插入控制項  
+- 在 [工具箱] 中按兩下控制項以插入控制項  
   
--   繪製控制項外框以插入控制項  
+- 繪製控制項外框以插入控制項  
   
--   將現有控制項重新指派至不同的父代  
+- 將現有控制項重新指派至不同的父代  
   
  完成後，您就會了解這些重要配置功能所扮演的角色。  
   
@@ -158,25 +158,25 @@ ms.locfileid: "59341617"
   
 #### <a name="to-demonstrate-that-multiple-controls-within-cells-are-not-permitted"></a>為了示範不允許的儲存格內的多個控制項  
   
--   拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**成<xref:System.Windows.Forms.TableLayoutPanel>控制項，並拖放到佔用儲存格的其中一個。 請注意，<xref:System.Windows.Forms.TableLayoutPanel>控制項不允許卸除<xref:System.Windows.Forms.Button>佔用儲存格的控制項。  
+- 拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**成<xref:System.Windows.Forms.TableLayoutPanel>控制項，並拖放到佔用儲存格的其中一個。 請注意，<xref:System.Windows.Forms.TableLayoutPanel>控制項不允許卸除<xref:System.Windows.Forms.Button>佔用儲存格的控制項。  
   
 ## <a name="swapping-controls"></a>交換控制項  
  <xref:System.Windows.Forms.TableLayoutPanel>控制項可讓您交換佔用兩個不同的儲存格的控制項。  
   
 #### <a name="to-swap-controls"></a>若要交換控制項  
   
--   拖曳其中一個<xref:System.Windows.Forms.Button>佔用儲存格並放到另一個佔用儲存格的控制項。 請注意，兩個控制項從一個儲存格移到其他。  
+- 拖曳其中一個<xref:System.Windows.Forms.Button>佔用儲存格並放到另一個佔用儲存格的控制項。 請注意，兩個控制項從一個儲存格移到其他。  
   
 ## <a name="next-steps"></a>後續步驟  
  您可以組合配置面板和控制項，完成複雜的配置。 進一步的探索建議包括：  
   
--   請嘗試調整大小的其中一個<xref:System.Windows.Forms.Button>控制項以較大的大小並注意配置的效果。  
+- 請嘗試調整大小的其中一個<xref:System.Windows.Forms.Button>控制項以較大的大小並注意配置的效果。  
   
--   貼上至多個控制項的選取範圍<xref:System.Windows.Forms.TableLayoutPanel>控制，並記下插入控制項的方式。  
+- 貼上至多個控制項的選取範圍<xref:System.Windows.Forms.TableLayoutPanel>控制，並記下插入控制項的方式。  
   
--   配置面板可以包含其他的配置面板。 實驗將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項放入現有的控制項。  
+- 配置面板可以包含其他的配置面板。 實驗將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項放入現有的控制項。  
   
--   將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項停駐在父表單。 調整表單的大小，並注意配置的效果。  
+- 將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項停駐在父表單。 調整表單的大小，並注意配置的效果。  
   
 ## <a name="see-also"></a>另請參閱
 

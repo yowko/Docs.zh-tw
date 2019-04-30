@@ -7,11 +7,11 @@ helpviewer_keywords:
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
 ms.openlocfilehash: f8c8a1b2e3d2adfa7daadd609051ffc304150efe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972106"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>HOW TO：使用設計工具在 Windows Forms ListView 控制項中啟用並排顯示
 並排顯示檢視功能<xref:System.Windows.Forms.ListView>控制項可讓您提供圖形和文字資訊之間的視覺化平衡。 並排顯示檢視中針對項目顯示的文字資訊與詳細資料檢視所定義的資料行資訊相同。 並排顯示檢視函式搭配的群組 」 或 「 插入標記功能<xref:System.Windows.Forms.ListView>控制項。  

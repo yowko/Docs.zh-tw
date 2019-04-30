@@ -3,11 +3,11 @@ title: 使用自訂活動設計工具中的 ExpressionTextBox
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
 ms.openlocfilehash: c85254f1ae7ba8a269568cf1a14acf367b595e33
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004753"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>使用自訂活動設計工具中的 ExpressionTextBox
 這個範例示範如何在自訂活動設計工具內使用 <xref:System.Activities.Presentation.View.ExpressionTextBox>。 自訂活動 `MultiAssign` 會將兩個字串值指派給兩個字串變數。 某些 <xref:System.Activities.Presentation.View.ExpressionTextBox> 控制項會繫結至 <xref:System.Activities.InArgument>，而某些則繫結至 <xref:System.Activities.OutArgument>。

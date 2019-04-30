@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
 ms.openlocfilehash: b8284f45d769f018655ee35a5f0b067703963634
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034485"
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter 的參數
 <xref:System.Data.Common.DbDataAdapter> 具有四個屬性，可用來擷取資料來源的資料，以及將資料更新至資料來源：<xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> 屬性可傳回資料來源的資料，而 <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>、<xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 和 <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> 屬性可用來管理在資料來源的變更。 在您呼叫 `SelectCommand` 的 `Fill` 方法前，必須先設定 `DataAdapter` 屬性。 您必須先設定 `InsertCommand`、`UpdateCommand` 或 `DeleteCommand` 屬性，然後再呼叫 `Update` 的 `DataAdapter` 方法，端視針對 <xref:System.Data.DataTable> 中的資料進行哪些變更而定。 例如，如果已經加入資料列，則必須先設定 `InsertCommand`，才能呼叫 `Update`。 `Update` 正在處理已插入、已更新或已刪除的資料列時，`DataAdapter` 會使用個別的 `Command` 屬性來處理這項動作。 已修改資料列的目前資訊會透過 `Command` 集合傳遞給 `Parameters` 物件。  

@@ -3,11 +3,11 @@ title: 寄不出的信件佇列
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
 ms.openlocfilehash: 379b6901e835a6820d194edda1d7727df789bfd8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051958"
 ---
 # <a name="dead-letter-queues"></a>寄不出的信件佇列
 這個範例示範如何處理已傳遞失敗的訊息。 它根據[交易 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)範例。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。
@@ -24,15 +24,15 @@ ms.locfileid: "59334090"
 
  在 `NetMsmqBinding` 繫結中，會使用下列屬性來表示寄不出的信件佇列：
 
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> 屬性，用來表示用戶端所需之寄不出的信件佇列種類。 這個列舉具有下列值：
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> 屬性，用來表示用戶端所需之寄不出的信件佇列種類。 這個列舉具有下列值：
 
--   `None`：沒有寄不出信件佇列所需的用戶端。
+- `None`：沒有寄不出信件佇列所需的用戶端。
 
--   `System`：系統寄不出信件佇列用來儲存無法傳遞的訊息。 電腦上執行的所有應用程式會共用系統之寄不出的信件佇列。
+- `System`：系統寄不出信件佇列用來儲存無法傳遞的訊息。 電腦上執行的所有應用程式會共用系統之寄不出的信件佇列。
 
--   `Custom`：使用指定的自訂寄不出信件佇列<xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>屬性用來儲存無法傳遞的訊息。 這項功能只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。 當應用程式必須使用自己的寄不出的信件佇列，而不與執行於同一台電腦的其他應用程式共用時，會使用這項功能。
+- `Custom`：使用指定的自訂寄不出信件佇列<xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>屬性用來儲存無法傳遞的訊息。 這項功能只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。 當應用程式必須使用自己的寄不出的信件佇列，而不與執行於同一台電腦的其他應用程式共用時，會使用這項功能。
 
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 屬性，用來表示要當做寄不出的信件佇列使用的特定佇列。 這只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 屬性，用來表示要當做寄不出的信件佇列使用的特定佇列。 這只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。
 
  在這個範例中，用戶端會從異動範圍內傳送一批訊息至服務，並隨意為這些訊息指定很低的「存留時間」值 (約 2 秒)。 用戶端還會指定要使用的自訂寄不出的信件佇列，以便將過期的訊息加入。
 
@@ -314,15 +314,15 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 2. 如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。
 
-    1.  開啟 Visual Studio 2012 中的 伺服器管理員。
+    1. 開啟 Visual Studio 2012 中的 伺服器管理員。
 
-    2.  依序展開**功能** 索引標籤。
+    2. 依序展開**功能** 索引標籤。
 
-    3.  以滑鼠右鍵按一下**私用訊息佇列**，然後選取**新增**，**私用佇列**。
+    3. 以滑鼠右鍵按一下**私用訊息佇列**，然後選取**新增**，**私用佇列**。
 
-    4.  請檢查**Transactional**  方塊中。
+    4. 請檢查**Transactional**  方塊中。
 
-    5.  輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。
+    5. 輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。
 
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 

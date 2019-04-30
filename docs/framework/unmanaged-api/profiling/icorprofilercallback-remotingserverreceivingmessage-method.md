@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 30015cc6cae935c43cdbfec1a6eeae5c703ef9f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041817"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>ICorProfilerCallback::RemotingServerReceivingMessage 方法
 通知分析工具處理序已收到的遠端方法叫用或啟用要求。  
@@ -39,11 +39,11 @@ HRESULT RemotingClientSendingMessage(
  `pCookie`  
  [in]值，這個值會對應中提供的價值[icorprofilercallback:: Remotingclientsendingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)在這些情況下：  
   
--   遠端處理 GUID cookie 在作用中。  
+- 遠端處理 GUID cookie 在作用中。  
   
--   成功的訊息傳輸通道。  
+- 成功的訊息傳輸通道。  
   
--   GUID cookie 上為作用中的用戶端程序。  
+- GUID cookie 上為作用中的用戶端程序。  
   
  這可讓您輕易地配對的遠端呼叫，以及建立的邏輯呼叫堆疊。  
   

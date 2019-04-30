@@ -5,11 +5,11 @@ helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
 ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971947"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>定義可搭配 .NET Framework XAML 服務使用的自訂類型
 當您定義了商務物件的自訂類型，或在特定架構上沒有相依性的類型時，但也有特定的 XAML，您可以遵循的最佳作法。 如果您遵循這些作法時，.NET Framework XAML 服務及其 XAML 讀取器和 XAML 寫入器可以探索您類型的 XAML 特性，並提供適當的表示，使用 XAML 型別系統的 XAML 節點資料流中。 本主題說明類型定義、 成員定義，以及 CLR 屬性的型別或成員的最佳作法。  
@@ -17,9 +17,9 @@ ms.locfileid: "59164433"
 ## <a name="constructor-patterns-and-type-definitions-for-xaml"></a>建構函式模式和 XAML 的類型定義  
  若要具現化為物件項目在 XAML 中，自訂類別必須符合下列需求：  
   
--   自訂類別必須是公用，而且必須公開 （expose） 的預設 （無參數） 公用建構函式。 (如需結構相關附註，請參閱下節)。  
+- 自訂類別必須是公用，而且必須公開 （expose） 的預設 （無參數） 公用建構函式。 (如需結構相關附註，請參閱下節)。  
   
--   自訂類別不能巢狀的類別。 「 點 」 的完整名稱的路徑中的額外類別命名空間除法模稜兩可，並會干擾其他 XAML 功能，例如附加屬性。  
+- 自訂類別不能巢狀的類別。 「 點 」 的完整名稱的路徑中的額外類別命名空間除法模稜兩可，並會干擾其他 XAML 功能，例如附加屬性。  
   
  如果物件可以具現化為物件項目中，所建立的物件可以填入屬性項目表單的任何採用物件作為其基礎類型的屬性。  
   
@@ -72,9 +72,9 @@ ms.locfileid: "59164433"
   
  `public static object Get` <屬性名稱> `(object`  `target` `)`  
   
--   `target` 物件可以指定為實作中的更特定類型。 您可以使用這個限定範圍的使用量，您可附加成員;您預期的範圍之外的使用方式，就會擲回無效轉換例外狀況，然後呈現由 XAML 剖析錯誤。 參數名稱`target`並非必要，但名為`target`依照慣例，在大部分的實作。  
+- `target` 物件可以指定為實作中的更特定類型。 您可以使用這個限定範圍的使用量，您可附加成員;您預期的範圍之外的使用方式，就會擲回無效轉換例外狀況，然後呈現由 XAML 剖析錯誤。 參數名稱`target`並非必要，但名為`target`依照慣例，在大部分的實作。  
   
--   傳回值可以指定為實作中的更特定類型。  
+- 傳回值可以指定為實作中的更特定類型。  
   
  若要支援<xref:System.ComponentModel.TypeConverter>套用的屬性使用方式的可附加成員，啟用的文字語法<xref:System.ComponentModel.TypeConverterAttribute>要`Get` *PropertyName*存取子。 將套用至`get`而不是`set`似乎不被察覺; 不過，這個慣例可以支援這個概念的唯讀狀態可附加成員都是可序列化，這是在設計工具的情況下很有用。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "59164433"
   
  `public static void Set` <屬性名稱> `(object`  `target` `, object`  `value` `)`  
   
--   `target`物件可以指定為在您實作中，使用相同的邏輯和結果的更特定類型，如上一節所述。  
+- `target`物件可以指定為在您實作中，使用相同的邏輯和結果的更特定類型，如上一節所述。  
   
--   `value` 物件可以指定為實作中的更特定類型。  
+- `value` 物件可以指定為實作中的更特定類型。  
   
  請記住，此方法的值來自 XAML 用法，通常是以屬性形式的輸入。 從屬性形式必須是值轉換子支援文字語法中，而且您屬性`Get` *PropertyName*存取子。  
   

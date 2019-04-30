@@ -6,11 +6,11 @@ helpviewer_keywords:
 - threading [Windows Forms], controls
 ms.assetid: c311d652-0f26-45fa-bdcc-b1615d73ce4e
 ms.openlocfilehash: cc7f358a62c8057abb77e1f5a28544bb6c858d98
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012720"
 ---
 # <a name="multithreading-in-windows-forms-controls"></a>在 Windows Form 控制項中的多執行緒
 在許多應用程式，您可以讓您的使用者介面 (UI) 回應速度更快執行耗時的作業，另一個執行緒上。 數種工具可供進行多執行緒處理您的 Windows Form 控制項，包括<xref:System.Threading>命名空間<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType>方法，和`BackgroundWorker`元件。  

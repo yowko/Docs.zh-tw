@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
 ms.openlocfilehash: 15fbf4a3cebef1485f0c54ace36ab88f3d4289e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962574"
 ---
 # <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>HOW TO：使用 Windows Forms ErrorProvider 元件檢視資料集錯誤
 您可以使用 Windows Form<xref:System.Windows.Forms.ErrorProvider>元件來檢視資料集或其他資料來源內的資料行錯誤。 針對<xref:System.Windows.Forms.ErrorProvider>元件，以在表單上顯示資料的錯誤不一定要直接控制項相關聯。 一旦它已繫結至資料來源，它可以顯示錯誤圖示旁邊繫結至相同的資料來源的任何控制項。  

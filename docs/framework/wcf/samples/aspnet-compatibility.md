@@ -3,11 +3,11 @@ title: ASP.NET 相容性
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
 ms.openlocfilehash: 01381dc579f5ae3eadd2f913a0e09d7d259794a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002660"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 相容性
 此範例示範如何啟用 ASP.NET 相容性模式在 Windows Communication Foundation (WCF)。 在 ASP.NET 相容性模式會充分參與 ASP.NET 應用程式管線和可執行的服務使用的 ASP.NET 功能，例如檔案 /URL 授權、 工作階段狀態和<xref:System.Web.HttpContext>類別。 <xref:System.Web.HttpContext>類別可讓您存取 cookie、 工作階段和其他 ASP.NET 功能。 這個模式會要求這些繫結使用 HTTP 傳輸，而且服務本身必須以 IIS 裝載。  

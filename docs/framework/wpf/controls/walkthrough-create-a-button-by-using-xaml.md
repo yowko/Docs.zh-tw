@@ -5,11 +5,11 @@ helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
 ms.openlocfilehash: 908a38485c879e3f28399bb7dbc8303afd4505da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023966"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>逐步解說：使用 XAML 建立按鈕
 本逐步解說的目的是要了解如何在 Windows Presentation Foundation (WPF) 應用程式中建立動畫的按鈕，供使用。 本逐步解說會使用樣式和範本來建立自訂的按鈕資源可讓您重複使用程式碼及從按鈕宣告按鈕的邏輯分隔開來。 本逐步解說完全在撰寫[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
@@ -421,15 +421,15 @@ ms.locfileid: "59309494"
 ## <a name="summary"></a>總結  
  在本逐步解說中，您的練習如下：  
   
--   目標<xref:System.Windows.Style>成物件類型 (<xref:System.Windows.Controls.Button>)。  
+- 目標<xref:System.Windows.Style>成物件類型 (<xref:System.Windows.Controls.Button>)。  
   
--   控制在整個應用程式中使用按鈕的基本屬性<xref:System.Windows.Style>。  
+- 控制在整個應用程式中使用按鈕的基本屬性<xref:System.Windows.Style>。  
   
--   建立資源，例如要用於屬性值的漸層<xref:System.Windows.Style>setter。  
+- 建立資源，例如要用於屬性值的漸層<xref:System.Windows.Style>setter。  
   
--   將範本套用至按鈕來自訂整個應用程式中按鈕的外觀。  
+- 將範本套用至按鈕來自訂整個應用程式中按鈕的外觀。  
   
--   自訂的按鈕，以回應使用者動作的行為 (例如<xref:System.Windows.UIElement.MouseEnter>， <xref:System.Windows.UIElement.MouseLeave>，和<xref:System.Windows.Controls.Primitives.ButtonBase.Click>) 包含的動畫效果。  
+- 自訂的按鈕，以回應使用者動作的行為 (例如<xref:System.Windows.UIElement.MouseEnter>， <xref:System.Windows.UIElement.MouseLeave>，和<xref:System.Windows.Controls.Primitives.ButtonBase.Click>) 包含的動畫效果。  
   
 ## <a name="see-also"></a>另請參閱
 

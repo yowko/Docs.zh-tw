@@ -10,11 +10,11 @@ helpviewer_keywords:
 - hosting [WPF], visual objects in Win32 code
 ms.assetid: f0e1600c-3217-43d5-875d-1864fa7fe628
 ms.openlocfilehash: b260f96246f0d9e5447b74a05e1396bfef176197
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053076"
 ---
 # <a name="tutorial-hosting-visual-objects-in-a-win32-application"></a>教學課程：在 Win32 應用程式中裝載視覺物件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，如果您已長期開發[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]程式碼，它可能會更有效率，以新增[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]您的應用程式的功能而不是重寫程式碼。 若要提供支援[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]並[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式，同時使用的圖形子系統[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供一個機制，來裝載中的物件[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗。  

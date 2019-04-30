@@ -11,26 +11,26 @@ helpviewer_keywords:
 - properties [WPF], Inlines [WPF], manipulating flow Content elements
 ms.assetid: 510780d2-3da1-4360-8763-7054bda22ea3
 ms.openlocfilehash: cfff958bb4c87e6bfecf2d280224cda233c31806
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942840"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>HOW TO：透過 Inlines 屬性管理動態內容項目
 這些範例會展示一些較常見的作業可以在內嵌非固定格式內容項目上執行 (和容器的這類項目，例如<xref:System.Windows.Controls.TextBlock>) 透過**Inlines**屬性。 這個屬性用來新增和移除項目從<xref:System.Windows.Documents.InlineCollection>。 非固定格式內容項目該功能**Inlines**屬性包括：  
   
--   <xref:System.Windows.Documents.Bold>  
+- <xref:System.Windows.Documents.Bold>  
   
--   <xref:System.Windows.Documents.Hyperlink>  
+- <xref:System.Windows.Documents.Hyperlink>  
   
--   <xref:System.Windows.Documents.Italic>  
+- <xref:System.Windows.Documents.Italic>  
   
--   <xref:System.Windows.Documents.Paragraph>  
+- <xref:System.Windows.Documents.Paragraph>  
   
--   <xref:System.Windows.Documents.Span>  
+- <xref:System.Windows.Documents.Span>  
   
--   <xref:System.Windows.Documents.Underline>  
+- <xref:System.Windows.Documents.Underline>  
   
  若要使用的這些範例中會發生<xref:System.Windows.Documents.Span>與流程內容的項目，但這些技術都適用於所有的項目或裝載的控制項<xref:System.Windows.Documents.InlineCollection>集合。  
   

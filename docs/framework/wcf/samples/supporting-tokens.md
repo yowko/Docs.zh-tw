@@ -6,8 +6,8 @@ ms.openlocfilehash: 5f2b1500f54f8ade3c4924e3eb22cd022c6800c0
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965616"
 ---
 # <a name="supporting-tokens"></a>支援權杖
 這個支援權杖範例會示範如何將其他權杖加入至使用 WS-Security 的訊息。 範例除了使用者名稱安全性權杖之外，還會新增 X.509 二進位安全性權杖。 權杖會在 WS-Security 訊息標頭中從用戶端傳遞至服務，而且使用與 X.509 安全性權杖相關聯的私密金鑰簽署該訊息的一部分，以便向接收者證明持有 X.509 憑證。 在必須有多個宣告與訊息產生關聯才能驗證或授權傳送者的情況下，這將十分有幫助。 服務會實作定義要求-回覆通訊模式的合約。
@@ -15,11 +15,11 @@ ms.locfileid: "59976647"
 ## <a name="demonstrates"></a>示範
  範例會示範下列情況：
 
--   用戶端如何傳遞其他安全性權杖給服務。
+- 用戶端如何傳遞其他安全性權杖給服務。
 
--   伺服器如何存取與其他安全性權杖相關聯的宣告。
+- 伺服器如何存取與其他安全性權杖相關聯的宣告。
 
--   如何使用伺服器的 X.509 憑證保護用於訊息加密和簽章的對稱金鑰。
+- 如何使用伺服器的 X.509 憑證保護用於訊息加密和簽章的對稱金鑰。
 
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。
@@ -461,7 +461,7 @@ iisreset
   
 ##### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
--   當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
+- 當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
 > [!NOTE]
 >  跨機器執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨機器使用憑證的 WCF 範例，請務必清除已安裝在 CurrentUser-TrustedPeople 存放區的服務憑證。 若要這樣做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
 ms.openlocfilehash: 015ce896e49b3a6a932c36db867271b4ac4c64c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033861"
 ---
 # <a name="large-udts"></a>大型 UDT
 使用者定義型別 (UDT) 可透過在 SQL Server 資料庫中儲存 Common Language Runtime (CLR) 物件，讓開發人員擴充伺服器的純量型別 (Scalar Type) 系統。 UDT 可以包含多個項目而且可以具有行為，這點與單一 SQL Server 系統資料型別所組成的傳統別名資料型別不同。  
@@ -49,21 +49,21 @@ ms.locfileid: "59303475"
   
  當 <xref:System.Data.SqlClient.SqlDataReader> 設定為 SQL Server 2005 時，下列 <xref:System.Data.SqlTypes.SqlBinary> 方法會傳回 `Type System Version` 而非 UDT：  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
   
  當 `Byte[]` 設定為 SQL Server 2005 時，下列方法會傳回 `Type System Version` 陣列而非 UDT：  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetValues%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetValues%2A>  
   
  請注意，尚未針對 ADO.NET 的目前版本進行任何轉換。  
   

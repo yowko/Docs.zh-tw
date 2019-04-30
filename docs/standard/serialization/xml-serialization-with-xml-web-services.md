@@ -18,11 +18,11 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
 ms.openlocfilehash: 79cc53be0f099151db1b64190c844b1d57205a44
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018057"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>以 XML Web 服務進行 XML 序列化
 XML 序列化為 XML Web 服務架構中使用的基礎傳輸機制，由 <xref:System.Xml.Serialization.XmlSerializer> 類別執行。 若要控制 XML Web Service 產生的 XML，可將列在[控制 XML 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)和[控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)中的屬性，套用至用來建立 XML Web Service (.asmx) 之檔案的類別、傳回值、參數以及欄位。 如需建立 XML Web service 的詳細資訊，請參閱 < [ASP.NET XML Web Service 使用](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100))。  

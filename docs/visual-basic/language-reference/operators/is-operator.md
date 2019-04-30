@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
 ms.openlocfilehash: a59ff4c956724c614342f0ee4c0622a67f1c25e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054950"
 ---
 # <a name="is-operator-visual-basic"></a>Is 運算子 (Visual Basic)
 比較兩個物件參考變數。  

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d9279808e4ad15b693d06ac8a99dd33a609e5a8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992507"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize 方法
 目前範圍中取得的二進位的估計的大小，組件和它的中繼資料。  
@@ -40,11 +40,11 @@ HRESULT GetSaveSize (
  `fSave`  
  [in]值為[CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md)列舉，指定是否要取得精確或近似大小。 只有三個值都有效： cssAccurate，cssQuick，和 cssDiscardTransientCAs:  
   
--   cssAccurate 傳回的確切的儲存大小，但所花費的時間來計算。  
+- cssAccurate 傳回的確切的儲存大小，但所花費的時間來計算。  
   
--   cssQuick 傳回基於安全考量，填補的大小，但需要較少的時間來計算。  
+- cssQuick 傳回基於安全考量，填補的大小，但需要較少的時間來計算。  
   
--   cssDiscardTransientCAs 告訴`GetSaveSize`，它可以擲出可捨棄的自訂屬性。  
+- cssDiscardTransientCAs 告訴`GetSaveSize`，它可以擲出可捨棄的自訂屬性。  
   
  `pdwSaveSize`  
  [out]指標，才能儲存檔案的大小。  

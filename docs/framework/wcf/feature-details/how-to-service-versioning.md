@@ -3,11 +3,11 @@ title: 如何：服務版本控制
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
 ms.openlocfilehash: afc1a690cae020ded3988cfd41f0e926a2e86f1e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047473"
 ---
 # <a name="how-to-service-versioning"></a>如何：服務版本控制
 本主題概要說明建立路由組態服務時所需的基本步驟，該組態可傳送訊息至相同服務的不同版本。 在此範例中，會將訊息傳送至兩個不同版本的計算器服務，`roundingCalc` (v1) 和 `regularCalc` (v2)。 兩項實作都支援相同的作業，不過較舊的服務 `roundingCalc` 會在傳回之前將所有的計算結果捨入至最接近的整數值。 用戶端應用程式必須能夠表示是否可使用較新的 `regularCalc` 服務。  
@@ -17,13 +17,13 @@ ms.locfileid: "59346284"
   
  由這兩項服務公開的作業為：  
   
--   新增  
+- 新增  
   
--   差集  
+- 差集  
   
--   乘法  
+- 乘法  
   
--   分割  
+- 分割  
   
  因為這兩項服務實作會處理相同的作業，而且它們與不是由其傳回的資料完全相同，所以包含在來自用戶端應用程式之訊息中的基底資料的唯一性質不足，無法藉此判斷路由要求方式。 例如，無法使用動作篩選條件，因為兩項服務的預設動作均相同。  
   

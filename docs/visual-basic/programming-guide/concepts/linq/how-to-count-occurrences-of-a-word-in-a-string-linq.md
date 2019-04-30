@@ -3,11 +3,11 @@ title: HOW TO：計數的某個字在字串 (LINQ) (Visual Basic) 中的項目
 ms.date: 07/20/2015
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
 ms.openlocfilehash: b3d34503e87aff1180dca4cb8233d668d35b0255
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051737"
 ---
 # <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>HOW TO：計數的某個字在字串 (LINQ) (Visual Basic) 中的項目
 本例示範如何使用 LINQ 查詢計算字串中指定單字的出現次數。 請注意，執行計數要先呼叫 <xref:System.String.Split%2A> 方法來建立文字陣列。 <xref:System.String.Split%2A> 方法有效能成本。 如果字串上唯一的作業是計算字數，您應該考慮改用 <xref:System.Text.RegularExpressions.Regex.Matches%2A> 或 <xref:System.String.IndexOf%2A> 方法。 不過，如果效能不是重要的問題，或您已分割句子對它執行其他類型的查詢，則使用 LINQ 計算單字或詞組才有意義。  

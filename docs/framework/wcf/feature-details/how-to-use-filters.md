@@ -3,22 +3,22 @@ title: 如何：使用篩選器
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
 ms.openlocfilehash: 5d3ed4a1d64edee274e60f5bf156b4294902df8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972857"
 ---
 # <a name="how-to-use-filters"></a>如何：使用篩選器
 本主題概要說明建立使用多個篩選條件之路由組態所需的基本步驟。 在此範例中，會將訊息路由至計算機服務的兩種實作 (regularCalc 與 roundingCalc)。 兩項實作都支援相同的作業，不過其中一個服務會在傳回之前將所有的計算結果四捨五入至最接近的整數值。 用戶端應用程式必須能夠指出是否要使用四捨五入後的服務版本，如果未指定任何服務偏好設定，則會在兩項服務之間平衡訊息負載。 由這兩項服務公開的作業為：  
   
--   新增  
+- 新增  
   
--   差集  
+- 差集  
   
--   乘法  
+- 乘法  
   
--   分割  
+- 分割  
   
  由於兩項服務皆實作同一個作業，因此您不能使用 [動作] 篩選條件，因為訊息中指定的動作不會是唯一的動作。 相反的，您必須進行額外的工作，以確保訊息能夠路由至正確的端點。  
   
@@ -137,10 +137,10 @@ ms.locfileid: "59295519"
     > [!NOTE]
     >  PrefixEndpointAddress 篩選條件執行比對時不會評估主機名稱，因為可以使用多種主機名稱 (均為從用戶端應用程式參考主機的有效方式) 參考單一主機。 例如，下列所有名稱皆可參考同一個主機：  
     >   
-    > -   localhost  
-    > -   127.0.0.1  
-    > -   `www.contoso.com`  
-    > -   ContosoWeb01  
+    > - localhost  
+    > - 127.0.0.1  
+    > - `www.contoso.com`  
+    > - ContosoWeb01  
   
 4. 最終的篩選條件必須支援路由送達一般端點 (沒有自訂標頭) 的訊息。 在這個案例中，訊息應在 regularCalc 和 roundingCalc 服務之間交替。 若要支援這些訊息的 「 循環配置資源 」 路由，使用允許篩選執行個體以符合每個訊息處理的自訂篩選條件。  下列內容定義 RoundRobinMessageFilter 的兩個執行個體，這些執行個體群組在一起，表示應在彼此之間交替。  
   

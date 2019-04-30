@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
 ms.openlocfilehash: d8a1a12a4d8ab5e6f4b0fe6ad6c2a3759aa65aa9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034498"
 ---
 # <a name="annotating-typed-datasets"></a>註釋具類型資料集
 註釋可讓您在無需修改基礎結構描述的情況下，修改具型別之 <xref:System.Data.DataSet> 中的項目名稱。 修改基礎結構描述中元素的名稱可能會造成具型別的**資料集**來執行不存在於資料來源，以及遺失的資料來源中存在的物件參考的物件參考。  

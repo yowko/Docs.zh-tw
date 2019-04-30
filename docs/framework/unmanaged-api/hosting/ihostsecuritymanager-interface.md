@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f45379fe8640ef7e7b3917bac8d10ca956d75ffb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61957582"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager 介面
 提供方法，讓存取權和控制權的目前執行中執行緒的安全性內容。  
@@ -42,13 +42,13 @@ ms.locfileid: "59223754"
   
  CLR 會在內部處理 managed 的執行緒內容。 它會查詢處理序專屬`IHostSecurityManager`在下列情況：  
   
--   在完成項執行期間的完成項執行緒。  
+- 在完成項執行期間的完成項執行緒。  
   
--   在類別和模組的建構函式執行。  
+- 在類別和模組的建構函式執行。  
   
--   在背景工作執行緒的呼叫中的非同步點[ihostthreadpoolmanager:: Queueuserworkitem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md)方法。  
+- 在背景工作執行緒的呼叫中的非同步點[ihostthreadpoolmanager:: Queueuserworkitem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md)方法。  
   
--   在服務的 I/O 完成連接埠。  
+- 在服務的 I/O 完成連接埠。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

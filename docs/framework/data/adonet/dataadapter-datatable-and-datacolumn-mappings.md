@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
 ms.openlocfilehash: 54af7c2f449f8eb289841fb3eca357c6916404aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032691"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter DataTable 和 DataColumn 對應
 A **DataAdapter**包含零或多個集合<xref:System.Data.Common.DataTableMapping>中的物件及其**TableMappings**屬性。 A **DataTableMapping**提供對資料來源，查詢所傳回的資料之間的主要對應和<xref:System.Data.DataTable>。 **DataTableMapping**可以傳遞名稱，取代**DataTable**名稱**填滿**方法**DataAdapter**。 下列範例會建立**DataTableMapping**名為**AuthorsMapping** for**作者**資料表。  

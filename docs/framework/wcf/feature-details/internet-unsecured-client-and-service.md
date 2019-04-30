@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
 ms.openlocfilehash: ca6b028ef20095d6faeb125151772eedf1500fa0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038723"
 ---
 # <a name="internet-unsecured-client-and-service"></a>沒有安全保障的網際網路用戶端與服務
 下圖顯示的公用、 不安全 Windows Communication Foundation (WCF) 用戶端和服務的範例：  
@@ -30,9 +30,9 @@ ms.locfileid: "59133753"
 ## <a name="service"></a>服務  
  下列程式碼和組態要獨立執行。 執行下列任一步驟：  
   
--   使用不含組態的程式碼建立獨立服務。  
+- 使用不含組態的程式碼建立獨立服務。  
   
--   使用提供的組態建立服務，但不要定義任何端點。  
+- 使用提供的組態建立服務，但不要定義任何端點。  
   
 ### <a name="code"></a>程式碼  
  下列程式碼顯示如何建立無安全性的端點。 根據預設值，<xref:System.ServiceModel.BasicHttpBinding> 的安全性模式設定為 <xref:System.ServiceModel.BasicHttpSecurityMode.None>。  
@@ -70,9 +70,9 @@ ms.locfileid: "59133753"
 ## <a name="client"></a>用戶端  
  下列程式碼和組態要獨立執行。 執行下列任一步驟：  
   
--   使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
+- 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
   
--   建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如:   
+- 建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如:   
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

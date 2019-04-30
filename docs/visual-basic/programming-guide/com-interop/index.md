@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 ms.openlocfilehash: dfd256fa7ccd8f089fab6eb1d42579deb2c4a64d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022411"
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop (Visual Basic)
 元件物件模型 (COM) 可讓物件向其他元件公開其功能以及主控應用程式。 大部分的現今軟體都會包括 COM 物件。 雖然 .NET 組件是新應用程式的最佳選擇，但您有時可能需要採用 COM 物件。 本節涵蓋一些與建立和使用 Visual Basic 中使用 COM 物件相關聯的問題。  
@@ -19,19 +19,19 @@ ms.locfileid: "44183167"
  [COM Interop 簡介](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  提供 COM 互通性的概觀。  
   
- [如何：參考 Visual Basic 的 COM 物件](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
+ [如何：從 Visual Basic 參考 COM 物件](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
  涵蓋如何將參考新增至具有型別程式庫的 COM 物件。  
   
- [操作說明：使用 ActiveX 控制項](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
+ [如何：使用 ActiveX 控制項](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
  示範如何使用現有的 ActiveX 控制項來將功能加入至 Visual Studio 工具箱。  
   
  [逐步解說：呼叫 Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  逐步解說如何呼叫屬於 Windows 作業系統之 API 的程序。  
   
- [操作說明：呼叫 Windows API](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
+ [如何：呼叫 Windows API](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
  示範如何在 User32.dll 中定義和呼叫 `MessageBox` 函式。  
   
- [操作說明：呼叫使用不帶正負號類型的 Windows 函式](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [如何：呼叫使用不帶正負號類型的 Windows 函式](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  示範如何呼叫具有不帶正負號類型之參數的 Windows 函式。  
   
  [逐步解說：使用 Visual Basic 建立 COM 物件](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  

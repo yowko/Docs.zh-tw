@@ -5,11 +5,11 @@ f1_keywords:
 - vbrArgument_GEMinusOne1
 ms.assetid: 4bdbef4c-6eff-4fab-a1d0-cb176d5f8798
 ms.openlocfilehash: e5b8237b26896891fc88d57e10cd310031971220
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025154"
 ---
 # <a name="argument-argumentname-must-be-greater-than-or-equal-to--1"></a>引數 '\<引數名稱 >' 必須大於或等於-1
 引數的值小於 -1。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
 ms.openlocfilehash: 530f6cb8fbe80df3ad374f8ad0e4836be82830a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054324"
 ---
 # <a name="animation-overview"></a>動畫概觀
 <a name="introduction"></a>
@@ -27,13 +27,13 @@ ms.locfileid: "59337730"
   
  電腦上的動畫很類似如此。 例如，讓矩形繪圖淡出畫面的程式可能如下運作。  
   
--   程式建立計時器。  
+- 程式建立計時器。  
   
--   程式檢查設定間隔處的計時器，以查看經過多少時間。  
+- 程式檢查設定間隔處的計時器，以查看經過多少時間。  
   
--   每當程式檢查計時器時，會根據經過多少時間來計算矩形目前的不透明度值。  
+- 每當程式檢查計時器時，會根據經過多少時間來計算矩形目前的不透明度值。  
   
--   然後程式使用新值更新矩形，並重新繪製矩形。  
+- 然後程式使用新值更新矩形，並重新繪製矩形。  
   
  之前[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]開發人員，就必須建立並管理他們自己的計時系統或使用特殊的自訂程式庫。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含會公開透過 managed 程式碼的高效率計時系統以及[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和已完全整合至[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]framework。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫可讓您輕鬆以動畫顯示控制項和其他圖形物件。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "59337730"
   
  如果要讓屬性具備動畫功能，必須符合下列三個需求︰  
   
--   必須是相依性屬性。  
+- 必須是相依性屬性。  
   
--   它必須屬於繼承自類別<xref:System.Windows.DependencyObject>並實作<xref:System.Windows.Media.Animation.IAnimatable>介面。  
+- 它必須屬於繼承自類別<xref:System.Windows.DependencyObject>並實作<xref:System.Windows.Media.Animation.IAnimatable>介面。  
   
--   必須有相容的動畫類型。 (如果[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]不提供，您可以建立您自己。 請參閱[自訂動畫概觀](custom-animations-overview.md)。)  
+- 必須有相容的動畫類型。 (如果[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]不提供，您可以建立您自己。 請參閱[自訂動畫概觀](custom-animations-overview.md)。)  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含具有許多物件<xref:System.Windows.Media.Animation.IAnimatable>屬性。 控制這類<xref:System.Windows.Controls.Button>並<xref:System.Windows.Controls.TabControl>，以及<xref:System.Windows.Controls.Panel>並<xref:System.Windows.Shapes.Shape>物件繼承自<xref:System.Windows.DependencyObject>。 這些項目的大部分屬性是相依性屬性。  
   
@@ -183,27 +183,27 @@ ms.locfileid: "59337730"
 ## <a name="animation-types"></a>動畫類型  
  由於動畫會產生屬性值，因此不同的屬性類型有不同的動畫類型。 若要動畫顯示採用的屬性<xref:System.Double>，這類<xref:System.Windows.FrameworkElement.Width%2A>屬性的項目，使用會產生動畫<xref:System.Double>值。 若要動畫顯示採用的屬性<xref:System.Windows.Point>，使用會產生動畫<xref:System.Windows.Point>值，並依此類推。 由於不同的屬性類型的數目，有數個動畫類別，在<xref:System.Windows.Media.Animation>命名空間。 幸運的是，它們會遵循嚴格的命名慣例方便您區分︰  
   
--   \<*型別*> 動畫  
+- \<*型別*> 動畫  
   
      稱為 "From/To/By" 或「基本」動畫，這些會以動畫顯示開始值到目的地值，或將位移值新增至其開始值。  
   
-    -   若要指定開始值，請設定動畫的 From 屬性。  
+    - 若要指定開始值，請設定動畫的 From 屬性。  
   
-    -   若要指定結束值，請設定動畫的 To 屬性。  
+    - 若要指定結束值，請設定動畫的 To 屬性。  
   
-    -   若要指定位移值，請設定動畫的 By 屬性。  
+    - 若要指定位移值，請設定動畫的 By 屬性。  
   
      本概觀中的範例會使用這些動畫，因為最容易使用。 在 by 動畫概觀 > 中詳細說明 From/To/By 動畫。  
   
--   \<*Type*>AnimationUsingKeyFrames  
+- \<*Type*>AnimationUsingKeyFrames  
   
      主要畫面格動畫比 From/To/By 動畫更強大，因為您可以指定任意數目的目標值，甚至可以控制其插補方法。 某些類型只能使用主要畫面格動畫顯示動畫。 主要畫面格動畫會詳述[主要畫面格動畫概觀](key-frame-animations-overview.md)。  
   
--   \<*Type*>AnimationUsingPath  
+- \<*Type*>AnimationUsingPath  
   
      路徑動畫可讓您使用幾何路徑以產生動畫的值。  
   
--   \<*Type*>AnimationBase  
+- \<*Type*>AnimationBase  
   
      抽象類別，當您實作時，建立動畫\<*型別*> 值。 此類別可做為基底類別\<*型別*> 動畫並\<*型別*> animationusingkeyframes。 只有當您想要建立您自己的自訂動畫時，才需要直接處理這些類別。 否則，請使用\<*型別*> 動畫或主要畫面格\<*型別*> 動畫。  
   
@@ -264,9 +264,9 @@ ms.locfileid: "59337730"
   
  指派名稱給<xref:System.Windows.FrameworkElement>不同於指派名稱給<xref:System.Windows.Freezable>物件。 大部分的控制項和面板是架構元素。不過，大部分純圖形物件 (例如筆刷、轉換和幾何) 則是 Freezable 物件。 如果您不確定是否為型別<xref:System.Windows.FrameworkElement>或<xref:System.Windows.Freezable>，請參閱**繼承階層架構**其參考文件的章節。  
   
--   若要讓<xref:System.Windows.FrameworkElement>動畫目標，您賦予它一個名稱藉由設定其<xref:System.Windows.FrameworkElement.Name%2A>屬性。 在程式碼中，您必須也使用<xref:System.Windows.FrameworkElement.RegisterName%2A>方法，以其所屬的頁面註冊元素名稱。  
+- 若要讓<xref:System.Windows.FrameworkElement>動畫目標，您賦予它一個名稱藉由設定其<xref:System.Windows.FrameworkElement.Name%2A>屬性。 在程式碼中，您必須也使用<xref:System.Windows.FrameworkElement.RegisterName%2A>方法，以其所屬的頁面註冊元素名稱。  
   
--   若要讓<xref:System.Windows.Freezable>物件成為動畫目標，在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，您使用[X:name 指示詞](../../xaml-services/x-name-directive.md)將它指派名稱。 在程式碼，您只使用<xref:System.Windows.FrameworkElement.RegisterName%2A>方法，以其所屬的頁面註冊物件。  
+- 若要讓<xref:System.Windows.Freezable>物件成為動畫目標，在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，您使用[X:name 指示詞](../../xaml-services/x-name-directive.md)將它指派名稱。 在程式碼，您只使用<xref:System.Windows.FrameworkElement.RegisterName%2A>方法，以其所屬的頁面註冊物件。  
   
  下列各節提供範例中的項目命名[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]和程式碼。 命名與目標相關的詳細資訊，請參閱[分鏡腳本概觀](storyboards-overview.md)。  
   
@@ -318,11 +318,11 @@ ms.locfileid: "59337730"
 ## <a name="animation-samples"></a>動畫範例  
  下列範例可以幫助您開始將動畫加入至您的應用程式。  
   
--   [From、To 和 By 動畫目標值範例](https://go.microsoft.com/fwlink/?LinkID=159988)  
+- [From、To 和 By 動畫目標值範例](https://go.microsoft.com/fwlink/?LinkID=159988)  
   
      示範不同 From/To/By 設定。  
   
--   [動畫計時行為範例](https://go.microsoft.com/fwlink/?LinkID=159970)  
+- [動畫計時行為範例](https://go.microsoft.com/fwlink/?LinkID=159970)  
   
      示範您可以控制動畫計時行為的不同方式。 此範例也示範如何資料繫結動畫的目的地值。  
   

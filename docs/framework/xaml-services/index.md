@@ -7,11 +7,11 @@ helpviewer_keywords:
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
 ms.openlocfilehash: 37fdd96c0666bc6ecda0f46daa5ca6271a8666ab
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007418"
 ---
 # <a name="xaml-services"></a>XAML 服務
 本主題說明的技術集合，稱為.NET Framework XAML 服務的功能。 大部分的服務和描述 Api 位於 System.Xaml，這是組件所引進的組件[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]的.NET core 組件集。 服務包括讀取器和寫入，結構描述類別和結構描述支援的處理站，設定其屬性的類別、 XAML 語言內建支援和其他 XAML 語言功能。  
@@ -19,19 +19,19 @@ ms.locfileid: "58048152"
 ## <a name="about-this-documentation"></a>了解此文件  
  .NET Framework XAML 服務的概念文件假設您有先前的 XAML 語言以及如何它可能會套用至特定的架構，例如體驗[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Windows Workflow Foundation 中或特定技術功能區域中，例如組建自訂中的功能<xref:Microsoft.Build.Framework.XamlTypes>。 這份文件不會嘗試為標記語言、 XAML 語法術語中或其他簡介教材說明 XAML 的基本概念。 相反地，這份文件著重於特別使用 System.Xaml 組件的文件庫中的 已啟用.NET Framework XAML 服務。 這些 Api 大部分都是 XAML 語言整合與擴充性案例。 這可能包括下列其中一項：  
   
--   擴充的基底的 XAML 讀取器或 XAML 寫入器 （直接處理 XAML 節點資料流; 衍生您自己的 XAML 讀取器或 XAML 寫入器） 的功能。  
+- 擴充的基底的 XAML 讀取器或 XAML 寫入器 （直接處理 XAML 節點資料流; 衍生您自己的 XAML 讀取器或 XAML 寫入器） 的功能。  
   
--   定義，並沒有特定架構相依性，可使用 XAML 自訂型別和屬性的型別來傳達其 XAML 類型系統特性，以.NET Framework XAML 服務。  
+- 定義，並沒有特定架構相依性，可使用 XAML 自訂型別和屬性的型別來傳達其 XAML 類型系統特性，以.NET Framework XAML 服務。  
   
--   裝載的應用程式，例如視覺化設計工具或 XAML 標記來源的互動式編輯器元件的 XAML 讀取器或 XAML 寫入器。  
+- 裝載的應用程式，例如視覺化設計工具或 XAML 標記來源的互動式編輯器元件的 XAML 讀取器或 XAML 寫入器。  
   
--   撰寫 XAML 值轉換器 （標記延伸，類型轉換器的自訂型別）。  
+- 撰寫 XAML 值轉換器 （標記延伸，類型轉換器的自訂型別）。  
   
--   定義自訂的 XAML 結構描述內容 (使用替代的組件載入技術來支援型別來源; 使用已知型別查閱技術，而不永遠反映組件，使用載入的組件的概念，請勿使用 CLR`AppDomain`和其相關聯的安全性模型）。  
+- 定義自訂的 XAML 結構描述內容 (使用替代的組件載入技術來支援型別來源; 使用已知型別查閱技術，而不永遠反映組件，使用載入的組件的概念，請勿使用 CLR`AppDomain`和其相關聯的安全性模型）。  
   
--   擴充的基底的 XAML 類型系統。  
+- 擴充的基底的 XAML 類型系統。  
   
--   使用`Lookup`或`Invoker`技術，以影響 XAML 型別系統和型別 backings 的評估方式。  
+- 使用`Lookup`或`Invoker`技術，以影響 XAML 型別系統和型別 backings 的評估方式。  
   
  如果您要尋找在 XAML 做為語言的簡介教材，您可以試試[XAML 概觀 (WPF)](../wpf/advanced/xaml-overview-wpf.md)。 該主題討論 XAML 的新功能的對象來[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]以及使用 XAML 標記和 XAML 語言功能。 另一個有用的文件是在簡介教材[XAML 語言規格](https://go.microsoft.com/fwlink/?LinkId=114525)。  
   
@@ -45,50 +45,50 @@ ms.locfileid: "58048152"
 ## <a name="xaml-node-streams-xaml-readers-and-xaml-writers"></a>XAML 節點資料流，XAML 讀取器和 XAML 寫入器  
  若要了解.NET Framework XAML 服務 XAML 語言和 XAML 作為語言的特定技術之間的關聯性中所扮演的角色，最好先了解的概念，XAML 節點資料流，以及該概念圖形 API 的方式和術語。 XAML 節點資料流是 XAML 語言表示法與 XAML 表示，或定義的物件圖形之間的概念中繼。  
   
--   XAML 讀取器是處理某種形式的 XAML，並產生 XAML 節點資料流的實體。 在 API 中，XAML 讀取器由基底類別<xref:System.Xaml.XamlReader>。  
+- XAML 讀取器是處理某種形式的 XAML，並產生 XAML 節點資料流的實體。 在 API 中，XAML 讀取器由基底類別<xref:System.Xaml.XamlReader>。  
   
--   XAML 寫入器是一個實體來處理 XAML 節點資料流，並會產生其他項目。 在 API 中，XAML 寫入器由基底類別<xref:System.Xaml.XamlWriter>。  
+- XAML 寫入器是一個實體來處理 XAML 節點資料流，並會產生其他項目。 在 API 中，XAML 寫入器由基底類別<xref:System.Xaml.XamlWriter>。  
   
  涉及 XAML 的兩個最常見案例是載入 XAML 來具現化物件圖形，並從應用程式或工具中儲存的物件圖形並產生 （通常是在儲存為文字檔的標記形式） 的 XAML 表示。 載入 XAML，和建立物件圖形通常就是在載入路徑本文件集中。 儲存或序列化 XAML 至現有的物件圖形通常指在另存為這份文件路徑。  
   
  最常見的載入路徑的類型說明如下：  
   
--   開始使用的 XAML 表示法，以 UTF 編碼的 XML 格式，並儲存為文字檔。  
+- 開始使用的 XAML 表示法，以 UTF 編碼的 XML 格式，並儲存為文字檔。  
   
--   載入至該 XAML <xref:System.Xaml.XamlXmlReader>。 <xref:System.Xaml.XamlXmlReader> 是<xref:System.Xaml.XamlReader>子類別。  
+- 載入至該 XAML <xref:System.Xaml.XamlXmlReader>。 <xref:System.Xaml.XamlXmlReader> 是<xref:System.Xaml.XamlReader>子類別。  
   
--   結果是 XAML 節點資料流。 您可以存取的 XAML 節點資料流使用的個別節點<xref:System.Xaml.XamlXmlReader>  /  <xref:System.Xaml.XamlReader> API。 最常見的作業為 XAML 節點資料流處理使用 「 目前的記錄 」 的每個節點中向前推進比喻。  
+- 結果是 XAML 節點資料流。 您可以存取的 XAML 節點資料流使用的個別節點<xref:System.Xaml.XamlXmlReader>  /  <xref:System.Xaml.XamlReader> API。 最常見的作業為 XAML 節點資料流處理使用 「 目前的記錄 」 的每個節點中向前推進比喻。  
   
--   將 XAML 節點資料流傳遞產生的節點<xref:System.Xaml.XamlObjectWriter>API。 <xref:System.Xaml.XamlObjectWriter> 是<xref:System.Xaml.XamlWriter>子類別。  
+- 將 XAML 節點資料流傳遞產生的節點<xref:System.Xaml.XamlObjectWriter>API。 <xref:System.Xaml.XamlObjectWriter> 是<xref:System.Xaml.XamlWriter>子類別。  
   
--   <xref:System.Xaml.XamlObjectWriter>根據來源 XAML 節點資料流進行寫入物件圖形，一次的一個物件。 這是 XAML 結構描述內容和可存取組件和類型的支援型別系統和 framework 實作的協助。  
+- <xref:System.Xaml.XamlObjectWriter>根據來源 XAML 節點資料流進行寫入物件圖形，一次的一個物件。 這是 XAML 結構描述內容和可存取組件和類型的支援型別系統和 framework 實作的協助。  
   
--   呼叫<xref:System.Xaml.XamlObjectWriter.Result%2A>XAML 節點資料流，以取得物件圖形的根物件的結尾。  
+- 呼叫<xref:System.Xaml.XamlObjectWriter.Result%2A>XAML 節點資料流，以取得物件圖形的根物件的結尾。  
   
  最常見的類型儲存路徑可以如下所述：  
   
--   物件圖形的整個應用程式執行時間、 UI 內容和狀態的執行階段中或在執行階段的整體應用程式的物件表示的較小區段的開頭。  
+- 物件圖形的整個應用程式執行時間、 UI 內容和狀態的執行階段中或在執行階段的整體應用程式的物件表示的較小區段的開頭。  
   
--   從邏輯開始物件，例如應用程式的根目錄或文件根物件載入至<xref:System.Xaml.XamlObjectReader>。 <xref:System.Xaml.XamlObjectReader> 是<xref:System.Xaml.XamlReader>子類別。  
+- 從邏輯開始物件，例如應用程式的根目錄或文件根物件載入至<xref:System.Xaml.XamlObjectReader>。 <xref:System.Xaml.XamlObjectReader> 是<xref:System.Xaml.XamlReader>子類別。  
   
--   結果是 XAML 節點資料流。 您可以存取的 XAML 節點資料流使用的個別節點<xref:System.Xaml.XamlObjectReader>和<xref:System.Xaml.XamlReader>API。 最常見的作業為 XAML 節點資料流處理使用 「 目前的記錄 」 的每個節點中向前推進比喻。  
+- 結果是 XAML 節點資料流。 您可以存取的 XAML 節點資料流使用的個別節點<xref:System.Xaml.XamlObjectReader>和<xref:System.Xaml.XamlReader>API。 最常見的作業為 XAML 節點資料流處理使用 「 目前的記錄 」 的每個節點中向前推進比喻。  
   
--   將 XAML 節點資料流傳遞產生的節點<xref:System.Xaml.XamlXmlWriter>API。 <xref:System.Xaml.XamlXmlWriter> 是<xref:System.Xaml.XamlWriter>子類別。  
+- 將 XAML 節點資料流傳遞產生的節點<xref:System.Xaml.XamlXmlWriter>API。 <xref:System.Xaml.XamlXmlWriter> 是<xref:System.Xaml.XamlWriter>子類別。  
   
--   <xref:System.Xaml.XamlXmlWriter> XAML 寫入 XML utf 編碼。 您可以將它儲存為文字檔案，做為資料流，或其他格式。  
+- <xref:System.Xaml.XamlXmlWriter> XAML 寫入 XML utf 編碼。 您可以將它儲存為文字檔案，做為資料流，或其他格式。  
   
--   呼叫<xref:System.Xaml.XamlXmlWriter.Flush%2A>取得最終輸出。  
+- 呼叫<xref:System.Xaml.XamlXmlWriter.Flush%2A>取得最終輸出。  
   
  如需有關 XAML 節點資料流概念的詳細資訊，請參閱 <<c0> [ 了解 XAML 節點 Stream 結構和概念](understanding-xaml-node-stream-structures-and-concepts.md)。  
   
 ### <a name="the-xamlservices-class"></a>XamlServices 類別  
  您不一定需要處理 XAML 節點資料流。 如果您想要的基本載入路徑或儲存路徑的基本，您可以使用中的 Api<xref:System.Xaml.XamlServices>類別。  
   
--   各種不同的簽章的<xref:System.Xaml.XamlServices.Load%2A>實作載入路徑。 您可以載入檔案或資料流，或可以載入<xref:System.Xml.XmlReader>，<xref:System.IO.TextReader>或<xref:System.Xaml.XamlReader>，包裝您的 XAML 輸入，方法是使用該讀取器 Api 載入。  
+- 各種不同的簽章的<xref:System.Xaml.XamlServices.Load%2A>實作載入路徑。 您可以載入檔案或資料流，或可以載入<xref:System.Xml.XmlReader>，<xref:System.IO.TextReader>或<xref:System.Xaml.XamlReader>，包裝您的 XAML 輸入，方法是使用該讀取器 Api 載入。  
   
--   各種不同的簽章<xref:System.Xaml.XamlServices.Save%2A>儲存的物件圖形，並產生輸出資料流、 檔案，或<xref:System.Xml.XmlWriter> / <xref:System.IO.TextWriter>執行個體。  
+- 各種不同的簽章<xref:System.Xaml.XamlServices.Save%2A>儲存的物件圖形，並產生輸出資料流、 檔案，或<xref:System.Xml.XmlWriter> / <xref:System.IO.TextWriter>執行個體。  
   
--   <xref:System.Xaml.XamlServices.Transform%2A> 將 XAML 轉換藉由連結的載入路徑和儲存路徑做為單一作業。 ，則可以使用不同的結構描述內容或不同的支援型別系統<xref:System.Xaml.XamlReader>和<xref:System.Xaml.XamlWriter>，這是影響產生的 XAML 轉換的方式。  
+- <xref:System.Xaml.XamlServices.Transform%2A> 將 XAML 轉換藉由連結的載入路徑和儲存路徑做為單一作業。 ，則可以使用不同的結構描述內容或不同的支援型別系統<xref:System.Xaml.XamlReader>和<xref:System.Xaml.XamlWriter>，這是影響產生的 XAML 轉換的方式。  
   
  如需有關如何使用<xref:System.Xaml.XamlServices>，請參閱 < [XAMLServices 類別和基本 XAML 讀取或寫入](xamlservices-class-and-basic-xaml-reading-or-writing.md)。  
   

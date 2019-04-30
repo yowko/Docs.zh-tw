@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1b84b852-3cad-41a7-8077-149a70d50c8b
 ms.openlocfilehash: f82e347ecdb3c69cee3749855d1e4cb457a460f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033608"
 ---
 # <a name="how-to-turn-off-deferred-loading"></a>HOW TO：關閉延後載入
 您可以將 <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> 設定為 `false`，以關閉延後載入。 如需詳細資訊，請參閱 <<c0> [ 延後執行與立即載入](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)。  

@@ -5,18 +5,18 @@ f1_keywords:
 - vbrPPMT_PerGT0AndLTNPer
 ms.assetid: 5f3fadba-d32c-4e52-b949-85a907e6c12f
 ms.openlocfilehash: bb6ec0e94f5467dd70c4d747f6daf6ec812c6187
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977074"
 ---
 # <a name="argument-per-is-not-valid"></a>引數 'Per' 是無效的
 為 `Per`提供的引數無效，該引數必須是指定範圍 1 到 `Double` 中付款期的 `NPer`。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   確定引數落在有效範圍內。  
+- 確定引數落在有效範圍內。  
   
 ## <a name="see-also"></a>另請參閱
 

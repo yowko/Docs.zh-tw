@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RadioButton control type
 ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
 ms.openlocfilehash: b437e19b10b534ce1c1dfae8ef0cca083cac2d61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996706"
 ---
 # <a name="ui-automation-support-for-the-radiobutton-control-type"></a>RadioButton 控制項類型的 UI 自動化支援
 > [!NOTE]

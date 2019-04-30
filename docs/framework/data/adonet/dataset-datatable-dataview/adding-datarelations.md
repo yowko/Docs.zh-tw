@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
 ms.openlocfilehash: 9cefc97e571f315a6a644e0a058d4283168ecb9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034507"
 ---
 # <a name="adding-datarelations"></a>加入 DataRelation
 在包含多個 <xref:System.Data.DataSet> 物件的 <xref:System.Data.DataTable> 中，可以使用 <xref:System.Data.DataRelation> 物件建立資料表間的關聯性、巡覽資料表，並從相關資料表傳回子資料列或父資料列。  

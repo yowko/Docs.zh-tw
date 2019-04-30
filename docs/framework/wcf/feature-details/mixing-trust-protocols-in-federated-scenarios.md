@@ -3,11 +3,11 @@ title: 在聯合案例中混合信任通信協定
 ms.date: 03/30/2017
 ms.assetid: d7b5fee9-2246-4b09-b8d7-9e63cb817279
 ms.openlocfilehash: ce5c3a1875d84d98068dcc78d8346a88bc0b28f3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046680"
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>在聯合案例中混合信任通信協定
 有些情況下，聯合用戶端會與信任版本不相同的服務和安全性權杖服務 (STS) 進行通訊。 WSDL 服務可包含 `RequestSecurityTokenTemplate` 判斷提示 (Assertion)，其中 WS-Trust 項目的版本與 STS 不同。 在這種情況下，Windows Communication Foundation (WCF) 用戶端會將從收到的 Ws-trust 元素轉換`RequestSecurityTokenTemplate`成符合 STS 信任版本。 WCF 會處理只能在標準繫結時不相符的信任版本。 WCF 所辨識的所有標準演算法參數是標準繫結的一部分。 本主題說明使用各種服務與 STS 之間的信任設定 WCF 行為。  
@@ -15,17 +15,17 @@ ms.locfileid: "50182902"
 ## <a name="rp-feb-2005-and-sts-feb-2005"></a>RP Feb 2005 和 STS Feb 2005  
  信賴憑證者 (Relying Party，RP) WSDL 在其 `RequestSecurityTokenTemplate` 區段中包含下列項目：  
   
--   `CanonicalizationAlgorithm`  
+- `CanonicalizationAlgorithm`  
   
--   `EncryptionAlgorithm`  
+- `EncryptionAlgorithm`  
   
--   `EncryptWith`  
+- `EncryptWith`  
   
--   `SignWith`  
+- `SignWith`  
   
--   `KeySize`  
+- `KeySize`  
   
--   `KeyType`  
+- `KeyType`  
   
  用戶端組態檔包含參數清單。  
   
@@ -34,19 +34,19 @@ ms.locfileid: "50182902"
 ## <a name="rp-trust-13-and-sts-trust-13"></a>RP Trust 1.3 和 STS Trust 1.3  
  RP WSDL 在其 `RequestSecurityTokenTemplate` 區段內包含了下列項目：  
   
--   `CanonicalizationAlgorithm`  
+- `CanonicalizationAlgorithm`  
   
--   `EncryptionAlgorithm`  
+- `EncryptionAlgorithm`  
   
--   `EncryptWith`  
+- `EncryptWith`  
   
--   `SignWith`  
+- `SignWith`  
   
--   `KeySize`  
+- `KeySize`  
   
--   `KeyType`  
+- `KeyType`  
   
--   `KeyWrapAlgorithm`  
+- `KeyWrapAlgorithm`  
   
  用戶端組態檔所包含的 `secondaryParameters` 項目，會包裝 RP 所指定的參數。  
   
@@ -55,17 +55,17 @@ ms.locfileid: "50182902"
 ## <a name="rp-trust-feb-2005-and-sts-trust-13"></a>RP Trust Feb 2005 和 STS Trust 1.3  
  RP WSDL 在其 `RequestSecurityTokenTemplate` 區段中包含了下列項目：  
   
--   `CanonicalizationAlgorithm`  
+- `CanonicalizationAlgorithm`  
   
--   `EncryptionAlgorithm`  
+- `EncryptionAlgorithm`  
   
--   `EncryptWith`  
+- `EncryptWith`  
   
--   `SignWith`  
+- `SignWith`  
   
--   `KeySize`  
+- `KeySize`  
   
--   `KeyType`  
+- `KeyType`  
   
  用戶端組態檔包含參數清單。  
   
@@ -73,28 +73,28 @@ ms.locfileid: "50182902"
   
  WCF 的控制代碼`KeyType`， `KeySize`，和`TokenType`項目，如下所示：  
   
--   下載 WSDL，建立繫結，然後指派 RP 參數中的 `KeyType`、`KeySize` 和 `TokenType`。 用戶端組態檔隨即產生。  
+- 下載 WSDL，建立繫結，然後指派 RP 參數中的 `KeyType`、`KeySize` 和 `TokenType`。 用戶端組態檔隨即產生。  
   
--   現在用戶端可以變更組態檔中的任何參數。  
+- 現在用戶端可以變更組態檔中的任何參數。  
   
--   在執行階段，WCF 會複製到指定的所有參數`AdditionalTokenParameters`以外的用戶端組態檔區段`KeyType`，`KeySize`和`TokenType`，這些參數會包含在組態檔，因此層代。  
+- 在執行階段，WCF 會複製到指定的所有參數`AdditionalTokenParameters`以外的用戶端組態檔區段`KeyType`，`KeySize`和`TokenType`，這些參數會包含在組態檔，因此層代。  
   
 ## <a name="rp-trust-13-and-sts-trust-feb-2005"></a>RP Trust 1.3 和 STS Trust Feb 2005  
  RP WSDL 在其 `RequestSecurityTokenTemplate` 區段中包含了下列項目：  
   
--   `CanonicalizationAlgorithm`  
+- `CanonicalizationAlgorithm`  
   
--   `EncryptionAlgorithm`  
+- `EncryptionAlgorithm`  
   
--   `EncryptWith`  
+- `EncryptWith`  
   
--   `SignWith`  
+- `SignWith`  
   
--   `KeySize`  
+- `KeySize`  
   
--   `KeyType`  
+- `KeyType`  
   
--   `KeyWrapAlgorithm`  
+- `KeyWrapAlgorithm`  
   
  用戶端組態檔所包含的 `secondaryParamters` 項目，會包裝 RP 所指定的參數。  
   
