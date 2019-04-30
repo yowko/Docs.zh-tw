@@ -8,11 +8,11 @@ helpviewer_keywords:
 - TreeView control [Windows Forms]
 ms.assetid: 879438b4-4eac-45c6-b345-0229c9b21ab0
 ms.openlocfilehash: a479c288aaf3269c07ab02417226c8e78f5df59a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009238"
 ---
 # <a name="treeview-control-windows-forms"></a>TreeView 控制項 (Windows Form)
 Windows Form `TreeView` 控制項會顯示節點的階層，就像 Windows 作業系統中 Windows 檔案總管功能左窗格顯示檔案和資料夾的方式。  

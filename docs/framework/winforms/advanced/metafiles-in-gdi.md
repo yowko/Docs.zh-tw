@@ -10,11 +10,11 @@ helpviewer_keywords:
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
 ms.openlocfilehash: bb972f158496192aa38f10564209bb2781837414
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010019"
 ---
 # <a name="metafiles-in-gdi"></a>GDI+ 中的中繼檔
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供<xref:System.Drawing.Imaging.Metafile>類別，使您可以記錄並顯示中繼檔。 中繼檔，也稱為向量映像中，是儲存為一連串的繪圖命令和設定的映像。 命令和設定記錄在<xref:System.Drawing.Imaging.Metafile>可以儲存在記憶體中或儲存至檔案或資料流物件。  
@@ -22,11 +22,11 @@ ms.locfileid: "59119856"
 ## <a name="metafile-formats"></a>中繼檔格式  
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 可以顯示已儲存在下列格式的中繼檔：  
   
--   Windows Metafile (WMF)  
+- Windows Metafile (WMF)  
   
--   加強型中繼檔 (EMF)   
+- 加強型中繼檔 (EMF)   
   
--   EMF+  
+- EMF+  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] EMF 和 EMF + 格式中，但不是在 WMF 格式時，就可以記錄的中繼檔。  
   

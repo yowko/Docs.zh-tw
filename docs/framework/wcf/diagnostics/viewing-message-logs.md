@@ -3,11 +3,11 @@ title: 檢視訊息記錄
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
 ms.openlocfilehash: 2322d2a6e0c5a6f26ad103be72230666f6bca191
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964394"
 ---
 # <a name="viewing-message-logs"></a>檢視訊息記錄
 此主題描述如何檢視訊息記錄。  
@@ -29,9 +29,9 @@ ms.locfileid: "59139057"
   
  您可以使用下列其中一種方法解決這個問題。  
   
--   只能檢視中的三個訊息記錄檔的兩個[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)在任何時間。  
+- 只能檢視中的三個訊息記錄檔的兩個[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)在任何時間。  
   
--   如果您必須檢視中的所有三個記錄檔[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)在此同時，您可以修改轉送服務來建立新<xref:System.ServiceModel.Channels.Message>執行個體。 這個執行個體應該是傳入訊息本文的複本，加上所有的標頭 (除了 `ActivityId` 和 `Action` 標頭以外)。 下列範例程式碼示範如何進行這項操作：  
+- 如果您必須檢視中的所有三個記錄檔[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)在此同時，您可以修改轉送服務來建立新<xref:System.ServiceModel.Channels.Message>執行個體。 這個執行個體應該是傳入訊息本文的複本，加上所有的標頭 (除了 `ActivityId` 和 `Action` 標頭以外)。 下列範例程式碼示範如何進行這項操作：  
   
 ```csharp
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
@@ -50,15 +50,15 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
 ## <a name="exceptional-cases-for-inaccurate-message-logging-content"></a>不正確之訊息記錄內容的例外情況  
  在下列情況中，記錄的訊息可能不是在網路上傳輸之八位元資料流的完整表示。  
   
--   針對 BasicHttpBinding，在 /addressing/none 命名空間中會記錄傳入訊息的封套標頭。  
+- 針對 BasicHttpBinding，在 /addressing/none 命名空間中會記錄傳入訊息的封套標頭。  
   
--   空白字元可以不相符。  
+- 空白字元可以不相符。  
   
--   針對傳入訊息，空白項目可以用不同方式表示。 例如，\<標記 >\<標記 > 而不是\<標記 / >  
+- 針對傳入訊息，空白項目可以用不同方式表示。 例如，\<標記 >\<標記 > 而不是\<標記 / >  
   
--   當藉由預設或明確設定 enableLoggingKnownPii="true" 停用已知 PII 記錄時。  
+- 當藉由預設或明確設定 enableLoggingKnownPii="true" 停用已知 PII 記錄時。  
   
--   啟用編碼以轉換至 UTF-8。  
+- 啟用編碼以轉換至 UTF-8。  
   
 ## <a name="see-also"></a>另請參閱
 

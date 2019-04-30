@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
 ms.openlocfilehash: 9f13f9d95c40b964c5eb416c590a5d603d714bac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991012"
 ---
 # <a name="schema-import-and-export"></a>結構描述匯入和匯出
 Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 `DataContractSerializer` 會在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件與 XML 之間轉譯 (雙向)。 除了本身的序列化程式，WCF 會包含相關聯的結構描述匯入和結構描述匯出機制。 *結構描述*是的 XML 序列化程式產生或還原序列化程式可以存取的形狀的正式、 精確及電腦可讀取描述。 WCF 會使用 World Wide Web Consortium (W3C) XML 結構描述定義語言 (XSD) 做為其結構描述表示，也就是許多第三方平台廣泛互通。  
@@ -33,11 +33,11 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
   
  請注意，產生的型別會遵循數個資料合約最佳做法 (位於[最佳做法：資料合約版本控制](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)):  
   
--   此型別會實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面。 如需詳細資訊，請參閱[向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
+- 此型別會實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面。 如需詳細資訊，請參閱[向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
--   資料成員會實作為包裝私用欄位的公用屬性。  
+- 資料成員會實作為包裝私用欄位的公用屬性。  
   
--   此類別是部份類別，而且透過不需要修改產生之程式碼來新增項目。  
+- 此類別是部份類別，而且透過不需要修改產生之程式碼來新增項目。  
   
  <xref:System.Runtime.Serialization.XsdDataContractExporter> 讓您能夠進行相反的動作，也就是接受可使用 `DataContractSerializer` 序列化的型別，並產生 XSD 結構描述文件。  
   

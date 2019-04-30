@@ -3,18 +3,18 @@ title: 如果檔案不存在，就無法查詢檔案資訊
 ms.date: 07/20/2015
 ms.assetid: 2bf50d79-2a74-403f-833c-6cabd2c213ce
 ms.openlocfilehash: 93161b823f87e0c5cbfa1f8a8f72ef0bfeb0c534
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971570"
 ---
 # <a name="file-information-cannot-be-queried-if-the-file-does-not-exist"></a>如果檔案不存在，就無法查詢檔案資訊
 已嘗試查詢 <xref:System.IO.FileInfo> 物件，以取得不存在檔案的相關資訊。 這通常是因為提供檔案名稱時發生錯誤。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   確認您提供的檔案名稱正確。  
+- 確認您提供的檔案名稱正確。  
   
 ## <a name="see-also"></a>另請參閱
 
