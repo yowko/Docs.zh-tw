@@ -5,11 +5,11 @@ ms.assetid: faa538c2-60c9-4064-b996-1b4c24ebd751
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7349a20da35eb0b87894440026a0974d49ae2aa0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948638"
 ---
 # <a name="icordebugprocess6getcode-method"></a>ICorDebugProcess6::GetCode 方法
 取得特定程式碼位址之 Managed 程式碼的相關資訊。  

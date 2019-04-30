@@ -9,11 +9,11 @@ helpviewer_keywords:
 - changing selections in a RichTextBox [WPF]
 ms.assetid: f1213205-1ad7-4cd2-b115-460173cc5aa3
 ms.openlocfilehash: b8acfe7cde1fe5dae96cd6324f75c5b146be9ec9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001711"
 ---
 # <a name="change-selection-in-a-richtextbox-programmatically"></a>以程式設計方式變更 RichTextBox 中的選項
 此範例示範如何以程式設計方式變更目前的選取範圍中<xref:System.Windows.Controls.RichTextBox>。 此選取項目會與相同使用者已選取使用使用者介面的內容。  

@@ -14,11 +14,11 @@ ms.assetid: 578cc32b-5654-4d8b-9d8c-ebcbc5c75390
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 596165bfac9c65898448714a4477b7f045bd87d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018576"
 ---
 # <a name="role-based-security"></a>以角色為基礎的安全性
 角色通常用在財務和商務應用程式中以強制執行原則。 例如，應用程式可能會根據提出要求的使用者是否為指定角色的成員，而限制正在處理之交易的大小。 職員可能具有授權，可以處理小於指定臨界值的交易，監督員可能有更高的限制，而副總裁可能有再更高的限制 (或根本沒有限制)。 以角色為基礎的安全性也可用於應用程式需要多重許可才能完成動作之時。 這樣的情況可能是採購系統，任何員工可以產生採購要求，但只有採購人員可以將該要求轉換成可以傳送給供應商的訂單。  
@@ -29,7 +29,7 @@ ms.locfileid: "33582528"
   
  .NET Framework 提供以角色為基礎的安全性支援，具有足夠的彈性和可擴充性，可滿足廣泛應用程式的需要。 您可以選擇與現有的驗證基礎結構 (例如 COM + 1.0 服務) 交互操作，或建立自訂驗證系統。 以角色為基礎的安全性特別適合用於 ASP.NET Web 應用程式，它們主要是在伺服器上進行處理。 不過，.NET Framework 以角色為基礎的安全性可以用在用戶端或伺服器上。  
   
- 之前讀取這個區段，請確定您了解中所呈現的題材[重要的安全性概念](../../../docs/standard/security/key-security-concepts.md)。  
+ 之前閱讀本節，請確定您已了解中所呈現的題材[重要的安全性概念](../../../docs/standard/security/key-security-concepts.md)。  
   
 ## <a name="related-topics"></a>相關主題  
   

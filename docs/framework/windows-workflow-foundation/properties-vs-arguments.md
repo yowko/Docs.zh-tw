@@ -1,15 +1,15 @@
 ---
-title: 屬性與。引數
+title: 屬性與引數
 ms.date: 03/30/2017
 ms.assetid: 14651389-4a49-4cbb-9ddf-c83fdc155df1
 ms.openlocfilehash: a6ea4755599f18e8bbaa8187941623578d2168ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962626"
 ---
-# <a name="properties-vs-arguments"></a>屬性與。引數
+# <a name="properties-vs-arguments"></a>屬性與引數
 有許多選項可用來將資料傳入活動。 除了使用 <xref:System.Activities.InArgument> 以外，您也可以使用標準 CLR 屬性或公用 <xref:System.Activities.ActivityAction> 屬性來開發接收資料的活動。 本主題將討論如何選取適當的方法類型。  
   
 ## <a name="using-clr-properties"></a>使用 CLR 屬性  

@@ -3,11 +3,11 @@ title: IdentityModel 例外狀況
 ms.date: 03/30/2017
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
 ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998513"
 ---
 # <a name="identitymodel-exceptions"></a>IdentityModel 例外狀況
 本主題會列出由 IdentityModel 產生的所有例外狀況。  
@@ -23,7 +23,7 @@ ms.locfileid: "33474866"
 |SAMLAttributeMissingNameAttributeOnRead|為 SamlAttribute 所讀取的 'Name' 遺失或是長度為 0。|  
 |UnknownICryptoType|不支援 ICrypto 實作。|  
 |TraceCodeSecurityTokenProviderClosed|安全性權杖提供者已關閉。|  
-|SAMLUnableToLoadAdvice|無法載入\<saml:advice > 項目。|  
+|SAMLUnableToLoadAdvice|無法載入\<saml: advice > 項目。|  
 |SAMLAuthenticationStatementMissingAuthenticationMethodOnRead|為 SamlAuthenticationStatement 所讀取的 'AuthenticationMethod' 屬性遺失或是長度為 0。|  
 |UnsupportedTransformAlgorithm|不支援的轉換或標準化演算法。|  
 |SAMLAudienceRestrictionShouldHaveOneAudience|SamlAudienceRestrictionCondition 至少必須包含一個 Audience (URI)。|  
@@ -42,7 +42,7 @@ ms.locfileid: "33474866"
 |TraceCodeSecuritySessionClosedFaultReceived|用戶端安全性工作階段已從伺服器接收工作階段已關閉的錯誤。|  
 |TraceCodeIssuanceTokenProviderRedirectApplied|IssuanceTokenProvider 已套用重新導向標頭。|  
 |TraceCodeSecuritySessionClosedFaultSendFailure|將安全性工作階段已關閉的錯誤傳送到用戶端時失敗。|  
-|ValueMustBeZero|這個引數的值必須是 0。|  
+|ValueMustBeZero|此引數的值必須是 0。|  
 |SAMLUnableToResolveSignatureKey|無法解析在 SamlAssertion 簽章中找到的 SecurityKeyIdentifier。 無法驗證特定簽發者的 SamlAssertion 簽章。|  
 |X509IsNotInTrustedStore|特定的 X.509 憑證不是位於受信任人的存放區。|  
 |SAMLElementNotRecognized|不支援特定的項目。|  
@@ -83,12 +83,12 @@ ms.locfileid: "33474866"
 |SspiWrapperEncryptDecryptAssert1|Sspiwrapper:: Encryptdecrypthelper&#124;'offset' 超出範圍。|  
 |SspiWrapperEncryptDecryptAssert2|Sspiwrapper:: Encryptdecrypthelper&#124;'size' 超出範圍。 SecurityTokenManagerCannotCreateAuthenticatorForRequirement=安全性權杖管理員無法針對特定需求建立權杖驗證器。|  
 |UnableToCreateKeyedHashAlgorithm|無法從特定的值針對特定的簽章演算法建立 KeyedHashAlgorithm。|  
-|SAMLUnableToLoadAssertion|\<Saml:assertion > 無法載入項目。|  
+|SAMLUnableToLoadAssertion|\<Saml: assertion > 無法載入項目。|  
 |X509FindValueMismatchMulti|特定的 X509FindType 要求 findValue 引數型別必須是兩個值的其中一個值。 引數 findValue 是另一個類型。|  
 |TraceCodeSecurityIdentityDeterminationSuccess|已確定 EndpointAddress 的身分識別。|  
 |UndefinedUseOfPrefixAtElement|在項目使用的特定前置詞尚未定義命名空間。|  
 |TraceCodeSecuritySessionResponderOperationFailure|伺服器的安全性工作階段作業失敗。|  
-|CannotFindCert|使用下列特定的搜尋條件找不到 X.509 憑證：StoreName、StoreLocation、FindType、FindValue。|  
+|CannotFindCert|找不到使用特定的搜尋條件的 X.509 憑證：StoreName、 StoreLocation、 FindType、 FindValue。|  
 |X509InvalidUsageTime|特定的 X.509 憑證使用時間無效。 使用時間不是介於必要的 NotBefore 時間與 NotAfter 時間之間。|  
 |TraceCodeSecurityIdentityDeterminationFailure|無法判斷 EndpointAddress 的身分識別。|  
 |AsyncObjectAlreadyEnded|已對這個非同步結果物件呼叫 End 方法。|  
@@ -100,11 +100,11 @@ ms.locfileid: "33474866"
 |SAMLAssertionMissingMajorVersionAttributeOnRead|所讀取的 SamlAssertion 遺失 MajorVersion 或其長度為 0。|  
 |SamlAttributeClaimRightShouldBePossessProperty|這個 SamlAttribute 建構函式要求宣告權利的值必須是 System.IdentityModel.Claims.Rights.PossessProperty。|  
 |AuthorizationPolicyEvaluated|已評估具有特定識別碼的原則。|  
-|SAMLUnableToLoadCondtions|\<Saml:conditions > 無法載入項目。|  
+|SAMLUnableToLoadCondtions|\<Saml: conditions > 無法載入項目。|  
 |AESKeyLengthNotSupported|不支援指定的 bits Key。 只支援 128、192 和 256 bits Key。|  
 |UserNameCannotBeEmpty|使用者名稱不可以空白。|  
 |AlgorithmAndPublicKeyMisMatch|指定的演算法與公開金鑰不相符。|  
-|SAMLUnableToLoadCondtion|\<Saml:conditions > 無法載入項目。|  
+|SAMLUnableToLoadCondtion|\<Saml: conditions > 無法載入項目。|  
 |SamlAssertionMissingSigningCredentials|尚未對 SamlAssertion 設定 SigningCredentials。 SamlAssertions 必須簽署，請對 SamlAssertion 設定有效的 SigningCredentials，才能繼續進行。|  
 |SspiPayloadNotEncrypted|二進位資料未以 SSPI 安全性內容加密。|  
 |SAMLAuthorizationDecisionShouldHaveOneActionOnRead|所讀取的 SamlAuthorizationDecisionStatement 未包含任何 SamlAction。|  
@@ -227,7 +227,7 @@ ms.locfileid: "33474866"
 |UnableToCreateSignatureDeformatterFromAsymmetricCrypto|無法從指定的非對稱式加密針對指定的演算法建立簽章變形項。|  
 |TraceCodeIdentityModelAsyncCallbackThrewException|非同步回呼擲回例外狀況。|  
 |LengthMustBeGreaterThanZero|此引數的長度必須大於 0。|  
-|FoundMultipleCerts|使用指定的搜尋條件 StoreName、StoreLocation、FindType、FindValue 時，找到多個 X.509 憑證。 請提供更精確的尋找值。|  
+|FoundMultipleCerts|找到多個 X.509 憑證使用指定的搜尋準則：StoreName、 StoreLocation、 FindType、 FindValue。 請提供更精確的尋找值。|  
 |AtLeastOneTransformRequired|Transforms 項目必須至少包含一個轉換。|  
 |SAMLTokenNotSerialized|SamlAssertion 無法序列化到 XML。 如需詳細資訊，請參閱內部例外狀況。|  
 |TraceCodeSecurityBindingOutgoingMessageSecured|安全性通訊協定已驗證傳出訊息。|  

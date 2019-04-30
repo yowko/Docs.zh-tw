@@ -6,26 +6,26 @@ helpviewer_keywords:
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
 ms.openlocfilehash: 4a77060661cb0d71b0209cbcdeba23ffc2c6e5c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010666"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF 中的程式碼後置和 XAML
 <a name="introduction"></a> 程式碼後置指的是用來描述與標記定義的物件，聯結的程式碼時[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面是進行標記編譯。 本主題描述程式碼後置的需求，以及在程式碼的替代的內嵌程式碼機制[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
   
  此主題包括下列章節：  
   
--   [必要條件](#Prerequisites)  
+- [必要條件](#Prerequisites)  
   
--   [程式碼後置和 XAML 語言](#codebehind_and_the_xaml_language)  
+- [程式碼後置和 XAML 語言](#codebehind_and_the_xaml_language)  
   
--   [程式碼後置、 事件處理常式，並在 WPF 中的部分類別需求](#Code_behind__Event_Handler__and_Partial_Class)  
+- [程式碼後置、 事件處理常式，並在 WPF 中的部分類別需求](#Code_behind__Event_Handler__and_Partial_Class)  
   
--   [x:Code](#x_Code)  
+- [x:Code](#x_Code)  
   
--   [內嵌程式碼的限制](#Inline_Code_Limitations)  
+- [內嵌程式碼的限制](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
@@ -38,15 +38,15 @@ ms.locfileid: "59088559"
 <a name="Code_behind__Event_Handler__and_Partial_Class"></a>   
 ## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a>程式碼後置、 事件處理常式，並在 WPF 中的部分類別需求  
   
--   部分類別必須衍生自支援的根項目類型。  
+- 部分類別必須衍生自支援的根項目類型。  
   
--   請注意，在標記編譯建置動作的預設行為，可以讓衍生空白部分類別定義中的程式碼後置的一端。 編譯的結果會假設為部分類別中，基礎頁面根的支援類型，即使未指定。 不過，依賴此行為不是最佳的作法。  
+- 請注意，在標記編譯建置動作的預設行為，可以讓衍生空白部分類別定義中的程式碼後置的一端。 編譯的結果會假設為部分類別中，基礎頁面根的支援類型，即使未指定。 不過，依賴此行為不是最佳的作法。  
   
--   您在程式碼後置中撰寫的事件處理常式必須是執行個體方法，而且不可為靜態方法。 這些方法必須由所識別之 CLR 命名空間內的部分類別定義`x:Class`。 您無法限定名稱的事件處理常式，以指示[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器尋找事件連接不同的類別範圍中的事件處理常式。  
+- 您在程式碼後置中撰寫的事件處理常式必須是執行個體方法，而且不可為靜態方法。 這些方法必須由所識別之 CLR 命名空間內的部分類別定義`x:Class`。 您無法限定名稱的事件處理常式，以指示[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器尋找事件連接不同的類別範圍中的事件處理常式。  
   
--   處理常式必須符合適當的事件的委派，在支援型別系統中。  
+- 處理常式必須符合適當的事件的委派，在支援型別系統中。  
   
--   Microsoft Visual Basic 語言的具體來說，您可以使用語言特有`Handles`關鍵字來關聯執行個體和事件處理常式宣告，而不是附加處理常式中的屬性中的處理常式[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 不過，這項技術的確有些限制因為`Handles`關鍵字無法支援所有的特定功能[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件系統，例如特定路由事件的案例，或附加事件。 如需詳細資訊，請參閱 < [Visual Basic 和 WPF 事件處理](visual-basic-and-wpf-event-handling.md)。  
+- Microsoft Visual Basic 語言的具體來說，您可以使用語言特有`Handles`關鍵字來關聯執行個體和事件處理常式宣告，而不是附加處理常式中的屬性中的處理常式[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 不過，這項技術的確有些限制因為`Handles`關鍵字無法支援所有的特定功能[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件系統，例如特定路由事件的案例，或附加事件。 如需詳細資訊，請參閱 < [Visual Basic 和 WPF 事件處理](visual-basic-and-wpf-event-handling.md)。  
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x:Code  

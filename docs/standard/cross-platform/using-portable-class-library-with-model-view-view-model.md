@@ -12,11 +12,11 @@ ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b48dc67e18411d82f03d29ab244d57575d6d720
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050491"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>搭配 Model-View-View 模型使用可攜式類別庫
 您可以使用.NET Framework[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)實作模型檢視 View Model (MVVM) 模式，並跨多個平台共用的組件。
@@ -32,27 +32,27 @@ ms.locfileid: "56835781"
 ## <a name="classes-that-support-mvvm"></a>支援 MVVM 類別
  如果您的[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]專案是以 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]、[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]、Silverlight 或 Windows Phone 7.5 為目標，就可以使用下列類別實作 MVVM 模式：
 
--   <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> 類別
+- <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> 類別
 
--   <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType> 類別
+- <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType> 類別
 
--   <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType> 類別
+- <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType> 類別
 
--   <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType> 類別
+- <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType> 類別
 
--   <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType> 類別
+- <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType> 類別
 
--   <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType> 類別
+- <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType> 類別
 
--   <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType> 類別
+- <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType> 類別
 
--   <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType> 類別
+- <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType> 類別
 
--   <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType> 類別
+- <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType> 類別
 
--   <xref:System.Windows.Input.ICommand?displayProperty=nameWithType> 類別
+- <xref:System.Windows.Input.ICommand?displayProperty=nameWithType> 類別
 
--   中的所有類別<xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType>命名空間
+- 中的所有類別<xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType>命名空間
 
 ## <a name="implementing-mvvm"></a>實作 MVVM
  若要實作 MVVM，您通常會建立模型和檢視模型中的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案，因為[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案無法參考非可攜式專案。 模型和檢視模型可以是相同專案中，或在不同的專案中。 如果您使用不同的專案，請從檢視模型專案中將參考新增到模型專案。

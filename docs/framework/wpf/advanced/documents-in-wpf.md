@@ -11,11 +11,11 @@ helpviewer_keywords:
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
 ms.openlocfilehash: b4057f54934fb5c7c9bb3d4fb97fe8e197e324ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051659"
 ---
 # <a name="documents-in-wpf"></a>WPF 中的文件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 所提供的各種文件功能可以建立高精確度的內容，此種內容的設計會比在舊版 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 中更加容易存取與閱讀。 除了增強功能和品質，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也針對文件顯示、封裝和安全性提供整合式服務。 本主題提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文件類型和文件封裝的簡介。  
@@ -61,11 +61,11 @@ ms.locfileid: "59313953"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 封裝架構是下列幾個重要技術的基礎：  
   
--   符合 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 的 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件。  
+- 符合 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 的 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件。  
   
--   Microsoft Office "12" Open XML 格式文件 (.docx)。  
+- Microsoft Office "12" Open XML 格式文件 (.docx)。  
   
--   適用於您自己應用程式設計的自訂儲存格式。  
+- 適用於您自己應用程式設計的自訂儲存格式。  
   
  封裝 Api，為基礎<xref:System.Windows.Xps.Packaging.XpsDocument>專為儲存[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]修正內容的文件。 <xref:System.Windows.Xps.Packaging.XpsDocument>是獨立的文件，可以在檢視器 中顯示開啟<xref:System.Windows.Controls.DocumentViewer>控制項來列印多工緩衝處理，路由或輸出直接[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-相容的印表機。  
   
@@ -99,11 +99,11 @@ ms.locfileid: "59313953"
 #### <a name="packagerelationships"></a>PackageRelationships  
  A <xref:System.IO.Packaging.PackageRelationship> （「 關聯性 」） 提供一個機制，來將關聯封裝或封裝內的組件中的其他資訊。 關聯性是封裝層級功能，可將其他資訊與組件產生關聯，而不需要修改實際組件內容。 直接將新資料插入組件內容，在許多情況下通常並不可行：  
   
--   不知道組件及其內容結構描述的實際類型。  
+- 不知道組件及其內容結構描述的實際類型。  
   
--   即使知道，內容結構描述也可能不會提供新增資訊的方法。  
+- 即使知道，內容結構描述也可能不會提供新增資訊的方法。  
   
--   組件可能會進行數位簽署或加密，以免遭到任何修改。  
+- 組件可能會進行數位簽署或加密，以免遭到任何修改。  
   
  封裝關聯性提供一個顯而易見的方法，來新增其他資訊，並將此資訊與個別組件或整個封裝產生關聯。 封裝關聯性可用於兩項主要功能：  
   
@@ -125,13 +125,13 @@ ms.locfileid: "59313953"
 ## <a name="xps-documents"></a>XPS 文件  
  [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文件是一種封裝，其中包含一或多份固定格式文件，以及進行呈現所需的所有資源和資訊。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 也是原生 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 列印多工緩衝檔案格式。  <xref:System.Windows.Xps.Packaging.XpsDocument>會儲存在標準 ZIP 資料集中，而且可以包含 XML 和二進位的元件，例如影像和字型檔案組成。 [PackageRelationships](#PackageRelationships) 可用來定義完整呈現文件所需的內容和資源之間的相依性。  <xref:System.Windows.Xps.Packaging.XpsDocument>設計提供支援多個使用單一、 高精確文件解決方案：  
   
--   將固定格式文件內容和資源當做單一可攜式且容易散發的檔案，進行讀取、寫入及儲存。  
+- 將固定格式文件內容和資源當做單一可攜式且容易散發的檔案，進行讀取、寫入及儲存。  
   
--   使用 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 檢視器應用程式顯示文件。  
+- 使用 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 檢視器應用程式顯示文件。  
   
--   以 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的原生列印多工緩衝處理輸出格式來輸出文件。  
+- 以 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的原生列印多工緩衝處理輸出格式來輸出文件。  
   
--   將文件直接路由傳送至 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 相容的印表機。  
+- 將文件直接路由傳送至 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 相容的印表機。  
   
 ## <a name="see-also"></a>另請參閱
 

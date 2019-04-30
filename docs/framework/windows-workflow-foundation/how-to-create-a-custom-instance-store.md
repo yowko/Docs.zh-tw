@@ -3,11 +3,11 @@ title: HOW TO：建立自訂執行個體存放區
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
 ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945635"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>HOW TO：建立自訂執行個體存放區
 
@@ -15,8 +15,7 @@ ms.locfileid: "57707764"
 
 ## <a name="implementing-the-begintrycommand-method"></a>實作 BeginTryCommand 方法
 
-持續性引擎會將 <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> 傳送至執行個體存放區。 
-  `command` 參數的型別會表示所執行的命令；此參數可以是下列其中一種型別：
+持續性引擎會將 <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> 傳送至執行個體存放區。 `command` 參數的型別會表示所執行的命令；此參數可以是下列其中一種型別：
 
 - <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>：工作流程時要保存至儲存媒體，持續性引擎會傳送此命令至執行個體存放區。 工作流程持續性資料已提供給在<xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A> 參數之 `command` 成員中的方法。
 

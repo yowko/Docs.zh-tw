@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a49252d00f75b4d0b6325aeae0aab22f8ada5e4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000320"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies 函式
 判斷兩個組件是否只有強制名稱簽章不同。  
@@ -48,11 +48,11 @@ BOOLEAN StrongNameCompareAssemblies (
  `pdwResult`  
  [out]下列值之一：  
   
--   `SN_CMP_DIFFERENT` (0): 指定組件包含不同的資料。  
+- `SN_CMP_DIFFERENT` (0): 指定組件包含不同的資料。  
   
--   `SN_CMP_IDENTICAL` (1)-指定的組件完全相同，包括其簽章和總和檢查碼。  
+- `SN_CMP_IDENTICAL` (1)-指定的組件完全相同，包括其簽章和總和檢查碼。  
   
--   `SN_CMP_SIGONLY` (2)-指定只要簽章與總和檢查碼不同組件。  
+- `SN_CMP_SIGONLY` (2)-指定只要簽章與總和檢查碼不同組件。  
   
 ## <a name="return-value"></a>傳回值  
  `true` 如果成功地完成;否則， `false`。  

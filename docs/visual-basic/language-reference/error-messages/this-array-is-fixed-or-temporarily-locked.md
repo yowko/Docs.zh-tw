@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
 ms.openlocfilehash: c74d9524ff64101ba6002e133b93c9b80e8f50a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982445"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>此陣列為固定長度或暫時鎖定 (Visual Basic)
 此錯誤有下列可能的原因：  
   
--   使用`ReDim`若要變更的固定大小陣列的項目數。  
+- 使用`ReDim`若要變更的固定大小陣列的項目數。  
   
--   Redimensioning 模組層級動態陣列，在其中一個項目已傳遞做為引數給程序。 如果傳遞的項目，則陣列會鎖定以防止解除配置記憶體的程序內參考參數。  
+- Redimensioning 模組層級動態陣列，在其中一個項目已傳遞做為引數給程序。 如果傳遞的項目，則陣列會鎖定以防止解除配置記憶體的程序內參考參數。  
   
--   嘗試指派值給`Variant`變數，其中包含陣列，但`Variant`目前已鎖定。  
+- 嘗試指派值給`Variant`變數，其中包含陣列，但`Variant`目前已鎖定。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   

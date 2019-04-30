@@ -6,44 +6,44 @@ helpviewer_keywords:
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
 ms.openlocfilehash: 03f785da018cacdec643fa196bdd0c6d5d7c7f70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020305"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>WPF 4.5 版的新功能
 <a name="introduction"></a> 本主題包含全新和增強功能的詳細資訊[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]4.5 版。  
   
  此主題包括下列章節：  
   
--   [功能區控制項](#ribbon_control)  
+- [功能區控制項](#ribbon_control)  
   
--   [顯示大型群組資料集合時改善效能](#grouped_virtualization)  
+- [顯示大型群組資料集合時改善效能](#grouped_virtualization)  
   
--   [VirtualizingPanel 的新功能](#VirtualizingPanel)  
+- [VirtualizingPanel 的新功能](#VirtualizingPanel)  
   
--   [繫結至靜態屬性](#static_properties)  
+- [繫結至靜態屬性](#static_properties)  
   
--   [存取非 UI 執行緒上的集合](#xthread_access)  
+- [存取非 UI 執行緒上的集合](#xthread_access)  
   
--   [同步和非同步驗證資料](#INotifyDataErrorInfo)  
+- [同步和非同步驗證資料](#INotifyDataErrorInfo)  
   
--   [自動更新資料繫結的來源](#delay)  
+- [自動更新資料繫結的來源](#delay)  
   
--   [繫結至實作 ICustomTypeProvider 的型別](#ICustomTypeProvider)  
+- [繫結至實作 ICustomTypeProvider 的型別](#ICustomTypeProvider)  
   
--   [從繫結運算式擷取資料繫結資訊](#binding_state)  
+- [從繫結運算式擷取資料繫結資訊](#binding_state)  
   
--   [檢查有效的 DataContext 物件](#DisconnectedSource)  
+- [檢查有效的 DataContext 物件](#DisconnectedSource)  
   
--   [隨著資料值變更重新調整資料的位置 (即時繪圖)](#live_shaping)  
+- [隨著資料值變更重新調整資料的位置 (即時繪圖)](#live_shaping)  
   
--   [建立事件弱式參考的加強支援](#weak_event_pattern)  
+- [建立事件弱式參考的加強支援](#weak_event_pattern)  
   
--   [Dispatcher 類別的新方法](#async)  
+- [Dispatcher 類別的新方法](#async)  
   
--   [事件的標記延伸](#events_markup_extenions)  
+- [事件的標記延伸](#events_markup_extenions)  
   
 <a name="ribbon_control"></a>   
 ## <a name="ribbon-control"></a>功能區控制項  
@@ -64,9 +64,9 @@ ms.locfileid: "59325822"
 ## <a name="binding-to-static-properties"></a>繫結至靜態屬性  
  您可以使用靜態屬性做為資料繫結的來源。 資料繫結引擎會辨識當引發靜態事件時，屬性的值何時變更。  例如，如果類別 `SomeClass` 定義靜態屬性，稱為 `MyProperty`，`SomeClass` 可以定義為靜態事件，該事件在 `MyProperty` 的值變更時引發。  靜態事件可以使用下列簽章。  
   
--   `public static event EventHandler MyPropertyChanged;`  
+- `public static event EventHandler MyPropertyChanged;`  
   
--   `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
+- `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
   
  請注意，在第一個案例中，類別會公開靜態事件，名為*PropertyName* `Changed`通過<xref:System.EventArgs>事件處理常式。  在第二個案例中，這個類別會公開靜態事件，名為`StaticPropertyChanged`通過<xref:System.ComponentModel.PropertyChangedEventArgs>事件處理常式。 實作靜態屬性的類別，可以選擇使用任一種方法引發屬性變更通知。  
   

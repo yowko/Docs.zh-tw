@@ -10,11 +10,11 @@ helpviewer_keywords:
 - PropertyNameChanged pattern [Windows Forms], applying
 ms.assetid: aa47ddf6-5223-40c4-833f-a78992194836
 ms.openlocfilehash: 36670eee6235277a7fe98770192df9ae05d3dd03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966812"
 ---
 # <a name="how-to-apply-the-propertynamechanged-pattern"></a>HOW TO：套用 PropertyNameChanged 模式
 下列程式碼範例示範如何套用*PropertyName*自訂控制項模式。 當您實作自訂控制項，可搭配 Windows Form 資料繫結引擎，適用於這種模式。  
@@ -26,7 +26,7 @@ ms.locfileid: "59213021"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  若要編譯上述程式碼範例：  
   
--   程式碼貼到空白程式碼檔案。 您必須使用自訂控制項，其中包含 Windows Form 上的`Main`方法。  
+- 程式碼貼到空白程式碼檔案。 您必須使用自訂控制項，其中包含 Windows Form 上的`Main`方法。  
   
 ## <a name="see-also"></a>另請參閱
 

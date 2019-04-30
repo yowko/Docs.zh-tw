@@ -5,11 +5,11 @@ helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
 ms.openlocfilehash: 4d5fe4c92f0d456942219bc3f7014f09a005aa5d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048287"
 ---
 # <a name="choosing-a-transport"></a>選擇傳輸
 本主題討論選擇包含 Windows Communication Foundation (WCF) 中的三種主要傳輸的準則：HTTP、 TCP 和具名的管道。 WCF 也包含訊息佇列 (也稱為 MSMQ) 傳輸，但是這份文件不討論訊息佇列。  
@@ -57,7 +57,7 @@ ms.locfileid: "59107844"
 |檢閱|Inspection 是在傳輸期間從訊息擷取及處理資訊的能力。 HTTP 通訊協定會分開路由及控制資訊與資料，讓它更容易建立檢查及分析訊息的工具。 容易檢查的傳輸在網路應用裝置中可能也需要較少的處理能力。 所使用的安全性層級會影響是否可以檢查訊息。|HTTP|  
 |Latency|Latency 是完成訊息交換所需要的最小時間量。 所有的網路作業多少都會有延遲時間，視所選擇的傳輸而定。 與原生訊息交換模式為要求/回覆的傳輸 (例如 HTTP) 使用雙工或單向通訊，會因訊息的強制關聯造成額外的延遲時間。 在這種情況中，請考慮使用原生訊息交換模式為雙工的傳輸，例如 TCP。|TCP、具名<br /><br /> 管道|  
 |Reach|傳輸的範圍反映出傳輸與其他系統連線時的功能。 具名管道傳輸的範圍非常小；它只能連至在相同電腦上執行的服務。 TCP 和 HTTP 傳輸都有極佳的範圍，而且可以穿透某些 NAT 和防火牆組態。 如需詳細資訊，請參閱 <<c0> [ 使用 Nat 與防火牆](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md)。|HTTP、TCP|  
-|安全性|Security 是在傳輸期間藉由提供機密性、完整性或驗證來保護訊息的能力。 機密性可保護訊息不受檢查，完整性可保護訊息不受修改，而驗證可提供有關訊息的傳送者或接收者的保證。<br /><br /> WCF 支援傳輸安全性，在訊息層級和傳輸層級。 如果傳輸支援緩衝傳輸模式，訊息安全性便會以該傳輸組成。 傳輸安全性的支援會依所選擇的傳輸而有所不同。 HTTP、TCP 和具名管道傳輸在傳輸安全性的支援中，有合理的同位檢查。|全部|  
+|安全性|Security 是在傳輸期間藉由提供機密性、完整性或驗證來保護訊息的能力。 機密性可保護訊息不受檢查，完整性可保護訊息不受修改，而驗證可提供有關訊息的傳送者或接收者的保證。<br /><br /> WCF 支援傳輸安全性，在訊息層級和傳輸層級。 如果傳輸支援緩衝傳輸模式，訊息安全性便會以該傳輸組成。 傳輸安全性的支援會依所選擇的傳輸而有所不同。 HTTP、TCP 和具名管道傳輸在傳輸安全性的支援中，有合理的同位檢查。|All|  
 |輸送量|Throughput 是測量可以在指定的時間內傳輸及處理的資料量。 和延遲時間一樣，所選擇的傳輸會影響服務作業的輸送量。 將傳輸的輸送量最大化需要最小化傳輸內容的額外負荷，以及最小化等待訊息交換完成所花費的時間。 TCP 和具名管道傳輸都會為訊息本文增加少許額外負荷，並支援減少等候訊息回覆時間的原生雙工類型。|TCP、具名管道|  
 |Tooling|Tooling 代表開發、診斷、裝載和其他活動之通訊協定的協力廠商應用程式支援。 開發搭配 HTTP 通訊協定使用的工具和軟體代表極大的投資。|HTTP|  
   

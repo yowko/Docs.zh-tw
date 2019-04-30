@@ -11,24 +11,24 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
 ms.openlocfilehash: 8de87e17d1baedccfe18bfded3ccab7ab59f0a09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012473"
 ---
 # <a name="rendering-a-windows-forms-control"></a>呈現 Windows Form 控制項
 轉譯是指使用者的畫面上建立的視覺表示法的程序。 Windows Form 使用[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]（的新 Windows 圖形程式庫） 進行轉譯。 Managed 的類別，可提供存取權[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]位於<xref:System.Drawing?displayProperty=nameWithType>命名空間和其子命名空間。  
   
  控制項的呈現，需要下列項目：  
   
--   基底類別所提供的繪圖功能<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。  
+- 基底類別所提供的繪圖功能<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。  
   
--   基本項目[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]圖形程式庫。  
+- 基本項目[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]圖形程式庫。  
   
--   繪圖區域的幾何。  
+- 繪圖區域的幾何。  
   
--   釋放圖形資源的程序。  
+- 釋放圖形資源的程序。  
   
 ## <a name="drawing-functionality-provided-by-control"></a>繪製控制項所提供的功能  
  基底類別<xref:System.Windows.Forms.Control>提供的繪圖功能，透過其<xref:System.Windows.Forms.Control.Paint>事件。 控制項會引發<xref:System.Windows.Forms.Control.Paint>每當需要更新其顯示的事件。 如需.NET Framework 中的事件的詳細資訊，請參閱[處理和引發事件](../../../standard/events/index.md)。  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
 ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006392"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>指定與處理合約和服務中的錯誤
 Windows Communication Foundation (WCF) 應用程式會將 managed 例外狀況物件對應至 SOAP 錯誤物件，並對 managed 例外狀況物件的 SOAP 錯誤物件，以處理錯誤情況。 本節中的主題討論如何設計合約以將錯誤條件公開為自訂 SOAP 錯誤、如何將此類錯誤當成服務實作的一部份傳回，以及用戶端如何捕捉此類錯誤。  
@@ -25,9 +25,9 @@ Windows Communication Foundation (WCF) 應用程式會將 managed 例外狀況�
   
  一般來說，服務 (與雙工用戶端) 會採取下列步驟，成功地將錯誤處理整合到應用程式中：  
   
--   將例外狀況條件對應至自訂 SOAP 錯誤。  
+- 將例外狀況條件對應至自訂 SOAP 錯誤。  
   
--   用戶端與服務會將 SOAP 錯誤當成例外狀況來傳送與接收。  
+- 用戶端與服務會將 SOAP 錯誤當成例外狀況來傳送與接收。  
   
  此外，WCF 用戶端和服務可以使用未宣告的 soap 錯誤以進行偵錯，而且可以擴充預設的錯誤行為。 下列各節將說明這些工作與概念。  
   

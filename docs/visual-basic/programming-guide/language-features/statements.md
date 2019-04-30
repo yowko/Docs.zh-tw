@@ -16,11 +16,11 @@ helpviewer_keywords:
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
 ms.openlocfilehash: e66acae5e98d561883f4ad59853dfd862c8ebfee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946454"
 ---
 # <a name="statements-in-visual-basic"></a>Visual Basic 中的陳述式
 
@@ -144,7 +144,7 @@ ms.locfileid: "43506286"
 
 在許多情況下，您可以繼續陳述式在下一步 的連續行不使用底線字元 (`_`)。 下列語法元素會隱含地繼續下一行程式碼陳述式。
 
-- 在逗號之後 (`,`)。 例如: 
+- 在逗號之後 (`,`)。 例如：
 
    [!code-vb[VbVbalrLineContinuation#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#1)]
 
@@ -152,11 +152,11 @@ ms.locfileid: "43506286"
 
    [!code-vb[VbVbalrLineContinuation#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#2)]
 
-- 在開啟的大括號之後 (`{`) 或右大括號之前 (`}`)。 例如: 
+- 在開啟的大括號之後 (`{`) 或右大括號之前 (`}`)。 例如：
 
     [!code-vb[VbVbalrLineContinuation#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#3)]
 
-    如需詳細資訊，請參閱 <<c0> [ 物件初始設定式： 具名和匿名型別](./objects-and-classes/object-initializers-named-and-anonymous-types.md)或是[集合初始設定式](./collection-initializers/index.md)。
+    如需詳細資訊，請參閱[物件初始設定式：具名和匿名型別](./objects-and-classes/object-initializers-named-and-anonymous-types.md)或是[集合初始設定式](./collection-initializers/index.md)。
 
 - 在開啟之後內嵌運算式 (`<%=`) 或內嵌運算式的結束前 (`%>`) 在 XML 常值。 例如: 
 
@@ -170,7 +170,7 @@ ms.locfileid: "43506286"
 
    如需詳細資訊，請參閱 <<c0> [ 依功能排列運算子](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。
 
-- 之後指派運算子 (`=`， `&=`， `:=`， `+=`， `-=`， `*=`， `/=`， `\=`， `^=`， `<<=`， `>>=`)。 例如: 
+- 之後指派運算子 (`=`， `&=`， `:=`， `+=`， `-=`， `*=`， `/=`， `\=`， `^=`， `<<=`， `>>=`)。 例如：
 
    [!code-vb[VbVbalrLineContinuation#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#5)]
 
@@ -188,17 +188,17 @@ ms.locfileid: "43506286"
 
    如需詳細資訊，請參閱 <<c0> [ 依功能排列運算子](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。
 
-- 成員的限定詞字元之後 (`.`) 和成員名稱前面。 例如: 
+- 成員的限定詞字元之後 (`.`) 和成員名稱前面。 例如：
 
    [!code-vb[VbVbalrLineContinuation#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#5)]
 
-   不過，您必須包含行接續字元 (`_`) 下列成員的限定詞字元，當您使用`With`陳述式，或提供類型的初始化清單中的值。 請考慮將該行之後指派運算子 (例如`=`) 當您使用`With`陳述式或物件初始設定清單。 例如: 
+   不過，您必須包含行接續字元 (`_`) 下列成員的限定詞字元，當您使用`With`陳述式，或提供類型的初始化清單中的值。 請考慮將該行之後指派運算子 (例如`=`) 當您使用`With`陳述式或物件初始設定清單。 例如：
 
    [!code-vb[VbVbalrLineContinuation#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#14)]
 
-   如需詳細資訊，請參閱[與...With...end With 陳述式](../../../visual-basic/language-reference/statements/with-end-with-statement.md)或是[物件初始設定式： 具名和匿名型別](./objects-and-classes/object-initializers-named-and-anonymous-types.md)。
+   如需詳細資訊，請參閱[與...With...end With 陳述式](../../../visual-basic/language-reference/statements/with-end-with-statement.md)或[物件初始設定式：具名和匿名型別](./objects-and-classes/object-initializers-named-and-anonymous-types.md)。
 
-- XML 軸屬性辨識符號之後 (`.`或是`.@`或`...`)。 不過，您必須包含行接續字元 (`_`) 當您指定成員的限定詞當您使用`With`關鍵字。 例如: 
+- XML 軸屬性辨識符號之後 (`.`或是`.@`或`...`)。 不過，您必須包含行接續字元 (`_`) 當您指定成員的限定詞當您使用`With`關鍵字。 例如：
 
    [!code-vb[VbVbalrLineContinuation#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#9)]
 
@@ -210,7 +210,7 @@ ms.locfileid: "43506286"
 
    如需詳細資訊，請參閱 <<c0> [ 屬性概觀](../../../visual-basic/programming-guide/concepts/attributes/index.md)。
 
-- 之前和之後的查詢運算子 (`Aggregate`， `Distinct`， `From`， `Group By`， `Group Join`， `Join`， `Let`， `Order By`， `Select`， `Skip`， `Skip While`， `Take`， `Take While`， `Where`， `In`， `Into`， `On`， `Ascending`，及`Descending`)。 您無法中斷程式之間的多個關鍵字的查詢運算子關鍵字 (`Order By`， `Group Join`， `Take While`，和`Skip While`)。 例如: 
+- 之前和之後的查詢運算子 (`Aggregate`， `Distinct`， `From`， `Group By`， `Group Join`， `Join`， `Let`， `Order By`， `Select`， `Skip`， `Skip While`， `Take`， `Take While`， `Where`， `In`， `Into`， `On`， `Ascending`，及`Descending`)。 您無法中斷程式之間的多個關鍵字的查詢運算子關鍵字 (`Order By`， `Group Join`， `Take While`，和`Skip While`)。 例如：
 
    [!code-vb[VbVbalrLineContinuation#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#11)]
 
@@ -222,7 +222,7 @@ ms.locfileid: "43506286"
 
    如需詳細資訊，請參閱[每個...下一個陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md)。
 
-- 之後`From`集合初始設定式中的關鍵字。 例如: 
+- 之後`From`集合初始設定式中的關鍵字。 例如：
 
    [!code-vb[VbVbalrLineContinuation#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#13)]
 
@@ -246,5 +246,5 @@ ms.locfileid: "43506286"
 |---|---|
 |[指派運算子](../../../visual-basic/language-reference/operators/assignment-operators.md)|提供涵蓋指派運算子，例如語言參考頁面連結`=`， `*=`，和`&=`。|
 |[運算子和運算式](./operators-and-expressions/index.md)|示範如何結合以產生新值的運算子中的項目。|
-|[操作說明：在程式碼內中斷和合併陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|示範如何在單一陳述式分成多行，以及如何將多個陳述式放在同一行。|
-|[操作說明：標記陳述式](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|示範如何標記一行程式碼。|
+|[如何：在程式碼內中斷和合併陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|示範如何在單一陳述式分成多行，以及如何將多個陳述式放在同一行。|
+|[如何：標記陳述式](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|示範如何標記一行程式碼。|

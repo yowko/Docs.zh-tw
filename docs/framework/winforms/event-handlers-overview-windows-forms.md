@@ -11,11 +11,11 @@ helpviewer_keywords:
 - event handlers [Windows Forms], about event handlers
 ms.assetid: 228112e1-1711-42ee-8ffa-ff3555bffe66
 ms.openlocfilehash: 05acbfaf427060d015c2445360a7d73ebe97d070
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966825"
 ---
 # <a name="event-handlers-overview-windows-forms"></a>事件處理常式概觀 (Windows Form)
 事件處理常式是繫結至事件的方法。 當引發事件時，會執行內的事件處理常式的程式碼。 每個事件處理常式提供可讓您正確地處理事件的兩個參數。 下列範例顯示的事件處理常式<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件。  

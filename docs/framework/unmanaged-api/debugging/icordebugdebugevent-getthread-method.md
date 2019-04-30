@@ -5,11 +5,11 @@ ms.assetid: 4f2e9a2c-8369-4a07-a881-ad5422626353
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 103768918f67ca695a47c52b9cd97f24fb8d46ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996121"
 ---
 # <a name="icordebugdebugeventgetthread-method"></a>ICorDebugDebugEvent::GetThread 方法
 取得發生事件的執行緒。  

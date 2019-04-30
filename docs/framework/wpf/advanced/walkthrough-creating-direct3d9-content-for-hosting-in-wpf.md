@@ -8,29 +8,29 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
 ms.openlocfilehash: 160395b84ef7ca447d162ceff34752113a1d59a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031196"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>逐步解說：建立 Direct3D9 內容以裝載在 WPF 中
 本逐步解說示範如何建立適用於 Windows Presentation Foundation (WPF) 應用程式中裝載 Direct3D9 內容。 如需有關裝載 WPF 應用程式中的 Direct3D9 內容的詳細資訊，請參閱[WPF 和 Direct3D9 互通](wpf-and-direct3d9-interoperation.md)。
 
  在這個逐步解說中，您將執行下列工作：
 
--   建立 Direct3D9 專案。
+- 建立 Direct3D9 專案。
 
--   設定 WPF 應用程式中裝載 Direct3D9 專案。
+- 設定 WPF 應用程式中裝載 Direct3D9 專案。
 
  當您完成時，您必須包含用於在 WPF 應用程式中的 Direct3D9 內容的 DLL。
 
 ## <a name="prerequisites"></a>必要條件
  您需要下列元件才能完成此逐步解說：
 
--   Visual Studio 2010。
+- Visual Studio 2010。
 
--   DirectX 9 或更新版本的 SDK。
+- DirectX 9 或更新版本的 SDK。
 
 ## <a name="creating-the-direct3d9-project"></a>建立 Direct3D9 專案
  第一個步驟是建立和設定 Direct3D9 專案。
@@ -137,7 +137,7 @@ ms.locfileid: "59300264"
 
 ## <a name="next-steps"></a>後續步驟
 
--   裝載 Direct3D9 內容，在 WPF 應用程式。 如需詳細資訊，請參閱[逐步解說：裝載在 WPF 中的 Direct3D9 內容](walkthrough-hosting-direct3d9-content-in-wpf.md)。
+- 裝載 Direct3D9 內容，在 WPF 應用程式。 如需詳細資訊，請參閱[逐步解說：裝載在 WPF 中的 Direct3D9 內容](walkthrough-hosting-direct3d9-content-in-wpf.md)。
 
 ## <a name="see-also"></a>另請參閱
 

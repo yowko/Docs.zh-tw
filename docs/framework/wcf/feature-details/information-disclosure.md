@@ -3,11 +3,11 @@ title: 資訊洩露
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
 ms.openlocfilehash: b42faeb4043302e5e70379cc4e1de3cb8bd96af4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972597"
 ---
 # <a name="information-disclosure"></a>資訊洩露
 資訊洩漏讓攻擊者可以取得與系統有關的寶貴資訊。 因此，公開資訊時，請務必考慮您要公開的是哪些資訊，以及是否會遭到惡意使用者的使用。 下列列出可能的資訊洩漏攻擊，並針對各種攻擊提供減少受到攻擊的方法。  
@@ -32,16 +32,16 @@ ms.locfileid: "59195900"
   
  安全防護包括下列：  
   
--   服務參考假設為可以信任。 每次傳送服務參考執行個體時，小心確保它們不會遭到竄改。  
+- 服務參考假設為可以信任。 每次傳送服務參考執行個體時，小心確保它們不會遭到竄改。  
   
--   有些應用程式會提供使用者體驗，可根據服務參考中的資料以及經由遠端主機證實的信任資料，互相建立信任。 WCF 提供的這類機能的擴充點，但使用者必須實作它們。  
+- 有些應用程式會提供使用者體驗，可根據服務參考中的資料以及經由遠端主機證實的信任資料，互相建立信任。 WCF 提供的這類機能的擴充點，但使用者必須實作它們。  
   
 ## <a name="ntlm"></a>NTLM  
  在預設情況下，Windows 網域環境中的 Windows 驗證會使用 Kerberos 通訊協定來驗證和授權使用者。 如果基於某個原因而無法使用 Kerberos 通訊協定，請使用 NT LAN Manager (NTLM) 做為後援。 透過將 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 屬性設定為 `false`，即可停用此行為。 允許 NTLM 時要注意的問題包括：  
   
--   NTLM 會公開用戶端使用者名稱。 如果使用者名稱需要保密，請將繫結上的 `AllowNTLM` 屬性設定為 `false`。  
+- NTLM 會公開用戶端使用者名稱。 如果使用者名稱需要保密，請將繫結上的 `AllowNTLM` 屬性設定為 `false`。  
   
--   NTLM 不會提供伺服器驗證。 因此，當您使用 NTLM 做為驗證通訊協定時，用戶端無法確保能與正確的服務通訊。  
+- NTLM 不會提供伺服器驗證。 因此，當您使用 NTLM 做為驗證通訊協定時，用戶端無法確保能與正確的服務通訊。  
   
 ### <a name="specifying-client-credentials-or-invalid-identity-forces-ntlm-usage"></a>指定用戶端認證或無效的識別強制 NTLM 使用  
  當建立用戶端、指定沒有網域名稱的用戶端認證或指定無效的伺服器識別時，會導致使用 NTLM 取代 Kerberos 通訊協定 (如果 `AlllowNtlm` 屬性設定為 `true`)。 由於 NTLM 不會驗證伺服器，因此資訊可能會遭到洩漏。  

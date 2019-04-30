@@ -3,11 +3,11 @@ title: 組態範例
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
 ms.openlocfilehash: 48f66c4110d048f714dae0943f97f3f4aa7cd419
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002236"
 ---
 # <a name="configuration-sample"></a>組態範例
 此範例示範如何使用組態檔讓服務變成可搜尋的。  
@@ -27,15 +27,15 @@ ms.locfileid: "59768237"
 ## <a name="service-configuration"></a>服務組態  
  此範例中的組態檔示範兩種功能：  
   
--   透過標準的 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 讓服務變成可搜尋的。  
+- 透過標準的 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 讓服務變成可搜尋的。  
   
--   針對服務的應用程式端點調整與探索相關的資訊，以及針對標準端點調整部分與探索相關的設定。  
+- 針對服務的應用程式端點調整與探索相關的資訊，以及針對標準端點調整部分與探索相關的設定。  
   
  若要啟用探索，您必須在服務的應用程式組態檔中進行少數變更：  
   
--   探索端點必須加入至 `<service>` 項目中。 這是標準的 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 端點。 這是執行階段與探索服務產生關聯的系統端點。 探索服務會接聽此端點上的訊息。  
+- 探索端點必須加入至 `<service>` 項目中。 這是標準的 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 端點。 這是執行階段與探索服務產生關聯的系統端點。 探索服務會接聽此端點上的訊息。  
   
--   `<serviceDiscovery>` 行為會加入至 `<serviceBehaviors>` 區段。 如此可在執行階段探索服務，並使用先前提到的探索端點接聽探索 `Probe` 和 `Resolve` 訊息。 加入這兩個項目之後，就可以在指定的探索端點搜尋服務。  
+- `<serviceDiscovery>` 行為會加入至 `<serviceBehaviors>` 區段。 如此可在執行階段探索服務，並使用先前提到的探索端點接聽探索 `Probe` 和 `Resolve` 訊息。 加入這兩個項目之後，就可以在指定的探索端點搜尋服務。  
   
  下列組態程式碼片段顯示啟用應用程式端點和探索端點的服務：  
   

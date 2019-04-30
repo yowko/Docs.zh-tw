@@ -10,32 +10,32 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
 ms.openlocfilehash: 4e005ea96df45da8326386f8b43aa5640ce810b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050608"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF 中的 Pack URI
 在 Windows Presentation Foundation (WPF) 中，[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]用來識別和載入檔案，在許多方面，包括下列：  
   
--   指定[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]以顯示應用程式第一次啟動時。  
+- 指定[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]以顯示應用程式第一次啟動時。  
   
--   載入影像。  
+- 載入影像。  
   
--   巡覽至頁面。  
+- 巡覽至頁面。  
   
--   載入不可執行的資料檔案。  
+- 載入不可執行的資料檔案。  
   
  此外，[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]可用來識別和載入檔案，從各種不同的位置，包括下列：  
   
--   目前的組件。  
+- 目前的組件。  
   
--   所參考的組件。  
+- 所參考的組件。  
   
--   與組件相對的位置。  
+- 與組件相對的位置。  
   
--   應用程式的來源網站。  
+- 應用程式的來源網站。  
   
  若要提供一致的機制來識別並從這些位置載入這些類型的檔案[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]運用的擴充性*pack URI 配置*。 本主題提供配置的概觀，說明如何建構套件[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]各種案例中，討論 absolute 和 relative[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]並[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]解析度，顯示如何使用組件之前[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]從這兩個標記與程式碼。  
 
@@ -59,15 +59,15 @@ ms.locfileid: "59344347"
   
  套件和組件與應用程式和檔案類似，其中應用程式 (套件) 可以包括一或多個檔案 (組件)，包括︰  
   
--   編譯為本機組件的資源檔。  
+- 編譯為本機組件的資源檔。  
   
--   編譯為所參考組件的資源檔。  
+- 編譯為所參考組件的資源檔。  
   
--   編譯為參考組件的資源檔。  
+- 編譯為參考組件的資源檔。  
   
--   內容檔。  
+- 內容檔。  
   
--   來源網站檔案。  
+- 來源網站檔案。  
   
  若要存取這些類型的檔案，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]支援兩種授權： 應用程式: / / 和 siteoforigin:///: / /。 application:/// 授權識別在編譯時期已知的應用程式資料檔，包括資源檔和內容檔。 siteoforigin:/// 授權識別來源網站檔案。 下圖顯示每個授權的範圍。  
   
@@ -86,9 +86,9 @@ ms.locfileid: "59344347"
 ### <a name="local-assembly-resource-file"></a>本機組件資源檔  
  組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]資源檔編譯為本機組件會使用下列授權和路徑：  
   
--   **授權**：application:///。  
+- **授權**：application:///。  
   
--   **路徑**:資源檔，包括其相對於本機組件專案資料夾根的路徑名稱。  
+- **路徑**:資源檔，包括其相對於本機組件專案資料夾根的路徑名稱。  
   
  下列範例示範此組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]針對[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]位於本機組件專案資料夾的根目錄中的資源檔。  
   
@@ -102,21 +102,21 @@ ms.locfileid: "59344347"
 ### <a name="referenced-assembly-resource-file"></a>所參考的組件資源檔  
  組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]資源檔編譯為參考的組件會使用下列授權和路徑：  
   
--   **授權**：application:///。  
+- **授權**：application:///。  
   
--   **路徑**:資源檔編譯為參考的組件的名稱。 路徑必須符合下列格式：  
+- **路徑**:資源檔編譯為參考的組件的名稱。 路徑必須符合下列格式：  
   
      *AssemblyShortName*{*;Version*]{*;PublicKey*];component/*Path*  
   
-    -   **AssemblyShortName**：所參考組件的簡短名稱。  
+    - **AssemblyShortName**：所參考組件的簡短名稱。  
   
-    -   **;Version** [選擇性]：包含資源檔之參考組件的版本。 這是在載入具有相同簡短名稱的兩個以上參考組件時使用。  
+    - **;Version** [選擇性]：包含資源檔之參考組件的版本。 這是在載入具有相同簡短名稱的兩個以上參考組件時使用。  
   
-    -   **;PublicKey** [選擇性]：用來簽署參考組件的公開金鑰。 這是在載入具有相同簡短名稱的兩個以上參考組件時使用。  
+    - **;PublicKey** [選擇性]：用來簽署參考組件的公開金鑰。 這是在載入具有相同簡短名稱的兩個以上參考組件時使用。  
   
-    -   **;component**︰指定從本機組件參考所參考的組件。  
+    - **;component**︰指定從本機組件參考所參考的組件。  
   
-    -   **/Path**︰相對於所參考組件專案資料夾根之資源檔的名稱，包括其路徑。  
+    - **/Path**︰相對於所參考組件專案資料夾根之資源檔的名稱，包括其路徑。  
   
  下列範例示範此組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]針對[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]位於參考組件的專案資料夾的根目錄中的資源檔。  
   
@@ -138,9 +138,9 @@ ms.locfileid: "59344347"
 ## <a name="content-file-pack-uris"></a>內容檔套件 URI  
  組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]內容檔案會使用下列授權和路徑：  
   
--   **授權**：application:///。  
+- **授權**：application:///。  
   
--   **路徑**:內容檔，包括其相對於應用程式的主要可執行組件的檔案系統位置的路徑名稱。  
+- **路徑**:內容檔，包括其相對於應用程式的主要可執行組件的檔案系統位置的路徑名稱。  
   
  下列範例示範此組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]針對[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]位於與可執行組件相同的資料夾中的內容檔案。  
   
@@ -157,9 +157,9 @@ ms.locfileid: "59344347"
 ## <a name="site-of-origin-pack-uris"></a>來源網站套件 URI  
  組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]的來源站台的檔案會使用下列授權和路徑：  
   
--   **授權**：siteoforigin:///。  
+- **授權**：siteoforigin:///。  
   
--   **路徑**:站台的來源檔案，包括其相對於從中啟動可執行組件位置的路徑名稱。  
+- **路徑**:站台的來源檔案，包括其相對於從中啟動可執行組件位置的路徑名稱。  
   
  下列範例示範此組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]針對[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]來源網站檔，儲存在從中啟動可執行組件的位置。  
   
@@ -175,17 +175,17 @@ ms.locfileid: "59344347"
   
  型別[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]通常會設定為的檔案[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page`項目具有下列作為其根項目其中之一：  
   
--   <xref:System.Windows.Window?displayProperty=nameWithType>  
+- <xref:System.Windows.Window?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Page?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Page?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Navigation.PageFunction%601?displayProperty=nameWithType>  
+- <xref:System.Windows.Navigation.PageFunction%601?displayProperty=nameWithType>  
   
--   <xref:System.Windows.ResourceDictionary?displayProperty=nameWithType>  
+- <xref:System.Windows.ResourceDictionary?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Documents.FlowDocument?displayProperty=nameWithType>  
+- <xref:System.Windows.Documents.FlowDocument?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>  
   
 <a name="Absolute_vs_Relative_Pack_URIs"></a>   
 ## <a name="absolute-vs-relative-pack-uris"></a>絕對與相對套件 URI  
@@ -246,11 +246,11 @@ ms.locfileid: "59344347"
   
  [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 解析不適用於[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]，請參考下列：  
   
--   參考的組件中的內容檔： 這些檔案類型不支援[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。  
+- 參考的組件中的內容檔： 這些檔案類型不支援[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。  
   
--   參考組件中的內嵌檔案：[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]可識別它們是唯一的因為它們包含參考的組件名稱和`;component`後置詞。  
+- 參考組件中的內嵌檔案：[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]可識別它們是唯一的因為它們包含參考的組件名稱和`;component`後置詞。  
   
--   來源網站檔案：[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]可識別它們是唯一的因為它們是由組件的唯一檔案[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]包含 siteoforigin:///: / / 授權單位。  
+- 來源網站檔案：[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]可識別它們是唯一的因為它們是由組件的唯一檔案[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]包含 siteoforigin:///: / / 授權單位。  
   
  組件的一個簡化[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]解析可讓您允許適用於程式碼是無關的資源和內容檔的位置。 例如，如果您有會重新設定為內容檔，將組件的本機組件中的資源檔[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]的資源保持不變，如同使用組件的程式碼[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。  
   
@@ -258,23 +258,23 @@ ms.locfileid: "59344347"
 ## <a name="programming-with-pack-uris"></a>使用套件 URI 的程式設計  
  許多[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]類別會實作可以使用組件設定的屬性[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]，包括：  
   
--   <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Frame.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Frame.Source%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Window.Icon%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Window.Icon%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Image.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Image.Source%2A?displayProperty=nameWithType>  
   
  可以透過標記和程式碼來設定這些屬性。 本節示範兩者的基本建構，並顯示常見案例的範例。  
   
 <a name="Using_Pack_URIs_in_Markup"></a>   
 ### <a name="using-pack-uris-in-markup"></a>透過標記使用套件 URI  
- 組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]標記中設定具有組件之屬性的項目，來指定[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。 例如:   
+ 組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]標記中設定具有組件之屬性的項目，來指定[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。 例如：  
   
  `<element attribute="pack://application:,,,/File.xaml" />`  
   

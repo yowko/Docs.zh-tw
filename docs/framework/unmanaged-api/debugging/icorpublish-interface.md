@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7581d68f5c2b575403ddc84d06147f012e7ab39e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993567"
 ---
 # <a name="icorpublish-interface"></a>ICorPublish 介面
 當做發行處理序的相關資訊和應用程式定義域的相關資訊，這些處理序中的一般介面。  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
 ms.openlocfilehash: 1d1b10b4da1263843bdce5447f0716569c7700e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982588"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments 指示詞
 限制的傳遞類型泛型型別之建構函式的泛型引的數。  
@@ -62,13 +62,13 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>XAML 2006 和 WPF XAML 的一般使用方式  
  如需 XAML 2006 使用量和用於 WPF 應用程式的 XAML，有下列限制`x:TypeArguments`以及從 XAML 中一般的泛型型別使用方式：  
   
--   只有 XAML 檔案的根項目可以支援一般的 XAML 用途，參考泛型型別。  
+- 只有 XAML 檔案的根項目可以支援一般的 XAML 用途，參考泛型型別。  
   
--   根項目必須對應到至少一個類型引數的泛型型別。 例如， <xref:System.Windows.Navigation.PageFunction%601>。 頁面函式會將一般用途支援 XAML 在 WPF 中的主要案例。  
+- 根項目必須對應到至少一個類型引數的泛型型別。 例如， <xref:System.Windows.Navigation.PageFunction%601>。 頁面函式會將一般用途支援 XAML 在 WPF 中的主要案例。  
   
--   泛型的根項目的 XAML 物件項目也必須宣告部分類別，使用`x:Class`。 這是 true，即使定義 WPF 建置動作。  
+- 泛型的根項目的 XAML 物件項目也必須宣告部分類別，使用`x:Class`。 這是 true，即使定義 WPF 建置動作。  
   
--   `x:TypeArguments` 不能參考巢狀的泛型條件約束。  
+- `x:TypeArguments` 不能參考巢狀的泛型條件約束。  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 或不含 WPF 3.0 或 3.5 WPF 的 XAML 2006 相依性  
  在.NET Framework XAML 服務 XAML 2006 或 XAML 2009，一般 XAML 用途的 WPF 相關限制比較不嚴謹。 您可以具現化的支援型別系統和物件模型可支援 XAML 標記中的任何位置的一般物件項目。  

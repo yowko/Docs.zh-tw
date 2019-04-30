@@ -15,11 +15,11 @@ helpviewer_keywords:
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
 ms.openlocfilehash: 12843c74a7519d29e869be0342b18a1137f2dc5a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054246"
 ---
 # <a name="custom-dependency-properties"></a>自訂相依性屬性
 
@@ -47,21 +47,21 @@ ms.locfileid: "57372213"
 
 當您實作的屬性在類別上，只要您的類別衍生自<xref:System.Windows.DependencyObject>，您可以選擇將您的屬性與<xref:System.Windows.DependencyProperty>識別碼，因此若要讓相依性屬性。 讓您的屬性成為相依性屬性並非絕對必要或合適，視案例需求而定。 有時候，支援有私用欄位的屬性，一般的技巧即已足夠。 但只要您希望屬性支援下列一或多項 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能，就應該將屬性實作為相依性屬性：
 
--   您希望屬性在樣式中是可設定的。 如需詳細資訊，請參閱 [設定樣式和範本](../controls/styling-and-templating.md)。
+- 您希望屬性在樣式中是可設定的。 如需詳細資訊，請參閱 [設定樣式和範本](../controls/styling-and-templating.md)。
 
--   您希望屬性支援資料繫結。 如需資料繫結相依性屬性的詳細資訊，請參閱[繫結兩個控制項的屬性](../data/how-to-bind-the-properties-of-two-controls.md)。
+- 您希望屬性支援資料繫結。 如需資料繫結相依性屬性的詳細資訊，請參閱[繫結兩個控制項的屬性](../data/how-to-bind-the-properties-of-two-controls.md)。
 
--   您希望屬性可使用動態資源參考來設定。 如需詳細資訊，請參閱 [XAML 資源](xaml-resources.md)。
+- 您希望屬性可使用動態資源參考來設定。 如需詳細資訊，請參閱 [XAML 資源](xaml-resources.md)。
 
--   您想要自動繼承項目樹狀結構父項目的屬性值。 在此情況下，向<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法，即使您也建立了屬性包裝函式[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]存取。 如需詳細資訊，請參閱[屬性值繼承](property-value-inheritance.md)。
+- 您想要自動繼承項目樹狀結構父項目的屬性值。 在此情況下，向<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法，即使您也建立了屬性包裝函式[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]存取。 如需詳細資訊，請參閱[屬性值繼承](property-value-inheritance.md)。
 
--   您希望屬性可製成動畫。 如需詳細資訊，請參閱 [動畫概觀](../graphics-multimedia/animation-overview.md)。
+- 您希望屬性可製成動畫。 如需詳細資訊，請參閱 [動畫概觀](../graphics-multimedia/animation-overview.md)。
 
--   當屬性系統、環境或使用者所採取的動作，或讀取和使用樣式變更了先前的屬性值時，您希望屬性系統能夠回報。 使用屬性中繼資料，您的屬性可以指定每次屬性系統判定屬性值變更時都會叫用回呼方法。 相關的概念是屬性值強制型轉。 如需詳細資訊，請參閱[相依性屬性回呼和驗證](dependency-property-callbacks-and-validation.md)。
+- 當屬性系統、環境或使用者所採取的動作，或讀取和使用樣式變更了先前的屬性值時，您希望屬性系統能夠回報。 使用屬性中繼資料，您的屬性可以指定每次屬性系統判定屬性值變更時都會叫用回呼方法。 相關的概念是屬性值強制型轉。 如需詳細資訊，請參閱[相依性屬性回呼和驗證](dependency-property-callbacks-and-validation.md)。
 
--   您想要使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 程序也使用的已建立中繼資料慣例，例如報告變更屬性值是否應該需要配置系統重新撰寫項目的視覺效果。 或者您想要能夠使用中繼資料覆寫，以便衍生類別可以變更中繼資料型的特性，例如預設值。
+- 您想要使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 程序也使用的已建立中繼資料慣例，例如報告變更屬性值是否應該需要配置系統重新撰寫項目的視覺效果。 或者您想要能夠使用中繼資料覆寫，以便衍生類別可以變更中繼資料型的特性，例如預設值。
 
--   您想要接收 Visual Studio WPF 設計工具的自訂控制項的屬性支援，例如**屬性**視窗編輯。 如需詳細資訊，請參閱[控制項撰寫概觀](../controls/control-authoring-overview.md)。
+- 您想要接收 Visual Studio WPF 設計工具的自訂控制項的屬性支援，例如**屬性**視窗編輯。 如需詳細資訊，請參閱[控制項撰寫概觀](../controls/control-authoring-overview.md)。
 
 當您檢查這些案例時，您也應該考慮是否能夠以覆寫現有相依性屬性中繼資料的方式完成您的案例，而不是實作全新的屬性。 中繼資料覆寫是否實際可行，取決於您的案例，以及該案例與現有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 相依性屬性和類別實作的類似程度。 如需覆寫現有屬性中繼資料的詳細資訊，請參閱[相依性屬性中繼資料](dependency-property-metadata.md)。
 
@@ -70,13 +70,13 @@ ms.locfileid: "57372213"
 
 定義相依性屬性包含四個不同的概念。 這些概念不一定得是嚴苛的程序步驟，因為其中有些最後會結合為實作中的單一段程式碼︰
 
--   (選擇性) 建立相依性屬性的屬性中繼資料。
+- (選擇性) 建立相依性屬性的屬性中繼資料。
 
--   向屬性系統登錄屬性名稱，指定擁有者類型和屬性值類型。 如經使用，也指定屬性中繼資料。
+- 向屬性系統登錄屬性名稱，指定擁有者類型和屬性值類型。 如經使用，也指定屬性中繼資料。
 
--   定義<xref:System.Windows.DependencyProperty>識別碼作為`public` `static` `readonly`擁有者型別的欄位。
+- 定義<xref:System.Windows.DependencyProperty>識別碼作為`public` `static` `readonly`擁有者型別的欄位。
 
--   定義名稱與相依性屬性名稱符合的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]"wrapper" 屬性。 實作 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "wrapper" 屬性的 `get` 和 `set` 存取子，以連接支援它的相依性屬性。
+- 定義名稱與相依性屬性名稱符合的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]"wrapper" 屬性。 實作 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "wrapper" 屬性的 `get` 和 `set` 存取子，以連接支援它的相依性屬性。
 
 <a name="registering"></a>
 ### <a name="registering-the-property-with-the-property-system"></a>向屬性系統登錄屬性
@@ -112,11 +112,11 @@ ms.locfileid: "57372213"
 
 同樣地，依照慣例，包裝函式屬性的名稱必須與所選擇和指定的第一個參數的名稱相同<xref:System.Windows.DependencyProperty.Register%2A>註冊屬性的呼叫。 如果您的屬性不遵循慣例，不一定會停用所有可能的用途，但您會遇到幾個值得注意的問題︰
 
--   樣式和範本的某些方面不起作用。
+- 樣式和範本的某些方面不起作用。
 
--   大部分的工具和設計工具必須依賴命名慣例，才能正確序列化 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，或依屬性層級提供設計工具環境協助。
+- 大部分的工具和設計工具必須依賴命名慣例，才能正確序列化 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，或依屬性層級提供設計工具環境協助。
 
--   目前的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 載入器實作會略過整個包裝函式，且在處理屬性值時依賴命名慣例。 如需詳細資訊，請參閱 [XAML 相依性屬性](xaml-loading-and-dependency-properties.md)。
+- 目前的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 載入器實作會略過整個包裝函式，且在處理屬性值時依賴命名慣例。 如需詳細資訊，請參閱 [XAML 相依性屬性](xaml-loading-and-dependency-properties.md)。
 
 <a name="metadata"></a>
 ### <a name="property-metadata-for-a-new-dependency-property"></a>新相依性屬性的屬性中繼資料
@@ -129,25 +129,25 @@ ms.locfileid: "57372213"
 
 #### <a name="setting-appropriate-metadata-flags"></a>設定適當的中繼資料旗標
 
--   屬性 （或其值的變更） 會影響[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]，並特別會影響版面配置系統應該調整大小，或呈現您的項目在頁面中，如何設定一或多個下列旗標： <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>， <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>， <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>。
+- 屬性 （或其值的變更） 會影響[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]，並特別會影響版面配置系統應該調整大小，或呈現您的項目在頁面中，如何設定一或多個下列旗標： <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>， <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>， <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>。
 
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> 指出此屬性的變更需要變更[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]轉譯，其中包含的物件可能需要增加或減少父代的空間。 例如，"Width" 屬性應該設定此旗標。
+    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> 指出此屬性的變更需要變更[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]轉譯，其中包含的物件可能需要增加或減少父代的空間。 例如，"Width" 屬性應該設定此旗標。
 
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> 指出此屬性的變更需要變更[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]呈現，通常不需要變更專用的空間，不過，不表示空間中的定位已變更。 例如，"Alignment" 屬性應該設定此旗標。
+    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> 指出此屬性的變更需要變更[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]呈現，通常不需要變更專用的空間，不過，不表示空間中的定位已變更。 例如，"Alignment" 屬性應該設定此旗標。
 
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> 指出一些其他的變更發生，不會影響版面配置和測量，但確實需要另一種轉譯。 例如可變更現有項目色彩的 "Background" 等屬性。
+    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> 指出一些其他的變更發生，不會影響版面配置和測量，但確實需要另一種轉譯。 例如可變更現有項目色彩的 "Background" 等屬性。
 
-    -   這些旗標在您自己的屬性系統或配置回呼覆寫實作中，通常用為中繼資料的通訊協定。 比方說，您可能會有<xref:System.Windows.DependencyObject.OnPropertyChanged%2A>會呼叫的回呼<xref:System.Windows.UIElement.InvalidateArrange%2A>如果執行個體的任何屬性回報值變更，而且擁有<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>做為`true`其中繼資料中。
+    - 這些旗標在您自己的屬性系統或配置回呼覆寫實作中，通常用為中繼資料的通訊協定。 比方說，您可能會有<xref:System.Windows.DependencyObject.OnPropertyChanged%2A>會呼叫的回呼<xref:System.Windows.UIElement.InvalidateArrange%2A>如果執行個體的任何屬性回報值變更，而且擁有<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>做為`true`其中繼資料中。
 
--   某些屬性會影響包含父項目的轉譯特性，超過前文所述之所需大小的變更。 例如，<xref:System.Windows.Documents.Paragraph.MinOrphanLines%2A>模型中使用非固定格式文件，該屬性的變更可以在其中變更包含段落之非固定格式文件的整體轉譯的屬性。 使用<xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentArrange>或<xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentMeasure>來識別類似的情況下，在您自己的屬性。
+- 某些屬性會影響包含父項目的轉譯特性，超過前文所述之所需大小的變更。 例如，<xref:System.Windows.Documents.Paragraph.MinOrphanLines%2A>模型中使用非固定格式文件，該屬性的變更可以在其中變更包含段落之非固定格式文件的整體轉譯的屬性。 使用<xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentArrange>或<xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentMeasure>來識別類似的情況下，在您自己的屬性。
 
--   相依性屬性預設支援資料繫結。 對於沒有任何實際案例可進行資料繫結的情況，或者大型物件的資料繫結效能認定有問題的情況，您可以故意停用資料繫結。
+- 相依性屬性預設支援資料繫結。 對於沒有任何實際案例可進行資料繫結的情況，或者大型物件的資料繫結效能認定有問題的情況，您可以故意停用資料繫結。
 
--   根據預設，資料繫結<xref:System.Windows.Data.Binding.Mode%2A>相依性屬性的預設值為<xref:System.Windows.Data.BindingMode.OneWay>。 您可以隨時變更繫結還是<xref:System.Windows.Data.BindingMode.TwoWay>每個繫結執行個體; 如需詳細資訊，請參閱[指定的繫結方向](../data/how-to-specify-the-direction-of-the-binding.md)。 相依性屬性的作者，您可以選擇要使用的屬性，但<xref:System.Windows.Data.BindingMode.TwoWay>預設的繫結模式。 現有的相依性屬性的範例<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A?displayProperty=nameWithType>; 這個屬性的情況是，<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>設定邏輯和撰寫<xref:System.Windows.Controls.MenuItem>與預設佈景主題樣式互動。 <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>屬性邏輯會使用資料繫結原生方式來維護其他狀態屬性和方法呼叫以根據屬性的狀態。 另一個繫結的範例屬性<xref:System.Windows.Data.BindingMode.TwoWay>預設是<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>。
+- 根據預設，資料繫結<xref:System.Windows.Data.Binding.Mode%2A>相依性屬性的預設值為<xref:System.Windows.Data.BindingMode.OneWay>。 您可以隨時變更繫結還是<xref:System.Windows.Data.BindingMode.TwoWay>每個繫結執行個體; 如需詳細資訊，請參閱[指定的繫結方向](../data/how-to-specify-the-direction-of-the-binding.md)。 相依性屬性的作者，您可以選擇要使用的屬性，但<xref:System.Windows.Data.BindingMode.TwoWay>預設的繫結模式。 現有的相依性屬性的範例<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A?displayProperty=nameWithType>; 這個屬性的情況是，<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>設定邏輯和撰寫<xref:System.Windows.Controls.MenuItem>與預設佈景主題樣式互動。 <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>屬性邏輯會使用資料繫結原生方式來維護其他狀態屬性和方法呼叫以根據屬性的狀態。 另一個繫結的範例屬性<xref:System.Windows.Data.BindingMode.TwoWay>預設是<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>。
 
--   您也可以藉由設定來啟用自訂的相依性屬性中的屬性繼承<xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits>旗標。 屬性繼承對父項目和子項目有共同屬性的案例很有用，而且對子項目將特定屬性值設定為和父項目設定的值一樣，才有意義。 繼承屬性的範例是<xref:System.Windows.FrameworkElement.DataContext%2A>，後者用來繫結以啟用重要的主從式案例以呈現資料的作業。 藉由<xref:System.Windows.FrameworkElement.DataContext%2A>可繼承的任何子項目會繼承該資料內容也。 因為屬性值繼承的緣故，您可以指定位在網頁或應用程式根目錄中的資料內容，不需要重新指定即可繫結所有可能的子項目。 <xref:System.Windows.FrameworkElement.DataContext%2A> 也是不錯的範例，說明繼承覆寫預設值，但它可以永遠在本機上設定任何特定的子元素如需詳細資訊，請參閱 <<c0> [ 使用含階層式資料的主從式模式](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)。 屬性值繼承確實有可能的效能成本，因此應謹慎使用。如需詳細資訊，請參閱[屬性值繼承](property-value-inheritance.md)。
+- 您也可以藉由設定來啟用自訂的相依性屬性中的屬性繼承<xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits>旗標。 屬性繼承對父項目和子項目有共同屬性的案例很有用，而且對子項目將特定屬性值設定為和父項目設定的值一樣，才有意義。 繼承屬性的範例是<xref:System.Windows.FrameworkElement.DataContext%2A>，後者用來繫結以啟用重要的主從式案例以呈現資料的作業。 藉由<xref:System.Windows.FrameworkElement.DataContext%2A>可繼承的任何子項目會繼承該資料內容也。 因為屬性值繼承的緣故，您可以指定位在網頁或應用程式根目錄中的資料內容，不需要重新指定即可繫結所有可能的子項目。 <xref:System.Windows.FrameworkElement.DataContext%2A> 也是不錯的範例，說明繼承覆寫預設值，但它可以永遠在本機上設定任何特定的子元素如需詳細資訊，請參閱 <<c0> [ 使用含階層式資料的主從式模式](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)。 屬性值繼承確實有可能的效能成本，因此應謹慎使用。如需詳細資訊，請參閱[屬性值繼承](property-value-inheritance.md)。
 
--   設定<xref:System.Windows.FrameworkPropertyMetadataOptions.Journal>旗標，指出是否應該偵測到或瀏覽日誌服務所使用的相依性屬性。 例如，<xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A>屬性; 在選取項目中選取任何項目巡覽日誌記錄時，就應該保存控制項。
+- 設定<xref:System.Windows.FrameworkPropertyMetadataOptions.Journal>旗標，指出是否應該偵測到或瀏覽日誌服務所使用的相依性屬性。 例如，<xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A>屬性; 在選取項目中選取任何項目巡覽日誌記錄時，就應該保存控制項。
 
 <a name="RODP"></a>
 ## <a name="read-only-dependency-properties"></a>唯讀相依性屬性

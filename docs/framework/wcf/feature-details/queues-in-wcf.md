@@ -5,22 +5,22 @@ helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
 ms.openlocfilehash: e28c91a8cc1798a4d0cd690f72e503b687af0108
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046441"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation 中的佇列
 在本節中的主題將討論 Windows Communication Foundation (WCF) 支援佇列。 WCF 會提供支援藉由利用 Microsoft Message Queuing （先前稱為 MSMQ） 做為傳輸佇列，並適用於下列案例：  
   
--   鬆散結合的應用程式。 傳送應用程式可以傳送訊息至佇列，不需要知道接收應用程式是否可以處理訊息。 佇列以不依靠接收應用程式可以多快處理訊息的速率，提供允許傳送應用程式傳送訊息至佇列的獨立處理。 傳送訊息至未與訊息處理緊密結合的佇列時，整體系統可用性會增加。  
+- 鬆散結合的應用程式。 傳送應用程式可以傳送訊息至佇列，不需要知道接收應用程式是否可以處理訊息。 佇列以不依靠接收應用程式可以多快處理訊息的速率，提供允許傳送應用程式傳送訊息至佇列的獨立處理。 傳送訊息至未與訊息處理緊密結合的佇列時，整體系統可用性會增加。  
   
--   隔離失敗。 應用程式傳送或接收訊息至佇列可能失敗，但不會互相影響。 例如，如果接收應用程式失敗，傳送應用程式可以繼續傳送訊息至佇列。 當接收者再次接收時，可以處理來自佇列的訊息。 隔離失敗會增加整體系統的可靠性與可用性。  
+- 隔離失敗。 應用程式傳送或接收訊息至佇列可能失敗，但不會互相影響。 例如，如果接收應用程式失敗，傳送應用程式可以繼續傳送訊息至佇列。 當接收者再次接收時，可以處理來自佇列的訊息。 隔離失敗會增加整體系統的可靠性與可用性。  
   
--   負載平衡。 傳送應用程式可能會利用訊息讓接收應用程式爆滿。 佇列可以管理不相符的訊息產生與消耗率，因此接收者不會爆滿。  
+- 負載平衡。 傳送應用程式可能會利用訊息讓接收應用程式爆滿。 佇列可以管理不相符的訊息產生與消耗率，因此接收者不會爆滿。  
   
--   中斷操作。 當透過高延遲網路或可用性有限的網路進行通訊時 (例如使用行動裝置)，傳送、接收和處理操作可能中斷。 佇列能夠使這些操作繼續進行，即使已經與端點中斷連線也是一樣。 重新建立連線後，佇列會將訊息轉送至接收應用程式。  
+- 中斷操作。 當透過高延遲網路或可用性有限的網路進行通訊時 (例如使用行動裝置)，傳送、接收和處理操作可能中斷。 佇列能夠使這些操作繼續進行，即使已經與端點中斷連線也是一樣。 重新建立連線後，佇列會將訊息轉送至接收應用程式。  
   
  若要使用的佇列功能的 WCF 應用程式中，您可以使用其中一個標準繫結，或如果其中一個標準繫結無法滿足您的需求，您可以建立自訂繫結。 如需相關標準繫結，以及如何選擇其中一個的詳細資訊，請參閱[How to:與 WCF 端點交換訊息和訊息佇列應用程式](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。 如需建立自訂繫結的詳細資訊，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   

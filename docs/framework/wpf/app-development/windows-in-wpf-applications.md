@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WPF application [WPF], windows
 ms.assetid: dc091d04-68cf-4592-9695-75fda037db76
 ms.openlocfilehash: 798f8def03cb396224b7ba61bd17974609a5ff54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971144"
 ---
 # <a name="windows-in-wpf-applications"></a>WPF 應用程式中的視窗
 使用者透過 windows 的應用程式與互動。 視窗的基本目的是裝載，並顯示內容。 視窗主機取決於資料類型的應用程式上運作，其中可以包含媒體、 Extensible Application Markup Language (XAML) 頁面、 網頁、 文件、 資料庫資料表和記錄，以及系統資訊的內容類型。  

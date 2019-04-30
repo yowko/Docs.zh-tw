@@ -11,11 +11,11 @@ helpviewer_keywords:
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
 ms.openlocfilehash: 85fb12028687578b76e0f16061deb9b9a4de70e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003973"
 ---
 # <a name="how-to-print-a-windows-form"></a>HOW TO：列印 Windows Form
 在開發程序的一部分，您通常會想要列印一份 Windows 表單。 下列程式碼範例示範如何使用列印一份目前的表單<xref:System.Drawing.Graphics.CopyFromScreen%2A>方法。  
@@ -30,9 +30,9 @@ ms.locfileid: "59121962"
 ## <a name="robust-programming"></a>穩固程式設計  
  以下條件可能會造成例外狀況：  
   
--   您沒有存取印表機的權限。  
+- 您沒有存取印表機的權限。  
   
--   不沒有安裝任何印表機。  
+- 不沒有安裝任何印表機。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  若要執行此程式碼範例，您必須存取您使用您的電腦與印表機的權限。  

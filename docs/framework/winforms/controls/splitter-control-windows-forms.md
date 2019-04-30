@@ -7,11 +7,11 @@ helpviewer_keywords:
 - views [Windows Forms], multiple per frame
 ms.assetid: 6f287407-e895-4b07-a46a-a5bff8388d46
 ms.openlocfilehash: 37d9cb91e28a93b98394620a4385989968700fae
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009665"
 ---
 # <a name="splitter-control-windows-forms"></a>Splitter 控制項 (Windows Form)
 Windows Form`Splitter`控制項可用來在執行階段調整停駐的控制項的大小。 `Splitter`控制項通常用於與各種長度的資料，呈現，例如 Windows 檔案總管中，其資料 窗格包含在不同時間的變動寬度資訊的控制項的表單上。  

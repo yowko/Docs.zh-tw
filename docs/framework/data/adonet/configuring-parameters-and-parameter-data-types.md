@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034550"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>設定參數和參數資料類型
 
@@ -56,27 +56,27 @@ ms.locfileid: "53242044"
 |<xref:System.Char>| |不支援從 char 推斷 <xref:System.Data.SqlDbType> 。|Char|Char|Byte|
 |<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|
 |<xref:System.DateTimeOffset>|DateTimeOffset|SQL Server 2008 中的 DateTimeOffset。 SQL Server 2008 之前的 SQL Server 版本不支援從 DateTimeOffset 推斷 <xref:System.Data.SqlDbType> 。|||DateTime|
-|<xref:System.Decimal>|Decimal|Decimal|Decimal|數值|數字|
+|<xref:System.Decimal>|Decimal|Decimal|Decimal|數值|number|
 |<xref:System.Double>|Double|浮動|Double|Double|Double|
 |<xref:System.Single>|Single|Real|Single|Real|浮動|
 |<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|Raw|
 |<xref:System.Int16>|Int16|SmallInt|SmallInt|SmallInt|Int16|
 |<xref:System.Int32>|Int32|Int|Int|Int|Int32|
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|數字|
-|<xref:System.Object>|物件|變異|變異|不支援從 Object 推斷 OdbcType。|Blob|
+|<xref:System.Object>|Object|變異|變異|不支援從 Object 推斷 OdbcType。|Blob|
 |<xref:System.String>|String|NVarChar。 如果字串超過 NVarChar 的最大大小 (4000 個字元)，則這項隱含轉換將會失敗。 若要使用超過 4000 個字元的字串，請明確設定 <xref:System.Data.SqlDbType>。|VarWChar|NVarChar|NVarChar|
 |<xref:System.TimeSpan>|時間|SQL Server 2008 中的 Time。 SQL Server 2008 之前的 SQL Server 版本不支援從 TimeSpan 推斷 <xref:System.Data.SqlDbType> 。|DBTime|時間|DateTime|
 |<xref:System.UInt16>|UInt16|不支援從 UInt16 推斷 <xref:System.Data.SqlDbType> 。|UnsignedSmallInt|Int|UInt16|
 |<xref:System.UInt32>|UInt32|不支援從 UInt32 推斷 <xref:System.Data.SqlDbType> 。|UnsignedInt|BigInt|UInt32|
-|<xref:System.UInt64>|UInt64|不支援從 UInt64 推斷 <xref:System.Data.SqlDbType> 。|UnsignedBigInt|數值|數字|
+|<xref:System.UInt64>|UInt64|不支援從 UInt64 推斷 <xref:System.Data.SqlDbType> 。|UnsignedBigInt|數值|number|
 ||AnsiString|VarChar|VarChar|VarChar|VarChar|
 ||AnsiStringFixedLength|Char|Char|Char|Char|
-||貨幣|Money|貨幣|不支援從 `OdbcType` 推斷 `Currency` 。|數字|
+||貨幣|Money|貨幣|不支援從 `OdbcType` 推斷 `Currency` 。|number|
 ||日期|SQL Server 2008 中的 Date。 SQL Server 2008 之前的 SQL Server 版本不支援從 Date 推斷 <xref:System.Data.SqlDbType> 。|DBDate|Date|DateTime|
 ||SByte|不支援從 SByte 推斷 <xref:System.Data.SqlDbType> 。|TinyInt|不支援從 SByte 推斷 `OdbcType` 。|SByte|
 ||StringFixedLength|NChar|WChar|NChar|NChar|
 ||時間|SQL Server 2008 中的 Time。 SQL Server 2008 之前的 SQL Server 版本不支援從 Time 推斷 <xref:System.Data.SqlDbType> 。|DBTime|時間|DateTime|
-||VarNumeric|不支援從 VarNumeric 推斷 <xref:System.Data.SqlDbType> 。|VarNumeric|不支援從 VarNumeric 推斷 `OdbcType` 。|數字|
+||VarNumeric|不支援從 VarNumeric 推斷 <xref:System.Data.SqlDbType> 。|VarNumeric|不支援從 VarNumeric 推斷 `OdbcType` 。|number|
 |使用者定義型別 (包含 <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>的物件)|Object 或 String 是取決於提供者而定 (SqlClient 一律會傳回 Object，Odbc 一律會傳回 String，而 OleDb Managed 資料提供者可查看這兩者)|若 <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> 存在即為 SqlDbType.Udt，否則為 Variant|OleDbType.VarWChar (如果值為 null)，否則為 OleDbType.Variant。|OdbcType.NVarChar|不支援|
 
 > [!NOTE]
@@ -96,7 +96,7 @@ ms.locfileid: "53242044"
 
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>使用參數配合 SqlCommand 和預存程序
 
-預存程序對資料驅動應用程式有許多好處。 藉由使用預存程序，資料庫作業可以封裝在單一命令中、最佳化為最佳效能，並且可進一步提升安全性。 雖然只要將後接參數引數的預存程序名稱當成 SQL 陳述式傳遞即可呼叫預存程序，但是使用 <xref:System.Data.Common.DbCommand.Parameters%2A> [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 物件的 <xref:System.Data.Common.DbCommand> 集合，可以讓您更明確地定義預存程序參數，以及存取輸出參數和傳回值。
+預存程序對資料驅動應用程式有許多好處。 藉由使用預存程序，資料庫作業可以封裝在單一命令中、最佳化為最佳效能，並且可進一步提升安全性。 雖然可以呼叫預存程序，預存程序名稱後, 接參數引數當成 SQL 陳述式，藉由傳遞<xref:System.Data.Common.DbCommand.Parameters%2A>的集合[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.Common.DbCommand>物件可讓您更明確地定義預存程序參數，來存取輸出參數和傳回值。
 
 > [!NOTE]
 > 參數化陳述式能在伺服器上執行，都是透過允許查詢計畫重複使用的 `sp_executesql,` 。 呼叫 `sp_executesql` 的批次無法見到 `sp_executesql`批次中的本機資料指標或變數。 資料庫內容中的變更只會持續到 `sp_executesql` 陳述式結束。 如需詳細資訊，請參閱 [sp_executesql (transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql)。

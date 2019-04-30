@@ -3,22 +3,22 @@ title: 背景資訊
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
 ms.openlocfilehash: cd2531dd141cfc6f0b67d1f58766327c218610f5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033783"
 ---
 # <a name="background-information"></a>背景資訊
 本節中的主題是有關於使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 之基本概念以外的概念和程序。  
   
  請遵循這些步驟來尋找 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 程式碼和應用程式的其他範例：  
   
--   搜尋特定問題的 Microsoft 文件。  
+- 搜尋特定問題的 Microsoft 文件。  
   
--   參與[LINQ 論壇](https://go.microsoft.com/fwlink/?LinkId=76488)，您可以與專家討論更複雜的主題的詳細資料。  
+- 參與[LINQ 論壇](https://go.microsoft.com/fwlink/?LinkId=76488)，您可以與專家討論更複雜的主題的詳細資料。  
   
--   研究 （英文） 白皮書會詳細說明[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]技術，其中包含 Visual Basic 和 C# 程式碼範例。 如需詳細資訊，請參閱 < [LINQ to SQL： 關聯式資料的.net language-integrated Query](https://go.microsoft.com/fwlink/?LinkId=93205)。  
+- 研究 （英文） 白皮書會詳細說明[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]技術，其中包含 Visual Basic 和 C# 程式碼範例。 如需詳細資訊，請參閱 < [LINQ to SQL： 關聯式資料的.net language-integrated Query](https://go.microsoft.com/fwlink/?LinkId=93205)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [ADO.NET 和 LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  
@@ -70,7 +70,7 @@ ms.locfileid: "43515628"
  描述如何在設計階段對應預存程序 (Stored Procedure)，以及如何從應用程式呼叫這些預存程序。  
   
  [異動支援](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)  
- 簡述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 所支援的三種交易模型。  
+ 簡述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 所支援的三種異動模型。  
   
  [SQL-CLR 類型不符](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
  描述混合不同型別系統的各種挑戰。  

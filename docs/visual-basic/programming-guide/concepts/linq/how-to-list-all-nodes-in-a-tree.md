@@ -3,11 +3,11 @@ title: HOW TO：列出樹狀結構 (Visual Basic) 中的所有節點
 ms.date: 07/20/2015
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
 ms.openlocfilehash: 6576beaaed00905ce7a09f338251934ea375cb7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021618"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>HOW TO：列出樹狀結構 (Visual Basic) 中的所有節點
 列出樹狀中的所有節點有時候很有幫助。 這在精確了解方法或屬性如何影響樹狀結構時相當實用。 以文字格式列出所有節點的其中一個方法為產生正確而且明確識別樹狀結構中任何節點的 XPath 運算式。  

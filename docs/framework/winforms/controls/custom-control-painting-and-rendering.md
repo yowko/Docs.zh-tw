@@ -7,11 +7,11 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 ms.assetid: a09dbf76-0966-4cbf-a66a-2083ba98e068
 ms.openlocfilehash: ec9002ffa4a7e2c82f59d52344764a01afe4c568
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011480"
 ---
 # <a name="custom-control-painting-and-rendering"></a>自訂控制項繪製和轉譯
 自訂繪製的控制項是其中一個輕鬆使用.NET framework 的許多複雜工作。 當撰寫自訂控制項，您會有相關控制項的圖形化外觀的許多選項。 如果您撰寫控制項是繼承自`Control`，您必須提供可讓您的控制項來呈現其圖形表示法的程式碼。 如果您要建立使用者控制項繼承自`UserControl`，繼承或從其中一個 Windows Form 控制項，您可能會覆寫標準的圖形化表示法，並提供您自己的圖形程式碼。 如果您想要提供的構成控制項的自訂轉譯`UserControl`您撰寫時，選項變得較少，但仍然允許廣泛的圖形化的能力，為您的控制項和應用程式。  

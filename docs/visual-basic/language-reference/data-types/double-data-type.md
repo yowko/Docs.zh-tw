@@ -20,11 +20,11 @@ helpviewer_keywords:
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
 ms.openlocfilehash: 701d10a334757a96ffd634204c1e1d5eb5418ce6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054441"
 ---
 # <a name="double-data-type-visual-basic"></a>Double 資料類型 (Visual Basic)
 保存帶正負號的 IEEE 64 位元 （8 個位元組） 雙精確度浮點數，範圍從-1.79769313486231570 e + 308 到-4.94065645841246544-324 負值進出 4.94065645841246544-324 1.79769313486231570 e + 308 到正的數值。 雙精度數字儲存的是實數的近似值。  
@@ -36,11 +36,11 @@ ms.locfileid: "58824659"
   
 ## <a name="programming-tips"></a>程式設計提示  
   
--   **有效位數。** 當您使用浮點數時，請記得它們在記憶體中不一定有精確的表示法。 這可能會導致非預期的結果從某些作業，例如要做數值比較，`Mod`運算子。 如需詳細資訊，請參閱 <<c0> [ 疑難排解資料型別](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。  
+- **有效位數。** 當您使用浮點數時，請記得它們在記憶體中不一定有精確的表示法。 這可能會導致非預期的結果從某些作業，例如要做數值比較，`Mod`運算子。 如需詳細資訊，請參閱 <<c0> [ 疑難排解資料型別](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。  
   
--   **尾端零。** 浮點資料類型沒有任何的尾端零個字元的內部表示法。 比方說，它們無法區分 4.2000 與 4.2。 因此，尾端零字元不會出現在顯示或列印的浮點值。  
+- **尾端零。** 浮點資料類型沒有任何的尾端零個字元的內部表示法。 比方說，它們無法區分 4.2000 與 4.2。 因此，尾端零字元不會出現在顯示或列印的浮點值。  
   
--   **類型字元。** 將常值類型字元 `R` 附加到常值，會強制其成為 `Double` 資料類型。 例如，如果整數值，後面跟著`R`的值變更為`Double`。  
+- **類型字元。** 將常值類型字元 `R` 附加到常值，會強制其成為 `Double` 資料類型。 例如，如果整數值，後面跟著`R`的值變更為`Double`。  
   
     ```  
     ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:  
@@ -53,7 +53,7 @@ ms.locfileid: "58824659"
     Dim num# = 3  
     ```  
   
--   **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.Double?displayProperty=nameWithType> 結構。  
+- **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.Double?displayProperty=nameWithType> 結構。  
   
 ## <a name="see-also"></a>另請參閱
 

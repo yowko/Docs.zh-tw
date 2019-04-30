@@ -5,11 +5,11 @@ helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
 ms.openlocfilehash: 074167111b78edc517dda019465260d0acd54737
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006690"
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
 裝載的應用程式[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]內容 PresentationHost.exe 透過實作這個介面來提供主機和 PresentationHost.exe 之間的整合點。  
@@ -19,11 +19,11 @@ ms.locfileid: "57376009"
   
  藉由啟用整合`IWpfHostSupport`可讓 PresentationHost.exe:  
   
--   探索並向未經處理輸入裝置 （人性化介面裝置） 的主應用程式有興趣。  
+- 探索並向未經處理輸入裝置 （人性化介面裝置） 的主應用程式有興趣。  
   
--   主應用程式，從已註冊的未經處理輸入的裝置與正向適當的訊息接收輸入的訊息。  
+- 主應用程式，從已註冊的未經處理輸入的裝置與正向適當的訊息接收輸入的訊息。  
   
--   查詢主應用程式自訂進度和錯誤的使用者介面。  
+- 查詢主應用程式自訂進度和錯誤的使用者介面。  
   
 > [!NOTE]
 >  僅限在本機用戶端電腦上使用及支援此 API  

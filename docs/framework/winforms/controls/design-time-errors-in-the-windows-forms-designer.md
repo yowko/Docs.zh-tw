@@ -9,11 +9,11 @@ helpviewer_keywords:
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 ms.openlocfilehash: 7ee4ce1d6efdc4927fc2d20100f0b12f7405261f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972350"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Windows Form 設計工具的設計階段錯誤
 本主題說明當 Windows Forms 設計工具載入失敗時，Microsoft Visual Studio 中所出現的設計階段錯誤清單的意義與用法。 如果出現此錯誤清單，您不應該將它視為是設計工具中的錯誤，而是協助您更正程式碼中的錯誤。  
@@ -25,11 +25,11 @@ ms.locfileid: "59213138"
   
  您可以按一下錯誤分類標題，或按一下展開/摺疊 > 形箭號，以展開或摺疊錯誤分類。 當您展開錯誤分類時，將會顯示下列額外說明︰  
   
--   此錯誤的執行個體。  
+- 此錯誤的執行個體。  
   
--   此錯誤的說明。  
+- 此錯誤的說明。  
   
--   此錯誤的相關論壇文章。  
+- 此錯誤的相關論壇文章。  
   
 ### <a name="instances-of-this-error"></a>此錯誤的執行個體  
  額外說明會列出目前專案中該錯誤的所有執行個體。 許多錯誤包括確切的位置，格式如下︰[專案名稱] [表單名稱] 行︰[行號]資料行︰[資料行號碼]。 [移至程式碼] 連結將帶您前往程式碼中發生錯誤的位置。  
@@ -45,9 +45,9 @@ ms.locfileid: "59213138"
 ### <a name="forum-posts-about-this-error"></a>此錯誤的相關論壇文章  
  額外說明包含與錯誤相關之 MSDN 論壇文章的連結。 系統是根據錯誤訊息的字串來搜尋論壇。 您也可以嘗試搜尋下列論壇︰  
   
--   [Windows Forms 設計工具論壇](https://go.microsoft.com/fwlink/?LinkId=203524)  
+- [Windows Forms 設計工具論壇](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Windows Forms 論壇](https://go.microsoft.com/fwlink/?LinkId=203523)  
+- [Windows Forms 論壇](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>忽略並繼續  
  您可以選擇忽略錯誤狀況並繼續載入設計工具。 選擇此動作可能會導致非預期的行為。 例如，控制項可能不會出現在設計介面上。  

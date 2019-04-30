@@ -11,24 +11,24 @@ helpviewer_keywords:
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
 ms.openlocfilehash: 27258110a8852c00990d73cd9ca8685c3ead315d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053830"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF 安全性策略 – 安全性工程
 高可信度電腦運算是一項 Microsoft 開發案，用於確保生產安全的程式碼。 高可信度電腦運算開發案的一個重要項目是 [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] 是可用來搭配標準工程程序協助安全的程式碼傳遞之工程實務。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] 包含 10 個階段，結合正規化、可衡量性與其他結構到最佳做法，包括：  
   
--   安全性設計分析  
+- 安全性設計分析  
   
--   以工具為基礎的品質檢查  
+- 以工具為基礎的品質檢查  
   
--   滲透測試  
+- 滲透測試  
   
--   最終安全性檢閱  
+- 最終安全性檢閱  
   
--   產品發行後安全性管理  
+- 產品發行後安全性管理  
   
 ## <a name="wpf-specifics"></a>WPF 特性  
  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 工程團隊同時套用和擴充 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)]，該組合包含下列重要功能：  
@@ -55,11 +55,11 @@ ms.locfileid: "59300563"
   
  威脅模型套用到整個 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 並包含下列各項：  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 剖析器會如何讀取檔案，將文字對應到對應的物件模型類別，並建立實際的程式碼。  
+- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 剖析器會如何讀取檔案，將文字對應到對應的物件模型類別，並建立實際的程式碼。  
   
--   如何建立視窗控制代碼 (hWnd)、傳送訊息，以及用來呈現視窗的內容。  
+- 如何建立視窗控制代碼 (hWnd)、傳送訊息，以及用來呈現視窗的內容。  
   
--   資料繫結如何取得資源，並與系統互動。  
+- 資料繫結如何取得資源，並與系統互動。  
   
  在開發過程中，這些威脅模型對於識別安全性設計需求和威脅的安全防護相當重要。  
   
@@ -67,23 +67,23 @@ ms.locfileid: "59300563"
 ### <a name="source-analysis-and-editing-tools"></a>來源分析和編輯工具  
  除了手動的 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] 安全性程式碼檢閱項目，[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 小組使用多項來源分析工具和相關聯的編輯來減少安全性漏洞。 使用廣泛的來源工具，包含下列項目：  
   
--   **FXCop**:舉凡繼承規則，到如何安全地相互操作 unmanaged 程式碼的程式碼存取安全性使用狀況的 managed 程式碼中尋找常見安全性問題。 請參閱 [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29)。  
+- **FXCop**:舉凡繼承規則，到如何安全地相互操作 unmanaged 程式碼的程式碼存取安全性使用狀況的 managed 程式碼中尋找常見安全性問題。 請參閱 [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29)。  
   
--   **Prefix/Prefast**:例如緩衝區滿溢、 格式字串問題和錯誤檢查的 unmanaged 程式碼中尋找安全性漏洞及常見安全性問題。  
+- **Prefix/Prefast**:例如緩衝區滿溢、 格式字串問題和錯誤檢查的 unmanaged 程式碼中尋找安全性漏洞及常見安全性問題。  
   
--   **禁用的 Api**:搜尋原始程式碼，來識別造成安全性問題，例如已知的函式的意外使用`strcpy`。 一旦識別到之後，會以較安全的替代項目取代這些函式。  
+- **禁用的 Api**:搜尋原始程式碼，來識別造成安全性問題，例如已知的函式的意外使用`strcpy`。 一旦識別到之後，會以較安全的替代項目取代這些函式。  
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>測試技術  
  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 使用不同的安全性測試技術，包含：  
   
--   **白箱測試**:測試人員檢視原始程式碼，並再建置入侵測試  
+- **白箱測試**:測試人員檢視原始程式碼，並再建置入侵測試  
   
--   **黑測試**:測試人員找出安全性漏洞，藉由檢查 API 和功能，再嘗試攻擊產品。  
+- **黑測試**:測試人員找出安全性漏洞，藉由檢查 API 和功能，再嘗試攻擊產品。  
   
--   **其他產品減輕安全性問題**:如果相關，則測試來自相關產品的安全性問題。 例如，已識別 [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)] 的大約 60 項安全性問題的合適變異型式，並嘗試套用至 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]。  
+- **其他產品減輕安全性問題**:如果相關，則測試來自相關產品的安全性問題。 例如，已識別 [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)] 的大約 60 項安全性問題的合適變異型式，並嘗試套用至 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]。  
   
--   **透過檔案模糊測試進行以工具為基礎的滲透測試**:檔案模糊測試是惡意探索檔案讀取器的輸入範圍，透過各種輸入。 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 中使用這項技術的其中一個範例是用來檢查影像解碼程式碼中的錯誤。  
+- **透過檔案模糊測試進行以工具為基礎的滲透測試**:檔案模糊測試是惡意探索檔案讀取器的輸入範圍，透過各種輸入。 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 中使用這項技術的其中一個範例是用來檢查影像解碼程式碼中的錯誤。  
   
 <a name="critical_code"></a>   
 ### <a name="critical-code-management"></a>重要程式碼管理  

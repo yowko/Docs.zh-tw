@@ -31,11 +31,11 @@ helpviewer_keywords:
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
 ms.openlocfilehash: 65fcd10521742e287c7934080b3352a06668df7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967977"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>程式碼中的特殊字元 (Visual Basic)
 有時候，您必須使用特殊字元，在您的程式碼，也就是不是字母或數字的字元。 標點符號和特殊字元，Visual Basic 字元集中的有許多用途，從組織程式文字到定義編譯器或編譯的程式執行的工作。 這些字元不指定要執行的作業。  

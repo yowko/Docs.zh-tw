@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
 ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010146"
 ---
 # <a name="custom-animations-overview"></a>自訂動畫概觀
 本主題說明如何以及何時建立自訂主要畫面格、動畫類別來擴充 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫系統，或使用每一畫面的回呼來略過它。  
@@ -28,11 +28,11 @@ ms.locfileid: "59313940"
 ## <a name="extending-the-animation-system"></a>擴充動畫系統  
  有數種方式可以擴充 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫系統，根據您想要使用的內建功能層級而定。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫引擎中有三個主要擴充點︰  
   
--   建立自訂主要畫面格物件，藉由繼承自其中一個*\<類型 >* 主要畫面格類別，例如<xref:System.Windows.Media.Animation.DoubleKeyFrame>。 這個方法可使用大部分的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫引擎內建功能。  
+- 建立自訂主要畫面格物件，藉由繼承自其中一個*\<類型 >* 主要畫面格類別，例如<xref:System.Windows.Media.Animation.DoubleKeyFrame>。 這個方法可使用大部分的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫引擎內建功能。  
   
--   建立您自己的動畫類別繼承自<xref:System.Windows.Media.Animation.AnimationTimeline>或其中一個*\<型別 >* AnimationBase 類別。  
+- 建立您自己的動畫類別繼承自<xref:System.Windows.Media.Animation.AnimationTimeline>或其中一個*\<型別 >* AnimationBase 類別。  
   
--   您可以針對每一畫面格使用每一畫面的回呼來產生動畫。 這個方法完全略過動畫與計時系統。  
+- 您可以針對每一畫面格使用每一畫面的回呼來產生動畫。 這個方法完全略過動畫與計時系統。  
   
  下表說明一些擴充動畫系統的案例。  
   
@@ -47,11 +47,11 @@ ms.locfileid: "59313940"
 ## <a name="create-a-custom-key-frame"></a>建立自訂主要畫面格  
  建立自訂主要畫面格類別是擴充動畫系統最簡單的方式。 當您想要不同的主要畫面格動畫內插補點方法時，請使用這個方法。  如[主要畫面格動畫概觀](key-frame-animations-overview.md)中所述，主要畫面格動畫使用主要畫面格物件來產生其輸出值。 每個主要畫面格物件都會執行三個函式︰  
   
--   指定目標值，使用其<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>屬性。  
+- 指定目標值，使用其<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>屬性。  
   
--   指定的值應該到達的時間使用其<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>屬性。  
+- 指定的值應該到達的時間使用其<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>屬性。  
   
--   藉由實作 InterpolateValueCore 方法，在前一個主要畫面格與其自身的值之間插入。  
+- 藉由實作 InterpolateValueCore 方法，在前一個主要畫面格與其自身的值之間插入。  
   
  **實作指示**  
   
@@ -87,13 +87,13 @@ ms.locfileid: "59313940"
   
  衍生自<xref:System.Windows.Media.Animation.AnimationTimeline>類別並覆寫下列成員：  
   
--   <xref:System.Windows.Freezable.CreateInstanceCore%2A> – 如果您的新類別是具體的您必須覆寫<xref:System.Windows.Freezable.CreateInstanceCore%2A>傳回您類別的新執行個體。  
+- <xref:System.Windows.Freezable.CreateInstanceCore%2A> – 如果您的新類別是具體的您必須覆寫<xref:System.Windows.Freezable.CreateInstanceCore%2A>傳回您類別的新執行個體。  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> -覆寫此方法以傳回動畫目前的值。 此方法採用三個參數︰ 預設原始值、 預設目的值和<xref:System.Windows.Media.Animation.AnimationClock>。 使用<xref:System.Windows.Media.Animation.AnimationClock>以取得目前的時間或動畫的進度。 您可以選擇是否要使用預設的來源和目的值。  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> -覆寫此方法以傳回動畫目前的值。 此方法採用三個參數︰ 預設原始值、 預設目的值和<xref:System.Windows.Media.Animation.AnimationClock>。 使用<xref:System.Windows.Media.Animation.AnimationClock>以取得目前的時間或動畫的進度。 您可以選擇是否要使用預設的來源和目的值。  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> -覆寫這個屬性，指出動畫是否使用指定的預設目的地值<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>方法。  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> -覆寫這個屬性，指出動畫是否使用指定的預設目的地值<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>方法。  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> -覆寫這個屬性，指出<xref:System.Type>動畫所產生的輸出。  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> -覆寫這個屬性，指出<xref:System.Type>動畫所產生的輸出。  
   
  如果類別不使用相依性屬性來儲存其資料或需要在建立之後額外進行初始化，您可能需要覆寫其他方法。如需詳細資訊，請參閱 [Freezable 物件概觀](../advanced/freezable-objects-overview.md)。  
   

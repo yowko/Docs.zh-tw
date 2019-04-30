@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
 ms.openlocfilehash: a85745d39903719ec1e44ccf70df72d472720b7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956277"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>在 Windows Form DataGridView 控制項中的資料行填入模式
 在資料行填滿模式中，<xref:System.Windows.Forms.DataGridView> 控制項會自動調整其資料行的大小，使資料行填滿可用顯示區域的寬度。 只有在必須將每個資料行的寬度保持等於或大於其 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 屬性值時，這個控制項才會顯示水平捲軸。  
@@ -45,22 +45,22 @@ ms.locfileid: "59214724"
 ### <a name="comments"></a>註解  
  若要使用這個示範應用程式：  
   
--   變更表單的大小 觀察資料行如何在維持比例 (由 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 屬性值指定) 的同時，變更其寬度。  
+- 變更表單的大小 觀察資料行如何在維持比例 (由 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 屬性值指定) 的同時，變更其寬度。  
   
--   使用滑鼠拖曳資料行分隔線來變更資料行大小。 觀察 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 值如何變更。  
+- 使用滑鼠拖曳資料行分隔線來變更資料行大小。 觀察 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 值如何變更。  
   
--   變更一個資料行的 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 值，然後以拖曳方式調整表單的大小。 觀察當表單變得很小時，<xref:System.Windows.Forms.DataGridViewColumn.Width%2A> 值如何維持在 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 值以上。  
+- 變更一個資料行的 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 值，然後以拖曳方式調整表單的大小。 觀察當表單變得很小時，<xref:System.Windows.Forms.DataGridViewColumn.Width%2A> 值如何維持在 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 值以上。  
   
--   將所有資料行的 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 值變更為較大的數值，讓結合的值超過控制項的寬度。 觀察水平捲軸的顯示方式。  
+- 將所有資料行的 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 值變更為較大的數值，讓結合的值超過控制項的寬度。 觀察水平捲軸的顯示方式。  
   
--   變更一些資料行的 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 值。 當您調整資料行或表單的大小時，觀察其效果。  
+- 變更一些資料行的 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 值。 當您調整資料行或表單的大小時，觀察其效果。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   System、System.Drawing 和 System.Windows.Forms 組件的參考。  
+- System、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
--   Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
+- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
 

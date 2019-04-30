@@ -3,11 +3,11 @@ title: WCF 服務的簡化組態
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
 ms.openlocfilehash: 47af8dcba35ba31f25597c946596b0cbcac93b4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007847"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF 服務的簡化組態
 此範例示範如何實作與設定一般服務和用戶端使用 Windows Communication Foundation (WCF)。 這個範例是所有其他基本技術範例的基礎。  
@@ -63,11 +63,11 @@ ms.locfileid: "59304255"
   
 3. 遵循下列步驟執行範例：  
   
-    1.  以滑鼠右鍵按一下**服務**專案，然後選取**設定為啟始專案**，然後按**Ctrl + F5**。  
+    1. 以滑鼠右鍵按一下**服務**專案，然後選取**設定為啟始專案**，然後按**Ctrl + F5**。  
   
-    2.  等待主控台輸出確認服務已啟動且在執行中。  
+    2. 等待主控台輸出確認服務已啟動且在執行中。  
   
-    3.  以滑鼠右鍵按一下**用戶端**專案，然後選取**設定為啟始專案**，然後按**Ctrl + F5**。  
+    3. 以滑鼠右鍵按一下**用戶端**專案，然後選取**設定為啟始專案**，然後按**Ctrl + F5**。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

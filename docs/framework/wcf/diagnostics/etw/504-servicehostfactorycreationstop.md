@@ -3,18 +3,18 @@ title: 504 - ServiceHostFactoryCreationStop
 ms.date: 03/30/2017
 ms.assetid: 284d240a-ef0c-4572-b3cd-8fbc579db05f
 ms.openlocfilehash: f32b29a7b76b7557d65603b9bf04dd60f0016a8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33466839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999618"
 ---
 # <a name="504---servicehostfactorycreationstop"></a>504 - ServiceHostFactoryCreationStop
 ## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
-|ID|504|  
+|識別碼|504|  
 |關鍵字|WebHost|  
 |層級|資訊|  
 |通道|Microsoft-Windows-Application Server-Applications/Debug|  

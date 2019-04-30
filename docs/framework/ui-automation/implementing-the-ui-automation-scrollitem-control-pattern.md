@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Scroll Item control pattern
 ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
 ms.openlocfilehash: c0bb852fa6c117ae8eb2644a0be75f20367b2054
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983303"
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>實作 UI 自動化 ScrollItem 控制項模式
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59095018"
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
  實作捲軸項目控制項模式時，請注意下列方針和慣例：  
   
--   視窗或畫布控制項內含的項目不必實作 IScrollItemProvider 介面。 但若要實作，這些項目就必須公開 <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 的有效位置。 如此可允許使用者介面自動化用戶端應用程式將 <xref:System.Windows.Automation.ScrollPattern> 控制項模式方法用於顯示子項目的容器。  
+- 視窗或畫布控制項內含的項目不必實作 IScrollItemProvider 介面。 但若要實作，這些項目就必須公開 <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 的有效位置。 如此可允許使用者介面自動化用戶端應用程式將 <xref:System.Windows.Automation.ScrollPattern> 控制項模式方法用於顯示子項目的容器。  
   
 <a name="Required_Members_for_IScrollItemProvider"></a>   
 ## <a name="required-members-for-iscrollitemprovider"></a>IScrollItemProvider 的必要成員  

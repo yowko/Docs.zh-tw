@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
 ms.openlocfilehash: cc38b0f3ded9e3c2a5a4146eb6bb474921d1e19f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012852"
 ---
 # <a name="label-control-overview-windows-forms"></a>Label 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.Label>控制項可用來顯示使用者無法編輯的映像或文字。 它們用來識別在表單上的物件，提供描述哪些特定的控制項將會執行動作，按一下，比方說，或在執行階段事件或在您的應用程式中的處理序的回應中顯示資訊。 例如，您可以使用標籤將描述性的原文字幕新增至文字方塊、 清單方塊、 下拉式方塊等等。 您也可以撰寫程式碼以變更在執行階段回應事件中的標籤所顯示的文字。 比方說，如果您的應用程式花幾分鐘的時間處理的變更，您就可以在標籤中顯示的處理狀態訊息。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cursor (mouse pointer), making objects follow
 ms.assetid: 50b20415-14bc-405c-baf3-2fb254fffde3
 ms.openlocfilehash: b9b13b4eec3e42744ba2be6031ec841fb5f215e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051594"
 ---
 # <a name="how-to-make-an-object-follow-the-mouse-pointer"></a>HOW TO：設定物件隨滑鼠指標移動
 此範例示範如何變更維度的物件，當滑鼠指標在螢幕上移動時。  

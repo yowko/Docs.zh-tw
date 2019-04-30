@@ -3,20 +3,20 @@ title: 追蹤
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
 ms.openlocfilehash: 2379b290494e72b65db5ddc6a7bc5df376d4373f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997980"
 ---
 # <a name="tracing"></a>追蹤
 Windows Communication Foundation (WCF) 會提供錯誤監視與分析應用程式檢測和診斷資料。 您可以不使用偵錯工具而改用追蹤，以了解應用程式行為以及發生錯誤的原因。 您也可以將各元件的錯誤與處理相互關聯，以提供端對端的經驗。  
   
  WCF 會輸出下列進行診斷追蹤資料：  
   
--   所有應用程式元件的處理過程里程碑追蹤，例如作業呼叫、程式碼例外狀況、警告和其他重大處理事件。  
+- 所有應用程式元件的處理過程里程碑追蹤，例如作業呼叫、程式碼例外狀況、警告和其他重大處理事件。  
   
--   追蹤功能故障時出現的 Windows 錯誤事件。  
+- 追蹤功能故障時出現的 Windows 錯誤事件。  
   
 ## <a name="in-this-section"></a>本節內容  
  [設定追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  

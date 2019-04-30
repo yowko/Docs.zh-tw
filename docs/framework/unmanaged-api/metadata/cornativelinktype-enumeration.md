@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 66d650adb39a9c7dade0936ec671ae5a8b4aeecd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045464"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType 列舉
 提供值，這些值表示機器碼中已連結的類型。  

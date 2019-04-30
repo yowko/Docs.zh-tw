@@ -1,25 +1,25 @@
 ---
-title: 將 Windows 容器部署到 Service Fabric 的時機
+title: 將 Windows 容器部署至 Service Fabric 的時機
 description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |將 Windows 容器部署到 Service Fabric 的時機
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 01d76f325480c7cf09fef36b02589a602e3ee11e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973640"
 ---
-# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>將 Windows 容器部署到 Service Fabric 的時機
+# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>將 Windows 容器部署至 Service Fabric 的時機
 
 Windows 容器為基礎的應用程式快速必須使用走了更進一步地從 IaaS Vm 適用的平台。 這是自動化的增強的延展性和高延展性，並獲得明顯的改進，在部署中，完整的管理體驗中升級，版本控制、 復原、 和健全狀況監視。 如果要達成這些目標，即可使用 Azure Service Fabric 中，可在 Microsoft Azure 雲端，但也在內部，或甚至是其他雲端中的 orchestrator。
 
 許多組織將現有單體式應用程式到容器的原因有二： 式
 
--   降低成本，可能是因為彙整和移除現有的硬體，或是從執行的應用程式在更高的密度。
+- 降低成本，可能是因為彙整和移除現有的硬體，或是從執行的應用程式在更高的密度。
 
--   開發與作業之間的一致性部署合約。
+- 開發與作業之間的一致性部署合約。
 
 追求降低成本是可理解的而且可能所有組織都追尋此目標。 一致性部署較難以評估，但同樣重要。 一致性部署合約會說，開發人員可以自由選擇要使用的技術，營運小組取得單一的方式來部署和管理應用程式。 本 「 合約 」 可以減輕必須處理許多不同的技術複雜性的作業，或強制只能使用某些技術的開發人員的痛苦。 基本上，每個應用程式容器化的自封式的部署映像中。
 

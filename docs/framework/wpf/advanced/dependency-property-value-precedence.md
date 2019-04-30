@@ -8,11 +8,11 @@ helpviewer_keywords:
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
 ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010536"
 ---
 # <a name="dependency-property-value-precedence"></a>相依性屬性值優先順序
 <a name="introduction"></a> 本主題說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統的運作方式如何影響相依性屬性的值，並描述屬性系統套用到屬性有效值的優先順序。  
@@ -47,9 +47,9 @@ ms.locfileid: "59315682"
   
 4. **TemplatedParent 範本屬性**： 項目具有<xref:System.Windows.FrameworkElement.TemplatedParent%2A>是建立為範本的一部分 (<xref:System.Windows.Controls.ControlTemplate>或<xref:System.Windows.DataTemplate>)。 如需何時套用此屬性的詳細資訊，請參閱本主題稍後的 [TemplatedParent](#templatedparent)。 在範本內，優先順序如下：  
   
-    1.  從觸發<xref:System.Windows.FrameworkElement.TemplatedParent%2A>範本。  
+    1. 從觸發<xref:System.Windows.FrameworkElement.TemplatedParent%2A>範本。  
   
-    2.  屬性集 (通常是透過[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]屬性) 中<xref:System.Windows.FrameworkElement.TemplatedParent%2A>範本。  
+    2. 屬性集 (通常是透過[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]屬性) 中<xref:System.Windows.FrameworkElement.TemplatedParent%2A>範本。  
   
 5. **隱含樣式**： 僅適用於 `Style` 屬性。 `Style` 屬性是由具有符合項目類型之索引鍵的任何樣式資源所填入。 該樣式資源必須位於頁面或應用程式中；查閱隱含樣式資源不會進行到主題中。  
   
@@ -61,9 +61,9 @@ ms.locfileid: "59315682"
   
 9. **預設 (主題) 樣式**： 如需何時套用此樣式，以及主題樣式與主題樣式內範本之關聯的詳細資訊，請參閱本主題稍後的[預設 (主題) 樣式](#themestyles)。 在預設樣式內，優先順序如下：  
   
-    1.  主題樣式中的作用中觸發程序。  
+    1. 主題樣式中的作用中觸發程序。  
   
-    2.  主題樣式中的 setter。  
+    2. 主題樣式中的 setter。  
   
 10. **繼承**： 有幾個相依性屬性會從父項目繼承值到子項目，因此無須在整個應用程式的每一個項目上特別設定。 如需詳細資訊，請參閱[屬性值繼承](property-value-inheritance.md)。  
   
@@ -77,11 +77,11 @@ ms.locfileid: "59315682"
 ## <a name="the-style-property"></a>Style 屬性  
  上述查閱順序適用於所有可能的相依性屬性，但有一個例外：<xref:System.Windows.FrameworkElement.Style%2A>屬性。 <xref:System.Windows.FrameworkElement.Style%2A>屬性是唯一的它無法本身能設定樣式，因此不會套用優先順序項目 5 至 8。 此外，建立動畫，或將強制轉型<xref:System.Windows.FrameworkElement.Style%2A>不建議您 (和動畫<xref:System.Windows.FrameworkElement.Style%2A>需要自訂動畫類別)。 這會保留三種方式，<xref:System.Windows.FrameworkElement.Style%2A>可能設定的屬性：  
   
--   **明確樣式**： <xref:System.Windows.FrameworkElement.Style%2A>直接設定屬性。 在大多數情況下，樣式不會內嵌定義，而是使用明確索引鍵將它當做資源參考。 在此情況下，Style 屬性本身就會當做區域數值，也就是優先順序項目 3。  
+- **明確樣式**： <xref:System.Windows.FrameworkElement.Style%2A>直接設定屬性。 在大多數情況下，樣式不會內嵌定義，而是使用明確索引鍵將它當做資源參考。 在此情況下，Style 屬性本身就會當做區域數值，也就是優先順序項目 3。  
   
--   **隱含樣式**： <xref:System.Windows.FrameworkElement.Style%2A>屬性不會直接設定。 不過， <xref:System.Windows.FrameworkElement.Style%2A> （頁面、 應用程式） 時，資源查閱序列中某一層級存在，而且做為索引鍵使用的樣式會套用至型別對應的資源索引鍵。 在此情況下，<xref:System.Windows.FrameworkElement.Style%2A>屬性本身就會依優先順序，順序為項目 5 中識別。 使用偵測到此狀況<xref:System.Windows.DependencyPropertyHelper>對抗<xref:System.Windows.FrameworkElement.Style%2A>屬性，並尋找<xref:System.Windows.BaseValueSource.ImplicitStyleReference>結果中。  
+- **隱含樣式**： <xref:System.Windows.FrameworkElement.Style%2A>屬性不會直接設定。 不過， <xref:System.Windows.FrameworkElement.Style%2A> （頁面、 應用程式） 時，資源查閱序列中某一層級存在，而且做為索引鍵使用的樣式會套用至型別對應的資源索引鍵。 在此情況下，<xref:System.Windows.FrameworkElement.Style%2A>屬性本身就會依優先順序，順序為項目 5 中識別。 使用偵測到此狀況<xref:System.Windows.DependencyPropertyHelper>對抗<xref:System.Windows.FrameworkElement.Style%2A>屬性，並尋找<xref:System.Windows.BaseValueSource.ImplicitStyleReference>結果中。  
   
--   **預設樣式**也稱為**主題樣式**。 <xref:System.Windows.FrameworkElement.Style%2A>屬性未直接設定，而且事實上會讀取為`null`執行階段為止。 在此情況下，樣式會來自屬於 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 展示引擎一部分的執行階段主題評估。  
+- **預設樣式**也稱為**主題樣式**。 <xref:System.Windows.FrameworkElement.Style%2A>屬性未直接設定，而且事實上會讀取為`null`執行階段為止。 在此情況下，樣式會來自屬於 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 展示引擎一部分的執行階段主題評估。  
   
  對於不在主題中的隱含樣式，類型必須完全-相符`MyButton` `Button`-在衍生的類別不會隱含使用的樣式`Button`。  
   

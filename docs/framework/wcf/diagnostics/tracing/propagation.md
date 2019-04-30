@@ -3,11 +3,11 @@ title: 傳播
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
 ms.openlocfilehash: faa0e6ecb53963587e3fc253cd8beae1dc2c4bf5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971375"
 ---
 # <a name="propagation"></a>傳播
 本主題說明 Windows Communication Foundation (WCF) 追蹤模型中的活動傳播。  
@@ -26,11 +26,11 @@ ms.locfileid: "59154033"
 ## <a name="propagation-definition"></a>傳播定義  
  如果下列所有條件都成立，就會將活動 M 的 gAId 傳播至活動 N。  
   
--   N 是因為 M 而建立的  
+- N 是因為 M 而建立的  
   
--   N 知道 M 的 gAId  
+- N 知道 M 的 gAId  
   
--   N 的 gAId 等於 M 的 gAId。  
+- N 的 gAId 等於 M 的 gAId。  
   
  gAId 是透過 ActivityId 訊息標頭所傳播，如下列 XML 結構描述所示。  
   

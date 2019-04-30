@@ -7,11 +7,11 @@ helpviewer_keywords:
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
 ms.openlocfilehash: e506908299109f94be6d190017b381fe7b4ee044
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032980"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隱私權資訊
 Microsoft 一向致力於保護使用者的隱私權。 當您建置的應用程式使用 Windows Communication Foundation (WCF) 3.0 版，您的應用程式可能會影響到使用者的隱私權。 例如，應用程式可能會明確收集使用者的連絡資訊，或者透過網際網路向您的網站要求資訊或傳送資訊至網站。 如果您在應用程式中內嵌 Microsoft 技術，則該技術可能帶有會影響隱私權的行為。 WCF 不會傳送任何資訊給 Microsoft 從您的應用程式除非您本人或使用者選擇要傳送給我們。  
@@ -38,9 +38,9 @@ Microsoft 一向致力於保護使用者的隱私權。 當您建置的應用程
   
  驗證的作法是在用戶端和服務之間傳遞認證。 您可以透過傳輸層級安全性或 SOAP 訊息層級安全性來進行驗證，如下所示：  
   
--   在 SOAP 訊息安全性中，可以透過使用者名稱/密碼、X.509 憑證、Kerberos 票證和 SAML 語彙基元這類認證來執行驗證，而視簽發者而定，這些認證中可能含有個人資訊。  
+- 在 SOAP 訊息安全性中，可以透過使用者名稱/密碼、X.509 憑證、Kerberos 票證和 SAML 語彙基元這類認證來執行驗證，而視簽發者而定，這些認證中可能含有個人資訊。  
   
--   使用傳輸安全性時，則可藉由 HTTP 驗證配置 (Basic、Digest、Negotiate、Integrated Windows Authorization、NTLM、None 和 Anonymous) 這種傳統傳輸驗證機制和表單驗證，來處理驗證動作。  
+- 使用傳輸安全性時，則可藉由 HTTP 驗證配置 (Basic、Digest、Negotiate、Integrated Windows Authorization、NTLM、None 和 Anonymous) 這種傳統傳輸驗證機制和表單驗證，來處理驗證動作。  
   
  執行驗證之後，會在進行通訊的端點之間建立安全工作階段。 這個工作階段是由會在安全性工作階段的存留期間持續活動的 GUID 所識別。 下表會顯示所保留的項目的位置。  
   

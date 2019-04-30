@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bab20301c5413f8bbe95d44b87e06d3b3870c9e7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988362"
 ---
 # <a name="icordebugmanagedcallbackbreak-method"></a>ICorDebugManagedCallback::Break 方法
 
@@ -49,9 +49,9 @@ HRESULT Break (
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**標頭：** CorDebug.idl、 CorDebug.h
+**標頭：** CorDebug.idl、CorDebug.h
 
-**程式庫：** CorGuids.lib
+**LIBRARY:** CorGuids.lib
 
 **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 024b1f3f7e08dc21582789de7f3899e8e44d5e39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041830"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a>ICorProfilerCallback::RemotingServerSendingReply 方法
 通知分析工具，處理程序已完成處理遠端方法引動過程要求，並將要傳輸的回覆，透過的通道。  
@@ -39,11 +39,11 @@ HRESULT RemotingServerSendingReply(
  `pCookie`  
  [in]中提供的值會對應至 GUID 的指標[icorprofilercallback:: Remotingclientreceivingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md)在這些情況下：  
   
--   遠端處理 GUID cookie 在作用中。  
+- 遠端處理 GUID cookie 在作用中。  
   
--   成功的訊息傳輸通道。  
+- 成功的訊息傳輸通道。  
   
--   GUID cookie 上為作用中的用戶端程序。  
+- GUID cookie 上為作用中的用戶端程序。  
   
  這可讓您輕易地配對的遠端呼叫，以及建立的邏輯呼叫堆疊。  
   

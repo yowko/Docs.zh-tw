@@ -15,11 +15,11 @@ ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055013"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>以多平台為目標之函式庫的應用程式資源
 您可以使用.NET Framework[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)專案類型，以確保您類別庫中的資源，可從多個平台。 這個專案類型會是適用於 Visual Studio 2012，並以.NET Framework 類別庫的可攜式子集為目標。 使用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]可確保能夠從桌面應用程式、Silverlight 應用程式、Windows Phone 應用程式和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式存取您的程式庫。
@@ -61,13 +61,13 @@ ms.locfileid: "54641144"
 |BornLength|12|
 |Hired|雇用日期|
 |HiredLength|12|
-|ID|ID|
+|識別碼|識別碼|
 |ID.Length|12|
 |名稱|名稱|
 |NameLength|25|
 |標題|員工資料庫|
 
- 下列程式碼定義`UILibrary`類別，會使用名為資源管理員包裝函式`resources`Visual Studio 所產生時**存取修飾詞**檔案變更為**公用**. UILibrary 類別會在必要時剖析字串資料。 . 請注意，該類別位於 `MyCompany.Employees` 命名空間中。
+ 下列程式碼定義`UILibrary`類別，會使用名為資源管理員包裝函式`resources`Visual Studio 所產生時**存取修飾詞**檔案變更為**公用**. UILibrary 類別會在必要時剖析字串資料。 。 請注意，該類別位於 `MyCompany.Employees` 命名空間中。
 
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]
@@ -90,7 +90,7 @@ ms.locfileid: "54641144"
 |BornLength|20|
 |Hired|Date embauché|
 |HiredLength|16|
-|ID|ID|
+|識別碼|識別碼|
 |名稱|Nom|
 |標題|Base de données des employés|
 

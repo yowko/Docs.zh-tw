@@ -3,11 +3,11 @@ title: Windows Process Activation
 ms.date: 03/30/2017
 ms.assetid: 37b79642-1e6f-44b3-9777-98af57443bfa
 ms.openlocfilehash: bcac3a9860dd03ed048bc27969fa1e1f070e788a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949925"
 ---
 # <a name="windows-process-activation"></a>Windows Process Activation
 本節包含示範透過網路通訊協定啟動服務的範例。  

@@ -12,26 +12,26 @@ helpviewer_keywords:
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
 ms.openlocfilehash: 3ae8a889bf69913d234e31804335ddb08560c30c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009210"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>控制項和元件撰寫疑難排解
 本主題列出當開發元件和控制項時，會發生下列常見問題。 如需詳細資訊，請參閱[使用元件進行程式設計](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120))。  
   
--   無法將控制項新增至工具箱  
+- 無法將控制項新增至工具箱  
   
--   無法針對 Windows Forms 使用者控制項或元件進行偵錯  
+- 無法針對 Windows Forms 使用者控制項或元件進行偵錯  
   
--   事件在繼承的控制項或元件中引發兩次  
+- 事件在繼承的控制項或元件中引發兩次  
   
--   設計階段錯誤：「 無法建立元件 '*元件名稱*' 」  
+- 設計階段錯誤：「 無法建立元件 '*元件名稱*' 」  
   
--   STAThreadAttribute  
+- STAThreadAttribute  
   
--   元件圖示不會出現在工具箱中  
+- 元件圖示不會出現在工具箱中  
   
 ## <a name="cannot-add-control-to-toolbox"></a>無法將控制項新增至工具箱  
  如果您想要將您在另一個專案中建立的自訂控制項或協力廠商控制項新增至 [工具箱]，您必須手動進行。 如果目前專案包含您的控制項或元件，它應該會自動出現在 [工具箱]。 如需詳細資訊，請參閱[逐步解說：自動將 [工具箱] 中的以自訂元件填入](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。  
@@ -42,11 +42,11 @@ ms.locfileid: "59343411"
   
 2. 在 [選擇工具箱項目] 對話方塊中，新增元件：  
   
-    -   如果您想要新增 .NET Framework 元件或控制項，請按一下 [.NET Framework 元件] 索引標籤。  
+    - 如果您想要新增 .NET Framework 元件或控制項，請按一下 [.NET Framework 元件] 索引標籤。  
   
          -或-  
   
-    -   如果您想要新增 COM 元件或 ActiveX 控制項，請按一下 [COM 元件] 索引標籤。  
+    - 如果您想要新增 COM 元件或 ActiveX 控制項，請按一下 [COM 元件] 索引標籤。  
   
 3. 如果您的控制項列在對話方塊中，確認它已選取，然後按一下 [確定]。  
   
@@ -54,15 +54,15 @@ ms.locfileid: "59343411"
   
 4. 如果您的控制項未列在對話方塊中，請執行下列作業︰  
   
-    1.  按一下 [瀏覽] 按鈕。  
+    1. 按一下 [瀏覽] 按鈕。  
   
-    2.  瀏覽至包含 .dll 檔案 (包含您的控制項) 的資料夾。  
+    2. 瀏覽至包含 .dll 檔案 (包含您的控制項) 的資料夾。  
   
-    3.  選取 .dll 檔案，然後按一下 [開啟]。  
+    3. 選取 .dll 檔案，然後按一下 [開啟]。  
   
          您的控制項會出現在對話方塊中。  
   
-    4.  確認已選取您的控制項，然後按一下 [確定]。  
+    4. 確認已選取您的控制項，然後按一下 [確定]。  
   
          您的控制項隨即新增至 [工具箱]。  
   

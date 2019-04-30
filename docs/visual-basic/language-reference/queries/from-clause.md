@@ -11,11 +11,11 @@ helpviewer_keywords:
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
 ms.openlocfilehash: b18ef2f291e20d8a150972a980ba063377b0bc3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945336"
 ---
 # <a name="from-clause-visual-basic"></a>From 子句 (Visual Basic)
 指定一或多個範圍變數和要查詢的集合。  
@@ -48,21 +48,21 @@ From element [ As type ] In collection [ _ ]
   
  每個`From`子句後面可以接著以精簡查詢的其他查詢子句的任何組合。 您可以透過下列方式來精簡查詢：  
   
--   使用隱含地結合多個集合`From`並`Select`子句，或明確地利用`Join`或`Group Join`子句。  
+- 使用隱含地結合多個集合`From`並`Select`子句，或明確地利用`Join`或`Group Join`子句。  
   
--   使用`Where`子句來篩選查詢結果。  
+- 使用`Where`子句來篩選查詢結果。  
   
--   使用排序結果`Order By`子句。  
+- 使用排序結果`Order By`子句。  
   
--   分組類似的結果使用`Group By`子句。  
+- 分組類似的結果使用`Group By`子句。  
   
--   使用`Aggregate`子句來識別要評估的整個查詢結果的彙總函式。  
+- 使用`Aggregate`子句來識別要評估的整個查詢結果的彙總函式。  
   
--   使用`Let`子句來引進反覆運算變數的值取決於而不是集合運算式。  
+- 使用`Let`子句來引進反覆運算變數的值取決於而不是集合運算式。  
   
--   使用`Distinct`子句來略過重複的查詢結果。  
+- 使用`Distinct`子句來略過重複的查詢結果。  
   
--   識別要傳回的結果使用的組件`Skip`， `Take`， `Skip While`，和`Take While`子句。  
+- 識別要傳回的結果使用的組件`Skip`， `Take`， `Skip While`，和`Take While`子句。  
   
 ## <a name="example"></a>範例  
  下列查詢的運算式用法`From`子句來宣告範圍變數`cust`每個`Customer`物件中`customers`集合。 `Where`子句來限制輸出給客戶，從指定的區域中使用的範圍變數。 `For Each`迴圈會顯示查詢結果中的每個客戶的公司名稱。  

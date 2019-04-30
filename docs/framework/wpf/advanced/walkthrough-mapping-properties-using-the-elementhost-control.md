@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
 ms.openlocfilehash: 360f19e558f97e1807b329ad18e429fa893bbf86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053154"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>逐步解說：使用 ElementHost 控制項對應屬性
 
@@ -21,13 +21,13 @@ ms.locfileid: "59300914"
 
 這個逐步解說中所述的工作包括：
 
--   建立專案。
+- 建立專案。
 
--   定義新的屬性對應。
+- 定義新的屬性對應。
 
--   移除預設屬性對應。
+- 移除預設屬性對應。
 
--   擴充預設屬性對應。
+- 擴充預設屬性對應。
 
 在此逐步解說中所述工作的完整程式碼清單，請參閱 <<c0> [ 對應屬性使用 ElementHost 控制項範例](https://go.microsoft.com/fwlink/?LinkID=160018)。
 
@@ -37,7 +37,7 @@ ms.locfileid: "59300914"
 
 您需要下列元件才能完成此逐步解說：
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="creating-the-project"></a>建立專案
 
@@ -47,13 +47,13 @@ ms.locfileid: "59300914"
 
 2. 在 **方案總管**，將參考加入至下列[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]組件。
 
-    -   PresentationCore
+    - PresentationCore
 
-    -   PresentationFramework
+    - PresentationFramework
 
-    -   WindowsBase
+    - WindowsBase
 
-    -   WindowsFormsIntegration
+    - WindowsFormsIntegration
 
 3. 將下列程式碼複製到頂端`Form1`程式碼檔案。
 
@@ -101,7 +101,7 @@ ms.locfileid: "59300914"
 
 ### <a name="to-remove-a-default-property-mapping"></a>移除預設屬性對應
 
--   將下列程式碼複製到的定義`Form1`類別。
+- 將下列程式碼複製到的定義`Form1`類別。
 
      [!code-csharp[PropertyMappingWithElementHost#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#13)]
      [!code-vb[PropertyMappingWithElementHost#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#13)]
@@ -114,7 +114,7 @@ ms.locfileid: "59300914"
 
 ### <a name="to-extend-a-default-property-mapping"></a>擴充預設屬性對應
 
--   將下列程式碼複製到的定義`Form1`類別。
+- 將下列程式碼複製到的定義`Form1`類別。
 
      [!code-csharp[PropertyMappingWithElementHost#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#15)]
      [!code-vb[PropertyMappingWithElementHost#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#15)]
@@ -132,11 +132,11 @@ ms.locfileid: "59300914"
 
      `Form1_Load`方法會處理<xref:System.Windows.Forms.Form.Load>事件，並執行下列初始化。
 
-    -   會建立[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Button>項目。
+    - 會建立[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Button>項目。
 
-    -   呼叫您稍早在本逐步解說中所定義的方法來設定屬性對應。
+    - 呼叫您稍早在本逐步解說中所定義的方法來設定屬性對應。
 
-    -   將初始值指派給對應的屬性。
+    - 將初始值指派給對應的屬性。
 
 2. 按 F5 鍵建置並執行應用程式。
 

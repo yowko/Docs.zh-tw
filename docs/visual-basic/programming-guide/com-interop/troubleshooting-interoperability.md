@@ -17,11 +17,11 @@ helpviewer_keywords:
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 ms.openlocfilehash: 147c61badd680277480226b809df97d46b636c7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022294"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>疑難排解互通性 (Visual Basic)
 當您 COM 和 managed 程式碼之間的交互操作[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，您可能會遇到一或多個下列常見的問題。  
@@ -100,11 +100,11 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 ## <a name="vbconinteroperabilitymarshalinganchor10"></a> ActiveX 控制項問題  
  大部分的 ActiveX 控制項可搭配 Visual Basic 6.0 搭配 Visual Basic.NET 沒有問題。 主要例外狀況是容器控制項或以視覺化方式包含其他控制項的控制項。 使用 Visual Studio 無法正常運作的舊版控制項的一些範例如下所示：  
   
--   Microsoft Forms 2.0 Frame 控制項  
+- Microsoft Forms 2.0 Frame 控制項  
   
--   上下按鈕控制項，也就是微調控制項  
+- 上下按鈕控制項，也就是微調控制項  
   
--   Sheridan 索引標籤控制項  
+- Sheridan 索引標籤控制項  
   
  有只有少數的因應措施不支援的 ActiveX 控制項問題。 如果您擁有原始的原始程式碼，您可以將現有的控制項移轉到 Visual Studio 中。 否則，您可以洽詢軟體廠商更新。NET 相容版本的控制項來取代不支援 ActiveX 控制項。  
   

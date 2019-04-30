@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
 ms.openlocfilehash: 02cc71dbda47d078284d9a2ec07538dfa063ac75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014140"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic 應用程式模型概觀
 Visual Basic 提供定義完善的模型，可用於控制 Windows Forms 應用程式的行為： 在 Visual Basic 應用程式模型。 此模型包含事件處理應用程式的啟動和關機，以及攔截未處理的例外狀況的事件。 它也會提供單一執行個體的應用程式的開發的支援。 應用程式模型，所以需要更多控制的開發人員可以自訂其可覆寫的方法。  
@@ -22,9 +22,9 @@ Visual Basic 提供定義完善的模型，可用於控制 Windows Forms 應用�
   
  單一執行個體的應用程式會啟動，並檢查是否為第一個執行個體或應用程式的後續執行個體：  
   
--   如果是第一個執行個體，它會開始如往常般。  
+- 如果是第一個執行個體，它會開始如往常般。  
   
--   若要啟動應用程式，第一個執行個體執行時，每個後續的嘗試會導致非常不同的行為。 後續的嘗試通知有關命令列引數，第一個執行個體，然後立即結束。 第一個執行個體控制代碼`StartupNextInstance`事件，以判斷哪些後續的執行個體的命令列引數，並繼續執行。  
+- 若要啟動應用程式，第一個執行個體執行時，每個後續的嘗試會導致非常不同的行為。 後續的嘗試通知有關命令列引數，第一個執行個體，然後立即結束。 第一個執行個體控制代碼`StartupNextInstance`事件，以判斷哪些後續的執行個體的命令列引數，並繼續執行。  
   
      下圖顯示後續的執行個體發出第一個執行個體的訊號：  
   
@@ -35,21 +35,21 @@ Visual Basic 提供定義完善的模型，可用於控制 Windows Forms 應用�
 ## <a name="events-in-the-application-model"></a>應用程式模型中的事件  
  應用程式模型中找到下列事件：  
   
--   **應用程式啟動**。 應用程式引發<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>啟動時的事件。 藉由處理這個事件，您可以加入主要表單載入之前初始化應用程式的程式碼。 `Startup`事件也會提供取消執行階段期間的應用程式啟動程序，如有需要。  
+- **應用程式啟動**。 應用程式引發<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>啟動時的事件。 藉由處理這個事件，您可以加入主要表單載入之前初始化應用程式的程式碼。 `Startup`事件也會提供取消執行階段期間的應用程式啟動程序，如有需要。  
   
      您可以設定應用程式啟動程式碼執行時顯示啟動顯示畫面的應用程式。 根據預設，應用程式模型會隱藏啟動顯示畫面時請`/nosplash`或`-nosplash`使用命令列引數。  
   
--   **單一執行個體的應用程式**。 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>後續的執行個體的單一執行個體的應用程式啟動時，會引發事件。 這個事件會傳遞後續的執行個體的命令列引數。  
+- **單一執行個體的應用程式**。 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>後續的執行個體的單一執行個體的應用程式啟動時，會引發事件。 這個事件會傳遞後續的執行個體的命令列引數。  
   
--   **未處理例外狀況**。 如果應用程式遇到未處理的例外狀況，則會引發<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>事件。 您針對該事件的處理常式可以檢查例外狀況，並判斷是否要繼續執行。  
+- **未處理例外狀況**。 如果應用程式遇到未處理的例外狀況，則會引發<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>事件。 您針對該事件的處理常式可以檢查例外狀況，並判斷是否要繼續執行。  
   
      `UnhandledException`在某些情況下不會引發事件。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>。  
   
--   **網路連線能力變更**。 如果電腦的網路可用性變更時，應用程式就會引發<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>事件。  
+- **網路連線能力變更**。 如果電腦的網路可用性變更時，應用程式就會引發<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>事件。  
   
      `NetworkAvailabilityChanged`在某些情況下不會引發事件。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>。  
   
--   **應用程式關閉**。 應用程式提供<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>事件，以表示它即將關閉時。 在該事件處理常式中，您可以確保，操作您的應用程式需要執行 — 關閉並儲存，例如，已完成。 您可以設定您的應用程式關閉時關閉主要表單，或關閉只有當所有的表單關閉。  
+- **應用程式關閉**。 應用程式提供<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>事件，以表示它即將關閉時。 在該事件處理常式中，您可以確保，操作您的應用程式需要執行 — 關閉並儲存，例如，已完成。 您可以設定您的應用程式關閉時關閉主要表單，或關閉只有當所有的表單關閉。  
   
 ## <a name="availability"></a>可用性  
  根據預設，Visual Basic 應用程式模型可供 Windows Form 專案。 如果您設定應用程式使用不同的啟動物件，或自訂的應用程式程式碼的開頭`Sub Main`，然後該物件或類別可能需要提供的實作<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>類別使用的應用程式模型。 如需變更啟始物件的詳細資訊，請參閱 < [Application Page，Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)。  

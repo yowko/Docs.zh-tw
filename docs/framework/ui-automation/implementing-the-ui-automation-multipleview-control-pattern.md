@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
 ms.openlocfilehash: 74e5908dfcd42d031464ffccedb530be4a71a3f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983355"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>實作 UI 自動化 MultipleView 控制項模式
 > [!NOTE]
@@ -27,13 +27,13 @@ ms.locfileid: "59125194"
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
  實作多重檢視控制項模式時，請注意下列方針和慣例：  
   
--   若管理目前檢視的容器與提供目前檢視的控制項不同，則也應在容器上實作<xref:System.Windows.Automation.Provider.IMultipleViewProvider> 。 例如，Windows 檔案總管包含目前資料夾內容的清單控制項，而控制項的檢視則是由 Windows 檔案總管應用程式管理。  
+- 若管理目前檢視的容器與提供目前檢視的控制項不同，則也應在容器上實作<xref:System.Windows.Automation.Provider.IMultipleViewProvider> 。 例如，Windows 檔案總管包含目前資料夾內容的清單控制項，而控制項的檢視則是由 Windows 檔案總管應用程式管理。  
   
--   可以排序內容的控制項不視為支援多種檢視。  
+- 可以排序內容的控制項不視為支援多種檢視。  
   
--   檢視集合在執行個體之間必須完全相同。  
+- 檢視集合在執行個體之間必須完全相同。  
   
--   檢視名稱必須適用於文字轉換語音、點字以及其他人類看得懂的應用程式。  
+- 檢視名稱必須適用於文字轉換語音、點字以及其他人類看得懂的應用程式。  
   
 <a name="Required_Members_for_IMultipleViewProvider"></a>   
 ## <a name="required-members-for-imultipleviewprovider"></a>IMultipleViewProvider 的必要成員  

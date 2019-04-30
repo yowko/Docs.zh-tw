@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
 ms.openlocfilehash: 226b77d1c638ec4f8505140332ad35d4029ef0b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050684"
 ---
 # <a name="understanding-generated-client-code"></a>了解產生的用戶端程式碼
 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 會產生用戶端程式碼和用戶端應用程式組態檔，用於建置用戶端應用程式。 本主題將提供產生之程式碼範例的導覽，用於標準服務合約情節。 如需有關如何建置使用產生的程式碼的用戶端應用程式的詳細資訊，請參閱 < [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)。  
@@ -20,15 +20,15 @@ ms.locfileid: "59189153"
   
  由於 Svcutil.exe 有許多選項可修改產生的型別資訊，因此本主題不會討論所有的案例。 然而，下列標準工作包含找出產生的程式碼：  
   
--   識別服務合約介面。  
+- 識別服務合約介面。  
   
--   用來識別的 WCF 用戶端類別。  
+- 用來識別的 WCF 用戶端類別。  
   
--   識別資料型別。  
+- 識別資料型別。  
   
--   識別雙工服務的回呼合約。  
+- 識別雙工服務的回呼合約。  
   
--   識別協助程式服務合約通道介面。  
+- 識別協助程式服務合約通道介面。  
   
 ### <a name="finding-service-contract-interfaces"></a>尋找服務合約介面  
  如果要找出建立服務合約模型的介面，請搜尋以 <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> 屬性標示的介面。 由於其他屬性的存在，且這個屬性本身有明確的內容設定，因此常常很難快速找出這個屬性。 請記住，服務合約介面和用戶端合約介面是兩種不同的型別。 下列程式碼範例會顯示原始的服務合約。  

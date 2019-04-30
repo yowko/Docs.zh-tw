@@ -8,11 +8,11 @@ helpviewer_keywords:
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
 ms.openlocfilehash: 98f8c6611340c89409697918ff8a16eaabe3c7a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010551"
 ---
 # <a name="dependency-property-metadata"></a>相依性屬性中繼資料
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統包含中繼資料報告系統，其針對屬性所報告的內容比透過反映或一般[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 特性報告的內容還多。 相依性屬性的中繼資料也可由定義相依性屬性的類別唯一指派、在相依性屬性新增至不同類別時變更，以及由從定義的基底類別繼承相依性屬性的所有衍生類別明確覆寫。  
@@ -25,11 +25,11 @@ ms.locfileid: "59170361"
 ## <a name="how-dependency-property-metadata-is-used"></a>相依性屬性中繼資料的使用方式  
  相依性屬性中繼資料以物件的形式存在，可接受查詢來查看相依性屬性的特性。 屬性系統也經常存取此中繼資料，因為它會處理任何指定的相依性屬性。 相依性屬性的中繼資料物件可包含下列類型的資訊：  
   
--   相依性屬性的預設值 (如果無法由區域數值、樣式、繼承等判斷出相依性屬性的其他值)。如需預設值在屬性系統指派相依性屬性的值時所佔優先順序的完整說明，請參閱[相依性屬性值優先順序](dependency-property-value-precedence.md)。  
+- 相依性屬性的預設值 (如果無法由區域數值、樣式、繼承等判斷出相依性屬性的其他值)。如需預設值在屬性系統指派相依性屬性的值時所佔優先順序的完整說明，請參閱[相依性屬性值優先順序](dependency-property-value-precedence.md)。  
   
--   影響各擁有者類型之強制型轉或變更通知行為的回呼實作參考。 請注意，這些回呼通常是在非公用存取層級定義，因此一般無法從中繼資料取得實際參考，除非參考位於允許的存取範圍內。 如需相依性屬性回呼的詳細資訊，請參閱[相依性屬性回呼和驗證](dependency-property-callbacks-and-validation.md)。  
+- 影響各擁有者類型之強制型轉或變更通知行為的回呼實作參考。 請注意，這些回呼通常是在非公用存取層級定義，因此一般無法從中繼資料取得實際參考，除非參考位於允許的存取範圍內。 如需相依性屬性回呼的詳細資訊，請參閱[相依性屬性回呼和驗證](dependency-property-callbacks-and-validation.md)。  
   
--   如果將考慮中的相依性屬性視為 WPF 架構層級屬性，中繼資料可能會包含 WPF 架構層級相依性屬性特性，以報告服務的資訊和狀態 (例如 WPF 架構層級配置引擎和屬性繼承邏輯)。 如需相依性屬性中繼資料在這方面的詳細資訊，請參閱[架構屬性中繼資料](framework-property-metadata.md)。  
+- 如果將考慮中的相依性屬性視為 WPF 架構層級屬性，中繼資料可能會包含 WPF 架構層級相依性屬性特性，以報告服務的資訊和狀態 (例如 WPF 架構層級配置引擎和屬性繼承邏輯)。 如需相依性屬性中繼資料在這方面的詳細資訊，請參閱[架構屬性中繼資料](framework-property-metadata.md)。  
   
 <a name="APIs"></a>   
 ## <a name="metadata-apis"></a>中繼資料 API  
@@ -62,15 +62,15 @@ ms.locfileid: "59170361"
   
  當您覆寫中繼資料時，不同的中繼資料特性會被合併或取代。  
   
--   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 會合併。 如果您加入新<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>，該回撥會儲存在中繼資料。 如果您未指定<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>中的值覆寫<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>會升階為來自指定中繼資料中最接近上階的參考。  
+- <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 會合併。 如果您加入新<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>，該回撥會儲存在中繼資料。 如果您未指定<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>中的值覆寫<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>會升階為來自指定中繼資料中最接近上階的參考。  
   
--   實際屬性系統行為<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>是階層中的所有中繼資料擁有者的實作都會保留並新增至資料表，且屬性系統的執行順序，是最具衍生性的類別的回呼會最先叫用。  
+- 實際屬性系統行為<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>是階層中的所有中繼資料擁有者的實作都會保留並新增至資料表，且屬性系統的執行順序，是最具衍生性的類別的回呼會最先叫用。  
   
--   <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 會被取代。 如果您未指定<xref:System.Windows.PropertyMetadata.DefaultValue%2A>中的值覆寫<xref:System.Windows.PropertyMetadata.DefaultValue%2A>來自指定中繼資料中最接近上階。  
+- <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 會被取代。 如果您未指定<xref:System.Windows.PropertyMetadata.DefaultValue%2A>中的值覆寫<xref:System.Windows.PropertyMetadata.DefaultValue%2A>來自指定中繼資料中最接近上階。  
   
--   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 實作會被取代。 如果您加入新<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>，該回撥會儲存在中繼資料。 如果您未指定<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>中的值覆寫<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>會升階為來自指定中繼資料中最接近上階的參考。  
+- <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 實作會被取代。 如果您加入新<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>，該回撥會儲存在中繼資料。 如果您未指定<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>中的值覆寫<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>會升階為來自指定中繼資料中最接近上階的參考。  
   
--   屬性系統行為是只<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>立即的中繼資料中會叫用。 其他任何參考<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>會保留在階層中的實作。  
+- 屬性系統行為是只<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>立即的中繼資料中會叫用。 其他任何參考<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>會保留在階層中的實作。  
   
  此行為由實作<xref:System.Windows.PropertyMetadata.Merge%2A>，可在衍生的中繼資料類別上覆寫。  
   

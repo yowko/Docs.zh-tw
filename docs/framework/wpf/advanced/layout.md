@@ -10,30 +10,30 @@ helpviewer_keywords:
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
 ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054353"
 ---
 # <a name="layout"></a>配置
 本主題描述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 配置系統。 了解如何和何時進行版面配置計算對於在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中建立使用者介面十分重要。  
   
  此主題包括下列章節：  
   
--   [項目週框方塊](#LayoutSystem_BoundingBox)  
+- [項目週框方塊](#LayoutSystem_BoundingBox)  
   
--   [配置系統](#LayoutSystem_Overview)  
+- [配置系統](#LayoutSystem_Overview)  
   
--   [測量和排列子系](#LayoutSystem_Measure_Arrange)  
+- [測量和排列子系](#LayoutSystem_Measure_Arrange)  
   
--   [面板項目和自訂版面配置行為](#LayoutSystem_PanelsCustom)  
+- [面板項目和自訂版面配置行為](#LayoutSystem_PanelsCustom)  
   
--   [版面配置效能考量](#LayoutSystem_Performance)  
+- [版面配置效能考量](#LayoutSystem_Performance)  
   
--   [子像素轉譯和版面配置進位](#LayoutSystem_LayoutRounding)  
+- [子像素轉譯和版面配置進位](#LayoutSystem_LayoutRounding)  
   
--   [後續步驟](#LayoutSystem_whatsnext)  
+- [後續步驟](#LayoutSystem_whatsnext)  
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>項目週框方塊  
@@ -120,19 +120,19 @@ ms.locfileid: "59330489"
 ## <a name="layout-performance-considerations"></a>版面配置效能考量  
  版面配置是遞迴程序。 在每個子項目<xref:System.Windows.Controls.Panel.Children%2A>集合取得處理期間每次叫用配置系統。 因此，不需要時，應該避免觸發配置系統。 下列考量可協助您達到更佳的效能。  
   
--   請注意哪些屬性值變更將會由配置系統強制遞迴更新。  
+- 請注意哪些屬性值變更將會由配置系統強制遞迴更新。  
   
      使用公用旗標，可標記其值可以初始化配置系統的相依性屬性。 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> 和<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>提供有用的線索有關哪些屬性值變更將會強制遞迴更新由配置系統。 一般情況下，可能會影響項目的週框方塊的大小的任何屬性應有<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>旗標設為 true。 如需詳細資訊，請參閱[相依性屬性概觀](dependency-properties-overview.md)。  
   
--   可能的話，請使用<xref:System.Windows.UIElement.RenderTransform%2A>而不是<xref:System.Windows.FrameworkElement.LayoutTransform%2A>。  
+- 可能的話，請使用<xref:System.Windows.UIElement.RenderTransform%2A>而不是<xref:System.Windows.FrameworkElement.LayoutTransform%2A>。  
   
      A<xref:System.Windows.FrameworkElement.LayoutTransform%2A>可以是非常有用的方式來影響的內容[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 不過，如果不需要轉換的效果不會影響其他項目的位置，最好是使用<xref:System.Windows.UIElement.RenderTransform%2A>相反的因為<xref:System.Windows.UIElement.RenderTransform%2A>不叫用配置系統。 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 套用其轉換，並強制遞迴版面配置更新來考量受影響項目的新位置。  
   
--   避免不必要的呼叫<xref:System.Windows.UIElement.UpdateLayout%2A>。  
+- 避免不必要的呼叫<xref:System.Windows.UIElement.UpdateLayout%2A>。  
   
      <xref:System.Windows.UIElement.UpdateLayout%2A>方法會強制遞迴版面配置更新，並經常是不必要。 除非您確定需要完整更新，否則請依賴配置系統來呼叫此方法。  
   
--   當使用大型<xref:System.Windows.Controls.Panel.Children%2A>集合，請考慮使用<xref:System.Windows.Controls.VirtualizingStackPanel>而非一般<xref:System.Windows.Controls.StackPanel>。  
+- 當使用大型<xref:System.Windows.Controls.Panel.Children%2A>集合，請考慮使用<xref:System.Windows.Controls.VirtualizingStackPanel>而非一般<xref:System.Windows.Controls.StackPanel>。  
   
      透過虛擬化子集合，<xref:System.Windows.Controls.VirtualizingStackPanel>只會保留在目前位於父項的檢視區的記憶體中的物件。 因此，在大部分情況下，都可以大幅改善效能。  
   

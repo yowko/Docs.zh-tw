@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data formats [WPF], listing
 ms.assetid: 18e7ba4b-ccef-4815-ae2d-3a32891010c0
 ms.openlocfilehash: f8230eac33a18a0d99cc757d54c2b901c1afe977
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001490"
 ---
 # <a name="how-to-list-the-data-formats-in-a-data-object"></a>HOW TO：列出資料物件中的資料格式
 下列範例示範如何使用<xref:System.Windows.DataObject.GetFormats%2A>方法多載取得用以表示使用資料物件中每個資料格式的字串陣列。  

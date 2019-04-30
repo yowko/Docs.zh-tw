@@ -7,11 +7,11 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
 ms.openlocfilehash: d7fca92f541ffeca7a6e8267260d3b665271e90a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58890393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014190"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>使用 Visual Basic 自訂專案和擴充 My 物件
 您可以自訂專案範本，以提供額外`My`物件。 這可輕鬆尋找並使用您物件的其他開發人員。  

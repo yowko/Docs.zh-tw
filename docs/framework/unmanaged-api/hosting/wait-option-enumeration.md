@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0ac28f28d4d284ba26fadd46e53ebeb8e5b5f3cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984148"
 ---
 # <a name="waitoption-enumeration"></a>WAIT_OPTION 列舉
 包含值，指出是否通用語言執行平台 (CLR) 區塊所要求的作業，應該採取動作的主機。  

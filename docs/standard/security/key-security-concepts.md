@@ -14,11 +14,11 @@ ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c483baeca9efcbc4a38020a7b2f4fa221a6b4028
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018615"
 ---
 # <a name="key-security-concepts"></a>重要的安全性概念
 Microsoft.NET Framework 提供以角色為基礎的安全性，以幫助解除對行動程式碼安全性的相關疑慮，並提供支援，讓元件能夠判斷哪些使用者有權執行。  
@@ -35,11 +35,11 @@ Microsoft.NET Framework 提供以角色為基礎的安全性，以幫助解除�
 ## <a name="principal"></a>主體  
  主體代表使用者的身分識別與角色，並且會代表使用者採取行動。 在 .NET Framework 中，以角色為基礎的安全性可支援三種主體：  
   
--   泛型主體代表獨立於 Windows 使用者和角色而存在的使用者和角色。  
+- 泛型主體代表獨立於 Windows 使用者和角色而存在的使用者和角色。  
   
--   Windows 主體代表 Windows 使用者及其角色 (或其 Windows 群組)。 Windows 主體可以模擬另一位使用者，這表示該主體可以代表使用者存取資源，同時呈現屬於該使用者身分識別。  
+- Windows 主體代表 Windows 使用者及其角色 (或其 Windows 群組)。 Windows 主體可以模擬另一位使用者，這表示該主體可以代表使用者存取資源，同時呈現屬於該使用者身分識別。  
   
--   自訂主體可以由應用程式以該特定應用程式所需的任何方式來定義。 其可擴充主體身分識別和角色的基本概念。  
+- 自訂主體可以由應用程式以該特定應用程式所需的任何方式來定義。 其可擴充主體身分識別和角色的基本概念。  
   
  如需詳細資訊，請參閱[主體和身分識別物件](../../../docs/standard/security/principal-and-identity-objects.md)。  
   
@@ -64,5 +64,5 @@ Microsoft.NET Framework 提供以角色為基礎的安全性，以幫助解除�
  [!code-csharp[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CS/source.cs#1)]
  [!code-vb[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/VB/source.vb#1)]  
   
-## <a name="authorization"></a>授權  
+## <a name="authorization"></a>Authorization  
  授權是決定是否允許主體執行所要求動作的程序。 授權會在驗證之後進行，它會使用主體的身分識別和角色相關資訊來判斷主體可以存取哪些資源。 您可以使用 .NET Framework 以角色為基礎的安全性來實作授權。

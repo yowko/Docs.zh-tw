@@ -7,17 +7,17 @@ helpviewer_keywords:
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
 ms.openlocfilehash: b83435b8448b53eca63aac0519e9eed2f7dfa9f3
-ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58348761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028687"
 ---
 # <a name="-and--null-conditional-operators-visual-basic"></a>?. 和嗎？（） null 條件運算子 (Visual Basic)
 
 測試的左運算元為 null 的值 (`Nothing`) 之前執行成員存取 (`?.`) 或索引 (`?()`) 作業; 會傳回`Nothing`如果左運算元評估為`Nothing`。 請注意，在正常情況下傳回實值類型的運算式中，null 條件運算子傳回<xref:System.Nullable%601>。
 
-這些運算子可協助您撰寫較少的程式碼來處理 null 檢查，尤其是遞減至資料結構。 例如: 
+這些運算子可協助您撰寫較少的程式碼來處理 null 檢查，尤其是遞減至資料結構。 例如：
 
 ```vb
 ' Nothing if customers is Nothing  

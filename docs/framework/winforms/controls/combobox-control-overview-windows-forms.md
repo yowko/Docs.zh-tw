@@ -10,11 +10,11 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], about combo boxes
 ms.assetid: a58b393f-a614-45d1-8961-857a024b5acd
 ms.openlocfilehash: 80056771744c9b97828a024adf32638e545a839e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956165"
 ---
 # <a name="combobox-control-overview-windows-forms"></a>ComboBox 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.ComboBox>控制項用來顯示在下拉式清單方塊中的資料。 根據預設，<xref:System.Windows.Forms.ComboBox>控制項會出現在兩個部分： 上半部是文字方塊，可讓使用者輸入的清單項目。 第二個部分是清單方塊，其中會顯示，使用者可以從中選取一個項目清單。 如需其他樣式下拉式方塊的詳細資訊，請參閱 <<c0> [ 何時使用 Windows Form ComboBox Instead of ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)。  

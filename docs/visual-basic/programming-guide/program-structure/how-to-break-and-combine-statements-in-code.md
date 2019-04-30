@@ -22,18 +22,18 @@ helpviewer_keywords:
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
 ms.openlocfilehash: 680084c39b90d4f664f48559fa21388ce192d999
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955619"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>HOW TO：中斷和合併陳述式中的程式碼 (Visual Basic)
 當撰寫程式碼，您有時可能會建立冗長的陳述式也許水平捲軸在程式碼編輯器。 雖然這不會影響的方式執行程式碼，它很難對您或其他人讀取的程式碼，此監視器上顯示的方式。 在此情況下，您應該考慮單一長的陳述式分成數行。  
   
 ### <a name="to-break-a-single-statement-into-multiple-lines"></a>若要在單一陳述式分成多行  
   
--   使用行接續字元是底線 (`_`)，您想要中斷的列之處。 底線的前面必須緊接一個空格，後面則必須緊接著行結束字元 (歸位字元)。  
+- 使用行接續字元是底線 (`_`)，您想要中斷的列之處。 底線的前面必須緊接一個空格，後面則必須緊接著行結束字元 (歸位字元)。  
   
     > [!NOTE]
     >  在某些情況下，如果您省略行接續字元中，Visual Basic 編譯器會隱含地繼續陳述式在下一行程式碼。 可以略過行接續字元的語法項目清單，請參閱 「 隱含行接續符號 」，在[陳述式](../../../visual-basic/programming-guide/language-features/statements.md)。  
@@ -54,7 +54,7 @@ ms.locfileid: "58837706"
   
 ### <a name="to-place-multiple-statements-on-the-same-line"></a>若要將多個陳述式放在同一行  
   
--   將陳述式以冒號分隔 (`:`)，如下列範例所示。  
+- 將陳述式以冒號分隔 (`:`)，如下列範例所示。  
   
      [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]  
   

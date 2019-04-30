@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
 ms.openlocfilehash: 5950779e1f0d1e76b933b83135a8bf516161aced
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022333"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>HOW TO：使用 ActiveX 控制項 (Visual Basic)
 ActiveX 控制項是 COM 元件或您可以將其插入 Web 網頁或其他應用程式重複使用其他人已撰寫的已封裝的功能的物件。 您可以使用 Visual Basic 6.0 和更早版本所開發的 ActiveX 控制項，若要將功能加入至**工具箱**的 Visual Studio。  

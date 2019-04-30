@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ink [WPF], advanced handling
 ms.assetid: abc8481a-f983-416f-b051-9168ac8b2ba3
 ms.openlocfilehash: 840ab08faebe760a38ef344fd1c41818a838250b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008937"
 ---
 # <a name="advanced-ink-handling"></a>筆墨進階處理
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]隨附<xref:System.Windows.Controls.InkCanvas>，而且您可以將它放在您的應用程式立即開始收集和顯示筆墨的項目。 不過，如果<xref:System.Windows.Controls.InkCanvas>控制項不提供細微的層級的控制，您可以藉由自訂筆跡收集和使用筆跡轉譯類別維護更高的層級的控制<xref:System.Windows.Input.StylusPlugIns>。  

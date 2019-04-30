@@ -5,11 +5,11 @@ ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: KrzysztofCwalina
 ms.openlocfilehash: bd5f67c3bd766625e7c22b3ca9986cfbca8854bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026415"
 ---
 # <a name="extension-methods"></a>擴充方法
 擴充方法是允許使用執行個體方法呼叫語法來呼叫靜態方法的語言功能。 這些方法必須接受至少一個參數，表示要對方法的執行個體。  
@@ -22,9 +22,9 @@ ms.locfileid: "54621756"
   
  **✓ CONSIDER** 任何下列案例中使用擴充方法：  
   
--   若要提供協助程式功能如果說功能相關的介面，每個實作都可以撰寫方面的核心介面。 這是因為具象實作否則無法指派給介面。 例如，`LINQ to Objects`運算子時，會實作為擴充方法上，所有<xref:System.Collections.Generic.IEnumerable%601>型別。 因此，任何`IEnumerable<>`實作是自動啟用 LINQ。  
+- 若要提供協助程式功能如果說功能相關的介面，每個實作都可以撰寫方面的核心介面。 這是因為具象實作否則無法指派給介面。 例如，`LINQ to Objects`運算子時，會實作為擴充方法上，所有<xref:System.Collections.Generic.IEnumerable%601>型別。 因此，任何`IEnumerable<>`實作是自動啟用 LINQ。  
   
--   當執行個體方法會產生某種類型的相依性，但這類相依性會中斷相依性管理規則。 比方說，從相依性<xref:System.String>要<xref:System.Uri?displayProperty=nameWithType>不可能需要這樣做，，因此`String.ToUri()`傳回的執行個體方法`System.Uri`會從相依性管理的觀點而言錯誤的設計。 靜態擴充方法`Uri.ToUri(this string str)`傳回`System.Uri`會是更好的設計。  
+- 當執行個體方法會產生某種類型的相依性，但這類相依性會中斷相依性管理規則。 比方說，從相依性<xref:System.String>要<xref:System.Uri?displayProperty=nameWithType>不可能需要這樣做，，因此`String.ToUri()`傳回的執行個體方法`System.Uri`會從相依性管理的觀點而言錯誤的設計。 靜態擴充方法`Uri.ToUri(this string str)`傳回`System.Uri`會是更好的設計。  
   
  **X AVOID** 上定義的擴充方法 <xref:System.Object?displayProperty=nameWithType>。  
   

@@ -3,11 +3,11 @@ title: 虛擬目錄安裝指示
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
 ms.openlocfilehash: fdff88026a49989870ee5c47f9a38a65ecad3c80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007548"
 ---
 # <a name="virtual-directory-setup-instructions"></a>虛擬目錄安裝指示
 Windows Communication Foundation (WCF) 範例的目的是共用一個通用的虛擬目錄，名為 servicemodelsamples 的會對應到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 資料夾。  
@@ -59,9 +59,9 @@ Windows Communication Foundation (WCF) 範例的目的是共用一個通用的�
   
 7. 預設會選取下列核取方塊：  
   
-    -   **Read**  
+    - **Read**  
   
-    -   **執行指令碼 （例如 ASP)**  
+    - **執行指令碼 （例如 ASP)**  
   
 8. 按一下 **下一步**，然後按一下**完成**以完成精靈。  
   
@@ -84,11 +84,11 @@ Windows Communication Foundation (WCF) 範例的目的是共用一個通用的�
   
 2. 預設會選取下列核取方塊：  
   
-    -   **Read**  
+    - **Read**  
   
-    -   **記錄查閱**  
+    - **記錄查閱**  
   
-    -   **此資源編製索引**  
+    - **此資源編製索引**  
   
 3. 選取 **瀏覽目錄**核取方塊。 這可讓您使用 Internet Explorer 存取目錄的目錄；如此將有助於偵錯服務。  
   
@@ -130,21 +130,21 @@ Windows Communication Foundation (WCF) 範例的目的是共用一個通用的�
   
      如果未列出：  
   
-    1.  按一下 [開始]，然後按一下 [控制台]。  
+    1. 按一下 [開始]，然後按一下 [控制台]。  
   
-    2.  如果您看不見**使用者帳戶**圖示，按一下**切換至 類別檢視**。  
+    2. 如果您看不見**使用者帳戶**圖示，按一下**切換至 類別檢視**。  
   
-    3.  按一下 **使用者帳戶**圖示。  
+    3. 按一下 **使用者帳戶**圖示。  
   
-    4.  在 或選取 控制台 圖示，「 按一下**使用者帳戶**。  
+    4. 在 或選取 控制台 圖示，「 按一下**使用者帳戶**。  
   
-    5.  在 **使用者帳戶** 對話方塊中，按一下**進階** 索引標籤。  
+    5. 在 **使用者帳戶** 對話方塊中，按一下**進階** 索引標籤。  
   
-    6.  按一下 [ **進階**]。  
+    6. 按一下 [ **進階**]。  
   
-    7.  在 [**本機使用者和群組**] 對話方塊中，按一下以展開**使用者**資料夾。  
+    7. 在 [**本機使用者和群組**] 對話方塊中，按一下以展開**使用者**資料夾。  
   
-    8.  在右窗格中，按兩下**Internet Guest 帳戶**。  
+    8. 在右窗格中，按兩下**Internet Guest 帳戶**。  
   
     9. 在 [**屬性**] 對話方塊中，複製 Internet guest 帳戶為使用的名稱。 根據預設，該名稱開頭為 "USR_"，後面會加上電腦的名稱。  
   
@@ -166,17 +166,17 @@ Windows Communication Foundation (WCF) 範例的目的是共用一個通用的�
   
      如果未列示 NETWORK SERVICE：  
   
-    1.  按一下 [加入] 。  
+    1. 按一下 [加入] 。  
   
-    2.  在 [**選取使用者或群組**] 對話方塊中，輸入電腦名稱後面接著反斜線。  
+    2. 在 [**選取使用者或群組**] 對話方塊中，輸入電腦名稱後面接著反斜線。  
   
-    3.  型別**服務**反斜線 （不含空格） 後面。  
+    3. 型別**服務**反斜線 （不含空格） 後面。  
   
-    4.  按一下 **檢查名稱**。  
+    4. 按一下 **檢查名稱**。  
   
-    5.  如果找到多個名稱，選取**NETWORK SERVICE**然後按一下**確定**。  
+    5. 如果找到多個名稱，選取**NETWORK SERVICE**然後按一下**確定**。  
   
-    6.  按一下 [ **[確定]** 以關閉**選取使用者或群組**] 對話方塊。  
+    6. 按一下 [ **[確定]** 以關閉**選取使用者或群組**] 對話方塊。  
   
 6. 如果您使用 Windows XP SP2 搭配 IIS 5.1，請檢查，會將 Internet Guest 帳戶和 ASPNET 都列在**群組或使用者名稱** 方塊中。  
   
@@ -184,11 +184,11 @@ Windows Communication Foundation (WCF) 範例的目的是共用一個通用的�
   
      若要檢查 ASPNET 是否屬於**使用者**安全性群組：  
   
-    1.  在 [**開始**] 功能表中，按一下**控制台**。  
+    1. 在 [**開始**] 功能表中，按一下**控制台**。  
   
-    2.  按一下 **使用者帳戶**圖示。  
+    2. 按一下 **使用者帳戶**圖示。  
   
-    3.  在 **群組**資料行中，確認的值**ASPNET**是 「 使用者 」。  
+    3. 在 **群組**資料行中，確認的值**ASPNET**是 「 使用者 」。  
   
 ## <a name="see-also"></a>另請參閱
 

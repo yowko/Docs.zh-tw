@@ -8,11 +8,11 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949600"
 ---
 # <a name="sending-and-receiving-faults"></a>傳送和接收錯誤
 SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案例中，則是以互通的方式從用戶端傳送到服務。 一般來說，服務會定義自訂錯誤內容，並指定透過哪項作業來傳回這些內容 (如需詳細資訊，請參閱 <<c0> [ 定義和指定的錯誤](../../../docs/framework/wcf/defining-and-specifying-faults.md)。)本主題將說明在發生錯誤情況時，服務或雙工用戶端如何傳送這些錯誤，以及用戶端或服務應用程式如何處理這些錯誤。 如需 Windows Communication Foundation (WCF) 應用程式中的錯誤處理的概觀，請參閱 <<c0> [ 指定及處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
@@ -47,9 +47,9 @@ SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案
 ## <a name="handling-faults"></a>處理錯誤  
  WCF 用戶端，在 SOAP 錯誤在通訊期間發生感興趣，用戶端應用程式的引發為 managed 例外狀況。 雖然有許多的任何程式執行期間可能發生的例外狀況，使用 WCF 用戶端程式設計模型的應用程式能夠處理下列兩種因通訊而產生的例外狀況。  
   
--   <xref:System.TimeoutException>  
+- <xref:System.TimeoutException>  
   
--   <xref:System.ServiceModel.CommunicationException>  
+- <xref:System.ServiceModel.CommunicationException>  
   
  當作業超出指定的逾時期間，就會擲回 <xref:System.TimeoutException> 物件。  
   
@@ -81,13 +81,13 @@ SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案
   
  一般來說，用戶端物件通道可透過下列其中一種方式來關閉：  
   
--   當 WCF 用戶端物件就會回收。  
+- 當 WCF 用戶端物件就會回收。  
   
--   當用戶端應用程式呼叫 <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> 時。  
+- 當用戶端應用程式呼叫 <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> 時。  
   
--   當用戶端應用程式呼叫 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 時。  
+- 當用戶端應用程式呼叫 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 時。  
   
--   當用戶端應用程式呼叫某個正在終止工作階段作業的作業時。  
+- 當用戶端應用程式呼叫某個正在終止工作階段作業的作業時。  
   
  不管什麼情況，關閉通道都會讓通道開始關閉任何基礎通道，進而傳送訊息以支援應用程式層級的複雜功能。 例如，當合約需要工作階段嘗試透過繫結來建立工作階段時 (方法是藉由與服務通道交換訊息，直到建立工作階段為止)。 一旦通道關閉，基礎工作階段通道會通知服務，工作階段已經終止。 在此情況下，如果通道已經中止、關閉，或是因為其他原因而無法使用 (例如，當網路纜線已拔除時)，用戶端通道將無法通知服務通道，告知工作階段已終止且可能擲回例外狀況。  
   

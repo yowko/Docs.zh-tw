@@ -13,11 +13,11 @@ helpviewer_keywords:
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
 ms.openlocfilehash: 4fca9231872a268470c9bcfa73e7a0c0a26d300c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981938"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>最佳化效能：2D 圖形和影像處理
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供各種 2D 圖形和影像處理功能，可以針對您的應用程式需求最佳化。 本主題提供下列領域的效能最佳化相關資訊。  
@@ -34,13 +34,13 @@ ms.locfileid: "59074985"
   
  有四種類型的<xref:System.Windows.Media.Drawing>物件：  
   
--   <xref:System.Windows.Media.GeometryDrawing> 繪製圖形。  
+- <xref:System.Windows.Media.GeometryDrawing> 繪製圖形。  
   
--   <xref:System.Windows.Media.ImageDrawing> 繪製影像。  
+- <xref:System.Windows.Media.ImageDrawing> 繪製影像。  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> 繪製文字。  
+- <xref:System.Windows.Media.GlyphRunDrawing> 繪製文字。  
   
--   <xref:System.Windows.Media.DrawingGroup> 繪製其他繪圖。 您可以使用繪圖群組，來將其他繪圖結合為單一複合繪圖。  
+- <xref:System.Windows.Media.DrawingGroup> 繪製其他繪圖。 您可以使用繪圖群組，來將其他繪圖結合為單一複合繪圖。  
   
  <xref:System.Windows.Media.GeometryDrawing>物件用來呈現幾何內容。 <xref:System.Windows.Media.Geometry>類別和衍生，這類的具象類別<xref:System.Windows.Media.CombinedGeometry>， <xref:System.Windows.Media.EllipseGeometry>，和<xref:System.Windows.Media.PathGeometry>、 提供方法來轉譯 2D 圖形，以及提供點擊測試和裁剪的支援。 舉例來說，Geometry 物件可用來定義控制項的區域，或定義要套用至影像的裁剪區域。 Geometry 物件可以是矩形和圓形之類的簡單區域，或從兩個或多個 Geometry 物件建立的複合區域。 更複雜的幾何區域可能由合併<xref:System.Windows.Media.PathSegment>-衍生的物件，例如<xref:System.Windows.Media.ArcSegment>， <xref:System.Windows.Media.BezierSegment>，和<xref:System.Windows.Media.QuadraticBezierSegment>。  
   
@@ -70,13 +70,13 @@ ms.locfileid: "59074985"
   
  使用影像時，請考慮下列建議事項以取得較佳的效能：  
   
--   如果您的應用程式需要顯示縮圖影像，請考慮建立影像的縮小版本。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 預設會載入您的影像，並將其解碼到完整大小。 如果您只需要影像的縮圖版本，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 仍會多此一舉地將影像解碼到完整大小，然後再縮至縮圖大小。 為了避免不必要的額外負荷，您可以要求 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 解碼影像至縮圖大小，或要求 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 載入縮圖大小的影像。  
+- 如果您的應用程式需要顯示縮圖影像，請考慮建立影像的縮小版本。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 預設會載入您的影像，並將其解碼到完整大小。 如果您只需要影像的縮圖版本，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 仍會多此一舉地將影像解碼到完整大小，然後再縮至縮圖大小。 為了避免不必要的額外負荷，您可以要求 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 解碼影像至縮圖大小，或要求 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 載入縮圖大小的影像。  
   
--   一律將影像解碼至所需大小，而非預設大小。 如上所述，您可以要求 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 將影像解碼至所需大小，而不是預設的完整大小。 這麼做不只能減少應用程式的工作集，還會降低執行速度。  
+- 一律將影像解碼至所需大小，而非預設大小。 如上所述，您可以要求 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 將影像解碼至所需大小，而不是預設的完整大小。 這麼做不只能減少應用程式的工作集，還會降低執行速度。  
   
--   因此，可能的話，請將影像合併單一影像，例如多張影像組成的底片。  
+- 因此，可能的話，請將影像合併單一影像，例如多張影像組成的底片。  
   
--   如需詳細資訊，請參閱 [影像處理概觀](../graphics-multimedia/imaging-overview.md)。  
+- 如需詳細資訊，請參閱 [影像處理概觀](../graphics-multimedia/imaging-overview.md)。  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
  建立任何點陣圖的比例動畫時，預設的高品質影像重新取樣演算法有時會耗用過多系統資源，導致畫面播放速率降低，從而造成動畫中斷。 藉由設定<xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A>的屬性<xref:System.Windows.Media.RenderOptions>物件到<xref:System.Windows.Media.BitmapScalingMode.LowQuality>縮放點陣圖時，您可以建立更順暢的動畫。 <xref:System.Windows.Media.BitmapScalingMode.LowQuality> 模式會告知[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]處理映像時，從品質最佳化的演算法切換為速度最佳化演算法的轉譯引擎。  

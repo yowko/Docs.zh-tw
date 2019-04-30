@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
 ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971908"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML 標記延伸概觀
 標記延伸是一種 XAML 技巧，用於取得不是基本類型和特定 XAML 類型的值。 對於屬性使用方式，標記延伸使用左大括號 `{` 的已知字元序列進入標記延伸範圍，並使用右大括號 `}` 結束。 使用 .NET Framework XAML 服務時，您可以使用 System.Xaml 組件中的一些預先定義 XAML 語言標記延伸。 您也可以從 <xref:System.Windows.Markup.MarkupExtension> 類別產生子類別 (定義於 System.Xaml 中)，以及定義您自己的標記延伸。 或者，您可以使用特定架構所定義的標記延伸 (如果已參考該架構)。  
@@ -54,9 +54,9 @@ ms.locfileid: "59224919"
 ## <a name="defining-the-support-type-for-a-custom-markup-extension"></a>定義自訂標記延伸的支援類型  
  如果使用 .NET Framework XAML 服務或是根據 .NET Framework XAML 服務所建置的架構，則有兩種命名標記延伸支援類型的選項。 類型名稱是與下列方式有關：XAML 物件寫入器在 XAML 中發現標記延伸使用方式時，嘗試存取和叫用標記延伸支援類型的方式。 使用下列其中一種命名策略：  
   
--   將類型名稱命名為與 XAML 標記使用方式語彙基元完全相符的名稱。 例如，若要支援 `{Collate ...}` 延伸使用方式，請將支援類型命名為 `Collate`。  
+- 將類型名稱命名為與 XAML 標記使用方式語彙基元完全相符的名稱。 例如，若要支援 `{Collate ...}` 延伸使用方式，請將支援類型命名為 `Collate`。  
   
--   將類型名稱命名為使用方式字串語彙基元加上後置詞 `Extension`。 例如，若要支援 `{Collate ...}` 延伸使用方式，請將支援類型命名為 `CollateExtension`。  
+- 將類型名稱命名為使用方式字串語彙基元加上後置詞 `Extension`。 例如，若要支援 `{Collate ...}` 延伸使用方式，請將支援類型命名為 `CollateExtension`。  
   
  查閱順序是先尋找後面加上 `Extension`的類別名稱，然後尋找沒有 `Extension` 後置詞的類別名稱。  
   
@@ -81,9 +81,9 @@ public Collate(CollationMode collationMode) {...}
   
  處理的運作在概念上如同標記延伸是要建立的物件，然後設定其成員值。 每個要設定之指定屬性的評估方式，類似剖析 XAML 時，如何在已建立物件上設定指定成員。 有兩個重大差異：  
   
--   如前所述，標記延伸支援類型不需要有預設建構函式，就可以在 XAML 中具現化。 除非它在文字語法中的可能引數語彙基元化並評估為位置或具名引數，以及在該時間呼叫適當的建構函式，否則會延後其物件建構。  
+- 如前所述，標記延伸支援類型不需要有預設建構函式，就可以在 XAML 中具現化。 除非它在文字語法中的可能引數語彙基元化並評估為位置或具名引數，以及在該時間呼叫適當的建構函式，否則會延後其物件建構。  
   
--   標記延伸使用方式可以是巢狀的。 會先評估最內層的標記延伸。 因此，您可以假設使用這類使用方式，並將一個建構參數宣告為需要值轉換器 (例如標記延伸) 的類型。  
+- 標記延伸使用方式可以是巢狀的。 會先評估最內層的標記延伸。 因此，您可以假設使用這類使用方式，並將一個建構參數宣告為需要值轉換器 (例如標記延伸) 的類型。  
   
  在先前範例中，顯示與這類處理的依賴性。 .NET Framework XAML 服務 XAML 物件寫入器會將列舉常數名稱處理為原生層級的列舉值。  
   
@@ -124,9 +124,9 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> 會報告 <xref:System.Type> 所傳回之物件類型的 <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> 資訊。 透過其純正簽章， <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> 會傳回 <xref:System.Object>。 但是，各種消費者可能想要更精確的傳回類型資訊。 包括：  
   
--   設計人員和 IDE，可能可以提供標記延伸使用方式的類型感知支援。  
+- 設計人員和 IDE，可能可以提供標記延伸使用方式的類型感知支援。  
   
--   目標類別上 `SetMarkupExtension` 處理常式的進階實作，可能依賴反映來判斷標記延伸的傳回類型，而不是依名稱對特定已知 <xref:System.Windows.Markup.MarkupExtension> 實作進行分支處理。  
+- 目標類別上 `SetMarkupExtension` 處理常式的進階實作，可能依賴反映來判斷標記延伸的傳回類型，而不是依名稱對特定已知 <xref:System.Windows.Markup.MarkupExtension> 實作進行分支處理。  
   
 <a name="serialization_of_markup_extension_usages"></a>   
 ## <a name="serialization-of-markup-extension-usages"></a>標記延伸使用方式的序列化  

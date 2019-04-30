@@ -16,11 +16,11 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: 484ca79483fc4a5d8f0d1cf2cd5a961c297249e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961301"
 ---
 # <a name="clrdataaddressrange-structure"></a>CLRDATA_ADDRESS_RANGE 結構
 
@@ -52,8 +52,8 @@ typedef struct
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**標頭：** 無  
-**程式庫：** 無  
+**標頭：** None  
+**LIBRARY:** None  
 **.NET framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>另請參閱

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5d60b9a9ae566b5bd686b27b2e09861a8414979
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000229"
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx 函式
 指定的組件中，根據指定的旗標產生的強式名稱簽章。  
@@ -70,9 +70,9 @@ BOOLEAN StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in]一或多個下列值：  
   
--   `SN_SIGN_ALL_FILES` (0x00000001)-重新計算所有的雜湊，連結的模組。  
+- `SN_SIGN_ALL_FILES` (0x00000001)-重新計算所有的雜湊，連結的模組。  
   
--   `SN_TEST_SIGN` (0x00000002)-測試-簽署組件。  
+- `SN_TEST_SIGN` (0x00000002)-測試-簽署組件。  
   
 ## <a name="return-value"></a>傳回值  
  `true` 如果成功地完成;否則， `false`。  

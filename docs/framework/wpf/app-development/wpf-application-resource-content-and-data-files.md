@@ -18,20 +18,20 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
 ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032249"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 應用程式資源、內容和資料檔案
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 應用程式經常依賴檔案包含非可執行檔的資料，例如[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、 影像、 視訊和音訊。 Windows Presentation Foundation (WPF) 提供設定、 用來識別，以及使用這些類型的資料檔案，稱為應用程式資料檔案的特殊支援。 這項支援是以一組特定的應用程式資料檔案類型為中心，包括：  
   
--   **資源檔**:資料檔案編譯成可執行檔或程式庫的[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]組件。  
+- **資源檔**:資料檔案編譯成可執行檔或程式庫的[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]組件。  
   
--   **內容檔**:具有明確關聯與可執行檔的獨立資料檔案[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]組件。  
+- **內容檔**:具有明確關聯與可執行檔的獨立資料檔案[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]組件。  
   
--   **來源網站檔**:與可執行檔沒有任何關聯的獨立資料檔案[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]組件。  
+- **來源網站檔**:與可執行檔沒有任何關聯的獨立資料檔案[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]組件。  
   
  這三種檔案類型之間的其中一個重要區別是資源檔和內容檔是建置階段的已知檔案；組件並明確知道這兩種檔案。 來源網站檔，不過，組件可能完全不了解它們，或透過組件的隱含知識[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]參考，後者的情況則無法保證參考的來源網站檔確實存在。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "59211917"
   
  應該使用資源檔的時機包括：  
   
--   您不需要在資源檔編譯成組件之後更新該檔案的內容。  
+- 您不需要在資源檔編譯成組件之後更新該檔案的內容。  
   
--   您想要透過減少檔案相依性數目的方式，簡化複雜的應用程式發佈程序。  
+- 您想要透過減少檔案相依性數目的方式，簡化複雜的應用程式發佈程序。  
   
--   您的應用程式資料檔案必須可以當地語系化 (請參閱[WPF 全球化和當地語系化概觀](../advanced/wpf-globalization-and-localization-overview.md))。  
+- 您的應用程式資料檔案必須可以當地語系化 (請參閱[WPF 全球化和當地語系化概觀](../advanced/wpf-globalization-and-localization-overview.md))。  
   
 > [!NOTE]
 >  在本節中所述的資源檔案為不同的資源檔中所述[XAML 資源](../advanced/xaml-resources.md)也不同於中所述的內嵌或連結資源[管理應用程式資源 (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
@@ -175,13 +175,13 @@ ms.locfileid: "59211917"
 ## <a name="site-of-origin-files"></a>來源網站檔  
  資源檔具有其散發，以及組件的明確關聯性所定義<xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>。 但是在某些情況下，您可能想在組件和應用程式資料檔案之間建立隱含或不存在的關聯性，這些情況包括：  
   
--   檔案不存在在編譯時期。  
+- 檔案不存在在編譯時期。  
   
--   在執行階段之前，您不知道組件需要哪些檔案。  
+- 在執行階段之前，您不知道組件需要哪些檔案。  
   
--   您不想在更新檔案時重新編譯其關聯的組件。  
+- 您不想在更新檔案時重新編譯其關聯的組件。  
   
--   應用程式使用大型的資料檔案，例如音訊和視訊，而您只想讓使用者自行選擇是否下載這些檔案。  
+- 應用程式使用大型的資料檔案，例如音訊和視訊，而您只想讓使用者自行選擇是否下載這些檔案。  
   
  就能夠載入這些類型的檔案，使用傳統[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]配置，例如 file:/// 和 http:// 配置。  
   

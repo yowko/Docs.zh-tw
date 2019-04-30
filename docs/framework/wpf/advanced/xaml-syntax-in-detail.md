@@ -30,11 +30,11 @@ helpviewer_keywords:
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
 ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981366"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 語法詳細資料
 本主題定義詞彙，用來說明 XAML 語法的項目。 這些詞彙常用的本文件中，WPF 文件的其餘具體來說，並使用 XAML 或啟用 System.Xaml 層級的 XAML 語言支援的基本 XAML 概念的架構。 本主題會詳述主題所介紹的基本術語[XAML 概觀 (WPF)](xaml-overview-wpf.md)。  
@@ -58,9 +58,9 @@ ms.locfileid: "59298886"
 ## <a name="object-element-syntax"></a>物件元素語法  
  *物件元素語法*是具現化 CLR 類別或結構宣告的 XML 元素的 XAML 標記語法。 此語法類似於其他標記語言，例如 HTML 項目語法。 物件元素語法的開頭是左角括號 (\<)，後面的類別或結構所產生的型別名稱。 零個以上的空間可以依照類型名稱，以及零個或多個屬性也可以宣告物件項目上有一或多個空格分隔每個屬性名稱 = 「 值 」 配對。 最後，下列其中一項必須為真：  
   
--   以正斜線 （/） 後面緊接跟著右角括弧 (>)，必須先關閉的項目和標籤。  
+- 以正斜線 （/） 後面緊接跟著右角括弧 (>)，必須先關閉的項目和標籤。  
   
--   項目的開頭標記必須完成的右角括號 (>)。 其他物件項目、 屬性項目或內部文字，可以依照項目的開頭標記。 確切內容可能包含此處通常受到物件模型的項目。 對等項目結尾標記的物件項目也必須存在，在適當的巢狀結構，並且及其他的開頭和結尾標記組之間取得平衡。  
+- 項目的開頭標記必須完成的右角括號 (>)。 其他物件項目、 屬性項目或內部文字，可以依照項目的開頭標記。 確切內容可能包含此處通常受到物件模型的項目。 對等項目結尾標記的物件項目也必須存在，在適當的巢狀結構，並且及其他的開頭和結尾標記組之間取得平衡。  
   
  XAML 由.NET 實作有一組規則，將物件項目對應至型別、 屬性或事件，和 CLR 命名空間加上組件的 XAML 命名空間的屬性。 如需 WPF 和.NET Framework，XAML 物件項目對應至[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]中所定義的類型參考的組件，和屬性會對應至這些類型的成員。 當您參考的 CLR 型別，在 XAML 中時，您會有該型別繼承成員的存取權。  
   
@@ -154,11 +154,11 @@ ms.locfileid: "59298886"
 ## <a name="collection-syntax"></a>集合語法  
  XAML 規格要求 XAML 處理器實作識別其中的實值型別是集合的屬性。 在.NET 中的一般 XAML 處理器實作根據 managed 程式碼與 CLR，用來識別集合型別，透過下列其中一項：  
   
--   型別會實作<xref:System.Collections.IList>。  
+- 型別會實作<xref:System.Collections.IList>。  
   
--   型別會實作<xref:System.Collections.IDictionary>。  
+- 型別會實作<xref:System.Collections.IDictionary>。  
   
--   型別衍生自<xref:System.Array>(如需 XAML 中陣列的詳細資訊，請參閱[X:array 標記延伸](../../xaml-services/x-array-markup-extension.md)。)  
+- 型別衍生自<xref:System.Array>(如需 XAML 中陣列的詳細資訊，請參閱[X:array 標記延伸](../../xaml-services/x-array-markup-extension.md)。)  
   
  如果屬性的型別是集合，然後推斷的集合型別不必做為物件元素標記中指定。 相反地，要成為的項目集合中的項目會指定為一或多個屬性項目的子項目。 每個這類項目評估的物件，在載入期間，以及藉由呼叫加入至集合`Add`隱含集合的方法。 例如，<xref:System.Windows.Style.Triggers%2A>屬性<xref:System.Windows.Style>採用特製化的集合型別<xref:System.Windows.TriggerCollection>，它會實作<xref:System.Collections.IList>。 您不需要具現化<xref:System.Windows.TriggerCollection>在標記中的物件項目。 相反地，您指定一或多個<xref:System.Windows.Trigger>做為項目內的項目`Style.Triggers`property 項目，其中<xref:System.Windows.Trigger>（或衍生的類別） 為的型別做為項目類型的強型別和隱含<xref:System.Windows.TriggerCollection>。  
   
@@ -264,9 +264,9 @@ ms.locfileid: "59298886"
   
  附加的屬性使用的語法上類似屬性元素語法，，，您也指定*typeName*。*propertyName*組合。 有兩個重大差異：  
   
--   您可以使用*typeName*。*propertyName*即使設定透過屬性語法的附加的屬性的組合。 附加的屬性是唯一的案例，其中限定屬性名稱是屬性語法的需求。  
+- 您可以使用*typeName*。*propertyName*即使設定透過屬性語法的附加的屬性的組合。 附加的屬性是唯一的案例，其中限定屬性名稱是屬性語法的需求。  
   
--   您也可以使用附加屬性的屬性元素語法。 不過，一般的屬性項目語法，對於*typeName*您指定的物件項目，其中包含屬性項目。 如果您指附加屬性，則*typeName*是定義類別，該附加的屬性，而不包含的物件項目。  
+- 您也可以使用附加屬性的屬性元素語法。 不過，一般的屬性項目語法，對於*typeName*您指定的物件項目，其中包含屬性項目。 如果您指附加屬性，則*typeName*是定義類別，該附加的屬性，而不包含的物件項目。  
   
 <a name="attached_events"></a>   
 ## <a name="attached-events"></a>附加事件  

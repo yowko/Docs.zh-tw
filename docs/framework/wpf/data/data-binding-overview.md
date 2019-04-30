@@ -11,11 +11,11 @@ helpviewer_keywords:
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
 ms.openlocfilehash: f849cf306f4de0cbaa7623ded4ab7045bb5112a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024205"
 ---
 # <a name="data-binding-overview"></a>資料繫結概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結在資料的展示和互動上，提供應用程式簡單而一致的方式。 項目可以和各種資料來源的資料繫結，資料的形式可以是 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。 <xref:System.Windows.Controls.ContentControl>這類的 s<xref:System.Windows.Controls.Button>並<xref:System.Windows.Controls.ItemsControl>這類的 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>有內建的功能，可讓彈性的樣式，單一資料項目的集合。 您可以在資料上方產生排序、篩選和群組檢視。  
@@ -36,15 +36,15 @@ ms.locfileid: "59315318"
   
  上面的應用程式 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 會顯示拍賣項目的清單。 應用程式會示範下列資料繫結功能：  
   
--   內容<xref:System.Windows.Controls.ListBox>繫結至的集合*AuctionItem*物件。 *AuctionItem* 物件具有 *Description*、*StartPrice*、*StartDate*、*Category* 和 *SpecialFeatures* 等屬性。  
+- 內容<xref:System.Windows.Controls.ListBox>繫結至的集合*AuctionItem*物件。 *AuctionItem* 物件具有 *Description*、*StartPrice*、*StartDate*、*Category* 和 *SpecialFeatures* 等屬性。  
   
--   資料 (*Specialfeatures*物件) 中顯示<xref:System.Windows.Controls.ListBox>已套用範本，以顯示描述，而且目前的價格為每個項目。 這是使用<xref:System.Windows.DataTemplate>。 除此之外，每個項目的外觀取決於所顯示 *AuctionItem* 的 *SpecialFeatures* 值。 如果 *AuctionItem* 的 *SpecialFeatures* 值是 *Color*，項目就具有藍色框線。 如果值是 *Highlight*，項目就具有橘色框線和星號。 [資料範本化](#data_templating)一節會提供資料範本化的相關資訊。  
+- 資料 (*Specialfeatures*物件) 中顯示<xref:System.Windows.Controls.ListBox>已套用範本，以顯示描述，而且目前的價格為每個項目。 這是使用<xref:System.Windows.DataTemplate>。 除此之外，每個項目的外觀取決於所顯示 *AuctionItem* 的 *SpecialFeatures* 值。 如果 *AuctionItem* 的 *SpecialFeatures* 值是 *Color*，項目就具有藍色框線。 如果值是 *Highlight*，項目就具有橘色框線和星號。 [資料範本化](#data_templating)一節會提供資料範本化的相關資訊。  
   
--   使用者可以分組、 篩選或排序資料使用<xref:System.Windows.Controls.CheckBox>es 提供。 在上圖中，"Group by category"和"Sort by category and date" <xref:System.Windows.Controls.CheckBox>es 已選取。 您可能已經注意到，資料的群組化是依據產品的分類，且分類名稱是以字母順序排列。 雖然在圖中很難辨識，但項目在每個分類內也有以開始日期排序。 這是藉由使用*集合檢視*而達成的。 [繫結至集合](#binding_to_collections)一節會討論集合檢視。  
+- 使用者可以分組、 篩選或排序資料使用<xref:System.Windows.Controls.CheckBox>es 提供。 在上圖中，"Group by category"和"Sort by category and date" <xref:System.Windows.Controls.CheckBox>es 已選取。 您可能已經注意到，資料的群組化是依據產品的分類，且分類名稱是以字母順序排列。 雖然在圖中很難辨識，但項目在每個分類內也有以開始日期排序。 這是藉由使用*集合檢視*而達成的。 [繫結至集合](#binding_to_collections)一節會討論集合檢視。  
   
--   當使用者選取項目，<xref:System.Windows.Controls.ContentControl>顯示選取的項目詳細資料。 這稱為*一對多案例*。 [一對多案例](#master_detail_scenario)一節會提供這類型繫結案例的相關資訊。  
+- 當使用者選取項目，<xref:System.Windows.Controls.ContentControl>顯示選取的項目詳細資料。 這稱為*一對多案例*。 [一對多案例](#master_detail_scenario)一節會提供這類型繫結案例的相關資訊。  
   
--   型別*StartDate*屬性是<xref:System.DateTime>，它會傳回包含時間的毫秒數的日期。 這個應用程式中有使用自訂轉換器，因此顯示較短的日期字串。 [資料轉換](#data_conversion)一節會提供轉換器的相關資訊。  
+- 型別*StartDate*屬性是<xref:System.DateTime>，它會傳回包含時間的毫秒數的日期。 這個應用程式中有使用自訂轉換器，因此顯示較短的日期字串。 [資料轉換](#data_conversion)一節會提供轉換器的相關資訊。  
   
  當使用者按一下 [Add Product (加入產品)] 按鈕時，會出現下列表單：  
   
@@ -64,11 +64,11 @@ ms.locfileid: "59315318"
   
  如上圖所說明，資料繫結基本上是繫結目標和繫結來源間的橋樑。 該圖示範下列基本 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 資料繫結概念：  
   
--   一般而言，每個繫結都具有這四個元件：繫結目標物件、目標屬性、繫結來源，以及繫結來源中要使用之值的路徑。 比方說，如果您想要繫結的內容<xref:System.Windows.Controls.TextBox>要*名稱*屬性*員工*物件，您的目標物件是<xref:System.Windows.Controls.TextBox>，目標屬性是<xref:System.Windows.Controls.TextBox.Text%2A>屬性，要使用的值是*名稱*，而且來源物件*員工*物件。  
+- 一般而言，每個繫結都具有這四個元件：繫結目標物件、目標屬性、繫結來源，以及繫結來源中要使用之值的路徑。 比方說，如果您想要繫結的內容<xref:System.Windows.Controls.TextBox>要*名稱*屬性*員工*物件，您的目標物件是<xref:System.Windows.Controls.TextBox>，目標屬性是<xref:System.Windows.Controls.TextBox.Text%2A>屬性，要使用的值是*名稱*，而且來源物件*員工*物件。  
   
--   目標屬性必須是相依性屬性。 大部分<xref:System.Windows.UIElement>屬性是相依性屬性，而大部分的相依性屬性，唯讀的除了預設支援資料繫結。 (僅<xref:System.Windows.DependencyObject>類型可以定義相依性屬性以及所有<xref:System.Windows.UIElement>均衍生自<xref:System.Windows.DependencyObject>。)  
+- 目標屬性必須是相依性屬性。 大部分<xref:System.Windows.UIElement>屬性是相依性屬性，而大部分的相依性屬性，唯讀的除了預設支援資料繫結。 (僅<xref:System.Windows.DependencyObject>類型可以定義相依性屬性以及所有<xref:System.Windows.UIElement>均衍生自<xref:System.Windows.DependencyObject>。)  
   
--   雖然圖中未指出，但應該注意的是，繫結來源物件不限於自訂的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 資料繫結支援 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件和 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 格式的資料。 若要提供一些範例，可能會繫結來源<xref:System.Windows.UIElement>，任何清單物件、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]相關聯的物件[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)]資料或 Web 服務或 XmlNode，其中包含您[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料。 如需詳細資訊，請參閱[繫結來源概觀](binding-sources-overview.md)。  
+- 雖然圖中未指出，但應該注意的是，繫結來源物件不限於自訂的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 資料繫結支援 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件和 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 格式的資料。 若要提供一些範例，可能會繫結來源<xref:System.Windows.UIElement>，任何清單物件、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]相關聯的物件[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)]資料或 Web 服務或 XmlNode，其中包含您[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料。 如需詳細資訊，請參閱[繫結來源概觀](binding-sources-overview.md)。  
   
  當您閱讀其他[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 主題時有一點很重要，請記住在建立繫結時，是將繫結目標「繫結到」繫結來源。 例如，如果您要顯示一些基本[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]中的資料<xref:System.Windows.Controls.ListBox>使用資料繫結，您要繫結您<xref:System.Windows.Controls.ListBox>到[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料。  
   
@@ -82,13 +82,13 @@ ms.locfileid: "59315318"
   
  ![資料繫結資料流程](./media/databinding-dataflow.png "DataBinding_DataFlow")  
   
--   <xref:System.Windows.Data.BindingMode.OneWay> 繫結會自動更新目標屬性中，[來源] 屬性的變更，但目標屬性的變更不會傳播回來源屬性。 如果要繫結的控制項是隱含唯讀的，這種類型的繫結很適當。 例如，您可以繫結到股票行情即時看板這類的來源，或者目標屬性沒有可供進行變更的控制項介面，例如資料表的資料繫結背景色彩。 如果不需要監視目標屬性的變更，使用 <xref:System.Windows.Data.BindingMode.OneWay> 繫結模式可以避免 <xref:System.Windows.Data.BindingMode.TwoWay> 繫結模式的額外負荷。  
+- <xref:System.Windows.Data.BindingMode.OneWay> 繫結會自動更新目標屬性中，[來源] 屬性的變更，但目標屬性的變更不會傳播回來源屬性。 如果要繫結的控制項是隱含唯讀的，這種類型的繫結很適當。 例如，您可以繫結到股票行情即時看板這類的來源，或者目標屬性沒有可供進行變更的控制項介面，例如資料表的資料繫結背景色彩。 如果不需要監視目標屬性的變更，使用 <xref:System.Windows.Data.BindingMode.OneWay> 繫結模式可以避免 <xref:System.Windows.Data.BindingMode.TwoWay> 繫結模式的額外負荷。  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay> 繫結會讓來源屬性或要自動更新對方的目標屬性的變更。 這種類型的繫結適合可編輯表單或其他完全互動式的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 案例。 大部分屬性預設為<xref:System.Windows.Data.BindingMode.OneWay>繫結，但是某些相依性屬性 (通常是屬性的使用者可編輯的控制項，例如<xref:System.Windows.Controls.TextBox.Text%2A>屬性<xref:System.Windows.Controls.TextBox>並<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>屬性<xref:System.Windows.Controls.CheckBox>) 預設為<xref:System.Windows.Data.BindingMode.TwoWay>繫結。 判斷相依性屬性預設是否會單向或雙向繫結的程式設計方式是，使用 <xref:System.Windows.DependencyProperty.GetMetadata%2A> 取得屬性的屬性中繼資料，然後檢查 <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A> 屬性的布林值。  
+- <xref:System.Windows.Data.BindingMode.TwoWay> 繫結會讓來源屬性或要自動更新對方的目標屬性的變更。 這種類型的繫結適合可編輯表單或其他完全互動式的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 案例。 大部分屬性預設為<xref:System.Windows.Data.BindingMode.OneWay>繫結，但是某些相依性屬性 (通常是屬性的使用者可編輯的控制項，例如<xref:System.Windows.Controls.TextBox.Text%2A>屬性<xref:System.Windows.Controls.TextBox>並<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>屬性<xref:System.Windows.Controls.CheckBox>) 預設為<xref:System.Windows.Data.BindingMode.TwoWay>繫結。 判斷相依性屬性預設是否會單向或雙向繫結的程式設計方式是，使用 <xref:System.Windows.DependencyProperty.GetMetadata%2A> 取得屬性的屬性中繼資料，然後檢查 <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A> 屬性的布林值。  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource> 是的反向<xref:System.Windows.Data.BindingMode.OneWay>繫結，它會更新來源 屬性的目標屬性變更時。 範例案例之一是當您只需要從 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 重新評估來源值時。  
+- <xref:System.Windows.Data.BindingMode.OneWayToSource> 是的反向<xref:System.Windows.Data.BindingMode.OneWay>繫結，它會更新來源 屬性的目標屬性變更時。 範例案例之一是當您只需要從 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 重新評估來源值時。  
   
--   圖中未說明為<xref:System.Windows.Data.BindingMode.OneTime>繫結，這會讓來源屬性，來初始化目標屬性，但並不會傳播後續變更。 這代表如果資料內容發生變更或資料內容中的物件有變更，則變更不會反映在目標屬性中。 如果您使用的資料適合使用目前狀態的快照集或資料是真正的靜態，則此類型的繫結很適當。 如果您想要以來源屬性的某些值初始化目標屬性，但無法預先得知資料內容，則此類型的繫結也很有用。 這是 <xref:System.Windows.Data.BindingMode.OneWay> 繫結的基本簡易形式，萬一來源值不變更，可提供較佳的效能。  
+- 圖中未說明為<xref:System.Windows.Data.BindingMode.OneTime>繫結，這會讓來源屬性，來初始化目標屬性，但並不會傳播後續變更。 這代表如果資料內容發生變更或資料內容中的物件有變更，則變更不會反映在目標屬性中。 如果您使用的資料適合使用目前狀態的快照集或資料是真正的靜態，則此類型的繫結很適當。 如果您想要以來源屬性的某些值初始化目標屬性，但無法預先得知資料內容，則此類型的繫結也很有用。 這是 <xref:System.Windows.Data.BindingMode.OneWay> 繫結的基本簡易形式，萬一來源值不變更，可提供較佳的效能。  
   
  請注意，若要偵測來源變更 (適用於<xref:System.Windows.Data.BindingMode.OneWay>並<xref:System.Windows.Data.BindingMode.TwoWay>繫結)，來源必須實作適合的屬性變更通知機制，例如<xref:System.ComponentModel.INotifyPropertyChanged>。 請參閱[實作屬性變更通知](how-to-implement-property-change-notification.md)如需範例的<xref:System.ComponentModel.INotifyPropertyChanged>實作。  
   
@@ -174,9 +174,9 @@ ms.locfileid: "59315318"
   
  A<xref:System.Windows.Data.BindingExpression>物件可以透過呼叫的傳回值取得<xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A>資料繫結物件上。 下列主題會示範一些使用方式<xref:System.Windows.Data.BindingExpression>類別：  
   
--   [從繫結的目標屬性取得繫結物件](how-to-get-the-binding-object-from-a-bound-target-property.md)  
+- [從繫結的目標屬性取得繫結物件](how-to-get-the-binding-object-from-a-bound-target-property.md)  
   
--   [控制 TextBox 文字更新來源的時機](how-to-control-when-the-textbox-text-updates-the-source.md)  
+- [控制 TextBox 文字更新來源的時機](how-to-control-when-the-textbox-text-updates-the-source.md)  
   
 <a name="data_conversion"></a>   
 ## <a name="data-conversion"></a>資料轉換  
@@ -201,13 +201,13 @@ ms.locfileid: "59315318"
   
  下列是適合實作資料轉換器的一些常見案例：  
   
--   依據文化特性的不同，您的資料顯示方式會有所不同。 例如，依據特定文化特性所使用的值或標準，您可能會想要實作貨幣轉換器或日曆日期/時間轉換器。  
+- 依據文化特性的不同，您的資料顯示方式會有所不同。 例如，依據特定文化特性所使用的值或標準，您可能會想要實作貨幣轉換器或日曆日期/時間轉換器。  
   
--   要使用的資料不見得是要變更屬性的文字值，但有可能是改為變更某些其他值，例如影像的來源，或者是顯示文字的色彩或樣式。 在這個情況下可能的轉換器使用方式，是藉由將可能不適合的屬性繫結轉換，例如將文字欄位繫結到表格儲存格的 Background 屬性。  
+- 要使用的資料不見得是要變更屬性的文字值，但有可能是改為變更某些其他值，例如影像的來源，或者是顯示文字的色彩或樣式。 在這個情況下可能的轉換器使用方式，是藉由將可能不適合的屬性繫結轉換，例如將文字欄位繫結到表格儲存格的 Background 屬性。  
   
--   一個以上的控制項或者是控制項的多個屬性，會繫結到相同資料。 在這個情況下，主要繫結可能只是顯示文字，而其他繫結會處理特定顯示問題，但仍然使用相同的繫結做為來源資訊。  
+- 一個以上的控制項或者是控制項的多個屬性，會繫結到相同資料。 在這個情況下，主要繫結可能只是顯示文字，而其他繫結會處理特定顯示問題，但仍然使用相同的繫結做為來源資訊。  
   
--   到目前為止我們有尚未討論到<xref:System.Windows.Data.MultiBinding>，而且目標屬性都有繫結的集合。 若是<xref:System.Windows.Data.MultiBinding>，您使用自訂<xref:System.Windows.Data.IMultiValueConverter>來產生最終的值從繫結的值。 舉例來說，顏色可以由紅藍綠的值計算而來，而這些值可以來自相同或不同的繫結來源物件。 請參閱<xref:System.Windows.Data.MultiBinding>取得相關範例和資訊的 [類別] 頁面。  
+- 到目前為止我們有尚未討論到<xref:System.Windows.Data.MultiBinding>，而且目標屬性都有繫結的集合。 若是<xref:System.Windows.Data.MultiBinding>，您使用自訂<xref:System.Windows.Data.IMultiValueConverter>來產生最終的值從繫結的值。 舉例來說，顏色可以由紅藍綠的值計算而來，而這些值可以來自相同或不同的繫結來源物件。 請參閱<xref:System.Windows.Data.MultiBinding>取得相關範例和資訊的 [類別] 頁面。  
   
 <a name="binding_to_collections"></a>   
 ## <a name="binding-to-collections"></a>繫結至集合  
@@ -362,9 +362,9 @@ ms.locfileid: "59315318"
   
  A<xref:System.Windows.Controls.ValidationRule>物件會檢查屬性的值是否有效。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 有下列兩種內建類型<xref:System.Windows.Controls.ValidationRule>物件：  
   
--   A<xref:System.Windows.Controls.ExceptionValidationRule>會檢查是否有繫結來源屬性更新期間擲回例外狀況。 在上面的範例中，`StartPrice` 的型別為整數。 當使用者輸入的值無法轉換為整數時，就會擲回例外狀況，造成繫結標記為無效。 設定的替代語法<xref:System.Windows.Controls.ExceptionValidationRule>明確設定為<xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>屬性設`true`上您<xref:System.Windows.Data.Binding>或<xref:System.Windows.Data.MultiBinding>物件。  
+- A<xref:System.Windows.Controls.ExceptionValidationRule>會檢查是否有繫結來源屬性更新期間擲回例外狀況。 在上面的範例中，`StartPrice` 的型別為整數。 當使用者輸入的值無法轉換為整數時，就會擲回例外狀況，造成繫結標記為無效。 設定的替代語法<xref:System.Windows.Controls.ExceptionValidationRule>明確設定為<xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>屬性設`true`上您<xref:System.Windows.Data.Binding>或<xref:System.Windows.Data.MultiBinding>物件。  
   
--   A<xref:System.Windows.Controls.DataErrorValidationRule>物件會實作的物件所引發的錯誤檢查<xref:System.ComponentModel.IDataErrorInfo>介面。 如需使用這項驗證規則的範例，請參閱<xref:System.Windows.Controls.DataErrorValidationRule>。 設定的替代語法<xref:System.Windows.Controls.DataErrorValidationRule>明確設定為<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>屬性設`true`上您<xref:System.Windows.Data.Binding>或<xref:System.Windows.Data.MultiBinding>物件。  
+- A<xref:System.Windows.Controls.DataErrorValidationRule>物件會實作的物件所引發的錯誤檢查<xref:System.ComponentModel.IDataErrorInfo>介面。 如需使用這項驗證規則的範例，請參閱<xref:System.Windows.Controls.DataErrorValidationRule>。 設定的替代語法<xref:System.Windows.Controls.DataErrorValidationRule>明確設定為<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>屬性設`true`上您<xref:System.Windows.Data.Binding>或<xref:System.Windows.Data.MultiBinding>物件。  
   
  您也可以建立您自己的驗證規則，藉由衍生自<xref:System.Windows.Controls.ValidationRule>類別，並實作<xref:System.Windows.Controls.ValidationRule.Validate%2A>方法。 下列範例示範所使用的規則*Add Product Listing* "Start Date"<xref:System.Windows.Controls.TextBox>從[資料繫結是什麼？](#what_is_data_binding)區段：  
   

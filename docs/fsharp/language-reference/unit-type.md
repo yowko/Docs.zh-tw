@@ -3,11 +3,11 @@ title: 單位類型
 description: 了解如何F#'unit' 類型通常用來保存其中值所需的語言語法所需或預期任何值時的位置。
 ms.date: 05/16/2016
 ms.openlocfilehash: f1866ff12f36f4f8d3eaa1275551c42fc4ade216
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982523"
 ---
 # <a name="unit-type"></a>單位類型
 
@@ -22,7 +22,7 @@ ms.locfileid: "53611980"
 
 ## <a name="remarks"></a>備註
 
-每個F#運算式必須評估為值。 不會產生值感興趣，類型的值，這個值的運算式`unit`用。 `unit`型別類似於`void`C# 和 c + + 等語言中的型別。
+每個F#運算式必須評估為值。 不會產生值感興趣，類型的值，這個值的運算式`unit`用。 `unit`型別類似`void`這類語言中輸入C#和C++。
 
 `unit`類型具有單一值，而該值由權杖`()`。
 
@@ -36,5 +36,5 @@ ms.locfileid: "53611980"
 
 ## <a name="see-also"></a>另請參閱
 
-- [基本](primitive-types.md)
+- [Primitive](primitive-types.md)
 - [F# 語言參考](index.md)

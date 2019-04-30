@@ -9,11 +9,11 @@ helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
 ms.openlocfilehash: ee4d30b82ceada5c4f3fc4ad95dc8eeedd9355b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970829"
 ---
 # <a name="myresources-object"></a>My.Resources 物件
 提供屬性和類別來存取應用程式的資源。  
@@ -32,11 +32,11 @@ ms.locfileid: "58821734"
   
  每個資源名稱、 類別和值，而且這些資源的設定可讓您決定要存取之資源的屬性會出現在`My.Resources`物件。 在 加入資源**專案設計工具**:  
   
--   名稱決定屬性的名稱  
+- 名稱決定屬性的名稱  
   
--   資源資料是屬性的值  
+- 資源資料是屬性的值  
   
--   類別會決定屬性的型別：  
+- 類別會決定屬性的型別：  
   
 |分類|屬性資料型別|  
 |---|---|  

@@ -9,32 +9,32 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
 ms.openlocfilehash: 4d7bb6eef398746a4bd2dc4dbf3d526da1c1e0f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014215"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>擴充 Visual Basic 中的 My 命名空間
 `My` Visual Basic 中的命名空間會公開屬性和方法可讓您輕鬆地利用.NET Framework 的強大功能。 `My`命名空間簡化了一般的程式設計問題，通常在一行程式碼中減少困難的工作。 此外，`My`命名空間是完全可延伸，讓您可以自訂的行為`My`並將新的服務新增至階層中以配合特定應用程式的需求。 本主題討論如何進行自訂的現有成員`My`命名空間，以及如何新增您自己的自訂類別，以`My`命名空間。  
   
  **主題內容**  
   
--   [自訂現有的 My 命名空間成員](#customizing)  
+- [自訂現有的 My 命名空間成員](#customizing)  
   
--   [將成員加入至我的物件](#addingtoobjects)  
+- [將成員加入至我的物件](#addingtoobjects)  
   
--   [新增自訂的物件，以 My 命名空間](#addingcustom)  
+- [新增自訂的物件，以 My 命名空間](#addingcustom)  
   
--   [將成員加入至我的命名空間](#addingtonamespace)  
+- [將成員加入至我的命名空間](#addingtonamespace)  
   
--   [將事件加入至自訂的 My 物件](#addingevents)  
+- [將事件加入至自訂的 My 物件](#addingevents)  
   
--   [設計指導方針](#design)  
+- [設計指導方針](#design)  
   
--   [設計類別庫的我](#designing)  
+- [設計類別庫的我](#designing)  
   
--   [封裝和部署擴充功能](#packaging)  
+- [封裝和部署擴充功能](#packaging)  
   
 ## <a name="customizing"></a> 自訂現有的 My 命名空間成員  
  `My`命名空間，在 Visual Basic 會公開中的常用的應用程式、 您的電腦，和更多功能的相關資訊。 如需完整的清單中的物件`My`命名空間，請參閱 <<c2> [ 我參考](../../../visual-basic/language-reference/keywords/my-reference.md)。 您可能需要自訂的現有成員`My`命名空間，讓它們更符合您的應用程式的需求。 中的物件的任何屬性`My`不是唯讀的命名空間可以設定為某個自訂值。  
@@ -76,22 +76,22 @@ ms.locfileid: "58814146"
 ## <a name="design"></a> 設計指導方針  
  當您開發延伸模組`My`命名空間中，使用下列指導方針，以協助您擴充功能元件的維護成本降至最低。  
   
--   **包含延伸模組邏輯。** 中包含的邏輯`My`命名空間延伸模組應該包含需要公開所需的功能中的程式碼`My`命名空間。 因為您的延伸模組會位在使用者專案中，以原始碼，更新擴充功能的元件會產生較高的維護成本，並應該儘可能避免。  
+- **包含延伸模組邏輯。** 中包含的邏輯`My`命名空間延伸模組應該包含需要公開所需的功能中的程式碼`My`命名空間。 因為您的延伸模組會位在使用者專案中，以原始碼，更新擴充功能的元件會產生較高的維護成本，並應該儘可能避免。  
   
--   **最小化專案的假設。** 當您建立您的擴充功能的`My`命名空間，不要假設一組參考，專案層級 imports 或特定的編譯器設定 (例如`Option Strict`關閉)。 相反地，最小化相依性，並使用完整限定所有型別參考`Global`關鍵字。 此外，請確定擴充功能會編譯使用`Option Strict`在延伸模組中的錯誤降至最低。  
+- **最小化專案的假設。** 當您建立您的擴充功能的`My`命名空間，不要假設一組參考，專案層級 imports 或特定的編譯器設定 (例如`Option Strict`關閉)。 相反地，最小化相依性，並使用完整限定所有型別參考`Global`關鍵字。 此外，請確定擴充功能會編譯使用`Option Strict`在延伸模組中的錯誤降至最低。  
   
--   **找出延伸模組程式碼。** 將程式碼放在單一檔案，可讓您的擴充功能可輕鬆部署為 Visual Studio 項目範本。 如需詳細資訊，請參閱本主題稍後的 「 封裝及部署擴充功能 」。 將所有`My`命名空間延伸模組程式碼，在單一檔案或不同的資料夾中的專案，也有助於使用者找出`My`命名空間延伸模組。  
+- **找出延伸模組程式碼。** 將程式碼放在單一檔案，可讓您的擴充功能可輕鬆部署為 Visual Studio 項目範本。 如需詳細資訊，請參閱本主題稍後的 「 封裝及部署擴充功能 」。 將所有`My`命名空間延伸模組程式碼，在單一檔案或不同的資料夾中的專案，也有助於使用者找出`My`命名空間延伸模組。  
   
 ## <a name="designing"></a> 設計類別庫的我  
  在此情況下，大部分的物件模型，一些設計模式適用於`My`命名空間，有些則沒有。 設計的延伸模組時`My`命名空間，請考量以下原則：  
   
--   **無狀態的方法。** 中的方法`My`命名空間應該提供特定工作的完整解決方案。 請確定傳遞給方法的參數值提供完成特定工作所需的所有輸入。 請避免建立依賴先前的狀態，例如開啟的連線資源的方法。  
+- **無狀態的方法。** 中的方法`My`命名空間應該提供特定工作的完整解決方案。 請確定傳遞給方法的參數值提供完成特定工作所需的所有輸入。 請避免建立依賴先前的狀態，例如開啟的連線資源的方法。  
   
--   **全域執行個體。** 唯一的狀態會保留在`My`命名空間是專案的全域。 比方說，`My.Application.Info`封裝共用整個應用程式的狀態。  
+- **全域執行個體。** 唯一的狀態會保留在`My`命名空間是專案的全域。 比方說，`My.Application.Info`封裝共用整個應用程式的狀態。  
   
--   **簡單的參數型別。** 簡單起見藉由避免複雜的參數類型。 相反地，建立 不要使用輸入參數的方法，或可接受簡單的輸入的類型，例如字串、 基本類型，等等。  
+- **簡單的參數型別。** 簡單起見藉由避免複雜的參數類型。 相反地，建立 不要使用輸入參數的方法，或可接受簡單的輸入的類型，例如字串、 基本類型，等等。  
   
--   **Factory 方法。** 某些類型非常難以具現化。 提供 factory 方法當做擴充`My`命名空間可讓您更輕鬆地探索及取用屬於此分類的類型。 非常適合的 factory 方法的範例是`My.Computer.FileSystem.OpenTextFileReader`。 有.NET Framework 中可用的數個資料流類型。 藉由明確地說，指定文字檔案`OpenTextFileReader`可協助使用者了解要使用的資料流。  
+- **Factory 方法。** 某些類型非常難以具現化。 提供 factory 方法當做擴充`My`命名空間可讓您更輕鬆地探索及取用屬於此分類的類型。 非常適合的 factory 方法的範例是`My.Computer.FileSystem.OpenTextFileReader`。 有.NET Framework 中可用的數個資料流類型。 藉由明確地說，指定文字檔案`OpenTextFileReader`可協助使用者了解要使用的資料流。  
   
  這些指導方針不會排除類別庫的一般設計原則。 相反地，它們是最適合用於開發人員使用 Visual Basic 的建議和`My`命名空間。 建立類別庫的一般設計原則，請參閱 < [Framework 設計方針](../../../standard/design-guidelines/index.md)。  
   

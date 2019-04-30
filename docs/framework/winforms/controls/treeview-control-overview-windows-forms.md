@@ -7,20 +7,19 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], about TreeView control
 ms.assetid: 0ece823a-9508-478a-bbdb-7d7c3bae51d5
 ms.openlocfilehash: 046713745e7de18cefe5b4883af73034af2cfb31
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009223"
 ---
 # <a name="treeview-control-overview-windows-forms"></a>TreeView 控制項概觀 (Windows Form)
 
-使用 Windows Form <xref:System.Windows.Forms.TreeView> 控制項，您可以向使用者顯示節點階層，就像 Windows 作業系統中 Windows 檔案總管功能左窗格顯示檔案和資料夾的方式。 樹狀檢視中的每個節點都可能包含其他節點，稱為*子節點*。 您可以顯示父節點或包含子節點的節點為展開或摺疊。 您也可以藉由設定樹狀檢視的 <xref:System.Windows.Forms.TreeView.CheckBoxes%2A> 屬性為 `true`來顯示節點旁邊核取方塊的樹狀檢視。 藉由設定節點的 <xref:System.Windows.Forms.TreeNode.Checked%2A> 屬性為 `true` 或 `false`，您可以程式設計的方式選取或清除節點。
+使用 Windows Form <xref:System.Windows.Forms.TreeView> 控制項，您可以向使用者顯示節點階層，就像 Windows 作業系統中 Windows 檔案總管功能左窗格顯示檔案和資料夾的方式。 樹狀檢視中的每個節點都可能包含其他節點，稱為*子節點*。 您可以顯示父節點或包含子節點的節點為展開或摺疊。 您也可以藉由設定樹狀檢閱的 <xref:System.Windows.Forms.TreeView.CheckBoxes%2A> 屬性為 `true`來顯示節點旁邊核取方塊的樹狀檢閱。 藉由設定節點的 <xref:System.Windows.Forms.TreeNode.Checked%2A> 屬性為 `true` 或 `false`，您可以程式設計的方式選取或清除節點。
 
-## <a name="key-properties"></a>主要屬性
+## <a name="key-properties"></a>索引鍵內容
 
-<xref:System.Windows.Forms.TreeView> 控制項的索引鍵屬性為 <xref:System.Windows.Forms.TreeView.Nodes%2A> 和 <xref:System.Windows.Forms.TreeView.SelectedNode%2A>。 <xref:System.Windows.Forms.TreeView.Nodes%2A> 屬性包含樹狀檢視中最上層節點的清單。 <xref:System.Windows.Forms.TreeView.SelectedNode%2A> 屬性會設定目前選取的節點。 您可以在節點旁邊顯示圖示。 此控制項會使用來自樹狀檢視的 <xref:System.Windows.Forms.TreeView.ImageList%2A> 屬性中命名的 <xref:System.Windows.Forms.ImageList> 影像。 
-  <xref:System.Windows.Forms.TreeView.ImageIndex%2A> 屬性會設定樹狀檢閱節點中的預設影像。 如需有關顯示影像的詳細資訊，請參閱[How to:設定 Windows Form TreeView 控制項的圖示](how-to-set-icons-for-the-windows-forms-treeview-control.md)。 如果您使用 Visual Studio 2005，您可以存取您可以搭配使用的標準映像的大型程式庫<xref:System.Windows.Forms.TreeView>控制項。
+<xref:System.Windows.Forms.TreeView> 控制項的索引鍵屬性為 <xref:System.Windows.Forms.TreeView.Nodes%2A> 和 <xref:System.Windows.Forms.TreeView.SelectedNode%2A>。 <xref:System.Windows.Forms.TreeView.Nodes%2A> 屬性包含樹狀檢閱中最上層節點的清單。 <xref:System.Windows.Forms.TreeView.SelectedNode%2A> 屬性會設定目前選取的節點。 您可以在節點旁邊顯示圖示。 此控制項會使用來自樹狀檢視的 <xref:System.Windows.Forms.TreeView.ImageList%2A> 屬性中命名的 <xref:System.Windows.Forms.ImageList> 影像。 <xref:System.Windows.Forms.TreeView.ImageIndex%2A> 屬性會設定樹狀檢閱節點中的預設影像。 如需有關顯示影像的詳細資訊，請參閱[How to:設定 Windows Form TreeView 控制項的圖示](how-to-set-icons-for-the-windows-forms-treeview-control.md)。 如果您使用 Visual Studio 2005，您可以存取您可以搭配使用的標準映像的大型程式庫<xref:System.Windows.Forms.TreeView>控制項。
 
 ## <a name="see-also"></a>另請參閱
 

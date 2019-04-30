@@ -18,11 +18,11 @@ helpviewer_keywords:
 - truncation [Visual Basic], integer division
 ms.assetid: 4b0ee347-950c-45c9-8e23-54bc85df208e
 ms.openlocfilehash: 1753199e2ecf3f156b90d8c0a5cacd672397260d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013552"
 ---
 # <a name="-operator-visual-basic"></a>\ 運算子 (Visual Basic)
 兩數相除並傳回整數結果。  

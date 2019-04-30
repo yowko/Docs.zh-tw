@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d366a0093ca82d2e5b3c40729777a1b6c0766bda
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049540"
 ---
 # <a name="icorprofilerinfogetobjectsize-method"></a>ICorProfilerInfo::GetObjectSize 方法
 取得指定之物件的大小。  
@@ -51,9 +51,9 @@ HRESULT GetObjectSize(
   
  所傳回的大小`GetObjectSize`方法不包含在記憶體回收堆積上物件之後，可能會出現任何對齊填補。 如果您使用`GetObjectSize`方法前進 object 物件在記憶體回收堆積，新增以手動方式，視需要填補的對齊方式。  
   
--   在 32 位元 Windows COR_PRF_GC_GEN_0、 COR_PRF_GC_GEN_1 和 COR_PRF_GC_GEN_2 使用 4 位元組對齊，而 COR_PRF_GC_LARGE_OBJECT_HEAP 會使用 8 位元組對齊。  
+- 在 32 位元 Windows COR_PRF_GC_GEN_0、 COR_PRF_GC_GEN_1 和 COR_PRF_GC_GEN_2 使用 4 位元組對齊，而 COR_PRF_GC_LARGE_OBJECT_HEAP 會使用 8 位元組對齊。  
   
--   在 64 位元 Windows 上的對齊方式一定是 8 個位元組。  
+- 在 64 位元 Windows 上的對齊方式一定是 8 個位元組。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

@@ -3,18 +3,18 @@ title: 尚未設定路徑
 ms.date: 07/20/2015
 ms.assetid: 2e61146f-1b42-4798-b823-bd1041d9d248
 ms.openlocfilehash: 83d6cd310cc7b9b8eb1a89e16f0a08677e356f93
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58028403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942705"
 ---
 # <a name="the-path-has-not-been-set"></a>尚未設定路徑
 嘗試檔案作業 (例如移動或複製檔案)，但未提供必要的路徑。 這可能是不正確剖析路徑的結果。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   確認已提供檔案路徑，而且正確無誤。  
+- 確認已提供檔案路徑，而且正確無誤。  
   
 ## <a name="see-also"></a>另請參閱
 

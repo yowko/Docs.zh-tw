@@ -3,11 +3,11 @@ title: ServiceToEndpointAssociation
 ms.date: 03/30/2017
 ms.assetid: 03c3cd15-e1b2-4dc2-bdc2-59fdccdae110
 ms.openlocfilehash: 3d23a3ee10c47e04ea7bdba202ea5063c0d84fac
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048227"
 ---
 # <a name="servicetoendpointassociation"></a>ServiceToEndpointAssociation
 將服務對應至端點。  
@@ -29,18 +29,18 @@ class ServiceToEndpointAssociation
  ServiceToEndpointAssociation 類別有下列屬性：  
   
 ### <a name="ref"></a>ref  
- 資料型別：服務  
+ 資料類型：服務  
   
  存取類型：唯讀  
-限定詞：索引鍵  
+限定詞：Key  
   
  與端點關聯的服務。  
   
 ### <a name="ref"></a>ref  
- 資料型別：端點  
+ 資料類型：端點  
   
  存取類型：唯讀  
-限定詞：索引鍵  
+限定詞：Key  
   
  與服務關聯的端點。  
   

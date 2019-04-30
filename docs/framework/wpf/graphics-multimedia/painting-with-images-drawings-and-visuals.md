@@ -13,11 +13,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
 ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002273"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>使用影像、繪圖和視覺效果繪製
 本主題描述如何使用<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，並<xref:System.Windows.Media.VisualBrush>物件來使用影像繪製區域<xref:System.Windows.Media.Drawing>，或<xref:System.Windows.Media.Visual>。  
@@ -57,15 +57,15 @@ DrawingBrush 所繪製的物件
   
  A<xref:System.Windows.Media.DrawingBrush>繪製區域<xref:System.Windows.Media.Drawing>物件。 A<xref:System.Windows.Media.Drawing>物件可描繪可見內容，例如圖形、 點陣圖、 視訊或文字行。 不同類型的繪圖可描繪不同類型的內容。 以下列出不同類型的繪圖物件。  
   
--   <xref:System.Windows.Media.GeometryDrawing> – 繪製圖形。  
+- <xref:System.Windows.Media.GeometryDrawing> – 繪製圖形。  
   
--   <xref:System.Windows.Media.ImageDrawing> – 繪製影像。  
+- <xref:System.Windows.Media.ImageDrawing> – 繪製影像。  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> – 繪製的文字。  
+- <xref:System.Windows.Media.GlyphRunDrawing> – 繪製的文字。  
   
--   <xref:System.Windows.Media.VideoDrawing> – 播放音訊或視訊檔。  
+- <xref:System.Windows.Media.VideoDrawing> – 播放音訊或視訊檔。  
   
--   <xref:System.Windows.Media.DrawingGroup> – 繪製其他繪圖。 您可以使用繪圖群組，來將其他繪圖結合為單一複合繪圖。  
+- <xref:System.Windows.Media.DrawingGroup> – 繪製其他繪圖。 您可以使用繪圖群組，來將其他繪圖結合為單一複合繪圖。  
   
  如需詳細資訊<xref:System.Windows.Media.Drawing>物件，請參閱[繪圖物件概觀](drawing-objects-overview.md)。  
   
@@ -89,9 +89,9 @@ DrawingBrush 所繪製的物件
   
  有兩種方式來指定<xref:System.Windows.Media.VisualBrush.Visual%2A>內容的<xref:System.Windows.Media.VisualBrush>。  
   
--   建立新<xref:System.Windows.Media.Visual>並使用它來設定<xref:System.Windows.Media.VisualBrush.Visual%2A>屬性<xref:System.Windows.Media.VisualBrush>。 如需範例，請參閱[範例：使用視覺效果繪製物件](#examplevisualbrush1)一節。  
+- 建立新<xref:System.Windows.Media.Visual>並使用它來設定<xref:System.Windows.Media.VisualBrush.Visual%2A>屬性<xref:System.Windows.Media.VisualBrush>。 如需範例，請參閱[範例：使用視覺效果繪製物件](#examplevisualbrush1)一節。  
   
--   使用現有<xref:System.Windows.Media.Visual>，這會建立重複的映像的目標<xref:System.Windows.Media.Visual>。 您可以接著使用<xref:System.Windows.Media.VisualBrush>建立有趣的效果，例如反映與放大。 如需範例，請參閱[範例：建立反映](#examplevisualbrush2)一節。  
+- 使用現有<xref:System.Windows.Media.Visual>，這會建立重複的映像的目標<xref:System.Windows.Media.Visual>。 您可以接著使用<xref:System.Windows.Media.VisualBrush>建立有趣的效果，例如反映與放大。 如需範例，請參閱[範例：建立反映](#examplevisualbrush2)一節。  
   
  當您定義新<xref:System.Windows.Media.VisualBrush.Visual%2A>for<xref:System.Windows.Media.VisualBrush>且<xref:System.Windows.Media.Visual>是<xref:System.Windows.UIElement>上執行 （例如面板或控制項），配置系統<xref:System.Windows.UIElement>及其子項目時<xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A>屬性設定為`true`。 不過，根<xref:System.Windows.UIElement>會獨立於系統的其餘部分： 樣式和外部的版面配置不能經常圍繞此界限。 因此，您應該明確指定根的大小<xref:System.Windows.UIElement>，因為它唯一的父系是<xref:System.Windows.Media.VisualBrush>，因此它無法自動調整本身的大小要繪製的區域。 如需 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中配置的詳細資訊，請參閱[配置](../advanced/layout.md)。  
   

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
 ms.openlocfilehash: e05d358452a247b0d071f78d19c0bf721502899a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018030"
 ---
 # <a name="serialization-in-net"></a>.NET 的序列化
 序列化是將物件的狀態轉換成可保存或傳輸之形式的程序。 序列化的互補方法是還原序列化，它將資料流轉換成為物件。 將這些程序搭配在一起，可讓資料輕鬆地儲存與傳輸。  
   
 .NET 具有兩種序列化技術：  
   
--   二進位序列化保留型別精確度，這對於在應用程式不同的引動過程之間，保留物件狀態相當實用。 例如，藉由將物件序列化至剪貼簿，就可在不同應用程式之間共用該物件。 您可以將物件序列化為資料流、序列化至磁碟、記憶體、在網路上序列化等等。 在遠端使用序列化從一台電腦或應用程式定義域，以「值」傳遞物件至他處。  
+- 二進位序列化保留型別精確度，這對於在應用程式不同的引動過程之間，保留物件狀態相當實用。 例如，藉由將物件序列化至剪貼簿，就可在不同應用程式之間共用該物件。 您可以將物件序列化為資料流、序列化至磁碟、記憶體、在網路上序列化等等。 在遠端使用序列化從一台電腦或應用程式定義域，以「值」傳遞物件至他處。  
   
--   XML 序列化程序僅對公用屬性與欄位進行序列化，並不保留型別精確度。 當您不想限制使用資料的應用程式，而能提供或使用資料時，這種做法就很有用。 因為 XML 為開放標準，因此是在 Web 上共用資料的很好選擇。 同樣是開放標準的 SOAP，也是一項很好的選擇。  
+- XML 序列化程序僅對公用屬性與欄位進行序列化，並不保留型別精確度。 當您不想限制使用資料的應用程式，而能提供或使用資料時，這種做法就很有用。 因為 XML 為開放標準，因此是在 Web 上共用資料的很好選擇。 同樣是開放標準的 SOAP，也是一項很好的選擇。  
   
 ## <a name="in-this-section"></a>本節內容  
 [序列化「如何」主題](../../../docs/standard/serialization/serialization-how-to-topics.md)  

@@ -3,11 +3,11 @@ title: 路由簡介
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
 ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991090"
 ---
 # <a name="routing-introduction"></a>路由簡介
 路由服務提供了泛型的可外掛式 SOAP 媒介，此媒介能夠根據訊息內容路由傳送訊息。 透過路由服務，您就可以建立複雜路由邏輯，以便實作服務彙總、服務版本控制、優先權路由和多點傳送路由等案例。 路由服務還提供錯誤處理，可讓您設定備份端點清單，當傳送至主要目的端點期間發生錯誤時，訊息就會傳送至此清單中的端點。  
@@ -156,9 +156,9 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
  雖然許多路由服務組態都使用僅將訊息路由傳送至一個特定端點的獨佔篩選邏輯，但您仍可能需要將特定訊息路由傳送至多個目的端點。 若要將訊息多點傳送至多個目的地，則下列條件必須為 true：  
   
--   通道組織結構不得為要求-回覆 (但可以是單向或雙工)，因為回應要求的用戶端應用程式只能接收一個回覆。  
+- 通道組織結構不得為要求-回覆 (但可以是單向或雙工)，因為回應要求的用戶端應用程式只能接收一個回覆。  
   
--   評估訊息時，必須有多個篩選傳回 `true`。  
+- 評估訊息時，必須有多個篩選傳回 `true`。  
   
  如果這些條件都符合，則訊息會路由傳送至所有評估為 `true` 之篩選的所有端點。 下列範例會定義路由組態，如果訊息中的端點位址路由傳送至這兩個端點會導致 `http://localhost:8000/routingservice/router/rounding` 。  
   
@@ -195,33 +195,33 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
   
  **要求處理**  
   
--   取得**MessageVersion**的輸出繫結/通道。  
+- 取得**MessageVersion**的輸出繫結/通道。  
   
--   取得原始訊息的本文讀取裝置。  
+- 取得原始訊息的本文讀取裝置。  
   
--   建立新的訊息使用相同的動作、 本文讀取裝置和新**MessageVersion**。  
+- 建立新的訊息使用相同的動作、 本文讀取裝置和新**MessageVersion**。  
   
--   如果<xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>！ = **Addressing.None**，複製 To、 From、 FaultTo 和 RelatesTo 標頭，以新的訊息。  
+- 如果<xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>！ = **Addressing.None**，複製 To、 From、 FaultTo 和 RelatesTo 標頭，以新的訊息。  
   
--   將所有訊息屬性複製到新訊息。  
+- 將所有訊息屬性複製到新訊息。  
   
--   儲存處理回應時要使用的原始要求訊息。  
+- 儲存處理回應時要使用的原始要求訊息。  
   
--   傳回新的要求訊息。  
+- 傳回新的要求訊息。  
   
  **回應處理**  
   
--   取得**MessageVersion**的原始要求訊息。  
+- 取得**MessageVersion**的原始要求訊息。  
   
--   取得已接收回應訊息的本文讀取裝置。  
+- 取得已接收回應訊息的本文讀取裝置。  
   
--   建立新的回應訊息與相同的動作、 本文讀取裝置，而**MessageVersion**的原始要求訊息。  
+- 建立新的回應訊息與相同的動作、 本文讀取裝置，而**MessageVersion**的原始要求訊息。  
   
--   如果<xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>！ = **Addressing.None**，複製 To、 From、 FaultTo 和 RelatesTo 標頭，以新的訊息。  
+- 如果<xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>！ = **Addressing.None**，複製 To、 From、 FaultTo 和 RelatesTo 標頭，以新的訊息。  
   
--   將訊息屬性複製到新訊息。  
+- 將訊息屬性複製到新訊息。  
   
--   傳回新的回應訊息。  
+- 傳回新的回應訊息。  
   
  根據預設， **SoapProcessingBehavior**會自動新增至用戶端端點<xref:System.ServiceModel.Routing.RoutingBehavior>在服務啟動時; 不過，您可以控制是否 SOAP 處理加入至所有用戶端端點所使用<xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A>屬性。 如果需要對 SOAP 處理進行更細微的控制，您也可以將此行為直接加入至特定端點，並且在端點層級啟用或停用此行為。  
   

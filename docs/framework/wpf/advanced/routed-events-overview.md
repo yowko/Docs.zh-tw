@@ -16,11 +16,11 @@ helpviewer_keywords:
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
 ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982362"
 ---
 # <a name="routed-events-overview"></a>路由事件概觀
 本主題說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中路由事件的概念。 本主題會定義路由事件的術語、說明如何透過元素的樹狀結構路由傳送路由事件、摘要說明如何處理路由事件，以及介紹如何建立您自己的自訂路由事件。
@@ -86,11 +86,11 @@ ms.locfileid: "59330439"
 ## <a name="routing-strategies"></a>路由傳送策略  
  路由事件會使用下列其中一個路由傳送策略：  
   
--   **事件反昇：** 在 事件來源的事件處理常式會叫用。 路由事件接著會路由傳送到後續的父元素，直到其到達元素樹狀結構的根元素為止。 大部分的路由事件會使用事件反昇路由傳送策略。 事件反昇的路由事件通常是用來報告來自不同控制項或其他 UI 元素的輸入或狀態變更。  
+- **事件反昇：** 在 事件來源的事件處理常式會叫用。 路由事件接著會路由傳送到後續的父元素，直到其到達元素樹狀結構的根元素為止。 大部分的路由事件會使用事件反昇路由傳送策略。 事件反昇的路由事件通常是用來報告來自不同控制項或其他 UI 元素的輸入或狀態變更。  
   
--   **直接：** 只有來源元素本身就有機會叫用處理常式以回應。 這類似於 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 針對事件所使用的「路由傳送」。 不過，與標準不同[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]事件，直接路由的事件支援類別處理 （類別處理將在後續章節中說明），可供<xref:System.Windows.EventSetter>和<xref:System.Windows.EventTrigger>。  
+- **直接：** 只有來源元素本身就有機會叫用處理常式以回應。 這類似於 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 針對事件所使用的「路由傳送」。 不過，與標準不同[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]事件，直接路由的事件支援類別處理 （類別處理將在後續章節中說明），可供<xref:System.Windows.EventSetter>和<xref:System.Windows.EventTrigger>。  
   
--   **通道：** 一開始，在元素樹狀結構根的事件處理常式會叫用。 路由事件接著會在路由中朝向屬於路由事件來源的節點元素 (會引發路由事件的元素) 移動，以透過後續的子元素周遊該路由。 通道路由事件時常會做為複合控制項的一部分來使用或處理，這類來自複合組件的事件可利用專用於該完整控制項的事件來刻意隱藏或取代。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中提供的輸入事件通常會實作為成對的通道/事件反昇組合。 由於用於配對的命名慣例，通道事件有時也稱為預覽事件。  
+- **通道：** 一開始，在元素樹狀結構根的事件處理常式會叫用。 路由事件接著會在路由中朝向屬於路由事件來源的節點元素 (會引發路由事件的元素) 移動，以透過後續的子元素周遊該路由。 通道路由事件時常會做為複合控制項的一部分來使用或處理，這類來自複合組件的事件可利用專用於該完整控制項的事件來刻意隱藏或取代。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中提供的輸入事件通常會實作為成對的通道/事件反昇組合。 由於用於配對的命名慣例，通道事件有時也稱為預覽事件。  
   
 <a name="why_use"></a>   
 ## <a name="why-use-routed-events"></a>為什麼要使用路由事件？  
@@ -104,9 +104,9 @@ ms.locfileid: "59330439"
   
  從路由層面以外的觀點來看，兩個其他因素讓任何指定的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件可能實作為路由事件，而不是標準 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件。 如果您要實作自己的事件，也可以考慮這些準則：  
   
--   某些[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]設定樣式和範本的功能，例如<xref:System.Windows.EventSetter>和<xref:System.Windows.EventTrigger>需要參考的事件是路由的事件。 這是先前所述的事件識別碼案例。  
+- 某些[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]設定樣式和範本的功能，例如<xref:System.Windows.EventSetter>和<xref:System.Windows.EventTrigger>需要參考的事件是路由的事件。 這是先前所述的事件識別碼案例。  
   
--   路由事件支援類別處理機制，此類別可藉以指定靜態方法，有機會在任何已註冊的執行個體處理常式可存取路由事件之前處理它們。 這在控制項設計中非常有用，因為您的類別可以強制執行事件驅動的類別行為，您無法藉由處理執行個體上的事件來附帶隱藏這類行為。  
+- 路由事件支援類別處理機制，此類別可藉以指定靜態方法，有機會在任何已註冊的執行個體處理常式可存取路由事件之前處理它們。 這在控制項設計中非常有用，因為您的類別可以強制執行事件驅動的類別行為，您無法藉由處理執行個體上的事件來附帶隱藏這類行為。  
   
  上述每個考量都會在本主題的不同小節中加以討論。  
   
@@ -147,21 +147,21 @@ ms.locfileid: "59330439"
   
  不過，還有"handledEventsToo"機制，藉此讓接聽程式仍然可以執行處理常式回應路由事件在何處<xref:System.Windows.RoutedEventArgs.Handled%2A>是`true`事件資料中。 換句話說，事件路由無法藉由將事件資料標示為已處理來真正停止。 您只可以在程式碼，或使用 handledEventsToo 機制<xref:System.Windows.EventSetter>:  
   
--   在程式碼，而不是使用一般的運作方式的語言特有的事件語法[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]事件，呼叫[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]方法<xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>加入您的處理常式。 將 `handledEventsToo` 的值指定為 `true`。  
+- 在程式碼，而不是使用一般的運作方式的語言特有的事件語法[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]事件，呼叫[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]方法<xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>加入您的處理常式。 將 `handledEventsToo` 的值指定為 `true`。  
   
--   在  <xref:System.Windows.EventSetter>，將<xref:System.Windows.EventSetter.HandledEventsToo%2A>屬性設為`true`。  
+- 在  <xref:System.Windows.EventSetter>，將<xref:System.Windows.EventSetter.HandledEventsToo%2A>屬性設為`true`。  
   
  除了行為之外，<xref:System.Windows.RoutedEventArgs.Handled%2A>路由事件的概念中的狀態會產生<xref:System.Windows.RoutedEventArgs.Handled%2A>有影響，您應該在設計您的應用程式及撰寫事件處理常式程式碼。 您可以將概念化<xref:System.Windows.RoutedEventArgs.Handled%2A>作為路由事件所公開的簡單通訊協定。 您使用此通訊協定是由您，但如需概念的設計值<xref:System.Windows.RoutedEventArgs.Handled%2A>旨在使用如下所示：  
   
--   如果將路由事件標示為已處理，則不需再次透過該路由中的其他元素來處理它。  
+- 如果將路由事件標示為已處理，則不需再次透過該路由中的其他元素來處理它。  
   
--   如果路由的事件不會標示為已處理，則路由中先前的其他接聽程式已選擇不到註冊處理常式或已註冊的選擇不要管理事件資料和設定的處理常式<xref:System.Windows.RoutedEventArgs.Handled%2A>至`true`。 (或者，當然有可能目前的接聽程式為路由中的第一個點)。目前接聽程式上的處理常式現在有三個可能的做法：  
+- 如果路由的事件不會標示為已處理，則路由中先前的其他接聽程式已選擇不到註冊處理常式或已註冊的選擇不要管理事件資料和設定的處理常式<xref:System.Windows.RoutedEventArgs.Handled%2A>至`true`。 (或者，當然有可能目前的接聽程式為路由中的第一個點)。目前接聽程式上的處理常式現在有三個可能的做法：  
   
-    -   不採取任何動作；事件會保持未處理狀態，而事件會路由傳送到下一個接聽程式。  
+    - 不採取任何動作；事件會保持未處理狀態，而事件會路由傳送到下一個接聽程式。  
   
-    -   執行程式碼以回應事件，但判定採取的動作後續不足以保證會將事件標示為已處理。 事件會路由傳送到下一個接聽程式。  
+    - 執行程式碼以回應事件，但判定採取的動作後續不足以保證會將事件標示為已處理。 事件會路由傳送到下一個接聽程式。  
   
-    -   執行程式碼以回應事件。 在傳遞至處理常式的事件資料中將事件標示為已處理，因為已將所採取的動作視為後續不足以保證會標示為已處理。 事件仍會路由傳送至下一個接聽程式，但<xref:System.Windows.RoutedEventArgs.Handled%2A> = `true`其事件資料，因此只有在`handledEventsToo`接聽程式有機會進一步叫用處理常式。  
+    - 執行程式碼以回應事件。 在傳遞至處理常式的事件資料中將事件標示為已處理，因為已將所採取的動作視為後續不足以保證會標示為已處理。 事件仍會路由傳送至下一個接聽程式，但<xref:System.Windows.RoutedEventArgs.Handled%2A> = `true`其事件資料，因此只有在`handledEventsToo`接聽程式有機會進一步叫用處理常式。  
   
  這個概念性設計根據稍早所述的路由行為的： 它是更困難 （儘管還是有可能在程式碼或樣式） 附加路由事件即使路由中的前一個處理常式 již nastavena叫用的處理常式<xref:System.Windows.RoutedEventArgs.Handled%2A>至`true`。  
   

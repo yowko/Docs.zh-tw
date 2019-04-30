@@ -12,8 +12,8 @@ ms.openlocfilehash: 23699c67de616ba3f535d2527a315aebe7448d3f
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955983"
 ---
 # <a name="contextmenustrip-control-overview"></a>ContextMenuStrip 控制項概觀
 > [!NOTE]

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: ae7d4b29-3436-4032-bdbf-4650eb1c8e19
 ms.openlocfilehash: f24ff05e48327c21c02eb92b07db17266f743a80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024608"
 ---
 # <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>HOW TO：驗證代表日期或時間的字串 (Visual Basic)
 下列程式碼範例將`Boolean`值，指出字串是否表示有效的日期或時間。  

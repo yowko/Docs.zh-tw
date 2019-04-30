@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
 ms.openlocfilehash: d4976b3725d04162ac10242c486f57c4d2598769
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012681"
 ---
 # <a name="panel-control-overview-windows-forms"></a>Panel 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.Panel>控制項可用來提供其他控制項的可識別分組。 一般而言，您可以使用面板細分函式的表單。 例如，您可能會指定郵寄的選項，例如要使用哪一個隔夜承運商的訂單表單。 將面板中的所有選項，可讓使用者邏輯的視覺提示。 在設計階段控制項可以輕易地移動所有 — 當您移動<xref:System.Windows.Forms.Panel>控制所有其包含的控制項移動，太。 可以透過存取面板中分組的控制項及其<xref:System.Windows.Forms.Control.Controls%2A>屬性。 這個屬性傳回的集合<xref:System.Windows.Forms.Control>執行個體，因此您通常需要轉型控制項擷取這種方式，為其特定的型別。  

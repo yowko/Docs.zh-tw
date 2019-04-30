@@ -10,11 +10,11 @@ helpviewer_keywords:
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
 ms.openlocfilehash: 1d00c222dabf446c7c102307c3b904d3f1ff4bca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007275"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>逐步解說：在 WPF 應用程式中快取應用程式資料
 快取可讓您將資料儲存在記憶體中，以進行快速存取。 重新存取資料時，應用程式可以從快取中取得資料，而不是從原始來源進行擷取。 這可以改善效能和延展性。 此外，暫時無法使用資料來源時，快取可讓資料可用。
@@ -28,24 +28,24 @@ ms.locfileid: "59314385"
 
  本逐步解說所述的工作包括下列各項：
 
--   建立 WPF 應用程式專案。
+- 建立 WPF 應用程式專案。
 
--   將參考加入[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。
+- 將參考加入[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。
 
--   正在初始化快取。
+- 正在初始化快取。
 
--   新增快取項目，其中包含文字檔案的內容。
+- 新增快取項目，其中包含文字檔案的內容。
 
--   快取項目的提供的收回原則。
+- 快取項目的提供的收回原則。
 
--   監視快取檔案的路徑和通知的快取執行個體變更為 受監視的項目。
+- 監視快取檔案的路徑和通知的快取執行個體變更為 受監視的項目。
 
 ## <a name="prerequisites"></a>必要條件
  若要完成這個逐步解說，您將需要：
 
--   Microsoft Visual Studio 2010。
+- Microsoft Visual Studio 2010。
 
--   包含小量文字的文字檔案。 （您會在訊息方塊中顯示的文字檔案的內容。）本逐步解說中所述的程式碼假設您正在使用下列檔案：
+- 包含小量文字的文字檔案。 （您會在訊息方塊中顯示的文字檔案的內容。）本逐步解說中所述的程式碼假設您正在使用下列檔案：
 
      `c:\cache\cacheText.txt`
 
@@ -109,9 +109,9 @@ ms.locfileid: "59314385"
 
 7. 新增快取的組件的參考，依照下列步驟：
 
-    1.  在 **方案總管**，以滑鼠右鍵按一下專案名稱，然後按一下**加入參考**。
+    1. 在 **方案總管**，以滑鼠右鍵按一下專案名稱，然後按一下**加入參考**。
 
-    2.  選取  **.NET**索引標籤上，選取`System.Runtime.Caching`，然後按一下**確定**。
+    2. 選取  **.NET**索引標籤上，選取`System.Runtime.Caching`，然後按一下**確定**。
 
 #### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a>若要變更 Visual C# 專案中的目標.NET Framework
 
@@ -125,9 +125,9 @@ ms.locfileid: "59314385"
 
 4. 新增快取的組件的參考，依照下列步驟：
 
-    1.  以滑鼠右鍵按一下**參考**資料夾，然後按一下**加入參考**。
+    1. 以滑鼠右鍵按一下**參考**資料夾，然後按一下**加入參考**。
 
-    2.  選取  **.NET**索引標籤上，選取`System.Runtime.Caching`，然後按一下**確定**。
+    2. 選取  **.NET**索引標籤上，選取`System.Runtime.Caching`，然後按一下**確定**。
 
 ## <a name="adding-a-button-to-the-wpf-window"></a>將按鈕新增至 WPF 視窗
  接下來，您將新增按鈕控制項，並建立按鈕的事件處理常式`Click`事件。 稍後您將加入程式碼，以便當您按一下按鈕時，快取並顯示文字檔的內容。
@@ -143,13 +143,13 @@ ms.locfileid: "59314385"
 ## <a name="initializing-the-cache-and-caching-an-entry"></a>初始化快取和快取項目
  接下來，您將加入程式碼執行下列工作：
 
--   建立快取類別的執行個體 — 也就是您將會具現化新<xref:System.Runtime.Caching.MemoryCache>物件。
+- 建立快取類別的執行個體 — 也就是您將會具現化新<xref:System.Runtime.Caching.MemoryCache>物件。
 
--   指定快取使用<xref:System.Runtime.Caching.HostFileChangeMonitor>物件來監視在文字檔案中的變更。
+- 指定快取使用<xref:System.Runtime.Caching.HostFileChangeMonitor>物件來監視在文字檔案中的變更。
 
--   讀取文字檔案並快取其內容為快取項目。
+- 讀取文字檔案並快取其內容為快取項目。
 
--   顯示快取的文字檔案的內容。
+- 顯示快取的文字檔案的內容。
 
 #### <a name="to-create-the-cache-object"></a>若要建立快取物件
 

@@ -3,11 +3,11 @@ title: 訊息記錄的安全性考量
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998149"
 ---
 # <a name="security-concerns-for-message-logging"></a>訊息記錄的安全性考量
 此主題描述如何保護訊息記錄以及記錄訊息時所產生之事件中的敏感性資料，使其不會被公開。  
@@ -21,11 +21,11 @@ ms.locfileid: "59170660"
   
  下列秘訣有助於防止無意間公開記錄檔內容：  
   
--   確定在 Web 主控和自我主控的情況下，記錄檔都受到存取控制清單 (ACL) 的保護。  
+- 確定在 Web 主控和自我主控的情況下，記錄檔都受到存取控制清單 (ACL) 的保護。  
   
--   您選擇的副檔名不可讓人透過 Web 要求就輕而易舉地取得檔案。 例如，.xml 副檔名就不是安全的選擇。 請參閱網際網路資訊服務 (IIS) 管理手冊，查看可服務的副檔名清單。  
+- 您選擇的副檔名不可讓人透過 Web 要求就輕而易舉地取得檔案。 例如，.xml 副檔名就不是安全的選擇。 請參閱網際網路資訊服務 (IIS) 管理手冊，查看可服務的副檔名清單。  
   
--   指定絕對路徑做為記錄檔位置，此位置應該位於 Web 主機 vroot 公用目錄之外，以防止外部人員使用網頁瀏覽器存取記錄檔。  
+- 指定絕對路徑做為記錄檔位置，此位置應該位於 Web 主機 vroot 公用目錄之外，以防止外部人員使用網頁瀏覽器存取記錄檔。  
   
  根據預設，金鑰和個人可識別資訊 (PII)，例如使用者名稱和密碼，不會記錄在追蹤和記錄訊息中。 不過，電腦的系統管理員還是可以使用 Machine.config 檔案中 `enableLoggingKnownPII` 項目的 `machineSettings` 屬性，來允許電腦上執行的應用程式記錄已知的個人可識別資訊 (PII)。 下列組態示範如何執行這項操作：  
   
@@ -99,13 +99,13 @@ ms.locfileid: "59170660"
 ## <a name="events-triggered-by-message-logging"></a>由訊息記錄所觸發的事件  
  以下列出由訊息記錄所發出的所有事件。  
   
--   登入的訊息：在組態中，或透過 WMI 啟用訊息記錄時，就會發出此事件。 事件內容為「已開啟訊息記錄。 可能會以純文字記錄敏感資料，即使在網路傳輸時經過加密，例如，訊息本文」。  
+- 登入的訊息：在組態中，或透過 WMI 啟用訊息記錄時，就會發出此事件。 事件內容為「已開啟訊息記錄。 可能會以純文字記錄敏感資料，即使在網路傳輸時經過加密，例如，訊息本文」。  
   
--   訊息記錄功能：透過 WMI 停用訊息記錄時，就會發出此事件。 事件內容為「已關閉訊息記錄」。  
+- 訊息記錄功能：透過 WMI 停用訊息記錄時，就會發出此事件。 事件內容為「已關閉訊息記錄」。  
   
--   登入的已知的 PII:啟用已知 pii 記錄時，就會發出此事件。 發生這種情況時`enableLoggingKnownPii`屬性中`machineSettings`Machine.config 檔案的元素設定為`true`，而`logKnownPii`屬性`source`App.config 或 Web.config 檔案中的項目設為`true`.  
+- 登入的已知的 PII:啟用已知 pii 記錄時，就會發出此事件。 發生這種情況時`enableLoggingKnownPii`屬性中`machineSettings`Machine.config 檔案的元素設定為`true`，而`logKnownPii`屬性`source`App.config 或 Web.config 檔案中的項目設為`true`.  
   
--   記錄已知的 PII，不允許：不允許記錄已知 PII 時，就會發出此事件。 發生這種情況時`logKnownPii`的屬性`source`App.config 或 Web.config 檔案中的項目設為`true`，但`enableLoggingKnownPii`屬性中`machineSettings`Machine.config 檔案的項目設為`false`. 不會有例外狀況擲回。  
+- 記錄已知的 PII，不允許：不允許記錄已知 PII 時，就會發出此事件。 發生這種情況時`logKnownPii`的屬性`source`App.config 或 Web.config 檔案中的項目設為`true`，但`enableLoggingKnownPii`屬性中`machineSettings`Machine.config 檔案的項目設為`false`. 不會有例外狀況擲回。  
   
  您可以在 Windows 的 [事件檢視器] 工具中檢視這些事件。 如需詳細資訊，請參閱[事件記錄](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)。  
   

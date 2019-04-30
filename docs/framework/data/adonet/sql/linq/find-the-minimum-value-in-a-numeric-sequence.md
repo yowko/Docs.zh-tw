@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 78203093-f242-4572-9b31-9495b10926aa
 ms.openlocfilehash: 84002609c550cc2de76f9948bf77f9fd88261f64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038450"
 ---
 # <a name="find-the-minimum-value-in-a-numeric-sequence"></a>尋找數值序列中的最小值
 使用 <xref:System.Linq.Enumerable.Min%2A> 運算子可傳回數值序列中的最小值。  

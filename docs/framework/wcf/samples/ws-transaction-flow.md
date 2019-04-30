@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
 ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007470"
 ---
 # <a name="ws-transaction-flow"></a>WS 交易流程
 這個範例會示範用戶端協調異動的用法，以及使用 WS-Atomic 異動或 OleTransactions 通訊協定之異動流程的用戶端和伺服器選項。 此樣本根據[快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務，但作業屬於示範如何使用`TransactionFlowAttribute`具有**TransactionFlowOption**若要判斷何種程度的交易流程已啟用的列舉型別。 在流動的異動範圍內，會將所要求作業的記錄檔寫入資料庫，並在完成用戶端協調異動之前都會保存該記錄檔。如果用戶端異動未完成，Web 服務異動一定不會認可對資料庫進行適當的更新。  
@@ -39,13 +39,13 @@ public interface ICalculator
 
  將以處理作業的順序定義這些作業：  
   
--   `Add` 作業要求必須包括流動的交易。  
+- `Add` 作業要求必須包括流動的交易。  
   
--   `Subtract` 作業要求可能包括流動的交易。  
+- `Subtract` 作業要求可能包括流動的交易。  
   
--   `Multiply` 作業要求不可在明確的 NotAllowed 設定中包含流動的異動。  
+- `Multiply` 作業要求不可在明確的 NotAllowed 設定中包含流動的異動。  
   
--   `Divide` 作業要求在省略 `TransactionFlow` 屬性時不可包含流動的異動。  
+- `Divide` 作業要求在省略 `TransactionFlow` 屬性時不可包含流動的異動。  
   
  若要啟用交易流程，使用的繫結[ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)必須使用啟用的屬性，以及適當的作業屬性。 在此範例中，除了中繼資料交換端點以外，服務組態也會公開 TCP 端點和 HTTP 端點。 TCP 端點和 HTTP 端點會使用下列的繫結，這兩者都有[ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)啟用的屬性。  
   
@@ -182,15 +182,15 @@ Console.WriteLine("Transaction committed");
 
  作業的呼叫如下所示：  
   
--   `Add` 要求會將必要的異動流動至服務，而服務的動作則是在用戶端的異動範圍內發生。  
+- `Add` 要求會將必要的異動流動至服務，而服務的動作則是在用戶端的異動範圍內發生。  
   
--   第一個 `Subtract` 要求也會將允許的交易流動至服務，而服務的動作再次是在用戶端的交易範圍內發生。  
+- 第一個 `Subtract` 要求也會將允許的交易流動至服務，而服務的動作再次是在用戶端的交易範圍內發生。  
   
--   第二個 `Subtract` 要求會在以 `TransactionScopeOption.Suppress` 選項宣告的新交易範圍內執行。 這樣做會隱藏用戶端的初始外部異動，而且要求不會將異動流動至服務。 這個方法可讓用戶端明確地不參與，並在不需要將交易流動至服務時，防止進行此動作。 會在新的和未連接的異動範圍內發生服務動作。  
+- 第二個 `Subtract` 要求會在以 `TransactionScopeOption.Suppress` 選項宣告的新交易範圍內執行。 這樣做會隱藏用戶端的初始外部異動，而且要求不會將異動流動至服務。 這個方法可讓用戶端明確地不參與，並在不需要將交易流動至服務時，防止進行此動作。 會在新的和未連接的異動範圍內發生服務動作。  
   
--   `Multiply` 要求不會將異動流動至服務，因為用戶端產生之 `ICalculator` 介面的定義包含設定為 <xref:System.ServiceModel.TransactionFlowAttribute><xref:System.ServiceModel.TransactionFlowOption> 的 `NotAllowed`。  
+- `Multiply` 要求不會將異動流動至服務，因為用戶端產生之 `ICalculator` 介面的定義包含設定為 <xref:System.ServiceModel.TransactionFlowAttribute><xref:System.ServiceModel.TransactionFlowOption> 的 `NotAllowed`。  
   
--   `Divide` 要求不會將交易流動至服務，因為用戶端產生之 `ICalculator` 介面的定義再次不包含 `TransactionFlowAttribute`。 再次會在其他新的和未連接的異動範圍內發生服務動作。  
+- `Divide` 要求不會將交易流動至服務，因為用戶端產生之 `ICalculator` 介面的定義再次不包含 `TransactionFlowAttribute`。 再次會在其他新的和未連接的異動範圍內發生服務動作。  
   
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
@@ -238,47 +238,47 @@ Press <ENTER> to terminate the service.
   
 1. 在執行 Windows Server 2003 或 Windows XP 的服務電腦上，請遵循下列指示設定 MSDTC 以允許傳入網路異動。  
   
-    1.  從**開始** 功能表中，瀏覽至**控制台**，然後**系統管理工具**，然後**元件服務**。  
+    1. 從**開始** 功能表中，瀏覽至**控制台**，然後**系統管理工具**，然後**元件服務**。  
   
-    2.  依序展開**元件服務**。 開啟**電腦**資料夾。  
+    2. 依序展開**元件服務**。 開啟**電腦**資料夾。  
   
-    3.  以滑鼠右鍵按一下**我的電腦**，然後選取**屬性**。  
+    3. 以滑鼠右鍵按一下**我的電腦**，然後選取**屬性**。  
   
-    4.  在  **MSDTC**索引標籤上，按一下**安全性設定**。  
+    4. 在  **MSDTC**索引標籤上，按一下**安全性設定**。  
   
-    5.  請檢查**網路 DTC 存取**並**允許輸入**。  
+    5. 請檢查**網路 DTC 存取**並**允許輸入**。  
   
-    6.  按一下  **確定**，然後按一下**是**重新啟動 MSDTC 服務。  
+    6. 按一下  **確定**，然後按一下**是**重新啟動 MSDTC 服務。  
   
-    7.  按一下 [確定]  關閉對話方塊。  
+    7. 按一下 [確定]  關閉對話方塊。  
   
 2. 在執行 Windows Server 2008 或 Windows Vista 的服務電腦上，請遵循下列指示設定 MSDTC 以允許傳入網路異動。  
   
-    1.  從**開始** 功能表中，瀏覽至**控制台**，然後**系統管理工具**，然後**元件服務**。  
+    1. 從**開始** 功能表中，瀏覽至**控制台**，然後**系統管理工具**，然後**元件服務**。  
   
-    2.  依序展開**元件服務**。 開啟**電腦**資料夾。 選取 **分散式交易協調器**。  
+    2. 依序展開**元件服務**。 開啟**電腦**資料夾。 選取 **分散式交易協調器**。  
   
-    3.  以滑鼠右鍵按一下**DTC 協調器**，然後選取**屬性**。  
+    3. 以滑鼠右鍵按一下**DTC 協調器**，然後選取**屬性**。  
   
-    4.  在上**安全性**索引標籤上，勾選**網路 DTC 存取**並**允許輸入**。  
+    4. 在上**安全性**索引標籤上，勾選**網路 DTC 存取**並**允許輸入**。  
   
-    5.  按一下  **確定**，然後按一下**是**重新啟動 MSDTC 服務。  
+    5. 按一下  **確定**，然後按一下**是**重新啟動 MSDTC 服務。  
   
-    6.  按一下 [確定]  關閉對話方塊。  
+    6. 按一下 [確定]  關閉對話方塊。  
   
 3. 在用戶端電腦上，設定 MSDTC 以允許傳出網路交易：  
   
-    1.  從**開始** 功能表中，瀏覽至`Control Panel`，然後**系統管理工具**，然後**元件服務**。  
+    1. 從**開始** 功能表中，瀏覽至`Control Panel`，然後**系統管理工具**，然後**元件服務**。  
   
-    2.  以滑鼠右鍵按一下**我的電腦**，然後選取**屬性**。  
+    2. 以滑鼠右鍵按一下**我的電腦**，然後選取**屬性**。  
   
-    3.  在  **MSDTC**索引標籤上，按一下**安全性設定**。  
+    3. 在  **MSDTC**索引標籤上，按一下**安全性設定**。  
   
-    4.  請檢查**網路 DTC 存取**並**允許輸出**。  
+    4. 請檢查**網路 DTC 存取**並**允許輸出**。  
   
-    5.  按一下  **確定**，然後按一下**是**重新啟動 MSDTC 服務。  
+    5. 按一下  **確定**，然後按一下**是**重新啟動 MSDTC 服務。  
   
-    6.  按一下 [確定]  關閉對話方塊。  
+    6. 按一下 [確定]  關閉對話方塊。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

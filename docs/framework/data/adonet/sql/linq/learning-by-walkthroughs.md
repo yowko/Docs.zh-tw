@@ -3,11 +3,11 @@ title: 依逐步解說學習
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
 ms.openlocfilehash: 611644ce9d6f95bc4113b81bfff36ecaf9cf0b4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033524"
 ---
 # <a name="learning-by-walkthroughs"></a>依逐步解說學習
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件提供了幾個逐步解說。 本主題會處理某些一般逐步解說問題 (包含疑難排解)，並提供數個入門級逐步解說的連結，供您學習 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]。  
@@ -30,20 +30,20 @@ ms.locfileid: "59329306"
 ## <a name="general"></a>一般  
  下列是有關於這些逐步解說的一般資訊：  
   
--   環境: 每個[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]逐步解說使用 Visual Studio 做為其整合式的開發環境 (IDE)。  
+- 環境: 每個[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]逐步解說使用 Visual Studio 做為其整合式的開發環境 (IDE)。  
   
--   SQL 引擎：這些逐步解說會寫入至使用 SQL Server Express 來實作。 如果您沒有 SQL Server Express，可以免費進行下載。 如需詳細資訊，請參閱 <<c0> [ 下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
+- SQL 引擎：這些逐步解說會寫入至使用 SQL Server Express 來實作。 如果您沒有 SQL Server Express，可以免費進行下載。 如需詳細資訊，請參閱 <<c0> [ 下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
     > [!NOTE]
     >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 逐步解說會使用檔名做為連接字串 (Connection String)。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 為了方便起見，讓 SQL Server Express 使用者只需指定檔名即可。 請時時注意安全性問題。 如需詳細資訊，請參閱 < [LINQ to SQL 中的安全性](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)。  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 逐步解說通常需要 Northwind 範例資料庫。 如需詳細資訊，請參閱 <<c0> [ 下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 逐步解說通常需要 Northwind 範例資料庫。 如需詳細資訊，請參閱 <<c0> [ 下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
--   對話方塊和您在逐步解說中看到的功能表命令可能會不同於所描述的說明，請根據您目前使用的設定或 Visual Studio 版本。 若要變更設定，請在 [工具]  功能表上按一下 [匯入和匯出設定]  。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
+- 對話方塊和您在逐步解說中看到的功能表命令可能會不同於所描述的說明，請根據您目前使用的設定或 Visual Studio 版本。 若要變更設定，請在 [工具]  功能表上按一下 [匯入和匯出設定]  。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
--   在專門處理多層式案例的逐步解說中，伺服器必須位於與開發電腦不同的電腦上，而且您必須具有存取該伺服器的適當權限。  
+- 在專門處理多層式案例的逐步解說中，伺服器必須位於與開發電腦不同的電腦上，而且您必須具有存取該伺服器的適當權限。  
   
--   用來表示 Northwind 範例資料庫中之 Orders 資料表的類別名稱通常為 `[Order]`。 逸出字元是必要的因為`Order`是在 Visual Basic 中的關鍵字。  
+- 用來表示 Northwind 範例資料庫中之 Orders 資料表的類別名稱通常為 `[Order]`。 逸出字元是必要的因為`Order`是在 Visual Basic 中的關鍵字。  
   
 ## <a name="troubleshooting"></a>疑難排解  
  發生執行階段錯誤的原因之一是您沒有足夠的權限可存取這些逐步解說中所用的資料庫。 請參閱下列步驟，以解決這類最常見的問題。  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 61fce3e06b5245872f7061716e8d995dd5f5043c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984642"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification 方法
 提供保證的 common language runtime (CLR) 版本是第一次載入，但尚未開始時要呼叫的回呼函式。 這個方法會取代[LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)函式。  
@@ -49,11 +49,11 @@ HRESULT RequestRuntimeLoadedNotification (
 ## <a name="remarks"></a>備註  
  回呼的運作方式如下：  
   
--   只有在第一次載入執行階段時，會叫用回呼。  
+- 只有在第一次載入執行階段時，會叫用回呼。  
   
--   回呼不會叫用相同的執行階段的可重新進入的負載。  
+- 回呼不會叫用相同的執行階段的可重新進入的負載。  
   
--   不可重新進入執行階段載入的序列化回呼函式的呼叫。  
+- 不可重新進入執行階段載入的序列化回呼函式的呼叫。  
   
  回呼函式具有下列原型：  
   
@@ -66,13 +66,13 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  回呼函式原型如下所示：  
   
--   `pfnCallbackThreadSet`：  
+- `pfnCallbackThreadSet`：  
   
     ```  
     typedef HRESULT (__stdcall *CallbackThreadSetFnPtr)();  
     ```  
   
--   `pfnCallbackThreadUnset`：  
+- `pfnCallbackThreadUnset`：  
   
     ```  
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
@@ -80,11 +80,11 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  如果主機想要載入，或導致另一個執行階段要載入的方式可重新進入，則`pfnCallbackThreadSet`和`pfnCallbackThreadUnset`參數所提供的回呼函式必須使用方式如下：  
   
--   `pfnCallbackThreadSet` 必須由之前嘗試這類載入可能會導致執行階段載入的執行緒呼叫。  
+- `pfnCallbackThreadSet` 必須由之前嘗試這類載入可能會導致執行階段載入的執行緒呼叫。  
   
--   `pfnCallbackThreadUnset` 必須先呼叫時，執行緒將不會再造成執行階段負載 （以及從初始的回呼傳回之前）。  
+- `pfnCallbackThreadUnset` 必須先呼叫時，執行緒將不會再造成執行階段負載 （以及從初始的回呼傳回之前）。  
   
--   `pfnCallbackThreadSet` 和`pfnCallbackThreadUnset`兩者都是不可重新進入。  
+- `pfnCallbackThreadSet` 和`pfnCallbackThreadUnset`兩者都是不可重新進入。  
   
 > [!NOTE]
 >  裝載應用程式必須呼叫`pfnCallbackThreadSet`並`pfnCallbackThreadUnset`的範圍外`pCallbackFunction`參數。  

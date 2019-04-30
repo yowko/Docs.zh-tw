@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
 ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020423"
 ---
 # <a name="drawing-objects-overview"></a>繪圖物件概觀
 本主題將介紹<xref:System.Windows.Media.Drawing>物件，並說明如何使用它們來有效率地繪製圖形、 點陣圖、 文字及媒體。 使用 <xref:System.Windows.Media.Drawing>物件，當您建立美工圖案、 繪製<xref:System.Windows.Media.DrawingBrush>，或使用<xref:System.Windows.Media.Visual>物件。  
@@ -23,25 +23,25 @@ ms.locfileid: "59325510"
 ## <a name="what-is-a-drawing-object"></a>什麼是繪圖物件？  
  A<xref:System.Windows.Media.Drawing>物件可描繪可見內容，例如圖形、 點陣圖、 視訊或文字行。 不同類型的繪圖可描繪不同類型的內容。 以下列出不同類型的繪圖物件。  
   
--   <xref:System.Windows.Media.GeometryDrawing> – 繪製圖形。  
+- <xref:System.Windows.Media.GeometryDrawing> – 繪製圖形。  
   
--   <xref:System.Windows.Media.ImageDrawing> – 繪製影像。  
+- <xref:System.Windows.Media.ImageDrawing> – 繪製影像。  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> – 繪製的文字。  
+- <xref:System.Windows.Media.GlyphRunDrawing> – 繪製的文字。  
   
--   <xref:System.Windows.Media.VideoDrawing> – 播放音訊或視訊檔。  
+- <xref:System.Windows.Media.VideoDrawing> – 播放音訊或視訊檔。  
   
--   <xref:System.Windows.Media.DrawingGroup> – 繪製其他繪圖。 您可以使用繪圖群組，來將其他繪圖結合為單一複合繪圖。  
+- <xref:System.Windows.Media.DrawingGroup> – 繪製其他繪圖。 您可以使用繪圖群組，來將其他繪圖結合為單一複合繪圖。  
   
  <xref:System.Windows.Media.Drawing> 物件是多用途;有很的多種，您可以使用<xref:System.Windows.Media.Drawing>物件。  
   
--   顯示為映像使用<xref:System.Windows.Media.DrawingImage>和<xref:System.Windows.Controls.Image>控制項。  
+- 顯示為映像使用<xref:System.Windows.Media.DrawingImage>和<xref:System.Windows.Controls.Image>控制項。  
   
--   您可以使用它與<xref:System.Windows.Media.DrawingBrush>來繪製物件，例如<xref:System.Windows.Controls.Page.Background%2A>的<xref:System.Windows.Controls.Page>。  
+- 您可以使用它與<xref:System.Windows.Media.DrawingBrush>來繪製物件，例如<xref:System.Windows.Controls.Page.Background%2A>的<xref:System.Windows.Controls.Page>。  
   
--   您可以使用它來描述的外觀<xref:System.Windows.Media.DrawingVisual>。  
+- 您可以使用它來描述的外觀<xref:System.Windows.Media.DrawingVisual>。  
   
--   您可以使用它來列舉內容<xref:System.Windows.Media.Visual>。  
+- 您可以使用它來列舉內容<xref:System.Windows.Media.Visual>。  
   
  WPF 提供其他能夠繪製圖形、點陣圖、文字及媒體的物件類型。 例如，您也可以使用<xref:System.Windows.Shapes.Shape>物件來繪製圖形，而<xref:System.Windows.Controls.MediaElement>控制項提供另一種方式將影片新增至您的應用程式。 因此當您應該使用<xref:System.Windows.Media.Drawing>物件？ 您可以犧牲架構等級功能以獲得效能優勢時，或當您需要<xref:System.Windows.Freezable>功能。 因為<xref:System.Windows.Media.Drawing>物件缺少支援[版面配置](../advanced/layout.md)、 輸入和焦點，它們提供效能優勢，使其更適合用來描繪背景、 美工圖案，並使用低層級繪圖<xref:System.Windows.Media.Visual>物件。  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
 ms.openlocfilehash: 0fba0b8814597f58018c4c5feba85082ef035e1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031313"
 ---
 # <a name="typography-in-wpf"></a>WPF 中的印刷樣式
 本主題將介紹 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要印刷樣式功能。 這些功能包括提升文字轉譯的品質與效能、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 印刷樣式支援、已增強的國際文字、已增強的字型支援，以及新的文字應用程式開發介面 (API)。  
@@ -45,39 +45,39 @@ ms.locfileid: "59111406"
 ## <a name="enhanced-international-text-support"></a>已增強的國際文字支援  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 藉由提供下列功能來提供已增強的國際文字支援：  
   
--   在所有書寫系統中，使用自動調整度量功能來自動調整行間距。  
+- 在所有書寫系統中，使用自動調整度量功能來自動調整行間距。  
   
--   對於國際文字的廣泛支援。 如需詳細資訊，請參閱 [WPF 的全球化](globalization-for-wpf.md)。  
+- 對於國際文字的廣泛支援。 如需詳細資訊，請參閱 [WPF 的全球化](globalization-for-wpf.md)。  
   
--   語言導向的分行、斷字及對齊。  
+- 語言導向的分行、斷字及對齊。  
   
 <a name="Enhanced_Font_Support"></a>   
 ## <a name="enhanced-font-support"></a>已增強的字型支援  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 藉由提供下列功能來提供已增強的字型支援：  
   
--   適用於所有文字的 Unicode。 字型行為和選取不再需要字元集或字碼頁。  
+- 適用於所有文字的 Unicode。 字型行為和選取不再需要字元集或字碼頁。  
   
--   字型行為與全域設定 (例如系統地區設定) 無關。  
+- 字型行為與全域設定 (例如系統地區設定) 無關。  
   
--   個別<xref:System.Windows.FontWeight>， <xref:System.Windows.FontStretch>，並<xref:System.Windows.FontStyle>定義的型別<xref:System.Windows.Media.FontFamily>。 這提供的彈性比使用 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式設計還要大，其中的斜體與粗體布林值組合是用來定義字型家族。  
+- 個別<xref:System.Windows.FontWeight>， <xref:System.Windows.FontStretch>，並<xref:System.Windows.FontStyle>定義的型別<xref:System.Windows.Media.FontFamily>。 這提供的彈性比使用 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式設計還要大，其中的斜體與粗體布林值組合是用來定義字型家族。  
   
--   書寫方向 (水平和垂直) 會與字型名稱分開處理。  
+- 書寫方向 (水平和垂直) 會與字型名稱分開處理。  
   
--   可攜式 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 檔案中的字型連結和字型遞補，使用的是複合字型技術。 複合字型，能夠建構全系列的多語系字型。 複合字型也提供一種機制來避免顯示遺漏的字符。 如需詳細資訊，請參閱中的備註<xref:System.Windows.Media.FontFamily>類別。  
+- 可攜式 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 檔案中的字型連結和字型遞補，使用的是複合字型技術。 複合字型，能夠建構全系列的多語系字型。 複合字型也提供一種機制來避免顯示遺漏的字符。 如需詳細資訊，請參閱中的備註<xref:System.Windows.Media.FontFamily>類別。  
   
--   從複合字型，使用單一語言字型群組建置的國際字型。 這可在開發多國語言的字型時節省資源成本。  
+- 從複合字型，使用單一語言字型群組建置的國際字型。 這可在開發多國語言的字型時節省資源成本。  
   
--   內嵌於文件中的複合字型，藉此提供文件的可攜性。 如需詳細資訊，請參閱中的備註<xref:System.Windows.Media.FontFamily>類別。  
+- 內嵌於文件中的複合字型，藉此提供文件的可攜性。 如需詳細資訊，請參閱中的備註<xref:System.Windows.Media.FontFamily>類別。  
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>新的文字應用程式開發介面 (API)  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供數個文字 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，讓開發人員能夠在他們的應用程式中包含文字時使用。 這些 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 可分為三個類別：  
   
--   **版面配置和使用者介面**。 [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] 的一般文字控制項。  
+- **版面配置和使用者介面**。 [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] 的一般文字控制項。  
   
--   **輕量型文字繪製**。 可讓您直接對物件繪製文字。  
+- **輕量型文字繪製**。 可讓您直接對物件繪製文字。  
   
--   **進階文字格式化**。 可讓您實作自訂的文字引擎。  
+- **進階文字格式化**。 可讓您實作自訂的文字引擎。  
   
 ### <a name="layout-and-user-interface"></a>版面配置和使用者介面  
  在最高層級的功能中，文字[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]提供通用[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]這類控制<xref:System.Windows.Controls.Label>， <xref:System.Windows.Controls.TextBlock>，和<xref:System.Windows.Controls.TextBox>。 這些控制項提供應用程式內基本的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素，以及提供一種簡單方式來呈現文字並與之互動。 控制這類<xref:System.Windows.Controls.RichTextBox>和<xref:System.Windows.Controls.PasswordBox>啟用更進階或特製化的文字處理。 這類類別和<xref:System.Windows.Documents.TextRange>， <xref:System.Windows.Documents.TextSelection>，和<xref:System.Windows.Documents.TextPointer>可讓您更有用的文字操作。 這些[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]控制項提供屬性，例如<xref:System.Windows.Controls.Control.FontFamily%2A>， <xref:System.Windows.Controls.Control.FontSize%2A>，和<xref:System.Windows.Controls.Control.FontStyle%2A>，可讓您控制用來呈現文字的字型。  

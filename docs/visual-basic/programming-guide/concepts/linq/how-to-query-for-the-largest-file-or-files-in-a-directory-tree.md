@@ -3,24 +3,24 @@ title: HOW TO：最大的檔案或目錄樹狀 (LINQ) (Visual Basic) 中的查�
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
 ms.openlocfilehash: 7ba330b18020b7c3b823b70d0541cdda199aa898
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008898"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>HOW TO：最大的檔案或目錄樹狀 (LINQ) (Visual Basic) 中的查詢
 此範例顯示五個與檔案位元組大小相關的查詢：  
   
--   如何擷取最大檔案的位元組大小。  
+- 如何擷取最大檔案的位元組大小。  
   
--   如何擷取最小檔案的位元組大小。  
+- 如何擷取最小檔案的位元組大小。  
   
--   如何從所指定根資料夾下的一或多個資料夾中，擷取最大或最小檔案的 <xref:System.IO.FileInfo> 物件。  
+- 如何從所指定根資料夾下的一或多個資料夾中，擷取最大或最小檔案的 <xref:System.IO.FileInfo> 物件。  
   
--   如何擷取序列，例如 10 個最大檔案。  
+- 如何擷取序列，例如 10 個最大檔案。  
   
--   如何根據檔案位元組大小將檔案分組排序，並略過小於指定大小的檔案。  
+- 如何根據檔案位元組大小將檔案分組排序，並略過小於指定大小的檔案。  
   
 ## <a name="example"></a>範例  
  下列範例包含五個不同的查詢，以示範如何根據檔案位元組大小來查詢和分組檔案。 您可以輕鬆修改這些範例，使查詢根據 <xref:System.IO.FileInfo> 物件的其他某個屬性。  

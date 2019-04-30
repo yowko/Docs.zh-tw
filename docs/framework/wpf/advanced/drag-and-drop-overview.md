@@ -13,11 +13,11 @@ helpviewer_keywords:
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
 ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051633"
 ---
 # <a name="drag-and-drop-overview"></a>拖放概觀
 本主題提供 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中的拖放功能支援概觀。 拖放功能一般是指資料傳送的方法，這種方法需要使用滑鼠 (或其他一些指標裝置) 選取一或多個物件，將這些物件拖曳到 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中一些想要的置放目標上，然後置放這些物件。  
@@ -41,11 +41,11 @@ ms.locfileid: "59301395"
 ## <a name="data-transfer"></a>資料傳輸  
  拖放功能是範圍較廣之資料傳輸的一部分。 資料傳輸包括拖放以及複製和貼上作業。 拖放作業類似複製和貼上或剪下和貼上作業，後者使用系統剪貼簿，將資料從某個物件或應用程式傳送到另一個物件或應用程式。 這兩種作業類型都需要：  
   
--   提供資料來源物件。  
+- 提供資料來源物件。  
   
--   暫時儲存所傳送之資料的方式。  
+- 暫時儲存所傳送之資料的方式。  
   
--   接收資料的目標物件。  
+- 接收資料的目標物件。  
   
  在複製和貼上作業中，會使用系統剪貼簿來暫時儲存所傳送的資料；在拖放作業中，會使用 <xref:System.Windows.DataObject> 來儲存資料。 資料物件在概念上是由一或多組 <xref:System.Object> (其中包含實際資料) 和對應的資料格式識別項所組成。  
   
@@ -94,31 +94,31 @@ ms.locfileid: "59301395"
   
  若要實作基本拖放功能，您將完成下列工作：  
   
--   識別將做為拖曳來源的項目。 拖曳來源可以是 <xref:System.Windows.UIElement> 或 <xref:System.Windows.ContentElement>。  
+- 識別將做為拖曳來源的項目。 拖曳來源可以是 <xref:System.Windows.UIElement> 或 <xref:System.Windows.ContentElement>。  
   
--   在要啟始拖放作業的拖曳來源上建立事件處理常式。 這個事件通常是 <xref:System.Windows.UIElement.MouseMove> 事件。  
+- 在要啟始拖放作業的拖曳來源上建立事件處理常式。 這個事件通常是 <xref:System.Windows.UIElement.MouseMove> 事件。  
   
--   在拖曳來源事件處理常式中，呼叫 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法來啟始拖放作業。 在 <xref:System.Windows.DragDrop.DoDragDrop%2A> 呼叫中，指定拖曳來源、要傳送的資料和允許的效果。  
+- 在拖曳來源事件處理常式中，呼叫 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法來啟始拖放作業。 在 <xref:System.Windows.DragDrop.DoDragDrop%2A> 呼叫中，指定拖曳來源、要傳送的資料和允許的效果。  
   
--   識別將做為置放目標的項目。 置放目標可以是 <xref:System.Windows.UIElement> 或 <xref:System.Windows.ContentElement>。  
+- 識別將做為置放目標的項目。 置放目標可以是 <xref:System.Windows.UIElement> 或 <xref:System.Windows.ContentElement>。  
   
--   在置放目標上，將 <xref:System.Windows.UIElement.AllowDrop%2A> 屬性設定為 `true`。  
+- 在置放目標上，將 <xref:System.Windows.UIElement.AllowDrop%2A> 屬性設定為 `true`。  
   
--   在置放目標上，建立 <xref:System.Windows.DragDrop.Drop> 事件處理常式來處理置放的資料。  
+- 在置放目標上，建立 <xref:System.Windows.DragDrop.Drop> 事件處理常式來處理置放的資料。  
   
--   在 <xref:System.Windows.DragDrop.Drop> 事件處理常式中，使用 <xref:System.Windows.DragEventArgs> 和 <xref:System.Windows.DataObject.GetDataPresent%2A> 方法從 <xref:System.Windows.DataObject.GetData%2A> 擷取資料。  
+- 在 <xref:System.Windows.DragDrop.Drop> 事件處理常式中，使用 <xref:System.Windows.DragEventArgs> 和 <xref:System.Windows.DataObject.GetDataPresent%2A> 方法從 <xref:System.Windows.DataObject.GetData%2A> 擷取資料。  
   
--   在 <xref:System.Windows.DragDrop.Drop> 事件處理常式中，使用資料來執行所需的拖放作業。  
+- 在 <xref:System.Windows.DragDrop.Drop> 事件處理常式中，使用資料來執行所需的拖放作業。  
   
  您可以建立自訂 <xref:System.Windows.DataObject>，並處理選擇性拖曳來源和置放目標事件，來增強您的拖放功能實作，如下列工作所示：  
   
--   若要傳送自訂資料或多個資料項目，請建立 <xref:System.Windows.DataObject> 以傳遞給 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法。  
+- 若要傳送自訂資料或多個資料項目，請建立 <xref:System.Windows.DataObject> 以傳遞給 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法。  
   
--   若要在拖曳期間執行其他動作，請處理置放目標上的 <xref:System.Windows.DragDrop.DragEnter>、<xref:System.Windows.DragDrop.DragOver> 和  <xref:System.Windows.DragDrop.DragLeave> 事件。  
+- 若要在拖曳期間執行其他動作，請處理置放目標上的 <xref:System.Windows.DragDrop.DragEnter>、<xref:System.Windows.DragDrop.DragOver> 和  <xref:System.Windows.DragDrop.DragLeave> 事件。  
   
--   若要變更滑鼠指標的外觀，請處理拖曳來源上的 <xref:System.Windows.DragDrop.GiveFeedback>  事件。  
+- 若要變更滑鼠指標的外觀，請處理拖曳來源上的 <xref:System.Windows.DragDrop.GiveFeedback>  事件。  
   
--   若要變更拖放作業的取消方式，請處理拖曳來源上的 <xref:System.Windows.DragDrop.QueryContinueDrag> 事件。  
+- 若要變更拖放作業的取消方式，請處理拖曳來源上的 <xref:System.Windows.DragDrop.QueryContinueDrag> 事件。  
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>拖放功能範例  
@@ -129,13 +129,13 @@ ms.locfileid: "59301395"
 ### <a name="enabling-an-element-to-be-a-drag-source"></a>使某個項目成為拖曳來源  
  拖曳來源物件負責：  
   
--   識別何時發生拖曳。  
+- 識別何時發生拖曳。  
   
--   啟始拖放作業。  
+- 啟始拖放作業。  
   
--   識別要傳送的資料。  
+- 識別要傳送的資料。  
   
--   指定傳送的資料允許的拖放作業效果。  
+- 指定傳送的資料允許的拖放作業效果。  
   
  不論允許的動作為何 (移動、複製、無)，拖曳來源也會提供回饋給使用者，並可根據其他使用者輸入 (例如在拖曳時按 ESC 鍵) 來取消拖放作業。  
   
@@ -146,11 +146,11 @@ ms.locfileid: "59301395"
   
  在 <xref:System.Windows.UIElement.MouseMove> 事件處理常式中，呼叫 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法來啟始拖放作業。 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法採用三個參數：  
   
--   `dragSource` - 所傳送之資料來源的相依性物件參考，通常是 <xref:System.Windows.UIElement.MouseMove> 事件的來源。  
+- `dragSource` - 所傳送之資料來源的相依性物件參考，通常是 <xref:System.Windows.UIElement.MouseMove> 事件的來源。  
   
--   `data` - 包含所傳送之資料的物件，該資料會包裝在 <xref:System.Windows.DataObject> 中。  
+- `data` - 包含所傳送之資料的物件，該資料會包裝在 <xref:System.Windows.DataObject> 中。  
   
--   `allowedEffects` - <xref:System.Windows.DragDropEffects> 列舉值之一，指定允許的拖放作業效果。  
+- `allowedEffects` - <xref:System.Windows.DragDropEffects> 列舉值之一，指定允許的拖放作業效果。  
   
  所有可序列化的物件都可以 `data` 參數傳遞。 如果資料尚未包裝在 <xref:System.Windows.DataObject>  中，則會自動包裝在新的 <xref:System.Windows.DataObject> 中。 若要傳遞多個資料項目，您必須自行建立 <xref:System.Windows.DataObject>，並傳遞給 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法。 如需詳細資訊，請參閱[資料和資料物件](data-and-data-objects.md)。  
   
@@ -171,13 +171,13 @@ ms.locfileid: "59301395"
 ### <a name="enabling-an-element-to-be-a-drop-target"></a>使某個項目成為置放目標  
  置放目標物件負責：  
   
--   指出它是有效的置放目標。  
+- 指出它是有效的置放目標。  
   
--   在拖曳來源被拖曳到目標上時回應拖曳來源。  
+- 在拖曳來源被拖曳到目標上時回應拖曳來源。  
   
--   檢查傳送的資料格式是可接收的格式。  
+- 檢查傳送的資料格式是可接收的格式。  
   
--   處理置放的資料。  
+- 處理置放的資料。  
   
  若要指定某個項目做為置放目標，您可以將其 <xref:System.Windows.UIElement.AllowDrop%2A> 屬性設定為 `true`。 接著會在項目上引發置放目標事件，以便您處理這些事件。 在拖放作業期間，置放目標上會發生以下一連串事件：  
   

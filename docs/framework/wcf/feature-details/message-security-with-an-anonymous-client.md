@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 ms.openlocfilehash: 613b85e18109faa2a4386090e91aaddcfd8e0b68
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038580"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>匿名用戶端的訊息安全性
 
@@ -25,7 +25,7 @@ ms.locfileid: "57680305"
 |安全性模式|訊息|
 |互通性|WCF 只|
 |驗證 (伺服器)|初始交涉需要伺服器驗證，而不需要用戶端驗證|
-|驗證 (用戶端)|無|
+|驗證 (用戶端)|None|
 |完整性|是，使用共用安全性內容|
 |機密性|是，使用共用安全性內容|
 |Transport|HTTP|

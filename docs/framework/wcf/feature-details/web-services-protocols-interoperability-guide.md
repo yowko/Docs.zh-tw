@@ -3,11 +3,11 @@ title: Web 服務通訊協定互通性手冊
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
 ms.openlocfilehash: 647212558b6be38e9b30239f7fb71213e6eb7d86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050346"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web 服務通訊協定互通性手冊
 Windows Communication Foundation (WCF) 會實作一些 Web 服務通訊協定。 許多這些通訊協定包含實作者應自行決定的一些選項和擴充點。 本主題提供 WCF 實作的 Web 服務通訊協定的清單。 本節中的其他主題則會提供每個受支援通訊協定的實作詳細資訊。  
@@ -76,29 +76,29 @@ Windows Communication Foundation (WCF) 會實作一些 Web 服務通訊協定。
   
  <xref:System.ServiceModel.Description.MetadataExporter>、<xref:System.ServiceModel.Description.MetadataImporter>、<xref:System.ServiceModel.Description.WsdlExporter>、<xref:System.ServiceModel.Description.WsdlImporter> 和 <xref:System.ServiceModel.Description.MetadataResolver> 類別支援下列中繼資料規格：  
   
--   [XML 結構描述第 1 部分：結構第二版](https://go.microsoft.com/fwlink/?LinkId=3536)  
+- [XML 結構描述第 1 部分：結構第二版](https://go.microsoft.com/fwlink/?LinkId=3536)  
   
--   [XML 結構描述第 2 部分：資料類型第二版](https://go.microsoft.com/fwlink/?LinkId=40138)  
+- [XML 結構描述第 2 部分：資料類型第二版](https://go.microsoft.com/fwlink/?LinkId=40138)  
   
--   [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
+- [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
   
--   [WS-Policy 1.2](https://go.microsoft.com/fwlink/?LinkId=96705)  
+- [WS-Policy 1.2](https://go.microsoft.com/fwlink/?LinkId=96705)  
   
--   [WS-Policy 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
+- [WS-Policy 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
   
--   [WS-PolicyAttachment 1.2](https://go.microsoft.com/fwlink/?LinkId=96707)  
+- [WS-PolicyAttachment 1.2](https://go.microsoft.com/fwlink/?LinkId=96707)  
   
--   [WS-MetadataExchange 1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
+- [WS-MetadataExchange 1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
   
--   [Ws-transfer Get 擷取中繼資料](https://go.microsoft.com/fwlink/?LinkId=96708)  
+- [Ws-transfer Get 擷取中繼資料](https://go.microsoft.com/fwlink/?LinkId=96708)  
   
  此外，跨 WCF 實作下列互通性設定檔：  
   
--   [基本設定檔 1.1](https://go.microsoft.com/fwlink/?LinkId=69313)  
+- [基本設定檔 1.1](https://go.microsoft.com/fwlink/?LinkId=69313)  
   
--   [簡單 SOAP 繫結 1.0](https://go.microsoft.com/fwlink/?LinkId=96710)  
+- [簡單 SOAP 繫結 1.0](https://go.microsoft.com/fwlink/?LinkId=96710)  
   
--   [Basic Security Profile 1.0 工作草稿](https://go.microsoft.com/fwlink/?LinkId=96711)  
+- [Basic Security Profile 1.0 工作草稿](https://go.microsoft.com/fwlink/?LinkId=96711)  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -3,22 +3,22 @@ title: 動態地啟用分析的追蹤
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
 ms.openlocfilehash: 219561b1acd2259daad4c984dcf0b15517166c3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999457"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>動態地啟用分析的追蹤
 使用隨附於 Windows 作業系統的工具，您可以使用 Windows 事件追蹤 (ETW) 來動態啟用或停用追蹤。 所有[!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)]Windows Communication Foundation (WCF) 服務，分析追蹤可以啟用和停用，而不需要修改應用程式的 Web.config 檔案或重新啟動服務。 這樣可讓發出追蹤事件的應用程式維持不變。  
   
  類似的方式，就可以設定 WCF 追蹤選項。 例如，您可以將嚴重性層級從 **Error** 變更為 **Information** ，無須干擾應用程式。 使用下列工具即可達到這個目的：  
   
--   **Logman** – 命令列工具，用來設定、控制和查詢追蹤資料。 如需詳細資訊，請參閱 < [Logman 建立追蹤](https://go.microsoft.com/fwlink/?LinkId=165426)並[Logman 更新追蹤](https://go.microsoft.com/fwlink/?LinkId=165427)。  
+- **Logman** – 命令列工具，用來設定、控制和查詢追蹤資料。 如需詳細資訊，請參閱 < [Logman 建立追蹤](https://go.microsoft.com/fwlink/?LinkId=165426)並[Logman 更新追蹤](https://go.microsoft.com/fwlink/?LinkId=165427)。  
   
--   **EventViewer** - Windows 圖形管理工具，用來檢視追蹤結果。 如需詳細資訊，請參閱 < [WCF 服務與為 Windows 事件追蹤](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)並[事件檢視器](https://go.microsoft.com/fwlink/?LinkId=165428)。  
+- **EventViewer** - Windows 圖形管理工具，用來檢視追蹤結果。 如需詳細資訊，請參閱 < [WCF 服務與為 Windows 事件追蹤](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)並[事件檢視器](https://go.microsoft.com/fwlink/?LinkId=165428)。  
   
--   **Perfmon** – Windows 圖形管理工具，使用計數器來監事追蹤計數器和對於效能的追蹤效果。 如需詳細資訊，請參閱 <<c0> [ 資料收集器設定手動建立](https://go.microsoft.com/fwlink/?LinkId=165429)。  
+- **Perfmon** – Windows 圖形管理工具，使用計數器來監事追蹤計數器和對於效能的追蹤效果。 如需詳細資訊，請參閱 <<c0> [ 資料收集器設定手動建立](https://go.microsoft.com/fwlink/?LinkId=165429)。  
   
 ### <a name="keywords"></a>關鍵字  
  使用 <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> 類別時，.NET Framework 追蹤訊息一般會由嚴重性層級加以篩選 (例如，[錯誤]、[警告] 和 [資訊])。 ETW 支援嚴重性層級的概念，不過會使用關鍵字引入全新、有彈性的篩選機制。 關鍵字是任意的文字值，可讓追蹤事件提供額外的內容，說明該事件的意義。  

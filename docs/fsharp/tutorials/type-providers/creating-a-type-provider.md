@@ -3,17 +3,17 @@ title: 教學課程：建立型別提供者
 description: 了解如何建立您自己F#型別中的提供者F#3.0 藉由檢查幾個簡單的型別提供者，來說明基本概念。
 ms.date: 02/02/2019
 ms.openlocfilehash: 14e3035d03438aaaa2f6e64210f99e1f149db274
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982614"
 ---
 # <a name="tutorial-create-a-type-provider"></a>教學課程：建立型別提供者
 
 中的型別提供者機制F#是其支援資訊豐富程式設計的重要部分。 本教學課程說明如何建立您自己的型別提供者，方法是逐步說明的基本概念的幾個簡單的型別提供者的開發。 如需中的型別提供者機制F#，請參閱[型別提供者](index.md)。
 
-F#生態系統包含一組常用的網際網路和企業資料服務的型別提供者。 例如: 
+F#生態系統包含一組常用的網際網路和企業資料服務的型別提供者。 例如：
 
 - [FSharp.Data](https://fsharp.github.io/FSharp.Data/)包含型別提供者，如 JSON、 XML、 CSV 和 HTML 文件格式。
 

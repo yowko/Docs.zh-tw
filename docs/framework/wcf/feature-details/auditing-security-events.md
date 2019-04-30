@@ -5,11 +5,11 @@ helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048267"
 ---
 # <a name="auditing-security-events"></a>稽核安全性事件
 建立使用 Windows Communication Foundation (WCF) 的應用程式可以使用稽核功能記錄安全性事件 （成功、 失敗或兩者）。 事件會寫入至 Windows 系統事件記錄檔，並且可以使用 [事件檢視器] 加以檢查。  
@@ -21,9 +21,9 @@ ms.locfileid: "59101287"
 ## <a name="audit-level-and-behavior"></a>稽核層級和行為  
  安全性稽核目前有兩種層級：  
   
--   服務授權層級，其中呼叫者已獲得授權。  
+- 服務授權層級，其中呼叫者已獲得授權。  
   
--   訊息層級，WCF 會檢查訊息的有效性和驗證呼叫者。  
+- 訊息層級，WCF 會檢查訊息的有效性和驗證呼叫者。  
   
  您可以檢查兩種稽核層級為成功或失敗，我們稱之為*稽核行為*。  
   

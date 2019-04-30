@@ -6,11 +6,11 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62030367"
 ---
 # <a name="multimedia-overview"></a>多媒體概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的多媒體功能可讓您將音訊和視訊整合到您的應用程式中，以增強使用者體驗。 本主題介紹 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的多媒體功能。  
@@ -37,11 +37,11 @@ ms.locfileid: "59340486"
 ### <a name="independent-mode"></a>獨立模式  
  在獨立模式中，媒體內容會驅動媒體播放。 獨立模式提供下列選項：  
   
--   媒體的<xref:System.Uri>也可以直接指定。  
+- 媒體的<xref:System.Uri>也可以直接指定。  
   
--   可以直接控制媒體播放。  
+- 可以直接控制媒體播放。  
   
--   媒體的<xref:System.Windows.Controls.MediaElement.Position%2A>和<xref:System.Windows.Controls.MediaElement.SpeedRatio%2A>可以修改屬性。  
+- 媒體的<xref:System.Windows.Controls.MediaElement.Position%2A>和<xref:System.Windows.Controls.MediaElement.SpeedRatio%2A>可以修改屬性。  
   
  媒體載入其中一個設定所<xref:System.Windows.Controls.MediaElement>物件的<xref:System.Windows.Controls.MediaElement.Source%2A>屬性或來電 800-659-3579<xref:System.Windows.Media.MediaPlayer>物件的<xref:System.Windows.Media.MediaPlayer.Open%2A>方法。  
   
@@ -52,11 +52,11 @@ ms.locfileid: "59340486"
 ### <a name="clock-mode"></a>時鐘模式  
  在時鐘模式中，<xref:System.Windows.Media.MediaTimeline>播放媒體的磁碟機。 時鐘模式具有下列特性：  
   
--   媒體的<xref:System.Uri>間接設定透過<xref:System.Windows.Media.MediaTimeline>。  
+- 媒體的<xref:System.Uri>間接設定透過<xref:System.Windows.Media.MediaTimeline>。  
   
--   可由時鐘來控制媒體播放。 無法使用媒體物件的控制方法。  
+- 可由時鐘來控制媒體播放。 無法使用媒體物件的控制方法。  
   
--   藉由設定載入媒體<xref:System.Windows.Media.MediaTimeline>物件的<xref:System.Windows.Media.MediaTimeline.Source%2A>從時間軸建立時鐘，和將時鐘指派到媒體物件的屬性。 媒體也會載入這種方式時<xref:System.Windows.Media.MediaTimeline>內<xref:System.Windows.Media.Animation.Storyboard>目標<xref:System.Windows.Controls.MediaElement>。  
+- 藉由設定載入媒體<xref:System.Windows.Media.MediaTimeline>物件的<xref:System.Windows.Media.MediaTimeline.Source%2A>從時間軸建立時鐘，和將時鐘指派到媒體物件的屬性。 媒體也會載入這種方式時<xref:System.Windows.Media.MediaTimeline>內<xref:System.Windows.Media.Animation.Storyboard>目標<xref:System.Windows.Controls.MediaElement>。  
   
  在時鐘模式中，控制媒體播放<xref:System.Windows.Media.Animation.ClockController>必須使用控制方法。 A<xref:System.Windows.Media.Animation.ClockController>取自<xref:System.Windows.Media.Animation.ClockController>屬性<xref:System.Windows.Media.MediaClock>。 如果您嘗試使用控制方法<xref:System.Windows.Controls.MediaElement>或是<xref:System.Windows.Media.MediaPlayer>處於時鐘模式時，物件<xref:System.InvalidOperationException>就會擲回。  
   

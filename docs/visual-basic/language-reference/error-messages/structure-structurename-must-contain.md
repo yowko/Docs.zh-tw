@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
 ms.openlocfilehash: 598aef3943a53ee6eb97064819c9128de1839f52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055104"
 ---
 # <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>結構 '\<結構名稱 >' 必須包含至少一個執行個體成員變數或至少一個執行個體事件宣告未標記為 'Custom'
 結構的定義不包含任何非共用的變數或非共用的非自訂事件。  
@@ -23,7 +23,7 @@ ms.locfileid: "58813934"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   定義至少一個變數或不是`Shared`。 如果您定義只有一個事件時，它必須是非自訂，以及非共用。  
+- 定義至少一個變數或不是`Shared`。 如果您定義只有一個事件時，它必須是非自訂，以及非共用。  
   
 ## <a name="see-also"></a>另請參閱
 

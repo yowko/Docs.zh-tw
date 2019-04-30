@@ -14,18 +14,18 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
 ms.openlocfilehash: c899cfe1015a25adc25fc28ee84d0a37a397defe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028248"
 ---
 # <a name="version-tolerant-serialization"></a>版本相容序列化
 在 .NET Framework 1.0 和 1.1 版中，建立可以從應用程式的某個版本，延續到下一個版本使用的可序列化型別，有其問題存在。 如果型別因加入其他欄位而變更，將會發生下列問題：  
   
--   當要求將新版的舊型別還原序列化時，舊版應用程式會擲回例外狀況。  
+- 當要求將新版的舊型別還原序列化時，舊版應用程式會擲回例外狀況。  
   
--   新版的應用程式在還原序列化資料遺失的舊版型別時，會擲回例外狀況。  
+- 新版的應用程式在還原序列化資料遺失的舊版型別時，會擲回例外狀況。  
   
  版本相容序列化 (VTS) 為 .NET Framework 2.0 引進的一組功能，讓變更序列化型別隨著時間更加簡單。 具體地說，VTS 功能是為套用 <xref:System.SerializableAttribute> 屬性的類別啟用，包括泛型型別。 VTS 可在不破壞與其他版本之型別相容性的情況下，將新欄位加入那些類別。 如需可用的範例應用程式，請參閱[版本相容序列化技術範例](../../../docs/standard/serialization/version-tolerant-serialization-technology-sample.md)。  
   
@@ -36,11 +36,11 @@ ms.locfileid: "54584684"
 ## <a name="feature-list"></a>功能清單  
  功能集包括以下內容：  
   
--   沒有直接關聯的容錯或未預期的資料。 這樣可以讓新版的型別傳送資料給舊版的型別。  
+- 沒有直接關聯的容錯或未預期的資料。 這樣可以讓新版的型別傳送資料給舊版的型別。  
   
--   遺失的選用資料容錯。 這樣可以讓舊版傳送資料給新版。  
+- 遺失的選用資料容錯。 這樣可以讓舊版傳送資料給新版。  
   
--   序列化回呼。 這樣能在資料遺失時，啟用智慧性預設值設定。  
+- 序列化回呼。 這樣能在資料遺失時，啟用智慧性預設值設定。  
   
  除此之外，還有在新增了新選項欄位時宣告的功能。 這是 <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A> 屬性 (attribute) 的 <xref:System.Runtime.Serialization.OptionalFieldAttribute> 屬性 (property)。  
   
@@ -129,7 +129,7 @@ End Class
  \* 此回呼是在還原序列化建構函式之前叫用 (若有建構函式的話)。  
   
 ### <a name="using-callbacks"></a>使用回呼  
- 若要使用回呼，將適當屬性套用至接受 <xref:System.Runtime.Serialization.StreamingContext> 參數的方法。 每個類別只有一個方法可以使用每個這些屬性來標示。 例如：  
+ 若要使用回呼，將適當屬性套用至接受 <xref:System.Runtime.Serialization.StreamingContext> 參數的方法。 每個類別只有一個方法可以使用每個這些屬性來標示。 例如:   
   
 ```csharp  
 [OnDeserializing]  
@@ -262,23 +262,23 @@ End Class
 ## <a name="best-practices"></a>最佳作法  
  若要確定版本控制行為適當，修改版本中的型別時，請遵循這些規則：  
   
--   絕不移除已序列化的欄位。  
+- 絕不移除已序列化的欄位。  
   
--   若屬性在之前的版本未套用至欄位，絕不套用 <xref:System.NonSerializedAttribute> 屬性至欄位。  
+- 若屬性在之前的版本未套用至欄位，絕不套用 <xref:System.NonSerializedAttribute> 屬性至欄位。  
   
--   絕不變更名稱或序列化欄位的型別。  
+- 絕不變更名稱或序列化欄位的型別。  
   
--   新增新的序列化欄位時，請套用 **OptionalFieldAttribute** 屬性。  
+- 新增新的序列化欄位時，請套用 **OptionalFieldAttribute** 屬性。  
   
--   自欄位 (在先前版本中為不可序列化的欄位) 移除 **NonSerializedAttribute** 屬性時，請套用 **OptionalFieldAttribute** 屬性。  
+- 自欄位 (在先前版本中為不可序列化的欄位) 移除 **NonSerializedAttribute** 屬性時，請套用 **OptionalFieldAttribute** 屬性。  
   
--   對所有選擇性欄位，除非可接受 0 或 **null** 作為預設值，否則使用序列化回呼來設定有意義的預設值。  
+- 對所有選擇性欄位，除非可接受 0 或 **null** 作為預設值，否則使用序列化回呼來設定有意義的預設值。  
   
  若要確定型別與未來序列化引擎相容，請遵循下列方針：  
   
--   一律在 **OptionalFieldAttribute** 屬性 (attribute) 上正確設定 **VersionAdded** 屬性 (property)。  
+- 一律在 **OptionalFieldAttribute** 屬性 (attribute) 上正確設定 **VersionAdded** 屬性 (property)。  
   
--   避免分支版本控制。  
+- 避免分支版本控制。  
   
 ## <a name="see-also"></a>另請參閱
 
