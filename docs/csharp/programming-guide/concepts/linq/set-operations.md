@@ -30,17 +30,17 @@ LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是
   
  ![顯示 Distinct&#40;&#41; 之行為的圖形。](./media/set-operations/distinct-method-behavior.png)  
   
-### <a name="except"></a>Except
+### <a name="except"></a>Except  
  下圖說明 <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType> 的行為。 所傳回的序列只包含第一個輸入序列中不在第二個輸入序列中的項目。  
   
  ![顯示 Except&#40;&#41; 動作的圖形。](./media/set-operations/except-behavior-graphic.png "顯示 Except 的行為。")  
   
-### <a name="intersect"></a>Intersect
+### <a name="intersect"></a>Intersect  
  下圖說明 <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType> 的行為。 所傳回的序列包含兩個輸入序列共有的項目。  
   
  ![顯示兩種序列交集的圖形。](./media/set-operations/intersection-two-sequences.png)  
  
-### <a name="union"></a>Union
+### <a name="union"></a>Union  
  下圖說明兩個字元序列的聯合作業。 所傳回的序列包含兩個輸入序列中的唯一項目。  
   
  ![顯示兩個序列聯集的圖形。](./media/set-operations/union-operation-two-sequences.png)  

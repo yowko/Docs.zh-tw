@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33c790bf2721f09b263494e845356ef6b6712f99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 09079c8847b7cb995d97a4577d03982602bbadfa
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177134"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979169"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>ICLRControl::GetCLRManager 方法
 取得任何主應用程式可用來設定 common language runtime (CLR) 的管理員型別的執行個體的介面指標。  
@@ -52,10 +52,10 @@ HRESULT GetCLRManager (
   
 -   IID_ICLRPolicyManager:指定`ppObject`的類型會是[ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)。  
   
--   IID_ICLRTaskManager: speciries 所`ppObject`的類型會是[ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)。  
+-   IID_ICLRTaskManager:指定`ppObject`的類型會是[ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)。  
   
  `ppObject`  
- [out]要求的管理員] 中或如果要求不正確的管理員類型的 null 介面指標。  
+ [out]要求的管理員 中或如果要求不正確的管理員類型的 null 介面指標。  
   
 ## <a name="return-value"></a>傳回值  
   
