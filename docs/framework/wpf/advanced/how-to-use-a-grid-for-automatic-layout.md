@@ -6,30 +6,30 @@ helpviewer_keywords:
 - automatic layout [WPF], grid use
 ms.assetid: ab9de407-e0c1-4047-bdf0-24951bf73879
 ms.openlocfilehash: 590ad7292fea572b20ccaa09ce2886724e004a6a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052400"
 ---
-# <a name="how-to-use-a-grid-for-automatic-layout"></a><span data-ttu-id="a1bf2-102">HOW TO：針對自動版面配置使用格線</span><span class="sxs-lookup"><span data-stu-id="a1bf2-102">How to: Use a Grid for Automatic Layout</span></span>
-<span data-ttu-id="a1bf2-103">此範例說明如何使用自動版面配置方法中的格線，以建立當地語系化的應用程式。</span><span class="sxs-lookup"><span data-stu-id="a1bf2-103">This example describes how to use a grid in the automatic layout approach to creating a localizable application.</span></span>  
+# <a name="how-to-use-a-grid-for-automatic-layout"></a><span data-ttu-id="7cbd4-102">HOW TO：針對自動版面配置使用格線</span><span class="sxs-lookup"><span data-stu-id="7cbd4-102">How to: Use a Grid for Automatic Layout</span></span>
+<span data-ttu-id="7cbd4-103">此範例說明如何使用自動版面配置方法中的格線，以建立當地語系化的應用程式。</span><span class="sxs-lookup"><span data-stu-id="7cbd4-103">This example describes how to use a grid in the automatic layout approach to creating a localizable application.</span></span>  
   
- <span data-ttu-id="a1bf2-104">當地語系化[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]可以是耗時的程序。</span><span class="sxs-lookup"><span data-stu-id="a1bf2-104">Localization of a [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] can be a time consuming process.</span></span> <span data-ttu-id="a1bf2-105">當地語系化人員除了翻譯文字以外，通常還需要重新調整項目的大小並重新定位。</span><span class="sxs-lookup"><span data-stu-id="a1bf2-105">Often localizers need to re-size and reposition elements in addition to translating text.</span></span> <span data-ttu-id="a1bf2-106">在過去每一種語言，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]已調整的需要調整。</span><span class="sxs-lookup"><span data-stu-id="a1bf2-106">In the past each language that a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] was adapted for required adjustment.</span></span> <span data-ttu-id="a1bf2-107">現在使用的功能[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，您可以設計可降低的需求調整的項目。</span><span class="sxs-lookup"><span data-stu-id="a1bf2-107">Now with the capabilities of [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] you can design elements that reduce the need for adjustment.</span></span> <span data-ttu-id="a1bf2-108">在呼叫的方法來撰寫應用程式都可以更輕鬆地重新調整大小和重新置放`auto layout`。</span><span class="sxs-lookup"><span data-stu-id="a1bf2-108">The approach to writing applications that can be more easily re-sized and repositioned is called `auto layout`.</span></span>  
+ <span data-ttu-id="7cbd4-104">當地語系化[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]可以是耗時的程序。</span><span class="sxs-lookup"><span data-stu-id="7cbd4-104">Localization of a [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] can be a time consuming process.</span></span> <span data-ttu-id="7cbd4-105">當地語系化人員除了翻譯文字以外，通常還需要重新調整項目的大小並重新定位。</span><span class="sxs-lookup"><span data-stu-id="7cbd4-105">Often localizers need to re-size and reposition elements in addition to translating text.</span></span> <span data-ttu-id="7cbd4-106">在過去每一種語言，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]已調整的需要調整。</span><span class="sxs-lookup"><span data-stu-id="7cbd4-106">In the past each language that a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] was adapted for required adjustment.</span></span> <span data-ttu-id="7cbd4-107">現在使用的功能[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，您可以設計可降低的需求調整的項目。</span><span class="sxs-lookup"><span data-stu-id="7cbd4-107">Now with the capabilities of [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] you can design elements that reduce the need for adjustment.</span></span> <span data-ttu-id="7cbd4-108">在呼叫的方法來撰寫應用程式都可以更輕鬆地重新調整大小和重新置放`auto layout`。</span><span class="sxs-lookup"><span data-stu-id="7cbd4-108">The approach to writing applications that can be more easily re-sized and repositioned is called `auto layout`.</span></span>  
   
- <span data-ttu-id="a1bf2-109">下列[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]範例示範如何使用格線來定位部分按鈕和文字。</span><span class="sxs-lookup"><span data-stu-id="a1bf2-109">The following [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] example demonstrates using a grid to position some buttons and text.</span></span> <span data-ttu-id="a1bf2-110">請注意，儲存格的寬度與高度設為`Auto`; 因此包含影像的按鈕的資料格會調整，以符合影像大小。</span><span class="sxs-lookup"><span data-stu-id="a1bf2-110">Notice that the height and width of the cells are set to `Auto`; therefore the cell that contains the button with an image adjusts to fit the image.</span></span> <span data-ttu-id="a1bf2-111">因為<xref:System.Windows.Controls.Grid>項目可以調整它可用來設計可當地語系化的應用程式採用自動版面配置方法時其內容。</span><span class="sxs-lookup"><span data-stu-id="a1bf2-111">Because the <xref:System.Windows.Controls.Grid> element can adjust to its content it can be useful when taking the automatic layout approach to designing applications that can be localized.</span></span>  
+ <span data-ttu-id="7cbd4-109">下列[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]範例示範如何使用格線來定位部分按鈕和文字。</span><span class="sxs-lookup"><span data-stu-id="7cbd4-109">The following [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] example demonstrates using a grid to position some buttons and text.</span></span> <span data-ttu-id="7cbd4-110">請注意，儲存格的寬度與高度設為`Auto`; 因此包含影像的按鈕的資料格會調整，以符合影像大小。</span><span class="sxs-lookup"><span data-stu-id="7cbd4-110">Notice that the height and width of the cells are set to `Auto`; therefore the cell that contains the button with an image adjusts to fit the image.</span></span> <span data-ttu-id="7cbd4-111">因為<xref:System.Windows.Controls.Grid>項目可以調整它可用來設計可當地語系化的應用程式採用自動版面配置方法時其內容。</span><span class="sxs-lookup"><span data-stu-id="7cbd4-111">Because the <xref:System.Windows.Controls.Grid> element can adjust to its content it can be useful when taking the automatic layout approach to designing applications that can be localized.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a1bf2-112">範例</span><span class="sxs-lookup"><span data-stu-id="a1bf2-112">Example</span></span>  
- <span data-ttu-id="a1bf2-113">下列範例示範如何使用格線。</span><span class="sxs-lookup"><span data-stu-id="a1bf2-113">The following example shows how to use a grid.</span></span>  
+## <a name="example"></a><span data-ttu-id="7cbd4-112">範例</span><span class="sxs-lookup"><span data-stu-id="7cbd4-112">Example</span></span>  
+ <span data-ttu-id="7cbd4-113">下列範例示範如何使用格線。</span><span class="sxs-lookup"><span data-stu-id="7cbd4-113">The following example shows how to use a grid.</span></span>  
   
  [!code-xaml[LocalizationGrid#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
   
- <span data-ttu-id="a1bf2-114">下圖顯示程式碼範例的輸出。</span><span class="sxs-lookup"><span data-stu-id="a1bf2-114">The following graphic shows the output of the code sample.</span></span>  
+ <span data-ttu-id="7cbd4-114">下圖顯示程式碼範例的輸出。</span><span class="sxs-lookup"><span data-stu-id="7cbd4-114">The following graphic shows the output of the code sample.</span></span>  
   
- <span data-ttu-id="a1bf2-115">![格線範例](./media/glob-grid.png "glob_grid")</span><span class="sxs-lookup"><span data-stu-id="a1bf2-115">![Grid example](./media/glob-grid.png "glob_grid")</span></span>  
-<span data-ttu-id="a1bf2-116">Grid</span><span class="sxs-lookup"><span data-stu-id="a1bf2-116">Grid</span></span>  
+ <span data-ttu-id="7cbd4-115">![格線範例](./media/glob-grid.png "glob_grid")</span><span class="sxs-lookup"><span data-stu-id="7cbd4-115">![Grid example](./media/glob-grid.png "glob_grid")</span></span>  
+<span data-ttu-id="7cbd4-116">Grid</span><span class="sxs-lookup"><span data-stu-id="7cbd4-116">Grid</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a1bf2-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a1bf2-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7cbd4-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7cbd4-117">See also</span></span>
 
-- [<span data-ttu-id="a1bf2-118">使用自動配置概觀</span><span class="sxs-lookup"><span data-stu-id="a1bf2-118">Use Automatic Layout Overview</span></span>](use-automatic-layout-overview.md)
-- [<span data-ttu-id="a1bf2-119">使用自動版面配置建立按鈕</span><span class="sxs-lookup"><span data-stu-id="a1bf2-119">Use Automatic Layout to Create a Button</span></span>](how-to-use-automatic-layout-to-create-a-button.md)
+- [<span data-ttu-id="7cbd4-118">使用自動配置概觀</span><span class="sxs-lookup"><span data-stu-id="7cbd4-118">Use Automatic Layout Overview</span></span>](use-automatic-layout-overview.md)
+- [<span data-ttu-id="7cbd4-119">使用自動版面配置建立按鈕</span><span class="sxs-lookup"><span data-stu-id="7cbd4-119">Use Automatic Layout to Create a Button</span></span>](how-to-use-automatic-layout-to-create-a-button.md)

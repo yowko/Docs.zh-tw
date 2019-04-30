@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c14080e3ac128a6a7fbb48586f59d8a5ea4105f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049332"
 ---
-# <a name="loadtypelibwithresolver-function"></a><span data-ttu-id="81206-102">LoadTypeLibWithResolver 函式</span><span class="sxs-lookup"><span data-stu-id="81206-102">LoadTypeLibWithResolver Function</span></span>
-<span data-ttu-id="81206-103">載入類型程式庫，並使用所提供[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)來解析任何的內部參考的型別程式庫。</span><span class="sxs-lookup"><span data-stu-id="81206-103">Loads a type library and uses the supplied [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) to resolve any internally referenced type libraries.</span></span>  
+# <a name="loadtypelibwithresolver-function"></a><span data-ttu-id="db4a3-102">LoadTypeLibWithResolver 函式</span><span class="sxs-lookup"><span data-stu-id="db4a3-102">LoadTypeLibWithResolver Function</span></span>
+<span data-ttu-id="db4a3-103">載入類型程式庫，並使用所提供[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)來解析任何的內部參考的型別程式庫。</span><span class="sxs-lookup"><span data-stu-id="db4a3-103">Loads a type library and uses the supplied [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) to resolve any internally referenced type libraries.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="81206-104">語法</span><span class="sxs-lookup"><span data-stu-id="81206-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="db4a3-104">語法</span><span class="sxs-lookup"><span data-stu-id="db4a3-104">Syntax</span></span>  
   
 ```  
 HRESULT LoadTypeLibWithResolver(  
@@ -36,64 +36,64 @@ HRESULT LoadTypeLibWithResolver(
     [out] ITypeLib          **pptlib);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="81206-105">參數</span><span class="sxs-lookup"><span data-stu-id="81206-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="db4a3-105">參數</span><span class="sxs-lookup"><span data-stu-id="db4a3-105">Parameters</span></span>  
  `szFile`  
- <span data-ttu-id="81206-106">[in]型別程式庫檔案路徑。</span><span class="sxs-lookup"><span data-stu-id="81206-106">[in] The file path of the type library.</span></span>  
+ <span data-ttu-id="db4a3-106">[in]型別程式庫檔案路徑。</span><span class="sxs-lookup"><span data-stu-id="db4a3-106">[in] The file path of the type library.</span></span>  
   
  `regkind`  
- <span data-ttu-id="81206-107">[in]A [REGKIND 列舉](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind)控制型別程式庫的註冊方式的旗標。</span><span class="sxs-lookup"><span data-stu-id="81206-107">[in] A [REGKIND enumeration](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) flag that controls how the type library is registered.</span></span> <span data-ttu-id="81206-108">其可能的值為：</span><span class="sxs-lookup"><span data-stu-id="81206-108">Its possible values are:</span></span>  
+ <span data-ttu-id="db4a3-107">[in]A [REGKIND 列舉](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind)控制型別程式庫的註冊方式的旗標。</span><span class="sxs-lookup"><span data-stu-id="db4a3-107">[in] A [REGKIND enumeration](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) flag that controls how the type library is registered.</span></span> <span data-ttu-id="db4a3-108">其可能的值為：</span><span class="sxs-lookup"><span data-stu-id="db4a3-108">Its possible values are:</span></span>  
   
--   <span data-ttu-id="81206-109">`REGKIND_DEFAULT`：使用預設註冊行為。</span><span class="sxs-lookup"><span data-stu-id="81206-109">`REGKIND_DEFAULT`: Use default registration behavior.</span></span>  
+- <span data-ttu-id="db4a3-109">`REGKIND_DEFAULT`：使用預設註冊行為。</span><span class="sxs-lookup"><span data-stu-id="db4a3-109">`REGKIND_DEFAULT`: Use default registration behavior.</span></span>  
   
--   <span data-ttu-id="81206-110">`REGKIND_REGISTER`：註冊此型別程式庫。</span><span class="sxs-lookup"><span data-stu-id="81206-110">`REGKIND_REGISTER`: Register this type library.</span></span>  
+- <span data-ttu-id="db4a3-110">`REGKIND_REGISTER`：註冊此型別程式庫。</span><span class="sxs-lookup"><span data-stu-id="db4a3-110">`REGKIND_REGISTER`: Register this type library.</span></span>  
   
--   <span data-ttu-id="81206-111">`REGKIND_NONE`：請勿註冊此型別程式庫。</span><span class="sxs-lookup"><span data-stu-id="81206-111">`REGKIND_NONE`: Do not register this type library.</span></span>  
+- <span data-ttu-id="db4a3-111">`REGKIND_NONE`：請勿註冊此型別程式庫。</span><span class="sxs-lookup"><span data-stu-id="db4a3-111">`REGKIND_NONE`: Do not register this type library.</span></span>  
   
  `pTlbResolver`  
- <span data-ttu-id="81206-112">[in]實作的指標[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="81206-112">[in] A pointer to the implementation of the [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).</span></span>  
+ <span data-ttu-id="db4a3-112">[in]實作的指標[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="db4a3-112">[in] A pointer to the implementation of the [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).</span></span>  
   
  `pptlib`  
- <span data-ttu-id="81206-113">[out]正在載入類型程式庫的參考。</span><span class="sxs-lookup"><span data-stu-id="81206-113">[out] A reference to the type library that is being loaded.</span></span>  
+ <span data-ttu-id="db4a3-113">[out]正在載入類型程式庫的參考。</span><span class="sxs-lookup"><span data-stu-id="db4a3-113">[out] A reference to the type library that is being loaded.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="81206-114">傳回值</span><span class="sxs-lookup"><span data-stu-id="81206-114">Return Value</span></span>  
- <span data-ttu-id="81206-115">下表所列的 HRESULT 值之一。</span><span class="sxs-lookup"><span data-stu-id="81206-115">One of the HRESULT values listed in the following table.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="db4a3-114">傳回值</span><span class="sxs-lookup"><span data-stu-id="db4a3-114">Return Value</span></span>  
+ <span data-ttu-id="db4a3-115">下表所列的 HRESULT 值之一。</span><span class="sxs-lookup"><span data-stu-id="db4a3-115">One of the HRESULT values listed in the following table.</span></span>  
   
-|<span data-ttu-id="81206-116">傳回值</span><span class="sxs-lookup"><span data-stu-id="81206-116">Return value</span></span>|<span data-ttu-id="81206-117">意義</span><span class="sxs-lookup"><span data-stu-id="81206-117">Meaning</span></span>|  
+|<span data-ttu-id="db4a3-116">傳回值</span><span class="sxs-lookup"><span data-stu-id="db4a3-116">Return value</span></span>|<span data-ttu-id="db4a3-117">意義</span><span class="sxs-lookup"><span data-stu-id="db4a3-117">Meaning</span></span>|  
 |------------------|-------------|  
-|`S_OK`|<span data-ttu-id="81206-118">成功。</span><span class="sxs-lookup"><span data-stu-id="81206-118">Success.</span></span>|  
-|`E_OUTOFMEMORY`|<span data-ttu-id="81206-119">記憶體不足。</span><span class="sxs-lookup"><span data-stu-id="81206-119">Out of memory.</span></span>|  
-|`E_POINTER`|<span data-ttu-id="81206-120">一或多個指標均為無效。</span><span class="sxs-lookup"><span data-stu-id="81206-120">One or more of the pointers are invalid.</span></span>|  
-|`E_INVALIDARG`|<span data-ttu-id="81206-121">一或多個引數均為無效。</span><span class="sxs-lookup"><span data-stu-id="81206-121">One or more of the arguments are invalid.</span></span>|  
-|`TYPE_E_IOERROR`|<span data-ttu-id="81206-122">此函式無法寫入檔案。</span><span class="sxs-lookup"><span data-stu-id="81206-122">The function could not write to the file.</span></span>|  
-|`TYPE_E_REGISTRYACCESS`|<span data-ttu-id="81206-123">無法開啟系統註冊資料庫。</span><span class="sxs-lookup"><span data-stu-id="81206-123">The system registration database could not be opened.</span></span>|  
-|`TYPE_E_INVALIDSTATE`|<span data-ttu-id="81206-124">無法開啟型別程式庫。</span><span class="sxs-lookup"><span data-stu-id="81206-124">The type library could not be opened.</span></span>|  
-|`TYPE_E_CANTLOADLIBRARY`|<span data-ttu-id="81206-125">無法載入類型程式庫或 DLL。</span><span class="sxs-lookup"><span data-stu-id="81206-125">The type library or DLL could not be loaded.</span></span>|  
+|`S_OK`|<span data-ttu-id="db4a3-118">成功。</span><span class="sxs-lookup"><span data-stu-id="db4a3-118">Success.</span></span>|  
+|`E_OUTOFMEMORY`|<span data-ttu-id="db4a3-119">記憶體不足。</span><span class="sxs-lookup"><span data-stu-id="db4a3-119">Out of memory.</span></span>|  
+|`E_POINTER`|<span data-ttu-id="db4a3-120">一或多個指標均為無效。</span><span class="sxs-lookup"><span data-stu-id="db4a3-120">One or more of the pointers are invalid.</span></span>|  
+|`E_INVALIDARG`|<span data-ttu-id="db4a3-121">一或多個引數均為無效。</span><span class="sxs-lookup"><span data-stu-id="db4a3-121">One or more of the arguments are invalid.</span></span>|  
+|`TYPE_E_IOERROR`|<span data-ttu-id="db4a3-122">此函式無法寫入檔案。</span><span class="sxs-lookup"><span data-stu-id="db4a3-122">The function could not write to the file.</span></span>|  
+|`TYPE_E_REGISTRYACCESS`|<span data-ttu-id="db4a3-123">無法開啟系統註冊資料庫。</span><span class="sxs-lookup"><span data-stu-id="db4a3-123">The system registration database could not be opened.</span></span>|  
+|`TYPE_E_INVALIDSTATE`|<span data-ttu-id="db4a3-124">無法開啟型別程式庫。</span><span class="sxs-lookup"><span data-stu-id="db4a3-124">The type library could not be opened.</span></span>|  
+|`TYPE_E_CANTLOADLIBRARY`|<span data-ttu-id="db4a3-125">無法載入類型程式庫或 DLL。</span><span class="sxs-lookup"><span data-stu-id="db4a3-125">The type library or DLL could not be loaded.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="81206-126">備註</span><span class="sxs-lookup"><span data-stu-id="81206-126">Remarks</span></span>  
- <span data-ttu-id="81206-127">[Tlbexp.exe （類型程式庫匯出工具）](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)呼叫`LoadTypeLibWithResolver`在組件至型別程式庫轉換過程中的函式。</span><span class="sxs-lookup"><span data-stu-id="81206-127">The [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) calls the `LoadTypeLibWithResolver` function during the assembly-to-type-library conversion process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="db4a3-126">備註</span><span class="sxs-lookup"><span data-stu-id="db4a3-126">Remarks</span></span>  
+ <span data-ttu-id="db4a3-127">[Tlbexp.exe （類型程式庫匯出工具）](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)呼叫`LoadTypeLibWithResolver`在組件至型別程式庫轉換過程中的函式。</span><span class="sxs-lookup"><span data-stu-id="db4a3-127">The [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) calls the `LoadTypeLibWithResolver` function during the assembly-to-type-library conversion process.</span></span>  
   
- <span data-ttu-id="81206-128">此函式會載入至登錄的最小存取指定的型別程式庫。</span><span class="sxs-lookup"><span data-stu-id="81206-128">This function loads the specified type library with minimal access to the registry.</span></span> <span data-ttu-id="81206-129">函式接著會檢查內部參考的型別程式庫，其中每個必須載入並加入至父型別程式庫的類型程式庫。</span><span class="sxs-lookup"><span data-stu-id="81206-129">The function then examines the type library for internally referenced type libraries, each of which must be loaded and added to the parent type library.</span></span>  
+ <span data-ttu-id="db4a3-128">此函式會載入至登錄的最小存取指定的型別程式庫。</span><span class="sxs-lookup"><span data-stu-id="db4a3-128">This function loads the specified type library with minimal access to the registry.</span></span> <span data-ttu-id="db4a3-129">函式接著會檢查內部參考的型別程式庫，其中每個必須載入並加入至父型別程式庫的類型程式庫。</span><span class="sxs-lookup"><span data-stu-id="db4a3-129">The function then examines the type library for internally referenced type libraries, each of which must be loaded and added to the parent type library.</span></span>  
   
- <span data-ttu-id="81206-130">可以載入參考的型別程式庫之前，必須解析其參考檔案路徑的完整檔案路徑。</span><span class="sxs-lookup"><span data-stu-id="81206-130">Before a referenced type library can be loaded, its reference file path must be resolved to a full file path.</span></span> <span data-ttu-id="81206-131">這透過達成[ResolveTypeLib 方法](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)所提供[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)，這會傳入`pTlbResolver`參數。</span><span class="sxs-lookup"><span data-stu-id="81206-131">This is accomplished through the [ResolveTypeLib method](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md) that is provided by the [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md), which is passed in the `pTlbResolver` parameter.</span></span>  
+ <span data-ttu-id="db4a3-130">可以載入參考的型別程式庫之前，必須解析其參考檔案路徑的完整檔案路徑。</span><span class="sxs-lookup"><span data-stu-id="db4a3-130">Before a referenced type library can be loaded, its reference file path must be resolved to a full file path.</span></span> <span data-ttu-id="db4a3-131">這透過達成[ResolveTypeLib 方法](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)所提供[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)，這會傳入`pTlbResolver`參數。</span><span class="sxs-lookup"><span data-stu-id="db4a3-131">This is accomplished through the [ResolveTypeLib method](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md) that is provided by the [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md), which is passed in the `pTlbResolver` parameter.</span></span>  
   
- <span data-ttu-id="81206-132">當已知的參考的類型程式庫的完整檔案路徑時，`LoadTypeLibWithResolver`函式載入，並將參考的類型程式庫加入至父型別程式庫，建立合併的主要類型程式庫。</span><span class="sxs-lookup"><span data-stu-id="81206-132">When the full file path of the referenced type library is known, the `LoadTypeLibWithResolver` function loads and adds the referenced type library to the parent type library, creating a combined master type library.</span></span>  
+ <span data-ttu-id="db4a3-132">當已知的參考的類型程式庫的完整檔案路徑時，`LoadTypeLibWithResolver`函式載入，並將參考的類型程式庫加入至父型別程式庫，建立合併的主要類型程式庫。</span><span class="sxs-lookup"><span data-stu-id="db4a3-132">When the full file path of the referenced type library is known, the `LoadTypeLibWithResolver` function loads and adds the referenced type library to the parent type library, creating a combined master type library.</span></span>  
   
- <span data-ttu-id="81206-133">函式會解析並載入所有的內部參考的型別程式庫之後，它會傳回的主要解析的型別程式庫中的參考`pptlib`參數。</span><span class="sxs-lookup"><span data-stu-id="81206-133">After the function resolves and loads all internally referenced type libraries, it returns a reference to the master resolved type library in the `pptlib` parameter.</span></span>  
+ <span data-ttu-id="db4a3-133">函式會解析並載入所有的內部參考的型別程式庫之後，它會傳回的主要解析的型別程式庫中的參考`pptlib`參數。</span><span class="sxs-lookup"><span data-stu-id="db4a3-133">After the function resolves and loads all internally referenced type libraries, it returns a reference to the master resolved type library in the `pptlib` parameter.</span></span>  
   
- <span data-ttu-id="81206-134">`LoadTypeLibWithResolver`通常會呼叫函式[Tlbexp.exe （類型程式庫匯出工具）](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)，提供其本身內部[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)中的實作`pTlbResolver`參數。</span><span class="sxs-lookup"><span data-stu-id="81206-134">The `LoadTypeLibWithResolver` function is generally called by the [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), which supplies its own internal [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementation in the `pTlbResolver` parameter.</span></span>  
+ <span data-ttu-id="db4a3-134">`LoadTypeLibWithResolver`通常會呼叫函式[Tlbexp.exe （類型程式庫匯出工具）](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)，提供其本身內部[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)中的實作`pTlbResolver`參數。</span><span class="sxs-lookup"><span data-stu-id="db4a3-134">The `LoadTypeLibWithResolver` function is generally called by the [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), which supplies its own internal [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementation in the `pTlbResolver` parameter.</span></span>  
   
- <span data-ttu-id="81206-135">如果您呼叫`LoadTypeLibWithResolver`直接管理，您必須提供您自己[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)實作。</span><span class="sxs-lookup"><span data-stu-id="81206-135">If you call `LoadTypeLibWithResolver` directly, you must supply your own [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementation.</span></span>  
+ <span data-ttu-id="db4a3-135">如果您呼叫`LoadTypeLibWithResolver`直接管理，您必須提供您自己[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)實作。</span><span class="sxs-lookup"><span data-stu-id="db4a3-135">If you call `LoadTypeLibWithResolver` directly, you must supply your own [ITypeLibResolver interface](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="81206-136">需求</span><span class="sxs-lookup"><span data-stu-id="81206-136">Requirements</span></span>  
- <span data-ttu-id="81206-137">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="81206-137">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="db4a3-136">需求</span><span class="sxs-lookup"><span data-stu-id="db4a3-136">Requirements</span></span>  
+ <span data-ttu-id="db4a3-137">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="db4a3-137">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="81206-138">**標頭：** TlbRef.h</span><span class="sxs-lookup"><span data-stu-id="81206-138">**Header:** TlbRef.h</span></span>  
+ <span data-ttu-id="db4a3-138">**標頭：** TlbRef.h</span><span class="sxs-lookup"><span data-stu-id="db4a3-138">**Header:** TlbRef.h</span></span>  
   
- <span data-ttu-id="81206-139">**LIBRARY:** TlbRef.lib</span><span class="sxs-lookup"><span data-stu-id="81206-139">**Library:** TlbRef.lib</span></span>  
+ <span data-ttu-id="db4a3-139">**LIBRARY:** TlbRef.lib</span><span class="sxs-lookup"><span data-stu-id="db4a3-139">**Library:** TlbRef.lib</span></span>  
   
- <span data-ttu-id="81206-140">**.NET framework 版本：** 3.5, 3.0, 2.0</span><span class="sxs-lookup"><span data-stu-id="81206-140">**.NET Framework Version:** 3.5, 3.0, 2.0</span></span>  
+ <span data-ttu-id="db4a3-140">**.NET framework 版本：** 3.5, 3.0, 2.0</span><span class="sxs-lookup"><span data-stu-id="db4a3-140">**.NET Framework Version:** 3.5, 3.0, 2.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="81206-141">另請參閱</span><span class="sxs-lookup"><span data-stu-id="81206-141">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="db4a3-141">另請參閱</span><span class="sxs-lookup"><span data-stu-id="db4a3-141">See also</span></span>
 
-- [<span data-ttu-id="81206-142">Tlbexp Helper 函式</span><span class="sxs-lookup"><span data-stu-id="81206-142">Tlbexp Helper Functions</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
-- [<span data-ttu-id="81206-143">LoadTypeLibEx 函式</span><span class="sxs-lookup"><span data-stu-id="81206-143">LoadTypeLibEx Function</span></span>](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+- [<span data-ttu-id="db4a3-142">Tlbexp Helper 函式</span><span class="sxs-lookup"><span data-stu-id="db4a3-142">Tlbexp Helper Functions</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [<span data-ttu-id="db4a3-143">LoadTypeLibEx 函式</span><span class="sxs-lookup"><span data-stu-id="db4a3-143">LoadTypeLibEx Function</span></span>](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
