@@ -6,11 +6,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
 ms.openlocfilehash: c9193ffa9ef34f1e43a92feec230fa2282264147
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966981"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>滑鼠輸入在 Windows Form 中的運作方式
 接收和處理滑鼠輸入是每個 Windows 應用程式中很重要的一部分。 您可以處理滑鼠事件，以在您的應用程式中執行的動作，或使用滑鼠位置資訊來執行點擊測試或其他動作。 此外，您可以變更您的應用程式中的控制項處理滑鼠輸入的方式。 本主題將描述這些詳細資料，以及如何取得和變更系統設定滑鼠的滑鼠事件。 如需使用滑鼠所提供的資料事件並在其中按一下滑鼠事件的順序引發，請參閱 < [Windows Form 中的滑鼠事件](mouse-events-in-windows-forms.md)。  

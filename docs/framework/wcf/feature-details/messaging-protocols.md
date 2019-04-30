@@ -3,11 +3,11 @@ title: 訊息通訊協定
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
 ms.openlocfilehash: a5292914cfebc79bf8a9af1c852dd8feec99eba4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948118"
 ---
 # <a name="messaging-protocols"></a>訊息通訊協定
 
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) 通道堆疊利用編碼和傳輸通道�
 - [XML](https://www.w3.org/TR/REC-xml)
 - [SOAP 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)
 - [SOAP 1.2 核心](https://www.w3.org/TR/soap12-part1/)
-- [Ws-addressing 2004/08](https://www.w3.org/Submission/2004/SUBM-ws-addressing-20040810/)
+- [WS-Addressing 2004/08](https://www.w3.org/Submission/2004/SUBM-ws-addressing-20040810/)
 - [W3C Web 服務定址 1.0-核心](https://www.w3.org/TR/2006/REC-ws-addr-core-20060509)
 - [W3C Web 服務定址 1.0-SOAP 繫結](https://www.w3.org/TR/2006/REC-ws-addr-soap-20060509)
 - [W3C Web 服務定址 1.0-WSDL 繫結](https://www.w3.org/TR/2006/CR-ws-addr-wsdl-20060529/)
@@ -388,7 +388,7 @@ Content-Length: 0
 
 可以搭配使用 WCF 非 HTTP 傳輸的 MTOM。 不過，在本主題中，我們將專注在 HTTP 上。
 
-MTOM 格式利用了大量的規格集，其中涵蓋了 MTOM 本身、XOP 和 MIME。 此規格集的模組化使其稍微難以重新建構格式及處理語意的正確需求。 本節將描述 MTOM HTTP 繫結的格式和處理需求。
+MTOM 格式利用了大量的規格集，其中涵蓋了 MTOM 本身、XOP 和 MIME。 此規格集的模組化使其稍微難以重新建構格式及處理語意的正確需求。 本節將描述 MTOM HTTP 繫結程序的格式和處理需求。
 
 ### <a name="mtom-message-encoding"></a>MTOM 訊息編碼
 

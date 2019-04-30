@@ -15,11 +15,11 @@ helpviewer_keywords:
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
 ms.openlocfilehash: 1da5de4971928ca23a23c4dcfc5f338c4d7a3875
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971778"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte 資料類型 (Visual Basic)
 
@@ -46,7 +46,7 @@ ms.locfileid: "54719569"
 
 [!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]  
 
-從 Visual Basic 15.5 開始，您也可以使用底線字元 (`_`) 作為前置分隔符號之間的前置詞和十六進位、 二進位或八進位數字。 例如: 
+從 Visual Basic 15.5 開始，您也可以使用底線字元 (`_`) 作為前置分隔符號之間的前置詞和十六進位、 二進位或八進位數字。 例如：
 
 ```vb
 Dim number As SByte = &H_F9
@@ -64,13 +64,13 @@ Dim number As SByte = &H_F9
 
 ## <a name="programming-tips"></a>程式設計提示
   
--   **CLS 合規性。** `SByte`資料類型不是屬於[Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) （cls） 標準，所以符合 CLS 標準的程式碼無法取用使用它的元件。
+- **CLS 合規性。** `SByte`資料類型不是屬於[Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) （cls） 標準，所以符合 CLS 標準的程式碼無法取用使用它的元件。
 
--   **擴展。** `SByte`資料類型可擴展為`Short`， `Integer`， `Long`， `Decimal`， `Single`，和`Double`。 這表示您可以將轉換`SByte`任何一種類型，而不會發生<xref:System.OverflowException?displayProperty=nameWithType>時發生錯誤。
+- **擴展。** `SByte`資料類型可擴展為`Short`， `Integer`， `Long`， `Decimal`， `Single`，和`Double`。 這表示您可以將轉換`SByte`任何一種類型，而不會發生<xref:System.OverflowException?displayProperty=nameWithType>時發生錯誤。
   
--   **類型字元。** `SByte` 沒有任何常值類型字元或識別項類型字元。  
+- **類型字元。** `SByte` 沒有任何常值類型字元或識別項類型字元。  
   
--   **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.SByte?displayProperty=nameWithType> 結構。
+- **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.SByte?displayProperty=nameWithType> 結構。
   
 ## <a name="see-also"></a>另請參閱
 

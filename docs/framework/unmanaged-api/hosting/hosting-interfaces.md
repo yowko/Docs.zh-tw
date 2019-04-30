@@ -9,11 +9,11 @@ ms.assetid: cc64cb05-38da-418e-815a-daac8e8e26e5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e330e0d06077d1eef63cf44f31bbcbf7c3431b59
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985539"
 ---
 # <a name="hosting-interfaces"></a>裝載介面
 本節描述 unmanaged 介面主機可用來將 common language runtime (CLR) 整合到他們的應用程式。  

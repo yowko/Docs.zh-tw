@@ -5,11 +5,11 @@ ms.assetid: 34a10ac2-882c-4797-8369-f120e8e640c7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 518c6ec99e4062bf8432809d3472baa395017da3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948614"
 ---
 # <a name="icordebugprocess6-interface"></a>ICorDebugProcess6 介面
 以邏輯方式擴充 ICorDebugProcess 介面，以啟用功能，例如解碼的編碼原生例外狀況偵錯事件，以及虛擬模組分割的 managed 偵錯事件。  

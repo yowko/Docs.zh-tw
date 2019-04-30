@@ -13,11 +13,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: bd8bd9b2-af8a-4f11-a3d5-54eecbe2400b
 ms.openlocfilehash: 16dbe4da1efecd120d4da4d66c3d79ec907b92a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947988"
 ---
 # <a name="how-to-reflect-data-source-updates-in-a-windows-forms-control-with-the-bindingsource"></a>HOW TO：使用 BindingSource 反映 Windows Forms 控制項中的資料來源更新
 當您使用資料繫結控制項時，如果資料來源未引發清單變更事件，您有時必須回應資料來源中的變更。 當您使用 <xref:System.Windows.Forms.BindingSource> 元件將資料來源繫結至 Windows Form 控制項時，可藉由呼叫 <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> 方法來通知控制項資料來源已變更。  
@@ -32,7 +32,7 @@ ms.locfileid: "59218640"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   System、System.Drawing 和 System.Windows.Forms 組件的參考。  
+- System、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   

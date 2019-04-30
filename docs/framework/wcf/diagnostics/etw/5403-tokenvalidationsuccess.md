@@ -3,18 +3,18 @@ title: 5403 - TokenValidationSuccess
 ms.date: 03/30/2017
 ms.assetid: 322efeb2-8081-4d3c-ab92-31d5b236f4d3
 ms.openlocfilehash: bdb95333483a0e749b1546cacae5cacd649ce6e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33469290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955269"
 ---
 # <a name="5403---tokenvalidationsuccess"></a>5403 - TokenValidationSuccess
 ## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
-|ID|5403|  
+|識別碼|5403|  
 |關鍵字|安全性|  
 |層級|詳細資訊|  
 |通道|Microsoft-Windows-Application Server-Applications/Debug|  

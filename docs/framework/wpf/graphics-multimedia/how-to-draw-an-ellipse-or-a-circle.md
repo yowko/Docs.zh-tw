@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [WPF], drawing ellipses
 ms.assetid: 99763b8c-bfc8-44be-8231-8a70daf5481a
 ms.openlocfilehash: 1393e158c1787dc7d4e44e5e1c90ed2e65666dc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947559"
 ---
 # <a name="how-to-draw-an-ellipse-or-a-circle"></a>HOW TO：繪製橢圓形或圓形
 此範例示範如何使用繪製橢圓形和圓形<xref:System.Windows.Shapes.Ellipse>項目。 若要繪製橢圓形，建立<xref:System.Windows.Shapes.Ellipse>項目，並指定其<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>。 使用其<xref:System.Windows.Shapes.Shape.Fill%2A>屬性來指定<xref:System.Windows.Media.Brush>，用來繪製橢圓形內部。 使用其<xref:System.Windows.Shapes.Shape.Stroke%2A>屬性來指定<xref:System.Windows.Media.Brush>，用來繪製外框的橢圓形。 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>屬性指定的橢圓形外框粗細。  

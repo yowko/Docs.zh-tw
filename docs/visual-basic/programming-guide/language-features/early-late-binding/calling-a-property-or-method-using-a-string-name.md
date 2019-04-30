@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
 ms.openlocfilehash: e267c0c4d1d3e8f986348863d933c984f686b33b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973338"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>使用字串名稱呼叫屬性或方法 (Visual Basic)
 在大部分情況下，您可以在設計階段探索的屬性和方法的物件和撰寫程式碼來處理它們。 不過，在某些情況下您可能不知道物件的屬性和方法事先，或者您可能只想讓使用者指定的屬性，或在執行階段執行方法的彈性。  

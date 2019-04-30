@@ -11,11 +11,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], manipulating bands
 ms.assetid: 1ea3470e-480f-4edc-bcbd-51373eca3856
 ms.openlocfilehash: 848ae7c88e2531806bf97b05cc0fe6d2388977fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971206"
 ---
 # <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>HOW TO：管理 Windows Forms DataGridView 控制項中的寬線
 下列程式碼範例示範使用 <xref:System.Windows.Forms.DataGridViewBand> 類別的屬性來管理 <xref:System.Windows.Forms.DataGridView> 資料列和資料行的各種方式，<xref:System.Windows.Forms.DataGridViewRow> 和 <xref:System.Windows.Forms.DataGridViewColumn> 類別便是衍生自這個類別。  
@@ -28,7 +28,7 @@ ms.locfileid: "59162367"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   System、System.Drawing 和 System.Windows.Forms 組件的參考。  
+- System、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   

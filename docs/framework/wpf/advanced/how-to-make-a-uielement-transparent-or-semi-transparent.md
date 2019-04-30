@@ -8,11 +8,11 @@ helpviewer_keywords:
 - UIElements [WPF], opacity
 ms.assetid: a49fc8d6-7b32-4f28-9122-39b632a19b4b
 ms.openlocfilehash: 1de9a7e11fee241ecb71242e9808e77b7e5e63b0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942866"
 ---
 # <a name="how-to-make-a-uielement-transparent-or-semi-transparent"></a>HOW TO：將 UIElement 設為透明或半透明
 此範例示範如何讓<xref:System.Windows.UIElement>透明或半透明。 若要透明或半透明，請將項目，您將其<xref:System.Windows.UIElement.Opacity%2A>屬性。 值為`0.0`使項目完全透明，而值為`1.0`讓項目完全不透明。 值為`0.5`讓項目 50%不透明，依此類推。 項目的<xref:System.Windows.UIElement.Opacity%2A>設為`1.0`預設。  

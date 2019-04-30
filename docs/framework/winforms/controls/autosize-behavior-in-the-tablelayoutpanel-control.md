@@ -12,19 +12,19 @@ helpviewer_keywords:
 - AutoSizeMode property
 ms.assetid: 9233e0c3-2fa6-405e-8701-959479b1250e
 ms.openlocfilehash: 466edeee5f45ec72ef265ef4855049c7852641b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954345"
 ---
 # <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a>AutoSize 在 TableLayoutPanel 控制項中的行為
 ## <a name="distinct-autosize-behaviors"></a>不同的調整行為  
  <xref:System.Windows.Forms.TableLayoutPanel>控制項支援自動調整大小行為如下：  
   
--   透過<xref:System.Windows.Forms.Control.AutoSize%2A>屬性;  
+- 透過<xref:System.Windows.Forms.Control.AutoSize%2A>屬性;  
   
--   透過<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>屬性上的<xref:System.Windows.Forms.TableLayoutPanel>控制項的資料行和資料列的樣式。  
+- 透過<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>屬性上的<xref:System.Windows.Forms.TableLayoutPanel>控制項的資料行和資料列的樣式。  
   
 ### <a name="the-autosize-property-with-row-and-column-styles"></a>AutoSize 屬性與資料列和資料行樣式  
  下表描述之間的互動<xref:System.Windows.Forms.Control.AutoSize%2A>屬性和<xref:System.Windows.Forms.TableLayoutPanel>控制項的資料行和資料列的樣式。  

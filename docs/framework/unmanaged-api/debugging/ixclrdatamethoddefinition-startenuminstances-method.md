@@ -16,11 +16,11 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: e92eea9677731756bdbfcbdcfac1531861fb5dce
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961261"
 ---
 # <a name="ixclrdatamethoddefinitionstartenuminstances-method"></a>IXCLRDataMethodDefinition::StartEnumInstances 方法
 
@@ -52,8 +52,8 @@ HRESULT StartEnumInstances(
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**標頭：** 無  
-**程式庫：** 無  
+**標頭：** None  
+**LIBRARY:** None  
 **.NET framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>另請參閱

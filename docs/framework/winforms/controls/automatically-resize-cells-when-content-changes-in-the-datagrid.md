@@ -11,11 +11,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], resizing cells
 ms.assetid: 1d68934d-a04c-4b12-9e66-c856c6828131
 ms.openlocfilehash: 7acd7777ede726b9dfed2b821e4248a0ebf7797f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954319"
 ---
 # <a name="how-to-automatically-resize-cells-when-content-changes-in-the-windows-forms-datagridview-control"></a>HOW TO：在 Windows Forms DataGridView 控制項的內容變更時自動調整儲存格大小
 您可以將 <xref:System.Windows.Forms.DataGridView> 控制項設定為每當內容變更就自動調整其資料列、資料行和標頭大小，讓儲存格的大小永遠足以容納並顯示所有的值，不發生內容截斷的情況。  
@@ -34,9 +34,9 @@ ms.locfileid: "59182490"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   System、System.Drawing 和 System.Windows.Forms 組件的參考。  
+- System、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
--   Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。
+- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。
   
 ## <a name="see-also"></a>另請參閱
 

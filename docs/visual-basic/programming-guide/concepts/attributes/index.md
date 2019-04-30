@@ -3,24 +3,24 @@ title: 屬性概觀 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
 ms.openlocfilehash: bb012b49c76963306d723d7732b4c7054bf13ebb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968047"
 ---
 # <a name="attributes-overview-visual-basic"></a>屬性概觀 (Visual Basic)
 屬性提供一種功能強大的方法，可將中繼資料或宣告資訊關聯至程式碼 (組建、型別、方法、屬性等)。 將屬性關聯至程式實體之後，就能在執行階段使用稱為「反映」的技術來查詢該屬性。 如需詳細資訊，請參閱[反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)。  
   
  屬性 (Attribute) 包含下列屬性 (Property)：  
   
--   屬性會將中繼資料新增至您的程式。 「中繼資料」是在程式中定義的型別相關資訊。 所有的 .NET 組件都包含一組指定的中繼資料，來描述組件中所定義的型別和型別成員。 您可以新增自訂屬性來指定所需的任何其他資訊。 如需詳細資訊，請參閱[建立自訂屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)。  
+- 屬性會將中繼資料新增至您的程式。 「中繼資料」是在程式中定義的型別相關資訊。 所有的 .NET 組件都包含一組指定的中繼資料，來描述組件中所定義的型別和型別成員。 您可以新增自訂屬性來指定所需的任何其他資訊。 如需詳細資訊，請參閱[建立自訂屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)。  
   
--   您可以將一或多個屬性 (Attribute) 套用至整個組件、模組或較小的程式元素，例如類別和屬性 (Property)。  
+- 您可以將一或多個屬性 (Attribute) 套用至整個組件、模組或較小的程式元素，例如類別和屬性 (Property)。  
   
--   屬性 (Attribute) 可以利用與方法與屬性 (Property) 相同的方式來接受引數。  
+- 屬性 (Attribute) 可以利用與方法與屬性 (Property) 相同的方式來接受引數。  
   
--   您的程式可以使用反映，來檢查自己的中繼資料或其他程式的中繼資料。 如需詳細資訊，請參閱[使用反映存取屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)。  
+- 您的程式可以使用反映，來檢查自己的中繼資料或其他程式的中繼資料。 如需詳細資訊，請參閱[使用反映存取屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)。  
   
 ## <a name="using-attributes"></a>使用屬性  
  屬性可以放置於大多數的任意宣告中，但特定的屬性可能會限制它適用的宣告型別。 在 Visual Basic 中，會使用角括弧 (\< >) 將屬性括起來。 它必須出現在同一行中要套用它的元素正前方。  
@@ -107,40 +107,40 @@ Module: CLSCompliant(True)>
 ## <a name="common-uses-for-attributes"></a>屬性的常見用法  
  下列清單包含一些程式碼中常見的屬性用法：  
   
--   在 Web 服務中使用 `WebMethod` 屬性標示方法，以表示此方法應該可以透過 SOAP 通訊協定來呼叫。 如需詳細資訊，請參閱<xref:System.Web.Services.WebMethodAttribute>。  
+- 在 Web 服務中使用 `WebMethod` 屬性標示方法，以表示此方法應該可以透過 SOAP 通訊協定來呼叫。 如需詳細資訊，請參閱<xref:System.Web.Services.WebMethodAttribute>。  
   
--   描述在與原生程式碼交互作用時，如何封送處理方法參數。 如需詳細資訊，請參閱<xref:System.Runtime.InteropServices.MarshalAsAttribute>。  
+- 描述在與原生程式碼交互作用時，如何封送處理方法參數。 如需詳細資訊，請參閱<xref:System.Runtime.InteropServices.MarshalAsAttribute>。  
   
--   描述適用於類別、方法和介面的 COM 屬性。  
+- 描述適用於類別、方法和介面的 COM 屬性。  
   
--   使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 類別呼叫 Unmanaged 程式碼。  
+- 使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 類別呼叫 Unmanaged 程式碼。  
   
--   針對標題、版本、描述或商標等方面來描述您的組件。  
+- 針對標題、版本、描述或商標等方面來描述您的組件。  
   
--   描述要將類別的哪些成員序列化以取得持續性。  
+- 描述要將類別的哪些成員序列化以取得持續性。  
   
--   描述如何基於 XML 序列化目的，在類別成員與 XML 節點之間進行對應。  
+- 描述如何基於 XML 序列化目的，在類別成員與 XML 節點之間進行對應。  
   
--   描述方法的安全性需求。  
+- 描述方法的安全性需求。  
   
--   指定用來強制執行安全性的特性。  
+- 指定用來強制執行安全性的特性。  
   
--   控制由 Just-In-Time (JIT) 編譯器所進行的最佳化，讓程式碼保持易於偵錯。  
+- 控制由 Just-In-Time (JIT) 編譯器所進行的最佳化，讓程式碼保持易於偵錯。  
   
--   取得有關方法之呼叫端的資訊。  
+- 取得有關方法之呼叫端的資訊。  
   
 ## <a name="related-sections"></a>相關章節  
  如需詳細資訊，請參閱:  
   
--   [建立自訂屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+- [建立自訂屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
   
--   [使用反映存取屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
+- [使用反映存取屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
   
--   [如何：建立 C /C++聯集，使用屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [如何：建立 C /C++聯集，使用屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
   
--   [通用屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
+- [通用屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
   
--   [呼叫端資訊 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
+- [呼叫端資訊 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
 ## <a name="see-also"></a>另請參閱
 

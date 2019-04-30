@@ -6,11 +6,11 @@ helpviewer_keywords:
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
 ms.openlocfilehash: 85d089813a455784fde679e9200a9b29b956af8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006397"
 ---
 # <a name="windows-service-host"></a>Windows 服務主機
 這個範例會示範裝載在 managed Windows 服務的 Windows Communication Foundation (WCF) 服務。 Windows 服務使用中的 [服務] 小程式來控制**控制台中**和可以設定為在系統重新開機後自動啟動。 範例是由用戶端程式與 Windows 服務程式所組成。 服務會實作為 .exe 程式並包含專屬的裝載程式碼。 在其他裝載環境中，例如 Windows 處理序啟用服務 (WAS) 或 Internet Information Services (IIS)，就不需要撰寫裝載程式碼。

@@ -3,11 +3,11 @@ title: HOW TO：序列化及還原序列化 JSON 資料
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
 ms.openlocfilehash: 7edce66a23021fa03a6f98b3b847a5b671c17124
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972987"
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>HOW TO：序列化和還原序列化 JSON 資料
 JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可以在用戶端瀏覽器與啟用 AJAX 的 Web 服務之間啟用快速的小量資料交換作業。  

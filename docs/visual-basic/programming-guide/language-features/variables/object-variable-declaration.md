@@ -13,11 +13,11 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
 ms.openlocfilehash: 4a3ef3a8254153fa8695ffacd9829ca9316d77a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959974"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>物件變數宣告 (Visual Basic)
 您可以使用一般的宣告陳述式來宣告物件變數。 資料類型，針對您指定下列其中一個`Object`(也就是[Object 資料型別](../../../../visual-basic/language-reference/data-types/object-data-type.md)) 或更特定的類別來源物件的建立。  
@@ -49,19 +49,19 @@ Dim objC As System.OperatingSystem
 ### <a name="advantages-of-early-binding"></a>早期繫結的優點  
  物件變數宣告為特定的類別會提供數個優點：  
   
--   自動類型檢查  
+- 自動類型檢查  
   
--   保證特定類別的所有成員存取  
+- 保證特定類別的所有成員存取  
   
--   Microsoft IntelliSense 支援在程式碼編輯器  
+- Microsoft IntelliSense 支援在程式碼編輯器  
   
--   您的程式碼更容易閱讀  
+- 您的程式碼更容易閱讀  
   
--   在您的程式碼中的錯誤更少  
+- 在您的程式碼中的錯誤更少  
   
--   在攔截到的錯誤編譯時間，而非執行階段  
+- 在攔截到的錯誤編譯時間，而非執行階段  
   
--   更快的程式碼執行  
+- 更快的程式碼執行  
   
 ## <a name="access-to-object-variable-members"></a>物件變數成員的存取  
  當`Option Strict`已開啟`On`，物件變數可以存取的方法和與您用以宣告之類別的屬性。 下列範例將說明這點。  

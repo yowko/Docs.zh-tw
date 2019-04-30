@@ -5,11 +5,11 @@ ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 18bfab7a666a4c715b2236f5101bcceacb5b2fed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953326"
 ---
 # <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>ICorDebugSymbolProvider::GetStaticFieldSymbols 方法
 取得對應至 TypeSpec 簽章的靜態欄位符號。  

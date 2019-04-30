@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
 ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943347"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>HOW TO：控制變數 (Visual Basic) 的可用性
 指定控制變數的可用性及其*存取層級*。 存取層級會判斷哪些程式碼有權讀取或寫入變數。  
   
--   *成員變數*（定義在模組層級和任何程序之外） 預設為公用存取，這表示可以看到它們的任何程式碼可以存取它們。 您可以藉由指定的存取修飾詞來變更此設定。  
+- *成員變數*（定義在模組層級和任何程序之外） 預設為公用存取，這表示可以看到它們的任何程式碼可以存取它們。 您可以藉由指定的存取修飾詞來變更此設定。  
   
--   *本機變數*（程序內所定義的） 名義上具有公用存取，但其程序內的程式碼可以存取它們。 您無法變更存取層級的區域變數，但您可以變更包含它的程序的存取層級。  
+- *本機變數*（程序內所定義的） 名義上具有公用存取，但其程序內的程式碼可以存取它們。 您無法變更存取層級的區域變數，但您可以變更包含它的程序的存取層級。  
   
  如需詳細資訊，請參閱 <<c0> [ 存取 Visual Basic 中的層級](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   

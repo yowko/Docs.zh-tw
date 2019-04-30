@@ -17,11 +17,11 @@ helpviewer_keywords:
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
 ms.openlocfilehash: 891a9a4d092de35ceff2f5ceb6dbde77cf2ca2ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966950"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>HOW TO：確認子資料表中選取的資料列保持在正確位置
 有時候當您使用 Windows Form 中的資料繫結時，您會在所謂父/子或主要/詳細資料檢視中顯示資料。 這是指來自相同來源的資料顯示在兩個控制項中的資料繫結案例。 在一個控制項中變更選取範圍會造成第二個控制項中顯示的資料也變更。 比方說，第一個控制項可能包含客戶清單，而第二個控制項包含與第一個控制項中所選取客戶相關的訂單清單。  
@@ -79,7 +79,7 @@ ms.locfileid: "59303137"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   System、System.Data、System.Drawing、System.Windows.Forms 和 System.XML 組件的參考。  
+- System、System.Data、System.Drawing、System.Windows.Forms 和 System.XML 組件的參考。  
   
  如需如何針對 Visual Basic 或 Visual C# 建置此範例從命令列資訊，請參閱[從命令列建置](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   

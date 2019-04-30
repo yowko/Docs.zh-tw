@@ -10,11 +10,11 @@ helpviewer_keywords:
 - color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
 ms.openlocfilehash: 619eee8e5c08d24f2c7c485dfdc43331f5d64e9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954764"
 ---
 # <a name="how-to-use-a-color-remap-table"></a>HOW TO：使用色彩重新對應表
 重新對應是轉換的色彩，色彩重新對應表根據映像中的程序。 色彩重新對應表是陣列<xref:System.Drawing.Imaging.ColorMap>物件。 每個<xref:System.Drawing.Imaging.ColorMap>陣列中的物件具有<xref:System.Drawing.Imaging.ColorMap.OldColor%2A>屬性和<xref:System.Drawing.Imaging.ColorMap.NewColor%2A>屬性。  

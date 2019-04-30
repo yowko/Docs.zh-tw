@@ -3,11 +3,11 @@ title: 多個合約
 ms.date: 03/30/2017
 ms.assetid: 2bef319b-fe9c-4d49-ac6c-dfb23eb35099
 ms.openlocfilehash: acced4bfc79571c78e868b31b0a4db6cfbdea76a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989738"
 ---
 # <a name="multiple-contracts"></a>多個合約
 多個合約範例會示範如何在服務上實作一個以上的合約，以及如何設定要與每個已實作合約進行通訊的端點。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 此服務已修改成要定義兩個合約：`ICalculator` 以及 `ICalculatorSession` 合約。  

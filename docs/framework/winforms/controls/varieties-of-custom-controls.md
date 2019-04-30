@@ -12,11 +12,11 @@ helpviewer_keywords:
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
 ms.openlocfilehash: 765befcf88247e4b2101b13c4937352ba4b070fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009145"
 ---
 # <a name="varieties-of-custom-controls"></a>各種自訂控制項
 使用 .NET Framework，您可以開發及實作新的控制項。 您可以擴充熟悉的使用者控制項的功能，以及透過繼承擴充現有的控制項。 您也可以撰寫自訂控制項來執行它們自己的繪製。  
@@ -31,17 +31,17 @@ ms.locfileid: "59170696"
   
  <xref:System.Windows.Forms.Control>類別會執行下列工作來提供 Windows Forms 應用程式中的視覺顯示：  
   
--   公開視窗控制代碼。  
+- 公開視窗控制代碼。  
   
--   管理訊息路由。  
+- 管理訊息路由。  
   
--   提供滑鼠和鍵盤事件，以及其他許多使用者介面事件。  
+- 提供滑鼠和鍵盤事件，以及其他許多使用者介面事件。  
   
--   提供進階版面配置功能。  
+- 提供進階版面配置功能。  
   
--   包含特定的視覺顯示的許多屬性，例如<xref:System.Windows.Forms.Control.ForeColor%2A>， <xref:System.Windows.Forms.Control.BackColor%2A>， <xref:System.Windows.Forms.Control.Height%2A>，和<xref:System.Windows.Forms.Control.Width%2A>。  
+- 包含特定的視覺顯示的許多屬性，例如<xref:System.Windows.Forms.Control.ForeColor%2A>， <xref:System.Windows.Forms.Control.BackColor%2A>， <xref:System.Windows.Forms.Control.Height%2A>，和<xref:System.Windows.Forms.Control.Width%2A>。  
   
--   提供 Windows Forms 控制項做為 Microsoft® ActiveX® 控制項所需的安全性和執行緒支援。  
+- 提供 Windows Forms 控制項做為 Microsoft® ActiveX® 控制項所需的安全性和執行緒支援。  
   
  因為基底類別提供了非常多的基礎結構，所以開發您自己的 Windows Forms 控制項相對容易。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59170696"
   
  如果有下列情況，便繼承自 <xref:System.Windows.Forms.UserControl> 類別：  
   
--   您想要將數個 Windows Form 控制項的功能結合成一個可重複使用的單位。  
+- 您想要將數個 Windows Form 控制項的功能結合成一個可重複使用的單位。  
   
 ### <a name="extended-controls"></a>擴充控制項  
  您可以從任何現有的 Windows Form 控制項衍生繼承的控制項。 使用這種方法，您可以保留 Windows Forms 控制項的所有固有功能，然後藉由新增自訂屬性、方法或其他功能，以擴充該功能。 使用這個選項，您可以覆寫基底控制項的繪製邏輯，然後藉由變更其外觀，以擴充其使用者介面。  
@@ -74,9 +74,9 @@ ms.locfileid: "59170696"
   
  如果有下列情況，便繼承自 Windows Form 控制項：  
   
--   大部分的所需功能已經與現有的 Windows Form 控制項相同。  
+- 大部分的所需功能已經與現有的 Windows Form 控制項相同。  
   
--   您不需要自訂的圖形化使用者介面，或是您想要為現有的控制項設計新的圖形化使用者介面。  
+- 您不需要自訂的圖形化使用者介面，或是您想要為現有的控制項設計新的圖形化使用者介面。  
   
 ### <a name="custom-controls"></a>自訂控制項  
  若要建立控制項的另一個方法是建立一個從頭藉由繼承自<xref:System.Windows.Forms.Control>。 <xref:System.Windows.Forms.Control>類別提供的所有控制項，包括滑鼠和鍵盤處理事件，所需的基本功能，但沒有控制項特定功能或圖形化介面。  
@@ -91,9 +91,9 @@ ms.locfileid: "59170696"
   
  如果有下列情況，便繼承自 <xref:System.Windows.Forms.Control> 類別：  
   
--   您想要提供控制項的自訂圖形表示。  
+- 您想要提供控制項的自訂圖形表示。  
   
--   您需要實作無法透過標準控制項使用的自訂功能。  
+- 您需要實作無法透過標準控制項使用的自訂功能。  
   
 ### <a name="activex-controls"></a>ActiveX 控制項  
  雖然 Windows Forms 基礎結構已進行最佳化來裝載 Windows Forms 控制項，但是您仍然可以使用 ActiveX 控制項。 在 Visual Studio 中會支援這項工作。 如需詳細資訊，請參閱[如何：將 ActiveX 控制項新增至 Windows Forms](how-to-add-activex-controls-to-windows-forms.md)。  

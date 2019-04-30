@@ -3,11 +3,11 @@ title: 佇列和可靠的工作階段
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
 ms.openlocfilehash: 1fb7d7db36aa51c63789b6daf0ac3689c87ace5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946688"
 ---
 # <a name="queues-and-reliable-sessions"></a>佇列和可靠的工作階段
 佇列和可靠工作階段會實作可信賴傳訊的 Windows Communication Foundation (WCF) 功能。 在本節中所包含的主題會討論 WCF 可靠的傳訊功能。  
@@ -16,15 +16,15 @@ ms.locfileid: "59196823"
   
  可信賴傳訊具有下列重要功能：  
   
--   傳輸保證，保證無論是訊息傳輸 (Transfer) 失敗或傳輸 (Transport) 失敗，訊息都會從來源傳送到目的地。  
+- 傳輸保證，保證無論是訊息傳輸 (Transfer) 失敗或傳輸 (Transport) 失敗，訊息都會從來源傳送到目的地。  
   
--   將來源和目的地彼此分開，如此可對來源與目的地提供獨立的失敗與復原作業，以及可靠訊息傳輸與傳遞，就算來源或目的地無法使用也是一樣。  
+- 將來源和目的地彼此分開，如此可對來源與目的地提供獨立的失敗與復原作業，以及可靠訊息傳輸與傳遞，就算來源或目的地無法使用也是一樣。  
   
  可信賴傳訊通常會伴隨長延遲時間的發生。 「延遲時間」為訊息從來源到達目的地所需要的時間。 WCF，因此，提供下列類型的可信賴傳訊：  
   
--   [可靠工作階段](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)，以提供不會造成高延遲的可靠傳輸  
+- [可靠工作階段](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)，以提供不會造成高延遲的可靠傳輸  
   
--   [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)，以提供可信賴傳訊以及來源和目的地之間的分隔。  
+- [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)，以提供可信賴傳訊以及來源和目的地之間的分隔。  
   
 ## <a name="reliable-sessions"></a>可靠工作階段  
  可靠工作階段使用 WS-ReliableMessaging 通訊協定提供來源和目的地之間的端對端可靠訊息傳輸，而不論傳訊端點 (來源和目的地) 之間媒介的類型或數目為何。 這包括不是使用 SOAP 的任何傳輸媒介 (例如，HTTP Proxy) 或使用 SOAP 的媒介 (例如，SOAP 架構的路由器或橋接器)，而訊息在端點之間流動時需要這些媒介。 可靠工作階段會使用記憶體中傳輸視窗來遮罩 SOAP 訊息層級的失敗，並在發生傳輸失敗時重新建立連線。  

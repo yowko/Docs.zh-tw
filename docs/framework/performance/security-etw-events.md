@@ -8,20 +8,20 @@ ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 11a19dce496423883e5fed62375c6db8ed5efdb1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949197"
 ---
 # <a name="security-etw-events"></a>安全性 ETW 事件
 <a name="top"></a> 強式名稱驗證和 Authenticode 驗證期間，會引發安全性事件。  
   
  這個類別包含下列事件：  
   
--   [StrongNameVerificationStart_V1 和 StrongNameVerificationStop_V1 事件](#strongnameverificationstart_v1_and_strongnameverificationstop_v1_events)  
+- [StrongNameVerificationStart_V1 和 StrongNameVerificationStop_V1 事件](#strongnameverificationstart_v1_and_strongnameverificationstop_v1_events)  
   
--   [AuthenticodeVerificationStart_V1 和 AuthenticodeVerificationStop_V1 事件](#authenticodeverificationstart_v1_and_authenticodeverificationstop_v1_events)  
+- [AuthenticodeVerificationStart_V1 和 AuthenticodeVerificationStop_V1 事件](#authenticodeverificationstart_v1_and_authenticodeverificationstop_v1_events)  
   
 <a name="strongnameverificationstart_v1_and_strongnameverificationstop_v1_events"></a>   
 ## <a name="strongnameverificationstartv1-and-strongnameverificationstopv1-events"></a>StrongNameVerificationStart_V1 和 StrongNameVerificationStop_V1 事件  

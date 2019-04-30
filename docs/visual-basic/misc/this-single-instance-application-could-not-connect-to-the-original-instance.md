@@ -5,18 +5,18 @@ f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
 ms.openlocfilehash: 7ffa9b185e16cfdf8223ce84e77d1a0e1fa67f65
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942606"
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>此單一執行個體應用程式無法連接到原始執行個體
 此單一執行個體應用程式無法連接到原始執行個體。 此問題的部分可能原因如下：  
   
--   原始執行個體停止回應。  
+- 原始執行個體停止回應。  
   
--   應用程式沒有建立核心物件的權限。 如需有關核心物件的詳細資訊，請參閱 < [Mutex](../../standard/threading/mutexes.md)。  
+- 應用程式沒有建立核心物件的權限。 如需有關核心物件的詳細資訊，請參閱 < [Mutex](../../standard/threading/mutexes.md)。  
   
      核心物件的主檔名 (Base Name) 是由連接組件的 GUID、主要版本號碼，以及次要版本號碼所組成。 例如，基底名稱可能是 `3639f15d-9547-43da-8145-60da347829915.1`。  
   

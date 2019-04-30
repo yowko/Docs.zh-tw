@@ -5,11 +5,11 @@ helpviewer_keywords:
 - dynamic objects [Visual Basic]
 ms.assetid: bdee2a00-07ff-46f9-86dd-fdac9b99cc97
 ms.openlocfilehash: ea7d7aae1cd79a0243a9c721b5e3958fba82f84f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973182"
 ---
 # <a name="working-with-dynamic-objects-visual-basic"></a>使用動態物件 (Visual Basic)
 動態物件會提供另一種方式，而非`Object`類型，以在執行階段在物件的晚期繫結。 動態物件在執行階段公開成員，例如屬性和方法，藉由使用動態中所定義的介面<xref:System.Dynamic>命名空間。 您可以使用中的類別<xref:System.Dynamic>命名空間，以建立靜態類型或格式不相符的資料結構所使用的物件。 您也可以使用 IronPython 和 IronRuby 之類的動態語言中所定義的動態物件。 如需示範如何建立動態物件，或使用動態語言所定義的動態物件的範例，請參閱[逐步解說：建立和使用動態物件](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)， <xref:System.Dynamic.DynamicObject>，或<xref:System.Dynamic.ExpandoObject>。  

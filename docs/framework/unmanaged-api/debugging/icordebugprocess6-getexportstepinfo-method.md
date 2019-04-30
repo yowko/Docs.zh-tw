@@ -5,11 +5,11 @@ ms.assetid: a927e0ac-f110-426d-bbec-9377a29c8f17
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 44a891e6d65d159875f5607ac33b0668414cb380
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948615"
 ---
 # <a name="icordebugprocess6getexportstepinfo-method"></a>ICorDebugProcess6::GetExportStepInfo 方法
 提供執行階段匯出函式的相關資訊，以協助逐步執行 Managed 程式碼。  

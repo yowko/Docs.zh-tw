@@ -3,14 +3,14 @@ title: 用戶端互通性
 ms.date: 03/30/2017
 ms.assetid: e890e40a-b76a-48c4-9e5b-a4b385fac847
 ms.openlocfilehash: 8aadd1592cdb08c9c44490ebfbaba1c9d3d9606e
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944010"
 ---
 # <a name="client-interoperability"></a>用戶端互通性
-本節包含示範 Windows Communication Foundation (WCF) 和其他技術之間的互通性範例。  
+本節包含示範 Windows Communication Foundation (WCF) 與其他技術之間的互通性的範例。  
   
 ## <a name="in-this-section"></a>本節內容  
  [與 ASMX Web 服務交互操作](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md)  

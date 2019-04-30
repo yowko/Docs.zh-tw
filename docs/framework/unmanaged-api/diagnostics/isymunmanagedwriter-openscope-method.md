@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5ea6ce91e0651e09fb908d8b8b35811349ac8845
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986033"
 ---
 # <a name="isymunmanagedwriteropenscope-method"></a>ISymUnmanagedWriter::OpenScope 方法
 開啟目前方法中的新語彙範圍。 範圍會成為新的目前範圍，並推送至堆疊的範圍。 範圍必須形成階層。 同層級項目不允許重疊。  

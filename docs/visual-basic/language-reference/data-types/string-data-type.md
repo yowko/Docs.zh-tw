@@ -19,11 +19,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
 ms.openlocfilehash: 3e87dc6527b4351467b1155439ee8266157c16ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971708"
 ---
 # <a name="string-data-type-visual-basic"></a>String 資料類型 (Visual Basic)
 會保留該範圍的不帶正負號的 16 位元 （2 個位元組） 字碼指標順序中從 0 到 65535 的值。 每個*字碼指標*，或字元碼表示單一 Unicode 字元。 字串可以包含從 0 至大約兩個 10 億個 (2 ^31) 的 Unicode 字元。  
@@ -70,13 +70,13 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 ## <a name="programming-tips"></a>程式設計提示  
   
--   **負數的數字。** 請記住所保留的字元`String`為不帶正負號，且不能代表負數值。 在任何情況下，您不應該使用`String`來保存數字值。  
+- **負數的數字。** 請記住所保留的字元`String`為不帶正負號，且不能代表負數值。 在任何情況下，您不應該使用`String`來保存數字值。  
   
--   **Interop 考量。** 如果您要使用的元件不是撰寫.NET framework 中，例如 Automation 或 COM 物件，請記住，字串的字元有不同的資料寬度 （8 位元） 在其他環境中。 如果您將 8 位元字元的字串引數傳遞給這類元件，將它宣告為`Byte()`，陣列`Byte`項目，而不是`String`中新的 Visual Basic 程式碼。  
+- **Interop 考量。** 如果您要使用的元件不是撰寫.NET framework 中，例如 Automation 或 COM 物件，請記住，字串的字元有不同的資料寬度 （8 位元） 在其他環境中。 如果您將 8 位元字元的字串引數傳遞給這類元件，將它宣告為`Byte()`，陣列`Byte`項目，而不是`String`中新的 Visual Basic 程式碼。  
   
--   **類型字元。** 附加識別項類型字元`$`到任何識別項會強制其成為`String`資料型別。 `String` 有任何常值類型字元。 不過，編譯器會將常值以引號括住 (`" "`) 做為`String`。  
+- **類型字元。** 附加識別項類型字元`$`到任何識別項會強制其成為`String`資料型別。 `String` 有任何常值類型字元。 不過，編譯器會將常值以引號括住 (`" "`) 做為`String`。  
   
--   **Framework 型別。** .NET Framework 中對應的型別是<xref:System.String?displayProperty=nameWithType>類別。  
+- **Framework 型別。** .NET Framework 中對應的型別是<xref:System.String?displayProperty=nameWithType>類別。  
   
 ## <a name="see-also"></a>另請參閱
 

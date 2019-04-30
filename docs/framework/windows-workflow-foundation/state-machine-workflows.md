@@ -3,11 +3,11 @@ title: 狀態機器工作流程
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
 ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004665"
 ---
 # <a name="state-machine-workflows"></a>狀態機器工作流程
 狀態機器是用來開發程式的知名範例。 <xref:System.Activities.Statements.StateMachine> 活動以及 <xref:System.Activities.Statements.State>、<xref:System.Activities.Statements.Transition> 和其他活動皆可用來建置狀態機器工作流程程式。 本主題提供建立狀態機器工作流程的概觀。  
@@ -15,11 +15,11 @@ ms.locfileid: "59222987"
 ## <a name="state-machine-workflow-overview"></a>狀態機器工作流程概觀  
  狀態機工作流提供模型樣式，可讓您以事件導向的方式建立工作流程的模型。 <xref:System.Activities.Statements.StateMachine> 活動包含組成狀態機器邏輯的狀態和轉換，並且適用於任何能夠使用活動的地方。 狀態機器執行階段包含數種類別：  
   
--   <xref:System.Activities.Statements.StateMachine>  
+- <xref:System.Activities.Statements.StateMachine>  
   
--   <xref:System.Activities.Statements.State>  
+- <xref:System.Activities.Statements.State>  
   
--   <xref:System.Activities.Statements.Transition>  
+- <xref:System.Activities.Statements.Transition>  
   
  若要建立狀態機器工作流程，必須將狀態加入至 <xref:System.Activities.Statements.StateMachine> 活動，並使用轉換來控制狀態之間的流向。 下列螢幕擷取畫面中，從[入門教學課程](getting-started-tutorial.md)步驟[How to:建立狀態機器工作流程](how-to-create-a-state-machine-workflow.md)，會顯示三種狀態和三個轉換的狀態機器工作流程。 **初始化目標**是初始狀態，並代表工作流程中的第一個狀態。 這連接到從該程式行所指定**啟動**節點。 名為工作流程中的最終狀態**FinalState**，代表工作流程完成時點。  
   

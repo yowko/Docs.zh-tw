@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
 ms.openlocfilehash: 3cfa4691376689bb8e7b1f8e8f41ed5d93ba0e61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990349"
 ---
 # <a name="datacontractserializer-sample"></a>DataContractSerializer 範例
 DataContractSerializer 範例會示範執行資料合約類別之一般序列化與還原序列化服務的 <xref:System.Runtime.Serialization.DataContractSerializer>。 此範例會建立`Record`物件、 將其序列化為記憶體資料流，並還原序列化到另一個記憶體資料流`Record`物件，以示範使用<xref:System.Runtime.Serialization.DataContractSerializer>。 此範例會接著會序列化使用二進位寫入器的 `Record` 物件，以便示範該寫入器會如何影響序列化。  

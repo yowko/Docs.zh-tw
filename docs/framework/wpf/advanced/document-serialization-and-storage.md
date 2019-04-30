@@ -7,11 +7,11 @@ helpviewer_keywords:
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
 ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962730"
 ---
 # <a name="document-serialization-and-storage"></a>文件序列化與儲存
 Microsoft.NET Framework 會提供功能強大的環境來建立和顯示高品質的文件。  增強的功能，可支援固定文件和非固定格式文件、 進階檢視控制項，結合功能強大的 2D 和 3D 圖形功能，可將新的層級的高品質和使用者經驗的.NET Framework 應用程式。  能夠彈性地管理記憶體中表示的文件是.NET Framework 的重要功能，並能夠有效率地儲存和載入文件從資料存放區是幾乎所有應用程式的需求。  將文件從記憶體內部表示轉換成外部資料存放區的程序，稱為序列化。  讀取資料存放區並重新建立原始記憶體內部執行個體的反向程序，則稱為還原序列化。  
@@ -24,19 +24,19 @@ Microsoft.NET Framework 會提供功能強大的環境來建立和顯示高品�
   
 ### <a name="features-of-net-framework-30-document-serializers"></a>.NET Framework 3.0 文件序列化程式的功能  
   
--   直接存取高階文件物件 (邏輯樹狀結構和視覺物件) 可以有效率地儲存分頁內容、2D/3D 項目、影像、媒體、超連結、註解和其他支援內容。  
+- 直接存取高階文件物件 (邏輯樹狀結構和視覺物件) 可以有效率地儲存分頁內容、2D/3D 項目、影像、媒體、超連結、註解和其他支援內容。  
   
--   同步和非同步作業。  
+- 同步和非同步作業。  
   
--   透過增強的功能支援外掛程式序列化程式：  
+- 透過增強的功能支援外掛程式序列化程式：  
   
-    -   所有的.NET Framework 應用程式使用的全系統的存取權。  
+    - 所有的.NET Framework 應用程式使用的全系統的存取權。  
   
-    -   輕鬆探索應用程式外掛程式。  
+    - 輕鬆探索應用程式外掛程式。  
   
-    -   輕鬆部署、安裝和更新自訂的協力廠商外掛程式。  
+    - 輕鬆部署、安裝和更新自訂的協力廠商外掛程式。  
   
-    -   可支援自訂執行階段設定和選項的使用者介面。  
+    - 可支援自訂執行階段設定和選項的使用者介面。  
   
 ### <a name="xps-print-path"></a>XPS 列印路徑  
  Microsoft.NET Framework[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]列印路徑也提供可擴充機制，來撰寫文件，透過列印輸出。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 可同時作為文件檔案格式，以及 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的原生列印多工緩衝處理格式。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件可以直接傳送至 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 相容的印表機，而不需要轉換成中繼格式。  如需列印路徑輸出選項和功能的其他資訊，請參閱[列印概觀](printing-overview.md)。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
 ms.openlocfilehash: faed11bb02037ea42b31402d431e1bcdd8b70339
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947832"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>HOW TO：建立傳回 UI 的增益集
 此範例示範如何建立 Windows Presentation Foundation (WPF) 傳回至主機的 WPF 獨立應用程式。  
@@ -25,9 +25,9 @@ ms.locfileid: "59115744"
   
  此範例會反白顯示 啟用此案例中，WPF 擴充功能至.NET Framework 增益集模型，並假設如下：  
   
--   .NET Framework 增益集模型，包括管線、 增益集和主應用程式開發的知識。 如果您不熟悉這些概念，請參閱[增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。 如需示範管線、 增益集，和主應用程式的實作的教學課程，請參閱[逐步解說：建立可延伸應用程式](../../add-ins/walkthrough-create-extensible-app.md)。  
+- .NET Framework 增益集模型，包括管線、 增益集和主應用程式開發的知識。 如果您不熟悉這些概念，請參閱[增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。 如需示範管線、 增益集，和主應用程式的實作的教學課程，請參閱[逐步解說：建立可延伸應用程式](../../add-ins/walkthrough-create-extensible-app.md)。  
   
--   了解 WPF 擴充功能，在.NET Framework 增益集模型，可以在這裡找到：[WPF 增益集概觀](wpf-add-ins-overview.md)。  
+- 了解 WPF 擴充功能，在.NET Framework 增益集模型，可以在這裡找到：[WPF 增益集概觀](wpf-add-ins-overview.md)。  
   
 ## <a name="example"></a>範例  
  若要建立傳回 WPF UI 的增益集需要特定的程式碼的每個管線區段、 增益集，和主應用程式。  

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
 ms.openlocfilehash: 4d93b1e40371b00f9d1ff69ec31ad0983beb493f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971726"
 ---
 # <a name="uinteger-data-type"></a>UInteger 資料類型
 
@@ -48,7 +48,7 @@ ms.locfileid: "58821487"
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]  
 
-從 Visual Basic 15.5 開始，您也可以使用底線字元 (`_`) 作為前置分隔符號之間的前置詞和十六進位、 二進位或八進位數字。 例如：
+從 Visual Basic 15.5 開始，您也可以使用底線字元 (`_`) 作為前置分隔符號之間的前置詞和十六進位、 二進位或八進位數字。 例如: 
 
 ```vb
 Dim number As UInteger = &H_0F8C_0326
@@ -66,17 +66,17 @@ Dim number = &H_0FAC_14D7ui
 
  `UInteger`並`Integer`資料類型提供最佳效能 32 位元的處理器，因為較小的整數類型 (`UShort`， `Short`， `Byte`，和`SByte`)，即使他們使用較少的位元，需要更多時間載入、 儲存和擷取。  
   
--   **負數的數字。** 因為`UInteger`是不帶正負號的型別，它無法表示負數。 如果您使用一元減號 (`-`) 運算子的運算式，評估為類型`UInteger`，Visual Basic 會將轉換的運算式`Long`第一次。  
+- **負數的數字。** 因為`UInteger`是不帶正負號的型別，它無法表示負數。 如果您使用一元減號 (`-`) 運算子的運算式，評估為類型`UInteger`，Visual Basic 會將轉換的運算式`Long`第一次。  
   
--   **CLS 合規性。** `UInteger`資料類型不是屬於[Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) （cls） 標準，所以符合 CLS 標準的程式碼無法取用使用它的元件。
+- **CLS 合規性。** `UInteger`資料類型不是屬於[Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) （cls） 標準，所以符合 CLS 標準的程式碼無法取用使用它的元件。
   
--   **Interop 考量。** 如果您要使用的元件不是撰寫.NET framework，例如 Automation 或 COM 物件，請記住，這類類型`uint`在其他環境中可以有不同的資料寬度 （16 位元）。 如果您將 16 位元引數傳遞給這類元件，將它宣告為`UShort`而不是`UInteger`中受管理的 Visual Basic 程式碼。  
+- **Interop 考量。** 如果您要使用的元件不是撰寫.NET framework，例如 Automation 或 COM 物件，請記住，這類類型`uint`在其他環境中可以有不同的資料寬度 （16 位元）。 如果您將 16 位元引數傳遞給這類元件，將它宣告為`UShort`而不是`UInteger`中受管理的 Visual Basic 程式碼。  
   
--   **擴展。** `UInteger`資料類型可擴展為`Long`， `ULong`， `Decimal`， `Single`，和`Double`。 這表示您可以將轉換`UInteger`任何一種類型，而不會發生<xref:System.OverflowException?displayProperty=nameWithType>時發生錯誤。  
+- **擴展。** `UInteger`資料類型可擴展為`Long`， `ULong`， `Decimal`， `Single`，和`Double`。 這表示您可以將轉換`UInteger`任何一種類型，而不會發生<xref:System.OverflowException?displayProperty=nameWithType>時發生錯誤。  
   
--   **類型字元。** 將常值類型字元附加`UI`成常值會強制其成為`UInteger`資料型別。 `UInteger` 有任何識別項類型字元。  
+- **類型字元。** 將常值類型字元附加`UI`成常值會強制其成為`UInteger`資料型別。 `UInteger` 有任何識別項類型字元。  
   
--   **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.UInt32?displayProperty=nameWithType> 結構。  
+- **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.UInt32?displayProperty=nameWithType> 結構。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -5,11 +5,11 @@ ms.assetid: d9c12b1f-9c1d-4943-8e9e-93b55faf085f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2d23bf14fbb3d75534ac2d4a43eca0fbf3e994ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946415"
 ---
 # <a name="icordebuginstancefieldsymbolgetname-method"></a>ICorDebugInstanceFieldSymbol::GetName 方法
 取得執行個體欄位的名稱。  

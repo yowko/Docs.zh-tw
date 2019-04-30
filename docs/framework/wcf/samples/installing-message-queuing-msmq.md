@@ -3,11 +3,11 @@ title: 安裝訊息佇列 (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
 ms.openlocfilehash: 64736f8f0a34a53658dd2838738a3d36b3891d2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954943"
 ---
 # <a name="installing-message-queuing-msmq"></a>安裝訊息佇列 (MSMQ)
 下列程序示範如何安裝 Message Queuing 4.0 和 Message Queuing 3.0。  
@@ -37,9 +37,9 @@ ms.locfileid: "59305087"
   
 3. 展開 [Microsoft Message Queue (MSMQ) 伺服器]，展開 [Microsoft Message Queue (MSMQ) 伺服器核心]，然後選取下列訊息佇列功能的核取方塊進行安裝：  
   
-    -   MSMQ Active Directory 網域服務整合 (針對加入網域的電腦)。  
+    - MSMQ Active Directory 網域服務整合 (針對加入網域的電腦)。  
   
-    -   MSMQ HTTP 支援。  
+    - MSMQ HTTP 支援。  
   
 4. 按一下 [確定] 。  
   

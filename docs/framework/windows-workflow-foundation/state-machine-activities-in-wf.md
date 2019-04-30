@@ -3,11 +3,11 @@ title: WF 中的狀態機器活動
 ms.date: 03/30/2017
 ms.assetid: 93312eaf-07e0-4a55-b4f7-4cdbbc4dee2d
 ms.openlocfilehash: 5aee2a7cb078d9d62c9296f7dda9f28ff812a88a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004597"
 ---
 # <a name="state-machine-activities-in-wf"></a>WF 中的狀態機器活動
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 提供數種系統提供的活動和活動設計工具，用於建立狀態機器工作流程。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
 ms.openlocfilehash: d3ff9d217d085e3afe5171cce9d80f8dbc32ff36
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969477"
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>HOW TO：更新執行中工作流程執行個體的定義
 
@@ -1077,8 +1077,7 @@ ms.locfileid: "57722902"
 
 3. 以滑鼠右鍵按一下**ApplyDynamicUpdate**中**方案總管**，然後選擇 **加入參考**。
 
-4. 按一下 **解決方案**旁的核取方塊**NumberGuessWorkflowHost**。 
-  `ApplyDynamicUpdate` 需要此參考才能使用 `NumberGuessWorkflowHost.WorkflowVersionMap` 類別。
+4. 按一下 **解決方案**旁的核取方塊**NumberGuessWorkflowHost**。 `ApplyDynamicUpdate` 需要此參考才能使用 `NumberGuessWorkflowHost.WorkflowVersionMap` 類別。
 
 5. 選取  **Framework**從**組件**節點中的**加入參考**清單。 型別**System.Activities**成**搜尋組件** 方塊中。 如此即會篩選組件，讓您更容易選取所需的參考。
 

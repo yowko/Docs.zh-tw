@@ -13,11 +13,11 @@ helpviewer_keywords:
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
 ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971310"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 增益集概觀
 <a name="Introduction"></a> .NET Framework 包含開發人員可用來建立支援增益集擴充性的應用程式增益集模型。 此增益集模型可讓您建立增益集，整合並擴充應用程式的功能。 在某些情況下，應用程式也需要顯示增益集所提供的使用者介面。本主題說明 WPF 擴大.NET Framework 增益集模型以啟用這些案例、 架構、 其優點，以及其限制背後的方式。  
@@ -30,33 +30,33 @@ ms.locfileid: "59304801"
 ## <a name="add-ins-overview"></a>增益集概觀  
  為避免新功能包含複雜的應用程式重新編譯和重新部署，應用程式會實作擴充性機制，讓開發人員 (第一方和第三方) 建立整合它們的其他應用程式。 支援此擴充性類型最常見的方式是使用增益集 (也稱為「附加元件」和「外掛程式」)。 公開增益集擴充性的真實世界應用程式範例包括︰  
   
--   Internet Explorer 附加元件。  
+- Internet Explorer 附加元件。  
   
--   Windows Media Player 外掛程式。  
+- Windows Media Player 外掛程式。  
   
--   Visual Studio 增益集。  
+- Visual Studio 增益集。  
   
  例如，Windows Media Player 增益集模型讓協力廠商開發人員實作以各種方式擴充 Windows Media Player 的「外掛程式」，包括建立適用於 Windows Media Player 原本不支援之媒體格式的解碼器和編碼器 (例如 DVD、MP3)、音訊效果和面板。 每個增益集模型都是建置來公開對應用程式的獨特功能，雖然有幾個實體和行為通用所有的增益集模型。  
   
  一般增益集擴充性解決方案的三個主要實體是「合約」、「增益集」和「主應用程式」。 合約定義增益集與主應用程式整合的兩種方式︰  
   
--   增益集整合主應用程式所實作的功能。  
+- 增益集整合主應用程式所實作的功能。  
   
--   主應用程式公開要整合的增益集功能。  
+- 主應用程式公開要整合的增益集功能。  
   
  為能使用增益集，主應用程式需要在執行階段找到並載入它們。 因此，支援增益集的應用程式有下列額外的責任︰  
   
--   **探索**:尋找增益集遵守主應用程式所支援的合約。  
+- **探索**:尋找增益集遵守主應用程式所支援的合約。  
   
--   **啟用**:正在載入、 執行及建立與增益集的通訊。  
+- **啟用**:正在載入、 執行及建立與增益集的通訊。  
   
--   **隔離**:若要建立隔離界限，防範潛在的安全性和增益集的執行問題的應用程式中使用應用程式定義域或處理程序。  
+- **隔離**:若要建立隔離界限，防範潛在的安全性和增益集的執行問題的應用程式中使用應用程式定義域或處理程序。  
   
--   **通訊**:讓增益集和主應用程式之間的通訊方式跨越隔離界限呼叫方法，並將資料傳送。  
+- **通訊**:讓增益集和主應用程式之間的通訊方式跨越隔離界限呼叫方法，並將資料傳送。  
   
--   **存留期管理**:載入和卸載應用程式定義域和處理程序簡潔、 可預測的方式 (請參閱[應用程式定義域](../../app-domains/application-domains.md))。  
+- **存留期管理**:載入和卸載應用程式定義域和處理程序簡潔、 可預測的方式 (請參閱[應用程式定義域](../../app-domains/application-domains.md))。  
   
--   **版本控制**:確保，主應用程式和增益集仍可進行通訊時，會建立為新版本。  
+- **版本控制**:確保，主應用程式和增益集仍可進行通訊時，會建立為新版本。  
   
  最後，開發強固的增益集模型是重要的工作。 基於這個理由，.NET Framework 提供基礎結構建置增益集模型。  
   
@@ -75,27 +75,27 @@ ms.locfileid: "59304801"
   
 1. **增益集傳回 UI**。 增益集傳回 UI 主應用程式透過方法呼叫，如合約所定義。 此案例用於下列情況︰  
   
-    -   UI 的增益集所傳回的外觀取決於資料，或已存在的條件只會在執行階段，例如動態產生的報告。  
+    - UI 的增益集所傳回的外觀取決於資料，或已存在的條件只會在執行階段，例如動態產生的報告。  
   
-    -   可以使用增益集主應用程式的 UI 與不同的 UI 的增益集所提供的服務。  
+    - 可以使用增益集主應用程式的 UI 與不同的 UI 的增益集所提供的服務。  
   
-    -   增益集主要執行主應用程式的服務，並將狀態回報給主應用程式 ui。  
+    - 增益集主要執行主應用程式的服務，並將狀態回報給主應用程式 ui。  
   
 2. **增益集為 UI**。 增益集為 UI 中，合約所定義。 此案例用於下列情況︰  
   
-    -   增益集不提供顯示以外的服務，例如廣告。  
+    - 增益集不提供顯示以外的服務，例如廣告。  
   
-    -   UI 的增益集所提供的服務是通用於所有的裝載應用程式可以使用該增益集，例如計算機或色彩選擇器。  
+    - UI 的增益集所提供的服務是通用於所有的裝載應用程式可以使用該增益集，例如計算機或色彩選擇器。  
   
  這些案例需要 UI 物件，可以在主應用程式和增益集應用程式定義域之間傳遞。 .NET Framework 增益集模型仰賴的遠端應用程式定義域之間通訊的情況下，因為它們之間傳遞的物件必須可遠端處理。  
   
  可在遠端處理的物件是執行下列一或多個工作的類別執行個體︰  
   
--   衍生自<xref:System.MarshalByRefObject>類別。  
+- 衍生自<xref:System.MarshalByRefObject>類別。  
   
--   實作 <xref:System.Runtime.Serialization.ISerializable> 介面。  
+- 實作 <xref:System.Runtime.Serialization.ISerializable> 介面。  
   
--   具有<xref:System.SerializableAttribute>套用的屬性。  
+- 具有<xref:System.SerializableAttribute>套用的屬性。  
   
 > [!NOTE]
 >  如需建立可遠端處理.NET Framework 物件的詳細資訊，請參閱[讓物件變成可遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))。  
@@ -156,11 +156,11 @@ ms.locfileid: "59304801"
 ## <a name="add-ins-and-xaml-browser-applications"></a>增益集和 XAML 瀏覽器應用程式  
  在到目前為止的範例中，主應用程式一直是已安裝的獨立應用程式。 但是 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 也可以裝載增益集，儘管有下列額外組建和實作需求︰  
   
--   [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 應用程式資訊清單必須特別設定為將管線 (資料夾和組件) 和增益集組件下載至用戶端電腦的 [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] 應用程式快取，和 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 在相同的資料夾中。  
+- [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 應用程式資訊清單必須特別設定為將管線 (資料夾和組件) 和增益集組件下載至用戶端電腦的 [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] 應用程式快取，和 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 在相同的資料夾中。  
   
--   探索及載入增益集的 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 程式碼必須使用 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 的 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 應用程式快取作為管線和增益集位置。  
+- 探索及載入增益集的 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 程式碼必須使用 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 的 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 應用程式快取作為管線和增益集位置。  
   
--   如果增益集參考位於原始網站的鬆散式檔案，[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 必須將增益集載入特殊的安全性內容；為 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 所裝載時，增益集只能參考位於主應用程式原始網站的鬆散式檔案。  
+- 如果增益集參考位於原始網站的鬆散式檔案，[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 必須將增益集載入特殊的安全性內容；為 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 所裝載時，增益集只能參考位於主應用程式原始網站的鬆散式檔案。  
   
  下列各小節將詳細說明這些工作。  
   
@@ -194,13 +194,13 @@ ms.locfileid: "59304801"
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>使用來自應用程式基底的管線和增益集  
  針對 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]部署設定管線和增益集時，它們會下載到和 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 相同的 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 快取資料夾。 若要使用來自 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 的管線和增益集，[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 程式碼必須從應用程式基底取得它們。 不同的類型和成員的.NET Framework 增益集模型使用管線和增益集提供特殊支援此案例中。 首先，會識別路徑<xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase>列舉值。 您使用此值與相關增益集成員的多載處理使用包含下列各項的管線︰  
   
--   <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
--   <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%2CSystem.String%5B%5D%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%2CSystem.String%5B%5D%29?displayProperty=nameWithType>  
   
--   <xref:System.AddIn.Hosting.AddInStore.Rebuild%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.Rebuild%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
--   <xref:System.AddIn.Hosting.AddInStore.Update%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.Update%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
 ### <a name="accessing-the-hosts-site-of-origin"></a>存取裝載的原始網站  
  為確保增益集能參考原始網站的檔案，必須使用相當於主應用程式的安全性隔離載入增益集。 此安全性層級由<xref:System.AddIn.Hosting.AddInSecurityLevel.Host?displayProperty=nameWithType>列舉值，並傳遞至<xref:System.AddIn.Hosting.AddInToken.Activate%2A>增益集啟動時的方法。  
@@ -213,9 +213,9 @@ ms.locfileid: "59304801"
   
  基本上，WPF 未通過 UI 的增益集主應用程式;相反地，WPF 會將傳遞的 Win32 視窗控制代碼的 ui 使用 WPF 互通性。 因此，UI 的增益集從傳遞至主應用程式時，會發生下列情況：  
   
--   在增益集端，WPF 會將顯示在主應用程式的 ui 取得視窗控制代碼。 視窗控制代碼會封裝由內部的 WPF 類別衍生自<xref:System.Windows.Interop.HwndSource>並實作<xref:System.AddIn.Contract.INativeHandleContract>。 此類別的執行個體由<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>並且從增益集的應用程式定義域中主應用程式的應用程式定義域來封送處理。  
+- 在增益集端，WPF 會將顯示在主應用程式的 ui 取得視窗控制代碼。 視窗控制代碼會封裝由內部的 WPF 類別衍生自<xref:System.Windows.Interop.HwndSource>並實作<xref:System.AddIn.Contract.INativeHandleContract>。 此類別的執行個體由<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>並且從增益集的應用程式定義域中主應用程式的應用程式定義域來封送處理。  
   
--   在主機應用程式端，WPF repackages<xref:System.Windows.Interop.HwndSource>做為內部的 WPF 類別衍生自<xref:System.Windows.Interop.HwndHost>，並取用<xref:System.AddIn.Contract.INativeHandleContract>。 此類別的執行個體由<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>主應用程式。  
+- 在主機應用程式端，WPF repackages<xref:System.Windows.Interop.HwndSource>做為內部的 WPF 類別衍生自<xref:System.Windows.Interop.HwndHost>，並取用<xref:System.AddIn.Contract.INativeHandleContract>。 此類別的執行個體由<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>主應用程式。  
   
  <xref:System.Windows.Interop.HwndHost> 用以顯示視窗控制代碼，WPF 使用者介面中所識別的使用者介面。 如需詳細資訊，請參閱 [WPF 和 Win32 互通](../advanced/wpf-and-win32-interoperation.md)。  
   
@@ -230,51 +230,51 @@ ms.locfileid: "59304801"
 ## <a name="wpf-add-in-benefits"></a>WPF 增益集的優點  
  因為 WPF 增益集使用者介面會顯示從主應用程式使用的內部類別衍生自<xref:System.Windows.Interop.HwndHost>，這些使用者介面會受限於各種<xref:System.Windows.Interop.HwndHost>對於 WPF UI 服務，例如版面配置，轉譯、 資料繫結、 樣式、 範本和資源。 不過，WPF 擴大其內部<xref:System.Windows.Interop.HwndHost>子類別與其他功能，包括下列：  
   
--   主應用程式的 UI 和增益集 UI 之間使用 tab 鍵。 請注意，「 增益 」 UI 的程式設計模型需使用增益集端配接器，來覆寫<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>以啟用定位處理，無論增益集是完全受信任或部分信任的。  
+- 主應用程式的 UI 和增益集 UI 之間使用 tab 鍵。 請注意，「 增益 」 UI 的程式設計模型需使用增益集端配接器，來覆寫<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>以啟用定位處理，無論增益集是完全受信任或部分信任的。  
   
--   接受主機應用程式使用者介面中顯示的增益集使用者介面的協助工具需求。  
+- 接受主機應用程式使用者介面中顯示的增益集使用者介面的協助工具需求。  
   
--   啟用 WPF 應用程式安全地在執行多個應用程式網域的案例。  
+- 啟用 WPF 應用程式安全地在執行多個應用程式網域的案例。  
   
--   防止不合法存取增益集 UI 視窗控制代碼時使用安全性隔離 （也就是部分信任安全性沙箱） 中執行增益集。 呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>可確保此安全性：  
+- 防止不合法存取增益集 UI 視窗控制代碼時使用安全性隔離 （也就是部分信任安全性沙箱） 中執行增益集。 呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>可確保此安全性：  
   
-    -   「 增益集傳回 UI 」 程式設計模型，跨越隔離界限傳遞增益集 UI 的視窗控制代碼的唯一方式是呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。  
+    - 「 增益集傳回 UI 」 程式設計模型，跨越隔離界限傳遞增益集 UI 的視窗控制代碼的唯一方式是呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。  
   
-    -   「 增益 」 UI 程式設計模型，覆寫<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>上為增益集端配接器並呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>（如上述範例所示） 是必要的因為呼叫增益集端配接器的`QueryContract`實作主應用程式端配接器。  
+    - 「 增益 」 UI 程式設計模型，覆寫<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>上為增益集端配接器並呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>（如上述範例所示） 是必要的因為呼叫增益集端配接器的`QueryContract`實作主應用程式端配接器。  
   
--   提供多個應用程式定義域執行保護。 由於應用程式定義域的限制，增益集應用程式定義域中擲回的未處理例外狀況會導致整個應用程式當機，即使有隔離界限。 不過，WPF 和.NET Framework 增益集模型提供簡單的方式來解決這個問題，並改善應用程式穩定性。 顯示使用者介面的 WPF 增益集建立<xref:System.Windows.Threading.Dispatcher>執行緒上，如果主應用程式是 WPF 應用程式執行的應用程式定義域。 您可以偵測應用程式定義域處理會發生的所有未處理例外狀況<xref:System.Windows.Threading.Dispatcher.UnhandledException>WPF 增益集的事件<xref:System.Windows.Threading.Dispatcher>。 您可以取得<xref:System.Windows.Threading.Dispatcher>從<xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>屬性。  
+- 提供多個應用程式定義域執行保護。 由於應用程式定義域的限制，增益集應用程式定義域中擲回的未處理例外狀況會導致整個應用程式當機，即使有隔離界限。 不過，WPF 和.NET Framework 增益集模型提供簡單的方式來解決這個問題，並改善應用程式穩定性。 顯示使用者介面的 WPF 增益集建立<xref:System.Windows.Threading.Dispatcher>執行緒上，如果主應用程式是 WPF 應用程式執行的應用程式定義域。 您可以偵測應用程式定義域處理會發生的所有未處理例外狀況<xref:System.Windows.Threading.Dispatcher.UnhandledException>WPF 增益集的事件<xref:System.Windows.Threading.Dispatcher>。 您可以取得<xref:System.Windows.Threading.Dispatcher>從<xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>屬性。  
   
 <a name="WPFAddInModelLimitations"></a>   
 ## <a name="wpf-add-in-limitations"></a>WPF 增益集限制  
  WPF 會將所提供的預設行為的優點之外<xref:System.Windows.Interop.HwndSource>， <xref:System.Windows.Interop.HwndHost>，和視窗控制代碼，也會顯示從主應用程式的增益集使用者介面的限制：  
   
--   從主應用程式中顯示的增益集使用者介面不遵守主應用程式的裁剪行為。  
+- 從主應用程式中顯示的增益集使用者介面不遵守主應用程式的裁剪行為。  
   
--   互通性案例中的「空間」概念也適用於增益集 (請參閱[技術領域概觀](../advanced/technology-regions-overview.md))。  
+- 互通性案例中的「空間」概念也適用於增益集 (請參閱[技術領域概觀](../advanced/technology-regions-overview.md))。  
   
--   主應用程式的 UI 服務，例如資源繼承、 資料繫結和命令，不會自動提供給增益集使用者介面。 若要向增益集提供這些服務，您需要更新管線。  
+- 主應用程式的 UI 服務，例如資源繼承、 資料繫結和命令，不會自動提供給增益集使用者介面。 若要向增益集提供這些服務，您需要更新管線。  
   
--   增益集 UI 無法旋轉、 縮放、 扭曲，或會受到轉換 (請參閱[轉換概觀](../graphics-multimedia/transforms-overview.md))。  
+- 增益集 UI 無法旋轉、 縮放、 扭曲，或會受到轉換 (請參閱[轉換概觀](../graphics-multimedia/transforms-overview.md))。  
   
--   藉由繪製作業轉譯的增益集使用者介面內的內容<xref:System.Drawing>命名空間可以包含 alpha 混色。 不過，增益集 UI 和主應用程式 UI，其中包含它必須是 100%透明的。換句話說，`Opacity`屬性都必須設定為 1。  
+- 藉由繪製作業轉譯的增益集使用者介面內的內容<xref:System.Drawing>命名空間可以包含 alpha 混色。 不過，增益集 UI 和主應用程式 UI，其中包含它必須是 100%透明的。換句話說，`Opacity`屬性都必須設定為 1。  
   
--   如果<xref:System.Windows.Window.AllowsTransparency%2A>主應用程式，其中包含增益集 UI 視窗的屬性設定為`true`，增益集是不可見。 這是 true，即使此增益集 UI 是 100%不透明 (也就是`Opacity`屬性具有值為 1)。  
+- 如果<xref:System.Windows.Window.AllowsTransparency%2A>主應用程式，其中包含增益集 UI 視窗的屬性設定為`true`，增益集是不可見。 這是 true，即使此增益集 UI 是 100%不透明 (也就是`Opacity`屬性具有值為 1)。  
   
--   增益集 UI 必須出現在 WPF 中其他項目相同的最上層視窗之上。  
+- 增益集 UI 必須出現在 WPF 中其他項目相同的最上層視窗之上。  
   
--   可以使用轉譯的增益集 UI 沒有部分<xref:System.Windows.Media.VisualBrush>。 相反地，增益集可能需要建立點陣圖，可以傳遞至主應用程式使用合約所定義的方法產生的 UI 的快照集。  
+- 可以使用轉譯的增益集 UI 沒有部分<xref:System.Windows.Media.VisualBrush>。 相反地，增益集可能需要建立點陣圖，可以傳遞至主應用程式使用合約所定義的方法產生的 UI 的快照集。  
   
--   無法從播放媒體檔案<xref:System.Windows.Controls.MediaElement>增益集的 UI 中。  
+- 無法從播放媒體檔案<xref:System.Windows.Controls.MediaElement>增益集的 UI 中。  
   
--   增益集 ui 所產生的滑鼠事件會不接收也不引發主應用程式，而`IsMouseOver`主應用程式 UI 屬性的值為`false`。  
+- 增益集 ui 所產生的滑鼠事件會不接收也不引發主應用程式，而`IsMouseOver`主應用程式 UI 屬性的值為`false`。  
   
--   當焦點在增益集 UI 的控制項之間移動`GotFocus`和`LostFocus`事件不是接收也不引發由主應用程式。  
+- 當焦點在增益集 UI 的控制項之間移動`GotFocus`和`LostFocus`事件不是接收也不引發由主應用程式。  
   
--   包含增益集 UI 的主應用程式的部分會出現白色列印時。  
+- 包含增益集 UI 的主應用程式的部分會出現白色列印時。  
   
--   所有 dispatcher (請參閱<xref:System.Windows.Threading.Dispatcher>) 建立的增益集 UI 必須手動關閉的擁有者增益集卸載之前如果主應用程式會繼續執行。 合約可以實作方法，可讓主應用程式，以表示增益集，增益集卸載之前，藉此讓增益集 UI 關閉其 dispatcher。  
+- 所有 dispatcher (請參閱<xref:System.Windows.Threading.Dispatcher>) 建立的增益集 UI 必須手動關閉的擁有者增益集卸載之前如果主應用程式會繼續執行。 合約可以實作方法，可讓主應用程式，以表示增益集，增益集卸載之前，藉此讓增益集 UI 關閉其 dispatcher。  
   
--   如果增益集 UI <xref:System.Windows.Controls.InkCanvas> ，或包含<xref:System.Windows.Controls.InkCanvas>，您不能卸載增益集。  
+- 如果增益集 UI <xref:System.Windows.Controls.InkCanvas> ，或包含<xref:System.Windows.Controls.InkCanvas>，您不能卸載增益集。  
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>效能最佳化  

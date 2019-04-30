@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
 ms.openlocfilehash: fdbc69634e86992e71cfccdc080829b6b45f963c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971895"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier 指示詞
 修改 XAML 編譯行為時`x:Class`也會提供。 具體來說，而不是建立在部分`class`具有`Public`存取層級 （預設值），提供`x:Class`會透過`NotPublic`存取層級。 此行為會影響產生的組件中的類別的存取層級。  
@@ -40,11 +40,11 @@ ms.locfileid: "59100912"
 ## <a name="remarks"></a>備註  
  值`x:ClassModifier`在.NET Framework XAML 服務使用方式會因程式語言。 要使用的字串取決於各種語言的實作方式及其<xref:System.CodeDom.Compiler.CodeDomProvider>和類型轉換器，它會傳回定義的意義<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>和<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>，以及該語言是否區分大小寫。  
   
--   適用於 C#，要傳遞至指定的字串<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>是`internal`。  
+- 適用於 C#，要傳遞至指定的字串<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>是`internal`。  
   
--   適用於 Microsoft Visual Basic.NET，要傳遞至指定的字串<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>是`Friend`。  
+- 適用於 Microsoft Visual Basic.NET，要傳遞至指定的字串<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>是`Friend`。  
   
--   針對[!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]，任何目標存在編譯 XAML 支援; 因此，要傳遞的值未指定。  
+- 針對[!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]，任何目標存在編譯 XAML 支援; 因此，要傳遞的值未指定。  
   
  您也可以指定<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>(`public`在 C#`Public`在 Visual Basic 中); 不過，指定<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>不常這樣做，因為<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>已經是預設行為。  
   

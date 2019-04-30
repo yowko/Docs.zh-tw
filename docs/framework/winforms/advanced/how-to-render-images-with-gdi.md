@@ -10,11 +10,11 @@ helpviewer_keywords:
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
 ms.openlocfilehash: e038da545bb3f56cc757710bcaa93aa2c86bfa67
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967111"
 ---
 # <a name="how-to-render-images-with-gdi"></a>HOW TO：使用 GDI+ 呈現影像
 您可以使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 來呈現應用程式中以檔案形式存在的影像。 您可以建立新的物件<xref:System.Drawing.Image>類別 (例如<xref:System.Drawing.Bitmap>) 建立<xref:System.Drawing.Graphics>物件，這是指您要使用的繪圖介面，並呼叫<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>物件。 影像將繪製於此圖形類別所代表的繪圖介面上。 您可以在設計階段使用影像編輯器來建立及編輯影像檔案，而在執行階段使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 來呈現它們。 如需詳細資訊，請參閱[圖示的影像編輯器](/cpp/windows/image-editor-for-icons)。  

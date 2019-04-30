@@ -12,11 +12,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], adding transparency
 ms.assetid: 5440f48c-3ac9-44c3-b170-c1c110bdbab8
 ms.openlocfilehash: 7a8286fb741effaf668b87e90da04f79d1490de2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960936"
 ---
 # <a name="alpha-blending-lines-and-fills"></a>Alpha 混色線條和填色
 在  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，色彩就是 8 位元每個 alpha、 紅色、 綠色及藍色的 32 位元值。 Alpha 值，表示色彩的透明度，範圍的色彩會與背景的色彩混合。 從 0 到 255，其中 0 代表完全透明的色彩，到 255 的 alpha 值範圍表示完全不透明的色彩。  

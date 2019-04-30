@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1e96a12bbf9c4fdc8a0bc79661070eb7fec1a593
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973078"
 ---
 # <a name="ihostiocompletionmanagergetavailablethreads-method"></a>IHostIoCompletionManager::GetAvailableThreads 方法
 取得 I/O 完成執行緒、 執行緒管理的主機，目前不會服務要求總數的數目。  

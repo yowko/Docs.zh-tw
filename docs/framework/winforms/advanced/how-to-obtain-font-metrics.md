@@ -9,22 +9,22 @@ helpviewer_keywords:
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
 ms.openlocfilehash: 24cada3962339cae0608bbe01e070a0b8e256e73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948205"
 ---
 # <a name="how-to-obtain-font-metrics"></a>HOW TO：取得字型度量資訊
 <xref:System.Drawing.FontFamily>類別提供下列方法，擷取各種度量，針對特定的系列樣式組合：  
   
--   <xref:System.Drawing.FontFamily.GetEmHeight%2A>([Fontstyle])  
+- <xref:System.Drawing.FontFamily.GetEmHeight%2A>([Fontstyle])  
   
--   <xref:System.Drawing.FontFamily.GetCellAscent%2A>([Fontstyle])  
+- <xref:System.Drawing.FontFamily.GetCellAscent%2A>([Fontstyle])  
   
--   <xref:System.Drawing.FontFamily.GetCellDescent%2A>([Fontstyle])  
+- <xref:System.Drawing.FontFamily.GetCellDescent%2A>([Fontstyle])  
   
--   <xref:System.Drawing.FontFamily.GetLineSpacing%2A>([Fontstyle])  
+- <xref:System.Drawing.FontFamily.GetLineSpacing%2A>([Fontstyle])  
   
  這些方法所傳回的數字為字型設計單位，因此它們是獨立的大小和單位的特定<xref:System.Drawing.Font>物件。  
   

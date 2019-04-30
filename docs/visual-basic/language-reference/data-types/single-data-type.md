@@ -21,11 +21,11 @@ helpviewer_keywords:
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
 ms.openlocfilehash: b90fdb562f9d65858ac477321a18067cc6e621a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971700"
 ---
 # <a name="single-data-type-visual-basic"></a>字串資料類型 (Visual Basic)
 保存帶正負號的 IEEE 32 位元 （4 個位元組） 單精確度浮點數，值範圍從-3.4028235E + 38 到-1.401298E-45 負值，以及從 1.401298E-45 到 3.4028235E + 38 的正數值。 單精確度數字儲存的是實數的近似值。  
@@ -37,15 +37,15 @@ ms.locfileid: "58833302"
   
 ## <a name="programming-tips"></a>程式設計提示  
   
--   **有效位數。** 當您使用浮點數時，記住其在記憶體中不一定有精確的表示法。 這可能會導致非預期的結果從某些作業，例如要做數值比較，`Mod`運算子。 如需詳細資訊，請參閱 <<c0> [ 疑難排解資料型別](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。  
+- **有效位數。** 當您使用浮點數時，記住其在記憶體中不一定有精確的表示法。 這可能會導致非預期的結果從某些作業，例如要做數值比較，`Mod`運算子。 如需詳細資訊，請參閱 <<c0> [ 疑難排解資料型別](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。  
   
--   **擴展。** `Single`資料類型可擴展為`Double`。 這表示您可以將轉換`Single`要`Double`而不會發生<xref:System.OverflowException?displayProperty=nameWithType>時發生錯誤。  
+- **擴展。** `Single`資料類型可擴展為`Double`。 這表示您可以將轉換`Single`要`Double`而不會發生<xref:System.OverflowException?displayProperty=nameWithType>時發生錯誤。  
   
--   **尾端零。** 浮點資料類型沒有任何結尾 0 字元的內部表示法。 比方說，它們無法區分 4.2000 與 4.2。 因此，結尾 0 字元時，沒有出現在顯示或列印浮點數的值。  
+- **尾端零。** 浮點資料類型沒有任何結尾 0 字元的內部表示法。 比方說，它們無法區分 4.2000 與 4.2。 因此，結尾 0 字元時，沒有出現在顯示或列印浮點數的值。  
   
--   **類型字元。** 將常值類型字元 `F` 附加到常值，會強制其成為 `Single` 資料類型。 將識別項類型字元 `!` 附加到任何識別項，會強制其成為 `Single`。  
+- **類型字元。** 將常值類型字元 `F` 附加到常值，會強制其成為 `Single` 資料類型。 將識別項類型字元 `!` 附加到任何識別項，會強制其成為 `Single`。  
   
--   **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.Single?displayProperty=nameWithType> 結構。  
+- **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.Single?displayProperty=nameWithType> 結構。  
   
 ## <a name="see-also"></a>另請參閱
 

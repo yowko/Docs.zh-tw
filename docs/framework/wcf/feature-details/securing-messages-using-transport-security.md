@@ -3,11 +3,11 @@ title: 使用傳輸安全性來確保訊息的安全
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 ms.openlocfilehash: f32e932bb6616911baa8991cb46a5940c8d285ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990960"
 ---
 # <a name="securing-messages-using-transport-security"></a>使用傳輸安全性來確保訊息的安全
 本節討論訊息佇列 (MSMQ) 的傳輸安全性，您可以使用這項傳輸安全性確保傳送至佇列之訊息的安全。  
@@ -25,11 +25,11 @@ ms.locfileid: "59160884"
   
  使用 <xref:System.ServiceModel.NetMsmqBinding> 與 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 的傳輸安全性，會影響 MSMQ 訊息在傳輸佇列與目標佇列之間傳輸時保障安全的方式，保障安全的意思是：  
   
--   簽署訊息以確保不會被竄改。  
+- 簽署訊息以確保不會被竄改。  
   
--   加密訊息以確保不會被看見或竄改。 這只是建議，可自由選擇。  
+- 加密訊息以確保不會被看見或竄改。 這只是建議，可自由選擇。  
   
--   針對不可否認性，識別訊息寄件人的目標佇列管理員。  
+- 針對不可否認性，識別訊息寄件人的目標佇列管理員。  
   
  在 MSMQ 中，目標佇列擁有存取控制清單 (ACL)，用來檢查用戶端是否擁有傳送訊息至目標佇列的授權，這部分與驗證無關。 同時也檢查接收的應用程式是否擁有自目標佇列接收訊息的權限。  
   

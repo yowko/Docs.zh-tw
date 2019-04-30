@@ -8,10 +8,10 @@ helpviewer_keywords:
 ms.assetid: f4bf3416-b3d8-4568-b98e-3eda8f6dbf7a
 ms.openlocfilehash: 462e32520393a1c23809cce8eb3c130c13bc882f
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947257"
 ---
 # <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a>HOW TO：修改線條或線段結尾的端點
 此範例示範如何修改的圖形的開頭或結尾開啟<xref:System.Windows.Shapes.Shape>項目。 若要變更的已開啟的開頭上限<xref:System.Windows.Shapes.Shape>，使用其<xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A>屬性。 若要變更的已開啟的結尾上限<xref:System.Windows.Shapes.Shape>，使用其<xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A>屬性。 若要檢視可用的線條端點，請參閱<xref:System.Windows.Media.PenLineCap>列舉型別。  

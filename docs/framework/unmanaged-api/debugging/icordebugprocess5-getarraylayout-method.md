@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 332de11790e78b712a429365bd89cc9e41539edc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948755"
 ---
 # <a name="icordebugprocess5getarraylayout-method"></a>ICorDebugProcess5::GetArrayLayout 方法
 提供關於版面配置的陣列類型的資訊。  

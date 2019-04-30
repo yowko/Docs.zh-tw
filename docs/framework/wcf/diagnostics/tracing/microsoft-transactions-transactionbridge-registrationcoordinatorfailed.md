@@ -3,11 +3,11 @@ title: Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorFailed
 ms.date: 03/30/2017
 ms.assetid: 96474056-0418-41e4-8c75-bbc0a853eaba
 ms.openlocfilehash: 3745c542986d405312a308fcf50ba6d7b6f93a1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997768"
 ---
 # <a name="microsofttransactionstransactionbridgeregistrationcoordinatorfailed"></a>Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorFailed
 未能傳送登錄訊息至其協調器的 WS-AT 通訊協定服務  

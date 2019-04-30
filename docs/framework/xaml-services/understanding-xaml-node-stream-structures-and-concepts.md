@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
 ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954085"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>認識 XAML 節點資料流結構和概念
 
@@ -45,13 +45,13 @@ XAML 節點資料流概念有一個值得注意的優點，如果您通過了整
 
 - 根據被報告為目前節點或目前記錄的 <xref:System.Xaml.XamlNodeType> ，呼叫下列其中一項，以取得節點內容的相關資訊：
 
-    - 針對 <xref:System.Xaml.XamlXmlReader.NodeType%2A> 或 <xref:System.Xaml.XamlNodeType.StartMember> 的 <xref:System.Xaml.XamlNodeType.EndMember>，呼叫 <xref:System.Xaml.XamlXmlReader.Member%2A> ，以取得成員的 <xref:System.Xaml.XamlMember> 相關資訊。 請注意，成員可能是 <xref:System.Xaml.XamlDirective>，因此不一定會是上述物件的傳統類型定義成員。 例如，套用至物件的 `x:Name` 似乎是 XAML 成員，其中 <xref:System.Xaml.XamlMember.IsDirective%2A> 為 true，而成員的 <xref:System.Xaml.XamlMember.Name%2A> 為 `Name`，還有其他屬性指出這個指示詞在 XAML 語言 XAML 命名空間之下。
+  - 針對 <xref:System.Xaml.XamlXmlReader.NodeType%2A> 或 <xref:System.Xaml.XamlNodeType.StartMember> 的 <xref:System.Xaml.XamlNodeType.EndMember>，呼叫 <xref:System.Xaml.XamlXmlReader.Member%2A> ，以取得成員的 <xref:System.Xaml.XamlMember> 相關資訊。 請注意，成員可能是 <xref:System.Xaml.XamlDirective>，因此不一定會是上述物件的傳統類型定義成員。 例如，套用至物件的 `x:Name` 似乎是 XAML 成員，其中 <xref:System.Xaml.XamlMember.IsDirective%2A> 為 true，而成員的 <xref:System.Xaml.XamlMember.Name%2A> 為 `Name`，還有其他屬性指出這個指示詞在 XAML 語言 XAML 命名空間之下。
 
-    - 針對 <xref:System.Xaml.XamlXmlReader.NodeType%2A> 或 <xref:System.Xaml.XamlNodeType.StartObject> 的 <xref:System.Xaml.XamlNodeType.EndObject>，呼叫 <xref:System.Xaml.XamlXmlReader.Type%2A> ，以取得物件的 <xref:System.Xaml.XamlType> 相關資訊。
+  - 針對 <xref:System.Xaml.XamlXmlReader.NodeType%2A> 或 <xref:System.Xaml.XamlNodeType.StartObject> 的 <xref:System.Xaml.XamlNodeType.EndObject>，呼叫 <xref:System.Xaml.XamlXmlReader.Type%2A> ，以取得物件的 <xref:System.Xaml.XamlType> 相關資訊。
 
-    - 針對 <xref:System.Xaml.XamlXmlReader.NodeType%2A> 的 <xref:System.Xaml.XamlNodeType.Value>，呼叫 <xref:System.Xaml.XamlXmlReader.Value%2A>。 唯有當節點對成員是某個值的最簡單運算式，或對物件是初始化文字時，該節點才會是一個值 (不過，您應該要注意類型轉換行為，本主題後續章節將會說明)。
+  - 針對 <xref:System.Xaml.XamlXmlReader.NodeType%2A> 的 <xref:System.Xaml.XamlNodeType.Value>，呼叫 <xref:System.Xaml.XamlXmlReader.Value%2A>。 唯有當節點對成員是某個值的最簡單運算式，或對物件是初始化文字時，該節點才會是一個值 (不過，您應該要注意類型轉換行為，本主題後續章節將會說明)。
 
-    - 針對 <xref:System.Xaml.XamlXmlReader.NodeType%2A> 的 <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>，呼叫 <xref:System.Xaml.XamlXmlReader.Namespace%2A> ，以取得命名空間節點的命名空間資訊。
+  - 針對 <xref:System.Xaml.XamlXmlReader.NodeType%2A> 的 <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>，呼叫 <xref:System.Xaml.XamlXmlReader.Namespace%2A> ，以取得命名空間節點的命名空間資訊。
 
 - 呼叫 <xref:System.Xaml.XamlXmlReader.Read%2A> ，使 XAML 讀取器前進至 XAML 節點資料流中的下一個節點，然後再重複那些步驟。
 
@@ -140,15 +140,15 @@ XAML 節點迴圈會以線性方式處理 XAML 節點資料流。 節點資料�
 
 - `Value` 節點代表該值本身；沒有 "EndValue"。 它後面只能接 `EndMember`。
 
-    - 可能被建構使用之物件的 XAML 初始文字，不會產生「物件-值」結構。 而是會針對名為 `_Initialization` 的成員，建立專用成員節點。 而該成員節點會包含初始值字串。 如果它存在的話， `_Initialization` 永遠是第一個 `StartMember`。 `_Initialization` 可能會限定在具有 XAML 語言的 XAML 名稱範圍的某些 XAML 服務表示中，以釐清 `_Initialization` 不支援類型中定義的屬性。
+  - 可能被建構使用之物件的 XAML 初始文字，不會產生「物件-值」結構。 而是會針對名為 `_Initialization` 的成員，建立專用成員節點。 而該成員節點會包含初始值字串。 如果它存在的話， `_Initialization` 永遠是第一個 `StartMember`。 `_Initialization` 可能會限定在具有 XAML 語言的 XAML 名稱範圍的某些 XAML 服務表示中，以釐清 `_Initialization` 不支援類型中定義的屬性。
 
-    - 「成員-值」組合代表該值的屬性設定。 可能最後會有值轉換器一起來處理這個值，而這個值是純文字字串。 不過，在 XAML 物件寫入器處理此節點資料流之前，不會評估這一點。 XAML 物件寫入器擁有必要的 XAML 結構描述內容、類型系統對應，以及值轉換所需的其他支援。
+  - 「成員-值」組合代表該值的屬性設定。 可能最後會有值轉換器一起來處理這個值，而這個值是純文字字串。 不過，在 XAML 物件寫入器處理此節點資料流之前，不會評估這一點。 XAML 物件寫入器擁有必要的 XAML 結構描述內容、類型系統對應，以及值轉換所需的其他支援。
 
 - `EndMember` 節點後面可以接著後續成員的 `StartMember` 節點，或是成員擁有者的 `EndObject` 節點。
 
 - `EndObject` 節點後面可以接著 `EndMember` 節點。 在集合的項目中，物件是對等的情況下，它後面可以接著 `StartObject` 節點。 或者它後面可以接 `Namespace` 節點，這會套用到後續的 `StartObject`。
 
-    - 針對關閉整個節點資料流這種特殊狀況，根目錄的 `EndObject` 的後面沒有接任何項目；讀取器現在是檔案結尾，而 <xref:System.Xaml.XamlReader.Read%2A> 會傳回 `false`。
+  - 針對關閉整個節點資料流這種特殊狀況，根目錄的 `EndObject` 的後面沒有接任何項目；讀取器現在是檔案結尾，而 <xref:System.Xaml.XamlReader.Read%2A> 會傳回 `false`。
 
 <a name="value_converters_and_the_xaml_node_stream"></a>
 

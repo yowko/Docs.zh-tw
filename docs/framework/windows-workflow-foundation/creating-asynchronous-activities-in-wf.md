@@ -3,11 +3,11 @@ title: 在 WF 中建立非同步活動
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
 ms.openlocfilehash: 5d8659ee57f9bb576cd7066652a294717811432f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945882"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>在 WF 中建立非同步活動
 <xref:System.Activities.AsyncCodeActivity> 會提供活動作者可用的基底類別，此類別可讓衍生活動實作非同步執行邏輯。 若自訂活動必須執行非同步工作而不保存工作流程排程器執行緒，並且封鎖任何能夠平行執行的活動，則此功能非常實用。 本主題提供如何使用 <xref:System.Activities.AsyncCodeActivity> 建立自訂非同步活動的概觀。  

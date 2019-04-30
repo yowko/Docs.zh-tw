@@ -10,11 +10,11 @@ helpviewer_keywords:
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
 ms.openlocfilehash: cab6c90947eae8abeb9387535eadb2f89e71454a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973086"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>逐步解說：宣告和引發事件 (Visual Basic)
 本逐步解說示範如何宣告及引發事件的類別，名為`Widget`。 完成步驟後，您可能想要閱讀系列主題中，[逐步解說：處理事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)，但會示範如何使用事件`Widget`來提供應用程式中的狀態資訊的物件。  
@@ -44,7 +44,7 @@ ms.locfileid: "59320687"
   
 #### <a name="to-declare-an-event-for-the-widget-class"></a>若要宣告事件，小工具類別  
   
--   使用`Event`關鍵字來宣告中的事件`Widget`類別。 請注意，事件可以有`ByVal`並`ByRef`引數，做為`Widget`的`PercentDone`事件示範：  
+- 使用`Event`關鍵字來宣告中的事件`Widget`類別。 請注意，事件可以有`ByVal`並`ByRef`引數，做為`Widget`的`PercentDone`事件示範：  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   

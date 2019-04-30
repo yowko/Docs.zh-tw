@@ -3,11 +3,11 @@ title: 將自訂活動屬性繫結至設計工具控制項
 ms.date: 03/30/2017
 ms.assetid: 2e8061ea-10f5-407c-a31f-d0d74ce12f27
 ms.openlocfilehash: 142a9eb273a98d3a2d83a1239d6d7c891d5cc305
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945895"
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a>將自訂活動屬性繫結至設計工具控制項
 

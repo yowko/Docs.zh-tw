@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, Toggle control pattern
 ms.assetid: 3cfe875f-b0c0-413d-9703-5f14e6a1a30e
 ms.openlocfilehash: cd14a20920b11cb198cfc91fd9be6ef83ca05c17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61957517"
 ---
 # <a name="implementing-the-ui-automation-toggle-control-pattern"></a>實作 UI 自動化 Toggle 控制項模式
 > [!NOTE]
@@ -25,13 +25,13 @@ ms.locfileid: "59182139"
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
  實作切換控制項模式時，請注意下列方針和慣例：  
   
--   若控制項在啟動後不會維持狀態，如按鈕、工具列按鈕和超連結，則必須改為實作 <xref:System.Windows.Automation.Provider.IInvokeProvider> 。  
+- 若控制項在啟動後不會維持狀態，如按鈕、工具列按鈕和超連結，則必須改為實作 <xref:System.Windows.Automation.Provider.IInvokeProvider> 。  
   
--   控制項必須以下列順序循環其 <xref:System.Windows.Automation.ToggleState> ： <xref:System.Windows.Automation.ToggleState.On>、 <xref:System.Windows.Automation.ToggleState.Off> 以及 <xref:System.Windows.Automation.ToggleState.Indeterminate>(若支援的話)。  
+- 控制項必須以下列順序循環其 <xref:System.Windows.Automation.ToggleState> ： <xref:System.Windows.Automation.ToggleState.On>、 <xref:System.Windows.Automation.ToggleState.Off> 以及 <xref:System.Windows.Automation.ToggleState.Indeterminate>(若支援的話)。  
   
--   <xref:System.Windows.Automation.TogglePattern> 不提供 SetState(newState) 方法，因為直接設定三種狀態的核取方塊，而不依適當的 <xref:System.Windows.Automation.ToggleState> 順序循環時會發生問題。  
+- <xref:System.Windows.Automation.TogglePattern> 不提供 SetState(newState) 方法，因為直接設定三種狀態的核取方塊，而不依適當的 <xref:System.Windows.Automation.ToggleState> 順序循環時會發生問題。  
   
--   RadioButton 控制項不會實作 <xref:System.Windows.Automation.Provider.IToggleProvider>，因為它無法循環其有效狀態。  
+- RadioButton 控制項不會實作 <xref:System.Windows.Automation.Provider.IToggleProvider>，因為它無法循環其有效狀態。  
   
 <a name="Required_Members_for_IToggleProvider"></a>   
 ## <a name="required-members-for-itoggleprovider"></a>IToggleProvider 的必要成員  

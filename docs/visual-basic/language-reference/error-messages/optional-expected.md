@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30202
 ms.assetid: 6f75060c-2db4-4a79-b5d1-5780c09a74cd
 ms.openlocfilehash: 71a25784f357a7e596093b314ed5b3d721d6f92c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946584"
 ---
 # <a name="optional-expected"></a>必須是 'Optional'
 在程序宣告中的選擇性引數的後面是必要的引數。 下列選擇性引數的每個引數也必須是選擇性的。  

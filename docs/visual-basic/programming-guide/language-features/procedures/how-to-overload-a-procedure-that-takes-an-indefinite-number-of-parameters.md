@@ -11,11 +11,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
 ms.openlocfilehash: 3cf75fc6221364704379eb23d308481c34e6c0d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955736"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>HOW TO：多載不定數目參數 (Visual Basic) 的程序
 如果程序[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)參數，您不能定義採用的參數陣列的一維陣列的多載的版本。 如需詳細資訊，請參閱 「 隱含多載的參數陣列參數 」 中[多載化程序中的考量](./considerations-in-overloading-procedures.md)。  

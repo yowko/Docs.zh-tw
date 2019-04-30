@@ -10,11 +10,11 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
 ms.openlocfilehash: fbe2aa724274022446498a89618f37787f0fa8bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013370"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>HOW TO：使用設計工具格式化 Windows Forms DataGrid 控制項
 
@@ -25,11 +25,11 @@ ms.locfileid: "59333570"
   
  有三個基本的格式化層面<xref:System.Windows.Forms.DataGrid>控制項：  
   
--   您可以設定屬性，以建立資料會顯示為預設樣式。  
+- 您可以設定屬性，以建立資料會顯示為預設樣式。  
   
--   從該基底，您可以自訂某些資料表顯示在執行階段的方式。  
+- 從該基底，您可以自訂某些資料表顯示在執行階段的方式。  
   
--   最後，您可以修改哪些資料行資料格，以及色彩顯示，而且其他格式設定，會顯示。  
+- 最後，您可以修改哪些資料行資料格，以及色彩顯示，而且其他格式設定，會顯示。  
   
  格式化資料格初始步驟中，您可以設定的屬性<xref:System.Windows.Forms.DataGrid>本身。 這些色彩和格式的選擇會形成您接著可以從該處進行變更資料表和資料行顯示根據基底。  
   

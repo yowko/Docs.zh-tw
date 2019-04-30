@@ -3,14 +3,14 @@ title: WF 中的控制流程活動
 ms.date: 03/30/2017
 ms.assetid: 6892885b-f7c5-4aea-8f5e-28863fb4ae75
 ms.openlocfilehash: bcbb12210af2d0172977dca6f81355031baa043a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945908"
 ---
 # <a name="control-flow-activities-in-wf"></a>WF 中的控制流程活動
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 提供數種活動，可用於控制工作流程內的執行流程。 這些活動 (例如`Switch`和`If`) 實作類似於程式設計環境例如 Visual C# 中，有些的流程控制架構 (例如`Pick`) 建立新的程式設計架構模型。  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 提供數種活動，可用於控制工作流程內的執行流程。 這些活動 (例如`Switch`和`If`) 實作類似於程式設計環境，例如視覺效果的流程控制架構C#，而其他資源管理員 (例如`Pick`) 建立新的程式設計架構的模型。  
   
  請注意，雖然 `Parallel` 和 `ParallelForEach` 之類的活動會排定多個同時執行的子活動，但只會使用單一執行緒來進行工作流程。 這些活動的每個子活動會循序執行，在先前的活動完成或閒置之前，後續的活動均不會執行。 因此，最適合使用這些活動的應用程式即為必須交錯執行數個可能封鎖之活動的應用程式。 如果這些活動中沒有任何子活動閒置，`Parallel` 活動會像 `Sequence` 活動般執行，而 `ParallelForEach` 活動會像 `ForEach` 活動般執行。 然而，如果使用非同步活動 (例如衍生自 <xref:System.Activities.AsyncCodeActivity> 的活動) 或傳訊活動，控制項會轉移至下一個分支，而子活動會等候其訊息被接收，或其非同步工作完成。  
   

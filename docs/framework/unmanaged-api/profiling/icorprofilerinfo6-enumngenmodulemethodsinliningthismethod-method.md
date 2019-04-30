@@ -5,11 +5,11 @@ ms.assetid: b933dfe6-7833-40cb-aad8-40842dc3034f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 67ae413ae8944757fc90bcde752b9a5fe53cc68f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948521"
 ---
 # <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod 方法
 
@@ -79,7 +79,7 @@ Simple.Add(int a, int b)
 
 **標頭：** CorProf.idl, CorProf.h
 
-**程式庫：** CorGuids.lib
+**LIBRARY:** CorGuids.lib
 
 **.NET framework 版本：**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]
 

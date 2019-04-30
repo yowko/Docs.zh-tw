@@ -5,22 +5,22 @@ f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
 ms.openlocfilehash: 397648618ea3764efafb5cff41deaef320bbeff3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982432"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub 或 Function 未定義 (Visual Basic)
 A`Sub`或`Function`必須定義，才能呼叫。 可能導致本錯誤的原因包括：  
   
--   拼錯下列程序名稱。  
+- 拼錯下列程序名稱。  
   
--   嘗試從另一個專案呼叫的程序，而不需明確新增至該專案中的參考**參考** 對話方塊。  
+- 嘗試從另一個專案呼叫的程序，而不需明確新增至該專案中的參考**參考** 對話方塊。  
   
--   指定看不到呼叫的程序的程序。  
+- 指定看不到呼叫的程序的程序。  
   
--   Windows 動態連結程式庫 (DLL) 常式或 Macintosh 不在指定的文件庫或程式碼資源的程式碼資源常式宣告。  
+- Windows 動態連結程式庫 (DLL) 常式或 Macintosh 不在指定的文件庫或程式碼資源的程式碼資源常式宣告。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
 ms.openlocfilehash: f3396eb3e758dc456d86de80246de24349680f2e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967748"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>參考和 Imports 陳述式 (Visual Basic)
 您可以對外部物件可以使用您的專案選擇**加入參考**命令**專案**功能表。 在 Visual Basic 中的參考可以指向組件，就像型別程式庫，但包含更多資訊。  

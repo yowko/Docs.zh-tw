@@ -12,11 +12,11 @@ helpviewer_keywords:
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
 ms.openlocfilehash: 60b775408f5c43ff08fc5c7de72a8302b20b2264
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969714"
 ---
 # <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>HOW TO：在 Windows Forms ListView 控制項中顯示插入標記
 <xref:System.Windows.Forms.ListView> 控制項中的插入標記會向使用者顯示將會插入拖曳項目的點。 當使用者將項目拖曳至另外兩個項目之間的某個點時，插入標記會顯示該項目的預期新位置。  
@@ -38,7 +38,7 @@ ms.locfileid: "59145609"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   System 和 System.Windows.Forms 組件的參考。  
+- System 和 System.Windows.Forms 組件的參考。  
   
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   

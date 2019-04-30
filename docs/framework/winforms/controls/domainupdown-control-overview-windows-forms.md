@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DomainUpDown control [Windows Forms], about DomainUpDown control
 ms.assetid: 3f40f9c1-20ad-4331-b9b5-b0127eb36eb3
 ms.openlocfilehash: bfe3e7239f77c6f1a0d9bb46a96c704653b43364
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972064"
 ---
 # <a name="domainupdown-control-overview-windows-forms"></a>DomainUpDown 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.DomainUpDown>控制項是本質上的文字方塊中的組合以及一組按鈕清單中向上或向下移動。 控制項顯示，並從清單中選擇設定文字字串。 按一下向上和向下按鈕移動清單、 按下向上鍵和向下鍵，或輸入字串符合清單中的項目，使用者可以選取字串。 這個控制項的可能用法之一是從名稱依字母順序排序清單中選取項目。  

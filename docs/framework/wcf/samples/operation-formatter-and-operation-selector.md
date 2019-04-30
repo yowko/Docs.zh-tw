@@ -3,11 +3,11 @@ title: 作業格式器和作業選取器
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
 ms.openlocfilehash: 45b489aeb88f57fe442cef9ffed1a2ee079b75e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989686"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>作業格式器和作業選取器
 這個範例會示範如何使用 Windows Communication Foundation (WCF) 擴充性點，以允許在不同的格式，從 WCF 所預期的內容中的訊息資料。 根據預設，WCF 格式器預期方法參數包含`soap:body`項目。 此範例會示範如何實作自訂作業格式器，而這個作業格式器會剖析 HTTP GET 查詢字串中的參數資料，然後使用該資料叫用方法。  
@@ -16,15 +16,15 @@ ms.locfileid: "59318919"
   
  為了此示範，範例提供下列各項：  
   
--   `QueryStringFormatter`，會分別對用戶端和伺服器實作 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 和 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>，並處理查詢字串中的資料。  
+- `QueryStringFormatter`，會分別對用戶端和伺服器實作 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 和 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>，並處理查詢字串中的資料。  
   
--   `UriOperationSelector`，會在伺服器上實作 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>，以根據 GET 要求中的作業名稱執行作業分派。  
+- `UriOperationSelector`，會在伺服器上實作 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>，以根據 GET 要求中的作業名稱執行作業分派。  
   
--   `EnableHttpGetRequestsBehavior` 端點行為 (以及對應的組態)，會將必要的作業選取器加入至執行階段。  
+- `EnableHttpGetRequestsBehavior` 端點行為 (以及對應的組態)，會將必要的作業選取器加入至執行階段。  
   
--   示範如何將新作業格式器插入至執行階段。  
+- 示範如何將新作業格式器插入至執行階段。  
   
--   在這個範例中，用戶端和服務都是主控台應用程式 (.exe)。  
+- 在這個範例中，用戶端和服務都是主控台應用程式 (.exe)。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -36,15 +36,15 @@ ms.locfileid: "59318919"
   
  要求：  
   
--   此範例會使用 <xref:System.ComponentModel.TypeConverter> 類別，將要求訊息中的參數資料與字串互相轉換。 如果特定型別無法使用 <xref:System.ComponentModel.TypeConverter>，則範例格式器會擲回例外狀況。  
+- 此範例會使用 <xref:System.ComponentModel.TypeConverter> 類別，將要求訊息中的參數資料與字串互相轉換。 如果特定型別無法使用 <xref:System.ComponentModel.TypeConverter>，則範例格式器會擲回例外狀況。  
   
--   在用戶端的 `IClientMessageFormatter.SerializeRequest` 方法中，格式器會使用適當的收件者地址來建立 URI，並將作業名稱附加為後置字元。 這個名稱會分派至伺服器上的適當作業。 接著會採用參數物件的陣列，並使用 <xref:System.ComponentModel.TypeConverter> 類別轉換的參數名稱和值，將參數資料序列化為 URI 查詢字串。 然後會將 <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> 和 <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> 屬性設定為這個 URI。 <xref:System.ServiceModel.Channels.MessageProperties> 是透過 <xref:System.ServiceModel.Channels.Message.Properties%2A> 屬性來存取。  
+- 在用戶端的 `IClientMessageFormatter.SerializeRequest` 方法中，格式器會使用適當的收件者地址來建立 URI，並將作業名稱附加為後置字元。 這個名稱會分派至伺服器上的適當作業。 接著會採用參數物件的陣列，並使用 <xref:System.ComponentModel.TypeConverter> 類別轉換的參數名稱和值，將參數資料序列化為 URI 查詢字串。 然後會將 <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> 和 <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> 屬性設定為這個 URI。 <xref:System.ServiceModel.Channels.MessageProperties> 是透過 <xref:System.ServiceModel.Channels.Message.Properties%2A> 屬性來存取。  
   
--   在伺服器的 `IDispatchMessageFormatter.DeserializeRequest` 方法中，格式器會在傳入要求訊息屬性中擷取 `Via` URI。 這個格式器會將 URI 查詢字串中的名稱/值組剖析為參數名稱和值，並使用參數名稱和值填入 (Populate) 傳遞至方法的參數陣列。 請注意，已進行作業分派，因此這個方法會忽略作業名稱後置字元。  
+- 在伺服器的 `IDispatchMessageFormatter.DeserializeRequest` 方法中，格式器會在傳入要求訊息屬性中擷取 `Via` URI。 這個格式器會將 URI 查詢字串中的名稱/值組剖析為參數名稱和值，並使用參數名稱和值填入 (Populate) 傳遞至方法的參數陣列。 請注意，已進行作業分派，因此這個方法會忽略作業名稱後置字元。  
   
  回應：  
   
--   在這個範例中，HTTP GET 只能用於要求。 格式器會將傳送回應的職責委派給原始格式器，但已使用原始格式器來產生 XML 訊息。 這個範例的其中一個目標就是告訴您如何實作此種委派格式器。  
+- 在這個範例中，HTTP GET 只能用於要求。 格式器會將傳送回應的職責委派給原始格式器，但已使用原始格式器來產生 XML 訊息。 這個範例的其中一個目標就是告訴您如何實作此種委派格式器。  
   
 ### <a name="uripathsuffixoperationselector-class"></a>UriPathSuffixOperationSelector 類別  
  <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 介面可讓使用者實作自己的邏輯，而這是特定訊息應該分派的作業。  
@@ -94,16 +94,16 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
   
  在伺服器上：  
   
--   必須實作 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 介面，因此可讀取 HTTP GET 要求並委派至原始格式器以撰寫回應。 呼叫相同 `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` Helper 方法以做為用戶端 (請參閱先前的程式碼範例)，即可完成此動作。  
+- 必須實作 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 介面，因此可讀取 HTTP GET 要求並委派至原始格式器以撰寫回應。 呼叫相同 `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` Helper 方法以做為用戶端 (請參閱先前的程式碼範例)，即可完成此動作。  
   
--   這個動作必須在呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 之前完成。 在此範例中，會顯示如何在呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 之前，以手動方式修改格式器。 其他一種可達到相同目標的方法為，從 <xref:System.ServiceModel.ServiceHost> (會在開啟之前呼叫 `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior`) 衍生類別 (如需範例，請參閱裝載文件和範例)。  
+- 這個動作必須在呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 之前完成。 在此範例中，會顯示如何在呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 之前，以手動方式修改格式器。 其他一種可達到相同目標的方法為，從 <xref:System.ServiceModel.ServiceHost> (會在開啟之前呼叫 `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior`) 衍生類別 (如需範例，請參閱裝載文件和範例)。  
   
 ### <a name="user-experience"></a>使用者經驗  
  在伺服器上：  
   
--   您不需要變更伺服器 `ICalculator` 實作。  
+- 您不需要變更伺服器 `ICalculator` 實作。  
   
--   服務的 App.config 必須使用自訂 POX 繫結，而這個繫結會將 `messageVersion` 項目的 `textMessageEncoding` 屬性設定為 `None`。  
+- 服務的 App.config 必須使用自訂 POX 繫結，而這個繫結會將 `messageVersion` 項目的 `textMessageEncoding` 屬性設定為 `None`。  
   
     ```xml  
     <bindings>  
@@ -116,7 +116,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
     </bindings>  
     ```  
   
--   服務的 App.config 也必須指定自訂 `EnableHttpGetRequestsBehavior`，方法是新增至行為延伸區段之後再使用即可。  
+- 服務的 App.config 也必須指定自訂 `EnableHttpGetRequestsBehavior`，方法是新增至行為延伸區段之後再使用即可。  
   
     ```xml  
     <behaviors>  
@@ -136,13 +136,13 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
     </extensions>  
     ```  
   
--   呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 之前新增作業格式器。  
+- 呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 之前新增作業格式器。  
   
  在用戶端上：  
   
--   您不需要變更用戶端實作。  
+- 您不需要變更用戶端實作。  
   
--   用戶端的 App.config 必須使用自訂 POX 繫結，而這個繫結會將 `messageVersion` 項目的 `textMessageEncoding` 屬性設定為 `None`。 與服務的某項差異為用戶端必須啟用手動定址，這樣才能修改傳出的收件者地址。  
+- 用戶端的 App.config 必須使用自訂 POX 繫結，而這個繫結會將 `messageVersion` 項目的 `textMessageEncoding` 屬性設定為 `None`。 與服務的某項差異為用戶端必須啟用手動定址，這樣才能修改傳出的收件者地址。  
   
     ```xml  
     <bindings>  
@@ -155,9 +155,9 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
     </bindings>  
     ```  
   
--   用戶端的 App.config 必須指定和伺服器一樣的自訂 `EnableHttpGetRequestsBehavior`。  
+- 用戶端的 App.config 必須指定和伺服器一樣的自訂 `EnableHttpGetRequestsBehavior`。  
   
--   呼叫 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel> 之前新增作業格式器。  
+- 呼叫 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel> 之前新增作業格式器。  
   
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 這四個作業 (Add、Subtract、Multiply 和 Divide) 都必須成功。  
   

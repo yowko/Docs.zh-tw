@@ -7,11 +7,11 @@ helpviewer_keywords:
 - authorization, Windows Communication Foundation sample
 ms.assetid: ddcfdaa5-8b2e-4e13-bd85-887209dc6328
 ms.openlocfilehash: 857e1ebe21dcb37764ddf60570a00ec35b205c8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955003"
 ---
 # <a name="authorizing-access-to-service-operations"></a>授權存取服務作業
 這個範例會示範如何使用[ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)若要允許使用<xref:System.Security.Permissions.PrincipalPermissionAttribute>屬性來授權存取服務作業。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)範例。 服務和用戶端使用設定[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。 `mode`的屬性[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)已設為`Message`並`clientCredentialType`已設為`Windows`。 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 會套用至每個服務方法，並且用來限制每個作業的存取。 呼叫者必須是 Windows 系統管理員才能存取每個作業。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - date and time picker controls
 ms.assetid: 1dac1fbd-8f67-4910-9ccb-2c5462d0d855
 ms.openlocfilehash: 236017834f3a965ee0ddfc1a74121679f086050b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971336"
 ---
 # <a name="datetimepicker-control-windows-forms"></a>DateTimePicker 控制項 (Windows Form)
 Windows Form`DateTimePicker`控制項可讓使用者從清單中的日期或時間選取單一項目。 用來代表日期時，它會出現在兩個部分： 下拉式清單中的文字，以及一個方格，其中會顯示當您按一下清單旁邊的向下箭號表示的日期。  

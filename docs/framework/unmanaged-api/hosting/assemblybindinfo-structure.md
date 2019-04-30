@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce79987c7fcf45b8d10dcc4613e053ee735941de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946821"
 ---
 # <a name="assemblybindinfo-structure"></a>AssemblyBindInfo 結構
 提供參考的組件的詳細的資訊。  

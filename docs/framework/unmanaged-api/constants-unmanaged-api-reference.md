@@ -9,11 +9,11 @@ ms.assetid: 77526f65-b71c-4483-9d19-3a3751fd8a45
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8c76db644ffee478003d834460c155c4ec6d0070
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944608"
 ---
 # <a name="constants-unmanaged-api-reference"></a>常數 (Unmanaged API 參考)
 本主題描述的語言類型、 語言廠商和定義於 CorSym.idl 中的文件類型常數。  

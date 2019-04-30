@@ -10,11 +10,11 @@ helpviewer_keywords:
 - drawing lines [Windows Forms], texture
 ms.assetid: dc9118cc-f3c2-42e5-8173-f46d41d18fd5
 ms.openlocfilehash: c0f90c298f48aeb96893bb09241faddc08d8a49d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004275"
 ---
 # <a name="how-to-draw-a-line-filled-with-a-texture"></a>HOW TO：繪製填滿材質的線條
 而不是繪圖線，以使用純色，則可以繪製含有材質的線條。 若要繪製的直線和曲線滿材質，建立<xref:System.Drawing.TextureBrush>物件，並將其傳遞<xref:System.Drawing.TextureBrush>物件到<xref:System.Drawing.Pen.%23ctor%2A>建構函式。 點陣圖相關聯的材質筆刷用來 （不可見），圖格的平面與畫筆筆觸畫筆繪製線條或曲線時，當發現拼接材質的特定像素為單位。  

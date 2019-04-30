@@ -10,11 +10,11 @@ helpviewer_keywords:
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
 ms.openlocfilehash: 061782dbd0ac54286a6c0da74fe769d98848f118
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945180"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic 執行階段程式庫成員
 `Microsoft.VisualBasic`命名空間包含類別、 模組、 常數和列舉型別構成 Visual Basic 執行階段程式庫。 這些程式庫成員提供程序、 屬性和您可以使用您的程式碼中的常數值。 每個模組和類別代表與特定類別的功能。  

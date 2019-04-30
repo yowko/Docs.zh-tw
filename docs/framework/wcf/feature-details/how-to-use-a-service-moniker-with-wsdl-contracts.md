@@ -3,11 +3,11 @@ title: HOW TO：使用服務 Moniker 搭配 WSDL 合約
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
 ms.openlocfilehash: 2968641538bf0b4d0e136d5784bf69e5e7fcb3a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972883"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>HOW TO：使用服務 Moniker 搭配 WSDL 合約
 在某些情況中，您可能會想要有完全獨立的 COM Interop 用戶端。 您要呼叫的服務可能不會公開 MEX 端點，而且系統可能也不會註冊 COM Interop 的 WCF 用戶端 DLL。 在這些情況中，您可以建立 WSDL 檔案，使其描述服務並傳遞至 WCF 服務 Moniker 中。 本主題說明如何使用 WCF WSDL Moniker 來呼叫使用者入門 WCF 範例。  

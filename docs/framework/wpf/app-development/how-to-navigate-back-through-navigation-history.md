@@ -1,5 +1,5 @@
 ---
-title: HOW TO：向後巡覽瀏覽歷程記錄
+title: HOW TO：在瀏覽記錄中向後巡覽
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - navigation [WPF], through navigation history (back)
 ms.assetid: 9343234b-d864-441d-b8a7-d895cba80a87
 ms.openlocfilehash: c489a1593b3d1f22fe1ad6e648d3f8a3f7a6cd44
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947780"
 ---
-# <a name="how-to-navigate-back-through-navigation-history"></a>HOW TO：向後巡覽瀏覽歷程記錄
+# <a name="how-to-navigate-back-through-navigation-history"></a>HOW TO：在瀏覽記錄中向後巡覽
 此範例說明如何瀏覽至項目重新瀏覽歷程記錄。  
   
 ## <a name="example"></a>範例  

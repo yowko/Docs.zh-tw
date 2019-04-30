@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在巡覽記錄中前移或後移
+title: HOW TO：在瀏覽記錄中向前或向後巡覽
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
 ms.openlocfilehash: 4c20ebfab45a24cf34b1476fb94dae6913fb4d99
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947754"
 ---
-# <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>HOW TO：在巡覽記錄中前移或後移
+# <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>HOW TO：在瀏覽記錄中向前或向後巡覽
 此範例說明如何巡覽向前或向後巡覽記錄中的項目。  
   
 ## <a name="example"></a>範例  
  從下列主控件中的內容中執行的程式碼可以巡覽向前或向後巡覽記錄，一次的一個項目。  
   
--   <xref:System.Windows.Navigation.NavigationWindow> 使用 <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Navigation.NavigationWindow> 使用 <xref:System.Windows.Navigation.NavigationService>  
   
--   <xref:System.Windows.Controls.Frame> 使用 <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Controls.Frame> 使用 <xref:System.Windows.Navigation.NavigationService>  
   
--   [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
+- [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
   
  您可以瀏覽正向的一個項目之前，您必須先檢查，有項目向前巡覽記錄中藉由檢查**CanGoForward**屬性。 若要瀏覽正向的一個項目，請呼叫**GoForward**方法。 下列範例所示：  
   

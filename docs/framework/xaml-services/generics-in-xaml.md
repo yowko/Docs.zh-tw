@@ -5,11 +5,11 @@ helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
 ms.openlocfilehash: 9263edf18872f510f5f2f4e3e9cb793e45c5d0b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954098"
 ---
 # <a name="generics-in-xaml"></a>XAML 中的泛型
 .NET Framework XAML 服務中 System.Xaml 實作提供支援使用泛型的 CLR 型別。 這項支援包括作為類型引數中指定的泛型條件約束，並強制執行條件約束，藉由呼叫適當`Add`泛型集合案例的方法。 本主題描述使用和參考 XAML 中的泛型類型的層面。  

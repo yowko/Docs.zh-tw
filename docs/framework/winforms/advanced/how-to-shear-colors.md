@@ -9,11 +9,11 @@ helpviewer_keywords:
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
 ms.openlocfilehash: bf645cf88c4905cd5cf47c2a6c7af088fa428c8a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954647"
 ---
 # <a name="how-to-shear-colors"></a>HOW TO：分歧色彩
 切變增加，或另一個色彩元件等比例的量減少色彩元件。 例如，請考慮其中紅色元件會增加一倍的藍色元件值的轉換。 在這類轉換 （0.7，0.5，1），就會變成 （0.2，0.5，1） 的色彩。 新的紅色元件是 0.2 版 + (1/2)(1) = 0.7。  

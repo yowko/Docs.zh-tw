@@ -3,11 +3,11 @@ title: 永久性執行個體內容
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
 ms.openlocfilehash: 25772e7f119ddd5a144d223f402e815380b3eba5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990254"
 ---
 # <a name="durable-instance-context"></a>永久性執行個體內容
 此範例示範如何自訂 Windows Communication Foundation (WCF) 執行階段，以啟用永久性執行個體內容。 它會使用 SQL Server 2005 做為備份存放區 (在此例中為 SQL Server 2005 Express)。 不過，也會提供存取自訂儲存機制的方法。  
@@ -233,11 +233,11 @@ else
   
  WCF 可讓您藉由加入新的狀態和使用其可擴充物件模式的行為擴充其 InstanceContext 執行階段元件。 可擴充物件模式可在 WCF 中，搭配來擴充現有的執行階段類別的新功能，或新增狀態功能到物件。 有三個介面，在可延伸物件模式-IExtensibleObject\<T >，IExtension\<T >，並 IExtensionCollection\<T >:  
   
--   IExtensibleObject\<T > 介面藉由允許自訂其功能的延伸模組的物件。  
+- IExtensibleObject\<T > 介面藉由允許自訂其功能的延伸模組的物件。  
   
--   IExtension\<T > 類別的型別 t 的延伸模組的物件會實作介面  
+- IExtension\<T > 類別的型別 t 的延伸模組的物件會實作介面  
   
--   IExtensionCollection\<T > 介面是 IExtensions 集合，允許型別擷取 IExtensions 依其類型。  
+- IExtensionCollection\<T > 介面是 IExtensions 集合，允許型別擷取 IExtensions 依其類型。  
   
  因此，您應該建立 InstanceContextExtension 類別，並實作 IExtension 介面及定義必要的狀態以儲存內容識別碼。 這個類別也會提供一種狀態，保留正在使用的存放管理員。 一旦儲存新狀態，就無法進行修改。 所以您應該在建構執行個體時提供狀態，並將該狀態儲存至執行個體，並只能透過唯讀屬性來進行存取。  
   

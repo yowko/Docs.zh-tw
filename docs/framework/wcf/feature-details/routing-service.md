@@ -3,34 +3,34 @@ title: 路由服務
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
 ms.openlocfilehash: 905c84d801a27e588e2c539f987d6280aae7b994
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991039"
 ---
 # <a name="routing-service"></a>路由服務
 「路由服務」是一種泛型 SOAP 媒介，可做為訊息路由器。 路由服務的核心功能是可根據訊息內容傳送訊息的能力，這可讓訊息根據訊息 (不論是標頭或訊息本文) 內部本身的值轉送至用戶端端點。  
   
  <xref:System.ServiceModel.Routing.RoutingService>實作為 Windows Communication Foundation (WCF) 服務中<xref:System.ServiceModel.Routing>命名空間。 路由服務會公開一個或多個接收訊息的服務端點，然後將每則訊息根據訊息內容傳送至一個或多個用戶端端點。 服務提供下列功能：  
   
--   以內容為基礎的路由  
+- 以內容為基礎的路由  
   
-    -   服務彙總  
+    - 服務彙總  
   
-    -   服務版本控制  
+    - 服務版本控制  
   
-    -   優先權路由  
+    - 優先權路由  
   
-    -   動態組態  
+    - 動態組態  
   
--   通訊協定橋接  
+- 通訊協定橋接  
   
--   SOAP 處理  
+- SOAP 處理  
   
--   進階的錯誤處理  
+- 進階的錯誤處理  
   
--   備份端點  
+- 備份端點  
   
  雖然您可以建立媒介服務來完成一或多項上述目標，但是這類實作經常與特定案例或方案關係密切，而且無法輕易套用至新應用程式。  
   
@@ -48,13 +48,13 @@ ms.locfileid: "59129437"
   
  將訊息篩選條件群組為篩選資料表，可建構路由邏輯，讓您處理多個路由案例，例如：  
   
--   服務彙總  
+- 服務彙總  
   
--   服務版本控制  
+- 服務版本控制  
   
--   優先權路由  
+- 優先權路由  
   
--   動態組態  
+- 動態組態  
   
  如需有關訊息篩選條件和篩選資料表的詳細資訊，請參閱[路由簡介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)並[訊息篩選條件](../../../../docs/framework/wcf/feature-details/message-filters.md)。  
   
@@ -97,13 +97,13 @@ ms.locfileid: "59129437"
 ## <a name="streaming"></a>資料流  
  如果您將繫結設定為支援資料流，路由服務就可以成功地串流處理訊息。  不過，在某些情況下，您可能必須緩衝處理訊息：  
   
--   多點傳送 (緩衝處理以建立其他訊息複本)  
+- 多點傳送 (緩衝處理以建立其他訊息複本)  
   
--   容錯移轉 (如果訊息必須傳送至備份，則緩衝處理)  
+- 容錯移轉 (如果訊息必須傳送至備份，則緩衝處理)  
   
--   System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly 為 false (緩衝處理以呈現含有 MessageBuffer 的 MessageFilterTable，讓篩選能夠檢查本文)  
+- System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly 為 false (緩衝處理以呈現含有 MessageBuffer 的 MessageFilterTable，讓篩選能夠檢查本文)  
   
--   動態組態  
+- 動態組態  
   
 ## <a name="see-also"></a>另請參閱
 

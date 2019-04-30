@@ -5,11 +5,11 @@ ms.assetid: 85b24196-b6c6-4bda-9de3-47180bd6ff96
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cc33018f68f9634a29e2f5c52123a0215b446de7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953234"
 ---
 # <a name="icordebugsymbolprovider-interface"></a>ICorDebugSymbolProvider 介面
 提供可用來擷取偵錯符號資訊的方法。  

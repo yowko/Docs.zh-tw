@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
 ms.openlocfilehash: 3a82642c985b7ec1cee885cdda7b054adbe3dfee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969464"
 ---
 # <a name="windows-forms-controls-by-function"></a>依功能區分 Windows Form 控制項
 Windows Form 提供控制項和執行數個函數的元件。 下表列出 Windows Form 控制項和元件，根據一般的函式。 此外，其中有多個控制項提供相同的功能，建議使用的控制項都會列出它所取代的控制項的相關附註。 在個別的後續資料表，其建議的取代項目會列出已被取代的控制項。  

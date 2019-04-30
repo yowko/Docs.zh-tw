@@ -8,11 +8,11 @@ helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
 ms.openlocfilehash: 4fe21bb5b91143dff4d0a9f24bbc39be5e529985
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967852"
 ---
 # <a name="specifying-an-endpoint-address"></a>指定端點位址
 與 Windows Communication Foundation (WCF) 服務的所有通訊都都會透過其端點。 每個 <xref:System.ServiceModel.Description.ServiceEndpoint> 都包含有 <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>、<xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> 和 <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>。 合約會指定哪些為可用的作業。 繫結會指定如何與服務通訊，而位址則指定何處可找到服務。 每個端點必須具備唯一的位址。 端點位址是由 <xref:System.ServiceModel.EndpointAddress> 類別所代表，其中包含代表服務位址的統一資源識別元 (URI)、代表服務之安全性身分識別的 <xref:System.ServiceModel.EndpointAddress.Identity%2A>，以及選用的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 集合。 選用標頭會提供更多詳細的定址資訊來識別端點或與端點互動。 例如，標頭會指出如何處理傳入訊息、端點應該將回覆訊息傳送到哪裡，或是當有多個執行個體可用時，要使用哪個服務執行個體來處理來自特定使用者的傳入訊息。  
@@ -22,13 +22,13 @@ ms.locfileid: "59097522"
   
  大部分傳輸的位址 URI 具有四個部分。 例如，此 URI`http://www.fabrikam.com:322/mathservice.svc/secureEndpoint`具有下列四個部分：  
   
--   配置：http:  
+- 配置：http:  
   
--   電腦： `www.fabrikam.com`  
+- 電腦： `www.fabrikam.com`  
   
--   （選擇性）連接埠：322  
+- （選擇性）連接埠：322  
   
--   路徑：/mathservice.svc/secureEndpoint  
+- 路徑：/mathservice.svc/secureEndpoint  
   
  EPR 模型的一部分，就是每個端點參考都包含可新增額外識別資訊的某些參考參數。 在 WCF 中，這些參考參數會模型化為的執行個體<xref:System.ServiceModel.Channels.AddressHeader>類別。  
   

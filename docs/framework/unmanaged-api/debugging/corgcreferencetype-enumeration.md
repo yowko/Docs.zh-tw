@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a673c98b11fbca5f66e9e1ae61f224448c20797
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966201"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType 列舉
 識別要進行記憶體回收的物件來源。  
@@ -69,9 +69,9 @@ typedef enum {
 ## <a name="remarks"></a>備註  
  `CorGCReferenceType`列舉可用，如下所示：  
   
--   值`type`欄位[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)結構，它會指出參考或控制代碼的來源。  
+- 值`type`欄位[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)結構，它會指出參考或控制代碼的來源。  
   
--   作為`types`引數[ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)方法，它會指定要包含在列舉中的控制代碼的類型。  
+- 作為`types`引數[ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)方法，它會指定要包含在列舉中的控制代碼的類型。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

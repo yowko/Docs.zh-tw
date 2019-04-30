@@ -10,11 +10,11 @@ ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951706"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Unmanaged 程式碼的安全編碼指南
 某些程式庫程式碼需要呼叫 Unmanaged 程式碼 (例如原生程式碼 API，像是 Win32)。 由於這表示要越過 Managed 程式碼的安全性範疇，所以充分的警告是必要的。 若您的程式碼是安全性中性的，則您的程式碼以及它所呼叫的任何程式碼，都必須具備 Unmanaged 程式碼權限 (指定了具有<xref:System.Security.Permissions.SecurityPermission> 旗標的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> )。  
@@ -25,9 +25,9 @@ ms.locfileid: "59143763"
   
  由於提供進入原生程式碼的程式碼路徑之任何 Managed 程式碼都是惡意程式碼的潛在目標，所以必須特別小心地判斷哪些 Unmanaged 程式碼可以安全使用及如何使用。 一般而言，Unmanaged 程式碼應該永遠不會直接公開給部分信任呼叫端。 在可由部分信任程式碼呼叫的程式庫中，評估使用 Unmanaged 程式碼的安全性時，有兩個主要的考量：  
   
--   功能**Safe.GetTimeOfDay**。 Unmanaged 的 API 是否會提供功能，不允許呼叫端執行有潛在危險的作業？ 程式碼存取安全性會使用權限來強制執行資源的存取權，因此請考慮 API 是否使用檔案、使用者介面或執行緒處理，或是否會公開受保護的資訊。 若是如此，包裝它的 Managed 程式碼必須要求必要的權限，才能允許它進入。 此外，當不受權限保護時，記憶體存取必須限定為嚴格的類型安全。  
+- 功能**Safe.GetTimeOfDay**。 Unmanaged 的 API 是否會提供功能，不允許呼叫端執行有潛在危險的作業？ 程式碼存取安全性會使用權限來強制執行資源的存取權，因此請考慮 API 是否使用檔案、使用者介面或執行緒處理，或是否會公開受保護的資訊。 若是如此，包裝它的 Managed 程式碼必須要求必要的權限，才能允許它進入。 此外，當不受權限保護時，記憶體存取必須限定為嚴格的類型安全。  
   
--   參數檢查**Safe.GetTimeOfDay**。 常見的攻擊會傳遞非預期的參數給公開的 Unmanaged 程式碼 API 方法，嘗試造成不合規格的運作。 使用超出範圍的索引或位移值的緩衝區滿溢是此類型攻擊的常見範例，就如可能會在基礎程式碼中惡意探索 Bug 的任何參數。 因此，即使 Unmanaged 程式碼 API 對於部分信任呼叫端在功能上是安全的 (在所需的要求之後)，Managed 程式碼仍必須徹底檢查參數有效性，以確保沒有可能來自使用 Managed 程式碼包裝函式層的惡意程式碼之非預期呼叫。  
+- 參數檢查**Safe.GetTimeOfDay**。 常見的攻擊會傳遞非預期的參數給公開的 Unmanaged 程式碼 API 方法，嘗試造成不合規格的運作。 使用超出範圍的索引或位移值的緩衝區滿溢是此類型攻擊的常見範例，就如可能會在基礎程式碼中惡意探索 Bug 的任何參數。 因此，即使 Unmanaged 程式碼 API 對於部分信任呼叫端在功能上是安全的 (在所需的要求之後)，Managed 程式碼仍必須徹底檢查參數有效性，以確保沒有可能來自使用 Managed 程式碼包裝函式層的惡意程式碼之非預期呼叫。  
   
 ## <a name="using-suppressunmanagedcodesecurityattribute"></a>使用 SuppressUnmanagedCodeSecurityAttribute  
  有先判斷提示，然後再呼叫 Unmanaged 程式碼的效能層面。 對於每個這類呼叫，安全性系統會自動要求 Unmanaged 程式碼權限，每次都會導致堆疊查核行程。 如果您判斷提示，並立即呼叫 Unmanaged 程式碼，堆疊查核行程並無意義：它由您的判斷提示和 Unmanaged 程式碼呼叫所組成。  
@@ -36,11 +36,11 @@ ms.locfileid: "59143763"
   
  如果您使用 SuppressUnmanagedCodeSecurityAttribute **Safe.GetTimeOfDay**，請檢查下列各點：  
   
--   讓 Unmanaged 程式碼進入點位於內部，否則在您的程式碼外部無法存取。  
+- 讓 Unmanaged 程式碼進入點位於內部，否則在您的程式碼外部無法存取。  
   
--   對 Unmanaged 程式碼的任何呼叫都是潛在的安全性漏洞。 請確定您的程式碼並非惡意程式碼間接呼叫 Unmanaged 程式碼並躲避安全性檢查的入口。 請視情況要求權限。  
+- 對 Unmanaged 程式碼的任何呼叫都是潛在的安全性漏洞。 請確定您的程式碼並非惡意程式碼間接呼叫 Unmanaged 程式碼並躲避安全性檢查的入口。 請視情況要求權限。  
   
--   當您正在建立進入 Unmanaged 程式碼的危險路徑時，請使用命名慣例明確地識別，如下面小節所述。  
+- 當您正在建立進入 Unmanaged 程式碼的危險路徑時，請使用命名慣例明確地識別，如下面小節所述。  
   
 ## <a name="naming-convention-for-unmanaged-code-methods"></a>Unmanaged 程式碼方法的命名慣例  
  對於 Unmanaged 程式碼方法，已建立實用且強烈建議使用的命名慣例。 所有 Unmanaged 程式碼方法分為三個類別：安全 **Safe.GetTimeOfDay**、原生 **Native.Xyz**和不安全 **Unsafe.DangerousAPI**。 這些關鍵字可做為類別名稱，其中定義各種 Unmanaged 程式碼進入點的種類。 在原始程式碼中，這些關鍵字應該加入類別名稱，例如就像在 `Safe.GetTimeOfDay`、 `Native.Xyz`或 `Unsafe.DangerousAPI`中一樣。 這些關鍵字每個都會提供對於使用該類別的開發人員相當實用的安全性資訊，如下表所述。  

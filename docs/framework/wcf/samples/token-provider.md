@@ -3,32 +3,32 @@ title: 權杖提供者
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
 ms.openlocfilehash: 9c10d67093fb09cb97f2010926ebaa6176df86c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965655"
 ---
 # <a name="token-provider"></a>權杖提供者
 這個範例會示範如何實作自訂權杖提供者。 Windows Communication Foundation (WCF) 中的權杖提供者用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附預設的 「 認證管理員權杖提供者。 WCF 也隨附[!INCLUDE[infocard](../../../../includes/infocard-md.md)]權杖提供者。 自訂權杖提供者適用於下列情況：
 
--   如果您有這些權杖提供者無法使用的認證存放區。
+- 如果您有這些權杖提供者無法使用的認證存放區。
 
--   如果您想要提供您自己自訂的機制，來轉換認證從使用者提供詳細資訊，以 WCF 用戶端架構時使用的認證時。
+- 如果您想要提供您自己自訂的機制，來轉換認證從使用者提供詳細資訊，以 WCF 用戶端架構時使用的認證時。
 
--   如果您要建置自訂權杖。
+- 如果您要建置自訂權杖。
 
  這個範例會示範如何建置自訂權杖提供者，以便將使用者的輸入轉換為不同的格式。
 
  簡而言之，這個範例示範下面的情形：
 
--   用戶端如何透過使用者名稱/密碼組進行驗證。
+- 用戶端如何透過使用者名稱/密碼組進行驗證。
 
--   如何使用自訂權杖提供者設定用戶端。
+- 如何使用自訂權杖提供者設定用戶端。
 
--   伺服器如何搭配自訂 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> (驗證使用者名稱與密碼是否相符) 來使用密碼驗證用戶端認證。
+- 伺服器如何搭配自訂 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> (驗證使用者名稱與密碼是否相符) 來使用密碼驗證用戶端認證。
 
--   用戶端如何使用伺服器的 X.509 憑證來驗證伺服器。
+- 用戶端如何使用伺服器的 X.509 憑證來驗證伺服器。
 
  這個範例也會示範如何在自訂權杖驗證程序之後存取呼叫者的身分識別。
 
@@ -219,7 +219,7 @@ static void DisplayIdentityInformation()
 
  下面提供批次檔的各區段簡要概觀，讓批次檔得以修改為在適當的組態下執行：
 
--   建立伺服器憑證。
+- 建立伺服器憑證。
 
      下列 Setup.bat 批次檔中的程式行會建立要使用的伺服器憑證。 `%SERVER_NAME%` 變數會指定伺服器名稱。 您可以變更這個變數來指定自己的伺服器名稱。 這個批次檔中的預設值為 localhost。
 
@@ -233,7 +233,7 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   將伺服器憑證安裝至用戶端的受信任憑證存放區中。
+- 將伺服器憑證安裝至用戶端的受信任憑證存放區中。
 
      Setup.bat 批次檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證存放區的步驟。
 

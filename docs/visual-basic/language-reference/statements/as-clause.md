@@ -9,11 +9,11 @@ helpviewer_keywords:
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
 ms.openlocfilehash: 4b0ebbb6a86cc2c71882427afd33e7d9e0fe7a04
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945089"
 ---
 # <a name="as-clause-visual-basic"></a>As 子句 (Visual Basic)
 導入了`As`子句中，用來識別宣告陳述式或泛型類型參數的條件約束清單中的資料類型。  

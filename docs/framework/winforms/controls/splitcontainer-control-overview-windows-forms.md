@@ -7,11 +7,11 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
 ms.openlocfilehash: 4afdd764b2f6ef7f15e8bd26459f0fa4c7d345e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59219417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971960"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer 控制項概觀 (Windows Form)
 Windows Form <xref:System.Windows.Forms.SplitContainer> 控制項可視為一個複合控制項，其中包含兩個可移動的分隔列所分隔的面板。 將滑鼠指標移到分隔列上時，指標會變更形狀，以顯示分隔列是可移動的。  

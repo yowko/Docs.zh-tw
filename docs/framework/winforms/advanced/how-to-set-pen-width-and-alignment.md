@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
 ms.openlocfilehash: bc2ac2587554215ef3b2c2580413fbbb894aa687
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967275"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>HOW TO：設定畫筆寬度和對齊
 當您建立<xref:System.Drawing.Pen>，您可以提供畫筆寬度作為建構函式的引數之一。 您也可以變更畫筆寬度<xref:System.Drawing.Pen.Width%2A>屬性<xref:System.Drawing.Pen>類別。  
@@ -26,7 +26,7 @@ ms.locfileid: "59074972"
   
 ### <a name="to-vary-the-width-of-a-pen"></a>變更畫筆的寬度  
   
--   設定的值<xref:System.Drawing.Pen.Alignment%2A>屬性設<xref:System.Drawing.Drawing2D.PenAlignment.Center>（預設值），指定將在假設線條上置中以綠色的畫筆繪製的像素為單位。 下圖顯示產生的列。  
+- 設定的值<xref:System.Drawing.Pen.Alignment%2A>屬性設<xref:System.Drawing.Drawing2D.PenAlignment.Center>（預設值），指定將在假設線條上置中以綠色的畫筆繪製的像素為單位。 下圖顯示產生的列。  
   
      ![以綠色反白顯示黑色細線。](./media/how-to-set-pen-width-and-alignment/green-pixels-centered-line.gif)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "59074972"
   
 ### <a name="to-change-the-alignment-of-a-pen"></a>若要變更畫筆的對齊方式  
   
--   設定的值<xref:System.Drawing.Pen.Alignment%2A>屬性設<xref:System.Drawing.Drawing2D.PenAlignment.Center>來指定將在矩形的界限上置中以綠色的畫筆繪製的像素。  
+- 設定的值<xref:System.Drawing.Pen.Alignment%2A>屬性設<xref:System.Drawing.Drawing2D.PenAlignment.Center>來指定將在矩形的界限上置中以綠色的畫筆繪製的像素。  
   
      下圖顯示產生的矩形：
   
@@ -48,7 +48,7 @@ ms.locfileid: "59074972"
   
 ### <a name="to-create-an-inset-pen"></a>若要建立插頁畫筆  
   
--   變更綠色手寫筆的對齊方式，藉由修改上述的程式碼範例中的第三個陳述式，如下所示：  
+- 變更綠色手寫筆的對齊方式，藉由修改上述的程式碼範例中的第三個陳述式，如下所示：  
   
      [!code-csharp[System.Drawing.UsingAPen#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#43)]
      [!code-vb[System.Drawing.UsingAPen#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#43)]  

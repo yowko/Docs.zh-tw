@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], Help (using designer)
 ms.assetid: a8563d25-8a75-4bc7-a024-f1870591b50f
 ms.openlocfilehash: 207ceeafa2ea06340310577c636deb5ea1977aae
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942918"
 ---
 # <a name="integrating-user-help-in-windows-forms"></a>整合 Windows Form 中的使用者說明
 建置以 Windows 為基礎的應用程式的很重要，但通常會被忽略的層面是混淆的 [說明] 系統，而這是混淆的使用者有尋求協助的地方。 Windows Form 支援兩種不同的說明，每個由[HelpProvider 元件](../controls/helpprovider-component-windows-forms.md)。 第一種使用者指向 HTML 或 HTML 說明 1 的說明檔。*x*或更高的格式。 第二個可顯示簡短"這是什麼 」-在個別控制項中，輸入說明這是對話方塊特別有用。 在相同表單上可用的說明這兩種類型。  

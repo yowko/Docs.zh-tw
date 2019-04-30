@@ -3,11 +3,11 @@ title: 循環追蹤
 ms.date: 03/30/2017
 ms.assetid: 5ff139f9-8806-47bc-8f33-47fe6c436b92
 ms.openlocfilehash: cd1a0c85dd42a7f064e75c7efdacb9ea46ef445d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002401"
 ---
 # <a name="circular-tracing"></a>循環追蹤
 這個範例會示範循環緩衝區追蹤接聽項的實作。 實際執行服務的常見案例是產生可長時間使用的服務以及可在低階進行的追蹤記錄。 這些服務會耗用大量的磁碟空間。 在進行服務疑難排解時，追蹤記錄中最近的資料往往最切合問題的解決。 這個範例將示範實作循環緩衝區追蹤接聽項，其中會將最近的追蹤保存在磁碟上，最多到某個可設定的資料數量。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)並包含自訂追蹤接聽項。  

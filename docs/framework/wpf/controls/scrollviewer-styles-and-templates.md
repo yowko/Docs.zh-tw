@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ScrollViewer [WPF], styles and templates
 ms.assetid: dffdd822-ae69-4946-abaf-710860cd65b2
 ms.openlocfilehash: 9c0edfd7ab4772eb9a1f5ecdd3db611fa36bf8d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971024"
 ---
 # <a name="scrollviewer-styles-and-templates"></a>ScrollViewer 樣式和範本
 本主題描述的樣式和範本<xref:System.Windows.Controls.ScrollViewer>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>，讓控制項的獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  

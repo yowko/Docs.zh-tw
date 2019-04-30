@@ -10,20 +10,20 @@ helpviewer_keywords:
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
 ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947949"
 ---
 # <a name="user-drawn-controls"></a>使用者自訂描繪控制項
 .NET Framework 會提供您能夠輕鬆地開發自己的控制項。 您可以建立使用者控制項，也就是一組標準的控制項繫結在一起的程式碼，或您可以設計自己的控制項所打造的註冊。 您甚至可以使用繼承建立繼承自現有控制項的控制項，並將新增至其固有的功能。 任何方法使用時，.NET Framework 提供的功能，以繪製自訂的圖形化介面，以您所建立的任何控制項。  
   
  繪製控制項的作業透過在控制項的程式碼執行<xref:System.Windows.Forms.Control.OnPaint%2A>方法。 單一引數<xref:System.Windows.Forms.Control.OnPaint%2A>方法是<xref:System.Windows.Forms.PaintEventArgs>物件，提供的所有資訊和呈現您的控制項時所需的功能。 <xref:System.Windows.Forms.PaintEventArgs>提供兩個主體物件，用以在呈現控制項的屬性：  
   
--   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 物件的矩形，表示要繪製之控制項的部分。 這可以是整個控制項或根據控制項如何繪製控制項的一部分。  
+- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 物件的矩形，表示要繪製之控制項的部分。 這可以是整個控制項或根據控制項如何繪製控制項的一部分。  
   
--   <xref:System.Drawing.Graphics> 物件-封裝數個圖形導向物件和方法，可提供繪製控制項所需的功能。  
+- <xref:System.Drawing.Graphics> 物件-封裝數個圖形導向物件和方法，可提供繪製控制項所需的功能。  
   
  如需詳細資訊<xref:System.Drawing.Graphics>物件，以及如何使用它，請參閱[How to:建立繪圖的圖形物件](../advanced/how-to-create-graphics-objects-for-drawing.md)。  
   

@@ -3,11 +3,11 @@ title: 傳輸
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
 ms.openlocfilehash: 4753ec85c458a0dde3db4a6b7cdad41c69185019
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964485"
 ---
 # <a name="transfer"></a>傳輸
 本主題說明 Windows Communication Foundation (WCF) 的活動追蹤模型中的傳輸。  
@@ -35,9 +35,9 @@ ms.locfileid: "59311015"
 ## <a name="example-of-transfers"></a>傳輸範例  
  下列將會列出兩個傳輸範例。  
   
--   當您建立服務主機時，建構函式會從呼叫程式碼中取得控制，或者呼叫程式碼會傳輸至建構函式。 建構函式執行完成時，會將控制權傳回呼叫程式碼，或者建構函式會傳輸回呼叫程式碼。 這就是巢狀關係的情況。  
+- 當您建立服務主機時，建構函式會從呼叫程式碼中取得控制，或者呼叫程式碼會傳輸至建構函式。 建構函式執行完成時，會將控制權傳回呼叫程式碼，或者建構函式會傳輸回呼叫程式碼。 這就是巢狀關係的情況。  
   
--   接聽項開始處理傳輸資料時，會建立新的執行緒，並將適當的內容交給接收位元組活動，以供處理、傳遞控制和資料。 當執行緒完成處理要求時，接收位元組活動不會將任何資料傳遞回接聽項。 在這個情況下，有資料傳輸進來，但沒有資料從新執行緒活動傳輸出去。 這兩個活動彼此相關，但不是巢狀關係。  
+- 接聽項開始處理傳輸資料時，會建立新的執行緒，並將適當的內容交給接收位元組活動，以供處理、傳遞控制和資料。 當執行緒完成處理要求時，接收位元組活動不會將任何資料傳遞回接聽項。 在這個情況下，有資料傳輸進來，但沒有資料從新執行緒活動傳輸出去。 這兩個活動彼此相關，但不是巢狀關係。  
   
 ## <a name="activity-transfer-sequence"></a>活動傳輸順序  
  格式正確的活動傳輸順序包括下列步驟。  

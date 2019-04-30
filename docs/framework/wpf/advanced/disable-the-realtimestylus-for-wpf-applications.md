@@ -3,11 +3,11 @@ title: 停用 WPF 應用程式的 RealTimeStylus
 ms.date: 03/30/2017
 ms.assetid: e0525309-5ede-4782-837d-dbf6e5554859
 ms.openlocfilehash: e44b71ac5af64ab3a6cb008db71e5a8881592e91
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962486"
 ---
 # <a name="disable-the-realtimestylus-for-wpf-applications"></a>停用 WPF 應用程式的 RealTimeStylus
 Windows Presentation Foundation (WPF) 已內建支援來處理 Windows 7 具備觸控輸入。支援是透過平板電腦平台的即時手寫筆輸入<xref:System.Windows.UIElement.OnStylusDown%2A>， <xref:System.Windows.UIElement.OnStylusUp%2A>，和<xref:System.Windows.UIElement.OnStylusMove%2A>事件。 Windows 7 也會提供 Win32 WM_TOUCH 視窗訊息的多點觸控輸入。 這兩個 Api 互斥上相同的 HWND。 啟用觸控輸入透過平板電腦平台 （WPF 應用程式的預設值） 會停用 WM_TOUCH 訊息。 如此一來，用於接收來自 WPF 視窗的觸控訊息 WM_TOUCH，您必須停用在 WPF 中的內建的手寫筆支援。 這是適用的案例，例如裝載使用 WM_TOUCH 的元件，為 WPF 視窗中。  

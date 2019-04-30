@@ -5,11 +5,11 @@ ms.assetid: 3db215aa-e180-4f70-8d23-6d5a0ffbc8e5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 103e724c37ae356729dd5bba3ff66c0f443f6eaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953515"
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>ICorDebugSymbolProvider::GetAssemblyImageBytes 方法
 如果合併組件中有相對虛擬位址 (RVA)，則會從合併組件讀取資料。  

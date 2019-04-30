@@ -3,18 +3,18 @@ title: 5404 - TokenValidationFailure
 ms.date: 03/30/2017
 ms.assetid: 19783336-5560-4334-be13-2efd15da3e2a
 ms.openlocfilehash: 72e002ef9006633aeac97d4bb8e18edd5192025b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33470220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955255"
 ---
 # <a name="5404---tokenvalidationfailure"></a>5404 - TokenValidationFailure
 ## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
-|ID|5404|  
+|識別碼|5404|  
 |關鍵字|安全性|  
 |層級|錯誤|  
 |通道|Microsoft-Windows-Application Server-Applications/Debug|  

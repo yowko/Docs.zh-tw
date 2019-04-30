@@ -6,8 +6,8 @@ ms.openlocfilehash: 53592db03c88e673d529ef04f2fbc6e182897457
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946662"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>延伸保護驗證之範例的讀我檔案
 延伸的保護是一項安全性方案以防止攔截 (MITM) 攻擊，攻擊者 （"--攔截 」） 會攔截用戶端的認證和使用它們來存取用戶端想要的伺服器上的安全資源。  
@@ -27,9 +27,9 @@ ms.locfileid: "59979117"
   
 4. 這個範例需由用戶端與伺服器建立安全通道，所以必須有可從 Internet Information Services (IIS) 管理員進行安裝的伺服器憑證。  
   
-    1.  開啟 [IIS 管理員] -> [伺服器憑證] \(位於功能檢視索引標籤)。  
+    1. 開啟 [IIS 管理員] -> [伺服器憑證] \(位於功能檢視索引標籤)。  
   
-    2.  為了測試這個範例，您可以建立自我簽署憑證  (若不希望 Internet Explorer 出現憑證可能不安全的提示，可將此憑證安裝到 [受信任的根憑證授權單位] 存放區)。  
+    2. 為了測試這個範例，您可以建立自我簽署憑證  (若不希望 Internet Explorer 出現憑證可能不安全的提示，可將此憑證安裝到 [受信任的根憑證授權單位] 存放區)。  
   
 5. 移至 [預設的網站] 的 [執行] 窗格。 按一下 編輯站台-> 繫結。 新增 HTTPS 做為繫結類型 (如果沒有此項)，連接埠編號為 443，並指派上一個步驟所建立的 SSL 憑證。  
   

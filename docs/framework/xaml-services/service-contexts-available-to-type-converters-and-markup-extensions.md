@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
 ms.openlocfilehash: 850e266aed6fc2d69722ba6dac3baa3e115678a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953968"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>適用於類型轉換子和標記延伸的服務內容
 在撰寫類型來支援使用類型轉換子和標記延伸時，通常必須先知道會在標記或周圍物件圖形結構中的何處使用類型轉換子和標記延伸。 要有這些資訊，才能正確地具現化所提供的物件，或是在物件圖形中建立對現有物件的物件參考。 使用 .NET Framework XAML 服務時，可能需要的內容會以一系列服務介面的形式公開。 類型轉換子或標記延伸支援程式碼可以使用從 <xref:System.Xaml.XamlObjectWriter> 或相關類型傳來的可用服務提供者內容，來查詢服務。 XAML 結構描述內容可透過這類服務直接提供。 本主題說明如何透過值轉換器實作存取服務內容，並列出通常可用的服務及其角色。  

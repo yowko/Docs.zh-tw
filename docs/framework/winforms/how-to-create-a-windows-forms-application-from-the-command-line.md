@@ -12,11 +12,11 @@ ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce97089ec71fc910079910957e784605387f3e06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966863"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>HOW TO：從命令列建立 Windows Forms 應用程式
 下列程序說明若要從命令列建立及執行 Windows Forms 應用程式，所必須完成的基本步驟。 在 Visual Studio 中，對這些程序有廣泛的支援。  另請參閱[逐步解說：在 WPF 中裝載 Windows Forms 控制項](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)。  
@@ -44,11 +44,11 @@ ms.locfileid: "59299863"
   
 4. 將 `Main` 方法加入類別中。  
   
-    1.  適用於<xref:System.STAThreadAttribute>C#`Main`方法，以指定 Windows Forms 應用程式是單一執行緒的 apartment。 （屬性不需要在 Visual Basic 中，因為 Windows forms 應用程式開發與 Visual Basic 使用單一執行緒 apartment 模型的預設值。）  
+    1. 適用於<xref:System.STAThreadAttribute>C#`Main`方法，以指定 Windows Forms 應用程式是單一執行緒的 apartment。 （屬性不需要在 Visual Basic 中，因為 Windows forms 應用程式開發與 Visual Basic 使用單一執行緒 apartment 模型的預設值。）  
   
-    2.  呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>若要將作業系統樣式套用至您的應用程式。  
+    2. 呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>若要將作業系統樣式套用至您的應用程式。  
   
-    3.  建立表單的執行個體，並加以執行。  
+    3. 建立表單的執行個體，並加以執行。  
   
      [!code-csharp[System.Windows.Forms.BasicForm#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.BasicForm#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
@@ -59,11 +59,11 @@ ms.locfileid: "59299863"
   
 2. 編譯表單。  
   
-    -   如果您使用的 C# 中，類型： `csc form1.cs`  
+    - 如果您使用的 C# 中，類型： `csc form1.cs`  
   
          `-or-`  
   
-    -   如果您使用 Visual Basic 中，類型： `vbc form1.vb`  
+    - 如果您使用 Visual Basic 中，類型： `vbc form1.vb`  
   
 3. 在命令提示字元中，輸入： `Form1.exe`  
   
@@ -111,7 +111,7 @@ ms.locfileid: "59299863"
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
--   若要編譯程式碼，請遵循前面說明如何編譯及執行應用程式之程序中的指示。  
+- 若要編譯程式碼，請遵循前面說明如何編譯及執行應用程式之程序中的指示。  
   
 ## <a name="see-also"></a>另請參閱
 

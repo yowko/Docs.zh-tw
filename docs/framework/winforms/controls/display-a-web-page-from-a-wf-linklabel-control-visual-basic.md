@@ -13,11 +13,11 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
 ms.openlocfilehash: 1be9ff06e749d14b46946e899c6ffb6c3a950d65
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972158"
 ---
 # <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>HOW TO：從 Windows Forms LinkLabel 控制項顯示網頁 (Visual Basic)
 此範例會顯示在預設瀏覽器網頁當使用者按一下 Windows Form<xref:System.Windows.Forms.LinkLabel>控制項。  
@@ -40,11 +40,11 @@ End Sub
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   Windows 表單名為`Form1`。  
+- Windows 表單名為`Form1`。  
   
--   名為 `LinkLabel1` 的 <xref:System.Windows.Forms.LinkLabel> 控制項。  
+- 名為 `LinkLabel1` 的 <xref:System.Windows.Forms.LinkLabel> 控制項。  
   
--   作用中的網際網路連線。  
+- 作用中的網際網路連線。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  若要呼叫<xref:System.Diagnostics.Process.Start%2A>方法需要完全信任。 如需詳細資訊，請參閱<xref:System.Security.SecurityException>。  

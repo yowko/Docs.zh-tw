@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
 ms.openlocfilehash: 82847add5b35fe767d42ee88d7754f789174e434
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942905"
 ---
 # <a name="enhancing-windows-forms-applications"></a>增強 Windows Forms 應用程式
 Windows Form 包含許多功能，可用來增強您的 Windows 應用程式，以符合您的使用者的特定需求。 下列主題將描述這些功能及其用法。  

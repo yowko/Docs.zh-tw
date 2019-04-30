@@ -6,11 +6,11 @@ helpviewer_keywords:
 - image controls
 ms.assetid: 83b48634-782b-464d-9b7d-568dc6e0bef2
 ms.openlocfilehash: 61939c427a8a74ef85f269d9e8788d4c3c3b3035
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971143"
 ---
 # <a name="imagelist-component-windows-forms"></a>ImageList 元件 (Windows Form)
 Windows Form `ImageList` 元件可用來儲存影像，然後可以用控制項來顯示這些影像。 影像清單可讓您針對單一且一致的影像目錄來撰寫程式碼。  

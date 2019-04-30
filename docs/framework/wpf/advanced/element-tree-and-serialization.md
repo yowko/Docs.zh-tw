@@ -9,11 +9,11 @@ helpviewer_keywords:
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
 ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962432"
 ---
 # <a name="element-tree-and-serialization"></a>項目樹狀結構和序列化
 WPF 的程式設計項目通常存在於彼此間某種形式的樹狀結構關聯性。 例如，以 XAML 建立的應用程式 UI 可以概念化為物件樹狀結構。 項目樹狀結構可以進一步細分為兩個不連續但有時平行的樹狀結構︰邏輯樹狀結構和視覺化樹狀結構。 WPF 中的序列化牽涉到儲存這兩種樹狀結構的狀態和應用程式狀態，並可能以 XAML 寫入至檔案。  

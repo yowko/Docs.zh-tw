@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fb0e7a676fdbbe3cf04108266471833b28275b1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985357"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen 類別
 提供建立原生可攜式執行檔 (PE) 的功能。 介面將通常用於由編譯器產生可執行其編譯的輸出。  

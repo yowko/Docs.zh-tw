@@ -8,11 +8,11 @@ helpviewer_keywords:
 - menus [Windows Forms], disabling items
 ms.assetid: 985e311e-7d67-4205-b5a3-d045b68a4a03
 ms.openlocfilehash: 9965825458afcd50b29699c3b89ed506078e04d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954241"
 ---
 # <a name="how-to-disable-toolstripmenuitems-using-the-designer"></a>HOW TO：使用設計工具停用 ToolStripMenuItems
 您可以限制，或擴大使用者可能會進行啟用和停用功能表項目，以回應使用者活動的命令。 依預設會啟用功能表項目，當建立，但這可以透過調整<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>屬性。 您可以使用這個屬性在設計階段**屬性**視窗或以程式設計方式在程式碼中設定它。 如需詳細資訊，請參閱[如何：停用 ToolStripMenuItems](how-to-disable-toolstripmenuitems.md)。  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
 ms.openlocfilehash: 13005eb55b430f6ff9b3a6408582a02e53838742
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969204"
 ---
 # <a name="-doc"></a>-doc
 將文件註解處理成 XML 檔案。  
@@ -36,9 +36,9 @@ ms.locfileid: "58824581"
   
  在原始程式檔中，文件註解可以在前面的下列定義：  
   
--   使用者定義型別，例如[類別](../../../visual-basic/language-reference/statements/class-statement.md)或[介面](../../../visual-basic/language-reference/statements/interface-statement.md)  
+- 使用者定義型別，例如[類別](../../../visual-basic/language-reference/statements/class-statement.md)或[介面](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
--   成員，為欄位，例如[事件](../../../visual-basic/language-reference/statements/event-statement.md)，[屬性](../../../visual-basic/language-reference/statements/property-statement.md)，[函式](../../../visual-basic/language-reference/statements/function-statement.md)，或[副程式](../../../visual-basic/language-reference/statements/sub-statement.md)。  
+- 成員，為欄位，例如[事件](../../../visual-basic/language-reference/statements/event-statement.md)，[屬性](../../../visual-basic/language-reference/statements/property-statement.md)，[函式](../../../visual-basic/language-reference/statements/function-statement.md)，或[副程式](../../../visual-basic/language-reference/statements/sub-statement.md)。  
   
  若要使用 Visual Studio 中使用產生的 XML 檔案[IntelliSense](/visualstudio/ide/using-intellisense)功能，可讓您想要支援的組件相同的 XML 檔案的檔案名稱。 請確定 XML 檔案是組件相同目錄中，以便當 Visual Studio 專案中參考組件時，也發現的.xml 檔案。 XML 文件檔案就不需要針對適用於在單一專案或專案所參考的專案中的程式碼的 IntelliSense。  
   

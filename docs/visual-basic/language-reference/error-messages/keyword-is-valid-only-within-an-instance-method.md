@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
 ms.openlocfilehash: 5ff82b932f9bea4c7fd087651e34277ef94bc27c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946636"
 ---
 # <a name="keyword-is-valid-only-within-an-instance-method"></a>'\<關鍵字 >' 只能在執行個體方法
 `Me`， `MyClass`，和`MyBase`關鍵字參考特定的類別執行個體。 您無法使用它們在共用`Function`或`Sub`程序。  
@@ -21,7 +21,7 @@ ms.locfileid: "58820709"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   從程序中移除關鍵字，或移除`Shared`從程序宣告的關鍵字。  
+- 從程序中移除關鍵字，或移除`Shared`從程序宣告的關鍵字。  
   
 ## <a name="see-also"></a>另請參閱
 

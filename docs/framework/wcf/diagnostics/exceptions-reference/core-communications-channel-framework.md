@@ -3,14 +3,14 @@ title: 核心通訊：通道架構
 ms.date: 03/30/2017
 ms.assetid: 8caeb496-8d4c-477e-a476-994ece685a68
 ms.openlocfilehash: 3795c3c34d80c455d7158a707e5d1cb18e7c5a7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33469820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998799"
 ---
 # <a name="core-communications-channel-framework"></a>核心通訊：通道架構
-本主題列出由 Windows Communication Foundation (WCF) 通道架構產生的所有例外狀況。  
+本主題會列出所有由 Windows Communication Foundation (WCF) 通道架構產生的例外狀況。  
   
 ## <a name="exception-list"></a>例外狀況清單  
   

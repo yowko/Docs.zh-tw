@@ -6,11 +6,11 @@ helpviewer_keywords:
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
 ms.openlocfilehash: 2399ec1342280df101e2818399e0f41f10d9606d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945076"
 ---
 # <a name="attribute-list-visual-basic"></a>屬性清單 (Visual Basic)
 指定要套用至程式設計項目宣告的屬性。 以逗號分隔多個屬性。 以下是一個屬性的語法。  
@@ -36,15 +36,15 @@ ms.locfileid: "58818408"
   
 ## <a name="rules"></a>規則  
   
--   **放置。** 您可以將屬性套用至大部分已宣告的程式設計項目。 若要套用一或多個屬性，您將放*屬性區塊*項目宣告的開頭。 屬性清單中的每個項目會指定您想要套用的屬性的修飾詞和您要用於屬性的這個引動過程的引數。  
+- **放置。** 您可以將屬性套用至大部分已宣告的程式設計項目。 若要套用一或多個屬性，您將放*屬性區塊*項目宣告的開頭。 屬性清單中的每個項目會指定您想要套用的屬性的修飾詞和您要用於屬性的這個引動過程的引數。  
   
--   **角括號。** 如果您提供的屬性清單時，您就必須將它括在括弧 ("`<`"和"`>`」)。  
+- **角括號。** 如果您提供的屬性清單時，您就必須將它括在括弧 ("`<`"和"`>`」)。  
   
--   **宣告的一部分。** 屬性必須是項目宣告，而不是個別的陳述式的一部分。 您可以使用行接續序列 (" `_`」) 來擴充分成多個原始程式行的宣告陳述式。  
+- **宣告的一部分。** 屬性必須是項目宣告，而不是個別的陳述式的一部分。 您可以使用行接續序列 (" `_`」) 來擴充分成多個原始程式行的宣告陳述式。  
   
--   **修飾詞。** 屬性修飾詞 (`Assembly`或`Module`) 套用至程式設計項目在原始程式檔開頭的每個屬性，並要求。 屬性套用至不在原始程式檔開頭的元素上不允許屬性修飾詞。  
+- **修飾詞。** 屬性修飾詞 (`Assembly`或`Module`) 套用至程式設計項目在原始程式檔開頭的每個屬性，並要求。 屬性套用至不在原始程式檔開頭的元素上不允許屬性修飾詞。  
   
--   **引數。** 屬性的所有位置引數必須在之前的任何變數或屬性初始設定式。  
+- **引數。** 屬性的所有位置引數必須在之前的任何變數或屬性初始設定式。  
   
 ## <a name="example"></a>範例  
  下列範例會套用<xref:System.Runtime.InteropServices.DllImportAttribute>屬性的基本架構定義`Function`程序。  

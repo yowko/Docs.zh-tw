@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
 ms.openlocfilehash: 662343af42f72816a5a673d2cd6d839a5dca9190
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971297"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>HOW TO：使用設計工具以 Windows Forms Panel 控制項分組控制項
 Windows Form<xref:System.Windows.Forms.Panel>控制項用來分組其他控制項。 有三個群組控制項的原因。 其中一個是視覺化群組相關的表單項目，清楚的使用者介面;另一個是以程式設計方式分組，選項按鈕： 例如，最後一個適用於在設計階段將控制項移動做為一個單位。  

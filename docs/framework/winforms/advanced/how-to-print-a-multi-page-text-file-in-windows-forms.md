@@ -11,11 +11,11 @@ helpviewer_keywords:
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
 ms.openlocfilehash: b17ddcb22f3e1b7dc181e977a0227db5490b66fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003908"
 ---
 # <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>HOW TO：在 Windows Forms 中列印多頁文字檔
 Windows 應用程式列印文字的情況極為常見。 <xref:System.Drawing.Graphics> 類別提供將物件 (圖形或文字) 繪製到螢幕或印表機等裝置的方法。  
@@ -54,11 +54,11 @@ Windows 應用程式列印文字的情況極為常見。 <xref:System.Drawing.Gr
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   位於磁碟機 C:\\ 根目錄之名為 testPage.txt 的文字檔，其中包含要列印的文字。 編輯這個程式碼可列印不同的檔案。  
+- 位於磁碟機 C:\\ 根目錄之名為 testPage.txt 的文字檔，其中包含要列印的文字。 編輯這個程式碼可列印不同的檔案。  
   
--   System、System.Windows.Forms、System.Drawing 組件的參考。  
+- System、System.Windows.Forms、System.Drawing 組件的參考。  
   
--   Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
+- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
 

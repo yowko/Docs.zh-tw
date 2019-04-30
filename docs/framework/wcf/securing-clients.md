@@ -5,11 +5,11 @@ helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949613"
 ---
 # <a name="securing-clients"></a>確保用戶端的安全
 在 Windows Communication Foundation (WCF) 中，服務說明用戶端的安全性需求。 也就是說，服務會指定使用哪一個安全性模式，以及用戶端是否必須提供認證。 因此，保護用戶端安全的程序便十分簡單，只要使用從服務 (如果已發行) 取得的中繼資料並建立用戶端即可。 中繼資料指定如何設定用戶端。 如果服務要求用戶端提供認證，則您必須取得符合要求的認證。 本主題將進一步探討此程序。 如需建立安全服務的詳細資訊，請參閱[Securing Services](../../../docs/framework/wcf/securing-services.md)。  
@@ -71,7 +71,7 @@ ms.locfileid: "59331802"
   
  常見的認證形式是 X.509 憑證。 您可以用兩種方式提供認證：  
   
--   以程式設計方式將它編寫在您的用戶端程式碼中 (使用 `SetCertificate` 方法)。  
+- 以程式設計方式將它編寫在您的用戶端程式碼中 (使用 `SetCertificate` 方法)。  
   
  藉由新增[\<行為 >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)用戶端組態檔區段及使用`clientCredentials`項目 （如下所示）。  
   

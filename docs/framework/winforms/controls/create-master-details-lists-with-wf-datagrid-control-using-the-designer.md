@@ -7,11 +7,11 @@ helpviewer_keywords:
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
 ms.openlocfilehash: f586572c850927ffe71566287986e6db6112c689
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961356"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>HOW TO：使用設計工具以 Windows Forms DataGrid 控制項建立主從式清單
 
@@ -42,15 +42,15 @@ ms.locfileid: "59332075"
   
 6. 設定<xref:System.Windows.Forms.DataGrid>控制您想要指定主版方格中，如下所示：  
   
-    1.  選取 <xref:System.Data.DataSet>從下拉式清單中<xref:System.Windows.Forms.DataGrid.DataSource%2A>屬性。  
+    1. 選取 <xref:System.Data.DataSet>從下拉式清單中<xref:System.Windows.Forms.DataGrid.DataSource%2A>屬性。  
   
-    2.  從下拉式清單中選取主要資料表中 （例如，「 客戶 」）<xref:System.Windows.Forms.DataGrid.DataMember%2A>屬性。  
+    2. 從下拉式清單中選取主要資料表中 （例如，「 客戶 」）<xref:System.Windows.Forms.DataGrid.DataMember%2A>屬性。  
   
 7. 設定<xref:System.Windows.Forms.DataGrid>控制您想要指定詳細資料方格中，如下所示：  
   
-    1.  選取 <xref:System.Data.DataSet>從下拉式清單中<xref:System.Windows.Forms.DataGrid.DataSource%2A>屬性。  
+    1. 選取 <xref:System.Data.DataSet>從下拉式清單中<xref:System.Windows.Forms.DataGrid.DataSource%2A>屬性。  
   
-    2.  選取 master] 和 [詳細資料的資料表，從下拉式清單中之間的關聯性 (例如，"Customers.CustOrd 」)<xref:System.Windows.Forms.DataGrid.DataMember%2A>屬性。 若要查看的關聯性，請按一下加號展開的節點 (**+**) 旁邊下拉式清單中的主資料表。  
+    2. 選取 master] 和 [詳細資料的資料表，從下拉式清單中之間的關聯性 (例如，"Customers.CustOrd 」)<xref:System.Windows.Forms.DataGrid.DataMember%2A>屬性。 若要查看的關聯性，請按一下加號展開的節點 (**+**) 旁邊下拉式清單中的主資料表。  
   
 ## <a name="see-also"></a>另請參閱
 

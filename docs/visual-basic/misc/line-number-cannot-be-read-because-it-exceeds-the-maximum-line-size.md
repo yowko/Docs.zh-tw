@@ -5,18 +5,18 @@ f1_keywords:
 - vbrTextFieldParser_MaxLineSizeExceeded
 ms.assetid: c59116d9-9856-47af-b32d-616d8f2d10d3
 ms.openlocfilehash: 26739ce4e6e188b71f3af9435d53105807aede92
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58047075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944998"
 ---
 # <a name="line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a>行\<數字 > 無法讀取，因為它超過最大線條大小。
 無法讀取這行，因為超過行數上限。 這通常表示檔案中有左引號，但沒有右引號。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   請在檔案中插入右引號。  
+- 請在檔案中插入右引號。  
   
 ## <a name="see-also"></a>另請參閱
 

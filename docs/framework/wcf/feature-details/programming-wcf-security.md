@@ -8,11 +8,11 @@ helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
 ms.openlocfilehash: d327605c084cd5fb1c65fbb786e871b421730b83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946675"
 ---
 # <a name="programming-wcf-security"></a>WCF 安全性程式設計
 本主題描述用來建立安全的 Windows Communication Foundation (WCF) 應用程式的基本程式設計工作。 本主題涵蓋驗證、 機密性和完整性，統稱為*傳輸安全性*。 本主題並未涵蓋授權 （控制存取資源或服務）;如需授權資訊，請參閱[授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  
@@ -33,17 +33,17 @@ ms.locfileid: "59313316"
   
      您有下列三個選擇：  
   
-    1.  `Transport`  
+    1. `Transport`  
   
          傳輸安全性將視您選取之繫結所使用的機制而定。 例如，假使您使用 `WSHttpBinding`，則安全性機制為安全通訊端層 (SSL) (同時也是 HTTPS 通訊協定的機制)。 一般來說，傳輸安全性的主要優點在於，不管您使用哪種傳輸機制，都能提供良好的輸送量。 不過，它有兩個的限制：第一個是傳輸機制會指出用來驗證使用者的認證類型。 只有當服務需要與其他要求不同認證類型的服務交互操作時，這個限制才會成為缺點。 第二個限制是，由於訊息層級並未套用安全性，所以會以躍點方式 (而不是以端對端方式) 來實作安全性。 只有當用戶端與服務之間的訊息路徑包含媒介時，第二個限制才會成為問題。 如需有關使用哪個傳輸的詳細資訊，請參閱[選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。 如需使用傳輸安全性的詳細資訊，請參閱[傳輸安全性概觀](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。  
   
-    2.  `Message`  
+    2. `Message`  
   
          訊息安全性表示每則訊息都包含保護訊息安全的必要標頭與資料。 由於標頭的組成份子各有不同，因此您可以加入任何數量的認證。 如果您正與其他需要特定認證類型 (但無法適用傳輸機制) 的服務進行交互操作，或是如果訊息必須與一個以上的服務搭配使用，而其中每個服務需要不同的認證類型時，這項特性就會變成一個要件。  
   
          如需詳細資訊，請參閱 <<c0> [ 訊息安全性](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)。  
   
-    3.  `TransportWithMessageCredential`  
+    3. `TransportWithMessageCredential`  
   
          這項選擇使用傳輸層來保護訊息傳輸的安全，而每則訊息則包含其他服務所需的豐富認證。 這項選擇會將傳輸安全性的效能優點，與訊息安全性的豐富認證優勢加以結合。 您可透過下列繫結來獲得這項優勢：<xref:System.ServiceModel.BasicHttpBinding>、<xref:System.ServiceModel.WSFederationHttpBinding>、<xref:System.ServiceModel.NetPeerTcpBinding> 和 <xref:System.ServiceModel.WSHttpBinding>。  
   
@@ -56,19 +56,19 @@ ms.locfileid: "59313316"
 ## <a name="setting-the-client-credential-type"></a>設定用戶端認證類型  
  視需要選取用戶端認證類型。 如需詳細資訊，請參閱 <<c0> [ 選取認證類型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)。 下列為可用的用戶端認證類型：  
   
--   `Windows`  
+- `Windows`  
   
--   `Certificate`  
+- `Certificate`  
   
--   `Digest`  
+- `Digest`  
   
--   `Basic`  
+- `Basic`  
   
--   `UserName`  
+- `UserName`  
   
--   `NTLM`  
+- `NTLM`  
   
--   `IssuedToken`  
+- `IssuedToken`  
   
  視模式的設定方式而定，您必須設定認證類型。 例如，如果您選取了 `wsHttpBinding`，並將模式設為 [訊息]，則也可以將 Message 項目的 `clientCredentialType` 屬性設為下列其中一個值：`None`、`Windows`、`UserName`、`Certificate` 和 `IssuedToken`，如下列組態範例所示。  
   

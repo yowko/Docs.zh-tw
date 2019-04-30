@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 480fc27bd41f7ca559ceee379b7f6f81c94da0ba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989192"
 ---
 # <a name="icordebugdatatarget-interface"></a>ICorDebugDataTarget 介面
 提供回呼介面，該介面可供存取特定的目標處理序。  
@@ -37,13 +37,13 @@ ms.locfileid: "59188704"
 ## <a name="remarks"></a>備註  
  `ICorDebugDataTarget` 其方法具有下列特性：  
   
--   偵錯的服務會呼叫這個介面來存取記憶體和目標處理序中的其他資料上的方法。  
+- 偵錯的服務會呼叫這個介面來存取記憶體和目標處理序中的其他資料上的方法。  
   
--   偵錯工具用戶端必須實作這個介面適用於特定的目標 （例如，即時處理序或傾印記憶體）。  
+- 偵錯工具用戶端必須實作這個介面適用於特定的目標 （例如，即時處理序或傾印記憶體）。  
   
--   `ICorDebugDataTarget`可以叫用方法只會從內實作的其他方法`ICorDebug*`介面。 這可確保具有控制哪一個執行緒上叫用它，而當偵錯工具用戶端。  
+- `ICorDebugDataTarget`可以叫用方法只會從內實作的其他方法`ICorDebug*`介面。 這可確保具有控制哪一個執行緒上叫用它，而當偵錯工具用戶端。  
   
--   `ICorDebugDataTarget`實作必須永遠會傳回目標的最新狀態資訊。  
+- `ICorDebugDataTarget`實作必須永遠會傳回目標的最新狀態資訊。  
   
  目標處理序應該停止，並不會變更以任何方式，同時`ICorDebug*`介面 (因此`ICorDebugDataTarget`方法) 呼叫。 如果目標是即時的處理序和其狀態變更， [iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法必須再次呼叫，以提供取代 ICorDebugProcess 執行個體。  
   

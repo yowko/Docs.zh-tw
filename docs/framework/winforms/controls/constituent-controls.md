@@ -10,11 +10,11 @@ helpviewer_keywords:
 - user controls [Windows Forms], constituent controls
 ms.assetid: 5565e720-198b-4bbd-a2bd-c447ba641798
 ms.openlocfilehash: 76a5a4f9b02a71616d247a1bb0f03cc0aec1d70d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956067"
 ---
 # <a name="constituent-controls"></a>組成控制項
 進行自訂圖形轉譯時，構成使用者控制項的控制項或所謂的「組成控制項」較不具彈性。 所有 Windows Form 控制項都處理自己透過自己的轉譯<xref:System.Windows.Forms.Control.OnPaint%2A>方法。 因為這個方法受到保護，所以開發人員無法存取它，因此無法在繪製控制項時防止它執行。 不過，這不表示您無法新增程式碼來影響組成控制項的外觀。 新增事件處理常式，即可完成其他轉譯。 例如，假設您正在撰寫<xref:System.Windows.Forms.UserControl>具有名為按鈕`MyButton`。 如果您想要有超過所提供的其他轉譯<xref:System.Web.UI.WebControls.Button>，您會將程式碼加入使用者控制項，如下所示：  

@@ -3,11 +3,11 @@ title: 區塊處理通道
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
 ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002369"
 ---
 # <a name="chunking-channel"></a>區塊處理通道
 傳送使用 Windows Communication Foundation (WCF) 的大型訊息時，它通常會限制用來緩衝處理這些訊息的記憶體數量。 一個可能的方案為以資料流處理訊息本文 (假設本文中有大量資料)。 然而，有些通訊協定需要緩衝處理整個訊息。 例如，可靠的傳訊和安全性。 另一個可能的方案為將較大訊息分成較小的訊息 (稱為區塊 (Chunk))，一次以單一區塊傳送這些區塊，然後在接收端重新構成較大訊息。 應用程式本身便可執行此區塊處理和取消區塊處理，或可以使用自訂通道來進行此作業。 區塊處理通道範例會顯示如何使用自訂通訊協定或層次通道，以便區塊處理和取消區塊處理任意較大訊息。  
@@ -240,30 +240,30 @@ interface ITestService
   
  一些不太重要的詳細資訊：  
   
--   傳送作業會先呼叫 `ThrowIfDisposedOrNotOpened`，確認已開啟 `CommunicationState`。  
+- 傳送作業會先呼叫 `ThrowIfDisposedOrNotOpened`，確認已開啟 `CommunicationState`。  
   
--   傳送會經過同步處理，以便每次只會為一個工作階段傳送一個訊息。 傳送區塊處理訊息時，會重設名稱為 `ManualResetEvent` 的 `sendingDone`。 傳送結束區塊訊息之後，就會設定此事件。 傳送方法在嘗試傳送傳出訊息之前，會先等待設定此事件。  
+- 傳送會經過同步處理，以便每次只會為一個工作階段傳送一個訊息。 傳送區塊處理訊息時，會重設名稱為 `ManualResetEvent` 的 `sendingDone`。 傳送結束區塊訊息之後，就會設定此事件。 傳送方法在嘗試傳送傳出訊息之前，會先等待設定此事件。  
   
--   傳送會鎖定 `CommunicationObject.ThisLock`，以在傳送時避免變更同步狀態。 如需 <xref:System.ServiceModel.Channels.CommunicationObject> 狀態和狀態機器的詳細資訊，請參閱 <xref:System.ServiceModel.Channels.CommunicationObject> 文件。  
+- 傳送會鎖定 `CommunicationObject.ThisLock`，以在傳送時避免變更同步狀態。 如需 <xref:System.ServiceModel.Channels.CommunicationObject> 狀態和狀態機器的詳細資訊，請參閱 <xref:System.ServiceModel.Channels.CommunicationObject> 文件。  
   
--   傳遞至傳送作業的逾時會當做整個傳送作業的逾時，而這包括傳送所有區塊。  
+- 傳遞至傳送作業的逾時會當做整個傳送作業的逾時，而這包括傳送所有區塊。  
   
--   已選擇自訂 <xref:System.Xml.XmlDictionaryWriter> 設計，可避免緩衝處理整個原始訊息本文。 如果要使用 <xref:System.Xml.XmlDictionaryReader> 取得本文上的 `message.GetReaderAtBodyContents`，將會緩衝處理整個本文。 相反地，我們有自訂<xref:System.Xml.XmlDictionaryWriter>傳遞至`message.WriteBodyContents`。 當訊息呼叫寫入器上的 WriteBase64 時，寫入器會將區塊封裝至訊息，然後使用內部通道傳送這些訊息。 傳送區塊之前，會封鎖 WriteBase64。  
+- 已選擇自訂 <xref:System.Xml.XmlDictionaryWriter> 設計，可避免緩衝處理整個原始訊息本文。 如果要使用 <xref:System.Xml.XmlDictionaryReader> 取得本文上的 `message.GetReaderAtBodyContents`，將會緩衝處理整個本文。 相反地，我們有自訂<xref:System.Xml.XmlDictionaryWriter>傳遞至`message.WriteBodyContents`。 當訊息呼叫寫入器上的 WriteBase64 時，寫入器會將區塊封裝至訊息，然後使用內部通道傳送這些訊息。 傳送區塊之前，會封鎖 WriteBase64。  
   
 ## <a name="implementing-the-receive-operation"></a>實作接收作業  
  在高層級中，接收作業會先檢查傳入訊息不是 `null`，而且其動做為 `ChunkingAction`。 如果不符合這兩個準則，會從接收作業傳回未變更的訊息。 否則，接收作業會建立新的 `ChunkingReader` 和包裝住的新 `ChunkingMessage` (透過呼叫 `GetNewChunkingMessage`)。 傳回新的 `ChunkingMessage` 之前，接收作業會使用執行緒集區的執行緒來執行 `ReceiveChunkLoop`，而它會呼叫迴圈中的 `innerChannel.Receive`，並在接收結束區塊訊息或達到接收逾時之前將區塊傳回 `ChunkingReader`。  
   
  一些不太重要的詳細資訊：  
   
--   和傳送作業一樣，接收作業會先呼叫 `ThrowIfDisposedOrNotOepned`，確認已開啟 `CommunicationState`。  
+- 和傳送作業一樣，接收作業會先呼叫 `ThrowIfDisposedOrNotOepned`，確認已開啟 `CommunicationState`。  
   
--   接收也會經過同步處理，以便一次只能從工作階段接收一個訊息。 其重要性在於，一旦接收開始區塊訊息，所有後續接收的訊息預期都會在此新區塊序列內進行區塊處理，直到接收結束區塊訊息為止。 在接收到目前屬於已取消區塊處理之訊息的所有區塊之前，接收作業無法從內部通道中提取訊息。 若要完成此作業，接收作業會使用名稱為 `ManualResetEvent` 的 `currentMessageCompleted`，此項目會在接收結束區塊訊息時設定，並在接收新的開始區塊訊息時重設。  
+- 接收也會經過同步處理，以便一次只能從工作階段接收一個訊息。 其重要性在於，一旦接收開始區塊訊息，所有後續接收的訊息預期都會在此新區塊序列內進行區塊處理，直到接收結束區塊訊息為止。 在接收到目前屬於已取消區塊處理之訊息的所有區塊之前，接收作業無法從內部通道中提取訊息。 若要完成此作業，接收作業會使用名稱為 `ManualResetEvent` 的 `currentMessageCompleted`，此項目會在接收結束區塊訊息時設定，並在接收新的開始區塊訊息時重設。  
   
--   和傳送作業不同，接收作業在接收時不會制止同步處理的狀態轉換。 例如，接收時可以呼叫關閉作業，並等待直到完成接收擱置的原始訊息，或達到指定的逾時值為止。  
+- 和傳送作業不同，接收作業在接收時不會制止同步處理的狀態轉換。 例如，接收時可以呼叫關閉作業，並等待直到完成接收擱置的原始訊息，或達到指定的逾時值為止。  
   
--   傳遞至接收作業的逾時會當做整個接收作業的逾時，而這包括接收所有區塊。  
+- 傳遞至接收作業的逾時會當做整個接收作業的逾時，而這包括接收所有區塊。  
   
--   如果使用訊息的層級正在以低於傳入區塊訊息的速率使用訊息本文，`ChunkingReader` 會緩衝處理這些傳入區塊，而且最多可緩衝處理 `ChunkingBindingElement.MaxBufferedChunks` 所限制的區塊數。 一旦達到該限制，在使用緩衝處理的區塊或達到接收逾時之前，就不會再從較低層級提取區塊。  
+- 如果使用訊息的層級正在以低於傳入區塊訊息的速率使用訊息本文，`ChunkingReader` 會緩衝處理這些傳入區塊，而且最多可緩衝處理 `ChunkingBindingElement.MaxBufferedChunks` 所限制的區塊數。 一旦達到該限制，在使用緩衝處理的區塊或達到接收逾時之前，就不會再從較低層級提取區塊。  
   
 ## <a name="communicationobject-overrides"></a>CommunicationObject 覆寫  
   

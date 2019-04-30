@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
 ms.openlocfilehash: 6b5e0e4e0a14410c23833db6cc90d23e7959ad22
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983264"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>實作 UI 自動化 Selection 控制項模式
 > [!NOTE]
@@ -25,16 +25,16 @@ ms.locfileid: "59087713"
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
  實作選取控制項模式時，請注意下列方針和慣例：  
   
--   實作 <xref:System.Windows.Automation.Provider.ISelectionProvider> 的控制項允許選取一個或多個子項目。 例如，清單方塊、清單檢視和樹狀檢視都支援多重選取，而下拉式方塊、滑桿和選項按鈕群組則支援單一選取。  
+- 實作 <xref:System.Windows.Automation.Provider.ISelectionProvider> 的控制項允許選取一個或多個子項目。 例如，清單方塊、清單檢視和樹狀檢視都支援多重選取，而下拉式方塊、滑桿和選項按鈕群組則支援單一選取。  
   
--   有最小值、最大值和連續範圍的控制項 (如 [音量]  滑桿控制項)，應實作 <xref:System.Windows.Automation.Provider.IRangeValueProvider> ，而不是實作 <xref:System.Windows.Automation.Provider.ISelectionProvider>。  
+- 有最小值、最大值和連續範圍的控制項 (如 [音量]  滑桿控制項)，應實作 <xref:System.Windows.Automation.Provider.IRangeValueProvider> ，而不是實作 <xref:System.Windows.Automation.Provider.ISelectionProvider>。  
   
--   若單一選取控制項有實作 <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>的子控制項，例如 [顯示內容]  對話方塊中的 [螢幕解析度]  滑桿或 **的 [色彩選擇器]**[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 選取控制項 (如下所示)，應實作 <xref:System.Windows.Automation.Provider.ISelectionProvider>，其子系應實作 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> 和 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>。  
+- 若單一選取控制項有實作 <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>的子控制項，例如 [顯示內容]  對話方塊中的 [螢幕解析度]  滑桿或 **的 [色彩選擇器]**[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 選取控制項 (如下所示)，應實作 <xref:System.Windows.Automation.Provider.ISelectionProvider>，其子系應實作 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> 和 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>。  
   
  ![反白顯示黃色的色彩選擇器。](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 色樣字串對應範例  
   
--   功能表不支援 <xref:System.Windows.Automation.SelectionPattern>。 若使用的功能表項目同時包含圖形和文字 (例如 **[檢視]** **功能表中的 [預覽窗格]**  [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)] 項目)，而有必要傳達狀態，則應實作 <xref:System.Windows.Automation.Provider.IToggleProvider>。  
+- 功能表不支援 <xref:System.Windows.Automation.SelectionPattern>。 若使用的功能表項目同時包含圖形和文字 (例如 **[檢視]** **功能表中的 [預覽窗格]**  [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)] 項目)，而有必要傳達狀態，則應實作 <xref:System.Windows.Automation.Provider.IToggleProvider>。  
   
 <a name="Required_Members_for_ISelectionProvider"></a>   
 ## <a name="required-members-for-iselectionprovider"></a>ISelectionProvider 的必要成員  

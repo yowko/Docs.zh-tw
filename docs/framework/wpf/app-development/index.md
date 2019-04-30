@@ -6,22 +6,22 @@ helpviewer_keywords:
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
 ms.openlocfilehash: 3b7e1d04173741088935104e8d4225691927a27b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951589"
 ---
 # <a name="application-development"></a>應用程式開發
 <a name="introduction"></a> Windows Presentation Foundation (WPF) 是一種展示架構，可用來開發下列類型的應用程式：  
   
--   獨立應用程式 (建置為可執行組件的傳統式 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 應用程式，這些應用程式會安裝到用戶端電腦並從中執行)。  
+- 獨立應用程式 (建置為可執行組件的傳統式 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 應用程式，這些應用程式會安裝到用戶端電腦並從中執行)。  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (以瀏覽頁面組成的應用程式，這些應用程式會建置為可執行組件，並由 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 或 Mozilla Firefox 等網頁瀏覽器裝載)。  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (以瀏覽頁面組成的應用程式，這些應用程式會建置為可執行組件，並由 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 或 Mozilla Firefox 等網頁瀏覽器裝載)。  
   
--   自訂控制項程式庫 (非可執行組件，其中包含可重複使用的控制項)。  
+- 自訂控制項程式庫 (非可執行組件，其中包含可重複使用的控制項)。  
   
--   類別庫 (非可執行組件，其中包含可重複使用的類別)。  
+- 類別庫 (非可執行組件，其中包含可重複使用的類別)。  
   
 > [!NOTE]
 >  強烈建議不要在 Windows 服務中使用 WPF 類型。 如果您嘗試在 Windows 服務中使用這些功能，它們可能無法如預期般運作。  
@@ -32,21 +32,21 @@ ms.locfileid: "59211058"
 ## <a name="application-management"></a>應用程式管理  
  可執行的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式通常需要一組核心功能，其中包括：  
   
--   建立及管理通用應用程式基礎結構 (包括建立進入點方法和 Windows 訊息迴圈以接收系統和輸入訊息)。  
+- 建立及管理通用應用程式基礎結構 (包括建立進入點方法和 Windows 訊息迴圈以接收系統和輸入訊息)。  
   
--   追蹤應用程式存留期並與其互動。  
+- 追蹤應用程式存留期並與其互動。  
   
--   擷取及處理命令列參數。  
+- 擷取及處理命令列參數。  
   
--   共用應用程式範圍的屬性和 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]資源。  
+- 共用應用程式範圍的屬性和 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]資源。  
   
--   偵測及處理未處理的例外狀況。  
+- 偵測及處理未處理的例外狀況。  
   
--   傳回結束代碼。  
+- 傳回結束代碼。  
   
--   管理獨立應用程式中的視窗。  
+- 管理獨立應用程式中的視窗。  
   
--   追蹤 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 以及具有瀏覽視窗和框架之獨立應用程式中的瀏覽。  
+- 追蹤 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 以及具有瀏覽視窗和框架之獨立應用程式中的瀏覽。  
   
  這些功能是由 <xref:System.Windows.Application> 類別實作，您可以使用「應用程式定義」將此類別新增至應用程式。  
   
@@ -62,13 +62,13 @@ ms.locfileid: "59211058"
 ## <a name="windows-and-dialog-boxes"></a>視窗和對話方塊  
  使用者是透過視窗與 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 獨立應用程式互動。 視窗的用途是裝載應用程式內容，以及公開通常可讓使用者與內容互動的應用程式功能。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中，視窗是由 <xref:System.Windows.Window> 類別封裝，該類別支援：  
   
--   建立及顯示視窗。  
+- 建立及顯示視窗。  
   
--   建立主控視窗/附屬視窗的關聯性。  
+- 建立主控視窗/附屬視窗的關聯性。  
   
--   設定視窗外觀 (例如大小、位置、圖示、標題列文字、框線)。  
+- 設定視窗外觀 (例如大小、位置、圖示、標題列文字、框線)。  
   
--   追蹤視窗存留期並與其互動。  
+- 追蹤視窗存留期並與其互動。  
   
  如需詳細資訊，請參閱 [WPF 視窗概觀](wpf-windows-overview.md)。  
   
@@ -84,23 +84,23 @@ ms.locfileid: "59211058"
 ## <a name="navigation"></a>巡覽  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支援使用頁面 (<xref:System.Windows.Controls.Page>) 和超連結 (<xref:System.Windows.Documents.Hyperlink>) 的 Web 式瀏覽。 您可以透過各種方式來實作瀏覽，包括：  
   
--   裝載於網頁瀏覽器的獨立頁面。  
+- 裝載於網頁瀏覽器的獨立頁面。  
   
--   編譯成裝載於網頁瀏覽器之 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 的頁面。  
+- 編譯成裝載於網頁瀏覽器之 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 的頁面。  
   
--   編譯成獨立應用程式並由瀏覽視窗 (<xref:System.Windows.Navigation.NavigationWindow>) 裝載的頁面。  
+- 編譯成獨立應用程式並由瀏覽視窗 (<xref:System.Windows.Navigation.NavigationWindow>) 裝載的頁面。  
   
--   由框架 (<xref:System.Windows.Controls.Frame>) 裝載的頁面，框架本身可以裝載於獨立頁面，或是編譯成 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 或獨立應用程式的頁面。  
+- 由框架 (<xref:System.Windows.Controls.Frame>) 裝載的頁面，框架本身可以裝載於獨立頁面，或是編譯成 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 或獨立應用程式的頁面。  
   
  為了加速瀏覽，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 會實作下列項目：  
   
--   <xref:System.Windows.Navigation.NavigationService>，這是處理瀏覽要求的共用瀏覽引擎，可供 <xref:System.Windows.Controls.Frame>、<xref:System.Windows.Navigation.NavigationWindow> 和 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 用來支援應用程式內的瀏覽。  
+- <xref:System.Windows.Navigation.NavigationService>，這是處理瀏覽要求的共用瀏覽引擎，可供 <xref:System.Windows.Controls.Frame>、<xref:System.Windows.Navigation.NavigationWindow> 和 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 用來支援應用程式內的瀏覽。  
   
--   要啟始瀏覽的瀏覽方法。  
+- 要啟始瀏覽的瀏覽方法。  
   
--   要追蹤瀏覽存留期並與其互動的瀏覽事件。  
+- 要追蹤瀏覽存留期並與其互動的瀏覽事件。  
   
--   使用日誌記住向後和向前瀏覽，該日誌也可供檢查和操作。  
+- 使用日誌記住向後和向前瀏覽，該日誌也可供檢查和操作。  
   
  如需相關資訊，請參閱[瀏覽概觀](navigation-overview.md)。  
   

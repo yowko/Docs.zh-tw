@@ -8,11 +8,11 @@ helpviewer_keywords:
 - serialization [WPF]
 ms.assetid: 2d8ef436-d559-4c3e-86de-5a160d5f87d2
 ms.openlocfilehash: 7227e61dd8140ec9b1560fbc12e4ba4dd3e0d843
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962472"
 ---
 # <a name="element-tree-and-serialization-how-to-topics"></a>項目樹狀結構和序列化 HOW TO 主題
 在本節中的主題描述如何使用 WPF 元素樹狀結構。  

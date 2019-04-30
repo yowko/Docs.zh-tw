@@ -6,16 +6,15 @@ helpviewer_keywords:
 - status bars [Windows Forms], creating
 ms.assetid: 6f543e27-cf78-4b7f-b4d0-6a8030155d48
 ms.openlocfilehash: 9ef6bc125a641538e7fd2da4c17c5f25dfc62709
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009652"
 ---
 # <a name="statusbar-control-windows-forms"></a>StatusBar 控制項 (Windows Form)
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.ToolStripStatusLabel> 控制項會取代 <xref:System.Windows.Forms.StatusBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.StatusBar> 控制項，以提供回溯相容性及未來使用。  
+>  <xref:System.Windows.Forms.ToolStripStatusLabel> 控制項會取代 <xref:System.Windows.Forms.StatusBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.StatusBar> 控制項，以提供回溯相容性及未來使用。  
   
  Windows Form <xref:System.Windows.Forms.StatusBar> 控制項在表單裡被當做區域來使用，通常會顯示在視窗底部，在其中應用程式可以顯示各種狀態資訊。 <xref:System.Windows.Forms.StatusBar> 可以在其上顯示的圖示指出狀態或一系列的動畫圖示，表示正在處理程序; 的狀態列面板控制項。比方說，指出 Microsoft Word 文件正在儲存。  
   

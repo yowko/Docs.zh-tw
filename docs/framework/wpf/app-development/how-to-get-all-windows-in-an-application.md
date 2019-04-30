@@ -1,5 +1,5 @@
 ---
-title: HOW TO：取得應用程式中的所有 Windows
+title: HOW TO：取得應用程式中的所有視窗
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - window objects [WPF], getting
 ms.assetid: f120f06e-993b-4a97-9657-af0d1986981f
 ms.openlocfilehash: 34316f0c6f81b960a8e00131a30b9a237b9ca938
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947767"
 ---
-# <a name="how-to-get-all-windows-in-an-application"></a>HOW TO：取得應用程式中的所有 Windows
+# <a name="how-to-get-all-windows-in-an-application"></a>HOW TO：取得應用程式中的所有視窗
 此範例示範如何取得所有<xref:System.Windows.Window>應用程式中的物件。  
   
 ## <a name="example"></a>範例  

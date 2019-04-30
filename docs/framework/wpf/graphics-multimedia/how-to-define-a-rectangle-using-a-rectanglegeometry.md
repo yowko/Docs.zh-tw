@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rectangles [WPF], creating with RectangleGeometry class
 ms.assetid: e40b8a8e-54b8-416b-a9f2-be6dca9fdf0b
 ms.openlocfilehash: 146ca7017ee38ad5c1065e59662ac441e7bfbfe2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965408"
 ---
 # <a name="how-to-define-a-rectangle-using-a-rectanglegeometry"></a>HOW TO：使用 RectangleGeometry 定義矩形
 此範例說明如何使用<xref:System.Windows.Media.RectangleGeometry>來描述矩形的類別。  

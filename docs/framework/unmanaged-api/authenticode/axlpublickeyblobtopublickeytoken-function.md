@@ -11,11 +11,11 @@ ms.assetid: 2d92a746-d68c-4f53-a16e-727f071a2d80
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1b2535441da173ee13653c68f25039fd1431261a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948950"
 ---
 # <a name="axlpublickeyblobtopublickeytoken-function"></a>_AxlPublicKeyBlobToPublicKeyToken 函式
 從 CSP PUBLICKEYBLOB 格式運算強式名稱公開金鑰語彙基元。  

@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b523c5819994e6da0332188311b4b631e3f9072
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000580"
 ---
 # <a name="icorprofilerinfo3-interface"></a>ICorProfilerInfo3 介面
 提供程式碼分析工具用於和 Common Language Runtime (CLR) 通訊，以控制事件監視以及要求資訊的方法。 `ICorProfilerInfo3`介面是擴充功能[ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)介面。 它提供在 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 和更新版本中支援的新方法。  

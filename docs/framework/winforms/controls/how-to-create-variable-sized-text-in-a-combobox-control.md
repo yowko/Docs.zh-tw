@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
 ms.openlocfilehash: 9155893b3d47707e0e55ee33e30d7998654f9e93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965490"
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>HOW TO：在 ComboBox 控制項中建立各種大小的文字
 此範例示範自訂繪圖中的文字<xref:System.Windows.Forms.ComboBox>控制項。 當項目符合特定準則時，它是以較大的字型繪製，而且變成紅色。  
@@ -58,14 +58,14 @@ End Sub
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   Windows 表單。  
+- Windows 表單。  
   
--   A<xref:System.Windows.Forms.ComboBox>控制項，名為`ListBox1`中的三個項目與<xref:System.Windows.Forms.ComboBox.Items%2A>屬性。 在此範例中，三個項目會命名為`"One", Two", and Three"`。 <xref:System.Windows.Forms.ComboBox.DrawMode%2A>的屬性`ComboBox1`必須設為<xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>。  
+- A<xref:System.Windows.Forms.ComboBox>控制項，名為`ListBox1`中的三個項目與<xref:System.Windows.Forms.ComboBox.Items%2A>屬性。 在此範例中，三個項目會命名為`"One", Two", and Three"`。 <xref:System.Windows.Forms.ComboBox.DrawMode%2A>的屬性`ComboBox1`必須設為<xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>。  
   
     > [!NOTE]
     >  這項技術也是適用於<xref:System.Windows.Forms.ListBox>控制項，您可以使用替代<xref:System.Windows.Forms.ListBox>如<xref:System.Windows.Forms.ComboBox>。  
   
--   <xref:System.Windows.Forms?displayProperty=nameWithType> 和 <xref:System.Drawing?displayProperty=nameWithType> 命名空間的參考。  
+- <xref:System.Windows.Forms?displayProperty=nameWithType> 和 <xref:System.Drawing?displayProperty=nameWithType> 命名空間的參考。  
   
 ## <a name="see-also"></a>另請參閱
 

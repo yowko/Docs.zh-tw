@@ -5,18 +5,18 @@ f1_keywords:
 - vbrTextFieldParser_NumberOfCharsMustBePositive
 ms.assetid: 3eea4bbf-cd49-4d19-adfb-0e2adf087065
 ms.openlocfilehash: 0b2dc0b7b308877d7029c9a32047296cace9a456
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944907"
 ---
 # <a name="numberofchars-must-be-greater-than-zero"></a>NumberOfChars 必須大於零
 使用 `PeekChars` 物件的 `TextFieldParser` 方法時，您必須提供大於 `NumberOfChars` 的 `0`值。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   請將 `NumberOfChars` 變更為大於 `0`的值。  
+- 請將 `NumberOfChars` 變更為大於 `0`的值。  
   
 ## <a name="see-also"></a>另請參閱
 

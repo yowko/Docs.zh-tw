@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
 author: KrzysztofCwalina
 ms.openlocfilehash: 3609d6ac4847cb081740fd698869df4976f83f8f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960389"
 ---
 # <a name="events-and-callbacks"></a>事件和回呼
 回呼是擴充點，讓回呼透過委派的使用者程式碼的架構。 這些委派通常會透過方法的參數傳遞給架構。  

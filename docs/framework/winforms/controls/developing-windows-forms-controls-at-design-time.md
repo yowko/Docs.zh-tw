@@ -10,11 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
 ms.openlocfilehash: 641a6c1c99169c6836c33b3e84b2ae02aba298d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972233"
 ---
 # <a name="developing-windows-forms-controls-at-design-time"></a>在設計階段開發 Windows Form 控制項
 針對控制項作者，.NET Framework 提供豐富的控制項撰寫技術。 作者不再只能設計作為預先存在之控制項集合的複合控制項。 透過繼承，您可以從預先存在的複合控制項或預先存在的 Windows Forms 控制項來建立自己的控制項。 您也可以設計可實作自訂繪製的專屬控制項。 這些選項可提供視覺介面設計和功能的大量彈性。 若要利用這些功能，您應該熟悉物件程式設計概念。  

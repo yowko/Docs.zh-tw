@@ -9,11 +9,11 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
 ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981886"
 ---
 # <a name="resources-wpf"></a>資源 (WPF)
 資源是可在應用程式中不同位置重複使用的物件。 WPF 支援不同類型的資源。 這些資源會有主要兩種類型的資源：XAML 資源和資源資料檔案。 XAML 資源的範例包括筆刷和樣式。 資源資料檔案是應用程式所需的非可執行資料檔案。  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a1b189b79a02f04b7f795ff2524441f12b053cec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984629"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost 介面
 提供方法，傳回 common language runtime (CLR) 的特定版本，其版本號碼為基礎，列出所有已安裝的 Clr，清單中指定的處理序所載入的所有執行階段中，探索用來編譯組件、 結束處理程序的 CLR 版本與全新的執行階段關閉舊版 API 繫結的查詢。  

@@ -11,22 +11,22 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
 ms.openlocfilehash: 526cb509d780abdbf3db6e15504616de19daae83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009093"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>逐步解說：建立專業樣式的 ToolStrip 控制項
 您可以提供給您的應用程式<xref:System.Windows.Forms.ToolStrip>撰寫您自己的類別衍生自控制項專業外觀和行為<xref:System.Windows.Forms.ToolStripProfessionalRenderer>型別。  
   
  本逐步解說示範如何使用<xref:System.Windows.Forms.ToolStrip>控制項，以建立複合控制項，以類似**瀏覽窗格**Microsoft® Outlook® 提供的。 本逐步解說會說明下列工作：  
   
--   建立 Windows 控制項程式庫專案。  
+- 建立 Windows 控制項程式庫專案。  
   
--   設計 StackView 控制項。  
+- 設計 StackView 控制項。  
   
--   實作自訂轉譯器。  
+- 實作自訂轉譯器。  
   
  當您完成時，您必須使用 Microsoft Office® XP 控制項專業外觀的可重複使用的自訂用戶端控制項。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "59336547"
 ## <a name="prerequisites"></a>必要條件  
  若要完成這個逐步解說，您將需要：  
   
--   若要能夠建立和安裝 Visual Studio 的電腦上執行 Windows Form 應用程式專案有足夠的權限。  
+- 若要能夠建立和安裝 Visual Studio 的電腦上執行 Windows Form 應用程式專案有足夠的權限。  
   
 ## <a name="creating-a-windows-control-library-project"></a>建立 Windows 控制項程式庫專案  
  第一個步驟是建立控制項程式庫專案。  
@@ -178,11 +178,11 @@ ms.locfileid: "59336547"
 ## <a name="next-steps"></a>後續步驟  
  在本逐步解說中，您已建立可重複使用的自訂用戶端控制項專業外觀的 Office XP 控制項。 您可以使用<xref:System.Windows.Forms.ToolStrip>用於許多其他用途的控制項系列：  
   
--   建立您的控制項使用的快顯功能表<xref:System.Windows.Forms.ContextMenuStrip>。 如需詳細資訊，請參閱 < [ContextMenu 元件概觀](contextmenu-component-overview-windows-forms.md)。  
+- 建立您的控制項使用的快顯功能表<xref:System.Windows.Forms.ContextMenuStrip>。 如需詳細資訊，請參閱 < [ContextMenu 元件概觀](contextmenu-component-overview-windows-forms.md)。  
   
--   使用自動填入的標準功能表中建立的表單。 如需詳細資訊，請參閱[逐步解說：對表單提供標準功能表項目](walkthrough-providing-standard-menu-items-to-a-form.md)。  
+- 使用自動填入的標準功能表中建立的表單。 如需詳細資訊，請參閱[逐步解說：對表單提供標準功能表項目](walkthrough-providing-standard-menu-items-to-a-form.md)。  
   
--   建立多個文件介面 (MDI) 表單使用停駐<xref:System.Windows.Forms.ToolStrip>控制項。 如需詳細資訊，請參閱[如何：使用功能表合併和 ToolStrip 控制項建立 MDI 表單](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)。  
+- 建立多個文件介面 (MDI) 表單使用停駐<xref:System.Windows.Forms.ToolStrip>控制項。 如需詳細資訊，請參閱[如何：使用功能表合併和 ToolStrip 控制項建立 MDI 表單](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

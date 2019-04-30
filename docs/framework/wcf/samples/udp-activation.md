@@ -3,42 +3,42 @@ title: UDP 啟用
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
 ms.openlocfilehash: 6e19e92872c9b9344db7e787f0cd77e0a315f1a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007665"
 ---
 # <a name="udp-activation"></a>UDP 啟用
 此樣本根據[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。 它會擴充[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例，以支援使用 Windows Process Activation Service (WAS) 處理序啟動。  
   
  此範例包含三個主要部分：  
   
--   UDP 通訊協定啟動程式，這是代表要啟動之應用程式接收 UDP 訊息的獨立處理序。  
+- UDP 通訊協定啟動程式，這是代表要啟動之應用程式接收 UDP 訊息的獨立處理序。  
   
--   用戶端，會使用 UDP 自訂傳輸以傳送訊息。  
+- 用戶端，會使用 UDP 自訂傳輸以傳送訊息。  
   
--   服務 (在 WAS 啟動的背景工作處理序中裝載)，會透過 UDP 自訂傳輸來接收訊息。  
+- 服務 (在 WAS 啟動的背景工作處理序中裝載)，會透過 UDP 自訂傳輸來接收訊息。  
   
 ## <a name="udp-protocol-activator"></a>UDP 通訊協定啟動程式  
  UDP 通訊協定啟動程式是 WCF 用戶端與 WCF 服務之間的橋樑。 可提供在傳輸層中，透過 UDP 通訊協定進行資料通訊。 這個啟動程式有兩個主要功能：  
   
--   WAS 接聽程式配接器 (LA)，會與 WAS 共同作業以啟動處理序，進而回應傳入訊息。  
+- WAS 接聽程式配接器 (LA)，會與 WAS 共同作業以啟動處理序，進而回應傳入訊息。  
   
--   UDP 通訊協定接聽程式，代表要啟動的應用程式接受 UDP 訊息。  
+- UDP 通訊協定接聽程式，代表要啟動的應用程式接受 UDP 訊息。  
   
  啟動程式必須當做伺服器電腦上的獨立程式來執行。 一般來說，WAS 接聽程式配接器 (例如 NetTcpActivator 和 NetPipeActivator) 會在長時間執行的 Windows 服務中實作。 不過，為了簡化和避免困擾，這個範例會實作通訊協定啟動程式以做為獨立應用程式。  
   
 ### <a name="was-listener-adapter"></a>WAS 接聽程式配接器  
  會在 `UdpListenerAdapter` 類別中實作 UDP 的 WAS 接聽程式配接器。 這是與 WAS 互動的模組，可對 UDP 通訊協定執行應用程式啟動。 呼叫下列 Webhost API 即可達到此作用：  
   
--   `WebhostRegisterProtocol`  
+- `WebhostRegisterProtocol`  
   
--   `WebhostUnregisterProtocol`  
+- `WebhostUnregisterProtocol`  
   
--   `WebhostOpenListenerChannelInstance`  
+- `WebhostOpenListenerChannelInstance`  
   
--   `WebhostCloseAllListenerChannelInstances`  
+- `WebhostCloseAllListenerChannelInstances`  
   
  初始呼叫 `WebhostRegisterProtocol` 之後，接聽程式配接器會針對 applicationHost.config (位於 %windir%\system32\inetsrv) 中註冊的所有應用程式，從 WAS 中接收回呼 `ApplicationCreated`。 在此範例中，只會處理已啟用 UDP 通訊協定 (通訊協定識別碼為 "net.udp") 的應用程式。 如果實作回應至應用程式的動態組態變更 (例如，應用程式從已停用轉換為已啟用)，則可能會以不同的方式處理這類實作。  
   
@@ -83,17 +83,17 @@ ms.locfileid: "59337652"
   
 2. 在 Windows Vista 上建置專案。 進行編譯之後，也會在建置後階段中執行下列作業：  
   
-    -   將 UDP 繫結安裝至「預設的網站」這個站台。  
+    - 將 UDP 繫結安裝至「預設的網站」這個站台。  
   
-    -   建立虛擬應用程式 "ServiceModelSamples" 以指向實際路徑："%SystemDrive%\inetpub\wwwroot\servicemodelsamples"。  
+    - 建立虛擬應用程式 "ServiceModelSamples" 以指向實際路徑："%SystemDrive%\inetpub\wwwroot\servicemodelsamples"。  
   
-    -   也會對此虛擬應用程式啟用 "net.udp" 通訊協定。  
+    - 也會對此虛擬應用程式啟用 "net.udp" 通訊協定。  
   
 3. 啟動使用者介面應用程式 "WasNetActivator.exe"。 按一下 **安裝程式**索引標籤上，勾選下列核取方塊，然後按一下**安裝**安裝它們：  
   
-    -   UDP 接聽程式配接器  
+    - UDP 接聽程式配接器  
   
-    -   UDP 通訊協定處理常式  
+    - UDP 通訊協定處理常式  
   
 4. 按一下 **啟用**的使用者介面應用程式"WasNetActivator.exe"的索引標籤。 按一下 **啟動**按鈕以啟動接聽程式配接器。 您現在可以準備執行程式。  
   
@@ -103,21 +103,21 @@ ms.locfileid: "59337652"
 ## <a name="sample-usage"></a>範例用法  
  進行編譯之後，會產生四個不同的二進位碼檔案：  
   
--   Client.exe：用戶端程式碼。 App.config 會編譯至用戶端的 Client.exe.config 組態檔。  
+- Client.exe：用戶端程式碼。 App.config 會編譯至用戶端的 Client.exe.config 組態檔。  
   
--   UDPActivation.dll：包含所有主要 UDP 實作的程式庫。  
+- UDPActivation.dll：包含所有主要 UDP 實作的程式庫。  
   
--   Service.dll:服務程式碼。 這個檔案會複製至虛擬應用程式 ServiceModelSamples 的 \bin 目錄。 服務檔為 Service.svc，而組態檔為 Web.config。進行編譯之後，會將這些檔案複製至下列位置：%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples。  
+- Service.dll:服務程式碼。 這個檔案會複製至虛擬應用程式 ServiceModelSamples 的 \bin 目錄。 服務檔為 Service.svc，而組態檔為 Web.config。進行編譯之後，會將這些檔案複製至下列位置：%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples。  
   
--   WasNetActivator:UDP 啟動程式。  
+- WasNetActivator:UDP 啟動程式。  
   
--   請確定已正確安裝所有必要的部分。 下列步驟會顯示如何執行範例：  
+- 請確定已正確安裝所有必要的部分。 下列步驟會顯示如何執行範例：  
   
 1. 請確定已啟動下列 Windows 服務：  
   
-    -   Windows Process Activation Service (WAS)。  
+    - Windows Process Activation Service (WAS)。  
   
-    -   Internet Information Services (IIS):W3SVC.  
+    - Internet Information Services (IIS):W3SVC.  
   
 2. 接著啟動啟動程式：WasNetActivator.exe。 底下**啟用**索引標籤，唯一的通訊協定**UDP**，在下拉式清單中選取。 按一下 [**啟動**] 按鈕來開始啟動程式。  
   

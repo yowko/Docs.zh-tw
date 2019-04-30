@@ -8,20 +8,20 @@ ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caacee591c4df8389cea241916618f50da56b22b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949158"
 ---
 # <a name="thread-pool-etw-events"></a>執行緒集區 ETW 事件
 <a name="top"></a> 這些事件會收集背景工作和 I/O 執行緒的資訊。  
   
  執行緒集區事件可分兩組：  
   
--   [背景工作執行緒集區事件](#worker)，提供有關應用程式如何使用執行緒集區，以及工作負載對並行存取控制項之影響的資訊。  
+- [背景工作執行緒集區事件](#worker)，提供有關應用程式如何使用執行緒集區，以及工作負載對並行存取控制項之影響的資訊。  
   
--   [I/O 執行緒集區事件](#io)，提供有關執行緒集區中所建立、淘汰、取消淘汰或終止之 I/O 執行緒的資訊。  
+- [I/O 執行緒集區事件](#io)，提供有關執行緒集區中所建立、淘汰、取消淘汰或終止之 I/O 執行緒的資訊。  
   
 <a name="worker"></a>   
 ## <a name="worker-thread-pool-events"></a>背景工作執行緒集區事件  
@@ -148,7 +148,7 @@ ms.locfileid: "59119128"
   
 |欄位名稱|資料類型|描述|  
 |----------------|---------------|-----------------|  
-|計數|win:UInt64|I/O 執行緒的數目，其包含新建立的執行緒。|  
+|Count|win:UInt64|I/O 執行緒的數目，其包含新建立的執行緒。|  
 |NumRetired|win:UInt64|已淘汰之背景工作執行緒的數目。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
@@ -169,7 +169,7 @@ ms.locfileid: "59119128"
   
 |欄位名稱|資料類型|描述|  
 |----------------|---------------|-----------------|  
-|計數|win:UInt64|執行緒集區中剩餘的 I/O 執行緒數目。|  
+|Count|win:UInt64|執行緒集區中剩餘的 I/O 執行緒數目。|  
 |NumRetired|win:UInt64|已淘汰的 I/O 執行緒數目。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
@@ -190,7 +190,7 @@ ms.locfileid: "59119128"
   
 |欄位名稱|資料類型|描述|  
 |----------------|---------------|-----------------|  
-|計數|win:UInt64|執行緒集區中的 I/O 執行緒數目，包含此執行緒。|  
+|Count|win:UInt64|執行緒集區中的 I/O 執行緒數目，包含此執行緒。|  
 |NumRetired|win:UInt64|已淘汰的 I/O 執行緒數目。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
@@ -211,7 +211,7 @@ ms.locfileid: "59119128"
   
 |欄位名稱|資料類型|描述|  
 |----------------|---------------|-----------------|  
-|計數|win:UInt64|執行緒集區中剩餘的 I/O 執行緒數目。|  
+|Count|win:UInt64|執行緒集區中剩餘的 I/O 執行緒數目。|  
 |NumRetired|win:UInt64|已淘汰的 I/O 執行緒數目。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   

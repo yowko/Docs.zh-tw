@@ -9,11 +9,11 @@ helpviewer_keywords:
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
 ms.openlocfilehash: 8319e451268152e95326c02027157db72df631b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981899"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource 標記延伸
 提供值的任何[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]屬性，藉由查閱已定義之資源的參考。 該資源查閱行為相當於載入時間對應，它會尋找先前已載入，從目前標記的資源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]其他應用程式來源，以及頁面上，且會產生做為該資源值在執行階段物件中的屬性值。  

@@ -15,11 +15,11 @@ ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f1049187dabbea64599617bb4372ed50515a51e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949184"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>SQL Server 程式設計和主機保護屬性
 在 SQL Server 主機中載入和執行 Managed 程式碼的功能需要符合主機對程式碼存取安全性和主機資源保護的需求。  三個 SQL Server 權限集的其中一個指定的程式碼存取安全性需求：SAFE、 EXTERNAL-ACCESS 或 UNSAFE。 在 SAFE 或 EXTERNAL-ACCESS 權限集合內執行的程式碼，必須避免已套用 <xref:System.Security.Permissions.HostProtectionAttribute> 屬性的特定類型或成員。 <xref:System.Security.Permissions.HostProtectionAttribute> 不像可靠性保證一樣是安全性權限，關鍵在於它會識別主機可能不允許的特定程式碼建構 (類型或方法)。  使用 <xref:System.Security.Permissions.HostProtectionAttribute> 會強制使用有助於保護主機穩定性的程式設計模型。  
@@ -27,11 +27,11 @@ ms.locfileid: "59088715"
 ## <a name="host-protection-attributes"></a>主機保護屬性  
  主機保護屬性可識別不適合主機程式設計模型的類型或成員，並且代表下列遞增的可靠性威脅層級：  
   
--   不是良性。  
+- 不是良性。  
   
--   可能會導致伺服器管理的使用者程式碼不穩定。  
+- 可能會導致伺服器管理的使用者程式碼不穩定。  
   
--   可能會導致伺服器處理序本身不穩定。  
+- 可能會導致伺服器處理序本身不穩定。  
   
  SQL Server 不允許使用具有 <xref:System.Security.Permissions.HostProtectionAttribute> 且其 <xref:System.Security.Permissions.HostProtectionResource> 值指定為 <xref:System.Security.Permissions.HostProtectionResource.SharedState>、<xref:System.Security.Permissions.HostProtectionResource.Synchronization>、<xref:System.Security.Permissions.HostProtectionResource.MayLeakOnAbort> 或 <xref:System.Security.Permissions.HostProtectionResource.ExternalProcessMgmt> 的類型或成員。 這可防止組件呼叫可啟用共用狀態、執行同步處理、可能造成終止時資源流失，或影響 SQL Server 程序完整性的成員。  
   

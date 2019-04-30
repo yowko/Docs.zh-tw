@@ -15,11 +15,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 62e4328b75a7f6fecc28cd620ec3ac18460316c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993443"
 ---
 # <a name="writeablemetadataupdatemode-enumeration"></a>WriteableMetadataUpdateMode 列舉
 [.NET Framework 4.5.2 與更新版本提供支援]  

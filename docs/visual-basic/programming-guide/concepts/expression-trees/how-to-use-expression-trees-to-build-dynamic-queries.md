@@ -3,11 +3,11 @@ title: HOW TO：使用運算式樹狀架構建置動態查詢 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
 ms.openlocfilehash: 2f91d95f888ab98902cc300afb61c41b62e64050
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966214"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>HOW TO：使用運算式樹狀架構建置動態查詢 (Visual Basic)
 在 LINQ 中，您可以使用運算式樹狀架構，來代表以實作 <xref:System.Linq.IQueryable%601> 的資料來源為目標的結構化查詢。 例如，LINQ 提供者會實作 <xref:System.Linq.IQueryable%601> 介面，來查詢關聯式資料存放區。 Visual Basic 編譯器會編譯成運算式樹狀架構在執行階段會建置的程式碼目標這類資料來源的查詢。 查詢提供者可接著周遊運算式樹狀架構資料結構，並將它轉譯成適用於資料來源的查詢語言。  
@@ -101,13 +101,13 @@ Next
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
--   建立新的**主控台應用程式**專案。  
+- 建立新的**主控台應用程式**專案。  
   
--   如果 System.Core.dll 的參考原本未參考，請新增這項參考。  
+- 如果 System.Core.dll 的參考原本未參考，請新增這項參考。  
   
--   加入 System.Linq.Expressions 命名空間。  
+- 加入 System.Linq.Expressions 命名空間。  
   
--   複製程式碼範例中，並將它貼至`Main``Sub`程序。  
+- 複製程式碼範例中，並將它貼至`Main``Sub`程序。  
   
 ## <a name="see-also"></a>另請參閱
 

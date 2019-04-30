@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
 ms.openlocfilehash: 56e8720a6130d2908fbfb83bd243a54fae9a2406
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972922"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>HOW TO：設定簽章確認
 *簽章確認*是訊息啟動器，以確保收到的回覆已產生來回應寄件者的原始訊息的機制。 簽章確認是定義在 WS-Security 1.1 規格中。 如果端點支援 WS-Security 1.0，您就無法使用簽章確認。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
 ms.openlocfilehash: f969769725ae099ddf477fd11efb03277a555fa6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967098"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>在 Windows Form 中建立事件處理常式
 事件處理常式是程式碼中的一項程序，可以決定發生事件時 (例如當使用者按一下按鈕，或訊息佇列收到訊息時) 所應執行的動作。 當事件引發時，收到事件的事件處理常式或處理常式會隨即執行。 事件可以指派給多個處理常式，而處理特定事件的方法也可隨機變更。 您也可以使用 Windows Forms 設計工具建立事件處理常式。  

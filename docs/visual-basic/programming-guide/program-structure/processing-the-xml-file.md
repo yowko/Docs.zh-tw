@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
 ms.openlocfilehash: a10255be140c7c86a435cca98cec5df7df82ffee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955489"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>處理 XML 檔案 (Visual Basic)
 編譯器會針對程式碼中，標記為要產生文件的每個建構產生識別碼字串。 (如需如何標記您的程式碼的資訊，請參閱[XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)。)識別碼字串可唯一識別此建構。 處理 XML 檔案的程式可以使用識別碼字串，來識別對應[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]中繼資料/反映項目。  
@@ -18,9 +18,9 @@ ms.locfileid: "58842092"
   
  編譯器在產生識別碼字串時會遵守下列規則：  
   
--   字串中未放置任何空白字元。  
+- 字串中未放置任何空白字元。  
   
--   識別碼字串的第一個部分會識別所識別的成員種類，格式為單一字元後面接著一個冒號。 會使用下列的成員類型。  
+- 識別碼字串的第一個部分會識別所識別的成員種類，格式為單一字元後面接著一個冒號。 會使用下列的成員類型。  
   
 |字元|描述|  
 |---|---|  
@@ -32,9 +32,9 @@ ms.locfileid: "58842092"
 |E|事件： `Event`|  
 |!|錯誤字串<br /><br /> 字串的其餘部分提供與錯誤相關的資訊。 Visual Basic 編譯器會產生無法解析的連結資訊時發生錯誤。|  
   
--   第二個部分`String`是項目，在命名空間的根開始的完整的名稱。 項目、 其封入的類型和命名空間的名稱並以句號分隔。 如果項目本身的名稱包含句點，它們會被取代的數字符號 （#）。 它會假設沒有項目，直接在其名稱中有數字的符號。 例如，完整的名稱的`String`建構函式會`System.String.#ctor`。  
+- 第二個部分`String`是項目，在命名空間的根開始的完整的名稱。 項目、 其封入的類型和命名空間的名稱並以句號分隔。 如果項目本身的名稱包含句點，它們會被取代的數字符號 （#）。 它會假設沒有項目，直接在其名稱中有數字的符號。 例如，完整的名稱的`String`建構函式會`System.String.#ctor`。  
   
--   針對屬性和方法，如果有方法的引數，則後面會接著以括弧括住的引數清單。 如果沒有任何引數，就不會出現括弧。 引數會以逗號分隔。 每個引數的編碼方式都會直接遵循它中的編碼方式[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]簽章。  
+- 針對屬性和方法，如果有方法的引數，則後面會接著以括弧括住的引數清單。 如果沒有任何引數，就不會出現括弧。 引數會以逗號分隔。 每個引數的編碼方式都會直接遵循它中的編碼方式[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]簽章。  
   
 ## <a name="example"></a>範例  
  下列程式碼會顯示類別識別碼字串的方式，並產生其成員。  

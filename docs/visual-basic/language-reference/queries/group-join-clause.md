@@ -12,11 +12,11 @@ helpviewer_keywords:
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
 ms.openlocfilehash: 3da4ca2db299a65b2c0f1fa259bbaabe4f53aa33
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945310"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join 子句 (Visual Basic)
 將兩個集合合併成單一階層式集合。 聯結作業根據對應索引鍵。  

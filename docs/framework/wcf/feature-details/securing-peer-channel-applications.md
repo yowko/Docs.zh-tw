@@ -3,11 +3,11 @@ title: 確保對等通道應用程式安全
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
 ms.openlocfilehash: a747923f81f4773eb58a4b7500cf4fc1c006f889
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990947"
 ---
 # <a name="securing-peer-channel-applications"></a>確保對等通道應用程式安全
 和 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 下的其他繫結一樣，`NetPeerTcpBinding` 預設已啟用安全性，並且會提供傳輸和訊息型安全性 (或兩者皆提供)。 這個主題會討論這兩種類型的安全性。 安全性類型則是由繫結規格中的安全性模式標記所指定 (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`)。  
@@ -15,16 +15,16 @@ ms.locfileid: "59146236"
 ## <a name="transport-based-security"></a>傳輸型安全性  
  對等通道支援兩種可用來保護傳輸的驗證認證類型，這兩種類型都需要在相關聯的 `ClientCredentialSettings.Peer` 上設定 `ChannelFactory` 屬性：  
   
--   密碼。 用戶端會運用已知的機密密碼來驗證連線。 使用這個認證類型時，`ClientCredentialSettings.Peer.MeshPassword` 必須傳遞有效的密碼並選擇性傳遞 `X509Certificate2` 執行個體。  
+- 密碼。 用戶端會運用已知的機密密碼來驗證連線。 使用這個認證類型時，`ClientCredentialSettings.Peer.MeshPassword` 必須傳遞有效的密碼並選擇性傳遞 `X509Certificate2` 執行個體。  
   
--   憑證。 將會使用特定的應用程式驗證。 使用這個認證類型時，您必須在 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 中使用實體 `ClientCredentialSettings.Peer.PeerAuthentication` 實作。  
+- 憑證。 將會使用特定的應用程式驗證。 使用這個認證類型時，您必須在 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 中使用實體 `ClientCredentialSettings.Peer.PeerAuthentication` 實作。  
   
 ## <a name="message-based-security"></a>訊息型安全性  
  使用訊息安全性時，應用程式可以簽署傳輸訊息，因此所有接收方都可驗證是否從信任的一方傳出訊息，而且該訊息並沒有遭到竄改。 目前對等通道僅支援 X.509 認證的訊息簽署。  
   
 ## <a name="best-practices"></a>最佳作法  
   
--   本節會討論保護對等通道應用程式安全的最佳做法。  
+- 本節會討論保護對等通道應用程式安全的最佳做法。  
   
 ### <a name="enable-security-with-peer-channel-applications"></a>啟用對等通道應用程式的安全性  
  有鑑於對等通道通訊協定的分散式特性，在不安全的網狀結構中很難強制施行網狀結構成員資格、機密性和隱私權。 而記住用戶端和解析程式服務之間的安全通訊也相當重要。 在套用對等名稱解析通訊協定 (PNRP) 時，請使用安全名稱來避免詐騙和其他常見攻擊。 啟用連線用戶端使用上的安全性以連絡解析程式服務，即可保護自訂解析程式服務，而這包括了訊息和傳輸型安全性。  

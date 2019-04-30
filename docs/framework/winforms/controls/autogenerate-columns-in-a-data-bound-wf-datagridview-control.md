@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data-bound columns
 ms.assetid: 699f6f9e-6aa5-4811-902b-6a2c57dec7d6
 ms.openlocfilehash: 4490a24047f5cce1328d68c529783a1d7692ff32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954306"
 ---
 # <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>HOW TO：在資料繫結 Windows Forms DataGridView 控制項中自動產生資料行
 下列程式碼範例示範如何顯示資料行中的繫結的資料來源從<xref:System.Windows.Forms.DataGridView>控制項。 當<xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A>屬性值是`true`（預設值），<xref:System.Windows.Forms.DataGridViewColumn>建立每個資料行中的資料來源資料表。  
@@ -28,11 +28,11 @@ ms.locfileid: "59165993"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   名為 `customersDataGridView` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
+- 名為 `customersDataGridView` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
   
--   A<xref:System.Data.DataSet>名為物件`customersDataSet`具有一個名為資料表`Customers`。  
+- A<xref:System.Data.DataSet>名為物件`customersDataSet`具有一個名為資料表`Customers`。  
   
--   <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType>、<xref:System.Data?displayProperty=nameWithType> 和 <xref:System.Xml?displayProperty=nameWithType> 組件的參考。  
+- <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType>、<xref:System.Data?displayProperty=nameWithType> 和 <xref:System.Xml?displayProperty=nameWithType> 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
 

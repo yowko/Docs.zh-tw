@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 48ce5381c745669b813f5b28d801add7daba7825
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965832"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>CreateCoreClrDebugTarget 函式
 建立偵錯工具 proxy 在遠端電腦上，執行並傳回連接[ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)可用來查詢執行的處理序和遠端電腦上載入的執行階段的物件。  
@@ -46,7 +46,7 @@ HRESULT CreateCoreClrDebugTarget (
   
 ## <a name="return-value"></a>傳回值  
  S_OK  
- 已成功判斷處理序中的 CLR 數目，並且已正確填入對應控制代碼和路徑陣列。  
+ 已成功確定處理序中的 CLR 數目，並且已正確填入對應的控制代碼和路徑陣列。  
   
  E_OUTOFMEMORY  
  無法為 `ppTarget` 配置足夠的記憶體。  

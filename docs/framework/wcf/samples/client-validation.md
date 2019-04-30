@@ -3,11 +3,11 @@ title: 用戶端驗證
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
 ms.openlocfilehash: 9659c262377af76294c52d1be97146923bc91b71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943971"
 ---
 # <a name="client-validation"></a>用戶端驗證
 服務經常會發行中繼資料，以便自動產生和設定用戶端 Proxy 型別。 當服務不受信任時，用戶端應用程式應該根據安全性、交易和服務合約類型等條件，驗證中繼資料是否符合用戶端應用程式的原則。 下列範例會示範如何撰寫用戶端端點行為，此行為會驗證服務端點以確定能夠安全地使用服務端點。  
@@ -54,11 +54,11 @@ ms.locfileid: "59315123"
   
 10. 在用戶端電腦上執行 client.exe。  
   
-    1.  如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+    1. 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
--   當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
+- 當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
     > [!NOTE]
     >  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行 WCF 範例，在電腦之間使用的憑證，請務必清除的服務憑證已安裝在 CurrentUser-TrustedPeople 存放。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
 ms.openlocfilehash: 5c9d94aca6b9b53c505fa7419406a0d2fc4a0ae7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983342"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>實作 UI 自動化 Invoke 控制項模式
 > [!NOTE]
@@ -25,30 +25,30 @@ ms.locfileid: "59134780"
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
  實作叫用控制項模式時，請注意下列方針和慣例：  
   
--   如果未透過另一個控制項模式提供者來公開相同的行為，則控制項會實作 <xref:System.Windows.Automation.Provider.IInvokeProvider> 。 例如，如果控制項的 <xref:System.Windows.Automation.InvokePattern.Invoke%2A> 方法所執行的動作與 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 或 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 方法相同，該控制項就不應實作 <xref:System.Windows.Automation.Provider.IInvokeProvider>。  
+- 如果未透過另一個控制項模式提供者來公開相同的行為，則控制項會實作 <xref:System.Windows.Automation.Provider.IInvokeProvider> 。 例如，如果控制項的 <xref:System.Windows.Automation.InvokePattern.Invoke%2A> 方法所執行的動作與 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 或 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 方法相同，該控制項就不應實作 <xref:System.Windows.Automation.Provider.IInvokeProvider>。  
   
--   通常按一下、按兩下或按 ENTER、使用預先定義的鍵盤快速鍵，或其他按鈕組合，就可以叫用控制項。  
+- 通常按一下、按兩下或按 ENTER、使用預先定義的鍵盤快速鍵，或其他按鈕組合，就可以叫用控制項。  
   
--   已啟動的控制項上會引發<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> (以回應執行相關動作的控制項)。 在可能的情況下，應該是在控制項完成該動作並返回，且沒有發生封鎖時才會引發該事件。 在下列情節中，叫用事件應該在服務叫用要求之前引發：  
+- 已啟動的控制項上會引發<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> (以回應執行相關動作的控制項)。 在可能的情況下，應該是在控制項完成該動作並返回，且沒有發生封鎖時才會引發該事件。 在下列情節中，叫用事件應該在服務叫用要求之前引發：  
   
-    -   無法或不適合等待至動作完成。  
+    - 無法或不適合等待至動作完成。  
   
-    -   動作需要使用者互動。  
+    - 動作需要使用者互動。  
   
-    -   動作費時，且會導致發出呼叫的用戶端長時間凍結。  
+    - 動作費時，且會導致發出呼叫的用戶端長時間凍結。  
   
--   如果叫用控制項會有嚴重的副作用，就必須透過 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> 屬性公開這些副作用。 例如，雖然 <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 和選取範圍沒有關聯，但 <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 卻可能會造成其他控制項受到選取。  
+- 如果叫用控制項會有嚴重的副作用，就必須透過 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> 屬性公開這些副作用。 例如，雖然 <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 和選取範圍沒有關聯，但 <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 卻可能會造成其他控制項受到選取。  
   
--   停留 (滑鼠在上) 效果通常不會形成叫用事件。 但是，根據停留狀態而執行動作 (相對於產生視覺效果) 的控制項，應該要支援 <xref:System.Windows.Automation.InvokePattern> 控制項模式。  
+- 停留 (滑鼠在上) 效果通常不會形成叫用事件。 但是，根據停留狀態而執行動作 (相對於產生視覺效果) 的控制項，應該要支援 <xref:System.Windows.Automation.InvokePattern> 控制項模式。  
   
 > [!NOTE]
 >  如果控制項的叫用是與滑鼠相關的副作用所造成的，便會將這個實作視為協助工具問題。  
   
--   叫用控制項和選擇項目不同。 但是，依據控制項而定，叫用某些控制項可能會有造成此項目受到選取的副作用。 例如，叫用 [我的文件] 資料夾中的 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 文件清單項目時，便會選取這個項目並開啟文件。  
+- 叫用控制項和選擇項目不同。 但是，依據控制項而定，叫用某些控制項可能會有造成此項目受到選取的副作用。 例如，叫用 [我的文件] 資料夾中的 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 文件清單項目時，便會選取這個項目並開啟文件。  
   
--   叫用某個項目時，此項目可能會立即從 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構中消失。 要求事件回呼所提供的項目資訊，可能會因此而失敗。 建議的解決方法是預先擷取快取的資訊。  
+- 叫用某個項目時，此項目可能會立即從 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構中消失。 要求事件回呼所提供的項目資訊，可能會因此而失敗。 建議的解決方法是預先擷取快取的資訊。  
   
--   控制項可以實作多個控制項模式。 例如， [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 工具列上的 [填滿色彩] 控制項會實作 <xref:System.Windows.Automation.InvokePattern> 及 <xref:System.Windows.Automation.ExpandCollapsePattern> 控制項模式。 <xref:System.Windows.Automation.ExpandCollapsePattern> 會公開功能表，而 <xref:System.Windows.Automation.InvokePattern> 則會以選擇的色彩填滿作用中的選取範圍。  
+- 控制項可以實作多個控制項模式。 例如， [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 工具列上的 [填滿色彩] 控制項會實作 <xref:System.Windows.Automation.InvokePattern> 及 <xref:System.Windows.Automation.ExpandCollapsePattern> 控制項模式。 <xref:System.Windows.Automation.ExpandCollapsePattern> 會公開功能表，而 <xref:System.Windows.Automation.InvokePattern> 則會以選擇的色彩填滿作用中的選取範圍。  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iinvokeprovider"></a>IInvokeProvider 的必要成員  

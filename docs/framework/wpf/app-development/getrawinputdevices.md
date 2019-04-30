@@ -5,11 +5,11 @@ helpviewer_keywords:
 - raw input [WPF]
 ms.assetid: c4d37ecd-065a-4d1c-9e6c-26804ae968ca
 ms.openlocfilehash: 3531ff9f42289a3ad3b029f090f2dd4987e5886c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947910"
 ---
 # <a name="getrawinputdevices"></a>GetRawInputDevices
 可讓 PresentationHost.exe 探索主應用程式有興趣的未經處理輸入裝置 (人性化介面裝置)。  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
 ms.openlocfilehash: 9f9653069606ec81d7ece4372d67a0a0eba4c073
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956035"
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox 控制項 (Windows Form)
 Windows Form`ComboBox`控制項用來顯示在下拉式清單方塊中的資料。 根據預設，`ComboBox`控制項會出現在兩個部分： 上半部是文字方塊，可讓使用者輸入的清單項目。 第二個部分是清單方塊，其中會顯示，使用者可以從中選取一個項目清單。  

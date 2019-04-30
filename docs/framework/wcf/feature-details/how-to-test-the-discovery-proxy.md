@@ -3,11 +3,11 @@ title: HOW TO：測試探索 Proxy
 ms.date: 03/30/2017
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
 ms.openlocfilehash: 856b86241299585b80d58c6d37582463736a5935
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972909"
 ---
 # <a name="how-to-test-the-discovery-proxy"></a>HOW TO：測試探索 Proxy
 本主題是四個主題中的第四個，示範如何實作探索 Proxy。 在上一個主題中， [How to:實作使用探索 Proxy 尋找服務的用戶端應用程式](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)，實作使用探索 proxy 尋找服務，然後再呼叫服務的 WCF 用戶端應用程式。 本主題描述如何確認探索 Proxy、服務以及用戶端應用程式如預期般運作。  

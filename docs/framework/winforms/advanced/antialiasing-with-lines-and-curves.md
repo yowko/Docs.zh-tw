@@ -10,11 +10,11 @@ helpviewer_keywords:
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
 ms.openlocfilehash: cbc9033f18f1ab255862c8f8e2891aa9b68cf8d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961072"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>線條和曲線的反鋸齒功能
 當您使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]繪製一條線，您提供的起點和結束點的行，但您沒有提供任何資訊的個別像素，該行。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 若要判斷哪一個像素為單位將會開啟到特定顯示裝置上顯示線條的顯示驅動程式軟體一起運作。  

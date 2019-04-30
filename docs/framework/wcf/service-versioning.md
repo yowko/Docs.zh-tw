@@ -3,11 +3,11 @@ title: 服務版本控制
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
 ms.openlocfilehash: 27d54cdf6f49bd9433f43290c97706af81d98b6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949782"
 ---
 # <a name="service-versioning"></a>服務版本控制
 在初始部署以及存留期間可能的數次部署之後，服務 (以及公開的端點) 可能因各種不同的原因而需要變更，例如變更業務需要、資訊技術需求，或解決其他問題等。 每個變更都會產生新的服務版本。 本主題說明如何在 Windows Communication Foundation (WCF) 的版本控制，請考慮。  
@@ -15,13 +15,13 @@ ms.locfileid: "59122404"
 ## <a name="four-categories-of-service-changes"></a>四種服務變更的分類  
  可能需要的服務變更可分成四個分類：  
   
--   合約變更：例如，可能加入作業，或可能加入或變更訊息中的資料元素。  
+- 合約變更：例如，可能加入作業，或可能加入或變更訊息中的資料元素。  
   
--   位址變更：例如，服務移至不同的位置，其中端點有新的位址。  
+- 位址變更：例如，服務移至不同的位置，其中端點有新的位址。  
   
--   繫結變更：例如，安全性機制變更或其設定變更。  
+- 繫結變更：例如，安全性機制變更或其設定變更。  
   
--   實作變更：例如，內部方法實作變更。  
+- 實作變更：例如，內部方法實作變更。  
   
  其中某些變更稱為「中斷」，其他則稱為「非中斷」變更。 變更*分行*會有已成功處理先前的版本中的所有訊息是否已成功處理，在新的版本。 不符合該準則的任何變更都會*重大*變更。  
   
@@ -43,9 +43,9 @@ ms.locfileid: "59122404"
 ### <a name="strict-versioning"></a>嚴格的版本控制  
  在許多變更版本會是問題的情況下，服務開發人員無法控制用戶端，因此無法假設用戶端對於訊息 XML 或結構描述中的變更會如何反應。 在這些情況下，您必須保證新的訊息將對舊的結構描述驗證，原因有兩個：  
   
--   舊的用戶端是在結構描述不會變更的假設下開發。 因此可能無法處理不屬於其設計目的的訊息。  
+- 舊的用戶端是在結構描述不會變更的假設下開發。 因此可能無法處理不屬於其設計目的的訊息。  
   
--   舊的用戶端甚至會在嘗試處理訊息之前，就先根據舊的結構描述執行實際結構描述驗證。  
+- 舊的用戶端甚至會在嘗試處理訊息之前，就先根據舊的結構描述執行實際結構描述驗證。  
   
  在這類情況下，建議的方法是將現有資料合約視為固定不變，並且以唯一的 XML 限定名稱建立新合約。 接著服務開發人員會將新方法加入至現有服務合約中，或是建立新的服務合約，其中包含使用新資料合約的方法。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "59122404"
 ### <a name="distinguishing-between-data-contract-and-net-types"></a>分辨資料合約與 .NET 型別  
  .NET 類別或結構可藉由將 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性套用至該類別，而予以投射為資料合約。 .NET 型別及其資料合約規劃是兩件不同的事。 您可以擁有多個 .NET 型別使用相同的資料合約規劃。 這項分別相當實用，可讓您在變更 .NET 型別的同時維持規劃的資料合約，甚至在用字嚴格的情況下也能藉此維持與現有用戶端的相容性。 若要維持 .NET 型別和資料合約之間的這項區別，有兩件事您務必要做到：  
   
--   請指定 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 和 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>。 您務必要指定資料合約的名稱和命名空間，以避免在合約中公開 .NET 型別的名稱和命名空間。 如此一來，即使您之後決定變更 .NET 命名空間或型別名稱，資料合約仍會維持不變。  
+- 請指定 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 和 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>。 您務必要指定資料合約的名稱和命名空間，以避免在合約中公開 .NET 型別的名稱和命名空間。 如此一來，即使您之後決定變更 .NET 命名空間或型別名稱，資料合約仍會維持不變。  
   
--   請指定 <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>。 您務必要指定資料成員的名稱，以避免在合約中公開 .NET 成員的名稱。 如此一來，即使您之後決定變更成員的 .NET 名稱，資料合約仍會維持不變。  
+- 請指定 <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>。 您務必要指定資料成員的名稱，以避免在合約中公開 .NET 成員的名稱。 如此一來，即使您之後決定變更成員的 .NET 名稱，資料合約仍會維持不變。  
   
 ### <a name="changing-or-removing-members"></a>變更或移除成員  
  即使在允許 lax 版本控制的情況下，變更成員的名稱或資料，或是移除資料成員即屬於中斷變更。 如果這是必要的，請建立新的資料合約。  

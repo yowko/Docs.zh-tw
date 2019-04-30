@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Freezable objects [WPF], modifiable clones
 ms.assetid: d028de61-bbe9-4d62-b656-8fe3b1b2ca24
 ms.openlocfilehash: 910c5dada6ca82f68992722e4df6b35f9f7497c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942788"
 ---
 # <a name="how-to-obtain-a-writable-copy-of-a-read-only-freezable"></a>HOW TO：取得唯讀 Freezable 的可寫入複本
 此範例示範如何使用<xref:System.Windows.Freezable.Clone%2A>方法用來建立唯讀的可寫入複本<xref:System.Windows.Freezable>。  

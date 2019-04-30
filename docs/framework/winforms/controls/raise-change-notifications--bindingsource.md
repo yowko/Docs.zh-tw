@@ -14,11 +14,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7fa2cf51-c09f-4375-adf0-e36c5617f099
 ms.openlocfilehash: 71fb0a09387c77dbc792180dac1b8594d11b3642
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948038"
 ---
 # <a name="how-to-raise-change-notifications-using-a-bindingsource-and-the-inotifypropertychanged-interface"></a>HOW TO：使用 BindingSource 和 INotifyPropertyChanged 介面引發變更通知
 當資料來源中包含的類型實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面，並且在屬性值變更時引發 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 事件，<xref:System.Windows.Forms.BindingSource> 元件將會自動偵測資料來源中的變更。 這很有用，因為當資料來源值變更時，繫結至 <xref:System.Windows.Forms.BindingSource> 的控制項就會自動更新。  
@@ -37,7 +37,7 @@ ms.locfileid: "59119505"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   System、System.Data、System.Drawing 和 System.Windows.Forms 組件的參考。  
+- System、System.Data、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。 另請參閱[How to:編譯並執行完整的 Windows Form 程式碼範例使用 Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb129228(v=vs.100))。  
   

@@ -5,18 +5,18 @@ f1_keywords:
 - vbrArray_TypeMismatch
 ms.assetid: d53cf41b-7a7a-466c-a29a-920d99698fa9
 ms.openlocfilehash: 86d639e70e85b19a91f89fa4e0cab330af07dccf
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58028834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943360"
 ---
 # <a name="redim-can-only-change-the-right-most-dimension"></a>'ReDim' 只能變更最右側的維度
 `ReDim` 陳述式嘗試使用 `Preserve` 關鍵字來變更不是最後一個維度的陣列的維度。 使用 `Preserve`時，您只能調整陣列的最後一個維度。 對於所有其他維度，您必須指定與現有陣列相同的大小。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   請移除 `Preserve` 關鍵字。  
+- 請移除 `Preserve` 關鍵字。  
   
 ## <a name="see-also"></a>另請參閱
 

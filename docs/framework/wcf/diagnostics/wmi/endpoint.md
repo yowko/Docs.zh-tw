@@ -3,11 +3,11 @@ title: 端點
 ms.date: 03/30/2017
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
 ms.openlocfilehash: 4562481e8b0b18c0ea0d9df0af3427ffe6419821
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963601"
 ---
 # <a name="endpoint"></a>端點
 端點  
@@ -70,15 +70,15 @@ class Endpoint
   
  裝載端點之 appdomain 的 appdomain 識別碼。  
   
-### <a name="behaviors"></a>行為  
- 資料型別：行為陣列  
+### <a name="behaviors"></a>「行為」  
+ 資料類型：行為陣列  
   
  存取類型：唯讀  
   
  此端點實作之行為的集合。  
   
 ### <a name="binding"></a>繫結  
- 資料型別：繫結  
+ 資料類型：繫結  
   
  存取類型：唯讀  
   
@@ -120,7 +120,7 @@ class Endpoint
  裝載端點之處理序的處理序識別碼。  
   
 ### <a name="ref"></a>ref  
- 資料型別：合約  
+ 資料類型：合約  
   
  存取類型：唯讀  
   

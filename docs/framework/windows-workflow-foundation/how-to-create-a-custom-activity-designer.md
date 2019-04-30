@@ -3,11 +3,11 @@ title: HOW TO：建立自訂活動設計工具
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
 ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945648"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>HOW TO：建立自訂活動設計工具
 
@@ -17,7 +17,7 @@ ms.locfileid: "57716825"
 
 <xref:System.Activities.Presentation.ActivityDesigner> 會使用兩項 Helper 控制項 (<xref:System.Activities.Presentation.WorkflowItemPresenter> 和 <xref:System.Activities.Presentation.WorkflowItemsPresenter>) 來簡化自訂活動設計工具的開發。 這些 Helper 能夠處理拖放子項目、刪除、選取及加入子項目之類的常見功能。 <xref:System.Activities.Presentation.WorkflowItemPresenter>允許單一子 UI 項目內，提供 「 卸除區 」，而<xref:System.Activities.Presentation.WorkflowItemsPresenter>可支援多個 UI 項目，包括額外的功能，例如排序、 移動、 刪除和加入子項目。
 
-其他需要在實作自訂活動設計工具中強調的重要部分，是有關如何使用 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 資料繫結將視覺化編輯繫結至設計工具中所編輯內容的記憶體內儲存的執行個體。 這項操作可透過模型項目樹狀結構完成，該樹狀結構也負責進行變更通知，以及追蹤如狀態變更這類事件。
+其他需要在實作自訂活動設計工具中強調的重要部分，是有關如何使用 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 資料繫結將視覺化編輯繫結至設計工具中所編輯內容的記憶體內儲存的執行個體。 這項操作可透過模型項目樹狀完成，該樹狀也負責進行變更通知，以及追蹤如狀態變更這類事件。
 
 本主題將說明兩種程序。
 
@@ -175,8 +175,7 @@ ms.locfileid: "57716825"
 20. 開啟 [SimpleNativeDesigner.xaml] 檔案，並將下列程式碼貼入其中。 請注意，這個程式碼會使用 <xref:System.Activities.Presentation.ActivityDesigner> 做為根項目，並且示範如何使用繫結將 <xref:System.Activities.Presentation.WorkflowItemPresenter> 整合至設計工具中，以便在複合活動設計工具中顯示子型別。
 
     > [!NOTE]
-    > 
-  <xref:System.Activities.Presentation.ActivityDesigner> 的結構描述允許只將一個子項目加入自訂活動設計工具定義中，不過，這個項目可以是 `StackPanel`、`Grid`，也可以是其他複合 UI 項目。
+    > <xref:System.Activities.Presentation.ActivityDesigner> 的結構描述允許只將一個子項目加入自訂活動設計工具定義中，不過，這個項目可以是 `StackPanel`、`Grid`，也可以是其他複合 UI 項目。
 
     ```xml
     <sap:ActivityDesigner x:Class=" UsingWorkflowItemPresenter.SimpleNativeDesigner"

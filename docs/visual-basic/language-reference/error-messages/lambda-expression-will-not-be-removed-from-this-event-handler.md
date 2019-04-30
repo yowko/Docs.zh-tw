@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
 ms.openlocfilehash: 20e83306925e91e579aca52f2e7c209c8c686dee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946623"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>Lambda 運算式將不會從這個事件處理常式中移除
 Lambda 運算式將不會從這個事件處理常式中移除。 指派給變數的 lambda 運算式，並使用變數來新增和移除事件。  
@@ -60,7 +60,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   若要避免出現警告，並移除 lambda 運算式，指派給變數的 lambda 運算式並使用該變數在這兩`AddHandler`和`RemoveHandler`陳述式，如下列範例所示。  
+- 若要避免出現警告，並移除 lambda 運算式，指派給變數的 lambda 運算式並使用該變數在這兩`AddHandler`和`RemoveHandler`陳述式，如下列範例所示。  
   
 ```vb  
 Module Module1  

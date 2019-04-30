@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Windows Forms controls, default button on form
 ms.assetid: 22cc9da6-b913-4e04-9554-dee443ac5c3a
 ms.openlocfilehash: 8e608bb2cb4635ef1d29fd7a0aff3ac95fcd9af5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943906"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a>HOW TO：將 Windows Forms 的按鈕指定為接受按鈕
 在任何 Windows 表單上，您可以指定<xref:System.Windows.Forms.Button>設為接受按鈕，也就是預設按鈕的控制項。 每當使用者按下 ENTER 鍵，不論哪一個表單上的其他控制項具有焦點按一下預設按鈕。  

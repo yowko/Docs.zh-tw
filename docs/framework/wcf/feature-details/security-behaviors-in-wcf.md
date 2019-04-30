@@ -3,24 +3,24 @@ title: WCF 中的安全性行為
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
 ms.openlocfilehash: d1bffef127fe295aa41b1287da1c7104464ae0bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990908"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF 中的安全性行為
 在 Windows Communication Foundation (WCF) 中，行為會修改服務層級或端點層級的執行階段行為。 (如需行為的詳細資訊在一般情況下，請參閱[指定服務執行階段行為](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。)*安全性行為*可控制認證、 驗證、 授權和稽核記錄。 您可以藉由程式設計的方式或透過組態的方式使用這些行為。 本主題將著重於設定下列與安全性功能相關的行為：  
   
--   [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)。  
+- [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)。  
   
--   [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)。  
+- [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)。  
   
--   [\<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)。  
+- [\<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)。  
   
--   [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
+- [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
   
--   [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)，這也可讓您指定用戶端存取中繼資料的安全端點。  
+- [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)，這也可讓您指定用戶端存取中繼資料的安全端點。  
   
 ## <a name="setting-credentials-with-behaviors"></a>設定認證與行為  
  使用[ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)並[ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)來設定服務或用戶端的認證值。 基礎繫結組態會判斷是否必須設定認證。 例如，若安全性模式設定為 `None`，則用戶端和服務不需互相驗證彼此，也不需要任何類型的認證。  
@@ -78,9 +78,9 @@ ms.locfileid: "59180059"
   
  您應該使用[ \<a d d >](../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md)集合中同盟的應用程式，它會利用*安全權杖服務*(STS) 發出`SamlSecurityToken`安全性權杖。 當 STS 發出安全性權杖時，它可以將 `SamlAudienceRestrictionCondition` 加入至安全性權杖中，以便指定此安全性權杖適用之 Web 服務的 URI。 如此便可讓接收端 Web 服務的 `SamlSecurityTokenAuthenticator` 驗證發出的安全性權杖是否適用於此 Web 服務，而驗證的方法則是指定這項檢查應該透過執行下列動作來進行：  
   
--   設定`audienceUriMode`的屬性[ \<issuedTokenAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)來`Always`或`BearerKeyOnly`。  
+- 設定`audienceUriMode`的屬性[ \<issuedTokenAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)來`Always`或`BearerKeyOnly`。  
   
--   將 URI 加入此集合，以指定有效的 URI 集合。 若要這樣做，請插入[\<新增 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md)對每個 URI  
+- 將 URI 加入此集合，以指定有效的 URI 集合。 若要這樣做，請插入[\<新增 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md)對每個 URI  
   
  如需詳細資訊，請參閱<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>。  
   

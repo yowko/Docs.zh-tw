@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7bc409d409cd4da54b61b16d069ce50c2456b53d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985838"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx 函式
 可讓 unmanaged 主應用程式將 common language runtime (CLR) 載入程序。 [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)並`CorBindToRuntimeEx`函式會執行相同的作業，但`CorBindToRuntimeEx`函式可讓您設定旗標指定 CLR 的行為。  
@@ -31,18 +31,18 @@ ms.locfileid: "59330957"
   
  此函數會採用一組參數，可讓主應用程式執行下列作業：  
   
--   指定將載入的執行階段版本。  
+- 指定將載入的執行階段版本。  
   
--   指出是否應該載入的伺服器或工作站的組建。  
+- 指出是否應該載入的伺服器或工作站的組建。  
   
--   控制是否進行並行記憶體回收或非並行記憶體回收。  
+- 控制是否進行並行記憶體回收或非並行記憶體回收。  
   
 > [!NOTE]
 >  執行 WOW64 的應用程式中不支援並行記憶體回收 x86 實作 Intel Itanium 架構 （先前稱為 IA-64） 的 64 位元系統上的模擬器。 如需在 64 位元 Windows 系統上使用 WOW64 的詳細資訊，請參閱[執行的 32 位元應用程式](/windows/desktop/WinProg64/running-32-bit-applications)。  
   
--   控制是否以定義域中性方式載入組件。  
+- 控制是否以定義域中性方式載入組件。  
   
--   取得的介面指標[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) ，可以用來設定其他選項來啟動之前設定的 CLR 執行個體。  
+- 取得的介面指標[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) ，可以用來設定其他選項來啟動之前設定的 CLR 執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -75,31 +75,31 @@ HRESULT CorBindToRuntimeEx (
  `startupFlags`  
  [in]值的組合[STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)列舉型別。 這些旗標控制並行記憶體回收、 定義域中性程式碼，以及行為`pwszVersion`參數。 如果沒有旗標設定，則預設會為單一網域。 下列是有效值：  
   
--   `STARTUP_CONCURRENT_GC`  
+- `STARTUP_CONCURRENT_GC`  
   
--   `STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`  
+- `STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`  
   
--   `STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`  
+- `STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`  
   
--   `STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN_HOST`  
+- `STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN_HOST`  
   
--   `STARTUP_LOADER_SAFEMODE`  
+- `STARTUP_LOADER_SAFEMODE`  
   
--   `STARTUP_LEGACY_IMPERSONATION`  
+- `STARTUP_LEGACY_IMPERSONATION`  
   
--   `STARTUP_LOADER_SETPREFERENCE`  
+- `STARTUP_LOADER_SETPREFERENCE`  
   
--   `STARTUP_SERVER_GC`  
+- `STARTUP_SERVER_GC`  
   
--   `STARTUP_HOARD_GC_VM`  
+- `STARTUP_HOARD_GC_VM`  
   
--   `STARTUP_SINGLE_VERSION_HOSTING_INTERFACE`  
+- `STARTUP_SINGLE_VERSION_HOSTING_INTERFACE`  
   
--   `STARTUP_LEGACY_IMPERSONATION`  
+- `STARTUP_LEGACY_IMPERSONATION`  
   
--   `STARTUP_DISABLE_COMMITTHREADSTACK`  
+- `STARTUP_DISABLE_COMMITTHREADSTACK`  
   
--   `STARTUP_ALWAYSFLOW_IMPERSONATION`  
+- `STARTUP_ALWAYSFLOW_IMPERSONATION`  
   
  如需這些旗標的描述，請參閱 < [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)列舉型別。  
   
@@ -124,9 +124,9 @@ HRESULT CorBindToRuntimeEx (
   
 2. 藉由處理程序的預設模式變更為 「 第 1 版相容性模式中，其中<xref:System.Security.Principal.WindowsIdentity>物件不會流經任何非同步點，無論<xref:System.Threading.ExecutionContext>目前執行緒上的設定。 您要如何變更預設的模式取決於您是使用 managed 可執行檔或未受管理的裝載介面載入 CLR:  
   
-    1.  受管理的可執行檔，您必須設定`enabled`的屬性[ \<legacyImpersonationPolicy >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)項目`true`。  
+    1. 受管理的可執行檔，您必須設定`enabled`的屬性[ \<legacyImpersonationPolicy >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)項目`true`。  
   
-    2.  Unmanaged 裝載介面，設定`STARTUP_LEGACY_IMPERSONATION`中的旗標`startupFlags`參數呼叫時`CorBindToRuntimeEx`函式。  
+    2. Unmanaged 裝載介面，設定`STARTUP_LEGACY_IMPERSONATION`中的旗標`startupFlags`參數呼叫時`CorBindToRuntimeEx`函式。  
   
      第 1 版相容性模式適用於整個程序和程序中的所有應用程式定義域。  
   

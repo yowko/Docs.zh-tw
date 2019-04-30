@@ -9,11 +9,11 @@ helpviewer_keywords:
 - clocks [WPF], controlling interactively
 ms.assetid: d0b520e0-2f18-4cef-977f-2909e709548a
 ms.openlocfilehash: 05989b6a03e03fb5723a70c9c36d5e32f9117049
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947234"
 ---
 # <a name="how-to-interactively-control-a-clock"></a>HOW TO：以互動方式控制時鐘
 A<xref:System.Windows.Media.Animation.Clock>物件的<xref:System.Windows.Media.Animation.ClockController>屬性可讓您以互動方式啟動、 暫停、 繼續、 搜尋、 前進到其填滿期間中，時鐘及停止時鐘。 您可以以互動方式控制只計時樹狀結構的根時鐘。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], mouse events using code
 ms.assetid: d9b12787-86f6-4022-8e0f-e12d312c4af2
 ms.openlocfilehash: 3ebe82fc18deba52fafe76da7ff85fb247446e46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971232"
 ---
 # <a name="handling-user-input"></a>處理使用者輸入
 本主題描述所提供的主要鍵盤和滑鼠事件<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。 處理事件時，控制項作者應覆寫受保護的 `On`*EventName* 方法，而不是將委派附加至事件。 如需檢閱事件，請參閱[從元件引發事件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/sh2e3k5z(v=vs.120))。  

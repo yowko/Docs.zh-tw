@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Clone method [WPF]
 ms.assetid: 2a6a1900-aa55-45fa-9382-241d569a2dc4
 ms.openlocfilehash: abc8a6e4780c8fe50afcf1b04f7e14aeb6452704
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949587"
 ---
 # <a name="ienumrawinputdevicclone"></a>IEnumRAWINPUTDEVIC:Clone
 使用與目前列舉程式相同的狀態，來建立另一個未經處理的輸入裝置列舉程式，以反覆查看相同的清單。  

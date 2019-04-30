@@ -3,11 +3,11 @@ title: 呼叫端資訊 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
 ms.openlocfilehash: 004cb003b6cf980f902d7625694e3d2fbfa5ee42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951941"
 ---
 # <a name="caller-information-visual-basic"></a>呼叫端資訊 (Visual Basic)
 使用 Caller Info 屬性，您就可以取得有關方法之呼叫端的資訊。 您可以取得原始程式碼的檔案路徑、原始程式碼中的行號，以及呼叫端的成員名稱。 這項資訊有助於追蹤、偵錯及建立診斷工具。  
@@ -58,9 +58,9 @@ End Sub
 ### <a name="MEMBERNAMES"></a> 成員名稱  
  您可以使用 `CallerMemberName` 屬性避免指定成員名稱做為所呼叫方法的 `String` 引數。 利用這個技巧就可以避免發生 [重新命名重構] 未變更 `String` 值這個問題。 這項優點對於下列工作特別有用：  
   
--   使用追蹤和診斷常式。  
+- 使用追蹤和診斷常式。  
   
--   當繫結資料時，實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面。 這個介面可讓物件的屬性告知繫結的控制項屬性已變更，所以控制項可以顯示更新的資訊。 沒有 `CallerMemberName` 屬性 (Attribute)，您就必須指定屬性 (Property) 名稱做為常值。  
+- 當繫結資料時，實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面。 這個介面可讓物件的屬性告知繫結的控制項屬性已變更，所以控制項可以顯示更新的資訊。 沒有 `CallerMemberName` 屬性 (Attribute)，您就必須指定屬性 (Property) 名稱做為常值。  
   
  下圖顯示當您使用 `CallerMemberName` 屬性時，傳回的成員名稱。  
   

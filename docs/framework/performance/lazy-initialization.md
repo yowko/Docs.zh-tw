@@ -10,18 +10,18 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949938"
 ---
 # <a name="lazy-initialization"></a>延遲初始設定
 物件的「延遲初始設定」表示物件一直延遲到第一次使用才建立。 (在本主題中，「延遲初始設定」和「延遲具現化」二詞為同義字。)延遲初始設定主要是用來改善效能，避免不必要的計算，並減少程式記憶體需求。 以下為最常見的案例：  
   
--   當建立某個物件會耗費大量資源，而程式可能不使用它時。 例如，假設您在記憶體中有 `Customer` 物件，它的 `Orders` 屬性包含大型的 `Order` 物件陣列，其初始化需要連接資料庫。 如果使用者從未要求顯示訂單，或使用資料進行計算，就沒必要使用系統記憶體或計算週期來建立它。 使用 `Lazy<Orders>` 宣告延遲初始設定 `Orders` 物件，可在不使用物件時，避免浪費系統資源。  
+- 當建立某個物件會耗費大量資源，而程式可能不使用它時。 例如，假設您在記憶體中有 `Customer` 物件，它的 `Orders` 屬性包含大型的 `Order` 物件陣列，其初始化需要連接資料庫。 如果使用者從未要求顯示訂單，或使用資料進行計算，就沒必要使用系統記憶體或計算週期來建立它。 使用 `Lazy<Orders>` 宣告延遲初始設定 `Orders` 物件，可在不使用物件時，避免浪費系統資源。  
   
--   當建立某個物件會耗費大量資源，而您想要延遲到完成其他耗費資源的作業後，再建立它。 例如，假設當程式啟動時會載入數個物件執行個體，但只有部分是立即需要的。 您可以延遲到必要的物件皆已建立後，再對不需要的物件進行初始設定，以改善程式的啟動效能。  
+- 當建立某個物件會耗費大量資源，而您想要延遲到完成其他耗費資源的作業後，再建立它。 例如，假設當程式啟動時會載入數個物件執行個體，但只有部分是立即需要的。 您可以延遲到必要的物件皆已建立後，再對不需要的物件進行初始設定，以改善程式的啟動效能。  
   
  雖然您可以自行撰寫程式碼執行延遲初始設定，但仍建議您改用 <xref:System.Lazy%601>。 <xref:System.Lazy%601> 及其相關類型也支援安全執行緒，並提供一致的例外狀況傳播原則。  
   
@@ -128,11 +128,11 @@ ms.locfileid: "59182295"
   
  <xref:System.Threading.ThreadLocal%601> 包裝其物件的方法，和 <xref:System.Lazy%601> 極其相似，但有以下基本差異：  
   
--   每個執行緒都是使用不能從其他執行緒存取的專用私用資料，來初始化執行緒區域變數。  
+- 每個執行緒都是使用不能從其他執行緒存取的專用私用資料，來初始化執行緒區域變數。  
   
--   <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> 屬性是讀寫的，不限修改次數。 這會影響例外狀況傳播，例如，一個 `get` 作業可能會引發例外狀況，但下一個卻可以成功初始化值。  
+- <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> 屬性是讀寫的，不限修改次數。 這會影響例外狀況傳播，例如，一個 `get` 作業可能會引發例外狀況，但下一個卻可以成功初始化值。  
   
--   如未提供任何初始設定委派，則 <xref:System.Threading.ThreadLocal%601> 會使用預設的類型值初始化其包裝類型。 在這方面，<xref:System.Threading.ThreadLocal%601> 和 <xref:System.ThreadStaticAttribute> 屬性一致。  
+- 如未提供任何初始設定委派，則 <xref:System.Threading.ThreadLocal%601> 會使用預設的類型值初始化其包裝類型。 在這方面，<xref:System.Threading.ThreadLocal%601> 和 <xref:System.ThreadStaticAttribute> 屬性一致。  
   
  下列範例示範，存取 `ThreadLocal<int>` 執行個體的每一個執行緒都會取得自己唯一的資料複本。  
   

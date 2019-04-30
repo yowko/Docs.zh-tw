@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
 ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007292"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverter 和 XAML
 本主題介紹將字串的類型轉換當成一般 XAML 語言功能的目的。 在.NET Framework 中，<xref:System.ComponentModel.TypeConverter>類別具有特殊用途的實作可用作 XAML 屬性使用方式中的屬性值的 managed 自訂類別的一部分。 如果您撰寫自訂類別，而且您想要您的類別可用來做為 XAML 可設定的屬性值的執行個體，您可能需要套用<xref:System.ComponentModel.TypeConverterAttribute>至您的類別撰寫自訂<xref:System.ComponentModel.TypeConverter>類別，或兩者。  
@@ -59,13 +59,13 @@ ms.locfileid: "59164981"
   
  <xref:System.ComponentModel.TypeConverter> 定義四個成員與相關的轉換與基於 XAML 處理的字串：  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
   
  其中，最重要的方法是<xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>。 這個方法會將輸入字串轉換為所需的物件類型。 嚴格來說，<xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>無法實作方法，以更廣泛的型別轉換子的預定的目的地類型，並因此提供延伸超過 XAML，例如支援執行階段轉換，但基於 XAML 用途這是只可以處理的程式碼路徑<xref:System.String>很重要的輸入。  
   

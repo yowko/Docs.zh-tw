@@ -5,11 +5,11 @@ ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bb41cc47351ccf22fcd522b7d4291c235312bfaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948651"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting 方法
 啟用或停用虛擬模組分割。  
@@ -54,40 +54,40 @@ HRESULT EnableVirtualModuleSplitting(
 ## <a name="behavioral-differences"></a>行為的差異  
  容器模組具有下列行為和特性：  
   
--   所有構成子模組的中繼資料會合併在一起。  
+- 所有構成子模組的中繼資料會合併在一起。  
   
--   其類型名稱可能會受損。  
+- 其類型名稱可能會受損。  
   
--   [Icordebugmodule:: Getname](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md)方法傳回的磁碟上模組的路徑。  
+- [Icordebugmodule:: Getname](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md)方法傳回的磁碟上模組的路徑。  
   
--   [Icordebugmodule:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md)方法會傳回該映像的大小。  
+- [Icordebugmodule:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md)方法會傳回該映像的大小。  
   
--   ICorDebugAssembly3.EnumerateContainedAssemblies 方法會列出子模組。  
+- ICorDebugAssembly3.EnumerateContainedAssemblies 方法會列出子模組。  
   
--   ICorDebugAssembly3.GetContainerAssembly 方法會傳回 `S_FALSE`。  
+- ICorDebugAssembly3.GetContainerAssembly 方法會傳回 `S_FALSE`。  
   
  子模組具有下列行為和特性：  
   
--   子模組包含一組縮減的中繼資料，只對應至已合併的原始組件。  
+- 子模組包含一組縮減的中繼資料，只對應至已合併的原始組件。  
   
--   中繼資料名稱不會受損。  
+- 中繼資料名稱不會受損。  
   
--   中繼資料語彙基元不太可能符合原始組件在建置流程中合併前的語彙基元。  
+- 中繼資料語彙基元不太可能符合原始組件在建置流程中合併前的語彙基元。  
   
--   [Icordebugmodule:: Getname](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md)方法會傳回組件名稱，而不是檔案路徑。  
+- [Icordebugmodule:: Getname](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md)方法會傳回組件名稱，而不是檔案路徑。  
   
--   [Icordebugmodule:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md)方法會傳回原始未合併的映像大小。  
+- [Icordebugmodule:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md)方法會傳回原始未合併的映像大小。  
   
--   ICorDebugModule3.EnumerateContainedAssemblies 方法會傳回 `S_FALSE`。  
+- ICorDebugModule3.EnumerateContainedAssemblies 方法會傳回 `S_FALSE`。  
   
--   ICorDebugAssembly3.GetContainerAssembly 方法會傳回所包含的模組。  
+- ICorDebugAssembly3.GetContainerAssembly 方法會傳回所包含的模組。  
   
 ## <a name="interfaces-retrieved-from-modules"></a>從模組擷取的介面  
  可從模組建立或擷取的各種介面。 其中包括：  
   
--   ICorDebugClass 物件由[icordebugmodule:: Getclassfromtoken](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md)方法。  
+- ICorDebugClass 物件由[icordebugmodule:: Getclassfromtoken](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md)方法。  
   
--   ICorDebugAssembly 物件由[icordebugmodule:: Getassembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md)方法。  
+- ICorDebugAssembly 物件由[icordebugmodule:: Getassembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md)方法。  
   
  這些物件一律會快取[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)，所以會有相同的指標識別，不論是否已建立或查詢的目標容器模組或子模組。 子模組提供這些快取物件的篩選檢視，而不是其本身複本的個別快取。  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - color dialog box
 ms.assetid: 261793e0-8252-47c5-b76c-621857b8da44
 ms.openlocfilehash: d04794df6bce82573ff8f53b282a4d945933b1bb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956308"
 ---
 # <a name="colordialog-component-windows-forms"></a>ColorDialog 元件 (Windows Form)
 Windows Form<xref:System.Windows.Forms.ColorDialog>元件是預先設定的對話方塊，可讓使用者從調色盤選取色彩，並將自訂色彩新增至該調色盤。 這是您在其他 Windows 應用程式中看到可選取色彩的相同對話方塊。 只要在 Windows 應用程式中使用這個控制項，便不需要設定自己的對話方塊。  

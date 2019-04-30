@@ -6,8 +6,8 @@ ms.openlocfilehash: 1ff83d95dae06b787f8bc7ec8e1bf0f45c226532
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943932"
 ---
 # <a name="custom-binding-security"></a>自訂繫結安全性
 這個範例會示範如何使用自訂繫結來設定安全性。 它會顯示如何使用自訂繫結同時啟用訊息層級安全性和安全傳輸。 當在用戶端和服務之間傳輸訊息需要安全傳輸，且同時必須保護訊息層級上訊息的安全時，這是相當有用的。 系統提供的繫結不支援這個組態。
@@ -19,9 +19,9 @@ ms.locfileid: "59973583"
 
  服務組態會定義支援下列作業的自訂繫結：
 
--   使用 TLS/SSL 通訊協定保護的 TCP 通訊。
+- 使用 TLS/SSL 通訊協定保護的 TCP 通訊。
 
--   Windows 訊息安全性。
+- Windows 訊息安全性。
 
  自訂繫結組態會同時啟用訊息層級安全性以啟用安全傳輸。 繫結項目的順序很重要定義自訂繫結，因為每個都代表通道堆疊中的圖層 (請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md))。 自訂繫結會定義在服務與用戶端組態檔中，如下列範例組態所示。
 
@@ -76,7 +76,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
  下面提供套用至此範例之批次檔的各區段的簡要概觀，讓批次檔得以修改為在適當的組態下執行：
 
--   建立伺服器憑證。
+- 建立伺服器憑證。
 
      下列 Setup.bat 檔中的程式行會建立要使用的伺服器憑證。 `%SERVER_NAME%` 變數會指定伺服器名稱。 您可以變更這個變數來指定自己的伺服器名稱。 這個批次檔的名稱預設為伺服器名稱，localhost。
 
@@ -92,7 +92,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   將伺服器憑證安裝至用戶端的受信任憑證存放區中。
+- 將伺服器憑證安裝至用戶端的受信任憑證存放區中。
 
      Setup.bat 檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證的步驟。
 
@@ -128,36 +128,36 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 1. 在服務電腦上：  
   
-    1.  在服務電腦上建立名為 servicemodelsamples 的虛擬目錄。  
+    1. 在服務電腦上建立名為 servicemodelsamples 的虛擬目錄。  
   
-    2.  將 \inetpub\wwwroot\servicemodelsamples 中的服務程式檔複製至服務電腦上的虛擬目錄中。 確定複製 \bin 子目錄中的檔案。  
+    2. 將 \inetpub\wwwroot\servicemodelsamples 中的服務程式檔複製至服務電腦上的虛擬目錄中。 確定複製 \bin 子目錄中的檔案。  
   
-    3.  將 Setup.bat 和 Cleanup.bat 檔案複製到服務電腦中。  
+    3. 將 Setup.bat 和 Cleanup.bat 檔案複製到服務電腦中。  
   
-    4.  以系統管理員權限開啟 Visual Studio 中開發人員命令提示字元執行下列命令： `Setup.bat service`。 這會建立服務憑證，其主體名稱與批次檔執行於其中之電腦的名稱相符。  
+    4. 以系統管理員權限開啟 Visual Studio 中開發人員命令提示字元執行下列命令： `Setup.bat service`。 這會建立服務憑證，其主體名稱與批次檔執行於其中之電腦的名稱相符。  
   
         > [!NOTE]
         >  Setup.bat 批次檔是設計用來從 Visual Studio 2010 命令提示字元執行。 它要求 path 環境變數指向安裝 SDK 的目錄。 這個環境變數是自動在 Visual Studio 2010 命令提示字元中設定。
 
-    5.  變更[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) Service.exe.config 檔以反映上一個步驟中產生的憑證的主體名稱。
+    5. 變更[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) Service.exe.config 檔以反映上一個步驟中產生的憑證的主體名稱。
 
-    6.  從命令提示字元執行 Service.exe。
+    6. 從命令提示字元執行 Service.exe。
 
 2. 在用戶端電腦上：
 
-    1.  將用戶端程式檔案從 \client\bin\ 資料夾複製到用戶端電腦中。 同時複製 Cleanup.bat 檔。
+    1. 將用戶端程式檔案從 \client\bin\ 資料夾複製到用戶端電腦中。 同時複製 Cleanup.bat 檔。
 
-    2.  執行 Cleanup.bat，移除先前範例的任何舊憑證。
+    2. 執行 Cleanup.bat，移除先前範例的任何舊憑證。
 
-    3.  匯出服務的憑證，以系統管理權限開啟 Visual studio 的開發人員命令提示字元，並在服務電腦上執行下列命令 (取代`%SERVER_NAME%`完整電腦名稱與位置服務正在執行）：
+    3. 匯出服務的憑證，以系統管理權限開啟 Visual studio 的開發人員命令提示字元，並在服務電腦上執行下列命令 (取代`%SERVER_NAME%`完整電腦名稱與位置服務正在執行）：
 
         ```
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
         ```
 
-    4.  將 %SERVER_NAME%.cer 複製到用戶端電腦 (將 %SERVER_NAME% 取代成執行此服務之電腦的完整名稱)。
+    4. 將 %SERVER_NAME%.cer 複製到用戶端電腦 (將 %SERVER_NAME% 取代成執行此服務之電腦的完整名稱)。
 
-    5.  以系統管理權限開啟 Visual studio 的開發人員命令提示字元，並在用戶端電腦上執行下列命令匯入服務的憑證 (取代 %server_name%取代成完整名稱的電腦，服務正在執行）：
+    5. 以系統管理權限開啟 Visual studio 的開發人員命令提示字元，並在用戶端電腦上執行下列命令匯入服務的憑證 (取代 %server_name%取代成完整名稱的電腦，服務正在執行）：
 
         ```
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
@@ -165,7 +165,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
          如果憑證是由信任的簽發者發行，就不需要執行步驟 c、d 和 e。
 
-    6.  修改用戶端的 App.config 檔，如下所示：
+    6. 修改用戶端的 App.config 檔，如下所示：
 
         ```xml
         <client>
@@ -178,10 +178,10 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         </client>
         ```
 
-    7.  如果用於執行服務的帳戶有別於網域環境中的 NetworkService 或 LocalSystem 帳戶，您可能需要修改用戶端 App.config 檔中服務端點的端點身分識別，以根據用來執行服務之帳戶設定適當的 UPN 或 SPN。 如需端點身分識別的詳細資訊，請參閱[服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)主題。
+    7. 如果用於執行服務的帳戶有別於網域環境中的 NetworkService 或 LocalSystem 帳戶，您可能需要修改用戶端 App.config 檔中服務端點的端點身分識別，以根據用來執行服務之帳戶設定適當的 UPN 或 SPN。 如需端點身分識別的詳細資訊，請參閱[服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)主題。
 
-    8.  從命令提示字元執行 Client.exe。
+    8. 從命令提示字元執行 Client.exe。
 
 ### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除
 
--   當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。
+- 當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。

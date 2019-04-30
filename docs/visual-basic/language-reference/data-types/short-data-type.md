@@ -17,11 +17,11 @@ helpviewer_keywords:
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
 ms.openlocfilehash: d4dab1a72d1e240bc428b2c6b83a722584e35ecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971791"
 ---
 # <a name="short-data-type-visual-basic"></a>Short 資料類型 (Visual Basic)
 保存帶正負號的 16 位元 （2 個位元組） 整數，範圍從-32,768 到 32,767。  
@@ -62,11 +62,11 @@ Dim number = &H_3264S
 
 ## <a name="programming-tips"></a>程式設計提示
 
--   **擴展。** `Short`資料類型可擴展為`Integer`， `Long`， `Decimal`， `Single`，或`Double`。 這表示，您可以將 `Short` 轉換成這些類型的任何一種，而不會發生 <xref:System.OverflowException?displayProperty=nameWithType> 錯誤。  
+- **擴展。** `Short`資料類型可擴展為`Integer`， `Long`， `Decimal`， `Single`，或`Double`。 這表示，您可以將 `Short` 轉換成這些類型的任何一種，而不會發生 <xref:System.OverflowException?displayProperty=nameWithType> 錯誤。  
   
--   **類型字元。** 將常值類型字元 `S` 附加到常值，會強制其成為 `Short` 資料類型。 `Short` 有任何識別項類型字元。  
+- **類型字元。** 將常值類型字元 `S` 附加到常值，會強制其成為 `Short` 資料類型。 `Short` 有任何識別項類型字元。  
   
--   **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.Int16?displayProperty=nameWithType> 結構。  
+- **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.Int16?displayProperty=nameWithType> 結構。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a39b0f2546d84cf24a58d5367c87d0a862aead93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985760"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a>CorMarkThreadInThreadPool 函式
 標記目前正在執行的執行緒集區執行緒，以便執行 managed 程式碼。 從.NET Framework 2.0 版開始，此函式沒有任何作用。 它不是必要項，並可從您的程式碼中移除。 此函式已被取代[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  

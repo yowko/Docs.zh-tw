@@ -3,11 +3,11 @@ title: 迭代器 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
 ms.openlocfilehash: 313ce0c79a71af1b602ecd4ccc9bd0ebceb5696e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966166"
 ---
 # <a name="iterators-visual-basic"></a>迭代器 (Visual Basic)
 「迭代器」可用來逐步執行集合，例如清單和陣列。  
@@ -44,21 +44,21 @@ End Function
   
  **本主題內容**  
   
--   [簡易迭代器](#BKMK_SimpleIterator)  
+- [簡易迭代器](#BKMK_SimpleIterator)  
   
--   [建立集合類別](#BKMK_CollectionClass)  
+- [建立集合類別](#BKMK_CollectionClass)  
   
--   [Try 區塊](#BKMK_TryBlocks)  
+- [Try 區塊](#BKMK_TryBlocks)  
   
--   [匿名方法](#BKMK_AnonymousMethods)  
+- [匿名方法](#BKMK_AnonymousMethods)  
   
--   [搭配泛型清單使用迭代器](#BKMK_GenericList)  
+- [搭配泛型清單使用迭代器](#BKMK_GenericList)  
   
--   [語法資訊](#BKMK_SyntaxInformation)  
+- [語法資訊](#BKMK_SyntaxInformation)  
   
--   [技術實作](#BKMK_Technical)  
+- [技術實作](#BKMK_Technical)  
   
--   [迭代器的使用](#BKMK_UseOfIterators)  
+- [迭代器的使用](#BKMK_UseOfIterators)  
   
 > [!NOTE]
 >  如需主題中的簡易迭代器範例以外的所有範例，包括[匯入](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)陳述式`System.Collections`和`System.Collections.Generic`命名空間。  
@@ -438,11 +438,11 @@ End Class
 ## <a name="BKMK_UseOfIterators"></a> 迭代器的使用  
  當您需要使用複雜的程式碼來填入清單序列時，迭代器可讓您維持 `For Each` 迴圈的簡潔性。 當您想要執行下列作業時，這會很有用：  
   
--   在第一次反覆運算 `For Each` 迴圈之後修改清單序列。  
+- 在第一次反覆運算 `For Each` 迴圈之後修改清單序列。  
   
--   避免在第一次反覆運算 `For Each` 迴圈之前完整載入大型清單。 分頁擷取以分批載入資料表資料列即為一例。 另一個範例是 <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> 方法，它會在 .NET Framework 中實作迭代器。  
+- 避免在第一次反覆運算 `For Each` 迴圈之前完整載入大型清單。 分頁擷取以分批載入資料表資料列即為一例。 另一個範例是 <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> 方法，它會在 .NET Framework 中實作迭代器。  
   
--   在迭代器中封裝建立清單。 在迭代器方法中，您可以建立清單，然後在迴圈中產生每個結果。  
+- 在迭代器中封裝建立清單。 在迭代器方法中，您可以建立清單，然後在迴圈中產生每個結果。  
   
 ## <a name="see-also"></a>另請參閱
 

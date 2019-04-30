@@ -9,30 +9,30 @@ helpviewer_keywords:
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
 ms.openlocfilehash: f6fd1f2f5d0a729ee5610b81d4bfdca052a6e01e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981808"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>逐步解說：繫結至混合應用程式中的資料
 不論您使用繫結至控制項的資料來源是不可或缺的將基礎資料的存取權提供給使用者[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]或[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 本逐步解說示範如何在包含兩者的混合式應用程式使用資料繫結[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項。  
   
  這個逐步解說中所述的工作包括：  
   
--   建立專案。  
+- 建立專案。  
   
--   定義資料範本。  
+- 定義資料範本。  
   
--   指定表單版面配置。  
+- 指定表單版面配置。  
   
--   指定資料繫結。  
+- 指定資料繫結。  
   
--   使用交互操作來顯示資料。  
+- 使用交互操作來顯示資料。  
   
--   將資料來源新增至專案。  
+- 將資料來源新增至專案。  
   
--   繫結至資料來源。  
+- 繫結至資料來源。  
   
  在此逐步解說中所述工作的完整程式碼清單，請參閱 <<c0> [ 混合式應用程式範例中的資料繫結](https://go.microsoft.com/fwlink/?LinkID=159983)。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "59300862"
 ## <a name="prerequisites"></a>必要條件  
  您需要下列元件才能完成此逐步解說：  
   
--   Visual Studio。  
+- Visual Studio。  
   
--   Microsoft SQL Server 上執行的 Northwind 範例資料庫的存取。  
+- Microsoft SQL Server 上執行的 Northwind 範例資料庫的存取。  
   
 ## <a name="creating-the-project"></a>建立專案  
   
@@ -53,9 +53,9 @@ ms.locfileid: "59300862"
   
 2. 在 [方案總管] 中，加入下列組件的參考。  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
 3. 開啟 MainWindow.xaml 中的[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "59300862"
   
 #### <a name="to-define-the-data-template"></a>定義資料範本  
   
--   複製成下列 XAML<xref:System.Windows.Controls.Grid>項目的宣告。  
+- 複製成下列 XAML<xref:System.Windows.Controls.Grid>項目的宣告。  
   
      [!code-xaml[WPFWithWFAndDatabinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
@@ -83,13 +83,13 @@ ms.locfileid: "59300862"
   
 #### <a name="to-set-up-the-grid-layout"></a>設定格線版面配置  
   
--   複製成下列 XAML<xref:System.Windows.Controls.Grid>項目的宣告。  
+- 複製成下列 XAML<xref:System.Windows.Controls.Grid>項目的宣告。  
   
      [!code-xaml[WPFWithWFAndDatabinding#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
 #### <a name="to-set-up-the-label-controls"></a>設定 Label 控制項  
   
--   複製成下列 XAML<xref:System.Windows.Controls.Grid>項目的宣告。  
+- 複製成下列 XAML<xref:System.Windows.Controls.Grid>項目的宣告。  
   
      [!code-xaml[WPFWithWFAndDatabinding#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
@@ -100,7 +100,7 @@ ms.locfileid: "59300862"
   
 #### <a name="to-specify-data-bindings"></a>指定資料繫結  
   
--   複製成下列 XAML<xref:System.Windows.Controls.Grid>項目的宣告。  
+- 複製成下列 XAML<xref:System.Windows.Controls.Grid>項目的宣告。  
   
      <xref:System.Windows.Data.Binding>類別繫結<xref:System.Windows.Controls.TextBox>到資料庫中的適當欄位的控制項。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "59300862"
   
 #### <a name="to-display-data-in-the-datagridview-control"></a>在 DataGridView 控制項中顯示資料  
   
--   複製成下列 XAML<xref:System.Windows.Controls.Grid>項目的宣告。  
+- 複製成下列 XAML<xref:System.Windows.Controls.Grid>項目的宣告。  
   
      [!code-xaml[WPFWithWFAndDatabinding#7](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   
