@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 06e9c7af1c4a769bfb45a8e9f805d97b3bad94aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994535"
 ---
-# <a name="icordebugobjectvaluegetclass-method"></a><span data-ttu-id="da25e-102">ICorDebugObjectValue::GetClass 方法</span><span class="sxs-lookup"><span data-stu-id="da25e-102">ICorDebugObjectValue::GetClass Method</span></span>
-<span data-ttu-id="da25e-103">取得這個物件值的類別。</span><span class="sxs-lookup"><span data-stu-id="da25e-103">Gets the class of this object value.</span></span>  
+# <a name="icordebugobjectvaluegetclass-method"></a><span data-ttu-id="7e03f-102">ICorDebugObjectValue::GetClass 方法</span><span class="sxs-lookup"><span data-stu-id="7e03f-102">ICorDebugObjectValue::GetClass Method</span></span>
+<span data-ttu-id="7e03f-103">取得這個物件值的類別。</span><span class="sxs-lookup"><span data-stu-id="7e03f-103">Gets the class of this object value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="da25e-104">語法</span><span class="sxs-lookup"><span data-stu-id="da25e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7e03f-104">語法</span><span class="sxs-lookup"><span data-stu-id="7e03f-104">Syntax</span></span>  
   
 ```  
 HRESULT GetClass (  
@@ -35,20 +35,20 @@ HRESULT GetClass (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="da25e-105">參數</span><span class="sxs-lookup"><span data-stu-id="da25e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7e03f-105">參數</span><span class="sxs-lookup"><span data-stu-id="7e03f-105">Parameters</span></span>  
  `ppClass`  
- <span data-ttu-id="da25e-106">[out]表示物件值，這個 「 ICorDebugObjectValue 」 物件所表示的類別 「 ICorDebugClass"物件的位址指標。</span><span class="sxs-lookup"><span data-stu-id="da25e-106">[out] A pointer to the address of an "ICorDebugClass" object that represents the class of the object value represented by this "ICorDebugObjectValue" object.</span></span>  
+ <span data-ttu-id="7e03f-106">[out]表示物件值，這個 「 ICorDebugObjectValue 」 物件所表示的類別 「 ICorDebugClass"物件的位址指標。</span><span class="sxs-lookup"><span data-stu-id="7e03f-106">[out] A pointer to the address of an "ICorDebugClass" object that represents the class of the object value represented by this "ICorDebugObjectValue" object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="da25e-107">備註</span><span class="sxs-lookup"><span data-stu-id="da25e-107">Remarks</span></span>  
- <span data-ttu-id="da25e-108">`GetClass`並[icordebugvalue:: Gettype](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)方法都會傳回值的類型的相關資訊; 它們同時由取代感知泛型[ICorDebugValue2::GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)。</span><span class="sxs-lookup"><span data-stu-id="da25e-108">The `GetClass` and [ICorDebugValue::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) methods each return information about the type of a value; they are both superseded by the generics-aware [ICorDebugValue2::GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7e03f-107">備註</span><span class="sxs-lookup"><span data-stu-id="7e03f-107">Remarks</span></span>  
+ <span data-ttu-id="7e03f-108">`GetClass`並[icordebugvalue:: Gettype](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)方法都會傳回值的類型的相關資訊; 它們同時由取代感知泛型[ICorDebugValue2::GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)。</span><span class="sxs-lookup"><span data-stu-id="7e03f-108">The `GetClass` and [ICorDebugValue::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) methods each return information about the type of a value; they are both superseded by the generics-aware [ICorDebugValue2::GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="da25e-109">需求</span><span class="sxs-lookup"><span data-stu-id="da25e-109">Requirements</span></span>  
- <span data-ttu-id="da25e-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="da25e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7e03f-109">需求</span><span class="sxs-lookup"><span data-stu-id="7e03f-109">Requirements</span></span>  
+ <span data-ttu-id="7e03f-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7e03f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="da25e-111">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="da25e-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7e03f-111">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7e03f-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="da25e-112">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="da25e-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7e03f-112">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7e03f-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="da25e-113">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="da25e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7e03f-113">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e03f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="da25e-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="da25e-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7e03f-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7e03f-114">See also</span></span>

@@ -7,35 +7,35 @@ helpviewer_keywords:
 - -codepage compiler option [Visual Basic]
 ms.assetid: be36ec33-6800-4505-838c-4124564f5cc9
 ms.openlocfilehash: fda75383435fdff718d1d50bc8583afc9858e7e2
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944699"
 ---
-# <a name="-codepage-visual-basic"></a><span data-ttu-id="e7d8b-102">-codepage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e7d8b-102">-codepage (Visual Basic)</span></span>
-<span data-ttu-id="e7d8b-103">指定編譯過程中所有原始程式碼檔使用的字碼頁。</span><span class="sxs-lookup"><span data-stu-id="e7d8b-103">Specifies the code page to use for all source-code files in the compilation.</span></span>  
+# <a name="-codepage-visual-basic"></a><span data-ttu-id="70979-102">-codepage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="70979-102">-codepage (Visual Basic)</span></span>
+<span data-ttu-id="70979-103">指定編譯過程中所有原始程式碼檔使用的字碼頁。</span><span class="sxs-lookup"><span data-stu-id="70979-103">Specifies the code page to use for all source-code files in the compilation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e7d8b-104">語法</span><span class="sxs-lookup"><span data-stu-id="e7d8b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="70979-104">語法</span><span class="sxs-lookup"><span data-stu-id="70979-104">Syntax</span></span>  
   
 ```  
 -codepage:id  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="e7d8b-105">引數</span><span class="sxs-lookup"><span data-stu-id="e7d8b-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="70979-105">引數</span><span class="sxs-lookup"><span data-stu-id="70979-105">Arguments</span></span>  
   
-|<span data-ttu-id="e7d8b-106">詞彙</span><span class="sxs-lookup"><span data-stu-id="e7d8b-106">Term</span></span>|<span data-ttu-id="e7d8b-107">定義</span><span class="sxs-lookup"><span data-stu-id="e7d8b-107">Definition</span></span>|  
+|<span data-ttu-id="70979-106">詞彙</span><span class="sxs-lookup"><span data-stu-id="70979-106">Term</span></span>|<span data-ttu-id="70979-107">定義</span><span class="sxs-lookup"><span data-stu-id="70979-107">Definition</span></span>|  
 |---|---|  
-|`id`|<span data-ttu-id="e7d8b-108">必要。</span><span class="sxs-lookup"><span data-stu-id="e7d8b-108">Required.</span></span> <span data-ttu-id="e7d8b-109">編譯器會使用指定的字碼頁`id`來解譯原始程式檔的編碼方式。</span><span class="sxs-lookup"><span data-stu-id="e7d8b-109">The compiler uses the code page specified by `id` to interpret the encoding of the source files.</span></span>|  
+|`id`|<span data-ttu-id="70979-108">必要項。</span><span class="sxs-lookup"><span data-stu-id="70979-108">Required.</span></span> <span data-ttu-id="70979-109">編譯器會使用指定的字碼頁`id`來解譯原始程式檔的編碼方式。</span><span class="sxs-lookup"><span data-stu-id="70979-109">The compiler uses the code page specified by `id` to interpret the encoding of the source files.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e7d8b-110">備註</span><span class="sxs-lookup"><span data-stu-id="e7d8b-110">Remarks</span></span>  
- <span data-ttu-id="e7d8b-111">若要編譯原始程式碼，以特定的編碼方式儲存，您可以使用`-codepage`指定應該使用的字碼頁。</span><span class="sxs-lookup"><span data-stu-id="e7d8b-111">To compile source code saved with a specific encoding, you can use `-codepage` to specify which code page should be used.</span></span> <span data-ttu-id="e7d8b-112">`-codepage`選項會套用至您所編譯的所有原始程式碼檔案。</span><span class="sxs-lookup"><span data-stu-id="e7d8b-112">The `-codepage` option applies to all source-code files in your compilation.</span></span> <span data-ttu-id="e7d8b-113">如需詳細資訊，請參閱 < [.NET Framework 中的字元編碼](../../../standard/base-types/character-encoding.md)。</span><span class="sxs-lookup"><span data-stu-id="e7d8b-113">For more information, see [Character Encoding in the .NET Framework](../../../standard/base-types/character-encoding.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="70979-110">備註</span><span class="sxs-lookup"><span data-stu-id="70979-110">Remarks</span></span>  
+ <span data-ttu-id="70979-111">若要編譯原始程式碼，以特定的編碼方式儲存，您可以使用`-codepage`指定應該使用的字碼頁。</span><span class="sxs-lookup"><span data-stu-id="70979-111">To compile source code saved with a specific encoding, you can use `-codepage` to specify which code page should be used.</span></span> <span data-ttu-id="70979-112">`-codepage`選項會套用至您所編譯的所有原始程式碼檔案。</span><span class="sxs-lookup"><span data-stu-id="70979-112">The `-codepage` option applies to all source-code files in your compilation.</span></span> <span data-ttu-id="70979-113">如需詳細資訊，請參閱 < [.NET Framework 中的字元編碼](../../../standard/base-types/character-encoding.md)。</span><span class="sxs-lookup"><span data-stu-id="70979-113">For more information, see [Character Encoding in the .NET Framework](../../../standard/base-types/character-encoding.md).</span></span>  
   
- <span data-ttu-id="e7d8b-114">`-codepage`如果原始程式檔已儲存的簽章中使用目前的 ANSI 字碼頁、 Unicode 或 utf-8，則不需要 選項。</span><span class="sxs-lookup"><span data-stu-id="e7d8b-114">The `-codepage` option is not needed if the source-code files were saved using the current ANSI code page, Unicode, or UTF-8 with a signature.</span></span> <span data-ttu-id="e7d8b-115">Visual Studio 會儲存所有的原始程式檔與目前的 ANSI 字碼頁預設情況下，除非使用者指定中的另一個編碼**編碼** 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="e7d8b-115">Visual Studio saves all source-code files with the current ANSI code page by default, unless the user specifies another encoding in the **Encoding** dialog box.</span></span> <span data-ttu-id="e7d8b-116">Visual Studio 會使用**編碼**對話方塊以開啟原始程式碼檔使用不同的字碼頁儲存。</span><span class="sxs-lookup"><span data-stu-id="e7d8b-116">Visual Studio uses the **Encoding** dialog box to open source-code files saved with a different code page.</span></span>  
+ <span data-ttu-id="70979-114">`-codepage`如果原始程式檔已儲存的簽章中使用目前的 ANSI 字碼頁、 Unicode 或 utf-8，則不需要 選項。</span><span class="sxs-lookup"><span data-stu-id="70979-114">The `-codepage` option is not needed if the source-code files were saved using the current ANSI code page, Unicode, or UTF-8 with a signature.</span></span> <span data-ttu-id="70979-115">Visual Studio 會儲存所有的原始程式檔與目前的 ANSI 字碼頁預設情況下，除非使用者指定中的另一個編碼**編碼** 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="70979-115">Visual Studio saves all source-code files with the current ANSI code page by default, unless the user specifies another encoding in the **Encoding** dialog box.</span></span> <span data-ttu-id="70979-116">Visual Studio 會使用**編碼**對話方塊以開啟原始程式碼檔使用不同的字碼頁儲存。</span><span class="sxs-lookup"><span data-stu-id="70979-116">Visual Studio uses the **Encoding** dialog box to open source-code files saved with a different code page.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e7d8b-117">`-codepage`選項不是從 Visual Studio 開發環境中使用; 只有在從命令列編譯時均可使用。</span><span class="sxs-lookup"><span data-stu-id="e7d8b-117">The `-codepage` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
+>  <span data-ttu-id="70979-117">`-codepage`選項不是從 Visual Studio 開發環境中使用; 只有在從命令列編譯時均可使用。</span><span class="sxs-lookup"><span data-stu-id="70979-117">The `-codepage` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e7d8b-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e7d8b-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="70979-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="70979-118">See also</span></span>
 
-- [<span data-ttu-id="e7d8b-119">Visual Basic 命令列編譯器</span><span class="sxs-lookup"><span data-stu-id="e7d8b-119">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="70979-119">Visual Basic 命令列編譯器</span><span class="sxs-lookup"><span data-stu-id="70979-119">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)

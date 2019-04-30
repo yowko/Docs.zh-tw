@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c2509945d2799b81e036888d146a51cee87fda09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62042714"
 ---
-# <a name="imetadataimportenummemberswithname-method"></a><span data-ttu-id="7d1e5-102">IMetaDataImport::EnumMembersWithName 方法</span><span class="sxs-lookup"><span data-stu-id="7d1e5-102">IMetaDataImport::EnumMembersWithName Method</span></span>
-<span data-ttu-id="7d1e5-103">列舉 MemberDef 語彙基元，其代表具有指定名稱之指定類型成員。</span><span class="sxs-lookup"><span data-stu-id="7d1e5-103">Enumerates MemberDef tokens representing members of the specified type with the specified name.</span></span>  
+# <a name="imetadataimportenummemberswithname-method"></a><span data-ttu-id="fdc9f-102">IMetaDataImport::EnumMembersWithName 方法</span><span class="sxs-lookup"><span data-stu-id="fdc9f-102">IMetaDataImport::EnumMembersWithName Method</span></span>
+<span data-ttu-id="fdc9f-103">列舉 MemberDef 語彙基元，其代表具有指定名稱之指定類型成員。</span><span class="sxs-lookup"><span data-stu-id="fdc9f-103">Enumerates MemberDef tokens representing members of the specified type with the specified name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7d1e5-104">語法</span><span class="sxs-lookup"><span data-stu-id="7d1e5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fdc9f-104">語法</span><span class="sxs-lookup"><span data-stu-id="fdc9f-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumMembersWithName (  
@@ -40,45 +40,45 @@ HRESULT EnumMembersWithName (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7d1e5-105">參數</span><span class="sxs-lookup"><span data-stu-id="7d1e5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fdc9f-105">參數</span><span class="sxs-lookup"><span data-stu-id="fdc9f-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="7d1e5-106">[in、 out]列舉值的指標。</span><span class="sxs-lookup"><span data-stu-id="7d1e5-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="fdc9f-106">[in、 out]列舉值的指標。</span><span class="sxs-lookup"><span data-stu-id="fdc9f-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `cl`  
- <span data-ttu-id="7d1e5-107">[in]代表具有列舉的成員類型的 TypeDef 語彙基元。</span><span class="sxs-lookup"><span data-stu-id="7d1e5-107">[in] A TypeDef token representing the type with members to enumerate.</span></span>  
+ <span data-ttu-id="fdc9f-107">[in]代表具有列舉的成員類型的 TypeDef 語彙基元。</span><span class="sxs-lookup"><span data-stu-id="fdc9f-107">[in] A TypeDef token representing the type with members to enumerate.</span></span>  
   
  `szName`  
- <span data-ttu-id="7d1e5-108">[in]列舉值的範圍限制成員名稱。</span><span class="sxs-lookup"><span data-stu-id="7d1e5-108">[in] The member name that limits the scope of the enumerator.</span></span>  
+ <span data-ttu-id="fdc9f-108">[in]列舉值的範圍限制成員名稱。</span><span class="sxs-lookup"><span data-stu-id="fdc9f-108">[in] The member name that limits the scope of the enumerator.</span></span>  
   
  `rMembers`  
- <span data-ttu-id="7d1e5-109">[out]陣列，用來儲存 MemberDef 語彙基元。</span><span class="sxs-lookup"><span data-stu-id="7d1e5-109">[out] The array used to store the MemberDef tokens.</span></span>  
+ <span data-ttu-id="fdc9f-109">[out]陣列，用來儲存 MemberDef 語彙基元。</span><span class="sxs-lookup"><span data-stu-id="fdc9f-109">[out] The array used to store the MemberDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="7d1e5-110">[in] `rMembers` 陣列的大小上限。</span><span class="sxs-lookup"><span data-stu-id="7d1e5-110">[in] The maximum size of the `rMembers` array.</span></span>  
+ <span data-ttu-id="fdc9f-110">[in] `rMembers` 陣列的大小上限。</span><span class="sxs-lookup"><span data-stu-id="fdc9f-110">[in] The maximum size of the `rMembers` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="7d1e5-111">[out]MemberDef 語彙基元中傳回的實際數目`rMembers`。</span><span class="sxs-lookup"><span data-stu-id="7d1e5-111">[out] The actual number of MemberDef tokens returned in `rMembers`.</span></span>  
+ <span data-ttu-id="fdc9f-111">[out]MemberDef 語彙基元中傳回的實際數目`rMembers`。</span><span class="sxs-lookup"><span data-stu-id="fdc9f-111">[out] The actual number of MemberDef tokens returned in `rMembers`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7d1e5-112">備註</span><span class="sxs-lookup"><span data-stu-id="7d1e5-112">Remarks</span></span>  
- <span data-ttu-id="7d1e5-113">這個方法會列舉欄位和方法，但沒有屬性或事件。</span><span class="sxs-lookup"><span data-stu-id="7d1e5-113">This method enumerates fields and methods, but not properties or events.</span></span> <span data-ttu-id="7d1e5-114">不同於[imetadataimport:: Enummembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md)，`EnumMembersWithName`捨棄並沒有指定的名稱的所有欄位和成員 token。</span><span class="sxs-lookup"><span data-stu-id="7d1e5-114">Unlike [IMetaDataImport::EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` discards all field and member tokens that do not have the specified name.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fdc9f-112">備註</span><span class="sxs-lookup"><span data-stu-id="fdc9f-112">Remarks</span></span>  
+ <span data-ttu-id="fdc9f-113">這個方法會列舉欄位和方法，但沒有屬性或事件。</span><span class="sxs-lookup"><span data-stu-id="fdc9f-113">This method enumerates fields and methods, but not properties or events.</span></span> <span data-ttu-id="fdc9f-114">不同於[imetadataimport:: Enummembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md)，`EnumMembersWithName`捨棄並沒有指定的名稱的所有欄位和成員 token。</span><span class="sxs-lookup"><span data-stu-id="fdc9f-114">Unlike [IMetaDataImport::EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` discards all field and member tokens that do not have the specified name.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7d1e5-115">傳回值</span><span class="sxs-lookup"><span data-stu-id="7d1e5-115">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="fdc9f-115">傳回值</span><span class="sxs-lookup"><span data-stu-id="fdc9f-115">Return Value</span></span>  
   
-|<span data-ttu-id="7d1e5-116">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7d1e5-116">HRESULT</span></span>|<span data-ttu-id="7d1e5-117">描述</span><span class="sxs-lookup"><span data-stu-id="7d1e5-117">Description</span></span>|  
+|<span data-ttu-id="fdc9f-116">HRESULT</span><span class="sxs-lookup"><span data-stu-id="fdc9f-116">HRESULT</span></span>|<span data-ttu-id="fdc9f-117">描述</span><span class="sxs-lookup"><span data-stu-id="fdc9f-117">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="7d1e5-118">`EnumTypeDefs` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="7d1e5-118">`EnumTypeDefs` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="7d1e5-119">沒有列舉 MemberDef 語彙基元。</span><span class="sxs-lookup"><span data-stu-id="7d1e5-119">There are no MemberDef tokens to enumerate.</span></span> <span data-ttu-id="7d1e5-120">在此情況下，`pcTokens`為零。</span><span class="sxs-lookup"><span data-stu-id="7d1e5-120">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="fdc9f-118">`EnumTypeDefs` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="fdc9f-118">`EnumTypeDefs` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="fdc9f-119">沒有列舉 MemberDef 語彙基元。</span><span class="sxs-lookup"><span data-stu-id="fdc9f-119">There are no MemberDef tokens to enumerate.</span></span> <span data-ttu-id="fdc9f-120">在此情況下，`pcTokens`為零。</span><span class="sxs-lookup"><span data-stu-id="fdc9f-120">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="7d1e5-121">需求</span><span class="sxs-lookup"><span data-stu-id="7d1e5-121">Requirements</span></span>  
- <span data-ttu-id="7d1e5-122">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7d1e5-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fdc9f-121">需求</span><span class="sxs-lookup"><span data-stu-id="fdc9f-121">Requirements</span></span>  
+ <span data-ttu-id="fdc9f-122">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fdc9f-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7d1e5-123">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7d1e5-123">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="fdc9f-123">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="fdc9f-123">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7d1e5-124">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="7d1e5-124">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="fdc9f-124">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="fdc9f-124">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7d1e5-125">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7d1e5-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="fdc9f-125">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fdc9f-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7d1e5-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7d1e5-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fdc9f-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fdc9f-126">See also</span></span>
 
-- [<span data-ttu-id="7d1e5-127">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="7d1e5-127">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="7d1e5-128">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="7d1e5-128">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="fdc9f-127">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="fdc9f-127">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="fdc9f-128">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="fdc9f-128">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

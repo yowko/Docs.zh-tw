@@ -6,32 +6,32 @@ helpviewer_keywords:
 - printing [Windows Forms], documents
 ms.assetid: 5af6a51d-66f6-43cd-a8cd-d64eb18fe7e7
 ms.openlocfilehash: 4bb03ef95f10f5eb1795e50f5147d245623e18e8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012596"
 ---
-# <a name="printdocument-component-windows-forms"></a><span data-ttu-id="5dd7a-102">PrintDocument 元件 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="5dd7a-102">PrintDocument Component (Windows Forms)</span></span>
-<span data-ttu-id="5dd7a-103">Windows Form `PrintDocument` 元件可用來設定描述列印項目的屬性，並接著在 Windows 應用程式中列印文件。</span><span class="sxs-lookup"><span data-stu-id="5dd7a-103">The Windows Forms `PrintDocument` component is used to set the properties that describe what to print and then to print the document within Windows-based applications.</span></span> <span data-ttu-id="5dd7a-104">它可以與 <xref:System.Windows.Forms.PrintDialog> 元件一起使用，以控制文件列印的各個方面。</span><span class="sxs-lookup"><span data-stu-id="5dd7a-104">It can be used in conjunction with the <xref:System.Windows.Forms.PrintDialog> component to be in command of all aspects of document printing.</span></span>  
+# <a name="printdocument-component-windows-forms"></a><span data-ttu-id="afae0-102">PrintDocument 元件 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="afae0-102">PrintDocument Component (Windows Forms)</span></span>
+<span data-ttu-id="afae0-103">Windows Form `PrintDocument` 元件可用來設定描述列印項目的屬性，並接著在 Windows 應用程式中列印文件。</span><span class="sxs-lookup"><span data-stu-id="afae0-103">The Windows Forms `PrintDocument` component is used to set the properties that describe what to print and then to print the document within Windows-based applications.</span></span> <span data-ttu-id="afae0-104">它可以與 <xref:System.Windows.Forms.PrintDialog> 元件一起使用，以控制文件列印的各個方面。</span><span class="sxs-lookup"><span data-stu-id="afae0-104">It can be used in conjunction with the <xref:System.Windows.Forms.PrintDialog> component to be in command of all aspects of document printing.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5dd7a-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="5dd7a-105">In This Section</span></span>  
- [<span data-ttu-id="5dd7a-106">PrintDocument 元件概觀</span><span class="sxs-lookup"><span data-stu-id="5dd7a-106">PrintDocument Component Overview</span></span>](printdocument-component-overview-windows-forms.md)  
- <span data-ttu-id="5dd7a-107">介紹 `PrintDocument` 元件的一般概念，這個元件可讓您設定描述列印項目的屬性，並在 Windows 應用程式中啟動列印。</span><span class="sxs-lookup"><span data-stu-id="5dd7a-107">Introduces the general concepts of the `PrintDocument` component, which allows you to set properties describing what to print and launches printing in a Windows-based application.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="afae0-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="afae0-105">In This Section</span></span>  
+ [<span data-ttu-id="afae0-106">PrintDocument 元件概觀</span><span class="sxs-lookup"><span data-stu-id="afae0-106">PrintDocument Component Overview</span></span>](printdocument-component-overview-windows-forms.md)  
+ <span data-ttu-id="afae0-107">介紹 `PrintDocument` 元件的一般概念，這個元件可讓您設定描述列印項目的屬性，並在 Windows 應用程式中啟動列印。</span><span class="sxs-lookup"><span data-stu-id="afae0-107">Introduces the general concepts of the `PrintDocument` component, which allows you to set properties describing what to print and launches printing in a Windows-based application.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="5dd7a-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="5dd7a-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="afae0-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="afae0-108">Reference</span></span>  
  <xref:System.Drawing.Printing.PrintDocument>  
- <span data-ttu-id="5dd7a-109">提供這個類別及其成員的相關參考資訊。</span><span class="sxs-lookup"><span data-stu-id="5dd7a-109">Provides reference information on the class and its members.</span></span>  
+ <span data-ttu-id="afae0-109">提供這個類別及其成員的相關參考資訊。</span><span class="sxs-lookup"><span data-stu-id="afae0-109">Provides reference information on the class and its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="5dd7a-110">相關章節</span><span class="sxs-lookup"><span data-stu-id="5dd7a-110">Related Sections</span></span>  
- [<span data-ttu-id="5dd7a-111">Windows Forms 列印支援</span><span class="sxs-lookup"><span data-stu-id="5dd7a-111">Windows Forms Print Support</span></span>](../advanced/windows-forms-print-support.md)  
- <span data-ttu-id="5dd7a-112">提供與 Windows Form 相關的列印主題清單。</span><span class="sxs-lookup"><span data-stu-id="5dd7a-112">Presents a list of printing topics related to Windows Forms.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="afae0-110">相關章節</span><span class="sxs-lookup"><span data-stu-id="afae0-110">Related Sections</span></span>  
+ [<span data-ttu-id="afae0-111">Windows Forms 列印支援</span><span class="sxs-lookup"><span data-stu-id="afae0-111">Windows Forms Print Support</span></span>](../advanced/windows-forms-print-support.md)  
+ <span data-ttu-id="afae0-112">提供與 Windows Form 相關的列印主題清單。</span><span class="sxs-lookup"><span data-stu-id="afae0-112">Presents a list of printing topics related to Windows Forms.</span></span>  
   
- [<span data-ttu-id="5dd7a-113">PrintDialog 元件</span><span class="sxs-lookup"><span data-stu-id="5dd7a-113">PrintDialog Component</span></span>](printdialog-component-windows-forms.md)  
- <span data-ttu-id="5dd7a-114">介紹 <xref:System.Windows.Forms.PrintDialog> 元件的一般概念，可讓您顯示預先設定的對話方塊，讓使用者用來選取印表機、選擇要列印的頁面，以及決定列印相關設定。</span><span class="sxs-lookup"><span data-stu-id="5dd7a-114">Introduces the general concepts of the <xref:System.Windows.Forms.PrintDialog> component, which allows you to display a pre-configured dialog box that users can use to select a printer, choose pages to print, and determine print-related settings.</span></span>  
+ [<span data-ttu-id="afae0-113">PrintDialog 元件</span><span class="sxs-lookup"><span data-stu-id="afae0-113">PrintDialog Component</span></span>](printdialog-component-windows-forms.md)  
+ <span data-ttu-id="afae0-114">介紹 <xref:System.Windows.Forms.PrintDialog> 元件的一般概念，可讓您顯示預先設定的對話方塊，讓使用者用來選取印表機、選擇要列印的頁面，以及決定列印相關設定。</span><span class="sxs-lookup"><span data-stu-id="afae0-114">Introduces the general concepts of the <xref:System.Windows.Forms.PrintDialog> component, which allows you to display a pre-configured dialog box that users can use to select a printer, choose pages to print, and determine print-related settings.</span></span>  
   
- [<span data-ttu-id="5dd7a-115">PrintPreviewControl 控制項</span><span class="sxs-lookup"><span data-stu-id="5dd7a-115">PrintPreviewControl Control</span></span>](printpreviewcontrol-control-windows-forms.md)  
- <span data-ttu-id="5dd7a-116">介紹 <xref:System.Windows.Forms.PrintPreviewControl> 的一般概念，您可以使用這個控制項來設計自己的預覽列印對話方塊或元件。</span><span class="sxs-lookup"><span data-stu-id="5dd7a-116">Introduces the general concepts of the <xref:System.Windows.Forms.PrintPreviewControl>, which you can use to design your own print preview dialog box or component.</span></span>  
+ [<span data-ttu-id="afae0-115">PrintPreviewControl 控制項</span><span class="sxs-lookup"><span data-stu-id="afae0-115">PrintPreviewControl Control</span></span>](printpreviewcontrol-control-windows-forms.md)  
+ <span data-ttu-id="afae0-116">介紹 <xref:System.Windows.Forms.PrintPreviewControl> 的一般概念，您可以使用這個控制項來設計自己的預覽列印對話方塊或元件。</span><span class="sxs-lookup"><span data-stu-id="afae0-116">Introduces the general concepts of the <xref:System.Windows.Forms.PrintPreviewControl>, which you can use to design your own print preview dialog box or component.</span></span>  
   
- [<span data-ttu-id="5dd7a-117">PrintPreviewDialog 控制項</span><span class="sxs-lookup"><span data-stu-id="5dd7a-117">PrintPreviewDialog Control</span></span>](printpreviewdialog-control-windows-forms.md)  
- <span data-ttu-id="5dd7a-118">介紹 <xref:System.Windows.Forms.PrintPreviewDialog> 控制項的一般概念，這個控制項可讓您顯示一個預先設定的對話方塊，使用者可以在這個對話方塊中查看文件列印後的結果。</span><span class="sxs-lookup"><span data-stu-id="5dd7a-118">Introduces the general concepts of the <xref:System.Windows.Forms.PrintPreviewDialog> control, which allows you to display a pre-configured dialog box that users can use to see a version of their document as it will look when it prints.</span></span>
+ [<span data-ttu-id="afae0-117">PrintPreviewDialog 控制項</span><span class="sxs-lookup"><span data-stu-id="afae0-117">PrintPreviewDialog Control</span></span>](printpreviewdialog-control-windows-forms.md)  
+ <span data-ttu-id="afae0-118">介紹 <xref:System.Windows.Forms.PrintPreviewDialog> 控制項的一般概念，這個控制項可讓您顯示一個預先設定的對話方塊，使用者可以在這個對話方塊中查看文件列印後的結果。</span><span class="sxs-lookup"><span data-stu-id="afae0-118">Introduces the general concepts of the <xref:System.Windows.Forms.PrintPreviewDialog> control, which allows you to display a pre-configured dialog box that users can use to see a version of their document as it will look when it prints.</span></span>

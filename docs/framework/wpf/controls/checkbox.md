@@ -8,24 +8,24 @@ helpviewer_keywords:
 - CheckBox control [WPF]
 ms.assetid: ee701cc2-968b-4683-8f81-3fafd8542700
 ms.openlocfilehash: 42d4d0e232d66c076a2f3ecfb2ae95a41b0557a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052218"
 ---
-# <a name="checkbox"></a><span data-ttu-id="a4bc4-102">核取方塊</span><span class="sxs-lookup"><span data-stu-id="a4bc4-102">CheckBox</span></span>
-<span data-ttu-id="a4bc4-103">您可以使用<xref:System.Windows.Controls.CheckBox>在[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]應用程式，以代表使用者可以選取或清除的選項。</span><span class="sxs-lookup"><span data-stu-id="a4bc4-103">You can use a <xref:System.Windows.Controls.CheckBox> in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] of your application to represent options that a user can select or clear.</span></span> <span data-ttu-id="a4bc4-104">您可以使用單一的核取方塊，或者您可以將群組兩個或多個核取方塊。</span><span class="sxs-lookup"><span data-stu-id="a4bc4-104">You can use a single check box or you can group two or more check boxes.</span></span>  
+# <a name="checkbox"></a><span data-ttu-id="aaaf0-102">核取方塊</span><span class="sxs-lookup"><span data-stu-id="aaaf0-102">CheckBox</span></span>
+<span data-ttu-id="aaaf0-103">您可以使用<xref:System.Windows.Controls.CheckBox>在[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]應用程式，以代表使用者可以選取或清除的選項。</span><span class="sxs-lookup"><span data-stu-id="aaaf0-103">You can use a <xref:System.Windows.Controls.CheckBox> in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] of your application to represent options that a user can select or clear.</span></span> <span data-ttu-id="aaaf0-104">您可以使用單一的核取方塊，或者您可以將群組兩個或多個核取方塊。</span><span class="sxs-lookup"><span data-stu-id="aaaf0-104">You can use a single check box or you can group two or more check boxes.</span></span>  
   
- <span data-ttu-id="a4bc4-105">下圖顯示的不同狀態<xref:System.Windows.Controls.CheckBox>。</span><span class="sxs-lookup"><span data-stu-id="a4bc4-105">The following graphic shows the different states of a <xref:System.Windows.Controls.CheckBox>.</span></span>  
+ <span data-ttu-id="aaaf0-105">下圖顯示的不同狀態<xref:System.Windows.Controls.CheckBox>。</span><span class="sxs-lookup"><span data-stu-id="aaaf0-105">The following graphic shows the different states of a <xref:System.Windows.Controls.CheckBox>.</span></span>  
   
- <span data-ttu-id="a4bc4-106">![核取方塊狀態](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span><span class="sxs-lookup"><span data-stu-id="a4bc4-106">![CheckBox states](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span></span>  
-<span data-ttu-id="a4bc4-107">在不同狀態的核取方塊控制項</span><span class="sxs-lookup"><span data-stu-id="a4bc4-107">CheckBox controls in different states</span></span>  
+ <span data-ttu-id="aaaf0-106">![核取方塊狀態](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span><span class="sxs-lookup"><span data-stu-id="aaaf0-106">![CheckBox states](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span></span>  
+<span data-ttu-id="aaaf0-107">在不同狀態的核取方塊控制項</span><span class="sxs-lookup"><span data-stu-id="aaaf0-107">CheckBox controls in different states</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="a4bc4-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="a4bc4-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="aaaf0-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="aaaf0-108">Reference</span></span>  
  <xref:System.Windows.Controls.CheckBox>  
   <xref:System.Windows.Controls.RadioButton>  
   <xref:System.Windows.Controls.Primitives.ButtonBase>  
   <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="a4bc4-109">相關章節</span><span class="sxs-lookup"><span data-stu-id="a4bc4-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="aaaf0-109">相關章節</span><span class="sxs-lookup"><span data-stu-id="aaaf0-109">Related Sections</span></span>

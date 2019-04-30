@@ -10,17 +10,17 @@ helpviewer_keywords:
 - content [WPF], Frame control
 ms.assetid: 1588f9bf-9001-4437-a8fc-cc57ef50561c
 ms.openlocfilehash: f530fa04e25bfa18095fc3b2a182d3d624789f54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054896"
 ---
-# <a name="frame"></a><span data-ttu-id="7e830-102">Frame</span><span class="sxs-lookup"><span data-stu-id="7e830-102">Frame</span></span>
-<span data-ttu-id="7e830-103"><xref:System.Windows.Controls.Frame>控制項支援內容導覽內容中的。</span><span class="sxs-lookup"><span data-stu-id="7e830-103">The <xref:System.Windows.Controls.Frame> control supports content navigation within content.</span></span> <span data-ttu-id="7e830-104"><xref:System.Windows.Controls.Frame> 可由根項目，例如<xref:System.Windows.Window>， <xref:System.Windows.Navigation.NavigationWindow>， <xref:System.Windows.Controls.Page>， <xref:System.Windows.Controls.UserControl>， <xref:System.Windows.Documents.FlowDocument>，或在內容樹狀結構中根項目屬於一座島。</span><span class="sxs-lookup"><span data-stu-id="7e830-104"><xref:System.Windows.Controls.Frame> can be hosted by a root element like <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, or as an island within a content tree that belongs to a root element.</span></span>  
+# <a name="frame"></a><span data-ttu-id="91ccb-102">Frame</span><span class="sxs-lookup"><span data-stu-id="91ccb-102">Frame</span></span>
+<span data-ttu-id="91ccb-103"><xref:System.Windows.Controls.Frame>控制項支援內容導覽內容中的。</span><span class="sxs-lookup"><span data-stu-id="91ccb-103">The <xref:System.Windows.Controls.Frame> control supports content navigation within content.</span></span> <span data-ttu-id="91ccb-104"><xref:System.Windows.Controls.Frame> 可由根項目，例如<xref:System.Windows.Window>， <xref:System.Windows.Navigation.NavigationWindow>， <xref:System.Windows.Controls.Page>， <xref:System.Windows.Controls.UserControl>， <xref:System.Windows.Documents.FlowDocument>，或在內容樹狀結構中根項目屬於一座島。</span><span class="sxs-lookup"><span data-stu-id="91ccb-104"><xref:System.Windows.Controls.Frame> can be hosted by a root element like <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, or as an island within a content tree that belongs to a root element.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="7e830-105">參考資料</span><span class="sxs-lookup"><span data-stu-id="7e830-105">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="91ccb-105">參考資料</span><span class="sxs-lookup"><span data-stu-id="91ccb-105">Reference</span></span>  
  <xref:System.Windows.Controls.Frame>  
   
-## <a name="related-sections"></a><span data-ttu-id="7e830-106">相關章節</span><span class="sxs-lookup"><span data-stu-id="7e830-106">Related Sections</span></span>  
- [<span data-ttu-id="7e830-107">瀏覽概觀</span><span class="sxs-lookup"><span data-stu-id="7e830-107">Navigation Overview</span></span>](../app-development/navigation-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="91ccb-106">相關章節</span><span class="sxs-lookup"><span data-stu-id="91ccb-106">Related Sections</span></span>  
+ [<span data-ttu-id="91ccb-107">瀏覽概觀</span><span class="sxs-lookup"><span data-stu-id="91ccb-107">Navigation Overview</span></span>](../app-development/navigation-overview.md)
