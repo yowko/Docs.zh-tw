@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
 ms.openlocfilehash: 0b4e7c9e253f94e1e28700c8669d28799ab69d91
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053713"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Array Dimensions in Visual Basic
 A*維度*是在其中您可以變更陣列的項目規格的方向。 保留每一天的月份的銷售總額的陣列有一個維度 （月份天數）。 保留每一天的月份部門銷售總額的陣列具有兩個維度 （的部門編號及月份天數）。 陣列的維度數目會呼叫其*陣序規範*。  

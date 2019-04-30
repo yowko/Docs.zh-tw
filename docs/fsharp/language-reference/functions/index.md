@@ -3,11 +3,11 @@ title: 函式
 description: 深入了解中的函式F#以及F#支援常見的函式程式設計建構。
 ms.date: 05/16/2016
 ms.openlocfilehash: 6e9ef916388745d2dd6874295d06dca656971b3f
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996784"
 ---
 # <a name="functions"></a>函式
 

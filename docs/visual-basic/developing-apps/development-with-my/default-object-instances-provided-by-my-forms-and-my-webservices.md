@@ -8,11 +8,11 @@ helpviewer_keywords:
 - rapid application development (RAD), My.WebServices
 ms.assetid: de930027-9108-4f0c-b97c-5e7db4d6ef79
 ms.openlocfilehash: ca31e1c40c77bf7f42d246019d81f4ffaed646e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014449"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>My.Forms 和 My.WebServices 提供的預設物件執行個體 (Visual Basic)
 [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)並[My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)物件提供存取表單、 資料來源和您的應用程式所使用的 XML Web 服務。 其做法是提供的集合*預設執行個體會*的每個物件。  

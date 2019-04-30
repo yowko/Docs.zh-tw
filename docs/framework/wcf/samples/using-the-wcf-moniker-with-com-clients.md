@@ -3,11 +3,11 @@ title: 利用 COM 用戶端使用 WCF Moniker
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
 ms.openlocfilehash: 14907dd3df66478e8f84b7735a84dd500855448b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051607"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>利用 COM 用戶端使用 WCF Moniker
 此範例示範如何使用 Windows Communication Foundation (WCF) 服務 moniker 將 Web 服務整合至 COM 架構開發環境，例如 Microsoft Office Visual Basic for Applications (Office VBA) 或 Visual Basic 6.0。 這個範例由 Windows Script Host 用戶端 (.vbs)、支援的用戶端程式庫 (.dll) 和網際網路資訊服務 (IIS) 裝載的服務程式庫 (.dll) 所組成。 服務為計算機服務，而 COM 用戶端會呼叫服務上的數學作業：加法、減法、乘法和除法。 您可以在訊息方塊視窗中看到用戶端活動。  
@@ -43,11 +43,11 @@ public interface ICalculator
   
  此範例會示範使用 Moniker 的三個替代方法：  
   
--   型別合約：合約會在用戶端電腦上註冊為 COM 可見型別。  
+- 型別合約：合約會在用戶端電腦上註冊為 COM 可見型別。  
   
--   WSDL 合約：合約會以 WSDL 文件的形式提供。  
+- WSDL 合約：合約會以 WSDL 文件的形式提供。  
   
--   中繼資料交換合約：會在執行階段從中繼資料交換 (MEX) 端點擷取合約。  
+- 中繼資料交換合約：會在執行階段從中繼資料交換 (MEX) 端點擷取合約。  
   
 ## <a name="typed-contract"></a>型別合約  
  若要搭配使用 Moniker 和型別合約，必須使用 COM 適當地註冊服務合約的屬性化型別。 首先，必須使用所產生的用戶端[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 請從用戶端目錄中的命令提示字元執行下列命令，以產生具有型別的 Proxy。  
@@ -87,11 +87,11 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
   
  Moniker 所使用的參數會指定：  
   
--   服務端點的位址。  
+- 服務端點的位址。  
   
--   用戶端應該用來連接該端點的繫結。 在此情況下，雖然可以在用戶端組態檔中定義自訂繫結，仍會使用系統定義的 wsHttpBinding。 若要與 Windows Script Host 搭配使用，可在與 Cscript.exe 相同目錄的 Cscript.exe.config 檔中定義自訂繫結。  
+- 用戶端應該用來連接該端點的繫結。 在此情況下，雖然可以在用戶端組態檔中定義自訂繫結，仍會使用系統定義的 wsHttpBinding。 若要與 Windows Script Host 搭配使用，可在與 Cscript.exe 相同目錄的 Cscript.exe.config 檔中定義自訂繫結。  
   
--   端點所支援的合約型別。 這是上面所產生及註冊的型別。 由於 Visual Basic 指令碼不支援強型別 COM 環境，因此，必須為合約指定識別碼。 此 GUID 是取自 CalcProxy.tlb 的 `interfaceID`，您可以使用 OLE/COM 物件檢視器 (OleView.exe) 這類 COM 工作來檢視 CalcProxy.tlb。 針對 Office VBA 或 Visual Basic 6.0 這類強型別，將明確參考新增至型別程式庫，然後宣告 Proxy 物件的型別，這個動作可用來代替合約參數。 此動作在應用程式開發期間也會提供 IntelliSense 支援。  
+- 端點所支援的合約型別。 這是上面所產生及註冊的型別。 由於 Visual Basic 指令碼不支援強型別 COM 環境，因此，必須為合約指定識別碼。 此 GUID 是取自 CalcProxy.tlb 的 `interfaceID`，您可以使用 OLE/COM 物件檢視器 (OleView.exe) 這類 COM 工作來檢視 CalcProxy.tlb。 針對 Office VBA 或 Visual Basic 6.0 這類強型別，將明確參考新增至型別程式庫，然後宣告 Proxy 物件的型別，這個動作可用來代替合約參數。 此動作在應用程式開發期間也會提供 IntelliSense 支援。  
   
  使用服務 Moniker 建構 Proxy 執行個體完畢之後，用戶端應用程式就可以針對 Proxy 呼叫方法，使服務 Moniker 基礎結構呼叫對應的服務作業。  
   
@@ -127,13 +127,13 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
   
  Moniker 所使用的參數會指定：  
   
--   服務端點的位址。  
+- 服務端點的位址。  
   
--   用戶端應該用來連接該端點的繫結，以及在其中定義該繫結的命名空間。 在此情況中，會使用 `wsHttpBinding_ICalculator`。  
+- 用戶端應該用來連接該端點的繫結，以及在其中定義該繫結的命名空間。 在此情況中，會使用 `wsHttpBinding_ICalculator`。  
   
--   定義合約的 WSDL。 在此情況中，這是已從 serviceWsdl.xml 檔讀取的字串。  
+- 定義合約的 WSDL。 在此情況中，這是已從 serviceWsdl.xml 檔讀取的字串。  
   
--   合約的名稱與命名空間。 這是必要的識別，因為 WSDL 可能包含多個合約。  
+- 合約的名稱與命名空間。 這是必要的識別，因為 WSDL 可能包含多個合約。  
   
     > [!NOTE]
     >  根據預設，WCF 服務會產生不同的 WSDL 檔案，每個命名空間的使用。 而這些檔案則與使用 WSDL 匯入建構相連結。 由於 Moniker 預期使用單一 WSDL 定義，服務必須如同本範例所示範使用單一命名空間，或必須以手動方式合併不同的檔案。  
@@ -165,13 +165,13 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
   
  Moniker 所使用的參數會指定：  
   
--   服務中繼資料交換端點的位址。  
+- 服務中繼資料交換端點的位址。  
   
--   服務端點的位址。  
+- 服務端點的位址。  
   
--   用戶端應該用來連接該端點的繫結，以及在其中定義該繫結的命名空間。 在此情況中，會使用 `wsHttpBinding_ICalculator`。  
+- 用戶端應該用來連接該端點的繫結，以及在其中定義該繫結的命名空間。 在此情況中，會使用 `wsHttpBinding_ICalculator`。  
   
--   合約的名稱與命名空間。 這是必要的識別，因為 WSDL 可能包含多個合約。  
+- 合約的名稱與命名空間。 這是必要的識別，因為 WSDL 可能包含多個合約。  
   
  使用服務 Moniker 建構 Proxy 執行個體完畢之後，用戶端應用程式就可以針對 Proxy 呼叫方法，使服務 Moniker 基礎結構呼叫對應的服務作業。  
   
@@ -235,4 +235,4 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
--   基於安全性目的，請在完成範例之後，移除虛擬目錄定義以及安裝步驟中所授與的權限。  
+- 基於安全性目的，請在完成範例之後，移除虛擬目錄定義以及安裝步驟中所授與的權限。  

@@ -3,30 +3,30 @@ title: C# 運算式
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
 ms.openlocfilehash: 2ffc380d9c65ec398084bfcbeadfe0fd2c3d6720
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009808"
 ---
 # <a name="c-expressions"></a>C# 運算式
 從開始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，在 Windows Workflow Foundation (WF) 支援 C# 運算式。 Visual Studio 2012 中建立新的 C# 工作流程專案目標[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]使用 C# 運算式和 Visual Basic 工作流程專案中使用 Visual Basic 運算式。 不論是否支援專案語言，使用 Visual Basic 運算式的現有 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 工作流程專案均可移轉至 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]。 本主題提供 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的 C# 運算式概觀。
 
 ## <a name="using-c-expressions-in-workflows"></a>在工作流程中使用 C# 運算式
 
--   [在工作流程設計工具中使用 C# 運算式](csharp-expressions.md#WFDesigner)
+- [在工作流程設計工具中使用 C# 運算式](csharp-expressions.md#WFDesigner)
 
-    -   [回溯相容性](csharp-expressions.md#BackwardCompat)
+    - [回溯相容性](csharp-expressions.md#BackwardCompat)
 
--   [在程式碼工作流程中使用 C# 運算式](csharp-expressions.md#CodeWorkflows)
+- [在程式碼工作流程中使用 C# 運算式](csharp-expressions.md#CodeWorkflows)
 
--   [XAML 工作流程中使用 C# 運算式](csharp-expressions.md#XamlWorkflows)
+- [XAML 工作流程中使用 C# 運算式](csharp-expressions.md#XamlWorkflows)
 
-    -   [已編譯的 Xaml](csharp-expressions.md#CompiledXaml)
+    - [已編譯的 Xaml](csharp-expressions.md#CompiledXaml)
 
-    -   [鬆散的 Xaml](csharp-expressions.md#LooseXaml)
+    - [鬆散的 Xaml](csharp-expressions.md#LooseXaml)
 
--   [在 XAMLX 工作流程服務中使用 C# 運算式](csharp-expressions.md#WFServices)
+- [在 XAMLX 工作流程服務中使用 C# 運算式](csharp-expressions.md#WFServices)
 
 ### <a name="WFDesigner"></a> 在工作流程設計工具中使用 C# 運算式
  從開始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，在 Windows Workflow Foundation (WF) 支援 C# 運算式。 Visual Studio 2012 中建立 C# 工作流程專案目標[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]使用 C# 運算式，而 Visual Basic 工作流程專案則使用 Visual Basic 運算式。 若要指定所需的 C# 運算式，方塊中輸入標示**輸入 C# 運算式**。 在設計工具中選取活動時，會在屬性視窗中顯示此標籤，而此標籤也會顯示在工作流程設計工具中的活動之上。 在下列範例中，`WriteLine` 內的 `Sequence` 包含兩個 `NoPersistScope` 活動。
@@ -176,22 +176,22 @@ static void CompileExpressions(DynamicActivity dynamicActivity)
 
  在動態活動中編譯 C# 運算式的 `CompileExpressions` 多載有一些差異。
 
--   傳給 `CompileExpressions` 的參數為 `DynamicActivity`。
+- 傳給 `CompileExpressions` 的參數為 `DynamicActivity`。
 
--   擷取型別名稱和命名空間需使用 `DynamicActivity.Name` 屬性。
+- 擷取型別名稱和命名空間需使用 `DynamicActivity.Name` 屬性。
 
--   `TextExpressionCompilerSettings.ForImplementation` 設定為 `true`。
+- `TextExpressionCompilerSettings.ForImplementation` 設定為 `true`。
 
--   呼叫 `CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation`，而不是 `CompiledExpressionInvoker.SetCompiledExpressionRoot`。
+- 呼叫 `CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation`，而不是 `CompiledExpressionInvoker.SetCompiledExpressionRoot`。
 
  如需有關使用程式碼中的運算式的詳細資訊，請參閱[撰寫工作流程、 活動和運算式使用命令式程式碼](authoring-workflows-activities-and-expressions-using-imperative-code.md)。
 
 ### <a name="XamlWorkflows"></a> XAML 工作流程中使用 C# 運算式
  XAML 工作流程支援 C# 運算式。 編譯的 XAML 工作流程會編譯為型別，而鬆散的 XAML 工作流程會在工作流程執行時，由執行階段載入並編譯為活動樹狀。
 
--   [已編譯的 Xaml](csharp-expressions.md#CompiledXaml)
+- [已編譯的 Xaml](csharp-expressions.md#CompiledXaml)
 
--   [鬆散的 Xaml](csharp-expressions.md#LooseXaml)
+- [鬆散的 Xaml](csharp-expressions.md#LooseXaml)
 
 #### <a name="CompiledXaml"></a> 已編譯的 Xaml
  編譯為型別的 XAML 工作流程支援 C# 運算式，當做部分以 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 為目標的 C# 工作流程專案。 已編譯的 XAML 是在 Visual Studio 中撰寫工作流程的預設型別和 C# 工作流程專案中建立 Visual Studio 目標[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]使用 C# 運算式。

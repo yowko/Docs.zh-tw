@@ -7,11 +7,11 @@ helpviewer_keywords:
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
 ms.openlocfilehash: 5b26a091dc8eb7415702c3c2853a569324def7d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013500"
 ---
 # <a name="sub-expression-visual-basic"></a>Sub 運算式 (Visual Basic)
 宣告的參數和副程式 lambda 運算式定義的程式碼。  
@@ -40,17 +40,17 @@ End Sub
 ## <a name="lambda-expression-syntax"></a>Lambda 運算式語法  
  Lambda 運算式的語法類似於標準的副程式。 差異如下所示：  
   
--   Lambda 運算式沒有名稱。  
+- Lambda 運算式沒有名稱。  
   
--   Lambda 運算式不能有修飾詞，例如`Overloads`或`Overrides`。  
+- Lambda 運算式不能有修飾詞，例如`Overloads`或`Overrides`。  
   
--   單行 lambda 運算式的主體必須是陳述式，而不是運算式。 主體可以包含子程序的呼叫，但不是呼叫的函式程序。  
+- 單行 lambda 運算式的主體必須是陳述式，而不是運算式。 主體可以包含子程序的呼叫，但不是呼叫的函式程序。  
   
--   在 lambda 運算式中，可能是所有的參數必須指定必須推斷資料類型或所有參數。  
+- 在 lambda 運算式中，可能是所有的參數必須指定必須推斷資料類型或所有參數。  
   
--   選擇性和`ParamArray`lambda 運算式中不允許使用參數。  
+- 選擇性和`ParamArray`lambda 運算式中不允許使用參數。  
   
--   Lambda 運算式中不允許泛型參數。  
+- Lambda 運算式中不允許泛型參數。  
   
 ## <a name="example"></a>範例  
  以下是將值寫入主控台的 lambda 運算式的範例。 此範例顯示一個副程式的這兩個單行和多行 lambda 運算式的語法。 如需其他範例，請參閱 < [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  

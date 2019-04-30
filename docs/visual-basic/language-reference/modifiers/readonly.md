@@ -11,11 +11,11 @@ helpviewer_keywords:
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
 ms.openlocfilehash: 6e361cbe89f4c51f28199b008de817c2d48ef326
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051854"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
 指定的變數或屬性可讀取但不是會寫入。  
@@ -24,11 +24,11 @@ ms.locfileid: "58825387"
   
 ## <a name="rules"></a>規則  
   
--   **宣告內容。** 您只能在模組層級使用 `ReadOnly`。 這表示的宣告內容`ReadOnly`項目必須是類別、 結構或模組，並不能是原始程式檔、 命名空間或程序。  
+- **宣告內容。** 您只能在模組層級使用 `ReadOnly`。 這表示的宣告內容`ReadOnly`項目必須是類別、 結構或模組，並不能是原始程式檔、 命名空間或程序。  
   
--   **結合的修飾詞。** 您無法指定`ReadOnly`搭配`Static`相同宣告中。  
+- **結合的修飾詞。** 您無法指定`ReadOnly`搭配`Static`相同宣告中。  
   
--   **指派的值。** 程式碼使用`ReadOnly`屬性無法設定其值。 但是，具有存取權的基礎儲存體的程式碼可以指派，或隨時變更此值。  
+- **指派的值。** 程式碼使用`ReadOnly`屬性無法設定其值。 但是，具有存取權的基礎儲存體的程式碼可以指派，或隨時變更此值。  
   
      您可以指派值給`ReadOnly`變數只在其宣告或類別或結構中定義的建構函式中。  
   

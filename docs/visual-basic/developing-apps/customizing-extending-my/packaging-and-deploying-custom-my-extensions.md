@@ -7,15 +7,15 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
 ms.openlocfilehash: 4212f58c39f63be6ba20c3b79e5d9c98d0615c5e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014202"
 ---
 # <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>封裝及部署自訂的 My 延伸模組 (Visual Basic)
 
-Visual Basic 提供簡單的方法，以部署您的自訂`My`使用 Visual Studio 範本的命名空間延伸模組。 如果您要建立的專案範本，讓您`My`擴充功能是新的專案類型中不可或缺的一部分，您可以只包含您的自訂`My`延伸模組程式碼使用專案中，當您匯出的範本。 如需有關匯出專案範本的詳細資訊，請參閱[如何： 建立專案範本](/visualstudio/ide/how-to-create-project-templates)。
+Visual Basic 提供簡單的方法，以部署您的自訂`My`使用 Visual Studio 範本的命名空間延伸模組。 如果您要建立的專案範本，讓您`My`擴充功能是新的專案類型中不可或缺的一部分，您可以只包含您的自訂`My`延伸模組程式碼使用專案中，當您匯出的範本。 如需有關匯出專案範本的詳細資訊，請參閱[How to:建立專案範本](/visualstudio/ide/how-to-create-project-templates)。
 
 如果您的自訂`My`延伸模組是在單一程式碼檔案中，您可以將檔案匯出為使用者可以將任何類型的 Visual Basic 專案中加入的項目範本。 您可以自訂的項目範本，以啟用其他功能與您的自訂行為`My`Visual Basic 專案中的延伸模組。 這些功能包括下列各項：
 
@@ -33,7 +33,7 @@ Visual Basic 提供簡單的方法，以部署您的自訂`My`使用 Visual Stud
 
 ## <a name="export-a-my-namespace-extension-as-an-item-template"></a>匯出我的命名空間延伸模組，做為項目範本
 
-包含的程式碼檔案之後您`My`命名空間延伸模組，您可以將程式碼檔案匯出為 Visual Studio 項目範本。 如需有關如何將檔案匯出為 Visual Studio 項目範本的指示，請參閱 <<c0> [ 如何： 建立項目範本](/visualstudio/ide/how-to-create-item-templates)。
+包含的程式碼檔案之後您`My`命名空間延伸模組，您可以將程式碼檔案匯出為 Visual Studio 項目範本。 如需有關如何將檔案匯出為 Visual Studio 項目範本的指示，請參閱[How to:建立項目範本](/visualstudio/ide/how-to-create-item-templates)。
 
 > [!NOTE]
 > 如果您`My`命名空間延伸模組相依於特定的組件，您可以自訂您的項目範本，以自動安裝您`My`命名空間擴充功能時在加入該組件的參考。 如此一來，您會想要排除的組件參考，當您匯出的程式碼檔案做為 Visual Studio 項目範本。
@@ -60,8 +60,8 @@ CustomData 檔案包含 <`VBMyExtensionTemplate>`具有屬性下, 表所列的�
 
 |屬性|描述|
 |---|---|
-|`ID`|必要。 延伸模組的唯一識別碼。 如果有此識別碼的延伸模組已新增至專案，將它再度新增不會提示使用者。|
-|`Version`|必要。 項目範本的版本號碼。|
+|`ID`|必要項。 延伸模組的唯一識別碼。 如果有此識別碼的延伸模組已新增至專案，將它再度新增不會提示使用者。|
+|`Version`|必要項。 項目範本的版本號碼。|
 |`AssemblyFullName`|選擇性。 組件名稱。 當此組件的參考加入專案中時，會提示使用者加入`My`從這個項目範本的延伸模組。|
 
 ### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>新增\<CustomDataSignature > 的.vstemplate 檔的項目

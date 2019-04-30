@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
 ms.openlocfilehash: 08be345557d10a528aa03234883eba1b3a31beaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054935"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>XML 常值中的空白字元 (Visual Basic)
 Visual Basic 編譯器會在建立時，包含只有顯著泛空白字元字元從 XML 常值[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件。 不會納入不顯著泛空白字元。  
@@ -18,11 +18,11 @@ Visual Basic 編譯器會在建立時，包含只有顯著泛空白字元字元�
 ## <a name="significant-and-insignificant-white-space"></a>顯著與不顯著泛空白字元  
  XML 常值中的空白字元很重要的只有三個方面：  
   
--   當它們位於屬性值。  
+- 當它們位於屬性值。  
   
--   當它們是項目的文字內容的一部分，文字也包含其他字元。  
+- 當它們是項目的文字內容的一部分，文字也包含其他字元。  
   
--   當它們位於項目的文字內容的內嵌運算式。  
+- 當它們位於項目的文字內容的內嵌運算式。  
   
  否則，編譯器泛空白字元視為無意義，而且不包含然後中[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]的常值的物件。  
   

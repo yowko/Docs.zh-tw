@@ -6,20 +6,20 @@ dev_langs:
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
 ms.openlocfilehash: cb2a172ac4e6a0ce4852f4c7cf7044583d9ab6c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034421"
 ---
 # <a name="copying-dataset-contents"></a>複製資料集內容
 您可以建立一份<xref:System.Data.DataSet>，讓您可以使用資料，而不會影響原始的資料，或處理的資料子集**資料集**。 當複製**資料集**，您可以：  
   
--   建立正確的副本**資料集**，包括結構描述、 資料、 資料列狀態資訊，以及資料列版本。  
+- 建立正確的副本**資料集**，包括結構描述、 資料、 資料列狀態資訊，以及資料列版本。  
   
--   建立**資料集**，其中包含針對現有的結構描述**DataSet**，但只有修改過的資料列。 您可以傳回已修改的所有資料列，或指定特定**DataRowState**。 如需有關資料列狀態的詳細資訊，請參閱[資料列狀態和資料列版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
+- 建立**資料集**，其中包含針對現有的結構描述**DataSet**，但只有修改過的資料列。 您可以傳回已修改的所有資料列，或指定特定**DataRowState**。 如需有關資料列狀態的詳細資訊，請參閱[資料列狀態和資料列版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
   
--   複製結構描述或關聯式結構的**資料集**，而不複製任何資料列。 使用 <xref:System.Data.DataTable>，可以將資料列匯入現有的 <xref:System.Data.DataTable.ImportRow%2A>。  
+- 複製結構描述或關聯式結構的**資料集**，而不複製任何資料列。 使用 <xref:System.Data.DataTable>，可以將資料列匯入現有的 <xref:System.Data.DataTable.ImportRow%2A>。  
   
  若要建立的完全相同複本**資料集**包含結構描述和資料，請使用<xref:System.Data.DataSet.Copy%2A>方法**DataSet**。 下列程式碼範例示範如何建立正確的副本**資料集**。  
   

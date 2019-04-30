@@ -3,11 +3,11 @@ title: LINQ to XML 比較DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
 ms.openlocfilehash: 282df577808342a52a70f419b2a7559752103a0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051490"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML 比較DOM (Visual Basic)
 本節描述 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 和目前主流的 XML 程式設計 API (也就是 W3C 文件物件模型 (DOM)) 之間的一些主要差異。  
@@ -79,11 +79,11 @@ Dim contacts = _
 ## <a name="working-directly-with-xml-elements"></a>直接使用 XML 項目  
  當您使用 XML 進行程式設計時，您的主要焦點通常是 XML 項目，也可能是屬性。 在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中，您可以直接使用 XML 項目和屬性。 例如，您可以：  
   
--   完全不使用文件物件來建立 XML 項目。 當您必須使用 XML 樹狀結構的片段時，這可以簡化程式設計的方式。  
+- 完全不使用文件物件來建立 XML 項目。 當您必須使用 XML 樹狀結構的片段時，這可以簡化程式設計的方式。  
   
--   從 XML 檔案直接載入 `T:System.Xml.Linq.XElement` 物件。  
+- 從 XML 檔案直接載入 `T:System.Xml.Linq.XElement` 物件。  
   
--   將 `T:System.Xml.Linq.XElement` 物件序列化為檔案或資料流。  
+- 將 `T:System.Xml.Linq.XElement` 物件序列化為檔案或資料流。  
   
  將這個 XML 項目或屬性與 W3C DOM 相比較，後者中的 XML 文件會當做 XML 樹狀結構的邏輯容器使用。 在 DOM 中，XML 節點 (包括項目和屬性) 必須在 XML 文件的內容中建立。 此處為要在 DOM 中建立名稱項目之節點的片段：  
   

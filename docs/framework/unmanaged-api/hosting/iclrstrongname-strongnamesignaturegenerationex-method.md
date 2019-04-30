@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c5d2539bc732cdc41c7514fd5d81c449ed8f17a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992884"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx 方法
 指定的組件中，根據指定的旗標產生的強式名稱簽章。  
@@ -69,9 +69,9 @@ HRESULT StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in]一或多個下列值：  
   
--   `SN_SIGN_ALL_FILES` (0x00000001)-重新計算所有的雜湊，連結的模組。  
+- `SN_SIGN_ALL_FILES` (0x00000001)-重新計算所有的雜湊，連結的模組。  
   
--   `SN_TEST_SIGN` (0x00000002)-測試-簽署組件。  
+- `SN_TEST_SIGN` (0x00000002)-測試-簽署組件。  
   
 ## <a name="return-value"></a>傳回值  
  `S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。  

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
 ms.openlocfilehash: 2677c57c825675c884d057827e065f05d7c8bf30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039139"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>HOW TO：安裝和設定 WCF 啟用元件
 本主題說明設定 Windows Process Activation Service (亦稱為 WAS) 所需的步驟上[!INCLUDE[wv](../../../../includes/wv-md.md)]來裝載 Windows Communication Foundation (WCF) 服務不會透過 HTTP 通訊的網路通訊協定。 下列各節將概述此組態的各項步驟：  
   
--   安裝 （或確認安裝） WCF 啟用元件。  
+- 安裝 （或確認安裝） WCF 啟用元件。  
   
--   設定 WAS 支援非 HTTP 通訊協定。 下列程序將設定 [!INCLUDE[wv](../../../../includes/wv-md.md)] 以啟動 TCP。  
+- 設定 WAS 支援非 HTTP 通訊協定。 下列程序將設定 [!INCLUDE[wv](../../../../includes/wv-md.md)] 以啟動 TCP。  
   
  安裝與設定 WAS，請參閱之後[How to:將 WCF 服務裝載於 WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)以建立 WCF 服務來公開使用 WAS 的非 HTTP 端點的程序。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "59327980"
   
      為了方便起見，下列兩個步驟會以範例目錄中名為 RemoveNetTcpSiteBinding.cmd 的批次檔來加以實作。  
   
-    1.  透過系統管理員層級的 [命令提示字元] 視窗執行下列命令，以從啟用的通訊協定清單中移除 net.tcp。  
+    1. 透過系統管理員層級的 [命令提示字元] 視窗執行下列命令，以從啟用的通訊協定清單中移除 net.tcp。  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app   
@@ -67,7 +67,7 @@ ms.locfileid: "59327980"
         > [!NOTE]
         >  這個命令是單行文字。  
   
-    2.  從提高權限的 [命令提示字元] 視窗中執行下列命令以移除 net.tcp 網站繫結：  
+    2. 從提高權限的 [命令提示字元] 視窗中執行下列命令以移除 net.tcp 網站繫結：  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   

@@ -3,11 +3,11 @@ title: HOW TO：同時發出多個 Web 要求，使用 Async 和 Await (Visual B
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
 ms.openlocfilehash: c799fa83c0157019961da6adcf89b6ab6f906763
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021995"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>HOW TO：同時發出多個 Web 要求，使用 Async 和 Await (Visual Basic)
 在非同步方法中，工作會在建立後啟動。 [Await](../../../../visual-basic/language-reference/operators/await-operator.md)運算子會套用到在方法中無法繼續處理直到工作完成的工作。 通常，工作會在建立後等候完成，如下列範例所示。  
@@ -46,11 +46,11 @@ Dim result = Await myTask
   
 1. 若要設定 WPF 應用程式，請完成下列步驟。 您可以在[逐步解說：存取 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   
-    -   建立 WPF 應用程式，其中包含一個文字方塊和一個按鈕。 將按鈕命名為 `startButton`，並將文字方塊命名為 `resultsTextBox`。  
+    - 建立 WPF 應用程式，其中包含一個文字方塊和一個按鈕。 將按鈕命名為 `startButton`，並將文字方塊命名為 `resultsTextBox`。  
   
-    -   加入 <xref:System.Net.Http> 的參考。  
+    - 加入 <xref:System.Net.Http> 的參考。  
   
-    -   在 MainWindow.xaml.vb 檔案中，新增`Imports`陳述式`System.Net.Http`。  
+    - 在 MainWindow.xaml.vb 檔案中，新增`Imports`陳述式`System.Net.Http`。  
   
 ### <a name="to-add-the-code"></a>新增程式碼  
   
@@ -68,9 +68,9 @@ Dim result = Await myTask
   
 3. 將下列支援方法新增至專案：  
   
-    -   `ProcessURLAsync` 使用 <xref:System.Net.Http.HttpClient> 方法，將網站內容下載為位元組陣列。 然後，支援方法 `ProcessURLAsync` 會顯示並傳回陣列的長度。  
+    - `ProcessURLAsync` 使用 <xref:System.Net.Http.HttpClient> 方法，將網站內容下載為位元組陣列。 然後，支援方法 `ProcessURLAsync` 會顯示並傳回陣列的長度。  
   
-    -   `DisplayResults` 會顯示每個 URL 的位元組陣列中的位元組數目。 當每個工作完成下載時，即會顯示此畫面。  
+    - `DisplayResults` 會顯示每個 URL 的位元組陣列中的位元組數目。 當每個工作完成下載時，即會顯示此畫面。  
   
      將下列方法，複製並貼上它們之後`startButton_Click`MainWindow.xaml.vb 中的事件處理常式。  
   
@@ -96,13 +96,13 @@ Dim result = Await myTask
   
 4. 最後，定義 `CreateMultipleTasksAsync` 方法以執行下列步驟。  
   
-    -   方法宣告 `HttpClient` 物件，需要存取 `ProcessURLAsync` 中的方法<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>。  
+    - 方法宣告 `HttpClient` 物件，需要存取 `ProcessURLAsync` 中的方法<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>。  
   
-    -   方法會建立並啟動三個 <xref:System.Threading.Tasks.Task%601> 類型的工作，其中 `TResult` 是整數。 當每個工作完成時，`DisplayResults` 會顯示工作的 URL 和下載內容的長度。 因為工作是以非同步方式執行，所以結果出現的順序可能會因宣告的順序而有所不同。  
+    - 方法會建立並啟動三個 <xref:System.Threading.Tasks.Task%601> 類型的工作，其中 `TResult` 是整數。 當每個工作完成時，`DisplayResults` 會顯示工作的 URL 和下載內容的長度。 因為工作是以非同步方式執行，所以結果出現的順序可能會因宣告的順序而有所不同。  
   
-    -   此方法會等候每個工作完成。 每個 `Await` 運算子會暫停執行 `CreateMultipleTasksAsync`，直到等候的工作完成為止。 此運算子也會從每個完成的工作擷取透過呼叫 `ProcessURLAsync` 傳回的值。  
+    - 此方法會等候每個工作完成。 每個 `Await` 運算子會暫停執行 `CreateMultipleTasksAsync`，直到等候的工作完成為止。 此運算子也會從每個完成的工作擷取透過呼叫 `ProcessURLAsync` 傳回的值。  
   
-    -   完成工作並擷取整數值之後，此方法會加總網站的長度並顯示結果。  
+    - 完成工作並擷取整數值之後，此方法會加總網站的長度並顯示結果。  
   
      將下列方法複製並貼到您的方案中。  
   

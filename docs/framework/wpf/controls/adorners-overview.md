@@ -8,11 +8,11 @@ helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
 ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019073"
 ---
 # <a name="adorners-overview"></a>裝飾項概觀
 裝飾項是一種特殊型別的<xref:System.Windows.FrameworkElement>，用來提供視覺提示給使用者。 除了其他用法，裝飾項還可用來將功能控點加入項目，或提供控制項的狀態資訊。  
@@ -23,13 +23,13 @@ ms.locfileid: "59320466"
   
  裝飾項的常見應用包括︰  
   
--   新增功能的控制代碼<xref:System.Windows.UIElement>可讓使用者操作以某種方式 （調整大小、 旋轉、 重新置放等等） 的項目。  
+- 新增功能的控制代碼<xref:System.Windows.UIElement>可讓使用者操作以某種方式 （調整大小、 旋轉、 重新置放等等） 的項目。  
   
--   提供視覺化回應以表示各種狀態，或回應各種事件。  
+- 提供視覺化回應以表示各種狀態，或回應各種事件。  
   
--   在 視覺裝飾項重疊<xref:System.Windows.UIElement>。  
+- 在 視覺裝飾項重疊<xref:System.Windows.UIElement>。  
   
--   以視覺化方式加上遮罩或覆寫部分或全部<xref:System.Windows.UIElement>。  
+- 以視覺化方式加上遮罩或覆寫部分或全部<xref:System.Windows.UIElement>。  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供基本的架構以便裝飾視覺項目。 下表列出在裝飾物件時所使用的主要類型，及其用途。 以下是幾個使用方式的範例。  
   

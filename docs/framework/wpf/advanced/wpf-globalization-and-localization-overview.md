@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
 ms.openlocfilehash: c97ae4f277395a75fb7522ffb74061001c10e07d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053960"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和當地語系化概觀
 
@@ -28,43 +28,43 @@ ms.locfileid: "58819576"
 
  當您設計[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]– 基礎[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，請考慮實作這些最佳作法：  
   
--   寫入您[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 請避免建立[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]在程式碼中。 當您建立您[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，透過內建當地語系化 Api 公開。  
+- 寫入您[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 請避免建立[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]在程式碼中。 當您建立您[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，透過內建當地語系化 Api 公開。  
   
--   請避免使用絕對位置和固定的大小來配置內容;相反地，使用相對或自動調整大小。
+- 請避免使用絕對位置和固定的大小來配置內容;相反地，使用相對或自動調整大小。
   
-    -   使用<xref:System.Windows.Window.SizeToContent%2A>並將寬度和高度設定為`Auto`。  
+    - 使用<xref:System.Windows.Window.SizeToContent%2A>並將寬度和高度設定為`Auto`。  
   
-    -   請避免使用<xref:System.Windows.Controls.Canvas>來配置[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]s。  
+    - 請避免使用<xref:System.Windows.Controls.Canvas>來配置[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]s。  
   
-    -   使用<xref:System.Windows.Controls.Grid>和其大小共用功能。  
+    - 使用<xref:System.Windows.Controls.Grid>和其大小共用功能。  
   
--   因為當地語系化文字通常需要更多空間，所以請在邊界提供額外空間。 額外空間可放置可能突出的字元。  
+- 因為當地語系化文字通常需要更多空間，所以請在邊界提供額外空間。 額外空間可放置可能突出的字元。  
   
--   啟用<xref:System.Windows.Controls.TextBlock.TextWrapping%2A>上<xref:System.Windows.Controls.TextBlock>以避免裁剪。
+- 啟用<xref:System.Windows.Controls.TextBlock.TextWrapping%2A>上<xref:System.Windows.Controls.TextBlock>以避免裁剪。
   
--   設定 `xml:lang` 屬性。 這個屬性所描述的文化特性特定的項目和其子項目。 這個屬性的值變更幾項功能的行為[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 例如，它會變更斷字、拼字檢查、數字替代、複雜指令碼形成和字型遞補的行為。 請參閱[WPF 的全球化](globalization-for-wpf.md)如需有關設定[xml: lang 處理中 XAML](../../xaml-services/xml-lang-handling-in-xaml.md)。  
+- 設定 `xml:lang` 屬性。 這個屬性所描述的文化特性特定的項目和其子項目。 這個屬性的值變更幾項功能的行為[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 例如，它會變更斷字、拼字檢查、數字替代、複雜指令碼形成和字型遞補的行為。 請參閱[WPF 的全球化](globalization-for-wpf.md)如需有關設定[xml: lang 處理中 XAML](../../xaml-services/xml-lang-handling-in-xaml.md)。  
   
--   建立自訂的複合字型，以取得更佳控制用於不同語言的字型。 根據預設，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用 Windows\Fonts 目錄中的 GlobalUserInterface.composite 字型。  
+- 建立自訂的複合字型，以取得更佳控制用於不同語言的字型。 根據預設，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用 Windows\Fonts 目錄中的 GlobalUserInterface.composite 字型。  
   
--   當您建立導覽應用程式可能會當地語系化的文化特性中的文字由右至左的格式呈現，明確設定<xref:System.Windows.FlowDirection>的每一頁，以確保頁面不會繼承<xref:System.Windows.FlowDirection>從<xref:System.Windows.Navigation.NavigationWindow>。  
+- 當您建立導覽應用程式可能會當地語系化的文化特性中的文字由右至左的格式呈現，明確設定<xref:System.Windows.FlowDirection>的每一頁，以確保頁面不會繼承<xref:System.Windows.FlowDirection>從<xref:System.Windows.Navigation.NavigationWindow>。  
   
--   當您建立裝載外部瀏覽器的獨立巡覽應用程式時，設定<xref:System.Windows.Application.StartupUri%2A>若要將初始應用程式<xref:System.Windows.Navigation.NavigationWindow>而不是頁面 (例如`<Application StartupUri="NavigationWindow.xaml">`)。 此設計可讓您變更<xref:System.Windows.FlowDirection>視窗和巡覽列。 如需詳細資訊和範例，請參閱 <<c0> [ 全球化首頁範例](https://go.microsoft.com/fwlink/?LinkID=159990)。  
+- 當您建立裝載外部瀏覽器的獨立巡覽應用程式時，設定<xref:System.Windows.Application.StartupUri%2A>若要將初始應用程式<xref:System.Windows.Navigation.NavigationWindow>而不是頁面 (例如`<Application StartupUri="NavigationWindow.xaml">`)。 此設計可讓您變更<xref:System.Windows.FlowDirection>視窗和巡覽列。 如需詳細資訊和範例，請參閱 <<c0> [ 全球化首頁範例](https://go.microsoft.com/fwlink/?LinkID=159990)。  
   
 ### <a name="best-practices-for-wpf-localization"></a>WPF 當地語系化最佳做法
 
  當您將當地語系化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]– 基礎的應用程式，請考慮實作這些最佳作法：  
   
--   使用當地語系化註解為當地語系化工具提供額外的內容。  
+- 使用當地語系化註解為當地語系化工具提供額外的內容。  
   
--   使用當地語系化屬性來控制當地語系化，而不是選擇性地省略<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>項目上的屬性。 請參閱[當地語系化屬性和註解](localization-attributes-and-comments.md)如需詳細資訊。  
+- 使用當地語系化屬性來控制當地語系化，而不是選擇性地省略<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>項目上的屬性。 請參閱[當地語系化屬性和註解](localization-attributes-and-comments.md)如需詳細資訊。  
   
--   使用`msbuild -t:updateuid`並`-t:checkuid`來新增和檢查<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>屬性，在您[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 使用<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>開發與當地語系化之間追蹤變更的屬性。 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 屬性可協助您當地語系化新的開發變更。 如果您手動新增<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>屬性，以[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，任務是通常會十分費時而且較不精確。  
+- 使用`msbuild -t:updateuid`並`-t:checkuid`來新增和檢查<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>屬性，在您[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 使用<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>開發與當地語系化之間追蹤變更的屬性。 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 屬性可協助您當地語系化新的開發變更。 如果您手動新增<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>屬性，以[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，任務是通常會十分費時而且較不精確。  
   
-    -   無法編輯或變更<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>開始當地語系化之後的屬性。  
+    - 無法編輯或變更<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>開始當地語系化之後的屬性。  
   
-    -   請勿使用重複<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>（當您使用複製和貼上 命令時，請記住這個提示） 的屬性。  
+    - 請勿使用重複<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>（當您使用複製和貼上 命令時，請記住這個提示） 的屬性。  
   
-    -   設定`UltimateResourceFallback`來指定適當的語言進行遞補的 assemblyinfo.* 中的位置 (例如`[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`)。  
+    - 設定`UltimateResourceFallback`來指定適當的語言進行遞補的 assemblyinfo.* 中的位置 (例如`[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`)。  
   
          如果您決定要包含在主要組件中的原始碼語言，藉由略過`<UICulture>`標記您的專案檔中，設定`UltimateResourceFallback`主要而非附屬組件的位置 (例如`[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`)。  
   
@@ -72,19 +72,19 @@ ms.locfileid: "58819576"
 
 當您將當地語系化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式中，有數個選項。 例如，在您的應用程式中繫結可當地語系化的資源[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]檔案，將可當地語系化文字儲存在 resx 資料表，或讓當地語系化人員使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]檔案。 本章節描述使用 BAML 形式的 XAML，提供多項優點的當地語系化工作流程：  
   
--   在建置後，您可以將當地語系化。  
+- 在建置後，您可以將當地語系化。  
   
--   您可以更新為較新版本的 BAML 形式的 XAML 使用當地語系化從 BAML 形式之 XAML 的較舊版本，讓您開發的同時，您可以當地語系化。  
+- 您可以更新為較新版本的 BAML 形式的 XAML 使用當地語系化從 BAML 形式之 XAML 的較舊版本，讓您開發的同時，您可以當地語系化。  
   
--   您可以驗證原始來源項目和語意在編譯時期因為 BAML 形式之 XAML 的編譯的形式[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
+- 您可以驗證原始來源項目和語意在編譯時期因為 BAML 形式之 XAML 的編譯的形式[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
   
 ### <a name="localization-build-process"></a>當地語系化建置程序  
 
 當您開發[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式中，當地語系化建置程序如下所示：  
   
--   開發人員建立和全球化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。 在專案檔中，開發人員設定`<UICulture>en-US</UICulture>`，讓應用程式編譯時，會產生語言中性主要組件。 此組件具有包含所有可當地語系化資源的附屬 .resources.dll 檔案。 （選擇性） 您可以讓原始碼語言中的主要組件因為我們的當地語系化[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]支援從主要組件進行擷取。  
+- 開發人員建立和全球化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。 在專案檔中，開發人員設定`<UICulture>en-US</UICulture>`，讓應用程式編譯時，會產生語言中性主要組件。 此組件具有包含所有可當地語系化資源的附屬 .resources.dll 檔案。 （選擇性） 您可以讓原始碼語言中的主要組件因為我們的當地語系化[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]支援從主要組件進行擷取。  
   
--   當檔案編譯為組建，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]轉換為 BAML 形式的 XAML。 文化特性中性`MyDialog.exe`和文化特性相依 （英文）`MyDialog.resources.dll`檔案都會發行給英語系的客戶。  
+- 當檔案編譯為組建，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]轉換為 BAML 形式的 XAML。 文化特性中性`MyDialog.exe`和文化特性相依 （英文）`MyDialog.resources.dll`檔案都會發行給英語系的客戶。  
   
 ### <a name="localization-workflow"></a>當地語系化工作流程
 
@@ -283,7 +283,7 @@ ms.locfileid: "58819576"
   
  [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]  
   
- 預設當地語系化屬性 (attribute)[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供也可覆寫透過程式碼，因此您可以正確地設定為自訂控制項的正確預設值。 例如：  
+ 預設當地語系化屬性 (attribute)[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供也可覆寫透過程式碼，因此您可以正確地設定為自訂控制項的正確預設值。 例如:   
 
 ```csharp 
 [Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)] 

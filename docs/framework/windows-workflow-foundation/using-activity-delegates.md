@@ -3,11 +3,11 @@ title: 使用活動委派
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
 ms.openlocfilehash: 8c9d82f47f709a89455f41691526b6ac9718a01f
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004610"
 ---
 # <a name="using-activity-delegates"></a>使用活動委派
 活動委派可讓活動作者使用特定的簽章以公開回呼，活動使用者可以此為依據來提供活動處理常式。 活動委派有兩種型別可用：<xref:System.Activities.ActivityAction%601>，用來定義沒有傳回值的活動委派，以及 <xref:System.Activities.ActivityFunc%601>，用來定義有傳回值的活動委派。

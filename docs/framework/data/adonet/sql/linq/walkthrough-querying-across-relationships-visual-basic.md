@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
 ms.openlocfilehash: abd4941697639ec7bdda545b1ead8d57091e9e7f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038437"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>逐步解說：跨關聯性查詢 (Visual Basic)
 本逐步解說示範如何使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*關聯*表示在資料庫中的外部索引鍵關聯性。  
@@ -24,18 +24,18 @@ ms.locfileid: "59314655"
 ## <a name="overview"></a>總覽  
  此逐步解說包含三項主要工作：  
   
--   加入實體類別，以表示 Northwind 範例資料庫中的 Orders 資料表。  
+- 加入實體類別，以表示 Northwind 範例資料庫中的 Orders 資料表。  
   
--   補充 `Customer` 類別的附註，以加強 `Customer` 和 `Order` 類別之間的關聯性。  
+- 補充 `Customer` 類別的附註，以加強 `Customer` 和 `Order` 類別之間的關聯性。  
   
--   建立和執行查詢，以測試使用 `Order` 類別取得 `Customer` 資訊的處理序。  
+- 建立和執行查詢，以測試使用 `Order` 類別取得 `Customer` 資訊的處理序。  
   
 ## <a name="mapping-relationships-across-tables"></a>跨資料表對應關聯性  
  在 `Customer` 類別定義之後，建立包含下列程式碼的 `Order` 實體類別定義，這表示 `Orders.Customer` 為 `Customers.CustomerID` 的外部索引鍵。  
   
 #### <a name="to-add-the-order-entity-class"></a>若要加入 Order 實體類別  
   
--   在 `Customer` 類別之後輸入或貼上下列程式碼：  
+- 在 `Customer` 類別之後輸入或貼上下列程式碼：  
   
      [!code-vb[DLinqWalk2VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#1)]  
   
@@ -44,7 +44,7 @@ ms.locfileid: "59314655"
   
 #### <a name="to-annotate-the-customer-class"></a>若要標註 Customer 類別  
   
--   將下列程式碼輸入或貼到 `Customer` 類別中：  
+- 將下列程式碼輸入或貼到 `Customer` 類別中：  
   
      [!code-vb[DLinqWalk2VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#2)]  
   

@@ -3,11 +3,11 @@ title: HOW TO：建置 LINQ to XML 範例 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 565bca7a-ac8b-497f-8d8d-3323b3d7799e
 ms.openlocfilehash: c4c1f04e83eda88eb3d954a71ad5f14c309cda79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054964"
 ---
 # <a name="how-to-build-linq-to-xml-examples-visual-basic"></a>HOW TO：建置 LINQ to XML 範例 (Visual Basic)
 此文件中的各種片段與範例使用各種命名空間中的類別和型別。 編譯 Visual Basic 程式碼時，您必須提供適當的 `Imports` 陳述式。  

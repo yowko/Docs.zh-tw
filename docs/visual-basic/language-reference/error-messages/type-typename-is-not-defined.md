@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
 ms.openlocfilehash: c2675d61307d92da1710368668f43af3559060a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032093"
 ---
 # <a name="type-typename-is-not-defined"></a>類型 '\<類型名稱 >' 未定義
 陳述式已參考了尚未定義的類型。 您可以定義在宣告陳述式類型這類`Enum`， `Structure`， `Class`，或`Interface`。  
@@ -21,15 +21,15 @@ ms.locfileid: "58825035"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   請確定類型定義，而且它的參考都使用相同的拼字。  
+- 請確定類型定義，而且它的參考都使用相同的拼字。  
   
--   確定存取參考的型別定義。 例如，如果類型是在另一個模組，而且已宣告`Private`、 將型別定義移至參考的模組，或將它宣告`Public`。  
+- 確定存取參考的型別定義。 例如，如果類型是在另一個模組，而且已宣告`Private`、 將型別定義移至參考的模組，或將它宣告`Public`。  
   
--   請確定類型的命名空間不會重新定義您的專案內。 如果是，使用`Global`關鍵字來完整限定的型別名稱。 例如，如果專案定義名為命名空間`System`，則<xref:System.Object?displayProperty=nameWithType>無法存取類型，除非它是以完整限定`Global`關鍵字： `Global.System.Object`。  
+- 請確定類型的命名空間不會重新定義您的專案內。 如果是，使用`Global`關鍵字來完整限定的型別名稱。 例如，如果專案定義名為命名空間`System`，則<xref:System.Object?displayProperty=nameWithType>無法存取類型，除非它是以完整限定`Global`關鍵字： `Global.System.Object`。  
   
--   如果類型定義，但在 Visual Basic 中，按一下的物件程式庫或在其中定義的型別程式庫未註冊**加入參考**上**專案**功能表、，然後選取適當的物件程式庫或型別程式庫。  
+- 如果類型定義，但在 Visual Basic 中，按一下的物件程式庫或在其中定義的型別程式庫未註冊**加入參考**上**專案**功能表、，然後選取適當的物件程式庫或型別程式庫。  
   
--   請確定類型位於組件的目標.NET Framework 設定檔的一部分。 如需詳細資訊，請參閱[針對 .NET Framework 目標錯誤進行疑難排解](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)。  
+- 請確定類型位於組件的目標.NET Framework 設定檔的一部分。 如需詳細資訊，請參閱[針對 .NET Framework 目標錯誤進行疑難排解](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)。  
   
 ## <a name="see-also"></a>另請參閱
 

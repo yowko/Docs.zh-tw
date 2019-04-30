@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c14080e3ac128a6a7fbb48586f59d8a5ea4105f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049332"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 函式
 載入類型程式庫，並使用所提供[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)來解析任何的內部參考的型別程式庫。  
@@ -43,11 +43,11 @@ HRESULT LoadTypeLibWithResolver(
  `regkind`  
  [in]A [REGKIND 列舉](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind)控制型別程式庫的註冊方式的旗標。 其可能的值為：  
   
--   `REGKIND_DEFAULT`：使用預設註冊行為。  
+- `REGKIND_DEFAULT`：使用預設註冊行為。  
   
--   `REGKIND_REGISTER`：註冊此型別程式庫。  
+- `REGKIND_REGISTER`：註冊此型別程式庫。  
   
--   `REGKIND_NONE`：請勿註冊此型別程式庫。  
+- `REGKIND_NONE`：請勿註冊此型別程式庫。  
   
  `pTlbResolver`  
  [in]實作的指標[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)。  

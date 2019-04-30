@@ -20,11 +20,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], drawing
 ms.assetid: f4f9214c-607e-407d-8cdd-6549f0278451
 ms.openlocfilehash: 019bbc19cc4b26c42f8539eccd93ec4ff87fab12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004142"
 ---
 # <a name="how-to-draw-an-outlined-shape"></a>HOW TO：繪製外框形狀
 此範例會在表單上繪製外框的橢圓形和矩形。  

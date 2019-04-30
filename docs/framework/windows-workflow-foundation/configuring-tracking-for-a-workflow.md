@@ -3,11 +3,11 @@ title: 設定工作流程的追蹤
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
 ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052764"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>設定工作流程的追蹤
 
@@ -52,7 +52,7 @@ instance.Extensions.Add(trackingParticipant);
 
 工作流程可以公開為 WCF 服務中裝載時<xref:System.ServiceModel.Activities.WorkflowServiceHost>服務主機。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 是用於工作流程服務的特殊 .NET ServiceHost 實作。 本節說明如何為在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中執行的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 工作流程服務設定追蹤。 此追蹤是透過 Web.config 檔案 (適用於 Web 裝載服務) 或 App.config 檔案 (適用於裝載於獨立應用程式中的服務，例如主控台應用程式) 指定服務行為而設定的，或是透過程式碼將追蹤特定行為加入至服務主機的 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合而設定的。
 
-對於裝載於 <xref:System.ServiceModel.WorkflowServiceHost> 的主機，您可以使用組態檔中的 <<xref:System.Activities.Tracking.EtwTrackingParticipant>> 項目加入 `behavior`，如下列範例所示。
+針對工作流程服務裝載於<xref:System.ServiceModel.WorkflowServiceHost>，您可以加入<xref:System.Activities.Tracking.EtwTrackingParticipant>使用 <`behavior`> 組態檔中，如下列範例所示的項目。
 
 ```xml
 <behaviors>

@@ -6,24 +6,24 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
 ms.openlocfilehash: b5294080d0cc76fdb98bc0908f4273dbb011f982
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046914"
 ---
 # <a name="integrating-with-com-applications-overview"></a>整合 COM+ 應用程式概觀
 Windows Communication Foundation (WCF) 提供豐富的環境，以建立分散式應用程式。 如果您已經使用裝載於 COM + 元件為基礎的應用程式邏輯，您可以使用 WCF 來擴充現有邏輯，而不需要重新撰寫程式碼。 一個常見案例就是當您要透過 Web 服務，公開現有的 COM+ 或 Enterprise Services 商務邏輯之時。  
   
  當 COM+ 元件上的介面公開為 Web 服務時，這些服務的規格和合約就會由在應用程式初始化時所執行的自動對映來決定。 下列清單會顯示這個對應的概念模型：  
   
--   對每個公開的 COM 類別定義一個服務。  
+- 對每個公開的 COM 類別定義一個服務。  
   
--   服務的合約是直接衍生自選取之元件的介面定義而得，且組態中可能已定義方法排除。  
+- 服務的合約是直接衍生自選取之元件的介面定義而得，且組態中可能已定義方法排除。  
   
--   該合約中的作業直接衍生自元件之介面定義上的方法。  
+- 該合約中的作業直接衍生自元件之介面定義上的方法。  
   
--   那些作業的參數則直接衍生自 COM 互通性型別，而此型別會對應至元件的方法參數。  
+- 那些作業的參數則直接衍生自 COM 互通性型別，而此型別會對應至元件的方法參數。  
   
  在服務組態檔中提供服務的預設位址和傳輸繫結，不過可依需求重新設定這些項目。  
   
@@ -47,19 +47,19 @@ Windows Communication Foundation (WCF) 提供豐富的環境，以建立分散�
 ## <a name="supported-interfaces"></a>支援的介面  
  對於可公開為 Web 服務之介面的型別，有一些限制存在。 不支援下列介面型別：  
   
--   將物件參考做為參數進行傳遞的介面：將會在＜限制的物件參考支援＞這一節描述下列限制的物件參考方法。  
+- 將物件參考做為參數進行傳遞的介面：將會在＜限制的物件參考支援＞這一節描述下列限制的物件參考方法。  
   
--   傳遞型別的介面與 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] COM 互通性轉換不相容。  
+- 傳遞型別的介面與 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] COM 互通性轉換不相容。  
   
--   應用程式的介面，該介面由 COM+ 裝載時，會啟用應用程式共用。  
+- 應用程式的介面，該介面由 COM+ 裝載時，會啟用應用程式共用。  
   
--   元件的介面，這些介面已對應用程式標示為私用。  
+- 元件的介面，這些介面已對應用程式標示為私用。  
   
--   COM+ 基礎結構介面。  
+- COM+ 基礎結構介面。  
   
--   來自系統應用程式的介面。  
+- 來自系統應用程式的介面。  
   
--   來自 Enterprise Services 元件的介面，這些元件尚未加入至全域組件快取。  
+- 來自 Enterprise Services 元件的介面，這些元件尚未加入至全域組件快取。  
   
 ### <a name="limited-object-reference-support"></a>限制的物件參考支援  
  由於一些已部署的 COM+ 元件確實會依參考參數而使用物件 (例如，傳回 ADO 資料錄集 (Recordset) 物件)，因此 COM+ 整合中就包括物件參考參數的限制支援。 支援會受限於實作 `IPersistStream` COM 介面的物件。 其中包括 ADO 資料錄集物件，並且可針對特定於應用程式的 COM 物件來實作。  
@@ -76,15 +76,15 @@ Windows Communication Foundation (WCF) 提供豐富的環境，以建立分散�
 ## <a name="selecting-the-hosting-mode"></a>選取主控模式  
  COM+ 會以下列其中一個主控模式公開 Web 服務：  
   
--   COM+ 主控  
+- COM+ 主控  
   
      會在應用程式的專用 COM+ 伺服器處理序 (Dllhost.exe) 內主控 Web 服務。 使用這個模式時，需要先明確的啟動應用程式，它才可以接收 Web 服務要求。 可以使用 COM+ [以 NT 服務執行] 或 [當閒置時仍繼續執行] 選項，防止應用程式與其服務因閒置而導致關機。 這個模式會對伺服器應用程式提供 Web 服務和 DCOM 存取。  
   
--   Web 主控  
+- Web 主控  
   
      Web 服務會在 Web 伺服器工作處理序內主控。 這個模式在接收初始化要求時，不需要使用 COM+。 如果收到這個要求時應用程式不在使用中，會在處理要求之前自動啟動該應用程式。 這個模式也會對伺服器應用程式提供 Web 服務和 DCOM 存取，但會對 Web 服務要求造成處理序躍點。 通常會需要用戶端啟用模擬。 在 WCF 中，這可以透過<xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>屬性<xref:System.ServiceModel.Security.WindowsClientCredential>類別的泛型屬性會當做<xref:System.ServiceModel.ChannelFactory%601>類別，以及<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>列舉值。  
   
--   Web 主控同處理序  
+- Web 主控同處理序  
   
      會在 Web 伺服器工作處理序內主控 Web 服務和 COM+ 應用程式邏輯。 如此可自動啟動 Web 主控模式，而不會對 Web 服務要求造成處理序躍點。 缺點則為無法透過 DCOM 存取伺服器應用程式。  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
 ms.openlocfilehash: 5b234a00f3194fcf40a33d25302cff16d5999b05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039373"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>在 Windows Process Activation Service 中裝載
 Windows Process Activation Service (WAS) 管理啟動和包含該主機的 Windows Communication Foundation (WCF) 服務的應用程式的工作者處理序的存留期。 WAS 處理序模型會藉由移除 HTTP 上的相依性，將 HTTP 伺服器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 處理序模型一般化。 這可讓 WCF 服務使用 HTTP 和非 HTTP 通訊協定，例如 Net.TCP，請在裝載環境中支援訊息型啟用，並可讓您裝載大量應用程式，在指定電腦上。  
@@ -18,13 +18,13 @@ Windows Process Activation Service (WAS) 管理啟動和包含該主機的 Windo
   
  WAS 處理序模型提供的幾項功能，可將應用程式裝載得更為穩固、容易管理，而且能夠更有效率地運用資源：  
   
--   訊息式的應用程式啟動和背景工作處理序應用程式會動態啟動與停止，以回應透過 HTTP 和非 HTTP 網路通訊協定抵達的傳入工作項目。  
+- 訊息式的應用程式啟動和背景工作處理序應用程式會動態啟動與停止，以回應透過 HTTP 和非 HTTP 網路通訊協定抵達的傳入工作項目。  
   
--   穩固的應用程式與背景工作處理序回收作業可維護執行中的應用程式健康狀況。  
+- 穩固的應用程式與背景工作處理序回收作業可維護執行中的應用程式健康狀況。  
   
--   集中式應用程式組態和管理。  
+- 集中式應用程式組態和管理。  
   
--   可讓應用程式善用 IIS 處理序模型的優勢，而不需要部署完整的 IIS 安裝項目。  
+- 可讓應用程式善用 IIS 處理序模型的優勢，而不需要部署完整的 IIS 安裝項目。  
   
  如需 WAS 功能的詳細資訊，請參閱[IIS 7.0 Beta:IIS 7.0 的 Web 系統管理](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
   

@@ -10,11 +10,11 @@ ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: afaa8e118bb21e5c1e4f1c53b1d0d29ca6bb3bf5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055052"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>使用可攜式類別庫的跨平台開發
 
@@ -50,13 +50,13 @@ ms.locfileid: "48030836"
 
 可攜式類別庫專案中提供的類型和成員受到多個相容性因素所限制：
 
--   它們必須在您選取的目標之間共用。
+- 它們必須在您選取的目標之間共用。
 
--   它們必須在這些目標上具有類似的行為。
+- 它們必須在這些目標上具有類似的行為。
 
--   它們不能是要被取代的候選項。
+- 它們不能是要被取代的候選項。
 
--   它們在可攜式環境中必須是合理的，尤其是支援成員無法移植時。
+- 它們在可攜式環境中必須是合理的，尤其是支援成員無法移植時。
 
 如果可攜式類別庫和您選取的目標可支援某成員，該成員就會出現在 IntelliSense 的專案中。 不過，請記得，可攜式類別庫可能會支援 API，但您是否可以使用 API，取決於您選取的目標。
 
@@ -78,9 +78,9 @@ ms.locfileid: "48030836"
 
 當您部署參考可攜式類別庫組件的 .NET Framework 應用程式時，必須指定正確 .NET Framework 版本的相依性。 藉由指定此相依性，您就可以確保所需的版本會隨著您的應用程式一起安裝。
 
--   若要建立與 ClickOnce 部署的相依性： 在**方案總管 中**，選擇您想要發佈專案的專案節點。 (這是參考可攜式類別庫專案的專案。)在功能表列上選擇 **專案** > **屬性**，然後選擇**發佈** 索引標籤。在 **發佈**頁面上，選擇**必要條件**。 選取所需的 .NET Framework 版本做為必要條件。
+- 若要建立與 ClickOnce 部署的相依性：在 [**方案總管] 中**，選擇您想要發佈專案的專案節點。 (這是參考可攜式類別庫專案的專案。)在功能表列上選擇 **專案** > **屬性**，然後選擇**發佈** 索引標籤。在 **發佈**頁面上，選擇**必要條件**。 選取所需的 .NET Framework 版本做為必要條件。
 
--   若要建立與安裝專案的相依性： 在**方案總管] 中**，選擇 [安裝專案。 在功能表列上選擇 **專案** > **屬性** > **必要條件**。 選取所需的 .NET Framework 版本做為必要條件。
+- 若要建立安裝專案的相依性：在 **方案總管 中**，選擇 安裝專案。 在功能表列上選擇 **專案** > **屬性** > **必要條件**。 選取所需的 .NET Framework 版本做為必要條件。
 
 如需部署.NET Framework 應用程式的詳細資訊，請參閱 <<c0> [ 開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)。
 

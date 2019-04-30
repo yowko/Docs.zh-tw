@@ -7,11 +7,11 @@ helpviewer_keywords:
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
 ms.openlocfilehash: 84525e58487ce9b0bc26f77ff8dbced734bc90a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008425"
 ---
 # <a name="opacity-masks-overview"></a>不透明度遮罩概觀
 不透明度遮罩可讓您將元素或視覺物件的一部分設定成透明或半透明。 若要建立不透明度遮罩，套用<xref:System.Windows.Media.Brush>要<xref:System.Windows.UIElement.OpacityMask%2A>元素的屬性或<xref:System.Windows.Media.Visual>。  筆刷會對應到元素或視覺物件，且每個筆刷像素的不透明度值會用來決定元素或視覺物件每個對應像素最終的不透明度。  
@@ -36,21 +36,21 @@ ms.locfileid: "59080081"
 ## <a name="creating-an-opacity-mask"></a>建立不透明度遮罩  
  若要建立不透明度遮罩，建立<xref:System.Windows.Media.Brush>套用至<xref:System.Windows.UIElement.OpacityMask%2A>元素或視覺效果的屬性。 您可以使用任何一種<xref:System.Windows.Media.Brush>作為不透明度遮罩。  
   
--   <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>:用來使元素或從檢視的視覺淡出。  
+- <xref:System.Windows.Media.LinearGradientBrush>、<xref:System.Windows.Media.RadialGradientBrush>：用來使元素或從檢視的視覺淡出。  
   
      下圖顯示<xref:System.Windows.Media.LinearGradientBrush>作為不透明度遮罩。  
   
      ![具有 LinearGradientBrush 不透明度遮罩的物件](./media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
 LinearGradientBrush 不透明度遮罩範例  
   
--   <xref:System.Windows.Media.ImageBrush>：用來建立紋理及柔邊或撕裂邊效果。  
+- <xref:System.Windows.Media.ImageBrush>：用來建立紋理及柔邊或撕裂邊效果。  
   
      下圖顯示<xref:System.Windows.Media.ImageBrush>作為不透明度遮罩。  
   
      ![具有 ImageBrush 不透明度遮罩的物件](./media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
 LinearGradientBrush 不透明度遮罩範例  
   
--   <xref:System.Windows.Media.DrawingBrush>：用來建立複雜不透明度遮罩的圖形、 影像和漸層的模式。  
+- <xref:System.Windows.Media.DrawingBrush>：用來建立複雜不透明度遮罩的圖形、 影像和漸層的模式。  
   
      下圖顯示<xref:System.Windows.Media.DrawingBrush>作為不透明度遮罩。  
   

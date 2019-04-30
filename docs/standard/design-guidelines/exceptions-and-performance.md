@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
 author: KrzysztofCwalina
 ms.openlocfilehash: f9fe3045d8bd8b4d625c5cd49bc18574ebb740de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026428"
 ---
 # <a name="exceptions-and-performance"></a>例外狀況和效能
 其中一個例外狀況的相關的一般考量，如果例外狀況會用於經常失敗的程式碼，實作的效能就是無法接受。 這是有效的考量。 當成員擲回例外狀況時，其效能可以呈數量級速度較慢。 不過，就可以達到良好的效能，同時完全符合不允許使用錯誤碼的例外狀況指導方針。 這一節所述的兩種模式提供建議這樣做。  

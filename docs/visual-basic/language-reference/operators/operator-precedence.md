@@ -15,11 +15,11 @@ helpviewer_keywords:
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
 ms.openlocfilehash: 568927eb4759c214311ad34a5b45e28094dd80be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013526"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic 中的運算子優先順序
 每個部分時數個作業發生時在運算式中，評估，以及在預先決定的順序呼叫中解決*運算子優先順序*。  
@@ -27,13 +27,13 @@ ms.locfileid: "58830028"
 ## <a name="precedence-rules"></a>優先順序規則  
  當運算式包含來自多個類別目錄的運算子時，會評估根據下列規則：  
   
--   算術和串連運算子有下列的一節所述的優先順序，都有更高的優先順序高於比較、 邏輯和位元運算子。  
+- 算術和串連運算子有下列的一節所述的優先順序，都有更高的優先順序高於比較、 邏輯和位元運算子。  
   
--   所有的比較運算子具有相等的優先順序，及其所有具有較高的優先順序高於邏輯和位元運算子，但較低的優先順序高於算術和串連運算子。  
+- 所有的比較運算子具有相等的優先順序，及其所有具有較高的優先順序高於邏輯和位元運算子，但較低的優先順序高於算術和串連運算子。  
   
--   邏輯和位元運算子有下列的一節所述的優先順序，所有具有較低的優先順序高於算術運算子、 串連和比較運算子。  
+- 邏輯和位元運算子有下列的一節所述的優先順序，所有具有較低的優先順序高於算術運算子、 串連和比較運算子。  
   
--   具有相同優先順序的運算子會由左至右評估以其出現在運算式中的順序。  
+- 具有相同優先順序的運算子會由左至右評估以其出現在運算式中的順序。  
   
 ## <a name="precedence-order"></a>優先順序  
  運算子會評估順序的優先順序如下：  

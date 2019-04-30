@@ -3,11 +3,11 @@ title: 設定 Internet Information Services 7.0 for Windows Communication Founda
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
 ms.openlocfilehash: 53ba48d47d30bd94ae5544920041cd430526223b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039763"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>設定 Internet Information Services 7.0 for Windows Communication Foundation
 
@@ -22,11 +22,11 @@ Internet Information Services (IIS) 7.0 具有模組化的設計，可以讓您�
 
  這項功能具有下列子元件：
 
--   .NET 環境
+- .NET 環境
 
--   組態 API
+- 組態 API
 
--   處理序模型
+- 處理序模型
 
  如果您選取根節點的 WAS，只有**處理序模型**子節點依預設會勾選。 請注意，進行這項安裝時只會安裝 WAS，因為此時不支援 Web 伺服器。
 

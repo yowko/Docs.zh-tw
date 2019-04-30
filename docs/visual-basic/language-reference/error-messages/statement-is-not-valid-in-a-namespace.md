@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30001
 ms.assetid: 43c1b509-15f9-4e91-bcad-90bcb5f6f191
 ms.openlocfilehash: 1c2b30045b25c1ef6542eff74716e9919ab8af93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013708"
 ---
 # <a name="statement-is-not-valid-in-a-namespace"></a>命名空間中的陳述式無效
 陳述式不能出現在命名空間層級。 唯一允許的命名空間層級的宣告是模組、 介面、 類別、 委派、 列舉和結構宣告。  
@@ -21,7 +21,7 @@ ms.locfileid: "58841754"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   陳述式移至 模組、 類別、 介面、 結構、 列舉或委派定義中的位置。  
+- 陳述式移至 模組、 類別、 介面、 結構、 列舉或委派定義中的位置。  
   
 ## <a name="see-also"></a>另請參閱
 

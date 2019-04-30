@@ -6,8 +6,8 @@ ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006324"
 ---
 # <a name="usage-of-standard-endpoints"></a>使用標準端點
 
@@ -143,13 +143,13 @@ public class CustomEndpoint : ServiceEndpoint
 
 2. 讓多個專案啟動。
 
-    1.  在 **方案總管**，以滑鼠右鍵按一下 標準端點 方案，然後選取**屬性**。
+    1. 在 **方案總管**，以滑鼠右鍵按一下 標準端點 方案，然後選取**屬性**。
 
-    2.  在 **通用屬性**，選取**啟始專案**，然後按一下**多個啟始專案**。
+    2. 在 **通用屬性**，選取**啟始專案**，然後按一下**多個啟始專案**。
 
-    3.  移至清單中，開頭的服務專案，具有**動作**設為**開始**。
+    3. 移至清單中，開頭的服務專案，具有**動作**設為**開始**。
 
-    4.  用戶端專案在之後移動服務專案中，也與**動作**設為**開始**。
+    4. 用戶端專案在之後移動服務專案中，也與**動作**設為**開始**。
 
          這樣會指定 [用戶端] 專案在 [服務] 專案之後執行。
 

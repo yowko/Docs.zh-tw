@@ -3,11 +3,11 @@ title: HTTP 傳輸安全性
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
 ms.openlocfilehash: b7415dcc1e6c4a5d47d9e7b6e70a86ab1b898783
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000840"
 ---
 # <a name="http-transport-security"></a>HTTP 傳輸安全性
 使用 HTTP 來傳輸時，會由安全通訊端層 (SSL) 實作提供安全性。 在網際網路上會廣泛使用 SSL 以對用戶端驗證服務，進而對通道提供機密性 (加密)。 本主題會說明 SSL 的運作方式，以及如何實作 Windows Communication Foundation (WCF) 中。  
@@ -31,9 +31,9 @@ ms.locfileid: "59113798"
 ## <a name="implementing-ssl-with-wcf"></a>以 WCF 實作 SSL  
  HTTP 傳輸安全性 （或 SSL） 會提供給 WCF 的外部。 您可以使用這兩種方法實作 SSL；決定的因素則視裝載您應用程式的方式而定：  
   
--   如果您使用 Internet Information Services (IIS) 與您的 WCF 主機，請使用 IIS 基礎結構來設定 SSL 服務。  
+- 如果您使用 Internet Information Services (IIS) 與您的 WCF 主機，請使用 IIS 基礎結構來設定 SSL 服務。  
   
--   如果您要建立自我裝載的 WCF 應用程式，您可以將 SSL 憑證繫結使用 HttpCfg.exe 工具的位址。  
+- 如果您要建立自我裝載的 WCF 應用程式，您可以將 SSL 憑證繫結使用 HttpCfg.exe 工具的位址。  
   
 ### <a name="using-iis-for-transport-security"></a>在傳輸安全性中使用 IIS  
   

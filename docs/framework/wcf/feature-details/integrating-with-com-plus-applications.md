@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: 98bf7dc4-d49a-4129-a59b-db7a7ec8c241
 ms.openlocfilehash: cd72265fe8e49c7def91ebbf05ad84618dd71d19
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046927"
 ---
 # <a name="integrating-with-com-applications"></a>整合 COM+ 應用程式
 Windows Communication Foundation (WCF) 提供豐富的環境，以建立分散式應用程式。 如果您已長期開發裝載於 COM + 元件為基礎的應用程式邏輯，您可以使用 WCF 來擴充現有邏輯，而不需要重新撰寫程式碼。 本節中的主題描述如何搭配 WCF 使用 COM +。  

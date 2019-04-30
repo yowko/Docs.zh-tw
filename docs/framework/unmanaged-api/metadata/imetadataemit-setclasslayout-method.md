@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 80bf9de3eb274bf536b2794ba2ed14e7e9b553cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050047"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout 方法
 完成欄位已由先前呼叫所定義之類別的配置[DefineTypeDef 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)。  
@@ -56,9 +56,9 @@ HRESULT SetClassLayout (
   
  不過，您可以根據程式碼會使用未受管理的排列方式配置的欄位。 在此情況下，選擇 循序或明確的配置和呼叫`SetClassLayout`完成欄位的配置：  
   
--   循序配置：指定封裝大小。 欄位會根據其自然的大小或封裝大小，任何會導致較小的欄位位移對齊。 設定`rFieldOffsets`和`ulClassSize`為零。  
+- 循序配置：指定封裝大小。 欄位會根據其自然的大小或封裝大小，任何會導致較小的欄位位移對齊。 設定`rFieldOffsets`和`ulClassSize`為零。  
   
--   明確的配置：指定每個欄位的位移，或指定類別和封裝大小。  
+- 明確的配置：指定每個欄位的位移，或指定類別和封裝大小。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

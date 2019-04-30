@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
 ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009608"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip 控制項架構
 <xref:System.Windows.Forms.ToolStrip>和<xref:System.Windows.Forms.ToolStripItem>類別提供具彈性且可擴充的系統顯示工具列、 狀態和功能表項目。 這些類別包含在<xref:System.Windows.Forms>命名空間和其所有通常以"ToolStrip"前置詞命名 (例如<xref:System.Windows.Forms.ToolStripOverflow>) 或 「 帶狀 」 的後置詞 (例如<xref:System.Windows.Forms.MenuStrip>)。  
@@ -25,56 +25,56 @@ ms.locfileid: "59296208"
   
  下列項目專為與兩者都能完美合作<xref:System.Windows.Forms.ToolStripSystemRenderer>和<xref:System.Windows.Forms.ToolStripProfessionalRenderer>在所有方向。 它們是在設計階段的預設可用的<xref:System.Windows.Forms.ToolStrip>控制項：  
   
--   <xref:System.Windows.Forms.ToolStripButton>  
+- <xref:System.Windows.Forms.ToolStripButton>  
   
--   <xref:System.Windows.Forms.ToolStripSeparator>  
+- <xref:System.Windows.Forms.ToolStripSeparator>  
   
--   <xref:System.Windows.Forms.ToolStripLabel>  
+- <xref:System.Windows.Forms.ToolStripLabel>  
   
--   <xref:System.Windows.Forms.ToolStripDropDownButton>  
+- <xref:System.Windows.Forms.ToolStripDropDownButton>  
   
--   <xref:System.Windows.Forms.ToolStripSplitButton>  
+- <xref:System.Windows.Forms.ToolStripSplitButton>  
   
--   <xref:System.Windows.Forms.ToolStripTextBox>  
+- <xref:System.Windows.Forms.ToolStripTextBox>  
   
--   <xref:System.Windows.Forms.ToolStripComboBox>  
+- <xref:System.Windows.Forms.ToolStripComboBox>  
   
 ### <a name="menustrip"></a>MenuStrip  
  <xref:System.Windows.Forms.MenuStrip> 已取代的最上層容器<xref:System.Windows.Forms.MainMenu>。 它也提供金鑰的處理和多個文件介面 (MDI) 功能。 在功能上，<xref:System.Windows.Forms.ToolStripDropDownItem>並<xref:System.Windows.Forms.ToolStripMenuItem>連同工作<xref:System.Windows.Forms.MenuStrip>，但它們衍生自<xref:System.Windows.Forms.ToolStripItem>。  
   
  下列項目專為與兩者都能完美合作<xref:System.Windows.Forms.ToolStripSystemRenderer>和<xref:System.Windows.Forms.ToolStripProfessionalRenderer>在所有方向。 它們是在設計階段的預設可用的<xref:System.Windows.Forms.MenuStrip>控制項：  
   
--   <xref:System.Windows.Forms.ToolStripMenuItem>  
+- <xref:System.Windows.Forms.ToolStripMenuItem>  
   
--   <xref:System.Windows.Forms.ToolStripTextBox>  
+- <xref:System.Windows.Forms.ToolStripTextBox>  
   
--   <xref:System.Windows.Forms.ToolStripComboBox>  
+- <xref:System.Windows.Forms.ToolStripComboBox>  
   
 ### <a name="statusstrip"></a>StatusStrip  
  <xref:System.Windows.Forms.StatusStrip> 取代<xref:System.Windows.Forms.StatusBar>控制項。 特殊功能<xref:System.Windows.Forms.StatusStrip>包含自訂表格配置，支援表單的縮放或移動想盡辦法，而`Spring`屬性，讓<xref:System.Windows.Forms.ToolStripStatusLabel>來自動填滿可用空間。  
   
  下列項目專為與兩者都能完美合作<xref:System.Windows.Forms.ToolStripSystemRenderer>和<xref:System.Windows.Forms.ToolStripProfessionalRenderer>在所有方向。 它們是在設計階段的預設可用的<xref:System.Windows.Forms.StatusStrip>控制項：  
   
--   <xref:System.Windows.Forms.ToolStripStatusLabel>  
+- <xref:System.Windows.Forms.ToolStripStatusLabel>  
   
--   <xref:System.Windows.Forms.ToolStripDropDownButton>  
+- <xref:System.Windows.Forms.ToolStripDropDownButton>  
   
--   <xref:System.Windows.Forms.ToolStripSplitButton>  
+- <xref:System.Windows.Forms.ToolStripSplitButton>  
   
--   <xref:System.Windows.Forms.ToolStripProgressBar>  
+- <xref:System.Windows.Forms.ToolStripProgressBar>  
   
 ### <a name="contextmenustrip"></a>ContextMenuStrip  
  <xref:System.Windows.Forms.ContextMenuStrip> 會取代 <xref:System.Windows.Forms.ContextMenu>。 您可以建立關聯<xref:System.Windows.Forms.ContextMenuStrip>與任何控制項，並以滑鼠右鍵按一下自動顯示的內容功能表 （或快顯功能表）。 您可以顯示<xref:System.Windows.Forms.ContextMenuStrip>以程式設計方式使用<xref:System.Windows.Forms.ToolStripDropDown.Show%2A>方法。 <xref:System.Windows.Forms.ContextMenuStrip> 支援可取消<xref:System.Windows.Forms.ToolStripDropDown.Opening>和<xref:System.Windows.Forms.ToolStripDropDown.Closing>事件，以處理動態的母體擴展，以及多個按一下案例。 <xref:System.Windows.Forms.ContextMenuStrip> 支援映像、 功能表項目核取狀態、 文字、 存取金鑰、 捷徑和串聯功能表。  
   
  下列項目專為與兩者都能完美合作<xref:System.Windows.Forms.ToolStripSystemRenderer>和<xref:System.Windows.Forms.ToolStripProfessionalRenderer>在所有方向。 它們是在設計階段的預設可用的<xref:System.Windows.Forms.ContextMenuStrip>控制項：  
   
--   <xref:System.Windows.Forms.ToolStripMenuItem>  
+- <xref:System.Windows.Forms.ToolStripMenuItem>  
   
--   <xref:System.Windows.Forms.ToolStripSeparator>  
+- <xref:System.Windows.Forms.ToolStripSeparator>  
   
--   <xref:System.Windows.Forms.ToolStripTextBox>  
+- <xref:System.Windows.Forms.ToolStripTextBox>  
   
--   <xref:System.Windows.Forms.ToolStripComboBox>  
+- <xref:System.Windows.Forms.ToolStripComboBox>  
   
 ### <a name="toolstrip-generic-features"></a>ToolStrip 泛型功能  
  下列主題將描述功能和行為的一般以<xref:System.Windows.Forms.ToolStrip>和衍生控制項。  
@@ -95,26 +95,26 @@ ms.locfileid: "59296208"
   
  下列清單描述親子照顧與相關的成員，並說明其用法。  
   
--   <xref:System.Windows.Forms.ToolStripDropDown.OwnerItem%2A> 存取下拉式清單項目的來源的項目。 這是類似<xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A>，而不是傳回的控制項，它會傳回但<xref:System.Windows.Forms.ToolStripItem>。  
+- <xref:System.Windows.Forms.ToolStripDropDown.OwnerItem%2A> 存取下拉式清單項目的來源的項目。 這是類似<xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A>，而不是傳回的控制項，它會傳回但<xref:System.Windows.Forms.ToolStripItem>。  
   
--   <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A> 判斷哪些控制項為來源的<xref:System.Windows.Forms.ContextMenuStrip>當多個控制項共用相同<xref:System.Windows.Forms.ContextMenuStrip>。  
+- <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A> 判斷哪些控制項為來源的<xref:System.Windows.Forms.ContextMenuStrip>當多個控制項共用相同<xref:System.Windows.Forms.ContextMenuStrip>。  
   
--   <xref:System.Windows.Forms.ToolStripItem.GetCurrentParent%2A> 是唯讀的存取子，來<xref:System.Windows.Forms.ToolStripItem.Parent%2A>屬性。 父代與不同擁有者，因為父代表示傳回的目前<xref:System.Windows.Forms.ToolStrip>項目顯示，這可能會溢位區域中。  
+- <xref:System.Windows.Forms.ToolStripItem.GetCurrentParent%2A> 是唯讀的存取子，來<xref:System.Windows.Forms.ToolStripItem.Parent%2A>屬性。 父代與不同擁有者，因為父代表示傳回的目前<xref:System.Windows.Forms.ToolStrip>項目顯示，這可能會溢位區域中。  
   
--   <xref:System.Windows.Forms.ToolStripItem.Owner%2A> 會傳回<xref:System.Windows.Forms.ToolStrip>其項目集合會包含目前<xref:System.Windows.Forms.ToolStripItem>。 這是最佳的方式來參考<xref:System.Windows.Forms.ToolStrip.ImageList%2A>或其他屬性，在最上層<xref:System.Windows.Forms.ToolStrip>而不需要撰寫特殊的程式碼來處理溢位。  
+- <xref:System.Windows.Forms.ToolStripItem.Owner%2A> 會傳回<xref:System.Windows.Forms.ToolStrip>其項目集合會包含目前<xref:System.Windows.Forms.ToolStripItem>。 這是最佳的方式來參考<xref:System.Windows.Forms.ToolStrip.ImageList%2A>或其他屬性，在最上層<xref:System.Windows.Forms.ToolStrip>而不需要撰寫特殊的程式碼來處理溢位。  
   
 #### <a name="behavior-of-inherited-controls"></a>繼承控制項的行為  
  它們用在繼承時，會鎖定下列控制項：  
   
--   <xref:System.Windows.Forms.ToolStrip>  
+- <xref:System.Windows.Forms.ToolStrip>  
   
--   <xref:System.Windows.Forms.MenuStrip>  
+- <xref:System.Windows.Forms.MenuStrip>  
   
--   <xref:System.Windows.Forms.ContextMenuStrip>  
+- <xref:System.Windows.Forms.ContextMenuStrip>  
   
--   <xref:System.Windows.Forms.StatusStrip>  
+- <xref:System.Windows.Forms.StatusStrip>  
   
--   <xref:System.Windows.Forms.ToolStripPanel> 其中包含在面板<xref:System.Windows.Forms.ToolStripContainer>和也個別<xref:System.Windows.Forms.ToolStripPanel>控制項。  
+- <xref:System.Windows.Forms.ToolStripPanel> 其中包含在面板<xref:System.Windows.Forms.ToolStripContainer>和也個別<xref:System.Windows.Forms.ToolStripPanel>控制項。  
   
  例如，使用上述清單中的一或多個控制項建立新的 Windows Forms 應用程式。 設定一或多個控制項的存取修飾詞`public`或`protected`，然後建置專案。 加入繼承自第一個表單，表單，然後選取 繼承的控制項。 控制項就會出現鎖定，其運作方式如同其存取修飾詞是`private`。  
   
@@ -138,13 +138,13 @@ ms.locfileid: "59296208"
 #### <a name="inherited-behavior-of-child-controls"></a>子控制項的繼承的行為  
  完成上述步驟之後，就會發生下列繼承的行為：  
   
--   在設計師中，控制項都會出現一個繼承的圖示。  
+- 在設計師中，控制項都會出現一個繼承的圖示。  
   
--   <xref:System.Windows.Forms.ToolStripPanel>控制項已被鎖定，因此您無法選取，或重新排列其內容。  
+- <xref:System.Windows.Forms.ToolStripPanel>控制項已被鎖定，因此您無法選取，或重新排列其內容。  
   
--   您可以將控制項加入<xref:System.Windows.Forms.ToolStripContentPanel>、 移動控制項，並讓它們的子控制項<xref:System.Windows.Forms.ToolStripContentPanel>。  
+- 您可以將控制項加入<xref:System.Windows.Forms.ToolStripContentPanel>、 移動控制項，並讓它們的子控制項<xref:System.Windows.Forms.ToolStripContentPanel>。  
   
--   在建置表單之後，保存您的變更。  
+- 在建置表單之後，保存您的變更。  
   
     > [!NOTE]
     >  移除所有的存取修飾詞<xref:System.Windows.Forms.ToolStripPanel>一部分的控制項<xref:System.Windows.Forms.ToolStripContainer>。 存取修飾詞<xref:System.Windows.Forms.ToolStripContainer>控管整個控制項。  
@@ -152,26 +152,26 @@ ms.locfileid: "59296208"
 #### <a name="partial-trust"></a>部分信任  
  限制`ToolStrip`在部分信任下的 s 設計來防止不當的項目，可能會使用未經授權的人員或服務的個人資訊。 保護措施如下所示：  
   
--   `ToolStripDropDown` 控制項需要<xref:System.Security.Permissions.UIPermissionWindow.AllWindows>中的項目顯示<xref:System.Windows.Forms.ToolStripControlHost>。 這適用於這兩個內建控制項這類<xref:System.Windows.Forms.ToolStripTextBox>， <xref:System.Windows.Forms.ToolStripComboBox>，和<xref:System.Windows.Forms.ToolStripProgressBar>並建立使用者控制項。 如果不符合此需求，不會顯示這些項目。 不會有例外狀況擲回。  
+- `ToolStripDropDown` 控制項需要<xref:System.Security.Permissions.UIPermissionWindow.AllWindows>中的項目顯示<xref:System.Windows.Forms.ToolStripControlHost>。 這適用於這兩個內建控制項這類<xref:System.Windows.Forms.ToolStripTextBox>， <xref:System.Windows.Forms.ToolStripComboBox>，和<xref:System.Windows.Forms.ToolStripProgressBar>並建立使用者控制項。 如果不符合此需求，不會顯示這些項目。 不會有例外狀況擲回。  
   
--   設定<xref:System.Windows.Forms.ToolStripDropDown.AutoClose%2A>屬性，以`false`不允許，和可取消之<xref:System.Windows.Forms.ToolStripDropDown.Closing>事件參數會被忽略。 這可讓您無法輸入多個按鍵輸入，而不需要關閉下拉式清單項目。 如果不符合此需求，不會顯示這類項目。 不會有例外狀況擲回。  
+- 設定<xref:System.Windows.Forms.ToolStripDropDown.AutoClose%2A>屬性，以`false`不允許，和可取消之<xref:System.Windows.Forms.ToolStripDropDown.Closing>事件參數會被忽略。 這可讓您無法輸入多個按鍵輸入，而不需要關閉下拉式清單項目。 如果不符合此需求，不會顯示這類項目。 不會有例外狀況擲回。  
   
--   如果它們發生在部分信任內容中以外，不會引發許多處理事件的按鍵輸入<xref:System.Security.Permissions.UIPermissionWindow.AllWindows>。  
+- 如果它們發生在部分信任內容中以外，不會引發許多處理事件的按鍵輸入<xref:System.Security.Permissions.UIPermissionWindow.AllWindows>。  
   
--   便捷鍵皆未處理的時機<xref:System.Security.Permissions.UIPermissionWindow.AllWindows>未授與。  
+- 便捷鍵皆未處理的時機<xref:System.Security.Permissions.UIPermissionWindow.AllWindows>未授與。  
   
 #### <a name="usage"></a>使用量  
  下列的使用模式會影響<xref:System.Windows.Forms.ToolStrip>版面配置、 鍵盤互動，以及使用者行為：  
   
--   已加入 <xref:System.Windows.Forms.ToolStripPanel>  
+- 已加入 <xref:System.Windows.Forms.ToolStripPanel>  
   
      <xref:System.Windows.Forms.ToolStrip>可以內重新定位<xref:System.Windows.Forms.ToolStripPanel>和跨<xref:System.Windows.Forms.ToolStripPanel>s。 `Dock`屬性會被忽略，而且如果<xref:System.Windows.Forms.ToolStrip.Stretch%2A>屬性是`false`，則大小<xref:System.Windows.Forms.ToolStrip>成長，因為項目會加入<xref:System.Windows.Forms.ToolStripPanel>。 一般而言，<xref:System.Windows.Forms.ToolStrip>不會參與的索引標籤順序。  
   
--   已停駐  
+- 已停駐  
   
      <xref:System.Windows.Forms.ToolStrip>放置其中一端的固定位置中的容器，其大小會展開整個它停駐的邊緣上方。 一般而言，<xref:System.Windows.Forms.ToolStrip>不會參與的索引標籤順序。  
   
--   絕對位置  
+- 絕對位置  
   
      <xref:System.Windows.Forms.ToolStrip>就像其他控制項，，因為它放置<xref:System.Windows.Forms.Control.Location%2A>屬性都有固定的大小，和通常參與索引標籤順序。  
   
@@ -197,11 +197,11 @@ ms.locfileid: "59296208"
 ##### <a name="stack-layouts"></a>堆疊配置  
  堆疊是彼此旁邊的兩端的項目排列<xref:System.Windows.Forms.ToolStrip>。 下列清單說明堆疊版面配置。  
   
--   <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow> 預設值。 此設定會導致<xref:System.Windows.Forms.ToolStrip>改變它自動在按照所使用的版面配置<xref:System.Windows.Forms.ToolStrip.Orientation%2A>屬性來處理拖曳和停駐的案例。  
+- <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow> 預設值。 此設定會導致<xref:System.Windows.Forms.ToolStrip>改變它自動在按照所使用的版面配置<xref:System.Windows.Forms.ToolStrip.Orientation%2A>屬性來處理拖曳和停駐的案例。  
   
--   <xref:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow> 呈現<xref:System.Windows.Forms.ToolStrip>旁邊彼此垂直項目。  
+- <xref:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow> 呈現<xref:System.Windows.Forms.ToolStrip>旁邊彼此垂直項目。  
   
--   <xref:System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow> 呈現<xref:System.Windows.Forms.ToolStrip>旁邊彼此水平項目。  
+- <xref:System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow> 呈現<xref:System.Windows.Forms.ToolStrip>旁邊彼此水平項目。  
   
 ##### <a name="other-features-of-stack-layouts"></a>堆疊配置的其他功能  
  <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> 決定結尾<xref:System.Windows.Forms.ToolStrip>以對齊項目。  
@@ -218,32 +218,32 @@ ms.locfileid: "59296208"
 ##### <a name="flow-layout"></a>流程配置  
  <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> 版面配置是預設值<xref:System.Windows.Forms.ContextMenuStrip>， <xref:System.Windows.Forms.ToolStripDropDownMenu>，和<xref:System.Windows.Forms.ToolStripOverflow>。 類似於<xref:System.Windows.Forms.FlowLayoutPanel>。 功能<xref:System.Windows.Forms.ToolStripLayoutStyle.Flow>配置如下所示：  
   
--   所有的功能<xref:System.Windows.Forms.FlowLayoutPanel>都由公開<xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A>屬性。 您必須轉型<xref:System.Windows.Forms.LayoutSettings>類別來<xref:System.Windows.Forms.FlowLayoutSettings>類別。  
+- 所有的功能<xref:System.Windows.Forms.FlowLayoutPanel>都由公開<xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A>屬性。 您必須轉型<xref:System.Windows.Forms.LayoutSettings>類別來<xref:System.Windows.Forms.FlowLayoutSettings>類別。  
   
--   您可以使用<xref:System.Windows.Forms.ToolStripItem.Dock%2A>和<xref:System.Windows.Forms.ToolStripItem.Anchor%2A>對齊之資料列中的項目程式碼中的屬性。  
+- 您可以使用<xref:System.Windows.Forms.ToolStripItem.Dock%2A>和<xref:System.Windows.Forms.ToolStripItem.Anchor%2A>對齊之資料列中的項目程式碼中的屬性。  
   
--   忽略 <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> 屬性。  
+- 忽略 <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> 屬性。  
   
--   在 <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>事件，您可以檢查<xref:System.Windows.Forms.ToolStripItem.Placement%2A>屬性，以判斷項目是否已放在主要<xref:System.Windows.Forms.ToolStrip>或不適合。  
+- 在 <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>事件，您可以檢查<xref:System.Windows.Forms.ToolStripItem.Placement%2A>屬性，以判斷項目是否已放在主要<xref:System.Windows.Forms.ToolStrip>或不適合。  
   
--   不會呈現在底框，因此<xref:System.Windows.Forms.ToolStrip>中<xref:System.Windows.Forms.ToolStripLayoutStyle.Flow>中的版面配置樣式<xref:System.Windows.Forms.ToolStripPanel>無法移動。  
+- 不會呈現在底框，因此<xref:System.Windows.Forms.ToolStrip>中<xref:System.Windows.Forms.ToolStripLayoutStyle.Flow>中的版面配置樣式<xref:System.Windows.Forms.ToolStripPanel>無法移動。  
   
--   <xref:System.Windows.Forms.ToolStrip>溢位按鈕不會呈現，和<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>會被忽略。  
+- <xref:System.Windows.Forms.ToolStrip>溢位按鈕不會呈現，和<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>會被忽略。  
   
 ##### <a name="table-layout"></a>表格版面配置  
  <xref:System.Windows.Forms.ToolStripLayoutStyle.Table> 版面配置是預設值<xref:System.Windows.Forms.StatusStrip>。 類似於<xref:System.Windows.Forms.TableLayoutPanel>。 功能<xref:System.Windows.Forms.ToolStripLayoutStyle.Flow>配置如下所示：  
   
--   所有的功能<xref:System.Windows.Forms.TableLayoutPanel>都由公開<xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A>屬性。 您必須轉型<xref:System.Windows.Forms.LayoutSettings>類別來<xref:System.Windows.Forms.TableLayoutSettings>類別。  
+- 所有的功能<xref:System.Windows.Forms.TableLayoutPanel>都由公開<xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A>屬性。 您必須轉型<xref:System.Windows.Forms.LayoutSettings>類別來<xref:System.Windows.Forms.TableLayoutSettings>類別。  
   
--   您可以使用<xref:System.Windows.Forms.ToolStripItem.Dock%2A>和<xref:System.Windows.Forms.ToolStripItem.Anchor%2A>對齊項目與資料表資料格內的程式碼中的屬性。  
+- 您可以使用<xref:System.Windows.Forms.ToolStripItem.Dock%2A>和<xref:System.Windows.Forms.ToolStripItem.Anchor%2A>對齊項目與資料表資料格內的程式碼中的屬性。  
   
--   忽略 <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> 屬性。  
+- 忽略 <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> 屬性。  
   
--   在 <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>事件，您可以檢查<xref:System.Windows.Forms.ToolStripItem.Placement%2A>屬性，以判斷項目是否已放在主要<xref:System.Windows.Forms.ToolStrip>或不適合。  
+- 在 <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>事件，您可以檢查<xref:System.Windows.Forms.ToolStripItem.Placement%2A>屬性，以判斷項目是否已放在主要<xref:System.Windows.Forms.ToolStrip>或不適合。  
   
--   不會呈現在底框，因此<xref:System.Windows.Forms.ToolStrip>中<xref:System.Windows.Forms.ToolStripLayoutStyle.Table>中的版面配置樣式<xref:System.Windows.Forms.ToolStripPanel>無法移動。  
+- 不會呈現在底框，因此<xref:System.Windows.Forms.ToolStrip>中<xref:System.Windows.Forms.ToolStripLayoutStyle.Table>中的版面配置樣式<xref:System.Windows.Forms.ToolStripPanel>無法移動。  
   
--   <xref:System.Windows.Forms.ToolStrip>溢位按鈕不會呈現，和<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>會被忽略。  
+- <xref:System.Windows.Forms.ToolStrip>溢位按鈕不會呈現，和<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>會被忽略。  
   
 ## <a name="toolstripitem"></a>ToolStripItem  
  下列主題將描述<xref:System.Windows.Forms.ToolStripItem>和從它衍生的控制項。  
@@ -296,9 +296,9 @@ ms.locfileid: "59296208"
 ### <a name="toolstripcontrolhost"></a>ToolStripControlHost  
  <xref:System.Windows.Forms.ToolStripControlHost> 是抽象的基底類別，如<xref:System.Windows.Forms.ToolStripComboBox>， <xref:System.Windows.Forms.ToolStripTextBox>，和<xref:System.Windows.Forms.ToolStripProgressBar>。 <xref:System.Windows.Forms.ToolStripControlHost> 可以裝載其他控制項，包括自訂控制項，有兩種：  
   
--   建構<xref:System.Windows.Forms.ToolStripControlHost>的類別衍生自<xref:System.Windows.Forms.Control>。 若要完整存取裝載的控制項和屬性，您必須轉換<xref:System.Windows.Forms.ToolStripControlHost.Control%2A>回到實際屬性類別與它代表。  
+- 建構<xref:System.Windows.Forms.ToolStripControlHost>的類別衍生自<xref:System.Windows.Forms.Control>。 若要完整存取裝載的控制項和屬性，您必須轉換<xref:System.Windows.Forms.ToolStripControlHost.Control%2A>回到實際屬性類別與它代表。  
   
--   擴充<xref:System.Windows.Forms.ToolStripControlHost>，並繼承的類別預設建構函式中呼叫基底類別建構函式的類別衍生自傳遞<xref:System.Windows.Forms.Control>。 此選項可讓您包裝常見控制項的方法和屬性中的輕鬆存取<xref:System.Windows.Forms.ToolStrip>。  
+- 擴充<xref:System.Windows.Forms.ToolStripControlHost>，並繼承的類別預設建構函式中呼叫基底類別建構函式的類別衍生自傳遞<xref:System.Windows.Forms.Control>。 此選項可讓您包裝常見控制項的方法和屬性中的輕鬆存取<xref:System.Windows.Forms.ToolStrip>。  
   
 ### <a name="toolstripcombobox"></a>ToolStripComboBox  
  <xref:System.Windows.Forms.ToolStripComboBox> 已<xref:System.Windows.Forms.ComboBox>適合裝載於<xref:System.Windows.Forms.ToolStrip>。 在公開裝載的控制項屬性和事件的子集<xref:System.Windows.Forms.ToolStripComboBox>層級，但基礎<xref:System.Windows.Forms.ComboBox>控制項是完全可透過存取<xref:System.Windows.Forms.ToolStripComboBox.ComboBox%2A>屬性。  
@@ -326,15 +326,15 @@ ms.locfileid: "59296208"
 ### <a name="toolstripitem-generic-features"></a>ToolStripItem 泛型功能  
  <xref:System.Windows.Forms.ToolStripItem> 提供下列一般功能和選項，以繼承的控制項：  
   
--   核心事件  
+- 核心事件  
   
--   映像處理  
+- 映像處理  
   
--   對齊  
+- 對齊  
   
--   文字和影像的關聯性  
+- 文字和影像的關聯性  
   
--   顯示樣式  
+- 顯示樣式  
   
 #### <a name="core-events"></a>核心事件  
  <xref:System.Windows.Forms.ToolStripItem> 控制項接收自己按一下、 滑鼠及繪製事件，而且可以執行前置處理也有些鍵盤。  
@@ -344,11 +344,11 @@ ms.locfileid: "59296208"
   
  影像縮放取決於屬性中的互動<xref:System.Windows.Forms.ToolStrip>和<xref:System.Windows.Forms.ToolStripItem>、，如下所示：  
   
--   <xref:System.Windows.Forms.ToolStrip.ImageScalingSize%2A> 小數位數的映像的組合所決定的最終映像<xref:System.Windows.Forms.ToolStripItem.ImageScaling%2A>設定和容器的<xref:System.Windows.Forms.ToolStrip.AutoSize%2A>設定。  
+- <xref:System.Windows.Forms.ToolStrip.ImageScalingSize%2A> 小數位數的映像的組合所決定的最終映像<xref:System.Windows.Forms.ToolStripItem.ImageScaling%2A>設定和容器的<xref:System.Windows.Forms.ToolStrip.AutoSize%2A>設定。  
   
-    -   如果<xref:System.Windows.Forms.ToolStrip.AutoSize%2A>是`true`（預設值） 和<xref:System.Windows.Forms.ToolStripItemImageScaling>是<xref:System.Windows.Forms.ToolStripItemImageScaling.SizeToFit>，沒有映像將會進行調整，而<xref:System.Windows.Forms.ToolStrip>大小是最大的項目或指定的最小大小。  
+    - 如果<xref:System.Windows.Forms.ToolStrip.AutoSize%2A>是`true`（預設值） 和<xref:System.Windows.Forms.ToolStripItemImageScaling>是<xref:System.Windows.Forms.ToolStripItemImageScaling.SizeToFit>，沒有映像將會進行調整，而<xref:System.Windows.Forms.ToolStrip>大小是最大的項目或指定的最小大小。  
   
-    -   如果<xref:System.Windows.Forms.ToolStrip.AutoSize%2A>是`false`並<xref:System.Windows.Forms.ToolStripItemImageScaling>是<xref:System.Windows.Forms.ToolStripItemImageScaling.None>，沒有映像，也不<xref:System.Windows.Forms.ToolStrip>進行調整。  
+    - 如果<xref:System.Windows.Forms.ToolStrip.AutoSize%2A>是`false`並<xref:System.Windows.Forms.ToolStripItemImageScaling>是<xref:System.Windows.Forms.ToolStripItemImageScaling.None>，沒有映像，也不<xref:System.Windows.Forms.ToolStrip>進行調整。  
   
 #### <a name="alignment"></a>對齊  
  值<xref:System.Windows.Forms.ToolStripItem.Alignment%2A>屬性會決定結尾<xref:System.Windows.Forms.ToolStrip>在出現一個項目。 <xref:System.Windows.Forms.ToolStripItem.Alignment%2A>屬性的運作方式時，才的配置樣式<xref:System.Windows.Forms.ToolStrip>設為其中一個堆疊溢位值。  
@@ -364,17 +364,17 @@ ms.locfileid: "59296208"
 ## <a name="accessory-classes"></a>附屬類別  
  類別可提供各種其他功能包括：  
   
--   <xref:System.Windows.Forms.ToolStripManager> 支援<xref:System.Windows.Forms.ToolStrip>-相關工作，對於整個應用程式，例如合併、 設定和轉譯器的選項。  
+- <xref:System.Windows.Forms.ToolStripManager> 支援<xref:System.Windows.Forms.ToolStrip>-相關工作，對於整個應用程式，例如合併、 設定和轉譯器的選項。  
   
--   <xref:System.Windows.Forms.ToolStripRenderer> 可讓您套用特定的樣式或佈景主題來<xref:System.Windows.Forms.ToolStrip>輕鬆。  
+- <xref:System.Windows.Forms.ToolStripRenderer> 可讓您套用特定的樣式或佈景主題來<xref:System.Windows.Forms.ToolStrip>輕鬆。  
   
--   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 建立畫筆和筆刷可取代的色彩表為基礎 (<xref:System.Windows.Forms.ProfessionalColorTable>)。  
+- <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 建立畫筆和筆刷可取代的色彩表為基礎 (<xref:System.Windows.Forms.ProfessionalColorTable>)。  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer> 適用於系統色彩和平面視覺化樣式<xref:System.Windows.Forms.ToolStrip>應用程式。  
+- <xref:System.Windows.Forms.ToolStripSystemRenderer> 適用於系統色彩和平面視覺化樣式<xref:System.Windows.Forms.ToolStrip>應用程式。  
   
--   <xref:System.Windows.Forms.ToolStripContainer> 類似於<xref:System.Windows.Forms.SplitContainer>。 它會使用四個停駐的側邊面板 (的執行個體<xref:System.Windows.Forms.ToolStripPanel>) 以及一個中央面板 (執行個體<xref:System.Windows.Forms.ToolStripContentPanel>) 來建立一般的排列方式。 您無法移除側邊面板，但是您可以隱藏起來。 您不可以移除或隱藏中間的面板。 您可以使用一或多個排列<xref:System.Windows.Forms.ToolStrip>， <xref:System.Windows.Forms.MenuStrip>，或<xref:System.Windows.Forms.StatusStrip>側邊面板，和您的控制項可用於其他控制項的中央面板。 <xref:System.Windows.Forms.ToolStripContentPanel>也提供方法，以進入您的表單，維持一致的外觀的主體中的轉譯器支援。 <xref:System.Windows.Forms.ToolStripContainer> 不支援多個文件介面 (MDI)。  
+- <xref:System.Windows.Forms.ToolStripContainer> 類似於<xref:System.Windows.Forms.SplitContainer>。 它會使用四個停駐的側邊面板 (的執行個體<xref:System.Windows.Forms.ToolStripPanel>) 以及一個中央面板 (執行個體<xref:System.Windows.Forms.ToolStripContentPanel>) 來建立一般的排列方式。 您無法移除側邊面板，但是您可以隱藏起來。 您不可以移除或隱藏中間的面板。 您可以使用一或多個排列<xref:System.Windows.Forms.ToolStrip>， <xref:System.Windows.Forms.MenuStrip>，或<xref:System.Windows.Forms.StatusStrip>側邊面板，和您的控制項可用於其他控制項的中央面板。 <xref:System.Windows.Forms.ToolStripContentPanel>也提供方法，以進入您的表單，維持一致的外觀的主體中的轉譯器支援。 <xref:System.Windows.Forms.ToolStripContainer> 不支援多個文件介面 (MDI)。  
   
--   <xref:System.Windows.Forms.ToolStripPanel> 提供位置來移動和排列<xref:System.Windows.Forms.ToolStrip>控制項。 您可以使用只有一個面板，如果您選擇如此，和<xref:System.Windows.Forms.ToolStripPanel>在 MDI 狀況下順利運作。  
+- <xref:System.Windows.Forms.ToolStripPanel> 提供位置來移動和排列<xref:System.Windows.Forms.ToolStrip>控制項。 您可以使用只有一個面板，如果您選擇如此，和<xref:System.Windows.Forms.ToolStripPanel>在 MDI 狀況下順利運作。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
 ms.openlocfilehash: 81a19d063f31b3c28fc15a061b5173495e83f6fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009119"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項
 有些應用程式需要表單能在調整表單大小或變更內容大小時，自行適當排列配置。 當需要動態配置但不想用程式碼明確處理 <xref:System.Windows.Forms.Control.Layout> 事件時，請考慮使用配置面板。  
@@ -23,23 +23,23 @@ ms.locfileid: "59321883"
   
  <xref:System.Windows.Forms.FlowLayoutPanel> 會以特定的水平或垂直文字方向排列其內容。 其內容可以從某一資料列換行至下一個資料列，或從某一資料行換行至下一個資料行。 此外，也可裁剪其內容而不換行。 這個逐步解說中所述的工作包括：  
   
--   建立 Windows Forms 專案  
+- 建立 Windows Forms 專案  
   
--   以水平或垂直方式排列控制項  
+- 以水平或垂直方式排列控制項  
   
--   變更文字方向  
+- 變更文字方向  
   
--   插入流向中斷點  
+- 插入流向中斷點  
   
--   使用填補和邊界排列控制項  
+- 使用填補和邊界排列控制項  
   
--   在 [工具箱] 中按兩下控制項以插入控制項  
+- 在 [工具箱] 中按兩下控制項以插入控制項  
   
--   繪製控制項外框以插入控制項  
+- 繪製控制項外框以插入控制項  
   
--   使用插入號以插入控制項  
+- 使用插入號以插入控制項  
   
--   將現有控制項重新指派至不同的父代  
+- 將現有控制項重新指派至不同的父代  
   
  完成後，您就會了解這些重要配置功能所扮演的角色。  
   
@@ -179,13 +179,13 @@ ms.locfileid: "59321883"
 ## <a name="next-steps"></a>後續步驟  
  您可以組合配置面板和控制項，完成複雜的配置。 進一步的探索建議包括：  
   
--   放大其中一個 <xref:System.Windows.Forms.Button> 控制項的大小，注意配置的效果。  
+- 放大其中一個 <xref:System.Windows.Forms.Button> 控制項的大小，注意配置的效果。  
   
--   配置面板可以包含其他的配置面板。 實驗將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項放入現有的控制項。  
+- 配置面板可以包含其他的配置面板。 實驗將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項放入現有的控制項。  
   
--   將 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項停駐在父表單。 調整表單的大小，並注意配置的效果。  
+- 將 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項停駐在父表單。 調整表單的大小，並注意配置的效果。  
   
--   將其中一個控制項的 <xref:System.Windows.Forms.Control.Visible%2A> 屬性設為 `false` ，注意 <xref:System.Windows.Forms.FlowLayoutPanel> 如何回應重訂方向。  
+- 將其中一個控制項的 <xref:System.Windows.Forms.Control.Visible%2A> 屬性設為 `false` ，注意 <xref:System.Windows.Forms.FlowLayoutPanel> 如何回應重訂方向。  
   
 ## <a name="see-also"></a>另請參閱
 

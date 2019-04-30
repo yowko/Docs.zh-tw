@@ -5,11 +5,11 @@ helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
 ms.openlocfilehash: e34f2033ec0f7dac784634d06712d65786503299
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991254"
 ---
 # <a name="queues-overview"></a>佇列概觀
 本節將介紹已佇列通訊背後的一般和核心概念。 後續各節討論有關此處所述的佇列概念會列印文件的顯示，請在 Windows Communication Foundation (WCF) 的詳細資料。  
@@ -36,9 +36,9 @@ ms.locfileid: "59099764"
 ## <a name="queues-and-transactions"></a>佇列與異動  
  交易允許您組成一組作業，如果一個作業失敗，所有作業都會失敗。 下列範例說明如何使用異動，當有人使用 ATM 將 $1,000 從他的存款帳戶轉到他的支票帳戶時， 這需要下列作業：  
   
--   從存款帳戶提款 $1,000。  
+- 從存款帳戶提款 $1,000。  
   
--   將 $1,000 存入支票帳戶。  
+- 將 $1,000 存入支票帳戶。  
   
  如果第一個作業成功，並從存款帳戶提款 $1,000，但是第二個作業失敗，則會因為已經從存款帳戶中提出 $1,000，而遺失了 $1,000。 為了讓帳戶處於有效狀態，如果其中一個作業失敗，兩個作業都必須失敗。  
   
@@ -59,9 +59,9 @@ ms.locfileid: "59099764"
   
  任何錯誤 (例如無法到達目標佇列或存留時間過期的訊息) 都必須分開處理。 因此，已佇列應用程式撰寫兩套邏輯是很常見的：  
   
--   傳送及接收訊息的一般用戶端和服務邏輯。  
+- 傳送及接收訊息的一般用戶端和服務邏輯。  
   
--   處理來自失敗傳輸或傳遞之訊息的補償邏輯。  
+- 處理來自失敗傳輸或傳遞之訊息的補償邏輯。  
   
  下列各節將說明這些概念。  
   

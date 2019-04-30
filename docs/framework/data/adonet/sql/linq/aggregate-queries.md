@@ -3,24 +3,24 @@ title: 彙總查詢
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
 ms.openlocfilehash: ed8624c47ca8e68646f176ff91b63577d64b6d1f
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032548"
 ---
 # <a name="aggregate-queries"></a>彙總查詢
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援 `Average`、`Count`、`Max`、`Min` 和 `Sum` 彙總運算子。 請注意，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的彙總運算子有下列特性：  
   
--   彙總查詢會立即執行。  
+- 彙總查詢會立即執行。  
   
      如需詳細資訊，請參閱 [LINQ 查詢簡介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。  
   
--   彙總查詢通常會傳回數字，而不是集合。  
+- 彙總查詢通常會傳回數字，而不是集合。  
   
      如需詳細資訊，請參閱 <<c0> [ 彙總作業](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120))。  
   
--   您不可以對匿名型別呼叫彙總。  
+- 您不可以對匿名型別呼叫彙總。  
   
  下列主題中的範例衍生自 Northwind 範例資料庫。 如需詳細資訊，請參閱 <<c0> [ 下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   

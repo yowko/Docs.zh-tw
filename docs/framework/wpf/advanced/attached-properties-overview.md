@@ -8,11 +8,11 @@ helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
 ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032228"
 ---
 # <a name="attached-properties-overview"></a>附加屬性概觀
 
@@ -46,11 +46,11 @@ ms.locfileid: "57370120"
 
 雖然可在任何物件上設定附加屬性，但是這不自動表示設定屬性就會產生明確結果，或者另一個物件將使用值。 一般而言，會使用附加屬性，讓來自各種可能類別階層或邏輯關聯性的物件都可以報告可定義附加屬性之類型的通用資訊。 可定義附加屬性的類型通常會遵循下列其中一個模型︰
 
--   設計可定義附加屬性的類型，因此它可以是設定附加屬性值之項目的父項目。 類型接著會透過內部邏輯針對某個物件樹狀結構逐一查看其子物件，並取得值，然後以某種方式處理這些值。
+- 設計可定義附加屬性的類型，因此它可以是設定附加屬性值之項目的父項目。 類型接著會透過內部邏輯針對某個物件樹狀結構逐一查看其子物件，並取得值，然後以某種方式處理這些值。
 
--   可定義附加屬性的類型將會用作各種可能父項目和內容模組的子項目。
+- 可定義附加屬性的類型將會用作各種可能父項目和內容模組的子項目。
 
--   可定義附加屬性的類型代表服務。 其他類型設定附加屬性的值。 然後，在服務內容中評估可設定屬性的項目時，會透過服務類別的內部邏輯取得附加屬性值。
+- 可定義附加屬性的類型代表服務。 其他類型設定附加屬性的值。 然後，在服務內容中評估可設定屬性的項目時，會透過服務類別的內部邏輯取得附加屬性值。
 
 ### <a name="an-example-of-a-parent-defined-attached-property"></a>父代已定義的附加屬性範例
 
@@ -102,9 +102,9 @@ WPF 定義附加的屬性的地方的最常見案例是當父項目支援子項�
 
 `public static object GetPropertyName(object target)`
 
--   `target` 物件可以指定為實作中的更特定類型。 例如，<xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType>方法類型參數做為<xref:System.Windows.UIElement>，因為附加的屬性只是要在設定<xref:System.Windows.UIElement>執行個體。
+- `target` 物件可以指定為實作中的更特定類型。 例如，<xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType>方法類型參數做為<xref:System.Windows.UIElement>，因為附加的屬性只是要在設定<xref:System.Windows.UIElement>執行個體。
 
--   傳回值可以指定為實作中的更特定類型。 例如，<xref:System.Windows.Controls.DockPanel.GetDock%2A>方法型別為<xref:System.Windows.Controls.Dock>，因為值只能設定為該列舉。
+- 傳回值可以指定為實作中的更特定類型。 例如，<xref:System.Windows.Controls.DockPanel.GetDock%2A>方法型別為<xref:System.Windows.Controls.Dock>，因為值只能設定為該列舉。
 
 #### <a name="the-set-accessor"></a>Set 存取子
 
@@ -112,9 +112,9 @@ WPF 定義附加的屬性的地方的最常見案例是當父項目支援子項�
 
 `public static void SetPropertyName(object target, object value)`
 
--   `target` 物件可以指定為實作中的更特定類型。 例如，<xref:System.Windows.Controls.DockPanel.SetDock%2A>方法型別為<xref:System.Windows.UIElement>，因為附加的屬性只是要在設定<xref:System.Windows.UIElement>執行個體。
+- `target` 物件可以指定為實作中的更特定類型。 例如，<xref:System.Windows.Controls.DockPanel.SetDock%2A>方法型別為<xref:System.Windows.UIElement>，因為附加的屬性只是要在設定<xref:System.Windows.UIElement>執行個體。
 
--   `value` 物件可以指定為實作中的更特定類型。 例如，<xref:System.Windows.Controls.DockPanel.SetDock%2A>方法型別為<xref:System.Windows.Controls.Dock>，因為值只能設定為該列舉。 請記住，當這個方法在標記的附加屬性使用方式中遇到附加屬性時，其值是來自 XAML 載入器的輸入。 該輸入是指定為標記中 XAML 屬性值的值。 因此，您使用的類型必須要有類型轉換、值序列化程式或標記延伸支援，因此，可以從屬性值 (這最後就是一個字串) 建立適當的類型。
+- `value` 物件可以指定為實作中的更特定類型。 例如，<xref:System.Windows.Controls.DockPanel.SetDock%2A>方法型別為<xref:System.Windows.Controls.Dock>，因為值只能設定為該列舉。 請記住，當這個方法在標記的附加屬性使用方式中遇到附加屬性時，其值是來自 XAML 載入器的輸入。 該輸入是指定為標記中 XAML 屬性值的值。 因此，您使用的類型必須要有類型轉換、值序列化程式或標記延伸支援，因此，可以從屬性值 (這最後就是一個字串) 建立適當的類型。
 
 下列範例示範相依性屬性註冊 (使用<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法)，以及**Get_PropertyName_** 並**Set_PropertyName_** 存取子。 在此範例中，附加屬性名稱為 `IsBubbleSource`。 因此，存取子必須命名為 `GetIsBubbleSource` 和 `SetIsBubbleSource`。
 
@@ -125,21 +125,21 @@ WPF 定義附加的屬性的地方的最常見案例是當父項目支援子項�
 
 WPF 定義數個[!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)]，要提供給反映程序，並反映和屬性的資訊，例如設計工具的一般使用者的附加屬性的相關資訊。 因為附加屬性的類型為無限制範圍，所以設計人員需要方法來避免使用 XAML 的特定技術實作中所定義之所有附加屬性的全域清單，讓使用者無所適從。 [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)]該 WPF 定義附加的屬性可以用來限定範圍的情況，其中指定的附加的屬性應該會顯示在 [屬性] 視窗。 您也可以考慮針對您自己的自訂附加屬性套用這些屬性。 適當的參考頁面會描述 [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] 的用途和語法：
 
--   <xref:System.Windows.AttachedPropertyBrowsableAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute>
 
 ## 深入了解附加屬性 <a name="more"></a>
 
--   如需建立附加屬性的詳細資訊，請參閱[註冊附加屬性](how-to-register-an-attached-property.md)。
+- 如需建立附加屬性的詳細資訊，請參閱[註冊附加屬性](how-to-register-an-attached-property.md)。
 
--   如需相依性屬性和附加屬性的更進階使用方式情節，請參閱[自訂相依性屬性](custom-dependency-properties.md)。
+- 如需相依性屬性和附加屬性的更進階使用方式情節，請參閱[自訂相依性屬性](custom-dependency-properties.md)。
 
--   您也可以將屬性註冊為附加屬性和相依性屬性，但仍公開「包裝函式」實作。 在此情況下，可以在該項目上設定屬性，或透過 XAML 附加屬性語法的任何項目上設定屬性。 舉例來說，標準和附加使用方式之適當情節的屬性是<xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>。
+- 您也可以將屬性註冊為附加屬性和相依性屬性，但仍公開「包裝函式」實作。 在此情況下，可以在該項目上設定屬性，或透過 XAML 附加屬性語法的任何項目上設定屬性。 舉例來說，標準和附加使用方式之適當情節的屬性是<xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>。
 
 ## <a name="see-also"></a>另請參閱
 

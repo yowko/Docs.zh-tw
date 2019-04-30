@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
 ms.openlocfilehash: bcd142785d8ee736c6a1b41950fae80e4d26fa18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013643"
 ---
 # <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>變數的類型 '\<變數名稱 >' 將不會推斷，因為它繫結至封閉範圍中的欄位
 變數的類型 '\<變數名稱 >' 將不會推斷，因為它繫結至封閉範圍中的欄位。 請變更名稱 '\<變數名稱 >'，或使用完整格式的名稱 （例如 'Me.variablename' 或 'MyBase.variablename'）。  
@@ -44,19 +44,19 @@ End Class
   
 ### <a name="to-address-this-warning"></a>解決這個警告  
   
--   也是不是類別的欄位名稱的識別項來變更其名稱，使迴圈控制變數本機。  
+- 也是不是類別的欄位名稱的識別項來變更其名稱，使迴圈控制變數本機。  
   
     ```  
     For I = 1 To 10  
     ```  
   
--   釐清，迴圈控制變數繫結至 [類別] 欄位前面加上`Me.`變數的名稱。  
+- 釐清，迴圈控制變數繫結至 [類別] 欄位前面加上`Me.`變數的名稱。  
   
     ```  
     For Me.Index = 1 To 10  
     ```  
   
--   而不是依賴區域型別推斷，使用`As`子句來指定迴圈控制變數的類型。  
+- 而不是依賴區域型別推斷，使用`As`子句來指定迴圈控制變數的類型。  
   
     ```  
     For Index As Integer = 1 To 10  

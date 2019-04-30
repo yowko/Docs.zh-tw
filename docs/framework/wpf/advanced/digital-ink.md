@@ -8,11 +8,11 @@ helpviewer_keywords:
 - digital ink [WPF]
 ms.assetid: d0d6df69-daf9-4cf3-b7f9-ffee588037a3
 ms.openlocfilehash: 1f68eafba64f45a77687d09d2e1ab709a76c0e33
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010552"
 ---
 # <a name="digital-ink"></a>數位筆跡
 本章節將討論使用中的數位筆跡[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 傳統上只有在 Tablet PC SDK 中找到，數位筆跡現提供 Windows Presentation Foundation 的核心。 這表示您現在可以使用 Windows Presentation Foundation 的功能，開發一個完備的 Tablet PC 應用程式。  

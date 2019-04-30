@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
 ms.openlocfilehash: 79dc7a3578c395ae8cdf5933e1249441f97071a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053690"
 ---
 # <a name="3-d-graphics-overview"></a>立體圖形概觀
 <a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 功能可讓開發人員以標記和程序性程式碼繪製、轉換 3D 圖形，以及以動畫顯示 3D 圖形。 開發人員可以結合 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 和 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 圖形來建立豐富的控制項、提供複雜的資料說明，或者加強應用程式介面的使用者體驗。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 支援不適用於提供完整功能的遊戲開發平台。 本主題將提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 圖形系統中 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 功能的概觀。  
@@ -86,11 +86,11 @@ ms.locfileid: "59087985"
   
  若要定義模型表面的特性[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用<xref:System.Windows.Media.Media3D.Material>抽象類別。 Material 的具體子類別會決定模型表面的一些外觀特性，每個特性也提供您可以傳遞 SolidColorBrush、TileBrush 或 VisualBrush 的 Brush 屬性。  
   
--   <xref:System.Windows.Media.Media3D.DiffuseMaterial> 指定模型將套用的筆刷，如同該模型已擴散光源。 使用 DiffuseMaterial 非常類似直接對 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 模型使用筆刷；模型表面不會反射光線但看起來閃亮。  
+- <xref:System.Windows.Media.Media3D.DiffuseMaterial> 指定模型將套用的筆刷，如同該模型已擴散光源。 使用 DiffuseMaterial 非常類似直接對 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 模型使用筆刷；模型表面不會反射光線但看起來閃亮。  
   
--   <xref:System.Windows.Media.Media3D.SpecularMaterial> 指定模型將套用的筆刷，如同模型表面堅硬或閃亮，能夠反射強光。 您可以藉由指定的值來設定此反射質地或 「 閃亮 」，材質會提供建議的程度<xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A>屬性。  
+- <xref:System.Windows.Media.Media3D.SpecularMaterial> 指定模型將套用的筆刷，如同模型表面堅硬或閃亮，能夠反射強光。 您可以藉由指定的值來設定此反射質地或 「 閃亮 」，材質會提供建議的程度<xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A>屬性。  
   
--   <xref:System.Windows.Media.Media3D.EmissiveMaterial> 可讓您指定將套用紋理，如同模型已發出的筆刷色彩的光線等於。 這不會讓模型變成光源。不過，這會影響陰影處理的方式，與透過 DiffuseMaterial 或 SpecularMaterial 加上紋理的方式不同。  
+- <xref:System.Windows.Media.Media3D.EmissiveMaterial> 可讓您指定將套用紋理，如同模型已發出的筆刷色彩的光線等於。 這不會讓模型變成光源。不過，這會影響陰影處理的方式，與透過 DiffuseMaterial 或 SpecularMaterial 加上紋理的方式不同。  
   
  為了達到最佳效能，達到的<xref:System.Windows.Media.Media3D.GeometryModel3D>（不檢視，因為它們位於相機中模型的另一端的那些面） 會從場景中挑選。  若要指定<xref:System.Windows.Media.Media3D.Material>要套用至模型，例如平面的背面，設定模型的<xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>屬性。  
   
@@ -111,13 +111,13 @@ ms.locfileid: "59087985"
   
  下列光線衍生自基底類別<xref:System.Windows.Media.Media3D.Light>:  
   
--   <xref:System.Windows.Media.Media3D.AmbientLight>：提供環境光線，不論其位置或方向，統一的所有物件。  
+- <xref:System.Windows.Media.Media3D.AmbientLight>：提供環境光線，不論其位置或方向，統一的所有物件。  
   
--   <xref:System.Windows.Media.Media3D.DirectionalLight>：位於等較遠的光線來源。  定向光線有<xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A>指定為 Vector3D，但沒有指定的位置。  
+- <xref:System.Windows.Media.Media3D.DirectionalLight>：位於等較遠的光線來源。  定向光線有<xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A>指定為 Vector3D，但沒有指定的位置。  
   
--   <xref:System.Windows.Media.Media3D.PointLight>：位於光源等。 PointLights 有一個位置，並從該位置投射光線。 場景中的物件會根據其相對於光線的位置和距離來照明。 <xref:System.Windows.Media.Media3D.PointLightBase> 會公開<xref:System.Windows.Media.Media3D.PointLightBase.Range%2A>決定的距離，超過此模型將不會以醒目顯示光線的屬性。 PointLight 也公開衰減屬性，決定光線強度如何隨距離而降低。 您可以為光線衰減指定常數、線性插補或二次插補。  
+- <xref:System.Windows.Media.Media3D.PointLight>：位於光源等。 PointLights 有一個位置，並從該位置投射光線。 場景中的物件會根據其相對於光線的位置和距離來照明。 <xref:System.Windows.Media.Media3D.PointLightBase> 會公開<xref:System.Windows.Media.Media3D.PointLightBase.Range%2A>決定的距離，超過此模型將不會以醒目顯示光線的屬性。 PointLight 也公開衰減屬性，決定光線強度如何隨距離而降低。 您可以為光線衰減指定常數、線性插補或二次插補。  
   
--   <xref:System.Windows.Media.Media3D.SpotLight>：繼承自 <xref:System.Windows.Media.Media3D.PointLight>。 Spotlight 照明的方式類似 PointLight，而且有位置和方向兩者。 他們將設定的圓錐形區域中的光線投射<xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A>和<xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A>以度為單位指定的屬性。  
+- <xref:System.Windows.Media.Media3D.SpotLight>：繼承自 <xref:System.Windows.Media.Media3D.PointLight>。 Spotlight 照明的方式類似 PointLight，而且有位置和方向兩者。 他們將設定的圓錐形區域中的光線投射<xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A>和<xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A>以度為單位指定的屬性。  
   
  燈號都<xref:System.Windows.Media.Media3D.Model3D>物件，因此您可以轉換，並以動畫顯示光線的屬性，包括位置、 色彩、 方向和範圍。  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
 ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002387"
 ---
 # <a name="timing-events-overview"></a>計時事件概觀
 本主題描述如何使用提供的五個計時事件<xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>物件。  
@@ -23,11 +23,11 @@ ms.locfileid: "59167163"
   
  有多種方式可用來以動畫顯示屬性在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
--   **使用分鏡腳本物件**（標記和程式碼）：您可以使用<xref:System.Windows.Media.Animation.Storyboard>排列及散發至一或多個物件的動畫的物件。 如需範例，請參閱[使用分鏡腳本建立屬性的動畫](how-to-animate-a-property-by-using-a-storyboard.md)。  
+- **使用分鏡腳本物件**（標記和程式碼）：您可以使用<xref:System.Windows.Media.Animation.Storyboard>排列及散發至一或多個物件的動畫的物件。 如需範例，請參閱[使用分鏡腳本建立屬性的動畫](how-to-animate-a-property-by-using-a-storyboard.md)。  
   
--   **使用本機動畫**（僅程式碼）：您可以套用<xref:System.Windows.Media.Animation.AnimationTimeline>直接向它們要建立動畫之屬性的物件。 如需範例，請參閱[不使用分鏡腳本而建立屬性的動畫](how-to-animate-a-property-without-using-a-storyboard.md)。  
+- **使用本機動畫**（僅程式碼）：您可以套用<xref:System.Windows.Media.Animation.AnimationTimeline>直接向它們要建立動畫之屬性的物件。 如需範例，請參閱[不使用分鏡腳本而建立屬性的動畫](how-to-animate-a-property-without-using-a-storyboard.md)。  
   
--   **使用時鐘**（僅程式碼）：您可以明確管理時鐘的建立，並自行發佈動畫時鐘。  如需範例，請參閱[藉由使用 AnimationClock 建立屬性的動畫](how-to-animate-a-property-by-using-an-animationclock.md)。  
+- **使用時鐘**（僅程式碼）：您可以明確管理時鐘的建立，並自行發佈動畫時鐘。  如需範例，請參閱[藉由使用 AnimationClock 建立屬性的動畫](how-to-animate-a-property-by-using-an-animationclock.md)。  
   
  因為您可以使用這些標記和程式碼，此概觀中的範例使用<xref:System.Windows.Media.Animation.Storyboard>物件。 不過，所述的概念也可以套用到其他建立屬性動畫的方法。  
   

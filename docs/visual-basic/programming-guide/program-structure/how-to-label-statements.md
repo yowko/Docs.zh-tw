@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
 ms.openlocfilehash: 69ec8c7625410f140c59ba8dd492dca76857eb96
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050427"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>HOW TO：標籤陳述式 (Visual Basic)
 陳述式區塊所組成的以分號分隔的程式碼行。 據說是幾行程式碼，加上識別的字串或整數*標示為*。 陳述式標籤用來標記行程式碼來加以識別，以便使用陳述式這類`On Error Goto`。  
@@ -28,7 +28,7 @@ ms.locfileid: "58828637"
   
 ### <a name="to-label-a-line-of-code"></a>若要標記一行程式碼  
   
--   將後面接著冒號，在原始程式碼行開頭的識別碼。  
+- 將後面接著冒號，在原始程式碼行開頭的識別碼。  
   
      例如，下列程式碼會加上`Jump`和`120`分別：  
   

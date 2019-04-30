@@ -7,11 +7,11 @@ helpviewer_keywords:
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
 ms.openlocfilehash: 89cb36dba63dccdf7e52b7fcafbe3d9fc2fea1e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053427"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>XamlWriter.Save 的序列化限制
 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A>可以用來序列化的內容[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式中[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]檔案。 不過，究竟要將哪些項目序列化，則有一些值得注意的限制。 本主題將說明這些限制及一些一般考量。  
@@ -36,8 +36,8 @@ ms.locfileid: "59113278"
 ## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>使用 XAMLWriter.Save 的真實案例  
  雖然限制列出如下相當多，還有數個使用的適當案例<xref:System.Windows.Markup.XamlWriter.Save%2A>進行序列化。  
   
--   向量或圖形輸出：轉譯區域的輸出可用來重新產生相同的向量或圖形時重新載入。  
+- 向量或圖形輸出：轉譯區域的輸出可用來重新產生相同的向量或圖形時重新載入。  
   
--   豐富的文字和非固定格式文件：文字和所有項目格式設定和項目內含項目內會保留在輸出中。 這適用於估計剪貼簿功能的機制。  
+- 豐富的文字和非固定格式文件：文字和所有項目格式設定和項目內含項目內會保留在輸出中。 這適用於估計剪貼簿功能的機制。  
   
--   保留商務物件資料：如果您將資料儲存在自訂的項目，例如[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料，只要您的商務物件遵循基本[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]等提供自訂建構函式和傳址屬性值的轉換規則，這些商務物件可以是永久存在於透過序列化。
+- 保留商務物件資料：如果您將資料儲存在自訂的項目，例如[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料，只要您的商務物件遵循基本[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]等提供自訂建構函式和傳址屬性值的轉換規則，這些商務物件可以是永久存在於透過序列化。

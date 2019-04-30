@@ -14,11 +14,11 @@ helpviewer_keywords:
 - list boxes
 ms.assetid: 2a525f72-0245-41d7-94e9-b9c971dc4484
 ms.openlocfilehash: 4d24a25a0b033caeb165566eb0dc5a2e189a8d4a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956451"
 ---
 # <a name="checkedlistbox-control-windows-forms"></a>CheckedListBox 控制項 (Windows Form)
 Windows Forms`CheckedListBox`控制項會顯示一份項目，例如<xref:System.Windows.Forms.ListBox>控制項，並也可以顯示在清單中項目旁的核取記號。  

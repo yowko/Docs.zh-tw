@@ -3,11 +3,11 @@ title: 有害訊息處理
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
 ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046433"
 ---
 # <a name="poison-message-handling"></a>有害訊息處理
 A*有害訊息*是超過嘗試傳遞至應用程式的數目上限的訊息。 這種情形可能會在佇列架構的應用程式因為錯誤而無法處理訊息時發生。 為了符合可靠性的需求，佇列的應用程式會在交易中接收訊息。 若中止了接收佇列訊息的異動，則會讓訊息留在佇列中，而訊息將會在新的異動中重試。 如果造成異動中止的問題未予以更正，則接收的應用程式可能會卡在接收及中止相同訊息的迴圈中，直到超過傳遞嘗試次數的上限為止，因而形成有害訊息。  
@@ -19,27 +19,27 @@ A*有害訊息*是超過嘗試傳遞至應用程式的數目上限的訊息。 �
 ## <a name="handling-poison-messages"></a>處理有害訊息  
  在 WCF 中，有害訊息處理會提供一個機制來處理無法分派至應用程式的訊息或訊息分派至應用程式，但因為特定的應用程式處理失敗的接收應用程式原因。 有害訊息處理是由每個可用佇列繫結中的以下屬性所設定：  
   
--   `ReceiveRetryCount`. 整數值，表示從應用程式佇列傳遞至應用程式的訊息重試次數上限。 預設值為 5。 這個值對於立即重試即可修正問題的情況來說就已足夠，例如資料庫上發生暫時死結時。  
+- `ReceiveRetryCount`. 整數值，表示從應用程式佇列傳遞至應用程式的訊息重試次數上限。 預設值為 5。 這個值對於立即重試即可修正問題的情況來說就已足夠，例如資料庫上發生暫時死結時。  
   
--   `MaxRetryCycles`. 整數值，表示重試週期的上限。 重試週期包含從應用程式佇列將訊息傳輸至重試子佇列，然後在經過一段可設定的延遲之後，再從重試子佇列傳回應用程式佇列，重新嘗試傳遞。 預設值為 2。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，訊息最多會嘗試 (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1) 次。 在 `MaxRetryCycles` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 上則會忽略 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
+- `MaxRetryCycles`. 整數值，表示重試週期的上限。 重試週期包含從應用程式佇列將訊息傳輸至重試子佇列，然後在經過一段可設定的延遲之後，再從重試子佇列傳回應用程式佇列，重新嘗試傳遞。 預設值為 2。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，訊息最多會嘗試 (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1) 次。 在 `MaxRetryCycles` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 上則會忽略 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
   
--   `RetryCycleDelay`. 重試週期之間的時間延遲。 預設值為 30 分鐘。 `MaxRetryCycles` 和 `RetryCycleDelay` 會一起提供解決問題的機制，透過定期延遲之後的重試，進行問題的修正。 例如，這個機制會處理 SQL Server 中所設定等待異動認可的鎖定資料列。  
+- `RetryCycleDelay`. 重試週期之間的時間延遲。 預設值為 30 分鐘。 `MaxRetryCycles` 和 `RetryCycleDelay` 會一起提供解決問題的機制，透過定期延遲之後的重試，進行問題的修正。 例如，這個機制會處理 SQL Server 中所設定等待異動認可的鎖定資料列。  
   
--   `ReceiveErrorHandling`. 列舉型別，指出要針對達到重試次數上限之後，而導致傳遞失敗的訊息所採取的動作。 這個值可以是 Fault、Drop、Reject 和 Move。 預設選項為 Fault。  
+- `ReceiveErrorHandling`. 列舉型別，指出要針對達到重試次數上限之後，而導致傳遞失敗的訊息所採取的動作。 這個值可以是 Fault、Drop、Reject 和 Move。 預設選項為 Fault。  
   
--   Fault： 這個選項會將錯誤傳送至造成 `ServiceHost` 失敗的接聽項。 訊息必須藉由某種外部機制從應用程式佇列中移除，應用程式才能繼續處理佇列中的訊息。  
+- Fault： 這個選項會將錯誤傳送至造成 `ServiceHost` 失敗的接聽項。 訊息必須藉由某種外部機制從應用程式佇列中移除，應用程式才能繼續處理佇列中的訊息。  
   
--   Drop： 這個選項會捨棄有害訊息，而且該訊息永遠不會傳遞至應用程式。 如果訊息的 `TimeToLive` 屬性此時已過期，那麼訊息便可能會出現在傳送者寄不出的信件佇列中。 如果未過期的話，訊息不會出現在任何位置。 這個選項表示，使用者尚未指定訊息遺失時的做法。  
+- Drop： 這個選項會捨棄有害訊息，而且該訊息永遠不會傳遞至應用程式。 如果訊息的 `TimeToLive` 屬性此時已過期，那麼訊息便可能會出現在傳送者寄不出的信件佇列中。 如果未過期的話，訊息不會出現在任何位置。 這個選項表示，使用者尚未指定訊息遺失時的做法。  
   
--   Reject： 這個選項只在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上提供。 這個選項會指示 Message Queuing (MSMQ) 將負值通知傳回傳送的佇列管理員，說明應用程式無法接收訊息。 訊息會放在傳送的佇列管理員寄不出的信件佇列中。  
+- Reject： 這個選項只在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上提供。 這個選項會指示 Message Queuing (MSMQ) 將負值通知傳回傳送的佇列管理員，說明應用程式無法接收訊息。 訊息會放在傳送的佇列管理員寄不出的信件佇列中。  
   
--   Move： 這個選項只在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上提供。 這個選項會將有害訊息移到有害訊息佇列，以便之後讓有害訊息處理應用程式進行處理。 有害訊息佇列是應用程式佇列的子佇列。 有害訊息處理應用程式可以是 WCF 服務，以讀取從有害佇列的訊息。 有害佇列是應用程式佇列的子佇列，並可以定址為 net.msmq://\<*電腦名稱*>/*applicationQueue*; poison，其中*電腦名稱*是佇列所在電腦的名稱， *applicationQueue*是應用程式專屬佇列的名稱。  
+- Move： 這個選項只在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上提供。 這個選項會將有害訊息移到有害訊息佇列，以便之後讓有害訊息處理應用程式進行處理。 有害訊息佇列是應用程式佇列的子佇列。 有害訊息處理應用程式可以是 WCF 服務，以讀取從有害佇列的訊息。 有害佇列是應用程式佇列的子佇列，並可以定址為 net.msmq://\<*電腦名稱*>/*applicationQueue*; poison，其中*電腦名稱*是佇列所在電腦的名稱， *applicationQueue*是應用程式專屬佇列的名稱。  
   
  以下為訊息的嘗試傳遞次數上限：  
   
--   在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上為 ((ReceiveRetryCount+1) * (MaxRetryCycles + 1))。  
+- 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上為 ((ReceiveRetryCount+1) * (MaxRetryCycles + 1))。  
   
--   在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上為 (ReceiveRetryCount + 1)。  
+- 在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上為 (ReceiveRetryCount + 1)。  
   
 > [!NOTE]
 >  成功傳遞的訊息不會有任何重試次數。  
@@ -52,9 +52,9 @@ A*有害訊息*是超過嘗試傳遞至應用程式的數目上限的訊息。 �
   
  WCF 提供兩個標準的佇列繫結：  
   
--   <xref:System.ServiceModel.NetMsmqBinding>. A[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]適用於執行佇列為基礎的通訊，與其他 WCF 端點繫結。  
+- <xref:System.ServiceModel.NetMsmqBinding>. A[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]適用於執行佇列為基礎的通訊，與其他 WCF 端點繫結。  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. 此繫結適合用來與現有的訊息佇列應用程式進行通訊。  
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. 此繫結適合用來與現有的訊息佇列應用程式進行通訊。  
   
 > [!NOTE]
 >  您可以變更這些 WCF 服務的需求為基礎的繫結中的屬性。 對於接收應用程式而言，整個有害訊息處理機制是在本機上進行的。 傳送應用程式看不到這個程序，除非接收應用程式最後停止並且將負值通知傳回至傳送者。 在這種情況下，訊息會移到傳送者寄不出的信件佇列中。  
@@ -97,11 +97,11 @@ A*有害訊息*是超過嘗試傳遞至應用程式的數目上限的訊息。 �
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Windows Vista、Windows Server 2003 及 Windows XP 的差異  
  如之前所述，並非所有有害訊息處理設定都適用於 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。 下列 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]、[!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上之訊息佇列間的主要差異，都與有害訊息處理相關：  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的訊息佇列支援子佇列，而 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 則不支援子佇列。 子佇列是在有害訊息處理中使用。 重試佇列和有害佇列都是應用程式佇列的子佇列，應用程式佇列是根據有害訊息處理設定而建立的。 `MaxRetryCycles` 會指示要建立多少重試子佇列。 因此，當在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上執行時，會略過 `MaxRetryCycles` 並且不允許 `ReceiveErrorHandling.Move`。  
+- [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的訊息佇列支援子佇列，而 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 則不支援子佇列。 子佇列是在有害訊息處理中使用。 重試佇列和有害佇列都是應用程式佇列的子佇列，應用程式佇列是根據有害訊息處理設定而建立的。 `MaxRetryCycles` 會指示要建立多少重試子佇列。 因此，當在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上執行時，會略過 `MaxRetryCycles` 並且不允許 `ReceiveErrorHandling.Move`。  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的訊息佇列支援負值通知，而 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 則不支援。 來自接收佇列管理員的負認可會造成傳送佇列管理員將拒絕的訊息放在寄不出的信件佇列中。 因此，`ReceiveErrorHandling.Reject` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 不可使用 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
+- [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的訊息佇列支援負值通知，而 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 則不支援。 來自接收佇列管理員的負認可會造成傳送佇列管理員將拒絕的訊息放在寄不出的信件佇列中。 因此，`ReceiveErrorHandling.Reject` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 不可使用 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的訊息佇列支援能夠保留嘗試傳遞訊息之計數的訊息屬性 這個中止計數屬性無法在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上使用。 WCF 會維護記憶體中的中止計數，因此它是這個屬性可能不包含精確的值相同的訊息讀取的伺服陣列中的多個 WCF 服務時。  
+- [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的訊息佇列支援能夠保留嘗試傳遞訊息之計數的訊息屬性 這個中止計數屬性無法在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上使用。 WCF 會維護記憶體中的中止計數，因此它是這個屬性可能不包含精確的值相同的訊息讀取的伺服陣列中的多個 WCF 服務時。  
   
 ## <a name="see-also"></a>另請參閱
 

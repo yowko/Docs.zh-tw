@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
 ms.openlocfilehash: 3cf9d133aee5a2c3d93c1a464c96fdaebcf230f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018186"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>逐步解說：使用 Microsoft Expression Blend 建立按鈕
 本逐步解說將引導您完成建立程序[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]使用 Microsoft Expression Blend 的自訂的按鈕。  
@@ -117,17 +117,17 @@ ms.locfileid: "59300457"
   
 10. **請看起來像玻璃的 glassCube:** 設定<xref:System.Windows.Shapes.Shape.Fill%2A>光滑看使用線形漸層 75%不透明且交替使用的色彩為白色和透明超過 6 大約平均地間距間隔。 這是要設定為漸層停駐的項目：  
   
-    -   漸層停駐 1:白色，並且 75%的 Alpha 值  
+    - 漸層停駐 1:白色，並且 75%的 Alpha 值  
   
-    -   漸層停駐 2:透明  
+    - 漸層停駐 2:透明  
   
-    -   漸層停駐 3:白色，並且 75%的 Alpha 值  
+    - 漸層停駐 3:白色，並且 75%的 Alpha 值  
   
-    -   漸層停駐 4:透明  
+    - 漸層停駐 4:透明  
   
-    -   漸層停駐 5:白色，並且 75%的 Alpha 值  
+    - 漸層停駐 5:白色，並且 75%的 Alpha 值  
   
-    -   漸層停駐 6:透明  
+    - 漸層停駐 6:透明  
   
      這會建立 「 波浪"玻璃外觀。  
   
@@ -173,9 +173,9 @@ ms.locfileid: "59300457"
   
 6. **建立 IsFocused 屬性觸發程序：** 使用相同的程序，與<xref:System.Windows.UIElement.IsMouseOver%2A>（請參閱本章節的第一個步驟），建立另一個屬性觸發程序<xref:System.Windows.UIElement.IsFocused%2A>屬性。 雖然**觸發程序記錄已開啟**，觸發程序中加入下列動作：  
   
-    -   **glassCube**取得<xref:System.Windows.UIElement.Opacity%2A>100%。  
+    - **glassCube**取得<xref:System.Windows.UIElement.Opacity%2A>100%。  
   
-    -   **outerRectangle**取得<xref:System.Windows.Shapes.Shape.Stroke%2A>的"{DynamicResource {x： 靜態 SystemColors.HighlightBrushKey}}"的自訂運算式值。  
+    - **outerRectangle**取得<xref:System.Windows.Shapes.Shape.Stroke%2A>的"{DynamicResource {x： 靜態 SystemColors.HighlightBrushKey}}"的自訂運算式值。  
   
  在本逐步解說最後一個步驟中，我們將動畫加入按鈕。 事件會觸發這些動畫，具體而言，<xref:System.Windows.UIElement.MouseEnter>和<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
   
@@ -208,19 +208,19 @@ ms.locfileid: "59300457"
   
 5. **建立另一個事件觸發程序，並讓不同的動畫與其產生關聯：** 讓我們加入一個詳細的動畫。 使用類似的程序，您用來建立上一個事件觸發程序動畫：  
   
-    1.  建立新的事件觸發程序使用<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
+    1. 建立新的事件觸發程序使用<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
   
-    2.  建立新的時間軸，包含關聯<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
+    2. 建立新的時間軸，包含關聯<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
   
      ![如何建立新的時間軸](./media/custom-button-blend-clickeventtrigger1.png "custom_button_blend_ClickEventTrigger1")  
   
-    1.  為這個時刻表，建立兩個主要畫面格，一個 0.0 秒時，第二個在 0.3 的秒數。  
+    1. 為這個時刻表，建立兩個主要畫面格，一個 0.0 秒時，第二個在 0.3 的秒數。  
   
-    2.  在 0.3 秒反白顯示的主要畫面格，設定**旋轉轉換角度**到 360 度。  
+    2. 在 0.3 秒反白顯示的主要畫面格，設定**旋轉轉換角度**到 360 度。  
   
      ![如何建立旋轉轉換](./media/custom-button-blend-rotatetransform.gif "custom_button_blend_RotateTransform")  
   
-    1.  按 F5 執行應用程式。 按一下按鈕。 請注意，半透明層會旋轉。  
+    1. 按 F5 執行應用程式。 按一下按鈕。 請注意，半透明層會旋轉。  
   
 ## <a name="conclusion"></a>結論  
  您已完成自訂 按鈕。 您未使用已套用至應用程式中的所有按鈕的按鈕範本。 如果您離開編輯模式的範本 （請參閱下圖） 和建立更多按鈕，您會看到它們的外觀和行為類似您自訂的按鈕，而不是像預設按鈕。  
@@ -237,15 +237,15 @@ ms.locfileid: "59300457"
   
  總而言之，在過程中自訂按鈕範本已了解如何執行 Microsoft Expression Blend 中的下列功能：  
   
--   自訂控制項的外觀。  
+- 自訂控制項的外觀。  
   
--   設定屬性觸發程序。 屬性觸發程序會很有幫助，因為它們可以使用大部分的物件，而不只是控制項。  
+- 設定屬性觸發程序。 屬性觸發程序會很有幫助，因為它們可以使用大部分的物件，而不只是控制項。  
   
--   設定事件觸發程序。 事件觸發程序會很有幫助，因為它們可以使用大部分的物件，而不只是控制項。  
+- 設定事件觸發程序。 事件觸發程序會很有幫助，因為它們可以使用大部分的物件，而不只是控制項。  
   
--   建立動畫。  
+- 建立動畫。  
   
--   其他： 建立漸層，在其中新增 BitmapEffects，使用轉換，並設定物件的基本屬性。  
+- 其他： 建立漸層，在其中新增 BitmapEffects，使用轉換，並設定物件的基本屬性。  
   
 ## <a name="see-also"></a>另請參閱
 

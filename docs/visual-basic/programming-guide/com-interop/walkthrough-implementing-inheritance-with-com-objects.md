@@ -8,11 +8,11 @@ helpviewer_keywords:
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 ms.openlocfilehash: 0b3977e73e3b2aa9e80e2dab08d15035283b8387
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022320"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>逐步解說：實作 COM 物件 (Visual Basic) 的繼承
 您可以衍生從 Visual Basic 類別`Public`中 COM 物件，即使在舊版的 Visual Basic 中建立的類別。 屬性和方法，從 COM 物件繼承的類別可以覆寫或多載，就如同屬性和任何其他基底類別的方法可以覆寫或多載。 當您有現有的類別程式庫，您不希望重新編譯時，適合使用 COM 物件的繼承。  
@@ -125,9 +125,9 @@ ms.locfileid: "59334142"
   
  屬性和方法繼承自 COM 類別可以覆寫，這表示您可以宣告區域屬性或方法，以取代屬性或繼承自基底的 COM 類別的方法。 覆寫其他的屬性和方法，但有下列例外狀況的規則覆寫繼承的 COM 屬性的規則如下：  
   
--   如果您覆寫任何屬性或繼承自 COM 類別的方法，您必須覆寫所有其他繼承的屬性和方法。  
+- 如果您覆寫任何屬性或繼承自 COM 類別的方法，您必須覆寫所有其他繼承的屬性和方法。  
   
--   使用屬性`ByRef`無法覆寫參數。  
+- 使用屬性`ByRef`無法覆寫參數。  
   
 ## <a name="see-also"></a>另請參閱
 

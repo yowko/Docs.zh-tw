@@ -5,11 +5,11 @@ helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
 ms.openlocfilehash: 0cd69a4d2d6087c1ebf93bb5931511f32a4c9c5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032054"
 ---
 # <a name="base-elements-overview"></a>基底項目概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中有高百分比的類別衍生自 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 文件中通稱為基底項目類別的四個類別。 這些類別是<xref:System.Windows.UIElement>， <xref:System.Windows.FrameworkElement>， <xref:System.Windows.ContentElement>，和<xref:System.Windows.FrameworkContentElement>。 <xref:System.Windows.DependencyObject>類別也會相關，因為它是通用的基底類別，這兩者的<xref:System.Windows.UIElement>和 <xref:System.Windows.ContentElement>  
@@ -31,49 +31,49 @@ ms.locfileid: "59110054"
   
  如果您建立衍生自類別<xref:System.Windows.DependencyObject>，還會繼承下列功能：  
   
--   <xref:System.Windows.DependencyObject.GetValue%2A> 和<xref:System.Windows.DependencyObject.SetValue%2A>支援，以及一般屬性系統支援。  
+- <xref:System.Windows.DependencyObject.GetValue%2A> 和<xref:System.Windows.DependencyObject.SetValue%2A>支援，以及一般屬性系統支援。  
   
--   可以使用相依性屬性以及實作為相依性屬性的附加屬性。  
+- 可以使用相依性屬性以及實作為相依性屬性的附加屬性。  
   
  如果您建立衍生自類別<xref:System.Windows.UIElement>，您會繼承下列功能除了提供<xref:System.Windows.DependencyObject>:  
   
--   動畫屬性值的基本支援。 如需詳細資訊，請參閱 [動畫概觀](../graphics-multimedia/animation-overview.md)。  
+- 動畫屬性值的基本支援。 如需詳細資訊，請參閱 [動畫概觀](../graphics-multimedia/animation-overview.md)。  
   
--   基本輸入事件支援和命令支援。 如需詳細資訊，請參閱[輸入概觀](input-overview.md)和[命令概觀](commanding-overview.md)。  
+- 基本輸入事件支援和命令支援。 如需詳細資訊，請參閱[輸入概觀](input-overview.md)和[命令概觀](commanding-overview.md)。  
   
--   可覆寫以將資訊提供給配置系統的虛擬方法。  
+- 可覆寫以將資訊提供給配置系統的虛擬方法。  
   
  如果您建立衍生自類別<xref:System.Windows.FrameworkElement>，您會繼承下列功能除了提供<xref:System.Windows.UIElement>:  
   
--   樣式和分鏡腳本的支援。 如需詳細資訊，請參閱 <<c0> <xref:System.Windows.Style> 並[分鏡腳本概觀](../graphics-multimedia/storyboards-overview.md)。  
+- 樣式和分鏡腳本的支援。 如需詳細資訊，請參閱 <<c0> <xref:System.Windows.Style> 並[分鏡腳本概觀](../graphics-multimedia/storyboards-overview.md)。  
   
--   資料繫結的支援。 如需詳細資訊，請參閱 [資料繫結概觀](../data/data-binding-overview.md)。  
+- 資料繫結的支援。 如需詳細資訊，請參閱 [資料繫結概觀](../data/data-binding-overview.md)。  
   
--   動態資源參考的支援。 如需詳細資訊，請參閱 [XAML 資源](xaml-resources.md)。  
+- 動態資源參考的支援。 如需詳細資訊，請參閱 [XAML 資源](xaml-resources.md)。  
   
--   屬性值繼承支援，以及中繼資料中協助向架構服務報告屬性條件的其他旗標，例如資料繫結、樣式或配置架構實作。 如需詳細資訊，請參閱[架構屬性中繼資料](framework-property-metadata.md)。  
+- 屬性值繼承支援，以及中繼資料中協助向架構服務報告屬性條件的其他旗標，例如資料繫結、樣式或配置架構實作。 如需詳細資訊，請參閱[架構屬性中繼資料](framework-property-metadata.md)。  
   
--   邏輯樹狀結構的概念。 如需詳細資訊，請參閱 [WPF 中的樹狀結構](trees-in-wpf.md)。  
+- 邏輯樹狀結構的概念。 如需詳細資訊，請參閱 [WPF 中的樹狀結構](trees-in-wpf.md)。  
   
--   版面配置系統的實用 WPF 架構層級實作支援包括<xref:System.Windows.FrameworkElement.OnPropertyChanged%2A>屬性可影響配置覆寫，可以偵測變更。  
+- 版面配置系統的實用 WPF 架構層級實作支援包括<xref:System.Windows.FrameworkElement.OnPropertyChanged%2A>屬性可影響配置覆寫，可以偵測變更。  
   
  如果您建立衍生自類別<xref:System.Windows.ContentElement>，您會繼承下列功能除了提供<xref:System.Windows.DependencyObject>:  
   
--   動畫的支援。 如需詳細資訊，請參閱 [動畫概觀](../graphics-multimedia/animation-overview.md)。  
+- 動畫的支援。 如需詳細資訊，請參閱 [動畫概觀](../graphics-multimedia/animation-overview.md)。  
   
--   基本輸入事件支援和命令支援。 如需詳細資訊，請參閱[輸入概觀](input-overview.md)和[命令概觀](commanding-overview.md)。  
+- 基本輸入事件支援和命令支援。 如需詳細資訊，請參閱[輸入概觀](input-overview.md)和[命令概觀](commanding-overview.md)。  
   
  如果您建立衍生自類別<xref:System.Windows.FrameworkContentElement>，取得所提供的下列功能<xref:System.Windows.ContentElement>:  
   
--   樣式和分鏡腳本的支援。 如需詳細資訊，請參閱 <<c0> <xref:System.Windows.Style> 並[動畫概觀](../graphics-multimedia/animation-overview.md)。  
+- 樣式和分鏡腳本的支援。 如需詳細資訊，請參閱 <<c0> <xref:System.Windows.Style> 並[動畫概觀](../graphics-multimedia/animation-overview.md)。  
   
--   資料繫結的支援。 如需詳細資訊，請參閱 [資料繫結概觀](../data/data-binding-overview.md)。  
+- 資料繫結的支援。 如需詳細資訊，請參閱 [資料繫結概觀](../data/data-binding-overview.md)。  
   
--   動態資源參考的支援。 如需詳細資訊，請參閱 [XAML 資源](xaml-resources.md)。  
+- 動態資源參考的支援。 如需詳細資訊，請參閱 [XAML 資源](xaml-resources.md)。  
   
--   屬性值繼承支援，以及中繼資料中協助向架構服務報告屬性條件的其他旗標，例如資料繫結、樣式或配置架構實作。 如需詳細資訊，請參閱[架構屬性中繼資料](framework-property-metadata.md)。  
+- 屬性值繼承支援，以及中繼資料中協助向架構服務報告屬性條件的其他旗標，例如資料繫結、樣式或配置架構實作。 如需詳細資訊，請參閱[架構屬性中繼資料](framework-property-metadata.md)。  
   
--   您不會繼承配置系統修改的存取 (例如<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>)。 配置系統實作才有提供的<xref:System.Windows.FrameworkElement>。 不過，您可以繼承<xref:System.Windows.FrameworkElement.OnPropertyChanged%2A>覆寫，可以偵測影響版面配置和回報這些向任何內容主機的屬性變更。  
+- 您不會繼承配置系統修改的存取 (例如<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>)。 配置系統實作才有提供的<xref:System.Windows.FrameworkElement>。 不過，您可以繼承<xref:System.Windows.FrameworkElement.OnPropertyChanged%2A>覆寫，可以偵測影響版面配置和回報這些向任何內容主機的屬性變更。  
   
  會記錄各種類別的內容模型。 如果您想要尋找從中衍生的適當類別，則類別的內容模型是您應該考慮的一個可能因素。 如需詳細資訊，請參閱 [WPF 內容模型](../controls/wpf-content-model.md)。  
   

@@ -3,28 +3,28 @@ title: 建立物件模型
 ms.date: 03/30/2017
 ms.assetid: 27afce86-9b1d-45fb-8e0b-636bf671a236
 ms.openlocfilehash: 7724d6e75b350e5c57f090d42ef1f49c4d3593b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032436"
 ---
 # <a name="creating-the-object-model"></a>建立物件模型
 您可以從現有的資料庫建立物件模型 (Object Model)，並且使用預設狀態下的模型。 您也可以自訂模型的各個層面及其行為。  
   
- 如果您使用 Visual Studio，您可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]來建立物件模型。  
+ 如果您使用 Visual Studio，您可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]建立物件模型。  
   
 ## <a name="in-this-section"></a>本節內容  
  [如何：以 Visual Basic 或 C# 產生物件模型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
- 說明如何使用 SQLMetal 命令列工具。 也會提供通往[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]用於 Visual Studio 使用者  
+ 說明如何使用 SQLMetal 命令列工具。 也會提供連結[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]適用於 Visual Studio 使用者  
   
- [如何：產生物件模型當作外部檔案](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
+ [如何：產生物件模型當做外部檔案](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
  說明如何產生外部對應檔案，而不要使用以屬性 (Attribute) 為基礎的對應。  
   
  [如何：藉由修改 DBML 檔案產生自訂程式碼](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-customized-code-by-modifying-a-dbml-file.md)  
- 描述如何從 DBML 中繼資料檔產生 Visual Basic 或 C# 程式碼。  
+ 描述如何產生 Visual Basic 或C#從 DBML 中繼資料檔案的程式碼。  
   
- [如何：驗證 DBML 和外部對應檔](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)  
+ [如何：驗證 DBML 和外部對應檔案](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)  
  說明如何驗證您已修改的對應檔 (進階)。  
   
  [如何：讓實體可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)  

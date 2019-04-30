@@ -10,18 +10,18 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], creating toggle buttons
 ms.assetid: d9c197df-4c65-43f2-beee-b68b52b2befc
 ms.openlocfilehash: e688e9a220e6c82caa2d107589b5ca9a1e59e72b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052153"
 ---
 # <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>HOW TO：在 ToolStrip 控制項中建立切換按鈕
 當使用者按一下切換按鈕時，它會出現下凹的連線，並保留下凹的外觀，直到使用者按一下按鈕時一次。  
   
 ### <a name="to-create-a-toggling-toolstripbutton"></a>若要建立切換 prvek ToolStripButton  
   
--   使用程式碼，如下列程式碼範例。 此程式碼假設您的表單包含<xref:System.Windows.Forms.ToolStrip>控制項，且其<xref:System.Windows.Forms.ToolStrip.Items%2A>集合包含<xref:System.Windows.Forms.ToolStripButton>稱為`toolStripButton1`。 同時也假設您已經呼叫事件處理常式`toolStripButton1_CheckedChanged`。  
+- 使用程式碼，如下列程式碼範例。 此程式碼假設您的表單包含<xref:System.Windows.Forms.ToolStrip>控制項，且其<xref:System.Windows.Forms.ToolStrip.Items%2A>集合包含<xref:System.Windows.Forms.ToolStripButton>稱為`toolStripButton1`。 同時也假設您已經呼叫事件處理常式`toolStripButton1_CheckedChanged`。  
   
     ```vb  
     toolStripButton1.CheckOnClick = True  

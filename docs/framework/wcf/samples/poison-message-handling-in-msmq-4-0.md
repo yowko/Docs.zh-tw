@@ -3,11 +3,11 @@ title: MSMQ 4.0 中的有害訊息處理
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
 ms.openlocfilehash: b4711d344a6ce08adc6e993c19f2c3d97f56e7b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052088"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 中的有害訊息處理
 這個範例會示範如何在服務中執行有害訊息處理。 此樣本根據[交易 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)範例。 這個範例會使用 `netMsmqBinding`。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。
@@ -27,13 +27,13 @@ ms.locfileid: "59316462"
 
  一旦訊息標記為有害，該訊息就會根據 <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 列舉中的設定加以處理。 若要重新逐一查看可能的值：
 
--   錯誤 （預設值）：若要接聽程式和服務主機錯誤。
+- 錯誤 （預設值）：若要接聽程式和服務主機錯誤。
 
--   卸除：若要卸除訊息。
+- 卸除：若要卸除訊息。
 
--   移動：若要將訊息移至有害訊息子佇列。 這個值只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。
+- 移動：若要將訊息移至有害訊息子佇列。 這個值只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。
 
--   拒絕：若要拒絕的訊息，將訊息傳送回給寄件者寄不出信件佇列。 這個值只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。
+- 拒絕：若要拒絕的訊息，將訊息傳送回給寄件者寄不出信件佇列。 這個值只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。
 
  此範例會示範對有害訊息使用 `Move` 處置。 `Move` 會導致訊息移至有害子佇列。
 
@@ -277,15 +277,15 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 2. 如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。
 
-    1.  開啟 Visual Studio 2012 中的 伺服器管理員。
+    1. 開啟 Visual Studio 2012 中的 伺服器管理員。
 
-    2.  依序展開**功能** 索引標籤。
+    2. 依序展開**功能** 索引標籤。
 
-    3.  以滑鼠右鍵按一下**私用訊息佇列**，然後選取**新增**，**私用佇列**。
+    3. 以滑鼠右鍵按一下**私用訊息佇列**，然後選取**新增**，**私用佇列**。
 
-    4.  請檢查**Transactional**  方塊中。
+    4. 請檢查**Transactional**  方塊中。
 
-    5.  輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。
+    5. 輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。
 
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 

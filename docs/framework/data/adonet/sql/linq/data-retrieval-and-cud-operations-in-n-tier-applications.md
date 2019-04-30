@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
 ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037917"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>多層式架構應用程式中的資料擷取和 CUD 作業 (LINQ to SQL)
 當您將像是 Customers 或 Orders 等實體物件透過網路序列化到用戶端時，這些實體會與其資料內容中斷連結。 資料內容不會再追蹤它們的變更或它們與其他物件的關聯。 如果用戶端只讀取資料，這就不成問題。 此外，要讓用戶端加入資料列到資料庫，也相對來說簡單。 不過，如果您的應用程式要讓用戶端能夠更新或刪除資料，就必須將實體附加到新的資料內容，才能呼叫 <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>。 此外，如果您使用開放式並行存取 (Optimistic Concurrency) 來檢查原始值，那麼也需要想辦法將原始實體和修改過的實體提供給資料庫。 `Attach` 方法即是提供來讓您將中斷連結的實體放入新的資料內容。  
@@ -85,9 +85,9 @@ private void GetProdsByCat_Click(object sender, EventArgs e)
 ### <a name="middle-tier-implementation"></a>中介層實作  
  下列範例顯示中介層 (Middle Tier) 上的介面方法實作。 下列是需要注意的兩個重點：  
   
--   <xref:System.Data.Linq.DataContext> 是在方法範圍內宣告。  
+- <xref:System.Data.Linq.DataContext> 是在方法範圍內宣告。  
   
--   此方法會傳回實際結果的 <xref:System.Collections.IEnumerable> 集合。 序列化程式將會執行查詢，將結果送回用戶端/展示層。 若要在中介層本機上存取查詢結果，您可以在查詢變數上呼叫 `ToList` 或 `ToArray` 來強制執行。 然後就可以將該清單或陣列以 `IEnumerable` 傳回。  
+- 此方法會傳回實際結果的 <xref:System.Collections.IEnumerable> 集合。 序列化程式將會執行查詢，將結果送回用戶端/展示層。 若要在中介層本機上存取查詢結果，您可以在查詢變數上呼叫 `ToList` 或 `ToArray` 來強制執行。 然後就可以將該清單或陣列以 `IEnumerable` 傳回。  
   
 ```vb  
 Public Function GetProductsByCategory(ByVal categoryID As Integer) _  
@@ -210,11 +210,11 @@ public void DeleteOrder(Order order)
 ## <a name="updating-data"></a>更新資料  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援在下列牽涉到開放式並行存取的案例中更新：  
   
--   以時間戳記或 RowVersion 號碼為基礎的開放式並行存取。  
+- 以時間戳記或 RowVersion 號碼為基礎的開放式並行存取。  
   
--   以實體屬性子集的原始值為基礎的開放式並行存取。  
+- 以實體屬性子集的原始值為基礎的開放式並行存取。  
   
--   以完整原始和修改過的實體為基礎的開放式並行存取。  
+- 以完整原始和修改過的實體為基礎的開放式並行存取。  
   
  您也可以對實體連同其關聯一起執行更新或刪除，例如 Customer 及其關聯 Order 物件的集合。 當您在用戶端上修改實體物件及子 (`EntitySet`) 集合的圖形，而開放式並行存取需要原始值時，用戶端必須提供每個實體和 <xref:System.Data.Linq.EntitySet%601> 物件的原始值。 如果要讓用戶端能夠在單一方法呼叫中執行一組相關的更新、刪除和插入，您必須提供用戶端方式來指出要對每個實體執行何種作業。 接著在中介層上，您必須為每個實體呼叫適當的 <xref:System.Data.Linq.ITable.Attach%2A> 方法，再呼叫 <xref:System.Data.Linq.ITable.InsertOnSubmit%2A>、<xref:System.Data.Linq.ITable.DeleteAllOnSubmit%2A> 或 <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> (插入不需要 `Attach`)，才能呼叫 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>。 請不要擷取資料庫的值來當做更新之前取得原始值的方式。  
   
@@ -379,11 +379,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="expected-entity-members"></a>必要的實體成員  
  如前所述，在呼叫 `Attach` 方法之前，只需要設定實體物件的某些成員。 需要設定的實體成員必須符合下列條件：  
   
--   屬於實體識別的一部分。  
+- 屬於實體識別的一部分。  
   
--   必須修改。  
+- 必須修改。  
   
--   本身是時間戳記或將其 <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> 屬性 (Attribute) 設為 `Never` 以外的值。  
+- 本身是時間戳記或將其 <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> 屬性 (Attribute) 設為 `Never` 以外的值。  
   
  如果資料表使用時間戳記或版本號碼進行開放式並行存取檢查，則您必須設定這些成員，才能呼叫 <xref:System.Data.Linq.ITable.Attach%2A>。 當 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> 屬性 (Property) 在該 Column 屬性 (Attribute) 上設定為 true 時，成員就會專供開放式並行存取檢查使用。 只有在版本號碼或時間戳記值在資料庫上相同時，才會提交任何要求的變更。  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
 ms.openlocfilehash: 9a08fdeaa3517b1483af3f9958ad2db1c64648b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031329"
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
 本主題將介紹您應留意撰寫時的問題[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]全球市場的應用程式。 全球化的程式設計項目中定義[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]在`System.Globalization`。
@@ -69,59 +69,59 @@ ms.locfileid: "59084163"
 
  目前支援下列指令碼︰
 
--   阿拉伯文
+- 阿拉伯文
 
--   孟加拉文
+- 孟加拉文
 
--   梵文字母
+- 梵文字母
 
--   斯拉夫文
+- 斯拉夫文
 
--   希臘文
+- 希臘文
 
--   古吉拉特文
+- 古吉拉特文
 
--   果魯穆奇文
+- 果魯穆奇文
 
--   希伯來文
+- 希伯來文
 
--   表意指令碼
+- 表意指令碼
 
--   坎那達文
+- 坎那達文
 
--   寮文
+- 寮文
 
--   拉丁文
+- 拉丁文
 
--   馬來亞拉姆文
+- 馬來亞拉姆文
 
--   蒙古文
+- 蒙古文
 
--   歐迪亞文
+- 歐迪亞文
 
--   敘利亞文
+- 敘利亞文
 
--   坦米爾文
+- 坦米爾文
 
--   特拉古文
+- 特拉古文
 
--   塔安那文
+- 塔安那文
 
--   泰文*
+- 泰文*
 
--   西藏文
+- 西藏文
 
  *本版支援泰文文字的顯示和編輯，不支援斷詞。
 
  目前不支援下列指令碼︰
 
--   高棉文
+- 高棉文
 
--   古韓文
+- 古韓文
 
--   緬甸文
+- 緬甸文
 
--   僧伽羅文
+- 僧伽羅文
 
  所有的書寫系統引擎都支援[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字型。 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 字型可以包括[!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]版面配置表格，讓字型建立者設計更好國際和高階的印刷樣式字型。 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]字型版面配置表格包含字符替代、 字符定位、 對齊和定位基準等相關資訊讓文字處理應用程式，以改善文字版面配置。
 
@@ -133,9 +133,9 @@ ms.locfileid: "59084163"
 ### <a name="international-layout"></a>國際版面配置
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供非常方便的方式來支援水平、雙向和垂直版面配置。 在展示架構<xref:System.Windows.FrameworkElement.FlowDirection%2A>屬性可用來定義版面配置。 流程方向模式有︰
 
--   *LeftToRight* - 拉丁文、東亞等的水平配置。
+- *LeftToRight* - 拉丁文、東亞等的水平配置。
 
--   *RightToLeft* - 阿拉伯文、希伯來文等的雙向配置。
+- *RightToLeft* - 阿拉伯文、希伯來文等的雙向配置。
 
 <a name="developing_localizable_apps"></a>
 ## <a name="developing-localizable-applications"></a>開發可當地語系化的應用程式

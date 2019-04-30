@@ -3,11 +3,11 @@ title: 使用模擬搭配傳輸安全性
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
 ms.openlocfilehash: 6209007b60effe5403caf3db8855f029d0c47a0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050671"
 ---
 # <a name="using-impersonation-with-transport-security"></a>使用模擬搭配傳輸安全性
 *模擬*是伺服器應用程式才會在用戶端的身分識別的能力。 對服務而言，驗證存取資源時使用模擬是很常見的。 伺服器應用程式使用服務帳戶執行，但是伺服器在接受用戶端連線會模擬用戶端，藉此使用用戶端的認證執行存取檢查。 傳輸安全性是一種用於傳遞認證與使用該認證保護通訊安全性的機制。 本主題描述使用傳輸安全性的設定，在 Windows Communication Foundation (WCF) 搭配模擬功能。 如需有關使用訊息安全性模擬的詳細資訊，請參閱[委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
@@ -33,24 +33,24 @@ ms.locfileid: "59151433"
 ### <a name="named-pipe-transport"></a>具名管道傳輸  
  下列項目會與具名管道傳輸一併使用：  
   
--   命名管道傳輸僅供在本機電腦上使用。 在 WCF 中的具名的管道明確不允許跨電腦連接。  
+- 命名管道傳輸僅供在本機電腦上使用。 在 WCF 中的具名的管道明確不允許跨電腦連接。  
   
--   具名管道無法搭配 `Impersonate` 或 `Delegate` 模擬等級使用。 具名管道無法在這些模擬等級強制執行電腦保證。  
+- 具名管道無法搭配 `Impersonate` 或 `Delegate` 模擬等級使用。 具名管道無法在這些模擬等級強制執行電腦保證。  
   
  如需有關具名管道的詳細資訊，請參閱 <<c0> [ 選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
   
 ### <a name="http-transport"></a>HTTP 傳輸  
  使用 HTTP 傳輸的繫結 (<xref:System.ServiceModel.WSHttpBinding>並<xref:System.ServiceModel.BasicHttpBinding>) 中所述，支援數個驗證配置， [Understanding HTTP Authentication](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)。 支援的模擬等級視驗證配置而定。 下列項目會與 HTTP 傳輸一併使用：  
   
--   `Anonymous` 驗證配置會忽略模擬。  
+- `Anonymous` 驗證配置會忽略模擬。  
   
--   `Basic`驗證配置僅支援`Delegate`層級。 所有較低的模擬等級都會進行升級。  
+- `Basic`驗證配置僅支援`Delegate`層級。 所有較低的模擬等級都會進行升級。  
   
--   `Digest` 驗證配置僅支援 `Impersonate` 和 `Delegate` 等級。  
+- `Digest` 驗證配置僅支援 `Impersonate` 和 `Delegate` 等級。  
   
--   可直接選擇或透過交涉選擇的 `NTLM` 驗證配置僅支援本機電腦上的 `Delegate` 等級。  
+- 可直接選擇或透過交涉選擇的 `NTLM` 驗證配置僅支援本機電腦上的 `Delegate` 等級。  
   
--   只能夠透過交涉選擇的 Kerberos 驗證配置可以搭配任何支援的模擬等級使用。  
+- 只能夠透過交涉選擇的 Kerberos 驗證配置可以搭配任何支援的模擬等級使用。  
   
  如需 HTTP 傳輸的詳細資訊，請參閱[選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
   

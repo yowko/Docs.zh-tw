@@ -11,11 +11,11 @@ helpviewer_keywords:
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
 ms.openlocfilehash: 8803dc2e25edde756958a243d429dd30c5c78bcf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053284"
 ---
 # <a name="-operator-visual-basic"></a>>> 運算子 (Visual Basic)
 位元模式中執行算術右移位。  
@@ -64,15 +64,15 @@ result = pattern >> amount
   
  上述範例的結果如下所示：  
   
--   `result1` 是 2560 (0000 1010年 0000 0000)。  
+- `result1` 是 2560 (0000 1010年 0000 0000)。  
   
--   `result2` 是 160 (0000 0000 1010年 0000)。  
+- `result2` 是 160 (0000 0000 1010年 0000)。  
   
--   `result3` 為 2 (0000 0000 0000 0010)。  
+- `result3` 為 2 (0000 0000 0000 0010)。  
   
--   `result4` 為 640 (0000 0010 1000年 0000)。  
+- `result4` 為 640 (0000 0010 1000年 0000)。  
   
--   `result5` 為 0 （右邊的移位 15 位數）。  
+- `result5` 為 0 （右邊的移位 15 位數）。  
   
  移位量的`result4`的計算方式為 18 和 15，等於 2。  
   
@@ -82,9 +82,9 @@ result = pattern >> amount
   
  上述範例的結果如下所示：  
   
--   `negresult1` 是-512 (1111年 1110年 0000 0000)。  
+- `negresult1` 是-512 (1111年 1110年 0000 0000)。  
   
--   `negresult2` 為-1 （傳播正負號位元）。  
+- `negresult2` 為-1 （傳播正負號位元）。  
   
 ## <a name="see-also"></a>另請參閱
 

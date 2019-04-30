@@ -3,22 +3,22 @@ title: HOW TO：實作探索 Proxy
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
 ms.openlocfilehash: b3e0b5cef01998c1e509586ba1fab3924eb7bc0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000905"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>HOW TO：實作探索 Proxy
 本主題說明如何實作探索 Proxy。 如需 Windows Communication Foundation (WCF) 中的 [探索] 功能的詳細資訊，請參閱[WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)。 探索 Proxy 可透過建立延伸類別的方式來實作，該類別可擴充<xref:System.ServiceModel.Discovery.DiscoveryProxy> 抽象類別。 許多其他支援類別都已在此範例中定義和使用。 `OnResolveAsyncResult`、`OnFindAsyncResult` 和 `AsyncResult`。 這些類別會實作 <xref:System.IAsyncResult> 介面。 如需詳細資訊<xref:System.IAsyncResult>請參閱 < [System.IAsyncResult 介面](xref:System.IAsyncResult)。
 
  本主題將實作探索 Proxy 分為三個主要部分：
 
--   定義類別，包含資料存放區並可擴充抽象 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 類別。
+- 定義類別，包含資料存放區並可擴充抽象 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 類別。
 
--   實作 Helper `AsyncResult` 類別。
+- 實作 Helper `AsyncResult` 類別。
 
--   裝載探索 Proxy。
+- 裝載探索 Proxy。
 
 ### <a name="to-create-a-new-console-application-project"></a>若要建立新的主控台應用程式專案
 
@@ -28,9 +28,9 @@ ms.locfileid: "59321012"
 
 3. 將下列參考加入至專案中
 
-    1.  System.ServiceModel.dll
+    1. System.ServiceModel.dll
 
-    2.  System.Servicemodel.Discovery.dll
+    2. System.Servicemodel.Discovery.dll
 
     > [!CAUTION]
     >  確定您參考的組件為 4.0 版或更新版本。

@@ -9,44 +9,44 @@ helpviewer_keywords:
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
 ms.openlocfilehash: 5b759baebb7192c1ee94b4aa925198864ba7a31a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007158"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>逐步解說：在 WPF 中排列 Windows Forms 控制項
 本逐步解說會示範如何使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]版面配置功能，來排列[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]混合式應用程式中的控制項。  
   
  這個逐步解說中所述的工作包括：  
   
--   建立專案。  
+- 建立專案。  
   
--   使用預設的版面配置設定。  
+- 使用預設的版面配置設定。  
   
--   依內容調整大小。  
+- 依內容調整大小。  
   
--   使用絕對位置。  
+- 使用絕對位置。  
   
--   明確指定大小。  
+- 明確指定大小。  
   
--   設定版面配置屬性。  
+- 設定版面配置屬性。  
   
--   了解疊置順序的限制。  
+- 了解疊置順序的限制。  
   
--   停駐。  
+- 停駐。  
   
--   設定可見度。  
+- 設定可見度。  
   
--   裝載不會自動縮放的控制項。  
+- 裝載不會自動縮放的控制項。  
   
--   縮放。  
+- 縮放。  
   
--   旋轉。  
+- 旋轉。  
   
--   設定邊框距離及邊界。  
+- 設定邊框距離及邊界。  
   
--   使用動態版面配置容器。  
+- 使用動態版面配置容器。  
   
  在此逐步解說中所述工作的完整程式碼清單，請參閱 < [WPF 範例中排列 Windows Form 控制項](https://go.microsoft.com/fwlink/?LinkID=159971)。  
   
@@ -64,11 +64,11 @@ ms.locfileid: "59338770"
   
 2. 在 [方案總管] 中，加入下列組件的參考。  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
-    -   System.Drawing  
+    - System.Drawing  
   
 3. 按兩下 MainWindow.xaml，在 XAML 檢視中加以開啟。  
   

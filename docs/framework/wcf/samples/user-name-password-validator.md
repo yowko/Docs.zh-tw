@@ -3,11 +3,11 @@ title: 使用者名稱密碼驗證程式
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
 ms.openlocfilehash: 52c22660e56d63121181bdcb618e0bed598ca585
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006430"
 ---
 # <a name="user-name-password-validator"></a>使用者名稱密碼驗證程式
 這個範例會示範如何實作自訂的 UserNamePassword 驗證程式。 當內建 UserNamePassword 驗證模式都不符合應用程式需求時，這個驗證程式就很有用；例如，當使用者名稱/密碼組儲存在某些外部存放區時，例如資料庫中。 這個範例示範的服務具有可檢查兩組特定使用者名稱/密碼組的自訂驗證程式。 用戶端會使用這些使用者名稱/密碼組來向服務驗證。
@@ -26,11 +26,11 @@ ms.locfileid: "59773931"
 
  這個範例所示範的作業摘要如下：
 
--   用戶端可以透過使用者名稱權杖進行驗證。
+- 用戶端可以透過使用者名稱權杖進行驗證。
 
--   伺服器會向自訂 UserNamePasswordValidator 驗證用戶端的認證，以及如何將使用者名稱與密碼驗證邏輯的自訂錯誤傳播至用戶端。
+- 伺服器會向自訂 UserNamePasswordValidator 驗證用戶端的認證，以及如何將使用者名稱與密碼驗證邏輯的自訂錯誤傳播至用戶端。
 
--   伺服器是使用該伺服器的 X.509 憑證來驗證的。
+- 伺服器是使用該伺服器的 X.509 憑證來驗證的。
 
  服務會公開 (Expose) 單一的端點來與已使用組態檔 App.config 定義之服務進行通訊。端點是由位址、繫結及合約所組成。 繫結設定為標準`wsHttpBinding`經由預設使用 WS Securityand 使用者名稱驗證。 服務行為會指定 `Custom` 模式，以驗證用戶端使用者名稱/密碼組以及該驗證程式類別的類型。 行為也會使用 `serviceCertificate` 項目來指定伺服器憑證。 伺服器憑證必須包含相同的值，如`SubjectName`作為`findValue`中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)。
 
@@ -254,7 +254,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
  下面提供批次檔的各區段簡要概觀，讓將批次檔得以修改為在適當的組態下執行。
 
--   建立伺服器憑證：
+- 建立伺服器憑證：
 
      下列 Setup.bat 批次檔中的程式行會建立要使用的伺服器憑證。 %SERVER_NAME% 變數會指定伺服器名稱。 您可以變更這個變數來指定自己的伺服器名稱。 預設值為 localhost。
 
@@ -268,7 +268,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   將伺服器憑證安裝至用戶端的受信任憑證存放區中：
+- 將伺服器憑證安裝至用戶端的受信任憑證存放區中：
 
      Setup.bat 批次檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證存放區的步驟。
 

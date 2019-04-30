@@ -6,14 +6,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: e5ef455a-e049-429c-8005-30c93132fb79
 ms.openlocfilehash: 1a5378665d29e02799dd732d17705e462f40a2b1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009496"
 ---
 # <a name="toolstrip-control-windows-forms"></a>ToolStrip 控制項 (Windows Form)
-<xref:System.Windows.Forms.ToolStrip> 控制項可以在 Windows Form 應用程式中裝載功能表、控制項和使用者控制項的工具列。  
+<xref:System.Windows.Forms.ToolStrip> 控制項可以在 Windows Forms 應用程式中裝載功能表、控制項和使用者控制項的工具列。  
   
 ## <a name="in-this-section"></a>本節內容  
  [ToolStrip 控制項概觀](toolstrip-control-overview-windows-forms.md)  
@@ -73,13 +73,13 @@ ms.locfileid: "57721459"
  [如何：實作自訂的 ToolStripRenderer](how-to-implement-a-custom-toolstriprenderer.md)  
  描述如何實作衍生自 <xref:System.Windows.Forms.ToolStripRenderer> 的類別，自訂 <xref:System.Windows.Forms.ToolStrip> 控制項的外觀。  
   
--   [如何：建立具有標準項目的使用設計工具的基本 Windows Form](create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)  
+- [如何：建立具有標準項目的使用設計工具的基本 Windows Form](create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)  
   
--   [如何：將移出 toolstripcontainer 並移到表單上 ToolStrip](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
+- [如何：將移出 toolstripcontainer 並移到表單上 ToolStrip](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
   
--   [逐步解說：建立專業樣式的 ToolStrip 控制項](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
+- [逐步解說：建立專業樣式的 ToolStrip 控制項](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
   
--   [逐步解說：使用功能表合併和 ToolStrip 控制項建立 MDI 表單](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
+- [逐步解說：使用功能表合併和 ToolStrip 控制項建立 MDI 表單](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.ToolStrip> 類別  

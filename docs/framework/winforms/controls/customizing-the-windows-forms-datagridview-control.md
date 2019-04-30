@@ -6,11 +6,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], customization
 ms.assetid: 01ea5d4c-a736-4596-b0e9-a67a1b86e15f
 ms.openlocfilehash: ab8d1f07c608aca4f14f5e73860f8c3e263a4610
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011401"
 ---
 # <a name="customizing-the-windows-forms-datagridview-control"></a>自訂 Windows Form DataGridView 控制項
 `DataGridView`控制項提供您可用來調整的外觀和其資料格、 資料列和資料行的基本行為 （外觀及操作） 的數個屬性。 如果您有特殊需求的功能之外<xref:System.Windows.Forms.DataGridViewCellStyle>類別中，不過，您也可以實作主控描繪控制項或擴充其功能，藉由建立自訂的資料格、 資料行和資料列。  

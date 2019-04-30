@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: af75a645b11325b96740807f9a3df65f5a676026
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000242"
 ---
 # <a name="strongnamekeygenex-function"></a>StrongNameKeyGenEx 函式
 會產生新公用/私密金鑰組以指定的金鑰大小，用於強式名稱。  
@@ -47,9 +47,9 @@ BOOLEAN StrongNameKeyGenEx (
  `dwFlags`  
  [in]指定是否要保留已註冊的金鑰。 支援下列值：  
   
--   0x00000000-時使用`wszKeyContainer`以產生暫時的金鑰容器名稱為 null。  
+- 0x00000000-時使用`wszKeyContainer`以產生暫時的金鑰容器名稱為 null。  
   
--   0x00000001 (`SN_LEAVE_KEY`)-指定應該向左註冊金鑰。  
+- 0x00000001 (`SN_LEAVE_KEY`)-指定應該向左註冊金鑰。  
   
  `dwKeySize`  
  [in]要求的大小，以位元的金鑰。  

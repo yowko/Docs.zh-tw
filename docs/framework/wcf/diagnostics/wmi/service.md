@@ -3,11 +3,11 @@ title: 服務
 ms.date: 03/30/2017
 ms.assetid: 999806e1-6376-409e-b998-b0af391adfe7
 ms.openlocfilehash: c59672b3b7617d9c28d99f7d534b6e7f2f2e9fbb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991441"
 ---
 # <a name="service"></a>服務
 服務  
@@ -46,7 +46,7 @@ class Service
  由服務使用的基底位址。  
   
 ### <a name="behaviors"></a>「行為」  
- 資料型別：行為陣列  
+ 資料類型：行為陣列  
   
  存取類型：唯讀  
   

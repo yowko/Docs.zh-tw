@@ -3,18 +3,18 @@ title: 您必須指定名稱
 ms.date: 07/20/2015
 ms.assetid: 9056bc12-951c-4b86-a44a-473d7c8d5f75
 ms.openlocfilehash: 763cf68a0175d43de5237b855ac8c2af1f99b630
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58018075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022437"
 ---
 # <a name="you-must-specify-a-name"></a>您必須指定名稱
 執行重新命名檔案等檔案作業時，您必須指定名稱。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   指定名稱。  
+- 指定名稱。  
   
 ## <a name="see-also"></a>另請參閱
 

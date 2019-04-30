@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
 ms.openlocfilehash: a535a6b951dc9872109527f78d7de5f3fcdd3292
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971639"
 ---
 # <a name="property-propertyname-doesnt-return-a-value-on-all-code-paths"></a>屬性 '\<屬性名稱 >' 並未傳回有關所有程式碼路徑的值
 屬性 '\<屬性名稱 >' 並未傳回有關所有程式碼路徑的值。 使用結果時，Null 參考例外狀況可能在執行階段時發生。  
@@ -21,11 +21,11 @@ ms.locfileid: "58821877"
   
  您可以從屬性傳回值`Get`程序，在下列任一方式：  
   
--   將值指派給屬性名稱，然後再執行`Exit Property`陳述式。  
+- 將值指派給屬性名稱，然後再執行`Exit Property`陳述式。  
   
--   將值指派給屬性名稱，然後再執行`End Get`陳述式。  
+- 將值指派給屬性名稱，然後再執行`End Get`陳述式。  
   
--   包含值[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)。  
+- 包含值[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)。  
   
  如果控制權傳遞給`Exit Property`或是`End Get`和您不指派任何值給屬性名稱，`Get`程序會傳回屬性的資料類型的預設值。 如需詳細資訊，請參閱 「 行為 」 中[Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "58821877"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   檢查控制項流程邏輯，並確定您指定的值會導致傳回每個陳述式之前。  
+- 檢查控制項流程邏輯，並確定您指定的值會導致傳回每個陳述式之前。  
   
      很容易就能保證每一次從程序傳回將傳回值，如果您總是使用`Return`陳述式。 如果您這麼做，最後一個陳述式前面`End Get`應該是`Return`陳述式。  
   

@@ -3,20 +3,20 @@ title: 從 XML 結構描述 (XSD) 產生資料集關聯
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
 ms.openlocfilehash: 29c0e9ee96c376c6da392692febccbbae3c6a33f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034316"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>從 XML 結構描述 (XSD) 產生資料集關聯
 您可以在 <xref:System.Data.DataSet> 內建立父子關係，以建立兩個或多個資料行之間的關聯。 有三種方式來代表**資料集**XML 結構描述定義語言 (XSD) 結構描述內的關聯性：  
   
--   指定巢狀複雜類型。  
+- 指定巢狀複雜類型。  
   
--   使用**msdata: relationship**註釋。  
+- 使用**msdata: relationship**註釋。  
   
--   指定**xs: keyref**不含**msdata: constraintonly**註釋。  
+- 指定**xs: keyref**不含**msdata: constraintonly**註釋。  
   
 ## <a name="nested-complex-types"></a>巢狀複雜類型  
  結構描述中的巢狀複雜類型定義表示項目的父子關係。 下列 XML 結構描述片段顯示**OrderDetail**是子元素**順序**項目。  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 48dd987896536006fe81bc01528cadb507123e27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049423"
 ---
 # <a name="gethashfromhandle-function"></a>GetHashFromHandle 函式
 使用指定的雜湊演算法產生以指定檔案控制代碼指定之檔案的雜湊。  

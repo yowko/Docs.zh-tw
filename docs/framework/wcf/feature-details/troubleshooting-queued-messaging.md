@@ -6,8 +6,8 @@ ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050762"
 ---
 # <a name="troubleshooting-queued-messaging"></a>佇列訊息的疑難排解
 本章節包含常見問題與疑難排解說明，以便使用 Windows Communication Foundation (WCF) 中的佇列。  
@@ -29,11 +29,11 @@ ms.locfileid: "59977284"
   
  **答：** 在 MSMQ 4.0，但不是能在 MSMQ 3.0 中有下列功能：  
   
--   只有 MSMQ 4.0 支援自訂的寄不出的信件佇列。  
+- 只有 MSMQ 4.0 支援自訂的寄不出的信件佇列。  
   
--   MSMQ 3.0 和 4.0 以不同的方式處理有害訊息。  
+- MSMQ 3.0 和 4.0 以不同的方式處理有害訊息。  
   
--   只有 MSMQ 4.0 支援遠端交易讀取。  
+- 只有 MSMQ 4.0 支援遠端交易讀取。  
   
  如需詳細資訊，請參閱 < [Windows Vista、 Windows Server 2003 和 Windows XP 中的佇列功能差異](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)。  
   
@@ -60,19 +60,19 @@ ms.locfileid: "59977284"
   
  **答：** 若要判斷答案，逐步完成下列檢查清單：  
   
--   檢查異動式佇列需求是否相容於指定的保證。 請注意下列準則：  
+- 檢查異動式佇列需求是否相容於指定的保證。 請注意下列準則：  
   
-    -   您可以傳送永久性的訊息 （資料包和工作階段） 具有 「 正好一次 」 保證 (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) 才能異動式佇列。  
+    - 您可以傳送永久性的訊息 （資料包和工作階段） 具有 「 正好一次 」 保證 (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) 才能異動式佇列。  
   
-    -   您只能傳送具有「正好一次」保證的工作階段。  
+    - 您只能傳送具有「正好一次」保證的工作階段。  
   
-    -   從異動式佇列接收工作階段中的訊息時需要進行異動。  
+    - 從異動式佇列接收工作階段中的訊息時需要進行異動。  
   
-    -   您可以傳送或接收永久性或變動性訊息 （僅限資料包） 不具保證 (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) 只能以非異動式佇列。  
+    - 您可以傳送或接收永久性或變動性訊息 （僅限資料包） 不具保證 (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) 只能以非異動式佇列。  
   
--   檢查寄不出的信件佇列。 如果您在其中找到訊息，請判斷它們為何沒有傳遞。  
+- 檢查寄不出的信件佇列。 如果您在其中找到訊息，請判斷它們為何沒有傳遞。  
   
--   檢查傳出佇列是否有連接或定址問題。  
+- 檢查傳出佇列是否有連接或定址問題。  
   
  **問：** 我已指定自訂的寄不出信件佇列，但當我啟動寄件者應用程式時，我會找不到寄不出信件佇列，發生例外狀況，或傳送的應用程式有沒有寄不出信件佇列的權限。 為什麼會發生這種問題？  
   
@@ -184,17 +184,17 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **答：** 這個問題可能有三個原因：  
   
--   如果您是在網域模式中，遠端交易接收便需要 Microsoft Distributed Transaction Coordinator (MSDTC) 網路存取。 您可以使用來啟用這**新增/移除元件**。  
+- 如果您是在網域模式中，遠端交易接收便需要 Microsoft Distributed Transaction Coordinator (MSDTC) 網路存取。 您可以使用來啟用這**新增/移除元件**。  
   
      ![螢幕擷取畫面顯示 啟用網路 DTC 存取。](./media/troubleshooting-queued-messaging/enable-distributed-transaction-coordinator-access.jpg)  
   
--   檢查與交易管理員進行通訊的驗證模式。 如果您是在工作群組模式中，則必須選取 不需要驗證 」。 如果您是在網域模式中，則必須選取 「 需要相互驗證 」。  
+- 檢查與交易管理員進行通訊的驗證模式。 如果您是在工作群組模式中，則必須選取 不需要驗證 」。 如果您是在網域模式中，則必須選取 「 需要相互驗證 」。  
   
      ![啟用 XA 交易](../../../../docs/framework/wcf/feature-details/media/4f3695e0-fb0b-4c5b-afac-75f8860d2bb0.jpg "4f3695e0-fb0b-4c5b-afac-75f8860d2bb0")  
   
--   請確定在清單中的例外狀況中的 MSDTC**網際網路連線防火牆**設定。  
+- 請確定在清單中的例外狀況中的 MSDTC**網際網路連線防火牆**設定。  
   
--   確定您是使用 [!INCLUDE[wv](../../../../includes/wv-md.md)]。 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上的 MSMQ 支援遠端交易讀取。 在舊版 Window 中的 MSMQ 並不支援遠端交易讀取。  
+- 確定您是使用 [!INCLUDE[wv](../../../../includes/wv-md.md)]。 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上的 MSMQ 支援遠端交易讀取。 在舊版 Window 中的 MSMQ 並不支援遠端交易讀取。  
   
  **問：** 網路服務從佇列讀取的服務時，比方說，在 Web 主機，為什麼收到拒絕存取時的例外狀況時引發從佇列讀取嗎？  
   

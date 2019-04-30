@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
 ms.openlocfilehash: 75e60a3a9b39c0dd63a24a1e71c4823e7cb0bd74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052543"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>逐步解說：在 Windows Forms 中裝載 WPF 複合控制項
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，如果您已長期開發[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]程式碼，它可以更有效率地將現有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式與[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而不從頭重寫程式。 常見的案例是當您想要內嵌一個或多個控制項實作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Windows Forms 應用程式內。 如需有關自訂 WPF 控制項的詳細資訊，請參閱 <<c0> [ 控制項自訂](../controls/control-customization.md)。  
@@ -20,9 +20,9 @@ ms.locfileid: "59322832"
   
  這個逐步解說中所述的工作包括：  
   
--   實作 WPF 複合控制項。  
+- 實作 WPF 複合控制項。  
   
--   實作 Windows Form 主應用程式。  
+- 實作 Windows Form 主應用程式。  
   
  在此逐步解說中所述工作的完整程式碼清單，請參閱 <<c0> [ 裝載 WPF 複合控制項在 Windows Form 範例](https://go.microsoft.com/fwlink/?LinkID=159996)。  
   
@@ -54,13 +54,13 @@ ms.locfileid: "59322832"
   
  您的專案應該有下列系統 DLL 的參考。 如果預設未包括所有這些 DLL，則請將它們新增至專案。  
   
--   PresentationCore  
+- PresentationCore  
   
--   PresentationFramework  
+- PresentationFramework  
   
--   系統  
+- 系統  
   
--   WindowsBase  
+- WindowsBase  
   
 ### <a name="creating-the-user-interface"></a>建立使用者介面  
  [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]複合控制項是實作與[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 複合控制項[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]包含五個<xref:System.Windows.Controls.TextBox>項目。 每個<xref:System.Windows.Controls.TextBox>項目都有相關聯<xref:System.Windows.Controls.TextBlock>作為標籤的項目。 有兩個<xref:System.Windows.Controls.Button>項目底部 **[確定]** 並**取消**。 使用者按一下任一個按鈕時，控制項會引發自訂事件，以將資訊傳回給主應用程式。  
@@ -139,11 +139,11 @@ namespace MyControls
 #### <a name="initializing-the-control"></a>初始化控制項  
  下例程式碼實作數個基本工作︰  
   
--   宣告私用的事件， `OnButtonClick`，和其相關聯的委派， `MyControlEventHandler`。  
+- 宣告私用的事件， `OnButtonClick`，和其相關聯的委派， `MyControlEventHandler`。  
   
--   建立可儲存使用者資料的數個私用全域變數。 這項資料是透過對應的屬性所公開。  
+- 建立可儲存使用者資料的數個私用全域變數。 這項資料是透過對應的屬性所公開。  
   
--   實作的處理常式`Init`，在控制項的<xref:System.Windows.FrameworkElement.Loaded>事件。 此處理常式會初始化全域變數，方法是將 MyControl1.xaml 中所定義的值指派給它們。 若要這樣做，它會使用<xref:System.Windows.FrameworkElement.Name%2A>指派給典型<xref:System.Windows.Controls.TextBlock>項目， `nameLabel`，以存取該元素的屬性設定。  
+- 實作的處理常式`Init`，在控制項的<xref:System.Windows.FrameworkElement.Loaded>事件。 此處理常式會初始化全域變數，方法是將 MyControl1.xaml 中所定義的值指派給它們。 若要這樣做，它會使用<xref:System.Windows.FrameworkElement.Name%2A>指派給典型<xref:System.Windows.Controls.TextBlock>項目， `nameLabel`，以存取該元素的屬性設定。  
   
  刪除現有的建構函式，並新增下列程式碼，以您`MyControl1`類別。  
   
@@ -152,11 +152,11 @@ namespace MyControls
 #### <a name="handling-the-buttons-click-events"></a>處理 Buttons 的 Click 事件  
  使用者會指出資料輸入工作已完成按一下**確定**  按鈕或**取消** 按鈕。 這兩個按鈕都使用相同<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式， `ButtonClicked`。 這兩個按鈕都有名稱，`btnOK`或是`btnCancel`，可讓處理常式來判斷所按的按鈕，藉由檢查的值`sender`引數。 此處理常式會執行下列動作︰  
   
--   會建立`MyControlEventArgs`物件，其中包含從資料<xref:System.Windows.Controls.TextBox>項目。  
+- 會建立`MyControlEventArgs`物件，其中包含從資料<xref:System.Windows.Controls.TextBox>項目。  
   
--   如果使用者已按下**取消**按鈕，設定`MyControlEventArgs`物件的`IsOK`屬性設`false`。  
+- 如果使用者已按下**取消**按鈕，設定`MyControlEventArgs`物件的`IsOK`屬性設`false`。  
   
--   引發`OnButtonClick`事件，表示主應用程式，使用者已完成，並傳遞回收集到的資料。  
+- 引發`OnButtonClick`事件，表示主應用程式，使用者已完成，並傳遞回收集到的資料。  
   
  將下列程式碼加入您`MyControl1`類別，之後`Init`方法。  
   
@@ -209,15 +209,15 @@ namespace MyControls
   
 4. 加入下列組件的參考。  
   
-    -   PresentationCore  
+    - PresentationCore  
   
-    -   PresentationFramework  
+    - PresentationFramework  
   
-    -   System.Xaml  
+    - System.Xaml  
   
-    -   WindowsBase  
+    - WindowsBase  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
 ### <a name="implementing-the-user-interface-for-the-application"></a>實作應用程式的使用者介面  
  Windows Forms 應用程式的 UI 包含數個控制項，可與 WPF 複合控制項互動。  
@@ -296,9 +296,9 @@ namespace MyControls
   
  中的其餘兩行會`Form1_Load`方法附加至兩個控制項事件的處理常式：  
   
--   `OnButtonClick` 是在使用者按一下時，會將複合控制項所引發的自訂事件**確定**或是**取消** 按鈕。 您可以處理事件以取得使用者回應，以及收集使用者所指定的任何資料。  
+- `OnButtonClick` 是在使用者按一下時，會將複合控制項所引發的自訂事件**確定**或是**取消** 按鈕。 您可以處理事件以取得使用者回應，以及收集使用者所指定的任何資料。  
   
--   <xref:System.Windows.FrameworkElement.Loaded> 是標準的事件所引發[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制時完全載入。 因為此範例需要使用控制項中的屬性來初始化數個全域變數，所以在這裡使用這個事件。 表單的當時<xref:System.Windows.Forms.Form.Load>事件，控制項不是完全載入，以及這些值仍會設為`null`。 您要等到控制項的<xref:System.Windows.FrameworkElement.Loaded>才能存取這些屬性，就會發生事件。  
+- <xref:System.Windows.FrameworkElement.Loaded> 是標準的事件所引發[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制時完全載入。 因為此範例需要使用控制項中的屬性來初始化數個全域變數，所以在這裡使用這個事件。 表單的當時<xref:System.Windows.Forms.Form.Load>事件，控制項不是完全載入，以及這些值仍會設為`null`。 您要等到控制項的<xref:System.Windows.FrameworkElement.Loaded>才能存取這些屬性，就會發生事件。  
   
  <xref:System.Windows.FrameworkElement.Loaded>上述的程式碼所示事件處理常式。 `OnButtonClick`處理常式會在下一節中討論。  
   

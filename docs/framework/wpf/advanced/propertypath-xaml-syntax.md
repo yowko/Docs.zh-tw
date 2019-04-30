@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
 ms.openlocfilehash: 7db435e45ddc55346af5ea5fdbcce611173c774b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053531"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 語法
 <xref:System.Windows.PropertyPath>物件支援複雜的內嵌[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]語法來設定各種屬性採用<xref:System.Windows.PropertyPath>做為其值的型別。 本主題說明<xref:System.Windows.PropertyPath>套用至繫結和動畫語法的語法。  
@@ -69,11 +69,11 @@ ms.locfileid: "59122911"
   
  括號，表示這個屬性在<xref:System.Windows.PropertyPath>應該使用部分限定性條件來建構。 它可以使用 XML 命名空間來尋找具有適當對應的類型。 `ownerType`搜尋型別[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]顆處理器具有存取權，透過<xref:System.Windows.Markup.XmlnsDefinitionAttribute>每個組件中的宣告。 大部分的應用程式都有對應至 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空間的預設 XML 命名空間，因此，前置詞通常只需用於自訂類型或該命名空間以外的類型。  `propertyName` 必須解析為存在於 `ownerType` 上的屬性名稱。 此語法通常用於下列其中一種情況：  
   
--   指定於 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的路徑，其位於不具指定目標類型的樣式或範本中。 除此之外，限定用法通常是無效的，因為在非樣式和非範本的情況中，屬性會存在於執行個體上，而非類型上。  
+- 指定於 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的路徑，其位於不具指定目標類型的樣式或範本中。 除此之外，限定用法通常是無效的，因為在非樣式和非範本的情況中，屬性會存在於執行個體上，而非類型上。  
   
--   屬性是附加屬性。  
+- 屬性是附加屬性。  
   
--   您要繫結至靜態屬性。  
+- 您要繫結至靜態屬性。  
   
  用於分鏡腳本目標，此屬性指定為`propertyName`必須是<xref:System.Windows.DependencyProperty>。  
   
@@ -118,19 +118,19 @@ or
 ### <a name="escapes-for-property-path-strings"></a>屬性路徑字串的逸出  
  對於某些商務物件，您可能會遇到屬性路徑字串需要逸出序列，才能正確剖析的情況。 需要逸出的情況應該相當罕見，因為在通常用來定義商務物件的語言中，這其中許多字元都有類似的命名互動問題。  
   
--   在索引子 ([ ]) 內，插入號字元 (^) 會逸出下一個字元。  
+- 在索引子 ([ ]) 內，插入號字元 (^) 會逸出下一個字元。  
   
--   您必須將專屬於 XML 語言定義的某些字元逸出 (使用 XML 實體)。 使用 `&` 逸出 "&" 字元。 使用 `>` 逸出 ">" 結束標記。  
+- 您必須將專屬於 XML 語言定義的某些字元逸出 (使用 XML 實體)。 使用 `&` 逸出 "&" 字元。 使用 `>` 逸出 ">" 結束標記。  
   
--   您必須將專屬於用來處理標記延伸之 WPF XAML 剖析器行為的字元逸出 (使用反斜線 `\`)。  
+- 您必須將專屬於用來處理標記延伸之 WPF XAML 剖析器行為的字元逸出 (使用反斜線 `\`)。  
   
-    -   反斜線 (`\`) 本身就是逸出字元。  
+    - 反斜線 (`\`) 本身就是逸出字元。  
   
-    -   等號 (`=`) 會分隔屬性名稱和屬性值。  
+    - 等號 (`=`) 會分隔屬性名稱和屬性值。  
   
-    -   逗號 (`,`) 會分隔屬性。  
+    - 逗號 (`,`) 會分隔屬性。  
   
-    -   右大括號 (`}`) 是標記延伸的結尾。  
+    - 右大括號 (`}`) 是標記延伸的結尾。  
   
 > [!NOTE]
 >  技術上來說，這些逸出也適用於分鏡腳本屬性路徑，但您通常會周遊現有 WPF 物件的物件模型，因此應該不需要逸出。  

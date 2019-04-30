@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a67e8ce19a2acf5b4ee1d114858e00d93cb183b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62044129"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod 方法
 使用指定的簽章中，建立方法或全域函式的定義，並將權杖傳回給該方法的定義。  
@@ -90,9 +90,9 @@ HRESULT DefineMethod (
 ## <a name="defining-a-method-for-pinvoke"></a>定義方法的 PInvoke  
  對於透過 PInvoke 呼叫每個 unmanaged 函式，您必須定義受管理的方法，表示目標 unmanaged 函式。 若要定義受管理的方法，使用`DefineMethod`與某些參數設為特定值，根據在其中使用 PInvoke 的方式：  
   
--   True PInvoke-涉及在 unmanaged DLL 位於外部的 unmanaged 方法引動過程。  
+- True PInvoke-涉及在 unmanaged DLL 位於外部的 unmanaged 方法引動過程。  
   
--   本機 PInvoke-包含內嵌於目前的受管理模組中的原生 unmanaged 方法的引動過程。  
+- 本機 PInvoke-包含內嵌於目前的受管理模組中的原生 unmanaged 方法的引動過程。  
   
  下表提供的參數設定。  
   

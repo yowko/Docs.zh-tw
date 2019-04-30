@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
 ms.openlocfilehash: d3c7ae9da9c18e53da393928e34dcfbf04fc891c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024686"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>在 Visual Basic 中文化特性如何影響字串
 此說明頁面討論 Visual Basic 來執行字串轉換及比較所使用的文化特性資訊。  
@@ -29,9 +29,9 @@ ms.locfileid: "58834617"
   
  `Str` （將數字轉換為字串） 和`Val`（將數字字串） 函式不會使用應用程式的文化特性資訊字串和數字之間轉換時。 相反地，它們只是句號 （.） 辨識為有效的十進位分隔符號。 這些函式的文化特性感知的雷同如下：  
   
--   **使用目前文化特性的轉換。** `CStr`並`Format`函式會將數字轉換為字串，而`CDbl`和`CInt`函式會將字串轉換為數字。  
+- **使用目前文化特性的轉換。** `CStr`並`Format`函式會將數字轉換為字串，而`CDbl`和`CInt`函式會將字串轉換為數字。  
   
--   **使用特定文化特性的轉換。** 每個物件具有`ToString(IFormatProvider)`方法，將數字轉換為字串，和`Parse(String, IFormatProvider)`將字串轉換為數字的方法。 例如，`Double`型別會提供<xref:System.Double.ToString%28System.IFormatProvider%29>和<xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29>方法。  
+- **使用特定文化特性的轉換。** 每個物件具有`ToString(IFormatProvider)`方法，將數字轉換為字串，和`Parse(String, IFormatProvider)`將字串轉換為數字的方法。 例如，`Double`型別會提供<xref:System.Double.ToString%28System.IFormatProvider%29>和<xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29>方法。  
   
  如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.Conversion.Str%2A> 與 <xref:Microsoft.VisualBasic.Conversion.Val%2A>。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "58834617"
 ## <a name="comparing-strings"></a>比較字串  
  有兩個重要的情況下，會在所需字串比較：  
   
--   **排序資料以供顯示給使用者。** 使用根據目前文化特性，因此能適當地排序字串的作業。  
+- **排序資料以供顯示給使用者。** 使用根據目前文化特性，因此能適當地排序字串的作業。  
   
--   **決定是否兩個應用程式內部的字串完全符合 （通常是基於安全性目的）。** 使用忽略目前的文化特性的作業。  
+- **決定是否兩個應用程式內部的字串完全符合 （通常是基於安全性目的）。** 使用忽略目前的文化特性的作業。  
   
  您可以執行使用 Visual Basic 比較這兩種<xref:Microsoft.VisualBasic.Strings.StrComp%2A>函式。 指定選擇性`Compare`控制項的比較類型的引數：`Text`適用於大部分的輸入和輸出`Binary`判斷完全相符項目。  
   

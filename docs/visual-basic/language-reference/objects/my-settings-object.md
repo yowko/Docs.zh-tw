@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
 ms.openlocfilehash: a962f7cce961b1ee6829702a6815ba02c534efb4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050307"
 ---
 # <a name="mysettings-object"></a>My.Settings 物件
 提供屬性和方法，以存取應用程式的設定。  
@@ -25,13 +25,13 @@ ms.locfileid: "58840363"
   
  每個設定都**名稱**，**型別**，**範圍**，和**值**，以及這些設定會決定如何用來存取每個設定屬性會出現在`My.Settings`物件：  
   
--   **名稱**判斷屬性的名稱。  
+- **名稱**判斷屬性的名稱。  
   
--   **型別**判斷屬性的型別。  
+- **型別**判斷屬性的型別。  
   
--   **範圍**指出屬性是否為唯讀。 如果值為**應用程式**，此屬性是唯讀的; 如果值為**使用者**，屬性是讀寫。  
+- **範圍**指出屬性是否為唯讀。 如果值為**應用程式**，此屬性是唯讀的; 如果值為**使用者**，屬性是讀寫。  
   
--   **值**是屬性的預設值。  
+- **值**是屬性的預設值。  
   
 ## <a name="methods"></a>方法  
   

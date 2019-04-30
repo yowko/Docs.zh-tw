@@ -6,11 +6,11 @@ helpviewer_keywords:
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
 ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032015"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF 中的雙向功能概觀
 不同於任何其他開發平台[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]有許多支援雙向內容的快速開發功能，例如混合使用由左至右和由右至左相同的文件中的資料。 在此同時，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]建立需要雙向功能，如阿拉伯文和希伯來文談到使用者之使用者的絕佳體驗。  
@@ -166,11 +166,11 @@ ms.locfileid: "59079821"
   
  這個屬性指定如何判斷數字的文化特性。 它會採用三個問題之一<xref:System.Windows.Media.NumberCultureSource>列舉值。  
   
--   覆寫：數字的文化特性就是<xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A>屬性。  
+- 覆寫：數字的文化特性就是<xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A>屬性。  
   
--   文字：數字文化特性為文字執行的文化特性。 在標記中，這會是`xml:lang`，或其別名`Language`屬性 (<xref:System.Windows.FrameworkElement.Language%2A>或<xref:System.Windows.FrameworkContentElement.Language%2A>)。 此外，它是衍生自的類別的預設值<xref:System.Windows.FrameworkContentElement>。 這類類別包括<xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>， <xref:System.Windows.Documents.Table?displayProperty=nameWithType>，<xref:System.Windows.Documents.TableCell?displayProperty=nameWithType>等等。  
+- 文字：數字文化特性為文字執行的文化特性。 在標記中，這會是`xml:lang`，或其別名`Language`屬性 (<xref:System.Windows.FrameworkElement.Language%2A>或<xref:System.Windows.FrameworkContentElement.Language%2A>)。 此外，它是衍生自的類別的預設值<xref:System.Windows.FrameworkContentElement>。 這類類別包括<xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>， <xref:System.Windows.Documents.Table?displayProperty=nameWithType>，<xref:System.Windows.Documents.TableCell?displayProperty=nameWithType>等等。  
   
--   使用者: 數字文化特性是目前執行緒文化特性。 這個屬性是所有的子類別的預設值<xref:System.Windows.FrameworkElement>這類<xref:System.Windows.Controls.Page>，<xref:System.Windows.Window>和<xref:System.Windows.Controls.TextBlock>。  
+- 使用者: 數字文化特性是目前執行緒文化特性。 這個屬性是所有的子類別的預設值<xref:System.Windows.FrameworkElement>這類<xref:System.Windows.Controls.Page>，<xref:System.Windows.Window>和<xref:System.Windows.Controls.TextBlock>。  
   
  **CultureOverride**：  
   
@@ -180,15 +180,15 @@ ms.locfileid: "59079821"
   
  這個屬性指定要執行的數字替代類型。 它會採用下列其中一種<xref:System.Windows.Media.NumberSubstitutionMethod>列舉值。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>：替代方法取決於數字的文化特性<xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType>屬性。 這是預設值。  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>：替代方法取決於數字的文化特性<xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType>屬性。 這是預設值。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Context>：如果數字的文化特性為阿拉伯文或波斯文文化特性，它會指定數字依賴內容。  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Context>：如果數字的文化特性為阿拉伯文或波斯文文化特性，它會指定數字依賴內容。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.European>：數字永遠會轉譯為歐洲數字。  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.European>：數字永遠會轉譯為歐洲數字。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>：數字的轉譯國家數字用於數字的文化特性，所指定的文化特性的<xref:System.Globalization.CultureInfo.NumberFormat%2A>。  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>：數字的轉譯國家數字用於數字的文化特性，所指定的文化特性的<xref:System.Globalization.CultureInfo.NumberFormat%2A>。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>：使用傳統數字的數字的文化特性會呈現數字。 對於大部分的文化特性，這等同於<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>。 不過，<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>導致拉丁數字用於一些阿拉伯文文化特性，而這個值會導致阿拉伯數字用於所有阿拉伯文文化特性。  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>：使用傳統數字的數字的文化特性會呈現數字。 對於大部分的文化特性，這等同於<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>。 不過，<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>導致拉丁數字用於一些阿拉伯文文化特性，而這個值會導致阿拉伯數字用於所有阿拉伯文文化特性。  
   
  這些值對雙向內容開發人員的意義為何？ 在大部分情況下，開發人員可能只需要定義<xref:System.Windows.FlowDirection>及每個文字的語言[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]項目，例如`Language="ar-SA"`並<xref:System.Windows.Media.NumberSubstitution>邏輯會負責顯示根據正確的數字[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 下列範例示範如何使用阿拉伯和英文中的數字[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]阿拉伯文版本中執行的應用程式[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]。  
   
@@ -208,7 +208,7 @@ ms.locfileid: "59079821"
   
  首先，設定應用程式元件的`NumberSubstitution.CultureSource="Text"`。 使用此設定可確保設定並非由[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]針對文字項目，具有 「 使用者 」 為預設值，例如<xref:System.Windows.Controls.TextBlock>。  
   
-例如:   
+例如：  
 
 ```xaml  
 <TextBlock

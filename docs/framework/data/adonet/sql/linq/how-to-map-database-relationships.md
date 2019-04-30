@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
 ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033718"
 ---
 # <a name="how-to-map-database-relationships"></a>HOW TO：對應資料庫關聯性
 您可以將任何永遠相同的資料關聯性 (Relationship)，編碼成為實體類別 (Entity Class) 中的屬性參考。 例如，在 Northwind 範例資料庫中，因為客戶往往會下單，所以模型中的客戶與其訂單之間一定有關聯性。  
@@ -22,11 +22,11 @@ ms.locfileid: "59152876"
   
  如本主題後面的範例所示，大部分關聯性都是一對多關聯性 (One-To-Many Relationship)。 您也可以表示一對一關聯性 (One-To-One Relationship) 和多對多關聯性 (Many-To-Many Relationship)，如下所示：  
   
--   一對一：代表這種關聯性包括<xref:System.Data.Linq.EntitySet%601>兩端。  
+- 一對一：代表這種關聯性包括<xref:System.Data.Linq.EntitySet%601>兩端。  
   
      例如，請考慮`Customer` - `SecurityCode`建立關聯性，以便客戶的安全性程式碼會在目錄中找到`Customer`資料表，並只能由獲得授權的人員可以存取。  
   
--   多對多：在多對多關聯性，連結資料表的主索引鍵 (也稱為*聯合*資料表) 通常由兩個資料表的外部索引鍵的複合形成。  
+- 多對多：在多對多關聯性，連結資料表的主索引鍵 (也稱為*聯合*資料表) 通常由兩個資料表的外部索引鍵的複合形成。  
   
      例如，請考慮`Employee` - `Project`藉由使用連結資料表的多對多關聯性形成`EmployeeProject`。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 要求使用下列三個類別塑造此種關聯性：`Employee`、`Project` 和 `EmployeeProject`。 在此情況下，變更 `Employee` 和 `Project` 之間的關聯性，似乎需要更新主索引鍵 `EmployeeProject`。 但是，刪除現有的 `EmployeeProject` 再建立新的 `EmployeeProject` 時，其實最能模擬此種情況。  
   

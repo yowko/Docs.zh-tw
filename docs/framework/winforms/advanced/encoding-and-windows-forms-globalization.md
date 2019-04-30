@@ -20,11 +20,11 @@ helpviewer_keywords:
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
 ms.openlocfilehash: 3a9d891fe898cf691a5f0d36e6360c2a73fb199d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004519"
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>編碼方式和 Windows Form 全球化
 Windows Forms 應用程式完全支援 Unicode，這表示不論是何種平台、程式或語言，每個字元都會以唯一號碼來表示。 如需有關 Unicode 的詳細資訊，請參閱 < [Unicode 協會網站](https://www.unicode.org)。  

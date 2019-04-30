@@ -9,11 +9,11 @@ helpviewer_keywords:
 - cropping images [WPF]
 ms.assetid: c6bba109-c6e7-4cf8-bfe6-9cf8d01bb4fc
 ms.openlocfilehash: e672c7e24ec4db2d6424fa0b611cb1c135cf8eec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053388"
 ---
 # <a name="how-to-crop-an-image"></a>HOW TO：裁剪影像
 此範例示範如何裁剪影像使用<xref:System.Windows.Media.Imaging.CroppedBitmap>。  

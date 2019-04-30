@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
 ms.openlocfilehash: 885e6bc011041320a3dc7b17d84b2541bf030adf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033458"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>傳回或略過序列中的項目
 使用 <xref:System.Linq.Queryable.Take%2A> 運算子傳回序列中指定數目的項目，然後略過其餘的項目。  
@@ -22,9 +22,9 @@ ms.locfileid: "59168307"
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 將轉譯<xref:System.Linq.Queryable.Skip%2A>藉由使用子查詢與 SQL`NOT EXISTS`子句。 這項轉譯具有下列限制：  
   
--   引數必須為集合。 即使多重集 (Multiset) 已排序，仍不支援多重集。  
+- 引數必須為集合。 即使多重集 (Multiset) 已排序，仍不支援多重集。  
   
--   產生的查詢可能會比已套用 <xref:System.Linq.Queryable.Skip%2A> 之基底查詢所產生的查詢更為複雜。 這種複雜性會導致效能降低甚或逾時。  
+- 產生的查詢可能會比已套用 <xref:System.Linq.Queryable.Skip%2A> 之基底查詢所產生的查詢更為複雜。 這種複雜性會導致效能降低甚或逾時。  
   
 ## <a name="example"></a>範例  
  下列範例會使用 `Take` 來選取前五名雇用的 `Employees`。 請注意，此集合會先按照 `HireDate` 排序。  

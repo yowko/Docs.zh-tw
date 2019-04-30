@@ -6,26 +6,26 @@ helpviewer_keywords:
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
 ms.openlocfilehash: 586d306d0f375241c9382e1e24cf1af75b990ba9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019151"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF 主應用程式 (PresentationHost.exe)
 Windows Presentation Foundation (WPF) 主應用程式 (PresentationHost.exe) 是可讓應用程式[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]相容的瀏覽器中裝載應用程式 (包括[!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)]和更新版本)。 根據預設，Windows Presentation Foundation (WPF) 的主機已登錄的殼層並[!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)]處理常式，如瀏覽器裝載[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]內容，包括：  
   
--   鬆散 (未編譯) 的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案 (.xaml)。  
+- 鬆散 (未編譯) 的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案 (.xaml)。  
   
--   [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] (.xbap)。  
+- [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] (.xbap)。  
   
  針對這些類型的檔案，Windows Presentation Foundation (WPF) 主機：  
   
--   啟動已登錄[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]來裝載 Windows Presentation Foundation (WPF) 內容的處理常式。  
+- 啟動已登錄[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]來裝載 Windows Presentation Foundation (WPF) 內容的處理常式。  
   
--   載入所需的正確版本[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]和 Windows Presentation Foundation (WPF) 組件。  
+- 載入所需的正確版本[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]和 Windows Presentation Foundation (WPF) 組件。  
   
--   確保部署區域的適當權限等級都已就緒。  
+- 確保部署區域的適當權限等級都已就緒。  
   
  本主題說明可以搭配使用 PresentationHost.exe 的命令列參數。  
   

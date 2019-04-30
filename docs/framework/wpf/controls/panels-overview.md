@@ -10,30 +10,30 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051022"
 ---
 # <a name="panels-overview"></a>面板概觀
 <xref:System.Windows.Controls.Panel> 元素是控制元素轉譯的元件，其大小和維度、 其位置和其子內容的排列方式。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供數個預先定義<xref:System.Windows.Controls.Panel>項目，以及能夠建構自訂<xref:System.Windows.Controls.Panel>項目。  
   
  此主題包括下列各節。  
   
--   [面板類別](#Panels_view_from_10000_feet)  
+- [面板類別](#Panels_view_from_10000_feet)  
   
--   [面板元素的一般成員](#Panels_declared_members)  
+- [面板元素的一般成員](#Panels_declared_members)  
   
--   [衍生的面板元素](#Panels_derived_elements)  
+- [衍生的面板元素](#Panels_derived_elements)  
   
--   [使用者介面面板](#Panels_main_UI_elements)  
+- [使用者介面面板](#Panels_main_UI_elements)  
   
--   [巢狀面板元素](#Panels_nested_panel_elements)  
+- [巢狀面板元素](#Panels_nested_panel_elements)  
   
--   [自訂面板元素](#Panels_custom_panel_elements)  
+- [自訂面板元素](#Panels_custom_panel_elements)  
   
--   [當地語系化/全球化支援](#Panels_global_localization)  
+- [當地語系化/全球化支援](#Panels_global_localization)  
   
 <a name="Panels_view_from_10000_feet"></a>   
 ## <a name="the-panel-class"></a>面板類別  

@@ -3,11 +3,11 @@ title: HOW TO：從 Office Open XML 文件 (Visual Basic) 擷取段落
 ms.date: 07/20/2015
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
 ms.openlocfilehash: 325f0d981c4988379938385fbfff5d36d0f5bff8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054467"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>HOW TO：從 Office Open XML 文件 (Visual Basic) 擷取段落
 本主題顯示的範例可開啟 Office Open XML 文件，並在文件中擷取所有段落的集合。  

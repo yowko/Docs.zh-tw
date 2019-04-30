@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 ms.openlocfilehash: e4421cbc40cdccc1dbbaeb459cb12fda0ee407cf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022346"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Interop 簡介 (Visual Basic)
 元件物件模型 (COM) 可讓您公開其功能給其他元件和主控件應用程式的物件。 雖然 COM 物件已被 Windows 程式設計許多年的基礎，專為 common language runtime (CLR) 所設計的應用程式會提供許多優點。  
@@ -28,15 +28,15 @@ ms.locfileid: "56745595"
 ## <a name="type-libraries-and-assembly-manifests"></a>型別程式庫和組件資訊清單  
  型別程式庫描述 COM 物件，例如成員名稱和資料類型的特性。 組件資訊清單執行的相同函式[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]應用程式。 其中包括下列資訊：  
   
--   組件身分識別、 版本、 文化特性和數位簽章。  
+- 組件身分識別、 版本、 文化特性和數位簽章。  
   
--   構成組件實作的檔案。  
+- 構成組件實作的檔案。  
   
--   型別和構成組件的資源。 這包括從其匯出。  
+- 型別和構成組件的資源。 這包括從其匯出。  
   
--   對其他組件的編譯時間相依性。  
+- 對其他組件的編譯時間相依性。  
   
--   若要正確執行的組件所需的權限。  
+- 若要正確執行的組件所需的權限。  
   
  如需有關組件和組件資訊清單的詳細資訊，請參閱 <<c0> [ 在.NET 中的組件](../../../standard/assembly/index.md)。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "56745595"
 - [逐步解說：實作 COM 物件的繼承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 - [與 Unmanaged 程式碼互通](../../../framework/interop/index.md)
 - [互通性的疑難排解](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
-- [在.NET 中的組件](../../../standard/assembly/index.md)
+- [.NET 中的組件](../../../standard/assembly/index.md)
 - [Tlbimp.exe (類型程式庫匯入工具)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (類型程式庫匯出工具)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
 - [Interop 封送處理](../../../framework/interop/interop-marshaling.md)

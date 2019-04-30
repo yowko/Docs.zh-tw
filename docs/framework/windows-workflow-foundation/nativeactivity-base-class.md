@@ -3,11 +3,11 @@ title: NativeActivity 基底類別
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
 ms.openlocfilehash: f718d247e7110b46cdd13038c7c93c1e45612c75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009977"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity 基底類別
 
@@ -16,21 +16,21 @@ ms.locfileid: "59296585"
 ## <a name="using-nativeactivitycontext"></a>使用 NativeActivityContext
  工作流程執行階段的功能可透過 <xref:System.Activities.NativeActivity.Execute%2A> 方法內部存取，方法是使用 `context` 參數的成員 (型別為 <xref:System.Activities.NativeActivityContext>)。 透過 <xref:System.Activities.NativeActivityContext> 可使用的功能如下：
 
--   取得與設定引數和變數。
+- 取得與設定引數和變數。
 
--   使用 <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A> 排程子活動。
+- 使用 <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A> 排程子活動。
 
--   使用 <xref:System.Activities.NativeActivityContext.Abort%2A> 中止活動執行。
+- 使用 <xref:System.Activities.NativeActivityContext.Abort%2A> 中止活動執行。
 
--   使用 <xref:System.Activities.NativeActivityContext.CancelChild%2A> 和 <xref:System.Activities.NativeActivityContext.CancelChildren%2A> 取消子執行。
+- 使用 <xref:System.Activities.NativeActivityContext.CancelChild%2A> 和 <xref:System.Activities.NativeActivityContext.CancelChildren%2A> 取消子執行。
 
--   使用 <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>、<xref:System.Activities.NativeActivityContext.RemoveBookmark%2A> 和 <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A> 之類的方法存取活動書籤。
+- 使用 <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>、<xref:System.Activities.NativeActivityContext.RemoveBookmark%2A> 和 <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A> 之類的方法存取活動書籤。
 
--   使用 <xref:System.Activities.CodeActivityContext.Track%2A> 自訂追蹤功能。
+- 使用 <xref:System.Activities.CodeActivityContext.Track%2A> 自訂追蹤功能。
 
--   使用 <xref:System.Activities.CodeActivityContext.GetProperty%2A> 和 <xref:System.Activities.NativeActivityContext.GetValue%2A> 存取活動的執行屬性和值屬性。
+- 使用 <xref:System.Activities.CodeActivityContext.GetProperty%2A> 和 <xref:System.Activities.NativeActivityContext.GetValue%2A> 存取活動的執行屬性和值屬性。
 
--   使用 <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> 和 <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A> 排訂活動動作與功能。
+- 使用 <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> 和 <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A> 排訂活動動作與功能。
 
 ### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>若要建立繼承自 NativeActivity 的自訂活動
 

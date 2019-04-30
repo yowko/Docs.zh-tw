@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
 ms.openlocfilehash: 673780909f6d66168548893e99d79bbfec70a0e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011403"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項的資料顯示模式
 <xref:System.Windows.Forms.DataGridView>控制項可以顯示三種不同模式中的資料： 繫結、 解除繫結和虛擬。 選擇最適合的模式，根據您的需求。  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
 ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009165"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>使用 Windows Form DataGridView 控制項中用於新增資料錄的資料列
 當您使用<xref:System.Windows.Forms.DataGridView>編輯您的應用程式中的資料，您通常想要讓使用者能夠將新的資料列加入至資料存放區。 <xref:System.Windows.Forms.DataGridView>控制項支援藉由提供一個資料列的新記錄，這一律會顯示為最後一個資料列的這項功能。 它是使用星號 （*） 的符號標示其資料列行首。 下列各節將討論您的程式與新記錄的資料列的啟用時，您應該考慮的事項。  
@@ -29,9 +29,9 @@ ms.locfileid: "59184817"
 ## <a name="the-rows-collection"></a>資料列集合  
  新記錄的資料列內<xref:System.Windows.Forms.DataGridView>控制項的<xref:System.Windows.Forms.DataGridView.Rows%2A>集合但行為以不同的方式在兩個方面：  
   
--   新記錄的資料列無法移除從<xref:System.Windows.Forms.DataGridView.Rows%2A>集合以程式設計的方式。 <xref:System.InvalidOperationException>如果嘗試這麼做會擲回。 使用者也無法刪除新記錄的資料列。 <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType>方法並不會移除此資料列從<xref:System.Windows.Forms.DataGridView.Rows%2A>集合。  
+- 新記錄的資料列無法移除從<xref:System.Windows.Forms.DataGridView.Rows%2A>集合以程式設計的方式。 <xref:System.InvalidOperationException>如果嘗試這麼做會擲回。 使用者也無法刪除新記錄的資料列。 <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType>方法並不會移除此資料列從<xref:System.Windows.Forms.DataGridView.Rows%2A>集合。  
   
--   新記錄的資料列之後，就可以不加入任何資料列。 <xref:System.InvalidOperationException>如果嘗試這麼做會引發。 如此一來，新資料錄的資料列一律是中的最後一個資料列<xref:System.Windows.Forms.DataGridView>控制項。 上的方法<xref:System.Windows.Forms.DataGridViewRowCollection>，將資料列 —<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>， <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>，和<xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— 所有呼叫插入方法在內部有新的記錄的資料列時。  
+- 新記錄的資料列之後，就可以不加入任何資料列。 <xref:System.InvalidOperationException>如果嘗試這麼做會引發。 如此一來，新資料錄的資料列一律是中的最後一個資料列<xref:System.Windows.Forms.DataGridView>控制項。 上的方法<xref:System.Windows.Forms.DataGridViewRowCollection>，將資料列 —<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>， <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>，和<xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— 所有呼叫插入方法在內部有新的記錄的資料列時。  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>資料列的新記錄的視覺自訂  
  建立新記錄的資料列時，它根據所指定的資料列<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>屬性。 未指定這個資料列的任何儲存格樣式被繼承自其他屬性。 如需有關儲存格樣式繼承的詳細資訊，請參閱[Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)。  

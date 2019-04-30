@@ -1,17 +1,17 @@
 ---
-title: 雲端原生應用程式如何呢？
+title: 雲端原生應用程式呢？
 description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |雲端原生應用程式如何呢？
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 10f7761b7c0d2ddd8cb9247b1a02aa49cdc4e5d4
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012102"
 ---
-# <a name="what-about-cloud-native-applications"></a>雲端原生應用程式如何呢？
+# <a name="what-about-cloud-native-applications"></a>雲端原生應用程式呢？
 
 雖然[雲端原生](https://azure.microsoft.com/overview/cloudnative/)應用程式不是重點的本指南中，很有幫助，若要了解這個現代化成熟度等級中，並以區分它與雲端最佳化應用程式。
 

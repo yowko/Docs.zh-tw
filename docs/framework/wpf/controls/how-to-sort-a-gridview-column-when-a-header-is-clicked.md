@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在按一下行首時排序 GridView 資料行
+title: HOW TO：在按一下標頭時排序 GridView 資料行
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
 ms.openlocfilehash: 3438ab91045a144a7fa1d531e9d7d55ad30e89ea
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052023"
 ---
-# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>HOW TO：在按一下行首時排序 GridView 資料行
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>HOW TO：在按一下標頭時排序 GridView 資料行
 
 此範例示範如何建立<xref:System.Windows.Controls.ListView>實作控制項<xref:System.Windows.Controls.GridView>檢視模式和排序資料內容，當使用者按一下資料行標頭。
 

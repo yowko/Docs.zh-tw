@@ -8,11 +8,11 @@ helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
 ms.openlocfilehash: f0305807e76ca27e1979aa23bf0797c505fee566
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048240"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF 中安全性的最佳做法
 下列各節將列出在使用 Windows Communication Foundation (WCF) 建立安全應用程式時，應該考慮採用的最佳做法。 如需安全性的詳細資訊，請參閱[安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)、[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)和[中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)。  
@@ -26,11 +26,11 @@ ms.locfileid: "59166123"
 ## <a name="use-x509-certificates-instead-of-ntlm"></a>使用 X509 憑證取代 NTLM  
  WCF 提供兩個對等驗證機制：X509 憑證 （對等通道所使用） 和從 Kerberos SSPI 交涉降級至 NTLM 所在的 Windows 驗證。  相較於 NTLM，使用 1024 位元以上的金鑰進行的憑證式驗證較為理想，因為：  
   
--   雙向驗證的可用性  
+- 雙向驗證的可用性  
   
--   使用更強的密碼編譯演算法  
+- 使用更強的密碼編譯演算法  
   
--   更不容易利用轉送的 X509 憑證  
+- 更不容易利用轉送的 X509 憑證  
    
 ## <a name="always-revert-after-impersonation"></a>在模擬完畢後一律還原  
  在使用可啟用用戶端模擬的 API 時，請務必還原成原始身分識別。 例如，在使用 <xref:System.Security.Principal.WindowsIdentity> 和 <xref:System.Security.Principal.WindowsImpersonationContext> 時，請使用 C# `using` 陳述式或 Visual Basic `Using` 陳述式，如下列程式碼所示。 <xref:System.Security.Principal.WindowsImpersonationContext> 類別會實作 <xref:System.IDisposable> 介面，因此 Common Language Runtime (CLR) 會在程式碼離開 `using` 區塊後，自動還原成原始身分識別。  

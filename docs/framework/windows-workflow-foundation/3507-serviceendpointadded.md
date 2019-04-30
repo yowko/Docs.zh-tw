@@ -3,18 +3,18 @@ title: 3507 - ServiceEndpointAdded
 ms.date: 03/30/2017
 ms.assetid: c068fc0e-07ee-4551-9824-ea7216e1fe37
 ms.openlocfilehash: c787a1a5af752a3d08e2049cfa0b600b7739e56c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009834"
 ---
 # <a name="3507---serviceendpointadded"></a>3507 - ServiceEndpointAdded
 ## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
-|ID|3507|  
+|識別碼|3507|  
 |關鍵字|WFServices|  
 |層級|資訊|  
 |通道|Microsoft-Windows-Application Server-Applications/Analytic|  

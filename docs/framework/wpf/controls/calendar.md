@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Calendar control [WPF]
 ms.assetid: ee844e4a-eefe-48e2-bd0d-1d82cc5e960b
 ms.openlocfilehash: 9a64c6cd6fc1cc53383f2617f7a7a78959e87c4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053573"
 ---
 # <a name="calendar"></a>行事曆
 行事曆可讓使用者使用視覺行事曆顯示選取的日期。  
@@ -47,8 +47,8 @@ Calendar 控制項
 |END|<xref:System.Windows.Controls.CalendarMode.Month>|變更<xref:System.Windows.Controls.Calendar.SelectedDate%2A>到當月最後一天。|  
 |END|<xref:System.Windows.Controls.CalendarMode.Year>|變更的月份<xref:System.Windows.Controls.Calendar.DisplayDate%2A>來年的最後一個月。 <xref:System.Windows.Controls.Calendar.SelectedDate%2A>不會變更。|  
 |END|<xref:System.Windows.Controls.CalendarMode.Decade>|變更的年份<xref:System.Windows.Controls.Calendar.DisplayDate%2A>至十年的最後一年。 <xref:System.Windows.Controls.Calendar.SelectedDate%2A>不會變更。|  
-|CTRL+向上鍵|任何|切換至下一個較大<xref:System.Windows.Controls.Calendar.DisplayMode%2A>。 如果<xref:System.Windows.Controls.Calendar.DisplayMode%2A>已經是<xref:System.Windows.Controls.CalendarMode.Decade>，採取任何動作。|  
-|CTRL+向下鍵|任何|切換至下一個較小<xref:System.Windows.Controls.Calendar.DisplayMode%2A>。 如果<xref:System.Windows.Controls.Calendar.DisplayMode%2A>已經是<xref:System.Windows.Controls.CalendarMode.Month>，採取任何動作。|  
+|CTRL+向上鍵|Any|切換至下一個較大<xref:System.Windows.Controls.Calendar.DisplayMode%2A>。 如果<xref:System.Windows.Controls.Calendar.DisplayMode%2A>已經是<xref:System.Windows.Controls.CalendarMode.Decade>，採取任何動作。|  
+|CTRL+向下鍵|Any|切換至下一個較小<xref:System.Windows.Controls.Calendar.DisplayMode%2A>。 如果<xref:System.Windows.Controls.Calendar.DisplayMode%2A>已經是<xref:System.Windows.Controls.CalendarMode.Month>，採取任何動作。|  
 |空白鍵或 ENTER|<xref:System.Windows.Controls.CalendarMode.Year> 或 <xref:System.Windows.Controls.CalendarMode.Decade>|交換器<xref:System.Windows.Controls.Calendar.DisplayMode%2A>要<xref:System.Windows.Controls.CalendarMode.Month>或<xref:System.Windows.Controls.CalendarMode.Year>焦點的項目所表示。|  
   
 ## <a name="see-also"></a>另請參閱

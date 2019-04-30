@@ -8,11 +8,11 @@ helpviewer_keywords:
 - paths [Visual Basic], validating
 ms.assetid: f673462d-57b7-4120-b13a-6a7592f7ab2c
 ms.openlocfilehash: c8e01a0f5a3f99fdbc424d6cd7d224367c7bad08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032171"
 ---
 # <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a>HOW TO：驗證檔案名稱和 Visual Basic 中的路徑
 這個範例會傳回`Boolean`值，指出字串是否表示的檔案名稱或路徑。 驗證會檢查名稱是否包含檔案系統不允許的字元。  

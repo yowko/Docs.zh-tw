@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
 ms.openlocfilehash: 9dc195ece60739cf0c137a2893c9e9150e0d4d3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010614"
 ---
 # <a name="data-and-data-objects"></a>資料與資料物件
 拖放作業的一部分傳送的資料會儲存在資料物件。  就概念而言，資料物件包含一或多個下列組合：  
   
--   <xref:System.Object>包含實際的資料。  
+- <xref:System.Object>包含實際的資料。  
   
--   對應的資料格式識別項。  
+- 對應的資料格式識別項。  
   
  資料本身可以包含任何項目可以表示做為基底<xref:System.Object>。  對應的資料格式是字串或<xref:System.Type>，提供有關在設定資料的格式為。  資料物件支援裝載多個/資料格式組;這可讓單一資料物件，提供多種格式的資料。  
   

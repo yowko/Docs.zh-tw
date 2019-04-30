@@ -10,11 +10,11 @@ helpviewer_keywords:
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
 ms.openlocfilehash: 0177533f11b7dfa6c2561f1f519eacf8073bcd45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047941"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>HOW TO：讓 WCF 能夠存取 X.509 憑證
 若要存取以 Windows Communication Foundation (WCF) 的 X.509 憑證，請的憑證存放區名稱和位置，必須指定應用程式程式碼。 在某些狀況下，處理序身分識別必須能夠存取包含與 X.509 憑證相關聯之私密金鑰的檔案。 若要取得相關聯的憑證存放區中 X.509 憑證的私密金鑰，WCF 必須進行此作業的權限。 根據預設，只有擁有人和系統帳戶能夠存取憑證的私密金鑰。  
@@ -23,7 +23,7 @@ ms.locfileid: "59331074"
   
 1. 授與 WCF 執行的讀取權限，其中包含與 X.509 憑證相關聯的私密金鑰檔案的帳戶。  
   
-    1.  判斷 WCF 是否需要 X.509 憑證的私用金鑰的 「 讀取 」 權限。  
+    1. 判斷 WCF 是否需要 X.509 憑證的私用金鑰的 「 讀取 」 權限。  
   
          下表詳細列出在使用 X.509 憑證時是否必須要提供私密金鑰。  
   
@@ -34,14 +34,14 @@ ms.locfileid: "59331074"
         |加密傳出的 SOAP 訊息。|否|  
         |解密傳入的 SOAP 訊息。|是|  
   
-    2.  判斷憑證存放於其中的憑證存放區位置和名稱。  
+    2. 判斷憑證存放於其中的憑證存放區位置和名稱。  
   
          憑證存放於其中的憑證存放區會指定於應用程式程式碼或組態中。 例如，下列範例會指定憑證是位於名為 `CurrentUser` 的 `My` 憑證存放區中。  
   
          [!code-csharp[x509Accessible#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/x509accessible/cs/source.cs#1)]
          [!code-vb[x509Accessible#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/x509accessible/vb/source.vb#1)]  
   
-    3.  判斷憑證的私用金鑰所在的電腦上使用[FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具。  
+    3. 判斷憑證的私用金鑰所在的電腦上使用[FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具。  
   
          [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具需要憑證存放區名稱、 憑證存放區位置，以及可以唯一識別該憑證。 此工具會接受憑證的主體名稱或是其指紋來做為唯一識別項。 如需如何判斷憑證指紋的詳細資訊，請參閱[How to:擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "59331074"
         findprivatekey.exe My CurrentUser -t "46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d" -a  
         ```  
   
-    4.  判斷執行 WCF 的帳戶。  
+    4. 判斷執行 WCF 的帳戶。  
   
          下表詳細說明 WCF 執行指定之案例的帳戶。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "59331074"
         |裝載於 IIS 6.0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) 或 IIS 7.0 ([!INCLUDE[wv](../../../../includes/wv-md.md)]) 中的服務。|網路服務|  
         |裝載於 IIS 5.X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]) 中的服務。|由 Machine.config 檔中的 `<processModel>` 項目控制。 預設帳戶是 ASPNET。|  
   
-    5.  授與讀取檔案，其中包含私密金鑰，以 WCF 在其下執行使用 icacls.exe 之類的工具的帳戶。  
+    5. 授與讀取檔案，其中包含私密金鑰，以 WCF 在其下執行使用 icacls.exe 之類的工具的帳戶。  
   
          下列程式碼範例會編輯判別存取控制清單 (DACL) 授與 NETWORK SERVICE 帳戶讀取指定的檔案 (: R) 檔案的存取權。  
   

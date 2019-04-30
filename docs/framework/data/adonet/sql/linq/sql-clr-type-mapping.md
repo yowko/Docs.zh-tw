@@ -3,11 +3,11 @@ title: SQL-CLR 類型對應
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037696"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 類型對應
 在 LINQ to SQL 中，關聯式資料庫的資料模型會對應至以您選擇之程式語言表示的物件模型 (Object Model)。 執行應用程式時，LINQ to SQL 會將物件模型中的 Language Integrated Query (LINQ) 轉譯成 SQL，並將這些查詢傳送至資料庫進行執行。 當資料庫傳回結果時，LINQ to SQL 會將結果轉譯回您可以在自己的程式語言中處理的物件。  
@@ -16,23 +16,23 @@ ms.locfileid: "59152486"
   
  這個主題將討論下列重點：  
   
--   [預設型別對應](#DefaultTypeMapping)  
+- [預設型別對應](#DefaultTypeMapping)  
   
--   [型別對應的執行階段行為對照表](#BehaviorMatrix)  
+- [型別對應的執行階段行為對照表](#BehaviorMatrix)  
   
--   [CLR 與 SQL 執行之間的行為差異](#BehaviorDiffs)  
+- [CLR 與 SQL 執行之間的行為差異](#BehaviorDiffs)  
   
--   [Enum 對應](#EnumMapping)  
+- [Enum 對應](#EnumMapping)  
   
--   [數字對應](#NumericMapping)  
+- [數字對應](#NumericMapping)  
   
--   [文字和 XML 對應](#TextMapping)  
+- [文字和 XML 對應](#TextMapping)  
   
--   [日期和時間對應](#DateMapping)  
+- [日期和時間對應](#DateMapping)  
   
--   [二進位對應](#BinaryMapping)  
+- [二進位對應](#BinaryMapping)  
   
--   [其他對應](#MiscMapping)  
+- [其他對應](#MiscMapping)  
   
 <a name="DefaultTypeMapping"></a>   
 ## <a name="default-type-mapping"></a>預設型別對應  
@@ -58,21 +58,21 @@ ms.locfileid: "59152486"
   
  例如，下面是 CLR 與 SQL Server 之間的一些行為差異：  
   
--   SQL Server 排序某些資料型別的方式與 CLR 中對等資料型別的排序方式不同。 例如，SQL Server 資料型別 `UNIQUEIDENTIFIER` 的排序方式就與 CLR 資料型別 <xref:System.Guid?displayProperty=nameWithType> 的排序方式不同。  
+- SQL Server 排序某些資料型別的方式與 CLR 中對等資料型別的排序方式不同。 例如，SQL Server 資料型別 `UNIQUEIDENTIFIER` 的排序方式就與 CLR 資料型別 <xref:System.Guid?displayProperty=nameWithType> 的排序方式不同。  
   
--   SQL Server 處理某些字串比較作業的方式與 CLR 不同。 在 SQL Server 中，字串比較行為會因伺服器的定序 (Collation) 設定而不同。 如需詳細資訊，請參閱 <<c0> [ 使用定序](https://go.microsoft.com/fwlink/?LinkId=115330)Microsoft SQL Server 線上叢書 》 中。  
+- SQL Server 處理某些字串比較作業的方式與 CLR 不同。 在 SQL Server 中，字串比較行為會因伺服器的定序 (Collation) 設定而不同。 如需詳細資訊，請參閱 <<c0> [ 使用定序](https://go.microsoft.com/fwlink/?LinkId=115330)Microsoft SQL Server 線上叢書 》 中。  
   
--   SQL Server 與 CLR 可能會針對某些對應函式傳回不同的值。 例如，等號比較函式便有所不同，因為如果兩個字串只有尾端泛空白字元 (White Space) 不同，SQL Server 就會將它們視為相等，而 CLR 則會將它們視為不相等。  
+- SQL Server 與 CLR 可能會針對某些對應函式傳回不同的值。 例如，等號比較函式便有所不同，因為如果兩個字串只有尾端泛空白字元 (White Space) 不同，SQL Server 就會將它們視為相等，而 CLR 則會將它們視為不相等。  
   
 <a name="EnumMapping"></a>   
 ## <a name="enum-mapping"></a>Enum 對應  
  LINQ to SQL 支援以下列兩種方式將 CLR <xref:System.Enum?displayProperty=nameWithType> 型別對應至 SQL Server 型別：  
   
--   對應至 SQL 數字型別 (`TINYINT`、`SMALLINT`、`INT`、`BIGINT`)  
+- 對應至 SQL 數字型別 (`TINYINT`、`SMALLINT`、`INT`、`BIGINT`)  
   
      當您將 CLR <xref:System.Enum?displayProperty=nameWithType> 型別對應至 SQL 數字型別 (Numeric Type) 時，就會將 CLR <xref:System.Enum?displayProperty=nameWithType> 的基礎整數值對應至 SQL Server 資料庫資料行的值。 例如，如果名為 <xref:System.Enum?displayProperty=nameWithType> 的 `DaysOfWeek` 包含名為 `Tue` 而且具有基礎整數值 3 的成員，則該成員就會對應至資料庫值 3。  
   
--   對應至 SQL 文字型別 (`CHAR`、`NCHAR`、`VARCHAR`、`NVARCHAR`)  
+- 對應至 SQL 文字型別 (`CHAR`、`NCHAR`、`VARCHAR`、`NVARCHAR`)  
   
      當您將 CLR <xref:System.Enum?displayProperty=nameWithType> 型別對應至 SQL 文字型別時，SQL 資料庫值會對應至 CLR <xref:System.Enum?displayProperty=nameWithType> 成員的名稱。 例如，如果名為 <xref:System.Enum?displayProperty=nameWithType> 的 `DaysOfWeek` 包含名為 `Tue` 而且具有基礎整數值 3 的成員，則該成員就會對應至資料庫值 `Tue`。  
   
@@ -154,13 +154,13 @@ ms.locfileid: "59152486"
 ### <a name="xml-types"></a>XML 型別  
  從 Microsoft SQL Server 2005 開始，就提供了 SQL Server `XML` 資料型別。 您可以將 SQL Server `XML` 資料類型對應至 <xref:System.Xml.Linq.XElement>、<xref:System.Xml.Linq.XDocument> 或 <xref:System.String>。 如果資料行儲存的 XML 片段無法讀入 <xref:System.Xml.Linq.XElement> 中，則該資料行必須對應至 <xref:System.String>，以免發生執行階段錯誤。 必須對應至 <xref:System.String> 的 XML 片段包括：  
   
--   XML 項目的序列  
+- XML 項目的序列  
   
--   屬性  
+- 屬性  
   
--   公用識別項 (PI)  
+- 公用識別項 (PI)  
   
--   註解  
+- 註解  
   
  雖然您可以將對應<xref:System.Xml.Linq.XElement>並<xref:System.Xml.Linq.XDocument>到 SQL Server 中所示[型別對應執行階段行為對照表](#BehaviorMatrix)，則<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>方法有這些類型沒有預設 SQL Server 類型對應。  
   

@@ -9,39 +9,39 @@ ms.assetid: 492e010f-7493-4134-9505-f7008ccdaae6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 01b12af8c3c3a2f834827ff14665050e07b31467
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985591"
 ---
 # <a name="hosting-structures"></a>裝載結構
 本章節描述裝載 API 所使用的 unmanaged 的結構。  
   
 ## <a name="in-this-section"></a>本節內容  
  [AssemblyBindInfo 結構](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)  
- 提供參考組件的詳細的資訊。  
+ 提供參考的組件的詳細的資訊。  
   
  [BucketParameters 結構](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md)  
- 儲存目前與事件相關聯的例外狀況事件和參數的型別名稱。  
+ 儲存目前的例外狀況與事件相關聯的事件和參數的類型名稱。  
   
  [COR_GC_STATS 結構](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)  
- 提供有關 common language runtime (CLR) 記憶體回收機制統計資料。  
+ 提供 common language runtime (CLR) 記憶體回收機制的相關統計資料。  
   
  [COR_GC_THREAD_STATS 結構](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md)  
- 包含記憶體回收相關的每個執行緒統計資料。  
+ 包含有關記憶體回收的每個執行緒統計資料。  
   
  [CustomDumpItem 結構](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)  
- 描述要加入至自訂的傾印在錯誤報告中的項目。  
+ 描述要新增至自訂的傾印，錯誤報告中的項目。  
   
  [MDAInfo 結構](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md)  
- 提供有關的詳細資料`Event_MDAFired`事件，以觸發建立的 managed 偵錯助理 (MDA)。  
+ 提供有關的詳細資料`Event_MDAFired`事件，這會觸發建立的 managed 偵錯助理 (MDA)。  
   
  [ModuleBindInfo 結構](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md)  
  提供參考的模組和包含它的組件的詳細的資訊。  
   
  [StackOverflowInfo 結構](../../../../docs/framework/unmanaged-api/hosting/stackoverflowinfo-structure.md)  
- 因為溢位而擲回的例外狀況會儲存發生溢位和資訊的類型。  
+ 因為溢位而擲回的例外狀況，會儲存發生溢位和資訊的類型。  
   
 ## <a name="related-sections"></a>相關章節  
  [裝載 Coclass](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
 ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032330"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>逐步解說：將 Win32 控制項裝載在 WPF 中
 Windows Presentation Foundation (WPF) 提供豐富的環境，以建立應用程式。 不過，當您已長期開發 Win32 程式碼中，它可能會重複使用至少一些更有效率的 WPF 應用程式中的程式碼而不是完全重寫程式。 WPF 提供簡單的機制，以裝載 Win32 視窗中，WPF 頁面上。  
@@ -47,9 +47,9 @@ Windows Presentation Foundation (WPF) 提供豐富的環境，以建立應用程
   
 6. 處理傳送至主視窗的已選取訊息，例如來自子控制項的通知。 執行這項作業的方法有兩種。  
   
-    -   如果您想要處理裝載類別中的訊息，覆寫<xref:System.Windows.Interop.HwndHost.WndProc%2A>方法的<xref:System.Windows.Interop.HwndHost>類別。  
+    - 如果您想要處理裝載類別中的訊息，覆寫<xref:System.Windows.Interop.HwndHost.WndProc%2A>方法的<xref:System.Windows.Interop.HwndHost>類別。  
   
-    -   如果您想要讓 WPF 處理的訊息，請處理<xref:System.Windows.Interop.HwndHost>類別<xref:System.Windows.Interop.HwndHost.MessageHook>中您的程式碼後置事件。 針對裝載的視窗接收到的每個訊息，都會發生此事件。 如果您選擇此選項時，您仍然必須覆寫<xref:System.Windows.Interop.HwndHost.WndProc%2A>，但您只需要最少的實作。  
+    - 如果您想要讓 WPF 處理的訊息，請處理<xref:System.Windows.Interop.HwndHost>類別<xref:System.Windows.Interop.HwndHost.MessageHook>中您的程式碼後置事件。 針對裝載的視窗接收到的每個訊息，都會發生此事件。 如果您選擇此選項時，您仍然必須覆寫<xref:System.Windows.Interop.HwndHost.WndProc%2A>，但您只需要最少的實作。  
   
 7. 覆寫<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>並<xref:System.Windows.Interop.HwndHost.WndProc%2A>方法<xref:System.Windows.Interop.HwndHost>。 您必須覆寫這些方法才能滿足<xref:System.Windows.Interop.HwndHost>合約，但您可能只需要提供最簡單的實作。  
   
@@ -129,13 +129,13 @@ Windows Presentation Foundation (WPF) 提供豐富的環境，以建立應用程
 ## <a name="implement-communication-between-the-control-and-the-page"></a>實作控制項與頁面之間的通訊  
  您可以操作控制項傳送 Windows 訊息。 在使用者透過將通知傳送至其主視窗與控制項互動時，控制項就會通知您。 [裝載在 WPF 中的 Win32 ListBox 控制項](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control)範例包含的 UI 提供數個範例，其運作方式：  
   
--   將項目附加至清單。  
+- 將項目附加至清單。  
   
--   刪除清單中選取的項目  
+- 刪除清單中選取的項目  
   
--   顯示目前所選取項目的文字。  
+- 顯示目前所選取項目的文字。  
   
--   顯示清單中的項目數。  
+- 顯示清單中的項目數。  
   
  使用者也可以選取項目在清單方塊中按一下，就像傳統的 Win32 應用程式。 每次使用者透過選取、新增或附加項目來變更清單方塊的狀態時，都會更新顯示的資料。  
   

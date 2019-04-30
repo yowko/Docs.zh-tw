@@ -3,11 +3,11 @@ title: HOW TO：尋找兩個位置路徑 (XPATH-LINQ to XML) 的聯集 (Visual B
 ms.date: 07/20/2015
 ms.assetid: c82c09b4-cb0a-47ec-8cc3-a124144c2788
 ms.openlocfilehash: 662cad329f4837d26b25d56f15d323fe623b05c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021670"
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>HOW TO：尋找兩個位置路徑 (XPATH-LINQ to XML) 的聯集 (Visual Basic)
 XPath 可讓您尋找兩個 XPath 位置路徑結果的等位。  

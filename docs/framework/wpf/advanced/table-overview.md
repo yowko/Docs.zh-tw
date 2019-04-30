@@ -10,34 +10,34 @@ helpviewer_keywords:
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
 ms.openlocfilehash: 6485aa9f2094b734f796ff38a33f4e0d3434e004
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053102"
 ---
 # <a name="table-overview"></a>資料表概觀
 <xref:System.Windows.Documents.Table> 是支援的非固定格式文件內容的方格呈現的區塊層級項目。 此元素的彈性讓它更為實用，但也讓您更難了解並正確使用。  
   
  此主題包括下列各節。  
   
--   [表格的基本概念](#table_basics)  
+- [表格的基本概念](#table_basics)  
   
--   [表格與方格之間的差異](#table_vs_Grid)  
+- [表格與方格之間的差異](#table_vs_Grid)  
   
--   [基本的表格結構](#basic_table_structure)  
+- [基本的表格結構](#basic_table_structure)  
   
--   [表格內含項目](#table_containment)  
+- [表格內含項目](#table_containment)  
   
--   [資料列群組](#row_groupings)  
+- [資料列群組](#row_groupings)  
   
--   [背景轉譯優先順序](#rendering_precedence)  
+- [背景轉譯優先順序](#rendering_precedence)  
   
--   [跨越資料列和資料行](#spanning_rows_or_columns)  
+- [跨越資料列和資料行](#spanning_rows_or_columns)  
   
--   [使用程式碼建置表格](#building_a_table_with_code)  
+- [使用程式碼建置表格](#building_a_table_with_code)  
   
--   [相關主題] 
+- [相關主題] 
   
 <a name="table_basics"></a>   
 ## <a name="table-basics"></a>表格的基本概念  
@@ -50,15 +50,15 @@ ms.locfileid: "59317658"
 ### <a name="basic-table-structure"></a>基本的表格結構  
  <xref:System.Windows.Documents.Table> 提供以方格為基礎的簡報，其中包含資料行 (由<xref:System.Windows.Documents.TableColumn>項目) 和資料列 (由<xref:System.Windows.Documents.TableRow>項目)。 <xref:System.Windows.Documents.TableColumn> 項目不會裝載內容;此外，它們只會定義資料行和資料行的特性。 <xref:System.Windows.Documents.TableRow> 元素必須裝載於<xref:System.Windows.Documents.TableRowGroup>元素，其定義的資料表資料列群組。 <xref:System.Windows.Documents.TableCell> 項目，其中包含要呈現資料表的實際內容，必須裝載在<xref:System.Windows.Documents.TableRow>項目。 <xref:System.Windows.Documents.TableCell> 只能包含衍生自<xref:System.Windows.Documents.Block>。  有效的子項目<xref:System.Windows.Documents.TableCell>包含。  
   
--   <xref:System.Windows.Documents.BlockUIContainer>  
+- <xref:System.Windows.Documents.BlockUIContainer>  
   
--   <xref:System.Windows.Documents.List>  
+- <xref:System.Windows.Documents.List>  
   
--   <xref:System.Windows.Documents.Paragraph>  
+- <xref:System.Windows.Documents.Paragraph>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Table>  
+- <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
 >  <xref:System.Windows.Documents.TableCell> 項目可能不會直接裝載文字內容。 如需有關非固定格式的內含項目規則內容的項目喜歡<xref:System.Windows.Documents.TableCell>，請參閱 <<c2> [ 非固定格式文件概觀](flow-document-overview.md)。  
@@ -78,19 +78,19 @@ ms.locfileid: "59317658"
 ### <a name="table-containment"></a>表格內含項目  
  <xref:System.Windows.Documents.Table> 衍生自<xref:System.Windows.Documents.Block>項目，並遵循的一般規則<xref:System.Windows.Documents.Block>層級項目。  A<xref:System.Windows.Documents.Table>元素可能包含任何下列的項目：  
   
--   <xref:System.Windows.Documents.FlowDocument>  
+- <xref:System.Windows.Documents.FlowDocument>  
   
--   <xref:System.Windows.Documents.TableCell>  
+- <xref:System.Windows.Documents.TableCell>  
   
--   <xref:System.Windows.Controls.ListBoxItem>  
+- <xref:System.Windows.Controls.ListBoxItem>  
   
--   <xref:System.Windows.Controls.ListViewItem>  
+- <xref:System.Windows.Controls.ListViewItem>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Floater>  
+- <xref:System.Windows.Documents.Floater>  
   
--   <xref:System.Windows.Documents.Figure>  
+- <xref:System.Windows.Documents.Figure>  
   
 <a name="row_groupings"></a>   
 ### <a name="row-groupings"></a>資料列群組  

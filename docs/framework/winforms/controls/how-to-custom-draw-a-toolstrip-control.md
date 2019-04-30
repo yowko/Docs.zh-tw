@@ -17,20 +17,20 @@ helpviewer_keywords:
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
 ms.openlocfilehash: 9b3d6b9391971d4c2d012345b96c2ed64d33a998
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052985"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>HOW TO：自訂繪製 ToolStrip 控制項
 <xref:System.Windows.Forms.ToolStrip> 控制項具有下列相關聯轉譯 (繪製) 類別的項目：  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer> 提供您作業系統的外觀和樣式。  
+- <xref:System.Windows.Forms.ToolStripSystemRenderer> 提供您作業系統的外觀和樣式。  
   
--   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 提供 Microsoft Office 的外觀和樣式。  
+- <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 提供 Microsoft Office 的外觀和樣式。  
   
--   <xref:System.Windows.Forms.ToolStripRenderer> 為其他兩個呈現類別的抽象基底類別。  
+- <xref:System.Windows.Forms.ToolStripRenderer> 為其他兩個呈現類別的抽象基底類別。  
   
  若要對 <xref:System.Windows.Forms.ToolStrip> 自訂繪圖 (也稱為主控描繪)，您可以覆寫其中一個轉譯器類別，並變更轉譯邏輯的層面。  
   
@@ -38,20 +38,20 @@ ms.locfileid: "59311041"
   
 ### <a name="to-switch-between-the-provided-renderers"></a>在提供的轉譯器之間切換  
   
--   將 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 屬性設定為所要的 <xref:System.Windows.Forms.ToolStripRenderMode> 值。  
+- 將 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 屬性設定為所要的 <xref:System.Windows.Forms.ToolStripRenderMode> 值。  
   
      藉由 <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>，靜態 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 決定您應用程式的轉譯器。 <xref:System.Windows.Forms.ToolStripRenderMode> 的其他值為 <xref:System.Windows.Forms.ToolStripRenderMode.Custom>、<xref:System.Windows.Forms.ToolStripRenderMode.Professional> 和 <xref:System.Windows.Forms.ToolStripRenderMode.System>。  
   
 ### <a name="to-change-the-microsoft-officestyle-borders-to-straight"></a>變更 Microsoft Office 樣式框線為直線  
   
--   請覆寫 <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>，但不要呼叫基底類別。  
+- 請覆寫 <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>，但不要呼叫基底類別。  
   
 > [!NOTE]
 >  該方法有用於 <xref:System.Windows.Forms.ToolStripRenderer>、<xref:System.Windows.Forms.ToolStripSystemRenderer> 和 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 的版本。  
   
 ### <a name="to-change-the-professionalcolortable"></a>變更 ProfessionalColorTable  
   
--   覆寫 <xref:System.Windows.Forms.ProfessionalColorTable> 和變更您想要的色彩。  
+- 覆寫 <xref:System.Windows.Forms.ProfessionalColorTable> 和變更您想要的色彩。  
   
     ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As _  
@@ -115,11 +115,11 @@ ms.locfileid: "59311041"
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a>關閉整個應用程式的 Microsoft Office 色彩  
   
--   請設定 <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> 為 `false`。  
+- 請設定 <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> 為 `false`。  
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-one-toolstrip-control"></a>關閉 ToolStrip 控制項的 Microsoft Office 色彩  
   
--   使用與下列程式碼範例類似的程式碼。  
+- 使用與下列程式碼範例類似的程式碼。  
   
     ```vb  
     Dim colorTable As ProfessionalColorTable()  

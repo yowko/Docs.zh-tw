@@ -3,11 +3,11 @@ title: 使用編輯範圍
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
 ms.openlocfilehash: 6417e51a29215ce2da22fa4c655642a5fe9b7d18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004766"
 ---
 # <a name="using-editing-scope"></a>使用編輯範圍
 這個範例示範如何批次處理一組變更，以便在單一不可部分完成的單位中復原這些變更。 根據預設，活動設計工具作者所執行的動作會自動整合至復原/取消復原系統。  
@@ -28,9 +28,9 @@ ms.locfileid: "59769420"
   
 2. 按一下 **開啟 編輯範圍**。  
   
-    1.  這個命令會呼叫 <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>，用於建立編輯範圍並將其發送至編輯堆疊上。  
+    1. 這個命令會呼叫 <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>，用於建立編輯範圍並將其發送至編輯堆疊上。  
   
-    2.  三個活動接著會加入至選取的 <xref:System.Activities.Presentation.Model.ModelItem>。 請注意，如果編輯範圍尚未使用 <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> 開啟，三個新活動會出現在設計工具畫布上。 因為這項作業在 <xref:System.Activities.Presentation.Model.EditingScope> 中仍為暫止，所以設計工具尚未更新。  
+    2. 三個活動接著會加入至選取的 <xref:System.Activities.Presentation.Model.ModelItem>。 請注意，如果編輯範圍尚未使用 <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> 開啟，三個新活動會出現在設計工具畫布上。 因為這項作業在 <xref:System.Activities.Presentation.Model.EditingScope> 中仍為暫止，所以設計工具尚未更新。  
   
 3. 按下**關閉編輯範圍**認可編輯範圍。 三個活動隨即出現在設計工具中。  
   

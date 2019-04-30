@@ -3,11 +3,11 @@ title: 使用 Pick 活動
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
 ms.openlocfilehash: 0b2fbeb9b32406dd913d7e1ee87ac167113d0f28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004727"
 ---
 # <a name="using-the-pick-activity"></a>使用 Pick 活動
 這個範例示範如何使用 <xref:System.Activities.Statements.Pick> 活動。
@@ -24,17 +24,17 @@ ms.locfileid: "59302970"
 
  設計工具的工作流程設計工具版本的範例示範如何建立工作流程設計工具中。 包含下列檔案：
 
--   Program.cs:包含`Main`執行範例工作流程函式。
+- Program.cs:包含`Main`執行範例工作流程函式。
 
--   ReadString.cs:從主控台讀取輸入的自訂活動。
+- ReadString.cs:從主控台讀取輸入的自訂活動。
 
--   Sequence1.xaml:使用 Pick 的設計工具中建立工作流程。
+- Sequence1.xaml:使用 Pick 的設計工具中建立工作流程。
 
  自動程式化的工作流程範例的程式碼版本示範如何建立工作流程設計工具中。 包含下列檔案：
 
--   Program.cs:包含`Main`執行範例工作流程函式。
+- Program.cs:包含`Main`執行範例工作流程函式。
 
--   ReadString.cs:從主控台讀取輸入的自訂活動。
+- ReadString.cs:從主控台讀取輸入的自訂活動。
 
 #### <a name="to-use-this-sample"></a>若要使用這個範例
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ListView controls [WPF], styling rows with GridViews
 ms.assetid: 2e406ba2-70a0-4e62-841f-0934859de76e
 ms.openlocfilehash: 9af8d10c7db2d3bbe8b9443402cbb1cfeaa7edb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052010"
 ---
 # <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>HOW TO：在實作 GridView 的 ListView 中設定資料列的樣式
 此範例示範如何在資料列的樣式<xref:System.Windows.Controls.ListView>控制項，可實作<xref:System.Windows.Controls.GridView><xref:System.Windows.Controls.ListView.View%2A>模式。  

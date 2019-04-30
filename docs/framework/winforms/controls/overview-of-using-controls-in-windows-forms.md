@@ -10,11 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
 ms.openlocfilehash: 247ec4fc11f33587e77c49244b239a574c8f3cfc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012707"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>在 Windows Form 中使用控制項的概觀
 本主題說明在 Windows Forms 應用程式的基本項目，並提供簡單的範例會使用控制項和處理 Windows Forms 應用程式中的事件。  
@@ -22,9 +22,9 @@ ms.locfileid: "59207353"
 ## <a name="simple-windows-forms-applications"></a>簡單的 Windows Forms 應用程式  
  至少在 Windows Forms 應用程式包含下列項目：  
   
--   一或多個類別衍生自<xref:System.Windows.Forms.Form?displayProperty=nameWithType>。  
+- 一或多個類別衍生自<xref:System.Windows.Forms.Form?displayProperty=nameWithType>。  
   
--   A`Main`叫用方法`static`(`shared`在 Visual Basic 中)<xref:System.Windows.Forms.Application.Run%2A>方法，並傳遞<xref:System.Windows.Forms.Form>給它的執行個體。 <xref:System.Windows.Forms.Application.Run%2A>方法會處理從作業系統到應用程式的訊息。  
+- A`Main`叫用方法`static`(`shared`在 Visual Basic 中)<xref:System.Windows.Forms.Application.Run%2A>方法，並傳遞<xref:System.Windows.Forms.Form>給它的執行個體。 <xref:System.Windows.Forms.Application.Run%2A>方法會處理從作業系統到應用程式的訊息。  
   
  下列程式碼範例會顯示在 Windows Forms 應用程式的基本項目。  
   

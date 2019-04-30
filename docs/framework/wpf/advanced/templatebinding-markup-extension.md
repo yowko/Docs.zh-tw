@@ -9,11 +9,11 @@ helpviewer_keywords:
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
 ms.openlocfilehash: c004560a0b7ab367fbf4fbb48b0e8d8b63f3d8f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053037"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding 標記延伸
 將控制項樣板中的屬性值連結成為樣板化控制項上另一個屬性的值。  

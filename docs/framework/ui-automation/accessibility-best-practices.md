@@ -6,11 +6,11 @@ helpviewer_keywords:
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 ms.openlocfilehash: a20ecb8fb8d2ea4efdd244c3460dc9c07e22b538
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033224"
 ---
 # <a name="accessibility-best-practices"></a>協助工具最佳作法
 > [!NOTE]
@@ -78,9 +78,9 @@ ms.locfileid: "59074231"
   
  應用程式應該提供下列鍵盤介面：  
   
--   使用者可與其互動的所有控制項之定位停駐點，例如按鈕、連結或清單方塊  
+- 使用者可與其互動的所有控制項之定位停駐點，例如按鈕、連結或清單方塊  
   
--   邏輯定位順序  
+- 邏輯定位順序  
   
 <a name="Show_the_Keyboard_Focus"></a>   
 ### <a name="show-the-keyboard-focus"></a>顯示鍵盤焦點  
@@ -90,11 +90,11 @@ ms.locfileid: "59074231"
   
  應用程式應以鍵盤焦點執行下列動作：  
   
--   項目應一律具有鍵盤焦點  
+- 項目應一律具有鍵盤焦點  
   
--   鍵盤焦點應為可見及明顯  
+- 鍵盤焦點應為可見及明顯  
   
--   選取項目及/或具有焦點的項目應該以視覺方式醒目提示  
+- 選取項目及/或具有焦點的項目應該以視覺方式醒目提示  
   
 <a name="Support_Navigation_Standards_and_Powerful_Navigation"></a>   
 ### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>支援巡覽標準和強大的巡覽配置  
@@ -102,11 +102,11 @@ ms.locfileid: "59074231"
   
  應用程式應該提供下列鍵盤介面：  
   
--   快速鍵以及所有命令、功能表和控制項之加上底線的便捷鍵  
+- 快速鍵以及所有命令、功能表和控制項之加上底線的便捷鍵  
   
--   重要連結的鍵盤快速鍵  
+- 重要連結的鍵盤快速鍵  
   
--   所有功能表項目都有便捷鍵；所有的按鈕都有快速鍵，且所有命令都有快速鍵。  
+- 所有功能表項目都有便捷鍵；所有的按鈕都有快速鍵，且所有命令都有快速鍵。  
   
 <a name="Do_not_let_Mouse_Location_Interfere_with_Keyboard"></a>   
 ### <a name="do-not-let-mouse-location-interfere-with-keyboard-navigation"></a>不要讓滑鼠位置干擾鍵盤巡覽  

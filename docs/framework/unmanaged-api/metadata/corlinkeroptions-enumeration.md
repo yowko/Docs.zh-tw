@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dc0554ed89d21607978d059b26c4ad69e59a2d4c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045788"
 ---
 # <a name="corlinkeroptions-enumeration"></a>CorLinkerOptions 列舉
 指定旗標，以選取中繼資料連結器的選項。  

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 61a36ff23bf9deac25983f06387b2bbbfd49546b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041895"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>ICorProfilerCallback::RemotingClientSendingMessage 方法
 通知分析工具用戶端會將要求傳送到伺服器。  
@@ -39,11 +39,11 @@ HRESULT RemotingClientSendingMessage(
  `pCookie`  
  [in]值，這個值會對應中提供的價值[icorprofilercallback:: Remotingserverreceivingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md)在這些情況下：  
   
--   遠端處理 GUID cookie 在作用中。  
+- 遠端處理 GUID cookie 在作用中。  
   
--   成功的訊息傳輸通道。  
+- 成功的訊息傳輸通道。  
   
--   GUID cookie 上為作用中伺服器端處理序。  
+- GUID cookie 上為作用中伺服器端處理序。  
   
  這可讓您輕易地配對的遠端呼叫，以及建立的邏輯呼叫堆疊。  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
 ms.openlocfilehash: 67cad0df3f10ff1fa1f6a58546fe150232fe1283
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032067"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>HOW TO：叫用命令列編譯器 (Visual Basic)
 您可以叫用命令列編譯器，命令列中，也稱為 MS-DOS 命令提示字元中輸入的可執行檔名稱。 如果您從預設的 Windows 命令提示字元進行編譯，您必須輸入可執行檔的完整的路徑。 若要覆寫此預設行為，您可以使用 Visual Studio 中，開發人員命令提示字元，或修改 PATH 環境變數。 兩者都可讓您只要鍵入編譯器名稱從任何目錄進行編譯。  

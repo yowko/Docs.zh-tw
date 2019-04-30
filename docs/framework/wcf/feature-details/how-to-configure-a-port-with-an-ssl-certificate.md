@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
 ms.openlocfilehash: d709123895f361c1d2268a218b4163c8d195e1b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047955"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>HOW TO：使用 SSL 憑證設定連接埠
 建立自我裝載的 Windows Communication Foundation (WCF) 服務使用時<xref:System.ServiceModel.WSHttpBinding>類別使用傳輸安全性的中，您也必須使用 X.509 憑證設定連接埠。 如果您沒有建立自我裝載的服務，可以將您的服務裝載在 Internet Information Services (IIS) 上。 如需詳細資訊，請參閱 < [HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
@@ -27,15 +27,15 @@ ms.locfileid: "59345582"
   
  本主題說明如何完成下列數個程序：  
   
--   判斷電腦目前的連接埠組態。  
+- 判斷電腦目前的連接埠組態。  
   
--   取得憑證的指紋 (如此才能完成下列兩個程序)。  
+- 取得憑證的指紋 (如此才能完成下列兩個程序)。  
   
--   將 SSL 憑證繫結至連接埠組態。  
+- 將 SSL 憑證繫結至連接埠組態。  
   
--   將 SSL 憑證繫結至連接埠組態並支援用戶端憑證。  
+- 將 SSL 憑證繫結至連接埠組態並支援用戶端憑證。  
   
--   從連接埠號碼刪除 SSL 憑證。  
+- 從連接埠號碼刪除 SSL 憑證。  
   
  請注意，您必須具備系統管理員權限，才能修改儲存在電腦上的憑證。  
   
@@ -71,9 +71,9 @@ ms.locfileid: "59345582"
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    -   **-I**交換器有的語法`IP`:`port` ，並指示工具將憑證設定電腦的連接埠 8012。 或者，號碼前面的四個零也可以使用電腦的實際 IP 位址來取代。  
+    - **-I**交換器有的語法`IP`:`port` ，並指示工具將憑證設定電腦的連接埠 8012。 或者，號碼前面的四個零也可以使用電腦的實際 IP 位址來取代。  
   
-    -   **-H**參數會指定憑證的指紋。  
+    - **-H**參數會指定憑證的指紋。  
   
 2. 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中，使用 Netsh.exe 工具，如下列範例所示：  
   
@@ -81,11 +81,11 @@ ms.locfileid: "59345582"
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
     ```  
   
-    -   **Certhash**參數會指定憑證的指紋。  
+    - **Certhash**參數會指定憑證的指紋。  
   
-    -   **Ipport**參數指定的 IP 位址和連接埠，以及運作方式就像是 **-i**上述 Httpcfg.exe 工具的參數。  
+    - **Ipport**參數指定的 IP 位址和連接埠，以及運作方式就像是 **-i**上述 Httpcfg.exe 工具的參數。  
   
-    -   **Appid**參數是可用來識別擁有端應用程式的 GUID。  
+    - **Appid**參數是可用來識別擁有端應用程式的 GUID。  
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>繫結 SSL 憑證與連接埠號碼並支援用戶端憑證  
   

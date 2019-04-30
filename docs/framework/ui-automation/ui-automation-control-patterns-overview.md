@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 ms.openlocfilehash: fc07cc23498b2079aba41dfa57c26b88944d6a8d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033081"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 自動化控制項模式概觀
 > [!NOTE]
@@ -27,11 +27,11 @@ ms.locfileid: "59126356"
 ## <a name="ui-automation-control-pattern-components"></a>使用者介面自動化控制項模式元件  
  控制項模式支援定義可在控制項中使用個別功能所需的方法、屬性、事件和關聯性。  
   
--   使用者介面自動化項目和其父系、子系和同層級之間的關聯性描述 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構內的項目結構。  
+- 使用者介面自動化項目和其父系、子系和同層級之間的關聯性描述 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構內的項目結構。  
   
--   這些方法可以讓使用者介面自動化用戶端操作此控制項。  
+- 這些方法可以讓使用者介面自動化用戶端操作此控制項。  
   
--   屬性和事件提供控制項模式功能以及控制項狀態的相關資訊。  
+- 屬性和事件提供控制項模式功能以及控制項狀態的相關資訊。  
   
  控制項模式與 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 相關聯，如同介面與 [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] 物件相關聯。 在 [!INCLUDE[TLA2#tla_com](../../../includes/tla2sharptla-com-md.md)]，您可以查詢物件以詢問支援哪個介面，然後使用這些介面來存取功能。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，使用者介面自動化用戶端可以詢問控制項支援何種控制項模式，然後透過支援的控制項模式所公開的屬性、方法、事件和結構與其互動。 例如，對於多行編輯方塊，使用者介面自動化提供者可實作 <xref:System.Windows.Automation.Provider.IScrollProvider>。 當用戶端知道 <xref:System.Windows.Automation.AutomationElement> 支援 <xref:System.Windows.Automation.ScrollPattern> 控制項模式時，它便可以使用該控制項模式所公開的屬性、方法和事件來操作控制項，或存取此控制項的相關資訊。  
   
