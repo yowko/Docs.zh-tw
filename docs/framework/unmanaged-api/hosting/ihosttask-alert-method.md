@@ -18,50 +18,50 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c153e6ae8558eeab2efa99765405fb7c84632b01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992845"
 ---
-# <a name="ihosttaskalert-method"></a><span data-ttu-id="81b74-102">IHostTask::Alert 方法</span><span class="sxs-lookup"><span data-stu-id="81b74-102">IHostTask::Alert Method</span></span>
-<span data-ttu-id="81b74-103">要求主機喚醒表示由目前的工作[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)執行個體，因此可以中止的工作。</span><span class="sxs-lookup"><span data-stu-id="81b74-103">Requests that the host wake the task represented by the current [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance, so the task can be aborted.</span></span>  
+# <a name="ihosttaskalert-method"></a><span data-ttu-id="2e84c-102">IHostTask::Alert 方法</span><span class="sxs-lookup"><span data-stu-id="2e84c-102">IHostTask::Alert Method</span></span>
+<span data-ttu-id="2e84c-103">要求主機喚醒表示由目前的工作[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)執行個體，因此可以中止的工作。</span><span class="sxs-lookup"><span data-stu-id="2e84c-103">Requests that the host wake the task represented by the current [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance, so the task can be aborted.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="81b74-104">語法</span><span class="sxs-lookup"><span data-stu-id="81b74-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2e84c-104">語法</span><span class="sxs-lookup"><span data-stu-id="2e84c-104">Syntax</span></span>  
   
 ```  
 HRESULT Alert ();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="81b74-105">傳回值</span><span class="sxs-lookup"><span data-stu-id="81b74-105">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2e84c-105">傳回值</span><span class="sxs-lookup"><span data-stu-id="2e84c-105">Return Value</span></span>  
   
-|<span data-ttu-id="81b74-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="81b74-106">HRESULT</span></span>|<span data-ttu-id="81b74-107">描述</span><span class="sxs-lookup"><span data-stu-id="81b74-107">Description</span></span>|  
+|<span data-ttu-id="2e84c-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2e84c-106">HRESULT</span></span>|<span data-ttu-id="2e84c-107">描述</span><span class="sxs-lookup"><span data-stu-id="2e84c-107">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="81b74-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="81b74-108">S_OK</span></span>|<span data-ttu-id="81b74-109">此方法傳回成功。</span><span class="sxs-lookup"><span data-stu-id="81b74-109">The method returned successfully.</span></span>|  
-|<span data-ttu-id="81b74-110">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="81b74-110">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="81b74-111">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="81b74-111">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="81b74-112">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="81b74-112">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="81b74-113">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="81b74-113">The call timed out.</span></span>|  
-|<span data-ttu-id="81b74-114">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="81b74-114">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="81b74-115">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="81b74-115">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="81b74-116">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="81b74-116">HOST_E_ABANDONED</span></span>|<span data-ttu-id="81b74-117">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="81b74-117">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="81b74-118">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="81b74-118">E_FAIL</span></span>|<span data-ttu-id="81b74-119">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="81b74-119">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="81b74-120">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="81b74-120">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="81b74-121">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="81b74-121">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="2e84c-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="2e84c-108">S_OK</span></span>|<span data-ttu-id="2e84c-109">此方法傳回成功。</span><span class="sxs-lookup"><span data-stu-id="2e84c-109">The method returned successfully.</span></span>|  
+|<span data-ttu-id="2e84c-110">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="2e84c-110">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="2e84c-111">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="2e84c-111">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="2e84c-112">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="2e84c-112">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="2e84c-113">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="2e84c-113">The call timed out.</span></span>|  
+|<span data-ttu-id="2e84c-114">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="2e84c-114">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="2e84c-115">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="2e84c-115">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="2e84c-116">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="2e84c-116">HOST_E_ABANDONED</span></span>|<span data-ttu-id="2e84c-117">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="2e84c-117">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="2e84c-118">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="2e84c-118">E_FAIL</span></span>|<span data-ttu-id="2e84c-119">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="2e84c-119">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="2e84c-120">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="2e84c-120">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="2e84c-121">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="2e84c-121">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="81b74-122">備註</span><span class="sxs-lookup"><span data-stu-id="81b74-122">Remarks</span></span>  
- <span data-ttu-id="81b74-123">CLR 會呼叫`Alert`方法時<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>呼叫使用者程式碼，或當<xref:System.AppDomain>目前相關聯<xref:System.Threading.Thread>關閉。</span><span class="sxs-lookup"><span data-stu-id="81b74-123">The CLR calls the `Alert` method when <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> is called from user code, or when the <xref:System.AppDomain> associated with the current <xref:System.Threading.Thread> shuts down.</span></span> <span data-ttu-id="81b74-124">主機必須立即傳回，因為以非同步方式進行呼叫。</span><span class="sxs-lookup"><span data-stu-id="81b74-124">The host must return immediately, because the call is made asynchronously.</span></span> <span data-ttu-id="81b74-125">如果主應用程式無法立即警示工作，它必須喚醒的下次進入中警示的狀態。</span><span class="sxs-lookup"><span data-stu-id="81b74-125">If the host cannot alert the task immediately, it must wake up the next time it enters a state in which it can be alerted.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2e84c-122">備註</span><span class="sxs-lookup"><span data-stu-id="2e84c-122">Remarks</span></span>  
+ <span data-ttu-id="2e84c-123">CLR 會呼叫`Alert`方法時<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>呼叫使用者程式碼，或當<xref:System.AppDomain>目前相關聯<xref:System.Threading.Thread>關閉。</span><span class="sxs-lookup"><span data-stu-id="2e84c-123">The CLR calls the `Alert` method when <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> is called from user code, or when the <xref:System.AppDomain> associated with the current <xref:System.Threading.Thread> shuts down.</span></span> <span data-ttu-id="2e84c-124">主機必須立即傳回，因為以非同步方式進行呼叫。</span><span class="sxs-lookup"><span data-stu-id="2e84c-124">The host must return immediately, because the call is made asynchronously.</span></span> <span data-ttu-id="2e84c-125">如果主應用程式無法立即警示工作，它必須喚醒的下次進入中警示的狀態。</span><span class="sxs-lookup"><span data-stu-id="2e84c-125">If the host cannot alert the task immediately, it must wake up the next time it enters a state in which it can be alerted.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="81b74-126">`Alert` 會影響執行階段已傳遞到的工作[WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)這類方法的 WAIT_ALERTABLE 值[聯結](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md)。</span><span class="sxs-lookup"><span data-stu-id="81b74-126">`Alert` affects only those tasks to which the runtime has passed a [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) value of WAIT_ALERTABLE to methods such as [Join](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md).</span></span>  
+>  <span data-ttu-id="2e84c-126">`Alert` 會影響執行階段已傳遞到的工作[WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)這類方法的 WAIT_ALERTABLE 值[聯結](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md)。</span><span class="sxs-lookup"><span data-stu-id="2e84c-126">`Alert` affects only those tasks to which the runtime has passed a [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) value of WAIT_ALERTABLE to methods such as [Join](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="81b74-127">需求</span><span class="sxs-lookup"><span data-stu-id="81b74-127">Requirements</span></span>  
- <span data-ttu-id="81b74-128">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="81b74-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2e84c-127">需求</span><span class="sxs-lookup"><span data-stu-id="2e84c-127">Requirements</span></span>  
+ <span data-ttu-id="2e84c-128">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2e84c-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="81b74-129">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="81b74-129">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="2e84c-129">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2e84c-129">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="81b74-130">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="81b74-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="2e84c-130">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="2e84c-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="81b74-131">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="81b74-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2e84c-131">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2e84c-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="81b74-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="81b74-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2e84c-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2e84c-132">See also</span></span>
 
-- [<span data-ttu-id="81b74-133">ICLRTask 介面</span><span class="sxs-lookup"><span data-stu-id="81b74-133">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="81b74-134">ICLRTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="81b74-134">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="81b74-135">IHostTask 介面</span><span class="sxs-lookup"><span data-stu-id="81b74-135">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="81b74-136">IHostTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="81b74-136">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="2e84c-133">ICLRTask 介面</span><span class="sxs-lookup"><span data-stu-id="2e84c-133">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="2e84c-134">ICLRTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="2e84c-134">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="2e84c-135">IHostTask 介面</span><span class="sxs-lookup"><span data-stu-id="2e84c-135">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="2e84c-136">IHostTaskManager 介面</span><span class="sxs-lookup"><span data-stu-id="2e84c-136">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

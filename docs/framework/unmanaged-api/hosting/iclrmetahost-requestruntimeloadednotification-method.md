@@ -18,44 +18,44 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 61fce3e06b5245872f7061716e8d995dd5f5043c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984642"
 ---
-# <a name="iclrmetahostrequestruntimeloadednotification-method"></a><span data-ttu-id="b9c39-102">ICLRMetaHost::RequestRuntimeLoadedNotification 方法</span><span class="sxs-lookup"><span data-stu-id="b9c39-102">ICLRMetaHost::RequestRuntimeLoadedNotification Method</span></span>
-<span data-ttu-id="b9c39-103">提供保證的 common language runtime (CLR) 版本是第一次載入，但尚未開始時要呼叫的回呼函式。</span><span class="sxs-lookup"><span data-stu-id="b9c39-103">Provides a callback function that is guaranteed to be called when a common language runtime (CLR) version is first loaded, but not yet started.</span></span> <span data-ttu-id="b9c39-104">這個方法會取代[LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)函式。</span><span class="sxs-lookup"><span data-stu-id="b9c39-104">This method supersedes the [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) function.</span></span>  
+# <a name="iclrmetahostrequestruntimeloadednotification-method"></a><span data-ttu-id="8ea59-102">ICLRMetaHost::RequestRuntimeLoadedNotification 方法</span><span class="sxs-lookup"><span data-stu-id="8ea59-102">ICLRMetaHost::RequestRuntimeLoadedNotification Method</span></span>
+<span data-ttu-id="8ea59-103">提供保證的 common language runtime (CLR) 版本是第一次載入，但尚未開始時要呼叫的回呼函式。</span><span class="sxs-lookup"><span data-stu-id="8ea59-103">Provides a callback function that is guaranteed to be called when a common language runtime (CLR) version is first loaded, but not yet started.</span></span> <span data-ttu-id="8ea59-104">這個方法會取代[LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)函式。</span><span class="sxs-lookup"><span data-stu-id="8ea59-104">This method supersedes the [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b9c39-105">語法</span><span class="sxs-lookup"><span data-stu-id="b9c39-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8ea59-105">語法</span><span class="sxs-lookup"><span data-stu-id="8ea59-105">Syntax</span></span>  
   
 ```  
 HRESULT RequestRuntimeLoadedNotification (  
     [in] RuntimeLoadedCallbackFnPtr pCallbackFunction);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b9c39-106">參數</span><span class="sxs-lookup"><span data-stu-id="b9c39-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8ea59-106">參數</span><span class="sxs-lookup"><span data-stu-id="8ea59-106">Parameters</span></span>  
  `pCallbackFunction`  
- <span data-ttu-id="b9c39-107">[in]已載入新的執行階段時，會叫用回呼函式。</span><span class="sxs-lookup"><span data-stu-id="b9c39-107">[in] The callback function that is invoked when a new runtime has been loaded.</span></span>  
+ <span data-ttu-id="8ea59-107">[in]已載入新的執行階段時，會叫用回呼函式。</span><span class="sxs-lookup"><span data-stu-id="8ea59-107">[in] The callback function that is invoked when a new runtime has been loaded.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b9c39-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="b9c39-108">Return Value</span></span>  
- <span data-ttu-id="b9c39-109">這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="b9c39-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8ea59-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="8ea59-108">Return Value</span></span>  
+ <span data-ttu-id="8ea59-109">這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="8ea59-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="b9c39-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b9c39-110">HRESULT</span></span>|<span data-ttu-id="b9c39-111">描述</span><span class="sxs-lookup"><span data-stu-id="b9c39-111">Description</span></span>|  
+|<span data-ttu-id="8ea59-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8ea59-110">HRESULT</span></span>|<span data-ttu-id="8ea59-111">描述</span><span class="sxs-lookup"><span data-stu-id="8ea59-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="b9c39-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="b9c39-112">S_OK</span></span>|<span data-ttu-id="b9c39-113">已成功完成命令。</span><span class="sxs-lookup"><span data-stu-id="b9c39-113">The method completed successfully.</span></span>|  
-|<span data-ttu-id="b9c39-114">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="b9c39-114">E_POINTER</span></span>|<span data-ttu-id="b9c39-115">`pCallbackFunction` 為 null。</span><span class="sxs-lookup"><span data-stu-id="b9c39-115">`pCallbackFunction` is null.</span></span>|  
+|<span data-ttu-id="8ea59-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="8ea59-112">S_OK</span></span>|<span data-ttu-id="8ea59-113">已成功完成命令。</span><span class="sxs-lookup"><span data-stu-id="8ea59-113">The method completed successfully.</span></span>|  
+|<span data-ttu-id="8ea59-114">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="8ea59-114">E_POINTER</span></span>|<span data-ttu-id="8ea59-115">`pCallbackFunction` 為 null。</span><span class="sxs-lookup"><span data-stu-id="8ea59-115">`pCallbackFunction` is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b9c39-116">備註</span><span class="sxs-lookup"><span data-stu-id="b9c39-116">Remarks</span></span>  
- <span data-ttu-id="b9c39-117">回呼的運作方式如下：</span><span class="sxs-lookup"><span data-stu-id="b9c39-117">The callback works in the following way:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8ea59-116">備註</span><span class="sxs-lookup"><span data-stu-id="8ea59-116">Remarks</span></span>  
+ <span data-ttu-id="8ea59-117">回呼的運作方式如下：</span><span class="sxs-lookup"><span data-stu-id="8ea59-117">The callback works in the following way:</span></span>  
   
--   <span data-ttu-id="b9c39-118">只有在第一次載入執行階段時，會叫用回呼。</span><span class="sxs-lookup"><span data-stu-id="b9c39-118">The callback is invoked only when a runtime is loaded for the first time.</span></span>  
+- <span data-ttu-id="8ea59-118">只有在第一次載入執行階段時，會叫用回呼。</span><span class="sxs-lookup"><span data-stu-id="8ea59-118">The callback is invoked only when a runtime is loaded for the first time.</span></span>  
   
--   <span data-ttu-id="b9c39-119">回呼不會叫用相同的執行階段的可重新進入的負載。</span><span class="sxs-lookup"><span data-stu-id="b9c39-119">The callback is not invoked for reentrant loads of the same runtime.</span></span>  
+- <span data-ttu-id="8ea59-119">回呼不會叫用相同的執行階段的可重新進入的負載。</span><span class="sxs-lookup"><span data-stu-id="8ea59-119">The callback is not invoked for reentrant loads of the same runtime.</span></span>  
   
--   <span data-ttu-id="b9c39-120">不可重新進入執行階段載入的序列化回呼函式的呼叫。</span><span class="sxs-lookup"><span data-stu-id="b9c39-120">For non-reentrant runtime loads, calls to the callback function are serialized.</span></span>  
+- <span data-ttu-id="8ea59-120">不可重新進入執行階段載入的序列化回呼函式的呼叫。</span><span class="sxs-lookup"><span data-stu-id="8ea59-120">For non-reentrant runtime loads, calls to the callback function are serialized.</span></span>  
   
- <span data-ttu-id="b9c39-121">回呼函式具有下列原型：</span><span class="sxs-lookup"><span data-stu-id="b9c39-121">The callback function has the following prototype:</span></span>  
+ <span data-ttu-id="8ea59-121">回呼函式具有下列原型：</span><span class="sxs-lookup"><span data-stu-id="8ea59-121">The callback function has the following prototype:</span></span>  
   
 ```  
 typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(  
@@ -64,41 +64,41 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
                      CallbackThreadUnsetFnPtr pfnCallbackThreadUnset);  
 ```  
   
- <span data-ttu-id="b9c39-122">回呼函式原型如下所示：</span><span class="sxs-lookup"><span data-stu-id="b9c39-122">The callback function prototypes are as follows:</span></span>  
+ <span data-ttu-id="8ea59-122">回呼函式原型如下所示：</span><span class="sxs-lookup"><span data-stu-id="8ea59-122">The callback function prototypes are as follows:</span></span>  
   
--   <span data-ttu-id="b9c39-123">`pfnCallbackThreadSet`：</span><span class="sxs-lookup"><span data-stu-id="b9c39-123">`pfnCallbackThreadSet`:</span></span>  
+- <span data-ttu-id="8ea59-123">`pfnCallbackThreadSet`：</span><span class="sxs-lookup"><span data-stu-id="8ea59-123">`pfnCallbackThreadSet`:</span></span>  
   
     ```  
     typedef HRESULT (__stdcall *CallbackThreadSetFnPtr)();  
     ```  
   
--   <span data-ttu-id="b9c39-124">`pfnCallbackThreadUnset`：</span><span class="sxs-lookup"><span data-stu-id="b9c39-124">`pfnCallbackThreadUnset`:</span></span>  
+- <span data-ttu-id="8ea59-124">`pfnCallbackThreadUnset`：</span><span class="sxs-lookup"><span data-stu-id="8ea59-124">`pfnCallbackThreadUnset`:</span></span>  
   
     ```  
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- <span data-ttu-id="b9c39-125">如果主機想要載入，或導致另一個執行階段要載入的方式可重新進入，則`pfnCallbackThreadSet`和`pfnCallbackThreadUnset`參數所提供的回呼函式必須使用方式如下：</span><span class="sxs-lookup"><span data-stu-id="b9c39-125">If the host intends to load or cause another runtime to be loaded in a reentrant manner, the `pfnCallbackThreadSet` and `pfnCallbackThreadUnset` parameters that are provided in the callback function must be used in the following way:</span></span>  
+ <span data-ttu-id="8ea59-125">如果主機想要載入，或導致另一個執行階段要載入的方式可重新進入，則`pfnCallbackThreadSet`和`pfnCallbackThreadUnset`參數所提供的回呼函式必須使用方式如下：</span><span class="sxs-lookup"><span data-stu-id="8ea59-125">If the host intends to load or cause another runtime to be loaded in a reentrant manner, the `pfnCallbackThreadSet` and `pfnCallbackThreadUnset` parameters that are provided in the callback function must be used in the following way:</span></span>  
   
--   <span data-ttu-id="b9c39-126">`pfnCallbackThreadSet` 必須由之前嘗試這類載入可能會導致執行階段載入的執行緒呼叫。</span><span class="sxs-lookup"><span data-stu-id="b9c39-126">`pfnCallbackThreadSet` must be called by the thread that might cause a runtime load before such a load is attempted.</span></span>  
+- <span data-ttu-id="8ea59-126">`pfnCallbackThreadSet` 必須由之前嘗試這類載入可能會導致執行階段載入的執行緒呼叫。</span><span class="sxs-lookup"><span data-stu-id="8ea59-126">`pfnCallbackThreadSet` must be called by the thread that might cause a runtime load before such a load is attempted.</span></span>  
   
--   <span data-ttu-id="b9c39-127">`pfnCallbackThreadUnset` 必須先呼叫時，執行緒將不會再造成執行階段負載 （以及從初始的回呼傳回之前）。</span><span class="sxs-lookup"><span data-stu-id="b9c39-127">`pfnCallbackThreadUnset` must be called when the thread will no longer cause such a runtime load (and before returning from the initial callback).</span></span>  
+- <span data-ttu-id="8ea59-127">`pfnCallbackThreadUnset` 必須先呼叫時，執行緒將不會再造成執行階段負載 （以及從初始的回呼傳回之前）。</span><span class="sxs-lookup"><span data-stu-id="8ea59-127">`pfnCallbackThreadUnset` must be called when the thread will no longer cause such a runtime load (and before returning from the initial callback).</span></span>  
   
--   <span data-ttu-id="b9c39-128">`pfnCallbackThreadSet` 和`pfnCallbackThreadUnset`兩者都是不可重新進入。</span><span class="sxs-lookup"><span data-stu-id="b9c39-128">`pfnCallbackThreadSet` and `pfnCallbackThreadUnset` are both non-reentrant.</span></span>  
+- <span data-ttu-id="8ea59-128">`pfnCallbackThreadSet` 和`pfnCallbackThreadUnset`兩者都是不可重新進入。</span><span class="sxs-lookup"><span data-stu-id="8ea59-128">`pfnCallbackThreadSet` and `pfnCallbackThreadUnset` are both non-reentrant.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b9c39-129">裝載應用程式必須呼叫`pfnCallbackThreadSet`並`pfnCallbackThreadUnset`的範圍外`pCallbackFunction`參數。</span><span class="sxs-lookup"><span data-stu-id="b9c39-129">Host applications must not call `pfnCallbackThreadSet` and `pfnCallbackThreadUnset` outside the scope of the `pCallbackFunction` parameter.</span></span>  
+>  <span data-ttu-id="8ea59-129">裝載應用程式必須呼叫`pfnCallbackThreadSet`並`pfnCallbackThreadUnset`的範圍外`pCallbackFunction`參數。</span><span class="sxs-lookup"><span data-stu-id="8ea59-129">Host applications must not call `pfnCallbackThreadSet` and `pfnCallbackThreadUnset` outside the scope of the `pCallbackFunction` parameter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b9c39-130">需求</span><span class="sxs-lookup"><span data-stu-id="b9c39-130">Requirements</span></span>  
- <span data-ttu-id="b9c39-131">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b9c39-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8ea59-130">需求</span><span class="sxs-lookup"><span data-stu-id="8ea59-130">Requirements</span></span>  
+ <span data-ttu-id="8ea59-131">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8ea59-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b9c39-132">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="b9c39-132">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="8ea59-132">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="8ea59-132">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="b9c39-133">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="b9c39-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8ea59-133">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="8ea59-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b9c39-134">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b9c39-134">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="8ea59-134">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8ea59-134">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b9c39-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b9c39-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8ea59-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8ea59-135">See also</span></span>
 
-- [<span data-ttu-id="b9c39-136">ICLRMetaHost 介面</span><span class="sxs-lookup"><span data-stu-id="b9c39-136">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
-- [<span data-ttu-id="b9c39-137">裝載</span><span class="sxs-lookup"><span data-stu-id="b9c39-137">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="8ea59-136">ICLRMetaHost 介面</span><span class="sxs-lookup"><span data-stu-id="8ea59-136">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [<span data-ttu-id="8ea59-137">裝載</span><span class="sxs-lookup"><span data-stu-id="8ea59-137">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

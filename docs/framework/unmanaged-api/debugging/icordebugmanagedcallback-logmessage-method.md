@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cf83124af5ced7bb6458564430ceb319ce7d680a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995172"
 ---
-# <a name="icordebugmanagedcallbacklogmessage-method"></a><span data-ttu-id="78e32-102">ICorDebugManagedCallback::LogMessage 方法</span><span class="sxs-lookup"><span data-stu-id="78e32-102">ICorDebugManagedCallback::LogMessage Method</span></span>
-<span data-ttu-id="78e32-103">通用語言執行平台 (CLR) managed 執行緒已呼叫方法，偵錯工具會告知<xref:System.Diagnostics.EventLog>記錄事件的類別。</span><span class="sxs-lookup"><span data-stu-id="78e32-103">Notifies the debugger that a common language runtime (CLR) managed thread has called a method in the <xref:System.Diagnostics.EventLog> class to log an event.</span></span>  
+# <a name="icordebugmanagedcallbacklogmessage-method"></a><span data-ttu-id="a2dc7-102">ICorDebugManagedCallback::LogMessage 方法</span><span class="sxs-lookup"><span data-stu-id="a2dc7-102">ICorDebugManagedCallback::LogMessage Method</span></span>
+<span data-ttu-id="a2dc7-103">通用語言執行平台 (CLR) managed 執行緒已呼叫方法，偵錯工具會告知<xref:System.Diagnostics.EventLog>記錄事件的類別。</span><span class="sxs-lookup"><span data-stu-id="a2dc7-103">Notifies the debugger that a common language runtime (CLR) managed thread has called a method in the <xref:System.Diagnostics.EventLog> class to log an event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="78e32-104">語法</span><span class="sxs-lookup"><span data-stu-id="78e32-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a2dc7-104">語法</span><span class="sxs-lookup"><span data-stu-id="a2dc7-104">Syntax</span></span>  
   
 ```  
 HRESULT LogMessage (  
@@ -39,31 +39,31 @@ HRESULT LogMessage (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="78e32-105">參數</span><span class="sxs-lookup"><span data-stu-id="78e32-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a2dc7-105">參數</span><span class="sxs-lookup"><span data-stu-id="a2dc7-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="78e32-106">[in]表示包含 managed 的執行緒記錄事件的應用程式網域的 ICorDebugAppDomain 物件指標。</span><span class="sxs-lookup"><span data-stu-id="78e32-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread that logged the event.</span></span>  
+ <span data-ttu-id="a2dc7-106">[in]表示包含 managed 的執行緒記錄事件的應用程式網域的 ICorDebugAppDomain 物件指標。</span><span class="sxs-lookup"><span data-stu-id="a2dc7-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread that logged the event.</span></span>  
   
  `pThread`  
- <span data-ttu-id="78e32-107">[in]ICorDebugThread 物件，表示 managed 的執行緒指標。</span><span class="sxs-lookup"><span data-stu-id="78e32-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
+ <span data-ttu-id="a2dc7-107">[in]ICorDebugThread 物件，表示 managed 的執行緒指標。</span><span class="sxs-lookup"><span data-stu-id="a2dc7-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
   
  `lLevel`  
- <span data-ttu-id="78e32-108">[in]值為[LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md)列舉，指出已寫入事件記錄檔的描述訊息的嚴重性層級。</span><span class="sxs-lookup"><span data-stu-id="78e32-108">[in] A value of the [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) enumeration that indicates the severity level of the descriptive message that was written to the event log.</span></span>  
+ <span data-ttu-id="a2dc7-108">[in]值為[LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md)列舉，指出已寫入事件記錄檔的描述訊息的嚴重性層級。</span><span class="sxs-lookup"><span data-stu-id="a2dc7-108">[in] A value of the [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) enumeration that indicates the severity level of the descriptive message that was written to the event log.</span></span>  
   
  `pLogSwitchName`  
- <span data-ttu-id="78e32-109">[in]追蹤參數的名稱指標。</span><span class="sxs-lookup"><span data-stu-id="78e32-109">[in] A pointer to the name of the tracing switch.</span></span>  
+ <span data-ttu-id="a2dc7-109">[in]追蹤參數的名稱指標。</span><span class="sxs-lookup"><span data-stu-id="a2dc7-109">[in] A pointer to the name of the tracing switch.</span></span>  
   
  `pMessage`  
- <span data-ttu-id="78e32-110">[in]已寫入事件記錄檔訊息指標。</span><span class="sxs-lookup"><span data-stu-id="78e32-110">[in] A pointer to the message that was written to the event log.</span></span>  
+ <span data-ttu-id="a2dc7-110">[in]已寫入事件記錄檔訊息指標。</span><span class="sxs-lookup"><span data-stu-id="a2dc7-110">[in] A pointer to the message that was written to the event log.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="78e32-111">需求</span><span class="sxs-lookup"><span data-stu-id="78e32-111">Requirements</span></span>  
- <span data-ttu-id="78e32-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="78e32-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a2dc7-111">需求</span><span class="sxs-lookup"><span data-stu-id="a2dc7-111">Requirements</span></span>  
+ <span data-ttu-id="a2dc7-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a2dc7-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="78e32-113">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="78e32-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a2dc7-113">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a2dc7-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="78e32-114">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="78e32-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a2dc7-114">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a2dc7-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="78e32-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="78e32-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a2dc7-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a2dc7-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="78e32-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="78e32-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a2dc7-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a2dc7-116">See also</span></span>
 
-- [<span data-ttu-id="78e32-117">ICorDebugManagedCallback 介面</span><span class="sxs-lookup"><span data-stu-id="78e32-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="a2dc7-117">ICorDebugManagedCallback 介面</span><span class="sxs-lookup"><span data-stu-id="a2dc7-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

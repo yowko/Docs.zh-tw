@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b24507c7cb0860fc04fa519c6bd95113483f629d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993703"
 ---
-# <a name="icordebugvalueenumnext-method"></a><span data-ttu-id="83767-102">ICorDebugValueEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="83767-102">ICorDebugValueEnum::Next Method</span></span>
-<span data-ttu-id="83767-103">取得指定的數目 」 ICorDebugValue 」 執行個體從列舉型別，從目前位置開始。</span><span class="sxs-lookup"><span data-stu-id="83767-103">Gets the specified number of "ICorDebugValue" instances from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugvalueenumnext-method"></a><span data-ttu-id="e978a-102">ICorDebugValueEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="e978a-102">ICorDebugValueEnum::Next Method</span></span>
+<span data-ttu-id="e978a-103">取得指定的數目 」 ICorDebugValue 」 執行個體從列舉型別，從目前位置開始。</span><span class="sxs-lookup"><span data-stu-id="e978a-103">Gets the specified number of "ICorDebugValue" instances from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="83767-104">語法</span><span class="sxs-lookup"><span data-stu-id="83767-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e978a-104">語法</span><span class="sxs-lookup"><span data-stu-id="e978a-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -38,23 +38,23 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="83767-105">參數</span><span class="sxs-lookup"><span data-stu-id="83767-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e978a-105">參數</span><span class="sxs-lookup"><span data-stu-id="e978a-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="83767-106">[in]數目`ICorDebugValue`要擷取的執行個體。</span><span class="sxs-lookup"><span data-stu-id="83767-106">[in] The number of `ICorDebugValue` instances to be retrieved.</span></span>  
+ <span data-ttu-id="e978a-106">[in]數目`ICorDebugValue`要擷取的執行個體。</span><span class="sxs-lookup"><span data-stu-id="e978a-106">[in] The number of `ICorDebugValue` instances to be retrieved.</span></span>  
   
  `values`  
- <span data-ttu-id="83767-107">[out]指標的陣列，其中每一個指向`ICorDebugValue`物件。</span><span class="sxs-lookup"><span data-stu-id="83767-107">[out] An array of pointers, each of which points to an `ICorDebugValue` object.</span></span>  
+ <span data-ttu-id="e978a-107">[out]指標的陣列，其中每一個指向`ICorDebugValue`物件。</span><span class="sxs-lookup"><span data-stu-id="e978a-107">[out] An array of pointers, each of which points to an `ICorDebugValue` object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="83767-108">[out]數目的指標`ICorDebugValue`實際傳回的執行個體。</span><span class="sxs-lookup"><span data-stu-id="83767-108">[out] Pointer to the number of `ICorDebugValue` instances actually returned.</span></span> <span data-ttu-id="83767-109">此值可能為 null 如果`celt`是其中一個。</span><span class="sxs-lookup"><span data-stu-id="83767-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="e978a-108">[out]數目的指標`ICorDebugValue`實際傳回的執行個體。</span><span class="sxs-lookup"><span data-stu-id="e978a-108">[out] Pointer to the number of `ICorDebugValue` instances actually returned.</span></span> <span data-ttu-id="e978a-109">此值可能為 null 如果`celt`是其中一個。</span><span class="sxs-lookup"><span data-stu-id="e978a-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="83767-110">需求</span><span class="sxs-lookup"><span data-stu-id="83767-110">Requirements</span></span>  
- <span data-ttu-id="83767-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="83767-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e978a-110">需求</span><span class="sxs-lookup"><span data-stu-id="e978a-110">Requirements</span></span>  
+ <span data-ttu-id="e978a-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e978a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="83767-112">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="83767-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e978a-112">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e978a-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="83767-113">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="83767-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e978a-113">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e978a-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="83767-114">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="83767-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e978a-114">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e978a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="83767-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="83767-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e978a-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e978a-115">See also</span></span>

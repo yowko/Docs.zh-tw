@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5d60b9a9ae566b5bd686b27b2e09861a8414979
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000229"
 ---
-# <a name="strongnamesignaturegenerationex-function"></a><span data-ttu-id="ea366-102">StrongNameSignatureGenerationEx 函式</span><span class="sxs-lookup"><span data-stu-id="ea366-102">StrongNameSignatureGenerationEx Function</span></span>
-<span data-ttu-id="ea366-103">指定的組件中，根據指定的旗標產生的強式名稱簽章。</span><span class="sxs-lookup"><span data-stu-id="ea366-103">Generates a strong name signature for the specified assembly, according to the specified flags.</span></span>  
+# <a name="strongnamesignaturegenerationex-function"></a><span data-ttu-id="b3c3d-102">StrongNameSignatureGenerationEx 函式</span><span class="sxs-lookup"><span data-stu-id="b3c3d-102">StrongNameSignatureGenerationEx Function</span></span>
+<span data-ttu-id="b3c3d-103">指定的組件中，根據指定的旗標產生的強式名稱簽章。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-103">Generates a strong name signature for the specified assembly, according to the specified flags.</span></span>  
   
- <span data-ttu-id="ea366-104">此函式已被取代。</span><span class="sxs-lookup"><span data-stu-id="ea366-104">This function has been deprecated.</span></span> <span data-ttu-id="ea366-105">使用[iclrstrongname:: Strongnamesignaturegenerationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)方法改為。</span><span class="sxs-lookup"><span data-stu-id="ea366-105">Use the [ICLRStrongName::StrongNameSignatureGenerationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md) method instead.</span></span>  
+ <span data-ttu-id="b3c3d-104">此函式已被取代。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-104">This function has been deprecated.</span></span> <span data-ttu-id="b3c3d-105">使用[iclrstrongname:: Strongnamesignaturegenerationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)方法改為。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-105">Use the [ICLRStrongName::StrongNameSignatureGenerationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ea366-106">語法</span><span class="sxs-lookup"><span data-stu-id="ea366-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b3c3d-106">語法</span><span class="sxs-lookup"><span data-stu-id="b3c3d-106">Syntax</span></span>  
   
 ```  
 BOOLEAN StrongNameSignatureGenerationEx (  
@@ -42,63 +42,63 @@ BOOLEAN StrongNameSignatureGenerationEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ea366-107">參數</span><span class="sxs-lookup"><span data-stu-id="ea366-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b3c3d-107">參數</span><span class="sxs-lookup"><span data-stu-id="b3c3d-107">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="ea366-108">[in]包含產生的強式名稱簽章的組件資訊清單檔案的路徑。</span><span class="sxs-lookup"><span data-stu-id="ea366-108">[in] The path to the file that contains the manifest of the assembly for which the strong name signature will be generated.</span></span>  
+ <span data-ttu-id="b3c3d-108">[in]包含產生的強式名稱簽章的組件資訊清單檔案的路徑。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-108">[in] The path to the file that contains the manifest of the assembly for which the strong name signature will be generated.</span></span>  
   
  `wszKeyContainer`  
- <span data-ttu-id="ea366-109">[in]包含 public/private 金鑰組的金鑰容器名稱。</span><span class="sxs-lookup"><span data-stu-id="ea366-109">[in] The name of the key container that contains the public/private key pair.</span></span>  
+ <span data-ttu-id="b3c3d-109">[in]包含 public/private 金鑰組的金鑰容器名稱。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-109">[in] The name of the key container that contains the public/private key pair.</span></span>  
   
- <span data-ttu-id="ea366-110">如果`pbKeyBlob`為 null，`wszKeyContainer`必須指定有效的容器內的密碼編譯服務提供者 (CSP)。</span><span class="sxs-lookup"><span data-stu-id="ea366-110">If `pbKeyBlob` is null, `wszKeyContainer` must specify a valid container within the cryptographic service provider (CSP).</span></span> <span data-ttu-id="ea366-111">在此情況下，儲存在容器中的金鑰組來簽署檔案。</span><span class="sxs-lookup"><span data-stu-id="ea366-111">In this case, the key pair stored in the container is used to sign the file.</span></span>  
+ <span data-ttu-id="b3c3d-110">如果`pbKeyBlob`為 null，`wszKeyContainer`必須指定有效的容器內的密碼編譯服務提供者 (CSP)。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-110">If `pbKeyBlob` is null, `wszKeyContainer` must specify a valid container within the cryptographic service provider (CSP).</span></span> <span data-ttu-id="b3c3d-111">在此情況下，儲存在容器中的金鑰組來簽署檔案。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-111">In this case, the key pair stored in the container is used to sign the file.</span></span>  
   
- <span data-ttu-id="ea366-112">如果`pbKeyBlob`不是 null，金鑰組會假設要包含在索引鍵二進位大型物件 (BLOB)。</span><span class="sxs-lookup"><span data-stu-id="ea366-112">If `pbKeyBlob` is not null, the key pair is assumed to be contained in the key binary large object (BLOB).</span></span>  
+ <span data-ttu-id="b3c3d-112">如果`pbKeyBlob`不是 null，金鑰組會假設要包含在索引鍵二進位大型物件 (BLOB)。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-112">If `pbKeyBlob` is not null, the key pair is assumed to be contained in the key binary large object (BLOB).</span></span>  
   
  `pbKeyBlob`  
- <span data-ttu-id="ea366-113">[in]Public/private 金鑰組指標。</span><span class="sxs-lookup"><span data-stu-id="ea366-113">[in] A pointer to the public/private key pair.</span></span> <span data-ttu-id="ea366-114">此配對的格式建立 win32`CryptExportKey`函式。</span><span class="sxs-lookup"><span data-stu-id="ea366-114">This pair is in the format created by the Win32 `CryptExportKey` function.</span></span> <span data-ttu-id="ea366-115">如果`pbKeyBlob`是 null，藉由指定之金鑰容器`wszKeyContainer`會假設包含金鑰組。</span><span class="sxs-lookup"><span data-stu-id="ea366-115">If `pbKeyBlob` is null, the key container specified by `wszKeyContainer` is assumed to contain the key pair.</span></span>  
+ <span data-ttu-id="b3c3d-113">[in]Public/private 金鑰組指標。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-113">[in] A pointer to the public/private key pair.</span></span> <span data-ttu-id="b3c3d-114">此配對的格式建立 win32`CryptExportKey`函式。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-114">This pair is in the format created by the Win32 `CryptExportKey` function.</span></span> <span data-ttu-id="b3c3d-115">如果`pbKeyBlob`是 null，藉由指定之金鑰容器`wszKeyContainer`會假設包含金鑰組。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-115">If `pbKeyBlob` is null, the key container specified by `wszKeyContainer` is assumed to contain the key pair.</span></span>  
   
  `cbKeyBlob`  
- <span data-ttu-id="ea366-116">[in]大小，以位元組為單位的`pbKeyBlob`。</span><span class="sxs-lookup"><span data-stu-id="ea366-116">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
+ <span data-ttu-id="b3c3d-116">[in]大小，以位元組為單位的`pbKeyBlob`。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-116">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
   
  `ppbSignatureBlob`  
- <span data-ttu-id="ea366-117">[out]Common language runtime 會傳回簽章的位置指標。</span><span class="sxs-lookup"><span data-stu-id="ea366-117">[out] A pointer to the location to which the common language runtime returns the signature.</span></span> <span data-ttu-id="ea366-118">如果`ppbSignatureBlob`是 null，執行階段存放區簽章中所指定的檔案`wszFilePath`。</span><span class="sxs-lookup"><span data-stu-id="ea366-118">If `ppbSignatureBlob` is null, the runtime stores the signature in the file specified by `wszFilePath`.</span></span>  
+ <span data-ttu-id="b3c3d-117">[out]Common language runtime 會傳回簽章的位置指標。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-117">[out] A pointer to the location to which the common language runtime returns the signature.</span></span> <span data-ttu-id="b3c3d-118">如果`ppbSignatureBlob`是 null，執行階段存放區簽章中所指定的檔案`wszFilePath`。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-118">If `ppbSignatureBlob` is null, the runtime stores the signature in the file specified by `wszFilePath`.</span></span>  
   
- <span data-ttu-id="ea366-119">如果`ppbSignatureBlob`是不是 null，common language runtime 配置的空間，在其中傳回的簽章。</span><span class="sxs-lookup"><span data-stu-id="ea366-119">If `ppbSignatureBlob` is not null, the common language runtime allocates space in which to return the signature.</span></span> <span data-ttu-id="ea366-120">呼叫端必須使用此空間釋放[StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)函式。</span><span class="sxs-lookup"><span data-stu-id="ea366-120">The caller must free this space using the [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) function.</span></span>  
+ <span data-ttu-id="b3c3d-119">如果`ppbSignatureBlob`是不是 null，common language runtime 配置的空間，在其中傳回的簽章。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-119">If `ppbSignatureBlob` is not null, the common language runtime allocates space in which to return the signature.</span></span> <span data-ttu-id="b3c3d-120">呼叫端必須使用此空間釋放[StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)函式。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-120">The caller must free this space using the [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) function.</span></span>  
   
  `pcbSignatureBlob`  
- <span data-ttu-id="ea366-121">[out]大小，以位元組為單位傳回的簽章。</span><span class="sxs-lookup"><span data-stu-id="ea366-121">[out] The size, in bytes, of the returned signature.</span></span>  
+ <span data-ttu-id="b3c3d-121">[out]大小，以位元組為單位傳回的簽章。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-121">[out] The size, in bytes, of the returned signature.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="ea366-122">[in]一或多個下列值：</span><span class="sxs-lookup"><span data-stu-id="ea366-122">[in] One or more of the following values:</span></span>  
+ <span data-ttu-id="b3c3d-122">[in]一或多個下列值：</span><span class="sxs-lookup"><span data-stu-id="b3c3d-122">[in] One or more of the following values:</span></span>  
   
--   <span data-ttu-id="ea366-123">`SN_SIGN_ALL_FILES` (0x00000001)-重新計算所有的雜湊，連結的模組。</span><span class="sxs-lookup"><span data-stu-id="ea366-123">`SN_SIGN_ALL_FILES` (0x00000001) - Recompute all hashes for linked modules.</span></span>  
+- <span data-ttu-id="b3c3d-123">`SN_SIGN_ALL_FILES` (0x00000001)-重新計算所有的雜湊，連結的模組。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-123">`SN_SIGN_ALL_FILES` (0x00000001) - Recompute all hashes for linked modules.</span></span>  
   
--   <span data-ttu-id="ea366-124">`SN_TEST_SIGN` (0x00000002)-測試-簽署組件。</span><span class="sxs-lookup"><span data-stu-id="ea366-124">`SN_TEST_SIGN` (0x00000002) - Test-sign the assembly.</span></span>  
+- <span data-ttu-id="b3c3d-124">`SN_TEST_SIGN` (0x00000002)-測試-簽署組件。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-124">`SN_TEST_SIGN` (0x00000002) - Test-sign the assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ea366-125">傳回值</span><span class="sxs-lookup"><span data-stu-id="ea366-125">Return Value</span></span>  
- <span data-ttu-id="ea366-126">`true` 如果成功地完成;否則， `false`。</span><span class="sxs-lookup"><span data-stu-id="ea366-126">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b3c3d-125">傳回值</span><span class="sxs-lookup"><span data-stu-id="b3c3d-125">Return Value</span></span>  
+ <span data-ttu-id="b3c3d-126">`true` 如果成功地完成;否則， `false`。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-126">`true` on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ea366-127">備註</span><span class="sxs-lookup"><span data-stu-id="ea366-127">Remarks</span></span>  
- <span data-ttu-id="ea366-128">指定 null`wszFilePath`來計算簽章的大小，而不需建立簽章。</span><span class="sxs-lookup"><span data-stu-id="ea366-128">Specify null for `wszFilePath` to calculate the size of the signature without creating the signature.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b3c3d-127">備註</span><span class="sxs-lookup"><span data-stu-id="b3c3d-127">Remarks</span></span>  
+ <span data-ttu-id="b3c3d-128">指定 null`wszFilePath`來計算簽章的大小，而不需建立簽章。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-128">Specify null for `wszFilePath` to calculate the size of the signature without creating the signature.</span></span>  
   
- <span data-ttu-id="ea366-129">簽章可以直接儲存在該檔案，或傳回給呼叫端。</span><span class="sxs-lookup"><span data-stu-id="ea366-129">The signature can be either stored directly in the file, or returned to the caller.</span></span>  
+ <span data-ttu-id="b3c3d-129">簽章可以直接儲存在該檔案，或傳回給呼叫端。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-129">The signature can be either stored directly in the file, or returned to the caller.</span></span>  
   
- <span data-ttu-id="ea366-130">如果`SN_SIGN_ALL_FILES`指定但不包含公開金鑰 (兩者`pbKeyBlob`和`wszFilePath`都是 null)，會重新計算雜湊，連結的模組，但不重新簽署組件。</span><span class="sxs-lookup"><span data-stu-id="ea366-130">If `SN_SIGN_ALL_FILES` is specified but a public key is not included (both `pbKeyBlob` and `wszFilePath` are null), hashes for linked modules are recomputed, but the assembly is not re-signed.</span></span>  
+ <span data-ttu-id="b3c3d-130">如果`SN_SIGN_ALL_FILES`指定但不包含公開金鑰 (兩者`pbKeyBlob`和`wszFilePath`都是 null)，會重新計算雜湊，連結的模組，但不重新簽署組件。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-130">If `SN_SIGN_ALL_FILES` is specified but a public key is not included (both `pbKeyBlob` and `wszFilePath` are null), hashes for linked modules are recomputed, but the assembly is not re-signed.</span></span>  
   
- <span data-ttu-id="ea366-131">如果`SN_TEST_SIGN`指定時，通用語言執行階段標頭不會修改來表示，以強式名稱簽署組件。</span><span class="sxs-lookup"><span data-stu-id="ea366-131">If `SN_TEST_SIGN` is specified, the common language runtime header is not modified to indicate that the assembly is signed with a strong name.</span></span>  
+ <span data-ttu-id="b3c3d-131">如果`SN_TEST_SIGN`指定時，通用語言執行階段標頭不會修改來表示，以強式名稱簽署組件。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-131">If `SN_TEST_SIGN` is specified, the common language runtime header is not modified to indicate that the assembly is signed with a strong name.</span></span>  
   
- <span data-ttu-id="ea366-132">如果`StrongNameSignatureGenerationEx`函式未順利完成，請呼叫[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函式來擷取最後一個產生的錯誤。</span><span class="sxs-lookup"><span data-stu-id="ea366-132">If the `StrongNameSignatureGenerationEx` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+ <span data-ttu-id="b3c3d-132">如果`StrongNameSignatureGenerationEx`函式未順利完成，請呼叫[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函式來擷取最後一個產生的錯誤。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-132">If the `StrongNameSignatureGenerationEx` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ea366-133">需求</span><span class="sxs-lookup"><span data-stu-id="ea366-133">Requirements</span></span>  
- <span data-ttu-id="ea366-134">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ea366-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b3c3d-133">需求</span><span class="sxs-lookup"><span data-stu-id="b3c3d-133">Requirements</span></span>  
+ <span data-ttu-id="b3c3d-134">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b3c3d-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ea366-135">**標頭：** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="ea366-135">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="b3c3d-135">**標頭：** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="b3c3d-135">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="ea366-136">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="ea366-136">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="b3c3d-136">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="b3c3d-136">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="ea366-137">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ea366-137">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b3c3d-137">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b3c3d-137">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ea366-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ea366-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b3c3d-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b3c3d-138">See also</span></span>
 
-- [<span data-ttu-id="ea366-139">StrongNameSignatureGenerationEx 方法</span><span class="sxs-lookup"><span data-stu-id="ea366-139">StrongNameSignatureGenerationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
-- [<span data-ttu-id="ea366-140">StrongNameSignatureGeneration 方法</span><span class="sxs-lookup"><span data-stu-id="ea366-140">StrongNameSignatureGeneration Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
-- [<span data-ttu-id="ea366-141">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="ea366-141">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="b3c3d-139">StrongNameSignatureGenerationEx 方法</span><span class="sxs-lookup"><span data-stu-id="b3c3d-139">StrongNameSignatureGenerationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
+- [<span data-ttu-id="b3c3d-140">StrongNameSignatureGeneration 方法</span><span class="sxs-lookup"><span data-stu-id="b3c3d-140">StrongNameSignatureGeneration Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
+- [<span data-ttu-id="b3c3d-141">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="b3c3d-141">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

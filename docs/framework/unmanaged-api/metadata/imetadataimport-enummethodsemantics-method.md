@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16cfa6df6251cd67860155cb8092e77a835eaaef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992416"
 ---
-# <a name="imetadataimportenummethodsemantics-method"></a><span data-ttu-id="dfa45-102">IMetaDataImport::EnumMethodSemantics 方法</span><span class="sxs-lookup"><span data-stu-id="dfa45-102">IMetaDataImport::EnumMethodSemantics Method</span></span>
-<span data-ttu-id="dfa45-103">列舉和指定方法相關的屬性及屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="dfa45-103">Enumerates the properties and the property-change events to which the specified method is related.</span></span>  
+# <a name="imetadataimportenummethodsemantics-method"></a><span data-ttu-id="ae12a-102">IMetaDataImport::EnumMethodSemantics 方法</span><span class="sxs-lookup"><span data-stu-id="ae12a-102">IMetaDataImport::EnumMethodSemantics Method</span></span>
+<span data-ttu-id="ae12a-103">列舉和指定方法相關的屬性及屬性變更事件。</span><span class="sxs-lookup"><span data-stu-id="ae12a-103">Enumerates the properties and the property-change events to which the specified method is related.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dfa45-104">語法</span><span class="sxs-lookup"><span data-stu-id="dfa45-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ae12a-104">語法</span><span class="sxs-lookup"><span data-stu-id="ae12a-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumMethodSemantics (  
@@ -39,42 +39,42 @@ HRESULT EnumMethodSemantics (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="dfa45-105">參數</span><span class="sxs-lookup"><span data-stu-id="dfa45-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ae12a-105">參數</span><span class="sxs-lookup"><span data-stu-id="ae12a-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="dfa45-106">[in、 out]列舉值的指標。</span><span class="sxs-lookup"><span data-stu-id="dfa45-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="dfa45-107">首次呼叫這個方法，這必須是 NULL。</span><span class="sxs-lookup"><span data-stu-id="dfa45-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="ae12a-106">[in、 out]列舉值的指標。</span><span class="sxs-lookup"><span data-stu-id="ae12a-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="ae12a-107">首次呼叫這個方法，這必須是 NULL。</span><span class="sxs-lookup"><span data-stu-id="ae12a-107">This must be NULL for the first call of this method.</span></span>  
   
  `mb`  
- <span data-ttu-id="dfa45-108">[in]列舉的範圍限制 MethodDef 語彙基元。</span><span class="sxs-lookup"><span data-stu-id="dfa45-108">[in] A MethodDef token that limits the scope of the enumeration.</span></span>  
+ <span data-ttu-id="ae12a-108">[in]列舉的範圍限制 MethodDef 語彙基元。</span><span class="sxs-lookup"><span data-stu-id="ae12a-108">[in] A MethodDef token that limits the scope of the enumeration.</span></span>  
   
  `rEventProp`  
- <span data-ttu-id="dfa45-109">[out]用來儲存事件或屬性的陣列。</span><span class="sxs-lookup"><span data-stu-id="dfa45-109">[out] The array used to store the events or properties.</span></span>  
+ <span data-ttu-id="ae12a-109">[out]用來儲存事件或屬性的陣列。</span><span class="sxs-lookup"><span data-stu-id="ae12a-109">[out] The array used to store the events or properties.</span></span>  
   
  `cMax`  
- <span data-ttu-id="dfa45-110">[in] `rEventProp` 陣列的大小上限。</span><span class="sxs-lookup"><span data-stu-id="dfa45-110">[in] The maximum size of the `rEventProp` array.</span></span>  
+ <span data-ttu-id="ae12a-110">[in] `rEventProp` 陣列的大小上限。</span><span class="sxs-lookup"><span data-stu-id="ae12a-110">[in] The maximum size of the `rEventProp` array.</span></span>  
   
  `pcEventProp`  
- <span data-ttu-id="dfa45-111">[out]事件或傳入的屬性數目`rEventProp`。</span><span class="sxs-lookup"><span data-stu-id="dfa45-111">[out] The number of events or properties returned in `rEventProp`.</span></span>  
+ <span data-ttu-id="ae12a-111">[out]事件或傳入的屬性數目`rEventProp`。</span><span class="sxs-lookup"><span data-stu-id="ae12a-111">[out] The number of events or properties returned in `rEventProp`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="dfa45-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="dfa45-112">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ae12a-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="ae12a-112">Return Value</span></span>  
   
-|<span data-ttu-id="dfa45-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="dfa45-113">HRESULT</span></span>|<span data-ttu-id="dfa45-114">描述</span><span class="sxs-lookup"><span data-stu-id="dfa45-114">Description</span></span>|  
+|<span data-ttu-id="ae12a-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ae12a-113">HRESULT</span></span>|<span data-ttu-id="ae12a-114">描述</span><span class="sxs-lookup"><span data-stu-id="ae12a-114">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="dfa45-115">`EnumMethodSemantics` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="dfa45-115">`EnumMethodSemantics` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="dfa45-116">沒有任何事件或列舉的屬性。</span><span class="sxs-lookup"><span data-stu-id="dfa45-116">There are no events or properties to enumerate.</span></span> <span data-ttu-id="dfa45-117">在此情況下，`pcEventProp`為零。</span><span class="sxs-lookup"><span data-stu-id="dfa45-117">In that case, `pcEventProp` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="ae12a-115">`EnumMethodSemantics` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="ae12a-115">`EnumMethodSemantics` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="ae12a-116">沒有任何事件或列舉的屬性。</span><span class="sxs-lookup"><span data-stu-id="ae12a-116">There are no events or properties to enumerate.</span></span> <span data-ttu-id="ae12a-117">在此情況下，`pcEventProp`為零。</span><span class="sxs-lookup"><span data-stu-id="ae12a-117">In that case, `pcEventProp` is zero.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="dfa45-118">備註</span><span class="sxs-lookup"><span data-stu-id="dfa45-118">Remarks</span></span>  
- <span data-ttu-id="dfa45-119">許多 common language runtime 類型定義*屬性*`Changed`事件並`On`*屬性*`Changed`方法與它們的屬性。</span><span class="sxs-lookup"><span data-stu-id="dfa45-119">Many common language runtime types define *Property*`Changed` events and `On`*Property*`Changed` methods related to their properties.</span></span> <span data-ttu-id="dfa45-120">例如，<xref:System.Windows.Forms.Control?displayProperty=nameWithType>型別會定義<xref:System.Windows.Forms.Control.Font%2A>屬性，<xref:System.Windows.Forms.Control.FontChanged>事件，和<xref:System.Windows.Forms.Control.OnFontChanged%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="dfa45-120">For example, the <xref:System.Windows.Forms.Control?displayProperty=nameWithType> type defines a <xref:System.Windows.Forms.Control.Font%2A> property, a <xref:System.Windows.Forms.Control.FontChanged> event, and an <xref:System.Windows.Forms.Control.OnFontChanged%2A> method.</span></span> <span data-ttu-id="dfa45-121">Set 存取子方法<xref:System.Windows.Forms.Control.Font%2A>屬性呼叫<xref:System.Windows.Forms.Control.OnFontChanged%2A>方法，進而引發<xref:System.Windows.Forms.Control.FontChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="dfa45-121">The set accessor method of the <xref:System.Windows.Forms.Control.Font%2A> property calls <xref:System.Windows.Forms.Control.OnFontChanged%2A> method, which in turn raises the <xref:System.Windows.Forms.Control.FontChanged> event.</span></span> <span data-ttu-id="dfa45-122">您可以呼叫`EnumMethodSemantics`使用的 MethodDef<xref:System.Windows.Forms.Control.OnFontChanged%2A>來取得參考<xref:System.Windows.Forms.Control.Font%2A>屬性和<xref:System.Windows.Forms.Control.FontChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="dfa45-122">You would call `EnumMethodSemantics` using the MethodDef for <xref:System.Windows.Forms.Control.OnFontChanged%2A> to get references to the <xref:System.Windows.Forms.Control.Font%2A> property and the <xref:System.Windows.Forms.Control.FontChanged> event.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ae12a-118">備註</span><span class="sxs-lookup"><span data-stu-id="ae12a-118">Remarks</span></span>  
+ <span data-ttu-id="ae12a-119">許多 common language runtime 類型定義*屬性*`Changed`事件並`On`*屬性*`Changed`方法與它們的屬性。</span><span class="sxs-lookup"><span data-stu-id="ae12a-119">Many common language runtime types define *Property*`Changed` events and `On`*Property*`Changed` methods related to their properties.</span></span> <span data-ttu-id="ae12a-120">例如，<xref:System.Windows.Forms.Control?displayProperty=nameWithType>型別會定義<xref:System.Windows.Forms.Control.Font%2A>屬性，<xref:System.Windows.Forms.Control.FontChanged>事件，和<xref:System.Windows.Forms.Control.OnFontChanged%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="ae12a-120">For example, the <xref:System.Windows.Forms.Control?displayProperty=nameWithType> type defines a <xref:System.Windows.Forms.Control.Font%2A> property, a <xref:System.Windows.Forms.Control.FontChanged> event, and an <xref:System.Windows.Forms.Control.OnFontChanged%2A> method.</span></span> <span data-ttu-id="ae12a-121">Set 存取子方法<xref:System.Windows.Forms.Control.Font%2A>屬性呼叫<xref:System.Windows.Forms.Control.OnFontChanged%2A>方法，進而引發<xref:System.Windows.Forms.Control.FontChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="ae12a-121">The set accessor method of the <xref:System.Windows.Forms.Control.Font%2A> property calls <xref:System.Windows.Forms.Control.OnFontChanged%2A> method, which in turn raises the <xref:System.Windows.Forms.Control.FontChanged> event.</span></span> <span data-ttu-id="ae12a-122">您可以呼叫`EnumMethodSemantics`使用的 MethodDef<xref:System.Windows.Forms.Control.OnFontChanged%2A>來取得參考<xref:System.Windows.Forms.Control.Font%2A>屬性和<xref:System.Windows.Forms.Control.FontChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="ae12a-122">You would call `EnumMethodSemantics` using the MethodDef for <xref:System.Windows.Forms.Control.OnFontChanged%2A> to get references to the <xref:System.Windows.Forms.Control.Font%2A> property and the <xref:System.Windows.Forms.Control.FontChanged> event.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dfa45-123">需求</span><span class="sxs-lookup"><span data-stu-id="dfa45-123">Requirements</span></span>  
- <span data-ttu-id="dfa45-124">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dfa45-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ae12a-123">需求</span><span class="sxs-lookup"><span data-stu-id="ae12a-123">Requirements</span></span>  
+ <span data-ttu-id="ae12a-124">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ae12a-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dfa45-125">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="dfa45-125">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ae12a-125">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ae12a-125">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="dfa45-126">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="dfa45-126">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ae12a-126">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="ae12a-126">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="dfa45-127">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dfa45-127">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ae12a-127">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ae12a-127">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dfa45-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dfa45-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ae12a-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ae12a-128">See also</span></span>
 
-- [<span data-ttu-id="dfa45-129">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="dfa45-129">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="dfa45-130">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="dfa45-130">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="ae12a-129">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="ae12a-129">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="ae12a-130">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="ae12a-130">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -18,18 +18,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6846b866fd47674ca6b5fd187b580fd28e080fd0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995926"
 ---
-# <a name="icordebugevalnewobjectnoconstructor-method"></a><span data-ttu-id="8ca42-102">ICorDebugEval::NewObjectNoConstructor 方法</span><span class="sxs-lookup"><span data-stu-id="8ca42-102">ICorDebugEval::NewObjectNoConstructor Method</span></span>
-<span data-ttu-id="8ca42-103">配置新的物件執行個體，指定的類型，而不會嘗試呼叫建構函式方法。</span><span class="sxs-lookup"><span data-stu-id="8ca42-103">Allocates a new object instance of the specified type, without attempting to call a constructor method.</span></span>  
+# <a name="icordebugevalnewobjectnoconstructor-method"></a><span data-ttu-id="18166-102">ICorDebugEval::NewObjectNoConstructor 方法</span><span class="sxs-lookup"><span data-stu-id="18166-102">ICorDebugEval::NewObjectNoConstructor Method</span></span>
+<span data-ttu-id="18166-103">配置新的物件執行個體，指定的類型，而不會嘗試呼叫建構函式方法。</span><span class="sxs-lookup"><span data-stu-id="18166-103">Allocates a new object instance of the specified type, without attempting to call a constructor method.</span></span>  
   
- <span data-ttu-id="8ca42-104">這個方法是在.NET Framework 2.0 版中已過時。</span><span class="sxs-lookup"><span data-stu-id="8ca42-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="8ca42-105">使用[ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)改。</span><span class="sxs-lookup"><span data-stu-id="8ca42-105">Use [ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) instead.</span></span>  
+ <span data-ttu-id="18166-104">這個方法是在.NET Framework 2.0 版中已過時。</span><span class="sxs-lookup"><span data-stu-id="18166-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="18166-105">使用[ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)改。</span><span class="sxs-lookup"><span data-stu-id="18166-105">Use [ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8ca42-106">語法</span><span class="sxs-lookup"><span data-stu-id="8ca42-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="18166-106">語法</span><span class="sxs-lookup"><span data-stu-id="18166-106">Syntax</span></span>  
   
 ```  
 HRESULT NewObjectNoConstructor (  
@@ -37,19 +37,19 @@ HRESULT NewObjectNoConstructor (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8ca42-107">參數</span><span class="sxs-lookup"><span data-stu-id="8ca42-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="18166-107">參數</span><span class="sxs-lookup"><span data-stu-id="18166-107">Parameters</span></span>  
  `pClass`  
- <span data-ttu-id="8ca42-108">[in]ICorDebugClass 物件，表示要具現化的物件類型的指標。</span><span class="sxs-lookup"><span data-stu-id="8ca42-108">[in] Pointer to an ICorDebugClass object that represents the type of object to be instantiated.</span></span>  
+ <span data-ttu-id="18166-108">[in]ICorDebugClass 物件，表示要具現化的物件類型的指標。</span><span class="sxs-lookup"><span data-stu-id="18166-108">[in] Pointer to an ICorDebugClass object that represents the type of object to be instantiated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8ca42-109">需求</span><span class="sxs-lookup"><span data-stu-id="8ca42-109">Requirements</span></span>  
- <span data-ttu-id="8ca42-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8ca42-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="18166-109">需求</span><span class="sxs-lookup"><span data-stu-id="18166-109">Requirements</span></span>  
+ <span data-ttu-id="18166-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="18166-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8ca42-111">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8ca42-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="18166-111">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="18166-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8ca42-112">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8ca42-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="18166-112">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="18166-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8ca42-113">**.NET framework 版本：** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="8ca42-113">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="18166-113">**.NET framework 版本：** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="18166-113">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8ca42-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8ca42-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="18166-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="18166-114">See also</span></span>
 
-- [<span data-ttu-id="8ca42-115">NewParameterizedObjectNoConstructor 方法</span><span class="sxs-lookup"><span data-stu-id="8ca42-115">NewParameterizedObjectNoConstructor Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)
+- [<span data-ttu-id="18166-115">NewParameterizedObjectNoConstructor 方法</span><span class="sxs-lookup"><span data-stu-id="18166-115">NewParameterizedObjectNoConstructor Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)

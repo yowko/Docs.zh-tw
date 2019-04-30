@@ -8,23 +8,23 @@ helpviewer_keywords:
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
 ms.openlocfilehash: f4f0cb15e1dc50fee7ca76e8cfbf31e6eaccd02b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971076"
 ---
-# <a name="richtextbox-how-to-topics"></a><span data-ttu-id="96f3a-102">RichTextBox HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="96f3a-102">RichTextBox How-to Topics</span></span>
-<span data-ttu-id="96f3a-103">本節提供範例，示範如何完成一般工作，使用<xref:System.Windows.Controls.RichTextBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="96f3a-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.RichTextBox> control.</span></span>  
+# <a name="richtextbox-how-to-topics"></a><span data-ttu-id="73b84-102">RichTextBox HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="73b84-102">RichTextBox How-to Topics</span></span>
+<span data-ttu-id="73b84-103">本節提供範例，示範如何完成一般工作，使用<xref:System.Windows.Controls.RichTextBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="73b84-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.RichTextBox> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="96f3a-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="96f3a-104">In This Section</span></span>  
- [<span data-ttu-id="96f3a-105">擷取 RichTextBox 的文字內容</span><span class="sxs-lookup"><span data-stu-id="96f3a-105">Extract the Text Content from a RichTextBox</span></span>](how-to-extract-the-text-content-from-a-richtextbox.md)  
- [<span data-ttu-id="96f3a-106">以程式設計方式變更 RichTextBox 中的選項</span><span class="sxs-lookup"><span data-stu-id="96f3a-106">Change Selection in a RichTextBox Programmatically</span></span>](change-selection-in-a-richtextbox-programmatically.md)  
- [<span data-ttu-id="96f3a-107">儲存、載入和列印 RichTextBox 內容</span><span class="sxs-lookup"><span data-stu-id="96f3a-107">Save, Load, and Print RichTextBox Content</span></span>](how-to-save-load-and-print-richtextbox-content.md)  
- [<span data-ttu-id="96f3a-108">在 RichTextBox 中放置自訂內容功能表</span><span class="sxs-lookup"><span data-stu-id="96f3a-108">Position a Custom Context Menu in a RichTextBox</span></span>](how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="73b84-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="73b84-104">In This Section</span></span>  
+ [<span data-ttu-id="73b84-105">擷取 RichTextBox 的文字內容</span><span class="sxs-lookup"><span data-stu-id="73b84-105">Extract the Text Content from a RichTextBox</span></span>](how-to-extract-the-text-content-from-a-richtextbox.md)  
+ [<span data-ttu-id="73b84-106">以程式設計方式變更 RichTextBox 中的選項</span><span class="sxs-lookup"><span data-stu-id="73b84-106">Change Selection in a RichTextBox Programmatically</span></span>](change-selection-in-a-richtextbox-programmatically.md)  
+ [<span data-ttu-id="73b84-107">儲存、載入和列印 RichTextBox 內容</span><span class="sxs-lookup"><span data-stu-id="73b84-107">Save, Load, and Print RichTextBox Content</span></span>](how-to-save-load-and-print-richtextbox-content.md)  
+ [<span data-ttu-id="73b84-108">在 RichTextBox 中放置自訂內容功能表</span><span class="sxs-lookup"><span data-stu-id="73b84-108">Position a Custom Context Menu in a RichTextBox</span></span>](how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
   
-## <a name="see-also"></a><span data-ttu-id="96f3a-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="96f3a-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="73b84-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="73b84-109">See also</span></span>
 
 - <xref:System.Windows.Controls.TextBox>
-- [<span data-ttu-id="96f3a-110">WPF 中的文件</span><span class="sxs-lookup"><span data-stu-id="96f3a-110">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
-- [<span data-ttu-id="96f3a-111">非固定格式文件概觀</span><span class="sxs-lookup"><span data-stu-id="96f3a-111">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
+- [<span data-ttu-id="73b84-110">WPF 中的文件</span><span class="sxs-lookup"><span data-stu-id="73b84-110">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
+- [<span data-ttu-id="73b84-111">非固定格式文件概觀</span><span class="sxs-lookup"><span data-stu-id="73b84-111">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)

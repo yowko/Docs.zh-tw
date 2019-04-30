@@ -10,21 +10,21 @@ helpviewer_keywords:
 - animation [WPF], clocks
 ms.assetid: c687b2a5-b151-41e2-9ade-df2fc1a16b04
 ms.openlocfilehash: bb625c116b1c58071ec0f51729df07f43600f36f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970959"
 ---
-# <a name="clocks-how-to-topics"></a><span data-ttu-id="e8a59-102">時鐘 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="e8a59-102">Clocks How-to Topics</span></span>
-<span data-ttu-id="e8a59-103">下列主題說明如何使用<xref:System.Windows.Media.Animation.Clock>維護時間的狀態資訊的物件<xref:System.Windows.Media.Animation.Timeline>。</span><span class="sxs-lookup"><span data-stu-id="e8a59-103">The following topics describe how to use a <xref:System.Windows.Media.Animation.Clock> object to maintain timing state information for a <xref:System.Windows.Media.Animation.Timeline>.</span></span>  
+# <a name="clocks-how-to-topics"></a><span data-ttu-id="f19d2-102">時鐘 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="f19d2-102">Clocks How-to Topics</span></span>
+<span data-ttu-id="f19d2-103">下列主題說明如何使用<xref:System.Windows.Media.Animation.Clock>維護時間的狀態資訊的物件<xref:System.Windows.Media.Animation.Timeline>。</span><span class="sxs-lookup"><span data-stu-id="f19d2-103">The following topics describe how to use a <xref:System.Windows.Media.Animation.Clock> object to maintain timing state information for a <xref:System.Windows.Media.Animation.Timeline>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e8a59-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="e8a59-104">In This Section</span></span>  
- [<span data-ttu-id="e8a59-105">使用 AnimationClock 建立屬性的動畫</span><span class="sxs-lookup"><span data-stu-id="e8a59-105">Animate a Property by Using an AnimationClock</span></span>](how-to-animate-a-property-by-using-an-animationclock.md)  
- [<span data-ttu-id="e8a59-106">以互動方式控制時鐘</span><span class="sxs-lookup"><span data-stu-id="e8a59-106">Interactively Control a Clock</span></span>](how-to-interactively-control-a-clock.md)  
- [<span data-ttu-id="e8a59-107">同步搜尋時鐘</span><span class="sxs-lookup"><span data-stu-id="e8a59-107">Seek a Clock Synchronously</span></span>](how-to-seek-a-clock-synchronously.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f19d2-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="f19d2-104">In This Section</span></span>  
+ [<span data-ttu-id="f19d2-105">使用 AnimationClock 建立屬性的動畫</span><span class="sxs-lookup"><span data-stu-id="f19d2-105">Animate a Property by Using an AnimationClock</span></span>](how-to-animate-a-property-by-using-an-animationclock.md)  
+ [<span data-ttu-id="f19d2-106">以互動方式控制時鐘</span><span class="sxs-lookup"><span data-stu-id="f19d2-106">Interactively Control a Clock</span></span>](how-to-interactively-control-a-clock.md)  
+ [<span data-ttu-id="f19d2-107">同步搜尋時鐘</span><span class="sxs-lookup"><span data-stu-id="f19d2-107">Seek a Clock Synchronously</span></span>](how-to-seek-a-clock-synchronously.md)  
   
-## <a name="reference"></a><span data-ttu-id="e8a59-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="e8a59-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f19d2-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="f19d2-108">Reference</span></span>  
  <xref:System.Windows.Media.Animation.Clock>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
@@ -33,7 +33,7 @@ ms.locfileid: "57361443"
   
  <xref:System.Windows.Media.Animation.Timeline>  
   
-## <a name="related-sections"></a><span data-ttu-id="e8a59-109">相關章節</span><span class="sxs-lookup"><span data-stu-id="e8a59-109">Related Sections</span></span>  
- [<span data-ttu-id="e8a59-110">動畫概觀</span><span class="sxs-lookup"><span data-stu-id="e8a59-110">Animation Overview</span></span>](animation-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="f19d2-109">相關章節</span><span class="sxs-lookup"><span data-stu-id="f19d2-109">Related Sections</span></span>  
+ [<span data-ttu-id="f19d2-110">動畫概觀</span><span class="sxs-lookup"><span data-stu-id="f19d2-110">Animation Overview</span></span>](animation-overview.md)  
   
- [<span data-ttu-id="e8a59-111">分鏡腳本概觀</span><span class="sxs-lookup"><span data-stu-id="e8a59-111">Storyboards Overview</span></span>](storyboards-overview.md)
+ [<span data-ttu-id="f19d2-111">分鏡腳本概觀</span><span class="sxs-lookup"><span data-stu-id="f19d2-111">Storyboards Overview</span></span>](storyboards-overview.md)
