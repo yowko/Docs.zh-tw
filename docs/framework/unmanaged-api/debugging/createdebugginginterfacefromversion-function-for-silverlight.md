@@ -11,11 +11,11 @@ ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 77164f9d8a1641ba37fa504d09d77ec6aecc3db5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965806"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>適用於 Silverlight 的 CreateDebuggingInterfaceFromVersion 函式
 接受從傳回的常見 language runtime (CLR) 版本字串[CreateVersionStringFromModule 函式](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)，並傳回對應的偵錯工具介面 (通常[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md))。  
@@ -31,7 +31,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
 ## <a name="parameters"></a>參數  
  `szDebuggeeVersion`  
- [in]中的 目標偵錯項目，傳回的 CLR 版本字串[CreateVersionStringFromModule 函式](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)。  
+ [in]中的 [目標偵錯項目，傳回的 CLR 版本字串[CreateVersionStringFromModule 函式](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)。  
   
  `ppCordb`  
  [out] COM 物件 (`IUnknown`) 指標的指標。 這個物件會轉換成[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)物件再傳回。  

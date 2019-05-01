@@ -5,11 +5,11 @@ ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f171af8dbfa4e812711e95e5587b314753cd9350
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944645"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo 方法
 擷取泛型字典對應。  
@@ -33,9 +33,9 @@ HRESULT GetGenericDictionaryInfo(
   
  對應是由兩個最上層區段所組成：  
   
--   A [directory](#Directory)包含這個對應中所有字典的相對虛擬位址 (RVA)。  
+- A [directory](#Directory)包含這個對應中所有字典的相對虛擬位址 (RVA)。  
   
--   位元組對齊[堆積](#Heap)，其中包含的物件具現化資訊。 會在最後一個目錄項目之後立即啟動。  
+- 位元組對齊[堆積](#Heap)，其中包含的物件具現化資訊。 會在最後一個目錄項目之後立即啟動。  
   
 <a name="Directory"></a>   
 ## <a name="the-directory"></a>目錄  
@@ -43,13 +43,13 @@ HRESULT GetGenericDictionaryInfo(
   
  泛型字典對應的目錄部分具有下列結構：  
   
--   前 4 個位元組包含字典項目數 (也就是字典中的相對虛擬位址數目)。 我們會將此值作為*N*。如果設定高位元，項目會依相對虛擬位址的遞增順序排序。  
+- 前 4 個位元組包含字典項目數 (也就是字典中的相對虛擬位址數目)。 我們會將此值作為*N*。如果設定高位元，項目會依相對虛擬位址的遞增順序排序。  
   
--   *N*遵循目錄項目。 每個項目是由兩個 4 位元組區段中的 8 個位元組所組成：  
+- *N*遵循目錄項目。 每個項目是由兩個 4 位元組區段中的 8 個位元組所組成：  
   
-    -   位元組 0-3:RVA;字典的相對虛擬位址。  
+    - 位元組 0-3:RVA;字典的相對虛擬位址。  
   
-    -   位元組 4-7:位移;相對於堆積開頭的位移。  
+    - 位元組 4-7:位移;相對於堆積開頭的位移。  
   
 <a name="Heap"></a>   
 ## <a name="the-heap"></a>堆積  
@@ -63,11 +63,11 @@ Heap Size = Stream.Length – (Directory Size + 4)
   
  堆積上每個具現化資訊項目的格式為：  
   
--   這個具現化資訊項目的長度 (以位元組為單位)，採用壓縮的 ECMA 中繼資料格式。 該值不包括這個長度資訊。  
+- 這個具現化資訊項目的長度 (以位元組為單位)，採用壓縮的 ECMA 中繼資料格式。 該值不包括這個長度資訊。  
   
--   數種泛型具現化類型，或*T*，採用壓縮的 ECMA 中繼資料格式。  
+- 數種泛型具現化類型，或*T*，採用壓縮的 ECMA 中繼資料格式。  
   
--   *T*類型，分別表示以 ECMA 類型簽章格式。  
+- *T*類型，分別表示以 ECMA 類型簽章格式。  
   
  包含每個堆積項目的長度可簡化目錄區段的排序，而不影響堆積。  
   

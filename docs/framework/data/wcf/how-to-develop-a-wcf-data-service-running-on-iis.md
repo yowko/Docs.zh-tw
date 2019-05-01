@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 78e8c3cacd89f88cbfa062cb30e5b3474c2614ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 74c31c748dd3483aa87afb2c9a7d926965c9f1ed
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517816"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773932"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>HOW TO：開發在 IIS 上執行的 WCF 資料服務
 
@@ -23,9 +23,9 @@ ms.locfileid: "59517816"
 > [!NOTE]
 > 若要建立 Northwind 資料服務，您必須在本機電腦上安裝 Northwind 範例資料庫。 若要下載此範例資料庫，請參閱下載頁面： [SQL Server 的範例資料庫](https://go.microsoft.com/fwlink/?linkid=24758)。
 
- 本主題示範如何使用 Entity Framework 提供者建立資料服務。 有其他資料服務提供者可以使用。 如需詳細資訊，請參閱 <<c0> [ 資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。
+本主題示範如何使用 Entity Framework 提供者建立資料服務。 有其他資料服務提供者可以使用。 如需詳細資訊，請參閱 <<c0> [ 資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。
 
- 當您建立服務之後，您必須明確提供資料服務資源的存取權。 如需詳細資訊，請參閱[如何：啟用資料服務的存取權](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md)。
+當您建立服務之後，您必須明確提供資料服務資源的存取權。 如需詳細資訊，請參閱[如何：啟用資料服務的存取權](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md)。
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>建立在 IIS 執行的 ASP.NET web 應用程式
 
@@ -35,7 +35,7 @@ ms.locfileid: "59517816"
 
 3. 選取  **ASP.NET Web 應用程式**範本。
 
-1. 輸入`NorthwindService`做為專案的名稱。
+4. 輸入`NorthwindService`做為專案的名稱。
 
 5. 按一下 [確定] 。
 
@@ -47,13 +47,13 @@ ms.locfileid: "59517816"
 
 9. 在具有系統管理員權限的命令提示字元中，執行下列其中一個命令 (視作業系統而定)：
 
-    -   32 位元系統：
+    - 32 位元系統：
 
         ```console
         "%windir%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
         ```
 
-    -   64 位元系統：
+    - 64 位元系統：
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
@@ -63,13 +63,13 @@ ms.locfileid: "59517816"
 
 10. 在具有系統管理員權限的命令提示字元中，執行下列其中一個命令 (視作業系統而定)：
 
-    -   32 位元系統：
+    - 32 位元系統：
 
         ```console
         "%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe" -i -enable
         ```
 
-    -   64 位元系統：
+    - 64 位元系統：
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe" -i -enable
@@ -132,11 +132,11 @@ ms.locfileid: "59517816"
 
 5. 連接到資料庫的資料模型，執行下列步驟中，其中，然後按一下**下一步**:
 
-    -   如果您沒有已設定的資料庫連線，請按一下**新的連接**並建立新的連接。 如需詳細資訊，請參閱[如何：建立連接至 SQL Server 資料庫](https://go.microsoft.com/fwlink/?LinkId=123631)。 此 SQL Server 執行個體必須已附加 Northwind 範例資料庫。
+    - 如果您沒有已設定的資料庫連線，請按一下**新的連接**並建立新的連接。 如需詳細資訊，請參閱[如何：建立連接至 SQL Server 資料庫](https://go.microsoft.com/fwlink/?LinkId=123631)。 此 SQL Server 執行個體必須已附加 Northwind 範例資料庫。
 
          \-或-
 
-    -   如果您擁有已經設定為連接至 Northwind 資料庫的資料庫連接，請從連接清單中選取該連接。
+    - 如果您擁有已經設定為連接至 Northwind 資料庫的資料庫連接，請從連接清單中選取該連接。
 
 6. 在精靈的最後一頁上，選取資料庫中所有資料表的核取方塊，並且清除檢視表和預存程序 (Stored Procedure) 的核取方塊。
 
