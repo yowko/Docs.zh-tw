@@ -6,11 +6,11 @@ helpviewer_keywords:
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
 ms.openlocfilehash: 0ffd4fb05a5a409d74f8a9401a5fb021db0cd99b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981504"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>部署 WPF 應用程式 (WPF)
 建置 Windows Presentation Foundation (WPF) 應用程式之後，他們需要部署。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 和.NET Framework 包含幾項部署技術。 用來部署 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式的部署技術會視應用程式類型而定。 本主題提供每項部署技術的簡短概觀，並說明這些技術如何配合每種 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式類型的部署需求來使用。  
@@ -19,21 +19,21 @@ ms.locfileid: "59320648"
 ## <a name="deployment-technologies"></a>部署技術  
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 和.NET Framework 包含幾項部署技術，包括：  
   
--   XCopy 部署。  
+- XCopy 部署。  
   
--   [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 部署。  
+- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 部署。  
   
--   [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] 部署。  
+- [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] 部署。  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>XCopy 部署  
  XCopy 部署是指使用 XCopy 命令列程式，將檔案從一個位置複製到另一個位置。 XCopy 部署適用於下列情況：  
   
--   應用程式是獨立的。 不需要更新用戶端即可執行。  
+- 應用程式是獨立的。 不需要更新用戶端即可執行。  
   
--   應用程式檔案必須從一個位置移至另一個位置，例如從組建位置 (本機磁碟、[!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] 檔案共用等) 移至發行位置 (網站、[!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] 檔案共用等)。  
+- 應用程式檔案必須從一個位置移至另一個位置，例如從組建位置 (本機磁碟、[!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] 檔案共用等) 移至發行位置 (網站、[!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] 檔案共用等)。  
   
--   應用程式不需要介面整合 ([開始] 功能表捷徑、桌面圖示等)。  
+- 應用程式不需要介面整合 ([開始] 功能表捷徑、桌面圖示等)。  
   
  雖然 XCopy 適用於簡單的部署案例，但當需要更複雜的部署功能時卻會受到限制。 特別是，使用 XCopy 通常需要另外建立、執行和維護指令碼，才能穩固地管理部署。 此外，XCopy 不支援版本設定、解除安裝或復原。  
   
@@ -49,15 +49,15 @@ ms.locfileid: "59320648"
 ### <a name="clickonce-deployment"></a>ClickOnce 部署  
  [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 可為非 Web 應用程式啟用 Web 式應用程式部署。 應用程式會先發行至網頁伺服器或檔案伺服器，再從中部署。 雖然 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 不支援 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 所安裝應用程式之完整範圍的用戶端功能，但支援其中一部分功能，包括：  
   
--   與 [開始] 功能表和 [程式集] 控制台整合。  
+- 與 [開始] 功能表和 [程式集] 控制台整合。  
   
--   版本設定、復原和解除安裝。  
+- 版本設定、復原和解除安裝。  
   
--   一律會從部署位置啟動應用程式的線上安裝模式。  
+- 一律會從部署位置啟動應用程式的線上安裝模式。  
   
--   在發行新版本時自動更新。  
+- 在發行新版本時自動更新。  
   
--   註冊副檔名。  
+- 註冊副檔名。  
   
  如需 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 的詳細資訊，請參閱 [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)。  
   
@@ -65,11 +65,11 @@ ms.locfileid: "59320648"
 ## <a name="deploying-wpf-applications"></a>部署 WPF 應用程式  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式的部署選項會視應用程式類型而定。 從部署觀點來看，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 有三個重要的應用程式類型：  
   
--   獨立應用程式。  
+- 獨立應用程式。  
   
--   全標記 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 應用程式。  
+- 全標記 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 應用程式。  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>部署獨立應用程式  
@@ -89,11 +89,11 @@ ms.locfileid: "59320648"
 ### <a name="deploying-xaml-browser-applications"></a>部署 XAML 瀏覽器應用程式  
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 是必須部署下列三個檔案的已編譯應用程式：  
   
--   *ApplicationName*.exe:可執行組件的應用程式檔案。  
+- *ApplicationName*.exe:可執行組件的應用程式檔案。  
   
--   *ApplicationName*.xbap:部署資訊清單中。  
+- *ApplicationName*.xbap:部署資訊清單中。  
   
--   *ApplicationName*.exe.manifest:應用程式資訊清單。  
+- *ApplicationName*.exe.manifest:應用程式資訊清單。  
   
 > [!NOTE]
 >  如需部署和應用程式資訊清單的詳細資訊，請參閱[建置 WPF 應用程式](building-a-wpf-application-wpf.md)。  

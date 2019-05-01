@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
 ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946740"
 ---
 # <a name="application-settings-architecture"></a>應用程式設定架構
 本主題描述應用程式設定的運作方式，並且瀏覽架構的進階功能 (例如群組設定和設定索引鍵)。  
@@ -24,15 +24,15 @@ ms.locfileid: "59312562"
 ## <a name="defining-settings"></a>定義設定  
  應用程式設定架構同時用於 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 Windows Forms，且包含數個在這兩種環境之間共用的基底類別。 最重要的是<xref:System.Configuration.SettingsBase>，其提供存取集合，透過設定，並提供低階方法來載入和儲存設定。 每個環境會實作自己的類別衍生自<xref:System.Configuration.SettingsBase>該環境提供額外的設定功能。 在 Windows Form 為基礎的應用程式，所有的應用程式設定必須定義衍生自的類別上<xref:System.Configuration.ApplicationSettingsBase>類別的基底類別新增下列功能：  
   
--   較高層級的載入和儲存作業  
+- 較高層級的載入和儲存作業  
   
--   支援使用者範圍的設定  
+- 支援使用者範圍的設定  
   
--   將使用者的設定還原為預先定義的預設值  
+- 將使用者的設定還原為預先定義的預設值  
   
--   從舊版應用程式升級設定  
+- 從舊版應用程式升級設定  
   
--   在設定變更之前或儲存之前驗證設定  
+- 在設定變更之前或儲存之前驗證設定  
   
  可以使用多個定義內的屬性所設定的描述<xref:System.Configuration>命名空間; 這些所述[應用程式設定屬性](application-settings-attributes.md)。 當您定義一項設定時，您就必須將它套用以<xref:System.Configuration.ApplicationScopedSettingAttribute>或<xref:System.Configuration.UserScopedSettingAttribute>，其中描述此設定套用至整個應用程式，或只用於目前的使用者。  
   
@@ -46,11 +46,11 @@ ms.locfileid: "59312562"
   
  最初隨著 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 一起發行的組態系統，支援透過本機電腦的 machine.config 檔案，或在您隨著應用程式部署的 `app.`exe.config 檔案內，提供靜態應用程式組態資料。 <xref:System.Configuration.LocalFileSettingsProvider>類別以下列方式展開此原生支援：  
   
--   應用程式範圍的設定可以儲存在 machine.config 或`app.`exe.config 檔案中。 Machine.config 永遠唯讀，但 `app`.exe.config 基於安全性考量，對大部分應用程式而言限制為唯讀。  
+- 應用程式範圍的設定可以儲存在 machine.config 或`app.`exe.config 檔案中。 Machine.config 永遠唯讀，但 `app`.exe.config 基於安全性考量，對大部分應用程式而言限制為唯讀。  
   
--   使用者範圍的設定可以儲存在 `app` exe.config 檔案中，在此情況下視為靜態預設值。  
+- 使用者範圍的設定可以儲存在 `app` exe.config 檔案中，在此情況下視為靜態預設值。  
   
--   非預設使用者範圍的設定儲存在新檔案 *user*config 中，其中 *user* 是目前執行應用程式之人員的使用者名稱。 您可以指定的使用者範圍設定的預設值<xref:System.Configuration.DefaultSettingValueAttribute>。 因為使用者範圍的設定通常會在應用程式執行期間變更，所以 `user`.config 永遠是可讀寫。  
+- 非預設使用者範圍的設定儲存在新檔案 *user*config 中，其中 *user* 是目前執行應用程式之人員的使用者名稱。 您可以指定的使用者範圍設定的預設值<xref:System.Configuration.DefaultSettingValueAttribute>。 因為使用者範圍的設定通常會在應用程式執行期間變更，所以 `user`.config 永遠是可讀寫。  
   
  這三個組態檔全部以 XML 格式儲存設定。 應用程式範圍設定的最上層 XML 元素是 `<appSettings>`，而 `<userSettings>` 用於使用者範圍的設定。 含有應用程式範圍的設定及使用者範圍設定預設值的 `app`.exe.config 檔案如下︰  
   

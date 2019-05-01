@@ -11,11 +11,11 @@ helpviewer_keywords:
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 ms.openlocfilehash: 18cb28de04737973876e70cdb7b87e720836bcba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032313"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 自動化和畫面縮放比例
 > [!NOTE]
@@ -44,15 +44,15 @@ ms.locfileid: "59332676"
 ## <a name="scaling-in-ui-automation-clients"></a>使用者介面自動化用戶端中的縮放比例  
   [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] 不會使用邏輯座標。 下列方法和屬性會傳回實體座標或採用它們做為參數。  
   
--   <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.TryGetClickablePoint%2A>  
+- <xref:System.Windows.Automation.AutomationElement.TryGetClickablePoint%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.ClickablePointProperty>  
+- <xref:System.Windows.Automation.AutomationElement.ClickablePointProperty>  
   
--   <xref:System.Windows.Automation.AutomationElement.FromPoint%2A>  
+- <xref:System.Windows.Automation.AutomationElement.FromPoint%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>  
+- <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>  
   
  根據預設，在非 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 環境中執行的使用者介面自動化用戶端應用程式將無法從這些方法和屬性取得正確結果。 例如，因為游標位置是在邏輯座標中，用戶端無法單純地將這些座標傳遞至 <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> ，以取得游標下的項目。 此外，應用程式也將無法在其用戶端區域之外正確放置視窗。  
   
