@@ -4,12 +4,12 @@ description: Azure functions 提供無伺服器的功能 （C#、 JavaScript、 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 2d8729276a5797bd8b89c39d8fb03c6f20646ea0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.openlocfilehash: 4febcc01eebf3efce3fc1eb42e19c2ec6c0baa52
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145159"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807894"
 ---
 # <a name="azure-functions"></a>Azure Functions
 
@@ -25,7 +25,7 @@ Azure functions 提供無伺服器計算體驗。 函式會叫用*觸發程序*�
 
 有兩個 Azure Functions 執行階段版本：1.x 和 2.x。 版本 1.x 已正式推出 (GA)。 它支援從入口網站或 Windows 電腦的.NET 開發，並使用.NET Framework。 1.x 支援C#，JavaScript，和F#，使用 Python、 PHP、 TypeScript、 Batch、 Bash、 和 PowerShell 的實驗性支援。
 
-版本 2.x 處於預覽狀態。 它會利用.NET Core，而且支援在 Windows、 macOS 和 Linux 機器上跨平台開發。 2.x 新增適用於 Java 的頂級支援，但尚不直接支援的任何實驗性語言。 版本 2.x 使用新的繫結擴充性模型，可讓協力廠商擴充功能的平台獨立的版本設定的繫結，並更精簡的執行環境。
+[版本 2.x 現也正式](https://azure.microsoft.com/blog/introducing-azure-functions-2-0/)。 它會利用.NET Core，而且支援在 Windows、 macOS 和 Linux 機器上跨平台開發。 2.x 新增適用於 Java 的頂級支援，但尚不直接支援的任何實驗性語言。 版本 2.x 使用新的繫結擴充性模型，可讓協力廠商擴充功能的平台獨立的版本設定的繫結，並更精簡的執行環境。
 
 > **與 1.x 中沒有已知的問題[繫結重新導向支援](https://github.com/Azure/azure-functions-host/issues/992)。** 問題在於專用的.NET 開發。 受影響的相依性會包含在執行階段程式庫中的不同版本的程式庫的專案。 Functions 小組已致力於問題的具體進度。 小組會在它進入正式運作之前解決在 2.x 中的繫結重新導向。 這裡有建議的修正和因應措施的官方團隊陳述式：[在 Azure Functions 中的組件解析](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions)。
 
@@ -37,9 +37,9 @@ Azure functions 提供無伺服器計算體驗。 函式會叫用*觸發程序*�
 
 |語言      |1.x         |2.x      |
 |--------------|------------|---------|
-|**C#**        |正式運作          |預覽  |
-|**JavaScript**|正式運作          |預覽  |
-|**F#**        |正式運作          |         |
+|**C#**        |GA          |預覽  |
+|**JavaScript**|GA          |預覽  |
+|**F#**        |GA          |         |
 |**Java**      |            |預覽  |
 |**Python**    |實驗|         |
 |**PHP**       |實驗|         |

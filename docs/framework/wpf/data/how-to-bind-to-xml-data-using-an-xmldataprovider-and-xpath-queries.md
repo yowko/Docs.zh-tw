@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: f6cd09279cf23d3273e7a4083950a5f42714c8bf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: 3a3df65f0c20cff49f9bd2a8790e8d9ae0032391
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097222"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809576"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>HOW TO：使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料
 此範例示範如何將繫結至[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]資料使用<xref:System.Windows.Data.XmlDataProvider>。  
@@ -30,19 +30,19 @@ ms.locfileid: "59097222"
   
  <xref:System.Windows.Controls.ListBox>時執行此範例會顯示下列項目。 這些是 *Books* 底下之所有元素的 *Title*，其有一個 *Stock* 值為 *out*，或有一個 *Number* 值為 3 或大於等於 8 。 請注意，沒有*CD*會傳回項目，因為<xref:System.Windows.Data.XmlDataProvider.XPath%2A>值組<xref:System.Windows.Data.XmlDataProvider>僅表示*書籍*項目應該公開 （基本上設定篩選條件）。  
   
- ![XPath 範例](./media/xpathexample.PNG "XPathExample")  
+ ![顯示的四個書籍標題的 XPath 範例的螢幕擷取畫面。](./media/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries/xpath-example-listbox-details.png)  
   
  在此範例中，因為，會顯示書籍標題<xref:System.Windows.Data.Binding.XPath%2A>的<xref:System.Windows.Controls.TextBlock>中的繫結<xref:System.Windows.DataTemplate>設定為 「*標題*"。 如果您想要顯示的屬性 (attribute) 值，例如*ISBN*，則您會設定<xref:System.Windows.Data.Binding.XPath%2A>值"`@ISBN`」。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的 **XPath** 屬性是由 XmlNode.SelectNodes 方法處理。 您可以修改 **XPath** 查詢，以取得不同的結果。 以下是一些範例，如<xref:System.Windows.Data.Binding.XPath%2A>查詢繫結<xref:System.Windows.Controls.ListBox>前一個範例：  
   
--   `XPath="Book[1]"` 會傳回第一個書籍元素 ("XML in Action")。 請注意，**XPath** 索引以 1 為起始，而非 0。  
+- `XPath="Book[1]"` 會傳回第一個書籍元素 ("XML in Action")。 請注意，**XPath** 索引以 1 為起始，而非 0。  
   
--   `XPath="Book[@*]"` 會傳回所有具有屬性的書籍元素。  
+- `XPath="Book[@*]"` 會傳回所有具有屬性的書籍元素。  
   
--   `XPath="Book[last()-1]"` 會傳回第二個至最後一個書籍元素 ("Introducing Microsoft .NET")。  
+- `XPath="Book[last()-1]"` 會傳回第二個至最後一個書籍元素 ("Introducing Microsoft .NET")。  
   
--   `XPath="*[position()>3]"` 會傳回除前 3 個以外的所有書籍元素。  
+- `XPath="*[position()>3]"` 會傳回除前 3 個以外的所有書籍元素。  
   
  當您執行**XPath**查詢，它會傳回<xref:System.Xml.XmlNode>或 XmlNodes 的清單。 <xref:System.Xml.XmlNode> 已[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]物件，這表示您可以使用<xref:System.Windows.Data.Binding.Path%2A>屬性繫結至[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]屬性。 再看一次上一個範例。 如果此範例的其餘部分維持不變，而且您變更<xref:System.Windows.Controls.TextBlock>繫結至下列，您會看到在所傳回之 Xmlnode 的名稱<xref:System.Windows.Controls.ListBox>。 在這個案例中，所有傳回的節點名稱都將為 *Book*。  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 4309b1108b2ea96eb298ff3bb876a0f63b80dc32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d633111c5abc572b0fc27c1a5b32050681504073
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343586"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807955"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>開始使用 WPF 中的筆墨
 
@@ -104,7 +104,7 @@ XAML 可以很容易就能設計使用者介面，而任何實際的應用程式
 
 1. 新增 PresentationCore、 PresentationFramework、 與 WindowsBase 組件的參考，以滑鼠右鍵按一下**參考**中**方案總管**，然後選擇**加入參考**.
 
-   ![顯示 PresentationCore 與 PresentationFramework 參考管理員](./media/getting-started-with-ink/references.png)
+   ![顯示 PresentationCore 與 PresentationFramework 參考管理員](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
 
 1. 建置應用程式藉由按下**F5**。
 

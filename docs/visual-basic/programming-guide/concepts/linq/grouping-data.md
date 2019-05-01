@@ -2,19 +2,19 @@
 title: 分組資料 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: c658ac5c46baec1bfa976074b78ac86d791b6515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: b5a6a3795e02e0638b81824701ad0cbacbcca91a
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842053"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808120"
 ---
 # <a name="grouping-data-visual-basic"></a>分組資料 (Visual Basic)
 分組指的是將資料放在群組中，好讓每一個群組中的項目共用共同的屬性。  
   
  下圖顯示一系列字元的分組結果。 每個群組的索引鍵是字元。  
   
- ![LINQ 群組作業](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")  
+ ![此圖顯示 LINQ 群組作業。](./media/grouping-data/linq-group-operation.png)  
   
  分組資料項目的標準查詢運算子方法詳列於下一節。  
   
