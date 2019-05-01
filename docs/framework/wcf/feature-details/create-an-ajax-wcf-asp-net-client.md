@@ -2,14 +2,14 @@
 title: 在 Visual Studio 中建立啟用 AJAX 的 WCF 服務和 ASP.NET 用戶端
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 954ee0409f370c3fa28814a70d51334fd75f7b79
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.openlocfilehash: 06fa3a9d0151f3b4b865c421f9960854ef471377
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024606"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807885"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>HOW TO：建立啟用 AJAX 的 WCF 服務和存取該服務的 ASP.NET 用戶端
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>HOW TO：建立啟用 AJAX 的 WCF 服務和 ASP.NET 用戶端存取服務
 
 本主題說明如何使用 Visual Studio 來建立啟用 AJAX 的 Windows Communication Foundation (WCF) 服務和 ASP.NET 用戶端存取服務。
 
@@ -77,15 +77,15 @@ ms.locfileid: "48024606"
 
 4. 回到**來源**檢視中，新增下列程式碼之間 **\<ScriptManager >** 標記，以指定 WCF 服務的路徑：
 
-    ```html
+    ```xml
     <Services>
        <asp:ServiceReference Path="~/CostService.svc" />
     </Services>
     ```
 
-1. 新增 Javascript 函式的程式碼`Calculate()`。 將下列程式碼中的放**head** web 表單的區段：
+5. 新增 Javascript 函式的程式碼`Calculate()`。 將下列程式碼中的放**head** web 表單的區段：
 
-    ```javascript
+    ```html
     <script type="text/javascript">
 
         function Calculate() {

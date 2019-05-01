@@ -3,20 +3,20 @@ title: WSFederation 驗證模組概觀
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: b13536acf71018eb21b6930d7542a9911add8261
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c64bbfc868268fea77d2d17317bfea43aa413b3f
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310248"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808266"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 驗證模組概觀
 Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-同盟驗證模組 (WS-FAM) 提供同盟驗證的支援。 本主題將協助您了解同盟驗證的運作方式以及如何使用它。  
   
 ### <a name="overview-of-federated-authentication"></a>同盟驗證的概觀  
- 同盟驗證可讓一個信任網域中的安全性權杖服務 (STS) 將驗證資訊提供給另一個信任網域中的 STS，條件是這兩個網域之間要有信任關係。 下圖將示範其中一種範例。  
+ 同盟驗證可讓一個信任網域中的安全性權杖服務 (STS) 將驗證資訊提供給另一個信任網域中的 STS，條件是這兩個網域之間要有信任關係。 這個範例是由下列圖所示：  
   
- ![同盟驗證情節](../../../docs/framework/security/media/federatedauthentication.gif "FederatedAuthentication")  
+ ![此圖表顯示同盟的驗證情節。](./media/wsfederation-authentication-module-overview/federated-authentication.gif)  
   
 1. Fabrikam 信任網域中的用戶端將某個要求傳送到 Contoso 信任網域中的信賴憑證者 (RP) 應用程式。  
   
@@ -50,7 +50,7 @@ Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-
   
  下圖顯示在被動式重新導向情況下的整體資訊流程。 該要求會自動透過 STS 進行重新導向來建立認證，而無需使用登入頁面：  
   
- ![使用被動式重新導向進行登入的時機圖表](../../../docs/framework/security/media/signinusingpassiveredirect.gif "SignInUsingPassiveRedirect")  
+ ![此圖顯示使用被動式重新導向登入。](./media/wsfederation-authentication-module-overview/sign-in-using-passive-redirect.gif)  
   
  下圖針對使用者已向 STS 完成驗證，其安全性權杖接著由 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 處理時所發生的狀況，提供更多詳細資料：  
   
@@ -63,9 +63,9 @@ Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-
 ### <a name="events"></a>事件  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>、<xref:System.IdentityModel.Services.SessionAuthenticationModule> 和其父類別 <xref:System.IdentityModel.Services.HttpModuleBase>，會在許多不同的 HTTP 要求處理階段引發事件。 您可以在 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式的 `global.asax` 檔案中處理這些事件。  
   
--   ASP.NET 基礎結構會叫用模組的 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 方法來初始化模組。  
+- ASP.NET 基礎結構會叫用模組的 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 方法來初始化模組。  
   
--   當 ASP.NET 基礎結構在衍生自 <xref:System.IdentityModel.Services.HttpModuleBase> 的其中一個應用程式模組上第一次叫用 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 方法時，就會引發 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> 事件。 這個方法會存取靜態 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> 屬性，因而導致從 Web.config 檔案中載入組態。 只有在第一次存取這個屬性時才會引發此事件。 從組態初始化的 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 物件可以透過事件處理常式中的 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> 屬性進行存取。 在將組態套用到任何模組之前，可以使用此事件來修改組態。 您可以在 Application_Start 方法中加入此事件的處理常式：  
+- 當 ASP.NET 基礎結構在衍生自 <xref:System.IdentityModel.Services.HttpModuleBase> 的其中一個應用程式模組上第一次叫用 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 方法時，就會引發 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> 事件。 這個方法會存取靜態 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> 屬性，因而導致從 Web.config 檔案中載入組態。 只有在第一次存取這個屬性時才會引發此事件。 從組態初始化的 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 物件可以透過事件處理常式中的 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> 屬性進行存取。 在將組態套用到任何模組之前，可以使用此事件來修改組態。 您可以在 Application_Start 方法中加入此事件的處理常式：  
   
     ```  
     void Application_Start(object sender, EventArgs e)  
@@ -76,19 +76,19 @@ Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-
   
      每個模組都會覆寫 <xref:System.IdentityModel.Services.HttpModuleBase.InitializeModule%2A?displayProperty=nameWithType> 和 <xref:System.IdentityModel.Services.HttpModuleBase.InitializePropertiesFromConfiguration%2A?displayProperty=nameWithType> 抽象方法。 其中的第一個方法會新增與模組相關之 ASP.NET 管線事件的處理常式。 在大部分情況下，模組的預設實作便已足夠。 其中的第二個方法則會從其下列屬性初始化模組的屬性：<xref:System.IdentityModel.Services.HttpModuleBase.FederationConfiguration%2A?displayProperty=nameWithType> 屬性。 (這是先前所載入之組態的複本)。如果您想要針對類別組態中衍生自 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 或 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 的新屬性支援其初始化作業，則可以覆寫第二個方法。 在這種情況下，您也必須衍生自適當的組態物件，才能支援新增的組態屬性；例如，衍生自 <xref:System.IdentityModel.Configuration.IdentityConfiguration>、<xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> 或 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration>。  
   
--   WS-FAM 在攔截 STS 所簽發的安全性權杖時，會引發 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenReceived> 事件。  
+- WS-FAM 在攔截 STS 所簽發的安全性權杖時，會引發 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenReceived> 事件。  
   
--   WS-FAM 在驗證權杖之後，會引發 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenValidated> 事件。  
+- WS-FAM 在驗證權杖之後，會引發 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenValidated> 事件。  
   
--   <xref:System.IdentityModel.Services.SessionAuthenticationModule> 在建立使用者的工作階段安全性權杖時，會引發 <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenCreated> 事件。  
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule> 在建立使用者的工作階段安全性權杖時，會引發 <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenCreated> 事件。  
   
--   <xref:System.IdentityModel.Services.SessionAuthenticationModule> 在攔截其 Cookie 包含工作階段安全性權杖的後續要求時，會引發 <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenReceived> 事件。  
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule> 在攔截其 Cookie 包含工作階段安全性權杖的後續要求時，會引發 <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenReceived> 事件。  
   
--   在 WS-FAM 將使用者重新導向至簽發者之前，它會引發 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> 事件。 WS-同盟登入要求是透過事件所傳遞之 <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs> 的 <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs.SignInRequestMessage%2A> 屬性來提供。 您可以選擇修改要求，再將此要求傳送給簽發者。  
+- 在 WS-FAM 將使用者重新導向至簽發者之前，它會引發 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> 事件。 WS-同盟登入要求是透過事件所傳遞之 <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs> 的 <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs.SignInRequestMessage%2A> 屬性來提供。 您可以選擇修改要求，再將此要求傳送給簽發者。  
   
--   當 Cookie 順利寫入且使用者已登入時，WS-FAM 會引發 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignedIn> 事件。  
+- 當 Cookie 順利寫入且使用者已登入時，WS-FAM 會引發 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignedIn> 事件。  
   
--   WS-FAM 會在每個使用者的工作階段關閉時，針對每一個工作階段引發 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut> 事件一次。 如果工作階段是在用戶端上關閉 (例如，藉由刪除工作階段 Cookie)，則不會引發此事件。 在 SSO 環境中，IP-STS 也可以要求每個 RP 登出。 若將 <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> 設定為 `true`，這也會引發此事件。  
+- WS-FAM 會在每個使用者的工作階段關閉時，針對每一個工作階段引發 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut> 事件一次。 如果工作階段是在用戶端上關閉 (例如，藉由刪除工作階段 Cookie)，則不會引發此事件。 在 SSO 環境中，IP-STS 也可以要求每個 RP 登出。 若將 <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> 設定為 `true`，這也會引發此事件。  
   
 > [!NOTE]
 >  您不應該在 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 或 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 所引發的任何事件期間使用 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 屬性。 這是因為 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 會在驗證程序之後才設定，而事件則是在驗證程序期間引發。  

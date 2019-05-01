@@ -1,19 +1,19 @@
 ---
-title: 逐步解說：裝載 WPF 時鐘在 Win32 中
+title: 逐步解說：將 WPF 時鐘裝載在 Win32 中
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interoperability [WPF], tutorials
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: a13e21281a4bdb365c3a0541d88cd94b6476492e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.openlocfilehash: 4001c34f6673e036bdbf731baed782c6dc0a16b0
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494944"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808069"
 ---
-# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>逐步解說：裝載 WPF 時鐘在 Win32 中
+# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>逐步解說：將 WPF 時鐘裝載在 Win32 中
 
 把[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]應用程式，使用<xref:System.Windows.Interop.HwndSource>，以提供包含 HWND 您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容。 第一次建立<xref:System.Windows.Interop.HwndSource>，讓它將與 CreateWindow 類似的參數。 接著您告訴<xref:System.Windows.Interop.HwndSource>關於[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容要放在其內。 最後，您可以放大的 HWND <xref:System.Windows.Interop.HwndSource>。 此逐步解說將說明如何建立混合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]實作作業系統的應用程式**日期和時間內容**對話方塊。
 
@@ -29,13 +29,13 @@ ms.locfileid: "57494944"
 
 下圖顯示本教學課程的預期最終產品︰
 
-![日期和時間內容對話方塊](./media/interoparch06.PNG "InteropArch06")
+![如果螢幕擷取畫面顯示日期和時間內容 對話方塊。](./media/walkthrough-hosting-a-wpf-clock-in-win32/date-time-properties-dialog.png)
 
-您可以藉由建立 c + + 來重建此對話方塊[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]專案中[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，並使用對話方塊編輯器來建立下列：
+您可以重建此對話方塊建立C++在 Visual Studio 中，並使用對話方塊編輯器來建立下列的 Win32 專案：
 
-![日期和時間內容對話方塊](./media/interoparch07.PNG "InteropArch07")
+![重新建立的日期和時間內容對話方塊](./media/walkthrough-hosting-a-wpf-clock-in-win32/recreated-date-time-properties-dialog.png)
 
-(您不需要使用[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]若要使用<xref:System.Windows.Interop.HwndSource>，而且您不需要使用 c + + 撰寫[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]程式，而這是相當常見的作法，並可逐步進行教學課程說明)。
+(您不需要使用[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]若要使用<xref:System.Windows.Interop.HwndSource>，而且您不需要使用C++撰寫[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]程式，而這是相當常見的作法，並可逐步進行教學課程說明)。
 
 您需要完成五個特定的子步驟，才能將[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]時鐘放在對話方塊：
 
@@ -53,7 +53,7 @@ ms.locfileid: "57494944"
 
 第一個步驟是將此 unmanaged[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]專案成一個可呼叫 managed 程式碼。 您使用 /clr 編譯器選項，將連結至您想要使用，並調整 Main 方法，用於將必要的 Dll [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。
 
-若要啟用 c + + 專案內的 managed 程式碼的使用：以滑鼠右鍵按一下 win32clock 專案，然後選取**屬性**。 在 **一般**屬性頁 （預設值），變更 Common Language Runtime 支援`/clr`。
+若要啟用 managed 程式碼內的C++專案：以滑鼠右鍵按一下 win32clock 專案，然後選取**屬性**。 在 **一般**屬性頁 （預設值），變更 Common Language Runtime 支援`/clr`。
 
 接下來，新增所需 dll 的參考[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:PresentationCore.dll、 PresentationFramework.dll、 System.dll、 WindowsBase.dll、 UIAutomationProvider.dll 和 UIAutomationTypes.dll。 (下列指示假設作業系統安裝在 C: 磁碟機上)。
 
@@ -229,7 +229,7 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
 
 最終結果如下：
 
-![日期和時間內容對話方塊](./media/interoparch08.PNG "InteropArch08")
+![最終結果 [日期和時間內容] 對話方塊](./media/walkthrough-hosting-a-wpf-clock-in-win32/final-result-date-time-properties-dialog.png)
 
 若要比較的程式碼產生此螢幕擷取畫面，您最後結果，請參閱[Win32 時鐘交互操作範例](https://go.microsoft.com/fwlink/?LinkID=160051)。
 

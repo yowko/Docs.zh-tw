@@ -2,12 +2,12 @@
 title: 授權原則
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 87deedb2bd28cd86619eb48d0ff9c3e566174d31
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: 50e868645d7e7ccbcf4be697f8bdb1814dd90e9c
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332672"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807973"
 ---
 # <a name="authorization-policy"></a>授權原則
 
@@ -18,17 +18,17 @@ ms.locfileid: "56332672"
 
  這個範例所示範的作業摘要如下：
 
--   用戶端可以使用使用者名稱與密碼來進行驗證。
+- 用戶端可以使用使用者名稱與密碼來進行驗證。
 
--   用戶端可以使用 X.509 憑證進行驗證。
+- 用戶端可以使用 X.509 憑證進行驗證。
 
--   伺服器會向自訂 `UsernamePassword` 驗證器驗證用戶端認證。
+- 伺服器會向自訂 `UsernamePassword` 驗證器驗證用戶端認證。
 
--   伺服器是使用該伺服器的 X.509 憑證來驗證的。
+- 伺服器是使用該伺服器的 X.509 憑證來驗證的。
 
--   伺服器可以使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 來控制服務中特定方法的存取。
+- 伺服器可以使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 來控制服務中特定方法的存取。
 
--   如何實作 <xref:System.IdentityModel.Policy.IAuthorizationPolicy>。
+- 如何實作 <xref:System.IdentityModel.Policy.IAuthorizationPolicy>。
 
 服務會公開兩個端點，以便與使用組態檔 App.config 定義的服務進行通訊。每個端點是由位址、繫結及合約所組成。 其中一個繫結使用標準 `wsHttpBinding` 繫結 (使用 WS-Security 和用戶端使用者名稱驗證) 來設定。 另一個繫結使用標準 `wsHttpBinding` 繫結 (使用 WS-Security 和用戶端憑證驗證) 來設定。 [\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)指定要用於服務驗證的使用者認證。 伺服器憑證必須包含相同的值，如`SubjectName`屬性設為`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)。
 
@@ -397,9 +397,9 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 下面提供批次檔的各區段簡要概觀，讓批次檔得以修改為在適當的組態下執行：
 
--   建立伺服器憑證。
+- 建立伺服器憑證。
 
-     下列 Setup.bat 批次檔中的程式行會建立要使用的伺服器憑證。 %SERVER_NAME% 變數會指定伺服器名稱。 您可以變更這個變數來指定自己的伺服器名稱。 預設值為 localhost。
+    下列 Setup.bat 批次檔中的程式行會建立要使用的伺服器憑證。 %SERVER_NAME% 變數會指定伺服器名稱。 您可以變更這個變數來指定自己的伺服器名稱。 預設值為 localhost。
 
     ```
     echo ************
@@ -411,19 +411,19 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   將伺服器憑證安裝至用戶端的受信任憑證存放區中。
+- 將伺服器憑證安裝至用戶端的受信任憑證存放區中。
 
-     Setup.bat 批次檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證存放區的步驟。
+    Setup.bat 批次檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證存放區的步驟。
 
     ```
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   建立用戶端憑證。
+- 建立用戶端憑證。
 
-     下列 Setup.bat 批次檔中的程式行會建立要使用的用戶端憑證。 %USER_NAME% 變數會指定伺服器名稱。 這個值會設定為 "test1"，因為這是 `IAuthorizationPolicy` 會尋找的名稱。 如果變更了 %USER_NAME% 的值，您就必須在 `IAuthorizationPolicy.Evaluate` 方法中變更對應的值。
+    下列 Setup.bat 批次檔中的程式行會建立要使用的用戶端憑證。 %USER_NAME% 變數會指定伺服器名稱。 這個值會設定為 "test1"，因為這是 `IAuthorizationPolicy` 會尋找的名稱。 如果變更了 %USER_NAME% 的值，您就必須在 `IAuthorizationPolicy.Evaluate` 方法中變更對應的值。
 
-     憑證會儲存在 CurrentUser 存放區位置下的 My (Personal) 存放區中。
+    憑證會儲存在 CurrentUser 存放區位置下的 My (Personal) 存放區中。
 
     ```
     echo ************
@@ -432,9 +432,9 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe
     ```
 
--   將用戶端憑證安裝至伺服器的受信任憑證存放區中。
+- 將用戶端憑證安裝至伺服器的受信任憑證存放區中。
 
-     Setup.bat 批次檔中的下列程式行會將用戶端憑證複製到受信任人的存放區。 這是必要步驟，因為伺服器系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將用戶端憑證填入伺服器憑證存放區的步驟。
+    Setup.bat 批次檔中的下列程式行會將用戶端憑證複製到受信任人的存放區。 這是必要步驟，因為伺服器系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將用戶端憑證填入伺服器憑證存放區的步驟。
 
     ```
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
@@ -460,7 +460,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 1. 從啟動 Client.exe *\client\bin*。 用戶端活動會顯示在用戶端主控台應用程式上。
 
-  如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
+如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
 
 ### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例
 
@@ -474,7 +474,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 5. 在伺服器上，執行`setup.bat service`中開發人員命令提示字元使用系統管理員權限開啟的 Visual Studio。
 
-   執行`setup.bat`具有`service`引數建立電腦的完整的網域名稱服務憑證，並將服務憑證匯出至名為的檔案*Service.cer*。
+    執行`setup.bat`具有`service`引數建立電腦的完整的網域名稱服務憑證，並將服務憑證匯出至名為的檔案*Service.cer*。
 
 6. 編輯*Service.exe.config*以反映新的憑證名稱 (在`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 這是完整的網域名稱相同電腦。 也會變更**computername**中\<服務 > /\<baseAddresses > 項目服務電腦的完整名稱從 localhost。
 
@@ -482,7 +482,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 8. 在用戶端，執行`setup.bat client`中開發人員命令提示字元使用系統管理員權限開啟的 Visual Studio。
 
-   執行`setup.bat`具有`client`引數會建立名為用戶端憑證**test1** ，並將用戶端憑證匯出為名為檔案*Client.cer*。
+    執行`setup.bat`具有`client`引數會建立名為用戶端憑證**test1** ，並將用戶端憑證匯出為名為檔案*Client.cer*。
 
 9. 在  *Client.exe.config*檔案在用戶端電腦上，變更端點位址值以符合您的服務的新位址。 執行這項操作來取代**localhost**伺服器的完整的網域名稱。
 
@@ -490,17 +490,17 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 11. 在用戶端，執行*ImportServiceCert.bat*中開發人員命令提示字元使用系統管理員權限開啟的 Visual Studio。
 
-   這會在將服務憑證從 Service.cer 檔案匯入**CurrentUser-TrustedPeople**儲存。
+    這會在將服務憑證從 Service.cer 檔案匯入**CurrentUser-TrustedPeople**儲存。
 
 12. 在伺服器上，執行*ImportClientCert.bat*中開發人員命令提示字元使用系統管理員權限開啟的 Visual Studio。
 
-   這會從 Client.cer 檔案匯入的用戶端憑證**LocalMachine-TrustedPeople**儲存。
+    這會從 Client.cer 檔案匯入的用戶端憑證**LocalMachine-TrustedPeople**儲存。
 
 13. 在伺服器電腦上，從命令提示字元視窗啟動 Service.exe。
 
 14. 在用戶端電腦上，從命令提示字元視窗啟動 Client.exe。
 
-   如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
+    如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
 
 ### <a name="clean-up-after-the-sample"></a>在此範例之後進行清除
 

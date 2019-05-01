@@ -9,12 +9,12 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 3c477923387e5a28dcc14b44b0f77bb6acb686e5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
-ms.translationtype: MT
+ms.openlocfilehash: 04e9dd3c135c516fa5554b9b547306337fb6a668
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176730"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807821"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>HOW TO：限定 XML 元素和 XML 屬性名稱
 
@@ -32,7 +32,7 @@ XML 命名空間提供限定 XML 文件中 XML 項目和 XML 屬性名稱的方�
 
 3. 套用適當的 `System.Xml.Serialization` 屬性至 <xref:System.Xml.Serialization.XmlSerializer> 將要序列化至 XML 文件的每個成員或類別。
 
-  可用的屬性為：<xref:System.Xml.Serialization.XmlAnyElementAttribute>、<xref:System.Xml.Serialization.XmlArrayAttribute>、<xref:System.Xml.Serialization.XmlArrayItemAttribute>、<xref:System.Xml.Serialization.XmlAttributeAttribute>、<xref:System.Xml.Serialization.XmlElementAttribute>、<xref:System.Xml.Serialization.XmlRootAttribute> 與 <xref:System.Xml.Serialization.XmlTypeAttribute>。
+    可用的屬性為：<xref:System.Xml.Serialization.XmlAnyElementAttribute>、<xref:System.Xml.Serialization.XmlArrayAttribute>、<xref:System.Xml.Serialization.XmlArrayItemAttribute>、<xref:System.Xml.Serialization.XmlAttributeAttribute>、<xref:System.Xml.Serialization.XmlElementAttribute>、<xref:System.Xml.Serialization.XmlRootAttribute> 與 <xref:System.Xml.Serialization.XmlTypeAttribute>。
 
 4. 將每個屬性 (Attribute) 的 `Namespace` 屬性 (Property) 設定為 `XmlSerializerNamespaces` 的其中一個命名空間值。
 
@@ -176,6 +176,6 @@ public class Book
 - [XML 序列化簡介](introducing-xml-serialization.md)
 - [XmlSerializer 類別](xref:System.Xml.Serialization.XmlSerializer)
 - [可控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)
-- [如何：指定 XML 資料流的替代元素名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [如何：序列化物件](how-to-serialize-an-object.md)
+- [如何：指定 XML Stream 的替代項目名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [如何：將物件序列化](how-to-serialize-an-object.md)
 - [如何：還原序列化物件](how-to-deserialize-an-object.md)

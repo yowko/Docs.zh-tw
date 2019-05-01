@@ -1,15 +1,15 @@
 ---
-title: 逐步解說：在 Visual Studio (Visual Basic) 中內嵌來自 Managed 組件的型別
+title: 逐步解說：在 Visual Studio 中內嵌來自受控組件的型別 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 836d035aab06f18c13e3675fbd72c5ab9879a3d2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 18f22a771ab7279f177fe39d8c372a8517056890
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359451"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809138"
 ---
-# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>逐步解說：在 Visual Studio (Visual Basic) 中內嵌來自 Managed 組件的型別
+# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>逐步解說：在 Visual Studio 中內嵌來自受控組件的型別 (Visual Basic)
 
 若要內嵌來自強式名稱 Managed 組件的類型資訊，您可以鬆散地結合應用程式中的類型以確保版本獨立。 也就是說，您可以撰寫程式來使用 Managed 程式庫多個版本的類型，而不需重新編譯每個版本。
 
@@ -209,13 +209,13 @@ ms.locfileid: "57359451"
 
 3. 開啟 SampleClass.vb 檔案。 將下列幾行程式碼加入 SampleClass 類別。
 
-```vb
-Public Function GetDate() As DateTime Implements ISampleInterface.GetDate
-    Return Now
-End Function
-```
+    ```vb
+    Public Function GetDate() As DateTime Implements ISampleInterface.GetDate
+        Return Now
+    End Function
+    ```
 
-    Save the file.
+    儲存檔案。
 
 4. 儲存專案。
 

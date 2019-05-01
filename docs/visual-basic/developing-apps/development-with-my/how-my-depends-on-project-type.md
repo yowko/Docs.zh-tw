@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-ms.openlocfilehash: 743160889c4f24a9edb2d0f9799662a74c5061fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: 72b9799d1f5ba7efa37d5f8f2a633e6806a58607
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842079"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808079"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>My 如何相依於專案類型 (Visual Basic)
 `My` 只有在特定專案類型所需的物件公開 （expose)。 比方說，`My.Forms`物件是在 Windows Forms 應用程式中可用的但無法使用主控台應用程式中。 本主題描述其中`My`物件都在不同的專案類型。  
@@ -17,11 +17,11 @@ ms.locfileid: "58842079"
 ## <a name="my-in-windows-applications-and-web-sites"></a>我在 Windows 應用程式和網站  
  `My` 公開可用於目前的專案類型; 的物件它會隱藏不適用的物件。 例如下, 圖顯示`My`Windows Forms 專案中的物件模型。  
   
- ![圖形的我的 Windows Forms 應用程式中](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")  
+ ![此圖顯示我在 Windows Forms 應用程式中的物件模型。](./media/how-my-depends-on-project-type/my-object-model-windows-forms.png)  
   
  在網站專案中，`My`公開的 Web 開發人員相關的物件 (例如`My.Request`並`My.Response`物件) 同時隱藏不相關的物件 (例如`My.Forms`物件)。 下圖顯示`My`網站專案中的物件模型：  
   
- ![圖形的我的 Web 應用程式](../../../visual-basic/developing-apps/development-with-my/media/myinweb.png "MyInWeb")  
+ ![此圖顯示我的 Web 應用程式中的物件模型。](./media/how-my-depends-on-project-type/my-object-model-web.png)  
   
 ## <a name="project-details"></a>專案詳細資料  
  下表顯示哪些`My`物件會啟用預設為八個專案類型：Windows 應用程式、 類別程式庫、 主控台應用程式、 Windows 控制項程式庫、 Web 控制項程式庫、 Windows 服務、 空的和網站。  
