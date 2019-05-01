@@ -1,1 +1,9 @@
-<span data-ttu-id="3bba4-101">WPF 設計工具</span><span class="sxs-lookup"><span data-stu-id="3bba4-101">WPF Designer</span></span>
+---
+ms.openlocfilehash: bc0e3c14631660dbd49fb3fe7f06738bfdde14f4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696379"
+---
+<span data-ttu-id="48fb5-101">WPF 設計工具</span><span class="sxs-lookup"><span data-stu-id="48fb5-101">WPF Designer</span></span>

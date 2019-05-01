@@ -1,1 +1,9 @@
-<span data-ttu-id="4aa69-101">WPF</span><span class="sxs-lookup"><span data-stu-id="4aa69-101">WPF</span></span>
+---
+ms.openlocfilehash: 07439a554abfd0a5b6ae407d2d029d2e4a0970cc
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696485"
+---
+<span data-ttu-id="b9f48-101">WPF</span><span class="sxs-lookup"><span data-stu-id="b9f48-101">WPF</span></span>
