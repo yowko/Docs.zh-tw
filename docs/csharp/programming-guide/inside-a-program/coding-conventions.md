@@ -171,7 +171,7 @@ ms.locfileid: "59326797"
   
      [!code-csharp[csProgGuideCodingConventions#25](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#25)]  
   
--   使用別名，確保匿名類型的屬性名稱使用 Pascal 大小寫慣例。  
+- 使用別名，確保匿名類型的屬性名稱正確使用 Pascal 大小寫慣例。 
   
      [!code-csharp[csProgGuideCodingConventions#26](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#26)]  
   
