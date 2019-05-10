@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 15cf94d5ea191435723f754f35e43d65632142e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10483c747e0f86816db6f03dd8df17472f31f15c
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773489"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063781"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>HOW TO：建立流程圖工作流程
 工作流程可以從內建活動建構，也可以從自訂活動建構。 本主題將逐步解說如何建立這類使用內建活動的工作流程<xref:System.Activities.Statements.Flowchart>活動，並從先前的自訂活動[How to:建立活動](how-to-create-an-activity.md)主題。 此工作流程會以數字猜測遊戲為模型。  
@@ -142,7 +142,7 @@ ms.locfileid: "61773489"
   
      下列範例示範完成的工作流程。  
   
-     ![完成 Windows Workflow Foundation](./media/gettingstartedtutorialcompletedflowchart.PNG "GettingStartedTutorialCompletedFlowchart")  
+     ![此圖顯示已完成的 Windows Workflow Foundation 流程圖。](./media/how-to-create-a-flowchart-workflow/completed-windows-workflow-flowchart.png)  
   
 ### <a name="to-build-the-workflow"></a>若要建置工作流程  
   

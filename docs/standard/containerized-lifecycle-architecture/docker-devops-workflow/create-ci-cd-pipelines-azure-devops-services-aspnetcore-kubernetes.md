@@ -4,12 +4,12 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 2cd769ce9013a8521c53f36b44ea260ceccd48b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e11c9ec61ea7d5131595f01ce76b5bb810bb70c0
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795357"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063305"
 ---
 # <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>在 Azure DevOps Services 中為容器上的 .NET Core 2.0 應用程式建立 CI/CD 管線並部署到 Kubernetes 叢集
 
@@ -21,7 +21,7 @@ ms.locfileid: "61795357"
 
 請務必反白顯示兩個管線、 組建/CI 和發行/CD，透過 Docker 登錄 （例如 Docker Hub 或 Azure Container Registry） 連線。 Docker 登錄是其中一個主要的差異，相較於傳統的 CI/CD 程序，不使用 Docker。
 
-如所示的圖 5-13，第一個階段是組建/CI 管線。 Azure DevOps 服務中，您可以建立會編譯程式碼、 建立 Docker 映像，並將其推送到 Docker Hub 或 Azure Container Registry 的 Docker 登錄的建置/CD 管線。
+如所示的圖 5-13，第一個階段是組建/CI 管線。 Azure DevOps 服務中，您可以建立組建/CI 管線，將會編譯程式碼、 建立 Docker 映像，並將其推送到 Docker Hub 或 Azure Container Registry 的 Docker 登錄。
 
 ![Azure DevOps，建置程序工作定義的瀏覽器檢視。](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
 

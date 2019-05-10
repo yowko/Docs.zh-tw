@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f7770db59c346f0981dd89a9995f11e41d17a1d
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051997"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063496"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>HOW TO：控制 TextBox 文字更新來源的時機
 本主題描述如何使用<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>屬性，即可控制繫結來源更新的時機。 本主題使用<xref:System.Windows.Controls.TextBox>控制項做為範例。  
@@ -28,7 +28,7 @@ ms.locfileid: "62051997"
   
  如此一來，<xref:System.Windows.Controls.TextBlock>顯示相同的文字 （因為來源變更時） 在使用者輸入的文字貼入<xref:System.Windows.Controls.TextBox>，如下列範例的螢幕擷取畫面所示：  
   
- ![簡單資料繫結範例螢幕擷取畫面](./media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
+ ![如果螢幕擷取畫面顯示簡單資料繫結。](./media/how-to-control-when-the-textbox-text-updates-the-source/data-binding-simple-binding-sample.png)  
   
  如果您有一個對話方塊或使用者可編輯的表單，而且您想要延後來源更新，直到使用者完成欄位編輯並按一下 [確定]，您可以設定<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>若要將繫結的值<xref:System.Windows.Data.UpdateSourceTrigger.Explicit>，如下列範例所示：  
   

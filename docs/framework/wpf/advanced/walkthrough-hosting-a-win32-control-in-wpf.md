@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2cfd8699afe48cb936ecf600c47508ef45781b43
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032330"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64605508"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>逐步解說：將 Win32 控制項裝載在 WPF 中
 Windows Presentation Foundation (WPF) 提供豐富的環境，以建立應用程式。 不過，當您已長期開發 Win32 程式碼中，它可能會重複使用至少一些更有效率的 WPF 應用程式中的程式碼而不是完全重寫程式。 WPF 提供簡單的機制，以裝載 Win32 視窗中，WPF 頁面上。  

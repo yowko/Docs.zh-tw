@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
-ms.openlocfilehash: dbffe2bd196e798b90104aebb74269387660c794
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68e1fb4f55d9f9b140f1b54cfde2bc5f60952dd2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918199"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592129"
 ---
 # <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>非 CLS 相容\<成員名稱 > 不允許在符合 CLS 規範的介面
 屬性、 程序或在介面中的事件標示為`<CLSCompliant(True)>`介面本身會標示為`<CLSCompliant(False)>`或未標記。  
@@ -29,11 +29,11 @@ ms.locfileid: "61918199"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   如果您需要 cls 符合性，而且可以控制介面的原始碼，將標示為介面`<CLSCompliant(True)>`其所有成員是否符合規範。  
+- 如果您需要 cls 符合性，而且可以控制介面的原始碼，將標示為介面`<CLSCompliant(True)>`其所有成員是否符合規範。  
   
--   如果您需要 cls 符合性，而且不需要控制介面的原始碼，或它不會不符合 cls 標準，定義這個成員在不同的介面。  
+- 如果您需要 cls 符合性，而且不需要控制介面的原始碼，或它不會不符合 cls 標準，定義這個成員在不同的介面。  
   
--   如果您想要將這個成員保留其目前的介面中，移除<xref:System.CLSCompliantAttribute>從其定義或將其標記為`<CLSCompliant(False)>`。  
+- 如果您想要將這個成員保留其目前的介面中，移除<xref:System.CLSCompliantAttribute>從其定義或將其標記為`<CLSCompliant(False)>`。  
   
 ## <a name="see-also"></a>另請參閱
 

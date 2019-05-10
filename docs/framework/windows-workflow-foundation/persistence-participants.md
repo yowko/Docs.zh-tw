@@ -2,12 +2,12 @@
 title: 持續性參與者
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 73799fd66dd619d2573a1d334a6dbd23a9ff5b4e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672649"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592139"
 ---
 # <a name="persistence-participants"></a>持續性參與者
 持續性參與者可參與由應用程式主機所觸發的持續性作業 (「儲存」或「載入」)。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]隨附兩個抽象類別， **PersistenceParticipant**並**PersistenceIOParticipant**，這可用來建立持續性參與者。 持續性參與者會衍生自這些類別的其中一個、實作感興趣的方法，然後將類別的執行個體加入至 <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> 上的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 集合。 應用程式主機保存工作流程執行個體時，可能會尋找此類工作流程擴充功能，並且在適當的時間於持續性參與者上叫用適當的方法。  

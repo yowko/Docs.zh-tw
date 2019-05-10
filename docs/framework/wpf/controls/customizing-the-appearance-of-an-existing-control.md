@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 563f4a9fefe86b58f0dc6f0a4aec5cb285630616
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017814"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593412"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>透過建立 ControlTemplate 自訂現有控制項的外觀
 <a name="introduction"></a> A<xref:System.Windows.Controls.ControlTemplate>指定的視覺結構和控制項的視覺行為。 您可以藉由提供新自訂控制項的外觀<xref:System.Windows.Controls.ControlTemplate>。 當您建立<xref:System.Windows.Controls.ControlTemplate>，您會取代現有控制項的外觀，而不變更其功能。 例如，您可以讓按鈕在您的應用程式而不是預設的方形，round，但仍會引發按鈕<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  

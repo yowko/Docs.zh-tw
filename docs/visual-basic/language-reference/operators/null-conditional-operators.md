@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: b83435b8448b53eca63aac0519e9eed2f7dfa9f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4815fe7ad337634cfb56127fbd24a47a37fdd74b
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62028687"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062938"
 ---
 # <a name="-and--null-conditional-operators-visual-basic"></a>?. 和嗎？（） null 條件運算子 (Visual Basic)
 
@@ -37,6 +37,24 @@ Dim length As Integer
 If customers IsNot Nothing Then
    length = customers.Length
 End If
+```
+
+有時候您需要採取動作，可能是 null，該物件的布林成員的值為基礎的物件上 (例如布林值屬性`IsAllowedFreeShipping`在下列範例中):
+
+```vb
+  Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
+  
+  If customer IsNot Nothing AndAlso customer.IsAllowedFreeShipping Then
+   ApplyFreeShippingToOrders(customer)
+  End If
+```
+
+您可以縮短您的程式碼，並避免以手動方式檢查為 null，如下所示使用 null 條件運算子：
+
+```vb
+ Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
+ 
+ If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
 ```
 
 Null 條件運算子會執行最少運算。  如果在條件式成員存取和索引作業鏈結中的一項作業會傳回`Nothing`，其餘的鏈結的執行會停止。  在下列範例中，`C(E)`如果不評估`A`， `B`，或`C`評估為`Nothing`。

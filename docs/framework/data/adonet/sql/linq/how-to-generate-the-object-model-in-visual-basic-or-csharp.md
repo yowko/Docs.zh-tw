@@ -2,12 +2,12 @@
 title: HOW TO：以 Visual Basic 或 C# 產生物件模型
 ms.date: 03/30/2017
 ms.assetid: a0c73b33-5650-420c-b9dc-f49310c201ee
-ms.openlocfilehash: 8752a28b9bcfd068afcfc5d33c3097f26cf0f231
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3feb045ff29527c388e1aa190108f003f96dd4d0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033757"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596780"
 ---
 # <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>HOW TO：在 Visual Basic 或 C 中產生物件模型\#
 在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，採用您自己之程式語言的物件模型 (Object Model) 會對應至關聯式資料庫。 這兩種工具可供自動產生 Visual Basic 或C#從現有資料庫的中繼資料模型。  

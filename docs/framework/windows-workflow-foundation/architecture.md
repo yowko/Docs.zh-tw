@@ -2,12 +2,12 @@
 title: Windows 工作流程架構
 ms.date: 03/30/2017
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
-ms.openlocfilehash: 5d6e1ead9184bfb61eb466389671ca2e74264ae3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d341ebd354d5324c5ad71436837cb85737f46c08
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945921"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64605902"
 ---
 # <a name="windows-workflow-architecture"></a>Windows 工作流程架構
 Windows Workflow Foundation (WF) 會引發開發互動式長期執行應用程式的抽象層級。 工作的單元會封裝為活動。 活動會在環境中執行，該環境會為流程控制、例外狀況處理、錯誤傳播、狀態資料保存、從記憶體載入及卸載處理中的工作流程、追蹤，以及異動流程提供機能。  

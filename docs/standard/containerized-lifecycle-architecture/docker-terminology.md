@@ -4,12 +4,12 @@ description: 了解使用 Docker 時，已使用每天的一些基本術語。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 79b1c6e01c96a906925e5b81b8ea14f988becd7c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d465065341bc58295c965853f4178b05b12a3d9b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785589"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591216"
 ---
 # <a name="docker-terminology"></a>Docker 術語
 
@@ -33,7 +33,7 @@ ms.locfileid: "61785589"
 
 **登錄**：提供存放庫存取權的服務。 大多數公用映像的預設登錄是 [Docker Hub](https://hub.docker.com/) (以組織形式為 Docker 所擁有）。 登錄通常會包含來自多個小組的存放庫。 公司通常會有私人登錄來儲存及管理其所建立的映像。 Azure Container Registry 是另一個範例。
 
-**多架構映像**：針對多重架構，是一項功能，可簡化選取適當的映像，根據 Docker 正在執行，例如，當 Dockerfile 要求的基底映像的平台 **`FROM mcr.microsoft.com/dotnet/core/sdk:2.1`** 從登錄它實際上會取得 **`2.1-nanoserver-1709`**， **`2.1-nanoserver-1803`**， **`2.1-nanoserver-1809`** 或 **`2.1-stretch`**，根據作業系統和執行 Docker 的版本。
+**多架構映像**：針對多重架構，是一項功能，可簡化選取適當的映像，根據 Docker 正在執行，例如，當 Dockerfile 要求的基底映像的平台 **`FROM mcr.microsoft.com/dotnet/core/sdk:2.2`** 從登錄它實際上會取得 **`2.2-nanoserver-1709`**， **`2.2-nanoserver-1803`**， **`2.2-nanoserver-1809`** 或 **`2.2-stretch`**，根據作業系統和執行 Docker 的版本。
 
 **Docker Hub**：上傳並使用映像的公開登錄。 Docker Hub 提供 Docker 映像裝載、公開或私人登錄、組建觸發程序和 Webhook，以及與 GitHub 和 Bitbucket 的整合。
 

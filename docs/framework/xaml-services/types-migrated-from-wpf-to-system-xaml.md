@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: dcfad1c2b2f95783e2b348a3a1111501f958143f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f967cf6b7957c36fd66ed5eafe695a850cf101e1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006627"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593348"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>從 WPF 移轉至 System.Xaml 的類型
 在 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]並[!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]，這兩個[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]和 Windows Workflow Foundation 隨附 XAML 語言實作。 有許多為 WPF XAML 實作提供擴充性的公用類型，存在於 WindowsBase、PresentationCore 和 PresentationFramework 組件中。 同樣地，Windows Workflow Foundation XAML 提供擴充性的公用型別存在於 System.Workflow.ComponentModel 組件。 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中，某些與 XAML 相關的類型已移轉至 System.Xaml 組件。 .NET Framework 有一項常見的 XAML 語言服務實作，可用以執行許多 XAML 擴充性情節，這些情節原先由特定架構的 XAML 實作所定義，但現在已納入整體 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] XAML 語言支援中。 本主題會列出移轉的類型，並討論與移轉相關的問題。  

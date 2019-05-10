@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86efc3a9d9eab5c1529804769af413dd88e71f1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aabf2ad437ee8a50614ca27978aa0a031f5d7e55
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792897"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592239"
 ---
 # <a name="resources-in-net-apps"></a>.NET 應用程式中的資源
 幾乎每個實際執行品質應用程式都必須使用資源。 資源是任何使用應用程式以邏輯方式部署的非執行檔資料。 資源可能在應用程式中顯示作錯誤訊息，或做為使用者介面的一部分。 資源可以含有一些表單中的資料，包括字串、影像和永續性物件。 (若要將保留物件寫入資源檔，物件必須是可序列化的)。將資料儲存在資源檔中，可讓您不需要重新編譯整個應用程式即可變更資料。 也可讓您將資料儲存在單一位置，不需要依賴儲存在多個位置的硬式編碼資料。  
@@ -43,23 +43,23 @@ ms.locfileid: "61792897"
 ## <a name="retrieving-resources"></a>擷取資源  
  在執行階段，應用程式會根據 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 屬性所指定的文化特性，針對每個執行緒載入適當的當地語系化資源。 這個屬性值被衍生，如下所示︰  
   
--   藉由直接將代表當地語系化文化特性的 <xref:System.Globalization.CultureInfo> 物件指派至 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> 屬性。  
+- 藉由直接將代表當地語系化文化特性的 <xref:System.Globalization.CultureInfo> 物件指派至 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> 屬性。  
   
--   如果未明確指派文化特性，則會從 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> 屬性擷取預設執行緒 UI 文化特性。  
+- 如果未明確指派文化特性，則會從 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> 屬性擷取預設執行緒 UI 文化特性。  
   
--   如果未明確指派預設執行緒 UI 文化特性 (透過在本機電腦上擷取目前使用者的文化特性)。 在 Windows 上執行的 .NET 實作透過呼叫 Windows [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) 函式來執行此動作。  
+- 如果未明確指派預設執行緒 UI 文化特性 (透過在本機電腦上擷取目前使用者的文化特性)。 在 Windows 上執行的 .NET 實作透過呼叫 Windows [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) 函式來執行此動作。  
   
  如需如何設定目前 UI 文化特性的詳細資訊，請參閱 <xref:System.Globalization.CultureInfo> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 參考頁面。  
   
  然後，您可以使用 <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 類別，針對目前 UI 文化特性或特定文化特性擷取資源。 雖然 <xref:System.Resources.ResourceManager> 類別最常用於擷取資源，<xref:System.Resources?displayProperty=nameWithType> 命名空間包含您可以用來擷取資源的額外類型。 它們包括：  
   
--   <xref:System.Resources.ResourceReader> 類別，可讓您列舉內嵌在組件中，或儲存在獨立二進位 .resources 檔中的資源。 當您不知道資源在執行階段可用的確切名稱時，這個項目很有用。  
+- <xref:System.Resources.ResourceReader> 類別，可讓您列舉內嵌在組件中，或儲存在獨立二進位 .resources 檔中的資源。 當您不知道資源在執行階段可用的確切名稱時，這個項目很有用。  
   
--   <xref:System.Resources.ResXResourceReader> 類別，可讓您從 XML (.resx) 檔擷取資源。  
+- <xref:System.Resources.ResXResourceReader> 類別，可讓您從 XML (.resx) 檔擷取資源。  
   
--   <xref:System.Resources.ResourceSet> 類別，可讓您擷取特定文化特性的資源，而不需要觀察後援規則。 資源可以儲存在組件或獨立二進位 .resources 檔中。 您也可以開發 <xref:System.Resources.IResourceReader> 實作，以使用 <xref:System.Resources.ResourceSet> 類別從其他來源擷取資源。  
+- <xref:System.Resources.ResourceSet> 類別，可讓您擷取特定文化特性的資源，而不需要觀察後援規則。 資源可以儲存在組件或獨立二進位 .resources 檔中。 您也可以開發 <xref:System.Resources.IResourceReader> 實作，以使用 <xref:System.Resources.ResourceSet> 類別從其他來源擷取資源。  
   
--   <xref:System.Resources.ResXResourceSet> 類別，可讓您將 XML 資源檔中的所有項目擷取至記憶體。  
+- <xref:System.Resources.ResXResourceSet> 類別，可讓您將 XML 資源檔中的所有項目擷取至記憶體。  
   
 ## <a name="see-also"></a>另請參閱
 

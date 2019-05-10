@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 效能
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: f7590591bfac374f6de637f57fad9853b82ca20c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4351955eeed722cfd10db79b9dbe5ec6692ed2ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006838"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592152"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 效能
 
@@ -376,25 +376,25 @@ public class Workflow1 : Activity
 
  請注意，WF4 SQL 持續性提供者在資料庫層中會執行較多工作。  由於 SQL 資料庫可能變成瓶頸，因此務必監視該處的 CPU 和磁碟使用量。  效能測試工作流程應用程式時，務必包括以下 SQL 資料庫中的效能計數器：
 
--   PhysicalDisk\\%磁碟讀取時間
+- PhysicalDisk\\%磁碟讀取時間
 
--   PhysicalDisk\\%Disk Time
+- PhysicalDisk\\%Disk Time
 
--   PhysicalDisk\\%的磁碟寫入時間
+- PhysicalDisk\\%的磁碟寫入時間
 
--   PhysicalDisk\\%平均Disk Queue Length
+- PhysicalDisk\\%平均Disk Queue Length
 
--   PhysicalDisk\Avg.Disk Read Queue Length
+- PhysicalDisk\Avg.Disk Read Queue Length
 
--   PhysicalDisk\Avg.Disk Write Queue Length
+- PhysicalDisk\Avg.Disk Write Queue Length
 
--   PhysicalDisk\Current Disk Queue Length
+- PhysicalDisk\Current Disk Queue Length
 
--   處理器資訊\\%處理器時間
+- 處理器資訊\\%處理器時間
 
--   SQLServer:Latches\Average Latch Wait Time (ms)
+- SQLServer:Latches\Average Latch Wait Time (ms)
 
--   SQLServer:Latches\Latch Waits/sec
+- SQLServer:Latches\Latch Waits/sec
 
 ### <a name="tracking"></a>追蹤
  工作流程追蹤可以用來追蹤工作流程的進度。  追蹤事件中包含的資訊是由追蹤設定檔所決定。  追蹤設定檔越複雜，追蹤所耗用的資源就愈多。
@@ -407,13 +407,13 @@ public class Workflow1 : Activity
 
  使用 ETW 而不使用 SQL 進行追蹤的優點如下：
 
--   追蹤事件的收集工作可以分割到另一個處理序。  如此就能在事件記錄方式上獲得更大的彈性。
+- 追蹤事件的收集工作可以分割到另一個處理序。  如此就能在事件記錄方式上獲得更大的彈性。
 
--   ETW 追蹤事件可輕鬆結合 WCF ETW 事件或是其他 ETW 提供者，例如 SQL Server 或核心提供者。
+- ETW 追蹤事件可輕鬆結合 WCF ETW 事件或是其他 ETW 提供者，例如 SQL Server 或核心提供者。
 
--   工作流程作者不需要修改工作流程，就能更充分地運用特定追蹤實作，例如 WF3 SQL 追蹤服務的批次模式。
+- 工作流程作者不需要修改工作流程，就能更充分地運用特定追蹤實作，例如 WF3 SQL 追蹤服務的批次模式。
 
--   系統管理員可以開啟或關閉追蹤功能，而不需回收主機處理序。
+- 系統管理員可以開啟或關閉追蹤功能，而不需回收主機處理序。
 
  但是 ETW 追蹤的效能優點伴隨了一個缺點。  如果系統的資源壓力很大，則 ETW 事件可能會遺失。  事件處理的目的不是封鎖正常的程式執行，因此無法保證所有 ETW 事件都會廣播至其訂閱者。  因此 ETW 追蹤相當適合用於健康監視，但不適合用於稽核。
 

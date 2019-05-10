@@ -8,12 +8,12 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 78fc498b0689026fb74ec0c422948c1879495560
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9cff13cabb0cd496ee4e628664e4b92bd9e60808
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954808"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063725"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>HOW TO：使用色彩矩陣轉換單一色彩
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供<xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>來儲存及操作影像的類別。 <xref:System.Drawing.Image> 和<xref:System.Drawing.Bitmap>物件會儲存每個像素的色彩為 32 位元數字：8 位元用於紅色、 綠色、 藍色和 alpha 的每個。 每四個元件是從 0 到 255，0 代表不含濃度，表示完整濃度 255 的數字。 Alpha 元件指定色彩的透明度：0 是完全透明的而且完全不透明 255。  
@@ -32,13 +32,13 @@ ms.locfileid: "61954808"
   
  下列矩陣乘法會依列出的順序執行成對的轉換。  
   
- ![重新著色](./media/recoloring01.gif "recoloring01")  
+ ![轉換矩陣乘法螢幕擷取畫面。](./media/how-to-use-a-color-matrix-to-transform-a-single-color/multiplication-color-matrix.gif)
   
  色彩矩陣的項目編製索引 （以零為起始） 的資料列，然後資料行。 比方說，第五個資料列和第三個資料行的矩陣 M 中的項目被以 M [4] [2]。  
   
  5 × 5 身分識別矩陣 （下圖所示） 具有對角線上的 1 和 0 的其他位置。 如果您將色彩向量乘以身分識別矩陣時，就不會變更色彩的向量。 便利的方式來形成 「 色彩 」 轉換的矩陣是以身分識別矩陣開始進行小幅變更會產生所需的轉換。  
   
- ![重新著色](./media/recoloring02.gif "recoloring02")  
+ ![螢幕擷取畫面 5 x 5 身分識別矩陣的色彩轉換。](./media/how-to-use-a-color-matrix-to-transform-a-single-color/5x5-identity-matrix-color-transformation.gif)  
   
  矩陣和轉換的詳細討論，請參閱[座標系統和轉換](coordinate-systems-and-transformations.md)。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "61954808"
   
  下圖顯示原始的映像，在左邊和轉換後的映像，在右邊。  
   
- ![色彩](./media/colortrans1.png "colortrans1")  
+ ![在左邊和右邊粉色正方形紫色正方形。](./media/how-to-use-a-color-matrix-to-transform-a-single-color/color-transformation.png)  
   
  下列範例中的程式碼會使用下列步驟執行的重新著色：  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: dfbdcf29e0fc003f9478e6f691957b67574d5233
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34357ac313e20c5bab5505984f92ea06df80a5c2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680658"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595407"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>例外狀況和例外處理 (C# 程式設計手冊)
 C# 語言的例外狀況處理功能可協助您處理在程式執行時發生的任何未預期或例外狀況。 例外狀況處理會使用 `try`、`catch` 和 `finally` 關鍵字來嘗試可能失敗的動作，以便在您決定這樣做很合理時處理失敗，之後再清除資源。 例外狀況可以由 Common Language Runtime (CLR)、.NET Framework 或任何協力廠商程式庫，或者應用程式程式碼來產生。 例外狀況是使用 `throw` 關鍵字所建立。  
@@ -26,40 +26,40 @@ C# 語言的例外狀況處理功能可協助您處理在程式執行時發生�
 ## <a name="exceptions-overview"></a>例外狀況概觀  
  例外狀況具有下列屬性：  
   
--   例外狀況是最終全都衍生自 `System.Exception` 的型別。  
+- 例外狀況是最終全都衍生自 `System.Exception` 的型別。  
   
--   在可能擲回例外狀況的陳述式前後使用 `try` 區塊。  
+- 在可能擲回例外狀況的陳述式前後使用 `try` 區塊。  
   
--   一旦 `try` 區塊中發生例外狀況之後，控制流程就會跳至第一個相關聯的例外狀況處理常式，此處理常式存在於呼叫堆疊中的任何位置。 在 C# 中，`catch` 關鍵字是用來定義例外狀況處理常式。  
+- 一旦 `try` 區塊中發生例外狀況之後，控制流程就會跳至第一個相關聯的例外狀況處理常式，此處理常式存在於呼叫堆疊中的任何位置。 在 C# 中，`catch` 關鍵字是用來定義例外狀況處理常式。  
   
--   如果沒有指定例外狀況的例外狀況處理常式存在，程式就會停止執行並出現錯誤訊息。  
+- 如果沒有指定例外狀況的例外狀況處理常式存在，程式就會停止執行並出現錯誤訊息。  
   
--   除非您可以處理它，否則不要攔截例外狀況，並讓應用程式保持已知的狀態。 如果您攔截 `System.Exception`，請在 `catch` 區塊結尾使用 `throw` 關鍵字重新擲回它。  
+- 除非您可以處理它，否則不要攔截例外狀況，並讓應用程式保持已知的狀態。 如果您攔截 `System.Exception`，請在 `catch` 區塊結尾使用 `throw` 關鍵字重新擲回它。  
   
--   如果 `catch` 區塊定義了例外狀況變數，您可以使用它來取得所發生例外狀況型別的詳細資訊。  
+- 如果 `catch` 區塊定義了例外狀況變數，您可以使用它來取得所發生例外狀況型別的詳細資訊。  
   
--   例外狀況可以透過程式使用 `throw` 關鍵字明確地產生。  
+- 例外狀況可以透過程式使用 `throw` 關鍵字明確地產生。  
   
--   例外狀況物件包含錯誤的詳細資訊，例如呼叫堆疊的狀態和錯誤狀態的文字描述。  
+- 例外狀況物件包含錯誤的詳細資訊，例如呼叫堆疊的狀態和錯誤狀態的文字描述。  
   
--   即使擲回例外狀況，`finally` 區塊中的程式碼也會執行。 使用 `finally` 區塊來釋放資源，例如，關閉已在 `try` 區塊中開啟的任何資料流或檔案。  
+- 即使擲回例外狀況，`finally` 區塊中的程式碼也會執行。 使用 `finally` 區塊來釋放資源，例如，關閉已在 `try` 區塊中開啟的任何資料流或檔案。  
   
--   .NET Framework 中的 Managed 例外狀況是在 Win32 結構化例外狀況處理機制上實作的。 如需詳細資訊，請參閱[結構化例外狀況處理 (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) 和[深入探究 Win32 結構化例外狀況處理的毀損課程 (英文)](https://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm)。  
+- .NET Framework 中的 Managed 例外狀況是在 Win32 結構化例外狀況處理機制上實作的。 如需詳細資訊，請參閱[結構化例外狀況處理 (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) 和[深入探究 Win32 結構化例外狀況處理的毀損課程 (英文)](https://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm)。  
   
 ## <a name="related-sections"></a>相關章節  
  請參閱下列主題，以了解例外狀況和例外狀況處理的詳細資訊：  
   
--   [使用例外狀況](../../../csharp/programming-guide/exceptions/using-exceptions.md)  
+- [使用例外狀況](../../../csharp/programming-guide/exceptions/using-exceptions.md)  
   
--   [例外狀況處理](../../../csharp/programming-guide/exceptions/exception-handling.md)  
+- [例外狀況處理](../../../csharp/programming-guide/exceptions/exception-handling.md)  
   
--   [建立和擲回例外狀況](../../../csharp/programming-guide/exceptions/creating-and-throwing-exceptions.md)  
+- [建立和擲回例外狀況](../../../csharp/programming-guide/exceptions/creating-and-throwing-exceptions.md)  
   
--   [編譯器所產生的例外狀況](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
+- [編譯器所產生的例外狀況](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
   
--   [如何：使用 try-catch 處理例外狀況 (C# 程式設計指南)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
+- [如何：使用 try-catch 處理例外狀況 (C# 程式設計指南)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
   
--   [如何：使用 finally 執行清除程式碼](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
+- [如何：使用 finally 執行清除程式碼](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36532
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
-ms.openlocfilehash: 04eae6d2c6d64e8a0f46ae3c2801a7eb6d893dca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 912962e2ab39c4811294ccc225814b230100e12a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918251"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592003"
 ---
 # <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>巢狀函式沒有與委派相容的簽章 '\<委派名稱 >'
 Lambda 運算式已指派給具有不相容的簽章的委派。 例如，下列程式碼中，委派`Del`有兩個整數參數。  
@@ -33,7 +33,7 @@ Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   調整委派定義或指派的 lambda 運算式，使簽章相容。  
+- 調整委派定義或指派的 lambda 運算式，使簽章相容。  
   
 ## <a name="see-also"></a>另請參閱
 

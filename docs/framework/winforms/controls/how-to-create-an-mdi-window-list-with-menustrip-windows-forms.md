@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating window lists
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-ms.openlocfilehash: ec0d8af81e320bea3d9d69305f91bd56666ba7cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 229afc879be6407340e2fca6c3b2474475bcb5a6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746777"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64611961"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>HOW TO：使用 MenuStrip (Windows Form) 建立 MDI 視窗清單
 您可以使用多重文件介面 (MDI) 來建立應用程式，可以開啟多份文件在相同的時間和複製並貼到另一份文件內容。  

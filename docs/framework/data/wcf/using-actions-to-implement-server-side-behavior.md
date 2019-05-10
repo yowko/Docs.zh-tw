@@ -2,12 +2,12 @@
 title: 使用動作實作伺服器端行為
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23a01b7221fcfcbfc3cceb82123c68879eba98a3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875247"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063172"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>使用動作實作伺服器端行為
 
@@ -46,7 +46,7 @@ OData 動作可實作一種行為，以依據從 OData 服務擷取的資源而�
   
 3. 儲存來自 Invoke() 的任何結果，以便使用 GetResult() 來擷取這些結果  
   
- 參數可能會以 Token 的形式傳遞。 這是因為您可以寫入使用代表資源之 Token 的資料服務提供者，如果是這種情況，您可能必須先將這些 Token 轉換 (封送處理) 成實際資源，然後再分派給實際動作。 封送處理參數之後，它必須處於可編輯狀態，如此一來，叫用動作時對資源進行的任何變更才會儲存並寫入磁碟。  
+ 參數可能會以 Token 的形式傳遞。 這是因為您可以寫入使用代表資源之 Token 的資料服務提供者，如果是這種情況，您可能必須先將這些 Token 轉換 (封送處理) 成實際資源，然後再分派給實際動作。 被封送處理參數之後，它必須處於可編輯的狀態，讓資源，會叫用動作時，會發生任何變更將會儲存並寫入磁碟。  
   
  此介面需要兩個方法：叫用和 GetResult。 Invoke 會叫用實作動作之行為的委派，而 GetResult 會傳回動作的結果。  
   

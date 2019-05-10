@@ -2,12 +2,12 @@
 title: ADO.NET 架構
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 3f3fc0c8c125c57116da4f1de467d738ac36ca29
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e85100733e20b69cf6b8c52c58d250be869971cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880083"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592645"
 ---
 # <a name="adonet-architecture"></a>ADO.NET 架構
 傳統的資料處理主要是依賴相互連接的雙層式模型。 隨著資料處理朝多層式架構發展，程式設計人員也逐漸改用中斷連接的方式，使應用程式更具延展性 (Scalability)。  
@@ -29,13 +29,13 @@ ADO.NET 架構
 ### <a name="choosing-a-datareader-or-a-dataset"></a>選擇 DataReader 或 DataSet  
  當您決定是否應該使用您的應用程式`DataReader`(請參閱[擷取的資料使用 DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)) 或`DataSet`(請參閱[Dataset、 Datatable 和 Dataview](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md))，請考慮的型別應用程式所需的功能。 請使用 `DataSet` 來進行下列作業：  
   
--   請快取應用程式本機的資料，如此您才能夠管理它。 若您只需要讀取查詢結果，`DataReader` 將是比較理想的選擇。  
+- 請快取應用程式本機的資料，如此您才能夠管理它。 若您只需要讀取查詢結果，`DataReader` 將是比較理想的選擇。  
   
--   在各層間或從 XML Web Service 遠端處理資料。  
+- 在各層間或從 XML Web Service 遠端處理資料。  
   
--   與資料動態互動 (例如繫結 Windows Form 控制項)，或是將來自多個來源的資料合併和關聯。  
+- 與資料動態互動 (例如繫結 Windows Form 控制項)，或是將來自多個來源的資料合併和關聯。  
   
--   針對資料進行廣泛處理，並不需要與資料來源間有開放連接，如此便可將連接釋放給其他用戶端使用。  
+- 針對資料進行廣泛處理，並不需要與資料來源間有開放連接，如此便可將連接釋放給其他用戶端使用。  
   
  如果您不需要 `DataSet` 所提供的功能，則可採用 `DataReader` 以順向、唯讀的方式來傳回資料，藉以提升應用程式的效能。 雖然`DataAdapter`會使用`DataReader`來填滿的內容`DataSet`(請參閱[從 DataAdapter 填入 DataSet](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md))，使用`DataReader`，可以提升效能，因為您將節省記憶體會由`DataSet`，並避免所需建立和填入的內容處理`DataSet`。  
   

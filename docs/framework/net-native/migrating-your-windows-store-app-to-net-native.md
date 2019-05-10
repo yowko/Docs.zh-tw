@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1d14e4ad45a4d5805187b993f2fc622a16dac09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4e4d3d7bc574dd27aaea0d43ee6f507dd0c413f2
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867093"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063809"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>將您的 Windows 市集應用程式移轉至 .NET Native
 .NET 原生提供靜態編譯的應用程式在 Windows 市集或開發人員的電腦上。 這不同於 just-in-time (JIT) 編譯器或裝置上的 [原生映像產生器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 為 Windows 市集應用程式執行的動態編譯。 儘管有所差異，.NET Native 會嘗試維持與相容性[適用於 Windows 市集應用程式](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)。 大部分的情況下，在適用於 Windows 市集應用程式運作的項目也適用於.NET 原生。  不過，在某些情況下，您可能會遇到行為上的變更。 本文將探討這些差異適用於 Windows 市集應用程式的標準和.NET Native 在下列區域：  
@@ -245,7 +245,7 @@ ms.locfileid: "61867093"
 - <xref:System.Runtime.InteropServices.UnmanagedType.AsAny?displayProperty=fullName>  
 - <xref:System.Runtime.InteropServices.UnmanagedType.CustomMarshaler?displayProperty=fullName>  
   
- 很少使用的封送處理 API：  
+ 很少使用封送處理 Api:  
   
 - <xref:System.Runtime.InteropServices.Marshal.ReadByte%28System.Object%2CSystem.Int32%29?displayProperty=fullName>  
 - <xref:System.Runtime.InteropServices.Marshal.ReadInt16%28System.Object%2CSystem.Int32%29?displayProperty=fullName>  

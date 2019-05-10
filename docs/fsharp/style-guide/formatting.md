@@ -2,12 +2,12 @@
 title: F#程式碼格式化方針
 description: 了解格式的指導方針F#程式碼。
 ms.date: 02/08/2019
-ms.openlocfilehash: 259d4bb2147d1fc8bc5d35d7ff2e3c34ec2185d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce07bd800984ec082a522bc62cb487f786fa0510
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902586"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063596"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#程式碼格式化方針
 
@@ -86,6 +86,46 @@ type MyFun = int -> int -> string
 
 // Bad
 type MyFunBad = int->int->string
+```
+
+### <a name="surround-function-arguments-with-white-space"></a>範圍陳述式以空白字元的函式引數
+
+在定義函式時，使用每個引數周圍的空白字元。
+
+```fsharp
+// OK
+let myFun (a: decimal) b c = a + b + c
+
+// Bad
+let myFunBad (a:decimal)(b)c = a + b + c
+```
+
+### <a name="type-annotations"></a>型別註釋
+
+#### <a name="right-pad-function-argument-type-annotations"></a>向右填補函式引數型別註釋
+
+在定義型別註解的引數時，使用空白字元之後`:`符號：
+
+```fsharp
+// OK
+let complexFunction (a: int) (b: int) c = a + b + c
+
+// Bad
+let complexFunctionBad (a :int) (b :int) (c:int) = a + b + c
+```
+
+#### <a name="surround-return-type-annotations-with-white-space"></a>範圍陳述式的傳回型別註釋，泛空白字元
+
+Let 繫結函式或值類型註釋 （如果函式的傳回類型），在使用之前和之後的泛空白字元`:`符號：
+
+```fsharp
+// OK
+let expensiveToCompute : int = 0 // Type annotation for let-bound value
+let myFun (a: decimal) b c : decimal = a + b + c // Type annotation for the return type of a function
+// Bad
+let expensiveToComputeBad1:int = 1
+let expensiveToComputeBad2 :int = 2
+let myFunBad (a: decimal) b c:decimal = a + b + c
 ```
 
 ## <a name="formatting-blank-lines"></a>格式化的空白行

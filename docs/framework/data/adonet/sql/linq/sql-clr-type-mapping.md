@@ -2,12 +2,12 @@
 title: SQL-CLR 類型對應
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d2ec70d014198299bd911b1a72ab8eb26c096ba9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037696"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592465"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 類型對應
 在 LINQ to SQL 中，關聯式資料庫的資料模型會對應至以您選擇之程式語言表示的物件模型 (Object Model)。 執行應用程式時，LINQ to SQL 會將物件模型中的 Language Integrated Query (LINQ) 轉譯成 SQL，並將這些查詢傳送至資料庫進行執行。 當資料庫傳回結果時，LINQ to SQL 會將結果轉譯回您可以在自己的程式語言中處理的物件。  
