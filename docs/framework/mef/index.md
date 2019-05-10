@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e40f52a6b6b8ea7a77f4e38a291621dab486cc72
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61872842"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648500"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -439,7 +439,7 @@ catalog.Catalogs.Add(New DirectoryCatalog("C:\SimpleCalculator\SimpleCalculator\
 catalog.Catalogs.Add(new DirectoryCatalog("C:\\SimpleCalculator\\SimpleCalculator\\Extensions"));
 ```
 
- 請將範例路徑取代為 Extensions 目錄的路徑 。 (這個絕對路徑僅供偵錯用途使用。 在生產應用程式中，您將會使用相對路徑。)<xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> 現在會將 Extensions 目錄之任何組件 (assembly) 中找到的任何組件 (part) 加入組合容器。
+ 請將範例路徑取代為 Extensions 目錄的路徑 。 (這個絕對路徑僅供偵錯用途。 在生產應用程式中，您將會使用相對路徑。)<xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> 現在會將 Extensions 目錄之任何組件 (assembly) 中找到的任何組件 (part) 加入組合容器。
 
  在 ExtendedOperations 專案中，加入 SimpleCalculator 和 System.ComponentModel.Composition 的參考。 在 ExtendedOperations 類別檔案中，針對 System.ComponentModel.Composition 加入 `Imports` 或 `using` 陳述式。 在 Visual Basic 中，也會針對 SimpleCalculator 加入 `Imports` 陳述式。 然後將下列類別加入 ExtendedOperations 類別檔案：
 
@@ -475,11 +475,11 @@ public class Mod : SimpleCalculator.IOperation
 ## <a name="conclusion"></a>結論
  本主題涵蓋 MEF 的基本概念。
 
--   組件、目錄和組合容器
+- 組件、目錄和組合容器
 
      組件和組合容器是 MEF 應用程式的基本建置組塊。 組件是匯入或匯出值 (隨本身變化且包含本身) 的任何物件。 目錄提供來自特定來源的組件集合。 組合容器會使用目錄所提供的組件來執行組合 (將匯入繫結至匯出)。
 
--   匯入和匯出
+- 匯入和匯出
 
      匯入和匯出是元件用來進行通訊的方式。 元件可以透過匯入來指定需要特定的值或物件，而透過匯出則可以指定值的可用性。 每個匯入都會透過其合約與匯出清單進行比對。
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf57d4dbd7e8596396fb2e9099d5984759d6e90d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863697"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665385"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>HOW TO：將參數定義程序 (Visual Basic)
 A*參數*可讓呼叫端的程式碼呼叫它時，將值傳遞至程序。 宣告程序的每個參數相同的方式，您宣告一個變數，指定其名稱和資料型別。 您也可以指定傳遞機制，以及參數是否為選擇性。  
@@ -46,11 +46,11 @@ A*參數*可讓呼叫端的程式碼呼叫它時，將值傳遞至程序。 宣�
   
      指定所有程式設計項目的資料型別就所謂*強型別*。 當您將設定`Option Strict On`，Visual Basic 會強制執行強型別。 這是強烈建議，原因如下：  
   
-    -   它可讓您的變數和參數的 IntelliSense 支援。 這可讓您查看其屬性與其他成員，當您輸入程式碼中。  
+    - 它可讓您的變數和參數的 IntelliSense 支援。 這可讓您查看其屬性與其他成員，當您輸入程式碼中。  
   
-    -   它可讓編譯器執行類型檢查。 這有助於攔截可能會在執行階段因例如溢位錯誤而失敗的陳述式。 它也會對方法的呼叫攔截不支援它們的物件。  
+    - 它可讓編譯器執行類型檢查。 這有助於攔截可能會在執行階段因例如溢位錯誤而失敗的陳述式。 它也會對方法的呼叫攔截不支援它們的物件。  
   
-    -   它會導致您的程式碼的執行速度加快。 其原因之一是，如果您未指定資料類型的程式設計項目，則 Visual Basic 編譯器將其指派`Object`型別。 您已編譯的程式碼可能必須將之間來回轉換`Object`及其他資料類型，會降低效能。  
+    - 它會導致您的程式碼的執行速度加快。 其原因之一是，如果您未指定資料類型的程式設計項目，則 Visual Basic 編譯器將其指派`Object`型別。 您已編譯的程式碼可能必須將之間來回轉換`Object`及其他資料類型，會降低效能。  
   
 ## <a name="see-also"></a>另請參閱
 

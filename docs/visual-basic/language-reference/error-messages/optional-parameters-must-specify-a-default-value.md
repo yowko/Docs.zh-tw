@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
-ms.openlocfilehash: 01c0abb366e8605a9b153333e645fc3276b6bd16
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0f501b518d5b3f2d48ced33885da2afd353c609e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772589"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665681"
 ---
 # <a name="optional-parameters-must-specify-a-default-value"></a>選擇性參數必須指定預設值
 選擇性參數必須提供預設值，如果未提供參數呼叫程序可以使用。  

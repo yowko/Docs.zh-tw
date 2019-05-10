@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: bf2a7188456097ac227039e4d902a14eb182664c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 367527fd638f6855077caf8ff5911edb333dfcbf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758271"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648772"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>HOW TO：摺疊和隱藏部分程式碼 (Visual Basic)
 `#Region`指示詞可讓您摺疊並隱藏 Visual Basic 檔案中的程式碼區段。 `#Region`指示詞可讓您使用 Visual Studio 程式碼編輯器時，指定程式碼，您可以展開或摺疊的區塊。 更容易管理而且更方便閱讀，選擇性地隱藏程式碼的功能可讓您的檔案。 如需詳細資訊，請參閱[大綱](/visualstudio/ide/outlining)。  

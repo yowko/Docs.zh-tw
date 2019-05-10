@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 5f058c8e7d480b9145452ae85f186a6ac2ed0d56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 99d5dc2e0f8389f8c9e90786c4d9d0fa037eb828
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803726"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651425"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>預設屬性存取模稜兩可繼承的介面成員\<defaultpropertyname >' 的介面 '\<介面名稱 1>.< >' 和'\<defaultpropertyname >' 的介面 '\<介面名稱 2&gt >'
 介面繼承自兩個介面，其中每個宣告預設屬性具有相同名稱。 編譯器無法解析此預設屬性，但是不限定存取。 下列範例將說明這點。  

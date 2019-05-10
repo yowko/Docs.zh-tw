@@ -2,12 +2,12 @@
 title: 診斷交易式應用程式
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a4f064d903092b04f8885fb00b56e18c9cfeb74
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856735"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751126"
 ---
 # <a name="diagnosing-transactional-applications"></a>診斷交易式應用程式
 本主題描述如何使用 Windows Communication Foundation (WCF) 管理和診斷功能，交易式應用程式進行疑難排解。  
@@ -87,15 +87,15 @@ ms.locfileid: "61856735"
 ## <a name="tracing"></a>追蹤  
  追蹤可讓您監視及分析交易式應用程式內的錯誤。 您可以使用下列方式啟用追蹤：  
   
--   標準的 WCF 追蹤  
+- 標準的 WCF 追蹤  
   
      這種類型是追蹤的追蹤任何 WCF 應用程式相同。 如需詳細資訊，請參閱 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。  
   
--   WS-AtomicTransaction 追蹤  
+- WS-AtomicTransaction 追蹤  
   
      可以藉由啟用 WS-AtomicTransaction 追蹤[WS-AtomicTransaction 組態公用程式 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)。 此類追蹤可讓您深入了解系統內交易和參與者的狀態。 若要同時啟用內部服務模型追蹤，您可以將 `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` 登錄機碼設定為 <xref:System.Diagnostics.SourceLevels> 列舉的有效值。 您可以啟用訊息記錄與其他 WCF 應用程式相同的方式。  
   
--   `System.Transactions` 追蹤  
+- `System.Transactions` 追蹤  
   
      使用 OleTransactions 通訊協定時，無法追蹤通訊協定訊息。 <xref:System.Transactions> 基礎結構提供的追蹤支援 (使用 OleTransactions) 可讓使用者檢閱異動發生的事件。 若要啟用 <xref:System.Transactions> 應用程式的追蹤，請在 `App.config` 組態檔內加入下列程式碼。  
   

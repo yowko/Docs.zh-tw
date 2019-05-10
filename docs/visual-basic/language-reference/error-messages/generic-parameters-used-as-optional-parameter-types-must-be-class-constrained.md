@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
-ms.openlocfilehash: 9b0293472f5eda74c2bf8fb215e15ae5cf8d8b98
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 11cf4f8d9457ebff385a601786dc97334f274324
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802320"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662065"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>用來做為選擇性參數類型的泛型參數必須受到類別條件約束
 程序會宣告使用不受限制是參考類型的型別參數的選擇性參數。  
@@ -25,7 +25,7 @@ ms.locfileid: "61802320"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   限制類型參數接受僅參考型別，或請勿使用它在選擇性參數。  
+- 限制類型參數接受僅參考型別，或請勿使用它在選擇性參數。  
   
 ## <a name="see-also"></a>另請參閱
 

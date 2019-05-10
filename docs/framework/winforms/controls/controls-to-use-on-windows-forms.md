@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 11790e14ed1fde9a42e642400161cfb92bf33293
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a05ddd714e85491d29aa5de574b4cdc36165c224
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011746"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469518"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>在 Windows Form 上使用的控制項
 以下是可在 Windows Forms 上使用的控制項和元件清單，依字母順序列出。 除了本節涵蓋的 Windows Forms 控制項之外，您還可以將 ActiveX 和自訂控制項新增至 Windows Forms。 如果您在這裡列出的控制項中找不到所需的控制項，則也可以建立自己的控制項。 如需詳細資訊，請參閱[在設計階段開發 Windows Forms 控制項](developing-windows-forms-controls-at-design-time.md)。 如需選擇所需控制項的詳細資訊，請參閱[依功能區分 Windows Forms 控制項](windows-forms-controls-by-function.md)。  
@@ -229,7 +229,7 @@ ms.locfileid: "62011746"
  提供下列項目的連結：逐步執行主題、要建立之控制項類型的建議，以及建立您自己的控制項的其他資訊。  
   
  [比較各種語言和程式庫的控制項與可以透過程式設計的物件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
- 提供資料表，以將 Visual Basic 6.0 中的控制項對應至 [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)] 中的對應控制項。 請注意，控制項現在是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中的類別。  
+ 提供 Visual Basic 6.0 中的控制項對應至對應的控制項，在 Visual Basic 中的資料表。 請注意，控制項現在是.NET Framework 中的類別。  
   
  [如何：將 ActiveX 控制項新增至 Windows Forms](how-to-add-activex-controls-to-windows-forms.md)  
  描述如何在 Windows Forms 上使用 ActiveX 控制項。

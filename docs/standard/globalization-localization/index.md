@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31f975b45ee854c73e6d502ece69bee24a7fcc3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 501e23656b3a31dc14e0b2213252ef52c598140f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683128"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622634"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>全球化與當地語系化 .NET 應用程式
 
@@ -38,9 +38,9 @@ ms.locfileid: "61683128"
 
 依照下列三個步驟執行可提供兩項優點：
 
--   您不需要重新設計用於支援單一文化特性 (例如英文 (美國)) 的應用程式，即可支援其他文化特性。
+- 您不需要重新設計用於支援單一文化特性 (例如英文 (美國)) 的應用程式，即可支援其他文化特性。
 
--   可產生更穩定且較少 Bug 的當地語系化應用程式。
+- 可產生更穩定且較少 Bug 的當地語系化應用程式。
 
 .NET 提供各種開發全球通用及當地語系化應用程式的支援。 特別是，.NET 類別庫中的許多類型成員，會傳回反映目前使用者文化特性或特定文化特性慣例的值，藉以協助全球化。 此外，.NET 還支援附屬組件，可簡化當地語系化應用程式的程序。
 

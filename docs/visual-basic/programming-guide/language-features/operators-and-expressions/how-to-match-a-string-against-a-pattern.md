@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5eb6bd5b5e7b2f0c3692c0fa2431a0b8f295299
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864698"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649719"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>HOW TO：比對的字串和模式 (Visual Basic)
 如果您想要找出是否有運算式[字串資料類型](../../../../visual-basic/language-reference/data-types/string-data-type.md)滿足模式，則您可以使用[Like 運算子](../../../../visual-basic/language-reference/operators/like-operator.md)。  
@@ -29,7 +29,7 @@ ms.locfileid: "61864698"
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>若要符合的特定字元的字串運算式中的字元  
   
--   將特定的字元放在模式比對字串中直接。 某些特殊字元必須加上方括號 (`[ ]`)。 如需詳細資訊，請參閱 < [Like 運算子](../../../../visual-basic/language-reference/operators/like-operator.md)。  
+- 將特定的字元放在模式比對字串中直接。 某些特殊字元必須加上方括號 (`[ ]`)。 如需詳細資訊，請參閱 < [Like 運算子](../../../../visual-basic/language-reference/operators/like-operator.md)。  
   
      下列範例會測試是否`myString`只包含單一字元`H`。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "61864698"
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>若要符合萬用字元的字串運算式中的字元  
   
--   將問號 (`?`)，模式字串中。 在這個位置中的任何有效字元會比對成功。  
+- 將問號 (`?`)，模式字串中。 在這個位置中的任何有效字元會比對成功。  
   
      下列範例會測試是否`myString`組成的單一字元`W`後面兩個字元的任何值。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "61864698"
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>若要符合的字元清單的字串運算式中的字元  
   
--   將方括號 (`[ ]`) 在模式字串中，並將清單的字元放在方括號內。 不需以逗號或任何其他分隔符號分隔保留字元。 在清單中的任何單一字元會比對成功。  
+- 將方括號 (`[ ]`) 在模式字串中，並將清單的字元放在方括號內。 不需以逗號或任何其他分隔符號分隔保留字元。 在清單中的任何單一字元會比對成功。  
   
      下列範例會測試是否`myString`後面接著一個字元的任何有效的字元所組成`A`， `C`，或`E`。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "61864698"
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>若要符合的字元範圍的字串運算式中的字元  
   
--   將方括號 (`[ ]`) 以連字號分隔的模式字串中，括號的最低和最高的字元放在範圍內 (`–`)。 在範圍內的任何單一字元會比對成功。  
+- 將方括號 (`[ ]`) 以連字號分隔的模式字串中，括號的最低和最高的字元放在範圍內 (`–`)。 在範圍內的任何單一字元會比對成功。  
   
      下列範例會測試是否`myString`字元所組成`num`只有其中一個字元後面接著`i`， `j`， `k`， `l`， `m`，或`n`。  
   

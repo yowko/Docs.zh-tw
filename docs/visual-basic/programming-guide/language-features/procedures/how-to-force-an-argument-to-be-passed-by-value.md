@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 497ae11b858b7d164ba3b5607ff2109254a154de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 540271c414ac295c419533a4622657d60d123796
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863619"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665387"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>HOW TO：強制以傳值 (Visual Basic) 的引數
 程序宣告判斷傳遞機制。 如果參數宣告[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，Visual Basic 需要以傳址方式傳遞相對應的引數。 這可讓程序來變更基礎呼叫程式碼中的引數的程式設計項目值。 如果您想要保護對這類變更的基礎項目，您可以覆寫`ByRef`程序中的傳遞機制來呼叫以括弧括住的引數名稱。 這些括號是以呼叫括住的引數清單的括號。  

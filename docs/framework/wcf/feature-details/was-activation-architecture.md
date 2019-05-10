@@ -2,12 +2,12 @@
 title: WAS 啟動架構
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 9c1af21782b377a9fb01cbd05e4fe61f6a69f3ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 063c5e43abf4ddda3edb1de1d9d983bfe8e05706
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932703"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637404"
 ---
 # <a name="was-activation-architecture"></a>WAS 啟動架構
 本主題將條列說明並討論 Windows Process Activation Service (亦稱為 WAS) 的元件。  

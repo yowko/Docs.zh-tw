@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32008
 ms.assetid: dc6abba0-a9ad-450f-8899-87265bc84abc
-ms.openlocfilehash: c308805f5e73d740ff18a40d95b9cc2576ac95fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 45dc0403468fa40888a6c5e6bdfe6ca782e98325
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013591"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664176"
 ---
 # <a name="typename-is-a-delegate-type"></a>'\<類型名稱 >' 是委派型別
 '\<類型名稱 >' 是委派型別。 委派建構允許只使用單一 AddressOf 運算式做為引數清單。 通常可以使用 AddressOf 運算式，而不是委派建構。  

@@ -2,12 +2,12 @@
 title: 將 ASP.NET Web 服務移轉至 WCF
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
-ms.openlocfilehash: 703088cdaae69d90d71fb950912538ea0662229b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8102b91ba14b75ec9cbd2a683b68c3723a77aed0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948092"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649427"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>將 ASP.NET Web 服務移轉至 WCF
 ASP.NET 提供 .NET Framework 類別程式庫與工具以建立 Web 服務，並提供在 Internet Information Services (IIS) 中裝載服務所需的功能。 Windows Communication Foundation (WCF) 提供.NET Framework 類別庫、 工具和裝載功能，讓軟體實體，使用任何通訊協定，包括所使用的 Web 服務進行通訊。  ASP.NET Web 服務移轉至 WCF 可讓您的應用程式，以善用新功能和增強 WCF 特有的。  

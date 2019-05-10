@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID55
 ms.assetid: d674a0fb-ef16-4cc2-9da7-709a8a07dbea
-ms.openlocfilehash: 401801c7c9072ce11f9eafdb84f2b377669ae545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8ec878e04b0128c997c5be51d2c714d55abcde8c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802644"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665124"
 ---
 # <a name="file-already-open"></a>檔案已經開啟
 有時候必須先關閉檔案之前另一個`FileOpen`或進行其他作業。 可能導致本錯誤的原因包括：  

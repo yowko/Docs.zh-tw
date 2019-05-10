@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: fbb7b4e118598157e2005469f89831df50de6576
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f61058bbe1b53ec82160c482a4882f4dbad92eea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638212"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623915"
 ---
 # <a name="declare-statement"></a>Declare Statement
 宣告實作的外部檔案中的程序的參考。  

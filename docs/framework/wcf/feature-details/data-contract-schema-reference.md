@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: a4ddaaea2133a8adf5271628f442644194a7f453
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7797b7a8786a89671175bccb501b7fe69c021d7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857177"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627067"
 ---
 # <a name="data-contract-schema-reference"></a>資料合約結構描述參考
 本主題說明 <xref:System.Runtime.Serialization.DataContractSerializer> 用來描述 XML 序列化之 Common Language Runtime (CLR) 型別的 XML 結構描述 (XSD) 子集。  
@@ -24,19 +24,19 @@ ms.locfileid: "61857177"
 ### <a name="support-levels"></a>支援層級  
  `DataContractSerializer` 針對特定 XML 結構描述功能提供下列支援層級：  
   
--   **支援**： 使用 `DataContractSerializer`從這項功能明確對應至 CLR 型別或屬性 (或兩者)。  
+- **支援**： 使用 `DataContractSerializer`從這項功能明確對應至 CLR 型別或屬性 (或兩者)。  
   
--   **忽略**： 此功能可用在 `DataContractSerializer`所匯入的結構描述中，但是不會對產生程式碼有任何影響。  
+- **忽略**： 此功能可用在 `DataContractSerializer`所匯入的結構描述中，但是不會對產生程式碼有任何影響。  
   
--   **禁止**： `DataContractSerializer` 不支援使用此功能來支援匯入結構描述。 例如，當使用結構描述 (運用此類功能) 來存取 WSDL 時，Svcutil.exe 就會改回使用 <xref:System.Xml.Serialization.XmlSerializer> 。 這是預設的結果。  
+- **禁止**： `DataContractSerializer` 不支援使用此功能來支援匯入結構描述。 例如，當使用結構描述 (運用此類功能) 來存取 WSDL 時，Svcutil.exe 就會改回使用 <xref:System.Xml.Serialization.XmlSerializer> 。 這是預設的結果。  
   
 ## <a name="general-information"></a>一般資訊  
   
--   [XML 結構描述](https://go.microsoft.com/fwlink/?LinkId=95475)(英文) 將說明結構描述命名空間。 本文使用 "xs" 前置詞。  
+- [XML 結構描述](https://go.microsoft.com/fwlink/?LinkId=95475)(英文) 將說明結構描述命名空間。 本文使用 "xs" 前置詞。  
   
--   任何包含非結構描述命名空間的屬性都會被忽略。  
+- 任何包含非結構描述命名空間的屬性都會被忽略。  
   
--   任何附註 (除了本文中所述的以外) 都會被忽略。  
+- 任何附註 (除了本文中所述的以外) 都會被忽略。  
   
 ### <a name="xsschema-attributes"></a>\<schema> >： 屬性  
   
@@ -120,11 +120,11 @@ ms.locfileid: "61857177"
 ### <a name="general-information"></a>一般資訊  
  `<xs:element>` 可能在下列情況發生：  
   
--   它會發生在用來描述一般 (非集合) 資料合約之資料成員的 `<xs:sequence>`中。 在此情況下， `maxOccurs` 屬性必須為 1 (不允許 0 這個值)。  
+- 它會發生在用來描述一般 (非集合) 資料合約之資料成員的 `<xs:sequence>`中。 在此情況下， `maxOccurs` 屬性必須為 1 (不允許 0 這個值)。  
   
--   它會發生在用來描述集合資料合約之資料成員的 `<xs:sequence>`中。 在此情況下， `maxOccurs` 屬性必須為大於 1 或 "unbounded"。  
+- 它會發生在用來描述集合資料合約之資料成員的 `<xs:sequence>`中。 在此情況下， `maxOccurs` 屬性必須為大於 1 或 "unbounded"。  
   
--   它會發生在 `<xs:schema>` 中，做為全域項目宣告 (GED)。  
+- 它會發生在 `<xs:schema>` 中，做為全域項目宣告 (GED)。  
   
 ### <a name="xselement-with-maxoccurs1-within-an-xssequence-data-members"></a>\<xs: element > maxOccurs = 1 內\<xs > （資料成員）  
   
@@ -144,17 +144,17 @@ ms.locfileid: "61857177"
   
 ### <a name="xselement-with-maxoccurs1-within-an-xssequence-collections"></a>\<xs: element > maxoccurs > 1 內\<xs > （集合）  
   
--   對應至 <xref:System.Runtime.Serialization.CollectionDataContractAttribute>。  
+- 對應至 <xref:System.Runtime.Serialization.CollectionDataContractAttribute>。  
   
--   在集合型別中，xs:sequence 只允許使用一個 xs:element。  
+- 在集合型別中，xs:sequence 只允許使用一個 xs:element。  
   
  集合可以是下列任何型別：  
   
--   一般集合 (例如，陣列)。  
+- 一般集合 (例如，陣列)。  
   
--   字典集合 (將某值對應至另一個值；例如， <xref:System.Collections.Hashtable>)。  
+- 字典集合 (將某值對應至另一個值；例如， <xref:System.Collections.Hashtable>)。  
   
--   字典與金鑰/值組型別的陣列之間的唯一差異，就在於產生的程式設計模型。 您可採用一種結構描述附註機制，將特定型別指定為字典集合。  
+- 字典與金鑰/值組型別的陣列之間的唯一差異，就在於產生的程式設計模型。 您可採用一種結構描述附註機制，將特定型別指定為字典集合。  
   
  `ref`、 `block`、 `default`、 `fixed`、 `form`和 `id` 屬性的規則與非集合案例的規則是一樣的。 下表包含其他各項屬性。  
   
@@ -168,13 +168,13 @@ ms.locfileid: "61857177"
   
 ### <a name="xselement-within-an-xsschema-global-element-declaration"></a>\<xs: element > 內\<schema> > 元素的全域宣告  
   
--   與結構描述中的型別具有相同名稱與命名空間的全域項目宣告 (GED)，或是可在本身內部定義匿名型別的項目，稱為與型別關聯。  
+- 與結構描述中的型別具有相同名稱與命名空間的全域項目宣告 (GED)，或是可在本身內部定義匿名型別的項目，稱為與型別關聯。  
   
--   結構描述匯出：每個產生的型別，不管是簡單還是複雜型別，都會產生關聯的 GED。  
+- 結構描述匯出：每個產生的型別，不管是簡單還是複雜型別，都會產生關聯的 GED。  
   
--   還原序列化/序列化：關聯的 GED 可做為型別的根項目來使用。  
+- 還原序列化/序列化：關聯的 GED 可做為型別的根項目來使用。  
   
--   結構描述匯入：如果關聯的 GED 遵循下列規則 (除非它們定義了型別)，則這些 GED 為非必要而且會被忽略。  
+- 結構描述匯入：如果關聯的 GED 遵循下列規則 (除非它們定義了型別)，則這些 GED 為非必要而且會被忽略。  
   
 |屬性|結構描述|  
 |---------------|------------|  
@@ -202,11 +202,11 @@ ms.locfileid: "61857177"
   
  \* 使用時`simpleType`和`complexType,`匿名型別對應是與非匿名型別相同，只不過沒有任何的匿名資料合約，因此建立具名的資料合約時，產生的名稱衍生自項目名稱。 下表為匿名型別的規則：  
   
--   WCF 實作詳細資料：如果`xs:element`名稱不包含句號，則匿名型別會對應至外部資料合約型別的內部型別。 如果名稱包含句點，則結果的資料合約型別是獨立的 (不是內部型別)。  
+- WCF 實作詳細資料：如果`xs:element`名稱不包含句號，則匿名型別會對應至外部資料合約型別的內部型別。 如果名稱包含句點，則結果的資料合約型別是獨立的 (不是內部型別)。  
   
--   產生之內部型別的資料合約名稱為外部型別的資料合約名稱，後面並跟著句點、項目名稱，以及字串 "Type"。  
+- 產生之內部型別的資料合約名稱為外部型別的資料合約名稱，後面並跟著句點、項目名稱，以及字串 "Type"。  
   
--   如果此名稱的資料合約已經存在，則名稱後面會加上 "1"、"2"、"3" 等，直到將其建立為唯一的名稱。  
+- 如果此名稱的資料合約已經存在，則名稱後面會加上 "1"、"2"、"3" 等，直到將其建立為唯一的名稱。  
   
 ## <a name="simple-types---xssimpletype"></a>簡單型別- \<simpletype> >  
   
@@ -228,11 +228,11 @@ ms.locfileid: "61857177"
   
 ### <a name="xsrestriction"></a>\<xs:restriction>  
   
--   base="`xs:anyType`" 僅支援複雜型別限制。  
+- base="`xs:anyType`" 僅支援複雜型別限制。  
   
--   只包含 `xs:string` 限制 Facet 的 `xs:enumeration` 簡單型別限制會對應至列舉資料合約。  
+- 只包含 `xs:string` 限制 Facet 的 `xs:enumeration` 簡單型別限制會對應至列舉資料合約。  
   
--   其他所有簡單型別限制則會對應至所限制的型別上。 例如， `xs:int` 的限制會對應至整數，就像 `xs:int` 本身一樣。 如需有關基本類型對應的詳細資訊，請參閱型別/基本對應。  
+- 其他所有簡單型別限制則會對應至所限制的型別上。 例如， `xs:int` 的限制會對應至整數，就像 `xs:int` 本身一樣。 如需有關基本類型對應的詳細資訊，請參閱型別/基本對應。  
   
 ### <a name="xsrestriction-attributes"></a>\<xs: restriction >： 屬性  
   
@@ -464,9 +464,9 @@ public class Employee : Person
   
  如果衍生型別內含的項目與基底型別中的項目擁有相同的名稱，則重複的項目宣告會對應至已產生唯一名稱的資料成員。 正整數會新增至資料成員名稱 ("member1"、"member2" 等等)，直到找到唯一名稱為止。 相反地：  
   
--   如果衍生資料合約的資料成員與基底資料合約中的資料成員具有相同的名稱與型別，則 `DataContractSerializer` 會在衍生型別中產生這個對應的項目。  
+- 如果衍生資料合約的資料成員與基底資料合約中的資料成員具有相同的名稱與型別，則 `DataContractSerializer` 會在衍生型別中產生這個對應的項目。  
   
--   如果衍生資料合約的資料成員與基底資料合約中的資料成員具有相同的名稱 (但型別不同)，則 `DataContractSerializer` 會將包含型別 `xs:anyType` 之項目的結構描述匯入基底型別與衍生型別宣告中。 原始型別名稱會保留在 `xs:annotations/xs:appInfo/ser:ActualType/@Name`中。  
+- 如果衍生資料合約的資料成員與基底資料合約中的資料成員具有相同的名稱 (但型別不同)，則 `DataContractSerializer` 會將包含型別 `xs:anyType` 之項目的結構描述匯入基底型別與衍生型別宣告中。 原始型別名稱會保留在 `xs:annotations/xs:appInfo/ser:ActualType/@Name`中。  
   
  兩種變化視各自的資料成員的順序而定，都可能會導致結構描述內含模糊的內容模型。  
   
@@ -609,11 +609,11 @@ public class Employee : Person
   
  請注意下列各項：  
   
--   `ser:char` 已引入來代表型別 <xref:System.Char>的 Unicode 字元。  
+- `ser:char` 已引入來代表型別 <xref:System.Char>的 Unicode 字元。  
   
--   `valuespace` 的 `xs:duration` 已縮減為排序的組合，以對應至 <xref:System.TimeSpan>。  
+- `valuespace` 的 `xs:duration` 已縮減為排序的組合，以對應至 <xref:System.TimeSpan>。  
   
--   `FactoryType` 會用在衍生自 <xref:System.Runtime.Serialization.ISerializable>之型別所匯出的結構描述中。  
+- `FactoryType` 會用在衍生自 <xref:System.Runtime.Serialization.ISerializable>之型別所匯出的結構描述中。  
   
 ## <a name="importing-non-datacontract-schemas"></a>匯入非 DataContract 結構描述  
  `DataContractSerializer` 具有 `ImportXmlTypes` 選項，可允許匯入不符合 `DataContractSerializer` XSD 設定檔的結構描述 (請參閱 <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> 屬性)。 將此選項設為 `true` 可允許接受不符的結構描述型別，並將之對應至下列實作： <xref:System.Xml.Serialization.IXmlSerializable> 包裝 <xref:System.Xml.XmlNode> 的陣列 (只有類別名稱不同)。  

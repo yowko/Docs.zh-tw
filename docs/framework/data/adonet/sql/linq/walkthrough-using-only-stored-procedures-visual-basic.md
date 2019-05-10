@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 1527e3b4b614d4e700ae0c2c0fc555e14c7bc8d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22db347afb45b981602d5a92516271f75b8e4359
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876729"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648685"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>逐步解說：僅使用預存程序 (Visual Basic)
 本逐步解說會針對只用預存程序來存取資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 資料庫管理員會使用這個方法來限制對資料存放區的存取。  
@@ -28,13 +28,13 @@ ms.locfileid: "61876729"
 ## <a name="prerequisites"></a>必要條件  
  本逐步解說需要下列項目：  
   
--   本逐步解說會使用專用資料夾 ("c:\linqtest3") 來保存檔案。 請先建立這個資料夾，再開始逐步解說。  
+- 本逐步解說會使用專用資料夾 ("c:\linqtest3") 來保存檔案。 請先建立這個資料夾，再開始逐步解說。  
   
--   Northwind 範例資料庫。  
+- Northwind 範例資料庫。  
   
      如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。 如需相關指示，請參閱 <<c0> [ 下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。 下載此資料庫之後，請將 northwnd.mdf 檔複製到 c:\linqtest3 資料夾。  
   
--   從 Northwind 資料庫產生的 Visual Basic 程式碼檔。  
+- 從 Northwind 資料庫產生的 Visual Basic 程式碼檔。  
   
      這個逐步解說是使用 SqlMetal 工具，以下列命令列所撰寫：  
   
@@ -45,17 +45,17 @@ ms.locfileid: "61876729"
 ## <a name="overview"></a>總覽  
  此逐步解說包含六個主要工作：  
   
--   設定[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio 中的方案。  
+- 設定[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio 中的方案。  
   
--   將 System.Data.Linq 組件加入至專案。  
+- 將 System.Data.Linq 組件加入至專案。  
   
--   將資料庫程式碼檔案加入至專案。  
+- 將資料庫程式碼檔案加入至專案。  
   
--   建立資料庫的連接。  
+- 建立資料庫的連接。  
   
--   設定使用者介面。  
+- 設定使用者介面。  
   
--   執行和測試應用程式。  
+- 執行和測試應用程式。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>建立 LINQ to SQL 方案  
  在第一個工作中，您會建立包含必要的參考，以建置並執行 Visual Studio 方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案。  
