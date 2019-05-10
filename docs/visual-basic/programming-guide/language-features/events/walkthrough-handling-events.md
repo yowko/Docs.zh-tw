@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 2ae32f0ac31c504e86d5cf39ed6a36cc5523a4a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: aa3c1f00922cda46d3ce5a788b606a6f5da52636
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053791"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604045"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>逐步解說：處理事件 (Visual Basic)
 這是示範如何使用事件的兩個主題的第二個。 第一個主題中，[逐步解說：宣告和引發事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)，示範如何宣告及引發事件。 本節會使用表單和類別，從該逐步解說示範如何處理它們發生的事件。  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - scenes [WPF], 3-D
 - 3-D scenes
 ms.assetid: adb4a598-71a2-4dd5-b677-ea3fc11b78b2
-ms.openlocfilehash: 8e176cb437055787da86d56770dd71323134fa33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a431b78993d197dac99f0b6e365823acb295f0b8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61910178"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64611641"
 ---
 # <a name="how-to-create-a-3-d-scene"></a>HOW TO：建立立體場景
 此範例示範如何建立 3d 物件看起來像一般的工作表的已旋轉的紙張。 A<xref:System.Windows.Controls.Viewport3D>搭配下列元件用來建立這個簡單的 3d 場景：  

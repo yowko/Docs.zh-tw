@@ -9,12 +9,12 @@ helpviewer_keywords:
 - administration [WCF]
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
-ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5df95c6b5f91cd4f36bd03c1bd291f7a44025ee9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797517"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600080"
 ---
 # <a name="administration-and-diagnostics"></a>管理與診斷
 Windows Communication Foundation (WCF) 提供一組豐富的功能，可協助您監視應用程式的生命週期的不同階段。 例如，您可以使用組態在部署時設定服務與用戶端。 WCF 包含大量的效能計數器，可協助您測量應用程式的效能。 WCF 也會公開服務，以在透過 WCF Windows Management Instrumentation (WMI) 提供者的執行階段檢查的資料。 當應用程式遭遇失敗或開始發生異常行為時，您可以使用事件日誌檢查是否發生任何顯著的事件。 您也可以使用訊息記錄與追蹤檢查在應用程式中端對端之間發生的事件。 這些功能可協助開發人員和 IT 專業人員疑難排解 WCF 應用程式，當它的行為不正確。  

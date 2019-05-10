@@ -2,12 +2,12 @@
 title: 獨立 JSON 序列化
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 29c7dd6ebde07632ef7742b5e9bdd846fc632258
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 701ad05b7432c36950ff514ad8c7c18a54c7f020
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747585"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586188"
 ---
 # <a name="stand-alone-json-serialization"></a>獨立 JSON 序列化
 JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 JavaScript 程式碼而設計的資料格式。 它是建立 Windows Communication Foundation (WCF) 中的 ASP.NET AJAX 服務所使用的預設資料格式。  

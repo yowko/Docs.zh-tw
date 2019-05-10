@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 806e4605411304f58d0428f2588454ba9652946e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917835"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610362"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic 中的範圍
 *領域*的宣告的項目是 所有程式碼都可以參考它，而不需要限定其名稱，或使其能透過一組[Imports 陳述式 （.NET 命名空間和類型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。 元素可能具有其中一個下列層級的範圍：  
@@ -37,11 +37,11 @@ ms.locfileid: "61917835"
 ## <a name="specifying-scope-and-defining-variables"></a>指定範圍，以及定義變數  
  當您在宣告時，您會指定項目的範圍。 範圍可能取決於下列因素：  
   
--   您可以在其中宣告之項目的區域 （區塊、 程序、 模組、 類別或結構）  
+- 您可以在其中宣告之項目的區域 （區塊、 程序、 模組、 類別或結構）  
   
--   包含的項目宣告的命名空間  
+- 包含的項目宣告的命名空間  
   
--   您宣告的項目之存取層級  
+- 您宣告的項目之存取層級  
   
  小心，因為如此一來，定義具有相同名稱但不同的範圍變數時，可能會導致非預期的結果。 如需詳細資訊，請參閱 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
@@ -51,21 +51,21 @@ ms.locfileid: "61917835"
 ### <a name="block-scope"></a>區塊範圍  
  區塊是一組陳述式括住起始並終止陳述式的宣告，如下所示：  
   
--   `Do` 和 `Loop`  
+- `Do` 和 `Loop`  
   
--   `For` [`Each`] 與 `Next`  
+- `For` [`Each`] 與 `Next`  
   
--   `If` 和 `End If`  
+- `If` 和 `End If`  
   
--   `Select` 和 `End Select`  
+- `Select` 和 `End Select`  
   
--   `SyncLock` 和 `End SyncLock`  
+- `SyncLock` 和 `End SyncLock`  
   
--   `Try` 和 `End Try`  
+- `Try` 和 `End Try`  
   
--   `While` 和 `End While`  
+- `While` 和 `End While`  
   
--   `With` 和 `End With`  
+- `With` 和 `End With`  
   
  如果您宣告的變數在區塊內，您可以只在該區塊內使用它。 在下列範例中，整數變數的範圍`cube`之間區塊`If`並`End If`，而且您可以不再參考`cube`當執行會通過區塊之外。  
   
@@ -127,9 +127,9 @@ Public strMsg As String
 ### <a name="advantages-of-local-variables"></a>本機變數的優點  
  本機變數會是不錯的選擇，為任何種類的暫存計算，原因如下：  
   
--   **避免名稱衝突。** 本機變數名稱不容易發生衝突。 例如，您可以建立數個不同的程序包含名為`intTemp`。 只要每個`intTemp`宣告為區域變數，每個程序可辨識自己的版本的`intTemp`。 任何一個程序可以改變其區域變數中的值`intTemp`而不會影響`intTemp`其他程序中的變數。  
+- **避免名稱衝突。** 本機變數名稱不容易發生衝突。 例如，您可以建立數個不同的程序包含名為`intTemp`。 只要每個`intTemp`宣告為區域變數，每個程序可辨識自己的版本的`intTemp`。 任何一個程序可以改變其區域變數中的值`intTemp`而不會影響`intTemp`其他程序中的變數。  
   
--   **記憶體耗用量。** 只會執行其程序時，本機變數會消耗記憶體。 程序傳回給呼叫程式碼時，會釋放其記憶體。 相反地， [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)並[靜態](../../../../visual-basic/language-reference/modifiers/static.md)變數耗用的記憶體資源，直到您的應用程式停止執行，因此，它們只在必要時使用。 *執行個體變數*耗用記憶體而其執行個體會持續存在，使其成為較不有效比本機變數，但可能更有效率，比`Shared`或`Static`變數。  
+- **記憶體耗用量。** 只會執行其程序時，本機變數會消耗記憶體。 程序傳回給呼叫程式碼時，會釋放其記憶體。 相反地， [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)並[靜態](../../../../visual-basic/language-reference/modifiers/static.md)變數耗用的記憶體資源，直到您的應用程式停止執行，因此，它們只在必要時使用。 *執行個體變數*耗用記憶體而其執行個體會持續存在，使其成為較不有效比本機變數，但可能更有效率，比`Shared`或`Static`變數。  
   
 ### <a name="minimizing-scope"></a>最小化範圍  
  一般情況下，宣告時的任何變數或常數，是良好的程式設計做法範圍愈小愈好 （區塊範圍內最小的）。 這有助於節省記憶體，並將程式碼誤用錯誤變數的機會降到最低。 同樣地，您應該將變數宣告[靜態](../../../../visual-basic/language-reference/modifiers/static.md)只會在必要時要保留其程序呼叫的間隔值。  

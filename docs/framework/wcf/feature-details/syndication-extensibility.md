@@ -2,25 +2,25 @@
 title: 新聞訂閱擴充性
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-ms.openlocfilehash: 226ea682d8b17a818e6d5be2097a19315d106bda
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 688b31f3c87b7c9ad4842cfe6834b0dbc9e5b85b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61915560"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585943"
 ---
 # <a name="syndication-extensibility"></a>新聞訂閱擴充性
 新聞訂閱 API 主要是提供格式中性的程式設計模型，以允許以各種格式將新聞訂閱內容寫入網路中。 抽象資料模型包含下列類別：  
   
--   <xref:System.ServiceModel.Syndication.SyndicationCategory>  
+- <xref:System.ServiceModel.Syndication.SyndicationCategory>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
+- <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationItem>  
+- <xref:System.ServiceModel.Syndication.SyndicationItem>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationLink>  
+- <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationPerson>  
+- <xref:System.ServiceModel.Syndication.SyndicationPerson>  
   
  這些類別可緊密地對應至 Atom 1.0 規格中所定義的建構 (儘管其中有些名稱不同)。  
   
@@ -32,17 +32,17 @@ ms.locfileid: "61915560"
 ## <a name="deriving-a-new-class"></a>衍生新的類別  
  您可以從任何一個現有的抽象資料模型類別中衍生新的類別。 在您實作應用程式時，如果所使用的大部分摘要都包含特定延伸時，就可以這麼做。 在本主題中，程式使用的大部分摘要都包含 `MyExtension` 延伸。 若要提供更好的程式設計體驗，請執行下列步驟：  
   
--   建立可保留延伸資料的類別。 在此案例中，建立名為 MyExtension 的類別。  
+- 建立可保留延伸資料的類別。 在此案例中，建立名為 MyExtension 的類別。  
   
--   從 <xref:System.ServiceModel.Syndication.SyndicationItem> 衍生名為 MyExtensionItem 的類別並公開型別 MyExtension 的屬性以供程式設計之用。  
+- 從 <xref:System.ServiceModel.Syndication.SyndicationItem> 衍生名為 MyExtensionItem 的類別並公開型別 MyExtension 的屬性以供程式設計之用。  
   
--   讀入 MyExtension 時，覆寫 MyExtensionItem 類別中的 <xref:System.ServiceModel.Syndication.SyndicationItem.TryParseElement%28System.Xml.XmlReader%2CSystem.String%29> 以產生新的 MyExtension 執行個體。  
+- 讀入 MyExtension 時，覆寫 MyExtensionItem 類別中的 <xref:System.ServiceModel.Syndication.SyndicationItem.TryParseElement%28System.Xml.XmlReader%2CSystem.String%29> 以產生新的 MyExtension 執行個體。  
   
--   覆寫 MyExtensionItem 類別中的 <xref:System.ServiceModel.Syndication.SyndicationItem.WriteElementExtensions%28System.Xml.XmlWriter%2CSystem.String%29> 以將 MyExtension 屬性內容寫入 XML 寫入器。  
+- 覆寫 MyExtensionItem 類別中的 <xref:System.ServiceModel.Syndication.SyndicationItem.WriteElementExtensions%28System.Xml.XmlWriter%2CSystem.String%29> 以將 MyExtension 屬性內容寫入 XML 寫入器。  
   
--   從 <xref:System.ServiceModel.Syndication.SyndicationFeed> 衍生稱為 MyExtensionFeed 的類別。  
+- 從 <xref:System.ServiceModel.Syndication.SyndicationFeed> 衍生稱為 MyExtensionFeed 的類別。  
   
--   覆寫 MyExtensionFeed 類別中的 <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> 以產生 MyExtensionItem，而不是預設的 <xref:System.ServiceModel.Syndication.SyndicationItem>。 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 中定義了一系列的方法，可建立 <xref:System.ServiceModel.Syndication.SyndicationLink>、<xref:System.ServiceModel.Syndication.SyndicationCategory> 和 <xref:System.ServiceModel.Syndication.SyndicationPerson> 物件 (例如，<xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>、<xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory> 和 <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson>)。 這些全部都可加以覆寫，以建立自訂的衍生類別。  
+- 覆寫 MyExtensionFeed 類別中的 <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> 以產生 MyExtensionItem，而不是預設的 <xref:System.ServiceModel.Syndication.SyndicationItem>。 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 中定義了一系列的方法，可建立 <xref:System.ServiceModel.Syndication.SyndicationLink>、<xref:System.ServiceModel.Syndication.SyndicationCategory> 和 <xref:System.ServiceModel.Syndication.SyndicationPerson> 物件 (例如，<xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>、<xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory> 和 <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson>)。 這些全部都可加以覆寫，以建立自訂的衍生類別。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b1e8585755bbbff900bd621d8bc3a25fd23961c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858022"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587498"
 ---
 # <a name="data-contract-surrogates"></a>資料合約代理
 資料合約*surrogate*是建置在資料合約模型時的進階的功能。 這項功能是專為在使用者想要變更型別序列化、還原序列化或投射至中繼資料的方式時，用來自訂和替換型別所設計。 某些可能使用代理的情況包括：尚未指定型別的資料合約、欄位和屬性 (Property) 尚未以 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Attribute) 標記，或是使用者希望動態建立結構描述變形時。  
@@ -37,13 +37,13 @@ ms.locfileid: "61858022"
   
  [!code-csharp[C_IDataContractSurrogate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#3)]  
   
--   在序列化過程中，這個方法傳回的對應會接著藉由呼叫 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 方法，將原始執行個體轉換成代理執行個體。  
+- 在序列化過程中，這個方法傳回的對應會接著藉由呼叫 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 方法，將原始執行個體轉換成代理執行個體。  
   
--   在還原序列化的過程中，這個方法傳回的對應會由序列化程式用來還原序列化為代理型別的執行個體。 接著它會呼叫 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> 將代理執行個體轉換成原始型別的執行個體。  
+- 在還原序列化的過程中，這個方法傳回的對應會由序列化程式用來還原序列化為代理型別的執行個體。 接著它會呼叫 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> 將代理執行個體轉換成原始型別的執行個體。  
   
--   在匯出過程中，這個方法傳回的代理型別會加以反映，以便將資料合約用於產生中繼資料。  
+- 在匯出過程中，這個方法傳回的代理型別會加以反映，以便將資料合約用於產生中繼資料。  
   
--   在匯入過程中，初始型別會變更為反映的代理型別，以便將資料合約用於參考支援這類目的。  
+- 在匯入過程中，初始型別會變更為反映的代理型別，以便將資料合約用於參考支援這類目的。  
   
  <xref:System.Type> 參數屬於要序列化、還原序列化、匯入或匯出的物件型別。 如果代理不處理型別，則 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> 方法必須傳回輸入型別。 否則會傳回適當的代理型別。 如果有數個代理型別存在，則可以在這個方法中定義許多對應。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "61858022"
 ### <a name="getobjecttoserialize-method"></a>GetObjectToSerialize 方法  
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 方法會將原始型別執行個體轉換成代理型別執行個體。 這是序列化需要的方法。  
   
- 下一個步驟是定義實體資料藉由實作 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 方法，從原始執行個體對應到代理的方式。 例如：  
+ 下一個步驟是定義實體資料藉由實作 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 方法，從原始執行個體對應到代理的方式。 例如:   
   
  [!code-csharp[C_IDataContractSurrogate#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#4)]  
   
@@ -71,7 +71,7 @@ ms.locfileid: "61858022"
 ### <a name="getdeserializedobject-method"></a>GetDeserializedObject 方法  
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> 方法會將代理型別執行個體轉換成原始型別執行個體。 這是還原序列化所需的程序。  
   
- 下一項工作是定義將實體資料從代理執行個體對應到原始執行個體的方式。 例如:   
+ 下一項工作是定義將實體資料從代理執行個體對應到原始執行個體的方式。 例如：  
   
  [!code-csharp[C_IDataContractSurrogate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#5)]  
   
@@ -116,7 +116,7 @@ ms.locfileid: "61858022"
 ### <a name="processimportedtype-method"></a>ProcessImportedType 方法  
  <xref:System.Runtime.Serialization.IDataContractSurrogate.ProcessImportedType%2A> 方法會自訂任何從結構描述匯入作業建立的型別。 這個方法是一個選擇項目。  
   
- 當匯入結構描述時，這個方法會允許自訂任何匯入的型別和編譯資訊。 例如：  
+ 當匯入結構描述時，這個方法會允許自訂任何匯入的型別和編譯資訊。 例如:   
   
  [!code-csharp[C_IDataContractSurrogate#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#7)]  
   

@@ -2,12 +2,12 @@
 title: HOW TO：使用 WCF Web HTTP 程式設計模型建立傳回任意資料的服務
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 55fdc6824ab82bdf3b5913cd600815ed05bd909c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6c7dd0debb5c491bca84ea9a4845f46b6b57b4a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747845"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586248"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>HOW TO：使用 WCF Web HTTP 程式設計模型建立傳回任意資料的服務
 有時候，開發人員必須要能夠完全控制資料從服務作業傳回的方式。 這是服務作業必須由 WCF 不支援的格式傳回資料的情況。 本主題說明如何使用 WCF WEB HTTP 程式設計模型建立這類服務。 該項服務提供一種會傳回資料流的作業。  

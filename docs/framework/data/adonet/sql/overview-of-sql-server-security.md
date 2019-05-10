@@ -2,12 +2,12 @@
 title: SQL Server 安全性概觀
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: de0c79a95a786f33b05c88ce4ed298837f2a6923
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 52e6f69c006353fcafcbf8f567675a7c14830f76
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922196"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582806"
 ---
 # <a name="overview-of-sql-server-security"></a>SQL Server 安全性概觀
 具有重疊安全性層的深入防禦策略是抵禦安全性威脅的最佳方式。 SQL Server 提供了一種安全性架構，其設計目的是為了允許資料庫管理員和開發人員建立安全的資料庫應用程式並抵禦威脅。 每個 SQL Server 版本都會透過引進新的特性和功能來改善舊版 SQL Server。 不過，安全性無法一體適用。 每個應用程式的安全性需求都是唯一的。 開發人員必須瞭解哪些特性和功能的組合最適合用來抵禦已知威脅，以及預期未來可能會發生的威脅。  

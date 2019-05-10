@@ -2,12 +2,12 @@
 title: 組態與中繼資料支援
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: abc9177fcc7b338a365d61721b63041ddcd68ab9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74dab4528ae11b60fc930a826962b71595073a7f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858360"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587731"
 ---
 # <a name="configuration-and-metadata-support"></a>組態與中繼資料支援
 這個主題描述如何啟用繫結和繫結項目的組態與中繼資料支援。  
@@ -15,13 +15,13 @@ ms.locfileid: "61858360"
 ## <a name="overview-of-configuration-and-metadata"></a>組態與中繼資料概觀  
  本主題將討論下列工作，也就是選用項目 1、 2 和 4 中[開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)工作清單。  
   
--   啟用繫結項目的組態檔支援。  
+- 啟用繫結項目的組態檔支援。  
   
--   啟用繫結的組態檔支援。  
+- 啟用繫結的組態檔支援。  
   
--   匯出繫結項目的 WSDL 和原則判斷提示。  
+- 匯出繫結項目的 WSDL 和原則判斷提示。  
   
--   識別要插入並設定繫結或繫結項目的 WSDL 和原則判斷提示。  
+- 識別要插入並設定繫結或繫結項目的 WSDL 和原則判斷提示。  
   
  如需建立使用者定義的繫結和繫結項目資訊，請參閱[Creating User-Defined 繫結](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)並[建立 BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)分別。  
   

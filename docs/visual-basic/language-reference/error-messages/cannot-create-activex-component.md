@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID429
 ms.assetid: 7fc5a271-8195-40a2-89f9-e05fd71bb8e0
-ms.openlocfilehash: 2c0df10d38d7fba8cb8b473b62d85592f8e63db1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4147be694dd6f204c53a0f3317c7fbcc3cbee8ef
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649942"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584295"
 ---
 # <a name="cannot-create-activex-component"></a>無法建立 ActiveX 元件
 您嘗試在設計階段時將 ActiveX 控制項放至於表單上，或將表單加入其上有 ActiveX 控制項的專案，但登錄中找不到相關資訊。  

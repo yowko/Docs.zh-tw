@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: 7ce759de004d479f5162d2ce3a965f5c40afa450
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: beb76f18a55d6e197c1c6bcfc91e3a8ef0f8119b
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917598"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063103"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL 物件模型
 在  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，以開發人員的程式語言表示的物件模型對應到關聯式資料庫的資料模型。 然後就會根據物件模型對資料執行作業。  
   
  在這種情況下，您不會發出資料庫命令 (例如，`INSERT`) 至資料庫。 而是在您的物件模型中變更值和執行方法。 當您要查詢資料庫或將變更傳送至資料庫時，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將您的要求轉譯為正確的 SQL 命令，並將這些命令傳送至資料庫。  
   
- ![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")  
+ ![如果螢幕擷取畫面顯示 Linq 物件模型。](./media/the-linq-to-sql-object-model/linq-object-model-two-tier.png)  
   
  中的最基本項目[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]物件模型和其與關聯式資料模型中的項目關聯性會摘要在下列資料表：  
   

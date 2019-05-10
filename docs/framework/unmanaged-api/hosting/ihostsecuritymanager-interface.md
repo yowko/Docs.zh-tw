@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f45379fe8640ef7e7b3917bac8d10ca956d75ffb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a2c71f32dfd190e188bb28aad5d51c72160eb4bc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61957582"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603245"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager 介面
 提供方法，讓存取權和控制權的目前執行中執行緒的安全性內容。  

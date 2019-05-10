@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: ee633e2488611417f72a9d51ab6b0fe2d9ddfa27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174105"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583571"
 ---
 # <a name="code-access-security-and-adonet"></a>程式碼存取安全性和 ADO.NET
 .NET Framework 會提供以角色為基礎的安全性和程式碼存取安全性 (CAS)，而這兩種安全性都是使用 Common Language Runtime (CLR) 所提供的通用基礎結構所實作的。 在 Unmanaged 程式碼的作用範圍內，大多數應用程式都是以使用者或主體的權限執行。 因此，當擁有更高權限的使用者執行惡意或充滿錯誤的軟體時，就可能損害電腦系統和竊取私人資料。  
@@ -27,11 +27,11 @@ ms.locfileid: "59174105"
   
  程式碼存取權限有三種類型：  
   
--   `Code access permissions`衍生自 <xref:System.Security.CodeAccessPermission> 類別。 為了存取受保護資源 (例如檔案和環境變數) 以及執行受保護作業 (例如存取 Unmanaged 程式碼)，因此需要權限。  
+- `Code access permissions`衍生自 <xref:System.Security.CodeAccessPermission> 類別。 為了存取受保護資源 (例如檔案和環境變數) 以及執行受保護作業 (例如存取 Unmanaged 程式碼)，因此需要權限。  
   
--   `Identity permissions` 代表可識別組件的特性。 系統會根據辨識項 (可能包含數位簽章或程式碼來源等項目)，將權限授與組件。 識別權限也衍生自 <xref:System.Security.CodeAccessPermission> 基底類別 (Base Class)。  
+- `Identity permissions` 代表可識別組件的特性。 系統會根據辨識項 (可能包含數位簽章或程式碼來源等項目)，將權限授與組件。 識別權限也衍生自 <xref:System.Security.CodeAccessPermission> 基底類別 (Base Class)。  
   
--   `Role-based security permissions`是以主體是否具有指定的識別或屬於指定角色成員為基礎。 <xref:System.Security.Permissions.PrincipalPermission> 類別允許針對使用中主體進行宣告式和必要的權限檢查。  
+- `Role-based security permissions`是以主體是否具有指定的識別或屬於指定角色成員為基礎。 <xref:System.Security.Permissions.PrincipalPermission> 類別允許針對使用中主體進行宣告式和必要的權限檢查。  
   
  為了判斷程式碼是否經授權可存取資源或執行某項作業，執行階段的安全性系統會周遊呼叫堆疊，並比較每個呼叫端被授與的權限與要求的權限。 如果呼叫堆疊中的任何呼叫端沒有要求的權限，系統就會擲回 <xref:System.Security.SecurityException> 並拒絕存取。  
   
