@@ -2,30 +2,30 @@
 title: 屬性概觀 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: bb012b49c76963306d723d7732b4c7054bf13ebb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2ecc3fb0a3bf7365b6eec39e1c5086d99f2c5a19
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968047"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642447"
 ---
-# <a name="attributes-overview-visual-basic"></a><span data-ttu-id="39823-102">屬性概觀 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="39823-102">Attributes overview (Visual Basic)</span></span>
-<span data-ttu-id="39823-103">屬性提供一種功能強大的方法，可將中繼資料或宣告資訊關聯至程式碼 (組建、型別、方法、屬性等)。</span><span class="sxs-lookup"><span data-stu-id="39823-103">Attributes provide a powerful method of associating metadata, or declarative information, with code (assemblies, types, methods, properties, and so forth).</span></span> <span data-ttu-id="39823-104">將屬性關聯至程式實體之後，就能在執行階段使用稱為「反映」的技術來查詢該屬性。</span><span class="sxs-lookup"><span data-stu-id="39823-104">After an attribute is associated with a program entity, the attribute can be queried at run time by using a technique called *reflection*.</span></span> <span data-ttu-id="39823-105">如需詳細資訊，請參閱[反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)。</span><span class="sxs-lookup"><span data-stu-id="39823-105">For more information, see [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).</span></span>  
+# <a name="attributes-overview-visual-basic"></a><span data-ttu-id="363c1-102">屬性概觀 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="363c1-102">Attributes overview (Visual Basic)</span></span>
+<span data-ttu-id="363c1-103">屬性提供一種功能強大的方法，可將中繼資料或宣告資訊關聯至程式碼 (組建、型別、方法、屬性等)。</span><span class="sxs-lookup"><span data-stu-id="363c1-103">Attributes provide a powerful method of associating metadata, or declarative information, with code (assemblies, types, methods, properties, and so forth).</span></span> <span data-ttu-id="363c1-104">將屬性關聯至程式實體之後，就能在執行階段使用稱為「反映」的技術來查詢該屬性。</span><span class="sxs-lookup"><span data-stu-id="363c1-104">After an attribute is associated with a program entity, the attribute can be queried at run time by using a technique called *reflection*.</span></span> <span data-ttu-id="363c1-105">如需詳細資訊，請參閱[反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)。</span><span class="sxs-lookup"><span data-stu-id="363c1-105">For more information, see [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).</span></span>  
   
- <span data-ttu-id="39823-106">屬性 (Attribute) 包含下列屬性 (Property)：</span><span class="sxs-lookup"><span data-stu-id="39823-106">Attributes have the following properties:</span></span>  
+ <span data-ttu-id="363c1-106">屬性 (Attribute) 包含下列屬性 (Property)：</span><span class="sxs-lookup"><span data-stu-id="363c1-106">Attributes have the following properties:</span></span>  
   
-- <span data-ttu-id="39823-107">屬性會將中繼資料新增至您的程式。</span><span class="sxs-lookup"><span data-stu-id="39823-107">Attributes add metadata to your program.</span></span> <span data-ttu-id="39823-108">「中繼資料」是在程式中定義的型別相關資訊。</span><span class="sxs-lookup"><span data-stu-id="39823-108">*Metadata* is information about the types defined in a program.</span></span> <span data-ttu-id="39823-109">所有的 .NET 組件都包含一組指定的中繼資料，來描述組件中所定義的型別和型別成員。</span><span class="sxs-lookup"><span data-stu-id="39823-109">All .NET assemblies contain a specified set of metadata that describes the types and type members defined in the assembly.</span></span> <span data-ttu-id="39823-110">您可以新增自訂屬性來指定所需的任何其他資訊。</span><span class="sxs-lookup"><span data-stu-id="39823-110">You can add custom attributes to specify any additional information that is required.</span></span> <span data-ttu-id="39823-111">如需詳細資訊，請參閱[建立自訂屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)。</span><span class="sxs-lookup"><span data-stu-id="39823-111">For more information, see, [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md).</span></span>  
+- <span data-ttu-id="363c1-107">屬性會將中繼資料新增至您的程式。</span><span class="sxs-lookup"><span data-stu-id="363c1-107">Attributes add metadata to your program.</span></span> <span data-ttu-id="363c1-108">「中繼資料」是在程式中定義的型別相關資訊。</span><span class="sxs-lookup"><span data-stu-id="363c1-108">*Metadata* is information about the types defined in a program.</span></span> <span data-ttu-id="363c1-109">所有的 .NET 組件都包含一組指定的中繼資料，來描述組件中所定義的型別和型別成員。</span><span class="sxs-lookup"><span data-stu-id="363c1-109">All .NET assemblies contain a specified set of metadata that describes the types and type members defined in the assembly.</span></span> <span data-ttu-id="363c1-110">您可以新增自訂屬性來指定所需的任何其他資訊。</span><span class="sxs-lookup"><span data-stu-id="363c1-110">You can add custom attributes to specify any additional information that is required.</span></span> <span data-ttu-id="363c1-111">如需詳細資訊，請參閱[建立自訂屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)。</span><span class="sxs-lookup"><span data-stu-id="363c1-111">For more information, see, [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md).</span></span>  
   
-- <span data-ttu-id="39823-112">您可以將一或多個屬性 (Attribute) 套用至整個組件、模組或較小的程式元素，例如類別和屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="39823-112">You can apply one or more attributes to entire assemblies, modules, or smaller program elements such as classes and properties.</span></span>  
+- <span data-ttu-id="363c1-112">您可以將一或多個屬性 (Attribute) 套用至整個組件、模組或較小的程式元素，例如類別和屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="363c1-112">You can apply one or more attributes to entire assemblies, modules, or smaller program elements such as classes and properties.</span></span>  
   
-- <span data-ttu-id="39823-113">屬性 (Attribute) 可以利用與方法與屬性 (Property) 相同的方式來接受引數。</span><span class="sxs-lookup"><span data-stu-id="39823-113">Attributes can accept arguments in the same way as methods and properties.</span></span>  
+- <span data-ttu-id="363c1-113">屬性 (Attribute) 可以利用與方法與屬性 (Property) 相同的方式來接受引數。</span><span class="sxs-lookup"><span data-stu-id="363c1-113">Attributes can accept arguments in the same way as methods and properties.</span></span>  
   
-- <span data-ttu-id="39823-114">您的程式可以使用反映，來檢查自己的中繼資料或其他程式的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="39823-114">Your program can examine its own metadata or the metadata in other programs by using reflection.</span></span> <span data-ttu-id="39823-115">如需詳細資訊，請參閱[使用反映存取屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)。</span><span class="sxs-lookup"><span data-stu-id="39823-115">For more information, see [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span></span>  
+- <span data-ttu-id="363c1-114">您的程式可以使用反映，來檢查自己的中繼資料或其他程式的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="363c1-114">Your program can examine its own metadata or the metadata in other programs by using reflection.</span></span> <span data-ttu-id="363c1-115">如需詳細資訊，請參閱[使用反映存取屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)。</span><span class="sxs-lookup"><span data-stu-id="363c1-115">For more information, see [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span></span>  
   
-## <a name="using-attributes"></a><span data-ttu-id="39823-116">使用屬性</span><span class="sxs-lookup"><span data-stu-id="39823-116">Using Attributes</span></span>  
- <span data-ttu-id="39823-117">屬性可以放置於大多數的任意宣告中，但特定的屬性可能會限制它適用的宣告型別。</span><span class="sxs-lookup"><span data-stu-id="39823-117">Attributes can be placed on most any declaration, though a specific attribute might restrict the types of declarations on which it is valid.</span></span> <span data-ttu-id="39823-118">在 Visual Basic 中，會使用角括弧 (\< >) 將屬性括起來。</span><span class="sxs-lookup"><span data-stu-id="39823-118">In Visual Basic, an attribute is enclosed in angle brackets (\< >).</span></span> <span data-ttu-id="39823-119">它必須出現在同一行中要套用它的元素正前方。</span><span class="sxs-lookup"><span data-stu-id="39823-119">It must appear immediately before the element to which it is applied, on the same line.</span></span>  
+## <a name="using-attributes"></a><span data-ttu-id="363c1-116">使用屬性</span><span class="sxs-lookup"><span data-stu-id="363c1-116">Using Attributes</span></span>  
+ <span data-ttu-id="363c1-117">屬性可以放置於大多數的任意宣告中，但特定的屬性可能會限制它適用的宣告型別。</span><span class="sxs-lookup"><span data-stu-id="363c1-117">Attributes can be placed on most any declaration, though a specific attribute might restrict the types of declarations on which it is valid.</span></span> <span data-ttu-id="363c1-118">在 Visual Basic 中，會使用角括弧 (\< >) 將屬性括起來。</span><span class="sxs-lookup"><span data-stu-id="363c1-118">In Visual Basic, an attribute is enclosed in angle brackets (\< >).</span></span> <span data-ttu-id="363c1-119">它必須出現在同一行中要套用它的元素正前方。</span><span class="sxs-lookup"><span data-stu-id="363c1-119">It must appear immediately before the element to which it is applied, on the same line.</span></span>  
   
- <span data-ttu-id="39823-120">在此範例中，會使用 <xref:System.SerializableAttribute> 屬性來將特定的特性套用至類別：</span><span class="sxs-lookup"><span data-stu-id="39823-120">In this example, the <xref:System.SerializableAttribute> attribute is used to apply a specific characteristic to a class:</span></span>  
+ <span data-ttu-id="363c1-120">在此範例中，會使用 <xref:System.SerializableAttribute> 屬性來將特定的特性套用至類別：</span><span class="sxs-lookup"><span data-stu-id="363c1-120">In this example, the <xref:System.SerializableAttribute> attribute is used to apply a specific characteristic to a class:</span></span>  
   
 ```vb  
 <System.Serializable()> Public Class SampleClass  
@@ -33,7 +33,7 @@ ms.locfileid: "61968047"
 End Class  
 ```  
   
- <span data-ttu-id="39823-121">具有 <xref:System.Runtime.InteropServices.DllImportAttribute> 屬性的方法宣告如下：</span><span class="sxs-lookup"><span data-stu-id="39823-121">A method with the attribute <xref:System.Runtime.InteropServices.DllImportAttribute> is declared like this:</span></span>  
+ <span data-ttu-id="363c1-121">具有 <xref:System.Runtime.InteropServices.DllImportAttribute> 屬性的方法宣告如下：</span><span class="sxs-lookup"><span data-stu-id="363c1-121">A method with the attribute <xref:System.Runtime.InteropServices.DllImportAttribute> is declared like this:</span></span>  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -45,7 +45,7 @@ Sub SampleMethod()
 End Sub  
 ```  
   
- <span data-ttu-id="39823-122">一個宣告中可以放置一個以上的屬性：</span><span class="sxs-lookup"><span data-stu-id="39823-122">More than one attribute can be placed on a declaration:</span></span>  
+ <span data-ttu-id="363c1-122">一個宣告中可以放置一個以上的屬性：</span><span class="sxs-lookup"><span data-stu-id="363c1-122">More than one attribute can be placed on a declaration:</span></span>  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -58,7 +58,7 @@ Sub MethodB(<Out(), [In]()> ByVal x As Double)
 End Sub  
 ```  
   
- <span data-ttu-id="39823-123">可以針對特定實體多次指定某些屬性。</span><span class="sxs-lookup"><span data-stu-id="39823-123">Some attributes can be specified more than once for a given entity.</span></span> <span data-ttu-id="39823-124"><xref:System.Diagnostics.ConditionalAttribute> 就是這種多次使用屬性的一個例子：</span><span class="sxs-lookup"><span data-stu-id="39823-124">An example of such a multiuse attribute is <xref:System.Diagnostics.ConditionalAttribute>:</span></span>  
+ <span data-ttu-id="363c1-123">可以針對特定實體多次指定某些屬性。</span><span class="sxs-lookup"><span data-stu-id="363c1-123">Some attributes can be specified more than once for a given entity.</span></span> <span data-ttu-id="363c1-124"><xref:System.Diagnostics.ConditionalAttribute> 就是這種多次使用屬性的一個例子：</span><span class="sxs-lookup"><span data-stu-id="363c1-124">An example of such a multiuse attribute is <xref:System.Diagnostics.ConditionalAttribute>:</span></span>  
   
 ```vb  
 <Conditional("DEBUG"), Conditional("TEST1")>   
@@ -67,10 +67,10 @@ End Sub
 ```  
   
 > [!NOTE]
->  <span data-ttu-id="39823-125">依照慣例，所有的屬性名稱都會以 "Attribute" 這個字結尾，以便與 .NET Framework 中的其他項目有所區別。</span><span class="sxs-lookup"><span data-stu-id="39823-125">By convention, all attribute names end with the word "Attribute" to distinguish them from other items in the .NET Framework.</span></span> <span data-ttu-id="39823-126">不過，您在程式碼中使用屬性時，不需要指定屬性的後置詞。</span><span class="sxs-lookup"><span data-stu-id="39823-126">However, you do not need to specify the attribute suffix when using attributes in code.</span></span> <span data-ttu-id="39823-127">例如，`[DllImport]` 相當於 `[DllImportAttribute]`，但 `DllImportAttribute` 是屬性在 .NET Framework 中的實際名稱。</span><span class="sxs-lookup"><span data-stu-id="39823-127">For example, `[DllImport]` is equivalent to `[DllImportAttribute]`, but `DllImportAttribute` is the attribute's actual name in the .NET Framework.</span></span>  
+>  <span data-ttu-id="363c1-125">依照慣例，所有的屬性名稱都會以 "Attribute" 這個字結尾，以便與 .NET Framework 中的其他項目有所區別。</span><span class="sxs-lookup"><span data-stu-id="363c1-125">By convention, all attribute names end with the word "Attribute" to distinguish them from other items in the .NET Framework.</span></span> <span data-ttu-id="363c1-126">不過，您在程式碼中使用屬性時，不需要指定屬性的後置詞。</span><span class="sxs-lookup"><span data-stu-id="363c1-126">However, you do not need to specify the attribute suffix when using attributes in code.</span></span> <span data-ttu-id="363c1-127">例如，`[DllImport]` 相當於 `[DllImportAttribute]`，但 `DllImportAttribute` 是屬性在 .NET Framework 中的實際名稱。</span><span class="sxs-lookup"><span data-stu-id="363c1-127">For example, `[DllImport]` is equivalent to `[DllImportAttribute]`, but `DllImportAttribute` is the attribute's actual name in the .NET Framework.</span></span>  
   
-### <a name="attribute-parameters"></a><span data-ttu-id="39823-128">屬性參數</span><span class="sxs-lookup"><span data-stu-id="39823-128">Attribute Parameters</span></span>  
- <span data-ttu-id="39823-129">許多屬性的參數可以是位置、未命名或具名的參數。</span><span class="sxs-lookup"><span data-stu-id="39823-129">Many attributes have parameters, which can be positional, unnamed, or named.</span></span> <span data-ttu-id="39823-130">任何位置參數都必須以特定順序指定，而且不能省略；具名參數是選擇性且可依任何順序指定。</span><span class="sxs-lookup"><span data-stu-id="39823-130">Any positional parameters must be specified in a certain order and cannot be omitted; named parameters are optional and can be specified in any order.</span></span> <span data-ttu-id="39823-131">位置參數會先指定。</span><span class="sxs-lookup"><span data-stu-id="39823-131">Positional parameters are specified first.</span></span> <span data-ttu-id="39823-132">例如，這三個屬性是相等的：</span><span class="sxs-lookup"><span data-stu-id="39823-132">For example, these three attributes are equivalent:</span></span>  
+### <a name="attribute-parameters"></a><span data-ttu-id="363c1-128">屬性參數</span><span class="sxs-lookup"><span data-stu-id="363c1-128">Attribute Parameters</span></span>  
+ <span data-ttu-id="363c1-129">許多屬性的參數可以是位置、未命名或具名的參數。</span><span class="sxs-lookup"><span data-stu-id="363c1-129">Many attributes have parameters, which can be positional, unnamed, or named.</span></span> <span data-ttu-id="363c1-130">任何位置參數都必須以特定順序指定，而且不能省略；具名參數是選擇性且可依任何順序指定。</span><span class="sxs-lookup"><span data-stu-id="363c1-130">Any positional parameters must be specified in a certain order and cannot be omitted; named parameters are optional and can be specified in any order.</span></span> <span data-ttu-id="363c1-131">位置參數會先指定。</span><span class="sxs-lookup"><span data-stu-id="363c1-131">Positional parameters are specified first.</span></span> <span data-ttu-id="363c1-132">例如，這三個屬性是相等的：</span><span class="sxs-lookup"><span data-stu-id="363c1-132">For example, these three attributes are equivalent:</span></span>  
   
 ```vb  
 <DllImport("user32.dll")>  
@@ -78,25 +78,25 @@ End Sub
 <DllImport("user32.dll", ExactSpelling:=False, SetLastError:=False)>  
 ```  
   
- <span data-ttu-id="39823-133">第一個參數 (DLL 名稱) 是位置參數，一律會先出現；其他的則為具名參數。</span><span class="sxs-lookup"><span data-stu-id="39823-133">The first parameter, the DLL name, is positional and always comes first; the others are named.</span></span> <span data-ttu-id="39823-134">在此案例中，這兩個具名參數預設為 false，因此可以省略。</span><span class="sxs-lookup"><span data-stu-id="39823-134">In this case, both named parameters default to false, so they can be omitted.</span></span> <span data-ttu-id="39823-135">請參閱個別屬性的文件，以取得預設參數值的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="39823-135">Refer to the individual attribute's documentation for information on default parameter values.</span></span>  
+ <span data-ttu-id="363c1-133">第一個參數 (DLL 名稱) 是位置參數，一律會先出現；其他的則為具名參數。</span><span class="sxs-lookup"><span data-stu-id="363c1-133">The first parameter, the DLL name, is positional and always comes first; the others are named.</span></span> <span data-ttu-id="363c1-134">在此案例中，這兩個具名參數預設為 false，因此可以省略。</span><span class="sxs-lookup"><span data-stu-id="363c1-134">In this case, both named parameters default to false, so they can be omitted.</span></span> <span data-ttu-id="363c1-135">請參閱個別屬性的文件，以取得預設參數值的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="363c1-135">Refer to the individual attribute's documentation for information on default parameter values.</span></span>  
   
-### <a name="attribute-targets"></a><span data-ttu-id="39823-136">屬性目標</span><span class="sxs-lookup"><span data-stu-id="39823-136">Attribute Targets</span></span>  
- <span data-ttu-id="39823-137">屬性的「目標」是要套用該屬性的實體。</span><span class="sxs-lookup"><span data-stu-id="39823-137">The *target* of an attribute is the entity to which the attribute applies.</span></span> <span data-ttu-id="39823-138">例如，屬性可套用至類別、特定的方法或整個組件。</span><span class="sxs-lookup"><span data-stu-id="39823-138">For example, an attribute may apply to a class, a particular method, or an entire assembly.</span></span> <span data-ttu-id="39823-139">根據預設，屬性會套用到位於它正後方的元素。</span><span class="sxs-lookup"><span data-stu-id="39823-139">By default, an attribute applies to the element that it precedes.</span></span> <span data-ttu-id="39823-140">但是，舉例來說，您也可以明確地識別是否要將屬性套用到方法、它的參數或它的傳回值。</span><span class="sxs-lookup"><span data-stu-id="39823-140">But you can also explicitly identify, for example, whether an attribute is applied to a method, or to its parameter, or to its return value.</span></span>  
+### <a name="attribute-targets"></a><span data-ttu-id="363c1-136">屬性目標</span><span class="sxs-lookup"><span data-stu-id="363c1-136">Attribute Targets</span></span>  
+ <span data-ttu-id="363c1-137">屬性的「目標」是要套用該屬性的實體。</span><span class="sxs-lookup"><span data-stu-id="363c1-137">The *target* of an attribute is the entity to which the attribute applies.</span></span> <span data-ttu-id="363c1-138">例如，屬性可套用至類別、特定的方法或整個組件。</span><span class="sxs-lookup"><span data-stu-id="363c1-138">For example, an attribute may apply to a class, a particular method, or an entire assembly.</span></span> <span data-ttu-id="363c1-139">根據預設，屬性會套用到位於它正後方的元素。</span><span class="sxs-lookup"><span data-stu-id="363c1-139">By default, an attribute applies to the element that it precedes.</span></span> <span data-ttu-id="363c1-140">但是，舉例來說，您也可以明確地識別是否要將屬性套用到方法、它的參數或它的傳回值。</span><span class="sxs-lookup"><span data-stu-id="363c1-140">But you can also explicitly identify, for example, whether an attribute is applied to a method, or to its parameter, or to its return value.</span></span>  
   
- <span data-ttu-id="39823-141">若要明確地識別屬性目標，請使用下列語法：</span><span class="sxs-lookup"><span data-stu-id="39823-141">To explicitly identify an attribute target, use the following syntax:</span></span>  
+ <span data-ttu-id="363c1-141">若要明確地識別屬性目標，請使用下列語法：</span><span class="sxs-lookup"><span data-stu-id="363c1-141">To explicitly identify an attribute target, use the following syntax:</span></span>  
   
 ```vb  
 <target : attribute-list>  
 ```  
   
- <span data-ttu-id="39823-142">下表顯示可能的 `target` 值清單。</span><span class="sxs-lookup"><span data-stu-id="39823-142">The list of possible `target` values is shown in the following table.</span></span>  
+ <span data-ttu-id="363c1-142">下表顯示可能的 `target` 值清單。</span><span class="sxs-lookup"><span data-stu-id="363c1-142">The list of possible `target` values is shown in the following table.</span></span>  
   
-|<span data-ttu-id="39823-143">目標值</span><span class="sxs-lookup"><span data-stu-id="39823-143">Target value</span></span>|<span data-ttu-id="39823-144">適用於</span><span class="sxs-lookup"><span data-stu-id="39823-144">Applies to</span></span>|  
+|<span data-ttu-id="363c1-143">目標值</span><span class="sxs-lookup"><span data-stu-id="363c1-143">Target value</span></span>|<span data-ttu-id="363c1-144">適用於</span><span class="sxs-lookup"><span data-stu-id="363c1-144">Applies to</span></span>|  
 |------------------|----------------|  
-|`assembly`|<span data-ttu-id="39823-145">整個組件</span><span class="sxs-lookup"><span data-stu-id="39823-145">Entire assembly</span></span>|  
-|`module`|<span data-ttu-id="39823-146">目前的組件模組 (這與 Visual Basic 模組不同)</span><span class="sxs-lookup"><span data-stu-id="39823-146">Current assembly module (which is different from a Visual Basic Module)</span></span>|  
+|`assembly`|<span data-ttu-id="363c1-145">整個組件</span><span class="sxs-lookup"><span data-stu-id="363c1-145">Entire assembly</span></span>|  
+|`module`|<span data-ttu-id="363c1-146">目前的組件模組 (這與 Visual Basic 模組不同)</span><span class="sxs-lookup"><span data-stu-id="363c1-146">Current assembly module (which is different from a Visual Basic Module)</span></span>|  
   
- <span data-ttu-id="39823-147">下列範例示範如何將屬性套用到組件和模組。</span><span class="sxs-lookup"><span data-stu-id="39823-147">The following example shows how to apply attributes to assemblies and modules.</span></span> <span data-ttu-id="39823-148">如需詳細資訊，請參閱[通用屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)。</span><span class="sxs-lookup"><span data-stu-id="39823-148">For more information, see [Common Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md).</span></span>  
+ <span data-ttu-id="363c1-147">下列範例示範如何將屬性套用到組件和模組。</span><span class="sxs-lookup"><span data-stu-id="363c1-147">The following example shows how to apply attributes to assemblies and modules.</span></span> <span data-ttu-id="363c1-148">如需詳細資訊，請參閱[通用屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)。</span><span class="sxs-lookup"><span data-stu-id="363c1-148">For more information, see [Common Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md).</span></span>  
   
 ```vb  
 Imports System.Reflection  
@@ -104,46 +104,46 @@ Imports System.Reflection
 Module: CLSCompliant(True)>   
 ```  
   
-## <a name="common-uses-for-attributes"></a><span data-ttu-id="39823-149">屬性的常見用法</span><span class="sxs-lookup"><span data-stu-id="39823-149">Common Uses for Attributes</span></span>  
- <span data-ttu-id="39823-150">下列清單包含一些程式碼中常見的屬性用法：</span><span class="sxs-lookup"><span data-stu-id="39823-150">The following list includes a few of the common uses of attributes in code:</span></span>  
+## <a name="common-uses-for-attributes"></a><span data-ttu-id="363c1-149">屬性的常見用法</span><span class="sxs-lookup"><span data-stu-id="363c1-149">Common Uses for Attributes</span></span>  
+ <span data-ttu-id="363c1-150">下列清單包含一些程式碼中常見的屬性用法：</span><span class="sxs-lookup"><span data-stu-id="363c1-150">The following list includes a few of the common uses of attributes in code:</span></span>  
   
-- <span data-ttu-id="39823-151">在 Web 服務中使用 `WebMethod` 屬性標示方法，以表示此方法應該可以透過 SOAP 通訊協定來呼叫。</span><span class="sxs-lookup"><span data-stu-id="39823-151">Marking methods using the `WebMethod` attribute in Web services to indicate that the method should be callable over the SOAP protocol.</span></span> <span data-ttu-id="39823-152">如需詳細資訊，請參閱<xref:System.Web.Services.WebMethodAttribute>。</span><span class="sxs-lookup"><span data-stu-id="39823-152">For more information, see <xref:System.Web.Services.WebMethodAttribute>.</span></span>  
+- <span data-ttu-id="363c1-151">在 Web 服務中使用 `WebMethod` 屬性標示方法，以表示此方法應該可以透過 SOAP 通訊協定來呼叫。</span><span class="sxs-lookup"><span data-stu-id="363c1-151">Marking methods using the `WebMethod` attribute in Web services to indicate that the method should be callable over the SOAP protocol.</span></span> <span data-ttu-id="363c1-152">如需詳細資訊，請參閱 <xref:System.Web.Services.WebMethodAttribute>。</span><span class="sxs-lookup"><span data-stu-id="363c1-152">For more information, see <xref:System.Web.Services.WebMethodAttribute>.</span></span>  
   
-- <span data-ttu-id="39823-153">描述在與原生程式碼交互作用時，如何封送處理方法參數。</span><span class="sxs-lookup"><span data-stu-id="39823-153">Describing how to marshal method parameters when interoperating with native code.</span></span> <span data-ttu-id="39823-154">如需詳細資訊，請參閱<xref:System.Runtime.InteropServices.MarshalAsAttribute>。</span><span class="sxs-lookup"><span data-stu-id="39823-154">For more information, see <xref:System.Runtime.InteropServices.MarshalAsAttribute>.</span></span>  
+- <span data-ttu-id="363c1-153">描述在與原生程式碼交互作用時，如何封送處理方法參數。</span><span class="sxs-lookup"><span data-stu-id="363c1-153">Describing how to marshal method parameters when interoperating with native code.</span></span> <span data-ttu-id="363c1-154">如需詳細資訊，請參閱 <xref:System.Runtime.InteropServices.MarshalAsAttribute>。</span><span class="sxs-lookup"><span data-stu-id="363c1-154">For more information, see <xref:System.Runtime.InteropServices.MarshalAsAttribute>.</span></span>  
   
-- <span data-ttu-id="39823-155">描述適用於類別、方法和介面的 COM 屬性。</span><span class="sxs-lookup"><span data-stu-id="39823-155">Describing the COM properties for classes, methods, and interfaces.</span></span>  
+- <span data-ttu-id="363c1-155">描述適用於類別、方法和介面的 COM 屬性。</span><span class="sxs-lookup"><span data-stu-id="363c1-155">Describing the COM properties for classes, methods, and interfaces.</span></span>  
   
-- <span data-ttu-id="39823-156">使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 類別呼叫 Unmanaged 程式碼。</span><span class="sxs-lookup"><span data-stu-id="39823-156">Calling unmanaged code using the <xref:System.Runtime.InteropServices.DllImportAttribute> class.</span></span>  
+- <span data-ttu-id="363c1-156">使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 類別呼叫 Unmanaged 程式碼。</span><span class="sxs-lookup"><span data-stu-id="363c1-156">Calling unmanaged code using the <xref:System.Runtime.InteropServices.DllImportAttribute> class.</span></span>  
   
-- <span data-ttu-id="39823-157">針對標題、版本、描述或商標等方面來描述您的組件。</span><span class="sxs-lookup"><span data-stu-id="39823-157">Describing your assembly in terms of title, version, description, or trademark.</span></span>  
+- <span data-ttu-id="363c1-157">針對標題、版本、描述或商標等方面來描述您的組件。</span><span class="sxs-lookup"><span data-stu-id="363c1-157">Describing your assembly in terms of title, version, description, or trademark.</span></span>  
   
-- <span data-ttu-id="39823-158">描述要將類別的哪些成員序列化以取得持續性。</span><span class="sxs-lookup"><span data-stu-id="39823-158">Describing which members of a class to serialize for persistence.</span></span>  
+- <span data-ttu-id="363c1-158">描述要將類別的哪些成員序列化以取得持續性。</span><span class="sxs-lookup"><span data-stu-id="363c1-158">Describing which members of a class to serialize for persistence.</span></span>  
   
-- <span data-ttu-id="39823-159">描述如何基於 XML 序列化目的，在類別成員與 XML 節點之間進行對應。</span><span class="sxs-lookup"><span data-stu-id="39823-159">Describing how to map between class members and XML nodes for XML serialization.</span></span>  
+- <span data-ttu-id="363c1-159">描述如何基於 XML 序列化目的，在類別成員與 XML 節點之間進行對應。</span><span class="sxs-lookup"><span data-stu-id="363c1-159">Describing how to map between class members and XML nodes for XML serialization.</span></span>  
   
-- <span data-ttu-id="39823-160">描述方法的安全性需求。</span><span class="sxs-lookup"><span data-stu-id="39823-160">Describing the security requirements for methods.</span></span>  
+- <span data-ttu-id="363c1-160">描述方法的安全性需求。</span><span class="sxs-lookup"><span data-stu-id="363c1-160">Describing the security requirements for methods.</span></span>  
   
-- <span data-ttu-id="39823-161">指定用來強制執行安全性的特性。</span><span class="sxs-lookup"><span data-stu-id="39823-161">Specifying characteristics used to enforce security.</span></span>  
+- <span data-ttu-id="363c1-161">指定用來強制執行安全性的特性。</span><span class="sxs-lookup"><span data-stu-id="363c1-161">Specifying characteristics used to enforce security.</span></span>  
   
-- <span data-ttu-id="39823-162">控制由 Just-In-Time (JIT) 編譯器所進行的最佳化，讓程式碼保持易於偵錯。</span><span class="sxs-lookup"><span data-stu-id="39823-162">Controlling optimizations by the just-in-time (JIT) compiler so the code remains easy to debug.</span></span>  
+- <span data-ttu-id="363c1-162">控制由 Just-In-Time (JIT) 編譯器所進行的最佳化，讓程式碼保持易於偵錯。</span><span class="sxs-lookup"><span data-stu-id="363c1-162">Controlling optimizations by the just-in-time (JIT) compiler so the code remains easy to debug.</span></span>  
   
-- <span data-ttu-id="39823-163">取得有關方法之呼叫端的資訊。</span><span class="sxs-lookup"><span data-stu-id="39823-163">Obtaining information about the caller to a method.</span></span>  
+- <span data-ttu-id="363c1-163">取得有關方法之呼叫端的資訊。</span><span class="sxs-lookup"><span data-stu-id="363c1-163">Obtaining information about the caller to a method.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="39823-164">相關章節</span><span class="sxs-lookup"><span data-stu-id="39823-164">Related Sections</span></span>  
- <span data-ttu-id="39823-165">如需詳細資訊，請參閱:</span><span class="sxs-lookup"><span data-stu-id="39823-165">For more information, see:</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="363c1-164">相關章節</span><span class="sxs-lookup"><span data-stu-id="363c1-164">Related Sections</span></span>  
+ <span data-ttu-id="363c1-165">如需詳細資訊，請參閱:</span><span class="sxs-lookup"><span data-stu-id="363c1-165">For more information, see:</span></span>  
   
-- [<span data-ttu-id="39823-166">建立自訂屬性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="39823-166">Creating Custom Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+- [<span data-ttu-id="363c1-166">建立自訂屬性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="363c1-166">Creating Custom Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
   
-- [<span data-ttu-id="39823-167">使用反映存取屬性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="39823-167">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
+- [<span data-ttu-id="363c1-167">使用反映存取屬性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="363c1-167">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
   
-- [<span data-ttu-id="39823-168">如何：建立 C /C++聯集，使用屬性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="39823-168">How to: Create a C/C++ Union by Using Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [<span data-ttu-id="363c1-168">如何：建立 C /C++聯集，使用屬性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="363c1-168">How to: Create a C/C++ Union by Using Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
   
-- [<span data-ttu-id="39823-169">通用屬性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="39823-169">Common Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
+- [<span data-ttu-id="363c1-169">通用屬性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="363c1-169">Common Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
   
-- [<span data-ttu-id="39823-170">呼叫端資訊 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="39823-170">Caller Information (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
+- [<span data-ttu-id="363c1-170">呼叫端資訊 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="363c1-170">Caller Information (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
-## <a name="see-also"></a><span data-ttu-id="39823-171">另請參閱</span><span class="sxs-lookup"><span data-stu-id="39823-171">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="363c1-171">另請參閱</span><span class="sxs-lookup"><span data-stu-id="363c1-171">See also</span></span>
 
-- [<span data-ttu-id="39823-172">Visual Basic 程式設計手冊</span><span class="sxs-lookup"><span data-stu-id="39823-172">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
-- [<span data-ttu-id="39823-173">反映 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="39823-173">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [<span data-ttu-id="39823-174">屬性</span><span class="sxs-lookup"><span data-stu-id="39823-174">Attributes</span></span>](../../../../standard/attributes/index.md)
+- [<span data-ttu-id="363c1-172">Visual Basic 程式設計手冊</span><span class="sxs-lookup"><span data-stu-id="363c1-172">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
+- [<span data-ttu-id="363c1-173">反映 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="363c1-173">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [<span data-ttu-id="363c1-174">屬性</span><span class="sxs-lookup"><span data-stu-id="363c1-174">Attributes</span></span>](../../../../standard/attributes/index.md)
