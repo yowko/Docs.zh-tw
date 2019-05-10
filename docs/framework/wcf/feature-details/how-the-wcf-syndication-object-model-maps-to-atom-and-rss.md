@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-ms.openlocfilehash: b5a7f68edc49a02bb99ca05765d4582b798e72ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1a2723a445c71dd883492907587f8cbe7b89666a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855201"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613210"
 ---
-# <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a><span data-ttu-id="06f65-102">WCF 新聞訂閱物件模型對應到 Atom 和 RSS 的方式</span><span class="sxs-lookup"><span data-stu-id="06f65-102">How the WCF Syndication Object Model Maps to Atom and RSS</span></span>
-<span data-ttu-id="06f65-103">開發 Windows Communication Foundation (WCF) 的新聞訂閱服務時，您可以建立摘要與項目使用下列類別：</span><span class="sxs-lookup"><span data-stu-id="06f65-103">When developing a Windows Communication Foundation (WCF) syndication service, you create feeds and items using the following classes:</span></span>  
+# <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a><span data-ttu-id="508dd-102">WCF 新聞訂閱物件模型對應到 Atom 和 RSS 的方式</span><span class="sxs-lookup"><span data-stu-id="508dd-102">How the WCF Syndication Object Model Maps to Atom and RSS</span></span>
+<span data-ttu-id="508dd-103">開發 Windows Communication Foundation (WCF) 的新聞訂閱服務時，您可以建立摘要與項目使用下列類別：</span><span class="sxs-lookup"><span data-stu-id="508dd-103">When developing a Windows Communication Foundation (WCF) syndication service, you create feeds and items using the following classes:</span></span>  
   
 - <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
@@ -31,29 +31,29 @@ ms.locfileid: "61855201"
   
 - <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
   
- <span data-ttu-id="06f65-104"><xref:System.ServiceModel.Syndication.SyndicationFeed> 可以序列化為任何一種用來定義格式器的同步發佈格式。</span><span class="sxs-lookup"><span data-stu-id="06f65-104">A <xref:System.ServiceModel.Syndication.SyndicationFeed> can be serialized into any syndication format for which a formatter is defined.</span></span> <span data-ttu-id="06f65-105">WCF 隨附兩個格式器：<xref:System.ServiceModel.Syndication.Atom10FeedFormatter>和<xref:System.ServiceModel.Syndication.Rss20FeedFormatter>。</span><span class="sxs-lookup"><span data-stu-id="06f65-105">WCF ships with two formatters: <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> and <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.</span></span>  
+ <span data-ttu-id="508dd-104"><xref:System.ServiceModel.Syndication.SyndicationFeed> 可以序列化為任何一種用來定義格式器的同步發佈格式。</span><span class="sxs-lookup"><span data-stu-id="508dd-104">A <xref:System.ServiceModel.Syndication.SyndicationFeed> can be serialized into any syndication format for which a formatter is defined.</span></span> <span data-ttu-id="508dd-105">WCF 隨附兩個格式器：<xref:System.ServiceModel.Syndication.Atom10FeedFormatter>和<xref:System.ServiceModel.Syndication.Rss20FeedFormatter>。</span><span class="sxs-lookup"><span data-stu-id="508dd-105">WCF ships with two formatters: <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> and <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.</span></span>  
   
- <span data-ttu-id="06f65-106">在 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 周圍的物件模型會與 Atom 1.0 規格 (而不是 RSS 2.0 規格) 較為符合。</span><span class="sxs-lookup"><span data-stu-id="06f65-106">The object model around <xref:System.ServiceModel.Syndication.SyndicationFeed> and <xref:System.ServiceModel.Syndication.SyndicationItem> is aligned more closely with the Atom 1.0 specification than the RSS 2.0 specification.</span></span> <span data-ttu-id="06f65-107">這是因為 Atom 1.0 是比較實質上的規格，可用來定義不明確或是從 RSS 2.0 規格中省略的項目。</span><span class="sxs-lookup"><span data-stu-id="06f65-107">This is because Atom 1.0 is a more substantial specification that defines elements that are ambiguous or omitted from the RSS 2.0 specification.</span></span> <span data-ttu-id="06f65-108">因為這個緣故，WCF 新聞訂閱物件模型中的許多項目會在 RSS 2.0 規格中沒有直接的表示法。</span><span class="sxs-lookup"><span data-stu-id="06f65-108">Because of this, many items in the WCF syndication object model have no direct representation in the RSS 2.0 specification.</span></span> <span data-ttu-id="06f65-109">當序列化<xref:System.ServiceModel.Syndication.SyndicationFeed>和<xref:System.ServiceModel.Syndication.SyndicationItem>物件至 RSS 2.0 時，WCF 可讓您將 Atom 特定的資料項目序列化為 Atom 規格符合的命名空間限定的延伸模組項目。</span><span class="sxs-lookup"><span data-stu-id="06f65-109">When serializing <xref:System.ServiceModel.Syndication.SyndicationFeed> and <xref:System.ServiceModel.Syndication.SyndicationItem> objects into RSS 2.0, WCF allows you to serialize Atom-specific data elements as namespace-qualified extension elements that conform to the Atom specification.</span></span> <span data-ttu-id="06f65-110">您可以將參數傳遞至 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> 建構函式來控制這個項目。</span><span class="sxs-lookup"><span data-stu-id="06f65-110">You can control this with a parameter passed to the <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> constructor.</span></span>  
+ <span data-ttu-id="508dd-106">在 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 周圍的物件模型會與 Atom 1.0 規格 (而不是 RSS 2.0 規格) 較為符合。</span><span class="sxs-lookup"><span data-stu-id="508dd-106">The object model around <xref:System.ServiceModel.Syndication.SyndicationFeed> and <xref:System.ServiceModel.Syndication.SyndicationItem> is aligned more closely with the Atom 1.0 specification than the RSS 2.0 specification.</span></span> <span data-ttu-id="508dd-107">這是因為 Atom 1.0 是比較實質上的規格，可用來定義不明確或是從 RSS 2.0 規格中省略的項目。</span><span class="sxs-lookup"><span data-stu-id="508dd-107">This is because Atom 1.0 is a more substantial specification that defines elements that are ambiguous or omitted from the RSS 2.0 specification.</span></span> <span data-ttu-id="508dd-108">因為這個緣故，WCF 新聞訂閱物件模型中的許多項目會在 RSS 2.0 規格中沒有直接的表示法。</span><span class="sxs-lookup"><span data-stu-id="508dd-108">Because of this, many items in the WCF syndication object model have no direct representation in the RSS 2.0 specification.</span></span> <span data-ttu-id="508dd-109">當序列化<xref:System.ServiceModel.Syndication.SyndicationFeed>和<xref:System.ServiceModel.Syndication.SyndicationItem>物件至 RSS 2.0 時，WCF 可讓您將 Atom 特定的資料項目序列化為 Atom 規格符合的命名空間限定的延伸模組項目。</span><span class="sxs-lookup"><span data-stu-id="508dd-109">When serializing <xref:System.ServiceModel.Syndication.SyndicationFeed> and <xref:System.ServiceModel.Syndication.SyndicationItem> objects into RSS 2.0, WCF allows you to serialize Atom-specific data elements as namespace-qualified extension elements that conform to the Atom specification.</span></span> <span data-ttu-id="508dd-110">您可以將參數傳遞至 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> 建構函式來控制這個項目。</span><span class="sxs-lookup"><span data-stu-id="508dd-110">You can control this with a parameter passed to the <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> constructor.</span></span>  
   
- <span data-ttu-id="06f65-111">本主題中的程式碼範例將使用此處所定義的兩種方法之一來實際執行序列化作業。</span><span class="sxs-lookup"><span data-stu-id="06f65-111">The code samples in this topic use one of two methods defined here to do the actual serialization.</span></span>  
+ <span data-ttu-id="508dd-111">本主題中的程式碼範例將使用此處所定義的兩種方法之一來實際執行序列化作業。</span><span class="sxs-lookup"><span data-stu-id="508dd-111">The code samples in this topic use one of two methods defined here to do the actual serialization.</span></span>  
   
- <span data-ttu-id="06f65-112">`SerializeFeed` 會序列化新聞訂閱摘要。</span><span class="sxs-lookup"><span data-stu-id="06f65-112">`SerializeFeed` serializes a syndication feed.</span></span>  
+ <span data-ttu-id="508dd-112">`SerializeFeed` 會序列化新聞訂閱摘要。</span><span class="sxs-lookup"><span data-stu-id="508dd-112">`SerializeFeed` serializes a syndication feed.</span></span>  
   
  [!code-csharp[SyndicationMapping#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#10)]
  [!code-vb[SyndicationMapping#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#10)]  
   
- <span data-ttu-id="06f65-113">`SerializeItem` 會序列化新聞訂閱項目。</span><span class="sxs-lookup"><span data-stu-id="06f65-113">`SerializeItem` serializes a syndication item.</span></span>  
+ <span data-ttu-id="508dd-113">`SerializeItem` 會序列化新聞訂閱項目。</span><span class="sxs-lookup"><span data-stu-id="508dd-113">`SerializeItem` serializes a syndication item.</span></span>  
   
  [!code-csharp[SyndicationMapping#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#11)]
  [!code-vb[SyndicationMapping#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#11)]  
   
-## <a name="syndicationfeed"></a><span data-ttu-id="06f65-114">SyndicationFeed</span><span class="sxs-lookup"><span data-stu-id="06f65-114">SyndicationFeed</span></span>  
- <span data-ttu-id="06f65-115">下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.SyndicationFeed> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="06f65-115">The following code example shows how to serialize the <xref:System.ServiceModel.Syndication.SyndicationFeed> class to Atom 1.0 and RSS 2.0.</span></span>  
+## <a name="syndicationfeed"></a><span data-ttu-id="508dd-114">SyndicationFeed</span><span class="sxs-lookup"><span data-stu-id="508dd-114">SyndicationFeed</span></span>  
+ <span data-ttu-id="508dd-115">下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.SyndicationFeed> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="508dd-115">The following code example shows how to serialize the <xref:System.ServiceModel.Syndication.SyndicationFeed> class to Atom 1.0 and RSS 2.0.</span></span>  
   
  [!code-csharp[SyndicationMapping#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#0)]
  [!code-vb[SyndicationMapping#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#0)]  
   
- <span data-ttu-id="06f65-116">下列 XML 會說明 <xref:System.ServiceModel.Syndication.SyndicationFeed> 如何序列化為 Atom 1.0。</span><span class="sxs-lookup"><span data-stu-id="06f65-116">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationFeed> is serialized to Atom 1.0.</span></span>  
+ <span data-ttu-id="508dd-116">下列 XML 會說明 <xref:System.ServiceModel.Syndication.SyndicationFeed> 如何序列化為 Atom 1.0。</span><span class="sxs-lookup"><span data-stu-id="508dd-116">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationFeed> is serialized to Atom 1.0.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -102,7 +102,7 @@ ms.locfileid: "61855201"
 </feed>  
 ```  
   
- <span data-ttu-id="06f65-117">下列 XML 說明 <xref:System.ServiceModel.Syndication.SyndicationFeed> 將如何序列化為 RSS 2.0。</span><span class="sxs-lookup"><span data-stu-id="06f65-117">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationFeed> is serialized to RSS 2.0.</span></span>  
+ <span data-ttu-id="508dd-117">下列 XML 說明 <xref:System.ServiceModel.Syndication.SyndicationFeed> 將如何序列化為 RSS 2.0。</span><span class="sxs-lookup"><span data-stu-id="508dd-117">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationFeed> is serialized to RSS 2.0.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -144,13 +144,13 @@ ms.locfileid: "61855201"
 </rss>  
 ```  
   
-## <a name="syndicationitem"></a><span data-ttu-id="06f65-118">SyndicationItem</span><span class="sxs-lookup"><span data-stu-id="06f65-118">SyndicationItem</span></span>  
- <span data-ttu-id="06f65-119">下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.SyndicationItem> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="06f65-119">The following code example shows how to serialize the <xref:System.ServiceModel.Syndication.SyndicationItem> class to Atom 1.0 and RSS 2.0.</span></span>  
+## <a name="syndicationitem"></a><span data-ttu-id="508dd-118">SyndicationItem</span><span class="sxs-lookup"><span data-stu-id="508dd-118">SyndicationItem</span></span>  
+ <span data-ttu-id="508dd-119">下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.SyndicationItem> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="508dd-119">The following code example shows how to serialize the <xref:System.ServiceModel.Syndication.SyndicationItem> class to Atom 1.0 and RSS 2.0.</span></span>  
   
  [!code-csharp[SyndicationMapping#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#1)]
  [!code-vb[SyndicationMapping#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#1)]  
   
- <span data-ttu-id="06f65-120">下列 XML 會說明 <xref:System.ServiceModel.Syndication.SyndicationItem> 如何序列化為 Atom 1.0。</span><span class="sxs-lookup"><span data-stu-id="06f65-120">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationItem> is serialized to Atom 1.0.</span></span>  
+ <span data-ttu-id="508dd-120">下列 XML 會說明 <xref:System.ServiceModel.Syndication.SyndicationItem> 如何序列化為 Atom 1.0。</span><span class="sxs-lookup"><span data-stu-id="508dd-120">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationItem> is serialized to Atom 1.0.</span></span>  
   
 ```xml  
 <entry xmlns="http://www.w3.org/2005/Atom">  
@@ -192,7 +192,7 @@ ms.locfileid: "61855201"
 </entry>  
 ```  
   
- <span data-ttu-id="06f65-121">下列 XML 說明 <xref:System.ServiceModel.Syndication.SyndicationItem> 將如何序列化為 RSS 2.0。</span><span class="sxs-lookup"><span data-stu-id="06f65-121">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationItem> is serialized to RSS 2.0.</span></span>  
+ <span data-ttu-id="508dd-121">下列 XML 說明 <xref:System.ServiceModel.Syndication.SyndicationItem> 將如何序列化為 RSS 2.0。</span><span class="sxs-lookup"><span data-stu-id="508dd-121">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationItem> is serialized to RSS 2.0.</span></span>  
   
 ```xml  
 <item>  
@@ -230,13 +230,13 @@ ms.locfileid: "61855201"
 </item>  
 ```  
   
-## <a name="syndicationperson"></a><span data-ttu-id="06f65-122">SyndicationPerson</span><span class="sxs-lookup"><span data-stu-id="06f65-122">SyndicationPerson</span></span>  
- <span data-ttu-id="06f65-123">下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.SyndicationPerson> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="06f65-123">The following code example shows how to serialize the <xref:System.ServiceModel.Syndication.SyndicationPerson> class to Atom 1.0 and RSS 2.0.</span></span>  
+## <a name="syndicationperson"></a><span data-ttu-id="508dd-122">SyndicationPerson</span><span class="sxs-lookup"><span data-stu-id="508dd-122">SyndicationPerson</span></span>  
+ <span data-ttu-id="508dd-123">下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.SyndicationPerson> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="508dd-123">The following code example shows how to serialize the <xref:System.ServiceModel.Syndication.SyndicationPerson> class to Atom 1.0 and RSS 2.0.</span></span>  
   
  [!code-csharp[SyndicationMapping#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#2)]
  [!code-vb[SyndicationMapping#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#2)]  
   
- <span data-ttu-id="06f65-124">下列 XML 會說明 <xref:System.ServiceModel.Syndication.SyndicationPerson> 如何序列化為 Atom 1.0。</span><span class="sxs-lookup"><span data-stu-id="06f65-124">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationPerson> is serialized to Atom 1.0.</span></span>  
+ <span data-ttu-id="508dd-124">下列 XML 會說明 <xref:System.ServiceModel.Syndication.SyndicationPerson> 如何序列化為 Atom 1.0。</span><span class="sxs-lookup"><span data-stu-id="508dd-124">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationPerson> is serialized to Atom 1.0.</span></span>  
   
 ```xml  
   <author>  
@@ -251,7 +251,7 @@ ms.locfileid: "61855201"
   </contributor>  
 ```  
   
- <span data-ttu-id="06f65-125">下列 XML 說明如果只有一個 <xref:System.ServiceModel.Syndication.SyndicationPerson> 分別存在於 <xref:System.ServiceModel.Syndication.SyndicationPerson> 或 `Authors` 集合的話，`Contributors` 類別將如何序列化為 RSS 2.0。</span><span class="sxs-lookup"><span data-stu-id="06f65-125">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationPerson> class is serialized to RSS 2.0 if only one <xref:System.ServiceModel.Syndication.SyndicationPerson> exists in the `Authors` or `Contributors` collections, respectively.</span></span>  
+ <span data-ttu-id="508dd-125">下列 XML 說明如果只有一個 <xref:System.ServiceModel.Syndication.SyndicationPerson> 分別存在於 <xref:System.ServiceModel.Syndication.SyndicationPerson> 或 `Authors` 集合的話，`Contributors` 類別將如何序列化為 RSS 2.0。</span><span class="sxs-lookup"><span data-stu-id="508dd-125">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationPerson> class is serialized to RSS 2.0 if only one <xref:System.ServiceModel.Syndication.SyndicationPerson> exists in the `Authors` or `Contributors` collections, respectively.</span></span>  
   
 ```xml  
 <author>Jesper.Aaberg@contoso.com</author>  
@@ -262,7 +262,7 @@ ms.locfileid: "61855201"
 </a10:contributor>  
 ```  
   
- <span data-ttu-id="06f65-126">下列 XML 說明如果有一個以上的 <xref:System.ServiceModel.Syndication.SyndicationPerson> 分別存在於 <xref:System.ServiceModel.Syndication.SyndicationPerson> 或 `Authors` 集合的話，`Contributors` 類別將如何序列化為 RSS 2.0。</span><span class="sxs-lookup"><span data-stu-id="06f65-126">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationPerson> class is serialized to RSS 2.0 if more than one <xref:System.ServiceModel.Syndication.SyndicationPerson> exists in the `Authors` or `Contributors` collections, respectively.</span></span>  
+ <span data-ttu-id="508dd-126">下列 XML 說明如果有一個以上的 <xref:System.ServiceModel.Syndication.SyndicationPerson> 分別存在於 <xref:System.ServiceModel.Syndication.SyndicationPerson> 或 `Authors` 集合的話，`Contributors` 類別將如何序列化為 RSS 2.0。</span><span class="sxs-lookup"><span data-stu-id="508dd-126">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationPerson> class is serialized to RSS 2.0 if more than one <xref:System.ServiceModel.Syndication.SyndicationPerson> exists in the `Authors` or `Contributors` collections, respectively.</span></span>  
   
 ```xml  
 <a10:author>  
@@ -287,67 +287,67 @@ ms.locfileid: "61855201"
 </a10:contributor>  
 ```  
   
-## <a name="syndicationlink"></a><span data-ttu-id="06f65-127">SyndicationLink</span><span class="sxs-lookup"><span data-stu-id="06f65-127">SyndicationLink</span></span>  
- <span data-ttu-id="06f65-128">下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.SyndicationLink> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="06f65-128">The following code example shows how to serialize the <xref:System.ServiceModel.Syndication.SyndicationLink> class to Atom 1.0 and RSS 2.0.</span></span>  
+## <a name="syndicationlink"></a><span data-ttu-id="508dd-127">SyndicationLink</span><span class="sxs-lookup"><span data-stu-id="508dd-127">SyndicationLink</span></span>  
+ <span data-ttu-id="508dd-128">下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.SyndicationLink> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="508dd-128">The following code example shows how to serialize the <xref:System.ServiceModel.Syndication.SyndicationLink> class to Atom 1.0 and RSS 2.0.</span></span>  
   
  [!code-csharp[SyndicationMapping#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#3)]
  [!code-vb[SyndicationMapping#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#3)]  
   
- <span data-ttu-id="06f65-129">下列 XML 會說明 <xref:System.ServiceModel.Syndication.SyndicationLink> 如何序列化為 Atom 1.0。</span><span class="sxs-lookup"><span data-stu-id="06f65-129">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationLink> is serialized to Atom 1.0.</span></span>  
+ <span data-ttu-id="508dd-129">下列 XML 會說明 <xref:System.ServiceModel.Syndication.SyndicationLink> 如何序列化為 Atom 1.0。</span><span class="sxs-lookup"><span data-stu-id="508dd-129">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationLink> is serialized to Atom 1.0.</span></span>  
   
  `<link rel="alternate" type="text/html" title="My Link Title" length="2048" href="http://contoso/MyLink" />`  
   
- <span data-ttu-id="06f65-130">下列 XML 說明 <xref:System.ServiceModel.Syndication.SyndicationLink> 將如何序列化為 RSS 2.0。</span><span class="sxs-lookup"><span data-stu-id="06f65-130">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationLink> is serialized to RSS 2.0.</span></span>  
+ <span data-ttu-id="508dd-130">下列 XML 說明 <xref:System.ServiceModel.Syndication.SyndicationLink> 將如何序列化為 RSS 2.0。</span><span class="sxs-lookup"><span data-stu-id="508dd-130">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationLink> is serialized to RSS 2.0.</span></span>  
   
  `<a10:link rel="alternate" type="text/html" title="My Link Title" length="2048" href="http://contoso/MyLink" />`  
   
-## <a name="syndicationcategory"></a><span data-ttu-id="06f65-131">SyndicationCategory</span><span class="sxs-lookup"><span data-stu-id="06f65-131">SyndicationCategory</span></span>  
- <span data-ttu-id="06f65-132">下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.SyndicationCategory> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="06f65-132">The following code example shows how to serialize the <xref:System.ServiceModel.Syndication.SyndicationCategory> class to Atom 1.0 and RSS 2.0.</span></span>  
+## <a name="syndicationcategory"></a><span data-ttu-id="508dd-131">SyndicationCategory</span><span class="sxs-lookup"><span data-stu-id="508dd-131">SyndicationCategory</span></span>  
+ <span data-ttu-id="508dd-132">下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.SyndicationCategory> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="508dd-132">The following code example shows how to serialize the <xref:System.ServiceModel.Syndication.SyndicationCategory> class to Atom 1.0 and RSS 2.0.</span></span>  
   
  [!code-csharp[SyndicationMapping#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#4)]
  [!code-vb[SyndicationMapping#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#4)]  
   
- <span data-ttu-id="06f65-133">下列 XML 會說明 <xref:System.ServiceModel.Syndication.SyndicationCategory> 如何序列化為 Atom 1.0。</span><span class="sxs-lookup"><span data-stu-id="06f65-133">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationCategory> is serialized to Atom 1.0.</span></span>  
+ <span data-ttu-id="508dd-133">下列 XML 會說明 <xref:System.ServiceModel.Syndication.SyndicationCategory> 如何序列化為 Atom 1.0。</span><span class="sxs-lookup"><span data-stu-id="508dd-133">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationCategory> is serialized to Atom 1.0.</span></span>  
   
  `<category term="categoryName" label="categoryLabel" scheme="categoryScheme" />`  
   
- <span data-ttu-id="06f65-134">下列 XML 說明 <xref:System.ServiceModel.Syndication.SyndicationCategory> 將如何序列化為 RSS 2.0。</span><span class="sxs-lookup"><span data-stu-id="06f65-134">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationCategory> is serialized to RSS 2.0.</span></span>  
+ <span data-ttu-id="508dd-134">下列 XML 說明 <xref:System.ServiceModel.Syndication.SyndicationCategory> 將如何序列化為 RSS 2.0。</span><span class="sxs-lookup"><span data-stu-id="508dd-134">The following XML shows how the <xref:System.ServiceModel.Syndication.SyndicationCategory> is serialized to RSS 2.0.</span></span>  
   
  `<category domain="categoryScheme">categoryName</category>`  
   
-## <a name="textsyndicationcontent"></a><span data-ttu-id="06f65-135">TextSyndicationContent</span><span class="sxs-lookup"><span data-stu-id="06f65-135">TextSyndicationContent</span></span>  
- <span data-ttu-id="06f65-136">下列程式碼範例說明當您使用 HTML 內容來建立 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 的時候，將 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="06f65-136">The following code example shows how to serialize the <xref:System.ServiceModel.Syndication.TextSyndicationContent> class to Atom 1.0 and RSS 2.0 when <xref:System.ServiceModel.Syndication.TextSyndicationContent> is created with HTML content.</span></span>  
+## <a name="textsyndicationcontent"></a><span data-ttu-id="508dd-135">TextSyndicationContent</span><span class="sxs-lookup"><span data-stu-id="508dd-135">TextSyndicationContent</span></span>  
+ <span data-ttu-id="508dd-136">下列程式碼範例說明當您使用 HTML 內容來建立 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 的時候，將 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="508dd-136">The following code example shows how to serialize the <xref:System.ServiceModel.Syndication.TextSyndicationContent> class to Atom 1.0 and RSS 2.0 when <xref:System.ServiceModel.Syndication.TextSyndicationContent> is created with HTML content.</span></span>  
   
  [!code-csharp[SyndicationMapping#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#5)]
  [!code-vb[SyndicationMapping#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#5)]  
   
- <span data-ttu-id="06f65-137">下列 XML 說明使用 HTML 內容的 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 類別將如何序列化為 Atom 1.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="06f65-137">The following XML shows how the <xref:System.ServiceModel.Syndication.TextSyndicationContent> class with HTML content is serialized to Atom 1.0.</span></span>  
+ <span data-ttu-id="508dd-137">下列 XML 說明使用 HTML 內容的 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 類別將如何序列化為 Atom 1.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="508dd-137">The following XML shows how the <xref:System.ServiceModel.Syndication.TextSyndicationContent> class with HTML content is serialized to Atom 1.0.</span></span>  
   
  `<content type="html"><html> some html </html></content>`  
   
- <span data-ttu-id="06f65-138">下列 XML 說明使用 HTML 內容的 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 類別將如何序列化為 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="06f65-138">The following XML shows how the <xref:System.ServiceModel.Syndication.TextSyndicationContent> class with HTML content is serialized to RSS 2.0.</span></span>  
+ <span data-ttu-id="508dd-138">下列 XML 說明使用 HTML 內容的 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 類別將如何序列化為 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="508dd-138">The following XML shows how the <xref:System.ServiceModel.Syndication.TextSyndicationContent> class with HTML content is serialized to RSS 2.0.</span></span>  
   
  `<description><html> some html </html></description>`  
   
- <span data-ttu-id="06f65-139">下列程式碼範例說明當您使用純文字內容來建立 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 的時候，將 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="06f65-139">The following code example shows how to serialize the <xref:System.ServiceModel.Syndication.TextSyndicationContent> class to Atom 1.0 and RSS 2.0 when <xref:System.ServiceModel.Syndication.TextSyndicationContent> is created with plain text content.</span></span>  
+ <span data-ttu-id="508dd-139">下列程式碼範例說明當您使用純文字內容來建立 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 的時候，將 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="508dd-139">The following code example shows how to serialize the <xref:System.ServiceModel.Syndication.TextSyndicationContent> class to Atom 1.0 and RSS 2.0 when <xref:System.ServiceModel.Syndication.TextSyndicationContent> is created with plain text content.</span></span>  
   
  [!code-csharp[SyndicationMapping#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#6)]
  [!code-vb[SyndicationMapping#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#6)]  
   
- <span data-ttu-id="06f65-140">下列 XML 說明使用純文字內容的 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 類別將如何序列化為 Atom 1.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="06f65-140">The following XML shows how the <xref:System.ServiceModel.Syndication.TextSyndicationContent> class with plain text content is serialized to Atom 1.0.</span></span>  
+ <span data-ttu-id="508dd-140">下列 XML 說明使用純文字內容的 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 類別將如何序列化為 Atom 1.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="508dd-140">The following XML shows how the <xref:System.ServiceModel.Syndication.TextSyndicationContent> class with plain text content is serialized to Atom 1.0.</span></span>  
   
  `<content type="text">Some Plain Text</content>`  
   
- <span data-ttu-id="06f65-141">下列 XML 說明使用純文字內容的 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 類別將如何序列化為 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="06f65-141">The following XML shows how the <xref:System.ServiceModel.Syndication.TextSyndicationContent> class with plain text content is serialized to RSS 2.0.</span></span>  
+ <span data-ttu-id="508dd-141">下列 XML 說明使用純文字內容的 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 類別將如何序列化為 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="508dd-141">The following XML shows how the <xref:System.ServiceModel.Syndication.TextSyndicationContent> class with plain text content is serialized to RSS 2.0.</span></span>  
   
  `<description>Some Plain Text</description>`  
   
- <span data-ttu-id="06f65-142">下列程式碼範例說明當您使用 XHTML 內容來建立 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 的時候，將 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="06f65-142">The following code example shows how to serialize the <xref:System.ServiceModel.Syndication.TextSyndicationContent> class to Atom 1.0 and RSS 2.0 when <xref:System.ServiceModel.Syndication.TextSyndicationContent> is created with XHTML content.</span></span>  
+ <span data-ttu-id="508dd-142">下列程式碼範例說明當您使用 XHTML 內容來建立 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 的時候，將 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="508dd-142">The following code example shows how to serialize the <xref:System.ServiceModel.Syndication.TextSyndicationContent> class to Atom 1.0 and RSS 2.0 when <xref:System.ServiceModel.Syndication.TextSyndicationContent> is created with XHTML content.</span></span>  
   
  [!code-csharp[SyndicationMapping#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#7)]
  [!code-vb[SyndicationMapping#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#7)]  
   
- <span data-ttu-id="06f65-143">下列 XML 說明使用 XHTML 內容的 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 類別將如何序列化為 Atom 1.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="06f65-143">The following XML shows how the <xref:System.ServiceModel.Syndication.TextSyndicationContent> class with XHTML content is serialized to Atom 1.0.</span></span>  
+ <span data-ttu-id="508dd-143">下列 XML 說明使用 XHTML 內容的 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 類別將如何序列化為 Atom 1.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="508dd-143">The following XML shows how the <xref:System.ServiceModel.Syndication.TextSyndicationContent> class with XHTML content is serialized to Atom 1.0.</span></span>  
   
  `<content type="xhtml">`  
   
@@ -355,33 +355,33 @@ ms.locfileid: "61855201"
   
  `</content>`  
   
- <span data-ttu-id="06f65-144">下列 XML 說明使用 XHTML 內容的 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 類別將如何序列化為 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="06f65-144">The following XML shows how the <xref:System.ServiceModel.Syndication.TextSyndicationContent> class with XHTML content is serialized to RSS 2.0.</span></span>  
+ <span data-ttu-id="508dd-144">下列 XML 說明使用 XHTML 內容的 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 類別將如何序列化為 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="508dd-144">The following XML shows how the <xref:System.ServiceModel.Syndication.TextSyndicationContent> class with XHTML content is serialized to RSS 2.0.</span></span>  
   
  `<description><html> some xhtml </html></description>`  
   
-## <a name="urlsyndicationcontent"></a><span data-ttu-id="06f65-145">UrlSyndicationContent</span><span class="sxs-lookup"><span data-stu-id="06f65-145">UrlSyndicationContent</span></span>  
- <span data-ttu-id="06f65-146">下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.UrlSyndicationContent> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="06f65-146">The following code example shows how to serialize the <xref:System.ServiceModel.Syndication.UrlSyndicationContent> class to Atom 1.0 and RSS 2.0.</span></span>  
+## <a name="urlsyndicationcontent"></a><span data-ttu-id="508dd-145">UrlSyndicationContent</span><span class="sxs-lookup"><span data-stu-id="508dd-145">UrlSyndicationContent</span></span>  
+ <span data-ttu-id="508dd-146">下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.UrlSyndicationContent> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="508dd-146">The following code example shows how to serialize the <xref:System.ServiceModel.Syndication.UrlSyndicationContent> class to Atom 1.0 and RSS 2.0.</span></span>  
   
  [!code-csharp[SyndicationMapping#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#8)]
  [!code-vb[SyndicationMapping#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#8)]  
   
- <span data-ttu-id="06f65-147">下列 XML 說明 <xref:System.ServiceModel.Syndication.UrlSyndicationContent> 類別如何序列化為 Atom 1.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="06f65-147">The following XML shows how the <xref:System.ServiceModel.Syndication.UrlSyndicationContent> class is serialized to Atom 1.0.</span></span>  
+ <span data-ttu-id="508dd-147">下列 XML 說明 <xref:System.ServiceModel.Syndication.UrlSyndicationContent> 類別如何序列化為 Atom 1.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="508dd-147">The following XML shows how the <xref:System.ServiceModel.Syndication.UrlSyndicationContent> class is serialized to Atom 1.0.</span></span>  
   
  `<content type="audio" src="http://someurl/" />`  
   
- <span data-ttu-id="06f65-148">下列 XML 說明使用 XHTML 內容的 <xref:System.ServiceModel.Syndication.UrlSyndicationContent> 類別將如何序列化為 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="06f65-148">The following XML shows how the <xref:System.ServiceModel.Syndication.UrlSyndicationContent> class with XHTML content is serialized to RSS 2.0.</span></span>  
+ <span data-ttu-id="508dd-148">下列 XML 說明使用 XHTML 內容的 <xref:System.ServiceModel.Syndication.UrlSyndicationContent> 類別將如何序列化為 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="508dd-148">The following XML shows how the <xref:System.ServiceModel.Syndication.UrlSyndicationContent> class with XHTML content is serialized to RSS 2.0.</span></span>  
   
  `<description />`  
   
  `<content type="audio" src="http://Contoso/someurl/" xmlns="http://www.w3.org/2005/Atom" />`  
   
-## <a name="xmlsyndicationcontent"></a><span data-ttu-id="06f65-149">XmlSyndicationContent</span><span class="sxs-lookup"><span data-stu-id="06f65-149">XmlSyndicationContent</span></span>  
- <span data-ttu-id="06f65-150">下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.XmlSyndicationContent> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="06f65-150">The following code example shows how to serialize the <xref:System.ServiceModel.Syndication.XmlSyndicationContent> class to Atom 1.0 and RSS 2.0.</span></span>  
+## <a name="xmlsyndicationcontent"></a><span data-ttu-id="508dd-149">XmlSyndicationContent</span><span class="sxs-lookup"><span data-stu-id="508dd-149">XmlSyndicationContent</span></span>  
+ <span data-ttu-id="508dd-150">下列程式碼範例說明將 <xref:System.ServiceModel.Syndication.XmlSyndicationContent> 類別序列化為 Atom 1.0 與 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="508dd-150">The following code example shows how to serialize the <xref:System.ServiceModel.Syndication.XmlSyndicationContent> class to Atom 1.0 and RSS 2.0.</span></span>  
   
  [!code-csharp[SyndicationMapping#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#9)]
  [!code-vb[SyndicationMapping#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#9)]  
   
- <span data-ttu-id="06f65-151">下列 XML 說明 <xref:System.ServiceModel.Syndication.XmlSyndicationContent> 類別如何序列化為 Atom 1.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="06f65-151">The following XML shows how the <xref:System.ServiceModel.Syndication.XmlSyndicationContent> class is serialized to Atom 1.0.</span></span>  
+ <span data-ttu-id="508dd-151">下列 XML 說明 <xref:System.ServiceModel.Syndication.XmlSyndicationContent> 類別如何序列化為 Atom 1.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="508dd-151">The following XML shows how the <xref:System.ServiceModel.Syndication.XmlSyndicationContent> class is serialized to Atom 1.0.</span></span>  
   
  `<content type="mytype">`  
   
@@ -389,7 +389,7 @@ ms.locfileid: "61855201"
   
  `</content>`  
   
- <span data-ttu-id="06f65-152">下列 XML 說明使用 XHTML 內容的 <xref:System.ServiceModel.Syndication.XmlSyndicationContent> 類別將如何序列化為 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="06f65-152">The following XML shows how the <xref:System.ServiceModel.Syndication.XmlSyndicationContent> class with XHTML content is serialized to RSS 2.0.</span></span>  
+ <span data-ttu-id="508dd-152">下列 XML 說明使用 XHTML 內容的 <xref:System.ServiceModel.Syndication.XmlSyndicationContent> 類別將如何序列化為 RSS 2.0 的方式。</span><span class="sxs-lookup"><span data-stu-id="508dd-152">The following XML shows how the <xref:System.ServiceModel.Syndication.XmlSyndicationContent> class with XHTML content is serialized to RSS 2.0.</span></span>  
   
  `<content type="mytype" xmlns="http://www.w3.org/2005/Atom">`  
   
@@ -397,10 +397,10 @@ ms.locfileid: "61855201"
   
  `</content>`  
   
-## <a name="see-also"></a><span data-ttu-id="06f65-153">另請參閱</span><span class="sxs-lookup"><span data-stu-id="06f65-153">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="508dd-153">另請參閱</span><span class="sxs-lookup"><span data-stu-id="508dd-153">See also</span></span>
 
-- [<span data-ttu-id="06f65-154">WCF 摘要整合概觀</span><span class="sxs-lookup"><span data-stu-id="06f65-154">WCF Syndication Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
-- [<span data-ttu-id="06f65-155">摘要整合架構</span><span class="sxs-lookup"><span data-stu-id="06f65-155">Architecture of Syndication</span></span>](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
-- [<span data-ttu-id="06f65-156">如何：建立基本 RSS 摘要</span><span class="sxs-lookup"><span data-stu-id="06f65-156">How to: Create a Basic RSS Feed</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)
-- [<span data-ttu-id="06f65-157">如何：建立基本 Atom 摘要</span><span class="sxs-lookup"><span data-stu-id="06f65-157">How to: Create a Basic Atom Feed</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)
-- [<span data-ttu-id="06f65-158">如何：公開 （expose) 的摘要為這兩個 Atom 和 RSS</span><span class="sxs-lookup"><span data-stu-id="06f65-158">How to: Expose a Feed as Both Atom and RSS</span></span>](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+- [<span data-ttu-id="508dd-154">WCF 摘要整合概觀</span><span class="sxs-lookup"><span data-stu-id="508dd-154">WCF Syndication Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
+- [<span data-ttu-id="508dd-155">摘要整合架構</span><span class="sxs-lookup"><span data-stu-id="508dd-155">Architecture of Syndication</span></span>](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
+- [<span data-ttu-id="508dd-156">如何：建立基本 RSS 摘要</span><span class="sxs-lookup"><span data-stu-id="508dd-156">How to: Create a Basic RSS Feed</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)
+- [<span data-ttu-id="508dd-157">如何：建立基本 Atom 摘要</span><span class="sxs-lookup"><span data-stu-id="508dd-157">How to: Create a Basic Atom Feed</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)
+- [<span data-ttu-id="508dd-158">如何：公開 （expose) 的摘要為這兩個 Atom 和 RSS</span><span class="sxs-lookup"><span data-stu-id="508dd-158">How to: Expose a Feed as Both Atom and RSS</span></span>](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
