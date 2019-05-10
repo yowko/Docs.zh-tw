@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: 98f8c6611340c89409697918ff8a16eaabe3c7a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a4b2edce76bc5ab97e644ec8dbdf045931e87786
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010551"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663421"
 ---
 # <a name="dependency-property-metadata"></a>相依性屬性中繼資料
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統包含中繼資料報告系統，其針對屬性所報告的內容比透過反映或一般[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 特性報告的內容還多。 相依性屬性的中繼資料也可由定義相依性屬性的類別唯一指派、在相依性屬性新增至不同類別時變更，以及由從定義的基底類別繼承相依性屬性的所有衍生類別明確覆寫。  

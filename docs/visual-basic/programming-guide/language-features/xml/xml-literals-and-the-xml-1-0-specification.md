@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], XML 1.0 specification
 ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
-ms.openlocfilehash: 4cc64bc5469b86a35a9dc45e09fa8fc9260fdcad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e00812ccf463342502eef96c91d62ba63223424f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761711"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639870"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>XML 常值和 XML 1.0 規格 (Visual Basic)
 在 Visual Basic 中的 XML 常值語法支援大部分的可延伸標記語言 (XML) 1.0 規格。 如需有關 XML 1.0 規格的詳細資訊，請參閱 <<c0> [ 可延伸標記語言 (XML) 1.0](https://www.w3.org/TR/xml) W3C 網站上。  

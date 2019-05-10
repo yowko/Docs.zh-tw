@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c9b60cdef2af25ce712fcb2401b7f776d3add5b5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754553"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660403"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>HOW TO：使用追蹤和偵錯進行條件式編譯
 當您於開發期間偵錯應用程式時，追蹤及偵錯輸出都會移至 Visual Studio 中的 [輸出] 視窗。 然而，若要在已部署的應用程式中包含追蹤功能，您必須在啟用 **TRACE** 編譯器指示詞的情況下編譯已經過檢測的應用程式。 這可將追蹤程式碼編譯成應用程式的發行版本。 如果您沒有啟用 **TRACE** 指示詞，則在編譯期間會忽略所有的追蹤程式碼，並且不會在您將部署的可執行程式碼中包含追蹤程式碼。  

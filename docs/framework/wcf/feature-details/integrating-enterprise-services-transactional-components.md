@@ -2,12 +2,12 @@
 title: 整合 Enterprise Services 異動元件
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 33e09eab1d7ad24dc234cfff21e352611e0b2ef9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 682bf5b92a5e01391766d614e955954019a4ce8d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047031"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638675"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>整合 Enterprise Services 異動元件
 Windows Communication Foundation (WCF) 提供與 Enterprise Services 整合的自動機制 (請參閱[COM + 應用程式與整合](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md))。 不過，您可能希望能夠彈性地開發出可透過內部方式使用裝載於 Enterprise Services 之異動元件的服務。 由於 WCF 交易功能建置在<xref:System.Transactions>基礎結構，與 WCF 整合 Enterprise Services 的程序等同於可用於指定之間的互通性<xref:System.Transactions>和 Enterprise Services 中所述[與 Enterprise Services 和 COM + 交易的互通性](https://go.microsoft.com/fwlink/?LinkId=94949)。  

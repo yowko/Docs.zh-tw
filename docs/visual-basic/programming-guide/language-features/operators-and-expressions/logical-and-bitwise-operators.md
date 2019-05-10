@@ -21,12 +21,12 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: ac47b6d7fa4861d18646a23f442caccc4062852f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23f3758527b787551ad83cbd4e19076b788c9dd8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864490"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649699"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic 中的邏輯運算子和位元運算子
 邏輯運算子會比較`Boolean`運算式，並傳回`Boolean`結果。 `And`， `Or`， `AndAlso`， `OrElse`，並`Xor`運算子*二進位*因為它們會使用兩個運算元，而`Not`運算子是*一元*因為這會在單一運算元。 其中有些運算子也可以執行位元整數值上的邏輯作業。  
@@ -72,13 +72,13 @@ ms.locfileid: "61864490"
   
  上述範例中設定的值`x`為 1。 發生這種情況，原因如下：  
   
--   的值會被當作二進位檔：  
+- 的值會被當作二進位檔：  
   
      以二進位格式的 3 = 011  
   
      以二進位格式的 5 = 101  
   
--   `And`運算子會比較二進位表示，也就是一個二進位位置 （位元） 一次。 如果指定位置的兩個位元都是 1，結果會在該位置中置入 1。 如果其中一個位元為 0，0 是會放在結果中的該位置中。 在上述範例中這適用於，如下所示：  
+- `And`運算子會比較二進位表示，也就是一個二進位位置 （位元） 一次。 如果指定位置的兩個位元都是 1，結果會在該位置中置入 1。 如果其中一個位元為 0，0 是會放在結果中的該位置中。 在上述範例中這適用於，如下所示：  
   
      011 (3 以二進位格式)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "61864490"
   
      001 （結果，以二進位格式）  
   
--   結果會被視為十進位。 001 的值是 1，二進位表示法因此`x`= 1。  
+- 結果會被視為十進位。 001 的值是 1，二進位表示法因此`x`= 1。  
   
  位元`Or`作業很類似，不同之處在於如果一個或兩個比較的位元為 1，1 指派的結果位元。 `Xor` 指派的結果位元為 1，如果只有其中一個 （非兩者） 的比較位元為 1。 `Not` 使用單一運算元反轉所有位元，包括正負號位元，並將該值指派給結果。 這表示用於簽署正數`Not`一律會傳回一個負數值，和負號，`Not`一律會傳回正數或零值。  
   

@@ -4,12 +4,12 @@ description: 了解開發 Docker 應用程式的 「 內部迴圈 」 工作流�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dda75e120b0f17a591fadc22944c78d1174ca156
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050539"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664384"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 應用程式的內部迴圈開發工作流程
 
@@ -21,11 +21,11 @@ ms.locfileid: "62050539"
 
 Docker 映像的執行個體的容器將會包含這些元件：
 
--   作業系統選取項目 （例如，對 Linux 散發套件或 Windows）
+- 作業系統選取項目 （例如，對 Linux 散發套件或 Windows）
 
 - 加入開發人員 （例如，應用程式二進位檔） 的檔案
 
--   設定 （例如，環境設定和相依性）
+- 設定 （例如，環境設定和相依性）
 
 - 指示的哪些處理程序來執行 docker
 
@@ -115,7 +115,7 @@ Microsoft 提供的 Visual Studio Code 中，也就是支援 Mac、 Windows、 �
 
 ```Dockerfile
 # Base Docker image to use  
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.1
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
   
 # Set the Working Directory and files to be copied to the image  
 ARG source  
@@ -129,7 +129,7 @@ EXPOSE 80
 ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 ```
 
-在此情況下，映像為基礎的官方 ASP.NET Core Docker 映像 （適用於 Linux 和 Windows 的多架構），根據列 2.1 版`FROM mcr.microsoft.com/dotnet/core/aspnet:2.1`。 (如需有關本主題的詳細資訊，請參閱 < [ASP.NET Core Docker 映像](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/)頁面並[.NET Core Docker 映像](https://hub.docker.com/_/microsoft-dotnet-core/)頁面)。
+在此情況下，映像為基礎的官方 ASP.NET Core Docker 映像 （適用於 Linux 和 Windows 的多架構），根據列 2.2 版`FROM mcr.microsoft.com/dotnet/core/aspnet:2.2`。 (如需有關本主題的詳細資訊，請參閱 < [ASP.NET Core Docker 映像](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/)頁面並[.NET Core Docker 映像](https://hub.docker.com/_/microsoft-dotnet-core/)頁面)。
 
 在 DockerFile 中，您也可以指示 Docker 接聽 TCP 連接埠，您將使用在執行階段 （例如連接埠 80）。
 

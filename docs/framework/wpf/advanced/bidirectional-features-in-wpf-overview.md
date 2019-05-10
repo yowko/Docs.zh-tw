@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 16cf232ccbdcca496aaa18fc2cfac280072ca24f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032015"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655480"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF 中的雙向功能概觀
 不同於任何其他開發平台[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]有許多支援雙向內容的快速開發功能，例如混合使用由左至右和由右至左相同的文件中的資料。 在此同時，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]建立需要雙向功能，如阿拉伯文和希伯來文談到使用者之使用者的絕佳體驗。  
@@ -208,7 +208,7 @@ ms.locfileid: "62032015"
   
  首先，設定應用程式元件的`NumberSubstitution.CultureSource="Text"`。 使用此設定可確保設定並非由[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]針對文字項目，具有 「 使用者 」 為預設值，例如<xref:System.Windows.Controls.TextBlock>。  
   
-例如：  
+例如:   
 
 ```xaml  
 <TextBlock

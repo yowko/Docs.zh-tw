@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8a39c50bfc452c807a18a9bf0a65e56cb75d20aa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800761"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655635"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>HOW TO：確保繫結至相同資料來源的多個控制項都能保持同步
 使用 Windows Form 中的資料繫結時，有時候多個控制項繫結至相同的資料來源中。 在某些情況下，可能必須採取額外步驟以確保控制項的繫結的內容維持彼此以及與資料來源同步處理。 這些步驟會需要有兩種情況：  

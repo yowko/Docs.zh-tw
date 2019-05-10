@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2be428f0ae83596a4398fc9830af40d05f6ab191
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047005"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638658"
 ---
 # <a name="integrating-with-com-applications-overview"></a>整合 COM 應用程式概觀
 Windows Communication Foundation (WCF) 提供豐富的環境，以建立連接的應用程式的 managed 程式碼開發人員。 不過，如果您已長期開發以 COM 為基礎的 unmanaged 程式碼，並不會想要移轉，您可以仍然 WCF Web 服務直接整合您現有的程式碼使用 WCF 服務 moniker。 服務 Moniker 可以從多種 COM 架構開發環境中使用，例如 Office VBA、Visual Basic 6.0 或 Visual C++ 6.0。  

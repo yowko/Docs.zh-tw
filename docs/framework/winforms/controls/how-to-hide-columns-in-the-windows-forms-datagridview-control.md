@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], hiding columns
 - columns [Windows Forms], hiding
 ms.assetid: 3f94143a-2ef0-49a5-a22a-b2e6f9289642
-ms.openlocfilehash: 40fccee551e7840ef474e7775873d4e7178748fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d991f3e6a2d70631c2a904bc5952a9c8e03f7949
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941254"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651700"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control"></a>HOW TO：隱藏 Windows Forms DataGridView 控制項的資料行
 有時候您會想要只顯示 Windows Form <xref:System.Windows.Forms.DataGridView> 控制項中某些可用的資料行。 例如，您可能會想要對具有管理認證的使用者顯示員工薪資資料行，而對其他使用者隱藏該資料行。 或者，您可能會想要將控制項繫結至包含許多資料行的資料來源，但您只想要顯示其中部分資料行。 在此情況下，您通常會移除不想顯示的資料行，而不是加以隱藏。  

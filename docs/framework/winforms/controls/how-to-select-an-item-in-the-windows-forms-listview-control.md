@@ -10,12 +10,12 @@ helpviewer_keywords:
 - selection [Windows Forms], in list views
 - list views [Windows Forms], selecting items
 ms.assetid: ddea918e-1ddf-47f4-bd09-1e9b4c9d0c39
-ms.openlocfilehash: b3cfcc6c2873dfb0eb95cf7950adc6b2bb73e74c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41a30ba6c242d0587e98b458e41ca213e8885bca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013357"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638195"
 ---
 # <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>HOW TO：選取 Windows Forms ListView 控制項的項目
 此範例示範如何以程式設計方式在 Windows Form 中選取的項目<xref:System.Windows.Forms.ListView>控制項。 以程式設計方式選取項目不會自動變更焦點<xref:System.Windows.Forms.ListView>控制項。 基於這個理由，您通常也要設定項目，如已取得焦點時選取項目。  
@@ -27,9 +27,9 @@ ms.locfileid: "62013357"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   A<xref:System.Windows.Forms.ListView>控制項，名為`listView1`包含至少一個項目。  
+- A<xref:System.Windows.Forms.ListView>控制項，名為`listView1`包含至少一個項目。  
   
--   <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空間的參考。  
+- <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空間的參考。  
   
 ## <a name="see-also"></a>另請參閱
 

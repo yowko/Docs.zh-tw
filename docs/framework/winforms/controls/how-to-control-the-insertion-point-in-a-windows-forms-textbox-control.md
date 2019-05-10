@@ -10,12 +10,12 @@ helpviewer_keywords:
 - insertion points [Windows Forms], TextBox controls
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
-ms.openlocfilehash: 43fdb023f19aa988dfef3dcd68443d6f59808472
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a9d8c02a05723814d074ff91c847471287588618
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746624"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642967"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>HOW TO：控制 Windows Forms TextBox 控制項的插入點
 當 Windows Forms<xref:System.Windows.Forms.TextBox>控制項第一次收到焦點時，文字方塊內的預設值插入至任何現有的文字的左邊。 使用者可以移動與鍵盤或滑鼠的插入點。 如果文字方塊將會遺失，並重新取得焦點，將會插入點，使用者最後放置的任一處它。  

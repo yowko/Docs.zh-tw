@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: bed943466348447e30947c170e27027f324342c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c7a874659be8dbaec66b78e1e065bcbec21da3b4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746815"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650882"
 ---
 # <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>HOW TO：變更 Windows Forms 中 ToolStrip 項目的間距和對齊方式
 <xref:System.Windows.Forms.ToolStrip>完全支援控制項的版面配置功能，例如調整大小、 間距<xref:System.Windows.Forms.ToolStripItem>彼此相對，控制項的排列方式的控制項<xref:System.Windows.Forms.ToolStrip>，以及相對於控制項的間距<xref:System.Windows.Forms.ToolStrip>。  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: eeff1c78b768e2c8f5a2583db86480ad96c5a9b7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967608"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655443"
 ---
 # <a name="extending-dispatchers"></a>擴充發送器
 發送器負責從基礎通道提取傳入訊息，將訊息轉譯成應用程式程式碼中的方法叫用，然後將結果傳回給呼叫者。 發送器擴充可讓您修改這個處理。  您可以實作可檢查或修改訊息或參數之內容的訊息或參數偵測器。  您可以變更訊息路由傳送到作業的方式，或提供其他特定功能。  

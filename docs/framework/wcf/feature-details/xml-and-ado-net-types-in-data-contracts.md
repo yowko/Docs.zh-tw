@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
-ms.openlocfilehash: 1053a543a23ed36a5c06c45044c8fdbe25a60538
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0d052c0f178c2dc6e2eb5a740faa42239fb91068
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929515"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637223"
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>資料合約中的 XML 與 ADO.NET 型別
 Windows Communication Foundation (WCF) 資料合約模型支援直接代表 XML 特定類型。 當這些型別序列化為 XML 時，序列化程式會寫出這些型別的 XML 內容，而不做更進一步的處理。 支援的型別為 <xref:System.Xml.XmlElement>、<xref:System.Xml.XmlNode> 的陣列 (但不是 `XmlNode` 型別本身) 以及實作 <xref:System.Xml.Serialization.IXmlSerializable> 的型別。 <xref:System.Data.DataSet> 和 <xref:System.Data.DataTable> 型別以及具型別資料集都常用於資料庫程式撰寫中。 這些型別會實作 `IXmlSerializable` 介面，因此在資料合約模型中是可序列化的。 在本主題最後，會列出這些型別的一些特別考量。  

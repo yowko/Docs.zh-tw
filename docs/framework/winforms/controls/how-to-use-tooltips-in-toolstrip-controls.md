@@ -6,12 +6,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding tooltips
 - tooltips [Windows Forms], adding
 ms.assetid: c5d86024-a7c5-44ee-8b3f-2daf53d80d3e
-ms.openlocfilehash: ffaf859fafc87131de525f7bf2f52db421a208c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b009d19ed949edbd52ec02252ba1e2271e4cb738
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785745"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750567"
 ---
 # <a name="how-to-use-tooltips-in-toolstrip-controls"></a>HOW TO：在 ToolStrip 控制項使用工具提示
 您可以顯示<xref:System.Windows.Forms.ToolTip>for<xref:System.Windows.Forms.ToolStrip>您想要藉由設定控制項的控制項<xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>屬性設`true`。  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 43bc222bb69aafa3fa3492d79d35fbc492055ead
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0e4ac18d4c5835f3bd0539f2a79d68b59860b6e6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038593"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637945"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>未使用認證交涉的 Windows 用戶端訊息安全性
 下列案例示範 Windows Communication Foundation (WCF) 用戶端和受保護的 Kerberos 通訊協定的服務。  
@@ -97,7 +97,7 @@ ms.locfileid: "62038593"
   
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
   
-- 建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如:   
+- 建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如：  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
