@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbb39eb768069a737f3f89c771bf02fd6bc0c3b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8c364d4ffec4cc6958051b51583ecdaff46ff133
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599048"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621381"
 ---
 # <a name="corprfmonitor-enumeration"></a>COR_PRF_MONITOR 列舉
 包含值，這些值用於指定分析工具想要訂閱的行為、功能或事件。  
