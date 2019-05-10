@@ -2,12 +2,12 @@
 title: 疑難排解安裝程式問題
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 69242ec745f2a5b945ae64eb558070dbf0d39c10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 358897917fff7097bc2907456f295d98ad6d431f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791530"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645166"
 ---
 # <a name="troubleshooting-setup-issues"></a>疑難排解安裝程式問題
 本主題描述如何疑難排解 Windows Communication Foundation (WCF) 設定問題。  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: c899cfe1015a25adc25fc28ee84d0a37a397defe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a61fa5a3f87c534574d7265dfdc16365c0afbbe0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62028248"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644859"
 ---
 # <a name="version-tolerant-serialization"></a>版本相容序列化
 在 .NET Framework 1.0 和 1.1 版中，建立可以從應用程式的某個版本，延續到下一個版本使用的可序列化型別，有其問題存在。 如果型別因加入其他欄位而變更，將會發生下列問題：  
@@ -129,7 +129,7 @@ End Class
  \* 此回呼是在還原序列化建構函式之前叫用 (若有建構函式的話)。  
   
 ### <a name="using-callbacks"></a>使用回呼  
- 若要使用回呼，將適當屬性套用至接受 <xref:System.Runtime.Serialization.StreamingContext> 參數的方法。 每個類別只有一個方法可以使用每個這些屬性來標示。 例如:   
+ 若要使用回呼，將適當屬性套用至接受 <xref:System.Runtime.Serialization.StreamingContext> 參數的方法。 每個類別只有一個方法可以使用每個這些屬性來標示。 例如：  
   
 ```csharp  
 [OnDeserializing]  

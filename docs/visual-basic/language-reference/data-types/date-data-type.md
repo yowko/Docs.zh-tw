@@ -15,12 +15,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: 42a36351ad70bc16b6cad63450ee5fcb3ed4f1ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d6179624ffbdf423f8d9b895c65ff41ac9846f33
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971804"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647037"
 ---
 # <a name="date-data-type-visual-basic"></a>Date 資料類型 (Visual Basic)
 具有 IEEE 64 位元 (8 位元組) 值，以代表從 0001 年 1 月 1 日到 9999 年 12 月 31 日的日期，以及從上午 (午夜) 12:00:00 到下午 11:59:59.9999999 的時間。 每個增量代表西曆日曆 1 年 1 月 1 日開始之後經過 100 奈秒的時間。 最大值代表 10000 年 1 月 1 開始之前的 100 奈秒。  

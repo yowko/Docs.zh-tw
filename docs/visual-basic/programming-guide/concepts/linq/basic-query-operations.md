@@ -15,12 +15,12 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: ed5ed56366911c3676c4413711207ac0a8f85765
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: af99a6c22239be1f9f03bafd8323c73f83df5c51
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925644"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642268"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本查詢作業 (Visual Basic)
 本主題提供簡介[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]運算式在 Visual Basic 中，以及一些典型的一種您在查詢中執行的作業。 如需詳細資訊，請參閱下列主題：  

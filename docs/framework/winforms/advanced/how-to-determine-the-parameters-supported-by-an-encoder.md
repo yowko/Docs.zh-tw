@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - encoder parameters [Windows Forms], determining supported
 ms.assetid: f47ae459-e3ce-4d41-a140-2f6c6aea3f44
-ms.openlocfilehash: 2626eee239d9876125340dd133c5a9b3e45c3d7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3e5345180e0ff3321b9ef0b885b836d3e9456f28
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004324"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643342"
 ---
 # <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>HOW TO：判斷編碼器所支援的參數
 您可以調整影像的參數，例如品質和壓縮層級，但您必須知道所指定之影像編碼器所支援的參數。 <xref:System.Drawing.Image>類別提供<xref:System.Drawing.Image.GetEncoderParameterList%2A>方法，如此您就可以判斷特定編碼器支援哪些映像參數。 您可以指定編碼器使用的 GUID。 <xref:System.Drawing.Image.GetEncoderParameterList%2A>方法傳回的陣列<xref:System.Drawing.Imaging.EncoderParameter>物件。  

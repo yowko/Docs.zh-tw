@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], resizing cells
 - grids [Windows Forms], resizing cells to fit content
 ms.assetid: 63d770dc-b3f5-462b-901a-3125b2753792
-ms.openlocfilehash: e8240d1d5ac9784bd33d65e4c79c3d5ac7595657
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8c95d60ba36275ec4d0e263f97bc28a559c1f38e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012538"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654461"
 ---
 # <a name="how-to-programmatically-resize-cells-to-fit-content-in-the-windows-forms-datagridview-control"></a>HOW TO：以程式設計方式調整儲存格大小使符合 Windows Forms DataGridView 控制項的內容
 您可以使用 <xref:System.Windows.Forms.DataGridView> 控制項方法來調整資料列、資料行和標頭的大小，讓它們可以顯示完整的值，而不至發生截斷狀況。 您有時可使用這些方法來調整您選擇的 <xref:System.Windows.Forms.DataGridView> 項目大小。 此外，您可以將控制項設定為每當內容變更時，就自動調整這些項目的大小。 不過，在使用大型資料集或資料經常變更時，這樣做可能會沒有效率。 如需詳細資訊，請參閱 < [Windows Forms DataGridView 控制項中的調整大小選項](sizing-options-in-the-windows-forms-datagridview-control.md)。  

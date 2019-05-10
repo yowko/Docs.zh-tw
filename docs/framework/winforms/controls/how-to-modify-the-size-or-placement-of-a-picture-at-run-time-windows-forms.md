@@ -11,23 +11,23 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: d0a86d7fe53dba3da6bd63587561f82877bc2f06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 695abf51870ef9164e4543a91b3183e801eee55f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913727"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649245"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>HOW TO：修改的大小或位置的圖片，在執行階段 (Windows Form)
 如果您使用 Windows Form<xref:System.Windows.Forms.PictureBox>控制項在表單中，您可以設定<xref:System.Windows.Forms.PictureBox.SizeMode%2A>上它的屬性：  
   
--   對齊圖片的左上的角的控制項的左上角  
+- 對齊圖片的左上的角的控制項的左上角  
   
--   在控制項中將圖片置中  
+- 在控制項中將圖片置中  
   
--   調整以符合它顯示的圖片控制項的大小  
+- 調整以符合它顯示的圖片控制項的大小  
   
--   自動縮放以符合控制項顯示的任何圖片  
+- 自動縮放以符合控制項顯示的任何圖片  
   
  自動縮放的圖片 （尤其是一個以點陣圖格式），可以產生遺失的影像品質。 中繼檔，也就是在執行階段繪製影像的圖形指示清單、 計較適合用來自動縮放比點陣圖。  
   

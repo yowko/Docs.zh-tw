@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: 1e134d877c45af00e2a2fb7e7ef0882ffd7ddc48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf99979e2ea3a47247a5df4b6e0ececab6abe8ef
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875728"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645521"
 ---
 # <a name="securing-wcf-data-services"></a>保護 WCF Data Services 的安全
 本主題描述專屬於開發、 部署和執行 WCF 資料服務和應用程式服務支援開放式資料通訊協定 (OData) 所存取的安全性考量。 您也應該遵循建立安全的.NET Framework 應用程式的建議。  
@@ -82,15 +82,15 @@ OData 是以 HTTP 通訊協定為基礎。 在 HTTP 訊息中，根據資料服�
 ### <a name="custom-hosting-requirements"></a>自訂裝載需求  
  根據預設，WCF Data Services 會建立為在 IIS 中裝載的 ASP.NET 應用程式。 這可讓資料服務運用此平台的安全行為。 您可以定義由自訂主機所裝載的 WCF Data Services。 如需詳細資訊，請參閱 <<c0> [ 裝載資料服務](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)。 裝載資料服務的元件和平台必須確定下列安全性行為，以防止資料服務的攻擊：  
   
--   限制所有可能作業之資料服務要求中接受的 URI 長度。  
+- 限制所有可能作業之資料服務要求中接受的 URI 長度。  
   
--   限制傳入與傳出之 HTTP 訊息的大小。  
+- 限制傳入與傳出之 HTTP 訊息的大小。  
   
--   限制在任何指定時間的未完成要求總數。  
+- 限制在任何指定時間的未完成要求總數。  
   
--   限制 HTTP 標頭和其值的大小，並提供 WCF 資料服務存取標頭的資料。  
+- 限制 HTTP 標頭和其值的大小，並提供 WCF 資料服務存取標頭的資料。  
   
--   偵測並還擊已知的攻擊，如 TCP SYN 和訊息重新執行攻擊。  
+- 偵測並還擊已知的攻擊，如 TCP SYN 和訊息重新執行攻擊。  
   
 ### <a name="values-are-not-further-encoded"></a>值不會進一步編碼  
  傳送至資料服務的屬性值不會進一步編碼由 WCF Data Services 的執行階段。 例如，當實體的字串屬性包含 HTML 格式的內容時，資料服務不會以 HTML 編碼標記。 資料服務也不會進一步編碼回應中的屬性值。 用戶端程式庫也不會執行任何額外的編碼。  
@@ -98,17 +98,17 @@ OData 是以 HTTP 通訊協定為基礎。 在 HTTP 訊息中，根據資料服�
 ### <a name="considerations-for-client-applications"></a>用戶端應用程式的考量  
  下列安全性考量適用於使用 WCF Data Services 用戶端來存取 OData 服務的應用程式：  
   
--   用戶端程式庫假設用來存取資料服務的通訊協定會提供適當的安全性層級。  
+- 用戶端程式庫假設用來存取資料服務的通訊協定會提供適當的安全性層級。  
   
--   用戶端程式庫會針對基礎平台提供之傳輸堆疊的逾時和剖析選項，使用所有預設值。  
+- 用戶端程式庫會針對基礎平台提供之傳輸堆疊的逾時和剖析選項，使用所有預設值。  
   
--   用戶端程式庫不會從應用程式組態檔讀取任何設定。  
+- 用戶端程式庫不會從應用程式組態檔讀取任何設定。  
   
--   用戶端程式庫不會實作任何跨網域存取機制。 但是，它會依賴基礎 HTTP 堆疊所提供的機制。  
+- 用戶端程式庫不會實作任何跨網域存取機制。 但是，它會依賴基礎 HTTP 堆疊所提供的機制。  
   
--   用戶端程式庫沒有使用者介面項目，因此，絕不會嘗試顯示或呈現它所接收或傳送的資料。  
+- 用戶端程式庫沒有使用者介面項目，因此，絕不會嘗試顯示或呈現它所接收或傳送的資料。  
   
--   建議用戶端應用程式一律驗證使用者輸入，以及接受自不受信任之服務的資料。  
+- 建議用戶端應用程式一律驗證使用者輸入，以及接受自不受信任之服務的資料。  
   
 ## <a name="see-also"></a>另請參閱
 

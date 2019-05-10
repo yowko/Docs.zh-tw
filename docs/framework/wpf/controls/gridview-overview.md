@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: d2f55db90fb130416ee4dcb15d440b6d367c0b06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d1b9efb4016fbc3c4f7e14ea4a1c63308d992504
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008745"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649179"
 ---
 # <a name="gridview-overview"></a>GridView 概觀
 <xref:System.Windows.Controls.GridView> 檢視模式是一種檢視模式的<xref:System.Windows.Controls.ListView>控制項。 <xref:System.Windows.Controls.GridView>類別和其支援的類別讓您和您的使用者可以檢視通常使用按鈕作為互動式資料行標頭的資料表中的集合項目。 本主題將介紹<xref:System.Windows.Controls.GridView>類別並概述其用法。  

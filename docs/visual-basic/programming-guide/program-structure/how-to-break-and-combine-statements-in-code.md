@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: 680084c39b90d4f664f48559fa21388ce192d999
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d3656b924ebaca67c90dc602701c4cef9ce088b4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955619"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648783"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>HOW TO：中斷和合併陳述式中的程式碼 (Visual Basic)
 當撰寫程式碼，您有時可能會建立冗長的陳述式也許水平捲軸在程式碼編輯器。 雖然這不會影響的方式執行程式碼，它很難對您或其他人讀取的程式碼，此監視器上顯示的方式。 在此情況下，您應該考慮單一長的陳述式分成數行。  

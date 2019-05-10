@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e9e5e09bdde82c7b818fd47275bdbfeda5850682
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793675"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645748"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>使用交易範圍實作隱含交易
 <xref:System.Transactions.TransactionScope> 類別提供一個簡單的方式，讓您不用與交易互動，即可將一段程式碼標記為參與交易。 交易範圍可以自動選取並管理環境交易。 由於 <xref:System.Transactions.TransactionScope> 類別非常容易使用且很有效率，在您開發交易應用程式時，建議您善加利用。  

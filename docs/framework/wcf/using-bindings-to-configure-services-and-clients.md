@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 3b4f00617418d5f84a0da5d0e531e1f671b58bb1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0f01fefc46cbc2cddaef9b025d59db8e2f734d9f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791374"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645132"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>使用繫結來設定服務和用戶端
 繫結是指定連接端點所需要之通訊詳細資料的物件。 更明確的說，繫結包含藉由定義傳輸、網路格式 (訊息編碼) 的細節，用於建立用戶端或服務執行階段的組態資訊，以及用於個別端點或用戶端通道的通訊協定。 若要建立可運作的 Windows Communication Foundation (WCF) 服務，在服務中的每個端點都需要繫結。 本主題將說明什麼是繫結、如何定義繫結，以及如何為端點指定特定繫結。  

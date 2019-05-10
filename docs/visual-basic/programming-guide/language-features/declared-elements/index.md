@@ -2,12 +2,12 @@
 title: Visual Basic 的宣告項目
 ms.date: 07/20/2015
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
-ms.openlocfilehash: cafc280bb4dbee388717ead4f748d66ea5d3ce72
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3430517aea32eeb79aeb586d3a1eb0df1524998b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918004"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639181"
 ---
 # <a name="declared-elements-in-visual-basic"></a>Visual Basic 的宣告項目
 「宣告項目」是宣告陳述式中定義的程式設計項目。 宣告項目包含變數、常數、列舉、類別、結構、模組、介面、程序、程序參數、函式傳回、外部程序參考、運算子、屬性、事件和委派。  

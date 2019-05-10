@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: e7c7dd72c733036031fcf28d0dd2c1bc023d6552
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ee6de112dcf92b1780fd331b581e6794d61f9406
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781494"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654441"
 ---
 # <a name="collection-types-in-data-contracts"></a>資料合約中的集合型別
 「 *集合* 」(Collection) 是特定型別之項目的清單。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中，可以使用陣列或其他多種型別 (泛型清單、泛型 <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>或 <xref:System.Collections.ArrayList>) 來表示這類清單。 例如，集合可能含有特定「客戶」的地址清單。 不論實際型別為何，這些集合統稱為「 *清單集合*」(List Collection)。  

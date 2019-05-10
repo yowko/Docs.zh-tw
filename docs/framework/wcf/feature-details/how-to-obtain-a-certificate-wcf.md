@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: 21e9e0609ed63c4398f2df7ba718f8af17464b0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1a2731c535bd403046ca3bc01364d0933f127a7f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683625"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643677"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>HOW TO：取得憑證 (WCF)
 若要使用任何 Windows Communication Foundation (WCF) 的功能，使用 X.509 憑證，您必須先取得憑證。  

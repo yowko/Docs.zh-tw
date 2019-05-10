@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: eb938cfae645a9cc3811f1b5a02cddef742bac89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 134759d729d6f291db61e6f64ebd51dfe5a4443b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922222"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648714"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>在 ADO.NET 中修改大量數值 (max) 資料
 大型物件 (LOB) 資料型別是指資料列大小上限超過 8 KB 的資料型別。 SQL Server 可提供 `max`、`varchar` 和 `nvarchar` 資料型別的 `varbinary` 規範，允許儲存最大達 2^32 位元組的值。 資料表資料行及 Transact-SQL 變數可指定 `varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 資料型別。 在 ADO.NET 中，`max` 資料型別可透過 `DataReader` 來擷取，也可指定為輸入及輸出參數值，並且不需要任何特殊處理。 對於大型 `varchar` 資料型別，可透過遞增方式擷取及更新資料。  
@@ -26,11 +26,11 @@ ms.locfileid: "61922222"
 ## <a name="large-value-type-restrictions"></a>大數值型別限制  
  下列限制適用於 `max` 資料型別，而小型資料型別則沒有這些限制：  
   
--   `sql_variant` 不可包含大型 `varchar` 資料型別。  
+- `sql_variant` 不可包含大型 `varchar` 資料型別。  
   
--   大型 `varchar` 資料行不可指定為索引中的索引鍵資料行。 而在非叢集索引的內含資料行中，則允許有大型資料行。  
+- 大型 `varchar` 資料行不可指定為索引中的索引鍵資料行。 而在非叢集索引的內含資料行中，則允許有大型資料行。  
   
--   大型 `varchar` 資料行不可用做分割索引鍵資料行。  
+- 大型 `varchar` 資料行不可用做分割索引鍵資料行。  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>在 Transact-SQL 中使用大數值型別  
  Transact-SQL `OPENROWSET` 函式是連接及存取遠端資料的一次性方法。 其包括從 OLE DB 資料來源存取遠端資料時所需的所有連接資訊。 您可以在查詢的 FROM 子句中，將 `OPENROWSET` 當做資料表名稱般地加以參考。 此外，它也可參考為 INSERT、UPDATE 或 DELETE 陳述式的目標資料表，但會受到 OLE DB 提供者的功能影響。  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
-ms.openlocfilehash: 095c89fd305b1eeb73e2919760abe48e848c6aa0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4db2a8b0e30a6bb3db0c5c629d868bc01dc15a8c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902313"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648087"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>DataGridView 控制項概觀 (Windows Form)
 > [!NOTE]
@@ -36,13 +36,13 @@ ms.locfileid: "61902313"
   
  <xref:System.Windows.Forms.DataGridView>控制項支援標準的 Windows Form 資料繫結模型，因此它會繫結至下列清單所述類別的執行個體：  
   
--   任何實作類別<xref:System.Collections.IList>介面，包括一維陣列。  
+- 任何實作類別<xref:System.Collections.IList>介面，包括一維陣列。  
   
--   任何實作類別<xref:System.ComponentModel.IListSource>介面，例如<xref:System.Data.DataTable>和<xref:System.Data.DataSet>類別。  
+- 任何實作類別<xref:System.ComponentModel.IListSource>介面，例如<xref:System.Data.DataTable>和<xref:System.Data.DataSet>類別。  
   
--   任何實作類別<xref:System.ComponentModel.IBindingList>介面，例如<xref:System.ComponentModel.BindingList%601>類別。  
+- 任何實作類別<xref:System.ComponentModel.IBindingList>介面，例如<xref:System.ComponentModel.BindingList%601>類別。  
   
--   任何實作類別<xref:System.ComponentModel.IBindingListView>介面，例如<xref:System.Windows.Forms.BindingSource>類別。  
+- 任何實作類別<xref:System.ComponentModel.IBindingListView>介面，例如<xref:System.Windows.Forms.BindingSource>類別。  
   
  <xref:System.Windows.Forms.DataGridView>控制項支援資料繫結至這些介面所傳回的物件的公用屬性或所傳回的屬性集合<xref:System.ComponentModel.ICustomTypeDescriptor>介面，如果傳回的物件上實作。  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 03f785da018cacdec643fa196bdd0c6d5d7c7f70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0dbe038bed3fd62589b2f3906441e27761e0438a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020305"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649154"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>WPF 4.5 版的新功能
 <a name="introduction"></a> 本主題包含全新和增強功能的詳細資訊[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]4.5 版。  
@@ -76,7 +76,7 @@ ms.locfileid: "62020305"
   
 <a name="INotifyDataErrorInfo"></a>   
 ## <a name="synchronously-and-asynchronously-validating-data"></a>同步和非同步驗證資料  
- <xref:System.ComponentModel.INotifyDataErrorInfo>介面可讓資料實體類別來實作自訂驗證規則，並以非同步的方式公開驗證結果。 此介面也支援自訂錯誤物件、每個屬性多個錯誤、跨屬性錯誤，以及實體層級錯誤。  如需詳細資訊，請參閱<xref:System.ComponentModel.INotifyDataErrorInfo>。  
+ <xref:System.ComponentModel.INotifyDataErrorInfo>介面可讓資料實體類別來實作自訂驗證規則，並以非同步的方式公開驗證結果。 此介面也支援自訂錯誤物件、每個屬性多個錯誤、跨屬性錯誤，以及實體層級錯誤。  如需詳細資訊，請參閱 <xref:System.ComponentModel.INotifyDataErrorInfo>。  
   
 <a name="delay"></a>   
 ## <a name="automatically-updating-the-source-of-a-data-binding"></a>自動更新資料繫結的來源  

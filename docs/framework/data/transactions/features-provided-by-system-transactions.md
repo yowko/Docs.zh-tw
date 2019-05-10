@@ -2,12 +2,12 @@
 title: System.Transactions 所提供的功能
 ms.date: 03/30/2017
 ms.assetid: e458cef9-63b5-4401-b448-1536dcd9d9e5
-ms.openlocfilehash: 6fc20f8249f37f69689fb3fc6b3144792badad3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 75277090652cd439d3466a307790f4b918ddb090
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793688"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645719"
 ---
 # <a name="features-provided-by-systemtransactions"></a>System.Transactions 所提供的功能
 本節說明如何使用 <xref:System.Transactions> 命名空間所提供的各項功能，來撰寫自己的交易式應用程式與資源管理員。 具體來說，本節涵蓋了如何與一或多位參與者一同建立並參與交易 (本機或分散式)。  

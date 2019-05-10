@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: e28c91a8cc1798a4d0cd690f72e503b687af0108
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6990d2b08f0ff729f0c0138c091c728a5ba59605
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046441"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643546"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation 中的佇列
 在本節中的主題將討論 Windows Communication Foundation (WCF) 支援佇列。 WCF 會提供支援藉由利用 Microsoft Message Queuing （先前稱為 MSMQ） 做為傳輸佇列，並適用於下列案例：  

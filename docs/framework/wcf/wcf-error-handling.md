@@ -2,12 +2,12 @@
 title: WCF 錯誤處理
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-ms.openlocfilehash: d70edacd2447fbe0b0b6db42b93f699ce7c17003
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: eba0894d6352bc1aea3596ee9d196b386e1eafef
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791218"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645451"
 ---
 # <a name="wcf-error-handling"></a>WCF 錯誤處理
 WCF 應用程式遇到的錯誤屬於下列其中一個群組：  
@@ -41,7 +41,7 @@ WCF 應用程式遇到的錯誤屬於下列其中一個群組：
  <xref:System.ServiceModel.Dispatcher.IErrorHandler> 介面可讓您進一步控制 WCF 應用程式如何回應錯誤。  它不僅能讓您完全控制傳送至用戶端的錯誤訊息，還能讓您執行自訂錯誤處理，例如記錄。  如需詳細資訊<xref:System.ServiceModel.Dispatcher.IErrorHandler>和[擴充控制項透過錯誤處理和報告](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
   
 ## <a name="servicehost-events"></a>ServiceHost 事件  
- <xref:System.ServiceModel.ServiceHost> 類別會裝載服務並定義許多處理錯誤可能需要的事件。 例如：  
+ <xref:System.ServiceModel.ServiceHost> 類別會裝載服務並定義許多處理錯誤可能需要的事件。 例如:   
   
 1. <xref:System.ServiceModel.Channels.CommunicationObject.Faulted>
   

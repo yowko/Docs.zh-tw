@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-ms.openlocfilehash: 892168ec282fbf168c43515e0718fe5486a345a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 15d10ed2ec0bc78acfe887fe583d4850425eeab9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011610"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648102"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView 控制項架構 (Windows Form)
 <xref:System.Windows.Forms.DataGridView>控制項以及與其相關的類別都是設計成有彈性、 可擴充的系統，來顯示和編輯表格式資料。 這些類別包含在<xref:System.Windows.Forms?displayProperty=nameWithType>命名空間，而且它們所有以"DataGridView"前置詞命名。  
@@ -26,19 +26,19 @@ ms.locfileid: "62011610"
 ### <a name="datagridviewelementstates"></a>DataGridViewElementStates  
  <xref:System.Windows.Forms.DataGridViewElementStates>列舉型別包含下列值：  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.None>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.None>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.Frozen>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.Frozen>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.ReadOnly>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.ReadOnly>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.Resizable>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.Resizable>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.ResizableSet>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.ResizableSet>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.Selected>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.Selected>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.Visible>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.Visible>  
   
  這個列舉型別的值可以結合這些位元的邏輯運算子，因此<xref:System.Windows.Forms.DataGridViewElement.State%2A>屬性可以用來表示多個狀態一次。 例如，<xref:System.Windows.Forms.DataGridViewElement>可以同時<xref:System.Windows.Forms.DataGridViewElementStates.Frozen>， <xref:System.Windows.Forms.DataGridViewElementStates.Selected>，和<xref:System.Windows.Forms.DataGridViewElementStates.Visible>。  
   
@@ -58,27 +58,27 @@ ms.locfileid: "62011610"
   
  下列清單顯示衍生自的類別<xref:System.Windows.Forms.DataGridViewCell>:  
   
--   <xref:System.Windows.Forms.DataGridViewTextBoxCell>  
+- <xref:System.Windows.Forms.DataGridViewTextBoxCell>  
   
--   <xref:System.Windows.Forms.DataGridViewButtonCell>  
+- <xref:System.Windows.Forms.DataGridViewButtonCell>  
   
--   <xref:System.Windows.Forms.DataGridViewLinkCell>  
+- <xref:System.Windows.Forms.DataGridViewLinkCell>  
   
--   <xref:System.Windows.Forms.DataGridViewCheckBoxCell>  
+- <xref:System.Windows.Forms.DataGridViewCheckBoxCell>  
   
--   <xref:System.Windows.Forms.DataGridViewComboBoxCell>  
+- <xref:System.Windows.Forms.DataGridViewComboBoxCell>  
   
--   <xref:System.Windows.Forms.DataGridViewImageCell>  
+- <xref:System.Windows.Forms.DataGridViewImageCell>  
   
--   <xref:System.Windows.Forms.DataGridViewHeaderCell>  
+- <xref:System.Windows.Forms.DataGridViewHeaderCell>  
   
--   <xref:System.Windows.Forms.DataGridViewRowHeaderCell>  
+- <xref:System.Windows.Forms.DataGridViewRowHeaderCell>  
   
--   <xref:System.Windows.Forms.DataGridViewColumnHeaderCell>  
+- <xref:System.Windows.Forms.DataGridViewColumnHeaderCell>  
   
--   <xref:System.Windows.Forms.DataGridViewTopLeftHeaderCell>  
+- <xref:System.Windows.Forms.DataGridViewTopLeftHeaderCell>  
   
--   您的自訂儲存格型別  
+- 您的自訂儲存格型別  
   
 ### <a name="datagridviewcolumn"></a>DataGridViewColumn  
  結構描述<xref:System.Windows.Forms.DataGridView>控制的連接的資料存放區以表示<xref:System.Windows.Forms.DataGridView>控制項的資料行。 您可以存取<xref:System.Windows.Forms.DataGridView>控制項的資料行使用<xref:System.Windows.Forms.DataGridView.Columns%2A>集合。 您可以使用來存取所選資料行<xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>集合。 下列物件模型說明這種使用方式，以及顯示<xref:System.Windows.Forms.DataGridViewColumn>繼承階層架構。  
@@ -89,19 +89,19 @@ ms.locfileid: "62011610"
   
  下列清單顯示衍生自的類別<xref:System.Windows.Forms.DataGridViewColumn>:  
   
--   <xref:System.Windows.Forms.DataGridViewButtonColumn>  
+- <xref:System.Windows.Forms.DataGridViewButtonColumn>  
   
--   <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>  
+- <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>  
   
--   <xref:System.Windows.Forms.DataGridViewComboBoxColumn>  
+- <xref:System.Windows.Forms.DataGridViewComboBoxColumn>  
   
--   <xref:System.Windows.Forms.DataGridViewImageColumn>  
+- <xref:System.Windows.Forms.DataGridViewImageColumn>  
   
--   <xref:System.Windows.Forms.DataGridViewTextBoxColumn>  
+- <xref:System.Windows.Forms.DataGridViewTextBoxColumn>  
   
--   <xref:System.Windows.Forms.DataGridViewLinkColumn>  
+- <xref:System.Windows.Forms.DataGridViewLinkColumn>  
   
--   您的自訂資料行類型  
+- 您的自訂資料行類型  
   
 ### <a name="datagridview-editing-controls"></a>DataGridView 編輯控制項  
  通常支援進階的編輯功能的資料格會使用裝載的控制項是衍生自 Windows Forms 控制項。 這些控制項也會實作<xref:System.Windows.Forms.IDataGridViewEditingControl>介面。 下列物件模型會說明這些控制項的用法。  
@@ -110,9 +110,9 @@ ms.locfileid: "62011610"
   
  下列的編輯控制項所提供的<xref:System.Windows.Forms.DataGridView>控制項：  
   
--   <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>  
+- <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>  
   
--   <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>  
+- <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>  
   
  如需建立自己的編輯控制項的資訊，請參閱[How to:Windows Forms DataGridView 儲存格主控制項](how-to-host-controls-in-windows-forms-datagridview-cells.md)。  
   

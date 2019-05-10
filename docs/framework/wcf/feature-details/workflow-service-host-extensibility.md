@@ -2,12 +2,12 @@
 title: 工作流程服務主機擴充性
 ms.date: 03/30/2017
 ms.assetid: c0e8f7bb-cb13-49ec-852f-b85d7c23972f
-ms.openlocfilehash: e37a33643fb58d93be953720303cd069e72a690e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4f1f67feb728cb2236f84c88ff223058d34990dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929788"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648361"
 ---
 # <a name="workflow-service-host-extensibility"></a>工作流程服務主機擴充性
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 提供用於裝載工作流程服務的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 類別。 若您要在 Managed 應用程式或 Windows 服務中自我裝載工作流程服務，則可使用此類別。 此類別還可在透過網際網路資訊服務 (IIS) 或 Windows Process Activation Service (WAS) 裝載工作流程時使用。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 類別會提供擴充點，讓您加入自訂擴充、變更閒置行為，以及裝載非服務工作流程 (不使用訊息傳遞活動的工作流程)。  

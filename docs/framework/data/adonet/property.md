@@ -2,12 +2,12 @@
 title: 屬性
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
-ms.openlocfilehash: 71a04f334ec465b0f11cc8f18f2680df651081eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97bb41305bd9b736fd67b51d77ee15ad9efa3f29
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879033"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645238"
 ---
 # <a name="property"></a>屬性
 *屬性*是基本建置組塊[實體類型](../../../../docs/framework/data/adonet/entity-type.md)並[複雜型別](../../../../docs/framework/data/adonet/complex-type.md)。 屬性可定義實體類型執行個體或複雜類型執行個體將包含的資料圖案和特性。 概念模型中的屬性類似類別中定義的屬性。 如同類別上的屬性可定義類別的圖形並包含關於物件的資訊，概念模型的屬性可定義實體類別的圖形，並包含關於實體類型執行個體的資訊。  
@@ -17,11 +17,11 @@ ms.locfileid: "61879033"
   
  屬性定義包含下列資訊：  
   
--   屬性名稱。 (必要項)  
+- 屬性名稱。 (必要項)  
   
--   屬性型別。 (必要項)  
+- 屬性型別。 (必要項)  
   
--   一組[facet](../../../../docs/framework/data/adonet/facet.md)。 (選擇項)  
+- 一組[facet](../../../../docs/framework/data/adonet/facet.md)。 (選擇項)  
   
  屬性可以包含基底資料 (例如字串、整數或布林值) 或結構化資料 (例如複雜類型)。 屬於基本型別的屬性亦稱為純量屬性。 如需詳細資訊，請參閱[實體資料模型：基本資料型別](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)。  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [Visual Basic], iterating
 - ListBox control [Windows Forms], populating from an enumeration
 ms.assetid: e5aa10eb-cfcd-4a3b-8e76-f06b8f2002be
-ms.openlocfilehash: 63597145e96b04affc5f0e80e05a56b3fdf27278
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c3fd7e6f7e8e4fcabf279975f7ffc2d848679396
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907032"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645253"
 ---
 # <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>HOW TO：逐一查看 Visual Basic 中列舉
 列舉提供使用相關常數組和建立常數值與名稱之關聯的便利方法。 若要逐一查看列舉型別，您可以將它移到陣列使用<xref:System.Enum.GetValues%2A>方法。 您也可以逐一列舉使用`For...Each`陳述式中，使用<xref:System.Enum.GetNames%2A>或<xref:System.Enum.GetValues%2A>方法來擷取字串或數值的值。  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operands
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: b762c3002913cbd925579ef28f2aa01411976c32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 40d71c5231b8d278f4ca8d9352e6e3cba5104f9b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864321"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649700"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic 中的運算子和運算式
 「運算子」是一種程式碼項目，可對保留值的一或多個程式碼項目執行運算。 值項目包含 `Function` 與 `Operator` 程序和運算式的變數、常數、常值、屬性、傳回值。  
@@ -25,13 +25,13 @@ ms.locfileid: "61864321"
 ## <a name="types-of-operators"></a>運算子類型  
  Visual Basic 提供下列類型的運算子：  
   
--   [算術運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)可對數值執行類似的計算，包括移位其位元模式。  
+- [算術運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)可對數值執行類似的計算，包括移位其位元模式。  
   
--   [比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)可比較兩個運算式，並傳回代表比較結果的 `Boolean` 值。  
+- [比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)可比較兩個運算式，並傳回代表比較結果的 `Boolean` 值。  
   
--   [串連運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)可將多個字串連成單一字串。  
+- [串連運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)可將多個字串連成單一字串。  
   
--   [Visual Basic 中的邏輯運算子和位元運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)可合併 `Boolean` 或數值，並傳回與值相同之資料類型的結果。  
+- [Visual Basic 中的邏輯運算子和位元運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)可合併 `Boolean` 或數值，並傳回與值相同之資料類型的結果。  
   
  與運算子合併使用的值項目稱為該運算子的「運算元」。 與值項目合併使用的運算子可形成運算式，但不含可形成「陳述式」的指派運算子。 如需詳細資訊，請參閱[陳述式](../../../../visual-basic/programming-guide/language-features/statements.md)。  
   

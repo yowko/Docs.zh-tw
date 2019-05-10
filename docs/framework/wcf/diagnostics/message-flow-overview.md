@@ -2,12 +2,12 @@
 title: 訊息流程概觀
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 009dd05ab299b92ee5f5cafd1c2131a2e6eb0132
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797474"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650247"
 ---
 # <a name="message-flow-overview"></a>訊息流程概觀
 在包含互連服務的分散式系統中，您必須判斷服務之間的因果關係。 請務必了解屬於要求流程一部分的各種元件，以便支援重要案例，例如健康監視、疑難排解和根本原因分析。 為了讓各種服務之間的追蹤相互關聯，我們透過下列功能，在 .NET Framework 4 中加入了支援：

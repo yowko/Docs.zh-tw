@@ -9,12 +9,12 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling with patterns
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
-ms.openlocfilehash: f5399c4151b335090f4b93be041375b8c2781afa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b9ecefb82aaaf896c4ed39733f1e8d7bd65c16d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781328"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645472"
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>HOW TO：使用影線圖樣填滿形狀
 從兩個色彩來進行以規劃圖樣： 一個用於背景，一個在背景上形成模式的程式碼行。 若要以規劃圖樣填滿一個封閉的形狀，請使用<xref:System.Drawing.Drawing2D.HatchBrush>物件。 下列範例示範如何使用以規劃圖樣填滿橢圓形：  

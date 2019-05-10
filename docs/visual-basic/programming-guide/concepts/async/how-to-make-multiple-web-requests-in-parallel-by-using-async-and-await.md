@@ -2,12 +2,12 @@
 title: HOW TO：同時發出多個 Web 要求，使用 Async 和 Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: c799fa83c0157019961da6adcf89b6ab6f906763
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e306722fca4e0215cf7b67d85763858d459a171a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021995"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642435"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>HOW TO：同時發出多個 Web 要求，使用 Async 和 Await (Visual Basic)
 在非同步方法中，工作會在建立後啟動。 [Await](../../../../visual-basic/language-reference/operators/await-operator.md)運算子會套用到在方法中無法繼續處理直到工作完成的工作。 通常，工作會在建立後等候完成，如下列範例所示。  

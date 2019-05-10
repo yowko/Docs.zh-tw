@@ -14,8 +14,6 @@
           href: foreground-and-background-threads.md
         - name: Windows 中的 Managed 和 Unmanaged 執行緒處理
           href: managed-and-unmanaged-threading-in-windows.md
-        - name: Thread.Suspend、記憶體回收和安全點
-          href: thread-suspend-garbage-collection-and-safe-points.md
         - name: 執行緒區域儲存區：執行緒相關的靜態欄位和資料位置
           href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
     - name: 使用執行緒和執行緒處理
@@ -34,13 +32,13 @@
           items:
             - name: 以合作方式取消執行緒
               href: canceling-threads-cooperatively.md
-            - name: HOW TO：透過輪詢接聽取消要求
+            - name: 作法：透過輪詢接聽取消要求
               href: how-to-listen-for-cancellation-requests-by-polling.md
-            - name: HOW TO：註冊取消要求的回呼
+            - name: 作法：註冊取消要求的回呼
               href: how-to-register-callbacks-for-cancellation-requests.md
-            - name: HOW TO：接聽具有等候控制代碼的取消要求
+            - name: 作法：接聽具有等候控制代碼的取消要求
               href: how-to-listen-for-cancellation-requests-that-have-wait-handles.md
-            - name: HOW TO：接聽多個取消要求
+            - name: 作法：接聽多個取消要求
               href: how-to-listen-for-multiple-cancellation-requests.md
     - name: Managed 執行緒處理的最佳實施方針
       href: managed-threading-best-practices.md
@@ -64,17 +62,17 @@
         - name: 屏障
           href: barrier.md
           items:
-            - name: HOW TO：使用屏障同步並行作業
+            - name: 作法：使用屏障同步並行作業
               href: how-to-synchronize-concurrent-operations-with-a-barrier.md
         - name: SpinLock
           href: spinlock.md
           items:
-            - name: HOW TO：使用 SpinLock 進行低階同步處理
+            - name: 作法：使用 SpinLock 進行低階同步處理
               href: how-to-use-spinlock-for-low-level-synchronization.md
-            - name: HOW TO：啟用 SpinLock 中的執行緒追蹤模式
+            - name: 作法：啟用 SpinLock 中的執行緒追蹤模式
               href: how-to-enable-thread-tracking-mode-in-spinlock.md
         - name: SpinWait
           href: spinwait.md
           items:
-            - name: HOW TO：使用 SpinWait 實作兩階段等候作業
+            - name: 作法：使用 SpinWait 實作兩階段等候作業
               href: how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md

@@ -2,12 +2,12 @@
 title: 追蹤類型摘要
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: 73777df2b58b14947c416ce409bcb42d439499ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44446b58510e58758934a5eb964efc8643854879
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925147"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647180"
 ---
 # <a name="trace-type-summary"></a>追蹤類型摘要
 [來源層級](https://go.microsoft.com/fwlink/?LinkID=94943)定義不同的追蹤層級：嚴重、 錯誤、 警告、 資訊和詳細資訊，並提供描述`ActivityTracing`旗標，它的輸出會切換追蹤界限與活動傳輸事件。  
@@ -37,13 +37,13 @@ ms.locfileid: "61925147"
   
  這表示活動必須滿足下列條件。  
   
--   必須分別由「開始」和「停止」追蹤來開始與停止  
+- 必須分別由「開始」和「停止」追蹤來開始與停止  
   
--   必須有「傳輸」追蹤緊接在「暫停」或「繼續」追蹤之前  
+- 必須有「傳輸」追蹤緊接在「暫停」或「繼續」追蹤之前  
   
--   在「暫停」或「繼續」追蹤之間不可以有任何追蹤 (如果有這種追蹤的話)  
+- 在「暫停」或「繼續」追蹤之間不可以有任何追蹤 (如果有這種追蹤的話)  
   
--   只要觀察到之前的條件，就可以有任意個嚴重/錯誤/警告/資訊/詳細資訊/傳輸追蹤  
+- 只要觀察到之前的條件，就可以有任意個嚴重/錯誤/警告/資訊/詳細資訊/傳輸追蹤  
   
  下列是定義全域範圍內理想活動的規則運算式：  
   
