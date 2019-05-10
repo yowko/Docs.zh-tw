@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 ms.assetid: bd0c310f-dd9f-4081-9be2-3db5909850b6
-ms.openlocfilehash: b55abe937701f8708643efa2ea4cb62514b3521b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1a18e2ab31998b7759803e023151892694757119
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923184"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613388"
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Windows Communication Foundation 端點
 使用 Windows Communication Foundation (WCF) 服務的所有通訊都都會透過*端點*的服務。 端點可讓用戶端存取 WCF 服務提供的功能。  

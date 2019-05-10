@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 31c5b386d707aa49cd36d536f1c8b419eb74a658
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f4c62ff551ac66c4b7192a4e978db0a9f443f3f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916405"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613690"
 ---
 # <a name="wcf-performance-counters"></a>WCF 效能計數器
 Windows Communication Foundation (WCF) 包含大量的效能計數器，可協助您測量應用程式的效能。  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF) 包含大量的效能計數器，可協�
   
  `performanceCounters` 屬性可設為啟用特定類型的效能計數器。 有效值為  
   
--   所有：類別的所有計數器 （ServiceModelService、 ServiceModelEndpoint 和 ServiceModelOperation） 會都啟用。  
+- 所有：類別的所有計數器 （ServiceModelService、 ServiceModelEndpoint 和 ServiceModelOperation） 會都啟用。  
   
--   ServiceOnly:啟用只 ServiceModelService 類別的計數器。 這是預設值。  
+- ServiceOnly:啟用只 ServiceModelService 類別的計數器。 這是預設值。  
   
--   Off:ServiceModel * 效能計數器已停用。  
+- Off:ServiceModel * 效能計數器已停用。  
   
  如果您想要啟用 WCF 的所有應用程式的效能計數器，您可以在 Machine.config 檔案中放置的組態設定。  請參閱**效能計數器增加記憶體大小**節，如需有關設定您電腦有足夠的記憶體效能計數器。  
   
@@ -63,11 +63,11 @@ config.Save();
   
  您可以變更登錄中的 WCF 類別目錄的效能計數器記憶體數量。 若要執行這項操作，您必須將名為 `FileMappingSize` 的新 DWORD 值加入下列三個位置，並且將它設為所需的值 (以位元組為單位)。 重新啟動您的電腦，讓這些變更生效。  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0\Performance  
   
  處置掉大量物件 (例如 ServiceHost)，但在等待進行記憶體回收時，`PrivateBytes` 效能計數器將登錄相當大的數目。 若要解決這個問題，您可以加入自己的應用程式專屬計數器，或是使用 `performanceCounters` 屬性，僅啟用服務層級的計數器。  
   
@@ -76,11 +76,11 @@ config.Save();
   
  您可以使用 WMI 擷取效能計數器執行個體的名稱。 例如，套用至物件的  
   
--   服務計數器執行個體名稱可以透過 WMI 取得[服務](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)執行個體的"CounterInstanceName"屬性。  
+- 服務計數器執行個體名稱可以透過 WMI 取得[服務](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)執行個體的"CounterInstanceName"屬性。  
   
--   端點計數器執行個體名稱可以透過 WMI 取得[端點](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)執行個體的"CounterInstanceName"屬性。  
+- 端點計數器執行個體名稱可以透過 WMI 取得[端點](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)執行個體的"CounterInstanceName"屬性。  
   
--   可以透過 WMI 取得作業計數器執行個體名稱[端點](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)執行個體的"GetOperationCounterInstanceName"方法。  
+- 可以透過 WMI 取得作業計數器執行個體名稱[端點](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)執行個體的"GetOperationCounterInstanceName"方法。  
   
  如需有關 WMI 的詳細資訊，請參閱 <<c0> [ 使用 Windows Management Instrumentation 進行診斷](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
   
@@ -126,15 +126,15 @@ ServiceName@ServiceBaseAddress
 ## <a name="programming-the-wcf-performance-counters"></a>WCF 效能計數器程式設計  
  數個檔案會安裝在 SDK 安裝資料夾中，好讓您可以透過程式設計方式存取 WCF 效能計數器。 這些檔案如下所列。  
   
--   _ServiceModelEndpointPerfCounters.vrg  
+- _ServiceModelEndpointPerfCounters.vrg  
   
--   _ServiceModelOperationPerfCounters.vrg  
+- _ServiceModelOperationPerfCounters.vrg  
   
--   _ServiceModelServicePerfCounters.vrg  
+- _ServiceModelServicePerfCounters.vrg  
   
--   _SMSvcHostPerfCounters.vrg  
+- _SMSvcHostPerfCounters.vrg  
   
--   _TransactionBridgePerfCounters.vrg  
+- _TransactionBridgePerfCounters.vrg  
   
  如需有關如何以程式設計方式存取計數器的詳細資訊，請參閱 <<c0> [ 效能計數器程式設計架構](https://go.microsoft.com/fwlink/?LinkId=95179)。  
   

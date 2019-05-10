@@ -16,29 +16,29 @@ helpviewer_keywords:
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35aec3a311680e398d9f2bba94bf4c9a274c8a04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5657e55856845404c5f8f063bd69d51614a234c9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873817"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614275"
 ---
 # <a name="trace-listeners"></a>追蹤接聽項
 使用 **Trace**、**Debug** 和 <xref:System.Diagnostics.TraceSource> 時，您必須具有收集和記錄所傳送訊息的機制。 追蹤訊息由「接聽程式」負責接收。 接聽項的用途是收集、儲存和傳送追蹤訊息。 接聽項會將追蹤輸出導向至適當的目標，例如記錄檔、視窗或文字檔。  
   
  接聽程式可供 **Debug**、**Trace** 和 <xref:System.Diagnostics.TraceSource> 類別使用，其中每一項都可以將輸出傳送至各種不同的接聽程式物件。 以下是常用的預先定義接聽程式：  
   
--   <xref:System.Diagnostics.TextWriterTraceListener> 會將輸出重新導向至 <xref:System.IO.TextWriter> 類別的執行個體，或重新導向至任何 <xref:System.IO.Stream> 類別。 因為這些是 <xref:System.IO.Stream> 類別，所以還可寫入至主控台或檔案。  
+- <xref:System.Diagnostics.TextWriterTraceListener> 會將輸出重新導向至 <xref:System.IO.TextWriter> 類別的執行個體，或重新導向至任何 <xref:System.IO.Stream> 類別。 因為這些是 <xref:System.IO.Stream> 類別，所以還可寫入至主控台或檔案。  
   
--   <xref:System.Diagnostics.EventLogTraceListener>會將輸出重新導向至事件記錄檔。  
+- <xref:System.Diagnostics.EventLogTraceListener>會將輸出重新導向至事件記錄檔。  
   
--   <xref:System.Diagnostics.DefaultTraceListener> 會發出 **Write** 和 **WriteLine** 訊息至 **OutputDebugString** 和 **Debugger.Log** 方法。 在 Visual Studio 中，這會造成 [輸出] 視窗中出現偵錯訊息。 **Fail** 和失敗的 **Assert** 訊息也會發送至 **OutputDebugString** Windows API 和 **Debugger.Log** 方法，這也造成會顯示訊息方塊。 因為 **DefaultTraceListener** 會被自動納入所有的 `Listeners` 集合，並且這是唯一被自動納入的接聽項，所以這種行為是 **Debug** 和 **Trace** 訊息的預設行為。  
+- <xref:System.Diagnostics.DefaultTraceListener> 會發出 **Write** 和 **WriteLine** 訊息至 **OutputDebugString** 和 **Debugger.Log** 方法。 在 Visual Studio 中，這會造成 [輸出] 視窗中出現偵錯訊息。 **Fail** 和失敗的 **Assert** 訊息也會發送至 **OutputDebugString** Windows API 和 **Debugger.Log** 方法，這也造成會顯示訊息方塊。 因為 **DefaultTraceListener** 會被自動納入所有的 `Listeners` 集合，並且這是唯一被自動納入的接聽項，所以這種行為是 **Debug** 和 **Trace** 訊息的預設行為。  
   
--   <xref:System.Diagnostics.ConsoleTraceListener> 會將追蹤或偵錯輸出導向至標準輸出或標準錯誤資料流。  
+- <xref:System.Diagnostics.ConsoleTraceListener> 會將追蹤或偵錯輸出導向至標準輸出或標準錯誤資料流。  
   
--   <xref:System.Diagnostics.DelimitedListTraceListener> 會將追蹤或偵錯輸出導向文字寫入器，例如資料流寫入器，或是導向資料流，例如檔案資料流。 此追蹤輸出使用分隔的文字格式，該格式使用由 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 屬性指定的分隔符號。  
+- <xref:System.Diagnostics.DelimitedListTraceListener> 會將追蹤或偵錯輸出導向文字寫入器，例如資料流寫入器，或是導向資料流，例如檔案資料流。 此追蹤輸出使用分隔的文字格式，該格式使用由 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 屬性指定的分隔符號。  
   
--   <xref:System.Diagnostics.XmlWriterTraceListener> 會將追蹤或偵錯輸出當成 XML 編碼資料導向至 <xref:System.IO.TextWriter> 或 <xref:System.IO.Stream>，例如 <xref:System.IO.FileStream>。  
+- <xref:System.Diagnostics.XmlWriterTraceListener> 會將追蹤或偵錯輸出當成 XML 編碼資料導向至 <xref:System.IO.TextWriter> 或 <xref:System.IO.Stream>，例如 <xref:System.IO.FileStream>。  
   
  如果您要 <xref:System.Diagnostics.DefaultTraceListener> 以外的接聽程式接收 **Debug**、**Trace** 和 <xref:System.Diagnostics.TraceSource> 輸出，則您必須將該接聽程式新增到 `Listeners` 集合。 如需詳細資訊，請參閱[如何：建立和初始化追蹤接聽項](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)和[How to:含有追蹤接聽項中使用 TraceSource 和篩選條件](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)。 **Listeners** 集合中的任何接聽程式都會自追蹤輸出方法取得相同的訊息。 例如，假設您設定兩個接聽項：**TextWriterTraceListener** 和 **EventLogTraceListener**。 則每個接聽項都會收到相同的訊息。 **TextWriterTraceListener** 會將其輸出導向至資料流，而 **EventLogTraceListener** 則會將其輸出導向至事件記錄檔。  
   

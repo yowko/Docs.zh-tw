@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: 96b7bfabef589464e99e808d19f0dee6cfb23536
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bf0a74bd010a188f38cf1a2088a449d97405fa0f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765657"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626378"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>產生資料服務用戶端程式庫 (WCF 資料服務)
 資料服務可實作[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]可以傳回服務中繼資料文件，描述所公開的資料模型[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要。 如需詳細資訊，請參閱[OData:服務中繼資料文件](https://go.microsoft.com/fwlink/?LinkId=186070)。 您可以使用**加入服務參考**對話方塊，在 Visual Studio 中將參考加入至[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-型服務。 當您使用此工具將傳回的中繼資料的參考[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要的用戶端專案中，執行下列動作：  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 01530d4ae9779934948bbaff60fbbd392de6e701
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86779197004f2a8e84d44aaeff2df2dacb05fb01
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007114"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621204"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>逐步解說：當地語系化混合應用程式
 
@@ -18,15 +18,15 @@ ms.locfileid: "62007114"
 
 這個逐步解說中所述的工作包括：
 
--   建立[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]主應用程式專案。
+- 建立[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]主應用程式專案。
 
--   新增可當地語系化的內容。
+- 新增可當地語系化的內容。
 
--   啟用當地語系化。
+- 啟用當地語系化。
 
--   指派資源識別碼。
+- 指派資源識別碼。
 
--   使用 LocBaml 工具產生附屬組件。
+- 使用 LocBaml 工具產生附屬組件。
 
 在此逐步解說中所述工作的完整程式碼清單，請參閱 <<c0> [ 當地語系化混合式應用程式範例](https://go.microsoft.com/fwlink/?LinkID=160015)。
 
@@ -36,7 +36,7 @@ ms.locfileid: "62007114"
 
 您需要下列元件才能完成此逐步解說：
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="creating-the-windows-forms-host-project"></a>建立 Windows Forms 主專案
 

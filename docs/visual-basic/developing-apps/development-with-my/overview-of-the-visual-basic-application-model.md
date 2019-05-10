@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 02cc71dbda47d078284d9a2ec07538dfa063ac75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0144c92e01e617081ae05003e6a7175c63166891
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014140"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622798"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic 應用程式模型概觀
 Visual Basic 提供定義完善的模型，可用於控制 Windows Forms 應用程式的行為： 在 Visual Basic 應用程式模型。 此模型包含事件處理應用程式的啟動和關機，以及攔截未處理的例外狀況的事件。 它也會提供單一執行個體的應用程式的開發的支援。 應用程式模型，所以需要更多控制的開發人員可以自訂其可覆寫的方法。  
@@ -43,11 +43,11 @@ Visual Basic 提供定義完善的模型，可用於控制 Windows Forms 應用�
   
 - **未處理例外狀況**。 如果應用程式遇到未處理的例外狀況，則會引發<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>事件。 您針對該事件的處理常式可以檢查例外狀況，並判斷是否要繼續執行。  
   
-     `UnhandledException`在某些情況下不會引發事件。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>。  
+     `UnhandledException`在某些情況下不會引發事件。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>。  
   
 - **網路連線能力變更**。 如果電腦的網路可用性變更時，應用程式就會引發<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>事件。  
   
-     `NetworkAvailabilityChanged`在某些情況下不會引發事件。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>。  
+     `NetworkAvailabilityChanged`在某些情況下不會引發事件。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>。  
   
 - **應用程式關閉**。 應用程式提供<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>事件，以表示它即將關閉時。 在該事件處理常式中，您可以確保，操作您的應用程式需要執行 — 關閉並儲存，例如，已完成。 您可以設定您的應用程式關閉時關閉主要表單，或關閉只有當所有的表單關閉。  
   

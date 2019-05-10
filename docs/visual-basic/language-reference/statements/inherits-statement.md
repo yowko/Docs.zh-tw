@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: 5ab90e44e2809c1e71d7f100970b7be73af4a732
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c39272d53fea136c83a5a09444b65a594fe3b7a7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784198"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625515"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 會導致目前的類別或介面從另一個類別或介面集合繼承屬性、 變數、 屬性、 程序和事件。  

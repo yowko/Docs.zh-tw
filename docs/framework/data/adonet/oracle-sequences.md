@@ -2,21 +2,21 @@
 title: Oracle 序列
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
-ms.openlocfilehash: 8fe7513093d06f3928540f2de8cba902ce62b56e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ba7b750d48613b80eca0ef3c7c2da127977498d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878445"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64632335"
 ---
 # <a name="oracle-sequences"></a>Oracle 序列
 .NET Framework Data Provider for Oracle 藉由使用 <xref:System.Data.OracleClient.OracleDataAdapter>，支援在執行插入後擷取伺服器所產生的「Oracle 序列」索引鍵值。  
   
  SQL Server 和 Oracle 都支援自動遞增資料行的建立 (您可將這些資料行指定為主索引鍵)。 上述的值會在資料列加入至資料表時由伺服器產生。 在 SQL Server 中要設定資料行的「識別」屬性；在 Oracle 中則要建立「序列」(Sequence)。 SQL Server 中的自動遞增資料行與 Oracle 中的序列差別在於：  
   
--   在 SQL Server 中，您要將資料行標示為自動遞增資料行，而 SQL Server 會在您插入新資料列時自動產生資料行的新值。  
+- 在 SQL Server 中，您要將資料行標示為自動遞增資料行，而 SQL Server 會在您插入新資料列時自動產生資料行的新值。  
   
--   在 Oracle 中，您要建立序列，以針對資料表中的資料行產生新值，但序列和資料表或資料行之間並沒有直接連結。 Oracle 序列是一種物件，類似資料表或預存程序 (Stored Procedure)。  
+- 在 Oracle 中，您要建立序列，以針對資料表中的資料行產生新值，但序列和資料表或資料行之間並沒有直接連結。 Oracle 序列是一種物件，類似資料表或預存程序 (Stored Procedure)。  
   
  當您在 Oracle 資料庫中建立序列時，可以定義其初始值及值之間的遞增值。 也可以在提交新資料列之前，查詢新值的序列。 這表示您的程式碼可在您將新資料列的索引鍵值插入資料庫之前先加以辨識。  
   

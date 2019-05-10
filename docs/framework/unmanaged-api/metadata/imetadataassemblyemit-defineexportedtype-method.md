@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e89fda72371f197efeeeef8f31ec396c334cfcb2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5702fac139ba602828bb8722a1e3e25d6f1c58f6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122027"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625430"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType 方法
 為指定的已匯出類型，建立包含其中繼資料的 `ExportedType` 結構，並且傳回關聯的中繼資料語彙基元。  
@@ -46,13 +46,13 @@ HRESULT DefineExportedType (
  `tkImplementation`  
  [in]語彙基元，指定匯出的型別實作的位置。 有效的值和其相關聯的意義如下：  
   
--   `mdFile` 類型被實作這個組件中另一個檔案中。  
+- `mdFile` 類型被實作這個組件中另一個檔案中。  
   
--   `mdAssemblyRef` 類型被實作不同的組件中。  
+- `mdAssemblyRef` 類型被實作不同的組件中。  
   
--   `mdExportedTYpe` 類型被巢狀其他類型。  
+- `mdExportedTYpe` 類型被巢狀其他類型。  
   
--   `mdFileNil` 型別是在相同的檔案與資訊清單，並不是巢狀型別。  
+- `mdFileNil` 型別是在相同的檔案與資訊清單，並不是巢狀型別。  
   
  `tkTypeDef`  
  [in]指定要匯出類型的中繼資料語彙基元。 在中，這個值輸入`TypeDef`實作的型別和該檔案位於這個組件時，才會相關的檔案中的資料表。  

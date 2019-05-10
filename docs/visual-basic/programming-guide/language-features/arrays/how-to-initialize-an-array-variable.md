@@ -7,12 +7,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: 4aa783d6179c72760a12d0259d587b5b38bb9140
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0e450a370c27de4690105231847de25ce5a90553
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053648"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627445"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>HOW TO：初始化陣列變數在 Visual Basic
 包括陣列常值中初始化陣列變數`New`子句並指定陣列的初始值。 您可以指定的型別，或允許它從陣列常值中的值推斷。 如需如何推斷的類型的詳細資訊，請參閱 < 填入陣列與初始值 」 中[陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-ms.openlocfilehash: a4bf0850b28b7101ba76f1c1fedc6633eccb81a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c14edebb7fd5ee133ce60769327e6b32dac1c7af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759852"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623714"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>逐步解說：驗證 Windows Forms DataGridView 控制項的資料
 當您向使用者顯示的項目資料功能時，您經常必須驗證您的表單中輸入的資料。 <xref:System.Windows.Forms.DataGridView>類別提供便利的方式，資料就會認可到資料存放區之前先執行驗證。 您可以藉由處理驗證資料<xref:System.Windows.Forms.DataGridView.CellValidating>事件，會引發<xref:System.Windows.Forms.DataGridView>目前儲存格的變更時。  

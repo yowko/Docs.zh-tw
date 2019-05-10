@@ -8,19 +8,19 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 04d5f9e6f128d9b4ed3f07a5faebe06ae4ffdebf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0374e63191f5f81891a0c7c78c5e739ac5ec7984
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011251"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624166"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>HOW TO：存取受控 HTML 文件物件模型
 您可以從兩種類型的應用程式中，存取受管理的「HTML 文件物件模型」(DOM)：  
   
--   執行有受管理之 <xref:System.Windows.Forms.WebBrowser> 控制項的 Windows Forms 應用程式 (.exe)。 這兩種技術為互補，<xref:System.Windows.Forms.WebBrowser> 控制項負責將頁面顯示給使用者，HTML DOM 負責顯示文件的邏輯結構。  
+- 執行有受管理之 <xref:System.Windows.Forms.WebBrowser> 控制項的 Windows Forms 應用程式 (.exe)。 這兩種技術為互補，<xref:System.Windows.Forms.WebBrowser> 控制項負責將頁面顯示給使用者，HTML DOM 負責顯示文件的邏輯結構。  
   
--   Windows Forms <xref:System.Windows.Forms.UserControl> 會在 Internet Explorer 中執行。 無論要變更文件的結構，或開啟強制回應對話方塊等等，都可以使用負責顯示您 <xref:System.Windows.Forms.UserControl> 執行所在之頁面的 HTML DOM。  
+- Windows Forms <xref:System.Windows.Forms.UserControl> 會在 Internet Explorer 中執行。 無論要變更文件的結構，或開啟強制回應對話方塊等等，都可以使用負責顯示您 <xref:System.Windows.Forms.UserControl> 執行所在之頁面的 HTML DOM。  
   
 ### <a name="to-access-dom-from-a-windows-forms-application"></a>從 Windows Forms 應用程式存取 DOM  
   

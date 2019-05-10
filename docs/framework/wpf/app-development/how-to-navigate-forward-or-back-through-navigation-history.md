@@ -8,12 +8,12 @@ helpviewer_keywords:
 - history [WPF], navigating forward
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
-ms.openlocfilehash: 4c20ebfab45a24cf34b1476fb94dae6913fb4d99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 00a41fcf85583ec0d081a2fa099f3a77cfcd2900
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947754"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625362"
 ---
 # <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>HOW TO：在瀏覽記錄中向前或向後巡覽
 此範例說明如何巡覽向前或向後巡覽記錄中的項目。  

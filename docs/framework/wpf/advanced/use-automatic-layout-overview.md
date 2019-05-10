@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 5df6d39bef137bd4005316eac252ca0952df5e7f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a9f04f6da4dc4024f4c9ece19f045eb8e3775e6a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098776"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620891"
 ---
 # <a name="use-automatic-layout-overview"></a>使用自動配置概觀
 本主題將介紹如何撰寫的開發人員的指導方針[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]含有可當地語系化的應用程式[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]。 在過去，當地語系化的 UI 會是耗時的程序。 針對調整 UI，是每一種語言所需的像素的像素調整。 使用正確的設計和正確的編碼標準，今日[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]可以建構，讓當地語系化人員擁有較少的調整大小和重新調整位置作業執行。 撰寫應用程式都可以更輕鬆地調整大小和重新置放方法稱為自動版面配置，並可藉由使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式的設計。  
@@ -19,15 +19,15 @@ ms.locfileid: "59098776"
 ## <a name="advantages-of-using-automatic-layout"></a>使用自動版面配置的優點  
  因為[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的呈現系統，是功能強大且靈活，提供可以進行調整以符合不同的語言需求的應用程式中的配置元素的能力。 下列清單提出一些自動版面配置的優點。  
 
--   UI 會顯示能以任何語言。  
+- UI 會顯示能以任何語言。  
 
--   減少在翻譯文字之後重新調整控制項位置和大小的需求。  
+- 減少在翻譯文字之後重新調整控制項位置和大小的需求。  
   
--   減少重新調整視窗大小的需求。  
+- 減少重新調整視窗大小的需求。  
 
--   以任何語言，UI 配置正確轉譯。  
+- 以任何語言，UI 配置正確轉譯。  
 
--   可將當地語系化降低為只比字串翻譯多一點點的程度。  
+- 可將當地語系化降低為只比字串翻譯多一點點的程度。  
   
 <a name="autolayout_controls"></a>   
 ## <a name="automatic-layout-and-controls"></a>自動版面配置和控制項  

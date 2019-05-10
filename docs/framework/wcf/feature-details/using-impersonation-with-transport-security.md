@@ -2,12 +2,12 @@
 title: 使用模擬搭配傳輸安全性
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-ms.openlocfilehash: 6209007b60effe5403caf3db8855f029d0c47a0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f392dbe5806532eba181adef4ba3c8bebce9eddd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050671"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637449"
 ---
 # <a name="using-impersonation-with-transport-security"></a>使用模擬搭配傳輸安全性
 *模擬*是伺服器應用程式才會在用戶端的身分識別的能力。 對服務而言，驗證存取資源時使用模擬是很常見的。 伺服器應用程式使用服務帳戶執行，但是伺服器在接受用戶端連線會模擬用戶端，藉此使用用戶端的認證執行存取檢查。 傳輸安全性是一種用於傳遞認證與使用該認證保護通訊安全性的機制。 本主題描述使用傳輸安全性的設定，在 Windows Communication Foundation (WCF) 搭配模擬功能。 如需有關使用訊息安全性模擬的詳細資訊，請參閱[委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  

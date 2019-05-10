@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2159199fc12ef83a6bf4a44841d71799e0dad4dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9d423ef71b76b2dcbbf2812e13850922fb50ac0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868962"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625885"
 ---
 # <a name="securing-method-access"></a>設定方法存取的安全性
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,17 +28,17 @@ ms.locfileid: "61868962"
   
  Managed 程式碼提供數種方式以限制方法存取：  
   
--   限制類別、 組件、 或衍生類別的存取範圍，如果其可以信任。 這是最簡單限制方法存取權的方式。 請注意，一般而言，衍生類別可能比它們衍生自的類別還不可靠，雖然在某些情況下它們共用父類別的識別。 特別的是，不會推斷關鍵字的信任關係**保護**，這不一定會在安全性內容。  
+- 限制類別、 組件、 或衍生類別的存取範圍，如果其可以信任。 這是最簡單限制方法存取權的方式。 請注意，一般而言，衍生類別可能比它們衍生自的類別還不可靠，雖然在某些情況下它們共用父類別的識別。 特別的是，不會推斷關鍵字的信任關係**保護**，這不一定會在安全性內容。  
   
--   限制方法存取，以指定的身分識別-基本上，任何特定的呼叫端[辨識項](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29)選擇 （強式名稱、 發行者、 區域等等）。  
+- 限制方法存取，以指定的身分識別-基本上，任何特定的呼叫端[辨識項](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29)選擇 （強式名稱、 發行者、 區域等等）。  
   
--   限制具有您選取權限之呼叫端的方法存取權。  
+- 限制具有您選取權限之呼叫端的方法存取權。  
   
  同樣地，宣告式安全性可讓您控制類別的繼承。 您可以使用**InheritanceDemand**執行下列動作：  
   
--   需要衍生類別以具有指定身分識別或權限。  
+- 需要衍生類別以具有指定身分識別或權限。  
   
--   需要覆寫指定方法的衍生類別以具有指定身分識別或權限。  
+- 需要覆寫指定方法的衍生類別以具有指定身分識別或權限。  
   
  下列範例示範如何以要求呼叫端使用特定強勢名稱，來協助保護限制存取的公用類別。 這個範例會使用<xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute>具有**隨選**強式名稱。 如需如何簽署以強式名稱組件的工作型資訊，請參閱[建立和使用強式名稱組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)。  
   

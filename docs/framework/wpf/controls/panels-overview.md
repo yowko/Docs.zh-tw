@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9bd2af8cd74c32bcda3a6105f39af470f961289d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051022"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625720"
 ---
 # <a name="panels-overview"></a>面板概觀
 <xref:System.Windows.Controls.Panel> 元素是控制元素轉譯的元件，其大小和維度、 其位置和其子內容的排列方式。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供數個預先定義<xref:System.Windows.Controls.Panel>項目，以及能夠建構自訂<xref:System.Windows.Controls.Panel>項目。  
@@ -244,7 +244,7 @@ ms.locfileid: "62051022"
 ## <a name="localizationglobalization-support"></a>當地語系化/全球化支援  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支援一些功能，能夠協助建立可當地語系化的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  
   
- 所有面板皆原生支援<xref:System.Windows.FrameworkElement.FlowDirection%2A>屬性，可用來以動態方式自動重排內容取決於使用者的地區設定或語言設定。 如需詳細資訊，請參閱<xref:System.Windows.FrameworkElement.FlowDirection%2A>。  
+ 所有面板皆原生支援<xref:System.Windows.FrameworkElement.FlowDirection%2A>屬性，可用來以動態方式自動重排內容取決於使用者的地區設定或語言設定。 如需詳細資訊，請參閱 <xref:System.Windows.FrameworkElement.FlowDirection%2A>。  
   
  <xref:System.Windows.Window.SizeToContent%2A>屬性會提供一種機制，可讓應用程式開發人員預期的需求當地語系化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 使用<xref:System.Windows.SizeToContent.WidthAndHeight>值，這個屬性時，父代<xref:System.Windows.Window>一律動態調整大小以符合內容，並不會受到人的高度或寬度限制。  
   

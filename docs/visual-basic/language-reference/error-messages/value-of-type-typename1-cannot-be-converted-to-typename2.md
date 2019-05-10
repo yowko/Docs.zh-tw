@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: 5f313a43bc3a2f983dabbd45477d120fdb80d063
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 027cccc9ad406d5bc2fd686ddeb4c674dc8f3c90
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766801"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621192"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>類型的值 '\<typename1 >' 無法轉換成'\<2&gt >'
 類型的值 '\<typename1 >' 無法轉換成'\<2&gt >'。 型別不相符可能是因為混用了檔案參考和組件的專案參考的 '\<組件名稱 >'。 請嘗試更換的檔案參考 '\<檔案路徑 >' 在專案'\<projectname1 >' 的專案參考 '\<專案名稱 2> >'。  

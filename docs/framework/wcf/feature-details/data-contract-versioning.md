@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: 53080975c03430a6c05bf72f58610b328430a3c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2bfe253011e24e6792fc60221d05fd60555e87c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857151"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627053"
 ---
 # <a name="data-contract-versioning"></a>資料合約版本控制
 隨著應用程式的發展，您也必須變更服務所使用的資料合約。 本主題說明如何設定資料合約的版本。 本主題描述資料合約版本控制的機制。 如需完整的概觀和規定性的版本控制指導方針，請參閱[最佳做法：資料合約版本控制](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
@@ -34,13 +34,13 @@ ms.locfileid: "61857151"
   
  某些變更會修改傳輸的資料，但可能會、也可能不會中斷。 下列的變更則一定會中斷：  
   
--   變更資料合約的 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 或 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> 值。  
+- 變更資料合約的 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 或 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> 值。  
   
--   使用 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> 的 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性變更資料成員的順序。  
+- 使用 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> 的 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性變更資料成員的順序。  
   
--   重新命名資料成員。  
+- 重新命名資料成員。  
   
--   變更資料成員的資料合約。 例如，將資料成員的型別從整數變更為字串，或從具有名為 "Customer" 資料合約的型別變更成具有名為 "Person" 資料合約的型別。  
+- 變更資料成員的資料合約。 例如，將資料成員的型別從整數變更為字串，或從具有名為 "Customer" 資料合約的型別變更成具有名為 "Person" 資料合約的型別。  
   
  以下變更是允許的。  
   
@@ -90,9 +90,9 @@ ms.locfileid: "61857151"
 ## <a name="omitted-default-values"></a>省略的預設值  
  可以 （但不建議） 若要設定`EmitDefaultValue`DataMemberAttribute 屬性上的屬性`false`所述，在[資料成員預設值](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)。 如果這個設定為 `false`，則如果資料成員設定為預設值 (通常為 null 或零)，將不會予以省略。 在以下兩方面，這會與不同版本中之必要資料成員不相容：  
   
--   在某個版本內要求具有資料成員的資料合約，無法從不同版本 (其 `EmitDefaultValue` 設定為 `false`) 接收預設 (null 或零) 資料。  
+- 在某個版本內要求具有資料成員的資料合約，無法從不同版本 (其 `EmitDefaultValue` 設定為 `false`) 接收預設 (null 或零) 資料。  
   
--   具有 `EmitDefaultValue` 設定為 `false` 的必要資料成員，無法用來序列化其預設值 (null 或零)，但是可以在還原序列化時接收此類的值。 如此會產生反覆存取的問題 (可以讀入資料，但卻無法接著將相同的資料寫出)。 因此，如果在某個版本內，`IsRequired` 為 `true`，且 `EmitDefaultValue` 為 `false`，則相同的組合應套用至所有其他版本，此類沒有資料合約的版本將能夠產生不會導致反覆存取的值。  
+- 具有 `EmitDefaultValue` 設定為 `false` 的必要資料成員，無法用來序列化其預設值 (null 或零)，但是可以在還原序列化時接收此類的值。 如此會產生反覆存取的問題 (可以讀入資料，但卻無法接著將相同的資料寫出)。 因此，如果在某個版本內，`IsRequired` 為 `true`，且 `EmitDefaultValue` 為 `false`，則相同的組合應套用至所有其他版本，此類沒有資料合約的版本將能夠產生不會導致反覆存取的值。  
   
 ## <a name="schema-considerations"></a>結構描述的考量  
  如需資料合約型別會產生哪些結構描述的說明，請參閱 < [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  

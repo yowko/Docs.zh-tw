@@ -2,12 +2,12 @@
 title: 匯出 WCF 擴充的自訂中繼資料
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: 5134b57c59268b139239021bc2b4f6f4538ad27d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ecca7e311e113e2aade360e4718d1bed4ea7feef
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857957"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627118"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>匯出 WCF 擴充的自訂中繼資料
 在 Windows Communication Foundation (WCF) 中，中繼資料匯出是描述服務端點，並將其投射至並行標準化表示法，用戶端可以用來了解如何使用服務的程序。 自訂中繼資料包含系統提供之中繼資料匯出工具所無法匯出的 XML 項目。 通常這包括使用者定義行為的自訂 WSDL 項目和繫結程序項目，以及有關繫結程序與合約功能和需求的原則判斷提示。  

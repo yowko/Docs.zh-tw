@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: 58b334eb5e6db443bcfaba72729d59cb1d798e70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7371cbd4fef4abced95744071ff222b40e160e3e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766814"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620317"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>類型的值 '\<typename1 >' 無法轉換成'\<2&gt >' （多重檔案參考）
 類型的值 '\<typename1 >' 無法轉換成'\<2&gt >'。 類型不相符可能是因為混用的檔案參考 '\<filepath1 >' 在專案'\<projectname1 >' 的檔案參考 '\<filepath2 >' 在專案'\<專案名稱 2> >'。 如果兩個組件相同，請嘗試更換這些參考，讓兩個參考都來自相同的位置。  

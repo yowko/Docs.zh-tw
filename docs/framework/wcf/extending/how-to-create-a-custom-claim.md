@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: 1892e910a86e01b7b2ee0f6a2403ad7af4688808
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c1c1e050cfef36aa53b83a764c0b7e308783394
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857775"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619609"
 ---
 # <a name="how-to-create-a-custom-claim"></a>HOW TO：建立自訂宣告
 身分識別模型基礎結構在 Windows Communication Foundation (WCF) 提供一組內建的宣告類型和 helper 函式具有權限建立<xref:System.IdentityModel.Claims.Claim>透過這些類型和權限的執行個體。 這些內建的宣告被設計來在 WCF 支援的用戶端認證類型中找到預設的模型資訊。 在許多情況下，內建宣告就已足夠；不過有些應用程式可能需要自訂宣告。 宣告中包含了宣告類型、宣告適用的資源，以及擁有該資源所需的權限。 這個主題會描述如何建立自訂宣告。  
@@ -19,15 +19,15 @@ ms.locfileid: "61857775"
   
 1. 將宣告類型、資源值和權限傳遞至 <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> 建構函式，即可建立自訂宣告。  
   
-    1.  決定用於宣告類型的唯一值。  
+    1. 決定用於宣告類型的唯一值。  
   
          宣告類型為唯一的字串識別碼。 自訂宣告設計者的責任在於確保用於宣告類型的字串識別碼為獨一無二的。 如需 WCF 所定義的宣告類型的清單，請參閱<xref:System.IdentityModel.Claims.ClaimTypes>類別。  
   
-    2.  選擇基本資料型別和資源的值。  
+    2. 選擇基本資料型別和資源的值。  
   
          資源就是物件。 資源的 CLR 類型可以為基本，例如 <xref:System.String> 或 <xref:System.Int32>，或任何可序列化的類型。 資源的 CLR 型別必須可序列化，因為宣告由 WCF 序列化的各個點上。 基本類型為可序列化。  
   
-    3.  選擇 WCF 或自訂的權限的唯一值所定義的權限。  
+    3. 選擇 WCF 或自訂的權限的唯一值所定義的權限。  
   
          權限為唯一字串識別碼。 由 WCF 所定義的權限會定義在<xref:System.IdentityModel.Claims.Rights>類別。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "61857775"
   
 1. 將宣告類型、資源值和權限傳遞至 <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> 建構函式，即可建立自訂宣告。  
   
-    1.  決定用於宣告類型的唯一值。  
+    1. 決定用於宣告類型的唯一值。  
   
          宣告類型為唯一的字串識別碼。 自訂宣告設計者的責任在於確保用於宣告類型的字串識別碼為獨一無二的。 如需 WCF 所定義的宣告類型的清單，請參閱<xref:System.IdentityModel.Claims.ClaimTypes>類別。  
   
-    2.  選擇或定義資源的可序列化非基本類型。  
+    2. 選擇或定義資源的可序列化非基本類型。  
   
          資源就是物件。 資源的 CLR 型別必須可序列化，因為宣告由 WCF 序列化的各個點上。 基本類型已為可序列化。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "61857775"
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)] 
          [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]        
   
-    3.  選擇 WCF 或自訂的權限的唯一值所定義的權限。  
+    3. 選擇 WCF 或自訂的權限的唯一值所定義的權限。  
   
          權限為唯一字串識別碼。 由 WCF 所定義的權限會定義在<xref:System.IdentityModel.Claims.Rights>類別。  
   

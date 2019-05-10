@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f424e4ef62f42da9065aa6ff846e8bd2c7a42a4e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929840"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625817"
 ---
 # <a name="working-with-certificates"></a>使用憑證
 在針對 Windows Communication Foundation (WCF) 安全性設計程式時，通常會採用 X.509 數位憑證來驗證用戶端與伺服器、加密，以及數位簽署訊息。 本主題將簡要說明 X.509 數位憑證功能及如何在 WCF 中使用這些憑證，同時針對這些概念的進一步說明以及如何運用 WCF 與憑證來完成一般工作的主題說明提供連結。  

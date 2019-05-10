@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 6987263854b0d0372bc08bb7e4d6efb498e265f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d9af75474f6b0aec2bdf6aa2f550c280209f91e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781000"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633490"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic 中的 LINQ 簡介
 Language Integrated Query (LINQ) 會將查詢功能新增至 Visual Basic，並提供簡單且功能強大的功能，當您使用所有類型的資料。 而不是將查詢傳送至資料庫，以進行處理，或使用的每一個您要搜尋的資料類型不同的查詢語法，LINQ 導入了查詢，Visual Basic 語言的一部分。 它使用統一的語法，不論資料類型為何。  
@@ -76,7 +76,7 @@ Language Integrated Query (LINQ) 會將查詢功能新增至 Visual Basic，並�
 
 ### <a name="from-clause"></a>From 子句
 
-任一[`From`子句](../../../../visual-basic/language-reference/queries/from-clause.md)或`Aggregate`子句，才能開始查詢。 `From` 子句會指定查詢的來源集合和反覆運算變數。 例如：
+任一[`From`子句](../../../../visual-basic/language-reference/queries/from-clause.md)或`Aggregate`子句，才能開始查詢。 `From` 子句會指定查詢的來源集合和反覆運算變數。 例如: 
 
  [!code-vb[VbVbalrIntroToLINQ#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#7)]
 
@@ -96,13 +96,13 @@ Language Integrated Query (LINQ) 會將查詢功能新增至 Visual Basic，並�
 
 ### <a name="order-by-clause"></a>Order By 子句]
 
-|選擇性的。 [ `Order By`子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)在查詢中指定資料行的排序次序。 例如: 
+|選擇性的。 [ `Order By`子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)在查詢中指定資料行的排序次序。 例如：
 
  [!code-vb[VbVbalrIntroToLINQ#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#10)]
 
 ### <a name="join-clause"></a>Join 子句
 
-選擇性。 A [ `Join`子句](../../../../visual-basic/language-reference/queries/join-clause.md)結合成單一集合的兩個集合。 例如: 
+選擇性。 A [ `Join`子句](../../../../visual-basic/language-reference/queries/join-clause.md)結合成單一集合的兩個集合。 例如：
 
  [!code-vb[VbVbalrIntroToLINQ#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#11)]
 
@@ -114,7 +114,7 @@ Language Integrated Query (LINQ) 會將查詢功能新增至 Visual Basic，並�
 
 ### <a name="group-join-clause"></a>Group Join 子句
 
-選擇性。 A [ `Group Join`子句](../../../../visual-basic/language-reference/queries/group-join-clause.md)結合成單一階層式集合的兩個集合。 例如：
+選擇性。 A [ `Group Join`子句](../../../../visual-basic/language-reference/queries/group-join-clause.md)結合成單一階層式集合的兩個集合。 例如: 
 
  [!code-vb[VbVbalrIntroToLINQ#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#13)]
 
@@ -148,7 +148,7 @@ Language Integrated Query (LINQ) 會將查詢功能新增至 Visual Basic，並�
 
 ### <a name="skip-while-clause"></a>Skip While 子句
 
-選擇性。 A [ `Skip While`子句](../../../../visual-basic/language-reference/queries/skip-while-clause.md)略過集合中的項目，只要指定的條件是`true`然後傳回其餘項目。 例如: 
+選擇性。 A [ `Skip While`子句](../../../../visual-basic/language-reference/queries/skip-while-clause.md)略過集合中的項目，只要指定的條件是`true`然後傳回其餘項目。 例如：
 
  [!code-vb[VbVbalrIntroToLINQ#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#19)]
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: b648d62c9128f0864d60ace1ca56700f594b78c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0252259d92f08a0f871167fc7930818bab542cc5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967085"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626789"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Form 支援的資料來源
 傳統上，資料繫結已使用的應用程式中利用儲存在資料庫中的資料。 使用 Windows Form 資料繫結，您可以從資料庫，以及其他的結構，例如陣列和集合中的資料存取資料，只要已符合特定最低需求。  

@@ -2,12 +2,12 @@
 title: 自訂複合設計工具 - 工作流程項目展示器
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: f3c7620f719b8412b6b34bda7be5d607dccda75f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0eb2ce0ca7e5d2ffd7ddd9a3d582783b4610427a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005225"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622617"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>自訂複合設計工具 - 工作流程項目展示器
 <xref:System.Activities.Presentation.WorkflowItemPresenter>是 WF 設計工具程式設計模型，可讓您建立的 「 卸除區 」 可以放置任意活動的索引鍵類型。 這個範例示範如何建立活動設計工具會呈現這類 「 卸除區。 」
@@ -16,18 +16,18 @@ ms.locfileid: "62005225"
 
 ## <a name="demonstrates"></a>示範
 
--   建立具有 <xref:System.Activities.Presentation.WorkflowItemPresenter> 的自訂活動設計工具。
+- 建立具有 <xref:System.Activities.Presentation.WorkflowItemPresenter> 的自訂活動設計工具。
 
--   使用中繼資料存放區登錄自訂設計工具。
+- 使用中繼資料存放區登錄自訂設計工具。
 
--   以宣告和強制方式設計重新裝載之工具箱的程式。
+- 以宣告和強制方式設計重新裝載之工具箱的程式。
 
 ## <a name="sample-details"></a>範例詳細資料
  這個範例的程式碼會示範：
 
--   針對 `SimpleNativeActivity` 類別建置自訂活動設計工具。
+- 針對 `SimpleNativeActivity` 類別建置自訂活動設計工具。
 
--   建立具有 <xref:System.Activities.Presentation.WorkflowItemPresenter> 的自訂活動設計工具
+- 建立具有 <xref:System.Activities.Presentation.WorkflowItemPresenter> 的自訂活動設計工具
 
 ```xaml
 <sap:ActivityDesigner x:Class="Microsoft.Samples.UsingWorkflowItemPresenter.SimpleNativeDesigner"
