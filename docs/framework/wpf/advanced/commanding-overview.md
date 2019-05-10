@@ -13,12 +13,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 4071f7f08c2b25a2ec551832f57a2b9a7facc91d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 835b06c6107cd44d49c83cfe34102b0c2d2a4bb9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037085"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627404"
 ---
 # <a name="commanding-overview"></a>命令概觀
 <a name="introduction"></a> 命令是處理比裝置輸入更接近語意層級的 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的輸入機制。 命令範例包含許多應用程式中都有的 [複製]、[剪下] 和 [貼上] 作業。  

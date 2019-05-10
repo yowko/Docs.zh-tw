@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1433583c4c8e20533e7e18f1722d5481ffed3bbc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002330"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625679"
 ---
 # <a name="timing-behaviors-overview"></a>計時行為概觀
 本主題說明動畫和其他的計時行為<xref:System.Windows.Media.Animation.Timeline>物件。  

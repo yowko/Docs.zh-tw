@@ -2,12 +2,12 @@
 title: HOW TO：使用 WCF REST 程式設計模型建立接受任意資料的服務
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: d7da3a5c6dd4f04c4d902dab9c2dff40413ddd20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1c30491f6c5b0a91f93a6f26417f9dc2b996a48
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857320"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614783"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>HOW TO：使用 WCF REST 程式設計模型建立接受任意資料的服務
 有時候，開發人員必須要能夠完全控制資料從服務作業傳回的方式。 這是服務作業必須傳回格式的資料不支援 byWCF 情況。 本主題說明如何使用 WCF REST 程式設計模型建立接收任意資料的服務。  
@@ -191,7 +191,7 @@ namespace ReceiveRawData
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
--   編譯程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll  
+- 編譯程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll  
   
 ## <a name="see-also"></a>另請參閱
 

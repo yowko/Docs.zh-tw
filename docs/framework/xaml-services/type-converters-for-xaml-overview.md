@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: 7a5ec731eacda8017c307a0ffa8ec282da78c40f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cf9eda484d184b9be70a02bac7ced5b85a2dd211
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025453"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617224"
 ---
 # <a name="type-converters-for-xaml-overview"></a>XAML 類型轉換子概觀
 物件寫入器的類型轉換器供應邏輯，可將 XAML 標記中的字串轉換為物件圖形中的特定物件。 在 .NET Framework XAML 服務中，類型轉換器必須是衍生自 <xref:System.ComponentModel.TypeConverter>的類別。 有些轉換器也支援 XAML 儲存路徑，而且可用來將序列化標記中的物件序列化成字串格式。 本主題描述如何以及何時叫用 XAML 中的類型轉換器，並提供 <xref:System.ComponentModel.TypeConverter>之方法覆寫的實作建議。  

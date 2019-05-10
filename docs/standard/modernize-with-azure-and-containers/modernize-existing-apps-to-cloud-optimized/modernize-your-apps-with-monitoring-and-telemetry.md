@@ -4,12 +4,12 @@ description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: cd54861600127191b852e0a966baae6e0fe7914e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a8135031d2879ff377881d246c532573a2149fe7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012095"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64611649"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>使用監視和遙測將應用程式現代化
 

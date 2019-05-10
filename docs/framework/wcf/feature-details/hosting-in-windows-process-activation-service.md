@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 5b234a00f3194fcf40a33d25302cff16d5999b05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: baa931b64e64c9c2f73ac07424b2cfd1868e725b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039373"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613299"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>在 Windows Process Activation Service 中裝載
 Windows Process Activation Service (WAS) 管理啟動和包含該主機的 Windows Communication Foundation (WCF) 服務的應用程式的工作者處理序的存留期。 WAS 處理序模型會藉由移除 HTTP 上的相依性，將 HTTP 伺服器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 處理序模型一般化。 這可讓 WCF 服務使用 HTTP 和非 HTTP 通訊協定，例如 Net.TCP，請在裝載環境中支援訊息型啟用，並可讓您裝載大量應用程式，在指定電腦上。  

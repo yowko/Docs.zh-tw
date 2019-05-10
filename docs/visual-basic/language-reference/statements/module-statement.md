@@ -13,12 +13,12 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-ms.openlocfilehash: f546498e5282bcf58d07a06968bb4303e4e6d7b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 73d4a5cc8fd4bad41ead1fda830504b19877a8d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784159"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625476"
 ---
 # <a name="module-statement"></a>Module 陳述式
 宣告模組的名稱，並引進變數、 屬性、 事件和組成模組的程序的定義。  

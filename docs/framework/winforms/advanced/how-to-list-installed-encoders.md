@@ -8,12 +8,12 @@ helpviewer_keywords:
 - image codecs [Windows Forms], listing
 - image encoders [Windows Forms], listing
 ms.assetid: 49e8e4e9-7a67-42d9-86bf-08821cdc282e
-ms.openlocfilehash: ce297cb6d183bc63c8b276e30100aa4e864cd90d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2634dd96b3aa5edcecde092919eb328b7f3dadc3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61722948"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626835"
 ---
 # <a name="how-to-list-installed-encoders"></a>HOW TO：列出已安裝的編碼器
 若要列出可用的電腦上，影像編碼器，以判斷是否能省下您的應用程式特定的影像檔案格式。 <xref:System.Drawing.Imaging.ImageCodecInfo>類別提供<xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A>靜態方法，讓您可以判斷哪一個映像編碼器可用。 <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> 傳回的陣列<xref:System.Drawing.Imaging.ImageCodecInfo>物件。  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6d631d51cc4f40b5be91b6579039a8b8dffa3dee
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780818"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613205"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 疑難排解快速入門
 本主題列出客戶在開發 WCF 用戶端和服務時會碰到的幾個已知問題。 如果您遇到的問題不在此清單中，建議您為您的服務設定追蹤。 這會產生一個追蹤檔案，您可以使用追蹤檔案檢視器檢視這個檔案，並取得服務中可能會發生之例外狀況的詳細資訊。 如需有關如何設定追蹤的詳細資訊，請參閱：[設定追蹤](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。 如需有關追蹤檔案檢視器的詳細資訊，請參閱：[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  

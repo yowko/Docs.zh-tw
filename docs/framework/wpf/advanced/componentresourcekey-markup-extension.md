@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 5f72d6c3273cfda4276383cfe72f90196e5d4340
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a593839447742ed91d22a397d29b2455ce7a3b2d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037748"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627414"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey 標記延伸
 定義和參考會從外部組件載入的資源索引鍵。 這可讓組件，而不是明確的資源字典的組件中，或在類別上指定目標類型的資源查閱。  

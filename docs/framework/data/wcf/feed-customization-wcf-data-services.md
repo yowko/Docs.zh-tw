@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 51da86d6c0f565d1baa58452a661ccbaa321538c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f35c1387d54fdc02cb421af477671a5a75939c57
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765683"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626400"
 ---
 # <a name="feed-customization-wcf-data-services"></a>自訂摘要 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]將資料公開為摘要。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支援資料摘要的 Atom 和 「 JavaScript 物件標記法 (JSON) 格式。 當您使用 Atom 摘要時，[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]提供標準的方法，用來序列化資料，例如實體和關聯性，為 XML 格式，可以包含在 HTTP 訊息的本文。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 定義包含在實體內的資料與 Atom 項目之間的預設實體屬性對應。 如需詳細資訊，請參閱[OData:Atom 格式](https://go.microsoft.com/fwlink/?LinkID=185794)。  

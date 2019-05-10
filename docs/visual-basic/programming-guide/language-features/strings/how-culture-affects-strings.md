@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: d3c7ae9da9c18e53da393928e34dcfbf04fc891c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c498ae0a9d39240e715e6ba66e57c5e1d3ebbfbc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024686"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610423"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>在 Visual Basic 中文化特性如何影響字串
 此說明頁面討論 Visual Basic 來執行字串轉換及比較所使用的文化特性資訊。  

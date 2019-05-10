@@ -2,12 +2,12 @@
 title: LINQ to SQL 中的安全性
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
-ms.openlocfilehash: 6af073a86b0feaba2fdcd9facd9474bb334096e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c07d8c6a22326397a21219ddd660a44f9282ece0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62036994"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616121"
 ---
 # <a name="security-in-linq-to-sql"></a>LINQ to SQL 中的安全性
 當您連接至資料庫時，永遠都會存在安全性風險。 雖然 LINQ to SQL 可能會包含一些使用 SQL Server 資料的新方式，但是並不會提供任何額外的安全性機制。  

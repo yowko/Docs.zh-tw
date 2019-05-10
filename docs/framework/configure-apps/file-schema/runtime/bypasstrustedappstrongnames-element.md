@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c39d9a1e3da9cccb2f027e9597a6f2272d187ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c70a03e1ad443739f43dc50ab34021652017713d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674203"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607414"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> 項目
 指定是否略過載入至完全信任的完全信任組件的強式名稱的驗證<xref:System.AppDomain>。  
@@ -61,13 +61,13 @@ ms.locfileid: "61674203"
   
  略過功能適用於任何以強式名稱簽署並具有下列特性的組件：  
   
--   而不需要完全信任<xref:System.Security.Policy.StrongName>辨識項 (例如，具有`MyComputer`區域辨識項)。  
+- 而不需要完全信任<xref:System.Security.Policy.StrongName>辨識項 (例如，具有`MyComputer`區域辨識項)。  
   
--   載入到完全信任的 <xref:System.AppDomain>。  
+- 載入到完全信任的 <xref:System.AppDomain>。  
   
--   從 <xref:System.AppDomain> 的 <xref:System.AppDomainSetup.ApplicationBase%2A> 屬性下的位置載入。  
+- 從 <xref:System.AppDomain> 的 <xref:System.AppDomainSetup.ApplicationBase%2A> 屬性下的位置載入。  
   
--   不延遲簽署。  
+- 不延遲簽署。  
   
 > [!NOTE]
 >  如果略過功能已關閉的電腦上的所有應用程式所使用的登錄機碼，此組態檔設定沒有任何作用。 如需詳細資訊，請參閱[如何：停用強式名稱略過功能](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)。  

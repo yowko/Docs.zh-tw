@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b37b00cfbeee10f217d1dbe1c754c50b65e31de9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344659"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625858"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>HOW TO：建立發行者原則
 組件的廠商可以應用程式應該使用較新版的組件，包含與升級後的組件的發行者原則檔的狀態。 發行者原則檔會指定組件重新導向和程式碼基底設定，並使用應用程式組態檔相同的格式。 發行者原則檔會編譯成組件，並放置於全域組件快取。  
@@ -57,15 +57,15 @@ ms.locfileid: "59344659"
   
      在這個命令：  
   
-    -   *PublisherPolicyFile*引數是發行者原則檔的名稱。  
+    - *PublisherPolicyFile*引數是發行者原則檔的名稱。  
   
-    -   *PublisherPolicyAssemblyFile*引數是此命令會產生發行者原則組件的名稱。 組件檔案名稱必須遵循格式：  
+    - *PublisherPolicyAssemblyFile*引數是此命令會產生發行者原則組件的名稱。 組件檔案名稱必須遵循格式：  
   
          **原則。** *majorNumber* **。** *minorNumber* **。** *mainAssemblyName* **.dll**  
   
-    -   *KeyPairFile*引數是含有金鑰組檔案的名稱。 您必須簽署的組件和相同的金鑰組的發行者原則組件。  
+    - *KeyPairFile*引數是含有金鑰組檔案的名稱。 您必須簽署的組件和相同的金鑰組的發行者原則組件。  
   
-    -   *ProcessorArchitecture*引數會識別特定處理器的組件的目標平台。  
+    - *ProcessorArchitecture*引數會識別特定處理器的組件的目標平台。  
   
         > [!NOTE]
         >  能夠針對特定的處理器架構是.NET Framework 2.0 版中的新功能。  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 426429eefd038008340a956ab3fa3cba21906c84
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857086"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627018"
 ---
 # <a name="denial-of-service"></a>阻斷服務
 當系統由於無法處理訊息，或者處理訊息的速度極為緩慢而爆滿時，就會發生阻絕服務。  
@@ -19,22 +19,22 @@ ms.locfileid: "61857086"
   
  風險降低的方式包括：  
   
--   衍生自 <xref:System.Xml.NameTable> 類別並強制執行最大的大小配額  (當配額已滿時，您無法避免使用 <xref:System.Xml.NameTable> 或切換 <xref:System.Xml.NameTable>)。  
+- 衍生自 <xref:System.Xml.NameTable> 類別並強制執行最大的大小配額  (當配額已滿時，您無法避免使用 <xref:System.Xml.NameTable> 或切換 <xref:System.Xml.NameTable>)。  
   
--   避免使用提到的屬性，並盡量搭配使用 <xref:System.Xml.XmlReader.MoveToAttribute%2A> 方法和 <xref:System.Xml.XmlReader.IsStartElement%2A> 方法，這些方法不會傳回字串，這樣就可避免 <xref:System.Xml.NameTable> 集合太滿的問題。  
+- 避免使用提到的屬性，並盡量搭配使用 <xref:System.Xml.XmlReader.MoveToAttribute%2A> 方法和 <xref:System.Xml.XmlReader.IsStartElement%2A> 方法，這些方法不會傳回字串，這樣就可避免 <xref:System.Xml.NameTable> 集合太滿的問題。  
   
 ## <a name="malicious-client-sends-excessive-license-requests-to-service"></a>惡意用戶端將大量授權要求傳送至服務  
  如果惡意用戶端透過大量授權要求炸滿服務，就可能導致伺服器使用過多的記憶體。  
   
  風險降低：使用下列屬性的<xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>類別：  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>：控制時間界限之 `SecurityContextToken` 的上限，而這是伺服器在 `SPNego` 或 `SSL` 交涉之後快取的上限。  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>：控制時間界限之 `SecurityContextToken` 的上限，而這是伺服器在 `SPNego` 或 `SSL` 交涉之後快取的上限。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>：控制 `SecurityContextTokens` 的存留時間，而這是伺服器在 `SPNego` 或 `SSL` 交涉之後發出的存留時間。 伺服器在這段時間內會快取 `SecurityContextToken`。  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>：控制 `SecurityContextTokens` 的存留時間，而這是伺服器在 `SPNego` 或 `SSL` 交涉之後發出的存留時間。 伺服器在這段時間內會快取 `SecurityContextToken`。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>：控制在伺服器中建立的安全對話上限，但是不會針對這些對話處理應用程式訊息。 這個配額會防止用戶端在服務中建立安全對話，由此服務會針對每個用戶端保留對話狀態，但不會使用這些對話。  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>：控制在伺服器中建立的安全對話上限，但是不會針對這些對話處理應用程式訊息。 這個配額會防止用戶端在服務中建立安全對話，由此服務會針對每個用戶端保留對話狀態，但不會使用這些對話。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>：控制服務將安全對話保留在作用中，而不會從用戶端中接收該對話之應用程式訊息的時間上限。 這個配額會防止用戶端在服務中建立安全對話，由此服務會針對每個用戶端保留對話狀態，但不會使用這些對話。  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>：控制服務將安全對話保留在作用中，而不會從用戶端中接收該對話之應用程式訊息的時間上限。 這個配額會防止用戶端在服務中建立安全對話，由此服務會針對每個用戶端保留對話狀態，但不會使用這些對話。  
   
 ## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>WSDualHttpBinding 或雙重自訂繫結需要用戶端驗證  
  根據預設，<xref:System.ServiceModel.WSDualHttpBinding> 已啟用安全性。 不過，如果透過將 <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> 屬性設定為 <xref:System.ServiceModel.MessageCredentialType.None> 而停用用戶端驗證，則惡意使用者可能在第三個服務上導致阻絕服務攻擊。 可能是因為惡意用戶端可以導向至服務，並將訊息資料流傳送至第三個服務。  

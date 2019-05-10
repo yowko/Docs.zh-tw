@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7261e5ce06a4ac20b1e7c816ababf8c8ba129b29
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 07d84506a7c07bde09b3b46ea608b1874842c3ac
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949275"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616393"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT 追蹤 ETW 事件
 <a name="top"></a> 這些事件會收集 just-in-time (JIT) 內嵌和 JIT tail 呼叫成功或失敗的相關資訊。  

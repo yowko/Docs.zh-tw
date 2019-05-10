@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: f168d6d9cd6970353e75fa35a7e52cc7156fda72
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c74b75adf0f56dd198375cb1ff24656d39ec074c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907643"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610570"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>HOW TO：宣告列舉 (Visual Basic)
 您建立的列舉`Enum`「 宣告 」 區段中的類別或模組的陳述式。 您無法宣告列舉型別方法內。 若要指定適當的存取等級，請使用`Private`， `Protected`， `Friend`，或`Public`。  
@@ -38,7 +38,7 @@ ms.locfileid: "61907643"
   
 ### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>若要宣告明確的型別為列舉型別  
   
--   使用指定的列舉型別`As`子句，如下列範例所示。  
+- 使用指定的列舉型別`As`子句，如下列範例所示。  
   
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   

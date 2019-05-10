@@ -2,12 +2,12 @@
 title: 確保對等通道應用程式安全
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
-ms.openlocfilehash: a747923f81f4773eb58a4b7500cf4fc1c006f889
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8fbad019270851a32d932c33d6fd401cea2b3515
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990947"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603327"
 ---
 # <a name="securing-peer-channel-applications"></a>確保對等通道應用程式安全
 和 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 下的其他繫結一樣，`NetPeerTcpBinding` 預設已啟用安全性，並且會提供傳輸和訊息型安全性 (或兩者皆提供)。 這個主題會討論這兩種類型的安全性。 安全性類型則是由繫結規格中的安全性模式標記所指定 (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`)。  

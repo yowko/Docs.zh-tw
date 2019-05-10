@@ -2,12 +2,12 @@
 title: 使用傳輸安全性來確保訊息的安全
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: f32e932bb6616911baa8991cb46a5940c8d285ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6f93fa37c6f1d6a0d7396c7f9ea5e97b44d1dc92
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990960"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603513"
 ---
 # <a name="securing-messages-using-transport-security"></a>使用傳輸安全性來確保訊息的安全
 本節討論訊息佇列 (MSMQ) 的傳輸安全性，您可以使用這項傳輸安全性確保傳送至佇列之訊息的安全。  

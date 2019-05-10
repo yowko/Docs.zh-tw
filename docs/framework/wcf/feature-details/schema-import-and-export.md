@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-ms.openlocfilehash: 9f13f9d95c40b964c5eb416c590a5d603d714bac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 43b9ca115f3eeae7a28d8ed8a0642ad6e5439bd8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991012"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603698"
 ---
 # <a name="schema-import-and-export"></a>結構描述匯入和匯出
 Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 `DataContractSerializer` 會在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件與 XML 之間轉譯 (雙向)。 除了本身的序列化程式，WCF 會包含相關聯的結構描述匯入和結構描述匯出機制。 *結構描述*是的 XML 序列化程式產生或還原序列化程式可以存取的形狀的正式、 精確及電腦可讀取描述。 WCF 會使用 World Wide Web Consortium (W3C) XML 結構描述定義語言 (XSD) 做為其結構描述表示，也就是許多第三方平台廣泛互通。  

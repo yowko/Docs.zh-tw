@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: d08f991204b2d74899cbd1aee82c0cc23e175dd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8f1251195fdb21ac57030056abc7b5657edb49fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298314"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614614"
 ---
 # <a name="how-to-localize-an-application"></a>HOW TO：將應用程式當地語系化
 本教學課程說明如何使用 LocBaml 工具來建立當地語系化的應用程式。  
@@ -91,21 +91,21 @@ ms.locfileid: "59298314"
   
 4. 當您執行 LocBaml 時，可指定的選項如下：  
   
-    -   **剖析**或 **-p:** 剖析 Baml、 資源或[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]檔案，以產生.csv 或.txt 檔案。  
+    - **剖析**或 **-p:** 剖析 Baml、 資源或[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]檔案，以產生.csv 或.txt 檔案。  
   
-    -   **產生**或 **-g:** 使用轉譯的檔案，以產生當地語系化的二進位檔案。  
+    - **產生**或 **-g:** 使用轉譯的檔案，以產生當地語系化的二進位檔案。  
   
-    -   **out**或是 **-o** {*filedirectory*] **:** 輸出檔名稱。  
+    - **out**或是 **-o** {*filedirectory*] **:** 輸出檔名稱。  
   
-    -   **文化特性**或是 **-cul** {*文化特性*] **:** 輸出組件的地區設定。  
+    - **文化特性**或是 **-cul** {*文化特性*] **:** 輸出組件的地區設定。  
   
-    -   **translation** or **-trans** {*translation.csv*] **:** 轉譯或當地語系化的檔案。  
+    - **translation** or **-trans** {*translation.csv*] **:** 轉譯或當地語系化的檔案。  
   
-    -   **asmpath**或是 **-asmpath:** {*filedirectory*] **:** 如果您[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]程式碼包含自訂控制項，您必須提供**asmpath**自訂控制項組件。  
+    - **asmpath**或是 **-asmpath:** {*filedirectory*] **:** 如果您[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]程式碼包含自訂控制項，您必須提供**asmpath**自訂控制項組件。  
   
-    -   **nologo:** 會顯示無標誌或著作權資訊。  
+    - **nologo:** 會顯示無標誌或著作權資訊。  
   
-    -   **詳細資訊：** 顯示詳細模式資訊。  
+    - **詳細資訊：** 顯示詳細模式資訊。  
   
     > [!NOTE]
     >  如果您執行此工具時，您需要的選項清單，輸入**LocBaml.exe**按 ENTER 鍵。  
@@ -133,19 +133,19 @@ ms.locfileid: "59298314"
 
    這七個欄位為：  
   
-   1.  **BAML 名稱**。 有關來源語言附屬組件的 BAML 資源名稱。  
+   1. **BAML 名稱**。 有關來源語言附屬組件的 BAML 資源名稱。  
   
-   2.  **資源索引鍵**。 當地語系化的資源識別碼。  
+   2. **資源索引鍵**。 當地語系化的資源識別碼。  
   
-   3.  **分類**。 值型別。 請參閱[當地語系化屬性和註解](localization-attributes-and-comments.md)。  
+   3. **分類**。 值型別。 請參閱[當地語系化屬性和註解](localization-attributes-and-comments.md)。  
   
-   4.  **可讀性**. 當地語系化工具是否能夠讀取該值。 請參閱[當地語系化屬性和註解](localization-attributes-and-comments.md)。  
+   4. **可讀性**. 當地語系化工具是否能夠讀取該值。 請參閱[當地語系化屬性和註解](localization-attributes-and-comments.md)。  
   
-   5.  **可修改性**. 當地語系化工具是否能夠修改該值。 請參閱[當地語系化屬性和註解](localization-attributes-and-comments.md)。  
+   5. **可修改性**. 當地語系化工具是否能夠修改該值。 請參閱[當地語系化屬性和註解](localization-attributes-and-comments.md)。  
   
-   6.  **註解**。 該值的其他說明，有助於判斷某值當地語系化的方式。 請參閱[當地語系化屬性和註解](localization-attributes-and-comments.md)。  
+   6. **註解**。 該值的其他說明，有助於判斷某值當地語系化的方式。 請參閱[當地語系化屬性和註解](localization-attributes-and-comments.md)。  
   
-   7.  **值**。 要轉譯成所需文化特性的文字值。  
+   7. **值**。 要轉譯成所需文化特性的文字值。  
   
    下表顯示這些欄位如何對應至 .csv 檔案的分隔值：  
   
@@ -188,9 +188,9 @@ ms.locfileid: "59298314"
   
 7. 若要測試新的附屬組件，您需要變更您的應用程式用來執行的文化特性。 您可以使用下列其中一種做法：  
   
-    -   變更您的作業系統地區設定 (**開始** &#124; **控制台中** &#124; **地區及語言選項**)。  
+    - 變更您的作業系統地區設定 (**開始** &#124; **控制台中** &#124; **地區及語言選項**)。  
   
-    -   在您的應用程式中，將下列程式碼加入 App.xaml.cs：  
+    - 在您的應用程式中，將下列程式碼加入 App.xaml.cs：  
   
    [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
    [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
@@ -199,11 +199,11 @@ ms.locfileid: "59298314"
 <a name="Some_Tips_for_Using_LocBaml"></a>   
 ## <a name="some-tips-for-using-locbaml"></a>使用 LocBaml 的一些秘訣  
   
--   用來定義自訂控制項的所有相依組件，都必須複製到 LocBaml 的本機目錄中，或安裝至 GAC 中。 這是必要的，因為當地語系化 API 在讀取 [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)] 時，必須能夠存取這些相依組件。  
+- 用來定義自訂控制項的所有相依組件，都必須複製到 LocBaml 的本機目錄中，或安裝至 GAC 中。 這是必要的，因為當地語系化 API 在讀取 [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)] 時，必須能夠存取這些相依組件。  
   
--   如果主要組件已簽署，所產生的資源 DLL 也必須簽署，才能將其載入。  
+- 如果主要組件已簽署，所產生的資源 DLL 也必須簽署，才能將其載入。  
   
--   當地語系化資源 DLL 的版本必須與主要組件同步處理。  
+- 當地語系化資源 DLL 的版本必須與主要組件同步處理。  
   
 <a name="Whats_Next"></a>   
 ## <a name="whats-next"></a>後續步驟  

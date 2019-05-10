@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: 32ff0adca9d35e6b5439ae06be85414924dac2e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a73a66313e7ca540711838c4d147d6bd163ec8d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801292"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625559"
 ---
 # <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>二進位 'If' 運算式的第一個運算元必須可為 Null 或是參考類型
 `If`運算式可以接受兩個或三個引數。 當您傳送僅兩個引數時，第一個引數必須是參考型別或可為 null 的型別。 如果第一個引數評估為任何項目以外的其他`Nothing`，其值會傳回。 如果第一個引數評估為`Nothing`，評估並傳回第二個引數。  

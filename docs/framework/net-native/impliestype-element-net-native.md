@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ef238a2cb852ecd7fa3f0e2dbe4048ff03a4139
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1cd2177707edfd29dc393e2bcfd6bbacb749b30
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868624"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616681"
 ---
 # <a name="impliestype-element-net-native"></a>\<ImpliesType > 項目 (.NET Native)
 如果原則已套用至包含類型或方法，則會將該原則套用至類型。  
@@ -75,9 +75,9 @@ ms.locfileid: "61868624"
 ## <a name="remarks"></a>備註  
  `<ImpliesType>` 元素的主要目的是要供程式庫使用。 它可以解決下列情況：  
   
--   如果常式需要反映在一個類型上，則一定需要反映在第二個類型上。  
+- 如果常式需要反映在一個類型上，則一定需要反映在第二個類型上。  
   
--   否則，無法將中繼資料用於第二個類型的隱含具現化，因為靜態分析並未指出中繼資料是必要的。  
+- 否則，無法將中繼資料用於第二個類型的隱含具現化，因為靜態分析並未指出中繼資料是必要的。  
   
  大多數情況下，這兩個類型是含有共用型別引數的泛型具現化。  
   

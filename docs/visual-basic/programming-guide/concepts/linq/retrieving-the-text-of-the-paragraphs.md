@@ -2,12 +2,12 @@
 title: 擷取段落 (Visual Basic) 的文字
 ms.date: 07/20/2015
 ms.assetid: 095fa0d9-7b1b-4cbb-9c13-e2c9d8923d31
-ms.openlocfilehash: bc6035c7d894d30b1441dd35925c233e02d35163
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f508c95d5ea7889d3ea22a4852b4813ec54f97a1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787019"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627170"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>擷取段落 (Visual Basic) 的文字
 此範例是根據上述範例中，[擷取段落及其樣式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)。 這個新的範例會將每個段落的文字當做字串擷取。  

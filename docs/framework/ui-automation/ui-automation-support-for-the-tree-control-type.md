@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Tree control type
 - UI Automation, Tree control type
 ms.assetid: 312dd04d-a86b-4072-8b12-2beeabdff5e3
-ms.openlocfilehash: 001381eddf56022e2b3e934604e42d871a64d730
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 56f1391505098d236284652051fed64397e41c2b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996512"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64609902"
 ---
 # <a name="ui-automation-support-for-the-tree-control-type"></a>Tree 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -33,9 +33,9 @@ ms.locfileid: "61996512"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視包含：  
   
--   在容器內的零到多個項目 (可以是樹狀結構項目、資料項目或其他控制項類型的項目)。  
+- 在容器內的零到多個項目 (可以是樹狀結構項目、資料項目或其他控制項類型的項目)。  
   
--   0、1 或 2 個捲軸。  
+- 0、1 或 2 個捲軸。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視包含容器內的零或多個項目 (可以是樹狀結構項目、資料項目或其他控制項類型的項目)。  
   

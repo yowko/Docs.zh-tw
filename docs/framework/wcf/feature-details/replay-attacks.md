@@ -2,12 +2,12 @@
 title: 重新執行攻擊
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-ms.openlocfilehash: fefcb533cedb5405736ecda70c6879ebe00b8b49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6874e87ba2a50bb496c5d7bf091fd670510ab840
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991142"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626867"
 ---
 # <a name="replay-attacks"></a>重新執行攻擊
 A*重新執行攻擊*攻擊者複製兩方之間的訊息資料流，並重新執行一個或多個合作對象的資料流時，就會發生。 除非緩解攻擊，否則受到攻擊的電腦會將資料流當成合法訊息來處理，導致發生一連串負面的影響，例如項目的重複排序。  

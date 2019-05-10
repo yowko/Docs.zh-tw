@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf8a5a7c97969fb0018bb1dba4ea027fe7afd2c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c50132be2755119b19e38d94919eb4b0ab28d994
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775852"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614326"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>效能計數器與同處理序並存應用程式
 使用效能監視器 (Perfmon.exe)，可以區分個別執行階段的效能計數器。 本主題描述啟用這項功能所需的登錄變更。  

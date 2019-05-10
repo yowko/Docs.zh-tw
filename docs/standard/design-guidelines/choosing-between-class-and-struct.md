@@ -13,12 +13,12 @@ helpviewer_keywords:
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: KrzysztofCwalina
-ms.openlocfilehash: a47e43b2387362500d46c8e531f16d004d823c4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5041368ca1a440698c399c935ac72aba2002c3ba
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778777"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615272"
 ---
 # <a name="choosing-between-class-and-struct"></a>在類別和結構之間選擇
 每個 framework 設計工具所面臨的基本設計決策之一是設計為型別，做為類別 （參考型別） 或結構 （實值型別）。 深入了解的參考型別和實值類型的行為差異是非常重要的做此選擇。  

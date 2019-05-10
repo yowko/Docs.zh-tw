@@ -9,12 +9,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: KrzysztofCwalina
-ms.openlocfilehash: 0099c5c8a863023099b377e139461606de3e1e1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b8b6ec195fd3f95a4255ea820f2bffcb3e27ba19
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940981"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615211"
 ---
 # <a name="names-of-namespaces"></a>命名空間的名稱
 做為其他命名指導方針，命名的命名空間時的目標建立足夠的清晰度給程式設計人員立即知道命名空間的內容可能是使用架構。 下列範本指定為命名空間進行的一般規則：  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 401803229c54a2b38af08c0418b9efd4c64d9d60
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856586"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627036"
 ---
 # <a name="data-transfer-architectural-overview"></a>資料傳輸架構概觀
 Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可以接收訊息、加以處理，然後分派到使用者程式碼執行進一步動作，或是使用使用者程式碼提供的資料建構訊息，然後傳遞到目的地。 此主題將針對進階程式開發人員，描述處理訊息與所包含資料的架構。 如需如何傳送與接收資料的簡化型工作導向檢視，請參閱 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。  
@@ -66,9 +66,9 @@ Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可�
 ### <a name="getting-data-from-a-message-body"></a>從訊息本文取得資料  
  您可以使用兩種主要方法擷取儲存在訊息本文中的資料：  
   
--   您可以藉由呼叫 <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 方法然後傳入 XML 寫入器，一次取得整個訊息本文。 完整的訊息本文會寫至這個寫入器。 一次取得整個訊息本文也稱為「 *寫入訊息*」(Writing a Message)。 當傳送訊息時寫入主要是由通道堆疊完成，通道堆疊的某些部分通常能夠存取整個訊息本文、加以編碼然後傳送。  
+- 您可以藉由呼叫 <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 方法然後傳入 XML 寫入器，一次取得整個訊息本文。 完整的訊息本文會寫至這個寫入器。 一次取得整個訊息本文也稱為「 *寫入訊息*」(Writing a Message)。 當傳送訊息時寫入主要是由通道堆疊完成，通道堆疊的某些部分通常能夠存取整個訊息本文、加以編碼然後傳送。  
   
--   從訊息本文取得資訊的另一種方法，是呼叫 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> 然後取得 XML 讀取器。 然後可以藉由呼叫讀取器上的方法，依需要以循序方式存取訊息本文。 以片段方式取得訊息本文也稱為「 *讀取訊息*」(Reading a Message)。 主要是服務架構會在接收訊息時使用讀取訊息。 例如，當 <xref:System.Runtime.Serialization.DataContractSerializer> 正在使用時，服務架構會透過本文取得 XML 讀取器，並且將其傳遞給還原序列化引擎，然後就會開始逐一讀取訊息項目並建構對應的物件圖形。  
+- 從訊息本文取得資訊的另一種方法，是呼叫 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> 然後取得 XML 讀取器。 然後可以藉由呼叫讀取器上的方法，依需要以循序方式存取訊息本文。 以片段方式取得訊息本文也稱為「 *讀取訊息*」(Reading a Message)。 主要是服務架構會在接收訊息時使用讀取訊息。 例如，當 <xref:System.Runtime.Serialization.DataContractSerializer> 正在使用時，服務架構會透過本文取得 XML 讀取器，並且將其傳遞給還原序列化引擎，然後就會開始逐一讀取訊息項目並建構對應的物件圖形。  
   
  訊息本文只能擷取一次。 就可以使用順向資料流。 例如，您可以寫入 <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 覆寫，以便從 <xref:System.IO.FileStream> 讀取然後使用 XML Infoset 的方式傳回結果。 您永遠不會將需要 「 倒轉 」 至檔案的開頭。  
   
@@ -160,11 +160,11 @@ Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可�
 ### <a name="the-istreamprovider-interface"></a>IStreamProvider 介面  
  將含有經過資料流處理之本文的傳出訊息寫入至 XML 寫入器時， <xref:System.ServiceModel.Channels.Message> 將會在其 <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 實作中使用類似下面一連串的呼叫：  
   
--   在資料流前面寫入任何必要的資訊，(例如，開頭 XML 標記)。  
+- 在資料流前面寫入任何必要的資訊，(例如，開頭 XML 標記)。  
   
--   寫入資料流。  
+- 寫入資料流。  
   
--   在資料流後面寫入任何資訊，(例如，結束 XML 標記)。  
+- 在資料流後面寫入任何資訊，(例如，結束 XML 標記)。  
   
  這很適合用在類似文字 XML 編碼方式的編碼。 但是，有些編碼並不會將 XML Infoset 資訊 (例如，XML 項目的開頭及結束標記) 與包含在項目內的資料放在一起。 例如，在 MTOM 編碼中，訊息會分割為多個部分。 其中一個部分會包含 XML Infoset，而這其中可能會包含實際項目內容之其他部分的參考。 XML Infoset 通常會比資料流處理後的內容還要小，因此合理的做法是先緩衝處理 Infoset，再將它寫出，然後以資料流的處理方式寫入內容。 這表示在寫入結尾項目標記以前，應該還沒有寫出資料流。  
   

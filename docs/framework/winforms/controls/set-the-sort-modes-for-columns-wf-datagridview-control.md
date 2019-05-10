@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sort mode
 - data grids [Windows Forms], sorting data
 ms.assetid: 57dfed60-a608-40d5-86f9-d65686ffb325
-ms.openlocfilehash: 4894de00a323f70ca244ea877101a5af1cbb37e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd627e3aaed7330a05c46b9e2ca0a213404e0bfe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012187"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625732"
 ---
 # <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a>HOW TO：設定 Windows Forms DataGridView 控制項的資料行排序模式
 在 <xref:System.Windows.Forms.DataGridView>自動排序依預設，而其他資料行類型不會自動排序控制項中，文字方塊資料行使用。 有時候您會想要覆寫這些預設值。 例如，您可以顯示影像取代文字、 數字或列舉型別資料格的值。 雖然映像無法進行排序，就可以排序它們所代表的基礎值。  
@@ -25,7 +25,7 @@ ms.locfileid: "62012187"
   
 ### <a name="to-set-the-sort-mode-for-a-column"></a>若要設定資料行排序模式  
   
--   設定 <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType> 屬性。  
+- 設定 <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType> 屬性。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#066](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#066)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#066](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#066)]  
@@ -33,9 +33,9 @@ ms.locfileid: "62012187"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項 ，包含名為 `Priority` 的資料行。  
+- 名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項 ，包含名為 `Priority` 的資料行。  
   
--   <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
+- <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
 

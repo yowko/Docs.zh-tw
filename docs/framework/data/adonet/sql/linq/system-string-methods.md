@@ -2,12 +2,12 @@
 title: System.String 方法
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: 3a7b45f27441d889524f5055eb5c6a3b06937bd3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c988bf7f04b284b0d352cd9e495931543980fdba
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876651"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613746"
 ---
 # <a name="systemstring-methods"></a>System.String 方法
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援下列 <xref:System.String> 方法。  
@@ -15,9 +15,9 @@ ms.locfileid: "61876651"
 ## <a name="unsupported-systemstring-methods-in-general"></a>一般不支援的 System.String 方法  
  一般不支援的 <xref:System.String> 方法：  
   
--   文化特性感知的多載 (採用的方法`CultureInfo`  /  `StringComparison`  /  `IFormatProvider`)。  
+- 文化特性感知的多載 (採用的方法`CultureInfo`  /  `StringComparison`  /  `IFormatProvider`)。  
   
--   取用或產生 `char` 陣列的方法。  
+- 取用或產生 `char` 陣列的方法。  
   
 ## <a name="unsupported-systemstring-static-methods"></a>不支援的 System.String 靜態方法  
   
@@ -47,13 +47,13 @@ ms.locfileid: "61876651"
   
 ## <a name="differences-from-net"></a>與 .NET 的差異  
   
--   查詢不會考慮伺服器上可能作用中的 SQL Server 定序 (Collation)，因此預設會提供區分文化特性、但不區分大小寫的比較。 這個行為與 .NET Framework 的預設區分大小寫語意 (Semantics) 不同。  
+- 查詢不會考慮伺服器上可能作用中的 SQL Server 定序 (Collation)，因此預設會提供區分文化特性、但不區分大小寫的比較。 這個行為與 .NET Framework 的預設區分大小寫語意 (Semantics) 不同。  
   
--   當`LastIndexOf`傳回 0，表示字串是`NULL`或找到的位置是 0。  
+- 當`LastIndexOf`傳回 0，表示字串是`NULL`或找到的位置是 0。  
   
--   固定長度字串 (`CHAR`、`NCHAR`) 上的串連或其他作業可能會傳回未預期的結果，原因是這些型別已自動將填補套用至資料庫中。  
+- 固定長度字串 (`CHAR`、`NCHAR`) 上的串連或其他作業可能會傳回未預期的結果，原因是這些型別已自動將填補套用至資料庫中。  
   
--   因為許多方法 (如 `Replace`、`ToLower`、`ToUpper` 和字元索引子 (Indexer)) 都沒有 `TEXT` 或 `NTEXT` 資料行和 XML 的有效轉譯，所以如果正常轉譯，則會發生 `SqlExceptions`。 對這些型別而言，這個行為是可接受的行為。 不過，所有字串作業都必須符合 `VARCHAR`、`NVARCHAR`、`VARCHAR(max)` 和 `NVARCHAR(max)` 的 Common Language Runtime (CLR) 語意。  
+- 因為許多方法 (如 `Replace`、`ToLower`、`ToUpper` 和字元索引子 (Indexer)) 都沒有 `TEXT` 或 `NTEXT` 資料行和 XML 的有效轉譯，所以如果正常轉譯，則會發生 `SqlExceptions`。 對這些型別而言，這個行為是可接受的行為。 不過，所有字串作業都必須符合 `VARCHAR`、`NVARCHAR`、`VARCHAR(max)` 和 `NVARCHAR(max)` 的 Common Language Runtime (CLR) 語意。  
   
 ## <a name="see-also"></a>另請參閱
 

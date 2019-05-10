@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad2c41cc99422217b9f85acbd32f91ac78a9a7c2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876144"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614232"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>追蹤和稽核應用程式
 追蹤可讓您在應用程式執行時，監視應用程式的執行。 您可以在開發 .NET Framework 應用程式時，加入追蹤和偵錯檢測，當您在開發應用程式時，以及將其部署之後，都可以使用該檢測。 您可以使用 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType> 和 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 類別，將錯誤和應用程式執行的相關資訊，記錄在記錄檔、文字檔案或其他裝置中，以供稍後進行分析。  

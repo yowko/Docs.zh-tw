@@ -4,12 +4,12 @@ description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: ad0da9f7f0412c14b5362e3f631a7aa4af1f8260
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0bdab6d8aaaaa9bdddb9e9d55df8bb4850bc2b81
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61812035"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614481"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>將現有 .NET 應用程式部署為 Windows 容器
 
@@ -39,13 +39,13 @@ Windows 容器為基礎的部署是適用於雲端最佳化應用程式和雲端
 
 許多組織會將現有單體式應用程式容器化，原因如下：
 
--   **釋出透過改良的部署的靈活性**。 容器會提供開發與作業之間的一致性部署合約。 當您使用容器時，您將不會聽到開發人員說，「 它能用在我的電腦上為何不在生產環境中？ 」 它們可以說 「 它以執行容器，其會在生產環境中執行。 」 封裝的應用程式，其所有相依性，可以在任何支援的容器型環境中執行。 它會執行它要用來在所有部署目標 （開發、 品管、 暫存、 生產環境） 中執行的方式。 容器會消除大部分的摩擦，它們將移至下一步，可大幅提升部署，從一個階段時，您可以更快交付。
+- **釋出透過改良的部署的靈活性**。 容器會提供開發與作業之間的一致性部署合約。 當您使用容器時，您將不會聽到開發人員說，「 它能用在我的電腦上為何不在生產環境中？ 」 它們可以說 「 它以執行容器，其會在生產環境中執行。 」 封裝的應用程式，其所有相依性，可以在任何支援的容器型環境中執行。 它會執行它要用來在所有部署目標 （開發、 品管、 暫存、 生產環境） 中執行的方式。 容器會消除大部分的摩擦，它們將移至下一步，可大幅提升部署，從一個階段時，您可以更快交付。
 
--   **成本降低**。 容器會導致較低成本，藉由彙總與移除現有的硬體，或是從執行的應用程式在更高的密度，每個硬體單位。
+- **成本降低**。 容器會導致較低成本，藉由彙總與移除現有的硬體，或是從執行的應用程式在更高的密度，每個硬體單位。
 
--   **可攜性**。 容器是模組化和可攜式。 在任何伺服器作業系統 （Linux 和 Windows），在任何的主要公用雲端 （Microsoft Azure、 Amazon AWS、 Google、 IBM） 和內部部署和私人或混合式雲端環境上支援 docker 容器。
+- **可攜性**。 容器是模組化和可攜式。 在任何伺服器作業系統 （Linux 和 Windows），在任何的主要公用雲端 （Microsoft Azure、 Amazon AWS、 Google、 IBM） 和內部部署和私人或混合式雲端環境上支援 docker 容器。
 
--   **控制**。 容器可提供彈性且安全的環境控制容器層級。 容器可以保護、 隔離，和甚至是有限的容器上設定執行原則的條件約束。 為 Windows 容器的相關章節中所述，Windows Server 2016 和 HYPER-V 容器會提供額外的企業支援選項。
+- **控制**。 容器可提供彈性且安全的環境控制容器層級。 容器可以保護、 隔離，和甚至是有限的容器上設定執行原則的條件約束。 為 Windows 容器的相關章節中所述，Windows Server 2016 和 HYPER-V 容器會提供額外的企業支援選項。
 
 靈活度、 可攜性和控制的重大改進最終會導致重大的成本降低當您使用容器來開發及維護應用程式。
 
@@ -123,15 +123,15 @@ Linux 容器，例如 Windows Server 容器會管理使用 Docker 引擎。 與 
 
 ### <a name="additional-resources"></a>其他資源
 
--   **Windows 容器文件**
+- **Windows 容器文件**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/>
 
--   **Windows 容器基本概念**
+- **Windows 容器基本概念**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
--   **資訊圖︰Microsoft 和容器**
+- **資訊圖︰Microsoft 和容器**
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -145,18 +145,18 @@ Linux 容器，例如 Windows Server 容器會管理使用 Docker 引擎。 與 
 > **圖 4-7.5。** 在 Azure 中的容器生態系統
 
 容器生態系統在 Azure 中，下列的產品支援是基礎結構的容器：
--   **Azure Container Instances (ACI)**
--   **Azure 虛擬機器**（含容器的支援）
--   **Azure 虛擬機器擴展集**（含容器的支援）
+- **Azure Container Instances (ACI)**
+- **Azure 虛擬機器**（含容器的支援）
+- **Azure 虛擬機器擴展集**（含容器的支援）
 
 從這三個，ACI 提供極大的好處，也就是您不需要維護基礎作業系統，也就是您不需要升級/修補等等，但仍 ACI 將放置在基礎結構層級，為進一步說明這本書接下來的章節中的事實。
 
 Azure 會在相同的時間更置於 PaaS （平台即服務） 層級的支援容器中的產品包括：
 
--   **Azure App Service**
--   **Azure Kubernetes Service （AKS 和 ACS）**
--   **Azure Service Fabric** 
--   **Azure Batch** 
+- **Azure App Service**
+- **Azure Kubernetes Service （AKS 和 ACS）**
+- **Azure Service Fabric** 
+- **Azure Batch** 
 
 然後，Azure Container Registry 是裝載於 Azure，您可以從所有先前的產品註冊或部署您的自訂容器映像時使用的高可調整的容器登錄。
 

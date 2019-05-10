@@ -2,12 +2,12 @@
 title: 變更傳送活動的快取共用層級
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: e439edc14183c2ba2bf9af67e177dddb52c43708
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1561d053dc04bbea18f4d6cb43399c2c625d5da1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784289"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614855"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>變更傳送活動的快取共用層級
 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 擴充可讓您為使用 <xref:System.ServiceModel.Activities.Send> 傳訊活動傳送訊息至服務端點的工作流程自訂快取共用層級、通道處理站快取的設定，以及通道快取的設定。 這些工作流程通常是用戶端工作流程，但也可以是裝載於 <xref:System.ServiceModel.WorkflowServiceHost> 中的工作流程服務。 通道處理站快取會包含快取的 <xref:System.ServiceModel.ChannelFactory%601> 物件。 通道快取則包含快取的通道。  

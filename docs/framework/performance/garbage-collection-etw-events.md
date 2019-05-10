@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f9bf0e309ec8c77d4b1d6afbf111e7eeae629ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e5e10a1dc1ad3230213a20b850741a6ec0468294
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61722935"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616429"
 ---
 # <a name="garbage-collection-etw-events"></a>記憶體回收 ETW 事件
 <a name="top"></a> 這些事件收集到記憶體回收的相關資訊。 它們協助診斷和偵錯，包括判斷執行多少次記憶體回收、在記憶體回收期間釋放了多少記憶體，以及其他事項。  
@@ -66,7 +66,7 @@ ms.locfileid: "61722935"
   
 |欄位名稱|資料類型|描述|  
 |----------------|---------------|-----------------|  
-|計數|win:UInt32|第 *n*個記憶體回收。|  
+|Count|win:UInt32|第 *n*個記憶體回收。|  
 |深度|win:UInt32|所收集的產生。|  
 |原因|win:UInt32|觸發記憶體回收的原因：<br /><br /> 0x0 - 小型物件堆積配置。<br /><br /> 0x1 - 已引起。<br /><br /> 0x2 - 記憶體不足。<br /><br /> 0x3 - 空白。<br /><br /> 0x4 - 大型物件堆積配置。<br /><br /> 0x5 - 空間不足 (針對小型物件堆積)。<br /><br /> 0x6 - 空間不足 (針對大型物件堆積)。<br /><br /> 0x7 - 已引起，但不強制為封鎖。|  
 |類型|win:UInt32|0x0 - 封鎖發生在背景記憶體回收之外的記憶體回收。<br /><br /> 0x1 - 背景記憶體回收。<br /><br /> 0x2 - 封鎖發生在背景記憶體回收期間的記憶體回收。|  
@@ -92,7 +92,7 @@ ms.locfileid: "61722935"
   
 |欄位名稱|資料類型|描述|  
 |----------------|---------------|-----------------|  
-|計數|win:UInt32|第 *n*個記憶體回收。|  
+|Count|win:UInt32|第 *n*個記憶體回收。|  
 |深度|win:UInt32|所收集的產生。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
@@ -325,7 +325,7 @@ ms.locfileid: "61722935"
   
 |欄位名稱|資料類型|描述|  
 |----------------|---------------|-----------------|  
-|計數|win:UInt32|所執行的完成項數目。|  
+|Count|win:UInt32|所執行的完成項數目。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
  [回到頁首](#top)  

@@ -2,12 +2,12 @@
 title: 將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
-ms.openlocfilehash: a1690e99aeaeb7ed9c85fd28697ae22d34bb2018
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cdbfba96c4cfe52cfbd58246be60842540a84754
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607889"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604006"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 XML 結構描述定義語言 (XSD) 允許在其定義的項目和屬性上指定條件約束。 對應 XML 結構描述中的關聯式結構描述時<xref:System.Data.DataSet>，XML 結構描述條件約束會對應到資料表和資料行內的適當關聯式條件約束**資料集**。  

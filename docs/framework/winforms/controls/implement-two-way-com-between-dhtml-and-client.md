@@ -14,12 +14,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], communication between DHTML and client application
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-ms.openlocfilehash: cf1391e88c03095e0851d75ae6d50f8e809d13e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a31a35257921c6dec6229b5cc3222ee3119c325e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797185"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625385"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>HOW TO：實作 DHTML 程式碼和用戶端應用程式程式碼之間的雙向通訊
 您可以使用 <xref:System.Windows.Forms.WebBrowser> 控制項，將現有的動態 HTML (DHTML) Web 應用程式程式碼加入至 Windows Form 用戶端應用程式。 這適用於投資了大量的開發時間在建立 DHTML 控制項，而且您想要利用 Windows Form 的豐富使用者介面功能而又不需要重新撰寫現有程式碼的情況。  

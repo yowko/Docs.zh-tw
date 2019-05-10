@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-ms.openlocfilehash: 33ebb07e350dbbbdd324b442f52dfb6287322bd8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: eae78220196395ba3002141f01d554f2335a1f28
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858373"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613352"
 ---
 # <a name="bindings-and-binding-elements"></a>繫結和繫結項目
 繫結是特殊的組態項目，呼叫的集合*繫結項目*，這會評估服務執行階段，每當用戶端或服務端點正在建構。 繫結項目在繫結內的型別與順序會決定端點通道堆疊中通訊協定與傳輸通道的選擇與堆疊順序。  

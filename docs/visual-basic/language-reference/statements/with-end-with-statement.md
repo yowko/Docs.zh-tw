@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: de2edc6b16689673c3be6703ff1a201febe73526
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 38a34a4662d969fd526963744b8bd493952d9cff
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698638"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615076"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With 陳述式 (Visual Basic)
 執行一系列重複參考單一物件或結構的陳述式，使陳述式在存取物件或結構的成員時，可以使用簡化的語法。  使用結構時，您可以只讀取成員的值或叫用方法，如果嘗試指派值給 `With...End With` 陳述式中使用的結構成員，將會收到錯誤。  

@@ -2,12 +2,12 @@
 title: 疑難排解
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebcfec475d20492f5ce1f971163544d9faa52223
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917627"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613748"
 ---
 # <a name="troubleshooting"></a>疑難排解
 下列資訊將說明一些您在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 應用程式中可能會遇到的問題，並提供建議來避免或降低這些問題的影響。  
@@ -31,9 +31,9 @@ ms.locfileid: "61917627"
 ## <a name="cascade-delete"></a>串聯刪除  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援或辨識串聯 (Cascade) 刪除作業。 如果您要刪除有條件約束之資料表中的資料列，必須執行下列其中一項工作：  
   
--   在資料庫的外部索引鍵條件約束中設定 `ON DELETE CASCADE` 規則。  
+- 在資料庫的外部索引鍵條件約束中設定 `ON DELETE CASCADE` 規則。  
   
--   使用您自己的程式碼，先刪除使父物件無法刪除的子物件。  
+- 使用您自己的程式碼，先刪除使父物件無法刪除的子物件。  
   
  否則會擲回 <xref:System.Data.SqlClient.SqlException> 例外狀況。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "61917627"
 ## <a name="expression-not-queryable"></a>無法查詢運算式  
  如果您看到「運算式 [expression] 無法查詢；是否遺漏組件參考？」 錯誤，請確定下列各項：  
   
--   應用程式的目標為 [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)]。  
+- 應用程式的目標為 [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)]。  
   
--   您有 `System.Core.dll` 和 `System.Data.Linq.dll` 的參考。  
+- 您有 `System.Core.dll` 和 `System.Data.Linq.dll` 的參考。  
   
--   您必須`Imports`(Visual Basic) 或`using`(C#) 指示詞<xref:System.Linq>和<xref:System.Data.Linq>。  
+- 您必須`Imports`(Visual Basic) 或`using`(C#) 指示詞<xref:System.Linq>和<xref:System.Data.Linq>。  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  在偵錯[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案中，您可能會周遊某個實體的關聯。 如此一來帶入快取中，這些項目和[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]察覺到它們的存在。 如果您接著嘗試執行 <xref:System.Data.Linq.Table%601.Attach%2A> 或 <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>，或是類似方法來產生有相同索引鍵的多個資料列，就會擲回 <xref:System.Data.Linq.DuplicateKeyException>。  

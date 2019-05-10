@@ -2,12 +2,12 @@
 title: 物件狀態和變更追蹤
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 704c5271f71c3709bbf48cf6a5af0a60828e6244
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794390"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610101"
 ---
 # <a name="object-states-and-change-tracking"></a>物件狀態和變更追蹤
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 物件一律會處於某種*狀態*。 例如，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 建立新物件時，該物件會是 `Unchanged` 狀態。 您自己建立的新物件不知道<xref:System.Data.Linq.DataContext>且位於`Untracked`狀態。 順利執行 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 之後，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 得知的所有物件都會是 `Unchanged` 狀態  (唯一的例外是已順利從資料庫中刪除的物件，這些物件是 `Deleted` 狀態，而且無法在該 <xref:System.Data.Linq.DataContext> 執行個體中使用)。  

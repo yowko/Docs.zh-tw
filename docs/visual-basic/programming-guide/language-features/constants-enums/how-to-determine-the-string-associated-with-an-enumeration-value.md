@@ -6,19 +6,19 @@ helpviewer_keywords:
 - strings [Visual Basic], enumeration values
 - values [Visual Basic], enumeration members
 ms.assetid: 9253e7c8-579c-49a2-8f26-392b20ea99eb
-ms.openlocfilehash: 4fa04fa621347ae961975bfb636734e6c9df39fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25c55c14507c67b9bdd8606cb85afd55f9a748fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906798"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610537"
 ---
 # <a name="how-to-determine-the-string-associated-with-an-enumeration-value-visual-basic"></a>HOW TO：決定與列舉值 (Visual Basic) 相關聯的字串
 <xref:System.Enum.GetValues%2A>和<xref:System.Enum.GetNames%2A>方法可讓您決定的字串和列舉成員相關聯的值。  
   
 ### <a name="to-determine-the-string-associated-with-an-enumeration"></a>若要決定與列舉型別相關聯的字串  
   
--   使用<xref:System.Enum.GetNames%2A>方法來擷取與列舉成員相關聯的字串。 這個範例會宣告列舉`flavorEnum`，然後使用<xref:System.Enum.GetNames%2A>方法，以顯示每個成員相關聯的字串。  
+- 使用<xref:System.Enum.GetNames%2A>方法來擷取與列舉成員相關聯的字串。 這個範例會宣告列舉`flavorEnum`，然後使用<xref:System.Enum.GetNames%2A>方法，以顯示每個成員相關聯的字串。  
   
      [!code-vb[VbEnumsTask#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#2)]  
   

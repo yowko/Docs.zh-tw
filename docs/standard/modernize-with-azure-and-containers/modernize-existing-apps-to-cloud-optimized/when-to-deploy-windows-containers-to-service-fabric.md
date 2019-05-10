@@ -4,12 +4,12 @@ description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 01d76f325480c7cf09fef36b02589a602e3ee11e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cf9f206852a483dbc391c4541762b885a0ba9660
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973640"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625645"
 ---
 # <a name="when-to-deploy-windows-containers-to-service-fabric"></a>將 Windows 容器部署至 Service Fabric 的時機
 

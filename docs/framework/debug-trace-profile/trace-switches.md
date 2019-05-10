@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85a1a017197826717280f53995ed98f26f1d80bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 16ef27b7d1a36121976cbb026f81984a8b84d1fe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873856"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614328"
 ---
 # <a name="trace-switches"></a>追蹤參數
 追蹤參數可讓您啟用、停用和篩選追蹤輸出。 它們是存在於您的程式碼中的物件，並可透過 .config 檔案在外部設定。 .NET Framework 中提供三種類型的追蹤參數： <xref:System.Diagnostics.BooleanSwitch> 類別、 <xref:System.Diagnostics.TraceSwitch> 類別和 <xref:System.Diagnostics.SourceSwitch> 類別。 <xref:System.Diagnostics.BooleanSwitch> 類別是做為切換參數，可啟用或停用各種追蹤陳述式。 <xref:System.Diagnostics.TraceSwitch> 和 <xref:System.Diagnostics.SourceSwitch> 類別可讓您針對特定追蹤層級啟用追蹤參數，以顯示針對該層級及其下所有層級指定的 <xref:System.Diagnostics.Trace> 或 <xref:System.Diagnostics.TraceSource> 訊息。 如果您停用此參數，就不會顯示追蹤訊息。 所有這些類別都是衍生自抽象 (**MustInherit**) 類別 **Switch**，如同任何使用者開發的參數。  
@@ -57,7 +57,7 @@ ms.locfileid: "61873856"
   
  **TraceSwitch** 屬性會指出參數的最大追蹤層級。 也就是說，會針對所指定的層級以及其下所有層級寫入追蹤資訊。 例如，如果 **TraceInfo** 是 **true**，則 **TraceError** 和 **TraceWarning** 也是 **true** ，但 **TraceVerbose** 很可能是 **false**。  
   
- 這些屬性是唯讀的。 設定 **TraceLevel** 屬性時， **TraceSwitch** 物件會自動設定這些屬性。 例如:   
+ 這些屬性是唯讀的。 設定 **TraceLevel** 屬性時， **TraceSwitch** 物件會自動設定這些屬性。 例如：  
   
 ```vb  
 Dim myTraceSwitch As New TraceSwitch("SwitchOne", "The first switch")  

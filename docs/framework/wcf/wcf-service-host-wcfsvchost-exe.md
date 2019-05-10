@@ -2,12 +2,12 @@
 title: WCF 服務主機 (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: d9a086b3a6ae0ece3b1b45161402ce058e1fb447
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7174cac4c07d9011ad4c0744ff7ad6550d832d8b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052608"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613250"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 服務主機 (WcfSvcHost.exe)
 Windows Communication Foundation (WCF) 服務主機 (WcfSvcHost.exe) 可讓您啟動 Visual Studio 偵錯工具 (F5) 來自動裝載並測試您已實作的服務。 然後，您可以測試使用 WCF 測試用戶端 (WcfTestClient.exe) 或您自己的用戶端中，找出並修正任何潛在錯誤的服務。  

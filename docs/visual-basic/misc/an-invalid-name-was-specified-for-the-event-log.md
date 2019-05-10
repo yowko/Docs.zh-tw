@@ -2,12 +2,12 @@
 title: 指定給事件記錄檔的名稱無效
 ms.date: 07/20/2015
 ms.assetid: b1b158bd-f13f-4371-a8af-31c0e86ae6be
-ms.openlocfilehash: 2b9c934272d0f3392c845dcd2f0062a98dc50c7b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 05f37239510482de218847f069dc74cbef91f398
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940669"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64609172"
 ---
 # <a name="an-invalid-name-was-specified-for-the-event-log"></a>指定給事件記錄檔的名稱無效
 指定給事件記錄檔的名稱無效。 這通常是名稱中有無效的字元、檔案名稱空白或檔案名稱太長的結果。  

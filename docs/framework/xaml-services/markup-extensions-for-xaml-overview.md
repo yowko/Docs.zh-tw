@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ce626d9b75f2061ff024fa25ce005f952301603e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971908"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617253"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML 標記延伸概觀
 標記延伸是一種 XAML 技巧，用於取得不是基本類型和特定 XAML 類型的值。 對於屬性使用方式，標記延伸使用左大括號 `{` 的已知字元序列進入標記延伸範圍，並使用右大括號 `}` 結束。 使用 .NET Framework XAML 服務時，您可以使用 System.Xaml 組件中的一些預先定義 XAML 語言標記延伸。 您也可以從 <xref:System.Windows.Markup.MarkupExtension> 類別產生子類別 (定義於 System.Xaml 中)，以及定義您自己的標記延伸。 或者，您可以使用特定架構所定義的標記延伸 (如果已參考該架構)。  

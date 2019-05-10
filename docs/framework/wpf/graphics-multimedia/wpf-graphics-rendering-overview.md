@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: a0400ce32dc6dab2585a8d5e76ff8d416fae24c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6ec6d9fc4cff01c020f2e100b8371b1ff744b076
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764922"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614484"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF 圖形轉譯概觀
 本主題提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 視覺圖層的概觀。 它著重於所扮演的角色<xref:System.Windows.Media.Visual>類別來呈現中的支援[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]模型。  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: f849cf306f4de0cbaa7623ded4ab7045bb5112a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3e4438b309d4e443d07a6c2db2310733927fd38b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024205"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625339"
 ---
 # <a name="data-binding-overview"></a>資料繫結概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結在資料的展示和互動上，提供應用程式簡單而一致的方式。 項目可以和各種資料來源的資料繫結，資料的形式可以是 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。 <xref:System.Windows.Controls.ContentControl>這類的 s<xref:System.Windows.Controls.Button>並<xref:System.Windows.Controls.ItemsControl>這類的 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>有內建的功能，可讓彈性的樣式，單一資料項目的集合。 您可以在資料上方產生排序、篩選和群組檢視。  

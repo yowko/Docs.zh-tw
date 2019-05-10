@@ -6,12 +6,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-ms.openlocfilehash: b298efb0494994659673f9bf9893b667f7eb0f8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: daddbee9aa5eff55bf12a5d8c53ad59001a0c308
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761386"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64612442"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>HOW TO：使用設計工具將 Windows Forms 控制項繫結至類型
 當您在建立與資料互動的控制項時，有時需要將控制項繫結至類型，而非物件。 您在設計階段通常需要將控制項繫結至類型，當時資料可能無法使用，但您仍希望資料繫結的控制項顯示類型公用介面中的資料。 下列程序示範如何建立新<xref:System.Windows.Forms.BindingSource>也就是繫結至型別，以及如何將其中一個類型的屬性，以繫結<xref:System.Windows.Forms.TextBox.Text%2A>屬性<xref:System.Windows.Forms.TextBox>。  

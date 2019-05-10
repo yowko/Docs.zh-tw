@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: b6778522b5757c0ece899f7465d3ab500038fc49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ff2b2f6575c82f3769823431ec6363775bf9d698
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037033"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616073"
 ---
 # <a name="serialization"></a>序列化
 本主題描述[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]序列化功能。 後續段落會提供有關如何在設計階段的程式碼產生期間加入序列化以及 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 類別 (Class) 的執行階段序列化行為。  
@@ -26,7 +26,7 @@ ms.locfileid: "62037033"
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]序列化功能會處理這個問題，主要是透過兩種機制：  
   
-- 用於關閉延後載入的 <xref:System.Data.Linq.DataContext> 模式 (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>)。 如需詳細資訊，請參閱<xref:System.Data.Linq.DataContext>。  
+- 用於關閉延後載入的 <xref:System.Data.Linq.DataContext> 模式 (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>)。 如需詳細資訊，請參閱 <xref:System.Data.Linq.DataContext>。  
   
 - 程式碼產生參數，用在產生的實體上產生 <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> 和 <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> 屬性 (Attribute)。 這個方面 (包含序列化之下延後載入類別的行為) 為本主題的主旨。  
   
