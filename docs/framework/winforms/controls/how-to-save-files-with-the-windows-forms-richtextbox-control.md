@@ -15,27 +15,27 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: 4784ddd563ccec0f7e6271700781ee1b5d3ac105
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a4f5a98c9fea9658d9d9a400faa773b78a12f3a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013318"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638324"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>HOW TO：使用 Windows Forms RichTextBox 控制項儲存檔案
 Windows Form<xref:System.Windows.Forms.RichTextBox>控制項可以撰寫會在幾種格式之一中顯示的資訊：  
   
--   純文字  
+- 純文字  
   
--   Unicode 純文字  
+- Unicode 純文字  
   
--   Rich Text Format (RTF)  
+- Rich Text Format (RTF)  
   
--   RTF 空格 OLE 物件的位置  
+- RTF 空格 OLE 物件的位置  
   
--   OLE 物件的文字表示的純文字  
+- OLE 物件的文字表示的純文字  
   
- 若要儲存檔案，請呼叫<xref:System.Windows.Forms.RichTextBox.SaveFile%2A>方法。 您也可以使用**SaveFile**方法，將資料儲存至資料流。 如需詳細資訊，請參閱<xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>。  
+ 若要儲存檔案，請呼叫<xref:System.Windows.Forms.RichTextBox.SaveFile%2A>方法。 您也可以使用**SaveFile**方法，將資料儲存至資料流。 如需詳細資訊，請參閱 <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>。  
   
 ### <a name="to-save-the-contents-of-the-control-to-a-file"></a>將控制項的內容儲存至檔案  
   

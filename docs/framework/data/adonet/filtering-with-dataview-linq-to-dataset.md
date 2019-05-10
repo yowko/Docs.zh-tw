@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: 41e099cdca4f02231fd4b1cc8bce2c4b1e511c71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b41b95ba06f031dc45c0267432d0d6afb7f3a7d9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878822"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645695"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>使用 DataView 進行篩選 (LINQ to DataSet)
 使用特定準則來篩選資料，然後透過 UI 控制項呈現資料給用戶端的功能是資料繫結的重要層面。 <xref:System.Data.DataView> 提供了許多方式來篩選資料並傳回符合特定篩選準則的資料列子集。 除了以字串為基礎的篩選功能<xref:System.Data.DataView>也讓您能夠使用[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]篩選準則的運算式。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 允許更複雜且功能強大的篩選作業，比以字串為基礎的篩選運算式。  
   
  目前有兩種方式可以使用 <xref:System.Data.DataView> 來篩選資料：  
   
--   從含有 Where 子句的 <xref:System.Data.DataView> 查詢中建立 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]。  
+- 從含有 Where 子句的 <xref:System.Data.DataView> 查詢中建立 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]。  
   
--   使用 <xref:System.Data.DataView> 現有的以字串為基礎的篩選功能。  
+- 使用 <xref:System.Data.DataView> 現有的以字串為基礎的篩選功能。  
   
 ## <a name="creating-dataview-from-a-query-with-filtering-information"></a>從含有篩選資訊的查詢中建立 DataView  
  您可以從 <xref:System.Data.DataView> 查詢中建立 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 物件。 如果該查詢包含 `Where` 子句，<xref:System.Data.DataView> 就是使用查詢的篩選資訊建立的。 `Where` 子句中的運算式可用來決定哪些資料列將包含在 <xref:System.Data.DataView> 中，而且它是篩選的基礎。  
@@ -76,9 +76,9 @@ ms.locfileid: "61878822"
 ## <a name="clearing-the-filter"></a>清除篩選  
  在您已經使用 <xref:System.Data.DataView> 屬性來設定篩選之後，就可以清除 <xref:System.Data.DataView.RowFilter%2A> 上的篩選。 您可以使用兩種不同的方式來清除 <xref:System.Data.DataView> 上的篩選：  
   
--   將 <xref:System.Data.DataView.RowFilter%2A> 屬性設定為 `null`。  
+- 將 <xref:System.Data.DataView.RowFilter%2A> 屬性設定為 `null`。  
   
--   將 <xref:System.Data.DataView.RowFilter%2A> 屬性設定為空字串。  
+- 將 <xref:System.Data.DataView.RowFilter%2A> 屬性設定為空字串。  
   
 ### <a name="example"></a>範例  
  下列範例會從查詢中建立 <xref:System.Data.DataView>，然後將 <xref:System.Data.DataView.RowFilter%2A> 屬性設定為 `null`，藉以清除篩選：  

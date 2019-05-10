@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: 3027be6ee4ed3664b81c661b6a086a3604573833
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c7fb92c963ea7fa4129cddf060fe7c0b0261fc7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802605"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665147"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>運算式是一個數值，不可以是指派的目標
 陳述式會嘗試將值指派給運算式。 您只能指派給可寫入的變數、 屬性或陣列元素的值，在執行階段。 下列範例說明如何可能會發生此錯誤。  
@@ -49,13 +49,13 @@ exitButton.Location = exitLocation
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   如果陳述式會將值指派給運算式，運算式以取代單一可寫入的變數、 屬性或陣列元素。  
+- 如果陳述式會將值指派給運算式，運算式以取代單一可寫入的變數、 屬性或陣列元素。  
   
--   如果此陳述式間接存取透過實值型別 （通常是結構），建立變數來保存實值型別。  
+- 如果此陳述式間接存取透過實值型別 （通常是結構），建立變數來保存實值型別。  
   
--   將適當的結構 （或其他實值型別） 指派給變數。  
+- 將適當的結構 （或其他實值型別） 指派給變數。  
   
--   您可以使用變數來存取屬性，以將它指派值。  
+- 您可以使用變數來存取屬性，以將它指派值。  
   
 ## <a name="see-also"></a>另請參閱
 

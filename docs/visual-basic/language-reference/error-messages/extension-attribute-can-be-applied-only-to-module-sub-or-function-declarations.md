@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
-ms.openlocfilehash: a4561359e4d7cb0f6ebe44a5deb09b3374556ed8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88212fb2c04eab61b719a161ae01ccdda9a6110d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801643"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64640719"
 ---
 # <a name="extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a>'Extension' 屬性只能套用到 'Module'、'Sub' 或 'Function' 宣告
 擴充 Visual Basic 中的資料類型的唯一方法是定義在標準模組內的擴充方法。 擴充方法可能`Sub`程序或`Function`程序。 所有擴充方法必須都標記為擴充屬性中， `<Extension()>`，從<xref:System.Runtime.CompilerServices?displayProperty=nameWithType>命名空間。 （選擇性） 包含擴充方法的模組，可能會標記為相同的方式。 延伸模組屬性的任何其他用途不是有效的。  
@@ -21,9 +21,9 @@ ms.locfileid: "61801643"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   移除延伸模組屬性。  
+- 移除延伸模組屬性。  
   
--   重新設計您的擴充功能，為方法，並在封入的模組中定義。  
+- 重新設計您的擴充功能，為方法，並在封入的模組中定義。  
   
 ## <a name="example"></a>範例  
  下列範例會定義`Print`方法`String`資料型別。  

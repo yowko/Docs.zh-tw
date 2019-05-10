@@ -2,12 +2,12 @@
 title: HOW TO：執行運算式樹狀架構 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-ms.openlocfilehash: cccb0b301e1da6d82c616d56604ad46dfde83e2a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d7e0f5f6687ffb4293209a29279ca16361e7424e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787175"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642335"
 ---
 # <a name="how-to-execute-expression-trees-visual-basic"></a>HOW TO：執行運算式樹狀架構 (Visual Basic)
 本主題示範如何執行運算式樹狀架構。 執行運算式樹狀架構可能會傳回一個值，或者只是執行某個動作，例如呼叫方法。  

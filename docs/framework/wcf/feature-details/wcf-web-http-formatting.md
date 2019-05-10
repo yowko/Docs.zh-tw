@@ -2,12 +2,12 @@
 title: WCF Web HTTP 格式化
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: f3d3a2d992f234c690f3fb87514b700a6596a5fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 884193dc26794be5e8a3c95e05be2ca43a90f6e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935469"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643484"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web HTTP 格式化
 WCF Web HTTP 程式設計模型可讓您動態決定服務作業傳回回應所使用的最佳格式。 兩種可用來判斷最適合格式的方法分別為：自動和明確。  

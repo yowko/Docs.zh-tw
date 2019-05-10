@@ -2,12 +2,12 @@
 title: 延伸保護原則
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: 645b48b3c7ce3daaaedac372ba5ba6fd5edfc8f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2a79798569e308c37bd66bf0bdf8dee0cfa6951
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990167"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650062"
 ---
 # <a name="extended-protection-policy"></a>延伸保護原則
 延伸保護是防止攔截式攻擊的一項安全性方案。 MITM 攻擊是一項安全性威脅，其方式為 MITM 取得用戶端的認證並將它轉送至伺服器。  
@@ -34,9 +34,9 @@ ms.locfileid: "61990167"
   
 4. 這個範例需由用戶端建立與伺服器之間的安全通道，所以必須有可從 Internet Information Services (IIS) 管理員進行安裝的伺服器憑證。  
   
-    1.  開啟 [IIS Manager]。 開啟**伺服器憑證**，會出現在**功能檢視**索引標籤上，選取根節點 （電腦名稱） 時。  
+    1. 開啟 [IIS Manager]。 開啟**伺服器憑證**，會出現在**功能檢視**索引標籤上，選取根節點 （電腦名稱） 時。  
   
-    2.  若要測試這個範例，請建立自我簽署憑證。 如果您不希望 Internet Explorer 出現憑證可能不安全的提示，請將此憑證安裝到 [受信任的根憑證授權單位] 存放區。  
+    2. 若要測試這個範例，請建立自我簽署憑證。 如果您不希望 Internet Explorer 出現憑證可能不安全的提示，請將此憑證安裝到 [受信任的根憑證授權單位] 存放區。  
   
 5. 開啟**動作**預設網站 窗格。 按一下 **編輯站台**，**繫結**。 加入 HTTPS 做為類型 (如果尚未存在)，並且使用連接埠號碼 443。 指派上一個步驟中建立的 SSL 憑證。  
   

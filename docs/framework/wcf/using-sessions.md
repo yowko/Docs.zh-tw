@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fc0bfec95e625c1433636fbe5e0fdb6cc1112b14
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791452"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645162"
 ---
 # <a name="using-sessions"></a>使用工作階段
 在 Windows Communication Foundation (WCF) 應用程式*工作階段*與一組訊息相互關聯至對話。 WCF 工作階段的不同中可用的工作階段物件[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]應用程式支援不同的行為，以及控制的方式。 本主題描述在 WCF 中的工作階段啟用功能的應用程式，以及如何使用它們。  

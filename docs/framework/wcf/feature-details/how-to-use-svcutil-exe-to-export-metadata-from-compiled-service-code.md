@@ -2,12 +2,12 @@
 title: HOW TO：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 5b905b6943127d483e001749c263242550ab28ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 40c684cbc1b14bf14d3ca23cbc044020e36b85f1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047331"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650221"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>HOW TO：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料
 Svcutil.exe 可匯出服務中繼資料、合約以及編譯組件資料類型，如下：  

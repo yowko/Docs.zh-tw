@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb9b61f0c0b787a2de0a39a0d47c5767acad9cc5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876274"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645884"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 使用者執行個體
 Microsoft SQL Server Express Edition (SQL Server Express) 支援使用者執行個體功能，只有在使用 .NET Framework Data Provider for SQL Server (`SqlClient`) 時才提供此功能。 使用者執行個體是 SQL Server Express Database Engine 的獨立執行個體，由父執行個體所產生。 不是系統管理員的使用者可以透過使用者執行個體，從本機電腦附加及連接至 SQL Server Express 資料庫。 每個執行個體都會依照「每個使用者一個執行個體」的基礎，在個別使用者的安全性內容下執行。  
@@ -41,15 +41,15 @@ sp_configure 'user instances enabled','0'
   
  請注意下列所示的範例連接字串：  
   
--   `Data Source` 關鍵字參考到產生使用者執行個體的 SQL Server Express 父執行個體。 預設執行個體是 \sqlexpress。  
+- `Data Source` 關鍵字參考到產生使用者執行個體的 SQL Server Express 父執行個體。 預設執行個體是 \sqlexpress。  
   
--   `Integrated Security` 設定為 `true`。 若要連接至使用者執行個體，必須使用「Windows 驗證」；SQL Server 登入則不受支援。  
+- `Integrated Security` 設定為 `true`。 若要連接至使用者執行個體，必須使用「Windows 驗證」；SQL Server 登入則不受支援。  
   
--   `User Instance` 會設定為 `true`，如此會叫用 (Invoke) 使用者執行個體  (預設值為 `false`)。  
+- `User Instance` 會設定為 `true`，如此會叫用 (Invoke) 使用者執行個體  (預設值為 `false`)。  
   
--   `AttachDbFileName` 連接字串關鍵字是用以附加主要資料庫檔案 (.mdf)，其中必須包括完整的路徑名稱。 `AttachDbFileName` 也會對應至 <xref:System.Data.SqlClient.SqlConnection> 連接字串中的 "extended properties" 與 "initial file name" 索引鍵。  
+- `AttachDbFileName` 連接字串關鍵字是用以附加主要資料庫檔案 (.mdf)，其中必須包括完整的路徑名稱。 `AttachDbFileName` 也會對應至 <xref:System.Data.SqlClient.SqlConnection> 連接字串中的 "extended properties" 與 "initial file name" 索引鍵。  
   
--   包含在垂直線符號中的 `|DataDirectory|` 替代字串參考到開啟連接之應用程式的資料目錄，且提供相關路徑，指出 .mdf 和 .ldf 資料庫以及記錄檔的位置。 如果想要在其他位置尋找這些檔案，則必須提供檔案的完整路徑。  
+- 包含在垂直線符號中的 `|DataDirectory|` 替代字串參考到開啟連接之應用程式的資料目錄，且提供相關路徑，指出 .mdf 和 .ldf 資料庫以及記錄檔的位置。 如果想要在其他位置尋找這些檔案，則必須提供檔案的完整路徑。  
   
 ```  
 Data Source=.\\SQLExpress;Integrated Security=true;  
@@ -144,11 +144,11 @@ private static void OpenSqlConnection()
   
  使用者執行個體案例包括：  
   
--   任何不需共用資料的單一使用者應用程式。  
+- 任何不需共用資料的單一使用者應用程式。  
   
--   ClickOnce 佈署。 如果目標電腦上已安裝 .NET Framework 2.0 (或更新版本) 和 SQL Server Express，則非系統管理員的使用者也可以安裝及使用因採取 ClickOnce 動作而下載的安裝套件。 請注意，如果 SQL Server Express 是安裝的一部分，則系統管理員必須加以安裝。 如需詳細資訊，請參閱 <<c0> [ 適用於 Windows Form ClickOnce 部署](../../../winforms/clickonce-deployment-for-windows-forms.md)。
+- ClickOnce 佈署。 如果目標電腦上已安裝 .NET Framework 2.0 (或更新版本) 和 SQL Server Express，則非系統管理員的使用者也可以安裝及使用因採取 ClickOnce 動作而下載的安裝套件。 請注意，如果 SQL Server Express 是安裝的一部分，則系統管理員必須加以安裝。 如需詳細資訊，請參閱 <<c0> [ 適用於 Windows Form ClickOnce 部署](../../../winforms/clickonce-deployment-for-windows-forms.md)。
   
--   使用「Windows 驗證」的專屬 ASP . NET 裝載。 單一的 SQL Server Express 執行個體可以裝載在內部網路上。 應用程式會使用 ASPNET Windows 帳戶連接，而不是使用模擬。 使用者執行個體不該用於協力廠商或共用裝載的案例，因為在這些情況下，所有的應用程式都會共用相同的使用者執行個體，而無法彼此保持隔離。  
+- 使用「Windows 驗證」的專屬 ASP . NET 裝載。 單一的 SQL Server Express 執行個體可以裝載在內部網路上。 應用程式會使用 ASPNET Windows 帳戶連接，而不是使用模擬。 使用者執行個體不該用於協力廠商或共用裝載的案例，因為在這些情況下，所有的應用程式都會共用相同的使用者執行個體，而無法彼此保持隔離。  
   
 ## <a name="see-also"></a>另請參閱
 

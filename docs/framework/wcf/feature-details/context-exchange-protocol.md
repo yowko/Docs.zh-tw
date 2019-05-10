@@ -2,12 +2,12 @@
 title: 內容交換通訊協定
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: a6bc0ac45282d94a6aea8dbbdb5a7d34163c692e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb6e52b5622316cfaa9c56b26c3aac6764c71cca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857346"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651120"
 ---
 # <a name="context-exchange-protocol"></a>內容交換通訊協定
 本節說明 Windows Communication Foundation (WCF) 版本.NET Framework 3.5 版中導入的內容交換通訊協定。 這項通訊協定可讓用戶端通道接受服務所提供的內容，並透過相同的用戶端通道執行個體將之套用到該服務的後續所有要求。 內容交換通訊協定的實作可以使用下列兩個機制其中之一來傳播內容伺服器與用戶端之間：HTTP cookie 或 SOAP 標頭。  
@@ -21,16 +21,16 @@ ms.locfileid: "61857346"
   
  下列為此模式中的不變量清單：  
   
--   在通道已經開啟的情況下，任何使用 `SetContext` 來重設內容的嘗試都會擲回 <xref:System.InvalidOperationException>。  
+- 在通道已經開啟的情況下，任何使用 `SetContext` 來重設內容的嘗試都會擲回 <xref:System.InvalidOperationException>。  
   
--   在傳出的訊息中使用 <xref:System.ServiceModel.Channels.ContextMessageProperty> 來傳送內容的嘗試都會擲回 <xref:System.InvalidOperationException>。  
+- 在傳出的訊息中使用 <xref:System.ServiceModel.Channels.ContextMessageProperty> 來傳送內容的嘗試都會擲回 <xref:System.InvalidOperationException>。  
   
--   如果在通道已經使用特定內容初始化之後，從伺服器接收包含特定內容的訊息時就會產生 <xref:System.ServiceModel.ProtocolException>。  
+- 如果在通道已經使用特定內容初始化之後，從伺服器接收包含特定內容的訊息時就會產生 <xref:System.ServiceModel.ProtocolException>。  
   
     > [!NOTE]
     >  只有當開啟的通道未明確設定任何內容時，才適合從伺服器接收初始內容。  
   
--   傳入訊息上的 <xref:System.ServiceModel.Channels.ContextMessageProperty> 一律為 null。  
+- 傳入訊息上的 <xref:System.ServiceModel.Channels.ContextMessageProperty> 一律為 null。  
   
 ## <a name="mode-2-application-context-management"></a>模式 2:應用程式內容管理  
  當 <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> 設為 `false` 的時候，會變成這個模式。 在此模式中，內容通道不會管理內容。 應用程式需負責透過 <xref:System.ServiceModel.Channels.ContextMessageProperty> 來擷取、管理與套用內容。 任何嘗試呼叫 `GetContext` 或 `SetContext` 的行為都會導致 <xref:System.InvalidOperationException>。  
@@ -53,7 +53,7 @@ ms.locfileid: "61857346"
   
  服務端點可以在發行的原則中明確地陳述對內容交換通訊協定的支援需求。 兩個全新的原則判斷提示已經引進來代表用戶端需求，以支援 SOAP 層級的內容交換通訊協定或是啟用 HTTP Cookie 支援。 服務原則中會不會產生這些判斷提示是由如下列所示的 <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> 屬性值所控制：  
   
--   對 <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader> 來說，會產生下列判斷提示：  
+- 對 <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader> 來說，會產生下列判斷提示：  
   
     ```xml  
     <IncludeContext   
@@ -61,7 +61,7 @@ ms.locfileid: "61857346"
     protectionLevel="Sign" />  
     ```  
   
--   對 <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie> 來說，會產生下列判斷提示：  
+- 對 <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie> 來說，會產生下列判斷提示：  
   
     ```xml  
     <HttpUseCookie xmlns="http://schemas.xmlsoap.org/soap/http"/>  

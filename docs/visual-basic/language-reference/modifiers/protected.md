@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: 88e13fcd03c6a10cf1450cec90f9ca60aedc3eb1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 86758c68f0f3bfe214a695f656d3924eadd27e31
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778706"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642692"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
 成員存取修飾詞，指定一或多個宣告的程式設計項目都可以存取只會從自己的類別或從衍生類別中。  

@@ -2,12 +2,12 @@
 title: 泛型介面 (Visual Basic) 中的變異數
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-ms.openlocfilehash: 50a1aeb5c17a0f193b9e90ca2167ef298f7ed237
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 93e169f658a855e3b271e3e3affeadac5d7e5032
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787214"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642389"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>泛型介面 (Visual Basic) 中的變異數
 .NET Framework 4 引入了對於數個現有泛型介面的變異數支援。 差異支援可讓實作這些介面的類別以隱含方式轉換。 下列介面現在都是 Variant︰  
