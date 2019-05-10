@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: 1be9ff06e749d14b46946e899c6ffb6c3a950d65
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f36f5bbaaf28963fc95440a4f3a174b8b48f6276
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972158"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651805"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a><span data-ttu-id="19159-102">HOW TO：從 Windows Forms LinkLabel 控制項顯示網頁 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="19159-102">How to: Display a Web Page from a Windows Forms LinkLabel Control (Visual Basic)</span></span>
-<span data-ttu-id="19159-103">此範例會顯示在預設瀏覽器網頁當使用者按一下 Windows Form<xref:System.Windows.Forms.LinkLabel>控制項。</span><span class="sxs-lookup"><span data-stu-id="19159-103">This example displays a Web page in the default browser when a user clicks a Windows Forms <xref:System.Windows.Forms.LinkLabel> control.</span></span>  
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a><span data-ttu-id="cf622-102">HOW TO：從 Windows Forms LinkLabel 控制項顯示網頁 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cf622-102">How to: Display a Web Page from a Windows Forms LinkLabel Control (Visual Basic)</span></span>
+<span data-ttu-id="cf622-103">此範例會顯示在預設瀏覽器網頁當使用者按一下 Windows Form<xref:System.Windows.Forms.LinkLabel>控制項。</span><span class="sxs-lookup"><span data-stu-id="cf622-103">This example displays a Web page in the default browser when a user clicks a Windows Forms <xref:System.Windows.Forms.LinkLabel> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="19159-104">範例</span><span class="sxs-lookup"><span data-stu-id="19159-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="cf622-104">範例</span><span class="sxs-lookup"><span data-stu-id="cf622-104">Example</span></span>  
   
 ```vb  
 Private Sub Form1_Load(ByVal sender As System.Object, ByVal e _  
@@ -37,19 +37,19 @@ LinkLabel1.LinkClicked
 End Sub  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="19159-105">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="19159-105">Compiling the Code</span></span>  
- <span data-ttu-id="19159-106">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="19159-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="cf622-105">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="cf622-105">Compiling the Code</span></span>  
+ <span data-ttu-id="cf622-106">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="cf622-106">This example requires:</span></span>  
   
-- <span data-ttu-id="19159-107">Windows 表單名為`Form1`。</span><span class="sxs-lookup"><span data-stu-id="19159-107">A Windows Form named `Form1`.</span></span>  
+- <span data-ttu-id="cf622-107">Windows 表單名為`Form1`。</span><span class="sxs-lookup"><span data-stu-id="cf622-107">A Windows Form named `Form1`.</span></span>  
   
-- <span data-ttu-id="19159-108">名為 `LinkLabel1` 的 <xref:System.Windows.Forms.LinkLabel> 控制項。</span><span class="sxs-lookup"><span data-stu-id="19159-108">A <xref:System.Windows.Forms.LinkLabel> control named `LinkLabel1`.</span></span>  
+- <span data-ttu-id="cf622-108">名為 `LinkLabel1` 的 <xref:System.Windows.Forms.LinkLabel> 控制項。</span><span class="sxs-lookup"><span data-stu-id="cf622-108">A <xref:System.Windows.Forms.LinkLabel> control named `LinkLabel1`.</span></span>  
   
-- <span data-ttu-id="19159-109">作用中的網際網路連線。</span><span class="sxs-lookup"><span data-stu-id="19159-109">An active Internet connection.</span></span>  
+- <span data-ttu-id="cf622-109">作用中的網際網路連線。</span><span class="sxs-lookup"><span data-stu-id="cf622-109">An active Internet connection.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="19159-110">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="19159-110">.NET Framework Security</span></span>  
- <span data-ttu-id="19159-111">若要呼叫<xref:System.Diagnostics.Process.Start%2A>方法需要完全信任。</span><span class="sxs-lookup"><span data-stu-id="19159-111">The call to the <xref:System.Diagnostics.Process.Start%2A> method requires full trust.</span></span> <span data-ttu-id="19159-112">如需詳細資訊，請參閱<xref:System.Security.SecurityException>。</span><span class="sxs-lookup"><span data-stu-id="19159-112">For more information, see <xref:System.Security.SecurityException>.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="cf622-110">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="cf622-110">.NET Framework Security</span></span>  
+ <span data-ttu-id="cf622-111">若要呼叫<xref:System.Diagnostics.Process.Start%2A>方法需要完全信任。</span><span class="sxs-lookup"><span data-stu-id="cf622-111">The call to the <xref:System.Diagnostics.Process.Start%2A> method requires full trust.</span></span> <span data-ttu-id="cf622-112">如需詳細資訊，請參閱 <xref:System.Security.SecurityException>。</span><span class="sxs-lookup"><span data-stu-id="cf622-112">For more information, see <xref:System.Security.SecurityException>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="19159-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="19159-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cf622-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cf622-113">See also</span></span>
 
 - <xref:System.Windows.Forms.LinkLabel>
-- [<span data-ttu-id="19159-114">LinkLabel 控制項</span><span class="sxs-lookup"><span data-stu-id="19159-114">LinkLabel Control</span></span>](linklabel-control-windows-forms.md)
+- [<span data-ttu-id="cf622-114">LinkLabel 控制項</span><span class="sxs-lookup"><span data-stu-id="cf622-114">LinkLabel Control</span></span>](linklabel-control-windows-forms.md)
