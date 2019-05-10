@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-ms.openlocfilehash: 0cb8d0656765e5bc2c2a54ef5f282a67d8579f20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a69e5922d2f66d295024149764c3836f9760b685
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762422"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591235"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>視覺分層中的點擊測試
 本主題提供視覺分層所提供點擊測試功能的概觀。 點擊測試支援可讓您判斷幾何或點的值是否落在呈現的內容<xref:System.Windows.Media.Visual>，可讓您實作使用者介面行為，例如選取矩形來選取多個物件。  

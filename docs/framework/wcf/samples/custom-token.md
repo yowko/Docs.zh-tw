@@ -2,12 +2,12 @@
 title: 自訂權杖
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: fbde7d1006cabddafa7e03fdee0e3493416001da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 862b4b26295ef3e90064b27ecd753e9b541471a7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855045"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650207"
 ---
 # <a name="custom-token"></a>自訂權杖
 此範例示範如何新增自訂權杖實作 Windows Communication Foundation (WCF) 應用程式。 範例會使用 `CreditCardToken`，將用戶端的信用卡資訊安全地傳遞至服務。 權杖會在 WS-Security 訊息標頭中傳遞，並且是使用對稱安全性繫結程序項目，與訊息本文及其他訊息標頭一起經過簽署和加密。 當內建權杖的安全性不足時，這會十分有幫助。 這個範例將示範如何提供自訂安全性權杖給服務，而不使用其中一個內建權杖。 服務會實作定義要求-回覆通訊模式的合約。
@@ -17,13 +17,13 @@ ms.locfileid: "61855045"
 
  簡而言之，這個範例示範下面的情形：
 
--   用戶端如何傳遞自訂安全性權杖給服務。
+- 用戶端如何傳遞自訂安全性權杖給服務。
 
--   服務如何取用並驗證自訂安全性權杖。
+- 服務如何取用並驗證自訂安全性權杖。
 
--   WCF 服務程式碼如何取得接收到的安全性權杖，包括自訂安全性權杖的相關資訊。
+- WCF 服務程式碼如何取得接收到的安全性權杖，包括自訂安全性權杖的相關資訊。
 
--   如何使用伺服器的 X.509 憑證保護用於訊息加密和簽章的對稱金鑰。
+- 如何使用伺服器的 X.509 憑證保護用於訊息加密和簽章的對稱金鑰。
 
 ## <a name="client-authentication-using-a-custom-security-token"></a>使用自訂安全性權杖的用戶端驗證
  服務會使用 `BindingHelper` 和 `EchoServiceHost` 類別，公開透過程式設計所建立的單一端點。 端點是由位址、繫結及合約所組成。 繫結是透過使用 `SymmetricSecurityBindingElement` 和 `HttpTransportBindingElement` 的自訂繫結所設定。 這個範例會設定 `SymmetricSecurityBindingElement`，使其在傳輸期間使用服務的 X.509 憑證來保護對稱金鑰，以及在 WS-Security 訊息標頭中傳遞自訂 `CreditCardToken` 做為簽署和加密的安全性權杖。 此行為會指定要用於用戶端驗證的服務認證，以及服務 X.509 憑證的相關資訊。
@@ -543,7 +543,7 @@ string GetCallerCreditCardNumber()
 
  下面提供批次檔的各區段簡要概觀，讓將批次檔得以修改為在適當的組態下執行。
 
--   建立伺服器憑證：
+- 建立伺服器憑證：
 
      下列 `Setup.bat` 批次檔中的程式行會建立要使用的伺服器憑證。 `%SERVER_NAME%` 變數會指定伺服器名稱。 您可以變更這個變數來指定自己的伺服器名稱。 這個批次檔中的預設值為 localhost。 如果您變更 `%SERVER_NAME%` 變數，就必須在 Client.cs 和 Service.cs 檔案中遍尋 localhost，並以您在 Setup.bat 指令碼中使用的伺服器名稱來取代 localhost 的所有例項。
 
@@ -559,7 +559,7 @@ string GetCallerCreditCardNumber()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   將伺服器憑證安裝至用戶端的受信任憑證存放區中：
+- 將伺服器憑證安裝至用戶端的受信任憑證存放區中：
 
      Setup.bat 批次檔中的下列程式行會將伺服器憑證複製到用戶端受信任人的存放區。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證存放區的步驟。
 
@@ -570,7 +570,7 @@ string GetCallerCreditCardNumber()
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   若要啟用從 IIS 裝載服務對憑證私密金鑰進行的存取，就必須將私密金鑰的適當權限授與用於執行 IIS 裝載處理序的使用者帳戶。 Setup.bat 指令碼中的最後幾個步驟將會完成這個部分。
+- 若要啟用從 IIS 裝載服務對憑證私密金鑰進行的存取，就必須將私密金鑰的適當權限授與用於執行 IIS 裝載處理序的使用者帳戶。 Setup.bat 指令碼中的最後幾個步驟將會完成這個部分。
 
     ```
     echo ************

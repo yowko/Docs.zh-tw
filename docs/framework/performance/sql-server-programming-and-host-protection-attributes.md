@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f1049187dabbea64599617bb4372ed50515a51e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: aafd494a2330609f68295588cf649bc4666f4cfe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949184"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614885"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>SQL Server 程式設計和主機保護屬性
 在 SQL Server 主機中載入和執行 Managed 程式碼的功能需要符合主機對程式碼存取安全性和主機資源保護的需求。  三個 SQL Server 權限集的其中一個指定的程式碼存取安全性需求：SAFE、 EXTERNAL-ACCESS 或 UNSAFE。 在 SAFE 或 EXTERNAL-ACCESS 權限集合內執行的程式碼，必須避免已套用 <xref:System.Security.Permissions.HostProtectionAttribute> 屬性的特定類型或成員。 <xref:System.Security.Permissions.HostProtectionAttribute> 不像可靠性保證一樣是安全性權限，關鍵在於它會識別主機可能不允許的特定程式碼建構 (類型或方法)。  使用 <xref:System.Security.Permissions.HostProtectionAttribute> 會強制使用有助於保護主機穩定性的程式設計模型。  

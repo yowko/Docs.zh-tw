@@ -3,12 +3,12 @@ title: WSFederation 驗證模組概觀
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: c64bbfc868268fea77d2d17317bfea43aa413b3f
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.openlocfilehash: f4dc63272c47dc0cd9eaa15986e4369d9d689b64
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63808266"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592371"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 驗證模組概觀
 Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-同盟驗證模組 (WS-FAM) 提供同盟驗證的支援。 本主題將協助您了解同盟驗證的運作方式以及如何使用它。  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: aaee236487fedcb0c5d8ad113391bd628b11bb41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c2f57b8ad4f657ab4e556dbda894b95bc41cb542
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793431"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652220"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>呼叫服務作業 (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 會定義資料服務的服務作業。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可讓您在資料服務上定義像方法那樣的作業。 就像其他資料服務資源，這些服務作業會使用 URI 來定址。 服務作業可以傳回實體類型集合、單一實體類型執行個體以及整數和字串等基本類型。 服務作業還可以傳回 `null` (在 Visual Basic 中為 `Nothing`)。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫可以用來存取支援 HTTP GET 要求的服務作業。 這些服務作業類型是定義為已套用 <xref:System.ServiceModel.Web.WebGetAttribute> 的方法。 如需詳細資訊，請參閱 <<c0> [ 服務作業](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)。  

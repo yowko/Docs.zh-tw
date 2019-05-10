@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 67da51ae900a0b2d1c0728b22e58aa83e789684f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa3d428d311fd954d092c3859cf8ad273e8a5c1f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61861227"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613807"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>撰寫大型、可回應的 .NET Framework 應用程式
 本文針對大型 .NET Framework 應用程式或處理大量資料 (例如檔案或資料庫) 的應用程式，提供可提升其效能的提示。 這些提示來自於以 Managed 程式碼重寫 C# 和 Visual Basic 編譯器，本文包含數個 C# 編譯器的實際範例。 
@@ -453,13 +453,13 @@ class Compilation { /*...*/
   
  在本文中，我們討論了您應該如何留意可能影響應用程式回應能力的效能瓶頸徵兆，特別是針對大型系統或處理大量資料的系統。 常見的原因包括 Boxing、字串操作、LINQ 和 Lambda、非同步方法中的快取、快取但不使用大小限制或處置原則、不當使用字典，以及在結構間傳遞。 請記住調整應用程式的四點事實：  
   
--   不要太早進行最佳化 - 保持生產力，並在發現問題時調整應用程式。 
+- 不要太早進行最佳化 - 保持生產力，並在發現問題時調整應用程式。 
   
--   程式碼剖析不會說謊 - 未經測量，不過是臆測。 
+- 程式碼剖析不會說謊 - 未經測量，不過是臆測。 
   
--   使用良好工具的成果大不相同 - 請下載並試用 PerfView。 
+- 使用良好工具的成果大不相同 - 請下載並試用 PerfView。 
   
--   重點在於配置 - 這是編譯器平台小組花費最多時間提升新編譯器效能的地方。 
+- 重點在於配置 - 這是編譯器平台小組花費最多時間提升新編譯器效能的地方。 
   
 ## <a name="see-also"></a>另請參閱
 

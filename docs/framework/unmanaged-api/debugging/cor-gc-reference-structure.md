@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1e31e95473136bf7e7c196eacc278fa8a1caab2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 848765a4ea9657020bd84e476f992ae69750dda9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609446"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617703"
 ---
 # <a name="corgcreference-structure"></a>COR_GC_REFERENCE 結構
 包含要進行記憶體回收之物件的相關資訊。  

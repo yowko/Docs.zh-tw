@@ -2,12 +2,12 @@
 title: WCF 測試用戶端 (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: cd6f0d7a98ca5bc5f6bee45ad296341a5b91b2a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ee40ca7a07729cac284ef8c634d63d673be3fbd0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791192"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613082"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 測試用戶端 (WcfTestClient.exe)
 Windows Communication Foundation (WCF) 測試用戶端 (WcfTestClient.exe) 是一種 GUI 工具，可讓使用者輸入測試參數，請將該服務中，輸入送出，並檢視服務傳回的回應。 它提供了完善的服務測試經驗搭配 WCF 服務主機。  

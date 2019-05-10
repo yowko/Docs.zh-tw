@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 93fa26927a6afc9d9f7a96198abeef6f45fc35b4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971310"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651921"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 增益集概觀
 <a name="Introduction"></a> .NET Framework 包含開發人員可用來建立支援增益集擴充性的應用程式增益集模型。 此增益集模型可讓您建立增益集，整合並擴充應用程式的功能。 在某些情況下，應用程式也需要顯示增益集所提供的使用者介面。本主題說明 WPF 擴大.NET Framework 增益集模型以啟用這些案例、 架構、 其優點，以及其限制背後的方式。  

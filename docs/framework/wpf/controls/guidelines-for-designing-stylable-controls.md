@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 756cc821b1a9fe20741e390a1fe6e84d12cc6363
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 99644be4a275c1de7f4b89ca23368a26a8b76f5b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009964"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614547"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>設計可設定樣式控制項的方針
 本文摘要說明當設計要能夠容易設定樣式及範本化的控制項時，可考量的一組最佳做法。 我們是在研究內建之 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項集的佈景主題控制項樣式時，經過許多嘗試和錯誤，才得出這組最佳做法。 我們了解到成功的樣式設定對設計良好的物件模型來說，不僅是樣式本身，也是一項功能。 本文件的適用對象是控制項作者，而不是樣式作者。  

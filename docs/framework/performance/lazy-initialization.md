@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7b19fbeb0144698c5091a9bbe6bce45c21c4f0d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949938"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616376"
 ---
 # <a name="lazy-initialization"></a>延遲初始設定
 物件的「延遲初始設定」表示物件一直延遲到第一次使用才建立。 (在本主題中，「延遲初始設定」和「延遲具現化」二詞為同義字。)延遲初始設定主要是用來改善效能，避免不必要的計算，並減少程式記憶體需求。 以下為最常見的案例：  

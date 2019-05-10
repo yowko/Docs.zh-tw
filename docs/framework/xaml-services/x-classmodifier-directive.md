@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-ms.openlocfilehash: fdbc69634e86992e71cfccdc080829b6b45f963c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8f90f56a595fa175d5c48a929fc19ceb81ab0d63
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971895"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617111"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier 指示詞
 修改 XAML 編譯行為時`x:Class`也會提供。 具體來說，而不是建立在部分`class`具有`Public`存取層級 （預設值），提供`x:Class`會透過`NotPublic`存取層級。 此行為會影響產生的組件中的類別的存取層級。  

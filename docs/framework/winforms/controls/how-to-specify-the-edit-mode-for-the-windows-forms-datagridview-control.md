@@ -8,23 +8,23 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], edit mode
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-ms.openlocfilehash: 7cb9278cd311d211ef95df238b930970ae472d05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a999582aeb629646fa1843f973b10a039c29e1a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012941"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630531"
 ---
 # <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>HOW TO：指定 Windows Forms DataGridView 控制項的編輯模式
 根據預設，使用者可以編輯的目前內容<xref:System.Windows.Forms.DataGridView>文字 方塊中儲存格，在其中輸入，或按下 f2 鍵。 在編輯模式中，如果符合所有下列條件，這會使儲存格：  
   
--   基礎資料來源支援編輯。  
+- 基礎資料來源支援編輯。  
   
--   <xref:System.Windows.Forms.DataGridView>啟用控制項。  
+- <xref:System.Windows.Forms.DataGridView>啟用控制項。  
   
--   <xref:System.Windows.Forms.DataGridView.EditMode%2A>屬性值不是<xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>。  
+- <xref:System.Windows.Forms.DataGridView.EditMode%2A>屬性值不是<xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>。  
   
--   `ReadOnly`資料格、 資料列、 資料行和控制項的屬性都設為`false`。  
+- `ReadOnly`資料格、 資料列、 資料行和控制項的屬性都設為`false`。  
   
  在編輯模式中，使用者可以變更儲存格的值，然後按 ENTER 認可的變更或 esc 鍵還原為其原始值的資料格。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62012941"
   
 ### <a name="to-change-the-edit-mode-of-a-datagridview-control"></a>若要變更 DataGridView 控制項的編輯模式  
   
--   設定<xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>屬性為適當<xref:System.Windows.Forms.DataGridViewEditMode>列舉型別。  
+- 設定<xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>屬性為適當<xref:System.Windows.Forms.DataGridViewEditMode>列舉型別。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
@@ -40,9 +40,9 @@ ms.locfileid: "62012941"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
+- 名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
   
--   <xref:System> 和 <xref:System.Windows.Forms> 組件的參考。  
+- <xref:System> 和 <xref:System.Windows.Forms> 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
 

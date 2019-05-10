@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09b2848619256a255cc27f0268d46e5e6db8cbe4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 38db390b8fad9cd36dacf33f9647b0272eddc4a0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949301"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616415"
 ---
 # <a name="interop-etw-events"></a>Interop ETW 事件
 <a name="top"></a> Interop 事件會擷取 Microsoft 中繼語言 (MSIL) Stub 之產生和快取的相關資訊。  

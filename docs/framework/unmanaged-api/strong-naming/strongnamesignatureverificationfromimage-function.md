@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54b1d35d1c40289bad465978750ba738acf28c90
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9eef4e1b1c9c82d8576c01dd124ee9ac68c2583
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000567"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610032"
 ---
 # <a name="strongnamesignatureverificationfromimage-function"></a>StrongNameSignatureVerificationFromImage 函式
 驗證已對應到記憶體的組件對關聯的公開金鑰而言有效。  
@@ -49,22 +49,22 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
  `dwInFlags`  
  [in]影響驗證行為的旗標。 支援下列值：  
   
--   `SN_INFLAG_FORCE_VER` (0x00000001)-強制執行驗證，即使它是需要覆寫登錄設定。  
+- `SN_INFLAG_FORCE_VER` (0x00000001)-強制執行驗證，即使它是需要覆寫登錄設定。  
   
--   `SN_INFLAG_INSTALL` (0x00000002)-指定此映像上執行的第一次驗證。  
+- `SN_INFLAG_INSTALL` (0x00000002)-指定此映像上執行的第一次驗證。  
   
--   `SN_INFLAG_ADMIN_ACCESS` (0x00000004)-指定快取可讓具有系統管理權限的使用者存取。  
+- `SN_INFLAG_ADMIN_ACCESS` (0x00000004)-指定快取可讓具有系統管理權限的使用者存取。  
   
--   `SN_INFLAG_USER_ACCESS` (0x00000008)-指定的組件都是僅供目前的使用者存取。  
+- `SN_INFLAG_USER_ACCESS` (0x00000008)-指定的組件都是僅供目前的使用者存取。  
   
--   `SN_INFLAG_ALL_ACCESS` (0x00000010)-指定快取會提供任何保證的存取限制。  
+- `SN_INFLAG_ALL_ACCESS` (0x00000010)-指定快取會提供任何保證的存取限制。  
   
--   `SN_INFLAG_RUNTIME` (0x80000000)-保留給內部偵錯。  
+- `SN_INFLAG_RUNTIME` (0x80000000)-保留給內部偵錯。  
   
  `pdwOutFlags`  
  [out]其他輸出資訊之旗標。 支援下列值：  
   
--   `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-此值設為`false`，指定驗證成功，因為登錄設定。  
+- `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-此值設為`false`，指定驗證成功，因為登錄設定。  
   
 ## <a name="return-value"></a>傳回值  
  `true` 如果成功地完成;否則， `false`。  

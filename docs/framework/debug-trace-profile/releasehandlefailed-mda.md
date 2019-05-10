@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b149a9b8ee41f5e196fd69258044f9b6563cb99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ad580ecace07d3d6fdf206ff660dc4bac4bceb09
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873999"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614297"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
 當衍生自 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 之類別的 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法傳回 `false` 時，會啟動 `releaseHandleFailed` Managed 偵錯助理 (MDA) 來通知開發人員。  

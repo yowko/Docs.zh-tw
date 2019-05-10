@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d8f6975d117d9920d2199c3996246822d1fdb6c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9b1223839be3747b04810d6b5bd131733c41631f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753798"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614382"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode MDA
 `moduloObjectHashcode` Managed 偵錯助理 (MDA) 會變更 <xref:System.Object> 類別對 <xref:System.Object.GetHashCode%2A> 方法所傳回之雜湊碼執行模數作業的行為。 此 MDA 的預設模數是 1，讓 <xref:System.Object.GetHashCode%2A> 針對所有物件都傳回 0。  

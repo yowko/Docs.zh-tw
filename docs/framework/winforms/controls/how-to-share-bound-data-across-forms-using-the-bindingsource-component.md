@@ -10,12 +10,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 - BindingSource [Windows Forms], using with multiple forms
 ms.assetid: a1a49630-db9c-4485-b888-1f62a373a4f7
-ms.openlocfilehash: 19505c690728147d2a67c26371e1cea4c281ab08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 026b5456134be531b05e75474bcad6bbd46dc7fc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013045"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630471"
 ---
 # <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>HOW TO：使用 BindingSource 元件跨表單共用繫結資料
 您可以使用 <xref:System.Windows.Forms.BindingSource> 元件輕鬆地跨表單共用資料。 例如，您可能想要顯示一個唯讀表單，該表單會摘要資料來源資料，並顯示另一個可編輯的表單，其中包含在資料來源中目前所選取項目的詳細資訊。 這個範例將示範此案例。  
@@ -32,7 +32,7 @@ ms.locfileid: "62013045"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   System、System.Windows.Forms、System.Drawing、System.Data 和 System.Xml 組件的參考。  
+- System、System.Windows.Forms、System.Drawing、System.Data 和 System.Xml 組件的參考。  
   
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   

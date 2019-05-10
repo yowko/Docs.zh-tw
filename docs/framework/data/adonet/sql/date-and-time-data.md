@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f93f215f7be27196217fd506796fd58c4e11d796
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877743"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619177"
 ---
 # <a name="date-and-time-data"></a>日期和時間資料
 SQL Server 2008 導入了處理日期和時間資訊的新資料型別。 這些新資料型別包括日期和時間的個別型別，以及具有較大範圍、精確度和時區感知的擴充資料型別。 從 .NET Framework 3.5 版 Service Pack (SP) 1 開始，.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 就會針對 SQL Server 2008 Database Engine 的所有新功能提供完整支援。 您必須安裝 .NET Framework 3.5 SP1 (或更新版本) 才能使用這些新功能搭配 SqlClient。  
@@ -51,13 +51,13 @@ SQL Server 2008 導入了處理日期和時間資訊的新資料型別。 這些
 ## <a name="datetime-data-types-and-parameters"></a>日期/時間資料型別和參數  
  <xref:System.Data.SqlDbType> 中已加入下列的列舉型別以支援新的日期及時間資料型別。  
   
--   `SqlDbType.Date`  
+- `SqlDbType.Date`  
   
--   `SqlDbType.Time`  
+- `SqlDbType.Time`  
   
--   `SqlDbType.DateTime2`  
+- `SqlDbType.DateTime2`  
   
--   `SqlDbType.DateTimeOffSet`  
+- `SqlDbType.DateTimeOffSet`  
 
 您可以指定的資料型別<xref:System.Data.SqlClient.SqlParameter>使用其中一種上述<xref:System.Data.SqlDbType>列舉型別。 
 
@@ -66,9 +66,9 @@ SQL Server 2008 導入了處理日期和時間資訊的新資料型別。 這些
 
  您也可以藉由將 <xref:System.Data.SqlClient.SqlParameter> 物件的 <xref:System.Data.SqlClient.SqlParameter.DbType%2A> 屬性設定為特定的 `SqlParameter` 列舉值，以一般的方式指定 <xref:System.Data.DbType> 的型別。 <xref:System.Data.DbType> 中已加入下列的列舉值以支援 `datetime2` 和 `datetimeoffset` 資料型別：  
   
--   DbType.DateTime2  
+- DbType.DateTime2  
   
--   DbType.DateTimeOffset  
+- DbType.DateTimeOffset  
   
  這些新的列舉型別補充了存在舊版 .NET Framework 中的 `Date`、`Time` 和 `DateTime` 列舉型別。  
   
@@ -219,11 +219,11 @@ command.Parameters.AddWithValue( _
 ## <a name="specifying-date-and-time-values-as-literals"></a>將日期和時間值指定為常值  
  您可以使用各種不同的常值字串格式來指定日期和時間資料型別，然後 SQL Server 就會在執行階段評估這些格式，並將它們轉換成內部日期/時間結構。 SQL Server 可辨識以單引號 (') 括住的日期和時間資料。 下列範例將示範一些格式：  
   
--   字母日期格式，例如 `'October 15, 2006'`。  
+- 字母日期格式，例如 `'October 15, 2006'`。  
   
--   數字日期格式，例如 `'10/15/2006'`。  
+- 數字日期格式，例如 `'10/15/2006'`。  
   
--   未分隔的字串格式，例如 `'20061015'`。如果您正在使用 ISO 標準日期格式，它就會解譯成 2006 年 10 月 15 日。  
+- 未分隔的字串格式，例如 `'20061015'`。如果您正在使用 ISO 標準日期格式，它就會解譯成 2006 年 10 月 15 日。  
   
 > [!NOTE]
 >  您可以在《SQL Server 線上叢書》中找到所有常值字串格式以及日期和時間資料型別之其他功能的完整文件。  

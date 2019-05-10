@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9fb7098c29768821cafad6662b646eb0e08a138
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8c15b8e416a5070f59a4df44b3e670e2eb9316b5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992819"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630539"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverification-method"></a>ICLRStrongName::StrongNameSignatureVerification 方法
 取得值，指出是否提供之路徑上的組件資訊清單包含強式名稱簽章，根據指定的旗標加以確認。  

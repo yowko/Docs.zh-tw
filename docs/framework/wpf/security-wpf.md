@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c284e37ce32848ab22ca9ff6cc2ca2a8e6df9cb6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696791"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614500"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a> 在開發 Windows Presentation Foundation (WPF) 獨立和瀏覽器裝載的應用程式時，您必須考量的安全性模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 獨立應用程式使用不受限制的權限執行 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**權限集合)，不論部署使用 Windows Installer (.msi)、 XCopy 或[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]。 不支援使用 ClickOnce 部署部分信任的獨立 WPF 應用程式。 不過，完全信任主應用程式可以建立部分信任<xref:System.AppDomain>使用.NET Framework 增益集模型。 如需詳細資訊，請參閱 < [WPF 增益集概觀](./app-development/wpf-add-ins-overview.md)。  

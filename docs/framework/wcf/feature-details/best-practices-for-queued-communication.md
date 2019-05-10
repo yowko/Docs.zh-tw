@@ -5,12 +5,12 @@ helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b2f64faab6df678182fb39174c8a558b298a8748
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858074"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584973"
 ---
 # <a name="best-practices-for-queued-communication"></a>佇列通訊的最佳做法
 本主題會提供佇列通訊中 Windows Communication Foundation (WCF) 的建議的做法。 下列各節由案例的觀點來討論建議的做法。  

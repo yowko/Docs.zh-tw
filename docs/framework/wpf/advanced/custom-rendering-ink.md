@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: b41ded25bd4eb704c6f0d67c8da1c0e6643cac5b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9a62a16f4fa16cfe40bbf830de2255bea25f8d3f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010627"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64611979"
 ---
 # <a name="custom-rendering-ink"></a>自訂呈現筆墨
 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>筆劃的屬性可讓您指定的筆劃，其大小、 色彩和形狀，例如外觀，但會有您想来自訂項目外觀<xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>允許。 您可能想要自訂筆跡外觀，轉譯具噴槍、油畫及許多其他效果的外觀。 Windows Presentation Foundation (WPF) 可讓您自訂實作自訂呈現筆墨<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>和<xref:System.Windows.Ink.Stroke>物件。  
