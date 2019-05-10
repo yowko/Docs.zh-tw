@@ -5,11 +5,11 @@ helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
 ms.openlocfilehash: 72b9799d1f5ba7efa37d5f8f2a633e6806a58607
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63808079"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755720"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>My 如何相依於專案類型 (Visual Basic)
 `My` 只有在特定專案類型所需的物件公開 （expose)。 比方說，`My.Forms`物件是在 Windows Forms 應用程式中可用的但無法使用主控台應用程式中。 本主題描述其中`My`物件都在不同的專案類型。  

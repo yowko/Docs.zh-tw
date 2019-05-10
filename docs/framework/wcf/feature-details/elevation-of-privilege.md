@@ -5,12 +5,12 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: fd5829d2dbb1853bf65f1f6e402b918137bd59e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e42e2726b54464d479398c023c3e7caecf9b054
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856389"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753048"
 ---
 # <a name="elevation-of-privilege"></a>權限提高
 *提高權限*肇因於賦予攻擊者授權高於原先賦予的權限。 例如，具有「唯讀」權限的攻擊者以不明方式將權限提高為「讀取和寫入」。  
@@ -25,13 +25,13 @@ ms.locfileid: "61856389"
   
  當建立用戶端與伺服器上，用戶端的身分識別之間的連線不會變更，以下情況除外： 開啟 WCF 用戶端時，如果下列條件全部成立之後：  
   
--   若要建立安全性內容 （使用傳輸安全性工作階段或訊息安全性工作階段） 的程序已關閉 (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A>屬性設定為`false`發生訊息安全性或傳輸無法建立安全性工作階段會在傳輸安全性情況。 HTTPS 即是此類傳輸的範例之一)。  
+- 若要建立安全性內容 （使用傳輸安全性工作階段或訊息安全性工作階段） 的程序已關閉 (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A>屬性設定為`false`發生訊息安全性或傳輸無法建立安全性工作階段會在傳輸安全性情況。 HTTPS 即是此類傳輸的範例之一)。  
   
--   您目前使用 Windows 驗證。  
+- 您目前使用 Windows 驗證。  
   
--   您未明確設定認證。  
+- 您未明確設定認證。  
   
--   您在模擬的安全性內容中呼叫服務。  
+- 您在模擬的安全性內容中呼叫服務。  
   
  如果這些條件都成立，可能會變更用來驗證服務的用戶端的識別 （它可能不是模擬的身分識別，而處理序身分識別而） 開啟 WCF 用戶端之後。 這是因為用來向服務驗證用戶端的 Windows 認證會隨著每個訊息一併傳輸，而用來驗證的認證則是從目前執行緒的 Windows 識別取得。 如果目前執行緒的 Windows 識別變更 (例如，藉由模擬不同的呼叫者)，則附加至訊息並用來向服務驗證用戶端的認證可能會一併變更。  
   
@@ -59,13 +59,13 @@ ms.locfileid: "61856389"
   
  當您使用下列其中一種方法來建立自訂繫結時，也會發生這種情況：  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForCertificateBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForCertificateBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForSslBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForSslBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenOverTransportBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenOverTransportBindingElement%2A>  
   
  若要緩解這個情況，授權原則必須檢查每個授權原則的動作與到期時間。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "61856389"
   
  在下列狀況下可能會發生這種情形：  
   
--   用戶端使用 X.509 憑證來數位簽署訊息，而且未將 X.509 憑證附加至訊息，只有使用其主體金鑰識別碼來參照憑證。  
+- 用戶端使用 X.509 憑證來數位簽署訊息，而且未將 X.509 憑證附加至訊息，只有使用其主體金鑰識別碼來參照憑證。  
   
--   服務的電腦包含兩個以上的憑證具有相同的公開金鑰，但是憑證中包含不同的資訊。  
+- 服務的電腦包含兩個以上的憑證具有相同的公開金鑰，但是憑證中包含不同的資訊。  
   
--   服務擷取的憑證符合主體主鑰識別碼，但不是用戶端原先想要使用的那組憑證。 當 WCF 接收訊息，並驗證簽章時，WCF 會對應至一組宣告的不同潛在提高權限從用戶端預期的非預期的 X.509 憑證中的資訊。  
+- 服務擷取的憑證符合主體主鑰識別碼，但不是用戶端原先想要使用的那組憑證。 當 WCF 接收訊息，並驗證簽章時，WCF 會對應至一組宣告的不同潛在提高權限從用戶端預期的非預期的 X.509 憑證中的資訊。  
   
  若要緩解這個情況，請以另一種方式來參照 X.509 憑證，例如使用 <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>。  
   

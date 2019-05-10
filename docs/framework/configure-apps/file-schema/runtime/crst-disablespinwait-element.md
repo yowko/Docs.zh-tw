@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Crst_DisableSpinWait element
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cde26250db0b3d11c51a18b7ebd378953ae0958
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f89f0558c11e229fef2ca3cd619e3c033f12c858
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704826"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754669"
 ---
 # <a name="crstdisablespinwait-element"></a>\<Crst_DisableSpinWait > 項目
 
-指定是否要停用微調-等候時爭用重要區段。 \ 
+指定是否要停用微調-等候時爭用重要區段。  
   
  \<configuration>  
 \<執行階段 >  
@@ -36,14 +36,14 @@ ms.locfileid: "61704826"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|**enabled**|指定是否要在其爭用時，啟用關鍵區段旋轉等待。|  
+|**enabled**|指定是否要停用微調-等候時它們爭用重要區段。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|1|微調等待已啟用。|  
-|0|微調等待已停用。 這是預設值|  
+|1|無法取得重要區段時，請停用微調等候。|  
+|0|無法取得重要區段時，請勿停用微調等候。 這是預設值。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  

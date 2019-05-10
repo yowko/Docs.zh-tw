@@ -3,11 +3,11 @@ title: 開始使用F#在 Visual Studio 中
 description: 了解如何使用F#使用 Visual Studio。
 ms.date: 07/03/2018
 ms.openlocfilehash: 9b02a5d295f982b1911dab567213fa9a2b6c4304
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63808019"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754872"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>開始使用F#在 Visual Studio 中
 

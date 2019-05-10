@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 1e515c0f4ce8e787754c61a9b53d247fa93c49f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d80dc542f71aaf3eec6891006d77c5d39c985abf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906525"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600997"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>HOW TO：將物件轉換成 Visual Basic 中的另一個類型
 您將轉換`Object`變數設為另一個資料類型，例如使用轉換關鍵字[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)。  
@@ -31,7 +31,7 @@ End Sub
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   <xref:System?displayProperty=nameWithType> 命名空間的參考。  
+- <xref:System?displayProperty=nameWithType> 命名空間的參考。  
   
 ## <a name="see-also"></a>另請參閱
 

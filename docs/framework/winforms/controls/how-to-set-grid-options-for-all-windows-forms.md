@@ -8,27 +8,25 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: acc329c8e61b4638b2f373860f5f13b8a98dece9
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912856"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211620"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>HOW TO：設定所有 Windows Forms 的格線選項
-您成為用來在 Visual Studio 開發環境中工作，您可以在 Windows Form 設計工具來設定喜好設定的所有表單和您使用的專案。  
-  
-> [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
-  
-### <a name="to-set-global-windows-forms-options"></a>若要設定全域 Windows Form 選項  
-  
-1. 從**工具**功能表上，選取**選項**。  
-  
-2. 在左窗格中**選項** 對話方塊中，按一下**Windows Forms 設計工具**。  
-  
-     在右窗格中，在**版面配置設定**標題時，您可以設定預設為您建立的新表單的格線設定。 這些設定包括格線大小、 控制項是否貼齊，以及它是否在預設情況下。 此外，您可以選取之間**貼齊格線**並**對齊線**版面配置模式。 如需有關對齊線的詳細資訊，請參閱[逐步解說：排列控制項，在 Windows Form 使用對齊線](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。  
-  
+
+您成為用來在 Visual Studio 開發環境中工作，您可以在 Windows Form 設計工具來設定喜好設定的所有表單和您使用的專案。
+
+## <a name="set-global-windows-forms-options"></a>設定全域 Windows Form 選項
+
+1. 在 Visual Studio 中，從**工具**功能表上，選取**選項**。
+
+2. 在左窗格中**選項** 對話方塊中，按一下**Windows Forms 設計工具**。
+
+   在右窗格中，在**版面配置設定**標題時，您可以設定預設為您建立的新表單的格線設定。 這些設定包括格線大小、 控制項是否貼齊，以及它是否在預設情況下。 此外，您可以選取之間**貼齊格線**並**對齊線**版面配置模式。 如需有關對齊線的詳細資訊，請參閱[逐步解說：排列控制項，在 Windows Form 使用對齊線](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。
+
 ## <a name="see-also"></a>另請參閱
 
 - [逐步解說：使用對齊線的 Windows Form 上排列控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

@@ -2,12 +2,12 @@
 title: 開放式並行存取：總覽
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: 8f3bd35cc1391339d99d5aa0a4021e29fa81756c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a6e654ea1ae199cb086e9377454d05e6eaa03ad6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767484"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64609958"
 ---
 # <a name="optimistic-concurrency-overview"></a>開放式並行存取：總覽
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援開放式並行存取 (Optimistic Concurrency) 控制。 下表描述中的開放式並行存取的條款[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件：  
@@ -29,7 +29,7 @@ ms.locfileid: "61767484"
  解決這項衝突包括探索哪些物件成員發生衝突，然後決定要採取的動作。  
   
 > [!NOTE]
->  只有對應成 <xref:System.Data.Linq.Mapping.UpdateCheck.Always> 或 <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> 的成員才會參與開放式並行存取檢查。 而不會檢查標記為 <xref:System.Data.Linq.Mapping.UpdateCheck.Never> 的成員。 如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.UpdateCheck>。  
+>  只有對應成 <xref:System.Data.Linq.Mapping.UpdateCheck.Always> 或 <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> 的成員才會參與開放式並行存取檢查。 而不會檢查標記為 <xref:System.Data.Linq.Mapping.UpdateCheck.Never> 的成員。 如需詳細資訊，請參閱 <xref:System.Data.Linq.Mapping.UpdateCheck>。  
   
 ## <a name="example"></a>範例  
  例如，在下列案例中，User1 查詢資料庫中的資料列，開始準備更新。 User1 會接收到值為 Alfreds、Maria 和 Sales 的一個資料列。  

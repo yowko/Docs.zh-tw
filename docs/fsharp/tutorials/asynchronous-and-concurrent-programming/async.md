@@ -3,11 +3,11 @@ title: 非同步程式設計
 description: 了解如何F#非同步程式設計透過語言層級的程式設計模型，而且容易使用自然語言來完成。
 ms.date: 06/20/2016
 ms.openlocfilehash: 8cd7d7bcecabe8ea2c33a4787fe9ebbadd67fe67
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63808227"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753587"
 ---
 # <a name="async-programming-in-f"></a>在 F 中的非同步程式設計\#
 

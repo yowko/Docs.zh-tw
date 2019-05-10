@@ -9,26 +9,26 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], detecting changes in cells
 - data grids [Windows Forms], detecting changes in cells
 ms.assetid: 7fa44d01-97f4-4ccb-a149-bc72628d2c36
-ms.openlocfilehash: 0573199e9afb7e52c7542d36a2f3e39730dacdc4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23753a2c0ceab9452bde24a1c56348eabf87d655
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012668"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654439"
 ---
 # <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a>HOW TO：根據 Windows Forms DataGridView 控制項儲存格的變更執行自訂動作
 <xref:System.Windows.Forms.DataGridView>控制項具有可用來偵測變更的狀態中的事件數目<xref:System.Windows.Forms.DataGridView>資料格。 最常使用的兩個是<xref:System.Windows.Forms.DataGridView.CellValueChanged>和<xref:System.Windows.Forms.DataGridView.CellStateChanged>事件。  
   
 ### <a name="to-detect-changes-in-the-values-of-datagridview-cells"></a>若要偵測 DataGridView 儲存格的值中的變更  
   
--   撰寫處理常式<xref:System.Windows.Forms.DataGridView.CellValueChanged>事件。  
+- 撰寫處理常式<xref:System.Windows.Forms.DataGridView.CellValueChanged>事件。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#130](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#130)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#130](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#130)]  
   
 ### <a name="to-detect-changes-in-the-states-of-datagridview-cells"></a>若要偵測的 DataGridView 儲存格的狀態中的變更  
   
--   撰寫處理常式<xref:System.Windows.Forms.DataGridView.CellStateChanged>事件。  
+- 撰寫處理常式<xref:System.Windows.Forms.DataGridView.CellStateChanged>事件。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#135](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#135)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#135](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#135)]  
@@ -36,9 +36,9 @@ ms.locfileid: "62012668"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。 針對C#，事件處理常式必須連接到對應的事件。  
+- 名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。 針對C#，事件處理常式必須連接到對應的事件。  
   
--   <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
+- <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
 

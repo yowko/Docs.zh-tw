@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_LengthGTZero1
 ms.assetid: 709bc232-f8fe-4864-9842-e064795da0f5
-ms.openlocfilehash: 94720ceafcd99b699fab5769abc5b70f0f637fba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 42f2d2d28e6c3850f4c99e7395845bc890f29a83
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790555"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604176"
 ---
 # <a name="length-of-argument-argumentname-must-be-greater-than-zero"></a>引數的長度 '\<引數名稱 >' 必須是小於或等於零
 引數的值等於或小於零。  

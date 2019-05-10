@@ -3,11 +3,11 @@ title: 分組資料 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
 ms.openlocfilehash: b5a6a3795e02e0638b81824701ad0cbacbcca91a
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63808120"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754469"
 ---
 # <a name="grouping-data-visual-basic"></a>分組資料 (Visual Basic)
 分組指的是將資料放在群組中，好讓每一個群組中的項目共用共同的屬性。  
