@@ -2,12 +2,12 @@
 title: 公司購買程序
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 346d4b58d8d59c416fbdd51f5fbe02b54f9e078f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eaf77fc8b1697d0e337d8c4823ca2184cb9c545c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005390"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665944"
 ---
 # <a name="corporate-purchase-process"></a>公司購買程序
 這個範例示範如何建立一個具有自動最佳提案選取、非常基本的提案徵求書 (RFP) 架構採購程序。 它結合 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601> 和 <xref:System.Activities.Statements.ForEach%601>，以及自訂活動，建立代表此程序的工作流程。
@@ -16,27 +16,27 @@ ms.locfileid: "62005390"
 
 ## <a name="requirements"></a>需求
 
--   Visual Studio 2012.
+- Visual Studio 2012.
 
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
+- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
 
 ## <a name="demonstrates"></a>示範
 
--   自訂活動。
+- 自訂活動。
 
--   活動撰寫。
+- 活動撰寫。
 
--   書籤。
+- 書籤。
 
--   持續性。
+- 持續性。
 
--   結構描述化的持續性。
+- 結構描述化的持續性。
 
--   追蹤。
+- 追蹤。
 
--   追查。
+- 追查。
 
--   在不同的用戶端 ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] Web 應用程式和 WinForms 應用程式) 中裝載 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。
+- 在不同的用戶端 ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] Web 應用程式和 WinForms 應用程式) 中裝載 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。
 
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
@@ -52,21 +52,21 @@ ms.locfileid: "62005390"
   
 1. X 公司的員工建立提案徵求書 (RFP)。  
   
-    1.  員工輸入 RFP 標題和描述。  
+    1. 員工輸入 RFP 標題和描述。  
   
-    2.  員工選取數家供應商，希望邀請他們提交提案。  
+    2. 員工選取數家供應商，希望邀請他們提交提案。  
   
 2. 員工提交提案。  
   
-    1.  建立工作流程執行個體。  
+    1. 建立工作流程執行個體。  
   
-    2.  工作流程等候所有供應商提交提案。  
+    2. 工作流程等候所有供應商提交提案。  
   
 3. 收到所有提案之後，工作流程逐一查看所有收到的提案並選取最佳提案。  
   
-    1.  每個供應商都有評價 (這個範例將評價清單儲存在 VendorRepository.cs)。  
+    1. 每個供應商都有評價 (這個範例將評價清單儲存在 VendorRepository.cs)。  
   
-    2.  提案的總值是由 (供應商輸入的值) * (供應商記錄評價) / 100 所決定。  
+    2. 提案的總值是由 (供應商輸入的值) * (供應商記錄評價) / 100 所決定。  
   
 4. 原始要求者可以看到所有提交的提案。 在報表的特殊區段中呈現最佳提案。  
   
@@ -155,20 +155,20 @@ ms.locfileid: "62005390"
   
 ### <a name="web-client-options"></a>Web 用戶端選項  
   
--   **建立新的 RFP**:建立新企劃書 (RFP) 並且啟動採購程序工作流程。  
+- **建立新的 RFP**:建立新企劃書 (RFP) 並且啟動採購程序工作流程。  
   
--   **重新整理**:重新整理作用中和主視窗中完成的 Rfp 的清單。  
+- **重新整理**:重新整理作用中和主視窗中完成的 Rfp 的清單。  
   
--   **檢視**：顯示現有 RFP 的內容。 供應商可以提交提案 (如果受邀或 RFP 未完成)。  
+- **檢視**：顯示現有 RFP 的內容。 供應商可以提交提案 (如果受邀或 RFP 未完成)。  
   
--   檢視為：使用者可以存取 RFP，方法是選取在所需的參與者使用不同的身分識別**視為**作用中 Rfp 方格中的下拉式方塊。  
+- 檢視為：使用者可以存取 RFP，方法是選取在所需的參與者使用不同的身分識別**視為**作用中 Rfp 方格中的下拉式方塊。  
   
 ### <a name="winforms-client-options"></a>WinForms 用戶端選項  
   
--   **Create RFP**:建立新企劃書 (RFP) 並且啟動採購程序工作流程。  
+- **Create RFP**:建立新企劃書 (RFP) 並且啟動採購程序工作流程。  
   
--   **重新整理**:重新整理作用中和主視窗中完成的 Rfp 的清單。  
+- **重新整理**:重新整理作用中和主視窗中完成的 Rfp 的清單。  
   
--   **View RFP**:顯示現有 RFP 的內容。 供應商可以提交提案 (如果受邀或 RFP 未完成)。  
+- **View RFP**:顯示現有 RFP 的內容。 供應商可以提交提案 (如果受邀或 RFP 未完成)。  
   
--   **連線身分**:使用者可以存取 RFP，方法是選取在所需的參與者使用不同的身分識別**視為**作用中 Rfp 方格中的下拉式方塊。
+- **連線身分**:使用者可以存取 RFP，方法是選取在所需的參與者使用不同的身分識別**視為**作用中 Rfp 方格中的下拉式方塊。

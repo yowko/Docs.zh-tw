@@ -2,12 +2,12 @@
 title: 執行個體鎖定的例外狀況動作
 ms.date: 03/30/2017
 ms.assetid: 164a5419-315c-4987-ad72-54cbdb88d402
-ms.openlocfilehash: 0cb39c51436271999c66c30210e0da79adc92e72
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d8fd2d1299a8563ae41b098c1cfb7a0ba30bb8f8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699535"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662989"
 ---
 # <a name="instance-locked-exception-action"></a>執行個體鎖定的例外狀況動作
 SQL 工作流程執行個體存放區的 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceLockedExceptionAction%2A> 屬性可讓您指定當 SQL 持續性提供者收到 <xref:System.Runtime.DurableInstancing.InstanceLockedException> 時應執行的動作。 當持續性提供者嘗試鎖定目前由其他服務主機鎖定的工作流程服務執行個體時，就會收到這個例外狀況。 此屬性的值為 <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>、<xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.BasicRetry> 和 <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.AggressiveRetry>。 預設值為 <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>。 下列清單描述這三種選項：  

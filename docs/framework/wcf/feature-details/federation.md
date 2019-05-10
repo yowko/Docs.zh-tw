@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 382d2aeff98b7d48dbae07dadb04ed644c3f4449
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: baf65340e390c7439e8639e334819fb0bf60f952
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856766"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662618"
 ---
 # <a name="federation"></a>同盟
 此主題提供聯合安全性概念的簡短概觀。 它也說明對部署聯合的安全性架構的 Windows Communication Foundation (WCF) 支援。 示範聯合的範例應用程式，請參閱[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
@@ -44,17 +44,17 @@ ms.locfileid: "61856766"
   
  一般來說，在存取服務之前，組織 B 會需要組織 A 的使用者提供某些有效形式的驗證。 此外，組織可能也會需要使用者通過授權才能存取討論中的特定資源。 處理這個問題，並且能夠讓組織 A 中的使用者存取組織 B 中資源的其中一種方法如下：  
   
--   組織 A 中的使用者在組織 B 登錄其認證 (使用者名稱與密碼)。  
+- 組織 A 中的使用者在組織 B 登錄其認證 (使用者名稱與密碼)。  
   
--   在資源存取期間，組織 A 中的使用者將其認證提交給組織 B，並且在存取資源之前通過驗證。  
+- 在資源存取期間，組織 A 中的使用者將其認證提交給組織 B，並且在存取資源之前通過驗證。  
   
  這個方法有三個顯著的缺點：  
   
--   組織 B 除了管理本機使用者的認證外，還必須管理組織 A 的使用者認證。  
+- 組織 B 除了管理本機使用者的認證外，還必須管理組織 A 的使用者認證。  
   
--   組織 A 中的使用者除了要維護平常用來存取組織 A 資源的認證外，還需要維護額外的認證集合 (也就是記憶額外的使用者名稱與密碼)。這通常會鼓勵在多個服務站台上使用相同的使用者名稱與密碼，而這是個很弱的安全性方式。  
+- 組織 A 中的使用者除了要維護平常用來存取組織 A 資源的認證外，還需要維護額外的認證集合 (也就是記憶額外的使用者名稱與密碼)。這通常會鼓勵在多個服務站台上使用相同的使用者名稱與密碼，而這是個很弱的安全性方式。  
   
--   這個架構並不會因為更多組織發覺組織 B 中有許多有用的資源而調整大小。  
+- 這個架構並不會因為更多組織發覺組織 B 中有許多有用的資源而調整大小。  
   
  另一個替代方法是採用聯合安全性，可以改善之前提到的缺點。 在這個方法中，組織 A 和 B 會建立信任關係並採用安全性權杖服務 (STS)，以啟用已建立信任的代理服務。  
   
@@ -76,13 +76,13 @@ ms.locfileid: "61856766"
 ### <a name="phase-1-design-phase"></a>第 1 階段：設計階段  
  在設計階段中，用戶端會使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)讀取服務端點公開的原則，以及收集服務的驗證和授權需求。 建構適當的 Proxy 以便在用戶端建立下列聯合安全性通訊模式：  
   
--   在用戶端信任領域中從 STS 取得安全性權杖。  
+- 在用戶端信任領域中從 STS 取得安全性權杖。  
   
--   在服務信任領域中將權杖提交給 STS。  
+- 在服務信任領域中將權杖提交給 STS。  
   
--   在服務信任領域中從 STS 取得安全性權杖。  
+- 在服務信任領域中從 STS 取得安全性權杖。  
   
--   將權杖提交給服務以存取服務。  
+- 將權杖提交給服務以存取服務。  
   
 ### <a name="phase-2-run-time-phase"></a>第 2 階段：執行階段  
  在執行階段的階段中，用戶端會具現化 WCF 用戶端類別的物件，並使用 WCF 用戶端呼叫。 WCF 的基礎架構會處理在聯合的安全性通訊模式中先前所述的步驟，並可讓用戶端能夠順利地取用服務。  

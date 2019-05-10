@@ -10,12 +10,12 @@ helpviewer_keywords:
 - professional appearance [Windows Forms], applying to elements of Windows Forms applications
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
-ms.openlocfilehash: 57c2bc5722f77338225d70b514345344211656dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2b9524b6a3e3c77d3c68c4d9e138b8c0e2a9373
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913115"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662298"
 ---
 # <a name="how-to-render-a-visual-style-element"></a>HOW TO：呈現視覺化樣式項目
 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType>命名空間會公開<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>物件表示 Windows 使用者介面 (UI) 項目支援視覺化樣式。 本主題示範如何使用<xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>類別呈現<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>表示**登出**並**關機**的 [開始] 功能表的按鈕。  
@@ -37,11 +37,11 @@ ms.locfileid: "61913115"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   自訂控制項衍生自<xref:System.Windows.Forms.Control>類別。  
+- 自訂控制項衍生自<xref:System.Windows.Forms.Control>類別。  
   
--   A<xref:System.Windows.Forms.Form>會裝載自訂的控制項。  
+- A<xref:System.Windows.Forms.Form>會裝載自訂的控制項。  
   
--   若要參考<xref:System?displayProperty=nameWithType>， <xref:System.Drawing?displayProperty=nameWithType>， <xref:System.Windows.Forms?displayProperty=nameWithType>，和<xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType>命名空間。  
+- 若要參考<xref:System?displayProperty=nameWithType>， <xref:System.Drawing?displayProperty=nameWithType>， <xref:System.Windows.Forms?displayProperty=nameWithType>，和<xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType>命名空間。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -2,12 +2,12 @@
 title: 逐步解說：僅使用預存程序 (C#)
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: e5497c1c6bfe032ba272c911217adaa3bd7f4f4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f4c34252f7d92985dac94663c85d3cca0dc58ab3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876521"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655117"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>逐步解說：僅使用預存程序 (C#)
 本逐步解說會針對只執行預存程序來存取資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 資料庫管理員會使用這個方法來限制對資料存放區的存取。  
@@ -26,13 +26,13 @@ ms.locfileid: "61876521"
 ## <a name="prerequisites"></a>必要條件  
  本逐步解說需要下列項目：  
   
--   這個逐步解說會使用專用資料夾 ("c:\linqtest7") 來保存檔案。 請先建立這個資料夾，再開始逐步解說。  
+- 這個逐步解說會使用專用資料夾 ("c:\linqtest7") 來保存檔案。 請先建立這個資料夾，再開始逐步解說。  
   
--   Northwind 範例資料庫。  
+- Northwind 範例資料庫。  
   
      如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。 如需相關指示，請參閱 <<c0> [ 下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。 下載資料庫之後，請將 northwnd.mdf 檔案複製至 c:\linqtest7 資料夾。  
   
--   會從 Northwind 資料庫產生 C# 程式碼檔案。  
+- 會從 Northwind 資料庫產生 C# 程式碼檔案。  
   
      這個逐步解說是使用 SqlMetal 工具，以下列命令列所撰寫：  
   
@@ -43,17 +43,17 @@ ms.locfileid: "61876521"
 ## <a name="overview"></a>總覽  
  此逐步解說包含六個主要工作：  
   
--   設定[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio 中的方案。  
+- 設定[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio 中的方案。  
   
--   將 System.Data.Linq 組件加入至專案。  
+- 將 System.Data.Linq 組件加入至專案。  
   
--   將資料庫程式碼檔案加入至專案。  
+- 將資料庫程式碼檔案加入至專案。  
   
--   建立與資料庫的連接。  
+- 建立與資料庫的連接。  
   
--   設定使用者介面。  
+- 設定使用者介面。  
   
--   執行和測試應用程式。  
+- 執行和測試應用程式。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>建立 LINQ to SQL 方案  
  在第一個工作中，您會建立包含必要的參考，以建置並執行 Visual Studio 方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案。  

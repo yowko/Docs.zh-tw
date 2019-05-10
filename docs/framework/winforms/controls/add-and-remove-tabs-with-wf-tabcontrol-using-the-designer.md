@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
-ms.openlocfilehash: 23fe9fa2b8405a6ebe66e8f0cee1d81d45f2395b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10550416a75592133b69c2807f1da2cca25e8707
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640363"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665836"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>HOW TO：使用設計工具以 Windows Forms TabControl 新增和移除索引標籤
 當您將<xref:System.Windows.Forms.TabControl>控制項在表單中，它必須包含兩個索引標籤預設。 您可以新增或移除使用設計工具索引標籤。  
@@ -25,11 +25,11 @@ ms.locfileid: "61640363"
   
 ### <a name="to-add-or-remove-a-tab-using-the-designer"></a>若要新增或移除使用設計工具索引標籤  
   
--   在控制項的智慧標籤上，按一下**加入索引標籤**或**移除索引標籤**  
+- 在控制項的智慧標籤上，按一下**加入索引標籤**或**移除索引標籤**  
   
      -或-  
   
-     在 [**屬性**] 視窗中，按一下**省略符號** 按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁邊<xref:System.Windows.Forms.TabControl.TabPages%2A>屬性，以開啟**TabPage 集合編輯器**。 按一下 [**新增**或是**移除**] 按鈕。  
+     在 **屬性** 視窗中，按一下**省略符號** 按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁邊<xref:System.Windows.Forms.TabControl.TabPages%2A>屬性，以開啟**TabPage 集合編輯器**。 按一下 [**新增**或是**移除**] 按鈕。  
   
 ## <a name="see-also"></a>另請參閱
 

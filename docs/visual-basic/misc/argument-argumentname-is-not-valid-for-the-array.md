@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidRank1
 ms.assetid: 2c931ede-9c41-4ad3-8dfd-d649617f567c
-ms.openlocfilehash: 4be82f26885d077e0b6539a59fa00640660b72aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a49af32b1df163328cdbf36c8ef62fa09f7feae4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666569"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659956"
 ---
 # <a name="argument-argumentname-is-not-valid-for-the-array"></a>引數 '\<引數名稱 >' 不是有效的陣列
 陣列包含無效的引數。  

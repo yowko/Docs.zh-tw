@@ -2,23 +2,23 @@
 title: UriTemplate 表發送器範例
 ms.date: 03/30/2017
 ms.assetid: 3b32975d-ba90-4c5c-83bc-2fbb48f11c0c
-ms.openlocfilehash: 800765c6b01e49b730414132ac64ab8eed3e9e5f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c5f7172543f575655faafad781a272e355224b6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007561"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662421"
 ---
 # <a name="uritemplate-table-dispatcher-sample"></a>UriTemplate 表發送器範例
 <xref:System.UriTemplateTable> 類別會提供可用來處理 <xref:System.UriTemplate> 執行個體集合的字典式關聯表結構。 這個範例示範使用 `UriTemplateTable` 建置的基本分派引擎，這是 `UriTemplateTable` 類別的常用案例。  
   
  這個範例會示範 `UriTemplateTable` 類別的下列主要概念：  
   
--   在 `UriTemplates` 中將委派與 `UriTemplateTable` 加以關聯。  
+- 在 `UriTemplates` 中將委派與 `UriTemplateTable` 加以關聯。  
   
--   使用 <xref:System.UriTemplateTable.MatchSingle%2A> 取得特定 URI 的正確處理常式委派。  
+- 使用 <xref:System.UriTemplateTable.MatchSingle%2A> 取得特定 URI 的正確處理常式委派。  
   
--   叫用處理常式委派以處理要求。  
+- 叫用處理常式委派以處理要求。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   

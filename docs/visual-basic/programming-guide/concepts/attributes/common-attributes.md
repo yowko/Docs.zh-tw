@@ -2,12 +2,12 @@
 title: 通用屬性 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: e001c9a637d2e5e34e77158704e4ad81d6973a50
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 58de23280f2e8765d945ac765d9455a89c45c9cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794026"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642397"
 ---
 # <a name="common-attributes-visual-basic"></a>通用屬性 (Visual Basic)
 本主題說明在 Visual Basic 程式中最常用的屬性。  
@@ -75,7 +75,7 @@ ms.locfileid: "61794026"
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|定義組件資訊清單的易記預設別名。|  
   
 ## <a name="Obsolete"></a> Obsolete 屬性  
- `Obsolete` 屬性會將程式實體標記為不再建議使用的標記。 每次使用標記為已淘汰的實體都會接著產生警告或錯誤 (視屬性的設定方式而定)。 例如:   
+ `Obsolete` 屬性會將程式實體標記為不再建議使用的標記。 每次使用標記為已淘汰的實體都會接著產生警告或錯誤 (視屬性的設定方式而定)。 例如：  
   
 ```vb  
 <System.Obsolete("use class B")>   
