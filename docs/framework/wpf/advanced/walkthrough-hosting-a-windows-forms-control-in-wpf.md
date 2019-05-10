@@ -7,68 +7,68 @@ dev_langs:
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 9cb88415-39b0-4c46-80c4-ff325b674286
-ms.openlocfilehash: 4e9b42738ff661425b05a63f2a5e5790c5cbd84b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: af5a0d58e789e609a25aa828493a3b0722cc83e1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699447"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64605463"
 ---
-# <a name="walkthrough-hosting-a-windows-forms-control-in-wpf"></a><span data-ttu-id="f8607-102">逐步解說：將 Windows Forms 控制項裝載在 WPF 中</span><span class="sxs-lookup"><span data-stu-id="f8607-102">Walkthrough: Hosting a Windows Forms Control in WPF</span></span>
+# <a name="walkthrough-hosting-a-windows-forms-control-in-wpf"></a><span data-ttu-id="f089b-102">逐步解說：將 Windows Forms 控制項裝載在 WPF 中</span><span class="sxs-lookup"><span data-stu-id="f089b-102">Walkthrough: Hosting a Windows Forms Control in WPF</span></span>
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <span data-ttu-id="f8607-103">提供具有豐富功能集的許多控制項。</span><span class="sxs-lookup"><span data-stu-id="f8607-103">provides many controls with a rich feature set.</span></span> <span data-ttu-id="f8607-104">不過，您有時可以使用[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制上您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]頁面。</span><span class="sxs-lookup"><span data-stu-id="f8607-104">However, you may sometimes want to use [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls on your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pages.</span></span> <span data-ttu-id="f8607-105">比方說，您可能已長期開發現有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項，或您可能會有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項，提供獨特的功能。</span><span class="sxs-lookup"><span data-stu-id="f8607-105">For example, you may have a substantial investment in existing [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls, or you may have a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control that provides unique functionality.</span></span>
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <span data-ttu-id="f089b-103">提供具有豐富功能集的許多控制項。</span><span class="sxs-lookup"><span data-stu-id="f089b-103">provides many controls with a rich feature set.</span></span> <span data-ttu-id="f089b-104">不過，您有時可以使用[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制上您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]頁面。</span><span class="sxs-lookup"><span data-stu-id="f089b-104">However, you may sometimes want to use [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls on your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pages.</span></span> <span data-ttu-id="f089b-105">比方說，您可能已長期開發現有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項，或您可能會有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項，提供獨特的功能。</span><span class="sxs-lookup"><span data-stu-id="f089b-105">For example, you may have a substantial investment in existing [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls, or you may have a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control that provides unique functionality.</span></span>
 
-<span data-ttu-id="f8607-106">本逐步解說會示範如何裝載[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType>控制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用程式碼的頁面。</span><span class="sxs-lookup"><span data-stu-id="f8607-106">This walkthrough shows you how to host a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> control on a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] page by using code.</span></span>
+<span data-ttu-id="f089b-106">本逐步解說會示範如何裝載[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType>控制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用程式碼的頁面。</span><span class="sxs-lookup"><span data-stu-id="f089b-106">This walkthrough shows you how to host a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> control on a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] page by using code.</span></span>
 
-<span data-ttu-id="f8607-107">如需完整的程式碼的清單在本逐步解說所示範的工作，請參閱 <<c0> [ 裝載 Windows Forms 控制項中 WPF 範例](https://go.microsoft.com/fwlink/?LinkID=160057)。</span><span class="sxs-lookup"><span data-stu-id="f8607-107">For a complete code listing of the tasks shown in this walkthrough, see [Hosting a Windows Forms Control in WPF Sample](https://go.microsoft.com/fwlink/?LinkID=160057).</span></span>
+<span data-ttu-id="f089b-107">如需完整的程式碼的清單在本逐步解說所示範的工作，請參閱 <<c0> [ 裝載 Windows Forms 控制項中 WPF 範例](https://go.microsoft.com/fwlink/?LinkID=160057)。</span><span class="sxs-lookup"><span data-stu-id="f089b-107">For a complete code listing of the tasks shown in this walkthrough, see [Hosting a Windows Forms Control in WPF Sample](https://go.microsoft.com/fwlink/?LinkID=160057).</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="f8607-108">必要條件</span><span class="sxs-lookup"><span data-stu-id="f8607-108">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="f089b-108">必要條件</span><span class="sxs-lookup"><span data-stu-id="f089b-108">Prerequisites</span></span>
 
-<span data-ttu-id="f8607-109">若要完成這個逐步解說，您必須具有 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="f8607-109">You need Visual Studio to complete this walkthrough.</span></span>
+<span data-ttu-id="f089b-109">若要完成這個逐步解說，您必須具有 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="f089b-109">You need Visual Studio to complete this walkthrough.</span></span>
 
-## <a name="hosting-the-windows-forms-control"></a><span data-ttu-id="f8607-110">裝載 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="f8607-110">Hosting the Windows Forms Control</span></span>
+## <a name="hosting-the-windows-forms-control"></a><span data-ttu-id="f089b-110">裝載 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="f089b-110">Hosting the Windows Forms Control</span></span>
 
-### <a name="to-host-the-maskedtextbox-control"></a><span data-ttu-id="f8607-111">裝載 MaskedTextBox 控制項</span><span class="sxs-lookup"><span data-stu-id="f8607-111">To host the MaskedTextBox control</span></span>
+### <a name="to-host-the-maskedtextbox-control"></a><span data-ttu-id="f089b-111">裝載 MaskedTextBox 控制項</span><span class="sxs-lookup"><span data-stu-id="f089b-111">To host the MaskedTextBox control</span></span>
 
-1. <span data-ttu-id="f8607-112">建立 WPF 應用程式專案，名為`HostingWfInWpf`。</span><span class="sxs-lookup"><span data-stu-id="f8607-112">Create a WPF Application project named `HostingWfInWpf`.</span></span>
+1. <span data-ttu-id="f089b-112">建立 WPF 應用程式專案，名為`HostingWfInWpf`。</span><span class="sxs-lookup"><span data-stu-id="f089b-112">Create a WPF Application project named `HostingWfInWpf`.</span></span>
 
-2. <span data-ttu-id="f8607-113">加入下列組件的參考。</span><span class="sxs-lookup"><span data-stu-id="f8607-113">Add references to the following assemblies.</span></span>
+2. <span data-ttu-id="f089b-113">加入下列組件的參考。</span><span class="sxs-lookup"><span data-stu-id="f089b-113">Add references to the following assemblies.</span></span>
 
-    - <span data-ttu-id="f8607-114">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="f8607-114">WindowsFormsIntegration</span></span>
+    - <span data-ttu-id="f089b-114">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="f089b-114">WindowsFormsIntegration</span></span>
 
-    - <span data-ttu-id="f8607-115">System.Windows.Forms</span><span class="sxs-lookup"><span data-stu-id="f8607-115">System.Windows.Forms</span></span>
+    - <span data-ttu-id="f089b-115">System.Windows.Forms</span><span class="sxs-lookup"><span data-stu-id="f089b-115">System.Windows.Forms</span></span>
 
-3. <span data-ttu-id="f8607-116">開啟 MainWindow.xaml 中的[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="f8607-116">Open MainWindow.xaml in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>
+3. <span data-ttu-id="f089b-116">開啟 MainWindow.xaml 中的[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="f089b-116">Open MainWindow.xaml in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>
 
-4. <span data-ttu-id="f8607-117">名稱<xref:System.Windows.Controls.Grid>項目`grid1`。</span><span class="sxs-lookup"><span data-stu-id="f8607-117">Name the <xref:System.Windows.Controls.Grid> element `grid1`.</span></span>
+4. <span data-ttu-id="f089b-117">名稱<xref:System.Windows.Controls.Grid>項目`grid1`。</span><span class="sxs-lookup"><span data-stu-id="f089b-117">Name the <xref:System.Windows.Controls.Grid> element `grid1`.</span></span>
 
      [!code-xaml[HostingWfInWPF#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfInWPF/CSharp/HostingWfInWPF/Window1.xaml#1)]
 
-5. <span data-ttu-id="f8607-118">在 設計 檢視或 XAML 檢視中，選取 <xref:System.Windows.Window>項目。</span><span class="sxs-lookup"><span data-stu-id="f8607-118">In Design view or XAML view, select the <xref:System.Windows.Window> element.</span></span>
+5. <span data-ttu-id="f089b-118">在 設計 檢視或 XAML 檢視中，選取 <xref:System.Windows.Window>項目。</span><span class="sxs-lookup"><span data-stu-id="f089b-118">In Design view or XAML view, select the <xref:System.Windows.Window> element.</span></span>
 
-6. <span data-ttu-id="f8607-119">在 屬性 視窗中，按一下**事件** 索引標籤。</span><span class="sxs-lookup"><span data-stu-id="f8607-119">In the Properties window, click the **Events** tab.</span></span>
+6. <span data-ttu-id="f089b-119">在 屬性 視窗中，按一下**事件** 索引標籤。</span><span class="sxs-lookup"><span data-stu-id="f089b-119">In the Properties window, click the **Events** tab.</span></span>
 
-7. <span data-ttu-id="f8607-120">按兩下<xref:System.Windows.FrameworkElement.Loaded>事件。</span><span class="sxs-lookup"><span data-stu-id="f8607-120">Double-click the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>
+7. <span data-ttu-id="f089b-120">按兩下<xref:System.Windows.FrameworkElement.Loaded>事件。</span><span class="sxs-lookup"><span data-stu-id="f089b-120">Double-click the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>
 
-8. <span data-ttu-id="f8607-121">插入下列程式碼來處理<xref:System.Windows.FrameworkElement.Loaded>事件。</span><span class="sxs-lookup"><span data-stu-id="f8607-121">Insert the following code to handle the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>
+8. <span data-ttu-id="f089b-121">插入下列程式碼來處理<xref:System.Windows.FrameworkElement.Loaded>事件。</span><span class="sxs-lookup"><span data-stu-id="f089b-121">Insert the following code to handle the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>
 
      [!code-csharp[HostingWfInWPF#10](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfInWPF/CSharp/HostingWfInWPF/Window1.xaml.cs#10)]
      [!code-vb[HostingWfInWPF#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWfInWPF/VisualBasic/HostingWfInWpf/Window1.xaml.vb#10)]
 
-9. <span data-ttu-id="f8607-122">在檔案頂端，新增下列`Imports`或`using`陳述式。</span><span class="sxs-lookup"><span data-stu-id="f8607-122">At the top of the file, add the following `Imports` or `using` statement.</span></span>
+9. <span data-ttu-id="f089b-122">在檔案頂端，新增下列`Imports`或`using`陳述式。</span><span class="sxs-lookup"><span data-stu-id="f089b-122">At the top of the file, add the following `Imports` or `using` statement.</span></span>
 
      [!code-csharp[HostingWfInWPF#11](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfInWPF/CSharp/HostingWfInWPF/Window1.xaml.cs#11)]
      [!code-vb[HostingWfInWPF#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWfInWPF/VisualBasic/HostingWfInWpf/Window1.xaml.vb#11)]
 
-10. <span data-ttu-id="f8607-123">按 **F5** 鍵建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="f8607-123">Press **F5** to build and run the application.</span></span>
+10. <span data-ttu-id="f089b-123">按 **F5** 鍵建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="f089b-123">Press **F5** to build and run the application.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f8607-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f8607-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f089b-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f089b-124">See also</span></span>
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [<span data-ttu-id="f8607-125">在 Visual Studio 中設計 XAML</span><span class="sxs-lookup"><span data-stu-id="f8607-125">Design XAML in Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [<span data-ttu-id="f8607-126">逐步解說：使用 XAML 裝載在 WPF 中的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="f8607-126">Walkthrough: Hosting a Windows Forms Control in WPF by Using XAML</span></span>](walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml.md)
-- [<span data-ttu-id="f8607-127">逐步解說：裝載在 WPF 中的 Windows Forms 複合控制項</span><span class="sxs-lookup"><span data-stu-id="f8607-127">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [<span data-ttu-id="f8607-128">逐步解說：裝載 Windows Forms 中的 WPF 複合控制項</span><span class="sxs-lookup"><span data-stu-id="f8607-128">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
-- [<span data-ttu-id="f8607-129">Windows Form 控制項和對等 WPF 控制項</span><span class="sxs-lookup"><span data-stu-id="f8607-129">Windows Forms Controls and Equivalent WPF Controls</span></span>](windows-forms-controls-and-equivalent-wpf-controls.md)
-- <span data-ttu-id="f8607-130">[Hosting a Windows Forms Control in WPF Sample](https://go.microsoft.com/fwlink/?LinkID=160057) (在 WPF 中裝載 Windows Forms 控制項的範例)</span><span class="sxs-lookup"><span data-stu-id="f8607-130">[Hosting a Windows Forms Control in WPF Sample](https://go.microsoft.com/fwlink/?LinkID=160057)</span></span>
+- [<span data-ttu-id="f089b-125">在 Visual Studio 中設計 XAML</span><span class="sxs-lookup"><span data-stu-id="f089b-125">Design XAML in Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [<span data-ttu-id="f089b-126">逐步解說：使用 XAML 裝載在 WPF 中的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="f089b-126">Walkthrough: Hosting a Windows Forms Control in WPF by Using XAML</span></span>](walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml.md)
+- [<span data-ttu-id="f089b-127">逐步解說：裝載在 WPF 中的 Windows Forms 複合控制項</span><span class="sxs-lookup"><span data-stu-id="f089b-127">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [<span data-ttu-id="f089b-128">逐步解說：裝載 Windows Forms 中的 WPF 複合控制項</span><span class="sxs-lookup"><span data-stu-id="f089b-128">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [<span data-ttu-id="f089b-129">Windows Form 控制項和對等 WPF 控制項</span><span class="sxs-lookup"><span data-stu-id="f089b-129">Windows Forms Controls and Equivalent WPF Controls</span></span>](windows-forms-controls-and-equivalent-wpf-controls.md)
+- <span data-ttu-id="f089b-130">[Hosting a Windows Forms Control in WPF Sample](https://go.microsoft.com/fwlink/?LinkID=160057) (在 WPF 中裝載 Windows Forms 控制項的範例)</span><span class="sxs-lookup"><span data-stu-id="f089b-130">[Hosting a Windows Forms Control in WPF Sample](https://go.microsoft.com/fwlink/?LinkID=160057)</span></span>
