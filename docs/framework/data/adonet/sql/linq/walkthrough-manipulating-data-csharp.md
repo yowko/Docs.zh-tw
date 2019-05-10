@@ -2,12 +2,12 @@
 title: 逐步解說：操作資料 (C#)
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 5418bdbdeee162bbc8c0abcb11fd39f2cc82ce73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 7bac370ae8dc260ca4b665fd51680a80fd9846fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330775"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64618043"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>逐步解說：操作資料 (C#)
 本逐步解說針對加入、修改和刪除資料庫中的資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將使用範例 Northwind 資料庫的複本來加入客戶、變更客戶名稱，以及刪除訂單。  
@@ -19,13 +19,13 @@ ms.locfileid: "59330775"
 ## <a name="prerequisites"></a>必要條件  
  本逐步解說需要下列項目：  
   
--   本逐步解說會使用專用資料夾 ("c:\linqtest6") 來保存檔案。 請先建立這個資料夾，再開始逐步解說。  
+- 本逐步解說會使用專用資料夾 ("c:\linqtest6") 來保存檔案。 請先建立這個資料夾，再開始逐步解說。  
   
--   Northwind 範例資料庫。  
+- Northwind 範例資料庫。  
   
      如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。 如需相關指示，請參閱 <<c0> [ 下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。 下載資料庫之後，請將 northwnd.mdf 檔案複製至 c:\linqtest6 資料夾。  
   
--   會從 Northwind 資料庫產生 C# 程式碼檔案。  
+- 會從 Northwind 資料庫產生 C# 程式碼檔案。  
   
      您可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]或 SQLMetal 工具來產生這個檔案。 本逐步解說是使用 SQLMetal 工具，以下列命令列所撰寫：  
   
@@ -36,17 +36,17 @@ ms.locfileid: "59330775"
 ## <a name="overview"></a>總覽  
  此逐步解說包含六個主要工作：  
   
--   建立[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio 中的方案。  
+- 建立[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio 中的方案。  
   
--   將資料庫程式碼檔案加入至專案。  
+- 將資料庫程式碼檔案加入至專案。  
   
--   建立新的客戶物件。  
+- 建立新的客戶物件。  
   
--   修改客戶的連絡人名稱。  
+- 修改客戶的連絡人名稱。  
   
--   刪除訂單。  
+- 刪除訂單。  
   
--   將這些變更送出至 Northwind 資料庫。  
+- 將這些變更送出至 Northwind 資料庫。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>建立 LINQ to SQL 方案  
  在第一個工作中，您會建立包含必要的參考，以建置並執行 Visual Studio 方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案。  
@@ -126,7 +126,7 @@ ms.locfileid: "59330775"
   
 #### <a name="to-change-the-name-of-a-customer"></a>若要變更 Customer 的名稱  
   
--   將下列程式碼加入至 `Console.ReadLine();` 的上方：  
+- 將下列程式碼加入至 `Console.ReadLine();` 的上方：  
   
      [!code-csharp[DLinqWalk3CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#4)]  
   
@@ -137,7 +137,7 @@ ms.locfileid: "59330775"
   
 #### <a name="to-delete-a-row"></a>若要刪除資料列  
   
--   將下列程式碼加入至 `Console.ReadLine();` 的正上方：  
+- 將下列程式碼加入至 `Console.ReadLine();` 的正上方：  
   
      [!code-csharp[DLinqWalk3CS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#5)]  
   

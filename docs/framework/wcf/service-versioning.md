@@ -2,12 +2,12 @@
 title: 服務版本控制
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 27d54cdf6f49bd9433f43290c97706af81d98b6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6b72558be4a367505ff18f10406785bc21fddd2c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949782"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64605994"
 ---
 # <a name="service-versioning"></a>服務版本控制
 在初始部署以及存留期間可能的數次部署之後，服務 (以及公開的端點) 可能因各種不同的原因而需要變更，例如變更業務需要、資訊技術需求，或解決其他問題等。 每個變更都會產生新的服務版本。 本主題說明如何在 Windows Communication Foundation (WCF) 的版本控制，請考慮。  

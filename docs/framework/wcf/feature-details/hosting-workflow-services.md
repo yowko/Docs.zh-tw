@@ -2,12 +2,12 @@
 title: 裝載工作流程服務
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: c933fd2bd46588ccd5c6115fbc2efca72bfadca4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbb5e9b687a735376d720b83607fc67350cd429f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855864"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613329"
 ---
 # <a name="hosting-workflow-services"></a>裝載工作流程服務
 您必須裝載工作流程服務，才能讓它回應傳入的訊息。 工作流程服務使用了 WCF 訊息基礎結構，因此會以類似的方式裝載。 就像 WCF 服務，可在任何受管理的應用程式，在網際網路資訊服務 (IIS) 或在 Windows Process Activation Services (WAS) 裝載工作流程服務。 此外，工作流程服務可以裝載 Windows Server App Fabric 底下。 如需 Windows Server App Fabric 的詳細資訊請參閱 < [Windows Server App Fabric 文件](https://go.microsoft.com/fwlink/?LinkId=193037)， [AppFabric 主控功能](https://go.microsoft.com/fwlink/?LinkId=196494)，並[AppFabric 主控概念](https://go.microsoft.com/fwlink/?LinkId=196495)。 針對服務中裝載 WCF 的各種方式的詳細資訊，請參閱[裝載的服務](../../../../docs/framework/wcf/hosting-services.md)。
@@ -18,9 +18,9 @@ ms.locfileid: "61855864"
 ## <a name="hosting-under-iis-or-was"></a>在 IIS 或 WAS 底下裝載
  在 IIS 或 WAS 底下裝載工作流程服務，需要建立虛擬目錄，並且在虛擬目錄中放入定義服務及其行為的檔案。 在 IIS 或 WAS 底下裝載工作流程服務時，有幾個可能的方法：
 
--   將定義工作流程服務的 .xamlx 檔案置入 IIS/WAS 虛擬目錄，與指定服務行為、端點及其他組態項目的 Web.config 檔案放在一起。
+- 將定義工作流程服務的 .xamlx 檔案置入 IIS/WAS 虛擬目錄，與指定服務行為、端點及其他組態項目的 Web.config 檔案放在一起。
 
--   將定義工作流程服務的 .xamlx 檔案置入 IIS/WAS 虛擬目錄。 這個 .xamlx 檔案指定要公開的端點。 端點是在 `WorkflowService.Endpoints` 項目中指定的，如下列範例所示。
+- 將定義工作流程服務的 .xamlx 檔案置入 IIS/WAS 虛擬目錄。 這個 .xamlx 檔案指定要公開的端點。 端點是在 `WorkflowService.Endpoints` 項目中指定的，如下列範例所示。
 
     ```xml
     <WorkflowService xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"  xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
@@ -38,9 +38,9 @@ ms.locfileid: "61855864"
     > [!NOTE]
     > 行為不能在 .xamlx 檔案中指定，所以如果需要指定行為設定，就必須使用 Web.config。
 
--   將定義工作流程服務的 .xamlx 檔案置入 IIS/WAS 虛擬目錄。 此外，請將 .svc 檔案放進虛擬目錄。 這個 .svc 檔案可讓您指定一個自訂的 Web 服務裝載處理站、套用自訂行為，或是從自訂位置載入組態。
+- 將定義工作流程服務的 .xamlx 檔案置入 IIS/WAS 虛擬目錄。 此外，請將 .svc 檔案放進虛擬目錄。 這個 .svc 檔案可讓您指定一個自訂的 Web 服務裝載處理站、套用自訂行為，或是從自訂位置載入組態。
 
--   將包含活動的組件置入 IIS/WAS 虛擬目錄，該活動會使用多個 WCF 訊息活動。
+- 將包含活動的組件置入 IIS/WAS 虛擬目錄，該活動會使用多個 WCF 訊息活動。
 
  定義工作流程服務的.xamlx 檔案必須包含 <`Service`> 根項目或根項目，其中包含衍生自任何型別<xref:System.Workflow.ComponentModel.Activity>。 使用 Visual Studio 活動範本時，會建立.xamlx 檔案。 使用 WCF Workflow Service 範本時，會建立.xamlx 檔案。
 

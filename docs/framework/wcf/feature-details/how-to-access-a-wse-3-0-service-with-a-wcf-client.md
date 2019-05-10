@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: 83507a95dbc4bc7499b94a516f569703f21a2726
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e191bc6c75c8c04e2cdf32d80673c32499b5736d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855123"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613131"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>HOW TO：存取 WSE 3.0 服務與 WCF 用戶端
 Windows Communication Foundation (WCF) 用戶端連線層級相容 Web Services Enhancements (WSE) 3.0 與 Microsoft.NET 服務的 WCF 用戶端會設定為使用 August 2004 版本的 Ws-addressing 規格時。 不過，WSE 3.0 服務不支援中繼資料交換 (MEX) 通訊協定，因此當您使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)若要建立的 WCF 用戶端類別，安全性設定不會套用至所產生WCF 用戶端。 因此，您必須在其中指定安全性設定 WSE 3.0 服務要求之後會產生 WCF 用戶端。  
@@ -29,21 +29,21 @@ Windows Communication Foundation (WCF) 用戶端連線層級相容 Web Services 
   
      下列類別是屬於[與 WSE 交互操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)範例：  
   
-    1.  建立從 <xref:System.ServiceModel.Channels.Binding> 類別衍生的類別。  
+    1. 建立從 <xref:System.ServiceModel.Channels.Binding> 類別衍生的類別。  
   
          下列程式碼範例會建立一個名為 `WseHttpBinding` 的類別，此類別衍生自 <xref:System.ServiceModel.Channels.Binding> 類別。  
   
          [!code-csharp[c_WCFClientToWSEService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#1)]
          [!code-vb[c_WCFClientToWSEService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#1)]  
   
-    2.  將屬性加入至類別，這些屬性會指定 WSE 服務所使用的 WSE 通行判斷提示 (Turnkey Assertion)、是否需要衍生金鑰、是否使用安全工作階段、是否需要簽章確認，以及訊息保護設定。 在 WSE 3.0 通行判斷提示會指定用戶端或 Web 服務的安全性需求，類似於 WCF 中的繫結的驗證模式。  
+    2. 將屬性加入至類別，這些屬性會指定 WSE 服務所使用的 WSE 通行判斷提示 (Turnkey Assertion)、是否需要衍生金鑰、是否使用安全工作階段、是否需要簽章確認，以及訊息保護設定。 在 WSE 3.0 通行判斷提示會指定用戶端或 Web 服務的安全性需求，類似於 WCF 中的繫結的驗證模式。  
   
          下列程式碼範例會定義 `SecurityAssertion`、`RequireDerivedKeys`、`EstablishSecurityContext` 和 `MessageProtectionOrder` 屬性，這些屬性會分別指定 WSE 通行判斷提示、是否需要衍生金鑰、是否使用安全工作階段、是否需要簽章確認，以及訊息保護設定。  
   
          [!code-csharp[c_WCFClientToWSEService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#3)]
          [!code-vb[c_WCFClientToWSEService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#3)]  
   
-    3.  覆寫 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 方法來設定繫結屬性。  
+    3. 覆寫 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 方法來設定繫結屬性。  
   
          下列程式碼範例會藉由取得 `SecurityAssertion` 和 `MessageProtectionOrder` 屬性的值，指定傳輸、訊息編碼和訊息保護設定。  
   

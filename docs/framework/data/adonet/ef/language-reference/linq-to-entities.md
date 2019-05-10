@@ -2,12 +2,12 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 570d6a60e4f34e89e758b505353a083b959d9def
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760710"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630724"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities 提供了 Language-Integrated Query (LINQ) 支援，可讓開發人員使用 Visual Basic 或 Visual C# 針對 Entity Framework 概念模型撰寫查詢。 針對 Entity Framework 執行的查詢是以命令樹查詢來表示，每一個查詢都會針對物件內容來執行。 LINQ to Entities 會將 Language-Integrated Queries (LINQ) 查詢轉換成命令樹查詢、針對 Entity Framework 執行查詢，並傳回 Entity Framework 和 LINQ 都可以使用的物件。 下列是建立及執行 LINQ to Entities 查詢的程序：  

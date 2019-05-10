@@ -2,23 +2,23 @@
 title: 從服務中繼資料產生 WCF 用戶端
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: 5cfbfc1e4be0003b3699f818212fbcd959f3ad91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9a72228ddb32786f39585083d62e1f3f028763c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855994"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613373"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>從服務中繼資料產生 WCF 用戶端
 本主題說明如何使用 Svcutil.exe 中不同的參數，從中繼資料文件中產生用戶端。  
   
  中繼資料文件可以位於永久性儲存裝置上或在線上擷取。 線上擷取會遵循 WS-MetadataExchange 通訊協定或 Microsoft Discovery (DISCO) 通訊協定。 Svcutil.exe 會同時發出以下中繼資料要求，以擷取中繼資料：  
   
--   對所提供位址的 WS-MetadataExchange (MEX) 要求。  
+- 對所提供位址的 WS-MetadataExchange (MEX) 要求。  
   
--   對附加 `/mex` 之所提供位址的 MEX 要求。  
+- 對附加 `/mex` 之所提供位址的 MEX 要求。  
   
--   DISCO 要求 (使用[DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777)從 ASP.NET Web 服務) 所提供的位址。  
+- DISCO 要求 (使用[DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777)從 ASP.NET Web 服務) 所提供的位址。  
   
  Svcutil.exe 會根據 Web 服務描述語言 (WSDL) 或從服務收到的原則檔產生用戶端。 使用者主體名稱 (UPN) 藉由串連使用者名稱與產生 「\@"，然後再新增一個完整網域名稱 (FQDN)。 不過，在 Active Directory 上註冊的使用者，這種格式無效，此工具會產生的 UPN 會造成 Kerberos 驗證，並出現下列錯誤訊息中的失敗：**登入嘗試失敗。** 若要解決這個問題，請手動修復由此工具產生的用戶端檔案。  
   

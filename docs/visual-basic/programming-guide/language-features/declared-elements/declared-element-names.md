@@ -23,12 +23,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 5b1f8ccc402f7f5928a33f434664b0f28d108e6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7642aea72ddaa3789dba3b2328f271afcb92a16a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61828612"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610556"
 ---
 # <a name="declared-element-names-visual-basic"></a>宣告項目名稱 (Visual Basic)
 每個宣告的項目有一個名稱，也稱為*識別碼*，這是程式碼會使用來參考它。  
@@ -36,13 +36,13 @@ ms.locfileid: "61828612"
 ## <a name="rules"></a>規則  
  在 Visual Basic 中的項目名稱必須遵守下列規則：  
   
--   它必須以字母字元或底線開頭 (`_`)。  
+- 它必須以字母字元或底線開頭 (`_`)。  
   
--   它必須只包含字母字元、 十進位數字和底線。  
+- 它必須只包含字母字元、 十進位數字和底線。  
   
--   如果它是以底線開頭，它必須包含至少一個字母字元或十進位數字。  
+- 如果它是以底線開頭，它必須包含至少一個字母字元或十進位數字。  
   
--   它不能超過 1023年個字元。  
+- 它不能超過 1023年個字元。  
   
  長度超過 1023年個字元的限制也適用於整個字串的完整限定名稱，例如`outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "61828612"
   
  一般情況下，您應該使用逸出的名稱時，才：  
   
--   移轉您的程式碼，從舊版的 Visual Basic，未保留關鍵字做為欄位名稱。或  
+- 移轉您的程式碼，從舊版的 Visual Basic，未保留關鍵字做為欄位名稱。或  
   
--   您正在使用不會保留指定的關鍵字是另一種語言撰寫的程式碼。  
+- 您正在使用不會保留指定的關鍵字是另一種語言撰寫的程式碼。  
   
  否則，您應該考慮重新命名項目，如果其名稱與關鍵字相衝突。 整合式的開發環境 (IDE) 提供簡單的方法，若要這樣做。 如需詳細資訊，請參閱 <<c0> [ 重構](/visualstudio/vb-ide/refactoring-vb)。  
   

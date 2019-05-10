@@ -2,12 +2,12 @@
 title: Entity SQL 與 Transact-SQL 的相異之處
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: 75ce0b00962526b76ea9f4b9fdfb0d1e1e564cdc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d6c98741107cd9ea7b0f29e4d06aed7d0ce27888
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774741"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64631786"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL 與 Transact-SQL 的相異之處
 本主題描述之間的差異[!INCLUDE[esql](../../../../../../includes/esql-md.md)]和[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]。  
@@ -18,7 +18,7 @@ ms.locfileid: "61774741"
  當使用繼承時，從超型別執行個體的集合中選取子型別執行個體的作法通常會很實用。 [Oftype](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)中的運算子[!INCLUDE[esql](../../../../../../includes/esql-md.md)](類似於`oftype`在C#序列) 提供這項功能。  
   
 ## <a name="support-for-collections"></a>集合的支援  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 您可以將集合視為第一級實體。 例如:   
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 您可以將集合視為第一級實體。 例如：  
   
 - 集合運算式在 `from` 子句中是有效的。  
   
@@ -143,7 +143,7 @@ group by b + c
 select t.a as a, count({1,2,3}) as b from T as t     
 ```  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 也支援 SQL 樣式彙總。 例如:   
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 也支援 SQL 樣式彙總。 例如：  
   
 ```  
 select a, sum(t.b) from T as t group by t.a as a  

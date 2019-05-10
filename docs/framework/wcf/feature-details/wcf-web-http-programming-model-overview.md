@@ -2,21 +2,21 @@
 title: WCF Web HTTP 程式設計模型概觀
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: a6f267232085a46d481199eac83e464f5f774273
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: a5438857114fba890aac78565ef128bfc5ea95f0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199579"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613050"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP 程式設計模型概觀
 Windows Communication Foundation (WCF) WEB HTTP 程式設計模型提供建置 wcf WEB HTTP 服務所需的基本項目。 WCF WEB HTTP 服務設計用來存取最廣泛的可能的用戶端，包括網頁瀏覽器，並具有下列獨特的需求：  
   
--   **Uri 和 URI 處理**Uri 在 WEB HTTP 服務的設計中扮演重要角色。 WCF WEB HTTP 程式設計模型運用<xref:System.UriTemplate>和<xref:System.UriTemplateTable>類別來提供 URI 處理能力。  
+- **Uri 和 URI 處理**Uri 在 WEB HTTP 服務的設計中扮演重要角色。 WCF WEB HTTP 程式設計模型運用<xref:System.UriTemplate>和<xref:System.UriTemplateTable>類別來提供 URI 處理能力。  
   
--   **GET 和 POST 作業的支援**WEB HTTP 服務還運用了 GET 動詞來擷取資料，除了各種叫用的資料修改與遠端叫用的動詞命令。 WCF WEB HTTP 程式設計模型運用<xref:System.ServiceModel.Web.WebGetAttribute>和<xref:System.ServiceModel.Web.WebInvokeAttribute>建立的關聯服務作業同時與 GET 及其他 HTTP 動詞命令，例如 PUT、 POST、 和刪除。  
+- **GET 和 POST 作業的支援**WEB HTTP 服務還運用了 GET 動詞來擷取資料，除了各種叫用的資料修改與遠端叫用的動詞命令。 WCF WEB HTTP 程式設計模型運用<xref:System.ServiceModel.Web.WebGetAttribute>和<xref:System.ServiceModel.Web.WebInvokeAttribute>建立的關聯服務作業同時與 GET 及其他 HTTP 動詞命令，例如 PUT、 POST、 和刪除。  
   
--   **多個資料格式**Web 樣式服務能夠處理許多種類的資料，包括 SOAP 訊息。 WCF WEB HTTP 程式設計模型運用<xref:System.ServiceModel.WebHttpBinding>和<xref:System.ServiceModel.Description.WebHttpBehavior>來支援許多不同的資料格式，包括 XML 文件、 JSON 資料物件和的二進位內容，例如影像、 視訊檔案或純文字資料流。  
+- **多個資料格式**Web 樣式服務能夠處理許多種類的資料，包括 SOAP 訊息。 WCF WEB HTTP 程式設計模型運用<xref:System.ServiceModel.WebHttpBinding>和<xref:System.ServiceModel.Description.WebHttpBehavior>來支援許多不同的資料格式，包括 XML 文件、 JSON 資料物件和的二進位內容，例如影像、 視訊檔案或純文字資料流。  
   
  WCF WEB HTTP 程式設計模型延伸來涵蓋 Web 樣式案例，包括 WEB HTTP 服務、 AJAX 和 JSON 服務，以及新聞訂閱 (ATOM/RSS) 摘要的 WCF 範圍。 如需 AJAX 和 JSON 服務的詳細資訊，請參閱[AJAX 整合與 JSON 支援](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。 如需有關新聞訂閱的詳細資訊，請參閱[WCF 新聞訂閱概觀](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)。  
   
@@ -33,23 +33,23 @@ Windows Communication Foundation (WCF) WEB HTTP 程式設計模型提供建置 w
   
  此範本會說明類似下列的 URI：  
   
--   a/x/c  
+- a/x/c  
   
--   a/y/c  
+- a/y/c  
   
--   a/z/c  
+- a/z/c  
   
--   等等。  
+- 等等。  
   
  在此範本中，大括號標記法 ("{segment}") 表示變數區段，而不是常值。  
   
  .NET Framework 提供可以使用 <xref:System.UriTemplate> 這種 URI 範本的應用程式開發介面。 `UriTemplates` 可讓您執行下列作業：  
   
--   您可以呼叫其中一個`Bind`方法的參數來產生一組*完全封閉式 URI* ，符合的範本。 意思就是，URI 範本中的所有變數都會以實際值來取代。  
+- 您可以呼叫其中一個`Bind`方法的參數來產生一組*完全封閉式 URI* ，符合的範本。 意思就是，URI 範本中的所有變數都會以實際值來取代。  
   
--   您可以使用候選 URI 來呼叫 `Match`()，以便透過範本將候選 URI 切割為自身的構成部分，並傳回包含不同的 URI (已依據範本中的變數加上標籤) 部分的字典。  
+- 您可以使用候選 URI 來呼叫 `Match`()，以便透過範本將候選 URI 切割為自身的構成部分，並傳回包含不同的 URI (已依據範本中的變數加上標籤) 部分的字典。  
   
--   `Bind`() 和 `Match`() 都是反向值，因此您可以呼叫 `Match`( `Bind`( x ) ) 並從一開始的相同環境重新開始。  
+- `Bind`() 和 `Match`() 都是反向值，因此您可以呼叫 `Match`( `Bind`( x ) ) 並從一開始的相同環境重新開始。  
   
  在許多情況下 (特別是在伺服器上，需要根據 URI 將要求分派到服務作業時) 您都想要追蹤資料結構中可以獨立處理每一個包含的範本的 <xref:System.UriTemplate> 物件集合。 <xref:System.UriTemplateTable> 表示一組 URI 範本，並且依據一組指定的範本及候選 URI 選取最佳對象。 這不是屬於任何特定的網路堆疊 （包含 WCF） 讓您可以在必要時使用它。  
   
@@ -127,11 +127,11 @@ interface ICustomer
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>格式與 WCF WEB HTTP 程式設計模型  
  WCF WEB HTTP 程式設計模型的新功能可與許多不同的資料格式一起運作。 在繫結層，<xref:System.ServiceModel.WebHttpBinding> 可以讀取並寫入下列不同種類的資料：  
   
--   XML  
+- XML  
   
--   JSON  
+- JSON  
   
--   不透明的二進位資料流  
+- 不透明的二進位資料流  
   
  這表示 WCF WEB HTTP 程式設計模型可以處理任何類型的資料，但您可能對程式設計<xref:System.IO.Stream>。  
   

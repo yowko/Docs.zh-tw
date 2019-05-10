@@ -2,12 +2,12 @@
 title: 逐步解說：簡單的物件模型和查詢 (C#)
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: dc56f1e7886a1a1391d94b512ba5c91ca8c9092a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: dd4ba42247a8305b14d859a5b49da4c11cfc18bc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309455"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617974"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>逐步解說：簡單的物件模型和查詢 (C#)
 這個逐步解說提供極為簡單的基本端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將建立的實體類別會構成 Northwind 範例資料庫中的 Customers 資料表。 接著，您會建立簡單查詢，以便列出位於倫敦的客戶。  
@@ -20,24 +20,24 @@ ms.locfileid: "59309455"
   
 ## <a name="prerequisites"></a>必要條件  
   
--   本逐步解說會使用專用資料夾 ("c:\linqtest5") 來保存檔案。 請先建立這個資料夾，再開始逐步解說。  
+- 本逐步解說會使用專用資料夾 ("c:\linqtest5") 來保存檔案。 請先建立這個資料夾，再開始逐步解說。  
   
--   這個逐步解說需要使用 Northwind 範例資料庫。 如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。 如需相關指示，請參閱 <<c0> [ 下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。 下載此資料庫之後，請將檔案複製到 c:\linqtest5 資料夾。  
+- 這個逐步解說需要使用 Northwind 範例資料庫。 如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。 如需相關指示，請參閱 <<c0> [ 下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。 下載此資料庫之後，請將檔案複製到 c:\linqtest5 資料夾。  
   
 ## <a name="overview"></a>總覽  
  此逐步解說包含六個主要工作：  
   
--   建立[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio 中的方案。  
+- 建立[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio 中的方案。  
   
--   將類別對應至資料庫資料表。  
+- 將類別對應至資料庫資料表。  
   
--   指定類別的屬性以表示資料庫資料表。  
+- 指定類別的屬性以表示資料庫資料表。  
   
--   指定與 Northwind 資料庫的連接。  
+- 指定與 Northwind 資料庫的連接。  
   
--   建立要對資料庫執行的簡單查詢。  
+- 建立要對資料庫執行的簡單查詢。  
   
--   執行查詢並觀察結果。  
+- 執行查詢並觀察結果。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>建立 LINQ to SQL 方案  
  在第一個工作中，您會建立包含必要的參考，以建置並執行 Visual Studio 方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案。  
@@ -76,22 +76,22 @@ ms.locfileid: "59309455"
   
 #### <a name="to-create-an-entity-class-and-map-it-to-a-database-table"></a>若要建立實體類別並將它對應至資料庫資料表  
   
--   在 Program.cs 中的 `Program` 類別宣告正上方輸入或貼上下列程式碼：  
+- 在 Program.cs 中的 `Program` 類別宣告正上方輸入或貼上下列程式碼：  
   
      [!code-csharp[DLinqWalk1CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#2)]  
   
 ## <a name="designating-properties-on-the-class-to-represent-database-columns"></a>指定類別的屬性以表示資料庫資料行  
  在這個步驟中，您會完成下列幾項工作：  
   
--   您會使用 <xref:System.Data.Linq.Mapping.ColumnAttribute> 屬性 (Attribute) 指定實體類別的 `CustomerID` 和 `City` 屬性 (Property)，以表示資料庫資料表中的資料行。  
+- 您會使用 <xref:System.Data.Linq.Mapping.ColumnAttribute> 屬性 (Attribute) 指定實體類別的 `CustomerID` 和 `City` 屬性 (Property)，以表示資料庫資料表中的資料行。  
   
--   您會指定 `CustomerID` 屬性 (Property)，以表示資料庫中的主索引鍵資料行。  
+- 您會指定 `CustomerID` 屬性 (Property)，以表示資料庫中的主索引鍵資料行。  
   
--   您會指定 `_CustomerID` 和 `_City` 欄位做為私用儲存區。 然後，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以直接儲存和擷取值，而不必使用可能含有商務邏輯的公用存取子。  
+- 您會指定 `_CustomerID` 和 `_City` 欄位做為私用儲存區。 然後，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以直接儲存和擷取值，而不必使用可能含有商務邏輯的公用存取子。  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>若要表示兩個資料庫資料行的特性  
   
--   在 Program.cs 中 `Customer` 類別的大括號內輸入或貼上列程式碼：  
+- 在 Program.cs 中 `Customer` 類別的大括號內輸入或貼上列程式碼：  
   
      [!code-csharp[DLinqWalk1CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#3)]  
   
@@ -102,7 +102,7 @@ ms.locfileid: "59309455"
   
 #### <a name="to-specify-the-database-connection"></a>若要指定資料庫連接  
   
--   將下列程式碼輸入或貼到 `Main` 方法中。  
+- 將下列程式碼輸入或貼到 `Main` 方法中。  
   
      請注意，`northwnd.mdf` 檔案會假設位於 linqtest5 資料夾中。 如需詳細資訊，請參閱本逐步解說稍早的「必要條件」一節。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "59309455"
   
 #### <a name="to-create-a-simple-query"></a>建立簡單查詢  
   
--   在 `Main` 方法中的 `Table<Customer>` 宣告之後輸入或貼上下列程式碼。  
+- 在 `Main` 方法中的 `Table<Customer>` 宣告之後輸入或貼上下列程式碼。  
   
      [!code-csharp[DLinqWalk1ACS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#5)]  
   

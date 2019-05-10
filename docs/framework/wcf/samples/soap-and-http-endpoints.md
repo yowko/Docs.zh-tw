@@ -2,12 +2,12 @@
 title: SOAP 及 HTTP 端點
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c07391ccd1f8db6e5d2cb6e0c24fc06152d7517f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007809"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617512"
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP 及 HTTP 端點
 此範例示範如何實作以 RPC 為基礎的服務，並將它公開的 SOAP 格式和"Plain Old XML"(POX) 格式中使用 WCF Web 程式設計模型。 請參閱[基本 HTTP 服務](../../../../docs/framework/wcf/samples/basic-http-service.md)如需詳細資訊，服務的 HTTP 繫結的範例。 這個範例的重點在於，使用不同繫結透過 SOAP 和 HTTP 公開相同服務的相關詳細資料。  
@@ -22,11 +22,11 @@ ms.locfileid: "62007809"
   
  Web.config 檔案設定 3 個端點的 WCF 服務：  
   
--   ~/service.svc/mex 端點，這個端點會公開服務中繼資料讓 SOAP 用戶端存取。  
+- ~/service.svc/mex 端點，這個端點會公開服務中繼資料讓 SOAP 用戶端存取。  
   
--   ~/service.svc/http 端點，這個端點會讓用戶端使用 HTTP 繫結存取服務。  
+- ~/service.svc/http 端點，這個端點會讓用戶端使用 HTTP 繫結存取服務。  
   
--   ~/service.svc/soap 端點，這個端點可讓用戶端使用 SOAP over HTTP 繫結存取服務。  
+- ~/service.svc/soap 端點，這個端點可讓用戶端使用 SOAP over HTTP 繫結存取服務。  
   
  HTTP 端點設定 <`webHttp`> 標準端點可`helpEnabled`設定為`true`。 因此，服務會在 HTTP 用戶端可用來存取服務的 ~/service.svc/http/help 公開 XHTML 說明頁。  
   

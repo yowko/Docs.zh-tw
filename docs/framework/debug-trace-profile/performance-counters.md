@@ -8,31 +8,31 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 210a0a7d84f21360dce93627cdf6a27777c09968
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af558e6712d58e208bf05cdb7a0f847ec4517f0f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874468"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614302"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework 中的效能計數器
 本主題提供一份您可以在中找到的效能計數器[Windows 效能監視器](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)。  
   
--   [例外狀況效能計數器](#exception)  
+- [例外狀況效能計數器](#exception)  
   
--   [Interop 效能計數器](#interop)  
+- [Interop 效能計數器](#interop)  
   
--   [JIT 效能計數器](#jit)  
+- [JIT 效能計數器](#jit)  
   
--   [載入效能計數器](#loading)  
+- [載入效能計數器](#loading)  
   
--   [鎖定和執行緒效能計數器](#lockthread)  
+- [鎖定和執行緒效能計數器](#lockthread)  
   
--   [記憶體效能計數器](#memory)  
+- [記憶體效能計數器](#memory)  
   
--   [網路效能計數器](#networking)  
+- [網路效能計數器](#networking)  
   
--   [安全性效能計數器](#security)  
+- [安全性效能計數器](#security)  
   
 <a name="exception"></a>   
 ## <a name="exception-performance-counters"></a>例外狀況效能計數器  
@@ -161,21 +161,21 @@ ms.locfileid: "61874468"
   
  支援許多類別的網路效能計數器：  
   
--   測量某些事件發生次數的事件計數器。  
+- 測量某些事件發生次數的事件計數器。  
   
--   測量傳送或接收資料數量的資料計數器。  
+- 測量傳送或接收資料數量的資料計數器。  
   
--   測量不同處理序費時多久的持續期間計數器。 在物件從不同狀態送出後，測量物件在每個間隔的時間 (通常以秒為單位)。  
+- 測量不同處理序費時多久的持續期間計數器。 在物件從不同狀態送出後，測量物件在每個間隔的時間 (通常以秒為單位)。  
   
--   測量每個間隔中正在進行特定轉換之物件數目的每個間隔計數器 (一般而言以秒為單位)。  
+- 測量每個間隔中正在進行特定轉換之物件數目的每個間隔計數器 (一般而言以秒為單位)。  
   
  事件的網路效能計數器包含下列各項：  
   
--   **Connections Established**  
+- **Connections Established**  
   
--   **Datagrams Received**  
+- **Datagrams Received**  
   
--   **Datagrams Sent**  
+- **Datagrams Sent**  
   
  這些效能計數器提供自處理序啟動後的計數。 已建立的 <xref:System.Net.Sockets.Socket> 連接計數包含應用程式為了已建立的資料流通訊端連接而呼叫的明確 <xref:System.Net.Sockets.Socket> 方法，以及由其他類別 (例如：<xref:System.Net.HttpWebRequest>、<xref:System.Net.FtpWebRequest>、<xref:System.Net.WebClient> 和 <xref:System.Net.Sockets.TcpClient>) 向 <xref:System.Net.Sockets.Socket> 類別所進行的呼叫。  
   
@@ -183,33 +183,33 @@ ms.locfileid: "61874468"
   
  資料的網路效能計數器包含下列各項：  
   
--   **Bytes Received**  
+- **Bytes Received**  
   
--   **Bytes Sent**  
+- **Bytes Sent**  
   
  上述效能計數器提供自處理序啟動後的位元組計數。  
   
  有二種持續期間計數器來測量 <xref:System.Net.HttpWebRequest> 物件通過其整個生命週期或僅通過其中一部分要費時多久：  
   
--   **HttpWebRequest Average Lifetime**  
+- **HttpWebRequest Average Lifetime**  
   
--   **HttpWebRequest Average Queue Time**  
+- **HttpWebRequest Average Queue Time**  
   
  針對 **HttpWebRequest Average Lifetime** 計數器，大部分 <xref:System.Net.HttpWebRequest> 物件的存留期永遠都是從建立物件之際開始計算，直到應用程式關閉回應資料流為止。 有二種不常見的情況：  
   
--   若應用程式永不呼叫 <xref:System.Net.HttpWebRequest.GetResponse%2A> 或 <xref:System.Net.HttpWebRequest.BeginGetResponse%2A> 方法，則會忽略 <xref:System.Net.HttpWebRequest> 物件的存留期。  
+- 若應用程式永不呼叫 <xref:System.Net.HttpWebRequest.GetResponse%2A> 或 <xref:System.Net.HttpWebRequest.BeginGetResponse%2A> 方法，則會忽略 <xref:System.Net.HttpWebRequest> 物件的存留期。  
   
--   若在呼叫 <xref:System.Net.HttpWebRequest.GetResponse%2A> 或 <xref:System.Net.HttpWebRequest.EndGetResponse%2A> 方法時，<xref:System.Net.HttpWebRequest> 物件擲回 <xref:System.Net.WebException>，則存留期會在例外狀況擲回後結束。 技術上來說，此時也會關閉基礎回應資料流 (傳回給使用者的回應資料流實際上是包含回應資料流複本的記憶體資料流)。  
+- 若在呼叫 <xref:System.Net.HttpWebRequest.GetResponse%2A> 或 <xref:System.Net.HttpWebRequest.EndGetResponse%2A> 方法時，<xref:System.Net.HttpWebRequest> 物件擲回 <xref:System.Net.WebException>，則存留期會在例外狀況擲回後結束。 技術上來說，此時也會關閉基礎回應資料流 (傳回給使用者的回應資料流實際上是包含回應資料流複本的記憶體資料流)。  
   
  有四種計數器會追蹤每個間隔的特定 <xref:System.Net.HttpWebRequest> 物件問題。 這些效能計數器可協助應用程式開發人員、系統管理員及支援人員進一步了解 <xref:System.Net.HttpWebRequest> 物件的用途。 這些計數器包含下列各項：  
   
--   **HttpWebRequests Created/sec**  
+- **HttpWebRequests Created/sec**  
   
--   **HttpWebRequests Queued/sec**  
+- **HttpWebRequests Queued/sec**  
   
--   **HttpWebRequests Aborted/sec**  
+- **HttpWebRequests Aborted/sec**  
   
--   **HttpWebRequests Failed/sec**  
+- **HttpWebRequests Failed/sec**  
   
  針對 **HttpWebRequests Aborted/sec** 計數器，對 <xref:System.Net.HttpWebRequest.Abort%2A> 的內部呼叫也會列入計算。 這些內部呼叫通常由應用程式想測量的逾時所造成。  
   
@@ -233,9 +233,9 @@ for (int i = 0; i < Array.Length; i++)
   
  網路效能計數器會列在兩個類別：  
   
--   「.NET CLR 網路」- 由 .NET Framework 版本 2 導入的原始效能計數器，受 .NET Framework 版本 2 和更新版本支援。  
+- 「.NET CLR 網路」- 由 .NET Framework 版本 2 導入的原始效能計數器，受 .NET Framework 版本 2 和更新版本支援。  
   
--   「.NET CLR 網路 4.0.0.0」 - 上述所有通訊端計數器再加上 .NET Framework 第 4 版及更新版本所支援的新效能計數器。 這些新的計數器會提供 <xref:System.Net.HttpWebRequest> 物件的效能資訊 。  
+- 「.NET CLR 網路 4.0.0.0」 - 上述所有通訊端計數器再加上 .NET Framework 第 4 版及更新版本所支援的新效能計數器。 這些新的計數器會提供 <xref:System.Net.HttpWebRequest> 物件的效能資訊 。  
   
  如需存取和管理應用程式中效能計數器的詳細資訊，請參閱[效能計數器](../../../docs/framework/debug-trace-profile/performance-counters.md)。  
   

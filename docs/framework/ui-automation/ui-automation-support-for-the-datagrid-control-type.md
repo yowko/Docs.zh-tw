@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-ms.openlocfilehash: 9bf036271652f8056b79f4c5e389347cd09989e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 45eaa66396049b619c9164b20eed798505d478a9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161027"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607042"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>DataGrid 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -61,13 +61,13 @@ ms.locfileid: "59161027"
   
  資料格容器內的資料項目至少會支援：  
   
--   選取項目控制項模式 (如果資料格可供選取)  
+- 選取項目控制項模式 (如果資料格可供選取)  
   
--   捲動項目控制項模式 (如果資料格可供捲動)  
+- 捲動項目控制項模式 (如果資料格可供捲動)  
   
--   方格項目控制項模式  
+- 方格項目控制項模式  
   
--   Table Item 控制項模式  
+- Table Item 控制項模式  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件  

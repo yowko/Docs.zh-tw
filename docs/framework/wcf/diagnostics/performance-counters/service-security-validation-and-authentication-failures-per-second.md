@@ -2,12 +2,12 @@
 title: 服務：每秒的安全性驗證和驗證失敗數
 ms.date: 03/30/2017
 ms.assetid: 4af18009-e778-490b-9ba6-e76485285830
-ms.openlocfilehash: 97752fbd4ff38c40917c132fddfe3798a7ee6766
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2caebed85a28004ef038beee7d07c05a23da53c0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998318"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613687"
 ---
 # <a name="service-security-validation-and-authentication-failures-per-second"></a>服務：每秒的安全性驗證和驗證失敗數
 計數器名稱：安全性驗證和每秒的驗證失敗。  

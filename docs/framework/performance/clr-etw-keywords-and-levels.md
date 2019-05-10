@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b9a9061503ae4bf68903f35eb7624deed2f34c9b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788072"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616605"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW 關鍵字和層級
 <a name="top"></a> Windows 事件追蹤 (ETW) 的事件可依分類和層級篩選。 事件 [CLR ETW 關鍵字](#keywords) 可以依分類啟用事件篩選；這些在執行階段和取消提供者時會加以組合使用。 [事件層級](#levels) 會標以旗標識別。  
