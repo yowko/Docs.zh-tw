@@ -2,12 +2,12 @@
 title: Pooling
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: f4df661ad5d831158da55fe3890805ccc5cd695f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d9f48f6bfade9dc2e28fd5495c8e450e43c36a9c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007964"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664754"
 ---
 # <a name="pooling"></a>Pooling
 此範例示範如何擴充 Windows Communication Foundation (WCF) 支援物件共用。 此範例會示範如何建立語法上及語意上與 Enterprise Services 的 `ObjectPoolingAttribute` 屬性功能相似的屬性。 物件共用可以大幅提升應用程式的效能。 不過，如果不當使用，可能會產生反效果。 物件共用有助於避免重複建立常用物件的煩瑣工作，這些物件往往需要大量的初始設定。 不過，如果呼叫共用物件上的方法要花費相當長的時間才能完成，而一旦到達集區的大小上限，物件共用就得將多出的要求加入佇列中。 它可能因此無法受理某個建立物件的要求，而擲回逾時例外狀況。  

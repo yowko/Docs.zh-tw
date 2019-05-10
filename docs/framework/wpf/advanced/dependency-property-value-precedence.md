@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4ea417b2a922574eb92a07aa845c360f6e843f17
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010536"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663405"
 ---
 # <a name="dependency-property-value-precedence"></a>相依性屬性值優先順序
 <a name="introduction"></a> 本主題說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統的運作方式如何影響相依性屬性的值，並描述屬性系統套用到屬性有效值的優先順序。  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: a5d7c06502b66298d530d0180ffaf63862b9fc28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 279f7932d38885331b69616afa719ad782d7244b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017765"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659908"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>建立外觀可自訂的控制項
 <a name="introduction"></a>
@@ -37,17 +37,17 @@ ms.locfileid: "62017765"
   
  此主題包括下列章節：  
   
--   [必要條件](#prerequisites)  
+- [必要條件](#prerequisites)  
   
--   [組件以及狀態模型](#parts_and_states_model)  
+- [組件以及狀態模型](#parts_and_states_model)  
   
--   [在 ControlTemplate 中定義的視覺結構和控制項的視覺化行為](#defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate)  
+- [在 ControlTemplate 中定義的視覺結構和控制項的視覺化行為](#defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate)  
   
--   [使用組件的程式碼中的 ControlTemplate](#using_parts_of_the_controltemplate_in_code)  
+- [使用組件的程式碼中的 ControlTemplate](#using_parts_of_the_controltemplate_in_code)  
   
--   [提供控制項合約](#providing_the_control_contract)  
+- [提供控制項合約](#providing_the_control_contract)  
   
--   [完整的範例](#complete_example)  
+- [完整的範例](#complete_example)  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
@@ -60,11 +60,11 @@ ms.locfileid: "62017765"
 ## <a name="parts-and-states-model"></a>組件以及狀態模型  
  組件與狀態的模型會指定如何定義視覺結構和控制項的視覺行為。 若要遵循的組件與狀態的模型，您應該執行下列作業：  
   
--   定義視覺結構和視覺化行為<xref:System.Windows.Controls.ControlTemplate>的控制項。  
+- 定義視覺結構和視覺化行為<xref:System.Windows.Controls.ControlTemplate>的控制項。  
   
--   當控制項的邏輯進行互動的控制項範本的組件時，請遵循某些最佳作法。  
+- 當控制項的邏輯進行互動的控制項範本的組件時，請遵循某些最佳作法。  
   
--   提供指定應該包含在控制項合約<xref:System.Windows.Controls.ControlTemplate>。  
+- 提供指定應該包含在控制項合約<xref:System.Windows.Controls.ControlTemplate>。  
   
  當您定義視覺結構和視覺化行為<xref:System.Windows.Controls.ControlTemplate>控制項的應用程式作者可以變更的視覺結構和控制項的視覺化行為來建立新<xref:System.Windows.Controls.ControlTemplate>而不需要撰寫程式碼。   您必須提供控制項合約，告訴應用程式作者這<xref:System.Windows.FrameworkElement>中，則應該定義物件和狀態<xref:System.Windows.Controls.ControlTemplate>。 當您互動中的組件時，您應該遵循一些最佳作法<xref:System.Windows.Controls.ControlTemplate>，讓您的控制項適當地處理不完整<xref:System.Windows.Controls.ControlTemplate>。  如果您遵循下列三項原則，應用程式作者將能夠建立<xref:System.Windows.Controls.ControlTemplate>控制項只是因為它們可能輕易地可以控制項，隨附[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  下節說明每個詳細建議。  
   
@@ -134,18 +134,18 @@ ms.locfileid: "62017765"
   
  <xref:System.Windows.VisualStateManager.GoToState%2A>方法會執行所需的啟動和停止將分鏡腳本的適當的邏輯。 當控制項便會呼叫<xref:System.Windows.VisualStateManager.GoToState%2A>若要變更其狀態，<xref:System.Windows.VisualStateManager>會進行下列作業：  
   
--   如果<xref:System.Windows.VisualState>控制項要具有<xref:System.Windows.Media.Animation.Storyboard>，分鏡腳本開始。 然後，如果<xref:System.Windows.VisualState>控制項來自具有<xref:System.Windows.Media.Animation.Storyboard>，分鏡腳本結束。  
+- 如果<xref:System.Windows.VisualState>控制項要具有<xref:System.Windows.Media.Animation.Storyboard>，分鏡腳本開始。 然後，如果<xref:System.Windows.VisualState>控制項來自具有<xref:System.Windows.Media.Animation.Storyboard>，分鏡腳本結束。  
   
--   如果控制項已在指定時，狀態<xref:System.Windows.VisualStateManager.GoToState%2A>會採取任何動作，並傳回`true`。  
+- 如果控制項已在指定時，狀態<xref:System.Windows.VisualStateManager.GoToState%2A>會採取任何動作，並傳回`true`。  
   
--   如果指定的狀態不存在於<xref:System.Windows.Controls.ControlTemplate>的`control`，<xref:System.Windows.VisualStateManager.GoToState%2A>會採取任何動作，並傳回`false`。  
+- 如果指定的狀態不存在於<xref:System.Windows.Controls.ControlTemplate>的`control`，<xref:System.Windows.VisualStateManager.GoToState%2A>會採取任何動作，並傳回`false`。  
   
 #### <a name="best-practices-for-working-with-the-visualstatemanager"></a>使用 VisualStateManager 的最佳作法  
  我們建議您下列工作來維護您的控制項狀態：  
   
--   您可以使用屬性來追蹤其狀態。  
+- 您可以使用屬性來追蹤其狀態。  
   
--   建立狀態之間轉換的 helper 方法。  
+- 建立狀態之間轉換的 helper 方法。  
   
  `NumericUpDown`控制項會使用其`Value`屬性來追蹤是否處於`Positive`或`Negative`狀態。  `NumericUpDown`控制項也會定義`Focused`並`UnFocused`所述，哪一個資料軌<xref:System.Windows.UIElement.IsFocused%2A>屬性。 如果您使用不會自然對應至的控制項屬性的狀態，您可以定義追蹤狀態的私用屬性。  
   
@@ -160,11 +160,11 @@ ms.locfileid: "62017765"
   
  有三個典型的地方，其中可能會變更控制項的狀態：  
   
--   當<xref:System.Windows.Controls.ControlTemplate>套用至<xref:System.Windows.Controls.Control>。  
+- 當<xref:System.Windows.Controls.ControlTemplate>套用至<xref:System.Windows.Controls.Control>。  
   
--   當屬性變更時。  
+- 當屬性變更時。  
   
--   在事件發生時。  
+- 在事件發生時。  
   
  下列範例將示範如何更新的狀態`NumericUpDown`在這些情況下的控制項。  
   
@@ -189,33 +189,33 @@ ms.locfileid: "62017765"
 ## <a name="providing-the-control-contract"></a>提供控制項合約  
  提供控制項合約，讓<xref:System.Windows.Controls.ControlTemplate>作者會知道要放在範本中的項目。 控制項合約有三個元素：  
   
--   控制項邏輯所使用的視覺元素。  
+- 控制項邏輯所使用的視覺元素。  
   
--   控制項的狀態及每個狀態所屬的群組。  
+- 控制項的狀態及每個狀態所屬的群組。  
   
--   在視覺上影響控制項的公用屬性。  
+- 在視覺上影響控制項的公用屬性。  
   
  建立新的某人<xref:System.Windows.Controls.ControlTemplate>必須知道<xref:System.Windows.FrameworkElement>控制項的邏輯會使用的物件，每個物件類型，以及它的名稱。 A<xref:System.Windows.Controls.ControlTemplate>作者也必須知道的控制項可以在中，每個可能狀態，以及哪些名稱<xref:System.Windows.VisualStateGroup>處於的狀態。  
   
  返回`NumericUpDown`範例中，控制項預期<xref:System.Windows.Controls.ControlTemplate>具有下列<xref:System.Windows.FrameworkElement>物件：  
   
--   A<xref:System.Windows.Controls.Primitives.RepeatButton>稱為`UpButton`。  
+- A<xref:System.Windows.Controls.Primitives.RepeatButton>稱為`UpButton`。  
   
--   A<xref:System.Windows.Controls.Primitives.RepeatButton>呼叫 `DownButton.`  
+- A<xref:System.Windows.Controls.Primitives.RepeatButton>呼叫 `DownButton.`  
   
  控制項可以處於下列狀態：  
   
--   在 `ValueStates`<xref:System.Windows.VisualStateGroup>  
+- 在 `ValueStates`<xref:System.Windows.VisualStateGroup>  
   
-    -   `Positive`  
+    - `Positive`  
   
-    -   `Negative`  
+    - `Negative`  
   
--   在 `FocusStates`<xref:System.Windows.VisualStateGroup>  
+- 在 `FocusStates`<xref:System.Windows.VisualStateGroup>  
   
-    -   `Focused`  
+    - `Focused`  
   
-    -   `Unfocused`  
+    - `Unfocused`  
   
  若要指定的項目<xref:System.Windows.FrameworkElement>物件的控制項預期，您使用<xref:System.Windows.TemplatePartAttribute>，以指定的名稱和預期的項目型別。  若要指定控制項的可能狀態，您使用<xref:System.Windows.TemplateVisualStateAttribute>，以指定的狀態名稱，以及其<xref:System.Windows.VisualStateGroup>它屬於。  放<xref:System.Windows.TemplatePartAttribute>和<xref:System.Windows.TemplateVisualStateAttribute>控制項的類別定義。  
   

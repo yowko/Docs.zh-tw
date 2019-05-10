@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-ms.openlocfilehash: ab45278b2e1199282e3066c34828b9bda716e162
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c964003217e7b96cf25288e2ae6ae6a2fb07a6c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803684"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651383"
 ---
 # <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>預設屬性 '\<屬性名稱 1&gt >' 衝突的預設屬性'\<propertyname2 >' 中 '\<類別名稱 >'，所以應宣告為 'Shadows'
 屬性會宣告具有相同名稱做為基底類別中定義的屬性。 在此情況下，此類別中的屬性應該會遮蔽基底類別屬性。  
@@ -23,7 +23,7 @@ ms.locfileid: "61803684"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   新增`Shadows`關鍵字來宣告或變更所宣告的屬性名稱。  
+- 新增`Shadows`關鍵字來宣告或變更所宣告的屬性名稱。  
   
 ## <a name="see-also"></a>另請參閱
 

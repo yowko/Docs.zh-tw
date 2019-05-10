@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: a758d05cca5ca71943b0ef08184aef5b2c457739
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93d02618ff19f431b3602e74478337f6918df289
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802345"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665175"
 ---
 # <a name="expression-recursively-calls-the-containing-property-propertyname"></a>運算式遞迴呼叫包含的屬性 '\<屬性名稱 >'
 中的陳述式`Set`屬性定義的程序會將值儲存至屬性的名稱。  
@@ -61,7 +61,7 @@ End Class
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   請重寫的屬性定義，以使用建議的方法，在上述範例所示。  
+- 請重寫的屬性定義，以使用建議的方法，在上述範例所示。  
   
 ## <a name="see-also"></a>另請參閱
 

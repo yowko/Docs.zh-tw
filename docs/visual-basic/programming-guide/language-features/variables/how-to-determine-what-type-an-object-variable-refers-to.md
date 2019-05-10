@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 6499dfce880cc9ce16e5d77887afc0598692f48e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4ae73e6b3dec7864eb670bed67630b1cc96e5e61
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938199"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663542"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>HOW TO：決定物件變數參考 (Visual Basic) 的類型
 物件變數包含儲存在其他地方的資料指標。 在執行階段，可以變更該資料型別。 在任何時刻，您可以使用<xref:System.Type.GetTypeCode%2A>方法，以判斷目前的執行階段類型，或有[TypeOf 運算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)來找出是否有目前的執行階段類型是與指定的型別相容。  

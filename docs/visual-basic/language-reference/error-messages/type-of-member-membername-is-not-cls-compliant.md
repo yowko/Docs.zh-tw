@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-ms.openlocfilehash: 0d87adee65f491f8c968e4ba93cf4b9df03aff85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 03962a3004b975dec86099307346aa5cc8829020
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013617"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664293"
 ---
 # <a name="type-of-member-membername-is-not-cls-compliant"></a>成員的型別 '\<成員名稱 >' 不符合 CLS 標準
 指定不是這個成員的資料類型的一部分[Language Independence and Language-independent Components](../../../standard/language-independence-and-language-independent-components.md) （cls） 標準。 這是不在您的元件中發生錯誤，因為[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]和 Visual Basic 支援這種資料類型。 不過，另一個以完全符合 CLS 標準的程式碼撰寫的元件可能不支援這種資料類型。 這類元件可能無法順利與您的元件互動。  

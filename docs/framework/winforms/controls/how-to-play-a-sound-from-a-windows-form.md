@@ -11,12 +11,12 @@ helpviewer_keywords:
 - My.Computer.Audio object [Windows Forms], playing sounds
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-ms.openlocfilehash: 3b9eb6f902d0d2193f0099f8e868e4ead347ce26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8c70187948577064ab2471e2263e587035c41754
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913406"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662400"
 ---
 # <a name="how-to-play-a-sound-from-a-windows-form"></a>HOW TO：播放 Windows Forms 的音效
 這個範例會在執行階段播放所指定路徑的音效。  

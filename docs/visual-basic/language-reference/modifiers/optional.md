@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: 67ceedffecdfba8ec0c2829a3af31d194f18bd88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 40605d4843bfccf9d2819b3ec6f2ef65f9e9cf9a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920662"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661318"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 指定呼叫程序時，可以省略程序引數。  
@@ -25,13 +25,13 @@ ms.locfileid: "61920662"
   
  `Optional` 修飾詞可用於以下內容：  
   
--   [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
 >  呼叫程序時使用或不含選擇性參數，您可以依位置或依名稱傳遞引數。 如需詳細資訊，請參閱 <<c0> [ 傳遞引數依位置和名稱](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)。  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6175e60b1dbdbdb31500f484da24b0f94990b2d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770873"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663335"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>HOW TO：使用 DataGrid 控制項實作驗證
 <xref:System.Windows.Controls.DataGrid>控制項可讓您執行的資料格 」 和 「 資料列層級的驗證。 資料格層級驗證，您驗證繫結的資料物件的個別屬性，當使用者更新的值。 資料列層級驗證，您會驗證整個資料的物件，當使用者認可變更的資料列。 您也可以提供自訂的視覺化回饋，對於驗證錯誤，或使用預設的視覺化回饋，<xref:System.Windows.Controls.DataGrid>控制項提供。  

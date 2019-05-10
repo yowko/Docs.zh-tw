@@ -2,12 +2,12 @@
 title: MSMQ 啟用
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: d83759f321abe7fa7e39202daadd4ceda82d8f23
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 925148c4bd084f843f125ab9e851a5404bbe4b89
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051477"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664803"
 ---
 # <a name="msmq-activation"></a>MSMQ 啟用
 這個範例示範如何在 Windows Process Activation Service (WAS) 中裝載可從訊息佇列讀取的應用程式。 這個範例會使用`netMsmqBinding`且根據[雙向通訊](../../../../docs/framework/wcf/samples/two-way-communication.md)範例。 本例中的服務是 Web 裝載的應用程式，而用戶端則會自我裝載並輸出至主控台，以便觀察所送出採購單的狀態。  

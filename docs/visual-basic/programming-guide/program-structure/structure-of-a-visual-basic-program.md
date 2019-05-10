@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f4136a2c8fb7ca98ff22aa6a5fc676f30cd1c5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61839394"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624304"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic 程式的結構
 從標準建置組塊，已建立 Visual Basic 程式。 A*解決方案*可以包含一或多個專案。 A*專案*又可以包含一或多個組件。 每個*組件*編譯一或多個原始程式檔。 A*原始程式檔*提供定義和實作的類別、 結構、 模組和介面，最後會包含所有的程式碼。  
@@ -47,30 +47,30 @@ ms.locfileid: "61839394"
 ## <a name="namespace-level-programming-elements"></a>命名空間層級的程式設計項目  
  類別、 結構和模組包含原始程式檔中的所有程式碼。 它們*命名空間層級*項目，可以出現在命名空間或在來源檔案層級。 它們會保存所有其他程式設計項目的宣告。 介面，可定義項目簽章，但不提供任何實作，也會出現在模組層級。 如需有關模組層級元素的詳細資訊，請參閱下列各項：  
   
--   [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)  
+- [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Structure 陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)  
+- [Structure 陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
--   [Module 陳述式](../../../visual-basic/language-reference/statements/module-statement.md)  
+- [Module 陳述式](../../../visual-basic/language-reference/statements/module-statement.md)  
   
--   [Interface 陳述式](../../../visual-basic/language-reference/statements/interface-statement.md)  
+- [Interface 陳述式](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
  在命名空間層級的資料元素是列舉和委派。  
   
 ## <a name="module-level-programming-elements"></a>模組層級的程式設計項目  
  程序、 運算子、 屬性和事件是唯一的程式設計項目，可保存可執行程式碼 （陳述式會在執行階段中執行的動作）。 它們*模組層級*的程式項目。 如需有關程序層級元素的詳細資訊，請參閱下列各項：  
   
--   [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)  
+- [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)  
+- [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)  
   
  在模組層級的資料元素是變數、 常數、 列舉和委派。  
   
@@ -82,13 +82,13 @@ ms.locfileid: "61839394"
 ## <a name="the-main-procedure"></a>在主要程序  
  `Main`程序是已載入您的應用程式時執行的第一個程式碼。 `Main` 可作為起點，並為您的應用程式的整體控制。 有四個不同的`Main`:  
   
--   `Sub Main()`  
+- `Sub Main()`  
   
--   `Sub Main(ByVal cmdArgs() As String)`  
+- `Sub Main(ByVal cmdArgs() As String)`  
   
--   `Function Main() As Integer`  
+- `Function Main() As Integer`  
   
--   `Function Main(ByVal cmdArgs() As String) As Integer`  
+- `Function Main(ByVal cmdArgs() As String) As Integer`  
   
  此程序的最常見的各種不同的是`Sub Main()`。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Basic 中的 Main 程序](../../../visual-basic/programming-guide/program-structure/main-procedure.md)。  
   

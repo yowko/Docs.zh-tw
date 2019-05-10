@@ -2,12 +2,12 @@
 title: LINQ to XML 比較DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
-ms.openlocfilehash: 282df577808342a52a70f419b2a7559752103a0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8a7d15a8eca8e7d9bcbba068305357ff766a9d9d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051490"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623071"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML 比較DOM (Visual Basic)
 本節描述 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 和目前主流的 XML 程式設計 API (也就是 W3C 文件物件模型 (DOM)) 之間的一些主要差異。  
@@ -113,7 +113,7 @@ doc.AppendChild(name)
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 不提供 `XmlDocumentFragment` 類別的對等類別。 在許多情況下，`XmlDocumentFragment` 概念可藉由查詢結果來處理，該查詢的類型為 <xref:System.Xml.Linq.XNode> 的 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Xml.Linq.XElement> 的 <xref:System.Collections.Generic.IEnumerable%601>。  
   
 ## <a name="support-for-xpathnavigator"></a>支援 XPathNavigator  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 透過 <xref:System.Xml.XPath?displayProperty=nameWithType> 命名空間中的擴充方法，提供 <xref:System.Xml.XPath.XPathNavigator> 的支援。 如需詳細資訊，請參閱<xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 透過 <xref:System.Xml.XPath?displayProperty=nameWithType> 命名空間中的擴充方法，提供 <xref:System.Xml.XPath.XPathNavigator> 的支援。 如需詳細資訊，請參閱 <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>。  
   
 ## <a name="support-for-white-space-and-indentation"></a>支援空白字元與縮排  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 處理空白字元時，比處理 DOM 更為容易。  

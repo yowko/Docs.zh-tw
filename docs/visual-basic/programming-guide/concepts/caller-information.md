@@ -2,12 +2,12 @@
 title: 呼叫端資訊 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 004cb003b6cf980f902d7625694e3d2fbfa5ee42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d9dc542ee9b800cfe6342f868ff9c2b170a4beec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61951941"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642358"
 ---
 # <a name="caller-information-visual-basic"></a>呼叫端資訊 (Visual Basic)
 使用 Caller Info 屬性，您就可以取得有關方法之呼叫端的資訊。 您可以取得原始程式碼的檔案路徑、原始程式碼中的行號，以及呼叫端的成員名稱。 這項資訊有助於追蹤、偵錯及建立診斷工具。  

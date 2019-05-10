@@ -2,12 +2,12 @@
 title: 訊息相互關聯
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: ed6fc8f5d16ae2d604cdbdf4659ecfaaa83bfa02
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 630afb728726fb81bbefa2f2cd34b9481b788f6f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989764"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663422"
 ---
 # <a name="message-correlation"></a>訊息相互關聯
 此範例示範訊息佇列 (MSMQ) 應用程式如何將 MSMQ 訊息傳送至 Windows Communication Foundation (WCF) 服務，以及如何訊息可以相互關聯的要求/回應案例中的傳送者與接收者應用程式之間。 這個範例會使用 msmqIntegrationBinding 繫結。 本實例中的服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 K  

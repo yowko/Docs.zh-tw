@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
-ms.openlocfilehash: 9f7f878649d8b96f050b56d5b878eb3d67e027ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ab8028062402e33b787a5a8649d93d975918393
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918218"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665699"
 ---
 # <a name="nullable-type-inference-is-not-supported-in-this-context"></a>在此內容中不支援可為 Null 的類型推斷
 實值型別和結構可以宣告為可為 null。  
@@ -34,7 +34,7 @@ Dim b As Integer?
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   使用`As`子句來將變數宣告為可為 null。  
+- 使用`As`子句來將變數宣告為可為 null。  
   
 ## <a name="see-also"></a>另請參閱
 

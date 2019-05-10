@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a8593c5dce30fc71750515ccedb4fc9cce9a4868
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703682"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652107"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 繫結概觀
 繫結是用來指定連接到 Windows Communication Foundation (WCF) 服務的端點所需之通訊詳細資料的物件。 WCF 服務中的每個端點都需要正確指定的繫結。 本主題概述通訊詳細資料所定義的繫結的繫結、 哪些繫結會包含在 WCF 中，以及如何指定繫結的端點項目的類型。  

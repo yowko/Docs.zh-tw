@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - hybrid control [WPF interoperability]
 ms.assetid: 9e8aa6b6-112c-4579-98d1-c974917df499
-ms.openlocfilehash: 2e3390c3e387e75168958f946472a5a24a4bd440
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6b8fcfb6b2795b1b41b5292a3d2c61ecd017f173
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053115"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662269"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>WPF 和 Windows Form 互通
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 呈現兩個建立應用程式介面的不同架構。 <xref:System.Windows.Forms.Integration?displayProperty=nameWithType>命名空間提供類別，可啟用一般交互操作情節。 實作交互操作功能的兩個主要類別是<xref:System.Windows.Forms.Integration.WindowsFormsHost>和<xref:System.Windows.Forms.Integration.ElementHost>。 本主題描述支援的交互操作情節以及不支援的情節。  

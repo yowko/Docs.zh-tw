@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: 0d68846938aba809a7a3a6f7d27f185bb90a39cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab8660ff0cf02956e760132f5aad69e359913950
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920675"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661091"
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 指定屬性或程序會重新宣告一或多個同名的現有屬性或程序。  
@@ -25,41 +25,41 @@ ms.locfileid: "61920675"
   
 ## <a name="rules"></a>規則  
   
--   **宣告內容。** 您只能在屬性或程序宣告陳述式中使用 `Overloads`。  
+- **宣告內容。** 您只能在屬性或程序宣告陳述式中使用 `Overloads`。  
   
--   **結合的修飾詞。** 您無法指定`Overloads`連同[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)相同的程序宣告中。  
+- **結合的修飾詞。** 您無法指定`Overloads`連同[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)相同的程序宣告中。  
   
--   **必要的差異。** *簽章*這個宣告中必須是不同的每個屬性或程序，它會多載簽章。 簽章包含屬性或程序名稱，以及下列項目：  
+- **必要的差異。** *簽章*這個宣告中必須是不同的每個屬性或程序，它會多載簽章。 簽章包含屬性或程序名稱，以及下列項目：  
   
-    -   參數的數目  
+    - 參數的數目  
   
-    -   參數的順序  
+    - 參數的順序  
   
-    -   參數的資料類型  
+    - 參數的資料類型  
   
-    -   類型參數的數目 (適用於泛型程序)  
+    - 類型參數的數目 (適用於泛型程序)  
   
-    -   傳回型別 (僅適用於轉換運算子程序)  
+    - 傳回型別 (僅適用於轉換運算子程序)  
   
      所有多載必須有相同的名稱，但每個多載的名稱在一或多個上述方面中必須和其他多載不同。 這可讓編譯器在程式碼呼叫屬性或程序時可識別要使用的版本。  
   
--   **不允許的差異。** 變更下列一或多個項目，對於多載屬性或程序是無效的，因為它們屬於簽章：  
+- **不允許的差異。** 變更下列一或多個項目，對於多載屬性或程序是無效的，因為它們屬於簽章：  
   
-    -   是否傳回值 (適用於程序)  
+    - 是否傳回值 (適用於程序)  
   
-    -   傳回值的資料類型 (除了轉換運算子之外)  
+    - 傳回值的資料類型 (除了轉換運算子之外)  
   
-    -   參數或型別參數的名稱  
+    - 參數或型別參數的名稱  
   
-    -   類型參數上的條件約束 (適用於泛型程序)  
+    - 類型參數上的條件約束 (適用於泛型程序)  
   
-    -   參數修飾詞關鍵字 (例如 `ByRef` 或 `Optional`)  
+    - 參數修飾詞關鍵字 (例如 `ByRef` 或 `Optional`)  
   
-    -   屬性或程序修飾詞關鍵字 (例如 `Public` 或 `Shared`)  
+    - 屬性或程序修飾詞關鍵字 (例如 `Public` 或 `Shared`)  
   
--   **選擇性修飾詞。** 當您在相同類別中定義多個多載的屬性或程序時，您不必使用 `Overloads` 修飾詞。 不過，如果您在其中一個宣告中使用 `Overloads`，您必須在全部的宣告中使用它。  
+- **選擇性修飾詞。** 當您在相同類別中定義多個多載的屬性或程序時，您不必使用 `Overloads` 修飾詞。 不過，如果您在其中一個宣告中使用 `Overloads`，您必須在全部的宣告中使用它。  
   
--   **遮蔽和多載。** `Overloads` 也可以用來遮蔽現有成員或基底類別中的多載成員的集合。 以此方式使用 `Overloads` 時，即表示您會宣告同名的屬性或方法和相同的參數清單作為基底類別成員，而且您並未提供 `Shadows` 關鍵字。  
+- **遮蔽和多載。** `Overloads` 也可以用來遮蔽現有成員或基底類別中的多載成員的集合。 以此方式使用 `Overloads` 時，即表示您會宣告同名的屬性或方法和相同的參數清單作為基底類別成員，而且您並未提供 `Shadows` 關鍵字。  
   
  如果您使用 `Overrides`，編譯器會隱含地新增 `Overloads`，讓程式庫 API 更容易使用 C#。  
   

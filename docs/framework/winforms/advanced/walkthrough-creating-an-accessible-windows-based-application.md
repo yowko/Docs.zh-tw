@@ -6,27 +6,27 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c324e4956d6db29e4de12bd7639a69daaf65d872
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747536"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665919"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>逐步解說：建立 Windows 架構的協助工具應用程式
 建立協助工具應用程式具有重要的商業含意， 許多政府對於市售軟體訂定有協助工具法規， 而擁有「Windows 憑證」標誌就表示符合有關協助工具的要求。 據估計光是美國便有約三千萬居民受到軟體協助工具的影響，而其中大部分是潛在客戶。  
   
  本逐步解說將提出「Windows 憑證」標誌的五項協助工具需求。 根據這些需求，協助工具應用程式將會：  
   
--   支援 [控制台] 的大小、色彩、字型和輸入設定。 當使用者變更 [控制台] 的設定時，功能表列、標題列、框線和狀態列的大小也會隨著調整。 不需要在這個應用程式中對控制項或程式碼進行其他變更。  
+- 支援 [控制台] 的大小、色彩、字型和輸入設定。 當使用者變更 [控制台] 的設定時，功能表列、標題列、框線和狀態列的大小也會隨著調整。 不需要在這個應用程式中對控制項或程式碼進行其他變更。  
   
--   支援高對比模式。  
+- 支援高對比模式。  
   
--   提供具備輔助說明的所有功能鍵盤存取。  
+- 提供具備輔助說明的所有功能鍵盤存取。  
   
--   以視覺呈現和程式設計方式顯示鍵盤焦點的位置。  
+- 以視覺呈現和程式設計方式顯示鍵盤焦點的位置。  
   
--   避免只以音效傳達重要資訊。  
+- 避免只以音效傳達重要資訊。  
   
  如需詳細資訊，請參閱[設計可及性應用程式的資源](/visualstudio/ide/reference/resources-for-designing-accessible-applications)。  
   
@@ -41,29 +41,29 @@ ms.locfileid: "61747536"
   
 #### <a name="to-begin-making-the-application"></a>開始建立應用程式  
   
--   建立新的 Windows 應用程式在 Visual Basic 或 Visual C#。 將專案命名為 **PizzaOrder** (如需詳細資訊，請參閱[建立新的方案和專案](/visualstudio/ide/creating-solutions-and-projects))。  
+- 建立新的 Windows 應用程式在 Visual Basic 或 Visual C#。 將專案命名為 **PizzaOrder** (如需詳細資訊，請參閱[建立新的方案和專案](/visualstudio/ide/creating-solutions-and-projects))。  
   
 ## <a name="adding-the-controls-to-the-form"></a>將控制項加入表單  
  將控制項加入表單時，請注意下列建立協助工具應用程式的方針：  
   
--   設定 <xref:System.Windows.Forms.Control.AccessibleDescription%2A> 和 <xref:System.Windows.Forms.Control.AccessibleName%2A> 屬性。 在這個範例中，<xref:System.Windows.Forms.Control.AccessibleRole%2A> 的預設值便已足夠。 如需協助工具屬性的詳細資訊，請參閱[提供 Windows Forms 上控制項的協助工具資訊](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md)。  
+- 設定 <xref:System.Windows.Forms.Control.AccessibleDescription%2A> 和 <xref:System.Windows.Forms.Control.AccessibleName%2A> 屬性。 在這個範例中，<xref:System.Windows.Forms.Control.AccessibleRole%2A> 的預設值便已足夠。 如需協助工具屬性的詳細資訊，請參閱[提供 Windows Forms 上控制項的協助工具資訊](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md)。  
   
--   將字型大小設定為 10 或更大的點數。  
+- 將字型大小設定為 10 或更大的點數。  
   
     > [!NOTE]
     >  如果您一開始將表單的字型大小設定為 10，之後加入表單之所有控制項的字型大小都將是 10。  
   
--   確定任何描述 TextBox 控制項的 Label 控制項都是依定位順序，緊接著位於 TextBox 控制項之前。  
+- 確定任何描述 TextBox 控制項的 Label 控制項都是依定位順序，緊接著位於 TextBox 控制項之前。  
   
--   將便捷鍵，使用"&"字元中，新增<xref:System.Windows.Forms.Control.Text%2A>使用者可能想要瀏覽至任何控制項的屬性。  
+- 將便捷鍵，使用"&"字元中，新增<xref:System.Windows.Forms.Control.Text%2A>使用者可能想要瀏覽至任何控制項的屬性。  
   
--   將便捷鍵，使用"&"字元中，新增<xref:System.Windows.Forms.Control.Text%2A>使用者可能想要瀏覽至的控制項前面之標籤的屬性。 將標籤的 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 屬性設定為 `true`如此一來，當使用者按下便捷鍵時，焦點便會設定為定位順序的下一個控制項。  
+- 將便捷鍵，使用"&"字元中，新增<xref:System.Windows.Forms.Control.Text%2A>使用者可能想要瀏覽至的控制項前面之標籤的屬性。 將標籤的 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 屬性設定為 `true`如此一來，當使用者按下便捷鍵時，焦點便會設定為定位順序的下一個控制項。  
   
--   將便捷鍵加入所有功能表項目。  
+- 將便捷鍵加入所有功能表項目。  
   
 #### <a name="to-make-your-windows-application-accessible"></a>讓 Windows 應用程式具備協助功能  
   
--   如下所述將控制項加入表單並設定屬性。 如需如何在表單上排列控制項的模型，請參閱表格下方的圖片。  
+- 如下所述將控制項加入表單並設定屬性。 如需如何在表單上排列控制項的模型，請參閱表格下方的圖片。  
   
     |Object|屬性|值|  
     |------------|--------------|-----------|  
@@ -137,20 +137,20 @@ ms.locfileid: "61747536"
     |MenuItem|名稱|exitApp|  
     ||文字|結束(&X)|
     
-      您的表單看起來如下圖所示：
+      Your form will look something like the following image:
     
-      ![名稱文字方塊中，與大小配料選取比薩訂購表單。](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+      ![The pizza order form with a name textbox, and size and toppings selection.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
 
 ## <a name="supporting-high-contrast-mode"></a>支援高對比模式  
  高對比模式是 Windows 系統的一項設定，使用對比色彩和字型大小以提升可讀性，對於視覺受損的使用者很有幫助。 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>屬性可用來判斷是否已設定高對比模式。  
   
  如果 SystemInformation.HighContrast 為 `true`，應用程式應該：  
   
--   使用系統色彩配置來顯示所有使用者介面項目。  
+- 使用系統色彩配置來顯示所有使用者介面項目。  
   
--   藉由視覺提示或音效來傳達原本由色彩傳達的任何資訊。 例如，如果使用紅色字型醒目提示特定清單項目，您也可以將粗體套用至字型，讓使用者透過非色彩提示得知該項目已醒目提示。  
+- 藉由視覺提示或音效來傳達原本由色彩傳達的任何資訊。 例如，如果使用紅色字型醒目提示特定清單項目，您也可以將粗體套用至字型，讓使用者透過非色彩提示得知該項目已醒目提示。  
   
--   省略文字後的任何影像或圖樣。  
+- 省略文字後的任何影像或圖樣。  
   
  當應用程式啟動並回應 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 系統事件時，應該會檢查 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> 的設定。 只要 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> 的值變更，便會引發 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件。  
   

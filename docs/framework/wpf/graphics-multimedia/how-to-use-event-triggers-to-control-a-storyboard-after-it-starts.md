@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event triggers [WPF], controlling Storyboards
 - Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
-ms.openlocfilehash: d444349f8bc9236e1d15f484f35b1326c77e2425
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e0bc019ee361cba6a28ac573da3d2ee09e2168ed
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769287"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663305"
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>HOW TO：在分鏡腳本開始後使用事件觸發程序進行控制
 此範例示範如何控制<xref:System.Windows.Media.Animation.Storyboard>啟動之後。 若要啟動<xref:System.Windows.Media.Animation.Storyboard>利用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，使用<xref:System.Windows.Media.Animation.BeginStoryboard>，這會對物件和屬性，它們建立動畫，然後啟動 分鏡腳本將動畫的散發。 如果您賦予<xref:System.Windows.Media.Animation.BeginStoryboard>藉由指定的名稱及其<xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>屬性，讓它可控制的分鏡腳本。 然後您可以以互動方式控制分鏡腳本開始後。  

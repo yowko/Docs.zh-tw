@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce97089ec71fc910079910957e784605387f3e06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 91261e5077352179719e631ebeb26670ffd74792
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966863"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665233"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>HOW TO：從命令列建立 Windows Forms 應用程式
 下列程序說明若要從命令列建立及執行 Windows Forms 應用程式，所必須完成的基本步驟。 在 Visual Studio 中，對這些程序有廣泛的支援。  另請參閱[逐步解說：在 WPF 中裝載 Windows Forms 控制項](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)。  

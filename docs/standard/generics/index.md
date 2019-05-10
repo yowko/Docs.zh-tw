@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 104a0018896eb95255cf4054f9402ce5160b95f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a8792698d78b37fa42721f0ad82c0e0d3f7c8dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683297"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622815"
 ---
 # <a name="generics-in-net"></a>.NET 的泛型
 
@@ -41,17 +41,17 @@ ms.locfileid: "61683297"
   
  本主題提供 .NET 中的泛型概觀，以及泛型類型或方法的摘要。 它包含以下各節：  
   
--   [定義和使用泛型](#defining_and_using_generics)  
+- [定義和使用泛型](#defining_and_using_generics)  
   
--   [泛型術語](#generics_terminology)  
+- [泛型術語](#generics_terminology)  
   
--   [類別庫和語言支援](#class_library_and_language_support)  
+- [類別庫和語言支援](#class_library_and_language_support)  
   
--   [巢狀類型和泛型](#nested_types_and_generics)  
+- [巢狀類型和泛型](#nested_types_and_generics)  
   
--   [相關主題](#related_topics)  
+- [相關主題](#related_topics)  
   
--   [參考資料](#reference)  
+- [參考資料](#reference)  
   
 <a name="defining_and_using_generics"></a>   
 ## <a name="defining-and-using-generics"></a>定義和使用泛型  
@@ -71,21 +71,21 @@ ms.locfileid: "61683297"
 ### <a name="generics-terminology"></a>泛型術語  
  下列詞彙會用於討論在 .NET 中的泛型：  
   
--   *「泛型類型定義」* (generic type definition)，是做為範本的類別、結構或介面宣告，且具有可包含或使用之類型的預留位置。 例如， <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 類別可包含兩種類型：索引鍵和值。 因為泛型類型定義是只是範本，您無法建立泛型類型定義之類別、結構或介面的執行個體。  
+- *「泛型類型定義」* (generic type definition)，是做為範本的類別、結構或介面宣告，且具有可包含或使用之類型的預留位置。 例如， <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 類別可包含兩種類型：索引鍵和值。 因為泛型類型定義是只是範本，您無法建立泛型類型定義之類別、結構或介面的執行個體。  
   
--   「泛型型別參數」或「型別參數」，是泛型型別或方法定義中的預留位置。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 泛型類型有兩個類型參數， `TKey` 和 `TValue`，分別代表其索引鍵和值的類型。  
+- 「泛型型別參數」或「型別參數」，是泛型型別或方法定義中的預留位置。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 泛型類型有兩個類型參數， `TKey` 和 `TValue`，分別代表其索引鍵和值的類型。  
   
--   *「建構的泛型類型」*(constructed generic type) 或 *「建構的類型」*(constructed type)，是為泛型類型定義的泛型類型參數所指定之類型的結果。  
+- *「建構的泛型類型」*(constructed generic type) 或 *「建構的類型」*(constructed type)，是為泛型類型定義的泛型類型參數所指定之類型的結果。  
   
--   *「泛型類型引數」* (generic type argument) 是要替換泛型類型參數的所有類型。  
+- *「泛型類型引數」* (generic type argument) 是要替換泛型類型參數的所有類型。  
   
--   一般詞彙 *「泛型類型」* (generic type) 包括建構的類型和泛型類型定義。  
+- 一般詞彙 *「泛型類型」* (generic type) 包括建構的類型和泛型類型定義。  
   
--   泛型型別參數的「共變數」和「反變數」可讓您使用建構的泛型型別，其型別引數比目標建構的型別有更多衍生 (共變數) 或更少衍生 (反變數)。 共變數和反變數合稱為「變異數」。 如需詳細資訊，請參閱 [Covariance and Contravariance](../../../docs/standard/generics/covariance-and-contravariance.md) (共變數和反變數)。  
+- 泛型型別參數的「共變數」和「反變數」可讓您使用建構的泛型型別，其型別引數比目標建構的型別有更多衍生 (共變數) 或更少衍生 (反變數)。 共變數和反變數合稱為「變異數」。 如需詳細資訊，請參閱 [Covariance and Contravariance](../../../docs/standard/generics/covariance-and-contravariance.md) (共變數和反變數)。  
   
--   「條件約束」是對泛型型別參數的限制。 例如，您可以限制類型參數為實作 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 泛型介面的類型，以確保能夠排序類型的執行個體。 您也可以將類型參數限制為具有特定基底類別的類型，或是具有預設建構函式的類型，或為參考類型或實值類型。 的泛型類型的使用者無法替換沒有滿足這些條件約束的類型引數。  
+- 「條件約束」是對泛型型別參數的限制。 例如，您可以限制類型參數為實作 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 泛型介面的類型，以確保能夠排序類型的執行個體。 您也可以將類型參數限制為具有特定基底類別的類型，或是具有預設建構函式的類型，或為參考類型或實值類型。 的泛型類型的使用者無法替換沒有滿足這些條件約束的類型引數。  
   
--   *「泛型方法定義」* (generic method definition)，是一種有兩個參數清單的方法：泛型類型參數清單和型式參數清單。 類型參數會顯示為傳回類型或型式參數的類型，如下程式碼所示。  
+- *「泛型方法定義」* (generic method definition)，是一種有兩個參數清單的方法：泛型類型參數清單和型式參數清單。 類型參數會顯示為傳回類型或型式參數的類型，如下程式碼所示。  
   
  [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)]
  [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)]
@@ -103,29 +103,29 @@ ms.locfileid: "61683297"
 ## <a name="advantages-and-disadvantages-of-generics"></a>泛型的優缺點  
  使用泛型集合和委派有許多優點：  
   
--   類型安全。 泛型會將類型安全的負擔轉移給編譯器。 並不需要撰寫程式碼以測試是否為正確的資料類型，因為它在編譯時期會強制執行。 降低了類型轉換的需求以及執行階段錯誤的可能性。  
+- 類型安全。 泛型會將類型安全的負擔轉移給編譯器。 並不需要撰寫程式碼以測試是否為正確的資料類型，因為它在編譯時期會強制執行。 降低了類型轉換的需求以及執行階段錯誤的可能性。  
   
--   程式碼較少且更容易重複使用程式碼。 沒有需要從基底類型繼承，並覆寫成員。 例如， <xref:System.Collections.Generic.LinkedList%601> 可以立即使用。 例如，您可以下列變數宣告，建立字串的連結清單：  
+- 程式碼較少且更容易重複使用程式碼。 沒有需要從基底類型繼承，並覆寫成員。 例如， <xref:System.Collections.Generic.LinkedList%601> 可以立即使用。 例如，您可以下列變數宣告，建立字串的連結清單：  
   
      [!code-cpp[HowToGeneric#24](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/source2.cpp#24)]
      [!code-csharp[HowToGeneric#24](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/source2.cs#24)]
      [!code-vb[HowToGeneric#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/source2.vb#24)]  
   
--   效能較佳。 泛型集合類型在儲存和管理實值類型上，通常有較好的表現，因為不需要 box 實值類型。  
+- 效能較佳。 泛型集合類型在儲存和管理實值類型上，通常有較好的表現，因為不需要 box 實值類型。  
   
--   泛型委派讓類型安全回呼不需要建立多個委派類別。 例如， <xref:System.Predicate%601> 泛型委派可讓您建立一種方法，為特定類型實作您自己的搜尋條件，以及讓您搭配 <xref:System.Array> 類型的方法 (例如 <xref:System.Array.Find%2A>、 <xref:System.Array.FindLast%2A>和 <xref:System.Array.FindAll%2A>) 使用方法。  
+- 泛型委派讓類型安全回呼不需要建立多個委派類別。 例如， <xref:System.Predicate%601> 泛型委派可讓您建立一種方法，為特定類型實作您自己的搜尋條件，以及讓您搭配 <xref:System.Array> 類型的方法 (例如 <xref:System.Array.Find%2A>、 <xref:System.Array.FindLast%2A>和 <xref:System.Array.FindAll%2A>) 使用方法。  
   
--   泛型簡化了動態產生的程式碼。 當您搭配動態產生的程式碼使用泛型時，不需要產生類型。 這會增加您使用輕量動態方法而非產生整個組件的時機。 如需詳細資訊，請參閱[如何：定義和執行動態方法](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) 與 <xref:System.Reflection.Emit.DynamicMethod>。  
+- 泛型簡化了動態產生的程式碼。 當您搭配動態產生的程式碼使用泛型時，不需要產生類型。 這會增加您使用輕量動態方法而非產生整個組件的時機。 如需詳細資訊，請參閱[如何：定義和執行動態方法](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) 與 <xref:System.Reflection.Emit.DynamicMethod>。  
   
  下列是泛型的一些限制：  
   
--   泛型類型可以從大部分的基底類別衍生，例如 <xref:System.MarshalByRefObject> (且可使用條件約束要求泛型類型參數衍生自基底類別，例如 <xref:System.MarshalByRefObject>)。 不過，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 不支援內容繫結的泛型型別。 泛型類型可以衍生自 <xref:System.ContextBoundObject>，但嘗試建立該類型的執行個體會導致 <xref:System.TypeLoadException>。  
+- 泛型類型可以從大部分的基底類別衍生，例如 <xref:System.MarshalByRefObject> (且可使用條件約束要求泛型類型參數衍生自基底類別，例如 <xref:System.MarshalByRefObject>)。 不過，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 不支援內容繫結的泛型型別。 泛型類型可以衍生自 <xref:System.ContextBoundObject>，但嘗試建立該類型的執行個體會導致 <xref:System.TypeLoadException>。  
   
--   列舉不能有泛型類型參數。 列舉只能偶爾做為泛型 (例如，因為它位於使用 Visual Basic、C# 或 C++ 所定義的泛型類型中)。 如需詳細資訊，請參閱 [Common Type System](../../../docs/standard/base-types/common-type-system.md)中的＜列舉＞。  
+- 列舉不能有泛型類型參數。 列舉只能偶爾做為泛型 (例如，因為它位於使用 Visual Basic、C# 或 C++ 所定義的泛型類型中)。 如需詳細資訊，請參閱 [Common Type System](../../../docs/standard/base-types/common-type-system.md)中的＜列舉＞。  
   
--   輕量動態方法不可為泛型。  
+- 輕量動態方法不可為泛型。  
   
--   在 Visual Basic、C# 和 C++ 中，括在泛型類型中的巢狀類型無法具現化，除非已將指派給類型所有封入類型的類型參數。 另一個說法是，在反映中，已定義使用這些語言的巢狀類型，包括了其所有封入類型的類型參數。 這讓封入類型的類型參數，可用於巢狀類型的成員定義中。 如需詳細資訊，請參閱 <xref:System.Type.MakeGenericType%2A>中的「巢狀類型」。  
+- 在 Visual Basic、C# 和 C++ 中，括在泛型類型中的巢狀類型無法具現化，除非已將指派給類型所有封入類型的類型參數。 另一個說法是，在反映中，已定義使用這些語言的巢狀類型，包括了其所有封入類型的類型參數。 這讓封入類型的類型參數，可用於巢狀類型的成員定義中。 如需詳細資訊，請參閱 <xref:System.Type.MakeGenericType%2A>中的「巢狀類型」。  
   
     > [!NOTE]
     >  透過發出動態組件中的程式碼或使用 [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 所定義的巢狀型別，不一定要包含其封入型別的型別參數；不過，如果它不包含這些，型別參數就不在巢狀類別的範圍中。  
@@ -138,9 +138,9 @@ ms.locfileid: "61683297"
 ## <a name="class-library-and-language-support"></a>類別庫和語言支援  
  .NET 在下列命名空間中提供數個泛型集合類別：  
   
--   <xref:System.Collections.Generic> 命名空間包含 .NET 所提供的大部分泛型集合類型，例如 <xref:System.Collections.Generic.List%601> 和 <xref:System.Collections.Generic.Dictionary%602> 泛型類別。  
+- <xref:System.Collections.Generic> 命名空間包含 .NET 所提供的大部分泛型集合類型，例如 <xref:System.Collections.Generic.List%601> 和 <xref:System.Collections.Generic.Dictionary%602> 泛型類別。  
   
--   <xref:System.Collections.ObjectModel> 命名空間也包含其他泛型集合類型 (例如 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 泛型類別)，可用來向類別的使用者公開物件模型。  
+- <xref:System.Collections.ObjectModel> 命名空間也包含其他泛型集合類型 (例如 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 泛型類別)，可用來向類別的使用者公開物件模型。  
   
  實作排序及相等比較的泛型介面，和事件處理常式、轉換及搜尋述詞的泛型委派類型，一起提供於 <xref:System> 命名空間中。  
   

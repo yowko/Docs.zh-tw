@@ -16,12 +16,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], substituting cell values for display
 - data grids [Windows Forms], formatting data
 ms.assetid: a6e72c70-ce18-425f-828d-d57be6f96ab6
-ms.openlocfilehash: 5ce43054130db88792acab852b1e886285ff34d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dfd02e3e575c06bf7c37720fa3d6ecf4a3193491
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651411"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666374"
 ---
 # <a name="how-to-customize-data-formatting-in-the-windows-forms-datagridview-control"></a>HOW TO：自訂 Windows Forms DataGridView 控制項中的資料格式
 下列程式碼範例示範如何實作 <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> 事件的處理常式，這會根據其資料行和值變更儲存格的顯示方式。  

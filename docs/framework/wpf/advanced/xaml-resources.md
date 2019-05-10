@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f92519ca1f960961f95722bce5c8e1f3b4419292
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757075"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662189"
 ---
 # <a name="xaml-resources"></a>XAML 資源
 資源是可在應用程式中不同位置重複使用的物件。 資源的範例包括筆刷和樣式。 本概觀說明如何使用中的資源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 您也可以建立及存取資源，使用程式碼，或是交換使用程式碼之間和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 資源和程式碼](resources-and-code.md)。  

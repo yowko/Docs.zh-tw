@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d361b0c471402c097dfac799eb58ef08209d4343
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795538"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664362"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>在 Windows 上的 Visual Studio 2017 中使用 Docker 工具
 
@@ -79,7 +79,7 @@ ms.locfileid: "61795538"
 | 自動在專案載入提取所需的 Docker 映像 | 開啟 | Docker Compose | 為了提高效能載入專案時，Visual Studio 會啟動 Docker 提取作業在背景中，因此當您準備好要執行您的程式碼，將映像已下載，或是正在下載。 如果您只會載入專案，並瀏覽程式碼，您可以避免下載容器映像，您不需要將此關閉。 |
 | 自動在背景中啟動容器 | 開啟 | Docker Compose | 再次為了提高效能，Visual Studio 會建立一個容器與磁碟區掛接供當您建置並執行您的容器。 如果您想要控制您的容器建立時，請關閉這個功能。 |
 | 自動終止容器解決方案關閉 | 開啟 | Docker Compose | 如果您想要繼續執行之後關閉解決方案，或關閉 Visual Studio 方案的容器，請開啟此功能。 |
-| 不要提示信任 localhost SSL 憑證 | Off | ASP.NET Core 2.1 專案 | 如果 localhost SSL 憑證不受信任，Visual Studio 在除非已選取此核取方塊，會先提示每次您執行您的專案。 |
+| 不要提示信任 localhost SSL 憑證 | Off | ASP.NET Core 2.2 專案 | 如果 localhost SSL 憑證不受信任，Visual Studio 在除非已選取此核取方塊，會先提示每次您執行您的專案。 |
 
 > [!WARNING]
 > 如果 localhost SSL 憑證不受信任，而且您核取方塊來隱藏提示，則 HTTPS web 要求可能會在您的應用程式或服務執行階段失敗。 在此情況下，取消核取**不要提示**核取方塊，執行您的專案，並指出在提示字元中的信任。

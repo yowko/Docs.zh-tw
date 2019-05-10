@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: e6f8ed3b893319e771eb0af96da7a58a7fad5c9b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ff820256a27ce455b8eda0c4e7192bc26a3199c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954256"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663219"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML 的類型轉換子和標記延伸
 類型轉換器和標記延伸是 XAML 類型系統和 XAML 寫入器用以產生物件圖形元件的兩項技術。 雖然兩者共用某些特性，但類型轉換器和標記延伸在 XAML 節點資料流中會以不同的方式表示。 在本文件集中，有時會將類型轉換器、標記延伸和類似的建構統稱為值轉換器。  

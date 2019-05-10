@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c82d32fe5b1e62a19ff5e2920c5943f1303b2d64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3e7a8e6509cea5f9035e3b8544aa37aa99681822
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599467"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650319"
 ---
 # <a name="serialization-and-metadata"></a>序列化和中繼資料
 如果您的應用程式將物件序列化和還原序列化，您可能需要將項目加入至執行階段指示詞 (.rd.xml) 檔案，以確保執行階段有必要的中繼資料存在。 有兩種類別的序列化程式，在執行階段指示詞檔案中，各需要不同的處理：  

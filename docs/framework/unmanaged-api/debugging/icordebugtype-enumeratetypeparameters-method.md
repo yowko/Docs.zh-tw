@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8fa39a54437e60737aa052c495f58422bc0d3fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1b48e375286e709a2ce570769c9a0453765824ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946233"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622681"
 ---
 # <a name="icordebugtypeenumeratetypeparameters-method"></a>ICorDebugType::EnumerateTypeParameters 方法
 取得包含 ICorDebugTypeEnum 介面指標<xref:System.Type>類別此 ICorDebugType 所參考的參數。  

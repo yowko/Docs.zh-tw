@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: 4415608bcfca63b43b3d9ebf17ce622ccd418775
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 71f8cb96c9981bbfc55236ea815fa5f5cb0e8aaf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921000"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622665"
 ---
 # <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a>'\<成員名稱 >' 模稜兩可，跨繼承介面\<介面名稱 1>.< >' 和'\<介面名稱 2&gt >'
 此介面會繼承自多個介面的兩個或多個具有相同名稱的成員。  
@@ -21,7 +21,7 @@ ms.locfileid: "61921000"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   將值轉換成您想要使用的基底介面例如：  
+- 將值轉換成您想要使用的基底介面例如：  
   
     ```  
     Interface Left  

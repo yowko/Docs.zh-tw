@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pages [WPF], navigating to
 - navigation [WPF], to page
 ms.assetid: 2a556fc0-748b-417f-a58a-0d05a7afb66f
-ms.openlocfilehash: c8e808180682bfd97f397d8cadd1e4deafd7eb06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 458769355521c8a3653e3bc80a6ab8a0d0f7c6dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947731"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622828"
 ---
 # <a name="how-to-navigate-to-a-page"></a>HOW TO：巡覽至頁面
 此範例說明數種方式，在其中一個頁面可以巡覽到從<xref:System.Windows.Navigation.NavigationWindow>。  

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: bb87879fdf584a439e09839bf4321b85e7dd6a43
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f4857d410b16c3bbcb2129cec0d753a1c3d7a726
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602453"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469489"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>擴充 Visual Basic 應用程式模型
 您可以將功能加入應用程式模型藉由覆寫`Overridable`的成員<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>類別。 這項技術可讓您自訂應用程式模型的行為，並加入您自己的方法呼叫，在應用程式啟動和關閉。  
@@ -76,10 +76,10 @@ ms.locfileid: "64602453"
   
  如果應用程式是單一執行個體的應用程式，而且應用程式已在執行中，應用程式的後續執行個體會呼叫<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>應用程式，然後結束原始執行個體上的方法。  
  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)>建構函式呼叫<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>屬性來判斷要用於應用程式的表單的文字轉譯引擎。 根據預設，<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>屬性會傳回`False`，表示使用 GDI 文字轉譯引擎，這是預設值在[!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]。 您可以覆寫<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>屬性，以傳回`True`，這表示使用 GDI + 文字轉譯引擎，這是 Visual Basic.NET 2002年和 Visual Basic.NET 2003年中的預設值。  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)>建構函式呼叫<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>屬性來判斷要用於應用程式的表單的文字轉譯引擎。 根據預設，<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>屬性會傳回`False`，表示使用 GDI 文字轉譯引擎，這是 Visual Basic 2005 和更新版本中的預設值。 您可以覆寫<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>屬性，以傳回`True`，這表示使用 GDI + 文字轉譯引擎，這是 Visual Basic.NET 2002年和 Visual Basic.NET 2003年中的預設值。  
   
 ## <a name="configuring-the-application"></a>設定應用程式  
- Visual Basic 應用程式模型的一部分<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering>類別提供受保護的內容，設定應用程式。 在實作類別的建構函式，就應該設定這些屬性。  
+ Visual Basic 應用程式模型的一部分<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>類別提供受保護的內容，設定應用程式。 在實作類別的建構函式，就應該設定這些屬性。  
   
  在預設的 Windows Form 專案中，**專案設計工具**建立程式碼來設定與設計工具設定的屬性。 只有在應用程式正在啟動; 時，才使用屬性設定應用程式啟動後沒有任何作用。  
   

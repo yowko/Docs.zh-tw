@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad2c41cc99422217b9f85acbd32f91ac78a9a7c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 84af29aa169710f8de86c383429bf391fbc20bd3
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614232"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469537"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>追蹤和稽核應用程式
 追蹤可讓您在應用程式執行時，監視應用程式的執行。 您可以在開發 .NET Framework 應用程式時，加入追蹤和偵錯檢測，當您在開發應用程式時，以及將其部署之後，都可以使用該檢測。 您可以使用 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType> 和 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 類別，將錯誤和應用程式執行的相關資訊，記錄在記錄檔、文字檔案或其他裝置中，以供稍後進行分析。  
@@ -134,7 +134,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  您可以實作自己的接聽程式來產生自訂結果。 比方說，自訂追蹤接聽程式可能會將訊息顯示在訊息方塊，或連接至資料庫，以將訊息加入資料表。 所有自訂接聽程式應該都會支援上述六種方法。 如需有關如何建立開發人員定義之接聽程式的詳細資訊，請參閱 .NET Framework 參考中的 <xref:System.Diagnostics.TraceListener>。  
   
 > [!NOTE]
->  在 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 中，**Debug.Write**、**Debug.WriteIf**、**Debug.WriteLine** 和 **Debug.WriteLineIf** 方法，已經取代舊版 Visual Basic 中可用的 **Debug.Print** 方法。  
+>  在 Visual Basic **Debug.Write**， **Debug.WriteIf**， **Debug.WriteLine**，以及**Debug.WriteLineIf**方法，已經取代**Debug.Print**較早版本的 Visual Basic 中可用的方法。  
   
  **Write** 和 **WriteLine** 方法一律會寫入您指定的文字。 **Assert**、**WriteIf** 和 **WriteLineIf** 需要 Boolean 引數，以控制是否要寫入指定的文字；只有當運算式為 **true** (針對 **WriteIf** 和 **WriteLineIf**) 或 **false** (針對 **Assert**) 時，才會寫入指定的文字。 **Fail** 方法一律會寫入指定的文字。 如需詳細資訊，請參閱[如何：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)和.NET Framework 參考。  
   
