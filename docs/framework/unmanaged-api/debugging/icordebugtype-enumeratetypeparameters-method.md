@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8fa39a54437e60737aa052c495f58422bc0d3fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1b48e375286e709a2ce570769c9a0453765824ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946233"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622681"
 ---
-# <a name="icordebugtypeenumeratetypeparameters-method"></a><span data-ttu-id="1f61a-102">ICorDebugType::EnumerateTypeParameters 方法</span><span class="sxs-lookup"><span data-stu-id="1f61a-102">ICorDebugType::EnumerateTypeParameters Method</span></span>
-<span data-ttu-id="1f61a-103">取得包含 ICorDebugTypeEnum 介面指標<xref:System.Type>類別此 ICorDebugType 所參考的參數。</span><span class="sxs-lookup"><span data-stu-id="1f61a-103">Gets an interface pointer to an ICorDebugTypeEnum that contains the <xref:System.Type> parameters of the class referenced by this ICorDebugType.</span></span>  
+# <a name="icordebugtypeenumeratetypeparameters-method"></a><span data-ttu-id="64861-102">ICorDebugType::EnumerateTypeParameters 方法</span><span class="sxs-lookup"><span data-stu-id="64861-102">ICorDebugType::EnumerateTypeParameters Method</span></span>
+<span data-ttu-id="64861-103">取得包含 ICorDebugTypeEnum 介面指標<xref:System.Type>類別此 ICorDebugType 所參考的參數。</span><span class="sxs-lookup"><span data-stu-id="64861-103">Gets an interface pointer to an ICorDebugTypeEnum that contains the <xref:System.Type> parameters of the class referenced by this ICorDebugType.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1f61a-104">語法</span><span class="sxs-lookup"><span data-stu-id="1f61a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="64861-104">語法</span><span class="sxs-lookup"><span data-stu-id="64861-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateTypeParameters (  
@@ -35,24 +35,24 @@ HRESULT EnumerateTypeParameters (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1f61a-105">參數</span><span class="sxs-lookup"><span data-stu-id="1f61a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="64861-105">參數</span><span class="sxs-lookup"><span data-stu-id="64861-105">Parameters</span></span>  
  `ppTyParEnum`  
- <span data-ttu-id="1f61a-106">[out]位址指標`ICorDebugTypeEnum`包含類型的參數。</span><span class="sxs-lookup"><span data-stu-id="1f61a-106">[out] A pointer to the address of an `ICorDebugTypeEnum` that contains the parameters of the type.</span></span>  
+ <span data-ttu-id="64861-106">[out]位址指標`ICorDebugTypeEnum`包含類型的參數。</span><span class="sxs-lookup"><span data-stu-id="64861-106">[out] A pointer to the address of an `ICorDebugTypeEnum` that contains the parameters of the type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1f61a-107">備註</span><span class="sxs-lookup"><span data-stu-id="1f61a-107">Remarks</span></span>  
- <span data-ttu-id="1f61a-108">您可以使用`EnumerateTypeParameters`如果所傳回的 CorElementType 值[icordebugtype:: Gettype](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) ELEMENT_TYPE_CLASS、 ELEMENT_TYPE_VALUETYPE、 ELEMENT_TYPE_ARRAY、 ELEMENT_TYPE_SZARRAY、 ELEMENT_TYPE_BYREF、 ELEMENT_TYPE_PTR,2001 年或 typ ELEMENT_TYPE_FNPTR。</span><span class="sxs-lookup"><span data-stu-id="1f61a-108">You can use `EnumerateTypeParameters` if the CorElementType value returned by [ICorDebugType::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) is ELEMENT_TYPE_CLASS, ELEMENT_TYPE_VALUETYPE, ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF, ELEMENT_TYPE_PTR, or ELEMENT_TYPE_FNPTR.</span></span> <span data-ttu-id="1f61a-109">參數數目和它們的順序取決於類型：</span><span class="sxs-lookup"><span data-stu-id="1f61a-109">The number of parameters and their order depends on the type:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="64861-107">備註</span><span class="sxs-lookup"><span data-stu-id="64861-107">Remarks</span></span>  
+ <span data-ttu-id="64861-108">您可以使用`EnumerateTypeParameters`如果所傳回的 CorElementType 值[icordebugtype:: Gettype](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) ELEMENT_TYPE_CLASS、 ELEMENT_TYPE_VALUETYPE、 ELEMENT_TYPE_ARRAY、 ELEMENT_TYPE_SZARRAY、 ELEMENT_TYPE_BYREF、 ELEMENT_TYPE_PTR,2001 年或 typ ELEMENT_TYPE_FNPTR。</span><span class="sxs-lookup"><span data-stu-id="64861-108">You can use `EnumerateTypeParameters` if the CorElementType value returned by [ICorDebugType::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) is ELEMENT_TYPE_CLASS, ELEMENT_TYPE_VALUETYPE, ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF, ELEMENT_TYPE_PTR, or ELEMENT_TYPE_FNPTR.</span></span> <span data-ttu-id="64861-109">參數數目和它們的順序取決於類型：</span><span class="sxs-lookup"><span data-stu-id="64861-109">The number of parameters and their order depends on the type:</span></span>  
   
-- <span data-ttu-id="1f61a-110">ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE:中所包含的型別參數數目`ICorDebugTypeEnum`，這個方法傳回時，將取決於對應的類別的型式的型別參數數目。</span><span class="sxs-lookup"><span data-stu-id="1f61a-110">ELEMENT_TYPE_CLASS or ELEMENT_TYPE_VALUETYPE: The number of type parameters contained in the `ICorDebugTypeEnum` that this method returns, will depend on the number of formal type parameters for the corresponding class.</span></span> <span data-ttu-id="1f61a-111">例如，如果類型是`class Dict<String,int32>`，然後`EnumerateTypeParameters`會傳回`ICorDebugTypeEnum`，其中包含物件，代表`String`和`int32`序列中。</span><span class="sxs-lookup"><span data-stu-id="1f61a-111">For example, if the type is `class Dict<String,int32>`, then `EnumerateTypeParameters` will return an `ICorDebugTypeEnum` that contains objects representing `String` and `int32` in sequence.</span></span>  
+- <span data-ttu-id="64861-110">ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE:中所包含的型別參數數目`ICorDebugTypeEnum`，這個方法傳回時，將取決於對應的類別的型式的型別參數數目。</span><span class="sxs-lookup"><span data-stu-id="64861-110">ELEMENT_TYPE_CLASS or ELEMENT_TYPE_VALUETYPE: The number of type parameters contained in the `ICorDebugTypeEnum` that this method returns, will depend on the number of formal type parameters for the corresponding class.</span></span> <span data-ttu-id="64861-111">例如，如果類型是`class Dict<String,int32>`，然後`EnumerateTypeParameters`會傳回`ICorDebugTypeEnum`，其中包含物件，代表`String`和`int32`序列中。</span><span class="sxs-lookup"><span data-stu-id="64861-111">For example, if the type is `class Dict<String,int32>`, then `EnumerateTypeParameters` will return an `ICorDebugTypeEnum` that contains objects representing `String` and `int32` in sequence.</span></span>  
   
-- <span data-ttu-id="1f61a-112">TYP ELEMENT_TYPE_FNPTR:中所包含的型別參數數目`ICorDebugTypeEnum`會是其中一個大於函式所接受的引數數目。</span><span class="sxs-lookup"><span data-stu-id="1f61a-112">ELEMENT_TYPE_FNPTR: The number of type parameters contained in the `ICorDebugTypeEnum` will be one greater than the number of arguments accepted by the function.</span></span> <span data-ttu-id="1f61a-113">第一個型別參數中包含`ICorDebugTypeEnum`是函式，傳回的型別，而後續的型別參數是函式的參數。</span><span class="sxs-lookup"><span data-stu-id="1f61a-113">The first type parameter contained in the `ICorDebugTypeEnum` is the return type for the function, and the subsequent type parameters are the function's parameters.</span></span>  
+- <span data-ttu-id="64861-112">TYP ELEMENT_TYPE_FNPTR:中所包含的型別參數數目`ICorDebugTypeEnum`會是其中一個大於函式所接受的引數數目。</span><span class="sxs-lookup"><span data-stu-id="64861-112">ELEMENT_TYPE_FNPTR: The number of type parameters contained in the `ICorDebugTypeEnum` will be one greater than the number of arguments accepted by the function.</span></span> <span data-ttu-id="64861-113">第一個型別參數中包含`ICorDebugTypeEnum`是函式，傳回的型別，而後續的型別參數是函式的參數。</span><span class="sxs-lookup"><span data-stu-id="64861-113">The first type parameter contained in the `ICorDebugTypeEnum` is the return type for the function, and the subsequent type parameters are the function's parameters.</span></span>  
   
-- <span data-ttu-id="1f61a-114">ELEMENT_TYPE_ARRAY、 ELEMENT_TYPE_SZARRAY、 ELEMENT_TYPE_BYREF，還是 ELEMENT_TYPE_PTR:會傳回一個型別參數。</span><span class="sxs-lookup"><span data-stu-id="1f61a-114">ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF, or ELEMENT_TYPE_PTR: One type parameter will be returned.</span></span> <span data-ttu-id="1f61a-115">例如，如果類型是陣列類型這類`int32[]`，`EnumerateTypeParameters`會傳回`ICorDebugTypeEnum`，其中包含這個物件代表`int32`。</span><span class="sxs-lookup"><span data-stu-id="1f61a-115">For example, if the type is an array type such as `int32[]`,`EnumerateTypeParameters` will return an `ICorDebugTypeEnum` that contains an object representing `int32`.</span></span>  
+- <span data-ttu-id="64861-114">ELEMENT_TYPE_ARRAY、 ELEMENT_TYPE_SZARRAY、 ELEMENT_TYPE_BYREF，還是 ELEMENT_TYPE_PTR:會傳回一個型別參數。</span><span class="sxs-lookup"><span data-stu-id="64861-114">ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF, or ELEMENT_TYPE_PTR: One type parameter will be returned.</span></span> <span data-ttu-id="64861-115">例如，如果類型是陣列類型這類`int32[]`，`EnumerateTypeParameters`會傳回`ICorDebugTypeEnum`，其中包含這個物件代表`int32`。</span><span class="sxs-lookup"><span data-stu-id="64861-115">For example, if the type is an array type such as `int32[]`,`EnumerateTypeParameters` will return an `ICorDebugTypeEnum` that contains an object representing `int32`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1f61a-116">需求</span><span class="sxs-lookup"><span data-stu-id="1f61a-116">Requirements</span></span>  
- <span data-ttu-id="1f61a-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1f61a-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="64861-116">需求</span><span class="sxs-lookup"><span data-stu-id="64861-116">Requirements</span></span>  
+ <span data-ttu-id="64861-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="64861-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1f61a-118">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1f61a-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="64861-118">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="64861-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1f61a-119">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1f61a-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="64861-119">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="64861-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1f61a-120">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1f61a-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="64861-120">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="64861-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
