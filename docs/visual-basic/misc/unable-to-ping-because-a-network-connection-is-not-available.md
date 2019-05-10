@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrNetwork_NetworkNotAvailable
 ms.assetid: 8d2bac12-bc6a-42ae-b28b-80b026dfabce
-ms.openlocfilehash: 10d03ce67776a4d4942c2c9f016a55a70b5a3374
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c5790349c9262481a96490a7880a22378169317
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922365"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913264"
 ---
 # <a name="unable-to-ping-because-a-network-connection-is-not-available"></a>無法 Ping，因為有一個網路連線無法使用
 無法執行此作業，因為沒有網路連線可用。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   重新連線到網路，然後重試一次作業。  
+- 重新連線到網路，然後重試一次作業。  
   
 ## <a name="see-also"></a>另請參閱
 

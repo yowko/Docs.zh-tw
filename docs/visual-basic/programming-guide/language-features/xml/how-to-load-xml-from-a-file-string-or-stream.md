@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML [Visual Basic], loading
 - LINQ to XML [Visual Basic], loading XML from files
 ms.assetid: 2b02dcec-4cca-4575-b4ad-89ceb87b984c
-ms.openlocfilehash: 2b9da2062068ef25c5df97ef19b1502999ea78ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 097c766fc9efbc810859ab693d3b26f5c1db57ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052530"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598327"
 ---
 # <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>HOW TO：從檔案、 字串或 Stream (Visual Basic) 載入 XML
 您可以建立[XML 常值](../../../../visual-basic/language-reference/xml-literals/index.md)並且填入從外部來源，例如檔案、 字串或資料流的內容使用幾種方法。 在下列範例會顯示這些方法。  

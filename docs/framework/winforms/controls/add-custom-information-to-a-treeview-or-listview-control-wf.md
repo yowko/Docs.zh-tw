@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Forms)
+title: 作法：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 302eb1b88d4e43b4e2bd6395e27a3a6489320085
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9e2942e11ed10dffcfad8f0329295827b7f0d4d8
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640390"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452732"
 ---
-# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>HOW TO：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Forms)
+# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>作法：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Forms)
 您可以在 Windows Forms 中建立衍生的節點<xref:System.Windows.Forms.TreeView>控制項或中的衍生項目<xref:System.Windows.Forms.ListView>控制項。 衍生可讓您新增您所需的任何欄位，以及新增自訂方法和建構函式來處理它們。 這項功能的其中一個用途是將 Customer 物件附加至每個樹狀節點或清單項目。 這裡的範例是針對<xref:System.Windows.Forms.TreeView>控制項，但是相同的方法可用於<xref:System.Windows.Forms.ListView>控制項。  
   
 ### <a name="to-derive-a-tree-node"></a>衍生樹狀節點  
@@ -86,8 +86,8 @@ ms.locfileid: "61640390"
     // You should replace the bold text file   
     // in the sample below with a text file of your own choosing.  
     // Note the escape character used (@) when specifying the path.  
-    treeView1.Nodes.Add(new myTreeNode (System.Environment.GetFolderPath _  
-       (System.Environment.SpecialFolder.Personal) _  
+    treeView1.Nodes.Add(new myTreeNode(System.Environment.GetFolderPath
+       (System.Environment.SpecialFolder.Personal)
        + @"\TextFile.txt") );  
     ```  
   
@@ -100,7 +100,7 @@ ms.locfileid: "61640390"
        "\\TextFile.txt")));  
     ```  
   
-2. 如果您傳遞的樹狀節點和它的類型為<xref:System.Windows.Forms.TreeNode>類別，則您必須轉換為衍生的類別。 轉型是物件類型之間的明確轉換。 如需有關轉換的詳細資訊，請參閱 <<c0> [ 隱含和明確轉換](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)(Visual Basic)、 [（) 運算子](~/docs/csharp/language-reference/operators/invocation-operator.md)(Visual C#)，或[轉型運算子: （)](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]).</c0>  
+2. 如果您傳遞的樹狀節點和它的類型為<xref:System.Windows.Forms.TreeNode>類別，則您必須轉換為衍生的類別。 轉型是物件類型之間的明確轉換。 如需有關轉換的詳細資訊，請參閱 <<c0> [ 隱含和明確轉換](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)(Visual Basic)、[轉型和類型轉換](~/docs/csharp/programming-guide/types/casting-and-type-conversions.md)(Visual C#)，或[轉型運算子: （)](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]).</c0>  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  

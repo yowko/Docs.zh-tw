@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
-ms.openlocfilehash: ca0f95342783d22559761294ccea6056cd3e4fa7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b4226c83f25807e013823031820d58790bb6db2
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918446"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912792"
 ---
 # <a name="long-data-type-visual-basic"></a>Long 資料類型 (Visual Basic)
 
@@ -68,13 +68,13 @@ Dim number = &H_0FAC_0326_1489_D68CL
 
 ## <a name="programming-tips"></a>程式設計提示
 
--   **Interop 考量。** 如果您要使用的元件不是撰寫.NET framework，例如 Automation 或 COM 物件，請記住，`Long`在其他環境中會有不同的資料寬度 （32 位元）。 如果您在這類元件傳遞 32 位元引數，將它宣告為`Integer`而不是`Long`中新的 Visual Basic 程式碼。  
+- **Interop 考量。** 如果您要使用的元件不是撰寫.NET framework，例如 Automation 或 COM 物件，請記住，`Long`在其他環境中會有不同的資料寬度 （32 位元）。 如果您在這類元件傳遞 32 位元引數，將它宣告為`Integer`而不是`Long`中新的 Visual Basic 程式碼。  
   
--   **擴展。** `Long`資料類型可擴展為`Decimal`， `Single`，或`Double`。 這表示，您可以將 `Long` 轉換成這些類型的任何一種，而不會發生 <xref:System.OverflowException?displayProperty=nameWithType> 錯誤。  
+- **擴展。** `Long`資料類型可擴展為`Decimal`， `Single`，或`Double`。 這表示，您可以將 `Long` 轉換成這些類型的任何一種，而不會發生 <xref:System.OverflowException?displayProperty=nameWithType> 錯誤。  
   
--   **類型字元。** 將常值類型字元 `L` 附加到常值，會強制其成為 `Long` 資料類型。 將識別項類型字元 `&` 附加到任何識別項，會強制其成為 `Long`。  
+- **類型字元。** 將常值類型字元 `L` 附加到常值，會強制其成為 `Long` 資料類型。 將識別項類型字元 `&` 附加到任何識別項，會強制其成為 `Long`。  
   
--   **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.Int64?displayProperty=nameWithType> 結構。  
+- **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.Int64?displayProperty=nameWithType> 結構。  
 
 ## <a name="see-also"></a>另請參閱
 

@@ -2,12 +2,12 @@
 title: 部分信任功能相容性
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1ff3b6e4d54dcbc6cc884c9bcd1bf5aa4fb3a526
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039061"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603681"
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信任功能相容性
 在部分信任環境中執行時，Windows Communication Foundation (WCF) 支援有限的功能子集。 部分信任環境所支援的功能，主要是用在如 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 主題所述的特定案例中。  

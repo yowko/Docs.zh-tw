@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e887747a3f036d10e5e5fec6c0cadaf9f34050df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 79a8d378f69ced0bc22926b066e76dc515b06559
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674294"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65210435"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<Appcontextswitchoverrides> > 項目
 定義一或多個由 <xref:System.AppContext> 類別所使用的參數，以提供新功能的退出機制。  
@@ -90,15 +90,17 @@ ms.locfileid: "61674294"
 |`Switch.System.Net.`<br/>`DontEnableSchUseStrongCrypto`|控制項是否<xref:System.Net.ServicePointManager?displayProperty=nameWithType>和<xref:System.Net.Security.SslStream?displayProperty=nameWithType>類別可以使用 SSL 3.0 通訊協定。 如需詳細資訊，請參閱[風險降低：TLS 通訊協定](../../../migration-guide/mitigation-tls-protocols.md)。|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSystemDefaultTlsVersions`|停用還原回預設值是 Tls12、 Tls11、 Tls 的 SystemDefault TLS 版本。|.NET Framework 4.7|
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|停用 SslStream TLS 伺服器端的警示。|.NET Framework 4.7|
+|`Switch.System.Runtime.InteropServices.`<br/>`DoNotMarshalOutByrefSafeArrayOnInvoke`|控制是否在 COM interop 事件 ByRef SafeArray 參數封送處理回原生程式碼 (`false`)，或是否封送處理回原生程式碼停用 (`true`)。|.NET Framework 4.8|
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |控制項是否[DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer)序列化某些於 ECMAScript V6 及 V8 標準為基礎的控制字元。 如需詳細資訊，請參閱[風險降低：序列化使用 DataContractJsonSerializer 控制字元](../../../migration-guide/mitigation-serialization-control-characters.md)| .NET Framework 4.7 |
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|控制項是否<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>支援多個調整或只有單一調整時區。 如果`true`，它會使用<xref:System.TimeZoneInfo>類型來序列化和還原序列化日期和時間資料; 否則它會使用<xref:System.TimeZone>型別，不支援多個調整規則。|.NET Framework 4.6.2|
 |`Switch.System.Runtime.Serialization.UseNewMaxArraySize`|控制項是否<xref:System.Runtime.Serialization.ObjectManager?displayProperty=nameWithType>物件序列化和還原序列化期間使用較大的陣列。 此參數設定為`true`例如改善效能的序列化和還原序列化的類型的大型物件圖形<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>。 |.NET Framework 4.7.2|
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|控制項是否<xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType>建構函式會設定新的物件<xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType>與現有的物件參考的屬性。 如需詳細資訊，請參閱[風險降低：ClaimsIdentity 建構函式](../../../migration-guide/mitigation-claimsidentity-constructor.md)。|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|控制是否要重複使用嘗試<xref:System.Security.Cryptography.AesCryptoServiceProvider>解密程式會擲回<xref:System.Security.Cryptography.CryptographicException>。 如需詳細資訊，請參閱 < [AesCryptoServiceProvider 解密程式提供可重複使用的轉換](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform)。|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|控制項是否的值[cspparameters.parentwindowhandle 應該](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle)屬性是[IntPtr](xref:System.IntPtr)代表視窗的記憶體位置處理，或它是否視窗控制代碼 (HWND)。 如需詳細資訊，請參閱[風險降低：Cspparameters.parentwindowhandle 應該有 HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value)。 |.NET Framework 4.7|   
-|`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|判斷某些 SignedCMS 作業的預設值是 SHA1 或 SHA256。<br>由於 SHA1 的衝突問題，Microsoft 建議使用 SHA256。|.NET Framework 4.7.1|
-|`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|判斷某些 SignedXML 作業的預設值是 SHA1 或 SHA256。<br>由於 SHA1 的衝突問題，Microsoft 建議使用 SHA256。|.NET Framework 4.7.1|
 |`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|控制是否使用受管理的密碼編譯類別在 FIPS 模式下會擲回<xref:System.Security.Cryptography.CryptographicException>(`true`) 或依賴系統程式庫的實作 (`false`)。|.NET Framework 4.8|
+|`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|判斷某些 SignedCMS 作業的預設值是 SHA1 或 SHA256。<br>由於 SHA1 的衝突問題，Microsoft 建議使用 SHA256。|.NET Framework 4.7.1|
+|`Switch.System.Security.Cryptography.X509Certificates.`<br/>`ECDsaCertificateExtensions.UseLegacyPublicKeyReader`|控制項是否<xref:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey%2A?displayProperty=nameWithtype>方法可正確處理由作業系統所支援的所有具名的曲線 (`false`) 或是要還原成舊版行為。|.NET Framework 4.8|
+|`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|判斷某些 SignedXML 作業的預設值是 SHA1 或 SHA256。<br>由於 SHA1 的衝突問題，Microsoft 建議使用 SHA256。|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|決定是否`TransportWithMessageCredential`安全性模式可讓訊息與不帶正負號"to"標頭。 這是選擇性參數。 如需詳細資訊，請參閱 < [.NET Framework 4.6.1 中的執行階段變更](../../../migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf)。|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|控制項是否<xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})>建構函式會擲回<xref:System.ArgumentException>如果其中一個項目是`null`。|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|決定是否在嘗試使用 X509 憑證使用 CSG 金鑰儲存提供者會擲回例外狀況。 如需詳細資訊，請參閱 < [WCF 傳輸安全性支援使用 CNG 儲存的憑證](../../../migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng)。|.NET Framework 4.6.1|

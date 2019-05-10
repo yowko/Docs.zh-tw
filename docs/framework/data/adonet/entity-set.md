@@ -2,12 +2,12 @@
 title: 實體集
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-ms.openlocfilehash: 7fcaa2cb9bac02271940a712d4d044df25d7d4cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: da70d25790918340e92df83b1c2c704c5dc54226
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033952"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599640"
 ---
 # <a name="entity-set"></a>實體集
 *實體集*是邏輯容器的執行個體[實體類型](../../../../docs/framework/data/adonet/entity-type.md)和衍生自該實體類型的任何類型的執行個體。 (有關衍生型別的資訊，請參閱[實體資料模型：繼承](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)。)實體類型和實體集之間的關聯性相當於一個資料列與關聯式資料庫中的資料表之間的關聯性：資料列，例如實體類型描述資料結構，和資料表，這類實體集包含指定的結構的執行個體。 實體集不是資料模型建構，也就是說，它不會描述資料結構。 反之，實體集會提供建構，讓裝載或儲存環境 (例如 Common Language Runtime 或 SQL Server 資料庫) 群組實體類型執行個體，以將其對應至資料存放區。  

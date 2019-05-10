@@ -11,12 +11,12 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-ms.openlocfilehash: ea719b60a6bcd40494666d4923fad296a8ddae70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 65ee23c59958eefb94c7ab0c6bef4a7e992a121c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907383"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601173"
 ---
 # <a name="composite-data-types-visual-basic"></a>複合資料類型 (Visual Basic)
 除了提供基本資料型別 Visual Basic，您也可以組合來建立不同類型的項目*複合資料型別*結構、 陣列等類別。 從基本型別，以及從其他複合類型，您可以建置複合資料類型。 比方說，您可以定義陣列的結構項目或結構的陣列成員。  

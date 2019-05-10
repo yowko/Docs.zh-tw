@@ -9,12 +9,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-ms.openlocfilehash: 2b051d22fe3d331626f2e181c008043e576b7526
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69d5294eacc59718adb1b0a226594d2cf69273f5
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908124"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913457"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>疑難排解陣列 (Visual Basic)
 此頁面會列出使用陣列時所發生的一些常見問題。  
@@ -22,7 +22,7 @@ ms.locfileid: "61908124"
 ## <a name="compilation-errors-declaring-and-initializing-an-array"></a>宣告和初始化陣列的編譯錯誤  
  從 宣告、 建立和初始化陣列的規則的誤解，可能會發生編譯錯誤。 錯誤的最常見的原因如下所示：  
   
--   提供[New 運算子](../../../../visual-basic/language-reference/operators/new-operator.md)陣列變數宣告中指定的維度長度之後的子句。 下列程式碼行顯示此類型的無效的宣告。  
+- 提供[New 運算子](../../../../visual-basic/language-reference/operators/new-operator.md)陣列變數宣告中指定的維度長度之後的子句。 下列程式碼行顯示此類型的無效的宣告。  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ ms.locfileid: "61908124"
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
--   指定維度的長度超過一個最上層陣列的不規則陣列。 下列程式碼行顯示此類型的無效的宣告。  
+- 指定維度的長度超過一個最上層陣列的不規則陣列。 下列程式碼行顯示此類型的無效的宣告。  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
--   省略`New`關鍵字指定的項目值時。 下列程式碼行顯示此類型的無效的宣告。  
+- 省略`New`關鍵字指定的項目值時。 下列程式碼行顯示此類型的無效的宣告。  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
--   提供`New`子句但不含大括號 (`{}`)。 下列程式碼行顯示此類型的無效的宣告。  
+- 提供`New`子句但不含大括號 (`{}`)。 下列程式碼行顯示此類型的無效的宣告。  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   

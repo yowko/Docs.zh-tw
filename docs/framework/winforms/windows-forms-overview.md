@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: bbc77c0074b35a95140b35d71e89c51ad8abac62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5eee8b4b046bd4d3f9c71b692f4bac3dd6bcea2c
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800174"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211775"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms 概觀
 
@@ -32,7 +32,7 @@ ms.locfileid: "61800174"
 
  Windows Form 有豐富的 UI 控制項，可以模擬高階應用程式 (例如 Microsoft Office) 中的功能。 當您使用 <xref:System.Windows.Forms.ToolStrip> 和 <xref:System.Windows.Forms.MenuStrip> 控制項時，您可以建立包含文字和影像的工具列和功能表、顯示子功能表，以及裝載其他控制項，例如文字方塊和下拉式方塊。
 
- 使用 Visual Studio-拖**Windows Form 設計工具**，您可以輕鬆地建立 Windows Forms 應用程式。 只要用您的游標選取控制項，然後將其加入表單上您想要的位置即可。 設計工具提供像是格線和對齊線之類的工具，可讓您輕鬆對齊控制項。 無論您使用 Visual Studio，或在命令列進行編譯，您可以使用<xref:System.Windows.Forms.FlowLayoutPanel>，<xref:System.Windows.Forms.TableLayoutPanel>和<xref:System.Windows.Forms.SplitContainer>控制項來建立進階表單配置較少的時間。
+ 使用拖放**Windows Form 設計工具**在 Visual Studio 中，您可以輕鬆建立 Windows Forms 應用程式。 只要用您的游標選取控制項，然後將其加入表單上您想要的位置即可。 設計工具提供像是格線和對齊線之類的工具，可讓您輕鬆對齊控制項。 無論您使用 Visual Studio，或在命令列進行編譯，您可以使用<xref:System.Windows.Forms.FlowLayoutPanel>，<xref:System.Windows.Forms.TableLayoutPanel>和<xref:System.Windows.Forms.SplitContainer>控制項來建立進階表單配置較少的時間。
 
  最後，如果您必須建立自己的自訂 UI 項目，<xref:System.Drawing> 命名空間包含許多類別選項，可直接在表單上呈現線條、圓形和其他形狀。
 

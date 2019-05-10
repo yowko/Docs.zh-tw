@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: 6ba3f29ad0ceef7f1ea9d102743df568a32c26c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb87879fdf584a439e09839bf4321b85e7dd6a43
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014262"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64602453"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>擴充 Visual Basic 應用程式模型
 您可以將功能加入應用程式模型藉由覆寫`Overridable`的成員<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>類別。 這項技術可讓您自訂應用程式模型的行為，並加入您自己的方法呼叫，在應用程式啟動和關閉。  
@@ -38,11 +38,11 @@ ms.locfileid: "62014262"
   
      <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>方法會呼叫下列方法：  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. 判斷應用程式是否定義啟動顯示畫面，若是如此，請在個別執行緒上顯示啟動顯示畫面。  
+    1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. 判斷應用程式是否定義啟動顯示畫面，若是如此，請在個別執行緒上顯示啟動顯示畫面。  
   
-         <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>方法中包含的程式碼，會顯示啟動顯示畫面的最少的所指定的毫秒數<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>屬性。 若要使用這項功能，必須將啟動顯示畫面新增至您的應用程式使用**專案設計工具**(集合`My.Application.MinimumSplashScreenDisplayTime`屬性，以兩秒)，或設定`My.Application.MinimumSplashScreenDisplayTime`會覆寫方法中的屬性<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>或<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>方法。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>。  
+         <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>方法中包含的程式碼，會顯示啟動顯示畫面的最少的所指定的毫秒數<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>屬性。 若要使用這項功能，必須將啟動顯示畫面新增至您的應用程式使用**專案設計工具**(集合`My.Application.MinimumSplashScreenDisplayTime`屬性，以兩秒)，或設定`My.Application.MinimumSplashScreenDisplayTime`會覆寫方法中的屬性<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>或<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>方法。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>。  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. 允許設計工具發出程式碼，以初始化啟動顯示畫面。  
+    2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. 允許設計工具發出程式碼，以初始化啟動顯示畫面。  
   
          根據預設，這個方法沒有任何作用。 如果您選取 Visual Basic 中的應用程式啟動顯示畫面**專案設計工具**，在設計工具會覆寫<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>方法的方法，設定<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>啟動顯示畫面的表單的新執行個體的屬性.  
   
@@ -54,11 +54,11 @@ ms.locfileid: "62014262"
   
      根據預設，它就會進入 Windows Form 訊息迴圈之前這個方法會呼叫`OnCreateMainForm`（若要建立應用程式的主要表單） 和`HideSplashScreen`（若要關閉啟動顯示畫面） 方法：  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. 可讓設計工具發出初始化主表單的程式碼。  
+    1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. 可讓設計工具發出初始化主表單的程式碼。  
   
          根據預設，這個方法沒有任何作用。 不過，當您選取的主表單應用程式的 Visual Basic**專案設計工具**，在設計工具會覆寫<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>方法的方法，設定<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A>主要表單的新執行個體的屬性。  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. 如果應用程式已定義的啟動顯示畫面，已開啟，所以這個方法會關閉啟動顯示畫面。  
+    2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. 如果應用程式已定義的啟動顯示畫面，已開啟，所以這個方法會關閉啟動顯示畫面。  
   
          根據預設，這個方法會關閉啟動顯示畫面。  
   

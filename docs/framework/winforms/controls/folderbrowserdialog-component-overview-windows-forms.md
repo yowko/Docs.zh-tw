@@ -8,23 +8,24 @@ helpviewer_keywords:
 - directories [Windows Forms], enabling browsing in applications
 - folders [Windows Forms], enabling browsing in applications
 ms.assetid: 796b622c-3ba9-4356-93bb-e217fc52f2c7
-ms.openlocfilehash: aae18167b29c71ad692cc6ba447457cd079374b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd89980ccad7e6c73094c1fb462d93cee8094959
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651463"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65210403"
 ---
 # <a name="folderbrowserdialog-component-overview-windows-forms"></a>FolderBrowserDialog 元件概觀 (Windows Form)
-Windows Form<xref:System.Windows.Forms.FolderBrowserDialog>元件是用來瀏覽和選取的資料夾的強制回應對話方塊。 新的資料夾也可以建立從<xref:System.Windows.Forms.FolderBrowserDialog>元件。  
-  
+
+Windows Form<xref:System.Windows.Forms.FolderBrowserDialog>元件是用來瀏覽和選取的資料夾的強制回應對話方塊。 新的資料夾也可以建立從<xref:System.Windows.Forms.FolderBrowserDialog>元件。
+
 > [!NOTE]
->  若要選取檔案，而不是資料夾，使用[OpenFileDialog](openfiledialog-component-windows-forms.md)元件。  
-  
- <xref:System.Windows.Forms.FolderBrowserDialog>元件會顯示在執行的階段使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法。 設定<xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>屬性來判斷最上層資料夾，然後將出現在對話方塊中的樹狀檢視內的任何子資料夾。 一旦已顯示 [] 對話方塊中，您可以使用<xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A>屬性來取得所選取之資料夾的路徑。  
-  
- 當加入至表單，<xref:System.Windows.Forms.FolderBrowserDialog>元件會出現在底部的 Windows Form 設計工具的紙匣。  
-  
+> 若要選取檔案，而不是資料夾，使用[OpenFileDialog](openfiledialog-component-windows-forms.md)元件。
+
+<xref:System.Windows.Forms.FolderBrowserDialog>元件會顯示在執行的階段使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法。 設定<xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>屬性來判斷最上層資料夾，然後將出現在對話方塊中的樹狀檢視內的任何子資料夾。 一旦已顯示 [] 對話方塊中，您可以使用<xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A>屬性來取得所選取之資料夾的路徑。
+
+當加入至表單，<xref:System.Windows.Forms.FolderBrowserDialog>元件會出現在底部的 Windows Form 設計工具，在 Visual Studio 中的紙匣。
+
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>

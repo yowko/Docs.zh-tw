@@ -7,27 +7,25 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: 262487eabb3f0ab27efe8bc7fdb31a822ed07823
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a184312b1df7c0736fa9c6b6ef787451add0465e
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010965"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211811"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>HOW TO：對齊 Windows Forms 上的多個控制項
-若要標準化您以 Windows 為基礎的應用程式的使用者介面 (UI) 的配置，您可以放置群組使用單一命令的控制項。  
-  
-> [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
-  
-### <a name="to-align-multiple-controls-on-a-form"></a>若要對齊表單上的多個控制項  
-  
-1. 開啟包含您要放置在的控制項的表單**Windows Form 設計工具**。  
-  
-2. 選取您想要對齊，讓您選取的第一個控制項的其他人應該對齊的主要控制項的控制項。  
-  
-3. 在 **格式**功能表上，指向**對齊**，然後按一下其中一個可用的七個選項。  
-  
+
+若要標準化您以 Windows 為基礎的應用程式的使用者介面 (UI) 的配置，您可以放置群組使用單一命令的控制項。
+
+### <a name="to-align-multiple-controls-on-a-form"></a>若要對齊表單上的多個控制項
+
+1. 在 Visual Studio 中，開啟包含您要放置在的控制項的表單**Windows Form 設計工具**。
+
+2. 選取您想要對齊，讓您選取的第一個控制項的其他人應該對齊的主要控制項的控制項。
+
+3. 在 **格式**功能表上，指向**對齊**，然後按一下其中一個可用的七個選項。
+
 ## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 控制項](index.md)

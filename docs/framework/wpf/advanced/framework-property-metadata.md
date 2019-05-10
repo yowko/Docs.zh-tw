@@ -5,12 +5,12 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f0385280cf01502a5b2786541c3d959fca24d239
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703331"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912450"
 ---
 # <a name="framework-property-metadata"></a>架構屬性中繼資料
 針對在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 架構中視為 WPF 架構層級的物件項目屬性，報告架構屬性中繼資料選項。 WPF 架構層級指定一般會需要由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 簡報 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 和可執行檔處理的轉譯、資料繫結和屬性系統調整等功能。 這些系統會查詢架構屬性中繼資料，以判斷特定項目屬性的特定功能特性。  

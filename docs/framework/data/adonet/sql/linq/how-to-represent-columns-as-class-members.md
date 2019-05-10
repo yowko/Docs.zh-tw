@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab28021-4d15-4d9c-bf2e-6ccc0daa7d1a
-ms.openlocfilehash: 74966dd1661faa43df334987b2e3b0e84eff3446
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 009da2579a6fe15cea3913ae5844fc886da2586c
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037853"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910735"
 ---
 # <a name="how-to-represent-columns-as-class-members"></a>HOW TO：將資料行表示為類別成員
 使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute>欄位或屬性相關聯的資料庫資料行的屬性。  

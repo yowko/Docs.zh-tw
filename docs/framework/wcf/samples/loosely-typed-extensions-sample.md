@@ -2,12 +2,12 @@
 title: 鬆散型別延伸範例
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: 2f80c3379ba9d7e0649a36c5dd1bd552c1da68c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4d92f45382361c61fe9e7ac85ff5d604a2c87b27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006573"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592205"
 ---
 # <a name="loosely-typed-extensions-sample"></a>鬆散型別延伸範例
 新聞訂閱物件模型對使用延伸資料 (即以新聞訂閱摘要 XML 表示法呈現，但是尚未經由像是 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 等類別明確公開的資訊) 提供大量支援。 這個範例說明使用延伸資料的基本技術。  
@@ -54,15 +54,15 @@ w.w3.org/2001/XMLSchema" xmlns="">
   
  這份文件包含下列延伸資料片段：  
   
--   `myAttribute` 元素的 `<feed>` 屬性。  
+- `myAttribute` 元素的 `<feed>` 屬性。  
   
--   `<simpleString>` 項目。  
+- `<simpleString>` 項目。  
   
--   `<DataContractExtension>` 項目。  
+- `<DataContractExtension>` 項目。  
   
--   `<XmlSerializerExtension>` 項目。  
+- `<XmlSerializerExtension>` 項目。  
   
--   `<xElementExtension>` 項目。  
+- `<xElementExtension>` 項目。  
   
 ## <a name="writing-extension-data"></a>撰寫延伸資料  
  將項目新增至 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 集合便可以建立屬性延申，如下列範例程式碼所示。  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-ms.openlocfilehash: 636fcc36e7bac52467998dc9c59f14ba1bedead3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b58759502b9297f9cd5ac89296ab147c40fc89f1
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774877"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913354"
 ---
 # <a name="underlying-type-typename-of-enum-is-not-cls-compliant"></a>基礎型別\<類型名稱 > 的列舉不符合 CLS 規範
 這個列舉型別不是指定的資料類型的一部分[Language Independence and Language-independent Components](../../../standard/language-independence-and-language-independent-components.md) （cls） 標準。 這是不在您的元件中發生錯誤，因為[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]和 Visual Basic 支援這種資料類型。 不過，另一個以完全符合 CLS 標準的程式碼撰寫的元件可能不支援這種資料類型。 這類元件可能無法順利與您的元件互動。  

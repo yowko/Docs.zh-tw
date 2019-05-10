@@ -10,12 +10,12 @@ helpviewer_keywords:
 - drawing text [Windows Forms], specified locations [Windows Forms]
 - Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
-ms.openlocfilehash: f7834ea45db8dd6e971defd9c3b2b152ffddf512
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0c36b00e4f6f71f0ecf8042853bb8e99e57854da
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004054"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912417"
 ---
 # <a name="how-to-draw-text-at-a-specified-location"></a>HOW TO：在指定的位置繪製文字
 當您執行自訂繪圖時，您可以在單一的水平列，從指定的點開始來繪製文字。 您也可以使用這個方式繪製文字<xref:System.Drawing.Graphics.DrawString%2A>方法的多載化<xref:System.Drawing.Graphics>類別<xref:System.Drawing.Point>或<xref:System.Drawing.PointF>參數。 <xref:System.Drawing.Graphics.DrawString%2A>方法也需要<xref:System.Drawing.Brush>和 <xref:System.Drawing.Font>  

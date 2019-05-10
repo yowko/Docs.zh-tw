@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 480fc27bd41f7ca559ceee379b7f6f81c94da0ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f9a87ae4381ec5bc0d8c416ef4ee4c13b04a862f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989192"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606891"
 ---
 # <a name="icordebugdatatarget-interface"></a>ICorDebugDataTarget 介面
 提供回呼介面，該介面可供存取特定的目標處理序。  

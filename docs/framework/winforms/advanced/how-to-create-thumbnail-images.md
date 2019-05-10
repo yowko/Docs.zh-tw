@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 275041372bd5e7da5dd0b32dc0a3d70a38bd0dcd
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937630"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063780"
 ---
 # <a name="how-to-create-thumbnail-images"></a>HOW TO：建立縮圖影像
 縮圖的影像是影像的縮小版本。 您可以藉由呼叫建立縮圖影像<xref:System.Drawing.Image.GetThumbnailImage%2A>方法的<xref:System.Drawing.Image>物件。  
@@ -21,9 +21,9 @@ ms.locfileid: "61937630"
 ## <a name="example"></a>範例  
  下列範例會建構<xref:System.Drawing.Image>JPG 檔案中的物件。 原始的映像有 640 像素的寬度和高度為 479 個像素。 程式碼會建立具有 100 像素的寬度和高度為 100 像素的縮圖影像。  
   
- 下圖顯示的縮圖影像。  
+ 下圖顯示的縮圖影像：  
   
- ![縮圖影像](./media/thumbnail1.png "Thumbnail1")  
+ ![螢幕擷取畫面顯示輸出的縮圖。](./media/how-to-create-thumbnail-images/construct-thumbnail-image.png)  
   
 > [!NOTE]
 >  在此範例中，回呼方法已宣告但從未使用。 這可支援所有版本的 GDI +。  

@@ -2,12 +2,12 @@
 title: 編碼不能設定為 Nothing。
 ms.date: 07/20/2015
 ms.assetid: 59f7c731-8291-4a85-bf51-c225e48cdc84
-ms.openlocfilehash: 30b0b4a29fbdf931aa62263b75d1fa946e87b145
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 492db7755e8b2b75ea8c60d7f4e1ccc1a5ded865
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970322"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598355"
 ---
 # <a name="encoding-cannot-be-set-to-nothing"></a>編碼不能設定為 Nothing。
 讀取或寫入檔案的嘗試失敗，因為參數 `encoding` 已設定為 `Nothing` ，但需要有效的值。  

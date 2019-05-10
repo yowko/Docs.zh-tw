@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8c021e3b3de1dbe000ab328f7a09d79a4bc966fe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007470"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592222"
 ---
 # <a name="ws-transaction-flow"></a>WS 交易流程
 這個範例會示範用戶端協調異動的用法，以及使用 WS-Atomic 異動或 OleTransactions 通訊協定之異動流程的用戶端和伺服器選項。 此樣本根據[快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務，但作業屬於示範如何使用`TransactionFlowAttribute`具有**TransactionFlowOption**若要判斷何種程度的交易流程已啟用的列舉型別。 在流動的異動範圍內，會將所要求作業的記錄檔寫入資料庫，並在完成用戶端協調異動之前都會保存該記錄檔。如果用戶端異動未完成，Web 服務異動一定不會認可對資料庫進行適當的更新。  

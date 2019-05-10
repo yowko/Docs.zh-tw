@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 825da3a09f8b8013ffecaedfee0dce2362c8a7b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d6e5b74e508f55ec8e94b09960e496ff21936228
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598970"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586977"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 函式
 控制項已傳遞至函式，並提供資訊堆疊框架和函式的引數，請通知分析工具。 這個函數會取代[FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)函式。  

@@ -2,12 +2,12 @@
 title: 自訂篩選器
 ms.date: 03/30/2017
 ms.assetid: 97cf247d-be0a-4057-bba9-3be5c45029d5
-ms.openlocfilehash: 4140a944ed195e1defc1a0677d8e26ff4ff85beb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ef94d95737fb743af56f411bcc0f39ceea679a0
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857216"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912678"
 ---
 # <a name="custom-filters"></a>自訂篩選器
 自訂篩選可讓您定義無法使用系統所提供訊息篩選完成的比對邏輯。 例如，您可能會建立自訂篩選，此篩選會雜湊特殊訊息項目，然後檢查值，判斷篩選應傳回 true 或 false。  

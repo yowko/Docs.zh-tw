@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 656f2498c7dd9ba165ab6759d8ca3b26e0d7c93f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4686710c105ef002fe30f8b6e167d760088913ce
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598775"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587002"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall 函式
 通知分析工具目前正在執行的函式即將執行的另一個函式的 tail 呼叫。  

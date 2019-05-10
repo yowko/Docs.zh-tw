@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 54a1c8e06991729ea8556d82d31897c522f6d173
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1e776a42ca63e4b862e307cbcae1bab2847d0ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923236"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587301"
 ---
 # <a name="creating-user-defined-bindings"></a>建立使用者定義繫結
 您有幾種方式可以建立系統不提供的繫結：  
   
--   依據 <xref:System.ServiceModel.Channels.CustomBinding> 類別來建立自訂繫結，此類別是一個容器，可供您填入繫結項目。 接著自訂繫結會新增至服務端點。 您可以程式設計方式，或是透過應用程式組態檔來建立自訂繫結。 若要使用應用程式組態檔的繫結項目，繫結項目必須延伸 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>。 如需有關自訂繫結的詳細資訊，請參閱 <<c0> [ 自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)和<xref:System.ServiceModel.Channels.CustomBinding>。  
+- 依據 <xref:System.ServiceModel.Channels.CustomBinding> 類別來建立自訂繫結，此類別是一個容器，可供您填入繫結項目。 接著自訂繫結會新增至服務端點。 您可以程式設計方式，或是透過應用程式組態檔來建立自訂繫結。 若要使用應用程式組態檔的繫結項目，繫結項目必須延伸 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>。 如需有關自訂繫結的詳細資訊，請參閱 <<c0> [ 自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)和<xref:System.ServiceModel.Channels.CustomBinding>。  
   
--   您可以建立衍生自標準繫結的類別。 例如，您可以從 <xref:System.ServiceModel.WSHttpBinding> 衍生類別，並覆寫 <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> 方法來取得繫結項目，並插入自訂繫結項目或是建立特定的安全值。  
+- 您可以建立衍生自標準繫結的類別。 例如，您可以從 <xref:System.ServiceModel.WSHttpBinding> 衍生類別，並覆寫 <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> 方法來取得繫結項目，並插入自訂繫結項目或是建立特定的安全值。  
   
--   您可以建立新的 <xref:System.ServiceModel.Channels.Binding> 型別以完全掌控整個繫結實作。  
+- 您可以建立新的 <xref:System.ServiceModel.Channels.Binding> 型別以完全掌控整個繫結實作。  
   
 ## <a name="the-order-of-binding-elements"></a>繫結項目的順序  
  每個繫結項目都代表傳送或接收訊息時的一個處理步驟。 在執行階段，繫結項目會建立通道和接聽項，它們是建立傳出和傳入通道堆疊的必要項目。  

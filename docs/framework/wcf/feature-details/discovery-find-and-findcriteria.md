@@ -2,12 +2,12 @@
 title: 探索尋找與尋找準則
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 097027026afa6099f85dee1485fa3a451bb8fefd
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856514"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912690"
 ---
 # <a name="discovery-find-and-findcriteria"></a>探索尋找與尋找準則
 探索尋找作業是由用戶端初始化，用於探索一項或多項服務，並且為探索中的其中一個主要動作。 執行尋找會透過網路傳送 WS-Discovery Probe 訊息。 符合指定準則的服務會以 WS-Discovery ProbeMatch 訊息回覆。 如需有關探索訊息的詳細資訊，請參閱[Ws-discovery 規格](https://go.microsoft.com/fwlink/?LinkID=122347)。  
@@ -20,21 +20,21 @@ ms.locfileid: "61856514"
   
  搜尋準則包括：  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement>：選擇項。 要搜尋的服務合約名稱，以及搜尋服務時常用的準則。 如果指定多個合約名稱，則只會回覆符合「所有」合約的服務端點。 請注意，在 WCF 端點僅支援一個合約。  
+- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement>：選擇項。 要搜尋的服務合約名稱，以及搜尋服務時常用的準則。 如果指定多個合約名稱，則只會回覆符合「所有」合約的服務端點。 請注意，在 WCF 端點僅支援一個合約。  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement>：選擇項。 範圍是絕對 URI，可用來分類個別服務端點。 在多個端點公開相同合約，而您希望能夠搜尋端點子集的情況下，可能會想要使用這種方式。 如果指定多個範圍，則只會回覆符合「所有」範圍的服務端點。  
+- <xref:System.ServiceModel.Discovery.Configuration.ScopeElement>：選擇項。 範圍是絕對 URI，可用來分類個別服務端點。 在多個端點公開相同合約，而您希望能夠搜尋端點子集的情況下，可能會想要使用這種方式。 如果指定多個範圍，則只會回覆符合「所有」範圍的服務端點。  
   
--   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A>：指定比對 Probe 訊息中的範圍與端點的範圍時，要使用的比對演算法。 支援的範圍比對規則有五種：  
+- <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A>：指定比對 Probe 訊息中的範圍與端點的範圍時，要使用的比對演算法。 支援的範圍比對規則有五種：  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> 會執行基本的區分大小寫字串比較。  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> 會執行基本的區分大小寫字串比較。  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> 相符項目以區段分隔"/"。 搜尋 `http://contoso/building1` 符合與範圍的服務 `http://contoso/building/floor1`  。 請注意，它不符合 `http://contoso/building100` 因為最後兩個區段不相符。  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> 相符項目以區段分隔"/"。 搜尋 `http://contoso/building1` 符合與範圍的服務 `http://contoso/building/floor1`  。 請注意，它不符合 `http://contoso/building100` 因為最後兩個區段不相符。  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> 會使用 LDAP URL 依照區段比對範圍。  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> 會使用 LDAP URL 依照區段比對範圍。  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> 會使用 UUID 字串精確比對範圍。  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> 會使用 UUID 字串精確比對範圍。  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> 僅比對未定範圍的服務。  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> 僅比對未定範圍的服務。  
   
      如果未指定範圍比對規則，則會使用 <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix>。  
   

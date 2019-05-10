@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attribute names [XML in Visual Basic]
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
-ms.openlocfilehash: 2221f2677183cf360fa82a4d73a679a8b68927d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dbe85b456f46c40c9cc9a703b38e11992edd24cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761698"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598284"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>宣告的 XML 項目和屬性的名稱 (Visual Basic)
 本主題提供 Visual Basic 的指導方針來命名 XML 項目和 XML 常值中的屬性。  在 XML 常值，您可以指定區域名稱或限定的名稱。 限定的名稱是由 XML 命名空間前置詞、 冒號與本機名稱所組成。 如需有關 XML 命名空間前置詞的詳細資訊，請參閱 < [XML 元素常值](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)。  

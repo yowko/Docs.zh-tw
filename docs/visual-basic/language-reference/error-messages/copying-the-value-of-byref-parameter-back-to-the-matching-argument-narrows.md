@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: fa8607bf72dfb344048ec82514182dcb6810274d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d238e9c426b5ae7df0cde745b51eace1cae5d87
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803853"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913209"
 ---
 # <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>'ByRef' 參數的值複製 '\<參數名稱 >' 回相符引數會從類型'\<typename1 >' 為類型 '\<2&gt >'
 可擴展為對應參數類型的引數呼叫的程序，並將參數轉換成引數會縮小。  
@@ -27,11 +27,11 @@ ms.locfileid: "61803853"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   可能的話，因此不需要執行任何轉換 Visual Basic，請做為程序參數，使用相同類型的呼叫中引數。  
+- 可能的話，因此不需要執行任何轉換 Visual Basic，請做為程序參數，使用相同類型的呼叫中引數。  
   
--   如果您需要呼叫引數類型與參數類型不同的程序，但不需要將值傳回給呼叫中引數，請將此參數定義為 [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) ，而非 `ByRef`。  
+- 如果您需要呼叫引數類型與參數類型不同的程序，但不需要將值傳回給呼叫中引數，請將此參數定義為 [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) ，而非 `ByRef`。  
   
--   如果您需要將值傳回呼叫的引數，定義反向轉換運算子，作為[Widening](../../../visual-basic/language-reference/modifiers/widening.md)、 的話。  
+- 如果您需要將值傳回呼叫的引數，定義反向轉換運算子，作為[Widening](../../../visual-basic/language-reference/modifiers/widening.md)、 的話。  
   
 ## <a name="see-also"></a>另請參閱
 

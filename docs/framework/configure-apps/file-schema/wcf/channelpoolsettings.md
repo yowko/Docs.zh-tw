@@ -2,12 +2,12 @@
 title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: ca1f680e2de67984dfcec49b3d262799000a2625
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ad1cba170a7ade06de4678651a8dfcb608d5c46
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673325"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607205"
 ---
 # <a name="channelpoolsettings"></a>\<channelPoolSettings>
 指定自訂繫結的通道集區設定。  
@@ -52,11 +52,11 @@ ms.locfileid: "61673325"
   
  `ChannelPoolSettings` 指定三種配額：  
   
--   `idleTimeout` 配額，可用來降低在伺服器上藉由佔用資源一段延長期間所產生的阻斷服務 (DOS) 攻擊情形。 在用戶端，設定正確的值可以增加與服務的連接可靠性。 預設值是依據最為保守穩當的資源配置所設定。 這個設定值適合開發環境和小規模的安裝情況。 如果安裝時資源不足，或是連線不論是否有額外的資源都會受到限制，服務系統管理員就應該檢查此值。  
+- `idleTimeout` 配額，可用來降低在伺服器上藉由佔用資源一段延長期間所產生的阻斷服務 (DOS) 攻擊情形。 在用戶端，設定正確的值可以增加與服務的連接可靠性。 預設值是依據最為保守穩當的資源配置所設定。 這個設定值適合開發環境和小規模的安裝情況。 如果安裝時資源不足，或是連線不論是否有額外的資源都會受到限制，服務系統管理員就應該檢查此值。  
   
--   `leaseTimeout` 配額，其用途在於整合負載平衡器和改善可靠性。 預設值是依據保守的資源配置所設定。 這個設定值適合開發環境和小規模的安裝情況。 如果安裝時資源不足，或是連線不論是否有額外的資源都會受到限制，服務系統管理員就應該檢查此值。  
+- `leaseTimeout` 配額，其用途在於整合負載平衡器和改善可靠性。 預設值是依據保守的資源配置所設定。 這個設定值適合開發環境和小規模的安裝情況。 如果安裝時資源不足，或是連線不論是否有額外的資源都會受到限制，服務系統管理員就應該檢查此值。  
   
--   `maxOutboundChannelsPerEndpoint` 配額會設定伺服器和用戶端雙方的快取限制，並可用來改善可靠性。 預設值是依據最為保守穩當的資源配置所設定，這個設定值適合開發環境和小規模的安裝情況。 如果安裝時資源不足，或是連線不論是否有額外的資源都會受到限制，服務系統管理員就應該檢查此值。  
+- `maxOutboundChannelsPerEndpoint` 配額會設定伺服器和用戶端雙方的快取限制，並可用來改善可靠性。 預設值是依據最為保守穩當的資源配置所設定，這個設定值適合開發環境和小規模的安裝情況。 如果安裝時資源不足，或是連線不論是否有額外的資源都會受到限制，服務系統管理員就應該檢查此值。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -6,33 +6,31 @@ helpviewer_keywords:
 - forms [Windows Forms], adding ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
-ms.openlocfilehash: 780411949c543a2178de5e7c531bd2202703f27a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 17311adade187ef3c8e4e639299e6c5cbbcd98a9
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011150"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65210384"
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>HOW TO：將 ActiveX 控制項新增至 Windows Forms
-雖然 Windows Forms 設計工具已最佳化來裝載 Windows Forms 控制項中，您也可以使 Windows Form 上的 ActiveX 控制項。  
-  
+
+雖然 Visual Studio 中的 Windows Form 設計工具已最佳化來裝載 Windows Forms 控制項中，您也可以使 Windows Form 上的 ActiveX 控制項。
+
 > [!CAUTION]
->  ActiveX 控制項新增至它們時，則需要有 Windows Forms 的效能限制。  
-  
- 您將 ActiveX 控制項新增至您的表單之前，您必須將它們加入 [工具箱] 中。 如需詳細資訊，請參閱 < [COM 元件、 自訂工具箱對話方塊](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/cby6tzh5(v=vs.100))。  
-  
+> ActiveX 控制項新增至它們時，則需要有 Windows Forms 的效能限制。
+
+您將 ActiveX 控制項新增至您的表單之前，您必須將它們加入 [工具箱] 中。 如需詳細資訊，請參閱 < [COM 元件、 自訂工具箱對話方塊](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/cby6tzh5(v=vs.100))。
+
+## <a name="add-an-activex-control-to-your-windows-form"></a>將 ActiveX 控制項新增至您的 Windows 表單
+
+若要加入 Windows Form ActiveX 控制項，連按兩下 [工具箱] 上的控制項。
+
+Visual Studio 專案中新增至控制項的所有參考。 如需有關使用 Windows Form 上的 ActiveX 控制項時，請記住的事項的詳細資訊，請參閱[裝載在 Windows Form 上的 ActiveX 控制項的考慮因素](considerations-when-hosting-an-activex-control-on-a-windows-form.md)。
+
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請在 [工具]  功能表上按一下 [匯入和匯出設定]  。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
-  
-### <a name="to-add-an-activex-control-to-your-windows-form"></a>將 ActiveX 控制項新增至您的 Windows 表單  
-  
-- 按兩下 [工具箱] 控制項。  
-  
-     Visual Studio 專案中新增至控制項的所有參考。 如需有關使用 Windows Form 上的 ActiveX 控制項時，請記住的事項的詳細資訊，請參閱[裝載在 Windows Form 上的 ActiveX 控制項的考慮因素](considerations-when-hosting-an-activex-control-on-a-windows-form.md)。  
-  
-    > [!NOTE]
-    >  非預期的 ActiveX 動態連結程式庫匯入作業時，Windows Forms ActiveX 控制項匯入工具 (AxImp.exe) 就會建立不同類型的事件引數。 AxImp.exe 所建立的引數會與下列類似： `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`，當`Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)`預期。 請注意，此種不規則變化不會防止程式碼正常運作。 如需詳細資訊，請參閱 < [Windows Forms ActiveX 控制項匯入工具 (Aximp.exe)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)。  
-  
+> 非預期的 ActiveX 動態連結程式庫匯入作業時，Windows Forms ActiveX 控制項匯入工具 (AxImp.exe) 就會建立不同類型的事件引數。 AxImp.exe 所建立的引數會與下列類似： `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`，當`Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)`預期。 請注意，此種不規則變化不會防止程式碼正常運作。 如需詳細資訊，請參閱 < [Windows Forms ActiveX 控制項匯入工具 (Aximp.exe)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)。
+
 ## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 控制項](index.md)
