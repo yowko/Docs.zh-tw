@@ -6,27 +6,27 @@ helpviewer_keywords:
 - My.Computer object [Visual Basic], tasks
 - computer resources [Visual Basic], accessing
 ms.assetid: 75b81c88-f7c0-46e0-95c8-0c006d2120f9
-ms.openlocfilehash: 7128a71f28d1755a14fcda5f09bee11202ab4154
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c53358d483868317887258c92b1aad2d9dcba00
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973872"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662682"
 ---
 # <a name="accessing-computer-resources-visual-basic"></a>存取電腦資源 (Visual Basic)
 
 `My.Computer` 物件是 `My` 中的三個中央物件之一，它們提供對資訊和常用功能的存取。 `My.Computer` 提供方法、屬性和事件來存取應用程式執行所在的電腦。 它的物件包括︰  
   
--   <xref:Microsoft.VisualBasic.Devices.Audio>
--   剪貼簿(<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>)
--   <xref:Microsoft.VisualBasic.Devices.Clock>
--   <xref:Microsoft.VisualBasic.FileIO.FileSystem>
--   <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>
--   <xref:Microsoft.VisualBasic.Devices.Keyboard>
--   <xref:Microsoft.VisualBasic.Devices.Mouse>
--   <xref:Microsoft.VisualBasic.Devices.Network>
--   <xref:Microsoft.VisualBasic.Devices.Ports>
--   登錄(<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)
+- <xref:Microsoft.VisualBasic.Devices.Audio>
+- 剪貼簿(<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>)
+- <xref:Microsoft.VisualBasic.Devices.Clock>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>
+- <xref:Microsoft.VisualBasic.Devices.Keyboard>
+- <xref:Microsoft.VisualBasic.Devices.Mouse>
+- <xref:Microsoft.VisualBasic.Devices.Network>
+- <xref:Microsoft.VisualBasic.Devices.Ports>
+- 登錄(<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)
   
 ## <a name="in-this-section"></a>本節內容
 

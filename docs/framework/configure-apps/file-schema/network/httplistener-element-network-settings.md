@@ -2,12 +2,12 @@
 title: <httpListener> 項目 (網路設定)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8257b0311e18a21fbc04185f8297ee8e5f38b86b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705073"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592728"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener > 項目 （網路設定）
 自訂所使用的參數<xref:System.Net.HttpListener>類別。  

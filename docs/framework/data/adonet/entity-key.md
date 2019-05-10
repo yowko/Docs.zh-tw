@@ -2,12 +2,12 @@
 title: 實體索引鍵
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 1484a73450d5a435f795f18f122c7fe8494cf197
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bf8ab7ffacd7565e408e4851ed0f1ef4636b5d80
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879176"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599650"
 ---
 # <a name="entity-key"></a>實體索引鍵
 *實體索引鍵*是[屬性](../../../../docs/framework/data/adonet/property.md)或屬性的一組[實體類型](../../../../docs/framework/data/adonet/entity-type.md)，用於判斷識別。 構成實體索引鍵的屬性是在設計階段選取的。 實體索引鍵屬性的值必須唯一識別實體類型執行個體[實體集](../../../../docs/framework/data/adonet/entity-set.md)在執行階段。 您應選取構成實體索引鍵的屬性，以保證執行個體在實體集中的唯一性。  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
-ms.openlocfilehash: 545f0f4a56e72e32d2225217225d441a10f0e52e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7d3d86f89ef3b76e958707dd0be2dce8a3e9bf2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803437"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659809"
 ---
 # <a name="elementname-is-obsolete-visual-basic-warning"></a>'\<項目名稱 >' 已經過時 （Visual Basic 警告）
 陳述式嘗試存取已使用 <xref:System.ObsoleteAttribute> 屬性和指示詞標記以視為警告的程式設計項目。  
@@ -25,7 +25,7 @@ ms.locfileid: "61803437"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   確定原始程式碼參考正確拼寫項目名稱。  
+- 確定原始程式碼參考正確拼寫項目名稱。  
   
 ## <a name="see-also"></a>另請參閱
 

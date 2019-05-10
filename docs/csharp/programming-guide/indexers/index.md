@@ -8,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 5ab0a5e524979110c355391cf800cc82e6d6244f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43cc051eda8c3458d3dc5c529b52104bcd9b807a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680153"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596115"
 ---
 # <a name="indexers-c-programming-guide"></a>索引子 (C# 程式設計手冊)
 
@@ -40,29 +40,29 @@ ms.locfileid: "61680153"
   
 ## <a name="indexers-overview"></a>索引子概觀  
   
--   索引子可以讓物件利用與陣列類似的方式編製索引。  
+- 索引子可以讓物件利用與陣列類似的方式編製索引。  
   
--   `get` 存取子會傳回值。 `set` 存取子會指派值。  
+- `get` 存取子會傳回值。 `set` 存取子會指派值。  
   
--   [this](../../../csharp/language-reference/keywords/this.md) 關鍵字是用來定義索引子。  
+- [this](../../../csharp/language-reference/keywords/this.md) 關鍵字是用來定義索引子。  
   
--   [value`set` 關鍵字是用來定義 ](../../../csharp/language-reference/keywords/value.md) 索引子要指派的值。  
+- [value`set` 關鍵字是用來定義 ](../../../csharp/language-reference/keywords/value.md) 索引子要指派的值。  
   
--   索引子不一定要由整數值編製索引。您可自行決定如何定義特定的查詢機制。  
+- 索引子不一定要由整數值編製索引。您可自行決定如何定義特定的查詢機制。  
   
--   索引子可以多載。  
+- 索引子可以多載。  
   
--   索引子可具有一個以上的型式參數，例如，存取二維陣列時。  
+- 索引子可具有一個以上的型式參數，例如，存取二維陣列時。  
   
 ## <a name="BKMK_RelatedSections"></a> 相關章節  
   
--   [使用索引子](../../../csharp/programming-guide/indexers/using-indexers.md)  
+- [使用索引子](../../../csharp/programming-guide/indexers/using-indexers.md)  
   
--   [介面中的索引子](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+- [介面中的索引子](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
   
--   [屬性與索引子之間的比較](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [屬性與索引子之間的比較](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [限制存取子的存取範圍](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [限制存取子的存取範圍](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
 

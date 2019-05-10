@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 72ef84cb53c6eff1fc2fb9459b40e780869243a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a8129b2c8674fb5ecc4d513f57236fde66fdff14
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62023776"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659913"
 ---
 # <a name="binding-sources-overview"></a>繫結來源概觀
 在資料繫結中，繫結來源物件是指您取得資料的來源物件。 本主題討論可以當做繫結來源的物件類型。  
@@ -48,7 +48,7 @@ ms.locfileid: "62023776"
   
 - 您不能繫結至公用欄位。  
   
-- 在類別中宣告的屬性，其型別就是傳遞至繫結的型別。 不過，繫結最終使用的型別需視繫結目標屬性 (而非繫結來源屬性) 的型別而定。 如果型別不同，您可能需要撰寫轉換器來處理自訂屬性一開始傳遞到繫結的方式。 如需詳細資訊，請參閱<xref:System.Windows.Data.IValueConverter>。  
+- 在類別中宣告的屬性，其型別就是傳遞至繫結的型別。 不過，繫結最終使用的型別需視繫結目標屬性 (而非繫結來源屬性) 的型別而定。 如果型別不同，您可能需要撰寫轉換器來處理自訂屬性一開始傳遞到繫結的方式。 如需詳細資訊，請參閱 <xref:System.Windows.Data.IValueConverter>。  
   
 <a name="objects"></a>   
 ## <a name="using-entire-objects-as-a-binding-source"></a>使用整個物件做為繫結來源  

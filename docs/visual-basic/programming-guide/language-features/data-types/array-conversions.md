@@ -12,21 +12,21 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: 88002e2c099ed9503beddb190d243aadcc1087fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f69ed6e0040f33f810d324a76859d448e9dc7632
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908020"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601135"
 ---
 # <a name="array-conversions-visual-basic"></a>陣列轉換 (Visual Basic)
 您可以將陣列型別轉換成不同的陣列型別，提供符合下列條件：  
   
--   **相等的順位。** 兩個陣列的陣序規範必須相同，也就是它們必須具有相同的維度數目。 不過，個別的維度的長度不需要相同。  
+- **相等的順位。** 兩個陣列的陣序規範必須相同，也就是它們必須具有相同的維度數目。 不過，個別的維度的長度不需要相同。  
   
--   **項目資料型別。** 兩個陣列元素的資料類型必須是參考型別。 您無法轉換`Integer`陣列`Long`陣列、 或甚至`Object`陣列，因為牽涉到至少一個實值型別。 如需詳細資訊，請參閱 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)。  
+- **項目資料型別。** 兩個陣列元素的資料類型必須是參考型別。 您無法轉換`Integer`陣列`Long`陣列、 或甚至`Object`陣列，因為牽涉到至少一個實值型別。 如需詳細資訊，請參閱 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)。  
   
--   **可轉換性。** 轉換，以擴大或縮小，必須能夠在兩個陣列項目類型之間。 舉例來說，未通過這項需求是嘗試之間的轉換`String`陣列和陣列的類別衍生自<xref:System.Attribute?displayProperty=nameWithType>。 這兩種類型沒有任何共通點，並沒有任何類型的轉換之間存在。  
+- **可轉換性。** 轉換，以擴大或縮小，必須能夠在兩個陣列項目類型之間。 舉例來說，未通過這項需求是嘗試之間的轉換`String`陣列和陣列的類別衍生自<xref:System.Attribute?displayProperty=nameWithType>。 這兩種類型沒有任何共通點，並沒有任何類型的轉換之間存在。  
   
  擴展或縮小取決於個別的項目轉換是否會擴大或縮小到另一個陣列類型的轉換。 如需詳細資訊，請參閱 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
   

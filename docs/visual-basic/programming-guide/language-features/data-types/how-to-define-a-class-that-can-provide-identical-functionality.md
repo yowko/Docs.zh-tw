@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 9121041f936c091cda0e2af41b4f5be8d826d582
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 829ff08fe3805f37bc6189a66a6675b3518da138
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906629"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601003"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>HOW TO：定義的類別，可提供完全相同的功能上不同的資料類型 (Visual Basic)
 您可以定義一個類別，以從中建立可在不同資料類型上提供相同功能的物件。 若要這樣做，請在定義中指定一個或多個 *「類型參數」* (type parameter)。 類別之後可以作為使用各種資料類型之物件的範本。 使用這種方法所定義的類別稱為 *「泛型類別」*(generic class)。  
@@ -50,11 +50,11 @@ ms.locfileid: "61906629"
   
 4. 如果您的程式碼對類型參數執行簡單指派以外的作業，請在該類型參數後面加上 `As` 子句來加入一個或多個 *「條件約束」*(constraint)。 條件約束保證針對該類型參數所提供的類型符合下列這類需求：  
   
-    -   支援您程式碼所執行的作業 (例如 `>`)  
+    - 支援您程式碼所執行的作業 (例如 `>`)  
   
-    -   支援您程式碼所存取的成員 (例如方法)  
+    - 支援您程式碼所存取的成員 (例如方法)  
   
-    -   公開無參數建構函式  
+    - 公開無參數建構函式  
   
      如果您未指定任何條件約束，則您程式碼可使用的唯一作業和成員是 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)所支援的作業和成員。 如需詳細資訊，請參閱 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)。  
   

@@ -2,21 +2,21 @@
 title: 訊息安全性中的活動追蹤
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
-ms.openlocfilehash: c3bd36598fd903dc016959149e563174624d084b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65b2842c57da8e17c7280a2becd755ba2aae8364
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912648"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656445"
 ---
 # <a name="activity-tracing-in-message-security"></a>訊息安全性中的活動追蹤
 此主題將說明安全性處理中的活動追蹤 (將於下列三個階段中發生)。  
   
--   交涉/SCT 交換。 這個情況會發生在傳輸層 (透過二進位資料交換) 或訊息層 (透過 SOAP 訊息交換)。  
+- 交涉/SCT 交換。 這個情況會發生在傳輸層 (透過二進位資料交換) 或訊息層 (透過 SOAP 訊息交換)。  
   
--   訊息加密/解密，包含簽章驗證 (verification) 與驗證 (authentication)。 追蹤項目會在環境活動中發生 (通常是「處理動作」)。  
+- 訊息加密/解密，包含簽章驗證 (verification) 與驗證 (authentication)。 追蹤項目會在環境活動中發生 (通常是「處理動作」)。  
   
--   授權與驗證 這個情況會在本機或於端點之間進行通訊時發生。  
+- 授權與驗證 這個情況會在本機或於端點之間進行通訊時發生。  
   
 ## <a name="negotiationsct-exchange"></a>交涉/SCT 交換  
  在交涉 /SCT 交換階段中，用戶端上建立兩個活動類型：「 設定安全工作階段 」 和 「 關閉安全工作階段 」。 「設定安全工作階段」涵蓋了 RST/RSTR/SCT 訊息交換的追蹤，而「關閉安全工作階段」則包含了取消訊息的追蹤。  

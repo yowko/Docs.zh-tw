@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: 0b517bca3a9e296eb891e30df91c1d32eb357432
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f85acfe7592d7b90423107e0d45bb007fce5f4a8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907214"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601148"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>有效率地使用資料類型 (Visual Basic)
 未宣告的變數和資料型別未宣告的變數會指派`Object`資料型別。 這可輕鬆快速地撰寫程式，但它可能會使程式執行速度變慢。  
@@ -26,11 +26,11 @@ ms.locfileid: "61907214"
 ## <a name="strong-typing"></a>強型別  
  指定所有變數的資料類型就所謂*強型別*。 使用強型別有下列優點：  
   
--   它可讓您的變數的 IntelliSense 支援。 這可讓您查看其屬性與其他成員，當您輸入程式碼中。  
+- 它可讓您的變數的 IntelliSense 支援。 這可讓您查看其屬性與其他成員，當您輸入程式碼中。  
   
--   它會利用編譯器型別檢查。 這會攔截可能會在執行階段因例如溢位錯誤而失敗的陳述式。 它也會對方法的呼叫攔截不支援它們的物件。  
+- 它會利用編譯器型別檢查。 這會攔截可能會在執行階段因例如溢位錯誤而失敗的陳述式。 它也會對方法的呼叫攔截不支援它們的物件。  
   
--   它會導致您的程式碼的執行速度加快。  
+- 它會導致您的程式碼的執行速度加快。  
   
 ## <a name="most-efficient-data-types"></a>最有效率的資料類型  
  對於絕對不能包含分數的變數，整數資料類型會比非整數類型更有效率。 在 Visual Basic`Integer`和`UInteger`是最有效率的數字類型。  

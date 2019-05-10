@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42015
 ms.assetid: 658c070a-113e-4bd8-b294-12c243191160
-ms.openlocfilehash: 64bd7771820c2a4073350b7a5189d3a32c4775be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5943eff5fa7e68da9905e3e589eea264c06943c1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921325"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593309"
 ---
 # <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a>'\<介面名稱 >。\<成員名稱 >' 已經由基底類別的實作\<基 >'。 重新實作\<類型 > 假設
 屬性、 程序或在衍生類別中的事件使用`Implements`子句指定的基底類別中已實作介面成員。  
@@ -25,9 +25,9 @@ ms.locfileid: "61921325"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   如果您要重新實作介面成員，則不需要採取任何動作。 在衍生類別中的程式碼會存取重新實作的成員，除非您使用`MyBase`關鍵字存取基底類別實作。  
+- 如果您要重新實作介面成員，則不需要採取任何動作。 在衍生類別中的程式碼會存取重新實作的成員，除非您使用`MyBase`關鍵字存取基底類別實作。  
   
--   如果您不要重新實作介面成員，請從屬性、程序或事件宣告中移除 `Implements` 子句。  
+- 如果您不要重新實作介面成員，請從屬性、程序或事件宣告中移除 `Implements` 子句。  
   
 ## <a name="see-also"></a>另請參閱
 

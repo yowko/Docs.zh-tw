@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30024
 ms.assetid: 758e7a8f-429b-42c1-9a78-778e5b480e04
-ms.openlocfilehash: 994cafc44a37d16d0f70caec560f530c6a836ec0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9e6c8ddd7851aee6d9fa1928a6854f7337b867b0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055117"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593219"
 ---
 # <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a>陳述式在方法/多行 Lambda 內無效
 陳述式中無效`Sub`， `Function`，屬性`Get`，或屬性`Set`程序。 某些陳述式可以放在模組或類別層級。 其他項目，例如`Option Strict`，必須在命名空間層級並在所有其他宣告之前。  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-ms.openlocfilehash: 568489d6034316e895cd999801241fa995aadefa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fd24369380e5f8ccf8de939c36ba72a12dc872e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864399"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649621"
 ---
 # <a name="function-procedures-visual-basic"></a>函式程序 (Visual Basic)
 A`Function`程序是一系列的 Visual Basic 陳述式加上`Function`和`End Function`陳述式。 `Function`程序執行的工作，然後將控制權傳回呼叫程式碼。 當它傳回控制項時，它也會傳回值，呼叫程式碼。  
@@ -54,7 +54,7 @@ End Function
 ## <a name="returning-values"></a>傳回值  
  值`Function`程序會傳送回到呼叫端程式碼會呼叫它的傳回值。 程序會傳回此值中有兩種：  
   
--   它會使用`Return`陳述式來指定傳回值，並傳回立即控制權傳輸至呼叫端程式。 下列範例將說明這點。  
+- 它會使用`Return`陳述式來指定傳回值，並傳回立即控制權傳輸至呼叫端程式。 下列範例將說明這點。  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -64,7 +64,7 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
--   它將值指派給自己的程序的一或多個陳述式中的函式名稱。 控制項不會傳回給呼叫程式，直到`Exit Function`或`End Function`陳述式。 下列範例將說明這點。  
+- 它將值指派給自己的程序的一或多個陳述式中的函式名稱。 控制項不會傳回給呼叫程式，直到`Exit Function`或`End Function`陳述式。 下列範例將說明這點。  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  

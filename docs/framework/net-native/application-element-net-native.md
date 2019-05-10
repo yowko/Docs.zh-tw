@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c346b23bd49abaabde9cc4adfdeb134c4267cbf8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868597"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64657191"
 ---
 # <a name="application-element-net-native"></a>\<應用程式 > 項目 (.NET Native)
 做為容器，以包含整個應用程式中，可在執行階段將中繼資料用於反映的類型和類型成員，並將執行階段反映原則套用至應用程式中的所有程式元素。  
@@ -81,9 +81,9 @@ ms.locfileid: "61868597"
   
  `<Application>` 元素有兩種用法：  
   
--   做為容器，以定義在執行階段會需要其中繼資料的程式元素。 在此情況下，`<Application>` 元素不需要任何屬性。 在編譯時期，編譯器工具會在所有程式庫 (包括 .NET Framework 核心程式庫) 中，搜尋 `<Application>` 元素的子元素所識別的程式元素。 相對地，編譯器工具只會在 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 元素指定的程式庫中，搜尋 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 的子元素所識別的程式元素。  
+- 做為容器，以定義在執行階段會需要其中繼資料的程式元素。 在此情況下，`<Application>` 元素不需要任何屬性。 在編譯時期，編譯器工具會在所有程式庫 (包括 .NET Framework 核心程式庫) 中，搜尋 `<Application>` 元素的子元素所識別的程式元素。 相對地，編譯器工具只會在 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 元素指定的程式庫中，搜尋 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 的子元素所識別的程式元素。  
   
--   做為用來為反映、序列化和 interop 設定整個應用程式原則的元素。 `<Application>` 元素的屬性會定義整個應用程式原則，這可能會被 `<Application>` 或 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 元素定義的子元素覆寫。  
+- 做為用來為反映、序列化和 interop 設定整個應用程式原則的元素。 `<Application>` 元素的屬性會定義整個應用程式原則，這可能會被 `<Application>` 或 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 元素定義的子元素覆寫。  
   
 ## <a name="see-also"></a>另請參閱
 

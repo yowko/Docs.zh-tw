@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba943a54fdfc71dc1eb2ee2ce9548dfb86070712
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903353"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64657064"
 ---
 # <a name="frequently-asked-questions"></a>常見問題集
 下列各節將解答實作 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 時可能會遇到的一些常見問題。  
@@ -34,18 +34,18 @@ ms.locfileid: "61903353"
   
  連接使用方式的確切詳細資訊會取決於下列各項：  
   
--   連接狀態 (如果 <xref:System.Data.Linq.DataContext> 是使用連接物件建構的)。  
+- 連接狀態 (如果 <xref:System.Data.Linq.DataContext> 是使用連接物件建構的)。  
   
--   連接字串設定 (例如，啟用 Multiple Active Result Set (MARS)。 如需詳細資訊，請參閱 [Multiple Active Result Sets (MARS)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)。  
+- 連接字串設定 (例如，啟用 Multiple Active Result Set (MARS)。 如需詳細資訊，請參閱 [Multiple Active Result Sets (MARS)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)。  
   
 ## <a name="updating-without-querying"></a>更新但不查詢  
  問： 我可以不先查詢資料庫，就更新資料表資料嗎？  
   
  答： 雖然 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 沒有以設定為基礎的更新命令，不過您可以使用下列其中一種方式，就可以不先查詢即更新。  
   
--   使用 <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> 傳送 SQL 程式碼。  
+- 使用 <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> 傳送 SQL 程式碼。  
   
--   建立物件的新執行個體，然後初始化所有影響更新的目前值 (欄位)。 接著使用 <xref:System.Data.Linq.DataContext> 附加物件至 <xref:System.Data.Linq.Table%601.Attach%2A>，然後修改要變更的欄位。  
+- 建立物件的新執行個體，然後初始化所有影響更新的目前值 (欄位)。 接著使用 <xref:System.Data.Linq.DataContext> 附加物件至 <xref:System.Data.Linq.Table%601.Attach%2A>，然後修改要變更的欄位。  
   
 ## <a name="unexpected-query-results"></a>未預期的查詢結果  
  問： 我的查詢傳回未預期的結果。 我該如何檢查發生了什麼狀況？  
@@ -57,9 +57,9 @@ ms.locfileid: "61903353"
   
  答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供兩種方式來藉由預存程序傳回資料庫產生的值。  
   
--   藉由命名輸出結果。  
+- 藉由命名輸出結果。  
   
--   藉由明確指定輸出參數。  
+- 藉由明確指定輸出參數。  
   
  下面是輸出不正確的範例。 由於 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 無法對應結果，因此永遠會傳回 0：  
   

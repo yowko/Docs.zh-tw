@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: 4c96665994a7e56bc70f72b66d5922f5a6472a13
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2b22cccbd24671a74ed9819d1613ffe5a7e072a8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961222"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598392"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML 中內嵌的運算式 (Visual Basic)
 內嵌的運算式可讓您建立 XML 常值包含在執行階段評估的運算式。 內嵌運算式的語法`<%=` `expression` `%>`，這會是相同的語法用於[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]。  

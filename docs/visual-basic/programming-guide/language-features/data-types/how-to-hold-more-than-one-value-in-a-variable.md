@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: e2e1648ea508ecdd744adb8d2a4f7fdbc1e586c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c3df9873d184ead2de3f82b89a081955ade93b3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906486"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601127"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>HOW TO：變數 (Visual Basic) 中保留多個值
 變數會保留多個值，如果您將它的宣告*複合資料型別*。  
@@ -29,11 +29,11 @@ ms.locfileid: "61906486"
   
 2. 如果沒有已定義的複合資料類型，其定義，讓您的變數可以使用它。  
   
-    -   定義結構[Structure 陳述式](../../../../visual-basic/language-reference/statements/structure-statement.md)。  
+    - 定義結構[Structure 陳述式](../../../../visual-basic/language-reference/statements/structure-statement.md)。  
   
-    -   定義與陣列[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)。  
+    - 定義與陣列[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)。  
   
-    -   定義具有的類別[Class 陳述式](../../../../visual-basic/language-reference/statements/class-statement.md)。  
+    - 定義具有的類別[Class 陳述式](../../../../visual-basic/language-reference/statements/class-statement.md)。  
   
 3. 您以宣告變數`Dim`陳述式。  
   

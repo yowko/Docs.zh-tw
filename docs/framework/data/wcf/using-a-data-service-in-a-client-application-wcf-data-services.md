@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc14b6a2b3782ae7ed3d26f9878646f004504d1c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875302"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660562"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>在用戶端應用程式中使用資料服務 (WCF 資料服務)
 您可以存取服務公開[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要將 URI 提供給網頁瀏覽器。 URI 可提供資源的位址，而要求訊息會傳送至這些位址，以存取或變更資源所代表的基礎資料。 瀏覽器會發出 HTTP GET 命令，並且以 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要的形式傳回要求的資源。 如需詳細資訊，請參閱 <<c0> [ 從網頁瀏覽器存取服務](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)。  
@@ -23,24 +23,24 @@ ms.locfileid: "61875302"
 ### <a name="http-actions"></a>HTTP 動作  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 可支援下列 HTTP 動作，在定址資源代表的實體資料上，執行建立、讀取、更新，以及刪除作業：  
   
--   **HTTP GET** -這是從瀏覽器存取資源時的預設動作。 要求訊息中不會提供任何承載，同時會以包含所要求之資料的承載傳回回應方法。  
+- **HTTP GET** -這是從瀏覽器存取資源時的預設動作。 要求訊息中不會提供任何承載，同時會以包含所要求之資料的承載傳回回應方法。  
   
--   **HTTP POST** -提供的資源中插入新的實體資料。 要插入的資料會於要求訊息的承載中提供。 回應訊息的裝載包含新建立之實體的資料。 其中包括任何自動產生的索引鍵值。 標頭亦包含定址新實體資源的 URI。  
+- **HTTP POST** -提供的資源中插入新的實體資料。 要插入的資料會於要求訊息的承載中提供。 回應訊息的裝載包含新建立之實體的資料。 其中包括任何自動產生的索引鍵值。 標頭亦包含定址新實體資源的 URI。  
   
--   **HTTP DELETE** -刪除指定的資源所代表的實體資料。 要求或回應訊息中不會出現任何承載。  
+- **HTTP DELETE** -刪除指定的資源所代表的實體資料。 要求或回應訊息中不會出現任何承載。  
   
--   **HTTP PUT** -取代現有的要求之資源的實體資料，以在要求訊息的承載中提供的新資料。  
+- **HTTP PUT** -取代現有的要求之資源的實體資料，以在要求訊息的承載中提供的新資料。  
   
--   **HTTP MERGE** -由於執行刪除再插入資料來源，只為了變更實體資料的方式非常缺乏效率[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]引進了新的 HTTP MERGE 動作。 要求訊息的承載包含在定址實體資源中必須變更的屬性。 由於 HTTP 規格中未定義 HTTP MERGE，因此可能需要進行額外處理，才能透過非 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 感知的伺服器來路由傳送 HTTP MERGE 要求。  
+- **HTTP MERGE** -由於執行刪除再插入資料來源，只為了變更實體資料的方式非常缺乏效率[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]引進了新的 HTTP MERGE 動作。 要求訊息的承載包含在定址實體資源中必須變更的屬性。 由於 HTTP 規格中未定義 HTTP MERGE，因此可能需要進行額外處理，才能透過非 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 感知的伺服器來路由傳送 HTTP MERGE 要求。  
   
  如需詳細資訊，請參閱[OData:作業](https://go.microsoft.com/fwlink/?LinkId=185792)。  
   
 ### <a name="payload-formats"></a>承載格式  
  若為 HTTP PUT、HTTP POST 或 HTTP MERGE 要求，要求訊息的裝載會包含您傳送至資料服務的實體資料。 承載的內容取決於訊息的資料格式。 所有動作 (DELETE 除外) 的 HTTP 回應也包含此類承載。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支援以下列承載格式存取及變更服務的資料：  
   
--   **Atom** -藉由以 XML 為基礎的訊息編碼，可定義[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]做為 Atom 發行通訊協定 (AtomPub) 來啟用透過 HTTP 交換資料，如 Web 摘要、 podcast、 wiki 及以 XML 為基礎的網際網路功能的延伸。 如需詳細資訊，請參閱[OData:Atom 格式](https://go.microsoft.com/fwlink/?LinkId=185794)。  
+- **Atom** -藉由以 XML 為基礎的訊息編碼，可定義[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]做為 Atom 發行通訊協定 (AtomPub) 來啟用透過 HTTP 交換資料，如 Web 摘要、 podcast、 wiki 及以 XML 為基礎的網際網路功能的延伸。 如需詳細資訊，請參閱[OData:Atom 格式](https://go.microsoft.com/fwlink/?LinkId=185794)。  
   
--   **JSON** -JavaScript Object Notation (JSON) 是以 JavaScript 程式設計語言的子集為基礎的輕量型資料交換格式。 如需詳細資訊，請參閱[OData:JSON 格式](https://go.microsoft.com/fwlink/?LinkId=185795)。  
+- **JSON** -JavaScript Object Notation (JSON) 是以 JavaScript 程式設計語言的子集為基礎的輕量型資料交換格式。 如需詳細資訊，請參閱[OData:JSON 格式](https://go.microsoft.com/fwlink/?LinkId=185795)。  
   
  HTTP 要求訊息的標頭中會要求裝載的訊息格式。 如需詳細資訊，請參閱[OData:作業](https://go.microsoft.com/fwlink/?LinkID=185792)。  
   
