@@ -6,21 +6,21 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16ed4d86d64a6d3c569c7fd7ab9e9e3a3943f078
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1e14fa2d739a6fdabda7b64e7e765e51da19701a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723663"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616458"
 ---
-# <a name="controlling-net-framework-logging"></a><span data-ttu-id="8edd0-102">控制 .NET Framework 記錄</span><span class="sxs-lookup"><span data-stu-id="8edd0-102">Controlling .NET Framework Logging</span></span>
-<span data-ttu-id="8edd0-103">您可以使用 Windows 事件追蹤 (ETW) 來記錄通用語言執行平台 (CLR) 事件。</span><span class="sxs-lookup"><span data-stu-id="8edd0-103">You can use event tracing for Windows (ETW) to record common language runtime (CLR) events.</span></span> <span data-ttu-id="8edd0-104">您可以使用下列工具來建立和檢視追蹤：</span><span class="sxs-lookup"><span data-stu-id="8edd0-104">You can create and view traces by using the following tools:</span></span>  
+# <a name="controlling-net-framework-logging"></a><span data-ttu-id="fd897-102">控制 .NET Framework 記錄</span><span class="sxs-lookup"><span data-stu-id="fd897-102">Controlling .NET Framework Logging</span></span>
+<span data-ttu-id="fd897-103">您可以使用 Windows 事件追蹤 (ETW) 來記錄通用語言執行平台 (CLR) 事件。</span><span class="sxs-lookup"><span data-stu-id="fd897-103">You can use event tracing for Windows (ETW) to record common language runtime (CLR) events.</span></span> <span data-ttu-id="fd897-104">您可以使用下列工具來建立和檢視追蹤：</span><span class="sxs-lookup"><span data-stu-id="fd897-104">You can create and view traces by using the following tools:</span></span>  
   
-- <span data-ttu-id="8edd0-105">[Logman](/windows-server/administration/windows-commands/logman) 和 [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) 命令列工具，隨附於 Windows 作業系統。</span><span class="sxs-lookup"><span data-stu-id="8edd0-105">The [Logman](/windows-server/administration/windows-commands/logman) and [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) command-line tools, which are included with the Windows operating system.</span></span>  
+- <span data-ttu-id="fd897-105">[Logman](/windows-server/administration/windows-commands/logman) 和 [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) 命令列工具，隨附於 Windows 作業系統。</span><span class="sxs-lookup"><span data-stu-id="fd897-105">The [Logman](/windows-server/administration/windows-commands/logman) and [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) command-line tools, which are included with the Windows operating system.</span></span>  
   
-- <span data-ttu-id="8edd0-106">[Windows 效能工具組](/windows-hardware/test/wpt/)中的 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 工具。</span><span class="sxs-lookup"><span data-stu-id="8edd0-106">The [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) tools in the [Windows Performance Toolkit](/windows-hardware/test/wpt/).</span></span> <span data-ttu-id="8edd0-107">如需 Xperf 的詳細資訊，請參閱 [Windows 效能部落格](https://go.microsoft.com/fwlink/?LinkId=179509)。</span><span class="sxs-lookup"><span data-stu-id="8edd0-107">For more information about Xperf, see the [Windows Performance blog](https://go.microsoft.com/fwlink/?LinkId=179509).</span></span>  
+- <span data-ttu-id="fd897-106">[Windows 效能工具組](/windows-hardware/test/wpt/)中的 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 工具。</span><span class="sxs-lookup"><span data-stu-id="fd897-106">The [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) tools in the [Windows Performance Toolkit](/windows-hardware/test/wpt/).</span></span> <span data-ttu-id="fd897-107">如需 Xperf 的詳細資訊，請參閱 [Windows 效能部落格](https://go.microsoft.com/fwlink/?LinkId=179509)。</span><span class="sxs-lookup"><span data-stu-id="fd897-107">For more information about Xperf, see the [Windows Performance blog](https://go.microsoft.com/fwlink/?LinkId=179509).</span></span>  
   
- <span data-ttu-id="8edd0-108">若要擷取 CLR 事件資訊，您必須在電腦上安裝 CLR 提供者。</span><span class="sxs-lookup"><span data-stu-id="8edd0-108">To capture CLR event information, the CLR provider must be installed on your computer.</span></span> <span data-ttu-id="8edd0-109">若要確認是否已安裝此提供者，請在命令提示字元中輸入 `logman query providers`。</span><span class="sxs-lookup"><span data-stu-id="8edd0-109">To confirm that the provider is installed, type `logman query providers` at the command prompt.</span></span> <span data-ttu-id="8edd0-110">提供者的清單隨即顯示。</span><span class="sxs-lookup"><span data-stu-id="8edd0-110">A list of providers is displayed.</span></span> <span data-ttu-id="8edd0-111">此清單應該會包含 CLR 提供者的項目，如下所示。</span><span class="sxs-lookup"><span data-stu-id="8edd0-111">This list should contain an entry for the CLR provider, as follows.</span></span>  
+ <span data-ttu-id="fd897-108">若要擷取 CLR 事件資訊，您必須在電腦上安裝 CLR 提供者。</span><span class="sxs-lookup"><span data-stu-id="fd897-108">To capture CLR event information, the CLR provider must be installed on your computer.</span></span> <span data-ttu-id="fd897-109">若要確認是否已安裝此提供者，請在命令提示字元中輸入 `logman query providers`。</span><span class="sxs-lookup"><span data-stu-id="fd897-109">To confirm that the provider is installed, type `logman query providers` at the command prompt.</span></span> <span data-ttu-id="fd897-110">提供者的清單隨即顯示。</span><span class="sxs-lookup"><span data-stu-id="fd897-110">A list of providers is displayed.</span></span> <span data-ttu-id="fd897-111">此清單應該會包含 CLR 提供者的項目，如下所示。</span><span class="sxs-lookup"><span data-stu-id="fd897-111">This list should contain an entry for the CLR provider, as follows.</span></span>  
   
 ```  
 Provider                                 GUID  
@@ -28,87 +28,87 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.  
 ```  
   
- <span data-ttu-id="8edd0-112">如果未列出 CLR 提供者，您可以使用 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 命令列工具，在 Windows Vista 和更新版本的作業系統上安裝此提供者。</span><span class="sxs-lookup"><span data-stu-id="8edd0-112">If the CLR provider is not listed, you can install it on Windows Vista and later operating systems by using the Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) command-line tool.</span></span> <span data-ttu-id="8edd0-113">以系統管理員身分開啟 [命令提示字元] 視窗。</span><span class="sxs-lookup"><span data-stu-id="8edd0-113">Open the Command Prompt window as an administrator.</span></span> <span data-ttu-id="8edd0-114">將提示目錄變更為 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 資料夾 (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET 版本>\)。</span><span class="sxs-lookup"><span data-stu-id="8edd0-114">Change the prompt directory to the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] folder (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET version>\ ).</span></span> <span data-ttu-id="8edd0-115">這個資料夾包含 CLR-ETW.man 檔案。</span><span class="sxs-lookup"><span data-stu-id="8edd0-115">This folder contains the CLR-ETW.man file.</span></span> <span data-ttu-id="8edd0-116">在命令提示字元中，輸入下列命令，即可安裝 CLR 提供者：</span><span class="sxs-lookup"><span data-stu-id="8edd0-116">At the command prompt, type the following command to install the CLR provider:</span></span>  
+ <span data-ttu-id="fd897-112">如果未列出 CLR 提供者，您可以使用 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 命令列工具，在 Windows Vista 和更新版本的作業系統上安裝此提供者。</span><span class="sxs-lookup"><span data-stu-id="fd897-112">If the CLR provider is not listed, you can install it on Windows Vista and later operating systems by using the Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) command-line tool.</span></span> <span data-ttu-id="fd897-113">以系統管理員身分開啟 [命令提示字元] 視窗。</span><span class="sxs-lookup"><span data-stu-id="fd897-113">Open the Command Prompt window as an administrator.</span></span> <span data-ttu-id="fd897-114">將提示目錄變更為 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 資料夾 (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET 版本>\)。</span><span class="sxs-lookup"><span data-stu-id="fd897-114">Change the prompt directory to the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] folder (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET version>\ ).</span></span> <span data-ttu-id="fd897-115">這個資料夾包含 CLR-ETW.man 檔案。</span><span class="sxs-lookup"><span data-stu-id="fd897-115">This folder contains the CLR-ETW.man file.</span></span> <span data-ttu-id="fd897-116">在命令提示字元中，輸入下列命令，即可安裝 CLR 提供者：</span><span class="sxs-lookup"><span data-stu-id="fd897-116">At the command prompt, type the following command to install the CLR provider:</span></span>  
   
  `wevtutil im CLR-ETW.man`  
   
-## <a name="capturing-clr-etw-events"></a><span data-ttu-id="8edd0-117">擷取 CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="8edd0-117">Capturing CLR ETW Events</span></span>  
- <span data-ttu-id="8edd0-118">您可以使用 [Logman](/windows-server/administration/windows-commands/logman) 和 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 命令列工具擷取 ETW 事件，以及使用 [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) 和 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 工具解碼追蹤事件。</span><span class="sxs-lookup"><span data-stu-id="8edd0-118">You can use the [Logman](/windows-server/administration/windows-commands/logman) and [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) command-line tools to capture ETW events, and the [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) and [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) tools to decode the trace events.</span></span>  
+## <a name="capturing-clr-etw-events"></a><span data-ttu-id="fd897-117">擷取 CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="fd897-117">Capturing CLR ETW Events</span></span>  
+ <span data-ttu-id="fd897-118">您可以使用 [Logman](/windows-server/administration/windows-commands/logman) 和 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 命令列工具擷取 ETW 事件，以及使用 [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) 和 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 工具解碼追蹤事件。</span><span class="sxs-lookup"><span data-stu-id="fd897-118">You can use the [Logman](/windows-server/administration/windows-commands/logman) and [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) command-line tools to capture ETW events, and the [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) and [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) tools to decode the trace events.</span></span>  
   
- <span data-ttu-id="8edd0-119">若要開啟記錄，使用者必須指定三個項目：</span><span class="sxs-lookup"><span data-stu-id="8edd0-119">To turn on logging, a user must specify three things:</span></span>  
+ <span data-ttu-id="fd897-119">若要開啟記錄，使用者必須指定三個項目：</span><span class="sxs-lookup"><span data-stu-id="fd897-119">To turn on logging, a user must specify three things:</span></span>  
   
-- <span data-ttu-id="8edd0-120">要與之通訊的提供者。</span><span class="sxs-lookup"><span data-stu-id="8edd0-120">The provider to communicate to.</span></span>  
+- <span data-ttu-id="fd897-120">要與之通訊的提供者。</span><span class="sxs-lookup"><span data-stu-id="fd897-120">The provider to communicate to.</span></span>  
   
-- <span data-ttu-id="8edd0-121">表示一組關鍵字的 64 位元數字。</span><span class="sxs-lookup"><span data-stu-id="8edd0-121">A 64-bit number that represents a set of keywords.</span></span> <span data-ttu-id="8edd0-122">每個關鍵字各表示一組提供者可以開啟的事件。</span><span class="sxs-lookup"><span data-stu-id="8edd0-122">Each keyword represents a set of events that the provider can turn on.</span></span> <span data-ttu-id="8edd0-123">數字綜合表示一組要開啟的關鍵字。</span><span class="sxs-lookup"><span data-stu-id="8edd0-123">The number represents a combined set of keywords to turn on.</span></span>  
+- <span data-ttu-id="fd897-121">表示一組關鍵字的 64 位元數字。</span><span class="sxs-lookup"><span data-stu-id="fd897-121">A 64-bit number that represents a set of keywords.</span></span> <span data-ttu-id="fd897-122">每個關鍵字各表示一組提供者可以開啟的事件。</span><span class="sxs-lookup"><span data-stu-id="fd897-122">Each keyword represents a set of events that the provider can turn on.</span></span> <span data-ttu-id="fd897-123">數字綜合表示一組要開啟的關鍵字。</span><span class="sxs-lookup"><span data-stu-id="fd897-123">The number represents a combined set of keywords to turn on.</span></span>  
   
-- <span data-ttu-id="8edd0-124">很小的數字，表示要記錄的 (詳細) 層級。</span><span class="sxs-lookup"><span data-stu-id="8edd0-124">A small number representing the level (verbosity) to log at.</span></span> <span data-ttu-id="8edd0-125">層級 1 最不詳細，而層級 5 則是最詳細。</span><span class="sxs-lookup"><span data-stu-id="8edd0-125">Level 1 is the least verbose, and level 5 is the most verbose.</span></span> <span data-ttu-id="8edd0-126">層級 0 為預設值，意思是提供者特有的事件。</span><span class="sxs-lookup"><span data-stu-id="8edd0-126">Level 0 is a default whose meaning is provider-specific.</span></span>  
+- <span data-ttu-id="fd897-124">很小的數字，表示要記錄的 (詳細) 層級。</span><span class="sxs-lookup"><span data-stu-id="fd897-124">A small number representing the level (verbosity) to log at.</span></span> <span data-ttu-id="fd897-125">層級 1 最不詳細，而層級 5 則是最詳細。</span><span class="sxs-lookup"><span data-stu-id="fd897-125">Level 1 is the least verbose, and level 5 is the most verbose.</span></span> <span data-ttu-id="fd897-126">層級 0 為預設值，意思是提供者特有的事件。</span><span class="sxs-lookup"><span data-stu-id="fd897-126">Level 0 is a default whose meaning is provider-specific.</span></span>  
   
-#### <a name="to-capture-clr-etw-events-using-logman"></a><span data-ttu-id="8edd0-127">若要使用 Logman 來擷取 CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="8edd0-127">To capture CLR ETW events using Logman</span></span>  
+#### <a name="to-capture-clr-etw-events-using-logman"></a><span data-ttu-id="fd897-127">若要使用 Logman 來擷取 CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="fd897-127">To capture CLR ETW events using Logman</span></span>  
   
-1. <span data-ttu-id="8edd0-128">在命令提示中，輸入：</span><span class="sxs-lookup"><span data-stu-id="8edd0-128">At the command prompt, type:</span></span>  
+1. <span data-ttu-id="fd897-128">在命令提示中，輸入：</span><span class="sxs-lookup"><span data-stu-id="fd897-128">At the command prompt, type:</span></span>  
   
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`  
   
-     <span data-ttu-id="8edd0-129">其中：</span><span class="sxs-lookup"><span data-stu-id="8edd0-129">where:</span></span>  
+     <span data-ttu-id="fd897-129">其中：</span><span class="sxs-lookup"><span data-stu-id="fd897-129">where:</span></span>  
   
-    - <span data-ttu-id="8edd0-130">`-p` 參數會識別提供者 GUID。</span><span class="sxs-lookup"><span data-stu-id="8edd0-130">The `-p` parameter identifies the provider GUID.</span></span>  
+    - <span data-ttu-id="fd897-130">`-p` 參數會識別提供者 GUID。</span><span class="sxs-lookup"><span data-stu-id="fd897-130">The `-p` parameter identifies the provider GUID.</span></span>  
   
-    - <span data-ttu-id="8edd0-131">`0x1CCBD` 會指定即將引發之事件的分類。</span><span class="sxs-lookup"><span data-stu-id="8edd0-131">`0x1CCBD` specifies the categories of events that will be raised.</span></span>  
+    - <span data-ttu-id="fd897-131">`0x1CCBD` 會指定即將引發之事件的分類。</span><span class="sxs-lookup"><span data-stu-id="fd897-131">`0x1CCBD` specifies the categories of events that will be raised.</span></span>  
   
-    - <span data-ttu-id="8edd0-132">`0x5` 會設定記錄的層級 (在本例中，設為詳細資訊 (5))。</span><span class="sxs-lookup"><span data-stu-id="8edd0-132">`0x5` sets the level of logging (in this case, verbose (5)).</span></span>  
+    - <span data-ttu-id="fd897-132">`0x5` 會設定記錄的層級 (在本例中，設為詳細資訊 (5))。</span><span class="sxs-lookup"><span data-stu-id="fd897-132">`0x5` sets the level of logging (in this case, verbose (5)).</span></span>  
   
-    - <span data-ttu-id="8edd0-133">`-ets` 參數會指示 Logman 傳送命令給事件追蹤工作階段。</span><span class="sxs-lookup"><span data-stu-id="8edd0-133">The `-ets` parameter instructs Logman to send commands to event tracing sessions.</span></span>  
+    - <span data-ttu-id="fd897-133">`-ets` 參數會指示 Logman 傳送命令給事件追蹤工作階段。</span><span class="sxs-lookup"><span data-stu-id="fd897-133">The `-ets` parameter instructs Logman to send commands to event tracing sessions.</span></span>  
   
-    - <span data-ttu-id="8edd0-134">`-ct perf` 參數會指定要使用 `QueryPerformanceCounter` 函式來記錄每個事件的時間戳記。</span><span class="sxs-lookup"><span data-stu-id="8edd0-134">The `-ct perf` parameter specifies that the `QueryPerformanceCounter` function will be used to log the time stamp for each event.</span></span>  
+    - <span data-ttu-id="fd897-134">`-ct perf` 參數會指定要使用 `QueryPerformanceCounter` 函式來記錄每個事件的時間戳記。</span><span class="sxs-lookup"><span data-stu-id="fd897-134">The `-ct perf` parameter specifies that the `QueryPerformanceCounter` function will be used to log the time stamp for each event.</span></span>  
   
-2. <span data-ttu-id="8edd0-135">若要停止記錄事件，請輸入：</span><span class="sxs-lookup"><span data-stu-id="8edd0-135">To stop logging the events, type:</span></span>  
+2. <span data-ttu-id="fd897-135">若要停止記錄事件，請輸入：</span><span class="sxs-lookup"><span data-stu-id="fd897-135">To stop logging the events, type:</span></span>  
   
      `logman stop clrevents -ets`  
   
-     <span data-ttu-id="8edd0-136">這個命令會建立名為 clrevents.etl 的二進位追蹤檔。</span><span class="sxs-lookup"><span data-stu-id="8edd0-136">This command creates a binary trace file named clrevents.etl.</span></span>  
+     <span data-ttu-id="fd897-136">這個命令會建立名為 clrevents.etl 的二進位追蹤檔。</span><span class="sxs-lookup"><span data-stu-id="fd897-136">This command creates a binary trace file named clrevents.etl.</span></span>  
   
-#### <a name="to-capture-clr-etw-events-using-xperf"></a><span data-ttu-id="8edd0-137">若要使用 Xperf 來擷取 CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="8edd0-137">To capture CLR ETW events using Xperf</span></span>  
+#### <a name="to-capture-clr-etw-events-using-xperf"></a><span data-ttu-id="fd897-137">若要使用 Xperf 來擷取 CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="fd897-137">To capture CLR ETW events using Xperf</span></span>  
   
-1. <span data-ttu-id="8edd0-138">在命令提示中，輸入：</span><span class="sxs-lookup"><span data-stu-id="8edd0-138">At the command prompt, type:</span></span>  
+1. <span data-ttu-id="fd897-138">在命令提示中，輸入：</span><span class="sxs-lookup"><span data-stu-id="fd897-138">At the command prompt, type:</span></span>  
   
      `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`  
   
-     <span data-ttu-id="8edd0-139">其中，GUID 是 CLR ETW 提供者 GUID，而且 `0x1CCBD:5` 會追蹤層級 5 (詳細資訊) 以下的每個事件。</span><span class="sxs-lookup"><span data-stu-id="8edd0-139">where the GUID is the CLR ETW provider GUID, and `0x1CCBD:5` traces everything at and below level 5 (verbose).</span></span>  
+     <span data-ttu-id="fd897-139">其中，GUID 是 CLR ETW 提供者 GUID，而且 `0x1CCBD:5` 會追蹤層級 5 (詳細資訊) 以下的每個事件。</span><span class="sxs-lookup"><span data-stu-id="fd897-139">where the GUID is the CLR ETW provider GUID, and `0x1CCBD:5` traces everything at and below level 5 (verbose).</span></span>  
   
-2. <span data-ttu-id="8edd0-140">若要停止追蹤，請輸入：</span><span class="sxs-lookup"><span data-stu-id="8edd0-140">To stop tracing, type:</span></span>  
+2. <span data-ttu-id="fd897-140">若要停止追蹤，請輸入：</span><span class="sxs-lookup"><span data-stu-id="fd897-140">To stop tracing, type:</span></span>  
   
      `Xperf -stop clr`  
   
-     <span data-ttu-id="8edd0-141">這個命令會建立名為 clrevents.etl 的追蹤檔。</span><span class="sxs-lookup"><span data-stu-id="8edd0-141">This command creates a trace file named clrevents.etl.</span></span>  
+     <span data-ttu-id="fd897-141">這個命令會建立名為 clrevents.etl 的追蹤檔。</span><span class="sxs-lookup"><span data-stu-id="fd897-141">This command creates a trace file named clrevents.etl.</span></span>  
   
-## <a name="viewing-clr-etw-events"></a><span data-ttu-id="8edd0-142">檢視 CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="8edd0-142">Viewing CLR ETW Events</span></span>  
- <span data-ttu-id="8edd0-143">您可以使用下列命令來檢視 CLR ETW 事件。</span><span class="sxs-lookup"><span data-stu-id="8edd0-143">Use the commands listed below to view the CLR ETW events.</span></span> <span data-ttu-id="8edd0-144">如需這些事件的描述，請參閱 [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)。</span><span class="sxs-lookup"><span data-stu-id="8edd0-144">For a description of the events, see [CLR ETW Events](../../../docs/framework/performance/clr-etw-events.md).</span></span>  
+## <a name="viewing-clr-etw-events"></a><span data-ttu-id="fd897-142">檢視 CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="fd897-142">Viewing CLR ETW Events</span></span>  
+ <span data-ttu-id="fd897-143">您可以使用下列命令來檢視 CLR ETW 事件。</span><span class="sxs-lookup"><span data-stu-id="fd897-143">Use the commands listed below to view the CLR ETW events.</span></span> <span data-ttu-id="fd897-144">如需這些事件的描述，請參閱 [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)。</span><span class="sxs-lookup"><span data-stu-id="fd897-144">For a description of the events, see [CLR ETW Events](../../../docs/framework/performance/clr-etw-events.md).</span></span>  
   
-#### <a name="to-view-clr-etw-events-using-tracerpt"></a><span data-ttu-id="8edd0-145">若要使用 Tracerpt 來檢視 CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="8edd0-145">To view CLR ETW events using Tracerpt</span></span>  
+#### <a name="to-view-clr-etw-events-using-tracerpt"></a><span data-ttu-id="fd897-145">若要使用 Tracerpt 來檢視 CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="fd897-145">To view CLR ETW events using Tracerpt</span></span>  
   
-- <span data-ttu-id="8edd0-146">在命令提示中，輸入：</span><span class="sxs-lookup"><span data-stu-id="8edd0-146">At the command prompt, type:</span></span>  
+- <span data-ttu-id="fd897-146">在命令提示中，輸入：</span><span class="sxs-lookup"><span data-stu-id="fd897-146">At the command prompt, type:</span></span>  
   
      `tracerpt clrevents.etl`  
   
-     <span data-ttu-id="8edd0-147">這個命令會建立兩個檔案：dumpfile.xml 和 summary.txt。</span><span class="sxs-lookup"><span data-stu-id="8edd0-147">This command creates two files: dumpfile.xml and summary.txt.</span></span> <span data-ttu-id="8edd0-148">dumpfile.xml 檔案會列出所有事件，而 summary.txt 會提供這些事件的摘要。</span><span class="sxs-lookup"><span data-stu-id="8edd0-148">The dumpfile.xml file lists all the events, and summary.txt provides a summary of the events.</span></span>  
+     <span data-ttu-id="fd897-147">這個命令會建立兩個檔案：dumpfile.xml 和 summary.txt。</span><span class="sxs-lookup"><span data-stu-id="fd897-147">This command creates two files: dumpfile.xml and summary.txt.</span></span> <span data-ttu-id="fd897-148">dumpfile.xml 檔案會列出所有事件，而 summary.txt 會提供這些事件的摘要。</span><span class="sxs-lookup"><span data-stu-id="fd897-148">The dumpfile.xml file lists all the events, and summary.txt provides a summary of the events.</span></span>  
   
-#### <a name="to-view-clr-etw-events-using-xperf"></a><span data-ttu-id="8edd0-149">若要使用 Xperf 來檢視 CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="8edd0-149">To view CLR ETW events using Xperf</span></span>  
+#### <a name="to-view-clr-etw-events-using-xperf"></a><span data-ttu-id="fd897-149">若要使用 Xperf 來檢視 CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="fd897-149">To view CLR ETW events using Xperf</span></span>  
   
-- <span data-ttu-id="8edd0-150">在命令提示中，輸入：</span><span class="sxs-lookup"><span data-stu-id="8edd0-150">At the command prompt, type:</span></span>  
+- <span data-ttu-id="fd897-150">在命令提示中，輸入：</span><span class="sxs-lookup"><span data-stu-id="fd897-150">At the command prompt, type:</span></span>  
   
      `xperf clrevents.etl`  
   
-     <span data-ttu-id="8edd0-151">這個命令會開啟 Xperf ETL 檔案檢視器。</span><span class="sxs-lookup"><span data-stu-id="8edd0-151">This command opens the Xperf ETL file viewer.</span></span> <span data-ttu-id="8edd0-152">在這個檢視器中，CLR 事件會顯示在 [一般事件] 檢視中。</span><span class="sxs-lookup"><span data-stu-id="8edd0-152">In this viewer, the CLR events show up in the **Generic Events** view.</span></span> <span data-ttu-id="8edd0-153">若要顯示依類型分類的事件資料格，請在這個檢視中選取一個時間區域，並按一下滑鼠右鍵，然後選取 [摘要]。</span><span class="sxs-lookup"><span data-stu-id="8edd0-153">To display a data grid of events categorized by type, select a region of time in this view, and then right-click and select **Summary**.</span></span>  
+     <span data-ttu-id="fd897-151">這個命令會開啟 Xperf ETL 檔案檢視器。</span><span class="sxs-lookup"><span data-stu-id="fd897-151">This command opens the Xperf ETL file viewer.</span></span> <span data-ttu-id="fd897-152">在這個檢視器中，CLR 事件會顯示在 [一般事件] 檢視中。</span><span class="sxs-lookup"><span data-stu-id="fd897-152">In this viewer, the CLR events show up in the **Generic Events** view.</span></span> <span data-ttu-id="fd897-153">若要顯示依類型分類的事件資料格，請在這個檢視中選取一個時間區域，並按一下滑鼠右鍵，然後選取 [摘要]。</span><span class="sxs-lookup"><span data-stu-id="fd897-153">To display a data grid of events categorized by type, select a region of time in this view, and then right-click and select **Summary**.</span></span>  
   
-#### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a><span data-ttu-id="8edd0-154">若要將 .etl 檔案轉換為逗點分隔值檔案</span><span class="sxs-lookup"><span data-stu-id="8edd0-154">To convert the .etl file to a comma-separated value file</span></span>  
+#### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a><span data-ttu-id="fd897-154">若要將 .etl 檔案轉換為逗點分隔值檔案</span><span class="sxs-lookup"><span data-stu-id="fd897-154">To convert the .etl file to a comma-separated value file</span></span>  
   
-- <span data-ttu-id="8edd0-155">在命令提示中，輸入：</span><span class="sxs-lookup"><span data-stu-id="8edd0-155">At the command prompt, type:</span></span>  
+- <span data-ttu-id="fd897-155">在命令提示中，輸入：</span><span class="sxs-lookup"><span data-stu-id="fd897-155">At the command prompt, type:</span></span>  
   
      `xperf -i clrevents.etl -f clrevents.csv`  
   
-     <span data-ttu-id="8edd0-156">這個命令會讓 XPerf 以您可以檢視的逗點分隔值 (CSV) 檔案的形式傾印事件。</span><span class="sxs-lookup"><span data-stu-id="8edd0-156">This command causes XPerf to dump the events as a comma separated value (CSV) file that you can view.</span></span> <span data-ttu-id="8edd0-157">因為不同的事件有不同的欄位，所以這個 CSV 檔案中的資料前面會有多行標頭。</span><span class="sxs-lookup"><span data-stu-id="8edd0-157">Because different events have different fields, this CSV file is contains more than one header line before the data.</span></span> <span data-ttu-id="8edd0-158">每行的第一個欄位都是事件類型，表示應使用哪一行的標頭來判斷其餘的欄位。</span><span class="sxs-lookup"><span data-stu-id="8edd0-158">The first field of every line is the event type, which indicates which header should be used to determine the rest of the fields.</span></span>  
+     <span data-ttu-id="fd897-156">這個命令會讓 XPerf 以您可以檢視的逗點分隔值 (CSV) 檔案的形式傾印事件。</span><span class="sxs-lookup"><span data-stu-id="fd897-156">This command causes XPerf to dump the events as a comma separated value (CSV) file that you can view.</span></span> <span data-ttu-id="fd897-157">因為不同的事件有不同的欄位，所以這個 CSV 檔案中的資料前面會有多行標頭。</span><span class="sxs-lookup"><span data-stu-id="fd897-157">Because different events have different fields, this CSV file is contains more than one header line before the data.</span></span> <span data-ttu-id="fd897-158">每行的第一個欄位都是事件類型，表示應使用哪一行的標頭來判斷其餘的欄位。</span><span class="sxs-lookup"><span data-stu-id="fd897-158">The first field of every line is the event type, which indicates which header should be used to determine the rest of the fields.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8edd0-159">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8edd0-159">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fd897-159">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fd897-159">See also</span></span>
 
-- [<span data-ttu-id="8edd0-160">Windows 效能工具組</span><span class="sxs-lookup"><span data-stu-id="8edd0-160">Windows Performance Toolkit</span></span>](/windows-hardware/test/wpt/)
-- [<span data-ttu-id="8edd0-161">Common Language Runtime 中的 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="8edd0-161">ETW Events in the Common Language Runtime</span></span>](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [<span data-ttu-id="fd897-160">Windows 效能工具組</span><span class="sxs-lookup"><span data-stu-id="fd897-160">Windows Performance Toolkit</span></span>](/windows-hardware/test/wpt/)
+- [<span data-ttu-id="fd897-161">Common Language Runtime 中的 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="fd897-161">ETW Events in the Common Language Runtime</span></span>](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

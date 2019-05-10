@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30020
 ms.assetid: 228afebd-1203-4bd3-8d7a-c5c56f3cedc4
-ms.openlocfilehash: b828de196a12128a9f34ee1f9ff1e57fee22c687
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65fbba9689ae01d8156bd0b3e2efeb6b75bd79e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799180"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625961"
 ---
-# <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a><span data-ttu-id="ea776-102">'Is' 需要有參考類型的運算元，但此運算元擁有實值型別 '\<類型名稱 >'</span><span class="sxs-lookup"><span data-stu-id="ea776-102">'Is' requires operands that have reference types, but this operand has the value type '\<typename>'</span></span>
-<span data-ttu-id="ea776-103">`Is`比較運算子會判斷兩個物件變數是否參考相同的執行個體。</span><span class="sxs-lookup"><span data-stu-id="ea776-103">The `Is` comparison operator determines whether two object variables refer to the same instance.</span></span> <span data-ttu-id="ea776-104">這項比較未定義實值型別。</span><span class="sxs-lookup"><span data-stu-id="ea776-104">This comparison is not defined for value types.</span></span>  
+# <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a><span data-ttu-id="6de6b-102">'Is' 需要有參考類型的運算元，但此運算元擁有實值型別 '\<類型名稱 >'</span><span class="sxs-lookup"><span data-stu-id="6de6b-102">'Is' requires operands that have reference types, but this operand has the value type '\<typename>'</span></span>
+<span data-ttu-id="6de6b-103">`Is`比較運算子會判斷兩個物件變數是否參考相同的執行個體。</span><span class="sxs-lookup"><span data-stu-id="6de6b-103">The `Is` comparison operator determines whether two object variables refer to the same instance.</span></span> <span data-ttu-id="6de6b-104">這項比較未定義實值型別。</span><span class="sxs-lookup"><span data-stu-id="6de6b-104">This comparison is not defined for value types.</span></span>  
   
- <span data-ttu-id="ea776-105">**錯誤 ID:** BC30020</span><span class="sxs-lookup"><span data-stu-id="ea776-105">**Error ID:** BC30020</span></span>  
+ <span data-ttu-id="6de6b-105">**錯誤 ID:** BC30020</span><span class="sxs-lookup"><span data-stu-id="6de6b-105">**Error ID:** BC30020</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="ea776-106">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="ea776-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6de6b-106">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="6de6b-106">To correct this error</span></span>  
   
--   <span data-ttu-id="ea776-107">使用適當的算術比較運算子或`Like`運算子來比較兩個實值型別。</span><span class="sxs-lookup"><span data-stu-id="ea776-107">Use the appropriate arithmetic comparison operator or the `Like` operator to compare two value types.</span></span>  
+- <span data-ttu-id="6de6b-107">使用適當的算術比較運算子或`Like`運算子來比較兩個實值型別。</span><span class="sxs-lookup"><span data-stu-id="6de6b-107">Use the appropriate arithmetic comparison operator or the `Like` operator to compare two value types.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ea776-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ea776-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6de6b-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6de6b-108">See also</span></span>
 
-- [<span data-ttu-id="ea776-109">Is 運算子</span><span class="sxs-lookup"><span data-stu-id="ea776-109">Is Operator</span></span>](../../../visual-basic/language-reference/operators/is-operator.md)
-- [<span data-ttu-id="ea776-110">Like 運算子</span><span class="sxs-lookup"><span data-stu-id="ea776-110">Like Operator</span></span>](../../../visual-basic/language-reference/operators/like-operator.md)
-- [<span data-ttu-id="ea776-111">比較運算子</span><span class="sxs-lookup"><span data-stu-id="ea776-111">Comparison Operators</span></span>](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [<span data-ttu-id="6de6b-109">Is 運算子</span><span class="sxs-lookup"><span data-stu-id="6de6b-109">Is Operator</span></span>](../../../visual-basic/language-reference/operators/is-operator.md)
+- [<span data-ttu-id="6de6b-110">Like 運算子</span><span class="sxs-lookup"><span data-stu-id="6de6b-110">Like Operator</span></span>](../../../visual-basic/language-reference/operators/like-operator.md)
+- [<span data-ttu-id="6de6b-111">比較運算子</span><span class="sxs-lookup"><span data-stu-id="6de6b-111">Comparison Operators</span></span>](../../../visual-basic/language-reference/operators/comparison-operators.md)
