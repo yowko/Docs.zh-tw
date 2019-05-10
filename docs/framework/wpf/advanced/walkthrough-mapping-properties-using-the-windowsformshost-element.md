@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a7c36e8fc150fe3268120ed728f1bed87d24e800
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007111"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623592"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>逐步解說：使用 WindowsFormsHost 項目對應屬性
 
@@ -21,17 +21,17 @@ ms.locfileid: "62007111"
 
 這個逐步解說中所述的工作包括：
 
--   建立專案。
+- 建立專案。
 
--   定義應用程式版面配置。
+- 定義應用程式版面配置。
 
--   定義新的屬性對應。
+- 定義新的屬性對應。
 
--   移除預設屬性對應。
+- 移除預設屬性對應。
 
--   取代預設屬性對應。
+- 取代預設屬性對應。
 
--   擴充預設屬性對應。
+- 擴充預設屬性對應。
 
 在此逐步解說中所述工作的完整程式碼清單，請參閱 <<c0> [ 對應屬性使用 WindowsFormsHost 項目範例](https://go.microsoft.com/fwlink/?LinkID=160019)。
 
@@ -41,7 +41,7 @@ ms.locfileid: "62007111"
 
 您需要下列元件才能完成此逐步解說：
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="create-and-set-up-the-project"></a>建立並設定專案
 
@@ -76,7 +76,7 @@ ms.locfileid: "62007111"
 
 ### <a name="to-define-a-new-property-mapping"></a>定義新的屬性對應
 
--   將下列程式碼複製到的定義`Window1`類別。
+- 將下列程式碼複製到的定義`Window1`類別。
 
      [!code-csharp[PropertyMappingWithWfhSample#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#14)]
      [!code-vb[PropertyMappingWithWfhSample#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#14)]
@@ -93,7 +93,7 @@ ms.locfileid: "62007111"
 
 ### <a name="to-remove-a-default-property-mapping"></a>移除預設屬性對應
 
--   將下列程式碼複製到的定義`Window1`類別。
+- 將下列程式碼複製到的定義`Window1`類別。
 
      [!code-csharp[PropertyMappingWithWfhSample#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#13)]
      [!code-vb[PropertyMappingWithWfhSample#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#13)]
@@ -106,7 +106,7 @@ ms.locfileid: "62007111"
 
 ### <a name="to-replace-a-default-property-mapping"></a>移除預設屬性對應
 
--   將下列程式碼複製到的定義`Window1`類別。
+- 將下列程式碼複製到的定義`Window1`類別。
 
      [!code-csharp[PropertyMappingWithWfhSample#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#12)]
      [!code-vb[PropertyMappingWithWfhSample#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#12)]
@@ -123,7 +123,7 @@ ms.locfileid: "62007111"
 
 ### <a name="to-extend-a-default-property-mapping"></a>擴充預設屬性對應
 
--   將下列程式碼複製到的定義`Window1`類別。
+- 將下列程式碼複製到的定義`Window1`類別。
 
      [!code-csharp[PropertyMappingWithWfhSample#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#15)]
      [!code-vb[PropertyMappingWithWfhSample#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#15)]
@@ -145,11 +145,11 @@ ms.locfileid: "62007111"
 
      `WindowLoaded`方法會處理<xref:System.Windows.FrameworkElement.Loaded>事件，並執行下列初始化。
 
-    -   會建立[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox>控制項。
+    - 會建立[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox>控制項。
 
-    -   呼叫您稍早在本逐步解說中所定義的方法來設定屬性對應。
+    - 呼叫您稍早在本逐步解說中所定義的方法來設定屬性對應。
 
-    -   將初始值指派給對應的屬性。
+    - 將初始值指派給對應的屬性。
 
 2. 按 **F5** 鍵建置並執行應用程式。 按一下核取方塊，若要查看的效果<xref:System.Windows.FrameworkElement.FlowDirection%2A>對應。 當您按一下核取方塊時，版面配置會反轉其左右方向。
 

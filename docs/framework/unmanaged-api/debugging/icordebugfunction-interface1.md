@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca21911f3d16b79887b9d6d8185f8fab17651321
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 550b85474c1ccd7e125549e86df906439caf410e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672987"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621490"
 ---
 # <a name="icordebugfunction-interface"></a>ICorDebugFunction 介面
 
@@ -45,9 +45,9 @@ ms.locfileid: "61672987"
   
  方法的中繼資料語彙基元，之間的關聯性`mdMethodDef`，以及方法的`ICorDebugFunction`物件所相依的函數上是否允許編輯後繼續：  
   
--   如果函式上不允許編輯後繼續，之間有一對一的關係`ICorDebugFunction`物件和`mdMethodDef`語彙基元。 也就是說，函式有一個`ICorDebugFunction`物件和一個`mdMethodDef`語彙基元。  
+- 如果函式上不允許編輯後繼續，之間有一對一的關係`ICorDebugFunction`物件和`mdMethodDef`語彙基元。 也就是說，函式有一個`ICorDebugFunction`物件和一個`mdMethodDef`語彙基元。  
   
--   如果函式允許編輯後繼續，之間存在多對一關聯性`ICorDebugFunction`物件和`mdMethodDef`語彙基元。 也就是說，函式可能有許多執行個體`ICorDebugFunction`，一個用於每個版本的函式，不過只有一個`mdMethodDef`語彙基元。  
+- 如果函式允許編輯後繼續，之間存在多對一關聯性`ICorDebugFunction`物件和`mdMethodDef`語彙基元。 也就是說，函式可能有許多執行個體`ICorDebugFunction`，一個用於每個版本的函式，不過只有一個`mdMethodDef`語彙基元。  
   
 > [!NOTE]
 >  這個介面不支援跨電腦或跨處理序的遠端呼叫。  

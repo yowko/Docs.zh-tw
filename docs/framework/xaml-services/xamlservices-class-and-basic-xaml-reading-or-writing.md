@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [XAML Services], XamlServices class
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
-ms.openlocfilehash: c9ef6a215587750f66d2cf8b5b54cbc51f89037e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a47436d9f7df099f54d450f6f8176b8cba6d7f5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938732"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622902"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>XAMLServices 類別和基本 XAML 的讀取或寫入
 <xref:System.Xaml.XamlServices> 是 .NET Framework XAML 服務所提供的類別，可用來解決不需要特別存取 XAML 節點資料流，或取自這些節點之 XAML 類型系統資訊的 XAML 情節。 <xref:System.Xaml.XamlServices> API 可摘述如下： `Load` 或 `Parse` 支援 XAML 載入路徑、 `Save` 支援 XAML 儲存路徑，而 `Transform` 則提供結合載入路徑和儲存路徑的技術。 `Transform` 可從某個 XAML 結構描述變更為另一個 XAML 結構描述。 本主題摘要說明這些 API 分類，並說明特定方法多載之間的差異。  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30306
 ms.assetid: 3c0d9732-ee37-436f-a1df-29d65712f48a
-ms.openlocfilehash: 4dadad63f4321e88b79f2006a9e6b7befa27909a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 831cab0871405f342f389ed21d77ec15639803a5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935339"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619588"
 ---
 # <a name="array-subscript-expression-missing"></a>遺漏陣列註標運算式
 陣列初始化省去了一個或多個定義陣列界限的註標。 例如，此陳述式可能會包含運算式`myArray (5,5,,10)`，它將被排除的第三個註標。  

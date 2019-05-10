@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: b50c902f69f7602dbad4663dc35bf0a2b932973f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6600b3b2945120f2f24e14d4cc898cd814366045
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796977"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647067"
 ---
 # <a name="char-data-type-visual-basic"></a>Char 資料類型 (Visual Basic)
 保存不帶正負號的 16 位元 （2 個位元組） 字碼指標值範圍從 0 到 65535。 每個*字碼指標*，或字元碼表示單一 Unicode 字元。  

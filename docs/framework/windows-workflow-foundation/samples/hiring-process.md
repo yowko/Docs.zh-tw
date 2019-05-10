@@ -2,12 +2,12 @@
 title: 招聘程序
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87e49613214a6a608bd8e22dc9470250c90e220a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005052"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622489"
 ---
 # <a name="hiring-process"></a>招聘程序
 此範例示範如何使用傳訊活動和裝載為工作流程服務的兩個工作流程來實作商務程序。 這些工作流程是虛擬公司 Contoso, Inc. 的 IT 基礎結構的一部分。  
@@ -18,35 +18,35 @@ ms.locfileid: "62005052"
   
  此範例示範以下的 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 功能：  
   
--   將商務程序模型化的 <xref:System.Activities.Statements.Flowchart> 和 <xref:System.Activities.Statements.Sequence> 工作流程。  
+- 將商務程序模型化的 <xref:System.Activities.Statements.Flowchart> 和 <xref:System.Activities.Statements.Sequence> 工作流程。  
   
--   工作流程服務。  
+- 工作流程服務。  
   
--   訊息活動。  
+- 訊息活動。  
   
--   以內容為主的相互關聯。  
+- 以內容為主的相互關聯。  
   
--   自訂活動 (宣告式和以程式碼為主)。  
+- 自訂活動 (宣告式和以程式碼為主)。  
   
--   系統提供的 SQL Server 持續性。  
+- 系統提供的 SQL Server 持續性。  
   
--   自訂 <xref:System.Activities.Persistence.PersistenceParticipant>。  
+- 自訂 <xref:System.Activities.Persistence.PersistenceParticipant>。  
   
--   自訂追蹤。  
+- 自訂追蹤。  
   
--   Windows 事件追蹤 (ETW)。  
+- Windows 事件追蹤 (ETW)。  
   
--   活動撰寫。  
+- 活動撰寫。  
   
--   <xref:System.Activities.Statements.Parallel> 活動。  
+- <xref:System.Activities.Statements.Parallel> 活動。  
   
--   <xref:System.Activities.Statements.CancellationScope> 活動。  
+- <xref:System.Activities.Statements.CancellationScope> 活動。  
   
--   永久性計時器 (<xref:System.Activities.Statements.Delay> 活動)。  
+- 永久性計時器 (<xref:System.Activities.Statements.Delay> 活動)。  
   
--   交易。  
+- 交易。  
   
--   相同方案中一個以上的工作流程。  
+- 相同方案中一個以上的工作流程。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
@@ -64,25 +64,25 @@ ms.locfileid: "62005052"
   
 2. 申請者的經理必須核准申請：  
   
-    1.  經理可以拒絕申請。  
+    1. 經理可以拒絕申請。  
   
-    2.  經理可以將申請退回給申請者，要求提供其他資訊：  
+    2. 經理可以將申請退回給申請者，要求提供其他資訊：  
   
-        1.  申請者複查申請，並將申請送回給經理。  
+        1. 申請者複查申請，並將申請送回給經理。  
   
-    3.  經理可以核准申請。  
+    3. 經理可以核准申請。  
   
 3. 當申請者的經理核准之後，部門主管必須核准申請：  
   
-    1.  部門主管可以拒絕申請。  
+    1. 部門主管可以拒絕申請。  
   
-    2.  部門主管可以核准申請。  
+    2. 部門主管可以核准申請。  
   
 4. 當部門主管核准之後，此程序需要兩位人力資源部門經理或 CEO 的核准：  
   
-    1.  此程序可以轉換為已接受或已拒絕狀態。  
+    1. 此程序可以轉換為已接受或已拒絕狀態。  
   
-    2.  如果已接受此程序，就會啟動新的 `ResumeRequest` 工作流程執行個體 (`ResumeRequest` 會透過服務參考連結到 HiringRequest.csproj)。  
+    2. 如果已接受此程序，就會啟動新的 `ResumeRequest` 工作流程執行個體 (`ResumeRequest` 會透過服務參考連結到 HiringRequest.csproj)。  
   
  一旦經理核准新員工的招聘之後，人力資源部門就必須尋找適當的人選。 這個程序是由第二個工作流程所執行 (`ResumeRequest`，定義在 ResumeRequestService.csproj 中)。 此工作流程定義的程序會將工作機會的刊登內容提交給 Contoso 的外部職涯網站、接收求職者的履歷表，並監控工作刊登的狀態。 刊登的工作職務會留在外部網站一段固定的期間 (直到過了期限)，或者直到 Contoso 的員工決定將它取下為止。 `ResumeRequest` 工作流程包含下列步驟：  
   
@@ -215,19 +215,19 @@ ms.locfileid: "62005052"
   
 2. 如果此方案建置失敗，請確認以下事項：  
   
-    -   若要參考`ContosoHR`並未遺失`InternalClient`或`CareersWebSite`專案。  
+    - 若要參考`ContosoHR`並未遺失`InternalClient`或`CareersWebSite`專案。  
   
 3. 如果此方案執行失敗，請確認以下事項：  
   
-    1.  所有服務都在執行中。  
+    1. 所有服務都在執行中。  
   
-    2.  服務參考已更新。  
+    2. 服務參考已更新。  
   
-        1.  開啟 App_WebReferences 資料夾  
+        1. 開啟 App_WebReferences 資料夾  
   
-        2.  以滑鼠右鍵按一下**Contoso** ，然後選取**更新 Web/服務參考**。  
+        2. 以滑鼠右鍵按一下**Contoso** ，然後選取**更新 Web/服務參考**。  
   
-        3.  在 Visual Studio 中按 CTRL + SHIFT + B 重新建置此方案。  
+        3. 在 Visual Studio 中按 CTRL + SHIFT + B 重新建置此方案。  
   
 ## <a name="uninstalling"></a>解除安裝  
   

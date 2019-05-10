@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: 64ee75c93615f57b15fea29f06fff500a395ba0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e6f8bf2b4ce9789a1715971b8262bdd162ba8035
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803827"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619535"
 ---
 # <a name="declaration-expected"></a>必須是宣告
 非宣告陳述式，例如指派或迴圈陳述式，就會發生任何程序之外。 允許只宣告外部程序。  
@@ -23,11 +23,11 @@ ms.locfileid: "61803827"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   非宣告的陳述式移至程序的主體。  
+- 非宣告的陳述式移至程序的主體。  
   
--   開始使用適當的宣告關鍵字宣告。  
+- 開始使用適當的宣告關鍵字宣告。  
   
--   請確定宣告關鍵字沒有拼字錯誤。  
+- 請確定宣告關鍵字沒有拼字錯誤。  
   
 ## <a name="see-also"></a>另請參閱
 

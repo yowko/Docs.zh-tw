@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: ace1b40b25bd12ff7092459e468a90f382434bf4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0984028e0a09c9939f68ae64be8c401182b57274
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938758"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622919"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>自訂類型和程式庫的 XAML 相關 CLR 屬性
 本主題描述由.NET Framework XAML 服務所定義的通用語言執行平台 (CLR) 屬性。 它也會說明其他 CLR 屬性定義在.NET Framework 組件或類型的應用程式的 XAML 相關案例。 屬性的組件、 類型或成員設定這些 CLR 屬性提供 XAML 類型系統資訊與您的型別。 處理 XAML 節點資料流直接或透過專用的 XAML 讀取器和 XAML 寫入器會使用.NET Framework XAML 服務任何 XAML 取用者會提供資訊。  
@@ -37,7 +37,7 @@ ms.locfileid: "61938758"
   
  **引數：** 指定符合的單一建構函式引數的屬性名稱的字串。  
   
- <xref:System.Windows.Markup.ConstructorArgumentAttribute> 指定可以使用非預設建構函式語法中初始化物件，並指定名稱的屬性提供建構資訊。 這項資訊主要供 XAML 序列化之用。 如需詳細資訊，請參閱<xref:System.Windows.Markup.ConstructorArgumentAttribute>。  
+ <xref:System.Windows.Markup.ConstructorArgumentAttribute> 指定可以使用非預設建構函式語法中初始化物件，並指定名稱的屬性提供建構資訊。 這項資訊主要供 XAML 序列化之用。 如需詳細資訊，請參閱 <xref:System.Windows.Markup.ConstructorArgumentAttribute>。  
   
 ### <a name="contentpropertyattribute"></a>ContentPropertyAttribute  
  **參考文件：**  <xref:System.Windows.Markup.ContentPropertyAttribute>  
@@ -151,7 +151,7 @@ ms.locfileid: "61938758"
   
  **引數：** 布林值。 如果使用屬性的目的，這應該一律指定為`true`。  
   
- 表示這個類型是否在 XAML 物件圖形建立期間由上而下建置。 這是進階的概念，與您的程式設計模型的定義可能密切相關。 如需詳細資訊，請參閱<xref:System.Windows.Markup.UsableDuringInitializationAttribute>。  
+ 表示這個類型是否在 XAML 物件圖形建立期間由上而下建置。 這是進階的概念，與您的程式設計模型的定義可能密切相關。 如需詳細資訊，請參閱 <xref:System.Windows.Markup.UsableDuringInitializationAttribute>。  
   
 ### <a name="valueserializerattribute"></a>ValueSerializerAttribute  
  **參考文件：**  <xref:System.Windows.Markup.ValueSerializerAttribute>  

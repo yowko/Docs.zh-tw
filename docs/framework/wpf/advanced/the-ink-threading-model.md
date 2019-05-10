@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b753fcffbdaa1cc9ba960a774077457dd0263e0a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007359"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621365"
 ---
 # <a name="the-ink-threading-model"></a>筆墨執行緒模型
 Tablet PC 上的好處之一是筆墨的，覺得有許多撰寫使用一般紙筆。  若要這麼做，tablet 畫筆會收集在更高的速率比滑鼠，並為使用者寫入會轉譯筆跡輸入的資料。  應用程式的使用者介面 (UI) 執行緒不足，無法用來收集畫筆資料和呈現筆墨，因為它可能會被封鎖。  若要解決，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]時使用者寫入筆跡，應用程式會使用兩個額外的執行緒。  

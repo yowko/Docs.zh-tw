@@ -11,12 +11,12 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-ms.openlocfilehash: 09a445da068f0141b9526e0228df8be0105498c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e6af8d6410c4e383990bdaa27f97cc698be71719
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776541"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649195"
 ---
 # <a name="how-to-clone-a-printer"></a>HOW TO：複製印表機
 大多數企業在某個時間點，將會購買相同模型的多台的印表機。 一般而言，這些會安裝所有使用幾乎完全相同的組態設定。 安裝每一部印表機可能相當耗時又容易出錯。 <xref:System.Printing.IndexedProperties?displayProperty=nameWithType>命名空間和<xref:System.Printing.PrintServer.InstallPrintQueue%2A>都會以 Microsoft.NET Framework 公開的類別可讓您立即安裝任意數目的所複製的其他列印佇列，從現有的列印佇列。  
