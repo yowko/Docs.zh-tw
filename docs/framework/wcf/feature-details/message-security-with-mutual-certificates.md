@@ -5,48 +5,48 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 8fc8d6d4a63b7a752fb8c26991d904761fdcebdd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 263ec73af7f4a6f52c4570e17cd140b6afb53601
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923057"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637842"
 ---
-# <a name="message-security-with-mutual-certificates"></a><span data-ttu-id="bf3bc-102">相互憑證的訊息安全性</span><span class="sxs-lookup"><span data-stu-id="bf3bc-102">Message Security with Mutual Certificates</span></span>
-<span data-ttu-id="bf3bc-103">下列案例示範 Windows Communication Foundation (WCF) 服務和用戶端使用訊息安全性模式保護。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-103">The following scenario shows a Windows Communication Foundation (WCF) service and client secured using message security mode.</span></span> <span data-ttu-id="bf3bc-104">用戶端與服務以憑證加以驗證。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-104">The client and the service are authenticated with certificates.</span></span>  
+# <a name="message-security-with-mutual-certificates"></a><span data-ttu-id="c1f74-102">相互憑證的訊息安全性</span><span class="sxs-lookup"><span data-stu-id="c1f74-102">Message Security with Mutual Certificates</span></span>
+<span data-ttu-id="c1f74-103">下列案例示範 Windows Communication Foundation (WCF) 服務和用戶端使用訊息安全性模式保護。</span><span class="sxs-lookup"><span data-stu-id="c1f74-103">The following scenario shows a Windows Communication Foundation (WCF) service and client secured using message security mode.</span></span> <span data-ttu-id="c1f74-104">用戶端與服務以憑證加以驗證。</span><span class="sxs-lookup"><span data-stu-id="c1f74-104">The client and the service are authenticated with certificates.</span></span>  
   
- <span data-ttu-id="bf3bc-105">因為案例使用具有 X.509 憑證權杖設定檔的 WS-Security，所以這個案例是互通的。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-105">This scenario is interoperable because it uses WS-Security with the X.509 certificate token profile.</span></span>  
+ <span data-ttu-id="c1f74-105">因為案例使用具有 X.509 憑證權杖設定檔的 WS-Security，所以這個案例是互通的。</span><span class="sxs-lookup"><span data-stu-id="c1f74-105">This scenario is interoperable because it uses WS-Security with the X.509 certificate token profile.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="bf3bc-106">這個案例並不執行服務憑證的交涉。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-106">This scenario does not perform negotiation of the service certificate.</span></span> <span data-ttu-id="bf3bc-107">在任何通訊前，必須先對用戶端提供服務憑證。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-107">The service certificate must be provided to the client in advance of any communication.</span></span> <span data-ttu-id="bf3bc-108">伺服器憑證可在應用程式散發，或在超出範圍通訊中提供。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-108">The server certificate can be distributed with the application or provided in an out-of-band communication.</span></span>  
+>  <span data-ttu-id="c1f74-106">這個案例並不執行服務憑證的交涉。</span><span class="sxs-lookup"><span data-stu-id="c1f74-106">This scenario does not perform negotiation of the service certificate.</span></span> <span data-ttu-id="c1f74-107">在任何通訊前，必須先對用戶端提供服務憑證。</span><span class="sxs-lookup"><span data-stu-id="c1f74-107">The service certificate must be provided to the client in advance of any communication.</span></span> <span data-ttu-id="c1f74-108">伺服器憑證可在應用程式散發，或在超出範圍通訊中提供。</span><span class="sxs-lookup"><span data-stu-id="c1f74-108">The server certificate can be distributed with the application or provided in an out-of-band communication.</span></span>  
   
- <span data-ttu-id="bf3bc-109">![訊息相互憑證的安全性](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span><span class="sxs-lookup"><span data-stu-id="bf3bc-109">![Message security with mutual certificates](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span></span>  
+ <span data-ttu-id="c1f74-109">![訊息相互憑證的安全性](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span><span class="sxs-lookup"><span data-stu-id="c1f74-109">![Message security with mutual certificates](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span></span>  
   
-|<span data-ttu-id="bf3bc-110">特性</span><span class="sxs-lookup"><span data-stu-id="bf3bc-110">Characteristic</span></span>|<span data-ttu-id="bf3bc-111">描述</span><span class="sxs-lookup"><span data-stu-id="bf3bc-111">Description</span></span>|  
+|<span data-ttu-id="c1f74-110">特性</span><span class="sxs-lookup"><span data-stu-id="c1f74-110">Characteristic</span></span>|<span data-ttu-id="c1f74-111">描述</span><span class="sxs-lookup"><span data-stu-id="c1f74-111">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="bf3bc-112">安全性模式</span><span class="sxs-lookup"><span data-stu-id="bf3bc-112">Security Mode</span></span>|<span data-ttu-id="bf3bc-113">訊息</span><span class="sxs-lookup"><span data-stu-id="bf3bc-113">Message</span></span>|  
-|<span data-ttu-id="bf3bc-114">互通性</span><span class="sxs-lookup"><span data-stu-id="bf3bc-114">Interoperability</span></span>|<span data-ttu-id="bf3bc-115">是的，採用 WS-Security 及 X.509 憑證權杖設定檔相容的用戶端及服務。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-115">Yes, with WS-Security and X.509 certificate token profile compatible clients and services.</span></span>|  
-|<span data-ttu-id="bf3bc-116">驗證</span><span class="sxs-lookup"><span data-stu-id="bf3bc-116">Authentication</span></span>|<span data-ttu-id="bf3bc-117">伺服器和用戶端的交互驗證。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-117">Mutual authentication of the server and client.</span></span>|  
-|<span data-ttu-id="bf3bc-118">完整性</span><span class="sxs-lookup"><span data-stu-id="bf3bc-118">Integrity</span></span>|<span data-ttu-id="bf3bc-119">是</span><span class="sxs-lookup"><span data-stu-id="bf3bc-119">Yes</span></span>|  
-|<span data-ttu-id="bf3bc-120">機密性</span><span class="sxs-lookup"><span data-stu-id="bf3bc-120">Confidentiality</span></span>|<span data-ttu-id="bf3bc-121">是</span><span class="sxs-lookup"><span data-stu-id="bf3bc-121">Yes</span></span>|  
-|<span data-ttu-id="bf3bc-122">Transport</span><span class="sxs-lookup"><span data-stu-id="bf3bc-122">Transport</span></span>|<span data-ttu-id="bf3bc-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="bf3bc-123">HTTP</span></span>|  
-|<span data-ttu-id="bf3bc-124">繫結</span><span class="sxs-lookup"><span data-stu-id="bf3bc-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
+|<span data-ttu-id="c1f74-112">安全性模式</span><span class="sxs-lookup"><span data-stu-id="c1f74-112">Security Mode</span></span>|<span data-ttu-id="c1f74-113">訊息</span><span class="sxs-lookup"><span data-stu-id="c1f74-113">Message</span></span>|  
+|<span data-ttu-id="c1f74-114">互通性</span><span class="sxs-lookup"><span data-stu-id="c1f74-114">Interoperability</span></span>|<span data-ttu-id="c1f74-115">是的，採用 WS-Security 及 X.509 憑證權杖設定檔相容的用戶端及服務。</span><span class="sxs-lookup"><span data-stu-id="c1f74-115">Yes, with WS-Security and X.509 certificate token profile compatible clients and services.</span></span>|  
+|<span data-ttu-id="c1f74-116">驗證</span><span class="sxs-lookup"><span data-stu-id="c1f74-116">Authentication</span></span>|<span data-ttu-id="c1f74-117">伺服器和用戶端的交互驗證。</span><span class="sxs-lookup"><span data-stu-id="c1f74-117">Mutual authentication of the server and client.</span></span>|  
+|<span data-ttu-id="c1f74-118">完整性</span><span class="sxs-lookup"><span data-stu-id="c1f74-118">Integrity</span></span>|<span data-ttu-id="c1f74-119">是</span><span class="sxs-lookup"><span data-stu-id="c1f74-119">Yes</span></span>|  
+|<span data-ttu-id="c1f74-120">機密性</span><span class="sxs-lookup"><span data-stu-id="c1f74-120">Confidentiality</span></span>|<span data-ttu-id="c1f74-121">是</span><span class="sxs-lookup"><span data-stu-id="c1f74-121">Yes</span></span>|  
+|<span data-ttu-id="c1f74-122">Transport</span><span class="sxs-lookup"><span data-stu-id="c1f74-122">Transport</span></span>|<span data-ttu-id="c1f74-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="c1f74-123">HTTP</span></span>|  
+|<span data-ttu-id="c1f74-124">繫結</span><span class="sxs-lookup"><span data-stu-id="c1f74-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a><span data-ttu-id="bf3bc-125">服務</span><span class="sxs-lookup"><span data-stu-id="bf3bc-125">Service</span></span>  
- <span data-ttu-id="bf3bc-126">下列程式碼和組態要獨立執行。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="bf3bc-127">執行下列任一步驟：</span><span class="sxs-lookup"><span data-stu-id="bf3bc-127">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="c1f74-125">服務</span><span class="sxs-lookup"><span data-stu-id="c1f74-125">Service</span></span>  
+ <span data-ttu-id="c1f74-126">下列程式碼和組態要獨立執行。</span><span class="sxs-lookup"><span data-stu-id="c1f74-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="c1f74-127">執行下列任一步驟：</span><span class="sxs-lookup"><span data-stu-id="c1f74-127">Do one of the following:</span></span>  
   
-- <span data-ttu-id="bf3bc-128">使用不含組態的程式碼建立獨立服務。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-128">Create a stand-alone service using the code with no configuration.</span></span>  
+- <span data-ttu-id="c1f74-128">使用不含組態的程式碼建立獨立服務。</span><span class="sxs-lookup"><span data-stu-id="c1f74-128">Create a stand-alone service using the code with no configuration.</span></span>  
   
-- <span data-ttu-id="bf3bc-129">使用提供的組態建立服務，但不要定義任何端點。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+- <span data-ttu-id="c1f74-129">使用提供的組態建立服務，但不要定義任何端點。</span><span class="sxs-lookup"><span data-stu-id="c1f74-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="bf3bc-130">程式碼</span><span class="sxs-lookup"><span data-stu-id="bf3bc-130">Code</span></span>  
- <span data-ttu-id="bf3bc-131">下列程式碼顯示建立使用訊息安全性的服務端點。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-131">The following code shows creates a service endpoint that uses message security.</span></span> <span data-ttu-id="bf3bc-132">服務需要憑證來驗證自己。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-132">The service requires a certificate to authenticate itself.</span></span>  
+### <a name="code"></a><span data-ttu-id="c1f74-130">程式碼</span><span class="sxs-lookup"><span data-stu-id="c1f74-130">Code</span></span>  
+ <span data-ttu-id="c1f74-131">下列程式碼顯示建立使用訊息安全性的服務端點。</span><span class="sxs-lookup"><span data-stu-id="c1f74-131">The following code shows creates a service endpoint that uses message security.</span></span> <span data-ttu-id="c1f74-132">服務需要憑證來驗證自己。</span><span class="sxs-lookup"><span data-stu-id="c1f74-132">The service requires a certificate to authenticate itself.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#13)]
  [!code-vb[C_SecurityScenarios#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#13)]  
   
-### <a name="configuration"></a><span data-ttu-id="bf3bc-133">組態</span><span class="sxs-lookup"><span data-stu-id="bf3bc-133">Configuration</span></span>  
- <span data-ttu-id="bf3bc-134">您可使用下列組態來取代程式碼，以建立相同的服務。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-134">The following configuration can be used instead of the code to create the same service.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="c1f74-133">組態</span><span class="sxs-lookup"><span data-stu-id="c1f74-133">Configuration</span></span>  
+ <span data-ttu-id="c1f74-134">您可使用下列組態來取代程式碼，以建立相同的服務。</span><span class="sxs-lookup"><span data-stu-id="c1f74-134">The following configuration can be used instead of the code to create the same service.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -90,24 +90,24 @@ ms.locfileid: "61923057"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="bf3bc-135">用戶端</span><span class="sxs-lookup"><span data-stu-id="bf3bc-135">Client</span></span>  
- <span data-ttu-id="bf3bc-136">下列程式碼和組態要獨立執行。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-136">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="bf3bc-137">執行下列任一步驟：</span><span class="sxs-lookup"><span data-stu-id="bf3bc-137">Do one of the following:</span></span>  
+## <a name="client"></a><span data-ttu-id="c1f74-135">用戶端</span><span class="sxs-lookup"><span data-stu-id="c1f74-135">Client</span></span>  
+ <span data-ttu-id="c1f74-136">下列程式碼和組態要獨立執行。</span><span class="sxs-lookup"><span data-stu-id="c1f74-136">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="c1f74-137">執行下列任一步驟：</span><span class="sxs-lookup"><span data-stu-id="c1f74-137">Do one of the following:</span></span>  
   
-- <span data-ttu-id="bf3bc-138">使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-138">Create a stand-alone client using the code (and client code).</span></span>  
+- <span data-ttu-id="c1f74-138">使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。</span><span class="sxs-lookup"><span data-stu-id="c1f74-138">Create a stand-alone client using the code (and client code).</span></span>  
   
-- <span data-ttu-id="bf3bc-139">建立未定義任何端點位址的用戶端，</span><span class="sxs-lookup"><span data-stu-id="bf3bc-139">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="bf3bc-140">然後改用可接受組態名稱當做引數的用戶端建構函式。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-140">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="bf3bc-141">例如: </span><span class="sxs-lookup"><span data-stu-id="bf3bc-141">For example:</span></span>  
+- <span data-ttu-id="c1f74-139">建立未定義任何端點位址的用戶端，</span><span class="sxs-lookup"><span data-stu-id="c1f74-139">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="c1f74-140">然後改用可接受組態名稱當做引數的用戶端建構函式。</span><span class="sxs-lookup"><span data-stu-id="c1f74-140">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="c1f74-141">例如: </span><span class="sxs-lookup"><span data-stu-id="c1f74-141">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### <a name="code"></a><span data-ttu-id="bf3bc-142">程式碼</span><span class="sxs-lookup"><span data-stu-id="bf3bc-142">Code</span></span>  
- <span data-ttu-id="bf3bc-143">下列程式碼會建立用戶端。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-143">The following code creates the client.</span></span> <span data-ttu-id="bf3bc-144">安全性模式設為訊息，而且用戶端認證類型設為憑證。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-144">The security mode is set to Message, and the client credential type is set to Certificate.</span></span>  
+### <a name="code"></a><span data-ttu-id="c1f74-142">程式碼</span><span class="sxs-lookup"><span data-stu-id="c1f74-142">Code</span></span>  
+ <span data-ttu-id="c1f74-143">下列程式碼會建立用戶端。</span><span class="sxs-lookup"><span data-stu-id="c1f74-143">The following code creates the client.</span></span> <span data-ttu-id="c1f74-144">安全性模式設為訊息，而且用戶端認證類型設為憑證。</span><span class="sxs-lookup"><span data-stu-id="c1f74-144">The security mode is set to Message, and the client credential type is set to Certificate.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#20)]
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
-### <a name="configuration"></a><span data-ttu-id="bf3bc-145">組態</span><span class="sxs-lookup"><span data-stu-id="bf3bc-145">Configuration</span></span>  
- <span data-ttu-id="bf3bc-146">下列組態會設定用戶端。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-146">The following configures the client.</span></span> <span data-ttu-id="bf3bc-147">必須使用指定的用戶端憑證[ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-147">A client certificate must be specified using the [\<clientCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).</span></span> <span data-ttu-id="bf3bc-148">此外，使用指定的服務憑證[ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)。</span><span class="sxs-lookup"><span data-stu-id="bf3bc-148">Also, the service certificate is specified using the [\<defaultCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).</span></span>  
+### <a name="configuration"></a><span data-ttu-id="c1f74-145">組態</span><span class="sxs-lookup"><span data-stu-id="c1f74-145">Configuration</span></span>  
+ <span data-ttu-id="c1f74-146">下列組態會設定用戶端。</span><span class="sxs-lookup"><span data-stu-id="c1f74-146">The following configures the client.</span></span> <span data-ttu-id="c1f74-147">必須使用指定的用戶端憑證[ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)。</span><span class="sxs-lookup"><span data-stu-id="c1f74-147">A client certificate must be specified using the [\<clientCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).</span></span> <span data-ttu-id="c1f74-148">此外，使用指定的服務憑證[ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)。</span><span class="sxs-lookup"><span data-stu-id="c1f74-148">Also, the service certificate is specified using the [\<defaultCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -158,8 +158,8 @@ ms.locfileid: "61923057"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bf3bc-149">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bf3bc-149">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c1f74-149">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c1f74-149">See also</span></span>
 
-- [<span data-ttu-id="bf3bc-150">安全性概觀</span><span class="sxs-lookup"><span data-stu-id="bf3bc-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [<span data-ttu-id="bf3bc-151">Windows Server App Fabric 的安全性模型</span><span class="sxs-lookup"><span data-stu-id="bf3bc-151">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
-- [<span data-ttu-id="bf3bc-152">如何：建立並在 WCF 中安裝暫時憑證來獲得傳輸安全性在開發期間</span><span class="sxs-lookup"><span data-stu-id="bf3bc-152">How to: Create and Install Temporary Certificates in WCF for Transport Security During Development</span></span>](https://go.microsoft.com/fwlink/?LinkId=244264)
+- [<span data-ttu-id="c1f74-150">安全性概觀</span><span class="sxs-lookup"><span data-stu-id="c1f74-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [<span data-ttu-id="c1f74-151">Windows Server App Fabric 的安全性模型</span><span class="sxs-lookup"><span data-stu-id="c1f74-151">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [<span data-ttu-id="c1f74-152">如何：建立並在 WCF 中安裝暫時憑證來獲得傳輸安全性在開發期間</span><span class="sxs-lookup"><span data-stu-id="c1f74-152">How to: Create and Install Temporary Certificates in WCF for Transport Security During Development</span></span>](https://go.microsoft.com/fwlink/?LinkId=244264)
