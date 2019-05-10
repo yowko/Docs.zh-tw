@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 635c791f81107a1800e2ef381f6bea78cbc18e18
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f1d77ac27def556d94fac12dbde2f36d5b139de
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61830358"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649764"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic 的算術運算子
 算術運算子用來執行許多熟悉的算術作業牽涉到數字常值、 變數、 其他運算式、 函式和屬性呼叫和常數所代表的值計算。 搭配算術運算子也分類為位元移位運算子，運算元的個別位元層級處理，並向左或向右移位其位元模式。  
@@ -70,13 +70,13 @@ ms.locfileid: "61830358"
   
  算術的排班不是循環，這表示移出結果的某一端的位元不會重新引入另一端。 移位空出的位元位置設定，如下所示：  
   
--   算術左移位的 0  
+- 算術左移位的 0  
   
--   0 為正數的算術右移位的  
+- 0 為正數的算術右移位的  
   
--   0 代表不帶正負號的資料類型的算術右移位 (`Byte`， `UShort`， `UInteger`， `ULong`)  
+- 0 代表不帶正負號的資料類型的算術右移位 (`Byte`， `UShort`， `UInteger`， `ULong`)  
   
--   1 是負數值的算術右移位 (`SByte`， `Short`， `Integer`，或`Long`)  
+- 1 是負數值的算術右移位 (`SByte`， `Short`， `Integer`，或`Long`)  
   
  下列範例會轉移`Integer`左和右值。  
   

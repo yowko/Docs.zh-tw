@@ -2,12 +2,12 @@
 title: C# 運算式
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: 2ffc380d9c65ec398084bfcbeadfe0fd2c3d6720
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 23c5ee0e0d1408f19e87615008ee95266176d27b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009808"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650948"
 ---
 # <a name="c-expressions"></a>C# 運算式
 從開始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，在 Windows Workflow Foundation (WF) 支援 C# 運算式。 Visual Studio 2012 中建立新的 C# 工作流程專案目標[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]使用 C# 運算式和 Visual Basic 工作流程專案中使用 Visual Basic 運算式。 不論是否支援專案語言，使用 Visual Basic 運算式的現有 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 工作流程專案均可移轉至 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]。 本主題提供 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的 C# 運算式概觀。

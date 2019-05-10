@@ -9,12 +9,12 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: f0196457235ad77df545a367573f62b43209269d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d4fe5d1b9048f4a8ae22a84e14456318ca38f0f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906980"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645853"
 ---
 # <a name="user-defined-constants-visual-basic"></a>使用者定義常數 (Visual Basic)
 常數是有意義的名稱來取代數字或字串，不會變更。 如同它的名稱所示，常數用來儲存應用程式執行過程中維持不變的值。 您可以使用常數所定義的控制項或元件使用，或建立您自己。 您可以建立自己的常數會被稱為*使用者定義*。  
@@ -37,13 +37,13 @@ ms.locfileid: "61906980"
 ## <a name="scope-of-user-defined-constants"></a>使用者定義的常數的範圍  
  A`Const`陳述式的範圍是在相同的位置所宣告的變數相同。 您可以使用下列任一方式來指定範圍：  
   
--   若要建立程序內只能存在一個常數，請將它宣告內該程序。  
+- 若要建立程序內只能存在一個常數，請將它宣告內該程序。  
   
--   若要建立所有的程序，在類別中，但不是屬於該模組外的任何程式碼可以使用的常數，請將它宣告之類別的宣告區段中。  
+- 若要建立所有的程序，在類別中，但不是屬於該模組外的任何程式碼可以使用的常數，請將它宣告之類別的宣告區段中。  
   
--   若要建立外部的用戶端組件的所有成員的組件，但不是使用的常數，宣告使用`Friend`類別的 「 宣告 」 區段中的關鍵字。  
+- 若要建立外部的用戶端組件的所有成員的組件，但不是使用的常數，宣告使用`Friend`類別的 「 宣告 」 區段中的關鍵字。  
   
--   若要建立整個應用程式，您可以使用的常數，宣告使用`Public`關鍵字在宣告中的區段的類別。  
+- 若要建立整個應用程式，您可以使用的常數，宣告使用`Public`關鍵字在宣告中的區段的類別。  
   
  如需詳細資訊，請參閱[如何：宣告常數](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)。  
   

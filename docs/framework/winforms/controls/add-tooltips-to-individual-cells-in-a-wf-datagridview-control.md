@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding tooltips
 - data grids [Windows Forms], adding tooltips
 ms.assetid: 2a81f9de-d58b-4ea8-bc0b-8d93c2f4cf78
-ms.openlocfilehash: 3307c92a13e5730de6dce0fe45b924e44b7af554
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d0e9b3ad742633b135a2fe1c00af3fa72af7b44a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640292"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663461"
 ---
 # <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>HOW TO：將工具提示新增至 Windows Forms DataGridView 控制項的個別儲存格
 根據預設，工具提示用來顯示值<xref:System.Windows.Forms.DataGridView>太小，無法顯示其完整內容的儲存格。 您可以覆寫這個行為，不過，設定個別資料格的工具提示文字值。 這是要顯示給使用者的其他資訊的資料格，或為使用者提供的儲存格內容的其他說明很有用。 比方說，如果您有顯示狀態圖示的資料列時，您可能想要提供使用工具提示的文字說明。  

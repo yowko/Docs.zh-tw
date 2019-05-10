@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ink data [WPF], adding custom data
 - InkCanvas [WPF], displaying
 ms.assetid: f02aac6f-3436-4f7c-b6ea-0452cba5332c
-ms.openlocfilehash: c524e30943a21426e2e5e8fe6ae009999924fead
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7c59a205df5358daec101339cc6a308c8e38a9d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777048"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64640860"
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>HOW TO：將自訂資料新增至筆墨資料
 您可以將自訂資料加入時，筆墨會儲存成筆墨序列化格式 (ISF) 將儲存的筆墨。  您可以自訂將資料儲存到<xref:System.Windows.Ink.DrawingAttributes>，則<xref:System.Windows.Ink.StrokeCollection>，或<xref:System.Windows.Ink.Stroke>。  能夠將自訂的資料儲存在三個物件上，讓您能夠決定最佳的位置來儲存資料。  所有三個類別會使用類似的方法，來儲存及存取自訂的資料。  

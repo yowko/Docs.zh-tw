@@ -2,12 +2,12 @@
 title: 永久性發行權杖提供者
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: f91f603e91b1f640ebe97229a1a433446cddb0cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b7f204fcb2c1b72a73e091ecf37c2921f7575516
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990206"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650077"
 ---
 # <a name="durable-issued-token-provider"></a>永久性發行權杖提供者
 這個範例示範如何實作自訂用戶端發行的權杖提供者。  
@@ -15,21 +15,21 @@ ms.locfileid: "61990206"
 ## <a name="discussion"></a>討論  
  Windows Communication Foundation (WCF) 中的權杖提供者用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附[!INCLUDE[infocard](../../../../includes/infocard-md.md)]權杖提供者。 自訂權杖提供者適用於下列情況：  
   
--   如果您有內建權杖提供者無法使用的認證存放區。  
+- 如果您有內建權杖提供者無法使用的認證存放區。  
   
--   如果您想要提供您自己自訂的機制，來轉換認證從使用者提供詳細資訊，以當 WCF 用戶端會使用認證時。  
+- 如果您想要提供您自己自訂的機制，來轉換認證從使用者提供詳細資訊，以當 WCF 用戶端會使用認證時。  
   
--   如果您要建置自訂權杖。  
+- 如果您要建置自訂權杖。  
   
  這個範例示範如何建置自訂權杖提供者，以便快取安全性權杖服務 (STS) 發行的權杖。  
   
  簡而言之，這個範例示範下面的情形：  
   
--   如何使用自訂權杖提供者設定用戶端。  
+- 如何使用自訂權杖提供者設定用戶端。  
   
--   如何發行的權杖可以快取，並提供給 WCF 用戶端。  
+- 如何發行的權杖可以快取，並提供給 WCF 用戶端。  
   
--   用戶端如何使用伺服器的 X.509 憑證來驗證伺服器。  
+- 用戶端如何使用伺服器的 X.509 憑證來驗證伺服器。  
   
  這個範例是由用戶端主控台程式 (Client.exe)、安全性權杖服務主控台程式 (Securitytokenservice.exe) 和服務主控台程式 (Service.exe) 所組成。 服務會實作定義要求-回覆通訊模式的合約。 合約是由 `ICalculator` 介面所定義，這個介面會公開數學運算作業 (加、減、乘、除)。 用戶端會從安全性權杖服務 (STS) 取得安全性權杖，並對指定的數學運算作業提出同步要求，服務則會以結果回覆。 您可以在主控台視窗中看到用戶端活動。  
   

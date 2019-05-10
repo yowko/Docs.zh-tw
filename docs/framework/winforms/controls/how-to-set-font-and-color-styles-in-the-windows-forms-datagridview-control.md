@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], font styles
 - data grids [Windows Forms], color styles
 ms.assetid: 588f2c57-d963-41b1-9c1d-d02d71818113
-ms.openlocfilehash: 737a4b943125245a2916bbf6b24b8abdffa8e371
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ad2426ed9643fd46927c4f8b6373fedbec372d38
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912895"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638098"
 ---
 # <a name="how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control"></a>HOW TO：設定 Windows Forms DataGridView 控制項的字型和色彩樣式
 您可以設定 <xref:System.Windows.Forms.DataGridViewCellStyle> 類別的屬性，在 <xref:System.Windows.Forms.DataGridView> 控制項內指定儲存格的視覺外觀。 您可以從 <xref:System.Windows.Forms.DataGridView> 類別和其附屬類別的各種屬性擷取此類別的執行個體，或者您可以具現化 <xref:System.Windows.Forms.DataGridViewCellStyle> 物件以便指派給這些屬性。  

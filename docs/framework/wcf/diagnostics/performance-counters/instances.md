@@ -2,12 +2,12 @@
 title: 執行個體
 ms.date: 03/30/2017
 ms.assetid: c8cf3460-0ca1-4411-8262-e9ecaf7f0a31
-ms.openlocfilehash: 668cfb3026b9ab7259665f5e53873a512b1e2238
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e0be9c93b5efe17235dbccd426cdd73fbb739361
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916392"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651841"
 ---
 # <a name="instances"></a>執行個體
 計數器名稱：執行個體。  

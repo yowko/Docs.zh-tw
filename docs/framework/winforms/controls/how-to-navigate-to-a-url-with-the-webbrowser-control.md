@@ -12,12 +12,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], navigating to URLs
 - examples [Windows Forms], WebBrowser control
 ms.assetid: b3ec38cb-f509-4d0b-bd79-9f3611259c62
-ms.openlocfilehash: a174b6ae60f87e91e6f97e8fa7f8ad3892ef017a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bee16a388d823f74bc9c88bc34b510d2a5907393
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913467"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649228"
 ---
 # <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a>HOW TO：使用 WebBrowser 控制項巡覽至 URL
 下列程式碼範例示範如何瀏覽<xref:System.Windows.Forms.WebBrowser>至特定 URL 的控制項。  
@@ -37,9 +37,9 @@ this.webBrowser1.Navigate("http://www.microsoft.com");
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   名為 `webBrowser1` 的 <xref:System.Windows.Forms.WebBrowser> 控制項。  
+- 名為 `webBrowser1` 的 <xref:System.Windows.Forms.WebBrowser> 控制項。  
   
--   `System` 和 `System.Windows.Forms` 組件的參考。  
+- `System` 和 `System.Windows.Forms` 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
 

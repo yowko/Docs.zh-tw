@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30766
 ms.assetid: 13918600-6087-40d7-8134-32aa9d3bfda4
-ms.openlocfilehash: 2561995e6b03efb2b6c10b7ded7cd76805ec481c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 421cc098956150526345c34c053a1df46fd08285
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801604"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662078"
 ---
 # <a name="functionname-is-not-declared-smart-devicevisual-basic-compiler-error"></a>'\<函數名稱 >' 未宣告 （智慧型裝置 /visual Basic 編譯器錯誤）
 <`functionname`> 未宣告。 檔案 I/O 功能通常是在 `Microsoft.VisualBasic` 命名空間中，但是目標 .NET Compact Framework 版本並不支援它。  
@@ -21,7 +21,7 @@ ms.locfileid: "61801604"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   使用 `System.IO` 命名空間中所定義的函式來執行檔案作業。  
+- 使用 `System.IO` 命名空間中所定義的函式來執行檔案作業。  
   
 ## <a name="see-also"></a>另請參閱
 

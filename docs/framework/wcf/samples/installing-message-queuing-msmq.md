@@ -2,12 +2,12 @@
 title: 安裝訊息佇列 (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 64736f8f0a34a53658dd2838738a3d36b3891d2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 813de350c3fd32bb4698384d6b770af8a0913739
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954943"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648335"
 ---
 # <a name="installing-message-queuing-msmq"></a>安裝訊息佇列 (MSMQ)
 下列程序示範如何安裝 Message Queuing 4.0 和 Message Queuing 3.0。  

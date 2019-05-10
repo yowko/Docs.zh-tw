@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6b9e3d3f5ebc122e2031dac5999a80445ee03a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba780692d59157438da1e04f3bdc3577a3eaef65
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909128"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664579"
 ---
 # <a name="collections-and-data-structures"></a>集合和資料結構
 使用集合進行儲存與管理時，通常可以更有效率地處理類似的資料。 您可以使用 <xref:System.Array?displayProperty=nameWithType> 類別或 <xref:System.Collections>、<xref:System.Collections.Generic>、<xref:System.Collections.Concurrent> 和 System.Collections.Immutable 命名空間中的類別，來新增、移除和修改集合中的個別項目或某個範圍項目。  
@@ -30,17 +30,17 @@ ms.locfileid: "61909128"
 ## <a name="common-collection-features"></a>常見集合功能  
  所有集合都提供加入、移除或尋找集合中項目的方法。 此外，直接或間接實作 <xref:System.Collections.ICollection> 介面或 <xref:System.Collections.Generic.ICollection%601> 介面的所有集合，都可共用這些功能：  
   
--   **列舉集合的能力**  
+- **列舉集合的能力**  
   
      .NET Framework 集合實作 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>，可重複查看集合。 列舉程式可視為集合中任何元素可移動的指標。 [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) 陳述式和 [For Each...Next 陳述式](../../visual-basic/language-reference/statements/for-each-next-statement.md)，會使用 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法所公開的列舉程式，並會隱藏管理列舉程式的複雜程度。 此外，實作 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 的任何集合，會視為「可查詢類型」，且可使用 LINQ 進行查詢。 LINQ 查詢提供存取資料的常見模式。 且通常比標準 `foreach` 迴圈更簡潔易懂，並提供篩選、排序和分組的功能。 LINQ 查詢也可以提升效能。 如需詳細資訊，請參閱 [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md)、[LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)、[Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)、[LINQ 查詢簡介 (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) 及[基本查詢作業 (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。  
   
--   **將集合內容複製到陣列的能力**  
+- **將集合內容複製到陣列的能力**  
   
      所有集合都可使用 **CopyTo** 方法複製到陣列。但新陣列中的元素順序，會根據列舉程式傳回元素的順序排列。 產生的陣列一律會是一維陣列，且其下限為零。  
   
  此外，許多集合類別包含下列功能：  
   
--   **容量和計數屬性**  
+- **容量和計數屬性**  
   
      集合的容量是它可以包含的元素數目。 集合的計數是它實際包含的元素數目。 某些集合會隱藏容量或計數，或同時隱藏兩者。  
   
@@ -48,11 +48,11 @@ ms.locfileid: "61909128"
   
      <xref:System.Collections.BitArray> 是特殊的情況；它的容量等同於長度，計數也是。  
   
--   **一致的下限**  
+- **一致的下限**  
   
      集合的下限是其第一個元素的索引。 <xref:System.Collections> 命名空間中的所有索引集合下限皆為零，表示它們為 0 索引。 根據預設，<xref:System.Array> 下限為零，但使用 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 建立 **Array** 類別的執行個體時，可以定義其他下限。  
   
--   **從多個執行緒存取的同步處理** (僅限 <xref:System.Collections> 類別)。  
+- **從多個執行緒存取的同步處理** (僅限 <xref:System.Collections> 類別)。  
   
      <xref:System.Collections> 命名空間中的非泛型集合類型，提供一些同步處理的執行緒安全性；通常會透過 <xref:System.Collections.ICollection.SyncRoot%2A> 和 <xref:System.Collections.ICollection.IsSynchronized%2A> 成員公開。 這些集合不是預設的安全執行緒。 如果您需要可調整且有效地以多執行緒存取集合，請使用 <xref:System.Collections.Concurrent> 命名空間中的其中一個類別，或考慮使用不可變的集合。 如需詳細資訊，請參閱[安全執行緒集合](../../../docs/standard/collections/thread-safe/index.md)。  
   

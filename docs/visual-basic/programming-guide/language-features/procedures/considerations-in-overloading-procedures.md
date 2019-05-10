@@ -25,12 +25,12 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: f14cc28960af28530bda9a78c1309dea10c18b8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b5a26a8b68a2f786213aa49f30247d692b3de2f7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864345"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649651"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>多載化程序的考慮因素 (Visual Basic)
 當您多載程序時，您必須使用不同*簽章*針對每個多載版本。 這通常表示每個版本必須指定不同的參數清單。 如需詳細資訊，請參閱 「 不同的簽章 」 中[程序多載](./procedure-overloading.md)。  
@@ -50,14 +50,14 @@ ms.locfileid: "61864345"
 #### <a name="when-to-use-overloaded-versions"></a>使用多載的版本的時機  
  在下列情況下，可以考慮一系列的多載版本：  
   
--   程序程式碼中的邏輯是根據呼叫的程式碼是否提供選擇性引數截然不同。  
+- 程序程式碼中的邏輯是根據呼叫的程式碼是否提供選擇性引數截然不同。  
   
--   是否呼叫程式碼已提供的選擇性引數，無法可靠地測試程序程式碼。 此情況下，比方說，如果有任何可能的候選項目的預設值，呼叫程式碼可能不需要提供。  
+- 是否呼叫程式碼已提供的選擇性引數，無法可靠地測試程序程式碼。 此情況下，比方說，如果有任何可能的候選項目的預設值，呼叫程式碼可能不需要提供。  
   
 #### <a name="when-to-use-optional-parameters"></a>當使用選擇性參數  
  您可能會偏好在下列情況中的一或多個選擇性參數：  
   
--   若要將參數設定為預設值是唯一必要的動作時呼叫的程式碼中未提供選擇性引數。 在此情況下中的程序程式碼可以變得簡單許多，如果您定義具有一或多個單一版本`Optional`參數。  
+- 若要將參數設定為預設值是唯一必要的動作時呼叫的程式碼中未提供選擇性引數。 在此情況下中的程序程式碼可以變得簡單許多，如果您定義具有一或多個單一版本`Optional`參數。  
   
  如需詳細資訊，請參閱 <<c0> [ 選擇性參數](./optional-parameters.md)。  
   
@@ -67,18 +67,18 @@ ms.locfileid: "61864345"
 #### <a name="when-to-use-overloaded-versions"></a>使用多載的版本的時機  
  在下列情況下，可以考慮一系列的多載版本：  
   
--   您知道，呼叫程式碼永遠不會傳遞多個一小部分的值給參數陣列。  
+- 您知道，呼叫程式碼永遠不會傳遞多個一小部分的值給參數陣列。  
   
--   程序程式碼中的邏輯是根據呼叫的程式碼傳遞的值數目大幅不同。  
+- 程序程式碼中的邏輯是根據呼叫的程式碼傳遞的值數目大幅不同。  
   
--   呼叫端程式碼可以傳遞不同的資料類型的值。  
+- 呼叫端程式碼可以傳遞不同的資料類型的值。  
   
 #### <a name="when-to-use-a-parameter-array"></a>使用參數陣列的時機  
  您會取得更佳服務`ParamArray`參數，在下列情況：  
   
--   您不能預測多少值呼叫的程式碼可以傳遞給參數陣列，並可能是大的數字。  
+- 您不能預測多少值呼叫的程式碼可以傳遞給參數陣列，並可能是大的數字。  
   
--   程序邏輯可用於逐一查看通過呼叫程式碼，執行本質相同之作業的每個值上的所有值。  
+- 程序邏輯可用於逐一查看通過呼叫程式碼，執行本質相同之作業的每個值上的所有值。  
   
  如需詳細資訊，請參閱 <<c0> [ 參數陣列](./parameter-arrays.md)。  
   
@@ -96,11 +96,11 @@ ms.locfileid: "61864345"
 ## <a name="implicit-overloads-for-a-paramarray-parameter"></a>ParamArray 參數的隱含多載  
  編譯器會考慮使用的程序[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)參數具有無限個多載，彼此不同項目呼叫的程式碼將傳遞給參數陣列，如下所示：  
   
--   其中一個多載的呼叫端程式碼時未提供的引數 `ParamArray`  
+- 其中一個多載的呼叫端程式碼時未提供的引數 `ParamArray`  
   
--   針對呼叫的程式碼時提供的一維陣列的其中一個多載`ParamArray`項目類型  
+- 針對呼叫的程式碼時提供的一維陣列的其中一個多載`ParamArray`項目類型  
   
--   對每一個正整數，其中一個多載時呼叫的程式碼提供該數目的引數，每個`ParamArray`項目類型  
+- 對每一個正整數，其中一個多載時呼叫的程式碼提供該數目的引數，每個`ParamArray`項目類型  
   
  下列宣告會說明這些隱含的多載。  
   
@@ -115,11 +115,11 @@ ms.locfileid: "61864345"
 ## <a name="typeless-programming-as-an-alternative-to-overloading"></a>除了多載的無類型程式設計  
  如果您想要允許呼叫端的程式碼，來傳遞參數至不同的資料類型，另一個方法是無型別程式設計。 您可以設定類型檢查參數來`Off`與其中一個[Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)或[/optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md)編譯器選項。 然後您沒有宣告參數的資料類型。 不過，這個方法會有下列缺點相較於多載：  
   
--   無類型程式設計產生效率較低的執行程式碼。  
+- 無類型程式設計產生效率較低的執行程式碼。  
   
--   此程序必須測試它預期傳遞的每一個資料型別。  
+- 此程序必須測試它預期傳遞的每一個資料型別。  
   
--   編譯器無法通知發生錯誤，如果呼叫程式碼會將此程序不支援的資料類型。  
+- 編譯器無法通知發生錯誤，如果呼叫程式碼會將此程序不支援的資料類型。  
   
 ## <a name="see-also"></a>另請參閱
 

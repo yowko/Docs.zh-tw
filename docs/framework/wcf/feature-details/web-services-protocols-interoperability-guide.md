@@ -2,12 +2,12 @@
 title: Web 服務通訊協定互通性手冊
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 647212558b6be38e9b30239f7fb71213e6eb7d86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ffa7da4c723a2cd0054f4f79dd22792a9db67068
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050346"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648398"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web 服務通訊協定互通性手冊
 Windows Communication Foundation (WCF) 會實作一些 Web 服務通訊協定。 許多這些通訊協定包含實作者應自行決定的一些選項和擴充點。 本主題提供 WCF 實作的 Web 服務通訊協定的清單。 本節中的其他主題則會提供每個受支援通訊協定的實作詳細資訊。  

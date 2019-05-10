@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-ms.openlocfilehash: 0b0da7e60cb54a1c3d6eb6d2d557f7312da1e9ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e425db792a2aec562eb0c4f90463eb861eb80f63
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61950302"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650270"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>HOW TO：為安全工作階段建立安全性內容權杖
 在安全工作階段中使用可設定狀態的安全性內容權杖時，工作階段可以承受正在回收的服務。 例如，當安全工作階段使用沒有狀態的 SCT 而且重設了網際網路資訊服務 (IIS)，則與該服務相關聯的工作階段資料就會遺失。 這個工作階段資料包含 SCT 權杖快取。 因此，下一次當用戶端傳送的服務是無狀態的 SCT 時，便會傳回錯誤，因為無法擷取與 SCT 相關聯的金鑰。 但是，如果使用可設定狀態的 SCT，則與 SCT 相關聯的金鑰就會包含在 SCT 中。 由於金鑰是包含在 SCT (因此也包含在訊息中)，安全工作階段就不會受到正在回收的服務所影響。 根據預設，Windows Communication Foundation (WCF) 會使用無狀態的 Sct 的安全工作階段中。 此主題將詳細說明如何在安全工作階段中使用具狀態的 SCT。  

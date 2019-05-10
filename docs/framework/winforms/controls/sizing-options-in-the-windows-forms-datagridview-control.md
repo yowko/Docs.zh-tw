@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: 2f76bbca3d4b6e642c0eec2129c4a2abee752655
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1da98dfa58651eca2052f7d180912d1aa2898385
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903158"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651969"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的調整大小選項
 <xref:System.Windows.Forms.DataGridView> 資料列、 資料行和標頭可以變更大小，因為許多不同的項目。 下表顯示這些項目。  
@@ -46,13 +46,13 @@ ms.locfileid: "61903158"
 ## <a name="resizing-with-the-mouse"></a>使用滑鼠調整大小  
  根據預設，使用者可以調整資料列、 資料行，以及不使用資料格的值為基礎的自動調整大小模式的標頭。 若要防止使用者調整與其他模式，例如資料行填滿模式中，將設定一或多個項目<xref:System.Windows.Forms.DataGridView>屬性：  
   
--   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
+- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>  
+- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
  您也可以防止使用者調整個別的資料列或資料行，藉由設定其<xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>屬性。 根據預設，<xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>屬性值根據<xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>資料行的屬性值和<xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>資料列的屬性值。 如果您明確設定<xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>要<xref:System.Windows.Forms.DataGridViewTriState.True>或<xref:System.Windows.Forms.DataGridViewTriState.False>，不過指定的值會覆寫控制項的值是該資料列或資料行。 設定<xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>至<xref:System.Windows.Forms.DataGridViewTriState.NotSet>還原繼承。  
   
@@ -74,13 +74,13 @@ ms.locfileid: "61903158"
   
  若要設定調整大小模式的標頭和資料列和資料行不會覆寫控制項的值，設定一或多個項目<xref:System.Windows.Forms.DataGridView>屬性：  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
   
  若要覆寫個別資料行的控制項的資料行調整大小模式，請將其<xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>屬性以外的值為<xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>。 調整大小模式的資料行實際上由其<xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A>屬性。 這個屬性的值為基礎的資料行<xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>屬性值，該值除非<xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>，在此情況下控制項的<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>繼承值。  
   
@@ -93,27 +93,27 @@ ms.locfileid: "61903158"
 ## <a name="programmatic-resizing"></a>以程式設計方式調整大小  
  停用自動調整大小後，您可以以程式設計方式設定的確切的寬度或高度的資料列、 資料行或藉由下列屬性的標頭：  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
   
  您也以程式設計的方式可以調整大小的資料列、 資料行和標頭，以適合其內容，使用下列方法：  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
   
  這些方法會重新調整資料列、 資料行，或一次標頭而不是加以設定的持續調整大小。 新的大小會自動計算要顯示所有儲存格的內容，而不裁剪。 當您以程式設計方式調整資料行具有<xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A>屬性值<xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill>，不過，會按比例調整資料行使用導出的內容為基礎之寬度<xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>屬性值和實際資料行的寬度因此，所有的資料行填滿可用顯示區域的控制項，則計算根據這些新的比例。  
   

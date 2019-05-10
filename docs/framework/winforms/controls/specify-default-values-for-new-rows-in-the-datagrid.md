@@ -10,12 +10,12 @@ helpviewer_keywords:
 - rows [Windows Forms], specifying default values
 - DataGridView control [Windows Forms], default values for new rows
 ms.assetid: 8d127963-d9f8-4e4e-9f7f-beb66688f1f2
-ms.openlocfilehash: 8a90cbef7032fd3753a6c9ec0b856a4e2ea1db27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 879c035366c4686ceff3250a63c6ae8d8d3cfec4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009730"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651953"
 ---
 # <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>HOW TO：指定 Windows Form DataGridView 控制項的新資料列預設值
 當應用程式的預設填新加入的資料列的值時，您可以讓資料輸入更方便。 具有<xref:System.Windows.Forms.DataGridView>類別，您可以填入預設值取代<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>事件。 當使用者輸入新資料錄的資料列時，會引發這個事件。 當您的程式碼會處理此事件時，您可以填入所需的資料格，以您選擇的值。  

@@ -2,12 +2,12 @@
 title: 效能考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6cd12948d16eea66efb6ee4b427a2c979e0aab3d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879394"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641277"
 ---
 # <a name="performance-considerations-entity-framework"></a>效能考量 (Entity Framework)
 本主題說明 ADO.NET Entity Framework 的效能特性，並提供一些考量因素以協助提升 Entity Framework 應用程式的效能。  
@@ -55,12 +55,12 @@ ms.locfileid: "61879394"
 #### <a name="query-complexity"></a>查詢複雜度  
  在命令中需要大量聯結的查詢會針對資料來源進行執行，否則傳回的大量資料可能會以下列方式影響效能：  
   
--   針對概念模型進行的查詢看似簡單，但可能會導致針對資料來源執行更複雜的查詢。 發生這個問題的原因是 Entity Framework 會將針對概念模型的查詢轉譯為針對資料來源的同等查詢。 當概念模型中的單一實體集對應至資料來源中一個以上的資料表，或當實體之間的關聯性對應至聯結資料表時，針對資料來源查詢執行的查詢命令可能需要一個以上的聯結。  
+- 針對概念模型進行的查詢看似簡單，但可能會導致針對資料來源執行更複雜的查詢。 發生這個問題的原因是 Entity Framework 會將針對概念模型的查詢轉譯為針對資料來源的同等查詢。 當概念模型中的單一實體集對應至資料來源中一個以上的資料表，或當實體之間的關聯性對應至聯結資料表時，針對資料來源查詢執行的查詢命令可能需要一個以上的聯結。  
   
     > [!NOTE]
     >  請使用 <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> 的 <xref:System.Data.Objects.ObjectQuery%601> 方法或 <xref:System.Data.EntityClient.EntityCommand> 類別，檢視針對資料來源而執行之指定查詢的命令。 如需詳細資訊，請參閱[如何：檢視存放命令](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896348(v=vs.100))。  
   
--   巢狀 Entity SQL 查詢可在伺服器上建立聯結，並傳回大量資料列。  
+- 巢狀 Entity SQL 查詢可在伺服器上建立聯結，並傳回大量資料列。  
   
      下列是投影子句中巢狀查詢的範例：  
   
@@ -72,7 +72,7 @@ ms.locfileid: "61879394"
   
      此外，這類查詢會使查詢管線產生單一查詢，並重複跨巢狀查詢的物件。 因此，單一資料行可能會重複多次。 在某些些資料庫上 (包括 SQL Server)，這個工作會使 TempDB 資料表變得非常大，降低伺服器的效能。 您執行巢狀查詢時應特別注意。  
   
--   如果用戶端正在執行耗用資源與結果集大小成正比的作業，任何傳回大量資料的查詢可能會使效能降低。 在這種情況下，您應該考慮依查詢限制傳回的資料量。 如需詳細資訊，請參閱[如何：逐頁檢視查詢結果](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))。  
+- 如果用戶端正在執行耗用資源與結果集大小成正比的作業，任何傳回大量資料的查詢可能會使效能降低。 在這種情況下，您應該考慮依查詢限制傳回的資料量。 如需詳細資訊，請參閱[如何：逐頁檢視查詢結果](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))。  
   
  由 Entity Framework 自動產生的任何命令，會比由資料庫開發人員明確撰寫的類似命令更為複雜。 如果您需要明確控制針對資料來源執行的命令，請考慮資料表值函式的對應或預存程序。  
   
@@ -114,9 +114,9 @@ ms.locfileid: "61879394"
 ### <a name="distributed-transactions"></a>分散式異動  
  在明確異動中，需要由分散式異動協調器 (DTC) 管理之資源的作業，會比不需要 DTC 的相似作業耗用更多成本。 提升至 DTC 會發生以下狀況：  
   
--   包含針對 SQL Server 2000 資料庫或其他資料來源之作業的明確異動，永遠會將明確異動提升至 DTC。  
+- 包含針對 SQL Server 2000 資料庫或其他資料來源之作業的明確異動，永遠會將明確異動提升至 DTC。  
   
--   當連接是由 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 管理時，會執行包含針對 SQL Server 2005 之作業的明確異動。 發生這種情況，是因為每當單一異動內的連接關閉又重新開啟時，SQL Server 2005 會提升至 DTC，這是 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的預設行為。 使用 SQL Server 2008 就不會發生 DTC 提升。 若要在使用 SQL Server 2005 時防止這個問題發生，您必須明確開啟和關閉交易內的連接。 如需詳細資訊，請參閱 <<c0> [ 管理連接和交易](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
+- 當連接是由 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 管理時，會執行包含針對 SQL Server 2005 之作業的明確異動。 發生這種情況，是因為每當單一異動內的連接關閉又重新開啟時，SQL Server 2005 會提升至 DTC，這是 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的預設行為。 使用 SQL Server 2008 就不會發生 DTC 提升。 若要在使用 SQL Server 2005 時防止這個問題發生，您必須明確開啟和關閉交易內的連接。 如需詳細資訊，請參閱 <<c0> [ 管理連接和交易](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
   
  當一個或多個作業在 <xref:System.Transactions> 交易內執行時，會使用明確交易。 如需詳細資訊，請參閱 <<c0> [ 管理連接和交易](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
   
@@ -147,11 +147,11 @@ ms.locfileid: "61879394"
 ## <a name="performance-data"></a>效能資料  
  有些 Entity Framework 的效能資料發佈下列文章中於[ADO.NET 小組部落格](https://go.microsoft.com/fwlink/?LinkId=91905):  
   
--   [瀏覽 ADO.NET Entity Framework 的效能-第 1 部分](https://go.microsoft.com/fwlink/?LinkId=123907)  
+- [瀏覽 ADO.NET Entity Framework 的效能-第 1 部分](https://go.microsoft.com/fwlink/?LinkId=123907)  
   
--   [瀏覽 ADO.NET Entity Framework 的效能-第 2 部分](https://go.microsoft.com/fwlink/?LinkId=123909)  
+- [瀏覽 ADO.NET Entity Framework 的效能-第 2 部分](https://go.microsoft.com/fwlink/?LinkId=123909)  
   
--   [ADO.NET Entity Framework 效能比較](https://go.microsoft.com/fwlink/?LinkID=123913)  
+- [ADO.NET Entity Framework 效能比較](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
 ## <a name="see-also"></a>另請參閱
 

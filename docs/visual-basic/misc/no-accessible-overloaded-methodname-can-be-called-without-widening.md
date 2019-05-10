@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousCall_WideningConversion2
 ms.assetid: 5e74f5cf-80bd-4b48-b58a-465f981ec694
-ms.openlocfilehash: b5a7431722ea7ccb20ca21f453235ca42eb3cb0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e1394adfe1258dfa068838792d9768ef88225a2f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944959"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642532"
 ---
 # <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-widening-conversion-list"></a>沒有可存取的多載 '\<方法名稱 >' 可以擴展轉換這些引數呼叫：\<清單 >
 已呼叫多載方法，但沒有任何方法可在未擴展轉換的情況下，符合所提供的引數清單。  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: aa045dd5454819a37ad81c76d97fd3e61e7d0420
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4577609c78271ac91e011b20ef6a8b4066072428
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864308"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649662"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>自動實作的屬性 (Visual Basic)
 *自動實作的屬性*可讓您快速指定類別的屬性，而不需要撰寫程式碼來`Get`和`Set`屬性。 當您撰寫自動實作屬性之程式碼時，Visual Basic 編譯器會自動建立私用欄位，來存放建立關聯的 `Get` 和 `Set` 程序外，另外存放屬性變數。  
@@ -52,13 +52,13 @@ End Class
   
  支援欄位也具有下列特性：  
   
--   支援欄位的存取修飾詞一律為 `Private`，即使屬性本身有不同的存取層級，例如 `Public`。  
+- 支援欄位的存取修飾詞一律為 `Private`，即使屬性本身有不同的存取層級，例如 `Public`。  
   
--   如果屬性標記為 `Shared`，支援欄位也會共用。  
+- 如果屬性標記為 `Shared`，支援欄位也會共用。  
   
--   為屬性所指定的屬性並不適用於支援欄位。  
+- 為屬性所指定的屬性並不適用於支援欄位。  
   
--   可從類別內的程式碼，和從偵錯工具 (例如 [監看式] 視窗) 中存取的支援欄位。 不過，支援欄位不會顯示在 IntelliSense 文字自動完成清單中。  
+- 可從類別內的程式碼，和從偵錯工具 (例如 [監看式] 視窗) 中存取的支援欄位。 不過，支援欄位不會顯示在 IntelliSense 文字自動完成清單中。  
   
 ## <a name="initializing-an-auto-implemented-property"></a>初始化自動實作屬性  
  任何可以用來初始化欄位的運算式，對初始化自動實作屬性都是有效的。 當您初始化自動實作屬性時，會評估運算式，並傳遞給屬性的 `Set` 程序。 下列程式碼範例會顯示一些包括起始值的自動實作屬性。  
@@ -78,17 +78,17 @@ End Class
   
  如果您想要執行下列任何一項，您必須使用已展開屬性定義語法：  
   
--   將程式碼新增至屬性的 `Get` 或 `Set` 程序，例如在 `Set` 程序中用來驗證傳入值的程式碼。 比方說，您可能想要先確認代表電話號碼的字串包含必要的數字，再設定屬性值。  
+- 將程式碼新增至屬性的 `Get` 或 `Set` 程序，例如在 `Set` 程序中用來驗證傳入值的程式碼。 比方說，您可能想要先確認代表電話號碼的字串包含必要的數字，再設定屬性值。  
   
--   指定 `Get` 和 `Set` 程序的不同協助工具。 比方說，您可能想要製作 `Set` 程序 `Private` 和 `Get` 程序 `Public`。  
+- 指定 `Get` 和 `Set` 程序的不同協助工具。 比方說，您可能想要製作 `Set` 程序 `Private` 和 `Get` 程序 `Public`。  
   
--   建立 `WriteOnly` 屬性。  
+- 建立 `WriteOnly` 屬性。  
   
--   使用參數化屬性 (包括 `Default` 屬性)。 若要指定屬性的參數，或指定 `Set` 程序的其他參數，您必須宣告已展開屬性。  
+- 使用參數化屬性 (包括 `Default` 屬性)。 若要指定屬性的參數，或指定 `Set` 程序的其他參數，您必須宣告已展開屬性。  
   
--   將屬性放在支援欄位，或變更支援欄位的存取層級。  
+- 將屬性放在支援欄位，或變更支援欄位的存取層級。  
   
--   提供支援欄位的 XML 註解。  
+- 提供支援欄位的 XML 註解。  
   
 ## <a name="expanding-an-auto-implemented-property"></a>展開自動實作屬性  
  如果您必須將自動實作屬性轉換為包含 `Get` 或 `Set` 程序的已展開屬性，Visual Basic 程式碼編輯器可以自動產生屬性的 `Get` 和 `Set` 程序和 `End Property` 陳述式。 如果資料指標放在空行下列使用者產生的程式碼`Property`陳述式中，輸入`G`(如`Get`) 或`S`(的`Set`) 然後按 ENTER。 當您在 `Property` 陳述式結束時按下 ENTER，Visual Basic 程式碼編輯器會自動產生唯讀和唯寫屬性的 `Get` 或 `Set` 程序。  

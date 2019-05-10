@@ -2,41 +2,41 @@
 title: WCF Web HTTP 程式設計物件模型
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: f1772220ed5f425ec603fd8927f4617446d106eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f8bda6292506b64057dee006fa59b7723fa406b2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096006"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648402"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP 程式設計物件模型
 WCF WEB HTTP 程式設計模型可讓開發人員公開透過基本 HTTP 要求的 Windows Communication Foundation (WCF) Web 服務，而不需要使用 SOAP。 WCF WEB HTTP 程式設計模型是建置在現有的 WCF 擴充性模型之上。 這個模型會定義下列類別：  
   
  **程式設計模型：**  
   
--   <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>  
+- <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>  
   
--   <xref:System.ServiceModel.Web.WebGetAttribute>  
+- <xref:System.ServiceModel.Web.WebGetAttribute>  
   
--   <xref:System.ServiceModel.Web.WebInvokeAttribute>  
+- <xref:System.ServiceModel.Web.WebInvokeAttribute>  
   
--   <xref:System.ServiceModel.Web.WebServiceHost>  
+- <xref:System.ServiceModel.Web.WebServiceHost>  
   
  **通道與發送器基礎結構：**  
   
--   <xref:System.ServiceModel.WebHttpBinding>  
+- <xref:System.ServiceModel.WebHttpBinding>  
   
--   <xref:System.ServiceModel.Description.WebHttpBehavior>  
+- <xref:System.ServiceModel.Description.WebHttpBehavior>  
   
  **公用程式類別和擴充點：**  
   
--   <xref:System.UriTemplate>  
+- <xref:System.UriTemplate>  
   
--   <xref:System.UriTemplateTable>  
+- <xref:System.UriTemplateTable>  
   
--   <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
+- <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
--   <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
+- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
   
 ## <a name="aspnetcacheprofileattribute"></a>AspNetCacheProfileAttribute  
  <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>，套用至服務作業時，表示組態檔中的 ASP.NET 輸出快取設定檔，此設定檔應該用來快取 ASP .NET 輸出快取中作業傳來的回應。 此屬性僅採用一個參數，也就是在組態檔中指定快取設定的快取設定檔名稱。  
