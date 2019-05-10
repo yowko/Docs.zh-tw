@@ -4,12 +4,12 @@ description: 了解 Microsoft 的供應項目，以支援 Docker 應用程式生
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 8536703a520434c0e393c5f46005c2ac02d5d849
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cdaac06ffd907783c7ebe9b62ecd726158a02484
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934653"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664386"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Microsoft 平台和容器化應用程式的工具簡介
 
@@ -31,7 +31,7 @@ ms.locfileid: "61934653"
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Docker 應用程式的平台   | • Microsoft Visual Studio 和 Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Container Service<br /> • Azure Service Fabric<br /> • Azure Container Registry<br /> | • 任何程式碼編輯器 (例如，Sublime)<br /> • 任何語言 (Node.js、Java、Go 等等)<br /> • 任何協調器和排程器<br /> • 任何 Docker 登錄<br /> |
 | Docker 應用程式的 DevOps     | • Azure DevOps 服務<br /> • Microsoft Team Foundation Server<br /> • Azure Container Service<br /> • Azure Service Fabric<br /> | • GitHub、Git、Subversion 等等<br /> • Jenkins、Chef、Puppet、Velocity、CircleCI、TravisCI 等等<br /> • 內部部署 Docker Datacenter、Docker Swarm、Mesos DC/OS、Kubernetes 等等<br /> |
-| 管理和監視  | • Operations Management Suite<br /> • Applications Insights<br /> | • Marathon、Chronos 等等<br />
+| 管理和監視  | • Azure 監視 | • Marathon、Chronos 等等<br />|
 
 表 3-1 中所定義之容器化 Docker 應用程式的 Microsoft 平台和工具，包含下列元件：
 

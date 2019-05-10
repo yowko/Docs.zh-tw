@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 10f8e0899e61d5d54589c910bdcbcd92d8ee947c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 32e3926bb4c519b7be14a26484603d6d4ea88b6a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777061"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665801"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>HOW TO：使用程式碼新增事件處理常式
 此範例示範如何使用程式碼，將事件處理常式新增至項目。  

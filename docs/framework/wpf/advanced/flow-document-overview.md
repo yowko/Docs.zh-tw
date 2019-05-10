@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 082f5bf9f8cdd8e5f44aa74e7b34e03637b5c579
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703834"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663359"
 ---
 # <a name="flow-document-overview"></a>非固定格式文件概觀
 非固定格式文件的設計是為最佳化檢視和可讀性。 非固定格式文件並不會設為某種預先定義的配置，而是會根據執行階段變數 (例如視窗大小、裝置解析度和選擇性的使用者喜好設定)，動態調整及自動重排其內容。 此外，非固定格式文件提供進階文件功能，例如編頁和資料行。 本主題提供非固定格式文件和建立方式的概觀。  
@@ -48,7 +48,7 @@ ms.locfileid: "61703834"
   
 - 頁面導覽控制項︰如果文件的檢視模式使用頁面，頁面導覽控制項包括按鈕以移至下一頁 （向下箭號） 或上一頁 （向上箭頭），以及目前的頁碼和總頁數的指示器。 使用鍵盤方向鍵也可以翻頁。  
   
-- 縮放:縮放控制項可讓使用者以增加或減少的縮放層級，按一下加號或減號按鈕，分別。 縮放控制項也包括調整縮放層級的滑桿。 如需詳細資訊，請參閱<xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>。  
+- 縮放:縮放控制項可讓使用者以增加或減少的縮放層級，按一下加號或減號按鈕，分別。 縮放控制項也包括調整縮放層級的滑桿。 如需詳細資訊，請參閱 <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>。  
   
  您可以根據裝載非固定格式內容所用的控制項來修改這些功能。 下一節說明不同的控制項。  
   

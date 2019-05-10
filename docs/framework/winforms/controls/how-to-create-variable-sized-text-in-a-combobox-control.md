@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: 9155893b3d47707e0e55ee33e30d7998654f9e93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1fa9b04063d8f606f674cc54190dad5a669adbeb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61965490"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666413"
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>HOW TO：在 ComboBox 控制項中建立各種大小的文字
 此範例示範自訂繪圖中的文字<xref:System.Windows.Forms.ComboBox>控制項。 當項目符合特定準則時，它是以較大的字型繪製，而且變成紅色。  
