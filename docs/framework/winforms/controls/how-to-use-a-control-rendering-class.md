@@ -10,30 +10,30 @@ helpviewer_keywords:
 - visual themes [Windows Forms], applying to Windows Forms controls
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: c0125e34-cd74-4c35-818c-3e40f462b0a3
-ms.openlocfilehash: 7115c227cb24cf12a50073d0dc587524abf0cbb9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a0f450ff5f169026007002a0d2907ee35e79b29d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785836"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630559"
 ---
-# <a name="how-to-use-a-control-rendering-class"></a><span data-ttu-id="91072-102">HOW TO：使用控制項呈現類別</span><span class="sxs-lookup"><span data-stu-id="91072-102">How to: Use a Control Rendering Class</span></span>
-<span data-ttu-id="91072-103">此範例示範如何使用<xref:System.Windows.Forms.ComboBoxRenderer>來呈現的下拉式箭號，下拉式方塊控制項的類別。</span><span class="sxs-lookup"><span data-stu-id="91072-103">This example demonstrates how to use the <xref:System.Windows.Forms.ComboBoxRenderer> class to render the drop-down arrow of a combo box control.</span></span> <span data-ttu-id="91072-104">此範例包含<xref:System.Windows.Forms.Control.OnPaint%2A>簡單的自訂控制項的方法。</span><span class="sxs-lookup"><span data-stu-id="91072-104">The example consists of the <xref:System.Windows.Forms.Control.OnPaint%2A> method of a simple custom control.</span></span> <span data-ttu-id="91072-105"><xref:System.Windows.Forms.ComboBoxRenderer.IsSupported%2A?displayProperty=nameWithType>屬性用來判斷是否已啟用視覺化樣式的應用程式視窗的工作區中。</span><span class="sxs-lookup"><span data-stu-id="91072-105">The <xref:System.Windows.Forms.ComboBoxRenderer.IsSupported%2A?displayProperty=nameWithType> property is used to determine whether visual styles are enabled in the client area of application windows.</span></span> <span data-ttu-id="91072-106">如果視覺化樣式作用中，則<xref:System.Windows.Forms.ComboBoxRenderer.DrawDropDownButton%2A?displayProperty=nameWithType>方法會呈現具有視覺化樣式; 的下拉式箭號，否則為<xref:System.Windows.Forms.ControlPaint.DrawComboButton%2A?displayProperty=nameWithType>方法會呈現傳統的 Windows 樣式的下拉式箭號。</span><span class="sxs-lookup"><span data-stu-id="91072-106">If visual styles are active, then the <xref:System.Windows.Forms.ComboBoxRenderer.DrawDropDownButton%2A?displayProperty=nameWithType> method will render the drop-down arrow with visual styles; otherwise, the <xref:System.Windows.Forms.ControlPaint.DrawComboButton%2A?displayProperty=nameWithType> method will render the drop-down arrow in the classic Windows style.</span></span>  
+# <a name="how-to-use-a-control-rendering-class"></a><span data-ttu-id="e955f-102">HOW TO：使用控制項呈現類別</span><span class="sxs-lookup"><span data-stu-id="e955f-102">How to: Use a Control Rendering Class</span></span>
+<span data-ttu-id="e955f-103">此範例示範如何使用<xref:System.Windows.Forms.ComboBoxRenderer>來呈現的下拉式箭號，下拉式方塊控制項的類別。</span><span class="sxs-lookup"><span data-stu-id="e955f-103">This example demonstrates how to use the <xref:System.Windows.Forms.ComboBoxRenderer> class to render the drop-down arrow of a combo box control.</span></span> <span data-ttu-id="e955f-104">此範例包含<xref:System.Windows.Forms.Control.OnPaint%2A>簡單的自訂控制項的方法。</span><span class="sxs-lookup"><span data-stu-id="e955f-104">The example consists of the <xref:System.Windows.Forms.Control.OnPaint%2A> method of a simple custom control.</span></span> <span data-ttu-id="e955f-105"><xref:System.Windows.Forms.ComboBoxRenderer.IsSupported%2A?displayProperty=nameWithType>屬性用來判斷是否已啟用視覺化樣式的應用程式視窗的工作區中。</span><span class="sxs-lookup"><span data-stu-id="e955f-105">The <xref:System.Windows.Forms.ComboBoxRenderer.IsSupported%2A?displayProperty=nameWithType> property is used to determine whether visual styles are enabled in the client area of application windows.</span></span> <span data-ttu-id="e955f-106">如果視覺化樣式作用中，則<xref:System.Windows.Forms.ComboBoxRenderer.DrawDropDownButton%2A?displayProperty=nameWithType>方法會呈現具有視覺化樣式; 的下拉式箭號，否則為<xref:System.Windows.Forms.ControlPaint.DrawComboButton%2A?displayProperty=nameWithType>方法會呈現傳統的 Windows 樣式的下拉式箭號。</span><span class="sxs-lookup"><span data-stu-id="e955f-106">If visual styles are active, then the <xref:System.Windows.Forms.ComboBoxRenderer.DrawDropDownButton%2A?displayProperty=nameWithType> method will render the drop-down arrow with visual styles; otherwise, the <xref:System.Windows.Forms.ControlPaint.DrawComboButton%2A?displayProperty=nameWithType> method will render the drop-down arrow in the classic Windows style.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="91072-107">範例</span><span class="sxs-lookup"><span data-stu-id="91072-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e955f-107">範例</span><span class="sxs-lookup"><span data-stu-id="e955f-107">Example</span></span>  
  [!code-cpp[System.Windows.Forms_ControlRenderer#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms_ControlRenderer/cpp/form1.cpp#10)]
  [!code-csharp[System.Windows.Forms_ControlRenderer#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms_ControlRenderer/CS/form1.cs#10)]
  [!code-vb[System.Windows.Forms_ControlRenderer#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms_ControlRenderer/VB/form1.vb#10)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="91072-108">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="91072-108">Compiling the Code</span></span>  
- <span data-ttu-id="91072-109">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="91072-109">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="e955f-108">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="e955f-108">Compiling the Code</span></span>  
+ <span data-ttu-id="e955f-109">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="e955f-109">This example requires:</span></span>  
   
-- <span data-ttu-id="91072-110">自訂控制項衍生自<xref:System.Windows.Forms.Control>類別。</span><span class="sxs-lookup"><span data-stu-id="91072-110">A custom control derived from the <xref:System.Windows.Forms.Control> class.</span></span>  
+- <span data-ttu-id="e955f-110">自訂控制項衍生自<xref:System.Windows.Forms.Control>類別。</span><span class="sxs-lookup"><span data-stu-id="e955f-110">A custom control derived from the <xref:System.Windows.Forms.Control> class.</span></span>  
   
-- <span data-ttu-id="91072-111">A<xref:System.Windows.Forms.Form>會裝載自訂的控制項。</span><span class="sxs-lookup"><span data-stu-id="91072-111">A <xref:System.Windows.Forms.Form> that hosts the custom control.</span></span>  
+- <span data-ttu-id="e955f-111">A<xref:System.Windows.Forms.Form>會裝載自訂的控制項。</span><span class="sxs-lookup"><span data-stu-id="e955f-111">A <xref:System.Windows.Forms.Form> that hosts the custom control.</span></span>  
   
-- <span data-ttu-id="91072-112">若要參考<xref:System?displayProperty=nameWithType>， <xref:System.Drawing?displayProperty=nameWithType>， <xref:System.Windows.Forms?displayProperty=nameWithType>，和<xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType>命名空間。</span><span class="sxs-lookup"><span data-stu-id="91072-112">References to the <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, and <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespaces.</span></span>  
+- <span data-ttu-id="e955f-112">若要參考<xref:System?displayProperty=nameWithType>， <xref:System.Drawing?displayProperty=nameWithType>， <xref:System.Windows.Forms?displayProperty=nameWithType>，和<xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType>命名空間。</span><span class="sxs-lookup"><span data-stu-id="e955f-112">References to the <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, and <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="91072-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="91072-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e955f-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e955f-113">See also</span></span>
 
-- [<span data-ttu-id="91072-114">使用視覺化樣式呈現控制項</span><span class="sxs-lookup"><span data-stu-id="91072-114">Rendering Controls with Visual Styles</span></span>](rendering-controls-with-visual-styles.md)
+- [<span data-ttu-id="e955f-114">使用視覺化樣式呈現控制項</span><span class="sxs-lookup"><span data-stu-id="e955f-114">Rendering Controls with Visual Styles</span></span>](rendering-controls-with-visual-styles.md)
