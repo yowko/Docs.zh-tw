@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
-ms.openlocfilehash: 2b45a4629474c394c8e49c41a7a98fc1181e124b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0903aac366426e8b4d271ae4bfaa54c79a198e5c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077169"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583743"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>比較 DataRow (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 定義了許多設定運算子，可比較來源項目以便查看它們是否相等。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 會提供下列設定運算子：  
   
--   <xref:System.Linq.Enumerable.Distinct%2A>  
+- <xref:System.Linq.Enumerable.Distinct%2A>  
   
--   <xref:System.Linq.Enumerable.Union%2A>  
+- <xref:System.Linq.Enumerable.Union%2A>  
   
--   <xref:System.Linq.Enumerable.Intersect%2A>  
+- <xref:System.Linq.Enumerable.Intersect%2A>  
   
--   <xref:System.Linq.Enumerable.Except%2A>  
+- <xref:System.Linq.Enumerable.Except%2A>  
   
  這些運算子會針對每個項目集合呼叫 <xref:System.Collections.Generic.IEqualityComparer%601.GetHashCode%2A> 和 <xref:System.Collections.Generic.IEqualityComparer%601.Equals%2A> 方法，藉以比較來源項目。 在 <xref:System.Data.DataRow> 的情況中，這些運算子會執行參考比較，但是這通常不是表格式資料之設定作業的理想行為。 若為設定作業，您通常會想要判斷項目值是否相等，而非項目參考。 因此，<xref:System.Data.DataRowComparer> 類別 (Class) 已經加入至 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]。 這個類別可用來比較資料列值。  
   

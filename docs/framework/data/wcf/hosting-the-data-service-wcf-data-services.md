@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: e738fa1feebdd91bdb84484340b31e599d7f5f76
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bca11c0c1828513077985aa11553ec5c0ad52a27
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765568"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910795"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>裝載資料服務 (WCF 資料服務)
 使用 WCF Data Services，您可以建立資料公開為服務[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 這個資料服務會定義為繼承自 <xref:System.Data.Services.DataService%601> 的類別。 這個類別會提供處理要求訊息、 執行更新，針對資料來源，以及產生所需的 OData 回應訊息所需的功能。 不過，無法繫結至資料服務，而且網路通訊端上接聽內送的 HTTP 要求。 對於這個必要的功能而言，資料服務會依賴裝載的元件。

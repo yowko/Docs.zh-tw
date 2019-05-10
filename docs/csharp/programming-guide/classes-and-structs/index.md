@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 7b85940f8ce64139d056497a8007379f1658010d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c26b8deb6036c13a9a61d8929b4cabba5f3ef67
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646328"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584545"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>類別和結構 (C# 程式設計手冊)
 類別和結構是 .NET Framework 中一般型別系統的兩個基本建構。 每一個基本上都是封裝一組屬於相同邏輯單元之資料和行為的資料結構。 資料和行為是類別或結構的「成員」，它們包含類別或結構的方法、屬性和事件等，如本主題稍後所列。  
@@ -44,25 +44,25 @@ ms.locfileid: "61646328"
 ### <a name="members"></a>成員  
  所有的方法、欄位、常數、屬性和事件都必須在型別內宣告。這些便是該型別的「成員」。 和部分其他語言不同，在 C# 中並沒有全域變數或方法。 即使是程式的進入點 (`Main` 方法)，也必須在類別或結構內宣告。 下列清單包含所有可能在類別或結構中宣告的各種成員。  
   
--   [欄位](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [欄位](../../../csharp/programming-guide/classes-and-structs/fields.md)  
   
--   [常數](../../../csharp/programming-guide/classes-and-structs/constants.md)  
+- [常數](../../../csharp/programming-guide/classes-and-structs/constants.md)  
   
--   [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
   
--   [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
   
--   [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [事件](../../../csharp/programming-guide/events/index.md)  
+- [事件](../../../csharp/programming-guide/events/index.md)  
   
--   [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
--   [索引子](../../../csharp/programming-guide/indexers/index.md)  
+- [索引子](../../../csharp/programming-guide/indexers/index.md)  
   
--   [運算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [運算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
--   [巢狀型別](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+- [巢狀型別](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
   
 ### <a name="accessibility"></a>協助工具選項  
  有些方法和屬性必須從類別或結構以外的程式碼呼叫或存取，它們稱為「用戶端程式碼」。 其他方法和屬性可能只會在類別或結構本身中使用。 請務必限制程式碼的可存取性，以確保只有目標用戶端程式碼可以存取。 您可以使用存取修飾詞 [public](../../../csharp/language-reference/keywords/public.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md)、[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)、[private](../../../csharp/language-reference/keywords/private.md) 和 [private protected](../../../csharp/language-reference/keywords/private-protected.md)，來指定用戶端程式碼可以存取您的類型和其成員的程度。 預設可存取性為 `private`。 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  

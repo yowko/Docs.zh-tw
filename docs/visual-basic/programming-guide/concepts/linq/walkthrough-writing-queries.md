@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 8e3d893a21b36868f59d132bd8ba9a6f634cac62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: daf4ef0032ef8bfcce02ec925cc957abdecb3643
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907604"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910704"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>逐步解說：在 Visual Basic 中撰寫查詢
 本逐步解說示範如何使用 Visual Basic 語言功能，以及在寫入[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查詢運算式。 逐步解說示範如何建立一份學生物件上的查詢、 如何執行查詢，以及如何修改它們。 查詢會將數個功能，包括物件初始設定式、 區域類型推斷和匿名型別。  
@@ -40,14 +40,14 @@ ms.locfileid: "61907604"
   
 #### <a name="to-add-the-data-source"></a>若要新增資料來源  
   
--   定義`Student`類別，並建立一份類別的執行個體。  
+- 定義`Student`類別，並建立一份類別的執行個體。  
   
     > [!IMPORTANT]
     >  定義所需的程式碼`Student`類別，並建立使用的清單中的逐步解說中提供範例[How to:建立項目清單](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)。 您可以從該處複製，並將它貼到您的專案。 新的程式碼取代您在建立專案時出現的程式碼。  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>若要將新的學生新增至學生清單  
   
--   請依照下列中的模式`getStudents`方法，以新增另一個執行個體`Student`類別清單。 加入學生將為您介紹物件初始設定式。 如需詳細資訊，請參閱[物件初始設定式：具名和匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)。  
+- 請依照下列中的模式`getStudents`方法，以新增另一個執行個體`Student`類別清單。 加入學生將為您介紹物件初始設定式。 如需詳細資訊，請參閱[物件初始設定式：具名和匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)。  
   
 ## <a name="create-a-query"></a>建立查詢  
  在執行時，在這一節中新增此查詢會產生學術排名將它們放入前十名學生的清單。 因為此查詢會選取完整`Student`物件每次查詢結果的型別是`IEnumerable(Of Student)`。 不過，查詢類型通常是未指定查詢定義中。 相反地，編譯器會使用區域類型推斷來判斷型別。 如需詳細資訊，請參閱 <<c0> [ 區域型別推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。 查詢的範圍變數`currentStudent`，做為每個參考`Student`在來源中，執行個體`students`，提供存取權的每個物件在屬性`students`。  

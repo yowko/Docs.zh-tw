@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-ms.openlocfilehash: 3455c7ccdedb432fc05c7dc9e80f0f7509f4fa0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ba9f41921749db74444e35948adb2e49c7830f8e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010679"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666308"
 ---
 # <a name="binding-markup-extension"></a>繫結標記延伸
 延遲是資料繫結的值，建立中繼運算式物件，並解譯會套用至項目和其在執行階段的繫結的資料內容的屬性值。  

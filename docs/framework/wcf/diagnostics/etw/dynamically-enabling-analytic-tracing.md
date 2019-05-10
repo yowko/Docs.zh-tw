@@ -2,12 +2,12 @@
 title: 動態地啟用分析的追蹤
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-ms.openlocfilehash: 219561b1acd2259daad4c984dcf0b15517166c3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fc157e6612a59640aef557b57e5e2dd9e91cb529
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999457"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584338"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>動態地啟用分析的追蹤
 使用隨附於 Windows 作業系統的工具，您可以使用 Windows 事件追蹤 (ETW) 來動態啟用或停用追蹤。 所有[!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)]Windows Communication Foundation (WCF) 服務，分析追蹤可以啟用和停用，而不需要修改應用程式的 Web.config 檔案或重新啟動服務。 這樣可讓發出追蹤事件的應用程式維持不變。  

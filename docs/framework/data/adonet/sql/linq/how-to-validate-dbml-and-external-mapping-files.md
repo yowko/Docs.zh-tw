@@ -2,12 +2,12 @@
 title: HOW TO：驗證 DBML 和外部對應檔
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 83a26f22495c849aa00143ca36b63fa147120c28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 9e80f41e05fb78b7a6c1ef9ce47ef611cfe3e57d
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310235"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910651"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>HOW TO：驗證 DBML 和外部對應檔
 如果修改外部對應檔案和 .dbml 檔案，則必須根據它們各自的結構描述定義進行驗證。 本主題提供的步驟來實作驗證程序的 Visual Studio 使用者。  
@@ -30,9 +30,9 @@ ms.locfileid: "59310235"
   
 5. 請記下適用於您目的的適當結構描述定義。  
   
-    -   DbmlSchema.xsd 是用來驗證 .dbml 檔案的結構描述定義。 如需詳細資訊，請參閱 < [LINQ to SQL 中的程式碼產生](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)。  
+    - DbmlSchema.xsd 是用來驗證 .dbml 檔案的結構描述定義。 如需詳細資訊，請參閱 < [LINQ to SQL 中的程式碼產生](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)。  
   
-    -   LinqToSqlMapping.xsd 是用來驗證外部 XML 對應檔案的結構描述定義。 如需詳細資訊，請參閱 <<c0> [ 外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
+    - LinqToSqlMapping.xsd 是用來驗證外部 XML 對應檔案的結構描述定義。 如需詳細資訊，請參閱 <<c0> [ 外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
   
 6. 在 **使用**所需的結構描述定義資料列，按一下即可開啟下拉式清單方塊中，然後再按一下資料行**使用這個結構描述**。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "59310235"
   
 1. 如這個主題前面所述，找到內含結構描述定義的 [說明] 主題。  
   
-    -   如需.dbml 檔案，請參閱[LINQ to SQL 中的程式碼產生](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)。  
+    - 如需.dbml 檔案，請參閱[LINQ to SQL 中的程式碼產生](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)。  
   
-    -   外部對應檔案，請參閱 <<c0> [ 外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
+    - 外部對應檔案，請參閱 <<c0> [ 外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
   
 2. 按一下 **複製程式碼**將程式碼檔案複製到剪貼簿。  
   

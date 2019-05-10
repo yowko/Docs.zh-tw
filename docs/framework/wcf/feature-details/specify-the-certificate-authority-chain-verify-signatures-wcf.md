@@ -5,12 +5,12 @@ helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-ms.openlocfilehash: 43296fad9519a08db5facdd220492ac70dffeca2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 664d0e1a3f59ce391bb055dcded5cfc1b8fff115
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747637"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586171"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>HOW TO：指定用來驗證簽章 (WCF) 的憑證授權單位憑證鏈結
 當 Windows Communication Foundation (WCF) 收到透過 X.509 憑證簽署的 SOAP 訊息時，預設會確認 X.509 憑證已發行的受信任的憑證授權單位。 它會搜尋憑證存放區並判斷該憑證授權單位的憑證是否已指定為受信任來完成所有程序。 為了讓 WCF 來做出此判斷，憑證授權單位憑證鏈結必須安裝在正確的憑證存放區中。  

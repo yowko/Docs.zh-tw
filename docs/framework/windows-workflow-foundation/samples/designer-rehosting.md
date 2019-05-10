@@ -2,25 +2,25 @@
 title: 設計工具重新裝載
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: b2a51014e34bf27d6f016db71d2c2eaabb906c6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c67bdc5715a95e3f4252fc9ab0c7b151ddddc6cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005223"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583697"
 ---
 # <a name="designer-rehosting"></a>設計工具重新裝載
 設計工具重新裝載是在自訂應用程式中裝載工作流程設計畫布的一般案例。 大多數人熟悉的裝載應用程式是 Visual Studio，但在一些情況下，在應用程式中顯示工作流程設計工具可能很有用：  
   
--   監視應用程式 (讓終端使用者視覺化處理序，以及有關處理序的執行階段資料，例如目前作用中狀態、彙總執行時間資料，或有關工作流程執行個體的其他資訊)。  
+- 監視應用程式 (讓終端使用者視覺化處理序，以及有關處理序的執行階段資料，例如目前作用中狀態、彙總執行時間資料，或有關工作流程執行個體的其他資訊)。  
   
--   讓使用者以有限活動集來自訂處理序的應用程式。  
+- 讓使用者以有限活動集來自訂處理序的應用程式。  
   
  為了支援這些類型的應用程式，.NET Framework 隨附工作流程設計工具，該設計工具可裝載於 WPF 應用程式或具有適當 WPF 裝載程式碼的 WinForms 應用程式。 這個範例會示範下列情況：  
   
--   重新裝載 WF 設計工具。  
+- 重新裝載 WF 設計工具。  
   
--   使用重新裝載的工具箱以及屬性方格。  
+- 使用重新裝載的工具箱以及屬性方格。  
   
 ## <a name="rehosting-the-designer"></a>重新裝載設計工具  
  這個範例示範如何建立 WPF 配置以包含設計工具，如下列方格配置所示 (基於空間考量而省略工具箱程式碼)。 請注意包含設計工具和屬性方格之框線的命名。  

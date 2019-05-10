@@ -13,23 +13,23 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0ec2c56403e43f2ce04b394a1a4a59eafaa7311
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61830163"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912979"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>宣告項目特性 (Visual Basic)
 A*特性*的宣告的項目是如何與其互動的程式碼會影響該元素的層面。 每個宣告的項目有一或多個與它相關的下列特性：  
   
--   *資料型別*-項目可以保留的值，以及它如何儲存這些值。 如需詳細資訊，請參閱[資料類型](../../../../visual-basic/language-reference/data-types/index.md)。  
+- *資料型別*-項目可以保留的值，以及它如何儲存這些值。 如需詳細資訊，請參閱[資料類型](../../../../visual-basic/language-reference/data-types/index.md)。  
   
--   *存留期*— 這段期間執行期間的項目是可供使用。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Basic 中的存留期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)。  
+- *存留期*— 這段期間執行期間的項目是可供使用。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Basic 中的存留期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)。  
   
--   *範圍*— 可以參考的項目未限定其名稱的所有程式碼的集合。 如需詳細資訊，請參閱[如何：控制變數的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)。  
+- *範圍*— 可以參考的項目未限定其名稱的所有程式碼的集合。 如需詳細資訊，請參閱[如何：控制變數的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)。  
   
--   *存取層級*— 進行程式碼的權限使用的項目。 如需詳細資訊，請參閱[如何：控制變數的可用性](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)。  
+- *存取層級*— 進行程式碼的權限使用的項目。 如需詳細資訊，請參閱[如何：控制變數的可用性](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)。  
   
 ## <a name="characteristics-of-the-elements"></a>項目特性  
  下表顯示宣告的項目並套用至每一個的特性。  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: 0a9c01269e12c2d84be4f30c236c439012a88153
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e51d2d5c34a501368ed77d6ceef73b57c6bd79be
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013903"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469503"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>常數和列舉類型 (Visual Basic)
 Visual Basic 提供許多預先定義的常數和列舉型別適用於開發人員。 常數用來儲存保持不變的應用程式執行過程中的值。 列舉提供使用相關常數組和建立常數值與名稱之關聯的便利方法。  
@@ -27,7 +27,7 @@ Visual Basic 提供許多預先定義的常數和列舉型別適用於開發人�
 |`DEBUG`|A`Boolean`中可設定的值**專案屬性** 對話方塊。 根據預設，專案的偵錯組態會定義`DEBUG`。 當`DEBUG`定義，則<xref:System.Diagnostics.Debug>類別方法會產生輸出**輸出**視窗。 當未定義時，<xref:System.Diagnostics.Debug>類別方法便不會編譯，並會產生任何偵錯輸出。|  
 |`TARGET`|字串，表示的命令列設定或專案的輸出類型 **/目標**選項。 可能值`TARGET`是：<br /><br /> -「 winexe 「 Windows 應用程式。<br />-"exe"主控台應用程式。<br />-「 程式庫 」 之類別程式庫。<br />-對於模組的 「 模組 」。<br />- **/目標**選項可在 Visual Studio 整合式的開發環境中設定。 如需詳細資訊，請參閱 < [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)。|  
 |`TRACE`|A`Boolean`中可設定的值**專案屬性** 對話方塊。 根據預設，專案的所有組態都定義`TRACE`。 當`TRACE`定義，則<xref:System.Diagnostics.Trace>類別方法會產生輸出**輸出**視窗。 未定義，當<xref:System.Diagnostics.Trace>類別方法便不會編譯，但沒有`Trace`會產生輸出。|  
-|`VBC_VER`|代表 Visual Basic 版本，在中的數字*主要*。*次要*格式。 版本號碼[!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]為 8.0。|  
+|`VBC_VER`|代表 Visual Basic 版本，在中的數字*主要*。*次要*格式。|  
   
 ### <a name="print-and-display-constants"></a>列印和顯示常數  
  當您呼叫列印和顯示功能時，您可以使用下列常數在您的程式碼來取代實際的值。  
@@ -40,7 +40,7 @@ Visual Basic 提供許多預先定義的常數和列舉型別適用於開發人�
 |`vbNewLine`|新行字元。|  
 |`vbNullChar`|Null 字元。|  
 |`vbNullString`|不同的零長度字串 ("");用來呼叫外部程序。|  
-|`vbObjectError`|錯誤號碼。 使用者定義的錯誤號碼應該大於此值。 例如: <br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
+|`vbObjectError`|錯誤號碼。 使用者定義的錯誤號碼應該大於此值。 例如：<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
 |`vbTab`|字元的索引標籤。|  
 |`vbBack`|退格鍵字元。|  
 |`vbFormFeed`|Microsoft Windows 中未使用。|  

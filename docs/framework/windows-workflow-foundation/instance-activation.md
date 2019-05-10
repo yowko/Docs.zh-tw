@@ -2,12 +2,12 @@
 title: 執行個體啟動
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 088722ba19a1f38e8a341e34a8344963021f1113
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641657"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584928"
 ---
 # <a name="instance-activation"></a>執行個體啟動
 SQL 工作流程執行個體存放區會執行內部工作，定期喚醒及偵測持續性資料庫中可執行或可啟動的工作流程執行個體。 如果找到可執行的工作流程執行個體，就會通知工作流程主機，表示主機可以啟動該執行個體。 如果執行個體存放區找到可啟動的工作流程執行個體，則會通知啟動工作流程主機的泛型主機，再由該主機執行工作流程執行個體。 本主題中的下列章節詳細說明執行個體啟動處理序。  

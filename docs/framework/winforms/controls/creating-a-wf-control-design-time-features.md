@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 70cd08a9d7d03cec4e946d2acb806dbecfe774f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f290629e50d7d791119298059277ba73d8e73eb
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011553"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211208"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項
 
@@ -68,17 +68,13 @@ ms.locfileid: "62011553"
 
 ## <a name="prerequisites"></a>必要條件
 
-若要完成這個逐步解說，您將需要：
-
-- 若要能夠建立和安裝 Visual Studio 的電腦上執行 Windows Form 應用程式專案有足夠的權限。
+若要完成此逐步解說中，您必須使用 Visual Studio。
 
 ## <a name="creating-the-project"></a>建立專案
 
 第一個步驟是建立應用程式專案。 您將使用此專案來建置應用程式裝載自訂的控制項。
 
-### <a name="to-create-the-project"></a>若要建立專案
-
-- 建立 Windows Forms 應用程式專案，稱為 「 MarqueeControlTest"(**檔案** > **新增** > **專案** >  **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**)。
+開啟 Visual Studio 並建立名為"MarqueeControlTest 」 的 Windows Forms 應用程式專案 (**檔案** > **新增** > **專案** > **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**).
 
 ## <a name="creating-a-control-library-project"></a>建立控制項程式庫專案
 
@@ -469,7 +465,7 @@ using MarqueeControlLibrary;
 
 ## <a name="adding-designer-verbs-to-your-custom-designer"></a>將設計工具動詞命令加入至您的自訂設計工具
 
-設計工具動詞命令是連結至事件處理常式的功能表命令。 在設計階段，設計工具動詞命令會新增至元件之捷徑功能表。 如需詳細資訊，請參閱<xref:System.ComponentModel.Design.DesignerVerb>。
+設計工具動詞命令是連結至事件處理常式的功能表命令。 在設計階段，設計工具動詞命令會新增至元件之捷徑功能表。 如需詳細資訊，請參閱 <xref:System.ComponentModel.Design.DesignerVerb>。
 
 您會在設計工具中加入兩個設計工具動詞命令：**執行測試**並**停止測試**。 這些動詞命令可讓您檢視的執行階段行為`MarqueeControl`在設計階段。 這些動詞命令會加入至`MarqueeControlRootDesigner`。
 

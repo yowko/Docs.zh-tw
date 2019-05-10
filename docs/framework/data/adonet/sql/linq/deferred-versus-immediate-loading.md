@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-ms.openlocfilehash: ae20dbe557c3cf56a273556c24578056843e9af6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7196d172b7bec051b5407f1c8e27ec642d230fc2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032457"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64581389"
 ---
 # <a name="deferred-versus-immediate-loading"></a>延後和立即載入的比較
 當您查詢物件時，實際上只擷取了所要求的物件。 *相關*物件不會自動擷取一次。 (如需詳細資訊，請參閱 <<c0> [ 跨關聯性查詢](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md)。)因為嘗試存取相關物件會產生對相關物件進行擷取的要求，所以您看不到相關物件尚未載入的事實。  

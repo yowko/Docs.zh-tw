@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d93c55cec3d35fd4208a4a8a7c9b235dd10fb9ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 82d81be7a9e0843dfe382767de582f93371acb4c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59156165"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584493"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName 方法
 取得定義在指定的範圍內，也就是目前範圍以外的類型中繼資料語彙基元。  
@@ -41,15 +41,15 @@ HRESULT DefineTypeRefByName (
  `tkResolutionScope`  
  [in]指定的解析範圍語彙基元。 下列的語彙基元型別是有效的：  
   
--   `mdModuleRef`如果呼叫端定義所在的相同組件中定義型別。  
+- `mdModuleRef`如果呼叫端定義所在的相同組件中定義型別。  
   
--   `mdAssemblyRef`如果不同於呼叫端定義的組件中定義的類型。  
+- `mdAssemblyRef`如果不同於呼叫端定義的組件中定義的類型。  
   
--   `mdTypeRef`如果類型是巢狀型別。  
+- `mdTypeRef`如果類型是巢狀型別。  
   
--   `mdModule`如果類型定義在呼叫端定義所在的相同模組中。  
+- `mdModule`如果類型定義在呼叫端定義所在的相同模組中。  
   
--   如果為 null，全域定義類型。  
+- 如果為 null，全域定義類型。  
   
  `szName`  
  [in]以 Unicode 的目標類型的名稱。  

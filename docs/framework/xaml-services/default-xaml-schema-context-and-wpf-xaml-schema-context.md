@@ -2,12 +2,12 @@
 title: 預設 XAML 結構描述內容和 WPF XAML 結構描述內容
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: 0d6a0aa80d8490c509fa9036f88d4f6863ff040c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f29d9eb481903b06ee1f35424baeb055a396b7c1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689394"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663256"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>預設 XAML 結構描述內容和 WPF XAML 結構描述內容
 XAML 結構描述內容是限定使用特定的 XAML 詞彙的 XAML 生產環境與撰寫行為，包括類型對應的解析，已載入組件的方式、 如何特定讀取器和寫入器物件之間的互動方式在概念實體設定會被解譯。 本主題描述.NET Framework XAML 服務和相關聯的預設 XAML 結構描述內容，以 CLR 型別系統為基礎的功能。 本主題也描述用於 WPF 的 XAML 結構描述內容。  

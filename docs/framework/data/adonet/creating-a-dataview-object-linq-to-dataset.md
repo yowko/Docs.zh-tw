@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: 95bc9beed9965bad32118dfafa4a5aa76902ca10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7baf358d9cdabe8cadf6b297a1d0d63d64282525
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607822"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583535"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>建立 DataView 物件 (LINQ to DataSet)
 目前有兩種方式可以在 <xref:System.Data.DataView> 內容中建立 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]。 您可以從 <xref:System.Data.DataView> 的 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查詢中建立 <xref:System.Data.DataTable>，也可以從具型別或不具型別的 <xref:System.Data.DataTable> 中建立此物件。 在這兩種情況下，您會建立<xref:System.Data.DataView>使用其中一種<xref:System.Data.DataTableExtensions.AsDataView%2A>擴充方法<xref:System.Data.DataView>不是直接建構在[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]內容。  

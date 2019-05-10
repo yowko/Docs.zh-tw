@@ -2,12 +2,12 @@
 title: 驗證簽發者名稱登錄
 ms.date: 03/30/2017
 ms.assetid: c4644dd1-dead-48ff-abeb-7bffae69a6ac
-ms.openlocfilehash: aa6a71ced0f9bf969eb6c8800739f629810dd63f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fc10181a142fd8ca4ebd8250869d49a046623564
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645899"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910774"
 ---
 # <a name="validating-issuer-name-registry"></a>驗證簽發者名稱登錄
 適用於 Windows Identity Foundation 的驗證簽發者名稱登錄 (Validating Issuer Name Registry，VINR) 可讓多租用戶應用程式確保傳入的權杖是由信任的租用戶和識別提供者發行。 這項功能對使用 Microsoft Azure Active Directory 的多租用戶應用程式特別有用，因為 Microsoft Azure AD 發行的所有權杖都是使用相同的憑證來簽署。 為了區別來自使用相同憑證 (因此具有相同指紋) 之多個租用戶的要求，應用程式必須保存每個租用戶的簽發者名稱，才能執行驗證邏輯。 VINR 不僅提供這項功能，還能讓您加入自訂驗證邏輯，或是將簽發者登錄資料儲存在組態檔以外的位置。 這項擴充功能可以加入至應用程式的 WIF 管線，也可以單獨使用。  
