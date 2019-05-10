@@ -13,21 +13,21 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: 8ed3ba9050a9117a53b5f4f1cccd26381f55ab32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8275961a8f11332a04f89561fac779f4cdf9f8d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013227"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64609408"
 ---
-# <a name="how-to-set-pictures-at-run-time-windows-forms"></a><span data-ttu-id="e25dd-102">HOW TO：在執行階段 (Windows Form) 設定的圖片</span><span class="sxs-lookup"><span data-stu-id="e25dd-102">How to: Set Pictures at Run Time (Windows Forms)</span></span>
-<span data-ttu-id="e25dd-103">您可以透過程式設計方式設定顯示 Windows Form 的影像<xref:System.Windows.Forms.PictureBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="e25dd-103">You can programmatically set the image displayed by a Windows Forms <xref:System.Windows.Forms.PictureBox> control.</span></span>  
+# <a name="how-to-set-pictures-at-run-time-windows-forms"></a><span data-ttu-id="d5ebf-102">HOW TO：在執行階段 (Windows Form) 設定的圖片</span><span class="sxs-lookup"><span data-stu-id="d5ebf-102">How to: Set Pictures at Run Time (Windows Forms)</span></span>
+<span data-ttu-id="d5ebf-103">您可以透過程式設計方式設定顯示 Windows Form 的影像<xref:System.Windows.Forms.PictureBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="d5ebf-103">You can programmatically set the image displayed by a Windows Forms <xref:System.Windows.Forms.PictureBox> control.</span></span>  
   
-### <a name="to-set-a-picture-programmatically"></a><span data-ttu-id="e25dd-104">以程式設計方式設定圖片</span><span class="sxs-lookup"><span data-stu-id="e25dd-104">To set a picture programmatically</span></span>  
+### <a name="to-set-a-picture-programmatically"></a><span data-ttu-id="d5ebf-104">以程式設計方式設定圖片</span><span class="sxs-lookup"><span data-stu-id="d5ebf-104">To set a picture programmatically</span></span>  
   
-- <span data-ttu-id="e25dd-105">設定<xref:System.Windows.Forms.PictureBox.Image%2A>屬性使用<xref:System.Drawing.Image.FromFile%2A>方法<xref:System.Drawing.Image>類別。</span><span class="sxs-lookup"><span data-stu-id="e25dd-105">Set the <xref:System.Windows.Forms.PictureBox.Image%2A> property using the <xref:System.Drawing.Image.FromFile%2A> method of the <xref:System.Drawing.Image> class.</span></span>  
+- <span data-ttu-id="d5ebf-105">設定<xref:System.Windows.Forms.PictureBox.Image%2A>屬性使用<xref:System.Drawing.Image.FromFile%2A>方法<xref:System.Drawing.Image>類別。</span><span class="sxs-lookup"><span data-stu-id="d5ebf-105">Set the <xref:System.Windows.Forms.PictureBox.Image%2A> property using the <xref:System.Drawing.Image.FromFile%2A> method of the <xref:System.Drawing.Image> class.</span></span>  
   
-     <span data-ttu-id="e25dd-106">在下列範例中，映像的位置所設定的路徑會是 [我的文件] 資料夾。</span><span class="sxs-lookup"><span data-stu-id="e25dd-106">In the example below, the path set for the location of the image is the My Documents folder.</span></span> <span data-ttu-id="e25dd-107">這麼做，因為您可以假設大部分執行 Windows 作業系統的電腦都會包含這個目錄。</span><span class="sxs-lookup"><span data-stu-id="e25dd-107">This is done, because you can assume that most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="e25dd-108">也可讓具備最小系統存取層級的使用者安全地執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="e25dd-108">This also allows users with minimal system access levels to safely run the application.</span></span> <span data-ttu-id="e25dd-109">下列範例假設表單<xref:System.Windows.Forms.PictureBox>已經加入的控制項。</span><span class="sxs-lookup"><span data-stu-id="e25dd-109">The example below assumes a form with a <xref:System.Windows.Forms.PictureBox> control already added.</span></span>  
+     <span data-ttu-id="d5ebf-106">在下列範例中，映像的位置所設定的路徑會是 [我的文件] 資料夾。</span><span class="sxs-lookup"><span data-stu-id="d5ebf-106">In the example below, the path set for the location of the image is the My Documents folder.</span></span> <span data-ttu-id="d5ebf-107">這麼做，因為您可以假設大部分執行 Windows 作業系統的電腦都會包含這個目錄。</span><span class="sxs-lookup"><span data-stu-id="d5ebf-107">This is done, because you can assume that most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="d5ebf-108">也可讓具備最小系統存取層級的使用者安全地執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="d5ebf-108">This also allows users with minimal system access levels to safely run the application.</span></span> <span data-ttu-id="d5ebf-109">下列範例假設表單<xref:System.Windows.Forms.PictureBox>已經加入的控制項。</span><span class="sxs-lookup"><span data-stu-id="d5ebf-109">The example below assumes a form with a <xref:System.Windows.Forms.PictureBox> control already added.</span></span>  
   
     ```vb  
     Private Sub LoadNewPict()  
@@ -65,9 +65,9 @@ ms.locfileid: "62013227"
        }  
     ```  
   
-### <a name="to-clear-a-graphic"></a><span data-ttu-id="e25dd-110">若要清除圖形</span><span class="sxs-lookup"><span data-stu-id="e25dd-110">To clear a graphic</span></span>  
+### <a name="to-clear-a-graphic"></a><span data-ttu-id="d5ebf-110">若要清除圖形</span><span class="sxs-lookup"><span data-stu-id="d5ebf-110">To clear a graphic</span></span>  
   
-- <span data-ttu-id="e25dd-111">首先，釋放記憶體正在使用映像，然後再清除 圖形。</span><span class="sxs-lookup"><span data-stu-id="e25dd-111">First, release the memory being used by the image, and then clear the graphic.</span></span> <span data-ttu-id="e25dd-112">記憶體回收會釋出記憶體稍後如果記憶體管理變得有問題。</span><span class="sxs-lookup"><span data-stu-id="e25dd-112">Garbage collection will free up the memory later if memory management becomes a problem.</span></span>  
+- <span data-ttu-id="d5ebf-111">首先，釋放記憶體正在使用映像，然後再清除 圖形。</span><span class="sxs-lookup"><span data-stu-id="d5ebf-111">First, release the memory being used by the image, and then clear the graphic.</span></span> <span data-ttu-id="d5ebf-112">記憶體回收會釋出記憶體稍後如果記憶體管理變得有問題。</span><span class="sxs-lookup"><span data-stu-id="d5ebf-112">Garbage collection will free up the memory later if memory management becomes a problem.</span></span>  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  
@@ -93,15 +93,15 @@ ms.locfileid: "62013227"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="e25dd-113">如需有關為什麼您應該使用<xref:System.Drawing.Image.Dispose%2A>方法，如此一來，請參閱[清除 Unmanaged 資源總](../../../standard/garbage-collection/unmanaged.md)。</span><span class="sxs-lookup"><span data-stu-id="e25dd-113">For more information on why you should use the <xref:System.Drawing.Image.Dispose%2A> method in this way, see [Cleaning Up Unmanaged Resources](../../../standard/garbage-collection/unmanaged.md).</span></span>  
+    >  <span data-ttu-id="d5ebf-113">如需有關為什麼您應該使用<xref:System.Drawing.Image.Dispose%2A>方法，如此一來，請參閱[清除 Unmanaged 資源總](../../../standard/garbage-collection/unmanaged.md)。</span><span class="sxs-lookup"><span data-stu-id="d5ebf-113">For more information on why you should use the <xref:System.Drawing.Image.Dispose%2A> method in this way, see [Cleaning Up Unmanaged Resources](../../../standard/garbage-collection/unmanaged.md).</span></span>  
   
-     <span data-ttu-id="e25dd-114">此程式碼將會清除映像，即使圖形在設計階段時載入控制項。</span><span class="sxs-lookup"><span data-stu-id="e25dd-114">This code will clear the image even if a graphic was loaded into the control at design time.</span></span>  
+     <span data-ttu-id="d5ebf-114">此程式碼將會清除映像，即使圖形在設計階段時載入控制項。</span><span class="sxs-lookup"><span data-stu-id="d5ebf-114">This code will clear the image even if a graphic was loaded into the control at design time.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e25dd-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e25dd-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d5ebf-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d5ebf-115">See also</span></span>
 
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="e25dd-116">PictureBox 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="e25dd-116">PictureBox Control Overview</span></span>](picturebox-control-overview-windows-forms.md)
-- [<span data-ttu-id="e25dd-117">如何：使用設計工具載入圖片</span><span class="sxs-lookup"><span data-stu-id="e25dd-117">How to: Load a Picture Using the Designer</span></span>](how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [<span data-ttu-id="e25dd-118">如何：在執行階段修改的大小或位置的圖片</span><span class="sxs-lookup"><span data-stu-id="e25dd-118">How to: Modify the Size or Placement of a Picture at Run Time</span></span>](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
-- [<span data-ttu-id="e25dd-119">PictureBox 控制項</span><span class="sxs-lookup"><span data-stu-id="e25dd-119">PictureBox Control</span></span>](picturebox-control-windows-forms.md)
+- [<span data-ttu-id="d5ebf-116">PictureBox 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="d5ebf-116">PictureBox Control Overview</span></span>](picturebox-control-overview-windows-forms.md)
+- [<span data-ttu-id="d5ebf-117">如何：使用設計工具載入圖片</span><span class="sxs-lookup"><span data-stu-id="d5ebf-117">How to: Load a Picture Using the Designer</span></span>](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [<span data-ttu-id="d5ebf-118">如何：在執行階段修改的大小或位置的圖片</span><span class="sxs-lookup"><span data-stu-id="d5ebf-118">How to: Modify the Size or Placement of a Picture at Run Time</span></span>](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [<span data-ttu-id="d5ebf-119">PictureBox 控制項</span><span class="sxs-lookup"><span data-stu-id="d5ebf-119">PictureBox Control</span></span>](picturebox-control-windows-forms.md)
