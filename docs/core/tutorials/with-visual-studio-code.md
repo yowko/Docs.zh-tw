@@ -4,12 +4,12 @@ description: 了解如何在 C# 中使用 Visual Studio Code 建立並偵錯您�
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: d23f095454a24d67c2b9fb7a0f090fb08ff9e8bb
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 7ea2aed3b340b7ae7a6dcd83df30f9453380af15
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613443"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750878"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 與 Visual Studio Code 使用者入門
 
@@ -94,45 +94,45 @@ ms.locfileid: "59613443"
 2. 將檔案命名為 `MyClass.cs`。 您必須在結尾加上 `.cs` 副檔名來儲存它，系統才能將它辨識為 csharp 檔案。
 3. 新增下方程式碼來建立您的第一個類別。 請務必包含正確的命名空間，如此您才能夠從 `Program.cs` 檔案參考它。
 
-``` csharp
-using System;
+    ``` csharp
+    using System;
 
-namespace HelloWorld
-{
-    public class MyClass
+    namespace HelloWorld
     {
-        public string ReturnMessage()
+        public class MyClass
         {
-            return "Happy coding!";
+            public string ReturnMessage()
+            {
+                return "Happy coding!";
+            }
         }
     }
-}
-```
+    ```
 
 4. 新增下方程式碼以從 `Program.cs` 中的主要方法呼叫您的新類別。
 
-```csharp
-using System;
-
-namespace HelloWorld
-{
-    class Program
+    ```csharp
+    using System;
+    
+    namespace HelloWorld
     {
-        static void Main(string[] args)
+        class Program
         {
-            MyClass c1 = new MyClass();
-            Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
+            static void Main(string[] args)
+            {
+                MyClass c1 = new MyClass();
+                Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
+            }
         }
     }
-}
-```
+    ```
 
 5. 儲存變更，然後重新執行您的程式。 應該會顯示含有所附加字串的新訊息。
 
-```console
-> dotnet run
-Hello World! Happy coding!
-```
+    ```console
+    > dotnet run
+    Hello World! Happy coding!
+    ```
 
 ## <a name="faq"></a>常見問題集
 

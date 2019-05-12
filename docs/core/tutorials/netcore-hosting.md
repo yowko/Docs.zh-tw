@@ -4,12 +4,12 @@ description: 了解如何從原生程式碼裝載 .NET Core 執行階段，以�
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 53cdc13d5a356a2975182c58374a0e9c6639ec17
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 0ebd5b1532af77c082a2d8cd6508a83e969b325e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481141"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587048"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>撰寫自訂 .NET Core 主機以從原生程式碼控制 .NET 執行階段
 
@@ -52,11 +52,11 @@ dotnet/samples GitHub 存放庫中提供下列示範教學課程所述步驟的[
 
 CoreClrHost 有幾個可用於裝載 .NET Core 的重要方法：
 
-* `coreclr_initialize`:啟動 .NET Core 執行階段，並設定預設的 (且唯一的) AppDomain。
-* `coreclr_execute_assembly`:執行受控組件。
-* `coreclr_create_delegate`:建立受控方法的函式指標。
-* `coreclr_shutdown`:關閉 .NET Core 執行階段。
-* `coreclr_shutdown_2`:如同 `coreclr_shutdown`，但還會擷取受控碼的結束代碼。
+* `coreclr_initialize`：啟動 .NET Core 執行階段，並設定預設的 (且唯一的) AppDomain。
+* `coreclr_execute_assembly`：執行受控組件。
+* `coreclr_create_delegate`：建立受控方法的函式指標。
+* `coreclr_shutdown`：關閉 .NET Core 執行階段。
+* `coreclr_shutdown_2`：如同 `coreclr_shutdown`，但還會擷取受控碼的結束代碼。
 
 載入 CoreCLR 程式庫之後，下一個步驟是使用 `GetProcAddress` (在 Windows 上) 或 `dlsym` (在 Linux/Mac 上) 取得這些函式的參考。
 
@@ -68,13 +68,11 @@ CoreClrHost 有幾個可用於裝載 .NET Core 的重要方法：
 
 常用屬性包括：
 
-* `TRUSTED_PLATFORM_ASSEMBLIES`
-  這是執行階段預設能夠解析的組件路徑清單 (在 Windows 上會以 ';' 分隔，而在 Linux 上則以 ':' 分隔)。 某些主機具有硬式編碼資訊清單，其中列出它們可以載入的組件。 其他主機則會在此清單的特定位置 (例如，*coreclr.dll* 旁邊) 放入任何程式庫。
-* `APP_PATHS`
-  這是在信賴平台組件 (TPA) 清單中找不到組件時，要在其中探查組件的路徑清單。 因為主機可以進一步控制使用 TPA 清單載入哪些組件，所以主機最好確定它們預期載入哪些組件，並明確列出這些組件。 不過，如果需要在執行階段進行探查，此屬性可用於這種情況。
-*  `APP_NI_PATHS`：此清單與 APP_PATHS 類似，不同之處在於其用途是作為探查原生映像的路徑。
-*  `NATIVE_DLL_SEARCH_DIRECTORIES`：此屬性是想要透過 p/invoke 呼叫原生程式庫時，載入器應探查的路徑清單。
-*  `PLATFORM_RESOURCE_ROOTS`：此清單包含要在其中探查資源附屬組件的路徑 (位於文化特性專屬子目錄中)。
+* `TRUSTED_PLATFORM_ASSEMBLIES`：這是執行階段預設能夠解析的組件路徑 (在 Windows 上會以 ';' 分隔，而在 Linux 上則以 ':' 分隔) 清單。 某些主機具有硬式編碼資訊清單，其中列出它們可以載入的組件。 其他主機則會在此清單的特定位置 (例如，*coreclr.dll* 旁邊) 放入任何程式庫。
+* `APP_PATHS`：這是在信賴平台組件 (TPA) 清單中找不到組件時，要在其中探查組件的路徑清單。 因為主機可以進一步控制使用 TPA 清單載入哪些組件，所以主機最好確定它們預期載入哪些組件，並明確列出這些組件。 不過，如果需要在執行階段進行探查，此屬性可用於這種情況。
+* `APP_NI_PATHS`：此清單與 APP_PATHS 類似，不同之處在於其用途是作為探查原生映像的路徑。
+* `NATIVE_DLL_SEARCH_DIRECTORIES`：此屬性是想要透過 p/invoke 呼叫原生程式庫時，載入器應探查的路徑清單。
+* `PLATFORM_RESOURCE_ROOTS`：此清單包含要在其中探查資源附屬組件的路徑 (位於文化特性專屬子目錄中)。
 
 在此範例主機中，只需列出目前目錄中的所有程式庫，即可建構 TPA 清單：
 
@@ -166,13 +164,11 @@ AppDomain 旗標會指定與安全性和 Interop 相關的 AppDomain 行為。 �
 
 常見的 AppDomain 屬性包括：
 
-* `TRUSTED_PLATFORM_ASSEMBLIES`
-  這是 AppDomain 應設定載入優先權並授與完全信任 (即使是部分信任的定義域) 的組件路徑清單 (在 Windows 上會以 `;` 分隔，而在 Linux/Mac 上則以 `:` 分隔)。 此清單可用來包含 'Framework' 組件及其他信任的模組，類似於 .NET Framework 案例中的 GAC。 某些主機會將任何程式庫放在此清單中的 *coreclr.dll* 旁，其他主機則會有針對其用途列出信任組件的硬式編碼資訊清單。
-* `APP_PATHS`
-  這是在信賴平台組件 (TPA) 清單中找不到組件時，要在其中探查組件的路徑清單。 因為主機可以進一步控制使用 TPA 清單載入哪些組件，所以主機最好確定它們預期載入哪些組件，並明確列出這些組件。 不過，如果需要在執行階段進行探查，此屬性可用於這種情況。
-*  `APP_NI_PATHS`：此清單與 APP_PATHS 非常類似，不同之處在於其用途是作為探查原生影像的路徑。
-*  `NATIVE_DLL_SEARCH_DIRECTORIES`：此屬性是想要透過 p/invoke 呼叫原生 DLL 時，載入器應探查的路徑清單。
-*  `PLATFORM_RESOURCE_ROOTS`：此清單包含要在其中探查資源附屬組件的路徑 (位於文化特性專屬子目錄中)。
+* `TRUSTED_PLATFORM_ASSEMBLIES`：這是 AppDomain 應設定載入優先權並授與完全信任 (即使是部分信任的定義域) 的組件路徑清單 (在 Windows 上會以 `;` 分隔，而在 Linux/Mac 上則以 `:` 分隔)。 此清單可用來包含 'Framework' 組件及其他信任的模組，類似於 .NET Framework 案例中的 GAC。 某些主機會將任何程式庫放在此清單中的 *coreclr.dll* 旁，其他主機則會有針對其用途列出信任組件的硬式編碼資訊清單。
+* `APP_PATHS`：這是在信賴平台組件 (TPA) 清單中找不到組件時，要在其中探查組件的路徑清單。 因為主機可以進一步控制使用 TPA 清單載入哪些組件，所以主機最好確定它們預期載入哪些組件，並明確列出這些組件。 不過，如果需要在執行階段進行探查，此屬性可用於這種情況。
+* `APP_NI_PATHS`：此清單與 APP_PATHS 非常類似，不同之處在於其用途是作為探查原生影像的路徑。
+* `NATIVE_DLL_SEARCH_DIRECTORIES`：此屬性是想要透過 p/invoke 呼叫原生 DLL 時，載入器應探查的路徑清單。
+* `PLATFORM_RESOURCE_ROOTS`：此清單包含要在其中探查資源附屬組件的路徑 (位於文化特性專屬子目錄中)。
 
 在我們的[簡單範例主機](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithMscoree)中，這些屬性會設定如下：
 

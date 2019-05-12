@@ -3,16 +3,16 @@ title: 使用 Visual Studio 2017 針對您的 Hello World .NET Core 應用程式
 description: 了解如何使用 Visual Studio 2017 對以 C# 或 Visual Basic 撰寫的 Hello World 應用程式進行偵錯。
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 9b2375443c9947a32fcccea062642103601d5010
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 4c6a9fe46e29addf53319adf2351af3a7af05119
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610713"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063068"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>使用 Visual Studio 2017 針對您的 C# 或 Visual Basic .NET Core Hello World 應用程式進行偵錯
 
-截至目前為止，您已遵循[在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式](with-visual-studio.md)或[在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic Hello World 應用程式](vb-with-visual-studio.md)中的步驟，建立並執行簡單的主控台應用程式。 在您撰寫並編譯應用程式之後，便可以開始測試它。 Visual Studio 包含一組完整的偵錯工具，可供您在針對應用程式進行測試和疑難排解時使用。
+截至目前為止，您已遵循[在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式](with-visual-studio.md)或[在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic Hello World 應用程式](vb-with-visual-studio.md)中的步驟，建立並執行簡單的主控台應用程式。 在您撰寫並編譯應用程式之後，便可以開始測試它。 Visual Studio 包含一組完整的偵錯工具，可供您在針對應用程式進行測試和疑難排解時使用。 
 
 ## <a name="debugging-in-debug-mode"></a>在偵錯模式下進行偵錯
 
