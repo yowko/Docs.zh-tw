@@ -2,12 +2,12 @@
 title: 對等名稱和 PNRP 識別碼
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: e7e92519bede478a5e26a88a56236f987c93c441
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8cdd5151d029436d11c78806cf7673861cc0d8a4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772904"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623126"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>對等名稱和 PNRP 識別碼
 對等名稱代表通訊端點，可以是一部電腦、一位使用者、一個群組、一項服務，或是與可解析成 IPv6 位址之對等建立關聯的任何項目。 對等名稱解析通訊協定 (PNRP) 採用靜態上唯一的對等名稱來建立 PNRP 識別碼，以用來識別雲端成員。  
@@ -24,9 +24,9 @@ ms.locfileid: "59772904"
   
  PNRP 識別碼由下列各項所組成：  
   
--   高序位 128 位元 (稱為對等 (P2P) 識別碼) 是指派給端點的對等名稱雜湊。 對等名稱的格式如下：*Authority.Classifier*。 安全名稱的 *Authority* 是以十六進位字元表示，是對等名稱公開金鑰的安全雜湊演算法 1 (SHA1) 雜湊。 不安全名稱的 *Authority* 則為單一字元 "0"。 *Classifier* 是識別應用程式的字串。 對等名稱分類器的長度不能超過 149 個字元 (包含 `null` 結束字元)。  
+- 高序位 128 位元 (稱為對等 (P2P) 識別碼) 是指派給端點的對等名稱雜湊。 對等名稱的格式如下：*Authority.Classifier*。 安全名稱的 *Authority* 是以十六進位字元表示，是對等名稱公開金鑰的安全雜湊演算法 1 (SHA1) 雜湊。 不安全名稱的 *Authority* 則為單一字元 "0"。 *Classifier* 是識別應用程式的字串。 對等名稱分類器的長度不能超過 149 個字元 (包含 `null` 結束字元)。  
   
--   低序位 128 位元用於表示服務位置所產生的數字，用來識別相同雲端中同一個 P2P 識別碼的不同執行個體。  
+- 低序位 128 位元用於表示服務位置所產生的數字，用來識別相同雲端中同一個 P2P 識別碼的不同執行個體。  
   
  這個 P2P 識別碼與服務位置的組合可讓單一電腦登錄多個 PNRP 識別碼。  
   

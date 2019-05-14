@@ -2,12 +2,12 @@
 title: PNRP 快取
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
-ms.openlocfilehash: 9cd1901e716cab9f1b47825a5d3ecdb071a58440
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3ed3e11e702c8933b500421de5654b212cdd80d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182477"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622997"
 ---
 # <a name="pnrp-caches"></a>PNRP 快取
 對等名稱解析通訊協定 (PNRP) 快取是以演算法方式選取對等上所維護之對等端點的本機集合。  
@@ -15,9 +15,9 @@ ms.locfileid: "59182477"
 ## <a name="pnrp-cache-initialization"></a>PNRP 快取初始化  
  若要在對等節點啟動時初始化 PNRP 快取或對等名稱記錄集合，節點可以使用下列方法：  
   
--   節點關閉時存在的持續快取項目是從硬碟儲存體載入。  
+- 節點關閉時存在的持續快取項目是從硬碟儲存體載入。  
   
--   如果應用程式使用 P2P 共同作業基礎結構，則可以在該節點的連絡人管理員中取得共同作業資訊。  
+- 如果應用程式使用 P2P 共同作業基礎結構，則可以在該節點的連絡人管理員中取得共同作業資訊。  
   
 ## <a name="scaling-peer-name-resolution-with-a-multi-level-cache"></a>使用多層快取調整對等名稱解析  
  為了盡量縮小 PNRP 快取的大小，對等節點會使用多層快取，而每一層都包含最大項目數。 快取中的每一層都代表 PNRP 識別碼空間的十分之一 (2<sup>256</sup>)。 快取中的最下面一層包含在本機上註冊的 PNRP 識別碼，以及其他數字接近的 PNRP 識別碼。 一層快取填滿最多 20 個項目之後，就會建立新的較低一層。 快取中的最大層數是按照 log10 的順序而定 (雲端中 PNRP 識別碼的總數)。 例如，對於含有 1 億個 PNRP 識別碼的全域雲端來說，快取中不會超過 8 (=log10(100,000,000)) 層，這與解析名稱時用來解析 PNRP 識別碼的躍點數目相似。 此機制允許使用可針對其解析任意 PNRP 識別碼的分散式雜湊表，方法是將 PNRP 要求訊息轉送至下一個最接近的對等，直到找到包含對應 CPA 的對等為止。  

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Visual Basic 中從文字檔讀取
+title: 作法：在 Visual Basic 中從文字檔讀取
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extended characters [Visual Basic], reading
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - examples [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 735fe9d7-0f7a-4185-ba02-f35e580ec4b8
-ms.openlocfilehash: 813928fbcf67f269d99d418ab16e202bd19f25fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1d3fbe3ab8ff59d73dc5ec4f33e4dde2437bcbec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836879"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623335"
 ---
-# <a name="how-to-read-from-text-files-in-visual-basic"></a>HOW TO：在 Visual Basic 中從文字檔讀取
+# <a name="how-to-read-from-text-files-in-visual-basic"></a>作法：在 Visual Basic 中從文字檔讀取
 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> 物件的 `My.Computer.FileSystem` 方法允許您從文字檔讀取。 如果檔案的內容是使用 ASCII 或 UTF-8 之類的編碼方式，則可以指定檔案編碼方式。  
   
  如果您是從含擴充字元的檔案讀取，您將需要指定檔案的編碼方式。  
@@ -25,34 +25,34 @@ ms.locfileid: "58836879"
   
 ### <a name="to-read-from-a-text-file"></a>若要從文字檔讀取  
   
--   使用 `ReadAllText` 物件的 `My.Computer.FileSystem` 方法並提供路徑，將文字檔的內容讀取到字串中。 下列範例會將 test.txt 的內容讀取到字串中，然後顯示於訊息方塊中。  
+- 使用 `ReadAllText` 物件的 `My.Computer.FileSystem` 方法並提供路徑，將文字檔的內容讀取到字串中。 下列範例會將 test.txt 的內容讀取到字串中，然後顯示於訊息方塊中。  
   
      [!code-vb[VbFileIORead#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#2)]  
   
 ### <a name="to-read-from-a-text-file-that-is-encoded"></a>若要從已編碼的文字檔讀取  
   
--   使用 `ReadAllText` 物件的 `My.Computer.FileSystem` 方法，並且提供路徑和檔案編碼類型，將文字檔的內容讀取到字串中。 下列範例會將 UTF32 檔案 test.txt 的內容讀取到字串中，然後顯示於訊息方塊中。  
+- 使用 `ReadAllText` 物件的 `My.Computer.FileSystem` 方法，並且提供路徑和檔案編碼類型，將文字檔的內容讀取到字串中。 下列範例會將 UTF32 檔案 test.txt 的內容讀取到字串中，然後顯示於訊息方塊中。  
   
      [!code-vb[VbFileIORead#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#3)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  以下條件可能會造成例外狀況：  
   
--   因下列其中一項原因而導致路徑無效：它是長度為零的字串、它只包含空白字元、它包含無效的字元，或者它是裝置路徑 (<xref:System.ArgumentException>)。  
+- 因下列其中一項原因而導致路徑無效：它是長度為零的字串、它只包含空白字元、它包含無效的字元，或者它是裝置路徑 (<xref:System.ArgumentException>)。  
   
--   路徑無效，因為它是 `Nothing` (<xref:System.ArgumentNullException>)。  
+- 路徑無效，因為它是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   檔案不存在 (<xref:System.IO.FileNotFoundException>)。  
+- 檔案不存在 (<xref:System.IO.FileNotFoundException>)。  
   
--   檔案正由另一個程序使用中，或發生 I/O 錯誤 (<xref:System.IO.IOException>)。  
+- 檔案正由另一個程序使用中，或發生 I/O 錯誤 (<xref:System.IO.IOException>)。  
   
--   路徑超過系統定義的最大長度 (<xref:System.IO.PathTooLongException>)。  
+- 路徑超過系統定義的最大長度 (<xref:System.IO.PathTooLongException>)。  
   
--   路徑中的檔案或目錄名稱含有冒號 (:)，或者是無效的格式 (<xref:System.NotSupportedException>)。  
+- 路徑中的檔案或目錄名稱含有冒號 (:)，或者是無效的格式 (<xref:System.NotSupportedException>)。  
   
--   沒有足夠的記憶體可將字串寫入緩衝區 (<xref:System.OutOfMemoryException>)。  
+- 沒有足夠的記憶體可將字串寫入緩衝區 (<xref:System.OutOfMemoryException>)。  
   
--   使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。  
+- 使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。  
   
  請勿根據檔案名稱來判斷檔案內容。 例如，檔案 Form1.vb 可能不是 Visual Basic 來源檔案。  
   

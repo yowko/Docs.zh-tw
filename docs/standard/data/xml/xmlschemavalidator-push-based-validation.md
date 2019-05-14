@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4d1d5602ff224c1c8f3e0948fc93c9200b9661e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 8e2b6ca8ef04ad6ff637a59f03f3b4cf04cb06ad
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44189072"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615357"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator 推入型驗證
 <xref:System.Xml.Schema.XmlSchemaValidator> 類別提供有效率的高效能機制，可根據 XML 結構描述以推入方式驗證 XML 資料。 例如，<xref:System.Xml.Schema.XmlSchemaValidator> 類別可讓您就地驗證 XML 資訊集，而無需將其序列化為 XML 文件，然後使用驗證 XML 讀取器重新剖析該文件。  
@@ -76,9 +76,9 @@ ms.locfileid: "44189072"
 ### <a name="initializing-validation"></a>初始化驗證  
  建構 <xref:System.Xml.Schema.XmlSchemaValidator> 物件之後，可以採用兩種多載 <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> 方法，初始化 <xref:System.Xml.Schema.XmlSchemaValidator> 物件的狀態。 以下是這兩個 <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> 方法。  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>  
   
  預設的 <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType> 方法會將 <xref:System.Xml.Schema.XmlSchemaValidator> 物件初始化為其開始狀態，以 <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType> 做為參數的多載 <xref:System.Xml.Schema.XmlSchemaObject> 方法，會將 <xref:System.Xml.Schema.XmlSchemaValidator> 物件初始化為開始狀態，以進行部分驗證。  
   
@@ -148,7 +148,7 @@ validator.ValidateEndElement(null);
 ### <a name="validating-elements-attributes-and-content"></a>驗證項目、屬性及內容  
  <xref:System.Xml.Schema.XmlSchemaValidator> 類別提供幾種方法，可用於根據 XML 結構描述驗證 XML 資訊集中的項目、屬性及內容。 下表對每個方法進行說明。  
   
-|方法|描述|  
+|方法|說明|  
 |------------|-----------------|  
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>|驗證目前內容中的項目名稱。|  
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>|驗證目前項目內容中的屬性，或根據做為參數傳遞給 <xref:System.Xml.Schema.XmlSchemaAttribute> 方法的 <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> 物件驗證屬性。|  
@@ -171,11 +171,11 @@ validator.ValidateEndElement(null);
   
  <xref:System.Xml.Schema.XmlSchemaValidator> 類別的下列方法接受 <xref:System.Xml.Schema.XmlValueGetter>`delegate` 做為參數。  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>  
   
  以下 <xref:System.Xml.Schema.XmlValueGetter>`delegate` 範例取自簡介中的 <xref:System.Xml.Schema.XmlSchemaValidator> 類別範例。 <xref:System.Xml.Schema.XmlValueGetter>`delegate` 會將屬性的值做為 <xref:System.DateTime> 物件傳回。 為驗證 <xref:System.DateTime> 傳回的 <xref:System.Xml.Schema.XmlValueGetter> 物件，<xref:System.Xml.Schema.XmlSchemaValidator> 物件先將其轉換成屬性資料型別 ValueType (ValueType 是 XSD 型別的預設 CLR 對應)，然後檢查已轉換值的 Facet。  
   
@@ -216,21 +216,21 @@ static XmlValueGetter dateTimeGetter(DateTime dateTime)
   
  下列 <xref:System.Xml.Schema.XmlSchemaValidator> 類別方法接受 <xref:System.Xml.Schema.XmlSchemaInfo> 物件做為輸出參數。  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>  
   
  如需 <xref:System.Xml.Schema.XmlSchemaInfo> 類別的完整範例，請參閱簡介中的範例。 如需 <xref:System.Xml.Schema.XmlSchemaInfo> 類別的詳細資訊，請參閱 <xref:System.Xml.Schema.XmlSchemaInfo> 類別參考文件。  
   
@@ -448,7 +448,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
   
  下表說明在以上狀態轉換表中找到的標點符號，如何影響針對 <xref:System.Xml.Schema.XmlSchemaValidator> 類別之狀態轉換中每個狀態呼叫的方法及其他狀態。  
   
-|符號|描述|  
+|符號|說明|  
 |------------|-----------------|  
 |&#124;|可呼叫方法或狀態 (垂直線前後的項目)。|  
 |?|問號之前的方法或狀態是選擇性的，但如果呼叫它，則只能呼叫一次。|  

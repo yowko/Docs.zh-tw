@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 839772fac51ab006d03875920360824a73b033e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c37480f18c100d66e78e851439bd15e2ecfdd381
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599994"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615186"
 ---
 # <a name="observer-design-pattern-best-practices"></a>觀察器設計模式最佳作法
 在 .NET Framework 中，觀察者設計模式會實作為一組介面。 <xref:System.IObservable%601?displayProperty=nameWithType> 介面代表資料提供者，它也負責提供 <xref:System.IDisposable> 實作，讓觀察者可以取消訂閱通知。 <xref:System.IObserver%601?displayProperty=nameWithType> 介面代表觀察者。 本主題說明使用這些介面實作觀察者設計模式時，開發人員應該遵循的最佳作法。  
@@ -31,11 +31,11 @@ ms.locfileid: "54599994"
   
  提供者在處理例外狀況及呼叫 <xref:System.IObserver%601.OnError%2A> 方法時，應遵循這些最佳作法：  
   
--   如果有任何特定的需求，提供者必須處理它本身的例外狀況。  
+- 如果有任何特定的需求，提供者必須處理它本身的例外狀況。  
   
--   提供者不應預期或要求觀察者以任何特定方式處理例外狀況。  
+- 提供者不應預期或要求觀察者以任何特定方式處理例外狀況。  
   
--   提供者應該在處理危害其提供更新能力的例外狀況時，呼叫 <xref:System.IObserver%601.OnError%2A> 方法。 這類例外狀況的詳細資訊，可以傳遞給觀察者。 在其他情況下，不需要通知觀察者有例外狀況。  
+- 提供者應該在處理危害其提供更新能力的例外狀況時，呼叫 <xref:System.IObserver%601.OnError%2A> 方法。 這類例外狀況的詳細資訊，可以傳遞給觀察者。 在其他情況下，不需要通知觀察者有例外狀況。  
   
  一旦提供者呼叫了 <xref:System.IObserver%601.OnError%2A> 或<xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> 方法，便不應該再有進一步的通知，提供者可以取消訂閱其觀察者。 但觀察者也可以隨時取消訂閱自己，包括收到 <xref:System.IObserver%601.OnError%2A> 或 <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> 通知之前和之後。 觀察者設計模式不會指定提供者還是觀察者要否要負責取消訂閱；因此，有可能兩者都會嘗試取消訂閱。 一般而言，當觀察者取消訂閱時，它們會從訂閱者集合中移除。 在單一執行緒應用程式中，<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 實作應可確保物件參考有效，且物件是訂閱者集合的成員，然後再嘗試將它移除。 在多執行緒應用程式中，應使用安全執行緒的集合物件，例如 <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> 物件。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "54599994"
   
  在回應來自提供者的 <xref:System.IObserver%601.OnError%2A> 方法呼叫時，觀察者應該遵循這些最佳作法：  
   
--   觀察者不應該從其介面實作擲回例外狀況，例如 <xref:System.IObserver%601.OnNext%2A> 或 <xref:System.IObserver%601.OnError%2A>。 不過，如果觀察者沒有擲回例外狀況，它應該預期這些例外狀況不會受到處理。  
+- 觀察者不應該從其介面實作擲回例外狀況，例如 <xref:System.IObserver%601.OnNext%2A> 或 <xref:System.IObserver%601.OnError%2A>。 不過，如果觀察者沒有擲回例外狀況，它應該預期這些例外狀況不會受到處理。  
   
--   若要保留呼叫堆疊，則想要擲回傳遞給其 <xref:System.Exception> 方法之 <xref:System.IObserver%601.OnError%2A> 物件的觀察者，在擲回之前應該包裝該例外狀況。 對此用途應使用標準的例外狀況物件。  
+- 若要保留呼叫堆疊，則想要擲回傳遞給其 <xref:System.Exception> 方法之 <xref:System.IObserver%601.OnError%2A> 物件的觀察者，在擲回之前應該包裝該例外狀況。 對此用途應使用標準的例外狀況物件。  
   
 ## <a name="additional-best-practices"></a>其他最佳作法  
  嘗試在 <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> 方法中取消註冊，可能會導致 null 參考。 因此，我們建議您避免使用這種作法。  

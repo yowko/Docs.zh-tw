@@ -2,12 +2,12 @@
 title: 對等名稱發佈和解析
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 330117e103f7729ecf6f18ff551f65f1ba0f35da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a0787972a61f5700d1e8728be96db8ef9ee749e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769485"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623193"
 ---
 # <a name="peer-name-publication-and-resolution"></a>對等名稱發佈和解析
 
@@ -15,9 +15,9 @@ ms.locfileid: "59769485"
 
  為了發行新的 PNRP 識別碼，對等會執行下列動作：  
   
--   將 PNRP 發行訊息傳送至相鄰的快取 (在快取的最下層中註冊 PNRP 識別碼的對等)，讓其快取成為種子。  
+- 將 PNRP 發行訊息傳送至相鄰的快取 (在快取的最下層中註冊 PNRP 識別碼的對等)，讓其快取成為種子。  
   
--   在雲端中隨機選擇非相鄰的節點，並將其專屬 P2P 識別碼的 PNRP 名稱解析要求傳送至這些節點。 產生的端點判斷處理序會以發行對等的 PNRP 識別碼，作為雲端中隨機節點的快取種子。  
+- 在雲端中隨機選擇非相鄰的節點，並將其專屬 P2P 識別碼的 PNRP 名稱解析要求傳送至這些節點。 產生的端點判斷處理序會以發行對等的 PNRP 識別碼，作為雲端中隨機節點的快取種子。  
   
 如果 PNRP 第 2 版僅解析其他 P2P 識別碼，則其節點不會發行 PNRP 識別碼。 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1 登錄值 (REG_DWORD 類型) 指定對等節點只能使用 PNRP 進行名稱解析，而不進行名稱發行。 此登錄值也可以透過群組原則進行設定。  
   
@@ -37,11 +37,11 @@ ms.locfileid: "59769485"
   
  為了在 PNRP 中執行名稱解析，對等節點會檢查本身的快取項目中是否有符合目標 PNRP 識別碼的項目。 如果找到相符項目，對等會將 PNRP 要求訊息傳送至對等，並等候回應。 如果找不到 PNRP 識別碼的項目，則對等會將 PNRP 要求訊息傳送至對應到最接近目標 PNRP 識別碼之 PNRP 識別碼的對等。 收到 PNRP 要求訊息的節點會檢查自己的快取，並執行下列動作：  
   
--   如果找到 PNRP 識別碼，則收到要求的對等會直接回覆發出要求的對等。  
+- 如果找到 PNRP 識別碼，則收到要求的對等會直接回覆發出要求的對等。  
   
--   如果找不到 PNRP 識別碼，而快取中有接近目標 PNRP 識別碼的 PNRP 識別碼，則收到要求的對等會將回應傳送至發出要求的對等，其中包含代表擁有較接近目標 PNRP 識別碼之 PNRP 識別碼的對等 IPv6 位址。 使用回應中的 IP 位址時，發出要求的節點會將另一個 PNRP 要求訊息傳送至 IPv6 位址來進行回應，或檢查其快取。  
+- 如果找不到 PNRP 識別碼，而快取中有接近目標 PNRP 識別碼的 PNRP 識別碼，則收到要求的對等會將回應傳送至發出要求的對等，其中包含代表擁有較接近目標 PNRP 識別碼之 PNRP 識別碼的對等 IPv6 位址。 使用回應中的 IP 位址時，發出要求的節點會將另一個 PNRP 要求訊息傳送至 IPv6 位址來進行回應，或檢查其快取。  
   
--   如果找不到 PNRP 識別碼，而且快取中沒有接近目標 PNRP 識別碼的 PNRP 識別碼，則收到要求的對等會將指出此情況的回應傳送給發出要求的對等。 發出要求的對等接著會選擇下一個最接近的 PNRP 識別碼。  
+- 如果找不到 PNRP 識別碼，而且快取中沒有接近目標 PNRP 識別碼的 PNRP 識別碼，則收到要求的對等會將指出此情況的回應傳送給發出要求的對等。 發出要求的對等接著會選擇下一個最接近的 PNRP 識別碼。  
   
 發出要求的對等會繼續重複執行此處理序，直到最後找到登錄 PNRP 識別碼的節點。  
   

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-ms.openlocfilehash: a98528a4bae1a22352096958cfec2350b21ddf8e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c69210c3d8f35ccab4375cfe7e49e2de147f2289
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103411"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599878"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows 服務應用程式簡介
 Microsoft Windows 服務 (以前稱為 NT 服務) 讓您能夠建立長時間執行的應用程式，並使其在自己的 Windows 工作階段中執行。 這些服務可以在電腦開機時自動啟動、可以暫停和重新啟動，而且不會顯示任何使用者介面。 這些功能讓服務非常適合在伺服器上使用，或者，當您需要不會干擾其他在同一部電腦上工作的使用者且又長時間執行的功能時使用。 您也可以在特定使用者帳戶的安全性內容中執行服務，此使用者帳戶不同於登入的使用者帳戶或預設電腦帳戶。 如需服務和 Windows 工作階段的詳細資訊，請參閱 Windows SDK 文件。  
@@ -41,19 +41,19 @@ Microsoft Windows 服務 (以前稱為 NT 服務) 讓您能夠建立長時間執
 ## <a name="service-applications-vs-other-visual-studio-applications"></a>服務應用程式相較於其他 Visual Studio 應用程式  
  服務應用程式的運作在某些方面有別於許多其他專案類型：  
   
--   服務應用程式專案所建立的已編譯可執行檔必須先安裝在伺服器上，然後專案才能正常地運作。 您無法按 F5 鍵或 F11 鍵來偵錯或執行服務應用程式；您無法立即執行服務或逐步執行其程式碼。 反之，您必須安裝並啟動服務，然後將偵錯工具附加到服務的處理序。 如需詳細資訊，請參閱[如何：偵錯 Windows 服務應用程式](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)。  
+- 服務應用程式專案所建立的已編譯可執行檔必須先安裝在伺服器上，然後專案才能正常地運作。 您無法按 F5 鍵或 F11 鍵來偵錯或執行服務應用程式；您無法立即執行服務或逐步執行其程式碼。 反之，您必須安裝並啟動服務，然後將偵錯工具附加到服務的處理序。 如需詳細資訊，請參閱[如何：偵錯 Windows 服務應用程式](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)。  
   
--   不同於某些類型的專案，您必須為服務應用程式建立安裝元件。 安裝元件會在伺服器上安裝並註冊服務，以及使用 Windows **服務控制管理員**來建立服務項目。 如需詳細資訊，請參閱[如何：將安裝程式新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
+- 不同於某些類型的專案，您必須為服務應用程式建立安裝元件。 安裝元件會在伺服器上安裝並註冊服務，以及使用 Windows **服務控制管理員**來建立服務項目。 如需詳細資訊，請參閱[如何：將安裝程式新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
   
--   服務應用程式的 `Main` 方法必須針對專案所包含的服務發出 Run 命令。 `Run` 方法會將服務載入到適當伺服器上的**服務控制管理員**。 如果您使用 **Windows 服務**專案範本，即會自動撰寫這個方法。 請注意，載入服務與啟動服務不同。 如需詳細資訊，請參閱下方的「服務存留期」。  
+- 服務應用程式的 `Main` 方法必須針對專案所包含的服務發出 Run 命令。 `Run` 方法會將服務載入到適當伺服器上的**服務控制管理員**。 如果您使用 **Windows 服務**專案範本，即會自動撰寫這個方法。 請注意，載入服務與啟動服務不同。 如需詳細資訊，請參閱下方的「服務存留期」。  
   
--   Windows 服務應用程式執行所在的視窗工作站，不同於登入使用者的互動式工作站。 視窗工作站是一個安全的物件，其中包含剪貼簿、一組通用元素，以及一個桌面物件群組。 由於 Windows 服務的工作站不是互動式工作站，因此看不到從 Windows 服務應用程式內引發的對話方塊，因而可能造成程式停止回應。 同樣地，錯誤訊息應該記錄於 Windows 事件記錄檔中，而不應在使用者介面中引發。  
+- Windows 服務應用程式執行所在的視窗工作站，不同於登入使用者的互動式工作站。 視窗工作站是一個安全的物件，其中包含剪貼簿、一組通用元素，以及一個桌面物件群組。 由於 Windows 服務的工作站不是互動式工作站，因此看不到從 Windows 服務應用程式內引發的對話方塊，因而可能造成程式停止回應。 同樣地，錯誤訊息應該記錄於 Windows 事件記錄檔中，而不應在使用者介面中引發。  
   
      .NET Framework 所支援的 Windows 服務類別不支援與互動式工作站 (也就是登入的使用者) 進行互動。 .NET Framework 也不會包含代表工作站和桌面的類別。 如果您的 Windows 服務必須與其他工作站互動，您將需要存取非受控的 Windows API。 如需詳細資訊，請參閱 Windows SDK 文件。  
   
      Windows 服務與使用者或其他工作站的互動必須經過精心設計以包含如下的案例：沒有登入的使用者，或者使用者具備一組未預期的桌面物件。 在某些情況下，撰寫由使用者控制的 Windows 應用程式可能更為合適。  
   
--   Windows 服務應用程式會在自己的安全性內容中執行，並在使用者登入安裝應用程式所在的 Windows 電腦之前便啟動。 您應該仔細規劃要在哪些使用者帳戶內執行服務；在系統帳戶下執行的服務，其權限會高於在使用者帳戶下執行的服務。  
+- Windows 服務應用程式會在自己的安全性內容中執行，並在使用者登入安裝應用程式所在的 Windows 電腦之前便啟動。 您應該仔細規劃要在哪些使用者帳戶內執行服務；在系統帳戶下執行的服務，其權限會高於在使用者帳戶下執行的服務。  
   
 ## <a name="service-lifetime"></a>服務存留期  
  服務會在其存留期中會經歷數個內部狀態。 首先，服務會安裝於執行所在的系統上。 此流程會針對服務專案執行安裝程式，並將服務載入該電腦的**服務控制管理員**。 **服務控制管理員**是由 Windows 提供來管理服務的重要公用程式。  
@@ -76,17 +76,17 @@ Microsoft Windows 服務 (以前稱為 NT 服務) 讓您能夠建立長時間執
   
 ## <a name="requirements"></a>需求  
   
--   服務必須建立於 **Windows 服務**應用程式專案或其他已啟用 .NET Framework 的專案中，以便在建置時建立 .exe 檔並繼承自 <xref:System.ServiceProcess.ServiceBase> 類別。  
+- 服務必須建立於 **Windows 服務**應用程式專案或其他已啟用 .NET Framework 的專案中，以便在建置時建立 .exe 檔並繼承自 <xref:System.ServiceProcess.ServiceBase> 類別。  
   
--   包含 Windows 服務的專案必須具備專案及其服務的安裝元件。 這可輕鬆地從 [屬性] 視窗來完成。 如需詳細資訊，請參閱[如何：將安裝程式新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
+- 包含 Windows 服務的專案必須具備專案及其服務的安裝元件。 這可輕鬆地從 [屬性] 視窗來完成。 如需詳細資訊，請參閱[如何：將安裝程式新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [Windows 服務應用程式](../../../docs/framework/windows-services/index.md)
 - [服務應用程式的程式設計架構](../../../docs/framework/windows-services/service-application-programming-architecture.md)
-- [作法：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [作法：安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
-- [作法：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)
-- [作法：偵錯 Windows 服務應用程式](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
+- [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [如何：安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [如何：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)
+- [如何：偵錯 Windows 服務應用程式](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
 - [逐步解說：在元件設計工具中建立 Windows 服務應用程式](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
-- [作法：將安裝程式新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [如何：將安裝程式新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

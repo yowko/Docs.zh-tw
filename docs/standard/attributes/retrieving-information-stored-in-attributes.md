@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d921c13765f5d61ce9822df0b4059b2cf93a6f6d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6939c215633be10e487f9cd5bd25856c0c611921
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744075"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623661"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>擷取儲存於屬性中的資訊
 擷取自訂屬性是一個簡單的程序。 首先，對想要擷取的屬性宣告執行個體。 然後，使用 <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> 方法將新屬性初始化為所要擷取之屬性的值。 在將新屬性 (Attribute) 初始化之後，只要使用其屬性 (Poperty) 即可取得值。  
@@ -28,11 +28,11 @@ ms.locfileid: "54744075"
   
  本節說明下列擷取屬性的方式：  
   
--   [擷取單一屬性執行個體](#cpconretrievingsingleinstanceofattribute)  
+- [擷取單一屬性執行個體](#cpconretrievingsingleinstanceofattribute)  
   
--   [擷取套用至相同範圍的多個屬性執行個體](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
+- [擷取套用至相同範圍的多個屬性執行個體](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
   
--   [擷取套用至不同範圍的多個屬性執行個體](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
+- [擷取套用至不同範圍的多個屬性執行個體](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
 <a name="cpconretrievingsingleinstanceofattribute"></a>   
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>擷取單一屬性執行個體  

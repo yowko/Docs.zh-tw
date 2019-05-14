@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9dd8e49ad3270fe62b65469470485fcb169a4e7
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 96499d2a3d74deb7208fa49f9fc0927109d93a69
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788540"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623799"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>以工作為基礎的非同步模式 (TAP)
 工作式非同步模式 (TAP) 是以 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 命名空間中的 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks?displayProperty=nameWithType> 類型為基礎，這兩種類別用於表示任意非同步作業。 TAP 是進行新的開發工作時，建議使用的非同步設計模式。  
@@ -30,7 +30,7 @@ TAP 使用單一方法表示非同步作業的啟始和完成。 這與非同步
   
  TAP 方法會傳回 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>，取決於對應的同步方法傳回 void 或 `TResult` 類型。  
   
- TAP 方法的參數應該與其同步對應項目的參數相符，並且應該以相同順序提供。  不過，`out` 和 `ref` 參數不受限於此規則，因此應完全避免使用。 所有可能會透過 `out` 或 `ref` 參數傳回的資料，都應該改成做為 `TResult` 所傳回 <xref:System.Threading.Tasks.Task%601> 的一部分傳回，而且應使用 Tuple 或自訂資料結構來容納多個值。 即使 TAP 方法的同步對應項目沒有提供 <xref:System.Threading.CancellationToken> 參數，您也應該考慮新增一個。
+ TAP 方法的參數應該與其同步對應項目的參數相符，並且應該以相同順序提供。  不過，`out` 和 `ref` 參數不受限於這項規則，因此應完全避免使用。 所有可能會透過 `out` 或 `ref` 參數傳回的資料，都應該改成做為 `TResult` 所傳回 <xref:System.Threading.Tasks.Task%601> 的一部分傳回，而且應使用 Tuple 或自訂資料結構來容納多個值。 即使 TAP 方法的同步對應項目沒有提供 <xref:System.Threading.CancellationToken> 參數，您也應該考慮新增一個。
  
  專門用於建立、管理或組合工作的方法 (其中方法的非同步用意以方法名稱或方法所屬的類型名稱清楚表示) 不需要遵循這個命名模式，這類方法通常稱為「組合器」。 組合器的範例包括 <xref:System.Threading.Tasks.Task.WhenAll%2A> 和 <xref:System.Threading.Tasks.Task.WhenAny%2A>，並且將在[使用以工作為基礎的非同步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)文件的[使用內建工作式組合器](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md#combinators)一節中加以討論。  
   
@@ -39,14 +39,14 @@ TAP 使用單一方法表示非同步作業的啟始和完成。 這與非同步
 ## <a name="initiating-an-asynchronous-operation"></a>啟始非同步作業  
  以 TAP 為基礎的非同步方法可以先同步處理少量供作，例如驗證引數和啟始非同步作業，再傳回產生的工作。 同步工作量應盡量維持最少，這樣非同步方法才可以快速傳回。 快速傳回的原因如下：  
   
--   非同步方法可能是從使用者介面 (UI) 執行緒叫用，而任何長時間執行的同步工作都可能影響應用程式的回應。  
+- 非同步方法可能是從使用者介面 (UI) 執行緒叫用，而任何長時間執行的同步工作都可能影響應用程式的回應。  
   
--   可能有多個非同步方法同時啟動。 因此，在非同步方法的同步處理部分中，所有長時間執行的工作都可能延遲啟始其他非同步作業，因而降低並行的優勢。  
+- 可能有多個非同步方法同時啟動。 因此，在非同步方法的同步處理部分中，所有長時間執行的工作都可能延遲啟始其他非同步作業，因而降低並行的優勢。  
   
  在某些情況下，完成作業所需的工作量會比以非同步方式啟動作業所需的工作量還少。 若資料流中的讀取作業可以藉由已在記憶體中緩衝的資料獲得滿足，則從該資料流進行讀取就是這類情境的範例。 在這類情況下，作業會同步完成，而且可能會傳回已完成的工作。  
   
 ## <a name="exceptions"></a>例外狀況  
- 非同步方法應只有在回應使用方式錯誤時，才引發從非同步方法呼叫擲回例外狀況。 使用方式錯誤一律不應發生在實際執行程式碼中。 例如，如果傳遞 Null 參考 (在 Visual Basic 中為 `Nothing`) 做為方法的其中一個引數造成了錯誤狀態 (通常是以 <xref:System.ArgumentNullException> 例外狀況表示)，您可以修改呼叫程式碼，確保絕不會傳遞 Null 參考。 對於所有其他錯誤，非同步方法執行時發生的例外狀況應該指派給傳回的工作，即使非同步方法剛好在工作傳回前同步完成也一樣。 通常，工作最多只能包含一個例外狀況。 不過，如果工作表示多個作業 (例如 <xref:System.Threading.Tasks.Task.WhenAll%2A>)，則可能會有多個例外狀況與單一工作相關聯。  
+ 非同步方法應只有在回應使用方式錯誤時，才引發從非同步方法呼叫擲回例外狀況。 使用方式錯誤一律不應發生在實際執行程式碼中。 例如，如果傳遞 Null 參考 (在 Visual Basic 中為 `Nothing`) 做為方法的其中一個引數造成了錯誤狀態 (通常是以 <xref:System.ArgumentNullException> 例外狀況表示)，您可以修改呼叫程式碼，確保絕不會傳遞 Null 參考。 對於所有其他錯誤，非同步方法執行時發生的例外狀況應該指派給傳回的工作，即使非同步方法剛好在工作傳回前同步完成也一樣。 通常，工作最多只能包含一個例外狀況。 不過，如果工作表示多項作業 (例如 <xref:System.Threading.Tasks.Task.WhenAll%2A>)，則可能會有多個例外狀況與單一工作相關聯。  
   
 ## <a name="target-environment"></a>目標環境  
  當您實作 TAP 方法時，可以判斷非同步執行發生的位置。 您可以選擇在執行緒集區上執行工作負載、使用非同步 I/O (在作業執行過程中大部分時間未繫結至執行緒) 實作它、在特定執行緒 (例如 UI 執行緒) 上執行它，或是使用任意數量的可能內容。 TAP 方法甚至可能沒有可執行的項目，而且可能只傳回 <xref:System.Threading.Tasks.Task>，指出系統中其他位置發生的情形 (例如，代表資料的工作抵達佇列的資料結構)。
@@ -75,7 +75,7 @@ TAP 使用單一方法表示非同步作業的啟始和完成。 這與非同步
  
  在 TAP 中，進度是透過 <xref:System.IProgress%601> 介面處理，並且做為通常名為 `progress` 的參數傳遞至非同步方法。  在呼叫非同步方法時提供進度介面，有助於排除不當使用所造成的競爭情形 (也就是說，事件處理常式在作業啟動後才註冊是不正確的，而這樣可能導致遺失更新)。  更重要的是，進度介面支援各種不同的進度實作，取決於使用的程式碼。  例如，使用的程式碼可能只在意最新的進度更新，或是想要緩衝所有更新，也可能想要對每一個更新叫用一個動作，或是想要控制是否要將引動過程封送處理置特定執行緒。 這些選項全都可以使用不同的介面實作達成，並依照消費者的特殊需要自訂。  就像處理取消一樣，TAP 實作應只在 API 支援進度通知時才提供 <xref:System.IProgress%601> 參數。 
  
- 例如，如果此文章前面所討論的 `ReadAsync` 方法能夠以目前為止讀取之位元組數目的形式報告中繼進度，則進度回呼就可以是 <xref:System.IProgress%601> 介面：  
+ 例如，如果本文前面所討論的 `ReadAsync` 方法能夠以目前為止讀取之位元組數目的形式報告中繼進度，則進度回呼就可以是 <xref:System.IProgress%601> 介面：  
   
  [!code-csharp[Conceptual.TAP#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap/cs/examples1.cs#2)]
  [!code-vb[Conceptual.TAP#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap/vb/examples1.vb#2)]  

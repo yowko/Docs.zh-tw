@@ -6,19 +6,19 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 9bb87115f4649a890d1fb2aab1595c3b6848bc74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9bce692c767169536d762a36ea2b9343655680c7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322078"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583077"
 ---
 # <a name="polymorphism-c-programming-guide"></a>多型 (C# 程式設計手冊)
 多型通常是指物件導向程式設計的第三個重要部分，其重要性僅次於封裝和繼承。 多型在希臘文中表示「多種形狀」，可分成下列兩方面：  
   
--   在執行階段，衍生類別物件可視為方法參數和集合或陣列等位置中的基底類別物件。 發生此情況時，物件的宣告類型與其執行階段類型將不再相同。  
+- 在執行階段，衍生類別物件可視為方法參數和集合或陣列等位置中的基底類別物件。 發生此情況時，物件的宣告類型與其執行階段類型將不再相同。  
   
--   基底類別可以定義和實作 [virtual](../../../csharp/language-reference/keywords/virtual.md)「方法」，而衍生類別可以[覆寫](../../../csharp/language-reference/keywords/override.md)這些方法，換句話說，衍生類別會提供自己的定義和實作。 在執行階段，當用戶端程式碼呼叫方法時，CLR 會查詢物件的執行階段類型，然後叫用虛擬方法的覆寫。 因此，在您的原始程式碼中，您可以在基底類別上呼叫方法，然後執行衍生類別版本的方法。  
+- 基底類別可以定義和實作 [virtual](../../../csharp/language-reference/keywords/virtual.md)「方法」，而衍生類別可以[覆寫](../../../csharp/language-reference/keywords/override.md)這些方法，換句話說，衍生類別會提供自己的定義和實作。 在執行階段，當用戶端程式碼呼叫方法時，CLR 會查詢物件的執行階段類型，然後叫用虛擬方法的覆寫。 因此，在您的原始程式碼中，您可以在基底類別上呼叫方法，然後執行衍生類別版本的方法。  
   
  虛擬方法可讓您以一致的方式來使用相關物件群組。 例如，假設您有一個繪圖應用程式，可讓使用者在繪圖介面上建立各種圖形。 您不知道使用者將在編譯時期建立哪一種圖形。 但是，應用程式必須追蹤所建立的所有不同圖形類型，並且必須根據使用者滑鼠動作來更新圖形。 您可以使用多型，分兩個基本步驟來解決這個問題：  
   
@@ -37,11 +37,11 @@ ms.locfileid: "59322078"
 ### <a name="virtual-members"></a>虛擬成員  
  當衍生類別從基底類別繼承時，會取得基底類別的所有方法、欄位、屬性和事件。 衍生類別的設計工具可選擇是否要  
   
--   覆寫在基底類別中的虛擬成員  
+- 覆寫在基底類別中的虛擬成員  
   
--   繼承最近的基底類別方法，而不加以覆寫  
+- 繼承最近的基底類別方法，而不加以覆寫  
   
--   定義隱藏基底類別實作的成員之新的非虛擬實作  
+- 定義隱藏基底類別實作的成員之新的非虛擬實作  
   
  只有在基底類別成員宣告為 [virtual](../../../csharp/language-reference/keywords/virtual.md) 或 [abstract](../../../csharp/language-reference/keywords/abstract.md) 時，衍生類別才能覆寫基底類別成員。 衍生成員必須使用 [override](../../../csharp/language-reference/keywords/override.md) 關鍵字明確指出方法預定會參與虛擬引動過程。 下列程式碼提供一個範例：  
   
@@ -89,11 +89,11 @@ ms.locfileid: "59322078"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [使用 Override 和 New 關鍵字進行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+- [使用 Override 和 New 關鍵字進行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   
--   [了解使用 Override 和 New 關鍵字的時機](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
+- [了解使用 Override 和 New 關鍵字的時機](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [如何：覆寫 ToString 方法](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+- [如何：覆寫 ToString 方法](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>另請參閱
 

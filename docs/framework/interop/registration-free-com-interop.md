@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24e7eed539898c511250a1a09a187448e9424890
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a3de327001f987b6c35d547b7cf3cbe7feeac49
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300992"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648517"
 ---
 # <a name="registration-free-com-interop"></a>免註冊的 COM Interop
 免註冊的 COM Interop 不需要使用 Windows 登錄來儲存組件資訊，即可啟動元件。 您不是在部署期間在電腦上登錄元件，而是在設計階段建立 Win32 樣式資訊清單檔案，其中包含繫結和啟動的相關資訊。 這些資訊清單檔案 (而不是登錄機碼) 會引導物件的啟動。  
   
  為您的組件使用免註冊啟動，而不是在部署期間將其註冊，有兩個優點：  
   
--   當電腦上安裝多個 DLL 版本時，您可以控制要啟動哪個版本。  
+- 當電腦上安裝多個 DLL 版本時，您可以控制要啟動哪個版本。  
   
--   終端使用者可以使用 XCOPY 或 FTP，將您的應用程式複製到他們電腦上的適當目錄。 接著便可從該目錄執行應用程式。  
+- 終端使用者可以使用 XCOPY 或 FTP，將您的應用程式複製到他們電腦上的適當目錄。 接著便可從該目錄執行應用程式。  
   
  本節說明免註冊 COM Interop 所需的兩種資訊清單類型：應用程式和元件資訊清單。 這些資訊清單是 XML 檔案。 應用程式資訊清單是由應用程式開發人員建立，其中包含說明組件和組件相依性的中繼資料。 元件資訊清單是由元件開發人員建立，其中包含其他位在 Windows 登錄中的資訊。  
   

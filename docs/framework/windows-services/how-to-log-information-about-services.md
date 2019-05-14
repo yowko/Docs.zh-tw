@@ -1,5 +1,5 @@
 ---
-title: HOW TO：記錄關於服務的資訊
+title: 作法：記錄關於服務的資訊
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: dfcfb7370ffd59a50cf6d0b01e84e581ddc6fc52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c8a744337803a7a26397c999a6d9c6d10f69a1c5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306517"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591656"
 ---
-# <a name="how-to-log-information-about-services"></a>HOW TO：記錄關於服務的資訊
+# <a name="how-to-log-information-about-services"></a>作法：記錄關於服務的資訊
 根據預設，所有的 Windows 服務專案都能與應用程式事件記錄檔互動，並在其中寫入資訊和例外狀況。 您使用 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 屬性來表示在您的應用程式中是否要這項功能。 根據預設，會為您以 Windows 服務專案範本建立任何服務開啟記錄。 您可以使用靜態形式的 <xref:System.Diagnostics.EventLog> 類別將服務資訊寫入記錄檔，而不需要建立 <xref:System.Diagnostics.EventLog> 元件的執行個體或手動註冊來源。  
   
  您的服務安裝程式會自動在專案中註冊每個服務，做為開啟記錄功能時，服務安裝所在電腦上的應用程式記錄檔的有效事件來源。 服務會在每次服務啟動、停止、暫停、繼續、安裝或解除安裝時記錄資訊。 它也會記錄發生的任何失敗。 使用預設行為時，您不需要撰寫任何程式碼，以將項目寫入記錄檔；服務會自動為您處理。  
@@ -32,14 +32,14 @@ ms.locfileid: "59306517"
   
 ### <a name="to-enable-default-event-logging-for-your-service"></a>啟用服務的預設事件記錄  
   
--   將您的元件 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 屬性設為 `true`。  
+- 將您的元件 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 屬性設為 `true`。  
   
     > [!NOTE]
     >  根據預設，這個屬性設定為 `true`。 您不需要明確地設定這個屬性，除非您正在建置更複雜的處理，例如評估條件，然後根據該條件的結果設定 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 屬性。  
   
 ### <a name="to-disable-event-logging-for-your-service"></a>停用服務的事件記錄  
   
--   將您的元件 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 屬性設為 `false`。  
+- 將您的元件 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 屬性設為 `false`。  
   
      [!code-csharp[VbRadconService#17](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#17)]
      [!code-vb[VbRadconService#17](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#17)]  

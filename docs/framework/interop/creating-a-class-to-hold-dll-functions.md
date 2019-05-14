@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 399ad6649016e53d91d5d9d30ecc031ae8a97a4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6b204eacd43db2c562fbe6d519b5fa91df3466cc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149353"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626405"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>建立類別以包裝 DLL 函式
 將常用 DLL 函式包裝在 Managed 類別中，是封裝平台功能的有效方法。 雖然不會強制您在每個案例這麼做，但提供類別包裝函式十分方便，因為定義 DLL 函式十分麻煩又容易發生錯誤。 如果您是使用 Visual Basic 或 C# 進行程式設計，則必須在類別或 Visual Basic 模組內宣告 DLL 函式。  
@@ -28,11 +28,11 @@ ms.locfileid: "59149353"
   
  設計平台叫用的 Managed 類別時，請考慮類別與 DLL 函式之間的關聯性。 例如，您可以：  
   
--   在現有類別內，宣告 DLL 函式。  
+- 在現有類別內，宣告 DLL 函式。  
   
--   建立每個 DLL 函式的個別類別，來隔離函式，以及輕鬆找到函式。  
+- 建立每個 DLL 函式的個別類別，來隔離函式，以及輕鬆找到函式。  
   
--   為一組相關 DLL 函式建立一個類別，以形成邏輯群組，並減少額外負荷。  
+- 為一組相關 DLL 函式建立一個類別，以形成邏輯群組，並減少額外負荷。  
   
  您可以依需要命名類別和其方法。 如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
   

@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2717655ac73cac6635aba563f008feb460a5f788
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7609c88b088b9386201f5ac5725d16f4c5f11071
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074517"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591392"
 ---
 # <a name="security-issues-in-reflection-emit"></a>反映發出中的安全性問題
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供三種發出 Microsoft 中繼語言 (MSIL) 的方式，每種都有它自己的安全性問題：  
   
--   [動態組件](#Dynamic_Assemblies)  
+- [動態組件](#Dynamic_Assemblies)  
   
--   [匿名裝載的動態方法](#Anonymously_Hosted_Dynamic_Methods)  
+- [匿名裝載的動態方法](#Anonymously_Hosted_Dynamic_Methods)  
   
--   [與現有組件相關聯的動態方法](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
+- [與現有組件建立關聯的動態方法](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
   
  無論您產生動態程式碼的方式為何，執行產生的程式碼需要所有權限，這些是產生的程式碼所使用之類型和方法所需的。  
   
@@ -51,13 +51,13 @@ ms.locfileid: "59074517"
 ### <a name="generating-dynamic-assemblies-from-partially-trusted-code"></a>從部分信任的程式碼產生動態組件  
  請考慮具有網際網路權限的組件可產生暫時性動態組件並執行其程式碼的條件：  
   
--   動態組件只會使用公用類型和其他組件的成員。  
+- 動態組件只會使用公用類型和其他組件的成員。  
   
--   在部分信任組件的授權集中包含這些類型和成員所要求的權限。  
+- 在部分信任組件的授權集中包含這些類型和成員所要求的權限。  
   
--   該組件不會儲存到磁碟。  
+- 該組件不會儲存到磁碟。  
   
--   不會產生偵錯符號。 (`Internet` 和 `LocalIntranet` 權限集合不包含必要的權限。)  
+- 不會產生偵錯符號。 (`Internet` 和 `LocalIntranet` 權限集合不包含必要的權限。)  
   
 <a name="Anonymously_Hosted_Dynamic_Methods"></a>   
 ## <a name="anonymously-hosted-dynamic-methods"></a>匿名裝載的動態方法  
@@ -70,9 +70,9 @@ ms.locfileid: "59074517"
   
  如果應用程式定義域允許，則匿名裝載的動態方法可以跳過 JIT 可見度檢查，且受下列限制：由匿名裝載動態方法存取的非公用類型和成員必須位於組件中，且該組件授權集與發出呼叫堆疊的授權集相等，或是為其子集。 如果應用程式定義域對 <xref:System.Security.Permissions.ReflectionPermission> 授與 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標，則會啟用這項跳過 JIT 可見度檢查的限制功能。  
   
--   如果您的方法只使用公用類型和成員，則在建構期間不需要權限。  
+- 如果您的方法只使用公用類型和成員，則在建構期間不需要權限。  
   
--   如果您指定 JIT 可見度檢查應該要跳過，則在建構方法時提出的要求會包含具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>以及包含正在存取非公用成員之組件的授權集。  
+- 如果您指定 JIT 可見度檢查應該要跳過，則在建構方法時提出的要求會包含具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>以及包含正在存取非公用成員之組件的授權集。  
   
  因為非公用成員的授權集已納入考慮，所以已授與 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 的部分信任程式碼無法藉由執行受信任組件的非公用成員來提高權限。  
   
@@ -85,9 +85,9 @@ ms.locfileid: "59074517"
 ### <a name="generating-anonymously-hosted-dynamic-methods-from-partially-trusted-code"></a>從部分信任的程式碼產生匿名裝載的動態方法  
  請考慮具有網際網路權限的組件可產生匿名裝載的動態方法並予以執行的條件：  
   
--   動態方法只會使用公用類型和成員。 如果其授權集包含 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>，則它可以使用授權集為發出組件授權集子集或與其相等的任何組件之非公用類型與成員。  
+- 動態方法只會使用公用類型和成員。 如果其授權集包含 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>，則它可以使用授權集為發出組件授權集子集或與其相等的任何組件之非公用類型與成員。  
   
--   部分信任組件的授權集包含動態方法所使用的所有類型及成員所需的權限。  
+- 部分信任組件的授權集包含動態方法所使用的所有類型及成員所需的權限。  
   
 > [!NOTE]
 >  動態方法並不支援偵錯符號。  
@@ -96,21 +96,21 @@ ms.locfileid: "59074517"
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>與現有組件相關聯的動態方法  
  若要將動態方法和現有組件中的類型或模組相關聯，請使用任何一種指定相關聯的類型或模組的 <xref:System.Reflection.Emit.DynamicMethod> 建構函式。 呼叫這些建構函式所需的權限有所不同，因為將動態方法與現有類型或模組產生關聯會讓動態方法存取非公用類型和成員：  
   
--   與類型相關聯的動態方法可以存取所有該類型的成員，甚至是私用成員，且能存取包含相關聯的類型之組件中的所有內部類型和成員。  
+- 與類型相關聯的動態方法可以存取所有該類型的成員，甚至是私用成員，且能存取包含相關聯的類型之組件中的所有內部類型和成員。  
   
--   與模組相關聯的動態方法可存取模組中所有 `internal` 類型和成員 (在 Visual Basic 中為 `Friend`，在 Common Language Runtime 中繼資料中為 `assembly`)。  
+- 與模組相關聯的動態方法可存取模組中所有 `internal` 類型和成員 (在 Visual Basic 中為 `Friend`，在 Common Language Runtime 中繼資料中為 `assembly`)。  
   
  此外，您可以使用會指定略過 JIT 編譯器可見度檢查能力的建構函式。 這樣可讓您的動態方法在所有組件中存取所有類型和成員，不論存取層級為何。  
   
  建構函式所要求的權限取決於您決定要授與動態方法多少的存取權：  
   
--   如果您的方法只使用公用類型和成員，而且您將它和您自己的類型或模組產生關聯，則不需要任何權限。  
+- 如果您的方法只使用公用類型和成員，而且您將它和您自己的類型或模組產生關聯，則不需要任何權限。  
   
--   如果您指定應該略過 JIT 可見度檢查，則建構函式會要求具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。  
+- 如果您指定應該略過 JIT 可見度檢查，則建構函式會要求具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。  
   
--   如果您將動態方法與其他類型產生關聯，甚至是在您自己的組件中的另一個類型，則建構函式會要求具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission> 和具有 <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.SecurityPermission>。  
+- 如果您將動態方法與其他類型產生關聯，甚至是在您自己的組件中的另一個類型，則建構函式會要求具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission> 和具有 <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.SecurityPermission>。  
   
--   如果您將動態方法和其他組件中的類型或模組產生關聯，則建構函式會要求兩項事物：具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission> 及包含其他模組之組件的授權集。 也就是您的呼叫堆疊必須包含所有在目標模組授權集中的權限，加上 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>。  
+- 如果您將動態方法和其他組件中的類型或模組產生關聯，則建構函式會要求兩項事物：具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission> 及包含其他模組之組件的授權集。 也就是您的呼叫堆疊必須包含所有在目標模組授權集中的權限，加上 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>。  
   
     > [!NOTE]
     >  為了回溯相容性，如果目標授權集加上 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 的要求失敗，則建構函式會要求具有 <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.SecurityPermission>。  
@@ -126,13 +126,13 @@ ms.locfileid: "59074517"
   
  請考慮具有網際網路權限的組件可產生動態方法並予以執行的條件：  
   
--   與動態方法發出的模組或類型相關聯的動態方法，或是其授權集會包含 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>，且這會與組件中的模組相關聯，該組件的授權集為發出組件授權集子集或與其相等。  
+- 與動態方法發出的模組或類型相關聯的動態方法，或是其授權集會包含 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>，且這會與組件中的模組相關聯，該組件的授權集為發出組件授權集子集或與其相等。  
   
--   動態方法只會使用公用類型和成員。 如果其授權集包含 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>，而且與組件中的模組相關聯，該組件的授權集為發出組件授權集子集或與其相等，則它可以在相關聯的模組中使用標示為 `internal` 的類型和成員 (在 Visual Basic 中為 `Friend`，在 Common Language Runtime 中繼資料中為 `assembly`)。  
+- 動態方法只會使用公用類型和成員。 如果其授權集包含 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>，而且與組件中的模組相關聯，該組件的授權集為發出組件授權集子集或與其相等，則它可以在相關聯的模組中使用標示為 `internal` 的類型和成員 (在 Visual Basic 中為 `Friend`，在 Common Language Runtime 中繼資料中為 `assembly`)。  
   
--   部分信任組件的授權集包含動態方法所使用的所有類型及成員所要求的權限。  
+- 部分信任組件的授權集包含動態方法所使用的所有類型及成員所要求的權限。  
   
--   該動態方法不會略過 JIT 可見度檢查。  
+- 該動態方法不會略過 JIT 可見度檢查。  
   
 > [!NOTE]
 >  動態方法並不支援偵錯符號。  
@@ -144,7 +144,7 @@ ms.locfileid: "59074517"
  從 [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 開始，當發出動態組件和動態方法時，不再需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。 在所有舊版 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中需要此旗標。  
   
 > [!NOTE]
->  <xref:System.Security.Permissions.ReflectionPermission> (具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 旗標) 根據預設會包含在 `FullTrust` 和 `LocalIntranet` 具名權限集合，而不是 `Internet` 權限集合。 因此，在舊版的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中，僅當程式庫執行針對 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 的 <xref:System.Security.PermissionSet.Assert%2A> 時，程式庫才可搭配網際網路權限使用。 這類程式庫需要仔細的安全性檢閱，因為編碼錯誤可能會造成安全性漏洞。 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 允許在部分信任案例中發出程式碼，而不需提出任何安全性要求，因為產生的程式碼本質上並非有權限的作業。 也就是產生的程式碼之權限不會比發出程式碼的組件還多。 這可讓程式庫發出安全性透明的程式碼，並可免除 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 判斷提示的需要，這可簡化撰寫安全程式庫的工作。  
+>  根據預設，具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission> 包含在 `FullTrust` 和 `LocalIntranet` 具名權限集合，而不是 `Internet` 權限集合。 因此，在舊版的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中，僅當程式庫執行針對 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 的 <xref:System.Security.PermissionSet.Assert%2A> 時，程式庫才可搭配網際網路權限使用。 這類程式庫需要仔細的安全性檢閱，因為編碼錯誤可能會造成安全性漏洞。 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 允許在部分信任案例中發出程式碼，而不需提出任何安全性要求，因為產生的程式碼本質上並非有權限的作業。 也就是產生的程式碼之權限不會比發出程式碼的組件還多。 這可讓程式庫發出安全性透明的程式碼，並可免除 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 判斷提示的需要，這可簡化撰寫安全程式庫的工作。  
   
  此外，[!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 導入了 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標，用來從部分信任的動態方法中存取非公用類型和成員。 對於會存取非公用類型和成員的動態方法，舊版的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 需要 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 旗標；這是永遠不該授與部分信任程式碼的權限。  
   

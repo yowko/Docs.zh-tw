@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1f9a88a347650474c7a63b41984e3346e0ce205
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 00dc191d53d01d33a5dce3ed2d012942e2672dae
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204558"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607519"
 ---
 # <a name="shadow-copying-assemblies"></a>陰影複製組件
 陰影複製可讓應用程式定義域中使用的組件更新，而不需卸載應用程式定義域。 這對必須連續運作的應用程式特別有用，例如 ASP.NET 網站。  
@@ -30,21 +30,21 @@ ms.locfileid: "59204558"
   
  本文包含下列章節：  
   
--   [啟用和使用陰影複製](#EnablingAndUsing)描述基本的用法，以及陰影複製可用的選項。  
+- [啟用和使用陰影複製](#EnablingAndUsing)描述基本的用法，以及陰影複製可用的選項。  
   
--   [啟動效能](#StartupPerformance)描述為了在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中陰影複製而進行的變更，以改善啟動效能，也描述如何還原為舊版的行為。  
+- [啟動效能](#StartupPerformance)描述為了在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中陰影複製而進行的變更，以改善啟動效能，也描述如何還原為舊版的行為。  
   
--   [已淘汰的方法](#ObsoleteMethods)描述對於 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 中控制陰影複製之屬性和方法的變更。  
+- [已淘汰的方法](#ObsoleteMethods)描述對於 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 中控制陰影複製之屬性和方法的變更。  
   
 <a name="EnablingAndUsing"></a>   
 ## <a name="enabling-and-using-shadow-copying"></a>啟用及使用陰影複製  
  您可以使用 <xref:System.AppDomainSetup> 類別的屬性，如下所示，設定用於陰影複製的應用程式定義域：  
   
--   將 <xref:System.AppDomainSetup.ShadowCopyFiles%2A> 屬性設為字串值 `"true"` 來啟用陰影複製。  
+- 將 <xref:System.AppDomainSetup.ShadowCopyFiles%2A> 屬性設為字串值 `"true"` 來啟用陰影複製。  
   
      根據預設，在載入組件之前，此設定會複製在應用程式路徑的所有組件到下載快取。 這與 Common Language Runtime 所維護的快取相同，用以儲存從其他電腦下載的檔案，而且當這些檔案不再必需時，Common Language Runtime 會自動刪除這些檔案。  
   
--   使用 <xref:System.AppDomainSetup.CachePath%2A> 屬性和 <xref:System.AppDomainSetup.ApplicationName%2A> 屬性，選擇性地設定用於陰影複製檔案的自訂位置。  
+- 使用 <xref:System.AppDomainSetup.CachePath%2A> 屬性和 <xref:System.AppDomainSetup.ApplicationName%2A> 屬性，選擇性地設定用於陰影複製檔案的自訂位置。  
   
      藉由串連 <xref:System.AppDomainSetup.ApplicationName%2A> 屬性至 <xref:System.AppDomainSetup.CachePath%2A> 屬性做為子目錄，形成此位置的基底路徑。 這會陰影複製組件到這個路徑的子目錄，而非本身的基底路徑。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "59204558"
   
      有幾個理由可能會讓您想設定陰影複製檔案的自訂位置。 如果您的應用程式會產生大量的複本，則您可能會想要設定陰影複製檔案的自訂位置。 下載快取會受大小所限制，而非存留期，因此 Common Language Runtime 很可能會嘗試刪除仍在使用中的檔案。 設定自訂位置的另一個理由是執行您應用程式的使用者沒有寫入權限，來寫入 Common Language Runtime 為下載快取所使用的目錄位置。  
   
--   使用 <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> 屬性來選擇性地限制陰影複製的組件。  
+- 使用 <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> 屬性來選擇性地限制陰影複製的組件。  
   
      當您啟用應用程式定義域的陰影複製時，預設會複製所有組件到應用程式路徑中；也就是 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A> 屬性所指定的目錄中。 您可以藉由建立字串限制所選目錄的複製，該字串只包含您想要陰影複製的目錄，並指派字串至 <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> 屬性。 請以分號分隔目錄。 只會對在所選目錄中的組件陰影複製。  
   

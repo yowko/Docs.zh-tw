@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2aa7c35ebc06fb67d9cf6216233d2bed65ae76ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16776e83c8bae6cc82329a8f709fd9d1d7cab145
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645895"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634346"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>規則運算式中的分組建構
 分組建構會描寫規則運算式的子運算式，以及擷取輸入字串的子字串。 您可以使用分組建構來執行下列作業：  
   
--   比對輸入字串中重複的子運算式。  
+- 比對輸入字串中重複的子運算式。  
   
--   將數量詞套用至具有多個規則運算式語言項目的子運算式。 如需數量詞的詳細資訊，請參閱 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+- 將數量詞套用至具有多個規則運算式語言項目的子運算式。 如需數量詞的詳細資訊，請參閱 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
--   在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法傳回的字串中包含子運算式。  
+- 在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法傳回的字串中包含子運算式。  
   
--   從 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 屬性擷取個別子運算式，再全部一起與相符文字分開處理。  
+- 從 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 屬性擷取個別子運算式，再全部一起與相符文字分開處理。  
   
  下表列出 .NET 規則運算式引擎支援的分組建構，並指出其為擷取或非擷取。  
   
@@ -63,13 +63,13 @@ ms.locfileid: "54645895"
   
  您可以用四種方式來存取擷取群組：  
   
--   在規則運算式中使用反向參考建構。 使用語法 `\`*number*(其中 where *number* 是所擷取子運算式的序號)，在相同的規則運算式中參考相符子運算式。  
+- 在規則運算式中使用反向參考建構。 使用語法 `\`*number*(其中 where *number* 是所擷取子運算式的序號)，在相同的規則運算式中參考相符子運算式。  
   
--   在規則運算式中使用具名的反向參考建構。 使用語法 `\k<`*name*`>`(其中 where *name* 是擷取群組的名稱) 或 `\k<`*number*`>`(其中 where *number* 是擷取群組的序號)，在相同的規則運算式中參考相符子運算式。 擷取群組的預設名稱與其序號相同。 如需詳細資訊，請參閱本主題稍後的 [具名的相符子運算式](#named_matched_subexpression) 。  
+- 在規則運算式中使用具名的反向參考建構。 使用語法 `\k<`*name*`>`(其中 where *name* 是擷取群組的名稱) 或 `\k<`*number*`>`(其中 where *number* 是擷取群組的序號)，在相同的規則運算式中參考相符子運算式。 擷取群組的預設名稱與其序號相同。 如需詳細資訊，請參閱本主題稍後的 [具名的相符子運算式](#named_matched_subexpression) 。  
   
--   在 `$`*number* $ <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> number <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 取代順序，其中 *number* 是所擷取子運算式的序號)，在相同的規則運算式中參考相符子運算式。  
+- 在 `$`*number* $ <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> number <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 取代順序，其中 *number* 是所擷取子運算式的序號)，在相同的規則運算式中參考相符子運算式。  
   
--   以程式設計方式，使用 <xref:System.Text.RegularExpressions.GroupCollection> 屬性傳回的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 物件。 集合中位置為零的成員代表整個規則運算式相符。 每個後續成員各代表一個相符子運算式。 如需詳細資訊，請參閱 [Grouping Constructs and Regular Expression Objects](#Objects) 一節。  
+- 以程式設計方式，使用 <xref:System.Text.RegularExpressions.GroupCollection> 屬性傳回的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 物件。 集合中位置為零的成員代表整個規則運算式相符。 每個後續成員各代表一個相符子運算式。 如需詳細資訊，請參閱 [Grouping Constructs and Regular Expression Objects](#Objects) 一節。  
   
  下列範例說明可識別文字中重複文字的規則運算式。 規則運算式模式的兩個擷取群組代表重複文字的兩個執行個體。 擷取第二個執行個體是為了報告其於輸入字串中的開始位置。  
   
@@ -112,17 +112,17 @@ ms.locfileid: "54645895"
   
  您可以用下列方式來存取具名的擷取群組：  
   
--   在規則運算式中使用具名的反向參考建構。 使用語法 `\k<`*name*`>`(其中 where *name* 是所擷取子運算式的名稱)，在相同的規則運算式中參考相符子運算式。  
+- 在規則運算式中使用具名的反向參考建構。 使用語法 `\k<`*name*`>`(其中 where *name* 是所擷取子運算式的名稱)，在相同的規則運算式中參考相符子運算式。  
   
--   在規則運算式中使用反向參考建構。 使用語法 `\`*number*(其中 where *number* 是所擷取子運算式的序號)，在相同的規則運算式中參考相符子運算式。 具名的相符子運算式會在相符子運算式之後，由左至右連續編號。  
+- 在規則運算式中使用反向參考建構。 使用語法 `\`*number*(其中 where *number* 是所擷取子運算式的序號)，在相同的規則運算式中參考相符子運算式。 具名的相符子運算式會在相符子運算式之後，由左至右連續編號。  
   
--   在 `${`*name*`}` $ <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> number <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 取代順序，其中 *name* 是所擷取子運算式的名稱)，在相同的規則運算式中參考相符子運算式。  
+- 在 `${`*name*`}` $ <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> number <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 取代順序，其中 *name* 是所擷取子運算式的名稱)，在相同的規則運算式中參考相符子運算式。  
   
--   在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法呼叫中使用 `$`*number* 取代序列，其中 *number* 是所擷取子運算式的序號。  
+- 在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法呼叫中使用 `$`*number* 取代序列，其中 *number* 是所擷取子運算式的序號。  
   
--   以程式設計方式，使用 <xref:System.Text.RegularExpressions.GroupCollection> 屬性傳回的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 物件。 集合中位置為零的成員代表整個規則運算式相符。 每個後續成員各代表一個相符子運算式。 具名的擷取群組儲存在集合中，編號的擷取群組之後。  
+- 以程式設計方式，使用 <xref:System.Text.RegularExpressions.GroupCollection> 屬性傳回的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 物件。 集合中位置為零的成員代表整個規則運算式相符。 每個後續成員各代表一個相符子運算式。 具名的擷取群組儲存在集合中，編號的擷取群組之後。  
   
--   以程式設計方式，提供子運算式名稱給 <xref:System.Text.RegularExpressions.GroupCollection> 物件的索引子 (在 C# 中) 或其 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 屬性 (在 Visual Basic 中)。  
+- 以程式設計方式，提供子運算式名稱給 <xref:System.Text.RegularExpressions.GroupCollection> 物件的索引子 (在 C# 中) 或其 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 屬性 (在 Visual Basic 中)。  
   
  有一個簡單的規則運算式模式，說明如何以程式設計方式，或是使用規則運算式語言語法，來參考編號 (未具名) 和具名群組。 規則運算式 `((?<One>abc)\d+)?(?<Two>xyz)(.*)` 會依號碼或依名稱產生下列擷取群組。 第一個擷取群組 (編號 0) 一律參考整個模式。  
   
@@ -446,11 +446,11 @@ ms.locfileid: "54645895"
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>分組建構和規則運算式物件  
  規則運算式擷取群組所比對的子字串會以 <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> 物件來代表，此物件可從 <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> 屬性傳回的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 物件來擷取。 <xref:System.Text.RegularExpressions.GroupCollection> 物件的填入方式如下：  
   
--   集合中的第一個 <xref:System.Text.RegularExpressions.Group> 物件 (索引位置為零的物件) 代表整個比對。  
+- 集合中的第一個 <xref:System.Text.RegularExpressions.Group> 物件 (索引位置為零的物件) 代表整個比對。  
   
--   下一個 <xref:System.Text.RegularExpressions.Group> 物件組合代表未具名 (編號的) 擷取群組。 其出現順序會依照規則運算式中定義的順序，由左至右。 這些群組的索引值範圍是從 1 到集合中未具名擷取群組的編號。 (特定群組的索引同等於其編號的反向參考。 如需反向參考的詳細資訊，請參閱 [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。)  
+- 下一個 <xref:System.Text.RegularExpressions.Group> 物件組合代表未具名 (編號的) 擷取群組。 其出現順序會依照規則運算式中定義的順序，由左至右。 這些群組的索引值範圍是從 1 到集合中未具名擷取群組的編號。 (特定群組的索引同等於其編號的反向參考。 如需反向參考的詳細資訊，請參閱 [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。)  
   
--   最後一個 <xref:System.Text.RegularExpressions.Group> 物件組合代表具名擷取群組。 其出現順序會依照規則運算式中定義的順序，由左至右。 第一個具名擷取群組的索引值比最後一個未具名擷取群組的索引值大一。 如果規則運算式中沒有未具名擷取群組，則第一個具名擷取群組的索引值為一。  
+- 最後一個 <xref:System.Text.RegularExpressions.Group> 物件組合代表具名擷取群組。 其出現順序會依照規則運算式中定義的順序，由左至右。 第一個具名擷取群組的索引值比最後一個未具名擷取群組的索引值大一。 如果規則運算式中沒有未具名擷取群組，則第一個具名擷取群組的索引值為一。  
   
  如果您將數量詞套用至擷取群組，對應之 <xref:System.Text.RegularExpressions.Group> 物件的 <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>、 <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>和 <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> 屬性會反映擷取群組所擷取的最後一個子字串。 您可以擷取由群組所擷取的一組完整子字串，那些群組具有 <xref:System.Text.RegularExpressions.CaptureCollection> 屬性傳回之 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 物件中的數量詞。  
   

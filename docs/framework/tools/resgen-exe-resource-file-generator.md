@@ -17,27 +17,27 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2cb07389ad68985362993e76f82e58d2a59e237
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: bb2aabfd083a71d8d083d08e9bc7e2a7ad065e7f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178876"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623358"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (資源檔產生器)
 資源檔產生器 (Resgen.exe) 可以將文字檔 (.txt 或 .restext) 及 XML 架構資源格式檔 (.resx)，轉換成通用語言執行平台二進位檔 (.resources)，這種檔案可以嵌入至執行階段二進位可執行檔或附屬組件  (請參閱[建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md))。  
   
  Resgen.exe 為執行下列工作的通用資源轉換公用程式：  
   
--   將 .txt 或 .restext 檔轉換成 .resources 或 .resx 檔  (.restext 檔案的格式與 .txt 檔案的格式相同。 不過，.restext 副檔名可以幫助您更容易識別內含資源定義的文字檔)。  
+- 將 .txt 或 .restext 檔轉換成 .resources 或 .resx 檔  (.restext 檔案的格式與 .txt 檔案的格式相同。 不過，.restext 副檔名可以幫助您更容易識別內含資源定義的文字檔)。  
   
--   將 .resources 檔轉換成文字或 .resx 檔。  
+- 將 .resources 檔轉換成文字或 .resx 檔。  
   
--   將 .resx 檔轉換成文字或 .resources 檔。  
+- 將 .resx 檔轉換成文字或 .resources 檔。  
   
--   從組譯碼擷取字串資源到適用於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式的 .resw 檔案。  
+- 從組譯碼擷取字串資源到適用於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式的 .resw 檔案。  
   
--   建立可存取個別具名資源和對於 <xref:System.Resources.ResourceManager> 執行個體的強類型類別。  
+- 建立可存取個別具名資源和對於 <xref:System.Resources.ResourceManager> 執行個體的強類型類別。  
   
  如果 Resgen.exe 因任何理由而失敗，則傳回值將會是 –1。  
   
@@ -73,7 +73,7 @@ resgen filename.extension [outputDirectory]
   
 |參數|說明|  
 |-------------------------|-----------------|  
-|`/define:` *symbol1*[, *symbol2*,...]|從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，支援文字資源檔 (.txt 或 .restext) 的條件式編譯。 如果 *symbol* 對應至在 `#ifdef` 建構內輸入文字檔中的符號，關聯字串資源會包含在 .resources 檔案中。 如果輸入文字檔包含有不是 `#if !` 參數所定義之符號的 `/define` 陳述式，關聯的字串資源會包含在資源檔中。<br /><br /> `/define` 會被忽略 (如果搭配非文字檔案使用)。 符號會區分大小寫。<br /><br /> 如需這個選項的詳細資訊，請參閱本主題稍後的[條件式編譯資源](#Conditional)。|  
+|`/define:` *symbol1*[, *symbol2*,...]|從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，支援文字資源檔 (.txt 或 .restext) 的條件式編譯。 如果 *symbol* 對應至在 `#ifdef` 建構內輸入文字檔中的符號，關聯字串資源會包含在 .resources 檔案中。 如果輸入文字檔包含有不是 `#if !` 參數所定義之符號的 `/define` 陳述式，關聯的字串資源會包含在資源檔中。<br /><br /> 使用非文字檔案則會忽略 `/define`。 符號會區分大小寫。<br /><br /> 如需這個選項的詳細資訊，請參閱本主題稍後的[條件式編譯資源](#Conditional)。|  
 |`useSourcePath`|具體指明輸入檔的目前目錄是用來解析相對檔案路徑。|  
 |`/compile`|可讓您指定在單一大量作業中，將多個 .resx 或文字檔轉換成多個 .resources 檔案。 如果您不指定這個選項，則只能指定一個輸入檔引數。 輸出檔案的名稱為 <檔案名稱>.resources。<br /><br /> 這個選項無法與 `/str:` 選項搭配使用。<br /><br /> 如需這個選項的詳細資訊，請參閱本主題稍後的[編譯或轉換多個檔案](#Multiple)。|  
 |`/r:` `assembly`|從指定的組件參考中繼資料。 在轉換 .resx 檔時，以及讓 Resgen.exe 序列化或還原序列化物件資源時使用。 它類似 C# 和 Visual Basic 編譯器的 `/reference:` 或 `/r:` 選項。|  
@@ -116,17 +116,17 @@ resgen filename.extension [outputDirectory]
 ## <a name="performing-specific-resgenexe-tasks"></a>執行特定 Resgen.exe 工作  
  您可以透過不同方式來使用 Resgen.exe：將文字或 XML 架構資源檔編譯成二進位檔案、資源檔格式間的轉換和產生包裝 <xref:System.Resources.ResourceManager> 功能並提供存取資源的類別。 本節提供各項工作的詳細資訊：  
   
--   [將資源編譯成二進位檔](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
+- [將資源編譯成二進位檔](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
   
--   [資源檔類型間的轉換](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
+- [資源檔類型間的轉換](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
   
--   [編譯或轉換多個檔案](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
+- [編譯或轉換多個檔案](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
   
--   [將資源匯出至 .resw 檔案](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
+- [將資源匯出至 .resw 檔案](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
   
--   [條件式編譯資源](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
+- [條件式編譯資源](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
   
--   [產生強類型資源類別](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
+- [產生強型別資源類別](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
   
 <a name="Compiling"></a>   
 ### <a name="compiling-resources-into-a-binary-file"></a>將資源編譯成二進位檔  
@@ -170,13 +170,13 @@ resgen Resources.resx Resources.resources
 ### <a name="converting-between-resource-file-types"></a>資源檔類型間的轉換  
  除了將文字或 XML 架構的資源檔編譯成二進位 .resources 檔外，Resgen.exe 能將任何支援的檔案類型轉換為其他任何支援的檔案類型。 這表示它可以執行下列轉換：  
   
--   .txt 檔和 .restext 檔轉換為 .resx 檔。  
+- .txt 檔和 .restext 檔轉換為 .resx 檔。  
   
--   .resx 檔轉換為 .txt 和 .restext 檔。  
+- .resx 檔轉換為 .txt 和 .restext 檔。  
   
--   .resources 檔轉換為 .txt 檔和 .restext 檔。  
+- .resources 檔轉換為 .txt 檔和 .restext 檔。  
   
--   .resources 檔轉換為 .resx 檔。  
+- .resources 檔轉換為 .resx 檔。  
   
  語法與上一節顯示的內容相同。  
   
@@ -293,7 +293,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
  如果 `inputFilename` 為 .resources 檔案且 `outputFilename` 也是 .resources 檔，則 Resgen.exe 會複製 .resources 檔案。 如果省略 `outputFilename`，Resgen.exe 會覆寫具有相同 .resources 檔案的 `inputFilename`。  
   
- *語言*  
+ *language*  
  產生強類型資源類別的原始程式碼時，所使用的語言。 針對 C# 程式碼，可能的值為 `cs`、`C#` 和 `csharp`；針對 Visual Basic 程式碼，為 `vb` 和 `visualbasic`；針對 VBScript 程式碼，為 `vbs` 和 `vbscript`；針對 C++ 程式碼，為 `c++`、`mc` 和 `cpp`。  
   
  *namespace*  
@@ -315,13 +315,13 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
  強類型資源類別具有下列成員：  
   
--   無參數建構函式，可以使用來具現化強類型資源類別。  
+- 無參數建構函式，可以使用來具現化強類型資源類別。  
   
--   `static` (C#) 或 `Shared` (Visual Basic) 和唯讀 `ResourceManager` 屬性，可傳回 <xref:System.Resources.ResourceManager> 管理強類型資源的執行個體。  
+- `static` (C#) 或 `Shared` (Visual Basic) 和唯讀 `ResourceManager` 屬性，可傳回 <xref:System.Resources.ResourceManager> 管理強類型資源的執行個體。  
   
--   靜態 `Culture` 屬性，可讓您將文化特性設定為資源擷取使用。 根據預設，它的值是為 `null`，表示已使用目前的 UI 文化特性。  
+- 靜態 `Culture` 屬性，可讓您將文化特性設定為資源擷取使用。 根據預設，它的值是為 `null`，表示已使用目前的 UI 文化特性。  
   
--   在 .resource 檔中每個 resource 的 `static` (C#) 或 `Shared` (Visual Basic) 和唯讀屬性。 屬性名稱是資源的名稱。-  
+- 在 .resource 檔中每個 resource 的 `static` (C#) 或 `Shared` (Visual Basic) 和唯讀屬性。 屬性名稱是資源的名稱。-  
   
  例如，下列命令會將名為 StringResources.txt 編譯為 StringResources.resources，並且在一個名為 StringResources.vb 的 Visual Basic 原始程式碼中產生名為 `StringResources` 的類別，可用於存取資源管理員。  
   

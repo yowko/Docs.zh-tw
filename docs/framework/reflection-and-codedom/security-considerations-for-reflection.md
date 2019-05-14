@@ -12,33 +12,33 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c238f0aebd7c81443eb55fe0ee84844f0c9aee8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 34f0002554320f99d961d03e9eebd8d0f774f1f6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207509"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591505"
 ---
 # <a name="security-considerations-for-reflection"></a>反映的安全性考量
 反映可讓您取得類型和成員的相關資訊，以及存取成員 (也就是呼叫方法和建構函式、取得和設定屬性值、加入和移除事件處理常式等等)。 不限制使用反映來取得類型和成員的相關資訊。 所有程式碼都可以使用反映來執行下列工作：  
   
--   列舉類型和成員，並檢查其中繼資料。  
+- 列舉類型和成員，並檢查其中繼資料。  
   
--   列舉及檢查組件和模組。  
+- 列舉及檢查組件和模組。  
   
  相對地，使用反映來存取成員有所限制。 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]開始，只有受信任的程式碼才能使用反映存取安全性關鍵成員。 此外，只有受信任的程式碼能夠使用反映來存取已編譯程式碼無法直接存取的非公用成員。 最後，使用反映存取安全性關鍵成員的程式碼必須擁有安全關鍵成員所要求的任何權限，就如同編譯的程式碼。  
   
  受限於所需的權限，程式碼可以使用反映來執行下列類型的存取：  
   
--   存取非安全性關鍵的公用成員。  
+- 存取非安全性關鍵的公用成員。  
   
--   存取可供已編譯程式碼存取的非公用成員 (前提是這些成員不是安全性關鍵成員)。 這類非公用成員的範例包括：  
+- 存取可供已編譯程式碼存取的非公用成員 (前提是這些成員不是安全性關鍵成員)。 這類非公用成員的範例包括：  
   
-    -   呼叫程式碼基底類別的 Protected 成員。 (在反映中，這稱為系列層級的存取。)  
+    - 呼叫程式碼基底類別的 Protected 成員。 (在反映中，這稱為系列層級的存取。)  
   
-    -   `internal` 呼叫程式碼組件中的以下成員 (在 Visual Basic 中為 `Friend` 成員)： (在反映中，這稱為組件層級存取。)  
+    - 呼叫程式碼組件中的 `internal` 成員 (在 Visual Basic 中為 `Friend` 成員)。 (在反映中，這稱為組件層級存取。)  
   
-    -   包含呼叫程式碼之類別的其他執行個體的私用成員。  
+    - 包含呼叫程式碼之類別的其他執行個體的私用成員。  
   
  例如，在沙箱化應用程式定義域中執行的程式碼，僅限於此清單中所描述的存取權，除非應用程式定義域授與其他權限。  
   
@@ -50,9 +50,9 @@ ms.locfileid: "59207509"
 ## <a name="accessing-security-critical-members"></a>存取安全性關鍵成員  
  如果成員有 <xref:System.Security.SecurityCriticalAttribute>、屬於具有 <xref:System.Security.SecurityCriticalAttribute> 的類型，或位於安全性關鍵組件中，就是安全性關鍵成員。 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，存取安全性關鍵成員的規則如下：  
   
--   透明程式碼無法使用反映來存取安全性關鍵成員，即使是完全受信任的程式碼也一樣。 會擲回 <xref:System.MethodAccessException>、<xref:System.FieldAccessException> 或 <xref:System.TypeAccessException>。  
+- 透明程式碼無法使用反映來存取安全性關鍵成員，即使是完全受信任的程式碼也一樣。 會擲回 <xref:System.MethodAccessException>、<xref:System.FieldAccessException> 或 <xref:System.TypeAccessException>。  
   
--   使用部分信任來執行的程式碼會視為透明。  
+- 使用部分信任來執行的程式碼會視為透明。  
   
  無論是由已編譯程式碼直接存取安全性關鍵成員，或是使用反映來存取安全性關鍵成員，這些規則都一樣。  
   
@@ -77,18 +77,18 @@ ms.locfileid: "59207509"
 ## <a name="accessing-members-that-are-normally-inaccessible"></a>存取通常無法存取的成員  
  若要使用反映來叫用無法存取的成員 (根據 Common Language Runtime 的存取範圍規則)，您的程式碼必須被授與下列兩個權限之一：  
   
--   若要允許程式碼叫用任何非公用成員：您的程式碼必須被授與具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。  
+- 若要允許程式碼叫用任何非公用成員：您的程式碼必須被授與具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。  
   
     > [!NOTE]
     >  根據預設，安全性原則會拒絕將此權限授與源自網際網路的程式碼。 此權限絕不能授與源自網際網路的程式碼。  
   
--   若要允許程式碼叫用任何非公用成員，只要包含被叫用成員的組件授權集，與包含叫用程式碼的組件授權集相同，或是其授權集的子集：您的程式碼必須被授與具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。  
+- 若要允許程式碼叫用任何非公用成員，只要包含被叫用成員的組件授權集，與包含叫用程式碼的組件授權集相同，或是其授權集的子集：您的程式碼必須被授與具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。  
   
  例如，假設您將網際網路權限，以及具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>，授與應用程式定義域，然後執行網際網路應用程式來搭配兩個組件 A 和 B。  
   
--   組件 A 可以使用反映來存取組件 B 的私用成員，因為組件 B 的授權集不包含未授與 A 的任何權限。  
+- 組件 A 可以使用反映來存取組件 B 的私用成員，因為組件 B 的授權集不包含未授與 A 的任何權限。  
   
--   組件 A 無法使用反映來存取 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 組件的私用成員，例如 mscorlib.dll，因為 mscorlib.dll 是完全受信任，因此擁有尚未授與組件 A 的權限。當程式碼存取安全性查核執行階段的堆疊時，會擲回 <xref:System.MemberAccessException>。  
+- 組件 A 無法使用反映來存取 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 組件的私用成員，例如 mscorlib.dll，因為 mscorlib.dll 是完全受信任，因此擁有尚未授與組件 A 的權限。當程式碼存取安全性查核執行階段的堆疊時，會擲回 <xref:System.MemberAccessException>。  
   
 ## <a name="serialization"></a>序列化  
  進行序列化時，不論存取範圍為何，具有 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.SecurityPermission> 都可讓您取得或設定可序列化類型的成員。 此權限可讓程式碼探索及變更執行個體的私用狀態。 (除了授與適當的權限，也必須在中繼資料中將該類型[標示](../../../docs/standard/attributes/applying-attributes.md)為可序列化。)  
@@ -98,11 +98,11 @@ ms.locfileid: "59207509"
   
 ## <a name="version-information"></a>版本資訊  
   
--   從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，透明程式碼無法使用反映來存取安全性關鍵的成員。  
+- 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，透明程式碼無法使用反映來存取安全性關鍵的成員。  
   
--   [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 中已開始使用 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標。 舊版 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 需要 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 旗標，使用反映的程式碼才能存取非公用成員。 絕不要將此權限授與部分受信任的程式碼。  
+- [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 中已開始使用 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標。 舊版 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 需要 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 旗標，使用反映的程式碼才能存取非公用成員。 絕不要將此權限授與部分受信任的程式碼。  
   
--   從 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 開始，使用反映來取得非公用類型和成員的相關資訊時，不需要任何權限。 在舊版中，會需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。  
+- 從 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 開始，使用反映來取得非公用類型和成員的相關資訊時，不需要任何權限。 在舊版中，會需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。  
   
 ## <a name="see-also"></a>另請參閱
 

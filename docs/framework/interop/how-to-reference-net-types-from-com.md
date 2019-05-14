@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e033ba4b3b98367452b355363058adc7f1a5887
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 081548f9004d2fedf4d49845d3f44d4609fa508e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198396"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626315"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>作法：參考 COM 的 .NET 類型
 從用戶端和伺服器程式碼的觀點來看，COM 和 .NET Framework 之間的差異大部分是無形的。 Microsoft Visual Basic 用戶端可以在物件瀏覽器中檢視 .NET 物件，這會公開物件方法和語法、屬性及欄位，完全如同它是任何其他 COM 物件一樣。  
@@ -28,7 +28,7 @@ ms.locfileid: "59198396"
   
 ### <a name="to-import-a-library"></a>匯入程式庫  
   
--   在 **#import** 指示詞中指定 **raw_interfaces_only** 選項。 例如：  
+- 在 **#import** 指示詞中指定 **raw_interfaces_only** 選項。 例如：  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
@@ -36,7 +36,7 @@ ms.locfileid: "59198396"
   
      -或-  
   
--   包括 Mscorlib.tlb 的 #import 指示詞。 例如：  
+- 包括 Mscorlib.tlb 的 #import 指示詞。 例如：  
   
     ```cpp  
     #import "mscorlib.tlb"  
@@ -47,5 +47,5 @@ ms.locfileid: "59198396"
 
 - [將 .NET Framework 元件公開給 COM](exposing-dotnet-components-to-com.md)
 - [向 COM 註冊組件](registering-assemblies-with-com.md)
-- [呼叫 .NET 物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
+- [呼叫 .NET 物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)) \(機器翻譯\)
 - [部署供 COM 存取的應用程式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

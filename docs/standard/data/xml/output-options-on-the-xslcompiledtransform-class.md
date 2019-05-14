@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 694d2be51d025ab054caf19e4aa2900216ad5b2e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0f56e27b2ae9a32385aa9a44db631d2909023206
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47204993"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647846"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>XslCompiledTransform 類別的輸出選項
 本主題討論可用的 XSLT 輸出選項。 您可以指定樣式表中或 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法上的輸出選項。  
@@ -55,7 +55,7 @@ ms.locfileid: "47204993"
   
 ## <a name="notes"></a>注意  
   
--   寫出空白標記時，請在項目名稱的最後一個字元與反斜線之間寫入一個空格，例如 `<myElement />`。 如此可讓舊版瀏覽器正確顯示所產生的 HTML 頁面。  
+- 寫出空白標記時，請在項目名稱的最後一個字元與反斜線之間寫入一個空格，例如 `<myElement />`。 如此可讓舊版瀏覽器正確顯示所產生的 HTML 頁面。  
   
 ## <a name="see-also"></a>另請參閱
 

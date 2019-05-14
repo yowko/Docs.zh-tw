@@ -13,29 +13,29 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 931edf3610d083f6821ec87d3e05db855e88c6f9
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: fa4b8fdd56ed8a1304b6ee436ce3391c52ae7b9d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836418"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622729"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的共變數和反變數
 <a name="top"></a> 共變數和反變數這兩個詞，是指使用比原本所指定更多 (較明確) 或更少 (較不明確) 衍生類型的能力。 泛型類型參數支援共變數和反變數，可在指派和使用泛型類型時提供更大的彈性。 當您參考類型系統時，共變數、反變數和不可變數的定義如下。 範例中會假設名為 `Base` 的基底類別，以及名為 `Derived`的衍生類別。  
   
--   `Covariance`  
+- `Covariance`  
   
      可讓您使用比原本指定更多衍生的類型。  
   
      您可以將 `IEnumerable<Derived>` (在 Visual Basic 中為`IEnumerable(Of Derived)` ) 的執行個體指派給 `IEnumerable<Base>`類型的變數。  
   
--   `Contravariance`  
+- `Contravariance`  
   
      可讓您使用比原本所指定更泛型 (較少衍生) 的類型。  
   
      您可以將 `Action<Base>` (在 Visual Basic 中為`Action(Of Base)` ) 的執行個體指派給 `Action<Derived>`類型的變數。  
   
--   `Invariance`  
+- `Invariance`  
   
      表示您只能使用原本指定的類型，因此不可變泛型類型參數既不是共變數，也不是反變數。  
   
@@ -59,25 +59,25 @@ ms.locfileid: "56836418"
   
  共變性和逆變性合稱為「 *變異性*」(Variance)。 未標示 Covariant 或 Contravariant 的泛型類型參數，稱為 *Invariant*參數。 通用語言執行平台中變異數事實的簡短摘要。  
   
--   在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中，Variant 類型參數僅限為泛型介面和泛型委派類型。  
+- 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中，Variant 類型參數僅限為泛型介面和泛型委派類型。  
   
--   泛型介面或泛型委派類型可以同時具有 Covariant 和 Contravariant 類型參數。  
+- 泛型介面或泛型委派類型可以同時具有 Covariant 和 Contravariant 類型參數。  
   
--   變異數只適用於參考類型，因此如果將 Variant 類型參數指定為實值類型，該類型參數最後建構的類型會是 Invariant。  
+- 變異數只適用於參考類型，因此如果將 Variant 類型參數指定為實值類型，該類型參數最後建構的類型會是 Invariant。  
   
--   變異數不適用於委派組合。 也就是說，如果有分別適用於 `Action<Derived>` 和 `Action<Base>` (在 Visual Basic 中則為`Action(Of Derived)` 和 `Action(Of Base)` ) 類型的兩個委派，您無法將第二個委派與第一個委派組合 (雖然結果會是類型安全的)。 變異數允許將第二個委派指派給 `Action<Derived>`類型的變數，但是委派只有在類型完全相符時才能組合。  
+- 變異數不適用於委派組合。 也就是說，如果有分別適用於 `Action<Derived>` 和 `Action<Base>` (在 Visual Basic 中則為`Action(Of Derived)` 和 `Action(Of Base)` ) 類型的兩個委派，您無法將第二個委派與第一個委派組合 (雖然結果會是類型安全的)。 變異數允許將第二個委派指派給 `Action<Derived>`類型的變數，但是委派只有在類型完全相符時才能組合。  
   
  下列小節將詳細說明 Covariant 和 Contravariant 類型參數：  
   
--   [具有 Covariant 類型參數的泛型介面](#InterfaceCovariantTypeParameters)  
+- [具有 Covariant 類型參數的泛型介面](#InterfaceCovariantTypeParameters)  
   
--   [具有 Contravariant 泛型類型參數的泛型介面](#InterfaceCovariantTypeParameters)  
+- [具有 Contravariant 泛型類型參數的泛型介面](#InterfaceCovariantTypeParameters)  
   
--   [具有 Variant 類型參數的泛型委派](#DelegateVariantTypeParameters)  
+- [具有 Variant 類型參數的泛型委派](#DelegateVariantTypeParameters)  
   
--   [定義 Variant 泛型介面與委派](#DefiningVariantTypeParameters)  
+- [定義 Variant 泛型介面與委派](#DefiningVariantTypeParameters)  
   
--   [Variant 泛型介面與委派類型的清單](#VariantList)  
+- [Variant 泛型介面與委派類型的清單](#VariantList)  
   
 <a name="InterfaceCovariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>具有 Covariant 類型參數的泛型介面  

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e56680a74bc6800242ff56d27bcf179ee372df74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 742f031961a24475d67718c595431e36bfca8c22
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579585"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615379"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>用於結構描述編譯的 XmlSchemaSet
 說明 <xref:System.Xml.Schema.XmlSchemaSet>，它是一種可儲存及驗證 XML 結構描述定義語言 (XSD) 結構描述的快取。  
@@ -37,9 +37,9 @@ ms.locfileid: "54579585"
 ## <a name="migrating-to-the-xmlschemaset"></a>移轉至 XmlSchemaSet  
  下列程式碼範例提供從過時的 <xref:System.Xml.Schema.XmlSchemaSet> 類別到新 <xref:System.Xml.Schema.XmlSchemaCollection> 類別的移轉指南。 該程式碼範例會說明兩種類別之間的下列主要差異。  
   
--   不同於 <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> 類別的 <xref:System.Xml.Schema.XmlSchemaCollection> 方法，當呼叫 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法時，不會編譯結構描述。 在範例程式碼中，會明確呼叫 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法。  
+- 不同於 <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> 類別的 <xref:System.Xml.Schema.XmlSchemaCollection> 方法，當呼叫 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法時，不會編譯結構描述。 在範例程式碼中，會明確呼叫 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法。  
   
--   若要重複處理 <xref:System.Xml.Schema.XmlSchemaSet>，則必須使用 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 屬性。  
+- 若要重複處理 <xref:System.Xml.Schema.XmlSchemaSet>，則必須使用 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 屬性。  
   
  下列是過時的 <xref:System.Xml.Schema.XmlSchemaCollection> 程式碼範例。  
   

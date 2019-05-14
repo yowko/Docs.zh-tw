@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Visual Basic 中顯示可用的序列埠
+title: 作法：在 Visual Basic 中顯示可用的序列埠
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports, availability
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
-ms.openlocfilehash: 57b3a33fecb6128a10ce903fd26724de98acb8c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d6b092b499af2003e8a43987677b13741c362b1b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834643"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662713"
 ---
-# <a name="how-to-show-available-serial-ports-in-visual-basic"></a>HOW TO：在 Visual Basic 中顯示可用的序列埠
+# <a name="how-to-show-available-serial-ports-in-visual-basic"></a>作法：在 Visual Basic 中顯示可用的序列埠
 本主題描述如何在 Visual Basic 中使用 `My.Computer.Ports` 來顯示電腦的可用序列埠。  
   
  為了允許使用者選取所要使用的序列埠，序列埠的名稱放在 <xref:System.Windows.Forms.ListBox> 控制項中。  
@@ -31,11 +31,11 @@ ms.locfileid: "58834643"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   System.Windows.Forms.dll 的專案參考。  
+- System.Windows.Forms.dll 的專案參考。  
   
--   <xref:System.Windows.Forms> 命名空間成員的存取權。 新增 `Imports` 陳述式 (如果未在程式碼中完整限定成員名稱)。 如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
+- <xref:System.Windows.Forms> 命名空間成員的存取權。 新增 `Imports` 陳述式 (如果未在程式碼中完整限定成員名稱)。 如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
   
--   您的表單會有名為 `ListBox1` 的 <xref:System.Windows.Forms.ListBox> 控制項。  
+- 您的表單會有名為 `ListBox1` 的 <xref:System.Windows.Forms.ListBox> 控制項。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  您不一定要使用 <xref:System.Windows.Forms.ListBox> 控制項來顯示可用的序列埠名稱。 相反地，您可以使用 <xref:System.Windows.Forms.ComboBox> 或其他控制項。 如果應用程式不需要使用者的回應，您還可以使用 <xref:System.Windows.Forms.TextBox> 控制項來顯示資訊。  

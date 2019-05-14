@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49c490b57574f8c9c9c93e3e0da2089cec95481f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: daebcf210dfa484c49f52635bb5c3c8f74c8a88a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59344230"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591731"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>作法：使用反映發出定義泛型方法
 第一個程序示範如何建立有兩個類型參數的簡單泛型方法，以及如何將類別條件約束、介面條件約束和特殊條件約束套用至類型參數。  
@@ -95,7 +95,7 @@ ms.locfileid: "59344230"
      [!code-csharp[GenericMethodHowTo#10](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#10)]
      [!code-vb[GenericMethodHowTo#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#10)]  
   
-2. 使用 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 方法的泛型方法多載，發出程式碼以建立 `TOutput` 的執行個體。 指定的類型需要有無參數建構函式才能使用此多載，這是在 `TOutput` 新增該條件約束的原因。 將 `TOutput` 傳遞到 <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>，以建立建構的泛型方法。 發出程式碼以呼叫方法後，再發出程式碼將它儲存在區域變數 `retVal` 中 (使用 <xref:System.Reflection.Emit.OpCodes.Stloc_S>  
+2. 使用 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 方法的泛型方法多載，發出程式碼以建立 `TOutput` 的執行個體。 指定的類型需要有無參數建構函式才能使用此多載，這是在 `TOutput` 新增該條件約束的原因。 將 `TOutput` 傳遞到 <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>，以建立建構的泛型方法。 發出程式碼以呼叫方法後，再使用 <xref:System.Reflection.Emit.OpCodes.Stloc_S> 發出程式碼將它儲存在區域變數 `retVal` 中。  
   
      [!code-csharp[GenericMethodHowTo#11](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#11)]
      [!code-vb[GenericMethodHowTo#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#11)]  
@@ -117,7 +117,7 @@ ms.locfileid: "59344230"
   
 6. 發出此迴圈的程式碼。 第一個步驟是呼叫有 `loopAgain` 標籤的 <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A>，來標記迴圈頂端。 使用標籤的分支陳述式現在會分支到程式碼的這個點。 下個步驟推送 `TOutput` 物件、投射到 `ICollection(Of TInput)`，再到堆疊。 它不是立即需要，但要就位以待呼叫 `Add` 方法。 接下來，將輸入陣列推送至堆疊，再將包含目前索引的 `index` 變數推送至陣列。 <xref:System.Reflection.Emit.OpCodes.Ldelem> 作業碼會從堆疊取出索引和陣列，並將索引的陣列項目推送至堆疊。 堆疊已就緒可呼叫 <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> 方法，它會從堆疊取出集合和新的項目，並將項目新增至集合。  
   
-     迴圈中其餘的程式碼會遞增索引，並測試看迴圈是否已結束：索引和 32 位元整數 1 會推送到堆疊並相加，將總和留在堆疊上，總和會儲存在 `index` 中。 <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> 若要將此點設定為迴圈的進入點，則會呼叫 再次載入索引。 輸入陣列會推送到堆疊，並發出 <xref:System.Reflection.Emit.OpCodes.Ldlen> 取得其長度。 索引和長度現在都在堆疊上，而 <xref:System.Reflection.Emit.OpCodes.Clt> 會發出以比較兩者。 如果索引小於長度，<xref:System.Reflection.Emit.OpCodes.Brtrue_S> 就會分支回到迴圈的開頭。  
+     迴圈中其餘的程式碼會遞增索引，並測試看迴圈是否已結束：索引和 32 位元整數 1 會推送到堆疊並相加，將總和留在堆疊上，總和會儲存在 `index` 中。 呼叫 <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> 以將此點設定為迴圈的進入點。 再次載入索引。 輸入陣列會推送到堆疊，並發出 <xref:System.Reflection.Emit.OpCodes.Ldlen> 取得其長度。 索引和長度現在都在堆疊上，而 <xref:System.Reflection.Emit.OpCodes.Clt> 會發出以比較兩者。 如果索引小於長度，<xref:System.Reflection.Emit.OpCodes.Brtrue_S> 就會分支回到迴圈的開頭。  
   
      [!code-csharp[GenericMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#13)]
      [!code-vb[GenericMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#13)]  
@@ -164,13 +164,13 @@ ms.locfileid: "59344230"
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
--   此程式碼包含編譯所需的 C# `using` 陳述式 (Visual Basic 為 `Imports`)。  
+- 此程式碼包含編譯所需的 C# `using` 陳述式 (Visual Basic 為 `Imports`)。  
   
--   不需要任何其他組件參考。  
+- 不需要任何其他組件參考。  
   
--   在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
+- 在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Reflection.Emit.MethodBuilder>
-- [作法：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+- [如何：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)

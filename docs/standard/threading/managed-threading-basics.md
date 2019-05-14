@@ -1,5 +1,5 @@
 ---
-title: 受控執行緒處理的基本概念
+title: Managed 執行緒處理的基本概念
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e053a04ba0587a4eca166fa710bc465094feca80
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: b352c35a327ed4736a1f41816d3f15c1a0f559f5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479564"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644813"
 ---
 # <a name="managed-threading-basics"></a>受控執行緒處理的基本概念
 
@@ -42,9 +42,6 @@ ms.locfileid: "55479564"
   
  [Windows 中的 Managed 和 Unmanaged 執行緒處理](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
  討論受控和非受控執行緒之間的關聯性、針對 Windows 執行緒 API 列出受控對等項目，並討論 COM Apartment 和受控執行緒的互動。  
-  
- [Thread.Suspend、記憶體回收和安全點](../../../docs/standard/threading/thread-suspend-garbage-collection-and-safe-points.md)  
- 描述執行緒暫止和記憶體回收。  
   
  [執行緒本機儲存體：執行緒相關靜態欄位和資料插槽](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  描述執行緒相關的儲存機制。  

@@ -10,23 +10,23 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
-ms.openlocfilehash: 93136d4c87463db7128a68957b243c1ef13a90eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8d4071a7f8dbb1cca1440fa69ae40df17330b060
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174053"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624661"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>快取原則互動 — 最長使用期限和最小有效期限
 為了協助確保將最新內容傳回給用戶端應用程式，用戶端快取原則與伺服器重新驗證需求的互動一律會導致最保守的快取原則。 本主題中的所有範例都會說明在 1 月 1 日快取並在 1 月 4 日到期之資源的快取原則。  
   
  下列範例說明最長使用期限 (`maxAge`) 與最小有效期限 (`minFresh`) 值的互動所造成的快取原則。  
   
--   如果快取原則設定 `maxAge` = 2 天，但未指定 `minFresh`，則會在 1 月 3 日重新驗證內容。  
+- 如果快取原則設定 `maxAge` = 2 天，但未指定 `minFresh`，則會在 1 月 3 日重新驗證內容。  
   
--   根據 `maxAge`，如果快取原則設定 `maxAge` = 2 天且 `minFresh` = 1 天，則會在 1 月 3 日之前整理內容。 根據 `minFresh`，會在 1 月 3 日之前整理內容。 因此，必須在 1 月 3 日重新驗證內容。  
+- 根據 `maxAge`，如果快取原則設定 `maxAge` = 2 天且 `minFresh` = 1 天，則會在 1 月 3 日之前整理內容。 根據 `minFresh`，會在 1 月 3 日之前整理內容。 因此，必須在 1 月 3 日重新驗證內容。  
   
--   根據 `maxAge`，如果快取原則設定 `maxAge` = 2 天且 `minFresh` = 2 天，則會在 1 月 3 日之前整理內容。 根據 `minFresh`，會在 1 月 2 日之前整理內容。 因此，必須在 1 月 2 日重新驗證內容。  
+- 根據 `maxAge`，如果快取原則設定 `maxAge` = 2 天且 `minFresh` = 2 天，則會在 1 月 3 日之前整理內容。 根據 `minFresh`，會在 1 月 2 日之前整理內容。 因此，必須在 1 月 2 日重新驗證內容。  
   
 ## <a name="see-also"></a>另請參閱
 

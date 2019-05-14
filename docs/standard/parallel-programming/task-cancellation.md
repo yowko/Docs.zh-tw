@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84da3e1e896397b4e5dacec9d7dd0eeeed96d1c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7fefbfd33788ea84a8daf9dfbab452802ffd50d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690835"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650746"
 ---
 # <a name="task-cancellation"></a>工作取消
 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 類別可使用 .NET Framework 中的取消語彙基元來支援取消作業。 如需詳細資訊，請參閱[受控執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)。 在 Task 類別中，取消作業包括使用者委派之間的合作，這是指可取消的作業和要求取消的程式碼。  成功的取消包括要求呼叫 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法的程式碼，以及適時終止作業的使用者委派。 您可以使用下列選項之一來終止作業：  
   
--   藉由直接從委派傳回。 在許多情況下使用這個選項即已足夠，但以這種方式取消的工作執行個體將會轉換至 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> 狀態，而非 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 狀態。  
+- 藉由直接從委派傳回。 在許多情況下使用這個選項即已足夠，但以這種方式取消的工作執行個體將會轉換至 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> 狀態，而非 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 狀態。  
   
--   擲回 <xref:System.OperationCanceledException> ，並將其傳遞至據以要求取消的語彙基元。 執行此作業的常見方式是使用 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> 方法。 以此方式取消的工作會切換至 Canceled 狀態，可供呼叫端節點用以驗證工作已回應其取消要求。  
+- 擲回 <xref:System.OperationCanceledException> ，並將其傳遞至據以要求取消的語彙基元。 執行此作業的常見方式是使用 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> 方法。 以此方式取消的工作會切換至 Canceled 狀態，可供呼叫端節點用以驗證工作已回應其取消要求。  
   
  下列範例說明會擲回例外狀況的工作取消基本模式。 請注意，語彙基元不但會傳遞至使用者委派，也會傳遞至工作執行個體本身。  
   

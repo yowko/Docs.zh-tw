@@ -225,8 +225,8 @@ Collection(T)，其中 T 是下列類型之一： `Int32`， `Int64`， `Double`
 
 如需 SqlClient 所支援彙總函式的詳細資訊，請參閱 SqlClient 提供者資訊清單中所指定 SQL Server 版本的說明文件：
 
-- **SQL Server 2005:**[彙總函式 & Amp;#40;transact-SQL&AMP;#41](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms173454(v=sql.90))
-- **SQL Server 2008 及更新版本：**[彙總函式 & Amp;#40;transact-SQL&AMP;#41](/sql/t-sql/functions/aggregate-functions-transact-sql)
+- **SQL Server 2005:**[彙總函式 (transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms173454(v=sql.90))
+- **SQL Server 2008 及更新版本：**[彙總函式 (transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)
 
 - [Entity SQL 語言](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
 - [彙總標準函式](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: d860f1a3c6917238a529093672dc5f2abc5ae066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edc513a31d348dc685ce70aa8e63577473e47d97
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620187"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755897"
 ---
 # <a name="extern-c-reference"></a>extern (C# 參考)
 
@@ -43,46 +43,46 @@ extern 關鍵字在 C# 中的使用方式比在 C++ 中受到更多限制。 若
 
 1. 請建立下列 C 檔案並將它命名為 `cmdll.c`：
 
-```c
-// cmdll.c
-// Compile with: -LD
-int __declspec(dllexport) SampleMethod(int i)
-{
-  return i*10;
-}
-```
+    ```c
+    // cmdll.c
+    // Compile with: -LD
+    int __declspec(dllexport) SampleMethod(int i)
+    {
+      return i*10;
+    }
+    ```
 
 2. 從 Visual Studio 安裝目錄開啟 Visual Studio x64 (或 x32) Native Tools [命令提示字元] 視窗，並在命令提示字元中鍵入 **cl -LD cmdll.c** 來編譯 `cmdll.c` 檔案。
 
 3. 在相同的目錄中，建立下列 C# 檔案並將它命名為 `cm.cs`：
 
-```csharp
-// cm.cs
-using System;
-using System.Runtime.InteropServices;
-public class MainClass
-{
-    [DllImport("Cmdll.dll")]
-      public static extern int SampleMethod(int x);
-
-    static void Main()
+    ```csharp
+    // cm.cs
+    using System;
+    using System.Runtime.InteropServices;
+    public class MainClass
     {
-        Console.WriteLine("SampleMethod() returns {0}.", SampleMethod(5));
+        [DllImport("Cmdll.dll")]
+          public static extern int SampleMethod(int x);
+
+        static void Main()
+        {
+            Console.WriteLine("SampleMethod() returns {0}.", SampleMethod(5));
+        }
     }
-}
-```
+    ```
 
 4. 從 Visual Studio 安裝目錄開啟 Visual Studio x64 (或 x32) Native Tools [命令提示字元] 視窗，並輸入下列內容來編譯 `cm.cs` 檔案：
 
-> **csc cm.cs** (適用於 x64 命令提示字元) - 或 - **csc -platform:x86 cm.cs** (適用於 x32 命令提示字元)
+    > **csc cm.cs** (適用於 x64 命令提示字元) - 或 - **csc -platform:x86 cm.cs** (適用於 x32 命令提示字元)
 
-這樣將會建立可執行檔 `cm.exe`。
+    這樣將會建立可執行檔 `cm.exe`。
 
 5. 執行 `cm.exe`。 `SampleMethod` 方法會將值 5 傳遞至 DLL 檔案，並傳回乘以 10 的值。  此程式會產生下列輸出：
 
-```
-SampleMethod() returns 50.
-```
+    ```
+    SampleMethod() returns 50.
+    ```
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
