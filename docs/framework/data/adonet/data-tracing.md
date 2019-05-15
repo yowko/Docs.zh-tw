@@ -2,12 +2,12 @@
 title: ADO.NET 中的資料追蹤
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: 8f9388d084e9e598e43c0f871b21d05c053e77ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df49fc7a5f7c437132a4dc24ed7f18492d9e7647
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608004"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583774"
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET 中的資料追蹤
 
@@ -31,7 +31,7 @@ ADO.NET 具備內建資料追蹤功能的.NET 資料提供者所支援的 SQL Se
 
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>存取擴充事件記錄中的診斷資訊
 
-在  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server，資料存取追蹤 ([資料存取追蹤](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) 已經更新，以方便您更輕鬆地從相互關聯用戶端事件與診斷資訊，例如連線失敗伺服器連接信號緩衝區與應用程式效能資訊的擴充的事件記錄檔中。 如需有關讀取擴充的事件記錄檔的詳細資訊，請參閱[檢視事件工作階段資料](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110))。
+在 .NET Framework Data Provider for SQL Server，資料存取追蹤 ([資料存取追蹤](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) 已經更新，以方便您更輕鬆地從相互關聯用戶端事件與診斷資訊，例如連線失敗伺服器連接信號緩衝區與應用程式效能資訊的擴充的事件記錄檔中。 如需有關讀取擴充的事件記錄檔的詳細資訊，請參閱[檢視事件工作階段資料](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110))。
 
 ADO.NET 會傳送用戶端連接 ID 以進行連接作業。 如果連線失敗，您可以存取連接信號緩衝區 ([連線疑難排解 SQL Server 2008 中與連接信號緩衝區](https://go.microsoft.com/fwlink/?LinkId=207752))，並尋找`ClientConnectionID`欄位，並取得相關診斷資訊連接失敗。 只有在發生錯誤時，用戶端連接 ID 才會記錄在信號緩衝區中 (如果在傳送登入前封包之前連接失敗，就不會產生用戶端連接 ID)。用戶端連接 ID 是 16 個位元組的 GUID。 如果在擴充事件工作階段中將 `client_connection_id` 動作加入到事件中，您還可以在擴充事件目標輸出中尋找用戶端連接 ID。 如需進一步的用戶端驅動程式診斷協助，您可以啟用資料存取追蹤並傳回連接命令，同時觀察資料存取追蹤當中的 `ClientConnectionID` 欄位。
 

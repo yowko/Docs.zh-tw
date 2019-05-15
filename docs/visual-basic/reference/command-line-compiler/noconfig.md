@@ -6,15 +6,15 @@ helpviewer_keywords:
 - -noconfig compiler option [Visual Basic]
 - /noconfig compiler option [Visual Basic]
 ms.assetid: a7405067-bd21-4171-adf4-a126fa3ad6c3
-ms.openlocfilehash: 44bc619c489fdff36f0b595f7d8934689b859adb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b707899c845b6b08e008fe229497f682c930044a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789021"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588854"
 ---
 # <a name="-noconfig"></a>-noconfig
-指定的編譯器應該不會自動參考常用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]組件或匯入`System`和`Microsoft.VisualBasic`命名空間。  
+指定編譯器應不會自動參考常用的.NET Framework 組件，或匯入`System`和`Microsoft.VisualBasic`命名空間。  
   
 ## <a name="syntax"></a>語法  
   
@@ -23,7 +23,7 @@ ms.locfileid: "61789021"
 ```  
   
 ## <a name="remarks"></a>備註  
- `-noconfig`選項會指示編譯器不要使用 Vbc.rsp 檔案，位於與 Vbc.exe 檔案相同的目錄中的檔案。 Vbc.rsp 檔案參考常用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]組件和匯入`System`和`Microsoft.VisualBasic`命名空間。 編譯器會隱含參考之 System.dll 組件，除非`-nostdlib`指定選項。 `-nostdlib`選項會指示編譯器不要使用 vbc.rsp 進行編譯，或自動參考 System.dll 組件。  
+ `-noconfig`選項會指示編譯器不要使用 Vbc.rsp 檔案，位於與 Vbc.exe 檔案相同的目錄中的檔案。 Vbc.rsp 檔案參考常用的.NET Framework 組件並匯入`System`和`Microsoft.VisualBasic`命名空間。 編譯器會隱含參考之 System.dll 組件，除非`-nostdlib`指定選項。 `-nostdlib`選項會指示編譯器不要使用 vbc.rsp 進行編譯，或自動參考 System.dll 組件。  
   
 > [!NOTE]
 >  一律會參考 Mscorlib.dll 和 Microsoft.VisualBasic.dll 的組件。  

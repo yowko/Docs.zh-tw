@@ -1,22 +1,22 @@
 ---
-title: HOW TO：比較兩個資料夾的內容 (LINQ) (C#)
+title: 作法：比較兩個資料夾的內容 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: c6a44070e251a1521e7ea94c47a3c0c9360df1b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aec333fd3a54927f39569173db4e30999f632513
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543038"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597114"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>HOW TO：比較兩個資料夾的內容 (LINQ) (C#)
+# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>作法：比較兩個資料夾的內容 (LINQ) (C#)
 本例示範三種比較兩個檔案清單的方式︰  
   
--   查詢指定兩個檔案清單是否完全相同的布林值。  
+- 查詢指定兩個檔案清單是否完全相同的布林值。  
   
--   查詢交集，以擷取這兩個資料夾都有的檔案。  
+- 查詢交集，以擷取這兩個資料夾都有的檔案。  
   
--   查詢集合差異，以擷取一個資料夾中有而另一個沒有的檔案。  
+- 查詢集合差異，以擷取一個資料夾中有而另一個沒有的檔案。  
   
     > [!NOTE]
     >  這裡顯示的技巧可用於比較任何類型的物件序列。  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 851be5bdf4a3adced724dc2df33657a84226270d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 837022cf1675097af5ebce63441cad1ce63eaabb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906954"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591106"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>疑難排解資料類型 (Visual Basic)
 此頁面會列出您的內建資料型別上執行作業時所發生的一些常見問題。  
@@ -66,7 +66,7 @@ ms.locfileid: "61906954"
  請注意，不宣告足夠`decimalRemainder`做為`Decimal`。 您也必須強制常值，以`Decimal`，或者使用`Double`根據預設並`decimalRemainder`收到不正確的相同值，做為`doubleRemainder`。  
   
 ## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>布林值類型不會精確地轉換成數值類型  
- [布林資料型別](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)值不會儲存為 數字，儲存的值不可為等同於數字。 為了與舊版相容，Visual Basic 提供轉換關鍵字 ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)， `CBool`，`CInt`等) 之間進行轉換`Boolean`和數字類型。 不過，其他語言有時會執行這些轉換以不同的方式一樣[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]方法。  
+ [布林資料型別](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)值不會儲存為 數字，儲存的值不可為等同於數字。 為了與舊版相容，Visual Basic 提供轉換關鍵字 ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)， `CBool`，`CInt`等) 之間進行轉換`Boolean`和數字類型。 不過，其他語言有時執行這些轉換以不同的方式，.NET Framework 方法一樣。  
   
  您不需撰寫程式碼，以針對對等數值`True`和`False`。 可能的話，您應該限制的使用方式`Boolean`它們設計的邏輯值的變數。 如果您必須混合使用`Boolean`和數字的值，請確定您了解您所選取的轉換方法。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "61906954"
 ## <a name="string-conversion-fails-at-run-time"></a>在執行階段的字串轉換失敗  
  [字串資料型別](../../../../visual-basic/language-reference/data-types/string-data-type.md)參與極少數的擴展轉換。 `String` 可擴展為本身只和`Object`，並只`Char`並`Char()`(`Char`陣列) 擴展為`String`。 這是因為`String`變數和常數可以包含其他資料類型不能包含的值。  
   
- 當類型檢查參數 ([Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是`On`，編譯器不允許隱含的縮小轉換。 這包括涉及`String`。 您的程式碼仍然可以使用轉換關鍵字這類`CStr`並[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)，哪一個 direct[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]嘗試轉換。  
+ 當類型檢查參數 ([Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是`On`，編譯器不允許隱含的縮小轉換。 這包括涉及`String`。 您的程式碼仍然可以使用轉換關鍵字這類`CStr`並[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)，其指示.NET Framework，才能嘗試轉換。  
   
 > [!NOTE]
 >  轉換中的項目隱藏的縮小轉換錯誤`For Each…Next`迴圈控制變數的集合。 如需詳細資訊和範例，請參閱 「 縮小轉換 」 一節[每個...下一個陳述式](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)。  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 3f76d51ce5cc167e71e2f3f5e7944dae2e3265d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c2e6a955a151e0e11bcf189085dc24e7815fb747
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645214"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582738"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和非同步作業
 本主題討論實作和呼叫非同步服務作業。  
@@ -56,7 +56,7 @@ ms.locfileid: "64645214"
 3. IAsyncResult 非同步模式  
   
 #### <a name="task-based-asynchronous-pattern"></a>以工作為基礎的非同步模式  
- 工作架構非同步模式是實作非同步作業的慣用方式，因為這是最簡單且最直接的方式。 若要使用這個方法，只需實作服務作業並指定 Task\<T> 的傳回類型，其中 T 是由邏輯作業傳回的類型。 例如:   
+ 工作架構非同步模式是實作非同步作業的慣用方式，因為這是最簡單且最直接的方式。 若要使用這個方法，只需實作服務作業並指定 Task\<T> 的傳回類型，其中 T 是由邏輯作業傳回的類型。 例如：  
   
 ```csharp  
 public class SampleService:ISampleService   
@@ -110,7 +110,7 @@ public class AsyncExample
  如需事件架構非同步模式的詳細資訊，請參閱[事件架構非同步模式](https://go.microsoft.com/fwlink/?LinkId=232515)。  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>IAsyncResult 非同步模式  
- 使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 非同步程式設計模式並使 `<Begin>` 方法的 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 屬性設定為 `true`，即可以非同步方式實作服務作業。 在此情況下，非同步作業會在相同的格式為同步作業的中繼資料：它會公開為要求訊息和相互關聯的回應訊息的單一作業。 用戶端程式設計模型接著就會做出選擇。 只要在叫用服務時發生要求/回應訊息交換，這些程式設計模型就會將此模式表示為同步作業或非同步作業。  
+ 可以實作服務作業，以非同步方式使用.NET Framework 非同步程式設計模式，並將標示`<Begin>`方法<xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>屬性設定為`true`。 在此情況下，非同步作業會在相同的格式為同步作業的中繼資料：它會公開為要求訊息和相互關聯的回應訊息的單一作業。 用戶端程式設計模型接著就會做出選擇。 只要在叫用服務時發生要求/回應訊息交換，這些程式設計模型就會將此模式表示為同步作業或非同步作業。  
   
  一般而言，基於系統的非同步本質，您不應該相依於執行緒。  將資料傳遞至作業分派處理之各種階段最可靠的方式就是使用延伸模組。  
   

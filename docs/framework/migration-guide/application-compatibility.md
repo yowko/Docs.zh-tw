@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dcbcced47cfb2031e4a35a7437ec875a20354eed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 154640499e99767f73a148c6980e6a2a4cfbce2f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176250"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623781"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework 中的應用程式相容性
 
@@ -42,11 +42,11 @@ ms.locfileid: "59176250"
 
 每個問題包含下列資訊：
 
--   舊版中已變更的內容描述。
+- 舊版中已變更的內容描述。
 
--   變更如何影響客戶，以及是否有任何因應措施可保留版本間的相容性。
+- 變更如何影響客戶，以及是否有任何因應措施可保留版本間的相容性。
 
--   變更的重要性評估。 應用程式相容性問題可分類如下：
+- 變更的重要性評估。 應用程式相容性問題可分類如下：
 
     |   |   |
     |---|---|
@@ -55,18 +55,18 @@ ms.locfileid: "59176250"
     |邊緣案例|在非常特定 (罕見) 的情況下影響應用程式的變更。|
     |透明|對應用程式的開發人員或使用者影響的不明顯變更。|
 
--   第一次出現此變更的 Framework 版本。 也指出某些變更會引入到特定版本，然後在更新版本中還原。
+- 第一次出現此變更的 Framework 版本。 也指出某些變更會引入到特定版本，然後在更新版本中還原。
 
--   變更類型：
+- 變更類型：
 
     |   |   |
     |---|---|
     |正在重定目標|此變更會影響為了以新版 .NET Framework 為目標而重新編譯的應用程式。|
     |執行階段|此變更會影響以舊版 .NET Framework 為目標但在新版上執行的現有應用程式。|
 
--   受影響的 API (如果有的話)。
+- 受影響的 API (如果有的話)。
 
--   可用診斷的識別碼
+- 可用診斷的識別碼
 
 ## <a name="usage"></a>使用量
 若要開始，請選取以下的相容性變更類型：

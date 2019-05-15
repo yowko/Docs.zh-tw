@@ -2,12 +2,12 @@
 title: C# 中的非同步程式設計
 description: 使用 async、await、Task 和 Task<T> 進行非同步程式設計的 C# 語言支援概觀
 ms.date: 03/18/2019
-ms.openlocfilehash: dc85fd4fb30278dc39c75c88d5fd23c1f1633366
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 350ccdeeb31e318ca0c1a8158691f58bf5208efb
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668675"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064110"
 ---
 # <a name="the-task-asynchronous-programming-model-in-c"></a>C\# 中的非同步工作程式設計模型
 
@@ -22,7 +22,7 @@ ms.locfileid: "61668675"
 1. 在吐司塗上奶油和果醬。
 1. 倒杯柳橙汁。
 
-如果您有烹飪經驗，您會**以非同步方式**來執行這些指示。 您會從為雞蛋熱鍋開始，然後開始煎培根。 等到將麵包放入烤麵包機，再開始煎蛋。 在程序的每個步驟，您會開始一個工作，然後將注意轉移到其他需要您注意的工作。
+如果您有烹飪經驗，您會**非同步地**執行這些指示。 您會從為雞蛋熱鍋開始，然後開始煎培根。 等到將麵包放入烤麵包機，再開始煎蛋。 在程序的每個步驟，您會開始一個工作，然後將注意轉移到其他需要您注意的工作。
 
 準備早餐很適合用來示範非平行的非同步工作。 一個人 (或執行緒) 可處理所有這些工作。 繼續以早餐為例，一個人可能會以非同步方式準備早餐，不等到第一個工作完成，就開始下一個工作。 不論是否有旁觀者，烹飪都會進行。 開始為雞蛋熱鍋之後，您可以開始煎培根。 等到開始煎培根，您可以將麵包放入烤麵包機。
 

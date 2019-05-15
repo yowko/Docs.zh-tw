@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 ToolStripControlHost 包裝 Windows Forms 控制項
+title: 作法：使用 ToolStripControlHost 包裝 Windows Forms 控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], wrapping controls
 - ToolStrip control [Windows Forms], hosting controls
 ms.assetid: e2ce4990-661d-4882-a116-8a9eb575dc84
-ms.openlocfilehash: b90e47f9cd20d4f963f6223877cefc901f1c0667
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4f1bac24d7742066d2b472f52b7d85c84c243670
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591557"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589038"
 ---
 # <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>HOW TO：使用 ToolStripControlHost 包裝 Windows Forms 控制項
 藉由使用 <xref:System.Windows.Forms.ToolStripControlHost> 建構函式或擴充 <xref:System.Windows.Forms.ToolStripControlHost> 本身，<xref:System.Windows.Forms.ToolStripControlHost> 設計來啟用任意 Windows Form 控制項的裝載。 藉由擴充 <xref:System.Windows.Forms.ToolStripControlHost> 及實作屬性和方法 (這些會公開控制項經常使用的屬性和方法)，包裝控制項變得更容易。 您也可以公開在 <xref:System.Windows.Forms.ToolStripControlHost> 層級的控制項事件。  
@@ -59,11 +59,9 @@ ms.locfileid: "64591557"
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
-- 這個範例需要：  
+這個範例需要：
   
 - System 和 System.Windows.Forms 組件的參考。  
-  
- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
 

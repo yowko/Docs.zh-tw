@@ -1,5 +1,5 @@
 ---
-title: HOW TO：決定組件的完整名稱
+title: 作法：決定組件的完整名稱
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,26 +12,26 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60a4ef1f5bde121d5773925437307b2749aa7282
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2f1dbfde5e13d771f82ab1542e02de4c72b68678
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097527"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607729"
 ---
-# <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>HOW TO：決定組件的完整名稱
+# <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>作法：決定組件的完整名稱
 若要在全域組件快取中找到組件的完整名稱，請使用全域組件快取工具 ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md))。 請參閱[如何：檢視全域組件快取的內容](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)。  
   
  對於不在全域組件快取的組件，您可以使用數種方式取得完整組件名稱：可以使用程式碼輸出資訊至主控台或至變數，或者您可使用 [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 以檢查組件中繼資料，其中包含完整名稱。  
   
--   如果應用程式已經載入組件時，您可以擷取 <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> 屬性的值來取得完整名稱。 您可以使用此方法，不論組件是否在 GAC 中。 這個範例將提供說明。  
+- 如果應用程式已經載入組件時，您可以擷取 <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> 屬性的值來取得完整名稱。 您可以使用此方法，不論組件是否在 GAC 中。 這個範例將提供說明。  
   
--   如果您知道組件的檔案系統路徑，您可以呼叫靜態 (`Shared` 在 Visual Basic 中) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> 方法來取得完整組件名稱。 以下是一個簡單的範例。  
+- 如果您知道組件的檔案系統路徑，您可以呼叫靜態 (`Shared` 在 Visual Basic 中) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> 方法來取得完整組件名稱。 以下是一個簡單的範例。  
   
      [!code-csharp[System.Reflection.AssemblyName.GetAssemblyName#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflection.assemblyname.getassemblyname/cs/getassemblyname1.cs#1)]
      [!code-vb[System.Reflection.AssemblyName.GetAssemblyName#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflection.assemblyname.getassemblyname/vb/getassemblyname1.vb#1)]  
   
--   您可以使用 [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 來檢查組件的中繼資料，其中包含完整名稱。  
+- 您可以使用 [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 來檢查組件的中繼資料，其中包含完整名稱。  
   
  如需有關設定組件屬性的詳細資訊，如版本、文化特性及組件名稱，請參閱[設定組件屬性](../../../docs/framework/app-domains/set-assembly-attributes.md)。 如需有關給予組件強式名稱的詳細資訊，請參閱[建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)。  
   

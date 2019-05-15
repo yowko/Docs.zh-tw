@@ -1,5 +1,5 @@
 ---
-title: HOW TO：對齊繪製的文字
+title: 作法：對齊繪製的文字
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - text [Windows Forms], aligning
 - Windows Forms, aligning drawn text
 ms.assetid: 83c10a81-1a90-4b5c-98aa-2c6c4b280079
-ms.openlocfilehash: 0e77e4d8eeb9d7a07115b89525ac80074afeb6e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a569284a1c4b43fa7264e0354934436f95b8dc3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937809"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589377"
 ---
-# <a name="how-to-align-drawn-text"></a>HOW TO：對齊繪製的文字
+# <a name="how-to-align-drawn-text"></a>作法：對齊繪製的文字
 當您執行自訂繪圖時，您通常可以在表單或控制項上的繪製的文字置中對齊。 您可以輕鬆地將以繪製文字的對齊<xref:System.Drawing.Graphics.DrawString%2A>或<xref:System.Windows.Forms.TextRenderer.DrawText%2A>方法藉由建立正確的格式物件，並設定適當的格式旗標。  
   
 ### <a name="to-draw-centered-text-with-gdi-drawstring"></a>若要繪製置中對齊文字使用 GDI + (DrawString)  

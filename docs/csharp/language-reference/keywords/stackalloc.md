@@ -1,18 +1,18 @@
 ---
 title: stackalloc 關鍵字 - C# 參考
 ms.custom: seodec18
-ms.date: 04/12/2018
+ms.date: 04/10/2019
 f1_keywords:
 - stackalloc_CSharpKeyword
 - stackalloc
 helpviewer_keywords:
 - stackalloc keyword [C#]
-ms.openlocfilehash: 61a27e777a1919a2a6fc5140a311835a8f3daba9
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 654e225ef98b13aeb4f689e17b1ff378e6002d28
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480803"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063921"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (C# 參考)
 
@@ -52,7 +52,7 @@ Span<int> third = stackalloc[] { 1, 2, 3 };
 
 涉及指標類型時，`stackalloc` 需要 [unsafe](unsafe.md) 內容。 如需詳細資訊，請參閱[不安全的程式碼和指標](../../programming-guide/unsafe-code-pointers/index.md)。
 
-`stackalloc` 就像 C 執行階段程式庫中的 [_alloca](/cpp/c-runtime-library/reference/alloca) 一樣。
+`stackalloc` 就像 C 執行階段程式庫中的 [_alloca](/cpp/c-runtime-library/reference/alloca)。
 
 ## <a name="examples"></a>範例
 
@@ -75,7 +75,7 @@ Span<int> third = stackalloc[] { 1, 2, 3 };
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計手冊](../../programming-guide/index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [運算子關鍵字](operator-keywords.md)
-- [不安全的程式碼和指標](../../programming-guide/unsafe-code-pointers/index.md)
+- [Unsafe 程式碼和指標](../../programming-guide/unsafe-code-pointers/index.md)

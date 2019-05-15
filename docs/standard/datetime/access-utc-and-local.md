@@ -1,5 +1,5 @@
 ---
-title: HOW TO：存取預先定義的 UTC 和當地時區物件
+title: 作法：存取預先定義的 UTC 和當地時區物件
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c10c07c08a4e676cf3c84a5722814eaed85f74a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d36b5ff4912b09101694dd0e83291053260f0bf9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026599"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586424"
 ---
-# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>HOW TO：存取預先定義的 UTC 和當地時區物件
+# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>作法：存取預先定義的 UTC 和當地時區物件
 
 <xref:System.TimeZoneInfo>類別提供兩個屬性：<xref:System.TimeZoneInfo.Utc%2A>和<xref:System.TimeZoneInfo.Local%2A>，，讓程式碼可以存取預先定義的時區物件。 本主題討論如何存取這些屬性所傳回的 <xref:System.TimeZoneInfo> 物件。
 
@@ -50,8 +50,6 @@ ms.locfileid: "62026599"
 ## <a name="compiling-the-code"></a>編譯程式碼
 
 這個範例需要：
-
-* 對 System.Core.dll 的參考加入至專案。
 
 * 該<xref:System>命名空間匯入與`using`陳述式 （C# 程式碼所需）。
 

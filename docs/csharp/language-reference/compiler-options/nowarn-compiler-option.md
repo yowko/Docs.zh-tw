@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-ms.openlocfilehash: 13bb50366d9c19751ef3387baf809ab69e27b5dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b455a2f719e7350c51cf4a1f095d4669529d0e5e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324145"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592803"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn (C# 編譯器選項)
 **-nowarn** 選項可讓您隱藏編譯器不顯示一或多個警告。 請以逗點分隔多個警告編號。  
@@ -35,11 +35,11 @@ ms.locfileid: "59324145"
   
  `-nowarn` 選項無法隱藏下列警告︰  
   
--   編譯器警告 (層級 1) CS2002  
+- 編譯器警告 (層級 1) CS2002  
   
--   編譯器警告 (層級 1) CS2023  
+- 編譯器警告 (層級 1) CS2023  
   
--   編譯器警告 (層級 1) CS2029  
+- 編譯器警告 (層級 1) CS2029  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d50ece4b800b77ac0447d1f22f1929f5a38a7d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f02cbac83bd1e849c30f6c732395335464e6e4e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874233"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582819"
 ---
 # <a name="runtime-profiling"></a>執行階段分析
 分析是在任何開發或部署案例中蒐集效能資料的一種方法。 本節適用對象為想要蒐集應用程式效能資訊的開發人員和系統管理員。  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>使用效能監視器 (Perfmon.exe) 追蹤效能  
- 效能監視器是用來分析 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 應用程式的最簡單工具。 效能監視器會以圖形方式表示在 Common Language Runtime 和 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]隨附之 .NET Framework 效能計數器中找到的資料。 這些計數器可用來監視從記憶體管理到 Just-In-Time (JIT) 編譯器效能的一切內容。 它會告訴您應用程式使用的資源，這是間接測量應用程式效能的方法。 使用這些計數器可了解應用程式內部運作的方式。  
+ 效能監視器是用來分析您的.NET Framework 應用程式的最簡單的工具。 效能監視器會以圖形方式表示在 Common Language Runtime 和 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]隨附之 .NET Framework 效能計數器中找到的資料。 這些計數器可用來監視從記憶體管理到 Just-In-Time (JIT) 編譯器效能的一切內容。 它會告訴您應用程式使用的資源，這是間接測量應用程式效能的方法。 使用這些計數器可了解應用程式內部運作的方式。  
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>在 Windows Vista 和更新版本上執行 Perfmon.exe  
   
@@ -57,7 +57,7 @@ ms.locfileid: "61874233"
 >  在安裝 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的系統上，效能監視器可能不會顯示某些類別的效能計數器資料，例如「.NET CLR 資料」  和「.NET CLR 網路」 ，因為應用程式是使用 [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]所開發。 如果出現這種情況，只要將 [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 項目新增至應用程式組態檔，就可以設定效能監視器來顯示此資料。  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>以程式設計方式讀取及建立效能計數器  
- 您可以使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 所提供的類別，以程式設計方式存取 [效能] 主控台中可用的相同效能資訊。 您也可以使用這些類別，建立自訂效能計數器。 下表描述 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]中所提供的一些效能監視類別。  
+ .NET Framework 會提供可用來以程式設計方式存取 [效能] 主控台中使用的相同效能資訊的類別。 您也可以使用這些類別，建立自訂效能計數器。 下表說明一些效能監視提供.NET Framework 中的類別。  
   
 |類別|描述|  
 |-----------|-----------------|  

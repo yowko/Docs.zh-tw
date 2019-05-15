@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 19506d051442dc841a28c14f212addf66af71cf5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 50e8d24698bd8451b90da05ffe52b473a13b3a20
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750822"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583596"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>建立 .NET Framework 用戶端應用程式 (WCF 資料服務快速入門)
 
@@ -84,7 +84,7 @@ ms.locfileid: "64750822"
 
 您已成功建立存取的範例 Northwind OData 摘要的用戶端應用程式。 您也已經完成的 WCF Data Services 快速入門 ！
 
-如需存取 OData 摘要[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]應用程式，請參閱 < [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)。
+如需摘要從.NET Framework 應用程式存取 OData 的詳細資訊，請參閱[WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b45b8ebe048a5917019349ea3a6a357b7e90a9c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32c76ae4556467759dad111b47e3ad8f6cf6df92
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565640"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589970"
 ---
 # <a name="script-blocks-using-msxslscript"></a>使用 msxsl:script 的指令碼區塊
 <xref:System.Xml.Xsl.XslCompiledTransform> 類別支援使用 `msxsl:script` 項目的內嵌指令碼。 載入樣式表時，程式碼文件物件模型 (CodeDOM) 會將任何已定義的函式編譯成 Microsoft Intermediate Language (MSIL)，並在執行階段期間執行。 從內嵌指令碼區塊產生的組件不同於為樣式表產生的組件。  
@@ -71,11 +71,11 @@ ms.locfileid: "54565640"
 #### <a name="assemblies"></a>組件  
  預設會參考下列兩個組件：  
   
--   System.dll  
+- System.dll  
   
--   System.Xml.dll  
+- System.Xml.dll  
   
--   Microsoft.VisualBasic.dll (若指令碼語言為 VB)  
+- Microsoft.VisualBasic.dll (若指令碼語言為 VB)  
   
  您可以使用 `msxsl:assembly` 項目匯入其他組件。 編譯樣式表時會併入該組件。 `msxsl:assembly` 項目具有下列定義：  
   
@@ -94,21 +94,21 @@ ms.locfileid: "54565640"
 #### <a name="namespaces"></a>命名空間  
  預設會包含下列命名空間：  
   
--   系統  
+- 系統  
   
--   System.Collection  
+- System.Collection  
   
--   System.Text  
+- System.Text  
   
--   System.Text.RegularExpressions  
+- System.Text.RegularExpressions  
   
--   System.Xml  
+- System.Xml  
   
--   System.Xml.Xsl  
+- System.Xml.Xsl  
   
--   System.Xml.XPath  
+- System.Xml.XPath  
   
--   Microsoft.VisualBasic (若指令碼語言為 VB)  
+- Microsoft.VisualBasic (若指令碼語言為 VB)  
   
  您可使用 `namespace` 屬性加入對其他命名空間的支援。 屬性值是命名空間的名稱。  
   

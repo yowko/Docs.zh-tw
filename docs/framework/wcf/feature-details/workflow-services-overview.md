@@ -2,12 +2,12 @@
 title: WCF-工作流程服務概觀
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-ms.openlocfilehash: 1461ef545c4b31f84e62d82453320179d9aa74e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d5f8636bec57cee1cb72c2796fc4bafc6b9c044
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050333"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590081"
 ---
 # <a name="workflow-services-overview"></a>工作流程服務概觀
 
@@ -48,7 +48,7 @@ WCF 定義兩種以 MSMQ 為主的繫結：<xref:System.ServiceModel.NetMsmqBind
 
 就像 WCF 服務必須裝載工作流程服務。 WCF 服務會使用<xref:System.ServiceModel.ServiceHost>類別來裝載服務和工作流程服務使用<xref:System.ServiceModel.Activities.WorkflowServiceHost>來裝載服務。 就像 WCF 服務，工作流程服務可以裝載各種不同的方式，例如：
 
-- 在 Managed [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 應用程式中。
+- 在受管理的.NET Framework 應用程式。
 
 - 在網際網路資訊服務 (IIS) 中。
 
@@ -56,7 +56,7 @@ WCF 定義兩種以 MSMQ 為主的繫結：<xref:System.ServiceModel.NetMsmqBind
 
 - 在 Managed Windows 服務中。
 
-裝載於 Managed [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 應用程式或 Managed Windows 服務中的工作流程服務會建立 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 類別的執行個體，並將該執行個體傳遞至 <xref:System.ServiceModel.Activities.WorkflowService> 的執行個體 (此執行個體包含 <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> 屬性中的工作流程定義)。 包含傳訊活動的工作流程定義會公開為工作流程服務。
+受管理的.NET Framework 應用程式中裝載的工作流程服務 」 或 「 受管理的 Windows 服務，建立的執行個體<xref:System.ServiceModel.Activities.WorkflowServiceHost>類別，並將它傳遞的執行個體<xref:System.ServiceModel.Activities.WorkflowService>，其中包含工作流程定義內<xref:System.ServiceModel.Activities.WorkflowService.Body%2A>屬性。 包含傳訊活動的工作流程定義會公開為工作流程服務。
 
 若要將工作流程服務裝載於 IIS 或 WAS 中，請將包含工作流程服務定義的 .xamlx 檔案置入虛擬目錄中。 預設端點 (使用<xref:System.ServiceModel.BasicHttpBinding>) 會自動建立，如需詳細資訊，請參閱[Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)。 您也可以將 Web.config 檔案置於虛擬目錄中，指定您自己的端點。 如果工作流程定義位於組件中，您可以將 .svc 檔案置於虛擬目錄內，並將工作流程組件置於 App_Code 目錄中。 .svc 檔案必須指定服務主機處理站，以及實作工作流程服務的類別。 下列範例示範如何指定服務主機處理站，以及指定實作工作流程服務的類別。
 

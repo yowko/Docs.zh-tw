@@ -1,26 +1,26 @@
 ---
-title: HOW TO：查詢樹狀目錄中的最大檔案 (LINQ) (C#)
+title: 作法：查詢樹狀目錄中的最大檔案 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: 20453c754c792d4f5c59fde481e1fec56dcd0e09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 134183da58b490635284699de2f1721dda5422dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564119"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597065"
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>HOW TO：查詢樹狀目錄中的最大檔案 (LINQ) (C#)
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>作法：查詢樹狀目錄中的最大檔案 (LINQ) (C#)
 此範例顯示五個與檔案位元組大小相關的查詢：  
   
--   如何擷取最大檔案的位元組大小。  
+- 如何擷取最大檔案的位元組大小。  
   
--   如何擷取最小檔案的位元組大小。  
+- 如何擷取最小檔案的位元組大小。  
   
--   如何從所指定根資料夾下的一或多個資料夾中，擷取最大或最小檔案的 <xref:System.IO.FileInfo> 物件。  
+- 如何從所指定根資料夾下的一或多個資料夾中，擷取最大或最小檔案的 <xref:System.IO.FileInfo> 物件。  
   
--   如何擷取序列，例如 10 個最大檔案。  
+- 如何擷取序列，例如 10 個最大檔案。  
   
--   如何根據檔案位元組大小將檔案分組排序，並略過小於指定大小的檔案。  
+- 如何根據檔案位元組大小將檔案分組排序，並略過小於指定大小的檔案。  
   
 ## <a name="example"></a>範例  
  下列範例包含五個不同的查詢，以示範如何根據檔案位元組大小來查詢和分組檔案。 您可以輕鬆修改這些範例，使查詢根據 <xref:System.IO.FileInfo> 物件的其他某個屬性。  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [Visual Basic]
 - /nostdlib compiler option [Visual Basic]
 ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
-ms.openlocfilehash: 4f3dc61a6e78b0fb2135d4132c53e7efc22447a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c3c70b24de5163ca004b41a21017205a19d9730
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789047"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583372"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 可讓編譯器不會自動參考標準程式庫。  
@@ -23,7 +23,7 @@ ms.locfileid: "61789047"
 ```  
   
 ## <a name="remarks"></a>備註  
- `-nostdlib`選項會移除自動 System.dll 組件參考，並可防止編譯器讀取 Vbc.rsp 檔案。 Vbc.rsp 檔案，位於與 Vbc.exe 檔案相同的目錄中，參考常用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]組件和匯入`System`和`Microsoft.VisualBasic`命名空間。  
+ `-nostdlib`選項會移除自動 System.dll 組件參考，並可防止編譯器讀取 Vbc.rsp 檔案。 Vbc.rsp 檔案，位於與 Vbc.exe 檔案相同的目錄中，參考常用的.NET Framework 組件並匯入`System`和`Microsoft.VisualBasic`命名空間。  
   
 > [!NOTE]
 >  一律會參考 Mscorlib.dll 和 Microsoft.VisualBasic.dll 的組件。  

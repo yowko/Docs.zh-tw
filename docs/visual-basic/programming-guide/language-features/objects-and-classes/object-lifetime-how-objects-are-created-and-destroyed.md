@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 430041f5f4315c5ad20cd2495f01a6f776f239c7
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: a63134b966fe6e6cd0cd40f69ac04a7cd986513d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469698"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591539"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>物件存留期：物件如何建立和終結 (Visual Basic)
 您可以使用 `New` 關鍵字來建立類別的執行個體，即物件。 在使用新物件之前，經常必須在新物件上執行初始設定工作。 常見的初始設定工作包括開啟檔案、連線到資料庫，以及讀取登錄機碼的值。 Visual Basic 控制項的使用程序呼叫的新物件初始化*建構函式*（允許控制初始化的特殊方法）。  
@@ -140,7 +140,7 @@ End Sub
  衍生類別不應該覆寫基底類別的 <xref:System.IDisposable.Dispose%2A> 和 `Finalize` 方法。 從衍生類別的執行個體呼叫那些方法時，基底類別對於那些方法的實作會呼叫衍生類別的 `Dispose(disposing)` 方法覆寫。  
   
 ## <a name="garbage-collection-and-the-finalize-destructor"></a>記憶體回收和 Finalize 解構函式  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]會使用*參考 reference-tracing garbage collection*系統，定期釋放未使用的資源。 Visual Basic 6.0 和更早版本使用不同的系統，稱為*參考計數*來管理資源。 這兩個系統固然會自動執行相同的功能，不過有幾個重要的差異。  
+ .NET Framework 會使用*參考 reference-tracing garbage collection*系統，定期釋放未使用的資源。 Visual Basic 6.0 和更早版本使用不同的系統，稱為*參考計數*來管理資源。 這兩個系統固然會自動執行相同的功能，不過有幾個重要的差異。  
   
  當系統決定不再需要這類物件時，CLR 會定期終結該物件。 當系統資源短缺時，會更快釋放物件，反之則較不常釋放物件。 物件失去範圍的時間與 CLR 釋放它的時間之間的延遲表示，與 Visual Basic 6.0 及舊版中的物件不同的是，您無法精確判斷何時將會終結物件。 在這種情況下，物件被視為具有*不具決定性存留期*。 在大部分的情況下，不具決定性存留期不會變更撰寫應用程式的方式，只要記住，`Finalize` 解構函式可能不會在物件失去範圍時立即執行。  
   

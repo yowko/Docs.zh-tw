@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 5f898bf342c8596d9dd4cc0b03396aec4dcf545c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1e5a8d221468f5028f7b44af1c634b4c988063a4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970216"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596277"
 ---
 # <a name="generic-classes-c-programming-guide"></a>泛型類別 (C# 程式設計手冊)
 泛型類別會封裝不專屬於特定資料類型的作業。 泛型類別最常搭配類似連結清單、雜湊表、堆疊、佇列、樹狀結構等的集合。 無論儲存的資料類型為何，基本上是以相同的方式執行新增和移除集合項目等作業。  
@@ -20,19 +20,19 @@ ms.locfileid: "56970216"
   
  建立泛型類別一般是從現有的實體類別開始，一次將一個類型變更成型別參數，直到達成一般化和可用性的最佳平衡。 在建立您自己的泛型類別時，重要考量包括：  
   
--   要將哪些類型一般化為型別參數。  
+- 要將哪些類型一般化為型別參數。  
   
      依照規則，能夠參數化的類型愈多，程式碼就愈有彈性和可重複使用。 但是，過多的一般化，會建立讓其他開發人員不易閱讀或了解的程式碼。  
   
--   如果有的話，要將何種條件約束套用至型別參數 (請參閱[型別參數的條件約束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md))。  
+- 如果有的話，要將何種條件約束套用至型別參數 (請參閱[型別參數的條件約束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md))。  
   
      理想的規則是盡可能套用最多的條件約束，卻仍能讓您處理必須處理的類型。 例如，如果您知道您的泛型類別，僅打算搭配參考型別，請套用類別條件約束。 這可防止類別非預期搭配實值型別，而且可讓您使用 `T` 的 `as` 運算子，並檢查 null 值。  
   
--   是否要將泛型行為分解成基底類別和子類別。  
+- 是否要將泛型行為分解成基底類別和子類別。  
   
      因為泛型類別可做為基底類別，所以這裡適用和非泛型類別相同的設計考量。 請參閱本主題稍後有關繼承自泛型基底類別的規則。  
   
--   是否要實作一或多個泛型介面。  
+- 是否要實作一或多個泛型介面。  
   
      例如，如果您要設計一個類別，用於建立泛型式集合的項目，您可能必須實作 `T` 是您類別類型的介面，例如 <xref:System.IComparable%601>。  
   

@@ -2,12 +2,12 @@
 title: 以不同的組織結構投影 XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: 381d674c420128f75d27394c21a7b622b2d78402
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac9c6e05b366c9d34f82c6da9bf154d741840b3d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723780"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596804"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>以不同的組織結構投影 XML (C#)
 本主題顯示以不同於來源 XML 的組織結構規劃 XML 的範例。  
@@ -233,7 +233,7 @@ class Program
 ## <a name="next-steps"></a>後續步驟  
  在下一個範例中，您將在 Word 文件中進行查詢以尋找所有文字：  
   
--   [尋找 Word 文件中的文字 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [尋找 Word 文件中的文字 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>另請參閱
 

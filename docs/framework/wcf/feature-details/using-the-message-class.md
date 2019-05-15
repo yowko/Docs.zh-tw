@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-ms.openlocfilehash: 00b64bdd3795cf282847a3bbaa0940f76faa1c2e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1db509d8f1c672bf51cac7f1ca6b1af91b34fa4d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637534"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591271"
 ---
 # <a name="using-the-message-class"></a>使用 Message 類別
 <xref:System.ServiceModel.Channels.Message>類別是以 Windows Communication Foundation (WCF) 的基礎。 用戶端和服務之間的通訊，最終結果都是要傳送和接收 <xref:System.ServiceModel.Channels.Message> 執行個體。  
   
  您通常不會直接和 <xref:System.ServiceModel.Channels.Message> 類別進行互動。 相反地，WCF 服務模型建構，例如資料合約、 訊息合約和作業合約會用來描述傳入和傳出訊息。 不過，在某些進階案例中，您可以直接使用 <xref:System.ServiceModel.Channels.Message> 類別來設計程式。 例如，您可能想要使用 <xref:System.ServiceModel.Channels.Message> 類別：  
   
-- 當您需要其他建立傳出訊息內容的方法 (例如，直接從磁碟上的檔案建立訊息)，而非序列化 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件時。  
+- 當您需要建立外寄訊息的內容 （例如，直接從磁碟上的檔案建立訊息），而不序列化.NET Framework 物件的替代方式。  
   
-- 當您需要其他使用傳入訊息內容的方法 (例如，要將 XSLT 轉換套用至未經處理的 XML 內容)，而非還原序列化至 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件。  
+- 當您需要使用傳入訊息內容 （例如，當您想要在 XSLT 轉換套用至未經處理的 XML 內容時），而不還原序列化成.NET Framework 物件的替代方式。  
   
 - 當您需要以一般方法處理訊息，而不管訊息內容時 (例如，當建置路由器、負載平衡器或發行/訂閱系統遞送或轉寄訊息時)。  
   

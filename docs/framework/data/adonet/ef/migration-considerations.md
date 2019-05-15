@@ -2,22 +2,22 @@
 title: 移轉考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 6453e0960af5a91e5abc40d1ce6002b7733175dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f65c558b0cbc02bdff8e78189a38d06a7502434f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641266"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583572"
 ---
 # <a name="migration-considerations-entity-framework"></a>移轉考量 (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework 可以為現有應用程式提供幾項優勢， 其中一項最重要的優勢，就是使用概念模型將應用程式所使用的資料結構從資料來源中的結構描述分隔。 這樣能方便您以後對儲存體模型或資料來源本身進行變更，而不必對應用程式進行補償變更。 針對使用的優點的詳細資訊[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，請參閱 < [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)並[Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)。  
   
- 若要享有的權益[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，您可以移轉現有的應用程式[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。 有些工作通用於所有移轉的應用程式。 這些一般工作包括升級應用程式使用[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]啟動版本 3.5 Service Pack 1 (SP1)、 定義模型和對應，以及設定 Entity Framework。 在將應用程式移轉至 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的時候，有其他的適用考量。 這些考量取決於要移轉的應用程式類型以及應用程式的特定功能。 本主題所提供的資訊有助於您選擇在升級現有應用程式時要使用的最佳方式。  
+ 若要享有的權益[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，您可以移轉現有的應用程式[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。 有些工作通用於所有移轉的應用程式。 這些一般工作包括升級應用程式使用.NET Framework 版本 3.5 Service Pack 1 (SP1)，從開始定義模型和對應，以及設定 Entity Framework。 在將應用程式移轉至 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的時候，有其他的適用考量。 這些考量取決於要移轉的應用程式類型以及應用程式的特定功能。 本主題所提供的資訊有助於您選擇在升級現有應用程式時要使用的最佳方式。  
   
 ## <a name="general-migration-considerations"></a>一般移轉考量  
  下列考量適用於將任何應用程式移轉至 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的情況：  
   
-- 使用任何應用程式[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]開頭為 3.5 版 SP1 可以移轉至 Entity Framework，只要應用程式所使用的資料來源的資料提供者支援 Entity Framework。  
+- 使用.NET Framework 3.5 SP1 版起的任何應用程式可以移轉至 Entity Framework，只要應用程式所使用的資料來源的資料提供者支援 Entity Framework。  
   
 - Entity Framework 可能無法支援資料來源提供者的所有功能，即使那個提供者支援 Entity Framework 也一樣。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "64641266"
   
 1. 升級應用程式。  
   
-     使用舊版的 Visual Studio 所建立的專案和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]必須升級為使用 Visual Studio 2008 SP1 和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]開頭為 3.5 版 SP1。  
+     若要使用 Visual Studio 2008 SP1 和.NET Framework 3.5 SP1 版起，必須升級使用較早版本的 Visual Studio 和.NET Framework 建立的專案。  
   
 2. 定義模型與對應  
   
@@ -53,7 +53,7 @@ ms.locfileid: "64641266"
      若要參考[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]組件的模型和對應檔案必須新增至 Visual Studio 專案。 您可以將這些對應檔加入至專案，以確保它們與應用程式一起部署在連接字串中所指示的位置。 如需詳細資訊，請參閱[如何：手動設定 Entity Framework 專案](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))。  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>適用於具有現有物件的應用程式之考量  
- 從 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4 版開始，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 可支援「單純」(plain old) CLR 物件 (POCO)，又稱為非持續性物件。 大部分的情況下，只要稍加變更您現有的物件，它們都能與 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 搭配使用。 如需詳細資訊，請參閱 <<c0> [ 處理 POCO 實體](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100))。 您也可以移轉應用程式[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]並使用 Entity Framework 工具所產生的資料類別。 如需詳細資訊，請參閱[如何：使用 Entity Data Model 精靈](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))。  
+ .NET Framework 4 中，從開始[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支援 」 (plain old) CLR 物件 (POCO)，也稱為非持續的物件。 大部分的情況下，只要稍加變更您現有的物件，它們都能與 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 搭配使用。 如需詳細資訊，請參閱 <<c0> [ 處理 POCO 實體](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100))。 您也可以移轉應用程式[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]並使用 Entity Framework 工具所產生的資料類別。 如需詳細資訊，請參閱[如何：使用 Entity Data Model 精靈](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))。  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>適用於使用 ADO.NET 提供者的應用程式之考量  
  [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 提供者，如 SqlClient，可讓您查詢資料來源，進而傳回表格式資料。 也將資料載入至[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]資料集。 下列清單說明適用於升級使用現有 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 提供者的應用程式之考量：  
@@ -69,7 +69,7 @@ ms.locfileid: "64641266"
   如果[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]未提供功能的應用程式所需的資料集，您可以仍然利用 LINQ 查詢的優勢使用[!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]。 如需詳細資訊，請參閱 [LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>適用於將資料繫結至控制項的應用程式之考量  
- [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]可讓您封裝這類的資料來源中的資料集、[!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]資料來源控制項，並再將使用者介面項目繫結至那些資料控制項。 下列清單說明適用於將控制項繫結至 Entity Framework 資料的考量。  
+ .NET Framework 可讓您封裝這類的資料來源中的資料集、[!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]資料來源控制項，並再將使用者介面項目繫結至那些資料控制項。 下列清單說明適用於將控制項繫結至 Entity Framework 資料的考量。  
   
 - 將資料繫結至控制項。  
 

@@ -5,22 +5,22 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: a05ddd714e85491d29aa5de574b4cdc36165c224
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 3d8e6d37a5c27eac6af303819fb50b28acd225c6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469518"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589051"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>在 Windows Form 上使用的控制項
 以下是可在 Windows Forms 上使用的控制項和元件清單，依字母順序列出。 除了本節涵蓋的 Windows Forms 控制項之外，您還可以將 ActiveX 和自訂控制項新增至 Windows Forms。 如果您在這裡列出的控制項中找不到所需的控制項，則也可以建立自己的控制項。 如需詳細資訊，請參閱[在設計階段開發 Windows Forms 控制項](developing-windows-forms-controls-at-design-time.md)。 如需選擇所需控制項的詳細資訊，請參閱[依功能區分 Windows Forms 控制項](windows-forms-controls-by-function.md)。  
   
 > [!NOTE]
->  Visual Basic 控制項根據所提供的類別[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]。  
+>  Visual Basic 控制項根據.NET Framework 所提供的類別。  
   
 ## <a name="in-this-section"></a>本節內容  
  [依功能區分 Windows Forms 控制項](windows-forms-controls-by-function.md)  
- 根據 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，列出和描述 Windows Forms 控制項。  
+ 列出並描述.NET Framework 為基礎的 Windows Form 控制項。  
   
  [使用內建主控描繪支援的控制項](controls-with-built-in-owner-drawing-support.md)  
  描述如何更改無法透過屬性提供之控制項外觀的層面。  
@@ -168,7 +168,7 @@ ms.locfileid: "65469518"
  允許使用者調整停駐的控制項大小。  
   
  [Splitter 控制項](splitter-control-windows-forms.md)  
- 允許使用者調整停駐的控制項大小 ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.x 版)。  
+ 可讓使用者調整停駐的控制項 (.NET Framework 版本 1.x)。  
   
  [StatusBar 控制項](statusbar-control-windows-forms.md)  
  顯示具有焦點之控制項的相關狀態資訊。 雖然 <xref:System.Windows.Forms.StatusStrip> 會取代及擴充舊版的 <xref:System.Windows.Forms.StatusBar> 控制項，但是您也可以選擇保留 <xref:System.Windows.Forms.StatusBar>，以提供回溯相容性及供未來使用。  

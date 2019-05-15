@@ -14,31 +14,31 @@ helpviewer_keywords:
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eefd3773d26fe71741668a9df366f041ba0ae0a4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a91890435b1c2b5b955875f52de86249c2ee79df
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744326"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607814"
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Common Language Runtime 中的組件
 組件是 .NET Framework 應用程式的建置組塊；它們構成部署、版本控制、重複使用、啟用範圍和安全性權限的基礎單位。 組件是建置來共同運作及構成一個功能邏輯單位的型別與資源集合。 組件為通用語言執行平台提供了感知型別實作所需的資訊。 對於執行階段而言，型別不會存在於組件的內容以外。  
   
  組件可以執行以下功能：  
   
--   組件包含通用語言執行平台執行的程式碼。 如果組件沒有相關聯的組件資訊清單，則不會執行可攜式執行檔 (PE) 中的 Microsoft 中繼語言 (MSIL) 程式碼。 請注意，每個組件只能有一個進入點 (`DllMain`、`WinMain` 或 `Main`)。  
+- 組件包含通用語言執行平台執行的程式碼。 如果組件沒有相關聯的組件資訊清單，則不會執行可攜式執行檔 (PE) 中的 Microsoft 中繼語言 (MSIL) 程式碼。 請注意，每個組件只能有一個進入點 (`DllMain`、`WinMain` 或 `Main`)。  
   
--   組件可構成安全性界限。 組件是要求和授與權限的單位。 如需套用至組件之安全性界限的詳細資訊，請參閱[組件安全性考量](../../../docs/framework/app-domains/assembly-security-considerations.md)。  
+- 組件可構成安全性界限。 組件是要求和授與權限的單位。 如需套用至組件之安全性界限的詳細資訊，請參閱[組件安全性考量](../../../docs/framework/app-domains/assembly-security-considerations.md)。  
   
--   組件可構成型別界限。 每種型別的識別都包含該型別所在之組件的名稱。 在某個組件範圍中載入的型別 `MyType` 與在另一個組件範圍中載入的型別 `MyType` 不同。  
+- 組件可構成型別界限。 每種型別的識別都包含該型別所在之組件的名稱。 在某個組件範圍中載入的型別 `MyType` 與在另一個組件範圍中載入的型別 `MyType` 不同。  
   
--   組件可構成參考範圍界限。 組件的資訊清單含有用來解析型別和滿足資源要求的組件中繼資料。 它會指定公開於組件之外的型別和資源。 資訊清單也會列舉組件相依的其他組件。  
+- 組件可構成參考範圍界限。 組件的資訊清單含有用來解析型別和滿足資源要求的組件中繼資料。 它會指定公開於組件之外的型別和資源。 資訊清單也會列舉組件相依的其他組件。  
   
--   組件可構成版本界限。 組件是通用語言執行平台中可控制版本的最小單位；在同一組件中的所有型別和資源會當做一個單位來控制版本。 組件的資訊清單描述您對任何相依組件所指定的版本相依性。 如需版本控制的詳細資訊，請參閱[組件版本控制](../../../docs/framework/app-domains/assembly-versioning.md)。  
+- 組件可構成版本界限。 組件是通用語言執行平台中可控制版本的最小單位；在同一組件中的所有型別和資源會當做一個單位來控制版本。 組件的資訊清單描述您對任何相依組件所指定的版本相依性。 如需版本控制的詳細資訊，請參閱[組件版本控制](../../../docs/framework/app-domains/assembly-versioning.md)。  
   
--   組件可構成部署單位。 當應用程式啟動時，一定要有應用程式一開始所呼叫的組件。 至於其他組件 (例如當地語系化資源或含有公用程式類別的組件)，則可視需要擷取。 如此可讓應用程式在第一次下載時保持最簡狀態。 如需部署組件的詳細資訊，請參閱[部署應用程式](../../../docs/framework/deployment/index.md)。  
+- 組件可構成部署單位。 當應用程式啟動時，一定要有應用程式一開始所呼叫的組件。 至於其他組件 (例如當地語系化資源或含有公用程式類別的組件)，則可視需要擷取。 如此可讓應用程式在第一次下載時保持最簡狀態。 如需部署組件的詳細資訊，請參閱[部署應用程式](../../../docs/framework/deployment/index.md)。  
   
--   組件是支援並存執行的單位。 如需執行多個組件版本的詳細資訊，請參閱[組件和並存執行](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md)。  
+- 組件是支援並存執行的單位。 如需執行多個組件版本的詳細資訊，請參閱[組件和並存執行](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md)。  
   
  組件可以是靜態，也可以是動態。 靜態組件可以包含 .NET Framework 型別 (介面和類別)，以及組件的資源 (點陣圖、JPEG 檔案、資源檔案等)。 靜態組件儲存在磁碟上的可攜式執行檔 (PE) 中。 您也可以使用 .NET Framework 建立動態組件，直接從記憶體執行，並且執行前不會儲存至磁碟。 您可以在執行動態組件之後，再將其儲存至磁碟。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "32744326"
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|標題|說明|  
 |-----------|-----------------|  
 |[組件內容](../../../docs/framework/app-domains/assembly-contents.md)|描述構成組件的項目。|  
 |[組件資訊清單](../../../docs/framework/app-domains/assembly-manifest.md)|描述組件資訊清單中的資料，以及這些資料在組件中的儲存方式。|  

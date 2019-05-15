@@ -1,5 +1,5 @@
 ---
-title: HOW TO：以動態方式新增 ToolStrip 項目
+title: 作法：以動態方式新增 ToolStrip 項目
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items dynamically
 - ToolStrip control [Windows Forms]
 ms.assetid: 0e8dea56-5f46-408b-914d-7e360341a234
-ms.openlocfilehash: 9426c7cb3251dbbd95727b78c57be7a0b71556e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 08d08a292995cc5e12fbab3e91a0962c3b895a02
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624021"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588871"
 ---
-# <a name="how-to-add-toolstrip-items-dynamically"></a>HOW TO：以動態方式新增 ToolStrip 項目
+# <a name="how-to-add-toolstrip-items-dynamically"></a>作法：以動態方式新增 ToolStrip 項目
 在功能表開啟時，您可以動態填入 <xref:System.Windows.Forms.ToolStrip> 控制項的功能表項目集合。  
   
 ## <a name="example"></a>範例  
@@ -33,8 +33,6 @@ ms.locfileid: "64624021"
  這個範例需要：  
   
 - System.Drawing 和 System.Windows.Forms 組件的參考。  
-  
- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
 

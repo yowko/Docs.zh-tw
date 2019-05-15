@@ -2,12 +2,12 @@
 title: 追蹤設定檔
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c934ec9fd0524506577ab4457a2ec194d4d0cba7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699668"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589943"
 ---
 # <a name="tracking-profiles"></a>追蹤設定檔
 
@@ -17,7 +17,7 @@ ms.locfileid: "61699668"
 
 追蹤設定檔可用來指定要為工作流程執行個體發出哪些追蹤資訊。 如果未指定任何設定檔，則會發出所有追蹤事件。 如果有指定設定檔，則會發出設定檔中指定的追蹤事件。 根據您的監控需求，您可以寫入非常廣泛的設定檔，使其訂閱工作流程上的一組小型高階狀態變更。 反之，您也可以建立非常詳細的設定檔，取得充分的結果事件，以便在日後重新建構為詳細的執行流程。
 
-追蹤設定檔會顯示為標準 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 組態檔中的 XML 項目，或在程式碼中指定。 下列範例是組態檔中的 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 追蹤設定檔，可允許追蹤參與者訂閱 `Started` 和 `Completed` 工作流程事件。
+追蹤設定檔會顯示為標準的.NET Framework 組態檔中的 XML 項目，或在程式碼中指定。 下列範例是組態檔中的 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 追蹤設定檔，可允許追蹤參與者訂閱 `Started` 和 `Completed` 工作流程事件。
 
 ```xml
 <system.serviceModel>

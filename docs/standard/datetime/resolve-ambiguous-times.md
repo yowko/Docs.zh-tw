@@ -1,5 +1,5 @@
 ---
-title: HOW TO：解決模稜兩可的時間
+title: 作法：解決模稜兩可的時間
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 2cf5fb25-492c-4875-9245-98cac8348e97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aae3e5145d2fa85cd55fc5b1288ef4aaa0fef48f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c98f47613479c40804dce254261c560d829d91c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796405"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586343"
 ---
-# <a name="how-to-resolve-ambiguous-times"></a>HOW TO：解決模稜兩可的時間
+# <a name="how-to-resolve-ambiguous-times"></a>作法：解決模稜兩可的時間
 
 不明確的時間是指對應到多個國際標準時間 (UTC) 的時間。 發生時機是往回調整時鐘時間，例如從時區的日光節約時間轉換到其標準時間期間。 處理不明確的時間時，您可以執行下列其中一項：
 
@@ -52,8 +52,6 @@ ms.locfileid: "61796405"
 ## <a name="compiling-the-code"></a>編譯程式碼
 
 這個範例需要：
-
-* 對 System.Core.dll 的參考加入至專案。
 
 * 該<xref:System>命名空間匯入與`using`陳述式 （C# 程式碼所需）。
 

@@ -2,12 +2,12 @@
 title: Internet Information Service 裝載指示
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
-ms.openlocfilehash: a537f37132e5014901d415cd96bc72a55ae0b750
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92ee270426dbb7fdd166964c1b10e37f280e28f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600256"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591873"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Internet Information Service 裝載指示
 若要執行由網際網路資訊服務 (IIS) 裝載的範例，您必須確定 IIS 已正確安裝並正在執行中。  
@@ -163,7 +163,7 @@ ms.locfileid: "64600256"
 4. 這時應該會出現包含文字 "Hello World" 的網頁。  
   
 > [!NOTE]
->  每次您安裝新版本的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 時，就必須重新註冊 aspnet_isapi 做為 IIS 的 Web 服務延伸。 若要這樣做，請發出 `aspnet_regiis –I –enable` 命令。  
+>  每次您安裝新版.NET Framework 中，您必須重新註冊 aspnet_isapi 做為 Web 服務擴充功能的 IIS。 若要這樣做，請發出 `aspnet_regiis –I –enable` 命令。  
   
 ## <a name="sample-code"></a>程式碼範例  
   

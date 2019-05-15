@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cce67b36330714a821012082457e0297395a09c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e87fdd31a4dfb9b595f165225f7b86d5e88ea7af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087530"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607761"
 ---
 # <a name="assembly-manifest"></a>組件資訊清單
 每個組件 (不論是靜態或是動態) 都含有描述組件中項目彼此如何關聯的資料集合。 組件資訊清單就包含這個組件的中繼資料。 組件資訊清單含有指定組件的版本需求和安全性識別所需的所有中繼資料，以及定義組件範圍和解析資源與類別參考所需的所有中繼資料。 組件資訊清單可以存放在具有 Microsoft Intermediate Language (MSIL) 程式碼的可移植執行檔 (PE) (.exe 或 .dll) 中，或者存放在只包含組件資訊清單的獨立 PE 檔中。  
@@ -28,15 +28,15 @@ ms.locfileid: "59087530"
   
  每個組件的資訊清單都會執行下列功能：  
   
--   列舉構成組件的檔案  
+- 列舉構成組件的檔案  
   
--   控制組件之型別和資源的參考如何對應到含有它們的宣告和實作的檔案  
+- 控制組件之型別和資源的參考如何對應到含有它們的宣告和實作的檔案  
   
--   列舉組件所依賴的其他組件  
+- 列舉組件所依賴的其他組件  
   
--   在組件使用者與組件的實作詳細資料之間提供一層間接取值 (Indirection)  
+- 在組件使用者與組件的實作詳細資料之間提供一層間接取值 (Indirection)  
   
--   轉譯組件的自我描述  
+- 轉譯組件的自我描述  
   
 ## <a name="assembly-manifest-contents"></a>組件資訊清單內容  
  下表所示為組件資訊清單中包含的資訊。 前四個項目 - 組件名稱、版本號碼、文化特性 (Culture) 和強式名稱 (Strong Name) 資訊 - 構成組件的識別。  

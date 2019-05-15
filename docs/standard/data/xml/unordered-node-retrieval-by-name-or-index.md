@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da1c9f25052bb2354b435cd28b7ff55d4a754ed1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a7701f887410aa263483e52a5dd65a09d1444aa6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583996"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589876"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>根據名稱或索引擷取的未排序節點
 根據全球資訊網協會 (W3C) 規格中的說明，**XmlNamedNodeMap** 是一種 NamedNodeMap，若要處理的是未排序節點集，則必須使用它，因為它可以根據名稱或索引而參考節點。 存取 **XmlNamedNodeMap** 的唯一方法，是當 **XmlNamedNodeMap** 經由方法或屬性傳回時。 有三種方法或屬性會傳回 **XmlNamedNodeMap**：  
   
--   XmlElement.Attributes  
+- XmlElement.Attributes  
   
--   XmlDocumentType.Entities  
+- XmlDocumentType.Entities  
   
--   XmlDocumentType.Notations  
+- XmlDocumentType.Notations  
   
  例如，**XmlDocumentType.Entities** 屬性會取得文件類型宣告中宣告的 **XmlEntity** 節點之集合。 這個集合會以 **XmlNamedNodeMap** 傳回，而且您可以使用 **Count** 屬性重複集合並且顯示實體資訊。 如需重複 **XmlNamedNodeMap** 的範例，請參閱 <xref:System.Xml.XmlDocumentType.Entities%2A>。  
   

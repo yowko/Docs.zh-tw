@@ -16,18 +16,18 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: af28ba1a167415a59b8e2a4db860497122a5c2c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 60a61dfa7302611800c0b808a31a386e46304756
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624801"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592163"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>疑難排解互通性 (Visual Basic)
-當您 COM 和 managed 程式碼之間的交互操作[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，您可能會遇到一或多個下列常見的問題。  
+當您 COM 和.NET Framework 的 managed 程式碼之間互通時，您可能會遇到一或多個下列常見的問題。  
   
 ## <a name="vbconinteroperabilitymarshalinganchor1"></a> Interop 封送處理  
- 有時候，您可能要使用的資料類型不屬於[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]。 Interop 組件會處理大部分的 COM 物件的工作，但您可能要控制受管理的物件會公開給 COM 時所使用的資料類型 例如，類別庫中的結構必須指定`BStr`非受控型別傳送給 Visual Basic 6.0 和更早版本所建立的 COM 物件的字串。 在這種情況下，您可以使用<xref:System.Runtime.InteropServices.MarshalAsAttribute>造成要公開為 unmanaged 類型的 managed 的類型的屬性。  
+ 有時候，您可能要使用的資料類型不是.NET Framework 的一部分。 Interop 組件會處理大部分的 COM 物件的工作，但您可能要控制受管理的物件會公開給 COM 時所使用的資料類型 例如，類別庫中的結構必須指定`BStr`非受控型別傳送給 Visual Basic 6.0 和更早版本所建立的 COM 物件的字串。 在這種情況下，您可以使用<xref:System.Runtime.InteropServices.MarshalAsAttribute>造成要公開為 unmanaged 類型的 managed 的類型的屬性。  
   
 ## <a name="vbconinteroperabilitymarshalinganchor2"></a> 匯出至 Unmanaged 程式碼的固定長度字串  
  在 Visual Basic 6.0 和更早版本中，字串會匯出至 COM 物件為不含終止 null 字元的位元組序列。 與其他語言的相容性，Visual Basic.NET 中包含的終止字元匯出字串時。 若要解決此不相容情況的最佳方式是將匯出的字串，做為陣列的中缺乏的終止字元`Byte`或`Char`。  
@@ -55,7 +55,7 @@ ms.locfileid: "64624801"
  不同於標準的組件中的類別，COM 類別會公開介面和類別，表示 COM 類別的 interop 組件中。 介面的名稱完全相同的 COM 類別。 Interop 的類別名稱是原始的 COM 類別相同，但字附加 「 類別 」。 例如，假設您有專案的 COM 物件的 interop 組件的參考。 若為 COM 類別`MyComClass`，IntelliSense 和物件瀏覽器會顯示名為介面`MyComClass`和名為類別`MyComClassClass`。  
   
 ## <a name="vbconinteroperabilitymarshalinganchor6"></a> 建立.NET Framework 類別的執行個體  
- 一般而言，您建立的執行個體[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]類別使用`New`陳述式的類別名稱。 Interop 組件所表示的 COM 類別是一種情況，您可以使用`New`陳述式的介面。 除非您使用 COM 類別`Inherits`陳述式中，您可以使用介面，就像您一樣的類別。 下列程式碼示範如何建立`Command`具有 Microsoft ActiveX 資料物件 2.8 程式庫 COM 物件的參考的專案中的物件：  
+ 一般而言，您可以建立使用.NET Framework 類別的執行個體`New`陳述式的類別名稱。 Interop 組件所表示的 COM 類別是一種情況，您可以使用`New`陳述式的介面。 除非您使用 COM 類別`Inherits`陳述式中，您可以使用介面，就像您一樣的類別。 下列程式碼示範如何建立`Command`具有 Microsoft ActiveX 資料物件 2.8 程式庫 COM 物件的參考的專案中的物件：  
   
  [!code-vb[VbVbalrInterop#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#20)]  
   
@@ -67,7 +67,7 @@ ms.locfileid: "64624801"
 >  Interop 組件會以隱含方式實作代表 COM 類別的介面。 您不應該嘗試使用`Implements`會實作這些介面或錯誤的陳述式。  
   
 ## <a name="vbconinteroperabilitymarshalinganchor7"></a> 參數和傳回值的資料類型  
- 不同於標準的組件的成員，interop 組件的成員可能不同於原始物件宣告中所使用的資料類型。 雖然隱含 interop 組件會將 COM 型別轉換成相容的 common language runtime 類型中，您應注意兩方用來防止執行階段錯誤的資料類型。 例如，在 Visual Basic 6.0 及舊版中，類型的值中建立的 COM 物件`Integer`假設[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]對等型別， `Short`。 建議您使用物件瀏覽器使用，來檢查匯入成員的特性，再使用它們。  
+ 不同於標準的組件的成員，interop 組件的成員可能不同於原始物件宣告中所使用的資料類型。 雖然隱含 interop 組件會將 COM 型別轉換成相容的 common language runtime 類型中，您應注意兩方用來防止執行階段錯誤的資料類型。 例如，在 Visual Basic 6.0 及舊版中，類型的值中建立的 COM 物件`Integer`.NET Framework 對等型別，會假設`Short`。 建議您使用物件瀏覽器使用，來檢查匯入成員的特性，再使用它們。  
   
 ## <a name="vbconinteroperabilitymarshalinganchor8"></a> 模組層級 COM 方法  
  大部分的 COM 物件所建立的 COM 類別使用的執行個體`New`關鍵字，然後呼叫物件的方法。 此規則的唯一例外牽涉到包含的 COM 物件`AppObj`或`GlobalMultiUse`COM 類別。 這類類別類似於在 Visual Basic.NET 類別中的模組層級方法。 Visual Basic 6.0 和更早版本會隱含建立這類物件的執行個體，您呼叫其中一個方法的第一次。 比方說，在 Visual Basic 6.0 中您可以加入至 Microsoft DAO 3.6 物件程式庫，並呼叫參考`DBEngine`不用先建立執行個體的方法：  
@@ -111,7 +111,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 ## <a name="vbconinteroperabilitymarshalinganchor11"></a> 傳遞的控制項 ByRef 的 ReadOnly 屬性  
  Visual Basic.NET 有時會引發 COM 錯誤，例如，「 錯誤 0x800A017F CTL_E_SETNOTSUPPORTED"，當您將傳遞`ReadOnly`屬性的某些較舊的 ActiveX 控制項做為`ByRef`其他程序的參數。 從 Visual Basic 6.0 的類似程序呼叫不會引發錯誤，以及參數會視為由值傳遞。 Visual Basic.NET 中的錯誤訊息指出您嘗試變更此屬性，並沒有屬性`Set`程序。  
   
- 如果您有存取權所呼叫的程序，您可以使用來避免此錯誤`ByVal`關鍵字來宣告可接受的參數`ReadOnly`屬性。 例如:   
+ 如果您有存取權所呼叫的程序，您可以使用來避免此錯誤`ByVal`關鍵字來宣告可接受的參數`ReadOnly`屬性。 例如：  
   
  [!code-vb[VbVbalrInterop#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#26)]  
   

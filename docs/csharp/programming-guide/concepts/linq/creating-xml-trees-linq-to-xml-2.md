@@ -2,12 +2,12 @@
 title: 在 C# 中建立 XML 樹狀 (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 3bac7b62d04c9690cdd08d1993b64db33c4e6ab8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00f528bca00b2c2316d949ceb3b6c4bba2499146
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503161"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597666"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>在 C# 中建立 XML 樹狀結構 (LINQ to XML)
 本節提供在 C# 中建立 XML 樹狀的相關資訊。  
@@ -50,17 +50,17 @@ XElement contacts =
   
  `content` 參數非常有彈性。 它支援物件為 <xref:System.Xml.Linq.XElement> 之有效子系的任何型別。 下列規則適用於傳入此參數的不同型別物件：  
   
--   字串當做文字內容加入。  
+- 字串當做文字內容加入。  
   
--   <xref:System.Xml.Linq.XElement> 當做子項目加入。  
+- <xref:System.Xml.Linq.XElement> 當做子項目加入。  
   
--   <xref:System.Xml.Linq.XAttribute> 當做屬性加入。  
+- <xref:System.Xml.Linq.XAttribute> 當做屬性加入。  
   
--   <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment> 或 <xref:System.Xml.Linq.XText> 當做子內容加入。  
+- <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment> 或 <xref:System.Xml.Linq.XText> 當做子內容加入。  
   
--   系統會列舉 <xref:System.Collections.IEnumerable>，並將這些規則遞迴地套用到結果。  
+- 系統會列舉 <xref:System.Collections.IEnumerable>，並將這些規則遞迴地套用到結果。  
   
--   若是其他任何型別，則會呼叫其 `ToString` 方法，並將結果當做文字內容加入。  
+- 若是其他任何型別，則會呼叫其 `ToString` 方法，並將結果當做文字內容加入。  
   
 ### <a name="creating-an-xelement-with-content"></a>建立包含內容的 XElement  
  您可以建立包含具有單一方法呼叫之簡單內容的 <xref:System.Xml.Linq.XElement>。 如果要這樣做，請將內容指定為第二個參數，如下所示：  

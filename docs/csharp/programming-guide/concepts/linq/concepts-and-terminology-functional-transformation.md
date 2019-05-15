@@ -2,12 +2,12 @@
 title: 概念和術語 (功能性轉換) (C#)
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: 83c2f531f5747047c60ddbcedabc0747641d80c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 878ecdbbc4155ca5ca145480ae610701eed9a0c8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583359"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597817"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>概念和術語 (功能性轉換) (C#)
 本主題說明純功能性轉換的概念與術語。 轉換資料的功能性轉換方法所產生的程式碼通常比更傳統的命令性程式設計可以更快速地進行程式設計、更明確，而且更容易進行偵錯與維護。  
@@ -17,9 +17,9 @@ ms.locfileid: "54583359"
 ## <a name="what-is-pure-functional-transformation"></a>何謂純功能性轉換？  
  在「純功能性轉換」中，一組稱為「純虛擬函式」的函式會定義如何將一組結構化的資料從其原始格式轉換為另一個格式。 「純」這個字表示這些函式是「可組合的」也就是說，這些函式需要是：  
   
--   「獨立的」，讓這些函式可以自由排列與重新整理，而不會與程式的其餘部分有任何牽連或互相依賴。 純轉換與其環境無關，也不會影響其環境。 也就是說，用於轉換的函式沒有「副作用」。  
+- 「獨立的」，讓這些函式可以自由排列與重新整理，而不會與程式的其餘部分有任何牽連或互相依賴。 純轉換與其環境無關，也不會影響其環境。 也就是說，用於轉換的函式沒有「副作用」。  
   
--   「無狀態」，如此一來，在相同的輸入上執行相同的函式或特定一組函式時，永遠會導致相同的輸出。 純轉換絲毫不會記得其先前的用途。  
+- 「無狀態」，如此一來，在相同的輸入上執行相同的函式或特定一組函式時，永遠會導致相同的輸出。 純轉換絲毫不會記得其先前的用途。  
   
 > [!IMPORTANT]
 >  在本教學課程的其餘部分，「純虛擬函式」這個名詞用於一般含意，表示程式設計方法而非特定的語言功能。  

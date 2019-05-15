@@ -2,22 +2,22 @@
 title: Entity Framework 資料提供者
 ms.date: 03/30/2017
 ms.assetid: 5252e639-ff11-4818-82e7-07221ed6ae23
-ms.openlocfilehash: 897afcd606a9b9b6c3b316d03dd5cb8e2adedbc0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c81508324da6040754cc64c6456420d59fe40512
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606742"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584603"
 ---
 # <a name="entity-framework-data-providers"></a>Entity Framework 資料提供者
 本節提供支援 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 之資料提供者的資訊。  
   
 ## <a name="in-this-section"></a>本節內容  
  [Entity Framework 的 EntityClient 提供者](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)  
- 描述 EntityClient 資料提供者 (Data Provider)。 這個提供者會將針對資料模型的查詢轉換成標準命令樹。 然後，此命令可供適用於 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 的 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 資料提供者取用。  
+ 描述 EntityClient 資料提供者 (Data Provider)。 這個提供者會將針對資料模型的查詢轉換成標準命令樹。 命令樹則可供.NET Framework 資料提供者[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。  
   
  [適用於 Entity Framework 的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
- 描述[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]支援的資料提供者[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]搭配 SQL Server 資料庫。  
+ 描述支援的.NET Framework data provider[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]搭配 SQL Server 資料庫。  
   
 ## <a name="related-sections"></a>相關章節  
  [Entity Framework (SQL Server Compact)](https://go.microsoft.com/fwlink/?LinkId=135638)  

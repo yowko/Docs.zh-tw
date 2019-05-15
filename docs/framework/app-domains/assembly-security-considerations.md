@@ -17,27 +17,27 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e74d7a4a72b9595d6a280a16ad9bbc4118648404
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0f6f6fa8afe2e4aaea6e9f2b96329542b7fe5292
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218066"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607702"
 ---
 # <a name="assembly-security-considerations"></a>組件安全性考量
 <a name="top"></a> 當您建置組件時，您可以指定一組該組件需要用來執行的使用權限。 是否將某些使用權限授予組件則以辨識項 (Evidence) 為基礎。  
   
  使用辨識項有兩種不同的方法：  
   
--   輸入辨識項會和載入器所集合的辨識項合併，以建立用於原則解析的最終辨識項組。 使用這個語意的方法包括 **Assembly.Load**、**Assembly.LoadFrom** 和 **Activator.CreateInstance**。  
+- 輸入辨識項會和載入器所集合的辨識項合併，以建立用於原則解析的最終辨識項組。 使用這個語意的方法包括 **Assembly.Load**、**Assembly.LoadFrom** 和 **Activator.CreateInstance**。  
   
--   輸入辨識項使用時不會更改，就和用於原則解析的最終辨識項組一樣。 使用這個語意的方法包括 **Assembly.Load(byte[])** 和 **AppDomain.DefineDynamicAssembly()**。  
+- 輸入辨識項使用時不會更改，就和用於原則解析的最終辨識項組一樣。 使用這個語意的方法包括 **Assembly.Load(byte[])** 和 **AppDomain.DefineDynamicAssembly()**。  
   
  選擇性的使用權限可以藉由該組件要在其上執行之電腦上所設定的[安全性原則](../../../docs/framework/misc/code-access-security-basics.md)來授與。 如果您希望程式碼處理所有可能的安全性例外狀況，您可以執行下列某一項動作：  
   
--   插入您程式碼必須擁有之所有使用權限的使用權限要求，並且處理萬一使用權限未獲授予時，發生在最前面位置的載入期間失敗。  
+- 插入您程式碼必須擁有之所有使用權限的使用權限要求，並且處理萬一使用權限未獲授予時，發生在最前面位置的載入期間失敗。  
   
--   不要利用使用權限要求來取得程式碼可能需要的使用權限，但是要準備處理萬一使用權限未獲授予時的安全性例外狀況。  
+- 不要利用使用權限要求來取得程式碼可能需要的使用權限，但是要準備處理萬一使用權限未獲授予時的安全性例外狀況。  
   
     > [!NOTE]
     >  安全性是個複雜的領域，有許多的選項可以供您選擇。 如需詳細資訊，請參閱[重要的安全性概念](../../../docs/standard/security/key-security-concepts.md)。  

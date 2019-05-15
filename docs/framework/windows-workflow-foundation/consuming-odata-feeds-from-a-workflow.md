@@ -2,16 +2,16 @@
 title: 從多個 WF 工作流程取用 OData 摘要
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: aec23667e7388d6bc31d122617795ff5dfdefa5f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7d5230bb15474d63b2381d3906e07e48ac0134d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946054"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592988"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>從工作流程取用 OData 摘要
 
-WCF 資料服務是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的一個元件，可讓您建立使用 Open Data Protocol (OData) 的服務，利用具像狀態傳輸 (REST) 的語意透過 Web 或內部網路公開及取用資料。 OData 會將資料公開為可由 URI 定址的資源。 任何可以傳送 HTTP 要求並處理資料服務傳回之 OData 摘要的應用程式，都可以與 OData 型資料服務互動。 此外，WCF 資料服務也包含用戶端程式庫，在您從 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 應用程式取用 OData 摘要時，可為您提供更豐富的程式設計體驗。 本主題提供在工作流程中取用 OData 摘要的概觀 (不論有沒有使用用戶端程式庫)。
+WCF Data Services 是可讓您建立使用開放式資料通訊協定 (OData) 來公開及取用資料透過 Web 或內部網路，使用具像狀態傳輸 (REST) 的語意的服務的.NET framework 的元件。 OData 會將資料公開為可由 URI 定址的資源。 任何可以傳送 HTTP 要求並處理資料服務傳回之 OData 摘要的應用程式，都可以與 OData 型資料服務互動。 此外，WCF Data Services 包含用戶端程式庫取用 OData 摘要，從.NET Framework 應用程式時，提供更豐富的程式設計體驗。 本主題提供在工作流程中取用 OData 摘要的概觀 (不論有沒有使用用戶端程式庫)。
 
 ## <a name="using-the-sample-northwind-odata-service"></a>使用範例 Northwind OData 服務
 
@@ -19,7 +19,7 @@ WCF 資料服務是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>使用用戶端程式庫取用 OData 摘要
 
-WCF 資料服務包含用戶端程式庫，可讓您更輕鬆地從 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 和用戶端應用程式取用 OData 摘要。 這些程式庫會簡化 HTTP 訊息的傳送與接收。 他們也會將訊息承載轉譯為代表實體資料的 CLR 物件。 用戶端程式庫具有兩個核心類別： <xref:System.Data.Services.Client.DataServiceContext> 和 <xref:System.Data.Services.Client.DataServiceQuery%601>。 這些類別可讓您查詢資料服務，然後使用傳回的實體資料當做 CLR 物件。 本章節包含了建立活動來使用用戶端程式庫的兩個方法。
+WCF Data Services 包含可讓您更輕鬆地取用 OData 摘要從.NET Framework 和用戶端應用程式的用戶端程式庫。 這些程式庫會簡化 HTTP 訊息的傳送與接收。 他們也會將訊息承載轉譯為代表實體資料的 CLR 物件。 用戶端程式庫具有兩個核心類別： <xref:System.Data.Services.Client.DataServiceContext> 和 <xref:System.Data.Services.Client.DataServiceQuery%601>。 這些類別可讓您查詢資料服務，然後使用傳回的實體資料當做 CLR 物件。 本章節包含了建立活動來使用用戶端程式庫的兩個方法。
 
 ### <a name="adding-a-service-reference-to-the-wcf-data-service"></a>加入服務參考至 WCF 資料服務
 
@@ -34,7 +34,7 @@ WCF 資料服務包含用戶端程式庫，可讓您更輕鬆地從 [!INCLUDE[dn
 
 ### <a name="using-asynchronous-methods"></a>使用非同步方法
 
-為了對付透過 Web 存取資源時可能發生的延遲問題，我們建議您以非同步方式存取 WCF 資料服務。 WCF Data Services 用戶端程式庫包含叫用查詢的非同步方法，並在 Windows Workflow Foundation (WF) 提供<xref:System.Activities.AsyncCodeActivity>類別來撰寫非同步活動。 您可以撰寫<xref:System.Activities.AsyncCodeActivity> 衍生活動，以利用具有非同步方法的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 類別，或者可以將要非同步執行的程式碼放在方法中，然後使用委派來叫用此程式碼。 本章節提供 <xref:System.Activities.AsyncCodeActivity> 衍生活動的兩個範例，一個範例會使用 WCF 資料服務用戶端程式庫的非同步方法，另一個範例則使用委派。
+為了對付透過 Web 存取資源時可能發生的延遲問題，我們建議您以非同步方式存取 WCF 資料服務。 WCF Data Services 用戶端程式庫包含叫用查詢的非同步方法，並在 Windows Workflow Foundation (WF) 提供<xref:System.Activities.AsyncCodeActivity>類別來撰寫非同步活動。 <xref:System.Activities.AsyncCodeActivity> 衍生的活動可以撰寫來利用擁有非同步方法的.NET Framework 類別，也要以非同步方式執行的程式碼可以置於方法，並使用委派來叫用。 本章節提供 <xref:System.Activities.AsyncCodeActivity> 衍生活動的兩個範例，一個範例會使用 WCF 資料服務用戶端程式庫的非同步方法，另一個範例則使用委派。
 
 > [!NOTE]
 > 如需詳細資訊，請參閱 <<c0> [ 非同步作業 (WCF Data Services)](../data/wcf/asynchronous-operations-wcf-data-services.md)並[建立非同步活動](creating-asynchronous-activities-in-wf.md)。
@@ -72,7 +72,7 @@ Calling WCF Data Service...
 
 ### <a name="using-a-delegate"></a>使用委派
 
-除了叫用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 類別的非同步方法以外，以 <xref:System.Activities.AsyncCodeActivity>為基礎的活動也可以在它的其中一個方法內定義非同步邏輯。 這個方法的指定方式是使用活動之 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 覆寫中的委派。 當此方法傳回時，執行階段會叫用此活動的 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 覆寫。 從工作流程呼叫 OData 服務時，這個方法可用來查詢此服務，並提供任何額外的處理工作。
+除了叫用.NET Framework 類別，非同步方法<xref:System.Activities.AsyncCodeActivity>-為主的活動也可以在其中一個方法定義非同步邏輯。 這個方法的指定方式是使用活動之 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 覆寫中的委派。 當此方法傳回時，執行階段會叫用此活動的 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 覆寫。 從工作流程呼叫 OData 服務時，這個方法可用來查詢此服務，並提供任何額外的處理工作。
 
 在下列範例中，會定義 `ListCustomers` 活動。 這個活動會查詢範例 Northwind 資料服務，並傳回 `List<Customer>` ，其中包含了 Northwind 資料庫中的所有客戶。 非同步工作是由 `GetCustomers` 方法所執行。 這個方法會查詢此服務中的所有客戶，然後將這些客戶複製到 `List<Customer>`。 接著它會檢查結果是否分頁。 如果是的話，它會查詢此服務中的下一頁結果、將這些結果加入至清單中，並繼續進行，直到擷取所有客戶資料為止。
 

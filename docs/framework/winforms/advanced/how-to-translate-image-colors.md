@@ -1,5 +1,5 @@
 ---
-title: HOW TO：轉譯影像色彩
+title: 作法：轉譯影像色彩
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], changing colors
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-ms.openlocfilehash: 04e61383ef79b17ea6e1523588cd9593ec9b082c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb9ec30c06740214b8dc6b65d32eba4e2920c89b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954621"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592927"
 ---
-# <a name="how-to-translate-image-colors"></a>HOW TO：轉譯影像色彩
+# <a name="how-to-translate-image-colors"></a>作法：轉譯影像色彩
 翻譯加入到一或多個四個色彩元件的值。 下表提供色彩矩陣項目表示的翻譯。  
   
 |要轉換的元素|矩陣項目|  
@@ -46,7 +46,7 @@ ms.locfileid: "61954621"
  [!code-vb[System.Drawing.RecoloringImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 上述範例是為了搭配 Windows Form 使用而設計，且其需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，這是 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數。 取代`ColorBars.bmp`映像檔案名稱與您系統為有效的路徑。  
+ 上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。 取代`ColorBars.bmp`映像檔案名稱與您系統為有效的路徑。  
   
 ## <a name="see-also"></a>另請參閱
 

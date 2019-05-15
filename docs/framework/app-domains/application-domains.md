@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd6004bce42a3617c9b7de940336de0fb03c8cc9
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: fe56c0ec3b8a5a150a999e7de98f283436a0ba9d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674577"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607913"
 ---
 # <a name="application-domains"></a>應用程式定義域
 
@@ -41,18 +41,18 @@ ms.locfileid: "55674577"
   
  應用程式定義域提供的隔離具有以下優點：  
   
--   在某一應用程式中的錯誤不會影響其他應用程式。 由於型別安全程式碼不會導致記憶體錯誤，所以使用應用程式定義域可確保在某一定義域中執行的程式碼不會影響處理序中的其他應用程式。  
+- 在某一應用程式中的錯誤不會影響其他應用程式。 由於型別安全程式碼不會導致記憶體錯誤，所以使用應用程式定義域可確保在某一定義域中執行的程式碼不會影響處理序中的其他應用程式。  
   
--   可以停止個別應用程式而不需停止整個處理序。 使用應用程式定義域可以讓您卸載在單一應用程式中執行的程式碼。  
+- 可以停止個別應用程式而不需停止整個處理序。 使用應用程式定義域可以讓您卸載在單一應用程式中執行的程式碼。  
   
     > [!NOTE]
     >  您不能卸載個別組件或型別。 只有完整的定義域可以卸載。  
   
--   在某一應用程式中執行的程式碼不能直接從其他應用程式存取程式碼或資源。 Common Language Runtime 是藉由防止不同應用程式定義域中物件之間的呼叫來強制執行這種隔離。 在不同定義域之間傳遞的物件必須用複製方式傳遞或由 Proxy 存取。 如果物件是複製的，那麼對該物件的呼叫就是區域呼叫。 也就是說，呼叫端和被參考的物件是在同一個應用程式定義域中。 如果物件是透過 Proxy 存取，那麼對物件的呼叫便是遠端呼叫。 在這種情況下，呼叫端和被參考的物件是在不同的應用程式定義域中。 跨定義域呼叫是使用與兩個處理序或兩部電腦之間呼叫相同的遠端呼叫基礎結構。 因此，所參考之物件的中繼資料 (Metadata) 必須在這兩個應用程式定義域中都能使用，才能讓該方法呼叫被 JIT 適當地編譯。 如果呼叫定義域無權存取所呼叫物件的中繼資料，則編譯可能會失敗，並擲回 <xref:System.IO.FileNotFoundException> 類型的例外狀況。 如需詳細資訊，請參閱 [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))。 決定如何跨定義域存取物件的機制是由該物件決定。 如需詳細資訊，請參閱<xref:System.MarshalByRefObject?displayProperty=nameWithType>。  
+- 在某一應用程式中執行的程式碼不能直接從其他應用程式存取程式碼或資源。 Common Language Runtime 是藉由防止不同應用程式定義域中物件之間的呼叫來強制執行這種隔離。 在不同定義域之間傳遞的物件必須用複製方式傳遞或由 Proxy 存取。 如果物件是複製的，那麼對該物件的呼叫就是區域呼叫。 也就是說，呼叫端和被參考的物件是在同一個應用程式定義域中。 如果物件是透過 Proxy 存取，那麼對物件的呼叫便是遠端呼叫。 在這種情況下，呼叫端和被參考的物件是在不同的應用程式定義域中。 跨定義域呼叫是使用與兩個處理序或兩部電腦之間呼叫相同的遠端呼叫基礎結構。 因此，所參考之物件的中繼資料 (Metadata) 必須在這兩個應用程式定義域中都能使用，才能讓該方法呼叫被 JIT 適當地編譯。 如果呼叫定義域無權存取所呼叫物件的中繼資料，則編譯可能會失敗，並擲回 <xref:System.IO.FileNotFoundException> 類型的例外狀況。 如需詳細資訊，請參閱 [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))。 決定如何跨定義域存取物件的機制是由該物件決定。 如需詳細資訊，請參閱<xref:System.MarshalByRefObject?displayProperty=nameWithType>。  
   
--   程式碼的行為範圍是由執行該程式碼的應用程式決定。 換言之，應用程式定義域會提供應用程式版本原則、它所取之任何遠端組件的位置，以及有關在哪裡尋找載入定義域中之組件等組態設定。  
+- 程式碼的行為範圍是由執行該程式碼的應用程式決定。 換言之，應用程式定義域會提供應用程式版本原則、它所取之任何遠端組件的位置，以及有關在哪裡尋找載入定義域中之組件等組態設定。  
   
--   授予程式碼的使用權限可以由執行該程式碼的應用程式定義域控制。  
+- 授予程式碼的使用權限可以由執行該程式碼的應用程式定義域控制。  
   
 ## <a name="application-domains-and-assemblies"></a>應用程式定義域和組件
 
@@ -60,9 +60,9 @@ ms.locfileid: "55674577"
   
  載入組件的方式會決定其 Just-in-Time (JIT) 編譯程式碼是否能在處理序中由多個應用程式定義域所共用，以及組件是否能夠從處理序卸載。  
   
--   如果組件是以定義域中性方式 (Domain-neutral) 載入，所有共用相同安全性授權集的應用程式定義域，也就都能共用相同的 JIT 編譯程式碼，進而減少應用程式所需要的記憶體。 然而，組件則會永遠無法從處理序中卸載。  
+- 如果組件是以定義域中性方式 (Domain-neutral) 載入，所有共用相同安全性授權集的應用程式定義域，也就都能共用相同的 JIT 編譯程式碼，進而減少應用程式所需要的記憶體。 然而，組件則會永遠無法從處理序中卸載。  
   
--   如果組件不是以定義域中性方式載入，則在載入該組件的每一個應用程式定義域中，都必須是 JIT 編譯的。 然而，只要卸載所有載入該組件的應用程式定義域，即可從處理序中卸載組件。  
+- 如果組件不是以定義域中性方式載入，則在載入該組件的每一個應用程式定義域中，都必須是 JIT 編譯的。 然而，只要卸載所有載入該組件的應用程式定義域，即可從處理序中卸載組件。  
   
  執行階段主機會判斷將執行階段載入處理序時，是否要以定義域中性方式載入組件。 針對 Managed 應用程式，會將 <xref:System.LoaderOptimizationAttribute> 屬性 (Attribute) 套用到處理序的進入點方法，並從關聯的 <xref:System.LoaderOptimization> 列舉型別 (Enumeration) 中指定值。 針對裝載 Common Language Runtime 的 Unmanaged 應用程式，指定您在呼叫 [CorBindToRuntimeEx 函式](../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)方法時的適當旗標。  
   
@@ -84,9 +84,9 @@ ms.locfileid: "55674577"
   
  在決定是否要將組件以定義域中性方式載入時，您必須在減少記憶體使用與其他效能考量之間做出取捨。  
   
--   對於定義域中性的組件，存取靜態資料和方法會比較緩慢，這是因為需要隔離組件。 存取該組件的每一個應用程式定義域都必須有靜態資料的單獨複本，以避免靜態欄位中物件的參考跨越定義域界限。 而其結果是，執行階段會含有額外的邏輯以便將呼叫端導向至靜態資料或方法的適當複本。 這些額外的邏輯就會讓呼叫慢下來。  
+- 對於定義域中性的組件，存取靜態資料和方法會比較緩慢，這是因為需要隔離組件。 存取該組件的每一個應用程式定義域都必須有靜態資料的單獨複本，以避免靜態欄位中物件的參考跨越定義域界限。 而其結果是，執行階段會含有額外的邏輯以便將呼叫端導向至靜態資料或方法的適當複本。 這些額外的邏輯就會讓呼叫慢下來。  
   
--   在將組件以定義域中性方式載入時，必須找到和載入組件的所有相依性項目。這是因為無法以定義域中性方式載入的相依性項目，也會使組件無法以定義域中性方式載入。  
+- 在將組件以定義域中性方式載入時，必須找到和載入組件的所有相依性項目。這是因為無法以定義域中性方式載入的相依性項目，也會使組件無法以定義域中性方式載入。  
   
 ## <a name="application-domains-and-threads"></a>應用程式定義域和執行緒
 
@@ -100,9 +100,9 @@ ms.locfileid: "55674577"
 
  文化特性 (由 <xref:System.Globalization.CultureInfo> 物件表示) 會與執行緒產生關聯。 您可以使用 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 屬性取得與目前執行中執行緒相關聯的文化特性，也可以使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 屬性來取得或設定與目前執行中執行緒相關聯的文化特性。 如果已經使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 屬性明確設定與執行緒相關聯的文化特性，當執行緒跨越應用程式定義域界限時，文化特性會繼續與該執行緒相關聯。 否則，在任何指定時間與執行緒相關聯的文化特性會由執行緒執行所在之應用程式定義域中的 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> 屬性值決定：  
   
--   如果該屬性的值不是 `null`，則該屬性所傳回的文化特性會與執行緒相關聯 (也因此會由 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 屬性傳回)。  
+- 如果該屬性的值不是 `null`，則該屬性所傳回的文化特性會與執行緒相關聯 (也因此會由 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 屬性傳回)。  
   
--   如果該屬性的值為 `null`，則目前系統的文化特性會與執行緒相關聯。  
+- 如果該屬性的值為 `null`，則目前系統的文化特性會與執行緒相關聯。  
   
 ## <a name="programming-with-application-domains"></a>使用應用程式定義域設計程式
 
@@ -110,7 +110,7 @@ ms.locfileid: "55674577"
   
  <xref:System.AppDomain> 是應用程式定義域的程式設計介面。 這個類別包括了一些方法，可用來建立及卸載定義域、建立定義域中的型別執行個體，以及註冊各種告知 (例如，應用程式定義域的卸載)。 下表列出常用的 <xref:System.AppDomain> 方法。  
   
-|AppDomain 方法|描述|  
+|AppDomain 方法|說明|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|建立新的應用程式定義域。 建議您要使用指定 <xref:System.AppDomainSetup> 物件的這個方法多載。 這是設定新定義域之屬性的慣用方法，例如，應用程式基底或應用程式的根目錄；定義域組態檔的位置；以及 Common Language Runtime 要用來將組件載入定義域的搜尋路徑等屬性。|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> 和 <xref:System.AppDomain.ExecuteAssemblyByName%2A>|執行應用程式定義域中的組件。 這是執行個體方法，所以可用來在另一個您擁有參考的應用程式定義域中執行程式碼。|  
@@ -138,9 +138,9 @@ COMPLUS_LoaderOptimization = 1
   
  載入組件的方式會決定其 Just-In-Time (JIT) 編譯程式碼是否能在處理序中由多個應用程式定義域所共用。  
   
--   如果組件是以定義域中性 (Domain-neutral) 方式載入，所有共用相同安全性授權集的應用程式定義域都能共用相同的 JIT 編譯程式碼。 這會減少應用程式所需要的記憶體。  
+- 如果組件是以定義域中性 (Domain-neutral) 方式載入，所有共用相同安全性授權集的應用程式定義域都能共用相同的 JIT 編譯程式碼。 這會減少應用程式所需要的記憶體。  
   
--   如果組件不是以定義域中性方式載入，則在載入該組件的每一個應用程式定義域中，該組件都必須是 JIT 編譯的，並且載入器不可以跨越應用程式定義域來共用內部資源。  
+- 如果組件不是以定義域中性方式載入，則在載入該組件的每一個應用程式定義域中，該組件都必須是 JIT 編譯的，並且載入器不可以跨越應用程式定義域來共用內部資源。  
   
  當設定為 1 時，COMPLUS_LoaderOptimization 環境旗標會強制執行階段主應用程式以稱為 SingleDomain 的非定義域中性方式載入所有組件。 除了永遠以定義域中性方式載入的 Mscorlib 之外，SingleDomain 不會以定義域中性方式載入任何組件。 這種設定稱為單一定義域，因為它通常使用於裝載程式只在處理序中執行單一應用程式的情況。  
   

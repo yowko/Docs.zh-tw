@@ -2,12 +2,12 @@
 title: Entity Framework 詞彙
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: a4befe4c45f11a59982edc9f976258f795a18cde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9272740bef21dbe8b28bd6e58354a342fb799002
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764331"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583543"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework 詞彙
 本主題定義中最常參考的詞彙[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]文件。 而為相關主題提供的連結表示有其他可用的資訊。  
@@ -18,7 +18,7 @@ ms.locfileid: "61764331"
 |Association Set - 關聯集|用於相同類型之關聯執行個體的邏輯容器。<br /><br /> 如需詳細資訊，請參閱 < [AssociationSet 項目 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#associationset-element-csdl)並[關聯集](../../../../../docs/framework/data/adonet/association-set.md)。|  
 |Code First|從 Entity Framework 4.1 開始，您可以使用 Code First 開發透過程式設計方式建立模型。 Code First 開發有兩種不同的方案。 在這兩種情況下，開發人員透過編碼 .NET Framework 類別定義建立模型，然後選擇性地使用資料註解或 Fluent 應用程式開發介面指定其他對應或組態。<br /><br /> 請注意，Code First 開發是屬於[Entity Framework 5.0](https://go.microsoft.com/fwlink/?LinkId=234900)。 Entity Framework 5.0 不是 .NET Framework 的一部分，而是建置在 .NET Framework 4.5 之上。 Entity Framework 5.0 可[' Entity Framework'](https://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](https://go.microsoft.com/fwlink/?LinkId=232488)封裝。 如需詳細資訊，請參閱 < [Entity Framework 版本與版本控制](https://go.microsoft.com/fwlink/?LinkId=234899)。|  
 |Command Tree - 命令樹|所有的通用、 程式設計表示[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]一或多個運算式組成的查詢。<br /><br /> 如需詳細資訊，請參閱 < [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)。|  
-|複雜類型|[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 類別，表示概念模型中所定義的複雜屬性。 複雜類型可使純量屬性在實體內有組織結構。 複雜物件是複雜類型的執行個體。 如需詳細資訊，請參閱 < [ComplexType 項目 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#complextype-element-csdl)並[複雜型別](../../../../../docs/framework/data/adonet/complex-type.md)。|  
+|複雜類型|.NET Framework 類別，表示概念模型中所定義的複雜屬性。 複雜類型可使純量屬性在實體內有組織結構。 複雜物件是複雜類型的執行個體。 如需詳細資訊，請參閱 < [ComplexType 項目 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#complextype-element-csdl)並[複雜型別](../../../../../docs/framework/data/adonet/complex-type.md)。|  
 |ComplexType|資料型別的規格，其中表示實體類型的非純量屬性沒有索引鍵屬性。<br /><br /> 如需詳細資訊，請參閱 < [ComplexType 項目 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#complextype-element-csdl)並[複雜型別](../../../../../docs/framework/data/adonet/complex-type.md)。|  
 |概念模型|[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 中之應用程式定義域中實體類型、複雜型別、關聯、實體容器、實體集和關聯集的抽象規格。 概念模型是以 CSDL 定義於 .csdl 檔案。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 模型和對應](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)。|  
 |.csdl file - .csdl 檔案|包含概念模型的 XML 檔案 (以 CSDL 表示)。|  
@@ -36,7 +36,7 @@ ms.locfileid: "61764331"
 |Entity Framework|一組藉由讓開發人員使用對應至資料來源中邏輯結構描述的概念模型，進而可以支援資料導向軟體應用程式開發的技術。<br /><br /> 如需詳細資訊，請參閱 < [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)。|  
 |實體集|用於所指型別及其子型別之實體的邏輯容器。 實體集在資料庫中是對應至資料表。<br /><br /> 如需詳細資訊，請參閱 < [EntitySet 項目 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entityset-element-csdl)並[實體集](../../../../../docs/framework/data/adonet/entity-set.md)。|  
 |Entity SQL|與儲存體無關的 SQL Dialect，可直接與概念實體結構描述一起運作並支援概念模型的概念，例如繼承和關聯性。<br /><br /> 如需詳細資訊，請參閱 < [Entity SQL 語言](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)。|  
-|Entity Type - 實體類型|[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 類別，表示概念模型中所定義的實體。 實體類型可以有純量、複雜和導覽屬性。 物件是實體類型的執行個體。 如需詳細資訊，請參閱 <<c0> [ 使用物件](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)。|  
+|Entity Type - 實體類型|.NET Framework 類別，因為它定義概念模型中表示的實體。 實體類型可以有純量、複雜和導覽屬性。 物件是實體類型的執行個體。 如需詳細資訊，請參閱 <<c0> [ 使用物件](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)。|  
 |EntityType|資料型別的規格，其中包括索引鍵和一組具名屬性以及表示概念模型或儲存體模型中的最上層項目。<br /><br /> 如需詳細資訊，請參閱 < [EntityType 項目 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl)並[實體類型](../../../../../docs/framework/data/adonet/entity-type.md)。|  
 |Explicit Loading - 明確載入|當查詢傳回物件時，相關物件不會同時載入。 根據預設，在導覽屬性上使用 `Load` 方法明確要求之前，不會載入相關物件。|  
 |Foreign Key Association - 外部索引鍵關聯|實體間的關聯，透過外部索引鍵屬性加以管理。|  
@@ -57,7 +57,7 @@ ms.locfileid: "61764331"
 |Object Layer - 物件層|Entity Framework 所使用的實體類型和內容物件定義。|  
 |Object Query - 物件查詢|在物件內容中針對概念模型執行的查詢，該物件內容會傳回資料做為物件。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 物件查詢](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))。|  
 |Object-Relational Mapping - 物件關聯式對應|將資料從關聯式資料庫轉換成資料型別的技巧，該資料型別可在物件導向軟體應用程式中使用。<br /><br /> [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 透過對應關聯式資料的方式，依儲存體模型中所定義提供物件關聯式對應服務給資料型別，如概念模型中所定義。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 模型和對應](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)。|  
-|物件服務|所提供的服務[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]可讓應用程式程式碼來操作實體，例如[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]物件。|  
+|物件服務|所提供的服務[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]可讓應用程式程式碼與.NET Framework 物件的實體上運作。|  
 |Persistence-Ignorant Object - 非持續性物件|不包含任何與資料儲存體相關之邏輯的物件。 也可稱為 POCO 實體。|  
 |POCO|Plain Old CLR Object - 簡單的 CLR 物件。 不會繼承自另一類別或實作介面的物件。|  
 |POCO entity - POCO 實體|[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 中的實體，其並非繼承自 <xref:System.Data.Objects.DataClasses.EntityObject> 或 <xref:System.Data.Objects.DataClasses.ComplexObject> 也不會實作 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 介面。 POCO 實體通常，現有的使用中的網域物件[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]應用程式。 這些實體支援非持續性。 如需詳細資訊，請參閱 <<c0> [ 處理 POCO 實體](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100))。|  

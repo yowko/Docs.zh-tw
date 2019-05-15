@@ -2,12 +2,12 @@
 title: 弱型別 JSON 序列化範例
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9be679b26e395e8fed0938567184a2e5d4a8f07
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006352"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589222"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>弱型別 JSON 序列化範例
 當將使用者定義的型別序列化為指定的 Wire 格式，或是將 Wire 格式還原序列化為使用者定義的型別時，服務和用戶端都必須提供指定的使用者定義型別，以供使用。 一般而言，若要完成這項操作， <xref:System.Runtime.Serialization.DataContractAttribute> 屬性會套用至這些使用者定義的型別，而 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性會套用至其成員。 這個機制也適用於使用 JavaScript Object Notation (JSON) 物件，如本主題中所述[How to:序列化和還原序列化 JSON 資料](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)。  
@@ -58,7 +58,7 @@ ms.locfileid: "62006352"
   
  這可能會很麻煩，特別是如果用戶端必須處理一種以上的 JSON 物件型別。  
   
- 這個範例提供的 `JsonObject` 型別引入還原序列化 JSON 物件的弱式型別表示。 `JsonObject` 需要依賴 JSON 物件與 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 字典之間的自然對應以及 JSON 陣列與 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 陣列之間的對應。 下列程式碼會顯示 `JsonObject` 型別。  
+ 這個範例提供的 `JsonObject` 型別引入還原序列化 JSON 物件的弱式型別表示。 `JsonObject` 依賴 JSON 物件和.NET Framework 字典之間的自然對應以及 JSON 陣列和.NET Framework 陣列之間的對應。 下列程式碼會顯示 `JsonObject` 型別。  
   
 ```  
 // Instantiation of JsonObject json omitted  

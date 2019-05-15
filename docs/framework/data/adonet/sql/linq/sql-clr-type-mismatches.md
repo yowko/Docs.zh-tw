@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 13d8d68140b68652b5e059ae9fb106f32142f698
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e51d999d5fcaf8180b4ea5189a3db9b6143a57db
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876859"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582727"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR 類型不符
 
@@ -39,7 +39,7 @@ Select DateOfBirth From Customer Where CustomerId = @id
   - **TimeSpan**。 這種型別代表兩個 `DateTime` 值之間的差異，而且不會對應至 SQL Server 的 `timestamp`。 在某些情況下，CLR <xref:System.TimeSpan?displayProperty=nameWithType> 可能也會對應至 SQL Server `TIME` 型別。 SQL Server `TIME` 型別只能用於代表小於 24 小時的正值。 CLR <xref:System.TimeSpan> 具有較大的範圍。
 
   > [!NOTE]
-  > SQL Server 專屬[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]中的型別<xref:System.Data.SqlTypes>不包含在這項比較。
+  > 中的 SQL Server 特定.NET Framework 型別<xref:System.Data.SqlTypes>不包含在這項比較。
 
 - SQL Server 中的不符：
 
@@ -159,7 +159,7 @@ Where Col1 = Col2
 
 ### <a name="operator-and-function-differences"></a>運算子和函式差異
 
-在本質上相等的運算子和函式，在語意上具有少許的差異。 例如: 
+在本質上相等的運算子和函式，在語意上具有少許的差異。 例如：
 
 - C# 會根據邏輯運算子 (Logical Operator) `&&` 和 `||` 的運算元語彙順序，指定最少運算 (Short Circuit) 語意。 相反地，SQL 是針對集合架構查詢，因此可提供更多的自由讓最佳化工具決定執行順序。 下列是部分隱含意義：
 
@@ -167,7 +167,7 @@ Where Col1 = Col2
 
   - 則鬆散轉譯為`AND` / `OR`運算子可能會導致未預期的錯誤，如果C#運算式依賴評估根據第一個運算元評估結果的第二個運算元。
 
-- `Round()` 函式在 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 和 T-SQL 中的語意不同。
+- `Round()` .NET Framework 中，並在 T-SQL 中，函式會有不同的語意。
 
 - 在 CLR 中，字串的起始索引是 0，而在 SQL 中則是 1。 因此，任何具有索引的函式都需要進行索引轉譯。
 
@@ -194,7 +194,7 @@ Where Col1 = Col2
 [!code-csharp[DLinqMismatch#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#5)]
 [!code-vb[DLinqMismatch#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#5)]
 
-- SQL 會在 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 使用 Banker's Rounding (四捨六入五成雙) 時，執行對稱式算術捨入。 如需詳細資訊，請參閱知識庫文件 196652。
+- SQL 執行對稱式算術捨入而.NET Framework 可讓您使用成雙。 如需詳細資訊，請參閱知識庫文件 196652。
 
 - 根據預設，在通用地區設定 (Locale) 中，SQL 中的字元字串比較作業不會區分大小寫。 在 Visual Basic 和 C# 中，則會區分大小寫。 例如， `s == "Food"` (`s = "Food"` Visual Basic 中) 及`s == "Food"`可以產生不同的結果，如果`s`是`food`。
 

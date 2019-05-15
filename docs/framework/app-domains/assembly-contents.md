@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25594c55a5462c42611df7119dad37bd8a61cc2e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dd41051bd770d3579137aa158e70cef41aed49f8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149340"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607834"
 ---
 # <a name="assembly-contents"></a>組件內容
 一般而言，靜態組件可包含四個項目：  
   
--   [組件資訊清單](../../../docs/framework/app-domains/assembly-manifest.md)，其中含有組件中繼資料。  
+- [組件資訊清單](../../../docs/framework/app-domains/assembly-manifest.md)，其中含有組件中繼資料。  
   
--   型別中繼資料  
+- 型別中繼資料  
   
--   會實作型別的 Microsoft Intermediate Language (MSIL) 程式碼  
+- 會實作型別的 Microsoft Intermediate Language (MSIL) 程式碼  
   
--   資源集合  
+- 資源集合  
   
  只有組件資訊清單是必要項，不過型別或資源兩者必須有一項要用來賦予組件任何有意義的功能。  
   

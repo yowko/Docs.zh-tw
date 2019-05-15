@@ -7,27 +7,27 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 19c1f754aaef66197b033a68bc215255511cd618
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 87755eadeaebb72c5a8ce147ba2e6faf109e6c12
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202882"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584378"
 ---
 # <a name="finalizers-c-programming-guide"></a>完成項 (C# 程式設計手冊)
 完成項 (也稱為**解構函式**) 可在記憶體回收行程收集類別執行個體時，用來執行任何必要的最後清除。  
   
 ## <a name="remarks"></a>備註  
   
--   無法在結構中定義完成項。 它們只能與類別搭配使用。  
+- 無法在結構中定義完成項。 它們只能與類別搭配使用。  
   
--   一個類別只能有一個完成項。  
+- 一個類別只能有一個完成項。  
   
--   無法繼承或多載完成項。  
+- 無法繼承或多載完成項。  
   
--   無法呼叫完成項。 會自動呼叫它們。  
+- 無法呼叫完成項。 會自動呼叫它們。  
   
--   完成項不會接受修飾詞，也不會包含參數。  
+- 完成項不會接受修飾詞，也不會包含參數。  
   
  例如，下列是 `Car` 類別的完成項宣告。
   
@@ -72,11 +72,11 @@ protected override void Finalize()
   
  如需清除資源的詳細資訊，請參閱下列主題︰  
   
--   [清除 Unmanaged 資源](../../../standard/garbage-collection/unmanaged.md)  
+- [清除 Unmanaged 資源](../../../standard/garbage-collection/unmanaged.md)  
   
--   [實作 Dispose 方法](../../../standard/garbage-collection/implementing-dispose.md)  
+- [實作 Dispose 方法](../../../standard/garbage-collection/implementing-dispose.md)  
   
--   [using 陳述式](../../../csharp/language-reference/keywords/using-statement.md)  
+- [using 陳述式](../../../csharp/language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>範例  
  下列範例會建立三個產生繼承鏈結的類別。 `First` 類別是基底類別、`Second` 衍生自 `First`，而 `Third` 衍生自 `Second`。 所有這三個都有完成項。 在 `Main` 中，會建立最高衍生性類別的執行個體。 程式執行時，請注意，會依最高衍生性到最低衍生性的順序，自動呼叫這三個類別的完成項。  

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Visual Basic 中排序陣列
+title: 作法：在 Visual Basic 中排序陣列
 ms.date: 07/20/2015
 f1_keywords:
 - Array.Sort
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], sorting
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-ms.openlocfilehash: 3c701d1b65d31315ba931cca729e465ba7d766b5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 680f488a98d6e7e31b3d077843514fd12f75481c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620867"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586437"
 ---
-# <a name="how-to-sort-an-array-in-visual-basic"></a>HOW TO：在 Visual Basic 中排序陣列
+# <a name="how-to-sort-an-array-in-visual-basic"></a>作法：在 Visual Basic 中排序陣列
 這個範例會宣告陣列`String`命名的物件`zooAnimals`，填入它，然後依字母順序排序。  
   
 ## <a name="example"></a>範例  
@@ -32,7 +32,7 @@ End Sub
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
-- Mscorlib.dll 的存取和<xref:System>命名空間。  
+- 若要存取<xref:System>命名空間。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  以下條件可能會造成例外狀況：  

@@ -2,12 +2,12 @@
 title: LINQ to XML 比較DOM (C#)
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: 44e5a4d00705d1cd7aff66e0a9be387d5c6c633a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ab775cc259fd3a337358bca2da6055d7b1ea6bd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702427"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596960"
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML 比較DOM (C#)
 本節描述 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 和目前主流的 XML 程式設計 API (也就是 W3C 文件物件模型 (DOM)) 之間的一些主要差異。  
@@ -15,7 +15,7 @@ ms.locfileid: "54702427"
 ## <a name="new-ways-to-construct-xml-trees"></a>建構 XML 樹狀的新方式  
  在 W3C DOM 中，您可以從下往上建置 XML 樹狀；也就是說，您可以建立文件、建立項目，然後將項目加入到文件中。  
   
- 例如，以下是使用 Microsoft 的 DOM 實作 <xref:System.Xml.XmlDocument> 建立 XML 樹狀結構的典型方式：  
+ 例如，以下是使用 Microsoft 的 DOM 實作 <xref:System.Xml.XmlDocument> 建立 XML 樹狀的典型方式：  
   
 ```csharp  
 XmlDocument doc = new XmlDocument();  
@@ -50,7 +50,7 @@ contacts.AppendChild(contact);
 doc.AppendChild(contacts);  
 ```  
   
- 這個編碼樣式在視覺上不會提供太多 XML 樹狀的相關資訊。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 支援使用這個方法來建構 XML 樹狀結構，但是也支援採用「功能建構」的替代方法。 功能結構使用 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 建構函式來建置 XML 樹狀。  
+ 這個編碼樣式在視覺上不會提供太多 XML 樹狀的相關資訊。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 支援使用這個方法來建構 XML 樹狀結構，但是也支援採用「功能建構」的替代方法。 功能結構使用 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 建構函式來建置 XML 樹狀結構。  
   
  此處說明您如何使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 功能建構，來建構相同的 XML 樹狀結構：  
   
@@ -80,11 +80,11 @@ XElement contacts =
 ## <a name="working-directly-with-xml-elements"></a>直接使用 XML 項目  
  當您使用 XML 進行程式設計時，您的主要焦點通常是 XML 項目，也可能是屬性。 在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中，您可以直接使用 XML 項目和屬性。 例如，您可以：  
   
--   完全不使用文件物件來建立 XML 項目。 當您必須使用 XML 樹狀結構的片段時，這可以簡化程式設計的方式。  
+- 完全不使用文件物件來建立 XML 項目。 當您必須使用 XML 樹狀結構的片段時，這可以簡化程式設計的方式。  
   
--   從 XML 檔案直接載入 `T:System.Xml.Linq.XElement` 物件。  
+- 從 XML 檔案直接載入 `T:System.Xml.Linq.XElement` 物件。  
   
--   將 `T:System.Xml.Linq.XElement` 物件序列化為檔案或資料流。  
+- 將 `T:System.Xml.Linq.XElement` 物件序列化為檔案或資料流。  
   
  將這個 XML 項目或屬性與 W3C DOM 相比較，後者中的 XML 文件會當做 XML 樹狀結構的邏輯容器使用。 在 DOM 中，XML 節點 (包括項目和屬性) 必須在 XML 文件的內容中建立。 此處為要在 DOM 中建立名稱項目之節點的片段：  
   
@@ -105,7 +105,7 @@ doc.AppendChild(name);
  另一個 DOM 問題是，DOM 不會讓您變更節點的名稱， 而是必須建立新的節點，並將所有子節點複製到該節點中，因此會失去原始的節點識別。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會讓您在節點上設定 <xref:System.Xml.Linq.XName> 屬性，藉以避免這個問題。  
   
 ## <a name="static-method-support-for-loading-xml"></a>載入 XML 的靜態方法支援  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 可讓您使用靜態方法 (而非執行個體方法) 來載入 XML。 這會簡化載入和剖析的程序。 如需詳細資訊，請參閱[＜How to：從檔案載入 XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 可讓您使用靜態方法 (而非執行個體方法) 來載入 XML。 這會簡化載入和剖析的程序。 如需詳細資訊，請參閱[如何：從檔案載入 XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)。  
   
 ## <a name="removal-of-support-for-dtd-constructs"></a>移除 DTD 建構函式的支援  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會移除實體和實體參考的支援，進一步簡化 XML 程式設計。 實體的管理很複雜，而且不常使用。 移除這些支援會增進效能並簡化程式設計介面。 填入 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 樹狀結構時，系統會展開所有 DTD 實體。  
@@ -129,7 +129,7 @@ doc.AppendChild(name);
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 項目支援一組可延伸的附註。 這在追蹤項目的其他資訊 (例如，結構描述資訊)、項目是否繫結至 UI 的相關資訊，或任何種類的應用程式專屬資訊時，相當實用。 如需詳細資訊，請參閱 [LINQ to XML 註釋](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-annotations.md)。  
   
 ## <a name="support-for-schema-information"></a>支援結構描述資訊  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 透過 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間中的擴充方法，提供 XSD 驗證支援。 您可以驗證 XML 樹狀是以 XSD 編譯。 您可以利用 Post-Schema-Validation Infoset (PSVI) 填入 XML 樹狀。 如需詳細資訊，請參閱[＜How to：使用 XSD 進行驗證](../../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)和 <xref:System.Xml.Schema.Extensions>。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 透過 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間中的擴充方法，提供 XSD 驗證支援。 您可以驗證 XML 樹狀是以 XSD 編譯。 您可以利用 Post-Schema-Validation Infoset (PSVI) 填入 XML 樹狀。 如需詳細資訊，請參閱[如何：使用 XSD 進行驗證](../../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)和 <xref:System.Xml.Schema.Extensions>。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Windows Forms, controls
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
-ms.openlocfilehash: 3244f9560467de7a63b22d279a3fd277fd14876c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd152d19567806cf1cc7b1b38d9a3c0e47d2a960
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609728"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591680"
 ---
-# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>HOW TO：在 Windows Forms ListView 控制項中啟用並排顯示
+# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>作法：在 Windows Forms ListView 控制項中啟用並排顯示
 使用的 <xref:System.Windows.Forms.ListView> 控制項的並排顯示檢視功能，您可以提供圖形和文字資訊之間的視覺化平衡。 並排顯示檢視中針對項目顯示的文字資訊與詳細資料檢視所定義的資料行資訊相同。 並排顯示檢視與 <xref:System.Windows.Forms.ListView> 控制項中的群組或插入標記功能相配合。  
   
  並排顯示檢視會使用 32 x 32 像素圖示和數行的文字，如下列影像所示。  
@@ -55,8 +55,6 @@ ms.locfileid: "64609728"
 - System 和 System.Windows.Forms 組件的參考。  
   
 - 名為 book.ico 的圖示檔，位於與可執行檔相同的目錄中。  
-  
- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
 

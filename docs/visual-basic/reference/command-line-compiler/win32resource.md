@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32resource compiler option [Visual Basic]
 - win32resource compiler option [Visual Basic]
 ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
-ms.openlocfilehash: 9351e9f6bcb7660dac2c49667ca8db6d578eff7c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8f9c9aac87fd71b61a5413386582ae660efd903
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774760"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593080"
 ---
 # <a name="-win32resource"></a>-win32resource
 將 Win32 資源檔插入輸出檔。  
@@ -34,7 +34,7 @@ ms.locfileid: "61774760"
   
  Win32 資源可以包含版本或點陣圖 （圖示） 資訊，以協助識別您的應用程式**檔案總管**。 如果您未指定`-win32resource`，編譯器會產生的組件版本為基礎的版本資訊。 `-win32resource`和`-win32icon`選項互斥。  
   
- 請參閱[-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)參考[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]資源檔，或[-資源 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)附加[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]資源檔。  
+ 請參閱[-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)來參考.NET Framework 資源檔，或[-資源 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)附加.NET Framework 資源檔。  
   
 > [!NOTE]
 >  `-win32resource`選項不是從 Visual Studio 開發環境中使用; 只有在從命令列編譯時均可使用。  

@@ -2,15 +2,15 @@
 title: JSON 序列化
 ms.date: 03/30/2017
 ms.assetid: 3c2c4747-7510-4bdf-b4fe-64f98428ef4a
-ms.openlocfilehash: bb38005c02e9b3e850282d2a81c2e17143657025
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c44dd71c3903e5c4d3d37b89881896c65c664262
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989855"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591860"
 ---
 # <a name="json-serialization"></a>JSON 序列化
-這個範例示範如何使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 以序列化與還原序列化使用 JavaScript Object Notation (JSON) 格式的資料。 這個序列化引擎會將 JSON 資料轉換為 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別的執行個體，以及轉換回 JSON 資料。 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 與 <xref:System.Runtime.Serialization.DataContractSerializer> 支援相同的型別。 當撰寫 Asynchronous JavaScript and XML (AJAX) 型 Web 應用程式時，JSON 資料格式特別有用。 Windows Communication Foundation (WCF) 中的 AJAX 支援已針對透過 ScriptManager 控制項搭配 ASP.NET AJAX 最佳化。 如需如何使用 Windows Communication Foundation (WCF) 與 ASP.NET AJAX 的範例，請參閱[AJAX 範例](ajax.md)。  
+這個範例示範如何使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 以序列化與還原序列化使用 JavaScript Object Notation (JSON) 格式的資料。 這個序列化引擎將 JSON 資料轉換成.NET Framework 型別的執行個體並放回 JSON 資料。 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 與 <xref:System.Runtime.Serialization.DataContractSerializer> 支援相同的型別。 當撰寫 Asynchronous JavaScript and XML (AJAX) 型 Web 應用程式時，JSON 資料格式特別有用。 Windows Communication Foundation (WCF) 中的 AJAX 支援已針對透過 ScriptManager 控制項搭配 ASP.NET AJAX 最佳化。 如需如何使用 Windows Communication Foundation (WCF) 與 ASP.NET AJAX 的範例，請參閱[AJAX 範例](ajax.md)。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  

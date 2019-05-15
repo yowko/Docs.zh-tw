@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 8092289d6adc6a017999d14dc7439323a7fc0d37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a0da874c74562822d521d4a44782d9372cd62f90
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751000"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588646"
 ---
 # <a name="structured-navigation-overview"></a>結構化巡覽概觀
 可由裝載的內容[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]，則<xref:System.Windows.Controls.Frame>，或<xref:System.Windows.Navigation.NavigationWindow>是可由組件識別的頁面所組成[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]和超連結巡覽至。 頁面的結構及其可被巡覽的方式，如超連結所定義，稱之為巡覽拓撲。 這種拓撲適合各種不同的應用程式類型，尤其是巡覽文件的應用程式。 針對這類應用程式，使用者可以從一頁巡覽到另一頁，頁面彼此間不需要了解。  
@@ -70,7 +70,7 @@ ms.locfileid: "64751000"
   
  Deklarace<xref:System.Windows.Navigation.PageFunction%601>類似於宣告<xref:System.Windows.Controls.Page>加上型別引數。 如您在程式碼範例中所見，使用 `x:TypeArguments` 屬性的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 標記和使用標準泛型型別引數語法的程式碼後置，兩者都指定型別引數。  
   
- 您不必只使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 類別作為型別引數。 A<xref:System.Windows.Navigation.PageFunction%601>可能呼叫來收集抽象化為自訂類型的定義域專屬資料。 下列程式碼示範如何使用自訂類型的型別引數作為<xref:System.Windows.Navigation.PageFunction%601>。  
+ 您不需要使用只有.NET Framework 類別做為型別引數。 A<xref:System.Windows.Navigation.PageFunction%601>可能呼叫來收集抽象化為自訂類型的定義域專屬資料。 下列程式碼示範如何使用自訂類型的型別引數作為<xref:System.Windows.Navigation.PageFunction%601>。  
   
  [!code-csharp[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomType.cs#customtypecode1)]
  [!code-vb[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomType.vb#customtypecode1)]  

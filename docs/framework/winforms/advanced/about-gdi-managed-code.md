@@ -6,17 +6,17 @@ helpviewer_keywords:
 - GDI+
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
-ms.openlocfilehash: b1676189582596ad69981b330ffb081539e949da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c7632933e29a59c1db46f84360e271f27edf8b8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960949"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588611"
 ---
 # <a name="about-gdi-managed-code"></a>關於 GDI+ Managed 程式碼
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 是 Windows 作業系統提供二維向量圖形、影像處理和印刷樣式的部分。 藉由加入新功能，以及最佳化現有的功能，[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 改善了 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (包含在較早版本 Windows 的圖形裝置介面)。  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Managed 類別介面 (一組包裝函式) 是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的一部分，這是建置、部署和執行 XML Web Service 和其他應用程式的環境。  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Managed 的類別介面 （一組包裝函式） 是.NET Framework 中，用於建置、 部署和執行 XML Web service 和其他應用程式的環境的一部分。  
   
  本節為使用 Managed 程式碼的程式設計人員提供 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API 的相關資訊。  
   

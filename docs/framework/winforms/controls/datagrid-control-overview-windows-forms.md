@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 8deb151572b8a83396e4204378783304b66216c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c9442635bb193c13ca30fd1e271631a43b33e55
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648136"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589025"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 控制項概觀 (Windows Form)
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.locfileid: "64648136"
   
  <xref:System.Windows.Forms.DataGrid> 可以提供資料集的使用者介面、相關資料表之間的巡覽，以及豐富的格式化和編輯功能。  
   
- 顯示和操作資料是不同的功能：這個控制項負責使用者介面，而 Windows Form 資料繫結架構與處理資料更新[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]資料提供者。 因此，繫結至相同的資料來源的多個控制項將保持同步。  
+ 顯示和操作資料是不同的功能：控制處理使用者介面，而資料更新處理由 Windows Form 資料繫結架構和.NET Framework 資料提供者。 因此，繫結至相同的資料來源的多個控制項將保持同步。  
   
 > [!NOTE]
 >  如果您熟悉 Visual Basic 6.0 中的 DataGrid 控制項，您會在 Windows Form <xref:System.Windows.Forms.DataGrid> 控制項中發現一些顯著的差異。  

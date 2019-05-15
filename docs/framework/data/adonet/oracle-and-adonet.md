@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: ce92705d22edfc832e894dd2feaafcd11088bf26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8668ee115a3babbdf1ef549a418187d2c5e26b8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772017"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583416"
 ---
 # <a name="oracle-and-adonet"></a>Oracle 和 ADO.NET
 > [!NOTE]
 >  <xref:System.Data.OracleClient> 中的型別已被取代。 目前版本的 .NET Framework 仍然支援這些型別，不過未來的版本就會將其移除。 Microsoft 建議您使用協力廠商的 Oracle 提供者。  
   
- 本節說明 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 特定的功能與行為。  
+ 本章節描述功能和行為，專屬於.NET Framework Data Provider for Oracle。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 利用 Oracle 用戶端軟體所提供的「Oracle 呼叫介面」(OCI) 來存取 Oracle 資料庫。 資料提供者的功能設計類似於的[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]的 SQL Server、 OLE DB 和 ODBC 資料提供者。  
+ .NET Framework Data Provider for Oracle 提供使用 Oracle Call Interface (OCI) 由 Oracle 用戶端軟體所提供的 Oracle 資料庫的存取權。 資料提供者的功能設計類似於 SQL Server、 OLE DB 和 ODBC 的.NET Framework 資料提供者。  
   
- 若要使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle，應用程式必須參考 <xref:System.Data.OracleClient> 命名空間，如下所示：  
+ 若要使用.NET Framework Data Provider for Oracle，應用程式必須參考<xref:System.Data.OracleClient>命名空間，如下所示：  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -38,7 +38,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="in-this-section"></a>本節內容  
  [系統需求](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
- 說明使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 的需求，以及一些在使用時所要注意的問題。  
+ 說明使用.NET Framework Data Provider for Oracle，需求以及一些使用它時要注意的問題。  
   
  [Oracle BFILE](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  說明用來與 Oracle BFILE 資料型別搭配使用的 <xref:System.Data.OracleClient.OracleBFile> 類別。  

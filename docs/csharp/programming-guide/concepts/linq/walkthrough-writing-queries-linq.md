@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 29c24d9920bff38beced8f5995ec328571e6b5d9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 345acd17a6357f71f5c047475a4494a1fa793a58
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309221"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595782"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>逐步解說：在 C# 中撰寫查詢 (LINQ)
 本逐步解說示範用以撰寫 LINQ 查詢運算式的 C# 語言功能。  
@@ -41,17 +41,17 @@ ms.locfileid: "59309221"
 ## <a name="create-an-in-memory-data-source"></a>建立記憶體內部資料來源  
  查詢的資料來源是 `Student` 物件的簡單清單。 每個 `Student` 記錄都有名字、姓氏和整數的陣列，表示其在班級上的測驗分數。 將此程式碼複製到您的專案中。 並注意下列特性：  
   
--   `Student` 類別是由自動實作的屬性所組成。  
+- `Student` 類別是由自動實作的屬性所組成。  
   
--   使用物件初始設定式，初始化清單中的每一位學生。  
+- 使用物件初始設定式，初始化清單中的每一位學生。  
   
--   系統會使用集合初始設定式，來初始化清單本身。  
+- 系統會使用集合初始設定式，來初始化清單本身。  
   
  系統會初始化整個資料結構，並將其具現化，而不需要明確呼叫任何建構函式，亦不需明確的成員存取。 如需這些新功能的詳細資訊，請參閱[自動實作的屬性](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)以及[物件和集合初始設定式](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。  
   
 #### <a name="to-add-the-data-source"></a>若要新增資料來源  
   
--   將 `Student` 類別和學生的初始化清單，新增至專案中的 `Program` 類別。  
+- 將 `Student` 類別和學生的初始化清單，新增至專案中的 `Program` 類別。  
   
      [!code-csharp[CsLinqGettingStarted#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#11)]  
   
@@ -63,7 +63,7 @@ ms.locfileid: "59309221"
   
 #### <a name="to-create-a-simple-query"></a>建立簡單查詢  
   
--   在應用程式的 `Main` 方法中，建立簡單的查詢，即可在執行查詢時產生第一次測驗分數超過 90 分之所有學生的清單。 請注意，因為已選取整個 `Student` 物件，所以查詢的類型是 `IEnumerable<Student>`。 雖然程式碼也可以藉由 [var](../../../../csharp/language-reference/keywords/var.md) 關鍵字來使用隱含類型，但需使用明確類型來清楚說明結果  (如需 `var` 的詳細資訊，請參閱[隱含類型區域變數](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md))。  
+- 在應用程式的 `Main` 方法中，建立簡單的查詢，即可在執行查詢時產生第一次測驗分數超過 90 分之所有學生的清單。 請注意，因為已選取整個 `Student` 物件，所以查詢的類型是 `IEnumerable<Student>`。 雖然程式碼也可以藉由 [var](../../../../csharp/language-reference/keywords/var.md) 關鍵字來使用隱含類型，但需使用明確類型來清楚說明結果  (如需 `var` 的詳細資訊，請參閱[隱含類型區域變數](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md))。  
   
      另請注意，查詢的範圍變數 `student` 可作為來源中每個 `Student` 的參考，並提供每個物件的成員存取。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "59309221"
   
 1. 現在，請撰寫 `foreach` 迴圈以執行查詢。 請注意下列程式碼的相關重點：  
   
-    -   您可透過 `foreach` 迴圈中的反覆運算變數，存取傳回序列中的每個項目。  
+    - 您可透過 `foreach` 迴圈中的反覆運算變數，存取傳回序列中的每個項目。  
   
-    -   此變數的類型是 `Student`，其與 `IEnumerable<Student>` 查詢變數類型相容。  
+    - 此變數的類型是 `Student`，其與 `IEnumerable<Student>` 查詢變數類型相容。  
   
 2. 加入此程式碼之後，建置並執行應用程式，即可在 [主控台] 視窗中查看結果。  
   

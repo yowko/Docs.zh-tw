@@ -8,12 +8,12 @@ helpviewer_keywords:
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-ms.openlocfilehash: 539a554da2ea2f785a54bd7e5ff81d09b908c9e4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 43e81a342377b155fafe26bd0430384cddad5fd4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965211"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608219"
 ---
 # <a name="conversion-operators-c-programming-guide"></a>轉換運算子 (C# 程式設計指南)
 
@@ -25,27 +25,27 @@ C# 可讓程式設計人員宣告類別或結構轉換，使類別或結構能�
 
  轉換運算子具有下列屬性：  
   
--   宣告為 `implicit` 的轉換會在必要時自動發生。  
+- 宣告為 `implicit` 的轉換會在必要時自動發生。  
   
--   宣告為 `explicit` 的轉換需要呼叫轉換。  
+- 宣告為 `explicit` 的轉換需要呼叫轉換。  
   
--   所有轉換都必須宣告為 `static`。  
+- 所有轉換都必須宣告為 `static`。  
   
 ## <a name="related-sections"></a>相關章節
 
  如需詳細資訊：  
   
--   [使用轉換運算子](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  
+- [使用轉換運算子](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  
   
--   [轉換和型別轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+- [轉換和型別轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
   
--   [如何：在結構之間實作使用者定義的轉換](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
+- [如何：在結構之間實作使用者定義的轉換](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
   
--   [explicit](../../../csharp/language-reference/keywords/explicit.md)  
+- [explicit](../../../csharp/language-reference/keywords/explicit.md)  
   
--   [implicit](../../../csharp/language-reference/keywords/implicit.md)  
+- [implicit](../../../csharp/language-reference/keywords/implicit.md)  
   
--   [static](../../../csharp/language-reference/keywords/static.md)  
+- [static](../../../csharp/language-reference/keywords/static.md)  
   
 ## <a name="see-also"></a>另請參閱
 

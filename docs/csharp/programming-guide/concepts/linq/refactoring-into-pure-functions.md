@@ -2,12 +2,12 @@
 title: 重構為純虛擬函式 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 3e856c1e32d4b0dc16291e1b913e9a5cc19717c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a498588e9ca1ab85602946b75b593804fa0953a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497127"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596887"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>重構為純虛擬函式 (C#)
 
@@ -18,9 +18,9 @@ ms.locfileid: "54497127"
   
  如同本節先前所述，純虛擬函式擁有兩個實用的特性：  
   
--   它有沒有副作用。 函式不會變更函式以外任何類型的任何變數或資料。  
+- 它有沒有副作用。 函式不會變更函式以外任何類型的任何變數或資料。  
   
--   它是一致的。 假設是相同的輸入資料集合，就永遠會傳回相同的輸出值。  
+- 它是一致的。 假設是相同的輸入資料集合，就永遠會傳回相同的輸出值。  
   
  轉換為功能性程式設計的其中一種方式為重構現有的程式碼以排除不必要的副作用與外部相依性。 以此種方式，您可以建立現有程式碼的純虛擬函式版本。  
   

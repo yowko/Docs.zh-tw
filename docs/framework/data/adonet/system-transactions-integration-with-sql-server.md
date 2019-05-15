@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 4ff415adf57bf72cb4da6d405f652a4a50c19041
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b59f9a1895b06cbc102afdceccb373a22ddafc1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033367"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583517"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions 與 SQL Server 整合
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 2.0 版導入了新的交易架構，可透過 <xref:System.Transactions> 命名空間 (Namespace) 進行存取。 此架構以完全整合到 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (包括 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]) 中的方式來公開交易。  
+.NET Framework 2.0 版導入的交易架構，您可以透過<xref:System.Transactions>命名空間。 此架構會公開交易在.NET Framework 中，已完全整合的方式包括[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]。  
   
  除了增強程式設計之外，在處理交易時， <xref:System.Transactions> 還會與 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 一起運作協調出最佳效能。 可提升的交易是可視需要自動提升為完全分散式交易的輕量型 (本機) 交易。  
   
  開頭[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]2.0，<xref:System.Data.SqlClient>支援可提升交易，當您使用 SQL Server。 除非需要已加入的負荷，否則可提升交易不會叫用分散式交易的已加入負荷。 可提升交易是自動的而且需要從開發人員不需要介入。  
   
- 當您使用時，才有可提升交易[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for SQL Server (`SqlClient`) 與 SQL Server。  
+ 您可以使用.NET Framework Data Provider for SQL Server 時，才可以使用可提升交易 (`SqlClient`) 與 SQL Server。  
   
 ## <a name="creating-promotable-transactions"></a>建立可提升交易  
-  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider for SQL Server 支援可提升交易，可透過 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> 命名空間中的類別來處理這些交易。 可提升交易藉由直到需要時才建立分散式交易的方式，來最佳化分散式交易。 如果只需要一個資源管理員，則不會發生分散式交易。  
+ .NET Framework Provider for SQL Server 支援可提升交易，都會透過.NET Framework 中的類別處理<xref:System.Transactions>命名空間。 可提升交易藉由直到需要時才建立分散式交易的方式，來最佳化分散式交易。 如果只需要一個資源管理員，則不會發生分散式交易。  
   
 > [!NOTE]
 >  在部分信任案例中，當某筆交易提升至分散式交易時， <xref:System.Transactions.DistributedTransactionPermission> 就是必要項目。  

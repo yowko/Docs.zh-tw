@@ -9,14 +9,14 @@ helpviewer_keywords:
 - menu items [Windows Forms], standard
 - ToolStrip control [Windows Forms]
 ms.assetid: 75db9126-e70c-4e81-921d-b83c0a4a9f50
-ms.openlocfilehash: 530e4185b065c9483f112146c496860f2c8a52c1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a95476ff3d182bf2a56e6527c9ee83c8c56af246
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662327"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583636"
 ---
-# <a name="how-to-provide-standard-menu-items-to-a-form"></a>HOW TO：向表單提供標準的功能表項目
+# <a name="how-to-provide-standard-menu-items-to-a-form"></a>作法：向表單提供標準的功能表項目
 您可以使用 <xref:System.Windows.Forms.MenuStrip> 控制項來為您的表單提供標準功能表。  
   
  沒有這項功能在 Visual Studio 中的廣泛支援。  
@@ -33,8 +33,6 @@ ms.locfileid: "64662327"
  這個範例需要：  
   
 - System、System.Drawing 和 System.Windows.Forms 組件的參考。  
-  
- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
 

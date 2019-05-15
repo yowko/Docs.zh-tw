@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
-ms.openlocfilehash: a719b3f1cbd972e79d057730ac1d89e5d91d97e5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e7cf058ef5e6b007a39213aa0ca5748a3b77458a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664315"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590638"
 ---
 # <a name="type-of-parameter-parametername-is-not-cls-compliant"></a>參數的型別 '\<參數名稱 >' 不符合 CLS 標準
 程序標示為`<CLSCompliant(True)>`但宣告參數的類型會標示為`<CLSCompliant(False)>`、 未標示，或因為它不符合規範的型別不符合資格。  
@@ -43,4 +43,4 @@ ms.locfileid: "64664315"
   
 - 如果該程序必須符合 CLS 標準，變更此參數的型別以最符合 CLS 規範的型別。 例如，如果您不需要 2,147,483,647 以上的值範圍，而且不使用 `UInteger` ，則可能可以使用 `Integer` 。 如果您需要擴充範圍，則可以將 `UInteger` 取代為 `Long`。  
   
-- 如果您要與 Automation 或 COM 物件進行互動，請記住，某些型別的資料寬度會與在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中的資料寬度不同。 例如，`int` 在其他環境中通常是 16 位元。 如果您接受此元件從 16 位元整數，將它宣告為`Short`而不是`Integer`中受管理的 Visual Basic 程式碼。
+- 如果您要使用的 Automation 或 COM 物件，請記住，某些類型會有不同的資料寬度比在.NET Framework。 例如，`int` 在其他環境中通常是 16 位元。 如果您接受此元件從 16 位元整數，將它宣告為`Short`而不是`Integer`中受管理的 Visual Basic 程式碼。

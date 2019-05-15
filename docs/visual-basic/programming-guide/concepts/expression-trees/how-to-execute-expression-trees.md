@@ -1,15 +1,15 @@
 ---
-title: HOW TO：執行運算式樹狀架構 (Visual Basic)
+title: 作法：執行運算式樹狀架構 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-ms.openlocfilehash: d7e0f5f6687ffb4293209a29279ca16361e7424e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 62d3febf7090c6662e5593bbaf94c04236a162e9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642335"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592133"
 ---
-# <a name="how-to-execute-expression-trees-visual-basic"></a>HOW TO：執行運算式樹狀架構 (Visual Basic)
+# <a name="how-to-execute-expression-trees-visual-basic"></a>作法：執行運算式樹狀架構 (Visual Basic)
 本主題示範如何執行運算式樹狀架構。 執行運算式樹狀架構可能會傳回一個值，或者只是執行某個動作，例如呼叫方法。  
   
  您只能執行代表 Lambda 運算式的運算式樹狀架構。 代表 Lambda 運算式的運算式樹狀架構為 <xref:System.Linq.Expressions.LambdaExpression> 或 <xref:System.Linq.Expressions.Expression%601> 類型。 若要執行這些運算式樹狀架構，請呼叫 <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> 方法建立可執行委派，然後叫用該委派。  
@@ -43,8 +43,6 @@ MsgBox(result)
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
-  
-- 如果 System.Core.dll 的專案參考原本未參考，請新增這項參考。  
   
 - 加入 System.Linq.Expressions 命名空間。  
   

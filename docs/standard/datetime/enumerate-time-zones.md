@@ -1,5 +1,5 @@
 ---
-title: HOW TO：列舉電腦上既有的時區
+title: 作法：列舉電腦上既有的時區
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 697cd40482aee73fd150359acb710ffc258c3df2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82898e80f5acb2cb0dcab65390701efc8d48115b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908670"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586571"
 ---
-# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>HOW TO：列舉電腦上既有的時區
+# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>作法：列舉電腦上既有的時區
 
 若要順利處理指定的時區，需要可供系統使用之時區的相關資訊。 Windows XP 和 Windows Vista 作業系統會將此資訊儲存在登錄中。 不過，雖然全世界的時區總數很大，但是登錄只會包含其中一部分的資訊。 此外，登錄本身是內容很容易變成故意或意外變更的動態結構。 因此，應用程式無法永遠假設特定時區已定義且可在系統上使用。 許多使用時區資訊應用程式之應用程式的第一個步驟，為是否可在本機系統上使用必要時區，或將可從中選取的時區清單提供給使用者。 這需要應用程式列舉本機系統上所定義的時區。
 
@@ -62,8 +62,6 @@ ms.locfileid: "61908670"
 ## <a name="compiling-the-code"></a>編譯程式碼
 
 這個範例需要：
-
-* 對 System.Core.dll 的參考加入至專案。
 
 * 下列命名空間會匯入：
 
