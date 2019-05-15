@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: e8a3011828fd3b3f7aaaa062e837570c86f4fd65
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 240b68f901f819313fcae7aab0474abd5535c30d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626858"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592303"
 ---
 # <a name="data-binding-and-windows-forms"></a>資料繫結和 Windows Form
 在 Windows Forms 中，您不只可以繫結至傳統的資料來源，也能繫結至幾乎任何包含資料的結構。 您可以繫結程序至執行階段計算、從檔案讀取，或衍生自其他控制項之值的值陣列。  
   
- 此外，您也可以將任何控制項的任何屬性繫結至資料來源。 在傳統資料繫結中，您通常將顯示屬性 — 例如 <xref:System.Windows.Forms.Control.Text%2A> 控制項的 <xref:System.Windows.Forms.TextBox> 屬性 — 繫結到資料來源。 使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，您也可以選擇透過繫結程序設定其他屬性。 您可以使用繫結來執行下列工作：  
+ 此外，您也可以將任何控制項的任何屬性繫結至資料來源。 在傳統資料繫結中，您通常將顯示屬性 — 例如 <xref:System.Windows.Forms.Control.Text%2A> 控制項的 <xref:System.Windows.Forms.TextBox> 屬性 — 繫結到資料來源。 使用.NET Framework 中，您也可以設定其他屬性，透過繫結的選擇。 您可以使用繫結來執行下列工作：  
   
 - 設定影像控制項的圖形。  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 33cfcb765b93309d365a85e679107405a55a91f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8197dfc877842be824a5b10c742ef4fb7792858
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858035"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592756"
 ---
 # <a name="duplex-services"></a>雙工服務
 
@@ -87,10 +87,10 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 ```
 
 > [!WARNING]
-> 此雙工模型不會自動偵測服務或用戶端關閉其通道的時間。 因此，如果某個用戶端意外終止，預設不會通知此服務，或者如果某個用戶端意外終止，也不會通知此服務。 用戶端和服務可以實作自己的通訊協定來通知彼此 (如果選擇這樣做的話)。
+> 此雙工模型不會自動偵測服務或用戶端關閉其通道的時間。 因此如果用戶端意外終止，根據預設，服務將不會通知，或如果服務意外終止時，將不會通知用戶端。 用戶端和服務可以實作自己的通訊協定來通知彼此 (如果選擇這樣做的話)。 如需有關錯誤處理的詳細資訊，請參閱[WCF 錯誤處理](../wcf-error-handling.md)
 
 ## <a name="see-also"></a>另請參閱
 
-- [雙面](../../../../docs/framework/wcf/samples/duplex.md)
-- [指定用端執行階段行為](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [如何：建立通道處理站，並使用它來建立與管理通道](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [雙面](../samples/duplex.md)
+- [指定用端執行階段行為](../specifying-client-run-time-behavior.md)
+- [如何：建立通道處理站，並使用它來建立與管理通道](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

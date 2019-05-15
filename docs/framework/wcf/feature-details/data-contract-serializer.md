@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, data
 - DataContractSerializer
 ms.assetid: 3d64837e-0a0c-4cc8-90ff-a5c6f313c63a
-ms.openlocfilehash: eba12a38ee852dcdc08f27bc9e3cb02332fd7071
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1c773fbe90e7a45ea2a2718f9bde0aa9e9b67d6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857099"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592574"
 ---
 # <a name="data-contract-serializer"></a>資料合約序列化程式
 Windows Communication Foundation (WCF) 基礎結構會使用<xref:System.Runtime.Serialization.DataContractSerializer>類別做為預設的序列化程式。 本章節中的主題將提供使用它做為獨立序列化程式的詳細資訊。  
@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF) 基礎結構會使用<xref:System.Runtime
  如何使用 <xref:System.Runtime.Serialization.DataContractSerializer> 類別序列化物件圖形，以及將 XML 文件還原序列化為物件的詳細資訊。  
   
  [結構描述匯入和匯出](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
- 說明如何從 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 類別產生 XML 結構描述定義語言 (XSD) 結構描述，或是如何從 XSD 結構描述文件產生程式碼。  
+ 說明如何從.NET Framework 類別，產生的 XML 結構描述定義語言 (XSD) 結構描述或如何從 XSD 結構描述文件產生程式碼。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

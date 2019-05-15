@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 Windows Forms BindingSource 自訂新增項目
+title: 作法：使用 Windows Forms BindingSource 自訂新增項目
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingSource component
 - BindingSource component [Windows Forms], examples
 ms.assetid: 1aae11fc-6fb2-4cb9-b3d0-e0638fe77ef0
-ms.openlocfilehash: 33a82fbb4cd105491714cc07d997dd1eddb8fe24
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 94c7b304dd8b909d60ef6b25f828524594caf886
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666350"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592809"
 ---
-# <a name="how-to-customize-item-addition-with-the-windows-forms-bindingsource"></a>HOW TO：使用 Windows Forms BindingSource 自訂新增項目
+# <a name="how-to-customize-item-addition-with-the-windows-forms-bindingsource"></a>作法：使用 Windows Forms BindingSource 自訂新增項目
 當您使用 <xref:System.Windows.Forms.BindingSource> 元件將 Windows Form 控制項繫結至資料來源時，您可能會發現有必要自訂新項目的建立。 <xref:System.Windows.Forms.BindingSource> 元件提供了通常會在繫結控制項需要建立新項目時引發的 <xref:System.Windows.Forms.BindingSource.AddingNew> 事件，使這項作業毫不費力。 您的事件處理常式能夠提供任何要求的自訂行為，例如在 Web 服務上呼叫方法或者從 Class Factory 取得新物件。  
   
 > [!NOTE]
@@ -35,8 +35,6 @@ ms.locfileid: "64666350"
  這個範例需要：  
   
 - System、System.Data、System.Drawing 和 System.Windows.Forms 組件的參考。  
-  
- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
 

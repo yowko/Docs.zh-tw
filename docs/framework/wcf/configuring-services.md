@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 81727adbf985986a71cc9f9e2d42a1de0cb1fd76
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8ac62809b1269ae810f026c003c7611b3ec548c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608527"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593321"
 ---
 # <a name="configuring-wcf-services"></a>設定 WCF 服務
 
@@ -22,7 +22,7 @@ ms.locfileid: "61608527"
  從開始[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]，WCF 本身就有新的預設組態模型，可簡化 WCF 組態需求。 如果您未提供任何特定服務的 WCF 組態，執行階段會使用預設端點、 繫結和行為自動設定您的服務。  
   
  [使用設定檔設定服務](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- Windows Communication Foundation (WCF) 服務是可設定使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]技術設定。 大多數情況下，XML 項目會新增至裝載的 WCF 服務的 Internet Information Services (IIS) 網站的 Web.config 檔案。 這些項目允許您變更詳細資料，例如各電腦的端點位址 (用於與服務通訊的實際位址)。  
+ Windows Communication Foundation (WCF) 服務是可使用.NET Framework 技術設定。 大多數情況下，XML 項目會新增至裝載的 WCF 服務的 Internet Information Services (IIS) 網站的 Web.config 檔案。 這些項目允許您變更詳細資料，例如各電腦的端點位址 (用於與服務通訊的實際位址)。  
   
  [繫結](../../../docs/framework/wcf/bindings.md)  
  此外，WCF 會包含數個系統提供的常用組態的繫結可讓您快速選取用戶端與服務通訊的方式，例如傳輸、 安全性和訊息編碼使用的最基本的功能形式。  

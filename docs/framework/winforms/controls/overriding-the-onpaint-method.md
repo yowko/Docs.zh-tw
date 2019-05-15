@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: b1eb24aaa9ed3bfede41fc5a9a80fcbdc9f749a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92aaeabfc12e964ac294fbd69998c4671fc8763c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936444"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582613"
 ---
 # <a name="overriding-the-onpaint-method"></a>覆寫 OnPaint 方法
-覆寫任何事件中所定義的基本步驟[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]都相同，而且下列清單摘要說明。  
+覆寫.NET Framework 中定義的任何事件的基本步驟完全相同，並在下列清單摘要說明。  
   
 #### <a name="to-override-an-inherited-event"></a>若要覆寫繼承的事件  
   

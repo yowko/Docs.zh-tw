@@ -2,12 +2,12 @@
 title: 使用者定義函式
 ms.date: 03/30/2017
 ms.assetid: 3304c9b2-5c7a-4a95-9d45-4f260dcb606e
-ms.openlocfilehash: 57675c470383fb45e9ccf34a846144b435cf4d0d
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: fb55a8b248b085275f83d47b1f452cd07bd8dcb1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910670"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582649"
 ---
 # <a name="user-defined-functions"></a>使用者定義函式
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會使用物件模型 (Object Model) 中的方法來表示使用者定義函式。 您可套用 <xref:System.Data.Linq.Mapping.FunctionAttribute> 屬性 (Attribute) 和 (視需要) 套用 <xref:System.Data.Linq.Mapping.ParameterAttribute> 屬性，將方法指定為函式。 如需詳細資訊，請參閱 < [LINQ to SQL 物件模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)。  
@@ -18,7 +18,7 @@ ms.locfileid: "64910670"
   
 - [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 特有的靜態 SQL 方法。  
   
-- [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 方法所支援的函式。  
+- 支援的.NET Framework 方法的函數。  
   
  本節中的主題顯示自行撰寫程式碼時，如何在應用程式中形成和呼叫這些方法。 使用 Visual Studio 的開發人員通常會使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]對應使用者定義函式。  
   

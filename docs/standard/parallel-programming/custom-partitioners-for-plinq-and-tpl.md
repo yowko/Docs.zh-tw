@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73c745fbbdb66777b50478623d969c125f92474b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d08be327d4c6bf6dd1add3c7ea40ed491619a9ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698887"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625599"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ 和 TPL 的自訂 Partitioner
 若要將資料來源上的作業平行化，其中一個必要步驟就是將來源「分割」成多個可供多個執行緒同時存取的區段。 PLINQ 和「工作平行程式庫」(TPL) 提供預設的 Partitioner，可在您撰寫平行查詢或 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 迴圈時在背景中運作。 針對較進階的案例，您可以插入自己的 Partitioner。  
@@ -100,25 +100,25 @@ ms.locfileid: "54698887"
 ### <a name="contract-for-partitioners"></a>Partitioner 的合約  
  實作自訂 Partitioner 時，請依循下列指導方針來協助確保能夠與 PLINQ 和 TPL 中的 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 正確互動：  
   
--   如果使用等於或小於零的 `partitionsCount` 引數來呼叫 <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>，將會擲回 <xref:System.ArgumentOutOfRangeException>。 雖然 PLINQ 和 TPL 永遠不會傳入等於 0 的 `partitionCount`，但建議您杜絕這個可能性。  
+- 如果使用等於或小於零的 `partitionsCount` 引數來呼叫 <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>，將會擲回 <xref:System.ArgumentOutOfRangeException>。 雖然 PLINQ 和 TPL 永遠不會傳入等於 0 的 `partitionCount`，但建議您杜絕這個可能性。  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> 和 <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> 應該一律傳回 `partitionsCount` 數量的資料分割。 如果 Partitioner 用盡資料而無法建立符合所要求數量的資料分割，則方法應該針對剩餘的每個資料分割傳回空的列舉值。 否則，PLINQ 和 TPL 都會擲回 <xref:System.InvalidOperationException>。  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> 和 <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> 應該一律傳回 `partitionsCount` 數量的資料分割。 如果 Partitioner 用盡資料而無法建立符合所要求數量的資料分割，則方法應該針對剩餘的每個資料分割傳回空的列舉值。 否則，PLINQ 和 TPL 都會擲回 <xref:System.InvalidOperationException>。  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>、<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>、<xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A> 及 <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> 應該一律不傳回 `null` (在 Visual Basic 中為 `Nothing`)。 如果會傳回該值，PLINQ/TPL 將會擲回 <xref:System.InvalidOperationException>。  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>、<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>、<xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A> 及 <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> 應該一律不傳回 `null` (在 Visual Basic 中為 `Nothing`)。 如果會傳回該值，PLINQ/TPL 將會擲回 <xref:System.InvalidOperationException>。  
   
--   方法如果會傳回資料分割，應該一律傳回能夠以完整且唯一方式列舉資料來源的資料分割。 除非 Partitioner 的設計上所需，否則資料來源中不應該有任何重複項目或是略過的項目。 如果不允許使用此規則，則輸出順序可能會相當凌亂。  
+- 方法如果會傳回資料分割，應該一律傳回能夠以完整且唯一方式列舉資料來源的資料分割。 除非 Partitioner 的設計上所需，否則資料來源中不應該有任何重複項目或是略過的項目。 如果不允許使用此規則，則輸出順序可能會相當凌亂。  
   
--   下列布林值 getter 必須一律精確地傳回下列值，如此輸出順序才不會凌亂：  
+- 下列布林值 getter 必須一律精確地傳回下列值，如此輸出順序才不會凌亂：  
   
-    -   `KeysOrderedInEachPartition`：每個分割都會傳回具有遞增索引鍵索引的項目。  
+    - `KeysOrderedInEachPartition`：每個分割都會傳回具有遞增索引鍵索引的項目。  
   
-    -   `KeysOrderedAcrossPartitions`：在所有傳回的分割中，分割 *i* 中之索引鍵索引會高於分割 *i*-1 中的索引鍵索引。  
+    - `KeysOrderedAcrossPartitions`：在所有傳回的分割中，分割 *i* 中之索引鍵索引會高於分割 *i*-1 中的索引鍵索引。  
   
-    -   `KeysNormalized`：所有索引鍵索引都會從零開始，以單純方式遞增而沒有間隔。  
+    - `KeysNormalized`：所有索引鍵索引都會從零開始，以單純方式遞增而沒有間隔。  
   
--   所有索引都必須是唯一的。 不可以有重複的索引。 如果不允許使用此規則，則輸出順序可能會相當凌亂。  
+- 所有索引都必須是唯一的。 不可以有重複的索引。 如果不允許使用此規則，則輸出順序可能會相當凌亂。  
   
--   所有索引都不可為負值。 如果未遵守此規則，則 PLINQ/TPL 可能會擲回例外狀況。  
+- 所有索引都不可為負值。 如果未遵守此規則，則 PLINQ/TPL 可能會擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 效能
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 4351955eeed722cfd10db79b9dbe5ec6692ed2ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 701e05301e82537aa6119ab3ec894483daee41f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592152"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592543"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 效能
 
@@ -18,7 +18,7 @@ ms.locfileid: "64592152"
 ## <a name="terminology"></a>用語
  本主題後續內容皆以 WF4 代表 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中引進的 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 版本。  [!INCLUDE[wf1](../../../includes/wf1-md.md)] .NET 3.0 中引進，而且有幾項小幅修訂透過[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]SP1。 本主題中一律將 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 版的 Workflow Foundation 稱為 WF3。 WF3 與 WF4 一同隨附於 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]。 如需將 WF3 成品移轉至 WF4 的詳細資訊，請參閱：[Windows Workflow Foundation 4 移轉指南](https://go.microsoft.com/fwlink/?LinkID=153313)
 
- Windows Communication Foundation (WCF) 是 Microsoft 的統一程式設計模型來建置服務導向應用程式。 它一部分與 WF3 一併.NET 3.0 中引進第一次，而且現在是其中一個重要元件[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。
+ Windows Communication Foundation (WCF) 是 Microsoft 的統一程式設計模型來建置服務導向應用程式。 它引進一部分與 WF3 一併.NET 3.0 現在是其中一個.NET Framework 的重要元件。
 
  Windows Server AppFabric 是一組整合式技術，可讓您更輕鬆地建置、調整及管理 IIS 上執行的 Web 與複合應用程式。 它提供了監視及管理服務和工作流程的工具。 如需詳細資訊，請參閱 < [Windows Server AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))。
 
@@ -401,7 +401,7 @@ public class Workflow1 : Activity
 
  WF3 隨附 SQL 架構追蹤服務。  這項服務可以在批次和非批次模式下運作。  在非批次模式中，追蹤事件會直接寫入資料庫。  在批次模式中，追蹤事件會收集到與工作流程執行個體狀態相同的批次中。  針對最廣泛的工作流程設計，批次模式可提供最佳效能。  不過，如果工作流程執行許多活動而未保存，而且這些活動都會加以追蹤，則批次處理可能對效能產生負面影響。  這種情況常發生在迴圈中，而避免這種情況發生的最佳方式，就是設計大型迴圈來包含保存點。  在迴圈中導入保存點同樣可能對效能造成負面影響，因此務必計算各項的成本並找出平衡。
 
- WF4 沒有隨附 SQL 追蹤服務。  將追蹤資訊記錄到 SQL 資料庫的工作，交由應用程式伺服器處理會比內建於 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 更有效。 因此，SQL 追蹤現在是由 AppFabric 處理。  WF4 中現成的追蹤提供者是以 Windows 事件追蹤 (ETW) 為基礎。
+ WF4 沒有隨附 SQL 追蹤服務。  追蹤資訊記錄到 SQL database 可以是進一步處理從應用程式伺服器而非內建於.NET Framework。 因此，SQL 追蹤現在是由 AppFabric 處理。  WF4 中現成的追蹤提供者是以 Windows 事件追蹤 (ETW) 為基礎。
 
  ETW 是核心層級的低延遲事件系統，內建於 Windows。  它使用提供者/消費者模型，如此在實際上有消費者時，就只有事件追蹤會產生負面影響。  除了核心事件 (像是處理器、磁碟、記憶體和網路使用量) 之外，許多應用程式也都會運用 ETW。  ETW 事件的功能比效能計數器強大，因為可以針對應用程式自訂事件。  事件可以包含像是工作流程 ID 或資訊訊息這類文字。  此外，事件還會依位元遮罩分類，如此一來，使用特定事件子集對效能的影響就會比擷取所有事件低。
 

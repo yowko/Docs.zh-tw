@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2ca5c26b7e5b830ee8dccffb452b8509c8b0d1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f070419fb8cdca178369bee12545dd1a0d89ea47
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795300"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592742"
 ---
 # <a name="cryptographic-services"></a>密碼編譯服務
 
@@ -112,7 +112,7 @@ CBC 加密使用初始化向量 (IV) 來加密純文字的第一個區塊，克�
 
 假設 Alice 和 Bob 想要透過安全通道進行通訊的兩方，它們可能會使用秘密金鑰加密，如下所示：Alice 和 Bob 同意使用特定的金鑰和 IV 的一種特定演算法 (例如 AES)。 Alice 撰寫好訊息，並建立要傳送訊息的網路資料流 （或許是具名管道或網路電子郵件）。 接下來，她使用金鑰和 IV 將文字加密，並透過內部網路傳送加密訊息和 IV 給 Bob。 Bob 收到加密文字，並使用該 IV 和先前同意的金鑰解密文字。 如果傳輸被攔截了，攔截者不知道金鑰，所以無法復原原始訊息。 在此案例中，要保持機密的僅有金鑰。 在真實案例中，Alice 或 Bob 兩方都沒有產生私密金鑰，而是使用公開金鑰 (非對稱式) 加密來傳輸私密 (對稱) 金鑰至其他對象。 (如需公開金鑰加密的詳細資訊，請參閱下一節)。
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供的以下類別可實作私密金鑰加密演算法：
+.NET Framework 會提供以下類別可實作私密金鑰加密演算法：
 
 - <xref:System.Security.Cryptography.AesManaged> (已在 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]中引入)。
 
@@ -154,7 +154,7 @@ CBC 加密使用初始化向量 (IV) 來加密純文字的第一個區塊，克�
 
 - 相較於私密金鑰演算法，公開金鑰演算法速度很慢，並非設計來加密大量資料。 公開金鑰演算法只適合傳送非常少量的資料。 通常，公開金鑰加密是用來加密要使用私密金鑰演算法來加密的金鑰和 IV。 金鑰和 IV 傳送之後，其餘的工作階段會使用私密金鑰加密。
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供的以下類別可實作公開金鑰加密演算法：
+.NET Framework 會提供以下類別可實作公開金鑰加密演算法：
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -185,7 +185,7 @@ RSA 允許加密和簽章，但是 DSA 只能用於簽章，而且 Diffie-hellma
 > [!NOTE]
 > 任何人都可以驗證簽章，因為寄件者的公開金鑰是通用資訊，而且通常包含於數位簽章格式中。 此方法不保留訊息的機密性，對於需要保密的訊息，還是必須經過加密。
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供的以下類別可實作數位簽章演算法：
+.NET Framework 會提供以下類別可實作數位簽章演算法：
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -223,7 +223,7 @@ RSA 允許加密和簽章，但是 DSA 只能用於簽章，而且 Diffie-hellma
 
 先前的方法中，沒有一項能防止他人讀取 Alice 的訊息，因為它們會以純文字傳送。 完整的安全性通常需有數位簽章和加密 (訊息簽章)。
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供的以下類別可實作數位雜湊演算法：
+.NET Framework 會提供以下類別可實作雜湊演算法：
 
 - <xref:System.Security.Cryptography.HMACSHA1>.
 
@@ -256,7 +256,7 @@ RSA 允許加密和簽章，但是 DSA 只能用於簽章，而且 Diffie-hellma
 
 ## <a name="random-number-generation"></a>產生變數
 
-對許多密碼編譯作業而言，亂數產生是不可或缺的項目。 例如，密碼編譯金鑰需要盡可能為隨機產生，以致於其他人無法重現金鑰。 密碼編譯亂數產生器需產生在運算資源上，無法預測的機率必須大於一半之輸出。 因此，任何預測下一個輸出位元的方法，必須不能優於隨機猜測的方式。 在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的類別使用亂數產生器來產生密碼編譯金鑰。
+對許多密碼編譯作業而言，亂數產生是不可或缺的項目。 例如，密碼編譯金鑰需要盡可能為隨機產生，以致於其他人無法重現金鑰。 密碼編譯亂數產生器需產生在運算資源上，無法預測的機率必須大於一半之輸出。 因此，任何預測下一個輸出位元的方法，必須不能優於隨機猜測的方式。 .NET Framework 中的類別使用亂數產生器，來產生密碼編譯金鑰。
 
 <xref:System.Security.Cryptography.RNGCryptoServiceProvider> 類別是亂數產生器演算法的一種實作。
 

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: b97ce0e4ce32e272ff884240b566c1c1c0e0d271
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4dbccfc881e777309394aed9711a93b8a25315be
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614652"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592601"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>使用視覺化樣式呈現控制項
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 會使用作業系統支援的視覺化樣式，來支援控制項和其他 Windows 使用者介面 (UI) 項目的呈現。 本主題說明在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中使用作業系統目前的視覺化樣式，來呈現控制項和其他 UI 項目的數種支援層級。  
+.NET Framework 支援來呈現控制項和其他 Windows 使用者介面 (UI) 項目支援的作業系統中使用視覺化樣式。 本主題將討論數個層級的支援.NET Framework 來呈現控制項和其他 UI 項目中使用的作業系統目前視覺化樣式。  
   
 ## <a name="rendering-classes-for-common-controls"></a>呈現通用控制項的類別  
  呈現控制項是指繪製控制項的使用者介面。 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空間提供的 <xref:System.Windows.Forms.ControlPaint> 類別可用來呈現一些通用的 Windows Forms 控制項。 不過，此類別會使用傳統的 Windows 樣式來繪製控制項，並導致在啟用視覺化樣式的應用程式中繪製自訂控制項時，很難保持一致的 UI 經驗。  
@@ -61,7 +61,7 @@ ms.locfileid: "64614652"
  如需使用詳細資訊<xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>並<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>，請參閱[How to:呈現視覺化樣式項目](how-to-render-a-visual-style-element.md)。  
   
 ## <a name="enabling-visual-styles"></a>啟用視覺化樣式  
- 若要在為 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0 版撰寫的應用程式中啟用視覺化樣式，程式設計人員必須包含應用程式資訊清單，以指定使用 ComCtl32.dll 6 (含) 以後版本來繪製控制項。 如果應用程式是使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.1 (含) 以後版本來建置，則可以使用 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 類別的 <xref:System.Windows.Forms.Application> 方法。  
+ 若要啟用.NET framework 1.0 版所撰寫的應用程式的視覺化樣式，程式設計人員必須包含指定 ComCtl32.dll 版本 6 或更新版本，將用來繪製控制項的應用程式資訊清單。 以.NET Framework 1.1 或更新版本建置的應用程式可以使用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>方法的<xref:System.Windows.Forms.Application>類別。  
   
 ## <a name="checking-for-visual-styles-support"></a>檢查視覺化樣式支援  
  <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 類別的 <xref:System.Windows.Forms.Application> 屬性會指出目前的應用程式是否使用視覺化樣式繪製控制項。 在繪製自訂控制項時，您可以檢查 <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 的值，以決定是否要使用視覺化樣式呈現控制項。 下表列出四個條件，唯有這些條件成立， <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 才會傳回 `true`。  

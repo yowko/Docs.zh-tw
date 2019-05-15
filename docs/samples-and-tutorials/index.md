@@ -4,12 +4,12 @@ description: 針對 .NET Core、ASP.NET Core 及 C# 語言的範例和教學課�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba0d7e4163a1c4afe08ea3f871c2bccc2335ac48
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61950848"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469471"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 範例與教學課程
 
@@ -60,6 +60,10 @@ ms.locfileid: "61950848"
 **LINQ 範例**
 
 這一系列範例示範 Language Integrated Query (LINQ) 的許多功能。 [完整範例](https://github.com/dotnet/samples/tree/master/core/linq/csharp) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
+
+**受控 COM 伺服器範例**
+
+[COM 伺服器](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)範例示範如何建立受控 COM 伺服器和如何全域註冊它。
 
 **Microsoft Office PIA 範例**
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a8792698d78b37fa42721f0ad82c0e0d3f7c8dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8170dd2e2941be3a73f7a4fd8c37d4fb2ef96235
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622815"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592244"
 ---
 # <a name="generics-in-net"></a>.NET 的泛型
 
@@ -119,7 +119,7 @@ ms.locfileid: "64622815"
   
  下列是泛型的一些限制：  
   
-- 泛型類型可以從大部分的基底類別衍生，例如 <xref:System.MarshalByRefObject> (且可使用條件約束要求泛型類型參數衍生自基底類別，例如 <xref:System.MarshalByRefObject>)。 不過，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 不支援內容繫結的泛型型別。 泛型類型可以衍生自 <xref:System.ContextBoundObject>，但嘗試建立該類型的執行個體會導致 <xref:System.TypeLoadException>。  
+- 泛型類型可以從大部分的基底類別衍生，例如 <xref:System.MarshalByRefObject> (且可使用條件約束要求泛型類型參數衍生自基底類別，例如 <xref:System.MarshalByRefObject>)。 但 .NET Framework 不支援內容繫結的泛型型別。 泛型類型可以衍生自 <xref:System.ContextBoundObject>，但嘗試建立該類型的執行個體會導致 <xref:System.TypeLoadException>。  
   
 - 列舉不能有泛型類型參數。 列舉只能偶爾做為泛型 (例如，因為它位於使用 Visual Basic、C# 或 C++ 所定義的泛型類型中)。 如需詳細資訊，請參閱 [Common Type System](../../../docs/standard/base-types/common-type-system.md)中的＜列舉＞。  
   

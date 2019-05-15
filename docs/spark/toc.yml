@@ -1,0 +1,23 @@
+- name: .NET for Apache Spark 指南
+  href: index.yml
+- name: 總覽
+  expanded: true
+  items:
+    - name: 什麼是 .NET for Apache Spark？
+      href: what-is-apache-spark-dotnet.md
+- name: 教學課程
+  items:
+    - name: 開始使用
+      href: tutorials/get-started.md
+- name: 參考資料
+  items:
+    - name: 應用程式開發介面參考
+      href: 'https://docs.microsoft.com/dotnet/api/?view=spark-dotnet'
+- name: 資源
+  items:
+    - name: 資源概觀
+      href: resources/index.md
+    - name: GitHub
+      href: 'https://github.com/dotnet/spark'
+    - name: 堆疊溢位
+      href: 'https://stackoverflow.com/questions/tagged/spark-dotnet'

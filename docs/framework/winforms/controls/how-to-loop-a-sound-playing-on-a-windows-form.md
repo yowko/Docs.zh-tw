@@ -1,5 +1,5 @@
 ---
-title: HOW TO：循環播放 Windows Forms 的音效
+title: 作法：循環播放 Windows Forms 的音效
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: bc3cf7775f68237f8b3393f867b81fcf020e52fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e14d9de2326234b86c1f24b227e86f822fbfdb71
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649296"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592354"
 ---
-# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>HOW TO：循環播放 Windows Forms 的音效
+# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>作法：循環播放 Windows Forms 的音效
 下列程式碼範例會重複播放音效。 當 `stopPlayingButton_Click` 事件處理常式中的程式碼執行時，會停止目前正在播放任何聲音。 如果未播放聲音，就不會發生任何事。  
   
 ## <a name="example"></a>範例  
@@ -30,8 +30,6 @@ ms.locfileid: "64649296"
 - 本系統和 System.Windows.Forms 組件的參考。  
   
 - 您將檔案名稱 `"c:\Windows\Media\chimes.wav"` 取代為有效的檔案名稱。  
-  
- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  檔案作業應含括在適當的例外狀況處理區塊內。  

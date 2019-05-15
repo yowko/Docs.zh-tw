@@ -2,12 +2,12 @@
 title: HOW TO：合併 LINQ 查詢與規則運算式 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
-ms.openlocfilehash: da693b682e9b44970f167c030f6803f8dc6d2d36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d61eb9bfd3566a4736fcb0d01a9f3b8915944fc7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855032"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593020"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>HOW TO：合併 LINQ 查詢與規則運算式 (Visual Basic)
 此範例會示範如何使用 <xref:System.Text.RegularExpressions.Regex> 類別來建立規則運算式，以在文字字串中進行更複雜的比對。 LINQ 查詢讓您輕鬆地準確篩選出您想要用規則運算式搜尋的檔案，並調整結果。  
@@ -82,7 +82,7 @@ End Class
  請注意，您也可以對由 `RegEx` 搜尋所傳回的 <xref:System.Text.RegularExpressions.MatchCollection> 物件進行查詢。 在本例中，結果只會產生每個相符項目的值。 不過，它也可以使用 LINQ 對該集合執行所有種類的篩選、排序及群組。 因為 <xref:System.Text.RegularExpressions.MatchCollection> 為非泛型 <xref:System.Collections.IEnumerable> 集合，所以您必須在查詢中明確地陳述範圍變數的類型。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。  
+建立 VB.NET 的主控台應用程式專案，使用`Imports`System.Linq 命名空間陳述式。
   
 ## <a name="see-also"></a>另請參閱
 

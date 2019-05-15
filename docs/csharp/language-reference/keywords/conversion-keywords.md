@@ -7,21 +7,21 @@ helpviewer_keywords:
 - type conversion [C#], keywords
 - types [C#], conversion keywords
 ms.assetid: 8683ff14-5289-4efe-b4f5-1e6a075918ab
-ms.openlocfilehash: 867e2208bdceb83bd499d4f1f78912268bc21d80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a77347f2b5e12df10d1254946ea4f19b141a1143
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645934"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596685"
 ---
 # <a name="conversion-keywords-c-reference"></a>轉換關鍵字 (C# 參考)
 本節描述用於類型轉換的關鍵字：  
   
--   [explicit](../../../csharp/language-reference/keywords/explicit.md)  
+- [explicit](../../../csharp/language-reference/keywords/explicit.md)  
   
--   [implicit](../../../csharp/language-reference/keywords/implicit.md)  
+- [implicit](../../../csharp/language-reference/keywords/implicit.md)  
   
--   [operator](../../../csharp/language-reference/keywords/operator.md)  
+- [operator](../../../csharp/language-reference/keywords/operator.md)  
   
 ## <a name="see-also"></a>另請參閱
 

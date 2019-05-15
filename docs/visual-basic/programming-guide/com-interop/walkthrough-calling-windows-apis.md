@@ -11,21 +11,21 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 8fd63c2abedcd416937e2c281486bdc1716a275f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70914d63773c6a94ad92cf6301a8e2bc1368e7a1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022398"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592705"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>逐步解說：呼叫 Windows Api (Visual Basic)
 Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您可以使用它們來執行工作時很難撰寫您自己的對等的程序。 比方說，Windows 會提供名為函式`FlashWindowEx`，可讓您的應用程式的標題列淺色與深色陰影之間。  
   
  在您的程式碼中使用 Windows Api 的優點是，他們就可以節省開發時間，因為它們包含數十個有用的功能，已撰寫並可立即使用。 缺點是 Windows Api 很難進行運作和十足，發生錯誤時。  
   
- Windows Api 就是一個特殊種類的互通性。 Windows Api 無法使用 managed 程式碼，並沒有內建型別程式庫，並使用不同於 Visual Studio 搭配使用的資料類型。 由於這些差異，以及因為 Windows Api 不是 COM 物件，與 Windows Api 的互通性和[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]必須利用平台叫用，或 PInvoke。 平台叫用是一項服務，可讓 managed 程式碼呼叫 unmanaged 的 Dll 中實作的函式。 如需詳細資訊，請參閱 <<c0> [ 使用 Unmanaged DLL 函式](../../../framework/interop/consuming-unmanaged-dll-functions.md)。 您也可以使用 Visual Basic 中使用 PInvoke`Declare`陳述式，或套用`DllImport`屬性設定為空的程序。  
+ Windows Api 就是一個特殊種類的互通性。 Windows Api 無法使用 managed 程式碼，並沒有內建型別程式庫，並使用不同於 Visual Studio 搭配使用的資料類型。 因為這些差異，以及因為 Windows Api 不是 COM 物件，與 Windows Api 的互通性，並使用執行.NET Framework 平台叫用，或 PInvoke。 平台叫用是一項服務，可讓 managed 程式碼呼叫 unmanaged 的 Dll 中實作的函式。 如需詳細資訊，請參閱 <<c0> [ 使用 Unmanaged DLL 函式](../../../framework/interop/consuming-unmanaged-dll-functions.md)。 您也可以使用 Visual Basic 中使用 PInvoke`Declare`陳述式，或套用`DllImport`屬性設定為空的程序。  
   
- Windows API 呼叫是 Visual Basic 程式在過去，很重要的一部分，但很少會需要使用 Visual Basic.NET。 可能的話，您應該使用從 managed 程式碼[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]來執行工作，而不是 Windows API 呼叫。 本逐步解說提供在使用這種情況下的資訊是必要的 Windows Api。  
+ Windows API 呼叫是 Visual Basic 程式在過去，很重要的一部分，但很少會需要使用 Visual Basic.NET。 可能的話，您應該使用從.NET Framework 的 managed 程式碼來執行工作，而不是 Windows API 呼叫。 本逐步解說提供在使用這種情況下的資訊是必要的 Windows Api。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -77,7 +77,7 @@ Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您�
   
      `#define MB_ICONQUESTION             0x00000020L`  
   
-3. 新增對等項目`Const`至您的類別或模組，讓您的應用程式可使用這些常數的陳述式。 例如：  
+3. 新增對等項目`Const`至您的類別或模組，讓您的應用程式可使用這些常數的陳述式。 例如:   
   
      [!code-vb[VbVbalrInterop#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#11)]  
   

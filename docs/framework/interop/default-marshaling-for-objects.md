@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b05d5c72491265b7617950550935e3c719421f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c694a9d0ba0d6c7d41a9ce3b932b88519fcddfeb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59076156"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626337"
 ---
 # <a name="default-marshaling-for-objects"></a>物件的預設封送處理
 類型為 <xref:System.Object?displayProperty=nameWithType> 的參數和欄位可以向 Unmanaged 程式碼公開為下列類型之一：  
   
--   Variant，當物件是參數時。  
+- Variant，當物件是參數時。  
   
--   介面，當物件是結構欄位時。  
+- 介面，當物件是結構欄位時。  
   
  只有 COM Interop 支援封送處理物件類型。 預設行為是封送處理 COM Variant 的物件。 這些規則只適用於**物件**類型，不適用於衍生自**物件**類別的強型別物件。  
   
@@ -120,11 +120,11 @@ struct ObjectHolder {
 ## <a name="marshaling-object-to-variant"></a>將物件封送處理成 Variant  
  當物件封送處理成 Variant 時，會根據下列規則在執行階段決定內部的 Variant 類型：  
   
--   如果物件參考為 null (Visual Basic 為**Nothing**)，物件會封送處理成 **VT_EMPTY** 類型的 Variant。  
+- 如果物件參考為 null (Visual Basic 為**Nothing**)，物件會封送處理成 **VT_EMPTY** 類型的 Variant。  
   
--   如果物件是下表所列任一類型的執行個體，則產生的 Variant 類型是由封送處理器內建的規則決定，並顯示在資料表中。  
+- 如果物件是下表所列任一類型的執行個體，則產生的 Variant 類型是由封送處理器內建的規則決定，並顯示在資料表中。  
   
--   需要明確控制封送處理行為的其他物件，可以實作 <xref:System.IConvertible> 介面。 在此情況下，Variant 類型是由 <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType> 方法傳回的類型程式碼所決定。 否則，物件會封送處理成 **VT_UNKNOWN** 類型的 Variant。  
+- 需要明確控制封送處理行為的其他物件，可以實作 <xref:System.IConvertible> 介面。 在此情況下，Variant 類型是由 <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType> 方法傳回的類型程式碼所決定。 否則，物件會封送處理成 **VT_UNKNOWN** 類型的 Variant。  
   
 ### <a name="marshaling-system-types-to-variant"></a>將系統類型封送處理為 Variant  
  下表顯示 Managed 物件類型及其對應的 COM Variant 類型。 只有當正在呼叫的方法簽章是 <xref:System.Object?displayProperty=nameWithType> 類型時，這些類型才會轉換。  
@@ -236,7 +236,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |不支援。|**VT_ARRAY**|  
 |不支援。|**VT_RECORD**|  
 |不支援。|**VT_CY**|  
-|不支援。|**VT_VARIANT**|  
+|不支援。|**VT_Variant**|  
   
  COM Variant 的值是透過呼叫 **IConvertible.To** *Type* 介面所決定；其中 **To** *Type* 是轉換常式，對應到從 **IConvertible.GetTypeCode** 傳回的類型。 例如，從 **IConvertible.GetTypeCode** 傳回 **TypeCode.Double** 的物件，會封送處理成 **VT_R8** 類型的 COM Variant。 您可以透過轉換為 **IConvertible** 介面及呼叫 <xref:System.IConvertible.ToDouble%2A> 方法，取得 Variant 的值 (儲存在 COM Variant 的 **dblVal** 欄位)。  
   
@@ -269,7 +269,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**VT_ARRAY** &#124; **VT_**\*|<xref:System.Array?displayProperty=nameWithType>|  
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|  
 |**VT_RECORD**|對應 Boxed 實值型別。|  
-|**VT_VARIANT**|不支援。|  
+|**VT_Variant**|不支援。|  
   
  從 COM 傳遞至 Managed 程式碼再回到 COM 的 Variant 類型，在呼叫期間可能不會保留相同的 Variant 類型。 當 **VT_DISPATCH** 類型的 Variant 從 COM 傳遞至 .NET Framework 時，請考慮會發生什麼情況。 在封送處理期間，Variant 會轉換成 <xref:System.Object?displayProperty=nameWithType>。 如果接著將**物件**傳送回 COM，它會封送處理回 **VT_UNKNOWN** 類型的 Variant。 當物件從 Managed 程式碼封送處理到 COM 時產生的 Variant，不保證和最初用來產生物件的 Variant 是同一類型。  
   
@@ -281,26 +281,26 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
   
  **依值封送處理物件和 Variant 的預設行為**  
   
--   當從 Managed 程式碼將物件傳送至 COM 時，會使用[將物件封送處理成 Variant](#marshaling-object-to-variant) 中定義的規則，將物件的內容複製到封送處理器所建立的新 Variant 中。 對 Unmanaged 端的 Variant 所做的變更，在從呼叫傳回時，不會傳播回原始物件。  
+- 當從 Managed 程式碼將物件傳送至 COM 時，會使用[將物件封送處理成 Variant](#marshaling-object-to-variant) 中定義的規則，將物件的內容複製到封送處理器所建立的新 Variant 中。 對 Unmanaged 端的 Variant 所做的變更，在從呼叫傳回時，不會傳播回原始物件。  
   
--   當從 COM 將 Variant 傳送至 Managed 程式碼時，會使用[將 Variant 封送處理成物件](#marshaling-variant-to-object)中定義的規則，將 Variant 的內容複製到新建立的物件中。 對 Unmanaged 端的 Variant 所做的變更，在從呼叫傳回時，不會傳播回原始物件。  
+- 當從 COM 將 Variant 傳送至 Managed 程式碼時，會使用[將 Variant 封送處理成物件](#marshaling-variant-to-object)中定義的規則，將 Variant 的內容複製到新建立的物件中。 對 Unmanaged 端的 Variant 所做的變更，在從呼叫傳回時，不會傳播回原始物件。  
   
  **依參考封送處理物件和 Variant 的預設行為**  
   
  若要將變更傳播回呼叫端，必須以傳址方式傳遞參數。 例如，您可以在 C# 中使用 **ref** 關鍵字 (或在 Visual Basic 的 Managed 程式碼中使用 **ByRef**)，以傳址方式傳遞參數。 在 COM 中，參考參數是使用 **Variant \*** 等指標傳遞。  
   
--   以傳址方式將物件傳遞給 COM 時，封送處理器會建立新的 Variant，先將物件參考的內容複製到 Variant，再進行呼叫。 Variant 會傳遞至 Unmanaged 函式，使用者可在此任意變更 Variant 的內容。 對 Unmanaged 端的 Variant 所做的變更，在從呼叫傳回時，會傳播回原始物件。 如果 Variant 的類型和傳遞至呼叫的 Variant 類型不同，則變更會傳播回不同類型的物件。 也就是說，傳遞至呼叫的物件類型，可以不同於從呼叫傳回的物件類型。  
+- 以傳址方式將物件傳遞給 COM 時，封送處理器會建立新的 Variant，先將物件參考的內容複製到 Variant，再進行呼叫。 Variant 會傳遞至 Unmanaged 函式，使用者可在此任意變更 Variant 的內容。 對 Unmanaged 端的 Variant 所做的變更，在從呼叫傳回時，會傳播回原始物件。 如果 Variant 的類型和傳遞至呼叫的 Variant 類型不同，則變更會傳播回不同類型的物件。 也就是說，傳遞至呼叫的物件類型，可以不同於從呼叫傳回的物件類型。  
   
--   以傳址方式將 Variant 傳遞給 Managed 程式碼時，封送處理器會建立新的物件，先將 Variant 的內容複製到物件，再進行呼叫。 物件參考會傳遞至 Managed 函式，使用者可在此任意變更物件。 對參考的物件所做的任何變更，在從呼叫傳回時，會傳播回原始的 Variant。 如果物件的類型和傳遞給呼叫的物件類型不同，原始 Variant 類型就會變更，值也會傳播回 Variant。 同樣地，傳遞至呼叫的 Variant 類型，可以不同於從呼叫傳回的 Variant 類型。  
+- 以傳址方式將 Variant 傳遞給 Managed 程式碼時，封送處理器會建立新的物件，先將 Variant 的內容複製到物件，再進行呼叫。 物件參考會傳遞至 Managed 函式，使用者可在此任意變更物件。 對參考的物件所做的任何變更，在從呼叫傳回時，會傳播回原始的 Variant。 如果物件的類型和傳遞給呼叫的物件類型不同，原始 Variant 類型就會變更，值也會傳播回 Variant。 同樣地，傳遞至呼叫的 Variant 類型，可以不同於從呼叫傳回的 Variant 類型。  
   
  **封送處理設有 VT_BYREF 旗標的 Variant 的預設行為**  
   
--   正以傳值方式傳遞至 Managed 程式碼的 Variant 可設定 **VT_BYREF** 旗標，以表示 Variant 包含的是參考，不是值。 如果是這樣，Variant 仍會被封送處理成物件，因為 Variant 正以傳值方式傳遞。 封送處理器會自動取值 Variant 的內容，並將它先複製到新建立的物件中，再進行呼叫。 然後物件會傳遞到 Managed 函式，但在從呼叫傳回時，該物件不會傳播回原始的 Variant。 遺失對 Managed 物件所做的變更。  
+- 正以傳值方式傳遞至 Managed 程式碼的 Variant 可設定 **VT_BYREF** 旗標，以表示 Variant 包含的是參考，不是值。 如果是這樣，Variant 仍會被封送處理成物件，因為 Variant 正以傳值方式傳遞。 封送處理器會自動取值 Variant 的內容，並將它先複製到新建立的物件中，再進行呼叫。 然後物件會傳遞到 Managed 函式，但在從呼叫傳回時，該物件不會傳播回原始的 Variant。 遺失對 Managed 物件所做的變更。  
   
     > [!CAUTION]
     >  沒有任何方法可以變更以傳值方式傳遞的 Variant 值，即使 Variant 設定了 **VT_BYREF** 旗標。  
   
--   正以傳址方式傳遞至 Managed 程式碼的 Variant 也可以設定 **VT_BYREF** 旗標，以表示 Variant 包含另一個參考。 如果是這樣，Variant 會被封送處理成 **ref** 物件，因為 Variant 正以傳址方式傳遞。 封送處理器會自動取值 Variant 的內容，並將它先複製到新建立的物件中，再進行呼叫。 在從呼叫傳回時，只有當物件的類型和傳入的物件相同時，物件的值才會傳播回原始 Variant 內的參考。 也就是傳播不會變更設有 **VT_BYREF** 旗標的 Variant 類型。 如果物件的類型在呼叫期間變更，從呼叫傳回時，就會發生 <xref:System.InvalidCastException>。  
+- 正以傳址方式傳遞至 Managed 程式碼的 Variant 也可以設定 **VT_BYREF** 旗標，以表示 Variant 包含另一個參考。 如果是這樣，Variant 會被封送處理成 **ref** 物件，因為 Variant 正以傳址方式傳遞。 封送處理器會自動取值 Variant 的內容，並將它先複製到新建立的物件中，再進行呼叫。 在從呼叫傳回時，只有當物件的類型和傳入的物件相同時，物件的值才會傳播回原始 Variant 內的參考。 也就是傳播不會變更設有 **VT_BYREF** 旗標的 Variant 類型。 如果物件的類型在呼叫期間變更，從呼叫傳回時，就會發生 <xref:System.InvalidCastException>。  
   
  下表摘要說明 Variant 和物件的傳播規則。  
   

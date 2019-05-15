@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: eb1ba14bbcfe4e561fa575b9802126fab59d31fc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 52b92048fa845725ce46740e36b96ed55af67c30
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968030"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644725"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
@@ -103,15 +103,15 @@ API 語法只是一個使用查詢語法的更簡潔方法嗎？
 
 如果你符合下列條件，則此問題的答案為**是**...
 
-*   現有的程式碼基底已經使用查詢語法
-*   為了避免過於複雜，您需要在查詢內指定變數的範圍
-*   您偏好查詢語法，且它不會偏離程式碼基底
+* 現有的程式碼基底已經使用查詢語法
+* 為了避免過於複雜，您需要在查詢內指定變數的範圍
+* 您偏好查詢語法，且它不會偏離程式碼基底
 
 如果你符合下列條件，則此問題的答案為**否**...
 
-*   現有的程式碼基底已經使用 API 語法
-*   您不需要在查詢內指定變數的範圍
-*   您偏好 API 語法，且它不會影響程式碼基底
+* 現有的程式碼基底已經使用 API 語法
+* 您不需要在查詢內指定變數的範圍
+* 您偏好 API 語法，且它不會影響程式碼基底
 
 ## <a name="essential-samples"></a>基本範例
 
@@ -119,7 +119,7 @@ API 語法只是一個使用查詢語法的更簡潔方法嗎？
 
 以下是一些 LINQ 基本部分的簡單示範。 這些示範並不完整，因為 LINQ 提供的功能遠比此處說明的功能還多。
 
-*   基本要素 - `Where``Select`和 `Aggregate`：
+* 基本要素 - `Where``Select`和 `Aggregate`：
 
 ```csharp
 // Filtering a list
@@ -142,14 +142,14 @@ int seed = 0;
 int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 ```
 
-*   簡維清單的清單︰
+* 簡維清單的清單︰
 
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
 var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 ```
 
-*   兩組集合之間的聯集 (使用自訂比較子)︰
+* 兩組集合之間的聯集 (使用自訂比較子)︰
 
 ```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
@@ -184,7 +184,7 @@ public class DogHairLengthComparer : IEqualityComparer<Dog>
 var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthComparer());
 ```
 
-*   兩組集合之間的交集︰
+* 兩組集合之間的交集︰
 
 ```csharp
 // Gets the volunteers who spend share time with two humane societies.
@@ -192,7 +192,7 @@ var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      new VolunteerTimeComparer());
 ```
 
-*   排序︰
+* 排序︰
 
 ```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
@@ -201,7 +201,7 @@ var results = DirectionsProcessor.GetDirections(start, end)
               .ThenBy(direction => direction.EstimatedTime);
 ```
 
-*   最後是一項更進階的範例︰判斷兩個相同類型執行個體的屬性值是否相等 (從 [此 StackOverflow 文章](https://stackoverflow.com/a/844855)中借用並經過修改)：
+* 最後是一項更進階的範例︰判斷兩個相同類型執行個體的屬性值是否相等 (從 [此 StackOverflow 文章](https://stackoverflow.com/a/844855)中借用並經過修改)：
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -252,6 +252,6 @@ public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> fa
 
 ## <a name="further-resources"></a>其他資源︰
 
-*   [101 LINQ 範例](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-*   [Linqpad](https://www.linqpad.net/)為 C#/F#/VB 的遊樂場環境和資料庫查詢引擎
-*   [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/)，為學習 LINQ-to-object 如何實作的電子書
+* [101 LINQ 範例](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+* [Linqpad](https://www.linqpad.net/)為 C#/F#/VB 的遊樂場環境和資料庫查詢引擎
+* [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/)，為學習 LINQ-to-object 如何實作的電子書

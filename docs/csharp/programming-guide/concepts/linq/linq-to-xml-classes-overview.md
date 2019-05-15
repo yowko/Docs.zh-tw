@@ -2,12 +2,12 @@
 title: LINQ to XML 類別概觀 (C#)
 ms.date: 07/20/2015
 ms.assetid: bf666100-5392-4968-97f4-f6b9d3287d7b
-ms.openlocfilehash: a50b58ad3e8f375d80701f454e74fef00e4d2203
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f93e3a791bfd56095df12ebf070f72540a8b21dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509658"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597051"
 ---
 # <a name="linq-to-xml-classes-overview-c"></a>LINQ to XML 類別概觀 (C#)
 本主題提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 命名空間 (Namespace) 中的 <xref:System.Xml.Linq> 類別 (Class) 清單，以及每個類別的簡短說明。  
@@ -26,9 +26,9 @@ ms.locfileid: "54509658"
 ### <a name="xcontainer-class"></a>XContainer 類別  
  <xref:System.Xml.Linq.XContainer> 對於可能擁有子節點的所有節點而言，是抽象基底類別。 下列類別衍生自 <xref:System.Xml.Linq.XContainer> 類別：  
   
--   <xref:System.Xml.Linq.XElement>  
+- <xref:System.Xml.Linq.XElement>  
   
--   <xref:System.Xml.Linq.XDocument>  
+- <xref:System.Xml.Linq.XDocument>  
   
 ### <a name="xdeclaration-class"></a>XDeclaration 類別  
  <xref:System.Xml.Linq.XDeclaration> 代表 XML 宣告。 XML 宣告用於宣告 XML 版本與文件的編碼。 此外，XML 宣告會指定 XML 文件是否為獨立的。 如果文件是獨立的，外部 DTD 或內部子集所參考的外部參數實體 (Entity) 就不會包含任何外部標記宣告。  
@@ -55,15 +55,15 @@ ms.locfileid: "54509658"
 ### <a name="xnode-class"></a>XNode 類別  
  <xref:System.Xml.Linq.XNode> 是代表 XML 樹狀結構節點的抽象類別。 下列類別衍生自 <xref:System.Xml.Linq.XNode> 類別：  
   
--   <xref:System.Xml.Linq.XText>  
+- <xref:System.Xml.Linq.XText>  
   
--   <xref:System.Xml.Linq.XContainer>  
+- <xref:System.Xml.Linq.XContainer>  
   
--   <xref:System.Xml.Linq.XComment>  
+- <xref:System.Xml.Linq.XComment>  
   
--   <xref:System.Xml.Linq.XProcessingInstruction>  
+- <xref:System.Xml.Linq.XProcessingInstruction>  
   
--   <xref:System.Xml.Linq.XDocumentType>  
+- <xref:System.Xml.Linq.XDocumentType>  
   
 ### <a name="xnodedocumentordercomparer-class"></a>XNodeDocumentOrderComparer 類別  
  <xref:System.Xml.Linq.XNodeDocumentOrderComparer> 會提供功能，針對其文件順序比較節點。  

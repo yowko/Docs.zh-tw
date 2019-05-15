@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da059e1be7c685eba7792045abf4ffa691525d2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03a17e8f30c15e98a350ef558cc1cb6ddf65cade
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701472"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584503"
 ---
 # <a name="systemruntimecaching-element-cache-settings"></a>\<system.runtime.caching > 項目 （快取設定）
 透過組態檔中的 <xref:System.Runtime.Caching.ObjectCache> 項目，提供預設記憶體內 `memoryCache` 實作的組態。  
@@ -45,7 +45,7 @@ ms.locfileid: "61701472"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|指定通用語言執行平台和 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 應用程式所使用之每個組態檔中的根項目。|  
+|[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|所有由 common language runtime 和.NET Framework 應用程式的組態檔中指定的根項目。|  
   
 ## <a name="remarks"></a>備註  
  這個命名空間中的類別提供如同在 ASP.NET 中使用快取設備的方式，但是不需要在 `System.Web` 組件上的相依性。 如需詳細資訊，請參閱 [Caching in .NET Framework Applications](../../../../../docs/framework/performance/caching-in-net-framework-applications.md)。  

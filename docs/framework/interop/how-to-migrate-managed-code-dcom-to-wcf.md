@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74acea566e4b0e407e86cb67d3f521f18c2d68af
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: fad8a73c41379cac7523db6266951b8abab26e27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59307713"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626288"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>作法：將受控碼 DCOM 移轉至 WCF
 對於分散式環境中伺服器與用戶端之間的 Managed 程式碼呼叫，Windows Communication Foundation (WCF) 是比分散式元件物件模型 (DCOM) 更建議使用的安全選擇。 本文將說明如何在下列情節中將程式碼從 DCOM 移轉至 WCF。  
   
--   遠端服務以傳值方式將物件傳回給用戶端  
+- 遠端服務以傳值方式將物件傳回給用戶端  
   
--   用戶端以傳值方式將物件傳送至遠端服務  
+- 用戶端以傳值方式將物件傳送至遠端服務  
   
--   遠端服務以傳址方式將物件傳回給用戶端  
+- 遠端服務以傳址方式將物件傳回給用戶端  
   
  基於安全性理由，在 WCF 中不允許以傳址方式將物件從用戶端傳送至服務。 如果需要在用戶端與伺服器之間來回溝通，可透過雙工服務在 WCF 中達成。  如需雙工服務的詳細資訊，請參閱[雙工服務](../../../docs/framework/wcf/feature-details/duplex-services.md)。  
   

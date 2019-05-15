@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 9f1d77ac27def556d94fac12dbde2f36d5b139de
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a1854e35e32a31dbf531e6705a7968434dd02e44
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649764"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593249"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic 的算術運算子
 算術運算子用來執行許多熟悉的算術作業牽涉到數字常值、 變數、 其他運算式、 函式和屬性呼叫和常數所代表的值計算。 搭配算術運算子也分類為位元移位運算子，運算元的個別位元層級處理，並向左或向右移位其位元模式。  
@@ -51,7 +51,7 @@ ms.locfileid: "64649764"
  [!code-vb[VbVbalrOperators#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#63)]  
   
 ### <a name="attempted-division-by-zero"></a>嘗試的除以零  
- 除數為零會有不同的結果，根據相關的資料類型。 中不可或缺的部門 (`SByte`， `Byte`， `Short`， `UShort`， `Integer`， `UInteger`， `Long`， `ULong`)，則[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]會擲回<xref:System.DivideByZeroException>例外狀況。 在除法運算`Decimal`或`Single`資料類型[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]也會擲回<xref:System.DivideByZeroException>例外狀況。  
+ 除數為零會有不同的結果，根據相關的資料類型。 中不可或缺的部門 (`SByte`， `Byte`， `Short`， `UShort`， `Integer`， `UInteger`， `Long`， `ULong`)，.NET Framework 會擲回<xref:System.DivideByZeroException>例外狀況。 在除法運算`Decimal`或是`Single`資料類型，.NET Framework 也會擲回<xref:System.DivideByZeroException>例外狀況。  
   
  涉及浮點劃分`Double`資料類型，會擲回任何例外狀況，以及結果是代表該類別的成員<xref:System.Double.NaN>， <xref:System.Double.PositiveInfinity>，或<xref:System.Double.NegativeInfinity>，端視被除數。 下表摘要說明各種不同的嘗試將結果`Double`零的值。  
   

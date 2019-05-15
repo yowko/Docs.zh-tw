@@ -1,13 +1,13 @@
 ---
-title: HOW TO：查詢具有指定之屬性或名稱 (Visual Basic) 的檔案
+title: 作法：查詢具有指定之屬性或名稱 (Visual Basic) 的檔案
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 0c6875a0e4b8224010b20ca17ab6318387490aca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05dfe3e88274efe8d817defcac2f47efe053b12b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021358"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586496"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>HOW TO：查詢具有指定之屬性或名稱 (Visual Basic) 的檔案
 這個範例示範如何在指定的樹狀目錄中尋找所有具有指定副檔名 (例如 ".txt") 的檔案。 它也會示範如何根據建立時間來傳回樹狀結構中的最新或最舊檔案。  
@@ -61,7 +61,7 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立專案的目標.NET Framework 3.5 版或更高版本 system.core.dll 的參考和`Imports`System.Linq 命名空間陳述式。  
+建立 VB.NET 的主控台應用程式專案，使用`Imports`System.Linq 命名空間陳述式。
   
 ## <a name="see-also"></a>另請參閱
 

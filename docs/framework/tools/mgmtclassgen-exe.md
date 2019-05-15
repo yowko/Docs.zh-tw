@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 061b5aa2208a73f6a53bc5eaee056410256ac6ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9e018d8c83165b3e025ad4db7f3d59b6ba58b72a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213125"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616085"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (管理強類型類別產生器)
 [管理強類型類別產生器] 工具可快速地為指定的 Windows Management Instrumentation (WMI) 類別產生早期繫結 Managed 類別。 產生的類別會將為存取 WMI 類別之執行個體所撰寫的程式碼加以簡化。  
@@ -64,30 +64,30 @@ WMIClass [options]
 |CIM_UINT64|**UInt64**|  
 |CIM_REAL32|**Single**|  
 |CIM_REAL64|**Double**|  
-|CIM_BOOLEAN|**Boolean**|  
+|CIM_BOOLEAN|**布林值**|  
 |CIM_String|**String**|  
 |CIM_DATETIME|**DateTime** 或 **TimeSpan**|  
 |CIM_REFERENCE|**ManagementPath**|  
 |CIM_CHAR16|**Char**|  
 |CIM_OBJECT|**ManagementBaseObject**|  
-|CIM_IUNKNOWN|**Object**|  
+|CIM_IUNKNOWN|**物件**|  
 |CIM_ARRAY|上述物件的陣列|  
   
  請注意下列在產生 WMI 類別時的行為：  
   
--   標準公用屬性或方法有可能和現有屬性或方法的名稱相同。 當此情況發生時，工具會變更在所產生之類別中屬性或方法的名稱以避免命名衝突。  
+- 標準公用屬性或方法有可能和現有屬性或方法的名稱相同。 當此情況發生時，工具會變更在所產生之類別中屬性或方法的名稱以避免命名衝突。  
   
--   所產生之類別中屬性或方法的名稱有可能是目標程式語言的關鍵字。 當此情況發生時，工具會變更在所產生之類別中屬性或方法的名稱以避免命名衝突。  
+- 所產生之類別中屬性或方法的名稱有可能是目標程式語言的關鍵字。 當此情況發生時，工具會變更在所產生之類別中屬性或方法的名稱以避免命名衝突。  
   
--   在 WMI 中，限定詞為修飾詞，其中包含說明類別、執行個體、屬性或方法的資訊。 WMI 使用如 **Read**、**Write** 和 **Key** 等標準限定詞以說明產生之類別中的屬性。 例如，以 **Read** 限定詞修飾的屬性只能以在所產生類別中的屬性 **get** 存取子來定義。 因為以 **Read** 限定詞標記的屬性是做唯讀之用，不會定義 **set** 存取子。  
+- 在 WMI 中，限定詞為修飾詞，其中包含說明類別、執行個體、屬性或方法的資訊。 WMI 使用如 **Read**、**Write** 和 **Key** 等標準限定詞以說明產生之類別中的屬性。 例如，以 **Read** 限定詞修飾的屬性只能以在所產生類別中的屬性 **get** 存取子來定義。 因為以 **Read** 限定詞標記的屬性是做唯讀之用，不會定義 **set** 存取子。  
   
--   數值屬性可使用 **Values** 和 **ValueMaps** 限定詞加以修飾，表示屬性只能設定為指定的允許值。 列舉是以這些 **Values** 和 **ValueMaps** 產生的，而屬性會對應到列舉。  
+- 數值屬性可使用 **Values** 和 **ValueMaps** 限定詞加以修飾，表示屬性只能設定為指定的允許值。 列舉是以這些 **Values** 和 **ValueMaps** 產生的，而屬性會對應到列舉。  
   
--   WMI 使用單一 (Singleton) 這個詞彙來說明只能有一個執行個體的類別。 因此，單一 (Singleton) 類別的預設建構函式會將類別初始化為類別的唯一執行個體。  
+- WMI 使用單一 (Singleton) 這個詞彙來說明只能有一個執行個體的類別。 因此，單一 (Singleton) 類別的預設建構函式會將類別初始化為類別的唯一執行個體。  
   
--   WMI 類別可以擁有物件的屬性。 當產生此類型之 WMI 類別的強類型類別時，應考慮產生此內嵌物件屬性類型的強類型類別。 這能讓您以強類型的方式存取內嵌物件。 請注意，產生的程式碼可能無法偵測內嵌物件的類型。 在這個情況下，會在產生的程式碼中建立註解以告知您這個問題。 接著，您可以將所產生程式碼的屬性類型修改為其他所產生類別的屬性類型。  
+- WMI 類別可以擁有物件的屬性。 當產生此類型之 WMI 類別的強類型類別時，應考慮產生此內嵌物件屬性類型的強類型類別。 這能讓您以強類型的方式存取內嵌物件。 請注意，產生的程式碼可能無法偵測內嵌物件的類型。 在這個情況下，會在產生的程式碼中建立註解以告知您這個問題。 接著，您可以將所產生程式碼的屬性類型修改為其他所產生類別的屬性類型。  
   
--   WMI 中，CIM_DATETIME 資料類型的資料值可表示特定的日期和時間，或表示時間間隔。 如果資料值代表日期和時間，所產生類別中的資料類型就會是 **DateTime**。 如果資料值代表時間間隔，則所產生類別中的資料類型就會是 **TimeSpan**。  
+- WMI 中，CIM_DATETIME 資料類型的資料值可表示特定的日期和時間，或表示時間間隔。 如果資料值代表日期和時間，所產生類別中的資料類型就會是 **DateTime**。 如果資料值代表時間間隔，則所產生類別中的資料類型就會是 **TimeSpan**。  
   
  您也可以使用 Visual Studio .NET 中的 Server Explorer Management Extension 來產生強類型類別。  
   

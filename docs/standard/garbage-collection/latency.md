@@ -8,27 +8,27 @@ helpviewer_keywords:
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 897f49dc783885728f7d7242482a2b42f3a114bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a81a0015ae046682e1afa40c1c8d272357839ba
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498069"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622766"
 ---
 # <a name="latency-modes"></a>延遲模式
 為了回收物件，記憶體回收行程必須停止應用程式中所有正在執行的執行緒。 在某些情況下，例如當應用程式擷取資料或顯示內容時，完整記憶體回收會在關鍵時刻進行，而妨礙效能。 您可以藉由設定 <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> 屬性為 <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> 值的其中一個，來調整記憶體回收行程的干擾程度。  
   
  延遲指的是記憶體回收行程干擾應用程式的時間。 在低延遲期間，記憶體回收行程會更加保守，也較不干擾啟用物件。 <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> 列舉會提供兩個低延遲設定：  
   
--   <xref:System.Runtime.GCLatencyMode.LowLatency> 會隱藏層代 2 回收，並且只執行層代 0 和 1 回收。 它只適合短時間使用。 經過一段較長的時間後，如果系統記憶體吃緊，則記憶體回收行程將會觸發回收，該回收可能會短暫暫停應用程式，並且中斷時間關鍵的作業。 這項設定僅適用於工作站記憶體回收。  
+- <xref:System.Runtime.GCLatencyMode.LowLatency> 會隱藏層代 2 回收，並且只執行層代 0 和 1 回收。 它只適合短時間使用。 經過一段較長的時間後，如果系統記憶體吃緊，則記憶體回收行程將會觸發回收，該回收可能會短暫暫停應用程式，並且中斷時間關鍵的作業。 這項設定僅適用於工作站記憶體回收。  
   
--   <xref:System.Runtime.GCLatencyMode.SustainedLowLatency> 會隱藏前景層代 2 回收，並且只執行層代 0、1 和背景層代 2 回收。 它可以長時間使用，並且可用於工作站和伺服器記憶體回收。 如果已停用[並行記憶體回收](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)，則無法使用這個設定。  
+- <xref:System.Runtime.GCLatencyMode.SustainedLowLatency> 會隱藏前景層代 2 回收，並且只執行層代 0、1 和背景層代 2 回收。 它可以長時間使用，並且可用於工作站和伺服器記憶體回收。 如果已停用[並行記憶體回收](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)，則無法使用這個設定。  
   
  在低延遲期間，會隱藏層代 2 回收，除非發生下列情況：  
   
--   系統從作業系統接收到記憶體不足的通知。  
+- 系統從作業系統接收到記憶體不足的通知。  
   
--   應用程式程式碼會呼叫 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法並指定 `generation` 參數為 2 來進行回收。  
+- 應用程式程式碼會呼叫 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法並指定 `generation` 參數為 2 來進行回收。  
   
  下表列出使用 <xref:System.Runtime.GCLatencyMode> 值的應用程式案例。  
   
@@ -42,17 +42,17 @@ ms.locfileid: "54498069"
 ## <a name="guidelines-for-using-low-latency"></a>使用低延遲的指導方針  
  當您使用 <xref:System.Runtime.GCLatencyMode.LowLatency> 模式時，請考慮下列指導方針：  
   
--   盡可能縮短這段低延遲的時間。  
+- 盡可能縮短這段低延遲的時間。  
   
--   請避免在低延遲期間配置大量記憶體。 因為記憶體回收較少物件時，會造成記憶體不足的通知。  
+- 請避免在低延遲期間配置大量記憶體。 因為記憶體回收較少物件時，會造成記憶體不足的通知。  
   
--   在低延遲模式時，盡量減少配置數目，特別是配置到大型物件堆積和 Pin 物件的數目。  
+- 在低延遲模式時，盡量減少配置數目，特別是配置到大型物件堆積和 Pin 物件的數目。  
   
--   請注意無法配置的執行緒。 因為 <xref:System.Runtime.GCSettings.LatencyMode%2A> 屬性設定為整個處理序，或許會在可能配置的任何執行緒中產生 <xref:System.OutOfMemoryException>。  
+- 請注意無法配置的執行緒。 因為 <xref:System.Runtime.GCSettings.LatencyMode%2A> 屬性設定為整個處理序，或許會在可能配置的任何執行緒中產生 <xref:System.OutOfMemoryException>。  
   
--   將低度延遲的程式碼包裝在限制執行區域 (如需詳細資訊，請參閱[限制執行區域](../../../docs/framework/performance/constrained-execution-regions.md))。  
+- 將低度延遲的程式碼包裝在限制執行區域 (如需詳細資訊，請參閱[限制執行區域](../../../docs/framework/performance/constrained-execution-regions.md))。  
   
--   您也可以呼叫 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType> 方法，在低延遲期間強制層代 2 回收。  
+- 您也可以呼叫 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType> 方法，在低延遲期間強制層代 2 回收。  
   
 ## <a name="see-also"></a>另請參閱
 

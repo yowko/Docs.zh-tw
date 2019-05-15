@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: a8593c5dce30fc71750515ccedb4fc9cce9a4868
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e78616acc56e75dd06445f7a569ab94e65e20cc0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652107"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592224"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 繫結概觀
 繫結是用來指定連接到 Windows Communication Foundation (WCF) 服務的端點所需之通訊詳細資料的物件。 WCF 服務中的每個端點都需要正確指定的繫結。 本主題概述通訊詳細資料所定義的繫結的繫結、 哪些繫結會包含在 WCF 中，以及如何指定繫結的端點項目的類型。  
@@ -36,9 +36,9 @@ ms.locfileid: "64652107"
   
 - <xref:System.ServiceModel.WSHttpBinding>：互通的繫結適合用來連接到端點符合 WS-* 通訊協定。  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>：使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]連接至同一部電腦上的其他 WCF 端點。  
+- <xref:System.ServiceModel.NetNamedPipeBinding>：您可以使用.NET Framework 來連接至同一部電腦上的其他 WCF 端點。  
   
-- <xref:System.ServiceModel.NetMsmqBinding>：使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]與其他 WCF 端點建立佇列的訊息連線。  
+- <xref:System.ServiceModel.NetMsmqBinding>：使用.NET Framework，才能建立已排入佇列訊息與其他 WCF 端點的連線。  
 
 - <xref:System.ServiceModel.NetTcpBinding>：這個繫結提供更高的效能比 HTTP 繫結，而且非常適用於區域網路。
   

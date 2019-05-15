@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: c6b3808a2d73070cc07b31eb0fca7ca9d6af8cdb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 328f67c5afe22f336aa6337903b6569fb6ecc359
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200541"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623051"
 ---
 # <a name="proxy-configuration"></a>Proxy 組態
 Proxy 伺服器可處理資源的用戶端要求。 Proxy 可從其快取傳回要求的資源，或將要求轉送至資源所在的伺服器。 Proxy 可透過減少傳送至遠端伺服器的要求數目，來提升網路效能。 Proxy 也可用來限制對資源的存取。  
@@ -45,11 +45,11 @@ Proxy 伺服器可處理資源的用戶端要求。 Proxy 可從其快取傳回�
   
  您有數個選項可控制靜態 Proxy 的運作方式。 您可以指定下列各項：  
   
--   Proxy 的位址。  
+- Proxy 的位址。  
   
--   是否應該讓本機位址略過 Proxy。  
+- 是否應該讓本機位址略過 Proxy。  
   
--   是否應該讓一組位址略過 Proxy。  
+- 是否應該讓一組位址略過 Proxy。  
   
  下表顯示靜態 Proxy 的組態選項。  
   

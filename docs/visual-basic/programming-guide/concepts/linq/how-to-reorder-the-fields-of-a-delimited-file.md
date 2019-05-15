@@ -1,15 +1,15 @@
 ---
-title: HOW TO：重新排列欄位的分隔符號的檔案 (LINQ) (Visual Basic)
+title: 作法：重新排列欄位的分隔符號的檔案 (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-ms.openlocfilehash: 6f41a8e38812cf9d3c652fa605febf2511f07a27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25f860109275bdee1b980c68e71c2c65d44756a4
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051360"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593106"
 ---
-# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>HOW TO：重新排列欄位的分隔符號的檔案 (LINQ) (Visual Basic)
+# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>作法：重新排列欄位的分隔符號的檔案 (LINQ) (Visual Basic)
 逗號分隔值 (CSV) 檔案是一種文字檔，常用來儲存試算表資料或其他以資料列和資料行呈現的表格式資料。 使用 <xref:System.String.Split%2A> 方法隔開欄位後，就可以利用 LINQ 輕鬆地查詢和管理 CSV 檔案。 事實上，您可以使用此相同的方法來重新排列任何結構化文字行中的其中幾部分，而不限於 CSV 檔案。  
   
  在下列範例中，假設有三個資料行分別表示學生的「姓氏」、「名字」和「學號」。 這些欄位會依照學生的姓氏字母排序。 此查詢會產生新的順序，其中會先出現學號資料行，後面接著結合學生姓氏和名字的第二個資料行。 這些行會根據學號欄位重新排列。 結果會儲存至新的檔案，而且不會修改原始資料。  
@@ -73,8 +73,6 @@ End Class
 ' 121, Eugene Zabokritski  
 ' 122, Michael Tucker  
 ```  
-  
-## <a name="compiling-the-code"></a>編譯程式碼  
   
 ## <a name="see-also"></a>另請參閱
 

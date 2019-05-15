@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: ae2305e0f5d3ca4de386d8e7933a1107450e0be4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5a00820b01ee0ac78715efa0140e2a5aef28bef8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341500"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592791"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (C# 編譯器選項)
 指定哪個 Common Language Runtime (CLR) 版本可以執行組件。  
@@ -30,29 +30,29 @@ ms.locfileid: "59341500"
   
 ## <a name="remarks"></a>備註  
   
--   **anycpu** (預設值) 會將組件編譯為可在所有平台上執行。 您的應用程式會盡可能做為 64 位元處理序執行，而且只有在 32 位元模式可用時才會回到該模式。  
+- **anycpu** (預設值) 會將組件編譯為可在所有平台上執行。 您的應用程式會盡可能做為 64 位元處理序執行，而且只有在 32 位元模式可用時才會回到該模式。  
   
--   **anycpu32bitpreferred** 會將組件編譯為可在所有平台上執行。 您的應用程式在同時支援 64 位元和 32 位元應用程式的系統上會以 32 位元模式執行。 您只能針對以 .NET Framework 4.5 為目標的專案指定此選項。  
+- **anycpu32bitpreferred** 會將組件編譯為可在所有平台上執行。 您的應用程式在同時支援 64 位元和 32 位元應用程式的系統上會以 32 位元模式執行。 您只能針對以 .NET Framework 4.5 為目標的專案指定此選項。  
   
--   **ARM** 會將您的組件編譯為可在採用 Advanced RISC Machine (ARM) 處理器的電腦上執行。  
+- **ARM** 會將您的組件編譯為可在採用 Advanced RISC Machine (ARM) 處理器的電腦上執行。  
   
--   **ARM64** 會編譯您的組件，使其可由具備支援 A64 指令集進階 RISC 機器 (ARM) 處理器電腦上的 64 位元 CLR 執行。  
+- **ARM64** 會編譯您的組件，使其可由具備支援 A64 指令集進階 RISC 機器 (ARM) 處理器電腦上的 64 位元 CLR 執行。  
 
--   在支援 AMD64 或 EM64T 指令集的電腦上，**x64** 會將組件編譯成由 64 位元 CLR 執行。  
+- 在支援 AMD64 或 EM64T 指令集的電腦上，**x64** 會將組件編譯成由 64 位元 CLR 執行。  
   
--   **x86** 會將組件編譯為以 32 位元、與 x86 相容的 CLR 執行。  
+- **x86** 會將組件編譯為以 32 位元、與 x86 相容的 CLR 執行。  
   
--   **Itanium** 會將組件編譯為可以在使用 Itanium 處理器的電腦上以 64 位元 CLR 執行。  
+- **Itanium** 會將組件編譯為可以在使用 Itanium 處理器的電腦上以 64 位元 CLR 執行。  
   
  在 64 位元 Windows 作業系統上：  
   
--   使用 **-platform:x86** 所編譯的組件會在 WOW64 下執行的 32 位元 CLR 上執行。  
+- 使用 **-platform:x86** 所編譯的組件會在 WOW64 下執行的 32 位元 CLR 上執行。  
   
--   使用 **-platform:anycpu** 所編譯的 DLL 會在與載入它的程序相同的 CLR 上執行。  
+- 使用 **-platform:anycpu** 所編譯的 DLL 會在與載入它的程序相同的 CLR 上執行。  
   
--   使用 **-platform:anycpu** 所編譯的可執行檔會在 64 位元 CLR 上執行。  
+- 使用 **-platform:anycpu** 所編譯的可執行檔會在 64 位元 CLR 上執行。  
   
--   使用 **-platform:anycpu32bitpreferred** 所編譯的可執行檔會在 32 位元 CLR 上執行。  
+- 使用 **-platform:anycpu32bitpreferred** 所編譯的可執行檔會在 32 位元 CLR 上執行。  
   
  **anycpu32bitpreferred** 設定只對可執行檔 (.EXE) 有效，而且需要 .NET Framework 4.5。  
   

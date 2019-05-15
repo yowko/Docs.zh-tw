@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 3d4aa5e60ab9bb134716bddcf90b6fc6b07c2ea0
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: e392f6b2e57bebf1ab916bc6142aebbc8f341db2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656150"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615302"
 ---
 # <a name="delegates-and-lambdas"></a>委派和 Lambda
 
@@ -46,9 +46,9 @@ public class Program
 
 為了簡化開發程序，.NET 包含一組委派類型，程式設計人員可重複使用這些類型，而不需要建立新的類型。 這些類型包括 `Func<>`、`Action<>` 和 `Predicate<>`，可用於 .NET API 中的不同位置，而不需要定義新的委派類型。 當然，這三種類型彼此有些不同，如您在其簽章中所見，大部分與其預定使用方式相關：
 
-*   使用委派的引數時如需執行動作，會使用 `Action<>`。
-*   `Func<>` 通常會在需要轉換時使用，亦即您必須將委派的引數轉換成其他結果。 預測就是一個主要範例。
-*   `Predicate<>` 會在需要判斷引數是否符合委派的條件時使用。 它也可以寫成 `Func<T, bool>`。
+* 使用委派的引數時如需執行動作，會使用 `Action<>`。
+* `Func<>` 通常會在需要轉換時使用，亦即您必須將委派的引數轉換成其他結果。 預測就是一個主要範例。
+* `Predicate<>` 會在需要判斷引數是否符合委派的條件時使用。 它也可以寫成 `Func<T, bool>`。
 
 我們現在可以使用 `Func<>` 委派取代自訂類型，針對上述範例進行重寫。 程式會以完全相同的方式繼續執行。
 
@@ -155,10 +155,10 @@ public MainWindow()
 }
 ```
 
-在此內容中使用 `+=` 運算子來訂閱[事件](../../docs/csharp/language-reference/keywords/event.md)。 如需詳細資訊，請參閱[＜How to：訂閱及取消訂閱事件](../../docs/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
+在此內容中使用 `+=` 運算子來訂閱[事件](../../docs/csharp/language-reference/keywords/event.md)。 如需詳細資訊，請參閱[如何：訂閱及取消訂閱事件](../../docs/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
 
 ## <a name="further-reading-and-resources"></a>延伸閱讀和資源
 
-*   [委派](../../docs/csharp/programming-guide/delegates/index.md)
-*   [匿名函式](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
-*   [Lambda 運算式](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+* [委派](../../docs/csharp/programming-guide/delegates/index.md)
+* [匿名函式](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+* [Lambda 運算式](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

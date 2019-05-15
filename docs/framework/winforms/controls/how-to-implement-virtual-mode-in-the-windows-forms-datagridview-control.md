@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Windows Forms DataGridView 控制項中實作虛擬模式
+title: 作法：在 Windows Forms DataGridView 控制項中實作虛擬模式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - virtual mode
 - DataGridView control [Windows Forms], large data sets
 ms.assetid: 98236267-f08e-4918-bcf9-77acf050a3ca
-ms.openlocfilehash: 69c0f53f4ab86c7851db5e940fd0c4b5d5ebb3fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 064b58b64e0a9f55e3ef7d15b4962cfec514eff3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651625"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592402"
 ---
-# <a name="how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control"></a>HOW TO：在 Windows Forms DataGridView 控制項中實作虛擬模式
+# <a name="how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control"></a>作法：在 Windows Forms DataGridView 控制項中實作虛擬模式
 下列程式碼範例示範如何使用 <xref:System.Windows.Forms.DataGridView> 控制項 (其 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 屬性設定為 `true`) 來管理大量的資料。  
   
  如需這個程式碼範例的完整說明，請參閱[逐步解說：實作虛擬模式中的 Windows Form DataGridView 控制項](implementing-virtual-mode-wf-datagridview-control.md)。  
@@ -32,8 +32,6 @@ ms.locfileid: "64651625"
  這個範例需要：  
   
 - System 和 System.Windows.Forms 組件的參考。  
-  
- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
 

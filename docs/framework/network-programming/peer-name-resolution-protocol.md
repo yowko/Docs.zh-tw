@@ -2,12 +2,12 @@
 title: 對等名稱解析通訊協定
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: 4473ccb01349d2697ba512861aa505d5e363ab19
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9e20e23cf467bc87fd9984bdbc15d07dfed06798
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119063"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623021"
 ---
 # <a name="peer-name-resolution-protocol"></a>對等名稱解析通訊協定
 在對等環境中，對等使用特定名稱解析系統，才能從名稱或其他類型的識別碼解析彼此的網路位置 (位址、通訊協定和連接埠)。 過去，網域名稱系統 (DNS) 內本來就是暫時性連線以及其他缺點，而讓對等名稱解析變得複雜。  
@@ -20,31 +20,31 @@ ms.locfileid: "59119063"
   
 對等名稱解析通訊協定會示範下列屬性：  
   
--   分散式且幾乎完全無伺服器。 只有啟動程序處理序才需要伺服器。  
+- 分散式且幾乎完全無伺服器。 只有啟動程序處理序才需要伺服器。  
   
--   沒有第三方的安全名稱發行。 與 DNS 名稱發行不同，PNRP 名稱發行是瞬間發生的，沒有財務成本。  
+- 沒有第三方的安全名稱發行。 與 DNS 名稱發行不同，PNRP 名稱發行是瞬間發生的，沒有財務成本。  
   
--   PNRP 會即時更新，以防止解析過時位址。  
+- PNRP 會即時更新，以防止解析過時位址。  
   
--   透過 PNRP 的名稱解析同時允許服務的名稱解析，以擴充到不只限於電腦。  
+- 透過 PNRP 的名稱解析同時允許服務的名稱解析，以擴充到不只限於電腦。  
   
 ## <a name="the-systemnetpeertopeer-namespace"></a>System.Net.PeerToPeer 命名空間  
   
--   PNRP 功能是由 .NET Framework 3.5 版內的 <xref:System.Net.PeerToPeer> 命名空間所定義。 它提供的一組類型可用來向可用的 PNRP 服務註冊和解析對等名稱。  
+- PNRP 功能是由 .NET Framework 3.5 版內的 <xref:System.Net.PeerToPeer> 命名空間所定義。 它提供的一組類型可用來向可用的 PNRP 服務註冊和解析對等名稱。  
   
--   (PNRP 和自訂對等解析程式可以使用 <xref:System.ServiceModel.PeerResolvers> 命名空間中所提供的類型進行建立和具現化)。  
+- (PNRP 和自訂對等解析程式可以使用 <xref:System.ServiceModel.PeerResolvers> 命名空間中所提供的類型進行建立和具現化)。  
   
--   用來向可用 PNRP 服務註冊和解析名稱的基本類型如下：  
+- 用來向可用 PNRP 服務註冊和解析名稱的基本類型如下：  
   
--   <xref:System.Net.PeerToPeer.Cloud>:定義描述可用 PNRP 雲端的資訊，包含其範圍。  
+- <xref:System.Net.PeerToPeer.Cloud>：定義描述可用 PNRP 雲端的資訊，包含其範圍。  
   
--   <xref:System.Net.PeerToPeer.PeerName>:定義可用來註冊並後續解析雲端內對等的對等名稱。  
+- <xref:System.Net.PeerToPeer.PeerName>：定義可用來註冊並後續解析雲端內對等的對等名稱。  
   
--   <xref:System.Net.PeerToPeer.PeerNameRecord>:定義 PNRP 雲端中包含對等註冊資訊的記錄，而對等包含可連絡對等的網路端點。  
+- <xref:System.Net.PeerToPeer.PeerNameRecord>：定義 PNRP 雲端中包含對等註冊資訊的記錄，而對等包含可連絡對等的網路端點。  
   
--   <xref:System.Net.PeerToPeer.PeerNameRegistration>:定義對等名稱的註冊處理序，包括啟動和停止對等名稱註冊的方法。  
+- <xref:System.Net.PeerToPeer.PeerNameRegistration>：定義對等名稱的註冊處理序，包括啟動和停止對等名稱註冊的方法。  
   
--   <xref:System.Net.PeerToPeer.PeerNameResolver>:定義將對等名稱解析成其網路端點的處理序，包括用於解析的同步和非同步方法。  
+- <xref:System.Net.PeerToPeer.PeerNameResolver>：定義將對等名稱解析成其網路端點的處理序，包括用於解析的同步和非同步方法。  
   
 ## <a name="see-also"></a>另請參閱
 

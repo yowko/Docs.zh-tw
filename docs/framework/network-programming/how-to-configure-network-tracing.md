@@ -1,5 +1,5 @@
 ---
-title: HOW TO：設定網路追蹤
+title: 作法：設定網路追蹤
 ms.date: 03/30/2017
 helpviewer_keywords:
 - formatting [.NET Framework], network tracing
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: cc08faba7edede3dd527b7c05fe47f6408e18a04
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2c2c2718d79ce9aa4fed343cf368bbf541e493d0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151550"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613704"
 ---
-# <a name="how-to-configure-network-tracing"></a>HOW TO：設定網路追蹤
+# <a name="how-to-configure-network-tracing"></a>作法：設定網路追蹤
 應用程式或電腦組態檔都會保存可決定網路追蹤格式和內容的設定。 在執行這個程序之前，請確認已啟用追蹤。 如需啟用追蹤的詳細資訊，請參閱[啟用網路追蹤](../../../docs/framework/network-programming/enabling-network-tracing.md)。  
   
  電腦組態檔 (machine.config) 是儲存在 Windows 安裝目錄中的 %Windir%\Microsoft.NET\Framework 資料夾下。 另外還有一個 machine.config 檔案，位於電腦上所安裝的每個 .NET Framework 版本之 %Windir%\Microsoft.NET\Framework 下的資料夾中 (例如，C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config 或 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config)。  
@@ -27,7 +27,7 @@ ms.locfileid: "59151550"
   
 ### <a name="to-configure-network-tracing"></a>若要設定網路追蹤  
   
--   將下列各行加入至適當的組態檔中。 下表中會說明這些設定的值和選項。  
+- 將下列各行加入至適當的組態檔中。 下表中會說明這些設定的值和選項。  
   
     ```xml  
     <configuration>  

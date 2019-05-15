@@ -2,12 +2,12 @@
 title: 序列化概念
 ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-ms.openlocfilehash: 649c4475aa8dcfc657b7591a0068dbfa4af918ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99716a6346689ac4d3201f83b0b8204cad462e8e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018108"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593317"
 ---
 # <a name="serialization-concepts"></a>序列化概念
 為何會想要使用序列化？ 最重要的兩大原因是，在儲存媒體中保持物件的狀態以便在稍後階段重建完全相同的複本，以及利用值在應用程式定義域之間傳送物件。 例如，使用序列化來儲存 ASP.NET 的工作階段狀態，並且複製物件至 Windows Forms 的剪貼簿。 它也供遠端使用，利用值在應用程式定義域之間傳遞物件。
@@ -17,7 +17,7 @@ ms.locfileid: "62018108"
 ## <a name="persistent-storage"></a>持續性儲存體
 經常有需要將物件的欄位值儲存至磁碟，稍後再擷取此資料的情況。 儘管不需序列化就可以輕易取得，但是此做法經常繁瑣而易出錯，而且當需要追蹤物件階層時會變得越來越複雜。 想像撰寫包含數千個物件的大型企業應用程式，且必須對所有物件撰寫程式碼，將欄位和屬性儲存至磁碟和從磁碟中還原。 序列化提供方便的機制達到此目的。
 
-Common Language Runtime 管理物件在記憶體中儲存的方式，並使用[反映](../../../docs/framework/reflection-and-codedom/reflection.md)提供自動的序列化機制。 當物件序列化後，類別名稱、組件以及類別執行個體的所有資料成員都會寫入儲存區。 物件通常將對其他執行個體的參考儲存在成員變數中。 將類別序列化後，序列化引擎會追蹤已序列化的參考物件，確保不會將相同的物件序列化多次。 隨 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]所提供的序列化架構會正確地自動處理物件圖形和循環參考。 對物件圖形的唯一要求是所有由已序列化物件所參考的物件，必須也標示為 `Serializable` (如需詳細資訊，請參閱[基本序列化](basic-serialization.md))。 若不這麼做，當序列化程式嘗試序列化未標示的物件時，將擲回例外狀況。
+Common Language Runtime 管理物件在記憶體中儲存的方式，並使用[反映](../../../docs/framework/reflection-and-codedom/reflection.md)提供自動的序列化機制。 當物件序列化後，類別名稱、組件以及類別執行個體的所有資料成員都會寫入儲存區。 物件通常將對其他執行個體的參考儲存在成員變數中。 將類別序列化後，序列化引擎會追蹤已序列化的參考物件，確保不會將相同的物件序列化多次。 序列化架構隨附.NET Framework 正確處理可物件圖形和循環參考會自動。 對物件圖形的唯一要求是所有由已序列化物件所參考的物件，必須也標示為 `Serializable` (如需詳細資訊，請參閱[基本序列化](basic-serialization.md))。 若不這麼做，當序列化程式嘗試序列化未標示的物件時，將擲回例外狀況。
 
 將已序列化的類別還原序列化時，會重新建立該類別且自動還原所有資料成員的值。
 

@@ -1,15 +1,15 @@
 ---
-title: HOW TO：排序或篩選文字資料，依任何字或欄位 (LINQ) (Visual Basic)
+title: 作法：排序或篩選文字資料，依任何字或欄位 (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: 46c9149a7cb1809bf94162649de0a35110bbc697
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d6a8d26f28feafecfbddfb8d2b538adc22f1b90
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613569"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592469"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>HOW TO：排序或篩選文字資料，依任何字或欄位 (LINQ) (Visual Basic)
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>作法：排序或篩選文字資料，依任何字或欄位 (LINQ) (Visual Basic)
 下列範例示範如何依行中的任一欄位，來排序多行結構化文字 (例如逗號分隔值)。 此欄位可能會在執行階段以動態方式指定。 假設 scores.csv 中的欄位各代表學生的學號和四個測驗分數。  
   
 ### <a name="to-create-a-file-that-contains-data"></a>建立內含資料的檔案  
@@ -72,7 +72,7 @@ End Class
  此範例也示範如何從函式傳回的查詢變數。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。  
+建立 VB.NET 的主控台應用程式專案，使用`Imports`System.Linq 命名空間陳述式。
   
 ## <a name="see-also"></a>另請參閱
 

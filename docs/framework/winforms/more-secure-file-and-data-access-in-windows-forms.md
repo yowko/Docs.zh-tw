@@ -13,15 +13,15 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 557c3296310a7eb3922a6c18b7b3de19ffac953c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c161cc27bd45f8f29e4d48c572d26d3c153b8f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802085"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592675"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Form 中更安全的檔案和資料存取
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 使用權限協助保護資源與資料。 您的應用程式可以讀取或寫入資料的位置取決於應用程式授與權限。 當您的應用程式在部分信任的環境中執行時，您可能無法存取您的資料，或者您可能要改變您存取資料的方式。  
+.NET Framework 會使用的權限，來協助保護資源和資料。 您的應用程式可以讀取或寫入資料的位置取決於應用程式授與權限。 當您的應用程式在部分信任的環境中執行時，您可能無法存取您的資料，或者您可能要改變您存取資料的方式。  
   
  當您遇到安全性限制時，您有兩個選項：判斷權限 (假設已授與您的應用程式)，或者使用被寫成具有在部分信任環境運作功能的版本。 下列章節將討論如何使用在部分信任環境執行的應用程式所產生的檔案、資料庫以及登錄存取。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "61802085"
 >  根據預設，產生 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署的工具預設這些部署去要求來自執行那些程式之電腦的完全信任。 如果您決定您想要的部分信任中執行的額外的安全性優點，您必須變更此預設值，在 Visual Studio 或其中一個[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]工具 （Mage.exe 或 MageUI.exe）。 如需有關 Windows Forms 安全性，以及如何判斷您的應用程式的適當信任層級的詳細資訊，請參閱[安全性的 Windows Forms Overview](security-in-windows-forms-overview.md)。  
   
 ## <a name="file-access"></a>檔案存取  
- <xref:System.Security.Permissions.FileIOPermission> 類別控制在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的檔案與資料夾存取。 根據預設，安全性系統並未將 <xref:System.Security.Permissions.FileIOPermission> 授與部分安全性環境，例如近端內部網路或者網際網路區域。 然而，如果您修改您應用程式的設計或使用不同方法來存取檔案，需要檔案存取的應用程式依然能夠在這些環境中運作。 根據預設，近端內部網路區域已經被授與權限能夠存取相同網站與相同目錄、連線到網站的原始來源、以及從其安裝目錄讀取。 根據預設，網際網路區域只被授與連回其原始網站的權限。  
+ <xref:System.Security.Permissions.FileIOPermission>類別 .NET Framework 中的控制檔案和資料夾存取。 根據預設，安全性系統並未將 <xref:System.Security.Permissions.FileIOPermission> 授與部分安全性環境，例如近端內部網路或者網際網路區域。 然而，如果您修改您應用程式的設計或使用不同方法來存取檔案，需要檔案存取的應用程式依然能夠在這些環境中運作。 根據預設，近端內部網路區域已經被授與權限能夠存取相同網站與相同目錄、連線到網站的原始來源、以及從其安裝目錄讀取。 根據預設，網際網路區域只被授與連回其原始網站的權限。  
   
 ### <a name="user-specified-files"></a>使用者指定的檔案  
  沒有檔案存取權限的處理方法之一是使用 <xref:System.Windows.Forms.OpenFileDialog> 或 <xref:System.Windows.Forms.SaveFileDialog> 類別來提示使用者提供特定的檔案資訊。 這種使用者互動有助於提供在某種程度上保證應用程式無法惡意載入私人檔案或覆寫重要檔案。 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 與 <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> 方法，藉著開啟使用者指定的檔案資料流來提供讀取與寫入的檔案存取。 本方法也藉由模糊檔案路徑來協助保護使用者的檔案。  
@@ -47,7 +47,7 @@ ms.locfileid: "61802085"
 > [!NOTE]
 >  特定的權限在方法 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 真的被呼叫之前不會被要求。  
   
- 顯示檔案對話方塊的權限不會授與您的應用程式對 <xref:System.Windows.Forms.FileDialog>、<xref:System.Windows.Forms.OpenFileDialog> 與 <xref:System.Windows.Forms.SaveFileDialog> 類別所有成員的完整存取權。 要了解呼叫每一種方法所需要的確切權限，請參閱 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 類別程式庫文件中該方法的參考主題。  
+ 顯示檔案對話方塊的權限不會授與您的應用程式對 <xref:System.Windows.Forms.FileDialog>、<xref:System.Windows.Forms.OpenFileDialog> 與 <xref:System.Windows.Forms.SaveFileDialog> 類別所有成員的完整存取權。 如呼叫每個方法所需的確切權限，請參閱.NET Framework 類別庫文件中該方法的參考主題。  
   
  下列程式碼範例使用 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 方法，來將使用者指定的檔案開啟至 <xref:System.Windows.Forms.RichTextBox> 控制項。 這個範例需要 <xref:System.Security.Permissions.FileDialogPermission> 以及相關的列舉值 <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> 。 此範例示範如何處理 <xref:System.Security.SecurityException> 來判斷是否應該停用儲存功能。 這個範例需要您的 <xref:System.Windows.Forms.Form> 有 <xref:System.Windows.Forms.Button> 控制項命名為 `ButtonOpen`，和 <xref:System.Windows.Forms.RichTextBox> 控制項命名為 `RtfBoxMain`。  
   

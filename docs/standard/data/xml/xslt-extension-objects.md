@@ -5,21 +5,21 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b10ab992089e2e9280162c4cd2273bc1d9dc35e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2efe31ce8ece241bdfeb95687c5496c7ba0fd626
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320414"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615293"
 ---
 # <a name="xslt-extension-objects"></a>XSLT 擴充物件
 擴充物件可用來擴充樣式表的功能。 <xref:System.Xml.Xsl.XsltArgumentList> 類別會維護擴充物件。  
   
  以下是使用擴充物件而不使用內嵌指令碼的優點：  
   
--   提供較佳的類別封裝和重複使用。  
+- 提供較佳的類別封裝和重複使用。  
   
--   允許樣式表更簡潔且更易於維護。  
+- 允許樣式表更簡潔且更易於維護。  
   
  使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法，將 XSLT 擴充物件加入至 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 物件。 限定名稱和命名空間 URI 於當時與擴充物件產生關聯。  
   

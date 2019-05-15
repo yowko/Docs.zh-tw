@@ -6,15 +6,15 @@ helpviewer_keywords:
 - user interface
 - user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-ms.openlocfilehash: aa3f3d8adc34d8c51cd2cfa6b087d01e9af1ad82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00e359e7c2440b6d88f2c42fd0267fc1f12b7bb7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801175"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583432"
 ---
 # <a name="windows-forms"></a>Windows Forms
-由於表單是應用程式的基礎單位，因此在表單的功能和設計方面需要多加考量。 表單基本上就像是一個空白面板，身為開發人員的您可使用控制項建立使用者介面，並使用程式碼管理資料，來增強表單。 為此，Visual Studio 為您提供的整合式的開發環境 (IDE)，以協助撰寫程式碼，以及豐富的控制項集合以寫入[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。 您可以利用程式碼來補充這些控制項的功能，進而輕鬆快速地開發所需的方案。  
+由於表單是應用程式的基礎單位，因此在表單的功能和設計方面需要多加考量。 表單基本上就像是一個空白面板，身為開發人員的您可使用控制項建立使用者介面，並使用程式碼管理資料，來增強表單。 為此，Visual Studio 為您提供的整合式的開發環境 (IDE)，以協助撰寫程式碼，以及設定.NET framework 撰寫的豐富控制項。 您可以利用程式碼來補充這些控制項的功能，進而輕鬆快速地開發所需的方案。  
   
 ## <a name="in-this-section"></a>本節內容  
  [Windows Forms 使用者入門](getting-started-with-windows-forms.md)  

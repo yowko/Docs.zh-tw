@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0533265cc96ebf5601579f7fb25b8cbafae73e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 920787c00a12a56de2766ec9ea104241a5722852
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305191"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593658"
 ---
 # <a name="assembly-versioning"></a>組件版本控制
 使用 Common Language Runtime 之組件的所有版本控制都是在組件層級進行的。 組件的特定版本和相依組件的版本是記錄在組件的資訊清單中。 Runtime 的預設版本原則為，除非被組態檔 (應用程式組態檔、發行者原則檔和電腦的系統管理員組態檔) 中的明確版本原則強制取代，否則應用程式只能搭配用來建置和測試它們的版本執行。  
@@ -42,9 +42,9 @@ ms.locfileid: "59305191"
 ## <a name="version-information"></a>版本資訊  
  每一組件有兩種表示版本資訊的不同方式：  
   
--   組件的版本號碼以及組件名稱和文化特性資訊，都是組件識別的一部分。 這個號碼是執行階段用來強制執行版本原則的，也是在執行階段時的型別解析過程中非常重要的一部分。  
+- 組件的版本號碼以及組件名稱和文化特性資訊，都是組件識別的一部分。 這個號碼是執行階段用來強制執行版本原則的，也是在執行階段時的型別解析過程中非常重要的一部分。  
   
--   資訊版本，為表示其他版本資訊的字串，它隨附於組件僅做為資訊用途。  
+- 資訊版本，為表示其他版本資訊的字串，它隨附於組件僅做為資訊用途。  
   
 ### <a name="assembly-version-number"></a>組件版本號碼  
  每一組件都有一個版本號碼做為其識別的一部分。 因此，兩個版本號碼不同的組件會被執行階段視為完全不同的組件。 這個版本號碼實際上會以下列格式表示為四個部分的字串：  

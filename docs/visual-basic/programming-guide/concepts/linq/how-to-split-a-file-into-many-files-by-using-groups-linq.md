@@ -2,14 +2,14 @@
 title: HOW TO：使用群組 (LINQ) (Visual Basic)，將檔案分割成許多檔案
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 578b4921ac8ae3ea0fe8c871996e1a5dce3fbf39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c3d0d4d8c45ba2d7016636f0272ace0fdc6ffa3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614466"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592475"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>HOW TO：使用群組 (LINQ) (Visual Basic)，將檔案分割成許多檔案
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>作法：使用群組 (LINQ) (Visual Basic)，將檔案分割成許多檔案
 此範例示範如何合併兩個檔案的內容，然後建立一組以新方法組織資料的新檔案。  
   
 ### <a name="to-create-the-data-files"></a>建立資料檔  
@@ -116,7 +116,7 @@ End Class
  此程式會在與資料檔相同的資料夾中，寫入每個群組的個別檔案。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。  
+建立 VB.NET 的主控台應用程式專案，使用`Imports`System.Linq 命名空間陳述式。
   
 ## <a name="see-also"></a>另請參閱
 

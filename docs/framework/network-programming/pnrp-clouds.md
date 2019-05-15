@@ -2,12 +2,12 @@
 title: PNRP 雲端
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: 943cad880885a624c0ed0798738665c8bcd7036f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6e7ec5d88e1053f33b86816fec739aae38cac18c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110041"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623035"
 ---
 # <a name="pnrp-clouds"></a>PNRP 雲端
 PNRP「雲端」代表一組節點，可以透過網路彼此進行通訊。 「雲端」這個詞相當於「對等網格」和「點對點圖形」。  
@@ -18,9 +18,9 @@ PNRP「雲端」代表一組節點，可以透過網路彼此進行通訊。 「
   
  PNRP 會使用三個雲端「範圍」，而範圍是一組可找到彼此的電腦：  
   
--   全域雲端對應至全域 IPv6 位址範圍和全域位址，並代表整個 IPv6 網際網路上的所有電腦。 單一全域雲端只有一個。  
+- 全域雲端對應至全域 IPv6 位址範圍和全域位址，並代表整個 IPv6 網際網路上的所有電腦。 單一全域雲端只有一個。  
   
--   連結-本機雲端對應至連結-本機 IPv6 位址範圍與連結-本機位址。 連結-本機雲端用於特定連結，而且通常與本機連接的子網路相同。 可以有多個連結-本機雲端。  
+- 連結-本機雲端對應至連結-本機 IPv6 位址範圍與連結-本機位址。 連結-本機雲端用於特定連結，而且通常與本機連接的子網路相同。 可以有多個連結-本機雲端。  
   
  第三個雲端是網站特定雲端，並對應至網站 IPv6 位址範圍和網站-本機位址。 此雲端已過時，不過 PNRP 中仍然支援此雲端。  
   

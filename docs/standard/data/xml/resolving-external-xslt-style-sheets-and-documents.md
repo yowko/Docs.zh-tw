@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91d4e5bf3846dc2859c519227c0dee2c9d36343c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31143e17eec097cc67dff0cfffeb628f8a0b2127
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609456"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590083"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>解析外部的 XSLT 樣式表和文件
 在轉換期間，您可能需要進行數次外部資源解析。  
@@ -20,11 +20,11 @@ ms.locfileid: "54609456"
   
  在轉換期間，您可能需要進行數次外部資源解析：  
   
--   在 <xref:System.Xml.Xsl.XslTransform.Load%2A> 期間用來尋找外部樣式表。  
+- 在 <xref:System.Xml.Xsl.XslTransform.Load%2A> 期間用來尋找外部樣式表。  
   
--   在 <xref:System.Xml.Xsl.XslTransform.Load%2A> 期間，用來解析樣式表中找到的任何 `<xsl:include>` 或 `<xsl:import>` 項目。  
+- 在 <xref:System.Xml.Xsl.XslTransform.Load%2A> 期間，用來解析樣式表中找到的任何 `<xsl:include>` 或 `<xsl:import>` 項目。  
   
--   在 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 期間，用來解析任何 `document()` 函式。  
+- 在 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 期間，用來解析任何 `document()` 函式。  
   
 ## <a name="using-the-xmlresolver-class"></a>使用 XmlResolver 類別  
  如果存取網路資源需要驗證，請使用具有可傳遞 <xref:System.Xml.Xsl.XslTransform.Load%2A> 物件之 <xref:System.Xml.XmlResolver> 參數的 <xref:System.Xml.XmlResolver> 方法，該物件具有必要的認證屬性集。  

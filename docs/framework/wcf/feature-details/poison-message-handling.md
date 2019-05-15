@@ -2,12 +2,12 @@
 title: 有害訊息處理
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 1a7ab0afa982508f07256f090a13692174b5fb0b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b1f01714d2b4587659682661c05b341d0f50254e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638416"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592859"
 ---
 # <a name="poison-message-handling"></a>有害訊息處理
 A*有害訊息*是超過嘗試傳遞至應用程式的數目上限的訊息。 這種情形可能會在佇列架構的應用程式因為錯誤而無法處理訊息時發生。 為了符合可靠性的需求，佇列的應用程式會在交易中接收訊息。 若中止了接收佇列訊息的異動，則會讓訊息留在佇列中，而訊息將會在新的異動中重試。 如果造成異動中止的問題未予以更正，則接收的應用程式可能會卡在接收及中止相同訊息的迴圈中，直到超過傳遞嘗試次數的上限為止，因而形成有害訊息。  
@@ -52,7 +52,7 @@ A*有害訊息*是超過嘗試傳遞至應用程式的數目上限的訊息。 �
   
  WCF 提供兩個標準的佇列繫結：  
   
-- <xref:System.ServiceModel.NetMsmqBinding>. A[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]適用於執行佇列為基礎的通訊，與其他 WCF 端點繫結。  
+- <xref:System.ServiceModel.NetMsmqBinding>. 適用於執行與其他 WCF 端點的佇列通訊的.NET Framework 繫結。  
   
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. 此繫結適合用來與現有的訊息佇列應用程式進行通訊。  
   

@@ -2,17 +2,17 @@
 title: SQL Server 資料類型對應
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: f90f44666fa5843ccf9bd1cd9ccb5c20b812f494
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04a3bbd9ba18b30a24b425888cce78597deb068a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664086"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583731"
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server 資料類型對應
 SQL Server 和 .NET Framework 是以不同的型別系統為基礎。 例如，.NET Framework <xref:System.Decimal> 結構的最大小數點位數為 28，而 SQL Server decimal 和 numeric 資料型別的最大小數點位數為 38。 為了在讀取和寫入資料時維持資料完整性，<xref:System.Data.SqlClient.SqlDataReader> 會公開 (Expose) SQL Server 特有的具型別存取子方法 (可傳回 <xref:System.Data.SqlTypes> 的物件) 以及存取子方法 (可傳回 .NET Framework 型別)。 SQL Server 型別和 .NET Framework 型別也會由 <xref:System.Data.DbType> 和 <xref:System.Data.SqlDbType> 類別 (Class) 中的列舉型別 (Enumeration) 表示，而且您可以在指定 <xref:System.Data.SqlClient.SqlParameter> 資料型別時使用這些類別。  
   
- 下表將顯示推斷的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別、<xref:System.Data.DbType> 和 <xref:System.Data.SqlDbType> 列舉型別，以及 <xref:System.Data.SqlClient.SqlDataReader> 的存取子方法。  
+ 下表顯示推斷的.NET Framework 型別<xref:System.Data.DbType>並<xref:System.Data.SqlDbType>列舉型別，以及存取子方法<xref:System.Data.SqlClient.SqlDataReader>。  
   
 |SQL Server Database Engine 型別|.NET Framework 類型|SqlDbType 列舉型別|SqlDataReader SqlTypes 具型別的存取子|DbType 列舉型別|SqlDataReader DbType 具型別的存取子|  
 |-------------------------------------|-------------------------|---------------------------|-------------------------------------------|------------------------|-----------------------------------------|  

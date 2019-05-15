@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 9c8ccf2404c4d8fd6e71f7aa41445c3d26ef5da7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 813ee167fdc09c7c7ea12f5f09602230e711d362
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601075"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593393"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic 中的泛型類型 (Visual Basic)
 *「泛型類型」* (generic type) 是單一程式設計項目，適用於為各種資料類型執行相同的功能。 當您定義泛型類別或程序時，不需要為想要執行該功能的每種資料類型定義不同的版本。  
@@ -76,7 +76,7 @@ ms.locfileid: "64601075"
  如需更完整的範例，請參閱[如何：定義可以在不同的資料類型上提供完全相同的功能類別](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)。  
   
 ## <a name="eligible-programming-elements"></a>合格的程式設計項目  
- 您可以定義和使用泛型類別、結構、介面、程序和委派。 請注意， [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 定義數個泛型類別、結構和介面來代表常用的泛型項目。 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間提供字典、清單、佇列和堆疊。 定義您自己的泛型項目之前，請查看它是否已在 <xref:System.Collections.Generic?displayProperty=nameWithType>中。  
+ 您可以定義和使用泛型類別、結構、介面、程序和委派。 請注意，.NET Framework 會定義數個泛型類別、 結構和介面來代表常用的泛型項目。 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間提供字典、清單、佇列和堆疊。 定義您自己的泛型項目之前，請查看它是否已在 <xref:System.Collections.Generic?displayProperty=nameWithType>中。  
   
  程序不是類型，但您可以定義和使用泛型程序。 請參閱 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)。  
   

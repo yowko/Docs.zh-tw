@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea62f7dc5c47f52f94567857427e7add929b8b1c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: c8f78e926835e86fdc20da5e4e1bc66c4b6ab1a2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336573"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625442"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>作法：設定 .NET Framework 架構 COM 元件進行免註冊啟用
 .NET Framework 型元件的免註冊啟用，只比 COM 元件的免註冊啟用略為複雜。 安裝程式需要兩個資訊清單：  
   
--   COM 應用程式必須有 Win32 樣式應用程式資訊清單，才能識別 Managed 元件。  
+- COM 應用程式必須有 Win32 樣式應用程式資訊清單，才能識別 Managed 元件。  
   
--   .NET Framework 元件必須具有執行階段所需啟用資訊的元件資訊清單。  
+- .NET Framework 元件必須具有執行階段所需啟用資訊的元件資訊清單。  
   
  本主題描述如何建立應用程式資訊清單與應用程式的關聯、建立元件資訊清單與元件的關聯，以及將元件資訊清單內嵌在組件中。  
   

@@ -4,12 +4,12 @@ description: 了解如何連接到 .NET 中的原生元件。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 29aacc9210b4103f379b7776c36fc3c29b9e6dec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b01ea9c17db6da32755309d9c1c2359cecaa1155
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973554"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062707"
 ---
 # <a name="native-interoperability"></a>原生互通性
 
@@ -29,5 +29,5 @@ ms.locfileid: "61973554"
 ## <a name="see-also"></a>另請參閱
 
 - [平台叫用 (P/Invoke)](pinvoke.md)
-- [類型封送處理](type-marshalling.md)
+- [型別封送處理](type-marshaling.md)
 - [原生互通性最佳做法](best-practices.md)

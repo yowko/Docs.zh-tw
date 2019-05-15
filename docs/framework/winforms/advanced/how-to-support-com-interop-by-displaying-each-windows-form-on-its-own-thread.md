@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在自己的執行緒上顯示每個 Windows Form 以支援 COM Interop
+title: 作法：在自己的執行緒上顯示每個 Windows Form 以支援 COM Interop
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
-ms.openlocfilehash: 56eaf438455754c69b2df3ff798cf6d2ac6f7549
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f158cf71f69ed3221dcaf7d3abbe495cf818638b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636950"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593198"
 ---
 # <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>HOW TO：在自己的執行緒上顯示每個 Windows Form 以支援 COM Interop
-您可以藉由在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 訊息迴圈上顯示表單來解決 COM 互通性問題，這可使用 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法來建立。  
+您可以解決 COM 互通性問題，您可以建立使用.NET Framework 訊息迴圈上顯示表單<xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>方法。  
   
  若要讓 Windows Form 在 COM 用戶端應用程式正確運作，您必須在 Windows Form 訊息迴圈上執行表單。 若要執行此工作，請使用下列的其中一個方法：  
   
@@ -33,7 +33,7 @@ ms.locfileid: "64636950"
 ## <a name="example"></a>範例  
  下列程式碼範例示範如何在個別的執行緒上顯示表單，並呼叫 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法在該執行緒上啟動 Windows Form 訊息幫浦。 若要使用此方法，您必須使用 <xref:System.Windows.Forms.Control.Invoke%2A> 方法封送處理任何呼叫至來自 Unmanaged 應用程式的表單。  
   
- 此方法需要表單的每個執行個體使用它自己的訊息迴圈在自己的執行緒上執行。 在每個執行緒中，您不能執行一個以上的訊息迴圈。 因此，您無法變更用戶端應用程式的訊息迴圈。 不過，您可以修改 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 元件來啟動會使用自己的訊息迴圈之新執行緒。  
+ 此方法需要表單的每個執行個體使用它自己的訊息迴圈在自己的執行緒上執行。 在每個執行緒中，您不能執行一個以上的訊息迴圈。 因此，您無法變更用戶端應用程式的訊息迴圈。 不過，您可以修改.NET Framework 元件，以啟動新的執行緒，會使用它自己的訊息迴圈。  
   
  [!code-vb[System.Windows.Forms.ComInterop#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/COMForm.vb#1)]  
   
