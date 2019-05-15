@@ -23,7 +23,7 @@ ms.locfileid: "61774643"
   
 1. 在您的資料庫中建立自訂函式。  
   
-     如需 SQL Server 中建立自訂函式的詳細資訊，請參閱[CREATE FUNCTION & Amp;#40;transact-SQL&AMP;#41;](https://go.microsoft.com/fwlink/?LinkID=139871)。  
+     如需 SQL Server 中建立自訂函式的詳細資訊，請參閱[CREATE FUNCTION (transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=139871)。  
   
 2. 在 .edmx 檔案的存放結構定義語言 (SSDL) 中宣告函式。 函式的名稱必須和資料庫中宣告的函式名稱一樣。  
   

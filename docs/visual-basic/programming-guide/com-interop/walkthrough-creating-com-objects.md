@@ -8,15 +8,15 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 97e917d568b31860979e54598350d1ae7a6fdb25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 465f1d8141f51de179dbb4e963a8fcac8c09fa33
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022307"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592701"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>逐步解說：使用 Visual Basic 建立 COM 物件
-建立新的應用程式或元件時，最好是建立.NET Framework 組件。 不過，Visual Basic 也容易公開給 COM 的.NET Framework 元件 這可讓您針對需要 COM 元件的舊版應用程式套件中提供新元件。 本逐步解說示範如何使用 Visual Basic 來公開 （expose）[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]為 COM 物件，使用和不使用 COM 類別範本的物件。  
+建立新的應用程式或元件時，最好是建立.NET Framework 組件。 不過，Visual Basic 也容易公開給 COM 的.NET Framework 元件 這可讓您針對需要 COM 元件的舊版應用程式套件中提供新元件。 本逐步解說示範如何使用 Visual Basic 來公開成 COM 物件，使用和不使用 COM 類別範本的.NET Framework 物件。  
   
  COM 物件公開 （expose） 的最簡單方式是使用 COM 類別範本。 使用 COM 類別範本會建立新的類別，並設定專案以產生類別和互通性層級為 COM 物件，並向作業系統註冊。  
   
