@@ -2,15 +2,15 @@
 title: 安全性考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 14d07fcb1d97a4e71747d6517f63fbc4108493da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5a985cfcd4834efd7bbab04d30c86787dfb90955
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641176"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583472"
 ---
 # <a name="security-considerations-entity-framework"></a>安全性考量 (Entity Framework)
-本主題將描述與開發、部署和執行 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式有關的安全性考量。 您也應該遵循建立安全 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 應用程式的建議事項。 如需詳細資訊，請參閱 <<c0> [ 安全性概觀](../../../../../docs/framework/data/adonet/security-overview.md)。  
+本主題將描述與開發、部署和執行 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式有關的安全性考量。 您也應該遵循建立安全的.NET Framework 應用程式的建議。 如需詳細資訊，請參閱 <<c0> [ 安全性概觀](../../../../../docs/framework/data/adonet/security-overview.md)。  
   
 ## <a name="general-security-considerations"></a>一般安全性考量  
  下列安全性考量適用於使用 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的所有應用程式。  
@@ -63,7 +63,7 @@ ms.locfileid: "64641176"
  資料來源管理員應該只授與必要的權限給使用者。 即使 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 不支援修改資料的 DML 陳述式 (Statement) (例如 INSERT、UPDATE 或 DELETE)，使用者仍然可以存取資料來源的連接。 不過，惡意使用者可能會使用這個連接，以資料來源的原生語言執行 DML 陳述式。  
   
 #### <a name="run-applications-with-the-minimum-permissions"></a>使用最低權限來執行應用程式。  
- 當您允許 Managed 應用程式以完全信任的權限執行時，[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 就不會限制應用程式對電腦的存取。 這樣做可能會讓應用程式存在安全性弱點，進而危害整個系統。 若要在 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 中使用程式碼存取安全性和其他安全性機制，您應該使用部分信任的權限以及讓應用程式正常運作所需的最低權限集合來執行應用程式。 下列程式碼存取權限是 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式所需的最低權限：  
+ 當您允許受管理的應用程式，以執行完全信任權限時，.NET Framework 不會限制您的電腦的應用程式的存取。 這樣做可能會讓應用程式存在安全性弱點，進而危害整個系統。 若要使用.NET Framework 中的程式碼存取安全性和其他安全性機制，您應該使用部分信任權限與權限，讓函式應用程式所需的最小集合，執行應用程式。 下列程式碼存取權限是 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式所需的最低權限：  
   
 - <xref:System.Security.Permissions.FileIOPermission>：<xref:System.Security.Permissions.FileIOPermissionAccess.Write> (用以開啟指定的中繼資料檔案) 或 <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> (用以搜尋中繼資料檔案的目錄)。  
   
