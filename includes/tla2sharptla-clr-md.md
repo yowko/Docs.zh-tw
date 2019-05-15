@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: ea01041724ba0e871f81a8a07b8bbeb5fd7b6448
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c64fefee30ad91d306ff4fea23deb9663113fcd6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699247"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672604"
 ---
-<span data-ttu-id="b2a5b-101">CLR</span><span class="sxs-lookup"><span data-stu-id="b2a5b-101">CLR</span></span>
+<span data-ttu-id="a0a91-101">CLR</span><span class="sxs-lookup"><span data-stu-id="a0a91-101">CLR</span></span>

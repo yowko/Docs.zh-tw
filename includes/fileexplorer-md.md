@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 700869dc5e37deb64f3dc9bf4596ad870260953e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9563858652e43d33e1b7008f79ae6d75d91fe5f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760036"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637850"
 ---
-<span data-ttu-id="f2ef0-101">檔案總管</span><span class="sxs-lookup"><span data-stu-id="f2ef0-101">File Explorer</span></span>
+<span data-ttu-id="71489-101">檔案總管</span><span class="sxs-lookup"><span data-stu-id="71489-101">File Explorer</span></span>
