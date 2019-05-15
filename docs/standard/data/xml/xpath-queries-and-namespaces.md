@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f35725f5e1a08f2fcb1d6bc87765f50308c963f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0704e78a0e7fbf3987b3bc75bb46e135f00110e9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566316"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615342"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath 查詢及命名空間
 XPath 查詢可辨識 XML文件中的命名空間，並可使用命名空間前置詞來限定項目及屬性名稱。 使用命名空間前置詞限定項目及屬性名稱，會將 XPath 查詢傳回的節點限制為那些只屬於特定命名空間的節點。  
@@ -25,17 +25,17 @@ XPath 查詢可辨識 XML文件中的命名空間，並可使用命名空間前�
   
  可以透過下列每一種方式將 <xref:System.Xml.XmlNamespaceManager> 物件用於查詢中。  
   
--   可藉由使用 <xref:System.Xml.XmlNamespaceManager> 物件的 <xref:System.Xml.XPath.XPathExpression> 方法，使 <xref:System.Xml.XPath.XPathExpression.SetContext%2A> 物件與現有 <xref:System.Xml.XPath.XPathExpression> 物件產生關聯。 您也可使用靜態 <xref:System.Xml.XPath.XPathExpression> 方法編譯新的 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 物件；該方法會採用表示 XPath 運算式的字串及 <xref:System.Xml.XmlNamespaceManager> 物件做為參數，並傳回新的 <xref:System.Xml.XPath.XPathExpression> 物件。  
+- 可藉由使用 <xref:System.Xml.XmlNamespaceManager> 物件的 <xref:System.Xml.XPath.XPathExpression> 方法，使 <xref:System.Xml.XPath.XPathExpression.SetContext%2A> 物件與現有 <xref:System.Xml.XPath.XPathExpression> 物件產生關聯。 您也可使用靜態 <xref:System.Xml.XPath.XPathExpression> 方法編譯新的 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 物件；該方法會採用表示 XPath 運算式的字串及 <xref:System.Xml.XmlNamespaceManager> 物件做為參數，並傳回新的 <xref:System.Xml.XPath.XPathExpression> 物件。  
   
--   <xref:System.Xml.XmlNamespaceManager> 物件本身會做為參數，連同表示 XPath 運算式的字串一起傳遞至接受的 <xref:System.Xml.XPath.XPathNavigator> 類別方法。  
+- <xref:System.Xml.XmlNamespaceManager> 物件本身會做為參數，連同表示 XPath 運算式的字串一起傳遞至接受的 <xref:System.Xml.XPath.XPathNavigator> 類別方法。  
   
  下列是 <xref:System.Xml.XPath.XPathNavigator> 類別的方法，其接受衍生自 <xref:System.Xml.IXmlNamespaceResolver> 介面的物件做為參數。  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
 ### <a name="the-default-namespace"></a>預設命名空間  
  在下面的 XML 文件中，會使用具有空前置詞的預設命名空間來宣告 `http://www.contoso.com/books` 命名空間。  

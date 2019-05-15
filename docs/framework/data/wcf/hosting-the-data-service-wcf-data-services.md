@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: bca11c0c1828513077985aa11553ec5c0ad52a27
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 4886103f7f0246eaacd12c3f12d50a055e650959
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910795"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582664"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>裝載資料服務 (WCF 資料服務)
 使用 WCF Data Services，您可以建立資料公開為服務[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 這個資料服務會定義為繼承自 <xref:System.Data.Services.DataService%601> 的類別。 這個類別會提供處理要求訊息、 執行更新，針對資料來源，以及產生所需的 OData 回應訊息所需的功能。 不過，無法繫結至資料服務，而且網路通訊端上接聽內送的 HTTP 要求。 對於這個必要的功能而言，資料服務會依賴裝載的元件。
@@ -58,7 +58,7 @@ ms.locfileid: "64910795"
  因為資料服務的行為就像 WCF 服務一樣，所以資料服務會與 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 整合並遵循 WCF Web 程式設計模型。 如需詳細資訊，請參閱 < [WCF 服務和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)並[WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)。
 
 ## <a name="self-hosted-wcf-services"></a>自我裝載的 WCF 服務
- 它會合併 WCF 實作，因為 WCF Data Services 支援自我裝載的資料服務當做 WCF 服務。 服務可以在任何 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 應用程式中自我裝載，例如在主控台應用程式中。 繼承自 <xref:System.Data.Services.DataServiceHost> 的 <xref:System.ServiceModel.Web.WebServiceHost> 類別是用來具現化特定位址上的資料服務。
+ 它會合併 WCF 實作，因為 WCF Data Services 支援自我裝載的資料服務當做 WCF 服務。 服務可以是任何.NET Framework 應用程式，例如主控台應用程式中自我裝載。 繼承自 <xref:System.Data.Services.DataServiceHost> 的 <xref:System.ServiceModel.Web.WebServiceHost> 類別是用來具現化特定位址上的資料服務。
 
  自我裝載可用於開發及測試，因為它可更輕鬆地部署服務以及針對服務進行疑難排解。 但是，這種裝載不會提供 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 或 Internet Information Services (IIS) 所提供的進階裝載和管理功能。 如需詳細資訊，請參閱 <<c0> [ 受管理的應用程式中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)。
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: fc8e55d8f3824ca11c575479863491d7f949efa3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 02f3224a8069fd091833bb09744389592c769818
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665851"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592508"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Windows Form 和 Unmanaged 應用程式概觀
 伴隨著某些注意事項，Windows Form 應用程式和控制項能與 Unmanaged 應用程式交互操作。 下列各節描述 Windows Form 應用程式和控制項支援及不支援的案例和組態。  
@@ -47,7 +47,7 @@ ms.locfileid: "64665851"
  應用程式的訊息迴圈是一種內部程式迴圈，它從執行緒訊息佇列擷取訊息並轉譯，然後傳送到應用程式以進行處理。 Windows Form 訊息迴圈不具有和舊版應用程式 (例如 Visual Basic 6.0 應用程式和 MFC 應用程式) 提供的訊息迴圈相同的架構。 張貼至訊息迴圈的視窗訊息可能以和 Windows Form 所預期的不同方式處理。 因此，可能會發生未預期的行為。 某些按鍵組合可能無法運作，或是某些滑鼠活動可能無法運作，或者可能不會如預期般引發某些事件。  
   
 ## <a name="resolving-interoperability-issues"></a>解決互通性問題  
- 藉由顯示使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 方法建立之 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 訊息迴圈上的表單，您可解決這些問題。  
+ 您可以建立使用.NET Framework 訊息迴圈上顯示表單來解決這些問題<xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>方法。  
   
  若要讓 Windows Form 在 COM 用戶端應用程式正確運作，您必須在 Windows Form 訊息迴圈上執行。 若要執行此工作，請使用下列的其中一個方法：  
   

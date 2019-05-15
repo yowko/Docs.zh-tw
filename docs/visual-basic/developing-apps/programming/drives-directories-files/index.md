@@ -9,12 +9,12 @@ helpviewer_keywords:
 - files [Visual Basic], accessing
 - directories [Visual Studio], processing
 ms.assetid: f1db14c8-a4fd-4d0b-8323-c7cb29d688c2
-ms.openlocfilehash: 0c9c1c787138595f725316a580acda9c5d4d43a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c0e412f9b9ccb8d425aae1e3985e7492e452fd9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61676075"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593398"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>處理磁碟機、目錄和檔案 (Visual Basic)
 您可以使用 Visual Basic，利用 `My.Computer.FileSystem` 物件來處理磁碟機、資料夾和檔案，這個物件提供更佳效能，而且比 `FileOpen` 和 `Write` 函式等傳統方法更容易使用 (不過仍然可供使用)。 下列各節詳細討論這些方法。  
@@ -27,7 +27,7 @@ ms.locfileid: "61676075"
  提供 .NET Framework 中檔案 I/O 概念的概觀，包括資料流、隔離儲存區、檔案事件、檔案屬性和檔案存取。  
   
  [逐步解說：使用 .NET Framework 方法管理檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- 示範如何使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 來管理檔案和資料夾。  
+ 示範如何使用 .NET Framework 來處理檔案與資料夾。  
   
  [逐步解說：在 Visual Basic 中管理檔案和目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  示範如何使用 `My.Computer.FileSystem` 物件來管理檔案和資料夾。  

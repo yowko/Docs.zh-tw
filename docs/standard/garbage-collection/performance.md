@@ -8,25 +8,25 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: da29bd6bc53b59f1f20e2272a8293b49e230bff0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59310560"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622874"
 ---
 # <a name="garbage-collection-and-performance"></a>記憶體回收和效能
 <a name="top"></a> 本主題描述記憶體回收和記憶體使用量的相關問題。 它解決關於 Managed 堆積的問題，並說明如何將記憶體回收對應用程式的影響降至最低。 每個問題已連結至程序，可讓您用來調查問題。  
   
  此主題包括下列章節：  
   
--   [效能分析工具](#performance_analysis_tools)  
+- [效能分析工具](#performance_analysis_tools)  
   
--   [效能問題疑難排解](#troubleshooting_performance_issues)  
+- [針對效能問題進行疑難排解](#troubleshooting_performance_issues)  
   
--   [疑難排解方針](#troubleshooting_guidelines)  
+- [疑難排解方針](#troubleshooting_guidelines)  
   
--   [效能檢查程序](#performance_check_procedures)  
+- [效能檢查程序](#performance_check_procedures)  
   
 <a name="performance_analysis_tools"></a>   
 ## <a name="performance-analysis-tools"></a>效能分析工具  
@@ -46,11 +46,11 @@ ms.locfileid: "59310560"
 ### <a name="garbage-collection-etw-events"></a>記憶體回收 ETW 事件  
  Windows 事件追蹤 (ETW) 是補充 .NET Framework 所提供之程式碼剖析和偵錯支援的追蹤系統。 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，[記憶體回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)會擷取有用的資訊，以便從統計的觀點來分析 Managed 堆積。 例如，引發 `GCStart_V1` 事件時，會發生記憶體回收，這會提供下列資訊：  
   
--   所收集物件的層代。  
+- 所收集物件的層代。  
   
--   觸發記憶體回收的原因。  
+- 觸發記憶體回收的原因。  
   
--   記憶體回收 (並行或不同時) 的類型。  
+- 記憶體回收 (並行或不同時) 的類型。  
   
  ETW 事件記錄很有效率，且不會遮蓋與記憶體回收相關聯的任何效能問題。 處理程序可以提供自己的事件來搭配 ETW 事件。 記錄時，應用程式的事件和記憶體回收事件都可以相互關聯，以判斷堆積問題發生的方式和時間。 例如，伺服器應用程式可以在用戶端要求開始和結束時提供事件。  
   
@@ -69,41 +69,41 @@ ms.locfileid: "59310560"
 ## <a name="troubleshooting-performance-issues"></a>效能問題疑難排解  
  第一個步驟是[判斷問題是否真的是記憶體回收](#IsGC)。 如果您判斷是，則請從下列清單選取以疑難排解問題。  
   
--   [擲回記憶體不足例外狀況](#Issue_OOM)  
+- [擲回記憶體不足例外狀況](#Issue_OOM)  
   
--   [處理序使用太多記憶體](#Issue_TooMuchMemory)  
+- [處理序使用太多記憶體](#Issue_TooMuchMemory)  
   
--   [記憶體回收行程回收物件速度不夠快](#Issue_NotFastEnough)  
+- [記憶體回收行程回收物件速度不夠快](#Issue_NotFastEnough)  
   
--   [受控堆積太過分散](#Issue_Fragmentation)  
+- [Managed 堆積太過分散](#Issue_Fragmentation)  
   
--   [記憶體回收暫停太長](#Issue_LongPauses)  
+- [記憶體回收暫停太長](#Issue_LongPauses)  
   
--   [層代 0 太大](#Issue_Gen0)  
+- [層代 0 太大](#Issue_Gen0)  
   
--   [在記憶體回收期間的 CPU 使用量太高](#Issue_HighCPU)  
+- [在記憶體回收期間的 CPU 使用量太高](#Issue_HighCPU)  
   
 <a name="Issue_OOM"></a>   
 ### <a name="issue-an-out-of-memory-exception-is-thrown"></a>問題：擲回記憶體不足例外狀況  
  有兩種合理狀況會擲回 Managed <xref:System.OutOfMemoryException>：  
   
--   虛擬記憶體不足。  
+- 虛擬記憶體不足。  
   
      記憶體回收行程會以預先決定大小的區段，從系統配置記憶體。 如果配置需要額外的區段，但處理序的虛擬記憶體空間中沒有剩下連續的可用區塊，則 Managed 堆積配置將會失敗。  
   
--   沒有足夠的實體記憶體可配置。  
+- 沒有足夠的實體記憶體可配置。  
   
 |效能檢查|  
 |------------------------|  
-|[判斷記憶體不足例外狀況是否已受控。](#OOMIsManaged)<br /><br /> [判斷可以保留多少虛擬記憶體。](#GetVM)<br /><br /> [判斷是否有足夠的實體記憶體。](#Physical)|  
+|[判斷記憶體不足例外狀況是否為 Managed。](#OOMIsManaged)<br /><br /> [判斷可以保留多少虛擬記憶體。](#GetVM)<br /><br /> [判斷是否有足夠的實體記憶體。](#Physical)|  
   
  如果您判斷例外狀況不合法，請連絡 Microsoft 客戶服務及支援，並提供下列資訊：  
   
--   具有受管理的記憶體不足例外狀況的堆疊。  
+- 具有受管理的記憶體不足例外狀況的堆疊。  
   
--   完整記憶體傾印。  
+- 完整記憶體傾印。  
   
--   證明它是不合法的記憶體不足例外狀況的資料，包括顯示虛擬或實體記憶體不是問題的資料。  
+- 證明它是不合法的記憶體不足例外狀況的資料，包括顯示虛擬或實體記憶體不是問題的資料。  
   
 <a name="Issue_TooMuchMemory"></a>   
 ### <a name="issue-the-process-uses-too-much-memory"></a>問題：處理序使用太多記憶體  
@@ -115,7 +115,7 @@ ms.locfileid: "59310560"
   
 |效能檢查|  
 |------------------------|  
-|[判斷可以保留多少虛擬記憶體。](#GetVM)<br /><br /> [判斷受控堆積正在認可的記憶體數量。](#ManagedHeapCommit)<br /><br /> [判斷受控堆積保留的記憶體數量。](#ManagedHeapReserve)<br /><br /> [判斷層代 2 中的大型物件。](#ExamineGen2)<br /><br /> [判斷物件的參考。](#ObjRef)|  
+|[判斷可以保留多少虛擬記憶體。](#GetVM)<br /><br /> [判斷 Managed 堆積正在認可的記憶體數量。](#ManagedHeapCommit)<br /><br /> [判斷 Managed 堆積保留的記憶體數量。](#ManagedHeapReserve)<br /><br /> [判斷層代 2 的大型物件。](#ExamineGen2)<br /><br /> [判斷物件的參考。](#ObjRef)|  
   
 <a name="Issue_NotFastEnough"></a>   
 ### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a>問題：記憶體回收行程回收物件速度不夠快  
@@ -141,17 +141,17 @@ ms.locfileid: "59310560"
   
  如果虛擬記憶體的分散導致記憶體回收行程無法加入區段，原因可能是下列其中一項：  
   
--   經常載入及卸載許多小型組件。  
+- 經常載入及卸載許多小型組件。  
   
--   與 Unmanaged 程式碼交互作用時，保留太多 COM 物件的參考。  
+- 與 Unmanaged 程式碼交互作用時，保留太多 COM 物件的參考。  
   
--   建立大型的暫時性物件，這會造成大型物件堆積頻繁地配置和釋放堆積區段。  
+- 建立大型的暫時性物件，這會造成大型物件堆積頻繁地配置和釋放堆積區段。  
   
      裝載 CLR 時，應用程式可以要求記憶體回收行程保留其區段。 這會減少區段配置的頻率。 這可以藉由使用 [STARTUP_FLAGS 列舉](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)中的 STARTUP_HOARD_GC_VM 旗標來達成。  
   
 |效能檢查|  
 |------------------------|  
-|[判斷受控堆積中的可用空間數量。](#Fragmented)<br /><br /> [判斷被固定的物件數目。](#Pinned)|  
+|[判斷 Managed 堆積中的可用空間數量。](#Fragmented)<br /><br /> [判斷被固定的物件數目。](#Pinned)|  
   
  如果您認為是不合法的分散原因，請連絡 Microsoft 客戶服務及支援中心。  
   
@@ -201,24 +201,24 @@ ms.locfileid: "59310560"
 ### <a name="when-to-measure-the-managed-heap-size"></a>測量 Managed 堆積大小的時機  
  除非您使用程式碼剖析工具，否則您必須建立一致的測量模式，才能有效地診斷效能問題。 建立排程時請考慮下列各點：  
   
--   如果您在層代 2 記憶體回收之後測量，整個 Managed 堆積都將沒有廢棄項目 (無作用物件)。  
+- 如果您在層代 2 記憶體回收之後測量，整個 Managed 堆積都將沒有廢棄項目 (無作用物件)。  
   
--   如果層代 0 記憶體回收之後立即測量，此時尚不會回收層代 1 和 2 中的物件。  
+- 如果層代 0 記憶體回收之後立即測量，此時尚不會回收層代 1 和 2 中的物件。  
   
--   如果在記憶體回收之前立即測量，您會測量到記憶體回收開始之前最多的可能配置。  
+- 如果在記憶體回收之前立即測量，您會測量到記憶體回收開始之前最多的可能配置。  
   
--   在記憶體回收期間測量會有問題，因為記憶體回收行程資料結構不在周遊的有效狀態，而且可能無法提供完整的結果。 這是依設計的結果。  
+- 在記憶體回收期間測量會有問題，因為記憶體回收行程資料結構不在周遊的有效狀態，而且可能無法提供完整的結果。 這是依設計的結果。  
   
--   當您使用工作站記憶體回收與並行記憶體回收時，回收的物件不會壓縮，因此堆積大小可能相同或更大 (分散可能讓它看起來似乎較大)。  
+- 當您使用工作站記憶體回收與並行記憶體回收時，回收的物件不會壓縮，因此堆積大小可能相同或更大 (分散可能讓它看起來似乎較大)。  
   
--   實體記憶體負載過高時，就會延遲層代 2 的並行記憶體回收。  
+- 實體記憶體負載過高時，就會延遲層代 2 的並行記憶體回收。  
   
  下列程序描述如何設定中斷點，讓您可以測量 Managed 堆積。  
   
 <a name="GenBreak"></a>   
 ##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>在記憶體回收結尾處設定中斷點  
   
--   在載入 SOS 偵錯工具擴充功能的 WinDbg 中，輸入下列命令：  
+- 在載入 SOS 偵錯工具擴充功能的 WinDbg 中，輸入下列命令：  
   
      **bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) 'kb';'g'"**  
   
@@ -234,44 +234,44 @@ ms.locfileid: "59310560"
 ## <a name="performance-check-procedures"></a>效能檢查程序  
  本節描述下列程序，以找出效能問題的原因：  
   
--   [判斷問題是否由於記憶體回收所造成。](#IsGC)  
+- [判斷問題是否由於記憶體回收所造成。](#IsGC)  
   
--   [判斷記憶體不足例外狀況是否已受控。](#OOMIsManaged)  
+- [判斷記憶體不足例外狀況是否為 Managed。](#OOMIsManaged)  
   
--   [判斷可以保留多少虛擬記憶體。](#GetVM)  
+- [判斷可以保留多少虛擬記憶體。](#GetVM)  
   
--   [判斷是否有足夠的實體記憶體。](#Physical)  
+- [判斷是否有足夠的實體記憶體。](#Physical)  
   
--   [判斷受控堆積正在認可的記憶體數量。](#ManagedHeapCommit)  
+- [判斷 Managed 堆積正在認可的記憶體數量。](#ManagedHeapCommit)  
   
--   [判斷受控堆積保留的記憶體數量。](#ManagedHeapReserve)  
+- [判斷 Managed 堆積保留的記憶體數量。](#ManagedHeapReserve)  
   
--   [判斷層代 2 中的大型物件。](#ExamineGen2)  
+- [判斷層代 2 的大型物件。](#ExamineGen2)  
   
--   [判斷物件的參考。](#ObjRef)  
+- [判斷物件的參考。](#ObjRef)  
   
--   [判斷是否已執行完成項。](#Induce)  
+- [判斷是否已執行完成項。](#Induce)  
   
--   [判斷是否有等候完成的物件。](#Finalize)  
+- [判斷是否有等候完成的物件。](#Finalize)  
   
--   [判斷受控堆積中的可用空間數量。](#Fragmented)  
+- [判斷 Managed 堆積中的可用空間數量。](#Fragmented)  
   
--   [判斷被固定的物件數目。](#Pinned)  
+- [判斷被固定的物件數目。](#Pinned)  
   
--   [判斷記憶體回收的時間長度。](#TimeInGC)  
+- [判斷記憶體回收的時間長度。](#TimeInGC)  
   
--   [判斷觸發記憶體回收的原因。](#Triggered)  
+- [判斷觸發記憶體回收的原因。](#Triggered)  
   
--   [判斷高 CPU 使用量是否由於記憶體回收所造成。](#HighCPU)  
+- [判斷高 CPU 使用量是否由於記憶體回收所造成。](#HighCPU)  
   
 <a name="IsGC"></a>   
 ##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>判斷問題是否由於記憶體回收所造成  
   
--   檢查下列兩個記憶體效能計數器：  
+- 檢查下列兩個記憶體效能計數器：  
   
-    -   **在 GC 的時間 %**。 顯示自上次記憶體回收循環後所花費在執行記憶體回收的已耗用時間百分比。 使用此計數器來判斷是否記憶體回收行程花費太多時間才讓 Managed 堆積的空間可供使用。 如果花費在記憶體回收的時間很短，可能表示 Managed 堆積以外的資源問題。 與並行或背景記憶體回收相關時，這個計數器可能不正確。  
+    - **在 GC 的時間 %**。 顯示自上次記憶體回收循環後所花費在執行記憶體回收的已耗用時間百分比。 使用此計數器來判斷是否記憶體回收行程花費太多時間才讓 Managed 堆積的空間可供使用。 如果花費在記憶體回收的時間很短，可能表示 Managed 堆積以外的資源問題。 與並行或背景記憶體回收相關時，這個計數器可能不正確。  
   
-    -   **已認可的位元組總數**。 顯示記憶體回收行程目前已認可的虛擬記憶體數目。 使用此計數器來判斷記憶體回收行程所耗用的記憶體是否佔應用程式所使用記憶體的過多數量。  
+    - **已認可的位元組總數**。 顯示記憶體回收行程目前已認可的虛擬記憶體數目。 使用此計數器來判斷記憶體回收行程所耗用的記憶體是否佔應用程式所使用記憶體的過多數量。  
   
      大部分的記憶體效能計數器會在每次記憶體回收結束時更新。 因此，它們可能無法反映您要取得相關資訊的目前狀況。  
   
@@ -311,7 +311,7 @@ ms.locfileid: "59310560"
 <a name="GetVM"></a>   
 ##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>判斷可以保留多少虛擬記憶體  
   
--   在載入 SOS 偵錯工具擴充功能的 WinDbg 中，輸入下列命令，取得最大的可用區域：  
+- 在載入 SOS 偵錯工具擴充功能的 WinDbg 中，輸入下列命令，取得最大的可用區域：  
   
      **!address -summary**  
   
@@ -325,7 +325,7 @@ ms.locfileid: "59310560"
   
      -或-  
   
--   使用 **vmstat** 命令︰  
+- 使用 **vmstat** 命令︰  
   
      **!vmstat**  
   
@@ -353,7 +353,7 @@ ms.locfileid: "59310560"
 <a name="ManagedHeapCommit"></a>   
 ##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>判斷 Managed 堆積正在認可的記憶體數量  
   
--   使用 `# Total committed bytes` 記憶體效能計數器，以取得 Managed 堆積正在認可的位元組數目。 記憶體回收行程會視需要認可區段上的區塊 (chunk)，而不是同時全部認可。  
+- 使用 `# Total committed bytes` 記憶體效能計數器，以取得 Managed 堆積正在認可的位元組數目。 記憶體回收行程會視需要認可區段上的區塊 (chunk)，而不是同時全部認可。  
   
     > [!NOTE]
     >  請勿使用 `# Bytes in all Heaps` 效能計數器，因為它不代表 Managed 堆積的實際記憶體使用量。 層代的大小包含在此值中，且為其實際閾值大小，也就是層代裝滿物件時引發記憶體回收的大小。 因此，這個值通常是零。  
@@ -361,14 +361,14 @@ ms.locfileid: "59310560"
 <a name="ManagedHeapReserve"></a>   
 ##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>判斷 Managed 堆積保留的記憶體數量  
   
--   使用 `# Total reserved bytes` 記憶體效能計數器。  
+- 使用 `# Total reserved bytes` 記憶體效能計數器。  
   
      記憶體回收行程會以區段來保留記憶體，您可以使用 **eeheap** 命令來判斷區段開始的位置。  
   
     > [!IMPORTANT]
     >  雖然您可以判斷記憶體回收行程配置給每個區段的記憶體數量，但區段大小會依實作而定，而且隨時可能變更，包括定期更新。 您的應用程式永遠都不應該對相關或根據特定區段的大小做出假設，也不應嘗試設定區段配置的可用記憶體數量。  
   
--   在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：  
+- 在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：  
   
      **!eeheap -gc**  
   
@@ -409,7 +409,7 @@ ms.locfileid: "59310560"
 <a name="ExamineGen2"></a>   
 ##### <a name="to-determine-large-objects-in-generation-2"></a>判斷層代 2 的大型物件  
   
--   在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：  
+- 在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：  
   
      **!dumpheap –stat**  
   
@@ -448,13 +448,13 @@ ms.locfileid: "59310560"
 <a name="ObjRef"></a>   
 ##### <a name="to-determine-references-to-objects"></a>判斷物件的參考  
   
--   在載入 SOS 偵錯工具擴充功能的 WinDbg 中，輸入下列命令，列出物件的參考：  
+- 在載入 SOS 偵錯工具擴充功能的 WinDbg 中，輸入下列命令，列出物件的參考：  
   
      **!gcroot**  
   
      `-or-`  
   
--   若要判斷特定物件的參考，請包含位址：  
+- 若要判斷特定物件的參考，請包含位址：  
   
      **!gcroot 1c37b2ac**  
   
@@ -481,7 +481,7 @@ ms.locfileid: "59310560"
 <a name="Induce"></a>   
 ##### <a name="to-determine-whether-a-finalizer-has-been-run"></a>判斷是否已執行完成項  
   
--   執行測試程式，其中包含下列程式碼：  
+- 執行測試程式，其中包含下列程式碼：  
   
     ```  
     GC.Collect();  
@@ -518,7 +518,7 @@ ms.locfileid: "59310560"
 <a name="Fragmented"></a>   
 ##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>判斷 Managed 堆積中的可用空間數量  
   
--   在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：  
+- 在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：  
   
      **!dumpheap -type Free -stat**  
   
@@ -532,7 +532,7 @@ ms.locfileid: "59310560"
     Total 230 objects  
     ```  
   
--   若要判斷層代 0 中的可用空間，請輸入下列命令以取得依層代的記憶體耗用量資訊：  
+- 若要判斷層代 0 中的可用空間，請輸入下列命令以取得依層代的記憶體耗用量資訊：  
   
      **!eeheap -gc**  
   
@@ -552,9 +552,9 @@ ms.locfileid: "59310560"
     46120000 46120038  49e05d04   0x03ce5ccc(63855820)  
     ```  
   
--   計算層代 0 所使用的空間：  
+- 計算層代 0 所使用的空間：  
   
-     **? 49e05d04-0x49521f8c**  
+     **?49e05d04-0x49521f8c**  
   
      結果如下所示。 層代 0 大約 9 MB。  
   
@@ -562,7 +562,7 @@ ms.locfileid: "59310560"
     Evaluate expression: 9321848 = 008e3d78  
     ```  
   
--   下列命令會傾印在層代 0 範圍內的可用空間：  
+- 下列命令會傾印在層代 0 範圍內的可用空間：  
   
      **!dumpheap -type Free -stat 0x49521f8c 49e05d04**  
   
@@ -594,7 +594,7 @@ ms.locfileid: "59310560"
 <a name="Pinned"></a>   
 ##### <a name="to-determine-the-number-of-pinned-objects"></a>判斷被固定的物件數目  
   
--   在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：  
+- 在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令：  
   
      **!gchandles**  
   
@@ -609,7 +609,7 @@ ms.locfileid: "59310560"
 <a name="TimeInGC"></a>   
 ##### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>判斷記憶體回收的時間長度  
   
--   檢查 `% Time in GC` 記憶體效能計數器。  
+- 檢查 `% Time in GC` 記憶體效能計數器。  
   
      值的計算是使用取樣間隔時間。 由於計數器會在每次記憶體回收結束時更新，如果在間隔期間未發生任何回收，則目前的取樣值將會與前一個取樣值相同。  
   
@@ -640,7 +640,7 @@ ms.locfileid: "59310560"
   
      第二次層代 2 記憶體回收在第三個間隔期間開始，並在第五個間隔完成。 假設在最壞的情況下，最後一次記憶體回收是針對層代 0 回收，其在第二個間隔開始時完成，且層代 2 記憶體回收在第五個間隔結束時完成。 因此，層代 0 記憶體回收結束與層代 2 記憶體回收結束之間的時間是 4 秒。 由於 `% Time in GC` 計數器為 20%，因此層代 2 記憶體回收可能花費的最長時間量是 (4 秒 * 20% = 800 毫秒)。  
   
--   或者，您可以使用[記憶體回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)來判斷記憶體回收的長度，並分析資訊來判斷記憶體回收的持續時間。  
+- 或者，您可以使用[記憶體回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)來判斷記憶體回收的長度，並分析資訊來判斷記憶體回收的持續時間。  
   
      例如，下列資料顯示在非並行記憶體回收期間發生的事件序列。  
   
@@ -696,7 +696,7 @@ ms.locfileid: "59310560"
 <a name="Triggered"></a>   
 ##### <a name="to-determine-what-triggered-a-garbage-collection"></a>判斷觸發記憶體回收的原因  
   
--   在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令以顯示所有執行緒及其呼叫堆疊：  
+- 在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令以顯示所有執行緒及其呼叫堆疊：  
   
      **~\*kb**  
   
@@ -774,7 +774,7 @@ ms.locfileid: "59310560"
 <a name="HighCPU"></a>   
 ##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>判斷高 CPU 使用量是否由於記憶體回收所造成  
   
--   相互關聯 `% Time in GC` 記憶體效能計數器值與處理序時間。  
+- 相互關聯 `% Time in GC` 記憶體效能計數器值與處理序時間。  
   
      如果 `% Time in GC` 值與處理序時間同時升高，則記憶體回收便造成高 CPU 使用量。 否則，請針對應用程式進行程式碼剖析，尋找發生高使用量的地方。  
   

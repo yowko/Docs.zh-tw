@@ -2,12 +2,12 @@
 title: HOW TO：填入物件集合，從多個來源 (LINQ) (Visual Basic)
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 65c7e2c791ba8331416ee2eee292f1e8c4888712
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21474758cffd15c0cb4193cdb2a7bc33c981c938
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024322"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586196"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>HOW TO：填入物件集合，從多個來源 (LINQ) (Visual Basic)
 
@@ -127,14 +127,6 @@ For Each s In queryNamesScores2
                       s.Last & " is " & s.ExamScores.Average())
 Next
 ```
-
-## <a name="compiling-the-code"></a>編譯程式碼
-
-建立並編譯專案，以下列選項之一為目標：
-
-- .NET Framework 3.5 版與對 System.Core.dll 的參考。
-- NET Framework 4.0 或更高版本。
-- NET Core 1.0 或更高版本。
 
 ## <a name="see-also"></a>另請參閱
 

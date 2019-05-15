@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在日期和時間算術中使用時區
+title: 作法：在日期和時間算術中使用時區
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 053ca2d10deadf58d5bb8b4628fb5dee815d82c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d504aa9ad7d6e4084192a2434ac408e8fa7a041
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026493"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588535"
 ---
 # <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>HOW TO：在日期和時間算術中使用時區
 
@@ -59,8 +59,6 @@ ms.locfileid: "62026493"
 ## <a name="compiling-the-code"></a>編譯程式碼
 
 這個範例需要：
-
-* 對 System.Core.dll 的參考加入至專案。
 
 * 該<xref:System>命名空間匯入與`using`陳述式 （C# 程式碼所需）。
 

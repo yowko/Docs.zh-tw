@@ -2,12 +2,12 @@
 title: EDM 產生器 (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 7f06b393cd7e7ccf3d3637d6fb46eb6d983d943a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9c75cd7589b1c5fb28112a22390acf90f46e465
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607667"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584585"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM 產生器 (EdmGen.exe)
 
@@ -21,7 +21,7 @@ EdmGen.exe 是用於處理 [!INCLUDE[adonet_ef](../../../../../includes/adonet-e
 
 - 產生 C# 或 Visual Basic 程式碼檔案，其中包含為現有模型預先產生的檢視表。 如需詳細資訊， [How to:預先產生檢視以改善查詢效能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))。
 
-EdmGen.exe 工具是安裝在 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 目錄。 在許多情況下，這是位於 C:\windows\Microsoft.NET\Framework\v4.0。 若為 64 位元系統，則是位於 C:\windows\Microsoft.NET\Framework64\v4.0。 您也可以存取 EdmGen.exe 工具從 Visual Studio 命令提示字元 (按一下**開始**，指向**所有程式**，指向**Microsoft Visual Studio 2010**，指向**Visual Studio Tools**，然後按一下**Visual Studio 2010 命令提示字元**)。
+EdmGen.exe 工具被安裝.NET Framework 目錄中。 在許多情況下，這是位於 C:\windows\Microsoft.NET\Framework\v4.0。 若為 64 位元系統，則是位於 C:\windows\Microsoft.NET\Framework64\v4.0。 您也可以存取 EdmGen.exe 工具從 Visual Studio 命令提示字元 (按一下**開始**，指向**所有程式**，指向**Microsoft Visual Studio 2010**，指向**Visual Studio Tools**，然後按一下**Visual Studio 2010 命令提示字元**)。
 
 ## <a name="syntax"></a>語法
 
@@ -46,7 +46,7 @@ EdmGen /mode:choice [options]
 |選項|描述|
 |------------|-----------------|
 |`/p[roject]:`\<string>|指定要使用的專案名稱。 專案名稱會當成命名空間 (Namespace) 設定的預設值、模型和對應檔案的名稱、物件來源檔案的名稱和檢視表產生來源檔案的名稱。 實體容器名稱設為\<專案 > 內容。|
-|`/prov[ider]:`\<string>|要用來產生儲存模型 (.ssdl) 檔案的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 資料提供者的名稱。 預設提供者[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>)。|
+|`/prov[ider]:`\<string>|要用來產生儲存體模型 (.ssdl) 檔案的 .NET Framework 資料提供者名稱。 預設提供者為 .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>)。|
 |`/c[onnectionstring]:`\<連接字串 >|指定用來連接至資料來源的字串。|
 |`/incsdl:`\<file>|指定 .csdl 檔案或 .csdl 檔案所在的目錄。 這個引數可多次指定，因此您能指定數個目錄或 .csdl 檔案。 當概念模型被分割成數個檔案後，指定多個目錄會有助於產生類別 (`/mode:EntityClassGeneration`) 或檢視表 (`/mode:ViewGeneration`)， 而這也有助於驗證多個模型 (`/mode:ValidateArtifacts`)。|
 |`/refcsdl:`\<file>|指定用於解析來源 .csdl 檔案中任何參考的其他 .csdl 檔案  (來源 .csdl 檔案是由 `/incsdl` 選項所指定的檔案)。 `/refcsdl` 檔案包含來源 .csdl 檔案相依的類型。 這個引數可多次指定。|

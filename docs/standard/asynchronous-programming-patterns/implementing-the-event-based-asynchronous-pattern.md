@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 76c7b9fa9ef103fc5fc62830932cc724ba50baca
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 41303bf548502fe319cbcfb8a152179863902817
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333356"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623570"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>實作事件架構非同步模式
 如果您正在撰寫某項類別，其擁有的一些作業可能會造成明顯延遲，請考慮實作[事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)以賦予它非同步功能。  
@@ -35,26 +35,26 @@ ms.locfileid: "59333356"
   
  下列清單所描述的事件架構非同步模式功能，本主題會加以討論。  
   
--   實作事件架構非同步模式的機會  
+- 實作事件架構非同步模式的機會  
   
--   為非同步方法命名  
+- 為非同步方法命名  
   
--   選擇性地支援取消方法  
+- 選擇性地支援取消方法  
   
--   選擇性地支援 IsBusy 屬性  
+- 選擇性地支援 IsBusy 屬性  
   
--   選擇性地提供進度報告支援  
+- 選擇性地提供進度報告支援  
   
--   選擇性地提供可傳回累加結果的支援  
+- 選擇性地提供可傳回累加結果的支援  
   
--   在方法中處理 Out 和 Ref 參數  
+- 在方法中處理 Out 和 Ref 參數  
   
 ## <a name="opportunities-for-implementing-the-event-based-asynchronous-pattern"></a>實作事件架構非同步模式的機會  
  若有下列情況，請考慮實作事件架構非同步模式：  
   
--   類別的用戶端不需要非同步作業可使用 <xref:System.Threading.WaitHandle> 和 <xref:System.IAsyncResult> 物件，這表示輪詢和 <xref:System.Threading.WaitHandle.WaitAll%2A> 或 <xref:System.Threading.WaitHandle.WaitAny%2A> 都必須由用戶端所建立。  
+- 類別的用戶端不需要非同步作業可使用 <xref:System.Threading.WaitHandle> 和 <xref:System.IAsyncResult> 物件，這表示輪詢和 <xref:System.Threading.WaitHandle.WaitAll%2A> 或 <xref:System.Threading.WaitHandle.WaitAny%2A> 都必須由用戶端所建立。  
   
--   您想要由用戶端使用熟悉的事件/委派模型來管理非同步作業。  
+- 您想要由用戶端使用熟悉的事件/委派模型來管理非同步作業。  
   
  任何作業都適合進行非同步實作，但您應該考慮那些預期會產生較長延遲的作業。 用戶端會呼叫方法並在完成時收到通知的作業尤其適合，因為您不必進一步介入。 會持續執行，並定期將進度、累加結果或狀態變更通知用戶端的作業也很適合。  
   
@@ -65,11 +65,11 @@ ms.locfileid: "59333356"
   
  定義有下列情形的 _MethodName_**Async** 方法：  
   
--   傳回 `void`。  
+- 傳回 `void`。  
   
--   使用與 MethodName 方法相同的參數。  
+- 使用與 MethodName 方法相同的參數。  
   
--   接受多個引動過程。  
+- 接受多個引動過程。  
   
  選擇性地定義 _MethodName_**Async** 多載，它與 _MethodName_**Async** 相同，但是具有稱為 `userState` 的額外物件值參數。 需要這麼做的前提是，您已準備好管理您擁有之方法的多個並行引動過程，在此情況下，`userState` 值會傳回給所有的事件處理常式，以供區別該方法的各個引動過程。 您也可以純粹為了能有位置可儲存使用者狀態以供日後擷取，而選擇這樣做。  
   
@@ -108,9 +108,9 @@ ms.locfileid: "59333356"
     }  
     ```  
   
-    -   確定 _MethodName_**CompletedEventArgs** 類別將其成員公開為唯讀屬性，而不是欄位，因為欄位會防止資料繫結。  
+    - 確定 _MethodName_**CompletedEventArgs** 類別將其成員公開為唯讀屬性，而不是欄位，因為欄位會防止資料繫結。  
   
-    -   不要為不會產生結果的方法定義任何 <xref:System.ComponentModel.AsyncCompletedEventArgs> 衍生類別。 只要使用 <xref:System.ComponentModel.AsyncCompletedEventArgs> 本身的執行個體。  
+    - 不要為不會產生結果的方法定義任何 <xref:System.ComponentModel.AsyncCompletedEventArgs> 衍生類別。 只要使用 <xref:System.ComponentModel.AsyncCompletedEventArgs> 本身的執行個體。  
   
         > [!NOTE]
         >  只要可行且適當，重複使用委派和 <xref:System.ComponentModel.AsyncCompletedEventArgs> 型別也是完全可以接受的。 在此情況下，其命名將不會與方法名稱一致，因為給定的委派和 <xref:System.ComponentModel.AsyncCompletedEventArgs> 不會繫結至單一方法。  
@@ -118,9 +118,9 @@ ms.locfileid: "59333356"
 ## <a name="optionally-support-cancellation"></a>選擇性地支援取消方法  
  如果您的類別會支援取消非同步作業，請如下所述對用戶端公開取消方法。 請注意，在定義取消支援之前，您必須先達成兩個決策點︰  
   
--   您的類別 (包括其未來預期的新增項目) 是否只有一個支援取消方法的非同步作業？  
+- 您的類別 (包括其未來預期的新增項目) 是否只有一個支援取消方法的非同步作業？  
   
--   可支援取消方法的非同步作業能否支援多個暫止作業？ 也就是說，_MethodName_**Async** 方法是否使用 `userState` 參數，而且是否在等候任何作業完成之前允許多個引動過程？  
+- 可支援取消方法的非同步作業能否支援多個暫止作業？ 也就是說，_MethodName_**Async** 方法是否使用 `userState` 參數，而且是否在等候任何作業完成之前允許多個引動過程？  
   
  使用下表中對於這兩個問題的回答，來判斷您的取消方法應該使用的簽章。  
   
@@ -156,13 +156,13 @@ ms.locfileid: "59333356"
 ## <a name="optionally-provide-support-for-progress-reporting"></a>選擇性地提供進度報告支援  
  非同步作業經常需要在其作業期間報告進度。 事件架構非同步模式提供了這方面的指導方針。  
   
--   選擇性地定義要供非同步作業引發，並在適當的執行緒上叫用的事件。 <xref:System.ComponentModel.ProgressChangedEventArgs> 物件帶有以整數值表示的進度指示器，其值應該會介於 0 到 100 之間。  
+- 選擇性地定義要供非同步作業引發，並在適當的執行緒上叫用的事件。 <xref:System.ComponentModel.ProgressChangedEventArgs> 物件帶有以整數值表示的進度指示器，其值應該會介於 0 到 100 之間。  
   
--   將此事件命名如下︰  
+- 將此事件命名如下︰  
   
-    -   `ProgressChanged` ，如果類別具有多個非同步作業 (或預期會有成長，而會在未來的版本中包含多個非同步作業)；  
+    - `ProgressChanged`，如果類別具有多個非同步作業 (或預期會有成長，而會在未來的版本中包含多個非同步作業)。  
   
-    -   _MethodName_**ProgressChanged**，如果類別具有單一非同步作業。  
+    - _MethodName_**ProgressChanged**，如果類別具有單一非同步作業。  
   
      這個命名選擇和取消方法的選擇類似，後者在＜選擇性地支援取消方法＞一節中有所說明。  
   
@@ -180,9 +180,9 @@ ms.locfileid: "59333356"
 ### <a name="single-operation-class"></a>單一作業類別  
  如果您的類別只支援單一非同步作業，而且該作業可傳回累加結果，則請︰  
   
--   擴充 <xref:System.ComponentModel.ProgressChangedEventArgs> 型別以附帶累加結果資料，並以這個擴充資料來定義 _MethodName_**ProgressChanged** 事件。  
+- 擴充 <xref:System.ComponentModel.ProgressChangedEventArgs> 型別以附帶累加結果資料，並以這個擴充資料來定義 _MethodName_**ProgressChanged** 事件。  
   
--   在出現可回報的累加結果時，引發這個 _MethodName_**ProgressChanged** 事件。  
+- 在出現可回報的累加結果時，引發這個 _MethodName_**ProgressChanged** 事件。  
   
  這個解決方案特別適用於單一非同步作業類別，因為就像 _MethodName_**ProgressChanged** 事件一樣，相同事件在「所有作業」上發生並傳回累加結果時，並不會造成問題。  
   
@@ -194,9 +194,9 @@ ms.locfileid: "59333356"
 ### <a name="multiple-operation-class-with-heterogeneous-incremental-results"></a>具有異質累加結果的多重作業類別  
  如果您的類別支援多個非同步方法，而且各會傳回不同型別的資料，您應該︰  
   
--   將累加結果報告和進度報告區隔開來。  
+- 將累加結果報告和進度報告區隔開來。  
   
--   對於每個非同步方法，以適當的 <xref:System.EventArgs> 定義個別的 _MethodName_**ProgressChanged** 事件，以處理該方法的累加結果資料。  
+- 對於每個非同步方法，以適當的 <xref:System.EventArgs> 定義個別的 _MethodName_**ProgressChanged** 事件，以處理該方法的累加結果資料。  
   
  如[實作事件架構非同步模式的最佳作法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)所述，在適當的執行緒上叫用該事件處理常式。  
   
@@ -205,9 +205,9 @@ ms.locfileid: "59333356"
   
  假設同步方法為 MethodName：  
   
--   `out` 參數 (針對 *MethodName*) 不應成為 _MethodName_**Async** 的一部分。 相反地，這些參數應該成為 _MethodName_**CompletedEventArgs** 的一部分，其名稱會與 MethodName 中的對等參數相同 (除非還有更適當的名稱)。  
+- MethodName 的 `out` 參數不應成為 _MethodName_**Async** 的一部分。 相反地，這些參數應該成為 _MethodName_**CompletedEventArgs** 的一部分，其名稱會與 MethodName 中的對等參數相同 (除非還有更適當的名稱)。  
   
--   `ref` 參數 (針對 *MethodName*) 應該顯示為 _MethodName_**Async** 的一部分，並且也必須是 _MethodName_**CompletedEventArgs** 的一部分，其名稱會與 *MethodName* 中的對等參數相同 (除非還有更適當的名稱)。  
+- MethodName 的 `ref` 參數應該為 _MethodName_**Async** 的一部分，並且也必須是 _MethodName_**CompletedEventArgs** 的一部分，其名稱會與 MethodName 中的對等參數相同 (除非還有更適當的名稱)。  
   
  例如，假設︰  
   
@@ -250,9 +250,9 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
-- [作法：實作支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
-- [作法：在背景執行作業](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [作法：實作使用背景作業的表單](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [如何：實作支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
+- [如何：在背景執行作業](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [如何：實作使用背景作業的表單](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
 - [決定何時實作事件架構非同步模式](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
 - [實作事件架構非同步模式的最佳作法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

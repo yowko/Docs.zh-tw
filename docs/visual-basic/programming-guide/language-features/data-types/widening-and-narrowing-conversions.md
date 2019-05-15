@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: 98702f2fb8f912b9503f3ccdad74e61ef097f617
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e2dbbd63be07a19c6e05c7ec8f94bdcd8f50c902
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600897"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586311"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>擴展和縮小轉換 (Visual Basic)
 使用類型轉換的重要考量是轉換的結果是否在目的地資料類型的範圍內。  
@@ -93,7 +93,7 @@ ms.locfileid: "64600897"
   
 - <xref:System.OverflowException> -（只有整數類型） 如果已轉換的值太大的目標型別  
   
- 如果類別或結構定義[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)做為與該類別或結構，轉換運算子，`CType`可能會擲回它認為適當的任何例外狀況。 此外，所`CType`可能會呼叫 Visual Basic 函式或[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]接著可能會擲回例外狀況的各種不同的方法。  
+ 如果類別或結構定義[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)做為與該類別或結構，轉換運算子，`CType`可能會擲回它認為適當的任何例外狀況。 颾魤 ㄛ，`CType`可能會呼叫 Visual Basic 函式或.NET Framework 方法，接著可能會擲回各種例外狀況。  
   
 ## <a name="changes-during-reference-type-conversions"></a>參考型別轉換期間的變更  
  從轉換*參考的型別*複製值的指標。 值本身不會複製或以任何方式變更。 唯一可以變更為指標的變數的資料類型。 在下列範例中，資料類型轉換從衍生類別為其基底類別，但這兩個變數現在指向的物件不會變更。  

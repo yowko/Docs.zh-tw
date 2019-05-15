@@ -16,24 +16,24 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 792741dc4df7b65ddef124615032c06a7ff1bcb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbd8d901f018d95b8a1f5c81c813853838c4a4cd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050453"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586294"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic 中的命名空間
 命名空間可組織組件中定義的物件。 組件可包含多個命名空間，而命名空間也可包含其他命名空間。 在使用類別庫等大型物件群組時，命名空間可避免語意模糊並簡化參考。  
   
- 例如， [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 會在 <xref:System.Windows.Forms.ListBox> 命名空間中定義 <xref:System.Windows.Forms?displayProperty=nameWithType> 類別。 下列程式碼片段示範如何使用這個類別的完整名稱來宣告變數：  
+ 例如，.NET Framework 會定義<xref:System.Windows.Forms.ListBox>類別中<xref:System.Windows.Forms?displayProperty=nameWithType>命名空間。 下列程式碼片段示範如何使用這個類別的完整名稱來宣告變數：  
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>避免名稱衝突  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 命名空間會解決有時稱為 *「命名空間干擾」*(namespace pollution) 的問題，也就是類別庫的開發人員因為使用與另一個程式庫類似的名稱而受到阻礙的情況。 這些與現有元件的衝突有時稱為 *「名稱衝突」*(name collision)。  
+ .NET framework 命名空間會解決問題，有時也稱為*命名空間干擾*，在類別庫的開發人員零碎所使用的另一個程式庫類似的名稱。 這些與現有元件的衝突有時稱為 *「名稱衝突」*(name collision)。  
   
- 例如，如果您建立了一個名為 `ListBox`的新類別，您不需提供完整名稱就可以在專案內使用它。 不過，如果您想在同一個專案中使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> 類別，則必須使用完整參考使其成為唯一的參考。 如果參考不是唯一的 Visual Basic 會產生錯誤訊息指出名稱模稜兩可。 下列程式碼範例示範如何宣告這些物件：  
+ 例如，如果您建立了一個名為 `ListBox`的新類別，您不需提供完整名稱就可以在專案內使用它。 不過，如果您想要使用.NET Framework<xref:System.Windows.Forms.ListBox>類別在相同專案中，您必須使用完整的參考成為唯一的參考。 如果參考不是唯一的 Visual Basic 會產生錯誤訊息指出名稱模稜兩可。 下列程式碼範例示範如何宣告這些物件：  
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   

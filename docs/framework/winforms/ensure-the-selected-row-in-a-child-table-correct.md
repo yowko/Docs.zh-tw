@@ -1,5 +1,5 @@
 ---
-title: HOW TO：確認子資料表中選取的資料列保持在正確位置
+title: 作法：確認子資料表中選取的資料列保持在正確位置
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: bbebd9f040c60016305a861abee3723450a7456b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1047958a5600d8e6ee0ba461305e09395151ab14
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651987"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592281"
 ---
-# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>HOW TO：確認子資料表中選取的資料列保持在正確位置
+# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>作法：確認子資料表中選取的資料列保持在正確位置
 有時候當您使用 Windows Form 中的資料繫結時，您會在所謂父/子或主要/詳細資料檢視中顯示資料。 這是指來自相同來源的資料顯示在兩個控制項中的資料繫結案例。 在一個控制項中變更選取範圍會造成第二個控制項中顯示的資料也變更。 比方說，第一個控制項可能包含客戶清單，而第二個控制項包含與第一個控制項中所選取客戶相關的訂單清單。  
   
  從 .NET Framework 2.0 版開始，當您在父/子檢視中顯示資料時，您可能必須採取額外的步驟，以確定子資料表中目前選取的資料列不會重設為資料表的第一個資料列。 若要這樣做，您必須快取子系資料表位置並在父資料表變更之後重設它。 重設子系通常會發生在父資料表的資料列欄位第一次變更時。  
@@ -80,8 +80,6 @@ ms.locfileid: "64651987"
  這個範例需要：  
   
 - System、System.Data、System.Drawing、System.Windows.Forms 和 System.XML 組件的參考。  
-  
- 如需如何針對 Visual Basic 或 Visual C# 建置此範例從命令列資訊，請參閱[從命令列建置](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
 

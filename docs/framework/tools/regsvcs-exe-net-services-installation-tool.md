@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b529ccd8c5e0cf0563adf556a7d316372ac4d0e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0dc05294ae762b4f896bb7f514df102c1f948fe0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215036"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623401"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET 服務安裝工具)
 .NET 服務安裝工具會執行下列動作：  
   
--   載入和註冊組件。  
+- 載入和註冊組件。  
   
--   產生、註冊和安裝類型程式庫到指定的 COM+ 應用程式。  
+- 產生、註冊和安裝類型程式庫到指定的 COM+ 應用程式。  
   
--   設定您以程式設計方式加入至類別的服務。  
+- 設定您以程式設計方式加入至類別的服務。  
   
  若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "59215036"
 |**/parname:** *name*|指定要尋找或建立之 COM+ 應用程式的名稱或 ID。|  
 |**/reconfig**|重新設定現有的目標應用程式。 這是預設值。|  
 |**/tlb:<型別程式庫檔案>** |指定要安裝的類型程式庫檔案。|  
-|**/U**|解除安裝目標應用程式。|  
+|**/u**|解除安裝目標應用程式。|  
 |**/quiet**|指定安靜模式，隱藏標誌或成功訊息顯示。|  
 |**/?**|顯示工具的命令語法和選項。|  
   
@@ -89,5 +89,5 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
 ## <a name="see-also"></a>另請參閱
 
 - [工具](../../../docs/framework/tools/index.md)
-- [作法：使用強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [如何：使用強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
 - [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

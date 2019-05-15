@@ -1,5 +1,5 @@
 ---
-title: HOW TO：自訂 ToolStrip 應用程式的色彩
+title: 作法：自訂 ToolStrip 應用程式的色彩
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - colors [Windows Forms], customizing in ToolStrip controls [Windows Forms]
 - ToolStrip control [Windows Forms], custom colors
 ms.assetid: e2752fe2-1afb-489e-ab96-b7805acd96bc
-ms.openlocfilehash: 971fc8478e6ff2b5745a950daa2f04bfc8d00322
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6719156d0ab6d1e53cd0bd8f16f306577589fb40
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666399"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592839"
 ---
 # <a name="how-to-customize-colors-in-toolstrip-applications"></a>HOW TO：自訂 ToolStrip 應用程式的色彩
 您可以自訂 <xref:System.Windows.Forms.ToolStrip> 的外觀，藉由使用 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 類別來使用自訂的色彩。  
@@ -29,8 +29,6 @@ ms.locfileid: "64666399"
  這個範例需要：  
   
 - System.Design、System.Drawing 和 System.Windows.Forms 組件的參考。  
-  
- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
 

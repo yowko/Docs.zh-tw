@@ -2,18 +2,18 @@
 title: Entity Framework 概觀
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8c870c1990da9b86515dc933716cd628f63eb0a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034046"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583842"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework 概觀
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 是 ADO.NET 中的一組技術，可支援資料導向軟體應用程式的開發。 資料導向應用程式的架構設計人員和開發人員經常致力於滿足達成兩個迥異目標的需求。 他們必須針對所解決之商務問題的實體、關聯性和邏輯建立模型，而且也必須使用用來儲存和擷取資料的資料引擎。 這項資料可能會跨越多個儲存系統，而且每個系統都有自己的通訊協定 (Protocol)。即使是使用單一儲存系統的應用程式都必須在儲存系統的需求與撰寫有效率和可維護應用程式程式碼的需求之間取得平衡。
 
-[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 可讓開發人員使用網域特有之物件和屬性的格式 (如客戶和客戶地址) 來處理資料，而不需要顧慮這些資料儲存在哪些基礎資料庫資料表和資料行內。 有了 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，開發人員在處理資料時可以在較高的抽象層級工作，而且能使用比傳統應用程式更少的程式碼來建立及維護資料導向應用程式。 因為[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]是的元件[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]應用程式可以在其上的任何電腦上執行[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]以 3.5 版 SP1 開始安裝。
+[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 可讓開發人員使用網域特有之物件和屬性的格式 (如客戶和客戶地址) 來處理資料，而不需要顧慮這些資料儲存在哪些基礎資料庫資料表和資料行內。 有了 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，開發人員在處理資料時可以在較高的抽象層級工作，而且能使用比傳統應用程式更少的程式碼來建立及維護資料導向應用程式。 因為[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]是.NET Framework 中，元件[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]應用程式可以安裝.NET Framework 3.5 SP1 版起的任何電腦上執行。
 
 ## <a name="give-life-to-models"></a>模型賦予生命
  傳統且常見的建置應用程式或服務之設計方式是將應用程式或服務分成三個部分：領域模型、邏輯模型和實體模型。 網域模型會在建立模型的系統中定義實體和關聯性。 關聯式資料庫的邏輯模型會將實體和關聯性正規化成含有外部索引鍵條件約束的資料表。 實體模型會透過指定儲存詳細資料 (例如資料分割和索引)，處理特定資料引擎的功能。

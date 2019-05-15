@@ -2,12 +2,12 @@
 title: XDocument 類別概觀 (C#)
 ms.date: 07/20/2015
 ms.assetid: 63305603-ab54-49fc-84e4-f76eecc59549
-ms.openlocfilehash: e3ef7d66cb9759bd71e69c1a0db3614a02f785b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a2b2e7490116cfd7ff3cff783a4a3a985a39d0a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604192"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595342"
 ---
 # <a name="xdocument-class-overview-c"></a>XDocument 類別概觀 (C#)
 本主題說明 <xref:System.Xml.Linq.XDocument> 類別。  
@@ -22,15 +22,15 @@ ms.locfileid: "54604192"
 ## <a name="components-of-xdocument"></a>XDocument 的元件  
  <xref:System.Xml.Linq.XDocument> 可以包含下列項目：  
   
--   一個 <xref:System.Xml.Linq.XDeclaration> 物件。 <xref:System.Xml.Linq.XDeclaration> 可讓您指定 XML 宣告的關聯部分：XML 版本、文件的編碼，以及 XML 文件是否是獨立的。  
+- 一個 <xref:System.Xml.Linq.XDeclaration> 物件。 <xref:System.Xml.Linq.XDeclaration> 可讓您指定 XML 宣告的關聯部分：XML 版本、文件的編碼，以及 XML 文件是否是獨立的。  
   
--   一個 <xref:System.Xml.Linq.XElement> 物件。 這是 XML 文件的根節點。  
+- 一個 <xref:System.Xml.Linq.XElement> 物件。 這是 XML 文件的根節點。  
   
--   任何數目的 <xref:System.Xml.Linq.XProcessingInstruction> 物件。 處理指示會將資訊傳達到處理 XML 的應用程式。  
+- 任何數目的 <xref:System.Xml.Linq.XProcessingInstruction> 物件。 處理指示會將資訊傳達到處理 XML 的應用程式。  
   
--   任何數目的 <xref:System.Xml.Linq.XComment> 物件。 這些註解將是根項目的同層級。 <xref:System.Xml.Linq.XComment> 物件不得為清單中的第一個引數，因為對於 XML 文件而言，它不適用於開始註解。  
+- 任何數目的 <xref:System.Xml.Linq.XComment> 物件。 這些註解將是根項目的同層級。 <xref:System.Xml.Linq.XComment> 物件不得為清單中的第一個引數，因為對於 XML 文件而言，它不適用於開始註解。  
   
--   一個適用於 DTD 的 <xref:System.Xml.Linq.XDocumentType>。  
+- 一個適用於 DTD 的 <xref:System.Xml.Linq.XDocumentType>。  
   
  當您序列化 <xref:System.Xml.Linq.XDocument> 時，即使 `XDocument.Declaration` 為 `null`，如果寫入器已將 `Writer.Settings.OmitXmlDeclaration` 設定為 `false` (預設值)，則輸出將會有 XML 宣告。  
   

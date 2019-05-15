@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: c9cb40cb318bd044cb9204ba2ed384b41b475d57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0ca890e384fc1f282cfbb62562090ee858bd33f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625768"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592775"
 ---
 # <a name="application-settings-architecture"></a>應用程式設定架構
 本主題描述應用程式設定的運作方式，並且瀏覽架構的進階功能 (例如群組設定和設定索引鍵)。  
@@ -44,7 +44,7 @@ ms.locfileid: "64625768"
 ## <a name="settings-persistence"></a>設定持續性  
  <xref:System.Configuration.ApplicationSettingsBase>類別不會自行保存或載入設定，這項工作由設定提供者類別衍生自<xref:System.Configuration.SettingsProvider>。 如果在衍生類別的<xref:System.Configuration.ApplicationSettingsBase>未指定設定提供者透過<xref:System.Configuration.SettingsProviderAttribute>，則預設的提供者， <xref:System.Configuration.LocalFileSettingsProvider>，會使用。  
   
- 最初隨著 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 一起發行的組態系統，支援透過本機電腦的 machine.config 檔案，或在您隨著應用程式部署的 `app.`exe.config 檔案內，提供靜態應用程式組態資料。 <xref:System.Configuration.LocalFileSettingsProvider>類別以下列方式展開此原生支援：  
+ 最初發行.NET framework 組態系統支援提供靜態應用程式組態資料到本機電腦的 machine.config 檔案，或是在`app.`您使用部署的 exe.config 檔您的應用程式。 <xref:System.Configuration.LocalFileSettingsProvider>類別以下列方式展開此原生支援：  
   
 - 應用程式範圍的設定可以儲存在 machine.config 或`app.`exe.config 檔案中。 Machine.config 永遠唯讀，但 `app`.exe.config 基於安全性考量，對大部分應用程式而言限制為唯讀。  
   

@@ -1,15 +1,13 @@
 ---
 title: 實作值物件
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 深入了解使用新 Entity Framework 功能實作值物件的詳細資料與選項。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 64ffd600468124439986b0d1949dc048ef245c78
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: bd165ac2511476a5041e7d09126647546c632ba6
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611376"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063085"
 ---
 # <a name="implement-value-objects"></a>實作值物件
 
@@ -324,7 +322,7 @@ public class Address
 - **複雜類型和/或值物件**。 EF Core GitHub 存放庫 ([問題] 索引標籤) 的探討 \
   <https://github.com/aspnet/EntityFramework/issues/246>
 
-- **ValueObject.cs.** eShopOnContainers 中的基底值物件類別。**  \
+- **ValueObject.cs.** eShopOnContainers 中的基底值物件類別。 \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs>
 
 - **網址類別。** eShopOnContainers 中的範列值物件類別。 \

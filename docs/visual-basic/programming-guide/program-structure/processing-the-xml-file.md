@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: efd9711f93478b1ecc2ded7b57fa45f38286eeb5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ab05db770f312a362e26f17df684f6f4f49c0eb3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651217"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586746"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>處理 XML 檔案 (Visual Basic)
-編譯器會針對程式碼中，標記為要產生文件的每個建構產生識別碼字串。 (如需如何標記您的程式碼的資訊，請參閱[XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)。)識別碼字串可唯一識別此建構。 處理 XML 檔案的程式可以使用識別碼字串，來識別對應[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]中繼資料/反映項目。  
+編譯器會針對程式碼中，標記為要產生文件的每個建構產生識別碼字串。 (如需如何標記您的程式碼的資訊，請參閱[XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)。)識別碼字串可唯一識別此建構。 處理 XML 檔案的程式可以使用識別碼字串，來識別對應的.NET Framework 中繼資料/反映項目。  
   
  XML 檔案不是您的程式碼; 的階層式表示法它是與每個項目所產生之識別碼的一般清單。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "64651217"
   
 - 第二個部分`String`是項目，在命名空間的根開始的完整的名稱。 項目、 其封入的類型和命名空間的名稱並以句號分隔。 如果項目本身的名稱包含句點，它們會被取代的數字符號 （#）。 它會假設沒有項目，直接在其名稱中有數字的符號。 例如，完整的名稱的`String`建構函式會`System.String.#ctor`。  
   
-- 針對屬性和方法，如果有方法的引數，則後面會接著以括弧括住的引數清單。 如果沒有任何引數，就不會出現括弧。 引數會以逗號分隔。 每個引數的編碼方式都會直接遵循它中的編碼方式[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]簽章。  
+- 針對屬性和方法，如果有方法的引數，則後面會接著以括弧括住的引數清單。 如果沒有任何引數，就不會出現括弧。 引數會以逗號分隔。 每個引數的編碼方式都會直接遵循它在.NET Framework 簽章中的編碼方式。  
   
 ## <a name="example"></a>範例  
  下列程式碼會顯示類別識別碼字串的方式，並產生其成員。  

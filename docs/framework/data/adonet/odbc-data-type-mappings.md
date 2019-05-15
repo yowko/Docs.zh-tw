@@ -2,17 +2,17 @@
 title: ODBC 資料類型對應
 ms.date: 03/30/2017
 ms.assetid: 43c35d32-831d-480f-a150-78f7e869d17f
-ms.openlocfilehash: 8165ab933352394e29cbe93a9e8ba64267f8ae60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 51090ede73710afedf74e1d2b8b5363337426279
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772212"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584529"
 ---
 # <a name="odbc-data-type-mappings"></a>ODBC 資料類型對應
-下表顯示來自 .NET Framework Data Provider for ODBC ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]) 之資料型別的推斷 <xref:System.Data.Odbc> 型別。 同時也一併列出 <xref:System.Data.Odbc.OdbcDataReader> 具型別的存取子方法。  
+下表顯示從.NET Framework Data Provider for ODBC 的資料型別推斷的.NET Framework 型別 (<xref:System.Data.Odbc>)。 同時也一併列出 <xref:System.Data.Odbc.OdbcDataReader> 具型別的存取子方法。  
   
-|ODBC 型別|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 類型|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 具型別的存取子|  
+|ODBC 型別|.NET Framework 類型|.NET framework 型別存取子|  
 |---------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |SQL_BIGINT|Int64|GetInt64()|  
 |SQL_BINARY|Byte[]|GetBytes()|  

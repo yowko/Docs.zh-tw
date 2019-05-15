@@ -21,12 +21,12 @@ helpviewer_keywords:
 - current instance [Visual Basic], Me keyword
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
-ms.openlocfilehash: a8df6e48fd5bce9bb28d8aef7e031f36741ad0ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3eca756429c5fec8f324a17350844b59baf9ccf7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050476"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586261"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic 中的 Me、My、MyBase 和 MyClass
 `Me``My`， `MyBase`，和`MyClass`Visual Basic 中有類似的名稱，但不同的用途。 本主題會描述每個實體以區別。  
@@ -50,7 +50,7 @@ ChangeFormColor(Me)
 ```  
   
 ## <a name="my"></a>My  
- `My`功能提供簡單又直覺式存取數個[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]類別，讓 Visual Basic 使用者與電腦、 應用程式、 設定、 資源等等互動。  
+ `My`項功能可輕鬆且直覺式存取數個.NET Framework 類別，讓 Visual Basic 使用者與電腦、 應用程式、 設定、 資源等等互動。  
   
 ## <a name="mybase"></a>MyBase  
  `MyBase`關鍵字的行為就像參考類別的目前執行個體的基底類別的物件變數。 `MyBase` 通常用來存取所覆寫或遮蔽衍生類別中的基底類別成員。 `MyBase.New` 用來明確地從衍生的類別建構函式呼叫的基底類別建構函式。  

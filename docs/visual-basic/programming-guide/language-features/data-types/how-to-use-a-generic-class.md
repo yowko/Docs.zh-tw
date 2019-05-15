@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用泛型類別 (Visual Basic)
+title: 作法：使用泛型類別 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - type parameters [Visual Basic], defining
@@ -21,19 +21,19 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
-ms.openlocfilehash: c7fb4c95b6ef09508df57b3a0c08a651b122e251
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b069d3a0249f6aff2f9f09c5a560e5708bd60aa6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906473"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593367"
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>HOW TO：使用泛型類別 (Visual Basic)
 採用 *「類型參數」* (type parameter) 的類別稱為 *「泛型類別」*(generic class)。 如果您使用泛型類別，則可以透過它產生 *「建構類別」* (constructed class)，方法是提供所有這些參數的 *「類型引數」* (type argument)。 您接著可以宣告所建構類別類型的變數，而且可以建立所建構類別的執行個體，並將它指派給該變數。  
   
  除了類別之外，您還可以定義和使用泛型結構、介面、程序和委派。  
   
- 下列程序會採用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中所定義的泛型類別，並透過它建立執行個體。  
+ 下列程序會採用.NET Framework 中定義的泛型類別，並從它建立執行個體。  
   
 ### <a name="to-use-a-class-that-takes-a-type-parameter"></a>使用採用類型參數的類別  
   

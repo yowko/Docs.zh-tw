@@ -1,22 +1,22 @@
 ---
-title: HOW TO：以程式設計方式將探索能力新增至 WCF 服務與用戶端
+title: 作法：以程式設計方式將探索能力新增至 WCF 服務與用戶端
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de227e8df895dd4c031aadce16102559c43e47ce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761542"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586619"
 ---
-# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>HOW TO：以程式設計方式將探索能力新增至 WCF 服務與用戶端
+# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>作法：以程式設計方式將探索能力新增至 WCF 服務與用戶端
 本主題說明如何讓 Windows Communication Foundation (WCF) 服務可以探索。 它根據[自我裝載](https://go.microsoft.com/fwlink/?LinkId=145523)範例。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>若要為探索設定現有的自我裝載服務範例  
   
 1. 開啟 Visual Studio 2012 中的自我裝載的解決方案。 範例位於 TechnologySamples\Basic\Service\Hosting\SelfHost 目錄中。  
   
-2. 將 `System.ServiceModel.Discovery.dll`的參考加入至服務專案。 您可能會看到下列錯誤訊息: 「 系統。 ServiceModel.Discovery.dll 或其中一個相依性需要較新版[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]高於指定的專案中...」如果您看到此訊息，以滑鼠右鍵按一下 [方案總管] 中的專案，然後選擇 **屬性**。 在 [**專案屬性**] 視窗中，請確定**目標 Framework**是[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
+2. 將 `System.ServiceModel.Discovery.dll`的參考加入至服務專案。 您可能會看到下列錯誤訊息: 「 系統。 ServiceModel.Discovery.dll 或其中一個相依性需要較新版的.NET Framework 所指定的專案中...」如果您看到此訊息，以滑鼠右鍵按一下 方案總管 中的專案，然後選擇 **屬性**。 在 [**專案屬性**] 視窗中，請確定**目標 Framework**是[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
   
 3. 開啟 Service.cs 檔案，然後加入下列 `using` 陳述式。  
   

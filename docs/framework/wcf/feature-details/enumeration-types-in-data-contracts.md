@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 8e793fc130252caf91d9b1c15b41beba1cc8ae1f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f8d399859e4f861158ab74db9ed410aec280dbe2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587604"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586683"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>資料合約中的列舉型別
 列舉可以在資料合約模型中表示。 本主題將逐步介紹幾個範例，說明程式設計模型。  
@@ -39,7 +39,7 @@ ms.locfileid: "64587604"
   
  例如，您可以在傳送端上使用 `CarConditionEnum`，而在接收端上使用 `CarConditionWithNumbers`。 雖然傳送端對 `Used` 使用 "1" 值，而接收端使用 "20" 值，但是 XML 表示法對兩端都是 `<condition>Used</condition>`。  
   
- 如果要包含在資料合約中，您必須套用 <xref:System.Runtime.Serialization.EnumMemberAttribute> 屬性。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中，您永遠可以對列舉套用特殊值 0 (零)，這也是任何列舉的預設值。 然而，即使這個特殊的零值也無法序列化，除非它標上 <xref:System.Runtime.Serialization.EnumMemberAttribute> 屬性。  
+ 如果要包含在資料合約中，您必須套用 <xref:System.Runtime.Serialization.EnumMemberAttribute> 屬性。 在.NET Framework 中，您一律可以套用特殊值 0 （零） 列舉型別，這也是任何列舉型別的預設值。 然而，即使這個特殊的零值也無法序列化，除非它標上 <xref:System.Runtime.Serialization.EnumMemberAttribute> 屬性。  
   
  這種情形有兩個例外狀況：  
   

@@ -2,18 +2,18 @@
 title: 程式設計手冊 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
-ms.openlocfilehash: 608ed431009c033de39cc38748bcbf173cf47cd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf8dbaf5991d1991267ad31125029298cffcfcd3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785576"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592917"
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a>程式設計手冊 (LINQ to XML) (Visual Basic)
 本節提供使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 進行程式設計的概念性和使用說明資訊。  
   
 ## <a name="who-should-read-this-documentation"></a>本文件的對象  
- 這份文件為目標的開發人員已經了解 Visual Basic 和一些基本層面[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]。  
+ 這份文件為目標的開發人員已經了解 Visual Basic 和.NET Framework 的一些基本層面。  
   
  本文件的目標在於讓各種開發人員容易使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 可讓 XML 程式設計更為容易。 您不需要是專業開發人員就可以使用本文件。  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: a205682bb15b5d25ba0a2df895533d3443a41409
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2394a23ddd59d09ce53c78fc4486fc5bae9e8516
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663473"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583355"
 ---
 # <a name="-reference-visual-basic"></a>-參考 (Visual Basic)
 可讓編譯器進行指定的組件中的類型資訊提供給您目前編譯的專案。  
@@ -46,7 +46,7 @@ ms.locfileid: "64663473"
   
  編譯器無法辨識的組件 （而非模組） 中的型別，它必須強制執行解析的型別。 執行這其中一個範例是定義類型的執行個體。 其他方式可解決編譯器的組件中的型別名稱。 比方說，如果您繼承自組件中的類型，類型名稱就會知道給編譯器。  
   
- 參考常用的 Vbc.rsp 回應檔[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]組件，預設會使用。 使用`-noconfig`若不想讓編譯器使用 Vbc.rsp。  
+ Vbc.rsp 回應檔，以參考常用.NET Framework 組件，會使用預設值。 使用`-noconfig`若不想讓編譯器使用 Vbc.rsp。  
   
  `-reference` 的簡短形式為 `/r`。  
   

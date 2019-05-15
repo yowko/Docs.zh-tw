@@ -7,12 +7,12 @@ helpviewer_keywords:
 - connections [Visual Basic], checking status
 - connection status [Visual Basic]
 ms.assetid: 4d9ee8ab-9a6f-4279-ace4-b75afc976a74
-ms.openlocfilehash: fd618852c2d0650f168edf8dac53931216fc3a9b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1a03b181c2e363c3380c4f9858b629713641f2c2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826258"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620679"
 ---
 # <a name="how-to-check-connection-status-in-visual-basic"></a>作法：在 Visual Basic 中檢查連線狀態
 <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> 屬性可用來判斷電腦具有工作中的網路或網際網路連線。  
@@ -21,7 +21,7 @@ ms.locfileid: "58826258"
   
 ### <a name="to-check-whether-a-computer-has-a-working-connection"></a>檢查電腦是否有工作中的連線  
   
--   判斷 `IsAvailable` 屬性是 `True` 或 `False`。 下列程式碼會檢查並報告屬性的狀態︰  
+- 判斷 `IsAvailable` 屬性是 `True` 或 `False`。 下列程式碼會檢查並報告屬性的狀態︰  
   
      [!code-vb[VbResourceTasks#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#3)]  
   

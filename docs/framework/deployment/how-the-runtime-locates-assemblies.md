@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: b967e6441ae3f3d43e5a6276cfcf79e3c44f74cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59342333"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613968"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>執行階段如何找出組件
 若要成功部署 .NET Framework 應用程式，您必須了解 Common Language Runtime 如何找出並繫結至構成應用程式的組件。 根據預設，執行階段會嘗試與用來建置應用程式的組件正確版本繫結。 組態檔設定可覆寫這個預設行為。  
@@ -51,11 +51,11 @@ ms.locfileid: "59342333"
   
 4. 使用下列步驟來[探查組件](#step4) ：  
   
-    1.  如果組態和發行者原則不會影響原始參考，而且如果繫結要求是使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法來建立的，執行階段會檢查位置提示。  
+    1. 如果組態和發行者原則不會影響原始參考，而且如果繫結要求是使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法來建立的，執行階段會檢查位置提示。  
   
-    2.  如果在組態檔中找到程式碼基底，執行階段只會檢查這個位置。 如果此探查失敗，執行階段會判定繫結要求失敗，且不會再發生其他探查。  
+    2. 如果在組態檔中找到程式碼基底，執行階段只會檢查這個位置。 如果此探查失敗，執行階段會判定繫結要求失敗，且不會再發生其他探查。  
   
-    3.  [探查一節](#step4)中會說明如何使用啟發學習法來探查組件。 如果在探查之後找不到組件，執行階段會要求 Windows Installer 提供組件。 這可以做為隨選安裝功能。  
+    3. [探查一節](#step4)中會說明如何使用啟發學習法來探查組件。 如果在探查之後找不到組件，執行階段會要求 Windows Installer 提供組件。 這可以做為隨選安裝功能。  
   
         > [!NOTE]
         >  針對沒有強式名稱的組件，不會進行版本檢查，執行階段也不會在全域組件快取中檢查沒有強式名稱的組件。  
@@ -64,11 +64,11 @@ ms.locfileid: "59342333"
 ## <a name="step-1-examining-the-configuration-files"></a>步驟 1：檢查組態檔  
  根據下列三個 XML 檔案，可以在不同層級設定組件繫結行為：  
   
--   應用程式組態檔。  
+- 應用程式組態檔。  
   
--   發行者原則檔。  
+- 發行者原則檔。  
   
--   電腦組態檔。  
+- 電腦組態檔。  
   
  這些檔案遵循相同的語法，並提供繫結重新導向、程式碼位置，以及特定組件的繫結模式等資訊。 每個組態檔都可以包含重新導向繫結處理序的 [\<assemblyBinding> 項目](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)。 [\<assemblyBinding> 項目](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)的子項目包括 [\<dependentAssembly> 項目](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)。 [\<dependentAssembly> 項目](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)的子項目包括 [\<assemblyIdentity> 項目](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment)、[\<bindingRedirect> 項目](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md) 和 [\<codeBase> 項目](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)。  
   
@@ -172,13 +172,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ### <a name="locating-the-assembly-through-probing"></a>透過探查找出組件  
  如果應用程式組態檔中沒有 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 項目，則執行階段會使用四個準則來探查組件：  
   
--   應用程式基底，這是執行應用程式所在的根位置。  
+- 應用程式基底，這是執行應用程式所在的根位置。  
   
--   文化特性，這是所參考之組件的文化特性屬性。  
+- 文化特性，這是所參考之組件的文化特性屬性。  
   
--   名稱，這是所參考之組件的名稱。  
+- 名稱，這是所參考之組件的名稱。  
   
--   [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 項目的 `privatePath` 屬性，這是根位置下使用者定義的子目錄清單。 您可以使用應用程式定義域的 <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> 屬性，將這個位置指定在應用程式組態檔和 Managed 程式碼中。 如果指定在 Managed 程式碼中，會先探查 Managed 程式碼 `privatePath` ，後面接著應用程式組態檔中指定的路徑。  
+- [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 項目的 `privatePath` 屬性，這是根位置下使用者定義的子目錄清單。 您可以使用應用程式定義域的 <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> 屬性，將這個位置指定在應用程式組態檔和 Managed 程式碼中。 如果指定在 Managed 程式碼中，會先探查 Managed 程式碼 `privatePath` ，後面接著應用程式組態檔中指定的路徑。  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>探查應用程式基底和文化特性目錄  
  執行階段一定會從應用程式的基底開始探查，該基底可以是 URL，或是應用程式在電腦上的根目錄。 如果在應用程式基底中找不到參考的組件，而且沒有提供任何文化特性資訊，執行階段會搜尋具有該組件名稱的任何子目錄。 所探查的目錄包括：  
@@ -213,13 +213,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="probing-examples"></a>探查範例  
  假設有下列資訊：  
   
--   參考的組件名稱：myAssembly  
+- 參考的組件名稱：myAssembly  
   
--   應用程式根目錄： `http://www.code.microsoft.com`  
+- 應用程式根目錄：`http://www.code.microsoft.com`  
   
--   組態檔中的 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 項目指定：bin  
+- 組態檔中的 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 項目指定：bin  
   
--   文化特性：de  
+- 文化特性：de  
   
  執行階段會探查下列 URL：  
   
@@ -249,5 +249,5 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 ## <a name="see-also"></a>另請參閱
 
-- [組件載入的最佳作法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
+- [組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [部署](../../../docs/framework/deployment/index.md)

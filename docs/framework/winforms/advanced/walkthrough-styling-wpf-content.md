@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: d815311a89ba09ade7e3092ca4eeab67cbe20bd0
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: b689bb7299d541708db7ae786bff62a1007608e5
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211246"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557876"
 ---
 # <a name="walkthrough-style-wpf-content"></a>逐步解說：樣式的 WPF 內容
 
@@ -58,15 +58,15 @@ ms.locfileid: "65211246"
 
 1. 在 Windows Form 設計工具中開啟 `Form1`。
 
-2. 在 **工具箱**，按兩下`UserControl1`若要建立的執行個體`UserControl1`表單上。
+1. 在 **工具箱**，按兩下`UserControl1`若要建立的執行個體`UserControl1`表單上。
 
      `UserControl1` 的執行個體裝載於名為 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。
 
-3. 中的智慧標籤面板`elementHost1`，按一下**編輯裝載內容**從下拉式清單。
+1. 中的智慧標籤面板`elementHost1`，按一下**編輯裝載內容**從下拉式清單。
 
      `UserControl1` 會在 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] 中開啟。
 
-4. 在 [XAML] 檢閱中，插入下列 XAML 到 `<UserControl>` 開頭標記後面。
+1. 在 [XAML] 檢閱中，插入下列 XAML 到 `<UserControl>` 開頭標記後面。
 
      此 XAML 會建立具有對比漸層框線的漸層。 按一下控制項時，漸層會變更，產生已按下的按鈕外觀。 如需詳細資訊，請參閱 [設定樣式和範本](../../wpf/controls/styling-and-templating.md)。
 
@@ -118,7 +118,7 @@ ms.locfileid: "65211246"
    </UserControl.Resources>
    ```
 
-4. 藉由插入 [取消] 按鈕`<Button>` 標籤中的下列 XAML，套用前一個步驟中定義的 `SimpleButton` 樣式到 [取消] 按鈕。
+1. 藉由插入 [取消] 按鈕`<Button>` 標籤中的下列 XAML，套用前一個步驟中定義的 `SimpleButton` 樣式到 [取消] 按鈕。
 
    ```xaml
    Style="{StaticResource SimpleButton}
@@ -131,15 +131,15 @@ ms.locfileid: "65211246"
                 Style="{StaticResource SimpleButton}">Cancel</Button>
    ```
 
-5. 建置專案。
+1. 建置專案。
 
-6. 在 Windows Form 設計工具中開啟 `Form1`。
+1. 在 Windows Form 設計工具中開啟 `Form1`。
 
-7. 新的樣式會套用至按鈕控制項。
+1. 新的樣式會套用至按鈕控制項。
 
-8. 從**偵錯**功能表上，選取**開始偵錯**執行應用程式。
+1. 從**偵錯**功能表上，選取**開始偵錯**執行應用程式。
 
-9. 按一下 [確定] 和 [取消] 按鈕，然後檢視其差異。
+1. 按一下 [確定] 和 [取消] 按鈕，然後檢視其差異。
 
 ## <a name="see-also"></a>另請參閱
 

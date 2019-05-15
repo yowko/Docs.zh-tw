@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d35e2775c6c6912d2a36c550202b309ebdeaa32
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034550"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583835"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>設定參數和參數資料類型
 
@@ -33,7 +33,7 @@ ms.locfileid: "62034550"
 
 ## <a name="working-with-parameter-placeholders"></a>使用參數預留位置
 
-參數預留位置的語法會隨資料來源而有所不同。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者對於命名和指定參數及參數預留位置的處理方式各有不同。 這個語法是特定資料來源專用的，如以下資料表所述：
+參數預留位置的語法會隨資料來源而有所不同。 .NET Framework 資料提供者會以不同方式來處理參數和參數預留位置的命名及指定。 這個語法是特定資料來源專用的，如以下資料表所述：
 
 |資料提供者|參數命名語法|
 |-------------------|-----------------------------|
@@ -44,9 +44,9 @@ ms.locfileid: "62034550"
 
 ## <a name="specifying-parameter-data-types"></a>指定的參數資料類型
 
-參數的資料型別是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者特有的。 指定型別會使 `Parameter` 的值在傳遞給資料來源前，先轉換成 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者型別。 您也可以使用一般方式指定 `Parameter` 的型別，方法是將 `DbType` 物件的 `Parameter` 屬性設為特定的 <xref:System.Data.DbType>。
+參數的資料型別是.NET Framework 資料提供者特有的。 指定類型的值轉換`Parameter`為.NET Framework 資料提供者型別，再將值傳遞至資料來源。 您也可以使用一般方式指定 `Parameter` 的型別，方法是將 `DbType` 物件的 `Parameter` 屬性設為特定的 <xref:System.Data.DbType>。
 
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件的 `Parameter` 資料提供者型別是從 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件之 `Value` 的 `Parameter` 型別，或是 `DbType` 物件的 `Parameter` 推斷而來。 下列表格說明根據以 `Parameter` 值或指定之 `Parameter` 來傳遞的物件而推斷出的 `DbType`型別。
+.NET Framework 資料提供者型別`Parameter`物件從.NET Framework 型別推斷`Value`的`Parameter`物件，或從`DbType`的`Parameter`物件。 下列表格說明根據以 `Parameter` 值或指定之 `Parameter` 來傳遞的物件而推斷出的 `DbType`型別。
 
 |.NET Framework 類型|DbType|SqlDbType|OleDbType|OdbcType|OracleType|
 |-------------------------|------------|---------------|---------------|--------------|----------------|
@@ -101,7 +101,7 @@ ms.locfileid: "62034550"
 > [!NOTE]
 > 參數化陳述式能在伺服器上執行，都是透過允許查詢計畫重複使用的 `sp_executesql,` 。 呼叫 `sp_executesql` 的批次無法見到 `sp_executesql`批次中的本機資料指標或變數。 資料庫內容中的變更只會持續到 `sp_executesql` 陳述式結束。 如需詳細資訊，請參閱 [sp_executesql (transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql)。
 
-將參數與 <xref:System.Data.SqlClient.SqlCommand> 搭配使用以執行 SQL Server 預存程序時，加入 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 集合的參數名稱必須與預存程序中的參數標記名稱相符。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server 不支援以問號 (?) 預留位置來傳遞參數至 SQL 陳述式或預存程序。 它會將預存程式中的參數視為具名參數，並搜尋相符的參數標記。 例如， `CustOrderHist` 預存程序是使用名為 `@CustomerID`的參數所定義的。 則當您的程式碼執行預存程序時，也必須使用名為 `@CustomerID`的參數。
+將參數與 <xref:System.Data.SqlClient.SqlCommand> 搭配使用以執行 SQL Server 預存程序時，加入 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 集合的參數名稱必須與預存程序中的參數標記名稱相符。 .NET Framework Data Provider for SQL Server 不支援問號 （？） 預留位置將參數傳遞至 SQL 陳述式或預存程序。 它會將預存程式中的參數視為具名參數，並搜尋相符的參數標記。 例如， `CustOrderHist` 預存程序是使用名為 `@CustomerID`的參數所定義的。 則當您的程式碼執行預存程序時，也必須使用名為 `@CustomerID`的參數。
 
 ```sql
 CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
@@ -119,9 +119,9 @@ CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
 
 ## <a name="using-parameters-with-an-oledbcommand-or-odbccommand"></a>使用參數配合 OleDbCommand 或 OdbcCommand
 
-將參數與 <xref:System.Data.OleDb.OleDbCommand> 或 <xref:System.Data.Odbc.OdbcCommand>搭配使用時，加入至 `Parameters` 集合的參數順序必須與預存程序中所定義的參數順序相符。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 和 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC 會將預存程序內的參數視為預留位置，並依順序套用參數值。 此外，傳回值參數必須是第一個加入至 `Parameters` 集合的參數。
+將參數與 <xref:System.Data.OleDb.OleDbCommand> 或 <xref:System.Data.Odbc.OdbcCommand>搭配使用時，加入至 `Parameters` 集合的參數順序必須與預存程序中所定義的參數順序相符。 .NET Framework Data Provider for OLE DB 和 ODBC 的.NET Framework 資料提供者在預存程序的參數視為預留位置，並套用順序的參數值。 此外，傳回值參數必須是第一個加入至 `Parameters` 集合的參數。
 
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 和 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC 資料提供者不支援以具名參數來傳遞參數至 SQL 陳述式或預存程序。 這種情況下，您必須使用問號 (?) 預留位置，如下列範例所示。
+.NET Framework Data Provider for OLE DB 和 ODBC 的.NET Framework 資料提供者不支援具名的參數來傳遞參數至 SQL 陳述式或預存程序。 這種情況下，您必須使用問號 (?) 預留位置，如下列範例所示。
 
 ```sql
 SELECT * FROM Customers WHERE CustomerID = ?

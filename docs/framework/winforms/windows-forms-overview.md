@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 5eee8b4b046bd4d3f9c71b692f4bac3dd6bcea2c
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: e9d117b272cea8ebb96dc579fa1d8faf65d42c45
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211775"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583471"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms 概觀
 
@@ -22,7 +22,7 @@ ms.locfileid: "65211775"
 
 ### <a name="build-rich-interactive-user-interfaces"></a>建置豐富、 互動式的使用者介面
 
- Windows Form 是一種適用於 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的智慧型用戶端技術，它是一組 Managed 程式庫，可簡化常見的應用程式工作，例如讀取和寫入檔案系統。 當您使用像是 Visual Studio 的開發環境時，則您可以透過網路來建立與遠端電腦來顯示資訊、 要求輸入使用者，以及通訊的 Windows Form 智慧型用戶端應用程式。
+ Windows Form 是.NET Framework 中，一組簡化常見的應用程式工作，例如讀取和寫入至檔案系統的受管理程式庫的智慧型用戶端技術。 當您使用像是 Visual Studio 的開發環境時，則您可以透過網路來建立與遠端電腦來顯示資訊、 要求輸入使用者，以及通訊的 Windows Form 智慧型用戶端應用程式。
 
  在 Windows Forms 中，「表單」是一種視覺化介面，您可以在上面顯示要提供給使用者的資訊。 通常在建置 Windows Forms 應用程式時，您會將控制項加入表單，以及開發對使用者動作的回應，例如滑鼠點選或是按下按鍵。 「控制項」是獨立的使用者介面 (UI) 項目，可顯示資料或接受資料輸入。
 
@@ -90,7 +90,7 @@ ms.locfileid: "65211775"
 
 ### <a name="other-controls-and-features"></a>其他控制項和功能
 
-Windows Form 中還有許多其他功能，可讓您快速、輕鬆地實作一般工作，例如支援建立對話方塊、列印、加入說明和文件，以及將您的應用程式當地語系化為多種語言。 此外，Windows Form 仰賴 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 強固的安全性系統。 藉由這個系統，您可以發行更安全的應用程式給您的客戶。
+Windows Form 中還有許多其他功能，可讓您快速、輕鬆地實作一般工作，例如支援建立對話方塊、列印、加入說明和文件，以及將您的應用程式當地語系化為多種語言。 此外，Windows Form 依賴.NET Framework 的強固的安全性系統。 藉由這個系統，您可以發行更安全的應用程式給您的客戶。
 
 #### <a name="implement-other-controls-and-features"></a>實作其他控制項和功能
 

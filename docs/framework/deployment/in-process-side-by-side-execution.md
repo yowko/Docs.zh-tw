@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37c2ad92af938c1816c275ce217e48652b0628d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 30d9517c404dc76cdc0f8206599cacdb430a1ae9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141254"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613983"
 ---
 # <a name="in-process-side-by-side-execution"></a>同處理序並存執行
 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，您可以使用同處理序並存裝載，在單一處理序中執行多個 Common Language Runtime (CLR) 版本。 根據預設，Managed COM 元件會與建置它們的 .NET Framework 版本一起執行，不論針對程序所載入的 .NET Framework 版本為何。  
@@ -22,19 +22,19 @@ ms.locfileid: "59141254"
   
  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 提供新的方式進行並存裝載，以確保下列各項：  
   
--   安裝新版的 .NET Framework 不會影響現有應用程式。  
+- 安裝新版的 .NET Framework 不會影響現有應用程式。  
   
--   應用程式會針對用來建置的 .NET Framework 版本執行。 除非明確指示，否則它們不會使用新版 .NET Framework。 不過，應用程式較容易轉換成使用新版 .NET Framework。  
+- 應用程式會針對用來建置的 .NET Framework 版本執行。 除非明確指示，否則它們不會使用新版 .NET Framework。 不過，應用程式較容易轉換成使用新版 .NET Framework。  
   
 ## <a name="effects-on-users-and-developers"></a>使用者和開發人員的影響  
   
--   **一般使用者和系統管理員**. 這些使用者現在可以更有信心，在單獨或與應用程式一起安裝新版執行階段時，不會對其電腦造成任何影響。 現有應用程式會繼續與之前一樣地執行。  
+- **一般使用者和系統管理員**. 這些使用者現在可以更有信心，在單獨或與應用程式一起安裝新版執行階段時，不會對其電腦造成任何影響。 現有應用程式會繼續與之前一樣地執行。  
   
--   **應用程式開發人員**。 並存裝載幾乎不會影響應用程式開發人員。 根據預設，應用程式一律會針對用來建置的 .NET Framework 版本執行；這並未變更。 不過，開發人員可以覆寫這個行為，並指示應用程式在較新版的 .NET Framework 下執行 (請參閱[情節 2](#scenarios))。  
+- **應用程式開發人員**。 並存裝載幾乎不會影響應用程式開發人員。 根據預設，應用程式一律會針對用來建置的 .NET Framework 版本執行；這並未變更。 不過，開發人員可以覆寫這個行為，並指示應用程式在較新版的 .NET Framework 下執行 (請參閱[情節 2](#scenarios))。  
   
--   **程式庫開發人員和取用者**。 並存裝載無法解決程式庫開發人員所面對的相容性問題。 應用程式直接透過直接參考或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 呼叫所載入的程式庫，會持續使用載入它之 <xref:System.AppDomain> 的執行階段。 您應該針對您想要支援的所有 .NET Framework 版本測試程式庫。 如果使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 執行階段來編譯應用程式，但應用程式包括使用舊版執行階段所建置的程式庫，則該程式庫也會使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 執行階段。 不過，如果您的應用程式是使用舊版執行階段所建置，而且程式庫是使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 所建置，則您必須強制應用程式也使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (請參閱[情節 3](#scenarios))。  
+- **程式庫開發人員和取用者**。 並存裝載無法解決程式庫開發人員所面對的相容性問題。 應用程式直接透過直接參考或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 呼叫所載入的程式庫，會持續使用載入它之 <xref:System.AppDomain> 的執行階段。 您應該針對您想要支援的所有 .NET Framework 版本測試程式庫。 如果使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 執行階段來編譯應用程式，但應用程式包括使用舊版執行階段所建置的程式庫，則該程式庫也會使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 執行階段。 不過，如果您的應用程式是使用舊版執行階段所建置，而且程式庫是使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 所建置，則您必須強制應用程式也使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (請參閱[情節 3](#scenarios))。  
   
--   **Managed COM 元件開發人員**。 過去，會使用電腦上所安裝的最新執行階段版本來自動執行 Managed COM 元件。 您現在可以針對建置它們的執行階段版本執行 COM 元件。  
+- **Managed COM 元件開發人員**。 過去，會使用電腦上所安裝的最新執行階段版本來自動執行 Managed COM 元件。 您現在可以針對建置它們的執行階段版本執行 COM 元件。  
   
      如下表所示，使用 .NET Framework 1.1 版所建置的元件可以與第 4 版元件並存執行，但它們無法與 2.0、3.0 或 3.5 版元件一起執行，因為這些版本無法使用並存裝載。  
   
@@ -50,13 +50,13 @@ ms.locfileid: "59141254"
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>常見並存裝載案例  
   
--   **情節 1：** 使用舊版 .NET Framework 所建置 COM 元件的原生應用程式。  
+- **情節 1：** 使用舊版 .NET Framework 所建置 COM 元件的原生應用程式。  
   
      已安裝的 .NET Framework 版本：[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以及 COM 元件所使用的所有其他 .NET Framework 版本。  
   
      處理方式：在此情節中，不執行任何動作。 COM 元件會與註冊它們的 .NET Framework 版本一起執行。  
   
--   **情節 2**：使用 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 所建置的受控應用程式，您想要將它與 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] 一起執行，但要在 2.0 版不存在時於 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 上執行。  
+- **情節 2**：使用 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 所建置的受控應用程式，您想要將它與 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] 一起執行，但要在 2.0 版不存在時於 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 上執行。  
   
      已安裝的 .NET Framework 版本：舊版 .NET Framework 和 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "59141254"
     </configuration>  
     ```  
   
--   **情節 3：** 使用舊版 .NET Framework 所建置 COM 元件的原生應用程式，您想要將它與 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 一起執行。  
+- **情節 3：** 使用舊版 .NET Framework 所建置 COM 元件的原生應用程式，您想要將它與 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 一起執行。  
   
      已安裝的 .NET Framework 版本：[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。  
   

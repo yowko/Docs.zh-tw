@@ -9,12 +9,12 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 01257847956f22c895b00c6055ec1cdd1e89eaf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dc297bd35d7bfdb25fc50135b8e684e1b9452cb2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627080"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592579"
 ---
 # <a name="data-contract-known-types"></a>資料合約已知型別
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 類別可讓您預先指定在還原序列化期間應該納入考量的型別。 如需實用範例，請參閱 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 範例。  
@@ -27,7 +27,7 @@ ms.locfileid: "64627080"
   
 - 要傳送的資訊宣告型別為 <xref:System.Object>。 由於每種型別都繼承自 <xref:System.Object>，而且您無法預先得知實際傳送的型別，因此接收的端點無法預先判斷已傳送資料的資料合約。 這是特殊案例的第一個項目：每個資料合約衍生自預設值，會針對產生的空白資料合約<xref:System.Object>。  
   
-- 有些型別 (包括 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別) 的成員隸屬於先前三大類別的其中一個類別。 例如， <xref:System.Collections.Hashtable> 會透過 <xref:System.Object> 將實際物件儲存到雜湊資料表中。 在序列化這些型別時，接收的一方無法預先判斷這些成員的資料合約。  
+- 某些類型，其中包含.NET Framework 型別，有上述三種類別中的成員。 例如， <xref:System.Collections.Hashtable> 會透過 <xref:System.Object> 將實際物件儲存到雜湊資料表中。 在序列化這些型別時，接收的一方無法預先判斷這些成員的資料合約。  
   
 ## <a name="the-knowntypeattribute-class"></a>KnownTypeAttribute 類別  
  當資料抵達接收的結束點時，WCF 執行階段會嘗試將資料還原序列化的 common language runtime (CLR) 類型執行個體。 還原系列化作業所產生的型別，首先會經由檢查傳入訊息來判斷訊息內容所符合的資料合約來加以選定。 接著，還原序列化引擎會嘗試尋找可實作資料合約 (相容於訊息內容) 的 CLR 型別。 在此處理序中，我們會將還原序列化引擎所允許的候選型別集合稱為還原序列化程式的「已知型別」集合。  

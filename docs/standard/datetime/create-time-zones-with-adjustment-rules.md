@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立有調整規則的時區
+title: 作法：建立有調整規則的時區
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83905c97f37a0e49f6219da47e2f640ecfb8edfb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: face995dbd5ba4b0b12e80bcef10a90b46c093ff
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61901716"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586417"
 ---
-# <a name="how-to-create-time-zones-with-adjustment-rules"></a>HOW TO：建立有調整規則的時區
+# <a name="how-to-create-time-zones-with-adjustment-rules"></a>作法：建立有調整規則的時區
 
 應用程式所需的精確的時區資訊可能不存在特定的系統上有幾個原因：
 
@@ -85,8 +85,6 @@ ms.locfileid: "61901716"
 ## <a name="compiling-the-code"></a>編譯程式碼
 
 這個範例需要：
-
-* 對 System.Core.dll 的參考加入至專案。
 
 * 下列命名空間會匯入：
 

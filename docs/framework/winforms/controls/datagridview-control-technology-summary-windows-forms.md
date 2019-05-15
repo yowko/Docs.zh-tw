@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8898f76971b6088fa8ca831961ea7f12e1ab4e6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909269"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588822"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>DataGridView 控制項技術摘要 (Windows Form)
 本主題提供有關 `DataGridView` 控制項及支援這些控制項之類別的摘要資訊。  
@@ -29,7 +29,7 @@ ms.locfileid: "61909269"
  `BindingSource`  
   
 ## <a name="background"></a>背景  
- 使用者介面 (UI) 設計工具通常會發現需要向使用者顯示表格式資料。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]提供數種方式，在資料表或方格中顯示資料。 `DataGridView`控制項所代表的 Windows Form 應用程式的這項技術的最新發展。  
+ 使用者介面 (UI) 設計工具通常會發現需要向使用者顯示表格式資料。 .NET Framework 會提供數種方式可在資料表或方格中顯示資料。 `DataGridView`控制項所代表的 Windows Form 應用程式的這項技術的最新發展。  
   
  `DataGridView`控制項可以顯示從資料存放區的資料列。 支援許多類型的資料存放區。 資料存放區可以保存簡單且不具類型的資料，例如一維陣列，或它可以保留型別的資料，例如<xref:System.Data.DataSet>。 如需詳細資訊，請參閱[如何：資料繫結至 Windows Form DataGridView 控制項](how-to-bind-data-to-the-windows-forms-datagridview-control.md)。  
   

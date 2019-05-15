@@ -6,23 +6,23 @@ helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: 98a535f68efc50c2ff7409d8eadf52f9e7549566
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: ef19b80e7f4c32830aabfcf1ad595348c2107228
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201946"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599977"
 ---
-# <a name="how-to-define-abstract-properties-c-programming-guide"></a>HOW TO：定義抽象屬性 (C# 程式設計手冊)
+# <a name="how-to-define-abstract-properties-c-programming-guide"></a>作法：定義抽象屬性 (C# 程式設計手冊)
 下例示範如何定義[抽象](../../../csharp/language-reference/keywords/abstract.md)屬性。 抽象屬性宣告不提供屬性存取子實作 -- 它會宣告類別支援屬性，但保留衍生類別的存取子實作。 下例示範如何實作繼承自基底類別的抽象屬性。  
   
  這個範例包含三個檔案，每個檔案都是各自編譯，產生的組件是下次編譯參考的對象：  
   
--   abstractshape.cs：包含抽象 `Area` 屬性的 `Shape` 類別。  
+- abstractshape.cs：包含抽象 `Area` 屬性的 `Shape` 類別。  
   
--   shapes.cs：`Shape` 類別的子類別。  
+- shapes.cs：`Shape` 類別的子類別。  
   
--   shapetest.cs：要顯示某些 `Shape` 衍生物件區域的測試程式。  
+- shapetest.cs：要顯示某些 `Shape` 衍生物件區域的測試程式。  
   
  若要編譯範例，請使用下列命令：  
   
@@ -35,13 +35,13 @@ ms.locfileid: "57201946"
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   
--   屬性的修飾詞是放在屬性宣告中。 例如：  
+- 屬性的修飾詞是放在屬性宣告中。 例如：  
   
     ```csharp  
     public abstract double Area  
     ```  
   
--   宣告抽象屬性時 (例如本例的 `Area`)，您只要指出有哪些屬性存取子可用即可，不用實作它們。 本例中只有 [get](../../../csharp/language-reference/keywords/get.md) 存取子可用，所以此屬性是唯讀的。  
+- 宣告抽象屬性時 (例如本例的 `Area`)，您只要指出有哪些屬性存取子可用即可，不用實作它們。 本例中只有 [get](../../../csharp/language-reference/keywords/get.md) 存取子可用，所以此屬性是唯讀的。  
   
 ## <a name="example"></a>範例  
  下列程式碼會示範 `Shape` 的三個子類別，以及它們如何覆寫 `Area` 屬性以提供它們自己的實作。  

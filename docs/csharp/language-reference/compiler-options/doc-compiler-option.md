@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: c46118a9b02df653844a0ca04f9e8f9952a957c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7c8fc11c8799912ea6340940ccd254ae82519591
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333596"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591684"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (C# 編譯器選項)
 **-doc** 選項可讓您在 XML 檔案中放入文件註解。  
@@ -35,9 +35,9 @@ ms.locfileid: "59333596"
 ## <a name="remarks"></a>備註  
  在原始程式碼檔案中，位在下列內容前面的文件註解，可以處理並新增至 XML 檔案︰  
   
--   這類使用者定義型別，如[類別](../../../csharp/language-reference/keywords/class.md)、[委派](../../../csharp/language-reference/keywords/delegate.md)或[介面](../../../csharp/language-reference/keywords/interface.md)。  
+- 這類使用者定義型別，如[類別](../../../csharp/language-reference/keywords/class.md)、[委派](../../../csharp/language-reference/keywords/delegate.md)或[介面](../../../csharp/language-reference/keywords/interface.md)。  
   
--   這類成員如欄位、[事件](../../../csharp/language-reference/keywords/event.md)、[屬性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)或方法。  
+- 這類成員如欄位、[事件](../../../csharp/language-reference/keywords/event.md)、[屬性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)或方法。  
   
  包含主要的原始程式碼檔案會先輸出為 XML。  
   

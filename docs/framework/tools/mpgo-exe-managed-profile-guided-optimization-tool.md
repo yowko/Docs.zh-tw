@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0258edb552b53130e7df47df6ccefa9b30def843
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: e72e091d9b120042254df5de323169f6f67c61d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306335"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616063"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Managed 特性指引最佳化工具)
 
@@ -49,19 +49,19 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 
 |必要參數|說明|
 |------------------------|-----------------|
-|`-Scenario` \<*命令*><br /><br /> -或-<br /><br /> `-Scenario` \<*套件名稱*><br /><br /> -或-<br /><br /> `-Import` \<*目錄*>|若是桌面應用程式，請使用 `–Scenario` 指定執行您要最佳化之應用程式的命令，包括任何命令列引數。 如果「命令」指定的路徑包含空格，請在前後加上三組雙引號。例如：`mpgo.exe -scenario """C:\My App\myapp.exe""" -assemblylist """C:\My App\myapp.exe""" -outdir "C:\optimized files"`。 不使用雙引號。如果「命令」包含空格就無法正確運作。<br /><br /> -或-<br /><br /> 若是 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式，請使用 `–Scenario` 來指定要產生其設定檔資訊的套件。 如果您指定套件顯示名稱或套件系列名稱而不是完整套件名稱，Mpgo.exe 在只有一個套件相符的情況下，將選取與您所提供名稱相符的套件。 如果有多個套件與指定的名稱相符，Mpgo.exe 將會提示您選擇一個套件。<br /><br /> -或-<br /><br /> 使用 `-Import` 可指定應該使用先前最佳化之組件的最佳化資料來最佳化 `-AssemblyList` 中的組件。 *「目錄」* 可指定包含先前最佳化之檔案的目錄。 `–AssemblyList` 或 `–AssemblyListFile` 中指定的組件是新版組件，其將使用匯入檔案的資料進行最佳化。 使用舊版組件的最佳化資料可讓您最佳化新版組件，而不需重新執行情節。  不過，如果匯入的組件和目標組件包含的程式碼相當不同，則最佳化資料將沒有作用。 在 `–AssemblyList` 或 `–AssemblyListFile` 中指定的組件名稱，必須出現在 `–Import`*目錄* 所指定的目錄中。 如果 *「目錄」* 指定的路徑包含空格，請在前後加上三組雙引號。<br /><br /> 您必須指定 `–Scenario` 或 `–Import`，但兩者不能同時指定。|
-|`-OutDir` \<*目錄*>|放置最佳化組件的目錄。 如果輸出目錄資料夾中已有組件，則會建立新的複本，並將索引編號附加至其名稱，例如： *組件名稱*-1.exe。 如果 *「目錄」* 指定的路徑包含空格，請在前後加上雙引號。|
-|`-AssemblyList` \<*assembly1 assembly2 ...*><br /><br /> -或-<br /><br /> `-AssemblyListFile` \<*檔案*>|您要收集其相關設定檔資訊的空格分隔組件清單 (包括 .exe 和 .dll 檔)。 您可以指定 `C:\Dir\*.dll` 或 `*.dll`以選取指定或目前工作目錄中的所有組件。 如需詳細資訊，請參閱＜備註＞一節。<br /><br /> -或-<br /><br /> 包含您要收集其相關設定檔資訊之組件清單的文字檔，每行列出一個組件。 如果組件名稱開頭是連字號 (-)，請使用組件檔清單或重新命名組件。|
-|`-AppID` \<*應用程式識別碼*>|所指定套件中的應用程式 ID。 如果您使用萬用字元 (\*)，Mpgo.exe 將嘗試列舉套件中的 AppID，如果失敗則會返回 \<套件系列名稱>!App。 如果您指定的字串前面加上驚嘆號 (!)，Mpgo.exe 將串連套件系列名稱與提供的引數。|
-|`-Timeout` \<*秒數*>|在應用程式結束之前允許 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式執行的時間長度。|
+|`-Scenario` \<命令><br /><br /> -或-<br /><br /> `-Scenario` \<套件名稱><br /><br /> -或-<br /><br /> `-Import` \<目錄>|若是桌面應用程式，請使用 `–Scenario` 指定執行您要最佳化之應用程式的命令，包括任何命令列引數。 如果「命令」指定的路徑包含空格，請在前後加上三組雙引號。例如：`mpgo.exe -scenario """C:\My App\myapp.exe""" -assemblylist """C:\My App\myapp.exe""" -outdir "C:\optimized files"`。 不使用雙引號。如果「命令」包含空格就無法正確運作。<br /><br /> -或-<br /><br /> 若是 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式，請使用 `–Scenario` 來指定要產生其設定檔資訊的套件。 如果您指定套件顯示名稱或套件系列名稱而不是完整套件名稱，Mpgo.exe 在只有一個套件相符的情況下，將選取與您所提供名稱相符的套件。 如果有多個套件與指定的名稱相符，Mpgo.exe 將會提示您選擇一個套件。<br /><br /> -或-<br /><br /> 使用 `-Import` 可指定應該使用先前最佳化之組件的最佳化資料來最佳化 `-AssemblyList` 中的組件。 *「目錄」* 可指定包含先前最佳化之檔案的目錄。 `–AssemblyList` 或 `–AssemblyListFile` 中指定的組件是新版組件，其將使用匯入檔案的資料進行最佳化。 使用舊版組件的最佳化資料可讓您最佳化新版組件，而不需重新執行情節。  不過，如果匯入的組件和目標組件包含的程式碼相當不同，則最佳化資料將沒有作用。 在 `–AssemblyList` 或 `–AssemblyListFile` 中指定的組件名稱，必須出現在 `–Import`*目錄* 所指定的目錄中。 如果 *「目錄」* 指定的路徑包含空格，請在前後加上三組雙引號。<br /><br /> 您必須指定 `–Scenario` 或 `–Import`，但兩者不能同時指定。|
+|`-OutDir` \<目錄>|放置最佳化組件的目錄。 如果輸出目錄資料夾中已有組件，則會建立新的複本，並將索引編號附加至其名稱，例如： *組件名稱*-1.exe。 如果 *「目錄」* 指定的路徑包含空格，請在前後加上雙引號。|
+|`-AssemblyList` \<組件 1 組件 2 ...><br /><br /> -或-<br /><br /> `-AssemblyListFile` \<檔案>|您要收集其相關設定檔資訊的空格分隔組件清單 (包括 .exe 和 .dll 檔)。 您可以指定 `C:\Dir\*.dll` 或 `*.dll`以選取指定或目前工作目錄中的所有組件。 如需詳細資訊，請參閱＜備註＞一節。<br /><br /> -或-<br /><br /> 包含您要收集其相關設定檔資訊之組件清單的文字檔，每行列出一個組件。 如果組件名稱開頭是連字號 (-)，請使用組件檔清單或重新命名組件。|
+|`-AppID` \<應用程式識別碼>|所指定套件中的應用程式 ID。 如果您使用萬用字元 (\*)，Mpgo.exe 將嘗試列舉套件中的 AppID，如果失敗則會返回 \<套件系列名稱>!App。 如果您指定的字串前面加上驚嘆號 (!)，Mpgo.exe 將串連套件系列名稱與提供的引數。|
+|`-Timeout` \<*秒*>|在應用程式結束之前允許 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式執行的時間長度。|
 
 |選擇性參數|說明|
 |------------------------|-----------------|
 |`-64bit`|檢測 64 位元系統的組件。  即使您的組件本身宣告為 64 位元，您仍必須為 64 位元組件指定此參數。|
-|`-ExeConfig` \<*檔案名稱*>|指定您的情節用來提供版本和載入器資訊的組態檔。|
+|`-ExeConfig` \<檔案名稱>|指定您的情節用來提供版本和載入器資訊的組態檔。|
 |`-f`|在二進位組件中強制包含分析資料，即使組件已簽署也一樣。  如果組件已簽署，則必須重新簽署，否則，組件將無法載入及執行。|
 |`-Reset`|重設環境，以確保中止的程式碼剖析工作階段不會影響您的組件，然後退出。 根據預設，在程式碼剖析工作階段之前與之後，環境都會重設。|
-|`-Timeout` \<*時間 (秒)*>|以秒為單位指定程式碼剖析期間。 使用比您觀察所得的 GUI 應用程式啟動時間稍微長一點的值。 在逾時期間結束時，雖然應用程式繼續執行，但是會記錄分析資料。 如果您未設定此選項，程式碼剖析將會繼續，直到應用程式關閉為止，而且此時才會記錄資料。|
+|`-Timeout` \<時間 (秒)>|以秒為單位指定程式碼剖析期間。 使用比您觀察所得的 GUI 應用程式啟動時間稍微長一點的值。 在逾時期間結束時，雖然應用程式繼續執行，但是會記錄分析資料。 如果您未設定此選項，程式碼剖析將會繼續，直到應用程式關閉為止，而且此時才會記錄資料。|
 |`-LeaveNativeImages`|指定執行情節之後不應移除檢測的原生映像。 此選項主要是在您要取得針對執行的情節指定的應用程式時使用。 它會防止 Mpgo.exe 後續執行後重新建立原生映像。 如果您指定此選項，當您完成執行應用程式時，可能會有失去關聯的原生映像留在快取中。 在這種情況下，請使用相同的案例與組件清單執行 Mpgo.exe，並使用 `–RemoveNativeImages` 參數移除這些原生映像。|
 |`-RemoveNativeImages`|從已指定 `–LeaveNativeImages` 的回合進行清理。 如果指定了 `-RemoveNativeImages`，Mpgo.exe 就會忽略除了 `-64bit` 和 `–AssemblyList` 以外的所有引數，並會在移除所有已檢測的原生映像之後結束。|
 
@@ -102,9 +102,9 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 ## <a name="using-mpgoexe-from-visual-studio"></a>從 Visual Studio 使用 Mpgo.exe  
  您可以從 Visual Studio 執行 Mpgo.exe (請參閱[如何：指定建置事件 (C#)](/visualstudio/ide/how-to-specify-build-events-csharp) 一文)，但有下列限制：  
   
--   因為 Visual Studio 巨集預設也會使用結尾斜線標記，所以您無法使用前後加上引號且包含結尾斜線標記的路徑  (例如，`–OutDir "C:\Output Folder\"` 無效。)若要解決此限制，您可以逸出結尾斜線  (例如，請改用 `-OutDir "$(OutDir)\"`。)  
+- 因為 Visual Studio 巨集預設也會使用結尾斜線標記，所以您無法使用前後加上引號且包含結尾斜線標記的路徑  (例如，`–OutDir "C:\Output Folder\"` 無效。)若要解決此限制，您可以逸出結尾斜線  (例如，請改用 `-OutDir "$(OutDir)\"`。)  
   
--   根據預設，Mpgo.exe 不在 Visual Studio 組建路徑上。 您必須將路徑加入至 Visual Studio，或是在 Mpgo 命令列上指定完整路徑。 您可以在 Visual Studio 的建置後事件中使用 `–Scenario` 或 `–Import` 參數。 但一般的處理序會從 Visual Studio 開發人員命令提示字元中使用一次 `–Scenario`，然後在每次建置之後，再使用 `–Import` 更新最佳化組件；例如：`"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`。  
+- 根據預設，Mpgo.exe 不在 Visual Studio 組建路徑上。 您必須將路徑加入至 Visual Studio，或是在 Mpgo 命令列上指定完整路徑。 您可以在 Visual Studio 的建置後事件中使用 `–Scenario` 或 `–Import` 參數。 但一般的處理序會從 Visual Studio 開發人員命令提示字元中使用一次 `–Scenario`，然後在每次建置之後，再使用 `–Import` 更新最佳化組件；例如：`"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`。  
   
 <a name="samples"></a>   
 ## <a name="examples"></a>範例  
@@ -131,4 +131,4 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 - [Ngen.exe (原生映像產生器)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)
 - [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 - [改善桌面應用程式的啟動效能](https://go.microsoft.com/fwlink/p/?LinkId=248943)
-- [.NET 4.5 的效能改進概觀](https://go.microsoft.com/fwlink/p/?LinkId=249131)
+- [An Overview of Performance Improvements in .NET 4.5](https://go.microsoft.com/fwlink/p/?LinkId=249131) (.NET 4.5 的效能改進概觀)

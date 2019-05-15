@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立垂直文字
+title: 作法：建立垂直文字
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing vertical
 - vertical text [Windows Forms], drawing
 ms.assetid: 50c69046-4188-47d9-b949-cc2610ffd337
-ms.openlocfilehash: 8398b3f18b764743bac19022b69e7f6fac0f7d57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 009e8e392841ac6b846007a88efc33ef79f56967
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625988"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582690"
 ---
-# <a name="how-to-create-vertical-text"></a>HOW TO：建立垂直文字
+# <a name="how-to-create-vertical-text"></a>作法：建立垂直文字
 您可以使用<xref:System.Drawing.StringFormat>物件來指定，垂直而非水平繪製文字。  
   
 ## <a name="example"></a>範例  

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立本身為 UI 的增益集
+title: 作法：建立本身為 UI 的增益集
 ms.date: 03/30/2017
 helpviewer_keywords:
 - creating an add-in that is a UI [WPF]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: e12769eca2d3c963e2d7a19e50c67814bcff3152
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0464d87aef3d4e88d9340af2ac1db93c13ba26e2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625376"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592656"
 ---
-# <a name="how-to-create-an-add-in-that-is-a-ui"></a>HOW TO：建立本身為 UI 的增益集
+# <a name="how-to-create-an-add-in-that-is-a-ui"></a>作法：建立本身為 UI 的增益集
 此範例示範如何建立增益集是 Windows Presentation Foundation (WPF) 所裝載的 WPF 獨立應用程式。  
   
  增益集是 WPF 使用者控制項的 UI。 此使用者控制項的內容是單一按鈕，當按下時，會顯示訊息方塊。 WPF 獨立應用程式會裝載增益集 UI，主應用程式視窗的內容。  
@@ -81,7 +81,7 @@ ms.locfileid: "64625376"
   
 <a name="HostApp"></a>   
 ## <a name="implementing-the-host-application"></a>實作主應用程式  
- 主應用程式端配接器和建立的 [主機] 檢視中，主應用程式可以使用[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]增益集模型開啟管線，並取得增益集主應用程式檢視。 下列程式碼顯示這些步驟。  
+ 主應用程式端配接器和建立的 [主機] 檢視中，主應用程式可以使用.NET Framework 增益集模型開啟管線，並取得增益集主應用程式檢視。 下列程式碼顯示這些步驟。  
 
  主應用程式會使用一般的.NET Framework 增益集模型程式碼來啟動增益集，隱含傳回給主應用程式的 [主機] 檢視。 主應用程式接著會顯示 [主機] 檢視 (也就是<xref:System.Windows.Controls.UserControl>) 從<xref:System.Windows.Controls.Grid>。  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 0fca02ab2dcb507c1129f18f31a25c7809fc9710
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 616599e15c0d3d4c2177622d6820269bcff3ea39
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917952"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592807"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>已宣告之項目的參考 (Visual Basic)
 當您的程式碼參考宣告的項目時，Visual Basic 編譯器會符合您適當的宣告該名稱的參考中的名稱。 如果多個項目宣告具有相同名稱時，您可以控制這些項目所要參考即*合格*它的名稱。  
@@ -152,7 +152,7 @@ End Module
 ## <a name="references-to-projects"></a>專案的參考  
  若要使用[公開金鑰](../../../../visual-basic/language-reference/modifiers/public.md)定義另一個專案中的項目，您必須先設定*參考*至該專案的組件或類型程式庫。 若要設定的參考，按一下**加入參考**上**專案**功能表上或使用[/reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md)命令列編譯器選項。  
   
- 例如，您可以使用的 XML 物件模型[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]。 如果您將參考設定為<xref:System.Xml>命名空間中，您可以宣告並使用任何其類別，例如<xref:System.Xml.XmlDocument>。 下列範例會使用<xref:System.Xml.XmlDocument>。  
+ 例如，您可以使用.NET Framework 的 XML 物件模型。 如果您將參考設定為<xref:System.Xml>命名空間中，您可以宣告並使用任何其類別，例如<xref:System.Xml.XmlDocument>。 下列範例會使用<xref:System.Xml.XmlDocument>。  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
