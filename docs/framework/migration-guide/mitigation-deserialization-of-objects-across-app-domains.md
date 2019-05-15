@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbde11672dc17f80a45defc0a55bcf841e83c324
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fd0cbd4c688815139d83a742bb75c54eebbe55b7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325068"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648467"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>風險降低：在應用程式定義域之間將物件還原序列化
 在某些情況下，當應用程式使用具有不同應用程式基底的兩個或多個應用程式定義域時，嘗試在跨應用程式定義域的邏輯呼叫內容中將物件還原序列化，將會擲回例外狀況。  
@@ -27,13 +27,13 @@ ms.locfileid: "59325068"
   
 5. 如果組態系統尚未初始化，則必須先完成初始化。 這表示，除此之外執行階段還必須為組態系統建立穩定的路徑，它會這樣做：  
   
-    1.  它會尋找非預設應用程式定義域的辨識項。  
+    1. 它會尋找非預設應用程式定義域的辨識項。  
   
-    2.  它會根據預設應用程式定義域，嘗試計算非預設應用程式定義域的辨識項。  
+    2. 它會根據預設應用程式定義域，嘗試計算非預設應用程式定義域的辨識項。  
   
-    3.  為了取得預設應用程式定義域的辨識項發出的呼叫，會觸發從非預設應用程式定義域到預設應用程式定義域的跨應用程式定義域呼叫。  
+    3. 為了取得預設應用程式定義域的辨識項發出的呼叫，會觸發從非預設應用程式定義域到預設應用程式定義域的跨應用程式定義域呼叫。  
   
-    4.  在 .NET Framework 的跨應用程式定義域合約中，邏輯呼叫內容中的內容同樣必須跨應用程式定義域的界限進行封送處理。  
+    4. 在 .NET Framework 的跨應用程式定義域合約中，邏輯呼叫內容中的內容同樣必須跨應用程式定義域的界限進行封送處理。  
   
 6. 由於邏輯呼叫內容中的類型無法在預設應用程式定義域中解析，因此會擲回例外狀況。  
   

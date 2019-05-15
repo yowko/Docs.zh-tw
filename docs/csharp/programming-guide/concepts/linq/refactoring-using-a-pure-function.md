@@ -2,12 +2,12 @@
 title: 使用純虛擬函式進行重構 (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: 66aab1b92f1a017eae650b18bd13d52536e84a6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be0b0d0778fea459701153b1c629f9ce797db1aa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692294"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608914"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>使用純虛擬函式進行重構 (C#)
 下列範例會重構上述範例 ([使用擴充方法進行重構 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)) 來使用此範例中的純虛擬函式，而且尋找段落文字的程式碼會被移到純靜態方法 `ParagraphText`。  
@@ -177,7 +177,7 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>後續步驟  
  下一個範例顯示如何將 XML 規劃為不同的組織結構：  
   
--   [以不同的組織結構投影 (C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [以不同的組織結構投影 (C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1905e9f1d80931bd15cff5f3d0a92ceee29435ef
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 2bc33d27d48267f5b74f1baf67a49bdf0b55c839
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59319881"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647979"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 存取強型別 XML 資料
 做為 XPath 2.0 資料模型的執行個體，<xref:System.Xml.XPath.XPathNavigator> 類別可以包含對應至 Common Language Runtime (CLR) 型別的強型別資料。 根據 XPath 2.0 資料模型，只有項目及屬性才可以包含強型別資料。 <xref:System.Xml.XPath.XPathNavigator> 類別提供可將 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件內的資料做為強型別資料進行存取的機制，以及將一種資料型別轉換為另一種型別的機制。  
@@ -21,15 +21,15 @@ ms.locfileid: "59319881"
 ## <a name="type-information-exposed-by-xpathnavigator"></a>XPathNavigator 公開的型別資訊  
  就技術而言，XML 1.0 資料沒有型別，除非它是透過 DTD、XML 結構描述定義語言 (XSD) 結構描述或其他機制予以處理。 某些類別的型別資訊，可以與 XML 項目或屬性相關聯。  
   
--   簡單的 CLR 類型：任何 XML 結構描述語言都無法直接支援通用語言執行平台 (CLR) 類型。 由於將簡單項目及屬性內容視為最適當的 CLR 型別很有用，因此在沒有結構描述資訊的情況下，所有的簡單內容都可以具有 <xref:System.String> 型別，並且任何加入的結構描述資訊都可能會將這個內容調整為更適當的型別。 您可以利用 <xref:System.Xml.XPath.XPathNavigator.ValueType%2A> 屬性，找到與簡單項目及屬性內容最相符的 CLR 型別。 如需從結構描述內建型別對應至 CLR 型別的詳細資訊，請參閱 [System.Xml 類別中的型別支援](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)。  
+- 簡單的 CLR 類型：任何 XML 結構描述語言都無法直接支援通用語言執行平台 (CLR) 類型。 由於將簡單項目及屬性內容視為最適當的 CLR 型別很有用，因此在沒有結構描述資訊的情況下，所有的簡單內容都可以具有 <xref:System.String> 型別，並且任何加入的結構描述資訊都可能會將這個內容調整為更適當的型別。 您可以利用 <xref:System.Xml.XPath.XPathNavigator.ValueType%2A> 屬性，找到與簡單項目及屬性內容最相符的 CLR 型別。 如需從結構描述內建型別對應至 CLR 型別的詳細資訊，請參閱 [System.Xml 類別中的型別支援](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)。  
   
--   簡單 (CLR) 類型的清單：具有簡單內容的元素或屬性可包含以空白字元分隔的值清單。 這些值是透過 XML 結構描述指定為「清單型別」。 如果沒有 XML 結構描述，則會將此類簡單內容視為單一文字節點。 當有 XML 結構描述可用時，這個簡單內容可公開為一系列原子值，並且每個值都有對應至 CLR 物件集合的簡單型別。 如需從結構描述內建型別對應至 CLR 型別的詳細資訊，請參閱 [System.Xml 類別中的型別支援](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)。  
+- 簡單 (CLR) 類型的清單：具有簡單內容的元素或屬性可包含以空白字元分隔的值清單。 這些值是透過 XML 結構描述指定為「清單型別」。 如果沒有 XML 結構描述，則會將此類簡單內容視為單一文字節點。 當有 XML 結構描述可用時，這個簡單內容可公開為一系列原子值，並且每個值都有對應至 CLR 物件集合的簡單型別。 如需從結構描述內建型別對應至 CLR 型別的詳細資訊，請參閱 [System.Xml 類別中的型別支援](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)。  
   
--   具類型值：具有簡單類型之已驗證結構描述的屬性或元素都會擁有具類型值。 這個值為基本型別，如數字、字串或日期型別。 XSD 中的所有內建簡單型別都可以對應至 CLR 型別，因為 CLR 型別可做為更適合提供節點值之存取權的型別，而不是只做為 <xref:System.String>。 具有屬性或項目子系的項目會視為複雜型別。 具有簡單內容之複雜型別的具型別值 (做為子系的唯一文字節點)，與其內容之簡單型別的具型別值相同。 具有複雜內容之複雜型別的具型別值 (一或多個項目子系)，是以 <xref:System.String> 型式傳回之所有子文字節點串連的字串值。 如需從結構描述內建型別對應至 CLR 型別的詳細資訊，請參閱 [System.Xml 類別中的型別支援](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)。  
+- 具類型值：具有簡單類型之已驗證結構描述的屬性或元素都會擁有具類型值。 這個值為基本型別，如數字、字串或日期型別。 XSD 中的所有內建簡單型別都可以對應至 CLR 型別，因為 CLR 型別可做為更適合提供節點值之存取權的型別，而不是只做為 <xref:System.String>。 具有屬性或項目子系的項目會視為複雜型別。 具有簡單內容之複雜型別的具型別值 (做為子系的唯一文字節點)，與其內容之簡單型別的具型別值相同。 具有複雜內容之複雜型別的具型別值 (一或多個項目子系)，是以 <xref:System.String> 型式傳回之所有子文字節點串連的字串值。 如需從結構描述內建型別對應至 CLR 型別的詳細資訊，請參閱 [System.Xml 類別中的型別支援](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)。  
   
--   結構描述語言特定類型名稱：在大多數情況中，設為套用外部結構描述之副作用的 CLR 類型，都會被用來提供節點值的存取權。 然而，有時您也可能想要檢查與套用至 XML 文件之特定結構描述相關聯的型別。 例如，您可能想要搜尋 XML 文件，擷取根據附加的結構描述判定其具有型別內容 PurchaseOrder 的所有項目。 這類資訊只會因結構描述驗證而加以設定，並且此資訊是透過 <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> 類別的 <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> 及 <xref:System.Xml.XPath.XPathNavigator> 屬性來進行存取。 如需詳細資訊，請參閱下面的＜後結構描述驗證資訊集 (PSVI)＞一節。  
+- 結構描述語言特定類型名稱：在大多數情況中，設為套用外部結構描述之副作用的 CLR 類型，都會被用來提供節點值的存取權。 然而，有時您也可能想要檢查與套用至 XML 文件之特定結構描述相關聯的型別。 例如，您可能想要搜尋 XML 文件，擷取根據附加的結構描述判定其具有型別內容 PurchaseOrder 的所有項目。 這類資訊只會因結構描述驗證而加以設定，並且此資訊是透過 <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> 類別的 <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> 及 <xref:System.Xml.XPath.XPathNavigator> 屬性來進行存取。 如需詳細資訊，請參閱下面的＜後結構描述驗證資訊集 (PSVI)＞一節。  
   
--   結構描述語言特定類型反映：在其他情況下，您可能會想要取得套用至 XML 文件之結構描述特定類型更詳細的資料。 例如，在讀取 XML 檔案時，可能要擷取 XML 文件中每個有效節點的 `maxOccurs` 屬性，以執行部份自訂計算。 因為此資訊只會透過結構描述驗證來予以設定，所以它會透過 <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> 類別的 <xref:System.Xml.XPath.XPathNavigator> 屬性來進行存取。 如需詳細資訊，請參閱下面的＜後結構描述驗證資訊集 (PSVI)＞一節。  
+- 結構描述語言特定類型反映：在其他情況下，您可能會想要取得套用至 XML 文件之結構描述特定類型更詳細的資料。 例如，在讀取 XML 檔案時，可能要擷取 XML 文件中每個有效節點的 `maxOccurs` 屬性，以執行部份自訂計算。 因為此資訊只會透過結構描述驗證來予以設定，所以它會透過 <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> 類別的 <xref:System.Xml.XPath.XPathNavigator> 屬性來進行存取。 如需詳細資訊，請參閱下面的＜後結構描述驗證資訊集 (PSVI)＞一節。  
   
 ## <a name="xpathnavigator-typed-accessors"></a>XPathNavigator 具型別存取子  
  下表顯示可用於存取節點相關型別資訊之 <xref:System.Xml.XPath.XPathNavigator> 類別的各種屬性及方法。  
@@ -190,8 +190,8 @@ Console.WriteLine("The price of the book has been dropped 20% from {0:C} to {1:C
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [System.Xml 類別中的型別支援](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+- [System.Xml 類別中的類型支援](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
 - [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [使用 XPathNavigator 巡覽節點集](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)
-- [使用 XPathNavigator 巡覽屬性及命名空間節點](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)
+- [使用 XPathNavigator 導覽節點集](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)
+- [使用 XPathNavigator 導覽屬性和命名空間節點](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)
 - [使用 XPathNavigator 擷取 XML 資料](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)

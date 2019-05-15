@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93abf6e91c2e13173184faee281de52eb83e17f5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 8d0574c7e0910a658f1dc80d8394f55b472c31a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59314005"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634561"
 ---
 # <a name="composite-formatting"></a>複合格式
 
@@ -31,14 +31,14 @@ ms.locfileid: "59314005"
 
 下列方法支援複合格式功能：  
   
-- <xref:System.String.Format%2A?displayProperty=nameWithType>，其會傳回格式化的結果字串。  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>，傳回格式化的結果字串。  
   
-- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>，其會將格式化的結果字串附加至 <xref:System.Text.StringBuilder> 物件。   
+- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>，將格式化的結果字串附加至 <xref:System.Text.StringBuilder> 物件。   
 - <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法的部分多載，對主控台顯示格式化的結果字串。  
   
 - <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType> 方法的部分多載，將格式化的結果字串寫入至資料流或檔案。 衍生自 <xref:System.IO.TextWriter> 的類別，例如 <xref:System.IO.StreamWriter> 和 <xref:System.Web.UI.HtmlTextWriter>，也會共用這項功能。  
   
-- <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>，其會將格式化的訊息輸出至追蹤接聽程式。  
+- <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>，將格式化的訊息輸出至追蹤接聽項。  
   
 - <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>、<xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法，將格式化的訊息輸出至追蹤接聽項。  
   
@@ -90,8 +90,8 @@ ms.locfileid: "59314005"
 |類型或類型分類|請參閱|  
 |---------------------------|---------|  
 |日期和時間類型 (<xref:System.DateTime>、<xref:System.DateTimeOffset>)|[標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|列舉類型 (衍生自 <xref:System.Enum?displayProperty=nameWithType> 的所有類型)|[列舉格式字串](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|數字類型 (<xref:System.Numerics.BigInteger>、<xref:System.Byte>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>)|[標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|列舉類型 (衍生自 <xref:System.Enum?displayProperty=nameWithType> 的所有類型)|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  
+|數字類型 (<xref:System.Numerics.BigInteger>、<xref:System.Byte>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>)|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[標準 TimeSpan 格式字串](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
   
@@ -126,11 +126,11 @@ ms.locfileid: "59314005"
   
 3. 如果值實作 <xref:System.IFormattable> 介面，則會呼叫介面的 <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> 方法。 如果格式項目中有 *formatString* 值的話，就會將該值傳遞給方法；如果沒有的話，則會傳遞 `null`。 <xref:System.IFormatProvider> 引數的判斷如下：  
   
-    -   對於數值，如果呼叫具有非 null <xref:System.IFormatProvider> 引數的複合格式方法，則執行階段會從其 <xref:System.Globalization.NumberFormatInfo> 方法要求 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 物件。 如果無法提供、如果引數的值為 `null`，或者如果複合格式方法沒有 <xref:System.IFormatProvider> 參數，則會使用目前執行緒文化特性的 <xref:System.Globalization.NumberFormatInfo> 物件。  
+    - 對於數值，如果呼叫具有非 null <xref:System.IFormatProvider> 引數的複合格式方法，則執行階段會從其 <xref:System.Globalization.NumberFormatInfo> 方法要求 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 物件。 如果無法提供、如果引數的值為 `null`，或者如果複合格式方法沒有 <xref:System.IFormatProvider> 參數，則會使用目前執行緒文化特性的 <xref:System.Globalization.NumberFormatInfo> 物件。  
   
-    -   對於日期和時間值，如果呼叫具有非 null <xref:System.IFormatProvider> 引數的複合格式方法，則執行階段會從其 <xref:System.Globalization.DateTimeFormatInfo> 方法要求 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 物件。 如果無法提供、如果引數的值為 `null`，或者如果複合格式方法沒有 <xref:System.IFormatProvider> 參數，則會使用目前執行緒文化特性的 <xref:System.Globalization.DateTimeFormatInfo> 物件。  
+    - 對於日期和時間值，如果呼叫具有非 null <xref:System.IFormatProvider> 引數的複合格式方法，則執行階段會從其 <xref:System.Globalization.DateTimeFormatInfo> 方法要求 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 物件。 如果無法提供、如果引數的值為 `null`，或者如果複合格式方法沒有 <xref:System.IFormatProvider> 參數，則會使用目前執行緒文化特性的 <xref:System.Globalization.DateTimeFormatInfo> 物件。  
   
-    -   對於其他類型的物件，如果呼叫複合格式時包含 <xref:System.IFormatProvider> 引數，它的值會直接傳遞至 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 實作。 否則會傳遞 `null` 至 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 實作。  
+    - 對於其他類型的物件，如果呼叫複合格式時包含 <xref:System.IFormatProvider> 引數，它的值會直接傳遞至 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 實作。 否則會傳遞 `null` 至 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 實作。  
   
 4. 呼叫類型的無參數 `ToString` 方法，該方法會覆寫 <xref:System.Object.ToString?displayProperty=nameWithType> 或繼承其基底類別的行為。 在這種情況下，會忽略 *formatString* 元件在格式項目中指定的格式字串 (如果有的話)。  
   
@@ -172,4 +172,4 @@ ms.locfileid: "59314005"
 - [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [標準 TimeSpan 格式字串](../../../docs/standard/base-types/standard-timespan-format-strings.md)
 - [自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [列舉格式字串](../../../docs/standard/base-types/enumeration-format-strings.md)
+- [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)

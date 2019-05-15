@@ -1,5 +1,5 @@
 ---
-title: HOW TO：確認字串是否為有效的電子郵件格式
+title: 作法：確認字串是否為有效的電子郵件格式
 ms.date: 12/10/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78210f9f007060551130812fcb5a9cd5b4728adc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ddd8b0e7965ca734865e83373af2f7ee45d62c05
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58890497"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633446"
 ---
-# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>HOW TO：確認字串是否為有效的電子郵件格式
+# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>作法：確認字串是否為有效的電子郵件格式
 下列範例會使用規則運算式來確認字串是否為有效的電子郵件格式。  
 
 ## <a name="example"></a>範例  
@@ -91,9 +91,9 @@ vbc /t:library RegexUtilities.vb
   
  假設您已建立名為 RegexUtilities.dll 的類別庫，且其中包括電子郵件驗證的規則運算式，則您可用下列其中一種方式編譯這個範例：  
   
--   在 Visual Studio 中，藉由建立主控台應用程式，將 RegexUtilities.dll 的參考加入您的專案。  
+- 在 Visual Studio 中，藉由建立主控台應用程式，將 RegexUtilities.dll 的參考加入您的專案。  
   
--   在命令列中，複製原始程式碼並將其貼到文字檔案，然後使用類似下列的命令 (假設原始程式碼檔案的名稱是 Example.cs 或 Example.vb) 進行編譯：  
+- 在命令列中，複製原始程式碼並將其貼到文字檔案，然後使用類似下列的命令 (假設原始程式碼檔案的名稱是 Example.cs 或 Example.vb) 進行編譯：  
   
     ```csharp  
     csc Example.cs /r:RegexUtilities.dll  

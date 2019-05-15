@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e38ad777112e5e88fe40c530da6107d0de0e3ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7031d34916c520f52550d215a1a8e62880209c87
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336131"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590041"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>移除 DOM 中項目節點的屬性
 有許多方法可用來移除屬性。 其中一種技術是從屬性集合中移除它們。 若要如此做，請執行下列步驟：  
@@ -19,19 +19,19 @@ ms.locfileid: "59336131"
   
 2. 使用下列三種方法之一，從屬性集合移除屬性：  
   
-    -   使用 <xref:System.Xml.XmlAttributeCollection.Remove%2A> 移除特定屬性。  
+    - 使用 <xref:System.Xml.XmlAttributeCollection.Remove%2A> 移除特定屬性。  
   
-    -   使用 <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> 從集合中移除所有的屬性，並保留不具屬性的項目。  
+    - 使用 <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> 從集合中移除所有的屬性，並保留不具屬性的項目。  
   
-    -   使用 <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A>，並透過屬性的索引編號，從屬性集合中移除屬性。  
+    - 使用 <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A>，並透過屬性的索引編號，從屬性集合中移除屬性。  
   
  下列方法可從項目節點移除屬性。  
   
--   使用 <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> 移除屬性集合。  
+- 使用 <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> 移除屬性集合。  
   
--   使用 <xref:System.Xml.XmlElement.RemoveAttribute%2A>，依名稱從集合移除單一屬性。  
+- 使用 <xref:System.Xml.XmlElement.RemoveAttribute%2A>，依名稱從集合移除單一屬性。  
   
--   使用 <xref:System.Xml.XmlElement.RemoveAttributeAt%2A>，依索引編號從集合移除單一屬性。  
+- 使用 <xref:System.Xml.XmlElement.RemoveAttributeAt%2A>，依索引編號從集合移除單一屬性。  
   
  還有另一種替代方案是取得項目，再從屬性集合取得屬性，然後直接移除該屬性節點。 若要從屬性集合取得屬性，可以使用名稱 `XmlAttribute attr = attrs["attr_name"];` 及索引 `XmlAttribute attr = attrs[0];`，或是使用命名空間 `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]` 來完整限定名稱。  
   

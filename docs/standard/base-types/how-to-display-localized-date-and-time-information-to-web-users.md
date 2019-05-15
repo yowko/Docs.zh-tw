@@ -1,5 +1,5 @@
 ---
-title: HOW TO：對 Web 使用者顯示當地語系化的日期和時間資訊
+title: 作法：對 Web 使用者顯示當地語系化的日期和時間資訊
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b6bb41ad3743e19ae3f6ded48dd491542926010d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320154"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633877"
 ---
-# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>HOW TO：對 Web 使用者顯示當地語系化的日期和時間資訊
+# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>作法：對 Web 使用者顯示當地語系化的日期和時間資訊
 由於網頁可在世界的任何一個角落顯示，負責剖析及格式化日期和時間值的作業在與使用者互動時，並不應該仰賴單一的預設格式 (這通常是網頁伺服器當地文化特性的格式)。 相反地，處理來自使用者之日期和時間字串輸入的 Web 表單，應該使用該使用者慣用的文化特性對字串進行剖析。 同樣地，日期和時間資料應該以符合使用者文化特性的格式向該使用者顯示。 本主題顯示如何執行此動作。  
   
 ## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>剖析來自使用者的日期和時間字串  
@@ -35,9 +35,9 @@ ms.locfileid: "59320154"
   
 4. 呼叫 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 類型的 `TryParse` 或 `Parse` 方法來嘗試轉換。 搭配 `provider` 參數使用 `TryParse` 或 `Parse` 方法的多載，然後將下列任一項傳遞給它：  
   
-    -   在步驟 3 中建立的 <xref:System.Globalization.CultureInfo> 物件。  
+    - 在步驟 3 中建立的 <xref:System.Globalization.CultureInfo> 物件。  
   
-    -   由步驟 3 中所建立 <xref:System.Globalization.CultureInfo> 物件之 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> 屬性所傳回的 <xref:System.Globalization.DateTimeFormatInfo> 物件。  
+    - 由步驟 3 中所建立 <xref:System.Globalization.CultureInfo> 物件之 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> 屬性所傳回的 <xref:System.Globalization.DateTimeFormatInfo> 物件。  
   
 5. 如果轉換失敗，請針對由 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回之字串陣列中的每個剩餘元素，重複執行步驟 2 到 4。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "59320154"
   
 10. 呼叫 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 或 <xref:System.DateTime.TryParse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%2CSystem.DateTime%40%29?displayProperty=nameWithType> 方法，以將使用者要求的日期和時間轉換為 <xref:System.DateTime> 值。 搭配 `provider` 參數使用方法的多載，然後將下列任一項傳遞給它：  
   
-    -   在步驟 8 中建立的 <xref:System.Globalization.CultureInfo> 物件。  
+    - 在步驟 8 中建立的 <xref:System.Globalization.CultureInfo> 物件。  
   
-    -   由步驟 8 中所建立之 <xref:System.Globalization.CultureInfo> 物件的 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> 屬性所傳回的 <xref:System.Globalization.DateTimeFormatInfo> 物件。  
+    - 由步驟 8 中所建立之 <xref:System.Globalization.CultureInfo> 物件的 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> 屬性所傳回的 <xref:System.Globalization.DateTimeFormatInfo> 物件。  
   
 11. 若步驟 10 中的剖析作業失敗，請移至步驟 13。 否則，請呼叫 <xref:System.UInt32.Parse%28System.String%29?displayProperty=nameWithType> 方法以將代表使用者時區時差的字串轉換為整數。  
   
@@ -100,13 +100,13 @@ ms.locfileid: "59320154"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  若要編譯程式碼，請在不搭配程式碼後置的情況下建立 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 網頁。 然後將範例複製到網頁中，以它取代所有現有的程式碼。 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 網頁應包含下列控制項：  
   
--   <xref:System.Web.UI.WebControls.Label> 控制項，程式碼中並未參考此控制項。 將它的 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 屬性設定為 "Enter a Number:"。  
+- <xref:System.Web.UI.WebControls.Label> 控制項，程式碼中並未參考此控制項。 將它的 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 屬性設定為 "Enter a Number:"。  
   
--   名為 `DateString` 的 <xref:System.Web.UI.WebControls.TextBox> 控制項。  
+- 名為 `DateString` 的 <xref:System.Web.UI.WebControls.TextBox> 控制項。  
   
--   名為 `OKButton` 的 <xref:System.Web.UI.WebControls.Button> 控制項。 將它的 <xref:System.Web.UI.WebControls.Button.Text%2A> 屬性設為 "OK"。  
+- 名為 `OKButton` 的 <xref:System.Web.UI.WebControls.Button> 控制項。 將它的 <xref:System.Web.UI.WebControls.Button.Text%2A> 屬性設為 "OK"。  
   
--   名為 `DateInfo` 的 <xref:System.Web.UI.WebControls.HiddenField> 控制項。  
+- 名為 `DateInfo` 的 <xref:System.Web.UI.WebControls.HiddenField> 控制項。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  為了防止使用者將指令碼插入至 HTML 資料流，絕對不應在伺服器回應中直接回應使用者輸入。 而應改用 <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> 方法進行編碼。  

@@ -5,25 +5,25 @@ ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee45d983483d907b2a1e8b9e5ee12841e5c89c91
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 976c34d72f9fcc89193658e50727a0ad365f2dd8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208578"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647880"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>修改 XML 文件中的節點、內容和值
 有許多方法可以修改文件中的節點及內容。 您可以：  
   
--   使用 <xref:System.Xml.XmlNode.Value%2A> 屬性變更節點的值。  
+- 使用 <xref:System.Xml.XmlNode.Value%2A> 屬性變更節點的值。  
   
--   藉由以新節點取代節點，修改整個節點集。 這可以使用 <xref:System.Xml.XmlNode.InnerXml%2A> 屬性來完成。  
+- 藉由以新節點取代節點，修改整個節點集。 這可以使用 <xref:System.Xml.XmlNode.InnerXml%2A> 屬性來完成。  
   
--   使用 <xref:System.Xml.XmlNode.RemoveChild%2A> 方法，以新節點取代現有節點。  
+- 使用 <xref:System.Xml.XmlNode.RemoveChild%2A> 方法，以新節點取代現有節點。  
   
--   使用 <xref:System.Xml.XmlCharacterData>、<xref:System.Xml.XmlCharacterData.AppendData%2A> 或 <xref:System.Xml.XmlCharacterData.InsertData%2A> 方法，將其他字元加入繼承自 <xref:System.Xml.XmlCharacterData.ReplaceData%2A> 類別的節點。  
+- 使用 <xref:System.Xml.XmlCharacterData>、<xref:System.Xml.XmlCharacterData.AppendData%2A> 或 <xref:System.Xml.XmlCharacterData.InsertData%2A> 方法，將其他字元加入繼承自 <xref:System.Xml.XmlCharacterData.ReplaceData%2A> 類別的節點。  
   
--   使用繼承自 <xref:System.Xml.XmlCharacterData.DeleteData%2A> 之節點型別上的 <xref:System.Xml.XmlCharacterData> 方法，藉由移除某範圍的字元來修改內容。  
+- 使用繼承自 <xref:System.Xml.XmlCharacterData.DeleteData%2A> 之節點型別上的 <xref:System.Xml.XmlCharacterData> 方法，藉由移除某範圍的字元來修改內容。  
   
  變更節點值的簡單技術是使用 `node.Value = "new value";`。 下表列出此單行程式碼適用的節點型別，以及該節點型別已變更的確切資料。  
   

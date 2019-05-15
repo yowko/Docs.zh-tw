@@ -1,19 +1,19 @@
 ---
-title: HOW TO：啟動服務
+title: 作法：啟動服務
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8ad61eaa292ec4cce17ba029186caf1536afacdb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336833"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591450"
 ---
-# <a name="how-to-start-services"></a>HOW TO：啟動服務
+# <a name="how-to-start-services"></a>作法：啟動服務
 安裝服務之後，必須加以啟動。 從呼叫服務類別上的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法開始。 通常，<xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法會定義服務將執行的有用工作。 服務啟動之後，即會保持作用中，直到您以手動方式暫停或停止它為止。  
   
  服務可以設定為自動或手動啟動。 自動啟動的服務將在其安裝所在的電腦重新開機或第一次開啟時啟動。 使用者必須啟動以手動方式啟動的服務。  
@@ -58,11 +58,11 @@ ms.locfileid: "59336833"
   
 1. 執行下列其中一個動作來開啟 [服務控制管理員]：  
   
-    -   在 Windows XP 和 2000 Professional 中，以滑鼠右鍵按一下桌面上的 [我的電腦]，然後按一下 [管理]。 在出現的對話方塊中，展開 [服務與應用程式] 節點。  
+    - 在 Windows XP 和 2000 Professional 中，以滑鼠右鍵按一下桌面上的 [我的電腦]，然後按一下 [管理]。 在出現的對話方塊中，展開 [服務與應用程式] 節點。  
   
          \-或-  
   
-    -   在 Windows Server 2003 和 Windows 2000 Server 中，按一下 [啟動]、指向 [程式集]、按一下 [系統管理工具]，然後按一下 [服務]。  
+    - 在 Windows Server 2003 和 Windows 2000 Server 中，按一下 [啟動]、指向 [程式集]、按一下 [系統管理工具]，然後按一下 [服務]。  
   
         > [!NOTE]
         >  在 Windows NT 4.0 版中，您可以從 [控制台] 開啟此對話方塊。  

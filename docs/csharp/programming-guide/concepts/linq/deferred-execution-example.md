@@ -2,12 +2,12 @@
 title: 延後執行範例 (C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-ms.openlocfilehash: 9697f3e4c120c7d8bc184181ad99df08634e791e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08125f8da54db18423f90564a51fcffad8db44c2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598876"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598024"
 ---
 # <a name="deferred-execution-example-c"></a>延後執行範例 (C#)
 本主題顯示延後執行與延遲評估如何影響您 LINQ to XML 查詢的執行。  
@@ -61,7 +61,7 @@ Main: str GHI
   
  本教學課程中的下一個主題說明將查詢鏈結在一起：  
   
--   [鏈結查詢範例 (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
+- [鏈結查詢範例 (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b44ff3f460d2f33903f7f083cd1bb59c7bf83e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ddb6a5534eb7ef2dc823ac05e03d3b2d3d0cee7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648691"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623963"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ 中的順序保留
 在 PLINQ 中，目標是在達到最佳效能的同時維持正確性。 查詢應以最快的速度執行，但仍應產生正確的結果。 在某些情況下，需要保留來源序列的順序以保持正確性；不過，排序可能需要大量計算。 因此，根據預設，PLINQ 不會保留來源序列的順序。 在這方面，PLINQ 類似於 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]，但是有別於會保留順序的 LINQ to Objects。  
@@ -44,25 +44,25 @@ ms.locfileid: "54648691"
 ## <a name="query-operators-and-ordering"></a>查詢運算子和排序  
  下列查詢運算子會將順序保留導入查詢中所有後續的作業，或直到呼叫 <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> 為止：  
   
--   <xref:System.Linq.ParallelEnumerable.OrderBy%2A>  
+- <xref:System.Linq.ParallelEnumerable.OrderBy%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>  
+- <xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.ThenBy%2A>  
+- <xref:System.Linq.ParallelEnumerable.ThenBy%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>  
+- <xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>  
   
  下列 PLINQ 查詢運算子在某些情況下可能需要已排序的來源序列產生正確的結果：  
   
--   <xref:System.Linq.ParallelEnumerable.Reverse%2A>  
+- <xref:System.Linq.ParallelEnumerable.Reverse%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>  
+- <xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.TakeWhile%2A>  
+- <xref:System.Linq.ParallelEnumerable.TakeWhile%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.SkipWhile%2A>  
+- <xref:System.Linq.ParallelEnumerable.SkipWhile%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.Zip%2A>  
+- <xref:System.Linq.ParallelEnumerable.Zip%2A>  
   
  有些 PLINQ 查詢運算子的行為有所不同，這取決於其來源序列是已排序或未排序。 下表列出這些運算子。  
   

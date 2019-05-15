@@ -9,82 +9,82 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 075396ae070be5312fa7afe29e8bdf5fa81a3817
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fed5e00de83e8280681909c9b0649e7aa6ac0766
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185418"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64605909"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework 中過時的成員
 
 本文中的表格列出 .NET Framework 4.5 和更新版本中依組件分組的已淘汰類型成員。 請使用下列連結，查看每個組件中過時的成員和建議的替代做法清單。 本文不會列出過時的類型成員。 如需過時的型別清單，請參閱[已淘汰類型](obsolete-types.md)。  
   
--   [系統組件中過時的成員](#SystemMembers)  
+- [系統組件中過時的成員](#SystemMembers)  
   
-    -   [mscorlib.dll](#mscorlib)  
+    - [mscorlib.dll](#mscorlib)  
   
-    -   [PresentationCore.dll](#PresentationCore)  
+    - [PresentationCore.dll](#PresentationCore)  
   
-    -   [PresentationFramework.dll](#PresFW)  
+    - [PresentationFramework.dll](#PresFW)  
   
-    -   [System.Activities.dll](#Act)  
+    - [System.Activities.dll](#Act)  
   
-    -   [System.Activities.Presentation.dll](#ActPres)  
+    - [System.Activities.Presentation.dll](#ActPres)  
   
-    -   [System.Core.dll](#core)  
+    - [System.Core.dll](#core)  
   
-    -   [System.Data.dll](#data)  
+    - [System.Data.dll](#data)  
   
-    -   [System.Data.Entity.dll](#entity)  
+    - [System.Data.Entity.dll](#entity)  
   
-    -   [System.Data.OracleClient.dll](#oracleclient)  
+    - [System.Data.OracleClient.dll](#oracleclient)  
   
-    -   [System.Design.dll](#design)  
+    - [System.Design.dll](#design)  
   
-    -   [System.dll](#system)  
+    - [System.dll](#system)  
   
-    -   [System.Drawing.dll](#drawing)  
+    - [System.Drawing.dll](#drawing)  
   
-    -   [System.Messaging.dll](#messaging)  
+    - [System.Messaging.dll](#messaging)  
   
-    -   [System.ServiceModel.dll](#servicemodel)  
+    - [System.ServiceModel.dll](#servicemodel)  
   
-    -   [System.ServiceModel.Discovery.dll](#smDisc)  
+    - [System.ServiceModel.Discovery.dll](#smDisc)  
   
-    -   [System.Web.DataVisualization.dll](#datavisualization)  
+    - [System.Web.DataVisualization.dll](#datavisualization)  
   
-    -   [System.Web.dll](#web)  
+    - [System.Web.dll](#web)  
   
-    -   [System.Web.DynamicData.dll](#dynamicdata)  
+    - [System.Web.DynamicData.dll](#dynamicdata)  
   
-    -   [System.Web.Extensions.dll](#extensions)  
+    - [System.Web.Extensions.dll](#extensions)  
   
-    -   [System.Web.Services.dll](#services)  
+    - [System.Web.Services.dll](#services)  
   
-    -   [System.Windows.Forms.dll](#forms)  
+    - [System.Windows.Forms.dll](#forms)  
   
-    -   [System.Xaml.dll](#xaml)  
+    - [System.Xaml.dll](#xaml)  
   
-    -   [System.Xml.dll](#xml)  
+    - [System.Xml.dll](#xml)  
   
--   [Microsoft 組件中過時的成員](#MicrosoftMembers)  
+- [Microsoft 組件中過時的成員](#MicrosoftMembers)  
   
-    -   [IEHost.dll 和 IEExec.exe](#IEHost)  
+    - [IEHost.dll 和 IEExec.exe](#IEHost)  
   
-    -   [ISymWrapper.dll](#isymwrapper)  
+    - [ISymWrapper.dll](#isymwrapper)  
   
-    -   [Microsoft.Build.Conversion.v4.0.dll](#conversion)  
+    - [Microsoft.Build.Conversion.v4.0.dll](#conversion)  
   
-    -   [Microsoft.Build.Engine.dll](#engine)  
+    - [Microsoft.Build.Engine.dll](#engine)  
   
-    -   [Microsoft.Build.Framework.dll](#BuildFW)  
+    - [Microsoft.Build.Framework.dll](#BuildFW)  
   
-    -   [Microsoft.Build.Utilities.v4.0.dll](#BuildUtil4)  
+    - [Microsoft.Build.Utilities.v4.0.dll](#BuildUtil4)  
   
-    -   [Microsoft.Data.Entity.Build.Tasks.dll](#data_entity_tasks)  
+    - [Microsoft.Data.Entity.Build.Tasks.dll](#data_entity_tasks)  
   
-    -   [Microsoft.VisualBasic.dll](#visualbasic)  
+    - [Microsoft.VisualBasic.dll](#visualbasic)  
   
 <a name="SystemMembers"></a>   
 ## <a name="obsolete-members-in-system-assemblies"></a>系統組件中過時的成員  
@@ -541,7 +541,7 @@ ms.locfileid: "59185418"
 |<xref:System.Net.FileWebResponse?displayProperty=nameWithType>|<xref:System.Net.FileWebResponse.%23ctor%2A>|序列化對於這個類型而言已經過時。|  
 |<xref:System.Net.Dns?displayProperty=nameWithType>|<xref:System.Net.Dns.BeginGetHostByName%2A>|<xref:System.Net.Dns.BeginGetHostByName%2A> 對於這個類型而言已過時，請改為使用 <xref:System.Net.Dns.BeginGetHostEntry%28System.String%2CSystem.AsyncCallback%2CSystem.Object%29?displayProperty=nameWithType>。|  
 |<xref:System.Net.Dns?displayProperty=nameWithType>|<xref:System.Net.Dns.BeginResolve%28System.String%2CSystem.AsyncCallback%2CSystem.Object%29>|<xref:System.Net.Dns.BeginResolve%28System.String%2CSystem.AsyncCallback%2CSystem.Object%29> 對於這個類型而言已過時，請改為使用 <xref:System.Net.Dns.BeginGetHostEntry%28System.String%2CSystem.AsyncCallback%2CSystem.Object%29?displayProperty=nameWithType>。|  
-|<xref:System.Net.Dns?displayProperty=nameWithType>|<xref:System.Net.Dns.EndGetHostByName%2A>|<xref:System.Net.Dns.EndGetHostByName%2A> 對於這個類型而言已經過時，請改用 <xref:System.Net.Dns.EndGetHostEntry%2A?displayProperty=nameWithType>。|  
+|<xref:System.Net.Dns?displayProperty=nameWithType>|<xref:System.Net.Dns.EndGetHostByName%2A>|<xref:System.Net.Dns.EndGetHostByName%2A> 對於這個類型而言已過時，請改為使用 <xref:System.Net.Dns.EndGetHostEntry%2A?displayProperty=nameWithType>。|  
 |<xref:System.Net.Dns?displayProperty=nameWithType>|<xref:System.Net.Dns.EndResolve%2A>|<xref:System.Net.Dns.EndResolve%2A> 對於這個類型而言已過時，請改為使用 <xref:System.Net.Dns.EndGetHostEntry%2A?displayProperty=nameWithType>。|  
 |<xref:System.Net.Dns?displayProperty=nameWithType>|<xref:System.Net.Dns.GetHostByAddress%28System.Net.IPAddress%29>|<xref:System.Net.Dns.GetHostByAddress%28System.Net.IPAddress%29> 對於這個類型而言已過時，請改為使用 <xref:System.Net.Dns.GetHostEntry%28System.Net.IPAddress%29?displayProperty=nameWithType>。|  
 |<xref:System.Net.Dns?displayProperty=nameWithType>|<xref:System.Net.Dns.GetHostByAddress%28System.String%29>|<xref:System.Net.Dns.GetHostByAddress%28System.String%29> 對於這個類型而言已過時，請改為使用 <xref:System.Net.Dns.GetHostEntry%28System.String%29?displayProperty=nameWithType>。|  

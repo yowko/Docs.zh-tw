@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將使用者輸入 Web 控制項的數值轉換成數字
+title: 作法：將使用者輸入 Web 控制項的數值轉換成數字
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f732f5bf61ed65fe7e62d110494d874262e30fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 29141cb43d914dd3781e9307b6a553361152a645
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296156"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634167"
 ---
-# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>HOW TO：將使用者輸入 Web 控制項的數值轉換成數字
+# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>作法：將使用者輸入 Web 控制項的數值轉換成數字
 由於網頁可在世界上的任何角落顯示，所以，使用者可以幾乎不限數量的格式來將數值資料輸入至 <xref:System.Web.UI.WebControls.TextBox> 控制項。 因此，判斷網頁使用者的地區設定和文化特性就變得非常重要。 當您剖析使用者輸入時，可以接著套用使用者地區設定和文化特性所定義的格式設定慣例。  
   
 ### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>將來自 Web TextBox 控制項的數值輸入轉換為數字  
@@ -35,9 +35,9 @@ ms.locfileid: "59296156"
   
 4. 針對您想要轉換使用者輸入的目標數值類型呼叫 `TryParse` 或 `Parse` 方法。 搭配 `provider` 參數使用 `TryParse` 或 `Parse` 方法的多載，然後將下列任一項傳遞給它：  
   
-    -   在步驟 3 中建立的 <xref:System.Globalization.CultureInfo> 物件。  
+    - 在步驟 3 中建立的 <xref:System.Globalization.CultureInfo> 物件。  
   
-    -   由步驟 3 中所建立 <xref:System.Globalization.CultureInfo> 物件之 <xref:System.Globalization.CultureInfo.NumberFormat%2A> 屬性所傳回的 <xref:System.Globalization.NumberFormatInfo> 物件。  
+    - 由步驟 3 中所建立 <xref:System.Globalization.CultureInfo> 物件之 <xref:System.Globalization.CultureInfo.NumberFormat%2A> 屬性所傳回的 <xref:System.Globalization.NumberFormatInfo> 物件。  
   
 5. 如果轉換失敗，請針對由 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回之字串陣列中的每個剩餘元素，重複執行步驟 2 到 4。  
   
@@ -60,11 +60,11 @@ ms.locfileid: "59296156"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  若要編譯程式碼，請將它複製到 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 程式碼後置頁面，以便它取代所有現有的程式碼。 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 網頁應包含下列控制項：  
   
--   <xref:System.Web.UI.WebControls.Label> 控制項，程式碼中並未參考此控制項。 將它的 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 屬性設定為 "Enter a Number:"。  
+- <xref:System.Web.UI.WebControls.Label> 控制項，程式碼中並未參考此控制項。 將它的 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 屬性設定為 "Enter a Number:"。  
   
--   名為 `NumericString` 的 <xref:System.Web.UI.WebControls.TextBox> 控制項。  
+- 名為 `NumericString` 的 <xref:System.Web.UI.WebControls.TextBox> 控制項。  
   
--   名為 `OKButton` 的 <xref:System.Web.UI.WebControls.Button> 控制項。 將它的 <xref:System.Web.UI.WebControls.Button.Text%2A> 屬性設為 "OK"。  
+- 名為 `OKButton` 的 <xref:System.Web.UI.WebControls.Button> 控制項。 將它的 <xref:System.Web.UI.WebControls.Button.Text%2A> 屬性設為 "OK"。  
   
  將來自 `NumericUserInput` 的類別名稱變更為由 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 頁面之 `Page` 指示詞的 `Inherits` 屬性所定義的類別名稱。 將 `NumericInput` 物件參考的名稱變更為 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 頁面之 `form` 標籤的 `id` 屬性所定義的名稱。  
   

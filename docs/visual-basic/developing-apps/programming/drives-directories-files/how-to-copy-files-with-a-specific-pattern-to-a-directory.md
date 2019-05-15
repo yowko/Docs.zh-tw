@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Visual Basic 中將具有特定模式的檔案複製到目錄
+title: 作法：在 Visual Basic 中將具有特定模式的檔案複製到目錄
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.FileSystem.CopyFile method, copying files [Visual Basic]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
-ms.openlocfilehash: 437a7058abd9ae167fcde15d4bddbe69bc64b7e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 15bec7c9604b243c586b393d71007b02917d3a6e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310768"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628926"
 ---
-# <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>HOW TO：在 Visual Basic 中將具有特定模式的檔案複製到目錄
+# <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>作法：在 Visual Basic 中將具有特定模式的檔案複製到目錄
 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> 方法會傳回代表檔案路徑名稱的唯讀字串集合。 您可以使用 `wildCards` 參數指定特定模式。  
   
  如果找不到相符的檔案，則會傳回空集合。  
@@ -43,19 +43,19 @@ ms.locfileid: "59310768"
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  以下條件可能會造成例外狀況：  
   
--   因下列其中一項原因而導致路徑無效：它是長度為零的字串、它只包含空白字元、它包含無效的字元，或者它是裝置路徑 (開頭為 \\\\.\\) (<xref:System.ArgumentException>)。  
+- 因下列其中一項原因而導致路徑無效：它是長度為零的字串、它只包含空白字元、它包含無效的字元，或者它是裝置路徑 (開頭為 \\\\.\\) (<xref:System.ArgumentException>)。  
   
--   路徑無效，因為它是 `Nothing` (<xref:System.ArgumentNullException>)。  
+- 路徑無效，因為它是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   目錄不存在 (<xref:System.IO.DirectoryNotFoundException>)。  
+- 目錄不存在 (<xref:System.IO.DirectoryNotFoundException>)。  
   
--   目錄指向現有檔案 (<xref:System.IO.IOException>)。  
+- 目錄指向現有檔案 (<xref:System.IO.IOException>)。  
   
--   路徑超過系統定義的最大長度 (<xref:System.IO.PathTooLongException>)。  
+- 路徑超過系統定義的最大長度 (<xref:System.IO.PathTooLongException>)。  
   
--   路徑中的檔案或目錄名稱含有冒號 (:)，或者是無效的格式 (<xref:System.NotSupportedException>)。  
+- 路徑中的檔案或目錄名稱含有冒號 (:)，或者是無效的格式 (<xref:System.NotSupportedException>)。  
   
--   使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。 使用者缺乏必要的權限 (<xref:System.UnauthorizedAccessException>)。  
+- 使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。 使用者缺乏必要的權限 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="see-also"></a>另請參閱
 

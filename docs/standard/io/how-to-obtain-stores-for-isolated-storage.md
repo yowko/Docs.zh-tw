@@ -1,5 +1,5 @@
 ---
-title: HOW TO：取得隔離儲存區的存放區
+title: 作法：取得隔離儲存區的存放區
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0968443af28e2d403b08a1af50846e7a1369db49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ef65356d84016462941850ef9b9d6210debc62c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524568"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622698"
 ---
-# <a name="how-to-obtain-stores-for-isolated-storage"></a>HOW TO：取得隔離儲存區的存放區
+# <a name="how-to-obtain-stores-for-isolated-storage"></a>作法：取得隔離儲存區的存放區
 隔離存放區會公開資料區間內的虛擬檔案系統。 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 類別提供多種與隔離存放區互動的方法。 若要建立和擷取存放區，<xref:System.IO.IsolatedStorage.IsolatedStorageFile> 提供三種靜態方法：  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> 會傳回使用者和組件所隔離的儲存區。  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> 會傳回使用者和組件所隔離的儲存區。  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> 會傳回網域和組件所隔離的儲存區。  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> 會傳回網域和組件所隔離的儲存區。  
   
      這兩種方法都會擷取屬於從中呼叫程式碼的存放區。  
   
--   靜態方法 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> 會傳回透過傳入範圍參數組合所指定的隔離存放區。  
+- 靜態方法 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> 會傳回透過傳入範圍參數組合所指定的隔離存放區。  
   
  下列程式碼會傳回使用者、組件及網域隔離的存放區。  
   

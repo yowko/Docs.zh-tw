@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: b3cfc44c430a02ec9ffce75ebff5c8f9cc46505c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3e4fed8ddde007eb9ce233eea942d6c052f0f2c4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143372"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615183"
 ---
 # <a name="framework-libraries"></a>Framework 程式庫
 
@@ -41,23 +41,23 @@ BCL 提供最基本的類型和公用程式功能，是所有其他 .NET 類別�
 
 .NET 包含一組可承載幾乎所有 .NET 應用程式的資料結構。 其中大多是集合，但也包含其他類型。
 
-*   <xref:System.Array> - 代表可依索引存取的強型別物件陣列。 根據其建構具有固定大小。
-*   <xref:System.Collections.Generic.List%601> - 代表可依索引存取的強型別物件清單。 其大小會視需要自動調整。
-*   <xref:System.Collections.Generic.Dictionary%602> - 代表由索引鍵編製索引的值集合。 這些值可透過索引鍵存取。 其大小會視需要自動調整。
-*   <xref:System.Uri> - 提供統一資源識別項 (URI) 的物件表示，以及對 URI 各部分的簡易存取。
-*   <xref:System.DateTime> - 代表時間的瞬間，通常以一天的日期和時間表示。
+* <xref:System.Array> - 代表可依索引存取的強型別物件陣列。 根據其建構具有固定大小。
+* <xref:System.Collections.Generic.List%601> - 代表可依索引存取的強型別物件清單。 其大小會視需要自動調整。
+* <xref:System.Collections.Generic.Dictionary%602> - 代表由索引鍵編製索引的值集合。 這些值可透過索引鍵存取。 其大小會視需要自動調整。
+* <xref:System.Uri> - 提供統一資源識別項 (URI) 的物件表示，以及對 URI 各部分的簡易存取。
+* <xref:System.DateTime> - 代表時間的瞬間，通常以一天的日期和時間表示。
 
 ## <a name="utility-apis"></a>公用程式 API
 
 .NET 包含一組公用程式 API，以提供用於執行許多重要工作的功能。
 
-*   <xref:System.Net.Http.HttpClient> - 此 API 可用於傳送 HTTP 要求，以及從 URI 所識別的資源接收 HTTP 回應。
-*   <xref:System.Xml.Linq.XDocument> - 此 API 可用於載入，以及使用 LINQ 查詢 XML 文件。
-*   <xref:System.IO.StreamReader> - 此 API 可用於讀取檔案。 
-*   <xref:System.IO.StreamWriter> - 此 API 可用於寫入檔案。
+* <xref:System.Net.Http.HttpClient> - 此 API 可用於傳送 HTTP 要求，以及從 URI 所識別的資源接收 HTTP 回應。
+* <xref:System.Xml.Linq.XDocument> - 此 API 可用於載入，以及使用 LINQ 查詢 XML 文件。
+* <xref:System.IO.StreamReader> - 此 API 可用於讀取檔案。 
+* <xref:System.IO.StreamWriter> - 此 API 可用於寫入檔案。
 
 ## <a name="app-model-apis"></a>應用程式模型 API
 
 有幾家公司提供許多應用程式模型以搭配 .NET 使用。
 
-*   [ASP.NET](https://www.asp.net) - 提供用於建置網站和服務的 Web 架構。 受到 Windows、Linux 和 macOS 的支援 (視 ASP.NET 版本而定)。
+* [ASP.NET](https://www.asp.net) - 提供用於建置網站和服務的 Web 架構。 受到 Windows、Linux 和 macOS 的支援 (視 ASP.NET 版本而定)。

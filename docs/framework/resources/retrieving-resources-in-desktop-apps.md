@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74469948ffe4045e6d367f1f60b8e66dc2a7810d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 64df7a4dc859c5d4035dd640a011a813348a0334
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59109794"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650498"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>擷取桌面應用程式中的資源
 當您在 .NET Framework 傳統型應用程式中使用當地語系化資源時，最好使用主要組件封裝預設或中性文化特性的資源，並針對應用程式支援的每個語言或文化特性，建立個別的附屬組件。 然後您可以使用下一節中所述的 <xref:System.Resources.ResourceManager> 類別，來存取具名資源。 如果您選擇不要將資源嵌入主要組件和附屬組件，您也可以直接存取二進位 .resources 檔，如本文稍後的 [從 .resources 檔擷取資源](#from_file) 一節中所述。  若要擷取 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中的資源，請參閱 Windows 開發人員中心的 [建立和擷取 Windows 市集應用程式中的資源](https://go.microsoft.com/fwlink/p/?LinkID=241674) 。  
@@ -34,9 +34,9 @@ ms.locfileid: "59109794"
 ## <a name="retrieving-resources-from-assemblies"></a>從組件擷取資源  
  <xref:System.Resources.ResourceManager> 類別提供對執行階段資源的存取。 您可以使用 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> 方法來擷取字串資源，以及使用 <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> 或 <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> 方法來擷取非字串資源。 每個方法都有兩個多載：  
   
--   具有單一參數的多載，此參數是包含資源名稱的字串。 此方法會嘗試擷取目前執行緒文化特性的資源。 如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager.GetString%28System.String%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 方法。  
+- 具有單一參數的多載，此參數是包含資源名稱的字串。 此方法會嘗試擷取目前執行緒文化特性的資源。 如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager.GetString%28System.String%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 方法。  
   
--   具有兩個參數的多載︰一個包含資源名稱的字串，以及一個代表所擷取資源之文化特性的 <xref:System.Globalization.CultureInfo> 物件。 如果找不到為該文化特性設定的資源，資源管理員會使用後援規則來擷取適當的資源。 如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> 方法。  
+- 具有兩個參數的多載︰一個包含資源名稱的字串，以及一個代表所擷取資源之文化特性的 <xref:System.Globalization.CultureInfo> 物件。 如果找不到為該文化特性設定的資源，資源管理員會使用後援規則來擷取適當的資源。 如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> 方法。  
   
  資源管理員使用資源後援處理序，來控制應用程式如何擷取文化特性專屬資源。 如需詳細資訊，請參閱 [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)中的＜Resource Fallback Process＞一節。 如需具現化 <xref:System.Resources.ResourceManager> 物件的資訊，請參閱 <xref:System.Resources.ResourceManager> 類別主題中的＜Instantiating a ResourceManager Object＞(具現化 ResourceManager 物件) 一節。  
   

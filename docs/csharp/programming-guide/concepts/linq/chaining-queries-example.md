@@ -2,12 +2,12 @@
 title: 鏈結查詢範例 (C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: b77de6b1e5bd81ac70165640aecf0d4ce89be03d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8564a2ece7dc09bd3330dc9bdad31689408089cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677340"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598545"
 ---
 # <a name="chaining-queries-example-c"></a>鏈結查詢範例 (C#)
 這個範例會在先前的範例上建置，然後在將同時使用延後執行與延遲評估的兩個查詢鏈結在一起時，顯示發生什麼狀況。  
@@ -84,7 +84,7 @@ Main: str >GHI!!!<
   
  本教學課程中的下一個主題說明中繼具體化：  
   
--   [中繼具體化 (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
+- [中繼具體化 (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
   
 ## <a name="see-also"></a>另請參閱
 

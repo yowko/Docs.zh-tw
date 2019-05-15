@@ -8,12 +8,12 @@ helpviewer_keywords:
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-ms.openlocfilehash: 9718febfe5aefba75decc133ad2113b64e4547de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4cdab8c818cf3278c829e2486e89be32bb4ba277
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618064"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593036"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (C# 編譯器選項)
 使用 **-win32manifest** 選項，指定要內嵌到專案之可攜式執行檔 (PE) 中的使用者定義 Win32 應用程式資訊清單檔。  
@@ -38,9 +38,9 @@ ms.locfileid: "54618064"
   
  如果符合上述任一個條件，您的應用程式將會受限於虛擬化︰  
   
--   您可以使用 **-nowin32manifest** 選項，而且未提供後面建置步驟中的資訊清單，或未使用 **-win32res** 選項將資訊清單作為 Windows 資源 (.res) 檔案的一部分。  
+- 您可以使用 **-nowin32manifest** 選項，而且未提供後面建置步驟中的資訊清單，或未使用 **-win32res** 選項將資訊清單作為 Windows 資源 (.res) 檔案的一部分。  
   
--   您可以提供未指定所要求執行層級的自訂資訊清單。  
+- 您可以提供未指定所要求執行層級的自訂資訊清單。  
   
  Visual Studio 會建立預設.manifest 檔案，並將它與可執行檔一起儲存在偵錯和發行目錄中。 您可以在任何文字編輯器中建立自訂資訊清單，然後將檔案新增至專案，來新增自訂資訊清單。 或者，您可以使用滑鼠右鍵按一下方案總管中的 [專案] 圖示，並按一下 [新增項目]，然後按一下 [應用程式資訊清單檔案]。 新增全新或現有資訊清單檔案之後，它將會顯示在 [資訊清單] 下拉式清單中。 如需詳細資訊，請參閱[專案設計工具、應用程式頁面 (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp)。  
   

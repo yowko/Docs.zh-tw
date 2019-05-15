@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 371e958aca87c922c902d8efd945d94d611672d9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 342af20b78ae996bb61c6b563ecf42137ee51022
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702877"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629095"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>以非同步的方式呼叫同步方法
 
@@ -45,13 +45,13 @@ ms.locfileid: "46702877"
 
 本主題中的程式碼範例將示範四個使用 `BeginInvoke` 和 `EndInvoke` 進行非同步呼叫的常用方法。 呼叫 `BeginInvoke` 之後您可執行以下動作：
 
--   執行一些工作，然後呼叫 `EndInvoke` 進行封鎖，直到呼叫完成。
+- 執行一些工作，然後呼叫 `EndInvoke` 進行封鎖，直到呼叫完成。
 
--   取得使用 <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType> 屬性的 <xref:System.Threading.WaitHandle>，利用其 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法封鎖執行，直到 <xref:System.Threading.WaitHandle> 收到信號，接著呼叫 `EndInvoke`。
+- 取得使用 <xref:System.Threading.WaitHandle> 屬性的 <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType> ，利用其 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法封鎖執行，直到 <xref:System.Threading.WaitHandle> 收到信號，接著呼叫 `EndInvoke`。
 
--   輪詢 <xref:System.IAsyncResult> 所傳回的 `BeginInvoke` ，判斷非同步呼叫完成的時間，然後再呼叫 `EndInvoke`。
+- 輪詢 <xref:System.IAsyncResult> 所傳回的 `BeginInvoke` ，判斷非同步呼叫完成的時間，然後再呼叫 `EndInvoke`。
 
--   將回呼方法的委派傳遞至 `BeginInvoke`。 非同步呼叫完成之時，會在 <xref:System.Threading.ThreadPool> 執行緒上執行此方法。 回呼方法會呼叫 `EndInvoke`。
+- 將回呼方法的委派傳遞至 `BeginInvoke`。 非同步呼叫完成之時，會在 <xref:System.Threading.ThreadPool> 執行緒上執行此方法。 回呼方法會呼叫 `EndInvoke`。
 
 > [!IMPORTANT]
 > 不論您使用哪一種技術，請務必呼叫 `EndInvoke` 完成非同步呼叫。
@@ -81,7 +81,7 @@ ms.locfileid: "46702877"
  如果您使用 <xref:System.Threading.WaitHandle>，您可以在非同步呼叫完成之前或之後，且在呼叫 `EndInvoke` 擷取結果之前，執行其他的處理。
 
 > [!NOTE]
-> 當您呼叫 `EndInvoke` 時，等候控制代碼不會自動關閉。 如果您釋放所有等候控制代碼的參考，當記憶體回收收回等候控制代碼時，系統資源就會釋放。 若要在您使用完等候控制代碼後立即釋放系統資源，請呼叫 <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType> 方法來加以配置。 明確配置可處置的物件之後，記憶體回收會更有效率。
+> 當您呼叫 `EndInvoke`時，等候控制代碼不會自動關閉。 如果您釋放所有等候控制代碼的參考，當記憶體回收收回等候控制代碼時，系統資源就會釋放。 若要在您使用完等候控制代碼後立即釋放系統資源，請呼叫 <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType> 方法來加以配置。 明確配置可處置的物件之後，記憶體回收會更有效率。
 
  [!code-cpp[AsyncDelegateExamples#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/waithandle.cpp#3)]
  [!code-csharp[AsyncDelegateExamples#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/waithandle.cs#3)]
@@ -101,11 +101,11 @@ ms.locfileid: "46702877"
 
  此範例的注意事項如下：
 
--   `TestMethod` 的 `threadId` 參數是 `out` 參數 (在 Visual Basic 中為 [`<Out>` `ByRef`)，因此 `TestMethod` 絕對不會使用它的輸入值。 虛設變數會傳遞給 `BeginInvoke` 呼叫。 如果 `threadId` 參數是 `ref` 參數 (Visual Basic 中的`ByRef` )，則變數必須是類別層級的欄位，才能同時傳遞至 `BeginInvoke` 和 `EndInvoke`。
+- `TestMethod` 的 `threadId` 參數是 `out` 參數 (在 Visual Basic 中為 [`<Out>` `ByRef`)，因此 `TestMethod` 絕對不會使用它的輸入值。 虛設變數會傳遞給 `BeginInvoke` 呼叫。 如果 `threadId` 參數是 `ref` 參數 (Visual Basic 中的`ByRef` )，則變數必須是類別層級的欄位，才能同時傳遞至 `BeginInvoke` 和 `EndInvoke`。
 
--   傳遞至 `BeginInvoke` 的狀態資訊是格式字串，回呼方法會用它來格式化輸出訊息。 由於狀態資訊傳遞時的型別是 <xref:System.Object>，因此必須先轉換成適當型別才能使用。
+- 傳遞至 `BeginInvoke` 的狀態資訊是格式字串，回呼方法會用它來格式化輸出訊息。 由於狀態資訊傳遞時的型別是 <xref:System.Object>，因此必須先轉換成適當型別才能使用。
 
--   回呼是在 <xref:System.Threading.ThreadPool> 執行緒上執行的。 <xref:System.Threading.ThreadPool> 執行緒為背景執行緒，也就是說主執行緒結束之時，並不會讓應用程式繼續執行，因此此範例的主執行緒必須進入睡眠直到回呼完成為止。
+- 回呼是在 <xref:System.Threading.ThreadPool> 執行緒上執行的。 <xref:System.Threading.ThreadPool> 執行緒為背景執行緒，也就是說主執行緒結束之時，並不會讓應用程式繼續執行，因此此範例的主執行緒必須進入睡眠直到回呼完成為止。
 
  [!code-cpp[AsyncDelegateExamples#5](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/callback.cpp#5)]
  [!code-csharp[AsyncDelegateExamples#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/callback.cs#5)]

@@ -8,14 +8,14 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: d94c3624b84b2fea6760ac8f36fc592928a55834
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3163598de5d03bf1691379cddae031841b9865d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970710"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595645"
 ---
-# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>HOW TO：建立檔案或資料夾 (C# 程式設計手冊)
+# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>作法：建立檔案或資料夾 (C# 程式設計手冊)
 您可以程式設計的方式在電腦上建立資料夾、建立子資料夾、在子資料夾中建立檔案，以及將資料寫入檔案。  
   
 ## <a name="example"></a>範例  
@@ -25,7 +25,7 @@ ms.locfileid: "56970710"
   
  透過在範例中進行下列變更，您可以根據是否已有具特定名稱的檔案來指定不同的結果。 如果沒有這類檔案，程式碼會建立一個。 如果有這類檔案，程式碼會將資料附加至該檔案。  
   
--   指定非隨機的檔案名稱。  
+- 指定非隨機的檔案名稱。  
   
     ```csharp  
     // Comment out the following line.  
@@ -35,7 +35,7 @@ ms.locfileid: "56970710"
     string fileName = "MyNewFile.txt";  
     ```  
   
--   請在下列程式碼中以 `using` 陳述式取代 `if`-`else` 陳述式。  
+- 請在下列程式碼中以 `using` 陳述式取代 `if`-`else` 陳述式。  
   
     ```csharp  
     using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))   
@@ -53,15 +53,15 @@ ms.locfileid: "56970710"
   
  以下條件可能會造成例外狀況：  
   
--   資料夾名稱的格式不正確。 舉例來說，其可能包含非法的字元，或是只有空白字元 (<xref:System.ArgumentException> 類別)。 請使用 <xref:System.IO.Path> 類別建立有效的路徑名稱。  
+- 資料夾名稱的格式不正確。 舉例來說，其可能包含非法的字元，或是只有空白字元 (<xref:System.ArgumentException> 類別)。 請使用 <xref:System.IO.Path> 類別建立有效的路徑名稱。  
   
--   要建立之資料夾的父資料夾為唯讀 (<xref:System.IO.IOException> 類別)。  
+- 要建立之資料夾的父資料夾為唯讀 (<xref:System.IO.IOException> 類別)。  
   
--   資料夾名稱為 `null` (<xref:System.ArgumentNullException> 類別)。  
+- 資料夾名稱為 `null` (<xref:System.ArgumentNullException> 類別)。  
   
--   資料夾名稱過長 (<xref:System.IO.PathTooLongException> 類別)。  
+- 資料夾名稱過長 (<xref:System.IO.PathTooLongException> 類別)。  
   
--   資料夾名稱只是一個冒號 ":" (<xref:System.IO.PathTooLongException> 類別)。  
+- 資料夾名稱只是一個冒號 ":" (<xref:System.IO.PathTooLongException> 類別)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  在部分信任的狀況下，可能會擲回 <xref:System.Security.SecurityException> 類別的執行個體。  
