@@ -1,21 +1,21 @@
 ---
-title: HOW TO：將內容從不同的檔案 (LINQ) (Visual Basic)
+title: 作法：將內容從不同的檔案 (LINQ) (Visual Basic)
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 91337e6a20329cbf3d4d6f0d30a2d604e80474a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ac91ffaf914a8b799ad1124e9361595d482366b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778062"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593496"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a><span data-ttu-id="15a19-102">HOW TO：將內容從不同的檔案 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="15a19-102">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a><span data-ttu-id="7203a-102">作法：將內容從不同的檔案 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7203a-102">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="15a19-103">此範例示範如何將兩個逗號分隔檔案中資料的共同值當做相符的索引鍵，聯結這兩個檔案中的資料。</span><span class="sxs-lookup"><span data-stu-id="15a19-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="15a19-104">如果您必須將兩個試算表中的資料，或一個試算表和一個不同格式之檔案中的資料合併為新的檔案，這個方法就很有用。</span><span class="sxs-lookup"><span data-stu-id="15a19-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="15a19-105">您可以修改範例，以搭配任何類型的結構化文字使用。</span><span class="sxs-lookup"><span data-stu-id="15a19-105">You can modify the example to work with any kind of structured text.</span></span>  
+<span data-ttu-id="7203a-103">此範例示範如何將兩個逗號分隔檔案中資料的共同值當做相符的索引鍵，聯結這兩個檔案中的資料。</span><span class="sxs-lookup"><span data-stu-id="7203a-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="7203a-104">如果您必須將兩個試算表中的資料，或一個試算表和一個不同格式之檔案中的資料合併為新的檔案，這個方法就很有用。</span><span class="sxs-lookup"><span data-stu-id="7203a-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="7203a-105">您可以修改範例，以搭配任何類型的結構化文字使用。</span><span class="sxs-lookup"><span data-stu-id="7203a-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-## <a name="to-create-the-data-files"></a><span data-ttu-id="15a19-106">建立資料檔</span><span class="sxs-lookup"><span data-stu-id="15a19-106">To create the data files</span></span>
+## <a name="to-create-the-data-files"></a><span data-ttu-id="7203a-106">建立資料檔</span><span class="sxs-lookup"><span data-stu-id="7203a-106">To create the data files</span></span>
   
-1. <span data-ttu-id="15a19-107">將下列各行複製到名為 scores.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。</span><span class="sxs-lookup"><span data-stu-id="15a19-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="15a19-108">該檔案代表試算表資料。</span><span class="sxs-lookup"><span data-stu-id="15a19-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="15a19-109">第 1 欄是學生的學號，第 2 欄到第 5 欄則是測驗分數。</span><span class="sxs-lookup"><span data-stu-id="15a19-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
+1. <span data-ttu-id="7203a-107">將下列各行複製到名為 scores.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。</span><span class="sxs-lookup"><span data-stu-id="7203a-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="7203a-108">該檔案代表試算表資料。</span><span class="sxs-lookup"><span data-stu-id="7203a-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="7203a-109">第 1 欄是學生的學號，第 2 欄到第 5 欄則是測驗分數。</span><span class="sxs-lookup"><span data-stu-id="7203a-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ ms.locfileid: "61778062"
     122, 94, 92, 91, 91  
     ```  
   
-2. <span data-ttu-id="15a19-110">將下列各行複製到名為 names.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。</span><span class="sxs-lookup"><span data-stu-id="15a19-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="15a19-111">該檔案代表內含學生姓氏、名字和學號的試算表。</span><span class="sxs-lookup"><span data-stu-id="15a19-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
+2. <span data-ttu-id="7203a-110">將下列各行複製到名為 names.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。</span><span class="sxs-lookup"><span data-stu-id="7203a-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="7203a-111">該檔案代表內含學生姓氏、名字和學號的試算表。</span><span class="sxs-lookup"><span data-stu-id="7203a-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -49,7 +49,7 @@ ms.locfileid: "61778062"
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a><span data-ttu-id="15a19-112">範例</span><span class="sxs-lookup"><span data-stu-id="15a19-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="7203a-112">範例</span><span class="sxs-lookup"><span data-stu-id="7203a-112">Example</span></span>  
 
 ```vb
 Imports System.Collections.Generic
@@ -120,15 +120,7 @@ End Class
 ' 12 total names in list 
 ```  
 
-## <a name="compiling-the-code"></a><span data-ttu-id="15a19-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="15a19-113">Compiling the code</span></span>
+## <a name="see-also"></a><span data-ttu-id="7203a-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7203a-113">See also</span></span>
 
-<span data-ttu-id="15a19-114">建立並編譯專案，以下列選項之一為目標：</span><span class="sxs-lookup"><span data-stu-id="15a19-114">Create and compile a project that targets one of the following options:</span></span>
-
-- <span data-ttu-id="15a19-115">.NET Framework 3.5 版與對 System.Core.dll 的參考。</span><span class="sxs-lookup"><span data-stu-id="15a19-115">.NET Framework version 3.5 with a reference to System.Core.dll.</span></span>
-- <span data-ttu-id="15a19-116">NET Framework 4.0 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="15a19-116">.NET Framework version 4.0 or higher.</span></span>
-- <span data-ttu-id="15a19-117">NET Core 1.0 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="15a19-117">.NET Core version 1.0 or higher.</span></span>
-  
-## <a name="see-also"></a><span data-ttu-id="15a19-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="15a19-118">See also</span></span>
-
-- [<span data-ttu-id="15a19-119">LINQ 和字串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="15a19-119">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="15a19-120">LINQ 與檔案目錄 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="15a19-120">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="7203a-114">LINQ 和字串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7203a-114">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="7203a-115">LINQ 與檔案目錄 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7203a-115">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
