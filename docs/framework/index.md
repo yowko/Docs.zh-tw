@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6e21d2514ad357c906885750d9320575bdb75b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d93dea42dbb854d8d52bd5cf3e54d1ce0d892d6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643929"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635523"
 ---
 # <a name="net-framework-guide"></a>.NET Framework 指南
 
@@ -28,7 +28,7 @@ ms.locfileid: "61643929"
 
 如需適用於使用者和開發人員的 .NET Framework 一般簡介，請參閱[使用者入門](./get-started/index.md)。 如需 .NET Framework 架構與重要功能的簡介，請參閱[概觀](./get-started/overview.md)。
 
-.NET Framework 可以搭配 Docker 與 [Windows 容器 (英文)](/virtualization/windowscontainers/about/) 使用。 請參閱[使用 Docker 部署 .NET Framework 應用程式](./docker/index.md)，以了解如何在 Docker 容器中執行應用程式。
+.NET Framework 可以搭配 Docker 與 [Windows 容器 (英文)](/virtualization/windowscontainers/about/) 使用。
 
 ## <a name="installation"></a>安裝
 
@@ -51,9 +51,6 @@ ms.locfileid: "61643929"
 
 * [移轉手冊](./migration-guide/index.md)  
 提供將應用程式移轉至新版 .NET Framework 時所需考量的資源與變更清單。
-
-* [Docker 上的 .NET Framework 指南](./docker/index.md)  
-使用 Windows 容器，提供搭配 Docker 執行 .NET Framework 應用程式的資源。
 
 * [開發指南](./development-guide.md)  
 提供應用程式開發所有主要技術領域和工作的指引，包括建立、設定、偵錯、保護及部署您的應用程式，以及有關動態程式設計、互通性、擴充性、記憶體管理和執行緒的資訊。

@@ -3,12 +3,12 @@ title: ML.NET 操作指南
 description: 了解如何執行特定工作協助建立自訂 AI 解決方案，以及將 Machine Learning 整合到您的.NET 應用程式。
 ms.custom: seodec18
 ms.date: 03/01/2019
-ms.openlocfilehash: 83188e65ccd02e6928cb4b87577105a75ee96245
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c16adf6bf85aec1aef51751c6d4fe8c7f0f3c9f4
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649153"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645036"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>.NET Machine Learning 操作指南 
 

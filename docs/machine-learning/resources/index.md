@@ -3,12 +3,12 @@ title: 機器學習資源
 description: 探索這些 ML.NET 資源，協助製作量身打造的 AI 解決方案，以及與您的 .NET 應用程式相整合。
 ms.custom: seodec18
 ms.date: 03/01/2019
-ms.openlocfilehash: 0558b4ec3ec170faf136441d99ba80949310bbb1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9a4c0633034a73f2531aea19c2efe23ff6b41cef
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636612"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645144"
 ---
 # <a name="machine-learning-resources"></a>機器學習資源 
 

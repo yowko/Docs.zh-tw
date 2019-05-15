@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 701086c76d4e7b811ca67a9dd2112e69a45ba254
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a31b1dc01fe1f9d9dd97775ae3c65f762b167079
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61679943"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635270"
 ---
 # <a name="c-programming-guide"></a>C# 程式設計手冊
 本節提供可透過 .NET Framework 存取 C# 的重要 C# 語言特性與功能的詳細資訊。  
@@ -66,7 +66,7 @@ ms.locfileid: "61679943"
   
  [Unsafe 程式碼和指標](../../csharp/programming-guide/unsafe-code-pointers/index.md)  
   
- [XML 文件註解](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+ [XML 文件註解](../../csharp/programming-guide/xmldoc/index.md)  
   
 ## <a name="platform-sections"></a>平台章節  
  [應用程式定義域](../../framework/app-domains/application-domains.md)  

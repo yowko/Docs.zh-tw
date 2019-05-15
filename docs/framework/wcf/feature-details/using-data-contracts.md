@@ -9,18 +9,18 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-ms.openlocfilehash: 0f33bdc006c6b965ba60257637f3cef182555d7d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3fd22cc0842c51b331905369915bd055235680c4
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637715"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592197"
 ---
 # <a name="using-data-contracts"></a>使用資料合約
 「 *資料合約* 」(Data Contract) 是服務與用戶端之間的正式合約，其中會抽象地描述要交換的資料。 也就是說，若要進行通訊，用戶端與服務並不需要共用相同的型別，而只需要共用相同的資料合約。 資料合約會針對每個參數或傳回型別精確地定義哪些資料要序列化 (變成 XML) 才能進行交換。  
   
 ## <a name="data-contract-basics"></a>資料合約基本概念  
- Windows Communication Foundation (WCF) 會使用序列化引擎預設會呼叫資料合約序列化程式序列化和還原序列化 （將它與 XML） 的資料。 包括像是整數和字串的所有 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 基本型別 (Primitive Type)，以及被視為基本型別的特定型別，例如 <xref:System.DateTime> 和 <xref:System.Xml.XmlElement>，都可以不用經過其他準備即加以序列化，而且會被視為具有預設的資料合約。 許多 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別也具有現有的資料合約。 如需可序列化型別的完整清單，請參閱 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
+ Windows Communication Foundation (WCF) 會使用序列化引擎預設會呼叫資料合約序列化程式序列化和還原序列化 （將它與 XML） 的資料。 所有.NET Framework 基本型別，例如整數和字串，以及視為基本類型，例如特定型別<xref:System.DateTime>和<xref:System.Xml.XmlElement>，沒有其他準備可以加以序列化，並會被視為具有預設的資料合約。 許多.NET Framework 型別也有現有的資料合約。 如需可序列化型別的完整清單，請參閱 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
   
  您建立的新複雜型別必須具有已針對其所定義的資料合約，才能夠進行序列化。 根據預設， <xref:System.Runtime.Serialization.DataContractSerializer> 會推斷資料合約，並且會序列化所有公開可見的型別。 型別的所有公用讀取/寫入屬性 (Property) 和欄位都會序列化。 您可以藉由使用 <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>，選擇不序列化成員。 您也可以使用 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Attribute) 明確建立資料合約。 通常將 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性套用至該型別即可達成這點。 這個屬性可以套用至類別、結構和列舉型別 (Enumeration)。 然後， <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性必須套用至資料合約型別的各個成員，以表示其為「 *資料成員*」(Data Member)，也就是這個成員應該要加以序列化。 如需詳細資訊，請參閱 <<c0> [ 可序列化型別](../../../../docs/framework/wcf/feature-details/serializable-types.md)。  
   

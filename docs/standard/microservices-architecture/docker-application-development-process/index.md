@@ -1,15 +1,13 @@
 ---
 title: Docker 應用程式的開發程序
 description: 提供 Docker 型應用程式開發選項的高層級概觀。 使用您選擇的 Visual Studio for Windows、Visual Studio for Mac 或適用於多平台支援 (Windows、Mac 與 Linux) 的 Visual Studio Code。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/27/2018
-ms.openlocfilehash: de4ec036be4611ee56823ced3e0cddca5c32b900
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a871fcbfcf079c745759cb17960fa4eaa6ec6eec
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61977691"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640077"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker 應用程式的開發程序
 

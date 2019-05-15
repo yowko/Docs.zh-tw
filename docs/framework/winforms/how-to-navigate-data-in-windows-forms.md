@@ -1,5 +1,5 @@
 ---
-title: HOW TO：巡覽 Windows Forms 中的資料
+title: 作法：巡覽 Windows Forms 中的資料
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 452aacab4580a3b07168daa6b7c03740dc98620b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801708"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583739"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>HOW TO：巡覽 Windows Forms 中的資料
 在 Windows 應用程式中，瀏覽資料來源中記錄的最簡單方式是繫結<xref:System.Windows.Forms.BindingSource>元件至資料來源，然後將控制項繫結至<xref:System.Windows.Forms.BindingSource>。 然後您可以使用內建的巡覽方法上<xref:System.Windows.Forms.BindingSource>這類<xref:System.Windows.Forms.BindingSource.MoveNext%2A>， <xref:System.Windows.Forms.BindingSource.MoveLast%2A>，<xref:System.Windows.Forms.BindingSource.MovePrevious%2A>和<xref:System.Windows.Forms.BindingSource.MoveFirst%2A>。 使用這些方法會自動調整<xref:System.Windows.Forms.BindingSource.Position%2A>並<xref:System.Windows.Forms.BindingSource.Current%2A>屬性的<xref:System.Windows.Forms.BindingSource>適當。 您也可以尋找項目，並將它設為目前的項目中，藉由設定<xref:System.Windows.Forms.BindingSource.Position%2A>屬性。  
@@ -26,7 +26,7 @@ ms.locfileid: "61801708"
 1. 設定<xref:System.Windows.Forms.BindingSource.Position%2A>屬性<xref:System.Windows.Forms.BindingSource>繫結資料移至的記錄位置。 下列範例說明如何利用<xref:System.Windows.Forms.BindingSource.MoveNext%2A>方法<xref:System.Windows.Forms.BindingSource>遞增<xref:System.Windows.Forms.BindingSource.Position%2A>屬性時`nextButton`按下。 <xref:System.Windows.Forms.BindingSource>相關聯`Customers`資料表的資料集`Northwind`。  
   
     > [!NOTE]
-    >  設定<xref:System.Windows.Forms.BindingSource.Position%2A>屬性設為值之外的第一個或最後一筆記錄不會導致發生錯誤時，為[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]將不允許您將位置設定的值超出清單的範圍。 如果您知道是否您已經看過的第一個或最後一筆記錄的應用程式中很重要，，包括邏輯，以測試是否就會超出資料元素計數。  
+    >  設定<xref:System.Windows.Forms.BindingSource.Position%2A>屬性與值之外的第一個或最後一筆記錄不會導致錯誤，因為.NET Framework 會允許您將位置設定為清單的範圍以外的值。 如果您知道是否您已經看過的第一個或最後一筆記錄的應用程式中很重要，，包括邏輯，以測試是否就會超出資料元素計數。  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.NavigatingData#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  

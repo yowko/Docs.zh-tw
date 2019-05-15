@@ -9,12 +9,12 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: d7c3bcba8e62d62904ed778a48d0e8ae6738ce00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b64c55b73a9c835ded0d7c81ff36329b8d6a8bc9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793990"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586538"
 ---
 # <a name="-netcf"></a>-netcf
 
@@ -28,7 +28,7 @@ ms.locfileid: "61793990"
 
 ## <a name="remarks"></a>備註
 
-`-netcf`選項可讓目標 Visual Basic 編譯器[!INCLUDE[Compact](~/includes/compact-md.md)]而不是完整[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]。 出現只在完整的語言功能[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]已停用。
+`-netcf`選項可讓目標 Visual Basic 編譯器[!INCLUDE[Compact](~/includes/compact-md.md)]而不是完整的.NET Framework。 是完整的.NET Framework 中的語言功能已停用。
 
 `-netcf`選項設計來搭配[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)。 停用的語言功能`-netcf`都是相同的語言功能不存在於目標檔案`-sdkpath`。
 

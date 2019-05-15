@@ -1,5 +1,5 @@
 ---
-title: HOW TO：從命令列建立 Windows Forms 應用程式
+title: 作法：從命令列建立 Windows Forms 應用程式
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91261e5077352179719e631ebeb26670ffd74792
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 72195dd49c163b26a5bcfa739768718f2a32f346
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665233"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588973"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>HOW TO：從命令列建立 Windows Forms 應用程式
 下列程序說明若要從命令列建立及執行 Windows Forms 應用程式，所必須完成的基本步驟。 在 Visual Studio 中，對這些程序有廣泛的支援。  另請參閱[逐步解說：在 WPF 中裝載 Windows Forms 控制項](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)。  
@@ -108,10 +108,6 @@ ms.locfileid: "64665233"
   
  [!code-csharp[System.Windows.Forms.FormWithButton#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.FormWithButton#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
-  
-## <a name="compiling-the-code"></a>編譯程式碼  
-  
-- 若要編譯程式碼，請遵循前面說明如何編譯及執行應用程式之程序中的指示。  
   
 ## <a name="see-also"></a>另請參閱
 

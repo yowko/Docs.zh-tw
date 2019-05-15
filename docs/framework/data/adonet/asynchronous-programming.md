@@ -2,16 +2,16 @@
 title: 非同步程式設計
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: b13ff7f67e7a62e071a27a77e72b7844dcb74d73
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: c41a231959536f4bd558fcd3e94d0d58c2375021
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846125"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584502"
 ---
 # <a name="asynchronous-programming"></a>非同步程式設計
 
-本主題討論支援進行非同步程式設計[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]包括增強功能來支援非同步程式設計功能中引進的 Data Provider for SQL Server (SqlClient) [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。
+本主題將討論非同步程式設計的支援在.NET Framework Data Provider for SQL Server (SqlClient) 包括增強功能來支援非同步程式設計功能中引進[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。
 
 ## <a name="legacy-asynchronous-programming"></a>傳統非同步程式設計
 
@@ -23,8 +23,7 @@ ms.locfileid: "57846125"
 
 3. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>
 
-
-  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中的 SqlClient 仍保留此功能。
+[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中的 SqlClient 仍保留此功能。
 
 > [!TIP]
 > 從開始[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]，所以不再需要這些舊版方法`Asynchronous Processing=true`連接字串中。
@@ -54,8 +53,7 @@ ms.locfileid: "57846125"
 
 呼叫 `async` 方法不會配置任何額外的執行緒。 它可能會在結尾處簡短地使用現有的 I/O 完成執行緒。
 
-
-  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中新增下列方法以支援非同步程式設計：
+[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中新增下列方法以支援非同步程式設計：
 
 - <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=nameWithType>
 
@@ -296,7 +294,7 @@ class Program {
 
 ### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a>使用 SQL 交易和新的非同步功能
 
-在企業應用程式中，您可能需在某些情況下新增分散式交易，以啟用多個資料庫伺服器之間的交易。 您可以使用 System.Transactions 命名空間並登記分散式交易，如下所示：
+在企業應用程式中，您可能需在某些情況下新增分散式異動，以啟用多個資料庫伺服器之間的異動。 您可以使用 System.Transactions 命名空間並登記分散式異動，如下所示：
 
 ```csharp
 using System;

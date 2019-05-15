@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: f823d9e80eb644487eab1ed84345dd8bdc10efc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 541fe9f176a6210372b58753254692142f086992
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600948"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589829"
 ---
 # <a name="value-types-and-reference-types"></a>Value Types and Reference Types
 在 Visual Basic 中的資料類型是根據其分類所實作的。 Visual Basic 資料類型可以根據自己的資料或資料指標，特定類型的變數是否儲存分類。 它會儲存它自己的資料是否*實值型別*; 如果它是的記憶體中其他位置的資料會保留指標*參考型別*。  
@@ -46,7 +46,7 @@ ms.locfileid: "64600948"
   
 - 委派  
   
- 類別是*參考的型別*。 基於這個理由，參考類型這類`Object`並`String`受到[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]類別。 請注意，每個陣列參考類型，即使其成員都是實值型別。  
+ 類別是*參考的型別*。 基於這個理由，參考類型這類`Object`和`String`所支援的.NET Framework 類別。 請注意，每個陣列參考類型，即使其成員都是實值型別。  
   
  由於每個參考型別代表基本的.NET Framework 類別，您必須使用[New 運算子](../../../../visual-basic/language-reference/operators/new-operator.md)關鍵字時將它初始化。 下列陳述式初始化陣列。  
   
