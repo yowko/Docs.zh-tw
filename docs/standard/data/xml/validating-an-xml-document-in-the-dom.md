@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fabd95d8fee6f6d8590036001ce2b0c7c23b12da
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298418"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589855"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>驗證 DOM 中的 XML 文件
 依預設，<xref:System.Xml.XmlDocument> 類別不會根據 XML 結構描述定義語言 (XSD) 結構描述或文件類型定義 (DTD)，驗證文件物件模型 (DOM) 中的 XML；只會驗證 XML 的格式是否正確。  
@@ -56,9 +56,9 @@ ms.locfileid: "59298418"
   
  在驗證載入至 DOM 的 XML 資料時，請考量下列事項。  
   
--   在上述範例中，每當遇到無效的類型時，就會呼叫 <xref:System.Xml.XmlReaderSettings.ValidationEventHandler>。 如果 <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> 未在要進行驗證的 <xref:System.Xml.XmlReader> 中設定，若因任何屬性或項目與要進行驗證之結構描述中指定的對應類型不符合，而呼叫 <xref:System.Xml.Schema.XmlSchemaValidationException> 時，則會擲回 <xref:System.Xml.XmlDocument.Load%2A>。  
+- 在上述範例中，每當遇到無效的類型時，就會呼叫 <xref:System.Xml.XmlReaderSettings.ValidationEventHandler>。 如果 <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> 未在要進行驗證的 <xref:System.Xml.XmlReader> 中設定，若因任何屬性或項目與要進行驗證之結構描述中指定的對應類型不符合，而呼叫 <xref:System.Xml.Schema.XmlSchemaValidationException> 時，則會擲回 <xref:System.Xml.XmlDocument.Load%2A>。  
   
--   當 XML 文件載入至具有可定義預設值之關聯結構描述的 <xref:System.Xml.XmlDocument> 物件時，<xref:System.Xml.XmlDocument> 會處理這些預設值，就好像它們是出現在 XML 文件中。 這表示 <xref:System.Xml.XmlReader.IsEmptyElement%2A> 屬性針對該結構描述預設會產生的項目，永遠傳回 `false`。 即使在 XML 文件中，它也做為空白項目寫入。  
+- 當 XML 文件載入至具有可定義預設值之關聯結構描述的 <xref:System.Xml.XmlDocument> 物件時，<xref:System.Xml.XmlDocument> 會處理這些預設值，就好像它們是出現在 XML 文件中。 這表示 <xref:System.Xml.XmlReader.IsEmptyElement%2A> 屬性針對該結構描述預設會產生的項目，永遠傳回 `false`。 即使在 XML 文件中，它也做為空白項目寫入。  
   
 ## <a name="validating-an-xml-document-in-the-dom"></a>驗證 DOM 中的 XML 文件  
  根據 <xref:System.Xml.XmlDocument.Validate%2A> 物件之 <xref:System.Xml.XmlDocument> 屬性中的結構描述，<xref:System.Xml.XmlDocument> 類別的 <xref:System.Xml.XmlDocument.Schemas%2A> 方法會驗證載入到 DOM 的 XML 資料。 在驗證成功之後，會套用結構描述預設值，視需要將文字值轉換成原子值，並將類型資訊與已驗證的資訊項目相關聯。 因此，具類型的 XML 資料會取代先前不具類型的 XML 資料。  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-ms.openlocfilehash: 94e9f7133c9a78ece7df5bd10cfc27c79d0652c2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d7823611df5e02040fd8735e1fa6ea7841298836
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203009"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595059"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>匿名方法 (C# 程式設計手冊)
 在 C# 2.0 版之前，宣告[委派](../../../csharp/language-reference/keywords/delegate.md)的唯一方式是使用[具名方法](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)。 C# 2.0 引入了匿名方法，而在 C# 3.0 和更新版本中，則是以 lambda 運算式取代匿名方法，成為撰寫程式碼內嵌的慣用方式。 不過，本主題中的匿名方法相關資訊也適用於 lambda 運算式。 有一種情況，是匿名方法提供了 lambda 運算式沒有的功能。 匿名方法能讓您省略參數清單。 這表示，匿名方法可以轉換成有各種不同簽章的委派。 這在 lambda 運算式是不可能的。 如需專門針對 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
@@ -49,9 +49,9 @@ ms.locfileid: "57203009"
 ## <a name="example"></a>範例  
  下例示範兩種具現化委派的方式：  
   
--   建立委派與匿名方法的關聯。  
+- 建立委派與匿名方法的關聯。  
   
--   建立委派與具名方法 (`DoWork`) 的關聯。  
+- 建立委派與具名方法 (`DoWork`) 的關聯。  
   
  在每個案例中，叫用委派時即會顯示訊息。  
   

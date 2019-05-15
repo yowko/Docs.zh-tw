@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 63d64acc0d0a1ed90a722db75b467bd3ce5f260e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f25455fac84903f9c39861e1f6863f6b2f6928f3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560332"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587382"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (C# 編譯器選項)
 指定偵錯資訊應該置於檔案以供稍後分析。  
@@ -31,19 +31,19 @@ ms.locfileid: "54560332"
 ## <a name="remarks"></a>備註  
  **-bugreport** 選項會指定下列資訊應該置於 `file`：  
   
--   編譯中所有原始程式碼檔的複本。  
+- 編譯中所有原始程式碼檔的複本。  
   
--   編譯中使用的編譯器選項清單。  
+- 編譯中使用的編譯器選項清單。  
   
--   您的編譯器、執行階段和作業系統的版本資訊。  
+- 您的編譯器、執行階段和作業系統的版本資訊。  
   
--   除了隨附於 .NET Framework 和 SDK 的組件之外，還包括參考組件和模組 (儲存為十六進位數字)。  
+- 除了隨附於 .NET Framework 和 SDK 的組件之外，還包括參考組件和模組 (儲存為十六進位數字)。  
   
--   編譯器輸出 (如果有的話)。  
+- 編譯器輸出 (如果有的話)。  
   
--   問題的描述，會提示您操作指示。  
+- 問題的描述，會提示您操作指示。  
   
--   您認為問題該如何解決的描述，會提示您操作指示。  
+- 您認為問題該如何解決的描述，會提示您操作指示。  
   
  如果這個選項與 **-errorreport:prompt** 或 **-errorreport:send** 搭配使用，則會將檔案中的資訊傳送給 Microsoft Corporation。  
   

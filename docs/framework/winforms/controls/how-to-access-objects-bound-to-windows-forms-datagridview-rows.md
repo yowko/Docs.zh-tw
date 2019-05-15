@@ -1,5 +1,5 @@
 ---
-title: HOW TO：存取繫結至 Windows Forms DataGridView 資料列的物件
+title: 作法：存取繫結至 Windows Forms DataGridView 資料列的物件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], accessing bound objects
 - DataGridView control [Windows Forms], accessing objects bound to rows
 ms.assetid: 0e05748f-4403-4eb8-8b2f-b098108181b5
-ms.openlocfilehash: 423e0ce09b643951e51a5fe94fc9f0423bc4879f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 244047f27b0eb109aba599bd26881046eb538163
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624154"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582618"
 ---
-# <a name="how-to-access-objects-bound-to-windows-forms-datagridview-rows"></a>HOW TO：存取繫結至 Windows Forms DataGridView 資料列的物件
+# <a name="how-to-access-objects-bound-to-windows-forms-datagridview-rows"></a>作法：存取繫結至 Windows Forms DataGridView 資料列的物件
 有時候顯示儲存在商務物件集合中之資料表的資訊會很有用。 當您繫結 <xref:System.Windows.Forms.DataGridView> 控制項至這類集合，則每個公用屬性會顯示在自己的資料行中​​，除非屬性已標示為不可由 <xref:System.ComponentModel.BrowsableAttribute> 瀏覽。 例如，`Customer` 物件的集合可能有 [名稱] 和 [位址] 等資料行。  
   
  如果這些物件包含其他資訊和您想要存取的程式碼，您可透過資料列物件取得。 在下列程式碼範例中，使用者可以選取多個資料列，然後按一下按鈕將發票傳送至每個對應的客戶。  
@@ -38,8 +38,6 @@ ms.locfileid: "64624154"
  這個範例需要：  
   
 - System 和 System.Windows.Forms 組件的參考。  
-  
- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
 

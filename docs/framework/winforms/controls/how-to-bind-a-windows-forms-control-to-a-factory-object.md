@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將 Windows Forms 控制項繫結至 Factory 物件
+title: 作法：將 Windows Forms 控制項繫結至 Factory 物件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a factory object
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7d59af89-ff82-41d8-a48a-f1fbae788b0d
-ms.openlocfilehash: 61ed671b48fd07559c8403b9f5761dbaee3a66ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b64545528746e50d00f88d626a07ac98839e926c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612571"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589730"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>HOW TO：將 Windows Forms 控制項繫結至 Factory 物件
+# <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>作法：將 Windows Forms 控制項繫結至 Factory 物件
 當您在建立與資料互動的控制項時，有時會發現需要將控制項繫結程序至會產生其他物件的物件或方法。 這類物件或方法就叫做 Factory。 比方說，您的資料來源可能是從方法呼叫傳回的值，而不是記憶體或類型中的物件。 只要來源傳回集合，您就可以將控制項繫結至這種資料來源。  
   
  使用 <xref:System.Windows.Forms.BindingSource> 控制項可讓您輕鬆將控制項繫結至 Factory 物件。  
@@ -34,8 +34,6 @@ ms.locfileid: "64612571"
  這個範例需要：  
   
 - System、System.Data、System.Drawing 和 System.Windows.Forms 組件的參考。  
-  
- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -11,25 +11,25 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: 68fd5d705cb2f38e00e90c211111ff34d23f3b10
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 633d378b2336b3ee166375a923252e0477e75127
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59335806"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591661"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>作法：指定服務的資訊安全內容
 根據預設，服務會在與登入使用者不同的安全性內容中執行。 服務會在稱為 `LocalSystem` 的預設系統帳戶內容中執行，授與他們與使用者不同的系統資源存取權限。 您可以變更此行為，以指定服務應在其中執行的不同使用者帳戶。  
   
  您可以藉由針對服務執行所在的處理序，操作 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 屬性來設定安全性內容。 這個屬性可讓您將服務設定為下列其中一種帳戶類型：  
   
--   `User`，其會導致系統在安裝服務時提示輸入有效的使用者名稱和密碼，並在網路上由單一使用者所指定的帳戶內容中執行；  
+- `User`，其會導致系統在安裝服務時提示輸入有效的使用者名稱和密碼，並在網路上由單一使用者所指定的帳戶內容中執行；  
   
--   `LocalService`，其會在帳戶的內容中執行，以便在本機電腦上作為沒有權限的使用者，並提供匿名認證給任何遠端伺服器；  
+- `LocalService`，其會在帳戶的內容中執行，以便在本機電腦上作為沒有權限的使用者，並提供匿名認證給任何遠端伺服器；  
   
--   `LocalSystem`，其會在帳戶的內容中執行，以提供更廣泛的本機權限，並提供電腦的認證給任何遠端伺服器；  
+- `LocalSystem`，其會在帳戶的內容中執行，以提供更廣泛的本機權限，並提供電腦的認證給任何遠端伺服器；  
   
--   `NetworkService`，其會在帳戶的內容中執行，以便在本機電腦上作為沒有權限的使用者，並提供電腦的認證給任何遠端伺服器。  
+- `NetworkService`，其會在帳戶的內容中執行，以便在本機電腦上作為沒有權限的使用者，並提供電腦的認證給任何遠端伺服器。  
   
  如需詳細資訊，請參閱 <xref:System.ServiceProcess.ServiceAccount> 列舉。  
   
@@ -47,5 +47,5 @@ ms.locfileid: "59335806"
 ## <a name="see-also"></a>另請參閱
 
 - [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [作法：將安裝程式新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
-- [作法：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [如何：將安裝程式新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)

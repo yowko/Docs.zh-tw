@@ -1,15 +1,15 @@
 ---
-title: HOW TO：合併和比較字串集合 (LINQ) (Visual Basic)
+title: 作法：合併和比較字串集合 (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: a0083c49c344a45a977793254d8062f2a6aa155a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4515fd3f96bfe94e46c2a090d75468a7e5b18939
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855227"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593042"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>HOW TO：合併和比較字串集合 (LINQ) (Visual Basic)
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>作法：合併和比較字串集合 (LINQ) (Visual Basic)
 本例示範如何合併包含文字行的檔案，然後排序結果。 具體來說，它會示範如何在兩組文字行上執行簡單的串連、等位和交集。  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>設定專案和文字檔案  
@@ -163,7 +163,7 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。  
+建立 VB.NET 的主控台應用程式專案，使用`Imports`System.Linq 命名空間陳述式。
   
 ## <a name="see-also"></a>另請參閱
 

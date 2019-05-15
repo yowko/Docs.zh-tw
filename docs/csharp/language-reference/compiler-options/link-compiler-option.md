@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 9dcb79a3310c4c814879501e2723560a84c9b48c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5c5f3337d1c1ff2d58d3876ed0d4ede11d22b6bb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969345"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593062"
 ---
 # <a name="-link-c-compiler-options"></a>-link (C# 編譯器選項)
 讓編譯器將所指定組件的 COM 類型資訊全部提供給您目前編譯的專案。  
@@ -47,9 +47,9 @@ ms.locfileid: "56969345"
   
  如果您所連結的 COM 組件 (A) 本身參考另一個 COM 組件 (組件 B)，您也必須在發生下列任一情況時連結到 B 組件：  
   
--   組件 A 的類型繼承自組件 B 的類型，或是實作組件 B 的介面。  
+- 組件 A 的類型繼承自組件 B 的類型，或是實作組件 B 的介面。  
   
--   所叫用的欄位、屬性、事件或方法具有組件 B 的傳回型別或參數類型。  
+- 所叫用的欄位、屬性、事件或方法具有組件 B 的傳回型別或參數類型。  
   
  如同 [-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 編譯器選項，`-link` 編譯器選項會使用參考常用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 組件的 Csc.rsp 回應檔。 如果您不想要讓編譯器使用 Csc.rsp 檔，請使用 [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) 編譯器選項。  
   

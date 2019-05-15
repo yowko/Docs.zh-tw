@@ -9,22 +9,22 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 65dfe906276912b5f6dc8d49af6a2662e3a09157
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630777"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591201"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>逐步解說：在 WPF 應用程式中快取應用程式資料
 快取可讓您將資料儲存在記憶體中，以進行快速存取。 重新存取資料時，應用程式可以從快取中取得資料，而不是從原始來源進行擷取。 這可以改善效能和延展性。 此外，暫時無法使用資料來源時，快取可讓資料可用。
 
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]提供類別，可讓您使用中的快取[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]應用程式。 這些類別位於<xref:System.Runtime.Caching>命名空間。
+ .NET Framework 會提供類別，可讓您使用.NET Framework 應用程式中的快取。 這些類別位於<xref:System.Runtime.Caching>命名空間。
 
 > [!NOTE]
->  <xref:System.Runtime.Caching>命名空間的新[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 此命名空間可讓快取是提供給所有[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]應用程式。 在舊版 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中，快取只能用於 <xref:System.Web> 命名空間中，因此需要與 ASP.NET 類別的相依性。
+>  <xref:System.Runtime.Caching>命名空間的新[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 此命名空間可讓快取是供所有.NET Framework 應用程式。 在舊版的.NET framework 中，快取是僅適用於<xref:System.Web>命名空間，因此需要對 ASP.NET 類別的相依性。
 
- 本逐步解說會示範如何使用所提供的快取功能[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]一部分[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式。 在逐步解說中，您快取的文字檔的內容。
+ 本逐步解說會示範如何使用快取功能的一部分，可在.NET Framework[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式。 在逐步解說中，您快取的文字檔的內容。
 
  本逐步解說所述的工作包括下列各項：
 
@@ -67,7 +67,7 @@ ms.locfileid: "64630777"
 4. 在 **新的專案**對話方塊中，選取**WPF 應用程式**。
 
     > [!NOTE]
-    >  如果您看不見**WPF 應用程式**範本，請確定您的目標版本，方法[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]支援 WPF。 在 **新的專案**對話方塊中，選取[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]從清單中。
+    >  如果您看不見**WPF 應用程式**範本，請確定您的目標.NET Framework 支援 WPF 的版本。 在 **新的專案**對話方塊中，選取[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]從清單中。
 
 5. 在 **名稱**文字中，輸入您專案的名稱。 例如，您可以輸入**WPFCaching**。
 

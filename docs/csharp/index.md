@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 458b53c9a2f1ea9774a61bb3439fe041cc8c2861
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fee2aad90485d3d06f1730d5937fd4e1240b4801
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672090"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064038"
 ---
 # <a name="c-guide"></a>C# 指南
 
@@ -39,7 +39,7 @@ C# 指南含有數個章節。 您可以按順序閱讀，或直接跳至您最�
   * C# 簡介教學課程提供適用於新進開發人員的互動式教學課程，讓他們在瀏覽器中使用「讀取、求值、輸出」迴圈 (REPL) 介面來探索及學習 C# 語言。 完成互動式課程之後，您可以在您的電腦上練習相同的課程，以改善程式碼撰寫技巧。
 
 * [教學課程](tutorials/index.md)
-  * 本節提供各種不同的完整案例，其中包括描述和程式碼。 課程將說明為什麼會偏好使用某些慣用語、在不同的情況下最適合使用哪些 C# 功能，以及通用工作的參考實作。 如果您學習的最佳方式是透過查看程式碼，請從本節開始。 您也可以下載所有的程式碼，並在您自己的環境中進行實驗。
+  * 本節提供各種不同的完整案例，其中包括描述和程式碼。 課程將說明為什麼會偏好使用某些慣用語、在不同的情況下最適合使用哪些 C# 功能，以及通用工作的參考實作。 如果查看程式碼是最佳學習方式的話，請從本節開始。 您也可以下載所有的程式碼，並在您自己的環境中進行實驗。
 
 * [C# 的教學課程](tour-of-csharp/index.md)
   * 本節提供了此語言的摡觀。 課程涵蓋組成 C# 程式的元素以及此語言的功能。 課程將顯示 C# 所有語法元素的小型範例，以及對於主要 C# 語言主題的討論。

@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f7aa8a57fce9382cb67327e69048c2b05bb99da
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: 53ad8f6187b4e9b1754094dae0ebfe6e05a1b78b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53397042"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614133"
 ---
 # <a name="best-practices-for-assembly-loading"></a>組件載入的最佳作法
 本文討論如何避免發生可能造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之類型身分識別的問題。 本文討論下列建議：  
   
--   [了解載入內容的優缺點](#load_contexts)  
+- [了解載入內容的優缺點](#load_contexts)  
   
--   [避免部分組件名稱上的繫結](#avoid_partial_names)  
+- [避免部分組件名稱上的繫結](#avoid_partial_names)  
   
--   [避免將組件載入多個內容](#avoid_loading_into_multiple_contexts)  
+- [避免將組件載入多個內容](#avoid_loading_into_multiple_contexts)  
   
--   [避免將多個版本的組件載入相同的內容](#avoid_loading_multiple_versions)  
+- [避免將多個版本的組件載入相同的內容](#avoid_loading_multiple_versions)  
   
--   [考慮切換成預設載入內容](#switch_to_default)  
+- [考慮切換成預設載入內容](#switch_to_default)  
   
  第一個建議 ([了解載入內容的優缺點](#load_contexts)) 提供其他建議的背景資訊，因為它們都取決於載入內容的知識。  
   
@@ -40,13 +40,13 @@ ms.locfileid: "53397042"
 ## <a name="understand-the-advantages-and-disadvantages-of-load-contexts"></a>了解載入內容的優缺點  
  在應用程式定義域內，可以將組件載入三個內容之一，或是載入時沒有內容：  
   
--   預設載入內容包含探查全域組件快取時所找到的組件、裝載執行階段時的主機組件存放區 (例如，在 SQL Server 中)，以及應用程式定義域的 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A>。 <xref:System.Reflection.Assembly.Load%2A> 方法的大部分多載都會將組件載入此內容中。  
+- 預設載入內容包含探查全域組件快取時所找到的組件、裝載執行階段時的主機組件存放區 (例如，在 SQL Server 中)，以及應用程式定義域的 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A>。 <xref:System.Reflection.Assembly.Load%2A> 方法的大部分多載都會將組件載入此內容中。  
   
--   載入來源內容包含從載入器未搜尋的位置中載入的組件。 例如，增益集可能安裝在不在應用程式路徑下的目錄。 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>、<xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> 和 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> 是依路徑載入之方法的範例。  
+- 載入來源內容包含從載入器未搜尋的位置中載入的組件。 例如，增益集可能安裝在不在應用程式路徑下的目錄。 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>、<xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> 和 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> 是依路徑載入之方法的範例。  
   
--   僅限反映的內容包含使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 和 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法所載入的組件。 無法執行此內容中的程式碼，因此此處不予討論。 如需詳細資訊，請參閱[＜How to：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
+- 僅限反映的內容包含使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 和 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法所載入的組件。 無法執行此內容中的程式碼，因此此處不予討論。 如需詳細資訊，請參閱[如何：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
   
--   如果您已使用反映發出來產生暫時性動態組件，則組件不會在任何內容中。 此外，使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法所載入的大部分組件在載入時都沒有內容，而且從位元組陣列載入的組件在載入時沒有內容，除非它們在套件原則之後所建立的身分識別位於全域組件快取中。  
+- 如果您已使用反映發出來產生暫時性動態組件，則組件不會在任何內容中。 此外，使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法所載入的大部分組件在載入時都沒有內容，而且從位元組陣列載入的組件在載入時沒有內容，除非它們在套件原則之後所建立的身分識別位於全域組件快取中。  
   
  執行內容具有優缺點，如下列各節所討論。  
   
@@ -55,28 +55,28 @@ ms.locfileid: "53397042"
   
  使用預設載入內容的缺點如下：  
   
--   無法使用載入至其他內容的相依性。  
+- 無法使用載入至其他內容的相依性。  
   
--   您無法將組件從探查路徑外部的位置載入預設載入內容。  
+- 您無法將組件從探查路徑外部的位置載入預設載入內容。  
   
 ### <a name="load-from-context"></a>載入來源內容  
  載入來源內容可讓您從不在應用程式路徑下的路徑中載入組件，因此不會納入探查。 它可以從該路徑尋找和載入相依性，因為是透過內容來維護路徑資訊。 此外，此內容中的組件可以使用載入預設載入內容的相依性。  
   
  使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法或依路徑載入的其他一個方法來載入組件，其缺點如下：  
   
--   如果已載入具有相同身分識別的組件，<xref:System.Reflection.Assembly.LoadFrom%2A> 會傳回載入的組件，即使指定不同的路徑也是一樣。  
+- 如果已載入具有相同身分識別的組件，<xref:System.Reflection.Assembly.LoadFrom%2A> 會傳回載入的組件，即使指定不同的路徑也是一樣。  
   
--   如果使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 載入組件，之後預設載入內容中的組件卻嘗試依顯示名稱載入相同組件，則載入嘗試會失敗。 還原序列化組件時，也可能發生這種情況。  
+- 如果使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 載入組件，之後預設載入內容中的組件卻嘗試依顯示名稱載入相同組件，則載入嘗試會失敗。 還原序列化組件時，也可能發生這種情況。  
   
--   如果使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 載入組件，而且探查路徑包括具有相同身分識別但在不同位置的組件，則可能會發生 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 或其他非預期的行為。  
+- 如果使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 載入組件，而且探查路徑包括具有相同身分識別但在不同位置的組件，則可能會發生 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 或其他非預期的行為。  
   
--   <xref:System.Reflection.Assembly.LoadFrom%2A> 要求所指定路徑上的 <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=nameWithType> 和 <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=nameWithType> 或 <xref:System.Net.WebPermission>。  
+- <xref:System.Reflection.Assembly.LoadFrom%2A> 要求所指定路徑上的 <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=nameWithType> 和 <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=nameWithType> 或 <xref:System.Net.WebPermission>。  
   
--   如果組件有原生映像，則不會使用它。  
+- 如果組件有原生映像，則不會使用它。  
   
--   組件無法以定義域中性方式載入。  
+- 組件無法以定義域中性方式載入。  
   
--   在 .NET Framework 1.0 和 1.1 版中，不會套用原則。  
+- 在 .NET Framework 1.0 和 1.1 版中，不會套用原則。  
   
 ### <a name="no-context"></a>沒有內容  
  沒有內容的載入是使用反映發出所產生之暫時性組件的唯一選項。 沒有內容的載入是將多個具有相同身分識別的組件載入到一個應用程式定義域的唯一方法。 會避免發生探查成本。  
@@ -85,17 +85,17 @@ ms.locfileid: "53397042"
   
  載入沒有內容之組件的缺點如下：  
   
--   除非您處理 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件，否則其他組件無法繫結至載入時沒有內容的組件。  
+- 除非您處理 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件，否則其他組件無法繫結至載入時沒有內容的組件。  
   
--   不會自動載入相依性。 您可以預先載入它們但沒有內容、將它們預先載入至預設載入內容，或者處理 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件來載入它們。  
+- 不會自動載入相依性。 您可以預先載入它們但沒有內容、將它們預先載入至預設載入內容，或者處理 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件來載入它們。  
   
--   載入具有相同身分識別但沒有內容的多個組件可能會造成類型身分識別問題，而這些問題與將具有相同身分識別的組件載入多個內容所造成的問題類似。 請參閱[避免將組件載入多個內容](#avoid_loading_into_multiple_contexts)。  
+- 載入具有相同身分識別但沒有內容的多個組件可能會造成類型身分識別問題，而這些問題與將具有相同身分識別的組件載入多個內容所造成的問題類似。 請參閱[避免將組件載入多個內容](#avoid_loading_into_multiple_contexts)。  
   
--   如果組件有原生映像，則不會使用它。  
+- 如果組件有原生映像，則不會使用它。  
   
--   組件無法以定義域中性方式載入。  
+- 組件無法以定義域中性方式載入。  
   
--   在 .NET Framework 1.0 和 1.1 版中，不會套用原則。  
+- 在 .NET Framework 1.0 和 1.1 版中，不會套用原則。  
   
 <a name="avoid_partial_names"></a>   
 ## <a name="avoid-binding-on-partial-assembly-names"></a>避免部分組件名稱上的繫結  
@@ -103,15 +103,15 @@ ms.locfileid: "53397042"
   
  部分名稱繫結會造成許多問題，包括下列：  
   
--   <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> 方法可能會載入具有相同簡單名稱的不同組件。 例如，兩個應用程式可能會將兩個具有簡單名稱 `GraphicsLibrary` 的完全不同組件安裝到全域組件快取中。  
+- <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> 方法可能會載入具有相同簡單名稱的不同組件。 例如，兩個應用程式可能會將兩個具有簡單名稱 `GraphicsLibrary` 的完全不同組件安裝到全域組件快取中。  
   
--   實際載入的組件可能無法與舊版相容。 例如，未指定版本可能會導致載入的版本，比一開始撰寫成使用之程式的版本還會新。 更新版本中的變更可能導致應用程式發生錯誤。  
+- 實際載入的組件可能無法與舊版相容。 例如，未指定版本可能會導致載入的版本，比一開始撰寫成使用之程式的版本還會新。 更新版本中的變更可能導致應用程式發生錯誤。  
   
--   實際載入的組件可能不正向相容。 例如，您可能已使用最新版本的組件來建置並測試應用程式，但部分繫結可能會載入缺乏應用程式所使用功能的更早版本。  
+- 實際載入的組件可能不正向相容。 例如，您可能已使用最新版本的組件來建置並測試應用程式，但部分繫結可能會載入缺乏應用程式所使用功能的更早版本。  
   
--   安裝新的應用程式可能會中斷現有應用程式。 安裝更新且不相容版本的共用組件，可能會中斷使用 <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 方法的應用程式。  
+- 安裝新的應用程式可能會中斷現有應用程式。 安裝更新且不相容版本的共用組件，可能會中斷使用 <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 方法的應用程式。  
   
--   可能會載入非預期的相依性。 如果您載入兩個共用相依性的組件，則使用部分繫結載入它們可能會導致一個組件，而此組件使用未用來建置或測試它的元件。  
+- 可能會載入非預期的相依性。 如果您載入兩個共用相依性的組件，則使用部分繫結載入它們可能會導致一個組件，而此組件使用未用來建置或測試它的元件。  
   
  <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 方法可能會導致問題，因此已標示為過時。 建議您改用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法，並指定完整組件顯示名稱。 請參閱[了解載入內容的優缺點](#load_contexts)和[考慮切換成預設載入內容](#switch_to_default)。  
   

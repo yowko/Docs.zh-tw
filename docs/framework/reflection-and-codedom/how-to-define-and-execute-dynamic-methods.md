@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17bc7c417980c0850788f082ebb6e810fd0c53d9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 883eb60197b79e0ddebf5e48438c81e29f609549
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333297"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591702"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>作法：定義和執行動態方法
 下列程序顯示如何定義及執行簡單的動態方法及繫結至類別執行個體的動態方法。 如需動態方法的詳細資訊，請參閱 <xref:System.Reflection.Emit.DynamicMethod> 類別和[反映發出動態方法案例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))。  
@@ -116,11 +116,11 @@ ms.locfileid: "59333297"
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
--   此程式碼包含編譯所需的 C# `using` 陳述式 (Visual Basic 為 `Imports`)。  
+- 此程式碼包含編譯所需的 C# `using` 陳述式 (Visual Basic 為 `Imports`)。  
   
--   不需要任何其他組件參考。  
+- 不需要任何其他組件參考。  
   
--   在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
+- 在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
   
 ## <a name="see-also"></a>另請參閱
 

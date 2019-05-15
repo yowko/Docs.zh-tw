@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: e139cafa168b0a6851e5d8474e6bb4db94f36e9a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1897116389aaa1b4c953612364c7302e9ca2f35a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878510"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584465"
 ---
 # <a name="local-transactions"></a>本機異動
 當您要將多個工作繫結程序在一起，以讓它們當做單一的工作單位來執行時，便會使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的異動。 例如，想像應用程式正在執行兩項工作。 首先，它會更新包含訂單資訊的資料表。 然後會更新包含存貨資訊的資料表，將訂購項目記入借方。 如果任一個工作失敗，則這兩個更新會回復。  
@@ -18,7 +18,7 @@ ms.locfileid: "61878510"
 ## <a name="determining-the-transaction-type"></a>決定異動類型  
  交易是被視為本機交易時它是單一階段交易，並直接處理資料庫。 交易是被視為是分散式的交易，它由交易監視器協調，並使用保全機制 （如兩階段交易認可），進行交易解析時。  
   
- 每個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者都有它自己的 `Transaction` 物件，以執行本機交易。 如果您需要在 SQL Server 資料庫中執行異動，請選擇 <xref:System.Data.SqlClient> 異動。 若為 Oracle 異動，請使用 <xref:System.Data.OracleClient> 提供者。 此外，還有<xref:System.Data.Common.DbTransaction>適用於撰寫需要交易的提供者獨立程式碼的類別。  
+ 每個.NET Framework 資料提供者都有它自己`Transaction`物件，以執行本機交易。 如果您需要在 SQL Server 資料庫中執行異動，請選擇 <xref:System.Data.SqlClient> 異動。 若為 Oracle 異動，請使用 <xref:System.Data.OracleClient> 提供者。 此外，還有<xref:System.Data.Common.DbTransaction>適用於撰寫需要交易的提供者獨立程式碼的類別。  
   
 > [!NOTE]
 > 在伺服器上執行時，異動是最有效率。 如果您使用的 SQL Server 資料庫大量使用明確的異動，請考慮使用 Transact-SQL BEGIN TRANSACTION 陳述式，將它們寫入為預存程序。

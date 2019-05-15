@@ -8,19 +8,19 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dcf869d77882810d063532b2cf0c8139be163b7a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 596ea34dce17d21a151007cad3ebb0ccb615d136
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345400"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590408"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>作法：使用組件執行 XSLT 轉換
 XSLT 編譯器 (xsltc.exe) 會編譯 XSLT 樣式表並產生組件。 然後此組件可以直接傳遞到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。  
   
 ### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>將 XML 和 XSLT 檔案複製到本機電腦  
   
--   將 XSLT 檔案複製到本機電腦，並將它命名為 Transform.xsl。  
+- 將 XSLT 檔案複製到本機電腦，並將它命名為 Transform.xsl。  
   
     ```xml  
     <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -87,7 +87,7 @@ XSLT 編譯器 (xsltc.exe) 會編譯 XSLT 樣式表並產生組件。 然後此�
     </xsl:stylesheet>  
     ```  
   
--   將 XML 檔案複製到本機電腦，並將它命名為 `books.xml`。  
+- 將 XML 檔案複製到本機電腦，並將它命名為 `books.xml`。  
   
     ```xml  
     <?xml version="1.0"?>  

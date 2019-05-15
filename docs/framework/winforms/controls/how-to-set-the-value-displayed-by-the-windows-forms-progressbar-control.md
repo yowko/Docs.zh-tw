@@ -1,5 +1,5 @@
 ---
-title: HOW TO：設定 Windows Forms ProgressBar 控制項顯示的值
+title: 作法：設定 Windows Forms ProgressBar 控制項顯示的值
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: 42a9e0f67f00c1a706b72ab0eeb522e99d8a8dfe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10e864ccfeb22113e5704a4063f903d7a91fedcd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912843"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591574"
 ---
-# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>HOW TO：設定 Windows Forms ProgressBar 控制項顯示的值
+# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>作法：設定 Windows Forms ProgressBar 控制項顯示的值
 > [!IMPORTANT]
 >  <xref:System.Windows.Forms.ToolStripProgressBar> 控制項會取代 <xref:System.Windows.Forms.ProgressBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ProgressBar> 控制項，以提供回溯相容性及未來使用。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]可讓您幾種不同的方式，顯示指定的值內<xref:System.Windows.Forms.ProgressBar>控制項。 您選擇哪種方法將取決於手邊的工作或您要解決的問題。 下表顯示方法，您可以選擇。  
+ .NET Framework 可讓您幾種不同的方式，顯示指定的值內<xref:System.Windows.Forms.ProgressBar>控制項。 您選擇哪種方法將取決於手邊的工作或您要解決的問題。 下表顯示方法，您可以選擇。  
   
 |方法|描述|  
 |--------------|-----------------|  

@@ -11,21 +11,21 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 50ad01376f3de9cda26f6b00e2d32fc8d3dabdcd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5145b013db1a86ef1b3128ab1c4495dddaaaf987
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169705"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624647"
 ---
 # <a name="enabling-network-tracing"></a>啟用網路追蹤
 針對方法叫用及 Managed 應用程式所產生的網路流量，網路追蹤能提供對這些相關資訊的存取。 您必須完成下列工作，才能在您的應用程式中啟用網路追蹤：  
   
--   編譯程式碼並啟用追蹤。 請參閱[如何：使用追蹤和偵錯進行條件式編譯](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)，以取得啟用追蹤所需之編譯器參數的詳細資訊。  
+- 編譯程式碼並啟用追蹤。 請參閱[如何：使用追蹤和偵錯進行條件式編譯](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)，以取得啟用追蹤所需之編譯器參數的詳細資訊。  
   
--   指定追蹤輸出的目的地。  
+- 指定追蹤輸出的目的地。  
   
--   設定網路追蹤的行為。 請參閱[如何：設定網路追蹤](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)以取得詳細資訊。  
+- 設定網路追蹤的行為。 請參閱[如何：設定網路追蹤](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)以取得詳細資訊。  
   
  最常見的追蹤目的地，也稱為追蹤接聽項，是預設的接聽程式和記錄檔。  
   

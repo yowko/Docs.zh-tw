@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: fbe27403920d8c85665e585ca461602131574038
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fbe1617aa8ade89258bb7f4b46180b5e18805e3a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638644"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590546"
 ---
 # <a name="integrating-with-com-applications-overview"></a>整合 COM+ 應用程式概觀
 Windows Communication Foundation (WCF) 提供豐富的環境，以建立分散式應用程式。 如果您已經使用裝載於 COM + 元件為基礎的應用程式邏輯，您可以使用 WCF 來擴充現有邏輯，而不需要重新撰寫程式碼。 一個常見案例就是當您要透過 Web 服務，公開現有的 COM+ 或 Enterprise Services 商務邏輯之時。  
@@ -49,7 +49,7 @@ Windows Communication Foundation (WCF) 提供豐富的環境，以建立分散�
   
 - 將物件參考做為參數進行傳遞的介面：將會在＜限制的物件參考支援＞這一節描述下列限制的物件參考方法。  
   
-- 傳遞型別的介面與 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] COM 互通性轉換不相容。  
+- 傳遞與.NET Framework 的 COM 互通性轉換不相容的類型的介面。  
   
 - 應用程式的介面，該介面由 COM+ 裝載時，會啟用應用程式共用。  
   

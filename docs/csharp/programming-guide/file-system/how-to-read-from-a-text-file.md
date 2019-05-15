@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 560453a81124a3ee52a2ffd794ddac026c7394a5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 236e730eaae0bc73c715e9b1c2c71d6c870d78e3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978016"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608540"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>作法：從文字檔讀取 (C# 程式設計手冊)
 這個範例會使用 <xref:System.IO.File?displayProperty=nameWithType> 類別中的靜態方法 <xref:System.IO.File.ReadAllText%2A> 和 <xref:System.IO.File.ReadAllLines%2A>，來讀取文字檔的內容。  
@@ -36,7 +36,7 @@ ms.locfileid: "56978016"
 ## <a name="robust-programming"></a>穩固程式設計  
  以下條件可能會造成例外狀況：  
   
--   檔案不存在或不在指定的位置。 請檢查路徑和檔案名稱的拼字。  
+- 檔案不存在或不在指定的位置。 請檢查路徑和檔案名稱的拼字。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  請勿依賴檔案的名稱來判斷檔案的內容。 例如，`myFile.cs` 檔案可能不是 C# 原始程式檔。  

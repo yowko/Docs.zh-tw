@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5580b6d8af7319397ad7eb6416941c2be0dcdb76
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 458b18ad34cfff6ab136408ab8e8b2e7953b35cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303416"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593556"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>作法：使用強式名稱簽署組件
 以下是幾種以強式名稱簽署組件的方式：  
   
--   使用 Visual Studio 中，專案之 [ **屬性** ] 對話方塊中的 [ **簽署** ] 索引標籤。 這是最簡單、最方便以強式名稱簽署組件的方式。  
+- 使用 Visual Studio 中，專案之 [ **屬性** ] 對話方塊中的 [ **簽署** ] 索引標籤。 這是最簡單、最方便以強式名稱簽署組件的方式。  
   
--   透過使用 [組件連結器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 將 .NET Framework 程式碼模組 (.netmodule 檔) 與金鑰檔連結在一起。  
+- 透過使用 [組件連結器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 將 .NET Framework 程式碼模組 (.netmodule 檔) 與金鑰檔連結在一起。  
   
--   使用組件屬性將強式名稱資訊插入您的程式碼。 您可以使用 <xref:System.Reflection.AssemblyKeyFileAttribute> 或 <xref:System.Reflection.AssemblyKeyNameAttribute> 屬性，視使用的金鑰檔所在位置而定。  
+- 使用組件屬性將強式名稱資訊插入您的程式碼。 您可以使用 <xref:System.Reflection.AssemblyKeyFileAttribute> 或 <xref:System.Reflection.AssemblyKeyNameAttribute> 屬性，視使用的金鑰檔所在位置而定。  
   
--   使用編譯器選項。  
+- 使用編譯器選項。  
   
  您必須使用密碼編譯金鑰組將組件簽署為強式名稱。 如需建立金鑰組的詳細資訊，請參閱[如何：建立公開/私密金鑰組](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "59303416"
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>若要使用組件連結器建立組件並以強式名稱簽署組件  
   
--   在 [Visual Studio 開發人員命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)中鍵入下列命令：  
+- 在 [Visual Studio 開發人員命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)中鍵入下列命令：  
   
      **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
   
@@ -90,7 +90,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 ### <a name="to-sign-an-assembly-with-a-strong-name-by-using-the-compiler"></a>若要使用編譯器以強式名稱簽署組件  
   
--   在 C# 和 Visual Basic 中使用 `/keyfile` 或 `/delaysign` 編譯器選項，或是在 C++ 中使用 `/KEYFILE` 或 `/DELAYSIGN` 連結器選項編譯原始程式碼檔。 在選項名稱後面加上冒號和金鑰檔的名稱。 使用命令列編譯器時，您可以將金鑰檔複製到包含您的原始程式碼檔的目錄中。  
+- 在 C# 和 Visual Basic 中使用 `/keyfile` 或 `/delaysign` 編譯器選項，或是在 C++ 中使用 `/KEYFILE` 或 `/DELAYSIGN` 連結器選項編譯原始程式碼檔。 在選項名稱後面加上冒號和金鑰檔的名稱。 使用命令列編譯器時，您可以將金鑰檔複製到包含您的原始程式碼檔的目錄中。  
   
      如需延遲簽署的詳細資訊，請參閱 [Delay Signing an Assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)。  
   
@@ -103,8 +103,8 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
 ## <a name="see-also"></a>另請參閱
 
 - [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [作法：建立公開/私密金鑰組](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [如何：建立公開/私密金鑰組](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
 - [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [延遲簽署組件](../../../docs/framework/app-domains/delay-sign-assembly.md)
 - [管理組件和資訊清單簽署](/visualstudio/ide/managing-assembly-and-manifest-signing)
-- [專案設計工具、簽署頁](/visualstudio/ide/reference/signing-page-project-designer)
+- [專案設計工具、簽署頁面](/visualstudio/ide/reference/signing-page-project-designer)

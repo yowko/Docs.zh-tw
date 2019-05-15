@@ -2,23 +2,23 @@
 title: 常見屬性 (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: d5d56fff82fb552f42f72c18b8c3b907c5bc113c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bb06fc72fc336df257c6b674d3eaa4fa47801da0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374800"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603329"
 ---
 # <a name="common-attributes-c"></a>常見屬性 (C#)
 本主題描述最常在 C# 程式中使用的屬性。  
   
--   [全域屬性](#Global)  
+- [全域屬性](#Global)  
   
--   [Obsolete 屬性](#Obsolete)  
+- [Obsolete 屬性](#Obsolete)  
   
--   [條件式屬性](#Conditional)  
+- [條件式屬性](#Conditional)  
   
--   [呼叫端資訊屬性](#CallerInfo)  
+- [呼叫端資訊屬性](#CallerInfo)  
   
 ## <a name="Global"></a> 全域屬性  
  大部分屬性會套用至特定語言項目 (例如類別或方法)；不過，有些屬性是全域屬性，其套用至整個組件或模組。 例如，<xref:System.Reflection.AssemblyVersionAttribute> 屬性可以用來將版本資訊內嵌到組件，與下面類似：  
@@ -31,11 +31,11 @@ ms.locfileid: "57374800"
   
  組件屬性是提供組件相關資訊的值。 它們的分類如下：  
   
--   組件識別屬性  
+- 組件識別屬性  
   
--   資訊屬性  
+- 資訊屬性  
   
--   組件資訊清單屬性  
+- 組件資訊清單屬性  
   
 ### <a name="assembly-identity-attributes"></a>組件識別屬性  
  三個具有強式名稱 (如果適用) 的屬性會判斷組件的識別：名稱、版本與文化特性。 這些屬性會形成組件的完整名稱，且在程式碼中參考組件時需要用到。 您可以使用屬性來設定組件的版本和文化特性。 不過，名稱值乃是根據包含組件資訊清單的檔案來由編譯器、[組件資訊對話方塊](/visualstudio/ide/reference/assembly-information-dialog-box) 中的 Visual Studio IDE 或在建立組件時的組件連結器 (Al.exe) 所設定。 <xref:System.Reflection.AssemblyFlagsAttribute> 屬性指定組件的多個複本是否可以並存。  

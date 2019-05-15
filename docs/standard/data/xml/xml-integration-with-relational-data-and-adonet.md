@@ -5,23 +5,23 @@ ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fbc381395720b6b63a8cdfb44c55808d4608e77f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 93b414eea5849ed020b521fcd5e5d5f5d194c35f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831978"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589799"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>XML 與關聯式資料和 ADO.NET 互相整合
 **XmlDataDocument** 類別是 **XmlDocument** 的衍生類別，而且含有 XML 資料。 **XmlDataDocument** 的好處是提供關聯式與階層式資料之間的橋樑。 可被結合到 **DataSet**，而且兩種類別都可以隨內含資料而同步變更的即是 **XmlDocument**。 結合 **DataSet** 的 **XmlDocument** 允許 XML 和關聯式資料互相整合，因而您的資料並不一定要成為 XML 或以關聯式格式表示。 兩種您都可以選擇，而不必受限於單一資料表示法。  
   
  資料以兩種型式提供的好處在於：  
   
--   XML 文件的結構化部分可以對應到資料集，因此可以有效的儲存、索引和搜尋。  
+- XML 文件的結構化部分可以對應到資料集，因此可以有效的儲存、索引和搜尋。  
   
--   轉換、驗證和巡覽可透過以關聯方式儲存的 XML 資料上的游標模型有效達成。 有時如果將 XML 儲存成 **XmlDocument** 模型，可以更有效地運用關聯式結構。  
+- 轉換、驗證和巡覽可透過以關聯方式儲存的 XML 資料上的游標模型有效達成。 有時如果將 XML 儲存成 **XmlDocument** 模型，可以更有效地運用關聯式結構。  
   
--   **DataSet** 可以儲存 XML 的部分資料。 換句話說，您可以使用 **XPath** 或 **XslTransform**，將有興趣的元件和屬性儲存到 **DataSet**。 從此，可以對較小、篩選過的資料子集進行變更，然後再將變更傳送到 **XmlDataDocument** 中較大的資料。  
+- **DataSet** 可以儲存 XML 的部分資料。 換句話說，您可以使用 **XPath** 或 **XslTransform**，將有興趣的元件和屬性儲存到 **DataSet**。 從此，可以對較小、篩選過的資料子集進行變更，然後再將變更傳送到 **XmlDataDocument** 中較大的資料。  
   
  您也可以對從 SQL Server 載入 **DataSet** 的資料執行轉換。 另一種選擇是結合 .NET Framework 類別樣式管理的 WinForm 和 WebForm 控制項，成為自 XML 輸入資料流填入的 **DataSet**。  
   

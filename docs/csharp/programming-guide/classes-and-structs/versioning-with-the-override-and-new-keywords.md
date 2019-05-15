@@ -6,29 +6,29 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 39aae39a761414947c14f0a78aedcdbf89ddfbda
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ec6040081d44a389bd42bb50cdd81ac0634abf91
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975853"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583117"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>使用 Override 和 New 關鍵字進行版本控制 (C# 程式設計手冊)
 C# 語言的設計，就是讓不同文件庫的[基底](../../../csharp/language-reference/keywords/base.md)和衍生類別的版本控制能夠發展兼具回溯相容性。 例如，這表示 C# 完全支援在基底[類別](../../../csharp/language-reference/keywords/class.md)中引入與衍生類別成員同名的新成員，不會導致非預期的行為。 這也表示，類別必須明確指出方法是打算覆寫繼承的方法，還是方法是一種新方法，會隱藏名稱相似的繼承方法。  
   
  在 C# 中，衍生類別可以包含與基底類別方法同名的方法。  
   
--   基底類別方法必須定義為 [virtual](../../../csharp/language-reference/keywords/virtual.md)。  
+- 基底類別方法必須定義為 [virtual](../../../csharp/language-reference/keywords/virtual.md)。  
   
--   如果衍生類別中的方法前未加上 [new](../../../csharp/language-reference/keywords/new.md) 或 [override](../../../csharp/language-reference/keywords/override.md) 關鍵字，編譯器就會發出警告，方法會表現為如同有 `new` 關鍵字。  
+- 如果衍生類別中的方法前未加上 [new](../../../csharp/language-reference/keywords/new.md) 或 [override](../../../csharp/language-reference/keywords/override.md) 關鍵字，編譯器就會發出警告，方法會表現為如同有 `new` 關鍵字。  
   
--   如果衍生類別中的方法前面加上 `new` 關鍵字，方法會定義為不受基底類別中的方法影響。  
+- 如果衍生類別中的方法前面加上 `new` 關鍵字，方法會定義為不受基底類別中的方法影響。  
   
--   如果衍生類別中的方法前面加上 `override` 關鍵字，衍生類別的物件會呼叫該方法，不會呼叫基底類別方法。  
+- 如果衍生類別中的方法前面加上 `override` 關鍵字，衍生類別的物件會呼叫該方法，不會呼叫基底類別方法。  
   
--   您可以使用 `base` 關鍵字從衍生類別中呼叫基底類別方法。  
+- 您可以使用 `base` 關鍵字從衍生類別中呼叫基底類別方法。  
   
--   `override`、`virtual` 和 `new` 關鍵字也可以套用至屬性、索引子和事件。  
+- `override`、`virtual` 和 `new` 關鍵字也可以套用至屬性、索引子和事件。  
   
  C# 方法預設不是虛擬的。 如果方法宣告為虛擬，則繼承該方法的任何類別都可以實作自己的版本。 若要使方法成為虛擬的，基底類別的方法宣告中會使用 `virtual` 修飾詞。 然後，衍生類別可以使用 `override` 關鍵字覆寫基底虛擬方法，或使用 `new` 關鍵字隱藏基底類別中的虛擬方法。 如果不指定 `override` 關鍵字，也不指定 `new` 關鍵字，則編譯器會發出警告，且衍生類別中的方法會隱藏基底類別中的方法。  
   

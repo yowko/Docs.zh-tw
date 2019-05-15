@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 459f83ee52d0ab6421fe7be4a597d8e5174b4fd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0cb0b78396731a9b8e127430cd06a9e71812d4fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331295"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593024"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C# 編譯器選項)
 **-out** 選項指定輸出檔案的名稱。  
@@ -35,9 +35,9 @@ ms.locfileid: "59331295"
   
  如果您未指定輸出檔案的名稱：  
   
--   .exe 的名稱將來自從包含 **Main** 方法的原始程式碼檔。  
+- .exe 的名稱將來自從包含 **Main** 方法的原始程式碼檔。  
   
--   .dll 或 .netmodule 的名稱將來自第一個原始程式碼檔。  
+- .dll 或 .netmodule 的名稱將來自第一個原始程式碼檔。  
   
  用來編譯某個輸出檔案的原始程式碼檔，不能在同一個編譯中用於編譯另一個輸出檔。  
   

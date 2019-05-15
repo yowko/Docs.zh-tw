@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 35ab91279c9ed8703f29d8cbb8df3d7d4bf2a6b8
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: a686716c4e8ed24c9b28426542cdf6bc6aa991b7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202219"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600230"
 ---
 # <a name="extension-methods-c-programming-guide"></a>擴充方法 (C# 程式設計手冊)
 擴充方法可讓您在現有類型中「加入」方法，而不需要建立新的衍生類型、重新編譯，或是修改原始類型。 擴充方法是一種特殊的靜態方法，但是會將它們當成擴充類型上的執行個體方法來呼叫。 對於以 C#、F# 和 Visual Basic 撰寫的用戶端程式碼，呼叫擴充方法或是在類型中實際定義的方法，兩者之間並沒有明顯的差別。  
@@ -73,9 +73,9 @@ using System.Linq;
   
  如果您要實作所指定類型的擴充方法，請記住下列幾點：  
   
--   如果擴充方法的簽章與類型中定義的方法相同，則絕不會呼叫擴充方法。  
+- 如果擴充方法的簽章與類型中定義的方法相同，則絕不會呼叫擴充方法。  
   
--   擴充方法是帶入命名空間層級的範圍。 例如，如果有多個靜態類別在名為 `Extensions` 的單一命名空間中包含擴充方法，則 `using Extensions;` 指示詞會將這些擴充方法全都帶入範圍中。  
+- 擴充方法是帶入命名空間層級的範圍。 例如，如果有多個靜態類別在名為 `Extensions` 的單一命名空間中包含擴充方法，則 `using Extensions;` 指示詞會將這些擴充方法全都帶入範圍中。  
   
  針對實作的類別庫，您不應該使用擴充方法阻止組件的版本號碼遞增。 如果您要在擁有其原始程式碼的程式庫中加入重要功能，則應遵循組件版本控制的標準 .NET Framework 方針。 如需詳細資訊，請參閱[組件版本控制](../../../../docs/framework/app-domains/assembly-versioning.md)。  
   

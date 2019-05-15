@@ -2,12 +2,12 @@
 title: 靜態編譯的查詢 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
-ms.openlocfilehash: 842f8c1c2fa07e1658992e94e5163222f38f80ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 543c49f8cd95dce5a4fd510984233b3b64e5164e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514786"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595378"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>靜態編譯的查詢 (LINQ to XML) (C#)
 相對於 <xref:System.Xml.XmlDocument> 而言，LINQ to XML 其中一個最重要的效能優勢在於，LINQ to XML 中的查詢是靜態編譯的查詢，而 XPath 查詢則必須在執行階段解譯。 由於這項功能是 LINQ to XML 內建的，所以您不需要進行額外步驟，即可運用此功能，但是在選擇這兩項技術時了解其差異會有所幫助。 本主題將說明兩者的差異。  
@@ -83,13 +83,13 @@ reader.Close();
   
  不過，<xref:System.Xml.XmlDocument> 方法的執行效能通常不如 LINQ to XML，因為每次呼叫 <xref:System.Xml.XmlNode.SelectNodes%2A> 方法時，它就必須在內部執行下列作業：  
   
--   它會剖析包含 XPath 運算式的字串，並將此字串分割成語彙基元 (Token)。  
+- 它會剖析包含 XPath 運算式的字串，並將此字串分割成語彙基元 (Token)。  
   
--   它會驗證這些語彙基元來確定 XPath 運算式是否有效。  
+- 它會驗證這些語彙基元來確定 XPath 運算式是否有效。  
   
--   它會將此運算式轉譯成內部運算式樹狀架構。  
+- 它會將此運算式轉譯成內部運算式樹狀架構。  
   
--   它會逐一查看這些節點，並且根據運算式的評估，適當地選取結果集的節點。  
+- 它會逐一查看這些節點，並且根據運算式的評估，適當地選取結果集的節點。  
   
  這點明顯比對應 LINQ to XML 查詢所完成的工作還多。 雖然特定效能差異會因不同類型的查詢而異，不過一般而言，相較於使用 <xref:System.Xml.XmlDocument> 來評估 XPath 運算式，LINQ to XML 查詢會進行較少工作，因此具有較佳的執行效能。  
   

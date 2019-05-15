@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: c40f8ee189733aa1ae58f8e46c3b7cce005ad9d7
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 85d75d6420404f278c4a8b16eb9bf30aff958f7c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204726"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593674"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML 文件註解 (C# 程式設計手冊)
 在 Visual C# 中，您可以加入程式碼的文件，加入的方法是在原始程式碼中，於註解所參考程式碼區塊之前的特殊註解欄位 (以三個斜線表示) 中加入 XML 項目，例如：  
@@ -38,18 +38,18 @@ public class MyClass {}
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)  
+- [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)  
   
--   [處理 XML 檔案](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)  
+- [處理 XML 檔案](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)  
   
--   [文件標籤的分隔符號](../../../csharp/programming-guide/xmldoc/delimiters-for-documentation-tags.md)  
+- [文件標籤的分隔符號](../../../csharp/programming-guide/xmldoc/delimiters-for-documentation-tags.md)  
   
--   [如何：使用 XML 文件功能](../../../csharp/programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md)  
+- [如何：使用 XML 文件功能](../../../csharp/programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md)  
   
 ## <a name="related-sections"></a>相關章節  
  如需詳細資訊，請參閱:  
   
--   [/doc (處理文件註解)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+- [/doc (處理文件註解)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

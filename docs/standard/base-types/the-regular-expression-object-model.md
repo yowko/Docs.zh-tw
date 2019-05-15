@@ -37,27 +37,27 @@ helpviewer_keywords:
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1dc0570bedb1e7dbe02994b7df943609a42ca092
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea31dc154d5df2b0058af4c04035d096d5e850c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535304"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664666"
 ---
 # <a name="the-regular-expression-object-model"></a>規則運算式物件模型
 <a name="introduction"></a> 本主題說明用來處理 .NET 規則運算式的物件模型。 它包含以下各節：  
   
--   [規則運算式引擎](#Engine)  
+- [規則運算式引擎](#Engine)  
   
--   [MatchCollection 與 Match 物件](#Match_and_MCollection)  
+- [MatchCollection 與 Match 物件](#Match_and_MCollection)  
   
--   [群組集合](#GroupCollection)  
+- [群組集合](#GroupCollection)  
   
--   [擷取的群組](#the_captured_group)  
+- [擷取的群組](#the_captured_group)  
   
--   [擷取集合](#CaptureCollection)  
+- [擷取集合](#CaptureCollection)  
   
--   [個別擷取](#the_individual_capture)  
+- [個別擷取](#the_individual_capture)  
   
 <a name="Engine"></a>   
 ## <a name="the-regular-expression-engine"></a>規則運算式引擎  
@@ -65,21 +65,21 @@ ms.locfileid: "54535304"
   
  規則運算式引擎有兩種使用方式：  
   
--   呼叫 <xref:System.Text.RegularExpressions.Regex> 類別的靜態方法。 方法參數包括輸入字串和規則運算式模式。 規則運算式引擎會快取靜態方法呼叫中所使用的規則運算式，因此重複呼叫使用相同規則運算式的靜態規則運算式方法，可提供相對較佳的效能。  
+- 呼叫 <xref:System.Text.RegularExpressions.Regex> 類別的靜態方法。 方法參數包括輸入字串和規則運算式模式。 規則運算式引擎會快取靜態方法呼叫中所使用的規則運算式，因此重複呼叫使用相同規則運算式的靜態規則運算式方法，可提供相對較佳的效能。  
   
--   傳遞規則運算式到類別建構函式，以具現化 <xref:System.Text.RegularExpressions.Regex> 物件。 在此案例中，<xref:System.Text.RegularExpressions.Regex> 物件不可變 (唯讀)，並代表與單一規則運算式緊密結合的規則運算式引擎。 由於未快取 <xref:System.Text.RegularExpressions.Regex> 執行個體所使用的規則運算式，因此您不應該以相同的規則運算式將 <xref:System.Text.RegularExpressions.Regex> 物件具現化多次。  
+- 傳遞規則運算式到類別建構函式，以具現化 <xref:System.Text.RegularExpressions.Regex> 物件。 在此案例中，<xref:System.Text.RegularExpressions.Regex> 物件不可變 (唯讀)，並代表與單一規則運算式緊密結合的規則運算式引擎。 由於未快取 <xref:System.Text.RegularExpressions.Regex> 執行個體所使用的規則運算式，因此您不應該以相同的規則運算式將 <xref:System.Text.RegularExpressions.Regex> 物件具現化多次。  
   
  您可以呼叫 <xref:System.Text.RegularExpressions.Regex> 類別的方法來執行下列作業：  
   
--   判定字串是否符合規則運算式模式。  
+- 判定字串是否符合規則運算式模式。  
   
--   擷取單一相符項目或第一個相符項目。  
+- 擷取單一相符項目或第一個相符項目。  
   
--   擷取所有相符項目。  
+- 擷取所有相符項目。  
   
--   取代相符的子字串。  
+- 取代相符的子字串。  
   
--   將單一字串分割成字串陣列。  
+- 將單一字串分割成字串陣列。  
   
  下面各節將會說明這些作業。  
   
@@ -180,14 +180,14 @@ ms.locfileid: "54535304"
 ### <a name="the-match"></a>比對  
  <xref:System.Text.RegularExpressions.Match> 類別代表單一規則運算式比對的結果。 您可以用兩個方式來存取 <xref:System.Text.RegularExpressions.Match> 物件：  
   
--   從 <xref:System.Text.RegularExpressions.MatchCollection> 方法傳回的 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 物件中擷取。 若要擷取個別 <xref:System.Text.RegularExpressions.Match> 物件，請使用 `foreach` (在 C# 中) 或 `For Each`...`Next` (在 Visual Basic 中) 的建構來逐一查看集合，或是使用 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 屬性來依據索引或名稱擷取特定的 <xref:System.Text.RegularExpressions.Match> 物件。 您也可以依索引 (從零到集合中的物件數減一) 從集合擷取個別 <xref:System.Text.RegularExpressions.Match> 物件。 不過，此方法不會利用延遲評估，因為它會存取 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 屬性。  
+- 從 <xref:System.Text.RegularExpressions.MatchCollection> 方法傳回的 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 物件中擷取。 若要擷取個別 <xref:System.Text.RegularExpressions.Match> 物件，請使用 `foreach` (在 C# 中) 或 `For Each`...`Next` (在 Visual Basic 中) 的建構來逐一查看集合，或是使用 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 屬性來依據索引或名稱擷取特定的 <xref:System.Text.RegularExpressions.Match> 物件。 您也可以依索引 (從零到集合中的物件數減一) 從集合擷取個別 <xref:System.Text.RegularExpressions.Match> 物件。 不過，此方法不會利用延遲評估，因為它會存取 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 屬性。  
   
      下列範例會使用 <xref:System.Text.RegularExpressions.Match> 或 <xref:System.Text.RegularExpressions.MatchCollection>...`foreach` 建構逐一查看集合，以從 `For Each` 物件擷取個別 `Next` 物件。 規則運算式會單純比對輸入字串中的字串 "abc"。  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/match2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/match2.vb#7)]  
   
--   呼叫 <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> 方法，它會傳回代表字串中第一個相符項目或字串一部分的 <xref:System.Text.RegularExpressions.Match> 物件。 您可以擷取 `Match.Success` 屬性的值，以判斷是否找到相符項目。 若要擷取代表後續相符項目的 <xref:System.Text.RegularExpressions.Match> 物件，請重複呼叫 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 方法，直到傳回之 `Success` 物件的 <xref:System.Text.RegularExpressions.Match> 屬性為 `false`。  
+- 呼叫 <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> 方法，它會傳回代表字串中第一個相符項目或字串一部分的 <xref:System.Text.RegularExpressions.Match> 物件。 您可以擷取 `Match.Success` 屬性的值，以判斷是否找到相符項目。 若要擷取代表後續相符項目的 <xref:System.Text.RegularExpressions.Match> 物件，請重複呼叫 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 方法，直到傳回之 `Success` 物件的 <xref:System.Text.RegularExpressions.Match> 屬性為 `false`。  
   
      下列範例使用 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 方法來比對輸入字串中的字串 "abc"。  
   
@@ -196,9 +196,9 @@ ms.locfileid: "54535304"
   
  <xref:System.Text.RegularExpressions.Match> 類別的兩個屬性會傳回集合物件：  
   
--   <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.Text.RegularExpressions.GroupCollection> 物件，其中包含符合規則運算式模式中之擷取群組的子字串相關資訊。  
+- <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.Text.RegularExpressions.GroupCollection> 物件，其中包含符合規則運算式模式中之擷取群組的子字串相關資訊。  
   
--   `Match.Captures` 屬性會傳回用法受限的 <xref:System.Text.RegularExpressions.CaptureCollection> 物件。 針對 <xref:System.Text.RegularExpressions.Match> 屬性為 `Success` 的 `false` 物件，不會填入集合。 否則，就會包含具有與 <xref:System.Text.RegularExpressions.Capture> 物件相同資訊的單一 <xref:System.Text.RegularExpressions.Match> 物件。  
+- `Match.Captures` 屬性會傳回用法受限的 <xref:System.Text.RegularExpressions.CaptureCollection> 物件。 針對 <xref:System.Text.RegularExpressions.Match> 屬性為 `Success` 的 `false` 物件，不會填入集合。 否則，就會包含具有與 <xref:System.Text.RegularExpressions.Capture> 物件相同資訊的單一 <xref:System.Text.RegularExpressions.Match> 物件。  
   
  如需這些物件的詳細資訊，請參閱本主題稍後的[群組集合](#GroupCollection)及[擷取集合](#CaptureCollection)兩節。  
   
@@ -206,9 +206,9 @@ ms.locfileid: "54535304"
   
  <xref:System.Text.RegularExpressions.Match> 類別也有兩個模式比對方法：  
   
--   <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 方法會尋找目前 <xref:System.Text.RegularExpressions.Match> 物件代表之相符項目後面的相符項目，並傳回代表該相符項目的 <xref:System.Text.RegularExpressions.Match> 物件。  
+- <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 方法會尋找目前 <xref:System.Text.RegularExpressions.Match> 物件代表之相符項目後面的相符項目，並傳回代表該相符項目的 <xref:System.Text.RegularExpressions.Match> 物件。  
   
--   <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法會在相符字串上執行指定的取代作業，並傳回結果。  
+- <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法會在相符字串上執行指定的取代作業，並傳回結果。  
   
  下列範例會使用 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法，在包含兩個小數位數的每個數字前面，加上 $ 符號和空格。  
   
@@ -288,7 +288,7 @@ ms.locfileid: "54535304"
   
  將數量詞套用至群組 (如需詳細資訊，請參閱[數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) 會以兩種方式來修改每個擷取群組各一個擷取的關聯性：  
   
--   如果將 `*` 或 `*?` 數量詞 (可指定零或多個相符項目) 套用至群組，擷取群組在輸入字串中可會沒有相符項目。 沒有擷取文字時，<xref:System.Text.RegularExpressions.Group> 物件的屬性會設定如下表所示。  
+- 如果將 `*` 或 `*?` 數量詞 (可指定零或多個相符項目) 套用至群組，擷取群組在輸入字串中可會沒有相符項目。 沒有擷取文字時，<xref:System.Text.RegularExpressions.Group> 物件的屬性會設定如下表所示。  
   
     |群組屬性|值|  
     |--------------------|-----------|  
@@ -301,7 +301,7 @@ ms.locfileid: "54535304"
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
   
--   數量詞可以比對多次出現的擷取群組定義的模式。 在此情況下，`Value` 物件的 `Length` 和 <xref:System.Text.RegularExpressions.Group> 屬性只包含最後擷取之子字串的相關資訊。 例如，下列規則運算式會比對以句點結尾的單一句子。 其使用兩個群組建構：第一個群組建構會擷取個別文字和空格字元；第二個群組建構會擷取個別文字。 如範例輸出所示，雖然規則運算式成功擷取了整個句子，但是第二個擷取群組只擷取了最後一個字。  
+- 數量詞可以比對多次出現的擷取群組定義的模式。 在此情況下，`Value` 物件的 `Length` 和 <xref:System.Text.RegularExpressions.Group> 屬性只包含最後擷取之子字串的相關資訊。 例如，下列規則運算式會比對以句點結尾的單一句子。 其使用兩個群組建構：第一個群組建構會擷取個別文字和空格字元；第二個群組建構會擷取個別文字。 如範例輸出所示，雖然規則運算式成功擷取了整個句子，但是第二個擷取群組只擷取了最後一個字。  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  
@@ -312,9 +312,9 @@ ms.locfileid: "54535304"
 ## <a name="the-capture-collection"></a>擷取集合  
  <xref:System.Text.RegularExpressions.Group> 物件只包含最後一個擷取的相關資訊。 不過，您仍可從 <xref:System.Text.RegularExpressions.CaptureCollection> 屬性傳回的 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 物件，取得擷取群組所建立的一整組擷取。 集合的每個成員都是 <xref:System.Text.RegularExpressions.Capture> 物件，代表擷取群組所建立的擷取，並依照擷取的順序排列 (因此，順序為在輸入字串中比對擷取群組的順序，由左至右排列)。 您可以從集合擷取個別 <xref:System.Text.RegularExpressions.Capture> 物件，有兩種方式：  
   
--   使用 `foreach` (在 C# 中) 或 `For Each` (在 Visual Basic 中) 之類的建構逐一查看集合。  
+- 使用 `foreach` (在 C# 中) 或 `For Each` (在 Visual Basic 中) 之類的建構逐一查看集合。  
   
--   使用 <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A?displayProperty=nameWithType> 屬性，依索引擷取特定物件。 <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A> 屬性是 <xref:System.Text.RegularExpressions.CaptureCollection> 物件的預設屬性 (在 Visual Basic 中) 或索引子 (在 C# 中)。  
+- 使用 <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A?displayProperty=nameWithType> 屬性，依索引擷取特定物件。 <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A> 屬性是 <xref:System.Text.RegularExpressions.CaptureCollection> 物件的預設屬性 (在 Visual Basic 中) 或索引子 (在 C# 中)。  
   
  如果沒有將數量詞套用至擷取群組，則 <xref:System.Text.RegularExpressions.CaptureCollection> 物件會包含單一較無用處的 <xref:System.Text.RegularExpressions.Capture> 物件，因為其提供與其 <xref:System.Text.RegularExpressions.Group> 物件相同之相符項目的相關資訊。 如果將數量詞套用至擷取群組，則 <xref:System.Text.RegularExpressions.CaptureCollection> 物件包含擷取群組建立的所有擷取，而集合的最後一個成員代表與 <xref:System.Text.RegularExpressions.Group> 物件相同的擷取。  
   
