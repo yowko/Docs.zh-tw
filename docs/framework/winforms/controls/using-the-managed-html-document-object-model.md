@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - managed HTML DOM
 ms.assetid: a017dd5c-cd7b-47e4-952c-f4f54cb48409
-ms.openlocfilehash: c18c6df29f79e9bde8474fa38e45dea03d4e0020
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe84cabfaabdc14c7dec6cb69653d41b4c6f6416
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009159"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590165"
 ---
 # <a name="using-the-managed-html-document-object-model"></a>使用 Managed HTML 文件物件模型
-受管理的 HTML 文件物件模型 (DOM) 提供的包裝函式，根據[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]HTML 類別公開的 Internet Explorer。 使用這些類別來操作中裝載的 HTML 網頁<xref:System.Windows.Forms.WebBrowser>控制項，或建置新的頁面，從一開始。  
+受管理的 HTML 文件物件模型 (DOM) 會提供 Internet Explorer 所公開之 HTML 類別的.NET Framework 為基礎的包裝函式。 使用這些類別來操作中裝載的 HTML 網頁<xref:System.Windows.Forms.WebBrowser>控制項，或建置新的頁面，從一開始。  
   
 ## <a name="in-this-section"></a>本節內容  
  [如何：存取 Managed 的 HTML 文件物件模型](how-to-access-the-managed-html-document-object-model.md)  

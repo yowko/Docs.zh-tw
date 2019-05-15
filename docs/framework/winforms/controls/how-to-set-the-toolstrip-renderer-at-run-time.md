@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在執行階段設定 ToolStrip 轉譯器
+title: 作法：在執行階段設定 ToolStrip 轉譯器
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MenuStrip control [Windows Forms]
 ms.assetid: 525e2347-0804-49aa-b9a3-9b2cabbf1c35
-ms.openlocfilehash: 7d52aa1b6049007928c4045ad52c982b16cd7a00
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 90a80ba421698a108cd7a358f89b64810b06efc9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630454"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591625"
 ---
-# <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a>HOW TO：在執行階段設定 ToolStrip 轉譯器
+# <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a>作法：在執行階段設定 ToolStrip 轉譯器
 您可以藉由建立自訂 `ProfessionalColorTable` 類別，自訂 <xref:System.Windows.Forms.ToolStrip> 控制項的外觀。  
   
 ## <a name="example"></a>範例  
@@ -47,8 +47,6 @@ ms.locfileid: "64630454"
  這個範例需要：  
   
 - System.Design、System.Drawing 和 System.Windows.Forms 組件的參考。  
-  
- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立具有 ToolStripPanel 控制項的 MDI 表單
+title: 作法：建立具有 ToolStripPanel 控制項的 MDI 表單
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MDI forms [Windows Forms], creating
 ms.assetid: d198ef8e-f7c4-4b3f-a7f5-ce858cb90cec
-ms.openlocfilehash: 047ca9f656ed2f15c23df305878ac8727648fb7d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4dae528d69c6c08c2005fd30d7d16fafa67afb53
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612024"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590557"
 ---
-# <a name="how-to-create-an-mdi-form-with-toolstrippanel-controls"></a>HOW TO：建立具有 ToolStripPanel 控制項的 MDI 表單
+# <a name="how-to-create-an-mdi-form-with-toolstrippanel-controls"></a>作法：建立具有 ToolStripPanel 控制項的 MDI 表單
 您可以建立在四邊都讓 <xref:System.Windows.Forms.ToolStrip> 控制項框架處理的多重文件介面 (MDI) 表單。  
   
 ## <a name="example"></a>範例  
@@ -36,8 +36,6 @@ ms.locfileid: "64612024"
  這個範例需要：  
   
 - System.Drawing 和 System.Windows.Forms 組件的參考。  
-  
- Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 4afdd764b2f6ef7f15e8bd26459f0fa4c7d345e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6dcdbde480c1900ea488c6db3cc320b20f9f182
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971960"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591492"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer 控制項概觀 (Windows Form)
 Windows Form <xref:System.Windows.Forms.SplitContainer> 控制項可視為一個複合控制項，其中包含兩個可移動的分隔列所分隔的面板。 將滑鼠指標移到分隔列上時，指標會變更形狀，以顯示分隔列是可移動的。  
   
 > [!IMPORTANT]
->  在 **工具箱**，<xref:System.Windows.Forms.SplitContainer>控制項取代了<xref:System.Windows.Forms.Splitter>是否有舊版的 Visual Studio 中的控制項。 <xref:System.Windows.Forms.SplitContainer> 控制項會比 <xref:System.Windows.Forms.Splitter> 控制項合用。 <xref:System.Windows.Forms.Splitter>類別仍然包含在[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]相容性與現有的應用程式，但強烈建議您將<xref:System.Windows.Forms.SplitContainer>針對新專案的控制項。  
+>  在 **工具箱**，<xref:System.Windows.Forms.SplitContainer>控制項取代了<xref:System.Windows.Forms.Splitter>是否有舊版的 Visual Studio 中的控制項。 <xref:System.Windows.Forms.SplitContainer> 控制項會比 <xref:System.Windows.Forms.Splitter> 控制項合用。 .NET Framework 中仍會包含 <xref:System.Windows.Forms.Splitter> 類別，以與現有的應用程式相容，但強烈建議您在新專案中使用 <xref:System.Windows.Forms.SplitContainer> 控制項。  
   
  使用<xref:System.Windows.Forms.SplitContainer>控制項，您可以建立複雜的使用者介面; 通常，一個面板中的選取範圍會決定在其他窗格中所顯示的物件。 這種排列方式可有效地顯示及瀏覽資訊。 有兩個面板可讓您彙總資訊方面的情況下，，和列中或 「 分隔器 」 可以方便使用者調整面板的大小。  
   

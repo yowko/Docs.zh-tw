@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: cf68834c5612ed51fb3e6c0ed18667cbc13482bc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 87788906cfbf5b230c3b976395d9a40c655ae41a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586211"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591655"
 ---
 # <a name="serialization-and-deserialization"></a>序列化和還原序列化
-Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 <xref:System.Runtime.Serialization.DataContractSerializer> 會在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件與 XML 之間轉譯 (雙向)。 本主題會說明序列化程式的運作方式。  
+Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 <xref:System.Runtime.Serialization.DataContractSerializer> .NET Framework 物件與 XML 之間轉譯兩個方向。 本主題會說明序列化程式的運作方式。  
   
- 序列化 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件時，序列化程式了解各種不同的序列化程式設計模型，包括新的「 *資料合約* 」(Data Contract) 模型。 如需完整的支援型別清單，請參閱 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。 如需資料合約的簡介，請參閱 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+ 在序列化.NET Framework 物件，序列化程式了解各種不同的程式設計模型，包括新的序列化*資料合約*模型。 如需完整的支援型別清單，請參閱 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。 如需資料合約的簡介，請參閱 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
  還原序列化 XML 時，序列化程式會使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 類別。 它也支援<xref:System.Xml.XmlDictionaryReader>和<xref:System.Xml.XmlDictionaryWriter>類別，讓它能夠產生最佳化 XML，在某些情況下，例如當使用 WCF 二進位 XML 格式。  
   
- WCF 也包含搭配的序列化程式， <xref:System.Runtime.Serialization.NetDataContractSerializer>。 <xref:System.Runtime.Serialization.NetDataContractSerializer> 與 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 序列化程式很類似，因為它同時會發出 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別名稱做為序列化資料的一部分。 當序列化和還原序列化兩端共用相同的型別時，就會使用它。 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 兩者同時衍生自一般基底類別， <xref:System.Runtime.Serialization.XmlObjectSerializer>。  
+ WCF 也包含搭配的序列化程式， <xref:System.Runtime.Serialization.NetDataContractSerializer>。 <xref:System.Runtime.Serialization.NetDataContractSerializer>大致<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>和<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>序列化程式因為它同時會發出的.NET Framework 型別名稱做為序列化資料的一部分。 當序列化和還原序列化兩端共用相同的型別時，就會使用它。 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 兩者同時衍生自一般基底類別， <xref:System.Runtime.Serialization.XmlObjectSerializer>。  
   
 > [!WARNING]
 >  <xref:System.Runtime.Serialization.DataContractSerializer> 會將包含十六進位值低於 20 之控制字元的字串序列化成 XML 實體。 將這類資料傳送至 WCF 服務時，這可能會導致非 WCF 用戶端的問題。  
@@ -226,7 +226,7 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
  有一種方式可以停用此包裝函式項目名稱檢查；某些 `ReadObject` 方法的多載會採用布林參數 `verifyObjectName`(預設會設定為 `true` )。 一旦設定為 `false`，就會忽略包裝函式項目的名稱與命名空間。 讀取以先前所述之逐步序列化機制撰寫的 XML 時，這種方式很有用。  
   
 ## <a name="using-the-netdatacontractserializer"></a>使用 NetDataContractSerializer  
- `DataContractSerializer` 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 之間的最主要差異，就是 `DataContractSerializer` 使用資料合約名稱，而 `NetDataContractSerializer` 則是在序列化 XML 中輸出完整的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 組件和型別名稱。 也就是說，序列化與還原序列化端點兩者必須共用完全相同的型別。 這表示 `NetDataContractSerializer` 並不需要已知型別機制，因為要還原序列化的完全相同型別一律呈現已知狀態。  
+ 主要差異`DataContractSerializer`而<xref:System.Runtime.Serialization.NetDataContractSerializer>在於`DataContractSerializer`會使用資料合約名稱，而`NetDataContractSerializer`輸出完整序列化的 XML 中的.NET Framework 組件和類型名稱。 也就是說，序列化與還原序列化端點兩者必須共用完全相同的型別。 這表示 `NetDataContractSerializer` 並不需要已知型別機制，因為要還原序列化的完全相同型別一律呈現已知狀態。  
   
  但是，還是會發生一些問題：  
   
@@ -234,11 +234,11 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
   
 - 版本控制。 在 XML 中使用完整的型別與組件名稱會嚴格限制型別的版本設定。 下列為無法變更的項目：型別名稱、命名空間、組件名稱以及組件版本。 將 <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> 屬性或建構函式設定為 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> (而不是 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> 的預設值) 可允許組件版本變更，但不適用於泛型參數型別。  
   
-- 互通性。 由於 XML 包含了 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別和組件名稱， [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 以外的平台將無法存取最後資料。  
+- 互通性。 在 XML 中包含.NET Framework 型別和組件名稱，因為.NET Framework 以外的平台無法存取產生的資料。  
   
 - 效能。 寫出型別和組件名稱會大幅增加最後 XML 的大小。  
   
- 這項機制與 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 遠端處理 (特別是 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>) 所使用的二進位或 SOAP 序列化很類似。  
+ 這項機制是二進位或 SOAP 序列化的.NET Framework 遠端處理所使用的類似 (具體而言，<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>而<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>)。  
   
  使用 `NetDataContractSerializer` 類似於使用 `DataContractSerializer`，除了下列幾點差異以外：  
   
@@ -258,7 +258,7 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
   
  `NetDataContractSerializer` 和 `DataContractSerializer` 使用的 XML 格式一般都不相容。 亦即，不支援使用其中一個序列化程式來序列化，並以另一個序列化程式來還原序列化的情況。  
   
- 同時請注意， `NetDataContractSerializer` 不會在物件圖形中為每個節點輸出完整的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別和組件名稱。 它只會針對不夠清楚的部分來輸出資訊。 亦即，它會在根物件層級以及任何多型案例中輸出。  
+ 另請注意，`NetDataContractSerializer`不會輸出物件圖形中每個節點的.NET Framework 型別和組件名稱完整。 它只會針對不夠清楚的部分來輸出資訊。 亦即，它會在根物件層級以及任何多型案例中輸出。  
   
 ## <a name="see-also"></a>另請參閱
 

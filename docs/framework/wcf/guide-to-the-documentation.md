@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: b0758cf1381b5a6e24067fdd64288d0f7e2b0d5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7458caee29d576d8a9d38f01027c106d39a1daf2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637161"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591928"
 ---
 # <a name="guide-to-the-documentation"></a>文件指南
 提供以下是 Windows Communication Foundation (WCF) 文件的相關指引。 連結文件是建議的起點，並且根據特定興趣和專業等級分群組。  
@@ -46,7 +46,7 @@ ms.locfileid: "64637161"
   
 - 若要建立 ASP.NET 用戶端進行通訊的服務，請參閱[How to:設定 WCF 服務與 ASP.NET Web 服務用戶端交互操作](../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)。  
   
-- 與整合[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]遠端處理述[將.NET 遠端處理應用程式移轉至 WCF](../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md)。  
+- 與.NET Framework 遠端處理整合述[將.NET 遠端處理應用程式移轉至 WCF](../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md)。  
   
 - 若要整合現有 COM + 應用程式使用 WCF 服務或用戶端，請參閱[整合 COM + 應用程式概觀](../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)。  
   

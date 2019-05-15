@@ -2,12 +2,12 @@
 title: 使用 Windows Management Instrumentation 進行診斷
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 47aece36368be12a2a63283367e95dcaa64ef484
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ecc5c754a51a8e1a52797dfd0af0891704eaad1f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662472"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591247"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 進行診斷
 Windows Communication Foundation (WCF) 公開服務，以在透過 WCF Windows Management Instrumentation (WMI) 提供者的執行階段檢查的資料。  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) 公開服務，以在透過 WCF Windows M
  這個組態項目會公開 WMI 介面。 現在，管理應用程式可以透過這個介面進行連線，並存取應用程式的管理測試設備。  
   
 ## <a name="accessing-wmi-data"></a>存取 WMI 資料  
- 您可以使用各種不同的方式來存取 WMI 資料。 Microsoft 提供了 WMI Api 針對指令碼，Visual Basic 應用程式，C++應用程式，而[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 使用 WMI](https://go.microsoft.com/fwlink/?LinkId=95183)。  
+ 您可以使用各種不同的方式來存取 WMI 資料。 Microsoft 提供了 WMI Api 針對指令碼，Visual Basic 應用程式，C++應用程式和.NET Framework。 如需詳細資訊，請參閱 <<c0> [ 使用 WMI](https://go.microsoft.com/fwlink/?LinkId=95183)。  
   
 > [!CAUTION]
 >  如果您使用 .NET Framework 提供的方法，以程式設計方式存取 WMI 資料，您要注意，當連線建立時，這類方法可能會擲回例外狀況。 連線不是在建構 <xref:System.Management.ManagementObject> 執行個體期間建立的，而是在第一次要求實際資料交換時建立。 因此，您應該使用 `try..catch` 區塊攔截可能的例外狀況。  

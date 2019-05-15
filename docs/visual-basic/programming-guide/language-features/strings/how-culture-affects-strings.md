@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: c498ae0a9d39240e715e6ba66e57c5e1d3ebbfbc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7301d52cf2c55394f731a8b7af5427e5fa66ba88
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610423"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591955"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>在 Visual Basic 中文化特性如何影響字串
 此說明頁面討論 Visual Basic 來執行字串轉換及比較所使用的文化特性資訊。  
@@ -38,7 +38,7 @@ ms.locfileid: "64610423"
 ## <a name="using-a-specific-culture"></a>使用特定文化特性  
  假設您正在開發的應用程式，傳送至 Web 服務的日期 （格式為字串）。 在此情況下，您的應用程式必須使用特定文化特性的字串轉換。 為了說明原因，請考慮使用的日期的結果<xref:System.DateTime.ToString>方法：如果您的應用程式會使用該方法來格式化日期 2005 年 7 月 4 日，它會傳回"2005 年 7 月 4 日上午 12:00:00"時執行的美式英文 (EN-US) 文化特性，但它會傳回"04.07.2005 00:00:00"當執行與德文 (DE-DE) 文化特性。  
   
- 當您需要執行的特定文化特性格式的字串轉換時，您應該使用`CultureInfo`類別的內建[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]。 您可以建立新`CultureInfo`藉由傳遞文化特性的名稱，以特定文化特性的物件<xref:System.Globalization.CultureInfo.%23ctor%2A>建構函式。 支援的文化特性名稱會列在<xref:System.Globalization.CultureInfo>類別 [說明] 頁面。  
+ 當您需要執行的特定文化特性格式的字串轉換時，您應該使用`CultureInfo`內建於.NET Framework 的類別。 您可以建立新`CultureInfo`藉由傳遞文化特性的名稱，以特定文化特性的物件<xref:System.Globalization.CultureInfo.%23ctor%2A>建構函式。 支援的文化特性名稱會列在<xref:System.Globalization.CultureInfo>類別 [說明] 頁面。  
   
  或者，您可以在其中取得的執行個體*文化特性而異*從<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>屬性。 而異的文化特性為基礎的英文文化特性，但有一些差異。 比方說，而異的文化特性會指定 24 小時制時鐘，而不是 12 小時制。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "64610423"
   
  [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
- 您也可以使用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]夥伴`StrComp`函式，<xref:System.String.Compare%2A?displayProperty=nameWithType>方法。 這是靜態的多載方法的基底的 string 類別。 下列範例說明如何使用這個方法：  
+ 您也可以使用的.NET Framework 夥伴`StrComp`函式，<xref:System.String.Compare%2A?displayProperty=nameWithType>方法。 這是靜態的多載方法的基底的 string 類別。 下列範例說明如何使用這個方法：  
   
  [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   

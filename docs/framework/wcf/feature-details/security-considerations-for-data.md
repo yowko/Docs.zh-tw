@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 13e596ea64fc62ed6280e74636243619178ce069
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4114c974da9c108f641aebdb69f32fb3b0c484c9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990882"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591526"
 ---
 # <a name="security-considerations-for-data"></a>資料的安全性考量
 
@@ -28,7 +28,7 @@ ms.locfileid: "61990882"
 
 程式碼作者有責任要確保沒有安全性弱點的存在。 例如，如果您以型別整數的資料成員屬性來建立資料合約類型，並在 `set` 存取子實作中根據屬性值來配置陣列，如果惡意訊息包含此資料成員的極大值，您便有可能會遭到阻絕服務攻擊。 一般來說，請避免以傳入資料為基礎所做的任何配置，或是使用者提供之程式碼中的漫長處理 (特別是如果小量的傳入資料可能會造成的漫長處理)。 當執行使用者提供之程式碼的安全性分析時，請確定同時考慮所有的失敗情況 (也就是擲回例外狀況的所有程式碼分支)。
 
-使用者提供之程式碼的最終範例為您在各個作業之服務實作內的程式碼。 您服務實作的安全性是您的責任。 很容易就會不小心建立可能會造成阻絕服務弱點的不安全作業實作。 例如，採用字串並從名稱以該字串開頭的資料庫傳回客戶清單的作業。 如果您是使用大型資料庫，且傳遞的字串只是單一字母，您的程式碼可能會嘗試建立大於所有可用記憶體的訊息，而造成整個服務失敗 ( <xref:System.OutOfMemoryException> 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中是不可復原的，且一定會造成應用程式終止)。
+使用者提供之程式碼的最終範例為您在各個作業之服務實作內的程式碼。 您服務實作的安全性是您的責任。 很容易就會不小心建立可能會造成阻絕服務弱點的不安全作業實作。 例如，採用字串並從名稱以該字串開頭的資料庫傳回客戶清單的作業。 如果您是使用大型資料庫，且傳遞的字串只是單一字母，您的程式碼可能會嘗試建立大於所有可用記憶體的訊息，而造成整個服務失敗 (<xref:System.OutOfMemoryException>不是.NET Framework 中可復原和永遠會導致您的應用程式終止。)
 
 您應該要確保各種擴充點中均未插入惡意程式碼。 這對於在部分信任下執行、從部分信任組件處理類型，或是建立無法由部分信任程式碼使用的元件時，特別有關係。 如需詳細資訊，請參閱本主題稍後的「部分信任威脅」。
 
@@ -54,7 +54,7 @@ ms.locfileid: "61990882"
 
 通常是使用配額來降低阻絕服務攻擊。 當超過配額時，通常會擲回 <xref:System.ServiceModel.QuotaExceededException> 例外狀況。 如果沒有配額，惡意訊息可能會導致存取所有的可用記憶體，造成 <xref:System.OutOfMemoryException> 例外狀況，或存取所有的可用堆疊，造成 <xref:System.StackOverflowException>。
 
-超過配額的情況是可復原的；如果是在執行中的服務中遇到，會捨棄目前正在處理的訊息，而服務會繼續執行並處理之後的訊息。 然而，記憶體不足和堆疊溢位狀況在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中任何地方都是不可復原的，如果遇到此類例外狀況，服務便會終止。
+超過配額的情況是可復原的；如果是在執行中的服務中遇到，會捨棄目前正在處理的訊息，而服務會繼續執行並處理之後的訊息。 記憶體不足和堆疊溢位情況下，不過，不是.NET Framework 中; 中的任何位置復原如果遇到這類例外狀況，則會終止服務。
 
 在 WCF 中的配額不包含任何的預先配置。 例如，如果 <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> 配額 (在各種不同類別上) 設定為 128 KB，不表示會為各個訊息自動配置 128 KB。 實際的配置量要視實際的傳入訊息大小而定。
 
@@ -274,7 +274,7 @@ XML Infoset 會形成 WCF 中的所有訊息處理的基礎。 接受來自不�
 
 - 請勿將資料合約類型設計為依賴呼叫 setter 屬性必須遵守的特定順序。
 
-- 請小心使用以 <xref:System.SerializableAttribute> 屬性標示的舊版型別。 其中許多都是設計來使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 遠端處理，只用於受信任的資料。 以此屬性標示之現有型別的設計可能尚未考慮到狀態安全性。
+- 請小心使用以 <xref:System.SerializableAttribute> 屬性標示的舊版型別。 其中有許多被設計用於搭配受信任的資料搭配使用的.NET Framework 遠端處理。 以此屬性標示之現有型別的設計可能尚未考慮到狀態安全性。
 
 - 就狀態安全性而言，請勿依賴 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性 (Attribute) 的 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Property) 來保證資料的存在。 資料可能永遠是 `null`、 `zero`或 `invalid`。
 
@@ -282,7 +282,7 @@ XML Infoset 會形成 WCF 中的所有訊息處理的基礎。 接受來自不�
 
 ### <a name="using-the-netdatacontractserializer-securely"></a>安全使用 NetDataContractSerializer
 
-<xref:System.Runtime.Serialization.NetDataContractSerializer> 是對型別使用緊密結合的序列化引擎。 這與 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>很類似。 也就是說，它會從傳入資料讀取 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 組件和型別名稱，以判斷要產生何種型別。 雖然它是 WCF 的一部分，但沒有提供的無法插入此序列化引擎;您必須撰寫自訂程式碼。 `NetDataContractSerializer`提供主要是為了簡化從移轉[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]遠端處理與 WCF。 如需詳細資訊，請參閱中相關的章節[序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。
+<xref:System.Runtime.Serialization.NetDataContractSerializer> 是對型別使用緊密結合的序列化引擎。 這與 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>很類似。 也就是說，它會判斷哪種類型來具現化讀取內送資料中的.NET Framework 組件和類型名稱。 雖然它是 WCF 的一部分，但沒有提供的無法插入此序列化引擎;您必須撰寫自訂程式碼。 `NetDataContractSerializer`提供主要是為了簡化從.NET Framework 遠端處理移轉至 WCF。 如需詳細資訊，請參閱中相關的章節[序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。
 
 由於訊息本身可能會指出可以載入的任何型別，因此 <xref:System.Runtime.Serialization.NetDataContractSerializer> 機制原本就是不安全的，且只應搭配受信任的資料使用。 藉由撰寫安全、型別有限制的型別繫結器，且該繫別器只允許載入安全型別 (使用 <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> 屬性)，有可能保護它的安全。
 

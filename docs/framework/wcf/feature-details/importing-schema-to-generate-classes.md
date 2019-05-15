@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: d7b5cb57e921fa802207d2ad606ba3535b78a77b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 986f8c2d1eec91ee9a68d2b6068f5b38dfdf14f1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587018"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591257"
 ---
 # <a name="importing-schema-to-generate-classes"></a>匯入結構描述以產生類別
 若要從可與 Windows Communication Foundation (WCF) 的結構描述產生類別，使用<xref:System.Runtime.Serialization.XsdDataContractImporter>類別。 這個主題將說明處理程序和變化。  
@@ -21,9 +21,9 @@ ms.locfileid: "64587018"
 ## <a name="the-import-process"></a>匯入程序
  結構描述匯入程序是從 <xref:System.Xml.Schema.XmlSchemaSet> 開始，並產生 <xref:System.CodeDom.CodeCompileUnit>。  
   
- `XmlSchemaSet` 是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的結構描述物件模型 (SOM) 的一部分，它代表一組 XML 結構描述定義語言 (Schema definition language，XSD) 結構描述文件。 如果要從一組 XSD 文件建立 `XmlSchemaSet` 物件，請還原序列化各文件至 <xref:System.Xml.Schema.XmlSchema> 物件中 (使用 <xref:System.Xml.Serialization.XmlSerializer>)，然後新增這些物件至新的 `XmlSchemaSet`。  
+ `XmlSchemaSet`是一部分的.NET Framework 的結構描述物件模型 (SOM)，代表一組 XML 結構描述定義語言 (XSD) 結構描述文件。 如果要從一組 XSD 文件建立 `XmlSchemaSet` 物件，請還原序列化各文件至 <xref:System.Xml.Schema.XmlSchema> 物件中 (使用 <xref:System.Xml.Serialization.XmlSerializer>)，然後新增這些物件至新的 `XmlSchemaSet`。  
   
- `CodeCompileUnit` 是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的 Code Document Object Model (CodeDOM) 的一部分，它會以抽象方式表示 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 程式碼。 如果要從 `CodeCompileUnit` 產生實際的程式碼，請使用 <xref:System.CodeDom.Compiler.CodeDomProvider> 類別的子類別，例如 <xref:Microsoft.CSharp.CSharpCodeProvider> 或 <xref:Microsoft.VisualBasic.VBCodeProvider> 類別。  
+ `CodeCompileUnit`是.NET Framework 的程式碼文件物件模型 (CodeDOM)，以抽象方式表示.NET Framework 程式碼的一部分。 如果要從 `CodeCompileUnit` 產生實際的程式碼，請使用 <xref:System.CodeDom.Compiler.CodeDomProvider> 類別的子類別，例如 <xref:Microsoft.CSharp.CSharpCodeProvider> 或 <xref:Microsoft.VisualBasic.VBCodeProvider> 類別。  
   
 ### <a name="to-import-a-schema"></a>匯入結構描述  
   
@@ -60,7 +60,7 @@ ms.locfileid: "64587018"
 #### <a name="controlling-namespaces-namespaces-or-the-namespace-switch"></a>控制命名空間 (Namespaces 或 /namespace 參數)  
  這會對應至 **/namespace**切換成開啟`Svcutil.exe`工具。  
   
- 一般來說，從結構描述產生的型別會產生至[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]命名空間，與每個對應至特定的 XSD 命名空間[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中所述的對應根據的命名空間[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). 您可以將 <xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A> 屬性設定為 <xref:System.Collections.Generic.Dictionary%602>，以自訂這個對應。 如果在目錄中找到指定的 XSD 命名空間，相符的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 命名空間也是取自您的目錄。  
+ 一般來說，從結構描述產生的型別至.NET Framework 命名空間，以產生對應到特定的.NET Framework 命名空間中所述的對應根據各個 XSD 命名空間[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). 您可以將 <xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A> 屬性設定為 <xref:System.Collections.Generic.Dictionary%602>，以自訂這個對應。 如果在字典中找到指定的 XSD 命名空間，則比對的.NET Framework 命名空間也是取自您的字典。  
   
  例如，請試想下列結構描述。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "64587018"
 #### <a name="adding-the-serializableattribute-generateserializable-or-the-serializable-switch"></a>新增 SerializableAttribute (GenerateSerializable 或 /serializable 參數)  
  這會對應至 **/serializable**切換成開啟`Svcutil.exe`工具。  
   
- 有時對於從結構描述產生的型別來說，可在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 執行階段序列化引擎中使用是很重要的 (例如，<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 類別)。 當針對 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 遠端使用型別時，這很有用。 如果要啟用，除了一般的 <xref:System.SerializableAttribute> 屬性之外，您還必須將 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性套用至所產生的型別。 如果 `GenerateSerializable` 匯入選項設定為 `true`，便會自動產生此屬性。  
+ 有時候很重要的結構描述產生的類型，可在.NET Framework 執行階段序列化引擎 (例如<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType>而<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>類別)。 使用.NET Framework 遠端處理型別時，這非常有用。 如果要啟用，除了一般的 <xref:System.SerializableAttribute> 屬性之外，您還必須將 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性套用至所產生的型別。 如果 `GenerateSerializable` 匯入選項設定為 `true`，便會自動產生此屬性。  
   
  下列範例會顯示由 `Vehicle` 匯入選項設定為 `GenerateSerializable` 所產生的 `true` 類別。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "64587018"
 > [!NOTE]
 >  任何關聯也都可以視為是清單。 例如，您可以將前述關聯視為是剛好有兩個欄位 (字串欄位和整數欄位) 之複雜 `city` 物件的清單。 這兩種模式在 XSD 結構描述中都有表示法。 沒有任何方法可以區分清單和關聯，因此這種模式都被視為清單除非特定 wcf 的特殊註釋是出現在結構描述。 附註會指出指定的模式表示關聯。 如需詳細資訊，請參閱 < [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
   
- 一般來說，會匯入清單做為衍生自泛型清單的集合資料合約或做為 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 陣列，視結構描述是否遵循集合的標準命名樣式而定。 這描述更詳細地[集合 Types in Data Contracts](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。 關聯通常會被匯入做為 <xref:System.Collections.Generic.Dictionary%602> 或衍生自目錄物件的集合資料合約。 例如，請試想下列結構描述。  
+ 一般來說，做為衍生自泛型清單的集合資料合約或可為.NET Framework 陣列，取決於結構描述遵循集合的標準命名模式，便會匯入清單。 這描述更詳細地[集合 Types in Data Contracts](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。 關聯通常會被匯入做為 <xref:System.Collections.Generic.Dictionary%602> 或衍生自目錄物件的集合資料合約。 例如，請試想下列結構描述。  
   
  [!code-xml[c_SchemaImportExport#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#13)]  
   
@@ -130,11 +130,11 @@ ms.locfileid: "64587018"
  `ReferencedCollectionTypes`屬性會對應至 **/collectionType** SvcUtil.exe 工具上切換。 請注意，如果要參照多個集合的型別， **/collectionType**參數必須指定多次。 如果類型不在 MsCorLib.dll 中，其參考組件必須也是使用 **/參考**切換。  
   
 #### <a name="import-options-referencing-existing-types"></a>匯入選項：參照現有型別  
- 結構描述中的型別偶而會對應至現有的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別，而不需要從頭開始產生這些型別  (本節只適用於非集合型別。 對於集合型別，請參閱上一節)。  
+ 有時候，結構描述中的類型會對應至現有的.NET Framework 型別，並不需要從頭產生這些型別。 (本節只適用於非集合型別。 對於集合型別，請參閱上一節)。  
   
  例如，您可能會有標準的全公司「人員」資料合約類型，固定用於表示人員。 只要有服務使用這個型別，且其結構描述出現在服務中繼資料中，當匯入這個結構描述時，您可能會想要重複使用現有的 `Person` 型別，而非為每個服務產生新的型別。  
   
- 如果要執行這項操作，請將您要重複使用之 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別的清單傳遞至 <xref:System.Runtime.Serialization.ImportOptions.ReferencedTypes%2A> 類別上 <xref:System.Runtime.Serialization.ImportOptions> 屬性傳回的集合中。 如果其中任何型別的資料合約名稱和命名空間符合結構描述型別的名稱和命名空間，便會執行結構比較。 如果判斷出型別同時具有相符的名稱和結構，便會重複使用現有的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別，而非產生新的型別。 如果只有名稱符合，但結構不符合，則會擲回例外狀況。 請注意，當參照型別時，不允許進行版本控制 (例如，新增選擇性資料成員)。 結構必須完全相符。  
+ 若要這樣做，請將傳遞一份您想要插入集合中重複使用的.NET Framework 型別<xref:System.Runtime.Serialization.ImportOptions.ReferencedTypes%2A>屬性會傳回在<xref:System.Runtime.Serialization.ImportOptions>類別。 如果其中任何型別的資料合約名稱和命名空間符合結構描述型別的名稱和命名空間，便會執行結構比較。 判斷型別具有相符的名稱和相符的結構，如果重複使用現有的.NET Framework 型別而非產生新的。 如果只有名稱符合，但結構不符合，則會擲回例外狀況。 請注意，當參照型別時，不允許進行版本控制 (例如，新增選擇性資料成員)。 結構必須完全相符。  
   
  將多個有相同資料合約名稱和命名空間的型別新增至參照型別集合是合法的，只要沒有結構描述型別使用該名稱和命名空間匯入即可。 這可讓您輕鬆地將組件中的所有型別新增至集合，而不需擔心並未實際發生在結構描述中的型別有重複。  
   
@@ -175,7 +175,7 @@ ms.locfileid: "64587018"
 #### <a name="import-options-advanced-options"></a>匯入選項：進階選項  
  以下是進階匯入選項：  
   
-- <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> 屬性。 請指定 <xref:System.CodeDom.Compiler.CodeDomProvider>，用於為所產生的類別產生程式碼。 匯入機制會嘗試避免 <xref:System.CodeDom.Compiler.CodeDomProvider> 不支援的功能。 如果沒有設定 <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>，使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的完整功能便沒有限制。  
+- <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> 屬性。 請指定 <xref:System.CodeDom.Compiler.CodeDomProvider>，用於為所產生的類別產生程式碼。 匯入機制會嘗試避免 <xref:System.CodeDom.Compiler.CodeDomProvider> 不支援的功能。 如果<xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>未設定，不受限制使用完整的.NET Framework 功能。  
   
 - <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 屬性。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 實作可以使用這個屬性來指定。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 會自訂匯入處理程序。 如需詳細資訊，請參閱 <<c0> [ 資料合約代理](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 根據預設，不會使用 Surrogate。  
   

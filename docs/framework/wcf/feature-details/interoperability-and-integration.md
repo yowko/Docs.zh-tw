@@ -2,12 +2,12 @@
 title: 互通性與整合
 ms.date: 03/30/2017
 ms.assetid: 0d925119-01a1-45c2-9ea0-23061323ad33
-ms.openlocfilehash: 5a50a8ebece72a0f2f8dc95fd87e73bef5db3195
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2410c52e99f3498d8dbd6ec66a5abe0e169f4b91
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61919135"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591235"
 ---
 # <a name="interoperability-and-integration"></a>互通性與整合
 本章節涵蓋互通性與整合與 Windows Communication Foundation (WCF)。  
@@ -23,7 +23,7 @@ ms.locfileid: "61919135"
  討論 COM 應用程式呼叫 WCF 服務的各種方法。  
   
  [將 .NET 遠端處理應用程式移轉至 WCF](../../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md)  
- 描述如何使用 WCF，與[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]遠端處理。  
+ 描述如何使用 WCF，與.NET Framework 遠端處理。  
   
  [與 Web Services Enhancements 3.0 的互通性](../../../../docs/framework/wcf/feature-details/interoperability-with-web-services-enhancements-3-0.md)  
  描述如何使用 WCF，與實作 Web Services Enhancements (WSE) 3.0 使用的 Web 服務。  

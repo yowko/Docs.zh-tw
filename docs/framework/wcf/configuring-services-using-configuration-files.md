@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 9f1ddf7691c9c00c3a4a7a20fc81d2f42f5830f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f1392a6ee2e8f5b3f85650ee91e20e7ec3436fa
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652093"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592220"
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用組態檔設定服務
 使用組態檔中設定 Windows Communication Foundation (WCF) 服務可讓您彈性提供端點，並設計階段部署而不是在服務行為資料。 本主題概要說明可用的主要技巧。  
   
- WCF 服務是可設定使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]技術設定。 大多數情況下，XML 項目會新增至裝載的 WCF 服務的 Internet Information Services (IIS) 網站的 Web.config 檔案。 這些項目允許您變更詳細資料，例如各電腦的端點位址 (用於與服務通訊的實際位址)。 此外，WCF 會包含數個系統提供的項目可讓您快速地選取 服務最基本的功能。 從開始[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]，WCF 本身就有新的預設組態模型，可簡化 WCF 組態需求。 如果您未提供任何特定服務的 WCF 組態，執行階段會使用一些標準端點和預設繫結/行為自動設定您的服務。 在實務上，撰寫組態是主要的程式設計 WCF 應用程式一部分。  
+ WCF 服務是可使用.NET Framework 技術設定。 大多數情況下，XML 項目會新增至裝載的 WCF 服務的 Internet Information Services (IIS) 網站的 Web.config 檔案。 這些項目允許您變更詳細資料，例如各電腦的端點位址 (用於與服務通訊的實際位址)。 此外，WCF 會包含數個系統提供的項目可讓您快速地選取 服務最基本的功能。 從開始[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]，WCF 本身就有新的預設組態模型，可簡化 WCF 組態需求。 如果您未提供任何特定服務的 WCF 組態，執行階段會使用一些標準端點和預設繫結/行為自動設定您的服務。 在實務上，撰寫組態是主要的程式設計 WCF 應用程式一部分。  
   
  如需詳細資訊，請參閱 <<c0> [ 服務的設定繫結](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。 如一份最常用的項目，請參閱 < [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)。 如需預設端點、繫結和行為的詳細資訊，請參閱[簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)和 [WCF 服務的簡化組態](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
@@ -22,7 +22,7 @@ ms.locfileid: "64652093"
 >  部署並存案例時，如果部署了兩個不同的服務版本，您就必須指定組態檔所參考之組件的部分名稱。 這是因為組態檔會在所有服務版本之間共用，而且它們可能會在不同的 .NET Framework 版本底下執行。  
   
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration:Web.config 和 App.config  
- WCF 會使用的 System.Configuration 組態系統[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。  
+ WCF 會使用.NET framework 的 System.Configuration 組態系統。  
   
  設定服務時在 Visual Studio 中，使用 web.config 或 App.config 檔案以指定的設定。 組態檔名稱的選擇取決於您為服務選擇的裝載環境。 如果您選擇使用 IIS 來裝載服務，請使用 Web.config 檔。 如果您使用其他任何裝載環境，請使用 App.config 檔。  
   

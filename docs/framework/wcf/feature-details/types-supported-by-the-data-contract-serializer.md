@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-ms.openlocfilehash: 364d3924d9db2c85959c1e41011c6d659823774c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b98b6b3da08ba7a0a37e0c26f58dd4d3ef115b1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614821"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592198"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>資料合約序列化程式支援的型別
 Windows Communication Foundation (WCF) 會使用<xref:System.Runtime.Serialization.DataContractSerializer>為其預設的序列化引擎將資料轉換成 XML，並將 XML 轉換成原來的資料。 <xref:System.Runtime.Serialization.DataContractSerializer> 主要是用來序列化「 *資料合約* 」(Data Contract) 型別。 但是，它支援其他許多型別，而您可將這些視為擁有隱含資料合約。 下列是可以序列化的完整型別清單：  
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF) 會使用<xref:System.Runtime.Serializati
     > [!NOTE]
     >  與其他基本型別不同的是，預設 <xref:System.DateTimeOffset> 不是已知型別 ( 如需詳細資訊，請參閱 < [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md))。  
   
-- 以 <xref:System.SerializableAttribute> 屬性標示的型別。 包含在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 基底類別程式庫中的許多型別都落在此分類範圍中。 <xref:System.Runtime.Serialization.DataContractSerializer> 充分支援原本由 .NET Framework 遠端處理所使用的序列化程式設計模型，亦即 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>以及 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>(包含對 <xref:System.Runtime.Serialization.ISerializable> 介面的支援)。  
+- 以 <xref:System.SerializableAttribute> 屬性標示的型別。 .NET Framework 基底類別庫中包含的許多類型屬於此分類。 <xref:System.Runtime.Serialization.DataContractSerializer> 充分支援原本由 .NET Framework 遠端處理所使用的序列化程式設計模型，亦即 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>以及 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>(包含對 <xref:System.Runtime.Serialization.ISerializable> 介面的支援)。  
   
 - 代表原始 XML 的型別或代表 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 關聯式資料的型別。 支援 <xref:System.Xml.XmlElement> 型別和 <xref:System.Xml.XmlNode> 型別的陣列以直接代表 XML。 另外亦支援實作 <xref:System.Xml.Serialization.IXmlSerializable> 介面的型別，包括相關的 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 屬性，以及 <xref:System.Xml.Linq.XDocument> 和 <xref:System.Xml.Linq.XElement> 型別。 支援 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> 型別和 <xref:System.Data.DataSet> 型別 (及其型別衍生類別) 全部會實作 <xref:System.Xml.Serialization.IXmlSerializable> 介面，因此會落在此分類範圍內。 如需詳細資訊，請參閱 < [XML and ADO.NET Types in Data Contracts](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)。  
   
