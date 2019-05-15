@@ -2,24 +2,24 @@
 title: 在 C# 中建立 XML 樹狀 (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 3bac7b62d04c9690cdd08d1993b64db33c4e6ab8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00f528bca00b2c2316d949ceb3b6c4bba2499146
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503161"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597666"
 ---
-# <a name="creating-xml-trees-in-c-linq-to-xml"></a><span data-ttu-id="0677b-102">在 C# 中建立 XML 樹狀結構 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="0677b-102">Creating XML trees in C# (LINQ to XML)</span></span>
-<span data-ttu-id="0677b-103">本節提供在 C# 中建立 XML 樹狀的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="0677b-103">This section provides information about creating XML trees in C#.</span></span>  
+# <a name="creating-xml-trees-in-c-linq-to-xml"></a><span data-ttu-id="83f34-102">在 C# 中建立 XML 樹狀結構 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="83f34-102">Creating XML trees in C# (LINQ to XML)</span></span>
+<span data-ttu-id="83f34-103">本節提供在 C# 中建立 XML 樹狀的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="83f34-103">This section provides information about creating XML trees in C#.</span></span>  
   
- <span data-ttu-id="0677b-104">如需使用 LINQ 查詢的結果作為 <xref:System.Xml.Linq.XElement> 內容的資訊，請參閱[函數式建構 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="0677b-104">For information about using the results of LINQ queries as the content for an <xref:System.Xml.Linq.XElement>, see [Functional Construction (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="83f34-104">如需使用 LINQ 查詢的結果作為 <xref:System.Xml.Linq.XElement> 內容的資訊，請參閱[函數式建構 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="83f34-104">For information about using the results of LINQ queries as the content for an <xref:System.Xml.Linq.XElement>, see [Functional Construction (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span></span>  
   
-## <a name="constructing-elements"></a><span data-ttu-id="0677b-105">建構項目</span><span class="sxs-lookup"><span data-stu-id="0677b-105">Constructing elements</span></span>
- <span data-ttu-id="0677b-106"><xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 建構函式的簽章可讓您傳遞項目或屬性的內容，當做建構函式的引數。</span><span class="sxs-lookup"><span data-stu-id="0677b-106">The signatures of the <xref:System.Xml.Linq.XElement> and <xref:System.Xml.Linq.XAttribute> constructors let you pass the contents of the element or attribute as arguments to the constructor.</span></span> <span data-ttu-id="0677b-107">由於其中一個建構函式採用多個引數，因此，您可以傳遞任何數目的子項目。</span><span class="sxs-lookup"><span data-stu-id="0677b-107">Because one of the constructors takes a variable number of arguments, you can pass any number of child elements.</span></span> <span data-ttu-id="0677b-108">當然，這些子項目中的每個子項目都可以包含其自己的子項目。</span><span class="sxs-lookup"><span data-stu-id="0677b-108">Of course, each of those child elements can contain their own child elements.</span></span> <span data-ttu-id="0677b-109">對於任何項目，您可以加入任何數目的屬性。</span><span class="sxs-lookup"><span data-stu-id="0677b-109">For any element, you can add any number of attributes.</span></span>  
+## <a name="constructing-elements"></a><span data-ttu-id="83f34-105">建構項目</span><span class="sxs-lookup"><span data-stu-id="83f34-105">Constructing elements</span></span>
+ <span data-ttu-id="83f34-106"><xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 建構函式的簽章可讓您傳遞項目或屬性的內容，當做建構函式的引數。</span><span class="sxs-lookup"><span data-stu-id="83f34-106">The signatures of the <xref:System.Xml.Linq.XElement> and <xref:System.Xml.Linq.XAttribute> constructors let you pass the contents of the element or attribute as arguments to the constructor.</span></span> <span data-ttu-id="83f34-107">由於其中一個建構函式採用多個引數，因此，您可以傳遞任何數目的子項目。</span><span class="sxs-lookup"><span data-stu-id="83f34-107">Because one of the constructors takes a variable number of arguments, you can pass any number of child elements.</span></span> <span data-ttu-id="83f34-108">當然，這些子項目中的每個子項目都可以包含其自己的子項目。</span><span class="sxs-lookup"><span data-stu-id="83f34-108">Of course, each of those child elements can contain their own child elements.</span></span> <span data-ttu-id="83f34-109">對於任何項目，您可以加入任何數目的屬性。</span><span class="sxs-lookup"><span data-stu-id="83f34-109">For any element, you can add any number of attributes.</span></span>  
   
- <span data-ttu-id="0677b-110">加入 <xref:System.Xml.Linq.XNode> (包括 <xref:System.Xml.Linq.XElement>) 或 <xref:System.Xml.Linq.XAttribute> 物件時，如果新內容沒有父代，這些物件只會附加到 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="0677b-110">When adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="0677b-111">如果新內容已經成為父代，或是其他 XML 樹狀的一部分，則會複製新內容，而且新複製的內容會附加到 XML 樹狀。</span><span class="sxs-lookup"><span data-stu-id="0677b-111">If the new content already is parented, and is part of another XML tree, the new content is cloned, and the newly cloned content is attached to the XML tree.</span></span> <span data-ttu-id="0677b-112">本主題中的最後一個範例會示範這個情況。</span><span class="sxs-lookup"><span data-stu-id="0677b-112">The last example in this topic demonstrates this.</span></span>  
+ <span data-ttu-id="83f34-110">加入 <xref:System.Xml.Linq.XNode> (包括 <xref:System.Xml.Linq.XElement>) 或 <xref:System.Xml.Linq.XAttribute> 物件時，如果新內容沒有父代，這些物件只會附加到 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="83f34-110">When adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="83f34-111">如果新內容已經成為父代，或是其他 XML 樹狀的一部分，則會複製新內容，而且新複製的內容會附加到 XML 樹狀。</span><span class="sxs-lookup"><span data-stu-id="83f34-111">If the new content already is parented, and is part of another XML tree, the new content is cloned, and the newly cloned content is attached to the XML tree.</span></span> <span data-ttu-id="83f34-112">本主題中的最後一個範例會示範這個情況。</span><span class="sxs-lookup"><span data-stu-id="83f34-112">The last example in this topic demonstrates this.</span></span>  
   
- <span data-ttu-id="0677b-113">若要建立 `contacts`<xref:System.Xml.Linq.XElement>，您可以使用下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="0677b-113">To create a `contacts`<xref:System.Xml.Linq.XElement>, you could use the following code:</span></span>  
+ <span data-ttu-id="83f34-113">若要建立 `contacts`<xref:System.Xml.Linq.XElement>，您可以使用下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="83f34-113">To create a `contacts`<xref:System.Xml.Linq.XElement>, you could use the following code:</span></span>  
   
 ```csharp  
 XElement contacts =  
@@ -37,62 +37,62 @@ XElement contacts =
     );  
 ```  
   
- <span data-ttu-id="0677b-114">如果縮排正確，建構 <xref:System.Xml.Linq.XElement> 物件的程式碼會非常接近基礎 XML 的結構。</span><span class="sxs-lookup"><span data-stu-id="0677b-114">If indented properly, the code to construct <xref:System.Xml.Linq.XElement> objects closely resembles the structure of the underlying XML.</span></span>  
+ <span data-ttu-id="83f34-114">如果縮排正確，建構 <xref:System.Xml.Linq.XElement> 物件的程式碼會非常接近基礎 XML 的結構。</span><span class="sxs-lookup"><span data-stu-id="83f34-114">If indented properly, the code to construct <xref:System.Xml.Linq.XElement> objects closely resembles the structure of the underlying XML.</span></span>  
   
-## <a name="xelement-constructors"></a><span data-ttu-id="0677b-115">XElement 建構函式</span><span class="sxs-lookup"><span data-stu-id="0677b-115">XElement constructors</span></span>  
- <span data-ttu-id="0677b-116"><xref:System.Xml.Linq.XElement> 類別會將下列建構函式用於功能結構。</span><span class="sxs-lookup"><span data-stu-id="0677b-116">The <xref:System.Xml.Linq.XElement> class uses the following constructors for functional construction.</span></span> <span data-ttu-id="0677b-117">請注意，<xref:System.Xml.Linq.XElement> 還有其他建構函式，但是它們不用於功能結構，因此未在此處列出。</span><span class="sxs-lookup"><span data-stu-id="0677b-117">Note that there are some other constructors for <xref:System.Xml.Linq.XElement>, but because they are not used for functional construction they are not listed here.</span></span>  
+## <a name="xelement-constructors"></a><span data-ttu-id="83f34-115">XElement 建構函式</span><span class="sxs-lookup"><span data-stu-id="83f34-115">XElement constructors</span></span>  
+ <span data-ttu-id="83f34-116"><xref:System.Xml.Linq.XElement> 類別會將下列建構函式用於功能結構。</span><span class="sxs-lookup"><span data-stu-id="83f34-116">The <xref:System.Xml.Linq.XElement> class uses the following constructors for functional construction.</span></span> <span data-ttu-id="83f34-117">請注意，<xref:System.Xml.Linq.XElement> 還有其他建構函式，但是它們不用於功能結構，因此未在此處列出。</span><span class="sxs-lookup"><span data-stu-id="83f34-117">Note that there are some other constructors for <xref:System.Xml.Linq.XElement>, but because they are not used for functional construction they are not listed here.</span></span>  
   
-|<span data-ttu-id="0677b-118">建構函式</span><span class="sxs-lookup"><span data-stu-id="0677b-118">Constructor</span></span>|<span data-ttu-id="0677b-119">說明</span><span class="sxs-lookup"><span data-stu-id="0677b-119">Description</span></span>|  
+|<span data-ttu-id="83f34-118">建構函式</span><span class="sxs-lookup"><span data-stu-id="83f34-118">Constructor</span></span>|<span data-ttu-id="83f34-119">說明</span><span class="sxs-lookup"><span data-stu-id="83f34-119">Description</span></span>|  
 |-----------------|-----------------|  
-|`XElement(XName name, object content)`|<span data-ttu-id="0677b-120">建立 <xref:System.Xml.Linq.XElement>。</span><span class="sxs-lookup"><span data-stu-id="0677b-120">Creates an <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="0677b-121">`name` 參數會指定項目的名稱；`content` 會指定項目的內容。</span><span class="sxs-lookup"><span data-stu-id="0677b-121">The `name` parameter specifies the name of the element; `content` specifies the content of the element.</span></span>|  
-|`XElement(XName name)`|<span data-ttu-id="0677b-122">在將其 <xref:System.Xml.Linq.XElement> 初始化為指定之名稱的情況下，建立 <xref:System.Xml.Linq.XName>。</span><span class="sxs-lookup"><span data-stu-id="0677b-122">Creates an <xref:System.Xml.Linq.XElement> with its <xref:System.Xml.Linq.XName> initialized to the specified name.</span></span>|  
-|`XElement(XName name, params object[] content)`|<span data-ttu-id="0677b-123">在將其 <xref:System.Xml.Linq.XElement> 初始化為指定之名稱的情況下，建立 <xref:System.Xml.Linq.XName>。</span><span class="sxs-lookup"><span data-stu-id="0677b-123">Creates an <xref:System.Xml.Linq.XElement> with its <xref:System.Xml.Linq.XName> initialized to the specified name.</span></span> <span data-ttu-id="0677b-124">系統會從參數清單的內容建立屬性和/或子項目。</span><span class="sxs-lookup"><span data-stu-id="0677b-124">The attributes and/or child elements are created from the contents of the parameter list.</span></span>|  
+|`XElement(XName name, object content)`|<span data-ttu-id="83f34-120">建立 <xref:System.Xml.Linq.XElement>。</span><span class="sxs-lookup"><span data-stu-id="83f34-120">Creates an <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="83f34-121">`name` 參數會指定項目的名稱；`content` 會指定項目的內容。</span><span class="sxs-lookup"><span data-stu-id="83f34-121">The `name` parameter specifies the name of the element; `content` specifies the content of the element.</span></span>|  
+|`XElement(XName name)`|<span data-ttu-id="83f34-122">在將其 <xref:System.Xml.Linq.XElement> 初始化為指定之名稱的情況下，建立 <xref:System.Xml.Linq.XName>。</span><span class="sxs-lookup"><span data-stu-id="83f34-122">Creates an <xref:System.Xml.Linq.XElement> with its <xref:System.Xml.Linq.XName> initialized to the specified name.</span></span>|  
+|`XElement(XName name, params object[] content)`|<span data-ttu-id="83f34-123">在將其 <xref:System.Xml.Linq.XElement> 初始化為指定之名稱的情況下，建立 <xref:System.Xml.Linq.XName>。</span><span class="sxs-lookup"><span data-stu-id="83f34-123">Creates an <xref:System.Xml.Linq.XElement> with its <xref:System.Xml.Linq.XName> initialized to the specified name.</span></span> <span data-ttu-id="83f34-124">系統會從參數清單的內容建立屬性和/或子項目。</span><span class="sxs-lookup"><span data-stu-id="83f34-124">The attributes and/or child elements are created from the contents of the parameter list.</span></span>|  
   
- <span data-ttu-id="0677b-125">`content` 參數非常有彈性。</span><span class="sxs-lookup"><span data-stu-id="0677b-125">The `content` parameter is extremely flexible.</span></span> <span data-ttu-id="0677b-126">它支援物件為 <xref:System.Xml.Linq.XElement> 之有效子系的任何型別。</span><span class="sxs-lookup"><span data-stu-id="0677b-126">It supports any type of object that is a valid child of an <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="0677b-127">下列規則適用於傳入此參數的不同型別物件：</span><span class="sxs-lookup"><span data-stu-id="0677b-127">The following rules apply to different types of objects passed in this parameter:</span></span>  
+ <span data-ttu-id="83f34-125">`content` 參數非常有彈性。</span><span class="sxs-lookup"><span data-stu-id="83f34-125">The `content` parameter is extremely flexible.</span></span> <span data-ttu-id="83f34-126">它支援物件為 <xref:System.Xml.Linq.XElement> 之有效子系的任何型別。</span><span class="sxs-lookup"><span data-stu-id="83f34-126">It supports any type of object that is a valid child of an <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="83f34-127">下列規則適用於傳入此參數的不同型別物件：</span><span class="sxs-lookup"><span data-stu-id="83f34-127">The following rules apply to different types of objects passed in this parameter:</span></span>  
   
--   <span data-ttu-id="0677b-128">字串當做文字內容加入。</span><span class="sxs-lookup"><span data-stu-id="0677b-128">A string is added as text content.</span></span>  
+- <span data-ttu-id="83f34-128">字串當做文字內容加入。</span><span class="sxs-lookup"><span data-stu-id="83f34-128">A string is added as text content.</span></span>  
   
--   <span data-ttu-id="0677b-129"><xref:System.Xml.Linq.XElement> 當做子項目加入。</span><span class="sxs-lookup"><span data-stu-id="0677b-129">An <xref:System.Xml.Linq.XElement> is added as a child element.</span></span>  
+- <span data-ttu-id="83f34-129"><xref:System.Xml.Linq.XElement> 當做子項目加入。</span><span class="sxs-lookup"><span data-stu-id="83f34-129">An <xref:System.Xml.Linq.XElement> is added as a child element.</span></span>  
   
--   <span data-ttu-id="0677b-130"><xref:System.Xml.Linq.XAttribute> 當做屬性加入。</span><span class="sxs-lookup"><span data-stu-id="0677b-130">An <xref:System.Xml.Linq.XAttribute> is added as an attribute.</span></span>  
+- <span data-ttu-id="83f34-130"><xref:System.Xml.Linq.XAttribute> 當做屬性加入。</span><span class="sxs-lookup"><span data-stu-id="83f34-130">An <xref:System.Xml.Linq.XAttribute> is added as an attribute.</span></span>  
   
--   <span data-ttu-id="0677b-131"><xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment> 或 <xref:System.Xml.Linq.XText> 當做子內容加入。</span><span class="sxs-lookup"><span data-stu-id="0677b-131">An <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment>, or <xref:System.Xml.Linq.XText> is added as child content.</span></span>  
+- <span data-ttu-id="83f34-131"><xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment> 或 <xref:System.Xml.Linq.XText> 當做子內容加入。</span><span class="sxs-lookup"><span data-stu-id="83f34-131">An <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment>, or <xref:System.Xml.Linq.XText> is added as child content.</span></span>  
   
--   <span data-ttu-id="0677b-132">系統會列舉 <xref:System.Collections.IEnumerable>，並將這些規則遞迴地套用到結果。</span><span class="sxs-lookup"><span data-stu-id="0677b-132">An <xref:System.Collections.IEnumerable> is enumerated, and these rules are applied recursively to the results.</span></span>  
+- <span data-ttu-id="83f34-132">系統會列舉 <xref:System.Collections.IEnumerable>，並將這些規則遞迴地套用到結果。</span><span class="sxs-lookup"><span data-stu-id="83f34-132">An <xref:System.Collections.IEnumerable> is enumerated, and these rules are applied recursively to the results.</span></span>  
   
--   <span data-ttu-id="0677b-133">若是其他任何型別，則會呼叫其 `ToString` 方法，並將結果當做文字內容加入。</span><span class="sxs-lookup"><span data-stu-id="0677b-133">For any other type, its `ToString` method is called and the result is added as text content.</span></span>  
+- <span data-ttu-id="83f34-133">若是其他任何型別，則會呼叫其 `ToString` 方法，並將結果當做文字內容加入。</span><span class="sxs-lookup"><span data-stu-id="83f34-133">For any other type, its `ToString` method is called and the result is added as text content.</span></span>  
   
-### <a name="creating-an-xelement-with-content"></a><span data-ttu-id="0677b-134">建立包含內容的 XElement</span><span class="sxs-lookup"><span data-stu-id="0677b-134">Creating an XElement with content</span></span>  
- <span data-ttu-id="0677b-135">您可以建立包含具有單一方法呼叫之簡單內容的 <xref:System.Xml.Linq.XElement>。</span><span class="sxs-lookup"><span data-stu-id="0677b-135">You can create an <xref:System.Xml.Linq.XElement> that contains simple content with a single method call.</span></span> <span data-ttu-id="0677b-136">如果要這樣做，請將內容指定為第二個參數，如下所示：</span><span class="sxs-lookup"><span data-stu-id="0677b-136">To do this, specify the content as the second parameter, as follows:</span></span>  
+### <a name="creating-an-xelement-with-content"></a><span data-ttu-id="83f34-134">建立包含內容的 XElement</span><span class="sxs-lookup"><span data-stu-id="83f34-134">Creating an XElement with content</span></span>  
+ <span data-ttu-id="83f34-135">您可以建立包含具有單一方法呼叫之簡單內容的 <xref:System.Xml.Linq.XElement>。</span><span class="sxs-lookup"><span data-stu-id="83f34-135">You can create an <xref:System.Xml.Linq.XElement> that contains simple content with a single method call.</span></span> <span data-ttu-id="83f34-136">如果要這樣做，請將內容指定為第二個參數，如下所示：</span><span class="sxs-lookup"><span data-stu-id="83f34-136">To do this, specify the content as the second parameter, as follows:</span></span>  
   
 ```csharp  
 XElement n = new XElement("Customer", "Adventure Works");  
 Console.WriteLine(n);  
 ```  
   
- <span data-ttu-id="0677b-137">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="0677b-137">This example produces the following output:</span></span>  
+ <span data-ttu-id="83f34-137">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="83f34-137">This example produces the following output:</span></span>  
   
 ```xml  
 <Customer>Adventure Works</Customer>  
 ```  
   
- <span data-ttu-id="0677b-138">您可以傳遞任何型別的物件當做內容。</span><span class="sxs-lookup"><span data-stu-id="0677b-138">You can pass any type of object as the content.</span></span> <span data-ttu-id="0677b-139">例如，下列程式碼會建立包含浮點數的項目當做內容：</span><span class="sxs-lookup"><span data-stu-id="0677b-139">For example, the following code creates an element that contains a floating point number as content:</span></span>  
+ <span data-ttu-id="83f34-138">您可以傳遞任何型別的物件當做內容。</span><span class="sxs-lookup"><span data-stu-id="83f34-138">You can pass any type of object as the content.</span></span> <span data-ttu-id="83f34-139">例如，下列程式碼會建立包含浮點數的項目當做內容：</span><span class="sxs-lookup"><span data-stu-id="83f34-139">For example, the following code creates an element that contains a floating point number as content:</span></span>  
   
 ```csharp  
 XElement n = new XElement("Cost", 324.50);  
 Console.WriteLine(n);  
 ```  
   
- <span data-ttu-id="0677b-140">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="0677b-140">This example produces the following output:</span></span>  
+ <span data-ttu-id="83f34-140">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="83f34-140">This example produces the following output:</span></span>  
   
 ```xml  
 <Cost>324.5</Cost>  
 ```  
   
- <span data-ttu-id="0677b-141">浮點數為 Boxed 而且會傳入建構函式。</span><span class="sxs-lookup"><span data-stu-id="0677b-141">The floating point number is boxed and passed in to the constructor.</span></span> <span data-ttu-id="0677b-142">Boxed 數字會轉換為字串，並當做項目的內容使用。</span><span class="sxs-lookup"><span data-stu-id="0677b-142">The boxed number is converted to a string and used as the content of the element.</span></span>  
+ <span data-ttu-id="83f34-141">浮點數為 Boxed 而且會傳入建構函式。</span><span class="sxs-lookup"><span data-stu-id="83f34-141">The floating point number is boxed and passed in to the constructor.</span></span> <span data-ttu-id="83f34-142">Boxed 數字會轉換為字串，並當做項目的內容使用。</span><span class="sxs-lookup"><span data-stu-id="83f34-142">The boxed number is converted to a string and used as the content of the element.</span></span>  
   
-### <a name="creating-an-xelement-with-a-child-element"></a><span data-ttu-id="0677b-143">建立包含子項目的 XElement</span><span class="sxs-lookup"><span data-stu-id="0677b-143">Creating an XElement with a child element</span></span>  
- <span data-ttu-id="0677b-144">如果您要針對內容引數傳遞 <xref:System.Xml.Linq.XElement> 類別的執行個體，建構函式會建立包含子項目的項目：</span><span class="sxs-lookup"><span data-stu-id="0677b-144">If you pass an instance of the <xref:System.Xml.Linq.XElement> class for the content argument, the constructor creates an element with a child element:</span></span>  
+### <a name="creating-an-xelement-with-a-child-element"></a><span data-ttu-id="83f34-143">建立包含子項目的 XElement</span><span class="sxs-lookup"><span data-stu-id="83f34-143">Creating an XElement with a child element</span></span>  
+ <span data-ttu-id="83f34-144">如果您要針對內容引數傳遞 <xref:System.Xml.Linq.XElement> 類別的執行個體，建構函式會建立包含子項目的項目：</span><span class="sxs-lookup"><span data-stu-id="83f34-144">If you pass an instance of the <xref:System.Xml.Linq.XElement> class for the content argument, the constructor creates an element with a child element:</span></span>  
   
 ```csharp  
 XElement shippingUnit = new XElement("ShippingUnit",  
@@ -101,7 +101,7 @@ XElement shippingUnit = new XElement("ShippingUnit",
 Console.WriteLine(shippingUnit);  
 ```  
   
- <span data-ttu-id="0677b-145">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="0677b-145">This example produces the following output:</span></span>  
+ <span data-ttu-id="83f34-145">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="83f34-145">This example produces the following output:</span></span>  
   
 ```xml  
 <ShippingUnit>  
@@ -109,8 +109,8 @@ Console.WriteLine(shippingUnit);
 </ShippingUnit>  
 ```  
   
-### <a name="creating-an-xelement-with-multiple-child-elements"></a><span data-ttu-id="0677b-146">建立包含多個子項目的 XElement</span><span class="sxs-lookup"><span data-stu-id="0677b-146">Creating an XElement with multiple child elements</span></span>  
- <span data-ttu-id="0677b-147">您可以針對內容傳入多個 <xref:System.Xml.Linq.XElement> 物件。</span><span class="sxs-lookup"><span data-stu-id="0677b-147">You can pass in a number of <xref:System.Xml.Linq.XElement> objects for the content.</span></span> <span data-ttu-id="0677b-148">每個 <xref:System.Xml.Linq.XElement> 物件都會當做子項目包含在內。</span><span class="sxs-lookup"><span data-stu-id="0677b-148">Each of the <xref:System.Xml.Linq.XElement> objects is included as a child element.</span></span>  
+### <a name="creating-an-xelement-with-multiple-child-elements"></a><span data-ttu-id="83f34-146">建立包含多個子項目的 XElement</span><span class="sxs-lookup"><span data-stu-id="83f34-146">Creating an XElement with multiple child elements</span></span>  
+ <span data-ttu-id="83f34-147">您可以針對內容傳入多個 <xref:System.Xml.Linq.XElement> 物件。</span><span class="sxs-lookup"><span data-stu-id="83f34-147">You can pass in a number of <xref:System.Xml.Linq.XElement> objects for the content.</span></span> <span data-ttu-id="83f34-148">每個 <xref:System.Xml.Linq.XElement> 物件都會當做子項目包含在內。</span><span class="sxs-lookup"><span data-stu-id="83f34-148">Each of the <xref:System.Xml.Linq.XElement> objects is included as a child element.</span></span>  
   
 ```csharp  
 XElement address = new XElement("Address",  
@@ -122,7 +122,7 @@ XElement address = new XElement("Address",
 Console.WriteLine(address);  
 ```  
   
- <span data-ttu-id="0677b-149">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="0677b-149">This example produces the following output:</span></span>  
+ <span data-ttu-id="83f34-149">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="83f34-149">This example produces the following output:</span></span>  
   
 ```xml  
 <Address>  
@@ -133,7 +133,7 @@ Console.WriteLine(address);
 </Address>  
 ```  
   
- <span data-ttu-id="0677b-150">藉由延伸以上的範例，您可以建立完整的 XML 樹狀結構，如下所示：</span><span class="sxs-lookup"><span data-stu-id="0677b-150">By extending the above example, you can create an entire XML tree, as follows:</span></span>  
+ <span data-ttu-id="83f34-150">藉由延伸以上的範例，您可以建立完整的 XML 樹狀結構，如下所示：</span><span class="sxs-lookup"><span data-stu-id="83f34-150">By extending the above example, you can create an entire XML tree, as follows:</span></span>  
   
 ```csharp  
 XElement contacts =  
@@ -152,7 +152,7 @@ XElement contacts =
 Console.WriteLine(contacts);  
 ```  
   
- <span data-ttu-id="0677b-151">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="0677b-151">This example produces the following output:</span></span>  
+ <span data-ttu-id="83f34-151">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="83f34-151">This example produces the following output:</span></span>  
   
 ```xml  
 <Contacts>  
@@ -169,8 +169,8 @@ Console.WriteLine(contacts);
 </Contacts>  
 ```  
 
-### <a name="creating-an-xelement-with-an-xattribute"></a><span data-ttu-id="0677b-152">建立具有 XAttribute 的 XElement</span><span class="sxs-lookup"><span data-stu-id="0677b-152">Creating an XElement with an XAttribute</span></span>
- <span data-ttu-id="0677b-153">如果您針對內容引數傳遞 <xref:System.Xml.Linq.XAttribute> 類別的執行個體，建構函式會建立具有屬性的元素：</span><span class="sxs-lookup"><span data-stu-id="0677b-153">If you pass an instance of the <xref:System.Xml.Linq.XAttribute> class for the content argument, the constructor creates an element with an attribute:</span></span>
+### <a name="creating-an-xelement-with-an-xattribute"></a><span data-ttu-id="83f34-152">建立具有 XAttribute 的 XElement</span><span class="sxs-lookup"><span data-stu-id="83f34-152">Creating an XElement with an XAttribute</span></span>
+ <span data-ttu-id="83f34-153">如果您針對內容引數傳遞 <xref:System.Xml.Linq.XAttribute> 類別的執行個體，建構函式會建立具有屬性的元素：</span><span class="sxs-lookup"><span data-stu-id="83f34-153">If you pass an instance of the <xref:System.Xml.Linq.XAttribute> class for the content argument, the constructor creates an element with an attribute:</span></span>
 
 ```csharp  
 XElement phone = new XElement("Phone",  
@@ -179,30 +179,30 @@ XElement phone = new XElement("Phone",
 Console.WriteLine(phone);  
 ```  
   
- <span data-ttu-id="0677b-154">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="0677b-154">This example produces the following output:</span></span>  
+ <span data-ttu-id="83f34-154">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="83f34-154">This example produces the following output:</span></span>  
   
 ```xml  
 <Phone Type="Home">555-555-5555</Phone>
 ```   
 
-### <a name="creating-an-empty-element"></a><span data-ttu-id="0677b-155">建立空項目</span><span class="sxs-lookup"><span data-stu-id="0677b-155">Creating an empty element</span></span>  
- <span data-ttu-id="0677b-156">若要建立空的 <xref:System.Xml.Linq.XElement>，您不用將任何內容傳遞到建構函式。</span><span class="sxs-lookup"><span data-stu-id="0677b-156">To create an empty <xref:System.Xml.Linq.XElement>, you do not pass any content to the constructor.</span></span> <span data-ttu-id="0677b-157">下列範例會建立空項目：</span><span class="sxs-lookup"><span data-stu-id="0677b-157">The following example creates an empty element:</span></span>  
+### <a name="creating-an-empty-element"></a><span data-ttu-id="83f34-155">建立空項目</span><span class="sxs-lookup"><span data-stu-id="83f34-155">Creating an empty element</span></span>  
+ <span data-ttu-id="83f34-156">若要建立空的 <xref:System.Xml.Linq.XElement>，您不用將任何內容傳遞到建構函式。</span><span class="sxs-lookup"><span data-stu-id="83f34-156">To create an empty <xref:System.Xml.Linq.XElement>, you do not pass any content to the constructor.</span></span> <span data-ttu-id="83f34-157">下列範例會建立空項目：</span><span class="sxs-lookup"><span data-stu-id="83f34-157">The following example creates an empty element:</span></span>  
   
 ```csharp  
 XElement n = new XElement("Customer");  
 Console.WriteLine(n);  
 ```  
   
- <span data-ttu-id="0677b-158">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="0677b-158">This example produces the following output:</span></span>  
+ <span data-ttu-id="83f34-158">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="83f34-158">This example produces the following output:</span></span>  
   
 ```xml  
 <Customer />  
 ```  
   
-### <a name="attaching-vs-cloning"></a><span data-ttu-id="0677b-159">附加與複製</span><span class="sxs-lookup"><span data-stu-id="0677b-159">Attaching vs. cloning</span></span>  
- <span data-ttu-id="0677b-160">如先前所述，加入 <xref:System.Xml.Linq.XNode> (包括 <xref:System.Xml.Linq.XElement>) 或 <xref:System.Xml.Linq.XAttribute> 物件時，如果新內容沒有父代，這些物件只會附加到 XML 樹狀。</span><span class="sxs-lookup"><span data-stu-id="0677b-160">As mentioned previously, when adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="0677b-161">如果新內容已經成為父代，或是其他 XML 樹狀的一部分，則會複製新內容，而且新複製的內容會附加到 XML 樹狀。</span><span class="sxs-lookup"><span data-stu-id="0677b-161">If the new content already is parented and is part of another XML tree, the new content is cloned, and the newly cloned content is attached to the XML tree.</span></span>  
+### <a name="attaching-vs-cloning"></a><span data-ttu-id="83f34-159">附加與複製</span><span class="sxs-lookup"><span data-stu-id="83f34-159">Attaching vs. cloning</span></span>  
+ <span data-ttu-id="83f34-160">如先前所述，加入 <xref:System.Xml.Linq.XNode> (包括 <xref:System.Xml.Linq.XElement>) 或 <xref:System.Xml.Linq.XAttribute> 物件時，如果新內容沒有父代，這些物件只會附加到 XML 樹狀。</span><span class="sxs-lookup"><span data-stu-id="83f34-160">As mentioned previously, when adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="83f34-161">如果新內容已經成為父代，或是其他 XML 樹狀的一部分，則會複製新內容，而且新複製的內容會附加到 XML 樹狀。</span><span class="sxs-lookup"><span data-stu-id="83f34-161">If the new content already is parented and is part of another XML tree, the new content is cloned, and the newly cloned content is attached to the XML tree.</span></span>  
 
-<span data-ttu-id="0677b-162">下列範例示範將成為父代的項目加入到樹狀結構時，以及將沒有父代的項目加入樹狀結構時的行為。</span><span class="sxs-lookup"><span data-stu-id="0677b-162">The following example demonstrates the behavior when you add a parented element to a tree, and when you add an element with no parent to a tree.</span></span>
+<span data-ttu-id="83f34-162">下列範例示範將成為父代的項目加入到樹狀結構時，以及將沒有父代的項目加入樹狀結構時的行為。</span><span class="sxs-lookup"><span data-stu-id="83f34-162">The following example demonstrates the behavior when you add a parented element to a tree, and when you add an element with no parent to a tree.</span></span>
 
 ```csharp  
 // Create a tree with a child element.  
@@ -234,6 +234,6 @@ Console.WriteLine("Child2 was {0}",
 //    Child2 was attached  
 ```
 
-## <a name="see-also"></a><span data-ttu-id="0677b-163">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0677b-163">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="83f34-163">另請參閱</span><span class="sxs-lookup"><span data-stu-id="83f34-163">See also</span></span>
 
-- [<span data-ttu-id="0677b-164">建立 XML 樹狀結構 (C#)</span><span class="sxs-lookup"><span data-stu-id="0677b-164">Creating XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+- [<span data-ttu-id="83f34-164">建立 XML 樹狀結構 (C#)</span><span class="sxs-lookup"><span data-stu-id="83f34-164">Creating XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)

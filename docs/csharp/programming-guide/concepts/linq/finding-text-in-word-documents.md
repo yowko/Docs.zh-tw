@@ -2,22 +2,22 @@
 title: 尋找 Word 文件中的文字 (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 59d224307808edefbbb7e7ffc848f40fbe2880ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d421916335f4cf163a449bc7b0c7c7bb30179a5c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720781"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596621"
 ---
-# <a name="finding-text-in-word-documents-c"></a><span data-ttu-id="aa53a-102">尋找 Word 文件中的文字 (C#)</span><span class="sxs-lookup"><span data-stu-id="aa53a-102">Finding Text in Word Documents (C#)</span></span>
-<span data-ttu-id="aa53a-103">本主題會延伸先前的查詢以進行實用的操作：在文件中尋找出現的所有字串。</span><span class="sxs-lookup"><span data-stu-id="aa53a-103">This topic extends the previous queries to do something useful: find all occurrences of a string in the document.</span></span>  
+# <a name="finding-text-in-word-documents-c"></a><span data-ttu-id="5e477-102">尋找 Word 文件中的文字 (C#)</span><span class="sxs-lookup"><span data-stu-id="5e477-102">Finding Text in Word Documents (C#)</span></span>
+<span data-ttu-id="5e477-103">本主題會延伸先前的查詢以進行實用的操作：在文件中尋找出現的所有字串。</span><span class="sxs-lookup"><span data-stu-id="5e477-103">This topic extends the previous queries to do something useful: find all occurrences of a string in the document.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="aa53a-104">範例</span><span class="sxs-lookup"><span data-stu-id="aa53a-104">Example</span></span>  
- <span data-ttu-id="aa53a-105">此範例會處理 WordprocessingML 文件，以便在文件中尋找所有出現的特定文字片段。</span><span class="sxs-lookup"><span data-stu-id="aa53a-105">This example processes a WordprocessingML document, to find all the occurrences of a specific piece of text in the document.</span></span> <span data-ttu-id="aa53a-106">如果要這樣做，我們會使用尋找字串 "Hello" 的查詢。</span><span class="sxs-lookup"><span data-stu-id="aa53a-106">To do this, we use a query that finds the string "Hello".</span></span> <span data-ttu-id="aa53a-107">此範例在這個教學課程中，會在先前的範例上建置。</span><span class="sxs-lookup"><span data-stu-id="aa53a-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="aa53a-108">新的查詢會在以下程式碼的註解中叫出。</span><span class="sxs-lookup"><span data-stu-id="aa53a-108">The new query is called out in comments in the code below.</span></span>  
+## <a name="example"></a><span data-ttu-id="5e477-104">範例</span><span class="sxs-lookup"><span data-stu-id="5e477-104">Example</span></span>  
+ <span data-ttu-id="5e477-105">此範例會處理 WordprocessingML 文件，以便在文件中尋找所有出現的特定文字片段。</span><span class="sxs-lookup"><span data-stu-id="5e477-105">This example processes a WordprocessingML document, to find all the occurrences of a specific piece of text in the document.</span></span> <span data-ttu-id="5e477-106">如果要這樣做，我們會使用尋找字串 "Hello" 的查詢。</span><span class="sxs-lookup"><span data-stu-id="5e477-106">To do this, we use a query that finds the string "Hello".</span></span> <span data-ttu-id="5e477-107">此範例在這個教學課程中，會在先前的範例上建置。</span><span class="sxs-lookup"><span data-stu-id="5e477-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="5e477-108">新的查詢會在以下程式碼的註解中叫出。</span><span class="sxs-lookup"><span data-stu-id="5e477-108">The new query is called out in comments in the code below.</span></span>  
   
- <span data-ttu-id="aa53a-109">如需建立此範例之來源文件的指示，請參閱[建立來源 Office Open XML 文件 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。</span><span class="sxs-lookup"><span data-stu-id="aa53a-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="5e477-109">如需建立此範例之來源文件的指示，請參閱[建立來源 Office Open XML 文件 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。</span><span class="sxs-lookup"><span data-stu-id="5e477-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="aa53a-110">這個範例會使用在 WindowsBase 組件中找到的類別。</span><span class="sxs-lookup"><span data-stu-id="aa53a-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="aa53a-111">它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。</span><span class="sxs-lookup"><span data-stu-id="aa53a-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="5e477-110">這個範例會使用在 WindowsBase 組件中找到的類別。</span><span class="sxs-lookup"><span data-stu-id="5e477-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="5e477-111">它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。</span><span class="sxs-lookup"><span data-stu-id="5e477-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -165,14 +165,14 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="aa53a-112">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="aa53a-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="5e477-112">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="5e477-112">This example produces the following output:</span></span>  
   
 ```  
 StyleName:Code >        Console.WriteLine("Hello World");<  
 StyleName:Code >Hello World<  
 ```  
   
- <span data-ttu-id="aa53a-113">當然您可以修改搜尋條件，讓它搜尋具有特定樣式的行。</span><span class="sxs-lookup"><span data-stu-id="aa53a-113">You can, of course, modify the search so that it searches for lines with a specific style.</span></span> <span data-ttu-id="aa53a-114">下列查詢會尋找具有 Code 樣式的所有空行：</span><span class="sxs-lookup"><span data-stu-id="aa53a-114">The following query finds all blank lines that have the Code style:</span></span>  
+ <span data-ttu-id="5e477-113">當然您可以修改搜尋條件，讓它搜尋具有特定樣式的行。</span><span class="sxs-lookup"><span data-stu-id="5e477-113">You can, of course, modify the search so that it searches for lines with a specific style.</span></span> <span data-ttu-id="5e477-114">下列查詢會尋找具有 Code 樣式的所有空行：</span><span class="sxs-lookup"><span data-stu-id="5e477-114">The following query finds all blank lines that have the Code style:</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -312,23 +312,23 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="aa53a-115">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="aa53a-115">This example produces the following output:</span></span>  
+ <span data-ttu-id="5e477-115">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="5e477-115">This example produces the following output:</span></span>  
   
 ```  
 StyleName:Code ><  
 ```  
   
- <span data-ttu-id="aa53a-116">當然，這個範例可以利用數種方式增強。</span><span class="sxs-lookup"><span data-stu-id="aa53a-116">Of course, this example could be enhanced in a number of ways.</span></span> <span data-ttu-id="aa53a-117">例如，我們可以使用規則運算式 (Regular Expression) 來搜尋文字；我們可以在特定的字典中逐一查看所有 Word 檔案等等。</span><span class="sxs-lookup"><span data-stu-id="aa53a-117">For example, we could use regular expressions to search for text, we could iterate through all the Word files in a particular directory, and so on.</span></span>  
+ <span data-ttu-id="5e477-116">當然，這個範例可以利用數種方式增強。</span><span class="sxs-lookup"><span data-stu-id="5e477-116">Of course, this example could be enhanced in a number of ways.</span></span> <span data-ttu-id="5e477-117">例如，我們可以使用規則運算式 (Regular Expression) 來搜尋文字；我們可以在特定的字典中逐一查看所有 Word 檔案等等。</span><span class="sxs-lookup"><span data-stu-id="5e477-117">For example, we could use regular expressions to search for text, we could iterate through all the Word files in a particular directory, and so on.</span></span>  
   
- <span data-ttu-id="aa53a-118">請注意，這個範例的執行方式與撰寫為單一查詢的執行方式約略相同。</span><span class="sxs-lookup"><span data-stu-id="aa53a-118">Note that this example performs approximately as well as if it were written as a single query.</span></span> <span data-ttu-id="aa53a-119">由於每個查詢都會使用延遲、延後的方式實作，因此每個查詢在反覆運算前不會產生其結果。</span><span class="sxs-lookup"><span data-stu-id="aa53a-119">Because each query is implemented in a lazy, deferred fashion, each query does not yield its results until the query is iterated.</span></span> <span data-ttu-id="aa53a-120">如需執行和延遲評估的詳細資訊，請參閱 [LINQ to XML 中的延後執行和延遲評估 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="aa53a-120">For more information about execution and lazy evaluation, see [Deferred Execution and Lazy Evaluation in LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="5e477-118">請注意，這個範例的執行方式與撰寫為單一查詢的執行方式約略相同。</span><span class="sxs-lookup"><span data-stu-id="5e477-118">Note that this example performs approximately as well as if it were written as a single query.</span></span> <span data-ttu-id="5e477-119">由於每個查詢都會使用延遲、延後的方式實作，因此每個查詢在反覆運算前不會產生其結果。</span><span class="sxs-lookup"><span data-stu-id="5e477-119">Because each query is implemented in a lazy, deferred fashion, each query does not yield its results until the query is iterated.</span></span> <span data-ttu-id="5e477-120">如需執行和延遲評估的詳細資訊，請參閱 [LINQ to XML 中的延後執行和延遲評估 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="5e477-120">For more information about execution and lazy evaluation, see [Deferred Execution and Lazy Evaluation in LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span></span>  
   
-## <a name="next-steps"></a><span data-ttu-id="aa53a-121">後續步驟</span><span class="sxs-lookup"><span data-stu-id="aa53a-121">Next Steps</span></span>  
- <span data-ttu-id="aa53a-122">下一節提供有關 WordprocessingML 文件的詳細資訊：</span><span class="sxs-lookup"><span data-stu-id="aa53a-122">The next section provides more information about WordprocessingML documents:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="5e477-121">後續步驟</span><span class="sxs-lookup"><span data-stu-id="5e477-121">Next Steps</span></span>  
+ <span data-ttu-id="5e477-122">下一節提供有關 WordprocessingML 文件的詳細資訊：</span><span class="sxs-lookup"><span data-stu-id="5e477-122">The next section provides more information about WordprocessingML documents:</span></span>  
   
--   [<span data-ttu-id="aa53a-123">Office Open XML WordprocessingML 文件的詳細資料 (C#)</span><span class="sxs-lookup"><span data-stu-id="aa53a-123">Details of Office Open XML WordprocessingML Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+- [<span data-ttu-id="5e477-123">Office Open XML WordprocessingML 文件的詳細資料 (C#)</span><span class="sxs-lookup"><span data-stu-id="5e477-123">Details of Office Open XML WordprocessingML Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
-## <a name="see-also"></a><span data-ttu-id="aa53a-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="aa53a-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5e477-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5e477-124">See also</span></span>
 
-- [<span data-ttu-id="aa53a-125">教學課程：管理 WordprocessingML 文件中的內容 (C#)</span><span class="sxs-lookup"><span data-stu-id="aa53a-125">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [<span data-ttu-id="aa53a-126">使用純虛擬函式進行重構 (C#)</span><span class="sxs-lookup"><span data-stu-id="aa53a-126">Refactoring Using a Pure Function (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
-- [<span data-ttu-id="aa53a-127">LINQ to XML 中的延後執行和延遲評估 (C#)</span><span class="sxs-lookup"><span data-stu-id="aa53a-127">Deferred Execution and Lazy Evaluation in LINQ to XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [<span data-ttu-id="5e477-125">教學課程：管理 WordprocessingML 文件中的內容 (C#)</span><span class="sxs-lookup"><span data-stu-id="5e477-125">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [<span data-ttu-id="5e477-126">使用純虛擬函式進行重構 (C#)</span><span class="sxs-lookup"><span data-stu-id="5e477-126">Refactoring Using a Pure Function (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
+- [<span data-ttu-id="5e477-127">LINQ to XML 中的延後執行和延遲評估 (C#)</span><span class="sxs-lookup"><span data-stu-id="5e477-127">Deferred Execution and Lazy Evaluation in LINQ to XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

@@ -7,31 +7,31 @@ helpviewer_keywords:
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c638531bd54f14c7e4b04a093deaec729db404ba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c736b4fe2a4bc38d4345413fa00d4cf7e5a80be7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129632"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607726"
 ---
-# <a name="assembly-location"></a><span data-ttu-id="85361-102">組件位置</span><span class="sxs-lookup"><span data-stu-id="85361-102">Assembly Location</span></span>
-<span data-ttu-id="85361-103">組件的位置可判斷 Common Language Runtime 是否可以在參考時找到它，也可以判斷是否可以與其他組件共用組件。</span><span class="sxs-lookup"><span data-stu-id="85361-103">An assembly's location determines whether the common language runtime can locate it when referenced, and can also determine whether the assembly can be shared with other assemblies.</span></span> <span data-ttu-id="85361-104">您可以在下列位置中部署組件：</span><span class="sxs-lookup"><span data-stu-id="85361-104">You can deploy an assembly in the following locations:</span></span>  
+# <a name="assembly-location"></a><span data-ttu-id="89434-102">組件位置</span><span class="sxs-lookup"><span data-stu-id="89434-102">Assembly Location</span></span>
+<span data-ttu-id="89434-103">組件的位置可判斷 Common Language Runtime 是否可以在參考時找到它，也可以判斷是否可以與其他組件共用組件。</span><span class="sxs-lookup"><span data-stu-id="89434-103">An assembly's location determines whether the common language runtime can locate it when referenced, and can also determine whether the assembly can be shared with other assemblies.</span></span> <span data-ttu-id="89434-104">您可以在下列位置中部署組件：</span><span class="sxs-lookup"><span data-stu-id="89434-104">You can deploy an assembly in the following locations:</span></span>  
   
--   <span data-ttu-id="85361-105">應用程式的目錄或子目錄。</span><span class="sxs-lookup"><span data-stu-id="85361-105">The application's directory or subdirectories.</span></span>  
+- <span data-ttu-id="89434-105">應用程式的目錄或子目錄。</span><span class="sxs-lookup"><span data-stu-id="89434-105">The application's directory or subdirectories.</span></span>  
   
-     <span data-ttu-id="85361-106">這是部署組件的最常用位置。</span><span class="sxs-lookup"><span data-stu-id="85361-106">This is the most common location for deploying an assembly.</span></span> <span data-ttu-id="85361-107">應用程式根目錄的子目錄可以根據語言或文化特性。</span><span class="sxs-lookup"><span data-stu-id="85361-107">The subdirectories of an application's root directory can be based on language or culture.</span></span> <span data-ttu-id="85361-108">如果組件具有文化特性屬性中的資訊，則必須在具有該文化特性名稱之應用程式目錄下的子目錄中。</span><span class="sxs-lookup"><span data-stu-id="85361-108">If an assembly has information in the culture attribute, it must be in a subdirectory under the application directory with that culture's name.</span></span>  
+     <span data-ttu-id="89434-106">這是部署組件的最常用位置。</span><span class="sxs-lookup"><span data-stu-id="89434-106">This is the most common location for deploying an assembly.</span></span> <span data-ttu-id="89434-107">應用程式根目錄的子目錄可以根據語言或文化特性。</span><span class="sxs-lookup"><span data-stu-id="89434-107">The subdirectories of an application's root directory can be based on language or culture.</span></span> <span data-ttu-id="89434-108">如果組件具有文化特性屬性中的資訊，則必須在具有該文化特性名稱之應用程式目錄下的子目錄中。</span><span class="sxs-lookup"><span data-stu-id="89434-108">If an assembly has information in the culture attribute, it must be in a subdirectory under the application directory with that culture's name.</span></span>  
   
--   <span data-ttu-id="85361-109">全域組件快取。</span><span class="sxs-lookup"><span data-stu-id="85361-109">The global assembly cache.</span></span>  
+- <span data-ttu-id="89434-109">全域組件快取。</span><span class="sxs-lookup"><span data-stu-id="89434-109">The global assembly cache.</span></span>  
   
-     <span data-ttu-id="85361-110">這是只要安裝 Common Language Runtime 的位置就會安裝的全機器程式碼快取。</span><span class="sxs-lookup"><span data-stu-id="85361-110">This is a machine-wide code cache that is installed wherever the common language runtime is installed.</span></span> <span data-ttu-id="85361-111">在大部分情況下，如果您想要與多個應用程式共用組件，則應該將它部署到全域組件快取。</span><span class="sxs-lookup"><span data-stu-id="85361-111">In most cases, if you intend to share an assembly with multiple applications, you should deploy it into the global assembly cache.</span></span>  
+     <span data-ttu-id="89434-110">這是只要安裝 Common Language Runtime 的位置就會安裝的全機器程式碼快取。</span><span class="sxs-lookup"><span data-stu-id="89434-110">This is a machine-wide code cache that is installed wherever the common language runtime is installed.</span></span> <span data-ttu-id="89434-111">在大部分情況下，如果您想要與多個應用程式共用組件，則應該將它部署到全域組件快取。</span><span class="sxs-lookup"><span data-stu-id="89434-111">In most cases, if you intend to share an assembly with multiple applications, you should deploy it into the global assembly cache.</span></span>  
   
--   <span data-ttu-id="85361-112">在 HTTP 伺服器上。</span><span class="sxs-lookup"><span data-stu-id="85361-112">On an HTTP server.</span></span>  
+- <span data-ttu-id="89434-112">在 HTTP 伺服器上。</span><span class="sxs-lookup"><span data-stu-id="89434-112">On an HTTP server.</span></span>  
   
-     <span data-ttu-id="85361-113">HTTP 伺服器上部署的組件必須具有強式名稱；您指向應用程式組態檔的程式碼基底區段中的組件。</span><span class="sxs-lookup"><span data-stu-id="85361-113">An assembly deployed on an HTTP server must have a strong name; you point to the assembly in the codebase section of the application's configuration file.</span></span>  
+     <span data-ttu-id="89434-113">HTTP 伺服器上部署的組件必須具有強式名稱；您指向應用程式組態檔的程式碼基底區段中的組件。</span><span class="sxs-lookup"><span data-stu-id="89434-113">An assembly deployed on an HTTP server must have a strong name; you point to the assembly in the codebase section of the application's configuration file.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="85361-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="85361-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="89434-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="89434-114">See also</span></span>
 
-- [<span data-ttu-id="85361-115">建立組件</span><span class="sxs-lookup"><span data-stu-id="85361-115">Creating Assemblies</span></span>](../../../docs/framework/app-domains/create-assemblies.md)
-- [<span data-ttu-id="85361-116">全域組件快取</span><span class="sxs-lookup"><span data-stu-id="85361-116">Global Assembly Cache</span></span>](../../../docs/framework/app-domains/gac.md)
-- [<span data-ttu-id="85361-117">執行階段如何找出組件</span><span class="sxs-lookup"><span data-stu-id="85361-117">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [<span data-ttu-id="85361-118">使用組件設計程式</span><span class="sxs-lookup"><span data-stu-id="85361-118">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [<span data-ttu-id="89434-115">建立組件</span><span class="sxs-lookup"><span data-stu-id="89434-115">Creating Assemblies</span></span>](../../../docs/framework/app-domains/create-assemblies.md)
+- [<span data-ttu-id="89434-116">全域組件快取</span><span class="sxs-lookup"><span data-stu-id="89434-116">Global Assembly Cache</span></span>](../../../docs/framework/app-domains/gac.md)
+- [<span data-ttu-id="89434-117">執行階段如何找出組件</span><span class="sxs-lookup"><span data-stu-id="89434-117">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [<span data-ttu-id="89434-118">使用組件設計程式</span><span class="sxs-lookup"><span data-stu-id="89434-118">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)
