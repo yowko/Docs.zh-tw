@@ -2,12 +2,12 @@
 title: 成員
 description: 深入了解物件成員，在F#程式設計語言。
 ms.date: 05/16/2016
-ms.openlocfilehash: c32bd76ab60673563f0cc45ce0fb569b2ea262b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0da704b637a9421aa150aa8d8de504bec858e252
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903847"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645146"
 ---
 # <a name="members"></a>成員
 

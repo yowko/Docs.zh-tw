@@ -2,12 +2,12 @@
 title: Boolean 運算子
 description: 深入了解可用於布林運算子F#程式設計語言。
 ms.date: 05/16/2016
-ms.openlocfilehash: 5353b6ec6a0bd610f3446761a1d28f01f0403302
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad4bdd1121389f7e280647dbe0c4d0098ffb17df
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925810"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641881"
 ---
 # <a name="boolean-operators"></a>Boolean 運算子
 

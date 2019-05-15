@@ -2,12 +2,12 @@
 title: 類型縮寫
 description: 深入了解F#類型可以提供更有意義的名稱以使程式碼更容易讀取的縮寫。
 ms.date: 05/16/2016
-ms.openlocfilehash: 0deaef789367aad413e5a537bf7164034e1275c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2930db1dcaa66741900bc91937aa1fd2f006c5f8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683336"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641690"
 ---
 # <a name="type-abbreviations"></a>類型縮寫
 

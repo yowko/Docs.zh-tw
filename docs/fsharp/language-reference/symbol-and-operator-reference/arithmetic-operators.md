@@ -2,12 +2,12 @@
 title: 算術運算子
 description: 深入了解可用於算術運算子F#程式設計語言。
 ms.date: 04/04/2018
-ms.openlocfilehash: 826f334125a542855bf2fda43465618403d49d4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74ab813a7ca5018b6bd084aea10627e4afd62015
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925849"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641652"
 ---
 # <a name="arithmetic-operators"></a>算術運算子
 

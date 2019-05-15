@@ -2,12 +2,12 @@
 title: Tuple
 description: 深入了解F#tuple 的群組不具名但有已排序，可能是不同類型的值。
 ms.date: 05/16/2016
-ms.openlocfilehash: a1fc31d4dc97c0921545e53b91dcde0547002006
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 950451ad1672e0c9fc609773f1bc32fc13636ddb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755333"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645119"
 ---
 # <a name="tuples"></a>Tuple
 
@@ -118,7 +118,7 @@ let struct (newX, newY) = Example.AddOneToXAndY(struct (1, 2))
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L5-L12)]
 
-您必須在模式比對一的 tuple，並建構的組成組件與其他。  例如：
+您必須在模式比對一的 tuple，並建構的組成組件與其他。  例如: 
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L18-L22)]
 

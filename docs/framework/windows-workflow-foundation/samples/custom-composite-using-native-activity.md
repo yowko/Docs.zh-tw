@@ -2,12 +2,12 @@
 title: 使用 Native 活動的自訂複合
 ms.date: 03/30/2017
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
-ms.openlocfilehash: 41a823ab00a2be0772a07b15d1292dbb4e8d1a6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c88a4a7794ef5f9e721669bc61402e97f6032da0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005195"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637610"
 ---
 # <a name="custom-composite-using-native-activity"></a>使用 Native 活動的自訂複合
 這個範例示範如何撰寫 <xref:System.Activities.NativeActivity>，它會排程其他 <xref:System.Activities.Activity> 物件來控制工作流程的執行流程。 此範例使用兩個常用的控制流程 (Sequence 和 While)，以示範如何進行這項處理。

@@ -2,12 +2,12 @@
 title: 外部函式
 description: 深入了解F#在原生程式碼中呼叫函式的語言支援。
 ms.date: 05/16/2016
-ms.openlocfilehash: 86ea78844fb812361233f8360c377465d83be203
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73e38d8942bfc8ddb3c51d126d7678e84903326b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934624"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642052"
 ---
 # <a name="external-functions"></a>外部函式
 

@@ -1,15 +1,13 @@
 ---
 title: 建置開始使用雲端的復原服務。 接受雲端中的暫時性失敗
 description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |建置開始使用雲端的復原服務。 接受雲端中的暫時性失敗
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 7af5e189ea930f9eac8aadab2ba1497f43f8d2b1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca5d5e0c3af772ac52a02894c96889c776cf7d48
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614517"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643729"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>建置準備好在雲端執行的彈性服務：接受雲端中的暫時性失敗
 

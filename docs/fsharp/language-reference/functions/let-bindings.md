@@ -2,12 +2,12 @@
 title: let 繫結
 description: 了解如何使用F#'let' 繫結，其中關聯識別項的值或函式。
 ms.date: 05/16/2016
-ms.openlocfilehash: 45de82acf6f4423698cd8037266968e023f40dcb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac33ee761cd4881f3d82d6680a07f62a1d7e77e5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940996"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641902"
 ---
 # <a name="let-bindings"></a>let 繫結
 

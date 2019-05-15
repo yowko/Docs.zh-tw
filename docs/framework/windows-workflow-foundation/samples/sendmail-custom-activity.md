@@ -2,12 +2,12 @@
 title: SendMail 自訂活動
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 3bbb16fd99d5d7de4183b26030c0afe65ebc90cd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d760f95b8e98bae52341296b90008e72d5c47d1f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617304"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637659"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail 自訂活動
 此範例示範如何建立衍生自 <xref:System.Activities.AsyncCodeActivity> 的自訂活動，以便使用 SMTP 傳送郵件供工作流程應用程式使用。 自訂活動使用的功能<xref:System.Net.Mail.SmtpClient>以非同步方式傳送電子郵件並傳送具有驗證的郵件。 也會提供一些終端使用者功能，例如測試模式、語彙基元替換、檔案範本和測試置放路徑。  

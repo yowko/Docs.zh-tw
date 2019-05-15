@@ -1,15 +1,13 @@
 ---
 title: Docker 應用程式之外部迴圈 DevOps 工作流程中的步驟
 description: 了解 DevOps 工作流程的 「 外部迴圈 」 的步驟
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 7193200d74eeac23e9cba11b3ed2056458c9984e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 194786a90fc02801211c7614eb632392d67f0109
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795709"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641058"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 應用程式之外部迴圈 DevOps 工作流程中的步驟
 

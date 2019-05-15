@@ -2,12 +2,12 @@
 title: 列舉
 description: 了解如何使用F#列舉型別取代常值，讓程式碼，更容易讀取與維護。
 ms.date: 05/16/2016
-ms.openlocfilehash: a8839b73de074f62606b70ffe969a53b3db753bf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ff62b1c0a6ab0fda58a30de9387acbb547f6b81
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921572"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645535"
 ---
 # <a name="enumerations"></a>列舉
 

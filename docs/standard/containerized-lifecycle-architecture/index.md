@@ -1,15 +1,13 @@
 ---
 title: 容器和 Docker 簡介
 description: 取得使用 Docker 的主要優點的高層級概觀。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: aa3ead1cb184e23dd091822368e62f580ed73ee5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a03c67ed4fbc55c84e69fba5b7978863c8305e00
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785618"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644949"
 ---
 # <a name="introduction-to-containers-and-docker"></a>容器和 Docker 簡介
 
