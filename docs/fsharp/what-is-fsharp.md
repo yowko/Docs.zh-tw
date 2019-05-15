@@ -2,12 +2,12 @@
 title: 什麼是F#
 description: 了解F#程式語言是以及F#程式設計如下。 了解豐富的資料類型、 函式，以及它們如何相互配合。
 ms.date: 08/03/2018
-ms.openlocfilehash: ea82147e4e6d3c980fb224eeafd805c7ed53f8f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d5b0de9828aa91857d3961bf7d40c02c344adaa
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756334"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641564"
 ---
 # <a name="what-is-f"></a>F 是什麼\#
 

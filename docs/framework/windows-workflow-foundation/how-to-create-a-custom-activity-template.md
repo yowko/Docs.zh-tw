@@ -1,15 +1,15 @@
 ---
-title: HOW TO：建立自訂活動範本
+title: 作法：建立自訂活動範本
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-ms.openlocfilehash: ee6f249092c5cf8643e3c9bfd15d32e77791d8bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f54a625fbe5497406645ea29f824d361c0392eb3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773606"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637719"
 ---
-# <a name="how-to-create-a-custom-activity-template"></a>HOW TO：建立自訂活動範本
+# <a name="how-to-create-a-custom-activity-template"></a>作法：建立自訂活動範本
 
 自訂活動範本是用來自訂活動的組態，包括自訂複合活動，因此使用者不需要個別建立每個活動以及手動設定其所有屬性和其他設定。 這些自訂範本以供在**工具箱**上[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]或重新裝載設計工具，從中使用者可以將它們拖曳到預先設定的設計介面。 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 隨附於這類範本的好例子： [SendAndReceiveReply 範本設計工具](/visualstudio/workflow-designer/sendandreceivereply-template-designer)並[ReceiveAndSendReply 範本設計工具](/visualstudio/workflow-designer/receiveandsendreply-template-designer)在[傳訊活動設計工具](/visualstudio/workflow-designer/messaging-activity-designers)類別。
 

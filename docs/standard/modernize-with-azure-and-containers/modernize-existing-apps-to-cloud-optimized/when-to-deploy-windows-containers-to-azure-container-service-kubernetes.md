@@ -1,15 +1,13 @@
 ---
 title: 將 Windows 容器部署至 Azure Container Service (亦即 Kubernetes) 的時機
 description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |將 Windows 容器部署至 Azure Container Service (亦即 Kubernetes) 的時機
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 0b803b104f905fddac7939d7b070c206aabffeda
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 921767b52f2b0d80f2d31d972b65ac7551d2f7c5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011966"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643564"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>將 Windows 容器部署至 Azure Container Service (亦即 Kubernetes) 的時機
 

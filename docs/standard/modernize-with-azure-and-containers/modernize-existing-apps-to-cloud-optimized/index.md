@@ -1,15 +1,13 @@
 ---
 title: 現代化雲端最佳化應用程式的現有.NET 應用程式
 description: 使用 Azure 雲端和 Windows 容器將現有 .NET 應用程式現代化。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: edbffe45a2a1652ff477f9785b3afb5b0e493bc3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00385ac1e2f41d2005606fa7f943618ec253ffc2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61811669"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638937"
 ---
 # <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a>現代化雲端最佳化應用程式的現有.NET 應用程式
 

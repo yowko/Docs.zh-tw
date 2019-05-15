@@ -4,12 +4,12 @@ description: Azure 無伺服器平台提供的功能，包括事件觸發立即�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 6149e79f45422be0b4f1ebc719543efd1b0b750c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43646db564ae31d26fe59e1ad7392e51d2d4e953
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053271"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638855"
 ---
 # <a name="azure-serverless-platform"></a>Azure 無伺服器平台
 

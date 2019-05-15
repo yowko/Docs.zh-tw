@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40027
 ms.assetid: 33c088c7-48e7-400c-920e-6d8967e1f3fc
-ms.openlocfilehash: 8d6ac07b653a27a7c4c5534f441b9d673592124c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 881726ea2cfb23493d85097635adb15608ed741d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592254"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642247"
 ---
 # <a name="return-type-of-function-procedurename-is-not-cls-compliant"></a>函式的傳回型別 '\<程序名稱 >' 不符合 CLS 標準
 A`Function`程序標示為`<CLSCompliant(True)>`但傳回類型標記為`<CLSCompliant(False)>`、 未標示，或因為它不符合規範的型別不符合資格。  

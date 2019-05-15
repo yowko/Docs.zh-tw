@@ -1,15 +1,13 @@
 ---
 title: 雲端最佳化應用程式中的 Microsoft 技術
 description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |雲端最佳化應用程式中的 Microsoft 技術
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 21ba318c3a59175dadde86ff247c6e41e7f85c0b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ebdbc7bb3a5f51f8408b69a5e13f03f424eae242
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627287"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639037"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>雲端最佳化應用程式中的 Microsoft 技術
 

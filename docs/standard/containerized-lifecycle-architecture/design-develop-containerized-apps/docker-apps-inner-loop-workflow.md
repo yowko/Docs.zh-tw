@@ -1,15 +1,13 @@
 ---
 title: Docker 應用程式的內部迴圈開發工作流程
 description: 了解開發 Docker 應用程式的 「 內部迴圈 」 工作流程。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: dda75e120b0f17a591fadc22944c78d1174ca156
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ce573546f61b98c2f93e998203497fa949e9efe8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664384"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644867"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 應用程式的內部迴圈開發工作流程
 

@@ -2,12 +2,12 @@
 title: 抽象類別
 description: 深入了解F#抽象類別，讓所有或部分成員未提供，而且代表多樣化的物件類型的一般功能。
 ms.date: 05/16/2016
-ms.openlocfilehash: fecd3b2d550c6b8f59fa614f5d00c5f730a4896a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8251d481c9056d40a0b13ae3c89353406986c116
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772771"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645554"
 ---
 # <a name="abstract-classes"></a>抽象類別
 

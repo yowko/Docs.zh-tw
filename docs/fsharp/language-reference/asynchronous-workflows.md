@@ -2,12 +2,12 @@
 title: 非同步工作流程
 description: 了解支援F#程式設計以非同步方式執行計算，而不會封鎖執行其他工作執行的語言。
 ms.date: 05/16/2016
-ms.openlocfilehash: 7643a26469ee6a6cf15940f90611fd430beef42e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87d4c927be89bbb404a087091eed8c4cae167f0f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703539"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645508"
 ---
 # <a name="asynchronous-workflows"></a>非同步工作流程
 

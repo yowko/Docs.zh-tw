@@ -2,12 +2,12 @@
 title: 編譯器指示詞
 description: 深入了解F#語言前置處理器指示詞、 條件式編譯指示詞、 line 指示詞和編譯器指示詞。
 ms.date: 12/10/2018
-ms.openlocfilehash: 3fade7407f84b00163bd5b3d7774104bce8a25af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b62fb930a3b0c55103d6b0edbe20ae056ba86bd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766099"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645502"
 ---
 # <a name="compiler-directives"></a>編譯器指示詞
 
@@ -25,7 +25,7 @@ ms.locfileid: "61766099"
 |`#else`|支援條件式編譯。 若未定義與先前的 `#if` 搭配使用的符號，則標記要包含的程式碼區段。|
 |`#endif`|支援條件式編譯。 標示程式碼的條件式區段結尾。|
 |`#`[line] *int*,<br/>`#`[line] *int* *string*,<br/>`#`[line] *int* *verbatim-string*|表示原始的原始程式碼行和檔案名稱 (適用於偵錯)。 這項功能提供用於產生 F# 原始程式碼的工具。|
-|`#nowarn` *warningcode*|停用編譯器警告。 若要停用警告，請從編譯器輸出中找出其號碼並包含在引號中。 略過 "FS" 前置詞。 若要停用同一行的多個警告號碼，請以引號括住每個號碼，並以一個空格分隔每個字串。 例如：
+|`#nowarn` *warningcode*|停用編譯器警告。 若要停用警告，請從編譯器輸出中找出其號碼並包含在引號中。 略過 "FS" 前置詞。 若要停用同一行的多個警告號碼，請以引號括住每個號碼，並以一個空格分隔每個字串。 例如: 
 
 `#nowarn "9" "40"`
 

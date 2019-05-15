@@ -2,12 +2,12 @@
 title: 例外狀況處理
 description: 了解例外狀況處理中的基本概念F#並尋找例外狀況處理運算式和函式的連結。
 ms.date: 05/16/2016
-ms.openlocfilehash: 187236ca380c7de0b3714160f6c3703f8fb93d5a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f4e57bfd643cba3dab5281df484ebb6162cb4b7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025089"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645469"
 ---
 # <a name="exception-handling"></a>例外狀況處理
 

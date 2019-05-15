@@ -1,15 +1,13 @@
 ---
 title: 在生產環境中執行已撰寫和以微服務為基礎的應用程式
 description: 了解在生產環境中執行容器化應用程式的主要元件
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 52cf273194bff10192b06d236bda7c1cbea1abd8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69df3d39a00b91cbe59c96e5fcab841a60943bcc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921585"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644970"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>在生產環境中執行已撰寫和以微服務為基礎的應用程式
 

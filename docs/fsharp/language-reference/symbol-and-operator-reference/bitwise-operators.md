@@ -2,12 +2,12 @@
 title: 位元運算子
 description: 深入了解可用於位元運算子F#程式設計語言。
 ms.date: 07/20/2018
-ms.openlocfilehash: 01c68be485525b49eb3121dfaea6dce0adfe3972
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4d61492ba94d26cfe8354c0ba89fbd732ed782e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926291"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645075"
 ---
 # <a name="bitwise-operators"></a>位元運算子
 

@@ -1,15 +1,13 @@
 ---
 title: 將關聯式資料庫移轉至 azure
 description: 將現有.NET 應用程式與 Azure 雲端和 Windows 容器現代化 |將關聯式資料庫移轉至 azure
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 600c47b6b0ccaf704c8e7b638c759e990acaaacf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c09172f0948551edfe059be6f43d7a02278203d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61812774"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638884"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>將關聯式資料庫移轉至 azure
 

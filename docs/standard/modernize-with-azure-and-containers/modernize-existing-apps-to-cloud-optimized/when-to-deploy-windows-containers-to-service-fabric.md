@@ -1,15 +1,13 @@
 ---
 title: 將 Windows 容器部署至 Service Fabric 的時機
 description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |將 Windows 容器部署到 Service Fabric 的時機
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: cf9f206852a483dbc391c4541762b885a0ba9660
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d29a358fb039eb3390910958b1b1080698d730e0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625645"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643350"
 ---
 # <a name="when-to-deploy-windows-containers-to-service-fabric"></a>將 Windows 容器部署至 Service Fabric 的時機
 

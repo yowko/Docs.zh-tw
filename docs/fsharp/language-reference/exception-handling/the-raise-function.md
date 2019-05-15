@@ -2,12 +2,12 @@
 title: 例外狀況：raise 函式
 description: 了解如何F#'raise' 函式用來表示已發生錯誤或例外狀況。
 ms.date: 05/16/2016
-ms.openlocfilehash: 87773ead7773c62a325c7e7ff105c729e10dd69c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e2515ad7b85c1025bc3aa0aa2a6929a8d35436d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772667"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641956"
 ---
 # <a name="exceptions-the-raise-function"></a>例外狀況：raise 函式
 

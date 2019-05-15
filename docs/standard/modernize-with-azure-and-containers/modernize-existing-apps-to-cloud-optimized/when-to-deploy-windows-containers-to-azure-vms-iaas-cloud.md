@@ -1,15 +1,13 @@
 ---
 title: 將 Windows 容器部署至 Azure VM 的時機 (IaaS 雲端)
 description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |將 Windows 容器部署至 Azure Vm （IaaS 雲端） 的時機
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 8bff4297f99b6549b80604860985568445bbdc0b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e9a2903662306b607977a7751018e24161ab80ab
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625650"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638975"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-vms-iaas-cloud"></a>將 Windows 容器部署至 Azure VM 的時機 (IaaS 雲端)
 

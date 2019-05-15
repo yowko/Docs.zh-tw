@@ -1,15 +1,13 @@
 ---
 title: 逐步解說和技術入門概觀
 description: 將現有.NET 應用程式與 Azure 雲端和 Windows 容器現代化 |逐步解說和技術開始入門的概觀
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 2202e2f972951e4074ed1941f0a0cfe352ab4b85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f5c1ca2b78d27b275845ada72d252450761f5091
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012292"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638972"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>逐步解說和技術入門概觀
 

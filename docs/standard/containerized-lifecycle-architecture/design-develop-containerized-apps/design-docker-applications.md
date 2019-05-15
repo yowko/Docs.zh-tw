@@ -1,15 +1,13 @@
 ---
 title: 設計 Docker 應用程式
 description: 尋找以下微服務架構的深度指南的參考，因為這是主題，不在本指南詳細說明。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1d49f7509c0a12edfe375486429147e8fd240b2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 535b6cefb7371014527032972ec27ebfe4b67ebc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799342"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644695"
 ---
 # <a name="design-docker-applications"></a>設計 Docker 應用程式
 
