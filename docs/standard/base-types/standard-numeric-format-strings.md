@@ -18,20 +18,20 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a11a9d18999bc7741e12af16d43fba8c03318da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6d11e16f58b6da24d7df0ccd97c1d54050004ae1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979953"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664656"
 ---
 # <a name="standard-numeric-format-strings"></a>標準數值格式字串
 
 標準數值格式字串會用來格式化一般數字類型。 標準數值格式字串會採用 `Axx` 格式，其中：  
   
--   `A` 是稱為「格式規範」的單一字母字元。 任何包含一個以上字母字元 (包含泛空白字元 (White Space)) 的數值格式字串都會解譯為自訂數值格式字串。 如需詳細資訊，請參閱[自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)。  
+- `A` 是稱為「格式規範」的單一字母字元。 任何包含一個以上字母字元 (包含泛空白字元 (White Space)) 的數值格式字串都會解譯為自訂數值格式字串。 如需詳細資訊，請參閱[自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)。  
   
--   `xx` 是稱為「精確度規範」的選用性整數。 精確度規範的範圍從 0 到 99，而且會影響結果內的位數。 請注意，精確度規範可控制數字字串表示法中的位數。 它不會捨入數字本身。 若要執行捨入運算，請使用 <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>、<xref:System.Math.Floor%2A?displayProperty=nameWithType> 或 <xref:System.Math.Round%2A?displayProperty=nameWithType> 方法。  
+- `xx` 是稱為「精確度規範」的選用性整數。 精確度規範的範圍從 0 到 99，而且會影響結果內的位數。 請注意，精確度規範可控制數字字串表示法中的位數。 它不會捨入數字本身。 若要執行捨入運算，請使用 <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>、<xref:System.Math.Floor%2A?displayProperty=nameWithType> 或 <xref:System.Math.Round%2A?displayProperty=nameWithType> 方法。  
   
     當「有效位數規範」控制結果字串中小數點後的位數，結果字串會反映已四捨五入為最接近無限精確度之可代表結果的數字。 若有兩個相等的近似可代表結果：
     - **在 .NET Framework 與 .NET Core (最高版本 .NET Core 2.0) 上**，執行階段會選取具有較大之最不顯著位數 (亦即，使用 <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>) 的結果。
@@ -73,13 +73,13 @@ ms.locfileid: "56979953"
 
 使用標準數值格式字串來定義數值的格式有兩種方式：  
   
--   您可以將它傳遞至具有 `ToString` 參數之 `format` 方法的多載。 下列範例會以目前的文化特定 (在此範例中是 en-US 文化特性) 來將數值格式化為貨幣字串。  
+- 您可以將它傳遞至具有 `ToString` 參數之 `format` 方法的多載。 下列範例會以目前的文化特定 (在此範例中是 en-US 文化特性) 來將數值格式化為貨幣字串。  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
--   您可以在搭配 <xref:System.String.Format%2A?displayProperty=nameWithType>、<xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 等方法一起使用的格式項目中，提供它作為 `formatString` 引數。 如需詳細資訊，請參閱[複合格式設定](../../../docs/standard/base-types/composite-formatting.md)。 下列範例會使用格式項目，在字串中插入貨幣值。  
+- 您可以在搭配 <xref:System.String.Format%2A?displayProperty=nameWithType>、<xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 等方法一起使用的格式項目中，提供它作為 `formatString` 引數。 如需詳細資訊，請參閱[複合格式設定](../../../docs/standard/base-types/composite-formatting.md)。 下列範例會使用格式項目，在字串中插入貨幣值。  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
@@ -91,7 +91,7 @@ ms.locfileid: "56979953"
      [!code-csharp-interactive[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
   
--   它可以提供作為字串內插補點的插補運算式項目中的 `formatString` 引數。 如需詳細資訊，請參閱 C# 參考中的[字串內插補點](../../csharp/language-reference/tokens/interpolated.md)主題，或 Visual Basic 參考中的[字串內插補點](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)主題。  
+- 它可以提供作為字串內插補點的插補運算式項目中的 `formatString` 引數。 如需詳細資訊，請參閱 C# 參考中的[字串內插補點](../../csharp/language-reference/tokens/interpolated.md)主題，或 Visual Basic 參考中的[字串內插補點](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)主題。  
   
  下列各節提供每個標準數值格式字串的詳細資訊。  
   

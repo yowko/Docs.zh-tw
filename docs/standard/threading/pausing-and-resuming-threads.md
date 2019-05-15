@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce1855027e89f21d96e6cf761afcaaabb9b5138f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b39f91c5fabcfb5d7929a645b438b5db77f70956
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648215"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644924"
 ---
 # <a name="pausing-and-interrupting-threads"></a>暫停和中斷執行緒
 
@@ -45,9 +45,9 @@ ms.locfileid: "54648215"
   
  如果等候是 Managed 等候，那麼 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 兩者都會立即喚醒執行緒。 如果等候是非受控的等候 (例如，平台叫用 Win32 [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) 函式的呼叫)，則 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 都無法控制執行緒，直到它傳回或呼叫受控程式碼為止。 在 Managed 程式碼中，行為如下所示：  
   
--   <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 會從任何可能的等候中喚醒執行緒，並造成 <xref:System.Threading.ThreadInterruptedException> 在目的執行緒中被擲回。  
+- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 會從任何可能的等候中喚醒執行緒，並造成 <xref:System.Threading.ThreadInterruptedException> 在目的執行緒中被擲回。  
   
--   <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 會從任何可能的等候中喚醒執行緒，並造成 <xref:System.Threading.ThreadAbortException> 在執行緒中被擲回。 如需詳細資訊，請參閱[終結執行緒](../../../docs/standard/threading/destroying-threads.md)。  
+- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 會從任何可能的等候中喚醒執行緒，並造成 <xref:System.Threading.ThreadAbortException> 在執行緒中被擲回。 如需詳細資訊，請參閱[終結執行緒](../../../docs/standard/threading/destroying-threads.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

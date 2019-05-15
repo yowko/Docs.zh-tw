@@ -15,37 +15,37 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 079cb3e969ee2c6d4e0163106769765cd96e96b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54d190bfa3f13ccfc78dd2501018442afb281d37
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622945"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634699"
 ---
 # <a name="character-classes-in-regular-expressions"></a>規則運算式中的字元類別
 <a name="Top"></a> 字元類別會定義一組字元，其中任何字元都可在輸入字串中出現，以便讓比對成功。 .NET 中的規則運算式語言支援下列字元類別：  
   
--   正字元群組。 輸入字串中的字元必須符合指定字元集的其中一個字元。 如需詳細資訊，請參閱[正字元群組](#PositiveGroup)。  
+- 正字元群組。 輸入字串中的字元必須符合指定字元集的其中一個字元。 如需詳細資訊，請參閱[正字元群組](#PositiveGroup)。  
   
--   負字元群組。 輸入字串中的字元不得符合指定字元集的其中一個字元。 如需詳細資訊，請參閱[負字元群組](#NegativeGroup)。  
+- 負字元群組。 輸入字串中的字元不得符合指定字元集的其中一個字元。 如需詳細資訊，請參閱[負字元群組](#NegativeGroup)。  
   
--   任何字元。 在規則運算式中的 `.` (點或句號) 字元是萬用字元，可符合 `\n` 以外的任何字元。 如需詳細資訊，請參閱[任何字元](#AnyCharacter)。  
+- 任何字元。 在規則運算式中的 `.` (點或句號) 字元是萬用字元，可符合 `\n` 以外的任何字元。 如需詳細資訊，請參閱[任何字元](#AnyCharacter)。  
   
--   一般 Unicode 分類或具名區塊。 輸入字串中的字元必須是特定 Unicode 分類的成員，或者必須落在 Unicode 字元的連續範圍內，比對才會成功。 如需詳細資訊，請參閱 [Unicode 分類或 Unicode 區塊](#CategoryOrBlock)。  
+- 一般 Unicode 分類或具名區塊。 輸入字串中的字元必須是特定 Unicode 分類的成員，或者必須落在 Unicode 字元的連續範圍內，比對才會成功。 如需詳細資訊，請參閱 [Unicode 分類或 Unicode 區塊](#CategoryOrBlock)。  
   
--   負的一般 Unicode 分類或是具名區塊。 輸入字串中的字元不得是特定 Unicode 分類的成員，或者不得落在 Unicode 字元的連續範圍內，比對才會成功。 如需詳細資訊，請參閱[負 Unicode 分類或 Unicode 區塊](#NegativeCategoryOrBlock)。  
+- 負的一般 Unicode 分類或是具名區塊。 輸入字串中的字元不得是特定 Unicode 分類的成員，或者不得落在 Unicode 字元的連續範圍內，比對才會成功。 如需詳細資訊，請參閱[負 Unicode 分類或 Unicode 區塊](#NegativeCategoryOrBlock)。  
   
--   文字字元。 輸入字串中的字元可以隸屬於任何適用於文字字元的 Unicode 分類。 如需詳細資訊，請參閱[文字字元](#WordCharacter)。  
+- 文字字元。 輸入字串中的字元可以隸屬於任何適用於文字字元的 Unicode 分類。 如需詳細資訊，請參閱[文字字元](#WordCharacter)。  
   
--   非文字字元。 輸入字串中的字元可以隸屬於任何非文字字元的 Unicode 分類。 如需詳細資訊，請參閱[非文字字元](#NonWordCharacter)。  
+- 非文字字元。 輸入字串中的字元可以隸屬於任何非文字字元的 Unicode 分類。 如需詳細資訊，請參閱[非文字字元](#NonWordCharacter)。  
   
--   空白字元。 輸入字串中的字元可以是任何 Unicode 分隔符號字元，以及任何一種控制字元。 如需詳細資訊，請參閱[空白字元](#WhitespaceCharacter)。  
+- 空白字元。 輸入字串中的字元可以是任何 Unicode 分隔符號字元，以及任何一種控制字元。 如需詳細資訊，請參閱[空白字元](#WhitespaceCharacter)。  
   
--   非空白字元。 輸入字串中的字元可以是空白字元以外的任何字元。 如需詳細資訊，請參閱[非空白字元](#NonWhitespaceCharacter)。  
+- 非空白字元。 輸入字串中的字元可以是空白字元以外的任何字元。 如需詳細資訊，請參閱[非空白字元](#NonWhitespaceCharacter)。  
   
--   十進位數字。 輸入字串中的字元可以是歸類為 Unicode 十進位數字的任何一個數字字元。 如需詳細資訊，請參閱[十進位數字字元](#DigitCharacter)。  
+- 十進位數字。 輸入字串中的字元可以是歸類為 Unicode 十進位數字的任何一個數字字元。 如需詳細資訊，請參閱[十進位數字字元](#DigitCharacter)。  
   
--   非十進位數字。 輸入字串中的字元可以是 Unicode 十進位數字以外的任何字元。 如需詳細資訊，請參閱[十進位數字字元](#NonDigitCharacter)。  
+- 非十進位數字。 輸入字串中的字元可以是 Unicode 十進位數字以外的任何字元。 如需詳細資訊，請參閱[十進位數字字元](#NonDigitCharacter)。  
   
  .NET 支援字元類別減法運算式，可讓您將一組字元定義為從某個字元類別中排除另一個字元類別的結果。 如需詳細資訊，請參閱[字元類別減法](#CharacterClassSubtraction)。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "54622945"
 ## <a name="any-character-"></a>任何字元：  
  句號字元 (.) 會比對 `\n` (新行字元 \u000A) 以外任何具有下列兩項資格的字元：  
   
--   如果 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項修改了規則運算式模式，或是 `.` 選項修改了模式中包含 `s` 字元類別的部分，`.` 就會符合任何字元。 如需詳細資訊，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)。  
+- 如果 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項修改了規則運算式模式，或是 `.` 選項修改了模式中包含 `s` 字元類別的部分，`.` 就會符合任何字元。 如需詳細資訊，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)。  
   
      下列範例將示範 `.` 字元類別的預設行為與使用 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項的行為有何不同。 規則運算式 `^.+` 會從字串開頭開始，比對每一個字元。 根據預設，比對會在第一行結尾結束。規則運算式模式會比對歸位字元 `\r` 或 \u000D，但不會比對 `\n`。 由於 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項會將整個輸入字串解譯為單行，因此它會比對輸入字串中的每個字元，包括 `\n`。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "54622945"
 > [!NOTE]
 >  由於它會比對 `\n` 以外的任何字元，因此 `.` 字元類別也會比對 `\r` (歸位字元 \u000D)。  
   
--   在正或負字元群組中，句號會視為常值句號字元而非字元類別。 如需詳細資訊，請參閱本主題前段的[正字元群組](#PositiveGroup)和[負字元群組](#NegativeGroup)。 下列範例將進行示範，定義包含句號字元 (`.`) 做為字元類別以及做為正字元群組成員的規則運算式。 規則運算式 `\b.*[.?!;:](\s|\z)` 會從字邊界開始比對所有字元，直到遇到包括句號的五個標點符號其中之一，然後比對空白字元或字串結尾。  
+- 在正或負字元群組中，句號會視為常值句號字元而非字元類別。 如需詳細資訊，請參閱本主題前段的[正字元群組](#PositiveGroup)和[負字元群組](#NegativeGroup)。 下列範例將進行示範，定義包含句號字元 (`.`) 做為字元類別以及做為正字元群組成員的規則運算式。 規則運算式 `\b.*[.?!;:](\s|\z)` 會從字邊界開始比對所有字元，直到遇到包括句號的五個標點符號其中之一，然後比對空白字元或字串結尾。  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 Tlbimp.exe 產生主要 Interop 組件
+title: 作法：使用 Tlbimp.exe 產生主要 Interop 組件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - primary interop assemblies, generating
@@ -8,29 +8,29 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a944cf87783c59c21bffc9c48a18237c9fe6cdec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7b3b1ae2734715c4204ac1887921505b5592e79e
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295493"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910761"
 ---
-# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>HOW TO：使用 Tlbimp.exe 產生主要 Interop 組件
+# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>作法：使用 Tlbimp.exe 產生主要 Interop 組件
 有兩種方式可產生主要 Interop 組件：  
   
--   使用 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供的[型別程式庫匯入工具 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)。  
+- 使用 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供的[型別程式庫匯入工具 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)。  
   
      產生主要 Interop 組件最直接的方法是使用[型別程式庫匯入工具 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)。 Tlbimp.exe 會提供下列保護措施：  
   
-    -   建立任何巢狀類型程式庫參考的新 Interop 組件之前，檢查是否有其他已註冊的主要 Interop 組件。  
+    - 建立任何巢狀類型程式庫參考的新 Interop 組件之前，檢查是否有其他已註冊的主要 Interop 組件。  
   
-    -   如果您未指定容器或檔案名稱，來指定主要 Interop 組件的強式名稱，則無法發出主要 Interop 組件。  
+    - 如果您未指定容器或檔案名稱，來指定主要 Interop 組件的強式名稱，則無法發出主要 Interop 組件。  
   
-    -   如果您省略相依組件的參考，則無法發出主要 Interop 組件。  
+    - 如果您省略相依組件的參考，則無法發出主要 Interop 組件。  
   
-    -   如果您加入非主要 Interop 組件的相依組件的參考，則無法發出主要 Interop 組件。  
+    - 如果您加入非主要 Interop 組件的相依組件的參考，則無法發出主要 Interop 組件。  
   
--   使用與 Common Language Specification (CLS) 相容的語言，例如 C#，在原始程式碼中手動建立主要 Interop 組件。 無法使用類型程式庫時，這個方法就很有用。  
+- 使用與 Common Language Specification (CLS) 相容的語言，例如 C#，在原始程式碼中手動建立主要 Interop 組件。 無法使用類型程式庫時，這個方法就很有用。  
   
  您必須使用密碼編譯金鑰組將組件簽署為強式名稱。 如需詳細資料，請參閱[建立金鑰組](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)。  
   

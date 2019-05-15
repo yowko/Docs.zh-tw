@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: e6e97591508c2aa90306ed22556f12f257cc4b03
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336144"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647723"
 ---
 # <a name="managed-execution-process"></a>Managed 執行程序
 <a name="introduction"></a> Managed 執行處理序包含下列步驟，將於本主題中稍後詳細討論：  
@@ -58,9 +58,9 @@ ms.locfileid: "59336144"
 ## <a name="compiling-msil-to-native-code"></a>將 MSIL 編譯成機器碼  
  Microsoft 中間語言 (MSIL) 必須先根據 Common Language Runtime 編譯成機器碼才能執行 (該程式碼是根據目標電腦架構來編譯)。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供兩種執行這項轉換的方式：  
   
--   .NET Framework Just-In-Time (JIT) 編譯器。  
+- .NET Framework Just-In-Time (JIT) 編譯器。  
   
--   .NET Framework [Ngen.exe (原生映像產生器)](../../docs/framework/tools/ngen-exe-native-image-generator.md)。  
+- .NET Framework [Ngen.exe (原生映像產生器)](../../docs/framework/tools/ngen-exe-native-image-generator.md)。  
   
 ### <a name="compilation-by-the-jit-compiler"></a>使用 JIT 編譯器編譯  
  當載入和執行組件內容時，JIT 編譯會視需要於應用程式執行階段將 MSIL 轉換成機器碼。 由於 Common Language Runtime 會為每個支援的 CPU 架構提供 JIT 編譯器，因此開發人員可以建置可在不同架構的電腦上進行 JIT 編譯和執行的 MSIL 組件集。 然而，如果您的 Managed 程式碼呼叫特定平台的原生 API 或特定平台的類別庫，便只能在特定的作業系統上執行。  
@@ -70,22 +70,22 @@ ms.locfileid: "59336144"
 ### <a name="install-time-code-generation-using-ngenexe"></a>使用 NGen.exe 產生安裝期間程式碼  
  由於 JIT 編譯器會在呼叫該組件中所定義的個別方法時，將組件的 MSIL 轉換成機器碼，因此這會對執行階段的效能產生不良影響。 在大部分情況下，效能稍減是可以接受的。 最重要的是，JIT 編譯器產生的程式碼會繫結至觸發編譯的處理序。 該程式碼無法跨多個處理序共用。 為了允許在多個應用程式的引動過程間共用產生的程式碼，或允許在共用組件集的多個處理序間共用產生的程式碼，Common Language Runtime 支援事先編譯模式。 這個預先編譯模式會使用 [Ngen.exe (原生映像產生器)](../../docs/framework/tools/ngen-exe-native-image-generator.md) 將 MSIL 組件轉換成機器碼，與 JIT 編譯器相當類似。 不過，Ngen.exe 的作業與 JIT 編譯器的作業有三個不同的地方：  
   
--   它會事先執行從 MSIL 至機器碼的轉換，而不是在執行應用程式時。  
+- 它會事先執行從 MSIL 至機器碼的轉換，而不是在執行應用程式時。  
   
--   它會一次編譯整個組件，而非一次一個方法。  
+- 它會一次編譯整個組件，而非一次一個方法。  
   
--   它會將原生映像快取中產生的程式碼保存為磁碟上的檔案。  
+- 它會將原生映像快取中產生的程式碼保存為磁碟上的檔案。  
   
 ### <a name="code-verification"></a>程式碼驗證  
  做為編譯成機器碼過程的一部分，MSIL 程式碼必須通過驗證程序，除非系統管理員建立的安全性原則允許程式碼略過驗證。 驗證會檢查 MSIL 和中繼資料，以了解該程式碼是否為類型安全，表示它僅存取獲得授權之可存取的記憶體位置。 類型安全有助於隔離各物件，因此就能免於意外或惡意的損毀。 它也保證會確實地強制執行程式碼的安全性限制。  
   
  可驗證的類型安全程式碼會滿足下列陳述，此為執行階段所仰賴的：  
   
--   類型的參考與正被參考的類型完全相容。  
+- 類型的參考與正被參考的類型完全相容。  
   
--   在物件上只叫用適當定義的作業。  
+- 在物件上只叫用適當定義的作業。  
   
--   這些識別與它們所宣告的一樣。  
+- 這些識別與它們所宣告的一樣。  
   
  在驗證程序期間，會檢查 MSIL 程式碼以確認程式碼只會使用正確定義的類型來存取記憶體位置和呼叫方法。 例如，程式碼不允許以可讓記憶體位置滿溢的方式存取物件欄位。 此外，驗證會檢視程式碼，以判斷 MSIL 是否已經正確產生，因為不正確的 MSIL 可能會違反類型安全規則。 驗證程序會讓妥善定義的類型安全程式碼集合通過驗證，它也只會讓類型安全的程式碼通過驗證。 然而，由於驗證程序的某些限制，某些類型安全程式碼可能無法通過驗證，而某些語言由於設計之故，不會產生可驗證的類型安全程式碼。 如果安全性原則需要類型安全程式碼，但該程式碼沒有通過驗證，則在程式碼執行時會產生例外狀況。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "59336144"
   
 ## <a name="see-also"></a>另請參閱
 
-- [總覽](../../docs/framework/get-started/overview.md)
+- [概觀](../../docs/framework/get-started/overview.md)
 - [語言獨立性以及與語言無關的元件](../../docs/standard/language-independence-and-language-independent-components.md)
 - [中繼資料和自我描述元件](../../docs/standard/metadata-and-self-describing-components.md)
 - [Ilasm.exe (IL 組譯工具)](../../docs/framework/tools/ilasm-exe-il-assembler.md)

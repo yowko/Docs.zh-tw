@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd75bd14b2393d9b316d90070894f214dfa60c88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d0c9447e53a874da856eb59932ec3871a9a1371d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344373"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654419"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>逐步解說：在 Windows Forms 應用程式中使用資料流程
 本文鍵示範如何建立資料流程區塊網路，其可以在 Windows Forms 應用程式中執行映像處理。  
@@ -29,13 +29,13 @@ ms.locfileid: "59344373"
 ## <a name="sections"></a>章節  
  本逐步解說包含下列各節：  
   
--   [建立 Windows Forms 應用程式](#winforms)  
+- [建立 Windows Forms 應用程式](#winforms)  
   
--   [建立資料流程網路](#network)  
+- [建立資料流程網路](#network)  
   
--   [連接資料流程網路與使用者介面](#ui)  
+- [連接資料流程網路與使用者介面](#ui)  
   
--   [完整範例](#complete)  
+- [完整範例](#complete)  
   
 <a name="winforms"></a>   
 ## <a name="creating-the-windows-forms-application"></a>建立 Windows Forms 應用程式  

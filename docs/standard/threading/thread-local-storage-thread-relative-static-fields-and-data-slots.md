@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69107cd7f1f84fa402479bb8a76c4b9b8a825d69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 681a9e71dcfb139c364d750383f13cdabbf33366
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718256"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644899"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>執行緒區域儲存區：執行緒相關的靜態欄位和資料位置
 您可以使用受控執行緒區域儲存區 (TLS) 來儲存對執行緒和應用程式定義域而言是唯一的資料。 .NET Framework 提供兩種方式來使用受控 TLS：執行緒相關的靜態欄位和資料插槽。  
   
--   如果您可以預期編譯時期的確切需求，請使用執行緒相關的靜態欄位 (在 Visual Basic 中為執行緒相關 `Shared` 欄位)。 執行緒相關靜態欄位提供最佳效能。 它們也提供編譯時期類型檢查的優點。  
+- 如果您可以預期編譯時期的確切需求，請使用執行緒相關的靜態欄位 (在 Visual Basic 中為執行緒相關 `Shared` 欄位)。 執行緒相關靜態欄位提供最佳效能。 它們也提供編譯時期類型檢查的優點。  
   
--   若您的實際需求只能在執行階段進行探索，請使用資料插槽。 比起執行緒相關靜態欄位，資料插槽的速度更慢且更難使用，而且會將資料儲存為 <xref:System.Object> 型別，因此您必須將它轉換成正確的型別才能使用它。  
+- 若您的實際需求只能在執行階段進行探索，請使用資料插槽。 比起執行緒相關靜態欄位，資料插槽的速度更慢且更難使用，而且會將資料儲存為 <xref:System.Object> 型別，因此您必須將它轉換成正確的型別才能使用它。  
   
  在非受控 C++ 中，您可以使用 `TlsAlloc` 動態配置插槽，並使用 `__declspec(thread)` 來宣告變數應配置於執行緒相關儲存區中。 執行緒相關靜態欄位和資料插槽提供此行為的受控版本。  
   
@@ -31,9 +31,9 @@ ms.locfileid: "54718256"
 ## <a name="uniqueness-of-data-in-managed-tls"></a>受控 TLS 中資料的唯一性  
  無論您使用的是執行緒相關靜態欄位或資料插槽，受控 TLS 中的資料對執行緒和應用程式定義域的組合都是唯一的。  
   
--   在應用程式定義域內，一個執行緒無法修改另一個執行緒的資料，即使這兩個執行緒使用同一個欄位或插槽也一樣。  
+- 在應用程式定義域內，一個執行緒無法修改另一個執行緒的資料，即使這兩個執行緒使用同一個欄位或插槽也一樣。  
   
--   當執行緒從多個應用程式定義域存取相同的欄位或插槽時，會在每個應用程式定義域中維護個別的值。  
+- 當執行緒從多個應用程式定義域存取相同的欄位或插槽時，會在每個應用程式定義域中維護個別的值。  
   
  例如，如果執行緒會設定執行緒相關靜態欄位的值，則進入另一個應用程式定義域，然後擷取該欄位的值，在第二個應用程式定義域中擷取的值與第一個應用程式定義域中的值不同。 在第二個應用程式定義域中設定欄位的新值，不會影響欄位在第一個應用程式定義域中的值。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "54718256"
 ## <a name="data-slots"></a>資料插槽  
  .NET Framework 提供動態資料插槽，這些插槽對執行緒和應用程式定義域的組合而言都是唯一的。 有兩種類型的資料插槽：具名插槽和未命名的插槽。 這兩者都使用 <xref:System.LocalDataStoreSlot> 結構來實作。  
   
--   若要建立具名資料插槽，使用 <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> 方法。 若要取得現有具名插槽的參考，將其名稱傳遞至 <xref:System.Threading.Thread.GetNamedDataSlot%2A> 方法。  
+- 若要建立具名資料插槽，使用 <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> 方法。 若要取得現有具名插槽的參考，將其名稱傳遞至 <xref:System.Threading.Thread.GetNamedDataSlot%2A> 方法。  
   
--   若要建立未命名的資料插槽，請使用 <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType> 方法。  
+- 若要建立未命名的資料插槽，請使用 <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType> 方法。  
   
  針對具名和未命名的插槽，請使用 <xref:System.Threading.Thread.SetData%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType> 方法來設定和擷取插槽中的資訊。 這些靜態方法一律會根據目前正在執行它們之執行緒的資料來動作。  
   

@@ -18,17 +18,16 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0793f3688f1f6ca66d92c5a22e158aa85e5470ae
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ab06c2d87de9483d7a3e9eb810f4be1f3278ddc2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58133333"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634528"
 ---
 # <a name="custom-numeric-format-strings"></a>自訂數值格式字串
 
 您可以建立由一個或多個自訂數值規範所組成的自訂數值格式字串，以定義如何格式化數值資料。 自訂數值格式字串為任何非 [標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)的格式字串。  
-  
 
  所有數字類型的 `ToString` 方法的一些多載可支援自訂數值格式字串。 例如，您可以提供數值格式字串給 <xref:System.Int32.ToString%28System.String%29> 類型的 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 和 <xref:System.Int32> 方法。 .NET 的[複合格式功能](../../../docs/standard/base-types/composite-formatting.md)也支援自訂數值格式字串，此功能會由 <xref:System.Console> 與 <xref:System.IO.StreamWriter> 類別的一些 `Write` 和 `WriteLine` 方法，以及 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法所使用。 [字串內插補點](../../csharp/language-reference/tokens/interpolated.md)功能也支援自訂數值格式字串。  
   
@@ -109,11 +108,11 @@ ms.locfileid: "58133333"
 ## <a name="the--custom-specifier"></a>"," 自訂規範  
  "," 字元同時當做群組分隔符號和數值縮放規範。  
   
--   群組分隔符號：如果在用於格式化數字整數位數的兩個數字預留位置 (0 或 #) 之間指定一或多個逗號，則會在輸出的整數部分中在每個數字群組之間插入群組分隔符號字元。  
+- 群組分隔符號：如果在用於格式化數字整數位數的兩個數字預留位置 (0 或 #) 之間指定一或多個逗號，則會在輸出的整數部分中在每個數字群組之間插入群組分隔符號字元。  
   
      目前 <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> 物件的 <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> 和 <xref:System.Globalization.NumberFormatInfo> 屬性會判斷當做數字群組分隔符號使用的字元，以及每個數字群組的大小。 例如，如果使用字串 "#,#" 和不變的文化特性來格式化數字 1000，則輸出為 "1,000"。  
   
--   數值縮放規範：如果在明確或隱含小數點的左側緊接著指定一或多個逗號，則每指定一個逗號就會將要格式化的數字除以 1000。 例如，如果使用字串 "0,," 來格式化數字 1 億，則其輸出為 "100"。  
+- 數值縮放規範：如果在明確或隱含小數點的左側緊接著指定一或多個逗號，則每指定一個逗號就會將要格式化的數字除以 1000。 例如，如果使用字串 "0,," 來格式化數字 1 億，則其輸出為 "100"。  
   
  您可以在相同的格式字串內使用群組分隔符號和數值縮放規範。 例如，如果使用字串 "#,0,," 和不變的文化特性來格式化數字 10 億，則輸出為 "1,000"。  
   

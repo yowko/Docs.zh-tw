@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45f0e30efac32dec42cf0687fa0da40f4d6dca4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1a5fa5113afdfb94a0b035b83cb59946d0970c9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551822"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664587"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>在集合內比較和排序
 <xref:System.Collections> 類別幾乎會在管理集合內的所有處理序中執行比較，包含搜尋要移除的項目，或傳回成對的索引鍵與值。  
@@ -30,9 +30,9 @@ ms.locfileid: "54551822"
 ## <a name="checking-for-equality"></a>檢查相等  
  例如， `Contains`、 <xref:System.Collections.IList.IndexOf%2A>、 <xref:System.Collections.Generic.List%601.LastIndexOf%2A>和 `Remove` 方法會為集合元素使用相等比較子。 如果集合為泛型，則會根據下列方針，比較項目是否相等：  
   
--   如果類型 T 實作了 <xref:System.IEquatable%601> 泛型介面，則相等比較子會是該介面的 <xref:System.IEquatable%601.Equals%2A> 方法。  
+- 如果類型 T 實作了 <xref:System.IEquatable%601> 泛型介面，則相等比較子會是該介面的 <xref:System.IEquatable%601.Equals%2A> 方法。  
   
--   如果類型 T 未實作 <xref:System.IEquatable%601>，則會使用 <xref:System.Object.Equals%2A?displayProperty=nameWithType> 。  
+- 如果類型 T 未實作 <xref:System.IEquatable%601>，則會使用 <xref:System.Object.Equals%2A?displayProperty=nameWithType> 。  
   
  此外，有些字典集合的建構函式多載，能接受 <xref:System.Collections.Generic.IEqualityComparer%601> 實作，其可用以比較索引鍵是否相等。 如需範例，請參閱 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> 。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "54551822"
   
  預設比較子會依賴至少一個所比較的物件，實作 **IComparable** 介面。 最好的作法是在所有用做為清單集合中的值或是用做為字典集合中索引鍵的類別上，實作 **IComparable** 。 若為泛型集合，會根據下列項目來決定相等比較：  
   
--   如果類型 T 實作 <xref:System.IComparable%601?displayProperty=nameWithType> 泛型介面，則預設比較子會是該介面的 <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> 方法。  
+- 如果類型 T 實作 <xref:System.IComparable%601?displayProperty=nameWithType> 泛型介面，則預設比較子會是該介面的 <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> 方法。  
   
--   如果類型 T 實作非泛型 <xref:System.IComparable?displayProperty=nameWithType> 介面，則預設比較子會是該介面的 <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> 方法。  
+- 如果類型 T 實作非泛型 <xref:System.IComparable?displayProperty=nameWithType> 介面，則預設比較子會是該介面的 <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> 方法。  
   
--   如果類型 T 沒有實作其中一個介面，則不會有預設比較子，且必須明確地提供比較子或比較委派。  
+- 如果類型 T 沒有實作其中一個介面，則不會有預設比較子，且必須明確地提供比較子或比較委派。  
   
  若要提供明確比較，某些方法接受以 **IComparer** 實作做為參數。 例如， <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> 方法接受 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 實作。  
   

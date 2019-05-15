@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 71330714658729ed82ba111e9384e6cd9d5ae116
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 658fc0ef797e941e33e1d03f0e492b4cf2ef0801
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59339420"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608023"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>逐步解說：建立和使用動態物件 (C# 和 Visual Basic)
 
@@ -28,9 +28,9 @@ ms.locfileid: "59339420"
   
  在這個逐步解說中，您將執行下列工作：  
   
--   建立自訂物件，以將文字檔內容動態公開為物件的屬性。  
+- 建立自訂物件，以將文字檔內容動態公開為物件的屬性。  
   
--   建立專案，以使用 `IronPython` 程式庫。  
+- 建立專案，以使用 `IronPython` 程式庫。  
   
 ## <a name="prerequisites"></a>必要條件  
 
@@ -162,7 +162,7 @@ ms.locfileid: "59339420"
 
 - <xref:System.Dynamic?displayProperty=nameWithType>
 - <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
-- [使用動態類型](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)
 - [早期和晚期繫結](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [動態](../../../csharp/language-reference/keywords/dynamic.md)
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
 - [實作動態介面 (Microsoft TechNet 的可下載 PDF)](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

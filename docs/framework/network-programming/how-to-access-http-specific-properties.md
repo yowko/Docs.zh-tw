@@ -1,18 +1,18 @@
 ---
-title: HOW TO：存取 HTTP 特定屬性
+title: 作法：存取 HTTP 特定屬性
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-ms.openlocfilehash: 107e57ca947012f5e2f65835d684f5e6068b3681
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 044a48aaffbd2d4ef490405a65236b17ecca1fbf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176588"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645791"
 ---
-# <a name="how-to-access-http-specific-properties"></a>HOW TO：存取 HTTP 特定屬性
+# <a name="how-to-access-http-specific-properties"></a>作法：存取 HTTP 特定屬性
 這個範例示範如何關閉 HTTP **保持運作**行為，以及如何從 Web 伺服器取得通訊協定版本號碼。  
   
 ## <a name="example"></a>範例  
@@ -47,7 +47,7 @@ HttpWResp.Close();
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   對 **System.Net** 命名空間的參考。  
+- 對 **System.Net** 命名空間的參考。  
   
 ## <a name="see-also"></a>另請參閱
 

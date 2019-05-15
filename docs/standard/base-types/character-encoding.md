@@ -14,19 +14,19 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e8edc747c003cd5527df509af83325816671ddfb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 735fedc5869ab82d49ef4d9068c67302bf825e2e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59346102"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634673"
 ---
 # <a name="character-encoding-in-net"></a>.NET 中的字元編碼
 字元是可以用許多不同的方式來表示的抽象實體。 字元編碼是一套系統，可將所支援之字元集中的每個字元與代表該字元的特定值配對。 例如，摩斯密碼就是一種字元編碼，可將羅馬字母中的每個字元與適合透過電報線路傳輸的點和虛線圖樣配對。 電腦的字元編碼可將所支援之字元集中的每個字元與代表該字元的數值配對。 字元編碼包含兩個不同的元件：  
   
--   編碼器，可將字元序列轉譯成數值 (位元組) 序列。  
+- 編碼器，可將字元序列轉譯成數值 (位元組) 序列。  
   
--   解碼器，可將位元組序列轉譯成字元序列。  
+- 解碼器，可將位元組序列轉譯成字元序列。  
   
  字元編碼描述編碼器和解碼器運作時所依據的規則。 例如， <xref:System.Text.UTF8Encoding> 類別描述編碼和解碼 8 位元 Unicode 轉換格式 (UTF-8) 的規則，該格式使用一到四個位元組來表示單一 Unicode 字元。 編碼和解碼也可包含驗證。 例如， <xref:System.Text.UnicodeEncoding> 類別會檢查所有 Surrogate，確定它們是由有效的 Surrogate 字組所組成。 (Surrogate 字組是由包含範圍從 U+D800 到 U+DBFF 之字碼指標的字元，後面接著包含範圍從 U+DC00 到 U+DFFF 之字碼指標的字元所組成)。後援策略決定編碼器如何處理無效的字元，或解碼器如何處理無效的位元組。  
   
@@ -37,27 +37,27 @@ ms.locfileid: "59346102"
   
  本主題包含下列章節：  
   
--   [.NET 中的編碼](../../../docs/standard/base-types/character-encoding.md#Encodings)  
+- [.NET 中的編碼](../../../docs/standard/base-types/character-encoding.md#Encodings)  
   
--   [選取編碼類別](../../../docs/standard/base-types/character-encoding.md#Selecting)  
+- [選取編碼類別](../../../docs/standard/base-types/character-encoding.md#Selecting)  
   
--   [使用編碼物件](../../../docs/standard/base-types/character-encoding.md#Using)  
+- [使用編碼物件](../../../docs/standard/base-types/character-encoding.md#Using)  
   
--   [選擇後援策略](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
+- [選擇後援策略](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
   
--   [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom)  
+- [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom)  
   
 <a name="Encodings"></a>   
 ## <a name="encodings-in-net"></a>.NET 中的編碼  
  .NET 中的所有字元編碼類別都會繼承自 <xref:System.Text.Encoding?displayProperty=nameWithType> 類別，這是定義所有字元編碼共通功能的抽象類別。 若要存取 .NET 中實作的個別編碼物件，請執行下列作業：  
   
--   使用 <xref:System.Text.Encoding> 類別的靜態屬性，這些屬性會傳回代表 .NET 中可用之標準字元編碼 (ASCII、UTF-7、UTF-8、UTF-16 和 UTF-32) 的物件。 例如， <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.Text.UnicodeEncoding> 物件。 每個物件會使用取代後援，來處理無法編碼的字串和無法解碼的位元組。 (如需詳細資訊，請參閱 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 一節。)  
+- 使用 <xref:System.Text.Encoding> 類別的靜態屬性，這些屬性會傳回代表 .NET 中可用之標準字元編碼 (ASCII、UTF-7、UTF-8、UTF-16 和 UTF-32) 的物件。 例如， <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.Text.UnicodeEncoding> 物件。 每個物件會使用取代後援，來處理無法編碼的字串和無法解碼的位元組。 (如需詳細資訊，請參閱 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 一節。)  
   
--   呼叫編碼的類別建構函式。 ASCII、UTF-7、UTF-8、UTF-16 和 UTF-32 編碼的物件可以透過這種方式執行個體化。 每個物件預設會使用取代後援，來處理無法編碼的字串和無法解碼的位元組，不過您可以指定改為擲回例外狀況。 (如需詳細資訊，請參閱 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 和 [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception) 一節。)  
+- 呼叫編碼的類別建構函式。 ASCII、UTF-7、UTF-8、UTF-16 和 UTF-32 編碼的物件可以透過這種方式執行個體化。 每個物件預設會使用取代後援，來處理無法編碼的字串和無法解碼的位元組，不過您可以指定改為擲回例外狀況。 (如需詳細資訊，請參閱 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 和 [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception) 一節。)  
   
--   呼叫 <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> 建構函式，並將代表編碼的整數傳遞給該建構函式。 標準編碼物件使用取代後援，來處理無法編碼的字串和無法解碼的位元組，而字碼頁和雙位元組字元集 (DBCS) 編碼物件則是使用自動調整後援。 (如需詳細資訊，請參閱 [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit) 一節。)  
+- 呼叫 <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> 建構函式，並將代表編碼的整數傳遞給該建構函式。 標準編碼物件使用取代後援，來處理無法編碼的字串和無法解碼的位元組，而字碼頁和雙位元組字元集 (DBCS) 編碼物件則是使用自動調整後援。 (如需詳細資訊，請參閱 [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit) 一節。)  
   
--   呼叫 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 方法，這個方法會傳回 .NET 中可用的任何標準、字碼頁或 DBCS 編碼。 多載可讓您同時為編碼器和解碼器指定後援物件。  
+- 呼叫 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 方法，這個方法會傳回 .NET 中可用的任何標準、字碼頁或 DBCS 編碼。 多載可讓您同時為編碼器和解碼器指定後援物件。  
   
 > [!NOTE]
 >  Unicode 標準會對每個受支援字集中的每個字元，指派一個字碼指標 (數字) 和一個名稱。 例如，字元 "A" 是由字碼指標 U+0041 和名稱 "LATIN CAPITAL LETTER A" 來表示。 Unicode 轉換格式 (UTF) 編碼定義將字碼指標編碼為一或多個位元組序列的方式。 Unicode 編碼配置簡化全球化應用程式的開發作業，因為它能夠以單一編碼表示任何字元集的字元。 應用程式開發人員不再需要追蹤用來產生特定語言或書寫系統字元的編碼配置，同時資料可在各國系統之間共用，而不會損毀。  
@@ -87,17 +87,17 @@ ms.locfileid: "59346102"
   
  如果您打算使用 ASCII 編碼 (<xref:System.Text.ASCIIEncoding>)，請改為選擇 <xref:System.Text.UTF8Encoding> 。 這兩種編碼對於 ASCII 字元集而言完全相同，但是 <xref:System.Text.UTF8Encoding> 具有下列優點：  
   
--   它可以表示每個 Unicode 字元，而 <xref:System.Text.ASCIIEncoding> 只支援 U+0000 與 U+007F 之間的 Unicode 字元值。  
+- 它可以表示每個 Unicode 字元，而 <xref:System.Text.ASCIIEncoding> 只支援 U+0000 與 U+007F 之間的 Unicode 字元值。  
   
--   它提供錯誤偵測且具有較佳的安全性。  
+- 它提供錯誤偵測且具有較佳的安全性。  
   
--   它已調整成其可能的最快速度，因此在速度上應該會超過其他任何編碼。 即使為全部都是 ASCII 的內容，使用 <xref:System.Text.UTF8Encoding> 執行的作業也會快過使用 <xref:System.Text.ASCIIEncoding>執行的作業。  
+- 它已調整成其可能的最快速度，因此在速度上應該會超過其他任何編碼。 即使為全部都是 ASCII 的內容，使用 <xref:System.Text.UTF8Encoding> 執行的作業也會快過使用 <xref:System.Text.ASCIIEncoding>執行的作業。  
   
  您應該考慮只對舊版應用程式使用 <xref:System.Text.ASCIIEncoding> 。 不過，即使是舊版應用程式， <xref:System.Text.UTF8Encoding> 仍然可能是較佳的選擇，原因如下 (假設使用預設值)：  
   
--   如果您的應用程式具有的內容不完全是 ASCII，而且使用 <xref:System.Text.ASCIIEncoding>編碼該內容，則每個非 ASCII 字元都會編碼為問號 (?)。 如果應用程式接著解碼這份資料，資訊就會遺失。  
+- 如果您的應用程式具有的內容不完全是 ASCII，而且使用 <xref:System.Text.ASCIIEncoding>編碼該內容，則每個非 ASCII 字元都會編碼為問號 (?)。 如果應用程式接著解碼這份資料，資訊就會遺失。  
   
--   如果應用程式具有的內容不完全是 ASCII，而且使用 <xref:System.Text.UTF8Encoding>編碼該內容，將結果解譯為 ASCII 會難以理解。 不過，如果應用程式接著使用 UTF-8 解碼器來解碼這份資料，則該資料會成功地執行來回轉換。  
+- 如果應用程式具有的內容不完全是 ASCII，而且使用 <xref:System.Text.UTF8Encoding>編碼該內容，將結果解譯為 ASCII 會難以理解。 不過，如果應用程式接著使用 UTF-8 解碼器來解碼這份資料，則該資料會成功地執行來回轉換。  
   
  在 Web 應用程式中，傳送至用戶端以回應 Web 要求的字元應該反映用戶端上使用的編碼。 在大部分情況下，您應該將 <xref:System.Web.HttpResponse.ContentEncoding%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.Web.HttpRequest.ContentEncoding%2A?displayProperty=nameWithType> 屬性所傳回的值，以便以使用者預期的編碼方式來顯示文字。  
   
@@ -130,11 +130,11 @@ ms.locfileid: "59346102"
 ## <a name="choosing-a-fallback-strategy"></a>選擇後援策略  
  當某個方法嘗試編碼或解碼字元，但是沒有任何對應存在時，它就必須實作後援策略，以決定應該如何處理失敗的對應。 後援策略有三種類型：  
   
--   Best-Fit Fallback  
+- Best-Fit Fallback  
   
--   Replacement Fallback  
+- Replacement Fallback  
   
--   Exception Fallback  
+- Exception Fallback  
   
 > [!IMPORTANT]
 >  編碼作業最常在 Unicode 字元無法對應至特定字碼頁編碼時發生問題。 解碼作業最常在無效的位元組序列無法轉譯為有效的 Unicode 字元時發生問題。 因此，您應該知道特定編碼物件所使用的後援策略。 您應該在執行個體化編碼物件時，盡可能指定該物件所使用的後援策略。  
@@ -195,9 +195,9 @@ ms.locfileid: "59346102"
   
  <xref:System.Text.EncoderFallbackException> 和 <xref:System.Text.DecoderFallbackException> 物件提供下列造成例外狀況之條件的相關資訊：  
   
--   <xref:System.Text.EncoderFallbackException> 物件包含 <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A> 方法，這個方法會指出無法編碼的一或多個字元代表未知的 Surrogate 字組 (在這種情況下，方法會傳回 `true`)，或未知的單一字元 (在這種情況下，方法會傳回 `false`)。 Surrogate 字組中的字元可從 <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=nameWithType> 和 <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=nameWithType> 屬性取得。 未知的單一字元可從 <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=nameWithType> 屬性取得。 <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=nameWithType> 屬性會指出字串中找到第一個無法編碼之字元的位置。  
+- <xref:System.Text.EncoderFallbackException> 物件包含 <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A> 方法，這個方法會指出無法編碼的一或多個字元代表未知的 Surrogate 字組 (在這種情況下，方法會傳回 `true`)，或未知的單一字元 (在這種情況下，方法會傳回 `false`)。 Surrogate 字組中的字元可從 <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=nameWithType> 和 <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=nameWithType> 屬性取得。 未知的單一字元可從 <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=nameWithType> 屬性取得。 <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=nameWithType> 屬性會指出字串中找到第一個無法編碼之字元的位置。  
   
--   <xref:System.Text.DecoderFallbackException> 物件包含 <xref:System.Text.DecoderFallbackException.BytesUnknown%2A> 屬性，這個屬性會傳回無法解碼的位元組陣列。 <xref:System.Text.DecoderFallbackException.Index%2A?displayProperty=nameWithType> 屬性會指出未知位元組的開始位置。  
+- <xref:System.Text.DecoderFallbackException> 物件包含 <xref:System.Text.DecoderFallbackException.BytesUnknown%2A> 屬性，這個屬性會傳回無法解碼的位元組陣列。 <xref:System.Text.DecoderFallbackException.Index%2A?displayProperty=nameWithType> 屬性會指出未知位元組的開始位置。  
   
  雖然 <xref:System.Text.EncoderFallbackException> 和 <xref:System.Text.DecoderFallbackException> 物件提供了有關例外狀況的適當診斷資訊，但是並未提供編碼或解碼緩衝區的存取權。 因此，這兩個物件不允許在編碼或解碼方法內取代或更正無效的資料。  
   
@@ -205,13 +205,13 @@ ms.locfileid: "59346102"
 ## <a name="implementing-a-custom-fallback-strategy"></a>Implementing a Custom Fallback Strategy  
  除了字碼頁在內部實作的自動調整對應之外，.NET 還包括下列實作後援策略的類別：  
   
--   使用 <xref:System.Text.EncoderReplacementFallback> 和 <xref:System.Text.EncoderReplacementFallbackBuffer> 取代編碼作業中的字元。  
+- 使用 <xref:System.Text.EncoderReplacementFallback> 和 <xref:System.Text.EncoderReplacementFallbackBuffer> 取代編碼作業中的字元。  
   
--   使用 <xref:System.Text.DecoderReplacementFallback> 和 <xref:System.Text.DecoderReplacementFallbackBuffer> 取代解碼作業中的字元。  
+- 使用 <xref:System.Text.DecoderReplacementFallback> 和 <xref:System.Text.DecoderReplacementFallbackBuffer> 取代解碼作業中的字元。  
   
--   在無法編碼字元時，使用 <xref:System.Text.EncoderExceptionFallback> 和 <xref:System.Text.EncoderExceptionFallbackBuffer> 擲回 <xref:System.Text.EncoderFallbackException> 。  
+- 在無法編碼字元時，使用 <xref:System.Text.EncoderExceptionFallback> 和 <xref:System.Text.EncoderExceptionFallbackBuffer> 擲回 <xref:System.Text.EncoderFallbackException> 。  
   
--   在無法解碼字元時，使用 <xref:System.Text.DecoderExceptionFallback> 和 <xref:System.Text.DecoderExceptionFallbackBuffer> 擲回 <xref:System.Text.DecoderFallbackException> 。  
+- 在無法解碼字元時，使用 <xref:System.Text.DecoderExceptionFallback> 和 <xref:System.Text.DecoderExceptionFallbackBuffer> 擲回 <xref:System.Text.DecoderFallbackException> 。  
   
  此外，您可以執行下列步驟，來實作使用自動調整後援、取代後援或例外狀況後援的自訂方案：  
   
@@ -226,24 +226,24 @@ ms.locfileid: "59346102"
   
  當您針對編碼器或解碼器建立自訂後援方案時，必須實作下列成員：  
   
--   <xref:System.Text.EncoderFallback.MaxCharCount%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallback.MaxCharCount%2A?displayProperty=nameWithType> 屬性，這個屬性會傳回自動調整、取代或例外狀況後援可傳回以取代單一字元的最大字元數。 若是自訂例外狀況後援，其值為零。  
+- <xref:System.Text.EncoderFallback.MaxCharCount%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallback.MaxCharCount%2A?displayProperty=nameWithType> 屬性，這個屬性會傳回自動調整、取代或例外狀況後援可傳回以取代單一字元的最大字元數。 若是自訂例外狀況後援，其值為零。  
   
--   <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> 方法，這個方法會傳回您自訂的 <xref:System.Text.EncoderFallbackBuffer> 或 <xref:System.Text.DecoderFallbackBuffer> 實作。 編碼器會在遇到無法成功編碼的第一個字元時呼叫這個方法，而解碼器會在遇到無法成功解碼的第一個位元組時呼叫這個方法。  
+- <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> 方法，這個方法會傳回您自訂的 <xref:System.Text.EncoderFallbackBuffer> 或 <xref:System.Text.DecoderFallbackBuffer> 實作。 編碼器會在遇到無法成功編碼的第一個字元時呼叫這個方法，而解碼器會在遇到無法成功解碼的第一個位元組時呼叫這個方法。  
   
 ### <a name="deriving-from-encoderfallbackbuffer-or-decoderfallbackbuffer"></a>衍生自 EncoderFallbackBuffer 或 DecoderFallbackBuffer  
  若要實作自訂後援方案，您還必須針對編碼作業建立繼承自 <xref:System.Text.EncoderFallbackBuffer> 的類別，以及針對解碼作業建立繼承自 <xref:System.Text.DecoderFallbackBuffer> 的類別。 這些類別的執行個體會由 <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A> 和 <xref:System.Text.EncoderFallback> 類別的 <xref:System.Text.DecoderFallback> 方法傳回。 編碼器會在遇到無法編碼的第一個字元時呼叫 <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> 方法，而解碼器會在遇到無法解碼的一或多個位元組時呼叫 <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> 方法。 <xref:System.Text.EncoderFallbackBuffer> 和 <xref:System.Text.DecoderFallbackBuffer> 類別提供後援實作。 每個執行個體代表包含後援字元的緩衝區，這些後援字元將取代無法編碼的字元或無法解碼的位元組序列。  
   
  當您針對編碼器或解碼器建立自訂後援方案時，必須實作下列成員：  
   
--   <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 方法。 <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 會被編碼器呼叫來提供後援緩衝區，其中包含無法編碼之字元的相關資訊。 由於要編碼的字元可能是 Surrogate 字組，因此這個方法為多載。 其中一個多載會收到傳遞之要編碼的字元，以及其在字串中的索引。 第二個多載會收到傳遞的高和低 Surrogate，以及其在字串中的索引。 解碼器會呼叫 <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 方法來提供後援緩衝區，其中包含無法解碼之位元組的相關資訊。 這個方法會收到傳遞之無法解碼的位元組陣列，以及第一個位元組的索引。 如果後援緩衝區可以提供自動調整或一或多個取代字元，則後援方法應該傳回 `true` ，否則應該傳回 `false`。 若是例外狀況後援，後援方法應該擲回例外狀況。  
+- <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 方法。 編碼器會呼叫<xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 來提供後援緩衝區，其中包含無法編碼之字元的相關資訊。 由於要編碼的字元可能是 Surrogate 字組，因此這個方法為多載。 其中一個多載會收到傳遞之要編碼的字元，以及其在字串中的索引。 第二個多載會收到傳遞的高和低 Surrogate，以及其在字串中的索引。 解碼器會呼叫 <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 方法來提供後援緩衝區，其中包含無法解碼之位元組的相關資訊。 這個方法會收到傳遞之無法解碼的位元組陣列，以及第一個位元組的索引。 如果後援緩衝區可以提供自動調整或一或多個取代字元，則後援方法應該傳回 `true` ，否則應該傳回 `false`。 若是例外狀況後援，後援方法應該擲回例外狀況。  
   
--   <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> 方法，編碼器或解碼器會重複呼叫這個方法，以便從後援緩衝區取得下一個字元。 當所有後援字元都已傳回時，這個方法應傳回 U+0000。  
+- <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> 方法，編碼器或解碼器會重複呼叫這個方法，以便從後援緩衝區取得下一個字元。 當所有後援字元都已傳回時，這個方法應傳回 U+0000。  
   
--   <xref:System.Text.EncoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> 屬性，這個屬性會傳回後援緩衝區中剩餘的字元數。  
+- <xref:System.Text.EncoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> 屬性，這個屬性會傳回後援緩衝區中剩餘的字元數。  
   
--   <xref:System.Text.EncoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> 方法，這個方法會將後援緩衝區中的目前位置移至前一個字元。  
+- <xref:System.Text.EncoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> 方法，這個方法會將後援緩衝區中的目前位置移至前一個字元。  
   
--   <xref:System.Text.EncoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> 方法，這個方法會重新初始化後援緩衝區。  
+- <xref:System.Text.EncoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> 方法，這個方法會重新初始化後援緩衝區。  
   
  如果後援實作是自動調整後援或取代後援，則衍生自 <xref:System.Text.EncoderFallbackBuffer> 和 <xref:System.Text.DecoderFallbackBuffer> 的類別還會維護兩個私用執行個體欄位：緩衝區中確實的字元數，以及緩衝區中要傳回之下一個字元的索引。  
   

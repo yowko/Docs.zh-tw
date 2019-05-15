@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b74321ecc5c945aab74ad8678b23eb4a66046d39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 80a07e389f84c56f6fa3f718b8ba7e0504201ba7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329514"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591519"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (組件繫結記錄檔檢視器)
 組件繫結記錄檔檢視器會顯示組件繫結的詳細資料。 這項資訊有助於診斷 .NET Framework 為何無法在執行階段找到組件。 這類失敗通常是因為組件部署至不正確的位置、原生映像已失效，或版本號碼或文化特定不符所致。 通用語言執行平台找不到組件，通常在應用程式中會顯示為 <xref:System.TypeLoadException>。  
@@ -51,17 +51,17 @@ fuslogvw
   
      工具便會顯示有關所選取繫結失敗的下列詳細資料：  
   
-    -   繫結失敗的特定原因，例如「找不到檔案」或「版本不符」。  
+    - 繫結失敗的特定原因，例如「找不到檔案」或「版本不符」。  
   
-    -   啟始繫結之應用程式的相關資訊，包括其名稱、應用程式的根目錄 (AppBase) 以及私用搜尋路徑的描述 (如果有的話)。  
+    - 啟始繫結之應用程式的相關資訊，包括其名稱、應用程式的根目錄 (AppBase) 以及私用搜尋路徑的描述 (如果有的話)。  
   
-    -   工具所搜尋之組件的識別。  
+    - 工具所搜尋之組件的識別。  
   
-    -   已套用之任何應用程式、發行者或系統管理員版本原則的描述。  
+    - 已套用之任何應用程式、發行者或系統管理員版本原則的描述。  
   
-    -   在[全域組件快取](../../../docs/framework/app-domains/gac.md)中是否找到組件。  
+    - 在[全域組件快取](../../../docs/framework/app-domains/gac.md)中是否找到組件。  
   
-    -   所有探查 URL 的清單。  
+    - 所有探查 URL 的清單。  
   
  以下範例記錄項目將顯示失敗之組件繫結的詳細資訊。  
   
@@ -105,26 +105,26 @@ LOG: All probing URLs attempted and failed.
   
 ### <a name="to-delete-all-entries-from-the-log"></a>若要從記錄檔刪除所有項目  
   
--   按一下 [全部刪除] 按鈕。  
+- 按一下 [全部刪除] 按鈕。  
   
 ### <a name="to-refresh-the-user-interface"></a>若要重新整理使用者介面  
   
--   按一下 [重新整理] 按鈕。 檢視器在執行時不會自動偵測新的記錄項目。 您必須使用 [重新整理] 按鈕才能顯示新項目。  
+- 按一下 [重新整理] 按鈕。 檢視器在執行時不會自動偵測新的記錄項目。 您必須使用 [重新整理] 按鈕才能顯示新項目。  
   
 ### <a name="to-change-the-log-settings"></a>若要變更記錄檔設定  
   
--   按一下 [設定] 按鈕，開啟 [記錄檔設定] 對話方塊。  
+- 按一下 [設定] 按鈕，開啟 [記錄檔設定] 對話方塊。  
   
 ### <a name="to-view-the-about-dialog"></a>若要檢視關於對話方塊  
   
--   按一下 [關於] 按鈕。  
+- 按一下 [關於] 按鈕。  
   
 ## <a name="binding-logs-for-native-images"></a>原生映像的繫結記錄檔  
  根據預設，Fuslogvw.exe 會記錄正常的組件繫結要求。 或者，您可以記錄使用 [Ngen.exe (原生映像產生器)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 所建立之原生映像的組件繫結。  
   
 #### <a name="to-log-assembly-binds-for-native-images"></a>若要記錄原生映像的組件繫結  
   
--   在 [記錄檔分類] 群組中，選取 [原生映像] 選項按鈕。  
+- 在 [記錄檔分類] 群組中，選取 [原生映像] 選項按鈕。  
   
  下列記錄將顯示建立應用程式的原生影像時，不存在的相依性所造成的失敗。 如果執行階段的相依性與 Ngen.exe 執行時的相依性不同，則不允許繫結至原生映像。  
   
@@ -185,23 +185,23 @@ Discarding native image.
   
 #### <a name="to-disable-logging"></a>若要停用記錄  
   
--   選取 [停用記錄] 選項按鈕。  請注意，這個選項預設為選取狀態。  
+- 選取 [停用記錄] 選項按鈕。  請注意，這個選項預設為選取狀態。  
   
 #### <a name="to-log-assembly-binds-in-exceptions"></a>若要記錄例外狀況中的組件繫結  
   
--   選取 [在例外狀況文字中記錄] 選項按鈕。 例外狀況文字中只會記錄最簡要的融合記錄資訊。 若要檢視完整資訊，請使用其中一項其他設定。  
+- 選取 [在例外狀況文字中記錄] 選項按鈕。 例外狀況文字中只會記錄最簡要的融合記錄資訊。 若要檢視完整資訊，請使用其中一項其他設定。  
   
      請參閱有關以定義域中性方式載入之組件的＜重要事項＞。  
   
 #### <a name="to-log-assembly-bind-failures"></a>若要記錄組件繫結失敗  
   
--   選取 [在磁碟中記錄失敗的繫結] 選項按鈕。  
+- 選取 [在磁碟中記錄失敗的繫結] 選項按鈕。  
   
      請參閱有關以定義域中性方式載入之組件的＜重要事項＞。  
   
 #### <a name="to-log-all-assembly-binds"></a>若要記錄所有組件繫結  
   
--   選取 [在磁碟中記錄所有繫結] 選項按鈕。  
+- 選取 [在磁碟中記錄所有繫結] 選項按鈕。  
   
      請參閱有關以定義域中性方式載入之組件的＜重要事項＞。  
   

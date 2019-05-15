@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63931f4498f4c1f313e7980b91ef712d4a46a837
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 43037f897dfb591572a62a9bb3cccf9170d1f5fe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865175"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645015"
 ---
 # <a name="exceptions-in-managed-threads"></a>Managed 執行緒中的例外狀況
 從 .NET Framework version 2.0 開始，通用語言執行平台允許執行緒中大多數未處理的例外狀況自然地繼續。 在大多數情況下，這表示未處理的例外狀況導致應用程式終止。  
@@ -25,11 +25,11 @@ ms.locfileid: "43865175"
   
  通用語言執行平台針對用於控制程式流程的特定未處理例外狀況提供了防護網︰  
   
--   因為呼叫了 <xref:System.Threading.Thread.Abort%2A>，而導致執行緒中擲回 <xref:System.Threading.ThreadAbortException>。  
+- 因為呼叫了 <xref:System.Threading.Thread.Abort%2A>，而導致執行緒中擲回 <xref:System.Threading.ThreadAbortException>。  
   
--   因為正在卸載執行緒執行所在的應用程式定義域，而在執行緒中擲回 <xref:System.AppDomainUnloadedException>。  
+- 因為正在卸載執行緒執行所在的應用程式定義域，而在執行緒中擲回 <xref:System.AppDomainUnloadedException>。  
   
--   通用語言執行平台或主機處理序會藉由擲回內部例外狀況來終止執行緒。  
+- 通用語言執行平台或主機處理序會藉由擲回內部例外狀況來終止執行緒。  
   
  如果在通用語言執行平台所建立的執行緒中有上述任何未處理的例外狀況，則此例外狀況會終止執行緒，但通用語言執行平台不允許例外狀況進一步繼續作業。  
   
@@ -47,11 +47,11 @@ ms.locfileid: "43865175"
 ## <a name="change-from-previous-versions"></a>從舊版變更  
  最重大的變更與 Managed 執行緒有關。 在 .NET Framework 1.0 和 1.1 版中，通用語言執行平台會針對下列情況中未處理的例外狀況提供防護網：  
   
--   執行緒集區執行緒上不會有未處理的例外狀況。 當工作擲回未處理的例外狀況時，執行平台會將例外狀況堆疊追蹤列印到主控台，然後將執行緒傳回到執行緒集區。  
+- 執行緒集區執行緒上不會有未處理的例外狀況。 當工作擲回未處理的例外狀況時，執行平台會將例外狀況堆疊追蹤列印到主控台，然後將執行緒傳回到執行緒集區。  
   
--   使用 <xref:System.Threading.Thread> 類別的 <xref:System.Threading.Thread.Start%2A> 方法建立的執行緒上不會有未處理例外狀況之類的項目。 在此種執行緒上執行的程式碼擲回未處理的例外狀況時，執行平台會將例外狀況堆疊追蹤列印到主控台，然後正常終止執行緒。  
+- 使用 <xref:System.Threading.Thread> 類別的 <xref:System.Threading.Thread.Start%2A> 方法建立的執行緒上不會有未處理例外狀況之類的項目。 在此種執行緒上執行的程式碼擲回未處理的例外狀況時，執行平台會將例外狀況堆疊追蹤列印到主控台，然後正常終止執行緒。  
   
--   完成項執行緒上不會有未處理的例外狀況。 當完成項擲回未處理的例外狀況時，執行平台會將例外狀況堆疊追蹤列印到主控台，然後允許完成項執行緒繼續執行完成項。  
+- 完成項執行緒上不會有未處理的例外狀況。 當完成項擲回未處理的例外狀況時，執行平台會將例外狀況堆疊追蹤列印到主控台，然後允許完成項執行緒繼續執行完成項。  
   
  Managed 執行緒的前景或背景狀態不會影響此行為。  
   
@@ -60,11 +60,11 @@ ms.locfileid: "43865175"
 ### <a name="migrating-code"></a>移轉程式碼  
  一般而言，變更會公開先前無法辨識的程式設計問題，以便修正這些問題。 不過，在某些情況下，程式設計人員可能已利用執行階段防護網來終止執行緒。 視情況而定，它們應該考慮下列其中一個移轉策略︰  
   
--   重新建構程式碼，讓執行緒在收到訊號時依正常程序結束。  
+- 重新建構程式碼，讓執行緒在收到訊號時依正常程序結束。  
   
--   使用 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法來中止執行緒。  
+- 使用 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法來中止執行緒。  
   
--   如果執行緒必須停止，處理序終止作業才能繼續，請讓執行緒成為背景執行緒，以便在處理序結束時自動終止。  
+- 如果執行緒必須停止，處理序終止作業才能繼續，請讓執行緒成為背景執行緒，以便在處理序結束時自動終止。  
   
  在所有情況下，此策略應該遵循例外狀況的設計方針。 請參閱[例外狀況的設計方針](../../../docs/standard/design-guidelines/exceptions.md)。  
   

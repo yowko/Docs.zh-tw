@@ -1,19 +1,19 @@
 ---
-title: HOW TO：將事件資訊寫入至文字檔 (Visual Basic)
+title: 作法：將事件資訊寫入至文字檔 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs [Visual Studio], writing event information
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: e696ccb7327197c2f3a2468d30085dc6d390e034
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f9abf99a06437f08c65eca69e54760e44a217023
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312707"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665758"
 ---
-# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>HOW TO：將事件資訊寫入至文字檔 (Visual Basic)
+# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>作法：將事件資訊寫入至文字檔 (Visual Basic)
 您可以使用 `My.Application.Log` 和 `My.Log` 物件來記錄應用程式中發生之事件的相關資訊。 這個範例示範如何使用 `My.Application.Log.WriteEntry` 方法將追蹤資訊記錄到記錄檔。  
   
 ### <a name="to-add-and-configure-the-file-log-listener"></a>新增和設定檔案記錄檔接聽程式  
@@ -24,11 +24,11 @@ ms.locfileid: "59312707"
   
      如果沒有 app.config 檔案︰  
   
-    1.  在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。  
+    1. 在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。  
   
-    2.  在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。  
+    2. 在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。  
   
-    3.  按一下 [加入] 。  
+    3. 按一下 [加入] 。  
   
 2. 在應用程式組態檔中找出 `<listeners>` 區段。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59312707"
   
 ### <a name="to-write-event-information-to-the-file-log"></a>將事件資訊寫入檔案記錄檔  
   
--   使用 `My.Application.Log.WriteEntry` 或 `My.Application.Log.WriteException` 方法，將資訊寫入檔案記錄檔。 如需詳細資訊，請參閱[如何：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)和[如何：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)。  
+- 使用 `My.Application.Log.WriteEntry` 或 `My.Application.Log.WriteException` 方法，將資訊寫入檔案記錄檔。 如需詳細資訊，請參閱[如何：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)和[如何：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)。  
   
      設定組件的檔案記錄檔接聽程式之後，接聽程式會接收 `My.Application.Log` 從該組件寫入的所有訊息。  
   

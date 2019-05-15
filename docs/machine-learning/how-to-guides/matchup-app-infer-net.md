@@ -1,21 +1,16 @@
 ---
 title: 使用 Infer.NET 與概率程式設計建立遊戲配對清單應用程式
 description: 了解如何使用 Infer.NET 進行概率程式設計，以 TrueSkill 的簡化版本為基礎，建立遊戲配對清單應用程式。
-ms.date: 03/05/2019
+ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 06538ec9de26f5aeabe474fbcae69f0a313c8d32
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 85cb3753ae19e7ca64002eb7c26b44b6f7d41e4f
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679128"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211428"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>使用 Infer.NET 與概率程式設計建立遊戲配對清單應用程式
-
-> [!NOTE]
-> 本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) (英文)。
-
-本操作說明與關聯的範例目前是使用 **ML.NET 0.10 版**。 如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊。
 
 本操作指南將教導您如何使用 Infer.NET 進行概率程式設計。 概率程式設計是一種機器學習方法，其中自訂模型會以電腦程式表示。 它可將網域知識融入模型中，使機器學習系統更具可解譯性。 它也支援線上推斷 - 也就是隨著新資料的到來而學習的程序。 Microsoft 的 Azure、Xbox 和 Bing 中的各種產品，都使用 Infer.NET。
 
@@ -23,7 +18,7 @@ ms.locfileid: "57679128"
 
 概率程式設計可讓您建立真實世界處理的統計模型。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 本機開發環境設定
 
@@ -158,7 +153,7 @@ Player 2 skill: Gaussian(2.639, 4.288)
 
 ## <a name="keep-learning"></a>持續學習
 
-設計統計模型本身就是一個技能。 Microsoft 研究劍橋團隊撰寫了一本[免費線上書籍](http://mbmlbook.com/) \(英文\)，該書對該文章進行了初步介紹。 該書的第 3 章更詳細地介紹了 TrueSkill 模型。 一旦您在心中有一個模型，就可以使用 Infer.NET 網站上的[詳盡文件](https://dotnet.github.io/infer/) \(英文\) 將其轉換成程式碼。
+設計統計模型本身就是一項技能。 Microsoft 研究劍橋團隊撰寫了一本[免費線上書籍](http://mbmlbook.com/) \(英文\)，該書對該文章進行了初步介紹。 該書的第 3 章更詳細地介紹了 TrueSkill 模型。 一旦您在心中有一個模型，就可以使用 Infer.NET 網站上的[詳盡文件](https://dotnet.github.io/infer/) \(英文\) 將其轉換成程式碼。
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 25d2177eed9ef83ba8f2575668e72dc21c2cd43f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: e32f36a0490a198078f8357f3603c91cc50cb3b8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298392"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647098"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>逐步解說：篩選 My.Application.Log 輸出 (Visual Basic)
 本逐步解說示範如何變更 `My.Application.Log` 物件的預設記錄檔篩選，以控制哪些資訊會從 `Log` 物件傳遞至接聽程式，而哪些資訊會由接聽程式寫入。 由於組態資訊是儲存在應用程式的組態檔中，因此即使在建置應用程式之後，您仍可以變更記錄行為。  
@@ -58,7 +58,7 @@ ms.locfileid: "59298392"
 |`Critical`|`Critical`|  
 |`Error`|`Critical` 或 `Error`|  
 |`Warning`|`Critical`、 `Error`或 `Warning`|  
-|`Information`|`Critical`、`Error`、`Warning`或 `Information`|  
+|`Information`|`Critical`、`Error`、`Warning` 或 `Information`|  
 |`Verbose`|`Critical`、`Error`、`Warning`、`Information` 或 `Verbose`|  
 |`ActivityTracing`|`Start`、`Stop`、`Suspend`、`Resume` 或 `Transfer`|  
 |`All`|允許所有訊息。|  
@@ -77,11 +77,11 @@ ms.locfileid: "59298392"
   
      如果沒有 app.config 檔案︰  
   
-    1.  在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。  
+    1. 在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。  
   
-    2.  在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。  
+    2. 在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。  
   
-    3.  按一下 [加入]。  
+    3. 按一下 [加入]。  
   
 2. 找出位於最上層 `<configuration>` 區段中 `<system.diagnostics>` 區段的 `<switches>` 區段。  
   
@@ -152,11 +152,11 @@ ms.locfileid: "59298392"
   
      如果沒有 app.config 檔案︰  
   
-    1.  在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。  
+    1. 在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。  
   
-    2.  在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。  
+    2. 在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。  
   
-    3.  按一下 [加入] 。  
+    3. 按一下 [加入] 。  
   
 2. 在方案總管中，以滑鼠右鍵按一下 app.config。 選擇 [開啟]。  
   
@@ -251,7 +251,7 @@ ms.locfileid: "59298392"
 
 - [逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
 - [逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
-- [逐步解說：建立自訂記錄檔接聽程式](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
-- [作法：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [逐步解說：建立自訂的記錄檔接聽程式](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
+- [如何：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
 - [追蹤參數](../../../../framework/debug-trace-profile/trace-switches.md)
 - [記錄來自應用程式的資訊](../../../../visual-basic/developing-apps/programming/log-info/index.md)

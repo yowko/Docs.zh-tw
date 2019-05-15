@@ -9,25 +9,25 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb44fad991c8184686fcda90878bae2ec53260c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55b973e9eb795ef2f5bd69b4ec67c1c194f043a9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617911"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644772"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>同步處理多執行緒處理的資料
 當多個執行緒可以對單一物件的屬性和方法進行呼叫時，請務必同步處理這些呼叫。 否則某個執行緒可能會中斷另一個執行緒正在執行的作業，而且物件可能會處於無效狀態。 其成員受到保護免於這種中斷的類別，稱為安全執行緒。  
   
  通用語言基礎結構提供幾種策略來同步存取執行個體和靜態成員︰  
   
--   同步程式碼區域。 您可以使用 <xref:System.Threading.Monitor> 類別或此類別的編譯器支援，僅同步處理需要它的程式碼區塊，進而改善效能。  
+- 同步程式碼區域。 您可以使用 <xref:System.Threading.Monitor> 類別或此類別的編譯器支援，僅同步處理需要它的程式碼區塊，進而改善效能。  
   
--   手動同步處理。 您可以使用 .NET Framework 類別庫提供的同步處理物件。 請參閱[同步處理原始物件概觀](../../../docs/standard/threading/overview-of-synchronization-primitives.md)，其中包括 <xref:System.Threading.Monitor> 類別的討論。  
+- 手動同步處理。 您可以使用 .NET Framework 類別庫提供的同步處理物件。 請參閱[同步處理原始物件概觀](../../../docs/standard/threading/overview-of-synchronization-primitives.md)，其中包括 <xref:System.Threading.Monitor> 類別的討論。  
   
--   同步處理的內容。 您可以使用 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>，針對 <xref:System.ContextBoundObject> 物件啟用簡單且自動的同步處理。  
+- 同步處理的內容。 您可以使用 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>，針對 <xref:System.ContextBoundObject> 物件啟用簡單且自動的同步處理。  
   
--   <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間中的集合類別。 這些類別會提供內建同步處理新增和移除作業。 如需詳細資訊，請參閱[安全執行緒集合](../../../docs/standard/collections/thread-safe/index.md)。  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間中的集合類別。 這些類別會提供內建同步處理新增和移除作業。 如需詳細資訊，請參閱[安全執行緒集合](../../../docs/standard/collections/thread-safe/index.md)。  
   
  通用語言執行平台提供執行緒模型，其中類別分為一些分類，可以根據需求以各種不同的方式同步處理。 下表顯示為指定同步處理分類的欄位和方法提供哪些同步處理支援。  
   

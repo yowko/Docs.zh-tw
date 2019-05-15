@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ca01234bf7adaca1337053bbc2bbba0731be3cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c4c56712460d772426a2d8d6d328cba9bb03373d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132020"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648666"
 ---
 # <a name="identifying-functions-in-dlls"></a>識別 DLL 中的函式
 DLL 函式的身分識別是由下列項目所組成：  
   
--   函式名稱或序數  
+- 函式名稱或序數  
   
--   可在其中找到實作之 DLL 檔案的名稱  
+- 可在其中找到實作之 DLL 檔案的名稱  
   
  例如，在 User32.dll 中指定 **MessageBox** 函式可識別此函式 (**MessageBox**) 及其位置 (User32.dll、User32 或 user32)。 Microsoft Windows 應用程式開發介面 (Windows API) 可針對處理字元和字串的每一個函式，各包含兩個版本：一個是單位元組字元的 ANSI 版本，另一個是雙位元組字元的 Unicode 版本。 未指定時，由 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 欄位所代表的字元集預設為 ANSI。 某些函式可以有兩個以上的版本。  
   

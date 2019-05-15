@@ -8,23 +8,23 @@ dev_langs:
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 515edf26df6190d2bf4906f3de2d019b1a4175fb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4e4847dd6bc05127799cb6d8424a8fdb63fbc0f7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45676187"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590067"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>根據索引擷取的已排序節點
 全球資訊網協會 (W3C) XML 文件物件模型 (DOM) 也說明了 NodeList；相對於能夠處理未排序節點集的 **XmlNamedNodeMap**，NodeList 具有處理已排序節點清單的功能。 Microsoft .NET Framework 中的 NodeList 稱為 **XmlNodeList**。 傳回 **XmlNodeList** 的方法和屬性有：  
   
--   XmlNode.ChildNodes  
+- XmlNode.ChildNodes  
   
--   XmlDocument.GetElementsByTagName  
+- XmlDocument.GetElementsByTagName  
   
--   XmlElement.GetElementsByTagName  
+- XmlElement.GetElementsByTagName  
   
--   XmlNode.SelectNodes  
+- XmlNode.SelectNodes  
   
  **XmlNodeList** 有一個 **Count** 屬性，可以用於將迴圈重複寫入 **XmlNodeList** 中的節點，如同下列程式碼範例所示：  
   

@@ -19,33 +19,33 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fdd7eef0994ca9c7b0533b6497d76a4720dd1f64
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096260"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634633"
 ---
 # <a name="common-type-system"></a>一般類型系統
 一般型別系統定義如何在 Common Language Runtime 中宣告、使用和管理型別，同時也是執行階段支援跨語言整合中很重要的一部分。 一般型別系統可執行下列功能：  
   
--   建立利於提供跨語言整合、型別安全 (Type Safety) 和高效能程式碼執行的架構。  
+- 建立利於提供跨語言整合、型別安全 (Type Safety) 和高效能程式碼執行的架構。  
   
--   提供可支援多種程式語言完整實作 (Implementation) 的物件導向模型。  
+- 提供可支援多種程式語言完整實作 (Implementation) 的物件導向模型。  
   
--   定義語言必須遵守的規則，有助於確保以不同語言撰寫的物件可彼此互動。  
+- 定義語言必須遵守的規則，有助於確保以不同語言撰寫的物件可彼此互動。  
   
--   提供包含應用程式開發時使用之原始資料型別 (例如 <xref:System.Boolean>、<xref:System.Byte>、<xref:System.Char>、<xref:System.Int32> 與 <xref:System.UInt64>) 的程式庫。  
+- 提供包含應用程式開發時使用之原始資料型別 (例如 <xref:System.Boolean>、<xref:System.Byte>、<xref:System.Char>、<xref:System.Int32> 與 <xref:System.UInt64>) 的程式庫。  
   
  此主題包括下列章節：  
   
--   [.NET 中的類型](#types_in_the_net_framework)  
+- [.NET 中的類型](#types_in_the_net_framework)  
   
--   [型別定義](#type_definitions)  
+- [型別定義](#type_definitions)  
   
--   [型別成員](#type_members)  
+- [型別成員](#type_members)  
   
--   [類型成員的特性](#characteristics_of_type_members)  
+- [類型成員的特性](#characteristics_of_type_members)  
   
 <a name="types_in_the_net_framework"></a>   
 ## <a name="types-in-net"></a>.NET 中的類型  
@@ -57,15 +57,15 @@ ms.locfileid: "59096260"
   
  .NET 中的一般型別系統支援下列五種型別：  
   
--   [類別](#Classes)  
+- [類別](#Classes)  
   
--   [結構](#Structures)  
+- [結構](#Structures)  
   
--   [列舉](#Enumerations)  
+- [列舉](#Enumerations)  
   
--   [介面](#Interfaces)  
+- [介面](#Interfaces)  
   
--   [委派](#Delegates)  
+- [委派](#Delegates)  
   
 <a name="Classes"></a>   
 ### <a name="classes"></a>類別  
@@ -106,13 +106,13 @@ ms.locfileid: "59096260"
   
  下列限制適用於列舉型別：  
   
--   不能定義自己的方法。  
+- 不能定義自己的方法。  
   
--   不能實作介面。  
+- 不能實作介面。  
   
--   不能定義屬性或事件。  
+- 不能定義屬性或事件。  
   
--   除非是巢狀置於泛型型別中，否則不能是泛型。 換句話說，列舉型別不能有自己的型別參數。  
+- 除非是巢狀置於泛型型別中，否則不能是泛型。 換句話說，列舉型別不能有自己的型別參數。  
   
     > [!NOTE]
     >  使用 Visual Basic、C# 和 C++ 建立的巢狀型別 (包括列舉型別) 包含所有封入泛型型別的型別參數，因此，即使沒有自己的型別參數，仍舊是泛型型別。 如需詳細資訊，請參閱 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 參考主題中的＜巢狀型別＞。  
@@ -130,13 +130,13 @@ ms.locfileid: "59096260"
   
  下列限制適用於介面：  
   
--   介面可宣告為任何存取範圍，但是介面成員必須全部具有公用存取範圍。  
+- 介面可宣告為任何存取範圍，但是介面成員必須全部具有公用存取範圍。  
   
--   介面無法定義建構函式。  
+- 介面無法定義建構函式。  
   
--   介面不能定義欄位。  
+- 介面不能定義欄位。  
   
--   介面可以只定義執行個體成員， 不能定義靜態成員。  
+- 介面可以只定義執行個體成員， 不能定義靜態成員。  
   
  由於可以使用相同簽章宣告成員的介面不只一個，而且這些成員可以具有分開的實作，因此每一種語言都必須提供規則，將實作對應到需要成員的介面。  
   
@@ -170,17 +170,17 @@ ms.locfileid: "59096260"
 ## <a name="type-definitions"></a>類型定義  
  型別定義包括下列：  
   
--   在型別上定義的任何屬性 (Attribute)  
+- 在型別上定義的任何屬性 (Attribute)  
   
--   型別的存取範圍 (可視性)  
+- 型別的存取範圍 (可視性)  
   
--   型別的名稱  
+- 型別的名稱  
   
--   型別的基底型別  
+- 型別的基底型別  
   
--   由型別實作的任何介面  
+- 由型別實作的任何介面  
   
--   型別中每一個成員的定義  
+- 型別中每一個成員的定義  
   
 ### <a name="attributes"></a>屬性  
  屬性提供了其他的使用者定義中繼資料。 最常見的屬性用法是，用來將關於型別的其他資訊儲存在組件中，或者在設計階段或執行階段環境中修改型別成員的行為。  
@@ -199,22 +199,22 @@ ms.locfileid: "59096260"
   
  在程式 `M` 的型別 `T` 中宣告的巢狀成員 `P`，它的存取範圍領域定義如下 (請注意，`M` 本身也可能是型別)：  
   
--   如果 `M` 的宣告存取範圍是 `public`，`M` 的存取範圍領域就是 `T` 的存取範圍領域。  
+- 如果 `M` 的宣告存取範圍是 `public`，`M` 的存取範圍領域就是 `T` 的存取範圍領域。  
   
--   如果 `M` 的宣告存取範圍是 `protected internal`，`M` 的存取範圍領域是 `T` 的存取範圍領域與 `P` 的程式文字和從 `T` 以外宣告的 `P` 所衍生任何型別的程式文字的交集。  
+- 如果 `M` 的宣告存取範圍是 `protected internal`，`M` 的存取範圍領域是 `T` 的存取範圍領域與 `P` 的程式文字和從 `T` 以外宣告的 `P` 所衍生任何型別的程式文字的交集。  
   
--   如果 `M` 的宣告存取範圍是 `protected`，`M` 的存取範圍領域是 `T` 的存取範圍領域與 `T` 的程式文字和 `T` 所衍生之任一型別的交集。  
+- 如果 `M` 的宣告存取範圍是 `protected`，`M` 的存取範圍領域是 `T` 的存取範圍領域與 `T` 的程式文字和 `T` 所衍生之任一型別的交集。  
   
--   如果 `M` 的宣告存取範圍是 `internal`，`M` 的存取範圍領域是 `T` 的存取範圍領域與 `P` 的程式文字的交集。  
+- 如果 `M` 的宣告存取範圍是 `internal`，`M` 的存取範圍領域是 `T` 的存取範圍領域與 `P` 的程式文字的交集。  
   
--   如果 `M` 的宣告存取範圍是 `private`，`M` 的存取範圍領域就是 `T` 的程式文字。  
+- 如果 `M` 的宣告存取範圍是 `private`，`M` 的存取範圍領域就是 `T` 的程式文字。  
   
 ### <a name="type-names"></a>類型名稱  
  一般型別系統對於名稱只有兩項限制：  
   
--   所有名稱都是以 Unicode (16 位元) 字元字串的方式編碼。  
+- 所有名稱都是以 Unicode (16 位元) 字元字串的方式編碼。  
   
--   名稱的內嵌 (16 位元) 值不允許為 0x0000。  
+- 名稱的內嵌 (16 位元) 值不允許為 0x0000。  
   
  然而，大部分語言會對型別名稱強制執行其他限制。 所有比較都是以位元組為基礎，因此會區分大小寫，而且與地區設定無關 (Locale-Independent)。  
   
@@ -229,25 +229,25 @@ ms.locfileid: "59096260"
 ## <a name="type-members"></a>型別成員  
  執行階段允許您定義能夠指定型別行為與狀態的型別成員。 型別成員包含下列：  
   
--   [欄位](#Fields)  
+- [欄位](#Fields)  
   
--   [屬性](#Properties)  
+- [屬性](#Properties)  
   
--   [方法](#Methods)  
+- [方法](#Methods)  
   
--   [建構函式](#Constructors)  
+- [建構函式](#Constructors)  
   
--   [事件](#Events)  
+- [事件](#Events)  
   
--   [巢狀類型](#NestedTypes)  
+- [巢狀類型](#NestedTypes)  
   
 <a name="Fields"></a>   
 ### <a name="fields"></a>欄位  
  欄位會描述並包含型別狀態組件。 欄位可為執行階段支援的任何型別。 最常見的情形是，欄位為 `private` 或 `protected`，如此才能夠只在類別內部或從衍生類別存取這些欄位。 如果欄位的值可以本身型別以外進行修改，則通常會使用屬性集存取子。 公開欄位通常是唯讀的，而且可以是下兩種型別：  
   
--   常數，它的值是在設計階段指派。 雖然並不會使用 `static` (Visual Basic 中則為 `Shared`) 關鍵字定義，但是這些常數都是類別的靜態成員。  
+- 常數，它的值是在設計階段指派。 雖然並不會使用 `static` (Visual Basic 中則為 `Shared`) 關鍵字定義，但是這些常數都是類別的靜態成員。  
   
--   唯讀變數，其值可以在類別建構函式中進行指派。  
+- 唯讀變數，其值可以在類別建構函式中進行指派。  
   
  下列範例說明兩種唯讀欄位的使用方法。  
   
@@ -294,12 +294,12 @@ ms.locfileid: "59096260"
 |特性|適用於|說明|  
 |--------------------|------------------|-----------------|  
 |abstract|方法、屬性和事件|型別不提供方法的實作。 繼承或實作抽象方法的型別必須提供方法的實作。 唯一的例外狀況 (Exception) 是當衍生型別本身也是抽象型別時。 所有抽象方法都是虛擬的。|  
-|private、family、assembly、family 和 assembly、family 或 assembly 或是 public|全部|定義成員的存取範圍：<br /><br /> private<br /> 只能在與成員相同的型別或巢狀型別中存取。<br /><br /> family<br /> 可在與成員相同的型別和從它繼承而來的衍生型別中存取。<br /><br /> 組件<br /> 只能在已定義型別的組件中存取。<br /><br /> family 和 assembly<br /> 只能從同時限定家族和組件存取的型別中存取。<br /><br /> family 或 assembly<br /> 只能從限定家族或組件之一存取的型別中存取。<br /><br /> public<br /> 可從任何型別中存取。|  
+|private、family、assembly、family 和 assembly、family 或 assembly 或是 public|All|定義成員的存取範圍：<br /><br /> private<br /> 只能在與成員相同的型別或巢狀型別中存取。<br /><br /> family<br /> 可在與成員相同的型別和從它繼承而來的衍生型別中存取。<br /><br /> 組件<br /> 只能在已定義型別的組件中存取。<br /><br /> family 和 assembly<br /> 只能從同時限定家族和組件存取的型別中存取。<br /><br /> family 或 assembly<br /> 只能從限定家族或組件之一存取的型別中存取。<br /><br /> public<br /> 可從任何型別中存取。|  
 |final|方法、屬性和事件|在衍生型別中無法覆寫虛擬方法。|  
 |initialize-only|欄位|只能初始化數值，在初始化之後即無法寫入。|  
 |執行個體|欄位、方法、屬性和事件|如果成員未標記為 `static` (C# 和 C++)、`Shared` (Visual Basic)、`virtual` (C# 和 C++) 或 `Overridable` (Visual Basic)，則為執行個體成員 (沒有 instance 關鍵字)。 在記憶體中，這類成員的複本數與使用它的物件數一樣。|  
 |常值|欄位|指定給欄位的數值是在編譯時間得知的內建實值型別的固定值。 常值 (Literal) 欄位有時候也稱為常數。|  
-|newslot 或 override|全部|定義成員與具有相同簽章的繼承成員之間的互動方式：<br /><br /> newslot<br /> 隱藏具有相同簽章的繼承成員。<br /><br /> 覆寫<br /> 取代繼承虛擬方法的定義。<br /><br /> 預設值為 newslot。|  
+|newslot 或 override|All|定義成員與具有相同簽章的繼承成員之間的互動方式：<br /><br /> newslot<br /> 隱藏具有相同簽章的繼承成員。<br /><br /> 覆寫<br /> 取代繼承虛擬方法的定義。<br /><br /> 預設值為 newslot。|  
 |靜態|欄位、方法、屬性和事件|成員屬於定義於其上的型別，而非屬於特定的型別執行個體；即使沒有建立型別執行個體，成員仍然存在，而且供型別的所有執行個體共用。|  
 |虛擬|方法、屬性和事件|方法可由衍生型別實作，而且可以用靜態或動態方式叫用。 如果使用動態引動，在執行時期進行呼叫的執行個體型別會決定呼叫哪一個方法實作，而不是由編譯時間得知的型別決定。 若要用靜態方式叫用虛擬方法，可能必須將變數轉型為使用方法所需版本的型別。|  
   
@@ -312,9 +312,9 @@ ms.locfileid: "59096260"
 ### <a name="inheriting-overriding-and-hiding-members"></a>繼承、覆寫和隱藏成員  
  衍生型別會繼承其基底型別的所有成員；也就是說，在衍生型別上會定義這些成員，並供衍生型別使用。 繼承成員的行為或品質可用下列兩種方式來修改：  
   
--   衍生型別可用相同的簽章定義新的成員，如此便可隱藏繼承的成員。 您可以將原先為 public 的成員設為 private 成員，或是為標記為 `final` 的繼承方法定義新的行為。  
+- 衍生型別可用相同的簽章定義新的成員，如此便可隱藏繼承的成員。 您可以將原先為 public 的成員設為 private 成員，或是為標記為 `final` 的繼承方法定義新的行為。  
   
--   衍生型別可覆寫繼承的虛擬方法。 覆寫方法會提供新的方法定義，叫用方法時將根據執行時期的實值型別，而非根據編譯時間得知的變數型別。 只有當虛擬方法未標記為 `final`，而且新的方法至少可像虛擬方法一樣存取時，方法才可覆寫虛擬方法。  
+- 衍生型別可覆寫繼承的虛擬方法。 覆寫方法會提供新的方法定義，叫用方法時將根據執行時期的實值型別，而非根據編譯時間得知的變數型別。 只有當虛擬方法未標記為 `final`，而且新的方法至少可像虛擬方法一樣存取時，方法才可覆寫虛擬方法。  
   
 ## <a name="see-also"></a>另請參閱
 

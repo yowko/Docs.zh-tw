@@ -6,12 +6,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 232368d2b019b8c265bbb48bd197776f9e03a132
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6dcf5a69be7817351a9e250506ba51471918a772
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971503"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608126"
 ---
 # <a name="statements-c-programming-guide"></a>陳述式 (C# 程式設計手冊)
 程式所採取的動作是在陳述式中表示。 根據指定的條件，常見動作包括宣告變數、指派值、呼叫方法、循環執行集合，以及分支到一個或另一個程式碼區塊。 陳述式在程式中的執行順序稱為「控制流程」或「執行流程」。 根據程式如何反應它在執行階段收到的輸入，每次執行程式時，控制流程可能都會不同。  
@@ -83,11 +83,11 @@ ms.locfileid: "56971503"
   
 ## <a name="related-sections"></a>相關章節  
   
--   [陳述式關鍵字](../../../csharp/language-reference/keywords/statement-keywords.md)  
+- [陳述式關鍵字](../../../csharp/language-reference/keywords/statement-keywords.md)  
   
--   [運算式](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
+- [運算式](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
   
--   [運算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [運算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

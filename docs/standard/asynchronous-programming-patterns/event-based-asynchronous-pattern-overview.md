@@ -16,25 +16,25 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 3f3c7e96f1c372bb05aba9bef81192aec47b3cde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f923ca42e67c76f8b4296089953fada65b645f4f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678287"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629016"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>事件架構非同步模式概觀
 要同時執行許多工作，還能繼續回應使用者互動，這樣的應用程式通常都需要可以使用多執行緒的設計。 <xref:System.Threading> 命名空間提供建立高效能多執行緒應用程式的所有必要工具，但是要有效地使用這些工具，需要具備多執行緒軟體工程的豐富經驗。 對於較簡單的多執行緒應用程式，<xref:System.ComponentModel.BackgroundWorker> 元件提供了簡單明瞭的方案。 如果是較為複雜精細的非同步應用程式，請考慮實作遵守事件架構非同步模式的類別。  
   
  事件架構非同步模式提供多執行緒應用程式的優點，同時隱藏多執行緒設計中許多原有的複雜問題。 使用支援此模式的類別，可以讓您：  
   
--   「在背景中」執行耗時的工作，像是下載及資料庫作業，而不會中斷應用程式。  
+- 「在背景中」執行耗時的工作，像是下載及資料庫作業，而不會中斷應用程式。  
   
--   同時執行多項作業，並在每項作業完成時都收到通知。  
+- 同時執行多項作業，並在每項作業完成時都收到通知。  
   
--   等候資源變成可供使用，而不需要停止 (「擱置」) 應用程式。  
+- 等候資源變成可供使用，而不需要停止 (「擱置」) 應用程式。  
   
--   使用熟悉的事件和委派模型，與暫止的非同步作業通訊。 如需使用事件處理常式和委派的詳細資訊，請參閱[事件](../../../docs/standard/events/index.md)。  
+- 使用熟悉的事件和委派模型，與暫止的非同步作業通訊。 如需使用事件處理常式和委派的詳細資訊，請參閱[事件](../../../docs/standard/events/index.md)。  
   
  支援事件架構非同步模式的類別，會有一或多個名為 _MethodName_**Async** 的方法。 這些方法可能鏡像在目前執行緒上執行相同作業的同步版本。 這個類別可能也具有 _MethodName_**Completed** 事件，且具有 _MethodName_**AsyncCancel** (或簡稱 **CancelAsync**) 方法。  
   

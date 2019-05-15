@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 7c500b9343bdfa3481e8e5d9b938ebec8a323bdb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59341071"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641029"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework 並存執行
 並存執行是在同一台電腦上執行多個版本之應用程式或元件的能力。 在同一台電腦上，您可以同時擁有通用語言執行平台的多個版本，以及使用某一版執行階段的應用程式和元件的多個版本。  
@@ -33,15 +33,15 @@ ms.locfileid: "59341071"
   
  並存執行和 .NET Framework 提供下列功能以消除 DLL 的衝突：  
   
--   強式名稱的組件。  
+- 強式名稱的組件。  
   
      並存執行使用強式名稱的組件，將類型資訊繫結至組件的特定版本。 這可防止應用程式或元件繫結至組件的無效版本。 強式名稱的組件也允許多個版本的檔案存在同一台電腦上，並供應用程式使用。 如需詳細資訊，請參閱[強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)。  
   
--   版本感知程式碼儲存區。  
+- 版本感知程式碼儲存區。  
   
      .NET Framework 在全域組件快取中提供版本感知程式碼儲存區。 全域組件快取是一種全電腦程式碼快取，存在於已經安裝 .NET Framework 的所有電腦上。 它是依據版本、文化特性和發行者資訊來儲存組件，並且可以支援多個版本的元件和應用程式。 如需詳細資訊，請參閱[全域組件快取](../../../docs/framework/app-domains/gac.md)。  
   
--   隔離性。  
+- 隔離性。  
   
      使用 .NET Framework，您可以建立隔離執行的應用程式和元件。 這種隔離執行的功能是並存執行的基本構成要素。 隔離的主要因素在於能夠掌握您要使用的資源，並且能放心地在應用程式或元件的多個版本之間共用資源。 隔離也包括使用版本特定的方式儲存檔案。 如需隔離的詳細資訊，請參閱[建立並存執行元件的方針](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md)。  
   
@@ -66,9 +66,9 @@ ms.locfileid: "59341071"
 ## <a name="determining-which-version-of-the-runtime-to-load"></a>決定要載入的執行階段版本  
  Common Language Runtime 使用下列資訊來決定要為應用程式載入的執行階段版本：  
   
--   可用的執行階段版本。  
+- 可用的執行階段版本。  
   
--   應用程式支援的執行階段版本。  
+- 應用程式支援的執行階段版本。  
   
 ### <a name="supported-runtime-versions"></a>支援的執行階段版本  
  執行階段使用應用程式組態檔和可攜式執行檔 (PE) 標頭，來決定應用程式支援的執行階段版本。 如果應用程式組態檔不存在，執行階段會載入應用程式的 PE 檔標頭中指定的執行階段版本 (如果該版本可用的話)。  
@@ -113,7 +113,7 @@ publicKeyToken=...,
   
 |標題|說明|  
 |-----------|-----------------|  
-|[作法：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|說明如何將應用程式繫結至組件的特定版本。|  
+|[如何：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|說明如何將應用程式繫結至組件的特定版本。|  
 |[設定組件繫結重新導向](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|說明如何將組件繫結參考重新導向至 .NET Framework 組件的特定版本。|  
 |[同處理序並存執行](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|討論如何使用同處理序並存執行階段主機啟用，在單一處理序中執行多個版本的 CLR。|  
 |[Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|提供組件的概觀。|  

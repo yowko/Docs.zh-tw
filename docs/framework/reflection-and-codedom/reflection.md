@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20dd6f9ab601277161079230effdaeeabd1bb13a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7cd9fb96f69da977efd2eee6f740cc93ad58e6ea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101571"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591476"
 ---
 # <a name="reflection-in-the-net-framework"></a>.NET Framework 中的反映
 <xref:System.Reflection> 命名空間中的類別，連同 <xref:System.Type?displayProperty=nameWithType>，可讓您取得已載入[組件](../app-domains/assemblies-in-the-common-language-runtime.md)和其中所定義類型的資訊，例如[類別](../../standard/base-types/common-type-system.md#classes)、[介面](../../standard/base-types/common-type-system.md#interfaces)和[實值型別](../../csharp/language-reference/keywords/value-types.md)。 您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。 如需反映特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。
@@ -37,23 +37,23 @@ ms.locfileid: "59101571"
   
  [組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)包含模組、模組包含類型，而類型包含成員。 反映提供封裝組件、模組和類型的物件。 您可以使用反映來動態建立類型的執行個體、繫結類型至現有的物件，或從現有的物件取得類型。 然後，您可以叫用類型的方法或存取其欄位和屬性。 反映的一般用法包含下列幾項：  
   
--   使用 <xref:System.Reflection.Assembly> 來定義和載入組件，載入列在組件資訊清單中的模組，然後從這個組件中尋找類型並建立它的執行個體。  
+- 使用 <xref:System.Reflection.Assembly> 來定義和載入組件，載入列在組件資訊清單中的模組，然後從這個組件中尋找類型並建立它的執行個體。  
   
--   使用 <xref:System.Reflection.Module> 來探索資訊，例如包含模組的組件以及模組中的類別。 您也可以取得所有全域方法，或在模組上所定義的其他特定非全域方法。  
+- 使用 <xref:System.Reflection.Module> 來探索資訊，例如包含模組的組件以及模組中的類別。 您也可以取得所有全域方法，或在模組上所定義的其他特定非全域方法。  
   
--   使用 <xref:System.Reflection.ConstructorInfo> 來探索資訊，例如名稱、參數、存取修飾詞 (例如 `public` 或 `private`)，以及建構函式的實作詳細資料 (例如 `abstract` 或 `virtual`)。 使用 <xref:System.Type> 的 <xref:System.Type.GetConstructors%2A> 或 <xref:System.Type.GetConstructor%2A> 方法來叫用特定的建構函式。  
+- 使用 <xref:System.Reflection.ConstructorInfo> 來探索資訊，例如名稱、參數、存取修飾詞 (例如 `public` 或 `private`)，以及建構函式的實作詳細資料 (例如 `abstract` 或 `virtual`)。 使用 <xref:System.Type> 的 <xref:System.Type.GetConstructors%2A> 或 <xref:System.Type.GetConstructor%2A> 方法來叫用特定的建構函式。  
   
--   使用 <xref:System.Reflection.MethodInfo> 來探索資訊，例如名稱、傳回類型、參數、存取修飾詞 (例如 `public` 或 `private`)，以及方法的實作詳細資料 (例如 `abstract` 或 `virtual`)。 使用 <xref:System.Type> 的 <xref:System.Type.GetMethods%2A> 或 <xref:System.Type.GetMethod%2A> 方法來叫用特定的方法。  
+- 使用 <xref:System.Reflection.MethodInfo> 來探索資訊，例如名稱、傳回類型、參數、存取修飾詞 (例如 `public` 或 `private`)，以及方法的實作詳細資料 (例如 `abstract` 或 `virtual`)。 使用 <xref:System.Type> 的 <xref:System.Type.GetMethods%2A> 或 <xref:System.Type.GetMethod%2A> 方法來叫用特定的方法。  
   
--   使用 <xref:System.Reflection.FieldInfo> 來探索資訊，例如名稱、存取修飾詞 (例如 `public` 或 `private`)，以及欄位的實作詳細資料 (例如 `static`)，並取得或設定欄位值。  
+- 使用 <xref:System.Reflection.FieldInfo> 來探索資訊，例如名稱、存取修飾詞 (例如 `public` 或 `private`)，以及欄位的實作詳細資料 (例如 `static`)，並取得或設定欄位值。  
   
--   使用 <xref:System.Reflection.EventInfo> 來探索資訊，例如名稱、事件處理常式資料類型、自訂屬性、宣告類型，以及事件的反映類型，並加入或移除事件處理常式。  
+- 使用 <xref:System.Reflection.EventInfo> 來探索資訊，例如名稱、事件處理常式資料類型、自訂屬性、宣告類型，以及事件的反映類型，並加入或移除事件處理常式。  
   
--   使用 <xref:System.Reflection.PropertyInfo> 來探索資訊，例如名稱、資料類型、宣告類型、反映類型和唯讀或可寫入的屬性狀態，並且取得或設定屬性值。  
+- 使用 <xref:System.Reflection.PropertyInfo> 來探索資訊，例如名稱、資料類型、宣告類型、反映類型和唯讀或可寫入的屬性狀態，並且取得或設定屬性值。  
   
--   使用 <xref:System.Reflection.ParameterInfo> 來探索資訊，例如參數的名稱、資料類型、參數是否為輸入或輸出參數以及方法簽章中的參數位置。  
+- 使用 <xref:System.Reflection.ParameterInfo> 來探索資訊，例如參數的名稱、資料類型、參數是否為輸入或輸出參數以及方法簽章中的參數位置。  
   
--   當您在應用程式定義域的僅限反映之內容中工作時，請使用 <xref:System.Reflection.CustomAttributeData> 來探索自訂屬性的相關資訊。 <xref:System.Reflection.CustomAttributeData> 可讓您檢查屬性而不需建立它們的執行個體。  
+- 當您在應用程式定義域的僅限反映之內容中工作時，請使用 <xref:System.Reflection.CustomAttributeData> 來探索自訂屬性的相關資訊。 <xref:System.Reflection.CustomAttributeData> 可讓您檢查屬性而不需建立它們的執行個體。  
   
  <xref:System.Reflection.Emit> 命名空間的類別提供一種特殊形式的反映，可讓您在執行階段建置類型。  
   
@@ -77,10 +77,10 @@ ms.locfileid: "59101571"
 |[反映和泛用類型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|說明反映如何處理泛型類型和泛型方法的型別參數和型別引數。|  
 |[反映的安全性考量](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)|描述判斷可使用哪種程度的反映之規則，以探索類型資訊和存取類型。|  
 |[動態載入和使用類型](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md)|描述支援晚期繫結的反映自訂繫結介面。|  
-|[作法：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|描述僅限反映的載入內容。 示範如何載入組件、如何測試內容，以及如何檢查套用至僅限反映的內容中組件的屬性。|  
+|[如何：將組件載入到僅限反映的內容將組件載入到僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|描述僅限反映的載入內容。 示範如何載入組件、如何測試內容，以及如何檢查套用至僅限反映的內容中組件的屬性。|  
 |[存取自訂屬性](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)|示範如何使用反映來查詢屬性是否存在和屬性的值。|  
 |[指定完整的類型名稱](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)|描述完整的類型名稱之格式，根據巴克斯格式 (BNF)，以及指定特殊字元、組件名稱、指標、參考和陣列所需的語法來描述。|  
-|[作法：使用反映連結委派](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|說明如何建立方法的委派，以及連結委派到事件。 說明如何在執行階段使用 <xref:System.Reflection.Emit.DynamicMethod> 建立事件處理方法。|  
+|[如何：使用反映連結委派](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|說明如何建立方法的委派，以及連結委派到事件。 說明如何在執行階段使用 <xref:System.Reflection.Emit.DynamicMethod> 建立事件處理方法。|  
 |[發出動態方法和組件](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|說明如何產生動態組件和動態方法。|  
   
 ## <a name="reference"></a>參考資料  

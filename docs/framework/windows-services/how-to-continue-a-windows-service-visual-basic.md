@@ -1,5 +1,5 @@
 ---
-title: HOW TO：繼續執行 Windows 服務 (Visual Basic)
+title: 作法：繼續執行 Windows 服務 (Visual Basic)
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
 author: ghogen
-ms.openlocfilehash: 160d1b5f0604cff96549c9d94dc5d8ddc7e39f09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 514cc8177bc5968c9d6e92eec07a03a8a7855bd3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217155"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649392"
 ---
-# <a name="how-to-continue-a-windows-service-visual-basic"></a>HOW TO：繼續執行 Windows 服務 (Visual Basic)
+# <a name="how-to-continue-a-windows-service-visual-basic"></a>作法：繼續執行 Windows 服務 (Visual Basic)
 這個範例會使用 <xref:System.ServiceProcess.ServiceController> 元件，在本機電腦上繼續執行 IIS 管理服務。  
   
 ## <a name="example"></a>範例  
@@ -29,9 +29,9 @@ ms.locfileid: "59217155"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   System.serviceprocess.dll 的專案參考。  
+- System.serviceprocess.dll 的專案參考。  
   
--   <xref:System.ServiceProcess> 命名空間成員的存取權。 新增 `Imports` 陳述式 (如果未在程式碼中完整限定成員名稱)。 如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
+- <xref:System.ServiceProcess> 命名空間成員的存取權。 新增 `Imports` 陳述式 (如果未在程式碼中完整限定成員名稱)。 如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  <xref:System.ServiceProcess.ServiceController> 類別的 <xref:System.ServiceProcess.ServiceController.MachineName%2A> 屬性預設是本機電腦。 若要參考另一部電腦上的 Windows 服務，請將 <xref:System.ServiceProcess.ServiceController.MachineName%2A> 屬性變更為該電腦的名稱。  
@@ -40,9 +40,9 @@ ms.locfileid: "59217155"
   
  以下條件可能會造成例外狀況：  
   
--   服務無法繼續。 (<xref:System.InvalidOperationException>)  
+- 服務無法繼續。 (<xref:System.InvalidOperationException>)  
   
--   存取系統 API 時發生的錯誤。 (<xref:System.ComponentModel.Win32Exception>)  
+- 存取系統 API 時發生的錯誤。 (<xref:System.ComponentModel.Win32Exception>)  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  您可能會使用 <xref:System.ServiceProcess.ServiceControllerPermissionAccess> 列舉來設定 <xref:System.ServiceProcess.ServiceControllerPermission> 類別中的權限，藉以限制電腦上對服務的控制。  

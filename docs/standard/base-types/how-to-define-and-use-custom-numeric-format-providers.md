@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fab94c85745bf17a632d04c563070d79b48aa95
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 37c9140db390c55c9cab4e8a3203287d2dd12725
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59318373"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634231"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>作法：定義和使用自訂數值格式提供者
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 可讓您有效掌控數值的字串表示。 它支援以下自訂數值格式的功能：  
   
--   標準數值格式字串，這些字串提供預先定義的格式集，可將數字轉換成其字串表示。 您可以使用它們搭配任何擁有 `format` 參數的數值格式化方法，例如 <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>。 如需詳細資訊，請參閱[標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)。  
+- 標準數值格式字串，這些字串提供預先定義的格式集，可將數字轉換成其字串表示。 您可以使用它們搭配任何擁有 `format` 參數的數值格式化方法，例如 <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>。 如需詳細資訊，請參閱[標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)。  
   
--   自訂數值格式字串，這些字串提供能夠合併的符號集，可用來定義自訂數值格式規範。 它們也可以搭配任何擁有 `format` 參數的數值格式化方法使用，例如 <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>。 如需詳細資訊，請參閱[自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)。  
+- 自訂數值格式字串，這些字串提供能夠合併的符號集，可用來定義自訂數值格式規範。 它們也可以搭配任何擁有 `format` 參數的數值格式化方法使用，例如 <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>。 如需詳細資訊，請參閱[自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)。  
   
--   自訂的 <xref:System.Globalization.CultureInfo> 或 <xref:System.Globalization.NumberFormatInfo> 物件，這類物件會定義用來顯示數值字串表示的符號和格式模式。 您可以使用它們搭配任何擁有 `provider` 參數的數值格式化方法，例如 <xref:System.Int32.ToString%2A>。 一般而言，會使用 `provider` 參數來指定文化特性特定的格式。  
+- 自訂的 <xref:System.Globalization.CultureInfo> 或 <xref:System.Globalization.NumberFormatInfo> 物件，這類物件會定義用來顯示數值字串表示的符號和格式模式。 您可以使用它們搭配任何擁有 `provider` 參數的數值格式化方法，例如 <xref:System.Int32.ToString%2A>。 一般而言，會使用 `provider` 參數來指定文化特性特定的格式。  
   
  在某些情況下，這三項技術並不適用 (例如，應用程式必須顯示格式化帳號、身分證號碼或是郵遞區號時)。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 還可讓您定義既不是 <xref:System.Globalization.CultureInfo> 也不是 <xref:System.Globalization.NumberFormatInfo> 物件的格式物件，以判斷如何將數值格式化。 本主題提供實作這類物件的逐步指示，並提供格式化電話號碼的範例。  
   
@@ -39,23 +39,23 @@ ms.locfileid: "59318373"
   
 1. 定義實作 <xref:System.IFormatProvider> 和 <xref:System.ICustomFormatter> 介面的類別。  
   
-2. 實作 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 方法。 <xref:System.IFormatProvider.GetFormat%2A> 是一個回呼方法，其中格式化方法 (例如 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法) 會叫用以擷取實際負責執行自訂格式化的物件。 <xref:System.IFormatProvider.GetFormat%2A> 的一般實作會執行下列操作：  
+2. 實作 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 方法。 <xref:System.IFormatProvider.GetFormat%2A> 是一個回呼方法，格式化方法 (例如 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法) 可叫用來擷取實際負責執行自訂格式的物件。 <xref:System.IFormatProvider.GetFormat%2A> 的一般實作會執行下列操作：  
   
-    1.  判斷作為方法參數傳遞的 <xref:System.Type> 物件是否代表 <xref:System.ICustomFormatter> 介面。  
+    1. 判斷作為方法參數傳遞的 <xref:System.Type> 物件是否代表 <xref:System.ICustomFormatter> 介面。  
   
-    2.  如果參數確實代表 <xref:System.ICustomFormatter> 介面，則 <xref:System.IFormatProvider.GetFormat%2A> 會傳回實作 <xref:System.ICustomFormatter> 介面的物件，該介面負責提供自訂格式。 一般而言，自訂格式物件會自行傳回。  
+    2. 如果參數確實代表 <xref:System.ICustomFormatter> 介面，則 <xref:System.IFormatProvider.GetFormat%2A> 會傳回實作 <xref:System.ICustomFormatter> 介面的物件，該介面負責提供自訂格式。 一般而言，自訂格式物件會自行傳回。  
   
-    3.  如果參數不代表 <xref:System.ICustomFormatter> 介面，<xref:System.IFormatProvider.GetFormat%2A> 就會傳回 `null`。  
+    3. 如果參數不代表 <xref:System.ICustomFormatter> 介面，<xref:System.IFormatProvider.GetFormat%2A> 就會傳回 `null`。  
   
 3. 實作 <xref:System.ICustomFormatter.Format%2A> 方法。 這個方法會由 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法呼叫，並負責傳回數字的字串表示。 實作這個方法通常包含下列各項：  
   
-    1.  (選擇性) 藉由檢查 `provider` 參數，來確認這個方法的合法目的為提供格式化服務。 針對實作 <xref:System.IFormatProvider> 與 <xref:System.ICustomFormatter> 的格式物件，這項檢查包含測試 `provider` 參數是否與目前的格式物件相等。  
+    1. (選擇性) 藉由檢查 `provider` 參數，來確認這個方法的合法目的為提供格式化服務。 針對實作 <xref:System.IFormatProvider> 與 <xref:System.ICustomFormatter> 的格式物件，這項檢查包含測試 `provider` 參數是否與目前的格式物件相等。  
   
-    2.  決定格式物件是否應支援自訂格式規範 (例如，"N" 格式規範可能表示應使用 NANP 格式輸出美國電話號碼，而 "I" 可能表示使用 ITU-T Recommendation E.123 格式輸出)。如果使用格式規範，則這個方法應處理特定格式規範。 格式規範會隨 `format` 參數傳遞至方法。 如果沒有規範，則 `format` 參數值為 <xref:System.String.Empty?displayProperty=nameWithType>。  
+    2. 決定格式物件是否應支援自訂格式規範 (例如，"N" 格式規範可能表示應使用 NANP 格式輸出美國電話號碼，而 "I" 可能表示使用 ITU-T Recommendation E.123 格式輸出)。如果使用格式規範，則這個方法應處理特定格式規範。 格式規範會隨 `format` 參數傳遞至方法。 如果沒有規範，則 `format` 參數值為 <xref:System.String.Empty?displayProperty=nameWithType>。  
   
-    3.  擷取作為 `arg` 參數傳遞至方法的數值。 執行任何必要的操作，將它轉換成其字串表示。  
+    3. 擷取作為 `arg` 參數傳遞至方法的數值。 執行任何必要的操作，將它轉換成其字串表示。  
   
-    4.  傳回 `arg` 參數的字串表示。  
+    4. 傳回 `arg` 參數的字串表示。  
   
 ### <a name="to-use-a-custom-numeric-formatting-object"></a>使用自訂數值格式物件  
   

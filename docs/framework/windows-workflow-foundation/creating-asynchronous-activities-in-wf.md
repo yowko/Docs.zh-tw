@@ -2,12 +2,12 @@
 title: 在 WF 中建立非同步活動
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-ms.openlocfilehash: 5d8659ee57f9bb576cd7066652a294717811432f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b990631d6efdb4644274c8a4606af07495b1979c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945882"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592969"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>在 WF 中建立非同步活動
 <xref:System.Activities.AsyncCodeActivity> 會提供活動作者可用的基底類別，此類別可讓衍生活動實作非同步執行邏輯。 若自訂活動必須執行非同步工作而不保存工作流程排程器執行緒，並且封鎖任何能夠平行執行的活動，則此功能非常實用。 本主題提供如何使用 <xref:System.Activities.AsyncCodeActivity> 建立自訂非同步活動的概觀。  
@@ -31,7 +31,7 @@ ms.locfileid: "61945882"
  [!code-csharp[CFX_ActivityExample#10](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#10)]  
   
 ### <a name="invoking-asynchronous-methods-on-a-class"></a>在類別上叫用非同步方法  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的許多類別提供非同步功能，而且可以使用 <xref:System.Activities.AsyncCodeActivity> 基底活動，以非同步的方式叫用此功能。 在下列範例中，活動會建立以非同步方式建立方式是使用<xref:System.IO.FileStream>類別。  
+ 許多.NET Framework 中的類別提供非同步功能，以及這項功能可以以非同步方式叫用使用<xref:System.Activities.AsyncCodeActivity>基底活動。 在下列範例中，活動會建立以非同步方式建立方式是使用<xref:System.IO.FileStream>類別。  
   
  [!code-csharp[CFX_ActivityExample#12](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#12)]  
   

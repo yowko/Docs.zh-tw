@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 4a057f872d15ca1fcd49d86d08606776a0c0bea0
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59315760"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063316"
 ---
 # <a name="default-marshaling-behavior"></a>預設的封送處理行為
 Interop 封送處理會依據規則作業，這些規則指定與方法參數關聯的資料在 Managed 和 Unmanaged 記憶體之間傳遞時的運作方式。 這些內建規則會將這類封送處理活動當做資料類型轉換來控制；控制被呼叫者是否可以變更收到的資料，並將這些變更傳回給呼叫端；以及控制在哪些情況下，封送處理器會提供效能最佳化。  
@@ -58,9 +58,9 @@ BSTR MethodOne (BSTR b) {
   
  例如，封送處理器會決定應該使用類別包裝函式來包裝已傳遞至 Managed 程式碼中的介面。 當透過封送處理器第一次傳遞介面時，封送處理器會檢查介面是否來自已知的物件。 這項檢查會發生於下列兩種情況：  
   
--   另一個已傳遞至其他位置之 COM 的 Managed 物件正在實作介面。 封送處理器能夠立即識別 Managed 物件所公開的介面，而且能夠以提供實作的 Managed 物件來比對介面。 接著 Managed 物件會傳遞給方法，並且不需要任何包裝函式。  
+- 另一個已傳遞至其他位置之 COM 的 Managed 物件正在實作介面。 封送處理器能夠立即識別 Managed 物件所公開的介面，而且能夠以提供實作的 Managed 物件來比對介面。 接著 Managed 物件會傳遞給方法，並且不需要任何包裝函式。  
   
--   已包裝的物件正在實作介面。 為了判斷是否為這種情況，封送處理器會查詢物件是否有 **IUnknown** 介面，並且將傳回的介面與其他已包裝之物件的介面進行比較。 如果該介面與其他包裝函式的介面相同，則物件會有相同的識別，因此會將現有的包裝函式傳遞給方法。  
+- 已包裝的物件正在實作介面。 為了判斷是否為這種情況，封送處理器會查詢物件是否有 **IUnknown** 介面，並且將傳回的介面與其他已包裝之物件的介面進行比較。 如果該介面與其他包裝函式的介面相同，則物件會有相同的識別，因此會將現有的包裝函式傳遞給方法。  
   
  如果介面不是來自已知的物件，則封送處理器會執行下列作業：  
   
@@ -73,9 +73,9 @@ BSTR MethodOne (BSTR b) {
 ## <a name="default-marshaling-for-delegates"></a>委派的預設封送處理  
  根據呼叫的機制，Managed 委派會封送處理為 COM 介面或函式指標：  
   
--   若為平台叫用，委派預設會封送處理為 Unmanaged 函式指標。  
+- 若為平台叫用，委派預設會封送處理為 Unmanaged 函式指標。  
   
--   若為 COM Interop，委派預設會封送處理為 **_Delegate** 類型的 COM 介面。 **_Delegate** 介面是在 Mscorlib.tlb 型別程式庫中定義，並且包含 <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> 方法，可讓您呼叫委派所參考的方法。  
+- 若為 COM Interop，委派預設會封送處理為 **_Delegate** 類型的 COM 介面。 **_Delegate** 介面是在 Mscorlib.tlb 型別程式庫中定義，並且包含 <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> 方法，可讓您呼叫委派所參考的方法。  
   
  下表顯示 Managed 委派資料類型的封送處理選項。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性提供幾種 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉值來封送處理委派。  
   
@@ -166,23 +166,23 @@ internal class DelegateTest {
   
  本節提供下列格式化實值型別的相關資訊：  
   
--   [在平台叫用中使用的實值類型](#value-types-used-in-platform-invoke)  
+- [在平台叫用中使用的實值型別](#value-types-used-in-platform-invoke)  
   
--   [在 COM Interop 中使用的實值類型](#value-types-used-in-com-interop)  
+- [在 COM Interop 中使用的實值型別](#value-types-used-in-com-interop)  
   
  本主題除了描述格式化類型之外，還指出具有獨特封送處理行為的[系統實值型別](#system-value-types)。  
   
  格式化類型是複雜類型，其中包含在記憶體中明確控制其成員配置的資訊。 這項成員配置資訊會透過 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來提供。 配置可以是下列其中一個 <xref:System.Runtime.InteropServices.LayoutKind> 列舉值：  
   
--   **LayoutKind.Automatic**  
+- **LayoutKind.Automatic**  
   
      表示 Common Language Runtime 可以為了更高的效率隨意重新排列類型的成員。 不過，當實值類型傳遞至 Unmanaged 程式碼時，成員的配置是可以預測的。 嘗試封送處理這類結構會自動造成例外狀況。  
   
--   **LayoutKind.Sequential**  
+- **LayoutKind.Sequential**  
   
      表示類型的成員可以透過它們出現在 Managed 類型定義中的相同順序來配置於 Unmanaged 記憶體中。  
   
--   **LayoutKind.Explicit**  
+- **LayoutKind.Explicit**  
   
      表示根據每個欄位提供的 <xref:System.Runtime.InteropServices.FieldOffsetAttribute> 來配置成員。  
   
@@ -229,14 +229,14 @@ BOOL PtInRect(const RECT *lprc, POINT pt);
  您可以使用以下的平台叫用定義來傳遞結構：  
   
 ```vb
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function PtInRect Lib "User32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Function PtInRect Lib "User32.dll" (
         ByRef r As Rect, p As Point) As Boolean
 End Class
 ```
   
 ```csharp
-internal static class WindowsAPI
+internal static class NativeMethods
 {
    [DllImport("User32.dll")]
    internal static extern bool PtInRect(ref Rect r, Point p);
@@ -291,14 +291,14 @@ void GetSystemTime(SYSTEMTIME* SystemTime);
  **GetSystemTime** 的對等平台叫用定義如下：  
   
 ```vb
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
         ByVal sysTime As SystemTime)
 End Class
 ```
   
 ```csharp
-internal static class WindowsAPI
+internal static class NativeMethods
 {
    [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
    internal static extern void GetSystemTime(SystemTime st);
@@ -333,7 +333,7 @@ public class Point {
 ### <a name="value-types-used-in-com-interop"></a>在 COM Interop 中使用的實值類型  
  格式化類型也可以傳遞至 COM Interop 方法呼叫。 事實上，當匯出至類型程式庫時，實值類型會自動轉換成結構。 如下列範例所示，`Point` 實值類型會變成名為 `Point` 的類型定義 (typedef)。 `Point` typedef 會取代在類型程式庫中的所有 `Point` 實值類型的參考。  
   
- **類型程式庫表示**  
+ **型別程式庫呈現**  
   
 ```cpp  
 typedef struct tagPoint {  

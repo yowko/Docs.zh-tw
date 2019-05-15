@@ -7,12 +7,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: f10f9aa17adf9a03b9b8905245983bdd9d865e39
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 6a929957a0bb512ae4af503ad4b80c9d081764dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200386"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582969"
 ---
 # <a name="using-properties-c-programming-guide"></a>使用屬性 (C# 程式設計手冊)
 屬性會合併欄位和方法的各個層面。 對物件的使用者而言，屬性會呈現為欄位，而存取屬性需要相同的語法。 對於類別的實作器而言，屬性是一或兩個程式碼區塊，代表 [get](../../../csharp/language-reference/keywords/get.md) 存取子和 (或) [set](../../../csharp/language-reference/keywords/set.md) 存取子。 讀取屬性時，會執行 `get` 存取子的程式碼區塊；指派屬性的新值時，會執行 `set` 存取子的程式碼區塊。 沒有 `set` 存取子的屬性會視為唯讀。 沒有 `get` 存取子的屬性則視為唯寫。 具有這兩個存取子的屬性是讀寫。  
@@ -85,11 +85,11 @@ ms.locfileid: "57200386"
   
  上述範例中的重點如下：  
   
--   衍生類別中的 `Name` 屬性會隱藏基底類別中的 `Name` 屬性。 在這類情況下，`new` 修飾詞用在衍生類別的屬性宣告中：  
+- 衍生類別中的 `Name` 屬性會隱藏基底類別中的 `Name` 屬性。 在這類情況下，`new` 修飾詞用在衍生類別的屬性宣告中：  
   
      [!code-csharp[csProgGuideProperties#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#4)]  
   
--   轉型 `(Employee)` 用來存取基底類別中的隱藏屬性：  
+- 轉型 `(Employee)` 用來存取基底類別中的隱藏屬性：  
   
      [!code-csharp[csProgGuideProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#5)]  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d3825ef73a6ec312ff51d1bddf5360f3de6cc69
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 3f25ffb16fa5feb382bb42c737440317cfb777b1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758912"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666312"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> 是一個同步處理基本類型，在發出了特定次數的訊號給它之後，就會解除封鎖其等候中的執行緒。 <xref:System.Threading.CountdownEvent> 是針對下列案例所設計：您必須使用 <xref:System.Threading.ManualResetEvent> 或 <xref:System.Threading.ManualResetEventSlim>，並在發出訊號給事件之前手動遞減變數。 例如，在分支/聯結案例中，您可以只建立訊號計數為 5 的 <xref:System.Threading.CountdownEvent>，然後在執行緒集區上啟動五個工作項目，並讓每個工作項目在其完成時呼叫 <xref:System.Threading.CountdownEvent.Signal%2A>。 每次呼叫 <xref:System.Threading.CountdownEvent.Signal%2A> 就會將訊號計數遞減 1。 在主執行緒上，對 <xref:System.Threading.CountdownEvent.Wait%2A> 的呼叫將會封鎖，直到訊號計數為零為止。  
@@ -25,13 +25,13 @@ ms.locfileid: "55758912"
   
  <xref:System.Threading.CountdownEvent> 具有下列其他功能：  
   
--   等候作業可以使用取消語彙基元來取消。  
+- 等候作業可以使用取消語彙基元來取消。  
   
--   建立執行個體之後，即可遞增其訊號計數。  
+- 建立執行個體之後，即可遞增其訊號計數。  
   
--   藉由呼叫 <xref:System.Threading.CountdownEvent.Reset%2A> 方法傳回 <xref:System.Threading.CountdownEvent.Wait%2A> 之後，就可重複使用執行個體。  
+- 藉由呼叫 <xref:System.Threading.CountdownEvent.Reset%2A> 方法傳回 <xref:System.Threading.CountdownEvent.Wait%2A> 之後，就可重複使用執行個體。  
   
--   執行個體會公開 <xref:System.Threading.WaitHandle>，以便與其他 .NET Framework 同步處理 API 整合，例如 <xref:System.Threading.WaitHandle.WaitAll%2A>。  
+- 執行個體會公開 <xref:System.Threading.WaitHandle>，以便與其他 .NET Framework 同步處理 API 整合，例如 <xref:System.Threading.WaitHandle.WaitAll%2A>。  
   
 ## <a name="basic-usage"></a>基本使用方式  
  下列範例示範如何將 <xref:System.Threading.CountdownEvent> 與 <xref:System.Threading.ThreadPool> 工作項目搭配使用。  

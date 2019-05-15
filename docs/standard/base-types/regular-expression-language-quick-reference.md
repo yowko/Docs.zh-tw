@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9224e78a422b20f33f19d05e43ed1e2ec8d1c5ce
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 053df7eeba10938f1d1d749e856f64d179d471d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410520"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664682"
 ---
 # <a name="regular-expression-language---quick-reference"></a>規則運算式語言 - 快速參考
  規則運算式是規則運算式引擎嘗試在輸入文字中比對的模式。 模式是由一個或多個字元常值、運算子或建構所組成。  如需簡介，請參閱 [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)。  
@@ -170,9 +170,9 @@ ms.locfileid: "58410520"
   
  您可以透過兩種方式指定內嵌選項：  
   
--   使用[其他建構](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`，其中選項或選項集合前面的減號 (-) 會關閉這些選項。 例如， `(?i-mn)` 會開啟不區分大小寫的比對 (`i`)、關閉多行模式 (`m`)，以及關閉未命名的群組擷取 (`n`)。 選項會從定義該選項的位置開始套用至規則運算式模式並且保持生效，直到模式結尾或出現另一個建構反轉選項為止。  
+- 使用[其他建構](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`，其中選項或選項集合前面的減號 (-) 會關閉這些選項。 例如， `(?i-mn)` 會開啟不區分大小寫的比對 (`i`)、關閉多行模式 (`m`)，以及關閉未命名的群組擷取 (`n`)。 選項會從定義該選項的位置開始套用至規則運算式模式並且保持生效，直到模式結尾或出現另一個建構反轉選項為止。  
   
--   使用[分組建構](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*子運算式*`)`，只針對指定的群組定義選項。  
+- 使用[分組建構](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*子運算式*`)`，只針對指定的群組定義選項。  
   
  .NET 規則運算式引擎支援下列內嵌選項。  
   

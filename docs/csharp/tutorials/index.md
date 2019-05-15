@@ -2,16 +2,16 @@
 title: C# 教學課程
 description: 探索這些 C# 教學課程以了解如何建置 C# 程式，並了解 C# 語言功能。
 ms.date: 10/25/2018
-ms.openlocfilehash: 72f159311397a0f4891709c16a4a6ecc937b5952
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c2dd00505afbf4d8bc3f213a2f87751fe452f253
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755783"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557173"
 ---
 # <a name="c-tutorials"></a>C# 教學課程
 
-歡迎使用 C# 教學課程。 這些快速入門會以可在瀏覽器中執行的互動式課程開始。 此教學課程稍後與更多進階教學課程將協助您在您的電腦上使用 .NET 開發工具來建立 C# 程式。
+歡迎使用 C# 教學課程。 這些快速入門會以可在瀏覽器中執行的互動式課程開始。 此教學課程稍後與更多進階教學課程都可協助您在電腦上使用 .NET 開發工具來製作 C# 程式。
 
 ## <a name="introduction-to-c-interactive-tutorials"></a>C# 簡介互動式教學課程
 

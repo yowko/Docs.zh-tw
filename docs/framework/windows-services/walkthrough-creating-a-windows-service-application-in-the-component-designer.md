@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 35ef113acffbebdcd4cb585970e575f17959f75b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8d30b7b98648e36a3008ac015f9560620f77b363
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518028"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751816"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>教學課程：建立 Windows 服務應用程式
 
@@ -32,13 +32,13 @@ ms.locfileid: "59518028"
 
    > [!NOTE]
    > 如未看到 **Windows Service** 範本，您可能需要安裝 **.NET 桌面開發**工作負載：
-   >  
+   >
    > 在 [新增專案] 對話方塊中，選取左下角的 [開啟 Visual Studio 安裝程式]。 選取 **.NET 桌面開發**工作負載，然後選取 [修改]。
 
 3. 針對 [名稱] 輸入 *MyNewService*，然後選取 [確定]。
 
    [設計] 索引標籤隨即出現 (**Service1.cs [Design]** 或 **Service1.vb [Design]**)。
-   
+
    專案範本會包含繼承自 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 且名為 `Service1` 的元件類別。 其中包含大部分的基本服務程式碼，例如啟動服務的程式碼。
 
 ## <a name="rename-the-service"></a>重新命名服務
@@ -53,11 +53,11 @@ ms.locfileid: "59518028"
 
     ![重新命名提示](media/windows-service-rename.png "Windows 服務重新命名提示")
 
-2. 在 [設計] 索引標籤中，從捷徑功能表選取 [屬性]。 從 [屬性] 視窗中，將 **ServiceName** 值變更為 *MyNewService*。
+3. 在 [設計] 索引標籤中，從捷徑功能表選取 [屬性]。 從 [屬性] 視窗中，將 **ServiceName** 值變更為 *MyNewService*。
 
     ![服務屬性](media/windows-service-properties.png "Windows 服務屬性")
 
-3. 從 [檔案] 功能表中選取 [全部儲存]。
+4. 從 [檔案] 功能表中選取 [全部儲存]。
 
 ## <a name="add-features-to-the-service"></a>在服務中新增功能
 
@@ -97,7 +97,7 @@ ms.locfileid: "59518028"
 
 #### <a name="polling"></a>輪詢
 
-因為服務應用程式設計為長時間執行，所以通常會輪詢或監視系統，它是您使用 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法設定的。 `OnStart` 方法必須在服務作業開始後返回作業系統，這樣才不會封鎖系統。 
+因為服務應用程式設計為長時間執行，所以通常會輪詢或監視系統，它是您使用 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法設定的。 `OnStart` 方法必須在服務作業開始後返回作業系統，這樣才不會封鎖系統。
 
 若要設定簡單的輪詢機制，請使用 <xref:System.Timers.Timer?displayProperty=nameWithType> 元件。 計時器會按固定的間隔引發 <xref:System.Timers.Timer.Elapsed> 事件，您的服務可在這段時間執行監視作業。 您使用 <xref:System.Timers.Timer> 元件，如下所示：
 
@@ -173,7 +173,7 @@ ms.locfileid: "59518028"
 
 ### <a name="define-other-actions-for-the-service"></a>為服務定義其他動作
 
-您可以覆寫 <xref:System.ServiceProcess.ServiceBase.OnPause%2A>、<xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> 方法，以定義額外的元件處理方式。 
+您可以覆寫 <xref:System.ServiceProcess.ServiceBase.OnPause%2A>、<xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> 方法，以定義額外的元件處理方式。
 
 下列程式碼示範如何在 `MyNewService` 類別中覆寫 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 方法：
 
@@ -182,7 +182,7 @@ ms.locfileid: "59518028"
 
 ## <a name="set-service-status"></a>設定服務狀態
 
-服務將它們的狀態報告給[服務控制管理員](/windows/desktop/Services/service-control-manager)，讓使用者也可以知道服務是否運作正常。 根據預設，繼承自 <xref:System.ServiceProcess.ServiceBase>服務會報告一組有限狀態設定，其中包括 SERVICE_STOPPED, SERVICE_PAUSED, and SERVICE_RUNNING。 如果服務需要一些時間才能啟動，則報告 SERVICE_START_PENDING 狀態會有所幫助。 
+服務將它們的狀態報告給[服務控制管理員](/windows/desktop/Services/service-control-manager)，讓使用者也可以知道服務是否運作正常。 根據預設，繼承自 <xref:System.ServiceProcess.ServiceBase>服務會報告一組有限狀態設定，其中包括 SERVICE_STOPPED, SERVICE_PAUSED, and SERVICE_RUNNING。 如果服務需要一些時間才能啟動，則報告 SERVICE_START_PENDING 狀態會有所幫助。
 
 您也可以新增程式碼，呼叫 Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) 函式，以實作 SERVICE_START_PENDING 和 SERVICE_STOP_PENDING 狀態設定。
 
@@ -319,7 +319,7 @@ ms.locfileid: "59518028"
 
     ' Update the service state to Stopped.
     serviceStatus.dwCurrentState = ServiceState.SERVICE_STOPPED
-    SetServiceStatus(Me.ServiceHandle, serviceStatus)    
+    SetServiceStatus(Me.ServiceHandle, serviceStatus)
     ```
 
 ## <a name="add-installers-to-the-service"></a>將安裝程式新增至服務
@@ -332,27 +332,27 @@ ms.locfileid: "59518028"
 
      根據預設，Visual Studio 會將名為 `ProjectInstaller` 的元件類別新增至您的專案，此類別包含兩個安裝程式。 這些安裝程式適用於您的服務及該服務的相關聯流程。
 
-4. 在 **ProjectInstaller** 的 [設計] 檢視中，針對 Visual C# 專案選取 [serviceInstaller1]，或針對 Visual Basic 專案選取 [ServiceInstaller1]，然後從捷徑功能表選擇 [屬性]。
+3. 在 **ProjectInstaller** 的 [設計] 檢視中，針對 Visual C# 專案選取 [serviceInstaller1]，或針對 Visual Basic 專案選取 [ServiceInstaller1]，然後從捷徑功能表選擇 [屬性]。
 
-5. 在 [屬性] 視窗中，驗證 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 屬性已設為 **MyNewService**。
+4. 在 [屬性] 視窗中，驗證 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 屬性已設為 **MyNewService**。
 
-6. 將文字新增至 <xref:System.ServiceProcess.ServiceInstaller.Description%2A> 屬性，例如「範例服務」。 
+5. 將文字新增至 <xref:System.ServiceProcess.ServiceInstaller.Description%2A> 屬性，例如「範例服務」。
 
      此文字會出現在 [服務] 視窗的 [描述] 欄中，向使用者說明服務。
 
     ![[服務] 視窗中的服務描述。](media/windows-service-description.png "服務描述")
 
-7. 將文字新增至 <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> 屬性。 例如，「MyNewService 顯示名稱」。 
+6. 將文字新增至 <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> 屬性。 例如，「MyNewService 顯示名稱」。
 
      此文字會出現在 [服務] 視窗的 [顯示名稱] 欄中。 這個名稱可以和系統使用的 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 屬性名稱不同 (例如，您用於 `net start` 命令來啟動服務的名稱)。
 
-8. 從下拉式清單中將 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 屬性設為 <xref:System.ServiceProcess.ServiceStartMode.Automatic>。
+7. 從下拉式清單中將 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 屬性設為 <xref:System.ServiceProcess.ServiceStartMode.Automatic>。
 
-9. 完成後，[屬性] 視窗看起來應該如下圖：
+8. 完成後，[屬性] 視窗看起來應該如下圖：
 
      ![Windows 服務的安裝程式屬性](media/windows-service-installer-properties.png "Windows 服務安裝程式屬性")
 
-9. 在 **ProjectInstaller** 的 [設計] 檢視中，針對 Visual C# 專案選擇 **serviceProcessInstaller1**，或針對 Visual Basic 專案選擇 **ServiceProcessInstaller1**，然後從捷徑功能表選擇 [屬性]。 從下拉式清單中將 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 屬性設為 <xref:System.ServiceProcess.ServiceAccount.LocalSystem>。 
+9. 在 **ProjectInstaller** 的 [設計] 檢視中，針對 Visual C# 專案選擇 **serviceProcessInstaller1**，或針對 Visual Basic 專案選擇 **ServiceProcessInstaller1**，然後從捷徑功能表選擇 [屬性]。 從下拉式清單中將 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 屬性設為 <xref:System.ServiceProcess.ServiceAccount.LocalSystem>。
 
      此設定會安裝服務，並使用本機系統帳戶來加以執行。
 
@@ -364,7 +364,7 @@ ms.locfileid: "59518028"
 ## <a name="optional-set-startup-parameters"></a>(選擇性) 設定啟動參數
 
 > [!NOTE]
-> 決定新增啟動參數之前，請考慮這是否為將資訊傳遞至服務的最佳方式。 雖然它們容易使用及剖析，且使用者也可以輕鬆覆寫它們，但在沒有文件時，使用者可能很難探索及使用它們。 一般而言，如果服務需要的不只是幾個啟動參數，則您應該考慮改用登錄或組態檔。 
+> 決定新增啟動參數之前，請考慮這是否為將資訊傳遞至服務的最佳方式。 雖然它們容易使用及剖析，且使用者也可以輕鬆覆寫它們，但在沒有文件時，使用者可能很難探索及使用它們。 一般而言，如果服務需要的不只是幾個啟動參數，則您應該考慮改用登錄或組態檔。
 
 Windows 服務可以接受命令列引數或啟動參數。 當您新增程式碼以處理啟動參數時，使用者可在服務的 [屬性] 視窗中，以自己的自訂啟動參數來啟動服務。 不過，這些啟動參數不會保留到下次服務啟動時。 若要永久設定啟動參數，請在登錄中設定。
 
@@ -480,13 +480,13 @@ Windows 服務可以接受命令列引數或啟動參數。 當您新增程式�
     installutil MyNewService.exe
     ```
 
-    如果服務安裝成功，則命令會報告成功。 
+    如果服務安裝成功，則命令會報告成功。
 
     如果系統找不到 *installutil.exe*，請確定它存在於您的電腦中。 此工具會透過 .NET Framework 安裝至資料夾 *%windir%\Microsoft.NET\Framework[64]\\&lt;[Framework 版本]&gt;*。 例如，64 位元版本的預設路徑是 *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*。
 
-    如果 **installutil.exe** 程序失敗，請檢查安裝記錄以找出原因。 根據預設，記錄檔與服務可執行檔位於同一資料夾。 安裝可能失敗的原因： 
+    如果 **installutil.exe** 程序失敗，請檢查安裝記錄以找出原因。 根據預設，記錄檔與服務可執行檔位於同一資料夾。 安裝可能失敗的原因：
     - <xref:System.ComponentModel.RunInstallerAttribute> 類別不存在於 `ProjectInstaller` 類別中。
-    -  屬性未設為 `true`。 
+    - 屬性未設為 `true`。
     - `ProjectInstaller` 類別未定義為 `public`。
 
 如需詳細資訊，請參閱[如何：安裝和解除安裝服務](how-to-install-and-uninstall-services.md)。
@@ -520,7 +520,7 @@ Windows 服務可以接受命令列引數或啟動參數。 當您新增程式�
 
 ## <a name="clean-up-resources"></a>清除資源
 
-如果您不再需要 Windows 服務應用程式，您可以移除它。 
+如果您不再需要 Windows 服務應用程式，您可以移除它。
 
 1. 以系統管理認證開啟 **Visual Studio 的開發人員命令提示字元**。
 

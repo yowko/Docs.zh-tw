@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c251bfc15ce588d426dd30f2ff1634a1f2a01336
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f6cf6120af21c6b8fcaf09203fcb3b77e4dcdfac
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971945"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621004"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>資料和工作平行處理原則中可能出現的錯誤
 在許多情況下，相較於一般循序迴圈，<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 更能提供顯著的效能改良。 不過，平行處理迴圈的工作所帶來的複雜性可能會造成問題，而在循序程式碼中，這些問題不是不常見，就是完全不會發生。 本主題列出一些您在撰寫平行迴圈時應該避免的作法。  
@@ -31,11 +31,11 @@ ms.locfileid: "56971945"
   
  最常發生過度平行處理的情況是巢狀迴圈。 在大部分情況下，除非您適用下列一或多個條件，否則最好只平行處理外部迴圈︰  
   
--   已知內部迴圈太長。  
+- 已知內部迴圈太長。  
   
--   您正在對每個順序執行昂貴的計算  (範例所示作業並不昂貴)。  
+- 您正在對每個順序執行昂貴的計算  (範例所示作業並不昂貴)。  
   
--   已知目標系統有足夠的處理器，可處理因為在 `cust.Orders` 上平行處理查詢而會產生的執行緒數目。  
+- 已知目標系統有足夠的處理器，可處理因為在 `cust.Orders` 上平行處理查詢而會產生的執行緒數目。  
   
  在上述所有情況下，若要判斷最佳的查詢形狀，最好的方式是測試和測量。  
   

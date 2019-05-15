@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd3b1cacc73743622aaaad72bfd4edb26dc26390
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f2be5881a7f663b13dd13ffc0e0faf88afd7efc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740472"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647966"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>使用 XPathNavigator 巡覽屬性及命名空間節點
 <xref:System.Xml.XPath.XPathNavigator> 類別提供兩組巡覽方法，第一組 (可在[使用 XPathNavigator 巡覽節點集](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)主題中找到) 用於巡覽 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中的*節點集*。 第二組 (在本主題中說明) 用於巡覽 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中的「屬性及命名空間節點」。  
@@ -22,11 +22,11 @@ ms.locfileid: "54740472"
   
  以下是 <xref:System.Xml.XPath.XPathNavigator> 類別的屬性巡覽方法。  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A>  
   
  當目前的節點為項目時，您可以使用 <xref:System.Xml.XPath.XPathNavigator.HasAttributes%2A> 屬性 (Property)，來查看是否有與項目相關的屬性 (Attribute)。 一旦知道項目有屬性，就有多種存取屬性的方法。 若要從項目擷取單一屬性，請使用 <xref:System.Xml.XPath.XPathNavigator.GetAttribute%2A> 方法。 若要將 <xref:System.Xml.XPath.XPathNavigator> 移至特定的屬性，請使用 <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A> 方法。 您還可以重複處理項目的每個屬性，方法是使用 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A> 方法，然後多次呼叫 <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A> 方法。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "54740472"
   
  以下是 <xref:System.Xml.XPath.XPathNavigator> 類別的命名空間巡覽方法。  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>  
   
  在 XML 文件中，任何項目的範圍內總是至少有一個命名空間節點。 此命名空間節點具有前置詞 `xml` 及命名空間 URI `http://www.w3.org/XML/1998/namespace`。 若要在給定特定前置詞的情況下，擷取範圍內的命名空間 URI，請使用 <xref:System.Xml.XPath.XPathNavigator.GetNamespace%2A> 方法。 若要將 <xref:System.Xml.XPath.XPathNavigator> 物件移至特定的命名空間節點，請使用 <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A> 方法。 您還可以重複處理項目範圍內的每個命名空間節點，方法是使用 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 方法，然後多次呼叫 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 方法。  
   
@@ -66,11 +66,11 @@ ms.locfileid: "54740472"
   
  命名空間序列 (在呼叫 <xref:System.Xml.XPath.XPathNavigator> 方法，然後對 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 方法進行一系列呼叫之後，<xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 所在的命名空間) 如下所示。  
   
--   當定位於 `element2` 上時：`xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"` 和 `xmlns:xml="http://www.w3.org/XML/1998/namespace"`。  
+- 當定位於 `element2` 上時：`xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"` 和 `xmlns:xml="http://www.w3.org/XML/1998/namespace"`。  
   
--   當定位於 `element1` 上時：`xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"` 和 `xmlns:xml="http://www.w3.org/XML/1998/namespace"`。  
+- 當定位於 `element1` 上時：`xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"` 和 `xmlns:xml="http://www.w3.org/XML/1998/namespace"`。  
   
--   當定位於 `root` 上時：`xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
+- 當定位於 `root` 上時：`xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
   
 > [!NOTE]
 >  <xref:System.Xml.XPath.XPathNavigator> 類別會以反向的文件順序傳回命名空間節點。 因此，<xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 實際上會移至目前範圍中的最後一個命名空間節點。  
@@ -87,11 +87,11 @@ ms.locfileid: "54740472"
   
  當定位於 `child2` 時，命名空間序列 (在呼叫 <xref:System.Xml.XPath.XPathNavigator> 方法，然後對 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 方法進行一系列呼叫之後，<xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 所在的命名空間) 如下所示。  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope.All>：`xmlns:c="urn:c"`、`xmlns:a="urn:a"`、`xmlns=""`、`xmlns:b="http://www.contoso.com/b"`、`xmlns:a="http://www.contoso.com/a"`、`xmlns="http://www.contoso.com"` 及 `xmlns:xml="http://www.w3.org/XML/1998/namespace"`。  
+- <xref:System.Xml.XPath.XPathNamespaceScope.All>：`xmlns:c="urn:c"`、`xmlns:a="urn:a"`、`xmlns=""`、`xmlns:b="http://www.contoso.com/b"`、`xmlns:a="http://www.contoso.com/a"`、`xmlns="http://www.contoso.com"` 及 `xmlns:xml="http://www.w3.org/XML/1998/namespace"`。  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>：`xmlns:c="urn:c"`、`xmlns:a="urn:a"`、`xmlns=""`、`xmlns:b="http://www.contoso.com/b"`、`xmlns:a="http://www.contoso.com/a"` 及 `xmlns="http://www.contoso.com"`。  
+- <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>：`xmlns:c="urn:c"`、`xmlns:a="urn:a"`、`xmlns=""`、`xmlns:b="http://www.contoso.com/b"`、`xmlns:a="http://www.contoso.com/a"` 及 `xmlns="http://www.contoso.com"`。  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope.Local>: `xmlns:c="urn:c"`.  
+- <xref:System.Xml.XPath.XPathNamespaceScope.Local>: `xmlns:c="urn:c"`.  
   
 > [!NOTE]
 >  <xref:System.Xml.XPath.XPathNavigator> 類別會以反向的文件順序傳回命名空間節點。 因此，<xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 實際上會移至目前範圍中的最後一個命名空間節點。  

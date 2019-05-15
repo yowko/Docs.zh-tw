@@ -1,5 +1,5 @@
 ---
-title: HOW TO：實作支援事件架構非同步模式的元件
+title: 作法：實作支援事件架構非同步模式的元件
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: da6f21ba452c5c0413881759879cca371507a290
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bc19ee687b26025d3da4d66888902395b863f046
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334285"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628920"
 ---
-# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>HOW TO：實作支援事件架構非同步模式的元件
+# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>作法：實作支援事件架構非同步模式的元件
 如果您正在撰寫的類別含有一些可能造成明顯延遲的作業，請考慮實作[事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)，來為它提供非同步功能。  
   
  本逐步解說說明如何建立實作「事件架構非同步模式」的元件。 其實作方式是使用 <xref:System.ComponentModel?displayProperty=nameWithType> 命名空間中的協助程式類別，以確保此元件在任何應用程式模型下都能正常運作，包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]、主控台應用程式及 Windows Forms 應用程式。 您也可以使用 <xref:System.Windows.Forms.PropertyGrid> 控制項和您自己的自訂設計工具來設計此元件。  
@@ -34,19 +34,19 @@ ms.locfileid: "59334285"
   
  這個逐步解說中所述的工作包括：  
   
--   建立元件  
+- 建立元件  
   
--   定義公用非同步事件和委派  
+- 定義公用非同步事件和委派  
   
--   定義私用委派  
+- 定義私用委派  
   
--   實作公用事件  
+- 實作公用事件  
   
--   實作完成方法  
+- 實作完成方法  
   
--   實作背景工作方法  
+- 實作背景工作方法  
   
--   實作開始和取消方法  
+- 實作開始和取消方法  
   
  若要將此主題中的程式碼複製為單一清單，請參閱[如何：實作事件架構非同步模式的用戶端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "59334285"
   
 #### <a name="to-create-the-component"></a>建立元件  
   
--   建立一個名為 `PrimeNumberCalculator` 且會從 <xref:System.ComponentModel.Component> 繼承的類別。  
+- 建立一個名為 `PrimeNumberCalculator` 且會從 <xref:System.ComponentModel.Component> 繼承的類別。  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>定義公用非同步事件和委派  
  您的元件會使用事件與用戶端進行通訊。 _MethodName_**Completed** 事件會對用戶端發出已完成非同步工作的警示，而 _MethodName_**ProgressChanged** 事件則是會通知用戶端非同步工作的進度。  
@@ -87,7 +87,7 @@ ms.locfileid: "59334285"
   
 #### <a name="to-test-your-component"></a>測試元件  
   
--   編譯元件。  
+- 編譯元件。  
   
      您將會收到兩個編譯器警告：  
   
@@ -148,7 +148,7 @@ ms.locfileid: "59334285"
   
 #### <a name="to-complete-an-asynchronous-operation"></a>完成非同步作業：  
   
--   實作完成方法。 此方法採用六個參數，用來填入會透過用戶端的 `CalculatePrimeCompletedEventHandler`.傳回到用戶端的 `CalculatePrimeCompletedEventArgs`。 它會從內部集合移除用戶端的工作識別碼權杖，然後藉由對 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> 的呼叫來結束非同步作業的存留期。 <xref:System.ComponentModel.AsyncOperation> 會將呼叫封送處理至適用於應用程式模型的執行緒或內容。  
+- 實作完成方法。 此方法採用六個參數，用來填入會透過用戶端的 `CalculatePrimeCompletedEventHandler`.傳回到用戶端的 `CalculatePrimeCompletedEventArgs`。 它會從內部集合移除用戶端的工作識別碼權杖，然後藉由對 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> 的呼叫來結束非同步作業的存留期。 <xref:System.ComponentModel.AsyncOperation> 會將呼叫封送處理至適用於應用程式模型的執行緒或內容。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#26)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#26)]  
@@ -158,7 +158,7 @@ ms.locfileid: "59334285"
   
 #### <a name="to-test-your-component"></a>測試元件  
   
--   編譯元件。  
+- 編譯元件。  
   
      您將會收到一個編譯器警告：  
   
@@ -212,7 +212,7 @@ ms.locfileid: "59334285"
   
 #### <a name="to-test-your-component"></a>測試元件  
   
--   編譯元件。  
+- 編譯元件。  
   
      剩下要撰寫的只有用來開始和取消非同步作業的方法 `CalculatePrimeAsync` 和 `CancelAsync`。  
   
@@ -238,7 +238,7 @@ ms.locfileid: "59334285"
   
 #### <a name="to-test-your-component"></a>測試元件  
   
--   編譯元件。  
+- 編譯元件。  
   
  `PrimeNumberCalculator` 元件現在已完整而可供使用。  
   

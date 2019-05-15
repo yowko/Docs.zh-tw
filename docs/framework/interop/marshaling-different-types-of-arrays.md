@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cafb15f691daa8d0d0e6c1ebab3cb89f7c811612
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fadccdf35429babce6e101d336c9ea1de150b276
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095096"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648600"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>封送處理不同類型的陣列
 陣列是 Managed 程式碼中的參考類型，它包含一或多個相同類型的項目。 雖然陣列是參考類型，它們會做為 In 參數傳遞至 Unmanaged 函式。 此行為與 Managed 陣列傳遞至 Managed 物件的方式 (做為 In/Out 參數) 不一致。 如需詳細資訊，請參閱 [複製和固定](copying-and-pinning.md)。  
@@ -34,53 +34,53 @@ ms.locfileid: "59095096"
 ## <a name="example"></a>範例  
  本範例示範如何傳遞下列類型的陣列：  
   
--   傳值方式的整數陣列。  
+- 傳值方式的整數陣列。  
   
--   傳址方式的整數陣列，可調整大小。  
+- 傳址方式的整數陣列，可調整大小。  
   
--   傳值方式的整數多維度陣列 (矩陣)。  
+- 傳值方式的整數多維度陣列 (矩陣)。  
   
--   傳值方式的字串陣列。  
+- 傳值方式的字串陣列。  
   
--   整數的結構陣列。  
+- 整數的結構陣列。  
   
--   字串的結構陣列。  
+- 字串的結構陣列。  
   
  除非陣列是明確地以傳值方式封送處理，否則預設行為會將陣列封送處理做為 In 參數。 您可以明確套用 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 屬性來變更此行為。  
   
  陣列範例會使用下列 Unmanaged 函式，和其原始函式宣告：  
   
--   從 PinvokeLib.dll 匯出的**TestArrayOfInts** 。  
+- 從 PinvokeLib.dll 匯出的**TestArrayOfInts** 。  
   
     ```  
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
--   從 PinvokeLib.dll 匯出的**TestRefArrayOfInts** 。  
+- 從 PinvokeLib.dll 匯出的**TestRefArrayOfInts** 。  
   
     ```  
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
--   從 PinvokeLib.dll 匯出的**TestMatrixOfInts** 。  
+- 從 PinvokeLib.dll 匯出的**TestMatrixOfInts** 。  
   
     ```  
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
--   從 PinvokeLib.dll 匯出的**TestArrayOfStrings** 。  
+- 從 PinvokeLib.dll 匯出的**TestArrayOfStrings** 。  
   
     ```  
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
--   從 PinvokeLib.dll 匯出的**TestArrayOfStructs** 。  
+- 從 PinvokeLib.dll 匯出的**TestArrayOfStructs** 。  
   
     ```  
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
--   從 PinvokeLib.dll 匯出的**TestArrayOfStructs2** 。  
+- 從 PinvokeLib.dll 匯出的**TestArrayOfStructs2** 。  
   
     ```  
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  

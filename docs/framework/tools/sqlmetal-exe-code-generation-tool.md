@@ -9,21 +9,21 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 80e0bcd341f9059fc6787756f8e743aedc5dc43e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e91859d4aa6e30877bfdae5da9063a1e2a6b3b44
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59206417"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647258"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (程式碼產生工具)
 SqlMetal 命令列工具會產生 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 之 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]元件的程式碼和對應。 藉由套用本主題稍後出現的選項，您就可以指示 SqlMetal 執行數個不同的動作，包括以下各項：  
   
--   從資料庫產生原始程式碼和對應屬性或對應檔。  
+- 從資料庫產生原始程式碼和對應屬性或對應檔。  
   
--   從資料庫產生中繼資料庫標記語言 (.dbml) 檔用於自訂。  
+- 從資料庫產生中繼資料庫標記語言 (.dbml) 檔用於自訂。  
   
--   從 .dbml 檔產生程式碼和對應屬性或對應檔。  
+- 從 .dbml 檔產生程式碼和對應屬性或對應檔。  
   
  此工具會自動與 Visual Studio 一起安裝。 根據預設，這個檔案位於 `drive`:\Program Files\Microsoft SDKs\Windows\v`n.nn`\bin。 如果您沒有安裝 Visual Studio，您也可以下載 [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225)以取得 SQLMetal 檔案。  
   
@@ -41,7 +41,7 @@ sqlmetal [options] [<input file>]
 ## <a name="options"></a>選項  
  若要檢視最新的選項清單，請進入安裝位置，並在命令提示字元輸入 `sqlmetal /?` 。  
   
- **連線選項**  
+ **連接選項**  
   
 |選項|說明|  
 |------------|-----------------|  
@@ -88,9 +88,9 @@ sqlmetal [options] [<input file>]
 ## <a name="remarks"></a>備註  
  SqlMetal 功能實際上包含兩個步驟：  
   
--   將資料庫的中繼資料擷取至 .dbml 檔。  
+- 將資料庫的中繼資料擷取至 .dbml 檔。  
   
--   產生程式碼輸出檔。  
+- 產生程式碼輸出檔。  
   
      使用適當的命令列選項，您就可以產生 Visual Basic 或 C# 原始程式碼，或是產生 XML 對應檔。  
   
@@ -98,11 +98,11 @@ sqlmetal [options] [<input file>]
   
  如果沒有指定 **/server** ，則會假設為 **localhost/sqlexpress** 。  
   
- [!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] 會擲回例外狀況 (如果下列其中一個或多個條件為真)：  
+ 如果下列其中一個或多個條件為真，則[!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] 會擲回例外狀況：  
   
--   SqlMetal 嘗試擷取呼叫本身的預存程序。  
+- SqlMetal 嘗試擷取呼叫本身的預存程序。  
   
--   預存程序、函式或檢視的巢狀層超過 32。  
+- 預存程序、函式或檢視的巢狀層超過 32。  
   
      SqlMetal 會快取這個例外狀況並回報為警告。  
   
@@ -134,6 +134,6 @@ sqlmetal [options] [<input file>]
   
 ## <a name="see-also"></a>另請參閱
 
-- [作法：以 Visual Basic 或 C# 產生物件模型](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [如何：以 Visual Basic 或 C# 產生物件模型](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
 - [LINQ to SQL 中的程式碼產生](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [外部對應](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)

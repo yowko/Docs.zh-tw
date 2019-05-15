@@ -11,12 +11,12 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 06d458828c77f61e03d18f635ec00f6a7267bab8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 1bbbb558134e5f11537de0efef594be2b964cdcb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59341864"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647377"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>作法：為應用程式設定以位置為基礎的快取原則
 以位置為基礎的快取原則，可讓應用程式明確地定義根據所要求資源位置的快取行為。 本主題將示範如何以程式設計方式設定快取原則。 如需使用組態檔為應用程式設定原則的詳細資訊，請參閱 [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  
@@ -29,7 +29,7 @@ ms.locfileid: "59341864"
   
 ### <a name="to-set-a-policy-that-takes-requested-resources-from-a-cache"></a>設定從快取中取得所要求資源的原則  
   
--   藉由將快取層級設定為 <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable> 來建立下列原則：從快取中取得可用的所要求資源，否則將要求傳送到伺服器。 用戶端與伺服器之間的任何快取都可以滿足要求，包括遠端快取。  
+- 藉由將快取層級設定為 <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable> 來建立下列原則：從快取中取得可用的所要求資源，否則將要求傳送到伺服器。 用戶端與伺服器之間的任何快取都可以滿足要求，包括遠端快取。  
   
     ```csharp  
     public static void UseCacheIfAvailable()  
@@ -50,7 +50,7 @@ ms.locfileid: "59341864"
   
 ### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-resources"></a>設定防止任何快取提供資源的原則  
   
--   藉由將快取層級設定為 <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore> 來建立下列原則：防止任何快取提供所要求的資源。 此原則層級會從本機快取中移除存在的資源，並且向遠端快取指出它們也應該移除資源。  
+- 藉由將快取層級設定為 <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore> 來建立下列原則：防止任何快取提供所要求的資源。 此原則層級會從本機快取中移除存在的資源，並且向遠端快取指出它們也應該移除資源。  
   
     ```csharp  
     public static void DoNotUseCache()  
@@ -71,7 +71,7 @@ ms.locfileid: "59341864"
   
 ### <a name="to-set-a-policy-that-returns-requested-resources-only-if-they-are-in-the-local-cache"></a>設定唯有所要求的資源位於本機快取中時，才會傳回這些資源的原則  
   
--   藉由將快取層級設定為 <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly> 來建立下列原則：唯有所要求的資源位於本機快取中時，才會傳回這些資源。 如果所要求的資源不在快取中，則會擲回 <xref:System.Net.WebException> 例外狀況。  
+- 藉由將快取層級設定為 <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly> 來建立下列原則：唯有所要求的資源位於本機快取中時，才會傳回這些資源。 如果所要求的資源不在快取中，則會擲回 <xref:System.Net.WebException> 例外狀況。  
   
     ```csharp  
     public static void OnlyUseCache()  
@@ -92,7 +92,7 @@ ms.locfileid: "59341864"
   
 ### <a name="to-set-a-policy-that-prevents-the-local-cache-from-supplying-resources"></a>設定防止本機快取提供資源的原則  
   
--   藉由將快取層級設定為 <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh> 來建立下列原則：防止本機快取提供所要求的資源。 如果所要求的資源位於中繼快取中，而且已成功重新驗證，則中繼快取可以提供所要求的資源。  
+- 藉由將快取層級設定為 <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh> 來建立下列原則：防止本機快取提供所要求的資源。 如果所要求的資源位於中繼快取中，而且已成功重新驗證，則中繼快取可以提供所要求的資源。  
   
     ```csharp  
     public static void DoNotUseLocalCache()  
@@ -113,7 +113,7 @@ ms.locfileid: "59341864"
   
 ### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-requested-resources"></a>設定防止任何快取提供所要求資源的原則  
   
--   藉由將快取層級設定為 <xref:System.Net.Cache.HttpRequestCacheLevel.Reload> 來建立下列原則：防止任何快取提供所要求的資源。 伺服器傳回的資源可以儲存在快取中。  
+- 藉由將快取層級設定為 <xref:System.Net.Cache.HttpRequestCacheLevel.Reload> 來建立下列原則：防止任何快取提供所要求的資源。 伺服器傳回的資源可以儲存在快取中。  
   
     ```csharp  
     public static void SendToServer()  
@@ -134,7 +134,7 @@ ms.locfileid: "59341864"
   
 ### <a name="to-set-a-policy-that-allows-any-cache-to-supply-requested-resources-if-the-resource-on-the-server-is-not-newer-than-the-cached-copy"></a>設定伺服器上的資源並未比快取複本更新時，可讓任何快取提供所要求資源的原則  
   
--   藉由將快取層級設定為 <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate> 來建立下列原則：伺服器上的資源並未比快取複本更新時，可讓任何快取提供所要求的資源。  
+- 藉由將快取層級設定為 <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate> 來建立下列原則：伺服器上的資源並未比快取複本更新時，可讓任何快取提供所要求的資源。  
   
     ```csharp  
     public static void CheckServer()  

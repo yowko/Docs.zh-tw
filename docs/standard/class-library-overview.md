@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82854b87f922f9937e593d0936fb1b29e6380ec0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5214ee83ab3009c3d2bb1360f46b39831c37c2ef
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970567"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664630"
 ---
 # <a name="net-class-library-overview"></a>.NET 類別庫概觀
 
@@ -52,17 +52,17 @@ ms.locfileid: "56970567"
   
  .NET 類型是建置 .NET 應用程式、元件和控制項的基礎。 .NET 實作包含執行下列函式的類型：  
   
--   代表基底資料型別和例外狀況  
+- 代表基底資料型別和例外狀況  
   
--   封裝資料結構  
+- 封裝資料結構  
   
--   執行 I/O  
+- 執行 I/O  
   
--   存取有關已載入型別的資訊  
+- 存取有關已載入型別的資訊  
   
--   叫用 .NET Framework 安全性檢查  
+- 叫用 .NET Framework 安全性檢查  
   
--   提供資料存取、豐富型用戶端 (Rich Client) GUI 和伺服器控制的用戶端 GUI  
+- 提供資料存取、豐富型用戶端 (Rich Client) GUI 和伺服器控制的用戶端 GUI  
   
  .NET 提供相當豐富的介面，以及抽象和具體 (非抽象) 類別。 您可以使用原來的具體類別，或在許多狀況中從它們衍生您自己的類別。 若要使用介面的功能，您可以建立實作介面的類別，或者從實作介面的 .NET 類別之一來衍生類別。  
   
@@ -106,8 +106,7 @@ ms.locfileid: "56970567"
 ||<xref:System.Object>|物件階層架構的根。|**物件**|**object**|**Object^**|**obj**|  
 ||<xref:System.String>|Unicode 字元，為不變且長度固定的字串。|**String**|**string**|**String^**|**string**|  
   
- 除了基底資料型別，<xref:System> 命名空間還包含 100 多個類別，涵蓋的範圍從處理例外狀況的類別到處理核心執行階段概念的類別，像是應用程式定義域和記憶體回收行程。 
-  <xref:System> 命名空間也包含許多第二層命名空間。  
+ 除了基底資料型別，<xref:System> 命名空間還包含 100 多個類別，涵蓋的範圍從處理例外狀況的類別到處理核心執行階段概念的類別，像是應用程式定義域和記憶體回收行程。 <xref:System> 命名空間也包含許多第二層命名空間。  
   
  如需命名空間的詳細資訊，請使用 [.NET API 瀏覽器](https://docs.microsoft.com/dotnet/api)來瀏覽 .NET 類別庫。 API 參考文件提供每個命名空間、其類型及其每個成員的相關文件。  
   

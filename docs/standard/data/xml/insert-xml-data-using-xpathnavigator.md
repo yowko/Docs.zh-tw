@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 224e4f3db31e4818833eb8411f44f547538534fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a941c99e1d22a71dc6d94e73f5402716f41e3a81
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517249"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647918"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 插入 XML 資料
 <xref:System.Xml.XPath.XPathNavigator> 類別提供一組方式，可在 XML 文件中插入同層級節點、子節點及屬性節點。 為了使用這些方法，<xref:System.Xml.XPath.XPathNavigator> 物件必須是可編輯的，也就是說，它的 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 屬性必須為 `true`。  
@@ -29,13 +29,13 @@ ms.locfileid: "54517249"
 ### <a name="inserting-sibling-nodes"></a>插入同層級節點  
  <xref:System.Xml.XPath.XPathNavigator> 類別提供下列方法來插入同層級節點。  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
   
  這些方法可在 <xref:System.Xml.XPath.XPathNavigator> 物件目前所在的節點前後，插入同層級節點。  
   
@@ -58,13 +58,13 @@ ms.locfileid: "54517249"
 ### <a name="inserting-child-nodes"></a>插入子節點  
  <xref:System.Xml.XPath.XPathNavigator> 類別提供下列方法來插入子節點。  
   
--   <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
   
  這些方法會將子節點附加到 <xref:System.Xml.XPath.XPathNavigator> 物件目前所在之節點的子節點清單結尾及開頭。  
   
@@ -87,9 +87,9 @@ ms.locfileid: "54517249"
 ### <a name="inserting-attribute-nodes"></a>插入屬性節點  
  <xref:System.Xml.XPath.XPathNavigator> 類別提供下列方法來插入屬性節點。  
   
--   <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
   
  這些方法可在 <xref:System.Xml.XPath.XPathNavigator> 物件目前所在的項目節點上，插入屬性節點。 <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A> 方法使用指定為參數的命名空間前置詞、區域名稱、命名空間 URI 及值，在 <xref:System.Xml.XPath.XPathNavigator> 物件目前所在的項目節點上，建立屬性節點。 <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> 方法會傳回用於插入屬性節點的 <xref:System.Xml.XmlWriter> 物件。  
   
@@ -227,26 +227,26 @@ navigator.SetTypedValue(DateTime.Now);
   
  下列是可能的命名空間衝突。  
   
--   如果 <xref:System.Xml.XmlReader> 物件的內容中包含範圍中的命名空間，其中命名空間 URI 對應的前置詞不在 <xref:System.Xml.XPath.XPathNavigator> 物件的內容中，則會將新命名空間宣告加入至新插入的節點。  
+- 如果 <xref:System.Xml.XmlReader> 物件的內容中包含範圍中的命名空間，其中命名空間 URI 對應的前置詞不在 <xref:System.Xml.XPath.XPathNavigator> 物件的內容中，則會將新命名空間宣告加入至新插入的節點。  
   
--   如果相同的命名空間 URI 在 <xref:System.Xml.XmlReader> 物件的內容及 <xref:System.Xml.XPath.XPathNavigator> 物件內容中都在範圍內，但它們在這兩個內容中擁有不同的對應前置詞，則會將新的命名空間宣告加入至新插入的節點，並從 <xref:System.Xml.XmlReader> 物件取得前置詞及命名空間 URI。  
+- 如果相同的命名空間 URI 在 <xref:System.Xml.XmlReader> 物件的內容及 <xref:System.Xml.XPath.XPathNavigator> 物件內容中都在範圍內，但它們在這兩個內容中擁有不同的對應前置詞，則會將新的命名空間宣告加入至新插入的節點，並從 <xref:System.Xml.XmlReader> 物件取得前置詞及命名空間 URI。  
   
--   如果相同的命名空間前置詞在 <xref:System.Xml.XmlReader> 物件的內容及 <xref:System.Xml.XPath.XPathNavigator> 物件的內容中都在範圍內，但在這兩個內容中擁有不同的對應命名空間 URI，則會將新的命名空間宣告加入至新插入的節點，該節點會以從 <xref:System.Xml.XmlReader> 物件取得之命名空間 URI 來重新宣告該前置詞。  
+- 如果相同的命名空間前置詞在 <xref:System.Xml.XmlReader> 物件的內容及 <xref:System.Xml.XPath.XPathNavigator> 物件的內容中都在範圍內，但在這兩個內容中擁有不同的對應命名空間 URI，則會將新的命名空間宣告加入至新插入的節點，該節點會以從 <xref:System.Xml.XmlReader> 物件取得之命名空間 URI 來重新宣告該前置詞。  
   
--   如果 <xref:System.Xml.XmlReader> 物件內容及 <xref:System.Xml.XPath.XPathNavigator> 物件內容中的前置詞及命名空間 URI 相同，則不會將新的命名空間宣告加入至新插入的節點。  
+- 如果 <xref:System.Xml.XmlReader> 物件內容及 <xref:System.Xml.XPath.XPathNavigator> 物件內容中的前置詞及命名空間 URI 相同，則不會將新的命名空間宣告加入至新插入的節點。  
   
 > [!NOTE]
 >  上述說明還適用於將空白 `string` 做為前置詞的命名空間宣告 (例如，預設命名空間宣告)。  
   
  下列是可能的 `xml:lang` 衝突。  
   
--   如果在 `xml:lang` 物件的內容中包含範圍中的 <xref:System.Xml.XmlReader> 屬性，但 <xref:System.Xml.XPath.XPathNavigator> 物件的內容中沒有，則會將從 `xml:lang` 物件取得值的 <xref:System.Xml.XmlReader> 屬性加入至新插入的節點。  
+- 如果在 `xml:lang` 物件的內容中包含範圍中的 <xref:System.Xml.XmlReader> 屬性，但 <xref:System.Xml.XPath.XPathNavigator> 物件的內容中沒有，則會將從 `xml:lang` 物件取得值的 <xref:System.Xml.XmlReader> 屬性加入至新插入的節點。  
   
--   如果 `xml:lang` 物件的內容及 <xref:System.Xml.XmlReader> 物件的內容都包含範圍中的 <xref:System.Xml.XPath.XPathNavigator> 屬性，但是屬性的值不同，則會將從 `xml:lang` 物件取得值的 <xref:System.Xml.XmlReader> 屬性加入至新插入的節點。  
+- 如果 `xml:lang` 物件的內容及 <xref:System.Xml.XmlReader> 物件的內容都包含範圍中的 <xref:System.Xml.XPath.XPathNavigator> 屬性，但是屬性的值不同，則會將從 `xml:lang` 物件取得值的 <xref:System.Xml.XmlReader> 屬性加入至新插入的節點。  
   
--   如果 `xml:lang` 物件的內容及 <xref:System.Xml.XmlReader> 物件的內容都包含範圍中的 <xref:System.Xml.XPath.XPathNavigator> 屬性，但是屬性的值相同，則不會將新的 `xml:lang` 屬性加入新插入的節點。  
+- 如果 `xml:lang` 物件的內容及 <xref:System.Xml.XmlReader> 物件的內容都包含範圍中的 <xref:System.Xml.XPath.XPathNavigator> 屬性，但是屬性的值相同，則不會將新的 `xml:lang` 屬性加入新插入的節點。  
   
--   如果 `xml:lang` 物件的內容包含範圍中的 <xref:System.Xml.XPath.XPathNavigator> 屬性，但是在 <xref:System.Xml.XmlReader> 物件的內容中沒有，則不會將 `xml:lang` 屬性加入至新插入的節點。  
+- 如果 `xml:lang` 物件的內容包含範圍中的 <xref:System.Xml.XPath.XPathNavigator> 屬性，但是在 <xref:System.Xml.XmlReader> 物件的內容中沒有，則不會將 `xml:lang` 屬性加入至新插入的節點。  
   
 ## <a name="inserting-nodes-with-xmlwriter"></a>使用 XmlWriter 插入節點  
  多載＜插入節點及值＞一節中說明之用於插入同層級節點、子節點及屬性節點的方法。 <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A> 類別的 <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>、<xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>、<xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>、<xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> 及 <xref:System.Xml.XPath.XPathNavigator> 方法會傳回用於插入節點的 <xref:System.Xml.XmlWriter> 物件。  
@@ -271,11 +271,11 @@ navigator.SetTypedValue(DateTime.Now);
   
  下列各項是使用多個 <xref:System.Xml.XmlWriter> 物件時，需要考慮的重要注意事項。  
   
--   當呼叫每個 <xref:System.Xml.XmlWriter> 物件的 <xref:System.Xml.XmlWriter.Close%2A> 方法時，會將由 <xref:System.Xml.XmlWriter> 物件寫入的 XML 片段加入至 XML 文件。 直到那時，<xref:System.Xml.XmlWriter> 物件會寫入中斷連接的片段。 如果在 XML 文件上執行作業，則不會影響在呼叫 <xref:System.Xml.XmlWriter> 之前，由 <xref:System.Xml.XmlWriter.Close%2A> 物件寫入的任何片段。  
+- 當呼叫每個 <xref:System.Xml.XmlWriter> 物件的 <xref:System.Xml.XmlWriter.Close%2A> 方法時，會將由 <xref:System.Xml.XmlWriter> 物件寫入的 XML 片段加入至 XML 文件。 直到那時，<xref:System.Xml.XmlWriter> 物件會寫入中斷連接的片段。 如果在 XML 文件上執行作業，則不會影響在呼叫 <xref:System.Xml.XmlWriter> 之前，由 <xref:System.Xml.XmlWriter.Close%2A> 物件寫入的任何片段。  
   
--   如果在特定 XML 子樹狀目錄上有開啟 <xref:System.Xml.XmlWriter> 物件，而該子樹狀目錄已刪除，則 <xref:System.Xml.XmlWriter> 物件仍然會加入至該子樹狀目錄。 該子樹狀目錄只是變成已刪除的片段。  
+- 如果在特定 XML 子樹狀目錄上有開啟 <xref:System.Xml.XmlWriter> 物件，而該子樹狀目錄已刪除，則 <xref:System.Xml.XmlWriter> 物件仍然會加入至該子樹狀目錄。 該子樹狀目錄只是變成已刪除的片段。  
   
--   如果在 XML 文件中同時開啟多個 <xref:System.Xml.XmlWriter> 物件，則會依照關閉 <xref:System.Xml.XmlWriter> 物件的順序 (而非開啟它們的順序)，將它們加入至 XML 文件。  
+- 如果在 XML 文件中同時開啟多個 <xref:System.Xml.XmlWriter> 物件，則會依照關閉 <xref:System.Xml.XmlWriter> 物件的順序 (而非開啟它們的順序)，將它們加入至 XML 文件。  
   
  下列範例會建立 <xref:System.Xml.XmlDocument> 物件及 <xref:System.Xml.XPath.XPathNavigator> 物件，然後使用由 <xref:System.Xml.XmlWriter> 方法傳回的 <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> 物件，在 `books.xml` 檔案建立第一本書的結構。 之後，範例會將其儲存為 `book.xml` 檔案。  
   

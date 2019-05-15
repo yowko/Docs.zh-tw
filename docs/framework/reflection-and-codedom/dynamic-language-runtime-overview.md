@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7dd67ea312f3677b9010dfea7f14fa366259bcd6
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: e873f23e0178efefe37f371c379caa3d15bde4cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220974"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649492"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Dynamic Language Runtime 概觀
 
@@ -24,11 +24,11 @@ ms.locfileid: "56220974"
 
 大部分動態語言為開發人員提供下列優點：
 
--   能夠使用快速意見反應迴圈 (REPL，或讀取-評估-列印迴圈)。 這可讓您輸入多個陳述式，並立即執行它們來查看結果。
+- 能夠使用快速意見反應迴圈 (REPL，或讀取-評估-列印迴圈)。 這可讓您輸入多個陳述式，並立即執行它們來查看結果。
 
--   支援由上而下開發和更傳統的由下而上開發。 比方說，當您使用由上而下方法時，可以呼叫尚未實作的函式，並在需要時再新增基礎實作。
+- 支援由上而下開發和更傳統的由下而上開發。 比方說，當您使用由上而下方法時，可以呼叫尚未實作的函式，並在需要時再新增基礎實作。
 
--   更容易進行重構和程式碼修改，因為您不需要變更整個程式碼的靜態類型宣告。
+- 更容易進行重構和程式碼修改，因為您不需要變更整個程式碼的靜態類型宣告。
 
 動態語言促成了絕佳的指令碼語言。 客戶可以使用具有新命令和功能的動態語言，輕鬆地擴充已建立的應用程式。 動態語言也經常用來建立網站和測試控管、維護伺服器陣列、開發各種公用程式，以及執行資料轉換。
 
@@ -51,9 +51,9 @@ DLR 也可協助您建立支援動態作業的程式庫。 比方說，如果您
 
 使用 DLR 語言開發的範例包括下列各項：
 
--   IronPython。 在 [GitHub](https://github.com/IronLanguages/ironpython2) 網站上以開放原始碼軟體形式提供。
+- IronPython。 在 [GitHub](https://github.com/IronLanguages/ironpython2) 網站上以開放原始碼軟體形式提供。
 
--   IronRuby。 以開放原始碼軟體於 [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044) 網站上提供。
+- IronRuby。 以開放原始碼軟體於 [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044) 網站上提供。
 
 ## <a name="primary-dlr-advantages"></a>主要的 DLR 優點
  DLR 提供下列優點。
@@ -80,11 +80,11 @@ DLR 也可協助您建立支援動態作業的程式庫。 比方說，如果您
 
  DLR 新增一組服務給 CLR，以便更妥善支援動態語言。 這些服務包括下列各項：
 
--   運算式樹狀架構。 DLR 使用運算式樹狀架構來代表語言語意。 基於此目的，DLR 有擴充的 LINQ 運算式樹狀架構，包含控制流程、指派及其他語言模型節點。 如需詳細資訊，請參閱 [Expression Trees (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) (運算式樹狀架構 (C#)) 或 [Expression Trees (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md) (運算式樹狀架構 (Visual Basic))。
+- 運算式樹狀架構。 DLR 使用運算式樹狀架構來代表語言語意。 基於此目的，DLR 有擴充的 LINQ 運算式樹狀架構，包含控制流程、指派及其他語言模型節點。 如需詳細資訊，請參閱 [Expression Trees (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) (運算式樹狀架構 (C#)) 或 [Expression Trees (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md) (運算式樹狀架構 (Visual Basic))。
 
--   呼叫站台快取。 「動態呼叫站台」是程式碼中您用來對動態物件執行像是 `a + b` 或 `a.b()` 等作業的地方。 DLR 會快取 `a` 和 `b` 的特性 (通常是這些物件的類型) 和作業的相關資訊。 如果先前已執行此類作業，DLR 會從快取擷取所有必要資訊以便快速分派。
+- 呼叫站台快取。 「動態呼叫站台」是程式碼中您用來對動態物件執行像是 `a + b` 或 `a.b()` 等作業的地方。 DLR 會快取 `a` 和 `b` 的特性 (通常是這些物件的類型) 和作業的相關資訊。 如果先前已執行此類作業，DLR 會從快取擷取所有必要資訊以便快速分派。
 
--   動態物件互通性。 DLR 提供一組類別和介面，代表動態物件和作業，而且可以由語言實作者和動態程式庫的作者所使用。 這些類別和介面包括 <xref:System.Dynamic.IDynamicMetaObjectProvider>、<xref:System.Dynamic.DynamicMetaObject>、<xref:System.Dynamic.DynamicObject> 和 <xref:System.Dynamic.ExpandoObject>。
+- 動態物件互通性。 DLR 提供一組類別和介面，代表動態物件和作業，而且可以由語言實作者和動態程式庫的作者所使用。 這些類別和介面包括 <xref:System.Dynamic.IDynamicMetaObjectProvider>、<xref:System.Dynamic.DynamicMetaObject>、<xref:System.Dynamic.DynamicObject> 和 <xref:System.Dynamic.ExpandoObject>。
 
 DLR 使用呼叫站台中的繫結器來進行通訊，不只是與 .NET Framework，也與其他基礎結構和服務通訊，包括 Silverlight 和 COM。 繫結器會封裝語言的語意，並指定如何使用運算式樹狀架構在呼叫站台執行作業。 這樣可讓動態語言和使用 DLR 的靜態類型語言共用程式庫，以及存取 DLR 所支援的所有技術。
 

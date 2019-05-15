@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ba1ded1757d71a2b7839ae8b45489da53763b8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73440f2ed689bdad56bb1f05025f826da9c409e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603608"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633328"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>在 .NET 中剖析數值字串
 所有數值類型皆有兩個靜態剖析方法：`Parse` 和 `TryParse`，可將數字的字串表示轉換成數值類型。 這些方法可讓您剖析使用[標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)和[自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)中記錄的格式字串所產生的字串。 根據預設，`Parse` 和 `TryParse` 方法只能將包含十進位數字的字串成功轉換為整數值。 它們可以將包含整數和小數的十進位數字、群組分隔符號，以及小數分隔符號的字串，成功轉換為浮點值。 如果作業失敗，即 `TryParse` 方法傳回 `false`，則 `Parse` 方法會擲回例外狀況。  
@@ -28,9 +28,9 @@ ms.locfileid: "54603608"
   
  格式提供者會由 <xref:System.IFormatProvider> 實作來代表。 此介面具有單一成員 (<xref:System.IFormatProvider.GetFormat%2A> 方法)，它的單一參數是表示要格式化之類型的 <xref:System.Type> 物件。 此方法會傳回提供格式設定資訊的物件。 .NET 支援下列兩個可用來剖析數值字串的 <xref:System.IFormatProvider> 實作：  
   
--   <xref:System.Globalization.CultureInfo> 物件，它的 <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> 方法會傳回提供文化特性特定格式資訊的 <xref:System.Globalization.NumberFormatInfo> 物件。  
+- <xref:System.Globalization.CultureInfo> 物件，它的 <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> 方法會傳回提供文化特性特定格式資訊的 <xref:System.Globalization.NumberFormatInfo> 物件。  
   
--   <xref:System.Globalization.NumberFormatInfo> 物件，它的 <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> 方法會傳回本身。  
+- <xref:System.Globalization.NumberFormatInfo> 物件，它的 <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> 方法會傳回本身。  
   
  下列範例會嘗試將陣列中的每個字串轉換為 <xref:System.Double> 值。 它會先嘗試使用反映英文 (美國) 文化特性慣例的格式提供者剖析字串。 如果此作業擲回 <xref:System.FormatException>，它就會嘗試使用可反映法文 (法國) 文化特性慣例的格式提供者來剖析字串。  
   

@@ -1,6 +1,6 @@
 ---
 title: C# 運算子
-ms.date: 04/04/2018
+ms.date: 04/30/2019
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
@@ -18,34 +18,34 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: f4267caeb6301950b9f6a8b9545a47b9f48e7920
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbbc0a5accf021df0675192deb040476bc97968d
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689810"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452379"
 ---
 # <a name="c-operators"></a>C# 運算子
 
-C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (數學、索引化、函式呼叫等) 的符號。 您可以[多載](../../programming-guide/statements-expressions-operators/overloadable-operators.md)許多運算子，以便在套用至使用者定義型別時變更它們的意義。
+C# 提供內建型別支援的數個預先定義運算子。 例如，[算術運算子](arithmetic-operators.md)會執行含內建數值型別運算元的算術運算，而[布林邏輯運算子](boolean-logical-operators.md)會執行含 [bool](../keywords/bool.md) 運算元的邏輯運算。
 
-列舉 (`enum`) 型別上通常會允許整數型別上的作業 (例如 `==`、`!=`、`<`、`>`、`&`、`|`)。
+使用者定義型別可以多載特定運算子，以定義該型別運算元的對應行為。 如需詳細資訊，請參閱[運算子](../keywords/operator.md)關鍵字文章。
 
-下列區段列出 C# 運算子，從最高優先順序開始到最低優先順序。 每個區段中的運算子會共用相同的優先順序層級。
+下面各節列出 C# 運算子，從最高優先順序開始列到最低。 每個區段中的運算子會共用相同的優先順序層級。
 
 ## <a name="primary-operators"></a>主要運算子
 
 這些是最高優先順序的運算子。
 
-[x.y](member-access-operator.md) – 成員存取。
+[x.y](member-access-operators.md#member-access-operator-) – 成員存取。
 
-[x?.y](null-conditional-operators.md) – null 條件成員存取。 如果左運算元評估為 `null`，則傳回 `null`。
+[x?.y](member-access-operators.md#null-conditional-operators--and-) – null 條件成員存取。 如果左運算元評估為 `null`，則傳回 `null`。
 
-[x?[y]](null-conditional-operators.md) - null 條件式索引存取。 如果左運算元評估為 `null`，則傳回 `null`。
+[x?[y]](member-access-operators.md#null-conditional-operators--and-) - Null 條件式陣列項目，或型別索引子存取。 如果左運算元評估為 `null`，則傳回 `null`。
 
-[f(x)](invocation-operator.md) – 函式引動過程。
+[f(x)](member-access-operators.md#invocation-operator-) – 方法呼叫，或委派叫用。
 
-[a&#91;x&#93;](index-operator.md) – 彙總物件索引化。
+[&#91;x&#93;](member-access-operators.md#indexer-operator-) – 陣列項目，或型別索引子存取。
 
 [x++](arithmetic-operators.md#increment-operator-) – 後置遞增。 傳回 x 的值，然後利用大於 x 值的值 (通常會加上整數 1) 更新儲存位置。
 
@@ -61,9 +61,13 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 
 [default(T)](../../programming-guide/statements-expressions-operators/default-value-expressions.md) - 產生類型 T 的預設值。
 
+[nameof](../keywords/nameof.md) - 取得變數、型別或成員的簡單 (未限定) 名稱，作為常數字串。
+
 [delegate](../../programming-guide/statements-expressions-operators/anonymous-methods.md) – 宣告並傳回委派執行個體。
 
 [sizeof](../keywords/sizeof.md) – 傳回型別運算元的大小 (以位元組為單位)。
+
+[stackalloc](../keywords/stackalloc.md) -　配置堆疊上的記憶體區塊。
 
 [->](dereference-operator.md) – 指標取值結合成員存取。
 
@@ -125,13 +129,13 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 
 這些運算子具有的優先順序高於下一個區段且低於前一個區段。
 
-[x \< y](less-than-operator.md) – 小於 (如果 x 小於 y，則為 true)。
+[x \< y](comparison-operators.md#less-than-operator-) – 小於 (如果 x 小於 y，則為 true)。
 
-[x > y](greater-than-operator.md) – 大於 (如果 x 大於 y，則為 true)。
+[x > y](comparison-operators.md#greater-than-operator-) – 大於 (如果 x 大於 y，則為 true)。
 
-[x \<= y](less-than-equal-operator.md) – 小於或等於。
+[x \<= y](comparison-operators.md#less-than-or-equal-operator-) – 小於或等於。
 
-[x >= y](greater-than-equal-operator.md) – 大於或等於。
+[x >= y](comparison-operators.md#greater-than-or-equal-operator-) – 大於或等於。
 
 [is](../keywords/is.md) – 型別相容性。 如果評估的左運算元可以轉換成右運算元中指定的類型 (靜態類型)，則傳回 true。
 

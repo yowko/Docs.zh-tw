@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 469074336c8aa49fee1acf871360f8dbc1363247
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 124e8a0dff18f02c178b56167cd12faa1fc97992
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59313264"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649405"
 ---
 # <a name="how-to-create-windows-services"></a>作法：建立 Windows 服務
 當您建立服務時，可以使用稱為 **Windows 服務**的 Visual Studio 專案範本。 這個範本會透過參考適當的類別和命名空間、設定繼承自服務的基底類別，以及覆寫您可能想要覆寫的其中幾個方法，來自動為您執行大部分的工作。  
@@ -21,11 +21,11 @@ ms.locfileid: "59313264"
   
  若要建立可運作的服務，您必須至少：  
   
--   設定 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 屬性。  
+- 設定 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 屬性。  
   
--   建立服務應用程式的必要安裝程式。  
+- 建立服務應用程式的必要安裝程式。  
   
--   覆寫並指定 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法的程式碼，以自訂服務的運作方式。  
+- 覆寫並指定 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法的程式碼，以自訂服務的運作方式。  
   
 ### <a name="to-create-a-windows-service-application"></a>建立 Windows 服務應用程式  
   
@@ -45,11 +45,11 @@ ms.locfileid: "59313264"
   
     |屬性|設定|  
     |--------------|-------------|  
-    |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|`True` 表示服務會接受停止執行的要求；如果為 `false`，則不會停止服務。|  
-    |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True` 表示當服務所在的電腦關機時，服務想要收到通知，以便呼叫 <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> 程序。|  
-    |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|`True` 表示服務會接受暫停或繼續執行的要求；如果為 `false`，則表示不會暫停及繼續服務。|  
+    |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|如果為 `True`，則表示服務會接受停止執行的要求；如果為 `false`，則不會停止服務。|  
+    |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|如果為 `True`，則表示當服務所在的電腦關機時，服務想要收到通知，以便呼叫 <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> 程序。|  
+    |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|如果為 `True`，則表示服務會接受暫停或繼續執行的要求；如果為 `false`，則表示不會暫停及繼續服務。|  
     |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` 表示服務可以處理電腦電源狀態變更的通知；`false` 則會防止服務收到這些變更的通知。|  
-    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` 會在服務執行動作時，將資訊項目寫入應用程式事件記錄檔；如果為 `false`，則會停用這項功能。 如需詳細資訊，請參閱[如何：記錄關於服務的資訊](../../../docs/framework/windows-services/how-to-log-information-about-services.md)。 **注意：** 依預設，<xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 會設為 `true`。|  
+    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|如果為 `True`，則會在服務執行動作時，將資訊項目寫入應用程式事件記錄檔；如果為 `false`，則會停用這項功能。 如需詳細資訊，請參閱[如何：記錄關於服務的資訊](../../../docs/framework/windows-services/how-to-log-information-about-services.md)。 **注意：** 依預設，<xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 會設為 `true`。|  
   
     > [!NOTE]
     >  當 <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 或 <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> 設定為 `false` 時，**服務控制管理員**將會停用對應的功能表選項，以停止、暫停或繼續服務。  
@@ -70,10 +70,10 @@ ms.locfileid: "59313264"
 ## <a name="see-also"></a>另請參閱
 
 - [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [作法：以程式設計方式撰寫服務](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)
-- [作法：將安裝程式新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
-- [作法：記錄關於服務的資訊](../../../docs/framework/windows-services/how-to-log-information-about-services.md)
-- [作法：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)
-- [作法：指定服務的資訊安全內容](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
-- [作法：安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [如何：以程式設計方式撰寫服務](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)
+- [如何：將安裝程式新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [如何：記錄關於服務的資訊](../../../docs/framework/windows-services/how-to-log-information-about-services.md)
+- [如何：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)
+- [如何：指定服務的資訊安全內容](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
+- [如何：安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
 - [逐步解說：在元件設計工具中建立 Windows 服務應用程式](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

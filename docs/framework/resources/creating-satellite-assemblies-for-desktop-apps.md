@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1aecd8e6dcec73ba4dc45d4bf8f365503888687e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 843b61257229bb3bf8c3852554f19c34dccc7496
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295987"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592355"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>建立桌面應用程式的附屬組件
 資源檔在當地語系化的應用程式中扮演重要角色。 它們可讓應用程式以使用者自己的語言和文化特性顯示字串、影像和其他資料，以及在使用者自己的語言或文化特性的資源無法使用時提供替代資料。 .NET Framework 會使用中樞和支點模型來尋找並擷取當地語系化的資源。 中樞是主要組件，其中包含未當地語系化的可執行程式碼以及稱為中性或預設文化特性之單一文化特性的資源。 預設文化特性是應用程式的後援文化特性；當地語系化的資源無法使用時會使用它。 您使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性來指定應用程式之預設文化特性的文化特性。 每個支點都會連線至附屬組件，其中包含單一當地語系化文化特性但未包含任何程式碼的資源。 因為附屬組件不是主要組件的一部分，所以您可以輕鬆地更新或取代對應至特定文化特性的資源，而不需要取代應用程式的主要組件。  
@@ -41,16 +41,16 @@ ms.locfileid: "59295987"
 ## <a name="satellite-assembly-name-and-location"></a>附屬組件名稱和位置  
  中樞和支點模型需要您將資源放入特定位置，以輕鬆地找到和使用它們。 如果您未如預期編譯和命名資源，或未將它們放在正確位置，則 Common Language Runtime 會找不到它們，並改為使用預設文化特性的資源。 以 <xref:System.Resources.ResourceManager> 物件代表的 .NET Framework Resource Manager 是用來自動存取當地語系化資源。 Resource Manager 需要下列各項：  
   
--   單一附屬組件必須包括特定文化特性的所有資源。 換句話說，您應該將多個 .txt 或 .resx 檔案編譯成單一二進位 .resources 檔案。  
+- 單一附屬組件必須包括特定文化特性的所有資源。 換句話說，您應該將多個 .txt 或 .resx 檔案編譯成單一二進位 .resources 檔案。  
   
--   在儲存該文化特性資源之每個當地語系化文化特性的應用程式目錄中，都必須有不同的子目錄。 子目錄名稱必須與文化特性名稱相同。 或者，您可以在全域組件快取中儲存附屬組件。 在此情況下，組件強式名稱的文化特性資訊元件必須指出其文化特性。 (請參閱本主題稍後的[在全域組件快取中安裝附屬組件](#SN)一節)。  
+- 在儲存該文化特性資源之每個當地語系化文化特性的應用程式目錄中，都必須有不同的子目錄。 子目錄名稱必須與文化特性名稱相同。 或者，您可以在全域組件快取中儲存附屬組件。 在此情況下，組件強式名稱的文化特性資訊元件必須指出其文化特性。 (請參閱本主題稍後的[在全域組件快取中安裝附屬組件](#SN)一節)。  
   
     > [!NOTE]
     >  如果您的應用程式包括子文化特性的資源，請將每個子文化特性放在應用程式目錄下的不同子目錄中。 請不要將子文化特性放在其主要文化特性目錄的子目錄中。  
   
--   附屬組件的名稱必須與應用程式相同，而且必須使用副檔名 ".resources.dll"。 例如，如果應用程式命名為 Example.exe，則每個附屬組件的名稱應該是 Example.resources.dll。 請注意，附屬組件名稱不會指出其資源檔的文化特性。 不過，附屬組件會出現在確實指定文化特性的目錄中。  
+- 附屬組件的名稱必須與應用程式相同，而且必須使用副檔名 ".resources.dll"。 例如，如果應用程式命名為 Example.exe，則每個附屬組件的名稱應該是 Example.resources.dll。 請注意，附屬組件名稱不會指出其資源檔的文化特性。 不過，附屬組件會出現在確實指定文化特性的目錄中。  
   
--   附屬組件文化特性的資訊必須包括在組件的中繼資料內。 若要將文化特性名稱儲存在附屬組件的中繼資料內，請在使用[組件連結器](../../../docs/framework/tools/al-exe-assembly-linker.md)將資源內嵌在附屬組件時指定 `/culture` 選項。  
+- 附屬組件文化特性的資訊必須包括在組件的中繼資料內。 若要將文化特性名稱儲存在附屬組件的中繼資料內，請在使用[組件連結器](../../../docs/framework/tools/al-exe-assembly-linker.md)將資源內嵌在附屬組件時指定 `/culture` 選項。  
   
  下圖顯示未在[全域組件快取](../../../docs/framework/app-domains/gac.md)中安裝之應用程式的範例目錄結構和位置需求。 副檔名為 .txt 和 .resources 的項目將不會隨附最終應用程式。 這些是用來建立最終附屬資源組件的中繼資源檔。 在此範例中，您可以將 .resx 檔案取代為 .txt 檔案。 如需詳細資訊，請參閱[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。 
  
@@ -97,11 +97,11 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 3. 將其他文化特性 (en-US、fr-FR 和 ru-RU) 的支援新增至應用程式，如下所示：  
   
-    -   若要支援 en-US 或英文 (美國) 文化特性，請建立名為 Greeting.en-US.resx 或 Greeting.en-US.txt 的資源檔，並在其中儲存名為 `HelloString` 且其值為 "Hi world!" 的單一字串。  
+    - 若要支援 en-US 或英文 (美國) 文化特性，請建立名為 Greeting.en-US.resx 或 Greeting.en-US.txt 的資源檔，並在其中儲存名為 `HelloString` 且其值為 "Hi world!" 的單一字串。  
   
-    -   若要支援 fr-FR 或法文 (法國) 文化特性，請建立名為 Greeting.fr-FR.resx 或 Greeting.fr-FR.txt 的資源檔，並在其中儲存名為 `HelloString` 且其值為 "Salut tout le monde!" 的單一字串。  
+    - 若要支援 fr-FR 或法文 (法國) 文化特性，請建立名為 Greeting.fr-FR.resx 或 Greeting.fr-FR.txt 的資源檔，並在其中儲存名為 `HelloString` 且其值為 "Salut tout le monde!" 的單一字串。  
   
-    -   若要支援 ru-RU 或俄文 (俄國) 文化特性，請建立名為 Greeting.ru-RU.resx 或 Greeting.ru-RU.txt 的資源檔，並在其中儲存名為 `HelloString` 且其值為 "Всем привет!" 的單一字串。  
+    - 若要支援 ru-RU 或俄文 (俄國) 文化特性，請建立名為 Greeting.ru-RU.resx 或 Greeting.ru-RU.txt 的資源檔，並在其中儲存名為 `HelloString` 且其值為 "Всем привет!" 的單一字串。  
   
 4. 使用 [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)，將每一個文字或 XML 資源檔編譯成二進位 .resources 檔案。 輸出是根檔案名稱與 .resx 或 .txt 檔案相同的一組檔案，但副檔名為 .resources。 如果您使用 Visual Studio 建立範例，則會自動處理編譯程序。 如果您不要使用 Visual Studio，請執行下列命令將 .resx 檔案編譯為 .resources 檔案：  
   
@@ -117,7 +117,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
 5. 將下列原始程式碼與預設文化特性的資源編譯為應用程式的主要組件：  
   
     > [!IMPORTANT]
-    >  如果您使用命令列建立範例而非 Visual Studio，則應該將 <xref:System.Resources.ResourceManager> 類別建構函式的呼叫修改為下列： `ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`  
+    >  如果您使用命令列建立範例而非 Visual Studio，則應該將 <xref:System.Resources.ResourceManager> 類別建構函式的呼叫修改為下列：`ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`  
   
      [!code-csharp[Conceptual.Resources.Locating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)]
      [!code-vb[Conceptual.Resources.Locating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]  
@@ -226,11 +226,11 @@ gacutil -i:StringLibrary.resources.dll
   
 5. 將其他文化特性 (en-US、fr-FR 和 ru-RU 文化特性) 的支援新增至應用程式，如下所示：  
   
-    -   若要支援 "en-US" 或英文 (美國) 文化特性，請建立名為 Strings.en-US.resx 或 Strings.en-US.txt 的資源檔，並在其中儲存名為 `Greeting` 且其值為 "Hello!" 的單一字串。  
+    - 若要支援 "en-US" 或英文 (美國) 文化特性，請建立名為 Strings.en-US.resx 或 Strings.en-US.txt 的資源檔，並在其中儲存名為 `Greeting` 且其值為 "Hello!" 的單一字串。  
   
-    -   若要支援 "fr-FR" 或法文 (法國) 文化特性，請建立名為 Strings.fr-FR.resx 或 Strings.fr-FR.txt 的資源檔，並在其中儲存名為 `Greeting` 且其值為 "Bon jour!" 的單一字串。  
+    - 若要支援 "fr-FR" 或法文 (法國) 文化特性，請建立名為 Strings.fr-FR.resx 或 Strings.fr-FR.txt 的資源檔，並在其中儲存名為 `Greeting` 且其值為 "Bon jour!" 的單一字串。  
   
-    -   若要支援 "ru-RU" 或俄文 (俄國) 文化特性，請建立名為 Strings.ru-RU.resx 或 Strings.ru-RU.txt 的資源檔，並在其中儲存名為 `Greeting` 且其值為 "Привет!" 的單一字串。  
+    - 若要支援 "ru-RU" 或俄文 (俄國) 文化特性，請建立名為 Strings.ru-RU.resx 或 Strings.ru-RU.txt 的資源檔，並在其中儲存名為 `Greeting` 且其值為 "Привет!" 的單一字串。  
   
 6. 使用 [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)，將每一個文字或 XML 資源檔編譯成二進位 .resources 檔案。 輸出是根檔案名稱與 .resx 或 .txt 檔案相同的一組檔案，但副檔名為 .resources。 如果您使用 Visual Studio 建立範例，則會自動處理編譯程序。 如果您不要使用 Visual Studio，請執行下列命令將 .resx 檔案編譯為 .resources 檔案：  
   

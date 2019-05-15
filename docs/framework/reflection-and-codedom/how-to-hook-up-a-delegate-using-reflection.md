@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用反映連結委派
+title: 作法：使用反映連結委派
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7c2956a222a47cea36abbc2f21da2d7e2061e09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8bc4b4df6829f5b86dff400c5cd7cbd3d86f5507
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314525"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591536"
 ---
-# <a name="how-to-hook-up-a-delegate-using-reflection"></a>HOW TO：使用反映連結委派
+# <a name="how-to-hook-up-a-delegate-using-reflection"></a>作法：使用反映連結委派
 當您使用反映來載入和執行組件時，無法使用 C# `+=` 運算子或 Visual Basic [AddHandler 陳述式](~/docs/visual-basic/language-reference/statements/addhandler-statement.md)這類語言功能來連結事件。 下列程序示範如何透過反映取得所有必要類型以將現有方法連結至事件，以及如何使用反映發出建立動態方法並將它連結至事件。  
   
 > [!NOTE]
@@ -107,11 +107,11 @@ ms.locfileid: "59314525"
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
--   此程式碼包含編譯所需的 C# `using` 陳述式 (Visual Basic 為 `Imports`)。  
+- 此程式碼包含編譯所需的 C# `using` 陳述式 (Visual Basic 為 `Imports`)。  
   
--   不需要任何其他組件參考，即可從命令列進行編譯。 在 Visual Studio 中，您必須新增 System.Windows.Forms.dll 的參考，因為這個範例是主控台應用程式。  
+- 不需要任何其他組件參考，即可從命令列進行編譯。 在 Visual Studio 中，您必須新增 System.Windows.Forms.dll 的參考，因為這個範例是主控台應用程式。  
   
--   在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
+- 在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
   
 ## <a name="see-also"></a>另請參閱
 

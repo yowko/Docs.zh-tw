@@ -8,16 +8,16 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 5c502c3832ca9afc30599d47d0890fae168fa998
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c97a5b843d27258f58d654d35420a262d5b741a
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668948"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062949"
 ---
 # <a name="get-started-with-c"></a>開始使用 C\#
 
-本節提供簡短且簡單的教學課程，可讓您使用 C# 和 .NET Core 快速建置應用程式。 本節內容涵蓋適用於 Visual Studio 2017 和 Visual Studio Code 的使用者入門主題。 這些文章假設您有一些程式設計經驗。 若您不懂程式設計，請嘗試我們的 [C# 簡介](../tutorials/intro-to-csharp/index.md)互動式教學課程。
+本節提供簡短且簡單的教學課程，可讓您使用 C# 和 .NET Core 快速建置應用程式。 本節內容涵蓋適用於 Visual Studio 2017 和 Visual Studio Code 的使用者入門主題。 這些文章假設您有一些程式設計經驗。 如果您是程式設計的新手，請嘗試我們的 [C# 簡介](../tutorials/intro-to-csharp/index.md)互動式教學課程。
 
 我們將提供下列主題：
 

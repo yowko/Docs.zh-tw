@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b88a07115871e48a7981bbb868ff2ef4ce8cf85
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0c4100bb3bafdfe141dc746a64ebd8172ebe3bce
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127695"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648582"
 ---
 # <a name="msgbox-sample"></a>MsgBox 範例
 此範例示範如何以傳值方式將字串類型傳遞為 In 參數，以及何時使用 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>、<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 和 <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> 欄位。  
   
  MsgBox 範例會使用下列 Unmanaged 函式和其原始函式宣告，如下所示：  
   
--   從 User32.dll 匯出的 **MessageBox**。  
+- 從 User32.dll 匯出的 **MessageBox**。  
   
     ```  
     int MessageBox(HWND hWnd, LPCTSTR lpText, LPCTSTR lpCaption,   

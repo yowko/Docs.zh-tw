@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37241dd666a5d10eeb35bcbb4c9e09a5bc56f620
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 51291fbc9ad2927bc3b9649074a6dbf374aaf7f1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176536"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648446"
 ---
 # <a name="mitigation-path-normalization"></a>風險降低：路徑正規化
 從以 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 為目標的應用程式開始，.NET Framework 中的路徑正規化已有所變更。  
@@ -17,26 +17,26 @@ ms.locfileid: "59176536"
 ## <a name="what-is-path-normalization"></a>路徑正規化是什麼？  
  路徑正規化牽涉到修改識別路徑或檔案的字串，使其符合目標作業系統上的有效路徑。 正規化通常牽涉到︰  
   
--   規範化元件和目錄分隔符號。  
+- 規範化元件和目錄分隔符號。  
   
--   將目前的目錄套用到相對路徑。  
+- 將目前的目錄套用到相對路徑。  
   
--   評估路徑中的相對目錄 (`.`) 或上層目錄 (`..`)。  
+- 評估路徑中的相對目錄 (`.`) 或上層目錄 (`..`)。  
   
--   修剪指定的字元。  
+- 修剪指定的字元。  
   
 ## <a name="the-changes"></a>變更  
  從以 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 為目標的應用程式開始，路徑正規化在以下方面已有所變更：  
   
--   執行階段會延後至作業系統的 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) 函式再進行路徑正規化。  
+- 執行階段會延後至作業系統的 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) 函式再進行路徑正規化。  
   
--   正規化不再涉及修剪目錄區段的結尾 (例如目錄名稱結尾的空格)。  
+- 正規化不再涉及修剪目錄區段的結尾 (例如目錄名稱結尾的空格)。  
   
--   支援完全信任的裝置路徑語法，包括 `\\.\` 以及適用於 mscorlib.dll 中之檔案 I/O API 的 `\\?\`。  
+- 支援完全信任的裝置路徑語法，包括 `\\.\` 以及適用於 mscorlib.dll 中之檔案 I/O API 的 `\\?\`。  
   
--   執行階段不會驗證裝置語法路徑。  
+- 執行階段不會驗證裝置語法路徑。  
   
--   支援使用裝置語法存取替代資料流。  
+- 支援使用裝置語法存取替代資料流。  
   
 ## <a name="impact"></a>影響  
  對於以 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更新版本為目標的應用程式，這些變更預設為開啟。 它們應該可以改善效能，同時允許方法存取先前無法存取的路徑。  

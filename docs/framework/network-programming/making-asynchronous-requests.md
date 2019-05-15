@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: b812db3259cbd2313cdf172950f51ab34679b460
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 66cacfbb031a531190a8cc5eafdb3e375609ee1e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208562"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647295"
 ---
 # <a name="making-asynchronous-requests"></a>進行非同步要求
 <xref:System.Net> 類別會使用 .NET Framework 的標準非同步程式設計模型，非同步存取網際網路資源。 <xref:System.Net.WebRequest> 類別的 <xref:System.Net.WebRequest.BeginGetResponse%2A> 和 <xref:System.Net.WebRequest.EndGetResponse%2A> 方法會啟動和完成網際網路資源的非同步要求。  
@@ -32,15 +32,15 @@ ms.locfileid: "59208562"
   
  **ClientGetAsync** 類別實作網際網路資源非同步要求，並將產生的回應寫入主控台中。 它包含下列清單所述的方法和屬性。  
   
--   `allDone` 屬性包含發出要求完成訊號的 <xref:System.Threading.ManualResetEvent> 類別執行個體。  
+- `allDone` 屬性包含發出要求完成訊號的 <xref:System.Threading.ManualResetEvent> 類別執行個體。  
   
--   `Main()` 方法會讀取命令列，並開始所指定網際網路資源的要求。 它會建立 **WebRequest** `wreq` 和 **RequestState** `rs`，並呼叫 **BeginGetResponse** 開始處理要求，然後呼叫 `allDone.WaitOne()` 方法，讓應用程式不會在回呼完成之前結束。 讀取來自網際網路資源的回應之後，`Main()` 會將它寫入至主控台，而且應用程式會結束。  
+- `Main()` 方法會讀取命令列，並開始所指定網際網路資源的要求。 它會建立 **WebRequest** `wreq` 和 **RequestState** `rs`，並呼叫 **BeginGetResponse** 開始處理要求，然後呼叫 `allDone.WaitOne()` 方法，讓應用程式不會在回呼完成之前結束。 讀取來自網際網路資源的回應之後，`Main()` 會將它寫入至主控台，而且應用程式會結束。  
   
--   `showusage()` 方法會寫入主控台上的範例命令列。 命令列上未提供任何 URI 時，它是由 `Main()` 所呼叫。  
+- `showusage()` 方法會寫入主控台上的範例命令列。 命令列上未提供任何 URI 時，它是由 `Main()` 所呼叫。  
   
--   `RespCallBack()` 方法會實作網際網路要求的非同步回呼方法。 它會建立包含網際網路資源回應的 **WebResponse** 執行個體，並取得回應資料流，然後開始非同步地讀取資料流中的資料。  
+- `RespCallBack()` 方法會實作網際網路要求的非同步回呼方法。 它會建立包含網際網路資源回應的 **WebResponse** 執行個體，並取得回應資料流，然後開始非同步地讀取資料流中的資料。  
   
--   `ReadCallBack()` 方法會實作非同步回呼方法來讀取回應資料流。 它會將接收自網際網路資源的資料傳送至 **RequestState** 執行個體的 **ResponseData** 屬性，接著對回應資料流啟動另一個非同步讀取，直到不再傳回其他資料為止。 已讀取所有資料之後，`ReadCallBack()` 會關閉回應資料流，並呼叫 `allDone.Set()` 方法，指出整個回應存在於 **ResponseData** 中。  
+- `ReadCallBack()` 方法會實作非同步回呼方法來讀取回應資料流。 它會將接收自網際網路資源的資料傳送至 **RequestState** 執行個體的 **ResponseData** 屬性，接著對回應資料流啟動另一個非同步讀取，直到不再傳回其他資料為止。 已讀取所有資料之後，`ReadCallBack()` 會關閉回應資料流，並呼叫 `allDone.Set()` 方法，指出整個回應存在於 **ResponseData** 中。  
   
     > [!NOTE]
     >  請務必關閉所有網路資料流。 如果您未關閉每個要求和回應資料流，應用程式就會耗盡與該伺服器的連線，而無法處理其他要求。  

@@ -2,12 +2,12 @@
 title: 佇列和可靠的工作階段
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-ms.openlocfilehash: d6b1e62e2b0f91856867128c2c0695ab0bdf1c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7a60e6f92f6875b6fb446d29abc7d858bfdefe73
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643537"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557161"
 ---
 # <a name="queues-and-reliable-sessions"></a>佇列和可靠的工作階段
 佇列和可靠工作階段會實作可信賴傳訊的 Windows Communication Foundation (WCF) 功能。 在本節中所包含的主題會討論 WCF 可靠的傳訊功能。  
@@ -31,7 +31,7 @@ ms.locfileid: "64643537"
   
  可靠工作階段會提供短延遲時間的可信賴訊息傳輸。 它們可透過任何的 Proxy 或媒介提供 SOAP 訊息，而這相當於 TCP 透過 IP 橋接器為封包提供的內容。 如需可靠工作階段的詳細資訊，請參閱[可靠工作階段](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)。  
   
-### <a name="queues"></a>佇列  
+## <a name="queues"></a>佇列  
  WCF 中的佇列會提供可信賴訊息和區隔來源和目的地，但代價是高延遲之間。 WCF 佇列通訊建置在訊息佇列 (也稱為 MSMQ) 之上。  
   
  MSMQ 是 Windows 隨附的選用元件，而且會以 NT 服務的身分執行。 它會代表來源擷取傳輸佇列中要進行傳輸的訊息，並將該訊息傳遞至目標佇列。 目標佇列會代表目的地接受訊息，以便隨時因應目的地要求訊息而進行傳遞。 MSMQ 佇列管理員會實作可靠訊息傳輸通訊協定，使訊息不會在傳輸期間遺失。 此通訊協定可以是原生或以 SOAP 為基礎的 SOAP Reliable Messaging Protocol (SRMP)。  

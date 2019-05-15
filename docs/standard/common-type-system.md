@@ -4,12 +4,12 @@ description: 了解一般型別系統 (CTS) 和 Common Language Specification (C
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.openlocfilehash: a6704b09a51a509cb7fbd786f9040454f78cc862
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d162a736b8f7b56293fc75a445c2a80cce597768
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675364"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664524"
 ---
 # <a name="common-type-system--common-language-specification"></a>一般類型系統和 Common Language Specification
 
@@ -21,10 +21,10 @@ ms.locfileid: "57675364"
 
 若要透明地執行這項操作，必須要有通用的方式來描述所有支援的類型。 這是一般類型系統 (CTS) 負責執行的作業。 它是用來執行下列事項︰
 
-*   建立跨語言執行的架構。
-*   提供物件導向模型，以支援在 .NET 實作上實作各種語言。
-*   定義所有語言在需要處理類型時必須遵循的一組規則。
-*   提供包含基礎基本型別 (例如 `Boolean`、`Byte`、`Char` 等) 的程式庫，以便用於應用程式開發。
+* 建立跨語言執行的架構。
+* 提供物件導向模型，以支援在 .NET 實作上實作各種語言。
+* 定義所有語言在需要處理類型時必須遵循的一組規則。
+* 提供包含基礎基本型別 (例如 `Boolean`、`Byte`、`Char` 等) 的程式庫，以便用於應用程式開發。
 
 CTS 定義應該支援的兩種主要類型︰參考和實值類型。 它們的名稱會指向其定義。
 
@@ -34,11 +34,11 @@ CTS 定義應該支援的兩種主要類型︰參考和實值類型。 它們的
 
 CTS 定義數種分類的類型，各有其特定語意和用法︰
 
-*   類別
-*   結構
-*   列舉
-*   介面
-*   委派
+* 類別
+* 結構
+* 列舉
+* 介面
+* 委派
 
 CTS 也會定義類型的所有其他屬性 (例如存取修飾詞)、什麼是有效類型成員、繼承和多載的運作方式等。 不幸的是，深入探討其中任何項目不在簡介文章的範圍 (例如這項)，但您可以查閱涵蓋這些主題之更深入內容連結結尾的[更多資源](#more-resources)一節。
 
@@ -52,5 +52,5 @@ CLS 是 CTS 的子集。 除非 CLS 規則更嚴格，否則這表示 CTS 中的
 
 ## <a name="more-resources"></a>更多資源
 
-*   [一般類型系統](./base-types/common-type-system.md)
-*   [Common Language Specification](language-independence-and-language-independent-components.md)
+* [一般類型系統](./base-types/common-type-system.md)
+* [Common Language Specification](language-independence-and-language-independent-components.md)

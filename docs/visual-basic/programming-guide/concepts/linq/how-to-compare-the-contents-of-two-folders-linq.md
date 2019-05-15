@@ -1,15 +1,15 @@
 ---
-title: HOW TO：比較兩個資料夾內容 (LINQ) (Visual Basic)
+title: 作法：比較兩個資料夾內容 (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 63027e892fe8404001c6869be33af8cff1bc014a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75283faf25e7a26055b1122eb45e23c510fc6b39
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643999"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593015"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>HOW TO：比較兩個資料夾內容 (LINQ) (Visual Basic)
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>作法：比較兩個資料夾內容 (LINQ) (Visual Basic)
 本例示範三種比較兩個檔案清單的方式︰  
   
 - 查詢指定兩個檔案清單是否完全相同的布林值。  
@@ -114,8 +114,8 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。  
-  
+ 建立 VB.NET 的主控台應用程式專案，使用`Imports`System.Linq 命名空間陳述式。
+ 
 ## <a name="see-also"></a>另請參閱
 
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

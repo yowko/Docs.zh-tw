@@ -20,12 +20,12 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: dcfa029f3feeafd9d75cd6cd19b36d32b0d5fce7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88e8bfadf34aecb207b1d2858eacf40338363599
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615973"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634735"
 ---
 # <a name="backtracking-in-regular-expressions"></a>規則運算式中的回溯
 <a name="top"></a> 回溯 (Backtracking) 會在規則運算式模式包含選擇性的 [數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 或 [交替建構](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)，且規則運算式引擎返回之前儲存的狀態繼續搜尋相符項目時發生。 回溯是規則運算式的核心能力，可讓運算式功能強大且靈活，並且比對非常複雜的模式。 但同時，這項強大功能需付出相當的代價。 回溯經常是影響規則運算式引擎之效能最重要的一項因素。 幸好開發人員能夠掌控規則運算式引擎的行為，以及其使用回溯的方式。 本主題將說明回溯運作的方式，以及如何進行控制。  
@@ -35,13 +35,13 @@ ms.locfileid: "54615973"
   
  此主題包括下列章節：  
   
--   [不進行回溯的線性比較](#linear_comparison_without_backtracking)  
+- [不進行回溯的線性比較](#linear_comparison_without_backtracking)  
   
--   [含有選擇性數量詞或交替建構的回溯](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
+- [含有選擇性數量詞或交替建構的回溯](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
   
--   [含有巢狀選擇性數量詞的回溯](#backtracking_with_nested_optional_quantifiers)  
+- [含有巢狀選擇性數量詞的回溯](#backtracking_with_nested_optional_quantifiers)  
   
--   [控制回溯](#controlling_backtracking)  
+- [控制回溯](#controlling_backtracking)  
   
 <a name="linear_comparison_without_backtracking"></a>   
 ## <a name="linear-comparison-without-backtracking"></a>不進行回溯的線性比較  
@@ -91,15 +91,15 @@ ms.locfileid: "54615973"
   
  為了進行這項比對，規則運算式引擎會使用回溯，如下所示：  
   
--   它會比對 `.*` (其會比對零個、一個或多個任意字元) 與整個輸入字串。  
+- 它會比對 `.*` (其會比對零個、一個或多個任意字元) 與整個輸入字串。  
   
--   它會嘗試比對規則運算式模式中的 "e"。 不過，輸入字串沒有其他可供比對的字元。  
+- 它會嘗試比對規則運算式模式中的 "e"。 不過，輸入字串沒有其他可供比對的字元。  
   
--   接著它會回溯至上一個成功的比對結果 "Essential services are provided by regular expressions"，並嘗試比對 "e" 與句尾的句號。 比對會失敗。  
+- 接著它會回溯至上一個成功的比對結果 "Essential services are provided by regular expressions"，並嘗試比對 "e" 與句尾的句號。 比對會失敗。  
   
--   然後它會繼續回溯至前一個成功的比對結果，一次一個字元，直到暫時相符的子字串為 "Essential services are provided by regular expr"。 然後運算式會比較模式中的 "e" 與 "expressions" 中的第二個 "e"，並且尋找符合的結果。  
+- 然後它會繼續回溯至前一個成功的比對結果，一次一個字元，直到暫時相符的子字串為 "Essential services are provided by regular expr"。 然後運算式會比較模式中的 "e" 與 "expressions" 中的第二個 "e"，並且尋找符合的結果。  
   
--   接著再比較模式中的 "s" 與相符的 "e" 字元後面接著的 "s" ("expressions" 中的第一個 "s")。 比對將會成功。  
+- 接著再比較模式中的 "s" 與相符的 "e" 字元後面接著的 "s" ("expressions" 中的第一個 "s")。 比對將會成功。  
   
  當您使用回溯時，比對規則運算式模式與長度 55 個字元的輸入字串需要進行 67 次比較作業。 通常如果規則運算式模式包含單一交替建構或單一選擇性數量詞，則比對模式所需的比較作業次數會超過輸入字串中字元數的兩倍。  
   
@@ -114,11 +114,11 @@ ms.locfileid: "54615973"
   
  如範例的輸出所示，規則運算式引擎耗費約為識別比對字串的兩倍時間，才發現輸入字串與模式不相符。 這是因為失敗的比對永遠代表最糟的狀況。 規則運算式引擎必須先使用規則運算式依循所有可能的途徑來處理資料，才能得到比對失敗的結果，而巢狀括號會製造許多額外的途徑來處理資料。 規則運算式引擎會藉由執行下列操作得出第二個字串與模式不相符的結果：  
   
--   它會檢查是否位於字串開頭，然後比對字串中的前五個字元與 `a+`模式。 然後判斷字串中沒有額外的 "a" 字元群組。 最後測試是否到達字串結尾。 由於字串中剩下一個額外的字串，因此比對失敗。 這個失敗的比對需要經過 9 次比較。 規則運算式引擎還會儲存 "a" (以下稱為符合結果 1)、"aa" (符合結果 2)、"aaa" (符合結果 3) 和 "aaaa" (符合結果 4) 這些符合結果的狀態資訊。  
+- 它會檢查是否位於字串開頭，然後比對字串中的前五個字元與 `a+`模式。 然後判斷字串中沒有額外的 "a" 字元群組。 最後測試是否到達字串結尾。 由於字串中剩下一個額外的字串，因此比對失敗。 這個失敗的比對需要經過 9 次比較。 規則運算式引擎還會儲存 "a" (以下稱為符合結果 1)、"aa" (符合結果 2)、"aaa" (符合結果 3) 和 "aaaa" (符合結果 4) 這些符合結果的狀態資訊。  
   
--   它會返回之前儲存的符合結果 4。 然後判斷出有一個額外的 "a" 字元要指派至額外的擷取群組。 最後測試是否到達字串結尾。 由於字串中剩下一個額外的字串，因此比對失敗。 這個失敗的比對需要經過 4 次比較。 到目前為止，總共執行了 13 次比較。  
+- 它會返回之前儲存的符合結果 4。 然後判斷出有一個額外的 "a" 字元要指派至額外的擷取群組。 最後測試是否到達字串結尾。 由於字串中剩下一個額外的字串，因此比對失敗。 這個失敗的比對需要經過 4 次比較。 到目前為止，總共執行了 13 次比較。  
   
--   它會返回之前儲存的符合結果 3。 然後判斷出有兩個額外的 "a" 字元要指派至額外的擷取群組。 然而，字串結尾測試失敗。 接著它會返回符合結果 3，並嘗試比對兩個額外的擷取群組中的這兩個額外的 "a" 字元。 字串結尾測試仍然失敗。 這些失敗的比對需要經過 12 次比較。 到目前為止，總共執行了 25 次比較。  
+- 它會返回之前儲存的符合結果 3。 然後判斷出有兩個額外的 "a" 字元要指派至額外的擷取群組。 然而，字串結尾測試失敗。 接著它會返回符合結果 3，並嘗試比對兩個額外的擷取群組中的這兩個額外的 "a" 字元。 字串結尾測試仍然失敗。 這些失敗的比對需要經過 12 次比較。 到目前為止，總共執行了 25 次比較。  
   
  輸入字串與規則運算式的比較會依照這種方式繼續進行，直到規則運算式引擎嘗試過所有可能的比對組合，然後得到沒有符合的結果這個結論。 由於巢狀數量詞的關係，這個比較是 O(2<sup>n</sup>) 或指數運算，其中 *n* 是輸入字串中的字元數。 這表示，在最糟的情況下，包含 30 個字元的輸入字串約需要進行 1,073,741,824 次比較，而包含 40 個字元的輸入字串約需要進行 1,099,511,627,776 次比較。 如果您使用這類長度甚至更長的字串，則規則運算式方法處理不符合規則運算式模式的輸入時，可能需要相當長的時間才能完成。  
   

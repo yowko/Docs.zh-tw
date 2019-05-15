@@ -5,23 +5,23 @@ ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 55756092f086de47c4b2acb8f147ca3ab231abe1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e4b789a23b790757ce2dfaa82b6eaec7fdaf3cb3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44207222"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647875"
 ---
 # <a name="load-data-from-a-reader"></a>從讀取器載入資料
 使用 <xref:System.Xml.XmlDocument.Load%2A> 方法及 <xref:System.Xml.XmlReader> 的參數載入 XML 文件所發生的行為，與從其他格式載入資料的行為相比會有所不同。 如果讀取器處於其初始狀態，則 <xref:System.Xml.XmlDocument.Load%2A> 會使用讀取器的整個內容，並利用讀取器中的所有資料建置 XML 文件物件模型 (DOM)。  
   
  如果已將讀取器置於文件中某處的節點上，而且隨後將讀取器傳遞至 <xref:System.Xml.XmlDocument.Load%2A> 方法，則 <xref:System.Xml.XmlDocument.Load%2A> 會嘗試將目前節點及其所有同層級節點 (直到關閉目前深度的結束標記) 讀取至記憶體。 嘗試進行的 <xref:System.Xml.XmlDocument.Load%2A> 是否能夠成功，取決於嘗試載入時讀取器所在的節點，因為 <xref:System.Xml.XmlDocument.Load%2A> 會驗證來自讀取器的 XML 格式是否正確。 如果 XML 的格式不正確，則 <xref:System.Xml.XmlDocument.Load%2A> 會擲回例外狀況。 例如，下列節點集包含兩個根層級的項目，XML 的格式不正確，並且 <xref:System.Xml.XmlDocument.Load%2A> 會擲回例外狀況。  
   
--   Comment 節點之後依次跟隨 Element 節點、Element 節點及 EndElement 節點。  
+- Comment 節點之後依次跟隨 Element 節點、Element 節點及 EndElement 節點。  
   
  由於缺少根層級的項目，因此下列節點集會建立不完整的 DOM。  
   
--   Comment 節點之後依次跟隨 ProcessingInstruction 節點、Comment 節點及 EndElement 節點。  
+- Comment 節點之後依次跟隨 ProcessingInstruction 節點、Comment 節點及 EndElement 節點。  
   
  如此就不會擲回例外狀況，而且會載入資料。 您可以將根項目加入至這些節點的最上層，並建立可正確儲存且格式正確的 XML。  
   
