@@ -2,12 +2,12 @@
 title: System.Uri 的國際資源識別項支援
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-ms.openlocfilehash: 589c49859592cba55cb5110fe65fdc49e451f478
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f78fff250aae177b5f0360e77a1c41a2f2bb0527
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769108"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647342"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>System.Uri 的國際資源識別項支援
 <xref:System.Uri?displayProperty=nameWithType> 類別已擴充加上國際資源識別碼 (IRI) 和國際化網域名稱 (IDN) 支援。 NET Framework 3.5、3.0 SP1 和 2.0 SP1 皆可使用這些增強功能。  
@@ -15,11 +15,11 @@ ms.locfileid: "59769108"
 ## <a name="iri-and-idn-support"></a>IRI 和 IDN 支援  
  網址通常是使用統一資源識別碼 (URI) 來表示，而 URI 是由非常有限的字元組構成：  
   
--   大寫和小寫的英文 ASCII 字母。  
+- 大寫和小寫的英文 ASCII 字母。  
   
--   0 到 9 位數。  
+- 0 到 9 位數。  
   
--   少數幾個其他 ASCII 符號。  
+- 少數幾個其他 ASCII 符號。  
   
  網際網路工程任務推動小組 (IETF) 發行的 RFC 2396 和 RFC 3986 中有記載 URI 的規格。  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cc9d592bc2030cdd17e7f87d7c5ac458dc01106
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 145e6b8891735c904aa98a36ccfd27958bdf788d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124809"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648611"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>做為回呼方法，委派封送處理
 此範例示範如何將委派傳遞至需要函式指標的 Unmanaged 函式。 委派是可保留方法參考的類別，並且相當於型別安全函式指標或回呼函式。
@@ -26,13 +26,13 @@ ms.locfileid: "59124809"
 
 Callback 範例會使用下列 Unmanaged 函式和其原始函式宣告，如下所示：
 
--   從 PinvokeLib.dll 匯出的 `TestCallBack`。
+- 從 PinvokeLib.dll 匯出的 `TestCallBack`。
 
     ```cpp
     void TestCallBack(FPTR pf, int value);
     ```
 
--   從 PinvokeLib.dll 匯出的 `TestCallBack2`。
+- 從 PinvokeLib.dll 匯出的 `TestCallBack2`。
 
     ```cpp
     void TestCallBack2(FPTR2 pf2, char* value);

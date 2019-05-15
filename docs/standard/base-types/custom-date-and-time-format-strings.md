@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8c9fe05049feff6e15c765212b72e35265fd844
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 90e9dbbd43751412c25dd5ca4dae2d503139db69
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345426"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634553"
 ---
 # <a name="custom-date-and-time-format-strings"></a>自訂日期與時間格式字串
 
@@ -348,11 +348,11 @@ ms.locfileid: "59345426"
 
 "K" 自訂格式規範表示日期和時間值的時區資訊。 與 <xref:System.DateTime> 值搭配使用這個格式規範時，結果字串會由 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 屬性的值定義：
 
--   若為本地時區 (<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 的 <xref:System.DateTimeKind.Local?displayProperty=nameWithType> 屬性值)，此規範相當於 "zzz" 規範，所產生的結果字串會包含本地與國際標準時間 (UTC) 之間的時差，例如 "-07:00"。
+- 若為本地時區 (<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 的 <xref:System.DateTimeKind.Local?displayProperty=nameWithType> 屬性值)，此規範相當於 "zzz" 規範，所產生的結果字串會包含本地與國際標準時間 (UTC) 之間的時差，例如 "-07:00"。
 
--   若為 UTC 時間 (<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 的 <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> 屬性值)，結果字串會包含 "Z" 字元來表示 UTC 日期。
+- 若為 UTC 時間 (<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 的 <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> 屬性值)，結果字串會包含 "Z" 字元來表示 UTC 日期。
 
--   若為未指定時區的時間 (<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 屬性等於 <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> 的時間)，結果就相當於 <xref:System.String.Empty?displayProperty=nameWithType>。
+- 若為未指定時區的時間 (<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 屬性等於 <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> 的時間)，結果就相當於 <xref:System.String.Empty?displayProperty=nameWithType>。
 
 若為 <xref:System.DateTimeOffset> 值，"K" 格式規範相當於 "zzz" 格式規範，所產生的結果字串會包含 <xref:System.DateTimeOffset> 值與 UTC 之間的時差。
 

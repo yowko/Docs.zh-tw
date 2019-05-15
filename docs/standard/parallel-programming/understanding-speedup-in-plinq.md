@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26128e5d707d3f331dc2b691f5a5f798bdf84c25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1905a61a1843427563ffcbad43ea6b2a4c161828
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322988"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654960"
 ---
 # <a name="understanding-speedup-in-plinq"></a>認識 PLINQ 中的加速
 PLINQ 的主要目的是要藉由在多核心電腦上平行執行查詢委派，來加快 LINQ to Objects 查詢的執行速度。 當來源集合中每個元素的處理各自獨立，個別委派之間沒有涉及任何共用狀態時，PLINQ 能夠發揮最佳執行效能。 這類作業在 LINQ to Objects 和 PLINQ 中相當常見，通常稱為「令人愉快的平行」，因為它們很容易出借本身供多個執行緒上的排程使用。 不過，並非所有查詢都全部由令人愉快的平行作業所組成；在大多數情況下，查詢會涉及一些無法平行處理或是會拖慢平行執行速度的運算子。 而且，即使查詢是完全令人愉快的平行查詢，PLINQ 仍然必須分割資料來源並在執行緒上排定工作，通常還會在查詢完成時合併結果。 所有這些作業都會計入平行處理的計算成本中；這些添加平行處理的成本稱為「額外負荷」。 若要在 PLINQ 查詢中達到最佳效能，目標就是要將令人愉快的平行部分提升到最高，並將需要額外負荷的部分降到最低。 本文提供資訊來協助您撰寫儘可能發揮最高效率又仍然能產生正確結果的 PLINQ 查詢。  
@@ -74,15 +74,15 @@ PLINQ 的主要目的是要藉由在多核心電腦上平行執行查詢委派�
   
  以下清單描述 PLINQ 預設將以循序模式執行的查詢型態：  
   
--   在已移除或已重新排列原始索引的排序或篩選運算子之後包含 Select、已編製索引的 Where、已編製索引的 SelectMany 或 ElementAt 子句的查詢。  
+- 在已移除或已重新排列原始索引的排序或篩選運算子之後包含 Select、已編製索引的 Where、已編製索引的 SelectMany 或 ElementAt 子句的查詢。  
   
--   包含 Take、TakeWhile、Skip、SkipWhile 運算子且來源序列中的索引不是按原始順序排列的查詢。  
+- 包含 Take、TakeWhile、Skip、SkipWhile 運算子且來源序列中的索引不是按原始順序排列的查詢。  
   
--   包含 Zip 或 SequenceEquals 的查詢，除非其中一個資料來源具有原始排序的索引，而且另一個資料來源也可以索引 (也就是陣列或 IList(T))。  
+- 包含 Zip 或 SequenceEquals 的查詢，除非其中一個資料來源具有原始排序的索引，而且另一個資料來源也可以索引 (也就是陣列或 IList(T))。  
   
--   包含 Concat 的查詢 (但套用至可編製索引的資料來源時除外)  
+- 包含 Concat 的查詢 (但套用至可編製索引的資料來源時除外)  
   
--   包含 Reverse 的查詢 (但套用至可編製索引的資料來源時除外)  
+- 包含 Reverse 的查詢 (但套用至可編製索引的資料來源時除外)  
   
 ## <a name="see-also"></a>另請參閱
 

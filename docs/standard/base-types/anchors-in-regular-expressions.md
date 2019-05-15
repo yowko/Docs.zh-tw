@@ -19,12 +19,12 @@ ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: f0e42c0032dc6f9dac0895a29db9de79547c0a49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85e971d3464b6f2a073288e7f8b5406563598f79
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675344"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634762"
 ---
 # <a name="anchors-in-regular-expressions"></a>規則運算式中的錨點
 <a name="top"></a> 錨點或不可部分完成的無寬度判斷提示會指定字串中必須比對的位置。 當您在搜尋運算式中使用錨點時，規則運算式引擎不會在字串中前進或使用字元；它只會尋找指定位置中的相符項目。 例如， `^` 指定必須從行首或字串的開頭開始比對。 因此，僅當行首出現 "http:" 時，規則運算式 `^http:` 才會與其相符。 下表列出 .NET 中此規則運算式所支援的錨點。  
@@ -46,9 +46,9 @@ ms.locfileid: "54675344"
   
  下列範例會在規則運算式中使用 `^` 錨點，該規則運算式會擷取與某些職業棒球隊存在期間年份相關的資訊。 此範例會呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法的兩個多載：  
   
--   在符合規則運算式模式的輸入字串中，對 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29> 多載的呼叫只會尋找其中的第一個子字串。  
+- 在符合規則運算式模式的輸入字串中，對 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29> 多載的呼叫只會尋找其中的第一個子字串。  
   
--   對 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29> 參數的呼叫 ( `options` 參數設為 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> ) 會尋找所有五個子字串。  
+- 對 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29> 參數的呼叫 ( `options` 參數設為 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> ) 會尋找所有五個子字串。  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/startofstring1.cs#1)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring1.vb#1)]  
