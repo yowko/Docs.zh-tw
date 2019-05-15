@@ -15,25 +15,25 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-ms.openlocfilehash: a0af2fa8bbe2efb2dc4fb3d1177c4950dcec87cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9cfa8d6a71898a1d1ea91825ffc9a37f4654ebd5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135796"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583527"
 ---
-# <a name="using-secure-sockets-layer"></a><span data-ttu-id="4df03-102">使用安全通訊端層</span><span class="sxs-lookup"><span data-stu-id="4df03-102">Using Secure Sockets Layer</span></span>
-<span data-ttu-id="4df03-103"><xref:System.Net> 類別會使用安全通訊端層 (SSL) 來加密數個網路通訊協定的連線。</span><span class="sxs-lookup"><span data-stu-id="4df03-103">The <xref:System.Net> classes use the Secure Sockets Layer (SSL) to encrypt the connection for several network protocols.</span></span>  
+# <a name="using-secure-sockets-layer"></a><span data-ttu-id="a98cb-102">使用安全通訊端層</span><span class="sxs-lookup"><span data-stu-id="a98cb-102">Using Secure Sockets Layer</span></span>
+<span data-ttu-id="a98cb-103"><xref:System.Net> 類別會使用安全通訊端層 (SSL) 來加密數個網路通訊協定的連線。</span><span class="sxs-lookup"><span data-stu-id="a98cb-103">The <xref:System.Net> classes use the Secure Sockets Layer (SSL) to encrypt the connection for several network protocols.</span></span>  
   
- <span data-ttu-id="4df03-104">若為 HTTP 連線，<xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 類別會使用 SSL 來與支援 SSL 的 Web 主機通訊。</span><span class="sxs-lookup"><span data-stu-id="4df03-104">For http connections, the <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse> classes use SSL to communicate with web hosts that support SSL.</span></span> <span data-ttu-id="4df03-105">決定使用 SSL 與否是 <xref:System.Net.WebRequest> 類別根據給定的 URI 來進行。</span><span class="sxs-lookup"><span data-stu-id="4df03-105">The decision to use SSL is made by the <xref:System.Net.WebRequest> class, based on the URI it is given.</span></span> <span data-ttu-id="4df03-106">如果 URI 開頭是 "https:"，則使用 SSL。如果 URI 開頭是 "http:"，則使用未加密的連線。</span><span class="sxs-lookup"><span data-stu-id="4df03-106">If the URI begins with "https:", SSL is used; if the URI begins with "http:", an unencrypted connection is used.</span></span>  
+ <span data-ttu-id="a98cb-104">若為 HTTP 連線，<xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 類別會使用 SSL 來與支援 SSL 的 Web 主機通訊。</span><span class="sxs-lookup"><span data-stu-id="a98cb-104">For http connections, the <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse> classes use SSL to communicate with web hosts that support SSL.</span></span> <span data-ttu-id="a98cb-105">決定使用 SSL 與否是 <xref:System.Net.WebRequest> 類別根據給定的 URI 來進行。</span><span class="sxs-lookup"><span data-stu-id="a98cb-105">The decision to use SSL is made by the <xref:System.Net.WebRequest> class, based on the URI it is given.</span></span> <span data-ttu-id="a98cb-106">如果 URI 開頭是 "https:"，則使用 SSL。如果 URI 開頭是 "http:"，則使用未加密的連線。</span><span class="sxs-lookup"><span data-stu-id="a98cb-106">If the URI begins with "https:", SSL is used; if the URI begins with "http:", an unencrypted connection is used.</span></span>  
   
- <span data-ttu-id="4df03-107">若要搭配使用 SSL 與檔案傳輸通訊協定 (FTP)，請將 <xref:System.Net.FtpWebRequest.EnableSsl> 屬性設定為 true，才能呼叫 <xref:System.Net.FtpWebRequest.GetResponse>。</span><span class="sxs-lookup"><span data-stu-id="4df03-107">To use SSL with File Transfer Protocol (FTP), set the <xref:System.Net.FtpWebRequest.EnableSsl> property to true prior to calling <xref:System.Net.FtpWebRequest.GetResponse>.</span></span> <span data-ttu-id="4df03-108">同樣地，若要搭配使用 SSL 與簡易郵件傳輸通訊協定 (SMTP)，請將 <xref:System.Net.Mail.SmtpClient.EnableSsl> 屬性設定為 true，然後傳送電子郵件。</span><span class="sxs-lookup"><span data-stu-id="4df03-108">Similarly, to use SSL with Simple Mail Transport Protocol (SMTP), set the <xref:System.Net.Mail.SmtpClient.EnableSsl> property to true prior to sending the email.</span></span>  
+ <span data-ttu-id="a98cb-107">若要搭配使用 SSL 與檔案傳輸通訊協定 (FTP)，請將 <xref:System.Net.FtpWebRequest.EnableSsl> 屬性設定為 true，才能呼叫 <xref:System.Net.FtpWebRequest.GetResponse>。</span><span class="sxs-lookup"><span data-stu-id="a98cb-107">To use SSL with File Transfer Protocol (FTP), set the <xref:System.Net.FtpWebRequest.EnableSsl> property to true prior to calling <xref:System.Net.FtpWebRequest.GetResponse>.</span></span> <span data-ttu-id="a98cb-108">同樣地，若要搭配使用 SSL 與簡易郵件傳輸通訊協定 (SMTP)，請將 <xref:System.Net.Mail.SmtpClient.EnableSsl> 屬性設定為 true，然後傳送電子郵件。</span><span class="sxs-lookup"><span data-stu-id="a98cb-108">Similarly, to use SSL with Simple Mail Transport Protocol (SMTP), set the <xref:System.Net.Mail.SmtpClient.EnableSsl> property to true prior to sending the email.</span></span>  
   
- <span data-ttu-id="4df03-109"><xref:System.Net.Security.SslStream> 類別提供 SSL 以資料流為基礎的抽象概念，並提供許多方式來設定 SSL 交握。</span><span class="sxs-lookup"><span data-stu-id="4df03-109">The <xref:System.Net.Security.SslStream> class provides a stream-based abstraction for SSL, and offers many ways to configure the SSL handshake.</span></span>  
+ <span data-ttu-id="a98cb-109"><xref:System.Net.Security.SslStream> 類別提供 SSL 以資料流為基礎的抽象概念，並提供許多方式來設定 SSL 交握。</span><span class="sxs-lookup"><span data-stu-id="a98cb-109">The <xref:System.Net.Security.SslStream> class provides a stream-based abstraction for SSL, and offers many ways to configure the SSL handshake.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4df03-110">範例</span><span class="sxs-lookup"><span data-stu-id="4df03-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="a98cb-110">範例</span><span class="sxs-lookup"><span data-stu-id="a98cb-110">Example</span></span>  
   
-### <a name="code"></a><span data-ttu-id="4df03-111">程式碼</span><span class="sxs-lookup"><span data-stu-id="4df03-111">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="a98cb-111">程式碼</span><span class="sxs-lookup"><span data-stu-id="a98cb-111">Code</span></span>  
   
 ```vb  
 Dim MyURI As String = "https://www.contoso.com/"  
@@ -57,13 +57,13 @@ request.Method = WebRequestMethods.Ftp.DeleteFile;
 FtpWebResponse response = (FtpWebResponse)request.GetResponse();  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="4df03-112">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="4df03-112">Compiling the Code</span></span>  
- <span data-ttu-id="4df03-113">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="4df03-113">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="a98cb-112">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="a98cb-112">Compiling the Code</span></span>  
+ <span data-ttu-id="a98cb-113">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="a98cb-113">This example requires:</span></span>  
   
--   <span data-ttu-id="4df03-114">對 **System.Net** 命名空間的參考。</span><span class="sxs-lookup"><span data-stu-id="4df03-114">References to the **System.Net** namespace.</span></span>  
+- <span data-ttu-id="a98cb-114">對 **System.Net** 命名空間的參考。</span><span class="sxs-lookup"><span data-stu-id="a98cb-114">References to the **System.Net** namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4df03-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4df03-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a98cb-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a98cb-115">See also</span></span>
 
-- [<span data-ttu-id="4df03-116">網路程式設計的安全性</span><span class="sxs-lookup"><span data-stu-id="4df03-116">Security in Network Programming</span></span>](../../../docs/framework/network-programming/security-in-network-programming.md)
-- [<span data-ttu-id="4df03-117">以 .NET Framework 進行網路程式設計</span><span class="sxs-lookup"><span data-stu-id="4df03-117">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)
-- [<span data-ttu-id="4df03-118">憑證的選取和驗證</span><span class="sxs-lookup"><span data-stu-id="4df03-118">Certificate Selection and Validation</span></span>](../../../docs/framework/network-programming/certificate-selection-and-validation.md)
+- [<span data-ttu-id="a98cb-116">網路程式設計的安全性</span><span class="sxs-lookup"><span data-stu-id="a98cb-116">Security in Network Programming</span></span>](../../../docs/framework/network-programming/security-in-network-programming.md)
+- [<span data-ttu-id="a98cb-117">以 .NET Framework 進行網路程式設計</span><span class="sxs-lookup"><span data-stu-id="a98cb-117">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)
+- [<span data-ttu-id="a98cb-118">憑證的選取和驗證</span><span class="sxs-lookup"><span data-stu-id="a98cb-118">Certificate Selection and Validation</span></span>](../../../docs/framework/network-programming/certificate-selection-and-validation.md)
