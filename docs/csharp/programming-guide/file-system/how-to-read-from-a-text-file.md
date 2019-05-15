@@ -10,39 +10,39 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 560453a81124a3ee52a2ffd794ddac026c7394a5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 236e730eaae0bc73c715e9b1c2c71d6c870d78e3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978016"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608540"
 ---
-# <a name="how-to-read-from-a-text-file-c-programming-guide"></a><span data-ttu-id="e0b47-102">作法：從文字檔讀取 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="e0b47-102">How to: Read From a Text File (C# Programming Guide)</span></span>
-<span data-ttu-id="e0b47-103">這個範例會使用 <xref:System.IO.File?displayProperty=nameWithType> 類別中的靜態方法 <xref:System.IO.File.ReadAllText%2A> 和 <xref:System.IO.File.ReadAllLines%2A>，來讀取文字檔的內容。</span><span class="sxs-lookup"><span data-stu-id="e0b47-103">This example reads the contents of a text file by using the static methods <xref:System.IO.File.ReadAllText%2A> and <xref:System.IO.File.ReadAllLines%2A> from the <xref:System.IO.File?displayProperty=nameWithType> class.</span></span>  
+# <a name="how-to-read-from-a-text-file-c-programming-guide"></a><span data-ttu-id="0549e-102">作法：從文字檔讀取 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="0549e-102">How to: Read From a Text File (C# Programming Guide)</span></span>
+<span data-ttu-id="0549e-103">這個範例會使用 <xref:System.IO.File?displayProperty=nameWithType> 類別中的靜態方法 <xref:System.IO.File.ReadAllText%2A> 和 <xref:System.IO.File.ReadAllLines%2A>，來讀取文字檔的內容。</span><span class="sxs-lookup"><span data-stu-id="0549e-103">This example reads the contents of a text file by using the static methods <xref:System.IO.File.ReadAllText%2A> and <xref:System.IO.File.ReadAllLines%2A> from the <xref:System.IO.File?displayProperty=nameWithType> class.</span></span>  
   
- <span data-ttu-id="e0b47-104">如需使用 <xref:System.IO.StreamReader> 的範例，請參閱[如何：一次一行讀取文字檔](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md)。</span><span class="sxs-lookup"><span data-stu-id="e0b47-104">For an example that uses <xref:System.IO.StreamReader>, see [How to: Read a Text File One Line at a Time](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).</span></span>  
+ <span data-ttu-id="0549e-104">如需使用 <xref:System.IO.StreamReader> 的範例，請參閱[如何：一次一行讀取文字檔](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md)。</span><span class="sxs-lookup"><span data-stu-id="0549e-104">For an example that uses <xref:System.IO.StreamReader>, see [How to: Read a Text File One Line at a Time](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e0b47-105">此範例中所用的檔案是在[如何︰寫入文字檔](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md)主題中建立。</span><span class="sxs-lookup"><span data-stu-id="e0b47-105">The files that are used in this example are created in the topic [How to: Write to a Text File](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md).</span></span>  
+>  <span data-ttu-id="0549e-105">此範例中所用的檔案是在[如何︰寫入文字檔](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md)主題中建立。</span><span class="sxs-lookup"><span data-stu-id="0549e-105">The files that are used in this example are created in the topic [How to: Write to a Text File](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e0b47-106">範例</span><span class="sxs-lookup"><span data-stu-id="e0b47-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="0549e-106">範例</span><span class="sxs-lookup"><span data-stu-id="0549e-106">Example</span></span>  
  [!code-csharp[csFilesandFolders#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#4)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="e0b47-107">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="e0b47-107">Compiling the Code</span></span>  
- <span data-ttu-id="e0b47-108">將程式碼複製並貼到 C# 主控台應用程式中。</span><span class="sxs-lookup"><span data-stu-id="e0b47-108">Copy the code and paste it into a C# console application.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="0549e-107">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="0549e-107">Compiling the Code</span></span>  
+ <span data-ttu-id="0549e-108">將程式碼複製並貼到 C# 主控台應用程式中。</span><span class="sxs-lookup"><span data-stu-id="0549e-108">Copy the code and paste it into a C# console application.</span></span>  
   
- <span data-ttu-id="e0b47-109">如果您不想使用[如何：寫入文字檔](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md)中的文字檔，請以您電腦上的適當路徑和檔案名稱取代 `ReadAllText` 和 `ReadAllLines` 的引數。</span><span class="sxs-lookup"><span data-stu-id="e0b47-109">If you are not using the text files from [How to: Write to a Text File](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md), replace the argument to `ReadAllText` and `ReadAllLines` with the appropriate path and file name on your computer.</span></span>  
+ <span data-ttu-id="0549e-109">如果您不想使用[如何：寫入文字檔](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md)中的文字檔，請以您電腦上的適當路徑和檔案名稱取代 `ReadAllText` 和 `ReadAllLines` 的引數。</span><span class="sxs-lookup"><span data-stu-id="0549e-109">If you are not using the text files from [How to: Write to a Text File](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md), replace the argument to `ReadAllText` and `ReadAllLines` with the appropriate path and file name on your computer.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="e0b47-110">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="e0b47-110">Robust Programming</span></span>  
- <span data-ttu-id="e0b47-111">以下條件可能會造成例外狀況：</span><span class="sxs-lookup"><span data-stu-id="e0b47-111">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="0549e-110">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="0549e-110">Robust Programming</span></span>  
+ <span data-ttu-id="0549e-111">以下條件可能會造成例外狀況：</span><span class="sxs-lookup"><span data-stu-id="0549e-111">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="e0b47-112">檔案不存在或不在指定的位置。</span><span class="sxs-lookup"><span data-stu-id="e0b47-112">The file doesn't exist or doesn't exist at the specified location.</span></span> <span data-ttu-id="e0b47-113">請檢查路徑和檔案名稱的拼字。</span><span class="sxs-lookup"><span data-stu-id="e0b47-113">Check the path and the spelling of the file name.</span></span>  
+- <span data-ttu-id="0549e-112">檔案不存在或不在指定的位置。</span><span class="sxs-lookup"><span data-stu-id="0549e-112">The file doesn't exist or doesn't exist at the specified location.</span></span> <span data-ttu-id="0549e-113">請檢查路徑和檔案名稱的拼字。</span><span class="sxs-lookup"><span data-stu-id="0549e-113">Check the path and the spelling of the file name.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="e0b47-114">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="e0b47-114">.NET Framework Security</span></span>  
- <span data-ttu-id="e0b47-115">請勿依賴檔案的名稱來判斷檔案的內容。</span><span class="sxs-lookup"><span data-stu-id="e0b47-115">Do not rely on the name of a file to determine the contents of the file.</span></span> <span data-ttu-id="e0b47-116">例如，`myFile.cs` 檔案可能不是 C# 原始程式檔。</span><span class="sxs-lookup"><span data-stu-id="e0b47-116">For example, the file `myFile.cs` might not be a C# source file.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="0549e-114">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="0549e-114">.NET Framework Security</span></span>  
+ <span data-ttu-id="0549e-115">請勿依賴檔案的名稱來判斷檔案的內容。</span><span class="sxs-lookup"><span data-stu-id="0549e-115">Do not rely on the name of a file to determine the contents of the file.</span></span> <span data-ttu-id="0549e-116">例如，`myFile.cs` 檔案可能不是 C# 原始程式檔。</span><span class="sxs-lookup"><span data-stu-id="0549e-116">For example, the file `myFile.cs` might not be a C# source file.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e0b47-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e0b47-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0549e-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0549e-117">See also</span></span>
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [<span data-ttu-id="e0b47-118">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="e0b47-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="e0b47-119">檔案系統和登錄 (C# 程式設計指南)</span><span class="sxs-lookup"><span data-stu-id="e0b47-119">File System and the Registry (C# Programming Guide)</span></span>](../../../csharp/programming-guide/file-system/index.md)
+- [<span data-ttu-id="0549e-118">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="0549e-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="0549e-119">檔案系統和登錄 (C# 程式設計指南)</span><span class="sxs-lookup"><span data-stu-id="0549e-119">File System and the Registry (C# Programming Guide)</span></span>](../../../csharp/programming-guide/file-system/index.md)
