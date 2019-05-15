@@ -7,27 +7,27 @@ helpviewer_keywords:
 - connections [Visual Basic], checking status
 - connection status [Visual Basic]
 ms.assetid: 4d9ee8ab-9a6f-4279-ace4-b75afc976a74
-ms.openlocfilehash: fd618852c2d0650f168edf8dac53931216fc3a9b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1a03b181c2e363c3380c4f9858b629713641f2c2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826258"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620679"
 ---
-# <a name="how-to-check-connection-status-in-visual-basic"></a><span data-ttu-id="35c42-102">作法：在 Visual Basic 中檢查連線狀態</span><span class="sxs-lookup"><span data-stu-id="35c42-102">How to: Check Connection Status in Visual Basic</span></span>
-<span data-ttu-id="35c42-103"><xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> 屬性可用來判斷電腦具有工作中的網路或網際網路連線。</span><span class="sxs-lookup"><span data-stu-id="35c42-103">The <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> property can be used to determine whether the computer has a working network or Internet connection.</span></span>  
+# <a name="how-to-check-connection-status-in-visual-basic"></a><span data-ttu-id="aafb1-102">作法：在 Visual Basic 中檢查連線狀態</span><span class="sxs-lookup"><span data-stu-id="aafb1-102">How to: Check Connection Status in Visual Basic</span></span>
+<span data-ttu-id="aafb1-103"><xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> 屬性可用來判斷電腦具有工作中的網路或網際網路連線。</span><span class="sxs-lookup"><span data-stu-id="aafb1-103">The <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> property can be used to determine whether the computer has a working network or Internet connection.</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-check-whether-a-computer-has-a-working-connection"></a><span data-ttu-id="35c42-104">檢查電腦是否有工作中的連線</span><span class="sxs-lookup"><span data-stu-id="35c42-104">To check whether a computer has a working connection</span></span>  
+### <a name="to-check-whether-a-computer-has-a-working-connection"></a><span data-ttu-id="aafb1-104">檢查電腦是否有工作中的連線</span><span class="sxs-lookup"><span data-stu-id="aafb1-104">To check whether a computer has a working connection</span></span>  
   
--   <span data-ttu-id="35c42-105">判斷 `IsAvailable` 屬性是 `True` 或 `False`。</span><span class="sxs-lookup"><span data-stu-id="35c42-105">Determine whether the `IsAvailable` property is `True` or `False`.</span></span> <span data-ttu-id="35c42-106">下列程式碼會檢查並報告屬性的狀態︰</span><span class="sxs-lookup"><span data-stu-id="35c42-106">The following code checks the property's status and reports it:</span></span>  
+- <span data-ttu-id="aafb1-105">判斷 `IsAvailable` 屬性是 `True` 或 `False`。</span><span class="sxs-lookup"><span data-stu-id="aafb1-105">Determine whether the `IsAvailable` property is `True` or `False`.</span></span> <span data-ttu-id="aafb1-106">下列程式碼會檢查並報告屬性的狀態︰</span><span class="sxs-lookup"><span data-stu-id="aafb1-106">The following code checks the property's status and reports it:</span></span>  
   
      [!code-vb[VbResourceTasks#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#3)]  
   
-     <span data-ttu-id="35c42-107">這個程式碼範例也可用為 IntelliSense 程式碼片段。</span><span class="sxs-lookup"><span data-stu-id="35c42-107">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="35c42-108">在程式碼片段選擇器中，該程式碼片段會位於 [連接和網路] 中。</span><span class="sxs-lookup"><span data-stu-id="35c42-108">In the code snippet picker, it is located in **Connectivity and Networking**.</span></span> <span data-ttu-id="35c42-109">如需詳細資訊，請參閱[程式碼片段](/visualstudio/ide/code-snippets)。</span><span class="sxs-lookup"><span data-stu-id="35c42-109">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
+     <span data-ttu-id="aafb1-107">這個程式碼範例也可用為 IntelliSense 程式碼片段。</span><span class="sxs-lookup"><span data-stu-id="aafb1-107">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="aafb1-108">在程式碼片段選擇器中，該程式碼片段會位於 [連接和網路] 中。</span><span class="sxs-lookup"><span data-stu-id="aafb1-108">In the code snippet picker, it is located in **Connectivity and Networking**.</span></span> <span data-ttu-id="aafb1-109">如需詳細資訊，請參閱[程式碼片段](/visualstudio/ide/code-snippets)。</span><span class="sxs-lookup"><span data-stu-id="aafb1-109">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="35c42-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="35c42-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aafb1-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="aafb1-110">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable>
