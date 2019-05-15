@@ -6,16 +6,16 @@ helpviewer_keywords:
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: 6e8b4eba40cc1872cb289ca120679bb951f2652a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e45f8eafa696c61f917e333c665380c454401e0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022373"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589008"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework 應用程式中的 COM 互通性 (Visual Basic)
 
-當您想要在相同的應用程式中使用 COM 物件和.NET Framework 物件時，您需要解決的物件存在於記憶體中的差異。 .NET Framework 物件位於 managed 記憶體 — common language runtime 所控制的記憶體，並可以由執行階段移動，視需要。 COM 物件位在 unmanaged 記憶體，且不應該將移至另一個記憶體位置。 Visual Studio 和[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]提供工具來控制這些互動 managed 和 unmanaged 元件。 如需有關 managed 程式碼的詳細資訊，請參閱[Common Language Runtime](../../../standard/clr.md)。
+當您想要在相同的應用程式中使用 COM 物件和.NET Framework 物件時，您需要解決的物件存在於記憶體中的差異。 .NET Framework 物件位於 managed 記憶體 — common language runtime 所控制的記憶體，並可以由執行階段移動，視需要。 COM 物件位在 unmanaged 記憶體，且不應該將移至另一個記憶體位置。 Visual Studio 和.NET Framework 提供工具來控制這些 managed 和 unmanaged 元件的互動。 如需有關 managed 程式碼的詳細資訊，請參閱[Common Language Runtime](../../../standard/clr.md)。
 
 除了.NET 應用程式中使用 COM 物件，您可能也想要使用 Visual Basic 來開發可從 unmanaged 程式碼，透過 COM 存取的物件
 

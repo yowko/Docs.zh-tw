@@ -3,12 +3,12 @@ title: C# 簡介 - 互動式教學課程
 description: 在您的瀏覽器中學習 C#，並開始使用您自己的開發環境
 ms.date: 01/30/2018
 ms.custom: mvc
-ms.openlocfilehash: 784461a707f0c40fd559b5652358bc8ec2ba9279
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 580339f6724066c9fb33ee734ff35a34081e1426
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675646"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634504"
 ---
 # <a name="introduction-to-c"></a>C\# 簡介
 

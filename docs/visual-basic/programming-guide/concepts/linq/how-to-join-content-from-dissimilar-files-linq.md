@@ -1,15 +1,15 @@
 ---
-title: HOW TO：將內容從不同的檔案 (LINQ) (Visual Basic)
+title: 作法：將內容從不同的檔案 (LINQ) (Visual Basic)
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 91337e6a20329cbf3d4d6f0d30a2d604e80474a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ac91ffaf914a8b799ad1124e9361595d482366b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778062"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593496"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>HOW TO：將內容從不同的檔案 (LINQ) (Visual Basic)
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>作法：將內容從不同的檔案 (LINQ) (Visual Basic)
 
 此範例示範如何將兩個逗號分隔檔案中資料的共同值當做相符的索引鍵，聯結這兩個檔案中的資料。 如果您必須將兩個試算表中的資料，或一個試算表和一個不同格式之檔案中的資料合併為新的檔案，這個方法就很有用。 您可以修改範例，以搭配任何類型的結構化文字使用。  
   
@@ -120,14 +120,6 @@ End Class
 ' 12 total names in list 
 ```  
 
-## <a name="compiling-the-code"></a>編譯程式碼
-
-建立並編譯專案，以下列選項之一為目標：
-
-- .NET Framework 3.5 版與對 System.Core.dll 的參考。
-- NET Framework 4.0 或更高版本。
-- NET Core 1.0 或更高版本。
-  
 ## <a name="see-also"></a>另請參閱
 
 - [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

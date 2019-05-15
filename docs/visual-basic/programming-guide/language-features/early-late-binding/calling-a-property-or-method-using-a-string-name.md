@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: e267c0c4d1d3e8f986348863d933c984f686b33b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92430f23b3d4d6237d0b6ec606ce2cb9b945f6f8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973338"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590026"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>使用字串名稱呼叫屬性或方法 (Visual Basic)
 在大部分情況下，您可以在設計階段探索的屬性和方法的物件和撰寫程式碼來處理它們。 不過，在某些情況下您可能不知道物件的屬性和方法事先，或者您可能只想讓使用者指定的屬性，或在執行階段執行方法的彈性。  
@@ -31,7 +31,7 @@ ms.locfileid: "61973338"
   
  第一個引數，*物件*，會使用您想要處理之物件的名稱。 *程序名稱*引數包含要叫用方法或屬性程序名稱的字串。 *CallType*引數的常數，表示要叫用的程序的類型： 一種方法 (`Microsoft.VisualBasic.CallType.Method`)，讀取的屬性 (`Microsoft.VisualBasic.CallType.Get`)，或將屬性設定 (`Microsoft.VisualBasic.CallType.Set`)。 *引數*引數，這是選擇性的採用陣列型別的`Object`，其中包含的程序的任何引數。  
   
- 您可以使用`CallByName`類別中目前的方案中，但通常可用來存取 COM 物件或物件從[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]組件。  
+ 您可以使用`CallByName`中目前的方案中，但它的類別是最常用於從.NET Framework 組件存取 COM 物件。  
   
  假設您將加入包含類別，名為組件的參考`MathClass`，其中包含新的函式，名為`SquareRoot`，如下列程式碼所示：  
   

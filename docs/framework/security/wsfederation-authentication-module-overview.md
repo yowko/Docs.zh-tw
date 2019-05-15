@@ -3,12 +3,12 @@ title: WSFederation 驗證模組概觀
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: f4dc63272c47dc0cd9eaa15986e4369d9d689b64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 63090efdf97066b4a276880d4f4be0f843de6800
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592371"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586047"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 驗證模組概觀
 Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-同盟驗證模組 (WS-FAM) 提供同盟驗證的支援。 本主題將協助您了解同盟驗證的運作方式以及如何使用它。  
@@ -44,7 +44,7 @@ Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-
  WS FAM 還會引發數個事件，讓您能夠在 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式中自訂其功能。  
   
 ### <a name="how-the-ws-fam-works"></a>WS-FAM 的運作方式  
- WS-FAM 會使用 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 類別進行實作。 一般來說，您會將 WS-FAM 加入 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] RP 應用程式的 HTTP 管線。 當未驗證使用者嘗試存取受保護資源時，RP 就會傳回「401 授權遭拒」HTTP 回應。 WS-FAM 會攔截這個回應而不讓用戶端接收，接著將使用者重新導向至指定的 STS。 STS 會簽發安全性權杖，而 WS-FAM 又會再度攔截此權杖。 WS-FAM 會使用此權杖來為已驗證的使用者建立 <xref:System.Security.Claims.ClaimsPrincipal> 執行個體，如此便可使標準的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 授權機制開始運作。  
+ WS-FAM 會使用 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 類別進行實作。 一般來說，您會將 WS-FAM 加入 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] RP 應用程式的 HTTP 管線。 當未驗證使用者嘗試存取受保護資源時，RP 就會傳回「401 授權遭拒」HTTP 回應。 WS-FAM 會攔截這個回應而不讓用戶端接收，接著將使用者重新導向至指定的 STS。 STS 會簽發安全性權杖，而 WS-FAM 又會再度攔截此權杖。 WS-FAM 會使用權杖來建立的執行個體<xref:System.Security.Claims.ClaimsPrincipal>通過驗證的使用者，讓一般的.NET Framework 授權機制開始運作。  
   
  因為 HTTP 是無狀態的，所以我們需要採用一種方法，以避免每當使用者嘗試存取其他受保護資源時，就得重複這一整個程序的狀況。 這時就需要用到 <xref:System.IdentityModel.Services.SessionAuthenticationModule>。 當 STS 簽發使用者的安全性權杖時，<xref:System.IdentityModel.Services.SessionAuthenticationModule> 也會建立該使用者的工作階段安全性權杖，並將它放入 Cookie 中。 在處理後續要求時，<xref:System.IdentityModel.Services.SessionAuthenticationModule> 會攔截這個 Cookie，並使用它來重新建構使用者的 <xref:System.Security.Claims.ClaimsPrincipal>。  
   

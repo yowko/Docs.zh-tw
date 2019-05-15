@@ -2,12 +2,12 @@
 title: ADO.NET 的新功能
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 76ded71e7fa5ece382d0b0947eefa05682dc0f8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b54f7ab6505f86d0447654f21b197644d68254c0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673094"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583444"
 ---
 # <a name="whats-new-in-adonet"></a>ADO.NET 的新功能
 
@@ -15,7 +15,7 @@ ms.locfileid: "61673094"
 
 ## <a name="sqlclient-data-provider"></a>SqlClient Data Provider
 
-下列功能是新功能[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for SQL Server 中[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:
+在.NET Framework Data Provider for SQL Server 中的新功能如下[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:
 
 - ConnectRetryCount 和 ConnectRetryInterval 連接字串關鍵字 (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) 可讓您控制閒置連接恢復功能。
 
@@ -43,7 +43,7 @@ ms.locfileid: "61673094"
 
 - SqlClient 支援連接至 LocalDB 資料庫。 如需詳細資訊，請參閱 < [LocalDB 的 SqlClient 支援](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)。
 
-- `Type System Version=SQL Server 2012;` 是傳遞至 `Type System Version` 連接屬性的新值。 `Type System Version=Latest;` 值現在已過時，並與 `Type System Version=SQL Server 2008;` 相等。 如需詳細資訊，請參閱<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>。
+- `Type System Version=SQL Server 2012;` 是傳遞至 `Type System Version` 連接屬性的新值。 `Type System Version=Latest;` 值現在已過時，並與 `Type System Version=SQL Server 2008;` 相等。 如需詳細資訊，請參閱 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>。
 
 - SqlClient 提供額外的疏鬆資料行支援，這是在 SQL Server 2008 中新增的功能。 如果您的應用程式已存取使用疏鬆資料行之資料表中的資料，效能應該會有所提高。 <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 的 IsColumnSet 資料行指出資料行是否為屬於資料行集的疏鬆資料行。 <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 指出資料行是否為疏鬆資料行 (請參閱[SQL Server 結構描述集合](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)如需詳細資訊)。 如需有關疏鬆資料行的詳細資訊，請參閱 <<c0> [ 使用疏鬆資料行](https://go.microsoft.com/fwlink/?LinkId=224244)。
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 2064c21d3ec0cd29ed5c41a2f4ba2fd8870926b0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b13d8266d0702d831a0f5ebb3a9586864fe22ccb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618209"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586524"
 ---
 # <a name="-link-visual-basic"></a>-link (Visual Basic)
 讓編譯器將所指定組件的 COM 類型資訊全部提供給您目前編譯的專案。  
@@ -55,7 +55,7 @@ ms.locfileid: "64618209"
   
  使用[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)指定一或多個組件參考所在的目錄。  
   
- 像是[/reference](../../../visual-basic/reference/command-line-compiler/reference.md)編譯器選項`-link`編譯器選項會使用參考常用的 Vbc.rsp 回應檔[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]組件。 使用  [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)編譯器選項，如果不想讓編譯器使用 Vbc.rsp 檔案。  
+ 像是[/reference](../../../visual-basic/reference/command-line-compiler/reference.md)編譯器選項，`-link`編譯器選項會使用參考常用的.NET Framework 組件的 Vbc.rsp 回應檔。 使用  [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)編譯器選項，如果不想讓編譯器使用 Vbc.rsp 檔案。  
   
  `-link` 的簡短形式為 `-l`。  
   
