@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f81af76ed305fb614202c240e449adc62b310933
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c261a025548b2d22f6df3051dbcdb637723d4324
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189927"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599462"
 ---
 # <a name="mitigation-wpf-layout"></a>風險降低：WPF 配置
 WPF 控制項的版面配置可能略有不同。  
@@ -17,11 +17,11 @@ WPF 控制項的版面配置可能略有不同。
 ## <a name="impact"></a>影響  
  此變更的結果：  
   
--   項目寬度或高度的增減最多不超過一個像素。  
+- 項目寬度或高度的增減最多不超過一個像素。  
   
--   物件的位置的位最多不超過一個像素。  
+- 物件的位置的位最多不超過一個像素。  
   
--   置中項目的垂直或水平位移最多不超過一個像素。  
+- 置中項目的垂直或水平位移最多不超過一個像素。  
   
  預設只有以 .NET Framework 4.6 為目標的應用程式才會啟用此新版面配置。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc90bedeee2d04c28a3860713ca5952a4564d3bd
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 8bad0abdba4c14659fdfa9b8064ebb8203100b33
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674733"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607880"
 ---
 # <a name="64-bit-applications"></a>64 位元應用程式
 您在編譯應用程式時，可以指定其應以原生應用程式在 Windows 64 位元作業系統上或在 WOW64 下 (Windows 64 位元上的 Windows 32 位元) 執行。 WOW64 是讓 32 位元應用程式可在 64 位元系統上執行的相容性環境。 所有 64 位元版本的 Windows 作業系統中都包含 WOW64。  
@@ -30,26 +30,26 @@ ms.locfileid: "55674733"
   
  許多組件在 32 位元 CLR 和 64 位元 CLR 上以相同方式執行。 不過，取決於 CLR，有些程式可能會有不同的行為，若它們包含下列一或多項情形：  
   
--   包含視平台而變更大小之成員的結構，(例如任何指標類型)。  
+- 包含視平台而變更大小之成員的結構，(例如任何指標類型)。  
   
--   包含常數大小的指標算術。  
+- 包含常數大小的指標算術。  
   
--   不正確的平台叫用，或是使用 `Int32` 而不是 `IntPtr` 作為控點的 COM 宣告。  
+- 不正確的平台叫用，或是使用 `Int32` 而不是 `IntPtr` 作為控點的 COM 宣告。  
   
--   將 `IntPtr` 轉換到 `Int32` 的程式碼。  
+- 將 `IntPtr` 轉換到 `Int32` 的程式碼。  
   
  如需如何將 32 位元應用程式移植到 64 位元 CLR 上執行的詳細資訊，請參閱[將 32 位元受控碼移轉至 64 位元](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973190(v=msdn.10))。  
   
 ## <a name="general-64-bit-programming-information"></a>64 位元程式設計的一般資訊  
  如需 64 位元程式設計的一般資訊，請參閱下列文件：  
   
--   如需 64 位元 Windows 電腦上的 64 位元版本 CLR 的詳細資訊，請參閱 MSDN 網站上的 [.NET Framework 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=37079)。  
+- 如需 64 位元 Windows 電腦上的 64 位元版本 CLR 的詳細資訊，請參閱 MSDN 網站上的 [.NET Framework 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=37079)。  
   
--   在 [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] 文件中，請參閱 [64 位元 Windows 程式設計指南](https://go.microsoft.com/fwlink/p/?LinkId=253512)。  
+- 在 [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] 文件中，請參閱 [64 位元 Windows 程式設計指南](https://go.microsoft.com/fwlink/p/?LinkId=253512)。  
   
--   如需如何下載 64 位元版本 CLR 的詳細資訊，請參閱 MSDN 網站上的 [.NET Framework 開發人員中心下載](https://go.microsoft.com/fwlink/?LinkId=50953)。  
+- 如需如何下載 64 位元版本 CLR 的詳細資訊，請參閱 MSDN 網站上的 [.NET Framework 開發人員中心下載](https://go.microsoft.com/fwlink/?LinkId=50953)。  
   
--   如需 Visual Studio 支援建立 64 位元應用程式的相關資訊，請參閱 [Visual Studio IDE 64 位元支援](/visualstudio/ide/visual-studio-ide-64-bit-support)。  
+- 如需 Visual Studio 支援建立 64 位元應用程式的相關資訊，請參閱 [Visual Studio IDE 64 位元支援](/visualstudio/ide/visual-studio-ide-64-bit-support)。  
   
 ## <a name="compiler-support-for-creating-64-bit-applications"></a>建立 64 位元應用程式的編譯器支援  
  根據預設，當您在 32 位元或 64 位元的電腦上使用 .NET Framework 應用程式建置應用程式時，應用程式會以原生應用程式在 64 位元電腦上執行 (也就是不在 WOW64 下)。 下表列出說明如何使用 Visual Studio 編譯器來建立將會在 WOW64 下以原生執行 (或兩者) 之 64 位元應用程式的文件。  

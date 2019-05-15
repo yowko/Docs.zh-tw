@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 7d39840f3b12df621a0e8d5fae5725065c295e59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9e4768b598f6046ffb7a0ac014d8594eac40309f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361261"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593060"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (C# 編譯器選項)
 指定 .netmodule 可以存取其非公用類型的組件。  
@@ -31,11 +31,11 @@ ms.locfileid: "57361261"
 ## <a name="remarks"></a>備註  
  **-moduleassemblyname** 應該在建置 .netmodule 時，以及符合下列條件時使用：  
   
--   .netmodule 需要存取現有組件中的非公用類型。  
+- .netmodule 需要存取現有組件中的非公用類型。  
   
--   您知道將在其中建置 .netmodule 之組件的名稱。  
+- 您知道將在其中建置 .netmodule 之組件的名稱。  
   
--   現存組件已對將在其中建置 .netmodule 的組件授與 friend 組件的存取權。  
+- 現存組件已對將在其中建置 .netmodule 的組件授與 friend 組件的存取權。  
   
  如需建置 .netmodule 的詳細資訊，請參閱 [-target:module (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)。  
   

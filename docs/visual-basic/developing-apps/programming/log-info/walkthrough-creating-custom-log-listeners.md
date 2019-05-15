@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 07c13d22235f1198188d26122c137db1d91e64e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 50eb1bc1588602bf562efc31b0f4dd01bc29cad0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342439"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593334"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>逐步解說：建立自訂的記錄檔接聽程式 (Visual Basic)
 本逐步解說示範如何建立自訂記錄檔接聽程式，並將它設定為接聽 `My.Application.Log` 物件的輸出。  
@@ -20,7 +20,7 @@ ms.locfileid: "59342439"
   
 #### <a name="to-create-the-listener"></a>若要建立接聽程式  
   
--   在應用程式中，建立一個繼承自 <xref:System.Diagnostics.TraceListener>，且命名為 `SimpleListener` 的類別。  
+- 在應用程式中，建立一個繼承自 <xref:System.Diagnostics.TraceListener>，且命名為 `SimpleListener` 的類別。  
   
      [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]  
   
@@ -64,7 +64,7 @@ ms.locfileid: "59342439"
   
 #### <a name="to-determine-the-strong-name-of-the-listener"></a>若要決定接聽程式的強式名稱  
   
--   下列程式碼示範如何決定以強式名稱命名 `SimpleListener` 的類型名稱。  
+- 下列程式碼示範如何決定以強式名稱命名 `SimpleListener` 的類型名稱。  
   
      [!code-vb[VbVbalrMyApplicationLog#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#17)]  
   
@@ -80,11 +80,11 @@ ms.locfileid: "59342439"
   
      如果已有 app.config 檔案︰  
   
-    1.  在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。  
+    1. 在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。  
   
-    2.  在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。  
+    2. 在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。  
   
-    3.  按一下 [加入] 。  
+    3. 按一下 [加入] 。  
   
 2. 在 `<listeners>` 區段下，具有 `<source>` 屬性 "DefaultSource" 的 `name` 區段中找出 `<sources>` 區段。 `<sources>` 區段位於最上層 `<system.diagnostics>` 區段中的 `<configuration>` 區段內。  
   

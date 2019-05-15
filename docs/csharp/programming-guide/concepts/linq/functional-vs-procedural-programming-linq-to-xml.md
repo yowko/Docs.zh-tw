@@ -2,31 +2,31 @@
 title: 功能性與程序性程式設計的比較 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fc64e39c-a487-4882-9169-da4de97917d9
-ms.openlocfilehash: 0f45efabd0e2092325ac18c7fbf195c3338acf87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c538011ce38708978f8b0f4866af3b3b4195a19
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536707"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597141"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>功能性與程序性程式設計的比較 (LINQ to XML) (C#)
 XML 應用程式有很多種：  
   
--   有些應用程式會採用 XML 來源文件，然後以不同於來源文件的組織結構產生新的 XML 文件。  
+- 有些應用程式會採用 XML 來源文件，然後以不同於來源文件的組織結構產生新的 XML 文件。  
   
--   有些應用程式會採用 XML 來源文件，然後以完全不同的形式 (例如，HTML 或 CSV 文字檔)，產生結果文件。  
+- 有些應用程式會採用 XML 來源文件，然後以完全不同的形式 (例如，HTML 或 CSV 文字檔)，產生結果文件。  
   
--   有些應用程式會採用 XML 來源文件，然後將記錄插入到資料庫中。  
+- 有些應用程式會採用 XML 來源文件，然後將記錄插入到資料庫中。  
   
--   有些應用程式會從其他來源 (例如，資料庫) 取得資料，然後從其中建立 XML 文件。  
+- 有些應用程式會從其他來源 (例如，資料庫) 取得資料，然後從其中建立 XML 文件。  
   
  這些並非 XML 應用程式的全部類型，但是這些是 XML 程式設計人員必須實作的一組代表性的功能類型。  
   
  利用所有這些應用程式類型，開發人員可以採用兩種明顯不同的方法：  
   
--   使用宣告式方法的功能結構。  
+- 使用宣告式方法的功能結構。  
   
--   使用程序性程式碼進行記憶體中 XML 樹狀結構修改。  
+- 使用程序性程式碼進行記憶體中 XML 樹狀結構修改。  
   
  LINQ to XML 同時支援這兩種方法。  
   

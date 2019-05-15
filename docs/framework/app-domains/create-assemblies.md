@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2713011d61b41dfa4d72a635c656c0c00cb42f8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 993c7f590f30b44f45e4833b4364b40ad9748b58
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643607"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607770"
 ---
 # <a name="creating-assemblies"></a>建立組件
 
@@ -24,23 +24,23 @@ ms.locfileid: "54643607"
 
 根據下列因素，將程式碼模組和資源群組成組件時，您會有數個選項：
 
--   版本控制
+- 版本控制
 
      應該具有相同版本資訊的群組模組。
 
--   部署
+- 部署
 
      支援您部署模型的群組程式碼模組和資源。
 
--   重複使用
+- 重複使用
 
      可透過邏輯方式一起用於某個目的的群組模組。 例如，包含不常用於程式維護之類型和類別的組件可以放在相同的組件中。 此外，您想要與多個應用程式共用的類型應該群組為組件，並且應該使用強式名稱來簽署組件。
 
--   安全性
+- 安全性
 
      包含需要相同安全性權限之類型的群組模組。
 
--   範圍設定
+- 範圍設定
 
      包含其可視性應該限制為相同組件之類型的群組模組。
 

@@ -10,27 +10,27 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: 12f65fe4b1dc710ff5c053073817dbd793c86082
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3378cffc1dcee7bb12705704e66b7fdd287105fb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511831"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592962"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked 與 Unchecked (C# 參考)
 C# 陳述式可在 checked 或 unchecked 內容中執行。 在 checked 內容中，算術溢位會引發例外狀況。 在未經檢查的內容中，會忽略算術溢位，並捨棄目的型別不適用的高序位位元，以便將結果截斷。  
   
--   [checked](checked.md) 指定 checked 內容。  
+- [checked](checked.md) 指定 checked 內容。  
   
--   [unchecked](unchecked.md) 指定 unchecked 內容。  
+- [unchecked](unchecked.md) 指定 unchecked 內容。  
   
  溢位檢查會影響下列作業：  
   
--   在整數類型上使用下列預先定義之運算子的運算式：  
+- 在整數類型上使用下列預先定義之運算子的運算式：  
   
      `++`、`--`、一元 `-`、`+`、`-`、`*`、`/`  
   
--   整數型別之間的明確數值轉換，或從 `float` 或 `double` 轉換為整數型別。  
+- 整數型別之間的明確數值轉換，或從 `float` 或 `double` 轉換為整數型別。  
   
  如果未指定 `checked` 和 `unchecked`，則非常數運算式 (在執行階段所評估的運算式) 的預設內容由 [-checked](../compiler-options/checked-compiler-option.md) 編譯器選項的值所定義。 根據預設，該選項的值是 unset，且算術運算在未經檢查的內容中執行。
  

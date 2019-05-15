@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: 17e16cec34b381cdfe46e1066c3219a93c3780e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: df969a634c84a7bccb048542cb768c920203e423
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216387"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599284"
 ---
 # <a name="service-application-programming-architecture"></a>服務應用程式的程式設計架構
 Windows 服務應用程式會以繼承自 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 類別的類別為基礎。 您會覆寫來自這個類別的方法，並定義適用於它們的功能以決定服務的行為方式。  
   
  以下是涉及服務建立的主要類別：  
   
--   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> — 您會在建立服務並定義程式碼以決定服務如何在此繼承類別中運作時，覆寫來自 <xref:System.ServiceProcess.ServiceBase> 類別的方法。  
+- <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>：您會在建立服務並定義程式碼以決定服務如何在此繼承類別中運作時，覆寫來自 <xref:System.ServiceProcess.ServiceBase> 類別的方法。  
   
--   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> 和 <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> —您會使用這些類別來安裝和解除安裝服務。  
+- <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> 和 <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType>：您會使用這些類別來安裝和解除安裝服務。  
   
  此外，名為 <xref:System.ServiceProcess.ServiceController> 的類別可用來操作服務本身。 這個類別並未涉及服務的建立，但可用來啟動和停止服務、將命令傳遞到其中，以及傳回一連串的列舉。  
   
@@ -51,7 +51,7 @@ Windows 服務應用程式會以繼承自 <xref:System.ServiceProcess.ServiceBas
   
  還有其他數個感興趣的屬性和方法。 它們包括：  
   
--   <xref:System.ServiceProcess.ServiceBase> 類別上的 <xref:System.ServiceProcess.ServiceBase.Run%2A> 方法。 這是服務的主要進入點。 當您使用 Windows 服務範本建立服務時，會將程式碼插入應用程式的 `Main` 方法來執行服務。 此程式碼如下所示：  
+- <xref:System.ServiceProcess.ServiceBase> 類別上的 <xref:System.ServiceProcess.ServiceBase.Run%2A> 方法。 這是服務的主要進入點。 當您使用 Windows 服務範本建立服務時，會將程式碼插入應用程式的 `Main` 方法來執行服務。 此程式碼如下所示：  
   
      [!code-csharp[VbRadconService#6](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#6)]
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
@@ -59,7 +59,7 @@ Windows 服務應用程式會以繼承自 <xref:System.ServiceProcess.ServiceBas
     > [!NOTE]
     >  這些範例會使用 <xref:System.ServiceProcess.ServiceBase> 類型的陣列，應用程式所包含的每個服務均可加入到此陣列，接著可一起執行所有服務。 不過，如果您只建立單一服務，則可以選擇不使用陣列，而只宣告繼承自 <xref:System.ServiceProcess.ServiceBase> 的新物件，然後加以執行。 如需範例，請參閱[如何：以程式設計方式撰寫服務](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)。  
   
--   <xref:System.ServiceProcess.ServiceBase> 類別上的一系列屬性。 這些屬性會決定可在您的服務上呼叫哪些方法。 例如，將 <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 屬性設定為 `true` 時，可以呼叫服務上的 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法。 將 <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> 屬性設定為 `true` 時，可以呼叫 <xref:System.ServiceProcess.ServiceBase.OnPause%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 方法。 當您將這其中一個屬性設定為 `true` 時，接著應該覆寫並定義適用於相關聯方法的處理。  
+- <xref:System.ServiceProcess.ServiceBase> 類別上的一系列屬性。 這些屬性會決定可在您的服務上呼叫哪些方法。 例如，將 <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 屬性設定為 `true` 時，可以呼叫服務上的 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法。 將 <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> 屬性設定為 `true` 時，可以呼叫 <xref:System.ServiceProcess.ServiceBase.OnPause%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 方法。 當您將這其中一個屬性設定為 `true` 時，接著應該覆寫並定義適用於相關聯方法的處理。  
   
     > [!NOTE]
     >  您的服務至少必須覆寫 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A>，才能發揮作用。  
@@ -69,4 +69,4 @@ Windows 服務應用程式會以繼承自 <xref:System.ServiceProcess.ServiceBas
 ## <a name="see-also"></a>另請參閱
 
 - [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [作法：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：訂閱及取消訂閱事件 - C# 程式設計手冊
+title: 作法：訂閱及取消訂閱事件 - C# 程式設計手冊
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 56c236e2e061b473f0b188b24d3ebdd98e013aa8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306595"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595996"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>HOW TO：訂閱及取消訂閱事件 (C# 程式設計手冊)
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>作法：訂閱及取消訂閱事件 (C# 程式設計手冊)
 如果您想要撰寫在引發事件時所呼叫的自訂程式碼，您可以訂閱由其他類別發行的事件。 例如，您可以訂閱某個按鈕的 `click` 事件，讓應用程式在使用者按下該按鈕時執行某項動作。  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>使用 Visual Studio IDE 訂閱事件  
@@ -74,7 +74,7 @@ ms.locfileid: "59306595"
   
 ### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>使用匿名方法訂閱事件  
   
--   如果您稍後不需要取消訂閱事件，您可以使用加法指派運算子 (`+=`) 將匿名方法附加至事件。 在下列範例中，假設名為 `publisher` 的物件具有名為 `RaiseCustomEvent` 的事件，而且也已定義 `CustomEventArgs` 類別來包含特定類型的特製化事件資訊。 請注意，subscriber 類別需要參考 `publisher`，才能訂閱其事件。  
+- 如果您稍後不需要取消訂閱事件，您可以使用加法指派運算子 (`+=`) 將匿名方法附加至事件。 在下列範例中，假設名為 `publisher` 的物件具有名為 `RaiseCustomEvent` 的事件，而且也已定義 `CustomEventArgs` 類別來包含特定類型的特製化事件資訊。 請注意，subscriber 類別需要參考 `publisher`，才能訂閱其事件。  
   
     ```csharp
     publisher.RaiseCustomEvent += delegate(object o, CustomEventArgs e)  
@@ -91,7 +91,7 @@ ms.locfileid: "59306595"
   
 #### <a name="to-unsubscribe-from-an-event"></a>取消訂閱事件  
   
--   使用減法指派運算子 (`-=`) 取消訂閱事件：  
+- 使用減法指派運算子 (`-=`) 取消訂閱事件：  
   
     ```csharp
     publisher.RaiseCustomEvent -= HandleCustomEvent;  

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 7166c27a946fb76c9351647ac6465c151866a2ad
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 3e62dd4b4e1b1eb4586dcb3ce0e3f39c54a5686c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202557"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608741"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>作法：宣告、產生和使用委派 (C# 程式設計手冊)
 在 C# 1.0 和更新版本中，宣告委派的方式如下列範例所示。  
@@ -42,7 +42,7 @@ ms.locfileid: "57202557"
   
 ## <a name="robust-programming"></a>穩固程式設計  
   
--   宣告委派。  
+- 宣告委派。  
   
      下列陳述式會宣告新的委派類型。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "57202557"
   
      每個委派類型都會描述引數的數目和類型，以及它可以封裝之方法的傳回值類型。 每當需要一組新的引數類型或傳回值類型時，就必須宣告新的委派類型。  
   
--   具現化委派。  
+- 具現化委派。  
   
      宣告委派類型之後，就必須建立委派物件並將其關聯至特定的方法。 在上述範例中，您可以藉由將 `PrintTitle` 方法傳遞至 `ProcessPaperbackBooks` 方法來執行此動作，如下列範例所示：  
   
@@ -64,7 +64,7 @@ ms.locfileid: "57202557"
   
      建立委派之後，與其相關聯的方法絕對不會變更；委派物件是不可變的。  
   
--   呼叫委派。  
+- 呼叫委派。  
   
      建立委派物件之後，通常會將委派物件傳遞至其他將呼叫委派的程式碼。 委派物件的呼叫方法是，使用委派物件的名稱，後面接著要傳遞至委派且已加上括號的引數。 以下是委派呼叫的範例：  
   

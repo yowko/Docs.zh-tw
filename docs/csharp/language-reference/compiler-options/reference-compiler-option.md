@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 7965dd2682591cc0840030dfbc9f28401e2a15b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbf93a87cede753ebd41c148f4fb4bb761846954
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679431"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593077"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (C# 編譯器選項)
 **-reference** 選項可讓編譯器將指定檔案的 [public](../../../csharp/language-reference/keywords/public.md) 類型資訊匯入至目前的專案，以讓您透過指定的組件檔案來參考中繼資料。  
@@ -48,9 +48,9 @@ ms.locfileid: "54679431"
   
  如果您參考的組件 (組件 A) 有參考其他組件 (組件 B)，則在下列情況中，您也需要參考 B 組件：  
   
--   您使用的類型是來自組件 A，但繼承自組件 B 的類型，或是實作組件 B 的介面。  
+- 您使用的類型是來自組件 A，但繼承自組件 B 的類型，或是實作組件 B 的介面。  
   
--   您所叫用的欄位、屬性、事件或方法具有組件 B 的傳回型別或參數類型。  
+- 您所叫用的欄位、屬性、事件或方法具有組件 B 的傳回型別或參數類型。  
   
  使用 [-lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md)，以指定一或多個組件參考所在的目錄。 **-lib** 主題也會說明編譯器會在其中搜尋組件的目錄。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "54679431"
  預設會使用 csc 回應檔 (.rsp)，以參考常用的 .NET Framework 組件。 如果您不想讓編譯器使用 csc.rsp，可使用 [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)。  
   
 > [!NOTE]
-> 在 Visual Studio 中，使用 [新增參考] 對話方塊。 如需詳細資訊，請參閱[＜How to：使用參考管理員新增或移除參考](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)。 新增參考時，為了確保使用 `-reference` 以及使用 [新增參考] 對話方塊的對等行為，請將您要新增之組件的 [內嵌 Interop 類型] 屬性設為 **False**。 這個屬性的預設值為 **True**。  
+> 在 Visual Studio 中，使用 [新增參考] 對話方塊。 如需詳細資訊，請參閱[如何：使用參考管理員新增或移除參考](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)。 新增參考時，為了確保使用 `-reference` 以及使用 [新增參考] 對話方塊的對等行為，請將您要新增之組件的 [內嵌 Interop 類型] 屬性設為 **False**。 這個屬性的預設值為 **True**。  
   
 ## <a name="example"></a>範例  
  這個範例會示範如何使用[外部別名](../../../csharp/language-reference/keywords/extern-alias.md)功能。  

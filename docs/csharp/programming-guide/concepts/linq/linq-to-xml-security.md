@@ -2,12 +2,12 @@
 title: LINQ to XML 安全性 (C#)
 ms.date: 07/20/2015
 ms.assetid: ef2c0dc9-ecf9-4c17-b24e-144184ab725f
-ms.openlocfilehash: e13a1db6a02ac2990624e93480e973284a0784e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2e535b67b6c9b599eb9e8c9b71e150079c626ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493089"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597014"
 ---
 # <a name="linq-to-xml-security-c"></a>LINQ to XML 安全性 (C#)
 這個主題描述與 LINQ to XML 相關聯的安全性問題。 此外，還提供減少暴露安全性的部分指引。  
@@ -26,25 +26,25 @@ ms.locfileid: "54493089"
   
  如果您要在較不安全的環境下操作，則會有一些與 XML 相關聯的安全性問題，以及在 <xref:System.Xml?displayProperty=nameWithType>、<xref:System.Xml.Schema?displayProperty=nameWithType>、<xref:System.Xml.XPath?displayProperty=nameWithType> 和 <xref:System.Xml.Xsl?displayProperty=nameWithType> 中使用類別的安全性問題。 這些包括 (但不限於) 下列問題：  
   
--   XSD、XPath 和 XSLT 是以字串為基礎的語言，您在其中指定的作業可能會耗用大量的時間與金錢。 從不受信任的來源取出 XSD、XPath 或 XSLT 字串的應用程式設計人員要負責驗證這些不是惡意的字串，或監視與降低評估這些字串將導致過度耗用系統資源的可能性。  
+- XSD、XPath 和 XSLT 是以字串為基礎的語言，您在其中指定的作業可能會耗用大量的時間與金錢。 從不受信任的來源取出 XSD、XPath 或 XSLT 字串的應用程式設計人員要負責驗證這些不是惡意的字串，或監視與降低評估這些字串將導致過度耗用系統資源的可能性。  
   
--   XSD 結構描述 (包括內嵌結構描述) 在本質上容易遭到阻絕服務攻擊；您不應接受來自不受支援之來源的結構描述。  
+- XSD 結構描述 (包括內嵌結構描述) 在本質上容易遭到阻絕服務攻擊；您不應接受來自不受支援之來源的結構描述。  
   
--   XSD 和 XSLT 可能包含其他檔案的參考，而且這類的參考可能會導致跨區域和跨網域的攻擊。  
+- XSD 和 XSLT 可能包含其他檔案的參考，而且這類的參考可能會導致跨區域和跨網域的攻擊。  
   
--   DTD 中的外部實體可能導致跨區域和跨網域的攻擊。  
+- DTD 中的外部實體可能導致跨區域和跨網域的攻擊。  
   
--   DTD 容易遭到阻絕服務攻擊。  
+- DTD 容易遭到阻絕服務攻擊。  
   
--   特別深的 XML 文件可能會提出阻絕服務問題；您可能想要限制 XML 文件的深度。  
+- 特別深的 XML 文件可能會提出阻絕服務問題；您可能想要限制 XML 文件的深度。  
   
--   請勿接受來自不受信任組件的支援元件，例如，<xref:System.Xml.NameTable>、<xref:System.Xml.XmlNamespaceManager> 和 <xref:System.Xml.XmlResolver> 物件。  
+- 請勿接受來自不受信任組件的支援元件，例如，<xref:System.Xml.NameTable>、<xref:System.Xml.XmlNamespaceManager> 和 <xref:System.Xml.XmlResolver> 物件。  
   
--   讀取區塊中的資料以減少大型文件的攻擊。  
+- 讀取區塊中的資料以減少大型文件的攻擊。  
   
--   XSLT 樣式表中的指令碼區塊可能會暴露多個攻擊。  
+- XSLT 樣式表中的指令碼區塊可能會暴露多個攻擊。  
   
--   建構動態 XPath 運算式前，請仔細驗證。  
+- 建構動態 XPath 運算式前，請仔細驗證。  
   
 ## <a name="linq-to-xml-security-issues"></a>LINQ to XML 安全性問題  
  本主題中的安全性問題不會以特定的順序呈現。 所有問題都同等重要，而且應該妥善處理。  

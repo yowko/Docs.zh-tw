@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdd43f7079563be6b1377f743a84625429ba4f16
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 97e2e54c534b30c3c514c9102ded0050fc154b75
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411690"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589794"
 ---
 # <a name="xml-schema-object-model-overview"></a>XML 結構描述物件模型概觀
 Microsoft .NET Framework 中的結構描述物件模型 (SOM) 是一個豐富的 API，可讓您以程式設計的方式建立、編輯及驗證結構描述。 SOM 在 XML 結構描述文件上的運作方式，與文件物件模型 (DOM) 在 XML 文件上的運作方式相似。 XML 結構描述文件是有效的 XML 檔案，當它載入 SOM 後，便可傳達符合該結構描述之其他 XML 文件結構及有效性的意義。  
@@ -19,17 +19,17 @@ Microsoft .NET Framework 中的結構描述物件模型 (SOM) 是一個豐富的
   
  以下是 .NET Framework 中 SOM API 允許您在建立、編輯及驗證結構描述時所使用的方式。  
   
--   在檔案間載入及儲存有效的結構描述。  
+- 在檔案間載入及儲存有效的結構描述。  
   
--   使用強型別類別建立記憶體中的結構描述。  
+- 使用強型別類別建立記憶體中的結構描述。  
   
--   與 <xref:System.Xml.Schema.XmlSchemaSet> 類別互動，以快取、編譯及擷取結構描述。  
+- 與 <xref:System.Xml.Schema.XmlSchemaSet> 類別互動，以快取、編譯及擷取結構描述。  
   
--   與 <xref:System.Xml.XmlReader.Create%2A> 類別的 <xref:System.Xml.XmlReader> 方法互動，以根據結構描述驗證 XML 執行個體文件。  
+- 與 <xref:System.Xml.XmlReader.Create%2A> 類別的 <xref:System.Xml.XmlReader> 方法互動，以根據結構描述驗證 XML 執行個體文件。  
   
--   建置編輯器以建立及維護結構描述。  
+- 建置編輯器以建立及維護結構描述。  
   
--   動態編輯可編譯和儲存的結構描述，以便在驗證 XML 執行個體文件時使用該結構描述。  
+- 動態編輯可編譯和儲存的結構描述，以便在驗證 XML 執行個體文件時使用該結構描述。  
   
 ## <a name="the-schema-object-model"></a>結構描述物件模型  
  SOM 是由 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間中的大量類別集 (其對應於 XML 結構描述中的項目) 所組成的。 例如，`<xsd:schema>...</xsd:schema>` 項目對應至 <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType> 類別，並可使用 `<xsd:schema/>` 類別來表示 <xref:System.Xml.Schema.XmlSchema> 項目可包含的所有資訊。 同樣地，`<xsd:element>...</xsd:element>` 及 `<xsd:attribute>...</xsd:attribute>` 項目分別對應至 <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> 及 <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType> 類別。 這種對應關係會在 XML 結構描述的所有項目持續下去，以在 <xref:System.Xml.Schema> 命名空間中建立 XML 結構描述物件模型，如下圖所示。  

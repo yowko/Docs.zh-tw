@@ -5,25 +5,25 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - keywords [C#], exception handling
 ms.assetid: 6d0323a3-3164-411c-9b84-a3606bd0e13c
-ms.openlocfilehash: afacb21eb54c97f5108772f37f313f5ef7403142
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ecb4b09e46df2159de5e68d94b588f32e621fa52
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659588"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596661"
 ---
 # <a name="exception-handling-statements-c-reference"></a>例外狀況處理陳述式 (C# 參考)
 C# 提供內建支援以處理稱為例外狀況的異常情況，它們可能發生在程式執行期間。 超出一般控制流程的程式碼會處理這些例外狀況。  
   
  本節說明下列例外狀況處理主題︰  
   
--   [throw](../../../csharp/language-reference/keywords/throw.md)  
+- [throw](../../../csharp/language-reference/keywords/throw.md)  
   
--   [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
   
--   [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
   
--   [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
+- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -8,25 +8,25 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: ed943948888110b76df9c9ce22b4e9b6f4bb679f
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 99d30d6c2b50569312ff2d732a34020ab29ce81c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200373"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595064"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>作法：在十六進位字串和數字型別間轉換 (C# 程式設計指南)
 這些範例示範如何執行下列工作：  
   
--   取得[字串](../../../csharp/language-reference/keywords/string.md)中每個字元的十六進位值。  
+- 取得[字串](../../../csharp/language-reference/keywords/string.md)中每個字元的十六進位值。  
   
--   取十六進位字串中對應每個值的 [char](../../../csharp/language-reference/keywords/char.md)。  
+- 取十六進位字串中對應每個值的 [char](../../../csharp/language-reference/keywords/char.md)。  
   
--   將十六進位 `string` 轉換成 [int](../../../csharp/language-reference/keywords/int.md)。  
+- 將十六進位 `string` 轉換成 [int](../../../csharp/language-reference/keywords/int.md)。  
   
--   將十六進位 `string` 轉換成 [float](../../../csharp/language-reference/keywords/float.md)。  
+- 將十六進位 `string` 轉換成 [float](../../../csharp/language-reference/keywords/float.md)。  
   
--   將 [byte](../../../csharp/language-reference/keywords/byte.md) 陣列轉換成十六進位 `string`。  
+- 將 [byte](../../../csharp/language-reference/keywords/byte.md) 陣列轉換成十六進位 `string`。  
   
 ## <a name="example"></a>範例  
  本例以 `string` 輸出每個字元的十六進位值。 它會先將 `string` 剖析成字元陣列。 接著在每個字元上呼叫 <xref:System.Convert.ToInt32%28System.Char%29>，以取得其數值。 最後，在 `string` 中將數字格式化為十六進位表示法。  
