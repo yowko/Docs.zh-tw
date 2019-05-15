@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6209df7d226d7e3acb938801d1fb77afbe1249b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3afbffcbbaa5e8398a9ab10c762e60305cfc164b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322403"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615244"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>樣式表參數和擴充物件的 XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> 類別包含可擴充樣式表語言轉換 (XSLT) 參數和 XSLT 擴充物件。 傳入 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法後，就可從樣式表叫用這些參數和擴充物件。  
@@ -25,13 +25,13 @@ ms.locfileid: "59322403"
   
  下列是傳遞物件，而不是使用內嵌指令碼的優點：  
   
--   提供較佳的類別封裝和重複使用。  
+- 提供較佳的類別封裝和重複使用。  
   
--   允許樣式表更簡潔且更易於維護。  
+- 允許樣式表更簡潔且更易於維護。  
   
--   除了支援的 <xref:System> 命名空間集內所定義的命名空間以外，支援在其他命名空間的類別上呼叫方法。  
+- 除了支援的 <xref:System> 命名空間集內所定義的命名空間以外，支援在其他命名空間的類別上呼叫方法。  
   
--   支援使用 <xref:System.Xml.XPath.XPathNodeIterator> 將結果樹狀結構片段傳遞給樣式表。  
+- 支援使用 <xref:System.Xml.XPath.XPathNodeIterator> 將結果樹狀結構片段傳遞給樣式表。  
   
 ## <a name="xslt-style-sheet-parameters"></a>XSLT 樣式表參數  
  XSLT 參數可使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法加入至 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>。 限定名稱和命名空間統一資源識別元 (URI) 會在此時與參數物件產生關聯。  
