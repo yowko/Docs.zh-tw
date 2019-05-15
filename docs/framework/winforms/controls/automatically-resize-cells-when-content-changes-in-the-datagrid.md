@@ -10,35 +10,33 @@ helpviewer_keywords:
 - cells [Windows Forms], resizing automatically
 - DataGridView control [Windows Forms], resizing cells
 ms.assetid: 1d68934d-a04c-4b12-9e66-c856c6828131
-ms.openlocfilehash: 436f5d4a77a3119fe5b16afa1a4e71c55b3751dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3411b68b4dcc64dba86cd9fa8804e0a487cec76d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587640"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586638"
 ---
-# <a name="how-to-automatically-resize-cells-when-content-changes-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="80ae8-102">HOW TO：在 Windows Forms DataGridView 控制項的內容變更時自動調整儲存格大小</span><span class="sxs-lookup"><span data-stu-id="80ae8-102">How to: Automatically Resize Cells When Content Changes in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="80ae8-103">您可以將 <xref:System.Windows.Forms.DataGridView> 控制項設定為每當內容變更就自動調整其資料列、資料行和標頭大小，讓儲存格的大小永遠足以容納並顯示所有的值，不發生內容截斷的情況。</span><span class="sxs-lookup"><span data-stu-id="80ae8-103">You can configure the <xref:System.Windows.Forms.DataGridView> control to resize its rows, columns, and headers automatically whenever content changes, so that cells are always large enough to display their values without clipping.</span></span>  
+# <a name="how-to-automatically-resize-cells-when-content-changes-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="1cc85-102">作法：在 Windows Forms DataGridView 控制項的內容變更時自動調整儲存格大小</span><span class="sxs-lookup"><span data-stu-id="1cc85-102">How to: Automatically Resize Cells When Content Changes in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="1cc85-103">您可以將 <xref:System.Windows.Forms.DataGridView> 控制項設定為每當內容變更就自動調整其資料列、資料行和標頭大小，讓儲存格的大小永遠足以容納並顯示所有的值，不發生內容截斷的情況。</span><span class="sxs-lookup"><span data-stu-id="1cc85-103">You can configure the <xref:System.Windows.Forms.DataGridView> control to resize its rows, columns, and headers automatically whenever content changes, so that cells are always large enough to display their values without clipping.</span></span>  
   
- <span data-ttu-id="80ae8-104">您有許多選項可限制使用哪些儲存格來決定新的大小。</span><span class="sxs-lookup"><span data-stu-id="80ae8-104">You have many options to restrict which cells are used to determine the new sizes.</span></span> <span data-ttu-id="80ae8-105">例如，您可以只根據目前顯示之資料列中的值，將控制項設定為自動調整其資料行的寬度。</span><span class="sxs-lookup"><span data-stu-id="80ae8-105">For example, you can configure the control to automatically resize the width of its columns based only on the values in rows that are currently displayed.</span></span> <span data-ttu-id="80ae8-106">如此一來，就可以避免在使用大量的資料列時效率低落，雖然在這種情況下，有時您也可能想要自行使用調整大小方法 (例如 <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> ) 來調整大小。</span><span class="sxs-lookup"><span data-stu-id="80ae8-106">With this, you can avoid inefficiency when working with large numbers of rows, although in this case, you might want to use sizing methods such as <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> to adjust sizes at times of your choosing.</span></span>  
+ <span data-ttu-id="1cc85-104">您有許多選項可限制使用哪些儲存格來決定新的大小。</span><span class="sxs-lookup"><span data-stu-id="1cc85-104">You have many options to restrict which cells are used to determine the new sizes.</span></span> <span data-ttu-id="1cc85-105">例如，您可以只根據目前顯示之資料列中的值，將控制項設定為自動調整其資料行的寬度。</span><span class="sxs-lookup"><span data-stu-id="1cc85-105">For example, you can configure the control to automatically resize the width of its columns based only on the values in rows that are currently displayed.</span></span> <span data-ttu-id="1cc85-106">如此一來，就可以避免在使用大量的資料列時效率低落，雖然在這種情況下，有時您也可能想要自行使用調整大小方法 (例如 <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> ) 來調整大小。</span><span class="sxs-lookup"><span data-stu-id="1cc85-106">With this, you can avoid inefficiency when working with large numbers of rows, although in this case, you might want to use sizing methods such as <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> to adjust sizes at times of your choosing.</span></span>  
   
- <span data-ttu-id="80ae8-107">如需稽核的詳細資訊，請參閱 [Sizing Options in the Windows Forms DataGridView Control](sizing-options-in-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="80ae8-107">For more information about automatic resizing, see [Sizing Options in the Windows Forms DataGridView Control](sizing-options-in-the-windows-forms-datagridview-control.md).</span></span>  
+ <span data-ttu-id="1cc85-107">如需稽核的詳細資訊，請參閱 [Sizing Options in the Windows Forms DataGridView Control](sizing-options-in-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="1cc85-107">For more information about automatic resizing, see [Sizing Options in the Windows Forms DataGridView Control](sizing-options-in-the-windows-forms-datagridview-control.md).</span></span>  
   
- <span data-ttu-id="80ae8-108">下列程式碼範例示範可供自動調整大小的選項。</span><span class="sxs-lookup"><span data-stu-id="80ae8-108">The following code example demonstrates the options available for automatic resizing.</span></span>  
+ <span data-ttu-id="1cc85-108">下列程式碼範例示範可供自動調整大小的選項。</span><span class="sxs-lookup"><span data-stu-id="1cc85-108">The following code example demonstrates the options available for automatic resizing.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="80ae8-109">範例</span><span class="sxs-lookup"><span data-stu-id="80ae8-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="1cc85-109">範例</span><span class="sxs-lookup"><span data-stu-id="1cc85-109">Example</span></span>  
  [!code-cpp[System.Windows.Forms.DataGridView.AutoSizing#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/CPP/autosizing.cpp#0)]
  [!code-csharp[System.Windows.Forms.DataGridView.AutoSizing#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/CS/autosizing.cs#0)]
  [!code-vb[System.Windows.Forms.DataGridView.AutoSizing#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/VB/autosizing.vb#0)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="80ae8-110">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="80ae8-110">Compiling the Code</span></span>  
- <span data-ttu-id="80ae8-111">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="80ae8-111">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="1cc85-110">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="1cc85-110">Compiling the Code</span></span>  
+ <span data-ttu-id="1cc85-111">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="1cc85-111">This example requires:</span></span>  
   
-- <span data-ttu-id="80ae8-112">System、System.Drawing 和 System.Windows.Forms 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="80ae8-112">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="1cc85-112">System、System.Drawing 和 System.Windows.Forms 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="1cc85-112">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
   
-- <span data-ttu-id="80ae8-113">Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="80ae8-113">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="80ae8-114">您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="80ae8-114">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>
-  
-## <a name="see-also"></a><span data-ttu-id="80ae8-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="80ae8-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1cc85-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1cc85-113">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A?displayProperty=nameWithType>
@@ -52,6 +50,6 @@ ms.locfileid: "64587640"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [<span data-ttu-id="80ae8-116">調整 Windows Forms DataGridView 控制項中資料行和資料列的大小</span><span class="sxs-lookup"><span data-stu-id="80ae8-116">Resizing Columns and Rows in the Windows Forms DataGridView Control</span></span>](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
-- [<span data-ttu-id="80ae8-117">Windows Forms DataGridView 控制項中的調整大小選項</span><span class="sxs-lookup"><span data-stu-id="80ae8-117">Sizing Options in the Windows Forms DataGridView Control</span></span>](sizing-options-in-the-windows-forms-datagridview-control.md)
-- [<span data-ttu-id="80ae8-118">如何：以程式設計方式調整大小以符合內容，在 Windows Form DataGridView 控制項中的資料格</span><span class="sxs-lookup"><span data-stu-id="80ae8-118">How to: Programmatically Resize Cells to Fit Content in the Windows Forms DataGridView Control</span></span>](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)
+- [<span data-ttu-id="1cc85-114">調整 Windows Forms DataGridView 控制項中資料行和資料列的大小</span><span class="sxs-lookup"><span data-stu-id="1cc85-114">Resizing Columns and Rows in the Windows Forms DataGridView Control</span></span>](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="1cc85-115">Windows Forms DataGridView 控制項中的調整大小選項</span><span class="sxs-lookup"><span data-stu-id="1cc85-115">Sizing Options in the Windows Forms DataGridView Control</span></span>](sizing-options-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="1cc85-116">如何：以程式設計方式調整大小以符合內容，在 Windows Form DataGridView 控制項中的資料格</span><span class="sxs-lookup"><span data-stu-id="1cc85-116">How to: Programmatically Resize Cells to Fit Content in the Windows Forms DataGridView Control</span></span>](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)
