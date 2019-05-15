@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7ccee788a00e56da16d1e78597815553d3c6212
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 788229053f5702b44c6ac351b59ad1c464e4e133
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678261"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633632"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>規則運算式中的數量詞
 數量詞指定輸入中要有多少字元、群組或字元類別的執行個體，才能找到相符項目。  下表列出 .NET 支援的數量詞。  
@@ -228,11 +228,11 @@ ms.locfileid: "54678261"
 ## <a name="greedy-and-lazy-quantifiers"></a>Greedy (匹配優先) 與 Lazy (忽略優先) 量詞  
  數個數量詞有兩種版本︰  
   
--   Greedy (窮盡) 版本。  
+- Greedy (窮盡) 版本。  
   
      Greedy (窮盡) 數量詞會嘗試盡可能多次比對項目。  
   
--   非 Greedy (窮盡) (或 Lazy (最少)) 版本。  
+- 非 Greedy (窮盡) (或 Lazy (最少)) 版本。  
   
      非 Greedy (窮盡) 數量詞會嘗試盡可能少比對項目。 只要加上 `?`，就可將 Greedy (窮盡) 數量詞變成 Lazy (最少) 數量詞。  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 224e8e82b7e71d7efbfdf0ce26cc4bd783cce3c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 1928980f24f08e0379639090cab8d2ac7ba014e4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59313303"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634004"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>作法：在非西曆中顯示日期
 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 類型使用西曆作為其預設月曆。 這表示即使該日期和時間是使用其他月曆所建立，呼叫日期和時間值的 `ToString` 方法仍會使用西曆顯示該日期和時間的字串表示。 以下範例將說明這種情況，其中使用兩種不同方式來建立波斯曆的日期和時間值，但在呼叫 <xref:System.DateTime.ToString%2A> 方法時，仍以西曆顯示這些日期和時間值。 此範例反映兩種常用來顯示特殊月曆之日期，但不正確的技術。  
@@ -51,19 +51,19 @@ ms.locfileid: "59313303"
   
 3. 針對您要顯示的每一個日期和時間元素，呼叫月曆物件的 `Get` 方法。 下列為可用的方法：  
   
-    -   <xref:System.Globalization.Calendar.GetYear%2A>，用來顯示適當月曆中的年份。  
+    - <xref:System.Globalization.Calendar.GetYear%2A>，用來顯示適當月曆中的年份。  
   
-    -   <xref:System.Globalization.Calendar.GetMonth%2A>，用來顯示適當月曆中的月份。  
+    - <xref:System.Globalization.Calendar.GetMonth%2A>，用來顯示適當月曆中的月份。  
   
-    -   <xref:System.Globalization.Calendar.GetDayOfMonth%2A>，用來顯示適當月曆中某個月份的日期數字。  
+    - <xref:System.Globalization.Calendar.GetDayOfMonth%2A>，用來顯示適當月曆中某個月份的日期數字。  
   
-    -   <xref:System.Globalization.Calendar.GetHour%2A>，用來顯示適當月曆中某天的小時。  
+    - <xref:System.Globalization.Calendar.GetHour%2A>，用來顯示適當月曆中某天的小時。  
   
-    -   <xref:System.Globalization.Calendar.GetMinute%2A>，用來顯示適當月曆中某小時的分鐘。  
+    - <xref:System.Globalization.Calendar.GetMinute%2A>，用來顯示適當月曆中某小時的分鐘。  
   
-    -   <xref:System.Globalization.Calendar.GetSecond%2A>，用來顯示適當月曆中某分鐘的秒鐘。  
+    - <xref:System.Globalization.Calendar.GetSecond%2A>，用來顯示適當月曆中某分鐘的秒鐘。  
   
-    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A> ，用來顯示適當月曆中某一秒的毫秒。  
+    - <xref:System.Globalization.Calendar.GetMilliseconds%2A>，用來顯示適當月曆中某一秒的毫秒。  
   
 ## <a name="example"></a>範例  
  這個範例顯示使用兩種不同月曆的日期。 日期會在定義回曆作為 ar-JO 文化特性的預設月曆之後顯示，並且會使用波斯曆顯示日期，而波斯曆並不是 fa-IR 文化特性支援的選用月曆。  
@@ -75,13 +75,13 @@ ms.locfileid: "59313303"
   
  這個範例會定義可重複使用的月曆公用程式類別 `CalendarUtility`，用來處理使用特殊月曆產生日期的字串表示時的許多細節。 `CalendarUtility` 類別具有下列成員：  
   
--   參數化的建構函式，其單一參數為用來表示日期的 <xref:System.Globalization.Calendar> 物件。 這個參數會指派給類別的私用欄位。  
+- 參數化的建構函式，其單一參數為用來表示日期的 <xref:System.Globalization.Calendar> 物件。 這個參數會指派給類別的私用欄位。  
   
--   `CalendarExists`是傳回布林值的私用方法，指出以參數形式傳遞給方法的 <xref:System.Globalization.CultureInfo> 物件是否支援 `CalendarUtility` 物件所代表的月曆。 此方法會包裝對 <xref:System.Array.Exists%2A?displayProperty=nameWithType> 方法的呼叫，並將 <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 陣列傳遞至其中。  
+- `CalendarExists` 是傳回布林值的私用方法，指出以參數形式傳遞給方法的 <xref:System.Globalization.CultureInfo> 物件是否支援 `CalendarUtility` 物件所代表的月曆。 此方法會包裝對 <xref:System.Array.Exists%2A?displayProperty=nameWithType> 方法的呼叫，並將 <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 陣列傳遞至其中。  
   
--   `HasSameName`是指派給 <xref:System.Predicate%601> 委派的私用方法，會以參數形式傳遞給 <xref:System.Array.Exists%2A?displayProperty=nameWithType> 方法。 每一個陣列成員都會傳遞至方法，直到方法傳回 `true` 為止。 這個方法會判斷選用月曆的名稱是否與 `CalendarUtility` 物件代表的月曆相同。  
+- `HasSameName` 是指派給 <xref:System.Predicate%601> 委派的私用方法，會以參數形式傳遞給 <xref:System.Array.Exists%2A?displayProperty=nameWithType> 方法。 每一個陣列成員都會傳遞至方法，直到方法傳回 `true` 為止。 這個方法會判斷選用月曆的名稱是否與 `CalendarUtility` 物件代表的月曆相同。  
   
--   `DisplayDate`是要傳入兩個參數的多載公用方法：要在 `CalendarUtility` 物件所代表之月曆中表示的 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值，以及要使用之格式化規則所屬的文化特性。 在傳回日期的字串表示時，其行為會根據文化特性是否支援要使用其格式化規則的目標月曆而定。  
+- `DisplayDate` 是要傳入兩個參數的多載公用方法：要在 `CalendarUtility` 物件所代表之月曆中表示的 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值，以及要使用之格式化規則所屬的文化特性。 在傳回日期的字串表示時，其行為會根據文化特性是否支援要使用其格式化規則的目標月曆而定。  
   
  不論此範例中用來建立 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值的月曆為何，該值通常會以西曆日期來表示。 這是因為 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 類型不會保留任何月曆資訊。 這兩個值會在內部表示為自 0001 年 1 月 1 日午夜開始經過的刻度數。 該數字的轉譯會根據月曆而定。 大部分文化特性的預設月曆是西曆。  
   

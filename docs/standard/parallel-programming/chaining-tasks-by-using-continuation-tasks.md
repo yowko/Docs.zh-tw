@@ -10,33 +10,33 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b924f281a2a543ff98e9ae681a6100150898f240
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1f88308dcea250c02d9c6cd7f326570f8bc0133c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219902"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630109"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>使用接續工作鏈結工作
 在非同步程式設計中，非同步作業完成時叫用第二個作業，並將資料傳遞給它，是很普遍的。 傳統上，會使用回呼方法完成接續。 在工作平行程式庫中，由 *「接續工作」*(continuation task) 提供相同的功能。 接續工作 (也只稱為接續) 是另一項稱為 *「前項」*(antecedent) 的工作所叫用的非同步工作，此時會完成前項。  
   
  接續相對容易使用，但卻非常強大且有彈性。 例如，您可以：  
   
--   將資料從前項傳遞至接續。  
+- 將資料從前項傳遞至接續。  
   
--   指定叫用或不叫用接續的精確條件。  
+- 指定叫用或不叫用接續的精確條件。  
   
--   在接續開始之前或是在以合作方式執行時取消接續。  
+- 在接續開始之前或是在以合作方式執行時取消接續。  
   
--   提供有關該如何排定接續的提示。  
+- 提供有關該如何排定接續的提示。  
   
--   從相同前項叫用多個接續。  
+- 從相同前項叫用多個接續。  
   
--   當所有或多個前項之任何一項完成時，請叫用一個接續。  
+- 當所有或多個前項之任何一項完成時，請叫用一個接續。  
   
--   鏈結接續可一個接著一個直到任意長度。  
+- 鏈結接續可一個接著一個直到任意長度。  
   
--   使用接續處理前項所擲回的例外狀況。  
+- 使用接續處理前項所擲回的例外狀況。  
   
 ## <a name="about-continuations"></a>關於接續  
  接續是在 <xref:System.Threading.Tasks.TaskStatus.WaitingForActivation> 狀態建立的工作。 當其前項工作完成時，它便會自動啟動。 在使用者程式碼中的接續呼叫 <xref:System.Threading.Tasks.Task.Start%2A?displayProperty=nameWithType> 會擲回 <xref:System.InvalidOperationException?displayProperty=nameWithType> 例外狀況。  
@@ -85,11 +85,11 @@ ms.locfileid: "56219902"
 ## <a name="canceling-a-continuation"></a>取消接續  
  在下列情況中，接續的 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> 屬性會被設定為 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> ：  
   
--   它會擲回 <xref:System.OperationCanceledException> 例外狀況以回應取消要求。 如同任何工作，如果例外狀況包含傳遞給接續的相同語彙基元，則會把它視為合作式取消的認可。  
+- 它會擲回 <xref:System.OperationCanceledException> 例外狀況以回應取消要求。 如同任何工作，如果例外狀況包含傳遞給接續的相同語彙基元，則會把它視為合作式取消的認可。  
   
--   接續傳遞 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> ，其 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性是 `true`。 在此案例中，接續未啟動，而且會轉換為 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 狀態。  
+- 接續傳遞 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> ，其 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性是 `true`。 在此案例中，接續未啟動，而且會轉換為 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 狀態。  
   
--   此接續絕不會執行，因為不符合 <xref:System.Threading.Tasks.TaskContinuationOptions> 引數設定的條件。 例如，如果前項進入 <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> 狀態，則不會執行其已傳遞 <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> 選項的接續，但會轉換成 <xref:System.Threading.Tasks.TaskStatus.Canceled> 狀態。  
+- 此接續絕不會執行，因為不符合 <xref:System.Threading.Tasks.TaskContinuationOptions> 引數設定的條件。 例如，如果前項進入 <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> 狀態，則不會執行其已傳遞 <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> 選項的接續，但會轉換成 <xref:System.Threading.Tasks.TaskStatus.Canceled> 狀態。  
   
  如果工作及其接續代表相同的邏輯作業的兩個部分，則您可傳遞相同的取消語彙基元給這兩項工作，如下列範例所示。 這包含會產生可由 33 整除的整數清單之前項，這會傳遞給接續。 接續會輪流顯示此清單。 前項和接續會定期暫停隨機一段時間。 此外，在 5 秒的逾時時間間隔後， <xref:System.Threading.Timer?displayProperty=nameWithType> 物件會用來執行 `Elapsed` 方法。 此範例會呼叫 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法，導致目前正在執行的工作去呼叫 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A?displayProperty=nameWithType> 方法。 當前項或其接續執行時，是否呼叫 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法取決於隨機產生的暫停持續期間。 如果取消前項，將不會啟動接續。 如果未取消前項，則語彙基元仍可用於取消接續。  
   
@@ -133,12 +133,12 @@ ms.locfileid: "56219902"
 ## <a name="handling-exceptions-thrown-from-continuations"></a>從接續擲回的例外狀況處理  
  前項與接續的關聯性並非父子式關聯性。 接續擲回的例外狀況並不會傳播至前項。 因此，就如同您在其他工作中一樣地處理接續所擲回的例外狀況，如下所示：  
   
--   您可以使用 <xref:System.Threading.Tasks.Task.Wait%2A>、 <xref:System.Threading.Tasks.Task.WaitAll%2A>或 <xref:System.Threading.Tasks.Task.WaitAny%2A> 方法或是其泛型對應項目，用來等待接續。 您可以在相同的 `try` 陳述式中等待前項和其接續，如下列範例所示。  
+- 您可以使用 <xref:System.Threading.Tasks.Task.Wait%2A>、 <xref:System.Threading.Tasks.Task.WaitAll%2A>或 <xref:System.Threading.Tasks.Task.WaitAny%2A> 方法或是其泛型對應項目，用來等待接續。 您可以在相同的 `try` 陳述式中等待前項和其接續，如下列範例所示。  
   
      [!code-csharp[TPL_Continuations#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception1.cs#6)]
      [!code-vb[TPL_Continuations#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception1.vb#6)]  
   
--   您可以使用第二個接續來觀察第一個接續的 <xref:System.Threading.Tasks.Task.Exception%2A> 屬性。 在下列範例中，工作會嘗試讀取不存在的檔案。 然後接續會顯示有關前項工作中例外狀況的資訊。  
+- 您可以使用第二個接續來觀察第一個接續的 <xref:System.Threading.Tasks.Task.Exception%2A> 屬性。 在下列範例中，工作會嘗試讀取不存在的檔案。 然後接續會顯示有關前項工作中例外狀況的資訊。  
   
      [!code-csharp[TPL_Continuations#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#4)]
      [!code-vb[TPL_Continuations#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#4)]  
@@ -150,7 +150,7 @@ ms.locfileid: "56219902"
   
      如需詳細資訊，請參閱[例外狀況處理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)。  
   
--   如果接續是使用 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> 選項建立的附加子工作，則其父代會將例外狀況傳播回到呼叫的執行緒，如同任何附加之子系的情況。 如需詳細資訊，請參閱[附加與中斷連結的子工作](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)。  
+- 如果接續是使用 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> 選項建立的附加子工作，則其父代會將例外狀況傳播回到呼叫的執行緒，如同任何附加之子系的情況。 如需詳細資訊，請參閱[附加與中斷連結的子工作](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cff235fe45c75fda51e04d5b0b54bb3ee03051b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16e500a645df2b58fb2d2fd402120556922d1800
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654304"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628945"
 ---
 # <a name="asynchronous-programming-model-apm"></a>非同步程式設計模型 (APM)
 使用 <xref:System.IAsyncResult> 設計模式的非同步作業會實作為兩種方法，一種名為 `BeginOperationName`，另一種名為 `EndOperationName`，這兩種方法分別負責開始和結束非同步作業 *OperationName*。 例如， <xref:System.IO.FileStream> 類別提供 <xref:System.IO.FileStream.BeginRead%2A> 和 <xref:System.IO.FileStream.EndRead%2A> 方法，以非同步方式讀取檔案的位元組。 這些方法實作 <xref:System.IO.FileStream.Read%2A> 方法的非同步版本。  
@@ -55,15 +55,15 @@ ms.locfileid: "54654304"
   
  應用程式開發人員有數項設計選擇，可存取非同步作業的結果。 正確的選擇取決於當作業完成時，應用程式是否有可以執行的指示。 如果應用程式一直到接收到非同步作業的結果，都無法執行任何額外的工作，它就必須封鎖直到取得結果為止。 若要封鎖到非同步作業完成，您可以使用下列方法的其中之一：  
   
--   從應用程式的主要執行緒呼叫 `EndOperationName`，並封鎖應用程式的執行，直到作業完成為止。 如需說明這項技巧的範例，請參閱[以結束非同步作業的方式封鎖應用程式執行](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md)。  
+- 從應用程式的主要執行緒呼叫 `EndOperationName`，並封鎖應用程式的執行，直到作業完成為止。 如需說明這項技巧的範例，請參閱[以結束非同步作業的方式封鎖應用程式執行](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md)。  
   
--   使用 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 應用程式執行，直到一或多個作業完成為止。 如需說明這項技巧的範例，請參閱 [Blocking Application Execution Using an AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)。  
+- 使用 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 應用程式執行，直到一或多個作業完成為止。 如需說明這項技巧的範例，請參閱 [Blocking Application Execution Using an AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)。  
   
  在非同步作業完成時不需要封鎖的應用程式，可以使用下列方法的其中之一：  
   
--   定期檢查 <xref:System.IAsyncResult.IsCompleted%2A> 屬性以輪詢作業完成狀態，並在作業完成時呼叫 `EndOperationName`。 如需說明這項技巧的範例，請參閱 [Polling for the Status of an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md)。  
+- 定期檢查 <xref:System.IAsyncResult.IsCompleted%2A> 屬性以輪詢作業完成狀態，並在作業完成時呼叫 `EndOperationName`。 如需說明這項技巧的範例，請參閱 [Polling for the Status of an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md)。  
   
--   使用 <xref:System.AsyncCallback> 委派指定作業完成時要叫用的方法。 如需說明這項技巧的範例，請參閱 [Using an AsyncCallback Delegate to End an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)。  
+- 使用 <xref:System.AsyncCallback> 委派指定作業完成時要叫用的方法。 如需說明這項技巧的範例，請參閱 [Using an AsyncCallback Delegate to End an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

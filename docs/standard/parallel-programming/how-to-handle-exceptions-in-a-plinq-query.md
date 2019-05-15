@@ -1,5 +1,5 @@
 ---
-title: HOW TO：處理 PLINQ 查詢中的例外狀況
+title: 作法：處理 PLINQ 查詢中的例外狀況
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b1a72a2b2443b419ea4f4b036664fb5f8932096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef107ae0dceb7ee937b21d65cba92cbcf6a9a96c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554240"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628991"
 ---
-# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>HOW TO：處理 PLINQ 查詢中的例外狀況
+# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>作法：處理 PLINQ 查詢中的例外狀況
 此主題中的第一個範例顯示如何處理當執行 PLINQ 查詢時可從它擲回的 <xref:System.AggregateException?displayProperty=nameWithType>。 第二個範例顯示如何將 try-catch 區塊放在委派內，且盡可能地接近將擲回例外狀況的位置。 如此一來，您可以在發生例外狀況時立即攔截它們，並可能繼續執行查詢。 當系統允許例外狀況反昇至聯結的執行緒時，查詢可能就可以在引發例外狀況之後，繼續處理某些項目。  
   
  在某些 PLINQ 回復為循序執行且發生例外狀況的情況中，例外狀況可能會直接傳播，而不會包裝在 <xref:System.AggregateException> 中。 此外，<xref:System.Threading.ThreadAbortException> 一律會直接傳播。  
@@ -43,7 +43,7 @@ ms.locfileid: "54554240"
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
--   若要編譯並執行這些範例，請將它們複製到 [PLINQ 資料範] 範例中，並從 Main 呼叫方法。  
+- 若要編譯並執行這些範例，請將它們複製到 [PLINQ 資料範] 範例中，並從 Main 呼叫方法。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  除非您知道如何處理，否則請勿攔截例外狀況，這樣您才不會損毀您的程式狀態。  

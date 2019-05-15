@@ -1,15 +1,15 @@
 ---
-title: 資料轉換 | ML.NET
+title: 資料轉換
 description: 探索 ML.NET 中支援的特徵工程元件。
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: 506abcc826059f4d252378b1bde0b852949a42e1
-ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
+ms.openlocfilehash: d3261f88a8e52c71f8ddf4d3d5c90b2e2b22b620
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59553845"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64636538"
 ---
 # <a name="data-transformations"></a>資料轉換
 
