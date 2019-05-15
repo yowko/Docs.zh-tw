@@ -1,15 +1,13 @@
 ---
 title: 實作復原應用程式
 description: 了解彈性這個微服務架構中的核心概念。 您必須知道如何有效地處理暫時性失敗，因為就是會發生失敗。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: 00724509ba6e027ef73f72bfb6f85b8ec0aa9d25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 766349e72389f848b0a741b020707cc7acf3410d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61977697"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639848"
 ---
 # <a name="implement-resilient-applications"></a>實作復原應用程式
 
