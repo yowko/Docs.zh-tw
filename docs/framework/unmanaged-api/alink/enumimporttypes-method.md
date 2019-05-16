@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1d0aefea7345bc3bf37bdb8d13cb2cda19cfe527
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0cd154ac90418dd0f6f476151686ff670c01c98c
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789951"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632238"
 ---
-# <a name="enumimporttypes-method"></a><span data-ttu-id="89e4a-102">EnumImportTypes 方法</span><span class="sxs-lookup"><span data-stu-id="89e4a-102">EnumImportTypes Method</span></span>
+# <a name="enumimporttypes-method"></a><span data-ttu-id="cd228-102">EnumImportTypes 方法</span><span class="sxs-lookup"><span data-stu-id="cd228-102">EnumImportTypes Method</span></span>
 
-<span data-ttu-id="89e4a-103">列舉每個範圍中的每個型別。</span><span class="sxs-lookup"><span data-stu-id="89e4a-103">Enumerates each type in each scope.</span></span>
+<span data-ttu-id="cd228-103">列舉每個範圍中的每個型別。</span><span class="sxs-lookup"><span data-stu-id="cd228-103">Enumerates each type in each scope.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="89e4a-104">語法</span><span class="sxs-lookup"><span data-stu-id="89e4a-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="cd228-104">語法</span><span class="sxs-lookup"><span data-stu-id="cd228-104">Syntax</span></span>
 
 ```cpp
 HRESULT EnumImportTypes(
@@ -39,30 +39,30 @@ HRESULT EnumImportTypes(
 ) PURE;
 ```
 
-## <a name="parameters"></a><span data-ttu-id="89e4a-105">參數</span><span class="sxs-lookup"><span data-stu-id="89e4a-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="cd228-105">參數</span><span class="sxs-lookup"><span data-stu-id="cd228-105">Parameters</span></span>
 
 `hEnum`\
-<span data-ttu-id="89e4a-106">列舉值的控制代碼。</span><span class="sxs-lookup"><span data-stu-id="89e4a-106">Handle for enumerator.</span></span>
+<span data-ttu-id="cd228-106">列舉值的控制代碼。</span><span class="sxs-lookup"><span data-stu-id="cd228-106">Handle for enumerator.</span></span>
 
 `dwMax`\
-<span data-ttu-id="89e4a-107">擷取類型的最大數目。</span><span class="sxs-lookup"><span data-stu-id="89e4a-107">Maximum number of types to retrieve.</span></span>
+<span data-ttu-id="cd228-107">擷取類型的最大數目。</span><span class="sxs-lookup"><span data-stu-id="cd228-107">Maximum number of types to retrieve.</span></span>
 
 `aTypeDefs`\
-<span data-ttu-id="89e4a-108">接收類型的語彙基元，不能超過`dwMax`。</span><span class="sxs-lookup"><span data-stu-id="89e4a-108">Receives type tokens, not to exceed `dwMax`.</span></span>
+<span data-ttu-id="cd228-108">接收類型的語彙基元，不能超過`dwMax`。</span><span class="sxs-lookup"><span data-stu-id="cd228-108">Receives type tokens, not to exceed `dwMax`.</span></span>
 
 `pdwCount`\
-<span data-ttu-id="89e4a-109">接收輸入的實際數目`aTypeDefs`。</span><span class="sxs-lookup"><span data-stu-id="89e4a-109">Receives actual number of type in `aTypeDefs`.</span></span>
+<span data-ttu-id="cd228-109">接收輸入的實際數目`aTypeDefs`。</span><span class="sxs-lookup"><span data-stu-id="cd228-109">Receives actual number of type in `aTypeDefs`.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="89e4a-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="89e4a-110">Return Value</span></span>
+## <a name="return-value"></a><span data-ttu-id="cd228-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="cd228-110">Return Value</span></span>
 
-<span data-ttu-id="89e4a-111">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="89e4a-111">Returns S_OK if the method succeeds.</span></span>
+<span data-ttu-id="cd228-111">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="cd228-111">Returns S_OK if the method succeeds.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="89e4a-112">需求</span><span class="sxs-lookup"><span data-stu-id="89e4a-112">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="cd228-112">需求</span><span class="sxs-lookup"><span data-stu-id="cd228-112">Requirements</span></span>
 
-<span data-ttu-id="89e4a-113">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="89e4a-113">Requires alink.h</span></span>
+<span data-ttu-id="cd228-113">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="cd228-113">Requires alink.h</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="89e4a-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="89e4a-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cd228-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cd228-114">See also</span></span>
 
-- [<span data-ttu-id="89e4a-115">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="89e4a-115">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="89e4a-116">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="89e4a-116">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="89e4a-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="89e4a-117">ALink API</span></span>](index.md)
+- [<span data-ttu-id="cd228-115">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="cd228-115">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="cd228-116">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="cd228-116">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="cd228-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="cd228-117">ALink API</span></span>](index.md)

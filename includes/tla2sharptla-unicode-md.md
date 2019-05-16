@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 9ab0bd9a6126ee4b9d7538d5c6cba7aa587f31ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6d93c0f9d10bc8c9725c69f2961ad33781da49f4
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025429"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65669878"
 ---
-<span data-ttu-id="01266-101">Unicode</span><span class="sxs-lookup"><span data-stu-id="01266-101">Unicode</span></span>
+<span data-ttu-id="b2fd4-101">Unicode</span><span class="sxs-lookup"><span data-stu-id="b2fd4-101">Unicode</span></span>

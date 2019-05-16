@@ -1,1 +1,9 @@
-<span data-ttu-id="c3302-101">Microsoft Visual C++</span><span class="sxs-lookup"><span data-stu-id="c3302-101">Microsoft Visual C++</span></span>
+---
+ms.openlocfilehash: 2912c931a22310e70147c01f1749f3396b6b178b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65669570"
+---
+<span data-ttu-id="fa098-101">Microsoft Visual C++</span><span class="sxs-lookup"><span data-stu-id="fa098-101">Microsoft Visual C++</span></span>

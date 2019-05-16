@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 4ca0a1dafaea5e84f002eb1c3a7a92dd033b7a8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 78253b48f0efe933e7e31e09cfbf9087527b329b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768497"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65670570"
 ---
-<span data-ttu-id="f78e6-101">API</span><span class="sxs-lookup"><span data-stu-id="f78e6-101">APIs</span></span>
+<span data-ttu-id="c8a7b-101">API</span><span class="sxs-lookup"><span data-stu-id="c8a7b-101">APIs</span></span>

@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 4da63a3a786aae5fee93e42a249d8d1e45315fd5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 72f1d9fb88a1babc75fbb5c8c9cd62ea48304a33
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61827112"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65669764"
 ---
-<span data-ttu-id="cf241-101">.NET Native</span><span class="sxs-lookup"><span data-stu-id="cf241-101">.NET Native</span></span>
+<span data-ttu-id="b7885-101">.NET Native</span><span class="sxs-lookup"><span data-stu-id="b7885-101">.NET Native</span></span>

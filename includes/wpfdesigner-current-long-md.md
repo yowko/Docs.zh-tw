@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: ab22a2cb159372443ef2354eef40381fd056327a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 134c3137458da12f1a0c2571ca161e0ac97553d6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696382"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671892"
 ---
-<span data-ttu-id="f5e47-101">WPF Designer for Visual Studio</span><span class="sxs-lookup"><span data-stu-id="f5e47-101">WPF Designer for Visual Studio</span></span>
+<span data-ttu-id="da720-101">WPF Designer for Visual Studio</span><span class="sxs-lookup"><span data-stu-id="da720-101">WPF Designer for Visual Studio</span></span>

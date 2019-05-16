@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: a220c1ba2089f36ee7483f9d624548a03c3bb4a7
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: b68bdb92442d4f0ab789a2b4444518961a1158f8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "25704815"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65669577"
 ---
-<span data-ttu-id="22325-101">可交換影像檔案 (Exif)</span><span class="sxs-lookup"><span data-stu-id="22325-101">Exchangeable image file (Exif)</span></span>
+<span data-ttu-id="29b2b-101">可交換影像檔案 (Exif)</span><span class="sxs-lookup"><span data-stu-id="29b2b-101">Exchangeable image file (Exif)</span></span>
