@@ -2,12 +2,12 @@
 title: JSON 和 XML 之間的對應
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: 075f85887f99708dd1f3479bf0b036203886af71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef5eaac8fc75149ac518ce322808a84bbab5506b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918771"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636441"
 ---
 # <a name="mapping-between-json-and-xml"></a>JSON 和 XML 之間的對應
 <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> 所產生的讀取器與寫入器會透過 JavaScript 物件標記法 (JSON) 內容來提供 XML API。 JSON 使用 JavaScript 物件常值的子集對資料進行編碼。 讀取器和寫入器所產生的這個處理站時也會使用 JSON 內容所使用的 Windows Communication Foundation (WCF) 應用程式傳送或接收<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>或<xref:System.ServiceModel.WebHttpBinding>。

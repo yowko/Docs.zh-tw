@@ -2,12 +2,12 @@
 title: 條件約束
 description: 深入了解F#條件約束套用至泛型型別參數的泛型型別或函式中指定的類型引數的需求。
 ms.date: 05/16/2016
-ms.openlocfilehash: b253ce50707512a0d46c41bba2dde34adcc24d0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1bf5c6fc4df6c8f2f7f969bd13030172c6b8aab9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937510"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645289"
 ---
 # <a name="constraints"></a>條件約束
 
