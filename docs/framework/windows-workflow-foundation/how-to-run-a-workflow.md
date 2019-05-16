@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c47e1ba89179b38055244c01507318836c899fda
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779154"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637512"
 ---
-# <a name="how-to-run-a-workflow"></a>HOW TO：執行工作流程
+# <a name="how-to-run-a-workflow"></a>作法：執行工作流程
 本主題將延續 Windows Workflow Foundation 快速入門教學課程，並討論如何建立工作流程主機和執行在先前定義的工作流程[How to:建立工作流程](how-to-create-a-workflow.md)主題。
 
 > [!NOTE]

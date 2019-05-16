@@ -1,16 +1,16 @@
 ---
-title: HOW TO：在受控的 Windows 服務中裝載 WCF 服務
+title: 作法：在受控的 Windows 服務中裝載 WCF 服務
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: c63b249cf16100f0b18d622fdecd7cd375df83d8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b21033cff53f0cb59710b70923c14b8a539923a1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683602"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636484"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>HOW TO：在受控的 Windows 服務中裝載 WCF 服務
 

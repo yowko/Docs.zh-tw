@@ -1,18 +1,18 @@
 ---
-title: HOW TO：建立基本 WCF Web HTTP 服務
+title: 作法：建立基本 WCF Web HTTP 服務
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-ms.openlocfilehash: 1b76d21cb4f416aae76e7597ad16cfd45e5b7cad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2d05e0c3bb24c44bf78dc41074b8759270cf49b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779193"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636519"
 ---
-# <a name="how-to-create-a-basic-wcf-web-http-service"></a>HOW TO：建立基本 WCF Web HTTP 服務
+# <a name="how-to-create-a-basic-wcf-web-http-service"></a>作法：建立基本 WCF Web HTTP 服務
 
 Windows Communication Foundation (WCF) 可讓您建立公開 Web 端點的服務。 Web 端點會透過 XML 或 JSON 來傳送資料，而且不使用任何 SOAP 封套。 本主題示範如何公開這類端點。
 

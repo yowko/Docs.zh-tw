@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用設計工具格式化 Windows Forms DataGrid 控制項
+title: 作法：使用設計工具格式化 Windows Forms DataGrid 控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], DataGrid controls
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: 245dae4af7103b7fffa6b567f83a6f10504f9473
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fddb59fc32feabf708e209ac4a5e78a14585fa66
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609687"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637562"
 ---
-# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>HOW TO：使用設計工具格式化 Windows Forms DataGrid 控制項
+# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>作法：使用設計工具格式化 Windows Forms DataGrid 控制項
 
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  

@@ -2,12 +2,12 @@
 title: 裝載工作流程服務
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: dbb5e9b687a735376d720b83607fc67350cd429f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 07e4f7779c06e6c95b45d59bcdd0890fb5a9cf55
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613329"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636133"
 ---
 # <a name="hosting-workflow-services"></a>裝載工作流程服務
 您必須裝載工作流程服務，才能讓它回應傳入的訊息。 工作流程服務使用了 WCF 訊息基礎結構，因此會以類似的方式裝載。 就像 WCF 服務，可在任何受管理的應用程式，在網際網路資訊服務 (IIS) 或在 Windows Process Activation Services (WAS) 裝載工作流程服務。 此外，工作流程服務可以裝載 Windows Server App Fabric 底下。 如需 Windows Server App Fabric 的詳細資訊請參閱 < [Windows Server App Fabric 文件](https://go.microsoft.com/fwlink/?LinkId=193037)， [AppFabric 主控功能](https://go.microsoft.com/fwlink/?LinkId=196494)，並[AppFabric 主控概念](https://go.microsoft.com/fwlink/?LinkId=196495)。 針對服務中裝載 WCF 的各種方式的詳細資訊，請參閱[裝載的服務](../../../../docs/framework/wcf/hosting-services.md)。

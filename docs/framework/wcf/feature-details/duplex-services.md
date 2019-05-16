@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: a8197dfc877842be824a5b10c742ef4fb7792858
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5fef151fe9149e2693ee217e7be642427162322d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592756"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636288"
 ---
 # <a name="duplex-services"></a>雙工服務
 
@@ -87,7 +87,7 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 ```
 
 > [!WARNING]
-> 此雙工模型不會自動偵測服務或用戶端關閉其通道的時間。 因此如果用戶端意外終止，根據預設，服務將不會通知，或如果服務意外終止時，將不會通知用戶端。 用戶端和服務可以實作自己的通訊協定來通知彼此 (如果選擇這樣做的話)。 如需有關錯誤處理的詳細資訊，請參閱[WCF 錯誤處理](../wcf-error-handling.md)
+> 服務或用戶端關閉其通道時，雙工模型不會自動偵測。 因此如果用戶端意外終止，根據預設，服務將不會通知，或如果服務意外終止時，將不會通知用戶端。 如果您使用中斷連線時，服務<xref:System.ServiceModel.CommunicationException>引發的例外狀況。 用戶端和服務可以實作自己的通訊協定來通知彼此 (如果選擇這樣做的話)。 如需有關錯誤處理的詳細資訊，請參閱[WCF 錯誤處理](../wcf-error-handling.md)
 
 ## <a name="see-also"></a>另請參閱
 
