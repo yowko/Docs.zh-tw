@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 6228cd93b275a059da63a8b8e3408032d78c5e39
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 440ef2ed398b22262923422efd7f1259e3ee9b74
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362011"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633697"
 ---
 # <a name="build-a-net-standard-library-with-c-and-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 C# 和 .NET Core SDK 來建置 .NET Standard 程式庫
 

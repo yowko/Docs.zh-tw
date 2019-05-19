@@ -2,12 +2,12 @@
 title: dotnet run 命令
 description: dotnet run 命令提供方便的選項，以透過原始程式碼來執行應用程式。
 ms.date: 05/29/2018
-ms.openlocfilehash: e96d5c99e7bcb394c6feffa18990f76a83f32276
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 489429e2371c807e09f9fb8c2de6f96d091edc6d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612845"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632020"
 ---
 # <a name="dotnet-run"></a>dotnet run
 

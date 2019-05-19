@@ -2,12 +2,12 @@
 title: dotnet pack 命令
 description: dotnet pack 命令會建立 .NET Core 專案的 NuGet 套件。
 ms.date: 12/04/2018
-ms.openlocfilehash: 8faa99bf35d9802b16f951082b20644d45a939c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5d48e5957e8095cc9ef4eaca2e1e1746c25a2a88
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672122"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876035"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -46,6 +46,14 @@ dotnet pack [-h|--help]
 `dotnet pack` 預設會先建置專案。 如果您想要避免這種行為，請傳遞 `--no-build` 選項。 這個選項通常適用於您知道先前剛建立程式碼的持續整合 (CI) 組建案例。
 
 您可以提供 MSBuild 屬性給 `dotnet pack` 命令來壓縮程序。 如需詳細資訊，請參閱 [NuGet 中繼資料屬性](csproj.md#nuget-metadata-properties)和 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)。 [範例](#examples)一節示範針對數個不同案例使用 MSBuild -p 參數的方法。
+
+Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新增至您的 .csproj 檔案：
+
+```xml
+<PropertyGroup>
+   <IsPackable>true</IsPackable>
+</PropertyGroup>
+```
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -110,15 +118,6 @@ dotnet pack [-h|--help]
 * **`-v|--verbosity <LEVEL>`**
 
   設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
-
-> [!NOTE]
-> Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新增至您的 .csproj 檔案：
->
-> ```xml
-> <PropertyGroup>
->    <IsPackable>true</IsPackable>
-> </PropertyGroup>
-> ```
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
