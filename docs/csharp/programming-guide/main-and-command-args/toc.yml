@@ -3,9 +3,7 @@
   items:
     - name: 命令列引數
       href: command-line-arguments.md
-    - name: HOW TO：顯示命令列引數
+    - name: 作法：顯示命令列引數
       href: how-to-display-command-line-arguments.md
-    - name: HOW TO：使用 foreach 存取命令列引數
-      href: how-to-access-command-line-arguments-using-foreach.md
     - name: Main() 傳回值
       href: main-return-values.md
