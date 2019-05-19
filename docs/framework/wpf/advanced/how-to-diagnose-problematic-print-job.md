@@ -1,5 +1,5 @@
 ---
-title: HOW TO：診斷問題列印工作
+title: 作法：診斷問題列印工作
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: ceffef8e911bb3e49e0d6526328523667a462b61
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: c9da2e1daff23ef9ba39d8b5d53cb3be67f35a27
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912443"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878213"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>HOW TO：診斷問題列印工作
 網路系統管理經常處理使用者對於列印工作的相關抱怨 (不會列印或列印緩慢)。 一組豐富的列印工作中公開的屬性[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]Microsoft.NET framework 提供一種方法來執行列印工作的快速遠端診斷。  
@@ -59,7 +59,7 @@ ms.locfileid: "64912443"
  [!code-csharp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#identifyanddiagnoseproblematicjob)]
  [!code-vb[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#identifyanddiagnoseproblematicjob)]  
   
- 若要檢查使用的旗標的列印工作狀態<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>屬性，檢查以查看是否已設定每個相關旗標。 若要查看是否已在一組位元旗標中設定一個位元，標準方法就是以這組旗標做為一個運算元，而旗標本身做為另一個運算元來執行邏輯 AND 運算。 因為旗標本身只會設定一個位元，所以邏輯 AND 的結果是最多設定相同的位元。 若要查明是否如此，只要比較邏輯 AND 的結果與旗標本身。 如需詳細資訊，請參閱 < <xref:System.Printing.PrintJobStatus>，則[& 運算子 (C#參考)](~/docs/csharp/language-reference/operators/and-operator.md)，和<xref:System.FlagsAttribute>。  
+ 若要檢查使用的旗標的列印工作狀態<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>屬性，檢查以查看是否已設定每個相關旗標。 若要查看是否已在一組位元旗標中設定一個位元，標準方法就是以這組旗標做為一個運算元，而旗標本身做為另一個運算元來執行邏輯 AND 運算。 因為旗標本身只會設定一個位元，所以邏輯 AND 的結果是最多設定相同的位元。 若要查明是否如此，只要比較邏輯 AND 的結果與旗標本身。 如需詳細資訊，請參閱 < <xref:System.Printing.PrintJobStatus>，則[& 運算子 (C#參考)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)，和<xref:System.FlagsAttribute>。  
   
  對於已設定位元的每個屬性，程式碼會將此回報至主控台畫面，而且有時會建議回應方式。 (下面會討論工作或佇列暫停時所呼叫的 **HandlePausedJob** 方法。)  
   
@@ -87,6 +87,6 @@ ms.locfileid: "64912443"
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
-- [& 運算子 (C#參考)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& 運算子 (C#參考)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
 - [WPF 中的文件](documents-in-wpf.md)
 - [列印概觀](printing-overview.md)

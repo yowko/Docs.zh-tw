@@ -2,24 +2,24 @@
 title: 在 ASP.NET 中使用 System.Transactions
 ms.date: 03/30/2017
 ms.assetid: 1982c300-7ea6-4242-95ed-dc28ccfacac9
-ms.openlocfilehash: df9a9f1878b2268d1d6bc3d9b05d0ad8d7bcc3f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 866d7b69fa6c18f6edfb48655b213e140a095a28
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793507"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880226"
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>在 ASP.NET 中使用 System.Transactions
-本主題說明如何成功運用 <xref:System.Transactions> 應用程式中的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 。  
+本主題說明如何成功運用 ASP.NET 應用程式中的 <xref:System.Transactions>。  
   
 ## <a name="enable-distributedtransactionpermission-in-aspnet"></a>啟用 ASP.NET 中的 DistributedTransactionPermission  
  <xref:System.Transactions> 支援部分信任的呼叫端，並且含有 **AllowPartiallyTrustedCallers** 屬性 (APTCA) 標記。 <xref:System.Transactions> 會依據 <xref:System.Transactions> 所公開的資源型別 (例如，系統記憶體、共用的整個處理序資源、整個系統資源與其他資源)，以及存取這些資源時必要的信任層級來共同定義信任層級。 在部分信任的環境中，非完整信任組件只能使用應用程式定義域內的交易 (在此情況下，系統記憶體是唯一受保護的資源)，除非它被授予了 <xref:System.Transactions.DistributedTransactionPermission>。  
   
  每當交易的管理擴大至需由「Microsoft 分散式交易協調器」(MSDTC) 管理的情況時，就會要求<xref:System.Transactions.DistributedTransactionPermission> 。 這種情況會使用整個處理序的資源，特別是全域資源 (亦即在 MSDTC 記錄中保留的空格)。 資料庫的 Web 前端或是將資料庫當成所提供的服務一部分來使用的應用程式，都是這類用法的例子。  
   
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 擁有專屬的信任層級，並透過原則檔將這些信任層級關聯至特定的權限。 如需詳細資訊，請參閱 < [ASP.NET 信任 Levels and Policy Files](https://docs.microsoft.com/previous-versions/aspnet/wyts434y(v=vs.100))。 在您初次安裝 Windows SDK 時，沒有任何預設的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 原則檔會與 <xref:System.Transactions.DistributedTransactionPermission>關聯。 因此，當 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式中的交易規模擴大至需由 MSDTC 管理時，在要求 <xref:System.Security.SecurityException> 時，擴大規模會失敗，並傳回 <xref:System.Transactions.DistributedTransactionPermission>。 若要在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 部分信任環境中啟用交易擴大規模，您應該在同一個預設信任層級中授與 <xref:System.Transactions.DistributedTransactionPermission> 權限 (與在 <xref:System.Data.SqlClient.SqlClientPermission>中所授與的權限一樣)。 您可以選擇設定自訂的信任層級與原則檔來支援這項作業，或者也可以修改預設的原則檔，亦即 **Web_hightrust.config** 和 **Web_mediumtrust.config**。  
+ ASP.NET 擁有專屬的信任層級，並透過原則檔將這些信任層級關聯至特定的權限。 如需詳細資訊，請參閱 < [ASP.NET 信任 Levels and Policy Files](https://docs.microsoft.com/previous-versions/aspnet/wyts434y(v=vs.100))。 當您初次安裝 Windows SDK 時，沒有預設的 ASP.NET 原則檔相關聯<xref:System.Transactions.DistributedTransactionPermission>。 因此，當 ASP.NET 應用程式中的交易規模擴大至需由 MSDTC 管理時，在要求 <xref:System.Security.SecurityException> 時，擴大規模會失敗，並傳回 <xref:System.Transactions.DistributedTransactionPermission>。 若要在 ASP.NET 部分信任環境中啟用交易擴大規模，您應該在同一個預設信任層級中授予 <xref:System.Transactions.DistributedTransactionPermission> 權限 (與在 <xref:System.Data.SqlClient.SqlClientPermission> 中所授予的權限一樣)。 您可以選擇設定自訂的信任層級與原則檔來支援這項作業，或者也可以修改預設的原則檔，亦即 **Web_hightrust.config** 和 **Web_mediumtrust.config**。  
   
- 若要修改原則檔，請新增**Distributedtransactionpermission**項目**DistributedTransactionPermission**來**Policylevel**項目底下**Securityclasses**項目並將對應**IPermission**項目底下[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] **NamedPermissionSet** system.transactions。 下列組態檔示範如何進行。  
+ 若要修改原則檔，請新增**Distributedtransactionpermission**項目**DistributedTransactionPermission**來**Policylevel**項目底下**Securityclasses**項目並將對應**IPermission**項目底下 ASP.NET **NamedPermissionSet** system.transactions。 下列組態檔示範如何進行。  
   
 ```xml  
 <SecurityClasses>  
@@ -40,10 +40,10 @@ ms.locfileid: "61793507"
 </PermissionSet>  
 ```  
   
- 如需詳細資訊[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]安全性原則，請參閱 < [securityPolicy 項目 （ASP.NET 設定結構描述）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/zhs35b56(v=vs.100))。  
+ 如需有關 ASP.NET 安全性原則的詳細資訊，請參閱[securityPolicy 項目 （ASP.NET 設定結構描述）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/zhs35b56(v=vs.100))。  
   
 ## <a name="dynamic-compilation"></a>動態編譯  
- 如果您希望匯入並使用 <xref:System.Transactions> 應用程式中的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] (在存取時動態編譯)，您可以在組態檔中放置 <xref:System.Transactions> 組件的參考。 具體來說，您應該將參考加入預設根 **Web.config**/**compilation** / **assemblies** 區段底下。 下列範例為其示範。  
+ 如果您希望匯入並使用 ASP.NET 應用程式中的 <xref:System.Transactions> (在存取時動態編譯)，您可以在組態檔中放置 <xref:System.Transactions> 組件的參考。 具體來說，您應該將參考加入預設根 **Web.config**/**compilation** / **assemblies** 區段底下。 下列範例為其示範。  
   
 ```xml  
 <configuration>  

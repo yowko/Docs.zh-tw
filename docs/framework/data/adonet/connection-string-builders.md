@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 8788c97842d157e09f7058411db43f86c66769cd
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f0510b9e3f31686e22532f21989cb95905522286
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583797"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879903"
 ---
 # <a name="connection-string-builders"></a>連接字串產生器
-在舊版[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]的編譯時間檢查含有串連字串值並未發生，連接字串，以便在執行階段，產生不正確的關鍵字<xref:System.ArgumentException>。 每個.NET Framework 資料提供者都支援不同語法的連接字串關鍵字，建立難以人工建構有效的連接字串。 若要解決這個問題， [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 導入了新的連接字串產生器的每個.NET Framework 資料提供者。 每個資料提供者都具有繼承自 <xref:System.Data.Common.DbConnectionStringBuilder> 強型別連接字串產生器類別。 下表列出.NET Framework 資料提供者和其相關聯的連接字串產生器類別。  
+在舊版 ADO.NET 中，在編譯時間檢查連接字串，串連的字串值的未發生，以便在執行階段，產生不正確的關鍵字<xref:System.ArgumentException>。 每個.NET Framework 資料提供者都支援不同語法的連接字串關鍵字，建立難以人工建構有效的連接字串。 若要解決此問題，ADO.NET 2.0 導入了新的連接字串產生器的每個.NET Framework 資料提供者。 每個資料提供者都具有繼承自 <xref:System.Data.Common.DbConnectionStringBuilder> 強型別連接字串產生器類別。 下表列出.NET Framework 資料提供者和其相關聯的連接字串產生器類別。  
   
 |提供者|ConnectionStringBuilder 類別|  
 |--------------|-----------------------------------|  

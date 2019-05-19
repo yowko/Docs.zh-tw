@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 4d522fb377fd117800ef4d7d754d513a3d919a35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d881a75e95bc3c3eef1df651b380210ff51ea3ce
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656039"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877511"
 ---
 # <a name="hosting-in-internet-information-services"></a>在網際網路資訊服務中裝載
-裝載 Windows Communication Foundation (WCF) 服務的其中一個選項是在 Internet Information Services (IIS) 應用程式內。 這個裝載模型與 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 ASP.NET (ASMX) Web 服務所使用的模型很類似。  
+裝載 Windows Communication Foundation (WCF) 服務的其中一個選項是在 Internet Information Services (IIS) 應用程式內。 這個裝載模型十分類似 ASP.NET 和 ASP.NET Web 服務 (ASMX) Web 服務所使用的模型。  
   
 ## <a name="versions-of-iis"></a>IIS 的版本  
  WCF 可以裝載在下列作業系統上的下列 IIS 版本：  
@@ -28,11 +28,11 @@ ms.locfileid: "64656039"
 ## <a name="benefits-of-iis-hosting"></a>IIS 裝載的優點  
  裝載在 IIS 中的 WCF 服務有幾項優點：  
   
-- 在 IIS 中裝載的 WCF 服務部署與管理其他任何類型 IIS 應用程式，包括[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式和 ASMX。  
+- 在 IIS 中裝載的 WCF 服務部署與管理 IIS 應用程式，包括 ASP.NET 應用程式與 asmx 運用的其他任何類型。  
   
 - IIS 可提供處理序啟動、系統健康狀態管理，與回收功能來增加所裝載之應用程式的可靠性。  
   
-- 像是[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]，WCF 服務裝載於[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]可以利用[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]以改進的伺服器密度及延展性的一般背景工作處理序中的多個應用程式所在的共用裝載模型。  
+- ASP.NET 中，例如在 ASP.NET 中裝載的 WCF 服務可以利用 ASP.NET 共用裝載模型的多個應用程式中常見的背景工作處理序，以改進的伺服器密度及延展性的所在位置。  
   
 - 在 IIS 中裝載的 WCF 服務使用相同的動態編譯模型[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]、 可簡化開發和部署的託管服務。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "64656039"
   
 - 確定，IIS、 ASP.NET、 WCF 和 WCF HTTP 啟動元件已正確安裝並註冊。  
   
-- 建立新的 IIS 應用程式，或是重複使用現有的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式。  
+- 建立新的 IIS 應用程式，或重複使用現有的 ASP.NET 應用程式。  
   
 - 建立 WCF 服務.svc 檔案。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "64656039"
  每個工作的討論，請參閱 <<c0> [ 部署 Internet Information Services-Hosted 的 WCF 服務](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)。  
   
 ## <a name="wcf-services-and-aspnet"></a>WCF 服務與 ASP.NET  
- WCF 服務可以裝載任一--與並存[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]或是在[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]所在的服務可以充分利用所提供的功能的相容性模式[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 應用程式平台。 如需這些功能的討論，請參閱 < [WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。  
+ WCF 服務可以裝載任一-並存使用 ASP.NET 或 ASP.NET 相容性模式中的服務可以充分利用 ASP.NET Web 應用程式平台所提供的功能。 如需這些功能的討論，請參閱 < [WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

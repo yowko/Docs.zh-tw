@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用設計工具定義工具列按鈕的圖示
+title: 作法：使用設計工具定義工具列按鈕的圖示
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms], adding icons to buttons
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-ms.openlocfilehash: 19d0b284238ed662b25627d6077c1ebe6ecc6e86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8fe28a7827c0f69f80a3078d604b1818f4134ac
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757429"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877412"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>HOW TO：使用設計工具定義工具列按鈕的圖示
+# <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>作法：使用設計工具定義工具列按鈕的圖示
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "61757429"
   
 3. 在 **屬性**視窗中，將<xref:System.Windows.Forms.ToolBar>控制項的<xref:System.Windows.Forms.ToolBar.ImageList%2A>屬性設<xref:System.Windows.Forms.ImageList>元件。  
   
-4. 按一下 <xref:System.Windows.Forms.ToolBar>控制項的<xref:System.Windows.Forms.ToolBar.Buttons%2A>屬性來加以選取，然後按一下省略符號 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 按鈕，開啟**ToolBarButton 集合編輯器**。  
+4.  按一下 <xref:System.Windows.Forms.ToolBar>控制項的<xref:System.Windows.Forms.ToolBar.Buttons%2A>屬性來加以選取，然後按一下省略符號 (![的省略符號按鈕 （...） 在 [屬性] 視窗的 Visual Studio。](./media/visual-studio-ellipsis-button.png)) 按鈕，即可開啟**ToolBarButton 集合編輯器**。  
   
 5. 使用**新增** 按鈕，將按鈕加入<xref:System.Windows.Forms.ToolBar>控制項。  
   

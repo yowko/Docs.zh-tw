@@ -2,15 +2,15 @@
 title: ADO.NET 資料集
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 50e8e8f5e4b3ee2f5a41cb9dad11b5e701135d9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 29aba76731c4170c8af3c913a06e78e89ce3a08d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607578"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877217"
 ---
 # <a name="adonet-datasets"></a>ADO.NET 資料集
-<xref:System.Data.DataSet> 物件對於支援 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 的中斷連接、分散式的資料案例非常重要。 **資料集**是提供與資料來源無關的一致性關聯式程式設計模型的資料常駐記憶體表示法。 它可與多個不同的資料來源一起使用、與 XML 資料一起使用，或管理應用程式的本機資料。 **資料集**表示一組完整的資料，包括相關的資料表、 條件約束及資料表間的關聯性。 如下圖所示**資料集**物件模型。  
+<xref:System.Data.DataSet>物件是支援的核心已中斷連線，分散式資料案例的 ADO.NET。 **資料集**是提供與資料來源無關的一致性關聯式程式設計模型的資料常駐記憶體表示法。 它可與多個不同的資料來源一起使用、與 XML 資料一起使用，或管理應用程式的本機資料。 **資料集**表示一組完整的資料，包括相關的資料表、 條件約束及資料表間的關聯性。 如下圖所示**資料集**物件模型。  
   
  ![ADO.Net 圖形](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 DataSet 物件模型  
@@ -20,7 +20,7 @@ DataSet 物件模型
  **資料集**也可以保存及重新載入其內容為 XML，以及其與 XML 結構描述定義語言 (XSD) 結構描述的結構描述。 如需詳細資訊，請參閱[在 DataSet 中使用 XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)。  
   
 ## <a name="the-datatablecollection"></a>DataTableCollection  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] **資料集**包含零個或多個資料表所表示的集合<xref:System.Data.DataTable>物件。 <xref:System.Data.DataTableCollection>包含所有**DataTable**中的物件**DataSet**。  
+ ADO.NET**資料集**包含零個或多個資料表所表示的集合<xref:System.Data.DataTable>物件。 <xref:System.Data.DataTableCollection>包含所有**DataTable**中的物件**DataSet**。  
   
  A **DataTable**中所定義<xref:System.Data>命名空間和表示記憶體常駐資料的單一資料表。 它包含由 <xref:System.Data.DataColumnCollection> 所表示的資料行集合，以及由 <xref:System.Data.ConstraintCollection> 所表示的條件約束，它們共同定義資料表的結構描述。 A **DataTable**也會包含所代表的資料列集合<xref:System.Data.DataRowCollection>，其中包含資料表中的資料。 連同其目前狀態一起，<xref:System.Data.DataRow> 還保留其目前及原始版本，以識別儲存在資料列中之值的變更。  
   

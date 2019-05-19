@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: aaa12ca65257be2f06c84f8ff3be926ea92b0dbb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6da9e2a91fe8156c0631aa77594e3ed47d32cb8b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651076"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882193"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隱私權資訊
 Microsoft 一向致力於保護使用者的隱私權。 當您建置的應用程式使用 Windows Communication Foundation (WCF) 3.0 版，您的應用程式可能會影響到使用者的隱私權。 例如，應用程式可能會明確收集使用者的連絡資訊，或者透過網際網路向您的網站要求資訊或傳送資訊至網站。 如果您在應用程式中內嵌 Microsoft 技術，則該技術可能帶有會影響隱私權的行為。 WCF 不會傳送任何資訊給 Microsoft 從您的應用程式除非您本人或使用者選擇要傳送給我們。  
@@ -29,7 +29,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您建置的應用程
  WCF 傳訊層不會寫入到本機電腦的任何個人資訊。 不過，如果服務開發人員建立了會公開這類資訊的服務 (例如，在端點名稱中使用某個人的名稱，或者在端點的 Web 服務描述語言中加入個人資訊，可是沒有要求用戶端使用 https 來存取 WSDL)，則該訊息層可能在網路層級中傳播個人資訊。 此外，如果開發人員執行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具針對端點公開個人資訊，此工具的輸出可能包含該資訊，並寫入輸出檔案本機硬碟。  
   
 ## <a name="hosting"></a>裝載  
- WCF 中的裝載功能可讓應用程式可視需要啟動或啟用多個應用程式之間的連接埠共用。 WCF 應用程式可以裝載在網際網路資訊服務 (IIS)，類似於[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]。  
+ WCF 中的裝載功能可讓應用程式可視需要啟動或啟用多個應用程式之間的連接埠共用。 WCF 應用程式可以裝載在網際網路資訊服務 (IIS)，類似於 ASP.NET。  
   
  裝載時並不會在網路上公開任何特定資訊，而且也不會保存電腦上的資料。  
   
@@ -47,7 +47,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您建置的應用程
 |資料|存放裝置|  
 |----------|-------------|  
 |展示認證，例如使用者名稱、X.509 憑證、Kerberos 語彙基元和認證的各種參照。|標準 Windows 認證管理機制，例如 Windows 憑證存放庫。|  
-|使用者成員資格資訊，例如使用者名稱和密碼。|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 成員資格提供者。|  
+|使用者成員資格資訊，例如使用者名稱和密碼。|ASP.NET 成員資格提供者。|  
 |身分識別服務的相關資訊，此服務是用來驗證用戶端的服務。|服務的端點位址。|  
 |呼叫端資訊。|稽核記錄。|  
   

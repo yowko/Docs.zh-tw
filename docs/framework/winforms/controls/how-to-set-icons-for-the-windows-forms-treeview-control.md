@@ -1,5 +1,5 @@
 ---
-title: HOW TO：設定 Windows Forms TreeView 控制項的圖示
+title: 作法：設定 Windows Forms TreeView 控制項的圖示
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - icons [Windows Forms], setting for TreeView control
 - tree nodes in TreeView control [Windows Forms], icons
 ms.assetid: c14ddcc0-e5a6-4c21-a2d5-6799fd491781
-ms.openlocfilehash: 1a857aade86d2366bb68ce14d716b3ce532ecb05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb2d75b7c18aa2e65c5e90749852383eea7985b3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013253"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880684"
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>HOW TO：設定 Windows Forms TreeView 控制項的圖示
 Windows Form<xref:System.Windows.Forms.TreeView>控制項可以顯示每個節點旁邊的圖示。 圖示位於節點文字的左邊。 若要顯示這些圖示，您必須建立關聯的樹狀檢視<xref:System.Windows.Forms.ImageList>控制項。 如需有關影像清單的詳細資訊，請參閱[ImageList 元件](imagelist-component-windows-forms.md)和[How to:新增或移除映像的 Windows Form ImageList 元件](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。  
@@ -45,7 +45,7 @@ Windows Form<xref:System.Windows.Forms.TreeView>控制項可以顯示每個節�
   
 2. 將節點的設定<xref:System.Windows.Forms.TreeNode.ImageIndex%2A>和<xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A>屬性。 <xref:System.Windows.Forms.TreeNode.ImageIndex%2A>屬性會決定節點的一般或展開狀態，所顯示的影像和<xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A>屬性決定節點的選取狀態顯示的影像。  
   
-     在程式碼，或在 TreeNode 編輯器內，可以設定這些屬性。 若要開啟 TreeNode 編輯器，請按一下 [省略符號按鈕 ( ![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁<xref:System.Windows.Forms.TreeView.Nodes%2A>屬性] 視窗上的屬性。  
+     在程式碼，或在 TreeNode 編輯器內，可以設定這些屬性。 若要開啟 TreeNode 編輯器，請按一下 [省略符號按鈕 (![的 Visual Studio 的 [屬性] 視窗中的省略符號按鈕 （...）](./media/visual-studio-ellipsis-button.png)) 旁邊<xref:System.Windows.Forms.TreeView.Nodes%2A>屬性] 視窗上的屬性。  
   
     ```vb  
     ' (Assumes that ImageList1 contains at least two images and  

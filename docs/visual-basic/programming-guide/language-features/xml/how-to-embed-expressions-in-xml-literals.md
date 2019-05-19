@@ -1,21 +1,21 @@
 ---
-title: HOW TO：將運算式內嵌在 XML 常值 (Visual Basic)
+title: 作法：將運算式內嵌在 XML 常值 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - embedded expressions [Visual Basic]
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
-ms.openlocfilehash: ca80ac666e8676e4e58a9741b00125c0126570fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9d0fd1e3713dc5b81cfca0ce54b571b38e648f87
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598385"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879104"
 ---
-# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>HOW TO：將運算式內嵌在 XML 常值 (Visual Basic)
+# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>作法：將運算式內嵌在 XML 常值 (Visual Basic)
 您可以使用內嵌的運算式，來建立 XML 文件、 片段中或包含在執行階段建立的內容項目結合 XML 常值。 下列範例示範如何使用內嵌的運算式在執行階段填入項目內容、 屬性和項目名稱。  
   
- 內嵌運算式的語法`<%=` `exp` `%>`，這是相同的語法，[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]使用。 如需詳細資訊，請參閱 < [XML 中內嵌的運算式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。  
+ 內嵌運算式的語法`<%=` `exp` `%>`，這是 ASP.NET 會使用相同的語法。 如需詳細資訊，請參閱 < [XML 中內嵌的運算式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。  
   
  您也可以使用[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Api 來建立[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件。 如需詳細資訊，請參閱 <xref:System.Xml.Linq.XElement>。  
   

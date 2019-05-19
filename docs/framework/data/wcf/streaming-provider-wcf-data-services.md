@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 19571f3102039176ed4d8fab46a7f8229cbfecbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eff4ee3cb8502645d3b6d9a8986c9c410fe73f1a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875533"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877583"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>資料流處理提供者 (WCF Data Services)
 
@@ -88,7 +88,7 @@ ms.locfileid: "61875533"
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>在裝載環境中啟用大型二進位資料流
 
-當您在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 應用程式中建立資料服務時，便會使用 Windows Communication Foundation (WCF) 來提供 HTTP 通訊協定實作。 根據預設，WCF 會將 HTTP 訊息大小限制為只有 65K 位元組。 為了要能夠與資料服務之間來回進行大型二進位資料的資料流處理，您也必須設定 Web 應用程式啟用大型二進位檔案及使用資料流進行傳輸。 若要這樣做，請在應用程式 Web.config 檔案的 `<configuration />` 項目中加入下列程式碼：
+當您建立資料服務中的 ASP.NET Web 應用程式時，Windows Communication Foundation (WCF) 用來提供 HTTP 通訊協定的實作。 根據預設，WCF 會將 HTTP 訊息大小限制為只有 65K 位元組。 為了要能夠與資料服務之間來回進行大型二進位資料的資料流處理，您也必須設定 Web 應用程式啟用大型二進位檔案及使用資料流進行傳輸。 若要這樣做，請在應用程式 Web.config 檔案的 `<configuration />` 項目中加入下列程式碼：
 
 > [!NOTE]
 > 您必須使用<xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType>以確保要求和回應訊息中的二進位資料會串流處理，並由 WCF 所未緩衝的傳輸模式。
@@ -125,7 +125,7 @@ ms.locfileid: "61875533"
 
 - 當您實作 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>、<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> 或 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 方法時，您必須使用當做方法參數提供的 eTag 和 Content-Type 值。 請勿在 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 提供者實作中設定 eTag 或 Content-Type 標頭。
 
-- 根據預設，用戶端會使用區塊式 HTTP Transfer-Encoding 來傳送大型二進位資料流。 因為[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]程式開發伺服器不支援這種編碼方式，您無法使用此網頁伺服器來裝載必須接受大型二進位資料流的資料流資料服務。 如需詳細資訊[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]程式開發伺服器，請參閱 < [ASP.NET Web 專案的 Visual Studio 中的 Web 伺服器](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120))。
+- 根據預設，用戶端會使用區塊式 HTTP Transfer-Encoding 來傳送大型二進位資料流。 因為 ASP.NET 程式開發伺服器不支援這種編碼方式，您無法使用此網頁伺服器來裝載必須接受大型二進位資料流的資料流資料服務。 如需有關 ASP.NET 程式開發伺服器的詳細資訊，請參閱[ASP.NET Web 專案的 Visual Studio 中的 Web 伺服器](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120))。
 
 <a name="versioning"></a>
 

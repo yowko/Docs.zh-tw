@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: fc0bfec95e625c1433636fbe5e0fdb6cc1112b14
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c19aa7200cfc938a1de7b788a58ba18f76634d9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645162"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881467"
 ---
 # <a name="using-sessions"></a>使用工作階段
-在 Windows Communication Foundation (WCF) 應用程式*工作階段*與一組訊息相互關聯至對話。 WCF 工作階段的不同中可用的工作階段物件[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]應用程式支援不同的行為，以及控制的方式。 本主題描述在 WCF 中的工作階段啟用功能的應用程式，以及如何使用它們。  
+在 Windows Communication Foundation (WCF) 應用程式*工作階段*與一組訊息相互關聯至對話。 WCF 工作階段不同於適用於 ASP.NET 應用程式的工作階段物件、 支援不同的行為，以及控制的方式。 本主題描述在 WCF 中的工作階段啟用功能的應用程式，以及如何使用它們。  
   
 ## <a name="sessions-in-windows-communication-foundation-applications"></a>Windows Communication Foundation 應用程式中的工作階段  
  當服務合約指定其需要工作階段時，該合約會指定所有的呼叫 (即支援呼叫的基礎訊息交換) 必須是同一個對話的一部分。 如果合約指定其允許使用工作階段，但不需要工作階段，則用戶端可以連線，並選擇是否要建立工作階段。 如果工作階段結束，而且某個訊息已透過相同的通道傳送，就會擲回例外狀況。  
@@ -30,13 +30,13 @@ ms.locfileid: "64645162"
   
 - 沒有與 WCF 工作階段相關聯的一般資料存放區。  
   
- 如果您熟悉<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>類別中[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]應用程式和功能提供，您可能會注意到這種種類的工作階段和 WCF 工作階段的下列差異：  
+ 如果您已熟悉<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>ASP.NET 應用程式中的類別和功能提供，您可能會注意到這種種類的工作階段和 WCF 工作階段的下列差異：  
   
-- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 工作階段一律由伺服器啟動。  
+- ASP.NET 工作階段會一律伺服器起始。  
   
-- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 工作階段具有隱含未排序特性。  
+- ASP.NET 工作階段會以隱含方式排序。  
   
-- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 工作階段提供了跨要求的一般資料儲存機制。  
+- ASP.NET 工作階段要求之間，提供一般的資料儲存機制。  
   
  本主題內容：  
   

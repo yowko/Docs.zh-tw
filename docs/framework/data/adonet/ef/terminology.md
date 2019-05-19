@@ -2,12 +2,12 @@
 title: Entity Framework 詞彙
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 9272740bef21dbe8b28bd6e58354a342fb799002
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f78545102823b19cc65b100f2b270ae71c1bd077
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583543"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877488"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework 詞彙
 本主題定義中最常參考的詞彙[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]文件。 而為相關主題提供的連結表示有其他可用的資訊。  
@@ -30,7 +30,7 @@ ms.locfileid: "65583543"
 |.edmx 檔案|XML 檔案，內含概念模型 (以 CSDL 表示)、儲存體模型 (以 SSDL 表示) 和兩種模型之間的對應 (以 MSL 表示)。 .edmx 檔案是由 [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] 工具建立。 如需詳細資訊，請參閱 < [.edmx 檔案概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))。|  
 |end|參與關聯的實體。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 結束項目 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl)並[關聯 end](../../../../../docs/framework/data/adonet/association-end.md)。|  
 |實體|在定義資料型別的應用程式定義域中的概念。<br /><br /> 如需詳細資訊，請參閱 < [EntityType 項目 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl)並[實體類型](../../../../../docs/framework/data/adonet/entity-type.md)。|  
-|EntityClient|與儲存體無關的 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 資料提供者，內含如 `EntityConnection`、`EntityCommand`、`EntityDataReader` 等的類別。 適用於[!INCLUDE[esql](../../../../../includes/esql-md.md)]並連接到特定的儲存體[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]資料提供者，例如`SqlClient`。<br /><br /> 如需詳細資訊，請參閱 < [Entity Framework 的 EntityClient 提供者](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。|  
+|EntityClient|包含類別，例如儲存體無關 ADO.NET 資料提供者`EntityConnection`， `EntityCommand`，和`EntityDataReader`。 適用於[!INCLUDE[esql](../../../../../includes/esql-md.md)]並將連線到特定 ADO.NET 資料提供者儲存體，例如`SqlClient`。<br /><br /> 如需詳細資訊，請參閱 < [Entity Framework 的 EntityClient 提供者](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。|  
 |Entity Container - 實體容器|指定將實作於指定之命名空間中的實體集和關聯集。<br /><br /> 如需詳細資訊，請參閱 < [EntityContainer 項目 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitycontainer-element-csdl)並[實體容器](../../../../../docs/framework/data/adonet/entity-container.md)。|  
 |實體資料模型 (EDM)|描述資料結構的概念集，就像實體和關聯性一樣，不論其儲存形式為何。<br /><br /> 如需詳細資訊，請參閱 < [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)。|  
 |Entity Framework|一組藉由讓開發人員使用對應至資料來源中邏輯結構描述的概念模型，進而可以支援資料導向軟體應用程式開發的技術。<br /><br /> 如需詳細資訊，請參閱 < [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)。|  

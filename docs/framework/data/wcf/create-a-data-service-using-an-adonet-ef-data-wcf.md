@@ -1,20 +1,20 @@
 ---
-title: 作法：建立資料服務，使用 ADO.NET Entity Framework 資料來源 (WCF Data Services)
+title: HOW TO：建立資料服務，使用 ADO.NET Entity Framework 資料來源 (WCF Data Services)
 ms.date: 08/24/2018
 helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: e9b2c1077cf3323a7d5b69bee6dff7e6f9611818
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 78286cde925a4583a3610ce100d23e16adcefe49
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634138"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878079"
 ---
-# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>HOW TO：建立資料服務，使用 ADO.NET Entity Framework 資料來源 (WCF Data Services)
+# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>作法：建立資料服務，使用 ADO.NET Entity Framework 資料來源 (WCF Data Services)
 
-WCF Data Services 會將實體資料公開為資料服務。 當資料來源為關聯式資料庫時，這個實體資料會由 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供。 本主題說明如何建立[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-架構根據現有的資料庫並使用此資料模型來建立新的資料服務的 Visual Studio Web 應用程式中的資料模型。
+WCF Data Services 會將實體資料公開為資料服務。 這個實體資料係由 ADO.NET[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]當資料來源為關聯式資料庫。 本主題說明如何建立[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-架構根據現有的資料庫並使用此資料模型來建立新的資料服務的 Visual Studio Web 應用程式中的資料模型。
 
 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]也提供命令列工具可以產生[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]模型之外的 Visual Studio 專案。 如需詳細資訊，請參閱[如何：使用 EdmGen.exe 產生模型和對應檔](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。
 
@@ -53,7 +53,7 @@ WCF Data Services 會將實體資料公開為資料服務。 當資料來源為�
 
 2. 在 **模型瀏覽器**，以滑鼠右鍵按一下模型，再按**屬性**，然後記下實體容器的名稱。
 
-3. 在**方案總管**，以滑鼠右鍵按一下名稱您[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]專案，然後再按一下**新增** > **新項目**。
+3. 在 **方案總管**，以滑鼠右鍵按一下您的 ASP.NET 專案的名稱，然後按一下**新增** > **新項目**。
 
 4. 在 **加入新項目**對話方塊中，選取**WCF 資料服務**中的範本**Web**類別。
 

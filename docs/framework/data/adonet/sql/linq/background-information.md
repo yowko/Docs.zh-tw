@@ -2,12 +2,12 @@
 title: 背景資訊
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: dfa1d06b9df7da86fe529c69d7fb01fcc58ccc87
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c64b720f893c907b0570e886f0a4d81bb19d09a9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592428"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878700"
 ---
 # <a name="background-information"></a>背景資訊
 本節中的主題是有關於使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 之基本概念以外的概念和程序。  
@@ -22,7 +22,7 @@ ms.locfileid: "64592428"
   
 ## <a name="in-this-section"></a>本節內容  
  [ADO.NET 和 LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  
- 描述 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 和 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的關係。  
+ 說明 ADO.NET 的關聯性和[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]。  
   
  [分析 LINQ to SQL 原始程式碼](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)  
  描述如何從 Northwind 範例資料庫產生和檢視原始程式碼，藉以分析 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 對應。  

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 9b59f9a1895b06cbc102afdceccb373a22ddafc1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 09fcf3f1a7e58a4bd8c2c6b0d25c24f32ea5ec5e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583517"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880586"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions 與 SQL Server 整合
-.NET Framework 2.0 版導入的交易架構，您可以透過<xref:System.Transactions>命名空間。 此架構會公開交易在.NET Framework 中，已完全整合的方式包括[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]。  
+.NET Framework 2.0 版導入的交易架構，您可以透過<xref:System.Transactions>命名空間。 此架構會公開在某種程度的完全整合在.NET Framework 中，包括 ADO.NET 中的交易。  
   
- 除了增強程式設計之外，在處理交易時， <xref:System.Transactions> 還會與 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 一起運作協調出最佳效能。 可提升的交易是可視需要自動提升為完全分散式交易的輕量型 (本機) 交易。  
+ 可程式性增強功能，除了<xref:System.Transactions>，以及 ADO.NET 可以一起運作協調出最佳效能，當您使用交易時。 可提升的交易是可視需要自動提升為完全分散式交易的輕量型 (本機) 交易。  
   
- 開頭[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]2.0，<xref:System.Data.SqlClient>支援可提升交易，當您使用 SQL Server。 除非需要已加入的負荷，否則可提升交易不會叫用分散式交易的已加入負荷。 可提升交易是自動的而且需要從開發人員不需要介入。  
+ 從 ADO.NET 2.0 開始<xref:System.Data.SqlClient>支援可提升交易，當您使用 SQL Server。 除非需要已加入的負荷，否則可提升交易不會叫用分散式交易的已加入負荷。 可提升交易是自動的而且需要從開發人員不需要介入。  
   
  您可以使用.NET Framework Data Provider for SQL Server 時，才可以使用可提升交易 (`SqlClient`) 與 SQL Server。  
   

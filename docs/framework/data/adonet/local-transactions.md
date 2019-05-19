@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 1897116389aaa1b4c953612364c7302e9ca2f35a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f686c20a9afd981405e32854fcc594abac78c85c
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584465"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882033"
 ---
 # <a name="local-transactions"></a>本機異動
-當您要將多個工作繫結程序在一起，以讓它們當做單一的工作單位來執行時，便會使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的異動。 例如，想像應用程式正在執行兩項工作。 首先，它會更新包含訂單資訊的資料表。 然後會更新包含存貨資訊的資料表，將訂購項目記入借方。 如果任一個工作失敗，則這兩個更新會回復。  
+當您想要繫結至多個工作一起讓它們執行為單一工作單位時，會使用在 ADO.NET 中的交易。 例如，想像應用程式正在執行兩項工作。 首先，它會更新包含訂單資訊的資料表。 然後會更新包含存貨資訊的資料表，將訂購項目記入借方。 如果任一個工作失敗，則這兩個更新會回復。  
   
 ## <a name="determining-the-transaction-type"></a>決定異動類型  
  交易是被視為本機交易時它是單一階段交易，並直接處理資料庫。 交易是被視為是分散式的交易，它由交易監視器協調，並使用保全機制 （如兩階段交易認可），進行交易解析時。  
@@ -24,7 +24,7 @@ ms.locfileid: "65584465"
 > 在伺服器上執行時，異動是最有效率。 如果您使用的 SQL Server 資料庫大量使用明確的異動，請考慮使用 Transact-SQL BEGIN TRANSACTION 陳述式，將它們寫入為預存程序。
   
 ## <a name="performing-a-transaction-using-a-single-connection"></a>使用單一連接執行異動  
- 在 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中，您會使用 `Connection` 物件控制異動。 您可使用 `BeginTransaction` 方法來起始本機異動。 開始異動之後，您可使用 `Transaction` 物件的 `Command` 屬性，在該異動中登記命令。 然後，您可根據異動元件的成敗，來認可或復原對資料來源所做的修改。  
+ 在 ADO.NET 中，您可以控制與交易`Connection`物件。 您可使用 `BeginTransaction` 方法來起始本機異動。 開始異動之後，您可使用 `Transaction` 物件的 `Command` 屬性，在該異動中登記命令。 然後，您可根據異動元件的成敗，來認可或復原對資料來源所做的修改。  
   
 > [!NOTE]
 >  `EnlistDistributedTransaction` 方法不可用於本機異動。  
@@ -42,7 +42,7 @@ ms.locfileid: "65584465"
   
 4. 呼叫 <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> 物件的 <xref:System.Data.SqlClient.SqlTransaction> 方法來完成交易，或呼叫 <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> 方法來中止交易。 如果在執行 <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> 或 <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> 方法之前關閉或處置連接，則會復原異動。  
   
- 下列程式碼範例會藉由搭配使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 與 Microsoft SQL Server 來示範異動邏輯。  
+ 下列程式碼範例示範如何使用 ADO.NET 與 Microsoft SQL Server 的交易邏輯。  
   
  [!code-csharp[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/CS/source.cs#1)]
  [!code-vb[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/VB/source.vb#1)]  

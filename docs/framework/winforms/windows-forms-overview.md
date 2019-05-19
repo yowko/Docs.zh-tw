@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: c9215d1072060c4272c7d61056d51297dd997197
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 08e85828451ba6c66b13ff31e3d6c106871b8154
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645742"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875878"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms 概觀
 
@@ -66,7 +66,7 @@ ms.locfileid: "65645742"
 |描述|說明主題|
 |-----------------|----------------|
 |使用 <xref:System.Windows.Forms.BindingSource> 元件|[如何：繫結 Windows Form 控制項和 BindingSource 元件加以使用設計工具](./controls/bind-wf-controls-with-the-bindingsource.md)|
-|使用 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 資料來源|[如何：排序和篩選 ADO.NET 資料，使用 Windows Form BindingSource 元件](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|使用 ADO.NET 資料來源|[如何：排序和篩選 ADO.NET 資料，使用 Windows Form BindingSource 元件](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |使用資料來源視窗|[將 Windows Forms 控制項繫結至 Visual Studio 中的資料](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
 |使用應用程式設定|[如何：建立應用程式設定](./advanced/how-to-create-application-settings.md)|
 

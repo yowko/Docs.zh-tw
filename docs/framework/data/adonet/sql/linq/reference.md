@@ -2,12 +2,12 @@
 title: 參考資料
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 467bc9f482fa24e679814de3be0fdb7d9363320c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a874cb659bc8701d7f894617d4e1db25f949fbcd
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877132"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881318"
 ---
 # <a name="reference"></a>參考資料
 本節提供參考資訊給 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 開發人員。  
@@ -45,4 +45,4 @@ ms.locfileid: "61877132"
  提供用於入口網站[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]主題。  
   
  [LinqDataSource Web 伺服器控制項概觀](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
- 描述 <xref:System.Web.UI.WebControls.LinqDataSource> 控制項如何透過 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 資料來源控制項架構，將 [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] 公開給 Web 程式開發人員。
+ 描述如何<xref:System.Web.UI.WebControls.LinqDataSource>控制項會公開[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]透過 ASP.NET 資料來源控制項架構的 Web 開發人員。

@@ -2,12 +2,12 @@
 title: 支援的部署案例： WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: f1a95e5448d2cc8f1ac472c3b1735f58460e2be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 986459e14206f073686474f5d65845ce682e1270
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639144"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881052"
 ---
 # <a name="supported-deployment-scenarios"></a>支援的部署案例
 
@@ -27,7 +27,7 @@ WCF 中其中一個下列標準具名權限集下執行應用程式支援功能�
 
 ## <a name="partial-trust-on-the-server"></a>在伺服器上的部分信任
 
-許多 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 應用程式裝載服務的商業提供者要求，在他們的伺服器上執行的應用程式必須透過 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 中度信任使用權限集合來執行。 前提是他們所使用，WCF 服務可以在這些環境中執行<xref:System.ServiceModel.BasicHttpBinding>，則<xref:System.ServiceModel.WebHttpBinding>，或<xref:System.ServiceModel.WSHttpBinding>具有傳輸層級安全性。
+裝載服務的 ASP.NET Web 應用程式的許多商業的提供者託管其伺服器上執行的應用程式是在執行[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]度信任使用權限集合。 前提是他們所使用，WCF 服務可以在這些環境中執行<xref:System.ServiceModel.BasicHttpBinding>，則<xref:System.ServiceModel.WebHttpBinding>，或<xref:System.ServiceModel.WSHttpBinding>具有傳輸層級安全性。
 
 在中度信任裝載環境執行的 WCF 服務也可以藉由將訊息傳送至用戶端要求的回應中的其他伺服器做為中介層服務。 如果裝載的環境已經授與應用程式適當的 <xref:System.Net.WebPermission> 以便對目的伺服器發出傳出要求時，伺服器便會支援中介層案例。
 

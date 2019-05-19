@@ -2,12 +2,12 @@
 title: .NET 4.5 中 Windows Workflow Foundation 的新功能
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: a76ec56cf6ac5260f00031bc815b32b1e10804a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6be2e3bd64fd93fab8af792bb92c3c0238a7ecde
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61671414"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876595"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 中 Windows Workflow Foundation 的新功能
 
@@ -118,7 +118,7 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
 
 下列螢幕擷取畫面顯示變數和引數設計工具內容功能表。
 
-![變數和引數設計工具操作功能表](./media/designercontextmenu.png "DesignerContextMenu")
+![變數和引數設計工具操作功能表](./media/whats-new-in-wf-in-dotnet/designer-context-menu.png)
 
 ### <a name="BKMK_AutoSurround"></a> 自動範圍陳述式序列
 
@@ -126,11 +126,11 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
 
 下列螢幕擷取畫面顯示 `WriteLine` 活動，此活動位在 `Body` 的 `NoPersistScope` 中。
 
-![自動&#45;括住置放位置](./media/autosurround1.png "AutoSurround1")
+![Nopersistscope 的本文中的 WriteLine 活動。](./media/whats-new-in-wf-in-dotnet/auto-surround-write-line-activity.png)
 
 當第二個 `Sequence` 降到第一個之下時，下列螢幕擷取畫面會顯示在 `Body` 中自動建立的 `WriteLine` 活動。
 
-![自動建立的序列活動](./media/autosurround2.png "AutoSurround2")
+![NoPersistScope 的本文中包含自動建立的順序。](./media/whats-new-in-wf-in-dotnet/auto-surround-sequence-activity.png)
 
 ### <a name="BKMK_PanMode"></a> 移動瀏覽模式
 
@@ -138,7 +138,7 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
 
 下列螢幕擷取畫面顯示位於工作流程設計工具右下角的移動瀏覽按鈕。
 
-![在工作流程設計工具中的移動瀏覽按鈕](./media/panbutton.png "PanButton")
+![工作流程設計工具中反白顯示 [移動瀏覽] 按鈕。](./media/whats-new-in-wf-in-dotnet/pan-button-workflow-designer.png)
 
 您也可以使用滑鼠中鍵或空白鍵移動瀏覽工作流程設計工具。
 
@@ -154,7 +154,7 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
 
 從完成的工作流程中的下列螢幕擷取畫面[入門教學課程](getting-started-tutorial.md)顯示循序工作流程的大綱檢視。
 
-![大綱檢視中工作流程設計工具](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+![使用 Visual Studio 中的循序工作流程的大綱檢視之螢幕擷取畫面。](./media/whats-new-in-wf-in-dotnet/outline-view-in-workflow-designer.jpg)
 
 ### <a name="BKMK_CSharpExpressions"></a> C# 運算式
 
@@ -174,17 +174,17 @@ C# 運算式會在設計階段進行驗證。 C# 運算式中的錯誤會用紅�
 
 下列螢幕擷取畫面顯示從工具箱拖曳活動時顯示的附加點。
 
-![顯示自動連接點的流程圖開始節點](./media/autoconnect1.png "Autoconnect1")
+![流程圖開始節點顯示自動連接點](./media/whats-new-in-wf-in-dotnet/auto-connect-points-start-node.png)
 
 您也可以將活動拖曳到流程圖節點和狀態之間的連接，以在其他兩個節點之間自動插入該節點。 下列螢幕擷取畫面顯示反白顯示的連接線，在此可以從工具箱中拖曳及放置活動。
 
-![自動&#45;卸除活動的控制代碼插入](./media/autoinsert.png "Autoinsert")
+![用於置放活動的自動插入控點](./media/whats-new-in-wf-in-dotnet/auto-insert-connecting-line.png)
 
 ### <a name="BKMK_Annotations"></a> 設計工具標註
 
 為方便開發大型工作流程，設計工具現已支援加入標註，以追蹤設計流程。 您可以在活動、狀態、流程圖節點、變數和引數中加入標註。 下列螢幕擷取畫面顯示用來將標註加入設計工具的操作功能表。
 
-![註解 內容功能表](./media/annotationdialog.png "annotationdialog")
+![顯示 加入註解功能表的螢幕擷取畫面。](./media/whats-new-in-wf-in-dotnet/designer-annotations-context-menu.png)
 
 ### <a name="debugging-states"></a>偵錯狀態
 
@@ -232,7 +232,7 @@ C# 運算式會在設計階段進行驗證。 C# 運算式中的錯誤會用紅�
 
 下列螢幕擷取畫面會顯示已完成的狀態機器工作流程，從[入門教學課程](getting-started-tutorial.md)步驟[How to:建立狀態機器工作流程](how-to-create-a-state-machine-workflow.md)。
 
-![已完成狀態機器工作流程](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
+![顯示已完成的狀態機器工作流程的圖例。](./media/whats-new-in-wf-in-dotnet/complete-state-machine-workflow.jpg)
 
 如需有關如何建立狀態機器工作流程的詳細資訊，請參閱 <<c0> [ 狀態機器工作流程](state-machine-workflows.md)。
 

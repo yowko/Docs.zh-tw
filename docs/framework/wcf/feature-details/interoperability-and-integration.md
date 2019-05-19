@@ -2,12 +2,12 @@
 title: 互通性與整合
 ms.date: 03/30/2017
 ms.assetid: 0d925119-01a1-45c2-9ea0-23061323ad33
-ms.openlocfilehash: 2410c52e99f3498d8dbd6ec66a5abe0e169f4b91
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8b4113d7545ab4e478b49c07681298d9ee942309
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591235"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875981"
 ---
 # <a name="interoperability-and-integration"></a>互通性與整合
 本章節涵蓋互通性與整合與 Windows Communication Foundation (WCF)。  
@@ -32,16 +32,16 @@ ms.locfileid: "65591235"
  描述如何將 WSE 3.0 Web 服務移轉至 WCF 服務。  
   
  [與 ASP.NET Web 服務的互通性](../../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)  
- 描述 WCF 與如何相互操作[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 服務。  
+ 說明 WCF 與 ASP.NET Web 服務如何相互操作。  
   
  [將 ASP.NET Web 服務移轉至 WCF](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- 說明如何移轉[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 服務的 WCF 服務。  
+ 描述如何將 ASP.NET Web 服務移轉至 WCF 服務。  
   
  [將 ASP.NET Web 服務移轉至 WCF](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- 說明如何移轉[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 服務的 WCF 服務。  
+ 描述如何將 ASP.NET Web 服務移轉至 WCF 服務。  
   
  [將 ASP.NET Web 服務移轉至 WCF](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- 說明如何移轉[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 服務的 WCF 服務。  
+ 描述如何將 ASP.NET Web 服務移轉至 WCF 服務。  
   
  [與 POX 應用程式的互通性](../../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md)  
  說明 WCF 如何提供服務和用戶端會使用"Plain Old XML"(POX) 訊息。  

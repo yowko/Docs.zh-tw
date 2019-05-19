@@ -1,21 +1,21 @@
 ---
-title: HOW TO：在 IIS 中裝載 WCF 服務
+title: 作法：在 IIS 中裝載 WCF 服務
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: f106ce1bca67f8b88df0835496eea0b3297ac946
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9ff82d58f08d8c040984b37422a7048b9d4361d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000827"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878642"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>HOW TO：在 IIS 中裝載 WCF 服務
 本主題概要說明建立 Windows Communication Foundation (WCF) 服務裝載在網際網路資訊服務 (IIS) 所需的基本步驟。 本主題假設您熟悉 IIS，而且了解如何使用 IIS 管理工具建立與管理 IIS 應用程式。 如需 IIS 的詳細資訊，請參閱[Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449)。 WCF 服務會在 IIS 環境中的執行採用完整的 IIS 功能，例如處理序回收、 閒置關機、 處理序健康狀態監控，以及訊息啟動。 這個裝載選項要求必須正確設定 IIS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 IIS 裝載只能和 HTTP 傳輸一起使用。  
   
- 如需有關如何 WCF 及[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]互動，請參閱 < [WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。 如需有關如何設定安全性的詳細資訊，請參閱 <<c0> [ 安全性](../../../../docs/framework/wcf/feature-details/security.md)。  
+ 如需有關 WCF 和 ASP.NET 的互動方式的詳細資訊，請參閱 < [WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。 如需有關如何設定安全性的詳細資訊，請參閱 <<c0> [ 安全性](../../../../docs/framework/wcf/feature-details/security.md)。  
   
  如需此範例中的來源複本，請參閱[IIS 裝載使用內嵌程式碼](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "62000827"
   
 1. 確認您的電腦上已安裝 IIS 且正在執行中。 如需安裝和設定 IIS 的詳細資訊，請參閱[安裝和設定 IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=132128)  
   
-2. 為您的應用程式檔案建立稱為 "IISHostedCalcService" 新的資料夾，確保 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 能夠存取資料夾內容，然後使用 IIS 管理工具來建立實際位於此應用程式目錄中的新 IIS 應用程式。 建立應用程式目錄的別名時，請使用 "IISHostedCalc"。  
+2. 建立稱為"IISHostedCalcService"的應用程式檔案的新資料夾、 確定 ASP.NET 有存取權之資料夾的內容並使用 IIS 管理工具來建立實際位於此應用程式目錄中的新 IIS 應用程式。 建立應用程式目錄的別名時，請使用 "IISHostedCalc"。  
   
 3. 在應用程式目錄中建立名為 "service.svc" 的新檔案。 編輯此檔案中加入下列@ServiceHost項目。  
   

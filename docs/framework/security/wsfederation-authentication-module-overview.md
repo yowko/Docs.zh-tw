@@ -3,12 +3,12 @@ title: WSFederation 驗證模組概觀
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 63090efdf97066b4a276880d4f4be0f843de6800
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0bd6c7432f79894c9e31952b72f3426fc88f9d03
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586047"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877197"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 驗證模組概觀
 Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-同盟驗證模組 (WS-FAM) 提供同盟驗證的支援。 本主題將協助您了解同盟驗證的運作方式以及如何使用它。  
@@ -31,7 +31,7 @@ Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-
 6. RP 從安全性權杖擷取用戶端的宣告，並進行授權決策。  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>搭配 ASP.NET 來使用同盟驗證模組  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) 是可將同盟驗證新增到 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式中的 HTTP 模組。 同盟驗證會將驗證邏輯交給 STS 處理，讓您可以專心地撰寫商務邏輯。  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) 是 HTTP 模組，可讓您將同盟的驗證新增至 ASP.NET 應用程式。 同盟驗證會將驗證邏輯交給 STS 處理，讓您可以專心地撰寫商務邏輯。  
   
  您可以設定 WS-FAM，以便指定非驗證要求將重新導向至其中的 STS。 WIF 可讓您使用兩種方式來驗證使用者：  
   
@@ -41,10 +41,10 @@ Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-
   
  在被動式重新導向中，所有通訊都是透過用戶端 (通常是瀏覽器) 的回應/重新導向來執行。 您可以將 WS-FAM 新增至應用程式的 HTTP 管線，它會在其中監看是否有未經驗證的使用者要求，並將使用者重新導向至您指定的 STS。  
   
- WS FAM 還會引發數個事件，讓您能夠在 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式中自訂其功能。  
+ WS-FAM 也會引發數個事件，可讓您自訂其功能的 ASP.NET 應用程式中。  
   
 ### <a name="how-the-ws-fam-works"></a>WS-FAM 的運作方式  
- WS-FAM 會使用 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 類別進行實作。 一般來說，您會將 WS-FAM 加入 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] RP 應用程式的 HTTP 管線。 當未驗證使用者嘗試存取受保護資源時，RP 就會傳回「401 授權遭拒」HTTP 回應。 WS-FAM 會攔截這個回應而不讓用戶端接收，接著將使用者重新導向至指定的 STS。 STS 會簽發安全性權杖，而 WS-FAM 又會再度攔截此權杖。 WS-FAM 會使用權杖來建立的執行個體<xref:System.Security.Claims.ClaimsPrincipal>通過驗證的使用者，讓一般的.NET Framework 授權機制開始運作。  
+ WS-FAM 會使用 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 類別進行實作。 一般而言，您將 WS-FAM 新增至 ASP.NET RP 應用程式的 HTTP 管線。 當未驗證使用者嘗試存取受保護資源時，RP 就會傳回「401 授權遭拒」HTTP 回應。 WS-FAM 會攔截這個回應而不讓用戶端接收，接著將使用者重新導向至指定的 STS。 STS 會簽發安全性權杖，而 WS-FAM 又會再度攔截此權杖。 WS-FAM 會使用權杖來建立的執行個體<xref:System.Security.Claims.ClaimsPrincipal>通過驗證的使用者，讓一般的.NET Framework 授權機制開始運作。  
   
  因為 HTTP 是無狀態的，所以我們需要採用一種方法，以避免每當使用者嘗試存取其他受保護資源時，就得重複這一整個程序的狀況。 這時就需要用到 <xref:System.IdentityModel.Services.SessionAuthenticationModule>。 當 STS 簽發使用者的安全性權杖時，<xref:System.IdentityModel.Services.SessionAuthenticationModule> 也會建立該使用者的工作階段安全性權杖，並將它放入 Cookie 中。 在處理後續要求時，<xref:System.IdentityModel.Services.SessionAuthenticationModule> 會攔截這個 Cookie，並使用它來重新建構使用者的 <xref:System.Security.Claims.ClaimsPrincipal>。  
   
@@ -61,7 +61,7 @@ Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-
  ![顯示使用控制項進行登入的 SAM 時機圖表](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
 ### <a name="events"></a>事件  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>、<xref:System.IdentityModel.Services.SessionAuthenticationModule> 和其父類別 <xref:System.IdentityModel.Services.HttpModuleBase>，會在許多不同的 HTTP 要求處理階段引發事件。 您可以在 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式的 `global.asax` 檔案中處理這些事件。  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>、<xref:System.IdentityModel.Services.SessionAuthenticationModule> 和其父類別 <xref:System.IdentityModel.Services.HttpModuleBase>，會在許多不同的 HTTP 要求處理階段引發事件。 您可以處理這些事件`global.asax`ASP.NET 應用程式的檔案。  
   
 - ASP.NET 基礎結構會叫用模組的 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 方法來初始化模組。  
   

@@ -2,15 +2,15 @@
 title: 浮點數
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-ms.openlocfilehash: 209e53e41495603f4ad559a74bdc87033f6a92a5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d1c033d7999fa403aaf18fccb765da178cba169a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583678"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882038"
 ---
 # <a name="floating-point-numbers"></a>浮點數
-本主題說明開發人員在 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中使用浮點數值 (Floating-Point Number) 時經常遇到的一些問題。 這些問題是由電腦儲存浮點數值的方式而導致，而不是特定提供者 (例如 <xref:System.Data.SqlClient> 或 <xref:System.Data.OracleClient>) 所特有。  
+本主題描述一些開發人員經常會遇到問題之時在 ADO.NET 中的浮點數與搭配使用。 這些問題是由電腦儲存浮點數值的方式而導致，而不是特定提供者 (例如 <xref:System.Data.SqlClient> 或 <xref:System.Data.OracleClient>) 所特有。  
   
  一般而言，浮點數值並不具有完全符合的二進位表示， 而是由電腦儲存該數值的近似值。 在不同的時間可能會使用不同的位元來表示該數值。 當浮點數值從一種表示法轉換為另一種時，該數值的最小顯著性數字可能會稍微變更。 轉換通常發生在當數值從一種型別轉型為另一種型別時。 不論轉換是發生在資料庫內、在表示資料庫值的型別之間或是在型別之間，都會造成最小顯著性數字的變更。 因為有這些變更，所以邏輯上應該相同的數值，可能因為最小顯著性數字變更而導致它們擁有不同的值。 數值的精確度位數可能會比預期的多或少。 如果將數值的格式設為字串，則該數值可能不會顯示預期的值。  
   

@@ -2,12 +2,12 @@
 title: AJAX
 ms.date: 03/30/2017
 ms.assetid: 9e0eb40a-69ef-4821-bdc3-45a9b71a58c3
-ms.openlocfilehash: ae4a39d48d9c688d14fa8cf131e8010188c2fe10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d80166eaed2598f21529e81c81985d78a23bf0c9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944192"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882128"
 ---
 # <a name="ajax"></a>AJAX
 本節包含示範非同步 JavaScript 與 XML 功能的範例。  
@@ -23,7 +23,7 @@ ms.locfileid: "61944192"
  示範如何使用 WCF 來建立基本 ASP.NET Asynchronous JavaScript 與 XML (AJAX) 服務。  
   
  [使用 HTTP POST 的 AJAX 服務](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)  
- 示範如何使用 WCF 來建立[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Asynchronous JavaScript and XML (AJAX) 服務會使用 HTTP POST。  
+ 示範如何使用 WCF 來建立 ASP.NET Asynchronous JavaScript 與 XML (AJAX) 服務會使用 HTTP POST。  
   
  [無組態的 AJAX 服務](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md)  
  示範如何使用 WCF 來建立基本 ASP.NET Asynchronous JavaScript 與 XML (AJAX) 服務。  

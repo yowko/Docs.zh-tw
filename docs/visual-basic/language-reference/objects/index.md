@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-ms.openlocfilehash: 161edd2cb3afeb6ba8b10455a1c3a2c43b90dac1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8852a3daa3cd3891d5053cc1fffe19fa310125de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949665"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880713"
 ---
 # <a name="objects-visual-basic"></a>物件 (Visual Basic)
 本主題提供其他主題的連結，而這些主題記錄 Visual Basic 執行階段物件，並包含其成員程序、屬性和事件的表格。  
@@ -37,9 +37,9 @@ ms.locfileid: "61949665"
 |`My.Computer.Registry` (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)|提供屬性和方法，以操作登錄。|  
 |[My.Forms 物件](../../../visual-basic/language-reference/objects/my-forms-object.md)|提供屬性，以存取目前專案中所宣告的每個 Windows Form 的執行個體。|  
 |`My.Log` (<xref:Microsoft.VisualBasic.Logging.AspLog>)|提供屬性和方法，以將事件和例外狀況資訊寫入應用程式的 Web 應用程式記錄檔接聽程式。|  
-|[My.Request 物件](../../../visual-basic/language-reference/objects/my-request-object.md)|取得所要求頁面的 <xref:System.Web.HttpRequest> 物件。 `My.Request` 物件包含目前 HTTP 要求的相關資訊。<br /><br /> `My.Request` 物件僅適用於 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 應用程式。|  
+|[My.Request 物件](../../../visual-basic/language-reference/objects/my-request-object.md)|取得所要求頁面的 <xref:System.Web.HttpRequest> 物件。 `My.Request` 物件包含目前 HTTP 要求的相關資訊。<br /><br /> `My.Request` 物件僅適用於 ASP.NET 應用程式。|  
 |[My.Resources 物件](../../../visual-basic/language-reference/objects/my-resources-object.md)|提供屬性和類別，以存取應用程式的資源。|  
-|[My.Response 物件](../../../visual-basic/language-reference/objects/my-response-object.md)|取得與 <xref:System.Web.HttpResponse> 關聯的 <xref:System.Web.UI.Page> 物件。 此物件可讓您將 HTTP 回應資料傳送給用戶端，並包含該回應的相關資訊。<br /><br /> `My.Response` 物件僅適用於 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 應用程式。|  
+|[My.Response 物件](../../../visual-basic/language-reference/objects/my-response-object.md)|取得與 <xref:System.Web.HttpResponse> 關聯的 <xref:System.Web.UI.Page> 物件。 此物件可讓您將 HTTP 回應資料傳送給用戶端，並包含該回應的相關資訊。<br /><br /> `My.Response` 物件僅適用於 ASP.NET 應用程式。|  
 |[My.Settings 物件](../../../visual-basic/language-reference/objects/my-settings-object.md)|提供屬性和方法，以存取應用程式的設定。|  
 |`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|提供目前使用者相關資訊的存取權。|  
 |[My.WebServices 物件](../../../visual-basic/language-reference/objects/my-webservices-object.md)|提供屬性，以建立和存取目前專案所參考之每個 Web 服務的單一執行個體。|  

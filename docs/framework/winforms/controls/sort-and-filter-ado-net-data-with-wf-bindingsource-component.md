@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 Windows Forms BindingSource 元件排序和篩選 ADO.NET 資料
+title: 作法：使用 Windows Forms BindingSource 元件排序和篩選 ADO.NET 資料
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: d05cbdf63483c160603ee44f6b507edc2d13b170
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d270155fa1e6b61d8537096a07a4b93fa3b79b35
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651948"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882201"
 ---
 # <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>HOW TO：使用 Windows Forms BindingSource 元件排序和篩選 ADO.NET 資料
-排序和篩選功能，您可以公開<xref:System.Windows.Forms.BindingSource>透過控制<xref:System.Windows.Forms.BindingSource.Sort%2A>和<xref:System.Windows.Forms.BindingSource.Filter%2A>屬性。 您可以套用簡單排序的基礎資料來源時<xref:System.ComponentModel.IBindingList>，您可以套用的篩選和進階排序的資料來源時<xref:System.ComponentModel.IBindingListView>。 <xref:System.Windows.Forms.BindingSource.Sort%2A>屬性需要標準[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]語法： 字串，表示資料來源中的資料行的名稱後面加上`ASC`或`DESC`來指出是否應該以遞增或遞減順序排序清單。 您可以設定進階排序，或使用逗號分隔符號隔開每個資料行的多重資料行排序。 <xref:System.Windows.Forms.BindingSource.Filter%2A>屬性會採用字串運算式。  
+排序和篩選功能，您可以公開<xref:System.Windows.Forms.BindingSource>透過控制<xref:System.Windows.Forms.BindingSource.Sort%2A>和<xref:System.Windows.Forms.BindingSource.Filter%2A>屬性。 您可以套用簡單排序的基礎資料來源時<xref:System.ComponentModel.IBindingList>，您可以套用的篩選和進階排序的資料來源時<xref:System.ComponentModel.IBindingListView>。 <xref:System.Windows.Forms.BindingSource.Sort%2A>屬性需要標準 ADO.NET 語法： 字串，表示資料來源中的資料行的名稱後面加上`ASC`或`DESC`來指出是否應該以遞增或遞減順序排序清單。 您可以設定進階排序，或使用逗號分隔符號隔開每個資料行的多重資料行排序。 <xref:System.Windows.Forms.BindingSource.Filter%2A>屬性會採用字串運算式。  
   
 > [!NOTE]
 >  在連接字串內儲存機密資訊 (例如密碼) 會影響應用程式的安全性。 使用 Windows 驗證 (也稱為整合式安全性) 是控制資料庫存取的更安全方式。 如需詳細資訊，請參閱[保護連線資訊](../../data/adonet/protecting-connection-information.md)。  

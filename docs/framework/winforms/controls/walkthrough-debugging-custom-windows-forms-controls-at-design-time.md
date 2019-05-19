@@ -15,12 +15,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: a8f228d334785cd880b06dbeda8f96550471599a
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 39adcbd6d915f8b086df7e425efbe08ae8680a45
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211552"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882454"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>逐步解說：在設計階段偵錯自訂 Windows Forms 控制項
 
@@ -124,7 +124,7 @@ ms.locfileid: "65211552"
 
 2. 在 [ **DebugControlLibrary**屬性工作表，選取**偵錯**] 索引標籤。
 
-     在 **起始動作**區段中，選取**啟動外部程式**。 您將會讓偵錯個別的執行個體的 Visual Studio 中，按一下省略符號 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 按鈕來瀏覽 Visual Studio IDE。 可執行檔的名稱是**devenv.exe**，且如果您安裝的預設位置，其路徑為 %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe。
+     在 **起始動作**區段中，選取**啟動外部程式**。 您將會讓偵錯個別的執行個體的 Visual Studio 中，按一下省略符號 (![的 Visual Studio 的 [屬性] 視窗中的省略符號按鈕 （...）](./media/visual-studio-ellipsis-button.png)) 按鈕來瀏覽 Visual Studio IDE。 可執行檔的名稱是**devenv.exe**，且如果您安裝的預設位置，其路徑為 %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe。
 
 3. 按一下 [確定]  關閉對話方塊。
 

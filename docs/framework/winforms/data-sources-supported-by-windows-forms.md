@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 0252259d92f08a0f871167fc7930818bab542cc5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6782261953fb5df94498deefb261407a2f0ba33a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626789"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882389"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Form 支援的資料來源
 傳統上，資料繫結已使用的應用程式中利用儲存在資料庫中的資料。 使用 Windows Form 資料繫結，您可以從資料庫，以及其他的結構，例如陣列和集合中的資料存取資料，只要已符合特定最低需求。  
@@ -44,12 +44,12 @@ ms.locfileid: "64626789"
  <xref:System.Collections.IEnumerable>  
  Windows Form 控制項可以繫結至資料來源僅支援<xref:System.Collections.IEnumerable>介面會透過繫結<xref:System.Windows.Forms.BindingSource>元件。  
   
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 資料物件  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 提供一些適合繫結至資料結構。 每個會在其複雜度和複雜程度而有所不同。  
+ ADO.NET 資料物件  
+ ADO.NET 會提供一些適合繫結至資料結構。 每個會在其複雜度和複雜程度而有所不同。  
   
 - <xref:System.Data.DataColumn>. A<xref:System.Data.DataColumn>是基本建置組塊的<xref:System.Data.DataTable>，依此資料行的數目所組成的資料表。 每個<xref:System.Data.DataColumn>具有<xref:System.Data.DataColumn.DataType%2A>決定的資料行保留 （例如，請描述 cars 資料表中的汽車） 的資料類型的屬性。 您可以簡單繫結控制項 (例如<xref:System.Windows.Forms.TextBox>控制項的<xref:System.Windows.Forms.Control.Text%2A>屬性) 到資料表中的資料行。  
   
-- <xref:System.Data.DataTable>. A<xref:System.Data.DataTable>資料表，且資料列和資料行，表示處於[!INCLUDE[vstecado](../../../includes/vstecado-md.md)]。 資料表包含兩個集合： <xref:System.Data.DataColumn>，代表在給定資料表中 （這會決定可輸入至該資料表的資料類型），資料行和<xref:System.Data.DataRow>，表示給定資料表中的資料列。 您可以複雜繫結控制項至資料表中所包含的資訊 (例如繫結<xref:System.Windows.Forms.DataGridView>至資料表的控制項)。 不過，當您繫結至<xref:System.Data.DataTable>，您會以真正的繫結至資料表的預設檢視。  
+- <xref:System.Data.DataTable>. A<xref:System.Data.DataTable>資料表，且資料列和資料行，在 ADO.NET 中的表示法。 資料表包含兩個集合： <xref:System.Data.DataColumn>，代表在給定資料表中 （這會決定可輸入至該資料表的資料類型），資料行和<xref:System.Data.DataRow>，表示給定資料表中的資料列。 您可以複雜繫結控制項至資料表中所包含的資訊 (例如繫結<xref:System.Windows.Forms.DataGridView>至資料表的控制項)。 不過，當您繫結至<xref:System.Data.DataTable>，您會以真正的繫結至資料表的預設檢視。  
   
 - <xref:System.Data.DataView>. A<xref:System.Data.DataView>是單一資料表的資料可能會篩選或排序的自訂的檢視。 資料檢視會是 「 快照集 」 複雜繫結控制項所使用的資料。 您可以簡單繫結或複雜繫結至的資料在資料檢視中，但請注意，您會繫結至固定 「 印象 」 資料，而不是全新的更新資料來源。  
   

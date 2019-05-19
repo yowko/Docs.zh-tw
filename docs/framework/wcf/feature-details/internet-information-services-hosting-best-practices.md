@@ -2,12 +2,12 @@
 title: 網際網路資訊服務裝載最佳做法
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: a4312a9affc1103f613f3f8ffd9a14696f9d4bcc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85b8efadca03de71fd98b0f0d1bf5aeb47fe76be
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972610"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878598"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>網際網路資訊服務裝載最佳做法
 本主題概述裝載 Windows Communication Foundation (WCF) 服務的最佳作法。  
@@ -40,7 +40,7 @@ ms.locfileid: "61972610"
  您可以使用 IIS Microsoft Management Console (MMC) 嵌入式管理單元來設定 IIS 網站繫結。  
   
 ## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>在不同使用者內容中執行的應用程式集區會覆寫來自暫存資料夾裡其他帳戶的組件  
- 為了確保在不同使用者內容中執行的應用程式集區無法覆寫來自 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 暫存檔案資料夾中其他帳戶的組件，請針對不同的應用程式使用不同的身分識別與暫存資料夾。 例如，如果您有兩個虛擬應用程式 (/Application1 和 / Application2)，則可以使用兩個不同的身分識別來建立兩個應用程式集區 (A 和 B)。 應用程式集區 A 可以使用某個使用者身分識別 (user1) 來執行，而應用程式集區 B 則可透過另一個使用者身分識別 (user2) 來執行，同時設定 /Application1 來使用 A 並設定 /Application2 來使用 B。  
+ 若要確保在不同的使用者內容中執行的應用程式集區無法覆寫來自暫存 ASP.NET 檔案資料夾中的其他帳戶的組件，請使用不同的身分識別與暫存資料夾不同應用程式。 例如，如果您有兩個虛擬應用程式 (/Application1 和 / Application2)，則可以使用兩個不同的身分識別來建立兩個應用程式集區 (A 和 B)。 應用程式集區 A 可以使用某個使用者身分識別 (user1) 來執行，而應用程式集區 B 則可透過另一個使用者身分識別 (user2) 來執行，同時設定 /Application1 來使用 A 並設定 /Application2 來使用 B。  
   
  在 Web.config 中，您可以設定暫存資料夾，請使用 \< system.web/compilation/@tempFolder>。 為 application1，它可以是"c:\tempForUser1 ，並對於應用程式 2 中，這可能是 c:\tempForUser2"。 針對這些資料夾賦予兩個身分識別對應的寫入權限。  
   

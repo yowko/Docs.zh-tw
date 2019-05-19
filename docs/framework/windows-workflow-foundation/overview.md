@@ -2,12 +2,12 @@
 title: Windows Workflow 概觀
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: bb714e5e5e4c1fe009ffa775efb456ebcc65c218
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 285ab75f7f67bbb9ffa18367eff126c04227f193
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592564"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876146"
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow 概觀
 工作流程是一組基本的單位，稱為*活動*，會儲存為描述真實世界的程序的模型。 工作流程能夠描述執行的順序，以及短期工作和長期工作之間的相依關係。 這個工作會從頭到尾經過整個模型，而活動可能會由人員或系統功能執行。  
@@ -23,7 +23,7 @@ ms.locfileid: "64592564"
   
  這裡每個類別都會包含核心活動執行階段，此執行階段是以負責活動執行的 <xref:System.Activities.ActivityInstance> 來表示。 在並行執行的應用程式網域內可能有幾個 <xref:System.Activities.ActivityInstance> 物件。  
   
- 前三個主機互動物件是從稱為工作流程程式的活動樹狀結構中所建立。 使用這些型別或自訂主機包裝<xref:System.Activities.ActivityInstance>，包括主控台應用程式，任何 Windows 處理序內執行的工作流程表單為基礎的應用程式、 Windows 服務[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]Web 站台和 Windows Communication Foundation （WCF) 服務。  
+ 前三個主機互動物件是從稱為工作流程程式的活動樹狀結構中所建立。 使用這些型別或自訂主機包裝<xref:System.Activities.ActivityInstance>，包括主控台應用程式、 表單架構應用程式、 Windows 服務、 ASP.NET 網站中，Windows Communication Foundation (WCF) 的任何 Windows 處理序內執行的工作流程服務。  
   
  ![在主控件程序中的工作流程元件](./media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 主機處理序中的工作流程元件  

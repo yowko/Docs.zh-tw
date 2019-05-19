@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: 5d35e2775c6c6912d2a36c550202b309ebdeaa32
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 638e8177060c489a7469f80adde68cb9ba266365
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583835"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879961"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>設定參數和參數資料類型
 
@@ -96,7 +96,7 @@ ms.locfileid: "65583835"
 
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>使用參數配合 SqlCommand 和預存程序
 
-預存程序對資料驅動應用程式有許多好處。 藉由使用預存程序，資料庫作業可以封裝在單一命令中、最佳化為最佳效能，並且可進一步提升安全性。 雖然可以呼叫預存程序，預存程序名稱後, 接參數引數當成 SQL 陳述式，藉由傳遞<xref:System.Data.Common.DbCommand.Parameters%2A>的集合[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.Common.DbCommand>物件可讓您更明確地定義預存程序參數，來存取輸出參數和傳回值。
+預存程序對資料驅動應用程式有許多好處。 藉由使用預存程序，資料庫作業可以封裝在單一命令中、最佳化為最佳效能，並且可進一步提升安全性。 雖然可以呼叫預存程序，預存程序名稱後, 接參數引數當成 SQL 陳述式，藉由傳遞<xref:System.Data.Common.DbCommand.Parameters%2A>集合的 ADO.NET<xref:System.Data.Common.DbCommand>物件可讓您更明確地定義預存程序參數，來存取輸出參數和傳回值。
 
 > [!NOTE]
 > 參數化陳述式能在伺服器上執行，都是透過允許查詢計畫重複使用的 `sp_executesql,` 。 呼叫 `sp_executesql` 的批次無法見到 `sp_executesql`批次中的本機資料指標或變數。 資料庫內容中的變更只會持續到 `sp_executesql` 陳述式結束。 如需詳細資訊，請參閱 [sp_executesql (transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql)。

@@ -2,15 +2,15 @@
 title: 成員資格和角色提供者
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 73084bb766274d6eab497555e82e029f94be0359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c172402f95b137117941381fd4803b8b6e4a5d61
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638367"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876738"
 ---
 # <a name="membership-and-role-provider"></a>成員資格和角色提供者
-「成員資格和角色提供者」範例會示範服務如何使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成員資格和角色提供者來驗證及授權用戶端。  
+成員資格和角色提供者範例示範如何服務可以使用 ASP.NET 成員資格和角色提供者來驗證及授權用戶端。  
   
  在這個範例中，用戶端是主控台應用程式 (.exe)，而服務則是由網際網路資訊服務 (IIS) 所裝載。  
   
@@ -21,11 +21,11 @@ ms.locfileid: "64638367"
   
 - 用戶端可以使用使用者名稱-密碼組合進行驗證。  
   
-- 伺服器可以對 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成員資格提供者驗證用戶端認證。  
+- 伺服器可以驗證的 ASP.NET 成員資格提供者的用戶端認證。  
   
 - 您可以使用伺服器的 X.509 憑證來驗證伺服器。  
   
-- 伺服器可以使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供者，將驗證的用戶端對應至角色。  
+- 伺服器可以使用 ASP.NET 角色提供者，以對應至角色驗證的用戶端。  
   
 - 伺服器可以使用 `PrincipalPermissionAttribute` 來控制對服務所公開特定方法的存取。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "64638367"
 </system.web>  
 ```  
   
- 服務會公開單一端點，以便與使用 Web.config 組態檔定義的服務進行通訊。 端點是由位址、繫結及合約所組成。 繫結是以預設為使用 Windows 驗證的標準 `wsHttpBinding` 來設定。 這個範例會將標準 `wsHttpBinding` 設定為使用使用者名稱驗證。 此行為會指定伺服器憑證要用於服務驗證。 伺服器憑證必須包含相同的值，如`SubjectName`作為`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)組態項目。 此外，此行為會藉由指定為兩種提供者定義的名稱，來指定使用者名稱-密碼配對的驗證是由 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成員資格提供者執行，而角色對應是由 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供者執行。  
+ 服務會公開單一端點，以便與使用 Web.config 組態檔定義的服務進行通訊。 端點是由位址、繫結及合約所組成。 繫結是以預設為使用 Windows 驗證的標準 `wsHttpBinding` 來設定。 這個範例會將標準 `wsHttpBinding` 設定為使用使用者名稱驗證。 此行為會指定伺服器憑證要用於服務驗證。 伺服器憑證必須包含相同的值，如`SubjectName`作為`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)組態項目。 除了此行為會指定驗證的使用者名稱密碼組由 ASP.NET 成員資格提供者執行，而且角色對應時，會執行 ASP.NET 角色提供者上，可以指定針對兩個提供者所定義的名稱。  
   
 ```xml  
 <system.serviceModel>  
@@ -123,10 +123,10 @@ ms.locfileid: "64638367"
 2. 請確定您已設定[ASP.NET 應用程式服務資料庫](https://go.microsoft.com/fwlink/?LinkId=94997)。  
   
     > [!NOTE]
-    >  如果您要執行 SQL Server Express Edition，則伺服器名稱為 .\SQLEXPRESS。 這個伺服器應該會在設定 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式服務資料庫時，以及在 Web.config 連接字串中使用。  
+    >  如果您要執行 SQL Server Express Edition，則伺服器名稱為 .\SQLEXPRESS。 設定 ASP.NET 應用程式服務資料庫以及與 Web.config 連接字串時，就應該使用此伺服器。  
   
     > [!NOTE]
-    >  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 背景工作處理序帳戶必須具有這個步驟中所建立資料庫的權限。 請使用 sqlcmd 公用程式或 SQL Server Management Studio 來執行這項操作。  
+    >  ASP.NET 工作者處理序帳戶必須在此步驟中建立資料庫權限。 請使用 sqlcmd 公用程式或 SQL Server Management Studio 來執行這項操作。  
   
 3. 若要在單一或跨電腦的組態中執行本範例，請使用下列指示。  
   

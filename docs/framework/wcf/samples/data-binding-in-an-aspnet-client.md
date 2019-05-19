@@ -2,12 +2,12 @@
 title: ASP.NET 用戶端中的資料繫結
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-ms.openlocfilehash: 07e03a4580795b3424f63cec8f93fea2039b6733
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0cc6fee822ad300969ccf8556a3eeb410660f256
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990622"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876986"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>ASP.NET 用戶端中的資料繫結
 此範例示範如何將 Web Form 應用程式中典型的 Windows Communication Foundation (WCF) 服務所傳回的資料繫結。  
@@ -19,7 +19,7 @@ ms.locfileid: "61990622"
   
  服務會實作定義要求-回覆通訊模式的合約。 合約是由 `IWeatherService` 介面所定義，而該介面會公開 (Expose) 名為 `GetWeatherData` 的作業。 這項作業會接受城市陣列並傳回 `WeatherData` 物件的陣列，而這些物件表示某個城市的最高和最低預測溫度。  
   
- 在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 用戶端 .aspx 頁面上會定義 DataGrid Web 控制項，其中包含服務傳回之資料的圖形表示。 在.aspx 頁面上的程式碼會呼叫天氣資料的 WCF 服務，並將資料傳回陣列的`WeatherData`物件。 DataGrid 指定從何處取得其資料的方式，是將 `DataSource` 屬性設定為該陣列。 呼叫 DataGrid 的 `DataBind` 方法時便會發生資料繫結。 這段程式碼是否包含在內。`aspx` 頁面的`Page_Load`方法，所以每次使用者重新整理瀏覽器頁面上，資料會更新在資料格中。  
+ 在 ASP.NET 用戶端.aspx 頁面上，會定義 DataGrid Web 控制項，其中包含服務所傳回的資料的圖形表示。 在.aspx 頁面上的程式碼會呼叫天氣資料的 WCF 服務，並將資料傳回陣列的`WeatherData`物件。 DataGrid 指定從何處取得其資料的方式，是將 `DataSource` 屬性設定為該陣列。 呼叫 DataGrid 的 `DataBind` 方法時便會發生資料繫結。 這段程式碼是否包含在內。`aspx` 頁面的`Page_Load`方法，所以每次使用者重新整理瀏覽器頁面上，資料會更新在資料格中。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   

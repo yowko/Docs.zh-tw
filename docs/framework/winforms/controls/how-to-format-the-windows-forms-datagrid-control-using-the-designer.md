@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: fddb59fc32feabf708e209ac4a5e78a14585fa66
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0c11937f1a0300c4a376657d423ef348a844f700
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637562"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880647"
 ---
-# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>作法：使用設計工具格式化 Windows Forms DataGrid 控制項
+# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>HOW TO：使用設計工具格式化 Windows Forms DataGrid 控制項
 
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
@@ -79,7 +79,7 @@ ms.locfileid: "65637562"
 
 1. 選取<xref:System.Windows.Forms.DataGrid>您表單上的控制項。
 
-2. 在 [**屬性**視窗中，選取<xref:System.Windows.Forms.DataGrid.TableStyles%2A>屬性，然後按一下**省略符號**(![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton"))] 按鈕。
+2.  在 **屬性**視窗中，選取<xref:System.Windows.Forms.DataGrid.TableStyles%2A>屬性，然後按一下**省略符號**(![Visual Studio 的 [屬性] 視窗中的省略符號按鈕 （...）。](./media/visual-studio-ellipsis-button.png))按鈕。
 
 3. 在 [ **Styl 集合編輯器**] 對話方塊中，按一下**新增**若要將資料表樣式加入至集合。
 
@@ -89,7 +89,7 @@ ms.locfileid: "65637562"
 
      對應名稱用來指定哪個資料表樣式應使用哪一個資料表。
 
-5. 在  **Styl 集合編輯器**，選取<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>屬性，然後按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")).
+5.  在  **Styl 集合編輯器**，選取<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>屬性，然後按一下省略符號按鈕 (![Visual Studio 的 [屬性] 視窗中的省略符號按鈕 （...）。](./media/visual-studio-ellipsis-button.png))。
 
 6. 在  **DataGridColumnStyle 集合編輯器**對話方塊方塊中，將資料行樣式新增至您所建立的表格樣式。
 

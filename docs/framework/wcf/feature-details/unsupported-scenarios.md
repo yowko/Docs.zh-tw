@@ -2,12 +2,12 @@
 title: 不支援的案例
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 48ed292b3bb22ae4966680805a74b40b249d8a32
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637741"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878753"
 ---
 # <a name="unsupported-scenarios"></a>不支援的案例
 基於各種原因，Windows Communication Foundation (WCF) 不支援某些特定的安全性案例。 比方說， [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 不會實作 SSPI 或 Kerberos 驗證通訊協定，並因此 WCF 不支援該平台上，執行使用 Windows 驗證的服務。 執行 WCF 只有 Windows XP Home Edition 下的時，會支援其他驗證機制，例如使用者名稱/密碼和 HTTP/HTTPS 整合式的驗證。  
@@ -36,7 +36,7 @@ ms.locfileid: "64637741"
 >  執行作業之前有一些特定需求： 例如，<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 將建立會變成 Windows 識別的繫結項目，但是不會建立 SCT。 因此，您可以將其與 `Required` 上的 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 選項搭配使用。  
   
 ### <a name="possible-aspnet-conflict"></a>可能產生的 ASP.NET 衝突  
- WCF 和[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]都可以啟用或停用模擬。 當[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]裝載的 WCF 應用程式中，WCF 之間可能存在衝突和[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]組態設定。 如果發生衝突，WCF 設定會優先採用，除非<xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>屬性設定為<xref:System.ServiceModel.ImpersonationOption.NotAllowed>，在此情況下[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]模擬設定的優先順序。  
+ WCF 和 ASP.NET 可以同時啟用或停用模擬。 當 ASP.NET 裝載的 WCF 應用程式時，可能會 WCF 和 ASP.NET 的組態設定之間有衝突。 如果發生衝突，WCF 設定會優先採用，除非<xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>屬性設定為<xref:System.ServiceModel.ImpersonationOption.NotAllowed>，在此情況下 ASP.NET 模擬設定的優先順序。  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>組件載入可能會在模擬狀態下失敗  
  如果模擬的內容沒有載入組件的存取權，而且同時也是 Common Language Runtime (CLR) 第一次嘗試載入該 AppDomain 的組件，則 <xref:System.AppDomain> 會快取失敗結果。 即使還原模擬後，後續的組件載入嘗試一樣會失敗，而且即使還原後的內容具有載入組件的存取權也一樣。 這是因為 CLR 並未在使用者內容變更之後重新嘗試載入。 您必須重新啟動應用程式定義域，從失敗中進行還原。  
@@ -75,13 +75,13 @@ ms.locfileid: "64637741"
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>如果需要使用 ASP.NET 模擬與 ASP.NET 相容性的話，訊息安全性就會失敗  
  WCF 不支援下列設定的組合，因為它們可以防止用戶端驗證發生：  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模擬已啟用。 這是在 web.config 中藉由設定`impersonate`屬性的 <`identity`> 項目`true`。  
+- 啟用 ASP.NET 模擬。 這是在 web.config 中藉由設定`impersonate`屬性的 <`identity`> 項目`true`。  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 藉由設定啟用相容性模式`aspNetCompatibilityEnabled`的屬性[ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)到`true`。  
+- 藉由設定來啟用 ASP.NET 相容性模式`aspNetCompatibilityEnabled`的屬性[ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)到`true`。  
   
 - 已使用訊息模式安全性。  
   
- 解決辦法就是關閉 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 相容性模式。 或者，如果[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]相容性模式時，停用[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]模擬功能，並改為使用 WCF 提供的模擬。 如需詳細資訊，請參閱 <<c0> [ 委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
+ 因應措施是關閉 ASP.NET 相容性模式。 或者，如果需要 ASP.NET 相容性模式下，停用 ASP.NET 模擬功能，並改為使用 WCF 提供的模擬。 如需詳細資訊，請參閱 <<c0> [ 委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
 ## <a name="ipv6-literal-address-failure"></a>IPv6 常值位址失敗  
  安全性要求會失敗的情況為：當用戶端與服務位於同一部電腦，以及服務使用 IPv6 常值位址時。  

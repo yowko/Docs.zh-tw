@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 6b6e77dea17d71b74c2c06534fd3a941e3e867a8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 83fd5ab1cfe7f48999dd2765405f58543eeb743a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592549"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882210"
 ---
 # <a name="data-transfer-architectural-overview"></a>資料傳輸架構概觀
 Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可以接收訊息、加以處理，然後分派到使用者程式碼執行進一步動作，或是使用使用者程式碼提供的資料建構訊息，然後傳遞到目的地。 此主題將針對進階程式開發人員，描述處理訊息與所包含資料的架構。 如需如何傳送與接收資料的簡化型工作導向檢視，請參閱 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。  
@@ -268,7 +268,7 @@ Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可�
   
  WCF 支援序列化和還原序列化參數及訊息部分的 「 現成 」 的兩種序列化技術：<xref:System.Runtime.Serialization.DataContractSerializer>而`XmlSerializer`。 此外，您可以撰寫自訂序列化程式。 不過，WCF 的其他部分 (例如泛型`GetBody`方法或 SOAP 錯誤序列化) 可能會受限於只能使用<xref:System.Runtime.Serialization.XmlObjectSerializer>子類別 (<xref:System.Runtime.Serialization.DataContractSerializer>並<xref:System.Runtime.Serialization.NetDataContractSerializer>，而非<xref:System.Xml.Serialization.XmlSerializer>)，或甚至被硬式編碼為只使用<xref:System.Runtime.Serialization.DataContractSerializer>。  
   
- `XmlSerializer` 是在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務中使用的序列化引擎。 `DataContractSerializer` 是了解新資料合約程式設計模型的新序列化引擎。 `DataContractSerializer` 是預設選擇，而您可以使用 `XmlSerializer` 屬性，針對個別作業選擇使用 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> 。  
+ `XmlSerializer`是在 ASP.NET Web 服務所使用的序列化引擎。 `DataContractSerializer` 是了解新資料合約程式設計模型的新序列化引擎。 `DataContractSerializer` 是預設選擇，而您可以使用 `XmlSerializer` 屬性，針對個別作業選擇使用 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> 。  
   
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 和 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 是分別負責插入 `DataContractSerializer` 與 `XmlSerializer`之訊息格式器的作業行為。 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 行為實際上能夠與任何衍生自 <xref:System.Runtime.Serialization.XmlObjectSerializer>的序列化程式共同運作，其中包含 <xref:System.Runtime.Serialization.NetDataContractSerializer> (在「使用獨立序列化」中會詳細描述)。 行為會呼叫其中一個 `CreateSerializer` 虛擬方法多載以取得序列化程式。 若要插入不同的序列化程式，請建立新的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 子類別，然後同時覆寫 `CreateSerializer` 多載。  
   

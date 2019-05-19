@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9341ff8bfb2aec4eb7274d444fca4497fa66f210
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046628"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875569"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>使用身分識別模型來管理宣告與授權
 授權就是決定哪些實體可以擁有變更、檢視或另外存取電腦資源等權限的程序。 例如，在公司裡只有經理可以存取這家公司員工的檔案。 Windows Communication Foundation (WCF) 支援兩種機制執行授權程序。 第一種機制可讓您使用現有的 Common Language Runtime (CLR) 建構來控制授權。 第二個是宣告為基礎的模型，稱為*身分識別模型*。 WCF 會使用身分識別模型來建立宣告，從內送訊息;身分識別模型類別可加以擴充以支援新的宣告類型，用於自訂授權配置。 本主題將顯示識別模型功能的主要程式設計概念概觀，以及此功能使用之最重要類別的清單。  
@@ -90,11 +90,12 @@ ms.locfileid: "62046628"
   
  下列圖表顯示三個宣告集範例，其中一個宣告集是以另一個宣告集做為其簽發者，而該簽發者宣告集又以系統宣告集做為其簽發者。 因此，這些宣告集會形成具有任意深度的階層。  
   
- ![管理宣告與授權](../../../../docs/framework/wcf/feature-details/media/claimshierarchy.gif "claimshierarchy")  
+ ![在階層內的宣告集。](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
- 多個宣告集可以擁有相同的發行宣告集，如下圖所示。  
+ 多個宣告集可能擁有相同的發行宣告集，如下圖所示：
+ 
   
- ![管理宣告與授權](../../../../docs/framework/wcf/feature-details/media/multiplesetsofclaims.gif "multiplesetsofclaims")  
+ ![多個具有相同的發行宣告集宣告集。](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   
  除了宣告集為自己本身簽發者的情況，識別模型並不支援讓宣告集形成迴圈。 因此，絕對不會出現宣告集 A 是由宣告集 B 發行，而宣告集 B 本身又是由宣告集 A 發行的狀況。 此外，識別模型也不支援宣告集擁有多個簽發者。 如果有兩個或多個簽發者必須發行特定的宣告集，您就必須使用多個宣告集來讓每個宣告集都包含相同的宣告，但卻擁有不同的簽發者。  
   

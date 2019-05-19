@@ -2,12 +2,12 @@
 title: 工作階段、執行個體與並行
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 52c9ed5d672ea05fec3333c9fece8b693143d6f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 74b9971fa9267ef6156b27261c61d3e998d01883
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586116"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877323"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>工作階段、執行個體與並行
 「 *工作階段* 」(Session) 是兩個端點之間所傳送之所有訊息的相互關聯。 「*執行個體* 」(Instancing) 是指控制使用者定義之服務物件的存留時間，以及其相關的 <xref:System.ServiceModel.InstanceContext> 物件。 「*並行* 」(Concurrency) 是指控制在 <xref:System.ServiceModel.InstanceContext> 中同時執行的執行緒數目。  
@@ -27,13 +27,13 @@ ms.locfileid: "64586116"
   
 - 沒有與 WCF 工作階段相關聯的一般資料存放區。  
   
- 如果您熟悉<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>類別中[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式和功能提供，您可能會注意到這種種類的工作階段和 WCF 工作階段的下列差異：  
+ 如果您已熟悉<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>ASP.NET 應用程式中的類別和功能提供，您可能會注意到這種種類的工作階段和 WCF 工作階段的下列差異：  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作階段一律由伺服器啟動。  
+- ASP.NET 工作階段會一律伺服器起始。  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作階段具有隱含未排序特性。  
+- ASP.NET 工作階段會以隱含方式排序。  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作階段提供了跨要求的一般資料儲存機制。  
+- ASP.NET 工作階段要求之間，提供一般的資料儲存機制。  
   
  用戶端應用程式和服務應用程式會以不同的方式與工作階段互動。 用戶端應用程式會初始化工作階段，接著並接收及處理在工作階段內傳送的訊息。 服務應用程式可以將工作階段當做擴充點使用，以便加入其他行為。 其做法是直接使用 <xref:System.ServiceModel.InstanceContext> 或實作自訂的執行個體內容提供者。  
   

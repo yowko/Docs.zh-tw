@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: b618d0c153501885fe8c42a04d0723eaa5bcd9af
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3a0c8bd90c2a8f4ffc2e7a6d8831f306637915e6
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586245"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877374"
 ---
 # <a name="using-the-xmlserializer-class"></a>使用 XmlSerializer 類別
 Windows Communication Foundation (WCF) 可以使用兩種不同的序列化技術，以將資料轉換成 XML，在用戶端與服務、 稱為序列化的程序之間傳輸的應用程式中。  
@@ -35,14 +35,14 @@ Windows Communication Foundation (WCF) 可以使用兩種不同的序列化技�
  <xref:System.Runtime.Serialization.DataContractSerializer>搭配資料合約類型，是撰寫新的 WCF 服務的建議的方式。 如需詳細資訊，請參閱 < [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
 ## <a name="when-to-use-the-xmlserializer-class"></a>何時使用 XmlSerializer 類別  
- WCF 亦支援<xref:System.Xml.Serialization.XmlSerializer>類別。 <xref:System.Xml.Serialization.XmlSerializer>類別不是唯一至 WCF。 它是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務使用的同一個序列化引擎。 <xref:System.Xml.Serialization.XmlSerializer> 類別支援的型別集範圍比 <xref:System.Runtime.Serialization.DataContractSerializer> 類別小多了，但允許對於結果 XML 有更多的控制權，並支援更多的 XML 結構描述定義語言 (XSD) 標準。 它在可序列化型別上也不需要任何宣告式屬性。 如需詳細資訊，請參閱.NET Framework 文件中的 「 XML 序列化 」 主題。 <xref:System.Xml.Serialization.XmlSerializer> 類別不支援資料合約類型。  
+ WCF 亦支援<xref:System.Xml.Serialization.XmlSerializer>類別。 <xref:System.Xml.Serialization.XmlSerializer>類別不是唯一至 WCF。 它是 ASP.NET Web 服務使用相同的序列化引擎。 <xref:System.Xml.Serialization.XmlSerializer> 類別支援的型別集範圍比 <xref:System.Runtime.Serialization.DataContractSerializer> 類別小多了，但允許對於結果 XML 有更多的控制權，並支援更多的 XML 結構描述定義語言 (XSD) 標準。 它在可序列化型別上也不需要任何宣告式屬性。 如需詳細資訊，請參閱.NET Framework 文件中的 「 XML 序列化 」 主題。 <xref:System.Xml.Serialization.XmlSerializer> 類別不支援資料合約類型。  
   
  當使用 Svcutil.exe 或**加入服務參考**功能在 Visual Studio 來產生用戶端程式碼，第三方服務，或存取協力廠商結構描述，適當的序列化程式會為您自動選取。 如果結構描述與 <xref:System.Runtime.Serialization.DataContractSerializer> 不相容，便會選擇 <xref:System.Xml.Serialization.XmlSerializer>。  
   
 ## <a name="manually-switching-to-the-xmlserializer"></a>手動切換至 XmlSerializer  
  有時候，您可能必須手動切換至 <xref:System.Xml.Serialization.XmlSerializer>。 例如，這會發生在下列案例中：  
   
-- 移轉應用程式時[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]WCF Web 服務，您可能想要重複使用現有的、 <xref:System.Xml.Serialization.XmlSerializer>-相容的類型，而不是建立新的資料合約型別。  
+- 當從 ASP.NET Web 服務的應用程式移轉至 WCF 中，您可以重複使用現有的、 <xref:System.Xml.Serialization.XmlSerializer>-相容的類型，而不是建立新的資料合約型別。  
   
 - 當出現在訊息中 XML 的精確控制權很重要，但 Web 服務描述語言 (WSDL) 文件無法使用時，例如，當使用必須符合與 DataContractSerializer 不相容的特定標準化、已發行的結構描述來建立服務時。  
   

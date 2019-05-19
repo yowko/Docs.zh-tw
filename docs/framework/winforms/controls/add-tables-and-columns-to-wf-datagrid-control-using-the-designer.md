@@ -1,17 +1,17 @@
 ---
-title: HOW TO：使用設計工具將資料表和資料行新增至 Windows Forms DataGrid 控制項
+title: 作法：使用設計工具將資料表和資料行新增至 Windows Forms DataGrid 控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], adding to DataGrid control
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 5e530b475745a3df7482b9ea4276f004d13ec055
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b248e9b250ce18f05a2bf57b80af8fbcebb4f811
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642447"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880607"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>HOW TO：使用設計工具將資料表和資料行新增至 Windows Forms DataGrid 控制項
 
@@ -29,7 +29,7 @@ ms.locfileid: "61642447"
   
 1. 若要顯示資料表中的資料，您必須先繫結<xref:System.Windows.Forms.DataGrid>資料集的控制項。 如需詳細資訊，請參閱[如何：將 Windows Forms DataGrid 控制項繫結至資料來源，使用設計工具](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)。  
   
-2. 選取 <xref:System.Windows.Forms.DataGrid>控制項的<xref:System.Windows.Forms.DataGrid.TableStyles%2A>屬性中 [屬性] 視窗中，然後按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁邊要顯示的屬性**Styl 集合編輯器**。  
+2.  選取 <xref:System.Windows.Forms.DataGrid>控制項的<xref:System.Windows.Forms.DataGrid.TableStyles%2A>[屬性] 視窗中的屬性，然後按一下省略符號按鈕 (![的 Visual Studio 的 [屬性] 視窗中的省略符號按鈕 （...）](./media/visual-studio-ellipsis-button.png)) 旁邊要顯示的屬性**Styl 集合編輯器**。  
   
 3. 在集合編輯器 中，按一下**新增**插入資料表樣式。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "61642447"
   
 ### <a name="to-add-a-column-to-the-datagrid-control-in-the-designer"></a>若要將資料行加入至設計工具中的 DataGrid 控制項  
   
-1. 在 **成員**的方塊**Styl 集合編輯器**，選取適當的資料表樣式。 在 **屬性**] 方塊中的 [集合編輯器中，選取<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>集合，然後按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 來顯示屬性旁**DataGridColumnStyle 集合編輯器**。  
+1.  在 **成員**的方塊**Styl 集合編輯器**，選取適當的資料表樣式。 在**屬性**] 方塊中的 [集合編輯器中，選取<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>集合，然後按一下省略符號按鈕 (![的 Visual Studio 的 [屬性] 視窗中的省略符號按鈕 （...）](./media/visual-studio-ellipsis-button.png)) 旁要顯示的屬性**DataGridColumnStyle 集合編輯器**。  
   
 2. 在集合編輯器 中，按一下**新增**插入資料行樣式，或按一下向下箭號旁**新增**來指定資料行類型。  
   

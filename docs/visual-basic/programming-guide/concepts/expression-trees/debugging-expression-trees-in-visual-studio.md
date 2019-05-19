@@ -2,26 +2,43 @@
 title: 在 Visual Studio (Visual Basic) 中的偵錯運算式樹狀架構
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: fb5905c3c1124dd64371216bddda0a17235abdce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7fc97d898c5956b5a569036e6e0fe1174714576d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787188"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879861"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>在 Visual Studio (Visual Basic) 中的偵錯運算式樹狀架構
+當您針對應用程式進行偵錯時，可以分析運算式樹狀架構的結構與內容。 若要取得運算式樹狀結構的快速概觀，您可以使用`DebugView`屬性，代表運算式樹狀架構使用特殊語法所述[下方](#debugview-syntax)。 (請注意，`DebugView`僅適用於偵錯模式。)  
 
-當您針對應用程式進行偵錯時，可以分析運算式樹狀架構的結構與內容。 若要取得運算式樹狀結構的快速概觀，您可以使用 `DebugView` 屬性，它只適用於偵錯模式。 如需偵錯的詳細資訊，請參閱 [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)。
+![DebugView 中的 Visual Studio 偵錯工具中的運算式樹狀架構](media/debugging-expression-trees-in-visual-studio/debugview_vb.png)
 
-為了更能代表運算式樹狀架構的內容，`DebugView` 屬性使用 Visual Studio 視覺化檢視。 如需詳細資訊，請參閱[建立自訂視覺化檢視](/visualstudio/debugger/create-custom-visualizers-of-data)。
+由於`DebugView`是一個字串，您可以使用[內建文字視覺化檢視](https://docs.microsoft.com/visualstudio/debugger/view-strings-visualizer#open-a-string-visualizer)來檢視它跨多行，選取**文字視覺化檢視**旁邊的放大鏡圖示從`DebugView`標籤。
 
-### <a name="to-open-a-visualizer-for-an-expression-tree"></a>開啟運算式樹狀架構的視覺化檢視
+ ![文字視覺化檢視套用至 'DebugView' 的結果](media/debugging-expression-trees-in-visual-studio/string_visualizer_vb.png)
 
-1. 在 [DataTips]、[監看式] 視窗，或是在 [自動變數] 視窗或 [區域變數] 視窗中，按一下出現在運算式樹狀架構 `DebugView` 屬性旁邊的放大鏡圖示。
+或者，您可以安裝並使用[自訂視覺化檢視](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data)的運算式樹狀架構：
 
-    視覺化檢視的清單隨即顯示。
+* [可讀取的運算式](https://github.com/agileobjects/ReadableExpressions)([MIT 授權](https://github.com/agileobjects/ReadableExpressions/blob/master/LICENSE.md)，網址[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1232914.ReadableExpressionsVisualizers))，轉譯運算式樹狀架構，為C#的程式碼：
 
-2. 按一下要使用的視覺化檢視。
+  ![可讀取的運算式視覺化檢視](media/debugging-expression-trees-in-visual-studio/readable_expressions_visualizer.png)
+
+* [運算式樹狀架構視覺化檢閱](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees)([MIT 授權](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE)) 提供的運算式樹狀結構、 屬性和相關的物件的圖形檢視，可以轉譯運算式樹狀架構，使用 Visual Basic 程式碼：
+
+  ![ExpressionToString 視覺化檢視](media/debugging-expression-trees-in-visual-studio/expression_to_string_visualizer_vb.png)
+
+### <a name="to-open-a-visualizer-for-an-expression-tree"></a>開啟運算式樹狀架構的視覺化檢視  
+  
+1. 按一下放大鏡圖示旁邊的運算式樹狀目錄中顯示**DataTips**，則**監看式** 視窗中，**自動變數**視窗中，或**區域變數**  視窗。  
+  
+     一份可用的視覺化檢視會顯示。: 
+
+      ![從 Visual Studio 開啟視覺化檢視](media/debugging-expression-trees-in-visual-studio/expression_tree_visualizers_vb.png)
+
+2. 按一下要使用的視覺化檢視。  
+
+## <a name="debugview-syntax"></a>`DebugView` 語法 
 
 如下列各節中所述，每個運算式類型會顯示在視覺化檢視中。
 

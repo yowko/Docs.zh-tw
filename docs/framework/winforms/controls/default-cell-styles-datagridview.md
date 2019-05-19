@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用設計工具設定 Windows Forms DataGridView 控制項的預設儲存格樣式和資料格式
+title: 作法：使用設計工具設定 Windows Forms DataGridView 控制項的預設儲存格樣式和資料格式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], cell styles
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 8939a182032cfac1beac6c1e5cb3c9de9792114c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7babc0918f5e8a7b4561d99bcfcfc9d7bdf9fb69
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011368"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878790"
 ---
-# <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：使用設計工具設定 Windows Forms DataGridView 控制項的預設儲存格樣式和資料格式
+# <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>作法：使用設計工具設定 Windows Forms DataGridView 控制項的預設儲存格樣式和資料格式
 <xref:System.Windows.Forms.DataGridView>控制項可讓您指定預設儲存格樣式和儲存格整個控制項、 特定的資料行、 資料列和資料行的標頭，以及替代資料列，以建立分類帳效果的資料格式。 設定整個控制項的預設樣式會覆寫預設資料行和替代的資料列的樣式設定。 此外，您在個別的資料列和資料格的程式碼中設定的樣式會覆寫預設樣式。  
   
  如需有關儲存格樣式的詳細資訊，請參閱 < [Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)。 若要設定替代資料列的樣式，請參閱[How to:設定 Windows Form DataGridView 控制項使用設計工具的替代資料列樣式](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)。  
@@ -30,7 +30,7 @@ ms.locfileid: "62011368"
   
 1. 選取<xref:System.Windows.Forms.DataGridView>設計工具中的控制項。  
   
-2. 在 [**屬性**] 視窗中，按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>， <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>，或<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>屬性。 **CellStyle 產生器** 對話方塊隨即出現。  
+2.  在 [**屬性**] 視窗中，按一下省略符號按鈕 (![的省略符號按鈕 （...） 在 [屬性] 視窗的 Visual Studio。](./media/visual-studio-ellipsis-button.png)) 旁<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>， <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>，或<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>屬性。 **CellStyle 產生器** 對話方塊隨即出現。  
   
 3. 藉由設定屬性，請使用定義的樣式**預覽**窗格，即可確認您的選擇。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62011368"
   
 2. 選取的資料行**選取的資料行**清單。  
   
-3. 在 **資料行屬性**方格中，按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>屬性。 **CellStyle 產生器** 對話方塊隨即出現。  
+3.  在 **資料行屬性**方格中，按一下省略符號按鈕 (![的省略符號按鈕 （...） 在 [屬性] 視窗的 Visual Studio。](./media/visual-studio-ellipsis-button.png)) 旁<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>屬性。 **CellStyle 產生器** 對話方塊隨即出現。  
   
 4. 藉由設定屬性，請使用定義的樣式**預覽**窗格，即可確認您的選擇。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62011368"
   
 1. 使用其中一個前述程序來顯示**CellStyle 產生器**對話方塊相關的預設儲存格樣式屬性。  
   
-2. 在  **CellStyle 產生器**對話方塊方塊中，按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁<xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>屬性。 **格式字串** 對話方塊隨即出現。  
+2.  在  **CellStyle 產生器**對話方塊方塊中，按一下省略符號按鈕 (![省略符號按鈕 （...） 在 [屬性] 視窗的 Visual Studio。](./media/visual-studio-ellipsis-button.png)) 旁<xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>屬性。 **格式字串** 對話方塊隨即出現。  
   
 3. 選取格式類型，則修改的詳細資料的類型 （例如要顯示的小數位數），使用**範例**方塊，確認您的選擇。  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: ace4b1c32ac30c54b56e2adbbbbf6af0450a4740
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b28a8a8fc2d75f80a14447008c850de63e4e04b3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651545"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882440"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>使用 Windows Form DataGridView 控制項中用於新增資料錄的資料列
 當您使用<xref:System.Windows.Forms.DataGridView>編輯您的應用程式中的資料，您通常想要讓使用者能夠將新的資料列加入至資料存放區。 <xref:System.Windows.Forms.DataGridView>控制項支援藉由提供一個資料列的新記錄，這一律會顯示為最後一個資料列的這項功能。 它是使用星號 （*） 的符號標示其資料列行首。 下列各節將討論您的程式與新記錄的資料列的啟用時，您應該考慮的事項。  
@@ -47,7 +47,7 @@ ms.locfileid: "64651545"
 ## <a name="sorting"></a>排序  
  在未繫結模式中，新的記錄會一律會新增至結尾<xref:System.Windows.Forms.DataGridView>即使使用者已排序的內容<xref:System.Windows.Forms.DataGridView>。 使用者必須重新套用排序，以正確的位置，來排序資料列此行為會類似於<xref:System.Windows.Forms.ListView>控制項。  
   
- 在資料繫結和虛擬模式中，插入時的行為套用排序會取決於資料模型的實作。 針對[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]，資料列立即排序到正確的位置。  
+ 在資料繫結和虛擬模式中，插入時的行為套用排序會取決於資料模型的實作。 Ado.net，資料列會立即排序到正確的位置。  
   
 ## <a name="other-notes-on-the-row-for-new-records"></a>在新記錄的資料列上的其他注意事項  
  您無法設定<xref:System.Windows.Forms.DataGridViewRow.Visible%2A>屬性到這個資料列`false`。 <xref:System.InvalidOperationException>如果嘗試這麼做會引發。  

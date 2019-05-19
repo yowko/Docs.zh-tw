@@ -12,16 +12,16 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 1609fbd8cbb24d6f2c10fbc3a235f01a451eb0fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 591b76ca6b5cd3a9180487c79293d5fc3b7991af
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754072"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882349"
 ---
 # <a name="interfaces-related-to-data-binding"></a>與資料繫結相關的介面
 
-透過 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]，您可以建立許多不同的資料結構，以滿足您正在使用之應用程式和資料的繫結需求。 您或許會想要建立自有類別以在 Windows Forms 中提供或取用資料。 這些物件可以提供不同程度的功能和複雜度，從基本的資料繫結，到提供設計階段支援、錯誤檢查、變更通知，或甚至對資料本身所做變更的結構化回復支援。
+使用 ADO.NET，您可以建立許多不同的資料結構，以符合您的應用程式以及您正在使用的資料繫結的需求。 您或許會想要建立自有類別以在 Windows Forms 中提供或取用資料。 這些物件可以提供不同程度的功能和複雜度，從基本的資料繫結，到提供設計階段支援、錯誤檢查、變更通知，或甚至對資料本身所做變更的結構化回復支援。
 
 ## <a name="consumers-of-data-binding-interfaces"></a>資料繫結介面的取用者
 
@@ -82,7 +82,7 @@ ms.locfileid: "64754072"
 
 - <xref:System.Collections.IEnumerable> 介面
 
-  類別若實作<xref:System.Collections.IEnumerable>介面通常由[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]。 此介面的 Windows Form 支援僅可透過<xref:System.Windows.Forms.BindingSource>元件。
+  類別若實作<xref:System.Collections.IEnumerable>介面通常由 ASP.NET。 此介面的 Windows Form 支援僅可透過<xref:System.Windows.Forms.BindingSource>元件。
 
   > [!NOTE]
   > <xref:System.Windows.Forms.BindingSource>元件會複製所有<xref:System.Collections.IEnumerable>到不同的清單，供繫結使用的項目。

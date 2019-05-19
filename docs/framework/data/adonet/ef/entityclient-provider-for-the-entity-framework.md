@@ -2,18 +2,18 @@
 title: Entity Framework 的 EntityClient 提供者
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: 268608c82070e60007bc09f97a775918e0d950f3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 17f18753cc64bce5901c9f57181a8c08733f0cfc
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583703"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878797"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Entity Framework 的 EntityClient 提供者
 EntityClient 提供者是 Entity Framework 應用程式用來存取概念模型中所描述之資料的資料提供者。 如需概念模型的資訊，請參閱[模型和對應](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)。 EntityClient 會使用其他 .NET Framework 資料提供者來存取資料來源。 例如，EntityClient 會在存取 SQL Server 資料庫時使用 .NET Framework Data Provider for SQL Server (SqlClient)。 SqlClient 提供者的相關資訊，請參閱[適用於 Entity Framework 的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)。 EntityClient 提供者是在 <xref:System.Data.EntityClient> 命名空間 (Namespace) 中實作的。  
   
 ## <a name="managing-connections"></a>管理連接  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]建置在儲存體專用[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]資料提供者，藉由提供<xref:System.Data.EntityClient.EntityConnection>到基礎資料提供者和關聯式資料庫。 若要建構<xref:System.Data.EntityClient.EntityConnection>物件，您必須參考一組包含必要模型和對應，以及儲存專用的資料提供者名稱和連接字串的中繼資料。 之後<xref:System.Data.EntityClient.EntityConnection>是就地的情況下，實體可以透過從概念模型產生的類別。  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]藉由提供儲存體專用 ADO.NET 資料提供者之上建置<xref:System.Data.EntityClient.EntityConnection>到基礎資料提供者和關聯式資料庫。 若要建構<xref:System.Data.EntityClient.EntityConnection>物件，您必須參考一組包含必要模型和對應，以及儲存專用的資料提供者名稱和連接字串的中繼資料。 之後<xref:System.Data.EntityClient.EntityConnection>是就地的情況下，實體可以透過從概念模型產生的類別。  
   
  您可以在 app.config 檔案中指定連接字串。  
   

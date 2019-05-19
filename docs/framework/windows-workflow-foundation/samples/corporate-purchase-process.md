@@ -2,17 +2,17 @@
 title: 公司購買程序
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: eaf77fc8b1697d0e337d8c4823ca2184cb9c545c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83290245dd203d4bb63c96e94ca6bdafee4ecffb
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665944"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876175"
 ---
 # <a name="corporate-purchase-process"></a>公司購買程序
 這個範例示範如何建立一個具有自動最佳提案選取、非常基本的提案徵求書 (RFP) 架構採購程序。 它結合 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601> 和 <xref:System.Activities.Statements.ForEach%601>，以及自訂活動，建立代表此程序的工作流程。
 
- 這個範例包含 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 用戶端應用程式，可讓您以不同的參與者身分 (做為原始要求者或特定供應商) 與程序互動。
+ 此範例包含 ASP.NET 用戶端應用程式，可讓您為不同的參與者 （做為原始要求者或特定供應商） 互動的程序。
 
 ## <a name="requirements"></a>需求
 
@@ -36,7 +36,7 @@ ms.locfileid: "64665944"
 
 - 追查。
 
-- 在不同的用戶端 ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] Web 應用程式和 WinForms 應用程式) 中裝載 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。
+- 裝載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]中不同的用戶端 （ASP.NET Web 應用程式和 WinForms 應用程式）。
 
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
@@ -82,7 +82,7 @@ ms.locfileid: "64665944"
 |-------------|-----------------|  
 |通用|程序中使用的實體物件 (Request for Proposal、Vendor 和 Vendor Proposal)。|  
 |WfDefinition|用戶端應用程式用來建立及使用採購程序工作流程執行個體之程序 ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 程式) 和主機 (`PurchaseProcessHost`) 的定義。|  
-|WebClient|[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 用戶端應用程式，讓使用者建立及參與採購程序的執行個體。 它使用自訂建立的主機，以便與工作流程引擎互動。|  
+|WebClient|ASP.NET 用戶端應用程式，可讓使用者建立及參與採購程序的執行個體。 它使用自訂建立的主機，以便與工作流程引擎互動。|  
 |WinFormsClient|Windows Form 用戶端應用程式，讓使用者建立及參與採購程序的執行個體。 它使用自訂建立的主機，以便與工作流程引擎互動。|  
   
 ### <a name="wfdefinition"></a>WfDefinition  

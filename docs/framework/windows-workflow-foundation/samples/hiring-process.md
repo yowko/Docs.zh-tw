@@ -2,12 +2,12 @@
 title: 招聘程序
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 87e49613214a6a608bd8e22dc9470250c90e220a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 685798ceab5e14169af6bdf16ce30a0f6548dc8c
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622489"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881904"
 ---
 # <a name="hiring-process"></a>招聘程序
 此範例示範如何使用傳訊活動和裝載為工作流程服務的兩個工作流程來實作商務程序。 這些工作流程是虛擬公司 Contoso, Inc. 的 IT 基礎結構的一部分。  
@@ -126,7 +126,7 @@ ms.locfileid: "64622489"
 |永久性計時器|`ResumeRequestService` 會使用永久性計時器來定義刊登工作的期間 (一旦過了期限之後，刊登就會結束)。|ResumeRequestService|  
 |異動|<xref:System.Activities.Statements.TransactionScope> 是用來確保數個活動執行內的資料都是一致的 (當收到新的履歷表時)。|ResumeRequestService|  
 |異動|自訂持續性參與者 (`HiringRequestPersistenceParticipant`) 和自訂追蹤參與者 (`HistoryFileTrackingParticipant`) 會使用相同的交易。|HiringRequestService|  
-|在 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 應用程式中使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。|工作流程是從兩個 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式進行存取。|InternalClient / CareersWebSite|  
+|使用[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ASP.NET 應用程式中。|從兩個 ASP.NET 應用程式存取工作流程。|InternalClient / CareersWebSite|  
   
 ## <a name="data-storage"></a>資料儲存  
  資料會儲存在名為 `ContosoHR` 的 SQL Server 資料庫中 (用來建立此資料庫的指令碼位於 `DbSetup` 資料夾中)。 工作流程執行個體會儲存在名為 `InstanceStore` 的 SQL Server 資料庫中 (用來建立執行個體存放區的指令碼屬於 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 散發的一部分)。  

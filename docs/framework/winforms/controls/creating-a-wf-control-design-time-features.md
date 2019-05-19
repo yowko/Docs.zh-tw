@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 9f290629e50d7d791119298059277ba73d8e73eb
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 4d741beffa5649d1d1593ba3dbb7a1918b669b80
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211208"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882299"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項
 
@@ -59,7 +59,7 @@ ms.locfileid: "65211208"
 
 當您完成時，您的自訂控制項看起來會如下所示：
 
-![可能的 marqueecontrol 可能排列](./media/demomarqueecontrol.gif "DemoMarqueeControl")
+![應用程式，顯示說明文字與啟動和停止按鈕的點線框。](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
 如需完整的程式碼清單，請參閱[How to:建立採用設計階段功能的 Windows Form 控制項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))。
 
@@ -178,7 +178,7 @@ using MarqueeControlLibrary;
 
 2. 在 「 MarqueeControlLibrary 屬性頁面 」 的對話方塊中，選取**偵錯**頁面。
 
-3. 在 **起始動作**區段中，選取**起始外部程式**。 您將會讓偵錯個別的執行個體的 Visual Studio 中，按一下省略符號 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 按鈕來瀏覽 Visual Studio IDE。 可執行檔的名稱是 devenv.exe，且如果您安裝的預設位置，其路徑為 %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe。
+3. 在 **起始動作**區段中，選取**起始外部程式**。 您將會讓偵錯個別的執行個體的 Visual Studio 中，按一下省略符號 (![的 Visual Studio 的 [屬性] 視窗中的省略符號按鈕 （...）](./media/visual-studio-ellipsis-button.png)) 按鈕來瀏覽 Visual Studio IDE。 可執行檔的名稱是 devenv.exe，且如果您安裝的預設位置，其路徑為 %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe。
 
 4. 按一下 [確定] 以關閉對話方塊。
 

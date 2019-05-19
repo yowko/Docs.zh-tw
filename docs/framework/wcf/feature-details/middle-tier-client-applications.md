@@ -2,18 +2,18 @@
 title: 中介層用戶端應用程式
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: c7934f6d0d34992db229244373b5a170180f51e6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b1ba177c365bb6913679ed2a217e66d7a0d522b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649448"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877476"
 ---
 # <a name="middle-tier-client-applications"></a>中介層用戶端應用程式
 本主題討論使用 Windows Communication Foundation (WCF) 的中介層用戶端應用程式特定的各種問題。  
   
 ## <a name="increasing-middle-tier-client-performance"></a>提升中介層用戶端效能  
- 相較於舊版的通訊技術，例如 Web 服務使用[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]，建立 WCF 用戶端執行個體可能更複雜，因為 WCF 的豐富功能集。 例如，<xref:System.ServiceModel.ChannelFactory%601> 物件開啟時，它可以和服務建立安全工作階段，而這個程序通常會增加用戶端執行個體的啟動時間。 一般而言，這些附加功能不會影響用戶端應用程式大幅因為 WCF 用戶端可讓多個呼叫，，然後關閉。  
+ 相較於舊版的通訊技術，例如使用 ASP.NET 的 Web 服務建立 WCF 用戶端執行個體可以是更複雜，因為 WCF 的豐富功能集的。 例如，<xref:System.ServiceModel.ChannelFactory%601> 物件開啟時，它可以和服務建立安全工作階段，而這個程序通常會增加用戶端執行個體的啟動時間。 一般而言，這些附加功能不會影響用戶端應用程式大幅因為 WCF 用戶端可讓多個呼叫，，然後關閉。  
   
  中介層用戶端應用程式，不過，可以快速建立許多的 WCF 用戶端物件，如此一來，體驗更高的初始化需求。 呼叫服務時，有兩種主要方式可以提高中介層應用程式的效能：  
   

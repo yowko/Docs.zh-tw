@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 7c9442635bb193c13ca30fd1e271631a43b33e55
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e1e9ce761baa77ea06b3d66aa5b296a186f054b4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589025"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878855"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 控制項概觀 (Windows Form)
 > [!NOTE]
@@ -53,7 +53,7 @@ ms.locfileid: "65589025"
   
  如果透過任何機制將繫結資料集中的資料更新， <xref:System.Windows.Forms.DataGrid> 控制項會反映那些變更。 如果資料格及其資料表樣式和資料行樣式`ReadOnly`屬性設定為`false`，可以透過更新資料集內的<xref:System.Windows.Forms.DataGrid>控制項。  
   
- 在 <xref:System.Windows.Forms.DataGrid> 中，一次只能顯示一個資料表。 如果資料表之間有定義父子關聯性，則使用者可以在相關的資料表之間移動，以選取要顯示在 <xref:System.Windows.Forms.DataGrid> 控制項中的資料表。 如需有關繫結資訊<xref:System.Windows.Forms.DataGrid>若要控制[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]資料來源在設計階段或執行的階段，請參閱[How to:將 Windows Forms DataGrid 控制項繫結至資料來源](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。  
+ 在 <xref:System.Windows.Forms.DataGrid> 中，一次只能顯示一個資料表。 如果資料表之間有定義父子關聯性，則使用者可以在相關的資料表之間移動，以選取要顯示在 <xref:System.Windows.Forms.DataGrid> 控制項中的資料表。 如需有關繫結資訊<xref:System.Windows.Forms.DataGrid>至 ADO.NET 資料來源控制項在設計階段或執行的階段，請參閱[How to:將 Windows Forms DataGrid 控制項繫結至資料來源](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。  
   
  <xref:System.Windows.Forms.DataGrid> 的有效資料來源包括：  
   

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：顯示 Windows Forms ListView 控制項的圖示
+title: 作法：顯示 Windows Forms ListView 控制項的圖示
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ImageList component [Windows Forms], with ListView control
 - list views [Windows Forms], displaying icons
 ms.assetid: 9d577542-8595-429b-99e5-078770ec9d35
-ms.openlocfilehash: 8e4ae744eecbe894767114179dd63651828b191b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80a827a88ac92008c7fe2a642d1d4b59a18f89da
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013435"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880412"
 ---
-# <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>HOW TO：顯示 Windows Forms ListView 控制項的圖示
+# <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>作法：顯示 Windows Forms ListView 控制項的圖示
 Windows Form<xref:System.Windows.Forms.ListView>控制項可以顯示三個映像清單中的圖示。 清單、 詳細資料，以及 [smallicon] 檢視會顯示從映像清單中指定的映像<xref:System.Windows.Forms.ListView.SmallImageList%2A>屬性。 LargeIcon 檢視會顯示從映像清單中指定的映像<xref:System.Windows.Forms.ListView.LargeImageList%2A>屬性。 清單檢視也可以顯示一組額外的設定的圖示<xref:System.Windows.Forms.ListView.StateImageList%2A>大型或小型圖示旁邊的屬性。 如需有關影像清單的詳細資訊，請參閱[ImageList 元件](imagelist-component-windows-forms.md)和[How to:新增或移除映像的 Windows Form ImageList 元件](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。  
   
 ### <a name="to-display-images-in-a-list-view"></a>若要在清單檢視中顯示影像  
@@ -32,7 +32,7 @@ Windows Form<xref:System.Windows.Forms.ListView>控制項可以顯示三個映�
   
 2. 設定<xref:System.Windows.Forms.ListViewItem.ImageIndex%2A>或<xref:System.Windows.Forms.ListViewItem.StateImageIndex%2A>屬性每個清單項目有一個相關聯的圖示。  
   
-     可以設定這些屬性，在程式碼，或在**ListViewItem 集合編輯器**。 若要開啟  **ListViewItem 集合編輯器**，按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁邊<xref:System.Windows.Forms.ListView.Items%2A>上的屬性**屬性**視窗。  
+     可以設定這些屬性，在程式碼，或在**ListViewItem 集合編輯器**。 若要開啟  **ListViewItem 集合編輯器**，按一下省略符號按鈕 (![省略符號按鈕 （...） 在 [屬性] 視窗的 Visual Studio。](./media/visual-studio-ellipsis-button.png)) 旁<xref:System.Windows.Forms.ListView.Items%2A>屬性**屬性**視窗。  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#42)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#42)]  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 9fead8a5d54fba7232831bba349f27b7eed4657b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d343f7be3e26575ee9a1e9ccae9f17314db10ac5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583794"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882108"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework 資料提供者
 .NET Framework 資料提供者用於連接到資料庫、 執行命令和擷取結果。 這些結果會直接處理、放入 <xref:System.Data.DataSet> 中以便視需要而公開給使用者、與多個來源的資料結合，或在各層之間進行遠端控制。 .NET framework 資料提供者是輕量級、 建立最小層之間的資料來源和程式碼，以提升效能而不犧牲功能。  
@@ -74,7 +74,7 @@ using System.Data.SqlClient;
 ## <a name="net-framework-data-provider-for-ole-db"></a>.NET Framework Data Provider for OLE DB  
  .NET Framework Data Provider for OLE DB (OleDb) 會使用原生 OLE DB 透過 COM interop 來啟用資料存取。 .NET Framework Data Provider for OLE DB 支援本機和分散式交易。 若是分散式交易，.NET Framework Data Provider for OLE DB，根據預設，自動登記在交易中，並從 Windows 元件服務取得交易詳細資料。 如需詳細資訊，請參閱 <<c0> [ 異動和並行存取](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)。  
   
- 下表顯示用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]測試過的提供者。  
+ 下表顯示已經過測試 ADO.NET 提供者。  
   
 |驅動器|提供者|  
 |------------|--------------|  
@@ -83,11 +83,11 @@ using System.Data.SqlClient;
 |Microsoft.Jet.OLEDB.4.0|OLE DB provider for Microsoft Jet|  
   
 > [!NOTE]
->  建議您最好不要將 Access (Jet) 資料庫當做多執行緒應用程式 (例如 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式) 的資料來源。 如果 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式必須使用 Jet 做為資料來源，則 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式連接 Access 資料庫時，可能會出現連接問題。  
+>  建議您不要使用多執行緒應用程式，例如 ASP.NET 應用程式，做為資料來源的 Access (Jet) 資料庫。 如果您必須使用 Jet 做為資料來源，ASP.NET 應用程式，了解連接到 Access 資料庫中的 ASP.NET 應用程式可能會遇到連線問題。  
   
  .NET Framework Data Provider for OLE DB 不支援 OLE DB 2.5 版的介面。 OLE DB 提供者，需要支援的 OLE DB 2.5 介面將無法正常搭配.NET Framework Data Provider for OLE DB。 這包括 Microsoft OLE DB provider for Exchange 和 Microsoft OLE DB provider for Internet Publishing。  
   
- .NET Framework Data Provider for OLE DB 無法搭配 OLE DB provider for ODBC (MSDASQL)。 若要存取 ODBC 資料來源使用[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]，使用.NET Framework Data Provider for ODBC。  
+ .NET Framework Data Provider for OLE DB 無法搭配 OLE DB provider for ODBC (MSDASQL)。 若要存取使用 ADO.NET 的 ODBC 資料來源，使用 .NET Framework Data Provider for ODBC。  
   
  .NET framework Data Provider for OLE DB 類別位於<xref:System.Data.OleDb>命名空間。 下列程式碼範例顯示如何將 `System.Data.OleDb` 命名空間納入您的應用程式。  
   
@@ -102,7 +102,7 @@ using System.Data.OleDb;
 ## <a name="net-framework-data-provider-for-odbc"></a>.NET Framework Data Provider for ODBC  
  .NET Framework Data Provider for ODBC (Odbc) 會使用原生 ODBC 驅動程式管理員 」 (DM) 來啟用資料存取。 ODBC 資料提供者支援本機和分散式交易。 若為分散式異動，則 ODBC 資料提供者預設會自動在異動中登記，並從 Windows 元件服務取得異動詳細資料。 如需詳細資訊，請參閱 <<c0> [ 異動和並行存取](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)。  
   
- 下表顯示 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]測試過的 ODBC 驅動程式。  
+ 下表顯示使用 ADO.NET 進行測試的 ODBC 驅動程式。  
   
 |驅動器|  
 |------------|  

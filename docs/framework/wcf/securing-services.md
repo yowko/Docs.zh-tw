@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4ac823b5419d845437ef8e89f5123adafda0c5a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949860"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881352"
 ---
 # <a name="securing-services"></a>保護服務的安全
 Windows Communication Foundation (WCF) 服務的安全性包含兩個主要需求： 傳輸安全性和授權。 (第三個需求中所述之安全性事件的稽核[稽核](../../../docs/framework/wcf/feature-details/auditing-security-events.md)。)簡言之，傳輸安全性包含驗證 (驗證服務和用戶端兩者的身分識別)、機密性 (訊息加密) 和完整性 (用來偵測竄改的數位簽章)。 授權會控制存取資源，例如，只允許有權限的使用者讀取檔案。 使用 WCF 的功能，即可輕鬆實作的兩個主要需求。  
@@ -50,7 +50,7 @@ Windows Communication Foundation (WCF) 服務的安全性包含兩個主要需�
  網際網路上的安全性和內部網路上的安全性有相同需求。 服務必須出示其認證，以證明其真實性，而用戶端則必須向服務證明其身分識別。 一旦證明用戶端的身分識別，服務就可以控制用戶端對資源的存取權限。 不過，由於網際網路的異質性，所出示的認證與 Windows 網域上所使用的並不相同。 在網域上，Kerberos 控制器會使用認證的票證來處理使用者驗證，但在網際網路上，服務和用戶端則仰賴多個不同方式來出示認證。 不過，本主題的目標是提出通用方法，可讓您建立可在網際網路存取的 WCF 服務。  
   
 ### <a name="using-iis-and-aspnet"></a>使用 IIS 和 ASP.NET  
- 網際網路安全性的需求以及解決這些問題的機制並不陌生。 IIS 是 Microsoft 的 Web 伺服器的網際網路功能，並有許多的安全性功能，以解決這些問題;颾魤 ㄛ[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]包含可以使用 WCF 服務的安全性功能。 若要利用這些安全性功能，裝載在 IIS 上的 WCF 服務。  
+ 網際網路安全性的需求以及解決這些問題的機制並不陌生。 IIS 是 Microsoft 的 Web 伺服器的網際網路功能，並有許多的安全性功能，以解決這些問題;此外，ASP.NET 會包含可以使用 WCF 服務的安全性功能。 若要利用這些安全性功能，裝載在 IIS 上的 WCF 服務。  
   
 #### <a name="using-aspnet-membership-and-role-providers"></a>使用 ASP.NET 成員資格和角色提供者  
  ASP.NET 包含成員資格和角色提供者。 提供者是用來驗證呼叫者，內含使用者名稱/密碼組的資料庫，也可讓您指定每個呼叫者的存取權限。 使用 WCF 時，您可以輕鬆地使用預先存在的成員資格和角色提供者，透過組態。 如需示範這個用法的範例應用程式，請參閱 [Membership and Role Provider](../../../docs/framework/wcf/samples/membership-and-role-provider.md) 範例。  

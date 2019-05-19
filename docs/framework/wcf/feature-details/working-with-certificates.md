@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: f424e4ef62f42da9065aa6ff846e8bd2c7a42a4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8c7d65f593f2ba5c21625835a0be7a77a44afb5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625817"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881109"
 ---
 # <a name="working-with-certificates"></a>使用憑證
 在針對 Windows Communication Foundation (WCF) 安全性設計程式時，通常會採用 X.509 數位憑證來驗證用戶端與伺服器、加密，以及數位簽署訊息。 本主題將簡要說明 X.509 數位憑證功能及如何在 WCF 中使用這些憑證，同時針對這些概念的進一步說明以及如何運用 WCF 與憑證來完成一般工作的主題說明提供連結。  
@@ -29,7 +29,7 @@ ms.locfileid: "64625817"
 ## <a name="certificate-stores"></a>憑證存放區  
  您可以在存放區中找到憑證。 兩個主要的存放區位置還可進一步細分為子存放區。 如果您是電腦的系統管理員，就可以使用 MMC 嵌入式管理單元工具來同時檢視兩個主要的存放區。 非系統管理員只能檢視目前使用者的存放區。  
   
-- **本機電腦存放區**。 裡面包含了電腦處理序所存取的憑證，例如 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。 請使用此位置來存放可對用戶端驗證伺服器的憑證。  
+- **本機電腦存放區**。 這包含機器的程序，例如 ASP.NET 所存取的憑證。 請使用此位置來存放可對用戶端驗證伺服器的憑證。  
   
 - **目前使用者的存放區**。 一般來說，互動性應用程式會將電腦目前使用者的憑證放在此處。 如果您正在建立用戶端應用程式，通常會將用來向服務驗證使用者的憑證放在此處。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "64625817"
 - 如果服務或用戶端是透過使用者帳戶執行的應用程式，則請使用 [目前使用者] 存放區。  
   
 ### <a name="accessing-stores"></a>存取存放區  
- 存放區會受到存取控制清單 (ACL) 的保護，就像電腦上的資料夾一樣。 當您建立由網際網路資訊服務 (IIS) 所裝載的服務時，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 處理序會透過 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 帳戶來執行。 該帳戶必須能夠存取包含服務所使用之憑證的存放區。 每一個主要存放區都會以預設的存取清單加以保護，但是您可以修改此清單。 如果您建立個別的角色來存取存放區，則必須授予該角色存取權限。 若要了解如何修改存取清單中，使用 WinHttpCertConfig.exe 工具，請參閱[How to:用於建立暫時憑證，在開發期間](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。 如需將用戶端憑證搭配 IIS 一起使用的詳細資訊，請參閱[如何在 ASP.NET Web 應用程式中使用用戶端憑證呼叫 Web 服務進行驗證](https://go.microsoft.com/fwlink/?LinkId=88914)。  
+ 存放區會受到存取控制清單 (ACL) 的保護，就像電腦上的資料夾一樣。 建立網際網路資訊服務 (IIS) 裝載服務時，則會在 ASP.NET 帳戶下執行 ASP.NET 處理序。 該帳戶必須能夠存取包含服務所使用之憑證的存放區。 每一個主要存放區都會以預設的存取清單加以保護，但是您可以修改此清單。 如果您建立個別的角色來存取存放區，則必須授予該角色存取權限。 若要了解如何修改存取清單中，使用 WinHttpCertConfig.exe 工具，請參閱[How to:用於建立暫時憑證，在開發期間](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。 如需將用戶端憑證搭配 IIS 一起使用的詳細資訊，請參閱[如何在 ASP.NET Web 應用程式中使用用戶端憑證呼叫 Web 服務進行驗證](https://go.microsoft.com/fwlink/?LinkId=88914)。  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>鏈結信任與憑證授權單位  
  憑證是在階層中建立的，其中每個個別憑證都會連結到核發憑證的 CA。 此連結連至 CA 的憑證。 CA 的憑證然後發出原始 CA 的憑證的 CA 的連結。 在找到根 CA 的憑證之前，會一直重複這個程序。 根 CA 的憑證在本質上會受到信任。  

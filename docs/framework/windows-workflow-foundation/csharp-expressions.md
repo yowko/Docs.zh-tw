@@ -2,12 +2,12 @@
 title: C# 運算式
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: 23c5ee0e0d1408f19e87615008ee95266176d27b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c50f6a2a8dfb69b914fb4fa84c028f9d65c00cfa
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650948"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882093"
 ---
 # <a name="c-expressions"></a>C# 運算式
 從開始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，在 Windows Workflow Foundation (WF) 支援 C# 運算式。 Visual Studio 2012 中建立新的 C# 工作流程專案目標[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]使用 C# 運算式和 Visual Basic 工作流程專案中使用 Visual Basic 運算式。 不論是否支援專案語言，使用 Visual Basic 運算式的現有 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 工作流程專案均可移轉至 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]。 本主題提供 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的 C# 運算式概觀。
@@ -31,7 +31,7 @@ ms.locfileid: "64650948"
 ### <a name="WFDesigner"></a> 在工作流程設計工具中使用 C# 運算式
  從開始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，在 Windows Workflow Foundation (WF) 支援 C# 運算式。 Visual Studio 2012 中建立 C# 工作流程專案目標[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]使用 C# 運算式，而 Visual Basic 工作流程專案則使用 Visual Basic 運算式。 若要指定所需的 C# 運算式，方塊中輸入標示**輸入 C# 運算式**。 在設計工具中選取活動時，會在屬性視窗中顯示此標籤，而此標籤也會顯示在工作流程設計工具中的活動之上。 在下列範例中，`WriteLine` 內的 `Sequence` 包含兩個 `NoPersistScope` 活動。
 
- ![自動建立的序列活動](./media/autosurround2.png "AutoSurround2")
+ ![螢幕擷取畫面會顯示自動建立的序列活動。](./media/csharp-expressions/auto-surround-sequence-activity.png)
 
 > [!NOTE]
 >  C# 運算式只支援 Visual Studio 中，並在重新裝載工作流程設計工具中不支援。 如需有關支援在重新裝載設計工具中的新 WF45 功能的詳細資訊，請參閱[的新 Workflow Foundation 4.5 功能，在重新裝載工作流程設計工具支援](wf-features-in-the-rehosted-workflow-designer.md)。

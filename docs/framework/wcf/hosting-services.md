@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 4342b3d6219f0c996264bb7ed190b1204338ba64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4641c1c63a4f3c13cefb573dacf4e88b5d63077e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051152"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881192"
 ---
 # <a name="hosting-services"></a>裝載服務
 如果要成為作用中的服務，必須將服務裝載在建立及控制其內容和存留時間的執行階段環境中。 Windows Communication Foundation (WCF) 服務專為在支援 managed 程式碼在任何 Windows 處理程序中執行。  
@@ -29,7 +29,7 @@ ms.locfileid: "62051152"
  這個裝載選項包含註冊為受管理的 Windows 服務 （之前稱為 NT 服務） 裝載的 WCF 服務，如此一來服務處理序存留期由服務控制管理員 (SCM) 控制應用程式定義域 (AppDomain)Windows 服務。 就像自我裝載選項一樣，此類型的裝載環境要求將某些裝載程式碼撰寫成應用程式的一部分。 服務會實作為兩個 Windows 服務和 WCF 服務會讓它繼承自<xref:System.ServiceProcess.ServiceBase>類別，以及從 WCF 服務合約介面。 <xref:System.ServiceModel.ServiceHost> 接著會透過覆寫的 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 方法來建立並開啟，並透過覆寫的 <xref:System.ServiceProcess.ServiceBase.OnStop> 方法加以關閉。 繼承自 <xref:System.Configuration.Install.Installer> 的安裝程式類別必須同時實作，以允許藉由 Installutil.exe 工具將程式安裝為 Windows 服務。 如需詳細資訊，請參閱[如何：將 WCF 服務裝載於 Managed 的 Windows 服務](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)。 受管理的 Windows 服務裝載選項所啟用的案例是，IIS 外部所裝載非訊息啟動的安全環境中的長時間執行 WCF 服務。 服務的存留期會改由作業系統來控制。 所有 Windows 版本都提供這個裝載選項。  
   
 #### <a name="internet-information-services-iis"></a>Internet Information Services (IIS)  
- IIS 裝載選項會與 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 整合並使用這些技術所提供的功能，例如處理序回收、閒置關機、處理序健康狀態監控，以及訊息啟動。 在 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 作業系統中，建議您採用這個解決方案來裝載必須具備高度可用性與高度擴充性的 Web 服務應用程式。 IIS 同時提供整合式管理功能，而這也是客戶希望從企業級伺服器產品中所得到的功能。 這個裝載選項要求必須正確設定 IIS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 如需有關如何設定 IIS 裝載的 WCF 服務，請參閱[How to:將 WCF 服務裝載於 IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。  
+ IIS 裝載選項與 ASP.NET 整合，並使用這些技術提供，例如處理序回收、 閒置關機、 處理序健康狀態監控，以及訊息型啟用的功能。 在 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 作業系統中，建議您採用這個解決方案來裝載必須具備高度可用性與高度擴充性的 Web 服務應用程式。 IIS 同時提供整合式管理功能，而這也是客戶希望從企業級伺服器產品中所得到的功能。 這個裝載選項要求必須正確設定 IIS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 如需有關如何設定 IIS 裝載的 WCF 服務，請參閱[How to:將 WCF 服務裝載於 IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。  
   
  請注意，IIS 裝載的服務只能使用 HTTP 傳輸。 它在 IIS 5.1 版的實作方式已經為 [!INCLUDE[wxp](../../../includes/wxp-md.md)]帶來一些限制。 在上提供 WCF 服務的 IIS 5.1 訊息式啟動[!INCLUDE[wxp](../../../includes/wxp-md.md)]封鎖其他所有自我裝載的 WCF 服務使用連接埠 80 來通訊的相同電腦上。 WCF 服務可以執行相同的 AppDomain/應用程式集區/背景工作處理序時由其他應用程式中[!INCLUDE[iis601](../../../includes/iis601-md.md)]上[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]。 但是因為 WCF 及[!INCLUDE[iis601](../../../includes/iis601-md.md)]兩者都使用核心模式 HTTP 堆疊 (HTTP.sys)，[!INCLUDE[iis601](../../../includes/iis601-md.md)]可以與其他不同於 IIS 5.1 的同一部電腦上執行的自我裝載 WCF 服務共用連接埠 80。  
   
@@ -45,9 +45,9 @@ ms.locfileid: "62051152"
 |-------------------------|----------------------|----------------------------------|  
 |Managed 應用程式 (「自我裝載」)|在開發期間使用的主控台應用程式。<br />-豐富型 WinForm 和[!INCLUDE[avalon2](../../../includes/avalon2-md.md)]存取服務的用戶端應用程式。|富彈性。<br />簡單部署。<br />-不企業解決方案的服務。|  
 |Windows 服務 (之前稱為 NT 服務)|-長期執行的 WCF 服務 IIS 外部所裝載。|服務控制作業系統，在非訊息啟動的處理序存留期。<br />支援所有版本的 Windows。<br />安全的環境。|  
-|IIS 5.1、 [!INCLUDE[iis601](../../../includes/iis601-md.md)]|-執行 WCF 服務與並存[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]使用 HTTP 通訊協定在網際網路上的內容。|同處理序回收。<br />-閒置關機。<br />-處理序健全狀況監視。<br />-訊息型啟用。<br />-僅限 HTTP。|  
+|IIS 5.1、 [!INCLUDE[iis601](../../../includes/iis601-md.md)]|為 WCF 服務並排顯示與 ASP.NET 內容在網際網路上執行使用 HTTP 通訊協定。|同處理序回收。<br />-閒置關機。<br />-處理序健全狀況監視。<br />-訊息型啟用。<br />-僅限 HTTP。|  
 |Windows Process Activation Service (WAS)|-執行而不需要使用各種傳輸通訊協定在網際網路上安裝 IIS 的 WCF 服務。|不需要 IIS。<br />同處理序回收。<br />-閒置關機。<br />-處理序健全狀況監視。<br />-訊息型啟用。<br />-使用 HTTP、 TCP、 具名的管道和 MSMQ。|  
-|IIS 7.0|-執行 WCF 服務使用[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]內容。<br />-使用各種傳輸通訊協定在網際網路上執行的 WCF 服務。|-已優點。<br />-整合了[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]和 IIS 內容。|  
+|IIS 7.0|-使用 ASP.NET 內容中執行 WCF 服務。<br />-使用各種傳輸通訊協定在網際網路上執行的 WCF 服務。|-已優點。<br />使用 ASP.NET 和 IIS 內容整合。|  
   
  裝載環境的選擇取決於用來部署該環境的 Windows 版本、用來傳送訊息所需的傳輸，以及所需的處理序類型和應用程式定義域回收。 下表摘要說明與這些需求相關的資料。  
   

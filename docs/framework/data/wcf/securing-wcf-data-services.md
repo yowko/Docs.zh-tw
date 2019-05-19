@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: cf99979e2ea3a47247a5df4b6e0ececab6abe8ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4db6d7e13bfc4a0e2705c210820db511a60e09de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645521"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877358"
 ---
 # <a name="securing-wcf-data-services"></a>保護 WCF Data Services 的安全
 本主題描述專屬於開發、 部署和執行 WCF 資料服務和應用程式服務支援開放式資料通訊協定 (OData) 所存取的安全性考量。 您也應該遵循建立安全的.NET Framework 應用程式的建議。  
@@ -55,7 +55,7 @@ context.Credentials = _
  當資料服務需要無法使用 <xref:System.Net.NetworkCredential> 物件指定的登入認證 (例如宣告架構語彙基元或 Cookie) 時，您必須在 HTTP 要求中手動設定標頭，這通常是 `Authorization` 和 `Cookie` 標頭。 如需有關此種驗證案例的詳細資訊，請參閱部落格文章[OData 和驗證 – 第 3 篇 – 用戶端攔截](https://devblogs.microsoft.com/odata/odata-and-authentication-part-3-clientside-hooks/)。 如需如何設定 HTTP 標頭的要求訊息中的範例，請參閱[How to:設定用戶端要求中的標頭](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)。  
   
 ## <a name="impersonation"></a>模擬  
- 一般而言，資料服務會使用裝載資料服務之背景工作處理序的認證來存取所需的資源，例如伺服器或資料庫上的檔案。 使用模擬時，可以用提出要求之使用者的 Windows 識別身分 (使用者帳戶) 執行 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式。 模擬常用於依賴 IIS 驗證使用者，而且此原則的認證用來存取必要資源的應用程式。 如需詳細資訊，請參閱 < [ASP.NET 模擬](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100))。  
+ 一般而言，資料服務會使用裝載資料服務之背景工作處理序的認證來存取所需的資源，例如伺服器或資料庫上的檔案。 當使用模擬，ASP.NET 應用程式可以執行以進行要求之使用者的 Windows 身分識別 （使用者帳戶）。 模擬常用於依賴 IIS 驗證使用者，而且此原則的認證用來存取必要資源的應用程式。 如需詳細資訊，請參閱 < [ASP.NET 模擬](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100))。  
   
 ## <a name="configuring-data-service-authorization"></a>設定資料服務授權  
  授權是將應用程式資源的存取權授與根據先前成功驗證所識別的原則或過程。 一般的作法是，您應該只授與足夠的權限給資料服務的使用者來執行用戶端應用程式所需的作業。  

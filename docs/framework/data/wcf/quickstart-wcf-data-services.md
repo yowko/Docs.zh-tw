@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: f20ffcf356aa0493b1e2356746d9ad7b27d9a1aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49d11556d3703331b4cdf5bf83a69f6b15bca8ed
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876196"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881986"
 ---
 # <a name="quickstart-wcf-data-services"></a>快速入門 (WCF 資料服務)
 
@@ -34,7 +34,7 @@ ms.locfileid: "61876196"
 
  [建立資料服務](../../../../docs/framework/data/wcf/creating-the-data-service.md)
 
- 定義 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式、定義資料模型、建立資料服務，並且啟用資源存取。
+ 定義 ADO.NET 應用程式、定義資料模型、建立資料服務，並且啟用資源存取。
 
  [從網頁瀏覽器存取服務](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 

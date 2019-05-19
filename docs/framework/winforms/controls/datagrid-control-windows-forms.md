@@ -8,18 +8,18 @@ helpviewer_keywords:
 - displaying data [Windows Forms], on forms
 - data [Windows Forms], displaying on Windows Forms
 ms.assetid: 1d9d5683-43d2-42dd-b6c3-e43f4cf0de99
-ms.openlocfilehash: 5f8fcd21802c52d61d354c5ba85d665bd17237db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a69605901eef7366c7a9ff9930e5f4ec6cece23
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011381"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878765"
 ---
 # <a name="datagrid-control-windows-forms"></a>DataGrid 控制項 (Windows Form)
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> 控制項會取代 `DataGrid` 控制項並加入其他功能，不過您也可以選擇保留 `DataGrid` 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
- Windows Forms `DataGrid` 控制項提供 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 資料集的使用者介面，可顯示表格式資料並啟用資料來源的更新。  
+ Windows Form`DataGrid`控制項提供使用者介面，以 ADO.NET 資料集，顯示表格式資料，並啟用資料來源的更新。  
   
  將 `DataGrid` 控制項設定為有效資料來源時，會自動填入控制項，並根據資料的形狀來建立資料行和資料列。 `DataGrid` 控制項可以用來顯示單一資料表，或一組資料表之間的階層關聯性。  
   
@@ -34,10 +34,10 @@ ms.locfileid: "62011381"
  描述如何透過程式設計方式在 `DataGrid` 控制項中新增資料表和資料行。  
   
  [如何：將 Windows Forms DataGrid 控制項繫結至資料來源，使用設計工具](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)  
- 描述如何使用設計工具將 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 資料集繫結至 `DataGrid` 控制項。  
+ 描述如何將繫結至 ADO.NET 資料集`DataGrid`控制項使用設計工具。  
   
  [如何：將 Windows Forms DataGrid 控制項繫結至資料來源](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
- 描述如何將 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 資料集繫結至 `DataGrid` 控制項。  
+ 描述如何將繫結至 ADO.NET 資料集`DataGrid`控制項。  
   
  [如何：在 Windows Forms DataGrid 控制項中的執行階段變更顯示的資料](change-displayed-data-at-run-time-wf-datagrid-control.md)  
  描述如何透過程式設計方式在 `DataGrid` 控制項中變更資料。  
@@ -45,7 +45,7 @@ ms.locfileid: "62011381"
  [如何：使用設計工具在 Windows Form DataGrid 控制項建立主從式清單](create-master-details-lists-with-wf-datagrid-control-using-the-designer.md)  
  描述如何使用設計工具在兩個不同的 `DataGrid` 控制項中顯示兩個透過父子式關係繫結在一起的資料表。  
   
- HOW TO：使用 Windows Forms DataGrid 控制項建立主從式清單  
+ 作法：使用 Windows Forms DataGrid 控制項建立主從式清單  
  描述如何在兩個不同的 `DataGrid` 控制項中顯示兩個透過父子式關係繫結在一起的資料表。  
   
  [如何：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Windows Forms ListView 控制項中分組項目
+title: 作法：在 Windows Forms ListView 控制項中分組項目
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,23 +12,22 @@ helpviewer_keywords:
 - groups
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 610416a1-8da4-436c-af19-5f19e654769b
-ms.openlocfilehash: f616436671da449e4f7b47c0a5d0c1b576584a1a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbca1d76f747f53103095c916605ce7335207f51
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941387"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882363"
 ---
-# <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>HOW TO：在 Windows Forms ListView 控制項中分組項目
+# <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>作法：在 Windows Forms ListView 控制項中分組項目
 使用群組功能的<xref:System.Windows.Forms.ListView>控制項，您可以在群組中顯示相關的項目集。 這些群組是在螢幕上分隔包含群組標題的水平群組標頭。 您可以使用<xref:System.Windows.Forms.ListView>群組，使導覽更容易的大型清單依字母順序，分組項目，依日期，或任何其他的邏輯群組。 下圖顯示一些分組的項目。  
   
- ![ListView 群組](./media/listviewgroups.gif "ListViewGroups")  
-ListView 群組項目  
-  
+ ![奇數和偶數 ListView 群組螢幕擷取畫面。](./media/how-to-group-items-in-a-windows-forms-listview-control-using-the-designer/odd-even-list-view-groups.gif)  
+   
  若要啟用群組，您必須先建立一個或多個群組，在設計工具或以程式設計的方式。 在定義的群組之後，您可以指派<xref:System.Windows.Forms.ListView>給群組的項目。 您也可以移動項目從一個群組到另一個以程式設計的方式。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ListView> 群組是僅適用於[!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)]當您的應用程式呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>方法。 在舊版的作業系統，與群組相關的任何程式碼沒有任何作用，並不會出現群組。 如需詳細資訊，請參閱<xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>。  
+>  <xref:System.Windows.Forms.ListView> 群組是僅適用於[!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)]當您的應用程式呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>方法。 在舊版的作業系統，與群組相關的任何程式碼沒有任何作用，並不會出現群組。 如需詳細資訊，請參閱 <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>。  
   
 ### <a name="to-add-groups"></a>若要加入群組  
   

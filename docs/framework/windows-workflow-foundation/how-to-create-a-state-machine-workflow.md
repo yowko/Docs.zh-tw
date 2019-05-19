@@ -1,18 +1,18 @@
 ---
-title: HOW TO：建立狀態機器工作流程
+title: 作法：建立狀態機器工作流程
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 654621ab7dd74c26a7fddbd985559a713c0e9df3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84d2355a78c7d33bf712baf158f28861e59e75d1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773512"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881950"
 ---
-# <a name="how-to-create-a-state-machine-workflow"></a>HOW TO：建立狀態機器工作流程
+# <a name="how-to-create-a-state-machine-workflow"></a>作法：建立狀態機器工作流程
 工作流程可以從內建活動建構，也可以從自訂活動建構。 本主題將逐步解說如何建立這類使用內建活動的工作流程<xref:System.Activities.Statements.StateMachine>活動，並從先前的自訂活動[How to:建立活動](how-to-create-an-activity.md)主題。 此工作流程會以數字猜測遊戲為模型。  
   
 > [!NOTE]
@@ -179,7 +179,7 @@ ms.locfileid: "61773512"
   
      下列範例示範完成的工作流程。  
   
-     ![已完成狀態機器工作流程](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+     ![顯示已完成的狀態機器工作流程的圖例。](./media/how-to-create-a-state-machine-workflow/complete-state-machine-workflow.jpg)  
   
 ### <a name="to-build-the-workflow"></a>若要建置工作流程  
   

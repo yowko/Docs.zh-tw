@@ -1,18 +1,18 @@
 ---
-title: HOW TO：使用 ASP.NET 角色提供者搭配服務
+title: 作法：使用 ASP.NET 角色提供者搭配服務
 ms.date: 03/30/2017
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-ms.openlocfilehash: 8f3fadc60645ef81d2683c63fda0ddd5bf24c982
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f989252c7dd9b2ccdce8331e7cdd987042230ded
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047239"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880237"
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>HOW TO：使用 ASP.NET 角色提供者搭配服務
-[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供者 (以及 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成員資格提供者) 這項功能可讓 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 開發人員建立網站，以允許使用者在網站中建立帳戶，並允許對使用者指派角色做為授權用途。 任何使用者都可以使用這個功能在網站上建立帳戶，並登入以擁有網站與其服務的獨佔存取權。 這與 Windows 安全性形成對比，因為 Windows 安全性需要使用者有 Windows 網域的帳戶。 相反的，任何使用者只要提供認證 (使用者名稱/密碼組合) 就可以使用該網站與其服務。  
+ASP.NET 角色提供者 （在 ASP.NET 成員資格提供者搭配） 是一項功能，可讓 ASP.NET 開發人員建立允許使用者建立具有站台的帳戶，並指派角色做為授權用途的網站。 任何使用者都可以使用這個功能在網站上建立帳戶，並登入以擁有網站與其服務的獨佔存取權。 這與 Windows 安全性形成對比，因為 Windows 安全性需要使用者有 Windows 網域的帳戶。 相反的，任何使用者只要提供認證 (使用者名稱/密碼組合) 就可以使用該網站與其服務。  
   
- 範例應用程式，請參閱[Membership and Role Provider](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)。 如需詳細資訊[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]成員資格提供者功能，請參閱[How to:使用 ASP.NET 成員資格提供者](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)。  
+ 範例應用程式，請參閱[Membership and Role Provider](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)。 如需詳細的 ASP.NET 成員資格提供者功能的詳細資訊，請參閱[How to:使用 ASP.NET 成員資格提供者](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)。  
   
  角色提供者功能會使用 SQL Server 資料庫儲存使用者資訊。 Windows Communication Foundation (WCF) 開發人員可以利用這些功能，基於安全性考量。 當整合到 WCF 應用程式，使用者必須提供 WCF 用戶端應用程式的使用者名稱/密碼組合。 若要啟用 WCF 使用的資料庫，您必須建立的執行個體<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>類別中，將其<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A>屬性設<xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>，並將執行個體新增至行為集合<xref:System.ServiceModel.ServiceHost>裝載服務。  
   

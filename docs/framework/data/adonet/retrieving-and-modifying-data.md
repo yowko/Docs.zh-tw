@@ -2,12 +2,12 @@
 title: 在 ADO.NET 中傳送和修改資料
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5ac8fbd2a53d2670471c1ef5e59508f582ed944
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033913"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881439"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>在 ADO.NET 中傳送和修改資料
 任何資料庫應用程式都有一個主要功能，那就是連接到資料來源並擷取其內含的資料。 ADO.NET 的.NET Framework 資料提供者做為應用程式和資料來源之間的橋樑可讓您執行命令也使用擷取資料**DataReader**或是**DataAdapter**. 任何資料庫應用程式都有一個主要功能，那就是更新資料庫中儲存的資料。 在 ADO.NET 中，更新資料牽涉到使用**DataAdapter**並<xref:System.Data.DataSet>，以及**命令**物件; 並且也可能需要使用交易。  
@@ -53,7 +53,7 @@ ms.locfileid: "62033913"
  說明適用於 `SqlClient` 和 `OracleClient` 的效能計數器。  
   
  [非同步程式設計](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
- 描述 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 支援非同步程式設計。  
+ 說明 ADO.NET 進行非同步程式設計的支援。  
   
  [SqlClient 資料流支援](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
  討論如何撰寫的應用程式的資料流資料從 SQL Server 而不需要它完全載入記憶體中。  

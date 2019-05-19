@@ -6,21 +6,21 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: 8011b026e857dd6e5815ef7da00c1c33db8b5b4d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61324bbc5ea07dd19e23589bfc90f9ea44a6b331
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038710"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880191"
 ---
-# <a name="how-to-use-the-aspnet-membership-provider"></a>HOW TO：使用 ASP.NET 成員資格提供者
-[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成員資格提供者是能夠讓 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 程式開發人員建立網站的功能，而網站可以讓使用者建立專屬的使用者名稱和密碼組合。 任何使用者都可以使用這個功能在網站上建立帳戶，並登入以擁有網站與其服務的獨佔存取權。 這與 Windows 安全性形成對比，因為 Windows 安全性需要使用者有 Windows 網域的帳戶。 相反的，任何使用者只要提供認證 (使用者名稱/密碼組合) 都可以使用該網站與其服務。  
+# <a name="how-to-use-the-aspnet-membership-provider"></a>作法：使用 ASP.NET 成員資格提供者
+ASP.NET 成員資格提供者是一項功能，可讓 ASP.NET 開發人員建立網站，可讓使用者建立唯一的使用者名稱和密碼的組合。 任何使用者都可以使用這個功能在網站上建立帳戶，並登入以擁有網站與其服務的獨佔存取權。 這與 Windows 安全性形成對比，因為 Windows 安全性需要使用者有 Windows 網域的帳戶。 相反的，任何使用者只要提供認證 (使用者名稱/密碼組合) 都可以使用該網站與其服務。  
   
- 範例應用程式，請參閱[Membership and Role Provider](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)。 如需有關使用資訊[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]角色提供者功能，請參閱[How to:使用 ASP.NET 角色提供者搭配服務](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)。  
+ 範例應用程式，請參閱[Membership and Role Provider](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)。 使用 ASP.NET 角色提供者功能的相關資訊，請參閱[How to:使用 ASP.NET 角色提供者搭配服務](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)。  
   
  成員資格功能需要使用 SQL Server 資料庫儲存使用者資訊。 這個功能也包含對忘記密碼的任何使用者提示問題的方法。  
   
- Windows Communication Foundation (WCF) 開發人員可以利用這些功能，基於安全性考量。 當整合至 WCF 應用程式，使用者必須提供 WCF 用戶端應用程式的使用者名稱/密碼組合。 若要將資料傳送至 WCF 服務，使用 支援的使用者名稱/密碼認證，例如繫結<xref:System.ServiceModel.WSHttpBinding>(在組態中， [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) 和用戶端認證類型設為`UserName`. WCF 安全性會驗證使用者為基礎的使用者名稱和密碼，並且也會指派所指定的角色在服務上，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]角色。  
+ Windows Communication Foundation (WCF) 開發人員可以利用這些功能，基於安全性考量。 當整合至 WCF 應用程式，使用者必須提供 WCF 用戶端應用程式的使用者名稱/密碼組合。 若要將資料傳送至 WCF 服務，使用 支援的使用者名稱/密碼認證，例如繫結<xref:System.ServiceModel.WSHttpBinding>(在組態中， [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) 和用戶端認證類型設為`UserName`. 在服務上，WCF 安全性會驗證使用者的使用者名稱和密碼為基礎，並也會將 ASP.NET 角色所指定的角色指派。  
   
 > [!NOTE]
 >  WCF 不提供方法來填入資料庫的使用者名稱/密碼組合或其他使用者資訊。  
@@ -98,7 +98,7 @@ ms.locfileid: "62038710"
 6. 將 `userNamePasswordValidationMode` 屬性設定為 `MembershipProvider`。  
   
     > [!IMPORTANT]
-    >  如果`userNamePasswordValidationMode`未設定值時，WCF 會使用 Windows 驗證，而不是[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]成員資格提供者。  
+    >  如果`userNamePasswordValidationMode`未設定值，WCF 會使用 Windows 驗證，而不是 ASP.NET 成員資格提供者。  
   
 7. 將 `membershipProviderName` 屬性設定為提供者的名稱 (在此主題的第一個程序中新增提供者時已指定)。 下列範例顯示目前的 `<serviceCredentials>` 片段。  
   

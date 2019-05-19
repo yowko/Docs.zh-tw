@@ -2,12 +2,12 @@
 title: ADO.NET 概觀
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a47a2734e68b4c00aab077191d5257386cd6602
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607358"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877215"
 ---
 # <a name="adonet-overview"></a>ADO.NET 概觀
 ADO.NET 可讓您以一致的方式存取資料來源 (例如 SQL Server 與 XML)，以及透過 OLE DB 和 ODBC 所公開的資料來源。 資料共用的消費者應用程式可使用 ADO.NET 來連接至這些資料來源，並且擷取、處理及更新其中所含的資料。  
@@ -46,7 +46,7 @@ ADO.NET 可讓您以一致的方式存取資料來源 (例如 SQL Server 與 XML
   
 ## <a name="related-sections"></a>相關章節  
  [ADO.NET 的新功能](../../../../docs/framework/data/adonet/whats-new.md)  
- 簡介 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 的新功能。  
+ 簡介 ADO.NET 的新功能。  
   
  [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  說明使用 ADO.NET 的安全程式碼撰寫實施方針。  

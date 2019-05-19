@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在執行階段變更 Windows Forms DataGrid 控制項顯示的資料
+title: 作法：在執行階段變更 Windows Forms DataGrid 控制項顯示的資料
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 60ba1e9304320346d505f3f73e1ba93ff6edab63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3217680a2bab43124b75529bead97ffcfbb06aea
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961651"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882129"
 ---
-# <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>HOW TO：在執行階段變更 Windows Forms DataGrid 控制項顯示的資料
+# <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>作法：在執行階段變更 Windows Forms DataGrid 控制項顯示的資料
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
@@ -64,13 +64,13 @@ ms.locfileid: "61961651"
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-     在執行的階段，您可以使用<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法來繫結<xref:System.Windows.Forms.DataGrid>不同的資料來源的控制項。 例如，您可能會有數個[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]資料控制項，每個都連接到不同的資料庫。  
+     在執行的階段，您可以使用<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法來繫結<xref:System.Windows.Forms.DataGrid>不同的資料來源的控制項。 例如，您可能有多個 ADO.NET 資料控制項，每個都連接到不同的資料庫。  
   
 ### <a name="to-change-the-datasource-programmatically"></a>若要以程式設計方式變更資料來源  
   
 1. 設定<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法的資料來源和您想要繫結至資料表的名稱。  
   
-     下列範例示範如何變更的日期來源 using<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法，以[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]連線至 Pubs 資料庫中 Authors 資料表的資料控制項 (adoPubsAuthors)。  
+     下列範例示範如何變更日期來源使用<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>至 ADO.NET 資料控制項 (adoPubsAuthors) 連接至 Pubs 資料庫中 Authors 資料表的方法。  
   
     ```vb  
     Private Sub ResetSource()  

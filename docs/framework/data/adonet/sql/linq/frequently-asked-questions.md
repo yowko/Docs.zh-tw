@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 4a41eac3d5b51936ebbae8d9e3dcf623da676bce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 05ba633415f782d5edea7028c1b82b8031428576
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583519"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878236"
 ---
 # <a name="frequently-asked-questions"></a>常見問題集
 下列各節將解答實作 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 時可能會遇到的一些常見問題。  
@@ -185,7 +185,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  答： 請不要嘗試重複使用 <xref:System.Data.Linq.DataContext> 的執行個體。 每個 <xref:System.Data.Linq.DataContext> 都會維持某一個特定編輯/查詢工作階段的狀態 (包括識別快取)。 若要取得以資料庫目前狀態為基礎的新執行個體，請使用新的 <xref:System.Data.Linq.DataContext>。  
   
- 您仍可以使用基礎 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 連接共用。 如需詳細資訊，請參閱 [SQL Server 連共用ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
+ 您仍然可以使用基礎 ADO.NET 連接共用。 如需詳細資訊，請參閱 [SQL Server 連共用ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
   
 ## <a name="second-datacontext-is-not-updated"></a>第二個 DataContext 未更新  
  問： 我使用一個 <xref:System.Data.Linq.DataContext> 執行個體來儲存資料庫中的值。 但是，相同資料庫上的第二個 <xref:System.Data.Linq.DataContext> 卻未反映更新的值。 第二個 <xref:System.Data.Linq.DataContext> 執行個體似乎傳回快取的值。  

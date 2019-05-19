@@ -2,20 +2,20 @@
 title: ADO.NET 中的並存執行
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 377af3c72b0a9a8eb26c8713d98f114803f08356
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d20d8e81d76284509d6fe733e4f283a9ab39cb00
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583615"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877099"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET 中的並存執行
 並排顯示執行.NET Framework 中的是有多個版本的.NET Framework 安裝，以獨佔方式使用的已編譯的應用程式版本的電腦上執行應用程式的能力。 如需設定並排顯示執行的詳細資訊，請參閱[並排顯示執行](../../../../docs/framework/deployment/side-by-side-execution.md)。  
   
- 藉由使用一種.NET Framework 版本所編譯的應用程式可以執行不同版本的.NET framework。 不過，我們建議您編譯的.NET Framework 中，每個已安裝版本的應用程式的版本，然後再個別執行。 不論是上述哪一種狀況，您都應該了解 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 各版本間的差異，因為它會影響應用程式的向前相容性或回溯相容性 (Backward Compatibility)。  
+ 藉由使用一種.NET Framework 版本所編譯的應用程式可以執行不同版本的.NET framework。 不過，我們建議您編譯的.NET Framework 中，每個已安裝版本的應用程式的版本，然後再個別執行。 在任一情況下，您應該注意在 ADO.NET 中可能會影響往後相容性或您的應用程式的回溯相容性的版本之間的變更。  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>向前相容性和回溯相容性  
- 正向相容性是指應用程式可以使用舊版.NET Framework 中，進行編譯，但仍會在更新的.NET framework 版本上順利執行。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 針對.NET Framework 1.1 版所撰寫的程式碼是向前相容於更新版本。  
+ 正向相容性是指應用程式可以使用舊版.NET Framework 中，進行編譯，但仍會在更新的.NET framework 版本上順利執行。 針對.NET Framework 1.1 版所撰寫 ADO.NET 程式碼是向前相容於更新版本。  
   
  回溯相容性表示應用程式針對較新版的.NET Framework 中，編譯，但仍會繼續執行舊版的.NET Framework 不會遺失任何的功能。 當然，這不是所引進的新版本的.NET framework 功能的情況。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "65583615"
   
  不過，從.NET Framework 2.0 版開始，所有.NET Framework 資料提供者可以用於部分信任的區域。 此外，新的安全性功能已加入.NET Framework 1.1 版中的.NET Framework 資料提供者。 這個功能可讓您限制能在特定安全性區域中使用的連接字串。 您也可以在特定安全性地區內停用空白密碼。 如需詳細資訊，請參閱 [Code Access Security and ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)。  
   
- 每個安裝的.NET framework 有個別的 Security.config 檔，因為有安全性設定沒有相容性問題。 不過，如果您的應用程式取決於額外的安全性功能的[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]包含.NET Framework 1.1 和更新版本中，您將無法將它散發給 1.0 版的系統。  
+ 每個安裝的.NET framework 有個別的 Security.config 檔，因為有安全性設定沒有相容性問題。 不過，如果您的應用程式相依於 ADO.NET 包含在.NET Framework 1.1 版或更新版本的其他安全性功能，您將無法將它散發給 1.0 版的系統。  
   
 ## <a name="sqlcommand-execution"></a>SqlCommand 之執行  
  從.NET Framework 1.1 版的方式開始，<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>執行命令，在資料來源已變更。  

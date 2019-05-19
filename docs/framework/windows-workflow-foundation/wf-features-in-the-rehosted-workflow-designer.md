@@ -2,12 +2,12 @@
 title: 針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8807506866ef0f5d73065958f1102460ebcc5e9f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669754"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876448"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援
 Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]導入許多新功能，包括工作流程設計工具經驗的數個增強功能。 本主題詳細介紹重新裝載的設計工具支援其中哪些功能，以及目前不支援的功能。
@@ -37,25 +37,25 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
 
  下列螢幕擷取畫面顯示變數和引數設計工具內容功能表。
 
- ![變數和引數設計工具操作功能表](./media/designercontextmenu.png "DesignerContextMenu")
+ ![變數和引數設計工具操作功能表](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>使用 Sequence 進行 Auto-surround
  由於工作流程或特定容器活動 (如 <xref:System.Activities.Statements.NoPersistScope>) 只能包含單一主體活動，因此開發人員必須先刪除第一個活動、加入 <xref:System.Activities.Statements.Sequence> 活動，然後將這兩個活動同時加入序列活動中，才能加入第二個活動。 從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，將第二個活動加入到設計工具介面時，會自動建立一個 `Sequence` 活動，以同時包含這兩個活動。 重新裝載的設計工具支援此功能。
 
  下列螢幕擷取畫面顯示 `WriteLine` 活動，此活動位在 `Body` 的 `NoPersistScope` 中。
 
- ![自動&#45;括住置放位置](./media/autosurround1.png "AutoSurround1")
+ ![Nopersistscope 的本文中的 WriteLine 活動。](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-write-line-activity.png)
 
  當第二個 `Sequence` 降到第一個之下時，下列螢幕擷取畫面會顯示在 `Body` 中自動建立的 `WriteLine` 活動。
 
- ![自動建立的序列活動](./media/autosurround2.png "AutoSurround2")
+ ![NoPersistScope 的本文中包含自動建立的順序。](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-sequence-activity.png)
 
 ### <a name="pan-mode"></a>移動瀏覽模式
  若要更輕鬆地在設計工具中巡覽大型工作流程，可以啟用移動瀏覽模式，讓開發人員能夠透過按一下與拖曳方式來移動工作流程的可見部分，而不需使用捲軸。 啟用移動瀏覽模式的按鈕位於設計工具的右下角。 重新裝載的設計工具支援此功能。
 
  下列螢幕擷取畫面顯示位於工作流程設計工具右下角的移動瀏覽按鈕。
 
- ![在工作流程設計工具中的移動瀏覽按鈕](./media/panbutton.png "PanButton")
+ ![工作流程設計工具中反白顯示 [移動瀏覽] 按鈕。](./media/wf-features-in-the-rehosted-workflow-designer/pan-button-workflow-designer.png)
 
  您也可以使用滑鼠中鍵或空白鍵移動瀏覽工作流程設計工具。
 
@@ -69,7 +69,7 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
 
  從完成的工作流程中的下列螢幕擷取畫面[入門教學課程](getting-started-tutorial.md)顯示循序工作流程的大綱檢視。
 
- ![大綱檢視中工作流程設計工具](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+ ![在 Visual Studio 中的循序工作流程大綱檢視的螢幕擷取畫面](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>更多殼層列及標頭項目的可見度控制功能
  在重新裝載的設計工具中，部分標準 UI 控制項可能對特定工作流程沒有意義，而且可能是關閉狀態。 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，只有設計工具最下方的殼層列支援這項自訂功能。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，可以透過設定 <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> 與適當的 <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> 值，來調整是否顯示設計工具最上方的殼層標頭項目。
@@ -79,18 +79,18 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
 
  下列螢幕擷取畫面顯示從工具箱拖曳活動時顯示的附加點。
 
- ![顯示自動連接點的流程圖開始節點](./media/autoconnect1.png "Autoconnect1")
+ ![流程圖開始節點顯示自動連接點](./media/wf-features-in-the-rehosted-workflow-designer/auto-connect-points-start-node.png)
 
  您也可以將活動拖曳到流程圖節點和狀態之間的連接，以在其他兩個節點之間自動插入該節點。 下列螢幕擷取畫面顯示反白顯示的連接線，在此可以從工具箱中拖曳及放置活動。
 
- ![自動&#45;卸除活動的控制代碼插入](./media/autoinsert.png "Autoinsert")
+ ![用於置放活動的自動插入控點](./media/wf-features-in-the-rehosted-workflow-designer/auto-insert-connecting-line.png)
 
  重新裝載的設計工具支援自動連接和自動插入。
 
 ### <a name="designer-annotations"></a>設計工具標註
  為方便開發大型工作流程，設計工具現已支援加入標註，以追蹤設計流程。 您可以在活動、狀態、流程圖節點、變數和引數中加入標註。 下列螢幕擷取畫面顯示用來將標註加入設計工具的操作功能表。
 
- ![註解 內容功能表](./media/annotationdialog.png "annotationdialog")
+ ![如果螢幕擷取畫面顯示的功能表新增標記法。](./media/wf-features-in-the-rehosted-workflow-designer/designer-annotations-context-menu.png)
 
  重新裝載的設計工具支援設計工具標註。
 
@@ -134,7 +134,7 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
   
  下列螢幕擷取畫面會顯示已完成的狀態機器工作流程，從[入門教學課程](getting-started-tutorial.md)步驟[How to:建立狀態機器工作流程](how-to-create-a-state-machine-workflow.md)。  
   
- ![已完成狀態機器工作流程](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![顯示已完成的狀態機器工作流程的圖例。](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)  
   
  如需有關如何建立狀態機器工作流程的詳細資訊，請參閱 <<c0> [ 狀態機器工作流程](state-machine-workflows.md)。 重新裝載的設計工具支援狀態機器工作流程。  
   

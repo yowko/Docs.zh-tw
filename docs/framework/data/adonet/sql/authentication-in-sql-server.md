@@ -2,12 +2,12 @@
 title: 在 SQL Server 中進行驗證
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 33a4a9e7e9d6d8c5324c0e108ec3705582efc866
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 94de49fe89f2b7f4aabaade624e960202f9973bf
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649581"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877453"
 ---
 # <a name="authentication-in-sql-server"></a>在 SQL Server 中進行驗證
 SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。  
@@ -43,7 +43,7 @@ SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。
   
 - 使用者是自不同的非受信任網域進行連接。  
   
-- 網際網路應用程式，例如 [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]。  
+- 網際網路應用程式，例如 ASP.NET。  
   
 > [!NOTE]
 >  指定 Windows 驗證並不會停用 SQL Server 登入。 使用 ALTER LOGIN DISABLE[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]陳述式停用高特殊權限的 SQL Server 登入。  

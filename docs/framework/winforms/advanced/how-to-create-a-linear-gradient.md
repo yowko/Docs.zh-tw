@@ -10,14 +10,14 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: 953a1944073a8cb5b19ef072e2a523baec3a5605
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e55d27b454579268658192ae56daa52e0b28bb83
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650011"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876048"
 ---
-# <a name="how-to-create-a-linear-gradient"></a>HOW TO：建立線形漸層
+# <a name="how-to-create-a-linear-gradient"></a>作法：建立線形漸層
 GDI + 提供水平、 垂直和對角線形漸層。 根據預設，線性漸層色彩一致變更。 不過，您可以自訂的線性漸層，以便的色彩會變更以非統一的方式。  
 
 > [!NOTE]
@@ -31,9 +31,9 @@ GDI + 提供水平、 垂直和對角線形漸層。 根據預設，線性漸層
   
  下圖顯示線條、 橢圓形和矩形。 請注意，之色彩漸層會自行重複增加超過 200 時的水平座標。  
   
- ![線性漸層](./media/cslineargradient1.png "cslineargradient1")  
+ ![線條、 橢圓形和矩形填滿漸層色彩。](./media/how-to-create-a-linear-gradient/gradient-line-ellipse-rectangle.png)  
   
-### <a name="to-use-horizontal-linear-gradients"></a>若要使用水平的線性漸層  
+## <a name="to-use-horizontal-linear-gradients"></a>若要使用水平的線性漸層  
   
 - 傳入的不透明的紅色及不透明藍色分別做為第三個和第四個引數。  
   
@@ -56,9 +56,9 @@ GDI + 提供水平、 垂直和對角線形漸層。 根據預設，線性漸層
   
  下圖顯示產生的橢圓形和矩形。  
   
- ![線性漸層](./media/cslineargradient2.png "cslineargradient2")  
+ ![橢圓形和矩形填滿水平的色彩漸層。](./media/how-to-create-a-linear-gradient/gradient-ellipse-rectangle.png)  
 
-### <a name="to-customize-linear-gradients"></a>若要自訂線性漸層  
+## <a name="to-customize-linear-gradients"></a>若要自訂線性漸層  
   
 - 傳入的不透明黑色及不透明的紅色分別做為第三個和第四個引數。  
   
@@ -71,9 +71,9 @@ GDI + 提供水平、 垂直和對角線形漸層。 根據預設，線性漸層
   
  下圖顯示的一行，並省略符號。 請注意，在 ellipse 變更色彩逐漸沿著任何移動線是兩點的直線通過 （0，0） 和 （200，100）。  
   
- ![線性漸層](./media/cslineargradient3.png "cslineargradient3")  
+ ![線條和橢圓形以對角線的色彩漸層填滿。](./media/how-to-create-a-linear-gradient/gradient-line-ellipse.png)  
   
-### <a name="to-create-diagonal-linear-gradients"></a>若要建立對角線的線性漸層  
+## <a name="to-create-diagonal-linear-gradients"></a>若要建立對角線的線性漸層  
   
 - 傳入的不透明的藍色及不透明綠色分別做為第三個和第四個引數。  
   
