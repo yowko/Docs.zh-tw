@@ -11,5 +11,3 @@
       href: support-for-windows-store-apps-and-windows-runtime.md
     - name: 傳遞 URI 給 Windows 執行階段
       href: passing-a-uri-to-the-windows-runtime.md
-    - name: WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) 方法
-      href: windowsruntimestreamextensions-asrandomaccessstream-method.md

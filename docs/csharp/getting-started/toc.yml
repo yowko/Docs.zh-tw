@@ -1,5 +1,6 @@
 - name: 快速入門
-  href: index.md
   items:
+    - name: 如何使用本指南
+      href: index.md
     - name: 'C# 語言和 .NET Framework 簡介'
       href: introduction-to-the-csharp-language-and-the-net-framework.md
