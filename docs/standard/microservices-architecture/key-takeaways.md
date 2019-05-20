@@ -1,15 +1,13 @@
 ---
 title: 金鑰附帶
 description: 取得適用於容器化 .NET 應用程式指南/電子書的 .NET 微服務架構重點摘要，以快速了解使用微服務架構時的概要問題，例如優點和缺點、設計與開發的 DDD 模式，以及復原性、安全性和使用協調器。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 90babf9a32d1e139216cbc8eb1c629401b8e83e3
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 3b8b7be9b3903c64221cba7c6abdb1e38f5d944f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362115"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639694"
 ---
 # <a name="key-takeaways"></a>重點摘要
 
@@ -35,7 +33,7 @@ ms.locfileid: "54362115"
 
 **安全性。** 現代化的容器和微服務世界會暴露新的弱點。 有多種方式可以實作以驗證和授權為基礎的基本應用程式安全性。 不過，容器安全性必須考量能讓應用程式更安全的其他重要元件。 建置更安全應用程式的關鍵元素，是擁有與其他應用程式和系統通訊的安全方式，這通常需要認證、權杖、密碼等等，通常稱為應用程式祕密。 任何安全的解決方案都必須遵循安全性最佳做法 (例如在傳輸和待用時加密祕密)，並預防最終應用程式使用祕密時洩漏祕密。 那些祕密必須儲存並安全地保護，就和使用 Azure Key Vault 時一樣。
 
-**協調器。** 容器式協調器 (例如 Azure Kubernetes Service 和 Azure Service Fabric) 是任何微服務和容器式應用程式的重要組件。 這些應用程式帶有高複雜性、延展性需求，並經歷不斷的演變。 此指南已在微服務及容器解決方案中推出協調器及其角色。 如果您的應用程式需求將您推向複雜的容器化應用程式，您會發現它對找出其他資源以深入了解協調器十分有幫助。
+**協調器。** 容器式協調器 (例如 Azure Kubernetes Service 和 Azure Service Fabric) 是任何微服務和容器式應用程式的重要組件。 這些應用程式帶有高複雜性、延展性需求，並經歷不斷的演變。 本指南已在微服務及容器解決方案中推出協調器及其角色。 如果您的應用程式需求將您推向複雜的容器化應用程式，您會發現它對找出其他資源以深入了解協調器十分有幫助。
 
 >[!div class="step-by-step"]
 >[上一步](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)

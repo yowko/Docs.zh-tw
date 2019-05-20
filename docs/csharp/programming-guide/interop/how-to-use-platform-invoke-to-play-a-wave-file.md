@@ -8,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 29c36bd0494879b66674cf3a3c404fdaf3908f59
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 2d7f50952a485c09e74462f3ad731d710b8f9198
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59323807"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584256"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>作法：使用平台叫用播放 WAV 檔 (C# 程式設計指南)
 下列 C# 程式碼範例說明如何在 Windows 作業系統上使用平台叫用服務來播放 .wav 音效檔。  
@@ -29,8 +29,6 @@ ms.locfileid: "59323807"
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
-### <a name="to-compile-the-code"></a>編譯程式碼  
-  
 1. 在 Visual Studio 中建立新的 C# Windows 應用程式專案，並將它命名為 **WinSound**。  
   
 2. 複製上述程式碼，並將它貼至 `Form1.cs` 檔案的內容上。  
@@ -41,12 +39,9 @@ ms.locfileid: "59323807"
   
 4. 編譯並執行程式碼。  
   
-## <a name="net-framework-security"></a>.NET Framework 安全性  
- 如需詳細資訊，請參閱 [.NET 的安全性](../../../standard/security/index.md)。  
-  
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [互通性概觀](../../../csharp/programming-guide/interop/interoperability-overview.md)
-- [進一步了解平台叫用](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
+- [詳述平台叫用](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [使用平台叫用封送處理資料](../../../framework/interop/marshaling-data-with-platform-invoke.md)

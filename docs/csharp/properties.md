@@ -2,12 +2,12 @@
 title: 屬性
 description: 了解 C# 屬性，其中包含驗證、計算值、延遲評估和屬性變更通知的功能。
 ms.date: 04/25/2018
-ms.openlocfilehash: d4fa7b6117bec63c41318dd4bcc3850ce55a5907
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: e8b6955da1f36673962339785b0bfb012343acf8
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956234"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878270"
 ---
 # <a name="properties"></a>屬性
 
@@ -140,7 +140,7 @@ public class Measurements
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-`?.` 運算子稱為「null 條件運算子」。 它會檢查是否有 null 參考，再評估運算子的右邊。 最後結果是，如果沒有 `PropertyChanged` 事件的訂閱者，則不會執行引發事件的程式碼。 在此情況下，它會擲回 `NullReferenceException` 而不進行這項檢查。 如需詳細資訊，請參閱 [`events`](delegates-events.md)。 此範例也會使用新的 `nameof` 運算子，從屬性名稱符號轉換成其文字表示。
+`?.` 運算子稱為「null 條件運算子」。 它會檢查是否有 null 參考，再評估運算子的右邊。 最後結果是，如果沒有 `PropertyChanged` 事件的訂閱者，則不會執行引發事件的程式碼。 在此情況下，它會擲回 `NullReferenceException` 而不進行這項檢查。 如需詳細資訊，請參閱 [`events`](events-overview.md)。 此範例也會使用新的 `nameof` 運算子，從屬性名稱符號轉換成其文字表示。
 使用 `nameof` 可減少鍵入錯誤屬性名稱時所發生的錯誤。
 
 同樣地，實作 <xref:System.ComponentModel.INotifyPropertyChanged> 是您可以在存取子中撰寫程式碼來支援所需案例的範例。

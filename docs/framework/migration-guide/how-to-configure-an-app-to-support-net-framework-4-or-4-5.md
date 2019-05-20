@@ -1,5 +1,5 @@
 ---
-title: HOW TO：設定應用程式以支援 .NET Framework 4 或更新版本
+title: 作法：設定應用程式以支援 .NET Framework 4 或更新版本
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring apps to support .NET Framework
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40c19dc21bb2262ca1f23573cb89f764e4cd2627
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 186297c050d81eca130b751c46303083ff025f22
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221319"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636115"
 ---
-# <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>HOW TO：設定應用程式以支援 .NET Framework 4 或更新版本
+# <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>作法：設定應用程式以支援 .NET Framework 4 或更新版本
 
 所有裝載通用語言執行平台 (CLR) 的應用程式都必須啟動或「啟用」CLR，才能執行 Managed 程式碼。 通常，.NET Framework 應用程式會在本身建置所在的 CLR 版本上執行，但是您可以使用應用程式組態檔 (有時稱為 app.config 檔案) 變更桌面應用程式的這個行為。 不過，您無法使用應用程式組態檔變更 Windows 市集應用程式或 Windows Phone 應用程式的預設啟用行為。 本文說明如何讓您的傳統型應用程式在另一個 .NET Framework 版本上執行，且提供如何鎖定 4 或更新版本作為目標。
 

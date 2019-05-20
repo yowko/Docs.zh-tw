@@ -1,5 +1,5 @@
 ---
-title: HOW TO：複製目錄
+title: 作法：複製目錄
 ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 57e2b61fb8fef37234dc10885752f92e5f9b1330
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a7fa901d887701e0fa41a0887b363adec07dba2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671066"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644652"
 ---
-# <a name="how-to-copy-directories"></a>HOW TO：複製目錄
+# <a name="how-to-copy-directories"></a>作法：複製目錄
 本主題示範如何使用 I/O 類別將某一個目錄的內容同步複製到另一個位置。 
 
 如需非同步檔案複製的範例，請參閱[非同步檔案 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)。 

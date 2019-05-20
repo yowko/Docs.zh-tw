@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
-ms.openlocfilehash: ed3e18c5981fa52dc2c6ef09bfb666cfa705fede
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5dba3759d8d0046f2a491e1d3408acb54bd0343d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239562"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633364"
 ---
 # <a name="partial-type-c-reference"></a>部分型別 (C# 參考)
 

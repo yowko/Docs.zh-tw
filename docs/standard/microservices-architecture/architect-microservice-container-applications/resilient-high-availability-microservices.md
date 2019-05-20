@@ -1,15 +1,13 @@
 ---
 title: 微服務中的復原和高可用性
 description: 微服務必須設計為能夠承受暫時性的網路和相依性失敗，他們必須能夠復原才能達到高可用性。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: a63b0c67e00ec91c5a91e1c6b84d1a38ab50e394
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bb1bef0c9cc08e43aed80a29effe89587fb296f6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672351"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639925"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>微服務中的復原和高可用性
 

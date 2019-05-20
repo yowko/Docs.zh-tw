@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ffb0686de5039573355e48446a4085fc44d2c75
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ddd075de6152d7f040d69682dde0361843971922
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356893"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631835"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (SOS 偵錯擴充功能)
 
@@ -73,7 +73,7 @@ SOS 偵錯延伸模組副檔名 (SOS.dll) 提供內部 Common Language Runtime (
 |**HistRoot** *\<root>*|顯示與指定之根的提升和重新配置都相關的資訊。<br /><br /> 根值可以透過記憶體回收，用來追蹤物件的移動。|
 |**IP2MD** \<*Code address*>|顯示在已進行 JIT 編譯之程式碼中之指定位址的 `MethodDesc` 結構。|
 |`ListNearObj` (`lno`) *<obj_address>*|顯示在指定的位址之前與之後的物件。 此命令會在記憶體回收堆積中，尋找看來像是 Managed 物件之有效開頭的位址 (根據有效方法資料表)，以及引數位址的後接物件。|
-|**MinidumpMode** [**0**] [**1**]|防止在使用小型傾印時執行不安全的命令。<br /><br /> 傳遞 **0** 便可停用此功能，而傳遞 **1** 便可啟用此功能。 根據預設，**MinidumpMode** 值會設定為 **0**。<br /><br /> 以 **.dump /m** 命令或 **.dump** 命令建立的小型傾印，都具有有限的 CLR 特定資料，並只允許您正確執行 SOS 命令的子集。 有些命令可能會因未預期的錯誤而失敗，原因是沒有對應或是只有部分對應到必要的記憶體區域。 這個選項可防止您對小型傾印執行不安全的命令。|
+|**MinidumpMode** [**0**] [**1**]|防止在使用小型傾印時執行不安全的命令。<br /><br /> 傳遞 **0** 便可停用這項功能，而傳遞 **1** 便可啟用這項功能。 根據預設，**MinidumpMode** 值會設定為 **0**。<br /><br /> 以 **.dump /m** 命令或 **.dump** 命令建立的小型傾印，都具有有限的 CLR 特定資料，並只允許您正確執行 SOS 命令的子集。 有些命令可能會因未預期的錯誤而失敗，原因是沒有對應或是只有部分對應到必要的記憶體區域。 這個選項可防止您對小型傾印執行不安全的命令。|
 |**Name2EE** \<*module name*> \<*type or method name*><br /><br /> -或-<br /><br /> **Name2EE** \<*module name*>**!**\<*type or method name*>|顯示所指定模組中之指定類型或方法的 `MethodTable` 結構和 `EEClass` 結構。<br /><br /> 指定的模組必須載入到處理序。<br /><br /> 若要取得適當的類型名稱，請使用 [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 瀏覽該模組。 您也可以將 `*` 當做模組名稱參數傳遞，以便搜尋所有已載入的 Managed 模組。 *module name* 參數也可以是模組的偵錯工具名稱，例如 `mscorlib` 或 `image00400000`。<br /><br /> 這個命令支援 <`module`>`!`<`type`> 的 Windows 偵錯工具語法。 這個類型必須具有完整名稱。|
 |**ObjSize** [\<*Object address*>] &#124; [**-aggregate**] [**-stat**]|顯示所指定物件的大小。 如果未指定任何參數，**ObjSize** 命令會顯示在 Managed 執行緒上找到之所有物件的大小，並會顯示處理序中的所有記憶體回收行程控制代碼，以及這些控制代碼所指向之任何物件的總大小。 **ObjSize** 命令會包括父代和其他所有子物件的大小。<br /><br /> **-aggregate** 選項可搭配使用 **-stat** 引數，以取得依然為根目錄之類型的詳細檢視。 藉由使用 **!dumpheap -stat** 和 **!objsize -aggregate -stat**，您可以判斷哪些物件不再是根目錄，以及診斷各種記憶體問題。|
 |**PrintException** [**-nested**] [**-lines**] [\<*Exception object address*>]<br /><br /> -或-<br /><br /> **PE** [**-nested**] [\<*Exception object address*>]|顯示並格式化在所指定位址且衍生自 <xref:System.Exception> 類別之任何物件的欄位。 如果您未指定位址，**PrintException** 命令便會顯示目前執行緒上最近一次擲回的例外狀況。<br /><br /> **-nested** 選項會顯示巢狀例外狀況物件的詳細資料。<br /><br /> **-lines** 選項會顯示來源資訊 (如果存在)。<br /><br /> 您可以使用這個命令來格式化和檢視 `_stackTrace` 欄位，此欄位屬於二進位陣列。|
@@ -88,7 +88,7 @@ SOS 偵錯延伸模組副檔名 (SOS.dll) 提供內部 Common Language Runtime (
 |**Threads** [**-live**] [**-special**]|顯示處理序中的所有 Managed 執行緒。<br /><br /> **Threads** 命令會顯示偵錯工具簡略識別碼、CLR 執行緒識別碼，以及作業系統執行緒識別碼。  此外，**Threads** 命令也會顯示 Domain 資料行、APT 資料行和 Exception 資料行，分別指出執行緒執行所在的應用程式定義域、COM Apartment 模式和執行緒中最近一次擲回的例外狀況。<br /><br /> **-live** 選項會顯示與運作中執行緒建立關聯的執行緒。<br /><br /> **-special** 選項會顯示由 CLR 建立的所有特殊執行緒。 特殊執行緒包括記憶體回收執行緒 (在並行和伺服器記憶體回收中)、偵錯工具 Helper 執行緒、完成項執行緒、<xref:System.AppDomain> 卸載執行緒，以及執行緒集區計時器執行緒。|
 |**ThreadState \<** *State value field* **>**|顯示執行緒的狀態。 `value` 參數為 **Threads** 報告輸出中 `State` 欄位的值。<br /><br /> 範例：<br /><br /> `0:003> !Threads     ThreadCount:      2     UnstartedThread:  0     BackgroundThread: 1     PendingThread:    0     DeadThread:       0     Hosted Runtime:   no                                           PreEmptive   GC Alloc           Lock            ID OSID ThreadOBJ    State     GC       Context       Domain   Count APT Exception        0    1  250 0019b068      a020 Disabled 02349668:02349fe8 0015def0     0 MTA        2    2  944 001a6020      b220 Enabled  00000000:00000000 0015def0     0 MTA (Finalizer)     0:003> !ThreadState b220         Legal to Join         Background         CLR Owns         CoInitialized         In Multi Threaded Apartment`|
 |**TraverseHeap** [**-xml**] \<*filename*>|使用 CLR 分析工具可了解的格式，將堆積資訊寫入至指定的檔案。 **-xml** 選項會使 **TraverseHeap** 命令將檔案的格式設定為 XML。<br /><br /> 您可以從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkID=67325)下載 CLR 分析工具。|
-|**U** [**-gcinfo**] [**-ehinfo**] [**-n**] \<*MethodDesc address*> &#124; \<*Code address*>|顯示由方法之 `MethodDesc` 結構指標，或是由方法主體內之程式碼位址所指定 Managed 方法的標註反組譯碼。 **U** 命令會顯示從開始到結束的整個方法，以及將中繼資料語彙基元轉換成名稱的註釋。<br /><br /> **-gcinfo** 選項會使 **U** 命令顯示方法的 `GCInfo` 結構。<br /><br /> **-ehinfo** 選項會顯示方法的例外狀況資訊。 您也可以使用 **EHInfo** 命令取得此資訊。<br /><br /> **-n** 選項會停用原始程式檔名稱和行號的顯示。 如果偵錯工具有指定 SYMOPT_LOAD_LINES 選項，SOS 就會查詢每個 Managed 框架的符號，而且如果成功，就會顯示對應的原始程式檔名稱和行號。 您可以指定 **-n** 選項以停用這種行為。|
+|**U** [**-gcinfo**] [**-ehinfo**] [**-n**] \<*MethodDesc address*> &#124; \<*Code address*>|顯示由方法之 `MethodDesc` 結構指標，或是由方法主體內之程式碼位址所指定 Managed 方法的標註反組譯碼。 **U** 命令會顯示從開始到結束的整個方法，以及將中繼資料語彙基元轉換成名稱的註釋。<br /><br /> **-gcinfo** 選項會使 **U** 命令顯示方法的 `GCInfo` 結構。<br /><br /> **-ehinfo** 選項會顯示方法的例外狀況資訊。 您也可以使用 **EHInfo** 命令取得這項資訊。<br /><br /> **-n** 選項會停用原始程式檔名稱和行號的顯示。 如果偵錯工具有指定 SYMOPT_LOAD_LINES 選項，SOS 就會查詢每個 Managed 框架的符號，而且如果成功，就會顯示對應的原始程式檔名稱和行號。 您可以指定 **-n** 選項以停用這種行為。|
 |**VerifyHeap**|檢查記憶體回收行程堆積是否有損毀徵兆，並顯示任何所發現的錯誤。<br /><br /> 堆積損毀的原因可能是平台叫用架構不正確的呼叫。|
 |**VerifyObj** \<*object address*>|檢查傳遞為引數的物件以找出損毀的症狀。|
 |**VMMap**|周遊虛擬位址空間，並顯示每個區域所套用的保護類型。|

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, reference types
 - types [C#], reference types
 ms.assetid: 801cf030-6e2d-4a0d-9daf-1431b0c31f47
-ms.openlocfilehash: ae7511c1bbe1b50e0070c41b25642e7b614c485d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4b3b1d5b27c3f6a88ce752243ab2d1389b168f0e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241349"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634065"
 ---
 # <a name="reference-types-c-reference"></a>參考類型 (C# 參考)
 

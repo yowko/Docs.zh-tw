@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '- operator [C#]'
 - subtraction operator (-) [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 8cf6e8871a88e2b37b9531ecbd616289523473c7
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 920981addd5c779c9ad1c666ef45e1de5cd23408
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333755"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633008"
 ---
 # <a name="--operator-c-reference"></a>- 運算子 (C# 參考)
 

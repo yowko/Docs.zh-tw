@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], member access
 ms.assetid: 1e998498-8c85-4a78-8ce2-4d8c20f08342
-ms.openlocfilehash: 9762b9e2487c30b81b7ef6ae22827b64e3cb02e2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d0ca4a0b2189ee652ad1d9c2b63690306a651df4
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200347"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635068"
 ---
 # <a name="how-to-access-a-member-with-a-pointer-c-programming-guide"></a>如何：使用指標存取成員 (C# 程式設計手冊)
 若要存取在不安全內容中宣告的結構成員，您可以使用下例所示的成員存取運算子，該例的 `p` 是包含成員 `x` 的 [struct](../../../csharp/language-reference/keywords/struct.md) 的指標。  
@@ -33,7 +33,6 @@ p -> x = 25; //member access operator ->
 ## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [指標運算式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
 - [指標型別](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
 - [型別](../../../csharp/language-reference/keywords/types.md)
 - [Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)

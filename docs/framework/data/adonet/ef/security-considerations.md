@@ -2,12 +2,12 @@
 title: 安全性考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 5a985cfcd4834efd7bbab04d30c86787dfb90955
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 47dbf800852e149f541c512e90a8bafef2077672
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583472"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879924"
 ---
 # <a name="security-considerations-entity-framework"></a>安全性考量 (Entity Framework)
 本主題將描述與開發、部署和執行 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式有關的安全性考量。 您也應該遵循建立安全的.NET Framework 應用程式的建議。 如需詳細資訊，請參閱 <<c0> [ 安全性概觀](../../../../../docs/framework/data/adonet/security-overview.md)。  
@@ -141,22 +141,23 @@ ms.locfileid: "65583472"
  存取 try-catch 區塊內 <xref:System.Data.Objects.ObjectContext> 的方法和屬性。 攔截例外狀況可避免未處理的例外狀況將 <xref:System.Data.Objects.ObjectStateManager> 中的項目或模型資訊 (例如資料表名稱) 公開給應用程式的使用者。  
   
 ## <a name="security-considerations-for-aspnet-applications"></a>ASP.NET 應用程式的安全性考量  
- 當您在 [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] 應用程式中使用路徑時，應該考量下列事項。  
+
+當您使用 ASP.NET 應用程式中的路徑時，您應該考慮下列。  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>確認主應用程式 (Host) 是否執行路徑檢查。  
- 使用 `|DataDirectory|` (以垂直線符號括住) 替代字串時，[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 會確認是否支援已解析的路徑。 例如，不允許在 `DataDirectory` 後面使用 "."。 裝載 `~` 的處理序會執行解析 Web 應用程式根目錄運算子 ([!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]) 的相同檢查。 IIS 會執行這項檢查。不過，IIS 以外的主應用程式可能不會確認是否支援已解析的路徑。 您應該了解部署 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式所在之主應用程式的行為。  
+ 當`|DataDirectory|`（放在直線符號內） 替代字串時，ADO.NET 可讓您確認是否支援已解析的路徑。 例如，不允許在 `DataDirectory` 後面使用 "."。 該相同的檢查，來解析 Web 應用程式根目錄運算子 (`~`) 由裝載 ASP.NET 處理序執行。 IIS 會執行這項檢查。不過，IIS 以外的主應用程式可能不會確認是否支援已解析的路徑。 您應該了解部署 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式所在之主應用程式的行為。  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>請勿針對已解析的路徑名稱提出任何假設。  
  雖然根目錄運算子 (`~`) 和 `DataDirectory` 替代字串解析而成的值應該在應用程式的執行階段期間維持不變，但是 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 不會限制主應用程式修改這些值。  
   
 #### <a name="verify-the-path-length-before-deployment"></a>在部署之前確認路徑長度。  
- 部署 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式之前，您應該確認根目錄運算子 (~) 和 `DataDirectory` 替代字串的值並未超過作業系統中路徑長度的限制。 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 資料提供者不會確定路徑長度是否在有效限制內。  
+ 部署 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式之前，您應該確認根目錄運算子 (~) 和 `DataDirectory` 替代字串的值並未超過作業系統中路徑長度的限制。 ADO.NET 資料提供者不會確定路徑長度在有效限制內。  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>ADO.NET 中繼資料的安全性考量  
  下列安全性考量會在產生和使用模型與對應檔時適用。  
   
 #### <a name="do-not-expose-sensitive-information-through-logging"></a>請勿透過記錄公開機密資訊。  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 中繼資料服務元件不會記錄任何私人資訊。 如果存在由於存取限制而無法傳回的結果，資料庫管理系統和檔案系統應該會傳回零筆結果，而非引發可能包含機密資訊的例外狀況。  
+ADO.NET 中繼資料服務元件不會記錄任何私人資訊。 如果存在由於存取限制而無法傳回的結果，資料庫管理系統和檔案系統應該會傳回零筆結果，而非引發可能包含機密資訊的例外狀況。  
   
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>請勿接受來自未受信任來源的 MetadataWorkspace 物件。  
  應用程式不應該接受來自未受信任來源之 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 類別的執行個體 (Instance)。 您應該改為根據這類來源明確建構並填入工作區 (Workspace)。  

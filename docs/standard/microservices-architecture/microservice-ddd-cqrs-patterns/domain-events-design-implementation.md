@@ -1,15 +1,13 @@
 ---
 title: 領域事件： 設計和實作
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 深入了解領域事件，這是用來在彙總之間建立通訊的重要概念。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 353e50de65f21930ebe0bef9e239e1e333403676
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5f7084ef638a1d04e0050eab447cb8903c973f45
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612039"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875930"
 ---
 # <a name="domain-events-design-and-implementation"></a>領域事件：設計和實作
 
@@ -347,7 +345,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 ## <a name="additional-resources"></a>其他資源
 
 - **Greg Young。What is a Domain Event?** (什麼是領域事件？) \
-  <http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/>
+  <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf#page=25>
 
 - **Jan Stenberg：Domain Events and Eventual Consistency** \ (領域事件與最終一致性)
   <https://www.infoq.com/news/2015/09/domain-events-consistency>

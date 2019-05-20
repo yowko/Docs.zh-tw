@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 05978c5604e7aa359b016bd6e3f3196178f706ec
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 8216e144dfcaeaf9b480d681ae91ce59832ae9e3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59332205"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877530"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令列引數 (C# 程式設計手冊)
 您可以使用下列其中一種方式，透過定義方法以將引數傳送給 `Main` 方法：  
@@ -67,7 +67,7 @@ long num = Convert.ToInt64(s);
   
      `Factorial 3`  
   
-5. 命令會產生以下輸出： `The factorial of 3 is 6.`  
+5. 命令會產生以下輸出：`The factorial of 3 is 6.`  
   
 > [!NOTE]
 >  在 Visual Studio 中執行應用程式時，您可以在[專案設計工具、偵錯頁面](/visualstudio/ide/reference/debug-page-project-designer)中指定命令列引數。  
@@ -77,9 +77,8 @@ long num = Convert.ToInt64(s);
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Environment?displayProperty=nameWithType>
-- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [作法：顯示命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [作法：使用 foreach 存取命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
+- [如何：顯示命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
 - [Main() 傳回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
 - [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)

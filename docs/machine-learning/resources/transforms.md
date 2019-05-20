@@ -4,16 +4,16 @@ description: 探索 ML.NET 中支援的特徵工程元件。
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: d3261f88a8e52c71f8ddf4d3d5c90b2e2b22b620
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ea06e19b4651017079a6ae57136f033e0ce981c
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636538"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65558019"
 ---
 # <a name="data-transformations"></a>資料轉換
 
-資料轉換是用來針對模型定型準備資料。 本指南中的轉換會傳回能實作 [IEstimator](xref:Microsoft.ML.IEstimator`1) 介面的類別。 資料轉換可以鏈結在一起。 每個轉換都會預期和產生特定類型及格式的資料，其已詳述於連結的參考文件中。
+資料轉換是用來針對模型定型準備資料。 本指南中的轉換會傳回能實作 [IEstimator](xref:Microsoft.ML.IEstimator%601) 介面的類別。 資料轉換可以鏈結在一起。 每個轉換都會預期和產生特定類型及格式的資料，其已詳述於連結的參考文件中。
 
 某些資料轉換需要定型資料以計算其參數。 例如：<xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> 轉換器會在 `Fit()` 作業期間計算定型資料的平均數和變異數，並將那些參數用於 `Transform()` 作業。 
 

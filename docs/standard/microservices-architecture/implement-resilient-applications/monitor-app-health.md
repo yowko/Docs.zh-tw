@@ -1,15 +1,13 @@
 ---
 title: 健康狀態監視
 description: 瀏覽實作健康情況監視的其中一種方式。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: deebcf6771d24be34050dd7fdfb807a681ebce1f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b03506972166eec1864de840c1abda05bc3e5277
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672200"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639869"
 ---
 # <a name="health-monitoring"></a>健康狀態監視
 

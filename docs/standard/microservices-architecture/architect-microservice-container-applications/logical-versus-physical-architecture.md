@@ -1,15 +1,13 @@
 ---
 title: 邏輯架構與實體架構
 description: 了解邏輯架構與實體架構之間的差異。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: e8ed375899637d06db8eb9b12a0e1cb0c05591f9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c269369e9b5391e8d25ece46e6b08e34a82fbbba
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129918"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644316"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>邏輯架構與實體架構
 

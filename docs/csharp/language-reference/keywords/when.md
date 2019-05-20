@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: a8f64da0ab603830972035f1c2cd3a0b1eaadaff
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: f0dbfb611ab563c16c97b1f6313134df38a174df
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221852"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633104"
 ---
 # <a name="when-c-reference"></a>when (C# 參考)
 

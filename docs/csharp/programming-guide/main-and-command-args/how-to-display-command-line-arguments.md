@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: b7018afa1272f4ae092863de6b7f9ef783001244
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c88219d03d40c814338a1b09ccd37cfc03c2d577
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965588"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881019"
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>作法：顯示命令列引數 (C# 程式設計指南)
 提供給命令列上可執行檔的引數，可以透過 `Main` 的選擇性參數來存取。 引數是以字串陣列的形式提供。 陣列的每個項目都包含一個引數。 引數之間的空白字元會被移除。 例如，請考慮這些虛擬可執行檔的命令列引動過程：  
@@ -34,5 +34,4 @@ ms.locfileid: "56965588"
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [使用 csc.exe 建置命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
 - [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [如何：使用 foreach 存取命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
 - [Main() 傳回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

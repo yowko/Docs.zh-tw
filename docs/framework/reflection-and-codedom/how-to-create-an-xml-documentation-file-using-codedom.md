@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ae041ae278dc6f2423a679dab8982f4ccc35620
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d984257958354eb2c6be6aa57d8b68ca39039edc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592501"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632796"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>作法：使用 CodeDOM 建立 XML 文件檔案
 CodeDOM 可以用來建立會產生 XML 文件的程式碼。 此程序涉及建立包含 XML 文件註解的 CodeDOM 圖表、產生程式碼，以及編譯可建立 XML 文件輸出的以編譯器選項產生的程式碼。  
@@ -82,5 +82,5 @@ CodeDOM 可以用來建立會產生 XML 文件的程式碼。 此程序涉及建
 ## <a name="see-also"></a>另請參閱
 
 - [使用 XML 加入程式碼註解](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [XML 文件註解](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML 文件註解](~/docs/csharp/programming-guide/xmldoc/index.md)
 - [XML 文件](/cpp/ide/xml-documentation-visual-cpp)

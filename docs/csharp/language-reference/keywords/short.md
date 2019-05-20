@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - short keyword [C#]
 ms.assetid: 04c10688-e51a-4a87-bfec-83f7fb42ff11
-ms.openlocfilehash: 8c38a4158f627f41d1667eb96478cd499de78772
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 0b02e72e0588f1c1a0343a391430b5878b96b5f5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238895"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633997"
 ---
 # <a name="short-c-reference"></a>short (C# 參考)
 
 `short` 關鍵字表示根據下表所示的大小和範圍來儲存值的整數資料型別。
 
-|類型|範圍|大小|.NET 型別|
+|類型|Range|大小|.NET 型別|
 |----------|-----------|----------|-------------------------|
 |`short`|-32,768 到 32,767|帶正負號的 16 位元整數|<xref:System.Int16?displayProperty=nameWithType>|
 

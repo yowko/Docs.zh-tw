@@ -1,5 +1,5 @@
 ---
-title: HOW TO：防止子工作附加到其父代
+title: 作法：防止子工作附加到其父代
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: c0fb85d4-9e80-4905-9f65-29acc54201c4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7506a57e29b7942bd06141baa2d2b048ed998214
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 55b9c6c7175d8c7c33d8bfa03330c8e4b8816531
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221527"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592019"
 ---
-# <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>HOW TO：防止子工作附加到其父代
+# <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>作法：防止子工作附加到其父代
 本文件將示範如何防止將子工作附加至父工作。 如果您呼叫的元件是由協力廠商所撰寫，而且也會使用工作，則防止子工作附加至其父代會很實用。 例如，如果使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 選項建立 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 物件的協力廠商元件會長時間執行或擲回未處理的例外狀況，則可能造成程式碼發生問題。  
   
 ## <a name="example"></a>範例  
@@ -27,19 +27,6 @@ ms.locfileid: "54221527"
  [!code-vb[TPL_DenyChildAttach#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_denychildattach/vb/denychildattach.vb#1)]  
   
  由於父工作會在所有子工作完成後才完成，因此長時間執行的子工作可能造成整個應用程式效能不佳。 在這個範例中，當應用程式使用預設選項建立父工作時，子工作必須在父工作完成之前完成。 當應用程式使用 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> 選項時，子工作不會附加至父工作。 因此，應用程式可以在父工作完成之後，以及必須等候子工作完成之前執行其他工作。  
-  
-## <a name="compiling-the-code"></a>編譯程式碼  
- 請複製範例程式碼，並將它貼入 Visual Studio 專案中，或是貼入名為 `DenyChildAttach.cs` 的檔案中 (在 Visual Basic 中為 `DenyChildAttach.vb`)，然後在 Visual Studio 開發人員命令提示字元視窗中執行下列命令。  
-  
- Visual C#  
-  
- **csc.exe DenyChildAttach.cs**  
-  
- Visual Basic  
-  
- **vbc.exe DenyChildAttach.vb**  
-  
-## <a name="robust-programming"></a>穩固程式設計  
   
 ## <a name="see-also"></a>另請參閱
 

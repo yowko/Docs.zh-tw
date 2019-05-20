@@ -7,12 +7,12 @@ helpviewer_keywords:
 - pointers [C#], & operator
 - pointer expressions [C#], address-of operator
 ms.assetid: 44fe2cd9-a64f-4ef5-be2a-09ce807c0182
-ms.openlocfilehash: b12d3bf99f32a3526bd4a1ec8c49b1fd88afd68a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bc5776bc57096b88a71ff786915553ae9aa04b7b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832342"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635065"
 ---
 # <a name="how-to-obtain-the-address-of-a-variable-c-programming-guide"></a>操作說明：取得變數位址 (C# 程式設計手冊)
 
@@ -40,7 +40,6 @@ int* p = &number; //address-of operator &
 ## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [指標運算式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
 - [指標型別](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
 - [型別](../../../csharp/language-reference/keywords/types.md)
 - [Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)

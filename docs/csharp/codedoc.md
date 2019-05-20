@@ -3,12 +3,12 @@ title: 使用 XML 註解記錄您的程式碼
 description: 了解如何使用 XML 文件註解記錄您的程式碼，並在編譯時期產生 XML 文件檔案。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 956598d7c8193f70e094fcb578c041b8972b9b0c
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 17a6beabf7e8a917c461dae4d92f1cfbb0d9de71
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063133"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633728"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 註解記錄您的程式碼
 
@@ -222,5 +222,5 @@ Sandcastle 這類工具會支援 [`<event>`](https://ewsoftware.github.io/XMLCom
 
 ## <a name="see-also"></a>另請參閱
 
-- [XML 文件註解 (C# 程式設計手冊)](programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML 文件註解 (C# 程式設計手冊)](programming-guide/xmldoc/index.md)
 - [建議使用的文件註解標記 (C# 程式設計手冊)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

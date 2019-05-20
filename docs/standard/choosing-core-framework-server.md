@@ -1,19 +1,19 @@
 ---
 title: 針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
-description: 此指南說明您在 .NET 中建置伺服器應用程式時應考量要使用哪種 .NET 實作。
+description: 本指南說明您在 .NET 中建置伺服器應用程式時應考量要使用哪種 .NET 實作。
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 03d008230d263853e322bb582706e2dbd3a11eec
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3034f77fe8ee136011a523f6882ffa09ed2758d6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678796"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641162"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
 
-有兩個支援的實作，可使用 .NET 來建置伺服器端應用程式：.NET Framework 及 .NET Core。 這兩者共用許多相同的元件，而您可以在這兩者間共用程式碼。 不過，兩者間有一些基本差異，而您的選擇取決於您想要完成的目標。  此文章提供有關每一個選項使用時機的指引。
+有兩個支援的實作，可使用 .NET 來建置伺服器端應用程式：.NET Framework 及 .NET Core。 這兩者共用許多相同的元件，而您可以在這兩者間共用程式碼。 不過，兩者間有一些基本差異，而您的選擇取決於您想要完成的目標。  本文提供有關每一個選項使用時機的指引。
 
 在下列情況中，請針對伺服器應用程式使用 .NET Core：
 
@@ -108,6 +108,6 @@ ms.locfileid: "57678796"
 - [目標架構](frameworks.md)
 - [.NET Core 指南](../core/index.md)
 - [從 .NET Framework 移植到 .NET Core](../core/porting/index.md)
-- [Docker 上的 .NET Framework 指南](../framework/docker/index.md)
+- [.NET 和 Docker 簡介](../core/docker/intro-net-docker.md)
 - [.NET 偵錯概觀](components.md)
 - [.NET 微服務：容器化 .NET 應用程式的架構](microservices-architecture/index.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: d0ca890e384fc1f282cfbb62562090ee858bd33f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a049bbe22d29f02acbc7889bb5d5010ec44f9d15
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592775"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876227"
 ---
 # <a name="application-settings-architecture"></a>應用程式設定架構
 本主題描述應用程式設定的運作方式，並且瀏覽架構的進階功能 (例如群組設定和設定索引鍵)。  
@@ -22,7 +22,7 @@ ms.locfileid: "65592775"
  提供的介面可讓自訂元件裝載於應用程式時，保存自己的設定。 元件可以使用設定索引鍵，區隔多個元件執行個體的設定。  
   
 ## <a name="defining-settings"></a>定義設定  
- 應用程式設定架構同時用於 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 Windows Forms，且包含數個在這兩種環境之間共用的基底類別。 最重要的是<xref:System.Configuration.SettingsBase>，其提供存取集合，透過設定，並提供低階方法來載入和儲存設定。 每個環境會實作自己的類別衍生自<xref:System.Configuration.SettingsBase>該環境提供額外的設定功能。 在 Windows Form 為基礎的應用程式，所有的應用程式設定必須定義衍生自的類別上<xref:System.Configuration.ApplicationSettingsBase>類別的基底類別新增下列功能：  
+ 應用程式設定架構用於 ASP.NET 和 Windows Form，其中包含數個這兩種環境之間所共用的基底類別。 最重要的是<xref:System.Configuration.SettingsBase>，其提供存取集合，透過設定，並提供低階方法來載入和儲存設定。 每個環境會實作自己的類別衍生自<xref:System.Configuration.SettingsBase>該環境提供額外的設定功能。 在 Windows Form 為基礎的應用程式，所有的應用程式設定必須定義衍生自的類別上<xref:System.Configuration.ApplicationSettingsBase>類別的基底類別新增下列功能：  
   
 - 較高層級的載入和儲存作業  
   

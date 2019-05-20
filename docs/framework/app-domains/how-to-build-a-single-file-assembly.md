@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建置單一檔案組件
+title: 作法：建置單一檔案組件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a73b2d8948c9a046fd77c02f1bcc87f5738105d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a409a93e5d84e96bbab13f2f6268d7f7ce6464ed
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303995"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634237"
 ---
-# <a name="how-to-build-a-single-file-assembly"></a>HOW TO：建置單一檔案組件
+# <a name="how-to-build-a-single-file-assembly"></a>作法：建置單一檔案組件
 
 單一檔案組件，是最簡單的組件類型，包含類型資訊和實作，以及[組件資訊清單](../../../docs/framework/app-domains/assembly-manifest.md)。 您可以使用命令列編譯器或 Visual Studio 來建立單一檔案組件。 編譯器預設會建立副檔名為 .exe 的組件檔案。
 

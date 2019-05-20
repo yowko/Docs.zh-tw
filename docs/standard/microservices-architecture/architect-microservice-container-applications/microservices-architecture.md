@@ -1,15 +1,13 @@
 ---
 title: 微服務架構
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 微服務架構的 30.000 英呎視圖。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 10d00ddc6255e6897bed3e826becff9aa8397e4e
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 3cf2a94140042d3cf76b5b63fe4e98638c56dbfe
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611898"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644859"
 ---
 # <a name="microservices-architecture"></a>微服務架構
 

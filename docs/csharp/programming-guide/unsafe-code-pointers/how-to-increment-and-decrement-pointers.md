@@ -6,12 +6,12 @@ helpviewer_keywords:
 - pointers [C#], increment and decrement
 - pointer expressions [C#], increment and decrement
 ms.assetid: 1b8b9281-44ee-485a-9045-3db38a4b4b89
-ms.openlocfilehash: 358decb73666d5a5ef7c0fa828168d90d2c22c1e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 040437bc8cbab4ba12f243434bdea7798711ce8a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973700"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635153"
 ---
 # <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a>操作說明：遞增和遞減指標 (C# 程式設計手冊)
 
@@ -48,9 +48,8 @@ p--;
 ## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [指標運算式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
 - [C# 運算子](../../../csharp/language-reference/operators/index.md)
-- [指標操作](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)
+- [指標操作](../../../csharp/programming-guide/unsafe-code-pointers/how-to-increment-and-decrement-pointers.md)
 - [指標型別](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
 - [型別](../../../csharp/language-reference/keywords/types.md)
 - [Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)

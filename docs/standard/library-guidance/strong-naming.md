@@ -4,12 +4,12 @@ description: .NET 程式庫強式命名的最佳做法建議。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 99905a795c4cdb3c79884716b39ed4e38cfe39d6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 79e44e89a94c1948ff29b9a8161f852c3a7c8cbb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128995"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640787"
 ---
 # <a name="strong-naming"></a>強式命名
 

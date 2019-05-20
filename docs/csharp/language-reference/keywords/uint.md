@@ -7,18 +7,18 @@ f1_keywords:
 - uint_CSharpKeyword
 helpviewer_keywords:
 - uint keyword [C#]
-ms.openlocfilehash: e22468eea63ce082f2e9842e6ec307aba1888964
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9a60460f67f9b6cf0b57d40ebf2789536e870d75
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241596"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633151"
 ---
 # <a name="uint-c-reference"></a>uint (C# 參考)
 
 `uint` 關鍵字表示根據下表所示的大小和範圍來儲存值的整數型別。
 
-|類型|範圍|大小|.NET 型別|
+|類型|Range|大小|.NET 型別|
 |----------|-----------|----------|-------------------------|
 |`uint`|0 到 4,294,967,295|不帶正負號的 32 位元整數|<xref:System.UInt32?displayProperty=nameWithType>|
 
@@ -57,7 +57,7 @@ ms.locfileid: "53241596"
 
 ## <a name="conversions"></a>轉換
 
-有一項從 `uint` 轉換為 [long](long.md)、[ulong](ulong.md)、[float](float.md)、[double](double.md) 或 [decimal](decimal.md) 之預先定義的隱含轉換。 例如: 
+有一項從 `uint` 轉換為 [long](long.md)、[ulong](ulong.md)、[float](float.md)、[double](double.md) 或 [decimal](decimal.md) 之預先定義的隱含轉換。 例如：
 
 ```csharp
 float myFloat = 4294967290;   // OK: implicit conversion to float

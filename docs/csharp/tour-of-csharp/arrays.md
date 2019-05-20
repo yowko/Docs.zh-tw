@@ -3,12 +3,12 @@ title: C# 陣列 - C# 語言教學課程
 description: 陣列是 C# 語言中最基本的集合類型
 ms.date: 08/10/2016
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
-ms.openlocfilehash: 8685e6ad08eb74534cdad499099b3d12da0a497a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 56a053ac8525d4c6c34592d6092f3f162cb04247
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153302"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634610"
 ---
 # <a name="arrays"></a>陣列
 

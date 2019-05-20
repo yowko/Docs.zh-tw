@@ -1,15 +1,13 @@
 ---
 title: 建立、發展以及版本控制微服務 API 與協定
 description: 因為需求會變更，所以要建立考慮演進和版本控制的 API 與合約。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: f42de3895f7f9affe09891fd89621fbb414313e9
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 1972d02d8bf7935c71bfd383707ae19ea2baded9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612104"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644918"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>建立、發展以及版本控制微服務 API 與協定
 

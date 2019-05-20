@@ -2,12 +2,12 @@
 title: 物件導向程式設計 (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: a7a3ce1b33d040b337087dfede90b58906c95cbd
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 2adb1ac24aa625c89fcafe074fe65189aa3767c7
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481167"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880700"
 ---
 # <a name="object-oriented-programming-c"></a>物件導向程式設計 (C#)
 
@@ -25,17 +25,17 @@ C# 為包括封裝、繼承和多型在內的物件導向程式設計提供完�
 
   - [類別成員](#Members)
 
-        [Properties and Fields](#Properties)
+    - [屬性與欄位](#Properties)
 
-        [Methods](#Methods)
+    - [方法](#Methods)
 
-        [Constructors](#Constructors)
+    - [建構函式](#Constructors)
 
-        [Finalizers](#Finalizers)
+    - [完成項](#Finalizers)
 
-        [Events](#Events)
+    - [事件](#Events)
 
-        [Nested Classes](#NestedClasses)
+    - [巢狀類別](#NestedClasses)
 
   - [存取修飾詞與存取層級](#AccessModifiers)
 
@@ -79,7 +79,7 @@ struct SampleStruct
 
 如需詳細資訊，請參閱:
 
-- [Class - 類別](../../../csharp/language-reference/keywords/class.md)
+- [class](../../../csharp/language-reference/keywords/class.md)
 
 - [struct](../../../csharp/language-reference/keywords/struct.md)
 
@@ -135,7 +135,7 @@ class SampleClass
 
 - [get](../../../csharp/language-reference/keywords/get.md)
 
-- [設定](../../../csharp/language-reference/keywords/set.md)
+- [set](../../../csharp/language-reference/keywords/set.md)
 
 #### <a name="Methods"></a> 方法
 
@@ -352,7 +352,7 @@ public abstract class B { }
 
 |C# 修飾詞|定義|
 |------------------|----------------|
-|[虛擬](../../../csharp/language-reference/keywords/virtual.md)|允許在衍生類別中覆寫類別成員。|
+|[virtual](../../../csharp/language-reference/keywords/virtual.md)|允許在衍生類別中覆寫類別成員。|
 |[override](../../../csharp/language-reference/keywords/override.md)|覆寫在基底類別中定義的虛擬 (可覆寫) 成員。|
 |[abstract](../../../csharp/language-reference/keywords/abstract.md)|要求在衍生類別中覆寫類別成員。|
 |[new 修飾詞](../../../csharp/language-reference/keywords/new-modifier.md)|隱藏繼承自基底類別的成員。|
@@ -450,8 +450,8 @@ class SampleClass
 
 - [委派](../../../csharp/programming-guide/delegates/index.md)
 
-- [Delegate - 委派](../../../csharp/language-reference/keywords/delegate.md)
+- [delegate](../../../csharp/language-reference/keywords/delegate.md)
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)

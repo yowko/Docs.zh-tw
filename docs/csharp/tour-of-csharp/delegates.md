@@ -3,12 +3,12 @@ title: C# 委派 - C# 語言教學課程
 description: 了解使用 C# 委派進行的晚期繫結
 ms.date: 08/10/2016
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
-ms.openlocfilehash: 2744f774392ef021974535de535b063264ae9a54
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 35a1e212b50e77eb43271a657c8abb21eb6cfb4a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151274"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634626"
 ---
 # <a name="delegates"></a>委派
 

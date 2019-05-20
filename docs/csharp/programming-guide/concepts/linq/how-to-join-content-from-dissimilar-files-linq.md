@@ -1,15 +1,15 @@
 ---
-title: HOW TO：從不同的檔案聯結內容 (LINQ) (C#)
+title: 作法：從不同的檔案聯結內容 (LINQ) (C#)
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: ca340e82e33d9b3ec212f69cb73efafb3c6abc0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dd7287abce7fca803dd87d23f1f58151cf4ec2f5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328812"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585726"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>HOW TO：從不同的檔案聯結內容 (LINQ) (C#)
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>作法：從不同的檔案聯結內容 (LINQ) (C#)
 
 此範例示範如何將兩個逗號分隔檔案中資料的共同值當做相符的索引鍵，聯結這兩個檔案中的資料。 如果您必須將兩個試算表中的資料，或一個試算表和一個不同格式之檔案中的資料合併為新的檔案，這個方法就很有用。 您可以修改範例，以搭配任何類型的結構化文字使用。  
   
@@ -124,14 +124,6 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="compiling-the-code"></a>編譯程式碼
-
-建立並編譯專案，以下列選項之一為目標：
-
-- .NET Framework 3.5 版與對 System.Core.dll 的參考。
-- NET Framework 4.0 或更高版本。
-- NET Core 1.0 或更高版本。
-  
 ## <a name="see-also"></a>另請參閱
 
 - [LINQ 和字串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

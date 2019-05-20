@@ -3,12 +3,12 @@ title: C# 中的 LINQ
 description: 提供 C# 中之 LINQ 詳細資訊的主題連結。
 ms.date: 11/30/2016
 ms.assetid: 8eb3284f-0ab9-4cad-9216-2da58d9761a5
-ms.openlocfilehash: a12970031e162f5ed40051ccf4d6fca35fb93698
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a86bbabedc99531a5d02a9e60df5798a03653370
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968539"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633780"
 ---
 # <a name="linq-in-c"></a>C\# 中的 LINQ
 

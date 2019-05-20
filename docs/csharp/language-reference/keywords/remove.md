@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - remove event accessor [C#]
 ms.assetid: c8223426-c17b-4fe2-8406-01564cf1dd2b
-ms.openlocfilehash: fc6f310e17841349d476f35214ac17100e81d76f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b5c604cbb0fef158750b0fa487374ab293795fc7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236722"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633726"
 ---
 # <a name="remove-c-reference"></a>remove (C# 參考)
 

@@ -1,19 +1,19 @@
 ---
-title: HOW TO：使用 XML 文件功能 - C# 程式設計指南
+title: 作法：使用 XML 文件功能 - C# 程式設計指南
 ms.custom: seodec18
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 893dc726f7b4ee2d2afa69f63d13d1f11a4692db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 047207e495f542108d6f41247b25009d9c9bb909
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491628"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634790"
 ---
-# <a name="how-to-use-the-xml-documentation-features"></a>HOW TO：使用 XML 文件功能
+# <a name="how-to-use-the-xml-documentation-features"></a>作法：使用 XML 文件功能
 
 下列範例提供已記載之類型的基本概觀。
 
@@ -136,4 +136,4 @@ XML 文件是以 /// 開頭。 當您建立新的專案時，精靈會為您在�
 
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [/doc (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [XML 文件註解](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML 文件註解](../../../csharp/programming-guide/xmldoc/index.md)

@@ -1,15 +1,15 @@
 ---
-title: HOW TO：從多個來源填入物件集合 (LINQ) (C#)
+title: 作法：從多個來源填入物件集合 (LINQ) (C#)
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: a40ff5ddcf606b0de8a1f41d96523526dc849462
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0789dee28cc2be5e72d2f99e2265e0181e351d8a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571333"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584386"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>HOW TO：從多個來源填入物件集合 (LINQ) (C#)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>作法：從多個來源填入物件集合 (LINQ) (C#)
 
 此範例示範如何將不同來源的資料合併成新的類型。
 
@@ -138,14 +138,6 @@ foreach (var student in queryNamesScores2)
         student.First, student.Last, student.ExamScores.Average());
 }
 ```
-
-## <a name="compiling-the-code"></a>編譯程式碼
-
-建立並編譯專案，以下列選項之一為目標：
-
-- .NET Framework 3.5 版與對 System.Core.dll 的參考。
-- NET Framework 4.0 或更高版本。
-- NET Core 1.0 或更高版本。
 
 ## <a name="see-also"></a>另請參閱
 
