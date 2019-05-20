@@ -1,28 +1,28 @@
 ---
-title: HOW TO：從多個來源填入物件集合 (LINQ) (C#)
+title: 作法：從多個來源填入物件集合 (LINQ) (C#)
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: a40ff5ddcf606b0de8a1f41d96523526dc849462
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0789dee28cc2be5e72d2f99e2265e0181e351d8a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571333"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584386"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a><span data-ttu-id="3cd4e-102">HOW TO：從多個來源填入物件集合 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="3cd4e-102">How to: Populate Object Collections from Multiple Sources (LINQ) (C#)</span></span>
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a><span data-ttu-id="2f58c-102">作法：從多個來源填入物件集合 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="2f58c-102">How to: Populate Object Collections from Multiple Sources (LINQ) (C#)</span></span>
 
-<span data-ttu-id="3cd4e-103">此範例示範如何將不同來源的資料合併成新的類型。</span><span class="sxs-lookup"><span data-stu-id="3cd4e-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>
+<span data-ttu-id="2f58c-103">此範例示範如何將不同來源的資料合併成新的類型。</span><span class="sxs-lookup"><span data-stu-id="2f58c-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="3cd4e-104">請勿嘗試將記憶體內部資料或檔案系統中的資料，與仍在資料庫中的資料聯結。</span><span class="sxs-lookup"><span data-stu-id="3cd4e-104">Don't try to join in-memory data or data in the file system with data that is still in a database.</span></span> <span data-ttu-id="3cd4e-105">這類跨定義域的聯結會產生未定義的結果，因為針對資料庫查詢和其他類型的來源定義聯結作業的方式可能不同。</span><span class="sxs-lookup"><span data-stu-id="3cd4e-105">Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources.</span></span> <span data-ttu-id="3cd4e-106">此外，如果資料庫中的資料量太大，這類作業也可能會導致記憶體不足的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="3cd4e-106">Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough.</span></span> <span data-ttu-id="3cd4e-107">若要將資料庫中的資料聯結至記憶體內部資料，請先在資料庫查詢中呼叫 `ToList` 或 `ToArray`，然後對傳回的集合執行聯結。</span><span class="sxs-lookup"><span data-stu-id="3cd4e-107">To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.</span></span>
+> <span data-ttu-id="2f58c-104">請勿嘗試將記憶體內部資料或檔案系統中的資料，與仍在資料庫中的資料聯結。</span><span class="sxs-lookup"><span data-stu-id="2f58c-104">Don't try to join in-memory data or data in the file system with data that is still in a database.</span></span> <span data-ttu-id="2f58c-105">這類跨定義域的聯結會產生未定義的結果，因為針對資料庫查詢和其他類型的來源定義聯結作業的方式可能不同。</span><span class="sxs-lookup"><span data-stu-id="2f58c-105">Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources.</span></span> <span data-ttu-id="2f58c-106">此外，如果資料庫中的資料量太大，這類作業也可能會導致記憶體不足的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="2f58c-106">Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough.</span></span> <span data-ttu-id="2f58c-107">若要將資料庫中的資料聯結至記憶體內部資料，請先在資料庫查詢中呼叫 `ToList` 或 `ToArray`，然後對傳回的集合執行聯結。</span><span class="sxs-lookup"><span data-stu-id="2f58c-107">To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.</span></span>
 
-## <a name="to-create-the-data-file"></a><span data-ttu-id="3cd4e-108">建立資料檔</span><span class="sxs-lookup"><span data-stu-id="3cd4e-108">To create the data file</span></span>
+## <a name="to-create-the-data-file"></a><span data-ttu-id="2f58c-108">建立資料檔</span><span class="sxs-lookup"><span data-stu-id="2f58c-108">To create the data file</span></span>
 
-<span data-ttu-id="3cd4e-109">將 names.csv 和 scores.csv 檔案複製到您的專案資料夾中，如[如何：從不同的檔案聯結內容 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) 中所述。</span><span class="sxs-lookup"><span data-stu-id="3cd4e-109">Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).</span></span>
+<span data-ttu-id="2f58c-109">將 names.csv 和 scores.csv 檔案複製到您的專案資料夾中，如[如何：從不同的檔案聯結內容 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) 中所述。</span><span class="sxs-lookup"><span data-stu-id="2f58c-109">Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="3cd4e-110">範例</span><span class="sxs-lookup"><span data-stu-id="3cd4e-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="2f58c-110">範例</span><span class="sxs-lookup"><span data-stu-id="2f58c-110">Example</span></span>
 
-<span data-ttu-id="3cd4e-111">下列範例示範如何使用具名類型 `Student`，來儲存將兩個記憶體內部字串集合合併得來的資料，這些字串模擬 .csv 格式的試算表資料。</span><span class="sxs-lookup"><span data-stu-id="3cd4e-111">The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format.</span></span> <span data-ttu-id="3cd4e-112">第一個字串集合代表學生姓名和學號，第二個集合代表學生學號 (第一欄) 和四個測驗分數。</span><span class="sxs-lookup"><span data-stu-id="3cd4e-112">The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores.</span></span> <span data-ttu-id="3cd4e-113">學號會作為外部索引鍵使用。</span><span class="sxs-lookup"><span data-stu-id="3cd4e-113">The ID is used as the foreign key.</span></span>
+<span data-ttu-id="2f58c-111">下列範例示範如何使用具名類型 `Student`，來儲存將兩個記憶體內部字串集合合併得來的資料，這些字串模擬 .csv 格式的試算表資料。</span><span class="sxs-lookup"><span data-stu-id="2f58c-111">The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format.</span></span> <span data-ttu-id="2f58c-112">第一個字串集合代表學生姓名和學號，第二個集合代表學生學號 (第一欄) 和四個測驗分數。</span><span class="sxs-lookup"><span data-stu-id="2f58c-112">The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores.</span></span> <span data-ttu-id="2f58c-113">學號會作為外部索引鍵使用。</span><span class="sxs-lookup"><span data-stu-id="2f58c-113">The ID is used as the foreign key.</span></span>
 
 ```csharp
 using System;
@@ -107,9 +107,9 @@ class PopulateCollection
  */
 ```
 
-<span data-ttu-id="3cd4e-114">在 [select](../../../../csharp/language-reference/keywords/select-clause.md) 子句中，會使用物件初始設定式，透過兩個來源的資料具現化每個新的 `Student` 物件。</span><span class="sxs-lookup"><span data-stu-id="3cd4e-114">In the [select](../../../../csharp/language-reference/keywords/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.</span></span>
+<span data-ttu-id="2f58c-114">在 [select](../../../../csharp/language-reference/keywords/select-clause.md) 子句中，會使用物件初始設定式，透過兩個來源的資料具現化每個新的 `Student` 物件。</span><span class="sxs-lookup"><span data-stu-id="2f58c-114">In the [select](../../../../csharp/language-reference/keywords/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.</span></span>
 
-<span data-ttu-id="3cd4e-115">如果您不需要儲存查詢的結果，則匿名型別會比具名類型更方便使用。</span><span class="sxs-lookup"><span data-stu-id="3cd4e-115">If you don't have to store the results of a query, anonymous types can be more convenient than named types.</span></span> <span data-ttu-id="3cd4e-116">如果要在執行查詢的方法外傳遞查詢結果，則必須使用具名類型。</span><span class="sxs-lookup"><span data-stu-id="3cd4e-116">Named types are required if you pass the query results outside the method in which the query is executed.</span></span> <span data-ttu-id="3cd4e-117">下列範例會執行與上述範例相同的工作，但使用匿名型別而不是具名類型：</span><span class="sxs-lookup"><span data-stu-id="3cd4e-117">The following example executes the same task as the previous example, but uses anonymous types instead of named types:</span></span>
+<span data-ttu-id="2f58c-115">如果您不需要儲存查詢的結果，則匿名型別會比具名類型更方便使用。</span><span class="sxs-lookup"><span data-stu-id="2f58c-115">If you don't have to store the results of a query, anonymous types can be more convenient than named types.</span></span> <span data-ttu-id="2f58c-116">如果要在執行查詢的方法外傳遞查詢結果，則必須使用具名類型。</span><span class="sxs-lookup"><span data-stu-id="2f58c-116">Named types are required if you pass the query results outside the method in which the query is executed.</span></span> <span data-ttu-id="2f58c-117">下列範例會執行與上述範例相同的工作，但使用匿名型別而不是具名類型：</span><span class="sxs-lookup"><span data-stu-id="2f58c-117">The following example executes the same task as the previous example, but uses anonymous types instead of named types:</span></span>
 
 ```csharp
 // Merge the data sources by using an anonymous type.
@@ -139,16 +139,8 @@ foreach (var student in queryNamesScores2)
 }
 ```
 
-## <a name="compiling-the-code"></a><span data-ttu-id="3cd4e-118">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="3cd4e-118">Compiling the code</span></span>
+## <a name="see-also"></a><span data-ttu-id="2f58c-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2f58c-118">See also</span></span>
 
-<span data-ttu-id="3cd4e-119">建立並編譯專案，以下列選項之一為目標：</span><span class="sxs-lookup"><span data-stu-id="3cd4e-119">Create and compile a project that targets one of the following options:</span></span>
-
-- <span data-ttu-id="3cd4e-120">.NET Framework 3.5 版與對 System.Core.dll 的參考。</span><span class="sxs-lookup"><span data-stu-id="3cd4e-120">.NET Framework version 3.5 with a reference to System.Core.dll.</span></span>
-- <span data-ttu-id="3cd4e-121">NET Framework 4.0 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="3cd4e-121">.NET Framework version 4.0 or higher.</span></span>
-- <span data-ttu-id="3cd4e-122">NET Core 1.0 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="3cd4e-122">.NET Core version 1.0 or higher.</span></span>
-
-## <a name="see-also"></a><span data-ttu-id="3cd4e-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3cd4e-123">See also</span></span>
-
-- [<span data-ttu-id="3cd4e-124">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="3cd4e-124">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="3cd4e-125">物件和集合初始設定式</span><span class="sxs-lookup"><span data-stu-id="3cd4e-125">Object and Collection Initializers</span></span>](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [<span data-ttu-id="3cd4e-126">匿名類型</span><span class="sxs-lookup"><span data-stu-id="3cd4e-126">Anonymous Types</span></span>](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [<span data-ttu-id="2f58c-119">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="2f58c-119">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="2f58c-120">物件和集合初始設定式</span><span class="sxs-lookup"><span data-stu-id="2f58c-120">Object and Collection Initializers</span></span>](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [<span data-ttu-id="2f58c-121">匿名類型</span><span class="sxs-lookup"><span data-stu-id="2f58c-121">Anonymous Types</span></span>](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
