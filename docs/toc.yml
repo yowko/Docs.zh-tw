@@ -496,11 +496,13 @@
     - name: 開始使用
       href: csharp/getting-started/
     - name: 教學課程
-      href: csharp/tutorials/index.md
       items:
-        - name: 'C# 簡介'
-          href: csharp/tutorials/intro-to-csharp/index.md
+        - name: 總覽
+          href: csharp/tutorials/index.md
+        - name: '使用 C# 設計程式的簡介'
           items:
+            - name: 選擇您的第一課
+              href: csharp/tutorials/intro-to-csharp/index.md
             - name: Hello World
               href: csharp/tutorials/intro-to-csharp/hello-world.yml
             - name: 'C# 中的數字'
@@ -510,8 +512,9 @@
             - name: 清單集合
               href: csharp/tutorials/intro-to-csharp/list-collection.yml
             - name: 在您的本機環境中運作
-              href: csharp/tutorials/intro-to-csharp/local-environment.md
               items:
+                - name: 設定環境
+                  href: csharp/tutorials/intro-to-csharp/local-environment.md
                 - name: 'C# 中的數字'
                   href: csharp/tutorials/intro-to-csharp/numbers-in-csharp-local.md
                 - name: 分支和迴圈
@@ -609,7 +612,6 @@
         - name: 迭代器
           href: csharp/iterators.md
         - name: 委派和事件
-          href: csharp/delegates-events.md
           items:
             - name: 委派簡介
               href: csharp/delegates-overview.md
@@ -636,8 +638,9 @@
         - name: 撰寫安全有效率的程式碼
           href: csharp/write-safe-efficient-code.md
         - name: 運算式樹狀架構
-          href: csharp/expression-trees.md
           items:
+            - name: 運算式樹狀架構簡介
+              href: csharp/expression-trees.md
             - name: 說明運算式樹狀架構
               href: csharp/expression-trees-explained.md
             - name: 支援運算式樹狀架構的架構類型
@@ -659,8 +662,9 @@
         - name: 版本控制
           href: csharp/versioning.md
     - name: '如何使用 C# 主題'
-      href: csharp/how-to/index.md
       items:
+        - name: 主題索引
+          href: csharp/how-to/index.md
         - name: 使用 `String.Split` 剖析字串
           href: csharp/how-to/parse-strings-using-split.md
         - name: 串連字串

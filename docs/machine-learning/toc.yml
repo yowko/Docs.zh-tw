@@ -9,15 +9,15 @@
   items:
     - name: 總覽
       href: tutorials/index.md
-    - name: 情感分析 (二元分類)
+    - name: 分析情感 (二元分類)
       href: tutorials/sentiment-analysis.md
-    - name: 問題分類 (多元分類)
+    - name: 分類支援問題 (多類別分類)
       href: tutorials/github-issue-classification.md
-    - name: 價格預測 (迴歸)
+    - name: 預測價格 (迴歸)
       href: tutorials/taxi-fare.md
-    - name: 鳶尾花 (叢集)
+    - name: 分類鳶尾花 (k-means 叢集)
       href: tutorials/iris-clustering.md
-    - name: 電影推薦 (建議)
+    - name: 電影推薦 (矩陣因式分解)
       href: tutorials/movie-recommmendation.md
     - name: 影像分類 (遷移式學習)
       href: tutorials/image-classification.md
