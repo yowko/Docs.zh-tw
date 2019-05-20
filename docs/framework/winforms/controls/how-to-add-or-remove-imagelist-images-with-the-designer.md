@@ -1,19 +1,19 @@
 ---
-title: HOW TO：使用設計工具新增或移除 ImageList 影像
+title: 作法：使用設計工具新增或移除 ImageList 影像
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ImageList component [Windows Forms], adding images
 - ImageList component [Windows Forms], removing images
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
-ms.openlocfilehash: 732267b431c5058fa7039f0fb132e6161c37d4a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 346d7107c9c17c5df06fa0e47f7a35355344f590
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303124"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880728"
 ---
-# <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>HOW TO：使用設計工具新增或移除 ImageList 影像
+# <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>作法：使用設計工具新增或移除 ImageList 影像
 您可以新增映像發佈至<xref:System.Windows.Forms.ImageList>元件數個不同的方式。 您可以使用相關聯的智慧標籤，非常快速地將影像<xref:System.Windows.Forms.ImageList>，或如果您要設定幾個其他屬性上<xref:System.Windows.Forms.ImageList>，您可能會發現它更方便地新增 [屬性] 視窗的影像。 您也可以使用程式碼，以新增映像。 如需有關新增程式碼使用的映像的詳細資訊，請參閱[How to:新增或移除映像的 Windows Form ImageList 元件](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。 通常您填入<xref:System.Windows.Forms.ImageList>映像之前表單與控制項相關聯，但這不是必要元件。  
   
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "59303124"
   
 1. 選取<xref:System.Windows.Forms.ImageList>元件，或新增至表單。  
   
-2. 在 [屬性] 視窗中，按一下 省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁邊<xref:System.Windows.Forms.ImageList.Images%2A>屬性。  
+2.  在 [屬性] 視窗中，按一下 [省略符號按鈕 (![的 Visual Studio 的 [屬性] 視窗中的省略符號按鈕 （...）](./media/visual-studio-ellipsis-button.png)) 旁邊<xref:System.Windows.Forms.ImageList.Images%2A>屬性。  
   
 3. 在**影像集合編輯器**，按一下 **新增**或**移除**新增或移除清單中的映像。  
   
