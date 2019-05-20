@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: fbbc0a5accf021df0675192deb040476bc97968d
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 07ef96862c04b8245d8365c3d3b419d227e824c4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452379"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876955"
 ---
 # <a name="c-operators"></a>C# 運算子
 
@@ -69,7 +69,7 @@ C# 提供內建型別支援的數個預先定義運算子。 例如，[算術運
 
 [stackalloc](../keywords/stackalloc.md) -　配置堆疊上的記憶體區塊。
 
-[->](dereference-operator.md) – 指標取值結合成員存取。
+[->](pointer-related-operators.md#pointer-member-access-operator--) - 指標間接取值結合成員存取。
 
 ## <a name="unary-operators"></a>一元運算子
 
@@ -91,9 +91,9 @@ C# 提供內建型別支援的數個預先定義運算子。 例如，[算術運
 
 [await](../keywords/await.md) – 等候 `Task`。
 
-[&x](and-operator.md) – 位址。
+[&x](pointer-related-operators.md#address-of-operator-) - 變數的位址。
 
-[*x](multiplication-operator.md) – 取值。
+[*x](pointer-related-operators.md#pointer-indirection-operator-) - 指標間接取值或取值 (Dereference)。
 
 [true 運算子](../keywords/true-false-operators.md) - 傳回 [bool](../keywords/bool.md) 值 `true` 以指出運算元必然為 true。
 

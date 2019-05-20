@@ -1,14 +1,14 @@
 ---
-title: 開始使用 Azure Blob 儲存體使用F#
+title: 使用 F# 開始使用 Azure Blob 儲存體
 description: 使用 Azure Blob 儲存體在雲端中儲存非結構化的資料。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d020c2cd9a11db1cd4b7a60113e1be03655f763
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982510"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880039"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>開始使用 Azure Blob 儲存體使用 F\#
 
@@ -196,8 +196,8 @@ Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/
 
 Azure 儲存體中的每個 blob 必須位於一個容器。 此容器會組成 blob 名稱的一部分。 比方說，`mydata`的這些範例 blob Uri 中的容器名稱：
 
-    https://storagesample.blob.core.windows.net/mydata/blob1.txt
-    https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
+- https://storagesample.blob.core.windows.net/mydata/blob1.txt
+- https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
 
 容器名稱必須是有效的 DNS 名稱，且符合下列命名規則：
 

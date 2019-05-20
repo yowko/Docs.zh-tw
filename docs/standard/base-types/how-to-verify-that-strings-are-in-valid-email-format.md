@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddd8b0e7965ca734865e83373af2f7ee45d62c05
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f6381747bc998f73b374442fcb15e025ca15795d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633446"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589532"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>作法：確認字串是否為有效的電子郵件格式
 下列範例會使用規則運算式來確認字串是否為有效的電子郵件格式。  
@@ -72,36 +72,12 @@ ms.locfileid: "64633446"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  `IsValidEmail` 和 `DomainMapper` 方法可以包含在規則運算式公用程式方法的程式庫中，或是做為私用的靜態或執行個體方法包含在應用程式類別中。  
   
- 若要將它們包含在規則運算式程式庫中，可以複製程式碼並將其貼入 Visual Studio 類別庫專案，或複製並貼入文字檔案，然後使用類似如下的命令 (假設原始程式碼檔案的名稱是 RegexUtilities.cs 或 RegexUtilities.vb)，從命令列進行編譯：  
-  
-```csharp  
-csc /t:library RegexUtilities.cs  
-```  
-  
-```vb  
-vbc /t:library RegexUtilities.vb  
-```  
-  
  您也可以使用 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> 方法，將此規則運算式包含在規則運算式程式庫中。  
   
  如果它們是在規則運算式程式庫中使用，則可以使用像是下列程式碼呼叫它們：  
   
  [!code-csharp[RegularExpressions.Examples.Email#8](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#8)]
  [!code-vb[RegularExpressions.Examples.Email#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#8)]  
-  
- 假設您已建立名為 RegexUtilities.dll 的類別庫，且其中包括電子郵件驗證的規則運算式，則您可用下列其中一種方式編譯這個範例：  
-  
-- 在 Visual Studio 中，藉由建立主控台應用程式，將 RegexUtilities.dll 的參考加入您的專案。  
-  
-- 在命令列中，複製原始程式碼並將其貼到文字檔案，然後使用類似下列的命令 (假設原始程式碼檔案的名稱是 Example.cs 或 Example.vb) 進行編譯：  
-  
-    ```csharp  
-    csc Example.cs /r:RegexUtilities.dll  
-    ```  
-  
-    ```vb  
-    vbc Example.vb /r:RegexUtilities.dll  
-    ```  
   
 ## <a name="see-also"></a>另請參閱
 

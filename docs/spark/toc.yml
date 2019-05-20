@@ -9,6 +9,12 @@
   items:
     - name: 開始使用
       href: tutorials/get-started.md
+    - name: 部署至 Azure HDInsight
+      href: tutorials/hdinsight-deployment.md
+    - name: 部署至 AWS EMR Spark
+      href: tutorials/amazon-emr-spark-deployment.md
+    - name: 部署至 Databricks
+      href: tutorials/databricks-deployment.md
 - name: 參考資料
   items:
     - name: 應用程式開發介面參考
