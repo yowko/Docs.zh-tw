@@ -2,12 +2,12 @@
 title: 解譯 wsatConfig.exe 傳回的錯誤碼
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 47db39f2b350c2fa8c655a041ec0239e5d297644
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26e7c40cb105ad10dac3b13b73cb33bc4fa57d69
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928813"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959855"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>解譯 wsatConfig.exe 傳回的錯誤碼
 本主題列出 WS-AtomicTransaction 組態公用程式 (wsatConfig.exe) 產生的錯誤碼，以及建議採取的動作。  
@@ -35,9 +35,9 @@ ms.locfileid: "61928813"
 |17|http.sys 的組態失敗。 無法從先前的連接埠將 SSL 憑證解除繫結。|使用錯誤訊息中傳回的錯誤碼來對應至適當的系統錯誤。 若有需要，請使用 httpcfg.exe 或 netsh.exe 移除錯誤的保留連接埠。|  
 |18|http.sys 的組態失敗。 無法將指定的憑證繫結至連接埠，因為已有先前的 SSL 繫結。|其他應用程式已取得特定連接埠的擁有權。 變更為不同的連接埠，或解除安裝或重新設定目前的應用程式。|  
 |19|重新啟動 MSDTC 失敗。|若有需要，請手動重新啟動 MSDTC。 如果問題持續存在，請連絡 Microsoft。|  
-|20|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 未安裝在遠端電腦上，或未正確安裝。|將 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 安裝在電腦上。|  
+|20|WinFX 未安裝在遠端電腦，或未正確安裝。|在電腦上安裝 WinFX。|  
 |21|遠端組態失敗，因為作業逾時。|對在遠端電腦上設定 WS-AT 的呼叫可能需要超過 90 秒的時間。|  
-|22|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 未安裝在遠端電腦上，或未正確安裝。|將 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 安裝在電腦上。|  
+|22|WinFX 未安裝在遠端電腦，或未正確安裝。|在電腦上安裝 WinFX。|  
 |23|遠端組態失敗，因為遠端電腦上有例外狀況。|檢查錯誤訊息有無可執行動作的項目|  
 |26|傳遞至 WsatConfig.exe 的引數無效。|檢查命令列有無錯誤。|  
 |27|`-accounts` 命令列選項無效。|更正 -`accounts` 命令列選項，以正確指定使用者帳戶。|  
@@ -52,10 +52,10 @@ ms.locfileid: "61928813"
 |38|處理序或使用者權限不足，無法變更防火牆組態。|使用系統管理員使用者帳戶執行 WsatConfig.exe。|  
 |39|更新防火繬組態時，WsatConfig.exe 發生錯誤。|檢查錯誤訊息有無可執行動作的項目。|  
 |40|WsatConfig.exe 無法提供 MSDTC 讀取權給憑證的私密金鑰|使用系統管理員使用者帳戶執行 WsatConfig.exe。|  
-|41|找不到 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 的安裝，或是找到的版本不符合工具能夠設定的版本。|確定 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 已正確安裝，且僅使用該版本 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 隨附的 WsatConfig.exe 工具設定 WS-AT。|  
+|41|找不到任何安裝 WinFX，或是找不到版本不符合此工具是什麼能夠設定。|請確定已正確安裝 WinFX 並只用來設定 WS-AT 的 WinFX 該版本所隨附的 WsatConfig.exe 工具。|  
 |42|命令列上有重複指定的引數。|執行 WsatConfig.exe 時，每個引數只指定一次。|  
 |43|如果未啟用 WS-AT，則 WsatConfig.exe 無法更新 WS-AT 設定。|指定 `-network:enable` 做為額外的命令列引數。|  
-|44|遺失必要的 Hotfix，必須先安裝該 Hotfix 才能設定 WS-AT。|如需安裝必要 Hotfix 的指示，請參閱 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 版本資訊。|  
+|44|遺失必要的 Hotfix，必須先安裝該 Hotfix 才能設定 WS-AT。|請參閱 < WinFX 版本資訊，如需有關安裝必要的 hotfix。|  
 |45|`-virtualServer` 命令列選項無效。|指定要設定之叢集資源的網路名稱，來更正 `-virtualServer` 命令列選項。|  
 |46|在嘗試啟動 ETW 追蹤工作階段時發生非預期的錯誤|使用傳回的錯誤碼來對應至適當的系統錯誤。|  
 |47|處理序或使用者權限不足，無法啟用 ETW 追蹤工作階段。|使用系統管理員使用者帳戶執行 WsatConfig.exe。|  

@@ -2,15 +2,15 @@
 title: Reliable Messaging Protocol 1.0 版
 ms.date: 03/30/2017
 ms.assetid: a5509a5c-de24-4bc2-9a48-19138055dcce
-ms.openlocfilehash: 857bbbf9ffa1311c38cfc007e0cdc6bde06d6284
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db4761efb34e7436ae54819b8e5056c732bd2fab
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617570"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959942"
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>Reliable Messaging Protocol 1.0 版
-本主題涵蓋 Windows Communication Foundation (WCF) 實作細節 Ws-reliable messaging February 2005 （1.0 版） 通訊協定所需的互通性，使用 HTTP 傳輸。 WCF 會遵循本主題所說明的相關限制與說明 Ws-reliable 訊息規格。 請注意，[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 中開始實作 WS-ReliableMessaging 1.0 版通訊協定。  
+本主題涵蓋 Windows Communication Foundation (WCF) 實作細節 Ws-reliable messaging February 2005 （1.0 版） 通訊協定所需的互通性，使用 HTTP 傳輸。 WCF 會遵循本主題所說明的相關限制與說明 Ws-reliable 訊息規格。 請注意 WinFX 從開始實作 WS-ReliableMessaging 1.0 版通訊協定。  
   
  Ws-reliable Messaging February 2005 通訊協定的實作中的 WCF <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>。  
   

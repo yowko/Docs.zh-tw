@@ -2,12 +2,12 @@
 title: 不支援的案例
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 884349739730510c356e1efc1f866d146f6ed946
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878753"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959960"
 ---
 # <a name="unsupported-scenarios"></a>不支援的案例
 基於各種原因，Windows Communication Foundation (WCF) 不支援某些特定的安全性案例。 比方說， [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 不會實作 SSPI 或 Kerberos 驗證通訊協定，並因此 WCF 不支援該平台上，執行使用 Windows 驗證的服務。 執行 WCF 只有 Windows XP Home Edition 下的時，會支援其他驗證機制，例如使用者名稱/密碼和 HTTP/HTTPS 整合式的驗證。  
@@ -50,7 +50,7 @@ ms.locfileid: "65878753"
 ## <a name="cryptography"></a>密碼編譯  
   
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>SHA-256 僅支援對應金鑰用途  
- WCF 支援各種不同的加密和簽章摘要建立演算法，您可以指定系統提供繫結中使用的演算法套件。 為了提升安全性，WCF 會支援安全雜湊演算法 (SHA) 2 的演算法，尤其是 SHA-256，用於建立簽章摘要雜湊。 此版本僅針對對稱金鑰用途 (例如 Kerberos 金鑰) 支援使用 SHA-256，而且並未使用 X.509 憑證來簽署訊息。 WCF 不支援 RSA 簽章 （用於 X.509 憑證） 使用 SHA-256 雜湊，因為目前不支援的 RSA-SHA256 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]。  
+ WCF 支援各種不同的加密和簽章摘要建立演算法，您可以指定系統提供繫結中使用的演算法套件。 為了提升安全性，WCF 會支援安全雜湊演算法 (SHA) 2 的演算法，尤其是 SHA-256，用於建立簽章摘要雜湊。 此版本僅針對對稱金鑰用途 (例如 Kerberos 金鑰) 支援使用 SHA-256，而且並未使用 X.509 憑證來簽署訊息。 WCF 不支援 RSA 簽章 （用於 X.509 憑證） 使用 SHA-256 雜湊，因為目前尚無法支援 RSA-sha256 WinFX 中。  
   
 ### <a name="fips-compliant-sha-256-hashes-not-supported"></a>不支援與 FIPS 相容的 SHA-256 雜湊  
  WCF 不支援 SHA-256 FIPS 相容的雜湊，因此使用 SHA-256 的演算法套件不支援由 WCF 使用 FIPS 相容演算法所需的系統。  

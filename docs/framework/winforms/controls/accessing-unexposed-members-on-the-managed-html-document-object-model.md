@@ -8,15 +8,15 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 20341a44eb8a43a9d130e0b76d23b513738c6782
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 539ac998a557615c097c33cdd4207e99f396e81d
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011890"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959623"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>存取 Managed HTML 文件物件模型上未公開的成員
-Managed HTML 文件物件模型 (DOM) 包含類別，稱為<xref:System.Windows.Forms.HtmlElement>公開屬性、 方法和所有 HTML 項目都有共通的事件。 有時候，不過，您將需要存取受管理的介面不會直接公開的成員。 本主題討論兩種方式來存取未公開的成員，包括[!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)]以及 Web 網頁內定義的 VBScript 函式。  
+Managed HTML 文件物件模型 (DOM) 包含類別，稱為<xref:System.Windows.Forms.HtmlElement>公開屬性、 方法和所有 HTML 項目都有共通的事件。 有時候，不過，您將需要存取受管理的介面不會直接公開的成員。 本主題討論兩種方式來存取未公開的成員，包括 Web 網頁內定義的 JScript 和 VBScript 函式。  
   
 ## <a name="accessing-unexposed-members-through-managed-interfaces"></a>透過受管理的介面存取未公開的成員  
  <xref:System.Windows.Forms.HtmlDocument> 和<xref:System.Windows.Forms.HtmlElement>提供四種方法可讓您存取未公開的成員。 下表顯示的型別以及其對應的方法。  
@@ -67,7 +67,7 @@ Managed HTML 文件物件模型 (DOM) 包含類別，稱為<xref:System.Windows.
  若要使用的 COM 介面的最簡單方式是新增至未受管理的 HTML DOM 文件庫 (MSHTML.dll) 的參考，從您的應用程式，雖然這是不支援。 如需詳細資訊，請參閱 <<c0> [ 知識庫文章 934368](https://support.microsoft.com/kb/934368)。  
   
 ## <a name="accessing-script-functions"></a>存取指令碼函式  
- HTML 網頁可以定義一或多個函式，藉由使用指令碼語言，例如[!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)]或 VBScript。 這些函式會放在`SCRIPT`在頁面中，頁面上，而且可以在 DOM 執行依需求或為了回應事件  
+ HTML 網頁可以定義一或多個函式使用 JScript 或 VBScript 的指令碼語言。 這些函式會放在`SCRIPT`在頁面中，頁面上，而且可以在 DOM 執行依需求或為了回應事件  
   
  您可以呼叫您定義 HTML 頁面使用的任何指令碼函式<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>方法。 如果指令碼方法傳回的 HTML 項目，您可以使用轉換來轉換這個傳回的結果，加<xref:System.Windows.Forms.HtmlElement>。 如需詳細資訊和範例程式碼，請參閱<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>。  
   

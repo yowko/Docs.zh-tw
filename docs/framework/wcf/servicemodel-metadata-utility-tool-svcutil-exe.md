@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 29b030708f2174b55386b13931f1088d15f4eb4f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0cb14bba724b50a8a2b723fe88503fafeeea3880
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582693"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959891"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel 中繼資料公用程式工具 (Svcutil.exe)
 
@@ -49,7 +49,7 @@ ServiceModel Metadata Utility Tool 位於 Windows SDK 安裝位置，特別 *%Pr
 
 ### <a name="accessing-wsdl-documents"></a>存取 WSDL 文件
 
-使用 Svcutil 存取參考安全性權杖服務 (STS) 的 WSDL 文件時，Svcutil 會對 STS 進行 WS-MetadataExchange 呼叫。 不過，服務可以使用 WS-MetadataExchange 或 HTTP GET 來公開 WSDL 文件。 因此，如果 STS 使用 HTTP GET 只公開 WSDL 文件時，寫入 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 中的用戶端將失敗。 撰寫的用戶端的[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]，Svcutil 會嘗試使用 Ws-metadataexchange 和 HTTP GET 取得 STS WSDL。
+使用 Svcutil 存取參考安全性權杖服務 (STS) 的 WSDL 文件時，Svcutil 會對 STS 進行 WS-MetadataExchange 呼叫。 不過，服務可以使用 WS-MetadataExchange 或 HTTP GET 來公開 WSDL 文件。 因此，如果 STS 只公開 WSDL 文件使用 HTTP GET，在 WinFX 中撰寫的用戶端將會失敗。 撰寫的用戶端的[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]，Svcutil 會嘗試使用 Ws-metadataexchange 和 HTTP GET 取得 STS WSDL。
 
 ## <a name="using-svcutilexe"></a>使用 SvcUtil.exe
 
@@ -107,7 +107,7 @@ Svcutil.exe 可從中繼資料文件產生服務合約、用戶端和資料型�
 |/serializer:Auto|自動選取序列化程式。 這會嘗試使用資料合約序列化程式，並使用 XmlSerializer，如果失敗。<br /><br /> 簡短形式：`/ser`|
 |/serializer:DataContractSerializer|產生使用「資料合約序列化程式」以進行序列化與還原序列化的資料型別。<br /><br /> 簡短形式：`/ser:DataContractSerializer`|
 |/serializer:XmlSerializer|產生使用 <xref:System.Xml.Serialization.XmlSerializer> 以進行序列化與還原序列化的資料型別。<br /><br /> 簡短形式：`/ser:XmlSerializer`|
-|/targetClientVersion|指定應用程式的目標.NET Framework 版本。 有效值為 `Version30` 和 `Version35`。 預設值為 `Version30`。<br /><br /> 簡短形式：`/tcv`<br /><br /> `Version30`：使用 `/tcv:Version30`如果您要使用的用戶端產生程式碼[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]。<br /><br /> `Version35`：使用 `/tcv:Version35`如果您要使用的用戶端產生程式碼[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]。 將 `/tcv:Version35` 與 `/async` 參數一起使用時，會產生事件架構與回呼/委派架構的非同步方法。 此外，也會啟用具備 LINQ 功能的資料集和 <xref:System.DateTimeOffset> 的支援。|
+|/targetClientVersion|指定應用程式的目標.NET Framework 版本。 有效值為 `Version30` 和 `Version35`。 預設值為 `Version30`。<br /><br /> 簡短形式：`/tcv`<br /><br /> `Version30`：使用`/tcv:Version30`如果使用 WinFX 的用戶端產生程式碼。<br /><br /> `Version35`：使用 `/tcv:Version35`如果您要使用的用戶端產生程式碼[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]。 將 `/tcv:Version35` 與 `/async` 參數一起使用時，會產生事件架構與回呼/委派架構的非同步方法。 此外，也會啟用具備 LINQ 功能的資料集和 <xref:System.DateTimeOffset> 的支援。|
 |/wrapped|控制是否將特殊大小寫搭配 wrapped 參數用於文件常值樣式的文件。 使用 **/ 包裝**參數搭配[Service Model Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具來指定一般大小寫。|
 
 > [!NOTE]

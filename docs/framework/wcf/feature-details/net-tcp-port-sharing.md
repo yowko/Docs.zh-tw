@@ -5,12 +5,12 @@ helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: f40afe25bbc3238ec773ee1ee19673d4d5a3ef1d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8eb0a2a5b8b6edad17477e1fd65f72b540a8a674
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603948"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960044"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP Port Sharing
 Windows Communication Foundation (WCF) 的高效能通訊提供全新的 TCP 架構網路通訊協定 (net.tcp://)。 WCF 也引進全新的系統元件，可讓多個使用者處理序共用 net.tcp 連接埠的 Net.TCP Port Sharing Service。  
@@ -38,7 +38,7 @@ Windows Communication Foundation (WCF) 的高效能通訊提供全新的 TCP 架
  當使用 net.tcp:// 連接埠共用開啟的 WCF 服務時，WCF TCP 傳輸基礎結構不會直接開啟 TCP 通訊端應用程式處理序中。 反之，傳輸基礎結構會將服務的基底位址統一資源識別元 (URI) 註冊到 Net.TCP 連接埠共用服務，並等候連接埠共用服務代表自己接聽訊息。  連接埠共用服務會在訊息抵達時，將目的地為應用程式服務的訊息分派出去。  
   
 ## <a name="installing-port-sharing"></a>安裝連接埠共用  
- 儘管所有支援 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 的作業系統都可使用 Net.TCP 連接埠共用服務，但是預設不會啟用此服務。 為了安全起見，第一次使用 Net.TCP 連接埠共用服務前，系統管理員必須先手動加以啟用。 Net.TCP Port Sharing Service 會公開組態選項，讓您操控連接埠共用服務所擁有的數個網路通訊端特徵。 如需詳細資訊，請參閱[如何：啟用 Net.TCP Port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)。  
+ Net.TCP Port Sharing Service 可用於所有作業系統都支援 WinFX，但預設不啟用服務。 為了安全起見，第一次使用 Net.TCP 連接埠共用服務前，系統管理員必須先手動加以啟用。 Net.TCP Port Sharing Service 會公開組態選項，讓您操控連接埠共用服務所擁有的數個網路通訊端特徵。 如需詳細資訊，請參閱[如何：啟用 Net.TCP Port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)。  
   
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>在應用程式中使用 Net.tcp Port Sharing  
  使用 net.tcp:// 連接埠共用 WCF 應用程式中的最簡單方式是公開服務，使用<xref:System.ServiceModel.NetTcpBinding>並啟用 Net.TCP Port Sharing Service 使用<xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A>屬性。  

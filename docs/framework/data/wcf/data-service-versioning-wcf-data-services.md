@@ -6,12 +6,12 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: fd3be8a60048b10bbd94ac5b3bfadaee954943ef
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9a58f375821109c0ec5f2230ae330dc6a2caa102
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583592"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959497"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>資料服務版本控制 (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]可讓您建立資料服務，讓用戶端可以存取資料，為使用 Uri 以資料模型為基礎的資源。 OData 也支援服務作業的定義。 初始部署並在其存留期期間潛在進行數次之後，可能會因為各種原因而需要變更這些資料服務 (例如變更商務需要、資訊技術需求) 或處理其他問題。 當您針對現有的資料服務進行變更時，必須考慮是否要定義新的資料服務版本，以及如何妥善地將對於現有用戶端應用程式的影響降至最低。 本主題提供建立新資料服務版本時機和方式的指引。 它也會描述 WCF Data Services 的用戶端和支援的 OData 通訊協定的不同版本的資料服務之間交換的處理方式。
@@ -60,12 +60,12 @@ ms.locfileid: "65583592"
 
  當應用程式會使用 WCF Data Services 用戶端程式庫來存取資料服務時，程式庫自動設定這些標頭設為正確的值，根據 OData 和您的應用程式中使用的功能的版本。 根據預設，WCF Data Services 會使用支援要求的作業的最小通訊協定版本。
 
- 下表詳細說明.NET Framework 版本和[!INCLUDE[silverlight](../../../../includes/silverlight-md.md)]包含 WCF Data Services 支援的 OData 通訊協定的特定版本。
+ 下表詳細列出包含 WCF Data Services 的.NET Framework 和 Silverlight 版本支援的 OData 通訊協定的特定版本。
 
 |OData 通訊協定版本|下列版本引入的支援|
 |-----------------------------------------------------------------------------------|----------------------------|
-|第 1 版|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Service Pack 1 (SP1)<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] 第 3 版|
-|第 2 版|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-若要更新[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]SP1。 您可以下載並安裝的更新[Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=158125)。<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] 第 4 版|
+|第 1 版|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Service Pack 1 (SP1)<br />Silverlight 版本 3|
+|第 2 版|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-若要更新[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]SP1。 您可以下載並安裝的更新[Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=158125)。<br />Silverlight 版本 4|
 |第 3 版|-您可以下載並安裝支援 OData 第 3 版的發行前版本[Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=203885)。|
 
 ### <a name="metadata-versions"></a>中繼資料版本
