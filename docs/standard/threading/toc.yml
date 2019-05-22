@@ -1,18 +1,18 @@
 - name: 執行緒
   href: index.md
   items:
-    - name: Managed 執行緒處理的基本概念
+    - name: 受控執行緒處理的基本概念
       href: managed-threading-basics.md
       items:
         - name: 執行緒和執行緒處理
           href: threads-and-threading.md
-        - name: Managed 執行緒中的例外狀況
+        - name: 受控執行緒中的例外狀況
           href: exceptions-in-managed-threads.md
         - name: 同步處理多執行緒處理的資料
           href: synchronizing-data-for-multithreading.md
         - name: 前景和背景執行緒
           href: foreground-and-background-threads.md
-        - name: Windows 中的 Managed 和 Unmanaged 執行緒處理
+        - name: Windows 中的非受控和非受控執行緒處理
           href: managed-and-unmanaged-threading-in-windows.md
         - name: 執行緒區域儲存區：執行緒相關的靜態欄位和資料位置
           href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
@@ -27,7 +27,7 @@
           href: destroying-threads.md
         - name: 排程執行緒
           href: scheduling-threads.md
-        - name: Managed 執行緒中的取消作業
+        - name: 受控執行緒中的取消作業
           href: cancellation-in-managed-threads.md
           items:
             - name: 以合作方式取消執行緒
@@ -40,7 +40,7 @@
               href: how-to-listen-for-cancellation-requests-that-have-wait-handles.md
             - name: 作法：接聽多個取消要求
               href: how-to-listen-for-multiple-cancellation-requests.md
-    - name: Managed 執行緒處理的最佳實施方針
+    - name: 受控執行緒處理的最佳實施方針
       href: managed-threading-best-practices.md
     - name: 執行緒物件和功能
       href: threading-objects-and-features.md

@@ -1,4 +1,4 @@
-- name: 不安全的程式碼和指標
+- name: Unsafe 程式碼和指標
   href: index.md
   items:
     - name: 固定大小的緩衝區
@@ -9,23 +9,5 @@
           href: pointer-types.md
         - name: 指標轉換
           href: pointer-conversions.md
-        - name: 指標運算式
-          items:
-            - name: 作法：取得指標變數值
-              href: how-to-obtain-the-value-of-a-pointer-variable.md
-            - name: 作法：取得變數位址
-              href: how-to-obtain-the-address-of-a-variable.md
-            - name: 作法：使用指標存取成員
-              href: how-to-access-a-member-with-a-pointer.md
-            - name: 作法：使用指標存取陣列元素
-              href: how-to-access-an-array-element-with-a-pointer.md
-            - name: 指標操作
-              items:
-                - name: 作法：遞增和遞減指標
-                  href: how-to-increment-and-decrement-pointers.md
-                - name: 指標的算術運算
-                  href: arithmetic-operations-on-pointers.md
-                - name: 指標比較
-                  href: pointer-comparison.md
-        - name: 作法：使用指標複製位元組陣列
+        - name: 如何：使用指標複製位元組陣列
           href: how-to-use-pointers-to-copy-an-array-of-bytes.md
