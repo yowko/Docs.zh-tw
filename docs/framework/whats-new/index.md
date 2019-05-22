@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c4a4ba28116965db1d4dfdef3cdfb0496aad123
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 81995d8003a9bb78f6a97ca7eadca94a2136c8a7
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557928"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960011"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新功能
 
@@ -1240,9 +1240,9 @@ Windows 現在提供將現有 Windows 傳統型應用程式 (包括 WPF 和 Wind
 
 ### <a name="debugging-improvements"></a>偵錯改進
 
-*Unmanaged 偵錯 API* 在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中已增強，可在擲回 <xref:System.NullReferenceException> 時執行額外的分析，因此可以判斷單行原始程式碼中哪個變數為 `null`。   為了支援這種情況，下列 API 已加入 Unmanaged 偵錯 API。
+*非受控偵錯 API* 在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中已增強，可在擲回 <xref:System.NullReferenceException> 時執行額外的分析，因此可以判斷單行原始程式碼中哪個變數為 `null`。   為了支援這種情況，下列 API 已加入非受控偵錯 API。
 
-- [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md)、[ICorDebugVariableHome](../unmanaged-api/debugging/icordebugvariablehome-interface.md) 和 [ICorDebugVariableHomeEnum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) 介面，它們會公開 Managed 變數的原生主資料夾。 這可讓偵錯工具在 <xref:System.NullReferenceException> 發生時執行某些程式碼流程分析，以及回溯判斷對應至原生位置且為 `null` 的 Managed 變數。
+- [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md)、[ICorDebugVariableHome](../unmanaged-api/debugging/icordebugvariablehome-interface.md) 和 [ICorDebugVariableHomeEnum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) 介面，它們會公開受控變數的原生主資料夾。 這可讓偵錯工具在 <xref:System.NullReferenceException> 發生時執行某些程式碼流程分析，以及回溯判斷對應至原生位置且為 `null` 的受控變數。
 
 - [ICorDebugType2::GetTypeID](../unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) 方法提供 ICorDebugType 到 [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md) 的對應，可讓偵錯工具取得 [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md)，而不需 ICorDebugType 的執行個體。 [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md) 上的現有 API 便可以用來判斷類型的類別配置。
 
@@ -1399,7 +1399,7 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
 
 ## <a name="whats-new-in-net-2015"></a>.NET 2015 的新功能
 
-.NET 2015 導入了 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 和 .NET Core。 其中一些新功能適用於兩者，另一些功能則專屬於 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 或 [!INCLUDE[net_core](../../../includes/net-core-md.md)]。
+.NET 2015 導入了 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 和 .NET Core。 其中一些新功能適用於兩者，另一些功能則專屬於 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 或 .NET Core。
 
 - **ASP.NET Core**
 
@@ -1464,7 +1464,7 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
 
      ADO.NET 現在支援 SQL Server 2016 Community Technology Preview 2 (CTP2) 提供的 Always Encrypted 功能。 使用 Always Encrypted，SQL Server 可以對加密資料執行作業，而且最好的是加密金鑰是與應用程式一起位於客戶的受信任環境內，而不是伺服器上。 Always Encrypted 會保護客戶資料安全，因此，DBA 無法存取純文字資料。 資料的加密和解密透明地在驅動程式層級進行，以將變更現有應用程式的需求降到最少。 如需詳細資訊，請參閱 [Always Encrypted (資料庫引擎)](/sql/relational-databases/security/encryption/always-encrypted-database-engine) 和 [Always Encrypted (用戶端開發)](/sql/relational-databases/security/encryption/always-encrypted-client-development)。
 
-- **Managed 程式碼的 64 位元 JIT 編譯器**
+- **受控程式碼的 64 位元 JIT 編譯器**
 
      .NET Framework 4.6 提供 64 位元 JIT 編譯器的新版本 (原本的代號是 RyuJIT)。 全新的 64 位元編譯器比舊版 64 位元 JIT 編譯器更大幅提升效能。 在 .NET Framework 4.6 之上執行的 64 位元處理序即會啟用全新的 64 位元編譯器。 若您的應用程式是編譯為 64 位元或 AnyCPU 並在 64 位元作業系統上執行，則會以 64 位元處理序執行。 雖然我們已盡量讓新編譯器的轉換透明化，但仍可能會有行為上的變更。 如果您在使用新的 JIT 編譯器遇到任何問題，歡迎您直接向我們反應。 如果您有任何可能與新的 64 位元 JIT 編譯器相關的問題，請透過 [Microsoft Connect](https://connect.microsoft.com/) 連絡我們。
 
@@ -1747,15 +1747,15 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
 
 - **字碼頁編碼方式的支援**
 
-     [!INCLUDE[net_core](../../../includes/net-core-md.md)] 主要支援 Unicode 編碼方式，並且預設會提供字碼頁編碼方式的有限支援。 您可以透過使用 <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> 方法註冊字碼頁編碼方式，來加入 .NET Framework 中可用但不受 [!INCLUDE[net_core](../../../includes/net-core-md.md)] 支援之字碼頁編碼方式的支援。 如需詳細資訊，請參閱<xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>。
+     .NET Core 主要支援 Unicode 編碼方式，並且預設會提供字碼頁編碼方式的有限支援。 您可以透過使用 <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> 方法註冊字碼頁編碼方式，來加入 .NET Framework 中可用但不受 .NET Core 支援之字碼頁編碼方式的支援。 如需詳細資訊，請參閱<xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>。
 
 - **.NET Native**
 
-     以 [!INCLUDE[net_core](../../../includes/net-core-md.md)] 為目標並以 C# 或 Visual Basic 撰寫的 Windows 10 應用程式，現在可以利用將應用程式編譯成機器碼的新技術，而不是使用 IL。 所產生之應用程式的特色是啟動和執行都更快。 如需詳細資訊，請參閱[使用 .NET Native 編譯應用程式](../net-native/index.md)。 如需 .NET Native 概觀，請參閱 [.NET Native 和編譯](../net-native/net-native-and-compilation.md)，其中探討 .NET Native 與 JIT 編譯和 NGEN 之間的差異，以及對您的程式碼所代表的意義。
+     以 .NET Core 為目標並以 C# 或 Visual Basic 撰寫的 Windows 10 應用程式，現在可以利用將應用程式編譯成機器碼的新技術，而不是使用 IL。 所產生之應用程式的特色是啟動和執行都更快。 如需詳細資訊，請參閱[使用 .NET Native 編譯應用程式](../net-native/index.md)。 如需 .NET Native 概觀，請參閱 [.NET Native 和編譯](../net-native/net-native-and-compilation.md)，其中探討 .NET Native 與 JIT 編譯和 NGEN 之間的差異，以及對您的程式碼所代表的意義。
 
      根據預設，當您使用 Visual Studio 2015 或更新版本編繹應用程式時，應用程式會編譯成機器碼。 如需詳細資訊，請參閱 [.NET Native 使用者入門](../net-native/getting-started-with-net-native.md)。
 
-     為了支援對 .NET Native 應用程式進行偵錯，Unmanaged 偵錯 API 已新增許多介面和列舉。 如需詳細資訊，請參閱[偵錯 (Unmanaged API 參考)](../unmanaged-api/debugging/index.md) 主題。
+     為了支援對 .NET Native 應用程式進行偵錯，非受控偵錯 API 已新增許多介面和列舉。 如需詳細資訊，請參閱[偵錯 (非受控 API 參考)](../unmanaged-api/debugging/index.md) 主題。
 
 - **開放原始碼 .NET Framework 套件**
 
@@ -1767,7 +1767,7 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
 
 - **ASP.NET 應用程式的全新 API。** 新的 <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=nameWithType> 和 <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=nameWithType> 方法可讓您在回應清除至用戶端應用程式時，檢查及修改回應標頭和狀態碼。 請考慮使用這些方法來取代 <xref:System.Web.HttpApplication.PreSendRequestHeaders> 和 <xref:System.Web.HttpApplication.PreSendRequestContent> 事件，這些方法的效率更高且更可靠。
 
-     <xref:System.Web.Hosting.HostingEnvironment.QueueBackgroundWorkItem%2A?displayProperty=nameWithType> 方法可讓您排程小型背景工作項目。 完成所有背景工作項目之前，ASP.NET 會追蹤這些項目，並防止 IIS 突然終止背景工作處理序。 此方法只能在 ASP.NET Managed 應用程式網域內呼叫。
+     <xref:System.Web.Hosting.HostingEnvironment.QueueBackgroundWorkItem%2A?displayProperty=nameWithType> 方法可讓您排程小型背景工作項目。 完成所有背景工作項目之前，ASP.NET 會追蹤這些項目，並防止 IIS 突然終止背景工作處理序。 此方法只能在 ASP.NET 受控應用程式網域內呼叫。
 
      新的 <xref:System.Web.HttpResponse.HeadersWritten?displayProperty=nameWithType> 和 <xref:System.Web.HttpResponseBase.HeadersWritten?displayProperty=nameWithType> 屬性傳回布林值，指出是否已寫入回應標頭。 您可以使用這些屬性確定 <xref:System.Web.HttpResponse.StatusCode%2A?displayProperty=nameWithType> 等的 API 呼叫成功 (如果已寫入標頭，則擲回例外狀況)。
 
@@ -1794,9 +1794,9 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
 
     - 以支援單一階段認可的永久性登記 <xref:System.Transactions.IPromotableSinglePhaseNotification> 取代 <xref:System.Transactions.ISinglePhaseNotification>。
 
-     您可以在相同的應用程式網域中完成這些作業，而不需要任何額外的 Unmanaged 程式碼來與 MSDTC 互動以進行提升。 僅當 <xref:System.Transactions?displayProperty=nameWithType> 對可提升登記未實作之 <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote` 方法的呼叫未完成時，才會呼叫此新方法。
+     您可以在相同的應用程式網域中完成這些作業，而不需要任何額外的非受控程式碼來與 MSDTC 互動以進行提升。 僅當 <xref:System.Transactions?displayProperty=nameWithType> 對可提升登記未實作之 <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote` 方法的呼叫未完成時，才會呼叫此新方法。
 
-- **程式碼剖析改進。** 下列新的 Unmanaged 程式碼分析 API 提供更強大的程式碼分析功能：
+- **程式碼剖析改進。** 下列新的非受控程式碼分析 API 提供更強大的程式碼分析功能：
 
     - [COR_PRF_ASSEMBLY_REFERENCE_INFO 結構](../unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)
     - [COR_PRF_HIGH_MONITOR 列舉](../unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)
@@ -1807,7 +1807,7 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
 
      之前的 `ICorProfiler` 實作支援相依組件的消極式載入。 新程式碼分析 API 要求可立即載入分析工具插入的相依組件，而不是在完全初始化應用程式之後才載入。 此變更不會影響現有 `ICorProfiler` API 的使用者。
 
-- **偵錯改進。** 下列新的 Unmanaged 偵錯 API 提供與分析工具更佳的整合。 您現在可以存取分析工具插入的中繼資料，並存取偵錯傾印時編譯器 ReJIT 要求所產生的區域變數和程式碼。
+- **偵錯改進。** 下列新的非受控偵錯 API 提供與分析工具更佳的整合。 您現在可以存取分析工具插入的中繼資料，並存取偵錯傾印時編譯器 ReJIT 要求所產生的區域變數和程式碼。
 
     - [SetWriteableMetadataUpdateMode 方法](../unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)
     - [EnumerateLocalVariablesEx 方法](../unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)
@@ -1890,9 +1890,9 @@ Windows Forms 的增強功能包括：
 
 在 Visual Studio 2013 中對您的 .NET Framework 應用程式進行偵錯時的改進功能包括：
 
-- 在 Visual Studio Debugger 中傳回值。 當您在 Visual Studio 2013 中對 Managed 應用程式進行偵錯時，[自動變數] 視窗會顯示方法的傳回類型和值。 這項資訊適用於桌面、Windows 市集和 Windows Phone 應用程式。 如需詳細資訊，請參閱[檢查方法呼叫的傳回值](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/dn323257(v=vs.120))。
+- 在 Visual Studio Debugger 中傳回值。 當您在 Visual Studio 2013 中對受控應用程式進行偵錯時，[自動變數] 視窗會顯示方法的傳回類型和值。 這項資訊適用於桌面、Windows 市集和 Windows Phone 應用程式。 如需詳細資訊，請參閱[檢查方法呼叫的傳回值](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/dn323257(v=vs.120))。
 
-- 64 位元應用程式的 [編輯後繼續] 功能。 Visual Studio 2013 對傳統型、Windows 市集和 Windows Phone 的 64 位元 Managed 應用程式支援「編輯後繼續」功能。 對 32 位元和 64 位元應用程式的現有限制仍然有效 (請參閱[支援的程式碼變更 (C#)](/visualstudio/debugger/supported-code-changes-csharp) 文章的最後一節)。
+- 64 位元應用程式的 [編輯後繼續] 功能。 Visual Studio 2013 對傳統型、Windows 市集和 Windows Phone 的 64 位元受控應用程式支援「編輯後繼續」功能。 對 32 位元和 64 位元應用程式的現有限制仍然有效 (請參閱[支援的程式碼變更 (C#)](/visualstudio/debugger/supported-code-changes-csharp) 文章的最後一節)。
 
 - 非同步感知偵錯。 為了在 Visual Studio 2013 中更容易對非同步應用程式進行偵錯，呼叫堆疊會隱藏編譯器提供的基礎結構程式碼來支援非同步程式設計，以及提供邏輯父框架中的鏈結，讓您可以更清楚地了解邏輯程式執行的方式。 [工作] 視窗會取代 [平行工作] 視窗，並顯示與特定中斷點相關的工作，同時也會顯示應用程式中目前為作用中或已排程的任何其他工作。 您可以在 [.NET Framework 4.5.1 公告 (英文)](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)的＜Async-aware debugging＞ (非同步感知偵錯) 一節中，閱讀此功能的相關資訊。
 
@@ -1962,7 +1962,7 @@ Windows Forms 的增強功能包括：
 
 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，資源檔產生器 (Resgen.exe) 可讓您從 .NET Framework 組件內嵌的 .resources 檔建立 .resw 檔，以供 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式使用。 如需詳細資訊，請參閱 [Resgen.exe (資源檔產生器)](../tools/resgen-exe-resource-file-generator.md)。
 
-Managed 特性指引最佳化 (Mpgo.exe) 可讓您藉由最佳化原生映像組件，改善應用程式啟動時間、記憶體使用量 (工作集大小) 和輸送量。 命令列工具會產生原生映像應用程式組件的設定檔資料。 請參閱 [Mpgo.exe (Managed 特性指引最佳化工具)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md)。 自 Visual Studio 2013 起，您可以使用 Mpgo.exe 來最佳化 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式與傳統型應用程式。
+受控設定檔指引最佳化 (Mpgo.exe) 可讓您藉由最佳化原生映像組件，改善應用程式啟動時間、記憶體使用量 (工作集大小) 和輸送量。 命令列工具會產生原生映像應用程式組件的設定檔資料。 請參閱 [Mpgo.exe (受控設定檔指引最佳化工具)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md)。 自 Visual Studio 2013 起，您可以使用 Mpgo.exe 來最佳化 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式與傳統型應用程式。
 
 <a name="parallel" />
 
@@ -2126,7 +2126,7 @@ ASP.NET 4.5 和 4.5.1 加入了 Web Forms、WebSocket 支援、非同步處理�
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>可攜式類別庫<a name="portable" />
 
-在 Visual Studio 2012 (含) 以後版本中的可攜式類別庫專案可讓您撰寫及建置可在多個 .NET Framework 平台上執行的 Managed 組件。 使用可攜式類別庫專案時，可選擇做為目標的平台 (例如 Windows Phone 和 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)])。 專案中可用的類型和成員會自動限制為這些平台上的通用類型和成員。 如需詳細資訊，請參閱[可攜式類別庫](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)。
+在 Visual Studio 2012 (含) 以後版本中的可攜式類別庫專案可讓您撰寫及建置可在多個 .NET Framework 平台上執行的受控組件。 使用可攜式類別庫專案時，可選擇做為目標的平台 (例如 Windows Phone 和 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)])。 專案中可用的類型和成員會自動限制為這些平台上的通用類型和成員。 如需詳細資訊，請參閱[可攜式類別庫](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)。
 
 ## <a name="see-also"></a>另請參閱
 

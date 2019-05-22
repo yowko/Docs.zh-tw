@@ -1,16 +1,16 @@
 ---
-title: HOW TO：在 Windows Form 上建立簡單繫結控制項
+title: 作法：在 Windows Form 上建立簡單繫結控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: fc59e6d5e71bfc69dea0bfc5098a1fa14c97d4b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79b31e61f4c7739a20765c9484db6a8cfd04b01b
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008950"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003766"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>HOW TO：在 Windows Form 上建立簡單繫結控制項
 具有*簡單繫結*，您可以在控制項中顯示單一資料元素，例如資料集資料表中的資料行值。 您可以簡單繫結控制項的任何屬性的資料值。  
@@ -28,7 +28,7 @@ ms.locfileid: "62008950"
   
      最常繫結的屬性會顯示底下 **(DataBindings)** 屬性。 例如，在大部分的控制項**文字**屬性最常繫結。  
   
-4. 如果您想要將屬性繫結不是其中一個常見的繫結的屬性，請按一下**省略符號** 按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](./media/vbellipsesbutton.png "vbEllipsesButton")) 中 **（進階）** 方塊，以顯示**格式化與進階繫結**該控制項屬性的對話方塊中的完整清單。  
+4.  如果您想要將屬性繫結不是其中一個常見的繫結的屬性，請按一下**省略符號** 按鈕 (![省略符號按鈕 （...） 在 [屬性] 視窗的 Visual Studio。](./media/how-to-create-a-simple-bound-control-on-a-windows-form/visual-studio-ellipsis-button.png)) 中 **(進階）** 方塊，以顯示**格式化與進階繫結**該控制項屬性的對話方塊中的完整清單。  
   
 5. 選取您想要繫結，然後按一下下方的下拉式箭頭的屬性**繫結**。  
   

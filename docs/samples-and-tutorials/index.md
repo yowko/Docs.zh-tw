@@ -4,12 +4,12 @@ description: 針對 .NET Core、ASP.NET Core 及 C# 語言的範例和教學課�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: ba0d7e4163a1c4afe08ea3f871c2bccc2335ac48
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: ea5bedc9bd58ca0661524d7edf999e21037e0063
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469471"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960305"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 範例與教學課程
 
@@ -63,7 +63,7 @@ ms.locfileid: "65469471"
 
 **受控 COM 伺服器範例**
 
-[COM 伺服器](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)範例示範如何建立受控 COM 伺服器和如何全域註冊它。
+[COM 伺服器](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)範例示範如何建立受控 COM 伺服器和如何全域註冊它或透過 RegFree COM 來取用它。
 
 **Microsoft Office PIA 範例**
 

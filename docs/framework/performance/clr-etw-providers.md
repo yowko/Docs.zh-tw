@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 639ebe1552fd3950bd77acd7b5730b0d3bdb150f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34d134d0d7ba1d131ded8d8a6eee818b84c86508
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787994"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003736"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW 提供者
 Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取消提供者。  
   
  執行階段提供者會根據啟用哪些關鍵字 (事件的類別) 來引發事件。 例如，您可以啟用 `LoaderKeyword` 關鍵字來收集載入器事件。  
   
- Windows (ETW) 事件的事件追蹤會記錄至副檔名為 .etl 的檔案，稍後可視需要在逗號分隔值 (.csv) 檔案中後置處理。 如需如何將 .etl 檔案轉換成 .csv 檔案的資訊，請參閱[控制 .NET Framework 記錄](../../../docs/framework/performance/controlling-logging.md)。  
+ 事件追蹤的 Windows (ETW) 事件記錄到.etl 副檔名，可以稍後進行後置處理所需的逗號分隔值 (.csv) 檔案中的檔案。 如需如何將 .etl 檔案轉換成 .csv 檔案的資訊，請參閱[控制 .NET Framework 記錄](../../../docs/framework/performance/controlling-logging.md)。  
   
 ## <a name="the-runtime-provider"></a>執行階段提供者  
  執行階段提供者是主要 CLR ETW 提供者。  

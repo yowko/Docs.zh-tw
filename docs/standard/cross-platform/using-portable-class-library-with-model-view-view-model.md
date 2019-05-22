@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a477b9d204be0bc9a4c438bccb1379ecc7abf53
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3aa18d4498bcdcc3737311473b4736545b184395
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664328"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003777"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>搭配 Model-View-View 模型使用可攜式類別庫
 您可以使用.NET Framework[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)實作模型檢視 View Model (MVVM) 模式，並跨多個平台共用的組件。
@@ -25,7 +25,7 @@ ms.locfileid: "64664328"
 
  MVVM 是將使用者介面與基礎商務邏輯隔離的應用程式模式。 您可以實作中的模型和檢視模型類別[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案在 Visual Studio 2012 中，然後再建立 適用於不同平台自訂的檢視。 這個方法讓您只需撰寫資料模型和商務邏輯一次，就可以從 .NET Framework、Silverlight、Windows Phone 和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式使用該程式碼，如下圖所示。
 
- ![搭配 MVVM 圖表可攜式](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")
+ ![顯示跨平台的可攜式類別庫搭配 MVVM 共用組件。](./media/using-portable-class-library-with-model-view-view-model/mvvm-share-assemblies-across-platforms.png)
 
  本主題不提供 MVVM 模式的一般資訊。 它只會提供有關如何使用資訊[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]實作 MVVM。 如需 MVVM 的詳細資訊，請參閱[MVVM 快速入門使用 Prism Library 5.0 for WPF](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40))。
 
