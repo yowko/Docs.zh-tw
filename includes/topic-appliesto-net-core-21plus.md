@@ -1,1 +1,9 @@
-<span data-ttu-id="ef7f1-101">**本主題適用於：✓** .NET Core 2.1 SDK 和更新版本</span><span class="sxs-lookup"><span data-stu-id="ef7f1-101">**This topic applies to: ✓** .NET Core 2.1 SDK and later versions</span></span>
+---
+ms.openlocfilehash: 68ddd9c25981dfadc9dee459432d3f9e0b65bf83
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631723"
+---
+<span data-ttu-id="79403-101">**本文適用於：✓** .NET Core 2.1 SDK</span><span class="sxs-lookup"><span data-stu-id="79403-101">**This article applies to: ✓** .NET Core 2.1 SDK</span></span>

@@ -14,7 +14,7 @@
     - name: 分類支援問題 (多類別分類)
       href: tutorials/github-issue-classification.md
     - name: 預測價格 (迴歸)
-      href: tutorials/taxi-fare.md
+      href: tutorials/predict-prices.md
     - name: 分類鳶尾花 (k-means 叢集)
       href: tutorials/iris-clustering.md
     - name: 電影推薦 (矩陣因式分解)

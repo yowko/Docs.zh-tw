@@ -1,22 +1,22 @@
 ---
-title: HOW TO：依任何字組或欄位排序或篩選文字資料 (LINQ) (C#)
+title: 作法：依任何字組或欄位排序或篩選文字資料 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: 243ff37e38b2e88b55962980e91a1ab6dcebab3c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 305733ccf249f1a2c2608a5bd01d74ba2b1e1b86
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304866"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585776"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a><span data-ttu-id="44357-102">HOW TO：依任何字組或欄位排序或篩選文字資料 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="44357-102">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (C#)</span></span>
-<span data-ttu-id="44357-103">下列範例示範如何依行中的任一欄位，來排序多行結構化文字 (例如逗號分隔值)。</span><span class="sxs-lookup"><span data-stu-id="44357-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="44357-104">此欄位可能會在執行階段以動態方式指定。</span><span class="sxs-lookup"><span data-stu-id="44357-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="44357-105">假設 scores.csv 中的欄位各代表學生的學號和四個測驗分數。</span><span class="sxs-lookup"><span data-stu-id="44357-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>  
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a><span data-ttu-id="1e4a2-102">作法：依任何字組或欄位排序或篩選文字資料 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="1e4a2-102">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (C#)</span></span>
+<span data-ttu-id="1e4a2-103">下列範例示範如何依行中的任一欄位，來排序多行結構化文字 (例如逗號分隔值)。</span><span class="sxs-lookup"><span data-stu-id="1e4a2-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="1e4a2-104">此欄位可能會在執行階段以動態方式指定。</span><span class="sxs-lookup"><span data-stu-id="1e4a2-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="1e4a2-105">假設 scores.csv 中的欄位各代表學生的學號和四個測驗分數。</span><span class="sxs-lookup"><span data-stu-id="1e4a2-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>  
   
-### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="44357-106">建立內含資料的檔案</span><span class="sxs-lookup"><span data-stu-id="44357-106">To create a file that contains data</span></span>  
+### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="1e4a2-106">建立內含資料的檔案</span><span class="sxs-lookup"><span data-stu-id="1e4a2-106">To create a file that contains data</span></span>  
   
-1. <span data-ttu-id="44357-107">從[如何：聯結不同檔案中的內容 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) 主題複製 scores.csv 資料，並將其儲存至解決方案資料夾。</span><span class="sxs-lookup"><span data-stu-id="44357-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>  
+1. <span data-ttu-id="1e4a2-107">從[如何：聯結不同檔案中的內容 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) 主題複製 scores.csv 資料，並將其儲存至解決方案資料夾。</span><span class="sxs-lookup"><span data-stu-id="1e4a2-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="44357-108">範例</span><span class="sxs-lookup"><span data-stu-id="44357-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="1e4a2-108">範例</span><span class="sxs-lookup"><span data-stu-id="1e4a2-108">Example</span></span>  
   
 ```csharp  
 public class SortLines  
@@ -72,12 +72,12 @@ public class SortLines
  */  
 ```  
   
- <span data-ttu-id="44357-109">此範例也會示範如何從方法傳回查詢變數。</span><span class="sxs-lookup"><span data-stu-id="44357-109">This example also demonstrates how to return a query variable from a method.</span></span>  
+ <span data-ttu-id="1e4a2-109">此範例也會示範如何從方法傳回查詢變數。</span><span class="sxs-lookup"><span data-stu-id="1e4a2-109">This example also demonstrates how to return a query variable from a method.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="44357-110">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="44357-110">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="1e4a2-110">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="1e4a2-110">Compiling the Code</span></span>  
 
- <span data-ttu-id="44357-111">建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。</span><span class="sxs-lookup"><span data-stu-id="44357-111">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+<span data-ttu-id="1e4a2-111">建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。</span><span class="sxs-lookup"><span data-stu-id="1e4a2-111">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="44357-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="44357-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e4a2-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1e4a2-112">See also</span></span>
 
-- [<span data-ttu-id="44357-113">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="44357-113">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="1e4a2-113">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="1e4a2-113">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

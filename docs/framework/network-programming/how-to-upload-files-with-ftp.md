@@ -1,23 +1,23 @@
 ---
-title: 如何：透過 FTP 上傳檔案
+title: 作法：透過 FTP 上傳檔案
 description: 這篇文章顯示如何將檔案上傳至 FTP 伺服器的範例。
 ms.date: 06/26/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: e40f17c5-dd12-4c62-9dbf-00ab491382dc
-ms.openlocfilehash: a1f067462361bb123c9d61a1d099c900a6641d6b
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 670bbc65078e6530cffbcfa7d324c36238014ffb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028197"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632813"
 ---
-# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="4ccbe-103">如何：透過 FTP 上傳檔案</span><span class="sxs-lookup"><span data-stu-id="4ccbe-103">How to: Upload files with FTP</span></span>
+# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="719d6-103">作法：透過 FTP 上傳檔案</span><span class="sxs-lookup"><span data-stu-id="719d6-103">How to: Upload files with FTP</span></span>
 
-<span data-ttu-id="4ccbe-104">這個範例示範如何將檔案上傳至 FTP 伺服器。</span><span class="sxs-lookup"><span data-stu-id="4ccbe-104">This sample shows how to upload a file to an FTP server.</span></span>
+<span data-ttu-id="719d6-104">這個範例示範如何將檔案上傳至 FTP 伺服器。</span><span class="sxs-lookup"><span data-stu-id="719d6-104">This sample shows how to upload a file to an FTP server.</span></span>
 
-## <a name="example"></a><span data-ttu-id="4ccbe-105">範例</span><span class="sxs-lookup"><span data-stu-id="4ccbe-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="719d6-105">範例</span><span class="sxs-lookup"><span data-stu-id="719d6-105">Example</span></span>
 
 ```csharp
 using System;
