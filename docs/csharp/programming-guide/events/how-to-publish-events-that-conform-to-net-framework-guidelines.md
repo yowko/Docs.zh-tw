@@ -5,15 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: f67789159cee64e928ae88cede9f4dbf33df1b40
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 010077cd95a9cf6bd7d4c22a54abc02b167755e8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608689"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584319"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>作法：發行符合 .NET Framework 方針的事件 (C# 程式設計手冊)
-下列程序示範如何將遵循標準 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 模式的事件，新增至您的類別和結構。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Class Library 中的所有事件都是以定義如下的 <xref:System.EventHandler> 委派為基礎：  
+下列程序示範如何將遵循標準 .NET Framework 模式的事件，新增至您的類別和結構。 .NET Framework 類別庫中的所有事件都是以 <xref:System.EventHandler> 委派為基礎，其定義如下：  
   
 ```csharp  
 public delegate void EventHandler(object sender, EventArgs e);  
@@ -22,7 +22,7 @@ public delegate void EventHandler(object sender, EventArgs e);
 > [!NOTE]
 >  [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] 引進 <xref:System.EventHandler%601> 這個委派的泛型版本。 下列範例示範如何使用這兩種版本。  
   
- 雖然您所定義之類別中的事件能以任何有效的委派類型 (甚至是傳回值的委派) 為基礎，但通常建議您使用 <xref:System.EventHandler>，讓事件以 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 模式為基礎，如下列範例所示。  
+ 雖然您所定義之類別中的事件能以任何有效的委派型別 (甚至是傳回值的委派) 為基礎，但通常建議您使用 <xref:System.EventHandler>，讓事件以 .NET Framework 模式為基礎，如下列範例所示。  
   
 ### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a>發行以 EventHandler 模式為基礎的事件  
   

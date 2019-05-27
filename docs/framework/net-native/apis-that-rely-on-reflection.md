@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a32e12b593f273c8b812390306c81b311da7c2a4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b86775f78b02b09dd8fb7925a13625783520bce1
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624688"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052674"
 ---
 # <a name="apis-that-rely-on-reflection"></a>依賴反映的 API
-在某些情況下，很難察覺程式碼中是否有使用反映，因此 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈不會保留執行階段所需的中繼資料。 本主題涵蓋一些常見的 API 或常見的程式設計模式，這些 API 或程式設計模式不是反映 API 的一部分，但依賴反映才能順利執行。 如果您在原始程式碼中使用這些 API 或程式設計模式，您可以將相關資訊加入至執行階段指示詞 (.rd.xml) 檔案，讓這些 API 的呼叫不會在執行階段擲回 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外狀況或某個其他例外狀況。  
+在某些情況下，使用程式碼中的反映並不明顯，並因此.NET Native 工具鏈不會保留在執行階段需要的中繼資料。 本主題涵蓋一些常見的 API 或常見的程式設計模式，這些 API 或程式設計模式不是反映 API 的一部分，但依賴反映才能順利執行。 如果您在原始程式碼中使用這些 API 或程式設計模式，您可以將相關資訊加入至執行階段指示詞 (.rd.xml) 檔案，讓這些 API 的呼叫不會在執行階段擲回 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外狀況或某個其他例外狀況。  
   
 ## <a name="typemakegenerictype-method"></a>Type.MakeGenericType 方法  
  您可以使用類似如下的程式碼呼叫 `AppClass<T>` 方法，以動態具現化泛型類型 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>：  
@@ -55,7 +55,7 @@ App1.AppClass`1<System.Int32>.
   
 - 您要呼叫方法的 `Browse` 中繼資料。  如果這是公用方法，加入包含類型的公用 `Browse` 中繼資料也會包含這個方法。  
   
-- 您要呼叫之方法的動態中繼資料，如此一來，[!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈便不會移除反映引動過程委派。 如果方法遺漏動態中繼資料，呼叫 <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 方法時會擲回下列例外狀況：  
+- 您想要呼叫，如此.NET Native 工具鏈不會移除反映引動過程委派方法的動態中繼資料。 如果方法遺漏動態中繼資料，呼叫 <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 方法時會擲回下列例外狀況：  
   
     ```  
     MakeGenericMethod() cannot create this generic method instantiation because the instantiation was not metadata-enabled: 'App1.Class1.GenMethod<Int32>(Int32)'.  

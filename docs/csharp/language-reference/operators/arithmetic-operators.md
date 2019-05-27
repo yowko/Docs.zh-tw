@@ -27,19 +27,19 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 25f716084c489c834e9242800f4c7e341c41aa58
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59301122"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880668"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算術運算子 (C# 參考)
 
 下列運算子會使用數字型別執行算術運算：
 
-- 一元 [`++` (遞增)](#increment-operator-)、[`--` (遞減)](#decrement-operator---)、 [`+` (加號)](#unary-plus-and-minus-operators) 以及 [`-` (減號)](#unary-plus-and-minus-operators) 運算子。
-- 二元 [`*` (乘法)](#multiplication-operator-)、[`/` (除法)](#division-operator-)、[`%` (餘數)](#remainder-operator-)、[`+` (加法)](#addition-operator-) 以及 [`-` (減法)](#subtraction-operator--) 運算子。
+- 一元 [`++` (遞增)](#increment-operator-)、[`--` (遞減)](#decrement-operator---)、[`+` (加號)](#unary-plus-and-minus-operators) 和 [`-` (減號)](#unary-plus-and-minus-operators) 運算子
+- 二元 [`*` (乘法)](#multiplication-operator-)、[`/` (除法)](#division-operator-)、[`%` (餘數)](#remainder-operator-)、[`+` (加法)](#addition-operator-) 和 [`-` (減法)](#subtraction-operator--) 運算子
 
 這些運算子可支援所有[整數](../keywords/integral-types-table.md)和[浮點](../keywords/floating-point-types-table.md)數字型別。
 
@@ -93,7 +93,7 @@ ms.locfileid: "59301122"
 
 [!code-csharp-interactive[multiplication operator](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#Multiplication)]
 
-一元 `*` 運算子是一個[指標間接運算子](multiplication-operator.md#pointer-indirection-operator)。
+一元 `*` 運算子是一個[指標間接運算子](pointer-related-operators.md#pointer-indirection-operator-)。
 
 ## <a name="division-operator-"></a>除法運算子 /
 
@@ -163,23 +163,6 @@ ms.locfileid: "59301122"
 
 您也可以使用 `-` 運算子進行委派移除。 如需詳細資訊，請參閱 [`-` 運算子](subtraction-operator.md)一文。
 
-## <a name="operator-precedence-and-associativity"></a>運算子優先順序和關聯性
-
-下列清單會將算術運算子從最高優先順序開始排序到最低優先順序：
-
-- 後置遞增 `x++` 和遞減 `x--` 運算子。
-- 前置遞增 `++x` 和遞減 `--x`，以及一元 `+` 和 `-` 運算子。
-- 乘法類 `*`、`/` 和 `%` 運算子。
-- 加法類 `+` 和 `-` 運算子。
-
-二元算術運算子都是左向關聯。 亦即，具有相同優先順序層級的運算子會由左至右進行評估。
-
-使用括號 `()` 變更運算子優先順序和關聯性強制執行的評估順序。
-
-[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
-
-如需按優先順序層級排序的 C# 運算子完整清單，請參閱 [C# 運算子](index.md)。
-
 ## <a name="compound-assignment"></a>複合指派
 
 若是二元運算子 `op`，表單的複合指派運算式
@@ -200,7 +183,28 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
 
+由於[數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)的緣故，`op` 作業的結果可能不會隱含轉換成 `x` 的 `T` 類型。 在此情況下，如果 `op` 是預先定義的運算子，且作業結果可以明確轉換成 `x` 的 `T` 型別，則形式 `x op= y` 的複合指派運算式相等於 `x = (T)(x op y)`，唯一的不同在於 `x` 只會評估一次。 下列範例示範了該行為：
+
+[!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
+
 您也可以使用 `+=` 和 `-=` 運算子訂閱及取消訂閱[事件](../keywords/event.md)。 如需詳細資訊，請參閱[如何：訂閱及取消訂閱事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
+
+## <a name="operator-precedence-and-associativity"></a>運算子優先順序和關聯性
+
+下列清單會將算術運算子從最高優先順序開始排序到最低優先順序：
+
+- 後置遞增 `x++` 和遞減 `x--` 運算子
+- 前置遞增 `++x` 和遞減 `--x` 以及一元 `+` 和 `-` 運算子
+- 乘法類 `*`、`/` 和 `%` 運算子
+- 加法類 `+` 和 `-` 運算子
+
+二元算術運算子都是左向關聯。 亦即，具有相同優先順序層級的運算子會由左至右進行評估。
+
+使用括號 `()` 變更運算子優先順序和關聯性強制執行的評估順序。
+
+[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
+
+如需按優先順序層級排序的 C# 運算子完整清單，請參閱 [C# 運算子](index.md)。
 
 ## <a name="arithmetic-overflow-and-division-by-zero"></a>算術溢位和除數為零
 
@@ -256,11 +260,12 @@ x = x op y
 - [減法運算子](~/_csharplang/spec/expressions.md#subtraction-operator)
 - [複合指派](~/_csharplang/spec/expressions.md#compound-assignment)
 - [checked 和 unchecked 運算子](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
+- [數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計手冊](../../programming-guide/index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 運算子](index.md)
 - <xref:System.Math?displayProperty=nameWithType>
 - <xref:System.MathF?displayProperty=nameWithType>

@@ -1,6 +1,6 @@
 ---
 title: C# foreach 陳述式
-ms.date: 06/29/2018
+ms.date: 05/17/2019
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 417a8cefbc9bc7544ae1156992e6e6c549fb828f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7a1508db23f60cac487e0171c3db7756bc228fd2
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128618"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880542"
 ---
 # <a name="foreach-in-c-reference"></a>foreach、in (C# 參考)
 
@@ -26,6 +26,8 @@ ms.locfileid: "53128618"
 從 C# 7.3 開始，如果列舉值的 `Current` 屬性會傳回[參考傳回值](ref.md#reference-return-values) (`T` 是集合元素類型的 `ref T`)，您可以使用 `ref` 或 `ref readonly` 修飾詞宣告反覆運算變數。
 
 您可以在 `foreach` 陳述式區塊內的任何位置，使用 [break](break.md) 陳述式跳出迴圈，或使用 [continue](continue.md) 陳述式逐步執行到迴圈中的下一個反覆運算。 您也可以使用 [goto](goto.md)、[return](return.md) 或 [throw](throw.md) 陳述式結束 `foreach` 迴圈。
+
+若將 `foreach` 陳述式套用到 `null`，則會擲回 <xref:System.NullReferenceException>。 若 `foreach` 陳述式的來源集合為空白，則不會執行 `foreach` 迴圈的主體，且會跳過該主體。
 
 ## <a name="examples"></a>範例
 

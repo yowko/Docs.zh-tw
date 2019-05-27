@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-ms.openlocfilehash: 5115973e3d8e558199f9569baeea9e272c0528b0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 895c49fb1fde56a1c9bf8b3a0ecf9de4f29f9972
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674104"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591210"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>逐步解說：判斷 My.Application.Log 寫入資訊的位置 (Visual Basic)
 
@@ -35,7 +35,7 @@ ms.locfileid: "57674104"
 
     如果這些區段不存在，則電腦的組態檔可能會設定 `My.Application.Log` 記錄接聽程式。 下列步驟描述如何判斷電腦組態檔能夠定義哪些事︰
 
-    1. 找出電腦的 machine.config 檔案。 一般而言，它位於 *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* 目錄中，其中 `SystemRoot` 為作業系統的目錄，而 `frameworkVersion` 為 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]的版本。
+    1. 找出電腦的 machine.config 檔案。 一般而言，它位於 *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* 目錄中，其中 `SystemRoot` 為作業系統的目錄，而 `frameworkVersion` 為 .NET Framework 的版本。
 
         machine.config 中的設定可以由應用程式組態檔覆寫。
 

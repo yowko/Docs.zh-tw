@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 SaveFileDialog 元件儲存檔案
+title: 作法：使用 SaveFileDialog 元件儲存檔案
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 933e049f825bcc8f2afef914f810b52c1cf51245
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 18d9b93b78d3ed588eafa48831448983ccd61fe8
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638311"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053502"
 ---
-# <a name="how-to-save-files-using-the-savefiledialog-component"></a>HOW TO：使用 SaveFileDialog 元件儲存檔案
+# <a name="how-to-save-files-using-the-savefiledialog-component"></a>作法：使用 SaveFileDialog 元件儲存檔案
 <xref:System.Windows.Forms.SaveFileDialog>元件可讓使用者瀏覽檔案系統，然後選取要儲存的檔案。 對話方塊會傳回使用者在對話方塊中所選取之檔案的路徑和名稱。 不過，您必須撰寫程式碼，以實際將檔案寫入至磁碟。  
   
 ### <a name="to-save-a-file-using-the-savefiledialog-component"></a>使用 SaveFileDialog 元件儲存檔案  
@@ -161,7 +161,7 @@ ms.locfileid: "64638311"
        }  
     ```  
   
-     (Visual C# 和[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 下列程式碼置於表單的建構函式，以註冊事件處理常式。  
+     (VisualC#和 Visual C++)下列程式碼置於表單的建構函式，以註冊事件處理常式。  
   
     ```csharp  
     this.button2.Click += new System.EventHandler(this.button2_Click);  

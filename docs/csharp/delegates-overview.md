@@ -3,15 +3,14 @@ title: 委派簡介
 description: 透過此概觀主題了解委派，該主題介紹委派的基本概念，並討論委派的語言設計目標。
 ms.date: 06/20/2016
 ms.assetid: 59b61d77-84e5-457b-8da5-fb5f24ca6ed6
-ms.openlocfilehash: d42d9d10aeaa153f12933fa3a59e58719f7741e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 43cdf9345f0bae9d5c4d0e6a31d80bc269c37fec
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879024"
 ---
 # <a name="introduction-to-delegates"></a>委派簡介
-
-[上一個](delegates-events.md)
 
 委派提供 .NET 中的「晚期繫結」機制。 「晚期繫結」表示您建立演算法，在其中，呼叫端也會提供至少一個方法來實作演算法的一部分。
 
@@ -31,7 +30,7 @@ C# 語言委派概念提供一流的語言支援，以及這類概念的型別�
 
 小組想要將通用語言建構用於任何晚期繫結演算法。 這可讓開發人員了解一個概念，並將這個相同的概念用於許多不同的軟體問題。
 
-其次，小組想要同時支援單一和多點傳送方法呼叫 (多點傳送委派是已將多個方法鏈結在一起的委派)。 您將在[本系列稍後](delegate-class.md)看到範例。 
+其次，小組想要同時支援單一和多點傳送方法呼叫。 (多點傳送委派是鏈結在一起之多個方法呼叫的委派。 您將在[本系列稍後](delegate-class.md)看到範例。) 
 
 小組想要委派支援開發人員期待所有 C# 建構的相同型別安全。 
 

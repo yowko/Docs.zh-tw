@@ -1,17 +1,21 @@
 ---
 title: dotnet build 命令
 description: dotnet build 命令會建置專案和其所有相依性。
-ms.date: 12/04/2018
-ms.openlocfilehash: 6a701ee371221c780a878e64b996df95f709371f
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.date: 04/24/2019
+ms.openlocfilehash: 6564aacbe520797b47095929cfe72c6b180b99a7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612689"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632127"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
+**本文適用於：✓** .NET Core 1.x SDK 及更新版本
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>名稱
 
@@ -19,29 +23,16 @@ ms.locfileid: "59612689"
 
 ## <a name="synopsis"></a>概要
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
-dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental]
-    [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
+    [--no-incremental] [--nologo] [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```
-dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
-    [-r|--runtime] [-v|--verbosity] [--version-suffix]
-
-dotnet build [-h|--help]
-```
-
----
 
 ## <a name="description"></a>說明
 
-`dotnet build` 命令會將專案及其相依性建置成一組二進位檔。 二進位檔將專案程式碼包含在副檔名為 *.dll* 的中繼語言 (IL) 檔案中，以及副檔名為 *.pdb* 且用於偵錯的符號檔。 產生相依性的 JSON 檔案 (*\*.deps.json*)，其中列出應用程式的相依性。 產生 *\*.runtimeconfig.json* 檔案，其中指定應用程式的共用執行階段及其版本。
+`dotnet build` 命令會將專案及其相依性建置成一組二進位檔。 二進位檔將專案程式碼包含在副檔名為 *.dll* 的中繼語言 (IL) 檔案中，以及副檔名為 *.pdb* 且用於偵錯的符號檔。 產生相依性的 JSON 檔案 ( *\*.deps.json*)，其中列出應用程式的相依性。 產生 *\*.runtimeconfig.json* 檔案，其中指定應用程式的共用執行階段及其版本。
 
 如果專案對於第三方有相依性 (例如來自 NuGet 的程式庫)，這些相依性將會從 NuGet 快取解析，而不會透過專案的建置輸出提供。 因此，`dotnet build` 產生的結果尚未準備好轉移到另一部電腦來執行。 這與 .NET Framework 的行為相反。在 .NET Framework 中，建置可執行檔專案 (應用程式) 所產生的輸出，可在任何已安裝 .NET Framework 的電腦上執行。 若要在 .NET Core 中擁有類似體驗，您需要使用 [dotnet publish](dotnet-publish.md) 命令。 如需詳細資訊，請參閱 [.NET Core 應用程式部署](../deploying/index.md)。
 
@@ -71,11 +62,9 @@ dotnet build [-h|--help]
 
 `PROJECT | SOLUTION`
 
-要建置的專案或方案檔。 如果未指定專案或方案檔，MSBuild 會搜尋目前工作目錄中副檔名結尾為 *proj* 或 *sln* 的檔案，並使用該檔案。
+要建置的專案或方案檔。 若未指定專案或解決方案檔，MSBuild 會搜尋目前工作目錄中副檔名結尾為 *proj* 或 *sln* 的檔案，並使用該檔案。
 
 ## <a name="options"></a>選項
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`-c|--configuration {Debug|Release}`**
 
@@ -87,11 +76,15 @@ dotnet build [-h|--help]
 
 * **`--force`**
 
-  即使最後的還原成功，仍強制解析所有相依性。 指定這個旗標等同於刪除 *project.assets.json* 檔案。
+  即使最後的還原成功，仍強制解析所有相依性。 指定這個旗標等同於刪除 *project.assets.json* 檔案。 自 .NET Core 2.0 SDK 起提供使用。
 
 * **`-h|--help`**
 
   印出命令的簡短說明。
+
+* **`--interactive`**
+
+  可讓命令停止，並等候使用者輸入或進行動作。 例如完成驗證。 自 .NET Core 3.0 SDK 起提供使用。
 
 * **`--no-dependencies`**
 
@@ -101,9 +94,13 @@ dotnet build [-h|--help]
 
   針對累加建置，將建置標示為不安全。 此旗標會關閉累加編譯，並強制全新重建專案的相依性關係圖。
 
+* **`--no-logo`**
+
+  不要顯示程式啟始橫幅或著作權訊息。 自 .NET Core 3.0 SDK 起提供使用。
+
 * **`--no-restore`**
 
-  建置期間不會執行隱含還原。
+  建置期間不會執行隱含還原。 自 .NET Core 2.0 SDK 起提供使用。
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -115,51 +112,11 @@ dotnet build [-h|--help]
 
 * **`-v|--verbosity <LEVEL>`**
 
-  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+  設定 MSBuild 詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設為 `minimal`。
 
 * **`--version-suffix <VERSION_SUFFIX>`**
 
-  定義專案檔版本欄位中星號 (`*`) 的版本尾碼。 格式遵循 NuGet 的版本指導方針。
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`-c|--configuration {Debug|Release}`**
-
-  定義組建組態。 預設值為 `Debug`。
-
-* **`-f|--framework <FRAMEWORK>`**
-
-  針對特定[架構](../../standard/frameworks.md)進行編譯。 架構必須定義於[專案檔](csproj.md)中。
-
-* **`-h|--help`**
-
-  印出命令的簡短說明。
-
-* **`--no-dependencies`**
-
-  忽略專案對專案 (P2P) 參考，並且只建置指定的根專案。
-
-* **`--no-incremental`**
-
-  針對累加建置，將建置標示為不安全。 此旗標會關閉累加編譯，並強制全新重建專案的相依性關係圖。
-
-* **`-o|--output <OUTPUT_DIRECTORY>`**
-
-  在其中放置已建置的二進位檔的目錄。 當您指定這個選項時，也需要定義 `--framework`。
-
-* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
-
-  指定目標執行階段。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。
-
-* **`-v|--verbosity <LEVEL>`**
-
-  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
-
-* **`--version-suffix <VERSION_SUFFIX>`**
-
-  定義專案檔版本欄位中星號 (`*`) 的版本尾碼。 格式遵循 NuGet 的版本指導方針。
-
----
+  設定要在建置專案時使用的 `$(VersionSuffix)` 屬性值。 這只有在沒有設定 `$(Version)` 屬性時才能運作。 接著，`$(Version)` 會設為 `$(VersionPrefix)` 加上 `$(VersionSuffix)`，並以破折號區隔。
 
 ## <a name="examples"></a>範例
 
@@ -175,10 +132,10 @@ dotnet build [-h|--help]
   dotnet build --configuration Release
   ```
 
-* 針對特定執行階段，建置專案和其相依性 (在此範例中為 Ubuntu 16.04)：
+* 針對特定執行階段，建置專案和其相依性 (在此範例中為 Ubuntu 18.04)：
 
   ```console
-  dotnet build --runtime ubuntu.16.04-x64
+  dotnet build --runtime ubuntu.18.04-x64
   ```
 
 * 建置專案，並在還原作業期間使用指定的 NuGet 套件來源 (.NET Core 2.0 SDK 和更新版本)：

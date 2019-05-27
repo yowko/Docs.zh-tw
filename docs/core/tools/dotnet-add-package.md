@@ -1,17 +1,21 @@
 ---
 title: dotnet add package 命令
 description: "'dotnet add package' 命令提供方便的選項，將 NuGet 套件參考新增至專案。"
-ms.date: 12/04/2018
-ms.openlocfilehash: 159b208feafb82e267629ea47dcef02d6b575055
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 04/24/2019
+ms.openlocfilehash: 07cb6cd8e7873def6f969a54c1f7b9a7325f9491
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169998"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632276"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
+**本文適用於：✓** .NET Core 1.x SDK 和更新版本
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>名稱
 
@@ -78,11 +82,11 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 * **`--package-directory <PACKAGE_DIRECTORY>`**
 
-  將套件還原至指定的目錄。
+  還原套件的目錄。
 
 * **`-s|--source <SOURCE>`**
 
-  在還原作業期間，使用特定 NuGet 套件來源。
+  要在還原作業期間使用的 NuGet 套件來源。
 
 * **`-v|--version <VERSION>`**
 

@@ -1,15 +1,15 @@
 ---
-title: HOW TO：合併和比較字串集合 (LINQ) (C#)
+title: 作法：合併和比較字串集合 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 5f8d734738606ada2db6db7f3c8e6c08ca57a543
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cdddf0aaac4264ae70c89590ef61e7b1bbf4cb9b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323742"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585967"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>HOW TO：合併和比較字串集合 (LINQ) (C#)
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>作法：合併和比較字串集合 (LINQ) (C#)
 本例示範如何合併包含文字行的檔案，然後排序結果。 具體來說，它會示範如何在兩組文字行上執行簡單的串連、等位和交集。  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>設定專案和文字檔案  
@@ -169,7 +169,7 @@ class MergeStrings
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。  
+ 建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。  
   
 ## <a name="see-also"></a>另請參閱
 

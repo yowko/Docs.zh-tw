@@ -1,15 +1,15 @@
 ---
-title: HOW TO：查詢字串中的字元 (LINQ) (C#)
+title: 作法：查詢字串中的字元 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: 0c577fc2dc2ae07574580f819a6fb51336107dfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b31dfb4c9fb7f7efc439a1703f13aafca3053e6a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665626"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584448"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>HOW TO：查詢字串中的字元 (LINQ) (C#)
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>作法：查詢字串中的字元 (LINQ) (C#)
 因為 <xref:System.String> 類別會實作泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面，所以可以用字元序列的形式查詢任何字串。 不過，這不是常見的 LINQ 用法。 對於複雜的模式比對作業，使用 <xref:System.Text.RegularExpressions.Regex> 類別。  
   
 ## <a name="example"></a>範例  
@@ -55,7 +55,7 @@ class QueryAString
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。  
+ 建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。  
   
 ## <a name="see-also"></a>另請參閱
 

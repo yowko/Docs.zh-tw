@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cc88106a54a00b4b12e5043da7961791a98102c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 79cfc607e20d921c7ae942cb9755eee4264336eb
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344360"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877045"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio 的開發人員命令提示字元
 
@@ -38,7 +38,7 @@ Visual Studio 的開發人員命令提示字元可讓您更輕鬆地使用 .NET 
 
 ### <a name="in-windows-81"></a>在 Windows 8.1
 
-1. 移至 [開始] 畫面，例如藉由按下鍵盤上的 Windows 標誌鍵 ![Windows 標誌](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")。
+1. 按下 Windows 標誌鍵 ![鍵盤上的 Windows 標誌鍵](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) 前往 [開始] 畫面。 位於您的鍵盤上，作為範例。
 
 2. 在 [開始] 畫面上，按 **Ctrl** + **Tab** 以開啟 [應用程式] 清單，然後輸入 `V`。 這會顯示包含所有已安裝 Visual Studio 命令提示字元的清單。
 
@@ -46,9 +46,9 @@ Visual Studio 的開發人員命令提示字元可讓您更輕鬆地使用 .NET 
 
 ### <a name="in-windows-8"></a>在 Windows 8
 
-1. 移至 [開始] 畫面，例如藉由按下鍵盤上的 Windows 標誌鍵 ![Windows 標誌](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")。
+1. 按下 Windows 標誌鍵 ![鍵盤上的 Windows 標誌鍵](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) 前往 [開始] 畫面。 位於您的鍵盤上，作為範例。
 
-2. 在 [開始] 畫面上，按下 Windows 標誌鍵 ![Windows 標誌](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") `+ Z`。
+2. 在 [開始] 畫面上，按下 Windows 標誌鍵 ![鍵盤上的 Windows 標誌鍵。](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) `+ Z`.
 
 3. 選擇畫面底部的 [應用程式檢視] 圖示，然後輸入 `V`。 這會顯示包含所有已安裝 Visual Studio 命令提示字元的清單。
 

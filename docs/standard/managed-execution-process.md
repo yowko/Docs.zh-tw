@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6e97591508c2aa90306ed22556f12f257cc4b03
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6007bc6085366e46e60696e412507026726f098a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647723"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593447"
 ---
 # <a name="managed-execution-process"></a>Managed 執行程序
 <a name="introduction"></a> Managed 執行處理序包含下列步驟，將於本主題中稍後詳細討論：  
@@ -56,7 +56,7 @@ ms.locfileid: "64647723"
   
 <a name="compiling_msil_to_native_code"></a>   
 ## <a name="compiling-msil-to-native-code"></a>將 MSIL 編譯成機器碼  
- Microsoft 中間語言 (MSIL) 必須先根據 Common Language Runtime 編譯成機器碼才能執行 (該程式碼是根據目標電腦架構來編譯)。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供兩種執行這項轉換的方式：  
+ Microsoft 中間語言 (MSIL) 必須先根據 Common Language Runtime 編譯成機器碼才能執行 (該程式碼是根據目標電腦架構來編譯)。 .NET Framework 提供兩種執行這項轉換的方式：  
   
 - .NET Framework Just-In-Time (JIT) 編譯器。  
   

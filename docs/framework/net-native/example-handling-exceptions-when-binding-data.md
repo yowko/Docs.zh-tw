@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25b2117de40bbe7ba36fab028526116fc01ae09b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 137459acc275629bb4608218772ae969e3fcf99a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868515"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052698"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>範例：處理繫結資料時所發生的例外狀況
 > [!NOTE]
 >  本主題討論 .NET 原生開發人員預覽，這是發行前版本的軟體。 您可以從 [Microsoft Connect 網站](https://go.microsoft.com/fwlink/?LinkId=394611)下載預覽 (需要註冊)。  
   
- 下列範例顯示如何解決當以 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈編譯的應用程式嘗試繫結資料時，所擲回的 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外狀況。 以下是例外狀況資訊：  
+ 下列範例示範如何解決[MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)使用.NET Native 工具鏈編譯的應用程式嘗試繫結資料時擲回的例外狀況。 以下是例外狀況資訊：  
   
 ```  
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   

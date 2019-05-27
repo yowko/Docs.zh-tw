@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b7aa028afeaf4230ee079f0d4071a5cd6a21c65
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 20ec022f378feba3368ea79fdd5c6ee7ecccf1b9
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59320908"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469645"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>將 COM 元件公開給 .NET Framework
 本節摘要說明向 Managed 程式碼公開現有 COM 元件所需要的程序。 如需撰寫與 .NET Framework 緊密整合的 COM 伺服器的詳細資訊，請參閱[交互操作的設計考量](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))。
@@ -32,7 +32,7 @@ ms.locfileid: "59320908"
   
 3. [編譯 Interop 專案](compiling-an-interop-project.md)。  
   
-     [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供與 Common Language Specification (CLS) 相容的數種語言編譯器，包括 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C# 和 C++。  
+     [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供與 Common Language Specification (CLS) 相容的數種語言編譯器，包括 Visual Basic、C# 和 C++。  
   
 4. [部署 Interop 應用程式](deploying-an-interop-application.md)。  
   

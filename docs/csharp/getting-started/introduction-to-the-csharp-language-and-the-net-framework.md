@@ -6,16 +6,16 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 28fde47721e6354612ffec557da25c6d3bb775e4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: bd2efcd28a8349ef07873adb5eaa69784e61d482
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409220"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585935"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 語言和 .NET Framework 簡介
 
-C# 是型別安全的優質物件導向語言，可讓開發人員建置各種在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 上執行且兼俱安全性與穩定性的應用程式。 您可以使用 C# 建立 Windows 用戶端應用程式、XML Web 服務、分散式元件、主從應用程式、資料庫應用程式，而且還不僅止於此。 Visual C# 提供進階的程式碼編輯器、使用方便的使用者介面設計工具、整合式偵錯工具及許多其他工具，以根據 C# 語言和 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 輕鬆地開發應用程式。  
+C# 是型別安全的優質物件導向語言，可讓開發人員建置各種在 .NET Framework 上執行且兼具安全性與穩定性的應用程式。 您可以使用 C# 建立 Windows 用戶端應用程式、XML Web 服務、分散式元件、主從應用程式、資料庫應用程式，而且還不僅止於此。 Visual C# 提供進階的程式碼編輯器、使用方便的使用者介面設計工具、整合式偵錯工具及許多其他工具，以根據 C# 語言和 .NET Framework 輕鬆地開發應用程式。  
   
 > [!NOTE]
 > Visual C# 文件假設您了解基本程式設計概念。 如果您是新手，可能會想要瀏覽網站上提供的 Visual C# Express。 您也可以利用 C# 的相關書籍和 Web 資源來了解實用的程式設計技能。  
@@ -52,7 +52,7 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
 
 ## <a name="net-framework-platform-architecture"></a>.NET Framework 平台架構
 
- C# 程式在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 上執行，其為 Windows 不可或缺的元件，包括稱為通用語言執行平台 (CLR) 的虛擬執行系統和整合的一組類別庫。 CLR 是由 Microsoft 通用語言基礎結構 (CLI) 的商業實作，此國際標準是建立各種語言和程式庫都能一起順暢執行和開發環境的基礎。  
+ C# 程式在 .NET Framework 上執行，其為 Windows 不可或缺的元件，包括稱為通用語言執行平台 (CLR) 的虛擬執行系統和一組已整合類別庫。 CLR 是由 Microsoft 通用語言基礎結構 (CLI) 的商業實作，此國際標準是建立各種語言和程式庫都能一起順暢執行和開發環境的基礎。  
   
  以 C# 撰寫的原始程式碼會編譯成符合 CLI 規格的中繼語言 (IL) 。 IL 程式碼和像是點陣圖和字串的資源，會以稱為組件的可執行檔儲存在磁碟上，副檔名通常為 .exe 或 .dll。 組件包含的資訊清單提供有關組件的型別、版本、文化特性及安全性需求資訊。  
   
@@ -60,9 +60,9 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
  ![從 C&#35; 原始程式碼到電腦執行](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
   
- 語言互通性是 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 的一項重要功能。 由於 C# 編譯器所產生的 IL 程式碼符合通用型別規格 (CTS)，所以從 C# 產生的 IL 程式碼可以和從 Visual Basic、Visual C++ 的 .NET 版本所產生的程式碼互動，或和 20 種以上的任何其他 CTS 相容語言互動。 單一組件可包含以不同的 .NET 語言撰寫的多個模組，而且型別可以彼此參考，如同它們都以相同的語言撰寫一般。  
+ 語言互通性是 .NET Framework 的一項重要功能。 由於 C# 編譯器所產生的 IL 程式碼符合通用型別規格 (CTS)，所以從 C# 產生的 IL 程式碼可以和從 Visual Basic、Visual C++ 的 .NET 版本所產生的程式碼互動，或和 20 種以上的任何其他 CTS 相容語言互動。 單一組件可包含以不同的 .NET 語言撰寫的多個模組，而且型別可以彼此參考，如同它們都以相同的語言撰寫一般。  
   
- 除了執行階段服務以外，[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 也包含超過 4000 種依據命名空間分類的大量類別庫，提供各式各樣的實用功能，從檔案輸入和輸出的字串操作乃至 XML 剖析，到 Windows Form 控制項的一切。 一般 C# 應用程式會使用廣泛用來處理常見「配管」例行工作的 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 類別庫。  
+ 除了執行階段服務以外，.NET Framework 也包含超過 4000 種依據命名空間分類的大量類別庫，提供各式各樣的實用功能，從檔案輸入和輸出的字串操作乃至 XML 剖析，到 Windows Form 控制項的一切。 一般 C# 應用程式廣泛使用 .NET Framework 類別庫處理常見的「配管」例行工作。  
   
  如需 .NET Framework 的詳細資訊，請參閱 [Microsoft.NET Framework 概觀 (英文)](../../framework/get-started/overview.md)。  
   

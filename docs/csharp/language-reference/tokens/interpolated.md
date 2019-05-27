@@ -2,7 +2,7 @@
 title: $ - 字串內插補點 - C# 參考
 ms.custom: seodec18
 description: 字串內插補點提供比傳統字串複合格式化更容易讀取且方便的語法來格式化字串輸出。
-ms.date: 03/26/2018
+ms.date: 04/29/2019
 f1_keywords:
 - $_CSharpKeyword
 - $
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 716f6ee2c9eb09abcbd4ada16954315ed4a56c02
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920892"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65210433"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 字串內插補點 (C# 參考)
 
@@ -26,7 +26,7 @@ ms.locfileid: "58920892"
 
 字串插補在建立格式化字串時，是比[字串複合格式化](../../../standard/base-types/composite-formatting.md)功能更容易理解且方便的語法。 下列範例會使用這兩項功能，產生相同的輸出：
 
-[!code-csharp-interactive[compare with composite formatting](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#1)]
+[!code-csharp-interactive[compare with composite formatting](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#1)]
 
 ## <a name="structure-of-an-interpolated-string"></a>插入字串的結構
 
@@ -48,7 +48,7 @@ ms.locfileid: "58920892"
 
 下列範例會使用上述的選擇性格式化元件：
 
-[!code-csharp-interactive[specify alignment and format string](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#2)]
+[!code-csharp-interactive[specify alignment and format string](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#2)]
 
 ## <a name="special-characters"></a>特殊字元
 
@@ -58,7 +58,7 @@ ms.locfileid: "58920892"
 
 下列範例示範如何在結果字串中包含大括號以及如何在插入運算式中使用條件運算子：
 
-[!code-csharp-interactive[example with ternary conditional operator](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
+[!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
 逐字插入字串以 `$` 字元為開頭，後面接著 `@` 字元。 如需逐字字串的詳細資訊，請參閱[字串](../keywords/string.md)和[逐字識別碼](verbatim.md)主題。
 
@@ -83,11 +83,21 @@ ms.locfileid: "58920892"
 
 下列範例會使用隱含轉換成 <xref:System.FormattableString>，來建立文化特性特定結果字串：
 
-[!code-csharp-interactive[create culture-specific result strings](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#4)]
+[!code-csharp-interactive[create culture-specific result strings](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#4)]
 
 ## <a name="additional-resources"></a>其他資源
 
-如果您是字串插補的新手，請參閱 [C# 中的字串插補](../../tutorials/exploration/interpolated-strings.yml)互動式教學課程。 或者您也可以在本機電腦上嘗試 [C# 中的字串插補](../../tutorials/string-interpolation.md)教學課程。
+如果您是字串插補的新手，請參閱 [C# 中的字串插補](../../tutorials/exploration/interpolated-strings.yml)互動式教學課程。 您也可以查看其他教學課程：[C# 中的字串插值](../../tutorials/string-interpolation.md)，其中示範如何使用內插字串來產生格式化的字串。
+
+## <a name="compilation-of-interpolated-strings"></a>內插字串的編譯
+
+如果內插字串的類型為 `string`，它通常會轉換成 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法呼叫。 如果分析的行為相當於串連，編譯器可以將 <xref:System.String.Format%2A?displayProperty=nameWithType> 取代為 <xref:System.String.Concat%2A?displayProperty=nameWithType>。
+
+如果內插字串的類型為 <xref:System.IFormattable> 或 <xref:System.FormattableString>，編譯器會產生 <xref:System.Runtime.CompilerServices.FormattableStringFactory.Create%2A?displayProperty=nameWithType> 方法的呼叫。
+
+## <a name="c-language-specification"></a>C# 語言規格
+
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[內插字串](~/_csharplang/spec/expressions.md#interpolated-strings)一節。
 
 ## <a name="see-also"></a>另請參閱
 

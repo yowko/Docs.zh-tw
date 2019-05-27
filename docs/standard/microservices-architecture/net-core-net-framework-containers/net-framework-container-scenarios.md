@@ -1,15 +1,13 @@
 ---
 title: 針對 Docker 容器選擇 .NET Framework 的時機
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 針對 Docker 容器選擇 .NET Framework 的時機
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 012eecbef669ada64392c43b92e8053873956210
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a31344173c82ddd461d2ff2901caeec7be43ebaa
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650709"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638869"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>針對 Docker 容器選擇 .NET Framework 的時機
 
@@ -59,8 +57,7 @@ ms.locfileid: "64650709"
 - **從 .NET Framework 移植到 .NET Core**  
     [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
-- **Docker 上的 .NET Framework 指南**  
-    [https://docs.microsoft.com/dotnet/framework/docker/](../../../framework/docker/index.md)
+- **Docker 上的 .NET Core 指南** [https://docs.microsoft.com/dotnet/core/docker/intro-net-docker](../../../core/docker/intro-net-docker.md)
 
 - **.NET 偵錯概觀**  
     [https://docs.microsoft.com/dotnet/standard/components](../../components.md)

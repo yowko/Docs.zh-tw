@@ -1,15 +1,15 @@
 ---
-title: HOW TO：查詢具有指定屬性或名稱的檔案 (C#)
+title: 作法：查詢具有指定屬性或名稱的檔案 (C#)
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: e600899251fe08884088275307f4311f3b9787cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94642ff500cb065ffcb28d6099c3f9f50d43d124
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564155"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584333"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>HOW TO：查詢具有指定屬性或名稱的檔案 (C#)
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>作法：查詢具有指定屬性或名稱的檔案 (C#)
 這個範例示範如何在指定的樹狀目錄中尋找所有具有指定副檔名 (例如 ".txt") 的檔案。 它也會示範如何根據建立時間來傳回樹狀結構中的最新或最舊檔案。  
   
 ## <a name="example"></a>範例  
@@ -64,7 +64,7 @@ class FindFileByExtension
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以 .NET Framework 3.5 版或更高版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。  
+  建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。
   
 ## <a name="see-also"></a>另請參閱
 

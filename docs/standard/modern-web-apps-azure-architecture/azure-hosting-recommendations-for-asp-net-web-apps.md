@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | AS
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: cda4c002c73e2dd0db1b2d5d1fa8bc76903c5c62
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d328f92ef5e64ee5d92b71472a5e32e2f5d007fd
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828380"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063248"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Web Core 應用程式的 Azure 裝載建議
 
@@ -26,11 +26,9 @@ ms.locfileid: "55828380"
 
 - 容器
 
-- Azure Service Fabric
-
 - 虛擬機器 (VM)
 
-其中，App Service Web Apps 是大多數情況下建議的方法。 對於微服務架構，請考慮容器型方法或 Service Fabric。 如果您需要更充分掌控執行應用程式的機器，請考慮 Azure 虛擬機器。
+其中，App Service Web Apps 是大多數情況下建議的方法。 針對微服務架構，請考慮容器式方法。 如果您需要更充分掌控執行應用程式的機器，請考慮 Azure 虛擬機器。
 
 ### <a name="app-service-web-apps"></a>App Service Web Apps
 
@@ -45,6 +43,8 @@ App Service Web Apps 提供全受管的平台，針對裝載 Web 應用程式最
 - 安全性與合規性。
 
 - Visual Studio 整合。
+
+- 透過[用於容器的 Web App](https://azure.microsoft.com/en-us/services/app-service/containers/) 支援 Linux 及 Windows 容器。
 
 Azure App Service 是大部分 Web 應用程式的最佳選擇。 部署和管理整合至平台中、網站可快速調整以處理高流量負載，以及內建的負載平衡和流量管理員提供高可用性。 您可以使用線上移轉工具，輕鬆將現有網站移動到 Azure App Service、使用 Web 應用程式資源庫中的開放原始碼應用程式，或使用您選擇的架構和工具來建立新網站。 WebJobs 功能可輕鬆將背景工作處理新增至 App Service Web 應用程式。
 
@@ -61,30 +61,9 @@ AKS 透過將大部分責任轉移給 Azure，來降低管理 Kubernetes 叢集�
 
 有了 Azure 負責管理您 AKS 叢集中的節點，您就不再需要手動執行許多工作，像是叢集升級。 由於 Azure 會為您處理這些重要的維護工作，因此 AKS 不提供對叢集的直接存取 (例如透過 SSH)。
 
-### <a name="azure-service-fabric"></a>Azure Service Fabric
-
-如果您要建立新應用程式或重新撰寫現有應用程式以使用微服務架構，則 Service Fabric 是不錯的選擇。 在機器共用集區運行的應用程式可以從小型起步，並視需要而成長為數百或數千部機器的龐大規模。 具狀態服務可讓您輕鬆保持應用程式狀態的一致性和可靠性，且 Service Fabric 會自動為您管理服務分區、擴展和可用性。 Service Fabric 也能使用 Open Web Interface for .NET (OWIN) 和 ASP.NET Core 來支援 WebAPI。 相較於 App Service，Service Fabric 還提供對基礎結構的更多控制或直接存取。 您可以從遠端存取伺服器或設定伺服器啟動工作。
-
 ### <a name="azure-virtual-machines"></a>Azure 虛擬機器
 
-如果您的現有應用程式需要進行大量修改才能在 App Service 或 Service Fabric 中執行，則可以選擇虛擬機器以簡化移轉至雲端的過程。 但是，與 Azure App Service 和 Service Fabric 相比，正確設定、保護和維護 VM 需要更多的時間和 IT 專業知識。 如果您正在考慮 Azure 虛擬機器，請確保將修補、更新和管理 VM 環境所需的持續性維護工作納入考量。 Azure 虛擬機器是基礎結構即服務 (IaaS)，而 App Service 和 Service Fabric 是 Paas。
-
-#### <a name="feature-comparison"></a>功能比較
-
-| 功能                                                                                    | App Service | 容器 (AKS) | Service Fabric | 虛擬機器 |
-| ------------------------------------------------------------------------------------------ | ----------- | ---------------- | -------------- | --------------- |
-| 幾乎立即部署                                                                    | X           | X                | X              |                 |
-| 調升規模至大型機器，而不需重新部署                                               | X           | X                | X              |                 |
-| 執行個體共用內容和組態；調整時無需重新部署或重新設定 | X           | X                | X              |                 |
-| 多個部署環境 (生產環境、預備環境)                                     | X           | X                | X              |                 |
-| 作業系統自動更新管理                                                             | X           | X                |                |                 |
-| 在 32/64 位元平台之間無縫切換                                             | X           | X                |                |                 |
-| 使用 Git、FTP 部署程式碼                                                                  | X           | X                |                | X               |
-| 使用 WebDeploy 部署程式碼                                                                 | X           | X                |                | X               |
-| 使用 TFS 部署程式碼                                                                       | X           | X                | X              | X               |
-| 裝載 Web 或 Web 服務階層的多層式架構                                    | X           | X                | X              | X               |
-| 存取 Azure 服務，例如服務匯流排、儲存體、SQL 資料庫                              | X           | X                | X              | X               |
-| 安裝任何自訂的 MSI                                                                     |             | X                | X              | X               |
+如果您的現有應用程式需要進行大量修改才能在 App Service 中執行，您可以選擇虛擬機器以簡化移轉至雲端的程序。 但是，與 Azure App Service 相較，正確設定、保護和維護 VM 需要更多的時間和 IT 專業知識。 如果您正在考慮 Azure 虛擬機器，請確保將修補、更新和管理 VM 環境所需的持續性維護工作納入考量。 Azure 虛擬機器是基礎結構即服務 (IaaS)，而 App Service 是 PaaS。 建議您也考慮將您的應用程式作為 Windows 容器部署至用於容器的 Web App，是否是您範例的可用選項。
 
 ## <a name="logical-processes"></a>邏輯處理序
 
@@ -121,8 +100,8 @@ Azure 提供各種資料儲存選項，以便您的應用程式可以針對有�
 - Web Apps 概觀\
   <https://docs.microsoft.com/azure/app-service/app-service-web-overview>
 
-- Azure App Service、虛擬機器、Service Fabric 和雲端服務比較\
-  <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
+- 用於容器的 Web App\
+  <https://azure.microsoft.com/en-us/services/app-service/containers/>
 
 - Azure Kubernetes Service (AKS) 簡介\
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>

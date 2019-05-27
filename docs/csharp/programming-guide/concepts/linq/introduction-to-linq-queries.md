@@ -7,15 +7,15 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 4432270c8a1a9ad499f833bf8201ed3155bd7ce2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 4276a1a7308e07b2dfb9cacb5670e97f6e2ca732
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333700"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879195"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ 查詢簡介 (C#)
-「查詢」是指從資料來源中擷取資料的運算式。 查詢通常以特定的查詢語言來表示。 針對各種資料來源類型開發不同的語言已有一段時間，例如用於關聯式資料庫的 SQL，以及用於 XML 的 XQuery。 因此，開發人員在過去必須針對所需支援的每種資料來源類型或資料格式，學習新的查詢語言。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供一致的模型來處理各種資料來源和格式的資料，從而簡化此情況。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢中，您所處理的一定是物件。 您會使用相同的基本編碼模式，來查詢及轉換 XML 文件、SQL 資料庫、[!INCLUDE[vstecado](~/includes/vstecado-md.md)] 資料集、.NET 集合，以及可使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者的任何其他格式中的資料。  
+「查詢」是指從資料來源中擷取資料的運算式。 查詢通常以特定的查詢語言來表示。 針對各種資料來源類型開發不同的語言已有一段時間，例如用於關聯式資料庫的 SQL，以及用於 XML 的 XQuery。 因此，開發人員在過去必須針對所需支援的每種資料來源類型或資料格式，學習新的查詢語言。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供一致的模型來處理各種資料來源和格式的資料，從而簡化此情況。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢中，您所處理的一定是物件。 您可以使用相同基本程式碼編寫模式來查詢和轉換 XML 文件、SQL 資料庫、ADO.NET 資料集、.NET 集合和任何其他提供 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者格式中的資料。  
   
 ## <a name="three-parts-of-a-query-operation"></a>查詢作業的三個部分  
  所有的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢作業都包含三個不同的動作：  
@@ -91,7 +91,7 @@ IQueryable<Customer> custQuery =
 ## <a name="see-also"></a>另請參閱
 
 - [開始使用 C# 中的 LINQ](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [逐步解說：用 C# 撰寫查詢](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [逐步解說：在 C# 中撰寫查詢](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
 - [LINQ 查詢運算式](../../../../csharp/programming-guide/linq-query-expressions/index.md)
 - [foreach、in](../../../../csharp/language-reference/keywords/foreach-in.md)
 - [查詢關鍵字 (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)

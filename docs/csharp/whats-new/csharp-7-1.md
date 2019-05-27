@@ -2,12 +2,12 @@
 title: C# 7.1 中的新增功能
 description: C# 7.1 新功能的概觀。
 ms.date: 04/09/2019
-ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 4b7bd96e428f990b2db91a4cfd45da01dc133aac
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480959"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881532"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 中的新增功能
 
@@ -17,16 +17,16 @@ C# 7.1 也新增了[語言版本選擇](../language-reference/configure-language
 
 此版本的新款語言功能包括：
 
-* [`async` `Main` 方法](#async-main)
+* [`async``Main`方法](#async-main)
   - 應用程式的進入點允許使用`async`修飾詞。
-* [`default` 常值運算式](#default-literal-expressions)
+* [`default`常值運算式](#default-literal-expressions)
   - 目標類型可以推斷時，可以在預設值運算式中使用預設常值運算式。
-* [Tuple 型別推導](#inferred-tuple-element-names)
+* [推斷的元組項目名稱](#inferred-tuple-element-names)
   - 在許多情況下，Tuple 項目的名稱均可從 Tuple 初始化推斷來加以推斷。
 * [泛型型別參數的模式比對](#pattern-matching-on-generic-type-parameters)
   - 您可以對型別為泛型型別參數的變數使用模式比對運算式。
 
-最後，編譯器有兩個選項 `/refout` 和 `/refonly`，它們控制了[參考組件產生](#reference-assembly-generation)。
+最後，編譯器有兩個選項 `-refout` 和 `-refonly`，它們控制了[參考組件產生](#reference-assembly-generation)。
 
 若要使用小數點版本中的最新功能，您需要[設定編譯器語言版本](../language-reference/configure-language-version.md)並選取該版本。
 
@@ -109,5 +109,5 @@ var pair = (count, label); // element names are "count" and "label"
 
 ## <a name="reference-assembly-generation"></a>參考組件產生
 
-有兩個新的編譯器選項會產生「僅參考的組件」：[/refout](../language-reference/compiler-options/refout-compiler-option.md) 和 [/refonly](../language-reference/compiler-options/refonly-compiler-option.md)。
+有兩個新編譯器選項會產生「僅參考的組件」：[-refout](../language-reference/compiler-options/refout-compiler-option.md) 和 [-refonly](../language-reference/compiler-options/refonly-compiler-option.md)。
 連結的文章將更詳細地說明這些選項和參考組件。

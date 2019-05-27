@@ -3,12 +3,12 @@ title: 標準的 .NET 事件模式
 description: 了解 .NET 事件模式、如何建立標準事件來源，以及如何訂閱和處理程式碼中的標準事件。
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 11755b4754b15070869adf12d5be409af99035d4
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: cd1ead318529d1afc5b27ff8710cebcaae9b7bc3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201244"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062950"
 ---
 # <a name="standard-net-event-patterns"></a>標準的 .NET 事件模式
 
@@ -26,7 +26,7 @@ ms.locfileid: "57201244"
 void OnEventRaised(object sender, EventArgs args);
 ```
 
-傳回型別為 void。 事件以委派為基礎，而且是多點傳送的委派。 支援任何事件來源的多個訂閱者。 來自方法的單一傳回值無法擴充至多個事件訂閱者。 引發事件後，事件來源看到哪一個傳回值？ 您會在此文章後面看到如何建立向事件來源報告資訊之支援事件訂閱者的事件通訊協定。
+傳回型別為 void。 事件以委派為基礎，而且是多點傳送的委派。 支援任何事件來源的多個訂閱者。 來自方法的單一傳回值無法擴充至多個事件訂閱者。 引發事件後，事件來源看到哪一個傳回值？ 您會在本文後面看到如何建立向事件來源報告資訊之支援事件訂閱者的事件通訊協定。
 
 引數清單包含兩個引數︰寄件者及事件引數。 `sender` 的編譯時間類型是 `System.Object`，即使您可能知道一向正確之衍生程度較高的類型。 依照慣例使用 `object`。
 
@@ -55,7 +55,7 @@ void OnEventRaised(object sender, EventArgs args);
 
 [!code-csharp[DeclareEvent](../../samples/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
 
-這看起來像是在宣告公用欄位，並會是不正確的物件導向做法。 您想要透過屬性或方法保護資料存取。 雖然這看起來不像正確的做法，但編譯器產生的程式碼確實會建立包裝函式，事件物件只能以安全的方式存取。 欄位型事件唯一可用的作業是新增處理常式︰
+這看起來像是在宣告公用欄位，並會是不正確的物件導向做法。 您想要透過屬性或方法保護資料存取。 雖然這看起來不像正確的做法，但編譯器產生的程式碼確實會建立包裝函式，讓事件物件只能以安全的方式存取。 欄位型事件唯一可用的作業是新增處理常式︰
 
 [!code-csharp[DeclareEventHandler](../../samples/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
 
@@ -102,7 +102,7 @@ public void List(string directory, string searchPattern)
 }
 ```
 
-此模式的優點之一是，它不是一個重大變更。
+此模式的優點之一是，它不是一項重大變更。
 以前沒有任何訂閱者要求取消，現在也沒有。 沒有任何訂閱者程式碼需要更新，除非它們要支援新的取消通訊協定。 它是非常鬆散的耦合。
 
 我們要更新訂閱者，以便它在找到第一個可執行檔之後，立刻要求取消︰
@@ -117,7 +117,7 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 ## <a name="adding-another-event-declaration"></a>新增另一個事件宣告
 
-我們要再新增一個功能，示範事件的其他語言慣例。 新增 `Search` 方法的多載，此方法會周遊所有子目錄搜尋檔案。
+我們要再新增一項功能，示範事件的其他語言慣例。 新增 `Search` 方法的多載，此方法會周遊所有子目錄搜尋檔案。
 
 這在有許多子目錄的目錄中可能會是冗長的作業。 新增在每個新目錄搜尋開始時要引發的事件。 這可讓訂閱者追蹤進度，將使用者更新為要處理的使用者。 您到目前為止建立的所有範例都是公用的。 讓我們把這個變成內部事件。 這表示您也可以將用於引數的類型變成內部。
 

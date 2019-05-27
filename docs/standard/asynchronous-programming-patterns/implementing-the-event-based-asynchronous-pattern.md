@@ -17,17 +17,17 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 41303bf548502fe319cbcfb8a152179863902817
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 55ae6467ca6e7f688bcb7b3fc797050a33074963
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623570"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882530"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>實作事件架構非同步模式
 如果您正在撰寫某項類別，其擁有的一些作業可能會造成明顯延遲，請考慮實作[事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)以賦予它非同步功能。  
   
- 事件架構非同步模式提供標準化方式來封裝具有非同步功能的類別。 您的類別若是使用協助程式類別 (例如 <xref:System.ComponentModel.AsyncOperationManager>) 來實作，就能夠在任何應用程式模型下正確運作，這些模型包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]、主控台應用程式和 Windows Forms 應用程式。  
+ 事件架構非同步模式提供標準化方式來封裝具有非同步功能的類別。 您的類別若是使用協助程式類別 (例如 <xref:System.ComponentModel.AsyncOperationManager>) 來實作，就能夠在任何應用程式模型下正確運作，這些模型包括 ASP.NET、主控台應用程式和 Windows Forms 應用程式。  
   
  如需實作事件架構非同步模式的範例，請參閱[如何：實作支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)。  
   

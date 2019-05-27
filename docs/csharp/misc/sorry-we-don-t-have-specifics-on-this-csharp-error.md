@@ -882,23 +882,23 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 5b6cf68ea2e08c63abd5c093d9ffc6ed24131cd9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 168e72e3f9f09c1f13e9d34cc1048f1dfacc2592
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61684051"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052764"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>抱歉，我們沒有這個 C# 錯誤的具體內容。
 很抱歉，我們沒有任何有關此錯誤的特定資訊。 您可以搜尋錯誤號碼與訊息文字，以在網路上尋找資訊。 或者，您可以要求其他開發人員使用這些論壇：  
   
- [Visual C# 語言](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
+ [Visual C# 語言](https://social.msdn.microsoft.com/Forums/home?forum=csharplanguage)  
  提供問題的視覺效果的相關和一般討論的論壇C#語言語法和編譯器。  
   
- [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
+ [Visual C# IDE](https://social.msdn.microsoft.com/Forums/home?forum=csharpide)  
  提供有關如何在 Visual Studio 環境中運作的問題的論壇。  
   
- [Visual C# 一般討論區](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
+ [Visual C# 一般討論區](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
  提供有關問題的論壇和視覺效果會發出C#，將不會討論其他論壇中。  
   
  [堆疊溢位](https://stackoverflow.com/questions/tagged/c%23)  

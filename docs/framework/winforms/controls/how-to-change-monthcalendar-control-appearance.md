@@ -1,5 +1,5 @@
 ---
-title: HOW TO：變更 Windows Forms MonthCalendar 控制項的外觀
+title: 作法：變更 Windows Forms MonthCalendar 控制項的外觀
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-ms.openlocfilehash: 9bd44a2d1f0db2652280e4875659c17916b033a6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 21fa6798c431b71d36c1909937ddad6bf5030782
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612141"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053099"
 ---
-# <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>HOW TO：變更 Windows Forms MonthCalendar 控制項的外觀
+# <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>作法：變更 Windows Forms MonthCalendar 控制項的外觀
 Windows Form<xref:System.Windows.Forms.MonthCalendar>控制項可讓您自訂在許多方面的行事曆的外觀。 例如，您可以設定色彩配置，以及選擇要顯示或隱藏週數和目前的日期。  
   
 ### <a name="to-change-the-month-calendars-color-scheme"></a>若要變更的月份行事曆的色彩配置  
@@ -74,7 +74,7 @@ Windows Form<xref:System.Windows.Forms.MonthCalendar>控制項可讓您自訂在
        }  
     ```  
   
-     (Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 下列程式碼置於表單的建構函式，以註冊事件處理常式。  
+     (Visual C#、 Visual C++)下列程式碼置於表單的建構函式，以註冊事件處理常式。  
   
     ```csharp  
     this.DoubleClick += new System.EventHandler(this.Form1_DoubleClick);  

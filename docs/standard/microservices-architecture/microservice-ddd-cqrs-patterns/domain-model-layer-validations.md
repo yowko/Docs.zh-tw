@@ -1,15 +1,13 @@
 ---
 title: 設計領域模型層中的驗證
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解領域模型驗證的關鍵概念。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: ae1252f4544f184a5f63ef02ba898da9b4373e17
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 75d227c0cc3d5ae20614d816b528d93709ccdfcf
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612702"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063019"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>設計領域模型層中的驗證
 
@@ -81,7 +79,7 @@ public void SetAddress(string line1, string line2,
 
 ### <a name="two-step-validation"></a>兩步驟驗證
 
-也請考慮兩步驟驗證。 在命令資料傳輸物件 (DTO) 上使用欄位層級驗證，以及在實體內部使用領域層級驗證。 作法是傳回結果物件，而不是例外狀況，以更輕鬆地處理驗證錯誤。
+也請考慮兩步驟驗證。 在命令資料傳輸物件 (DTO) 上使用欄位層級驗證，以及在實體內部使用領域層級驗證。 做法是傳回結果物件而不是例外狀況，以更輕鬆地處理驗證錯誤。
 
 例如，使用具有資料註解的欄位驗證，就不會有重複的驗證定義。 不過，如果是 DTO，則執行可以是伺服器端和用戶端 (例如，命令和 ViewModel)。
 

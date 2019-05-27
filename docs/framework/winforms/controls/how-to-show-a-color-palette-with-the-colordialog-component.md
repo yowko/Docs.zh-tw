@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 ColorDialog 元件顯示調色盤
+title: 作法：使用 ColorDialog 元件顯示調色盤
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - color palettes [Windows Forms], showing in ColorDialog component
 - colors [Windows Forms], showing palettes
 ms.assetid: ee050f61-dbc8-4436-ba22-51360981ab48
-ms.openlocfilehash: 587b2c3a502ec8a1cb2f4f7c0d981baa0f18ead6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff29df4ecfc90eabe8e3be0e5a6a126858799c16
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012988"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053430"
 ---
 # <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>HOW TO：使用 ColorDialog 元件顯示調色盤
 [ColorDialog](colordialog-component-windows-forms.md)元件會顯示色的調色盤，並傳回包含使用者選取的色彩屬性。  
@@ -65,7 +65,7 @@ ms.locfileid: "62012988"
        }  
     ```  
   
-     (Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 下列程式碼置於表單的建構函式，以註冊事件處理常式。  
+     (Visual C#、 Visual C++)下列程式碼置於表單的建構函式，以註冊事件處理常式。  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  

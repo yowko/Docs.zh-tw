@@ -9,15 +9,15 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: e91859d4aa6e30877bfdae5da9063a1e2a6b3b44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6f7450b4f682ea5ac69fd1bab434b27451e58df
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647258"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586060"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (程式碼產生工具)
-SqlMetal 命令列工具會產生 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 之 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]元件的程式碼和對應。 藉由套用本主題稍後出現的選項，您就可以指示 SqlMetal 執行數個不同的動作，包括以下各項：  
+SqlMetal 命令列工具會為 .NET Framework 的 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 元件產生程式碼及對應。 藉由套用本主題稍後出現的選項，您就可以指示 SqlMetal 執行數個不同的動作，包括以下各項：  
   
 - 從資料庫產生原始程式碼和對應屬性或對應檔。  
   

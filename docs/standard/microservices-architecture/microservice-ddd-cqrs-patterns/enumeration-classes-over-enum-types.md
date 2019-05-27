@@ -2,12 +2,12 @@
 title: 使用列舉類別，而非列舉類型
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解如何使用列舉類別 (而非列舉) 來解決後者的一些限制。
 ms.date: 10/08/2018
-ms.openlocfilehash: 02d5fcef580f71b6f8c4af6d88095e24b0bd3462
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 10b4c2f7b9f079ed535111e65b8154791f6575cd
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644471"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003829"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>使用列舉類別，而非列舉類型
 
@@ -67,7 +67,7 @@ public abstract class Enumeration : IComparable
 您可以使用此類別作為任何實體或值物件中的類型，如下列 `CardType` : `Enumeration` 類別所示：
 
 ```csharp
-public abstract class CardType : Enumeration
+public class CardType : Enumeration
 {
     public static CardType Amex = new CardType(1, "Amex");
     public static CardType Visa = new CardType(2, "Visa");
@@ -82,16 +82,16 @@ public abstract class CardType : Enumeration
 
 ## <a name="additional-resources"></a>其他資源
 
-- **Enum’s are evil—update (列舉很邪惡—更新)** \
+- **Enum’s are evil—update (列舉很邪惡—更新)**  \
   <https://www.planetgeek.ch/2009/07/01/enums-are-evil/>
 
-- **Daniel Hardman：How Enums Spread Disease — And How To Cure It (列舉傳播疾病的方式 — 以及如何治癒它)** \
+- **Daniel Hardman：How Enums Spread Disease — And How To Cure It (列舉傳播疾病的方式 — 以及如何治癒它)**  \
   <https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/>
 
-- **Jimmy Bogard：Enumeration classes (列舉類別)** \
+- **Jimmy Bogard：Enumeration classes (列舉類別)**  \
   <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>
 
-- **Steve Smith.Enum Alternatives in C# (C# 中的列舉替代項目)** \
+- **Steve Smith.Enum Alternatives in C# (C# 中的列舉替代項目)**  \
   <https://ardalis.com/enum-alternatives-in-c>
 
 - **Enumeration.cs：** eShopOnContainers 中的基底列舉類別 \

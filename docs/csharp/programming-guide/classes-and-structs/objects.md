@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 665fdd3d19008e7725983ea621a64514238639ce
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: de44f0c416de798fb42fba93e30ec6aa6ed0208d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599951"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585963"
 ---
 # <a name="objects-c-programming-guide"></a>物件 (C# 程式設計手冊)
 類別或結構定義就像是指定型別可以做什麼的藍圖。 物件基本上是根據藍圖配置和設定的記憶體區塊。 程式可建立許多同類別的物件。 物件也稱為執行個體，可儲存在具名變數或陣列或集合中。 用戶端程式碼是使用這些變數呼叫方法，並存取物件公用屬性的程式碼。 在 C# 之類的物件導向語言中，一般程式包含多個動態互動的物件。  
@@ -30,7 +30,7 @@ ms.locfileid: "64599951"
   
  [!code-csharp[csProgGuideStatements#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#31)]  
   
- `p1` 和 `p2` 的記憶體都配置在執行緒堆疊上。 該記憶體會和其宣告所在的型別或方法一起回收。 這是在指派時複製結構的原因之一。 相較之下，當物件的所有參考都超出範圍時，通用語言執行平台會自動回收為類別執行個體配置的記憶體 (記憶體回收)。 您不可能像在 C++ 中一樣決定性終結類別物件。 如需 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 記憶體回收的詳細資訊，請參閱[記憶體回收](../../../standard/garbage-collection/index.md)。  
+ `p1` 和 `p2` 的記憶體都配置在執行緒堆疊上。 該記憶體會和其宣告所在的型別或方法一起回收。 這是在指派時複製結構的原因之一。 相較之下，當物件的所有參考都超出範圍時，通用語言執行平台會自動回收為類別執行個體配置的記憶體 (記憶體回收)。 您不可能像在 C++ 中一樣決定性終結類別物件。 如需 .NET Framework 記憶體回收的詳細資訊，請參閱[記憶體回收](../../../standard/garbage-collection/index.md)。  
   
 > [!NOTE]
 >  通用語言執行平台中，已高度最佳化 Managed 堆積上的記憶體配置和解除配置。 在大部分情況下，在堆積上配置類別執行個體與在堆疊上配置結構執行個體，效能成本沒有任何重大差異。  

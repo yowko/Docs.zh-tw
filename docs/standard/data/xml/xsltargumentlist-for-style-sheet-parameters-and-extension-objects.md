@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3afbffcbbaa5e8398a9ab10c762e60305cfc164b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 11cf0b694d75836ad903edeafc79a55ec4612b45
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615244"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586459"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>樣式表參數和擴充物件的 XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> 類別包含可擴充樣式表語言轉換 (XSLT) 參數和 XSLT 擴充物件。 傳入 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法後，就可從樣式表叫用這些參數和擴充物件。  
@@ -36,7 +36,7 @@ ms.locfileid: "64615244"
 ## <a name="xslt-style-sheet-parameters"></a>XSLT 樣式表參數  
  XSLT 參數可使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法加入至 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>。 限定名稱和命名空間統一資源識別元 (URI) 會在此時與參數物件產生關聯。  
   
- 參數物件應對應至全球資訊網協會 (W3C) 型別。 下列表格將說明對應的 W3C 型別、對等的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 類別 (型別)，以及 W3C 型別是 XML 路徑語言 (XPath) 型別還是 XSLT 型別。  
+ 參數物件應對應至全球資訊網協會 (W3C) 型別。 下表說明對應的 W3C 型別、對等的 .NET Framework 類別 (型別)，以及 W3C 型別是 XML 路徑語言 (XPath) 型別還是 XSLT 型別。  
   
 |W3C 型別|對等的 .NET Framework 類別 (型別)|XPath 型別或 XSLT 型別|  
 |--------------|----------------------------------------------|-----------------------------|  

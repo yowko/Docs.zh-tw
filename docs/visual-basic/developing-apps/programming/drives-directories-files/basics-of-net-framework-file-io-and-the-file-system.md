@@ -9,25 +9,25 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: f0d5c4e48d8a44c2e39942cbe76acbb5ef44ea7d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3ff305a6b22918681561ed7262a7377dbdf7aadc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462769"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591510"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 檔案 I/O 和檔案系統基本概念 (Visual Basic)
 
 <xref:System.IO> 命名空間中的類別是用來處理磁碟機、檔案和目錄。
 
-<xref:System.IO> 命名空間包含 <xref:System.IO.File> 和 <xref:System.IO.Directory> 類別，以提供管理檔案和目錄的 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 功能。 因為這些物件的方法是靜態或共用成員，所以您可以直接使用它們，而不需要先建立類別的執行個體。 這些類別是與 <xref:System.IO.FileInfo> 和 <xref:System.IO.DirectoryInfo> 類別相關聯，對 `My` 功能的使用者而言這應該十分熟悉。 若要使用這些類別，您必須完整限定名稱，或在受影響程式碼的開頭包含 `Imports` 陳述式來匯入適當的命名空間。 如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。
+<xref:System.IO> 命名空間包含 <xref:System.IO.File> 和 <xref:System.IO.Directory> 類別，提供操縱檔案和目錄的 .NET Framework 功能。 因為這些物件的方法是靜態或共用成員，所以您可以直接使用它們，而不需要先建立類別的執行個體。 這些類別是與 <xref:System.IO.FileInfo> 和 <xref:System.IO.DirectoryInfo> 類別相關聯，對 `My` 功能的使用者而言這應該十分熟悉。 若要使用這些類別，您必須完整限定名稱，或在受影響程式碼的開頭包含 `Imports` 陳述式來匯入適當的命名空間。 如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。
 
 > [!NOTE]
-> 本節中的其他主題使用 `My.Computer.FileSystem` 物件，而非處理磁碟機、檔案和目錄的 `System.IO` 類別。 `My.Computer.FileSystem` 物件主要用於 Visual Basic 程式。 `System.IO` 類別是要用於任何支援 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 的語言 (包括 Visual Basic)。
+> 本節中的其他主題使用 `My.Computer.FileSystem` 物件，而非處理磁碟機、檔案和目錄的 `System.IO` 類別。 `My.Computer.FileSystem` 物件主要用於 Visual Basic 程式。 `System.IO` 類別旨在由任何支援 .NET Framework 的語言使用，包括 Visual Basic。
 
 ## <a name="definition-of-a-stream"></a>資料流的定義
 
-[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 使用資料流來支援讀取和寫入檔案。 您可以將資料流視為一組包含開始和結束的一維連續資料，而資料指標表示目前在資料流中的位置。
+.NET Framework 使用資料流來支援讀取和寫入檔案。 您可以將資料流視為一組包含開始和結束的一維連續資料，而資料指標表示目前在資料流中的位置。
 
 ![游標顯示目前在 FileStream 中的位置。](./media/basics-of-net-framework-file-io-and-the-file-system/filestream-cursor-position.gif)
 
@@ -45,7 +45,7 @@ ms.locfileid: "58462769"
 
 ## <a name="types-of-streams"></a>資料流類型
 
-在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中，資料流是透過 <xref:System.IO.Stream> 類別呈現，以構成所有其他資料流的抽象類別。 您無法直接建立 <xref:System.IO.Stream> 類別執行個體，但必須使用它所實作的其中一個類別。
+在 .NET Framework 中，資料流是透過 <xref:System.IO.Stream> 類別呈現，構成所有其他資料流的抽象類別。 您無法直接建立 <xref:System.IO.Stream> 類別執行個體，但必須使用它所實作的其中一個類別。
 
 有許多類型的資料流，但若要使用檔案輸入/輸出 (I/O)，最重要的類型是可讀取和寫入檔案的 <xref:System.IO.FileStream> 類別，以及可在隔離儲存體中建立檔案和目錄的 <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> 類別。 可以在使用檔案 I/O 時使用的其他資料流包括︰
 
@@ -84,7 +84,7 @@ ms.locfileid: "58462769"
 
 ## <a name="file-permissions"></a>檔案權限
 
-使用 <xref:System.Security.Permissions.FileIOPermission> 類別可以控制檔案和目錄的存取。 對於處理 Web Form (預設在名為 ASPNET 的特殊本機使用者帳戶內容內執行，而此帳戶是建立為 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 和 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 安裝的一部分) 的開發人員，則這可能特別重要。 當這類應用程式要求存取資源時，ASPNET 使用者帳戶會具有有限的權限，這樣可能會讓使用者無法執行從 Web 應用程式寫入檔案這類動作。 如需詳細資訊，請參閱<xref:System.Security.Permissions.FileIOPermission>。
+使用 <xref:System.Security.Permissions.FileIOPermission> 類別可以控制檔案和目錄的存取。 這對於使用 Web Form 的開發人員來說可能特別重要，其根據預設在名為 ASPNET 的特殊本機使用者帳戶內容中執行，而該帳戶則是在 ASP.NET 和 .NET Framework 安裝期間一同建立的。 當這類應用程式要求存取資源時，ASPNET 使用者帳戶會具有有限的權限，這樣可能會讓使用者無法執行從 Web 應用程式寫入檔案這類動作。 如需詳細資訊，請參閱<xref:System.Security.Permissions.FileIOPermission>。
 
 ## <a name="isolated-file-storage"></a>隔離檔案儲存區
 

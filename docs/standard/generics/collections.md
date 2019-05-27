@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec3f8fb16245318cab8706a2ed136e51f3dc31db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa6cd032ecf3a35c1dc32d9907218c9b6efd4bcc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705793"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592274"
 ---
 # <a name="generic-collections-in-net"></a>.NET 中的泛型集合
 
@@ -37,14 +37,14 @@ ms.locfileid: "54705793"
  <xref:System.Collections.ObjectModel.Collection%601> 泛型類別提供基底類別，可用於衍生您自己的泛型集合類型。 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 類別提供一個簡單的方法，從任何實作 <xref:System.Collections.Generic.IList%601> 泛型介面的類型中產生唯讀集合。 <xref:System.Collections.ObjectModel.KeyedCollection%602> 泛型類別提供一個方法來儲存物件 (其中包含物件的索引鍵)。  
   
 ## <a name="other-generic-types"></a>其他泛型類型  
- <xref:System.Nullable%601> 泛型結構可讓您使用可指派 `null` 的實值類型。 這在使用資料庫查詢時會很有用，因為包含實值類型的欄位可能遺漏。 泛型型別參數可以是任何實值類型。  
+ <xref:System.Nullable%601> 泛型結構可讓您使用可指派 `null` 的實值類型。 這在使用資料庫查詢時會很有用，因為包含實值類型的欄位可能遺漏。 泛型類型參數可以是任何實值類型。  
   
 > [!NOTE]
 >  在 C# 和 Visual Basic 中，不需要明確使用 <xref:System.Nullable%601>，因為語言已具有可為 Null 型別的語法。 請參閱[可為 Null 的型別 (C# 程式設計指南)](../../csharp/programming-guide/nullable-types/index.md) 或[可為 Null 的實值型別 (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)。 
   
- <xref:System.ArraySegment%601> 泛型結構提供一個方法，將項目範圍限定在任何類型之以零為起始的一維陣列中。 泛型類型參數是陣列的項目類型。  
+ <xref:System.ArraySegment%601> 泛型結構提供一個方法，將項目範圍限定在任何類型之以零為起始的一維陣列中。 泛型型別參數是陣列的項目類型。  
   
- 如果您的事件遵循 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 所使用的事件處理模式，則 <xref:System.EventHandler%601> 泛型委派不需要宣告委派類型來處理事件。 例如，假設您已建立衍生自 <xref:System.EventArgs> 的 `MyEventArgs` 類別來保存事件的資料。 您可以接著依照下列方式來宣告事件：  
+ 如果您的事件遵循 .NET Framework 所使用事件處理模式，則 <xref:System.EventHandler%601> 泛型委派不需要宣告委派型別來處理事件。 例如，假設您已建立衍生自 <xref:System.EventArgs> 的 `MyEventArgs` 類別來保存事件的資料。 您可以接著依照下列方式來宣告事件：  
   
  [!code-cpp[Conceptual.Generics.Overview#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Generics.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source2.cs#7)]

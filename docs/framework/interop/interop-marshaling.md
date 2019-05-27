@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21eea2ccdff88a11e9708fef317011dc547cafda
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3d6ddc2978078fd307ad79cffe14d53619d8be9e
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677210"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469707"
 ---
 # <a name="interop-marshaling"></a>Interop 封送處理
 <a name="top"></a> Interop 封送處理會控制如何以方法引數傳遞資料，以及控制呼叫期間於 Managed 和 Unmanaged 記憶體之間的傳回值。 Interop 封送處理是由 Common Language Runtime 的封送處理服務所執行的執行階段活動。  
@@ -24,23 +24,23 @@ ms.locfileid: "57677210"
   
  本概觀包含下列各節：  
   
--   [平台叫用和 COM Interop 模型](#platform_invoke_and_com_interop_models)  
+- [平台叫用和 COM Interop 模型](#platform_invoke_and_com_interop_models)  
   
--   [封送處理和 COM Apartment](#marshaling_and_com_apartments)  
+- [封送處理和 COM Apartment](#marshaling_and_com_apartments)  
   
--   [封送處理遠端呼叫](#marshaling_remote_calls)  
+- [封送處理遠端呼叫](#marshaling_remote_calls)  
   
--   [相關主題](#related_topics)  
+- [相關主題](#related_topics)  
   
--   [參考資料](#reference)  
+- [參考資料](#reference)  
   
 <a name="platform_invoke_and_com_interop_models"></a>   
 ## <a name="platform-invoke-and-com-interop-models"></a>平台叫用和 COM Interop 模型  
  Common Language Runtime 提供兩種與 Unmanaged 程式碼互通的機制：  
   
--   平台叫用，可讓 Managed 程式碼呼叫 Unmanaged 程式庫所匯出的函式。  
+- 平台叫用，可讓 Managed 程式碼呼叫 Unmanaged 程式庫所匯出的函式。  
   
--   COM Interop，可讓 Managed 程式碼透過介面與元件物件模型 (COM) 物件互動。  
+- COM Interop，可讓 Managed 程式碼透過介面與元件物件模型 (COM) 物件互動。  
   
  平台叫用和 COM Interop 都會使用 Interop 封送處理，正確地將方法引數在呼叫端和被呼叫端之間來回移動 (如有必要)。 如下圖所示，除非需要[回呼函式](callback-functions.md)，否則平台叫用方法呼叫會從 Managed 程式碼流向 Unmanaged 程式碼，但絕不會反向流回。 即使平台叫用呼叫只可以從 Managed 程式碼流向 Unmanaged 程式碼，資料還是可以當做輸入或輸出參數來進行雙向流動。 COM Interop 方法呼叫可以流向任一方向。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "57677210"
  如果您打算匯出 Managed 伺服器，請注意 COM 用戶端會決定伺服器的 Apartment。 由 MTA 中初始化的 COM 用戶端所呼叫的 Managed 伺服器必須確保執行緒安全。  
   
 ### <a name="managed-clients-and-com-servers"></a>Managed 用戶端和 COM 伺服器  
- Managed 用戶端 Apartment 的預設值為 MTA；不過，.NET 用戶端的應用程式類型可以變更預設值。 例如，[!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 用戶端 Apartment 設定為 STA。 您可以使用 <xref:System.STAThreadAttribute?displayProperty=nameWithType>、<xref:System.MTAThreadAttribute?displayProperty=nameWithType>、<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 屬性或 <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> 屬性，來檢查及變更 Managed 用戶端的 Apartment 設定。  
+ Managed 用戶端 Apartment 的預設值為 MTA；不過，.NET 用戶端的應用程式類型可以變更預設值。 例如，Visual Basic 用戶端 Apartment 設定為 STA。 您可以使用 <xref:System.STAThreadAttribute?displayProperty=nameWithType>、<xref:System.MTAThreadAttribute?displayProperty=nameWithType>、<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 屬性或 <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> 屬性，來檢查及變更 Managed 用戶端的 Apartment 設定。  
   
  元件作者會設定 COM 伺服器的執行緒相似性。 下表顯示 .NET 用戶端和 COM 伺服器的 Apartment 設定組合， 並顯示組合所產生的封送處理需求。  
   
@@ -86,9 +86,9 @@ ms.locfileid: "57677210"
   
  針對跨 Apartment 封送處理，您可以執行下列動作：  
   
--   接受跨 Apartment 封送處理的額外負荷，只有在許多呼叫跨界限時才會很明顯。 您必須註冊 COM 元件的類型程式庫，呼叫才能成功跨 Apartment 界限。  
+- 接受跨 Apartment 封送處理的額外負荷，只有在許多呼叫跨界限時才會很明顯。 您必須註冊 COM 元件的類型程式庫，呼叫才能成功跨 Apartment 界限。  
   
--   將用戶端執行緒設定為 STA 或 MTA 來變更主執行緒。 例如，如果您的 C# 用戶端呼叫許多 STA COM 元件，您可以將主執行緒設定為 STA，以避免跨 Apartment 封送處理。  
+- 將用戶端執行緒設定為 STA 或 MTA 來變更主執行緒。 例如，如果您的 C# 用戶端呼叫許多 STA COM 元件，您可以將主執行緒設定為 STA，以避免跨 Apartment 封送處理。  
   
     > [!NOTE]
     >  將 C# 用戶端的執行緒設定為 STA 之後，對 MTA COM 元件的呼叫會需要跨 Apartment 封送處理。  
@@ -101,9 +101,9 @@ ms.locfileid: "57677210"
 ## <a name="marshaling-remote-calls"></a>封送處理遠端呼叫  
  如同跨 Apartment 封送處理，當物件位於不同的處理序時，在 Managed 和 Unmanaged 程式碼之間的每一個呼叫都需要 COM 封送處理。 例如：  
   
--   在遠端主機上叫用 Managed 伺服器的 COM 用戶端會使用分散式 COM (DCOM)。  
+- 在遠端主機上叫用 Managed 伺服器的 COM 用戶端會使用分散式 COM (DCOM)。  
   
--   在遠端主機上叫用 COM 伺服器的 Managed 用戶端會使用 DCOM。  
+- 在遠端主機上叫用 COM 伺服器的 Managed 用戶端會使用 DCOM。  
   
  下圖顯示 Interop 封送處理和 COM 封送處理如何跨處理序和主機界限提供通訊通道。  
   
@@ -116,9 +116,9 @@ ms.locfileid: "57677210"
   
  在本圖中：  
   
--   Unmanaged 用戶端會從 Managed 物件取得 COM 物件的參考 (Managed 物件會從遠端主機取得這個參考)。 遠端處理機制是 DCOM。  
+- Unmanaged 用戶端會從 Managed 物件取得 COM 物件的參考 (Managed 物件會從遠端主機取得這個參考)。 遠端處理機制是 DCOM。  
   
--   Managed 用戶端會從 COM 物件取得 Managed 物件的參考 (COM 物件會從遠端主機取得這個參考)。 遠端處理機制是 DCOM。  
+- Managed 用戶端會從 COM 物件取得 Managed 物件的參考 (COM 物件會從遠端主機取得這個參考)。 遠端處理機制是 DCOM。  
   
     > [!NOTE]
     >  必須註冊 Managed 伺服器的匯出類型程式庫。  

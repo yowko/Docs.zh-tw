@@ -2,12 +2,12 @@
 title: LINQ to XML 概觀 (C#)
 ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 0ae7b226f4fef0aeec895b0b908711a6edb13728
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 2394151d855d75b418616d9fa1a6f69b08cdef86
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612832"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585758"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML 概觀 (C#)
 
@@ -23,7 +23,7 @@ XML 已被廣泛採用為格式化許多內容之資料的方式。 例如，您
 
 ## <a name="what-is-linq-to-xml"></a>何謂 LINQ to XML？
 
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 是一個以 LINQ 為基礎、記憶體中的 XML 程式發展介面，可讓您從 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 程式設計語言內使用 XML。
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 是一個啟用 LINQ 的記憶體內部 XML 程式設計介面，可讓您從 .NET Framework 程式設計語言內使用 XML。
 
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 如同文件物件模型 (DOM)，它會將 XML 文件帶到記憶體中。 您可以查詢與修改文件，並在修改後儲存到檔案，或將其序列化並透過網際網路傳送。 不過，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 與 DOM 不同：它所提供的新物件模型較為輕量且較容易使用，且會利用 C# 中的語言功能。
 

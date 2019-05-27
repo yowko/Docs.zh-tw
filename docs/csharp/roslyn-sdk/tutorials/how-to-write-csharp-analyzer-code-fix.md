@@ -3,12 +3,12 @@ title: 教學課程：撰寫您的第一個分析器和程式碼修正
 description: 本教學課程提供 使用 .NET Compiler SDK (Roslyn API) 來建置分析器和程式碼修正的逐步指示。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 7e3d1ac3a1ef692a1b7f1980fd00f95b04a8d047
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 1a4280741650b41174f93c4403008ee3522adbe6
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427496"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452701"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>教學課程：撰寫您的第一個分析器和程式碼修正
 
@@ -195,7 +195,7 @@ Console.WriteLine(x);
 
 接著，請刪除 `MakeUppercaseAsync` 方法。 該方法已不適用。
 
-所有程式碼修正皆衍生自 <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider>。 它們全都會覆寫 <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)?displayProperty=nameWithType>，以報告可用的程式碼修正。 在 `RegisterCodeFixesAsync` 中，將您要搜尋的上階節點類型變更為符合診斷的 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>：
+所有程式碼修正提供者皆衍生自 <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider>。 它們全都會覆寫 <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)?displayProperty=nameWithType>，以報告可用的程式碼修正。 在 `RegisterCodeFixesAsync` 中，將您要搜尋的上階節點類型變更為符合診斷的 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>：
 
 [!code-csharp[Find local declaration node](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FindDeclarationNode  "Find the local declaration node that raised the diagnostic")]
 

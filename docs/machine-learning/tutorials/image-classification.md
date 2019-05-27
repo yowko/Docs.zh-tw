@@ -1,15 +1,15 @@
 ---
-title: 搭配 TensorFlow 建置 ML.NET 自訂影像分類器
+title: 教學課程：搭配 TensorFlow 建置 ML.NET 自訂影像分類器
 description: 探索如何在 TensorFlow 遷移學習案例中建置 ML.NET 自訂影像分類器，以透過重複使用預先定型的 TensorFlow 模型來分類影像。
-ms.date: 04/05/2019
+ms.date: 05/06/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9b9ac1f1f15b4003a19a3d30d6cadf3e86946376
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
+ms.openlocfilehash: e248c5ae73281ed6cd492592ba4a51791db75aa2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59517963"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593429"
 ---
 # <a name="tutorial-build-an-mlnet-custom-image-classifier-with-tensorflow"></a>教學課程：搭配 TensorFlow 建置 ML.NET 自訂影像分類器
 
@@ -25,11 +25,6 @@ ms.locfileid: "59517963"
 > * 重複使用並調整預先定型的模型
 > * 分類影像
 
-> [!NOTE]
-> 本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) (英文)。
-
-此教學課程與關聯的範例目前是使用 **ML.NET 0.10 版**。 如需詳細資訊，請參閱 [dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) GitHub 存放庫中的版本資訊。
-
 ## <a name="image-classification-sample-overview"></a>影像分類範例概觀
 
 範例為使用 ML.NET 來建置影像分類器的主控台應用程式，其會重複使用已預先定型的模型搭配少量的定型資料來分類影像。
@@ -40,9 +35,9 @@ ms.locfileid: "59517963"
 
 * 已安裝「.NET Core 跨平台開發」工作負載的 [Visual Studio 2017 15.6 或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
 
-* Microsoft.ML 0.10.0 Nuget 套件
-* Microsoft.ML.ImageAnalytics 0.10.0 Nuget 套件
-* Microsoft.ML.TensorFlow 0.10.0 Nuget 套件
+* Microsoft.ML 1.0.0 Nuget 套件
+* Microsoft.ML.ImageAnalytics 1.0.0 Nuget 套件
+* Microsoft.ML.TensorFlow 0.12.0 Nuget 套件
 
 * [教學課程資產目錄 .ZIP 檔案](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
 
@@ -127,14 +122,11 @@ toaster2.png    appliance
 
 ### <a name="create-a-project"></a>建立專案
 
-1. 開啟 Visual Studio 2017。 從功能表列中選取 [檔案]  >  [新增]  >  [專案]。 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點，然後選取 [.NET Core] 節點。 然後選取 [主控台應用程式 (.NET Core)] 專案範本。 在 [名稱] 文字方塊中，輸入 "TransferLearningTF"，然後選取 [確定] 按鈕。
+1. 建立稱為 "TransferLearningTF" 的 **.NET Core 主控台應用程式**。
 
 2. 安裝「Microsoft.ML NuGet 套件」：
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 [nuget.org] 作為 [套件來源]，選取 [瀏覽] 索引標籤，搜尋 **Microsoft.ML**。 按一下 [版本] 下拉式清單，選取清單中的 [0.10.0] 套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。 針對 **Microsoft.ML.ImageAnalytics v0.10.0** 和 **Microsoft.ML.TensorFlow v0.10.0** 重複這些步驟。
-
-  > [!NOTE]
-  > 本教學課程是使用 **Microsoft.ML v0.10.0**、**Microsoft.ML.ImageAnalytics v0.10.0** 和 **Microsoft.ML.TensorFlow v0.10.0**。
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 [nuget.org] 作為 [套件來源]，選取 [瀏覽] 索引標籤，搜尋 **Microsoft.ML**。 按一下 [版本] 下拉式清單，選取清單中的 [1.0.0] 套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。 針對 **Microsoft.ML.ImageAnalytics v1.0.0** 和 **Microsoft.ML.TensorFlow v0.12.0** 重複這些步驟。
 
 ### <a name="prepare-your-data"></a>準備您的資料
 
@@ -228,31 +220,26 @@ Inception model 具有數個您需要傳遞的預設參數。 在 `Main()` 方�
 
 ### <a name="create-a-display-utility-method"></a>建立顯示公用程式方法
 
-您會配對並顯示影像資料及相關的預測超過一遍，且不想要重複程式碼。 建立顯示公用程式方法來處理影像及預測結果的配對和顯示。
+因為您將會不只一次顯示影像資料和相關預測，所以請建立顯示公用程式方法來處理顯示影像和預測結果。
 
-`PairAndDisplayResults()` 方法會執行下列工作：
+`DisplayResults()` 方法會執行下列工作：
 
-* 合併資料和預測來進行報告。
 * 顯示預測的結果。
 
-使用下列程式碼，在緊接著 `InceptionSettings` 結構之後，建立 `PairAndDisplayResults()` 方法：
+使用下列程式碼，在緊接著 `InceptionSettings` 結構之後，建立 `DisplayResults()` 方法：
 
 ```csharp
-private static void PairAndDisplayResults(IEnumerable<ImageNetData> imageData, IEnumerable<ImageNetPrediction> imagePredictionData)
+private static void DisplayResults(IEnumerable<ImagePrediction> imagePredictionData)
 {
 
 }
 ```
 
-顯示預測的結果之前，請先將 `imageData` 和 `imagePrediction` 合併在一起，以將原始 `Image Path` 搭配其預測類別一起查看。 下列程式碼會使用 <xref:System.Linq.Enumerable.Zip%2A?displayProperty=nameWithType> 方法來使其發生，因此請將它新增為 `PairAndDisplayResults()` 方法的第一行：
-
-[!code-csharp[BuildImagePredictionPairs](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#BuildImagePredictionPairs)]
-
-既然您已將 `imageData` 和 `imageData` 合併成一個類別，現在即可使用 <xref:System.Console.WriteLine?displayProperty=nameWithType> 方法來顯示結果：
+`Transform()` 方法會在 `ImagePrediction` 及預測欄位中填入 `ImagePath`。 隨著 ML.NET 處理的進行，每個元件都會新增資料行，使其易於顯示結果：
 
 [!code-csharp[DisplayPredictions](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayPredictions)]
 
-在接下來的兩個方法中，您將會呼叫 `PairAndDisplayResults()` 方法。
+您將會在兩個影像分類方法中呼叫 `DisplayResults()` 方法。
 
 ### <a name="create-a-tsv-file-utility-method"></a>建立 .tsv 檔案公用程式方法
 
@@ -274,7 +261,7 @@ public static IEnumerable<ImageData> ReadFromTsv(string file, string folder)
 下列程式碼會剖析 `tags.tsv` 檔案以新增 `ImagePath` 屬性之影像檔案名稱的檔案路徑，然後將它和 `Label` 載入 `ImageData` 物件。 將它新增為 `ReadFromTsv()` 方法的第一行。  您需要完整的檔案路徑以顯示預測結果。
 
 [!code-csharp[ReadFromTsv](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReadFromTsv)]
-ML.NET 有三個主要概念：[資料](../basic-concepts-model-training-in-mldotnet.md#data)、[轉換器](../basic-concepts-model-training-in-mldotnet.md#transformer)以及[估算工具](../basic-concepts-model-training-in-mldotnet.md#estimator)。
+ML.NET 有三個主要概念：[資料](../resources/glossary.md#data)、[轉換器](../resources/glossary.md#transformer)以及[估算工具](../resources/glossary.md#estimator)。
 
 ## <a name="reuse-and-tune-pre-trained-model"></a>重複使用並調整預先定型的模型
 
@@ -290,12 +277,12 @@ ML.NET 有三個主要概念：[資料](../basic-concepts-model-training-in-mldo
 * 調整 (重新定型) 模型。
 * 顯示模型結果。
 * 評估模型。
-* 儲存模型。
+* 傳回模型。
 
-使用下列程式碼，緊接在 `InceptionSettings` 結構之後及 `PairAndDisplayResults()` 方法之前，建立 `ReuseAndTuneInceptionModel()` 方法：
+使用下列程式碼，緊接在 `InceptionSettings` 結構之後及 `DisplayResults()` 方法之前，建立 `ReuseAndTuneInceptionModel()` 方法：
 
 ```csharp
-public static void ReuseAndTuneInceptionModel(MLContext mlContext, string dataLocation, string imagesFolder, string inputModelLocation, string outputModelLocation)
+public static ITransformer ReuseAndTuneInceptionModel(MLContext mlContext, string dataLocation, string imagesFolder, string inputModelLocation, string outputModelLocation)
 {
 
 }
@@ -303,9 +290,9 @@ public static void ReuseAndTuneInceptionModel(MLContext mlContext, string dataLo
 
 ### <a name="load-the-data"></a>載入資料
 
-ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.Data.DataView.IDataView) 表示。 `IDataView` 是彈性且有效率的表格式資料描述方式 (數值和文字)。 資料可以從文字或即時 (例如 SQL 資料庫或記錄檔) 載入至 `IDataView` 物件。
+ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。 `IDataView` 是彈性且有效率的表格式資料描述方式 (數值和文字)。 資料可以從文字或即時 (例如 SQL 資料庫或記錄檔) 載入至 `IDataView` 物件。
 
-使用 `MLContext.Data.ReadFromTextFile` 包裝函式載入資料。 將下列程式碼加入為 `ReuseAndTuneInceptionModel()` 方法中的下一行：
+使用 `MLContext.Data.LoadFromTextFile` 包裝函式載入資料。 將下列程式碼加入為 `ReuseAndTuneInceptionModel()` 方法中的下一行：
 
 [!code-csharp[LoadData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadData "Load the data")]
 
@@ -322,14 +309,14 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.Data.DataView.IDataView
 您的影像處理估算工具會使用預先定型的[深度神經網路 (DNN)](https://en.wikipedia.org/wiki/Deep_learning#Deep_neural_networks) 特徵化工具來擷取特徵。 處理深度神經網路時，您必須將影像調整為預期的網路格式。 這就是為何您會使用數種影像轉換，來將影像資料轉換為模型預期的形式：
 
 1. `LoadImages` 轉換所處理的影像，會以點陣圖類型的形式載入記憶體。
-2. `Resize` 轉換會調整影像大小，因為預先定型的模組具有已定義的輸入影像寬度和高度。
-3. `ImagePixelExtractingEstimator` 轉換會從輸入影像擷取像素，並將它們轉換成數值向量。
+2. `ResizeImages` 轉換會調整影像大小，因為預先定型的模組具有已定義的輸入影像寬度和高度。
+3. `ExtractPixels` 轉換會從輸入影像擷取像素，並將它們轉換成數值向量。
 
 將這些影像轉換新增為後續的程式碼行：
 
 [!code-csharp[ImageTransforms](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ImageTransforms)]
 
-`TensorFlowTransform` 會擷取指定的輸出 (`Inception model` 的影像特徵 `softmax2_pre_activation`)，並使用預先定型的 `TensorFlow` 模型為資料集評分。
+`LoadTensorFlowModel` 是一種便利方法，允許載入 `TensorFlow` 模型一次，接著便會使用 `ScoreTensorFlowModel` 建立 `TensorFlowEstimator`。 `ScoreTensorFlowModel` 會擷取指定的輸出 (`Inception model` 的影像特徵 `softmax2_pre_activation`)，並使用預先定型的 `TensorFlow` 模型為資料集評分。
 
 `softmax2_pre_activation` 會透過判斷影像所屬的類別來協助模型。 `softmax2_pre_activation` 會傳回每個類別適用於某個影像的機率，且那些機率的總和必須為 1。 它假設某個影像將會僅屬於單一類別，如下列範例所示：
 
@@ -345,7 +332,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.Data.DataView.IDataView
 
 ### <a name="choose-a-training-algorithm"></a>選擇的定型演算法
 
-若要新增定型演算法，請呼叫 `mlContext.MulticlassClassification.Trainers.LogisticRegression()` 包裝函式方法。  `LogisticRegression` 會被附加到 `estimator`，並接受 Inception 影像特徵 (`softmax2_pre_activation`) 和 `Label` 輸入參數，以從歷史資料學習。  使用下列程式碼來新增定型器：
+若要新增定型演算法，請呼叫 `mlContext.MulticlassClassification.Trainers.LbfgsMaximumEntropy()` 包裝函式方法。  [LbfgsMaximumEntropy](xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer) 會附加到 `estimator`，並接受 Inception 影像特徵 (`softmax2_pre_activation`) 及 `Label` 輸入參數來從歷史資料學習。  使用下列程式碼來新增定型器：
 
 [!code-csharp[AddTrainer](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#AddTrainer)]
 
@@ -353,7 +340,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.Data.DataView.IDataView
 
 [!code-csharp[MapValueToKey2](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#MapValueToKey2)]
 
-`Fit()` 方法會以所提供的定型資料集來將模型定型。 它會透過轉換資料並套用定型來執行 `Estimator` 定義，且會傳回已定型的模型，也就是 `Transformer`。 將下列內容新增為 `ReuseAndTuneInceptionModel()` 方法中的下一行程式碼，調整模型為合適於 `Train` 資料並傳回已定型模型：
+`Fit()` 方法會透過轉換資料集及套用定型，來定型您的模型。 將下列內容新增為 `ReuseAndTuneInceptionModel()` 方法中的下一行程式碼，調整模型使其符合定型資料集，並傳回已定型的模型：
 
 [!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#TrainModel)]
 
@@ -365,15 +352,15 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.Data.DataView.IDataView
 
 [!code-csharp[EnumerateDataViews](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#EnumerateDataViews)]
 
-呼叫 `PairAndDisplayResults()` 方法來進行配對，並將資料和預測顯示為 `ReuseAndTuneInceptionModel()` 方法中的下一行：
+呼叫 `DisplayResults()` 方法來顯示您的資料和預測，作為 `ReuseAndTuneInceptionModel()` 方法中的下一行：
 
-[!code-csharp[CallPairAndDisplayResults1](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallPairAndDisplayResults1)]
+[!code-csharp[CallDisplayResults1](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallDisplayResults1)]
 
 當您具有預測之後，請設定 [Evaluate()](xref:Microsoft.ML.RecommendationCatalog.Evaluate%2A) 方法：
 
 * 評估模型 (將預測的值與實際的資料集 `Labels` 比較)。
 
-* 傳回模型效能計量。 
+* 傳回模型效能計量。
 
 將下列程式碼加入 `ReuseAndTuneInceptionModel()` 方法中作為的下一行：
 
@@ -389,9 +376,9 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.Data.DataView.IDataView
 
 [!code-csharp[DisplayMetrics](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayMetrics)]
 
-`mlContext.Model.Save` 會將已定型模型儲存為 .zip 檔案 (位於 "assets/outputs" 資料夾中)，其可用於其他 .NET 應用程式中來進行預測。 將下列程式碼加入 `ReuseAndTuneInceptionModel()` 方法中作為的下一行：
+ 新增下列程式碼來將定型後的模型作為下一行傳回：
 
-[!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#SaveModel)]
+[!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReturnModel)]
 
 ## <a name="classify-images-with-a-loaded-model"></a>搭配已載入的模型分類影像
 
@@ -401,34 +388,29 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.Data.DataView.IDataView
 
 `ClassifyImages()` 方法會執行下列工作：
 
-* 載入模型。
 * 將 .TSV 檔案讀取至 `IEnumerable`。
 * 根據測試資料預測影像分類。
 
 使用下列程式碼，緊接在 `ReuseAndTuneInceptionModel()` 方法之後及 `PairAndDisplayResults()` 方法之前，建立 `ClassifyImages()` 方法：
 
 ```csharp
-public static void ClassifyImages(MLContext mlContext, string dataLocation, string imagesFolder, string outputModelLocation)
+public static void ClassifyImages(MLContext mlContext, string dataLocation, string imagesFolder, string outputModelLocation, ITransformer model)
 {
 
 }
 ```
 
-首先，使用下列程式碼載入您先前儲存的模型：
+首先，呼叫 `ReadFromTsv()` 方法來建立 `IEnumerable<ImageData>` 類別，其中包含每個 `ImagePath` 的完整路徑。 您需要該檔案路徑來配對資料與預測結果。 您也需要將 `IEnumerable<ImageData>` 類別轉換為將用來進行預測的 `IDataView`。 將下列程式碼新增為 `ClassifyImages()` 方法中的下兩行：
 
-[!code-csharp[LoadModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadModel)]
+[!code-csharp[CallReadFromTSV](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallReadFromTSV)]
 
-呼叫 `ReadFromTsv()` 方法以建立 `IEnumerable<ImageData>` 類別，其包含每個 `ImagePath` 的完整路徑。 您需要該檔案路徑來配對資料與預測結果。 您也需要將 `IEnumerable<ImageData>` 類別轉換為將用來進行預測的 `IDataView`。 將下列程式碼新增為 `ClassifyImages()` 方法中的下兩行：
-
-[!code-csharp[ReadFromTSV](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReadFromTSV)]
-
-和您先前針對定型影像資料所做的相同，請使用 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 方法來預測測試影像資料的類別。 將下列程式碼新增至 `ClassifyImages()` 方法以取得預測，並將 `predictions` `IDataView` 轉換為 `IEnumerable` 以進行配對及顯示：
+和您先前針對定型影像資料所做的相同，請使用傳入模型的 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 方法來預測測試影像資料的類別。 將下列程式碼新增至 `ClassifyImages()` 方法以取得預測，並將 `predictions` `IDataView` 轉換為 `IEnumerable` 以進行配對及顯示：
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#Predict)]
 
-若要配對及顯示您的測試影像資料和預測，請將下列程式碼新增為 `ClassifyImages()` 方法中的下一行，以呼叫先前所建立的 `PairAndDisplayResults()` 方法：
+若要配對及顯示您的測試影像資料和預測，請將下列程式碼新增為 `ClassifyImages()` 方法中的下一行，以呼叫先前所建立的 `DisplayResults()` 方法：
 
-[!code-csharp[CallPairAndDisplayResults2](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallPairAndDisplayResults2)]
+[!code-csharp[CallDisplayResults2](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallDisplayResults2)]
 
 ## <a name="classify-a-single-image-with-a-loaded-model"></a>搭配已載入的模型分類單一影像
 
@@ -436,26 +418,21 @@ public static void ClassifyImages(MLContext mlContext, string dataLocation, stri
 
 [!code-csharp[CallClassifySingleImage](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallClassifySingleImage)]
 
-`ClassifyImages()` 方法會執行下列工作：
+`ClassifySingleImage()` 方法會執行下列工作：
 
-* 載入模型。
 * 載入 `ImageData` 執行個體。
 * 根據測試資料預測影像分類。
 
 使用下列程式碼，緊接在 `ClassifyImages()` 方法之後及 `PairAndDisplayResults()` 方法之前，建立 `ClassifySingleImage()` 方法：
 
 ```csharp
-public static void ClassifySingleImage(MLContext mlContext, string imagePath, string outputModelLocation)
+public static void ClassifySingleImage(MLContext mlContext, string imagePath, string outputModelLocation, ITransformer model)
 {
 
 }
 ```
 
-首先，使用下列程式碼載入您先前儲存的模型：
-
-[!code-csharp[LoadModel2](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadModel2)]
-
-建立包含單一 `ImagePath` 之完整路徑和影像檔案名稱的 `ImageData` 類別。 將下列程式碼新增為 `ClassifySingleImage()` 方法中的下一行：
+首先，建立包含單一 `ImagePath` 完整路徑和影像檔案名稱的 `ImageData` 類別。 將下列程式碼新增為 `ClassifySingleImage()` 方法中的下一行：
 
 [!code-csharp[LoadImageData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadImageData)]
 
@@ -484,19 +461,15 @@ Image: toaster2.png predicted as: appliance with score: 0.9800823
 =============== Classification metrics ===============
 LogLoss is: 0.0228266745633507
 PerClassLogLoss is: 0.0277501705149937 , 0.0186303530571291 , 0.0217359128952187
-=============== Save model to local file ===============
-Model saved: C:\Tutorials\TransferLearningTF\bin\Debug\netcoreapp2.2\assets\outputs\imageClassifier.zip
-=============== Loading model ===============
-Model loaded: C:\Tutorials\TransferLearningTF\bin\Debug\netcoreapp2.2\assets\outputs\imageClassifier.zip
 =============== Making classifications ===============
 Image: broccoli.png predicted as: food with score: 0.905548
 Image: pizza3.jpg predicted as: food with score: 0.9709008
 Image: teddy6.jpg predicted as: toy with score: 0.9750155
-=============== Loading model ===============
-Model loaded: C:\Tutorials\TransferLearningTF\bin\Debug\netcoreapp2.2\assets\outputs\imageClassifier.zip
 =============== Making single image classification ===============
 Image: toaster3.jpg predicted as: appliance with score: 0.9625379
-Press any key to continue . . .
+
+C:\Program Files\dotnet\dotnet.exe (process 4304) exited with code 0.
+Press any key to close this window . . .
 ```
 
 恭喜您！ 您已透過在 ML.NET 中重複使用已預先定型的 `TensorFlow` 模型，成功建置出可用來分類影像的機器學習模型。

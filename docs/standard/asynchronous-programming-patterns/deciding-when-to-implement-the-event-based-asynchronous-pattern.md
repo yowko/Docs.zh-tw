@@ -12,15 +12,15 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: c41940e74682653339207b4c7cfc48eb3e48b322
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f07b68abecd237b2b378f00efbf2097c9416b487
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628956"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593134"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>決定何時實作事件架構非同步模式
-事件架構非同步模式提供的模式可公開類別的非同步行為。 引進此模式之後，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 定義兩種模式來公開非同步行為：以 <xref:System.IAsyncResult?displayProperty=nameWithType> 介面為基礎的非同步模式與事件架構模式。 本主題說明適合實作這兩種模式的時機。  
+事件架構非同步模式提供的模式可公開類別的非同步行為。 引進此模式之後，.NET Framework 定義兩種模式來公開非同步行為：以 <xref:System.IAsyncResult?displayProperty=nameWithType> 介面為基礎的非同步模式與事件式模式。 本主題說明適合實作這兩種模式的時機。  
   
  如需使用 <xref:System.IAsyncResult> 介面進行非同步程式設計的詳細資訊，請參閱[非同步程式設計模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)。  
   

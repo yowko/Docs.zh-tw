@@ -1,15 +1,15 @@
 ---
-title: HOW TO：依副檔名分組檔案 (LINQ) (C#)
+title: 作法：依副檔名分組檔案 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: bad4df9009a40cede04438063b2d30916d0e68b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b8cb30396a93f5f878c091c4aad3cab9db3f2d4
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575144"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584306"
 ---
-# <a name="how-to-group-files-by-extension-linq-c"></a>HOW TO：依副檔名分組檔案 (LINQ) (C#)
+# <a name="how-to-group-files-by-extension-linq-c"></a>作法：依副檔名分組檔案 (LINQ) (C#)
 此範例示範如何使用 LINQ，對檔案或資料庫清單執行進階群組和排序作業。 它也示範如何使用 <xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Take%2A> 方法在主控台視窗中分頁輸出。  
   
 ## <a name="example"></a>範例  
@@ -105,7 +105,7 @@ class GroupByExtension
  根據本機檔案系統的詳細資料及 `startFolder` 的設定，此程式的輸出可能很長。 為了能夠檢視所有結果，此範例示範如何將結果分頁。 您可以將相同的技術應用到 Windows 和 Web 應用程式。 請注意，因為程式碼會將群組中的項目分頁，所以需要使用巢狀 `foreach` 迴圈。 此外還需要一些額外的邏輯來計算清單中目前的位置，以及讓使用者停止分頁並結束程式。 在這種特殊情況下，會對原始查詢的快取結果執行分頁查詢。 在其他內容中 (例如 LINQ to SQL)，則不需要這類快取。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以 .NET Framework 3.5 版或更高版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。  
+ 建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。  
   
 ## <a name="see-also"></a>另請參閱
 

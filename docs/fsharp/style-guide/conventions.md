@@ -1,15 +1,15 @@
 ---
-title: F#編碼慣例
+title: F# 編碼慣例
 description: 了解一般的指導方針和慣例撰寫時F#程式碼。
 ms.date: 05/14/2018
-ms.openlocfilehash: 1ef016184180eb8d233295e8985903e07693ad26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b292d0a844a4d9efc79aa865b054b4af2cb68c4
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902131"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052803"
 ---
-# <a name="f-coding-conventions"></a>F#編碼慣例
+# <a name="f-coding-conventions"></a>F# 編碼慣例
 
 下列慣例會使用大型的經驗構成F#程式碼基底。 [良好的五個原則F#程式碼](index.md#five-principles-of-good-f-code)是每個建議的基礎。 它們與相關[F#元件的設計指導方針](component-design-guidelines.md)，但是也適用於任何F#程式碼，不只是元件，例如程式庫。
 
@@ -611,7 +611,7 @@ F#提供物件和物件導向 (OO) 概念的完整支援。 雖然許多 OO 概�
 
 ## <a name="type-abbreviations"></a>類型縮寫
 
-[類型縮寫](../language-reference/type-abbreviations.md)是便利的方式來將標籤指派給另一個類型，例如函式簽章或更複雜的類型。 例如，下列別名會將標籤指派給需要哪些技能來定義與計算[CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/)、 深入學習程式庫：
+[類型縮寫](../language-reference/type-abbreviations.md)是便利的方式來將標籤指派給另一個類型，例如函式簽章或更複雜的類型。 例如，下列別名會將標籤指派給需要哪些技能來定義與計算[CNTK](https://docs.microsoft.com/cognitive-toolkit/)、 深入學習程式庫：
 
 ```fsharp
 open CNTK

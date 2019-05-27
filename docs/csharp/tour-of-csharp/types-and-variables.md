@@ -3,12 +3,12 @@ title: C# 型別和變數 - C# 語言教學課程
 description: 了解如何在 C# 中定義類型和宣告變數
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: ae44dd273a2460e5718adc7324fae324e3de5bba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5623b4a1e85508ea7206df2c73b7aaffcbc3fbb1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672364"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881984"
 ---
 # <a name="types-and-variables"></a>型別與變數
 
@@ -23,8 +23,8 @@ C# 的實值型別可進一步細分為*簡單型別*、*列舉型別*、*結構
     * 帶正負號的整數︰`sbyte`、`short`、`int`、`long`
     * 不帶正負號的整數︰`byte`、`ushort`、`uint`、`ulong`
     * Unicode 字元：`char`
-    * IEEE 浮點數：`float`、`double`
-    * 高精確度十進位︰`decimal`
+    * IEEE 二進位浮點：`float`、`double`
+    * 高精確度十進位浮點：`decimal`
     * 布林值：`bool`
   - [列舉型別][EnumTypes]
     * 使用者定義型別，格式為 `enum E {...}`
@@ -55,33 +55,11 @@ C# 的實值型別可進一步細分為*簡單型別*、*列舉型別*、*結構
 [DelegateTypes]: ../language-reference/keywords/delegate.md
 [ArrayTypes]: ../programming-guide/arrays/index.md
 
-八種整數型別支援 8 位元、16 位元、32 位元和 64 位元的值 (帶正負號或不帶正負號)。
-
-兩個浮點數型別 `float` 和`double` 分別使用 32 位元單精確度和 64 位元雙精確度 IEC-60559 格式表示。
-
-`decimal` 型別是 128 位元的資料型別，適合財務和貨幣計算。
+如需數值型別的詳細資訊，請參閱[整數型別表](../language-reference/keywords/integral-types-table.md)和[浮點型別表](../language-reference/keywords/floating-point-types-table.md)。
 
 C# 的 `bool` 型別用來代表布林值 — 不是 `true` 或 `false` 的值。
 
 C# 中的字元和字串處理使用 Unicode 編碼方式。 `char` 型別代表 UTF-16 程式碼單位，而 `string` 型別代表一系列的 UTF-16 程式碼單位。
-
-以下摘要說明 C# 的數值型別。
-
-* 帶正負號的整數
-  - `sbyte`：8 位元，-128 到 127 之間
-  - `short`：16 位元，-32,768 到 32,767 之間
-  - `int`：32 位元，-2,147,483,648 到 2,147,483,647 之間
-  - `long`：64 位元，-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807 之間
-* 不帶正負號的整數
-  - `byte`：8 位元，0 到 255 之間
-  - `ushort`：16 位元，0 到 65,535 之間
-  - `uint`：32 位元，0 到 4,294,967,295 之間
-  - `ulong`：64 位元，0 到 18,446,744,073,709,551,615 之間
-* 浮點
-  - `float`：32 位元，1.5 × 10<sup>-45</sup> 到 3.4 × 10<sup>38</sup> 之間，7 位數精確度
-  - `double`：64 位元，5.0 × 10<sup>−324</sup> 到 1.7 × 10<sup>308</sup> 之間，15 位數精確度
-* Decimal
-  - `decimal`：128 位元，至少在 -7.9 × 10<sup>-28</sup> 到 7.9 × 10<sup>28</sup> 之間，至少 28 位數精確度
 
 C# 程式使用*型別宣告*來建立新型別。 型別宣告指定新型別的名稱成員。 可由使用者定義的五種 C# 型別類型︰類別型別、結構型別、介面型別、列舉型別及委派型別。
 

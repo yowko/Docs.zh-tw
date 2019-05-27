@@ -6,12 +6,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 87a7b16d3e096f6a5bf05475ccc7c43862324ae3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 110d83caad0c588fa899a4129897784e9c74aab8
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583359"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881919"
 ---
 # <a name="static-constructors-c-programming-guide"></a>靜態建構函式 (C# 程式設計手冊)
 靜態建構函式用來初始化任何 [static](../../../csharp/language-reference/keywords/static.md) 資料，或執行只需要執行一次的特定動作。 在建立第一個執行個體或參考任何靜態成員之前，會自動進行呼叫。  
@@ -22,7 +22,7 @@ ms.locfileid: "64583359"
   
 - 靜態建構函式不會接受存取修飾詞，也不會包含參數。  
   
-- 系統會在建立第一個執行個體或參考任何靜態成員之前，自動呼叫靜態建構函式來初始化 [class](../../../csharp/language-reference/keywords/class.md)。  
+- 系統會在建立第一個執行個體或參考任何靜態成員之前，自動呼叫靜態建構函式來初始化 [class](../../../csharp/language-reference/keywords/class.md)。 請注意，當靜態方法指派給事件時，會呼叫型別的靜態建構函式；或者指派時會叫用委派。
   
 - 靜態建構函式不能直接呼叫。  
   

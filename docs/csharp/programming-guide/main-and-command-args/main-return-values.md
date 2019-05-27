@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: f515268af13ef95b8b6d9a79f71c49d5d4a98d05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ea6f93e52ade91e61bdfcbc35aeb56de9101e80f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149834"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878922"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 傳回值 (C# 程式設計手冊)
 
@@ -22,7 +22,7 @@ ms.locfileid: "59149834"
 
  [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-如果未使用來自 `Main` 的傳回值，則傳回 `void` 可允許使用比較簡單的程式碼。 不過，若是傳回一個整數，可讓程式將狀態資訊傳達給其他會叫用可執行檔的程式或指令碼。 從 `Main` 傳回的值會視為處理序的結束代碼。 下列範例示範如何存取來自 `Main` 的傳回值。
+如果未使用來自 `Main` 的傳回值，則傳回 `void` 可允許使用比較簡單的程式碼。 不過，若是傳回一個整數，可讓程式將狀態資訊傳達給其他會叫用可執行檔的程式或指令碼。 從 `Main` 傳回的值會視為處理序的結束代碼。 如果 `void` 從 `Main` 傳回，結束程式碼會隱含為 `0`。 下列範例示範如何存取來自 `Main` 的傳回值。
 
 ## <a name="example"></a>範例
 
@@ -85,18 +85,17 @@ private static async Task<int> AsyncConsoleWork()
 
 當應用程式進入點傳回 `Task` 或 `Task<int>` 時，編譯器會產生新的進入點，以呼叫應用程式程式碼中宣告的進入點方法。 假設此進入點稱為 `$GeneratedMain`，編譯器會為這些進入點產生下列程式碼：
 
-- `static Task Main()` 會導致編譯器發出下列項目的對等項目： `private static void $GeneratedMain() => Main().GetAwaiter().GetResult();`
-- `static Task Main(string[])` 會導致編譯器發出下列項目的對等項目： `private static void $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`
-- `static Task<int> Main()` 會導致編譯器發出下列項目的對等項目： `private static int $GeneratedMain() => Main().GetAwaiter().GetResult();`
-- `static Task<int> Main(string[])` 會導致編譯器發出下列項目的對等項目： `private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`
+- `static Task Main()` 會導致編譯器發出 `private static void $GeneratedMain() => Main().GetAwaiter().GetResult();` 的對等項目
+- `static Task Main(string[])` 會導致編譯器發出 `private static void $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();` 的對等項目
+- `static Task<int> Main()` 會導致編譯器發出 `private static int $GeneratedMain() => Main().GetAwaiter().GetResult();` 的對等項目
+- `static Task<int> Main(string[])` 會導致編譯器發出 `private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();` 的對等項目
 
 > [!NOTE]
 >如果這些範例在 `Main` 方法上使用 `async` 修飾詞，編譯器會產生相同的程式碼。
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計手冊](../../programming-guide/index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 參考](../index.md)
 - [Main() 和命令列引數](index.md)
-- [作法：顯示命令列引數](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [作法：使用 foreach 存取命令列引數](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
+- [如何：顯示命令列引數](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)

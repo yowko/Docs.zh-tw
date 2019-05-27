@@ -6,18 +6,18 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 29f52728f0bfa9e78253fc2b39583e89f53198d6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 070b409a7d1cc755451414d24ca2fa6002638dc0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976326"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585736"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>作法：逐一查看目錄樹狀 (C# 程式設計手冊)
 「逐一查看樹狀目錄」一詞，代表存取指定根資料夾下每個巢狀子目錄中任意深度的每個檔案。 您不需要開啟每個檔案。 您可以只擷取的檔案名稱或子目錄當成 `string`，或者可以擷取格式為 <xref:System.IO.FileInfo?displayProperty=nameWithType> 或 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 物件的其他資訊。  
   
 > [!NOTE]
->  在 Windows 中，「目錄」和「資料夾」等詞可交替使用。 大多數文件和使用者介面文字是使用「資料夾」一詞，但 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Class Library 則是使用「目錄」一詞。  
+>  在 Windows 中，「目錄」和「資料夾」等詞可交替使用。 大多數文件和使用者介面文字都使用「資料夾」一詞，但 .NET Framework 類別庫則是使用「目錄」一詞。  
   
  在最簡單的情況下，當您確定具有指定根資料夾下所有目錄的存取權限時，就可以使用 `System.IO.SearchOption.AllDirectories` 旗標。 此旗標會傳回符合指定模式的所有巢狀子目錄。 下列範例示範如何使用此旗標。  
   

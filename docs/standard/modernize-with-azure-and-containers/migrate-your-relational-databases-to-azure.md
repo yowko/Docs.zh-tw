@@ -2,12 +2,12 @@
 title: 將關聯式資料庫移轉至 azure
 description: 將現有.NET 應用程式與 Azure 雲端和 Windows 容器現代化 |將關聯式資料庫移轉至 azure
 ms.date: 04/28/2018
-ms.openlocfilehash: 1c09172f0948551edfe059be6f43d7a02278203d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3d4f03e61144bb6a442a50916d7fd024d38ec611
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638884"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051927"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>將關聯式資料庫移轉至 azure
 
@@ -81,7 +81,7 @@ Azure SQL Database 提供下列優點：
 
 移轉選項的其中一個是移動您原始關聯式資料庫管理系統 (RDBMS)，包括 Oracle、 IBM DB2、 MySQL、 PostgreSQL 或 SQL Server 到類似的伺服器在 Azure VM 上執行。 如果您有現有的應用程式完全需要最快速移轉至雲端，幾乎不需要變更或完全不變更時，直接移轉至雲端中的 IaaS 可能是合理的選項。 它可能無法利用所有的雲端優勢的最佳辦法，但它可能是最快速的初始路徑。
 
-目前，Microsoft Azure 支援最多[331 不同資料庫伺服器](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all)部署為 IaaS Vm。 這些包括常用的 RDBMS，例如 SQL Server、 Oracle、 MySQL、 PostgreSQL 和 IBM DB2 和 MongoDB、 Cassandra、 DataStax、 MariaDB 和 Cloudera 等許多其他 NoSQL 資料庫。
+目前，Microsoft Azure 支援最多[331 不同資料庫伺服器](https://azuremarketplace.microsoft.com/marketplace/apps/category/databases?page=1&subcategories=databases-all)部署為 IaaS Vm。 這些包括常用的 RDBMS，例如 SQL Server、 Oracle、 MySQL、 PostgreSQL 和 IBM DB2 和 MongoDB、 Cassandra、 DataStax、 MariaDB 和 Cloudera 等許多其他 NoSQL 資料庫。
 
 > [!NOTE]
 > 雖然移動您 RDBMS 至 Azure VM 可能是最快速的方式將資料移轉至雲端 （因為它是 IaaS），這種方法需要大量投資您的 IT 團隊 （資料庫管理員和 IT 專業人員）。 企業團隊必須要能夠設定和管理高可用性、 災害復原及修補 SQL Server。 此內容也需要自訂的環境中，以完整系統管理權限。

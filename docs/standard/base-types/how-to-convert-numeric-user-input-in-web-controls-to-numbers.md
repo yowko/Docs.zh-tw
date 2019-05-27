@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29141cb43d914dd3781e9307b6a553361152a645
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5af942b5e7576c13ff7be8d11c0009fd0c4f7462
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634167"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882475"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>作法：將使用者輸入 Web 控制項的數值轉換成數字
 由於網頁可在世界上的任何角落顯示，所以，使用者可以幾乎不限數量的格式來將數值資料輸入至 <xref:System.Web.UI.WebControls.TextBox> 控制項。 因此，判斷網頁使用者的地區設定和文化特性就變得非常重要。 當您剖析使用者輸入時，可以接著套用使用者地區設定和文化特性所定義的格式設定慣例。  
@@ -58,7 +58,7 @@ ms.locfileid: "64634167"
  您的程式碼可以針對將轉換使用者輸入的目標數值類型呼叫 `Parse` 或 `TryParse` 方法。 您可能需要針對單一剖析作業重複呼叫剖析方法。 因此，`TryParse` 方法比較好，因為它會在剖析作業失敗時傳回 `false`。 相反地，在 Web 應用程式中處理 `Parse` 方法可能擲回的重複例外狀況，是個非常耗費成本的作法。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 若要編譯程式碼，請將它複製到 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 程式碼後置頁面，以便它取代所有現有的程式碼。 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 網頁應包含下列控制項：  
+ 若要編譯程式碼，請將它複製到 ASP.NET 程式碼後置頁面以取代所有現有的程式碼。 ASP.NET 網頁應包含下列控制項：  
   
 - <xref:System.Web.UI.WebControls.Label> 控制項，程式碼中並未參考此控制項。 將它的 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 屬性設定為 "Enter a Number:"。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "64634167"
   
 - 名為 `OKButton` 的 <xref:System.Web.UI.WebControls.Button> 控制項。 將它的 <xref:System.Web.UI.WebControls.Button.Text%2A> 屬性設為 "OK"。  
   
- 將來自 `NumericUserInput` 的類別名稱變更為由 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 頁面之 `Page` 指示詞的 `Inherits` 屬性所定義的類別名稱。 將 `NumericInput` 物件參考的名稱變更為 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 頁面之 `form` 標籤的 `id` 屬性所定義的名稱。  
+ 將來自 `NumericUserInput` 的類別名稱變更為由 ASP.NET 頁面 `Page` 指示詞的 `Inherits` 屬性所定義的類別名稱。 將 `NumericInput` 物件參考的名稱變更為 ASP.NET 頁面 `form` 標籤的 `id` 屬性所定義的名稱。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  為了防止使用者將指令碼插入至 HTML 資料流，絕對不應在伺服器回應中直接回應使用者輸入。 而應改用 <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> 方法進行編碼。  

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 Windows Forms RichTextBox 控制項顯示 Web 樣式連結
+title: 作法：使用 Windows Forms RichTextBox 控制項顯示 Web 樣式連結
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: faaa48051c80b6dfd330f15f72a38297ff2d1b9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05d9ad4766584b59cca7c31f49b737d4696a9921
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941579"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053545"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>HOW TO：使用 Windows Forms RichTextBox 控制項顯示 Web 樣式連結
 Windows Form<xref:System.Windows.Forms.RichTextBox>控制項可以顯示為彩色和加底線的網頁連結。 您可以撰寫程式碼，會開啟瀏覽器視窗顯示時按一下連結，連結文字中指定的網站。  
@@ -74,13 +74,13 @@ Windows Form<xref:System.Windows.Forms.RichTextBox>控制項可以顯示為彩�
        }  
     ```  
   
-     ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 您必須初始化程序`p`，可執行下列陳述式併入您的表單的建構函式：  
+     (Visual C++)您必須初始化程序`p`，可執行下列陳述式併入您的表單的建構函式：  
   
     ```cpp  
     p = gcnew System::Diagnostics::Process();  
     ```  
   
-     (Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 下列程式碼置於表單的建構函式，以註冊事件處理常式。  
+     (Visual C#、 Visual C++)下列程式碼置於表單的建構函式，以註冊事件處理常式。  
   
     ```csharp  
     this.richTextBox1.LinkClicked += new   

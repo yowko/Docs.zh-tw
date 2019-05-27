@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bf692ff93a575858d1d1a89346611cb9c5957b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb3ad0d39d47297b7d26a5c28cfbbc269ce99e44
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867039"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052404"
 ---
 # <a name="runtime-directive-elements"></a>執行階段指示詞項目
 執行階段指示詞 (rd.xml) 檔案格式支援下列執行階段指示詞元素。 如需階層表示法，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。  
@@ -24,7 +24,7 @@ ms.locfileid: "61867039"
  如果其包含 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 指示詞是屬性，則會將執行階段原則套用至套用該屬性的程式碼項目。  
   
  [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)  
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] 每個執行階段指示詞檔案中的根元素。 其子項目是 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 和 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)。  
+ 針對.NET 原生的每個執行階段指示詞檔案中的根項目。 其子項目是 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 和 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)。  
   
  [\<Event>](../../../docs/framework/net-native/event-element-net-native.md)  
  將執行階段原則套用至事件。 這是 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 和 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 項目的子項。  

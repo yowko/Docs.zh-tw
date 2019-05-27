@@ -1,18 +1,18 @@
 ---
 title: 運算子 - C# 程式設計手冊
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 04/30/2019
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fd10999066f599d819ef188e09028c64c6a5e9e6
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307453"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064046"
 ---
 # <a name="operators-c-programming-guide"></a>運算子 (C# 程式設計手冊)
 
@@ -26,108 +26,19 @@ ms.locfileid: "59307453"
   
  [!code-csharp[csProgGuideStatements#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#6)]  
   
-## <a name="operators-evaluation-and-operator-precedence"></a>運算子、評估和運算子優先順序
+運算元可以是由任何長度的程式碼撰寫而成的有效運算式，而且可以包含任何數量的子運算式。 在包含多個運算子的運算式中，套用運算子的順序取決於「 *運算子優先順序*」(Operator Precedence)、「 *順序關聯性*」(Associativity) 以及括號。  
 
- 運算元可以是由任何長度的程式碼撰寫而成的有效運算式，而且可以包含任何數量的子運算式。 在包含多個運算子的運算式中，套用運算子的順序取決於「 *運算子優先順序*」(Operator Precedence)、「 *順序關聯性*」(Associativity) 以及括號。  
+## <a name="operator-precedence"></a>運算子優先順序
   
- 每個運算子都有定義的優先順序。 在包含多個運算子且運算子具有不同優先順序層級的運算式中，運算子的優先順序決定評估運算子的順序。 例如，下列陳述式會將 3 指派給 `n1`。  
-  
- `n1 = 11 - 2 * 4;`  
-  
- 因為乘法的優先順序高於減法，所以會先執行乘法。  
-  
- 下表根據運算子所執行的運算類型，將運算子加以分類。 分類是依照優先順序列出。  
-  
- **主要運算子**  
-  
-|運算式|說明|  
-|----------------|-----------------|  
-|x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|成員存取<br /><br /> 條件式成員存取|  
-|f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|方法和委派叫用|  
-|a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)<br /><br /> a?[x]|陣列和索引子存取<br /><br /> 條件式陣列和索引子存取|  
-|x[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)|後置遞增|  
-|x[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)|後置遞減|  
-|[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)|建立物件和委派|  
-|`new` T(...){...}|使用初始設定式建立物件。 請參閱[物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。|  
-|`new` {...}|匿名物件初始設定式。 請參閱[匿名型別](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。|  
-|`new` T[...]|建立陣列。 請參閱[陣列](../../../csharp/programming-guide/arrays/index.md)。|  
-|[typeof](../../../csharp/language-reference/keywords/typeof.md)(T)|取得 T 的 System.Type 物件|  
-|[checked](../../../csharp/language-reference/keywords/checked.md)(x)|在核取的內容中評估運算式|  
-|[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)|在未核取的內容中評估運算式|  
-|[default](../../../csharp/language-reference/keywords/default.md) (T)|取得類型 T 的預設值|  
-|[delegate](../../../csharp/language-reference/keywords/delegate.md) {}|匿名函式 (匿名方法)|  
-  
- **一元運算子**  
-  
-|運算式|說明|  
-|----------------|-----------------|  
-|[+](../../../csharp/language-reference/operators/addition-operator.md)x|身分識別|  
-|[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|否定|  
-|[\!](../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)x|邏輯否定|  
-|[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|位元否定|  
-|[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|前置遞增|  
-|[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|前置遞減|  
-|[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|x 明確轉換成類型 T|  
-  
- **乘法類運算子**  
-  
-|運算式|說明|  
-|----------------|-----------------|  
-|[*](../../../csharp/language-reference/operators/arithmetic-operators.md#multiplication-operator-)|乘法|  
-|[/](../../../csharp/language-reference/operators/arithmetic-operators.md#division-operator-)|除號|  
-|[%](../../../csharp/language-reference/operators/arithmetic-operators.md#remainder-operator-)|餘數|  
-  
- **加法類運算子**  
-  
-|運算式|說明|  
-|----------------|-----------------|  
-|x [+](../../../csharp/language-reference/operators/addition-operator.md) y|加法、字串串連、委派組合|  
-|x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y|減法、委派移除|  
-  
- **移位運算子**  
-  
-|運算式|說明|  
-|----------------|-----------------|  
-|x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|左移|  
-|x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|右移|  
-  
- **關係和型別運算子**  
-  
-|運算式|說明|  
-|----------------|-----------------|  
-|x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y|小於|  
-|x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y|大於|  
-|x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y|小於或等於|  
-|x [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y|大於或等於|  
-|x [is](../../../csharp/language-reference/keywords/is.md) T|如果 x 為 T 則傳回 true，否則傳回 false|  
-|x [as](../../../csharp/language-reference/keywords/as.md) T|傳回類型 T 的 x，如果 x 不是 T 則傳回 null|  
-  
- **等號比較運算子**  
-  
-|運算式|說明|  
-|----------------|-----------------|  
-|x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|等於|  
-|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|不相等|  
-  
- **邏輯、條件和 Null 運算子**  
-  
-|分類|運算式|說明|  
-|--------------|----------------|-----------------|  
-|邏輯 AND|x [&](../../../csharp/language-reference/operators/and-operator.md) y|整數位元 AND、布林邏輯 AND|  
-|邏輯 XOR|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|整數位元 XOR、布林邏輯 XOR|  
-|邏輯 OR|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|整數位元 OR、布林邏輯 OR|  
-|條件式 AND|x [&&](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) y|只有在 x 為 true 時評估 y|  
-|條件式 OR|x [&#124;&#124;](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) y|只有在 x 為 false 時評估 y|  
-|Null 聯合|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) Y|如果 x 為 null 則判斷值為 y，否則判斷值為 x|  
-|條件式|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|如果 x 為 true 則判斷值為 y；如果 x 為 false 則判斷值為 z|  
-  
- **指派和匿名運算子**  
-  
-|運算式|說明|  
-|----------------|-----------------|  
-|[=](../../../csharp/language-reference/operators/assignment-operator.md)|指派|  
-|x op= y|複合指派。 支援這些運算子：[+=](../../../csharp/language-reference/operators/addition-assignment-operator.md)、[-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md)、[*=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment)、[/=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment)、[%=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment)、[&=](../../../csharp/language-reference/operators/and-assignment-operator.md)、[&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md)、[^=](../../../csharp/language-reference/operators/xor-assignment-operator.md)、[<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md)、[>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
-|(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|匿名函式 (Lambda 運算式)|  
+每個運算子都有定義的優先順序。 在包含多個運算子且運算子具有不同優先順序層級的運算式中，運算子的優先順序決定評估運算子的順序。 例如，下列陳述式會將 3 指派給 `n1`：
+
+```csharp
+n1 = 11 - 2 * 4;
+```
+
+因為乘法的優先順序高於減法，所以會先執行乘法。
+
+如需按優先順序層級排序的 C# 運算子完整清單，請參閱 [C# 運算子](../../language-reference/operators/index.md)。
   
 ## <a name="associativity"></a>順序關聯性
 
@@ -169,13 +80,11 @@ a = (b = c);
   
 ## <a name="operator-overloading"></a>運算子多載
 
- 您可以變更自訂類別和結構的運算子行為。 這個程序稱為「 *運算子多載*」(Operator Overloading)。 如需詳細資訊，請參閱[多載運算子](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)和 [operator](../../../csharp/language-reference/keywords/operator.md) 關鍵字文章。  
-  
-## <a name="related-sections"></a>相關章節
-
- 如需詳細資訊，請參閱[運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)[C# 運算子](../../../csharp/language-reference/operators/index.md)。  
+您可以定義自訂類別和結構的某些運算子行為。 這個程序稱為「 *運算子多載*」(Operator Overloading)。 如需詳細資訊，請參閱[多載運算子](overloadable-operators.md)和 [operator](../../language-reference/keywords/operator.md) 關鍵字文章。
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [陳述式、運算式和運算子](../../../csharp/programming-guide/statements-expressions-operators/index.md)
+- [C# 程式設計指南](../index.md)
+- [陳述式、運算式和運算子](index.md)
+- [C# 運算子](../../language-reference/operators/index.md)
+- [運算子關鍵字](../../language-reference/keywords/operator-keywords.md)

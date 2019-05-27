@@ -15,12 +15,12 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6bb41ad3743e19ae3f6ded48dd491542926010d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4c50cdf93d8cfcefeffd35290d26dfa432a241e1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633877"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882480"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>作法：對 Web 使用者顯示當地語系化的日期和時間資訊
 由於網頁可在世界的任何一個角落顯示，負責剖析及格式化日期和時間值的作業在與使用者互動時，並不應該仰賴單一的預設格式 (這通常是網頁伺服器當地文化特性的格式)。 相反地，處理來自使用者之日期和時間字串輸入的 Web 表單，應該使用該使用者慣用的文化特性對字串進行剖析。 同樣地，日期和時間資料應該以符合使用者文化特性的格式向該使用者顯示。 本主題顯示如何執行此動作。  
@@ -98,7 +98,7 @@ ms.locfileid: "64633877"
  您的程式碼可以呼叫 <xref:System.DateTime.Parse%2A> 或 <xref:System.DateTime.TryParse%2A> 方法，以將使用者代表日期和時間的字串轉換為 <xref:System.DateTime> 值。 您可能需要針對單一剖析作業重複呼叫剖析方法。 因此，<xref:System.DateTime.TryParse%2A> 方法是一個較佳的作法，因為它會在剖析作業失敗時傳回 `false`。 相反地，在 Web 應用程式中處理 <xref:System.DateTime.Parse%2A> 方法可能擲回的重複例外狀況，是個非常耗費成本的作法。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 若要編譯程式碼，請在不搭配程式碼後置的情況下建立 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 網頁。 然後將範例複製到網頁中，以它取代所有現有的程式碼。 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 網頁應包含下列控制項：  
+ 若要編譯程式碼，請在不搭配程式碼後置的情況下建立 ASP.NET 網頁。 然後將範例複製到網頁中，以它取代所有現有的程式碼。 ASP.NET 網頁應包含下列控制項：  
   
 - <xref:System.Web.UI.WebControls.Label> 控制項，程式碼中並未參考此控制項。 將它的 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 屬性設定為 "Enter a Number:"。  
   

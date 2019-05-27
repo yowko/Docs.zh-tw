@@ -5,16 +5,16 @@ ms.date: 03/15/2018
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: e528771d7afeec705f35fa3093a3e4f534b3a1e4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ce3d39c42dc35ca3038fc38edd9327e9b96fb20f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239848"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633424"
 ---
 # <a name="new-operator-c-reference"></a>new 運算子 (C# 參考)
 
-用以建立物件及叫用建構函式。 例如: 
+用以建立物件及叫用建構函式。 例如：
 
 ```csharp
 Class1 obj  = new Class1();
@@ -27,7 +27,7 @@ var query = from cust in customers
             select new { Name = cust.Name, Address = cust.PrimaryAddress };
 ```
 
-`new` 運算子也可以用來叫用實值型別的預設建構函式。 例如：
+`new` 運算子也會用來叫用實值型別的無參數建構函式。 例如：
 
 ```csharp
 int i = new int();
@@ -41,7 +41,7 @@ int i = 0;
 
 如需預設值的完整清單，請參閱[預設值表](default-values-table.md)。
 
-請記住，為 [struct](struct.md) 宣告預設建構函式是錯誤，因為每一個實值型別都有隱含的公用預設建構函式。 在結構型別上宣告參數化建構函式以設定其初始值是可能的，但只有需要預設值以外的值時才為必要。
+請記得，為 [struct](struct.md) 宣告無參數建構函式是一項錯誤，因為每個實值型別都隱含具有公用的無參數建構函式。 在結構型別上宣告參數化建構函式以設定其初始值是可能的，但只有需要預設值以外的值時才為必要。
 
 實質型別物件 (如結構) 與參考型別物件 (如類別) 皆會自動終結，但實質型別物件會在其包含的內容終結時終結，而參考型別物件則會在以其為目標的上一個參考移除時，在非指定時間由記憶體回收行程終結。 對於包含檔案處理常式或網路連線等資源的類型而言，最好採用確定性清除來確保其包含的資源盡早釋出。 如需詳細資訊，請參閱[使用陳述式](using-statement.md)。
 

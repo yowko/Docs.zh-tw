@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將引號放入字串中 (Windows Forms)
+title: 作法：將引號放入字串中 (Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 14180f0326b38872f5d1b112c3d9a87022fb79e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0148f9fde9d69bb1605776f1ab617079be96b59e
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913220"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053458"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>HOW TO：將引號放入字串中 (Windows Forms)
-您有時可能想要將引號 (" ") 放入文字字串中。 例如：  
+您有時可能想要將引號 (" ") 放入文字字串中。 例如:   
   
  She said, "You deserve a treat!"  
   
@@ -26,7 +26,7 @@ ms.locfileid: "61913220"
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>將引號放入您的程式碼中的字串  
   
-1. 在 Visual Basic 中，插入資料列中的兩個引號當作內嵌引號。 在視覺效果C#並[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]，插入逸出序列\\"當作內嵌的引號。 例如，若要建立前置字串，請使用下列程式碼。  
+1. 在 Visual Basic 中，插入資料列中的兩個引號當作內嵌引號。 在視覺效果C#和 Visual C++，插入逸出序列\\"當作內嵌的引號。 例如，若要建立前置字串，請使用下列程式碼。  
   
     ```vb  
     Private Sub InsertQuote()  

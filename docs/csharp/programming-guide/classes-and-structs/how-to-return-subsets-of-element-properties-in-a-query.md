@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: da4ecb11c51f42c2297b6d40ed9a963590b3f441
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: acff804d87d67bf8758b97ad04805359bb3f2e32
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600000"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586073"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>作法：在查詢中傳回項目屬性的子集 (C# 程式設計手冊)
 如果下列兩個條件都成立，請在查詢運算式中使用匿名型別：  
@@ -44,7 +44,7 @@ Console.WriteLine(student.First + " " + student.Last);
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
-- 若要執行此程式碼，請將該類別複製並貼到已在 Visual Studio 中建立的 Visual C# 主控台應用程式專案。 根據預設，此專案是以 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 版為目標，而且會有 System.Core.dll 的參考，以及 System.Linq 的 `using` 指示詞。 如果專案中遺漏上述一或多個需求，您可以手動新增這些需求。   
+若要執行此程式碼，請將該類別複製貼入 System.Linq 指示詞為 `using` 的 C# 主控台應用程式。
   
 ## <a name="see-also"></a>另請參閱
 

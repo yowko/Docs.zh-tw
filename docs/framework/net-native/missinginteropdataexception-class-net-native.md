@@ -7,22 +7,22 @@ dev_langs:
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31208a63caaf9158f12742f1547b0e1e2781de4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 803709c97309f9766b6a441f5521cdcd7504862f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866882"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052494"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>MissingInteropDataException 類別 (.NET Native)
-**僅限 Windows 10 之 Windows 應用程式的 .NET[!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
+**適用於 Windows 10，僅限.NET Native 的 Windows 應用程式的.NET**  
   
  當呼叫手動封送處理方法，但靜態分析或執行階段指示詞檔案中找不到類型的中繼資料時，會擲回這個例外狀況。  
   
  **命名空間：** System.Runtime.CompilerServices  
   
 > [!IMPORTANT]
->  `MissingInteropDataException` 類別主要僅供　[!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈內部使用。 這主要並非用於協力廠商程式碼中，也不應該在應用程式程式碼中處理此例外狀況。 相反地，請藉由將項目新增至[執行階段指示詞檔案](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)，來消除例外狀況。 如需詳細資訊，請參閱＜備註＞一節。  
+>  `MissingInteropDataException`類別是僅供內部使用的.NET Native 工具鏈。 這主要並非用於協力廠商程式碼中，也不應該在應用程式程式碼中處理此例外狀況。 相反地，請藉由將項目新增至[執行階段指示詞檔案](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)，來消除例外狀況。 如需詳細資訊，請參閱＜備註＞一節。  
   
 ## <a name="syntax"></a>語法  
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
@@ -34,7 +34,7 @@ ms.locfileid: "61866882"
   
 |建構函式|描述|  
 |-----------------|-----------------|  
-|`public MissingInteropDataException(String resourceId, Type pertinentType)`|使用系統提供有關錯誤及遺漏資料之類型的說明訊息識別碼，初始化 `MissingInteropDataException` 類別的新執行個體。 這個建構函式僅供 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈內部使用。|  
+|`public MissingInteropDataException(String resourceId, Type pertinentType)`|使用系統提供有關錯誤及遺漏資料之類型的說明訊息識別碼，初始化 `MissingInteropDataException` 類別的新執行個體。 這個建構函式是.NET Native 工具鏈僅供內部使用。|  
   
 ## <a name="properties"></a>屬性  
   

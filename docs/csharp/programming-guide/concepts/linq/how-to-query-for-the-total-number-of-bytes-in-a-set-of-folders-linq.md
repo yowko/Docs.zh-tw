@@ -1,15 +1,15 @@
 ---
-title: HOW TO：查詢一組資料夾中的位元組總數 (LINQ) (C#)
+title: 作法：查詢一組資料夾中的位元組總數 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: a01bd1d4-133c-4ca2-aa4e-e93e81d6076c
-ms.openlocfilehash: 52f428bcf427065b80e91c4d299c5d8fd9f32972
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04eed82041dc3c0818b0205f5198abe6e9eb228e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607549"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585686"
 ---
-# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a>HOW TO：查詢一組資料夾中的位元組總數 (LINQ) (C#)
+# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a>作法：查詢一組資料夾中的位元組總數 (LINQ) (C#)
 此範例示範如何擷取所指定資料夾及其所有子資料夾中之所有檔案使用的位元組總數。  
   
 ## <a name="example"></a>範例  
@@ -74,7 +74,7 @@ class QuerySize
  查詢會呼叫外面另一個方法來取得檔案長度。 這麼做是要解決可能會因下列狀況引發的例外狀況：自呼叫 `GetFiles` 而建立 <xref:System.IO.FileInfo> 物件後，有另一個執行緒刪除了檔案。 即使已建立 <xref:System.IO.FileInfo> 物件，還是可能會發生這個例外狀況，原因是 <xref:System.IO.FileInfo> 物件會在它的 <xref:System.IO.FileInfo.Length%2A> 屬性第一次受到存取時，嘗試用目前最新的長度來重新整理這個屬性。 讓這個作業進入查詢外部的 try-catch 區塊，程式碼就會遵循規則，以避免查詢中會造成副作業的作業。 一般而言，處理例外狀況時需要十分小心，以確定應用程式不是處於未知狀態。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以 .NET Framework 3.5 版或更高版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。  
+建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。
   
 ## <a name="see-also"></a>另請參閱
 

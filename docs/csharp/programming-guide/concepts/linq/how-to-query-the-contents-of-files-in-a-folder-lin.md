@@ -1,16 +1,16 @@
 ---
-title: HOW TO：查詢資料夾中的文字檔內容 (LINQ) (C#)
+title: 作法：查詢資料夾中的文字檔內容 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: 66e2a2d6ee2b8dd3be3e66f7277947b6d6f749a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1be896f257395cb1e70718ac55e3199da09d8961
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688153"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585849"
 ---
-# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>HOW TO：查詢資料夾中的文字檔內容 (LINQ) (C#)
-此範例示範如何查詢所指定樹狀目錄中的所有檔案、開啟每個檔案，然後檢查檔案的內容。 這類技巧可以用來建立索引，或將樹狀目錄內容的索引反轉。 在此範例中，執行的是簡單字串搜尋。 不過，您可以使用規則運算式執行更複雜的模式比對類型。 如需詳細資訊，請參閱[＜How to：使用規則運算式合併 LINQ 查詢 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)。  
+# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>作法：查詢資料夾中的文字檔內容 (LINQ) (C#)
+此範例示範如何查詢所指定樹狀目錄中的所有檔案、開啟每個檔案，然後檢查檔案的內容。 這類技巧可以用來建立索引，或將樹狀目錄內容的索引反轉。 在此範例中，執行的是簡單字串搜尋。 不過，您可以使用規則運算式執行更複雜的模式比對類型。 如需詳細資訊，請參閱[如何：使用規則運算式合併 LINQ 查詢 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -71,7 +71,7 @@ class QueryContents
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。  
+建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。
   
 ## <a name="see-also"></a>另請參閱
 

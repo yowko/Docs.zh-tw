@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3c845cefad451c608f5c095e4941c3368dc9975
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28b09bf07d831747be0006ffe1f1d8c5ac5171ce
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650554"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052648"
 ---
 # <a name="compiling-apps-with-net-native"></a>使用 .NET Native 編譯應用程式
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] 是用於建置及部署 Windows 應用程式的先行編譯技術是隨附於 Visual Studio 2015 和更新版本。 此工具可將以 Managed 程式碼 (C# 或 Visual Basic) 撰寫且目標為 .NET Framework 和 Windows 10 的應用程式發行版本自動編譯為機器碼。  
+.NET native 是隨附於 Visual Studio 2015 和更新版本的先行編譯技術來建置和部署 Windows 應用程式。 此工具可將以 Managed 程式碼 (C# 或 Visual Basic) 撰寫且目標為 .NET Framework 和 Windows 10 的應用程式發行版本自動編譯為機器碼。  
   
- 一般而言，以 .NET Framework 為目標的應用程式會編譯成中繼語言 (IL)。 在執行階段，just-in-time (JIT) 編譯器會將 IL 轉譯成機器碼。 相對地， [!INCLUDE[net_native](../../../includes/net-native-md.md)] 則會將 Windows 應用程式直接編譯成機器碼。 對開發人員而言，這表示：  
+ 一般而言，以 .NET Framework 為目標的應用程式會編譯成中繼語言 (IL)。 在執行階段，just-in-time (JIT) 編譯器會將 IL 轉譯成機器碼。 相反地，.NET Native 編譯 Windows 應用程式，直接以原生程式碼。 對開發人員而言，這表示：  
   
 - 您的應用程式功能的原生程式碼的效能。 通常，效能將會優先於第一次編譯成 IL 並由 JIT 編譯器編譯成原生程式碼的程式碼。 
   
@@ -28,7 +28,7 @@ ms.locfileid: "64650554"
   
 - 您可以繼續利用 .NET Framework 所提供的資源，包括其類別庫、自動記憶體管理和記憶體回收，以及例外狀況處理。  
   
- 對應用程式的使用者而言， [!INCLUDE[net_native](../../../includes/net-native-md.md)] 可提供下列優點：  
+ 您的應用程式的使用者，.NET Native，請提供下列優點：  
   
 - 大部分的應用程式與案例可更快速的執行時間。
   
@@ -41,17 +41,17 @@ ms.locfileid: "64650554"
 > [!IMPORTANT]
 > 針對絕大部分的應用程式和案例中，.NET 原生提供明顯更快的啟動時間和更優異的效能，相較於應用程式編譯成 IL 或 NGEN 映像。 不過，您的結果可能不同。 若要確保您的應用程式，受益的.NET 原生的效能增強功能，您應該比較它與您的應用程式的非-.NET 原生版本的效能。 如需詳細資訊，請參閱 <<c0> [ 效能工作階段概觀](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview)。
  
-但是 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 牽涉到多項機器碼編譯。 它會將轉換 .NET Framework 應用程式建置和執行的方式。 特別之處在於：  
+但.NET 原生需要超過原生程式碼編譯。 它會將轉換 .NET Framework 應用程式建置和執行的方式。 特別之處在於：  
   
 - 在預先編譯期間，.NET Framework 的必要部分會以靜態方式連結到您的應用程式。 這樣可以讓應用程式以 .NET Framework 的 app-local 程式庫來執行，並且讓編譯器執行全域分析，以提供優異的效能。 如此一來，即使 .NET Framework 更新之後，應用程式還是一貫地會以更快的速度啟動。  
   
-- [!INCLUDE[net_native](../../../includes/net-native-md.md)]執行階段已針對靜態預先編譯進行最佳化，在大部分情況下提供更優異的效能。 同時，它還保留了開發人員會覺得生產力極佳的核心反映功能。  
+- .NET Native 的執行階段已針對靜態預先編譯最佳化，並在大部分情況下提供更優異的效能。 同時，它還保留了開發人員會覺得生產力極佳的核心反映功能。  
   
-- [!INCLUDE[net_native](../../../includes/net-native-md.md)] 使用與 C++ 編譯器相同的後端，其已針對靜態預先編譯案例進行最佳化。  
+- .NET 原生使用相同的後端，為C++編譯器，並已針對靜態預先編譯案例最佳化。  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] 能夠將 C++ 的效能優點帶給 Managed 程式碼開發人員，因為其實它是使用與 C++ 相同或類似的工具，此下表所示。  
+ .NET native 是能夠使效能優勢C++至 managed 程式碼開發人員，因為它會使用相同或類似工具C++在幕後，如本表所示。  
   
-||[!INCLUDE[net_native](../../../includes/net-native-md.md)]|C++|  
+||.NET Native|C++|  
 |-|----------------------------------------------------------------|-----------|  
 |程式庫|.NET Framework + Windows 執行階段|Win32 + Windows 執行階段|  
 |編譯器|UTC 最佳化編譯器|UTC 最佳化編譯器|  

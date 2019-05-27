@@ -1,15 +1,15 @@
 ---
-title: HOW TO：依任何字組或欄位排序或篩選文字資料 (LINQ) (C#)
+title: 作法：依任何字組或欄位排序或篩選文字資料 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: 243ff37e38b2e88b55962980e91a1ab6dcebab3c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 305733ccf249f1a2c2608a5bd01d74ba2b1e1b86
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304866"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585776"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>HOW TO：依任何字組或欄位排序或篩選文字資料 (LINQ) (C#)
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>作法：依任何字組或欄位排序或篩選文字資料 (LINQ) (C#)
 下列範例示範如何依行中的任一欄位，來排序多行結構化文字 (例如逗號分隔值)。 此欄位可能會在執行階段以動態方式指定。 假設 scores.csv 中的欄位各代表學生的學號和四個測驗分數。  
   
 ### <a name="to-create-a-file-that-contains-data"></a>建立內含資料的檔案  
@@ -76,7 +76,7 @@ public class SortLines
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
 
- 建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。  
+建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。
   
 ## <a name="see-also"></a>另請參閱
 

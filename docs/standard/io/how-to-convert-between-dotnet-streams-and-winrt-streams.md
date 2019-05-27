@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0cf5b621be7532239b67bfe970302f27eca3ea2a
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 22cf168c660349bda16c59aec4824e3283430807
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835131"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877944"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>作法：在 .NET Framework 資料流及 Windows 執行階段資料流之間轉換 (僅限 Windows)
 
@@ -51,7 +51,7 @@ Windows 執行階段提供支援唯讀、唯寫或讀寫的資料流類型。 �
   
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsOutputStream%2A?displayProperty=nameWithType> 會將 .NET 中適用於 UWP 應用程式的受控資料流轉換成 Windows 執行階段中的輸出資料流。
   
-- [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md) 會將 .NET for UWP 應用程式中的受控資料流轉換為 Windows 執行階段可用於讀取或寫入的隨機存取資料流。
+- <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A?displayProperty=nameWithType> 會將適用於 UWP 應用程式 .NET 中的受控資料流轉換成 Windows 執行階段可用來讀取或寫入的隨機存取資料流。
 
 當您將 .NET Framework 資料流轉換成 Windows 執行階段資料流時，轉換後資料流的功能取決於原始資料流。 例如，如果原始資料流同時支援讀取和寫入，而且您呼叫 <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A?displayProperty=nameWithType> 來轉換資料流，則傳回的類型為 `IRandomAccessStream`。 `IRandomAccessStream` 會實作 `IInputStream` 和 `IOutputStream`，並支援讀取和寫入。
 
@@ -59,7 +59,7 @@ Windows 執行階段提供支援唯讀、唯寫或讀寫的資料流類型。 �
 
 ## <a name="example-convert-net-framework-to-windows-runtime-random-access-stream"></a>範例：將 .NET Framework 轉換為 Windows 執行階段隨機存取資料流
 
-若要從 .NET Framework 資料流轉換為 Windows 執行階段隨機存取資料流，請使用 [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md) 方法，如下列範例所示：
+若要從 .NET Framework 資料流轉換為 Windows 執行階段隨機存取資料流，請使用 <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A> 方法，如下列範例所示：
 
 > [!IMPORTANT]
 > 確定您使用的 .NET Framework 資料流支援搜尋，或將它複製到支援搜尋的資料流。 您可以使用 <xref:System.IO.Stream.CanSeek%2A?displayProperty=nameWithType> 屬性來判斷。

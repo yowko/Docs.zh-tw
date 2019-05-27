@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: 清單集合
-  ms.openlocfilehash: 62cc52e22406c6c19dad6cc800078e0d8f34f0d6
-  ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+  ms.openlocfilehash: aa6e91af175d1d3a3dcad7086c3a8205d45f438a
+  ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 04/09/2019
-  ms.locfileid: "59427522"
+  ms.lasthandoff: 05/06/2019
+  ms.locfileid: "65063851"
 items:
 - durationInMinutes: 1
   content: >
@@ -218,7 +218,7 @@ items:
     > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
 - title: 恭喜您！
   content: >-
-    您已經完成＜分支和迴圈＞互動式教學課程。 您可以按一下以下的**內插字串**連結來啟動下一個互動式教學課程，或者您可以瀏覽 [.NET 網站](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) \(英文\) 以下載 .NET Core SDK、在您的機器上建立專案，並繼續撰寫程式碼。 「繼續學習」步驟會帶您回到這些教學課程。
+    您已經完成＜分支和迴圈＞互動式教學課程。 您可以按一下以下的**清單集合**連結來啟動下一個互動式教學課程，或者您可以瀏覽 [.NET 網站](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)來下載 .NET Core SDK，以在您的電腦上建立專案並繼續撰寫程式碼。 「繼續學習」步驟會帶您回到這些教學課程。
 
 
     您可以在下列主題中深入了解這些概念：

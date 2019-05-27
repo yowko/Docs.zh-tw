@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 028497bbeae26ded126ba4d7ce459a6a85e0bcb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f04cfbac72008332a429c4e0ad8bd3f4e60cc83
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724040"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880334"
 ---
 # <a name="pointer-types-c-programming-guide"></a>指標類型 (C# 程式設計手冊)
 
@@ -75,28 +75,26 @@ int* myVariable;
 
 |運算子/陳述式|使用|
 |-------------------------|---------|
-|*|執行指標間接取值。|
-|->|透過指標存取結構的成員。|
-|[]|索引指標。|
+|`*`|執行指標間接取值。|
+|`->`|透過指標存取結構的成員。|
+|`[]`|索引指標。|
 |`&`|取得變數位址。|
-|++ 和 --|遞增和遞減指標。|
-|+ 和 -|執行指標算術。|
-|==、!=、\<、>、\<= 和 >=|比較指標。|
-|`stackalloc`|在堆疊上配置記憶體。|
-|`fixed` 陳述式|暫時固定變數以便找到其位址。|
+|`++` 和 `--`|遞增和遞減指標。|
+|`+` 和 `-`|執行指標算術。|
+|`==`、`!=`、`<`、`>`、`<=` 和 `>=`|比較指標。|
+|[`stackalloc` 運算子](../../language-reference/keywords/stackalloc.md)|在堆疊上配置記憶體。|
+|[`fixed` 陳述式](../../language-reference/keywords/fixed-statement.md)|暫時固定變數以便找到其位址。|
+
+如需指標相關運算子的詳細資訊，請參閱[指標相關運算子](../../language-reference/operators/pointer-related-operators.md)。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[指標型別](~/_csharplang/spec/unsafe-code.md#pointer-types)。
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [Unsafe 程式碼和指標](index.md)
 - [指標轉換](pointer-conversions.md)
-- [指標運算式](pointer-expressions.md)
 - [型別](../../language-reference/keywords/types.md)
 - [Unsafe.DangerousAPI](../../language-reference/keywords/unsafe.md)
-- [fixed 陳述式](../../language-reference/keywords/fixed-statement.md)
-- [stackalloc](../../language-reference/keywords/stackalloc.md)
-- [Boxing 和 Unboxing](../types/boxing-and-unboxing.md)

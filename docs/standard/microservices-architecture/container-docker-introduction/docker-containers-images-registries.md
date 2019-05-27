@@ -1,15 +1,13 @@
 ---
 title: Docker 容器、映像和登錄
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | Docker 容器、映像和登錄
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: f10d7d03bbf88ed8f7a89a5d3919a39b3c124ae0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 520f8d4d54f1fdd227ff9a1e88660b62e75f927f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130230"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639900"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker 容器、映像和登錄
 
@@ -29,9 +27,9 @@ ms.locfileid: "53130230"
 
 建議在下列情況下使用私人映像登錄 (不論是裝載在內部部署或在雲端中)：
 
--   基於機密性，您的映像不得公開共用。
+- 基於機密性，您的映像不得公開共用。
 
--   您想要在映像與所選擇的部署環境之間有最低的網路延遲。 例如，如果您的生產環境是 Azure 雲端，您可以將映像儲存在 [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) 中，使網路延遲盡可能縮短。 同樣地，如果您的生產環境是內部部署，您可能想要在相同的區域網路內提供內部部署 Docker Trusted Registry。
+- 您想要在映像與所選擇的部署環境之間有最低的網路延遲。 例如，如果您的生產環境是 Azure 雲端，您可以將映像儲存在 [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) 中，使網路延遲盡可能縮短。 同樣地，如果您的生產環境是內部部署，您可能想要在相同的區域網路內提供內部部署 Docker Trusted Registry。
 
 >[!div class="step-by-step"]
 >[上一頁](docker-terminology.md)

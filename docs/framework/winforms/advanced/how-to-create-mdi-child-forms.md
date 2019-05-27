@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立 MDI 子表單
+title: 作法：建立 MDI 子表單
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: fbc92c03da69dd452f35e5b4e00cd4a9ca17e252
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 8965231307da84fd555b181440978adbea7e7244
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211188"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052836"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>HOW TO：建立 MDI 子表單
 
@@ -34,7 +34,7 @@ MDI 子表單是不可或缺的元素[多重文件介面 (MDI) 應用程式](mul
 
 4. 在 [**方案總管] 中**，以滑鼠右鍵按一下專案，指向**新增**，然後選取**加入新項目**。
 
-5. 在 **加入新項目**對話方塊方塊中，選取**Windows 表單**（在 Visual Basic 或 Visual C# 中） 或**Windows Forms 應用程式 (.NET)** (在[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 從**範本**窗格。 在 **名稱**方塊中，將表單命名**Form2**。 按一下 **開啟**按鈕以新增至專案的表單。
+5. 在 **加入新項目**對話方塊中，選取**Windows 表單**(在 Visual Basic 或 Visual C#) 或**Windows Forms 應用程式 (.NET)** (視覺效果中C++) 從**範本**窗格。 在 **名稱**方塊中，將表單命名**Form2**。 按一下 **開啟**按鈕以新增至專案的表單。
 
     > [!NOTE]
     > 您在這個步驟中所建立的 MDI 子表單是標準的 Windows Form。 因此，它具有 <xref:System.Windows.Forms.Form.Opacity%2A> 屬性，可讓您控制表單的透明度。 然而，<xref:System.Windows.Forms.Form.Opacity%2A> 屬性是專為最上層視窗而設計的。 請勿搭配 MDI 子表單使用這個屬性，這樣做可能會發生繪製問題。

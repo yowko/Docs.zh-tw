@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d20ce0f09309c84dcbeb016e0f17c37fe338dd9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7726164e998ea917c8f539b5768aa7e3f1ae12c
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504089"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053203"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>執行不區分文化特性的字串比較
 根據預設，<xref:System.String.Compare%2A?displayProperty=nameWithType> 方法會執行區分文化特性和區分大小寫的比較。 這個方法也包含幾個多載，這些多載會提供 `culture` 參數 (讓您指定要使用的文化特性) 及 `comparisonType` 參數 (讓您指定要使用的比較規則)。 呼叫這些方法 (而不是預設多載) 會消除有關特定方法呼叫中使用之規則的任何模稜兩可情況，而且可以釐清特定比較是否區分文化特性。  
@@ -39,7 +39,7 @@ ms.locfileid: "54504089"
  [!code-csharp[Conceptual.Strings.CultureInsensitiveComparison#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.cultureinsensitivecomparison/cs/cultureinsensitive1.cs#1)]
  [!code-vb[Conceptual.Strings.CultureInsensitiveComparison#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.cultureinsensitivecomparison/vb/cultureinsensitive1.vb#1)]  
 
-您可以下載[排序權數資料表](https://www.microsoft.com/en-us/download/details.aspx?id=10921)，該文字檔集合包含在 Windows 作業系統排序及比較作業中使用的字元權數資訊，以及下載[預設 Unicode 定序元素資料表](https://www.unicode.org/Public/UCA/latest/allkeys.txt) (適用於 Linux 和 macOS 的排序權數資料表)。
+您可以下載[排序權數資料表](https://www.microsoft.com/download/details.aspx?id=10921)，該文字檔集合包含在 Windows 作業系統排序及比較作業中使用的字元權數資訊，以及下載[預設 Unicode 定序元素資料表](https://www.unicode.org/Public/UCA/latest/allkeys.txt) (適用於 Linux 和 macOS 的排序權數資料表)。
 
 ## <a name="see-also"></a>另請參閱
 

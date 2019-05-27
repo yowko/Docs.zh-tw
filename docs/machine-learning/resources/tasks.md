@@ -1,15 +1,15 @@
 ---
-title: 機器學習工作 - ML.NET
+title: 機器學習工作
 description: 探索 ML.NET 中支援的各種不同機器學習工作與相關的工作。
 ms.custom: seodec18
-ms.date: 04/12/2019
+ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: bfed9cf12f8d539c4327549e5305415ce096e022
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: ed6361fdcbca11c100ee5cae4ca76e152ddfba11
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613157"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063540"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET 中的機器學習工作
 
@@ -28,22 +28,36 @@ ms.locfileid: "59613157"
 
 如需詳細資訊，請參閱維基百科上的[二元分類](https://en.wikipedia.org/wiki/Binary_classification) \(英文\) 一文。
 
-### <a name="binary-classification-training-algorithms"></a>二元分類的訓練演算法
+### <a name="binary-classification-trainers"></a>二元分類訓練工具
 
 您可以使用下列演算法訓練二元分類模型：
 
 * <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.PriorTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer> 
+* <xref:Microsoft.ML.Trainers.PriorTrainer> 
+* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
+
+### <a name="binary-classification-inputs-and-outputs"></a>二元分類的輸入和輸出
+
+為了取得二元分類的最佳結果，定型資料應進行平衡 (例如具有相同數量的正向和負向定型資料)。 遺漏及其值必須在定型前進行處理。
+
+輸入標籤資料行資料必須是 <xref:System.Boolean>。
+輸入特徵資料行資料必須是 <xref:System.Single> 的固定大小向量。
+
+這些訓練工具會輸出下列資料行：
+
+| 輸出資料行名稱 | 資料行型別 | 說明|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | 由模型計算的原始分數|
+| `PredictedLabel` | <xref:System.Boolean> | 預測標籤 (根據分數的正負號)。 負值分數會對應到 `false`，正值分數則會對應到 `true`。|
 
 ## <a name="multiclass-classification"></a>多元分類
 
@@ -58,17 +72,29 @@ ms.locfileid: "59613157"
 >[!NOTE]
 >One-Vs-All 將任何[二元分類學習工具](#binary-classification)升級，以在多元分類資料集上運作。 如需詳細資訊，請參閱 [Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest)。
 
-### <a name="multiclass-classification-training-algorithms"></a>多元分類訓練演算法
+### <a name="multiclass-classification-trainers"></a>多類別分類學習工具
 
 您可以使用下列訓練演算法訓練多元分類模型：
 
-* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
+* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer> 
+
+### <a name="multiclass-classification-inputs-and-outputs"></a>多類別分類的輸入和輸出
+
+輸入標籤資料行資料必須是 [key](xref:Microsoft.ML.Data.KeyDataViewType) 類型。
+特徵資料行必須是 <xref:System.Single> 的固定大小向量。
+
+訓練工具輸出下列內容：
+
+| 輸出名稱 | 類型 | 說明|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> 的向量 | 所有類別的分數。 較高值表示落入相關聯類別的機率較高。 若第 i 個項目具有最大值，則預測標籤索引將會是 i。 請注意，i 是以零為基礎的索引。 |
+| `PredictedLabel` | [key](xref:Microsoft.ML.Data.KeyDataViewType) 類型 | 預測標籤的索引。 若其值是 i，則實際標籤可能會是索引鍵/值輸入標籤類型中的第 i 個類別。 |
 
 ## <a name="regression"></a>回復
 
@@ -78,19 +104,29 @@ ms.locfileid: "59613157"
 * 根據歷程記錄資料和目前的市場趨勢預測未來的股價。
 * 根據廣告預算預測產品銷售額。
 
-### <a name="regression-training-algorithms"></a>迴歸訓練演算法
+### <a name="regression-trainers"></a>迴歸訓練工具
 
 您可以使用下列演算法訓練迴歸模型：
 
+* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.OlsTrainer>
+* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer> 
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.OlsTrainer>
-* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
+
+### <a name="regression-inputs-and-outputs"></a>迴歸的輸入和輸出
+
+輸入標籤資料行資料必須是 <xref:System.Single>。
+
+這項工作的訓練工具會輸出下列內容：
+
+| 輸出名稱 | 類型 | 說明|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | 由模型預測的原始分數 |
 
 ## <a name="clustering"></a>群集
 
@@ -100,11 +136,22 @@ ms.locfileid: "59613157"
 * 識別客戶區隔和人口統計，以協助建立目標性廣告活動。
 * 根據製造計量來分類庫存。
 
-### <a name="clustering-training-algorithms"></a>叢集訓練演算法
+### <a name="clustering-trainer"></a>叢集訓練工具
 
 您可以使用下列演算法訓練叢集模型：
 
-* <xref:Microsoft.ML.Trainers.KMeansTrainer>
+* <xref:Microsoft.ML.Trainers.KMeansTrainer> 
+
+### <a name="clustering-inputs-and-outputs"></a>叢集的輸入和輸出
+
+輸入特徵資料必須是 <xref:System.Single>。 不需要任何標籤。
+
+訓練工具輸出下列內容：
+
+| 輸出名稱 | 類型 | 說明|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> 的向量 | 指定資料點到所有叢集幾何中心的距離 |
+| `PredictedLabel` | [key](xref:Microsoft.ML.Data.KeyDataViewType) 類型 | 由模型所預測最接近的叢集索引。 |
 
 ## <a name="anomaly-detection"></a>異常偵測
 
@@ -121,11 +168,21 @@ PCA 是以機器學習所建立的技術，經常用於探索資料分析，因�
 
 因為定義上異常是罕見事件，因此難以收集具代表性的資料樣本來進行模型化。 此類別中包含的演算法經過特別設計，用來解決使用不平衡的資料集建置和定型模型所發生的核心挑戰。
 
-### <a name="anomaly-detection-training-algorithms"></a>異常偵測訓練演算法
+### <a name="anomaly-detection-trainer"></a>異常偵測訓練工具
 
 您可以使用下列演算法訓練異常偵測模型：
 
 * <xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>
+
+### <a name="anomaly-detection-inputs-and-outputs"></a>異常偵測的輸入和輸出
+
+輸入特徵必須是 <xref:System.Single> 的固定大小向量。
+
+訓練工具輸出下列內容：
+
+| 輸出名稱 | 類型 | 說明|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | 由異常偵測模型所計算之非負數且沒有限制的分數 |
 
 ## <a name="ranking"></a>排名
 
@@ -135,8 +192,20 @@ PCA 是以機器學習所建立的技術，經常用於探索資料分析，因�
 
 您可以使用下列演算法訓練排名模型：
 
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer> 
+
+### <a name="ranking-input-and-outputs"></a>排名的輸入和輸出
+
+輸入標籤資料類型必須是 [key](xref:Microsoft.ML.Data.KeyDataViewType) 類型或 <xref:System.Single>。 標籤的值會決定相關性，其中較高值會指出較高的相關性。 若標籤是 [key](xref:Microsoft.ML.Data.KeyDataViewType) 類型，則索引鍵的索引是相關性值，其中最小的索引表示最不相關。 若標籤是 <xref:System.Single>，則較大的值表示相關性較高。
+
+特徵資料必須是 <xref:System.Single> 的固定大小向量，而輸入資料列群組資料行必須是 [key](xref:Microsoft.ML.Data.KeyDataViewType) 類型。
+
+訓練工具輸出下列內容：
+
+| 輸出名稱 | 類型 | 說明|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | 由模型計算的無限制分數，用來判斷預測 |
 
 ## <a name="recommendation"></a>建議
 

@@ -2,30 +2,48 @@
 title: Visual Studio 中的偵錯運算式樹狀架構 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 95a01a98e771e04afd296428ed56e9518bad9ac2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 4017e2c2592dc1d6067b428fc1d47f37775abf85
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59330400"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877190"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Visual Studio 中的偵錯運算式樹狀架構 (C#)
-當您針對應用程式進行偵錯時，可以分析運算式樹狀架構的結構與內容。 若要取得運算式樹狀結構的快速概觀，您可以使用 `DebugView` 屬性，它只適用於偵錯模式。 如需偵錯的詳細資訊，請參閱 [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)。  
-  
- 為了更能代表運算式樹狀架構的內容，`DebugView` 屬性使用 Visual Studio 視覺化檢視。 如需詳細資訊，請參閱[建立自訂視覺化檢視](/visualstudio/debugger/create-custom-visualizers-of-data)。  
-  
+當您針對應用程式進行偵錯時，可以分析運算式樹狀架構的結構與內容。 若要取得運算式樹狀架構的快速概觀，您可以使用 `DebugView` 屬性，它使用[以下](#debugview-syntax)所述的特殊語法代表運算式樹狀架構。 (請注意，`DebugView` 僅適用於偵錯模式。)  
+
+![Visual Studio 偵錯工具中的運算式樹狀架構 DebugView](media/debugging-expression-trees-in-visual-studio/debugview.png)
+
+由於 `DebugView` 是字串，所以您可以使用[內建的文字視覺化檢視](https://docs.microsoft.com/visualstudio/debugger/view-strings-visualizer#open-a-string-visualizer)跨多行檢視它，請從 `DebugView` 標籤旁的放大鏡圖示選取 [文字視覺化檢視]。
+
+ ![套用至 'DebugView' 結果的文字視覺化檢視](media/debugging-expression-trees-in-visual-studio/string_visualizer.png)
+
+或者，您可以安裝並使用[自訂的視覺化檢視](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data)來處理運算式樹狀架構：
+
+* [可讀取的運算式](https://github.com/agileobjects/ReadableExpressions) ([MIT 授權](https://github.com/agileobjects/ReadableExpressions/blob/master/LICENSE.md)，位於 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1232914.ReadableExpressionsVisualizers))，將運算式樹狀架構轉譯為 C# 程式碼：
+
+  ![可讀取的運算式視覺化檢視](media/debugging-expression-trees-in-visual-studio/readable_expressions_visualizer.png)
+
+* [運算式樹狀架構視覺化檢視](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees) ([MIT 授權](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE))，提供運算式樹狀架構的圖形檢視、其屬性和相關物件：
+
+  ![ExpressionToString 視覺化檢視](media/debugging-expression-trees-in-visual-studio/expression_to_string_visualizer.png)
+
 ### <a name="to-open-a-visualizer-for-an-expression-tree"></a>開啟運算式樹狀架構的視覺化檢視  
   
-1. 在 [DataTips]、[監看式] 視窗，或是在 [自動變數] 視窗或 [區域變數] 視窗中，按一下出現在運算式樹狀架構 `DebugView` 屬性旁邊的放大鏡圖示。  
+1. 在 [DataTips]、[監看式] 視窗、[自動變數] 視窗或 [區域變數] 視窗中，按一下出現在運算式樹狀架構旁邊的放大鏡圖示。  
   
-     視覺化檢視的清單隨即顯示。  
-  
+     可用的視覺化檢視清單隨即顯示： 
+
+      ![從 Visual Studio 開啟視覺化檢視](media/debugging-expression-trees-in-visual-studio/expression_tree_visualizers.png)
+
 2. 按一下要使用的視覺化檢視。  
-  
- 如下列各節中所述，每個運算式類型會顯示在視覺化檢視中。  
+
+## <a name="debugview-syntax"></a>`DebugView` 語法 
+
+如下列各節所述，`DebugView` 屬性會顯示每個運算式型別。  
   
 ## <a name="parameterexpressions"></a>ParameterExpression  
- <xref:System.Linq.Expressions.ParameterExpression> 變數名稱顯示時，其開頭會加上 "$" 符號。  
+ 顯示 <xref:System.Linq.Expressions.ParameterExpression> 變數名稱時，其開頭會加上 "$" 符號。  
   
  如果參數沒有名稱，會指派自動產生的名稱給它，例如 `$var1` 或 `$var2`。  
   
@@ -68,7 +86,7 @@ ms.locfileid: "59330400"
 |`BlockExpression block =  Expression.Block(typeof(Object), Expression.Constant("test"));`|`.Block<System.Object>() {`<br /><br /> `"test"`<br /><br /> `}`|  
   
 ## <a name="lambdaexpression"></a>LambdaExpression  
- <xref:System.Linq.Expressions.LambdaExpression> 物件會與其委派型別一起顯示。  
+ <xref:System.Linq.Expressions.LambdaExpression> 物件會與其委派類型一起顯示。  
   
  如果 Lambda 運算式沒有名稱，會指派自動產生的名稱給它，例如 `#Lambda1` 或 `#Lambda2`。  
   
@@ -105,6 +123,6 @@ ms.locfileid: "59330400"
   
 ## <a name="see-also"></a>另請參閱
 
-- [運算式樹狀架構 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [運算式樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
 - [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)
 - [建立自訂視覺化檢視](/visualstudio/debugger/create-custom-visualizers-of-data)

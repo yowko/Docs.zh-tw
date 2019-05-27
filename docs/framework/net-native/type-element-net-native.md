@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a92e6627ba937b10b183a833a005792f0a51f921
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d5541cc34f8967916e4896fd5f9be82edcb332f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033120"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051999"
 ---
 # <a name="type-element-net-native"></a>\<型別 > 項目 (.NET Native)
 將執行階段原則套用到特定的類型，例如類別或結構。  
@@ -102,7 +102,7 @@ ms.locfileid: "62033120"
   
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]  
   
- 因為 <xref:System.Collections.Generic.List%601> 類別中繼資料不會自動併入 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈結，所以範例無法在執行階段顯示要求的成員資訊。 若要提供必要的中繼資料，將下列 `<Type>` 項目加入到執行階段指示詞檔案。 請注意，因為我們提供了父代 [<Namespace\>](../../../docs/framework/net-native/namespace-element-net-native.md) 元素，所以不必在 `<Type>` 元素中提供完整的類型名稱。  
+ 因為中繼資料<xref:System.Collections.Generic.List%601>類別不會自動包含.NET Native 工具鏈，所以範例無法在執行階段顯示要求的成員資訊。 若要提供必要的中繼資料，將下列 `<Type>` 項目加入到執行階段指示詞檔案。 請注意，因為我們提供了父代 [<Namespace\>](../../../docs/framework/net-native/namespace-element-net-native.md) 元素，所以不必在 `<Type>` 元素中提供完整的類型名稱。  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -120,7 +120,7 @@ ms.locfileid: "62033120"
   
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]  
   
- 由於無法使用 <xref:System.String> 物件的中繼資料，因此在使用 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 工具鏈結編譯時，呼叫 <xref:System.NullReferenceException> 方法會在執行階段擲回 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 例外狀況。 若要消除例外狀況，並提供必要的中繼資料，將下列 `<Type>` 項目加入至執行階段指示詞檔案：  
+ 因為中繼資料<xref:System.String>物件無法使用，呼叫<xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>方法會擲回<xref:System.NullReferenceException>例外狀況，在執行時使用.NET Native 工具鏈編譯的時間。 若要消除例外狀況，並提供必要的中繼資料，將下列 `<Type>` 項目加入至執行階段指示詞檔案：  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

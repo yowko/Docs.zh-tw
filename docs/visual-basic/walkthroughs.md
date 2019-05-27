@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 47c79b8d716be6c247be3ec66c9ef00fbc021973
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739458"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586264"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 語言逐步解說
 逐步解說提供常見情節的逐步指示，使其成為開始學習產品或特定功能區域的最佳去處。  
@@ -72,7 +72,7 @@ ms.locfileid: "55739458"
  示範如何使用 Visual Basic 函式來判斷檔案的相關資訊、搜尋檔案中的字串，以及寫入檔案。  
   
  [使用 .NET Framework 方法管理檔案](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- 示範如何使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 方法來判斷檔案的相關資訊、搜尋檔案中的字串，以及寫入檔案。  
+ 示範如何使用 .NET Framework 方法來判斷檔案的相關資訊、搜尋檔案中的字串，以及寫入檔案。  
   
  [在 Visual Basic 中保存物件](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  示範如何建立簡單的物件，並將其資料保存至檔案。  

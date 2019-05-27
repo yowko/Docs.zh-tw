@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: de621b26334bbc9679ba7e48a9d5a0cbaec67eab
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: b666c915506872930b16c1c5890de24e9cbe4f7a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427314"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880572"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>布林值邏輯運算子 (C# 參考)
 
@@ -47,7 +47,7 @@ ms.locfileid: "59427314"
 - 二元 [`&` (邏輯 AND)](#logical-and-operator-)、[`|` (邏輯 OR)](#logical-or-operator-) 及 [`^` (邏輯互斥 OR)](#logical-exclusive-or-operator-) 運算子。 那些運算子一律會評估兩個運算元。
 - 二元 [`&&` (條件邏輯 AND)](#conditional-logical-and-operator-) 及 [`||` (條件邏輯 OR)](#conditional-logical-or-operator-) 運算子。 那些運算子只會在必要時才評估第二個運算元。
 
-針對[整數](../keywords/integral-types-table.md)類型的運算元，`&`、`|` 及 `^` 運算子都會執行位元邏輯作業。
+針對[整數](../keywords/integral-types-table.md)型別的運算元，`&`、`|` 和 `^` 運算子都會執行位元邏輯運算。 如需詳細資訊，請參閱[位元與移位運算子](bitwise-and-shift-operators.md)。
 
 ## <a name="logical-negation-operator-"></a>邏輯否定運算子 !
 
@@ -67,7 +67,7 @@ ms.locfileid: "59427314"
 
 [條件邏輯 AND 運算子](#conditional-logical-and-operator-) `&&` 也會計算其運算元的邏輯 AND，但如果第一個運算元的值評估為 `false`，系統便不會評估第二個運算元。
 
-針對整數類型的運算元，`&` 運算子會計算其運算元的[位元邏輯 AND](and-operator.md#integer-logical-bitwise-and-operator)。 一元的 `&` 運算子是 [address-of 運算子](and-operator.md#unary-address-of-operator)。
+針對整數型別的運算元，`&` 運算子會計算其運算元的[位元邏輯 AND](bitwise-and-shift-operators.md#logical-and-operator-)。 一元的 `&` 運算子是 [address-of 運算子](pointer-related-operators.md#address-of-operator-)。
 
 ## <a name="logical-exclusive-or-operator-"></a>邏輯互斥 OR 運算子 ^
 
@@ -75,7 +75,7 @@ ms.locfileid: "59427314"
 
 [!code-csharp-interactive[logical exclusive OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Xor)]
 
-針對整數類型的運算元，`^` 運算子會計算其運算元的[位元邏輯互斥 OR](xor-operator.md)。
+針對整數型別的運算元，`^` 運算子會計算其運算元的[位元邏輯互斥 OR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-)。
 
 ## <a name="logical-or-operator-"></a>邏輯 OR 運算子 |
 
@@ -89,7 +89,7 @@ ms.locfileid: "59427314"
 
 [條件邏輯 OR 運算子](#conditional-logical-or-operator-) `||` 也會計算其運算元的邏輯 OR，但如果第一個運算元的值評估為 `true`，系統便不會評估第二個運算元。
 
-針對整數類型的運算元，`|` 運算子會計算其運算元的[位元邏輯 OR](or-operator.md)。
+針對整數型別的運算元，`|` 運算子會計算其運算元的[位元邏輯 OR](bitwise-and-shift-operators.md#logical-or-operator-)。
 
 ## <a name="conditional-logical-and-operator-ampamp"></a>條件邏輯 AND 運算子 &amp;&amp;
 
@@ -187,9 +187,11 @@ x = x op y
 - [邏輯否定運算子](~/_csharplang/spec/expressions.md#logical-negation-operator)
 - [邏輯運算子](~/_csharplang/spec/expressions.md#logical-operators)
 - [條件邏輯運算子](~/_csharplang/spec/expressions.md#conditional-logical-operators)
+- [複合指派](~/_csharplang/spec/expressions.md#compound-assignment)
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計手冊](../../programming-guide/index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 運算子](index.md)
+- [位元與移位運算子](bitwise-and-shift-operators.md)

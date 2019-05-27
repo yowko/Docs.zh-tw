@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 28253a46e8da48cfc2812d7f3fef1a2dd3d1cf87
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 98d697aa7f4fa839b41509244993ced195730fdb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599843"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585871"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>靜態類別和靜態類別成員 (C# 程式設計手冊)
 [static](../../../csharp/language-reference/keywords/static.md) 類別基本上與非靜態類別相同，但有一項差異︰無法具現化靜態類別。 換句話說，您不能使用 [new](../../../csharp/language-reference/keywords/new.md) 關鍵字來建立類別類型的變數。 因為沒有任何執行個體變數，所以您可以使用類別名稱本身來存取靜態類別的成員。 例如，如果您的 `UtilityClass` 靜態類別包含 `MethodA` 公用靜態方法，則會呼叫方法，如下列範例所示︰  
@@ -37,7 +37,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 // 3  
 ```  
   
- 與所有類別類型的情況相同，載入可參考類別的程式時，[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 會載入靜態類別的類型資訊。 程式無法指定確實載入類別的時間。 不過，一定會載入類別、初始化其欄位，並在第一次於程式中參考類別之前呼叫其靜態建構函式。 只會呼叫靜態建構函式一次，而且靜態類別在程式所在應用程式定義域的存留期間保留在記憶體中。  
+ 與所有類別型別的情況相同，載入可參考類別的程式時，.NET Framework Common Language Runtime (CLR) 會載入靜態類別的型別資訊。 程式無法指定確實載入類別的時間。 不過，一定會載入類別、初始化其欄位，並在第一次於程式中參考類別之前呼叫其靜態建構函式。 只會呼叫靜態建構函式一次，而且靜態類別在程式所在應用程式定義域的存留期間保留在記憶體中。  
   
 > [!NOTE]
 >  若要建立只允許建立它本身之一個執行個體的非靜態類別，請參閱 [Implementing Singleton in C#](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29) (在 C# 中實作單一)。  

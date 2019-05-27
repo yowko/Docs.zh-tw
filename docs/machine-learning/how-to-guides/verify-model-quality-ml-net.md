@@ -1,16 +1,16 @@
 ---
-title: 計算計量以評估機器學習模型品質 - ML.NET
+title: 計算計量以評估機器學習模型品質
 description: 了解如何使用 ML.NET 計算計量及驗證機器學習模型品質
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: ad71f7da6981ac370e60725f88d3c70b1d5c5237
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 2c7749205b862a42f42b857972057c441ab84364
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679212"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641100"
 ---
-# <a name="calculate-metrics-to-evaluate-machine-learning-model-quality---mlnet"></a>計算計量以評估機器學習模型品質 - ML.NET
+# <a name="calculate-metrics-to-evaluate-machine-learning-model-quality"></a>計算計量以評估機器學習模型品質 
 
 > [!NOTE]
 > 本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) (英文)。

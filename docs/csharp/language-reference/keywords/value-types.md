@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 77aed78e7822e06b3b1e6c48b07790d93e09559c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 390b2226cc2f345d2f42659bd092e36a4bd0c4fc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612721"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632933"
 ---
 # <a name="value-types-c-reference"></a>實值型別 (C# 參考)
 
@@ -34,7 +34,7 @@ ms.locfileid: "53612721"
 
 實值型別預設不可為 `null`。 不過，相對應的[可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)則可為 `null`。
 
-每種實值型別都具有初始化該類型預設值的隱含預設建構函式。 如需有關實值型別預設值的資訊，請參閱[預設值表](default-values-table.md)。
+每種實值型別都具有初始化該型別預設值的隱含無參數建構函式。 如需有關實值型別預設值的資訊，請參閱[預設值表](default-values-table.md)。
 
 ## <a name="simple-types"></a>簡單型別
 
@@ -67,7 +67,7 @@ int myInt;
 您不能先使用它，再將它初始化。 您可以使用下列陳述式來初始化執行個體：
 
 ```csharp
-myInt = new int();  // Invoke default constructor for int type.
+myInt = new int();  // Invoke parameterless constructor for int type.
 ```
 
 這個陳述式相當於下列陳述式：
@@ -88,12 +88,12 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-使用 [new](new.md) 運算子會呼叫特定類型的預設建構函式，並將預設值指派給變數。 在上述範例中，預設建構函式已將 `0` 值指派給 `myInt`。 如需有關透過呼叫預設建構函式來指派的值之詳細資訊，請參閱[預設值表](default-values-table.md)。
+使用 [new](new.md) 運算子會呼叫特定型別的無參數建構函式，並將預設值指派給變數。 在上述範例中，無參數建構函式已將 `0` 值指派給 `myInt`。 如需有關透過呼叫預設建構函式來指派的值之詳細資訊，請參閱[預設值表](default-values-table.md)。
 
-如果要使用使用者定義型別，請使用 [new](new.md) 來叫用預設建構函式。 例如，下列陳述式會叫用 `Point` 結構的預設建構函式：
+如果要使用使用者定義型別，請使用 [new](new.md) 來叫用無參數建構函式。 例如，下列陳述式會叫用 `Point` 結構的無參數建構函式：
 
 ```csharp
-Point p = new Point(); // Invoke default constructor for the struct.
+Point p = new Point(); // Invoke parameterless constructor for the struct.
 ```
 
 在此呼叫之後，會視為已明確指派結構，也就是說，其所有成員都已初始化為其預設值。

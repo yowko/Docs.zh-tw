@@ -1,17 +1,21 @@
 ---
 title: dotnet clean 命令
 description: dotnet clean 命令會清除目前的目錄。
-ms.date: 12/04/2018
-ms.openlocfilehash: a25b7930794795e3dff5051a8ca1dd1b9c261dfd
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 04/14/2019
+ms.openlocfilehash: fa19f1b041e4031082f928135395a5f06ce702e9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169855"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631826"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
+**本主題適用於：✓** .NET Core 1.x SDK 和更新版本
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>名稱
 
@@ -20,7 +24,7 @@ ms.locfileid: "53169855"
 ## <a name="synopsis"></a>概要
 
 ```
-dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
@@ -30,9 +34,9 @@ dotnet clean [-h|--help]
 
 ## <a name="arguments"></a>引數
 
-`PROJECT`
+`PROJECT | SOLUTION`
 
-要清除的 MSBuild 專案。 如果未指定專案檔，MSBuild 會搜尋目前工作目錄中副檔名結尾為 *proj* 的檔案，並使用該檔案。
+要清除的 MSBuild 專案或方案。 MSBuild 會在目前工作目錄中搜尋副檔名以 *proj* 或 *sln* 結尾的檔案，並使用該檔案。
 
 ## <a name="options"></a>選項
 
@@ -48,9 +52,13 @@ dotnet clean [-h|--help]
 
   印出命令的簡短說明。
 
+* **`--interactive`**
+
+  可讓命令停止，並等候使用者輸入或進行動作。 例如完成驗證。 自 .NET Core 3.0 SDK 起提供。
+
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  在其中放置建置輸出的目錄。 如果您在建置專案時指定架構，請搭配輸出目錄參數來指定 `-f|--framework <FRAMEWORK>` 參數。
+  包含要清除組建成品的目錄。 如果您在建置專案時指定架構，請搭配輸出目錄參數來指定 `-f|--framework <FRAMEWORK>` 參數。
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -58,7 +66,7 @@ dotnet clean [-h|--help]
 
 * **`-v|--verbosity <LEVEL>`**
 
-  設定命令的詳細資訊層級。 允許的層級為 q[uiet]、m[inimal]、n[ormal]、d[etailed] 和 diag[nostic]。
+  設定 MSBuild 詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設為 `normal`。
 
 ## <a name="examples"></a>範例
 

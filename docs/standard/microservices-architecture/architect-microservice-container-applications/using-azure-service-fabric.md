@@ -1,15 +1,13 @@
 ---
 title: 使用 Azure Service Fabric
 description: 了解除了只用 Azure Service Fabric 應用程式模型來協調容器，您還能用來做什麼。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: b29be05f5ab353ddfae0d23211efaf57979d0604
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3c629b473a429b64243b5756c96fef6585c939b7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126961"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644520"
 ---
 # <a name="using-azure-service-fabric"></a>使用 Azure Service Fabric
 
@@ -27,7 +25,7 @@ Service Fabric 不在乎您用什麼方法來建置服務，所以您可以使�
 
 如圖 4-27 所示，您可以在 Service Fabric 中建立微服務，將其作為簡單的程序或 Docker 容器執行。 它也可以將容器型微服務與程序型微服務混合在相同的 Service Fabric 叢集中。
 
-![Azure Service Fabric 叢集的比較：微服務作為處理序，每個節點針對每個微服務執行一個處理序；微服務作為容器，每個節點使用數個容器來執行 Docker，每個微服務一個容器。](./media/image30.png)
+![比較 Azure 服務網狀架構叢集：微服務作為處理序，每個節點針對每個微服務執行一個處理序；微服務作為容器，每個節點使用數個容器來執行 Docker，每個微服務一個容器。](./media/image30.png)
 
 **圖 4-27**。 在 Azure Service Fabric 中將微服務部署為處理序或容器
 

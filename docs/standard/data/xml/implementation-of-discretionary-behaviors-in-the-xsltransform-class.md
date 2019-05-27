@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1602479d4986109ffe89a87250297ee5687930ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcc294f09172eb2029f92d2c05821837aa10c35f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609573"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591496"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>XslTransform 類別中的 Discretionary 行為實作
 
@@ -19,7 +19,7 @@ ms.locfileid: "54609573"
 
 判別行為會以[全球資訊網協會 (W3C) XSL 轉換 (XSLT) 1.0 版建議事項](https://www.w3.org/TR/1999/REC-xslt-19991116)中所列行為說明，其中實作提供者可選擇數個可能選項之一，作為處理狀況的方法。 例如，在 7.3 節＜建立處理指示＞(英文) 中，W3C 建議事項指出如果具現化 `xsl:processing-instruction` 的內容會建立非文字節點的節點，就會產生錯誤。 針對某些問題，W3C 會在處理器決定從錯誤復原時通知要採取的決策。 針對 7.3 節中的問題，W3C 指出只要忽略節點及其內容，實作即可從這項錯誤中復原。
 
-因此，針對 W3C 所允許的每個 Discretionary 行為，下表列出了對 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 類別的 <xref:System.Xml.Xsl.XslTransform> 實作所實作的 Discretionary 行為，以及 W3C XSLT 1.0 版建議事項會在哪個章節中討論此問題。
+因此，針對 W3C 所允許的每個判別行為，下表列出為 <xref:System.Xml.Xsl.XslTransform> 類別 .NET Framework 實作所實作的判別行為，以及在 W3C XSLT 1.0 建議事項中的哪一節討論了此問題。
 
 |問題|行為|區段|
 |-------------|--------------|-------------|

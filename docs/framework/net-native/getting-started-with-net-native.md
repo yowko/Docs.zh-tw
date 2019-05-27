@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b466b27925b41823ce3f6537782f3bd6201d5af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39d0066185703ebac7609d506c834b7718693d33
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868509"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052632"
 ---
 # <a name="getting-started-with-net-native"></a>.NET Native 使用者入門
 
-不論是為了 Windows 10 撰寫新的 Windows 應用程式，或是移轉現有的 Windows 市集應用程式，都可遵循一組相同的程序進行。 若要建立 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 應用程式，請遵循下列步驟：
+不論是為了 Windows 10 撰寫新的 Windows 應用程式，或是移轉現有的 Windows 市集應用程式，都可遵循一組相同的程序進行。 若要建立的.NET 原生應用程式，請遵循下列步驟：
 
 1. [開發以 Windows 10 為目標的通用 Windows 平台 (UWP) 應用程式](#Step1)，並測試應用程式的偵錯組建，以確保運作正常。
 
@@ -24,7 +24,7 @@ ms.locfileid: "61868509"
 4. [手動解決遺漏中繼資料的問題](#Step4)，然後重複 [步驟 3](#Step3) 直到所有問題解決為止。
 
 > [!NOTE]
-> 如果您要將現有的 Windows 市集應用程式移轉至 [!INCLUDE[net_native](../../../includes/net-native-md.md)]，請務必檢閱 [將您的 Windows 市集應用程式移轉至 .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)。
+> 如果您要移轉現有的 Windows 市集應用程式至.NET Native，請務必檢閱[將您 Windows 市集應用程式移轉至.NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)。
 
 <a name="Step1"></a>
 
@@ -36,12 +36,12 @@ ms.locfileid: "61868509"
 
 2. 請注意，使用 .NET Native 工具鏈編譯 UWP 應用程式專案與不使用此工具進行編譯之間有一些已知的相容性問題。 如需詳細資訊，請參閱 [移轉指南](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) 。
 
-您現在可以針對在本機系統上 (或模擬器中) 執行的 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 介面區，撰寫 C# 或 Visual Basic 程式碼。
+您現在可以撰寫C#或 Visual Basic 程式碼，對本機系統上 （或在模擬器中） 執行的.NET 原生介面區。
 
 > [!IMPORTANT]
 > 當您開發應用程式時，請記下在程式碼中使用的任何序列化或反映。
 
-根據預設，偵錯組建為 JIT 編譯，以便快速部署 F5，而發行組建會使用 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 先行編譯技術來編譯。 這表示您應該建置並測試應用程式的偵錯組建以確保運作正常，再使用 .NET Native 工具鏈進行編譯。
+根據預設，偵錯組建為 JIT 編譯，以便快速部署 F5，而發行組建會編譯使用.NET 原生的先行編譯技術。 這表示您應該建置並測試應用程式的偵錯組建以確保運作正常，再使用 .NET Native 工具鏈進行編譯。
 
 <a name="Step2"></a>
 
@@ -85,13 +85,13 @@ ms.locfileid: "61868509"
 
 如果您的應用程式無法正常運作 (特別是在擲回[MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)或是[MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)在執行階段的例外狀況)，依照下一步區段中，[步驟 4:手動解決遺漏中繼資料](#Step4)。 啟用第一個可能發生的例外狀況可協助您尋找這些錯誤。
 
-當您對應用程式的偵錯組建完成測試及偵錯，並確信已去除 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 和 [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 例外狀況時，您應該將應用程式當做 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 最佳化應用程式進行測試。 若要執行這項操作，請將使用中的專案組態從 [偵錯]  變更為 [發行] 。
+當您已測試並偵錯的偵錯組建您的應用程式，並確信已去除[MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)並[MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)例外狀況，您應該測試您為最佳化的.NET 原生應用程式的應用程式。 若要執行這項操作，請將使用中的專案組態從 [偵錯]  變更為 [發行] 。
 
 <a name="Step4"></a>
 
 ## <a name="step-4-manually-resolve-missing-metadata"></a>步驟 4：手動解決遺漏中繼資料
 
-使用 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 會遇到但不會在桌面上遇到的最常見失敗，包括執行階段 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)、 [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)或 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 例外狀況。 在某些情況下，缺少中繼資料會發生未預期的行為，甚至導致應用程式失敗。 本節討論如何將指示詞加入至執行階段指示詞檔案，來偵錯及解決這些例外狀況。 如需執行階段指示詞格式的資訊，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。 新增執行階段指示詞之後，您應該重新[部署和測試應用程式](#Step3)，並解決任何新的 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)、[MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 和 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 例外狀況，直到未遇到其他任何例外狀況為止。
+您會遇到使用.NET Native，不會在桌面上遇到的最常見失敗是執行階段[MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)， [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)，或[MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)例外狀況。 在某些情況下，缺少中繼資料會發生未預期的行為，甚至導致應用程式失敗。 本節討論如何將指示詞加入至執行階段指示詞檔案，來偵錯及解決這些例外狀況。 如需執行階段指示詞格式的資訊，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。 新增執行階段指示詞之後，您應該重新[部署和測試應用程式](#Step3)，並解決任何新的 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)、[MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 和 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 例外狀況，直到未遇到其他任何例外狀況為止。
 
 > [!TIP]
 > 在較高層級指定執行階段指示詞，可讓應用程式彈性地回應程式碼變更。  建議在命名空間和類型層級加入執行階段指示詞，而不是在成員層級加入執行階段指示詞。 請注意，您可能需要在彈性與較大二進位檔案需要更長編譯時間之間進行取捨。
@@ -113,7 +113,7 @@ ms.locfileid: "61868509"
   - 程式碼是否在有一些更佳的替代方案時，呼叫相依於反映的方法？
 
 > [!NOTE]
-> 如需處理源自於桌面應用程式和 [!INCLUDE[net_native](../../../includes/net-native-md.md)]之間反映和中繼資料可用性差異之問題的其他資訊，請參閱 [APIs That Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)。
+> 如需處理源自於反映和中繼資料，在傳統型應用程式和.NET Native 的可用性差異之問題的詳細資訊，請參閱[APIs That Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)。
 
 如需處理測試應用程式時所發生之例外狀況和其他問題的一些特定範例，請參閱：
 

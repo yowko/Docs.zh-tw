@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8012d2898e9722d1cfb93f5c9dcacce291fe6e78
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 55bdf4cf589bd912dbfc85777542150696aaa436
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633873"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589785"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>作法：從特定日期擷取一星期的哪一日
 .NET Framework 可方便判斷特定日期是一週的第幾天，並可顯示特定日期當地語系化的工作日名稱。 您可以從 <xref:System.DateTime.DayOfWeek%2A> 或 <xref:System.DateTimeOffset.DayOfWeek%2A> 屬性取得指出對應於特定日期是星期幾的列舉值。 相對地，擷取工作日名稱是一種格式化作業，可藉由呼叫格式化方法來執行，例如日期和時間值的 `ToString` 方法或 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法。 本主題示範如何執行下列格式化作業：  
@@ -85,7 +85,7 @@ ms.locfileid: "64633873"
  [!code-csharp[Formatting.Howto.WeekdayName#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/example6.cs#6)]
  [!code-vb[Formatting.Howto.WeekdayName#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/example6.vb#6)]  
   
- 個別語言可能會提供功能來複製或補充 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供的功能。 例如，Visual Basic 就有包含兩個這類函式：  
+ 個別語言可能會提供與 .NET Framework 所提供功能重複或補充的功能。 例如，Visual Basic 就有包含兩個這類函式：  
   
 - `Weekday` 會傳回指出特定日期是星期幾的數字。 它會將一週第一天的序數值視為一，而 <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> 屬性會將其視為零。  
   

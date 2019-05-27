@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b352c35a327ed4736a1f41816d3f15c1a0f559f5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7241dfb7e31ed2f83bf7af0ecc6bf0d97363b999
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644813"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960367"
 ---
 # <a name="managed-threading-basics"></a>受控執行緒處理的基本概念
 
@@ -45,9 +45,6 @@ ms.locfileid: "64644813"
   
  [執行緒本機儲存體：執行緒相關靜態欄位和資料插槽](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  描述執行緒相關的儲存機制。  
-  
- [Managed 執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
- 描述如何使用取消語彙基元來取消非同步或長時間執行的同步作業。  
   
 ## <a name="reference"></a>參考資料
 

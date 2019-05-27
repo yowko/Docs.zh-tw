@@ -9,12 +9,12 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: efd65ff6417b1a63a7f87917c4d9a95dedc464ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e81ef8b563afff6dd57a9fbb7674d17c0eb80916
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004441"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053065"
 ---
 # <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>HOW TO：在 Windows Forms 中選擇附加至使用者電腦的印表機
 通常，使用者會想要選擇列印到非預設的印表機。 使用 <xref:System.Windows.Forms.PrintDialog> 元件，即可讓使用者從目前安裝的印表機中選擇印表機。 透過 <xref:System.Windows.Forms.PrintDialog> 元件，擷取 <xref:System.Windows.Forms.DialogResult> 元件的 <xref:System.Windows.Forms.PrintDialog> 並將其用來選取印表機。  
@@ -89,7 +89,7 @@ ms.locfileid: "62004441"
        }  
     ```  
   
-     (Visual C# 和[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 下列程式碼置於表單的建構函式，以註冊事件處理常式。  
+     (VisualC#和 Visual C++)下列程式碼置於表單的建構函式，以註冊事件處理常式。  
   
     ```csharp  
     this.printDocument1.PrintPage += new  

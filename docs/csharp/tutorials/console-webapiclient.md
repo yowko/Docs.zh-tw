@@ -3,12 +3,12 @@ title: 使用 .NET Core 來建立 REST 用戶端
 description: 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 332e47d9a02f48c53bbad272477768fa4c0367f2
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: f6e3371a72810b30f804169be4025360aa10c477
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612059"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063876"
 ---
 # <a name="rest-client"></a>REST 用戶端
 
@@ -36,11 +36,10 @@ ms.locfileid: "59612059"
 
 ## <a name="create-the-application"></a>建立應用程式
 
-第一個步驟是建立新的應用程式。 請開啟命令提示字元，然後為您的應用程式建立新目錄。 使該目錄成為目前的目錄。 在命令提示字元處輸入命令 `dotnet new console`。 這會建立基本 "Hello World" 應用程式的起始檔案。
+第一個步驟是建立新的應用程式。 請開啟命令提示字元，然後為您的應用程式建立新目錄。 使該目錄成為目前的目錄。 在命令提示字元處輸入命令 `dotnet new console`。 這會建立基本 "Hello World" 應用程式的起始檔案。 由於這是新的專案，目前沒有任何相依性，因此第一次執行時會下載 .NET Core Framework、安裝開發憑證並執行 NuGet 套件管理員，以還原缺少的相依性。
 
-在您開始進行修改之前，讓我們先將執行簡單 Hello World 應用程式的所有步驟執行一遍。 在建立應用程式之後，在命令提示字元鍵入 `dotnet restore` ([參閱附註](#dotnet-restore-note))。 此命令會執行 NuGet 套件還原程序。 NuGet 是一個 .NET 套件管理員。 此命令會為您的專案下載任何遺漏的相依性。 由於這是一個新專案，因此沒有任何現有的相依性，所以第一次執行時將會下載 .NET Core 架構。 在這個初始步驟之後，當您新增新的相依套件或更新任何相依性的版本時，將只需要執行 `dotnet restore` ([參閱附註](#dotnet-restore-note))。
-
-還原套件之後，您需執行 `dotnet build`。 這會執行建置引擎並建立您的應用程式。 最後，您需執行 `dotnet run` 來執行您的應用程式。
+在您開始建立修改前，請先在命令提示字元中鍵入 `dotnet run` ([請參閱附註](#dotnet-restore-note))，執行您的應用程式。 如果您的環境缺少相依性，`dotnet run` 會自動執行 `dotnet restore`。 如果您的應用程式需要重建，它也會執行 `dotnet build`。
+在初始安裝之後，當它對您的專案有意義時，您只需要執行 `dotnet restore` 或 `dotnet build`。
 
 ## <a name="adding-new-dependencies"></a>新增新的相依性
 
@@ -62,7 +61,7 @@ ms.locfileid: "59612059"
 
 大多數程式碼編輯器都有為這些程式庫的不同版本提供完成功能。 您通常會想要使用所新增之任何套件的最新版本。 不過，請務必確保所有套件的版本都相符，此外，也與 .NET Core 應用程式架構的版本相符。
 
-在您進行這些變更之後，應該重新執行 `dotnet restore` ([參閱附註](#dotnet-restore-note))，讓套件安裝在您的系統上。
+在您完成這些變更之後，請執行 `dotnet restore`， ([請參閱附註](#dotnet-restore-note))，以將該套件安裝在您的系統上。
 
 ## <a name="making-web-requests"></a>提出 Web 要求
 

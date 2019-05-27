@@ -2,12 +2,12 @@
 title: 作法：比較兩個資料夾的內容 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: aec333fd3a54927f39569173db4e30999f632513
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5d944025d8d442bb80c492d1898487dff88c5bc1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597114"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585897"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>作法：比較兩個資料夾的內容 (LINQ) (C#)
 本例示範三種比較兩個檔案清單的方式︰  
@@ -126,7 +126,7 @@ namespace QueryCompareTwoDirs
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。  
+ 建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。  
   
 ## <a name="see-also"></a>另請參閱
 

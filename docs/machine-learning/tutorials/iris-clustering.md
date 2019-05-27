@@ -1,24 +1,19 @@
 ---
-title: 使用叢集學習工具建立鳶尾花叢集 - ML.NET
+title: 使用叢集模型分類鳶尾花
 description: 了解如何在群集案例中使用 ML.NET
 author: pkulikov
 ms.author: johalex
-ms.date: 04/08/2019
+ms.date: 05/02/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 86eba0c7a3eaeed008d41ff950bf2fd7e0e5fb57
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 7070189e289e8e18ba0d122d2411a9064182e2b1
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481336"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063550"
 ---
-# <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>教學課程：ML.NET 的使用叢集學習工具建立鳶尾花叢集
-
-> [!NOTE]
-> 本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) \(英文)。
-
-此教學課程與關聯的範例目前是使用 **ML.NET 1.0 RC (候選版) (`1.0.0-preview` 版)**。 如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊。
+# <a name="tutorial-categorize-iris-flowers-using-a-clustering-model-with-mlnet"></a>教學課程：使用有 ML.NET 的叢集模型分類鳶尾花
 
 本教學課程說明如何使用 ML.NET 為[鳶尾花資料集](https://en.wikipedia.org/wiki/Iris_flower_data_set)建立一個[群集模型](../resources/tasks.md#clustering)。
 
@@ -46,7 +41,7 @@ ms.locfileid: "59481336"
 
 ## <a name="create-a-console-application"></a>建立主控台應用程式
 
-1. 開啟 Visual Studio 2017。 從功能表列中選取 [檔案]  >  [新增]  >  [專案]。 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點，然後選取 [.NET Core] 節點。 然後選取 [主控台應用程式 (.NET Core)] 專案範本。 在 [名稱] 文字方塊中，鍵入 "IrisFlowerClustering"，然後選取 [確定] 按鈕。
+1. 開啟 Visual Studio。 從功能表列中選取 [檔案]  >  [新增]  >  [專案]。 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點，然後選取 [.NET Core] 節點。 然後選取 [主控台應用程式 (.NET Core)] 專案範本。 在 [名稱] 文字方塊中，鍵入 "IrisFlowerClustering"，然後選取 [確定] 按鈕。
 
 1. 在您的專案中建立一個名為 *Data* 的目錄以儲存資料集和模型檔案：
 
@@ -54,7 +49,7 @@ ms.locfileid: "59481336"
 
 1. 安裝 **Microsoft.ML** NuGet 套件：
 
-    在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為 [套件來源]，選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、從清單中選取該套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
+    在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、從清單中選取 **v1.0.0** 套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
 
 ## <a name="prepare-the-data"></a>準備資料
 

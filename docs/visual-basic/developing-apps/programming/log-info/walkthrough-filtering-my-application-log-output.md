@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: e32f36a0490a198078f8357f3603c91cc50cb3b8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 00e9eeb3227ceef54f899129847bfb74a370c51c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647098"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591278"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>逐步解說：篩選 My.Application.Log 輸出 (Visual Basic)
 本逐步解說示範如何變更 `My.Application.Log` 物件的預設記錄檔篩選，以控制哪些資訊會從 `Log` 物件傳遞至接聽程式，而哪些資訊會由接聽程式寫入。 由於組態資訊是儲存在應用程式的組態檔中，因此即使在建置應用程式之後，您仍可以變更記錄行為。  
@@ -135,7 +135,7 @@ ms.locfileid: "64647098"
 9. 將 `value` 屬性值變更回 "Information"。  
   
     > [!NOTE]
-    >  `DefaultSwitch` 參數設定只會控制 `My.Application.Log`。 它不會變更 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 類別的行為。  
+    >  `DefaultSwitch` 參數設定只會控制 `My.Application.Log`。 它不會變更 <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 類別的行為。  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>個別篩選 My.Application.Log 接聽程式  
  上一個範例示範如何變更所有 `My.Application.Log` 輸出的篩選。 此範例示範如何篩選個別的記錄檔接聽程式。 應用程式預設會有兩個接聽程式，以寫入應用程式的偵錯輸出和記錄檔。  

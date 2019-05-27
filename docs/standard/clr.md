@@ -1,7 +1,6 @@
 ---
-title: Common Language Runtime (CLR)
-ms.custom: updateeachrelease
-ms.date: 04/16/2018
+title: 通用語言執行平台 (CLR) 概觀 - .NET Framework
+ms.date: 04/02/2019
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - compiling source code, runtime functionality
@@ -18,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 740c804dae32a79dd06f951751bd0980fb34ca07
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.custom: updateeachrelease
+ms.openlocfilehash: a1e1fd2b7843299fdd8fbd62dbfba6c62a7be50f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904107"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645013"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Common Language Runtime (CLR) 概觀
 
@@ -64,7 +64,7 @@ Common Language Runtime 使得設計其物件可跨語言互動的元件和應�
 
 ## <a name="clr-versions"></a>CLR 版本
 
-.NET Framework 的版本號碼不一定對應於它包含的 CLR 版本號碼。 下表顯示這兩個版本號碼如何相互關聯。
+.NET Framework 的版本號碼不一定對應於它包含的 CLR 版本號碼。 下表顯示這兩個版本號碼如何相互關聯：
 
 |.NET Framework 版本|包含的 CLR 版本|
 |----------------------------|--------------------------|
@@ -77,10 +77,11 @@ Common Language Runtime 使得設計其物件可跨語言互動的元件和應�
 |4.5 (包括 4.5.1 和 4.5.2)|4|
 |4.6 (包括 4.6.1 和 4.6.2)|4|
 |4.7 (包括 4.7.1 和 4.7.2)|4|
+|4.8|4|
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|標題|說明|
 |-----------|-----------------|
 |[Managed 執行程序](managed-execution-process.md)|描述充分利用 Common Language Runtime 所需要的步驟。|
 |[自動管理記憶體](automatic-memory-management.md)|說明記憶體回收行程如何配置和釋放記憶體。|

@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 52b92048fa845725ce46740e36b96ed55af67c30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 941bfa624bfcc05457714b2f342054bbebfdf908
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644725"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557894"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
@@ -97,7 +97,7 @@ var filteredItems = from item in myItems
 
 API 語法只是一個使用查詢語法的更簡潔方法嗎？
 
-否。 查詢語法可讓您使用 **let** 子句，可使用運算式的後續部分，讓您將變數導入並將其繫結至運算式的範圍中。 可以僅使用 API 語法來重新產生相同的程式碼，但很可能會產生難以閱讀的程式碼。
+否。 查詢語法可讓您使用 **let** 子句，允許您在運算式的範圍內導入及繫結變數，並在運算式的後續片段中使用它。 可以僅使用 API 語法來重新產生相同的程式碼，但很可能會產生難以閱讀的程式碼。
 
 而這就帶出了一個問題，**您應該只使用查詢語法嗎？**
 

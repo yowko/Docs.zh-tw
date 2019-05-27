@@ -1,15 +1,15 @@
 ---
-title: HOW TO：尋找兩個清單之間的集合差異 (LINQ) (C#)
+title: 作法：尋找兩個清單之間的集合差異 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: a00b3ea6bcab13bbb3af56027c4c49a9bb562c3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c8f01cb53665d01d4c7861bab758ecc9e0dcc3c8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306308"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585716"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>HOW TO：尋找兩個清單之間的集合差異 (LINQ) (C#)
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>作法：尋找兩個清單之間的集合差異 (LINQ) (C#)
 此範例示範如何使用 LINQ 比較兩份字串清單，然後輸出在 names1.txt 但不在 names2.txt 中的字串行。  
   
 ### <a name="to-create-the-data-files"></a>建立資料檔  
@@ -55,7 +55,7 @@ class CompareLists
  C# 中某些查詢作業類型，如 <xref:System.Linq.Enumerable.Except%2A>、<xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Union%2A> 和 <xref:System.Linq.Enumerable.Concat%2A>，只能使用以方法為基礎的語法表示。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。  
+ 建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。  
   
 ## <a name="see-also"></a>另請參閱
 

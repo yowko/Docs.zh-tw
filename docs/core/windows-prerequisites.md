@@ -3,12 +3,12 @@ title: Windows 上 .NET Core 的必要條件
 description: 了解在 Windows 電腦上開發及執行 .NET Core 應用程式時，您需要哪些相依性。
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 8eb2913b0fa1fe037a460633064d6f179b64a248
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 423a333edf5b2946a28855352adf2915642b1eae
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634082"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051963"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的必要條件
 
@@ -57,11 +57,11 @@ ms.locfileid: "65634082"
 > [!NOTE]
 > **適用於 Windows 8.1 和更早版本，或 Windows Server 2012 R2 和更早版本：**
 >
-> 請確定您的 Windows 安裝處於最新狀態，且包含 [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows) \(機器翻譯\) (可透過 Windows Update 安裝)。 如果沒有安裝此更新，當您啟動 .NET Core 應用程式時，將會看到如下的錯誤：`The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> 請確定您的 Windows 安裝處於最新狀態，且包含 [KB2999226](https://support.microsoft.com/help/2999226/update-for-universal-c-runtime-in-windows) \(機器翻譯\) (可透過 Windows Update 安裝)。 如果沒有安裝此更新，當您啟動 .NET Core 應用程式時，將會看到如下的錯誤：`The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 >
 > **適用於 Windows 7 或 Windows Server 2008 R2：**
 >
-> 除了 KB2999226，請確定您也已經安裝 [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)。 如果沒有安裝此更新，當您啟動 .NET Core 應用程式時，將會看到如下的錯誤：`The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`。
+> 除了 KB2999226，請確定您也已經安裝 [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)。 如果沒有安裝此更新，當您啟動 .NET Core 應用程式時，將會看到如下的錯誤：`The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`。
 
 ## <a name="prerequisites-for-net-core-30-preview-3"></a>.NET Core 3.0 Preview 3 的先決條件
 
@@ -121,7 +121,7 @@ ms.locfileid: "65634082"
 > [!TIP]
 > 確認 Visual Studio 版本：
 >
-> * 在 **[說明]** 功能表上，選擇 **[關於 Microsoft Visual Studio]**。
+> * 在 **[說明]** 功能表上，選擇 **[關於 Microsoft Visual Studio]** 。
 > * 在 [關於 Microsoft Visual Studio] 對話方塊中，確認版本號碼。
 >   * 針對 .NET Core 3.0 Preview 3 應用程式，需要 Visual Studio 2019 16.0 版或更新版本。
 >   * 若為 .NET Core 2.2 應用程式，需要 Visual Studio 2017 15.9 版或更新版本。

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4aad615df6db5a29b9af21b585ea2b0dfbdedf4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: f50a469327a06eabdb6a80821203f2222dcd2921
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093680"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878043"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework 的概觀
 
@@ -45,7 +45,7 @@ Internet Explorer 是裝載執行階段的 Unmanaged 應用程式範例 (採用 
 
 下圖顯示 Common Language Runtime 和類別庫與您的應用程式及整體系統的關係。 下圖也顯示 Managed 程式碼是如何在較大架構中運作的。
 
-![較大型架構中的 Managed 程式碼](../../../docs/framework/get-started/media/circle.gif "圓形").NET Framework 關係架構圖
+![下圖也顯示受控碼是如何在較大的架構中運作。](./media/overview/language-runtime-class-library-relationship.gif)
 
 下列章節將更詳細說明 .NET Framework 的主要功能。
 

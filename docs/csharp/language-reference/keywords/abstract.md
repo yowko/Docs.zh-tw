@@ -8,15 +8,15 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: a85cf00a8dd1b406c7e5185fd332a507a3ca7c83
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 5476e99cbd1a5af2acf91ed6bf854fded3425e72
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203518"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452445"
 ---
 # <a name="abstract-c-reference"></a>abstract (C# 參考)
-`abstract` 修飾詞表示要修改的項目具有遺失或不完整的實作。 抽象修飾詞可以與類別、方法、屬性、索引子和事件搭配使用。 在類別宣告中使用 `abstract` 修飾詞，來表示某一類別只是要作為其他類別的基底類別。 標記為抽象或包括在抽象類別中的成員，必須由衍生自抽象類別的類別所實作。  
+`abstract` 修飾詞表示要修改的項目具有遺失或不完整的實作。 抽象修飾詞可以與類別、方法、屬性、索引子和事件搭配使用。 在類別宣告中使用 `abstract` 修飾詞，來表示某一類別只是要作為其他類別的基底類別，不是自行具現化。 標記為抽象的成員，必須由衍生自抽象類別的類別實作。
   
 ## <a name="example"></a>範例  
  在此範例中，`Square` 類別必須提供 `Area` 的實作，因為它繼承自 `ShapesClass`：  
@@ -25,23 +25,23 @@ ms.locfileid: "57203518"
   
  抽象類別具有下列功能：  
   
--   抽象類別無法具現化。  
+- 抽象類別無法具現化。  
   
--   抽象類別可能包含抽象方法和存取子。  
+- 抽象類別可能包含抽象方法和存取子。  
   
--   因為兩個修飾詞的意義相反，所以無法使用 [sealed](../../../csharp/language-reference/keywords/sealed.md) 修飾詞來修改抽象類別。 `sealed` 修飾詞可防止繼承類別，而 `abstract` 修飾詞需要繼承類別。  
+- 因為兩個修飾詞的意義相反，所以無法使用 [sealed](../../../csharp/language-reference/keywords/sealed.md) 修飾詞來修改抽象類別。 `sealed` 修飾詞可防止繼承類別，而 `abstract` 修飾詞需要繼承類別。  
   
--   衍生自抽象類別的非抽象類別必須包括所有繼承抽象方法和存取子的實際實作。  
+- 衍生自抽象類別的非抽象類別必須包括所有繼承抽象方法和存取子的實際實作。  
   
  在方法或屬性宣告中使用 `abstract` 修飾詞，表示方法或屬性未包含實作。  
   
  抽象方法具有下列功能：  
   
--   抽象方法隱含為虛擬方法。  
+- 抽象方法隱含為虛擬方法。  
   
--   只有在抽象類別中才允許抽象方法宣告。  
+- 只有在抽象類別中才允許抽象方法宣告。  
   
--   因為抽象方法宣告未提供實際實作，所以沒有方法主體；方法宣告的結尾就是分號，而且簽章後面沒有大括號 ({ })。 例如：  
+- 因為抽象方法宣告未提供實際實作，所以沒有方法主體；方法宣告的結尾就是分號，而且簽章後面沒有大括號 ({ })。 例如：  
   
     ```csharp  
     public abstract void MyMethod();  
@@ -49,13 +49,13 @@ ms.locfileid: "57203518"
   
      方法 [override](../../../csharp/language-reference/keywords/override.md) 提供了實作，而這個方法是非抽象類別的成員。  
   
--   在抽象方法宣告中使用 [static](../../../csharp/language-reference/keywords/static.md) 或 [virtual](../../../csharp/language-reference/keywords/virtual.md) 修飾詞是錯誤的。  
+- 在抽象方法宣告中使用 [static](../../../csharp/language-reference/keywords/static.md) 或 [virtual](../../../csharp/language-reference/keywords/virtual.md) 修飾詞是錯誤的。  
   
  抽象屬性的行為類似抽象方法，但宣告和引動過程語法的差異除外。  
   
--   在靜態屬性上使用 `abstract` 修飾詞是錯誤的。  
+- 在靜態屬性上使用 `abstract` 修飾詞是錯誤的。  
   
--   包括使用 [override](../../../csharp/language-reference/keywords/override.md) 修飾詞的屬性宣告，即可覆寫衍生類別中的抽象繼承屬性。  
+- 包括使用 [override](../../../csharp/language-reference/keywords/override.md) 修飾詞的屬性宣告，即可覆寫衍生類別中的抽象繼承屬性。  
   
  如需抽象類別的詳細資訊，請參閱[抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
   

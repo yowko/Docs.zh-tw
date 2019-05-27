@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e642f6507016dd1d62b4889f8a8dbcf0470a2202
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5652c04dc506e802741ba803af8e50837d0d795c
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168164"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064075"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>在 Managed 程式碼中建立原型
 本主題描述如何存取 Unmanaged 函式，並介紹數個以 Managed 程式碼來註解方法定義的屬性欄位。 如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)。  
@@ -38,10 +38,8 @@ ms.locfileid: "59168164"
  Unmanaged 函式的 Managed 定義會依語言而異，您可以在下列範例中觀察到。 如需更完整的程式碼範例，請參閱[平台叫用範例](platform-invoke-examples.md)。  
   
 ```vb
-Imports System
-
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Function MessageBox Lib "user32.dll" (
         ByVal hWnd As IntPtr,
         ByVal lpText As String,
         ByVal lpCaption As String,
@@ -49,13 +47,12 @@ Friend Class WindowsAPI
 End Class
 ```
   
- 若要套用 <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping> 、 <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention> 、 <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> 、 <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig> 、 <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> 或 <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> 欄位到 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 宣告中，您必須使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 屬性而不是 `Declare` 陳述式。  
+ 若要將 <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping?displayProperty=nameWithtype>、<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention?displayProperty=nameWithtype>、<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithtype>、<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig?displayProperty=nameWithtype>、<xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError?displayProperty=nameWithtype> 或 <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar?displayProperty=nameWithtype> 欄位套用至 Visual Basic 宣告，您必須使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 屬性，而不是 `Declare` 陳述式。  
   
 ```vb
-Imports System
 Imports System.Runtime.InteropServices
 
-Friend Class WindowsAPI
+Friend Class NativeMethods
     <DllImport("user32.dll", CharSet:=CharSet.Auto)>
     Friend Shared Function MessageBox(
         ByVal hWnd As IntPtr,
@@ -70,7 +67,7 @@ End Class
 using System;
 using System.Runtime.InteropServices;
 
-internal static class WindowsAPI
+internal static class NativeMethods
 {
     [DllImport("user32.dll")]
     internal static extern int MessageBox(
@@ -111,9 +108,9 @@ extern "C" int MessageBox(
 ### <a name="platform-invoke-examples"></a>平台叫用範例  
  本節中的平台叫用範例將說明如何使用具有堆疊查核行程修飾詞的  `RegistryPermission` 屬性。  
   
- 在下列程式碼範例中，<xref:System.Security.Permissions.SecurityAction>`Assert`、`Deny` 和 `PermitOnly` 修飾詞會被忽略。  
+ 在下列範例中，<xref:System.Security.Permissions.SecurityAction>`Assert`、`Deny` 和 `PermitOnly` 修飾詞會被忽略。  
   
-```  
+```csharp  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
 [RegistryPermission(SecurityAction.Assert, Unrestricted = true)]  
     private static extern bool CallRegistryPermissionAssert();  
@@ -129,13 +126,13 @@ extern "C" int MessageBox(
   
  不過，`Demand` 修飾詞，在下列範例中會被接受。  
   
-```  
+```csharp
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
 [RegistryPermission(SecurityAction.Demand, Unrestricted = true)]  
     private static extern bool CallRegistryPermissionDeny();  
 ```  
   
- <xref:System.Security.Permissions.SecurityAction> 修飾詞會正常運作 (如果它們被放在包含 (換行) 平台叫用呼叫的類別上)。  
+ 如果它們被放在包含 (換行) 平台叫用呼叫的類別上，<xref:System.Security.Permissions.SecurityAction> 修飾詞會正常運作。  
   
 ```cpp  
       [RegistryPermission(SecurityAction.Demand, Unrestricted = true)]  

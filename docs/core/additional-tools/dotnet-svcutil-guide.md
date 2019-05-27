@@ -4,12 +4,12 @@ description: Microsoft WCF dotnet-svcutil 工具的概觀，此工具可新增 .
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: b5dfb84f19c3748daa303c828cbe881f1582eb76
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5e361ce85bec696fe5d76c4f43a444c543a9012d
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612809"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063298"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>適用於 .NET Core 的 WCF dotnet-svcutil 工具
 
@@ -53,55 +53,56 @@ public interface ISayHello
 
 1. 為您的專案建立一個名為 _HelloSvcutil_ 的目錄，然後讓它成為您目前所在的目錄，如下列範例中所示：
 
-```console
-mkdir HelloSvcutil
-cd HelloSvcutil
-```
+    ```console
+    mkdir HelloSvcutil
+    cd HelloSvcutil
+    ```
 
 2. 使用 [`dotnet new`](../tools/dotnet-new.md) 命令在該目錄中建立新的 C# Web 專案，如下所示：
 
-```console
-dotnet new web
-```
+    ```console
+    dotnet new web
+    ```
 
-3. 將 [`dotnet-svcutil` NuGet 套件](https://nuget.org/packages/dotnet-svcutil)安裝為 CLI 工具：
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+3. 安裝 [`dotnet-svcutil`NuGet 套件](https://nuget.org/packages/dotnet-svcutil)作為 CLI 工具： <!-- markdownlint-disable MD023 -->
+    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-```console
-dotnet tool install --global dotnet-svcutil
-```
+    ```console
+    dotnet tool install --global dotnet-svcutil
+    ```
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
-在您的編輯器中開啟 `HelloSvcutil.csproj` 專案檔，編輯 `Project` 元素，然後使用下列程式碼將 [`dotnet-svcutil`NuGet 套件](https://nuget.org/packages/dotnet-svcutil) \(英文\) 新增為 CLI 工具參考：
+    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    在您的編輯器中開啟 `HelloSvcutil.csproj` 專案檔，編輯 `Project` 元素，然後使用下列程式碼將 [`dotnet-svcutil`NuGet 套件](https://nuget.org/packages/dotnet-svcutil) \(英文\) 新增為 CLI 工具參考：
 
-```xml
-<ItemGroup>
-  <DotNetCliToolReference Include="dotnet-svcutil" Version="1.0.*" />
-</ItemGroup>
-```
+    ```xml
+    <ItemGroup>
+      <DotNetCliToolReference Include="dotnet-svcutil" Version="1.0.*" />
+    </ItemGroup>
+    ```
 
-接著使用 [`dotnet restore`](../tools/dotnet-restore.md) 命令還原 _dotnet-svcutil_ 套件，如下所示：
+    接著使用 [`dotnet restore`](../tools/dotnet-restore.md) 命令還原 _dotnet-svcutil_ 套件，如下所示：
 
-```console
-dotnet restore
-```
+    ```console
+    dotnet restore
+    ```
 
----
+    ---
 
 4. 執行 _dotnet-svcutil_ 命令以產生 Web 服務參考檔案，如下所示：
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-```console
-dotnet-svcutil http://contoso.com/SayHello.svc
-```
+    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    ```console
+    dotnet-svcutil http://contoso.com/SayHello.svc
+    ```
 
-```console
-dotnet svcutil http://contoso.com/SayHello.svc
-```
+    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
----
+    ```console
+    dotnet svcutil http://contoso.com/SayHello.svc
+    ```
+
+    ---
 
 產生的檔案會儲存為 _HelloSvcutil/ServiceReference/Reference.cs_。 _dotnet-svcutil_ 工具也會將 Proxy 程式碼所需的適當 WCF 套件，以套件參考的形式新增到專案。
 
@@ -109,43 +110,43 @@ dotnet svcutil http://contoso.com/SayHello.svc
 
 1. 使用 [`dotnet restore`](../tools/dotnet-restore.md) 命令還原 WCF 套件，如下所示：
 
-```console
-dotnet restore
-```
+    ```console
+    dotnet restore
+    ```
 
 2. 尋找您要使用的用戶端類別與作業名稱。 `Reference.cs` 會包含繼承自 `System.ServiceModel.ClientBase`的類別，並有可用來在服務上呼叫作業的方法。 在此例中，您想要呼叫 _SayHello_ 服務的 _Hello_ 作業。 `ServiceReference.SayHelloClient` 是用戶端類別的名稱，並有稱為 `HelloAsync` 的方法，可用來呼叫作業。
 
 3. 在編輯器中開啟 `Startup.cs` 檔案，在頂端為服務參考命名空間新增 using 陳述式：
 
-```csharp
-using ServiceReference;
-```
+    ```csharp
+    using ServiceReference;
+    ```
 
- 4. 編輯 `Configure` 方法以叫用 Web 服務。 若要這樣做，請建立繼承自 `ClientBase` 的類別執行個體，然後在用戶端物件呼叫方法：
+4. 編輯 `Configure` 方法以叫用 Web 服務。 若要這樣做，請建立繼承自 `ClientBase` 的類別執行個體，然後在用戶端物件呼叫方法：
 
-```csharp
-public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-{
-    if (env.IsDevelopment())
+    ```csharp
+    public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     {
-        app.UseDeveloperExceptionPage();
+        if (env.IsDevelopment())
+        {
+            app.UseDeveloperExceptionPage();
+        }
+
+        app.Run(async (context) =>
+        {
+            var client = new SayHelloClient();
+            var response = await client.HelloAsync();
+            await context.Response.WriteAsync(response);
+        });
     }
 
-    app.Run(async (context) =>
-    {
-        var client = new SayHelloClient();
-        var response = await client.HelloAsync();
-        await context.Response.WriteAsync(response);
-    });
-}
-
-```
+    ```
 
 5. 使用 [`dotnet run`](../tools/dotnet-run.md) 命令執行應用程式，如下所示：
 
-```console
-dotnet run
-```
+    ```console
+    dotnet run
+    ```
 
 6. 在您的網頁瀏覽器中，瀏覽到主控台列出的 URL (例如 `http://localhost:5000`)。
 

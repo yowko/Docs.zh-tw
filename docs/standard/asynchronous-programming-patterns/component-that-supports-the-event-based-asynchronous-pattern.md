@@ -18,17 +18,17 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: bc19ee687b26025d3da4d66888902395b863f046
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6c35398d54b91c9aa595ffdcde56004e59b7693
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628920"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882496"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>作法：實作支援事件架構非同步模式的元件
 如果您正在撰寫的類別含有一些可能造成明顯延遲的作業，請考慮實作[事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)，來為它提供非同步功能。  
   
- 本逐步解說說明如何建立實作「事件架構非同步模式」的元件。 其實作方式是使用 <xref:System.ComponentModel?displayProperty=nameWithType> 命名空間中的協助程式類別，以確保此元件在任何應用程式模型下都能正常運作，包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]、主控台應用程式及 Windows Forms 應用程式。 您也可以使用 <xref:System.Windows.Forms.PropertyGrid> 控制項和您自己的自訂設計工具來設計此元件。  
+ 本逐步解說說明如何建立實作「事件架構非同步模式」的元件。 其實作方式是使用 <xref:System.ComponentModel?displayProperty=nameWithType> 命名空間中的協助程式類別，確保此元件在任何應用程式模型下都能正常運作，包括 ASP.NET、主控台應用程式及 Windows Forms 應用程式。 您也可以使用 <xref:System.Windows.Forms.PropertyGrid> 控制項和您自己的自訂設計工具來設計此元件。  
   
  完成時，您將擁有一個以非同步方式計算質數的應用程式。 您的應用程式將會有一個主要使用者介面 (UI) 執行緒，以及一個用來計算每個質數的執行緒。 雖然測試一個大數是否為質數所需的時間很長，但主要 UI 執行緒並不會被此延遲打斷，在計算期間表單將能持續回應。 您將能夠想要執行多少次計算就同時執行多少次計算，並選擇性地取消擱置中的計算。  
   

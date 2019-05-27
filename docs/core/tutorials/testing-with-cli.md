@@ -1,15 +1,15 @@
 ---
 title: 使用 .NET Core 命令列組織和測試專案
-description: 此教學課程說明如何從命令列組織和測試 .NET Core 專案。
+description: 本教學課程說明如何從命令列組織和測試 .NET Core 專案。
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: ffd15edc633142116089d206135eb16416eb14cb
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ef7263985288445fca273f37389876aeac2f136b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "57845904"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051948"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>使用 .NET Core 命令列組織和測試專案
 
@@ -108,14 +108,14 @@ Meow!
 測試專案目前無法測試 `NewTypes` 中的類型，並且需要 `NewTypes` 專案的專案參考。 若要新增專案參考，請使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令︰
 
 ```
-dotnet add reference ../../NewTypes/NewTypes.csproj
+dotnet add reference ../../src/NewTypes/NewTypes.csproj
 ```
 
 或者，您也可以選擇手動新增專案參考，方法是將 `<ItemGroup>` 節點新增至 *NewTypesTests.csproj* 檔案：
 
 ```xml
 <ItemGroup>
-  <ProjectReference Include="../../NewTypes/NewTypes.csproj" />
+  <ProjectReference Include="../../src/NewTypes/NewTypes.csproj" />
 </ItemGroup>
 ```
 

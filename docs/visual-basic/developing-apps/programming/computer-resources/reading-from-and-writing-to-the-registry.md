@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry [Visual Basic], writing to
 - registry [Visual Basic], reading
 ms.assetid: a13da106-185b-41d7-b23c-416da65e21e4
-ms.openlocfilehash: 6ce05b956ebf9a544eb8c95165b0f709c694f334
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: fcc13d82a2b27221c13f9277585c21196b47003d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332931"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591473"
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>讀取和寫入登錄 (Visual Basic)
 本主題描述與登錄建立關聯的工作和概念主題。  
@@ -29,7 +29,7 @@ ms.locfileid: "39332931"
  描述如何使用 `My.Computer.Registry.CurrentUser` 屬性的 `DeleteSubKey` 方法來刪除登錄機碼。  
   
  [使用 Microsoft.Win32 命名空間讀取和寫入登錄](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
- 描述如何使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 的 `Registry` 和 `RegistryKey` 類別來存取登錄。  
+ 描述如何使用 .NET Framework 的 `Registry` 和 `RegistryKey` 類別來存取登錄。  
   
  [安全性和登錄](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
  討論與登錄有關的安全性問題。  

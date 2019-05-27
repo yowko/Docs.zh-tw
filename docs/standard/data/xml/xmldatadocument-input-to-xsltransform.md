@@ -5,18 +5,18 @@ ms.technology: dotnet-standard
 ms.assetid: a0b536b6-cdb3-4a44-86c2-3b2ebc7bd4c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a917c0f64a8e61df1521d361ed0c8821fee295b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 811c513e6c8c613801c0ca60c11a9e5577672183
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508597"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592760"
 ---
 # <a name="xmldatadocument-input-to-xsltransform"></a>XslTransform 的 XmlDataDocument 輸入
 > [!NOTE]
 >  <xref:System.Xml.Xsl.XslTransform> 類別在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。 如需詳細資訊，請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[從 XslTransform 類別移轉](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。  
   
- Microsoft [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 可實作 XML 文件物件模型 (DOM)，以提供 XML 文件中之資料的存取權，以及其他可用來在 XML 文件中讀取、寫入和巡覽的類別。 <xref:System.Xml.XmlDataDocument> 位於 <xref:System.Xml> 命名空間中，可透過與 <xref:System.Data.DataSet> 中之關聯式資料的同步處理，而提供資料的關聯式存取權。 您可以透過 <xref:System.Data.DataSet> 的關聯式表示法同時檢視及管理結構化 XML，或透過 <xref:System.Xml.XmlDataDocument> 的 DOM 表示法來管理半結構化的 XML。 <xref:System.Xml.XmlDataDocument> 因此能夠跨越 XML 與關聯式領域的界限。  
+ Microsoft .NET Framework 實作 XML 文件物件模型 (DOM)，以提供 XML 文件中資料的存取權，以及其他可用來在 XML 文件中讀取、寫入和巡覽的類別。 <xref:System.Xml.XmlDataDocument> 位於 <xref:System.Xml> 命名空間中，可透過與 <xref:System.Data.DataSet> 中之關聯式資料的同步處理，而提供資料的關聯式存取權。 您可以透過 <xref:System.Data.DataSet> 的關聯式表示法同時檢視及管理結構化 XML，或透過 <xref:System.Xml.XmlDataDocument> 的 DOM 表示法來管理半結構化的 XML。 <xref:System.Xml.XmlDataDocument> 因此能夠跨越 XML 與關聯式領域的界限。  
   
  若資料儲存在關聯式結構中，而您想將它輸入 XSLT 轉換中，您可以將關聯式資料載入 <xref:System.Data.DataSet> 中，並使其與 <xref:System.Xml.XmlDataDocument> 產生關聯。 對 <xref:System.Xml.XPath.XPathNavigator> 的輸入 <xref:System.Xml.Xsl.XslTransform> 會透過 <xref:System.Xml.XmlDataDocument> 介面在 <xref:System.Xml.XPath.IXPathNavigable> 上實作。 採用關聯式資料，並將它載入 <xref:System.Data.DataSet> 中，然後在 <xref:System.Xml.XmlDataDocument> 內進行同步處理，此時即可對關聯式資料執行 XSLT 轉換。  
   

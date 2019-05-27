@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed276d8026201af94a0259c4258d5c50fa67c0f3
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026480"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053234"
 ---
 # <a name="working-with-calendars"></a>使用日曆
 
@@ -141,7 +141,7 @@ ms.locfileid: "62026480"
 >  Reiwa 紀元、 新時代的來臨<xref:System.Globalization.JapaneseCalendar>和<xref:System.Globalization.JapaneseLunisolarCalendar>，開始於 2019 5 月 1 日。 這項改變對所有使用這些日曆的應用程式都有影響。 請參閱下列文章，如需詳細資訊：
 > - [處理在.NET 中日本曆法中的新時代](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/)，此文件新增至.NET 能夠支援的功能與多個紀元行事曆，並討論處理多個紀元的行事曆時所要使用的最佳作法。
 > - [準備您的應用程式，以日文的紀元變更](/windows/uwp/design/globalizing/japanese-era-change)，它提供的測試以確保紀元變更其準備就緒可以安裝在 Windows 應用程式的資訊。
-> - [新的日文時代的摘要更新適用於.NET Framework](https://support.microsoft.com/en-us/help/4477957/new-japanese-era-updates-for-net-framework)，其中會列出新日本曆法的紀元，相關的個別 Windows 版本的.NET Framework 更新資訊的多個紀元支援的新.NET Framework 功能，並包含要在測試應用程式中尋找的項目。
+> - [新的日文時代的摘要更新適用於.NET Framework](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework)，其中會列出新日本曆法的紀元，相關的個別 Windows 版本的.NET Framework 更新資訊的多個紀元支援的新.NET Framework 功能，並包含要在測試應用程式中尋找的項目。
 
 大部分的行事曆中的紀元表示提供很長的時間週期。 在西曆，比方說，在目前紀元涵蓋千年來兩個以上。 針對<xref:System.Globalization.JapaneseCalendar>而<xref:System.Globalization.JapaneseLunisolarCalendar>、 兩個行事曆支援多個紀元，這不是。 紀元會對應至皇帝支配的期間。 支援多個紀元，特別是當目前紀元的上限為未知，帶來的特殊挑戰。 
 

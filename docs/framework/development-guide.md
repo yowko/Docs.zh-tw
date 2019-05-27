@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 894895331c2444a8e52a09e3de9d5a47daa87e5d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: cc7a0991ae308f1c61026e946021d22da9a4bc3b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092952"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583548"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 開發指南
 本節說明如何建立、設定、偵錯、保護和部署 .NET Framework 應用程式。 本節也提供有關技術領域的資訊，例如動態程式設計、互通性、擴充性、記憶體管理和執行緒。  
@@ -67,7 +67,7 @@ ms.locfileid: "56092952"
  
 ## <a name="reference"></a>參考資料  
  [.NET Framework 類別庫](/dotnet/api/?view=netframework-4.7)  
- 為每個包含在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空間的類別提供語法、程式碼範例和用法資訊。  
+ 為每個包含在 .NET Framework 命名空間中的類別，提供語法、程式碼範例及使用方式資訊。  
   
 ## <a name="related-sections"></a>相關章節  
  [快速入門](../../docs/framework/get-started/index.md)  

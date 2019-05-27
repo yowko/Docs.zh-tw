@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ca8cf76745190bd9819dde522c34e57952cd1ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c6f1a2d23d5f33ba7e4f0d51f795e75d7cf785e
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906317"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052444"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>執行階段指示詞 (rd.xml) 組態檔參考
 
@@ -405,7 +405,7 @@ ms.locfileid: "61906317"
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>XmlSerializer、 DataContractSerializer 和 DataContractJsonSerializer 原則的效果
 
-不像 `Serialize` 原則是主要用於反映型序列化程式，<xref:System.Xml.Serialization.XmlSerializer>、<xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 原則是要用來啟用 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈已知的序列化程式集。 這些序列化程式不是使用反映來實作，但是可以用類似可反映式類型的方法，來判斷可以在執行階段序列化的類型集。
+不同於`Serialize`原則，主要用於反映型序列化程式，這<xref:System.Xml.Serialization.XmlSerializer>， <xref:System.Runtime.Serialization.DataContractSerializer>，和<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>原則用來啟用.NET Native 工具鏈已知的序列化程式的一組。 這些序列化程式不是使用反映來實作，但是可以用類似可反映式類型的方法，來判斷可以在執行階段序列化的類型集。
 
 將這些原則的其中之一套用至類型，可讓該類型以相符的序列化程式來進行序列化。 此外，序列化引擎可以用靜態方式判斷為需要序列化的任何類型，也都可以序列化。
 

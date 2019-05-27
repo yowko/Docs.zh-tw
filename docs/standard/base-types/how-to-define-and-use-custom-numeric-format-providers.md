@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37c9140db390c55c9cab4e8a3203287d2dd12725
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b3898caa90c695ae681c2d9b20abbba57a2a9f61
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634231"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590466"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>作法：定義和使用自訂數值格式提供者
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 可讓您有效掌控數值的字串表示。 它支援以下自訂數值格式的功能：  
+.NET Framework 可讓您有效掌控數值的字串表示。 它支援以下自訂數值格式的功能：  
   
 - 標準數值格式字串，這些字串提供預先定義的格式集，可將數字轉換成其字串表示。 您可以使用它們搭配任何擁有 `format` 參數的數值格式化方法，例如 <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>。 如需詳細資訊，請參閱[標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "64634231"
   
 - 自訂的 <xref:System.Globalization.CultureInfo> 或 <xref:System.Globalization.NumberFormatInfo> 物件，這類物件會定義用來顯示數值字串表示的符號和格式模式。 您可以使用它們搭配任何擁有 `provider` 參數的數值格式化方法，例如 <xref:System.Int32.ToString%2A>。 一般而言，會使用 `provider` 參數來指定文化特性特定的格式。  
   
- 在某些情況下，這三項技術並不適用 (例如，應用程式必須顯示格式化帳號、身分證號碼或是郵遞區號時)。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 還可讓您定義既不是 <xref:System.Globalization.CultureInfo> 也不是 <xref:System.Globalization.NumberFormatInfo> 物件的格式物件，以判斷如何將數值格式化。 本主題提供實作這類物件的逐步指示，並提供格式化電話號碼的範例。  
+ 在某些情況下，這三項技術並不適用 (例如，應用程式必須顯示格式化帳號、身分證號碼或是郵遞區號時)。 .NET Framework 還可讓您定義既不是 <xref:System.Globalization.CultureInfo> 也不是 <xref:System.Globalization.NumberFormatInfo> 物件的格式物件，以判斷如何將數值格式化。 本主題提供實作這類物件的逐步指示，並提供格式化電話號碼的範例。  
   
 ### <a name="to-define-a-custom-format-provider"></a>定義自訂格式提供者  
   
@@ -87,9 +87,6 @@ ms.locfileid: "64634231"
  [!code-vb[System.ICustomFormatter.Format#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ICustomFormatter.Format/vb/Format.vb#1)]  
   
  在此範例中，實作 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 的方法是用來作為 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法的回呼方法。 因此，它會檢查 `formatProvider` 參數，以判斷其中是否包含目前 `TelephoneFormatter` 物件的參考。 不過，此方法也可以直接從程式碼呼叫。 在此情況下，您可以使用 `formatProvider` 參數來提供 <xref:System.Globalization.CultureInfo> 或 <xref:System.Globalization.NumberFormatInfo> 物件，該物件會提供文化特性特定的格式資訊。  
-  
-## <a name="compiling-the-code"></a>編譯程式碼  
- 在命令列中，使用 csc.exe 或 vbc.exe 來編譯程式碼。 若要在 Visual Studio 中編譯程式碼，請將它放入主控台應用程式專案範本。  
   
 ## <a name="see-also"></a>另請參閱
 

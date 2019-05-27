@@ -5,22 +5,22 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 9ea293a3c96f193285f45f8d70ac038e785f548a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2109c764d0143a843f75fc0c14cc0d09550efd85
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477658"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877580"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (資訊清單產生和編輯工具)
 
-「資訊清單產生和編輯工具」(*Mage.exe*) 是命令列工具，可支援建立和編輯應用程式與部署資訊清單。 由於 *Mage.exe* 是命令列工具，因此可以從批次指令碼及其他 Windows 架構應用程式 (包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式) 中執行。
+「資訊清單產生和編輯工具」(*Mage.exe*) 是命令列工具，可支援建立和編輯應用程式與部署資訊清單。 由於 *Mage.exe* 是命令列工具，因此可以從批次指令碼及其他 Windows 應用程式 (包括 ASP.NET 應用程式) 中執行。
 
 您也可以使用 *MageUI.exe* 這個圖形應用程式來取代 *Mage.exe*。 如需詳細資訊，請參閱 [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)。
 
 此工具會自動與 Visual Studio 一起安裝。 若要執行工具，請使用 Visual Studio 的開發人員命令提示字元。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
 
-有兩個版本的 *Mage.exe* 和 *MageUI.exe* 隨附於 Visual Studio。 若要查看版本資訊，請執行 *MageUI.exe*，並依序選取 [說明] 和 [關於]。 此文件描述 4.0.x.x 版本的 *Mage.exe* 和 *MageUI.exe*。
+有兩個版本的 *Mage.exe* 和 *MageUI.exe* 隨附於 Visual Studio。 若要查看版本資訊，請執行 *MageUI.exe*，並依序選取 [說明] 和 [關於]。 本文件描述 4.0.x.x 版本的 *Mage.exe* 和 *MageUI.exe*。
 
 ## <a name="syntax"></a>語法
 
@@ -36,7 +36,7 @@ Mage [commands] [commandOptions]
 |-------------|-----------------|
 |**-cc, ClearApplicationCache**|清除所有僅供線上使用之應用程式的已下載應用程式快取。|
 |**-n, -New** *fileType [newOptions]*|建立指定類型的新檔案。 有效的類型如下：<br /><br /> -   `Deployment`：建立新的部署資訊清單。<br />-   `Application`：建立新的應用程式資訊清單。<br /><br /> 如果這個命令沒有指定額外的參數，就會以適當的預設標記和屬性值，建立適當類型的檔案。<br /><br /> 使用 **-ToFile** 選項 (見下表) 可以指定新檔案的檔案名稱和路徑。<br /><br /> 使用 **-FromDirectory** 選項 (見下表) 可以建立應用程式資訊清單，並在此資訊清單的 \<相依性> 區段中新增應用程式的所有組件。|
-|**-u, -Update** *[filePath] [updateOptions]*|對資訊清單檔案進行一個或多個變更。 您不必指定要編輯的檔案類型。 Mage.exe 會使用一組啟發學習法來檢查檔案並判斷它是部署資訊清單或應用程式資訊清單。<br /><br /> 如果您已經使用憑證簽署檔案， **-Update** 會移除金鑰簽章區塊。 這是因為金鑰簽章含有檔案的雜湊，修改檔案會使得雜湊變成無效。<br /><br /> 使用 **-ToFile** 選項 (見下表) 可以指定新檔案名稱和路徑，而不會覆寫現有檔案。|
+|**-u, -Update** *[filePath] [updateOptions]*|對資訊清單檔案進行一項或多項變更。 您不必指定要編輯的檔案類型。 Mage.exe 會使用一組啟發學習法來檢查檔案並判斷它是部署資訊清單或應用程式資訊清單。<br /><br /> 如果您已經使用憑證簽署檔案， **-Update** 會移除金鑰簽章區塊。 這是因為金鑰簽章含有檔案的雜湊，修改檔案會使得雜湊變成無效。<br /><br /> 使用 **-ToFile** 選項 (見下表) 可以指定新檔案名稱和路徑，而不會覆寫現有檔案。|
 |**-s, -Sign** `[signOptions]`|使用金鑰組或 X509 憑證簽署檔案。 簽章會以 XML 項目的形式插入檔案內。<br /><br /> 簽署指定 **-TimestampUri** 值的資訊清單時，您必須連線到網際網路。|
 |**-ver, -Verify** *[manifest-filename]*|確認已正確簽署資訊清單。 無法與其他命令合併。 <br/><br/>**適用於 .NET Framework 4.7 和更新版本。**|
 |**-h, -?, -Help** *[verbose]*|描述所有可用命令及其選項。 指定 `verbose` 可取得詳細的說明。|
@@ -61,7 +61,7 @@ Mage [commands] [commandOptions]
 |**-mv, -MinVersion**  `[version]`|列於 ClickOnce 部署資訊清單中，由 **-Version** 旗標指定的版本。|部署資訊清單。|使用者可以執行的應用程式最小版本。 這個旗標可讓應用程式的具名版本成為必要的更新項目。 如果您發行的產品版本具有重大變更的更新或嚴重的安全性問題，即可使用這個旗標，指定必須安裝這個更新項目，且使用者不可再繼續執行舊版。<br /><br /> `version` 的語意與 **-Version** 旗標的引數相同。|
 |**-n, -Name** `nameString`|部署|所有檔案類型。|用來識別應用程式的名稱。 ClickOnce 會使用這個名稱來識別 [開始] 功能表 (如果應用程式是設定為自行安裝) 和 [使用權限提高] 對話方塊中的應用程式。 **注意：** 如果您要更新現有的資訊清單，但未使用此選項來指定發行者名稱，*Mage.exe* 會更新含電腦上定義之組織名稱的資訊清單。 若要使用不同的名稱，請務必使用這個選項，並指定所需的發行者名稱。|
 |**-pwd, -Password** `passwd`||所有檔案類型。|以數位憑證替資訊清單簽章時所使用的密碼。 必須與 **-CertFile** 選項搭配使用。|
-|**-p, Processor** `processorValue`|Msil|應用程式資訊清單。<br /><br /> 部署資訊清單。|此散發所要執行的微處理器架構。 如果您正準備進行一或數個安裝，且其組件已針對特定微處理器先行編譯過，則需要這個值。 有效值包括 `msil`、 `x86`、 `ia64`和 `amd64`。 `msil` 為 Microsoft 中繼語言，這表示您的所有組件都與平台無關，而且當您的應用程式首次執行時，通用語言執行平台 (CLR) 會對它們進行 Just-In-Time 編譯。|
+|**-p, Processor** `processorValue`|Msil|應用程式資訊清單。<br /><br /> 部署資訊清單。|這項散發所要執行的微處理器架構。 如果您正準備進行一或數個安裝，且其組件已針對特定微處理器先行編譯過，則需要這個值。 有效值包括 `msil`、 `x86`、 `ia64`和 `amd64`。 `msil` 為 Microsoft 中繼語言，這表示您的所有組件都與平台無關，而且當您的應用程式首次執行時，通用語言執行平台 (CLR) 會對它們進行 Just-In-Time 編譯。|
 |**-pu,** **-ProviderURL** `url`||部署資訊清單。|指定 URL，讓 ClickOnce 從該處檢查是否有應用程式更新。|
 |**-pub, -Publisher** `publisherName`||應用程式資訊清單。<br /><br /> 部署資訊清單。|將發行者名稱加入到部署或應用程式資訊清單的描述項目。 使用在應用程式資訊清單上時，也必須使用值 "true" 或 "t" 指定 **-UseManifestForTrust** ，否則此參數會引發錯誤。|
 |**-s, -SupportURL**  `url`||應用程式資訊清單。<br /><br /> 部署資訊清單。|指定出現在 [新增或移除程式] 中的 ClickOnce 應用程式連結。|

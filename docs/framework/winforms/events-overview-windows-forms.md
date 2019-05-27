@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 3adc2891579cafff9c8aeb3e918ae74c6f3ad8a5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fddb51bfe998c360ca418374b119ec12f25b0fad
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591008"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052285"
 ---
 # <a name="events-overview-windows-forms"></a>事件概觀 (Windows Form)
 事件是您可以透過程式碼加以回應或「處理」的動作。 使用者動作 (例如按一下滑鼠按鈕或按下按鍵)、程式碼或系統都可以產生事件。
@@ -29,7 +29,7 @@ ms.locfileid: "65591008"
  如需如何引發和使用事件的資訊，請參閱[事件](../../standard/events/index.md)。
 
 ## <a name="delegates-and-their-role"></a>委派及其角色
- 委派是通常用來建置事件處理機制的 .NET Framework 中的類別。 委派與函式指標大致相同，通常會在 [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] 及其他物件導向語言中使用。 不同之處在於委派為物件導向、類型安全，安全性也較好。 除此之外，函式指標只包含特定函式的參考，而委派不僅包含了物件參考，還包含了物件中一或多個方法的參考。
+ 委派是通常用來建置事件處理機制的 .NET Framework 中的類別。 常用的視覺效果中的函式指標大致相同委派C++和其他物件導向的語言。 不同之處在於委派為物件導向、類型安全，安全性也較好。 除此之外，函式指標只包含特定函式的參考，而委派不僅包含了物件參考，還包含了物件中一或多個方法的參考。
 
  這種事件模型會使用*委派*來將事件繫結的方法，用來處理它們。 委派允許透過指定處理常式方法的方式，為事件通知登錄其他類別。 當事件發生時，委派即會呼叫所繫結的方法。 如需如何定義委派的詳細資訊，請參閱[事件](../../standard/events/index.md)。
 

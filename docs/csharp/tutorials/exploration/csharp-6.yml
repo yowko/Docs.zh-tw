@@ -8,12 +8,12 @@ metadata:
   ms.date: 12/11/2018
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: c44d16e543f85852cee39106688fd3870dff7c4d
-  ms.sourcegitcommit: c3cf1ace8a1d403aeae76d8976d01995893d2536
+  ms.openlocfilehash: b43400a0fdae338744c521cf7ddb2bfce79fc43c
+  ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 02/07/2019
-  ms.locfileid: "55807043"
+  ms.lasthandoff: 05/19/2019
+  ms.locfileid: "65881030"
 items:
 - durationInMinutes: 1
   content: >
@@ -69,5 +69,5 @@ items:
   content: "`nameof` 運算子會傳回任何變數、類型或類型成員的名稱。 在互動式視窗中嘗試下列程式碼，以查看其運作方式：\n\n```csharp\nusing System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        Console.WriteLine(nameof(System.String));\n        int j = 5;\n        Console.WriteLine(nameof(j));\n        List<string> names = new List<string>();\n        Console.WriteLine(nameof(names));\n    }\n}\n```\n\n輸出會符合變數或類型的名稱。 即使您提供的是完整類型名稱 (例如 `System.String`)，`nameof` 運算子還是會傳回不完整的名稱。 此功能在需要將參數或屬性名稱轉換成字串時最有用。 範例包括擷取擲回 <xref:System.ArgumentNullException> 或 <xref:System.ArgumentException> 的引數名稱，或是擷取實作 <xref:System.ComponentModel.INotifyPropertyChanged> 時已變更的屬性名稱。 \n"
 - title: 新的物件初始化語法
   durationInMinutes: 2
-  content: "新的物件初始化可讓您建立方法，以便更輕鬆地初始化字典及其他類型。 從某個字典開始。 在互動式視窗中執行下列程式碼：\n\n```csharp\nvar messages = new Dictionary<int, string>\n{\n    [404] = \"Page not Found\",\n    [302] = \"Page moved, but left a forwarding address.\",\n    [500] = \"The web server can't come out to play today.\"\n};\n\nConsole.WriteLine(messages[302]);\n```\n\n您可以將此語法擴充至實作 <xref:System.Collections.IEnumerable> 並具有可公開存取 `Add` 方法的任何類別。  在互動式視窗中嘗試下列範例。 它會建立 `Path` 類別，該類別實作 `IEnumerable<Point3D>`，並有一個方法可新增點來接受三個引數。 它也會結合本教學課程中已示範的其他技術，例如運算式主體成員及字串內插補點。 \n\n在 `Main` 方法中，您可以為這些點提供座標來初始化路徑。 這些點會透過 `Add` 方法新增至集合。\n\n`Add` 方法也可以是延伸模組方法。 您可以更新上述範例，如下所示。 由於沙箱限制，您無法在互動式體驗中編譯此範例。 您可以在自己的電腦上嘗試。\n\n```csharp\npublic class Path : IEnumerable<Point3D>\n{\n    private List<Point3D> points = new List<Point3D>();\n    public IEnumerator<Point3D> GetEnumerator() => points.GetEnumerator();\n    IEnumerator IEnumerable.GetEnumerator() => points.GetEnumerator();\n\n    public void Add(Point3D pt) => points.Add(pt);\n}\n\npublic static class Extensions\n{\n    public static void Add(this Path path, double x, double y, double z) => path.Add(new Point3D(x, y, z));\n}\n```\n"
+  content: "物件初始設定式語法現在支援初始化*索引子*以及屬性和欄位。 此新增可讓您更容易初始化字典和其他型別。 從某個字典開始。 在互動式視窗中執行下列程式碼：\n\n```csharp\nvar messages = new Dictionary<int, string>\n{\n    [404] = \"Page not Found\",\n    [302] = \"Page moved, but left a forwarding address.\",\n    [500] = \"The web server can't come out to play today.\"\n};\n\nConsole.WriteLine(messages[302]);\n```\n\n此語法可以設定索引子中的值，能用於在索引子上有可存取 set 存取子的任何型別。\n\n第二個變更可讓您更輕鬆啟用代表序列的型別初始設定式語法。 集合初始設定式可用在實作 <xref:System.Collections.IEnumerable> 並可公開存取 `Add` 方法的任何類別。 `Add` 方法也可以是擴充方法。 \n\n下例顯示此語法的一個案例。 它會建立 `Path` 類別，該類別實作 `IEnumerable<Point3D>`，並有一個方法可新增點來接受三個引數。 `Extensions` 類別會建立額外的 `Add` 方法，從它的三個元件來新增點。 此範例因受環境限制，目前不會以互動方式執行。\n\n```csharp\npublic class Path : IEnumerable<Point3D>\n{\n    private List<Point3D> points = new List<Point3D>();\n    public IEnumerator<Point3D> GetEnumerator() => points.GetEnumerator();\n    IEnumerator IEnumerable.GetEnumerator() => points.GetEnumerator();\n\n    public void Add(Point3D pt) => points.Add(pt);\n}\n\npublic static class Extensions\n{\n    public static void Add(this Path path, double x, double y, double z) => path.Add(new Point3D(x, y, z));\n}\n```\n"
 - content: 您已完成探索 C# 6 的新功能。 現在，請在您的應用程式中自行嘗試。

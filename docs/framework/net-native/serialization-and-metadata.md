@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e7a8e6509cea5f9035e3b8544aa37aa99681822
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c1ee70c2701492acd331e5faed849ff0b2e8b559
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650319"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052383"
 ---
 # <a name="serialization-and-metadata"></a>序列化和中繼資料
 如果您的應用程式將物件序列化和還原序列化，您可能需要將項目加入至執行階段指示詞 (.rd.xml) 檔案，以確保執行階段有必要的中繼資料存在。 有兩種類別的序列化程式，在執行階段指示詞檔案中，各需要不同的處理：  
@@ -39,10 +39,10 @@ ms.locfileid: "64650319"
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] 編譯器將會自動處理這個程式碼。  
+ .NET Native 編譯器會自動處理此程式碼。  
   
 ### <a name="typeof-used-outside-the-constructor"></a>在建構函式外部使用的 typeof  
- 如果您呼叫這些序列化類別的建構函式，並且在提供給建構函式之 <xref:System.Type> 參數的運算式外部，使用 C# [typeof](~/docs/csharp/language-reference/keywords/typeof.md) 關鍵字 (如下列程式碼所示)，則 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 編譯器無法解析類型：  
+ 如果您呼叫這些序列化類別的建構函式，並使用C# [typeof](~/docs/csharp/language-reference/keywords/typeof.md)提供給建構函式的運算式外部的關鍵字<xref:System.Type>參數，如下列程式碼，.NET Native 編譯器無法解析的型別：  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -52,7 +52,7 @@ ms.locfileid: "64650319"
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- 同樣地，如果您呼叫 <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> 之類的建構函式，並提供要序列化的其他 <xref:System.Type> 物件陣列 (如下列程式碼)，則 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 編譯器無法解析這些類型。  
+ 同樣地，如果您呼叫建構函式，例如<xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>，並提供其他陣列<xref:System.Type>序列化，如下列程式碼，.NET Native 編譯器無法解析這些類型的物件。  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   

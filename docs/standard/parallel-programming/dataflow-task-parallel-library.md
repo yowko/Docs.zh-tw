@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d44ec0e0601383133e6c59e44cd81031918d4b6d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 7058e7857c03a2fc82a3d978ef7c8066a9e272bc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45619057"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589662"
 ---
 # <a name="dataflow-task-parallel-library"></a>資料流程 (工作平行程式庫)
 <a name="top"></a> 工作平行程式庫 (TPL) 提供資料流程元件，協助讓啟用並行的應用程式更強固。 這些資料流程元件合稱為「TPL 資料流程程式庫」。 此資料流程模型以提供針對廣泛資料流程以及管線工作的同處理序訊息傳遞，將以行動為基礎的程式撰寫升級。 資料流程元件會在 TPL 的類型與排程基礎結構上建置，並整合 C#、Visual Basic 以及 F# 語言對非同步程式設計的支援。 當您有多個必須非同步式互相溝通的作業時，或當您因為資料變為可用而要處理資料時，這些資料流程元件就會相當實用。 例如，請考慮一個應用程式，它會處理來自網路攝影機的影像資料。 使用資料流模型，應用程式就可以在影像畫面可用時處理它們。 例如，如果應用程式因執行光源修正或消除紅眼而增強影像畫面，則您可以建立資料流程元件的「管線」。 此管線的每個階段都可能使用更廣泛的平行處理原則功能 (例如 TPL 提供的功能) 來轉換該影像。  
@@ -27,13 +27,13 @@ ms.locfileid: "45619057"
   
  本文件包含下列章節：  
   
--   [程式設計模型](#model)  
+- [程式設計模型](#model)  
   
--   [預先定義的資料流程區塊類型](#predefined_types)  
+- [預先定義的資料流程區塊類型](#predefined_types)  
   
--   [設定資料流程區塊行為](#behavior)  
+- [設定資料流程區塊行為](#behavior)  
   
--   [自訂資料流程區塊](#custom)  
+- [自訂資料流程區塊](#custom)  
   
 <a name="model"></a>   
 ## <a name="programming-model"></a>程式設計模型  
@@ -47,10 +47,10 @@ ms.locfileid: "45619057"
 ### <a name="connecting-blocks"></a>連接區塊  
  您也可以連接資料流程區塊來形成「管線」(資料流程區塊的線性序列) 或「網路」(資料流程區塊的圖形)。 管線是網路的一種格式。 在管線或網路中，當資料可供使用時，來源會非同步散佈資料至目標。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> 方法將來源資料流程區塊連結至目標區塊。 來源可以連接至零或多個目標；目標可以從零或更多個來源連接。 您可以同時在管線或網路中加入或移除資料流程區塊。 預先定義的資料流程區塊類型會處理連結和取消連結的所有執行緒安全性層面。  
   
- 如需連接資料流程區塊以形成基本管線的範例，請參閱[逐步解說：建立資料流程管線](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md)。 如需連接資料流程區塊以形成更複雜網路的範例，請參閱[逐步解說：在 Windows Forms 應用程式中使用資料流程](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。 如需在來源提供目標訊息後將目標從來源取消連結的範例，請參閱[如何：取消連結資料流程區塊](../../../docs/standard/parallel-programming/how-to-unlink-dataflow-blocks.md)。  
+ 如需連接資料流程區塊以形成基本管線的範例，請參閱[逐步解說：建立資料流程管線](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md)。 如需連接資料流程區塊以形成更複雜之管線的範例，請參閱[逐步解說：在 Windows Forms 應用程式中使用資料流程](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。 如需在來源提供目標訊息後將目標從來源取消連結的範例，請參閱[如何：取消連結資料流程區塊](../../../docs/standard/parallel-programming/how-to-unlink-dataflow-blocks.md)。  
   
 #### <a name="filtering"></a>篩選  
- 當您呼叫 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> 方法來連結來源與目標時，您可以提供委派，根據訊息值來判斷目標區塊接受或拒絕訊息。 篩選機制是確保資訊流程區塊只接收特定值的實用方式。 對於大部分預先定義的資料流程區塊類型而言，如果來源區塊連接到多個目標區塊，則當目標區塊拒絕訊息時，來源就會提供該訊息給下一個目標。 來源提供訊息給目標的順序是由該來源所定義，而且可能會根據該來源類型而有所不同。 大部分的來源區塊類型在目標接受訊息之後，就會停止提供訊息。 此規則的唯一例外是 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 類別，即使有一些目標拒絕了訊息，其仍為所有目標提供每一個訊息。 如需使用篩選來只處理特定訊息的範例，請參閱[逐步解說：在 Windows Forms 應用程式中使用資料流程](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
+ 當您呼叫 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> 方法來連結來源與目標時，您可以提供委派，根據訊息值來判斷目標區塊接受或拒絕訊息。 篩選機制是確保資訊流程區塊只接收特定值的實用方式。 對於大部分預先定義的資料流程區塊類型而言，如果來源區塊連接到多個目標區塊，則當目標區塊拒絕訊息時，來源就會提供該訊息給下一個目標。 來源提供訊息給目標的順序是由該來源所定義，而且可能會根據該來源類型而有所不同。 大部分的來源區塊類型在目標接受訊息之後，就會停止提供訊息。 此規則的唯一例外是 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 類別，即使有一些目標拒絕了訊息，其仍為所有目標提供每一個訊息。 如需使用篩選處理特定訊息的範例，請參閱[逐步解說：在 Windows Forms 應用程式中使用資料流程](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
 > [!IMPORTANT]
 >  由於每個預先定義來源資料流程區塊類型確保訊息都會按照收到訊息的順序來散佈，所以每個訊息都必須由來源區塊所讀取，之後來源區塊才可處理下一個訊息。 因此，當您使用篩選以連接多個目標至來源時，請確定至少有一個目標區塊會接收每一個訊息。 否則，您的應用程式可能會發生死結。  
@@ -98,7 +98,7 @@ ms.locfileid: "45619057"
  [!code-csharp[TPLDataflow_Overview#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#1)]
  [!code-vb[TPLDataflow_Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#1)]  
   
- 如需示範如何撰寫訊息到 <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> 物件，並從其中讀取訊息的完整範例，請參閱[如何：寫入訊息至資料流程區塊及讀取資料流程區塊中的訊息](../../../docs/standard/parallel-programming/how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md)。  
+ 如需示範如何撰寫訊息到 <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> 物件，並從其中讀取訊息的完整範例，請參閱[如何：對資料流程區塊寫入訊息和讀取訊息](../../../docs/standard/parallel-programming/how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md)。  
   
 #### <a name="broadcastblockt"></a>BroadcastBlock(T)  
  當您需要將多則訊息傳遞給其他元件，但是該元件只需要最新的值時，<xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 類別就很有用。 當您想要將訊息廣播至多個元件時，這個類別也很有用。  
@@ -108,7 +108,7 @@ ms.locfileid: "45619057"
  [!code-csharp[TPLDataflow_Overview#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#2)]
  [!code-vb[TPLDataflow_Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#2)]  
   
- 如需示範如何使用 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 來將訊息廣播到多個目標區塊的完整範例，請參閱[如何：在資料流程區塊中指定工作排程器](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)。  
+ 如需示範如何使用 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 廣播訊息到多個目標區塊的完整範例，請參閱[如何：在資料流程區塊中指定工作排程器](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)。  
   
 #### <a name="writeonceblockt"></a>WriteOnceBlock(T)  
  <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 類別類似於 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 類別，但是 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 物件只能被寫入一次。 您可以將 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 視為類似 C# [readonly](~/docs/csharp/language-reference/keywords/readonly.md) (在 Visual Basic 中為 [ReadOnly](~/docs/visual-basic/language-reference/modifiers/readonly.md)) 關鍵字，不過當 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 物件接收到值 (而非建構) 時，它就會變成不可變。 與 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 類別相同的是，當目標從 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 物件收到訊息時，並不會從此物件中移除該訊息。 因此，多個目標會接收此訊息的複本。 當您只想要散佈眾多訊息中的第一個時，<xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 類別會很有用。  
@@ -131,7 +131,7 @@ ms.locfileid: "45619057"
  [!code-csharp[TPLDataflow_Overview#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#4)]
  [!code-vb[TPLDataflow_Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#4)]  
   
- 如需示範如何使用具有 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 類別之委派的完整範例，請參閱[如何：在資料流程區塊收到資料時執行動作](../../../docs/standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md)。  
+ 如需示範如何使用 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 類別來委派的完整範例，請參閱[如何：在資料流程區塊收到資料時執行動作](../../../docs/standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md)。  
   
 #### <a name="transformblocktinput-toutput"></a>TransformBlock(TInput, TOutput)  
  <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 類別類似於 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 類別，不同處在於它可同時作為來源和目標。 您傳遞給 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件的委派會傳回類型 `TOutput` 的值。 您提供給 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件的委派可以是類型 `System.Func<TInput, TOutput>` 或類型 `System.Func<TInput, Task<TOutput>>`。 當您搭配 `System.Func<TInput, TOutput>` 使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件時，會將每個輸入項目的處理在委派傳回時視為完成。 當您搭配 `System.Func<TInput, Task<TOutput>>` 使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件時，只有在傳回的 <xref:System.Threading.Tasks.Task%601> 物件已完成時，才會將每個輸入項目的處理視為已完成。 如同 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>，使用這兩種機制，您就可以使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 為每個輸入項目作同步與非同步處理。  
@@ -141,7 +141,7 @@ ms.locfileid: "45619057"
  [!code-csharp[TPLDataflow_Overview#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#5)]
  [!code-vb[TPLDataflow_Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#5)]  
   
- 如需在於 Windows Forms 應用程式中執行影像處理的資料流程區塊網路中使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 的完整範例，請參閱[逐步解說：在 Windows Forms 應用程式中使用資料流程](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
+ 如需在資料流程區塊網路 (在 Windows Forms 應用程式執行影像處理) 中使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 的完整範例，請參閱[逐步解說：在 Windows Forms 應用程式中使用資料流程](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
 #### <a name="transformmanyblocktinput-toutput"></a>TransformManyBlock(TInput, TOutput)  
  <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 類別相似於 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 類別，不同處在於 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 對每個輸入值會產生零或多個輸出值，而不是只有一個。 您提供給 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 物件的委派可以是類型 `System.Func<TInput, IEnumerable<TOutput>>` 或類型 `System.Func<TInput, Task<IEnumerable<TOutput>>>`。 當您搭配 `System.Func<TInput, IEnumerable<TOutput>>` 使用 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 物件時，會將每個輸入項目的處理在委派傳回時視為完成。 當您搭配 `System.Func<TInput, Task<IEnumerable<TOutput>>>` 使用 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 物件時，只有在傳回的 `System.Threading.Tasks.Task<IEnumerable<TOutput>>` 物件已完成時，才會將每個輸入項目的處理視為已完成。  
@@ -151,10 +151,10 @@ ms.locfileid: "45619057"
  [!code-csharp[TPLDataflow_Overview#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#6)]
  [!code-vb[TPLDataflow_Overview#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#6)]  
   
- 如需使用 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 為資料流程管線中的每個輸入產生多組獨立輸出的完整範例，請參閱[逐步解說：建立資料流程管線](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md)。  
+ 如需使用 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 為資料流程管線每個輸入產生多組獨立輸出的完整範例，請參閱[逐步解說：建立資料流程管線](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md)。  
   
 #### <a name="degree-of-parallelism"></a>平行處理原則的刻度  
- 每個 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 物件會緩衝輸入訊息，直到此區塊已準備好處理它們。 這些類別預設會按照接收到訊息的順序，一次處理一個訊息。 您也可以指定平行處理原則的刻度以啟動 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 物件同時處理多個訊息。 如需同時執行的詳細資訊，請參閱本文稍後的＜指定平行處理原則的刻度＞一節。 如需設定平行處理原則的刻度，讓執行資料流程區塊一次可處理一個以上訊息的範例，請參閱[如何：在資料流程區塊中指定平行處理原則的刻度](../../../docs/standard/parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md)。  
+ 每個 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 物件會緩衝輸入訊息，直到此區塊已準備好處理它們。 這些類別預設會按照接收到訊息的順序，一次處理一個訊息。 您也可以指定平行處理原則的刻度以啟動 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 物件同時處理多個訊息。 如需同時執行的詳細資訊，請參閱本文稍後的＜指定平行處理原則的刻度＞一節。 如需設定平行處理原則刻度以啟用執行資料流程區塊同時處理一個以上訊息的範例，請參閱[如何：在資料流程區塊中指定平行處理原則程度](../../../docs/standard/parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md)。  
   
 #### <a name="summary-of-delegate-types"></a>委派類型摘要  
  下表摘要說明您可以提供給 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 物件的委派類型。 表中也會指出委派類型是以同步或非同步方式運作。  
@@ -192,7 +192,7 @@ ms.locfileid: "45619057"
  [!code-csharp[TPLDataflow_Overview#8](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#8)]
  [!code-vb[TPLDataflow_Overview#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#8)]  
   
- 如需在非窮盡模式中使用 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 物件以合作方式共用資源的完整範例，請參閱[如何：使用 JoinBlock 從多個來源讀取資料](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md)。  
+ 如需在非窮盡模式使用 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 物件以合作方式共用資源的完整範例，請參閱[如何：使用 JoinBlock 從多個來源讀取資料](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md)。  
   
 #### <a name="batchedjoinblockt1-t2-"></a>BatchedJoinBlock(T1, T2, ...)  
  <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 和 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%603> 類別會收集輸入項目的批次，並散佈包含這些項目的 `System.Tuple(IList(T1), IList(T2))` 或 `System.Tuple(IList(T1), IList(T2), IList(T3))` 物件。 請將 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 視為 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 的組合。 當您建立 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 物件時，請指定每一批次的大小。 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 也提供會實作 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 的屬性：<xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602.Target1%2A> 和 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602.Target2%2A>。 當收到來自所有目標的指定輸入項目計數時，<xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 物件會非同步散佈包含這些項目的 `System.Tuple(IList(T1), IList(T2))` 物件。  
@@ -202,7 +202,7 @@ ms.locfileid: "45619057"
  [!code-csharp[TPLDataflow_Overview#9](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#9)]
  [!code-vb[TPLDataflow_Overview#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#9)]  
   
- 如需使用 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 來擷取程式從資料庫讀取時所發生的結果和任何例外狀況的完整範例，請參閱[逐步解說：使用 BatchBlock 和 BatchedJoinBlock 以改善效率](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md)。  
+ 如需在程式從資料庫讀取時使用 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 擷取結果和任何例外狀況的完整範例，請參閱[逐步解說：使用 BatchBlock 和 BatchedJoinBlock 以改善效率](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md)。  
   
  [回到頁首](#top)  
   
@@ -227,7 +227,7 @@ ms.locfileid: "45619057"
 ### <a name="specifying-the-task-scheduler"></a>指定工作排程器  
  每個預先定義的資料流程區塊使用 TPL 工作排程機制來執行活動，例如當資料可用時散佈資料至目標、接收來自來源的資料和執行使用者定義的委派。 <xref:System.Threading.Tasks.TaskScheduler> 是一種抽象類別，代表在執行緒上將工作排入佇列的工作排程器。 預設工作排程器 <xref:System.Threading.Tasks.TaskScheduler.Default%2A> 使用 <xref:System.Threading.ThreadPool> 類別將工作排入佇列並執行。 您可以在建構資料流程區塊物件時設定 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> 屬性，來覆寫預設工作排程器。  
   
- 在同一個工作排程器管理多個資料流程區塊時，它可以跨區塊強制執行原則。 例如，如果多個資料流程區塊分別設定為以相同 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 物件的獨佔排程器為目標，則會將所有跨區塊執行的的工作序列化。 同樣地，如果這些區塊設定為以相同 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 物件的並行排程器為目標，且該排程器已設定為具有最大並行層級，則所有來自這些區塊的工作都受限於並行作業的數目。 如需使用 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 類別來使讀取作業以平行方式發生，但使寫入作業僅會針對所有其他作業發生的範例，請參閱[如何：在資料流程區塊中指定工作排程器](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)。 如需 TPL 中工作排程器的詳細資訊，請參閱 <xref:System.Threading.Tasks.TaskScheduler> 類別主題。  
+ 在同一個工作排程器管理多個資料流程區塊時，它可以跨區塊強制執行原則。 例如，如果多個資料流程區塊分別設定為以相同 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 物件的獨佔排程器為目標，則會將所有跨區塊執行的的工作序列化。 同樣地，如果這些區塊設定為以相同 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 物件的並行排程器為目標，且該排程器已設定為具有最大並行層級，則所有來自這些區塊的工作都受限於並行作業的數目。 如需使用 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 類別啟用平行讀取作業，但只在所有其他作業中啟用寫入作業的範例，請參閱[如何：在資料流程區塊中指定工作排程器](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)。 如需 TPL 中工作排程器的詳細資訊，請參閱 <xref:System.Threading.Tasks.TaskScheduler> 類別主題。  
   
 ### <a name="specifying-the-degree-of-parallelism"></a>指定平行處理原則的刻度  
  根據預設，TPL 資料流程程式庫所提供的三個執行區塊類型 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>，一次處理一個訊息。 這些資料流程區塊類型也都會按照接收到訊息的順序處理訊息。 在建構資料流程區塊物件時，要讓這些資料流程區塊同時處理訊息，請設定 <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A?displayProperty=nameWithType> 屬性。  
@@ -241,7 +241,7 @@ ms.locfileid: "45619057"
   
  <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A> 屬性的值對每個資料流程區塊物件是獨佔的。 例如，如果四個資料流程區塊物件每一個都為平行處理原則的最大刻度指定為 1，則全部四個資料流程區塊物件都可以平行執行。  
   
- 如需設定平行處理原則的最大刻度，讓長時間作業平行處理的範例，請參閱[如何：在資料流程區塊中指定平行處理原則刻度](../../../docs/standard/parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md)。  
+ 如需設定平行處理原則的最大刻度，讓長時間作業平行處理的範例，請參閱[如何：在資料流程區塊中指定平行處理原則程度](../../../docs/standard/parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md)。  
   
 ### <a name="specifying-the-number-of-messages-per-task"></a>指定每項工作的訊息數量  
  預先定義的資料流程區塊類型使用工作以處理多個輸入項目。 這有助於減少被要求處理資料的工作物件數目，使得應用程式更有效率地執行。 不過，當來自一組工作資料流程區塊的工作正在處理資料時，來自其他資料流程區塊的工作可能需要將訊息加入佇列來等候處理時間。 若要提升資料流程中工作的公平性，請設定 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.MaxMessagesPerTask%2A> 屬性。 當 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.MaxMessagesPerTask%2A> 設定為 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.Unbounded?displayProperty=nameWithType> (預設) 時，由資料流程區塊所使用的工作會盡可能多地處理訊息。 在 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.MaxMessagesPerTask%2A> 設定為除了 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.Unbounded> 以外的值時，即為資料流程區塊對每個 <xref:System.Threading.Tasks.Task> 物件至多處理的訊息數量。 雖然設定 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.MaxMessagesPerTask%2A> 屬性可能會在工作之間提升公平性，但它可能造成系統建立更多超出所需的工作，反而可能會降低效能。  
@@ -249,14 +249,14 @@ ms.locfileid: "45619057"
 ### <a name="enabling-cancellation"></a>啟用取消  
  TPL 提供一種讓工作以合作方式協調取消的機制。 若要讓資料流程區塊參與此取消機制，請設定 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 屬性。 當此 <xref:System.Threading.CancellationToken> 物件設定為已取消狀態時，所有監視此語彙基元的資料流程區塊會結束執行其目前項目，但不開始處理後續項目。 這些資料流程區塊也會清除任何緩衝訊息，釋放連結給任何來源區塊和目標區塊，並轉換為取消狀態。 除非在處理期間發生例外狀況，不然 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> 屬性將透過轉換到已取消的狀態，將 <xref:System.Threading.Tasks.Task.Status%2A> 屬性設定為 <xref:System.Threading.Tasks.TaskStatus.Canceled>。 在此情況下，<xref:System.Threading.Tasks.Task.Status%2A> 會設定為 <xref:System.Threading.Tasks.TaskStatus.Faulted>。  
   
- 如需示範如何在 Windows Forms 應用程式中使用取消的範例，請參閱[如何：取消資料流程區塊](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md)。 如需 TPL 中取消的詳細資訊，請參閱[工作取消](../../../docs/standard/parallel-programming/task-cancellation.md)。  
+ 若要示範如何在 Windows Forms 應用程式使用取消的範例，請參閱[如何：取消資料流程區塊](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md)。 如需 TPL 中取消的詳細資訊，請參閱[工作取消](../../../docs/standard/parallel-programming/task-cancellation.md)。  
   
 ### <a name="specifying-greedy-versus-non-greedy-behavior"></a>指定窮盡與非窮盡的行為  
  許多群組資料流程區塊類型可以在「窮盡」或「非窮盡」模式中運作。 預先定義的資料流程區塊類型預設會在窮盡模式下運作。  
   
  對於聯結區塊類型 (例如 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>)，窮盡模式表示即使與其相聯結的對應資料尚未可用，區塊會立即接受資料。 非窮盡模式則表示區塊會延後處理所有傳入訊息，直到其中之一在其每個目標上可用於完成聯結。 如果任何延後的訊息皆不再可用，則聯結區塊會釋出所有延後的訊息，並重新啟動此程序。 對於 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 類別，窮盡和非窮盡的行為類似，但是在非窮盡模式下，<xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 物件將所有傳入訊息延後，直到來自不同來源的訊息足夠可用，以完成批次。  
   
- 若要為資料流程區塊指定非窮盡模式，請將 <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> 設為 `False`。 如需示範如何使用非窮盡模式，讓多個聯結區塊更有效率共用資料來源的範例，請參閱[如何：使用 JoinBlock 從多個來源讀取資料](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md)。  
+ 若要為資料流程區塊指定非窮盡模式，請將 <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> 設為 `False`。 如需示範如何使用非窮盡模式，讓多個聯結區塊更有效率地共用資料來源，請參閱[如何：使用 JoinBlock 從多個來源讀取資料](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md)。  
   
  [回到頁首](#top)  
   
@@ -268,18 +268,18 @@ ms.locfileid: "45619057"
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|標題|說明|  
 |-----------|-----------------|  
-|[操作說明：對資料流程區塊寫入訊息和讀取訊息](../../../docs/standard/parallel-programming/how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md)|示範如何寫入訊息至 <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> 物件及讀取該物件中的訊息。|  
-|[操作說明：實作產生者-取用者資料流程模式](../../../docs/standard/parallel-programming/how-to-implement-a-producer-consumer-dataflow-pattern.md)|描述如何使用此資料流程模型以實作生產者-消費者模式，其中生產者傳送訊息至資料流程區塊，而消費者從該區塊讀取訊息。|  
-|[操作說明：在資料流程區塊收到資料時執行動作](../../../docs/standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md)|說明如何提供委派給執行資料流程區塊類型 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>。|  
+|[如何：對資料流程區塊寫入訊息和讀取訊息](../../../docs/standard/parallel-programming/how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md)|示範如何寫入訊息至 <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> 物件及讀取該物件中的訊息。|  
+|[如何：實作產生者/取用者資料流程模式](../../../docs/standard/parallel-programming/how-to-implement-a-producer-consumer-dataflow-pattern.md)|描述如何使用此資料流程模型以實作生產者-消費者模式，其中生產者傳送訊息至資料流程區塊，而消費者從該區塊讀取訊息。|  
+|[如何：在資料流程區塊收到資料時執行動作](../../../docs/standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md)|說明如何提供委派給執行資料流程區塊類型 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>。|  
 |[逐步解說：建立資料流程管線](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md)|描述如何建立可以從網路下載文字並對該文字執行作業的資料流程管線。|  
-|[操作說明：取消連結資料流程區塊](../../../docs/standard/parallel-programming/how-to-unlink-dataflow-blocks.md)|示範如何使用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> 方法，來在來源為目標提供訊息之後，將目標區塊與其來源取消連結。|  
+|[如何：取消連結資料流程區塊](../../../docs/standard/parallel-programming/how-to-unlink-dataflow-blocks.md)|示範如何使用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> 方法，來在來源為目標提供訊息之後，將目標區塊與其來源取消連結。|  
 |[逐步解說：在 Windows Forms 應用程式中使用資料流程](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)|示範如何建立資料流程區塊網路，其可以在 Windows Form 應用程式中執行影像處理。|  
 |[如何：取消資料流程區塊](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md)|示範如何在 Windows Form 應用程式中使用取消。|  
-|[操作說明：使用 JoinBlock 從多個來源讀取資料](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md)|說明如何在資料可取自多重來源時使用 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 類別執行作業，以及如何使用非窮盡模式使得多重聯結區塊可以更有效率地共用資料來源。|  
-|[操作說明：在資料流程區塊中指定平行處理原則刻度](../../../docs/standard/parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md)|描述如何設定 <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A> 屬性使執行資料流程區塊可以同時處理一個以上的訊息。|  
-|[操作說明：在資料流程區塊中指定工作排程器](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)|示範當您在應用程式中使用資料流程時，要如何與特定工作排程器建立關聯。|  
+|[如何：使用 JoinBlock 從多個來源讀取資料](../../../docs/standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md)|說明如何在資料可取自多重來源時使用 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 類別執行作業，以及如何使用非窮盡模式使得多重聯結區塊可以更有效率地共用資料來源。|  
+|[如何：在資料流程區塊中指定平行處理原則程度](../../../docs/standard/parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md)|描述如何設定 <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A> 屬性使執行資料流程區塊可以同時處理一個以上的訊息。|  
+|[如何：在資料流程區塊中指定工作排程器](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)|示範當您在應用程式中使用資料流程時，要如何與特定工作排程器建立關聯。|  
 |[逐步解說：使用 BatchBlock 和 BatchedJoinBlock 以改善效率](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md)|說明如何使用 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 類別來改善資料庫插入作業的效率，以及說明如何使用 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 類別在程式讀取資料庫時擷取結果和發生的任何例外狀況。|  
 |[逐步解說：建立自訂資料流程區塊類型](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md)|示範建立會實作自訂行為的資料流程區塊類型之兩種方式。|  
-|[工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|介紹 TPL，一種在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 應用程式中簡化平行和並行程式設計的程式庫。|
+|[工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|介紹 TPL，這是一種在 .NET Framework 應用程式中簡化平行和並行程式設計的程式庫。|

@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05812d7bdda33f6fa06a6aae7129d1dc73144e37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aadb478b507cdd5d2828a2d224fbca1dc32b21b3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751896"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586457"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>XslTransform 類別實作 XSLT 處理器
 
 > [!NOTE]
 > <xref:System.Xml.Xsl.XslTransform> 類別在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。 如需詳細資訊，請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[從 XslTransform 類別移轉](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。
 
-<xref:System.Xml.Xsl.XslTransform> 類別是可實作 XSL 轉換 (XSLT) 1.0 版建議事項的 XSLT 處理器。 <xref:System.Xml.Xsl.XslTransform.Load%2A> 方法可尋找及讀取樣式表，而 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法則可轉換指定的來源文件。 任何實作 <xref:System.Xml.XPath.IXPathNavigable> 介面的存放區都可用來做為 <xref:System.Xml.Xsl.XslTransform> 的來源文件。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 目前可實作 <xref:System.Xml.XPath.IXPathNavigable>、<xref:System.Xml.XmlDocument> 和 <xref:System.Xml.XmlDataDocument> 上的 <xref:System.Xml.XPath.XPathDocument> 介面，因此它們都可用來做為轉換的輸入來源文件。
+<xref:System.Xml.Xsl.XslTransform> 類別是可實作 XSL 轉換 (XSLT) 1.0 版建議事項的 XSLT 處理器。 <xref:System.Xml.Xsl.XslTransform.Load%2A> 方法可尋找及讀取樣式表，而 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法則可轉換指定的來源文件。 任何實作 <xref:System.Xml.XPath.IXPathNavigable> 介面的存放區都可用來做為 <xref:System.Xml.Xsl.XslTransform> 的來源文件。 .NET Framework 目前實作 <xref:System.Xml.XmlDocument> 上的 <xref:System.Xml.XPath.IXPathNavigable> 介面、<xref:System.Xml.XmlDataDocument>，以及 <xref:System.Xml.XPath.XPathDocument>，因此這些項目都可以用來作為轉換的輸入來源文件。
 
-<xref:System.Xml.Xsl.XslTransform> 中的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件僅支援 XSLT 1.0 規格，此規格是以下列命名空間定義：
+.NET Framework 中的 <xref:System.Xml.Xsl.XslTransform> 物件僅支援 XSLT 1.0 規格，該規格是使用下列的命名空間定義：
 
 ```xml
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
@@ -213,7 +213,7 @@ print_root.xsl
 
 ## <a name="migration-of-xslt-from-net-framework-version-10-to-net-framework-version-11"></a>XSLT 從 .NET Framework 1.0 版到 .NET Framework 1.1 版的轉換
 
-下列表格將針對 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 方法列出已過時的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0 版方法以及新的 <xref:System.Xml.Xsl.XslTransform.Load%2A> 1.1 版方法。 新方法可讓您藉由指定辨識項來限制樣式表的使用權限。
+下表會顯示 <xref:System.Xml.Xsl.XslTransform.Load%2A> 方法已淘汰的 .NET Framework 版本 1.0 方法，以及新的 .NET Framework 版本 1.1 方法。 新方法可讓您藉由指定辨識項來限制樣式表的使用權限。
 
 |.NET Framework 1.0 版過時的 Load 方法|.NET Framework 1.1 版替代的 Load 方法|
 |------------------------------------------------------|---------------------------------------------------------|
@@ -235,7 +235,7 @@ print_root.xsl
 |Void Transform(IXPathNavigable input, XsltArgumentList args, Stream output)|Void Transform(IXPathNavigable input, XsltArgumentList args, Stream output, XmlResolver resolver)|
 |Void Transform(String input, String output);|Void Transform(String input, String output, XmlResolver resolver);|
 
-<xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> 屬性在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.1 版中已過時。 請改用新的 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 多載，它採用的是 <xref:System.Xml.XmlResolver> 物件。
+在 .NET Framework 版本 1.1 中，<xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> 屬性已遭淘汰。 請改用新的 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 多載，它採用的是 <xref:System.Xml.XmlResolver> 物件。
 
 ## <a name="see-also"></a>另請參閱
 

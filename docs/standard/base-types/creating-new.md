@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94ac21dfdf58e8aa1b629604792ad2f0f57c60d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50750b23af9e9cfca79b0f7db9d272e8e24971ab
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659484"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591409"
 ---
 # <a name="creating-new-strings-in-net"></a>在 .NET 中建立新字串
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 允許使用簡單指派來建立字串，並且還可以多載類別建構函式，以支援使用多個不同參數來建立字串。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 也會在 <xref:System.String?displayProperty=nameWithType> 類別中提供數個方法，藉由組合多個字串、字串陣列或物件來建立新的字串物件。  
+.NET Framework 允許使用簡單指派來建立字串，且還可以多載類別建構函式，支援使用多個不同參數來建立字串。 .NET Framework 也在 <xref:System.String?displayProperty=nameWithType> 類別中提供數個方法，藉由合併數個字串、字串陣列或物件來建立新的字串物件。  
   
 ## <a name="creating-strings-using-assignment"></a>使用指派建立字串  
  建立新 <xref:System.String> 物件的最簡單方式，就是將字串常值指派給 <xref:System.String> 物件。  

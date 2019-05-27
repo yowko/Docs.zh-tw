@@ -6,15 +6,15 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: cd0fae0c7d99491f21e5e1fb265e4aabafaa63c4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 2b599906082cabceeb8d97ec737b6fa39fed6825
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59332677"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584405"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ 和泛型類型 (C#)
-[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢是以 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 2.0 版中引進的泛型型別為基礎。 您不需要深入了解泛型，就可以開始撰寫查詢。 不過，您可能需要了解兩個基本概念：  
+[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢是以 .NET Framework 2.0 版中引進的泛型型別為基礎。 您不需要深入了解泛型，就可以開始撰寫查詢。 不過，您可能需要了解兩個基本概念：  
   
 1. 建立泛型集合類別 (例如 <xref:System.Collections.Generic.List%601>) 的執行個體時，請將 "T" 取代為清單中會包含之物件的類型。 例如，字串的清單是以 `List<string>` 表示，而 `Customer` 物件的清單則是以 `List<Customer>` 表示。 泛型清單是強型別，而且優點多於以 <xref:System.Object> 形式儲存項目的集合。 如果您嘗試將 `Customer` 新增至 `List<string>`，則會在編譯時收到錯誤。 由於不需要執行執行階段類型轉換，因此您可以輕鬆使用泛型集合。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "59332677"
  如需泛型的詳細資訊，請參閱[泛型](../../../../csharp/programming-guide/generics/index.md)。  
   
 ## <a name="ienumerablet-variables-in-linq-queries"></a>LINQ 查詢中的 IEnumerable<T\> 變數  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢變數的型別為 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Linq.IQueryable%601> 這類衍生型別。 當您看到類型為 `IEnumerable<Customer>` 的查詢變數時，只表示查詢在執行時會產生由零個以上的 `Customer` 物件所組成的序列。  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢變數的類型為 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Linq.IQueryable%601> 這類衍生類型。 當您看到類型為 `IEnumerable<Customer>` 的查詢變數時，只表示查詢在執行時會產生由零個以上的 `Customer` 物件所組成的序列。  
   
  [!code-csharp[csLINQGettingStarted#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#34)]  
   

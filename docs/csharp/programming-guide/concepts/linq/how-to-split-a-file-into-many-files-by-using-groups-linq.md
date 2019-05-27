@@ -1,15 +1,15 @@
 ---
-title: HOW TO：使用群組將檔案分割成許多檔案 (LINQ) (C#)
+title: 作法：使用群組將檔案分割成許多檔案 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: a78274a51bfec59147d97f88596a6ec60e40a997
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f38cfebae17ea6db9df2445f71852f7f4e6f201f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337366"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584355"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>HOW TO：使用群組將檔案分割成許多檔案 (LINQ) (C#)
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>作法：使用群組將檔案分割成許多檔案 (LINQ) (C#)
 此範例示範如何合併兩個檔案的內容，然後建立一組以新方法組織資料的新檔案。  
   
 ### <a name="to-create-the-data-files"></a>建立資料檔  
@@ -126,7 +126,7 @@ class SplitWithGroups
   
 ## <a name="compiling-the-code"></a>編譯程式碼
 
- 建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。  
+建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。
   
 ## <a name="see-also"></a>另請參閱
 

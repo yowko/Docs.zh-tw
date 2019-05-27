@@ -4,16 +4,16 @@ description: 在此教學課程中，您將了解如何使用 Docker 來將 .NET
 ms.date: 04/10/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: fcbac0e0d17d2481d42e715a7f2790586e31d085
-ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
+ms.openlocfilehash: 2ea9e9bc2614e62fe6ec0d59e39d42c2e32a80a1
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59553832"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051807"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>教學課程：將 .NET Core 應用程式容器化
 
-此教學課程將教您如何建置包含 .NET Core 應用程式的 Docker 映像。 映像可用來為您的本機開發環境、私人雲端，或公用雲端建立容器。
+本教學課程將教您如何建置包含 .NET Core 應用程式的 Docker 映像。 映像可用來為您的本機開發環境、私人雲端，或公用雲端建立容器。
 
 您將了解：
 
@@ -25,7 +25,7 @@ ms.locfileid: "59553832"
 
 您將了解 .NET Core 應用程式的 Docker 容器建置及部署工作。 「Docker 平台」會使用「Docker 引擎」快速建置應用程式，並將其封裝為「Docker 映像」。 這些映像是以 *Dockerfile* 格式所撰寫，可在分層式容器中部署及執行。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 安裝下列先決條件：
 
@@ -410,5 +410,6 @@ docker rmi mcr.microsoft.com/dotnet/core/runtime:2.2
 ## <a name="next-steps"></a>後續步驟
 
 * [嘗試 ASP.NET Core 微服務教學課程。](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro) \(英文\)
-* [檢閱支援容器的 Azure 服務。](https://azure.microsoft.com/en-us/overview/containers/)
+* [檢閱支援容器的 Azure 服務。](https://azure.microsoft.com/overview/containers/)
 * [了解 Dockerfile 命令。](https://docs.docker.com/engine/reference/builder/) \(英文\)
+* [探索 Visual Studio 的容器工具](/visualstudio/containers/overview)

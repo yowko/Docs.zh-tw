@@ -7,22 +7,22 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: 4ef334f6d200e75f29e22a9586f4538309797942
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a852f36c05075365ced8ec39457b15601ca3c3fb
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095980"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877077"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed 陳述式 (C# 參考)
 
-`fixed` 陳述式可防止記憶體回收行程重新配置可移動的變數。 `fixed` 陳述式只能用於[不安全](unsafe.md)的內容中。 `fixed` 也可用來建立[固定大小緩衝區](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)。
+`fixed` 陳述式可防止記憶體回收行程重新配置可移動的變數。 `fixed` 陳述式只能用於[不安全](unsafe.md)的內容中。 您也可以使用 `fixed` 關鍵字來建立[大小固定的緩衝區](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)。
 
 `fixed` 陳述式會將指標設定為 Managed 變數，並在陳述式執行期間「固定」該變數。 可移動之受控變數的指標只適用於 `fixed` 內容。 如果未使用 `fixed` 內容，記憶體回收可能會意外地重新配置變數。 C# 編譯器只能讓您將指標指派給 `fixed` 陳述式中的 Managed 變數。
 
 [!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#1)]
 
-您可以使用陣列、字串、固定大小緩衝區或變數位址，來初始化指標。 下列範例說明如何使用變數位址、陣列和字串。 如需固定大小緩衝區的詳細資訊，請參閱[固定大小緩衝區](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)。
+您可以使用陣列、字串、固定大小緩衝區或變數位址，來初始化指標。 下列範例說明如何使用變數位址、陣列和字串：
 
 [!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
 
@@ -63,7 +63,7 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-在不安全模式中，您可以配置堆疊上的記憶體，這不受限於記憶體回收，因此不需要固定。 如需詳細資訊，請參閱 [stackalloc](stackalloc.md)。
+您可以配置堆疊上的記憶體，此處不受記憶體回收限制，因此不需要釘選。 如需詳細資訊，請參閱 [stackalloc](stackalloc.md)。
 
 [!code-csharp[Initializing multiple pointers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#4)]
 
@@ -74,7 +74,7 @@ fixed (byte* ps = srcarray, pd = dstarray)
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計手冊](../../programming-guide/index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [unsafe](unsafe.md)
+- [Unsafe.DangerousAPI](unsafe.md)
 - [固定大小的緩衝區](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: c949bf5af441728b311391ecb42623951d0145ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 338f4b34a5de84d4ce2eb9e0bd6f4c9ebe360fa4
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608140"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584273"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>匿名函式 (C# 程式設計手冊)
 匿名函式是可用於任何需要委派類型之處的「內嵌」陳述式或運算式。 您可以使用它來初始化具名委派，或改將它傳遞給具名委派類型作為方法參數。  
@@ -27,7 +27,7 @@ ms.locfileid: "64608140"
     >  Lambda 運算式可以繫結至運算式樹狀結構，也可以繫結至委派。  
   
 ## <a name="the-evolution-of-delegates-in-c"></a>C\# 中的委派演進
- 在 C# 1.0 中，您已使用該程式碼中其他地方所定義的方法明確初始化委派，來建立委派執行個體。 C# 2.0 引進匿名方法概念，用來撰寫可在委派引動過程中執行的未命名內嵌陳述式區塊。 C# 3.0 引進 Lambda 運算式，這在概念上與匿名方法類似，但更易懂且更簡潔。 這兩個功能統稱為「匿名函式」。 一般而言，以 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 版和更新版本為目標的應用程式應該使用 Lambda 運算式。  
+ 在 C# 1.0 中，您已使用該程式碼中其他地方所定義的方法明確初始化委派，來建立委派執行個體。 C# 2.0 引進匿名方法概念，用來撰寫可在委派引動過程中執行的未命名內嵌陳述式區塊。 C# 3.0 引進 Lambda 運算式，這在概念上與匿名方法類似，但更易懂且更簡潔。 這兩個功能統稱為「匿名函式」。 一般而言，以 .NET Framework 3.5 版和更新版本為目標的應用程式應該使用 Lambda 運算式。  
   
  下列範例示範從 C# 1.0 到 C# 3.0 的委派建立演進：  
   

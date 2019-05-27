@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e942b3f6f6572c05d42a0267f98e6c876a113616
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.openlocfilehash: 728f360d2e8f93ebdf2b17fec39477b95ed11357
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504336"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063276"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> 與 Span\<T> 使用指導方針
 
@@ -86,7 +86,7 @@ class Program
 
 - `Main` 方法會保留針對 <xref:System.Buffers.IMemoryOwner%601> 執行個體的參考，因此 `Main` 方法是該緩衝區的擁有者。
 
-- `WriteInt32ToBuffer` 和 `DisplayBufferToConsole` 方法會接受 <xref:System.Memory%601> 作為公用 API。 因此，它們是該緩衝區的取用者。 且它們之間一次只有一個會取用緩衝區。
+- `WriteInt32ToBuffer` 和 `DisplayBufferToConsole` 方法接受 <xref:System.Memory%601> 作為公用 API。 因此，它們是該緩衝區的取用者。 且它們之間一次只有一個會取用緩衝區。
 
 雖然 `WriteInt32ToBuffer` 方法的目的是要將值寫入緩衝區，但 `DisplayBufferToConsole` 方法則不會這麼做。 為了反映此情況，它可以接受 <xref:System.ReadOnlyMemory%601>類型的引數。 如需 <xref:System.ReadOnlyMemory%601> 的詳細資訊，請參閱[規則 #2：在緩衝區必須是唯讀的情況下使用 ReadOnlySpan\<T> 或 ReadOnlyMemory\<T>](#rule-2)。
 
@@ -110,13 +110,13 @@ class Program
 
 - 元件可能會和另一個元件同時在緩衝區上運作，並在期間損毀緩衝區中的資料。
 
-- 雖然 <xref:System.Span%601> 的堆疊配置特性能對效能進行最佳化，並使 <xref:System.Span%601> 成為在記憶體區塊上運作的偏好類型，其也會使 <xref:System.Span%601> 具有一些顯著的限制。 請務必了解 <xref:System.Span%601> 和 <xref:System.Memory%601>的個別使用時機。
+- 雖然 <xref:System.Span%601> 的堆疊配置特性能對效能進行最佳化，並使 <xref:System.Span%601> 成為在記憶體區塊上運作的偏好類型，但它也會使 <xref:System.Span%601> 受制於某些顯著限制。 請務必了解 <xref:System.Span%601> 和 <xref:System.Memory%601>的個別使用時機。
 
 下列為針對順利使用 <xref:System.Memory%601> 和其相關類型的建議。 請注意，除非我們明確提及，否則適用於 <xref:System.Memory%601> 和 <xref:System.Span%601> 的指引，同時也會適用於 <xref:System.ReadOnlyMemory%601> 和 <xref:System.ReadOnlySpan%601>。
 
 **規則 #1：針對同步 API，在可能的情況下，請使用 Span\<T> 而非 Memory\<T> 作為參數。**
 
-<xref:System.Span%601> 比起 <xref:System.Memory%601> 更為靈活，且可以代表較廣泛類型的連續記憶體緩衝區。 <xref:System.Span%601> 也能夠提供比 <xref:System.Memory%601>> 更為優異的效能。 最後，雖然 Span\<T> 並無法轉換為 Memory\<T>，您可以使用 <xref:System.Memory%601.Span?displayProperty=nameWithType> 屬性來將 <xref:System.Memory%601> 執行個體轉換為 <xref:System.Span%601>。 因此如果您的呼叫端具有 <xref:System.Memory%601> 執行個體，它們仍然可以搭配 <xref:System.Span%601> 參數來呼叫您的方法。
+<xref:System.Span%601> 比起 <xref:System.Memory%601> 更為靈活，且可以代表較廣泛類型的連續記憶體緩衝區。 <xref:System.Span%601> 也能夠提供比 <xref:System.Memory%601> 更為優異的效能。 最後，雖然 Span\<T> 並無法轉換為 Memory\<T>，您可以使用 <xref:System.Memory%601.Span?displayProperty=nameWithType> 屬性來將 <xref:System.Memory%601> 執行個體轉換為 <xref:System.Span%601>。 因此如果您的呼叫端具有 <xref:System.Memory%601> 執行個體，它們仍然可以搭配 <xref:System.Span%601> 參數來呼叫您的方法。
 
 使用 <xref:System.Span%601> 類型 (而非 <xref:System.Memory%601> 類型) 的參數也可以協助您寫入到正確的使用方法實作。 您將能自動取得編譯時間檢查，以確保您不會嘗試在方法租用以外的時間嘗試存取緩衝區 (將於稍後詳述)。
 
@@ -246,7 +246,7 @@ class Person
 
 **規則 #9：如果您正在包裝同步的 p/invoke 方法，您的 API 應該接受 Span\<T> 作為參數。**
 
-根據規則 #1，<xref:System.Span%601> 通常是應該用於同步 API 的正確類型。 您可以透過 [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) 關鍵字釘選 <xref:System.Span%601>\<T> 執行個體，如下列範例所示。
+根據規則 #1，<xref:System.Span%601> 通常是應該用於同步 API 的正確類型。 您可以透過 [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) 關鍵字釘選 <xref:System.Span%601> 執行個體，如下列範例所示。
 
 ```csharp
 using System.Runtime.InteropServices;

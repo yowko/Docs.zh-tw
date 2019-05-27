@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 9c6f7ae5d7a579abead2a62f8fdc7c63e5c53328
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 8c09ddc5a9db71a4e0bef0434d2fc14a4c088352
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222690"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635556"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>隱含類型區域變數 (C# 程式設計手冊)
 
@@ -45,7 +45,7 @@ ms.locfileid: "54222690"
     using (var file = new StreamReader("C:\\myfile.txt")) {...}
     ```
 
-如需詳細資訊，請參閱[＜How to：在查詢運算式中使用隱含型別區域變數和陣列](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)。
+如需詳細資訊，請參閱[如何：在查詢運算式中使用隱含型別區域變數和陣列](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)。
 
 ## <a name="var-and-anonymous-types"></a>var 和匿名型別
 
@@ -68,6 +68,20 @@ ms.locfileid: "54222690"
 - 無法在相同的陳述式中初始化多個隱含型別變數。
 
 - 如果名為 `var` 的類型在範圍之內，則 `var` 關鍵字會解析成該類型名稱，而且不會視為隱含型別區域變數宣告的一部分。
+
+使用 `var` 關鍵字的隱含類型只能套用至本機方法範圍的變數。 隱含類型不適用於類別欄位，因為 C# 編譯器會在處理程式碼時發生邏輯矛盾：編譯器需要了解欄位的類型，但是它無法在分析指派運算式之前判斷類型，而運算式無法在不了解類型的情況下進行評估。 請考慮下列程式碼：
+
+```csharp
+private var bookTitles;
+```
+
+`bookTitles` 是類型為 `var` 的類別欄位。 因為欄位沒有能評估的運算式，所以編譯器無法推斷 `bookTitles` 的類型為何。 此外，將運算式新增至欄位 (如同你對區域變數進行的操作) 也不足夠：
+
+```csharp
+private var bookTitles = new List<string>();
+```
+
+當編譯器在編譯程式碼期間遇到欄位時，它會記錄每個欄位的類型，再處理任何與其建立關聯的運算式。 編譯器會在嘗試剖析 `bookTitles` 時發生相同的矛盾：它需要了解欄位的類型，但是編譯器通常會透過分析運算式來判斷 `var` 的類型，而這無法在不事先了解類型的情況下進行。
 
 您會發現在難以判斷查詢運算式中查詢變數的確切建構類型時，`var` 也相當有用。 這會在群組與排序作業時發生。
 

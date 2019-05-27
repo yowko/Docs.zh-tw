@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d08056780fe3042983ea021e5a4cd82a14d252a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2411b69dac6ef8945336a4c4e014cbf6687f702a
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113720"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469720"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>封送處理類別、結構和等位
 在 .NET Framework 中，類別和結構相類似。 兩者都可以有欄位、屬性和事件。 也可以有靜態和非靜態方法。 一個值得注意的差異在於結構是實值類型，而類別是參考類型。  
@@ -50,19 +50,19 @@ ms.locfileid: "59113720"
   
  本結構範例會使用下列 Unmanaged 函式，和其原始函式宣告，如下所示：  
   
--   從 PinvokeLib.dll 匯出的 **TestStructInStruct**。  
+- 從 PinvokeLib.dll 匯出的 **TestStructInStruct**。  
   
     ```  
     int TestStructInStruct(MYPERSON2* pPerson2);  
     ```  
   
--   從 PinvokeLib.dll 匯出的 **TestStructInStruct3**。  
+- 從 PinvokeLib.dll 匯出的 **TestStructInStruct3**。  
   
     ```  
     void TestStructInStruct3(MYPERSON3 person3);  
     ```  
   
--   從 PinvokeLib.dll 匯出的 **TestArrayInStruct**。  
+- 從 PinvokeLib.dll 匯出的 **TestArrayInStruct**。  
   
     ```  
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
@@ -98,23 +98,23 @@ typedef struct _MYARRAYSTRUCT
   
  Managed `MyPerson`、`MyPerson2`、`MyPerson3` 和 `MyArrayStruct` 結構的特性如下：  
   
--   `MyPerson` 僅包含字串成員。 當傳遞給 Unmanaged 函式時，[CharSet](specifying-a-character-set.md) 欄位會將字串設定為 ANSI 格式。  
+- `MyPerson` 僅包含字串成員。 當傳遞給 Unmanaged 函式時，[CharSet](specifying-a-character-set.md) 欄位會將字串設定為 ANSI 格式。  
   
--   `MyPerson2` 包含 `MyPerson` 結構的 **IntPtr**。 **IntPtr** 類型會取代原始指標的 Unmanaged 結構，因為 .NET Framework 應用程式不會使用指標，除非將程式碼標示為 **Unsafe**。  
+- `MyPerson2` 包含 `MyPerson` 結構的 **IntPtr**。 **IntPtr** 類型會取代原始指標的 Unmanaged 結構，因為 .NET Framework 應用程式不會使用指標，除非將程式碼標示為 **Unsafe**。  
   
--   `MyPerson3` 包含 `MyPerson` 做為內嵌結構。 藉由將內嵌結構的項目放在主結構中，可扁平化內嵌於其它結構的結構，或者將它留下做為內嵌結構，如本範例所完成的動作。  
+- `MyPerson3` 包含 `MyPerson` 做為內嵌結構。 藉由將內嵌結構的項目放在主結構中，可扁平化內嵌於其它結構的結構，或者將它留下做為內嵌結構，如本範例所完成的動作。  
   
--   `MyArrayStruct` 包含一個整數的陣列。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性會將 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉值設定為 **ByValArray**，用來表示陣列項目數。  
+- `MyArrayStruct` 包含一個整數的陣列。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性會將 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉值設定為 **ByValArray**，用來表示陣列項目數。  
   
  對於本範例的所有結構，套用 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來確定此成員以其顯示的順序循序排列在記憶體中。  
   
  `LibWrap` 類別包含 `TestStructInStruct`、`TestStructInStruct3` 及 `TestArrayInStruct` 方法的 Managed 原型，這些方法由 `App` 類別所呼叫。 每一個原型會宣告單一參數，如下所示：  
   
--   `TestStructInStruct` 宣告一個參考給 `MyPerson2` 類型做為它的參數。  
+- `TestStructInStruct` 宣告一個參考給 `MyPerson2` 類型做為它的參數。  
   
--   `TestStructInStruct3` 宣告 `MyPerson3` 類型做為它的參數，並以傳值方式傳遞參數。  
+- `TestStructInStruct3` 宣告 `MyPerson3` 類型做為它的參數，並以傳值方式傳遞參數。  
   
--   `TestArrayInStruct` 宣告一個參考給 `MyArrayStruct` 類型做為它的參數。  
+- `TestArrayInStruct` 宣告一個參考給 `MyArrayStruct` 類型做為它的參數。  
   
  除非此參數包含 **ref** 關鍵字 (在 Visual Basic 中為 **ByRef**)，否則作為方法引數的結構會以傳值方式傳遞。 例如， `TestStructInStruct` 方法會傳遞對於類型物件 `MyPerson2` 的參考 (位址的值) 給 Unmanaged 程式碼。 若要管理 `MyPerson2` 指向的結構，此範例會建立指定大小的緩衝區，並藉由合併 <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A?displayProperty=nameWithType> 和 <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> 方法，傳回其位址。 接下來，範例會將 Managed 結構的內容複製到 Unmanaged 緩衝區。 最後，此範例會使用 <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A?displayProperty=nameWithType> 方法自 Unmanaged 緩衝區封送處理資料到 Managed 物件，並以 <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A?displayProperty=nameWithType> 方法來釋放 Unmanaged 記憶體區塊。  
   
@@ -133,7 +133,7 @@ typedef struct _MYARRAYSTRUCT
   
  FindFile 範例會使用下列 Unmanaged 函式，和其原始函式宣告，如下所示：  
   
--   從 Kernel32.dll 匯出 **FindFirstFile**。  
+- 從 Kernel32.dll 匯出 **FindFirstFile**。  
   
     ```  
     HANDLE FindFirstFile(LPCTSTR lpFileName, LPWIN32_FIND_DATA lpFindFileData);  
@@ -176,7 +176,7 @@ typedef struct _WIN32_FIND_DATA
   
  Unions 範例會使用下列 Unmanaged 函式，和其原始函式宣告，如下所示：  
   
--   從 PinvokeLib.dll 匯出的 **TestUnion**。  
+- 從 PinvokeLib.dll 匯出的 **TestUnion**。  
   
     ```  
     void TestUnion(MYUNION u, int type);  
@@ -219,7 +219,7 @@ union MYUNION2
   
  SysTime 範例會使用下列 Unmanaged 函式，和其原始函式宣告，如下所示：  
   
--   從 Kernel32.dll 匯出 **GetSystemTime**。  
+- 從 Kernel32.dll 匯出 **GetSystemTime**。  
   
     ```  
     VOID GetSystemTime(LPSYSTEMTIME lpSystemTime);  
@@ -266,17 +266,17 @@ typedef struct _MYSTRSTRUCT2
   
  `MyStruct` 類別包含 ANSI 字元的字串物件。 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 欄位指定 ANSI 格式。 `MyUnsafeStruct` 為包含 <xref:System.IntPtr> 類型的結構，而非字串。  
   
- `LibWrap` 類別包含 `TestOutArrayOfStructs` 多載原型方法。 如果方法宣告指標做為參數，此類別會以 `unsafe` 關鍵字標記。 因為 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 不能使用 Unsafe 程式碼，所以多載的方法、Unsafe 修飾詞和 `MyUnsafeStruct` 結構是不必要的。  
+ `LibWrap` 類別包含 `TestOutArrayOfStructs` 多載原型方法。 如果方法宣告指標做為參數，此類別會以 `unsafe` 關鍵字標記。 因為 Visual Basic 不能使用不安全的程式碼，所以多載的方法、Unsafe 修飾詞和 `MyUnsafeStruct` 結構是不必要的。  
   
  `App` 類別會實作 `UsingMarshaling` 方法，該方法會執行所有用來傳遞陣列的必要工作。 該陣列以 `out` (在 Visual Basic 中為`ByRef`) 關鍵字標記，表示該資料從被呼叫端傳遞至呼叫端。 此實作會使用下列 <xref:System.Runtime.InteropServices.Marshal> 類別方法：  
   
--   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> 從 Unmanaged 緩衝區封送處理資料至 Managed 物件。  
+- <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> 從 Unmanaged 緩衝區封送處理資料至 Managed 物件。  
   
--   <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> 用來釋放在結構中為字串保留的記憶體。  
+- <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> 用來釋放在結構中為字串保留的記憶體。  
   
--   <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> 用來釋放為陣列保留的記憶體。  
+- <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> 用來釋放為陣列保留的記憶體。  
   
- 如先前所述，C# 允許 Unsafe 程式碼，而 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 則否。 在 C# 範例中， `UsingUnsafePointer` 是一種替代的方法實作，會使用指標，而非 <xref:System.Runtime.InteropServices.Marshal> 類別，以傳回包含 `MyUnsafeStruct` 結構的陣列。  
+ 如先前所述，C# 允許不安全的程式碼，而 Visual Basic 則否。 在 C# 範例中， `UsingUnsafePointer` 是一種替代的方法實作，會使用指標，而非 <xref:System.Runtime.InteropServices.Marshal> 類別，以傳回包含 `MyUnsafeStruct` 結構的陣列。  
   
 ### <a name="declaring-prototypes"></a>宣告原型  
  [!code-cpp[Conceptual.Interop.Marshaling#20](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/outarrayofstructs.cpp#20)]

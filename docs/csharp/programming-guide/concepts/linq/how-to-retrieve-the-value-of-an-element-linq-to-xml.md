@@ -1,15 +1,15 @@
 ---
-title: HOW TO：擷取項目的值 (LINQ to XML) (C#)
+title: 作法：擷取項目的值 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 2cf7390dde2d0dc1ea37d2dd28f753e5d7580cd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77743e263a168d89f84661b229be1270e9b46ed6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642603"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584383"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>HOW TO：擷取項目的值 (LINQ to XML) (C#)
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>作法：擷取項目的值 (LINQ to XML) (C#)
 本主題顯示如何取得項目的值。 以下有兩種主要的方式可達成此目標。 其中一種方式為，將 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 轉型為所需的型別。 然後，明確的轉換運算子會將項目或屬性的內容轉換為指定的型別，並將其指派給您的變數。 或者，您可以使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性或 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 屬性。  
   
  不過，使用 C# 時，轉型 (Casting) 通常是較好的方法。 如果您要將項目或屬性轉型為可為 Null 的型別 (Nullable Type)，擷取可能存在或可能不存在之項目 (或屬性) 的值時，較容易撰寫程式碼。 本主題中的最後一個範例會示範這個情況。 不過，您無法像透過 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性般，透過轉型設定項目的內容。  
@@ -67,7 +67,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>範例  
- 即使您不確定項目是否存在，您有時候還是會嘗試擷取項目的值。 在這個情況下，當您將轉換的項目指派給可為 Null 的型別 (`string` 或 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中其中一個可為 Null 的型別) 時，如果項目不存在，被指派的變數只會設定為 `null`。 下列程式碼顯示，項目可能存在或可能不存在時，使用轉型比使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性更為容易。  
+ 即使您不確定項目是否存在，您有時候還是會嘗試擷取項目的值。 在這個情況下，當您將已轉換項目指派給可為 Null 的型別 (`string` 或 .NET Framework 其中一個可為 Null 的型別) 時，如果項目不存在，則被指派的變數只會設定為 `null`。 下列程式碼顯示，項目可能存在或可能不存在時，使用轉型比使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性更為容易。  
   
 ```csharp  
 XElement root = new XElement("Root",  

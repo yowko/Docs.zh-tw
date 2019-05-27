@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ba528f8545f0781f15e4479cbef0b80feeab46d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 246584a34d6a3a8aaf4cac9845e8bb77d1654fa1
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61870665"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052440"
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>MissingRuntimeArtifactException 類別 (.NET Native)
-**僅限 Windows 10 之 Windows 應用程式的 .NET[!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
+**適用於 Windows 10，僅限.NET Native 的 Windows 應用程式的.NET**  
   
  當類型或類型成員的中繼資料可用，但已移除其實作時，會擲回這個例外狀況。  
   
  **命名空間：** System.Reflection  
   
 > [!IMPORTANT]
->  `MissingRuntimeArtifactException` 類別主要僅供　[!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈內部使用。 這主要並非用於協力廠商程式碼中，也不應該在應用程式程式碼中處理此例外狀況。 相反地，請藉由將項目新增至[執行階段指示詞檔案](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)，來消除例外狀況。 如需詳細資訊，請參閱＜備註＞一節。  
+>  `MissingRuntimeArtifactException`類別是僅供內部使用的.NET Native 工具鏈。 這主要並非用於協力廠商程式碼中，也不應該在應用程式程式碼中處理此例外狀況。 相反地，請藉由將項目新增至[執行階段指示詞檔案](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)，來消除例外狀況。 如需詳細資訊，請參閱＜備註＞一節。  
   
 ## <a name="syntax"></a>語法  
  [!code-csharp[ProjectN#22](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missingruntimeartifactexception_syntax1.cs#22)]  
@@ -32,8 +32,8 @@ ms.locfileid: "61870665"
   
 |建構函式|描述|  
 |-----------------|-----------------|  
-|`public MissingRuntimeArtifactException()`|使用系統提供的錯誤說明訊息，初始化 `MissingRuntimeArtifactException` 類別的新執行個體。<br /><br /> 這個建構函式僅供 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈內部使用。|  
-|`public MissingRuntimeArtifactException(String message)`|使用指定的錯誤訊息，初始化 `MissingRuntimeArtifactException` 類別的新執行個體。<br /><br /> 這個建構函式僅供 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈內部使用。|  
+|`public MissingRuntimeArtifactException()`|使用系統提供的錯誤說明訊息，初始化 `MissingRuntimeArtifactException` 類別的新執行個體。<br /><br /> 這個建構函式是.NET Native 工具鏈僅供內部使用。|  
+|`public MissingRuntimeArtifactException(String message)`|使用指定的錯誤訊息，初始化 `MissingRuntimeArtifactException` 類別的新執行個體。<br /><br /> 這個建構函式是.NET Native 工具鏈僅供內部使用。|  
   
 ## <a name="properties"></a>屬性  
   

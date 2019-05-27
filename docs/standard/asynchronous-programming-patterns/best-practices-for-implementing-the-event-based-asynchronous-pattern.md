@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: aea2715211ad03b763aae9cadc32e97d0e06d09e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 26e1fd4231964be5448229a6b3c7d90c0ba64499
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628838"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882507"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>實作事件架構非同步模式的最佳作法
 事件架構非同步模式提供有效率的方式，讓您運用熟悉的事件和委派語意，公開類別中的非同步行為。 若要實作事件架構非同步模式，您需要遵循一些特定的行為需求。 下列各節說明在實作遵循事件架構非同步模式的類別時，所應考量的需求和方針。  
@@ -118,7 +118,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 - 攔截非同步作業中發生的任何例外狀況，並將 <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> 屬性的值設定為該例外狀況。  
   
 ### <a name="threading-and-contexts"></a>執行緒和內容  
- 類別若要正常運作，必須在適當的執行緒上或指定應用程式模型 (包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 和 Windows Form 應用程式) 的內容中，叫用用戶端的事件處理常式。 <xref:System.ComponentModel.AsyncOperation> 和 <xref:System.ComponentModel.AsyncOperationManager> 等兩個重要的 Helper 類別，可用於確保您的非同步類別在任何應用程式模型下皆運作正常。  
+ 類別若要正常運作，必須在適當執行緒上或指定應用程式模型 (包括 ASP.NET 和 Windows Forms 應用程式) 的內容中，叫用用戶端的事件處理常式。 <xref:System.ComponentModel.AsyncOperation> 和 <xref:System.ComponentModel.AsyncOperationManager> 等兩個重要的 Helper 類別，可用於確保您的非同步類別在任何應用程式模型下皆運作正常。  
   
  <xref:System.ComponentModel.AsyncOperationManager> 提供一個方法 <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>，此方法會傳回 <xref:System.ComponentModel.AsyncOperation>。 您的 <em>MethodName</em>**Async** 方法會呼叫 <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>，而您的類別會使用傳回的 <xref:System.ComponentModel.AsyncOperation> 來追蹤非同步工作的存留期。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f77058ac0cb87d0316395bce1dfb11401a2ce806
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f62fbe13b42202a2eaca212236ee5fd9aa4df05
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921780"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053143"
 ---
 # <a name="wpf-community-feedback"></a>WPF 社群意見回應
 
@@ -24,7 +24,7 @@ Microsoft 會公開各種社群資源供您深入了解、 討論及在 Windows 
 
 ## <a name="forums"></a>論壇
 
-[WPF 論壇](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=wpf)是討論與解決問題的主要社群資源。 論壇提供了一組完整的支援功能以進行討論及解決問題，包括：
+[WPF 論壇](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wpf)是討論與解決問題的主要社群資源。 論壇提供了一組完整的支援功能以進行討論及解決問題，包括：
 
 - 搜尋。
 - 討論追蹤。

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 014af254d299d357c22a898357a533d650715500
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ea993880d68ab13eab8dfb4cf5e1d172025c6186
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650520"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052579"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>評估使用 .NET Native 的啟動改善
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] 可大幅改善應用程式的啟動時間。 在可攜式、低電源的裝置上，以及用於複雜的應用程式時，這項改良功能尤其明顯。 本主題將協助您著手進行測量這項啟動改良功能所需的基本檢測。  
+.NET 原生大幅改善應用程式的啟動時間。 在可攜式、低電源的裝置上，以及用於複雜的應用程式時，這項改良功能尤其明顯。 本主題將協助您著手進行測量這項啟動改良功能所需的基本檢測。  
   
  為加速效能調查，.NET Framework 和 Windows 使用一個名為 Windows 事件追蹤 (ETW) 的事件架構，可讓您的應用程式在事件發生時通知工具。 然後您可以使用名為 PerfView 的工具，輕鬆檢視及分析 ETW 事件。 本主題將說明如何：  
   
@@ -95,7 +95,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  選取左窗格中列出的所有事件 (Ctrl-A)，然後選擇 **Enter** 鍵。 現在，您應該可以看到每個事件的時間戳記。 這些時間戳記相對於追蹤的開始，所以您必須處理序的開始時間減去每個事件的時間，以識別自啟動後所耗用的時間。 如果您使用 Ctrl+按一下的方式來選取兩個時間戳記，您會看到其之間的差異顯示在頁面底部的狀態列中。 這樣可以讓您很容易在顯示器中查看任何兩個事件之間的經歷時間 (包括處理開始)。 您可以開啟檢視的快顯功能表，並從一些有用的選項中選取，像是匯出至 CSV 檔案，或是開啟 Microsoft Excel 來儲存或處理資料。  
   
- 針對您原始的應用程式以及使用 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈來建置的版本重複此程序，就可以比較出效能的差異。   [!INCLUDE[net_native](../../../includes/net-native-md.md)] 應用程式的啟動速度通常會比非 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 應用程式快。 如果您有挖掘更深入的資料，PerfView 也可以識別出程式碼中最耗時間的部分。 如需詳細資訊，請觀看 [PerfView 教學課程](https://channel9.msdn.com/Series/PerfView-Tutorial)或閱讀 [Vance Morrison 的部落格文章](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx)。  
+ 您使用.NET Native 工具鏈所建置的版本和原始的應用程式重複此程序，您可以比較效能的差異。   .NET 原生應用程式通常比非-.NET 原生應用程式更快啟動。 如果您有挖掘更深入的資料，PerfView 也可以識別出程式碼中最耗時間的部分。 如需詳細資訊，請觀看 [PerfView 教學課程](https://channel9.msdn.com/Series/PerfView-Tutorial)或閱讀 [Vance Morrison 的部落格文章](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx)。  
   
 ## <a name="see-also"></a>另請參閱
 

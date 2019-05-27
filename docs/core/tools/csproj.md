@@ -2,12 +2,12 @@
 title: 適用於 .NET Core 之 csproj 格式的新增項目
 description: 深入了解現有和 .NET Core csproj 檔案之間的差異
 ms.date: 04/08/2019
-ms.openlocfilehash: 89f0bbab1f9887295a68ffc6434340f1c6f10d5d
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 9c1f084af68010632cbe595858b2f242d37af598
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611090"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631809"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -125,11 +125,13 @@ ms.locfileid: "59611090"
 
 ### <a name="sdk-attribute"></a>Sdk 屬性
 
-*.csproj* 檔案的根 `<Project>` 元素有一個新屬性，稱為 `Sdk`。 `Sdk` 會指定專案將使用的 SDK。 如[分層文件](cli-msbuild-architecture.md)所述，SDK 是可建置 .NET Core 程式碼的一組 MSBuild [工作](/visualstudio/msbuild/msbuild-tasks)和[目標](/visualstudio/msbuild/msbuild-targets)。 我們隨 .NET Core 工具提供三個主要 SDK：
+*.csproj* 檔案的根 `<Project>` 元素有一個新屬性，稱為 `Sdk`。 `Sdk` 會指定專案將使用的 SDK。 如[分層文件](cli-msbuild-architecture.md)所述，SDK 是可建置 .NET Core 程式碼的一組 MSBuild [工作](/visualstudio/msbuild/msbuild-tasks)和[目標](/visualstudio/msbuild/msbuild-targets)。 使用.NET Core 3.0 Preview 時，隨附 .NET Core 工具的三個主要 SDK 和其他兩個 SDK：
 
 1. 識別碼為 `Microsoft.NET.Sdk` 的 .NET Core SDK
 2. 識別碼為 `Microsoft.NET.Sdk.Web` 的 .NET Core Web SDK
 3. 識別碼為 `Microsoft.NET.Sdk.Razor` 的 .NET Core Razor 類別庫 SDK
+4. .NET Core 的背景工作服務識別碼為 `Microsoft.NET.Sdk.Worker` (.NET Core 3.0 Preview)
+5. .NET Core WinForms 和 WPF 的識別碼為 `Microsoft.NET.Sdk.WindowsDesktop` (.NET Core 3.0 Preview)
 
 您必須在 `<Project>` 項目中將 `Sdk` 屬性設定為上述其中一個識別碼，才能使用 .NET Core 工具並建置您的程式碼。
 

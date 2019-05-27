@@ -3,14 +3,14 @@ title: .NET API 分析器
 description: 了解「.NET API 分析器」如何協助偵測已被取代的 API 及平台相容性問題。
 author: oliag
 ms.author: mairaw
-ms.date: 05/31/2018
+ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 84dd0717725f3538f9c9b2e3b5573f1385e549ac
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 892fb5cc9fba3434b0884c88b97f784d58093303
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680265"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063341"
 ---
 # <a name="net-api-analyzer"></a>.NET API 分析器
 
@@ -21,9 +21,9 @@ ms.locfileid: "57680265"
 > [!NOTE]
 > .NET API 分析器目前仍然是發行前版本。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
-* Visual Studio 2017 或 Visual Studio for Mac (所有版本)。
+* Visual Studio 2017 及更新版本，或 Visual Studio for Mac (所有版本)。
 
 ## <a name="discovering-deprecated-apis"></a>探索已被取代的 API
 
@@ -98,6 +98,7 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 * 使用擲回 <xref:System.PlatformNotSupportedException> 的 .NET Standard API (PC001)。
 * 使用 .NET Framework 4.6.1 上未提供的.NET Standard API (PC002)。
 * 使用 UWP 中所沒有的原生 API (PC003)。
+* Delegate.BeginInvoke 及 EndInvoke API 的使用方式 (PC004)。
 * 使用標示為已被取代的 API (DEXXXX)。
 
 ## <a name="ci-machine"></a>CI 電腦

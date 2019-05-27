@@ -2,12 +2,12 @@
 title: dotnet list package 命令
 description: "'dotnet list package' 命令提供一個便利選項，可列出適用於專案或解決方案的套件參考。"
 ms.date: 04/09/2019
-ms.openlocfilehash: bc38b94201f85ed4b22e11722ef5cabcb6fbf040
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 88ef3302a955eadc4167384312e4eb721dd496fb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481570"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631756"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 

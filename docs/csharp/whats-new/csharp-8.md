@@ -1,37 +1,89 @@
 ---
 title: C# 8.0 的新功能 - C# 指南
-description: 大致了解 C# 8.0 中可用的新功能。 本文為適用於預覽 2 的最新資訊。
+description: 大致了解 C# 8.0 中可用的新功能。 此文章為適用於預覽 5 的最新資訊。
 ms.date: 02/12/2019
-ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: dd4aca99a19134ed3ffff859c9c9554d4d480816
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427275"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557140"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
-有許多 C# 語言的增強功能，您已經可透過預覽 2 來試用。 在預覽 2 中新增的功能為：
+您已經可以試用許多 C# 語言的增強功能。 
 
+- [唯讀成員](#readonly-members)
+- [預設介面成員](#default-interface-members)
 - [模式比對增強功能](#more-patterns-in-more-places)：
-  * [switch 運算式](#switch-expressions)
+  * [Switch 運算式](#switch-expressions)
   * [屬性模式](#property-patterns)
   * [Tuple 模式](#tuple-patterns)
   * [位置模式](#positional-patterns)
-- [using 宣告](#using-declarations)
+- [Using 宣告](#using-declarations)
 - [靜態區域函式](#static-local-functions)
 - [可處置的 ref struct](#disposable-ref-structs)
-
-下列語言功能首次出現於 C# 8.0 預覽 1 中：
-
-- [可為 Null 的參考型別](#nullable-reference-types)
+- [可為 Null 的參考類型](#nullable-reference-types)
 - [非同步資料流](#asynchronous-streams)
 - [索引和範圍](#indices-and-ranges)
 
 > [!NOTE]
-> 本文內容為 C# 8.0 預覽 2 的最新更新。
+> 此文章內容為 C# 8.0 預覽 5 的最新更新。
 
 本文的其餘部分會簡短說明這些功能。 提供教學課程及概觀的連結，其中包含深入詳盡的文章。
+
+## <a name="readonly-members"></a>唯讀成員
+
+您可以套用 `readonly` 修飾詞到結構的任何成員。 它指出成員不會修改狀態。 它比套用 `readonly` 修飾詞到 `struct` 宣告更為精細。  假設您有下列可變動結構：
+
+```csharp
+public struct Point
+{
+    public double X { get; set; }
+    public double Y { get; set; }
+    public double Distance => Math.Sqrt(X * X + Y * Y);
+
+    public override string ToString() =>
+        $"({X}, {Y}) is {Distance} from the origin";
+}
+```
+
+就像大部分的結構一樣，`ToString()` 方法不會修改狀態。 您可以透過新增 `readonly` 修飾詞到 `ToString()` 的宣告來指出此情況：
+
+```csharp
+public readonly override string ToString() =>
+    $"({X}, {Y}) is {Distance} from the origin";
+```
+
+上述變更會產生編譯器警告，因為 `ToString` 會存取 `Distance` 屬性，但此屬性未標示為 `readonly`：
+
+```console
+warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
+```
+
+當它需要建立防禦性複本時，編譯器會警告您。  `Distance` 屬性不會變更狀態，因此您可以透過新增 `readonly` 修飾詞到宣告以修正此警告：
+
+```csharp
+public readonly double Distance => Math.Sqrt(X * X + Y * Y);
+```
+
+請注意，`readonly` 修飾詞在唯讀屬性上是必要的。 編譯器不會假設 `get` 存取子不會修改狀態；您必須明確地宣告 `readonly`。 編譯器會強制 `readonly` 成員不得修改狀態的規則。 除非您移除 `readonly` 修飾詞，否則下列方法將不會編譯：
+
+```csharp
+public readonly void Translate(int xOffset, int yOffset)
+{
+    X += xOffset;
+    Y += yOffset;
+}
+```
+
+此功能可讓您指定您的設計意圖，以便編譯器可以強制套用，並根據該意圖進行最佳化。
+
+## <a name="default-interface-members"></a>預設介面成員
+
+您現在可以新增成員到介面並提供那些成員的實作。 此語言功能可讓 API 作者在較新的版本中新增方法到介面中，而不會因為該介面的現有實作造成原始程式碼或二進位檔案相容性受影響。 現有實作會「繼承」預設實作。 此功能也會讓 C# 與以 Android 或 Swift 為目標的 API 相互操作，這些 API 支援類似的功能。 預設介面成員也會啟用類似「特徵」語言功能的案例。
+
+預設介面成員會影響許多案例與語言元素。 我們的第一個教學課程涵蓋[使用預設實作更新介面](../tutorials/default-interface-members-versions.md)。 其他教學課程與參考更新即將在正式發行時推出。
 
 ## <a name="more-patterns-in-more-places"></a>在更多位置使用更多的模式
 
@@ -321,9 +373,15 @@ await foreach (var number in GenerateSequence())
 
 範圍及索引可提供用來指定陣列中子範圍的簡潔語法，<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601>。
 
-您可**從結尾**指定索引。 您可使用 `^` 運算子指定**從結尾**。 您已熟悉 `array[2]` 表示「從開頭起算 2 個」元素。 現在，`array[^2]` 表示「從結尾起算 2 個」元素。 索引 `^0` 表示「結尾」，或最後一個元素後接續的索引。
+此語言支援仰賴兩個新的型別與兩個新的運算子。
+- <xref:System.Index?displayProperty=nameWithType> 代表序列的索引。
+- `^` 運算子，它會指定索引相對於序列結尾。
+- <xref:System.Range?displayProperty=nameWithType> 代表序列的子範圍。
+- Range 運算子 (`..`)，它會指定範圍的開頭與結尾作為其運算子。
 
-您可使用**範圍運算子**指定**範圍**：`..`。 例如，`0..^0` 會指定陣列的整個範圍：從開頭起算由 0 開始，從結尾起算則不包含 0。 運算元各可以使用「從開頭」或「從結尾」。 此外，也可省略各運算元。 預設是開始索引為 `0`，結尾索引為 `^0`。
+讓我們從索引的規則開始。 假設有一個陣列 `sequence`。 `0` 索引與 `sequence[0]` 相同。 `^0` 索引與 `sequence[sequence.Length]` 相同。 請注意，`sequence[^0]` 會擲回例外狀況，就樣 `sequence[sequence.Length]` 會這樣做一樣。 針對任何數字 `n`，索引 `^n` 與 `sequence.Length - n` 相同。
+
+指定範圍「開頭」與「結尾」的範圍。 範圍具有排除性，這表示「結尾」不包含在範圍內。 範圍 `[0..^0]` 代整個範圍，就像 `[0..sequence.Length]` 代表整個範圍一樣。 
 
 讓我們來看以下幾個範例。 試想下列使用其索引從開頭或從結尾標註的陣列：
 
@@ -340,10 +398,8 @@ var words = new string[]
     "the",      // 6                   ^3
     "lazy",     // 7                   ^2
     "dog"       // 8                   ^1
-};
+};              // 9 (or words.Length) ^0
 ```
-
-各元素的索引會強調「從開頭」及「從結尾」的概念，而且該範圍專屬於範圍的結尾。 整個陣列的「開頭」是第一個元素。 整個陣列的「結尾」則「結束在」最後一個元素。
 
 您可使用 `^1` 索引擷取最後一個字組：
 
@@ -383,3 +439,5 @@ Range phrase = 1..4;
 ```csharp
 var text = words[phrase];
 ```
+
+您可以在[索引及範圍](../tutorials/ranges-indexes.md)上的教學課程中探索更多關於索引及範圍的資訊。

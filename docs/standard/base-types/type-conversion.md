@@ -26,37 +26,37 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04ed4dcaab8d39d8a34cadef8285ea8307f198c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 519b92cd24d75dd8e98fc28dbce3701c521a041d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659757"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593514"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework 中的類型轉換
 <a name="top"></a>每個值都有相關聯的類型，該類型定義屬性，例如配置給值的空間量、能夠擁有的可能值範圍，以及提供的成員。 許多值都可以表示成多種類型。 例如，數值 4 就可以表示成整數值或浮點 (Floating-Point) 值。 類型轉換會建立新類型的值，與舊類型的值相等，但是不一定會保留原始物件的識別 (或實際的值)。  
   
  .NET Framework 自動支援下列轉換︰  
   
--   從衍生類別轉換成基底類別。 舉例來說，這表示任何類別或結構的執行個體都可以轉換成 <xref:System.Object> 執行個體。  這種轉換不需要轉型或轉換運算子。  
+- 從衍生類別轉換成基底類別。 舉例來說，這表示任何類別或結構的執行個體都可以轉換成 <xref:System.Object> 執行個體。  這種轉換不需要轉型或轉換運算子。  
   
--   從基底類別轉換回原始的衍生類別。 在 C# 中，這種轉換需要轉型運算子。 在 Visual Basic 中，如果已 `Option Strict` 開啟則需要 `CType` 運算子。  
+- 從基底類別轉換回原始的衍生類別。 在 C# 中，這種轉換需要轉型運算子。 在 Visual Basic 中，如果已 `Option Strict` 開啟則需要 `CType` 運算子。  
   
--   從實作介面的類型轉換成代表該介面的介面物件。 這種轉換不需要轉型或轉換運算子。  
+- 從實作介面的類型轉換成代表該介面的介面物件。 這種轉換不需要轉型或轉換運算子。  
   
--   從介面物件轉換回實作該介面的原始類型。  在 C# 中，這種轉換需要轉型運算子。 在 Visual Basic 中，如果已 `Option Strict` 開啟則需要 `CType` 運算子。  
+- 從介面物件轉換回實作該介面的原始類型。  在 C# 中，這種轉換需要轉型運算子。 在 Visual Basic 中，如果已 `Option Strict` 開啟則需要 `CType` 運算子。  
   
- 除了這些自動轉換以外，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 還提供多項支援自訂類型轉換的功能。 這些需求包括下列各項：  
+ 除了這些自動轉換以外，.NET Framework 還提供多個支援自訂類型轉換的功能。 這些需求包括下列各項：  
   
--   `Implicit` 運算子，這個運算子定義類型之間可用的擴展轉換。 如需詳細資訊，請參閱[使用 Implicit 運算子的隱含轉換](#implicit_conversion_with_the_implicit_operator)一節。  
+- `Implicit` 運算子，這個運算子定義類型之間可用的擴展轉換。 如需詳細資訊，請參閱[使用 Implicit 運算子的隱含轉換](#implicit_conversion_with_the_implicit_operator)一節。  
   
--   `Explicit` 運算子，這個運算子定義類型之間可用的縮小轉換。 如需詳細資訊，請參閱[使用 Explicit 運算子的明確轉換](#explicit_conversion_with_the_explicit_operator)一節。  
+- `Explicit` 運算子，這個運算子定義類型之間可用的縮小轉換。 如需詳細資訊，請參閱[使用 Explicit 運算子的明確轉換](#explicit_conversion_with_the_explicit_operator)一節。  
   
--   <xref:System.IConvertible> 介面，這個介面定義轉換至每一個基底 .NET Framework 資料類型的方式。 如需詳細資訊，請參閱 [IConvertible 介面](#the_iconvertible_interface)一節。  
+- <xref:System.IConvertible> 介面，這個介面定義轉換至每一個基底 .NET Framework 資料類型的方式。 如需詳細資訊，請參閱 [IConvertible 介面](#the_iconvertible_interface)一節。  
   
--   <xref:System.Convert> 類別，這個類別提供一組方法，這些方法實作 <xref:System.IConvertible> 介面中的方法。 如需詳細資訊，請參閱 [Convert 類別](#Convert)一節。  
+- <xref:System.Convert> 類別，這個類別提供一組方法，這些方法實作 <xref:System.IConvertible> 介面中的方法。 如需詳細資訊，請參閱 [Convert 類別](#Convert)一節。  
   
--   <xref:System.ComponentModel.TypeConverter> 類別，這個類別是基底類別，可以擴充來支援從指定的類型轉換至其他任何類型。 如需詳細資訊，請參閱 [TypeConverter 類別](#the_typeconverter_class)一節。  
+- <xref:System.ComponentModel.TypeConverter> 類別，這個類別是基底類別，可以擴充來支援從指定的類型轉換至其他任何類型。 如需詳細資訊，請參閱 [TypeConverter 類別](#the_typeconverter_class)一節。  
   
 <a name="implicit_conversion_with_the_implicit_operator"></a>   
 ## <a name="implicit-conversion-with-the-implicit-operator"></a>使用隱含運算子的隱含轉換  
@@ -97,7 +97,7 @@ ms.locfileid: "54659757"
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> 大於 <xref:System.Int32.MaxValue?displayProperty=nameWithType>。|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> 大於 <xref:System.Int32.MaxValue?displayProperty=nameWithType>。|  
   
- 為了處理縮小轉換，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 允許類型定義 `Explicit` 運算子。 然後，個別語言編譯器就可以使用自己的語法來實作這個運算子，也可以呼叫 <xref:System.Convert> 類別的成員來執行轉換。 (如需 <xref:System.Convert> 類別的詳細資訊，請參閱本主題稍後的 [Convert 類別](#Convert))。下列範例說明如何使用語言功能，處理從這些可能超出範圍的整數值至 <xref:System.Int32> 值的明確轉換。  
+ 為了處理縮小轉換，.NET Framework 允許類型定義 `Explicit` 運算子。 然後，個別語言編譯器就可以使用自己的語法來實作這個運算子，也可以呼叫 <xref:System.Convert> 類別的成員來執行轉換。 (如需 <xref:System.Convert> 類別的詳細資訊，請參閱本主題稍後的 [Convert 類別](#Convert)。)下列範例說明如何使用語言功能，處理從這些可能超出範圍之整數值至 <xref:System.Int32> 值的明確轉換。  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -127,13 +127,13 @@ ms.locfileid: "54659757"
   
 <a name="the_iconvertible_interface"></a>   
 ## <a name="the-iconvertible-interface"></a>IConvertible 介面  
- 為了支援從任何類型轉換至通用語言執行平台基底類型，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供 <xref:System.IConvertible> 介面。 實作類型需要提供下列項目：  
+ 為了支援從任何類型轉換至通用語言執行平台基底類型，.NET Framework 提供 <xref:System.IConvertible> 介面。 實作類型需要提供下列項目：  
   
--   傳回實作類型之 <xref:System.TypeCode> 的方法。  
+- 傳回實作類型之 <xref:System.TypeCode> 的方法。  
   
--   將實作類型轉換為每一個通用語言執行平台基底類型 (<xref:System.Boolean>、<xref:System.Byte>、<xref:System.DateTime>、<xref:System.Decimal>、<xref:System.Double> 等) 的方法。  
+- 將實作類型轉換為每一個通用語言執行平台基底類型 (<xref:System.Boolean>、<xref:System.Byte>、<xref:System.DateTime>、<xref:System.Decimal>、<xref:System.Double> 等) 的方法。  
   
--   將實作類型的執行個體轉換為另一個指定之類型的通用轉換方法。 不支援的轉換應該擲回 <xref:System.InvalidCastException>。  
+- 將實作類型的執行個體轉換為另一個指定之類型的通用轉換方法。 不支援的轉換應該擲回 <xref:System.InvalidCastException>。  
   
  每一個通用語言執行平台基底類型 (也就是 <xref:System.Boolean>、<xref:System.Byte>、<xref:System.Char>、<xref:System.DateTime>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.String>、<xref:System.UInt16>、<xref:System.UInt32> 和 <xref:System.UInt64>)，以及 <xref:System.DBNull> 和 <xref:System.Enum> 類型，都實作 <xref:System.IConvertible> 介面。 不過，這些都是明確的介面實作，且只能透過 <xref:System.IConvertible> 介面變數來呼叫轉換方法，如下列範例所示。 這個範例將 <xref:System.Int32> 值轉換為其對等的 <xref:System.Char> 值。  
   
@@ -143,9 +143,9 @@ ms.locfileid: "54659757"
  由於必須呼叫其介面上的轉換方法，而不是呼叫實作類型上的轉換方法，這種需求使得明確介面實作相當耗費資源。 相反地，在通用語言執行平台基底類型之間轉換時，我們建議您呼叫 <xref:System.Convert> 類別的適當成員。 如需詳細資訊，請參閱下一節 [Convert 類別](#Convert)。  
   
 > [!NOTE]
->  除了 <xref:System.IConvertible> 提供的 <xref:System.Convert> 介面和 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 類別之外，個別語言可能還會提供執行轉換的方式。 例如，C# 使用轉型 (Casting) 運算子、Visual Basic 使用編譯器實作的轉換函式，例如 `CType`、`CInt` 和 `DirectCast`。  
+>  除了 .NET Framework 提供的 <xref:System.IConvertible> 介面和 <xref:System.Convert> 類別之外，個別語言可能還會提供執行轉換的方式。 例如，C# 使用轉型 (Casting) 運算子、Visual Basic 使用編譯器實作的轉換函式，例如 `CType`、`CInt` 和 `DirectCast`。  
   
- 在大多數情況下，<xref:System.IConvertible> 介面的設計主要是支援在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的各基底類型之間轉換。 不過，也可以使用自訂類型來實作介面，以支援從該類型轉換至其他自訂類型。 如需詳細資訊，請參閱本主題稍後的[使用 ChangeType 方法的自訂轉換](#ChangeType)一節。  
+ 在大多數情況下，<xref:System.IConvertible> 介面的設計主要是支援在 .NET Framework 中的各基底類型之間轉換。 不過，也可以使用自訂類型來實作介面，以支援從該類型轉換至其他自訂類型。 如需詳細資訊，請參閱本主題稍後的[使用 ChangeType 方法的自訂轉換](#ChangeType)一節。  
   
  [回到頁首](#top)  
   

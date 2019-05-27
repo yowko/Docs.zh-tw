@@ -2,12 +2,12 @@
 title: 逐步解說：使用 Async 和 Await 存取 Web (C#)
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: eac19135c2506fdd324a2f425c23548690189ed9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 1057bdf02d20b0f685e6bd319929188ffd07c726
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306725"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052185"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>逐步解說：使用 Async 和 Await 存取 Web (C#)
 
@@ -46,19 +46,19 @@ ms.locfileid: "59306725"
 
 4. 反白顯示 **TextBox** 控制項，並在 [屬性] 視窗中，設定下列值：
 
-    -   將 [名稱] 屬性設定為 `resultsTextBox`。
+    - 將 [名稱] 屬性設定為 `resultsTextBox`。
 
-    -   將 [高度] 屬性設為 250。
+    - 將 [高度] 屬性設為 250。
 
-    -   將 [寬度] 屬性設為 500。
+    - 將 [寬度] 屬性設為 500。
 
-    -   在 [文字] 索引標籤上，指定等寬字型，例如 Lucida Console 或全域等寬。
+    - 在 [文字] 索引標籤上，指定等寬字型，例如 Lucida Console 或全域等寬。
 
 5. 反白顯示 **Button** 控制項，並在 [屬性] 視窗中，設定下列值：
 
-    -   將 [名稱] 屬性設定為 `startButton`。
+    - 將 [名稱] 屬性設定為 `startButton`。
 
-    -   將 [內容] 屬性的值從 **Button** 變更為 **Start**。
+    - 將 [內容] 屬性的值從 **Button** 變更為 **Start**。
 
 6. 放置文字方塊和按鈕，使兩者都出現在 [MainWindow] 視窗中。
 
@@ -108,13 +108,13 @@ ms.locfileid: "59306725"
 
 3. 同步方案的程式碼包含下列四種方法：
 
-    -   `SumPageSizes`，會從 `SetUpURLList` 取得網頁 URL 的清單，然後呼叫 `GetURLContents` 和 `DisplayResults` 以處理每個 URL。
+    - `SumPageSizes`，會從 `SetUpURLList` 取得網頁 URL 的清單，然後呼叫 `GetURLContents` 和 `DisplayResults` 以處理每個 URL。
 
-    -   `SetUpURLList`，會製作並傳回網址清單。
+    - `SetUpURLList`，會製作並傳回網址清單。
 
-    -   `GetURLContents`，會下載每個網站的內容，並傳回內容做為位元組陣列。
+    - `GetURLContents`，會下載每個網站的內容，並傳回內容做為位元組陣列。
 
-    -   `DisplayResults`，會顯示每個 URL 的位元組陣列中的位元組數目。
+    - `DisplayResults`，會顯示每個 URL 的位元組陣列中的位元組數目。
 
     複製下列四種方法，然後貼在 MainWindow.xaml.cs 的 `startButton_Click` 事件處理常式下方：
 
@@ -258,9 +258,9 @@ Control returned to startButton_Click.
 
 3. 由於您在上一個步驟中加入 `await` 運算子，所以發生編譯器錯誤。 此運算子只能用於以 [async](../../../../csharp/language-reference/keywords/async.md) 修飾詞標示的方法。 當您重複轉換步驟以將對 `CopyTo` 的呼叫取代為對 `CopyToAsync` 的呼叫時，略過錯誤。
 
-    -   變更方法的名稱，該方法會呼叫 <xref:System.IO.Stream.CopyToAsync%2A>。
+    - 變更方法的名稱，該方法會呼叫 <xref:System.IO.Stream.CopyToAsync%2A>。
 
-    -   `CopyTo` 或 `CopyToAsync` 方法會將位元組複製到其引數，`content`，並不會傳回有意義的值。 在同步版本中，呼叫 `CopyTo` 是簡單的陳述式，不會傳回值。 非同步版本，`CopyToAsync`，傳回 <xref:System.Threading.Tasks.Task>。 工作函式，例如 "Task(void)"，讓方法等候。 將 `Await` 或 `await` 套用至對 `CopyToAsync` 的呼叫，如下列程式碼所示。
+    - `CopyTo` 或 `CopyToAsync` 方法會將位元組複製到其引數，`content`，並不會傳回有意義的值。 在同步版本中，呼叫 `CopyTo` 是簡單的陳述式，不會傳回值。 非同步版本，`CopyToAsync`，傳回 <xref:System.Threading.Tasks.Task>。 工作函式，例如 "Task(void)"，讓方法等候。 將 `Await` 或 `await` 套用至對 `CopyToAsync` 的呼叫，如下列程式碼所示。
 
         ```csharp
         await responseStream.CopyToAsync(content);
@@ -289,9 +289,9 @@ Control returned to startButton_Click.
 
      方法 `GetURLContents` 有 return 陳述式，陳述式會傳回位元組陣列。 因此，非同步版本的傳回類型是 Task(T)，其中 T 是位元組陣列。 在方法簽章中進行下列變更：
 
-    -   將傳回型別變更為 `Task<byte[]>`。
+    - 將傳回型別變更為 `Task<byte[]>`。
 
-    -   依照慣例，非同步方法的名稱會以 "Async" 結尾，所以重新命名方法 `GetURLContentsAsync`。
+    - 依照慣例，非同步方法的名稱會以 "Async" 結尾，所以重新命名方法 `GetURLContentsAsync`。
 
      下列程式碼會顯示這些變更。
 
@@ -305,9 +305,9 @@ Control returned to startButton_Click.
 
 1. 針對 `SumPageSizes` 重複上述程序的步驟。 首先，將對 `GetURLContents` 的呼叫變更為非同步呼叫。
 
-    -   如果您尚未這麼做，請變更方法的名稱，該方法是從 `GetURLContents` 呼叫至 `GetURLContentsAsync`。
+    - 如果您尚未這麼做，請變更方法的名稱，該方法是從 `GetURLContents` 呼叫至 `GetURLContentsAsync`。
 
-    -   將 `await` 套用至工作，`GetURLContentsAsync` 會傳回該工作以取得位元組陣列值。
+    - 將 `await` 套用至工作，`GetURLContentsAsync` 會傳回該工作以取得位元組陣列值。
 
      下列程式碼會顯示這些變更。
 
@@ -326,11 +326,11 @@ Control returned to startButton_Click.
 
 2. 在方法簽章中進行下列變更：
 
-    -   以 `async` 修飾詞來標示方法。
+    - 以 `async` 修飾詞來標示方法。
 
-    -   將 "Async" 加入至方法名稱。
+    - 將 "Async" 加入至方法名稱。
 
-    -   這次沒有任何工作傳回變數，T，因為 `SumPageSizesAsync` 並未傳回 T 的值。(這個方法沒有任何 `return` 陳述式)。不過，方法必須傳回 `Task` 才可以等候。 因此，請將方法的傳回型別從 `void` 變更為 `Task`。
+    - 這次沒有任何工作傳回變數，T，因為 `SumPageSizesAsync` 並未傳回 T 的值。(這個方法沒有任何 `return` 陳述式)。不過，方法必須傳回 `Task` 才可以等候。 因此，請將方法的傳回型別從 `void` 變更為 `Task`。
 
     下列程式碼會顯示這些變更。
 
@@ -391,9 +391,9 @@ Control returned to startButton_Click.
 
 2. 類似同步方案的輸出應該會顯示。 但是，請注意下列差異。
 
-    -   處理完成之後，結果不會同時發生。 例如，這兩個程式在 `startButton_Click` 中都包含程式碼行，會清除文字方塊。 此用意是在顯示一個結果集之後、二度選擇 [開始] 按鈕時，清除執行之間的文字方塊。 在同步版本中，當下載完成且 UI 執行緒可以執行其他工作時，會在第二次顯示計數之前，清除文字方塊。 在非同步版本中，會在您選擇 [開始] 按鈕之後，立即清除文字方塊。
+    - 處理完成之後，結果不會同時發生。 例如，這兩個程式在 `startButton_Click` 中都包含程式碼行，會清除文字方塊。 此用意是在顯示一個結果集之後、二度選擇 [開始] 按鈕時，清除執行之間的文字方塊。 在同步版本中，當下載完成且 UI 執行緒可以執行其他工作時，會在第二次顯示計數之前，清除文字方塊。 在非同步版本中，會在您選擇 [開始] 按鈕之後，立即清除文字方塊。
 
-    -   最重要的是，不會在下載期間封鎖 UI 執行緒。 您可以移動視窗或調整其大小，同時下載、計算及顯示 Web 資源。 如果其中一個網站變慢或沒有回應，您可以選擇 [關閉] 按鈕 (右上角紅色欄位中的 x)，取消作業。
+    - 最重要的是，不會在下載期間封鎖 UI 執行緒。 您可以移動視窗或調整其大小，同時下載、計算及顯示 Web 資源。 如果其中一個網站變慢或沒有回應，您可以選擇 [關閉] 按鈕 (右上角紅色欄位中的 x)，取消作業。
 
 ## <a name="replace-method-geturlcontentsasync-with-a-net-framework-method"></a>將方法 GetURLContentsAsync 取代為 .NET Framework 方法
 
@@ -695,6 +695,6 @@ namespace AsyncExampleWPF
 - [await](../../../../csharp/language-reference/keywords/await.md)
 - [使用 Async 和 Await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [非同步方法的傳回型別 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
-- [以工作為基礎的非同步程式設計 (TAP)](https://www.microsoft.com/en-us/download/details.aspx?id=19957)
-- [作法：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [作法：使用 Async 和 Await，同時發出多個 Web 要求 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [Task-based Asynchronous Programming (TAP)](https://www.microsoft.com/download/details.aspx?id=19957) (以工作為基礎的非同步程式設計 (TAP))
+- [如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [如何：使用 Async 和 Await，同時發出多個 Web 要求 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

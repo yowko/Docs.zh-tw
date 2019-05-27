@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-ms.openlocfilehash: cfb22fea6d2be4c1cf78efbc63b2e2342bcac49c
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: f81ee980d861ac0eb41df9c41b3966512589af12
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959491"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593379"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>在 Visual Basic 中讀取檔案
 本節說明如何執行與讀取檔案建立關聯的工作。  
@@ -34,7 +34,7 @@ ms.locfileid: "37959491"
  [如何：讀取二進位檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
  示範如何從二進位檔案讀取。  
   
- [如何：以 StreamReader 從檔案讀取文字](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
+ [如何：使用 StreamReader 從檔案讀取文字](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
  示範如何使用 <xref:System.IO.StreamReader> 以從檔案讀取。  
   
 ## <a name="reference"></a>參考資料  
@@ -64,4 +64,4 @@ ms.locfileid: "37959491"
  示範如何搭配使用 `My` 功能與檔案和目錄。  
   
  [逐步解說：使用 .NET Framework 方法管理檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- 示範如何搭配使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 方法與檔案和目錄。
+ 示範如何使用 .NET Framework 方法來操作檔案和目錄。

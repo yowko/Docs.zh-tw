@@ -3,12 +3,12 @@ title: Tuple 型別 - C# 手冊
 description: 了解 C# 中的未具名和具名 Tuple 類型
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: d9d3424e1e59e7b33a098537738a0a1f6af27d74
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4000228507bf7925083147ddd49dd10914ef2449
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971400"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882054"
 ---
 # <a name="c-tuple-types"></a>C# Tuple 型別
 
@@ -109,7 +109,7 @@ Tuple 成員的名稱不會參與相等測試。 不過，如果其中一個運�
 
 [!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
 
-它是當您有不同的圖形時，比較兩個 Tuple 是否相等 (或不相等) 的編譯時間錯誤。 編譯器將不會嘗試任何巢狀 Tuple 的解構以比較它們。
+它是當您有不同的圖形時，比較兩個 Tuple 是否相等 (或不相等) 的編譯時間錯誤。 編譯器不會為了比較而嘗試解構任何巢狀 Tuple。
 
 ## <a name="assignment-and-tuples"></a>指派和 Tuple
 

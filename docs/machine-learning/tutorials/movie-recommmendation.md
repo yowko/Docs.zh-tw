@@ -1,21 +1,21 @@
 ---
-title: 在電影推薦案例中使用 ML.NET
-description: 探索如何在電影推薦案例中使用 ML.NET，將電影推薦給使用者。
+title: 教學課程：建置電影推薦工具
+description: 本教學課程會示範如何在 .NET Core 主控台應用程式中使用 ML.NET 建置電影推薦工具。 這些步驟會使用 C# 和 Visual Studio 2019。
 author: briacht
 ms.author: johalex
-ms.date: 03/08/2019
+ms.date: 05/06/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: bdc49f42e520f11ef63de873f0d30d11ba4b2366
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5d459d8b28298250f3b815e33ff4d85ac54f79c2
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612273"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063376"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>教學課程：使用 ML.NET 建立電影推薦
 
-本範例教學課程說明如何使用 Visual Studio 2017 中的 C#，透過 .NET Core 主控台應用程式，使用 ML.NET 來建置電影推薦。
+本教學課程會示範如何在 .NET Core 主控台應用程式中使用 ML.NET 建置電影推薦工具。 這些步驟會使用 C# 和 Visual Studio 2019。
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]
@@ -24,11 +24,6 @@ ms.locfileid: "59612273"
 > * 建置及定型模型
 > * 評估模型
 > * 部署及取用模型
-
-> [!NOTE]
-> 本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) (英文)。
-
-此教學課程與關聯的範例目前是使用 **ML.NET 0.11 版**。 如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊。
 
 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) 存放庫中找到本教學課程的原始程式碼。
 
@@ -61,10 +56,7 @@ ms.locfileid: "59612273"
 
 3. 安裝 **Microsoft.ML** 和 **Microsoft.ML.Recommender** NuGet 套件：
 
-    在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為 [套件來源]，選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、從清單中選取該套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。 為 **Microsoft.ML.Recommender** 重複這些步驟。
-
-    > [!NOTE]
-    > 本教學課程使用 **Microsoft.ML v0.11.0** 和 **Microsoft.ML.Recommender v0.11.0**。
+    在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、從清單中選取 [1.0.0] 套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。 為 **Microsoft.ML.Recommender v0.12.0** 重複這些步驟。
 
 4. 在您的 *Program.cs* 檔案最上方新增下列 `using` 陳述式：
 
@@ -175,7 +167,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 ## <a name="build-and-train-your-model"></a>建置及定型您的模型
 
-ML.NET 有三個主要概念：[資料](../basic-concepts-model-training-in-mldotnet.md#data)、[轉換器](../basic-concepts-model-training-in-mldotnet.md#transformer)以及[估算工具](../basic-concepts-model-training-in-mldotnet.md#estimator)。
+ML.NET 有三個主要概念：[資料](../resources/glossary.md#data)、[轉換器](../resources/glossary.md#transformer)以及[估算工具](../resources/glossary.md#estimator)。
 
 機器學習服務定型演算法需要特定格式的資料。 `Transformers` 用來將表格式資料轉換成相容的格式。
 

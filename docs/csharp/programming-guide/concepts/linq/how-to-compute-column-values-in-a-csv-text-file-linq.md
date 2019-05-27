@@ -1,15 +1,15 @@
 ---
-title: HOW TO：計算 CSV 文字檔中的資料行值 (LINQ) (C#)
+title: 作法：計算 CSV 文字檔中的資料行值 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 0a1b42bf941fa65f053be4931ddfbbbdf1223a48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 07fb81b474bd967d73dc9ff6a08e0c67e6ec0122
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309358"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585816"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>HOW TO：計算 CSV 文字檔中的資料行值 (LINQ) (C#)
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>作法：計算 CSV 文字檔中的資料行值 (LINQ) (C#)
 本例示範如何在 .csv 檔案的資料行上執行彙總計算，例如總和、平均、最小值和最大值。 此處顯示的範例準則可以套用至其他類型的結構化文字。  
   
 ### <a name="to-create-the-source-file"></a>建立來源檔案  
@@ -159,7 +159,7 @@ class SumColumns
  查詢的運作方式是使用 <xref:System.String.Split%2A> 方法，將每一行文字轉換成陣列。 每個陣列項目表示一個資料行。 最後，每個資料行中的文字都會轉換成其數值表示法。 如果您的檔案是以定位鍵分隔的檔案，只需要將 `Split` 方法中的引數更新成 `\t` 即可。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。  
+ 建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -3,12 +3,12 @@ title: 處理 LINQ
 description: 本教學課程會教導您如何使用 LINQ 產生序列、撰寫用於 LINQ 查詢的方法，並區分立即和延遲評估。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 702770650533b0549e414a1de87acf17d77af4e3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815579"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063176"
 ---
 # <a name="working-with-linq"></a>處理 LINQ
 
@@ -340,9 +340,9 @@ public static void Main(string[] args)
 
 如需有關 LINQ 的詳細資訊，請參閱：
 - [Language-Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
-    - [LINQ 簡介](../programming-guide/concepts/linq/introduction-to-linq.md)
-    - [開始使用 C# 中的 LINQ](../programming-guide/concepts/linq/getting-started-with-linq.md)
-        - [基本 LINQ 查詢作業 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-        - [使用 LINQ 轉換資料 (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-        - [LINQ 中的查詢語法及方法語法 (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-        - [支援 LINQ 的 C# 功能](../programming-guide/concepts/linq/features-that-support-linq.md)
+  - [LINQ 簡介](../programming-guide/concepts/linq/introduction-to-linq.md)
+  - [開始使用 C# 中的 LINQ](../programming-guide/concepts/linq/getting-started-with-linq.md)
+    - [基本 LINQ 查詢作業 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+    - [使用 LINQ 轉換資料 (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+    - [LINQ 中的查詢語法及方法語法 (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+    - [支援 LINQ 的 C# 功能](../programming-guide/concepts/linq/features-that-support-linq.md)

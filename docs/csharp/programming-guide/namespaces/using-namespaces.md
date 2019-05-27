@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 510a8dd2721e9c709444c065a8df25b0e5526c08
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c5bede7475fdbee3f3524984a9be97b95b44817d
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965549"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452678"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>使用命名空間 (C# 程式設計手冊)
 C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framework 類別會使用命名空間來組織其多種類別。 其次，宣告您自己的命名空間，有助於在較大型的程式設計專案中控制類別和方法名稱的範圍。  
@@ -39,7 +39,7 @@ C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framewor
  [!code-csharp[csProgGuideNamespaces#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#7)]  
   
 ## <a name="using-namespaces-to-control-scope"></a>使用命名空間控制範圍  
- `namespace` 關鍵字用來宣告範圍。 在專案內建立範圍的能力有助於組織程式碼，並可讓您建立全域唯一類型。 在下列範例中，標題為 `SampleClass` 的類別定義於兩個命名空間中，而其中一個命名空間巢狀於另一個命名空間內。 [。運算子](../../../csharp/language-reference/operators/member-access-operator.md)用來區分呼叫的方法。  
+ `namespace` 關鍵字用來宣告範圍。 在專案內建立範圍的能力有助於組織程式碼，並可讓您建立全域唯一類型。 在下列範例中，標題為 `SampleClass` 的類別定義於兩個命名空間中，而其中一個命名空間巢狀於另一個命名空間內。 [成員存取運算子 `.`](../../language-reference/operators/member-access-operators.md#member-access-operator-) 用來區分呼叫的方法。  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
@@ -52,13 +52,13 @@ C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framewor
   
  在先前的程式碼區段中：  
   
--   `N1` 命名空間是全域命名空間的成員。 其完整名稱是 `N1`。  
+- `N1` 命名空間是全域命名空間的成員。 其完整名稱是 `N1`。  
   
--   `N2` 命名空間是 `N1` 的成員。 其完整名稱是 `N1.N2`。  
+- `N2` 命名空間是 `N1` 的成員。 其完整名稱是 `N1.N2`。  
   
--   `C1` 類別是 `N1` 的成員。 其完整名稱是 `N1.C1`。  
+- `C1` 類別是 `N1` 的成員。 其完整名稱是 `N1.C1`。  
   
--   這個程式碼使用類別名稱 `C2` 兩次。 不過，完整名稱是唯一的。 第一個 `C2` 執行個體宣告於 `C1` 內；因此，其完整名稱是 `N1.C1.C2`。 第二個 `C2` 執行個體宣告於 `N2` 命名空間內；因此，其完整名稱是 `N1.N2.C2`。  
+- 這個程式碼使用類別名稱 `C2` 兩次。 不過，完整名稱是唯一的。 第一個 `C2` 執行個體宣告於 `C1` 內；因此，其完整名稱是 `N1.C1.C2`。 第二個 `C2` 執行個體宣告於 `N2` 命名空間內；因此，其完整名稱是 `N1.N2.C2`。  
   
  使用先前的程式碼區段，即可將新的類別成員 `C3` 新增至命名空間 `N1.N2`，如下所示：  
   
@@ -93,6 +93,6 @@ C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framewor
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [命名空間](../../../csharp/programming-guide/namespaces/index.md)
 - [命名空間關鍵字](../../../csharp/language-reference/keywords/namespace-keywords.md)
-- [.運算子](../../../csharp/language-reference/operators/member-access-operator.md)
+- [.運算子](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
 - [::運算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

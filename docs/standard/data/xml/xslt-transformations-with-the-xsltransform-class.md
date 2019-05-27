@@ -8,25 +8,25 @@ dev_langs:
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db10dda3cbb328cd143afa48e300588ccc7667a6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3b765cc42f7e060ad11d0e8dcd9991a841cda8b3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463068"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586473"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>使用 XslTransform 類別進行 XSLT 轉換
 
 > [!NOTE]
 > <xref:System.Xml.Xsl.XslTransform> 類別在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。 如需詳細資訊，請參閱[使用 XslCompiledTransform 類別](using-the-xslcompiledtransform-class.md)和[從 XslTransform 類別移轉](migrating-from-the-xsltransform-class.md)。
 
-XSLT 的目的在於，將來源 XML 文件的內容轉換為使用不同格式或結構的其他文件 (例如，將 XML 轉換為 HTML 以供網站使用，或將 XML 轉換為僅含某個應用程式所需之欄位的文件)。 這項轉換程序是由全球資訊網協會 (W3C) [XSLT 1.0 版建議事項](https://www.w3.org/TR/1999/REC-xslt-19991116)所指定。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中，是由 <xref:System.Xml.Xsl.XslTransform> 命名空間中的 <xref:System.Xml.Xsl> 類別做為實作此規格之功能的 XSLT 處理器。 W3C XSLT 1.0 版建議事項中有少數功能未被實作，列示於 [XslTransform 的輸出](outputs-from-an-xsltransform.md)中。 下圖說明 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的架構轉換作業。
+XSLT 的目的在於，將來源 XML 文件的內容轉換為使用不同格式或結構的其他文件 (例如，將 XML 轉換為 HTML 以供網站使用，或將 XML 轉換為僅含某個應用程式所需之欄位的文件)。 這項轉換程序是由全球資訊網協會 (W3C) [XSLT 1.0 版建議事項](https://www.w3.org/TR/1999/REC-xslt-19991116)所指定。 在 .NET Framework 之 <xref:System.Xml.Xsl> 命名空間中的 <xref:System.Xml.Xsl.XslTransform> 類別為 XSLT 處理器，其實作此規格功能。 W3C XSLT 1.0 版建議事項中有少數功能未被實作，列示於 [XslTransform 的輸出](outputs-from-an-xsltransform.md)中。 下圖說明 .NET Framework 的轉換架構。
 
 ## <a name="overview"></a>總覽
 
 ![顯示 XSLT 轉換架構的圖表。](./media/xslt-transformations-with-the-xsltransform-class/xslt-transformation-architecture.gif) 
 
-XSLT 建議事項使用 XML 路徑語言 (XPath) 來選擇 XML 文件的一部分，其中 XPath 是用來巡覽文件樹狀結構節點的查詢語言。 如圖所示，XPath 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 實作可用來選取數種類別中所儲存的部份 XML，如 <xref:System.Xml.XmlDocument>、<xref:System.Xml.XmlDataDocument> 和 <xref:System.Xml.XPath.XPathDocument>。 <xref:System.Xml.XPath.XPathDocument> 是最佳化的 XSLT 資料存放區，當它與 <xref:System.Xml.Xsl.XslTransform> 搭配使用時，可在 XSLT 轉換期間提供最佳效能。
+XSLT 建議事項使用 XML 路徑語言 (XPath) 來選擇 XML 文件的一部分，其中 XPath 是用來巡覽文件樹狀結構節點的查詢語言。 如圖所示，XPath 之 .NET Framework 實作會用來選取儲存在數個類別中的 XML 部分，例如 <xref:System.Xml.XmlDocument>、<xref:System.Xml.XmlDataDocument> 及 <xref:System.Xml.XPath.XPathDocument>。 <xref:System.Xml.XPath.XPathDocument> 是最佳化的 XSLT 資料存放區，當它與 <xref:System.Xml.Xsl.XslTransform> 搭配使用時，可在 XSLT 轉換期間提供最佳效能。
 
 下列表格列出與 <xref:System.Xml.Xsl.XslTransform> 和 XPath 搭配使用時最常用的類別及其函式。
 
