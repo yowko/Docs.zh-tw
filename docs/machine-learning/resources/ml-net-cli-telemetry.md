@@ -4,12 +4,12 @@ description: 了解 ML.NET CLI 遙測特性，它會收集用於分析、要收�
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 36f4af48615e2e3247f8e21343d0a00519ba1c0a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 94c66267dfeec4b70ba4dd1fc47518eb0e01509a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645015"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053581"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>依 ML.NET CLI 排列的遙測集合
 
@@ -75,5 +75,5 @@ Microsoft 的 ML.NET CLI 散發由 [Microsoft 軟體授權所授權：Microsoft 
 ## <a name="see-also"></a>另請參閱
 - [ML.NET CLI 參考](../reference/ml-net-cli-reference.md)
 - [MICROSOFT 軟體授權條款：Microsoft .NET 程式庫](https://aka.ms/dotnet-core-eula)
-- [Microsoft 隱私權](https://www.microsoft.com/en-us/trustcenter/privacy/)
-- [Microsoft 隱私權聲明](https://privacy.microsoft.com/en-us/privacystatement)
+- [Microsoft 隱私權](https://www.microsoft.com/trustcenter/privacy/)
+- [Microsoft 隱私權聲明](https://privacy.microsoft.com/privacystatement)
