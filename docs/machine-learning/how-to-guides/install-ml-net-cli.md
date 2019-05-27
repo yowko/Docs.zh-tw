@@ -3,12 +3,12 @@ title: 如何安裝 ML.NET 命令列介面 (CLI) 工具
 description: ML.NET 命令列介面 (CLI) 工具的概觀與安裝。
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 869c443d519557c9d3976676047e63a4a072d2d3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 9560aa846a1aefabadbd7d4faf8bd306ba72e0de
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065801"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557864"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>如何安裝 ML.NET 命令列介面 (CLI) 工具
 
@@ -56,10 +56,10 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 
 ## <a name="install-a-specific-release-version"></a>安裝特定的發行版本
 
-如果您要嘗試安裝發行前版本或特定版本的工具，可以使用下列格式指定版本號碼：
+如果您要嘗試安裝發行前版本或特定版本的工具，可以使用下列格式指定[架構](../../standard/frameworks.md)：
 
 ```console
-> dotnet tool install -g <package-name> --version <version-number>
+> dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 您也可以鍵入下列命令，檢查套件是否正確安裝：

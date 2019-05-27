@@ -5,12 +5,12 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 2abb17aad6091cd6a5f0b6f82835011d01b40153
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 3a3f1f672ed078754162dc377cf5c239d206b715
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063629"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557843"
 ---
 # <a name="train-and-evaluate-a-model"></a>定型和評估模型
 
@@ -145,7 +145,7 @@ var trainedModel = sdcaEstimator.Fit(transformedTrainingData);
 
 ## <a name="extract-model-parameters"></a>擷取模型參數
 
-在定型模型後，請擷取學習到的 [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase`1) 以進行檢查或重新定型。 [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) 可提供偏差和學習到的相關係數，或是定型模型的權數。 
+在定型模型後，請擷取學習到的 [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601) 以進行檢查或重新定型。 [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) 可提供偏差和學習到的相關係數，或是定型模型的權數。 
 
 ```csharp
 var trainedModelParameters = trainedModel.Model as LinearRegressionModelParameters;

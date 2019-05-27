@@ -4,12 +4,12 @@ description: 了解 ML.NET CLI 遙測特性，它會收集用於分析、要收�
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 49ebd6c9e1b77c85d891b8c9fb8cbd5c66b478a9
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 36f4af48615e2e3247f8e21343d0a00519ba1c0a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065541"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645015"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>依 ML.NET CLI 排列的遙測集合
 
@@ -42,15 +42,17 @@ ms.locfileid: "65065541"
 
 這個功能會收集下列資料︰
 
-- 叫用的命令，例如 `auto-train`
+- 已叫用哪個命令，例如 `auto-train`
+- 使用的命令列參數名稱 (亦即 "dataset-name、label-column-name、ml-task、output-path、max-exploration-time、verbosity")
 - 雜湊 MAC 位址：機器的密碼編譯 (SHA256) 匿名唯一識別碼
 - 叫用的時間戳記
-- 僅用來判斷地理位置的三個八位元 IP 位址
+- 僅用來判斷地理位置的三個八位元 IP 位址 (非完整 IP 位址)
 - 所有使用的引數/參數名稱。 不是客戶的值，例如字串
+- 經雜湊處理的資料集檔案名稱
+- 資料集檔案大小貯體
 - 作業系統和版本
-- --ml-task 參數的值：類別值，例如 `regression`、`binary-classification` 和 `multiclass-classification`
-- [四捨五入的對數](https://en.wikipedia.org/wiki/Rounding#Rounding_to_a_specified_power)資料集檔案大小 (最接近的 2 的乘冪)
-- 命令的 `ExitCode`
+- --task 參數的值：類別值，例如 `regression`、`binary-classification` 和 `multiclass-classification`
+- ML.NET CLI 版本 (亦即 0.3.27703.4)
 
 資料會使用 [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) 技術安全傳送至 Microsoft 伺服器、保留在限制存取權下，並在安全 [Azure 儲存體](https://azure.microsoft.com/services/storage/)系統的嚴格安全性控制項下使用。
 

@@ -1,19 +1,19 @@
 ---
-title: 教學課程：建置電影推薦工具
+title: 教學課程：建置電影推薦工具 - 矩陣因式分解
 description: 本教學課程會示範如何在 .NET Core 主控台應用程式中使用 ML.NET 建置電影推薦工具。 這些步驟會使用 C# 和 Visual Studio 2019。
 author: briacht
 ms.author: johalex
 ms.date: 05/06/2019
-ms.custom: mvc
+ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 5d459d8b28298250f3b815e33ff4d85ac54f79c2
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 512c8d663835da77c05fb24926ff85c56afd11ca
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063376"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882270"
 ---
-# <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>教學課程：使用 ML.NET 建立電影推薦
+# <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>教學課程：搭配 ML.NET 使用矩陣因式分解建置電影推薦工具
 
 本教學課程會示範如何在 .NET Core 主控台應用程式中使用 ML.NET 建置電影推薦工具。 這些步驟會使用 C# 和 Visual Studio 2019。
 

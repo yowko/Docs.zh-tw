@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: ea5797cb8f2fd0654d9facb636bc857eeb8e5aad
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 054fa0e1d9d8cc0d7c32efd4a9e8c81b91cb1335
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063703"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960424"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什麼是 ML.NET，它如何運作？
 
@@ -65,7 +65,7 @@ ML.NET 能讓您將機器學習新增至 .NET 應用程式。 使用這項功能
 
             // 2. Specify data preparation and model training pipeline
             var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
-                .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100);
+                .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100));
     
             // 3. Train model
             var model = pipeline.Fit(trainingData);
@@ -145,7 +145,7 @@ ML.NET 模型是一個物件，包含要對輸入資料執行的轉換，以達�
             new HouseData() { Size = 3.4F, Price = 3.6F }
         };
 
-        var testHouseDataView = mlContext.Data.LoadFromEnumerable(houseData);
+        var testHouseDataView = mlContext.Data.LoadFromEnumerable(testHouseData);
         var testPriceDataView = model.Transform(testHouseDataView);
                 
         var metrics = mlContext.Regression.Evaluate(testPriceDataView, labelColumnName: "Price");
@@ -153,8 +153,8 @@ ML.NET 模型是一個物件，包含要對輸入資料執行的轉換，以達�
         Console.WriteLine($"R^2: {metrics.RSquared:0.##}");
         Console.WriteLine($"RMS error: {metrics.RootMeanSquaredError:0.##}");
 
-        // R^2: 0.99
-        // RMS error: 0.09
+        // R^2: 0.96
+        // RMS error: 0.19
 ```
 
 評估計量會告訴您錯誤有點低，且預測輸出和測試輸出之間的關聯性很高。 很簡單！ 在實際範例中，需要更多微調才能達到良好的模型計量。
@@ -187,10 +187,10 @@ ML.NET 應用程式以 <xref:Microsoft.ML.MLContext> 物件開始。 此單一�
 
 ```csharp
     var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
-        .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100);
+        .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100));
 ```
 
-在程式碼片段中，`Concatenate` 和 `Sdca` 都是目錄中的方法。 它們會各自建立附加至管線的 [IEstimator](xref:Microsoft.ML.IEstimator`1) 物件。
+在程式碼片段中，`Concatenate` 和 `Sdca` 都是目錄中的方法。 它們會各自建立附加至管線的 [IEstimator](xref:Microsoft.ML.IEstimator%601) 物件。
 
 此時，只會建立物件。 尚未開始執行。
 

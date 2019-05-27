@@ -1,17 +1,17 @@
 ---
-title: 分類 GitHub 問題 - 多類別分類
+title: 教學課程：分類支援問題 - 多類別分類
 description: 了解如何在多類別分類案例中使用 ML.NET 來分類 GitHub 問題，以將它們指派至特定區域。
-ms.date: 05/02/2019
+ms.date: 05/16/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: a4122d0cdfe6531275fabf94743882a82f2a13c1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.custom: mvc, title-hack-0516
+ms.openlocfilehash: da4f82c1b2c4ebdc8ccc8f307722c2719909cf56
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063534"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195579"
 ---
-# <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>教學課程：在多類別分類案例中使用 ML.NET 來為 GitHub 問題分類
+# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>教學課程：搭配 ML .NET 使用多類別分類來分類支援問題
 
 此範例教學課程會示範使用 ML.NET，透過使用 Visual Studio 中 C# 的 .NET Core 主控台應用程式，建立 GitHub 問題分類器，來定型分類及預測 GitHub 問題 Area 標籤的模型。
 
@@ -242,7 +242,7 @@ public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingData
 建立並定型模型之後，現在必須使用不同的資料集來評估它，以確保和驗證品質。 在 `Evaluate` 方法中，會傳入在 `BuildAndTrainModel` 中建立的模型以供評估。 在緊接著 `BuildAndTrainModel` 之後，建立 `Evaluate` 方法，如以下程式碼所示：
 
 ```csharp
-public static void Evaluate()
+public static void Evaluate(DataViewSchema trainingDataViewSchema)
 {
 
 }

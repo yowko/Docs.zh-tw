@@ -2,12 +2,12 @@
 title: 設計領域模型層中的驗證
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解領域模型驗證的關鍵概念。
 ms.date: 10/08/2018
-ms.openlocfilehash: 75d227c0cc3d5ae20614d816b528d93709ccdfcf
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 1d3196d2130df33969ed231bccfe0fc6f0af2ad8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063019"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639579"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>設計領域模型層中的驗證
 

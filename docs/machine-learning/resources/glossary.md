@@ -2,20 +2,17 @@
 title: 機器學習字彙
 description: 對於您在 ML.NET 中建置自訂模型來說，相當實用的重要機器學習詞彙。
 ms.custom: seodec18
-ms.date: 03/05/2019
-ms.openlocfilehash: a3f94f2dedbe620c4d5c2bed2af99471572a91e5
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.date: 05/09/2019
+ms.openlocfilehash: 7d098dc9d3dc6cb7bb08b5689b50afff01ba1d7f
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063666"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557974"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機器學習詞彙的重要字詞
 
 以下清單匯集了對於您在 ML.NET 中建置自訂模型來說，相當實用的重要機器學習字詞。
-
-> [!NOTE]
-> 此文件指的是 ML.NET，它目前處於預覽階段。 資料可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) \(英文)。
 
 ## <a name="accuracy"></a>準確率
 
@@ -56,7 +53,7 @@ ms.locfileid: "65063666"
 
 ## <a name="estimator"></a>評估工具
 
-ML.NET 中實作 <xref:Microsoft.ML.IEstimator`1> 介面的類別。
+ML.NET 中實作 <xref:Microsoft.ML.IEstimator%601> 介面的類別。
 
 評估工具是轉換的規格 (資料準備轉換和機器學習模型定型轉換)。 評估工具可以一起鏈結到轉換管線。 評估工具參數或評估工具管線是在呼叫 <xref:Microsoft.ML.IEstimator`1.Fit*> 時學到。 <xref:Microsoft.ML.IEstimator`1.Fit*> 的結果是[轉換器](#transformer)。
 

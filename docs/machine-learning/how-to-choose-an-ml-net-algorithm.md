@@ -4,12 +4,12 @@ description: 了解如何選擇機器學習模型的 ML.NET 演算法
 author: natke
 ms.topic: overview
 ms.date: 04/20/1029
-ms.openlocfilehash: 3fd515a1d150ea51214b55f882726c4ba76bd6d1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: d1c637437a7b285f2b66b597d616fcf39248697f
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065631"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557788"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>如何選擇 ML.NET 演算法
 
@@ -81,8 +81,8 @@ ms.locfileid: "65065631"
 
 |演算法|屬性|定型器|
 |---------|----------|--------|
-|一對多|此多元分類器每類別定型一個二元分類器，從所有其他類別中區分出該類別。 規模受限於要分類的類別數目|[OneVersusAllTrainer<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
-|成對結合|此多元分類器針對每對類別定型二元分類演算法。 規模受限於類別數目，因為必須定型每對類別的組合。|[PairwiseCouplingTrainer<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
+|一對多|此多元分類器每類別定型一個二元分類器，從所有其他類別中區分出該類別。 規模受限於要分類的類別數目|[OneVersusAllTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
+|成對結合|此多元分類器針對每對類別定型二元分類演算法。 規模受限於類別數目，因為必須定型每對類別的組合。|[PairwiseCouplingTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
 
 ## <a name="k-means"></a>K-Means
 
@@ -107,4 +107,3 @@ ms.locfileid: "65065631"
 |屬性|定型器|
 |----------|--------|
 |使用此二元分類定型器建立其他定型器的效能基準。 為有效率，其他定型器的計量應該比舊定型器好。 |<xref:Microsoft.ML.Trainers.PriorTrainer>|
-

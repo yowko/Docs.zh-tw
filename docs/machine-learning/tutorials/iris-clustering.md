@@ -1,19 +1,19 @@
 ---
-title: 使用叢集模型分類鳶尾花
+title: 教學課程：分類鳶尾花 - k-means 群集
 description: 了解如何在群集案例中使用 ML.NET
 author: pkulikov
 ms.author: johalex
-ms.date: 05/02/2019
+ms.date: 05/16/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18
-ms.openlocfilehash: 7070189e289e8e18ba0d122d2411a9064182e2b1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.custom: mvc, seodec18, title-hack-0516
+ms.openlocfilehash: 208e97419faee097db8e187081f2910b71ca2e35
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063550"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882277"
 ---
-# <a name="tutorial-categorize-iris-flowers-using-a-clustering-model-with-mlnet"></a>教學課程：使用有 ML.NET 的叢集模型分類鳶尾花
+# <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>教學課程：搭配 ML.NET 使用 K-means 群集分類鳶尾花
 
 本教學課程說明如何使用 ML.NET 為[鳶尾花資料集](https://en.wikipedia.org/wiki/Iris_flower_data_set)建立一個[群集模型](../resources/tasks.md#clustering)。
 

@@ -5,12 +5,12 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: a15dfbfcd563cf9df9c25779a5854a9f556523d1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: a06711ca83ea545adc7292cf6d8173f006fdb94d
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065561"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557840"
 ---
 # <a name="train-and-evaluate-a-machine-learning-model-using-cross-validation"></a>使用交叉驗證定型及評估機器學習模型
 
@@ -91,7 +91,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 1. 對測試資料集使用 [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*) 方法，評估每個模型的效能。 
 1. 針對每個模型傳回模型及其計量。
 
-儲存在 `cvResults` 中的結果是 [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult`1) 物件的集合。 此物件包含定型的模型以及計量，可分別從 [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult`1.Model) 和 [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult`1.Metrics) 屬性中存取。 在此範例中，`Model` 屬性的類型是 [`ITransformer`](xref:Microsoft.ML.ITransformer)，而 `Metrics` 屬性的類型是 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics)。 
+儲存在 `cvResults` 中的結果是 [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 物件的集合。 此物件包含定型的模型以及計量，可分別從 [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) 和 [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics) 屬性中存取。 在此範例中，`Model` 屬性的類型是 [`ITransformer`](xref:Microsoft.ML.ITransformer)，而 `Metrics` 屬性的類型是 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics)。 
 
 ## <a name="extract-metrics"></a>擷取計量
 

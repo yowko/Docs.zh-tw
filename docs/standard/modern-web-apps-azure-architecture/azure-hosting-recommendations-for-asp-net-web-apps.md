@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | AS
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: d328f92ef5e64ee5d92b71472a5e32e2f5d007fd
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: a93009e66d63aa7d9c3b60951d43eafa3c351a63
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063248"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053269"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Web Core 應用程式的 Azure 裝載建議
 
@@ -44,7 +44,7 @@ App Service Web Apps 提供全受管的平台，針對裝載 Web 應用程式最
 
 - Visual Studio 整合。
 
-- 透過[用於容器的 Web App](https://azure.microsoft.com/en-us/services/app-service/containers/) 支援 Linux 及 Windows 容器。
+- 透過[用於容器的 Web App](https://azure.microsoft.com/services/app-service/containers/) 支援 Linux 及 Windows 容器。
 
 Azure App Service 是大部分 Web 應用程式的最佳選擇。 部署和管理整合至平台中、網站可快速調整以處理高流量負載，以及內建的負載平衡和流量管理員提供高可用性。 您可以使用線上移轉工具，輕鬆將現有網站移動到 Azure App Service、使用 Web 應用程式資源庫中的開放原始碼應用程式，或使用您選擇的架構和工具來建立新網站。 WebJobs 功能可輕鬆將背景工作處理新增至 App Service Web 應用程式。
 
@@ -101,7 +101,7 @@ Azure 提供各種資料儲存選項，以便您的應用程式可以針對有�
   <https://docs.microsoft.com/azure/app-service/app-service-web-overview>
 
 - 用於容器的 Web App\
-  <https://azure.microsoft.com/en-us/services/app-service/containers/>
+  <https://azure.microsoft.com/services/app-service/containers/>
 
 - Azure Kubernetes Service (AKS) 簡介\
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>
