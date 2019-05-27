@@ -2,12 +2,12 @@
 title: 非同步程式中的控制流程 (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 6a7b8f3f41b2096e3e7524d03217bdc123f26f10
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: d8d9f1dd0963ee9074122473e0eeab9254866660
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59326199"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599744"
 ---
 # <a name="control-flow-in-async-programs-c"></a>非同步程式中的控制流程 (C#)
 
@@ -17,9 +17,9 @@ ms.locfileid: "59326199"
 
 下列範例會使用非同步方法，將所指定網站的內容下載為字串，以及顯示字串的長度。 這個範例包含下列兩個方法。
 
--   `startButton_Click`，其呼叫 `AccessTheWebAsync` 並顯示結果。
+- `startButton_Click`，其呼叫 `AccessTheWebAsync` 並顯示結果。
 
--   `AccessTheWebAsync`，會將網站的內容下載為字串，並傳回字串的長度。 `AccessTheWebAsync` 使用非同步的 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> 來下載內容。
+- `AccessTheWebAsync`，會將網站的內容下載為字串，並傳回字串的長度。 `AccessTheWebAsync`使用非同步的 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> 來下載內容。
 
 編號的顯示行會出現在程式中的策略點，協助您了解程式的執行方式，以及說明每個標記點所發生的情況。 顯示行會標上 "ONE" 到 "SIX"。 標籤代表程式到達這些程式碼行的順序。
 
@@ -311,7 +311,7 @@ string urlContents = await getStringTask;
  除非傳回 `client.GetStringAsync`，否則 await 運算式會暫止 `AccessTheWebAsync`。 同時，控制項會返回 `AccessTheWebAsync` 的呼叫端 `startButton_Click`。
 
 > [!NOTE]
-> 一般而言，您會立即等候非同步方法呼叫。 例如，下列指派可以取代可建立後等候 `getStringTask` 的先前程式碼： `string urlContents = await client.GetStringAsync("https://msdn.microsoft.com");`
+> 一般而言，您會立即等候非同步方法呼叫。 例如，下列指派可以取代可建立後等候 `getStringTask` 的先前程式碼：`string urlContents = await client.GetStringAsync("https://msdn.microsoft.com");`
 >
 > 在本主題中，稍後會套用 await 運算子，以容納透過程式標記控制流程的輸出行。
 

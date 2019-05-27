@@ -1,5 +1,5 @@
 ---
-title: HOW TO：判斷在 Windows Forms StatusBar 控制項中按下了哪個面板
+title: 作法：判斷在 Windows Forms StatusBar 控制項中按下了哪個面板
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: 1c28f8eaba5c35f762d6fc57ebbddbbb71769c81
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a659de62965d17e965eee2f750337a08ae1801e0
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972311"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053726"
 ---
 # <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>HOW TO：判斷在 Windows Forms StatusBar 控制項中按下了哪個面板
 > [!IMPORTANT]
@@ -31,7 +31,7 @@ ms.locfileid: "61972311"
   
 ### <a name="to-determine-which-panel-was-clicked"></a>若要判斷已按下的面板  
   
-1. 在 <xref:System.Windows.Forms.StatusBar.PanelClick>事件處理常式，使用`Select Case`（在 Visual Basic) 或`switch case`(VisualC#或[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 陳述式來判斷已按下的面板藉由檢查事件引數中所按面板的索引。  
+1. 在 <xref:System.Windows.Forms.StatusBar.PanelClick>事件處理常式，使用`Select Case`（在 Visual Basic) 或`switch case`(VisualC#或視覺效果C++) 陳述式來判斷已按下的面板藉由檢查事件引數中所按面板的索引。  
   
      下列程式碼範例的需要，請在目前狀態，在表單中，<xref:System.Windows.Forms.StatusBar>控制項中， `StatusBar1`，並將兩個<xref:System.Windows.Forms.StatusBarPanel>物件`StatusBarPanel1`和`StatusBarPanel2`。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "61972311"
        }  
     ```  
   
-     (Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 下列程式碼置於表單的建構函式，以註冊事件處理常式。  
+     (Visual C#、 Visual C++)下列程式碼置於表單的建構函式，以註冊事件處理常式。  
   
     ```csharp  
     this.statusBar1.PanelClick += new   

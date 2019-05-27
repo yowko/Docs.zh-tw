@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eac5f9f6c8b47a6f14898eac2505ecc890015010
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f9cad5b24af86afdb1f3894dc124362fed732e93
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188116"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628893"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>使用以工作為基礎的非同步模式
 
@@ -101,13 +101,13 @@ var cts = new CancellationTokenSource();
 
  這種取消方法有幾項優點︰
 
--   您可以將相同的取消語彙基元傳遞至任何數目的非同步和同步作業。
+- 您可以將相同的取消語彙基元傳遞至任何數目的非同步和同步作業。
 
--   相同的取消要求可以擴散至任何數目的接聽程式。
+- 相同的取消要求可以擴散至任何數目的接聽程式。
 
--   非同步 API 的開發人員可以完全控制是否可要求取消及何時生效。
+- 非同步 API 的開發人員可以完全控制是否可要求取消及何時生效。
 
--   使用 API 的程式碼可能選擇性地決定要將取消要求傳播至其中的非同步引動過程。
+- 使用 API 的程式碼可能選擇性地決定要將取消要求傳播至其中的非同步引動過程。
 
 ## <a name="monitoring-progress"></a>監視進度
  某些非同步方法會透過傳遞至非同步方法的進度介面來公開進度。  例如，假設一個函式以非同步方式下載文字字串，對於過程中以進度更新顯示目前為止完成的下載百分比。  Windows Presentation Foundation (WPF) 應用程式中可以使用這種方法，如下所示︰
@@ -247,13 +247,13 @@ catch(Exception exc)
 ### <a name="taskwhenany"></a>Task.WhenAny
  您可以使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法，在多個以工作表示的非同步作業中，只以非同步方式等候其中一個完成。  這個方法適用於四種主要的使用案例：
 
--   備援：多次執行某項作業並選擇最先完成的作業 (例如，連絡多個會產生單一結果的提供股價報價服務的網站，並且選擇最快完成的那一個)。
+- 備援：多次執行某項作業並選擇最先完成的作業 (例如，連絡會產生單一結果之提供股價報價服務的多個網站，且選擇最快完成的那一個)。
 
--   交錯：啟動多項作業並等候所有作業完成，不過，會在作業完成時才進行處理。
+- 交錯：啟動多項作業並等候所有作業完成，不過，會在作業完成時才進行處理。
 
--   節流：當作業完成時，允許其他作業開始。  這是交錯情節的擴充。
+- 節流：當作業完成時，允許其他作業開始。  這是交錯情節的擴充。
 
--   提早釋出：例如，工作 t1 代表的作業可以在 <xref:System.Threading.Tasks.Task.WhenAny%2A> 工作中與另一個工作 t2 合併成群組，然後您可以等候 <xref:System.Threading.Tasks.Task.WhenAny%2A> 工作。 工作 t2 可代表造成 <xref:System.Threading.Tasks.Task.WhenAny%2A> 工作比 t1 更早完成的逾時、取消或一些其他訊號。
+- 提早釋出：例如，工作 t1 代表的作業可以在 <xref:System.Threading.Tasks.Task.WhenAny%2A> 工作中與另一個工作 t2 合併成群組，然後您可以等候 <xref:System.Threading.Tasks.Task.WhenAny%2A> 工作。 工作 t2 可代表造成 <xref:System.Threading.Tasks.Task.WhenAny%2A> 工作比 t1 更早完成的逾時、取消或一些其他訊號。
 
 #### <a name="redundancy"></a>備援性
  假設您想決定是否購買股票。  您有好幾個信任的股票建議 Web 服務，不過依據每日負載，每個服務可能會在不同時間點變得很慢。  您可以使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法來接收任何作業完成的通知：
@@ -290,7 +290,7 @@ while(recommendations.Count > 0)
 }
 ```
 
- 此外，即使第一個工作成功完成，後續工作可能失敗。  此時，您有幾個處理例外狀況的選項：您可以等待所有啟動的工作完成，在這種情況下，您可以使用 <xref:System.Threading.Tasks.Task.WhenAll%2A> 方法，或者您可以決定所有例外狀況都很重要，必須全部記錄。  對此，您可以使用接續，在工作完成時以非同步方式接收通知︰
+ 此外，即使第一個工作成功完成，後續工作可能失敗。  此時，您有幾個處理例外狀況的選項：您可以等待所有啟動的工作完成，在這種情況下，您可以使用 <xref:System.Threading.Tasks.Task.WhenAll%2A> 方法，或者您可以決定所有例外狀況都很重要且必須全部記錄。  對此，您可以使用接續，在工作完成時以非同步方式接收通知︰
 
 ```csharp
 foreach(Task recommendation in recommendations)

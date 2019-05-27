@@ -3,12 +3,12 @@ title: 更新的 .NET Core 事件模式
 description: 了解 .NET Core 事件模式如何啟用回溯相容性的彈性，以及如何使用非同步訂閱者來實作安全事件處理。
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 3cab80a0f4fcd3343fdeff265135f1503c036514
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 158295215932f54c75afdf1e96d48453434129fe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188478"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751780"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>更新的 .NET Core 事件模式
 
@@ -21,15 +21,29 @@ ms.locfileid: "50188478"
 事實上，您可以變更 `FileFoundArgs` 與 `SearchDirectoryArgs` 的定義，讓它們不衍生自 `EventArgs`。
 程式運作完全相同。
 
-如果您再進行一次變更，還可以將 `SearchDirectoryArgs` 變更為結構：
+如果您再進行一項變更，還可以將 `SearchDirectoryArgs` 變更為結構：
 
-[!code-csharp[SearchDir](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Define search directory event")]
+```csharp
+internal struct SearchDirectoryArgs
+{
+    internal string CurrentSearchDirectory { get; }
+    internal int TotalDirs { get; }
+    internal int CompletedDirs { get; }
 
-其他的變更是先呼叫預設的建構函式，再輸入初始化所有欄位的建構函式。 若不新增，C# 的規則就會先報告正在存取屬性，再報告它們已被指派。
+    internal SearchDirectoryArgs(string dir, int totalDirs, int completedDirs) : this()
+    {
+        CurrentSearchDirectory = dir;
+        TotalDirs = totalDirs;
+        CompletedDirs = completedDirs;
+    }
+}
+```
+
+其他的變更，是在輸入初始化所有欄位的建構函式前呼叫無參數建構函式。 若不新增，C# 的規則就會先報告正在存取屬性，再報告它們已被指派。
 
 您不應該將 `FileFoundArgs` 從 class (參考型別) 變更為 struct (實值型別)。 這是因為處理取消的通訊協定需要以傳址方式傳遞事件引數。 如果進行了相同的變更，則檔案搜尋類別永遠不會觀察到任何事件訂閱者所做的任何變更。 新的結構複本會用於每個訂閱者，且該複本和檔案搜尋物件看到的複本不同。
 
-接下來，我們要考慮如何讓此變更與舊版相容。
+接下來，我們要考慮如何讓這項變更與舊版相容。
 移除條件約束不會影響任何現有的程式碼。 任何現有的事件引數型別仍衍生自 `System.EventArgs`。
 回溯相容性是它們繼續衍生自 `System.EventArgs` 的一個主要原因。 任何現有的事件訂閱者都會是遵循傳統模式事件的訂閱者。
 
@@ -37,7 +51,7 @@ ms.locfileid: "50188478"
 
 ## <a name="events-with-async-subscribers"></a>有非同步訂閱者的事件
 
-最後一個需要學習的模式︰如何正確撰寫呼叫非同步程式碼的事件訂閱者。 [async 和 await](async.md) 一文中會說明此挑戰。 非同步方法可以有 void 傳回型別，但強烈建議不要使用。 當您的事件訂閱者程式碼呼叫 async 方法時，您一定要建立 `async void` 方法。 事件處理常式簽章需要它。
+您還有最後一個要了解的模式：如何正確撰寫呼叫非同步程式碼的事件訂閱者。 [async 和 await](async.md) 一文中會說明此挑戰。 非同步方法可以有 void 傳回型別，但強烈建議不要使用。 當您的事件訂閱者程式碼呼叫 async 方法時，您一定要建立 `async void` 方法。 事件處理常式簽章需要它。
 
 您需要調解此相反的指導方針。 不過，您還是必須得建立安全的 `async void` 方法。 您需要實作的模式基本概念如下︰
 

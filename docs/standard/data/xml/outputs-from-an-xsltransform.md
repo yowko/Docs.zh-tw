@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b299f09f3dc47b5d136284d4d1d285f2e5aad5f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f51a657135d9e22d960743b428057e13c1b23804
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970743"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590370"
 ---
 # <a name="outputs-from-an-xsltransform"></a>XslTransform 的輸出
 由於樣式表可以使用 `<xsl:output>` 陳述式以及 `method` 屬性決定輸出格式，因此下表將說明在使用 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法寫入輸出，且輸出格式宣告為 <xref:System.IO.Stream> 或 <xref:System.IO.TextWriter> 時，將產生何種輸出格式。  
@@ -27,32 +27,32 @@ ms.locfileid: "45970743"
 |method="text"|Text|  
   
 > [!NOTE]
->  注意：當 `<xsl:output>` 方法的輸出是 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 或 <xref:System.Xml.XmlReader> 時，將會忽略 <xref:System.Xml.XmlWriter> 陳述式。  
+>  注意:當 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法的輸出是 <xref:System.Xml.XmlReader> 或 <xref:System.Xml.XmlWriter> 時，將會忽略 `<xsl:output>` 陳述式。  
   
  當 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法輸出為 <xref:System.IO.Stream> 或 <xref:System.IO.TextWriter> 時，可支援下列屬性：  
   
--   encoding*  
+- encoding*  
   
--   omit-xml-declaration  
+- omit-xml-declaration  
   
--   獨立  
+- 獨立  
   
--   doctype-public  
+- doctype-public  
   
--   doctype-system  
+- doctype-system  
   
--   cdata-section-elements  
+- cdata-section-elements  
   
--   indent  
+- indent  
   
     > [!NOTE]
     >  *當 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法傳送它的輸出給 <xref:System.IO.TextWriter> 時，將會忽略編碼屬性。 會改用 <xref:System.IO.TextWriter> 上的編碼屬性。  
   
  當 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法輸出是 <xref:System.IO.Stream> 時，將會忽略下列屬性：  
   
--   版本：版本一律為 1.0  
+- 版本：版本一律為 1.0  
   
--   媒體類型：媒體類型  
+- 媒體類型：媒體類型  
   
 ## <a name="escaping-special-characters"></a>逸出特殊字元  
  `<xsl:text disable-output-escaping>` 標記可用來指示特殊字元是否必須逸出為 XML 格式 (例如，以 `<&lt>` 取代 `"<"` 符號)，或必須保持現有的狀況。 當轉換為 `disable-output-escaping` 或 <xref:System.Xml.XmlReader> 物件時，會忽略 <xref:System.Xml.XmlWriter> 屬性，這對於特殊字元不會有任何影響。  

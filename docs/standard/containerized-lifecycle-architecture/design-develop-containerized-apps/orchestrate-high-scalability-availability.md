@@ -2,12 +2,12 @@
 title: 協調微服務和多容器應用程式的高延展性和可用性
 description: 實際生產應用程式需要可部署和管理處理健康狀態、 工作負載和所有容器的生命週期的協調器。
 ms.date: 02/15/2019
-ms.openlocfilehash: 6cb41e632db7c7c6b9412bf54d2efeb44deee80f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: bde9a2815d0496608b3172582481c169cab37f04
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644715"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195642"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>協調微服務和多容器應用程式的高延展性和可用性
 
@@ -70,7 +70,7 @@ Azure Kubernetes Service 特別針對 Azure，提供熱門 Docker 叢集開放�
 
 ## <a name="get-started-with-azure-kubernetes-service-aks"></a>開始使用 Azure Kubernetes Service (AKS)
 
-若要開始使用 AKS，您可以部署從 Azure 入口網站或使用 CLI 在 AKS 叢集。 如需部署 Azure Container Service 叢集的詳細資訊，請參閱[部署 Azure Kubernetes Service (AKS) 叢集](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)。
+若要開始使用 AKS，您可以部署從 Azure 入口網站或使用 CLI 在 AKS 叢集。 如需有關如何將 Kubernetes 叢集部署至 Azure 的詳細資訊，請參閱[部署 Azure Kubernetes Service (AKS) 叢集](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)。
 
 隨附於 AKS 預設安裝的軟體均不會收取任何費用。 所有預設選項都是使用開放原始碼軟體來實作。 AKS 可供 Azure 中的多部虛擬機器使用。 您僅需支付所選計算執行個體的費用，以及其他已使用的基礎結構資源費用，例如儲存體和網路功能。 AKS 本身沒有任何累加的費用。
 
@@ -112,7 +112,7 @@ Azure 的 Dev 空間會提供一個空格，可讓您隔離而不用擔心中斷
 
 ## <a name="additional-resources"></a>其他資源
 
-- **開始使用 Azure Kubernetes Service (AKS)** \
+- **開始使用 Azure Kubernetes Service (AKS)**  \
   <https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal>
 
 - **Azure Dev Spaces** \
@@ -137,7 +137,7 @@ Service Fabric 不在乎您用什麼方法來建置服務，所以您可以使�
 
 如所示的 圖 4-10，您可以建立和執行 Service Fabric 中的微服務，以簡單處理序或 Docker 容器。 它也可以將容器型微服務與程序型微服務混合在相同的 Service Fabric 叢集中。
 
-![比較 Azure service Fabric 叢集：做為每個節點執行每個微服務; 的其中一個處理序的處理序的微服務為每個節點執行 Docker 與數個容器，容器的微服務一個容器，每個微服務。](./media/azure-service-fabric-cluster-types.png)
+![比較 Azure 服務網狀架構叢集：微服務作為處理序，每個節點針對每個微服務執行一個處理序；微服務作為容器，每個節點使用數個容器來執行 Docker，每個微服務一個容器。](./media/azure-service-fabric-cluster-types.png)
 
 **圖 4-10**： 在 Azure Service Fabric 中將微服務部署為處理序或容器
 

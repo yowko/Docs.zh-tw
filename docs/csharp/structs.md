@@ -3,12 +3,12 @@ title: 結構 - C# 手冊
 description: 了解結構類型和其建立方式
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 0db9ebca8a3b0be1d380128f7802e30a41c34a37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbaa7fcc26009fe3117784b411941d30af0ba3c5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506975"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608012"
 ---
 # <a name="structs"></a>結構
 *struct* 是實值型別。 建立結構時，指派結構的變數會保留結構的實際資料。 將結構指派至新的變數時，將會複製結構。 因此，新的變數和原始變數會各自包含一份相同的資料。 針對其中一個複本所做的變更，並不會影響到另一個複本。
@@ -35,21 +35,21 @@ ms.locfileid: "54506975"
     
 結構與類別共用大部分相同的語法，不過結構的限制高於類別︰  
   
--   在結構宣告內，除非欄位宣告為 `const` 或 `static`，否則無法初始化欄位。  
+- 在結構宣告內，除非欄位宣告為 `const` 或 `static`，否則無法初始化欄位。  
   
--   結構無法宣告預設建構函式 (不含參數的建構函式) 或完成項。  
+- 結構無法宣告無參數建構函式 (不含參數的建構函式) 或完成項。  
   
--   指派時會複製結構。 將結構指派給新的變數時，會複製所有資料，而且對新複本進行的任何修改都不會變更原始複本的資料。 使用實值型別集合 (例如 Dictionary<string, myStruct>) 時，請一定要記住這一點。  
+- 指派時會複製結構。 將結構指派給新的變數時，會複製所有資料，而且對新複本進行的任何修改都不會變更原始複本的資料。 使用實值型別集合 (例如 Dictionary<string, myStruct>) 時，請一定要記住這一點。  
   
--   結構是實值型別，而類別是參考型別。  
+- 結構是實值型別，而類別是參考型別。  
   
--   不同於類別，結構不需要使用 `new` 運算子就能具現化。  
+- 不同於類別，結構不需要使用 `new` 運算子就能具現化。  
   
--   結構可以宣告具有參數的建構函式。  
+- 結構可以宣告具有參數的建構函式。  
   
--   結構無法繼承自另一個結構或類別，而且不能作為類別的基底。 所有結構都直接繼承自 <xref:System.ValueType>，該項則繼承自 <xref:System.Object>。  
+- 結構無法繼承自另一個結構或類別，而且不能作為類別的基底。 所有結構都直接繼承自 <xref:System.ValueType>，該項則繼承自 <xref:System.Object>。  
   
--   結構可以實作介面。
+- 結構可以實作介面。
 
 ## <a name="literal-values"></a>常值  
 在 C# 中，常值會接收來自編譯器的類型。 您可以在數字後面附加一個字母，指定應如何輸入數值常值。 例如，若要指定應該將值 4.56 視為浮點數時，請在數字之後附加 "f" 或 "F"︰`4.56f`。 如果未附加任何字母，則編譯器會推斷 `double` 類型的常值。 如需您可以使用字母後置字元指定哪些類型的詳細資訊，請參閱參考頁面中個別類型的[實值型別](./language-reference/keywords/value-types.md)。  
@@ -63,7 +63,7 @@ ms.locfileid: "54506975"
 第二個示範「二進位常值」，可讓您直接指定位元模式，而不是使用十六進位標記法。
 
 ## <a name="nullable-types"></a>可為 Null 的型別  
-一般實值型別的值不能為 [null](./language-reference/keywords/null.md)。 不過，您可以在該類型後面添加 **?**，建立可為 Null 的實值型別 。 例如，**int?** 是也能具有 [null](./language-reference/keywords/null.md) 值的 **int** 類型。 在 CTS 中，可為 Null 的型別是泛型結構類型 <xref:System.Nullable%601> 的執行個體。 當您要在資料庫之間來回傳遞的資料數值可能為 Null 時，可為 Null 的型別會特別有用。 如需詳細資訊，請參閱[可為 Null 的型別 (C# 程式設計手冊)](./programming-guide/nullable-types/index.md)。
+一般實值型別的值不能為 [null](./language-reference/keywords/null.md)。 不過，您可以在該類型後面添加 **?** ，建立可為 Null 的實值型別 。 例如，**int?** 是也能具有 [null](./language-reference/keywords/null.md) 值的 **int** 類型。 在 CTS 中，可為 Null 的型別是泛型結構類型 <xref:System.Nullable%601> 的執行個體。 當您要在資料庫之間來回傳遞的資料數值可能為 Null 時，可為 Null 的型別會特別有用。 如需詳細資訊，請參閱[可為 Null 的型別 (C# 程式設計手冊)](./programming-guide/nullable-types/index.md)。
 
 ## <a name="see-also"></a>另請參閱
 

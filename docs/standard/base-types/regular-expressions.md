@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33aaf09e284db5c818eb0ff3917533cce5e70ad7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 201dbc759b619f65599e09c78c14b96d17395952
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577136"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620705"
 ---
 # <a name="net-regular-expressions"></a>.NET 規則運算式
 規則運算式提供功能強大、彈性且有效率的方法來處理文字。 規則運算式的廣泛模式比對標記法可讓您快速剖析大量文字，以尋找特定的字元模式；驗證文字，以確保其符合預先定義的模式 (例如電子郵件地址)；擷取、編輯、取代或刪除文字子字串；以及將擷取的字串加入至集合，以產生報告。 對許多處理字串或剖析大型文字區塊的應用程式而言，規則運算式是不可或缺的工具。  
@@ -35,19 +35,19 @@ ms.locfileid: "33577136"
 ## <a name="how-regular-expressions-work"></a>規則運算式的運作方式  
  使用規則運算式來處理文字的核心是規則運算式引擎，以 .NET 中的 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 物件來表示。 使用規則運算式來處理文字時，至少需要提供規則運算式引擎以及下列兩個資訊項目：  
   
--   要在文字中識別的規則運算式模式。  
+- 要在文字中識別的規則運算式模式。  
   
      在 .NET 中，規則運算式模式是以特殊的語法或語言來定義，其相容於 Perl 5 規則運算式，並新增一些其他功能，例如由右至左比對。 如需詳細資訊，請參閱[規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)。  
   
--   要為規則運算式模式剖析的文字。  
+- 要為規則運算式模式剖析的文字。  
   
  <xref:System.Text.RegularExpressions.Regex> 類別的方法可讓您執行下列作業：  
   
--   呼叫 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法，以判定規則運算式模式是否出現在輸入文字中。 如需使用 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> 方法來驗證文字的範例，請參閱[如何：確認字串是否為有效的電子郵件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。  
+- 呼叫 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法，以判定規則運算式模式是否出現在輸入文字中。 如需使用 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> 方法來驗證文字的範例，請參閱[如何：確認字串是否為有效的電子郵件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。  
   
--   呼叫 <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法，以擷取符合規則運算式模式的所有文字。 前一個方法會傳回 <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> 物件，提供相符文字的相關資訊。 後一個方法會傳回 <xref:System.Text.RegularExpressions.MatchCollection> 物件，其中針對在所剖析文字中找到的每個相符項目，各包含一個 <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> 物件。  
+- 呼叫 <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法，以擷取符合規則運算式模式的所有文字。 前一個方法會傳回 <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> 物件，提供相符文字的相關資訊。 後一個方法會傳回 <xref:System.Text.RegularExpressions.MatchCollection> 物件，其中針對在所剖析文字中找到的每個相符項目，各包含一個 <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> 物件。  
   
--   呼叫 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法，以取代符合規則運算式模式的文字。 如需使用 <xref:System.Text.RegularExpressions.Regex.Replace%2A> 方法來變更日期格式，以及移除字串中無效字元的範例，請參閱[如何：從字串中刪除無效的字元](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)和[如何：變更日期格式](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)。  
+- 呼叫 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法，以取代符合規則運算式模式的文字。 如需使用 <xref:System.Text.RegularExpressions.Regex.Replace%2A> 方法來變更日期格式，以及移除字串中無效字元的範例，請參閱[如何：從字串](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)中刪除無效的字元，以及[範例：變更日期格式](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)。  
   
  如需規則運算式物件模型概觀，請參閱[規則運算式物件模型](../../../docs/standard/base-types/the-regular-expression-object-model.md)。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "33577136"
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|標題|說明|  
 |-----------|-----------------|  
 |[規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|提供您可以用來定義規則運算式之字元、運算子和建構組合的資訊。|  
 |[規則運算式物件模型](../../../docs/standard/base-types/the-regular-expression-object-model.md)|提供資訊和程式碼範例，說明如何使用規則運算式類別。|  

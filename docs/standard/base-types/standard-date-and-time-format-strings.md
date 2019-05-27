@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 874501ac6dc4ea0ea1c0c97cdd2b802dfdb6bbb0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6939efa608f4887dfdb00abe8292bec841929440
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532185"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664632"
 ---
 # <a name="standard-date-and-time-format-strings"></a>標準日期和時間格式字串
 標準日期和時間格式字串使用單一格式規範，定義日期和時間值的文字表示。 任何包含一個以上字元 (包括空白字元) 的日期和時間格式字串都會解譯為自訂日期和時間格式字串；如需詳細資訊，請參閱[自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。 標準或自訂格式字串有兩種使用方式：  
   
--   定義執行格式化作業後所產生的字串。  
+- 定義執行格式化作業後所產生的字串。  
   
--   定義日期和時間值的文字表示，可藉由剖析作業轉換成 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值。  
+- 定義日期和時間值的文字表示，可藉由剖析作業轉換成 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值。  
 
 > [!TIP]
 >  您可以下載 [格式化公用程式](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，這個應用程式可讓您將格式字串套用至數值或日期和時間值，並且顯示結果字串。  
@@ -63,17 +63,17 @@ ms.locfileid: "54532185"
   
  如果格式化作業中的標準格式字串對應至特定文化特性的自訂格式字串，您的應用程式可以定義特定文化特性，以下列其中一種方式使用自訂格式字串：  
   
--   您可以使用預設 (或目前的) 文化特性。 下列範例顯示的日期使用了目前文化特性的簡短日期格式。 在此例中，目前的文化特性是 en-US。  
+- 您可以使用預設 (或目前的) 文化特性。 下列範例顯示的日期使用了目前文化特性的簡短日期格式。 在此例中，目前的文化特性是 en-US。  
   
      [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
      [!code-vb[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#1)]  
   
--   您可以將表示要用來進行格式化之文化特性的 <xref:System.Globalization.CultureInfo> 物件傳遞至具有 <xref:System.IFormatProvider> 參數的方法。 下列範例顯示的日期使用了 pt-BR 文化特性的簡短日期格式。  
+- 您可以將表示要用來進行格式化之文化特性的 <xref:System.Globalization.CultureInfo> 物件傳遞至具有 <xref:System.IFormatProvider> 參數的方法。 下列範例顯示的日期使用了 pt-BR 文化特性的簡短日期格式。  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
      [!code-vb[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#2)]  
   
--   您可以將提供格式化資訊的 <xref:System.Globalization.DateTimeFormatInfo> 物件傳遞至具有 <xref:System.IFormatProvider> 參數的方法。 下列範例顯示的日期使用了取自於 hr-HR 文化特性之 <xref:System.Globalization.DateTimeFormatInfo> 物件的簡短日期格式。  
+- 您可以將提供格式化資訊的 <xref:System.Globalization.DateTimeFormatInfo> 物件傳遞至具有 <xref:System.IFormatProvider> 參數的方法。 下列範例顯示的日期使用了取自於 hr-HR 文化特性之 <xref:System.Globalization.DateTimeFormatInfo> 物件的簡短日期格式。  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
@@ -249,17 +249,17 @@ ms.locfileid: "54532185"
   
  "O" 或 "o" 標準格式規範 (以及 "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK" 自訂格式字串) 利用 ISO 8601 表示時區資訊的三種方式，來保留 <xref:System.DateTime> 值的 <xref:System.DateTime.Kind%2A> 屬性：  
   
--   <xref:System.DateTimeKind.Local?displayProperty=nameWithType> 日期和時間值的時區元件是與 UTC 的時差 (例如，+01:00、-07:00)。 所有 <xref:System.DateTimeOffset> 值也都是以此格式表示。  
+- <xref:System.DateTimeKind.Local?displayProperty=nameWithType> 日期和時間值的時區元件是與 UTC 的時差 (例如，+01:00、-07:00)。 所有 <xref:System.DateTimeOffset> 值也都是以此格式表示。  
   
--   <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> 日期和時間值的時區元件使用 "Z" (代表零時差) 來表示 UTC。  
+- <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> 日期和時間值的時區元件使用 "Z" (代表零時差) 來表示 UTC。  
   
--   <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> 日期和時間值沒有時區資訊。  
+- <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> 日期和時間值沒有時區資訊。  
   
  因為 "O" 或 "o" 標準格式規範符合國際標準，所以使用該規範的格式化或剖析作業一律使用不因國別而異的文化特性和西曆。  
   
  傳遞至 `Parse` 和 `TryParse` 的 `ParseExact`、`TryParseExact`、<xref:System.DateTime> 和 <xref:System.DateTimeOffset> 方法的字串如果是這些格式，就可以使用 "O" 或 "o" 格式規範來剖析。 在 <xref:System.DateTime> 物件的案例中，您呼叫的剖析多載應該也要包含 `styles` 參數，且值為 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>。 請注意，如果您呼叫剖析方法時，使用對應於 "O" 或 "o" 格式規範的自訂格式字串，將不會取得與 "O" 或 "o" 相同的結果。 這是因為使用自訂格式字串的剖析方法，無法剖析缺少時區元件或使用 "Z" 來指示 UTC 之日期和時間值的字串表示法。  
   
- 下列範例使用 "o" 格式規範，在美國太平洋時區系統上顯示一連串的 <xref:System.DateTime> 值以及 <xref:System.DateTimeOffset> 值。  
+ 下列範例使用 "o" 格式規範，在美國太平洋時區系統上顯示一連串的 <xref:System.DateTime> 值以及 <xref:System.DateTimeOffset> 值太平洋時間  
   
  [!code-csharp-interactive[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]  
@@ -285,7 +285,7 @@ ms.locfileid: "54532185"
   
  雖然 RFC 1123 標準以國際標準時間 (UTC) 來表示時間，但對於要進行格式化的 <xref:System.DateTime> 物件，格式化作業並不會修改這些物件的值。 因此，您必須先呼叫 <xref:System.DateTime> 方法將 <xref:System.DateTime.ToUniversalTime%2A?displayProperty=nameWithType> 值轉換成 UTC，才能執行格式化作業。 相反地，<xref:System.DateTimeOffset> 值會自動執行這項轉換，因此在格式化作業之前，不需要呼叫 <xref:System.DateTimeOffset.ToUniversalTime%2A?displayProperty=nameWithType> 方法。  
   
- 下列範例會使用 "r" 格式規範，在美國太平洋時區系統上顯示 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值。  
+ 下列範例會使用 "r" 格式規範，在美國太平洋時區系統上顯示 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值。太平洋時間  
   
  [!code-csharp-interactive[Formatting.DateAndTime.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#9)]
  [!code-vb[Formatting.DateAndTime.Standard#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#9)]  
@@ -300,7 +300,7 @@ ms.locfileid: "54532185"
   
  使用這個標準格式規範時，格式或剖析作業一律使用不因文化特性而異。  
   
- 下列範例會使用 "s" 格式規範，在美國太平洋時區系統上顯示 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值。  
+ 下列範例會使用 "r" 格式規範，在美國太平洋時區系統上顯示 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值。太平洋時間  
   
  [!code-csharp-interactive[Formatting.DateAndTime.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#10)]
  [!code-vb[Formatting.DateAndTime.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#10)]  

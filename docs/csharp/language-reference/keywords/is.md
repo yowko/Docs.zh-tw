@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 9fb57caeafde9db5759300d938a85f4abf4d05f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 79cc59eb8de513f547a8fd87db8c95dd9af37375
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672455"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754514"
 ---
 # <a name="is-c-reference"></a>is (C# 參考)
 
@@ -88,7 +88,7 @@ ms.locfileid: "59672455"
 
 從 C# 7.1 開始，*expr* 可以擁有由泛型類型參數及其條件約束所定義的編譯時間類型。 
 
-如果 *exp* 為 `true`，且 `is` 與 `if` 陳述式搭配使用，則會指派 *varname* ；而且只在 `if` 陳述式內具有區域範圍。
+如果 *expr* 為 `true`，且 `is` 搭配 `if` 陳述式使用，則 *varname* 僅在 `if` 陳述式內指派。 *varname* 的範圍從 `is` 運算式到包含 `if` 陳述式的區塊結尾。 在任何其他位置使用 *varname*，會因使用尚未指派的變數而產生編譯時間錯誤。
 
 下列範例使用 `is` 類型模式來提供類型之 <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> 方法的實作。
 

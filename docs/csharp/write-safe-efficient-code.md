@@ -3,12 +3,12 @@ title: 撰寫安全且有效率的 C# 程式碼
 description: 最近對 C# 語言的增強功能，可讓您撰寫可驗證的安全程式碼，獲得先前使用不安全程式碼時的效能。
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: d363e357d3749bb2014456c0064c4de7dd7f1acb
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 259ce0b9405dfd74adf51a9cc046ffe3f08d242f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57411563"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753896"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>撰寫安全且有效率的 C# 程式碼
 
@@ -180,6 +180,8 @@ public struct Point3D
 [!code-csharp[readonlyInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
 編譯器會在您呼叫 `readonly struct` 的成員時，產生更有效率的程式碼：`this` 參考 (而非接收器的複本) 一律都是以參考型式傳遞至成員方法的 `in` 參數。 當您使用 `readonly struct` 作為 `in` 引數時，這項最佳化可避免進行複製。
+
+您不應將可為 Null 的實值型別作為 `in` 參數傳遞。 <xref:System.Nullable%601> 類型不會宣告為唯讀結構。 這表示，編譯器編譯器必須針對使用參數宣告上 `in` 修飾詞傳遞給方法之任何可為 Null 的實值型別引數來產生防禦性複本。
 
 您可以在我們於 GitHub 上的[範例存放庫](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark)中，查看使用 [Benchmark.net](https://www.nuget.org/packages/BenchmarkDotNet/) 示範效能差異的範例程式。 它會比較以值型式和以參考型式傳遞可變動結構，以及以值型式和以參考型式傳遞固定結構的差異。 使用固定結構並以參考型式傳遞的速度最快。
 

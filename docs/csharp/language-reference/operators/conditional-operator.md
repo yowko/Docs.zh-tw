@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 82ada5e4d1f56ea93bbd7f41b04cda9f98d678c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a40dd4addfaf8a505cf334876192f0b2ccf66a09
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672390"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452407"
 ---
 # <a name="-operator-c-reference"></a>?:運算子 (C# 參考)
 
@@ -43,10 +43,12 @@ a ? b : c ? d : e
 a ? b : (c ? d : e)
 ```
 
-一個方便您記住此運算子進行評估之方式的方法，就是透過詢問： 
-```
+一個幫助您記住此運算子進行評估之方式的方法，就是透過詢問：
+
+```text
 is this condition true ? yes : no
 ```
+
 運算子的 ? 部分 作為上一個陳述式的問號，後續則作為對這個問題的邏輯回答。
 
 下列範例示範條件運算子的用法：
@@ -93,6 +95,6 @@ condition ? ref consequent : ref alternative
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 運算子](index.md)
 - [if-else 陳述式](../keywords/if-else.md)
-- [?. 和 ?[] 運算子](null-conditional-operators.md)
+- [?. 和 ?[] 運算子](member-access-operators.md#null-conditional-operators--and-)
 - [??運算子](null-coalescing-operator.md)
 - [ref 關鍵字](../keywords/ref.md)

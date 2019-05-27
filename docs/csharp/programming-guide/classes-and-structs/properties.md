@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 473109100c14f26d0e31b9f57513997044c5b2f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7374b77526a31c2c508516d5a3cb7cc3e29339a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676818"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583078"
 ---
 # <a name="properties-c-programming-guide"></a>屬性 (C# 程式設計手冊)
 
@@ -54,21 +54,21 @@ ms.locfileid: "54676818"
 
 在某些情況下，屬性 `get` 和 `set` 存取子只會指派值給支援欄位，或從支援欄位中擷取值，而不會包含任何其他邏輯。 藉由使用自動實作屬性，您可以簡化程式碼，同時讓 C# 編譯器無障礙地為您提供支援欄位。 
 
-如果屬性具有 `get` 和 `set` 存取子，這兩者都必須自動實作。 您可以使用 `get` 和 `set` 關鍵字，但不提供任何實作，來定義自動實作屬性。 下列範例會重複上一個範例，不同之處在於 `Name` 和 `Price` 為自動實作屬性。 請注意，此範例也會移除參數化建構函式，讓 `SaleItem` 物件現在可透過呼叫預設建構函式和[物件初始設定式](object-and-collection-initializers.md)來進行初始化。
+如果屬性具有 `get` 和 `set` 存取子，這兩者都必須自動實作。 您可以使用 `get` 和 `set` 關鍵字，但不提供任何實作，來定義自動實作屬性。 下列範例會重複上一個範例，不同之處在於 `Name` 和 `Price` 為自動實作屬性。 請注意，此範例也會移除參數化建構函式，因此 `SaleItem` 物件現在會透過呼叫無參數建構函式和[物件初始設定式](object-and-collection-initializers.md)來初始化。
 
   [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 
 ## <a name="related-sections"></a>相關章節  
   
--   [使用屬性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [使用屬性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
   
--   [介面屬性](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [介面屬性](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
   
--   [屬性與索引子之間的比較](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [屬性與索引子之間的比較](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [限制存取子的存取範圍](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [限制存取子的存取範圍](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
--   [自動實作的屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [自動實作的屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
 

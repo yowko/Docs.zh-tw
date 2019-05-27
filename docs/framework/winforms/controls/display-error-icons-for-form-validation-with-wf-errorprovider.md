@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 Windows Forms ErrorProvider 元件顯示表單驗證的錯誤圖示
+title: 作法：使用 Windows Forms ErrorProvider 元件顯示表單驗證的錯誤圖示
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: 9487d4f82878ffefe17c576b16f654293ef01106
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2af8d3b9ea97b678c493de8a58d439b62f448387
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972181"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053704"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>HOW TO：使用 Windows Forms ErrorProvider 元件顯示表單驗證的錯誤圖示
 您可以使用 Windows Form<xref:System.Windows.Forms.ErrorProvider>元件，以在使用者輸入無效的資料時顯示錯誤圖示。 您必須擁有至少兩個控制項其間索引標籤，並藉此叫用的驗證程式碼以在表單上。  
@@ -77,7 +77,7 @@ ms.locfileid: "61972181"
        }  
     ```  
   
-     (Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 下列程式碼置於表單的建構函式，以註冊事件處理常式。  
+     (Visual C#、 Visual C++)下列程式碼置於表單的建構函式，以註冊事件處理常式。  
   
     ```csharp  
     this.textBox1.Validating += new  

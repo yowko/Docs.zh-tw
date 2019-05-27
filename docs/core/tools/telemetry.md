@@ -4,12 +4,12 @@ description: 探索收集使用量資訊以進行分析的 .NET Core SDK 遙測�
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 3a757daab372b8be8bfe2ee27d910e21fa4e3337
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 82410863c81faa95edfb120c95ec6bc186ed1328
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718034"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751685"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 遙測
 
@@ -89,12 +89,12 @@ ms.locfileid: "57718034"
 
 ### <a name="datasets"></a>資料集
 
-[2016 - Q3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q3.tsv)  
-[2016 - Q4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q4.tsv)  
-[2017 - Q1](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q1.tsv)  
-[2017 - Q2](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)  
-[2017 - Q3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q3.tsv)  
-[2017 - Q4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q4.tsv)  
+- [2016 - Q3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q3.tsv)
+- [2016 - Q4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q4.tsv)
+- [2017 - Q1](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q1.tsv)
+- [2017 - Q2](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)
+- [2017 - Q3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q3.tsv)
+- [2017 - Q4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q4.tsv)
 
 使用標準的 URL 格式張貼額外的資料集。 以年取代 `<YEAR>`，以一年的季取代 `<QUARTER>` (使用 `1`、`2`、`3` 或 `4`)。 這些檔案使用定位字元分隔值 (*TSV*) 格式。
 
@@ -102,11 +102,9 @@ ms.locfileid: "57718034"
 
 ## <a name="license"></a>使用權
 
-Microsoft 的 .NET Core 散發是使用 [MICROSOFT .NET LIBRARY EULA](https://aka.ms/dotnet-core-eula) 所授權。 此授權包含 "DATA" 區段以啟用遙測 (如下所示)。
+Microsoft 的 .NET Core 散發由 [Microsoft 軟體授權所授權：Mirosoft.NET 程式庫](https://aka.ms/dotnet-core-eula)。 如需資料收集與處理的詳細資訊，請參閱＜資料＞一節。
 
 [.NET NuGet 套件](https://www.nuget.org/profiles/dotnetframework)使用相同的授權，但不啟用遙測 (請參閱[範圍](#scope))。
-
-> 2. 資料。 軟體可能會收集和您及您使用軟體之方式有關的資訊，並將該資訊傳送給 Microsoft。 Microsoft 可能會使用此資訊以改善產品與服務。 您可以前往 <http://go.microsoft.com/fwlink/?LinkId=528096>，以在說明文件及隱私權聲明中深入了解資料收集和使用方式的相關資訊。 使用軟體即代表您同意這些做法。
 
 ## <a name="disclosure"></a>公開
 

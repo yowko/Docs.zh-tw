@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 3d3d52c9b29e743f676951ec8261ada39078fb27
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 16aa1cd43db0b10c4617b4fa92783c75a4ba5303
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59335013"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755211"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -27,9 +27,9 @@ ms.locfileid: "59335013"
 
 ## <a name="net-implementation-support"></a>.NET 實作支援
 
-下表列出支援每個 .NET Standard 版本的最小平台版本。
+下表列出支援每個 .NET Standard 版本的**最低**平台版本。 這表示所列出平台的更新版本也支援所對應 .NET Standard 版本。 例如，.NET Core 2.2 支援 .NET Standard 2.0 及更早版本。
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
 
 若要尋找可作為您目標的最新版 .NET Standard，請執行下列步驟：
 
@@ -76,7 +76,7 @@ ms.locfileid: "59335013"
 
 為了更方便閱讀及支援特定開發人員案例 (例如使用編譯器)，已提供衍生成品。
 
-- [以 Markdown 撰寫的 API 清單](https://github.com/dotnet/standard/tree/master/docs/versions)
+- [Markdown 中的 API 清單](https://github.com/dotnet/standard/tree/master/docs/versions)
 - 以 [NuGet 套件](../core/packages.md)散發並由 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/) 中繼套件參考的參考組件。
 
 ### <a name="package-representation"></a>封裝表示
@@ -142,7 +142,7 @@ NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standa
 
 [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) NuGet 套件提供設定檔型 PCL 相容性。 參考包含設定檔型 PCL 的 NuGet 套件時需要此相依性。
 
-封裝成 `netstandard` 的設定檔型 PCL，會比一般封裝的設定檔型 PCL 更容易使用。 `netstandard` 套件是與現有的使用者相容。
+封裝成 `netstandard` 的設定檔型 PCL，會比一般封裝的設定檔型 PCL 更容易使用。 現有的使用者可以使用 `netstandard` 封裝。
 
 您會看到與 .NET Standard 相容的 PCL 設定檔集合：
 

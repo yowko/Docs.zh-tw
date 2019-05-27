@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff25d2cef52a8c690f895222d69591bc53b3765e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ebe856b3ed904b13201c6d59752a8a00f4060d5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677162"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753962"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 系統上的大型物件堆積
 
@@ -32,7 +32,7 @@ ms.locfileid: "57677162"
 
 小物件一律會配置在層代 0 中，並根據其存留期，可能會提升至層代 1 或層代 2。 大型物件則一律配置在層代 2 中。
 
-大型物件屬於層代 2，因為只有在層代 2 回收期間才會回收它們。 回收層代時，也會回收其所有較年輕的層代。 舉例來說，發生層代 1 GC 時，會同時回收層代 1 和 0。 而發生層代 2 GC 時，就會回收整個堆積。 基於這個理由，層代 2 GC 也稱為「完整 GC」。 此文章引用層代 2 GC，而不是完整 GC，但這些詞彙可以互換。
+大型物件屬於層代 2，因為只有在層代 2 回收期間才會回收它們。 回收層代時，也會回收其所有較年輕的層代。 舉例來說，發生層代 1 GC 時，會同時回收層代 1 和 0。 而發生層代 2 GC 時，就會回收整個堆積。 基於這個理由，層代 2 GC 也稱為「完整 GC」。 本文引用層代 2 GC，而不是完整 GC，但這些詞彙可以互換。
 
 層代提供 GC 堆積的邏輯檢視。 實際上，物件是存留在受控堆積區段中。 「受控堆積區段」是記憶體的區塊，由 GC 代替受控程式碼向 OS (透過呼叫 [VirtualAlloc 函式](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)) 要求保留。 載入 CLR 時，GC 會配置兩個初始堆積區段：一個針對小型物件 (小型物件堆積或 SOH)，另一個針對大型物件 (大型物件堆積)。
 
@@ -92,7 +92,7 @@ ms.locfileid: "57677162"
 
 - 回收成本。
 
-  因為 LOH 和層代 2 會一起回收，如果超過其中一個的臨界值時，就會觸發層代 2 回收。 如果因為 LOH 而觸發了層代 2 回收，那麼在 GC 之後，層代 2 不一定會變得更小。 如果在層代 2 上沒有太多資料，其影響極小。 但是如果層代 2 很大，一旦觸發許多層代 2 GC，就可能會造成效能問題。 如果暫時配置了許多大型物件，而且您的 SOH 很大，則執行 GC 可能會花費太多時間。 此外，如果您繼續配置並釋放相當大的物件，配置的成本就會暴增。
+  因為 LOH 和層代 2 會一起回收，如果超過其中一項的臨界值時，就會觸發層代 2 回收。 如果因為 LOH 而觸發了層代 2 回收，那麼在 GC 之後，層代 2 不一定會變得更小。 如果在層代 2 上沒有太多資料，其影響極小。 但是如果層代 2 很大，一旦觸發許多層代 2 GC，就可能會造成效能問題。 如果暫時配置了許多大型物件，而且您的 SOH 很大，則執行 GC 可能會花費太多時間。 此外，如果您繼續配置並釋放相當大的物件，配置的成本就會暴增。
 
 - 含有參考類型的陣列元素。
 
@@ -154,9 +154,9 @@ ms.locfileid: "57677162"
 
    顯示 LOH 的目前大小 (以位元組為單位)，包括可用空間。 這個計數器於記憶體回收的結尾更新，而非每次配置時更新。
 
-查看效能計數器的常用方式，就是利用效能監視器 (perfmon.exe)。 請使用 [新增計數器]，為您關心的處理序新增有意義的計數器。 您可以將效能計數器資料儲存到記錄檔中，如圖 4 所示。
+查看效能計數器的常用方式，就是利用效能監視器 (perfmon.exe)。 請使用 [新增計數器]，為您關心的處理序新增有意義的計數器。 您可以將效能計數器資料儲存到記錄檔中，如圖 4 所示：
 
-![圖 4：新增效能計數器。](media/loh/perfcounter.png)\
+![螢幕擷取畫面顯示新增效能計數器。](media/large-object-heap/add-performance-counter.png)
 圖 4：層代 2 GC 之後的 LOH
 
 效能計數器也可以用程式設計的方式來查詢。 許多人都會使用這種方式在日常測試程序中收集相關資訊。 當他們發覺到計數器有不正常的數值時，就可以使用其他方式取得詳細資料，來協助進行調查。
@@ -184,7 +184,8 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 結果看起來如下：
 
-![圖 5：使用 PerfView 檢查 ETW 事件](media/loh/perfview.png) 圖 5：使用 PerfView 顯示的 ETW 事件
+![螢幕擷取畫面顯示 PerfView 中的 ETW 事件。](media/large-object-heap/event-tracing-windows-perfview.png)
+圖 5：使用 PerfView 顯示的 ETW 事件
 
 如您所見，所有的 GC 都是層代 2 GC，而且它們都是由 AllocLarge 所觸發，這表示配置大型物件時觸發了此 GC。 我們知道這些配置是暫時的，因為 [LOH Survival Rate %] \(LOH 未回收率 %\) 資料行顯示 1%。
 
@@ -196,7 +197,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 會收集 AllocationTick 事件，大約每隔 100K 的配置就會引發該事件。 換句話說，每次配置大型物件時，就會引發事件。 接著，您可以查看其中一個 GC 堆積配置檢視，這些檢視可向您顯示已配置大型物件的呼叫堆疊：
 
-![圖 6：GC 堆積配置檢視](media/loh/perfview2.png)\
+![螢幕擷取畫面顯示記憶體回收行程堆積檢視。](media/large-object-heap/garbage-collector-heap.png)
 圖 6：GC 堆積配置檢視
 
 如您所見，這是非常簡單的測試，只會從其 `Main` 方法配置大型物件。
@@ -309,8 +310,8 @@ bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 
 此命令會中斷並進入偵錯工具，並且只有在配置大小大於 8MB (0x800000) 的情況下呼叫 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 時，才會顯示呼叫堆疊。
 
-CLR 2.0 中新增了稱為 *VM Hoarding* 的功能，對於經常取得再釋放區段 (包括在大型與小型物件堆積上) 的案例，此功能非常有用。 若要指定 VM Hoarding，您可以透過裝載 API 指定稱為 `STARTUP_HOARD_GC_VM` 的啟動旗標。 CLR 會取消認可這些區段上的記憶體並將其放置於待命清單上，而不會將空的區段釋放歸還給 OS。 (請注意，CLR 不會對太大的區段執行此操作)。CLR 稍後會使用這些區段來滿足新的區段要求。 下次您的應用程式需要新的區段時，CLR 如果能夠找到夠大的區段，就會使用此待命清單中的區段。
+CLR 2.0 中新增了稱為 *VM Hoarding* 的功能，對於經常取得再釋放區段 (包括在大型與小型物件堆積上) 的案例，此功能非常有用。 若要指定 VM Hoarding，您可以透過裝載 API 指定稱為 `STARTUP_HOARD_GC_VM` 的啟動旗標。 CLR 會取消認可這些區段上的記憶體並將其放置於待命清單上，而不會將空的區段釋放歸還給 OS。 (請注意，CLR 不會對太大的區段執行這項操作)。CLR 稍後會使用這些區段來滿足新的區段要求。 下次您的應用程式需要新的區段時，CLR 如果能夠找到夠大的區段，就會使用此待命清單中的區段。
 
 對於想要保存已取得區段以避免發生記憶體不足例外狀況的應用程式 (例如本身是系統上所執行之主控項應用程式的某些伺服器應用程式) 來說，VM hoarding 也很有用。
 
-強烈建議您在使用此功能時仔細測試應用程式，以確保應用程式的記憶體使用情形相當穩定。
+強烈建議您在使用這項功能時仔細測試應用程式，以確保應用程式的記憶體使用情形相當穩定。

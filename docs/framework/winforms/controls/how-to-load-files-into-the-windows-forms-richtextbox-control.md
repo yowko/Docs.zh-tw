@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將檔案載入 Windows Forms RichTextBox 控制項
+title: 作法：將檔案載入 Windows Forms RichTextBox 控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], opening files
 - RTF files [Windows Forms], displaying in RichTextBox control
 ms.assetid: c03451be-f285-4428-a71a-c41e002cc919
-ms.openlocfilehash: ffbce7401f068b3d0a7fee4fd8ba04c10cb6f6b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1288d89bc9ffd729b59626b88fd2f3ca61c8669d
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918550"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053547"
 ---
-# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>HOW TO：將檔案載入 Windows Forms RichTextBox 控制項
+# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>作法：將檔案載入 Windows Forms RichTextBox 控制項
 Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項可以顯示純文字、Unicode 純文字或 Rich Text 格式 (RTF) 檔案。 執行方式是呼叫 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 方法。 您也可以使用 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 方法從資料流載入資料。 如需詳細資訊，請參閱 <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>。  
   
 ### <a name="to-load-a-file-into-the-richtextbox-control"></a>將檔案載入 RichTextBox 控制項  
@@ -66,7 +66,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項可以顯示純�
        }  
     ```  
   
-     (Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 下列程式碼置於表單的建構函式，以註冊事件處理常式。  
+     (Visual C#、 Visual C++)下列程式碼置於表單的建構函式，以註冊事件處理常式。  
   
     ```csharp  
     this.btnOpenFile.Click += new System.EventHandler(this. btnOpenFile_Click);  

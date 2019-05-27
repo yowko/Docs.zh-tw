@@ -1,14 +1,14 @@
 ---
 title: C# 運算式 - C# 語言教學課程
-description: 運算式、運算元及運算子是 C# 語言的構成要素
-ms.date: 11/06/2016
+description: 運算式、運算元及運算子是 C# 語言的建置組塊
+ms.date: 04/25/2019
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 4ffe947a4cb8c36a5925a4b3846486e44a9d8ec4
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: ffe800304a9125e11e20d96a84919936f1fee2c1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480751"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753643"
 ---
 # <a name="expressions"></a>運算式
 
@@ -23,73 +23,11 @@ ms.locfileid: "59480751"
 
 您可以使用括弧來控制優先順序和關聯性。 例如，`x + y * z` 會先將 `y` 乘以 `z`，然後再將結果加到 `x`，而 `(x + y) * z` 則會先將 `x` 與 `y` 相加，然後再將結果乘以 `z`。
 
-大多數運算子都是可以「多載」的運算子。 運算子多載可允許針對一個運算元屬於 (或兩個運算元都屬於) 使用者定義之類別或結構型別的運算式，指定使用者定義的運算子實作。
+大部分的運算子都可以[「多載」](../language-reference/keywords/operator.md)。 運算子多載可允許針對一個運算元屬於 (或兩個運算元都屬於) 使用者定義之類別或結構型別的運算式，指定使用者定義的運算子實作。
 
-以下摘要說明 C# 運算子，其中依優先順序從最高到最低列出運算子分類。 相同分類中的運算子具有相等的優先順序。 每個分類底下是該分類中的運算式清單，以及該運算式型別的描述。
+C# 提供數個運算子，用於執行[算術](../language-reference/operators/arithmetic-operators.md)、[邏輯](../language-reference/operators/boolean-logical-operators.md)、[位元和移位](../language-reference/operators/bitwise-and-shift-operators.md)作業以及[相等](../language-reference/operators/equality-operators.md)和[順序](../language-reference/operators/comparison-operators.md)比較。
 
-* 主要
-  - `x.m`:成員存取
-  - `x(...)`:方法和委派叫用
-  - `x[...]`:陣列和索引子存取
-  - `x++`:後置遞增
-  - `x--`:後置遞減
-  - `new T(...)`:建立物件和委派
-  - `new T(...){...}`:使用初始設定式來建立物件
-  - `new {...}`:匿名物件初始設定式
-  - `new T[...]`:建立陣列
-  - `typeof(T)`:取得下列項目的 <xref:System.Type> 物件： `T`
-  - `checked(x)`:在核取的內容中評估運算式
-  - `unchecked(x)`:在未核取的內容中評估運算式
-  - `default(T)`:取得下列型別的預設值： `T`
-  - `delegate {...}`:匿名函式 (匿名方法)
-* 一元
-  - `+x`:身分識別
-  - `-x`:否定
-  - `!x`:邏輯否定
-  - `~x`:位元否定
-  - `++x`:前置遞增
-  - `--x`:前置遞減
-  - `(T)x`:明確地將 `x` 轉換為型別 `T`
-  - `await x`:以非同步方式等候 `x` 完成
-* 乘法類 (Multiplicative)
-  - `x * y`:乘法
-  - `x / y`:除號
-  - `x % y`:餘數
-* 加法類 (Additive)
-  - `x + y`:加法、字串串連、委派組合
-  - `x – y`:減法、委派移除
-* Shift
-  - `x << y`:左移
-  - `x >> y`:右移
-* 關係和型別測試
-  - `x < y`:小於
-  - `x > y`:大於
-  - `x <= y`:小於或等於
-  - `x >= y`:大於或等於
-  - `x is T`:如果 `x` 是 `T`，便傳回 `true`，否則傳回 `false`
-  - `x as T`:傳回型別設定為 `T` 的 `x`，或傳回 `null` (若 `x` 不等於 `T`
-* 相等
-  - `x == y`:等於
-  - `x != y`:不等於
-* 邏輯 AND
-  - `x & y`:整數位元 AND、布林邏輯 AND
-* 邏輯 XOR
-  - `x ^ y`:整數位元 XOR、布林邏輯 XOR
-* 邏輯 OR
-  - `x | y`:整數位元 OR、布林邏輯 OR
-* 條件式 AND
-  - `x && y`:只有在 `x` 不等於下列項目的情況下才評估 `y` `false`
-* 條件式 OR
-  - `x || y`:只有在 `x` 不等於下列項目的情況下才評估 `y` `true`
-* Null 聯合
-  - `x ?? y`:如果 `x` 是 null，便評估為 `y`，否則評估為 `x`
-* 條件式
-  - `x ? y : z`:評估 `y` (若 `x` 為 `true`)，或評估 `z` (若 `x` 為下列值： `false`
-* 指派或匿名函式
-  - `x = y`:指派
-  - `x op= y`:複合指派；支援的運算子包括
-    - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
-  - `(T x) => y`:匿名函式 (Lambda 運算式)
+如需按優先順序層級排序的 C# 運算子完整清單，請參閱 [C# 運算子](../language-reference/operators/index.md)。
 
 > [!div class="step-by-step"]
 > [上一頁](types-and-variables.md)

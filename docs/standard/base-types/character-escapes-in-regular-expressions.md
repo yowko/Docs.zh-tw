@@ -18,19 +18,19 @@ ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 2643e6ec1edf9cd69d7530def1e2605e1af20de4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 71da71d1331e9eab818a7492daa230f758840762
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152356"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634659"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>在規則運算式中執行字元逸出
 規則運算式中的反斜線 (\\) 表示下列其中之一：  
   
--   它後面所接的字元是特殊字元，如下節中的資料表所示。 比方說，`\b` 是表示規則運算式比對應該在文字邊界上開始的一個錨點，`\t` 代表索引標籤，而 `\x020` 代表空間。  
+- 它後面所接的字元是特殊字元，如下節中的資料表所示。 比方說，`\b` 是表示規則運算式比對應該在文字邊界上開始的一個錨點，`\t` 代表索引標籤，而 `\x020` 代表空間。  
   
--   一個字元應該依其字面來解譯，否則會被解譯為未逸出的語言結構。 例如，括號 (`{`) 開始定義數量詞，但是反斜線後面接著一個括號 (`\{`) 則表示規則運算式引擎應該與括號相符。 同樣地，單一反斜線標記逸出的語言建構之開頭，但兩個反斜線 (`\\`) 表示規則運算式引擎應該符合反斜線。  
+- 一個字元應該依其字面來解譯，否則會被解譯為未逸出的語言結構。 例如，括號 (`{`) 開始定義數量詞，但是反斜線後面接著一個括號 (`\{`) 則表示規則運算式引擎應該與括號相符。 同樣地，單一反斜線標記逸出的語言建構之開頭，但兩個反斜線 (`\\`) 表示規則運算式引擎應該符合反斜線。  
   
 > [!NOTE]
 >  逸出字元會在規則運算式模式而不是在取代模式中被辨識。  
@@ -52,7 +52,7 @@ ms.locfileid: "53152356"
 |`\` *nnn*|符合 ASCII 字元，其中 *nnn* 是由代表八進位字元碼的兩個或三個數字所組成。 例如，`\040` 代表空格字元。 其若只有一個數字 (例如 `\2`)，或其對應至擷取群組的編號，會將此建構解譯為反向參考  (請參閱[反向參考建構](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。)|  
 |`\x` *nn*|符合 ASCII 字元，其中 *nn* 是兩位數的十六進位字元碼。|  
 |`\c` *X*|符合 ASCII 控制字元，其中 X 是控制字元的字母。 例如，`\cC` 是 CTRL + C。|  
-|`\u` *nnnn*|符合 UTF-16 字碼單位，其值為十六進位的 *nnnn*。 **注意：**.NET 不支援用來指定 Unicode 的 Perl 5 逸出字元。 Perl 5 字元逸出的形式是 `\x{`*####*`…}`，其中 *####*`…` 是一系列的十六進位數字。 請改用 `\u`*nnnn*。|  
+|`\u` *nnnn*|符合 UTF-16 字碼單位，其值為十六進位的 *nnnn*。 **注意：** .NET 不支援用來指定 Unicode 的 Perl 5 逸出字元。 Perl 5 字元逸出的形式是 `\x{` *####* `…}`，其中 *####* `…` 是一系列的十六進位數字。 請改用 `\u`*nnnn*。|  
 |`\`|當後面加上一個不被認為是逸出的字元時，符合該字元。 例如，`\*` 符合使用星號 (*)，而且與 `\x2A` 相同。|  
   
 ## <a name="an-example"></a>範例  

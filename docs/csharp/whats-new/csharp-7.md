@@ -3,19 +3,19 @@ title: C# 7.0 的新功能 - C# 指南
 description: 取得 C# 語言版本 7.0 中新功能的概觀。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 69e32bf6aae0da15c23e8f08da8c2bb9e3d3456e
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 942a126ae026897d608c9fb077fc5f10ff73c110
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481297"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753067"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 的新功能
 
 C# 7.0 新增許多新功能至 C# 語言：
 * [`out` 變數](#out-variables)
   - 您可以宣告 `out` 內嵌值作為使用它們之方法的引數。
-* [Tuple](#tuples)
+* [元組](#tuples)
   - 您可以建立包含多個公用欄位的輕量、未具名的類型。 編譯器和 IDE 工具了解這些類型的語意。
 * [捨棄](#discards)
   - 捨棄是當您不在意指派的值時，於指派內使用的僅限寫入且暫時之變數。 解構 Tuple 及使用者定義型別，以及使用 `out` 參數呼叫方法時，捨棄最為實用。
@@ -27,11 +27,11 @@ C# 7.0 新增許多新功能至 C# 語言：
   - 您可以將函式巢狀放置在其他函式內，限制其範圍和可視性。
 * [更多運算式主體成員](#more-expression-bodied-members)
   - 可以使用運算式來撰寫的成員清單已經增長。
-* [`throw` 運算式](#throw-expressions)
+* [`throw`運算式](#throw-expressions)
   - 您可以在程式碼建構中擲回例外狀況 (因為先前 `throw` 是陳述式，所以您無法這麼做)。
 * [通用的非同步傳回型別](#generalized-async-return-types)
   - 使用 `async` 修飾詞宣告的方法除了 `Task` 和 `Task<T>` 之外，也能傳回其他類型。
-* [數值常值的語法增強功能](#numeric-literal-syntax-improvements)
+* [數值常值語法增強功能](#numeric-literal-syntax-improvements)
   - 新的語彙基元改善了數值常數的可讀性。
 
 此文章的其餘部分將概述各個功能。 您將了解每項功能背後的原因。 您將了解語法。 您可以在這些功能的[互動式探索](../tutorials/exploration/csharp-7.yml)中探索這些功能。
@@ -180,7 +180,7 @@ C# 語言具備數個規則，可防止您濫用 `ref` 區域變數並傳回︰
 * `ref return` 可能會指派給值變數，或 `ref` 變數。
   - 呼叫端會控制是否要複製傳回值。 指派傳回值時省略 `ref` 修飾詞表示呼叫端需要值的複本，而不是儲存體的參考。
 * 您無法將標準方法傳回值指派到 `ref` 區域變數。
-  - 這可杜絕陳述式，例如 `ref int i = sequence.Count();`
+  - 這可杜絕類似 `ref int i = sequence.Count();` 的陳述式
 * 您無法將 `ref` 傳回給其存留期不超過方法執行的變數。
   - 這表示您無法將參考傳回區域變數或具有類似範圍的變數。
 * `ref` 區域變數及傳回值無法配合非同步方法使用。
@@ -194,7 +194,7 @@ C# 語言具備數個規則，可防止您濫用 `ref` 區域變數並傳回︰
 
 ## <a name="local-functions"></a>區域函式
 
-類別的許多設計都包括從唯一一個位置呼叫的方法。 這些額外的私用方法會使每一種方法維持小而聚焦。 「區域函式」可讓您在另一個方法的內容中宣告方法。 區域函式可讓類別的讀者更容易看到區域方法只會從它宣告所在的內容呼叫。
+類別的許多設計都包括從唯一一個位置呼叫的方法。 這些額外的私用方法會使每一種方法維持小而聚焦。 「區域函式」可讓您在另一個方法的內容中宣告方法。 區域函式可讓類別讀者輕鬆查看區域方法只會從其宣告的內容中呼叫。
 
 有兩個常見的區域函式使用案例︰公用迭代器方法和公用非同步方法。 這兩種方法都會產生程式碼，比程式設計人員想像更晚才報告錯誤。 在迭代器方法中，任何例外狀況只會在呼叫列舉傳回序列的程式碼時觀察到。 在非同步方法中，任何例外狀況只會在傳回的 `Task` 等候時觀察到。 下列範例示範使用區域函式分隔參數驗證和迭代器實作：
 

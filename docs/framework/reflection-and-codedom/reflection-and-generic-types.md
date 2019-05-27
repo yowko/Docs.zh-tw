@@ -17,42 +17,42 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a45ef91eba38223270a04cff2f00c30decb019f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0536acbcc71ae7792ec668ac352e95e604bd979
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399700"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591359"
 ---
 # <a name="reflection-and-generic-types"></a>反映和泛用類型
 <a name="top"></a> 從反映的的觀點來看，泛型類型與一般類型間的差異在於泛型類型具有與其相關聯的一組類型參數 (若其定義為泛型類型) 或類型引數 (若其為建構類型)。 泛型方法與一般方法的差異也如同上述。  
   
  了解反映如何處理泛型類型和方法有兩種方式：  
   
--   <xref:System.Type> 類別的執行個體，代表泛型類型定義與泛型方法定義的類型參數。  
+- <xref:System.Type> 類別的執行個體，代表泛型類型定義與泛型方法定義的類型參數。  
   
     > [!NOTE]
     >  <xref:System.Type> 物件代表泛型類型參數時，許多 <xref:System.Type> 的屬性與方法會有不同的行為。 這些差異皆記錄在屬性與方法主題中。 如需範例，請參閱 <xref:System.Type.IsAutoClass%2A> 與 <xref:System.Type.DeclaringType%2A>。 此外，部分成員僅限於 <xref:System.Type> 物件代表泛型類型參數時才有效。 如需範例，請參閱 <xref:System.Type.GetGenericTypeDefinition%2A>。  
   
--   如果 <xref:System.Type> 的執行個體代表泛型類型，則其包含一個代表類型參數 (若是泛型類型定義) 或代表類型引數 (若是建構類型) 的類型陣列。 上述同樣適用於代表泛型方法之 <xref:System.Reflection.MethodInfo> 類別的執行個體。  
+- 如果 <xref:System.Type> 的執行個體代表泛型類型，則其包含一個代表類型參數 (若是泛型類型定義) 或代表類型引數 (若是建構類型) 的類型陣列。 上述同樣適用於代表泛型方法之 <xref:System.Reflection.MethodInfo> 類別的執行個體。  
   
  反映提供允許您存取類型參數陣列之 <xref:System.Type> 和 <xref:System.Reflection.MethodInfo> 的方法，並決定 <xref:System.Type> 的執行個體是否代表類型參數或實際的類型。  
   
- 如需示範此處所探論之方法的程式碼範例，請參閱[如何：使用反映檢視和執行個體化泛型型別](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)。  
+ 如需示範此處討論之方法的範例程式碼，請參閱[如何：使用反映檢查和具現化泛型型別](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)。  
   
  下列討論假設您熟悉泛型術語，例如類型參數與引數之間的差異，以及引數與開放式或封閉式的建構類型。 如需詳細資訊，請參閱[泛型](../../../docs/standard/generics/index.md)。  
   
  本概觀包含下列各節：  
   
--   [這是泛型類型或泛型方法？](#is_this_a_generic_type_or_method)  
+- [這是泛型類型或泛型方法？](#is_this_a_generic_type_or_method)  
   
--   [產生封閉式泛型類型](#generating_closed_generic_types)  
+- [產生封閉式泛型類型](#generating_closed_generic_types)  
   
--   [檢查類型引數與類型參數](#examining_type_arguments)  
+- [檢查類型引數與類型參數](#examining_type_arguments)  
   
--   [非變異值](#invariants)  
+- [非變異值](#invariants)  
   
--   [相關主題](#related_topics)  
+- [相關主題](#related_topics)  
   
 <a name="is_this_a_generic_type_or_method"></a>   
 ## <a name="is-this-a-generic-type-or-method"></a>這是泛型類型或泛型方法？  
@@ -115,9 +115,9 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 ### <a name="source-of-a-generic-parameter"></a>泛型參數的來源  
  泛型類型參數可能來自於目前正在檢查的類型、封入類型，或是來自泛型方法。 您可以透過下列方式來判斷泛型類型參數的來源：  
   
--   首先，使用 <xref:System.Type.DeclaringMethod%2A> 屬性來判斷類型參數是否來自泛型方法。 如果屬性值不是 null 參考 (在 Visual Basic 中為`Nothing` )，則來源為泛型方法。  
+- 首先，使用 <xref:System.Type.DeclaringMethod%2A> 屬性來判斷類型參數是否來自泛型方法。 如果屬性值不是 null 參考 (在 Visual Basic 中為`Nothing` )，則來源為泛型方法。  
   
--   如果來源不是泛型方法，請使用 <xref:System.Type.DeclaringType%2A> 屬性來判斷泛型類型參數所屬的泛型類型。  
+- 如果來源不是泛型方法，請使用 <xref:System.Type.DeclaringType%2A> 屬性來判斷泛型類型參數所屬的泛型類型。  
   
  如果類型參數屬於泛型的方法， <xref:System.Type.DeclaringType%2A> 屬性會傳回原先宣告泛型方法但不相關的類型。  
   
@@ -147,9 +147,9 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|標題|說明|  
 |-----------|-----------------|  
-|[如何：使用反映檢視和執行個體化泛型型別](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|示範如何使用 <xref:System.Type> 和 <xref:System.Reflection.MethodInfo> 的屬性及方法，來檢查泛型類型。|  
+|[如何：使用反映檢視並具現化泛型型別](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|示範如何使用 <xref:System.Type> 和 <xref:System.Reflection.MethodInfo> 的屬性及方法，來檢查泛型類型。|  
 |[泛型](../../../docs/standard/generics/index.md)|說明泛型功能，及在 .NET Framework 下如何加以支援。|  
-|[操作說明：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|示範如何在動態組件中使用反映發出以產生泛型類型。|  
+|[如何：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|示範如何在動態組件中使用反映發出以產生泛型類型。|  
 |[檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|描述 <xref:System.Type> 類別，並提供程式碼範例以說明如何搭配不同的反映類別來使用 <xref:System.Type>，以取得建構函式、方法、欄位、屬性與事件的相關資訊。|

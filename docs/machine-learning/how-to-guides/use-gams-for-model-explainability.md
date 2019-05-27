@@ -1,14 +1,14 @@
 ---
-title: 在 ML.NET 中針對模型可解釋性使用一般化累加模型與圖形函式
+title: 將一般化累加模型與圖形函式用於模型可解釋性
 description: 在 ML.NET 中針對模型可解釋性使用一般化累加模型與圖形函式
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: f7b8b9a3daabb16f59c901911a1f6950ce864fff
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ef56f737a2ad0cba616e32229ac3a395146fb6d2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675585"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662135"
 ---
 # <a name="use-generalized-additive-models-and-shape-functions-for-model-explainability-in-mlnet"></a>在 ML.NET 中針對模型可解釋性使用一般化累加模型與圖形函式
 

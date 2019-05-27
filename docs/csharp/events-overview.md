@@ -3,12 +3,12 @@ title: 事件簡介
 description: 透過此概觀了解 .NET Core 中的事件，以及事件的語言設計目標。
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: 9f14954dd2e8aeacf3c5ae70a9e891ad11a6f0d7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e2944100d648d90e7aa5ea5798a351b8fd382cf7
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45747091"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051945"
 ---
 # <a name="introduction-to-events"></a>事件簡介
 
@@ -65,7 +65,8 @@ Progress?.Invoke(this, new FileListArgs(file));
 ```csharp
 EventHandler<FileListArgs> onProgress = (sender, eventArgs) => 
     Console.WriteLine(eventArgs.FoundFile);
-lister.Progress += onProgress;
+
+fileLister.Progress += onProgress;
 ```
 
 處理常式方法通常是前置詞 'On' 後面接事件名稱，如上所示。
@@ -73,7 +74,7 @@ lister.Progress += onProgress;
 使用 `-=` 運算子取消訂閱事件：
 
 ```csharp
-lister.Progress -= onProgress;
+fileLister.Progress -= onProgress;
 ```
 
 請務必注意，我宣告了表示事件處理常式的運算式區域變數。 這可確保取消訂閱移除處理常式。

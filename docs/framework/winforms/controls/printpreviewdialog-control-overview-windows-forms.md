@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 961b3c852f60a0917707bef07d4e26fc4215acca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dce6bf9cb9872183e60e6ccdf7eaf79b6630db51
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012551"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053701"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>PrintPreviewDialog 控制項概觀 (Windows Form)
 
@@ -23,7 +23,7 @@ Windows Forms<xref:System.Windows.Forms.PrintPreviewDialog>控制項是預先設
 
 控制項的索引鍵屬性是<xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>，可設定要預覽的文件。 必須是文件<xref:System.Drawing.Printing.PrintDocument>物件。 若要顯示對話方塊，您必須呼叫其<xref:System.Windows.Forms.Form.ShowDialog%2A>方法。 消除鋸齒可以讓文字出現更順暢，但可能也會使速度較慢; 顯示若要使用它，將<xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A>屬性設`true`。
 
-某些屬性都是透過<xref:System.Windows.Forms.PrintPreviewControl>，<xref:System.Windows.Forms.PrintPreviewDialog>包含。 (您沒有新增這<xref:System.Windows.Forms.PrintPreviewControl>表單中; 它會自動包含在<xref:System.Windows.Forms.PrintPreviewDialog>將對話方塊新增至您的表單。)屬性可透過範例<xref:System.Windows.Forms.PrintPreviewControl>都<xref:System.Windows.Forms.PrintPreviewControl.Columns%2A>和<xref:System.Windows.Forms.PrintPreviewControl.Rows%2A>屬性，負責決定控制項上顯示水平和垂直的頁數。 您可以存取<xref:System.Windows.Forms.PrintPreviewControl.Columns%2A>屬性設為`PrintPreviewDialog1.PrintPreviewControl.Columns`在 Visual Basic`printPreviewDialog1.PrintPreviewControl.Columns`視覺效果中C#，或`printPreviewDialog1->PrintPreviewControl->Columns`中[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]。
+某些屬性都是透過<xref:System.Windows.Forms.PrintPreviewControl>，<xref:System.Windows.Forms.PrintPreviewDialog>包含。 (您沒有新增這<xref:System.Windows.Forms.PrintPreviewControl>表單中; 它會自動包含在<xref:System.Windows.Forms.PrintPreviewDialog>將對話方塊新增至您的表單。)屬性可透過範例<xref:System.Windows.Forms.PrintPreviewControl>都<xref:System.Windows.Forms.PrintPreviewControl.Columns%2A>和<xref:System.Windows.Forms.PrintPreviewControl.Rows%2A>屬性，負責決定控制項上顯示水平和垂直的頁數。 您可以存取<xref:System.Windows.Forms.PrintPreviewControl.Columns%2A>屬性設為`PrintPreviewDialog1.PrintPreviewControl.Columns`在 Visual Basic`printPreviewDialog1.PrintPreviewControl.Columns`視覺效果中C#，或`printPreviewDialog1->PrintPreviewControl->Columns`視覺效果中C++。
 
 ## <a name="printpreviewdialog-performance"></a>PrintPreviewDialog 效能
 

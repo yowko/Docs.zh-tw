@@ -2,19 +2,19 @@
 title: 分組資料 (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 079f346435e2f21b7c46b528d68f917f5532db66
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a85babc43f673711fe1bdfa5cec1836a5073c785
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583216"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753924"
 ---
 # <a name="grouping-data-c"></a>分組資料 (C#)
 分組指的是將資料放在群組中，好讓每一個群組中的項目共用共同的屬性。  
   
  下圖顯示一系列字元的分組結果。 每個群組的索引鍵是字元。  
   
- ![LINQ 群組作業](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")  
+ ![顯示 LINQ 群組作業的圖表。](./media/grouping-data/linq-group-operation.png)  
   
  分組資料項目的標準查詢運算子方法詳列於下一節。  
   
@@ -68,4 +68,4 @@ foreach (var group in query)
 - [如何：依副檔名分組檔案 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
 - [如何：將查詢結果分組](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)
 - [如何：在分組作業上執行子查詢](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
-- [如何：使用群組將檔案分割成許多檔案 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [如何：使用群組將檔案分割成多個檔案 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

@@ -10,31 +10,31 @@ helpviewer_keywords:
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8024fe6673b39a611c55eb55742bcfd981300e7e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 57f274d55ba5723ce8e0b51a7a39e98e95855e28
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702942"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64653932"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL 和傳統 .NET Framework 非同步程式設計
 .NET Framework 提供下列兩個標準模式執行 I/O 繫結程序和計算繫結程序的非同步作業：  
   
--   非同步程式設計模型 (APM)，在這個模式中非同步作業會以一對 Begin/End 方法表示，例如 <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> 和 <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>。  
+- 非同步程式設計模型 (APM)，在這個模式中非同步作業會以一對 Begin/End 方法表示，例如 <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> 和 <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>。  
   
--   事件式非同步模式 (EAP)，在這個模式中非同步作業會以一對名為 *OperationName*Async 和 *OperationName*Completed 的方法/事件組表示，例如 <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> 和 <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>。 (EAP 是在 .NET Framework 2.0 版中引入的。)  
+- 事件式非同步模式 (EAP)，在這個模式中非同步作業會以一對名為 *OperationName*Async 和 *OperationName*Completed 的方法/事件組表示，例如 <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> 和 <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>。 (EAP 是在 .NET Framework 2.0 版中引入的。)  
   
  工作平行程式庫 (TPL) 可以用各種方式搭配非同步模式的其中一種。 您可以將 APM 和 EAP 作業做為工作公開給程式庫的取用者，或公開 APM 模式，但使用工作物件在內部實作它們。 在這兩種案例，您可以使用工作物件簡化程式碼，並利用下列好用的功能：  
   
--   在啟動工作的任何時間之後，註冊工作接續形式的回呼。  
+- 在啟動工作的任何時間之後，註冊工作接續形式的回呼。  
   
--   使用 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> 和 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> 方法，或 <xref:System.Threading.Tasks.Task.WaitAll%2A> 方法、<xref:System.Threading.Tasks.Task.WaitAny%2A> 方法協調多項為回應 `Begin_` 方法而執行的作業。  
+- 使用 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> 和 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> 方法，或 <xref:System.Threading.Tasks.Task.WaitAll%2A> 方法、<xref:System.Threading.Tasks.Task.WaitAny%2A> 方法協調多項為回應 `Begin_` 方法而執行的作業。  
   
--   在相同工作物件中封裝非同步 I/O 繫結和計算繫結的作業。  
+- 在相同工作物件中封裝非同步 I/O 繫結和計算繫結的作業。  
   
--   監視工作物件的狀態。  
+- 監視工作物件的狀態。  
   
--   使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 封送處理作業狀態給工作物件。  
+- 使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 封送處理作業狀態給工作物件。  
   
 ## <a name="wrapping-apm-operations-in-a-task"></a>在工作中包裝 APM 作業  
  <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> 類別都會提供數個 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType> 方法的多載，可讓您封裝 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 執行個體的其中一種 APM Begin/End 方法組。 這幾種多載會容納具有零到三個輸入參數的任何 Begin/End 方法組。  
@@ -50,13 +50,13 @@ ms.locfileid: "46702942"
   
  第一個參數是 <xref:System.Func%606> 委派，這與 <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> 方法的簽章相符。 第二個參數是 <xref:System.Func%602> 委派，會取得 <xref:System.IAsyncResult> 並傳回 `TResult`。 因為 <xref:System.IO.FileStream.EndRead%2A> 會傳回整數，所以編譯器會推斷 `TResult` 的類型為 <xref:System.Int32>，並且推斷工作的類型為 <xref:System.Threading.Tasks.Task>。 最後四個參數和在 <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> 方法中的相同：  
   
--   用來儲存檔案資料的緩衝區。  
+- 用來儲存檔案資料的緩衝區。  
   
--   開始寫入資料的緩衝區之位移。  
+- 開始寫入資料的緩衝區之位移。  
   
--   從檔案讀取的資料數量上限。  
+- 從檔案讀取的資料數量上限。  
   
--   選擇性的物件，其中儲存要傳遞至回呼的使用者定義狀態資料。  
+- 選擇性的物件，其中儲存要傳遞至回呼的使用者定義狀態資料。  
   
 ### <a name="using-continuewith-for-the-callback-functionality"></a>對於回呼功能使用 ContinueWith  
  如果您需要在檔案中資料的存取權，而不只是需要位元組數，則 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法仍不足夠。 請改用 <xref:System.Threading.Tasks.Task>，其 `Result` 屬性包含檔案資料。 您可將接續加入原始工作來達到此目的。 接續會執行通常由 <xref:System.AsyncCallback> 委派所執行的工作。 當前項完成，而且資料緩衝區已滿時，則會叫用它。 (<xref:System.IO.FileStream> 物件應該在傳回之前關閉。)  

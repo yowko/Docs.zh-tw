@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Windows Forms 應用程式中顯示預覽列印
+title: 作法：在 Windows Forms 應用程式中顯示預覽列印
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: cfdc8d21b3ddad19fd38eef9cb1c506920da9de6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9efccc220bb27706448ae555db8958afb0ccd9fa
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609889"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053599"
 ---
-# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>HOW TO：在 Windows Forms 應用程式中顯示預覽列印
+# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>作法：在 Windows Forms 應用程式中顯示預覽列印
 您可以使用<xref:System.Windows.Forms.PrintPreviewDialog>控制項，讓使用者以顯示文件，通常要列印之前。  
   
  若要這樣做，您需要指定的執行個體<xref:System.Drawing.Printing.PrintDocument>類別; 這是要列印的文件。 如需有關使用使用預覽列印<xref:System.Drawing.Printing.PrintDocument>元件，請參閱[How to:使用預覽列印 Windows Forms 中列印](../advanced/how-to-print-in-windows-forms-using-print-preview.md)。  
@@ -70,7 +70,7 @@ ms.locfileid: "64609889"
        }  
     ```  
   
-     (Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 下列程式碼置於表單的建構函式，以註冊事件處理常式。  
+     (Visual C#、 Visual C++)下列程式碼置於表單的建構函式，以註冊事件處理常式。  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  

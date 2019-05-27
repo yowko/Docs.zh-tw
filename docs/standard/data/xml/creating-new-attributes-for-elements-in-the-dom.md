@@ -8,19 +8,19 @@ dev_langs:
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 870e800220031338557792fa612d4a3101e79f90
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9cbef07e3db294dd4c0ffca1f25c15ec39e6ecf3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024567"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647937"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>為 DOM 中的項目建立新屬性
 建立新屬性不同於建立其他的節點型別，因為屬性不是節點，而是項目節點的屬性且包含於與項目相關的 **XmlAttributeCollection** 中。 有許多方法可以建立屬性並且將它附加於項目：  
   
--   取得項目節點並且使用 **SetAttribute** 將屬性加入此項目的屬性集合。  
+- 取得項目節點並且使用 **SetAttribute** 將屬性加入此項目的屬性集合。  
   
--   使用 **CreateAttribute** 方法建立 **XmlAttribute** 節點，取得項目節點，然後使用 **SetAttributeNode** 將節點加入此項目的屬性集合。  
+- 使用 **CreateAttribute** 方法建立 **XmlAttribute** 節點，取得項目節點，然後使用 **SetAttributeNode** 將節點加入此項目的屬性集合。  
   
  下列範例顯示如何使用 **SetAttribute** 方法將屬性加入項目。  
   
@@ -122,7 +122,7 @@ doc.DocumentElement.SetAttributeNode(attr);
  如果您建立了宣告要有預設屬性的項目，那麼具有預設值的新預設屬性會由 XML 文件物件模型 (DOM) 建立並且附加於項目。 預設屬性的子節點也會在此時建立。  
   
 ## <a name="attribute-child-nodes"></a>屬性子節點  
- 屬性節點的值會成為它的子節點。 有效的子節點有兩種型別：**XmlText** 節點和 **XmlEntityReference** 節點。 這些子節點讓像 **FirstChild** 和 **LastChild** 的方法能夠將它們當成子節點處理。 這種擁有子節點的屬性的區別在嘗試移除屬性或屬性子節點時很重要。 如需詳細資訊，請參閱[移除 DOM 中項目節點的屬性](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md)。  
+ 屬性節點的值會成為它的子節點。 有效的子節點有兩種類型：**XmlText** 節點與 **XmlEntityReference** 節點。 這些子節點讓像 **FirstChild** 和 **LastChild** 的方法能夠將它們當成子節點處理。 這種擁有子節點的屬性的區別在嘗試移除屬性或屬性子節點時很重要。 如需詳細資訊，請參閱[移除 DOM 中項目節點的屬性](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

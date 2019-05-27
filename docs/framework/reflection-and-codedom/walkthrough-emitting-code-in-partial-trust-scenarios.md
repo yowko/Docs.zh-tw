@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54a6a1cda604cb9cdeecd9587af81dbdb810965c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f461490529f626cfc442d817840b9c2e64df4c19
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592445"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585922"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>逐步解說：在部分信任情節中發出程式碼
 反映發出在完整或部分信任中使用相同的 API 集合，但在部分信任程式碼中，有些功能需要特殊權限。 此外，反映發出還有一項匿名裝載動態方法的功能，設計搭配部分信任使用並可供安全性透明組件使用。  
@@ -77,12 +77,12 @@ ms.locfileid: "64592445"
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
   
-     <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> 方法多載的最後一個參數可讓您指定組件集合，授與完全信任，而不是應用程式定義域的授權集。 因為這些組件位於全域組件快取，所以您不必指定應用程式使用的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 組件。 全域組件快取中的組件一律為完全信任。 您可以使用這個參數指定不在全域組件快取中的強式名稱組件。  
+     <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> 方法多載的最後一個參數可讓您指定組件集合，授與完全信任，而不是應用程式定義域的授權集。 因為這些組件位於全域組件快取，所以您不必指定應用程式使用的 .NET Framework 組件。 全域組件快取中的組件一律為完全信任。 您可以使用這個參數指定不在全域組件快取中的強式名稱組件。  
   
 ### <a name="adding-restrictedmemberaccess-to-sandboxed-domains"></a>將 RestrictedMemberAccess 新增至沙箱定義域  
  主應用程式可以允許匿名裝載的動態方法，存取組件中的私用資料，這些組件的信任層級都等於或低於發出程式碼的組件信任層級。 若要啟用此有限功能以略過 Just-In-Time (JIT) 可視性檢查，主應用程式會將具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> (RMA) 旗標的 <xref:System.Security.Permissions.ReflectionPermission> 物件新增至授權集。  
   
- 例如，主機可能會授與網際網路應用程式加上 RMA 的網際網路權限，讓網際網路應用程式可以發出程式碼，存取自己組件中的私用資料。 因為限制存取相同或較低信任的組件，所以網際網路應用程式無法存取完全信任組件的成員，例如 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 組件。  
+ 例如，主機可能會授與網際網路應用程式加上 RMA 的網際網路權限，讓網際網路應用程式可以發出程式碼，存取自己組件中的私用資料。 因為存取已限制在相同或較低信任的組件，所以網際網路應用程式無法存取完全信任組件的成員，例如 .NET Framework 組件。  
   
 > [!NOTE]
 >  為防止提高權限，建構匿名裝載的動態方法時，會包含發出組件的堆疊資訊。 叫用方法時會檢查堆疊資訊。 因此，從完全信任程式碼叫用的匿名裝載動態方法，其信任層級仍限於發出組件的信任層級。  
@@ -169,7 +169,7 @@ ms.locfileid: "64592445"
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
   
-     限制是匿名裝載的動態方法只可以存取信任層級等於或低於發出組件信任層級的組件私用資料。 例如，如果動態方法是以網際網路信任執行，它就可以存取也以網際網路信任執行的其他組件的私用資料，但無法存取 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 組件的私用資料。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 組件安裝在全域組件快取中，一律為完全信任。  
+     限制是匿名裝載的動態方法只可以存取信任層級等於或低於發出組件信任層級的組件私用資料。 例如，如果動態方法是以網際網路信任執行，它就可以存取也以網際網路信任執行的其他組件私有資料，但無法存取 .NET Framework 組件的私有資料。 .NET Framework 組件安裝在全域組件快取中，一律為完全信任。  
   
      只有當主應用程式授權有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission> 時，匿名裝載動態方法才可以使用此有限功能略過 JIT 可見度檢查。 叫用方法時才要求此權限。  
   
