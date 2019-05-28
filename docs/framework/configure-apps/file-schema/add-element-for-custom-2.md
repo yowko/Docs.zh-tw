@@ -16,13 +16,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61705489"
 ---
-# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<新增 > NameValueSectionHandler 和 DictionarySectionHandler 的項目
+# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a> \<新增> NameValueSectionHandler 和 DictionarySectionHandler 的項目
 
-加入自訂應用程式設定。 每個**\<新增 >** 標記包含索引鍵/值組。
+加入自訂應用程式設定。 每個 **\<新增>** 標記包含索引鍵/值組。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**
 
 ## <a name="syntax"></a>語法
 
@@ -41,7 +41,7 @@ ms.locfileid: "61705489"
 
 | 項目 | 描述 |
 | ------- | ------------|
-| [**\<sectionName >** 項目](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定義設定使用的自訂組態區段<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。 |
+| [ **\<sectionName >** 項目](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定義設定使用的自訂組態區段<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -49,7 +49,7 @@ None
 
 ## <a name="example"></a>範例
 
-下列範例示範如何定義自訂組態區段，然後使用**\<新增 >** 放一節中的設定項目：
+下列範例示範如何定義自訂組態區段，然後使用 **\<新增>** 放一節中的設定項目：
 
 ```xml
 <configuration>
