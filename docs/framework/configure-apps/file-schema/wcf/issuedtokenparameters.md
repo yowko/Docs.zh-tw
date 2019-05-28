@@ -52,7 +52,7 @@ ms.locfileid: "61758233"
 |inclusionMode|指定權杖內含需求。 此屬性的型別為 <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>。|  
 |keySize|指定權杖金鑰大小的整數。 預設值為 256。|  
 |keyType|指定金鑰型別之 <xref:System.IdentityModel.Tokens.SecurityKeyType> 的有效值。 預設為 `SymmetricKey`。|  
-|tokenType|指定權杖型別的字串。 預設值為「 http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAML」。|  
+|tokenType|指定權杖型別的字串。 預設值為「 http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAML 」。|  
   
 ### <a name="child-elements"></a>子元素  
   
