@@ -1,11 +1,13 @@
 - name: 運算式樹狀架構
   href: index.md
   items:
-    - name: HOW TO：執行運算式樹狀架構
+    - name: 作法：執行運算式樹狀架構
       href: how-to-execute-expression-trees.md
-    - name: HOW TO：修改運算式樹狀架構
+    - name: 作法：修改運算式樹狀架構
       href: how-to-modify-expression-trees.md
-    - name: HOW TO：使用運算式樹狀架構建置動態查詢
+    - name: 作法：使用運算式樹狀架構建置動態查詢
       href: how-to-use-expression-trees-to-build-dynamic-queries.md
     - name: 對運算式樹狀架構進行偵錯
       href: debugging-expression-trees-in-visual-studio.md
+    - name: DebugView 語法
+      href: debugview-syntax.md

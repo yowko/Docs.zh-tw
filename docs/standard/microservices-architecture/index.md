@@ -2,12 +2,12 @@
 title: .NET 微服務。 容器化 .NET 應用程式的架構
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 微服務是模組化的獨立可部署服務。 適用於 Linux 與 Windows 的 Docker 容器，可統合服務及其相依性到單一個單位，簡化部署及測試，然後即可於隔離的環境中執行。
 ms.date: 01/07/2019
-ms.openlocfilehash: bbd72b02ae446bbd0df31889679023d3b5040db8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a348a9c122ef7f0293a1385aa05dc98f61deab7e
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644416"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195978"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服務：容器化 .NET 應用程式的架構
 
@@ -31,7 +31,7 @@ ms.locfileid: "65644416"
 
 ## <a name="introduction"></a>簡介
 
-企業透過容器，逐漸實現成本節約、解決部署問題，以及改善 DevOps 和生產環境作業。 Microsoft 藉由建立 Azure Container Service 和 Azure Service Fabric 等產品，以及藉由與 Docker、Mesosphere 和 Kubernetes 等業界領導者合作，不斷為 Windows 和 Linux 創新容器。 這些產品提供容器解決方案，可協助公司以雲端速度和規模建置及部署應用程式，而不論其選擇的平台或工具為何。
+企業透過容器，逐漸實現成本節約、解決部署問題，以及改善 DevOps 和生產環境作業。 Microsoft 藉由建立 Azure Kubernetes Service 和 Azure Service Fabric 等產品，以及藉由與 Docker、Mesosphere 和 Kubernetes 等業界領導者合作，不斷為 Windows 和 Linux 創新容器。 這些產品提供容器解決方案，可協助公司以雲端速度和規模建置及部署應用程式，而不論其選擇的平台或工具為何。
 
 Docker 成為容器產業的既定標準，並受到 Windows 和 Linux 生態系統中最重要廠商的支援 (Microsoft 是其中一個支援 Docker 的主要雲端廠商)。未來，Docker 可能會在雲端或內部部署的任何資料中心廣泛運用。
 
