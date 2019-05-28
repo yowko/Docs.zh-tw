@@ -13,7 +13,7 @@ ms.locfileid: "62039529"
 
 本主題示範使用 Secure Sockets Layer (SSL) 傳輸安全性來搭配可靠工作階段。 若要透過 HTTPS 使用可靠工作階段，您必須建立使用可靠工作階段與 HTTPS 傳輸的自訂繫結。 透過命令式程式碼或是宣告式組態檔中，您就會啟用可靠工作階段。 此程序會使用用戶端和服務組態檔來啟用可靠工作階段並[  **\<httpsTransport >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md)項目。
 
-此程序的重要部分在於**\<端點 >** 組態項目包含`bindingConfiguration`參考名為自訂繫結組態的屬性`reliableSessionOverHttps`。 [ **\<繫結 >** ](../../../../docs/framework/misc/binding.md)組態項目會參考此名稱來指定包含要使用可靠工作階段和 HTTPS 傳輸 **\<reliableSession >** 並 **\<httpsTransport >** 項目。
+此程序的重要部分在於 **\<端點>** 組態項目包含`bindingConfiguration`參考名為自訂繫結組態的屬性`reliableSessionOverHttps`。 [ **\<繫結 >** ](../../../../docs/framework/misc/binding.md)組態項目會參考此名稱來指定包含要使用可靠工作階段和 HTTPS 傳輸 **\<reliableSession >** 並 **\<httpsTransport >** 項目。
 
 如需此範例中的來源複本，請參閱[自訂繫結可靠工作階段透過 HTTPS](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md)。
 
