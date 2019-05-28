@@ -50,7 +50,7 @@ ms.locfileid: "65634463"
 
 |項目|描述|
 |-------------|-----------------|
-|[\<requiredRuntime>](requiredruntime-element.md)|指定應用程式只支援 Common Language Runtime 1.0 版。 使用執行階段版本 1.1 或更新版本建置的應用程式應該改用 **\<Supportedruntime> >** 項目。|
+|[\<requiredRuntime>](requiredruntime-element.md)|指定應用程式只支援 Common Language Runtime 1.0 版。 使用執行階段版本 1.1 或更新版本建置的應用程式應該改用 **\<Supportedruntime>** 項目。|
 |[\<supportedRuntime>](supportedruntime-element.md)|指定應用程式支援的通用語言執行平台版本。|
 
 ### <a name="parent-elements"></a>父元素
@@ -61,9 +61,9 @@ ms.locfileid: "65634463"
 
 ## <a name="remarks"></a>備註
 
-  **\<Supportedruntime> >** 項目應由使用 1.1 版或更新版本的執行階段所建置的所有應用程式。 若要只支援 1.0 版的執行階段所建置的應用程式必須使用 **\<Requiredruntime> >** 項目。
+ **\<Supportedruntime>** 項目應由使用 1.1 版或更新版本的執行階段所建置的所有應用程式。 若要只支援 1.0 版的執行階段所建置的應用程式必須使用 **\<Requiredruntime> >** 項目。
 
- 在 Microsoft Internet Explorer 中裝載的應用程式的啟動程式碼會忽略**\<啟動 >** 項目和其子項目。
+ 在 Microsoft Internet Explorer 中裝載的應用程式的啟動程式碼會忽略 **\<啟動 >** 項目和其子項目。
 
 ## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a>UseLegacyV2RuntimeActivationPolicy 屬性
 

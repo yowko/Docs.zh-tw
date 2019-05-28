@@ -20,8 +20,8 @@ ms.locfileid: "61674791"
 
 包含組態區段和命名空間宣告。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<configSections>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp; **\<configSections>**
 
 ## <a name="attributes"></a>屬性
 
@@ -31,20 +31,20 @@ None
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。 |
+| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。 |
 
 ## <a name="child-elements"></a>子元素
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<section>**](~/docs/framework/configure-apps/file-schema/section-element.md) | 包含組態區段宣告。 |
-| [**\<sectionGroup>**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 定義組態區段的命名空間。 |
-| [**\<remove>**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | 移除預先定義的區段或區段群組。 |
-| [**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | 清除所有先前定義的區段和區段群組。 |
+| [ **\<section>** ](~/docs/framework/configure-apps/file-schema/section-element.md) | 包含組態區段宣告。 |
+| [ **\<sectionGroup>** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 定義組態區段的命名空間。 |
+| [ **\<remove>** ](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | 移除預先定義的區段或區段群組。 |
+| [ **\<clear>** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | 清除所有先前定義的區段和區段群組。 |
 
 ## <a name="remarks"></a>備註
 
-如果此項目是在組態檔中，它必須是第一個子項目**\<組態 >** 項目。
+如果此項目是在組態檔中，它必須是第一個子項目 **\<組態>** 項目。
 
 ## <a name="example"></a>範例
 

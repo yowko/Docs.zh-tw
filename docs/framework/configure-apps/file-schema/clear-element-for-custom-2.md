@@ -16,13 +16,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61705359"
 ---
-# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<清除 > NameValueSectionHandler 和 DictionarySectionHandler 的項目
+# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<清除> NameValueSectionHandler 和 DictionarySectionHandler 的項目
 
 清除所有先前定義的設定區段中。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>語法
 
@@ -38,7 +38,7 @@ None
 
 |     | 描述 |
 | --- | ------------|
-| [**\<sectionName >** 項目](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定義設定使用的自訂組態區段<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。 |
+| [ **\<sectionName >** 項目](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定義設定使用的自訂組態區段<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -46,13 +46,13 @@ None
 
 ## <a name="remarks"></a>備註
 
-您可以使用**\<清除 >** 来移除您已定義在組態檔階層架構中較高層級的應用程式中的所有設定項目。
+您可以使用 **\<清除>** 来移除您已定義在組態檔階層架構中較高層級的應用程式中的所有設定項目。
 
 ## <a name="example"></a>範例
 
-此範例中定義的機器組態檔案和應用程式組態檔，並示範如何使用**\<清除 >** 清除區段中預先定義的應用程式組態檔中的項目電腦組態檔。
+此範例中定義的機器組態檔案和應用程式組態檔，並示範如何使用 **\<清除>** 清除區段中預先定義的應用程式組態檔中的項目電腦組態檔。
 
-下列的機器組態檔案程式碼會宣告一節 **\<mySection >**:
+下列的機器組態檔案程式碼會宣告一節 **\<mySection >** :
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ None
 </configuration>
 ```
 
-下列應用程式組態檔程式碼中移除的所有設定 **\<mySection >**。 應用程式無法擷取的任何設定中所宣告的中 **\<mySection >** 機器組態檔區段。
+下列應用程式組態檔程式碼中移除的所有設定 **\<mySection >** 。 應用程式無法擷取的任何設定中所宣告的中 **\<mySection >** 機器組態檔區段。
 
 ```xml
 <!-- Application configuration file -->

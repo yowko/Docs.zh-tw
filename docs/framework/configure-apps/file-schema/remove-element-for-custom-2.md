@@ -20,9 +20,9 @@ ms.locfileid: "61705087"
 
 移除先前定義的設定。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
 
 ## <a name="syntax"></a>語法
 
@@ -40,7 +40,7 @@ ms.locfileid: "61705087"
 
 | 項目 | 描述 |
 | ------- | ------------|
-| [**\<sectionName >** 項目](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定義設定使用的自訂組態區段<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。 |
+| [ **\<sectionName >** 項目](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定義設定使用的自訂組態區段<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -48,11 +48,11 @@ None
 
 ## <a name="remarks"></a>備註
 
-您可以使用**\<移除 >** 來移除您已定義在組態檔階層架構中較高層級的應用程式設定的項目。
+您可以使用 **\<移除>** 來移除您已定義在組態檔階層架構中較高層級的應用程式設定的項目。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用**\<移除 >** 應用程式組態檔中移除先前在電腦組態檔中定義的設定項目。
+下列範例示範如何使用 **\<移除>** 應用程式組態檔中移除先前在電腦組態檔中定義的設定項目。
 
 下列的機器組態檔案程式碼會宣告一節 **\<mySection >** ，並將兩種設定`key1`和`key2`，給它：
 
@@ -69,7 +69,7 @@ None
 </configuration>
 ```
 
-下列應用程式組態檔程式碼中移除`key2`上設定 **\<mySection >**:
+下列應用程式組態檔程式碼中移除`key2`上設定 **\<mySection >** :
 
 ```xml
 <!--Application configuration file -->

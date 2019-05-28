@@ -41,21 +41,21 @@ None
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<assemblyBinding>**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | 指定位於組態層級的組件繫結原則。|
-| [**\<啟動 >** 設定結構描述](~/docs/framework/configure-apps/file-schema/startup/index.md) | 啟動設定結構描述中的所有項目。 |
-| [**\<執行階段 >** 設定結構描述](~/docs/framework/configure-apps/file-schema/runtime/index.md) | 在執行階段設定結構描述中的所有項目。 |
-| [**\<system.runtime.remoting >** 設定結構描述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) | 在 遠端設定結構描述中的所有項目。 |
-| [**\<system.Net >** 設定結構描述](~/docs/framework/configure-apps/file-schema/network/index.md) | 網路設定結構描述中的所有項目。 |
-| [**\<cryptographySettings >** 設定結構描述](~/docs/framework/configure-apps/file-schema/cryptography/index.md) | 密碼編譯設定結構描述中的所有項目。 |
-| [**\<組態 >** 區段結構描述](~/docs/framework/configure-apps/file-schema/configuration-sections-schema.md) | 組態區段的設定結構描述中的所有項目。 |
+| [ **\<assemblyBinding>** ](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | 指定位於組態層級的組件繫結原則。|
+| [ **\<啟動 >** 設定結構描述](~/docs/framework/configure-apps/file-schema/startup/index.md) | 啟動設定結構描述中的所有項目。 |
+| [ **\<執行階段 >** 設定結構描述](~/docs/framework/configure-apps/file-schema/runtime/index.md) | 在執行階段設定結構描述中的所有項目。 |
+| [ **\<system.runtime.remoting >** 設定結構描述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) | 在 遠端設定結構描述中的所有項目。 |
+| [ **\<system.Net >** 設定結構描述](~/docs/framework/configure-apps/file-schema/network/index.md) | 網路設定結構描述中的所有項目。 |
+| [ **\<cryptographySettings >** 設定結構描述](~/docs/framework/configure-apps/file-schema/cryptography/index.md) | 密碼編譯設定結構描述中的所有項目。 |
+| [ **\<組態 >** 區段結構描述](~/docs/framework/configure-apps/file-schema/configuration-sections-schema.md) | 組態區段的設定結構描述中的所有項目。 |
 | [追蹤和偵錯設定結構描述](~/docs/framework/configure-apps/file-schema/trace-debug/index.md) | 追蹤和偵錯設定結構描述中的所有項目。 |
 | [ASP.NET 組態設定結構描述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)) | ASP.NET 設定結構描述，包括用來設定 ASP.NET 網站和應用程式的項目中的所有項目。 用於*Web.config*檔案。 |
-| [**\<webServices>** Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) | Web 服務設定結構描述中的所有項目。 |
+| [ **\<webServices>** Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) | Web 服務設定結構描述中的所有項目。 |
 | [Web 設定結構描述](~/docs/framework/configure-apps/file-schema/web/index.md) | Web 設定結構描述中的所有項目，包括用來設定 ASP.NET 如何配合主機應用程式 (例如 IIS) 運作的項目。 用於*aspnet.config*檔案。 |
 
 ## <a name="remarks"></a>備註
 
-每個組態檔必須剛好包含一個**\<組態 >** 項目。
+每個組態檔必須剛好包含一個 **\<組態>** 項目。
 
 ## <a name="see-also"></a>另請參閱
 

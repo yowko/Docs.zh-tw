@@ -20,9 +20,9 @@ ms.locfileid: "61674307"
 
 移除預先定義的區段或區段群組。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
 
 ## <a name="syntax"></a>語法
 
@@ -40,7 +40,7 @@ ms.locfileid: "61674307"
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<configSections >** 項目](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含組態區段和命名空間宣告。 |
+| [ **\<configSections >** 項目](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含組態區段和命名空間宣告。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -48,13 +48,13 @@ None
 
 ## <a name="remarks"></a>備註
 
-您可以使用**\<移除 >** 區段和區段群組中移除您的應用程式組態檔階層架構中較高層級所定義的項目。
+您可以使用 **\<移除>** 區段和區段群組中移除您的應用程式組態檔階層架構中較高層級所定義的項目。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用**\<移除 >** 應用程式組態檔，以移除先前在電腦組態檔中定義的區段中的項目。
+下列範例示範如何使用 **\<移除>** 應用程式組態檔，以移除先前在電腦組態檔中定義的區段中的項目。
 
-下列的機器組態檔案程式碼會宣告一節 **\<sampleSection >**:
+下列的機器組態檔案程式碼會宣告一節 **\<sampleSection >** :
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ None
 </configuration>
 ```
 
-下列應用程式組態檔程式碼中移除 **\<sampleSection >** 一節。 移除後，應用程式無法擷取中的設定 **\<sampleSection >**。
+下列應用程式組態檔程式碼中移除 **\<sampleSection >** 一節。 移除後，應用程式無法擷取中的設定 **\<sampleSection >** 。
 
 ```xml
 <!-- Application configuration file -->
