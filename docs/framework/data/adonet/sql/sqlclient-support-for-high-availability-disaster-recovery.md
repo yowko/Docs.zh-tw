@@ -2,15 +2,15 @@
 title: 高可用性、嚴重損壞修復的 SqlClient 支援
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 9b928be56ac09ec707a45829c862e606b68b717c
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
-ms.translationtype: HT
+ms.openlocfilehash: b01db93c51c6d975c9cc951f08b64c5ffd6c1de4
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251173"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380015"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>高可用性、嚴重損壞修復的 SqlClient 支援
-本主題討論高可用性、嚴重損壞修復 (AlwaysOn 可用性群組) 的 SqlClient 支援 (在 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 中新增)。  AlwaysOn 可用性群組功能已新增至 SQL Server 2012。 如需 AlwaysOn 可用性群組的詳細資訊，請參閱 SQL Server 線上叢書 》。  
+本主題討論高可用性、 災害復原-AlwaysOn 可用性群組的 SqlClient 支援 （.NET Framework 4.5 中新增）。  AlwaysOn 可用性群組功能已新增至 SQL Server 2012。 如需 AlwaysOn 可用性群組的詳細資訊，請參閱 SQL Server 線上叢書 》。  
   
  您現在可以指定的可用性群組接聽程式 （高可用性、 災害復原） 可用性群組 (AG) 或 SQL Server 2012 容錯移轉叢集執行個體的連接屬性中。 如果 SqlClient 應用程式連接到容錯移轉的 AlwaysOn 資料庫，原始連接會中斷。容錯移轉之後，應用程式必須開啟新的連接才能繼續工作。  
   
@@ -19,7 +19,7 @@ ms.locfileid: "66251173"
 > [!NOTE]
 >  增加連接逾時和實作連接重試邏輯，可提高應用程式連接到可用性群組的可能性。 此外，由於連接可能因為容錯移轉而失敗，因此您應實作連接重試邏輯，重試失敗的連接直到重新連接為止。  
   
- [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 中的 SqlClient 新增了下列連接屬性：  
+ SqlClient，在.NET Framework 4.5 中已新增下列連接屬性：  
   
 - `ApplicationIntent`  
   
