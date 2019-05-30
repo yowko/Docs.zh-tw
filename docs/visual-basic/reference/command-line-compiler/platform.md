@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 5c01136564d64d5b2f1f56d311a6b7eadf1742f0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eb5513c6d8e4085e1b3f69de1d36a007fa27271e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633074"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380305"
 ---
 # <a name="-platform-visual-basic"></a>-平台 (Visual Basic)
 指定通用語言執行平台 (CLR) 的哪個平台版本可以執行輸出檔。  
@@ -31,7 +31,7 @@ ms.locfileid: "64633074"
 |`Itanium`|將組件編譯為可以在使用 Itanium 處理器的電腦上以 64 位元 CLR 執行。|  
 |`arm`|將組件編譯為可以在配備 ARM (進階 RISC 機器) 處理器的電腦上執行。|  
 |`anycpu`|編譯要在任何平台上執行的組件。 應用程式將在 32 位元版本的 Windows 上當做 32 位元應用程式執行，並在 64 位元版本的 Windows 上當做 64 位元應用程式執行。 此旗標為預設值。|  
-|`anycpu32bitpreferred`|編譯要在任何平台上執行的組件。 應用程式將在 32 位元和 64 位元版本的 Windows 上當做 32 位元應用程式執行。 這個旗標是只適用於可執行檔 (.EXE)，而且需要 [!INCLUDE[net_v45](~/includes/net-v45-md.md)]。|  
+|`anycpu32bitpreferred`|編譯要在任何平台上執行的組件。 應用程式將在 32 位元和 64 位元版本的 Windows 上當做 32 位元應用程式執行。 這個旗標是僅適用於可執行檔 (。EXE)，而且需要.NET Framework 4.5。|  
   
 ## <a name="remarks"></a>備註  
  使用 `-platform` 選項指定做為輸出檔目標的處理器類型。  

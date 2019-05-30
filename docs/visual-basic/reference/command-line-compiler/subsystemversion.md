@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: 0eca7918e5e4b8702858f972003faef1274e56e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e42501a002d808f31dc3d599dc030e96c573a22f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796226"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380326"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 
@@ -60,7 +60,7 @@ ms.locfileid: "61796226"
 
   - [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)
 
-- 如果您使用的是 MSBuild、以 [!INCLUDE[net_v45](~/includes/net-v45-md.md)] 為目標，並且尚未設定稍早在此清單中指定的任何編譯器選項，則預設值為 6.00。
+- 如果您使用 MSBuild，您的目標.NET Framework 4.5 中，而且您還未設定任何編譯器選項指定稍早在此清單中，預設值為 6.00。
 
 - 如果先前的條件均非為 true，則預設值是 4.00。
 
