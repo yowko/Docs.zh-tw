@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 735fedc5869ab82d49ef4d9068c67302bf825e2e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac4de843b3a134b840fc37e3c1d8327fe0010d79
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634673"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960327"
 ---
 # <a name="character-encoding-in-net"></a>.NET 中的字元編碼
 字元是可以用許多不同的方式來表示的抽象實體。 字元編碼是一套系統，可將所支援之字元集中的每個字元與代表該字元的特定值配對。 例如，摩斯密碼就是一種字元編碼，可將羅馬字母中的每個字元與適合透過電報線路傳輸的點和虛線圖樣配對。 電腦的字元編碼可將所支援之字元集中的每個字元與代表該字元的數值配對。 字元編碼包含兩個不同的元件：  
@@ -78,8 +78,8 @@ ms.locfileid: "64634673"
   
  這些編碼可讓您處理 Unicode 字元，以及舊版應用程式中最常用的編碼。 此外，您可以藉由定義衍生自 <xref:System.Text.Encoding> 的類別及覆寫其成員，來建立自訂編碼。  
   
-### <a name="platform-notes-includenetcoreincludesnet-core-mdmd"></a>平台注意事項： [!INCLUDE[net_core](../../../includes/net-core-md.md)]  
- 根據預設，除了字碼頁 28591 以及UTF-8 和 UTF-16 等 Unicode 編碼之外， [!INCLUDE[net_core](../../../includes/net-core-md.md)] 不會提供任何字碼頁編碼。 不過，您可將在以 .NET 為目標的標準 Windows 應用程式中找到的字碼頁編碼，加入至您的應用程式。 如需完整資訊，請參閱 <xref:System.Text.CodePagesEncodingProvider> 主題。  
+### <a name="platform-notes-net-core"></a>平台注意事項：.NET Core  
+ 根據預設，除了字碼頁 28591 以及UTF-8 和 UTF-16 等 Unicode 編碼之外，.NET Core 不會提供任何字碼頁編碼。 不過，您可將在以 .NET 為目標的標準 Windows 應用程式中找到的字碼頁編碼，加入至您的應用程式。 如需完整資訊，請參閱 <xref:System.Text.CodePagesEncodingProvider> 主題。  
   
 <a name="Selecting"></a>   
 ## <a name="selecting-an-encoding-class"></a>選取編碼類別  

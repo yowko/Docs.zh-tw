@@ -4,13 +4,13 @@ ms.custom: updateeachrelease
 description: 了解如何在 Windows 8 上安裝 .NET Framework
 author: rlander
 ms.author: mairaw
-ms.date: 04/10/2018
-ms.openlocfilehash: 46f0401075f434a5406d7ba19e6ef4b7a6639caf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.date: 04/18/2019
+ms.openlocfilehash: 27a5c46a711914b32f8c934a33f5897d8ad7a6b8
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542791"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052706"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>在 Windows 8 和 Windows Server 2012 上安裝 .NET Framework
 
@@ -18,20 +18,20 @@ ms.locfileid: "54542791"
 
 ![無法啟動這個應用程式](./media/this-application-could-not-be-started.png)
 
-這些指令將協助您安裝所需的 .NET Framework 版本。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 是最新版本。 在 Windows Server 2012 上支援，但 Windows 8 則不予支援。 它隨附於 [Windows 10 2018 年 10 月更新](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update)和 [Windows 10 2018 年 4 月更新](https://www.microsoft.com/software-download/windows10)中。
+這些指令將協助您安裝所需的 .NET Framework 版本。 [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) 是最新版本。 在 Windows Server 2012 上支援，但 Windows 8 則不予支援。 它隨附於 [Windows 10 2019 年 5 月更新](https://support.microsoft.com/help/4028685/windows-10-get-the-update)。
 
-## <a name="net-framework-472"></a>.NET Framework 4.7.2
+## <a name="net-framework-48"></a>.NET Framework 4.8
 
 > [!div class="button"]
-> [下載 .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
+> [下載 .NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-Windows Server 2012 支援 .NET Framework 4.7.2。 Windows 8 不予支援。
+Windows Server 2012 支援 .NET Framework 4.8。 Windows 8 不予支援。
 
-[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 可用來執行針對 .NET Framework 4.0 或更新版本建置的應用程式。
+[.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) 可用來執行針對 .NET Framework 4.0 或更新版本建置的應用程式。
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 
-[.NET Framework 4.6](https://www.microsoft.com/en-us/download/details.aspx?id=48130) 是 Windows 8 支援的最新版 .NET Framework。
+[.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130) 是 Windows 8 支援的最新版 .NET Framework。
 
 .NET Framework 4.6 支援針對 .NET Framework 4.0 到 4.6 建置的應用程式。
 

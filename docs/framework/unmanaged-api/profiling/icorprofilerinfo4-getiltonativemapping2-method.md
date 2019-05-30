@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b625b2962c829e7c0692a61d8f5561818f7ebf1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b59fe76bd6d8d5887ac825e844e89e85677e2d7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000515"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380342"
 ---
 # <a name="icorprofilerinfo4getiltonativemapping2-method"></a>ICorProfilerInfo4::GetILToNativeMapping2 方法
 針對指定函式的 JIT 重新編譯版本中所包含的程式碼，取得從 Microsoft Intermediate Language (MSIL) 位移到原生位移的對應。  
@@ -44,7 +44,7 @@ HRESULT GetILToNativeMapping(
  [in] 包含程式碼的函式 ID。  
   
  `pReJitId`  
- [in] 經過 JIT 重新編譯的函式識別。 在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中，識別必須是零。  
+ [in] 經過 JIT 重新編譯的函式識別。 身分識別必須是在.NET Framework 4.5 中的零。  
   
  `cMap`  
  [in] `map` 陣列的大小上限。  
@@ -59,7 +59,7 @@ HRESULT GetILToNativeMapping(
  `GetILToNativeMapping2` 類似於[icorprofilerinfo:: Getiltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)方法，不同之處在於它可讓分析工具指定重新編譯的函式的識別碼在未來版本。  
   
 > [!NOTE]
->  [Icorprofilerfunctioncontrol:: Setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md)未實作方法[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]，因此已被 JIT 重新編譯的函式不能有不同的 IL-原生對應原本已編譯的函式。 因此，不能在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中，以非零 JIT 重新編譯識別碼來呼叫 `GetILToNativeMapping2`。  
+>  [Icorprofilerfunctioncontrol:: Setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md)因此已被 JIT 重新編譯的函式不能有不同的 IL-原生對應，在.NET Framework 4.5 中，未實作方法原本已編譯的函式。 因此，`GetILToNativeMapping2`無法呼叫具有非零 JIT 重新編譯識別碼，在.NET Framework 4.5。  
   
  `GetILToNativeMapping2` 方法會傳回 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構的陣列。 陣列中的項目可以有傳達原生指令的特定範圍對應至特殊的區域，程式碼 （例如，初構），其`ilOffset`欄位設定為值[CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md)列舉型別。  
   
@@ -74,7 +74,7 @@ HRESULT GetILToNativeMapping(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

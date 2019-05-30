@@ -2,12 +2,12 @@
 title: 微服務可定址性和服務登錄
 description: 了解容器映像登錄在微服務架構中的角色。
 ms.date: 09/20/2018
-ms.openlocfilehash: 5b601f19b60a8e989977e7135138add7644bd7b6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 756be4d7102d2d8ef36ffbf172b70b08872c028c
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639975"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196010"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>微服務可定址性和服務登錄
 
@@ -15,7 +15,7 @@ ms.locfileid: "65639975"
 
 [服務登錄模式](https://microservices.io/patterns/service-registry.html)是服務探索的主要部分。 登錄是包含服務執行個體之網路位置的資料庫。 服務登錄必須高度可用且處於最新狀態。 用戶端可以快取從服務登錄取得的網路位置。 不過，該資訊最終會過期，此時用戶端將無法再探索服務執行個體。 因此，服務登錄是由伺服器叢集所組成，這些伺服器使用複寫通訊協定來維護一致性。
 
-在某些微服務部署環境中 (稱為叢集，本節稍後將會討論)，服務探索是內建的。 例如，Azure Container Service with Kubernetes (AKS) 環境可以處理服務執行個體註冊和取消註冊。 它也會在扮演伺服器端探索路由器角色的每部叢集主機上執行 Proxy。 另一個例子是 Azure Service Fabric，它也會透過現成的 Naming Service 來提供服務登錄。
+在某些微服務部署環境中 (稱為叢集，本節稍後將會討論)，服務探索是內建的。 例如，Azure Kubernetes Service (AKS) 環境可以處理服務執行個體註冊和取消註冊。 它也會在扮演伺服器端探索路由器角色的每部叢集主機上執行 Proxy。 另一個例子是 Azure Service Fabric，它也會透過現成的 Naming Service 來提供服務登錄。
 
 請注意，服務登錄與 API 閘道模式之間一定會有重疊，因此也可協助解決此問題。 例如，[Service Fabric 反向 Proxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) 是一種 API 閘道實作類型，該類型是以 Service Fabric 命名服務為基礎，並可協助將位址解析加以解析為內部服務。
 

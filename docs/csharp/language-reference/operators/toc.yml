@@ -24,18 +24,17 @@
       displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
     - name: () 運算子
       href: invocation-operator.md
-    - name: '::運算子'
+    - name: ':: 運算子'
       href: namespace-alias-qualifer.md
-    - name: + 運算子
+    - name: + 及 += 運算子
       href: addition-operator.md
+      displayName: 'string concatenation, delegate combination, event subscription'
     - name: '- 運算子'
       href: subtraction-operator.md
     - name: = 運算子
       href: assignment-operator.md
-    - name: '?:運算子'
+    - name: '?: 運算子'
       href: conditional-operator.md
-    - name: += 運算子
-      href: addition-assignment-operator.md
     - name: '-= 運算子'
       href: subtraction-assignment-operator.md
     - name: '?? 運算子'

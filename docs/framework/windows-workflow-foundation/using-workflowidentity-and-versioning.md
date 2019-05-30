@@ -2,12 +2,12 @@
 title: 使用 WorkflowIdentity 與版本控制
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: 77f5663665d56209cbb1ebc5999d44d411189f04
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: acf2b2c9502487c8bc8960f2a5625db94c31945f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603302"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380124"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>使用 WorkflowIdentity 與版本控制
 <xref:System.Activities.WorkflowIdentity> 提供一種方法，讓工作流程應用程式開發人員能夠將名稱和 <xref:System.Version> 與工作流程定義建立關聯，並為這項資訊與持續性的工作流程執行個體建立關聯。 此身分識別資訊可由工作流程應用程式開發人員使用以啟用案例 (例如並存執行多個版本的工作流程定義)，以及提供動態更新等其他功能的基礎。 本主題提供使用 <xref:System.Activities.WorkflowIdentity> 搭配 <xref:System.Activities.WorkflowApplication> 裝載的概觀。 並排顯示執行工作流程服務中的工作流程定義的資訊，請參閱[WorkflowServiceHost 中的並存版本控制](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)。 如需動態更新的資訊，請參閱[動態更新](dynamic-update.md)。  
@@ -139,9 +139,9 @@ wfApp.Load(instance);
 ```  
   
 ## <a name="UpdatingWF4PersistenceDatabases"></a> 升級.NET Framework 4 持續性資料庫，以支援工作流程版本控制  
- 提供 SqlWorkflowInstanceStoreSchemaUpgrade.sql 資料庫指令碼，以升級使用 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 資料庫指令碼建立的持續性資料庫。 這個指令碼可更新資料庫，以支援 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進的新版本控制功能。 資料庫中的任何持續性工作流程執行個體，都會有版本控制預設值，並可以參與並存執行和動態更新。  
+ 提供 SqlWorkflowInstanceStoreSchemaUpgrade.sql 資料庫指令碼，以升級使用 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 資料庫指令碼建立的持續性資料庫。 此指令碼會更新資料庫，以支援.NET Framework 4.5 中引進的新版本控制功能。 資料庫中的任何持續性工作流程執行個體，都會有版本控制預設值，並可以參與並存執行和動態更新。  
   
- 如果 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 工作流程應用程式嘗試的任何持續性作業，在未使用提供之指令碼進行升級的持續性資料庫上使用新版本功能，就會擲回 <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException>，並顯示類似下列訊息。  
+ 如果.NET Framework 4.5 工作流程應用程式嘗試使用新的版本控制功能，已使用提供的指令碼中，尚未升級的持續性資料庫的任何持續性作業<xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException>會擲回類似的訊息下列的訊息。  
   
  **SqlWorkflowInstanceStore 有 '4.0.0.0' 的資料庫版本。無法對這個資料庫版本執行 InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand'。請升級為 '4.5.0.0' 的資料庫。**  
 ### <a name="ToUpgrade"></a> 若要升級資料庫結構描述  

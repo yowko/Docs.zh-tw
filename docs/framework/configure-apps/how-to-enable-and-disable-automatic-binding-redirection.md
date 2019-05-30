@@ -5,26 +5,26 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: f646445d5fa4556646700bb5daf8ac859631da2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b6c9c3508c53e8a68a3f7e1cb12b6b6c95600e7b
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880103"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380095"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>HOW TO：啟用和停用自動繫結重新導向
 
-在 Visual Studio 中為目標的應用程式的編譯時[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]和更新版本中，繫結重新導向可能會自動加入至應用程式組態檔覆寫組件統一。 如果您的應用程式或其元件參考相同組件的多個版本，即使您在應用程式的組態檔中手動指定繫結重新導向，仍會加入繫結重新導向。 自動繫結重新導向功能會影響傳統型應用程式和 web 應用程式為目標[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]或更新版本中，雖然行為會稍有不同的 web 應用程式。 如果您有現有的應用程式先前版本為目標的.NET Framework 中，或如果您想要以手動方式撰寫繫結重新導向，您可以停用這項功能，您可以啟用自動繫結重新導向。
+當您編譯.NET Framework 4.5.1 為目標的 Visual Studio 和更新版本中的應用程式時，繫結重新導向可能會自動加入至應用程式組態檔覆寫組件統一。 如果您的應用程式或其元件參考相同組件的多個版本，即使您在應用程式的組態檔中手動指定繫結重新導向，仍會加入繫結重新導向。 自動繫結重新導向功能會影響傳統型應用程式和 web 應用程式目標為.NET Framework 4.5.1 或更新版本，但行為會稍有不同的 web 應用程式。 如果您有現有的應用程式先前版本為目標的.NET Framework 中，或如果您想要以手動方式撰寫繫結重新導向，您可以停用這項功能，您可以啟用自動繫結重新導向。
 
 ## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>停用自動繫結重新導向桌面應用程式中
 
-為目標的 Windows 傳統型應用程式預設會啟用自動繫結重新導向[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]和更新版本。 繫結重新導向新增至輸出組態 (**app.config**) 檔案在編譯應用程式時，並覆寫可能進行的組件統一。 來源**app.config**則不會修改檔案。 藉由修改應用程式的專案檔，或取消選取核取方塊，在 Visual Studio 中的專案屬性中，您可以停用這項功能。
+在.NET Framework 4.5.1 及更新版本為目標的 Windows 傳統型應用程式的預設會啟用自動繫結重新導向。 繫結重新導向新增至輸出組態 (**app.config**) 檔案在編譯應用程式時，並覆寫可能進行的組件統一。 來源**app.config**則不會修改檔案。 藉由修改應用程式的專案檔，或取消選取核取方塊，在 Visual Studio 中的專案屬性中，您可以停用這項功能。
 
 ### <a name="disable-through-project-properties"></a>停用透過專案屬性
 
 如果您有 Visual Studio 2017 15.7 版或更新版本時，您可以輕鬆停用專案屬性頁中的自動產生繫結重新導向。
 
-1. 以滑鼠右鍵按一下 [方案總管] 中的專案，然後選取 [屬性]。
+1. 以滑鼠右鍵按一下 [方案總管]  中的專案，然後選取 [屬性]  。
 
 2. 在 **應用程式**頁面上，取消核取**自動產生繫結重新導向**選項。
 
@@ -35,7 +35,7 @@ ms.locfileid: "61880103"
 1. 開啟專案檔案進行編輯使用下列方法之一：
 
    - 在 Visual Studio 中，選取專案**方案總管 中**，然後選擇**在檔案總管 中開啟資料夾**從捷徑功能表。 在 [檔案總管] 中，尋找專案 （.csproj 或.vbproj） 檔，並在記事本中開啟它。
-   - 在 Visual Studio 中，在**方案總管**，以滑鼠右鍵按一下專案，然後選擇**卸載專案**。 同樣地，以滑鼠右鍵按一下已卸載的專案，然後選擇 [**編輯 [projectname.csproj]]**。
+   - 在 Visual Studio 中，在**方案總管**，以滑鼠右鍵按一下專案，然後選擇**卸載專案**。 同樣地，以滑鼠右鍵按一下已卸載的專案，然後選擇 [**編輯 [projectname.csproj]]** 。
 
 2. 在專案檔中尋找下列屬性項目：
 
@@ -56,7 +56,7 @@ ms.locfileid: "61880103"
 1. 開啟專案檔案進行編輯使用下列方法之一：
 
    - 在 Visual Studio 中，選取專案**方案總管 中**，然後選擇**在檔案總管 中開啟資料夾**從捷徑功能表。 在 [檔案總管] 中，尋找專案 （.csproj 或.vbproj） 檔，並在記事本中開啟它。
-   - 在 Visual Studio 中，在**方案總管**，以滑鼠右鍵按一下專案，然後選擇**卸載專案**。 同樣地，以滑鼠右鍵按一下已卸載的專案，然後選擇 [**編輯 [projectname.csproj]]**。
+   - 在 Visual Studio 中，在**方案總管**，以滑鼠右鍵按一下專案，然後選擇**卸載專案**。 同樣地，以滑鼠右鍵按一下已卸載的專案，然後選擇 [**編輯 [projectname.csproj]]** 。
 
 2. 將下列項目新增至第一個組態屬性群組 (在\<PropertyGroup > 標記):
 

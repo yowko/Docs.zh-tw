@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: cfe3b413506aa1383bbdaa9a89ffe42e3724a4a8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 589bb205b10a5b7b0c4480393b8937e0df36022f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59337548"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052389"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互通性概觀 (C# 程式設計手冊)
 本主題說明可在 C# Managed 程式碼和 Unmanaged 程式碼之間啟用互通性的方法。  
@@ -28,7 +28,7 @@ ms.locfileid: "59337548"
 >  [Common Language Runtime](../../../standard/clr.md) (CLR) 管理對系統資源的存取。 在 CLR 外部呼叫 Unmanaged 程式碼會略過此安全性機制，因而造成安全性風險。 例如，Unmanaged 程式碼可能會直接呼叫 Unmanaged 程式碼中的資源，並略過 CLR 安全性機制。 如需詳細資訊，請參閱 [.NET 的安全性](../../../standard/security/index.md)。  
   
 ## <a name="c-interop"></a>C++ Interop  
- 您可以使用 C++ Interop (也稱為 It Just Works (IJW)) 包裝原生 C++ 類別，以供使用 C# 或其他 .NET Framework 語言撰寫的程式碼取用。 若要這樣做，您可以撰寫 C++ 程式碼來包裝原生 DLL 或 COM 元件。 不同於其他 .NET Framework 語言，[!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] 提供互通性支援，因此可將 Managed 和 Unmanaged 程式碼放置在相同的應用程式，甚至是相同的檔案中。 您接著可使用 **/clr** 編譯器參數建立 C++ 程式碼，以產生 Managed 組件。 最後，您可以在 C# 專案中新增組件的參考，並使用包裝的物件，就像是使用其他 Managed 類別一樣。  
+ 您可以使用 C++ Interop (也稱為 It Just Works (IJW)) 包裝原生 C++ 類別，以供使用 C# 或其他 .NET Framework 語言撰寫的程式碼取用。 若要這樣做，您可以撰寫 C++ 程式碼來包裝原生 DLL 或 COM 元件。 不同於其他 .NET Framework 語言，Visual C++ 能提供互通性支援，因此可將 Managed 和 Unmanaged 程式碼放置在相同的應用程式，甚至是相同的檔案中。 您接著可使用 **/clr** 編譯器參數建立 C++ 程式碼，以產生 Managed 組件。 最後，您可以在 C# 專案中新增組件的參考，並使用包裝的物件，就像是使用其他 Managed 類別一樣。  
   
 ## <a name="exposing-com-components-to-c"></a>將 COM 元件公開給 C\#
  您可以從 C# 專案取用 COM 元件。 一般步驟如下所示：  
@@ -60,9 +60,9 @@ ms.locfileid: "59337548"
   
 ## <a name="see-also"></a>另請參閱
 
-- [提升 Interop 效能](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
-- [COM 和.NET 之間的互通性簡介](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)
+- [Improving Interop Performance](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29) (提升 Interop 效能)
+- [COM 和.NET 之間的互通性簡介](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net) \(機器翻譯\)
 - [Visual Basic 中的 COM Interop 簡介](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
 - [在受控碼和非受控碼之間進行封送處理](../../../../docs/framework/interop/interop-marshaling.md)
 - [與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)
-- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)

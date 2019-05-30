@@ -7,14 +7,14 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: dc2bb949c7db4f70c20c3c0b687cacafed8696df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d522d004630dee942e24c39a936feae7dc957bd5
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674791"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300795"
 ---
 # <a name="configsections-element-for-configuration"></a>\<configSections > 項目\<設定 >
 

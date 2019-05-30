@@ -15,15 +15,16 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 54d190bfa3f13ccfc78dd2501018442afb281d37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e577f376b347442f6693a7a5478757ce3b698752
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634699"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053007"
 ---
 # <a name="character-classes-in-regular-expressions"></a>規則運算式中的字元類別
-<a name="Top"></a> 字元類別會定義一組字元，其中任何字元都可在輸入字串中出現，以便讓比對成功。 .NET 中的規則運算式語言支援下列字元類別：  
+
+字元類別會定義一組字元，其中任何字元都可在輸入字串中出現，以便讓比對成功。 .NET 中的規則運算式語言支援下列字元類別：  
   
 - 正字元群組。 輸入字串中的字元必須符合指定字元集的其中一個字元。 如需詳細資訊，請參閱[正字元群組](#PositiveGroup)。  
   
@@ -107,8 +108,6 @@ ms.locfileid: "64634699"
 |`\w*`|比對零個或多個文字字元。|  
 |`\b`|比對字邊界。|  
   
- [回到頁首](#Top)  
-  
 <a name="NegativeGroup"></a>   
 ## <a name="negative-character-group-"></a>負字元群組：[^]  
  負字元群組會指定一份字元清單，其中任何字元不得出現在輸入字串中，才會出現相符項目。 字元清單可以個別指定，也可以依範圍指定，或同時依兩種方式指定。  
@@ -154,10 +153,8 @@ ms.locfileid: "64634699"
 |`\w+`|比對一個或多個文字字元。|  
 |`\b`|在字邊界結束。|  
   
- [回到頁首](#Top)  
-  
 <a name="AnyCharacter"></a>   
-## <a name="any-character-"></a>任何字元：  
+## <a name="any-character-"></a>任何字元：.  
  句號字元 (.) 會比對 `\n` (新行字元 \u000A) 以外任何具有下列兩項資格的字元：  
   
 - 如果 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項修改了規則運算式模式，或是 `.` 選項修改了模式中包含 `s` 字元類別的部分，`.` 就會符合任何字元。 如需詳細資訊，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)。  
@@ -178,10 +175,8 @@ ms.locfileid: "64634699"
 > [!NOTE]
 >  由於它會比對任何字元，因此如果規則運算式模式嘗試多次比對任何字元，`.` 語言項目就會經常與 lazy 數量詞搭配使用。 如需詳細資訊，請參閱[數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
- [回到頁首](#Top)  
-  
 <a name="CategoryOrBlock"></a>   
-## <a name="unicode-category-or-unicode-block-p"></a>Unicode 分類或 Unicode 區塊：\p{}  
+## <a name="unicode-category-or-unicode-block-p"></a>Unicode 類別或 Unicode 區塊：\p{}  
  Unicode 標準會為每個字元指派一種一般分類。 例如，特定字元可以是大寫字母 (以 `Lu` 分類表示)、十進位數字 (`Nd` 分類)、數學符號 (`Sm` 分類) 或段落分隔符號 (`Zl` 分類)。 Unicode 標準中的特定字元集也會佔據連續字碼指標的特定範圍或區塊。 例如，從 \u0000 到 \u007F 可找到基本拉丁字元集，從 \u0600 到 \u06FF 則可找到阿拉伯字元集。  
   
  規則運算式建構  
@@ -209,10 +204,8 @@ ms.locfileid: "64634699"
 |`(\s)?`|比對零個或一個空白字元。|  
 |`(\p{IsBasicLatin}+(\s)?)+`|一次或多次比對一個或多個基本拉丁字元後面接著零個或一個空白字元的模式。|  
   
- [回到頁首](#Top)  
-  
 <a name="NegativeCategoryOrBlock"></a>   
-## <a name="negative-unicode-category-or-unicode-block-p"></a>負 Unicode 分類或 Unicode 區塊：\P{}  
+## <a name="negative-unicode-category-or-unicode-block-p"></a>負 Unicode 類別或 Unicode 區塊：\P{}  
  Unicode 標準會為每個字元指派一種一般分類。 例如，特定字元可以是大寫字母 (以 `Lu` 分類表示)、十進位數字 (`Nd` 分類)、數學符號 (`Sm` 分類) 或段落分隔符號 (`Zl` 分類)。 Unicode 標準中的特定字元集也會佔據連續字碼指標的特定範圍或區塊。 例如，從 \u0000 到 \u007F 可找到基本拉丁字元集，從 \u0600 到 \u06FF 則可找到阿拉伯字元集。  
   
  規則運算式建構  
@@ -227,8 +220,6 @@ ms.locfileid: "64634699"
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/notcategory1.vb#7)]  
   
  規則運算式模式 `(\P{Sc})+` 會比對一個或多個不是貨幣符號的字元，並且會有效移除結果字串中的所有貨幣符號。  
-  
- [回到頁首](#Top)  
   
 <a name="WordCharacter"></a>   
 ## <a name="word-character-w"></a>文字字元：\w  
@@ -259,8 +250,6 @@ ms.locfileid: "64634699"
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/wordchar1.cs#8)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/wordchar1.vb#8)]  
-  
- [回到頁首](#Top)  
   
 <a name="NonWordCharacter"></a>   
 ## <a name="non-word-character-w"></a>非文字字元：\W  
@@ -301,10 +290,8 @@ ms.locfileid: "64634699"
   
  由於第二個擷取群組的 <xref:System.Text.RegularExpressions.Group> 物件只包含單一擷取的非文字字元，因此這個範例會從 <xref:System.Text.RegularExpressions.CaptureCollection> 屬性所傳回之 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 物件擷取所有擷取的非文字字元。  
   
- [回到頁首](#Top)  
-  
 <a name="WhitespaceCharacter"></a>   
-## <a name="white-space-character-s"></a>空白字元：\s  
+## <a name="whitespace-character-s"></a>空白字元：\s  
  `\s` 會比對任何空白字元。 它相當於下表列出的逸出序列和 Unicode 分類。  
   
 |分類|說明|  
@@ -332,10 +319,8 @@ ms.locfileid: "64634699"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  
   
- [回到頁首](#Top)  
-  
 <a name="NonWhitespaceCharacter"></a>   
-## <a name="non-white-space-character-s"></a>非空白字元：\S  
+## <a name="non-whitespace-character-s"></a>非空白字元：\S  
  `\S` 會比對任何非空白字元。 它相當於 `[^\f\n\r\t\v\x85\p{Z}]` 規則運算式模式，或是規則運算式模式的相反模式，相當於會比對空白字元的 `\s`。 如需詳細資訊，請參閱[空白字元：\s](#WhitespaceCharacter)。  
   
  如果指定了符合 ECMAScript 的行為，`\S` 就等於 `[^ \f\n\r\t\v]`。 如需 ECMAScript 規則運算式的資訊，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)中的＜ECMAScript 相符行為＞一節。  
@@ -350,8 +335,6 @@ ms.locfileid: "64634699"
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nonwhitespace1.cs#11)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nonwhitespace1.vb#11)]  
-  
- [回到頁首](#Top)  
   
 <a name="DigitCharacter"></a>   
 ## <a name="decimal-digit-character-d"></a>十進位數字字元：\d  
@@ -375,8 +358,6 @@ ms.locfileid: "64634699"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/digit1.cs#12)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/digit1.vb#12)]  
   
- [回到頁首](#Top)  
-  
 <a name="NonDigitCharacter"></a>   
 ## <a name="non-digit-character-d"></a>非數字字元：\D  
  `\D` 會比對任何非數字字元。 它相當於 `\P{Nd}` 規則運算式模式。  
@@ -395,8 +376,6 @@ ms.locfileid: "64634699"
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nondigit1.cs#13)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nondigit1.vb#13)]  
-  
- [回到頁首](#Top)  
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
 ## <a name="supported-unicode-general-categories"></a>支援的 Unicode 一般分類  
@@ -447,11 +426,10 @@ ms.locfileid: "64634699"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/getunicodecategory1.cs#14)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/getunicodecategory1.vb#14)]  
   
- [回到頁首](#Top)  
-  
 <a name="SupportedNamedBlocks"></a>   
-## <a name="supported-named-blocks"></a>支援的具名區塊  
- .NET 提供下表所列的具名區塊。 這一組支援的具名區塊是根據 Unicode 4.0 和 Perl 5.6。  
+## <a name="supported-named-blocks"></a>支援的具名區塊
+
+.NET 提供下表所列的具名區塊。 這一組支援的具名區塊是根據 Unicode 4.0 和 Perl 5.6。 針對使用具名區塊的規則運算式，請參閱 [Unicode 類別或 Unicode 區塊：\\p{}](#unicode-category-or-unicode-block-p) 一節。  
   
 |字碼指標範圍|區塊名稱|  
 |----------------------|----------------|  
@@ -560,8 +538,6 @@ ms.locfileid: "64634699"
 |FE70 - FEFF|`IsArabicPresentationForms-B`|  
 |FF00 - FFEF|`IsHalfwidthandFullwidthForms`|  
 |FFF0 - FFFF|`IsSpecials`|  
-  
- [回到頁首](#Top)  
   
 <a name="CharacterClassSubtraction"></a>   
 ## <a name="character-class-subtraction-basegroup---excludedgroup"></a>字元類別減法：[base_group - [excluded_group]]  

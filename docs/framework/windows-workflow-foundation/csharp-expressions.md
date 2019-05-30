@@ -2,15 +2,15 @@
 title: C# 運算式
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: c50f6a2a8dfb69b914fb4fa84c028f9d65c00cfa
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7e29c4cacf97c729a07fa8d234e7c12006418027
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882093"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378407"
 ---
 # <a name="c-expressions"></a>C# 運算式
-從開始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，在 Windows Workflow Foundation (WF) 支援 C# 運算式。 Visual Studio 2012 中建立新的 C# 工作流程專案目標[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]使用 C# 運算式和 Visual Basic 工作流程專案中使用 Visual Basic 運算式。 不論是否支援專案語言，使用 Visual Basic 運算式的現有 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 工作流程專案均可移轉至 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]。 本主題提供 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的 C# 運算式概觀。
+從.NET Framework 4.5 中，C#中 Windows Workflow Foundation (WF) 支援運算式。 新C#的目標.NET Framework 4.5 使用工作流程專案在 Visual Studio 2012 中建立C#運算式和 Visual Basic 工作流程專案中使用 Visual Basic 運算式。 不論是否支援專案語言，使用 Visual Basic 運算式的現有 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 工作流程專案均可移轉至 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]。 本主題提供 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的 C# 運算式概觀。
 
 ## <a name="using-c-expressions-in-workflows"></a>在工作流程中使用 C# 運算式
 
@@ -29,7 +29,7 @@ ms.locfileid: "65882093"
 - [在 XAMLX 工作流程服務中使用 C# 運算式](csharp-expressions.md#WFServices)
 
 ### <a name="WFDesigner"></a> 在工作流程設計工具中使用 C# 運算式
- 從開始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，在 Windows Workflow Foundation (WF) 支援 C# 運算式。 Visual Studio 2012 中建立 C# 工作流程專案目標[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]使用 C# 運算式，而 Visual Basic 工作流程專案則使用 Visual Basic 運算式。 若要指定所需的 C# 運算式，方塊中輸入標示**輸入 C# 運算式**。 在設計工具中選取活動時，會在屬性視窗中顯示此標籤，而此標籤也會顯示在工作流程設計工具中的活動之上。 在下列範例中，`WriteLine` 內的 `Sequence` 包含兩個 `NoPersistScope` 活動。
+ 從.NET Framework 4.5 中，C#中 Windows Workflow Foundation (WF) 支援運算式。 C#在 Visual Studio 2012 中建立使用.NET Framework 4.5 為目標的工作流程專案C#運算式，而 Visual Basic 工作流程專案則使用 Visual Basic 運算式。 若要指定所需的 C# 運算式，方塊中輸入標示**輸入 C# 運算式**。 在設計工具中選取活動時，會在屬性視窗中顯示此標籤，而此標籤也會顯示在工作流程設計工具中的活動之上。 在下列範例中，`WriteLine` 內的 `Sequence` 包含兩個 `NoPersistScope` 活動。
 
  ![螢幕擷取畫面會顯示自動建立的序列活動。](./media/csharp-expressions/auto-surround-sequence-activity.png)
 

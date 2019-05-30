@@ -4,12 +4,12 @@ description: 此教學課程示範如何使用 C# 字串插補功能，在較大
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: 97773659ea7dd00c291aa6a96401cac531adfdc8
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: c1e6fed2293b7447384a657e720fb847f2fa041f
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921364"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195888"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>使用字串插補來建構格式化的字串
 
@@ -34,13 +34,13 @@ var name = "<name>";
 Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 ```
 
-在主控台視窗中鍵入 `dotnet run` 來嘗試此程式碼。 當您執行程式時，它會顯示問候語中包含您名稱的單一字串。 <xref:System.Console.WriteLine%2A> 方法呼叫中所含的字串是「插入字串」。 它是一種範本，可讓您從包含內嵌程式碼的字串建構單一字串 (稱為「結果字串」)。 插入字串特別適用於將值插入至字串或將字串串連 (聯結在一起)。
+在主控台視窗中鍵入 `dotnet run` 來嘗試此程式碼。 當您執行程式時，它會顯示問候語中包含您名稱的單一字串。 <xref:System.Console.WriteLine%2A> 方法呼叫中所含的字串是「插入字串運算式」。 它是一種範本，可讓您從包含內嵌程式碼的字串建構單一字串 (稱為「結果字串」)。 插入字串特別適用於將值插入至字串或將字串串連 (聯結在一起)。
 
 這個簡單範例包含每個插入字串都必須要有的兩個項目：
 
 - 左引號字元之前開頭為 `$` 字元的字串常值。 `$` 符號與引號字元之間不能有任何空格。 (如果您想要查看包含空格時會發生什麼情況，請在 `$` 字元後面插入空格、儲存檔案，然後在主控台視窗中鍵入 `dotnet run` 以重新執行程式。 C# 編譯器會顯示錯誤訊息「錯誤 CS1056:未預期的字元 '$'」。)
 
-- 一或多個「插入運算式」。 插入運算式是以左右大括號 (`{` 和 `}`) 指出。 您可以放置任何 C# 運算式，以傳回大括號內的值 (包含 `null`)。
+- 一或多個「插入運算式」。 插入運算式是以左右大括弧 (`{` 和 `}`) 指出。 您可以放置任何 C# 運算式，以傳回大括號內的值 (包含 `null`)。
 
 嘗試更多包含一些其他資料類型的字串插補範例。
 
@@ -97,7 +97,7 @@ public class Program
 
 在此範例的輸出中，日期太過精確 (eggplant 價格不會因第二個而變更)，而價格值未指出貨幣單位。 在下節中，您將學習如何控制運算式結果的字串表示格式來修正這些問題。
 
-## <a name="control-the-formatting-of-interpolated-expressions"></a>控制插入運算式的格式
+## <a name="control-the-formatting-of-interpolation-expressions"></a>控制插入運算式的格式
 
 在上節中，已將兩個格式不佳的字串插入至結果字串。 其中一個是只有日期才適合的日期和時間值。 第二個是未指出其貨幣單位的價格。 這兩個問題都很容易解決。 字串插補可讓您指定「格式字串」，以控制特定類型的格式。 修改前一個範例中的 `Console.WriteLine` 呼叫，使其包含日期和價格運算式的格式字串，如下行所示：
 
@@ -113,7 +113,7 @@ Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}."
 
 除了控制格式之外，您也可以控制結果字串中所含格式化字串的欄位寬度和對齊方式。 在下節中，您將學習如何執行這項作業。
 
-## <a name="control-the-field-width-and-alignment-of-interpolated-expressions"></a>控制插入運算式的欄位寬度和對齊方式
+## <a name="control-the-field-width-and-alignment-of-interpolation-expressions"></a>控制插入運算式的欄位寬度和對齊方式
 
 一般情況下，插入運算式的結果格式化為字串時，結果字串中會包含該字串，而且沒有前置或尾端空格。 特別是當您使用一組資料時，可控制欄位寬度和文字對齊方式有助於產生更容易讀取的輸出。 若要確認這一點，請將文字編輯器中的所有程式碼都取代為下列程式碼，然後鍵入 `dotnet run` 以執行程式：
 
@@ -141,7 +141,7 @@ public class Example
 }
 ```
 
-作者名稱會靠左對齊，而他們所撰寫的標題會靠右對齊。 在插入運算式後面新增逗號 (",")，並指定「最小」欄位寬度，即可指定對齊方式。 如果指定的值是正數，則欄位會靠右對齊。 如果它是負數，則欄位會靠左對齊。
+作者名稱會靠左對齊，而他們所撰寫的標題會靠右對齊。 在插入運算式後面加上逗號 (",")，並指定「最小」欄位寬度，即可指定對齊方式。 如果指定的值是正數，則欄位會靠右對齊。 如果它是負數，則欄位會靠左對齊。
 
 嘗試移除 `{"Author",-25}` 和 `{title.Key,-25}` 程式碼中的負號，然後重新執行此範例，如下列程式碼所執行：
 

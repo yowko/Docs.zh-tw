@@ -2,12 +2,12 @@
 title: 高可用性、嚴重損壞修復的 SqlClient 支援
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: a2cc63cb0b9118da6eb3c381e853165f800fe61f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 9b928be56ac09ec707a45829c862e606b68b717c
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645905"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251173"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>高可用性、嚴重損壞修復的 SqlClient 支援
 本主題討論高可用性、嚴重損壞修復 (AlwaysOn 可用性群組) 的 SqlClient 支援 (在 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 中新增)。  AlwaysOn 可用性群組功能已新增至 SQL Server 2012。 如需 AlwaysOn 可用性群組的詳細資訊，請參閱 SQL Server 線上叢書 》。  
@@ -32,7 +32,7 @@ ms.locfileid: "64645905"
 2. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
->  設定`MultiSubnetFailover`要`true`所以不需要[!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]或更新版本。
+>  設定`MultiSubnetFailover`至`true`不需要.NET Framework 4.6.1 或更新版本。
   
 ## <a name="connecting-with-multisubnetfailover"></a>連接 MultiSubnetFailover  
  一定要指定`MultiSubnetFailover=True`連接到 SQL Server 2012 可用性群組接聽程式或 SQL Server 2012 容錯移轉叢集執行個體時。 `MultiSubnetFailover` 啟用所有可用性群組，或容錯移轉叢集執行個體，在 SQL Server 2012 和會大幅減少單一和多重子網路 AlwaysOn 拓撲的容錯移轉時間更快的容錯移轉。 在多重子網路容錯移轉時，用戶端將嘗試並行連接。 子網路容錯移轉期間，將積極重試 TCP 連接。  

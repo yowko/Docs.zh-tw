@@ -3,12 +3,12 @@ title: 關於 .NET Core
 description: 了解 .NET Core。
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: 87514b476124196c835e4b22154f9bbaca7482a5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: fb6088bcadcdc9c28699446df035b899485c406d
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59296403"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003749"
 ---
 # <a name="about-net-core"></a>關於 .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "59296403"
 - **跨平台：** 可在 Windows、macOS 及 Linux [作業系統](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)上執行。
 - **在各架構間皆保持一致：** 在多個架構上 (包括 x64、x86 及 ARM) 可使用相同的行為來執行程式碼。
 - **命令列工具：** 包含易用的命令列工具，可用於本機開發及持續整合案例。
-- **彈性部署：** 可以包含在應用程式內，或任何使用者、任何機器都可並行安裝。 可搭配 [Docker 容器](docker/index.md)使用。
+- **彈性部署：** 可以包含在應用程式內或並行安裝 (針對所有使用者或所有系統進行安裝)。 可搭配 [Docker 容器](docker/index.md)使用。
 - **相容：**.NET Core 可透過 [.NET Standard](../standard/net-standard.md) 與 .NET Framework、Xamarin 及 Mono 相容。
 - **開放原始碼：**.NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 .NET core 是 [.NET Foundation](https://dotnetfoundation.org/) 專案。
 - **受 Microsoft 支援：**.NET Core 根據 [.NET Core 支援](https://www.microsoft.com/net/core/support/)受 Microsoft 支援。
@@ -73,7 +73,7 @@ C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式�
 
 人們常問如何實作 .NET Core 以支援多個作業系統。 他們通常會問是否有不同的實作，或是否使用[條件式編譯](https://en.wikipedia.org/wiki/Conditional_compilation)。 都有，是強式偏差趨向條件式編譯。
 
-如以下圖表所示，[CoreFX](https://github.com/dotnet/corefx) 絕大部分是跨所有平台共用的非平台相關程式碼。 非平台相關程式碼可以實作為單一的可攜式組件，用在所有平台上。
+如以下圖表所示，[CoreFX](https://github.com/dotnet/corefx) \(英文\) 絕大部分是跨所有平台共用的非平台相關程式碼。 非平台相關程式碼可以實作為單一的可攜式組件，用在所有平台上。
 
 ![CoreFX：每個平台各有程式碼行](../images/corefx-platforms-loc.png)
 
@@ -102,6 +102,8 @@ Windows 與 Unix 實作大小相近。 因為 CoreFX 實作一些 Windows 專屬
 - **開放原始碼**：.NET Core 是開放原始碼，同時[唯讀的 .NET Framework 子集](https://github.com/microsoft/referencesource)也是開放原始碼。
 
 雖然 .NET Core 很獨特，且與 .NET Framework 及其他 .NET 實作有顯著差異，卻可以直接使用原始程式碼或二進位共用技術在這些實作間共用程式碼。
+
+由於 .NET Core 支援並行安裝，且其執行階段完全獨立於 .NET Framework，這使您可以在不產生任何問題的情況下，將它安裝到已經安裝 .NET Framework 的電腦上。
 
 ### <a name="comparison-with-mono"></a>與 Mono 的比較
 

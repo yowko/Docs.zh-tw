@@ -7,14 +7,14 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 9ceffd3194c7df41f12ac6cd6b589602965b4920
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c0173879c692588cc2e15f0b14a5687bb0404fb
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674307"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300666"
 ---
 # <a name="remove-element-for-configsections"></a>\<移除 > 項目\<configSections >
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4f2a8fc10d2aad6b2d43bf128697e86aa73c411
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: be2e5dbe0d02bcec8974a1e52c0dce107d3bf46b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644655"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052844"
 ---
 # <a name="enumeration-format-strings"></a>列舉格式字串
 
@@ -48,7 +48,7 @@ ms.locfileid: "65644655"
 
 ## <a name="x-or-x"></a>X 或 x
 
-以十六進位值來顯示列舉項目。 該值可視需要加上前置零來表示，以確保值的長度至少有八位數。 下列範例說明 X 格式規範。
+以十六進位值來顯示列舉項目。 值在必要的情況下會以前置零來表示，以確保結果字串使用兩個字元代表列舉類型之[底層數值類型](xref:System.Enum.GetUnderlyingType%2A)每個位元組。 下列範例說明 X 格式規範。 在範例中，<xref:System.ConsoleColor> 與 <xref:System.IO.FileAttributes> 兩者的底層類型是 <xref:System.Int32>，或 32 位元 (或 4 位元) 整數，這會產生 8 個字元的結果字串。
 
 [!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]      
 [!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]

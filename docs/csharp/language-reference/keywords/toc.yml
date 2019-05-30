@@ -230,20 +230,6 @@
           href: sizeof.md
         - name: typeof
           href: typeof.md
-        - name: 'true'
-          href: true.md
-          items:
-            - name: true 運算子
-              href: true-false-operators.md
-            - name: true 常值
-              href: true-literal.md
-        - name: 'False'
-          href: false.md
-          items:
-            - name: false 運算子
-              href: true-false-operators.md
-            - name: false 常值
-              href: false-literal.md
         - name: stackalloc
           href: stackalloc.md
         - name: nameof
@@ -269,6 +255,10 @@
       items:
         - name: 'null'
           href: null.md
+        - name: 'true'
+          href: true-literal.md
+        - name: 'False'
+          href: false-literal.md
         - name: default
           href: default.md
     - name: 內容關鍵字

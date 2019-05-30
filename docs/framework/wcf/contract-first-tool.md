@@ -2,15 +2,15 @@
 title: Contract-First 工具
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: 95aef67eb43176ab062b38979e714f232898f221
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ddc3b2c733c73808d17b6e0f45129cc19d7527c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652066"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380378"
 ---
 # <a name="contract-first-tool"></a>Contract-First 工具
-服務合約通常必須從現有的服務來建立。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，可以使用合約優先 (Contract-First) 工具自動從現有的服務建立資料合約類別。 若要使用合約優先工具，必須將 XML 結構描述定義 (XSD) 檔案下載至本機，這個工具無法透過 HTTP 匯入遠端資料合約。
+服務合約通常必須從現有的服務來建立。 在.NET Framework 4.5 中，資料合約類別可以自動建立從現有的服務使用合約優先工具。 若要使用合約優先工具，必須將 XML 結構描述定義 (XSD) 檔案下載至本機，這個工具無法透過 HTTP 匯入遠端資料合約。
 
  合約優先工具已整合到 Visual Studio 2012 中，做為建置工作。 每當建置專案時就會建立建置工作所產生的程式碼檔案，讓專案可以輕鬆採用基礎服務合約中的變更。
 
@@ -56,7 +56,7 @@ ms.locfileid: "64652066"
 </xs:schema>
 ```
 
- 將上述服務合約加入至專案，以滑鼠右鍵按一下專案，然後選取**加入新...**. 從 [範本] 對話方塊的 [WCF] 窗格中選取 [結構描述定義]，並命名新的檔案 SampleContract.xsd。 複製上面的程式碼，將其貼入新檔案的程式碼檢視中。
+ 將上述服務合約加入至專案，以滑鼠右鍵按一下專案，然後選取**加入新...** . 從 [範本] 對話方塊的 [WCF] 窗格中選取 [結構描述定義]，並命名新的檔案 SampleContract.xsd。 複製上面的程式碼，將其貼入新檔案的程式碼檢視中。
 
 ## <a name="configuring-contract-first-options"></a>設定合約優先選項
  合約優先選項可以設定的內容功能表中的 WCF 專案。 若要啟用合約優先開發，請選取**將 XSD 啟用為型別定義語言**專案的 [屬性] 視窗的 [WCF] 頁面中核取方塊。

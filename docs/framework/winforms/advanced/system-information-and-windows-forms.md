@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user names [Windows Forms], retrieving
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
-ms.openlocfilehash: eeb469dbf4553634aa50d0a9ea17e9b2464defb4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2edc2e867259f8884467c3d5b0ae3d22ba391a77
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934689"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380110"
 ---
 # <a name="system-information-and-windows-forms"></a>系統資訊和 Windows Form
 有時候就必須蒐集電腦上執行您的應用程式以在您的程式碼中進行決策的相關資訊。 例如，您可能只是適用於連線到特定的網路網域; 函式在此情況下，您必須判斷網域和停用此函式，如果網域不存在的方法。  
@@ -34,8 +34,8 @@ MessageBox.Show("Good morning " & User & ". You are connected to " _
 string User = SystemInformation.UserName;  
 string Domain = SystemInformation.UserDomainName;  
   
-MessageBox.Show("Good morning " + User + ". You are connected to " _  
-+ Domain)  
+MessageBox.Show("Good morning " + User + ". You are connected to "
++ Domain);
 ```  
   
  所有成員<xref:System.Windows.Forms.SystemInformation>類別是唯讀; 您無法修改使用者的設定。 有超過 100 個類別的成員，傳回所有項目上的資訊，從連接到電腦的監視器數目 (<xref:System.Windows.Forms.SystemInformation.MonitorCount%2A>) 為 Windows 檔案總管中的圖示間距 (<xref:System.Windows.Forms.SystemInformation.IconHorizontalSpacing%2A>和<xref:System.Windows.Forms.SystemInformation.IconVerticalSpacing%2A>)。  

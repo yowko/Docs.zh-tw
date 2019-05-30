@@ -2,12 +2,12 @@
 title: 可為 Null 的參考型別
 description: 本文提供可為 Null 參考型別的概觀，這種型別是在 C# 8 中新增的功能。 您會了解此功能如何為新及現有的專案，針對 Null 參考例外狀況提供安全。
 ms.date: 02/19/2019
-ms.openlocfilehash: 9ce9efb890f0eff5a6c6747f96c143a4d093dbfb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ac19cbba0e078af34801231145ee339d6e42a42b
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725021"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195926"
 ---
 # <a name="nullable-reference-types"></a>可為 Null 的參考型別
 
@@ -58,7 +58,7 @@ name!.Length;
 
 可為 Null 內容可讓您對編譯器解譯參考型別變數的方式進行細部控制。 任何指定來源行的**可為 Null 註釋內容**都是 `enabled` 或 `disabled`。 您可以將 C# 8 之前的編譯器想成是將您所有程式碼編譯在一個 `disabled` 可為 Null 內容中：任何參考型別都可能為 Null。 **可為 Null 警告內容** 可設為 `enabled`、`disabled` 或 `safeonly`。 可為 Null 警告內容會指定編譯器使用其流程分析所產生的警告。
 
-可為 Null 註釋內容和可為 Null 警告內容都可在您的 `csproj` 檔案中使用 `NullableContextOptions` 項目來為專案設定。 此項目會設定編譯器解譯型別可 NULL 性的方式及所產生警告。 有效的設定如下：
+可為 Null 註釋內容和可為 Null 警告內容都可在您的 `csproj` 檔案中使用 `Nullable` 項目來為專案設定。 此項目會設定編譯器解譯型別可 NULL 性的方式及所產生警告。 有效的設定如下：
 
 - `enable`：可為 Null 註釋內容為**啟用**。 可為 Null 警告內容為**啟用**。
   - 參考型別變數 (例如 `string`) 不可為 Null。  啟用所有可 NULL 性警告。
@@ -70,6 +70,9 @@ name!.Length;
   - 參考型別變數為遺忘式。 啟用所有可 NULL 性警告。
 - `safeonlywarnings`：可為 Null 註釋內容為**停用**。 可為 Null 警告內容為**僅限安全**。
   - 參考型別變數為遺忘式。 啟用所有安全可 NULL 性警告。
+
+> [!IMPORTANT]
+> `Nullable` 元素先前稱為 `NullableContextOptions`。 重新命名是在 Visual Studio 2019，16.2-p1 中發生的。 .NET Core SDK 3.0.100-preview5-011568 沒有此變更。 若您使用 .NET Core CLI，您將必須使用 `NullableContextOptions`，直到下一個預覽版推出。
 
 您也可以使用指示詞，在您專案中的任何位置設定相同內容：
 

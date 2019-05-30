@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42bef9ab728af251b043e29af4cee9e5cb3f405d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a11f19a9b5ebdf491b79c250da7fc5ac3d980b64
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636537"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377872"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put 函式
 
@@ -72,7 +72,7 @@ HRESULT QualifierSet_Put (
 
 |常數  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | 發生不合法嘗試指定**金鑰**不得為索引鍵屬性上的限定詞。 指定索引鍵 om c; as 物件的定義，無法變更每個執行個體為基礎。 |
+| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | 發生不合法嘗試指定**金鑰**不得為索引鍵屬性上的限定詞。 索引鍵的物件類別定義中指定，並無法改變每個執行個體為基礎。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 參數不是有效的。 |
 | `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | `pVal`參數不是合法的限定詞型別。 |
 | `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | 不可能呼叫`QualifierSet_Put`方法在限定詞上的因為主控物件不允許覆寫。 |
@@ -88,7 +88,7 @@ HRESULT QualifierSet_Put (
 
 **標頭：** WMINet_Utils.idl
 
-**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>另請參閱
 

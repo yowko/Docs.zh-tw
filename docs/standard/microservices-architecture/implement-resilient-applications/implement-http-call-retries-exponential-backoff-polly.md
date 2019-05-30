@@ -2,12 +2,12 @@
 title: 使用 Polly 以指數輪詢實作 HTTP 呼叫重試
 description: 了解如何使用 Polly 和 HttpClientFactory 處理 HTTP 失敗。
 ms.date: 01/07/2019
-ms.openlocfilehash: f9f7c60792527c6bdba9a63b31e3dcbec2963da9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9ffb0d918dc2efdc41d6c2db2e2141d14061b687
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644568"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053107"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>使用 HttpClientFactory 和 Polly 原則以指數輪詢實作 HTTP 呼叫重試
 
@@ -15,7 +15,7 @@ ms.locfileid: "65644568"
 
 Polly 是 .NET 程式庫，提供恢復功能和暫時性錯誤處理功能。 您可以藉由套用重試、斷路器、艙壁隔離 (Bulkhead Isolation)、逾時和後援等 Polly 原則，來實作這些功能。 Polly 以 .NET 4.x 和 .NET Standard Library 1.0 (其支援 .NET Core) 為目標。
 
-不過，使用 Polly 的程式庫搭配您自己的自訂程式碼和 HttpClient 可能相當複雜。 在 eShopOnContainers 的原始版本中，已有採用 Polly 的 [ResilientHttpClient 建置組塊](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10)。 但自從發行 [HttpClientFactory](https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests) 後，具復原性的 HTTP 通訊已變得更容易實作，因此 eShopOnContainers 中的建置組塊已遭淘汰。 
+不過，使用 Polly 的程式庫搭配您自己的自訂程式碼和 HttpClient 可能相當複雜。 在 eShopOnContainers 的原始版本中，已有採用 Polly 的 [ResilientHttpClient 建置組塊](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10)。 但自從發行 [HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md) 後，具復原性的 HTTP 通訊已變得更容易實作，因此 eShopOnContainers 中的建置組塊已遭淘汰。 
 
 下列步驟示範如何透過整合到 HttpClientFactory 中的 Polly 使用 Http 重試，如上一節所述。
 
@@ -75,7 +75,7 @@ Policy
 - **Polly 和 HttpClientFactory**\
   <https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory>
 
-- **Polly (.NET 復原和暫時性錯誤處理程式庫)** \
+- **Polly (.NET 復原和暫時性錯誤處理程式庫)**\
   <https://github.com/App-vNext/Polly>
 
 - **Marc Brooker：Jitter:利用隨機性更臻完美**\

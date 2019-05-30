@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 9b421b4bab32c1aae7a6ba7d69b9f4aea2ab99a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3bbe4ad6559e324db5853b95e797f50a7b908dcb
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705489"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301444"
 ---
-# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a> \<新增> NameValueSectionHandler 和 DictionarySectionHandler 的項目
+# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<新增> NameValueSectionHandler 和 DictionarySectionHandler 的項目
 
 加入自訂應用程式設定。 每個 **\<新增>** 標記包含索引鍵/值組。
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc7a0991ae308f1c61026e946021d22da9a4bc3b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 032958c24e03025fc3fc3eee2aae40bdd4491e7b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583548"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052739"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 開發指南
 本節說明如何建立、設定、偵錯、保護和部署 .NET Framework 應用程式。 本節也提供有關技術領域的資訊，例如動態程式設計、互通性、擴充性、記憶體管理和執行緒。  
@@ -48,7 +48,7 @@ ms.locfileid: "65583548"
  說明如何直接使用組態檔變更設定，而無須重新編譯您的 .NET Framework 應用程式。  
   
  [使用 .NET Native 編譯應用程式](../../docs/framework/net-native/index.md)  
- 說明如何使用 [!INCLUDE[net_native](../../includes/net-native-md.md)] 預先編譯技術，建置及部署「Windows 市集」的應用程式。 [!INCLUDE[net_native](../../includes/net-native-md.md)] 會編譯以 Managed 程式碼 (C#) 所撰寫，並以 .NET Framework 做為機器碼的應用程式。  
+ 說明如何使用 .NET Native 預先編譯技術，建置及部署「Windows 市集」的應用程式。 .NET Native 會編譯以受控程式碼 (C#) 所撰寫，並以 .NET Framework 做為機器碼的應用程式。  
   
  [安全性](../../docs/standard/security/index.md)  
  提供 .NET Framework 中，可加強應用程式開發安全性的類別及服務的相關資訊。  

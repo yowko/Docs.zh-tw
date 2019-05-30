@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: 68169063c9cf152942ff8a7757a1b3d97886002a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa7c0c22d070ec12cb67252dee7dca02c5160b9e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034563"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380093"
 ---
 # <a name="redirecting-assembly-versions"></a>重新導向組件版本
 
@@ -21,9 +21,9 @@ ms.locfileid: "62034563"
 
 <a name="BKMK_Assemblyunificationanddefaultbinding"></a>
 ## <a name="assembly-unification-and-default-binding"></a>組件統一和預設繫結
- .NET Framework 組件的繫結有時會透過名為 *「組件統一」*(assembly unification) 的處理序進行重新導向。 .NET Framework 包含某個版本的通用語言執行平台，以及大約二十多個組成類型程式庫的 .NET Framework 組件。 執行階段將這些 .NET Framework 組件視為單一單位。 根據預設，應用程式啟動時，任何類型參考只要位於執行階段所執行的程式碼中，都會導向至 .NET Framework 組件；且該組建將與載入處理序的執行階段具有相同的版本號碼。 與此模型同時發生的重新導向，皆為執行階段的預設行為。
+ .NET Framework 組件的繫結有時會透過名為 *「組件統一」* (assembly unification) 的處理序進行重新導向。 .NET Framework 包含某個版本的通用語言執行平台，以及大約二十多個組成類型程式庫的 .NET Framework 組件。 執行階段將這些 .NET Framework 組件視為單一單位。 根據預設，應用程式啟動時，任何類型參考只要位於執行階段所執行的程式碼中，都會導向至 .NET Framework 組件；且該組建將與載入處理序的執行階段具有相同的版本號碼。 與此模型同時發生的重新導向，皆為執行階段的預設行為。
 
- 例如，如果您的應用程式參考 System.XML 命名空間中的類型，而且是使用 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]所建立，則會包含隨附於執行階段 4.5 版之 System.XML 組件的靜態參考。 如果您要將點的繫結參考重新導向至隨附於 .NET Framework 4 的 System.XML 組件，可以將重新導向資訊放在應用程式設定檔中。 統一的 .NET Framework 組件之設定檔中的繫結重新導向會取消統一該組件。
+ 例如，如果您的應用程式參考 System.XML 命名空間中的型別，並使用.NET Framework 4.5 所建置，它會包含隨附於執行階段 4.5 版之 System.XML 組件的靜態參考。 如果您要將點的繫結參考重新導向至隨附於 .NET Framework 4 的 System.XML 組件，可以將重新導向資訊放在應用程式設定檔中。 統一的 .NET Framework 組件之設定檔中的繫結重新導向會取消統一該組件。
 
  此外，如果有多個可用版本，您可能會想要以手動方式將協力廠商組件的組件繫結重新導向。
 
@@ -31,7 +31,7 @@ ms.locfileid: "62034563"
 ## <a name="redirecting-assembly-versions-by-using-publisher-policy"></a>使用發行者原則將組件版本重新導向
  組件的廠商可以加入具有新組件的發行者原則檔，藉此將應用程式導向至較新版的組件。 發行者原則檔位於全域組件快取，其中包含組件重新導向設定。
 
- 組件的每個主要 .次要 版本都有自己的發行者原則檔。 例如，從 2.0.2.222 版重新導向至 2.0.3.000 版，以及從 2.0.2.321 版重新導向至 2.0.3.000 版，兩者的目標檔案皆相同，因為已透過 2.0 版建立了關係。 然而，從 3.0.0.999 版重新導向至 4.0.0.000 版則會傳入 3.0.999 版的檔案。 .NET Framework 的每個主要版本都有自己的發行者原則檔。
+ 組件的每個主要  .次要  版本都有自己的發行者原則檔。 例如，從 2.0.2.222 版重新導向至 2.0.3.000 版，以及從 2.0.2.321 版重新導向至 2.0.3.000 版，兩者的目標檔案皆相同，因為已透過 2.0 版建立了關係。 然而，從 3.0.0.999 版重新導向至 4.0.0.000 版則會傳入 3.0.999 版的檔案。 .NET Framework 的每個主要版本都有自己的發行者原則檔。
 
  如果組件有發行者原則檔，則執行階段會在檢查組件的資訊清單和應用程式設定檔後，檢查此檔案。 廠商必須只在新組件與重新導向的舊版組件相容時，才使用發行者原則檔。
 
@@ -55,7 +55,7 @@ ms.locfileid: "62034563"
 
 ### <a name="relying-on-automatic-binding-redirection"></a>依賴自動繫結重新導向
 
-當您建立傳統型應用程式在 Visual Studio 中目標[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]或更新版本時，應用程式會使用自動繫結重新導向。 這表示如果兩個元件參考了同一個強式名稱組件的不同版本，則執行階段會自動將繫結重新導向加入較新版組件的輸出應用程式設定檔 (app.config)。 此重新導向會覆寫可能執行的組件統一。 來源 app.config 檔案則不會加以修改。 例如，假設您的應用程式直接參考頻外 .NET Framework 元件，但使用以相同元件較舊版本為目標的協力廠商程式庫。 當您編譯應用程式時，輸出應用程式設定檔已修改為包含較新版元件的繫結重新導向。 如果您建立的是 Web 應用程式，則會收到有關繫結衝突的建置警告，從而提供您選項將必要的繫結重新導向加入來源 Web 設定檔中。
+當目標.NET Framework 4.5.1 或更新版本，您可以建立 Visual Studio 中的傳統型應用程式時，應用程式會使用自動繫結重新導向。 這表示如果兩個元件參考了同一個強式名稱組件的不同版本，則執行階段會自動將繫結重新導向加入較新版組件的輸出應用程式設定檔 (app.config)。 此重新導向會覆寫可能執行的組件統一。 來源 app.config 檔案則不會加以修改。 例如，假設您的應用程式直接參考頻外 .NET Framework 元件，但使用以相同元件較舊版本為目標的協力廠商程式庫。 當您編譯應用程式時，輸出應用程式設定檔已修改為包含較新版元件的繫結重新導向。 如果您建立的是 Web 應用程式，則會收到有關繫結衝突的建置警告，從而提供您選項將必要的繫結重新導向加入來源 Web 設定檔中。
 
 如果您手動將繫結重新導向加入來源 app.config 檔案中，在編譯時期，Visual Studio 會嘗試統一根據您所加入的繫結重新導向組件。 例如，假設您為組件插入下列繫結重新導向：
 

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: bfc2a916e37ac27d45746eb268912b3752f4d80f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad98617cd4e88d1650f67136536b7dd5994233a4
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705294"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301159"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Singletagsectionhandler 的自訂項目
 
 定義設定中所定義的自訂組態區段\<一節 > 項目，並使用<xref:System.Configuration.SingleTagSectionHandler>類別。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;*\<sectionName>*
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp; *\<sectionName>*
 
 ## <a name="syntax"></a>語法
 
@@ -36,7 +36,7 @@ ms.locfileid: "61705294"
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。 |
+| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -44,7 +44,7 @@ None
 
 ## <a name="remarks"></a>備註
 
-**\<SectionName>** 項目是所定義的自訂項目 [**\<section>**](~/docs/framework/configure-apps/file-schema/section-element.md) 標記 [**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) 項目。 組態系統會傳回<xref:System.Collections.IDictionary>物件，當您呼叫<xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>。
+**\<SectionName>** 項目是所定義的自訂項目 [ **\<section>** ](~/docs/framework/configure-apps/file-schema/section-element.md) 標記 [ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) 項目。 組態系統會傳回<xref:System.Collections.IDictionary>物件，當您呼叫<xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>。
 
 ## <a name="example"></a>範例
 

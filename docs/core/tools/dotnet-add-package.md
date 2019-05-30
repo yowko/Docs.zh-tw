@@ -2,12 +2,12 @@
 title: dotnet add package 命令
 description: "'dotnet add package' 命令提供方便的選項，將 NuGet 套件參考新增至專案。"
 ms.date: 04/24/2019
-ms.openlocfilehash: 07cb6cd8e7873def6f969a54c1f7b9a7325f9491
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 82f178026b46eb0237243b8ae49d17fbcc1af6ec
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632276"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959248"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -90,7 +90,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 * **`-v|--version <VERSION>`**
 
-  套件的版本。
+  套件的版本。 請參閱 [NuGet 套件版本控制](https://docs.microsoft.com/nuget/reference/package-versioning) \(部分機器翻譯\)。
 
 ## <a name="examples"></a>範例
 

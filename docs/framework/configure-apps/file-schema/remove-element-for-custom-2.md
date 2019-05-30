@@ -7,14 +7,14 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: c86d231a4e3e8e15df94017a6ca461b365643ea5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 062aa3921d29cffd33db2d96096ef25c2b819030
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705087"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300703"
 ---
 # <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<移除 > NameValueSectionHandler 和 DictionarySectionHandler 的項目
 

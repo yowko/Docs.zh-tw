@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: 33473eadefabc2bcbbb552d225d021eae4bed0bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f645232d2ae9d9bad8c26a5b9fec2243c6cf9d0
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033380"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380028"
 ---
 # <a name="sort-elements-in-a-sequence"></a>在序列中排序項目
 使用 <xref:System.Linq.Enumerable.OrderBy%2A> 運算子，可以根據一個或多個索引鍵來排序序列。  
@@ -43,7 +43,7 @@ ms.locfileid: "62033380"
  [!code-vb[DLinqQueryExamples#24](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#24)]  
   
 ## <a name="example"></a>範例  
- 下列範例先根據送貨國家 (地區) 再根據最高到最低的運費，來排序 `EmployeeID 1` 的訂單。  
+ 下列範例會排序從訂單`EmployeeID 1`由`ShipCountry`，再以最高到最低的運費。  
   
  [!code-csharp[DLinqQueryExamples#25](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#25)]
  [!code-vb[DLinqQueryExamples#25](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#25)]  

@@ -2,12 +2,12 @@
 title: 協調微服務和多容器應用程式的高延展性和可用性
 description: 探索協調微服務和多容器應用程式之高延展性和可用性的各種選項，以及開發 Kubernetes 應用程式生命週期時使用 Azure Dev Spaces 的可能性。
 ms.date: 09/20/2018
-ms.openlocfilehash: 3b7383f6153b787ce8bfad87e3902c34afba0fb2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 27155736c6b5308d4794b17e5f5bd0b93109b5c1
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644886"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196042"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>協調微服務和多容器應用程式的高延展性和可用性
 
@@ -101,7 +101,7 @@ Azure Kubernetes Service 特別針對 Azure，提供熱門 Docker 叢集開放�
 
 ## <a name="getting-started-with-azure-kubernetes-service-aks"></a>開始使用 Azure Kubernetes Service (AKS) 
 
-若要開始使用 AKS，請從 Azure 入口網站或使用 CLI 部署 AKS 叢集。 如需部署 Azure Container Service 叢集的詳細資訊，請參閱[部署 Azure Kubernetes Service (AKS) 叢集](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)。
+若要開始使用 AKS，請從 Azure 入口網站或使用 CLI 部署 AKS 叢集。 如需在 Azure 中部署 Kubernetes 叢集的詳細資訊，請參閱[部署 Azure Kubernetes Service (AKS) 叢集](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)。
 
 隨附於 AKS 預設安裝的軟體均不會收取任何費用。 所有預設選項都是使用開放原始碼軟體來實作。 AKS 可供 Azure 中的多部虛擬機器使用。 您僅需支付所選計算執行個體的費用，以及其他已使用的基礎結構資源費用，例如儲存體和網路功能。 AKS 本身沒有任何累加的費用。
 

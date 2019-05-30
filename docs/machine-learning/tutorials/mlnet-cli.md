@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: feddafdd6becd676f4d18aa94bdfae50f02abc6e
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 029685be9d44ad947d4291912d7da1d8ce73d52a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557950"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053637"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>使用 CLI 自動產生二元分類器
 
@@ -142,12 +142,12 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 
     ![CLI 產生的 VS 方案](./media/mlnet-cli/generated-csharp-solution-detailed.png)
 
-    - 產生的**類別庫** (包含序列化的 ML 模型和資料類別) 可直接用於終端使用者應用程式，甚至是直接參考該類別庫 (如果您想要，也可以移動程式碼)。
+    - 產生的**類別庫** (包含序列化的 ML 模型 (.zip 檔案) 和資料類別 (資料模型)) 可直接用於終端使用者應用程式，甚至是直接參考該類別庫 (如果您想要，也可以移動程式碼)。
     - 產生的**主控台應用程式**包含執行程式碼，您必須進行檢閱，然後通常會重複使用「評分程式碼」(執行 ML 模型以建立預測的程式碼)，做法是將該簡單程式碼 (只有幾行) 移至您的終端使用者應用程式，以在其中建立預測。 
 
-1. 在類別庫專案中開啟 **Observation.cs** 和 **Prediction.cs** 類別檔案。 您會看到這些類別是「資料類別」或用於保存資料的 POCO 類別。 它是「未定案程式碼」，但如果您的資料集具有數十個或甚至數百個資料行時，則產生該程式碼會很有用。 
-    - `SampleObservation` 類別可用於從資料集讀取資料。 
-    - `SamplePrediction` 類別，或當
+1. 開啟類別庫專案內的 **ModelInput.cs** 與 **ModelOutput.cs** 類別檔案。 您會看到這些類別是「資料類別」或用於保存資料的 POCO 類別。 它是「未定案程式碼」，但如果您的資料集具有數十個或甚至數百個資料行時，則產生該程式碼會很有用。 
+    - `ModelInput` 類別可用於從資料集讀取資料。 
+    - `ModelOutput` 類別是用來取得預測結果 (預測資料)。
 
 1. 開啟 Program.cs 檔案並探索程式碼。 在短短幾行中，您就能夠執行模型並建立範例預測。
 
@@ -160,13 +160,13 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
         //ModelBuilder.CreateModel();
 
         ITransformer mlModel = mlContext.Model.Load(MODEL_FILEPATH, out DataViewSchema inputSchema);
-        var predEngine = mlContext.Model.CreatePredictionEngine<SampleObservation, SamplePrediction>(mlModel);
+        var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
 
         // Create sample data to do a single prediction with it 
-        SampleObservation sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
+        ModelInput sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
 
         // Try a single prediction
-        SamplePrediction predictionResult = predEngine.Predict(sampleData);
+        ModelOutput predictionResult = predEngine.Predict(sampleData);
 
         Console.WriteLine($"Single Prediction --> Actual value: {sampleData.Label} | Predicted value: {predictionResult.Prediction}");
     }
@@ -178,14 +178,14 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 
 - 在第三行程式碼中，您會提供該模型 .ZIP 檔案的路徑，使用 `mlContext.Model.Load()` API 從序列化模型 .ZIP 檔案載入模型。
 
-- 在第四行程式碼中，您會使用 `mlContext.Model.CreatePredictionEngine<TObservation, TPrediction>()` API 載入建立 `PredictionEngine` 物件。 每當您想要建立以單一範例資料為目標的預測時 (在本例中會以一段文字來預測其情感)，都需要 `PredictionEngine` 物件。
+- 在第四行程式碼中，您會使用 `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` API 載入建立 `PredictionEngine` 物件。 每當您想要建立以單一範例資料為目標的預測時 (在本例中會以一段文字來預測其情感)，都需要 `PredictionEngine` 物件。
 
 - 在第五行程式碼中，您會呼叫函式 `CreateSingleDataSample()` 來建立用於預測的「單一範例資料」。 由於 CLI 工具不知道要使用哪種範例資料類型，因此會在該函式中載入資料集的第一個資料列。 不過，在此情況下，您也可以建立自己的「硬式編碼」資料，藉由更新為實作 `CreateSingleDataSample()` 函式的更簡單程式碼，來取代該函式的目前實作：
 
     ```csharp
-    private static SampleObservation CreateSingleDataSample()
+    private static ModelInput CreateSingleDataSample()
     {
-        SampleObservation sampleForPrediction = new SampleObservation() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
+        ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
         return sampleForPrediction;
     }
     ```
@@ -219,7 +219,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 
 您可以使用類似的「ML 模型評分程式碼」，在終端使用者應用程式中執行模型並建立預測。 
 
-例如，您可以直接將該程式碼移至任何 Windows 傳統型應用程式 (例如 **WPP** 和 **WinForms**)，並以在主控台應用程式中執行的類似方式來執行模型。
+例如，您可以直接將該程式碼移至任何 Windows 傳統型應用程式 (例如 **WPF** 和 **WinForms**)，並以在主控台應用程式中執行的類似方式來執行模型。
 
 不過，您實作這幾行程式碼來執行 ML 模型的方式應該經過最佳化 (也就是快取模型 .zip 檔案並載入一次)，並具有單一物件而不是在每個要求上建立物件，尤其是您的應用程式 (Web 應用程式或分散式服務) 需要延展性時，如下一節中所述。
 
@@ -242,7 +242,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 
 更重要的是，在此特定案例 (情感分析模型) 中，您也可以比較該產生的定型程式碼與下列教學課程中所述程式碼：
 
-- 比較：[教學課程：在情感分析二元分類案例中使用 ML.NET](https://docs.microsoft.com/en-us/dotnet/machine-learning/tutorials/sentiment-analysis)。
+- 比較：[教學課程：在情感分析二元分類案例中使用 ML.NET](sentiment-analysis.md)。
 
 值得將教學課程中所選擇演算法和管線設定與 CLI 工具產生的程式碼進行比較。 根據您花在逐一查看和搜尋更佳模型的時間，所選擇的演算法及其特定超參數和管線設定可能會不同。
 

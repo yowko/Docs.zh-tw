@@ -2,20 +2,20 @@
 title: 非同步程式設計
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: c41a231959536f4bd558fcd3e94d0d58c2375021
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2698ffabb1f4d7c25f8d889c549c27b668647d62
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584502"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380076"
 ---
 # <a name="asynchronous-programming"></a>非同步程式設計
 
-本主題將討論非同步程式設計的支援在.NET Framework Data Provider for SQL Server (SqlClient) 包括增強功能來支援非同步程式設計功能中引進[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。
+本主題討論中的非同步程式設計，.NET Framework Data Provider for SQL Server (SqlClient) 包括可支援.NET Framework 4.5 中的非同步程式設計功能而引進的增強功能的支援。
 
 ## <a name="legacy-asynchronous-programming"></a>傳統非同步程式設計
 
-在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 之前，是使用下列方法和 `Asynchronous Processing=true` 連接屬性完成 SqlClient 非同步程式設計：
+在.NET Framework 4.5 中前, SqlClient 非同步程式設計是使用下列方法和`Asynchronous Processing=true`連接屬性：
 
 1. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>
 
@@ -23,16 +23,16 @@ ms.locfileid: "65584502"
 
 3. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>
 
-[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中的 SqlClient 仍保留此功能。
+在.NET Framework 4.5 中的 SqlClient 仍保留此功能。
 
 > [!TIP]
-> 從開始[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]，所以不再需要這些舊版方法`Asynchronous Processing=true`連接字串中。
+> 從.NET Framework 4.5 開始，這些舊版的方法已不再需要`Asynchronous Processing=true`連接字串中。
 
-## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中新增的非同步程式設計功能
+## <a name="asynchronous-programming-features-added-in-net-framework-45"></a>新增.NET Framework 4.5 中非同步程式設計功能
 
 新的非同步程式設計功能提供了一些簡單的技巧，可以使程式碼非同步。
 
-如需 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中引進的非同步程式設計功能詳細資訊，請參閱：
+如需.NET Framework 4.5 中引進的非同步程式設計功能的詳細資訊，請參閱：
 
 - [C# 中的非同步程式設計](../../../csharp/async.md)
 
@@ -53,7 +53,7 @@ ms.locfileid: "65584502"
 
 呼叫 `async` 方法不會配置任何額外的執行緒。 它可能會在結尾處簡短地使用現有的 I/O 完成執行緒。
 
-[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中新增下列方法以支援非同步程式設計：
+若要支援非同步程式設計的.NET Framework 4.5 中新增下列方法：
 
 - <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=nameWithType>
 

@@ -2,16 +2,16 @@
 title: SqlClient 資料流支援
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 6fda1dd2d46bbe5ad6b23cab0cd817365c6104eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83a657d1156774ec5ea342d47dca0434fd9d506c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698443"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379998"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient 資料流支援
 
-串流應用程式和 SQL Server 之間的支援 (新[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) 支援 （文件、 影像和媒體檔案） 的伺服器上的非結構化的資料。 SQL Server 資料庫可以儲存二進位大型物件 (Blob)，但擷取 BLOB，可以使用大量記憶體。
+資料流 （新功能 .NET Framework 4.5） 應用程式和 SQL Server 之間的支援 （文件、 影像和媒體檔案） 的伺服器上支援非結構化的資料。 SQL Server 資料庫可以儲存二進位大型物件 (Blob)，但擷取 BLOB，可以使用大量記憶體。
 
 資料流支援從 SQL Server 可簡化撰寫應用程式資料流資料，而不必完全將資料載入記憶體，導致較少的記憶體溢位例外狀況。
 
@@ -101,9 +101,9 @@ GO
 
 - 提供擷取大型檔案的非同步方法，避免封鎖使用者介面執行緒。
 
-- 從 SQL Server 傳輸大型文字檔[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。
+- 從.NET Framework 4.5 中的 SQL Server 傳輸大型文字檔。
 
-- 傳輸大型的 XML 檔案中的 SQL Server 從[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。
+- 從.NET Framework 4.5 中的 SQL Server 傳輸大型的 XML 檔案。
 
 - 從 SQL Server 擷取資料。
 
@@ -323,9 +323,9 @@ GO
 
 範例顯示如何執行下列動作：
 
-- 將大型 BLOB 傳輸到中的 SQL Server [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。
+- 在.NET Framework 4.5 中的 SQL Server 來傳輸大型 BLOB。
 
-- 將大型文字檔傳輸到中的 SQL Server [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。
+- 將大型文字檔傳輸到.NET Framework 4.5 中的 SQL Server。
 
 - 使用新的非同步功能傳輸大型 BLOB。
 

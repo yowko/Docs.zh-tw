@@ -3,12 +3,12 @@ title: 使用可為 Null 的參考類型進行設計
 description: 本進階教學課程提供可為 Null 的參考類型簡介。 您將了解如何在參考值可能為 Null 時表達您的設計意圖，以及在它們不能為 Null 時強制執行編譯器。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 97b41574b328c9f6bed60d4bf2943c7a726261d5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: cd73a73554514c2b7c70c78ba24038ee8d543266
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59296143"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195829"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>教學課程：使用可為 Null 與不可為 Null 的參考類型更清楚地表達您的設計意圖
 
@@ -36,15 +36,18 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>建立應用程式並啟用可為 Null 的參考類型
 
-在 Visual Studio 中或從命令列中使用 `dotnet new console` 來建立新的主控台應用程式。 為應用程式 `NullableIntroduction` 命名。 一旦建立應用程式之後，您將必須啟用 C# 8 搶鮮版 (Beta) 功能。 開啟 `csproj` 檔案，並將 `LangVersion` 項目新增到 `PropertyGroup` 項目。 您必須選擇參與**可為 Null 的參考類型**功能，甚至是在 C# 8 專案中。 這是因為一旦開啟此功能之後，現有的參考變數宣告就會變成**不可為 Null 的參考類型**。 儘管該決策將可協助您找出現有程式碼可能不具適當 Null 檢查的問題，但它可能不會正確地反映您的原始設計意圖。 您已透過將 `NullableContextOptions` 項目設為 `enable` 來開啟功能：
+在 Visual Studio 中或從命令列中使用 `dotnet new console` 來建立新的主控台應用程式。 為應用程式 `NullableIntroduction` 命名。 一旦建立應用程式之後，您將必須啟用 C# 8 搶鮮版 (Beta) 功能。 開啟 `csproj` 檔案，並將 `LangVersion` 項目新增到 `PropertyGroup` 項目。 您必須選擇參與**可為 Null 的參考類型**功能，甚至是在 C# 8 專案中。 這是因為一旦開啟此功能之後，現有的參考變數宣告就會變成**不可為 Null 的參考類型**。 儘管該決策將可協助您找出現有程式碼可能不具適當 Null 檢查的問題，但它可能不會正確地反映您的原始設計意圖。 您已透過將 `Nullable` 項目設為 `enable` 來開啟功能：
 
 ```xml
 <LangVersion>8.0</LangVersion>
-<NullableContextOptions>enable</NullableContextOptions>
+<Nullable>enable</Nullable>
 ```
 
+> [!IMPORTANT]
+> `Nullable` 元素先前稱為 `NullableContextOptions`。 重新命名是在 Visual Studio 2019，16.2-p1 中發生的。 .NET Core SDK 3.0.100-preview5-011568 沒有此變更。 若您使用 .NET Core CLI，您將必須使用 `NullableContextOptions`，直到下一個預覽版推出。
+
 > [!NOTE]
-> 當 C# 8 發行時 (並非處於預覽模式時)，新的專案範本會新增 `NullableContextOptions` 項目。 在那之前，您必須手動新增它。
+> 當 C# 8 發行時 (並非處於預覽模式時)，新的專案範本會新增 `Nullable` 項目。 在那之前，您必須手動新增它。
 
 ### <a name="design-the-types-for-the-application"></a>設計適用於應用程式的類型
 

@@ -12,15 +12,15 @@ api_type:
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 662863ec69e464dafe893552f1d81755313acc75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3df5324e23ebeded38f3aa9843f81701f7fd333
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786213"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251053"
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7::ReadInMemorySymbols
-[受到 [!INCLUDE[net_v461](../../../../includes/net-v461-md.md)] 和更新版本的支援]  
+[在 .NET Framework 4.6.1 及更新版本中支援]  
   
  從記憶體中的符號資料流讀取位元組。  
   

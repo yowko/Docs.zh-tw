@@ -7,22 +7,22 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: d824ae828dd025f3292990facaa5e423add9c282
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e79def513637937262d00b0edb1b0f7676fd120b
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705346"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300796"
 ---
-# <a name="clear-element-for-configsections"></a>\<清除 > 項目\<configSections >
+# <a name="clear-element-for-configsections"></a>\<清除>項目\<configSections >
 
 清除所有先前定義的區段和區段群組。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>語法
 
@@ -40,7 +40,7 @@ ms.locfileid: "61705346"
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<configSections >** 項目](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含組態區段和命名空間宣告。 |
+| [ **\<configSections >** 項目](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含組態區段和命名空間宣告。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -48,13 +48,13 @@ None
 
 ## <a name="remarks"></a>備註
 
-**\<清除 >** 項目會從您先前已定義在目前的組態檔中或在組態檔階層架構中較高層級的應用程式移除所有區段和區段群組。
+**\<清除>** 項目會從您先前已定義在目前的組態檔中或在組態檔階層架構中較高層級的應用程式移除所有區段和區段群組。
 
 ## <a name="example"></a>範例
 
-此範例中定義的機器組態檔案和應用程式組態檔，並示範如何使用**\<清除 >** 清除區段中預先定義的應用程式組態檔中的項目電腦組態檔。
+此範例中定義的機器組態檔案和應用程式組態檔，並示範如何使用 **\<清除>** 清除區段中預先定義的應用程式組態檔中的項目電腦組態檔。
 
-下列的機器組態檔案程式碼會宣告兩個區段 **\<sampleSection >** 並 **\<anotherSampleSection >**，應用程式之前所讀取的來源組態檔：
+下列的機器組態檔案程式碼會宣告兩個區段 **\<sampleSection >** 並 **\<anotherSampleSection >** ，應用程式之前所讀取的來源組態檔：
 
 ```xml
 <!-- Machine.config file -->
@@ -71,7 +71,7 @@ None
 </configuration>
 ```
 
-下列應用程式組態檔程式碼會清除所有先前宣告的區段。 應用程式無法使用，或擷取在電腦組態檔中所宣告的各區段的設定。 不過，它可以在這裡使用的設定 **\<anotherSection >** 因為它的來源之後**\<清除 >** 項目。
+下列應用程式組態檔程式碼會清除所有先前宣告的區段。 應用程式無法使用，或擷取在電腦組態檔中所宣告的各區段的設定。 不過，它可以在這裡使用的設定 **\<anotherSection>** 因為它的來源之後 **\<清除>** 項目。
 
 ```xml
 <!-- Application configuration file -->

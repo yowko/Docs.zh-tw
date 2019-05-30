@@ -7,12 +7,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: a852f36c05075365ced8ec39457b15601ca3c3fb
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2c49c8517e15534121b0f8dbc04902b46a92ef20
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877077"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959357"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed 陳述式 (C# 參考)
 
@@ -63,13 +63,11 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-您可以配置堆疊上的記憶體，此處不受記憶體回收限制，因此不需要釘選。 如需詳細資訊，請參閱 [stackalloc](stackalloc.md)。
-
-[!code-csharp[Initializing multiple pointers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#4)]
+您可以配置堆疊上的記憶體，此處不受記憶體回收限制，因此不需要釘選。 若要那麼做，請使用 [`stackalloc` 運算子](stackalloc.md)。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的 [fixed 陳述式](~/_csharplang/spec/unsafe-code.md#the-fixed-statement)一節。
 
 ## <a name="see-also"></a>另請參閱
 

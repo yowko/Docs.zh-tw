@@ -2,12 +2,12 @@
 title: dotnet build 命令
 description: dotnet build 命令會建置專案和其所有相依性。
 ms.date: 04/24/2019
-ms.openlocfilehash: 6564aacbe520797b47095929cfe72c6b180b99a7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: df264fe830259832e5c75db9fd71230ba70a9f18
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632127"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959188"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -32,7 +32,7 @@ dotnet build [-h|--help]
 
 ## <a name="description"></a>說明
 
-`dotnet build` 命令會將專案及其相依性建置成一組二進位檔。 二進位檔將專案程式碼包含在副檔名為 *.dll* 的中繼語言 (IL) 檔案中，以及副檔名為 *.pdb* 且用於偵錯的符號檔。 產生相依性的 JSON 檔案 ( *\*.deps.json*)，其中列出應用程式的相依性。 產生 *\*.runtimeconfig.json* 檔案，其中指定應用程式的共用執行階段及其版本。
+`dotnet build` 命令會將專案及其相依性建置成一組二進位檔。 二進位檔將專案程式碼包含在副檔名為 *.dll* 的中繼語言 (IL) 檔案中，以及副檔名為 *.pdb* 且用於偵錯的符號檔。 產生相依性的 JSON 檔案 (*\*.deps.json*)，其中列出應用程式的相依性。 產生 *\*.runtimeconfig.json* 檔案，其中指定應用程式的共用執行階段及其版本。
 
 如果專案對於第三方有相依性 (例如來自 NuGet 的程式庫)，這些相依性將會從 NuGet 快取解析，而不會透過專案的建置輸出提供。 因此，`dotnet build` 產生的結果尚未準備好轉移到另一部電腦來執行。 這與 .NET Framework 的行為相反。在 .NET Framework 中，建置可執行檔專案 (應用程式) 所產生的輸出，可在任何已安裝 .NET Framework 的電腦上執行。 若要在 .NET Core 中擁有類似體驗，您需要使用 [dotnet publish](dotnet-publish.md) 命令。 如需詳細資訊，請參閱 [.NET Core 應用程式部署](../deploying/index.md)。
 
@@ -144,7 +144,7 @@ dotnet build [-h|--help]
   dotnet build --source c:\packages\mypackages
   ```
 
-* 建置專案並設定 1.2.3.4 版本作為建置參數：
+* 建置專案並使用 `-p` [MSBuild 選項](#msbuild) 將 1.2.3.4 版設定為組建參數：
 
   ```console
   dotnet build -p:Version=1.2.3.4

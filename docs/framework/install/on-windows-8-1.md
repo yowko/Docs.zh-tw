@@ -4,13 +4,13 @@ ms.custom: updateeachrelease
 description: 了解如何在 Windows 8.1 上安裝 .NET Framework
 author: rlander
 ms.author: mairaw
-ms.date: 10/22/2017
-ms.openlocfilehash: 114ff758be59afd08b0c4727378df3a95ebc8220
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.date: 04/18/2019
+ms.openlocfilehash: 752f18eb3cbb87e5b6703fd7e0e81762ba3f0f10
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737802"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052063"
 ---
 # <a name="install-the-net-framework-on-windows-81-and-windows-server-2012-r2"></a>在 Windows 8.1 和 Windows Server 2012 R2 上安裝 .NET Framework
 
@@ -18,14 +18,14 @@ ms.locfileid: "54737802"
 
 ![無法啟動這個應用程式](./media/this-application-could-not-be-started.png)
 
-這些指令將協助您安裝所需的 .NET Framework 版本。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 是最新版本。 其支援 Windows 8.1 和 Windows Server 2012 R2，並且隨附於 [Windows 10 2018 年 10 月更新](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update)和 [Windows 10 2018 年 4 月更新](https://www.microsoft.com/software-download/windows10)。
+這些指令將協助您安裝所需的 .NET Framework 版本。 [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) 是最新版本。 Windows 8.1 和 Windows Server 2012 R2 支援它，而且它包含於 [Windows 10 2019 年 5 月更新](https://support.microsoft.com/help/4028685/windows-10-get-the-update)。
 
-## <a name="net-framework-472"></a>.NET Framework 4.7.2
+## <a name="net-framework-8"></a>.NET Framework 8
 
 > [!div class="button"]
-> [下載 .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
+> [下載 .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) 可用來執行針對 .NET Framework 4.0 或更新版本建置的應用程式。
+[.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) 可用來執行針對 .NET Framework 4.0 或更新版本建置的應用程式。
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 

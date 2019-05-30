@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: 279f7932d38885331b69616afa719ad782d7244b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3630b9e2f50830faf50599388e4fbb7ec1630b73
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659908"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300742"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>建立外觀可自訂的控制項
 <a name="introduction"></a>

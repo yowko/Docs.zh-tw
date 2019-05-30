@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 07ef96862c04b8245d8365c3d3b419d227e824c4
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c1f891314a2490d6dbf22977ea5a5f69533b330d
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876955"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300315"
 ---
 # <a name="c-operators"></a>C# 運算子
 
@@ -95,9 +95,9 @@ C# 提供內建型別支援的數個預先定義運算子。 例如，[算術運
 
 [*x](pointer-related-operators.md#pointer-indirection-operator-) - 指標間接取值或取值 (Dereference)。
 
-[true 運算子](../keywords/true-false-operators.md) - 傳回 [bool](../keywords/bool.md) 值 `true` 以指出運算元必然為 true。
+[true 運算子](true-false-operators.md) - 傳回 [bool](../keywords/bool.md) 值 `true` 以指出運算元必然為 true。
 
-[false 運算子](../keywords/true-false-operators.md) - 傳回 [bool](../keywords/bool.md) 值 `true`，以指出運算元必然為 false。
+[false 運算子](true-false-operators.md) - 傳回 [bool](../keywords/bool.md) 值 `true`，以指出運算元必然為 false。
 
 ## <a name="multiplicative-operators"></a>乘法類運算子
 
@@ -197,9 +197,9 @@ C# 提供內建型別支援的數個預先定義運算子。 例如，[算術運
 
 [x = y](assignment-operator.md) – 指派。
 
-[x += y](addition-assignment-operator.md) – 遞增。 將 `y` 的值加上 `x` 的值，將結果儲存在 `x`，並傳回新的值。 如果 `x` 指定 `event`，則 `y` 必須是適當的函式，其中會將 C# 視為事件處理常式予以新增。
+[x += y](arithmetic-operators.md#compound-assignment) – 遞增。 將 `y` 的值加上 `x` 的值，將結果儲存在 `x`，並傳回新的值。 如果 `x` 指定 [event](../keywords/event.md)，則 `y` 必須是 C# 視為事件處理常式新增的適當方法。
 
-[x -= y](subtraction-assignment-operator.md) – 遞減。 將 `x` 的值減去 `y` 的值，將結果儲存在 `x`，並傳回新的值。 如果 `x` 指定 `event`，則 `y` 必須是適當的函式，其中會將 C# 視為事件處理常式予以移除。
+[x -= y](arithmetic-operators.md#compound-assignment) – 遞減。 將 `x` 的值減去 `y` 的值，將結果儲存在 `x`，並傳回新的值。 如果 `x` 指定 [event](../keywords/event.md)，則 `y` 必須是 C# 視為事件處理常式移除的適當方法。
 
 [x *= y](arithmetic-operators.md#compound-assignment) – 乘法指派。 將 `y` 的值乘以 `x` 的值，將結果儲存在 `x`，並傳回新的值。
 

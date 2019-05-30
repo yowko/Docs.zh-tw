@@ -3,12 +3,12 @@ title: 使用可為 Null 的參考類型進行設計
 description: 本進階教學課程提供可為 Null 的參考類型簡介。 您將了解如何在參考值可能為 Null 時表達您的設計意圖，以及在它們不能為 Null 時強制執行編譯器。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 289b864aaa0380a31e93ef223fb5b5780e35892a
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427288"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195840"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>教學課程：使用可為 Null 的參考型別遷移現有程式碼
 
@@ -49,8 +49,11 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 良好的下一個步驟，便是開啟可為 Null 註釋內容，查看產生了多少警告。 將下列項目直接新增至解決方案中兩個 csproj 檔案的 `LangVersion` 項目下方：
 
 ```xml
-<NullableContextOptions>enable</NullableContextOptions>
+<Nullable>enable</Nullable>
 ```
+
+> [!IMPORTANT]
+> `Nullable` 元素先前稱為 `NullableContextOptions`。 重新命名是在 Visual Studio 2019，16.2-p1 中發生的。 .NET Core SDK 3.0.100-preview5-011568 沒有此變更。 若您使用 .NET Core CLI，您將必須使用 `NullableContextOptions`，直到下一個預覽版推出。
 
 執行測試建置，並注意警告清單。 在這個小型應用程式中，編譯器產生五個警告，因此您很有可能會將可為 Null 註釋內容維持在啟用狀態，並開始修正整個專案的警告。
 
@@ -58,7 +61,7 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 
 ## <a name="warnings-help-discover-original-design-intent"></a>警告可協助您探索原始的設計意圖
 
-有兩個類別會產生多個警告。 從 `NewsStoryViewModel` 類別開始。 從兩個 csproj 檔案中移除 `NullableContextOptions` 項目，可讓您將警告範圍限制在您目前使用的程式碼區段。 開啟 *NewsStoryViewModel.cs* 檔案，新增下列指示詞，以啟用 `NewsStoryViewModel` 的可為 Null 註釋內容，並遵循該類別定義來還原它：
+有兩個類別會產生多個警告。 從 `NewsStoryViewModel` 類別開始。 從兩個 csproj 檔案中移除 `Nullable` 項目，可讓您將警告範圍限制在您目前使用的程式碼區段。 開啟 *NewsStoryViewModel.cs* 檔案，新增下列指示詞，以啟用 `NewsStoryViewModel` 的可為 Null 註釋內容，並遵循該類別定義來還原它：
 
 ```csharp
 #nullable enable

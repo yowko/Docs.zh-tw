@@ -2,16 +2,16 @@
 title: 動態更新
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: e28a34e500034eec6cf250d94cf7631ca85a7d40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2553e6a29f498a9b53752d6c191df21a391dee34
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945804"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378284"
 ---
 # <a name="dynamic-update"></a>動態更新
 
-動態更新提供的機制可讓工作流程應用程式開發人員更新持續性工作流程執行個體的工作流程定義。 這可以是實作錯誤修復、新要求，或是適應突如其來的變化。 本主題提供 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進的動態更新功能概觀。
+動態更新提供的機制可讓工作流程應用程式開發人員更新持續性工作流程執行個體的工作流程定義。 這可以是實作錯誤修復、新要求，或是適應突如其來的變化。 本主題提供.NET Framework 4.5 中引進的動態更新功能的概觀。
 
 ## <a name="dynamic-update"></a>動態更新
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 898771c3de8b54c08decd91f1a631a6205292912
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: d064e2377e39f673d47ce497ebd6c96e9f3c1cd0
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053633"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251061"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新功能
 
@@ -782,7 +782,7 @@ WPF 在 <xref:System.Printing.PrintQueue?displayProperty=nameWithType> 類別中
 
 ## <a name="whats-new-in-net-framework-462"></a>.NET Framework 4.6.2 中的新功能
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 包含下列領域的新功能：
+.NET Framework 4.6.2 包含下列領域的新功能：
 
 - [ASP.NET](#ASPNET462)
 
@@ -810,11 +810,11 @@ WPF 在 <xref:System.Printing.PrintQueue?displayProperty=nameWithType> 類別中
 
 ### <a name="aspnet"></a>ASP.NET
 
-在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中，ASP.NET 會包含下列增強功能︰
+在 .NET Framework 4.6.2 中，ASP.NET 包含下列增強功能：
 
 **改進對資料註解驗證程式的當地語系化錯誤訊息的支援**
 
-資料註解驗證程式可讓您藉由將一或多個屬性加入類別內容來執行驗證。 屬性的 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 項目定義了驗證失敗時的錯誤訊息文字。 從 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 開始，ASP.NET 可讓您輕鬆地將錯誤訊息當地語系化。 錯誤訊息將會當地語系化，如果︰
+資料註解驗證程式可讓您藉由將一或多個屬性加入類別內容來執行驗證。 屬性的 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 項目定義了驗證失敗時的錯誤訊息文字。 從 .NET Framework 4.6.2 開始，ASP.NET 可讓您輕鬆地將錯誤訊息當地語系化。 錯誤訊息將會當地語系化，如果︰
 
 1. <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 提供在驗證屬性中。
 
@@ -873,7 +873,7 @@ End Interface
 
  **對輸出快取提供者的非同步支援**
 
- 從 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 開始，工作傳回方法可以用於輸出快取提供者，以提供非同步處理的延展性優勢。  實作這些方法的提供者能減少 Web 伺服器上的執行緒阻斷，並改善 ASP.NET 服務的延展性。
+ 從 .NET Framework 4.6.2 開始，工作傳回方法可以用於輸出快取提供者，以提供非同步處理的延展性優勢。  實作這些方法的提供者能減少 Web 伺服器上的執行緒阻斷，並改善 ASP.NET 服務的延展性。
 
  已新增下列 API 來支援非同步輸出快取提供者︰
 
@@ -897,7 +897,7 @@ End Interface
 
 ### <a name="character-categories"></a>字元類別
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中的字元是根據 [Unicode 標準 8.0.0 版](https://www.unicode.org/versions/Unicode8.0.0/)分類。 在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 和 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 中，字元是根據 Unicode 6.3 字元類別分類。
+.NET Framework 4.6.2 中的字元是根據 [Unicode 標準 8.0.0 版](https://www.unicode.org/versions/Unicode8.0.0/) 分類。 在 .NET Framework 4.6 和 .NET Framework 4.6.1 中，字元是根據 Unicode 6.3 字元類別分類。
 
 對 Unicode 8.0 的支援僅限於 <xref:System.Globalization.CharUnicodeInfo> 類別的字元分類，以及依賴它的類型和方法。 這些包括 <xref:System.Globalization.StringInfo> 類別、多載 <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> 方法，以及 .NET Framework 規則運算式引擎可辨識的[字元類別](../../standard/base-types/character-classes-in-regular-expressions.md)。  字元和字串比較和排序不會受到這項變更的影響，並且會繼續依賴基礎作業系統，在 Windows 7 系統上則是依賴 .NET Framework 所提供的字元資料。
 
@@ -909,11 +909,11 @@ End Interface
 
 **支援包含 FIPS 186-3 DSA 的 X509 憑證**
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 新增了對 DSA (數位簽章演算法) X509 憑證的支援，X509 憑證的金鑰超過 FIPS 186-2 1024 位元的限制。
+.NET Framework 4.6.2 新增對 DSA (數位簽章演算法) X509 憑證的支援，X509 憑證的金鑰超過 FIPS 186-2 1024 位元的限制。
 
-除了支援較大的 FIPS 186-3 金鑰大小，[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 也允許使用 SHA-2 系列雜湊演算法 (SHA256、SHA384 及 SHA512) 運算簽章。 FIPS 186-3 支援是由新的 <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType> 類別所提供。
+除了支援較大的 FIPS 186-3 金鑰大小，.NET Framework 4.6.2 也允許使用 SHA-2 系列雜湊演算法 (SHA256、SHA384 及 SHA512) 的運算簽章。 FIPS 186-3 支援是由新的 <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType> 類別所提供。
 
-為了保持 .NET Framework 4.6 中 <xref:System.Security.Cryptography.RSA> 類別和 .NET Framework 4.6.1 中 <xref:System.Security.Cryptography.ECDsa> 類別的最新變更，[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中的 <xref:System.Security.Cryptography.DSA> 抽象基底類別有額外的方法，可讓呼叫者使用此功能，而不用轉型。 您可以呼叫 <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> 擴充方法來簽署資料，如下列範例所示。
+為了保持 .NET Framework 4.6 中 <xref:System.Security.Cryptography.RSA> 類別和 .NET Framework 4.6.1 中 <xref:System.Security.Cryptography.ECDsa> 類別的最新變更，.NET Framework 4.6.2 中的 <xref:System.Security.Cryptography.DSA> 抽象基底類別有額外的方法，可讓呼叫者使用此功能，而不用轉換。 您可以呼叫 <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> 擴充方法來簽署資料，如下列範例所示。
 
 ```csharp
 public static byte[] SignDataDsaSha384(byte[] data, X509Certificate2 cert)
@@ -957,7 +957,7 @@ End Function
 
 .NET Framework 3.5 以三個不同的金鑰衍生函數 (KDF) 常式，新增了對橢圓曲線 Diffie-Hellman 金鑰合約的支援。 常式的輸入以及常式本身，是透過 <xref:System.Security.Cryptography.ECDiffieHellmanCng> 物件上的屬性設定。 但由於不是每個常式都會讀取每個輸入屬性，所以很有可能對過去的開發人員造成混淆。
 
-為了在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 解決這個問題，下列三種方法已加入 <xref:System.Security.Cryptography.ECDiffieHellman> 基底類別，以便更清楚地表示這些 KDF 常式和其輸入︰
+為了解決 .NET Framework 4.6.2 中的這個問題，我們對 <xref:System.Security.Cryptography.ECDiffieHellman> 基底類別新增了下列三種方法，以更清楚地表示這些 KDF 常式和其輸入︰
 
 |ECDiffieHellman 方法|說明|
 |----------------------------|-----------------|
@@ -967,7 +967,7 @@ End Function
 
 **對永久金鑰對稱式加密的支援**
 
-Windows 密碼編譯程式庫 (CNG) 新增了對儲存必要對稱金鑰和使用硬體儲存對稱金鑰的支援，[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 讓開發人員可以利用這項功能。  由於金鑰名稱和金鑰提供者的概念是因實作而定，使用此功能需要使用實體實作類型的建構函式，而不是慣用的 factory 方法 (例如呼叫 `Aes.Create`)。
+Windows 密碼編譯程式庫 (CNG) 新增了儲存永久對稱金鑰和使用硬體儲存之對稱金鑰的支援，而 .NET Framework 4.6.2 可讓開發人員利用此功能。  由於金鑰名稱和金鑰提供者的概念是因實作而定，使用此功能需要使用實體實作類型的建構函式，而不是慣用的 factory 方法 (例如呼叫 `Aes.Create`)。
 
 AES (<xref:System.Security.Cryptography.AesCng>) 及 3DES (<xref:System.Security.Cryptography.TripleDESCng>) 演算法具有必要金鑰的對稱加密支援。 例如：
 
@@ -1010,7 +1010,7 @@ End Function
 
 **SHA-2 雜湊的 SignedXml 支援**
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 新增 <xref:System.Security.Cryptography.Xml.SignedXml> RSA-SHA256、RSA-SHA384 和 RSA-SHA512 PKCS #1 簽章方法，和 SHA256、SHA384 及 SHA512 參照類別摘要演算法的支援。
+.NET Framework 4.6.2 對 RSA-SHA256、RSA-SHA384 和 RSA-SHA512 PKCS#1 簽章方法，以及 SHA256、SHA384 和 SHA512 參考摘要演算法的 <xref:System.Security.Cryptography.Xml.SignedXml> 類別新增了支援。
 
 URI 常數會公開在 <xref:System.Security.Cryptography.Xml.SignedXml>：
 
@@ -1029,7 +1029,7 @@ URI 常數會公開在 <xref:System.Security.Cryptography.Xml.SignedXml>：
 
 ### <a name="sqlclient"></a>SqlClient
 
-.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>) 包含 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 的下列新功能：
+.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>) 包含下列 .NET Framework 4.6.2 中的新功能：
 
 **Azure SQL 資料庫的連線共用和逾時**
 
@@ -1071,13 +1071,13 @@ SQLClient 導入兩個 Always Encrypted 增強功能︰
 
 ### <a name="windows-communication-foundation"></a>Windows Communication Foundation
 
-在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中，Windows Communication Foundation 已在下列領域增強︰
+在 .NET Framework 4.6.2 中，Windows Communication Foundation 已增強下列領域︰
 
 **支援使用 CNG 儲存之憑證的 WCF 傳輸安全性**
 
-WCF 傳輸安全性支援使用 Windows 密碼編譯程式庫 (CNG) 儲存的憑證。 在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中，這項支援僅限於使用具有公開金鑰的憑證，且指數長度不能超過 32 位元。 當應用程式以 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 為目標時，這項功能預設為開啟。
+WCF 傳輸安全性支援使用 Windows 密碼編譯程式庫 (CNG) 儲存的憑證。 在 .NET Framework 4.6.2 中，此支援僅限於使用具有公開金鑰的憑證，且指數長度不能超過 32 位元。 當應用程式以 .NET Framework 4.6.2 為目標時，此功能預設為開啟。
 
-如果應用程式是以 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 和舊版為目標，但卻執行於 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 當中，則可將下列這一行加入 app.config 或 web.config 檔的 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 區段。
+如果應用程式以 .NET Framework 4.6.1 和舊版為目標，卻在 .NET Framework 4.6.2 中執行，則可將下面這一行新增到 app.config 或 web.config 檔案的 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 區段，來啟用此功能。
 
 ```xml
 <AppContextSwitchOverrides
@@ -1146,7 +1146,7 @@ WCF 有新的應用程式設定，可以在用戶端應用程式上設定，以�
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
-在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中，Windows Presentation Foundation 已在下列領域增強︰
+在 .NET Framework 4.6.2 中，Windows Presentation Foundation 已增強下列領域︰
 
 **群組排序**
 
@@ -1180,11 +1180,11 @@ WCF 有新的應用程式設定，可以在用戶端應用程式上設定，以�
 
 **個別監視器 DPI**
 
-為了針對 WPF 應用程式支援最近激增的高 DPI 和混合式 DPI 環境，[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 啟用了個別監視器感知。 如需如何啟用 WPF 應用程式之個別監視器 DPI 感知功能的詳細資訊，請參閱 GitHub 上的[範例和開發人員指南](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI)。
+為了針對 WPF 應用程式支援最近激增的高 DPI 和混合式 DPI 環境，.NET Framework 4.6.2 啟用個別監視器感知。 如需如何啟用 WPF 應用程式之個別監視器 DPI 感知功能的詳細資訊，請參閱 GitHub 上的[範例和開發人員指南](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI)。
 
 在舊版 .NET Framework 中，WPF 應用程式是系統 DPI 感知。 換句話說，應用程式的 UI 會由作業系統進行適當的縮放，視應用程式呈現所在的監視器 DPI 而定。 ,
 
-若是在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 下執行的應用程式，您可以將組態陳述式加入應用程式組態檔的 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 區段，藉此停用 WPF 應用程式中的個別監視器 DPI 變更，如下所示︰
+若是在 .NET Framework 4.6.2 下執行的應用程式，您可以將組態陳述式加入應用程式組態檔的 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 區段，藉此停用 WPF 應用程式中的個別監視器 DPI 變更，如下所示︰
 
 ```xml
 <runtime>
@@ -1196,13 +1196,13 @@ WCF 有新的應用程式設定，可以在用戶端應用程式上設定，以�
 
 ### <a name="windows-workflow-foundation-wf"></a>Windows Workflow Foundation (WF)
 
-在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中，Windows Workflow Foundation 已在下列領域增強︰
+在 .NET Framework 4.6.2 中，Windows Workflow Foundation 已增強下列領域︰
 
 **Re-hosted WF 設計工具中的 C# 運算式和 IntelliSense 支援**
 
 從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，WF 在 Visual Studio 設計工具和程式碼工作流程中都支援 C# 運算式。 Re-hosted 工作流程設計工具是 WF 的重要功能，可讓工作流程設計工具位於 Visual Studio 以外的應用程式中 (例如 WPF 中)。  Windows Workflow Foundation 提供在 Re-hosted 工作流程設計工具中支援 C# 運算式與 IntelliSense 的功能。 如需詳細資訊，請參閱 [Windows Workflow Foundation 部落格](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409)。
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`：在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 之前的 .NET Framework 版本中，當客戶從 Visual Studio 重建工作流程專案時，WF 設計工具 IntelliSense 便會中斷。 雖然專案建置成功，但在設計工具中找不到工作流程類型，來自 IntelliSense 的遺漏工作流程類型警告也會出現在 [錯誤清單] 視窗中。 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 解決了這個問題，並提供 IntelliSense。
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` 在 .NET Framework 4.6.2 之前的 .NET Framework 版本中，當客戶從 Visual Studio 重建工作流程專案時，WF 設計工具 IntelliSense 會中斷。 雖然專案建置成功，但在設計工具中找不到工作流程類型，來自 IntelliSense 的遺漏工作流程類型警告也會出現在 [錯誤清單]  視窗中。 .NET Framework 4.6.2 解決這個問題，並提供 IntelliSense。
 
 **開啟工作流程追蹤的工作流程 V1 應用程式現在在 FIPS 模式下執行**
 
@@ -1216,7 +1216,7 @@ WCF 有新的應用程式設定，可以在用戶端應用程式上設定，以�
 
 **在 Visual Studio 工作流程設計工具中使用動態更新時的工作流程改進**
 
-工作流程設計工具、流程圖活動設計工具，以及其他工作流程活動設計工具，現在已順利載入和顯示在呼叫 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 方法之後儲存的工作流程。 在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 之前的 .NET Framework 的版本中，若要在 Visual Studio 中，針對在呼叫 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 之後儲存的工作流程載入 XAML 檔案，可能會導致下列問題︰
+工作流程設計工具、流程圖活動設計工具，以及其他工作流程活動設計工具，現在已順利載入和顯示在呼叫 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 方法之後儲存的工作流程。 在 .NET Framework 4.6.2 之前的 .NET Framework 的版本中，在 Visual Studio 中，針對在呼叫 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 之後儲存的工作流程載入 XAML 檔案，可能會導致下列問題︰
 
 - 工作流程設計工具無法正確載入 XAML 檔案 (當 <xref:System.Activities.Presentation.ViewState.ViewStateData.Id%2A?displayProperty=nameWithType> 在一行的結尾時)。
 
@@ -1240,7 +1240,7 @@ Windows 現在提供將現有 Windows 傳統型應用程式 (包括 WPF 和 Wind
 
 ### <a name="debugging-improvements"></a>偵錯改進
 
-*Unmanaged 偵錯 API* 在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中已增強，可在擲回 <xref:System.NullReferenceException> 時執行額外的分析，因此可以判斷單行原始程式碼中哪個變數為 `null`。   為了支援這種情況，下列 API 已加入 Unmanaged 偵錯 API。
+「受控偵錯 API」  在 .NET Framework 4.6.2 中已增強，可在擲回 <xref:System.NullReferenceException> 時執行額外的分析，因此可以判斷單行原始程式碼中哪個變數為 `null`。   為了支援這種情況，下列 API 已加入 Unmanaged 偵錯 API。
 
 - [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md)、[ICorDebugVariableHome](../unmanaged-api/debugging/icordebugvariablehome-interface.md) 和 [ICorDebugVariableHomeEnum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) 介面，它們會公開 Managed 變數的原生主資料夾。 這可讓偵錯工具在 <xref:System.NullReferenceException> 發生時執行某些程式碼流程分析，以及回溯判斷對應至原生位置且為 `null` 的 Managed 變數。
 
@@ -1250,7 +1250,7 @@ Windows 現在提供將現有 Windows 傳統型應用程式 (包括 WPF 和 Wind
 
 ## <a name="whats-new-in-net-framework-461"></a>.NET Framework 4.6.1 中的新功能
 
-[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 包含下列領域的新功能：
+.NET Framework 4.6.1 包含下列領域的新功能：
 
 - [加密](#Crypto)
 
@@ -1264,7 +1264,7 @@ Windows 現在提供將現有 Windows 傳統型應用程式 (包括 WPF 和 Wind
 
 - [NGen](#NGEN461)
 
-如需 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 的詳細資訊，請參閱下列主題：
+如需 .NET Framework 4.6.1 的詳細資訊，請參閱下列主題：
 
 - [.NET Framework 4.6.1 變更清單](https://go.microsoft.com/fwlink/?LinkId=622964)
 
@@ -1276,11 +1276,11 @@ Windows 現在提供將現有 Windows 傳統型應用程式 (包括 WPF 和 Wind
 
 ### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>加密：支援包含 ECDSA 的 X509 憑證
 
-.NET Framework 4.6 加入 X509 憑證的 RSACng 支援。 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 加入了 ECDSA (橢圓曲線數位簽章演算法) X509 憑證的支援。
+.NET Framework 4.6 加入 X509 憑證的 RSACng 支援。 .NET Framework 4.6.1 加入 ECDSA (橢圓曲線數位簽章演算法) X509 憑證的支援。
 
 ECDSA 提供較佳的效能，其密碼編譯演算法比 RSA 更安全，為傳輸層安全性 (TLS) 的效能和延展性提供了絕佳的選擇。 .NET Framework 實作會將呼叫包裝在現有的 Windows 功能中。
 
-下列範例程式碼示範使用 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 包含的 ECDSA X509 憑證新支援，產生位元組資料流的簽章是多麼的輕鬆。
+下列範例程式碼示範使用 .NET Framework 4.6.1 包含的 ECDSA X509 憑證新支援，產生位元組資料流的簽章是多麼地輕鬆。
 
 [!code-csharp[whatsnew.461.crypto#1](~/samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)]
 [!code-vb[whatsnew.461.crypto#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
@@ -1304,7 +1304,7 @@ ADO.NET 現在支援在硬體安全模組 (HSM) 中以原生方式儲存 Always 
 
 **改善 AlwaysOn 的 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 連線行為**
 
-SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。 它會明確偵測應用程式是否連線到不同子網路上的 AlwaysOn 可用性群組 (AG)，並快速找到目前使用中的伺服器和提供伺服器連線。 在此版本之前，應用程式必須設定連接字串包含 `"MultisubnetFailover=true"`，以表示它要連線到 AlwaysOn 可用性群組。 如果不在 `true` 設定連接關鍵字，應用程式可能會在連接到 AlwaysOn 可用性群組時發生逾時狀況。 使用此版本，應用程式就「不再」需要將 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 設定為 `true`。 如需 AlwaysOn 可用性群組的 SqlClient 支援詳細資訊，請參閱[高可用性、嚴重損壞修復的 SqlClient 支援](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)。
+SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。 它會明確偵測應用程式是否連線到不同子網路上的 AlwaysOn 可用性群組 (AG)，並快速找到目前使用中的伺服器和提供伺服器連線。 在此版本之前，應用程式必須設定連接字串包含 `"MultisubnetFailover=true"`，以表示它要連線到 AlwaysOn 可用性群組。 如果不在 `true` 設定連接關鍵字，應用程式可能會在連接到 AlwaysOn 可用性群組時發生逾時狀況。 使用此版本，應用程式就「不再」  需要將 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 設定為 `true`。 如需 AlwaysOn 可用性群組的 SqlClient 支援詳細資訊，請參閱[高可用性、嚴重損壞修復的 SqlClient 支援](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)。
 
 <a name="WPF461" />
 
@@ -1314,7 +1314,7 @@ Windows Presentation Foundation 包含數個改進和變更。
 
 **提升效能**
 
-[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 已修正了引發觸控事件的延遲。 此外，<xref:System.Windows.Controls.RichTextBox> 控制項中的輸入也不會在快速輸入期間佔用呈現執行緒。
+.NET Framework 4.6.1 已修正引發觸控事件的延遲。 此外，<xref:System.Windows.Controls.RichTextBox> 控制項中的輸入也不會在快速輸入期間佔用呈現執行緒。
 
 **改善拼字檢查**
 
@@ -1332,7 +1332,7 @@ Windows 8.1 和更新版本已更新了 WPF 的拼字檢查程式，運用作業
 
 **每個使用者自訂字典的額外支援**
 
-在 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 中，WPF 能夠辨識已全域註冊的自訂字典。 這是除了依照每個控制項登錄它們之外的可用功能。
+在 .NET Framework 4.6.1 中，WPF 能夠辨識已全域註冊的自訂字典。 這是除了依照每個控制項登錄它們之外的可用功能。
 
 在舊版的 WPF 中，自訂的字典無法辨識 [已排除單字] 和 [自動校正] 清單。 Windows 8.1 和 Windows 10 透過可置於 `%AppData%\Microsoft\Spelling\<language tag>` 目錄之下使用的檔案支援它們。  下列規則適用於這些檔案：
 
@@ -1838,7 +1838,7 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
                                             enlistmentOptions As EnlistmentOptions) As Enlistment
     ```
 
-     此方法可讓先前由 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> 所建立的登錄用來回應 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> 方法。 它會要求 `System.Transactions` 將交易升級為 MSDTC 交易，並將可升級登記「轉換」為永久性登記。 這個方法成功完成之後，<xref:System.Transactions.IPromotableSinglePhaseNotification> 介面將不再受 `System.Transactions` 參考，且會將任何未來的通知送至所提供的  <xref:System.Transactions.ISinglePhaseNotification> 介面。 登記必須做為永久性登記，才可支援交易記錄和復原。 如需詳細資訊，請參閱 <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>。 此外，登記必須支援 <xref:System.Transactions.ISinglePhaseNotification>。  只有在處理 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> 呼叫時，「才」可以呼叫此方法。 若否，則會擲回 <xref:System.Transactions.TransactionException> 例外狀況。
+     此方法可讓先前由 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> 所建立的登錄用來回應 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> 方法。 它會要求 `System.Transactions` 將交易升級為 MSDTC 交易，並將可升級登記「轉換」為永久性登記。 這個方法成功完成之後，<xref:System.Transactions.IPromotableSinglePhaseNotification> 介面將不再受 `System.Transactions` 參考，且會將任何未來的通知送至所提供的  <xref:System.Transactions.ISinglePhaseNotification> 介面。 登記必須做為永久性登記，才可支援交易記錄和復原。 如需詳細資訊，請參閱 <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>。 此外，登記必須支援 <xref:System.Transactions.ISinglePhaseNotification>。  只有在處理 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> 呼叫時，「才」  可以呼叫此方法。 若否，則會擲回 <xref:System.Transactions.TransactionException> 例外狀況。
 
 <a name="v451" />
 
@@ -1948,7 +1948,7 @@ Windows Forms 的增強功能包括：
 
 - 多個範圍。
 
-- 可以在建立 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式時使用的 MEF 子集。 您可透過 NuGet Gallery 取得這個子集的[可下載套件](https://go.microsoft.com/fwlink/?LinkId=256238)。 若要安裝套件，請在 Visual Studio 中開啟您的專案，從 [專案] 功能表中選擇 [管理 NuGet 套件]，並於線上搜尋 `Microsoft.Composition` 套件。
+- 可以在建立 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式時使用的 MEF 子集。 您可透過 NuGet Gallery 取得這個子集的[可下載套件](https://go.microsoft.com/fwlink/?LinkId=256238)。 若要安裝套件，請在 Visual Studio 中開啟您的專案，從 [專案]  功能表中選擇 [管理 NuGet 套件]  ，並於線上搜尋 `Microsoft.Composition` 套件。
 
 如需詳細資訊，請參閱 [Managed Extensibility Framework (MEF)](../mef/index.md)。
 
@@ -2082,13 +2082,13 @@ ASP.NET 4.5 和 4.5.1 加入了 Web Forms、WebSocket 支援、非同步處理�
 
 - 增強的「工作流程設計工具」功能，如下所示：
 
-    - 增強 Visual Studio 中的工作流程搜尋功能，包括「快速尋找」和「檔案中尋找」。
+    - 增強 Visual Studio 中的工作流程搜尋功能，包括「快速尋找」  和「檔案中尋找」  。
 
     - 可在第二個子活動加入至容器活動時自動建立「序列」活動，以及同時將這兩個活動包含在「序列」活動中的功能。
 
     - 平移支援，不需使用捲軸就能變更工作流程的可見部分。
 
-    - 新的 [文件大綱] 檢視，這個檢視會以樹狀樣式大綱檢視顯示工作流程的元件，並讓您在 [文件大綱] 檢視中選取元件。
+    - 新的 [文件大綱]  檢視，這個檢視會以樹狀樣式大綱檢視顯示工作流程的元件，並讓您在 [文件大綱]  檢視中選取元件。
 
     - 可將註釋加入至活動的功能。
 

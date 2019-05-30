@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fd904ba03fd5c652b1e5e5c7f763dab2b80e517
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 08b35dd1744dbbb64d202718b61a9db5684d3bc3
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636678"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380354"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences 方法
 
@@ -82,7 +82,7 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 ## <a name="remarks"></a>備註
 
-分析工具[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]或更新版本的版本會實作[ICorProfilerCallback5](icorprofilercallback5-interface.md)介面，並記錄所指定的相依性`ConditionalWeakTableElementReferences`方法。 `ICorProfilerCallback5` 提供一組完整的即時所代表的物件之間的相依性`ConditionalWeakTable`項目。 這些相依性和成員欄位所指定的參考[icorprofilercallback:: Objectreferences](icorprofilercallback-objectreferences-method.md)方法讓 managed 分析工具產生的作用中物件的完整物件圖形。
+.NET Framework 4.5 或更新版本的版本實作的程式碼剖析工具[ICorProfilerCallback5](icorprofilercallback5-interface.md)介面，並記錄所指定的相依性`ConditionalWeakTableElementReferences`方法。 `ICorProfilerCallback5` 提供一組完整的即時所代表的物件之間的相依性`ConditionalWeakTable`項目。 這些相依性和成員欄位所指定的參考[icorprofilercallback:: Objectreferences](icorprofilercallback-objectreferences-method.md)方法讓 managed 分析工具產生的作用中物件的完整物件圖形。
 
 ## <a name="requirements"></a>需求
 
@@ -90,7 +90,7 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 **標頭：** CorProf.idl, CorProf.h
 
-**.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
+**.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
 
 ## <a name="see-also"></a>另請參閱
 

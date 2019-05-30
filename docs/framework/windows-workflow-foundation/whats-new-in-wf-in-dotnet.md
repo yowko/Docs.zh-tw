@@ -2,19 +2,19 @@
 title: .NET 4.5 中 Windows Workflow Foundation 的新功能
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: 6be2e3bd64fd93fab8af792bb92c3c0238a7ecde
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: fb9604061fd6ccd7909a2d5b26675a1b637f2b4d
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876595"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380144"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 中 Windows Workflow Foundation 的新功能
 
-Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]導入了許多新功能的詳細資訊，例如新的活動、 設計工具的功能，以及工作流程開發模型。 然而，重新裝載之工作流程設計工具並不支援所有在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進的新工作流程功能。 如需有關支援的新功能的詳細資訊，請參閱[的新 Workflow Foundation 4.5 功能，在重新裝載工作流程設計工具支援](wf-features-in-the-rehosted-workflow-designer.md)。 如需有關移轉.NET 3.0 和.NET 3.5 工作流程應用程式使用最新版本的詳細資訊，請參閱[移轉指引](migration-guidance.md)。 本主題提供 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進之新工作流程功能的概觀。
+Windows Workflow Foundation (WF) 在.NET Framework 4.5 中引進了許多新功能的詳細資訊，例如新的活動、 設計工具的功能，以及工作流程開發模型。 許多，但並非全部，新的工作流程的重新裝載工作流程設計工具中支援.NET Framework 4.5 中引進的功能。 如需有關支援的新功能的詳細資訊，請參閱[的新 Workflow Foundation 4.5 功能，在重新裝載工作流程設計工具支援](wf-features-in-the-rehosted-workflow-designer.md)。 如需有關移轉.NET 3.0 和.NET 3.5 工作流程應用程式使用最新版本的詳細資訊，請參閱[移轉指引](migration-guidance.md)。 本主題提供.NET Framework 4.5 中引進的新工作流程功能的概觀。
 
 > [!WARNING]
-> 中導入新的 Windows Workflow Foundation 功能[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]不適用於以舊版 framework 為目標的專案。 如果將目標為 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的專案重設為舊版 Framework，就可能發生若干問題。
+> 在.NET Framework 4.5 中引進的新 Windows Workflow Foundation 功能不適用於以舊版 framework 為目標的專案。 如果專案目標.NET Framework 4.5 的重新目標為舊版 framework 中，可能會發生數個問題。
 >
 > - C# 運算式會在設計工具中取代訊息**XAML 中設定的值**。
 > - 會出現許多建置錯誤，包括下列錯誤。
@@ -23,7 +23,7 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
 
 ## <a name="BKMK_Versioning"></a> 工作流程版本控制
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引進了若干新版本控制功能，其以新的 <xref:System.Activities.WorkflowIdentity> 類別為根據。 <xref:System.Activities.WorkflowIdentity> 提供工作流程應用程式作者一個機制，用於對持續性的工作流程執行個體與其定義。
+.NET framework 4.5 引進了數個新的版本控制功能以新基礎<xref:System.Activities.WorkflowIdentity>類別。 <xref:System.Activities.WorkflowIdentity> 提供工作流程應用程式作者一個機制，用於對持續性的工作流程執行個體與其定義。
 
 - 使用 <xref:System.Activities.WorkflowApplication> 裝載的開發人員可以使用 <xref:System.Activities.WorkflowIdentity>，並存裝載多個版本的工作流程。 使用新的 <xref:System.Activities.WorkflowApplicationInstance> 類別即可載入持續性的工作流程執行個體，然後，主機可以在具現化 <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> 時使用 <xref:System.Activities.WorkflowApplication> 以提供正確的工作流程定義版本。 如需詳細資訊，請參閱 <<c0> [ 使用 WorkflowIdentity 與版本控制](using-workflowidentity-and-versioning.md)和[How to:裝載的工作流程-並存的多個版本](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。
 
@@ -31,7 +31,7 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
 
 - 引進動態更新，可提供用於更新持續性工作流程執行個體定義的機制。 如需詳細資訊，請參閱 <<c0> [ 動態更新](dynamic-update.md)和[How to:更新執行中工作流程執行個體的定義](how-to-update-the-definition-of-a-running-workflow-instance.md)。
 
-- 提供 SqlWorkflowInstanceStoreSchemaUpgrade.sql 資料庫指令碼，以升級使用 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 資料庫指令碼建立的持續性資料庫。 這個指令碼可更新 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 持續性資料庫，以支援 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引進的新版本控制功能。 資料庫中持續性的工作流程執行個體會提供版本控制預設值，並可以參與並存執行和動態更新。 如需詳細資訊，請參閱 <<c0> [ 升級.NET Framework 4 持續性資料庫以支援工作流程版本控制](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)。
+- 提供 SqlWorkflowInstanceStoreSchemaUpgrade.sql 資料庫指令碼，以升級使用 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 資料庫指令碼建立的持續性資料庫。 此指令碼更新[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]持續性資料庫，以支援.NET Framework 4.5 中引進的新版本控制功能。 資料庫中持續性的工作流程執行個體會提供版本控制預設值，並可以參與並存執行和動態更新。 如需詳細資訊，請參閱 <<c0> [ 升級.NET Framework 4 持續性資料庫以支援工作流程版本控制](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)。
 
 ## <a name="BKMK_NewActivities"></a> 活動
 
@@ -43,7 +43,7 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
 
 ### <a name="BKMK_NewFlowchartCapabilities"></a> 新的流程圖功能
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的流程圖已更新，且具有下列新功能：
+流程圖會更新為.NET Framework 4.5，並具有下列的新功能：
 
 - `DisplayName` 或 <xref:System.Activities.Statements.FlowSwitch%601> 活動的 <xref:System.Activities.Statements.FlowDecision> 屬性皆可編輯。 這會讓活動設計工具顯示更多關於活動用途的資訊。
 
@@ -51,7 +51,7 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
 
 ## <a name="support-for-partial-trust"></a>支援部分信任
 
-[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 中的工作流程需要完全受信任的應用程式定義域。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，工作流程可以在部分信任的環境中運行。 在部分信任環境中，可以使用協力廠商元件，而不將主機資源的完整存取權限授與這些元件。 以下是一些有關在部分信任環境中執行工作流程的疑慮：
+[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 中的工作流程需要完全受信任的應用程式定義域。 在.NET Framework 4.5 中，工作流程可以在部分信任環境中運作。 在部分信任環境中，可以使用協力廠商元件，而不將主機資源的完整存取權限授與這些元件。 以下是一些有關在部分信任環境中執行工作流程的疑慮：
 
 1. 在部分信任下，不支援使用 <xref:System.Activities.Statements.Interop> 活動中包含的舊版元件 (包括規則)。
 
@@ -114,7 +114,7 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
 
 ### <a name="BKMK_VariableDeleteContextMenu"></a> 刪除變數和引數設計工具中的操作功能表項目
 
-在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，只能使用鍵盤刪除設計工具中的變數和引數。 從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，即可以使用內容功能表刪除變數和引數。
+在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，只能使用鍵盤刪除設計工具中的變數和引數。 從.NET Framework 4.5 開始，刪除變數和引數可以使用操作功能表。
 
 下列螢幕擷取畫面顯示變數和引數設計工具內容功能表。
 
@@ -122,7 +122,7 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
 
 ### <a name="BKMK_AutoSurround"></a> 自動範圍陳述式序列
 
-由於工作流程或特定容器活動 (如 <xref:System.Activities.Statements.NoPersistScope>) 只能包含單一主體活動，因此開發人員必須先刪除第一個活動、加入 <xref:System.Activities.Statements.Sequence> 活動，然後將這兩個活動同時加入序列活動中，才能加入第二個活動。 從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，將第二個活動加入到設計工具介面時，會自動建立一個 `Sequence` 活動，以同時包含這兩個活動。
+由於工作流程或特定容器活動 (如 <xref:System.Activities.Statements.NoPersistScope>) 只能包含單一主體活動，因此開發人員必須先刪除第一個活動、加入 <xref:System.Activities.Statements.Sequence> 活動，然後將這兩個活動同時加入序列活動中，才能加入第二個活動。 從.NET Framework 4.5 中，第二個活動加入設計介面時`Sequence`活動將會自動建立包裝這兩個活動。
 
 下列螢幕擷取畫面顯示 `WriteLine` 活動，此活動位在 `Body` 的 `NoPersistScope` 中。
 
@@ -158,7 +158,7 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
 
 ### <a name="BKMK_CSharpExpressions"></a> C# 運算式
 
-在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 之前，您只能使用 Visual Basic 來撰寫工作流程中的所有運算式。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，Visual Basic 運算式只用於使用 Visual Basic 建立的專案。 Visual C# 專案現在使用 C# 來撰寫運算式。 提供功能完整的 C# 運算式編輯器，可使用反白顯示文法及 Intellisense 等功能。 在舊版中使用 Visual Basic 運算式建立的 C# 工作流程專案仍可繼續運作。
+之前的.NET Framework 4.5 中，工作流程中的所有運算式只可以都撰寫 Visual Basic 中。 在.NET Framework 4.5 中，Visual Basic 運算式僅適用於使用 Visual Basic 建立的專案。 Visual C# 專案現在使用 C# 來撰寫運算式。 提供功能完整的 C# 運算式編輯器，可使用反白顯示文法及 Intellisense 等功能。 在舊版中使用 Visual Basic 運算式建立的 C# 工作流程專案仍可繼續運作。
 
 C# 運算式會在設計階段進行驗證。 C# 運算式中的錯誤會用紅色的波浪底線標記。
 
@@ -166,11 +166,11 @@ C# 運算式會在設計階段進行驗證。 C# 運算式中的錯誤會用紅�
 
 ### <a name="BKMK_Visibility"></a> 多個控制項的可見性的殼層列及標頭項目
 
-在重新裝載的設計工具中，部分標準 UI 控制項可能對特定工作流程沒有意義，而且可能是關閉狀態。 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，只有設計工具最下方的殼層列支援這項自訂功能。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，可以透過設定 <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> 與適當的 <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> 值，來調整是否顯示設計工具最上方的殼層標頭項目。
+在重新裝載的設計工具中，部分標準 UI 控制項可能對特定工作流程沒有意義，而且可能是關閉狀態。 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，只有設計工具最下方的殼層列支援這項自訂功能。 在.NET Framework 4.5 中，頂端的設計工具殼層標頭項目的可見性可以藉由設定調整<xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A>與適當<xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility>值。
 
 ### <a name="BKMK_AutoConnect"></a> 自動連接] 和 [流程圖和狀態機器工作流程中自動插入
 
-在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，流程圖工作流程的節點連接必須手動加入。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的流程圖和狀態機器的節點具有自動連接點，在將活動從工具箱拖曳到設計工具介面上時，就會顯示自動連接點。 將活動拖曳到其中一點上，會自動加入該活動及必要的連接。
+在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，流程圖工作流程的節點連接必須手動加入。 在.NET Framework 4.5 中，流程圖和狀態機器的節點具有自動連接點，從 [工具箱] 拖曳至設計工具介面上拖曳活動時，就可以看見。 將活動拖曳到其中一點上，會自動加入該活動及必要的連接。
 
 下列螢幕擷取畫面顯示從工具箱拖曳活動時顯示的附加點。
 
@@ -196,7 +196,7 @@ C# 運算式會在設計階段進行驗證。 C# 運算式中的錯誤會用紅�
 
 ### <a name="BKMK_BuildTimeValidation"></a> 建置階段驗證
 
-在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，不會將工作流程驗證錯誤計為工作流程專案建置期間的建置錯誤。 這表示，即使有工作流程驗證錯誤，仍可能成功建置工作流程專案。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，工作流程驗證錯誤會導致建置失敗。
+在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，不會將工作流程驗證錯誤計為工作流程專案建置期間的建置錯誤。 這表示，即使有工作流程驗證錯誤，仍可能成功建置工作流程專案。 在.NET Framework 4.5 中，工作流程驗證錯誤會導致建置失敗。
 
 ### <a name="BKMK_DesignTimeValidation"></a> 設計階段背景驗證
 
@@ -204,15 +204,15 @@ C# 運算式會在設計階段進行驗證。 C# 運算式中的錯誤會用紅�
 
 ### <a name="BKMK_ViewState"></a> 位於不同的位置，在 XAML 檔案中的檢視狀態
 
-在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，工作流程的檢視狀態資訊會跨 XAML 檔案儲存在許多不同的位置。 對於想要直接讀取 XAML 或撰寫程式碼來移除檢視狀態資訊的開發人員來說，這樣很不方便。 在  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，XAML 檔案中的檢視狀態資訊會序列化為 XAML 檔案中的個別項目。 開發人員可以輕鬆地找出和編輯活動的檢視狀態資訊或完全移除檢視狀態。
+在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，工作流程的檢視狀態資訊會跨 XAML 檔案儲存在許多不同的位置。 對於想要直接讀取 XAML 或撰寫程式碼來移除檢視狀態資訊的開發人員來說，這樣很不方便。 在.NET Framework 4.5 中，XAML 檔案中的檢視狀態資訊會序列化為 XAML 檔案中的個別項目。 開發人員可以輕鬆地找出和編輯活動的檢視狀態資訊或完全移除檢視狀態。
 
 ### <a name="BKMK_ExpressionExtensibility"></a> 運算式擴充性
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 有提供一種方法，讓開發人員能夠建立自己的運算式和運算式編寫經驗，並可插入至工作流程設計工具。
+在.NET Framework 4.5 中，我們會提供方法讓開發人員建立他們自己的運算式和運算式編寫經驗，可插入至工作流程設計工具。
 
 ### <a name="BKMK_BackwardCompatRehostedDesigner"></a> 選擇加入的重新裝載設計工具中的 Workflow 4.5 功能
 
-為保持回溯相容性，重新裝載的設計工具預設中並未啟用包含在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中的一些新功能。 這是為了確保現有的應用程式 (使用重新裝載設計工具) 不會因為更新至最新版本而中斷。 若要在重新裝載的設計工具中啟用新功能，請將 <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> 設為 ".NET Framework 4.5"，或者設定 <xref:System.Activities.Presentation.DesignerConfigurationService> 的個別成員以啟用個別功能。
+若要保留回溯相容性，不會啟用一些隨附於.NET Framework 4.5 的新功能預設會在重新裝載設計工具。 這是為了確保現有的應用程式 (使用重新裝載設計工具) 不會因為更新至最新版本而中斷。 若要在重新裝載的設計工具中啟用新功能，請將 <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> 設為 ".NET Framework 4.5"，或者設定 <xref:System.Activities.Presentation.DesignerConfigurationService> 的個別成員以啟用個別功能。
 
 ## <a name="BKMK_NewWFModels"></a> 新的工作流程開發模型
 
@@ -220,7 +220,7 @@ C# 運算式會在設計階段進行驗證。 C# 運算式中的錯誤會用紅�
 
 ### <a name="BKMK_StateMachine"></a> 狀態機器工作流程
 
-狀態機器工作流程引進為.NET Framework 4 中的版本 4.0.1 的一部分[Microsoft.NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092)。 此更新包括若干新類別和活動，可讓開發人員建立狀態機器工作流程。 這些類別和活動在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中皆已更新。 更新包括：
+狀態機器工作流程引進為.NET Framework 4 中的版本 4.0.1 的一部分[Microsoft.NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092)。 此更新包括若干新類別和活動，可讓開發人員建立狀態機器工作流程。 這些類別和活動已更新為.NET Framework 4.5。 更新包括：
 
 1. 可設定狀態中斷點的功能
 

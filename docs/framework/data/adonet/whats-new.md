@@ -2,20 +2,20 @@
 title: ADO.NET 的新功能
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 90ac3ffe9bae892bf20ad874e5634a3a045f776d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 77a7aa5721a83bf7bc8d3e3cbf57a77c56267062
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877426"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379977"
 ---
 # <a name="whats-new-in-adonet"></a>ADO.NET 的新功能
 
-在 ADO.NET 中的新功能如下[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。
+下列功能是 ADO.NET.NET Framework 4.5 中的新功能。
 
 ## <a name="sqlclient-data-provider"></a>SqlClient Data Provider
 
-在.NET Framework Data Provider for SQL Server 中的新功能如下[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:
+下列功能是.NET Framework Data Provider for.NET Framework 4.5 中的 SQL Server 的新功能：
 
 - ConnectRetryCount 和 ConnectRetryInterval 連接字串關鍵字 (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) 可讓您控制閒置連接恢復功能。
 
@@ -51,7 +51,7 @@ ms.locfileid: "65877426"
 
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework
 
-[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 新增應用程式開發介面，可在搭配使用 Entity Framework 5.0 時啟用新案例。 如需有關改善和已新增至 Entity Framework 5.0 的功能的詳細資訊，請參閱下列主題：[最新消息](https://go.microsoft.com/fwlink/?LinkID=251106)並[Entity Framework 版本與版本控制](https://go.microsoft.com/fwlink/?LinkId=234899)。
+.NET Framework 4.5 將使用 Entity Framework 5.0 時啟用新案例的 Api。 如需有關改善和已新增至 Entity Framework 5.0 的功能的詳細資訊，請參閱下列主題：[最新消息](https://go.microsoft.com/fwlink/?LinkID=251106)並[Entity Framework 版本與版本控制](https://go.microsoft.com/fwlink/?LinkId=234899)。
 
 ## <a name="see-also"></a>另請參閱
 

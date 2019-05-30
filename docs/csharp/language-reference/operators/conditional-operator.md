@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: a40dd4addfaf8a505cf334876192f0b2ccf66a09
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 58317c26f87034991c817d0d7221d810657ca332
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452407"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003718"
 ---
 # <a name="-operator-c-reference"></a>?:運算子 (C# 參考)
 
@@ -43,13 +43,12 @@ a ? b : c ? d : e
 a ? b : (c ? d : e)
 ```
 
-一個幫助您記住此運算子進行評估之方式的方法，就是透過詢問：
-
-```text
-is this condition true ? yes : no
-```
-
-運算子的 ? 部分 作為上一個陳述式的問號，後續則作為對這個問題的邏輯回答。
+> [!TIP]
+> 您可以使用下列助憶鍵裝置來記住條件運算子的評估方式：
+>
+> ```text
+> is this condition true ? yes : no
+> ```
 
 下列範例示範條件運算子的用法：
 

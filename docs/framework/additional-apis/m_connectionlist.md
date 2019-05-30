@@ -10,14 +10,14 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: c9162e123c1167e3aa1be26ddd37279c088acc89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d06968c844dc9187b973af156a29ded9ba7cde66
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675295"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301399"
 ---
 # <a name="connectiongroupmconnectionlist-field"></a>ConnectionGroup.m\_ConnectionList 欄位
 
@@ -38,6 +38,6 @@ private ArrayList m_ConnectionList
 
 **命名空間︰** <xref:System.Net>
 
-**組件：**（在 System.dll) 的系統
+**組件：** （在 System.dll) 的系統
 
 **.NET framework 版本：** 自 2.0 起可用。

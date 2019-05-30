@@ -7,22 +7,22 @@ helpviewer_keywords:
 - sectionGroup Element
 - <sectionGroup> Element
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: ce0fa5bd77a7b9012d69fd5afab1f4c332f213a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 750708483f9680745eef4531d86fa7ecaa329f51
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673819"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301186"
 ---
 # <a name="sectiongroup-element-for-configsections"></a>\<sectionGroup > 項目\<configSections >
 
 定義組態區段的命名空間。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<sectionGroup>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<sectionGroup>**
 
 ## <a name="syntax"></a>語法
 
@@ -42,13 +42,13 @@ ms.locfileid: "61673819"
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<configSections >** 項目](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含組態區段和命名空間宣告。 |
+| [ **\<configSections >** 項目](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含組態區段和命名空間宣告。 |
 
 ## <a name="child-elements"></a>子元素
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<section>**](~/docs/framework/configure-apps/file-schema/section-element.md) | 包含組態區段宣告。 |
+| [ **\<section>** ](~/docs/framework/configure-apps/file-schema/section-element.md) | 包含組態區段宣告。 |
 
 ## <a name="remarks"></a>備註
 
