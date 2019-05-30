@@ -8,29 +8,29 @@ helpviewer_keywords:
 - section Element
 - <section> Element
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 58f823ce0c128f30e361b4a631d41286533b5f0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64556054df2689ff758f52c7e98556997a3e9d3d
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701498"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301178"
 ---
-# <a name="section-element"></a><span data-ttu-id="e3e6a-102">\<區段 > 項目</span><span class="sxs-lookup"><span data-stu-id="e3e6a-102">\<section> element</span></span>
+# <a name="section-element"></a><span data-ttu-id="415e6-102">\<區段 > 項目</span><span class="sxs-lookup"><span data-stu-id="415e6-102">\<section> element</span></span>
 
-<span data-ttu-id="e3e6a-103">包含組態區段宣告。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-103">Contains a configuration section declaration.</span></span>
+<span data-ttu-id="415e6-103">包含組態區段宣告。</span><span class="sxs-lookup"><span data-stu-id="415e6-103">Contains a configuration section declaration.</span></span>
 
-<span data-ttu-id="e3e6a-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="e3e6a-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="e3e6a-105">&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="e3e6a-105">&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span></span>  
-<span data-ttu-id="e3e6a-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<section>**</span><span class="sxs-lookup"><span data-stu-id="e3e6a-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<section>**</span></span>
+<span data-ttu-id="415e6-104">[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="415e6-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="415e6-105">&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="415e6-105">&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span></span>  
+<span data-ttu-id="415e6-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<section>**</span><span class="sxs-lookup"><span data-stu-id="415e6-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<section>**</span></span>
 
-<span data-ttu-id="e3e6a-107">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="e3e6a-107">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="e3e6a-108">&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="e3e6a-108">&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span></span>  
-<span data-ttu-id="e3e6a-109">&nbsp;&nbsp;&nbsp;&nbsp;[**\<sectionGroup>**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) </span><span class="sxs-lookup"><span data-stu-id="e3e6a-109">&nbsp;&nbsp;&nbsp;&nbsp;[**\<sectionGroup>**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) </span></span>  
-<span data-ttu-id="e3e6a-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<section>**</span><span class="sxs-lookup"><span data-stu-id="e3e6a-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<section>**</span></span>
+<span data-ttu-id="415e6-107">[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="415e6-107">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="415e6-108">&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="415e6-108">&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span></span>  
+<span data-ttu-id="415e6-109">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sectionGroup>** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) </span><span class="sxs-lookup"><span data-stu-id="415e6-109">&nbsp;&nbsp;&nbsp;&nbsp;[**\<sectionGroup>**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) </span></span>  
+<span data-ttu-id="415e6-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<section>**</span><span class="sxs-lookup"><span data-stu-id="415e6-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<section>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="e3e6a-111">語法</span><span class="sxs-lookup"><span data-stu-id="e3e6a-111">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="415e6-111">語法</span><span class="sxs-lookup"><span data-stu-id="415e6-111">Syntax</span></span>
 
 ```xml
 <section name="section name"
@@ -39,45 +39,45 @@ ms.locfileid: "61701498"
          allowLocation="true|false" />
 ```
 
-## <a name="required-attributes"></a><span data-ttu-id="e3e6a-112">必要屬性</span><span class="sxs-lookup"><span data-stu-id="e3e6a-112">Required attributes</span></span>
+## <a name="required-attributes"></a><span data-ttu-id="415e6-112">必要屬性</span><span class="sxs-lookup"><span data-stu-id="415e6-112">Required attributes</span></span>
 
-|           | <span data-ttu-id="e3e6a-113">描述</span><span class="sxs-lookup"><span data-stu-id="e3e6a-113">Description</span></span> |
+|           | <span data-ttu-id="415e6-113">描述</span><span class="sxs-lookup"><span data-stu-id="415e6-113">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="e3e6a-114">**name**</span><span class="sxs-lookup"><span data-stu-id="e3e6a-114">**name**</span></span>  | <span data-ttu-id="e3e6a-115">指定的組態區段名稱。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-115">Specifies the name of the configuration section.</span></span> |
-| <span data-ttu-id="e3e6a-116">**type**</span><span class="sxs-lookup"><span data-stu-id="e3e6a-116">**type**</span></span>  | <span data-ttu-id="e3e6a-117">指定讀取組態檔區段的組態區段處理常式類別的名稱。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-117">Specifies the name of the configuration section handler class that reads the section from the configuration file.</span></span> <span data-ttu-id="e3e6a-118">型別值的語法 」 fully-qualified-section-handler-class-name，簡單組件名稱 」。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-118">The type value has the syntax "fully-qualified-section-handler-class-name, simple-assembly-name".</span></span> <span data-ttu-id="e3e6a-119">簡單的組件名稱是根檔案名稱，而不需要 *.dll*副檔名。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-119">The simple assembly name is the root filename without the *.dll* file extension.</span></span> |
+| <span data-ttu-id="415e6-114">**name**</span><span class="sxs-lookup"><span data-stu-id="415e6-114">**name**</span></span>  | <span data-ttu-id="415e6-115">指定的組態區段名稱。</span><span class="sxs-lookup"><span data-stu-id="415e6-115">Specifies the name of the configuration section.</span></span> |
+| <span data-ttu-id="415e6-116">**type**</span><span class="sxs-lookup"><span data-stu-id="415e6-116">**type**</span></span>  | <span data-ttu-id="415e6-117">指定讀取組態檔區段的組態區段處理常式類別的名稱。</span><span class="sxs-lookup"><span data-stu-id="415e6-117">Specifies the name of the configuration section handler class that reads the section from the configuration file.</span></span> <span data-ttu-id="415e6-118">型別值的語法 」 fully-qualified-section-handler-class-name，簡單組件名稱 」。</span><span class="sxs-lookup"><span data-stu-id="415e6-118">The type value has the syntax "fully-qualified-section-handler-class-name, simple-assembly-name".</span></span> <span data-ttu-id="415e6-119">簡單的組件名稱是根檔案名稱，而不需要 *.dll*副檔名。</span><span class="sxs-lookup"><span data-stu-id="415e6-119">The simple assembly name is the root filename without the *.dll* file extension.</span></span> |
 
-## <a name="optional-attributes"></a><span data-ttu-id="e3e6a-120">選擇性的屬性</span><span class="sxs-lookup"><span data-stu-id="e3e6a-120">Optional attributes</span></span>
+## <a name="optional-attributes"></a><span data-ttu-id="415e6-120">選擇性的屬性</span><span class="sxs-lookup"><span data-stu-id="415e6-120">Optional attributes</span></span>
 
-<span data-ttu-id="e3e6a-121">以下為屬性只適用於 ASP.NET 應用程式。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-121">The following attributes are applicable only for ASP.NET applications.</span></span> <span data-ttu-id="e3e6a-122">組態系統會忽略這些屬性的其他應用程式類型。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-122">The configuration system ignores these attributes for other application types.</span></span>
+<span data-ttu-id="415e6-121">以下為屬性只適用於 ASP.NET 應用程式。</span><span class="sxs-lookup"><span data-stu-id="415e6-121">The following attributes are applicable only for ASP.NET applications.</span></span> <span data-ttu-id="415e6-122">組態系統會忽略這些屬性的其他應用程式類型。</span><span class="sxs-lookup"><span data-stu-id="415e6-122">The configuration system ignores these attributes for other application types.</span></span>
 
-|                     | <span data-ttu-id="e3e6a-123">描述</span><span class="sxs-lookup"><span data-stu-id="e3e6a-123">Description</span></span> |
+|                     | <span data-ttu-id="415e6-123">描述</span><span class="sxs-lookup"><span data-stu-id="415e6-123">Description</span></span> |
 | ------------------- | ----------- |
-| <span data-ttu-id="e3e6a-124">**allowDefinition**</span><span class="sxs-lookup"><span data-stu-id="e3e6a-124">**allowDefinition**</span></span> | <span data-ttu-id="e3e6a-125">指定區段可以用在哪一個組態檔。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-125">Specifies which configuration file the section can be used in.</span></span> <span data-ttu-id="e3e6a-126">使用下列其中一個值：</span><span class="sxs-lookup"><span data-stu-id="e3e6a-126">Use one of the following values:</span></span><br><br><span data-ttu-id="e3e6a-127">**Everywhere**</span><span class="sxs-lookup"><span data-stu-id="e3e6a-127">**Everywhere**</span></span><br><span data-ttu-id="e3e6a-128">允許使用任何組態檔中區段。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-128">Allows the section to be used in any configuration file.</span></span> <span data-ttu-id="e3e6a-129">這是預設值。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-129">This is the default.</span></span><br><span data-ttu-id="e3e6a-130">**MachineOnly**</span><span class="sxs-lookup"><span data-stu-id="e3e6a-130">**MachineOnly**</span></span><br><span data-ttu-id="e3e6a-131">允許區段只能用在電腦組態檔 (*Machine.config*)。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-131">Allows the section to be used only in the machine configuration file (*Machine.config*).</span></span><br><span data-ttu-id="e3e6a-132">**MachineToApplication**</span><span class="sxs-lookup"><span data-stu-id="e3e6a-132">**MachineToApplication**</span></span><br><span data-ttu-id="e3e6a-133">允許可用於電腦組態檔或應用程式組態檔區段。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-133">Allows the section to be used in the machine configuration file or the application configuration file.</span></span> |
-| <span data-ttu-id="e3e6a-134">**allowLocation**</span><span class="sxs-lookup"><span data-stu-id="e3e6a-134">**allowLocation**</span></span>   | <span data-ttu-id="e3e6a-135">判斷是否可以使用區段內 **\<位置>** 項目。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-135">Determines whether the section can be used within the **\<location>** element.</span></span> <span data-ttu-id="e3e6a-136">使用下列其中一個值：</span><span class="sxs-lookup"><span data-stu-id="e3e6a-136">Use one of the following values:</span></span><br><br><span data-ttu-id="e3e6a-137">**true**</span><span class="sxs-lookup"><span data-stu-id="e3e6a-137">**true**</span></span><br><span data-ttu-id="e3e6a-138">允許使用於區段 **\<位置>** 項目。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-138">Allows the section to be used within the **\<location>** element.</span></span> <span data-ttu-id="e3e6a-139">這是預設值。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-139">This is the default.</span></span><br><span data-ttu-id="e3e6a-140">**false**</span><span class="sxs-lookup"><span data-stu-id="e3e6a-140">**false**</span></span><br><span data-ttu-id="e3e6a-141">不允許使用於區段 **\<位置>** 項目。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-141">Does not allow the section to be used within the **\<location>** element.</span></span> |
+| <span data-ttu-id="415e6-124">**allowDefinition**</span><span class="sxs-lookup"><span data-stu-id="415e6-124">**allowDefinition**</span></span> | <span data-ttu-id="415e6-125">指定區段可以用在哪一個組態檔。</span><span class="sxs-lookup"><span data-stu-id="415e6-125">Specifies which configuration file the section can be used in.</span></span> <span data-ttu-id="415e6-126">使用下列其中一個值：</span><span class="sxs-lookup"><span data-stu-id="415e6-126">Use one of the following values:</span></span><br><br><span data-ttu-id="415e6-127">**Everywhere**</span><span class="sxs-lookup"><span data-stu-id="415e6-127">**Everywhere**</span></span><br><span data-ttu-id="415e6-128">允許使用任何組態檔中區段。</span><span class="sxs-lookup"><span data-stu-id="415e6-128">Allows the section to be used in any configuration file.</span></span> <span data-ttu-id="415e6-129">這是預設值。</span><span class="sxs-lookup"><span data-stu-id="415e6-129">This is the default.</span></span><br><span data-ttu-id="415e6-130">**MachineOnly**</span><span class="sxs-lookup"><span data-stu-id="415e6-130">**MachineOnly**</span></span><br><span data-ttu-id="415e6-131">允許區段只能用在電腦組態檔 (*Machine.config*)。</span><span class="sxs-lookup"><span data-stu-id="415e6-131">Allows the section to be used only in the machine configuration file (*Machine.config*).</span></span><br><span data-ttu-id="415e6-132">**MachineToApplication**</span><span class="sxs-lookup"><span data-stu-id="415e6-132">**MachineToApplication**</span></span><br><span data-ttu-id="415e6-133">允許可用於電腦組態檔或應用程式組態檔區段。</span><span class="sxs-lookup"><span data-stu-id="415e6-133">Allows the section to be used in the machine configuration file or the application configuration file.</span></span> |
+| <span data-ttu-id="415e6-134">**allowLocation**</span><span class="sxs-lookup"><span data-stu-id="415e6-134">**allowLocation**</span></span>   | <span data-ttu-id="415e6-135">判斷是否可以使用區段內 **\<位置>** 項目。</span><span class="sxs-lookup"><span data-stu-id="415e6-135">Determines whether the section can be used within the **\<location>** element.</span></span> <span data-ttu-id="415e6-136">使用下列其中一個值：</span><span class="sxs-lookup"><span data-stu-id="415e6-136">Use one of the following values:</span></span><br><br><span data-ttu-id="415e6-137">**true**</span><span class="sxs-lookup"><span data-stu-id="415e6-137">**true**</span></span><br><span data-ttu-id="415e6-138">允許使用於區段 **\<位置>** 項目。</span><span class="sxs-lookup"><span data-stu-id="415e6-138">Allows the section to be used within the **\<location>** element.</span></span> <span data-ttu-id="415e6-139">這是預設值。</span><span class="sxs-lookup"><span data-stu-id="415e6-139">This is the default.</span></span><br><span data-ttu-id="415e6-140">**false**</span><span class="sxs-lookup"><span data-stu-id="415e6-140">**false**</span></span><br><span data-ttu-id="415e6-141">不允許使用於區段 **\<位置>** 項目。</span><span class="sxs-lookup"><span data-stu-id="415e6-141">Does not allow the section to be used within the **\<location>** element.</span></span> |
 
-## <a name="parent-elements"></a><span data-ttu-id="e3e6a-142">父元素</span><span class="sxs-lookup"><span data-stu-id="e3e6a-142">Parent elements</span></span>
+## <a name="parent-elements"></a><span data-ttu-id="415e6-142">父元素</span><span class="sxs-lookup"><span data-stu-id="415e6-142">Parent elements</span></span>
 
-|     | <span data-ttu-id="e3e6a-143">描述</span><span class="sxs-lookup"><span data-stu-id="e3e6a-143">Description</span></span> |
+|     | <span data-ttu-id="415e6-143">描述</span><span class="sxs-lookup"><span data-stu-id="415e6-143">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="e3e6a-144">**\<configSections >** 項目</span><span class="sxs-lookup"><span data-stu-id="e3e6a-144">**\<configSections>** Element</span></span>](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | <span data-ttu-id="e3e6a-145">包含組態區段和命名空間宣告。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-145">Contains configuration section and namespace declarations.</span></span> |
-| [<span data-ttu-id="e3e6a-146">**\<sectionGroup>** Element</span><span class="sxs-lookup"><span data-stu-id="e3e6a-146">**\<sectionGroup>** Element</span></span>](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | <span data-ttu-id="e3e6a-147">定義組態區段的命名空間。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-147">Defines a namespace for configuration sections.</span></span> |
+| [<span data-ttu-id="415e6-144"> *\*\<configSections >** 項目</span><span class="sxs-lookup"><span data-stu-id="415e6-144">**\<configSections>** Element</span></span>](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | <span data-ttu-id="415e6-145">包含組態區段和命名空間宣告。</span><span class="sxs-lookup"><span data-stu-id="415e6-145">Contains configuration section and namespace declarations.</span></span> |
+| [<span data-ttu-id="415e6-146"> *\*\<sectionGroup>** Element</span><span class="sxs-lookup"><span data-stu-id="415e6-146">**\<sectionGroup>** Element</span></span>](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | <span data-ttu-id="415e6-147">定義組態區段的命名空間。</span><span class="sxs-lookup"><span data-stu-id="415e6-147">Defines a namespace for configuration sections.</span></span> |
 
 > [!NOTE]
-> <span data-ttu-id="e3e6a-148">A **\<一節 >** 項目是可能的子項目 **\<configSections >** 或 **\<sectionGroup >** 但不是兩者。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-148">A **\<section>** element is a child element of either **\<configSections>** or **\<sectionGroup>** but not both.</span></span>
+> <span data-ttu-id="415e6-148">A **\<一節 >** 項目是可能的子項目 **\<configSections >** 或 **\<sectionGroup >** 但不是兩者。</span><span class="sxs-lookup"><span data-stu-id="415e6-148">A **\<section>** element is a child element of either **\<configSections>** or **\<sectionGroup>** but not both.</span></span>
 
-## <a name="child-elements"></a><span data-ttu-id="e3e6a-149">子元素</span><span class="sxs-lookup"><span data-stu-id="e3e6a-149">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="415e6-149">子元素</span><span class="sxs-lookup"><span data-stu-id="415e6-149">Child elements</span></span>
 
-<span data-ttu-id="e3e6a-150">None</span><span class="sxs-lookup"><span data-stu-id="e3e6a-150">None</span></span>
+<span data-ttu-id="415e6-150">None</span><span class="sxs-lookup"><span data-stu-id="415e6-150">None</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="e3e6a-151">備註</span><span class="sxs-lookup"><span data-stu-id="e3e6a-151">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="415e6-151">備註</span><span class="sxs-lookup"><span data-stu-id="415e6-151">Remarks</span></span>
 
-<span data-ttu-id="e3e6a-152">本質上宣告組態區段會定義組態檔的新項目。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-152">Declaring a configuration section essentially defines a new element for the configuration file.</span></span> <span data-ttu-id="e3e6a-153">新的項目包含的組態區段處理常式的設定 (也就是一個類別，實作<xref:System.Configuration.IConfigurationSectionHandler>介面) 讀取。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-153">The new element contains settings that a configuration section handler (that is, a class that implements the <xref:System.Configuration.IConfigurationSectionHandler> interface) reads.</span></span> <span data-ttu-id="e3e6a-154">屬性和子項目的區段中定義取決於您用來讀取您的設定區段處理常式。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-154">The attributes and child elements of a section you define depend on the section handler you use to read your settings.</span></span>
+<span data-ttu-id="415e6-152">本質上宣告組態區段會定義組態檔的新項目。</span><span class="sxs-lookup"><span data-stu-id="415e6-152">Declaring a configuration section essentially defines a new element for the configuration file.</span></span> <span data-ttu-id="415e6-153">新的項目包含的組態區段處理常式的設定 (也就是一個類別，實作<xref:System.Configuration.IConfigurationSectionHandler>介面) 讀取。</span><span class="sxs-lookup"><span data-stu-id="415e6-153">The new element contains settings that a configuration section handler (that is, a class that implements the <xref:System.Configuration.IConfigurationSectionHandler> interface) reads.</span></span> <span data-ttu-id="415e6-154">屬性和子項目的區段中定義取決於您用來讀取您的設定區段處理常式。</span><span class="sxs-lookup"><span data-stu-id="415e6-154">The attributes and child elements of a section you define depend on the section handler you use to read your settings.</span></span>
 
-<span data-ttu-id="e3e6a-155">宣告中的組態區段處理常式*Machine.config*檔可讓您使用 [設定] 區段中任何應用程式組態檔，該電腦上，除非**allowDefinition**屬性指定不同的情況。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-155">Declaring a configuration section handler in the *Machine.config* file enables you to use the configuration section in any application configuration file on that computer, unless the **allowDefinition** attribute specifies otherwise.</span></span>
+<span data-ttu-id="415e6-155">宣告中的組態區段處理常式*Machine.config*檔可讓您使用 [設定] 區段中任何應用程式組態檔，該電腦上，除非**allowDefinition**屬性指定不同的情況。</span><span class="sxs-lookup"><span data-stu-id="415e6-155">Declaring a configuration section handler in the *Machine.config* file enables you to use the configuration section in any application configuration file on that computer, unless the **allowDefinition** attribute specifies otherwise.</span></span>
 
-## <a name="example"></a><span data-ttu-id="e3e6a-156">範例</span><span class="sxs-lookup"><span data-stu-id="e3e6a-156">Example</span></span>
+## <a name="example"></a><span data-ttu-id="415e6-156">範例</span><span class="sxs-lookup"><span data-stu-id="415e6-156">Example</span></span>
 
-<span data-ttu-id="e3e6a-157">下列範例示範如何定義組態區段，並定義該區段的設定：</span><span class="sxs-lookup"><span data-stu-id="e3e6a-157">The following example shows how to define a configuration section and define settings for that section:</span></span>
+<span data-ttu-id="415e6-157">下列範例示範如何定義組態區段，並定義該區段的設定：</span><span class="sxs-lookup"><span data-stu-id="415e6-157">The following example shows how to define a configuration section and define settings for that section:</span></span>
 
 ```xml
 <configuration>
@@ -92,10 +92,10 @@ ms.locfileid: "61701498"
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="e3e6a-158">組態檔</span><span class="sxs-lookup"><span data-stu-id="e3e6a-158">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="415e6-158">組態檔</span><span class="sxs-lookup"><span data-stu-id="415e6-158">Configuration file</span></span>
 
-<span data-ttu-id="e3e6a-159">這個項目可用的應用程式組態檔中，電腦組態檔 (*Machine.config*)，以及*Web.config*不在應用程式的目錄層級的檔案。</span><span class="sxs-lookup"><span data-stu-id="e3e6a-159">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="415e6-159">這個項目可用的應用程式組態檔中，電腦組態檔 (*Machine.config*)，以及*Web.config*不在應用程式的目錄層級的檔案。</span><span class="sxs-lookup"><span data-stu-id="415e6-159">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="e3e6a-160">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e3e6a-160">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="415e6-160">另請參閱</span><span class="sxs-lookup"><span data-stu-id="415e6-160">See also</span></span>
 
-- [<span data-ttu-id="e3e6a-161">適用於.NET Framework 的組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="e3e6a-161">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="415e6-161">適用於.NET Framework 的組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="415e6-161">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
