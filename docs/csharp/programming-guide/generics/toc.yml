@@ -1,10 +1,6 @@
 - name: 泛型
   href: index.md
   items:
-    - name: 泛型簡介
-      href: introduction-to-generics.md
-    - name: 泛型的優點
-      href: benefits-of-generics.md
     - name: 泛型類型參數
       href: generic-type-parameters.md
     - name: 型別參數的條件約束
