@@ -6,4 +6,4 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65629879"
 ---
-<span data-ttu-id="5872a-101">自 2.0 起可用</span><span class="sxs-lookup"><span data-stu-id="5872a-101">Available since 2.0</span></span>
+<span data-ttu-id="fab36-101">自 2.0 起可用</span><span class="sxs-lookup"><span data-stu-id="fab36-101">Available since 2.0</span></span>
