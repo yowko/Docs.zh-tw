@@ -2,12 +2,12 @@
 title: .NET 4.5 中 Windows Workflow Foundation 的新功能
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: fb9604061fd6ccd7909a2d5b26675a1b637f2b4d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9bf836abaa568b3df2080500d8d2357e604dff60
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380144"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423979"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 中 Windows Workflow Foundation 的新功能
 
@@ -200,7 +200,7 @@ C# 運算式會在設計階段進行驗證。 C# 運算式中的錯誤會用紅�
 
 ### <a name="BKMK_DesignTimeValidation"></a> 設計階段背景驗證
 
-在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，會在前景處理序中驗證工作流程，因此若驗證處理序較複雜或耗時，可能會使 UI 停止回應。 現在，工作流程驗證會在背景執行緒中進行，因此不會封鎖 UI。
+在  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，驗證工作流程，前景處理序，可能無法在較複雜或耗時的驗證程序期間會封鎖 UI。 現在，工作流程驗證會在背景執行緒中進行，因此不會封鎖 UI。
 
 ### <a name="BKMK_ViewState"></a> 位於不同的位置，在 XAML 檔案中的檢視狀態
 

@@ -2,12 +2,12 @@
 title: 針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 8459311239d46557405245c10b6fb5e887a4691c
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 70e4a8580a8b383bdd4e5e5299bcc5210f3210dc
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380153"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423973"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援
 Windows Workflow Foundation (WF) 在.NET Framework 4.5 中引進了許多新功能，包括工作流程設計工具經驗的數個增強功能。 本主題詳細介紹重新裝載的設計工具支援其中哪些功能，以及目前不支援的功能。
@@ -106,7 +106,7 @@ Windows Workflow Foundation (WF) 在.NET Framework 4.5 中引進了許多新功�
 >  重新裝載的設計工具不支援建置階段驗證。  
   
 ### <a name="design-time-background-validation"></a>設計階段背景驗證  
- 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，會在前景處理序中驗證工作流程，因此若驗證處理序較複雜或耗時，可能會使 UI 停止回應。 現在，工作流程驗證會在背景執行緒中進行，因此不會封鎖 UI。  
+ 在  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，驗證工作流程，前景處理序，可能無法在較複雜或耗時的驗證程序期間會封鎖 UI。 現在，工作流程驗證會在背景執行緒中進行，因此不會封鎖 UI。  
   
  重新裝載的設計工具支援設計階段背景驗證。  
   

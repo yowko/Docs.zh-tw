@@ -17,15 +17,15 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
-ms.openlocfilehash: da1d87464ef30fb549a2c201170e81c45cbdf6fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ef09fdc755480205b9929037277162349afa135
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587744"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423814"
 ---
 # <a name="backgroundworker-component-overview"></a>BackgroundWorker 元件概觀
-有許多經常執行的作業都需要長時間執行。 例如:   
+有許多經常執行的作業都需要長時間執行。 例如:  
   
 - 映像下載  
   
@@ -39,7 +39,7 @@ ms.locfileid: "64587744"
   
 - 本機磁碟存取 (假設因為存取記憶體導致速度變慢)  
   
- 當這類作業執行時，可能會導致您的使用者介面無回應。 當您需要 UI 即時回應，但 UI 卻受到這些作業拖累，導致回應時間拉長時，<xref:System.ComponentModel.BackgroundWorker> 元件可以提供合宜的解決方法。  
+ 這類作業可能會導致您的使用者介面，以封鎖執行時。 當您需要 UI 即時回應，但 UI 卻受到這些作業拖累，導致回應時間拉長時，<xref:System.ComponentModel.BackgroundWorker> 元件可以提供合宜的解決方法。  
   
  <xref:System.ComponentModel.BackgroundWorker> 元件可以非同步 (在背景中) 的方式，透過不同於應用程式之主要 UI 執行緒的執行緒來執行這些耗時的作業。 若要使用 <xref:System.ComponentModel.BackgroundWorker>，只須告知此函式要在背景中執行哪一個工作者方法，然後再呼叫 <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> 方法就可以了。 您呼叫的執行緒會如常執行，而工作者方法也會以非同步的方式同時執行。 當方法結束時，<xref:System.ComponentModel.BackgroundWorker> 會引發 <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> 事件來提示您呼叫的執行緒，並視情況在事件中包含作業的結果。  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 426429eefd038008340a956ab3fa3cba21906c84
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6dea344d5af24ba2f5bb4aa4064a4f876408380
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627018"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423896"
 ---
 # <a name="denial-of-service"></a>阻斷服務
 當系統由於無法處理訊息，或者處理訊息的速度極為緩慢而爆滿時，就會發生阻絕服務。  
@@ -19,7 +19,7 @@ ms.locfileid: "64627018"
   
  風險降低的方式包括：  
   
-- 衍生自 <xref:System.Xml.NameTable> 類別並強制執行最大的大小配額  (當配額已滿時，您無法避免使用 <xref:System.Xml.NameTable> 或切換 <xref:System.Xml.NameTable>)。  
+- 衍生自 <xref:System.Xml.NameTable> 類別並強制執行最大的大小配額 (當配額已滿時，您無法避免使用 <xref:System.Xml.NameTable> 或切換 <xref:System.Xml.NameTable>)。  
   
 - 避免使用提到的屬性，並盡量搭配使用 <xref:System.Xml.XmlReader.MoveToAttribute%2A> 方法和 <xref:System.Xml.XmlReader.IsStartElement%2A> 方法，這些方法不會傳回字串，這樣就可避免 <xref:System.Xml.NameTable> 集合太滿的問題。  
   
@@ -46,8 +46,8 @@ ms.locfileid: "64627018"
   
  若要減輕這個威脅，請將 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 屬性設定為 `true`，並使用 [事件檢視器] 的屬性來控制稽核行為。 如需使用事件檢視器來檢視和管理事件記錄檔的詳細資訊，請參閱[事件檢視器](https://go.microsoft.com/fwlink/?LinkId=186123)。 如需詳細資訊，請參閱 <<c0> [ 稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
   
-## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>無效的 IAuthorizationPolicy 實作會導致服務停止回應  
- 在錯誤的 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 介面實作上呼叫 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 方法，將會導致服務停止回應。  
+## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>無效的 IAuthorizationPolicy 的實作可能會造成服務沒有回應  
+ 呼叫<xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>方法的錯誤實作<xref:System.IdentityModel.Policy.IAuthorizationPolicy>介面可能會造成服務沒有回應。  
   
  風險降低：僅使用信任的程式碼。 也就是說，僅使用您所撰寫並測試過的程式碼，或使用來自可信任提供者的程式碼。 在沒有謹慎的考慮之前，請勿將不受信任的 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 延伸項目外掛至您的程式碼。 這個做法適用於服務實作中使用的所有延伸項目。 WCF 不會區分應用程式程式碼和已插入的外部程式碼中使用擴充點。  
   

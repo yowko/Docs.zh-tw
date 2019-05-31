@@ -1,5 +1,5 @@
 ---
-title: HOW TO：多載的程序會接受選擇性參數 (Visual Basic)
+title: 作法：多載的程序會接受選擇性參數 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], parameters
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 58c52a7d73efbd96d772dd85d6bf2c9084fb1241
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4374a229392d51b67c99210da91ae05dd3342e96
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863645"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424064"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>HOW TO：多載的程序會接受選擇性參數 (Visual Basic)
 如果程序中的一或多個[選擇性](../../../../visual-basic/language-reference/modifiers/optional.md)參數，您不能定義比對任何其隱含的多載的多載的版本。 如需詳細資訊，請參閱 < 隱含多載的選擇性參數 」 中[多載化程序中的考量](./considerations-in-overloading-procedures.md)。  
@@ -51,7 +51,7 @@ ms.locfileid: "61863645"
   
 #### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>若要多載會接受一個以上的選擇性參數的程序  
   
-1. 判斷哪些組合提供的選擇性引數是可接受的程序的邏輯。 一個選擇性參數相依於另一個時，可能導致無法接受的組合。 比方說，如果有一個參數接受配偶的名稱，而另一個接受配偶的時代，是無法接受的引數提供的時代，但省略名稱組合。  
+1. 判斷哪些組合提供的選擇性引數是可接受的程序的邏輯。 一個選擇性參數相依於另一個時，可能導致無法接受的組合。 比方說，如果一個參數可接受的人員名稱，而另一個接受個人的年齡，是無法接受的引數提供的時代，但省略名稱組合。  
   
 2. 針對提供的選擇性引數的每個可接受的組合，撰寫`Sub`或`Function`定義對應的參數清單的宣告陳述式。 請勿使用`Optional`關鍵字。  
   

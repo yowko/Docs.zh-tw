@@ -2,18 +2,18 @@
 title: 進出工作流程服務的異動流動
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: 7c47810ae168d39d7ebcd96952a75d6a3ba4d263
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2a837e446ec65caa6d481d3a5f141f87fe509910
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592815"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421898"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>進出工作流程服務的異動流動
 工作流程服務與用戶端都可以參與交易。  若要讓服務作業變成環境交易的一部分，請將 <xref:System.ServiceModel.Activities.Receive> 活動放在 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動內。 <xref:System.ServiceModel.Activities.Send> 或 <xref:System.ServiceModel.Activities.SendReply> 活動在 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 內所進行的任何呼叫也會在環境交易中進行。 工作流程用戶端應用程式可以使用 <xref:System.Activities.Statements.TransactionScope> 活動建立環境異動，然後使用環境異動呼叫服務作業。 本主題逐步帶領您建立參與交易的工作流程服務和工作流程用戶端。  
   
 > [!WARNING]
->  如果工作流程服務執行個體是在異動內載入，而且工作流程包含 <xref:System.Activities.Statements.Persist> 活動，則工作流程執行個體將會停止回應，直到異動逾時為止。  
+>  如果在交易中載入工作流程服務執行個體時，工作流程包含<xref:System.Activities.Statements.Persist>活動，工作流程執行個體將會封鎖直到異動逾時。  
   
 > [!IMPORTANT]
 >  每當您使用 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 時，建議您將工作流程中的所有 Receive 放在 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動內。  
@@ -76,7 +76,7 @@ ms.locfileid: "64592815"
   
 ### <a name="implement-the-workflow-service"></a>實作工作流程服務  
   
-1. 加入新的 WCF Workflow Service，稱為`WorkflowService`至`Common`專案。 若要這樣做，按一下右`Common`專案，然後選取**新增**，**新項目...**，選取**工作流程**之下**已安裝的範本**，然後選取**WCF Workflow Service**。  
+1. 加入新的 WCF Workflow Service，稱為`WorkflowService`至`Common`專案。 若要這樣做，按一下右`Common`專案，然後選取**新增**，**新項目...** ，選取**工作流程**之下**已安裝的範本**，然後選取**WCF Workflow Service**。  
   
      ![加入工作流程服務](./media/flowing-transactions-into-and-out-of-workflow-services/add-workflow-service.jpg)  
   
@@ -155,7 +155,7 @@ ms.locfileid: "64592815"
   
 ### <a name="implement-the-workflow-client"></a>實作工作流程用戶端  
   
-1. 將稱為 `WorkflowClient` 的新 WCF 工作流程應用程式加入至 `Common` 專案。 若要這樣做，按一下右`Common`專案，然後選取**新增**，**新項目...**，選取**工作流程**之下**已安裝的範本**，然後選取**活動**。  
+1. 將稱為 `WorkflowClient` 的新 WCF 工作流程應用程式加入至 `Common` 專案。 若要這樣做，按一下右`Common`專案，然後選取**新增**，**新項目...** ，選取**工作流程**之下**已安裝的範本**，然後選取**活動**。  
   
      ![加入 [活動] 專案](./media/flowing-transactions-into-and-out-of-workflow-services/add-activity-project.jpg)  
   

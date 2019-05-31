@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: 5224c7b5ae1c8a83be07fdf5f2065794fb46dd55
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 04378d2c9a7e565343ff663997e2a3e61f04f9d2
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625557"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423572"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By 子句 (Visual Basic)
 群組查詢結果的項目。 也可用來將彙總函式套用至每個群組。 群組作業是根據一個或多個索引鍵。  
@@ -65,7 +65,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
  您使用 `aggregateList` 子句的 `Into` 參數和 `Group` 關鍵字來識別用來參考群組的成員名稱。 您也可以在 `Into` 子句中包含彙總函式來計算群組項目的值。 如需標準彙總函式的清單，請參閱 [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md)。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例根據客戶的位置 (國家/地區) 進行客戶清單的分組，並提供每個群組中的客戶計數。 結果會依國家/地區名稱排序。 群組結果會依城市名稱排序。  
+ 下列程式碼範例群組根據其位置 （國家/地區） 的客戶清單，並提供每個群組中的客戶計數。 結果會依國家/地區名稱排序。 群組結果會依城市名稱排序。  
   
  [!code-vb[VbSimpleQuerySamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#11)]  
   

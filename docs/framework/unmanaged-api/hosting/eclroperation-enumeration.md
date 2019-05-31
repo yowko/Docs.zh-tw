@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d5f24d7415ff7ecceba6b0a5fbd3098d70dcd0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9bbff8bb1f095502f27b649639434010453ffe1
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796015"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423845"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation 列舉
 描述的作業主機可以套用原則的動作集合。  
@@ -55,7 +55,7 @@ typedef enum {
 ## <a name="remarks"></a>備註  
  Common language runtime (CLR) 可靠性 infrastructure 區分中止和資源配置失敗的程式碼和發生非關鍵區域中的程式碼的關鍵區域中發生。 這項區別被設計來讓主機以設定不同的原則，根據程式碼中發生失敗。  
   
- A*的程式碼的重要區域*該中止工作或無法完成要求的資源將會影響目前的工作，CLR 中不能保證任何空間。 例如，如果工作會保留鎖定，並收到指出時進行記憶體配置要求失敗的 HRESULT，它不足，只是中止該工作，以確保穩定性<xref:System.AppDomain>，因為<xref:System.AppDomain>可能包含其他相同的鎖定所等候的工作。 要放棄目前的工作可能會使這些其他工作，來停止回應 （或停止回應） 無限期。 在此情況下，主機必須能夠卸載整個<xref:System.AppDomain>而不是風險潛在的不穩定。  
+ A*的程式碼的重要區域*該中止工作或無法完成要求的資源將會影響目前的工作，CLR 中不能保證任何空間。 例如，如果工作會保留鎖定，並收到指出時進行記憶體配置要求失敗的 HRESULT，它不足，只是中止該工作，以確保穩定性<xref:System.AppDomain>，因為<xref:System.AppDomain>可能包含其他相同的鎖定所等候的工作。 若要放棄目前的工作可能會導致這些其他工作以停止回應。 在此情況下，主機必須能夠卸載整個<xref:System.AppDomain>而不是風險潛在的不穩定。  
   
  A*非關鍵的程式碼區域*，相反地，是 CLR 可以保證 「 中止 」 或 「 失敗會影響只有工作時就會發生錯誤的區域。  
   
@@ -68,7 +68,7 @@ typedef enum {
   
  **LIBRARY:** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

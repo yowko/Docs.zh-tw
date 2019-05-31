@@ -15,12 +15,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: d6179624ffbdf423f8d9b895c65ff41ac9846f33
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 970c69b36eecd110dd81b6a3700fbb0a7eea2834
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647037"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424030"
 ---
 # <a name="date-data-type-visual-basic"></a>Date 資料類型 (Visual Basic)
 具有 IEEE 64 位元 (8 位元組) 值，以代表從 0001 年 1 月 1 日到 9999 年 12 月 31 日的日期，以及從上午 (午夜) 12:00:00 到下午 11:59:59.9999999 的時間。 每個增量代表西曆日曆 1 年 1 月 1 日開始之後經過 100 奈秒的時間。 最大值代表 10000 年 1 月 1 開始之前的 100 奈秒。  
@@ -35,7 +35,7 @@ ms.locfileid: "64647037"
 ## <a name="format-requirements"></a>格式需求  
  您必須將 `Date` 常值包含在數字符號 (`# #`) 中。 您必須指定 M/d/yyyy 格式 (例如 `#5/31/1993#`) 或 yyyy-MM-dd (例如 `#1993-5-31#`) 的日期值。 先指定年份時可以使用斜線。  這項需求與您的地區設定和電腦的日期和時間格式設定無關。  
   
- 之所以有這項限制，是因為您程式碼的意義絕不應根據您的應用程式執行所在的地區設定而變更。 假設您對 `#3/4/1998#` 的 `Date` 常值進行硬式編碼，並想要讓它代表 1998 年 3 月 4 日。 在使用 mm/dd/yyyy 的地區設定中，3/4/1998 會依照您的需求進行編譯。 但假設您在許多國家 (地區) 部署應用程式。 在使用 dd/mm/yyyy 的地區設定中，您硬式編碼的常值會編譯為 1998 年 4 月 3 日。 在使用 yyyy/mm/dd 的地區設定中，常值將是無效的 (0003 年 4 月 1998 日)，而且會導致編譯器錯誤。  
+ 之所以有這項限制，是因為您程式碼的意義絕不應根據您的應用程式執行所在的地區設定而變更。 假設您對 `#3/4/1998#` 的 `Date` 常值進行硬式編碼，並想要讓它代表 1998 年 3 月 4 日。 在使用 mm/dd/yyyy 的地區設定中，3/4/1998 會依照您的需求進行編譯。 但是，假設您部署您的應用程式，在許多國家/地區。 在使用 dd/mm/yyyy 的地區設定中，您硬式編碼的常值會編譯為 1998 年 4 月 3 日。 在使用 yyyy/mm/dd 的地區設定中，常值將是無效的 (0003 年 4 月 1998 日)，而且會導致編譯器錯誤。  
   
 ## <a name="workarounds"></a>替代解決辦法  
  若要將 `Date` 常值轉換為您的地區設定或自訂格式，請將常值提供給 <xref:Microsoft.VisualBasic.Strings.Format%2A> 函式，以指定預先定義或使用者定義的日期格式。 下列範例為其示範。  
