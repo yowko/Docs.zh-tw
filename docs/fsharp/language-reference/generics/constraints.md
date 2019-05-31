@@ -2,12 +2,12 @@
 title: 條件約束
 description: 深入了解F#條件約束套用至泛型型別參數的泛型型別或函式中指定的類型引數的需求。
 ms.date: 05/16/2016
-ms.openlocfilehash: 1bf5c6fc4df6c8f2f7f969bd13030172c6b8aab9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: bb6625636f0465dd608ae2e8a8986d043b62b6e4
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645289"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378190"
 ---
 # <a name="constraints"></a>條件約束
 
@@ -58,10 +58,6 @@ class end
 
 // Null constraint
 type Class3<'T when 'T : null> =
-class end
-
-// Member constraint with static member
-type Class4<'T when 'T : (static member staticMethod1 : unit -> 'T) > =
 class end
 
 // Member constraint with instance member

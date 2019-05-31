@@ -2,12 +2,12 @@
 title: Docker 應用程式的開發程序
 description: 提供 Docker 型應用程式開發選項的高層級概觀。 使用您選擇的 Visual Studio for Windows、Visual Studio for Mac 或適用於多平台支援 (Windows、Mac 與 Linux) 的 Visual Studio Code。
 ms.date: 09/27/2018
-ms.openlocfilehash: a871fcbfcf079c745759cb17960fa4eaa6ec6eec
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8807bc57365e70a0cbf265dc7bce28c93de16098
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640077"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300652"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker 應用程式的開發程序
 
@@ -25,7 +25,7 @@ ms.locfileid: "65640077"
 
 **Visual Studio Code 和 Docker CLI**。 如果您偏好使用支援任何開發語言之輕量型且跨平台的編輯器，您可以使用 Microsoft Visual Studio Code (VS Code) 和 Docker CLI。 這是適用於 Mac、Linux 和 Windows 的跨平台開發方法。 此外，Visual Studio Code 支援 Docker 的延伸模組 (例如適用於 Dockerfile 的 IntelliSense)，以及可從編輯器執行 Docker 命令的捷徑工作。
 
-藉由安裝 [Docker Community Edition (CE)](https://www.docker.com/community-edition) 工具，您可以使用單一 Docker CLI 來建置 Windows 和 Linux 應用程式。
+透過安裝 [Docker Desktop Community Edition (CE)](https://hub.docker.com/search/?type=edition&offering=community)，您可以使用單一 Docker CLI 來建置 Windows 和 Linux 應用程式。
 
 ### <a name="additional-resources"></a>其他資源
 
@@ -35,8 +35,11 @@ ms.locfileid: "65640077"
 - **Visual Studio Code**。 官方網站。 \
   <https://code.visualstudio.com/download>
 
-- **適用於 Mac 和 Windows 的 Docker Community Edition (CE)** \
-  [https://www.docker.com/community-editions](https://www.docker.com/community-edition)
+- **適用於 Windows Community Edition (CE) 的 Docker Desktop** \
+  [https://hub.docker.com/editions/community/docker-ce-desktop-windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+  
+- **適用於 Mac Community Edition (CE) 的 Docker Desktop** \
+  [https://hub.docker.com/editions/community/docker-ce-desktop-mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>Docker 容器的 .NET 語言和 Framework
 
