@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 725bd715f6e70dff08929e58d588a3d8561d5011
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60fcdd902c6acf919e68806ff65e3b8142533280
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674060"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456379"
 ---
 # <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > 項目
 指定執行階段是否會在執行階段自動修復不正確的平台叫用宣告，即使這麼做會使 Managed 和 Unmanaged 程式碼之間的轉換變慢。  
@@ -56,7 +56,7 @@ ms.locfileid: "61674060"
 ## <a name="remarks"></a>備註  
  這個項目可讓您更快 interop 封送處理的執行階段彈性，針對不正確的平台叫用宣告的交換。  
   
- 從開始[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，簡化的 interop 封送處理架構提供從 managed 程式碼會轉換成 unmanaged 程式碼的顯著效能改善。 在舊版的.NET Framework 中，封送處理層偵測到不正確的平台叫用 32 位元平台上的宣告，並自動修正堆疊。 新的封送處理架構會移除此步驟。 如此一來，轉換會非常快速，但不正確的平台叫用宣告可能會導致程式失敗。  
+ 從.NET Framework 4 開始，簡化的 interop 封送處理架構，提供從 managed 程式碼會轉換成 unmanaged 程式碼的顯著效能改善。 在舊版的.NET Framework 中，封送處理層偵測到不正確的平台叫用 32 位元平台上的宣告，並自動修正堆疊。 新的封送處理架構會移除此步驟。 如此一來，轉換會非常快速，但不正確的平台叫用宣告可能會導致程式失敗。  
   
  若要讓您輕鬆地在開發期間偵測不正確的宣告，已改善 Visual Studio 偵錯體驗。 [PInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) managed 偵錯助理 (MDA) 會通知您有不正確的平台叫用宣告，以附加偵錯工具在您的應用程式執行時。  
   

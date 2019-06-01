@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 972efa150d560e74f0e7daadf18688ac12b9fbf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8f5c6f6aba9ec4ad627fcd4d3b3caaff810ee72
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583637"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456197"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>使用組態檔設定應用程式
 .NET Framework 透過組態檔賦予開發人員和系統管理員對於應用程式執行方式的控制和彈性。 組態檔是可以按需要變更的 XML 檔。 系統管員能夠控制應用程式可以存取哪些受保護的資源、應用程式將使用之組件的版本為何，以及遠端應用程式和物件要位於何處。 開發人員則可以將設定值置於組態檔，排除每當設定值變更時重新編譯應用程式的需要。 本章節說明可以設定些什麼以及設定應用程式會很有用處的原因。  
@@ -54,7 +54,7 @@ ms.locfileid: "64583637"
 ## <a name="machine-configuration-files"></a>電腦組態檔  
  電腦組態檔 Machine.config 包含套用於整個電腦的設定值。 這個檔案位於 %*runtime install path*%\Config 目錄中。 Machine.config 包含全電腦的組件繫結、內建[遠端通道](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100))和 ASP.NET 的組態設定。  
   
- 組態系統首先會在電腦組態檔中尋找 [**\<appSettings>** 項目](~/docs/framework/configure-apps/file-schema/appsettings/index.md)以及開發人員可能定義的其他組態區段。 接著會查看應用程式組態檔。 若要讓電腦組態檔易於管理，最好將這些設定值放在應用程式組態檔中。 然而，將設定值置於電腦組態檔可讓您的系統更容易維護。 例如，如果您有用戶端和伺服器應用程式都使用到的協力廠商元件，將那元件的設定值放在一個地方會比較容易。 在這個情況中，電腦組態檔是設定值的適當位置，所以您在兩個不同檔案中沒有相同的設定值。  
+ 組態系統首先會在電腦組態檔中尋找 [ **\<appSettings>** 項目](~/docs/framework/configure-apps/file-schema/appsettings/index.md)以及開發人員可能定義的其他組態區段。 接著會查看應用程式組態檔。 若要讓電腦組態檔易於管理，最好將這些設定值放在應用程式組態檔中。 然而，將設定值置於電腦組態檔可讓您的系統更容易維護。 例如，如果您有用戶端和伺服器應用程式都使用到的協力廠商元件，將那元件的設定值放在一個地方會比較容易。 在這個情況中，電腦組態檔是設定值的適當位置，所以您在兩個不同檔案中沒有相同的設定值。  
   
 > [!NOTE]
 >  使用 XCOPY 部署應用程式將不會複製電腦組態檔中的設定值。  
@@ -70,7 +70,7 @@ ms.locfileid: "64583637"
   
      這些應用程式有兩個組態檔：一個是來源組態檔，開發人員會在開發期間修改這個組態檔，另一個是隨應用程式散發的輸出檔。  
   
-     當您使用 Visual Studio 進行開發時，將應用程式的來源組態檔放置在專案目錄中，並將其 [複製到輸出目錄] 屬性設定為 [永遠複製] 或 [有更新時才複製]。 組態檔的名稱為具有 .config 副檔名的應用程式名稱。 例如，稱為 myApp.exe 的應用程式應擁有稱為 myApp.exe.config 的來源組態檔。  
+     當您使用 Visual Studio 進行開發時，將應用程式的來源組態檔放置在專案目錄中，並將其 [複製到輸出目錄]  屬性設定為 [永遠複製]  或 [有更新時才複製]  。 組態檔的名稱為具有 .config 副檔名的應用程式名稱。 例如，稱為 myApp.exe 的應用程式應擁有稱為 myApp.exe.config 的來源組態檔。  
   
      Visual Studio 會自動將來源組態檔複製到編譯的組件所在的目錄中，以建立輸出組態檔，該組態檔會隨應用程式一起部署。 在某些情況下，Visual Studio 可能會修改輸出組態檔；如需詳細資訊，請參閱[重新導向組件版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)文件的[將應用程式層級的組件版本重新導向](../../../docs/framework/configure-apps/redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel)一節。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "64583637"
  安全組態檔包含程式碼群組階層架構和與原則層級相關聯的使用權限集合的資訊。 強烈建議您使用[程式碼存取安全性原則工具 (Caspol.exe)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md) 修改安全性原則，確保原則變更不會造成安全性組態檔損毀。  
   
 > [!NOTE]
->  從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，安全性組態檔只有在安全性原則已變更時才會出現。  
+>  從.NET Framework 4 開始，安全性設定檔才會出現安全性原則已變更。  
   
  安全性組態檔位於下列位置：  
   

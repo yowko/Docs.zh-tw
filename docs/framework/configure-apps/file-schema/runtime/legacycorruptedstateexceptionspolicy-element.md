@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78b670d8b23b5ecf274432d3758d07dae34dcfcf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8733e11aba30ebea30fc71a5350f76dfd041eb4
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607165"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456409"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > 項目
 指定 common language runtime 是否允許 managed 程式碼攔截存取違規和其他損毀的狀態例外狀況。  
@@ -64,10 +64,10 @@ ms.locfileid: "64607165"
   
 - 適用於<xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType>屬性設定為包含例外狀況的方法`catch`區塊。  
   
- 這個組態項目是僅適用於[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]和更新版本。  
+ 這個組態項目是僅適用於.NET Framework 4 及更新版本。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何指定應用程式應該還原成之前的行為[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，並擷取所有損毀狀態例外狀況失敗。  
+ 下列範例示範如何指定應用程式應該還原為.NET Framework 4 之前的行為，並擷取所有損毀狀態例外狀況失敗。  
   
 ```xml  
 <configuration>  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b47c4d07fc0ee0cdaf53fe3c8199fb37dcb6c1b1
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: cb6cfc8e1c3f0409d99d31efa0a645476b47e45e
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377894"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456261"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > 項目
 指定未處理的工作例外狀況是否應終止執行中的處理序。  
@@ -65,7 +65,7 @@ ms.locfileid: "66377894"
   
  若要簡化開發人員撰寫工作為基礎的非同步程式碼，.NET Framework 4.5 中變更此預設行為未觀察到的例外狀況。 未觀察到的例外狀況，仍有導致<xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>事件引發，但根據預設，此程序不會終止。 相反地，引發事件，不論事件處理常式是否會觀察到例外狀況之後，會忽略例外狀況。  
   
- 在.NET Framework 4.5 中，您可以使用[ \<ThrowUnobservedTaskExceptions > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)應用程式組態檔中啟用[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]擲回例外狀況的行為。  
+ 在.NET Framework 4.5 中，您可以使用[ \<ThrowUnobservedTaskExceptions > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)應用程式組態檔中啟用.NET Framework 4 的行為擲回例外狀況。  
   
  您也可以指定的例外狀況行為中的下列方法之一：  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 703b8381-43db-4a4d-9faa-cca39302d922
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03839a2c6e52f9d2dcdd2e0941ff4fdbeb8a3a17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80404e65263aa4ad245a8c8213630a4736bd7b11
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789658"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456881"
 ---
 # <a name="clr-hosting-interfaces"></a>CLR 裝載介面
 本節描述 unmanaged 介面主機可用來將 common language runtime (CLR) 整合到他們的應用程式。 此資訊適用於.NET Framework 2.0 版和更新版本。 這些介面讓控制許多的更多方面，比在 1.0 和 1.1 版中的執行階段主應用程式，並提供 CLR 與主機的執行模式之間更緊密整合。  
@@ -191,4 +191,4 @@ ms.locfileid: "61789658"
  包含說明.NET Framework 1.0 和 1.1 版中提供裝載介面主題。  
   
  [.NET Framework 4 和 4.5 中新增的 CLR 裝載介面](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- 包含的主題將描述中所提供的裝載介面[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。
+ 包含說明.NET Framework 4 中提供裝載介面主題。

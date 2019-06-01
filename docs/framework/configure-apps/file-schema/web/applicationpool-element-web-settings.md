@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: 548f7de2753ef0c30aa787f4c879af87987bfbde
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0486e9faf70e7d5d147cfef996edcdaa8846963
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621509"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456300"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > 項目 （Web 設定）
 指定 asp.net 用於 ASP.NET 應用程式上執行整合模式中時，管理整個處理序行為的組態設定[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更新版本。  
@@ -59,7 +59,7 @@ ms.locfileid: "64621509"
 > [!IMPORTANT]
 >  如果您執行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]上[!INCLUDE[win7](../../../../../includes/win7-md.md)]，您可以設定每個應用程式集區的個別 aspnet.config 檔案。 這可讓您量身訂做的每個應用程式集區執行緒的效能。  
   
- 針對`maxConcurrentRequestsPerCPU`，預設設定為"5000 」 中設定[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]實際上會關閉要求節流也就控制 asp.net，除非您真的有 5000 個以上的要求，每個 CPU。 預設設定而定來自動管理每一 CPU 的並行存取 CLR 執行緒集區。 應用程式，讓使用大量的非同步要求處理，或已封鎖 I/O、 網路上的許多長時間執行要求將受益於提高的預設限制在[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]。 設定`maxConcurrentRequestsPerCPU`為零會關閉使用的 managed 執行緒來處理 ASP.NET 要求。 應用程式執行時的 IIS 應用程式集區中，要求停留在 IIS I/O 執行緒，因此並行由進行節流處理執行緒的 IIS 設定。  
+ 針對`maxConcurrentRequestsPerCPU`設定，「 5000"的預設設定.NET Framework 4 中有效地關閉要求節流受控制的 ASP.NET 中，除非您真的有 5000 個以上的要求，每個 CPU。 預設設定而定來自動管理每一 CPU 的並行存取 CLR 執行緒集區。 應用程式，讓使用大量的非同步要求處理，或有多長時間執行要求被封鎖在網路 I/O，會從更高的預設限制在.NET Framework 4 中獲益。 設定`maxConcurrentRequestsPerCPU`為零會關閉使用的 managed 執行緒來處理 ASP.NET 要求。 應用程式執行時的 IIS 應用程式集區中，要求停留在 IIS I/O 執行緒，因此並行由進行節流處理執行緒的 IIS 設定。  
   
  `requestQueueLimit`設定的運作方式一樣`requestQueueLimit`屬性[processModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100))項目，在 ASP.NET 應用程式的 Web.config 檔案中設定。 不過， `requestQueueLimit` aspnet.config 檔案中的設定會覆寫`requestQueueLimit`Web.config 檔中設定。 換句話說，如果設定了這兩個屬性 （根據預設，這是，則為 true）、 `requestQueueLimit` aspnet.config 檔中的設定的優先順序。  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: cc55809ecaffa4cab4fa4336f9f7f5c06debde2d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c6bf4c6b262bc9066277a683d5eda67ada6f4d08
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634208"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456222"
 ---
 # <a name="supportedruntime-element"></a>\<Supportedruntime> > 項目
 
@@ -22,7 +22,7 @@ ms.locfileid: "65634208"
 
 [\<configuration>](../configuration-element.md)  
 &nbsp;&nbsp;[\<startup>](../startup/startup-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<supportedRuntime>**  
 
 ## <a name="syntax"></a>語法
 
@@ -41,7 +41,7 @@ ms.locfileid: "65634208"
 
 如果 **\<Supportedruntime> >** 項目不存在於應用程式組態檔，會使用用來建置應用程式的執行階段版本。
 
- **\<Supportedruntime> >** 項目應由使用 1.1 版或更新版本的執行階段所建置的所有應用程式。 若要只支援 1.0 版的執行階段所建置的應用程式必須使用[ \<Requiredruntime> >](../startup/requiredruntime-element.md)項目。
+**\<Supportedruntime>** 項目應由使用 1.1 版或更新版本的執行階段所建置的所有應用程式。 若要只支援 1.0 版的執行階段所建置的應用程式必須使用[ \<Requiredruntime> >](../startup/requiredruntime-element.md)項目。
 
 > [!NOTE]
 > 如果您使用[CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)函數來指定組態檔，您必須使用`<requiredRuntime>`的執行階段的所有版本的項目。 `<supportedRuntime>`當您使用時，便會忽略元素[CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)。  
@@ -51,7 +51,7 @@ ms.locfileid: "65634208"
 如果 **\<Supportedruntime> >** 項目`sku`屬性已出現在組態檔，並已安裝的.NET Framework 版本是較低，則指定的支援的版本，應用程式無法執行，而是會顯示訊息，要求您安裝支援的版本。 否則應用程式會嘗試在任何已安裝的版本上執行，但它可能會出現非預期行為如果不是與該版本完全相容。 (如需.NET Framework 版本之間的相容性差異，請參閱[.NET Framework 中的應用程式相容性](https://docs.microsoft.com/dotnet/framework/migration-guide/application-compatibility)。)因此，我們建議您更輕鬆的錯誤診斷的應用程式組態檔中包含這個項目。 （已建立新專案時，自動產生 Visual studio 的組態檔包含它）。
   
 > [!NOTE]
-> 如果您的應用程式使用舊版啟用路徑，例如[CorBindToRuntimeEx 函式](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)，和您想要這些路徑來啟動第 4 版的 clr，而不是較早的版本，或如果您的應用程式以建置[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]具有相依性，但以舊版.NET Framework 建置的混合模式組件，它並不足以指定[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]中支援的執行階段的清單。 此外，在[\<啟動 > 項目](../startup/startup-element.md)在您的組態檔，您必須設定`useLegacyV2RuntimeActivationPolicy`屬性設定為`true`。 但是，將這個屬性設定為 `true`，即表示以舊版 .NET Framework 建置的所有元件都會使用 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 執行，而不是原本建置時所使用的執行階段。
+> 如果您的應用程式使用舊版啟用路徑，例如[CorBindToRuntimeEx 函式](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)，和您想要這些路徑來啟動第 4 版的 clr，而不是較早的版本，或如果您的應用程式以.NET Framework 建置4 但具有相依性以舊版.NET Framework 建置的混合模式組件，它並不足以支援的執行階段清單中指定.NET Framework 4。 此外，在[\<啟動 > 項目](../startup/startup-element.md)在您的組態檔，您必須設定`useLegacyV2RuntimeActivationPolicy`屬性設定為`true`。 不過，將此屬性設定為`true`而建置的執行階段不使用.NET Framework 4 執行使用舊版.NET Framework 所建置的所有元件的方法。
 
 建議您使用應用程式能夠執行的所有 .NET Framework 版本進行應用程式測試。
 

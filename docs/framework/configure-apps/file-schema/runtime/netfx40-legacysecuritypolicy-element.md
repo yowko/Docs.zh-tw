@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20a0ca8560fcd5d7f9d171df3e3b4c3f42e78641
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 848c56773c0ff2986f0bec3e82a08a3d0dd35434
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674177"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456480"
 ---
 # <a name="netfx40legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy > 項目
 指定執行階段是否使用舊版程式碼存取安全性 (CAS) 原則。  
@@ -57,7 +57,7 @@ ms.locfileid: "61674177"
 ## <a name="remarks"></a>備註  
  在.NET Framework 3.5 版和更早版本中，CAS 原則一律是作用中。 在  [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，必須啟用 CAS 原則。  
   
- 特定版本的 CAS 原則。 存在舊版.NET Framework 中的自訂 CA 原則必須重新指定在[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]。  
+ 特定版本的 CAS 原則。 在.NET Framework 4 中，必須重新指定存在於較早版本的.NET Framework 中的自訂 CA 原則。  
   
  套用`<NetFx40_LegacySecurityPolicy>`項目[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]組件不會影響[安全性透明程式碼](../../../../../docs/framework/misc/security-transparent-code.md); 透明度規則仍適用。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "61674177"
 >  套用`<NetFx40_LegacySecurityPolicy>`項目可以原生映像所建立的組件會導致重大的效能損失[原生映像產生器 (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) ，不會安裝在[全域組件快取](../../../../../docs/framework/app-domains/gac.md). 效能降低因執行階段無法載入組件為原生映像，套用屬性時，導致其被載入，在 just-in-time 組件。  
   
 > [!NOTE]
->  如果您指定的目標.NET Framework 版本早於[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]在專案設定為您的 Visual Studio 專案中，CAS 原則就會啟用，包括您為該版本所指定的任何自訂 CA 原則。 不過，您將無法使用新[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]類型和成員。 您也可以藉由指定舊版的.NET framework [ \<Supportedruntime> > 項目](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)啟動設定結構描述中您[應用程式組態檔](../../../../../docs/framework/configure-apps/index.md)。  
+>  如果您指定的目標.NET Framework 版本早於.NET Framework 4 中的專案設定 Visual Studio 專案時，就會啟用 CAS 原則，包括您為該版本所指定的任何自訂 CA 原則。 不過，您將無法使用新的.NET Framework 4 類型和成員。 您也可以藉由指定舊版的.NET framework [ \<Supportedruntime> > 項目](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)啟動設定結構描述中您[應用程式組態檔](../../../../../docs/framework/configure-apps/index.md)。  
   
 > [!NOTE]
 >  組態檔語法會區分大小寫。 提供語法和範例區段中，您應該使用的語法。  

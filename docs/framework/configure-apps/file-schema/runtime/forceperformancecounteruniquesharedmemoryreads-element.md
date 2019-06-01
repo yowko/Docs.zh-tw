@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d4a205f643c844b2fe77d3aa5211b4bc1f322fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e9073e48141bc6895d00c773c2d3d2cfeb260f6
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674245"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456469"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads > 項目
 指定 PerfCounter.dll 是否在 .NET Framework 1.1 版的應用程式中使用 CategoryOptions 登錄設定，以決定要從類別特定共用記憶體或從全域記憶體載入效能計數器資料。  
@@ -55,11 +55,11 @@ enabled="true|false"/>
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 在之前的.NET Framework 的版本中[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，PerfCounter.dll 載入的版本對應到已載入處理序中的執行階段。 如果電腦有兩個.NET Framework 1.1 版和[!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)]安裝，.NET Framework 1.1 應用程式會載入 PerfCounter.dll.NET Framework 1.1 版。 從開始[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，載入 PerfCounter.dll 已安裝最新版本。 這表示，.NET Framework 1.1 應用程式將會載入[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]PerfCounter.dll 版本如果[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]安裝在電腦上。  
+ 在之前的.NET Framework 的版本中[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，PerfCounter.dll 載入的版本對應到已載入處理序中的執行階段。 如果電腦有兩個.NET Framework 1.1 版和[!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)]安裝，.NET Framework 1.1 應用程式會載入 PerfCounter.dll.NET Framework 1.1 版。 從.NET Framework 4 開始，載入 PerfCounter.dll 已安裝最新版本。 這表示如果在電腦上安裝.NET Framework 4 的.NET Framework 1.1 應用程式會載入 PerfCounter.dll 的.NET Framework 4 版本。  
   
- 從開始[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，PerfCounter.dll 時耗用的效能計數器，會檢查每個提供者，以判斷它是否應該從類別特定共用的記憶體或全域共用的記憶體讀取的 CategoryOptions 登錄項目。 .NET Framework 1.1 PerfCounter.dll 不會讀取該登錄項目，因為它並不知道特定類別的共用記憶體中;它一律會從全域共用記憶體讀取。  
+ 從.NET Framework 4 中，使用效能計數器時，PerfCounter.dll 會檢查每個提供者，以判斷它是否應該從類別特定共用的記憶體或全域共用的記憶體讀取的 CategoryOptions 登錄項目。 .NET Framework 1.1 PerfCounter.dll 不會讀取該登錄項目，因為它並不知道特定類別的共用記憶體中;它一律會從全域共用記憶體讀取。  
   
- 回溯相容性， [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] PerfCounter.dll 在.NET Framework 1.1 應用程式中執行時不會檢查 CategoryOptions 登錄項目。 它會直接使用全域共用的記憶體的詳細資訊，就像.NET Framework 1.1 PerfCounter.dll 一樣。 不過，您可以指示[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]藉由檢查登錄設定 PerfCounter.dll`<forcePerformanceCounterUniqueSharedMemoryReads>`項目。  
+ .NET Framework 4 PerfCounter.dll 回溯相容性，它不會檢查 CategoryOptions 登錄項目中的.NET Framework 1.1 應用程式執行時。 它會直接使用全域共用的記憶體的詳細資訊，就像.NET Framework 1.1 PerfCounter.dll 一樣。 不過，您可以指示檢查登錄設定，藉由啟用.NET Framework 4 PerfCounter.dll`<forcePerformanceCounterUniqueSharedMemoryReads>`項目。  
   
 > [!NOTE]
 >  啟用`<forcePerformanceCounterUniqueSharedMemoryReads>`項目並不保證就會使用該特定類別的共用的記憶體。 若要啟用設定`true`只會導致 PerfCounter.dll 參考 CategoryOptions 登錄設定。 CategoryOptions 的預設設定為使用特定類別的共用的記憶體中;不過，您可以變更 CategoryOptions 以指出應該使用全域共用的記憶體。  

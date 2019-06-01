@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4ee973eb5a81a6428ee5a5fcfc00e28425ff2a44
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591201"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457510"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>逐步解說：在 WPF 應用程式中快取應用程式資料
 快取可讓您將資料儲存在記憶體中，以進行快速存取。 重新存取資料時，應用程式可以從快取中取得資料，而不是從原始來源進行擷取。 這可以改善效能和延展性。 此外，暫時無法使用資料來源時，快取可讓資料可用。
@@ -22,7 +22,7 @@ ms.locfileid: "65591201"
  .NET Framework 會提供類別，可讓您使用.NET Framework 應用程式中的快取。 這些類別位於<xref:System.Runtime.Caching>命名空間。
 
 > [!NOTE]
->  <xref:System.Runtime.Caching>命名空間的新[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 此命名空間可讓快取是供所有.NET Framework 應用程式。 在舊版的.NET framework 中，快取是僅適用於<xref:System.Web>命名空間，因此需要對 ASP.NET 類別的相依性。
+>  <xref:System.Runtime.Caching>命名空間是.NET Framework 4 的新功能。 此命名空間可讓快取是供所有.NET Framework 應用程式。 在舊版的.NET framework 中，快取是僅適用於<xref:System.Web>命名空間，因此需要對 ASP.NET 類別的相依性。
 
  本逐步解說會示範如何使用快取功能的一部分，可在.NET Framework[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式。 在逐步解說中，您快取的文字檔的內容。
 
@@ -30,7 +30,7 @@ ms.locfileid: "65591201"
 
 - 建立 WPF 應用程式專案。
 
-- 將參考加入[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。
+- 將參考加入.NET Framework 4。
 
 - 正在初始化快取。
 
@@ -60,25 +60,25 @@ ms.locfileid: "65591201"
 
 2. 在**檔案**功能表上，按一下**新增**，然後按一下**新專案**。
 
-     [新增專案] 對話方塊隨即出現。
+     [新增專案]  對話方塊隨即出現。
 
-3. 底下**已安裝的範本**，選取您想要使用的程式設計語言 (**Visual Basic**或是**Visual C#**)。
+3. 底下**已安裝的範本**，選取您想要使用的程式設計語言 (**Visual Basic**或是**Visual C#** )。
 
 4. 在 **新的專案**對話方塊中，選取**WPF 應用程式**。
 
     > [!NOTE]
-    >  如果您看不見**WPF 應用程式**範本，請確定您的目標.NET Framework 支援 WPF 的版本。 在 **新的專案**對話方塊中，選取[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]從清單中。
+    >  如果您看不見**WPF 應用程式**範本，請確定您的目標.NET Framework 支援 WPF 的版本。 在 [**新的專案**] 對話方塊中，從清單中選取的.NET Framework 4。
 
 5. 在 **名稱**文字中，輸入您專案的名稱。 例如，您可以輸入**WPFCaching**。
 
-6. 選取 [為解決方案建立目錄] 核取方塊。
+6. 選取 [為解決方案建立目錄]  核取方塊。
 
-7. 按一下 [確定] 。
+7. 按一下 [確定]  。
 
      WPF 設計工具中開啟**設計**檢視，並顯示 MainWindow.xaml 檔案。 Visual Studio 會建立**我的專案**資料夾、 Application.xaml 檔案，以及 MainWindow.xaml 檔案。
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>以.NET Framework 為目標，並加入快取的組件的參考
- 根據預設，WPF 應用程式目標[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。 若要使用<xref:System.Runtime.Caching>WPF 應用程式中的命名空間，應用程式必須為目標[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)](不[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)])，而且必須包含命名空間的參考。
+ 根據預設，WPF 應用程式目標[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。 若要使用<xref:System.Runtime.Caching>WPF 應用程式，應用程式中的命名空間必須以.NET Framework 4 為目標 (不[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)])，而且必須包含命名空間的參考。
 
  因此下, 一個步驟是變更.NET Framework 目標，並將參考加入<xref:System.Runtime.Caching>命名空間。
 
@@ -91,17 +91,17 @@ ms.locfileid: "65591201"
 
      應用程式的 [屬性] 視窗會顯示。
 
-2. 按一下 [編譯] 索引標籤。
+2. 按一下 [編譯]  索引標籤。
 
-3. 在視窗底部，按一下 **進階編譯選項...**.
+3. 在視窗底部，按一下 **進階編譯選項...** .
 
      **進階編譯器設定**對話方塊隨即出現。
 
-4. 在 **目標 framework （所有組態）** 清單中，選取[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 (請勿選取[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。)
+4. 在 **目標 framework （所有組態）** 清單中，選取 .NET Framework 4。 (請勿選取[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。)
 
-5. 按一下 [確定] 。
+5. 按一下 [確定]  。
 
-     [目標 Framework 變更] 對話方塊隨即出現。
+     [目標 Framework 變更]  對話方塊隨即出現。
 
 6. 在 [**目標 Framework 變更**] 對話方塊中，按一下**是**。
 
@@ -121,7 +121,7 @@ ms.locfileid: "65591201"
 
 2. 按一下 [應用程式]  索引標籤。
 
-3. 在 **目標 framework**清單中，選取[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 (請勿選取 **.NET Framework 4 Client Profile**。)
+3. 在 **目標 framework**清單中，選取 .NET Framework 4。 (請勿選取 **.NET Framework 4 Client Profile**。)
 
 4. 新增快取的組件的參考，依照下列步驟：
 

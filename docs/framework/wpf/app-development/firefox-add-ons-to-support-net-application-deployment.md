@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: ea42710f7963f485675279f25623f26bfd5d4f48
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1c0ee38037e79fc93a4318fc5309f61c9060213c
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582955"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457091"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>支援 .NET 應用程式部署的 Firefox 附加元件
 啟用 Windows Presentation Foundation (WPF) 外掛程式 Firefox 和.NET Framework Assistant for Firefox [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]、 鬆散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，與 ClickOnce 應用程式，才能使用 Mozilla Firefox 瀏覽器。  
@@ -22,7 +22,7 @@ ms.locfileid: "64582955"
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]外掛程式的 Firefox 會隨[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]。 Window 7 包含[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]，但不包含[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Firefox 的外掛程式。 您無法安裝[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]在 Windows 7 上的 Firefox 的外掛程式。  
   
- [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]不包含[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Firefox 的外掛程式。 不過，如果兩個[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]並[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]是安裝，安裝的 WPF 外掛程式適用於 Firefox 與[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]。 因此[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]應用程式仍會執行，因為 WPF 主應用程式會載入正確的 framework 版本。 如需詳細資訊，請參閱 < [WPF 主應用程式 (PresentationHost.exe)](wpf-host-presentationhost-exe.md)。  
+ .NET Framework 4 不包含[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Firefox 的外掛程式。 不過，如果兩個[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]安裝.NET Framework 4，使用無安裝 Firefox 的外掛程式的 WPF [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]。 因此.NET Framework 4 應用程式仍會執行因為 WPF 主應用程式會載入正確的 framework 版本。 如需詳細資訊，請參閱 < [WPF 主應用程式 (PresentationHost.exe)](wpf-host-presentationhost-exe.md)。  
   
 ## <a name="net-framework-assistant-for-firefox"></a>.NET Framework Assistant for Firefox  
  若要從 Firefox 瀏覽器執行的獨立 ClickOnce 應用程式可讓.NET Framework Assistant for Firefox。 .NET Framework Assistant for Firefox 函式只有在安裝之前和之後的 Firefox 瀏覽器時相同。 Firefox 瀏覽器啟動時，[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]是安裝，Firefox 會尋找並會安裝.NET Framework Assistant for Firefox。 使用者可以設定.NET Framework Assistant for Firefox 來執行下列作業：  

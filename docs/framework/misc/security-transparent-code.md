@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cb528bbb4f85cd4502b4e2efabbcf592ac6bd0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60f2856bea79f36beb3c467158114fa78d99e09a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868741"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456496"
 ---
 # <a name="security-transparent-code"></a>安全性透明的程式碼
 
@@ -59,14 +59,14 @@ ms.locfileid: "61868741"
 
 這些層級如下所示：
 
-- 層級 2 (<xref:System.Security.SecurityRuleSet.Level2>) – [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 透明度規則。
+- 層級 2 (<xref:System.Security.SecurityRuleSet.Level2>) –.NET Framework 4 的透明度規則。
 
 - 層級 1 (<xref:System.Security.SecurityRuleSet.Level1>) – .NET Framework 2.0 透明度規則。
 
 這兩個透明度層級之間的主要差異在於，層級 1 不會針對組件外部的呼叫強制執行透明度規則，而且這主要是為了相容性而使用。
 
 > [!IMPORTANT]
-> 您應該僅針對相容性指定層級 1 透明度；也就是說，您應該僅針對使用 .NET Framework 3.5 或更早版本 (使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 屬性或沒有使用透明度模型) 所開發的程式碼指定層級 1。 例如，對於允許來自部分信任呼叫端 (APTCA) 之呼叫的 .NET Framework 2.0 組件，請使用層級 1 透明度。 對於針對 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 所開發的程式碼，請一律使用層級 2 透明度。
+> 您應該僅針對相容性指定層級 1 透明度；也就是說，您應該僅針對使用 .NET Framework 3.5 或更早版本 (使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 屬性或沒有使用透明度模型) 所開發的程式碼指定層級 1。 例如，對於允許來自部分信任呼叫端 (APTCA) 之呼叫的 .NET Framework 2.0 組件，請使用層級 1 透明度。 開發適用於.NET Framework 4 的程式碼，請一律使用層級 2 透明度。
 
 ### <a name="level-2-transparency"></a>層級 2 透明度
 
@@ -114,7 +114,7 @@ ms.locfileid: "61868741"
 
 ## <a name="transparency-enforcement"></a>透明度強化
 
-透明度規則會等到計算出透明度之後才會強制執行。 此時，如果違反了透明度規則，就會擲回 <xref:System.InvalidOperationException>。 計算透明度的時間取決於多個因素，而且無法預測。 透明度的計算會盡可能延後。 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中，組件層級的透明度計算會比在 .NET Framework 2.0 中更早發生。 唯一能保證的是透明度計算會在需要時發生。 這與 Just-In-Time (JIT) 編譯器如何變更進行方法之編譯的時間點很類似，也和其如何變更偵測該方法中任何錯誤的時間點很類似。 如果您的程式碼沒有任何透明度錯誤，透明度計算就會是不可見的。
+透明度規則會等到計算出透明度之後才會強制執行。 此時，如果違反了透明度規則，就會擲回 <xref:System.InvalidOperationException>。 計算透明度的時間取決於多個因素，而且無法預測。 透明度的計算會盡可能延後。 在.NET Framework 4 組件層級的透明度計算就會不同於.NET Framework 2.0 更早發生。 唯一能保證的是透明度計算會在需要時發生。 這與 Just-In-Time (JIT) 編譯器如何變更進行方法之編譯的時間點很類似，也和其如何變更偵測該方法中任何錯誤的時間點很類似。 如果您的程式碼沒有任何透明度錯誤，透明度計算就會是不可見的。
 
 ## <a name="see-also"></a>另請參閱
 

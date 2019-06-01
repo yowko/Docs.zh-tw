@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7af34cf4bd3a2367eaf320990dbbc24f4e7a8bbf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 088ca6dd8973a626b1f028c638e60bf995af1e65
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660142"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457327"
 ---
 # <a name="enabling-jit-attach-debugging"></a>啟用 JIT 附加偵錯
 JIT 附加偵錯是當您將偵錯工具附加至處理序發生錯誤時，所使用的描述語句，或者可為特定的方法或函式所觸發。  
@@ -33,7 +33,7 @@ JIT 附加偵錯是當您將偵錯工具附加至處理序發生錯誤時，所�
   
 - [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) 函式 (Win32)。  
   
- 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 之前，.NET Framework 會提供不同的登錄機碼控制原生和 Managed 偵錯工具的行為。 從開始[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，控制會彙總在單一登錄機碼下：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug。 您可為該機碼設定的值，會決定是否叫用偵錯工具；而如果決定叫用，是否使用需要使用者互動的對話方塊叫用。 如需設定此登錄機碼的資訊，請參閱[設定自動偵錯](https://go.microsoft.com/fwlink/?LinkId=181767)。  
+ 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 之前，.NET Framework 會提供不同的登錄機碼控制原生和 Managed 偵錯工具的行為。 從.NET Framework 4 開始，控制會彙總在單一登錄機碼：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug。 您可為該機碼設定的值，會決定是否叫用偵錯工具；而如果決定叫用，是否使用需要使用者互動的對話方塊叫用。 如需設定此登錄機碼的資訊，請參閱[設定自動偵錯](https://go.microsoft.com/fwlink/?LinkId=181767)。  
   
 ## <a name="see-also"></a>另請參閱
 

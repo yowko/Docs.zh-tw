@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32aee404891bfad1aed2abc9ad84e43bcd002df5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 310aec9b180b37b7e5f34c4594fd61747ef02d39
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765319"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457054"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 函式
 載入的 DLL 隨附於.NET Framework 可轉散發套件中指定的版本。  
@@ -45,7 +45,7 @@ HRESULT LoadLibraryShim (
  [in]零結尾的字串，表示要載入從.NET Framework 程式庫 DLL 的名稱。  
   
  `szVersion`  
- [in]零結尾的字串，表示要載入的 dll 版本。 如果`szVersion`是 null，選取 載入為指定的 DLL 是小於第 4 版的最新版本的版本。 如果，亦即忽略所有版本等於或大於第 4 版`szVersion`為 null，但如果已安裝任何版本小於第 4 版，無法載入 DLL。 這是為了確保安裝[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]不會影響現有的應用程式或元件。 請參閱文章[In-proc SxS 並快速開始進行移轉](https://go.microsoft.com/fwlink/?LinkId=200329)CLR 小組的部落格。  
+ [in]零結尾的字串，表示要載入的 dll 版本。 如果`szVersion`是 null，選取 載入為指定的 DLL 是小於第 4 版的最新版本的版本。 如果，亦即忽略所有版本等於或大於第 4 版`szVersion`為 null，但如果已安裝任何版本小於第 4 版，無法載入 DLL。 這是為了確保，.NET Framework 4 的安裝不會影響現有的應用程式或元件。 請參閱文章[In-proc SxS 並快速開始進行移轉](https://go.microsoft.com/fwlink/?LinkId=200329)CLR 小組的部落格。  
   
  `pvReserved`  
  保留供未來使用。  
@@ -72,7 +72,7 @@ HRESULT LoadLibraryShim (
   
  **標頭：** MSCorEE.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

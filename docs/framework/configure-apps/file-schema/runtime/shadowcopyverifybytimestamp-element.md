@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ad61b3824b8155cf3f68f61865891c023b4cf32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1815da141beb3dd1022fe1a74f872aa70b4ded43
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674008"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456340"
 ---
 # <a name="shadowcopyverifybytimestamp-element"></a>\<shadowCopyVerifyByTimestamp> 項目
 指定陰影複製是否使用在 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 引進的預設啟動行為，或是要還原成舊版 .NET Framework 的啟動行為。  
@@ -40,7 +40,7 @@ ms.locfileid: "61674008"
   
 |值|描述|  
 |-----------|-----------------|  
-|true|在啟動時，複製 只有已更新，因此在上一次複製到陰影複製目錄的組件。 這是預設值[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]。|  
+|true|在啟動時，複製 只有已更新，因此在上一次複製到陰影複製目錄的組件。 這是.NET Framework 4 的預設值。|  
 |False|還原為舊版.NET Framework 的啟動行為是將在啟動的所有檔案都複製。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -54,10 +54,10 @@ ms.locfileid: "61674008"
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 從開始[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，組件都是其時間戳記表示自上次在複製到陰影複製目錄後有所變更時，只有複製的陰影。 這可改善許多使用陰影複製，應用程式的啟動時間，如中所述[陰影複製組件](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)。 組件更新比例與頻率相當高的應用程式可能不會受益於這種行為變更。 在這種情況下，您可以使用此項目還原舊版 .NET Framework 的行為。  
+ 從.NET Framework 4 開始，組件會陰影複製，只有當其時間戳記表示自上次在複製到陰影複製目錄後有所變更。 這可改善許多使用陰影複製，應用程式的啟動時間，如中所述[陰影複製組件](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)。 組件更新比例與頻率相當高的應用程式可能不會受益於這種行為變更。 在這種情況下，您可以使用此項目還原舊版 .NET Framework 的行為。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何停用的陰影複製中的預設啟動行為[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，並還原為舊版.NET Framework 的啟動行為。  
+ 下列範例示範如何停用預設啟動行為的陰影複製在.NET Framework 4 中，並還原為舊版.NET Framework 的啟動行為。  
   
 ```xml  
 <configuration>  

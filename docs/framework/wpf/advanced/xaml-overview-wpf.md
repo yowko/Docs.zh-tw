@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 403bd881f6e6349a91fc952a80441b0cec0c08fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f03d9481a2af3edebe83df5b1b725b7290d30d00
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662235"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457548"
 ---
 # <a name="xaml-overview-wpf"></a>XAML 概觀 (WPF)
 本主題說明 XAML 語言的功能，並示範如何使用 XAML 撰寫 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式。 本主題特別針對以 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作的 XAML 進行描述。 就語言概念而言，XAML 本身涵蓋的範圍比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 還要廣。  
@@ -48,7 +48,7 @@ ms.locfileid: "64662235"
 ### <a name="xaml-object-elements"></a>XAML 物件項目  
  物件元素通常會宣告型別的執行個體。 該型別定義於組件中，而這些組件會為使用 XAML 語言的技術提供支援型別。  
   
- 物件元素語法一定是以左角括弧 (\<) 開始。 之後接著您要用於建立執行個體之型別的名稱  (這個名稱可能會包含前置詞；前置詞的概念將於稍後說明)。接著，可以選擇性地在物件元素上宣告屬性。 然後，以右角括弧 (>) 結束，即可完成物件元素標記。 您也可以透過正斜線加上右角括弧 (/ >) 的組合完成標記，改為使用不含任何內容的自我結尾格式。 例如，請回顧先前示範的標記程式碼片段：  
+ 物件元素語法一定是以左角括弧 (\<) 開始。 之後接著您要用於建立執行個體之型別的名稱 (這個名稱可能會包含前置詞；前置詞的概念將於稍後說明)。接著，可以選擇性地在物件元素上宣告屬性。 然後，以右角括弧 (>) 結束，即可完成物件元素標記。 您也可以透過正斜線加上右角括弧 (/ >) 的組合完成標記，改為使用不含任何內容的自我結尾格式。 例如，請回顧先前示範的標記程式碼片段：  
   
  [!code-xaml[XAMLOvwSupport#DirtSimple](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#dirtsimple)]  
   
@@ -135,7 +135,7 @@ ms.locfileid: "64662235"
   
 - **省略的 StackPanel.Children 屬性元素：** <xref:System.Windows.Controls.StackPanel>衍生自<xref:System.Windows.Controls.Panel>。 <xref:System.Windows.Controls.Panel> 定義<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>作為其 XAML 內容屬性。  
   
-- **省略的 UIElementCollection 物件元素：**<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>屬性會採用型別<xref:System.Windows.Controls.UIElementCollection>，它會實作<xref:System.Collections.IList>。 集合的元素標記可以省略，根據這類處理集合的 XAML 規則<xref:System.Collections.IList>。 (在此情況下，<xref:System.Windows.Controls.UIElementCollection>實際上無法執行個體化，因為它不會公開預設建構函式，這就是為什麼<xref:System.Windows.Controls.UIElementCollection>物件項目會顯示標成註解)。  
+- **省略的 UIElementCollection 物件元素：** <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>屬性會採用型別<xref:System.Windows.Controls.UIElementCollection>，它會實作<xref:System.Collections.IList>。 集合的元素標記可以省略，根據這類處理集合的 XAML 規則<xref:System.Collections.IList>。 (在此情況下，<xref:System.Windows.Controls.UIElementCollection>實際上無法執行個體化，因為它不會公開預設建構函式，這就是為什麼<xref:System.Windows.Controls.UIElementCollection>物件項目會顯示標成註解)。  
   
 ```xaml  
 <StackPanel>  
@@ -307,7 +307,7 @@ ms.locfileid: "64662235"
 ## <a name="xaml-security"></a>XAML 安全性  
  XAML 是直接表示物件執行個體化和執行的標記語言。 因此，XAML 中建立的元素在與系統資源互動方面 (例如網路存取、檔案系統 IO)，跟對等的產生程式碼具有一樣的能力。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支援  [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 安全性架構 [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]。 這表示在網際網路區域中執行的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容的執行權限會降低。 「鬆散的 XAML」(於載入時間由 XAML 檢視器解譯的未編譯 XAML 的頁面) 和 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 通常是在這個網際網路區域中執行，並具有相同的權限設定。  然而，完全信任應用程式中載入的 XAML，具有與裝載應用程式相同的系統資源存取權限。 如需詳細資訊，請參閱 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支援的.NET Framework 4 安全性架構[!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]。 這表示在網際網路區域中執行的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容的執行權限會降低。 「鬆散的 XAML」(於載入時間由 XAML 檢視器解譯的未編譯 XAML 的頁面) 和 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 通常是在這個網際網路區域中執行，並具有相同的權限設定。  然而，完全信任應用程式中載入的 XAML，具有與裝載應用程式相同的系統資源存取權限。 如需詳細資訊，請參閱 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。  
   
 <a name="loading_xaml_from_code"></a>   
 ## <a name="loading-xaml-from-code"></a>從程式碼載入 XAML  

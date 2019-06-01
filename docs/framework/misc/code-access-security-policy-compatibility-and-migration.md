@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d9281e52de43391a92262f85084715ccabd5515
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 796c3b03612138238cb336361ab49514d80b4d7b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868910"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456647"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>程式碼存取安全性原則相容性和移轉
 
@@ -22,7 +22,7 @@ ms.locfileid: "61868910"
 
 您可以透過下列方式避免出現警告和錯誤：
 
-- [移轉](#migration)至[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]取代過時呼叫。
+- [移轉](#migration)以.NET Framework 4 取代過時呼叫。
 
    \-或-
 
@@ -114,7 +114,7 @@ ms.locfileid: "61868910"
 
 ### <a name="determining-an-assemblys-trust-level"></a>決定組件的信任層級
 
-CAS 原則通常用於決定組件或應用程式定義域的權限授權集或信任層級。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 會公開下列實用的屬性，這些屬性不需要解析安全性原則：
+CAS 原則通常用於決定組件或應用程式定義域的權限授權集或信任層級。 .NET Framework 4 會公開下列有用的屬性不需要解析安全性原則：
 
 - <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType>
 
@@ -126,15 +126,15 @@ CAS 原則通常用於決定組件或應用程式定義域的權限授權集或�
 
 ### <a name="application-domain-sandboxing"></a>應用程式定義域沙箱作業
 
-<xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> 方法通常用於對應用程式定義域中的組件進行沙箱化處理。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]會公開成員，不需要使用<xref:System.Security.Policy.PolicyLevel>針對此目的。 如需詳細資訊，請參閱[如何：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)中所述。
+<xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> 方法通常用於對應用程式定義域中的組件進行沙箱化處理。 .NET Framework 4 會公開成員，不需要使用<xref:System.Security.Policy.PolicyLevel>針對此目的。 如需詳細資訊，請參閱[如何：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)中所述。
 
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>決定部分信任程式碼的安全或合理權限集合
 
-主機通常需要決定對裝載的程式碼進行沙箱化處理的適當權限。 再[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，CAS 原則提供一個方式來執行這項作業<xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType>方法。 替代方案是，[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]提供<xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType>方法，以傳回安全、 標準的權限，提供的辨識項集合。
+主機通常需要決定對裝載的程式碼進行沙箱化處理的適當權限。 .NET Framework 4 之前的 CAS 原則會提供一個方式來執行這項作業<xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType>方法。 替代方案是，.NET Framework 4 提供<xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType>方法，以傳回安全、 標準的權限，提供的辨識項集合。
 
 ### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>非沙箱化案例：組件載入的多載
 
-不對組件進行沙箱化處理，而使用組件載入多載的原因，可能是為了要使用在其他情況下無法使用的參數。 開頭[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，不需要的組件載入多載<xref:System.Security.Policy.Evidence?displayProperty=nameWithType>物件做為參數，例如<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>，實現此案例。
+不對組件進行沙箱化處理，而使用組件載入多載的原因，可能是為了要使用在其他情況下無法使用的參數。 從.NET Framework 4 開始，組件載入多載，不需要<xref:System.Security.Policy.Evidence?displayProperty=nameWithType>物件做為參數，例如<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>，實現此案例。
 
 如果您要對組件進行沙箱化處理，請使用 <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> 多載。
 

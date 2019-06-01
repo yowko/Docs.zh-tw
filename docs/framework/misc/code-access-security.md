@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c8508b4ba7d6ac6e25fdcc70fb8162b8908e8fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa256fe95013494488ff52258186763fab7a85c9
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592854"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456664"
 ---
 # <a name="code-access-security"></a>程式碼存取安全性
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -67,7 +67,7 @@ ms.locfileid: "64592854"
 |標題|描述|  
 |-----------|-----------------|  
 |[程式碼存取安全性的基本概念](../../../docs/framework/misc/code-access-security-basics.md)|說明程式碼存取安全性及其最常見的用法。|  
-|[安全性透明程式碼，層級 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|說明 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中的安全性透明度模型。|  
+|[安全性透明程式碼，層級 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|描述.NET Framework 4 中的安全性透明度模型。|  
 |[從部分受信任程式碼使用程式庫](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|說明如何讓程式庫能夠與 Unmanaged 程式碼搭配使用，以及如何使用來自 Unmanaged 程式碼的程式庫。|  
 |[重要的安全性概念](../../../docs/standard/security/key-security-concepts.md)|提供 .NET Framework 安全性系統中所使用之許多主要詞彙和概念的概觀。|  
 |[以角色為基礎的安全性](../../../docs/standard/security/role-based-security.md)|說明如何依據角色來納入安全性。|  

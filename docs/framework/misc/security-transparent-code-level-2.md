@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c3970823557d1d1b24405fd4b390b81006533a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3da3e48f898797849a5304c4884b648f47a26dd
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868897"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456565"
 ---
 # <a name="security-transparent-code-level-2"></a>安全性透明的程式碼，層級 2
 
@@ -58,7 +58,7 @@ ms.locfileid: "61868897"
 
 ## <a name="usage-examples-and-behaviors"></a>使用範例和行為
 
-若要指定 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 規則 (層級 2 透明度)，請針對組件使用下列註釋：
+若要指定.NET Framework 4 的規則 （層級 2 透明度），用於組件中的下列註釋：
 
 ```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level2)]
@@ -70,7 +70,7 @@ ms.locfileid: "61868897"
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
 ```
 
-如果您沒有為組件加上附註，預設將使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 規則。 不過，建議的最佳做法是使用<xref:System.Security.SecurityRulesAttribute>屬性，而非仰賴預設值。
+如果您不是組件的標註，預設會使用.NET Framework 4 的規則。 不過，建議的最佳做法是使用<xref:System.Security.SecurityRulesAttribute>屬性，而非仰賴預設值。
 
 ### <a name="assembly-wide-annotation"></a>組件範圍的註釋
 

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: 9c75f6add000b2055bcbf13a7fcdf635bd707947
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c99e44c7d373d050113687753d4f18eca27e0de5
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663228"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457393"
 ---
 # <a name="xaml-services"></a>XAML 服務
-本主題說明的技術集合，稱為.NET Framework XAML 服務的功能。 大部分的服務和描述 Api 位於 System.Xaml，這是組件所引進的組件[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]的.NET core 組件集。 服務包括讀取器和寫入，結構描述類別和結構描述支援的處理站，設定其屬性的類別、 XAML 語言內建支援和其他 XAML 語言功能。  
+本主題說明的技術集合，稱為.NET Framework XAML 服務的功能。 大部分的服務和描述 Api 位於 System.Xaml，這是隨.NET Framework 4 的.NET core 組件集的組件的組件。 服務包括讀取器和寫入，結構描述類別和結構描述支援的處理站，設定其屬性的類別、 XAML 語言內建支援和其他 XAML 語言功能。  
   
 ## <a name="about-this-documentation"></a>了解此文件  
  .NET Framework XAML 服務的概念文件假設您有先前的 XAML 語言以及如何它可能會套用至特定的架構，例如體驗[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Windows Workflow Foundation 中或特定技術功能區域中，例如組建自訂中的功能<xref:Microsoft.Build.Framework.XamlTypes>。 這份文件不會嘗試為標記語言、 XAML 語法術語中或其他簡介教材說明 XAML 的基本概念。 相反地，這份文件著重於特別使用 System.Xaml 組件的文件庫中的 已啟用.NET Framework XAML 服務。 這些 Api 大部分都是 XAML 語言整合與擴充性案例。 這可能包括下列其中一項：  

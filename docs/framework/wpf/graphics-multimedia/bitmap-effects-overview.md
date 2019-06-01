@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
-ms.openlocfilehash: df8ce418b761ce1fca7f94614f5708ecb1b3652e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ccf837bd9f0e0bb40cfb07d5eeaa1f0f80a86ca9
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615486"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456678"
 ---
 # <a name="bitmap-effects-overview"></a>點陣圖效果概觀
 點陣圖效果可讓設計人員和開發人員来套用至視覺效果呈現 Windows Presentation Foundation (WPF) 內容。 例如，點陣圖效果可讓您輕鬆地套用<xref:System.Windows.Media.Effects.DropShadowBitmapEffect>效果或模糊效果影像或按鈕。  
   
 > [!IMPORTANT]
->  在 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]或更新版本，<xref:System.Windows.Media.Effects.BitmapEffect>類別已過時。 如果您嘗試使用<xref:System.Windows.Media.Effects.BitmapEffect>類別，您會收到已淘汰的例外狀況。 非過時的替代方式，來<xref:System.Windows.Media.Effects.BitmapEffect>類別是<xref:System.Windows.Media.Effects.Effect>類別。 在大部分情況下，<xref:System.Windows.Media.Effects.Effect>類別速度獲得大幅提升。  
+>  在.NET Framework 4 或更新版本，<xref:System.Windows.Media.Effects.BitmapEffect>類別已過時。 如果您嘗試使用<xref:System.Windows.Media.Effects.BitmapEffect>類別，您會收到已淘汰的例外狀況。 非過時的替代方式，來<xref:System.Windows.Media.Effects.BitmapEffect>類別是<xref:System.Windows.Media.Effects.Effect>類別。 在大部分情況下，<xref:System.Windows.Media.Effects.Effect>類別速度獲得大幅提升。  
 
 <a name="wpf_effects"></a>   
 ## <a name="wpf-bitmap-effects"></a>WPF 點陣圖效果  

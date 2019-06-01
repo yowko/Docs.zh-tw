@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6405c61429d56b125fd0327824482bf702e41319
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: aceb0179c6ee52699370480041af62262eff6bc2
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380284"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456925"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 和 4.5 中新增的 CLR 裝載介面
 本節說明 unmanaged 介面主機可用來將 common language runtime (CLR) 整合在[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]，.NET Framework 4.5 中，並在其應用程式的更新版本。 這些介面提供的主機，若要設定及執行階段載入處理序的方法。  
   
- 從開始[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]、 所有裝載介面具有下列特性：  
+ 從.NET Framework 4 開始，所有的裝載介面具有下列特性：  
   
 - 他們使用生命週期管理 (`AddRef`並`Release`)，封裝 （隱含的內容） 和`QueryInterface`從 com 存取。  
   

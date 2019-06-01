@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9833d768b84faaf6e1dcf8c9cb8b00b92adc3d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f098065cc005c59ec558ffa1f95202715624e7d
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673982"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456110"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > 項目
 藉由指定明確的堆疊大小，它會建立它會在內部使用，而不是使用預設堆疊大小為這些執行緒進行特定執行緒時，使用 common language runtime (CLR)，減少記憶體的要求。  
@@ -57,7 +57,7 @@ ms.locfileid: "61673982"
  這個組態項目用來要求縮減的虛擬記憶體的使用，在處理序中，因為如果遵循，則要求，CLR 會使用其內部的執行緒，則明確的執行緒大小是小於預設大小。  
   
 > [!IMPORTANT]
->  這個組態項目是 CLR，而不是絕對必要的需求的要求。 在  [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，要求會接受僅適用於 x86 架構。 這個項目可能會完全忽略未來的 CLR 版本中，或以一律用於進行選取的內部執行緒的明確的堆疊大小。  
+>  這個組態項目是 CLR，而不是絕對必要的需求的要求。 在.NET Framework 4 中，要求會接受僅適用於 x86 架構。 這個項目可能會完全忽略未來的 CLR 版本中，或以一律用於進行選取的內部執行緒的明確的堆疊大小。  
   
  指定這個組態項目往來可靠性較小的虛擬記憶體使用，是否 CLR 會接受要求，因為較小的堆疊大小可能會無法使堆疊更可能溢位。  
   

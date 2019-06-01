@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f02cbac83bd1e849c30f6c732395335464e6e4e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1f97892ecf7d891113cc7524dd8c1423e144583f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582819"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457332"
 ---
 # <a name="runtime-profiling"></a>執行階段分析
 分析是在任何開發或部署案例中蒐集效能資料的一種方法。 本節適用對象為想要蒐集應用程式效能資訊的開發人員和系統管理員。  
@@ -30,17 +30,17 @@ ms.locfileid: "65582819"
   
 1. 在命令提示字元處，輸入 **perfmon**。 [效能監視器]  主控台隨即出現。  
   
-2. 在 [監視工具]  資料夾中，按一下 [效能監視器] 。  
+2. 在 [監視工具]  資料夾中，按一下 [效能監視器]  。  
   
 3. 在 [效能監視器] 工具列中，按一下出現的 **加入** 圖示 (加號)。 如果未出現，請以滑鼠右鍵按一下監視器視窗，然後選取 [加入計數器]  選項。  
   
-     這會開啟 [加入計數器]  對話方塊。 [可用的計數器]  清單方塊顯示可用的效能物件。 .NET Framework 應用程式有一些預先定義的物件，包括用於記憶體管理 (**.NET CLR 記憶體**)、互通性 (**.NET CLR Interop**)、例外狀況處理 (**.NET CLR 例外狀況**) 和多執行緒 (**.NET CLR LocksAndThreads**) 的物件。 每個效能物件都包含一些個別的效能計數器。 如需效能監視器中可用的效能計數器清單，請參閱 [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)隨附之 .NET Framework 效能計數器中找到的資料。  
+     這會開啟 [加入計數器]  對話方塊。 [可用的計數器]  清單方塊顯示可用的效能物件。 .NET Framework 應用程式有一些預先定義的物件，包括用於記憶體管理 ( **.NET CLR 記憶體**)、互通性 ( **.NET CLR Interop**)、例外狀況處理 ( **.NET CLR 例外狀況**) 和多執行緒 ( **.NET CLR LocksAndThreads**) 的物件。 每個效能物件都包含一些個別的效能計數器。 如需效能監視器中可用的效能計數器清單，請參閱 [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)隨附之 .NET Framework 效能計數器中找到的資料。  
   
 4. 選取效能物件名稱旁的核取方塊，以檢視所支援的個別效能計數器清單。  
   
 5. 按一下您要檢視的效能計數器。  
   
-6. 在 [所選取物件的例項] 清單方塊中，按一下 [\<所有例項>]，指定您要全域 (也就是針對整個系統) 監視 Common Language Runtime 的效能計數器。  
+6. 在 [所選取物件的例項]  清單方塊中，按一下 [\<所有例項>]  ，指定您要全域 (也就是針對整個系統) 監視 Common Language Runtime 的效能計數器。  
   
      -或-  
   
@@ -54,7 +54,7 @@ ms.locfileid: "65582819"
  如果您想要分析某個區域或遠端共用中的組件，請確定該遠端組件在執行效能計數器的電腦上受到完全信任。 如果沒有充分信任該組件，則效能計數器將無法運作。 如需將信任授與不同區域的資訊，請參閱 [Caspol.exe (程式碼存取安全性原則工具)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)。  
   
 > [!NOTE]
->  在安裝 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的系統上，效能監視器可能不會顯示某些類別的效能計數器資料，例如「.NET CLR 資料」  和「.NET CLR 網路」 ，因為應用程式是使用 [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]所開發。 如果出現這種情況，只要將 [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 項目新增至應用程式組態檔，就可以設定效能監視器來顯示此資料。  
+>  在系統上安裝.NET Framework 4，效能監視器可能不會顯示效能計數器資料某些類別，例如 **.NET CLR Data**並 **.NET CLR 網路**，如使用所開發的應用程式[!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]。 如果出現這種情況，只要將 [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 項目新增至應用程式組態檔，就可以設定效能監視器來顯示此資料。  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>以程式設計方式讀取及建立效能計數器  
  .NET Framework 會提供可用來以程式設計方式存取 [效能] 主控台中使用的相同效能資訊的類別。 您也可以使用這些類別，建立自訂效能計數器。 下表說明一些效能監視提供.NET Framework 中的類別。  
