@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c35e796333aa3a93b7a66416fe0d93b7b1f3837f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81110736651db9fe00b116c3abbbdaa8d3670bee
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920298"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456094"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 工具
 .NET Framework 工具可讓您更輕鬆地建立、部署和管理以 .NET Framework 為目標的應用程式和元件。  
   
-本節提及的大部分 .NET Framework 工具會隨 Visual Studio 自動安裝  若要下載 Visual Studio，請前往 [Visual Studio 下載](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)頁面。
+本節提及的大部分 .NET Framework 工具會隨 Visual Studio 自動安裝 若要下載 Visual Studio，請前往 [Visual Studio 下載](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)頁面。
   
  除了組件快取檢視器 (Shfusion.dll) 之外，您可以從命令列執行所有的工具。 您必須從 [檔案總管] 存取 Shfusion.dll。  
   
@@ -63,10 +63,10 @@ ms.locfileid: "61920298"
  使用包含中繼語言 (IL) 程式碼的可攜式執行檔 (PE)，並建立可以輸入至 IL 組譯工具 (Ilasm.exe) 的文字檔。  
   
  [Installutil.exe (安裝程式工具)](../../../docs/framework/tools/installutil-exe-installer-tool.md)  
- 可讓您藉由執行所指定組件的 Installer 元件，來安裝和解除安裝伺服器資源  (使用 <xref:System.Configuration.Install> 命名空間中的類別)。可讓您藉由執行所指定組件的 Installer 元件，來安裝和解除安裝伺服器資源  (使用 <xref:System.Configuration.Install> 命名空間中的類別)。  
+ 可讓您藉由執行所指定組件的 Installer 元件，來安裝和解除安裝伺服器資源 (使用 <xref:System.Configuration.Install> 命名空間中的類別)。 
   
  [Lc.exe (授權編譯器)](../../../docs/framework/tools/lc-exe-license-compiler.md)  
- 讀取含有授權資訊的文字檔，並且產生可內嵌於通用語言執行平台可執行檔中做為資源的 .licenses 檔案。 讀取含有授權資訊的文字檔，並且產生可內嵌於通用語言執行平台可執行檔中做為資源的 .licenses 檔案。  
+ 讀取含有授權資訊的文字檔，並且產生可內嵌於通用語言執行平台可執行檔中做為資源的 .licenses 檔案。 
   
  [Mage.exe (資訊清單產生和編輯工具)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
  可讓您建立、編輯和簽署應用程式以及部署資訊清單。 由於 Mage.exe 是命令列工具，因此可以從批次指令碼及其他 Windows 架構應用程式 (包括 ASP.NET 應用程式) 中執行。  
