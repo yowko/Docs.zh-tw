@@ -1,15 +1,15 @@
 ---
 title: 使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core
 description: 本主題會逐步引導您使用 Visual Studio for Mac 和 .NET Core 建置簡單主控台應用程式。
-author: guardrex
+author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: d99cabf15be63593b272474867359324a5892b04
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 4467842c0b65ea536cc26601981d9fcc2bc68f2d
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59300875"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300042"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core
 
@@ -17,8 +17,8 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 
 > [!NOTE]
 > 我們非常重視您的意見反應。 您有兩種方式可以提供意見反應給 Visual Studio for Mac 開發小組：
-> * 在 Visual Studio for Mac 中，從功能表選取 [說明] > [回報問題]，或從歡迎畫面選取 [回報問題]，這會開啟用來提出錯誤報告的視窗。 您可在[開發人員社群](https://developercommunity.visualstudio.com/spaces/8/index.html)入口網站追蹤您的意見反應。
-> * 若要提出建議，請從功能表選取 [說明] > [提供建議]，或從歡迎畫面選取 [提供建議]，這會帶您前往 [Visual Studio for Mac 開發人員社群網頁](https://developercommunity.visualstudio.com/content/idea/post.html?space=41) \(英文\)。
+> * 在 Visual Studio for Mac 中，從功能表選取 [說明]   > [回報問題]  ，或從歡迎畫面選取 [回報問題]  ，這會開啟用來提出錯誤報告的視窗。 您可在[開發人員社群](https://developercommunity.visualstudio.com/spaces/8/index.html)入口網站追蹤您的意見反應。
+> * 若要提出建議，請從功能表選取 [說明]   > [提供建議]  ，或從歡迎畫面選取 [提供建議]  ，這會帶您前往 [Visual Studio for Mac 開發人員社群網頁](https://developercommunity.visualstudio.com/content/idea/post.html?space=41) \(英文\)。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -32,15 +32,15 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 
 ## <a name="creating-a-project"></a>建立專案
 
-1. 選取歡迎畫面上的 [新增專案]。
+1. 選取歡迎畫面上的 [新增專案]  。
 
    ![Visual Studio for Mac 歡迎畫面上的 [新增專案] 按鈕](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 
-1. 在 [新增專案] 對話方塊中，選取 [.NET Core] 節點下的 [應用程式]。 選取 [主控台應用程式] 範本，接著選取 [下一步]。
+1. 在 [新增專案]  對話方塊中，選取 [.NET Core]  節點下的 [應用程式]  。 選取 [主控台應用程式]  範本，接著選取 [下一步]  。
 
    ![[新增專案] 範本清單](./media/using-on-mac-vs/visual-studio-mac-new-dialog.png)
 
-1. 針對 [專案名稱] 輸入 "HelloWorld"。 選取 [建立]。
+1. 針對 [專案名稱]  輸入 "HelloWorld"。 選取 [建立]  。
 
    ![設定新主控台應用程式對話方塊](./media/using-on-mac-vs/visual-studio-mac-new-options.png)
 

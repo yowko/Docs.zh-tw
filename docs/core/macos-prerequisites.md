@@ -1,16 +1,16 @@
 ---
 title: Mac 上 .NET Core 的先決條件
 description: 支援的 macOS 版本和 .NET Core 的相依性，以在 macOS 電腦上開發、部署和執行 .NET Core 應用程式。
-author: guardrex
+author: mairaw
 ms.author: adegeo
 ms.custom: updateeachvsrelease
 ms.date: 12/14/2018
-ms.openlocfilehash: 3f5dce25ed03061d690432684975909d15bbad57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 57346eb5cfdcc9f51c3aab173ed575067b124150
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64752961"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66299977"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>macOS 上 .NET Core 的先決條件
 

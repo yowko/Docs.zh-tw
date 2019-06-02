@@ -1,14 +1,14 @@
 ---
 title: dotnet new 的自訂範本
 description: 了解任何 .NET 專案或檔案類型的自訂範本。
-author: guardrex
+author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: e37fb692640c25d7a91904b0802f97ebfab75851
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 6ce53cab308ed404974e4d736e735bc82ac04fe6
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679056"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66299914"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 的自訂範本
 
@@ -29,7 +29,7 @@ ms.locfileid: "57679056"
 
 ### <a name="source-files-and-folders"></a>來源檔案和資料夾
 
-來源檔案和資料夾包含執行 `dotnet new <TEMPLATE>` 命令時，您希望範本引擎使用的任何檔案和資料夾。 範本引擎的設計是將「可執行專案」用為原始程式碼以產生專案。 這有幾項優點：
+來源檔案和資料夾包含執行 `dotnet new <TEMPLATE>` 命令時，您希望範本引擎使用的任何檔案和資料夾。 範本引擎的設計是將「可執行專案」  用為原始程式碼以產生專案。 這有幾項優點：
 
 - 範本引擎不需要您將特殊權杖插入專案的原始程式碼。
 - 程式碼檔案不是特殊的檔案，也不使用範本引擎以任何方式修改。 因此，通常在處理專案時使用的工具也用來處理範本內容。
@@ -46,7 +46,7 @@ ms.locfileid: "57679056"
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | *template.json* 檔案的 JSON 結構描述。 支援 JSON 結構描述的編輯器，會在指定結構描述時，啟用 JSON 編輯功能。 例如，[Visual Studio Code](https://code.visualstudio.com/) 需要此成員才能啟用 IntelliSense。 使用 `http://json.schemastore.org/template` 的值。 |
 | `author`          | 字串        | 範本的作者。 |
-| `classifications` | array(string) | 搜尋範本時，使用者可能用來尋找範本的零或多個範本特性。 當它出現在使用 <code>dotnet new -l&#124;--list</code> 命令產生的範本清單中時，分類也會出現在「標記」資料行中。 |
+| `classifications` | array(string) | 搜尋範本時，使用者可能用來尋找範本的零或多個範本特性。 當它出現在使用 <code>dotnet new -l&#124;--list</code> 命令產生的範本清單中時，分類也會出現在「標記」  資料行中。 |
 | `identity`        | 字串        | 此範本的唯一名稱。 |
 | `name`            | 字串        | 使用者應該會看到的範本名稱。 |
 | `shortName`       | 字串        | 預設的速記，用於選取適用於環境的範本，在此環境中，範本名稱由使用者指定，不是透過 GUI 選取。 例如，從命令提示字元以 CLI 命令使用範本時，簡短名稱很有用。 |

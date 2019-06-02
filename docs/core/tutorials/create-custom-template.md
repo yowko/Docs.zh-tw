@@ -1,15 +1,15 @@
 ---
 title: 建立 dotnet new 的自訂範本
 description: 了解如何在此好玩的教學課程中建立 dotnet new 命令的自訂範本。
-author: guardrex
+author: mairaw
 ms.date: 08/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3b45a24c8a249eeb99fb1a4b14918483b978980b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e47da048584ec31c275ff9c122d157f34556268a
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676443"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66299963"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>建立 dotnet new 的自訂範本
 
@@ -35,7 +35,7 @@ ms.locfileid: "57676443"
 
 ## <a name="create-a-template-from-a-project"></a>從專案建立範本
 
-使用您已確認編譯和執行的現有專案，或在硬碟的資料夾中建立新的主控台應用程式專案。 本教學課程假設專案資料夾的名稱為 *GarciaSoftware.ConsoleTemplate.CSharp*，儲存在使用者設定檔的 *Documents\Templates*。 教學課程專案範本名稱的格式為 \<公司名稱>.\<範本類型>.\<程式設計語言>，但是您可以依喜好隨意命名您的專案與範本。
+使用您已確認編譯和執行的現有專案，或在硬碟的資料夾中建立新的主控台應用程式專案。 本教學課程假設專案資料夾的名稱為 *GarciaSoftware.ConsoleTemplate.CSharp*，儲存在使用者設定檔的 *Documents\Templates*。 教學課程專案範本名稱的格式為 \<公司名稱>.\<範本類型>.\<程式設計語言>  ，但是您可以依喜好隨意命名您的專案與範本。
 
 1. 將資料夾新增至 *.template.config* 專案的根目錄。
 1. 在 *.template.config* 資料夾中建立 *template.json* 檔案，以設定您的範本。 如需 *template.json* 檔案的詳細資訊和成員定義，請參閱 [dotnet new 的自訂範本](../tools/custom-templates.md#templatejson)主題和 [JSON 結構描述存放區的 *template.json* 結構描述](http://json.schemastore.org/template)。
@@ -60,7 +60,7 @@ ms.locfileid: "57676443"
 
 ### <a name="pack-the-template-into-a-nuget-package"></a>將範本封裝至 NuGet 套件中
 
-1. 建立 NuGet 套件的資料夾。 教學課程中使用 *GarciaSoftware.ConsoleTemplate.CSharp* 資料夾名稱，並在使用者設定檔的 *Documents\NuGetTemplates* 資料夾中建立此資料夾。 在新的範本資料夾內建立名為「內容」的資料夾，保留專案檔。
+1. 建立 NuGet 套件的資料夾。 教學課程中使用 *GarciaSoftware.ConsoleTemplate.CSharp* 資料夾名稱，並在使用者設定檔的 *Documents\NuGetTemplates* 資料夾中建立此資料夾。 在新的範本資料夾內建立名為「內容」  的資料夾，保留專案檔。
 1. 將專案資料夾的內容以及其 *.template.config/template.json* 檔案複製到您建立的 *content* 資料夾。
 1. 在 *content* 資料夾的旁邊，新增 [*nuspec* 檔案](/nuget/create-packages/creating-a-package)。 nuspec 檔案是 XML 資訊清單檔案，描述套件的內容及驅動建立 NuGet 套件的程序。
 

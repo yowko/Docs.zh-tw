@@ -1,15 +1,15 @@
 ---
 title: 在持續整合 (CI) 中使用 .NET Core SDK 和工具
 description: 如何在組建伺服器上使用 .NET Core SDK 和其工具的相關資訊。
-author: guardrex
+author: mairaw
 ms.date: 05/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: c9fd9e359a22467cc8639109538522e4088df5ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 629b7a9e1f2b59981adb77ab4d3125be7036ff02
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704091"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66299976"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>在持續整合 (CI) 中使用 .NET Core SDK 和工具
 
@@ -29,7 +29,7 @@ macOS 使用者應使用 PKG 安裝程式。 在 Linux 上，您可以選擇使�
 
 使用安裝程式指令碼可以在您的組建伺服器上進行非系統管理安裝，以及輕鬆地將取得工具的作業自動化。 指令碼會負責下載工具，然後將工具解壓縮至預設或指定位置以供使用。 您也可以指定要安裝的工具版本，以及指定要安裝整個 SDK 或只安裝共用執行階段。
 
-在建置開始時，安裝程式指令碼會自動執行，以擷取和安裝所需的 SDK 版本。 「所需版本」是您專案所需建置的任何 SDK 版本。 指令碼可讓您將 SDK 安裝在伺服器上的本機目錄中，從安裝位置執行工具，然後在建置之後清除 (或讓 CI 服務清除)。 這可以為整個建置程序提供封裝和隔離。 您可以在 [dotnet-install](dotnet-install-script.md) 一文中找到安裝指令碼參考。
+在建置開始時，安裝程式指令碼會自動執行，以擷取和安裝所需的 SDK 版本。 「所需版本」  是您專案所需建置的任何 SDK 版本。 指令碼可讓您將 SDK 安裝在伺服器上的本機目錄中，從安裝位置執行工具，然後在建置之後清除 (或讓 CI 服務清除)。 這可以為整個建置程序提供封裝和隔離。 您可以在 [dotnet-install](dotnet-install-script.md) 一文中找到安裝指令碼參考。
 
 > [!NOTE]
 > **Azure DevOps Services**
@@ -124,7 +124,7 @@ LOCALDOTNET="$INSTALLDIR/dotnet"
 
 您可以將 [Travis CI](https://travis-ci.org/) \(英文\) 設定成使用 `csharp` 語言和 `dotnet` 索引鍵來安裝 .NET Core SDK。 如需詳細資訊，請參閱有關[建置 C#、F# 或 Visual Basic 專案](https://docs.travis-ci.com/user/languages/csharp/) \(英文\) 的官方 Travis CI 文件。 在您存取 Travis CI 資訊時，請留意這個由社群維護的 `language: csharp` 語言識別碼可適用於所有 .NET 語言，包括 F# 和 Mono。
 
-Travis CI 會在「建置矩陣」中執行 macOS 和 Linux 作業，您可以在該矩陣中指定執行階段、環境及排除項/包含項的組合，以涵蓋應用程式的組建組合。 如需詳細資訊，請參閱 Travis CI 文件中的 [Customizing the Build](https://docs.travis-ci.com/user/customizing-the-build) (自訂組建) 一文。 MSBuild 型工具會在套件中包含 LTS (1.0.x) 和目前 (1.1.x) 執行階段，所以透過安裝 SDK，您就能獲得進行建置所需的一切項目。
+Travis CI 會在「建置矩陣」  中執行 macOS 和 Linux 作業，您可以在該矩陣中指定執行階段、環境及排除項/包含項的組合，以涵蓋應用程式的組建組合。 如需詳細資訊，請參閱 Travis CI 文件中的 [Customizing the Build](https://docs.travis-ci.com/user/customizing-the-build) (自訂組建) 一文。 MSBuild 型工具會在套件中包含 LTS (1.0.x) 和目前 (1.1.x) 執行階段，所以透過安裝 SDK，您就能獲得進行建置所需的一切項目。
 
 ### <a name="appveyor"></a>AppVeyor
 
@@ -153,15 +153,15 @@ install:
 
 若要在 Azure DevOps Services 中使用手動設定指令碼，請建立新的組建定義，並指定要針對建置步驟執行的指令碼。 這可使用 Azure DevOps Services 使用者介面來完成：
 
-1. 從建立新的組建定義開始。 當您抵達會提供選項以定義要建立哪一種組建的畫面時，請選取 [空] 選項。
+1. 從建立新的組建定義開始。 當您抵達會提供選項以定義要建立哪一種組建的畫面時，請選取 [空]  選項。
 
    ![選取空的組建定義](./media/using-ci-with-cli/select-empty-build-definition.png)
 
-1. 設定要建置的存放庫之後，系統就會將您導向至組建定義。 選取 [加入建置步驟]：
+1. 設定要建置的存放庫之後，系統就會將您導向至組建定義。 選取 [加入建置步驟]  ：
 
    ![加入建置步驟](./media/using-ci-with-cli/add-build-step.png)
 
-1. 系統會向您顯示 [工作目錄]。 目錄中包含您在組建中使用的工作。 因為您有指令碼，請選取 [PowerShell: 執行 PowerShell 指令碼] 的 [新增] 按鈕。
+1. 系統會向您顯示 [工作目錄]  。 目錄中包含您在組建中使用的工作。 因為您有指令碼，請選取 [PowerShell: 執行 PowerShell 指令碼]  的 [新增]  按鈕。
 
    ![新增 PowerShell 指令碼步驟](./media/using-ci-with-cli/add-powershell-script.png)
 
@@ -171,7 +171,7 @@ install:
 
 ## <a name="orchestrating-the-build"></a>協調組建
 
-本文件大部分內容為描述如何取得 .NET Core 工具及設定各種 CI 服務，並沒有提供如何使用 .NET Core 來協調或「實際建置」程式碼的相關資訊。 建置程序的結構方式取決於許多因素，無法在這裡以一一涵蓋。 如需有關使用各項技術來協調組建的詳細資訊，請探索 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/) 及 [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index) 文件集內所提供的資源與範例。
+本文件大部分內容為描述如何取得 .NET Core 工具及設定各種 CI 服務，並沒有提供如何使用 .NET Core 來協調或「實際建置」  程式碼的相關資訊。 建置程序的結構方式取決於許多因素，無法在這裡以一一涵蓋。 如需有關使用各項技術來協調組建的詳細資訊，請探索 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/) 及 [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index) 文件集內所提供的資源與範例。
 
 使用 .NET Core 工具建立 .NET Core 程式碼建置程序的結構時，可以採取兩種方法：直接使用 MSBuild，或使用 .NET Core 命令列命令。 您可以視自己對特定方法的熟悉程度並權衡其複雜度，來選擇要使用的方法。 MSBuild 可讓您以工作和目標的形式表示建置程序，但使用此方法必須額外學習 MSBuild 專案檔語法。 使用 .NET Core 命令列工具或許比較簡單，但您必須使用如 `bash` 或 PowerShell 之類的指令碼語言撰寫協調流程邏輯。
 
