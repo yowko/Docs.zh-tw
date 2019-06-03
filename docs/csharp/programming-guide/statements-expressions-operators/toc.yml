@@ -5,38 +5,39 @@
       href: statements.md
     - name: 運算式
       href: expressions.md
-      items:
-        - name: 運算式主體成員
-          href: expression-bodied-members.md
+    - name: 運算式主體成員
+      href: expression-bodied-members.md
     - name: 運算子
       href: operators.md
     - name: 匿名函式
-      href: anonymous-functions.md
       items:
+        - name: 總覽
+          href: anonymous-functions.md
         - name: Lambda 運算式
           href: lambda-expressions.md
-          items:
-            - name: HOW TO：在查詢中使用 Lambda 運算式
-              href: how-to-use-lambda-expressions-in-a-query.md
-            - name: HOW TO：在 LINQ 之外使用 Lambda 運算式
-              href: how-to-use-lambda-expressions-outside-linq.md
+        - name: 作法：在查詢中使用 Lambda 運算式
+          href: how-to-use-lambda-expressions-in-a-query.md
+        - name: 作法：在 LINQ 之外使用 Lambda 運算式
+          href: how-to-use-lambda-expressions-outside-linq.md
         - name: 匿名方法
           href: anonymous-methods.md
     - name: 可多載的運算子
       href: overloadable-operators.md
     - name: 轉換運算子
-      href: conversion-operators.md
       items:
+        - name: 轉換概觀
+          href: conversion-operators.md
         - name: 使用轉換運算子
           href: using-conversion-operators.md
-        - name: HOW TO：在結構之間實作使用者定義的轉換
+        - name: 作法：在結構之間實作使用者定義的轉換
           href: how-to-implement-user-defined-conversions-between-structs.md
     - name: 預設值運算式
       href: default-value-expressions.md
-    - name: 相等比較
-      href: equality-comparisons.md
+    - name: 相等及相等比較
       items:
-        - name: HOW TO：定義類型的實值相等
+        - name: 相等比較
+          href: equality-comparisons.md
+        - name: 作法：定義類型的實值相等
           href: how-to-define-value-equality-for-a-type.md
-        - name: HOW TO：參考相等 (識別) 的測試
+        - name: 作法：參考相等 (識別) 的測試
           href: how-to-test-for-reference-equality-identity.md

@@ -322,7 +322,7 @@
           href: core/tools/dotnet-build-server.md
         - name: dotnet clean
           href: core/tools/dotnet-clean.md
-        - name: dotnet 說明
+        - name: dotnet help
           href: core/tools/dotnet-help.md
         - name: dotnet migrate
           href: core/tools/dotnet-migrate.md
@@ -368,15 +368,15 @@
           href: core/tools/dotnet-install-script.md
         - name: 專案修改命令
           items:
-            - name: 參考
+            - name: reference
               items:
-                - name: dotnet 新增參考
+                - name: dotnet add reference
                   href: core/tools/dotnet-add-reference.md
                 - name: dotnet list reference
                   href: core/tools/dotnet-list-reference.md
                 - name: dotnet remove reference
                   href: core/tools/dotnet-remove-reference.md
-            - name: 封裝
+            - name: package
               items:
                 - name: dotnet add package
                   href: core/tools/dotnet-add-package.md

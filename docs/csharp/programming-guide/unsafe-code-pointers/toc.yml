@@ -1,13 +1,13 @@
-- name: Unsafe 程式碼和指標
-  href: index.md
-  items:
-    - name: 固定大小的緩衝區
-      href: fixed-size-buffers.md
-    - name: 指標類型
-      items:
-        - name: 總覽
-          href: pointer-types.md
-        - name: 指標轉換
-          href: pointer-conversions.md
-        - name: 如何：使用指標複製位元組陣列
-          href: how-to-use-pointers-to-copy-an-array-of-bytes.md
+items:
+  - name: 概觀及限制
+    href: index.md
+  - name: 固定大小的緩衝區
+    href: fixed-size-buffers.md
+  - name: 指標類型
+    items:
+      - name: 總覽
+        href: pointer-types.md
+      - name: 指標轉換
+        href: pointer-conversions.md
+      - name: 如何：使用指標複製位元組陣列
+        href: how-to-use-pointers-to-copy-an-array-of-bytes.md
