@@ -5,42 +5,42 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 3e8daf24929339e31cda81a726ec11fdcffc687a
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 072af9850f792cb6d7322724f2adbc978465dc84
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029498"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421751"
 ---
-# <a name="using-directive-c-reference"></a><span data-ttu-id="fca22-102">using 指示詞 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="fca22-102">using directive (C# Reference)</span></span>
+# <a name="using-directive-c-reference"></a><span data-ttu-id="54624-102">using 指示詞 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="54624-102">using directive (C# Reference)</span></span>
 
-<span data-ttu-id="fca22-103">`using` 指示詞有三個用途：</span><span class="sxs-lookup"><span data-stu-id="fca22-103">The `using` directive has three uses:</span></span>
+<span data-ttu-id="54624-103">`using` 指示詞有三個用途：</span><span class="sxs-lookup"><span data-stu-id="54624-103">The `using` directive has three uses:</span></span>
 
-- <span data-ttu-id="fca22-104">若要允許在命名空間中使用類型，使得您不需限定在該命名空間中使用的類型：</span><span class="sxs-lookup"><span data-stu-id="fca22-104">To allow the use of types in a namespace so that you do not have to qualify the use of a type in that namespace:</span></span>
+- <span data-ttu-id="54624-104">若要允許在命名空間中使用類型，使得您不需限定在該命名空間中使用的類型：</span><span class="sxs-lookup"><span data-stu-id="54624-104">To allow the use of types in a namespace so that you do not have to qualify the use of a type in that namespace:</span></span>
 
     ```csharp
     using System.Text;
     ```
 
-- <span data-ttu-id="fca22-105">允許您存取類型的靜態成員和巢狀類型，但不必以類型名稱限定存取。</span><span class="sxs-lookup"><span data-stu-id="fca22-105">To allow you to access static members and nested types of a type without having to qualify the access with the type name.</span></span>
+- <span data-ttu-id="54624-105">允許您存取類型的靜態成員和巢狀類型，但不必以類型名稱限定存取。</span><span class="sxs-lookup"><span data-stu-id="54624-105">To allow you to access static members and nested types of a type without having to qualify the access with the type name.</span></span>
 
     ```csharp
     using static System.Math;
     ```
 
-    <span data-ttu-id="fca22-106">如需詳細資訊，請參閱 [using static 指示詞](using-static.md)。</span><span class="sxs-lookup"><span data-stu-id="fca22-106">For more information, see the [using static directive](using-static.md).</span></span>
+    <span data-ttu-id="54624-106">如需詳細資訊，請參閱 [using static 指示詞](using-static.md)。</span><span class="sxs-lookup"><span data-stu-id="54624-106">For more information, see the [using static directive](using-static.md).</span></span>
 
-- <span data-ttu-id="fca22-107">若要建立命名空間或類型的別名。</span><span class="sxs-lookup"><span data-stu-id="fca22-107">To create an alias for a namespace or a type.</span></span> <span data-ttu-id="fca22-108">這稱為 *using alias 指示詞*。</span><span class="sxs-lookup"><span data-stu-id="fca22-108">This is called a *using alias directive*.</span></span>
+- <span data-ttu-id="54624-107">若要建立命名空間或類型的別名。</span><span class="sxs-lookup"><span data-stu-id="54624-107">To create an alias for a namespace or a type.</span></span> <span data-ttu-id="54624-108">這稱為 *using alias 指示詞*。</span><span class="sxs-lookup"><span data-stu-id="54624-108">This is called a *using alias directive*.</span></span>
 
     ```csharp
     using Project = PC.MyCompany.Project;
     ```
 
-<span data-ttu-id="fca22-109">`using` 關鍵字也用來建立 *using 陳述式*，協助確保能夠正確處理 <xref:System.IDisposable> 物件 (例如檔案和字型)。</span><span class="sxs-lookup"><span data-stu-id="fca22-109">The `using` keyword is also used to create *using statements*, which help ensure that <xref:System.IDisposable> objects such as files and fonts are handled correctly.</span></span> <span data-ttu-id="fca22-110">如需詳細資訊，請參閱 [sing 陳述式](using-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="fca22-110">See [using Statement](using-statement.md) for more information.</span></span>
+<span data-ttu-id="54624-109">`using` 關鍵字也用來建立 *using 陳述式*，協助確保能夠正確處理 <xref:System.IDisposable> 物件 (例如檔案和字型)。</span><span class="sxs-lookup"><span data-stu-id="54624-109">The `using` keyword is also used to create *using statements*, which help ensure that <xref:System.IDisposable> objects such as files and fonts are handled correctly.</span></span> <span data-ttu-id="54624-110">如需詳細資訊，請參閱 [sing 陳述式](using-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="54624-110">See [using Statement](using-statement.md) for more information.</span></span>
 
-## <a name="using-static-type"></a><span data-ttu-id="fca22-111">Using static 類型</span><span class="sxs-lookup"><span data-stu-id="fca22-111">Using static type</span></span>
+## <a name="using-static-type"></a><span data-ttu-id="54624-111">Using static 類型</span><span class="sxs-lookup"><span data-stu-id="54624-111">Using static type</span></span>
 
-<span data-ttu-id="fca22-112">您可以存取類型的靜態成員，而不需以類型名稱限定存取：</span><span class="sxs-lookup"><span data-stu-id="fca22-112">You can access static members of a type without having to qualify the access with the type name:</span></span>
+<span data-ttu-id="54624-112">您可以存取類型的靜態成員，而不需以類型名稱限定存取：</span><span class="sxs-lookup"><span data-stu-id="54624-112">You can access static members of a type without having to qualify the access with the type name:</span></span>
 
 ```csharp
 using static System.Console;
@@ -54,54 +54,53 @@ class Program
 }
 ```
 
-## <a name="remarks"></a><span data-ttu-id="fca22-113">備註</span><span class="sxs-lookup"><span data-stu-id="fca22-113">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="54624-113">備註</span><span class="sxs-lookup"><span data-stu-id="54624-113">Remarks</span></span>
 
-<span data-ttu-id="fca22-114">`using` 指示詞的範圍僅限於其出現的檔案。</span><span class="sxs-lookup"><span data-stu-id="fca22-114">The scope of a `using` directive is limited to the file in which it appears.</span></span>
+<span data-ttu-id="54624-114">`using` 指示詞的範圍僅限於其出現的檔案。</span><span class="sxs-lookup"><span data-stu-id="54624-114">The scope of a `using` directive is limited to the file in which it appears.</span></span>
 
-<span data-ttu-id="fca22-115">`using` 指示詞會出現：</span><span class="sxs-lookup"><span data-stu-id="fca22-115">The `using` directive can appear:</span></span>
+<span data-ttu-id="54624-115">`using` 指示詞會出現：</span><span class="sxs-lookup"><span data-stu-id="54624-115">The `using` directive can appear:</span></span>
 
-- <span data-ttu-id="fca22-116">位於原始程式碼檔的開頭，在任何命名空間或類型定義之前。</span><span class="sxs-lookup"><span data-stu-id="fca22-116">At the beginning of a source code file, before any namespace or type definitions.</span></span>
-- <span data-ttu-id="fca22-117">在任何命名空間中，但在任何命名空間或類型於此命名空間宣告之前。</span><span class="sxs-lookup"><span data-stu-id="fca22-117">In any namespace, but before any namespace or types declared in this namespace.</span></span>
+- <span data-ttu-id="54624-116">位於原始程式碼檔的開頭，在任何命名空間或類型定義之前。</span><span class="sxs-lookup"><span data-stu-id="54624-116">At the beginning of a source code file, before any namespace or type definitions.</span></span>
+- <span data-ttu-id="54624-117">在任何命名空間中，但在任何命名空間或類型於此命名空間宣告之前。</span><span class="sxs-lookup"><span data-stu-id="54624-117">In any namespace, but before any namespace or types declared in this namespace.</span></span>
 
-<span data-ttu-id="fca22-118">否則，就會發生編譯器錯誤 [CS1529](../../misc/cs1529.md)。</span><span class="sxs-lookup"><span data-stu-id="fca22-118">Otherwise, compiler error [CS1529](../../misc/cs1529.md) is generated.</span></span>
+<span data-ttu-id="54624-118">否則，就會發生編譯器錯誤 [CS1529](../../misc/cs1529.md)。</span><span class="sxs-lookup"><span data-stu-id="54624-118">Otherwise, compiler error [CS1529](../../misc/cs1529.md) is generated.</span></span>
 
-<span data-ttu-id="fca22-119">建立 `using` 別名指示詞，讓您更輕鬆地將識別碼限定在命名空間或類型。</span><span class="sxs-lookup"><span data-stu-id="fca22-119">Create a `using` alias directive to make it easier to qualify an identifier to a namespace or type.</span></span> <span data-ttu-id="fca22-120">在任何 `using` 指示詞中，必須使用完整的命名空間或類型，不論 `using` 指示詞是否在它前面。</span><span class="sxs-lookup"><span data-stu-id="fca22-120">In any `using` directive, the fully-qualified namespace or type must be used regardless of the `using` directives that come before it.</span></span> <span data-ttu-id="fca22-121">`using` 指示詞的宣告中不可使用任何 `using` 別名。</span><span class="sxs-lookup"><span data-stu-id="fca22-121">No `using` alias can be used in the declaration of a `using` directive.</span></span> <span data-ttu-id="fca22-122">例如，下列內容會產生編譯器錯誤：</span><span class="sxs-lookup"><span data-stu-id="fca22-122">For example, the following generates a compiler error:</span></span>
+<span data-ttu-id="54624-119">建立 `using` 別名指示詞，讓您更輕鬆地將識別碼限定在命名空間或類型。</span><span class="sxs-lookup"><span data-stu-id="54624-119">Create a `using` alias directive to make it easier to qualify an identifier to a namespace or type.</span></span> <span data-ttu-id="54624-120">在任何 `using` 指示詞中，必須使用完整的命名空間或類型，不論 `using` 指示詞是否在它前面。</span><span class="sxs-lookup"><span data-stu-id="54624-120">In any `using` directive, the fully-qualified namespace or type must be used regardless of the `using` directives that come before it.</span></span> <span data-ttu-id="54624-121">`using` 指示詞的宣告中不可使用任何 `using` 別名。</span><span class="sxs-lookup"><span data-stu-id="54624-121">No `using` alias can be used in the declaration of a `using` directive.</span></span> <span data-ttu-id="54624-122">例如，下列內容會產生編譯器錯誤：</span><span class="sxs-lookup"><span data-stu-id="54624-122">For example, the following generates a compiler error:</span></span>
 
 ```csharp
 using s = System.Text;
 using s.RegularExpressions;
 ```
 
-<span data-ttu-id="fca22-123">建立 `using` 指示詞，以在命名空間中使用類型，而無需指定命名空間。</span><span class="sxs-lookup"><span data-stu-id="fca22-123">Create a `using` directive to use the types in a namespace without having to specify the namespace.</span></span> <span data-ttu-id="fca22-124">`using` 指示詞不會授予巢狀於您指定的命名空間中的任何命名空間的存取權。</span><span class="sxs-lookup"><span data-stu-id="fca22-124">A `using` directive does not give you access to any namespaces that are nested in the namespace you specify.</span></span>
+<span data-ttu-id="54624-123">建立 `using` 指示詞，以在命名空間中使用類型，而無需指定命名空間。</span><span class="sxs-lookup"><span data-stu-id="54624-123">Create a `using` directive to use the types in a namespace without having to specify the namespace.</span></span> <span data-ttu-id="54624-124">`using` 指示詞不會授予巢狀於您指定的命名空間中的任何命名空間的存取權。</span><span class="sxs-lookup"><span data-stu-id="54624-124">A `using` directive does not give you access to any namespaces that are nested in the namespace you specify.</span></span>
 
-<span data-ttu-id="fca22-125">命名空間有兩種類型：使用者定義和系統定義。</span><span class="sxs-lookup"><span data-stu-id="fca22-125">Namespaces come in two categories: user-defined and system-defined.</span></span> <span data-ttu-id="fca22-126">使用者定義的命名空間是在程式碼中定義的命名空間。</span><span class="sxs-lookup"><span data-stu-id="fca22-126">User-defined namespaces are namespaces defined in your code.</span></span> <span data-ttu-id="fca22-127">如需系統定義的命名空間清單，請參閱 [.NET API 瀏覽器](../../../../api/index.md)。</span><span class="sxs-lookup"><span data-stu-id="fca22-127">For a list of the system-defined namespaces, see [.NET API Browser](../../../../api/index.md).</span></span>
+<span data-ttu-id="54624-125">命名空間有兩種類型：使用者定義和系統定義。</span><span class="sxs-lookup"><span data-stu-id="54624-125">Namespaces come in two categories: user-defined and system-defined.</span></span> <span data-ttu-id="54624-126">使用者定義的命名空間是在程式碼中定義的命名空間。</span><span class="sxs-lookup"><span data-stu-id="54624-126">User-defined namespaces are namespaces defined in your code.</span></span> <span data-ttu-id="54624-127">如需系統定義的命名空間清單，請參閱 [.NET API 瀏覽器](../../../../api/index.md)。</span><span class="sxs-lookup"><span data-stu-id="54624-127">For a list of the system-defined namespaces, see [.NET API Browser](../../../../api/index.md).</span></span>
 
-<span data-ttu-id="fca22-128">如需參考其他組件中的方法的範例，請參閱[以命令列建立和使用組件](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。</span><span class="sxs-lookup"><span data-stu-id="fca22-128">For examples on referencing methods in other assemblies, see [Create and Use Assemblies Using the Command Line](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).</span></span>
+<span data-ttu-id="54624-128">如需參考其他組件中的方法的範例，請參閱[以命令列建立和使用組件](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。</span><span class="sxs-lookup"><span data-stu-id="54624-128">For examples on referencing methods in other assemblies, see [Create and Use Assemblies Using the Command Line](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).</span></span>
 
-## <a name="example-1"></a><span data-ttu-id="fca22-129">範例 1</span><span class="sxs-lookup"><span data-stu-id="fca22-129">Example 1</span></span>
+## <a name="example-1"></a><span data-ttu-id="54624-129">範例 1</span><span class="sxs-lookup"><span data-stu-id="54624-129">Example 1</span></span>
 
-<span data-ttu-id="fca22-130">下列範例示範如何定義和使用命名空間的 `using` 別名：</span><span class="sxs-lookup"><span data-stu-id="fca22-130">The following example shows how to define and use a `using` alias for a namespace:</span></span>
+<span data-ttu-id="54624-130">下列範例示範如何定義和使用命名空間的 `using` 別名：</span><span class="sxs-lookup"><span data-stu-id="54624-130">The following example shows how to define and use a `using` alias for a namespace:</span></span>
 
 [!code-csharp[csrefKeywordsNamespace#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace2.cs#8)]
 
-<span data-ttu-id="fca22-131">using alias 指示詞的右邊不能有開放式的泛型類型。</span><span class="sxs-lookup"><span data-stu-id="fca22-131">A using alias directive cannot have an open generic type on the right hand side.</span></span> <span data-ttu-id="fca22-132">例如，您無法為 `List<T>` 建立 using 別名，但是可以為 `List<int>` 建立。</span><span class="sxs-lookup"><span data-stu-id="fca22-132">For example, you cannot create a using alias for a `List<T>`, but you can create one for a `List<int>`.</span></span>
+<span data-ttu-id="54624-131">using alias 指示詞的右邊不能有開放式的泛型類型。</span><span class="sxs-lookup"><span data-stu-id="54624-131">A using alias directive cannot have an open generic type on the right hand side.</span></span> <span data-ttu-id="54624-132">例如，您無法為 `List<T>` 建立 using 別名，但是可以為 `List<int>` 建立。</span><span class="sxs-lookup"><span data-stu-id="54624-132">For example, you cannot create a using alias for a `List<T>`, but you can create one for a `List<int>`.</span></span>
 
-## <a name="example-2"></a><span data-ttu-id="fca22-133">範例 2</span><span class="sxs-lookup"><span data-stu-id="fca22-133">Example 2</span></span>
+## <a name="example-2"></a><span data-ttu-id="54624-133">範例 2</span><span class="sxs-lookup"><span data-stu-id="54624-133">Example 2</span></span>
 
-<span data-ttu-id="fca22-134">下列範例示範如何定義類別的 `using` 指示詞和 `using` 別名：</span><span class="sxs-lookup"><span data-stu-id="fca22-134">The following example shows how to define a `using` directive and a `using` alias for a class:</span></span>
+<span data-ttu-id="54624-134">下列範例示範如何定義類別的 `using` 指示詞和 `using` 別名：</span><span class="sxs-lookup"><span data-stu-id="54624-134">The following example shows how to define a `using` directive and a `using` alias for a class:</span></span>
 
 [!code-csharp[csrefKeywordsNamespace#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace2.cs#9)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="fca22-135">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="fca22-135">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="54624-135">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="54624-135">C# language specification</span></span>
 
-<span data-ttu-id="fca22-136">如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的 [Using 指示詞](~/_csharplang/spec/namespaces.md#using-directives)。</span><span class="sxs-lookup"><span data-stu-id="fca22-136">For more information, see [Using directives](~/_csharplang/spec/namespaces.md#using-directives) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="fca22-137">語言規格是 C# 語法及用法的限定來源。</span><span class="sxs-lookup"><span data-stu-id="fca22-137">The language specification is the definitive source for C# syntax and usage.</span></span>
+<span data-ttu-id="54624-136">如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的 [Using 指示詞](~/_csharplang/spec/namespaces.md#using-directives)。</span><span class="sxs-lookup"><span data-stu-id="54624-136">For more information, see [Using directives](~/_csharplang/spec/namespaces.md#using-directives) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="54624-137">語言規格是 C# 語法及用法的限定來源。</span><span class="sxs-lookup"><span data-stu-id="54624-137">The language specification is the definitive source for C# syntax and usage.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="fca22-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fca22-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="54624-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="54624-138">See also</span></span>
 
-- [<span data-ttu-id="fca22-139">C# 參考</span><span class="sxs-lookup"><span data-stu-id="fca22-139">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="fca22-140">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="fca22-140">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="fca22-141">使用命名空間</span><span class="sxs-lookup"><span data-stu-id="fca22-141">Using Namespaces</span></span>](../../programming-guide/namespaces/using-namespaces.md)
-- [<span data-ttu-id="fca22-142">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="fca22-142">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="fca22-143">命名空間關鍵字</span><span class="sxs-lookup"><span data-stu-id="fca22-143">Namespace Keywords</span></span>](namespace-keywords.md)
-- [<span data-ttu-id="fca22-144">命名空間</span><span class="sxs-lookup"><span data-stu-id="fca22-144">Namespaces</span></span>](../../programming-guide/namespaces/index.md)
-- [<span data-ttu-id="fca22-145">using 陳述式</span><span class="sxs-lookup"><span data-stu-id="fca22-145">using Statement</span></span>](using-statement.md)
+- [<span data-ttu-id="54624-139">C# 參考</span><span class="sxs-lookup"><span data-stu-id="54624-139">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="54624-140">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="54624-140">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="54624-141">使用命名空間</span><span class="sxs-lookup"><span data-stu-id="54624-141">Using Namespaces</span></span>](../../programming-guide/namespaces/using-namespaces.md)
+- [<span data-ttu-id="54624-142">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="54624-142">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="54624-143">命名空間</span><span class="sxs-lookup"><span data-stu-id="54624-143">Namespaces</span></span>](../../programming-guide/namespaces/index.md)
+- [<span data-ttu-id="54624-144">using 陳述式</span><span class="sxs-lookup"><span data-stu-id="54624-144">using Statement</span></span>](using-statement.md)
