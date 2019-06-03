@@ -9,12 +9,12 @@ helpviewer_keywords:
 - finally keyword [C#]
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
-ms.openlocfilehash: 20a608c208a7c5e6f00b85dfc10cf14202a78446
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e8442438d06e8853e159b717b1f86fdce5c4b8f7
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633130"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422153"
 ---
 # <a name="try-finally-c-reference"></a>try-finally (C# 參考)
 
@@ -48,7 +48,6 @@ C# 也會包含 [using 陳述式](using-statement.md)，以透過方便使用的
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [try、throw 和 catch 陳述式 (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
-- [例外狀況處理陳述式](exception-handling-statements.md)
 - [throw](throw.md)
 - [try-catch](try-catch.md)
 - [如何：明確擲回例外狀況](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

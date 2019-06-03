@@ -9,18 +9,18 @@ helpviewer_keywords:
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-ms.openlocfilehash: 7f8e4a9dabb3e24293ae7fcc724e8787dd6d4cf5
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: b4a3a46ba98c0c621b747284ce39e03d68a5b62d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396782"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421728"
 ---
 # <a name="integral-types-table-c-reference"></a>整數型別表 (C# 參考)
 
 下表顯示整數型別的大小和範圍，以構成簡單類型的子集。  
   
-|類型|範圍|大小|  
+|類型|Range|大小|  
 |----------|-----------|----------|  
 |[sbyte](sbyte.md)|-128 到 127|帶正負號的 8 位元整數|  
 |[byte](byte.md)|0 到 255|不帶正負號的 8 位元整數|  
@@ -43,7 +43,6 @@ ms.locfileid: "53396782"
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [型別的參考表](reference-tables-for-types.md)
 - [浮點數類型表](floating-point-types-table.md)
 - [預設值表](default-values-table.md)
 - [格式化數值結果表](formatting-numeric-results-table.md)

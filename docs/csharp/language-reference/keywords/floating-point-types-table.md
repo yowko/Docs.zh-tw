@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ranges of floating-point types [C#]
 - types [C#], floating-point types
 ms.assetid: da886cc5-e01e-4f62-b3ec-6428c8f7a102
-ms.openlocfilehash: de14541be0e1247b99d6f000a69544b5f601ef8f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6dcab8e546ef12ebec5f8b57c66458172fc6f5d0
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753781"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422324"
 ---
 # <a name="floating-point-types-table-c-reference"></a>浮點數型別表 (C# 參考)
 
@@ -30,7 +30,6 @@ ms.locfileid: "64753781"
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [型別的參考表](reference-tables-for-types.md)
 - [整數型別表](integral-types-table.md)
 - [預設值表](default-values-table.md)
 - [格式化數值結果表](formatting-numeric-results-table.md)

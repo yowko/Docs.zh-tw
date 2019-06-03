@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: 0eb4cf5bc912f1fd77e6c42a0a60d1c723c66dae
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cdfbab381360bfcbae6cf3849d0bf0e18fda24bc
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633970"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377850"
 ---
 # <a name="asynchronous-programming"></a>非同步程式設計
 
@@ -106,9 +106,9 @@ calculateButton.Clicked += async (o, e) =>
 
     如果您的答案為「是」，則工作是 **CPU 繫結**。
 
-如果您的工作是「I/O 繫結」，請使用「沒有」`Task.Run` 的 `async` 和 `await`。  您「不應該」使用 Task Parallel Library。  [深入了解非同步](../standard/async-in-depth.md)一文中描述這個問題的原因。
+如果您的工作是「I/O 繫結」  ，請使用「沒有」  `Task.Run` 的 `async` 和 `await`。  您「不應該」  使用 Task Parallel Library。  [深入了解非同步](../standard/async-in-depth.md)一文中描述這個問題的原因。
 
-如果您的工作是「CPU 繫結」，而且您關心回應性，請使用 `async` 和 `await`，但在「含」`Task.Run` 的其他執行緒上繁衍工作。  如果工作適用於並行和平行處理原則，您應該也考慮使用 [工作平行程式庫](../standard/parallel-programming/task-parallel-library-tpl.md)。
+如果您的工作是「CPU 繫結」  ，而且您關心回應性，請使用 `async` 和 `await`，但在「含」  `Task.Run` 的其他執行緒上繁衍工作。  如果工作適用於並行和平行處理原則，您應該也考慮使用 [工作平行程式庫](../standard/parallel-programming/task-parallel-library-tpl.md)。
 
 此外，您應該一律測量程式碼的執行。  例如，您可能會發現，在進行多執行緒處理時，與內容切換的負擔相較之下，CPU 繫結工作較不耗費資源。  每個選項都有其取捨，您應該挑選適用於您情況的正確取捨。
 
@@ -155,7 +155,7 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
     NetworkProgressBar.Visibility = Visibility.Visible;
 
     // The await operator suspends SeeTheDotNets_Click, returning control to its caller.
-    // This is what allows the app to be responsive and not hang on the UI thread.
+    // This is what allows the app to be responsive and not block the UI thread.
     var html = await getDotNetFoundationHtmlTask;
     int count = Regex.Matches(html, @"\.NET").Count;
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 390b2226cc2f345d2f42659bd092e36a4bd0c4fc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: af3eab1c2453f37aa5bd881dc9804d7504c89298
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632933"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422116"
 ---
 # <a name="value-types-c-reference"></a>實值型別 (C# 參考)
 
@@ -38,7 +38,7 @@ ms.locfileid: "65632933"
 
 ## <a name="simple-types"></a>簡單型別
 
-「簡單型別」是 C# 所提供的一組預先定義結構型別，其中包含下列型別：
+「簡單型別」  是 C# 所提供的一組預先定義結構型別，其中包含下列型別：
 
 - [整數型別](integral-types-table.md)：整數數字型別和 [char](char.md) 型別
 - [浮點類型](floating-point-types-table.md)
@@ -108,6 +108,5 @@ Point p = new Point(); // Invoke parameterless constructor for the struct.
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [型別](types.md)
-- [型別的參考表](reference-tables-for-types.md)
 - [參考型別](reference-types.md)
 - [可為 Null 的型別](../../programming-guide/nullable-types/index.md)

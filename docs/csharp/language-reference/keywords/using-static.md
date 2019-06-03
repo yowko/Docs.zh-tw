@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29610a77eadf587162731b5bddbcc4bbe7fa0714
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4fa8dc3c043665ca2f56facf516cb03e5c6bb9d7
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610524"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421763"
 ---
 # <a name="using-static-directive-c-reference"></a>using static 指示詞 (C# 參考)
 
@@ -58,5 +58,4 @@ using static <fully-qualified-type-name>;
 - [C# 參考](../index.md)
 - [C# 關鍵字](index.md)
 - [使用命名空間](../../programming-guide/namespaces/using-namespaces.md)
-- [命名空間關鍵字](namespace-keywords.md)
 - [命名空間](../../programming-guide/namespaces/index.md)

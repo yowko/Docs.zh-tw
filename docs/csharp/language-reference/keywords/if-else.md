@@ -11,12 +11,12 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: ef25b3fb5657d833bbccf5bace71e049623476c9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 18b41446eb13f4b91db86d79316a5299b0f3020a
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59294415"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300484"
 ---
 # <a name="if-else-c-reference"></a>if-else (C# 參考)
 
@@ -62,7 +62,7 @@ if (condition)
 
 [!code-csharp[csrefKeywordsSelection#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#3)]
 
-`Result2` 評估為 false，就會顯示 `(m > 10)` 。
+如果條件 `(m > 10)` 評估為 false，就會顯示 `Result2`。
 
 ## <a name="example"></a>範例
 
@@ -138,7 +138,7 @@ if (!(m >= n || m >= p))
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計手冊](../../programming-guide/index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [?:運算子](../operators/conditional-operator.md)
 - [if-else 陳述式 (C++)](/cpp/cpp/if-else-statement-cpp)

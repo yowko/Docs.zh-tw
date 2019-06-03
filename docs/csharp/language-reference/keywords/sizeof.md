@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 8bb6d4a37b2eea3060921937cf15a1fdd1be97b4
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a00c4f96e62f7fd7d7c352aece097acd5b600ae2
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634002"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422392"
 ---
 # <a name="sizeof-c-reference"></a>sizeof (C# 參考)
 
@@ -73,7 +73,6 @@ int intSize = sizeof(int);
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [運算子關鍵字](operator-keywords.md)
 - [enum](enum.md)
 - [Unsafe 程式碼和指標](../../programming-guide/unsafe-code-pointers/index.md)
 - [結構](../../programming-guide/classes-and-structs/structs.md)

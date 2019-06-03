@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 79cc59eb8de513f547a8fd87db8c95dd9af37375
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac1ec7da7da465f4290000ac9c7254e9492c3c81
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754514"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421812"
 ---
 # <a name="is-c-reference"></a>is (C# 參考)
 
@@ -39,7 +39,7 @@ ms.locfileid: "64754514"
 
 - *expr* 是衍生自 *type* 的類型執行個體。 換句話說，*expr* 的結果可向上轉型成 *type* 的執行個體。
 
-- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」是定義於變數宣告的變數類型。 變數的「執行階段類型」是指派給該變數的執行個體類型。
+- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」  是定義於變數宣告的變數類型。 變數的「執行階段類型」  是指派給該變數的執行個體類型。
 
 - *expr* 是實作 *type* 介面的類型執行個體。
 
@@ -82,7 +82,7 @@ ms.locfileid: "64754514"
 
 - *expr* 是衍生自 *type* 的類型執行個體。 換句話說，*expr* 的結果可向上轉型成 *type* 的執行個體。
 
-- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」是定義於變數宣告的變數類型。 變數的「執行階段類型」是指派給該變數的執行個體類型。
+- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」  是定義於變數宣告的變數類型。 變數的「執行階段類型」  是指派給該變數的執行個體類型。
 
 - *expr* 是實作 *type* 介面的類型執行個體。
 
@@ -164,4 +164,3 @@ ms.locfileid: "64754514"
 - [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
 - [typeof](../../../csharp/language-reference/keywords/typeof.md)
 - [as](../../../csharp/language-reference/keywords/as.md)
-- [運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)
