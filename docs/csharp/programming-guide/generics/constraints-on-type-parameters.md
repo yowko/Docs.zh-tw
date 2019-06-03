@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 08863e677413c27461d621c7126c64f2b76c33a8
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 44ab9766bead15c97a1397ef1f47de75f72643a3
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202596"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423534"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型別參數的條件約束 (C# 程式設計手冊)
 
@@ -78,7 +78,7 @@ ms.locfileid: "57202596"
 
 ## <a name="unmanaged-constraint"></a>非受控條件約束
 
-從 C# 7.3 開始，您可以使用 `unmanaged` 條件約束指定型別參數必須是「非受控型別」。 「非受控型別」是非參考型別的型別，而且未包含任何巢狀層級的參考型別欄位。 `unmanaged` 條件約束可讓您撰寫可重複使用的常式來使用型別，而型別可以操作為記憶體區塊，如下列範例所示：
+從 C# 7.3 開始，您可以使用 `unmanaged` 條件約束指定型別參數必須是「非受控型別」  。 「非受控型別」  是非參考型別的型別，而且未包含任何巢狀層級的參考型別欄位。 `unmanaged` 條件約束可讓您撰寫可重複使用的常式來使用型別，而型別可以操作為記憶體區塊，如下列範例所示：
 
 [!code-csharp[using the unmanaged constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#15)]
 
@@ -114,6 +114,6 @@ ms.locfileid: "57202596"
 
 - <xref:System.Collections.Generic>
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [泛型簡介](../../../csharp/programming-guide/generics/index.md)
 - [泛型類別](../../../csharp/programming-guide/generics/generic-classes.md)
 - [new 條件約束](../../../csharp/language-reference/keywords/new-constraint.md)

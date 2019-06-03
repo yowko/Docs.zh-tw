@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-ms.openlocfilehash: 8d64f14f635a50afd8356dedfe16f8897fc77f98
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 083fc6ff3dd15252fb6cf2beb27b5be0a6e489f5
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978055"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423452"
 ---
 # <a name="generic-methods-c-programming-guide"></a>泛型方法 (C# 程式設計手冊)
 泛型方法是使用型別參數宣告的方法，如下所示：  
@@ -50,5 +50,5 @@ ms.locfileid: "56978055"
 
 - <xref:System.Collections.Generic>
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [泛型簡介](../../../csharp/programming-guide/generics/index.md)
 - [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)

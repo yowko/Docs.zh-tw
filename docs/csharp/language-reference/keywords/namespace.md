@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: f938e49267faad8aebbf4c22fc921f305d160123
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: df921ecc670bf12411dc8b0d828d6c19bb0a1aec
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633430"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422740"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# 參考)
 
@@ -71,6 +71,5 @@ ms.locfileid: "65633430"
 - [C# 參考](../../language-reference/index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [命名空間關鍵字](namespace-keywords.md)
 - [using](using-directive.md)
 - [使用靜態](using-static.md)

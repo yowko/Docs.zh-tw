@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: 2cf58e2edc5685032c2b9e590bc456e3a4e4d79b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 486936ae29552891c6a58913b6d5cf9a0d725a69
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633050"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422490"
 ---
 # <a name="while-c-reference"></a>while (C# 參考)
 
@@ -27,7 +27,7 @@ ms.locfileid: "65633050"
 
 ## <a name="example"></a>範例
 
-下列範例會示範 `while` 陳述式的用法。 選取 [執行] 執行範例程式碼。 之後，您可以修改程式碼，然後再次執行它。
+下列範例會示範 `while` 陳述式的用法。 選取 [執行]  執行範例程式碼。 之後，您可以修改程式碼，然後再次執行它。
 
 [!code-csharp-interactive[while loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#3)]
 
@@ -40,5 +40,4 @@ ms.locfileid: "65633050"
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [反覆運算陳述式](iteration-statements.md)
 - [do 陳述式](do.md)

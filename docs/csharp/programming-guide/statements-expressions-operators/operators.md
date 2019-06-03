@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: fd10999066f599d819ef188e09028c64c6a5e9e6
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 60e7f7c25b525c6db856731bd16c1c0e60efe6d6
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65064046"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422934"
 ---
 # <a name="operators-c-programming-guide"></a>運算子 (C# 程式設計手冊)
 
@@ -87,4 +87,3 @@ a = (b = c);
 - [C# 程式設計指南](../index.md)
 - [陳述式、運算式和運算子](index.md)
 - [C# 運算子](../../language-reference/operators/index.md)
-- [運算子關鍵字](../../language-reference/keywords/operator-keywords.md)

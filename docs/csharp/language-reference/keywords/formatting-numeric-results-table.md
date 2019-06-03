@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 12fe89e3aa63e9d3d8c3f102fe5a01a5f2225375
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 0f2b5bc54a0e9055d64a95dc229eaadf66687b43
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239965"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421964"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>格式化數值結果表 (C# 參考)
 
@@ -54,7 +54,6 @@ ms.locfileid: "53239965"
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
-- [型別的參考表](reference-tables-for-types.md)
 - [格式化類型](../../../standard/base-types/formatting-types.md)
 - [複合格式](../../../standard/base-types/composite-formatting.md)
 - [字串內插補點](../tokens/interpolated.md)

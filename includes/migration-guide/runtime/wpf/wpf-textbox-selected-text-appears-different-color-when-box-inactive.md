@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 74ce1bbc9a887aee3a33eaf05084e8c2000967c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "66379561"
 ---
 ### <a name="wpf-textbox-selected-text-appears-a-different-color-when-the-text-box-is-inactive"></a>WPF TextBox 選取文字在文字方塊非作用中時，會以不同的色彩來顯示
 

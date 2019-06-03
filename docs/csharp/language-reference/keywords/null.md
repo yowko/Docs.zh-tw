@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
-ms.openlocfilehash: 94e6fad4f6be335530300839e9b4c97de9efc96f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 12b7f69d7cbcac4a0270dcecfeb0c2cb8eb77fe2
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633397"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421998"
 ---
 # <a name="null-c-reference"></a>null (C# 參考)
 
@@ -32,6 +32,5 @@ ms.locfileid: "65633397"
 - [C# 參考](../../language-reference/index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [常值關鍵字](literal-keywords.md)
 - [預設值表](default-values-table.md)
 - [Nothing](../../../visual-basic/language-reference/nothing.md)

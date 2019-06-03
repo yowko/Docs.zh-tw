@@ -3,19 +3,19 @@ title: C# 的歷史 - C# 指南
 description: 最早的語言版本有哪些內容，而在之後有什麼演變？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 351e4de01a7c3c50cb815a99f0bde546848a9e51
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303358"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423246"
 ---
 # <a name="the-history-of-c"></a>C\# 的歷史
 
 此文章提供了 C# 語言每個主要版本的歷史。 C# 小組將持續創新並加入新功能。 您可以在ˋ GitHub 上的 [dotnet/roslyn 存放庫repository](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) 存放庫中找到詳細語言功能狀態 (包括針對未來版本考慮加入的功能)。
 
 > [!IMPORTANT]
-> C# 語言中的部分功能仰賴 C#規格定義為「標準程式庫」中的型別和方法。 .NET 平台在許多套件中會提供那些類型與方法。 例外狀況處理便是其中一個例子。 每個 `throw` 陳述式或運算式都會受到檢查，以確保擲回衍生自 <xref:System.Exception> 的物件。 每個 `catch` 也一樣會受到檢查，以確保攔截到衍生自 <xref:System.Exception> 的型別。 每個版本都可能會加入新的需求。 若要在較舊的環境中使用最新的語言功能，可能需要安裝特定的程式庫。 每個特定版本的頁面中會記載這些相依性。 若要知道此相依性的背景，可深入了解[語言和程式庫之間的關係](relationships-between-language-and-library.md)。
+> C# 語言中的部分功能仰賴 C#規格定義為「標準程式庫」  中的型別和方法。 .NET 平台在許多套件中會提供那些類型與方法。 例外狀況處理便是其中一個例子。 每個 `throw` 陳述式或運算式都會受到檢查，以確保擲回衍生自 <xref:System.Exception> 的物件。 每個 `catch` 也一樣會受到檢查，以確保攔截到衍生自 <xref:System.Exception> 的型別。 每個版本都可能會加入新的需求。 若要在較舊的環境中使用最新的語言功能，可能需要安裝特定的程式庫。 每個特定版本的頁面中會記載這些相依性。 若要知道此相依性的背景，可深入了解[語言和程式庫之間的關係](relationships-between-language-and-library.md)。
 
 C# 建置工具將最新的主要語言版本視為預設語言版本。 主要版本之間可能存在單點發行版本，此節的其他文章對此進行了詳細介紹。 若要使用小數點版本中的最新功能，您需要[設定編譯器語言版本](../language-reference/configure-language-version.md)並選取該版本。 自 C# 7.0 以來已經有三個單點發行版本：
 
@@ -45,7 +45,6 @@ C# 1.0 的主要功能包含：
 - [運算式](../programming-guide/statements-expressions-operators/expressions.md)
 - [陳述式](../programming-guide/statements-expressions-operators/statements.md)
 - [屬性](../programming-guide/concepts/attributes/index.md)
-- [常值](../language-reference/keywords/literal-keywords.md)
 
 ## <a name="c-version-12"></a>C# 1.2 版
 
@@ -107,8 +106,8 @@ C# 4.0 版要堅守 3.0 版的奠基狀態會很困難。 3.0 版開始，C# 讓
 
 - [動態繫結](../language-reference/keywords/dynamic.md)
 - [具名/選擇性引數](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
-- [泛型 Covariant 和 Contravariant](../../standard/generics/covariance-and-contravariance.md)
-- [內嵌的 Interop 型別](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
+- [泛型 covariant 和 contravariant](../../standard/generics/covariance-and-contravariance.md)
+- [內嵌 Interop 型別](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
 
 內嵌 interop 型別能減輕部署痛苦。 泛型 covariance 和 contravariance 可讓您有更強大的功能來使用泛型，但它們有點學術，可能最受架構和程式庫作者欣賞。 具名和選擇性參數可讓您消除許多方法多載，並提供方便性。 但這些功能沒有一項能完全改變典範。
 
@@ -125,7 +124,7 @@ C# 5.0 版是該語言的一個聚焦版本。 幾乎該版本的所有心血都
 
 ### <a name="see-also"></a>請參閱
 
-* [程式碼專案：C# 5.0 的呼叫端資訊屬性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+* [Code Project：C# 5.0 的呼叫端資訊屬性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 呼叫端資訊屬性可讓您輕鬆地擷取您正在執行的內容，而不必依賴大量的未定案反映程式碼。 它在診斷和記錄工作方面有許多用途。
 
@@ -135,12 +134,12 @@ C# 5.0 版是該語言的一個聚焦版本。 幾乎該版本的所有心血都
 
 在 3.0 和 5.0 版本中，C# 在物件導向語言中新增了一些重大的新功能。 在 6.0 版中，它不再作為主控的殺手級功能，而是改為發表讓 C# 程式設計更具生產力的許多較小功能。 這裡列出其中一些：
 
-- [靜態匯入](./csharp-6.md#using-static)
+- [動態匯入](./csharp-6.md#using-static)
 - [例外狀況篩選條件](./csharp-6.md#exception-filters)
 - [Auto 屬性初始設定式](./csharp-6.md#auto-property-initializers)
 - [運算式主體的成員](./csharp-6.md#expression-bodied-function-members)
 - [Null 傳播程式](./csharp-6.md#null-conditional-operators)
-- [字串插補](./csharp-6.md#string-interpolation)
+- [字串內插補點](./csharp-6.md#string-interpolation)
 - [nameof 運算子](./csharp-6.md#the-nameof-expression)
 - [索引初始設定式](csharp-6.md#extension-add-methods-in-collection-initializers)
 
@@ -174,4 +173,4 @@ C# 5.0 版是該語言的一個聚焦版本。 幾乎該版本的所有心血都
 
 但 C# 的運用範圍更廣了。 .NET Core 現在以任何作業系統為目標，並堅定地關注雲端和可攜性。  除了提出新功能之外，這些新功能當然也會佔據語言設計人員的想法和時間。
 
-_文章_ [_最初發佈於 NDepend 部落格_](https://blog.ndepend.com/c-versions-look-language-history/)_，感謝 Erik Dietrich 和 Patrick Smacchia。_
+_文章_ [_最初發佈於 NDepend 部落格_](https://blog.ndepend.com/c-versions-look-language-history/) _，感謝 Erik Dietrich 和 Patrick Smacchia。_

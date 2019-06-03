@@ -2,11 +2,11 @@
   href: index.md
   items:
     - name: 型別
-      href: types.md
       items:
         - name: 實值類型
-          href: value-types.md
           items:
+            - name: 實質型別的功能
+              href: value-types.md
             - name: bool
               href: bool.md
             - name: byte
@@ -38,8 +38,9 @@
             - name: ushort
               href: ushort.md
         - name: 參考類型
-          href: reference-types.md
           items:
+            - name: 參考類型的功能
+              href: reference-types.md
             - name: Class - 類別
               href: class.md
             - name: Delegate - 委派
@@ -57,7 +58,6 @@
         - name: var
           href: var.md
         - name: 類型的參考表
-          href: reference-tables-for-types.md
           items:
             - name: 內建類型表
               href: built-in-types-table.md
@@ -76,11 +76,11 @@
             - name: 格式化數值結果表
               href: formatting-numeric-results-table.md
     - name: 修飾詞
-      href: modifiers.md
       items:
         - name: 存取修飾詞
-          href: access-modifiers.md
           items:
+            - name: 快速參考
+              href: access-modifiers.md
             - name: 協助工具層級
               href: accessibility-levels.md
             - name: 協助工具定義域
@@ -128,17 +128,16 @@
         - name: volatile
           href: volatile.md
     - name: 陳述式關鍵字
-      href: statement-keywords.md
       items:
+        - name: 陳述式類別
+          href: statement-keywords.md
         - name: 選取範圍陳述式
-          href: selection-statements.md
           items:
             - name: if-else
               href: if-else.md
             - name: switch
               href: switch.md
         - name: 反覆運算陳述式
-          href: iteration-statements.md
           items:
             - name: do
               href: do.md
@@ -149,7 +148,6 @@
             - name: while
               href: while.md
         - name: 跳躍陳述式
-          href: jump-statements.md
           items:
             - name: break
               href: break.md
@@ -160,7 +158,6 @@
             - name: return
               href: return.md
         - name: 例外狀況處理陳述式
-          href: exception-handling-statements.md
           items:
             - name: throw
               href: throw.md
@@ -171,8 +168,9 @@
             - name: try-catch-finally
               href: try-catch-finally.md
         - name: Checked 與 Unchecked
-          href: checked-and-unchecked.md
           items:
+            - name: 總覽
+              href: checked-and-unchecked.md
             - name: checked
               href: checked.md
             - name: unchecked
@@ -182,8 +180,9 @@
         - name: lock 陳述式
           href: lock-statement.md
     - name: 方法參數
-      href: method-parameters.md
       items:
+        - name: 傳遞參數
+          href: method-parameters.md
         - name: params
           href: params.md
         - name: in (參數修飾詞)
@@ -193,13 +192,13 @@
         - name: out (參數修飾詞)
           href: out-parameter-modifier.md
     - name: 命名空間關鍵字
-      href: namespace-keywords.md
       items:
         - name: namespace
           href: namespace.md
         - name: using
-          href: using.md
           items:
+            - name: 使用內容
+              href: using.md
             - name: using 指示詞
               href: using-directive.md
             - name: using static 指示詞
@@ -209,7 +208,6 @@
         - name: extern alias
           href: extern-alias.md
     - name: 運算子關鍵字
-      href: operator-keywords.md
       items:
         - name: as
           href: as.md
@@ -218,8 +216,9 @@
         - name: 是
           href: is.md
         - name: new
-          href: new.md
           items:
+            - name: 新運算子、修飾詞及條件約束
+              href: new.md
             - name: new 運算子
               href: new-operator.md
             - name: new 修飾詞
@@ -235,7 +234,6 @@
         - name: nameof
           href: nameof.md
     - name: 轉換關鍵字
-      href: conversion-keywords.md
       items:
         - name: explicit
           href: explicit.md
@@ -244,14 +242,12 @@
         - name: 運算子
           href: operator.md
     - name: 存取關鍵字
-      href: access-keywords.md
       items:
         - name: base
           href: base.md
         - name: this
           href: this.md
     - name: 常值關鍵字
-      href: literal-keywords.md
       items:
         - name: 'null'
           href: null.md
@@ -262,8 +258,9 @@
         - name: default
           href: default.md
     - name: 內容關鍵字
-      href: contextual-keywords.md
       items:
+        - name: 快速參考
+          href: contextual-keywords.md
         - name: add
           href: add.md
         - name: get
@@ -287,8 +284,9 @@
         - name: yield
           href: yield.md
     - name: 查詢關鍵字
-      href: query-keywords.md
       items:
+        - name: 快速參考
+          href: query-keywords.md
         - name: from 子句
           href: from-clause.md
         - name: where 子句
