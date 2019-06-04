@@ -18,8 +18,8 @@ ms.locfileid: "61674827"
 
 指定位於組態層級的組件繫結原則。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<assemblyBinding>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp; **\<assemblyBinding>**
 
 ## <a name="syntax"></a>語法
 
@@ -39,13 +39,13 @@ ms.locfileid: "61674827"
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。 |
+| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。 |
 
 ## <a name="child-element"></a>子項目
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<linkedConfiguration>**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | 指定要包含的組態檔。 |
+| [ **\<linkedConfiguration>** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | 指定要包含的組態檔。 |
 
 ## <a name="remarks"></a>備註
 

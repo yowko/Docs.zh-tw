@@ -20,7 +20,7 @@ ms.locfileid: "61944062"
 
 1. 開啟 Visual Studio 開發人員命令提示字元並瀏覽至安裝範例所在目錄位置下的語言特定子目錄。
 
-2. 型別`msbuild`在命令列。 用戶端程式檔案內建*client\bin*和服務程式檔內建*service\bin*。 如果服務裝載網際網路資訊服務 (IIS)，則服務程式檔也會複製到*servicemodelsamples*目錄及其*\bin*子目錄。
+2. 型別`msbuild`在命令列。 用戶端程式檔案內建*client\bin*和服務程式檔內建*service\bin*。 如果服務裝載網際網路資訊服務 (IIS)，則服務程式檔也會複製到*servicemodelsamples*目錄及其 *\bin*子目錄。
 
 > [!NOTE]
 > 您必須上設定 Acl *%systemdrive%\inetpub\wwwroot*授與修改權限給您所執行的帳戶。 否則，有些建置後事件將會失敗。 或者，您也可以不去改變這些 ACL，而以系統管理員身分來執行 SDK 命令提示字元。
@@ -31,7 +31,7 @@ ms.locfileid: "61944062"
 
 1. 從**建置**功能表上，選取**重建方案**。
 
-   用戶端程式檔會建置至 client\bin，服務程式檔則建置至 service\bin。 如果服務裝載在 IIS 中，服務程式檔也會複製到*servicemodelsamples*目錄及其*\bin*子目錄。
+   用戶端程式檔會建置至 client\bin，服務程式檔則建置至 service\bin。 如果服務裝載在 IIS 中，服務程式檔也會複製到*servicemodelsamples*目錄及其 *\bin*子目錄。
 
 > [!NOTE]
 > 您必須在 %systemdrive%\inetpub\wwwroot 上設定 ACL 以將修改權限授予您用來執行的帳戶。 否則，有些建置後事件將會失敗。 不過，您也可以不去改變這些 ACL，而以系統管理員身分來執行 SDK 命令提示字元或 Visual Studio。 有些 Visual Studio 動作 (例如將偵錯工具附加到 ASP.Net 工作處理序中) 同時要求具備系統管理員權限。
