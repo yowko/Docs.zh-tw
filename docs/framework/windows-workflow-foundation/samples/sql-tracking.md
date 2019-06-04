@@ -2,12 +2,12 @@
 title: SQL 追蹤
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: f3c48b40e2d3d7dec2b9008b3de738f9b2983610
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b69336e9a6fd0d3cf91c2a187412638d08490eea
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785914"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491079"
 ---
 # <a name="sql-tracking"></a>SQL 追蹤
 此範例示範如何撰寫自訂的 SQL 追蹤參與者，將追蹤記錄寫入至 SQL 資料庫。 Windows Workflow Foundation (WF) 提供工作流程追蹤來查看執行工作流程執行個體。 追蹤執行階段會在工作流程執行期間發出工作流程追蹤記錄。 如需有關工作流程追蹤的詳細資訊，請參閱 <<c0> [ 工作流程追蹤](../workflow-tracking-and-tracing.md)。
@@ -35,7 +35,7 @@ ms.locfileid: "61785914"
   
      本機服務 WSDL 位址的範例是`http://localhost:65193/StockPriceService.xamlx?wsdl`。  
   
-8. 使用 [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] 來執行 WCF 測試用戶端 (WcfTestClient.exe)。 它是位於 Microsoft Visual Studio 10.0\Common7\IDE 目錄中。  
+8. 使用檔案總管執行 WCF 測試用戶端 (WcfTestClient.exe)。 它是位於 Microsoft Visual Studio 10.0\Common7\IDE 目錄中。  
   
 9. 在 WCF 測試用戶端中，按一下**檔案**功能表，然後選取**加入服務**。 將本機服務位址貼至文字方塊。 按一下 **確定**以關閉對話方塊。  
   

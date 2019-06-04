@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4adfa5d592514c9a91c93095e7199f4b425b712
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: abbc817142ab6906a04b4dc053693f87109922dc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596643"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487903"
 ---
 # <a name="securing-wrapper-code"></a>設定包裝函式程式碼的安全性
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -76,7 +76,7 @@ ms.locfileid: "64596643"
 - [LinkDemand](../../../docs/framework/misc/link-demands.md)會發生在 just-in-time (JIT) 編譯時間，並檢查立即呼叫端。 這項安全性檢查不會檢查呼叫端的呼叫端。 一旦通過這項檢查，不論呼叫端可能呼叫的次數為何，都不會再增加額外的安全性負荷。 不過，這也無法防止引誘攻擊。 具有**LinkDemand**，任何通過的測試，而且可以參考您的程式碼的程式碼可能會破壞安全性，藉由使用授權的程式碼呼叫的惡意程式碼。 因此，不會使用**LinkDemand**除非可以徹底避免所有可能的弱點。  
   
     > [!NOTE]
-    >  在  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，連結要求已被取代<xref:System.Security.SecurityCriticalAttribute>屬性中<xref:System.Security.SecurityRuleSet.Level2>組件。 <xref:System.Security.SecurityCriticalAttribute>就相當於連結要求完全信任; 不過，它也會影響繼承規則。 如需有關這項變更的詳細資訊，請參閱 <<c0> [ 安全性透明程式碼，層級 2](../../../docs/framework/misc/security-transparent-code-level-2.md)。  
+    >  在.NET Framework 4 中，連結要求已被取代<xref:System.Security.SecurityCriticalAttribute>屬性中<xref:System.Security.SecurityRuleSet.Level2>組件。 <xref:System.Security.SecurityCriticalAttribute>就相當於連結要求完全信任; 不過，它也會影響繼承規則。 如需有關這項變更的詳細資訊，請參閱 <<c0> [ 安全性透明程式碼，層級 2](../../../docs/framework/misc/security-transparent-code-level-2.md)。  
   
  使用時所需的額外預防措施**LinkDemand**必須個別進行程式編寫; 安全性系統可協助增強。 任何錯誤都可能會導致出現安全性弱點。 使用您程式碼的所有授權程式碼都必須負責執行下列作業，以實作額外的安全性：  
   

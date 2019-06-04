@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a313ea62455067fb36b94d942b0ce21589677e3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d530f37c979a1ecddf2cb3895234aab2f7556b88
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698157"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489626"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess 方法
 取得對應至程序中載入 common language runtime (CLR) 模組 ICorDebugProcess 介面。  
@@ -78,7 +78,7 @@ HRESULT OpenVirtualProcess(
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)回呼會傳回錯誤，或未提供有效的控制代碼。|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` 未實作所需的資料目標介面，這個版本的執行階段。|  
 |CORDBG_E_NOT_CLR|指定的模組不是 CLR 模組。 無法偵測到 CLR 模組，因為記憶體已損毀、 模組無法使用，或 CLR 版本晚於填充碼版本時，也會傳回此 HRESULT。|  
-|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|這個執行階段版本不支援此偵錯的模型。 偵錯模型目前不支援的 CLR 版本之前[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。 `pwszVersion`輸出參數仍然發生此錯誤後設定為正確的值。|  
+|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|這個執行階段版本不支援此偵錯的模型。 目前，.NET Framework 4 以前的 CLR 版本不支援偵錯的模型。 `pwszVersion`輸出參數仍然發生此錯誤後設定為正確的值。|  
 |CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|CLR 的版本大於宣告這個偵錯工具，以支援的版本。 `pwszVersion`輸出參數仍然發生此錯誤後設定為正確的值。|  
 |E_NO_INTERFACE|`riidProcess`不提供介面。|  
 |CORDBG_E_UNSUPPORTED_VERSION_STRUCT|`CLR_DEBUGGING_VERSION`結構沒有可辨識的值`wStructVersion`。 此時唯一接受的值為 0。|  
@@ -94,7 +94,7 @@ HRESULT OpenVirtualProcess(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

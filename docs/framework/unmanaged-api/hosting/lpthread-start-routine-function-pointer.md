@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27d1837f9f9f11ad34140f50ec41aa6fe8a62160
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a81e78c0a34f766e1598dd27506f62bd3132f348
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765241"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490167"
 ---
 # <a name="lpthreadstartroutine-function-pointer"></a>LPTHREAD_START_ROUTINE 函式指標
 指向主應用程式執行緒已開始執行的函式。  
   
- 中已被取代此函式指標[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 在.NET Framework 4 中，已被取代此函式指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +50,7 @@ typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (
   
  **LIBRARY:** MSCorWks.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

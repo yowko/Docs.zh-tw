@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e14fa2d739a6fdabda7b64e7e765e51da19701a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f6f6744451bf3436e58a3ff9efcdb16ceee08c9d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616458"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489751"
 ---
 # <a name="controlling-net-framework-logging"></a>控制 .NET Framework 記錄
 您可以使用 Windows 事件追蹤 (ETW) 來記錄通用語言執行平台 (CLR) 事件。 您可以使用下列工具來建立和檢視追蹤：  
@@ -28,7 +28,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.  
 ```  
   
- 如果未列出 CLR 提供者，您可以使用 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 命令列工具，在 Windows Vista 和更新版本的作業系統上安裝此提供者。 以系統管理員身分開啟 [命令提示字元] 視窗。 將提示目錄變更為 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 資料夾 (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET 版本>\)。 這個資料夾包含 CLR-ETW.man 檔案。 在命令提示字元中，輸入下列命令，即可安裝 CLR 提供者：  
+ 如果未列出 CLR 提供者，您可以使用 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 命令列工具，在 Windows Vista 和更新版本的作業系統上安裝此提供者。 以系統管理員身分開啟 [命令提示字元] 視窗。 將提示目錄變更為 [.NET Framework 4] 資料夾 (%windir%\microsoft.net\framework[64]\v4。\<.NET 版本 > \)。 這個資料夾包含 CLR-ETW.man 檔案。 在命令提示字元中，輸入下列命令，即可安裝 CLR 提供者：  
   
  `wevtutil im CLR-ETW.man`  
   
@@ -98,7 +98,7 @@ Provider                                 GUID
   
      `xperf clrevents.etl`  
   
-     這個命令會開啟 Xperf ETL 檔案檢視器。 在這個檢視器中，CLR 事件會顯示在 [一般事件] 檢視中。 若要顯示依類型分類的事件資料格，請在這個檢視中選取一個時間區域，並按一下滑鼠右鍵，然後選取 [摘要]。  
+     這個命令會開啟 Xperf ETL 檔案檢視器。 在這個檢視器中，CLR 事件會顯示在 [一般事件]  檢視中。 若要顯示依類型分類的事件資料格，請在這個檢視中選取一個時間區域，並按一下滑鼠右鍵，然後選取 [摘要]  。  
   
 #### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>若要將 .etl 檔案轉換為逗點分隔值檔案  
   

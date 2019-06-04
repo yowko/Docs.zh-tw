@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 5165f3ec1ef41e3fb0dd053c112610183197108a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dca5830a73d0f4374302862e7ccdffdf9dc48cb2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877438"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490115"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 連接共用 (ADO.NET)
 連接到資料庫伺服器通常需要執行幾個很費時的步驟。 必須要建立實體頻道 (如通訊端或具名管道)，必須建立與伺服器的初始信號交換、必須剖析連接字串資訊、伺服器必須要驗證連接，以及必須檢查是否已在現行交易中登記等。  
@@ -99,7 +99,7 @@ using (SqlConnection connection = new SqlConnection(
 ### <a name="pool-fragmentation-due-to-many-databases"></a>多個資料庫導致的集區片段  
  許多網際網路服務提供者在單一伺服器上裝載多個網站。 他們可以使用單一資料庫確認表單驗證登入，然後開啟該使用者或使用者群組之特定資料庫的連接。 驗證資料庫的連接可供所有人共用和使用。 不過，每個資料庫存在單獨的連接集區，而這會增加伺服器連接的數目。  
   
- 這也是應用程式設計的副作用。 有一個比較簡單的方法可避免此副作用，同時不會影響連接到 SQL Server 時的安全性。 連接到伺服器上的同一個資料庫 (而不是連接到每個使用者或群組的個別資料庫)，然後執行 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] USE 陳述式，以變更為想要的資料庫。 下列程式碼片段會示範如何建立與 `master` 資料庫的初始連接，然後切換至 `databaseName` 字串變數中指定之目標資料庫。  
+ 這也是應用程式設計的副作用。 有一個比較簡單的方法可避免此副作用，同時不會影響連接到 SQL Server 時的安全性。 連接到伺服器上的同一個資料庫，而不是連接到每個使用者或群組的個別資料庫，然後執行 Transact-SQL USE 陳述式，以變更為想要的資料庫。 下列程式碼片段會示範如何建立與 `master` 資料庫的初始連接，然後切換至 `databaseName` 字串變數中指定之目標資料庫。  
   
 ```vb  
 ' Assumes that command is a valid SqlCommand object and that  

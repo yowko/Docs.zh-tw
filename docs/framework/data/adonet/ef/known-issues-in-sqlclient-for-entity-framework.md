@@ -2,12 +2,12 @@
 title: 適用於 Entity Framework 的 SqlClient 已知問題
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 0a6fec7e2d129523e5f68955e51ac50154cb58df
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5c500a61a00914df7b106b7e89485921123e56ec
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631710"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489543"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>適用於 Entity Framework 的 SqlClient 已知問題
 本節說明與 .NET Framework Data Provider for SQL Server (SqlClient) 相關的已知問題。  
@@ -43,9 +43,9 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>以正確的 SQL Server 版本為目標  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]目標[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]中指定的 SQL Server 版本為基礎的查詢`ProviderManifestToken`儲存模型 (.ssdl) 檔案中的結構描述項目的屬性。 這個版本可能會因您所連接的 SQL Server 實際版本而有所不同。 例如，如果使用的是 SQL Server 2005，但 `ProviderManifestToken` 屬性卻設為 2008，則產生的 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 查詢可能無法在伺服器上執行。 例如，使用 SQL Server 2008 中導入新的日期時間類型的查詢將不會執行較舊版本的 SQL server。 如果您使用 SQL Server 2005，但`ProviderManifestToken`屬性設為 2000，則產生[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]查詢可能會是小於最佳化，或您可能會收到例外狀況指出不支援的查詢。 如需詳細資訊，請參閱本主題前面的「CROSS 和 OUTER APPLY 運算子」一節。  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]目標中指定的 SQL Server 版本為基礎的 TRANSACT-SQL 查詢`ProviderManifestToken`儲存模型 (.ssdl) 檔案中的結構描述項目的屬性。 這個版本可能會因您所連接的 SQL Server 實際版本而有所不同。 例如，如果您使用 SQL Server 2005，但您`ProviderManifestToken`屬性設為 2008年，產生的 TRANSACT-SQL 查詢可能不會在伺服器上執行。 例如，使用 SQL Server 2008 中導入新的日期時間類型的查詢將不會執行較舊版本的 SQL server。 如果您使用 SQL Server 2005，但您`ProviderManifestToken`屬性設為 2000年，可能會較不最佳化產生的 TRANSACT-SQL 查詢，或您可能會收到例外狀況指出不支援的查詢。 如需詳細資訊，請參閱本主題前面的「CROSS 和 OUTER APPLY 運算子」一節。  
   
- 某些資料庫行為取決於資料庫上設定的相容性層級。 如果 `ProviderManifestToken` 屬性是設為 2005 而 SQL Server 版本是 2005，但資料庫的相容性層級是設為 "80" (SQL Server 2000)，則產生的 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 會以 SQL Server 2005 為目標，但由於相容性層級設定的關係，執行的方式可能與預期的方式不同。 例如，當 ORDER BY 清單中資料行名稱與選擇器中資料行名稱相符合時，則可能會遺失排序資訊。  
+ 某些資料庫行為取決於資料庫上設定的相容性層級。 如果您`ProviderManifestToken`屬性設為 2005年和 SQL Server 版本是 2005，但資料庫的相容性層級設定為"80"(SQL Server 2000)，產生的 TRANSACT-SQL 將挑選作為目標 SQL Server 2005，但可能不會如預期般運作，因為執行相容性層級設定。 例如，當 ORDER BY 清單中資料行名稱與選擇器中資料行名稱相符合時，則可能會遺失排序資訊。  
   
 ## <a name="nested-queries-in-projection"></a>投影中的巢狀查詢  
  投影子句中的巢狀查詢可能會在伺服器上轉譯成笛卡兒乘積 (Cartesian Product) 查詢。 在包括 SLQ Server 的某些後端伺服器上，這會導致 TempDB 資料表變得很大。 這樣會降低伺服器的效能。  

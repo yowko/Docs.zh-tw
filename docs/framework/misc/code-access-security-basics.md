@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d5a5658fcb6bbba72938a16a9e5c82fd779e2e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c41becaa149b933d46a01f6ada0ea4b29b68fe8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868767"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66488027"
 ---
 # <a name="code-access-security-basics"></a>程式碼存取安全性的基本概念
 
@@ -32,7 +32,7 @@ ms.locfileid: "61868767"
 
 - **安全類別庫**:安全類別庫會使用安全性要求，以確保程式庫的呼叫端擁有存取程式庫公開的資源的權限。 例如，安全類別庫可能有一個用來建立檔案的方法，要求 (demand) 其呼叫端要有權限才能建立檔案。 .NET Framework 由安全類別庫組成。 您應該要知道需要哪些權限，才能存取您的程式碼所使用的任何類別庫。 如需詳細資訊，請參閱 <<c0> [ 使用安全類別庫](#secure_library)本主題稍後的章節。
 
-- **透明程式碼**:從開始[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，除了識別特定的權限，您也必須決定是否執行安全性透明程式碼。 安全性透明程式碼無法呼叫被識別為安全性關鍵的類型或成員。 這個規則適用於完全信任的應用程式，也適用於部分信任的應用程式。 如需詳細資訊，請參閱 <<c0> [ 安全性透明程式碼](../../../docs/framework/misc/security-transparent-code.md)。
+- **透明程式碼**:從.NET Framework 4 中，除了識別特定的權限，您也必須決定是否執行安全性透明程式碼。 安全性透明程式碼無法呼叫被識別為安全性關鍵的類型或成員。 這個規則適用於完全信任的應用程式，也適用於部分信任的應用程式。 如需詳細資訊，請參閱 <<c0> [ 安全性透明程式碼](../../../docs/framework/misc/security-transparent-code.md)。
 
 <a name="typesafe_code"></a>
 
@@ -55,7 +55,7 @@ Just-In-Time (JIT) 編譯會執行驗證程序來檢查程式碼，並嘗試判�
 宣告式安全性語法會使用[屬性](../../../docs/standard/attributes/index.md)放置安全性資訊[中繼資料](../../../docs/standard/metadata-and-self-describing-components.md)的程式碼。 屬性可以放在組件、類別或成員層級，以指出您想要使用的要求 (request)、要求 (demand) 或覆寫類型。 以 Common Language Runtime 為目標的應用程式中會使用要求 (request) 來通知執行階段安全性系統有關應用程式需要或不想要之權限的資訊。 程式庫中會使用要求 (demand) 和覆寫，以協助保護資源，不讓呼叫端存取，或是覆寫預設安全性行為。
 
 > [!NOTE]
-> 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中，.NET Framework 安全性模型和術語已有重大變更。 如需有關這些變更的詳細資訊，請參閱 <<c0> [ 安全性變更](../../../docs/framework/security/security-changes.md)。
+> 在.NET Framework 4 中，已對.NET Framework 安全性模型和術語的重要變更。 如需有關這些變更的詳細資訊，請參閱 <<c0> [ 安全性變更](../../../docs/framework/security/security-changes.md)。
 
 若要使用宣告式安全性呼叫，您必須初始化權限物件的狀態資料，使其表示您需要的特定權限形式。 每個內建權限都有一個被傳遞 <xref:System.Security.Permissions.SecurityAction> 列舉的屬性，以描述您想要執行之安全性作業的類型。 不過，權限也會接受其本身專用的參數。
 

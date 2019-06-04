@@ -2,12 +2,12 @@
 title: FILESTREAM 資料
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: f8521a9de3037ae759b0b0ea5bcbe84830f8629e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4edd03a38f8f5df6cb4fb9c2446f966dfe601564
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582716"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490072"
 ---
 # <a name="filestream-data"></a>FILESTREAM 資料
 
@@ -16,7 +16,7 @@ FILESTREAM 儲存體屬性適用於儲存在 varbinary(max) 資料行中的二�
 > [!NOTE]
 > 您必須安裝 .NET Framework 3.5 SP1 (或更新版本) 才能使用 SqlClient 來處理 FILESTREAM 資料。
 
-針對 varbinary(max) 資料行指定 FILESTREAM 屬性會導致 SQL Server 將資料儲存在本機 NTFS 檔案系統上，而非資料庫檔案中。 雖然系統會以不同的方式儲存資料，但是您仍可使用支援搭配儲存在資料庫中之 varbinary(max) 資料的相同 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 陳述式 (Statement)。
+針對 varbinary(max) 資料行指定 FILESTREAM 屬性會導致 SQL Server 將資料儲存在本機 NTFS 檔案系統上，而非資料庫檔案中。 雖然系統會以不同的方式儲存資料，但是您可以使用支援使用儲存在資料庫中之 varbinary(max) 資料的相同 Transact-SQL 陳述式 (Statement)。
 
 ## <a name="sqlclient-support-for-filestream"></a>FILESTREAM 的 SqlClient 支援
 
@@ -24,7 +24,7 @@ FILESTREAM 儲存體屬性適用於儲存在 varbinary(max) 資料行中的二�
 
 ### <a name="creating-the-sql-server-table"></a>建立 SQL Server 資料表
 
-下列 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 陳述式會建立名為 employees 的資料表並插入一個資料列。 一旦您啟用了 FILESTREAM 儲存體之後，就可以使用這份資料表搭配後面的程式碼範例。 SQL Server 線上叢書 》 中的資源連結位於本主題的結尾。
+下列 Transact-SQL 陳述式會建立名為 employees 的資料表並插入一個資料列。 一旦您啟用了 FILESTREAM 儲存體之後，就可以使用這份資料表搭配後面的程式碼範例。 SQL Server 線上叢書 》 中的資源連結位於本主題的結尾。
 
 ```sql
 CREATE TABLE employees

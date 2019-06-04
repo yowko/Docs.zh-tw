@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8500abe590d4c85dcb5ecda54212a1ba9cc7950d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d858ef4c2f70c55b0a36e845f90d9a8e08f5e2d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586979"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487819"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>從部分受信任程式碼使用程式庫
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
->  本主題說明強式名稱組件的行為，並且只適用於[層級 1](../../../docs/framework/misc/security-transparent-code-level-1.md)組件。 [安全性透明程式碼，層級 2](../../../docs/framework/misc/security-transparent-code-level-2.md)中的組件[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]或更新版本不會受到強式名稱。 如需有關變更安全性系統的詳細資訊，請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。  
+>  本主題說明強式名稱組件的行為，並且只適用於[層級 1](../../../docs/framework/misc/security-transparent-code-level-1.md)組件。 [安全性透明程式碼，層級 2](../../../docs/framework/misc/security-transparent-code-level-2.md)在.NET Framework 4 或更新版本的組件不會受到強式名稱。 如需有關變更安全性系統的詳細資訊，請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。  
   
  從其主機或沙箱獲得低於完全信任的應用程式不允許呼叫共用 Managed 程式庫，除非程式庫撰寫者透過使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 來特別允許它們。 因此，應用程式撰寫者必須知道有些程式庫將無法從部分信任的內容使用它們。 根據預設，所有的程式碼中執行部分信任[沙箱](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)並不是處於完全信任組件清單為部分信任。 如果您不希望從部分信任的內容中執行您的程式碼，或由部分信任程式碼呼叫您的程式碼，不必顧慮這一節中的資訊。 不過，如果您撰寫的程式碼必須與部分信任的程式碼互動，或從部分信任的內容操作，則應該考慮下列因素：  
   

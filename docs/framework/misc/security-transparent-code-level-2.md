@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3da3e48f898797849a5304c4884b648f47a26dd
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 36c3f139564b39555370cd5d41133f39c6b271bb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456565"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487840"
 ---
 # <a name="security-transparent-code-level-2"></a>安全性透明的程式碼，層級 2
 
@@ -22,7 +22,7 @@ ms.locfileid: "66456565"
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-層級 2 透明度是 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 引入的。 此模型的三個原則是透明程式碼、安全性安全關鍵程式碼和安全性關鍵程式碼。
+層級 2 透明度是.NET Framework 4 中引入的。 此模型的三個原則是透明程式碼、安全性安全關鍵程式碼和安全性關鍵程式碼。
 
 - 透明程式碼，包括以完全信任執行的程式碼，只可以呼叫其他透明程式碼或安全性安全關鍵程式碼。 它只能執行定義域之部分信任權限集合 (如果存在的話) 所允許的動作。 透明程式碼無法進行下列作業：
 

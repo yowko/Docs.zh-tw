@@ -2,12 +2,12 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 36bf627c7dfabdcf4bbc279bec8f3933f7aafb2a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 743c90cd9bc77a89051c59a217befa4275b28572
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631654"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489955"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 將一種資料類型的運算式轉換成另一種。  
@@ -29,7 +29,7 @@ CAST ( expression AS data_type )
  傳回 `data_type`的相同值。  
   
 ## <a name="remarks"></a>備註  
- 轉型運算式的語意很類似 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] CONVERT 運算式。 轉型運算式是用來將某個型別的值轉換成另一個型別的值。  
+ 轉型運算式的語意很類似 TRANSACT-SQL 將轉換的運算式。 轉型運算式是用來將某個型別的值轉換成另一個型別的值。  
   
 ```  
 CAST( e as T )  

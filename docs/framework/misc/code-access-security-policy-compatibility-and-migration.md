@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 796c3b03612138238cb336361ab49514d80b4d7b
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 163ed8d00e8f0f886481dbaca956bb633a625871
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456647"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487980"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>程式碼存取安全性原則相容性和移轉
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-程式碼存取安全性 (CAS) 的原則部分在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中已過時。 如此一來，您可能會遇到編譯警告和執行階段例外狀況如果您呼叫過時的原則類型和成員[明確](#explicit_use)或是[隱含](#implicit_use)（透過其他型別和成員）。
+程式碼存取安全性 (CAS) 原則部分已經成為.NET Framework 4 中已過時。 如此一來，您可能會遇到編譯警告和執行階段例外狀況如果您呼叫過時的原則類型和成員[明確](#explicit_use)或是[隱含](#implicit_use)（透過其他型別和成員）。
 
 您可以透過下列方式避免出現警告和錯誤：
 

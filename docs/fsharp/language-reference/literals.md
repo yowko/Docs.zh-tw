@@ -2,12 +2,12 @@
 title: 常值
 description: 深入了解中的常值型別F#程式設計語言。
 ms.date: 02/08/2019
-ms.openlocfilehash: 28ce34dee3c3c3d4d0cfd4107e8cbc375a23032c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 032bc82d222cd34e7ac62e42ee4394c97d975b2e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904562"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490984"
 ---
 # <a name="literals"></a>常值
 
@@ -28,12 +28,13 @@ ms.locfileid: "61904562"
 |uint16|不帶正負號的 16 位元自然數|us|`86us`|
 |int<br /><br />int32|帶正負號的 32 位元整數|l 或 none|`86`<br /><br />`86l`|
 |uint<br /><br />uint32|不帶正負號的 32 位元自然數|u 或 ul|`86u`<br /><br />`86ul`|
+|nativeint|帶正負號自然數的原生指標|n|`123n`|
 |unativeint|為不帶正負號自然數的原生指標|取消|`0x00002D3Fun`|
 |int64|帶正負號的 64 位元整數|L|`86L`|
 |uint64|不帶正負號的 64 位元自然數|UL|`86UL`|
 |single、float32|32 位元浮點數|F 或 f|`4.14F` 或 `4.14f`|
 |||lf|`0x00000000lf`|
-|浮點數;double|64 位元浮點數|none|`4.14` 或`2.3E+32`或 `2.3e+32`|
+|浮點數;double|64 位元浮點數|none|`4.14` 或 `2.3E+32` 或 `2.3e+32`|
 |||LF|`0x0000000000000000LF`|
 |bigint|不限於 64 位元表示的整數|I|`9999999999999999999999999999I`|
 |decimal|以固定點或有理數表示的小數數字|M 或 m|`0.7833M` 或 `0.7833m`|

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19dacae05766566521f563d0d24980c01dfb7a0b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb19f950122f7b0db66830e9ed5dff44ccd370c2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796119"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490431"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure 列舉
 描述的主機可以設定的原則動作失敗。  
@@ -49,7 +49,7 @@ typedef enum {
 |`FAIL_FatalRuntime`|Common language runtime (CLR) 已不再能夠執行程序中的 managed 程式碼。 從此以後，任何裝載的函式的呼叫會傳回 HOST_E_CLRNOTAVAILABLE HRESULT 值。|  
 |`FAIL_OrphanedLock`|執行緒無法釋放鎖定時<xref:System.AppDomain>物件。 主應用程式無法設定此失敗會造成執行緒中止。|  
 |`FAIL_StackOverflow`|發生堆疊溢位。|  
-|`FAIL_AccessViolation`|嘗試讀取或寫入受保護的記憶體。 不支援在[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。|  
+|`FAIL_AccessViolation`|嘗試讀取或寫入受保護的記憶體。 不支援在.NET Framework 4。|  
 |`FAIL_CodeContract`|程式碼合約失敗。 請參閱[程式碼合約](../../../../docs/framework/debug-trace-profile/code-contracts.md)。|  
   
 ## <a name="remarks"></a>備註  
@@ -62,7 +62,7 @@ typedef enum {
   
  **LIBRARY:** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

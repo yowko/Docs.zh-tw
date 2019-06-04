@@ -20,15 +20,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a28b9d6e41d0572d423576f5b4024a60a70216c
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 0d2b82bc056acd2e620461081b5f8c9d45fc152c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456860"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490640"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM 函式
-強制 common language runtime (CLR) 版本所有的介面指標，它就會保存於執行階段可呼叫包裝函式 (RCW)。 這有釋放 RCW 的所有快取的效果。 此全域函式已被取代[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。 相反地，針對特定執行階段使用的進入點。  
+強制 common language runtime (CLR) 版本所有的介面指標，它就會保存於執行階段可呼叫包裝函式 (RCW)。 這有釋放 RCW 的所有快取的效果。 在.NET Framework 4 中，此全域函式已被取代。 相反地，針對特定執行階段使用的進入點。  
   
 ## <a name="syntax"></a>語法  
   

@@ -2,12 +2,12 @@
 title: 符號和運算子參考
 description: 深入了解符號和運算子，可在F#程式設計語言。
 ms.date: 02/11/2019
-ms.openlocfilehash: 11a02792dc949b0a7a0a6e7bb59786c489b3aa9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ea8337a9055c8df639fe6abdb6c79445d189d64
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982733"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490810"
 ---
 # <a name="symbol-and-operator-reference"></a>符號和運算子參考
 
@@ -26,7 +26,7 @@ ms.locfileid: "61982733"
 |`!=`|不適用。|<ul><li>F# 中不使用。 使用 `<>` 進行不等比較運算。<br /></li></ul>|
 |`"`|[常值](../literals.md)<br /><br />[字串](../strings.md)|<ul><li>分隔文字字串。<br /></li></ul>|
 |`"""`|[字串](../strings.md)|分隔逐字文字字串。 有別於 `@"..."`，因為您可以在字串中使用單引號來表示引號字元。|
-|`#`|[編譯器指示詞](../compiler-directives.md)<br /><br />[彈性類型](../flexible-types.md)|<ul><li>開頭前置處理器或編譯器指示詞，例如，`#light`。<br /></li><li>與類型一起使用時，表示「彈性類型」，這指的是類型或任何一種其衍生的類型。<br /></li></ul>|
+|`#`|[編譯器指示詞](../compiler-directives.md)<br /><br />[彈性類型](../flexible-types.md)|<ul><li>開頭前置處理器或編譯器指示詞，例如，`#light`。<br /></li><li>與類型一起使用時，表示「彈性類型」  ，這指的是類型或任何一種其衍生的類型。<br /></li></ul>|
 |`$`|沒有可用的詳細資訊。|<ul><li>使用於內部，用於特定編譯器產生的變數與函式名稱。<br /></li></ul>|
 |`%`|[算術運算子](arithmetic-operators.md)<br /><br />[程式碼引號](../code-quotations.md)|<ul><li>計算整數餘數。<br /></li><li>用於將運算式接合成具類型的程式碼引號。<br /></li></ul>|
 |`%%`|[程式碼引號](../code-quotations.md)|<ul><li>用於將運算式接合成不具類型的程式碼引號。<br /></li></ul>|
@@ -39,7 +39,7 @@ ms.locfileid: "61982733"
 |`( )`|[單位類型](../unit-type.md)|<ul><li>代表單位類型的單一值。<br /></li></ul>|
 |`(...)`|[元組](../tuples.md)<br /><br />[運算子多載](../operator-overloading.md)|<ul><li>表示運算式的評估順序。<br /></li><li>分隔 Tuple。<br /></li><li>用於運算子定義中。<br /></li></ul>|
 |`(*...*)`||<ul><li>分隔無法跨越多行的註解。<br /></li></ul>|
-|<code>(&#124;...&#124;)</code>|[使用中模式](../active-patterns.md)|<ul><li>分隔使用中的模式。 也稱為「香蕉夾」。<br /></li></ul>|
+|<code>(&#124;...&#124;)</code>|[使用中模式](../active-patterns.md)|<ul><li>分隔使用中的模式。 也稱為「香蕉夾」  。<br /></li></ul>|
 |`*`|[算術運算子](arithmetic-operators.md)<br /><br />[元組](../tuples.md)<br /><br />[測量單位](../units-of-measure.md)|<ul><li>當做二元運算子使用時，將左側與右側相乘。<br /></li><li>在類型中，表示在 Tuple 中配對。<br /></li><li>用於測量單位類型中。<br /></li></ul>|
 |`*?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 類型時，將左側與右側相乘。<br /></li></ul>|
 |`**`|[算術運算子](arithmetic-operators.md)|<ul><li>計算乘冪運算 (`x ** y` 表示 `x` 的 `y` 次方)。<br /></li></ul>|
@@ -127,6 +127,7 @@ ms.locfileid: "61982733"
 |`let`|Nonassociative|
 |`function`, `fun`, `match`, `try`|Nonassociative|
 |`if`|Nonassociative|
+|`not`|右|
 |`->`|右|
 |`:=`|右|
 |`,`|Nonassociative|

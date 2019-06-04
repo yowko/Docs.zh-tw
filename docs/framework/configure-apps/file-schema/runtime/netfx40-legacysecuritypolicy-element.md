@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 848c56773c0ff2986f0bec3e82a08a3d0dd35434
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 868c5f0742fa4dc963539fd70414752092156c64
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456480"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489424"
 ---
 # <a name="netfx40legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy > 項目
 指定執行階段是否使用舊版程式碼存取安全性 (CAS) 原則。  
@@ -55,11 +55,11 @@ ms.locfileid: "66456480"
 |`runtime`|包含有關執行階段初始化選項的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 在.NET Framework 3.5 版和更早版本中，CAS 原則一律是作用中。 在  [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，必須啟用 CAS 原則。  
+ 在.NET Framework 3.5 版和更早版本中，CAS 原則一律是作用中。 在.NET Framework 4 中，您必須啟用 CAS 原則。  
   
  特定版本的 CAS 原則。 在.NET Framework 4 中，必須重新指定存在於較早版本的.NET Framework 中的自訂 CA 原則。  
   
- 套用`<NetFx40_LegacySecurityPolicy>`項目[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]組件不會影響[安全性透明程式碼](../../../../../docs/framework/misc/security-transparent-code.md); 透明度規則仍適用。  
+ 套用`<NetFx40_LegacySecurityPolicy>`.NET Framework 4 組件的項目不會影響[安全性透明程式碼](../../../../../docs/framework/misc/security-transparent-code.md); 透明度規則仍適用。  
   
 > [!IMPORTANT]
 >  套用`<NetFx40_LegacySecurityPolicy>`項目可以原生映像所建立的組件會導致重大的效能損失[原生映像產生器 (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) ，不會安裝在[全域組件快取](../../../../../docs/framework/app-domains/gac.md). 效能降低因執行階段無法載入組件為原生映像，套用屬性時，導致其被載入，在 just-in-time 組件。  

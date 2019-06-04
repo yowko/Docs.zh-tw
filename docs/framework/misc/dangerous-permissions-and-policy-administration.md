@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ae24cdcb97e30da0bd4aec6569ef3dcda11488c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17a596d9fc223dc53268ae9c91f7d02357b0a9b8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775761"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489985"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>危險使用權限和原則管理
 .NET Framework 為幾個受保護作業提供了使用權限，這些受保護作業也可能會讓安全性系統受到危害。 您只能在必要時將這些危險的使用權限授與給可靠的程式碼。 如果將這些使用權限授與給惡意程式碼，通常就沒有任何方法可以抵禦這些惡意程式碼。  
   
 > [!NOTE]
->  在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中，.NET Framework 安全性模型和術語已有重大變更。 如需有關這些變更的詳細資訊，請參閱 <<c0> [ 安全性變更](../../../docs/framework/security/security-changes.md)。  
+>  在.NET Framework 4 中，已對.NET Framework 安全性模型和術語的重要變更。 如需有關這些變更的詳細資訊，請參閱 <<c0> [ 安全性變更](../../../docs/framework/security/security-changes.md)。  
   
  下表說明危險的使用權限。  
   

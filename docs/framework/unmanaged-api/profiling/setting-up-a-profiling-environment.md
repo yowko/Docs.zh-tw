@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dfad184e30ec94c8add265db2ef8131d0d34396f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: cc5171b135facfbbe901b38a19fef9e9d47699b5
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457235"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490725"
 ---
 # <a name="setting-up-a-profiling-environment"></a>設定程式碼剖析環境
 > [!NOTE]
->  在 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 內的程式碼剖析已有大幅的變更。  
+>  已分析的.NET Framework 4 的重大變更。  
   
  當 Managed 處理序 (應用程式或服務) 啟動時，會載入 Common Language Runtime (CLR)。 初始化 CLR 時，會評估下列兩個環境變數來決定程序是否應該連接至程式碼剖析工具：  
   

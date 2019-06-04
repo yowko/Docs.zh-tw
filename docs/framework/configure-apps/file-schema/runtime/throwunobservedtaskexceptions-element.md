@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb6cfc8e1c3f0409d99d31efa0a645476b47e45e
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 9647297bf976d26a97be0da8807d607789e8a065
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456261"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489582"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > 項目
 指定未處理的工作例外狀況是否應終止執行中的處理序。  
@@ -61,7 +61,7 @@ ms.locfileid: "66456261"
 ## <a name="remarks"></a>備註  
  如果例外狀況相關聯<xref:System.Threading.Tasks.Task>尚未發現，沒有任何<xref:System.Threading.Tasks.Task.Wait%2A>未附加作業，父代，而<xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType>屬性未讀取的工作例外狀況會被視為未觀察到。  
   
- 在  [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，依預設，如果<xref:System.Threading.Tasks.Task>具有未觀察到例外狀況是記憶體回收，完成項會擲回例外狀況，並終止處理序。 終止處理序取決於記憶體回收行程和終結的時機。  
+ 在.NET Framework 4 中，根據預設，如果<xref:System.Threading.Tasks.Task>具有未觀察到例外狀況是記憶體回收，完成項會擲回例外狀況，並終止處理序。 終止處理序取決於記憶體回收行程和終結的時機。  
   
  若要簡化開發人員撰寫工作為基礎的非同步程式碼，.NET Framework 4.5 中變更此預設行為未觀察到的例外狀況。 未觀察到的例外狀況，仍有導致<xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>事件引發，但根據預設，此程序不會終止。 相反地，引發事件，不論事件處理常式是否會觀察到例外狀況之後，會忽略例外狀況。  
   
