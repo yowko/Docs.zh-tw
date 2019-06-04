@@ -2,44 +2,44 @@
 title: WCF 安全性中的密碼編譯靈活性
 ms.date: 03/30/2017
 ms.assetid: c2c549e5-ac19-40c5-b686-8f67f52b6dbf
-ms.openlocfilehash: 0a4171d6e753be9fbdd6974850fc6757ff585ae0
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b8e3b6dc62baf31901520d7f5edac0529e937016
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637835"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490947"
 ---
-# <a name="cryptographic-agility-in-wcf-security"></a><span data-ttu-id="c087e-102">WCF 安全性中的密碼編譯靈活性</span><span class="sxs-lookup"><span data-stu-id="c087e-102">Cryptographic agility in WCF security</span></span>
+# <a name="cryptographic-agility-in-wcf-security"></a><span data-ttu-id="c94d0-102">WCF 安全性中的密碼編譯靈活性</span><span class="sxs-lookup"><span data-stu-id="c94d0-102">Cryptographic agility in WCF security</span></span>
 
-<span data-ttu-id="c087e-103">此範例示範如何在提供的密碼編譯的敏捷式實作 Windows Communication Foundation (WCF) 用戶端和服務中的標準/自訂演算法中指定。</span><span class="sxs-lookup"><span data-stu-id="c087e-103">This sample shows how to specify in a standard/custom algorithm to provide a cryptographic agile implementation in a Windows Communication Foundation (WCF) client and service.</span></span> <span data-ttu-id="c087e-104">此範例是由下列專案所組成：</span><span class="sxs-lookup"><span data-stu-id="c087e-104">The sample is composed of the following projects:</span></span>
+<span data-ttu-id="c94d0-103">此範例示範如何在提供的密碼編譯的敏捷式實作 Windows Communication Foundation (WCF) 用戶端和服務中的標準/自訂演算法中指定。</span><span class="sxs-lookup"><span data-stu-id="c94d0-103">This sample shows how to specify in a standard/custom algorithm to provide a cryptographic agile implementation in a Windows Communication Foundation (WCF) client and service.</span></span> <span data-ttu-id="c94d0-104">此範例是由下列專案所組成：</span><span class="sxs-lookup"><span data-stu-id="c94d0-104">The sample is composed of the following projects:</span></span>
 
-<span data-ttu-id="c087e-105">**Service**</span><span class="sxs-lookup"><span data-stu-id="c087e-105">**Service**</span></span>
+<span data-ttu-id="c94d0-105">**Service**</span><span class="sxs-lookup"><span data-stu-id="c94d0-105">**Service**</span></span>
 
-<span data-ttu-id="c087e-106">這是自我裝載的 WCF 服務可實作`ICalculator`介面，並保護端點使用<xref:System.ServiceModel.WSHttpBinding>安全工作階段與可靠工作階段停用。</span><span class="sxs-lookup"><span data-stu-id="c087e-106">This is a self-hosted WCF service that implements the `ICalculator` interface and secures the endpoint using the <xref:System.ServiceModel.WSHttpBinding> with secure session and reliable session disabled.</span></span> <span data-ttu-id="c087e-107">這項服務會定義自訂的 `SecurityAlgorithmSuite` 類別，以指定用於訊息安全性的密碼編譯演算法。</span><span class="sxs-lookup"><span data-stu-id="c087e-107">The service defines a custom `SecurityAlgorithmSuite` class to specify the cryptographic algorithms to be used for message security.</span></span>
+<span data-ttu-id="c94d0-106">這是自我裝載的 WCF 服務可實作`ICalculator`介面，並保護端點使用<xref:System.ServiceModel.WSHttpBinding>安全工作階段與可靠工作階段停用。</span><span class="sxs-lookup"><span data-stu-id="c94d0-106">This is a self-hosted WCF service that implements the `ICalculator` interface and secures the endpoint using the <xref:System.ServiceModel.WSHttpBinding> with secure session and reliable session disabled.</span></span> <span data-ttu-id="c94d0-107">這項服務會定義自訂的 `SecurityAlgorithmSuite` 類別，以指定用於訊息安全性的密碼編譯演算法。</span><span class="sxs-lookup"><span data-stu-id="c94d0-107">The service defines a custom `SecurityAlgorithmSuite` class to specify the cryptographic algorithms to be used for message security.</span></span>
 
-<span data-ttu-id="c087e-108">**用戶端**</span><span class="sxs-lookup"><span data-stu-id="c087e-108">**Client**</span></span>
+<span data-ttu-id="c94d0-108">**用戶端**</span><span class="sxs-lookup"><span data-stu-id="c94d0-108">**Client**</span></span>
 
-<span data-ttu-id="c087e-109">這是在成功驗證之後存取服務的 WCF 用戶端。</span><span class="sxs-lookup"><span data-stu-id="c087e-109">This is a WCF client that accesses the service after successful authentication.</span></span> <span data-ttu-id="c087e-110">它會叫用由 `ICalculator` 介面公開並且由服務實作的作業。</span><span class="sxs-lookup"><span data-stu-id="c087e-110">It invokes the operations exposed by the `ICalculator` interface and implemented by the service.</span></span> <span data-ttu-id="c087e-111">這個用戶端還會定義相同的自訂 `SecurityAlgorithmSuite` 類別，以指定用於訊息安全性的密碼編譯演算法。</span><span class="sxs-lookup"><span data-stu-id="c087e-111">The client also defines the same custom `SecurityAlgorithmSuite` class to specify the cryptographic algorithms to be used for message security.</span></span>
+<span data-ttu-id="c94d0-109">這是在成功驗證之後存取服務的 WCF 用戶端。</span><span class="sxs-lookup"><span data-stu-id="c94d0-109">This is a WCF client that accesses the service after successful authentication.</span></span> <span data-ttu-id="c94d0-110">它會叫用由 `ICalculator` 介面公開並且由服務實作的作業。</span><span class="sxs-lookup"><span data-stu-id="c94d0-110">It invokes the operations exposed by the `ICalculator` interface and implemented by the service.</span></span> <span data-ttu-id="c94d0-111">這個用戶端還會定義相同的自訂 `SecurityAlgorithmSuite` 類別，以指定用於訊息安全性的密碼編譯演算法。</span><span class="sxs-lookup"><span data-stu-id="c94d0-111">The client also defines the same custom `SecurityAlgorithmSuite` class to specify the cryptographic algorithms to be used for message security.</span></span>
 
-## <a name="to-use-this-sample"></a><span data-ttu-id="c087e-112">若要使用這個範例</span><span class="sxs-lookup"><span data-stu-id="c087e-112">To use this sample</span></span>
+## <a name="to-use-this-sample"></a><span data-ttu-id="c94d0-112">若要使用這個範例</span><span class="sxs-lookup"><span data-stu-id="c94d0-112">To use this sample</span></span>
 
-1. <span data-ttu-id="c087e-113">Visual Studio 2012 中開啟 CryptoAgility.sln 方案。</span><span class="sxs-lookup"><span data-stu-id="c087e-113">Open the CryptoAgility.sln solution in Visual Studio 2012.</span></span>
+1. <span data-ttu-id="c94d0-113">Visual Studio 2012 中開啟 CryptoAgility.sln 方案。</span><span class="sxs-lookup"><span data-stu-id="c94d0-113">Open the CryptoAgility.sln solution in Visual Studio 2012.</span></span>
 
-2. <span data-ttu-id="c087e-114">按下 CTRL+SHIFT+B 以建置方案。</span><span class="sxs-lookup"><span data-stu-id="c087e-114">Press CTRL+SHIFT+B to build the solution.</span></span>
+2. <span data-ttu-id="c94d0-114">按下 CTRL+SHIFT+B 以建置方案。</span><span class="sxs-lookup"><span data-stu-id="c94d0-114">Press CTRL+SHIFT+B to build the solution.</span></span>
 
-3. <span data-ttu-id="c087e-115">開啟[!INCLUDE[fileExplorer](~/includes/fileexplorer-md.md)]並巡覽至 \WCF\Basic\Security\CryptoAgility\Service\bin 目錄，然後以系統管理員權限執行 service.exe 檔，以滑鼠右鍵按一下 service.exe 並選取**系統管理員身分執行**。</span><span class="sxs-lookup"><span data-stu-id="c087e-115">Open [!INCLUDE[fileExplorer](~/includes/fileexplorer-md.md)] and navigate to the \WCF\Basic\Security\CryptoAgility\Service\bin directory and run the service.exe file with administrator privileges by right-clicking service.exe and selecting **Run as administrator**.</span></span>
+3. <span data-ttu-id="c94d0-115">開啟檔案總管並巡覽至 \WCF\Basic\Security\CryptoAgility\Service\bin 目錄系統管理員權限執行 service.exe 檔，以滑鼠右鍵按一下 service.exe 並選取**系統管理員身分執行**。</span><span class="sxs-lookup"><span data-stu-id="c94d0-115">Open File Explorer and navigate to the \WCF\Basic\Security\CryptoAgility\Service\bin directory and run the service.exe file with administrator privileges by right-clicking service.exe and selecting **Run as administrator**.</span></span>
 
-4. <span data-ttu-id="c087e-116">巡覽至 \WCF\Basic\Security\CryptoAgility\Client\bin 目錄，並正常執行 client.exe 檔。</span><span class="sxs-lookup"><span data-stu-id="c087e-116">Navigate to \WCF\Basic\Security\CryptoAgility\Client\bin directory and run the client.exe file normally.</span></span>
+4. <span data-ttu-id="c94d0-116">巡覽至 \WCF\Basic\Security\CryptoAgility\Client\bin 目錄，並正常執行 client.exe 檔。</span><span class="sxs-lookup"><span data-stu-id="c94d0-116">Navigate to \WCF\Basic\Security\CryptoAgility\Client\bin directory and run the client.exe file normally.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="c087e-117">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="c087e-117">The samples may already be installed on your machine.</span></span> <span data-ttu-id="c087e-118">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="c087e-118">Check for the following (default) directory before continuing.</span></span>
+> <span data-ttu-id="c94d0-117">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="c94d0-117">The samples may already be installed on your machine.</span></span> <span data-ttu-id="c94d0-118">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="c94d0-118">Check for the following (default) directory before continuing.</span></span>
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> <span data-ttu-id="c087e-119">如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。</span><span class="sxs-lookup"><span data-stu-id="c087e-119">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="c087e-120">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="c087e-120">This sample is located in the following directory.</span></span>
+> <span data-ttu-id="c94d0-119">如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。</span><span class="sxs-lookup"><span data-stu-id="c94d0-119">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="c94d0-120">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="c94d0-120">This sample is located in the following directory.</span></span>
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Security\CryptoAgility`
 
-## <a name="see-also"></a><span data-ttu-id="c087e-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c087e-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c94d0-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c94d0-121">See also</span></span>
 
-- [<span data-ttu-id="c087e-122">Windows Communication Foundation 安全性</span><span class="sxs-lookup"><span data-stu-id="c087e-122">Windows Communication Foundation Security</span></span>](../feature-details/security.md)
+- [<span data-ttu-id="c94d0-122">Windows Communication Foundation 安全性</span><span class="sxs-lookup"><span data-stu-id="c94d0-122">Windows Communication Foundation Security</span></span>](../feature-details/security.md)
