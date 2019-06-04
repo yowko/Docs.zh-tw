@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc3f9c9c61afd4c231846adffc4b304a01d59281
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: dd3501bc74da2c9a812f9c4816b5a081b3780cd0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457250"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490026"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>效能計數器與同處理序並存應用程式
 使用效能監視器 (Perfmon.exe)，可以區分個別執行階段的效能計數器。 本主題描述啟用這項功能所需的登錄變更。  
@@ -27,7 +27,7 @@ ms.locfileid: "66457250"
   
 - 當您監視兩個同名的應用程式時。 例如，如果兩個應用程式的名稱都是 myapp.exe，則在 [執行個體]  資料行中，一個會顯示為 **myapp**，另一個則會顯示為 **myapp#1**。 在此情況下，很難符合特定應用程式的效能計數器。 不確定針對 **myapp#1** 所收集的資料指的是第一個 myapp.exe 還是第二個 myapp.exe。  
   
-- 應用程式使用多個 Common Language Runtime 執行個體時。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 支援同處理序並存裝載案例；亦即，單一處理序或應用程式可以載入多個 Common Language Runtime 執行個體。 如果名為 myapp.exe 的單一應用程式載入兩個執行階段執行個體，則會根據預設在 [執行個體]  資料行中將它們指定為 **myapp** 和 **myapp#1**。 在此情況下，不確定 **myapp** 和 **myapp#1** 指的是兩個同名的應用程式，還是含有兩個執行階段的相同應用程式。 如果多個同名的應用程式載入多個執行階段，則模稜兩可甚至會更高。  
+- 應用程式使用多個 Common Language Runtime 執行個體時。 .NET Framework 4 支援同處理序為並存裝載案例;也就是在單一處理序或應用程式可以載入多個 common language runtime 執行個體。 如果名為 myapp.exe 的單一應用程式載入兩個執行階段執行個體，則會根據預設在 [執行個體]  資料行中將它們指定為 **myapp** 和 **myapp#1**。 在此情況下，不確定 **myapp** 和 **myapp#1** 指的是兩個同名的應用程式，還是含有兩個執行階段的相同應用程式。 如果多個同名的應用程式載入多個執行階段，則模稜兩可甚至會更高。  
   
  您可以設定登錄機碼，以消除這項模稜兩可。 開發的應用程式使用.NET Framework 4，這項登錄變更會將後面的應用程式名稱的執行階段執行個體識別項的處理序識別碼**執行個體**資料行。 在 [執行個體]  資料行中，現在會將應用程式識別為 *application*_`p`*processID*\_`r`*runtimeID*，而不是 *application* 或 *application*#1。 如果使用舊版的 common language runtime 所開發的應用程式，該執行個體以*應用程式\_* `p`*processID*前提。安裝.NET Framework 4。  
   

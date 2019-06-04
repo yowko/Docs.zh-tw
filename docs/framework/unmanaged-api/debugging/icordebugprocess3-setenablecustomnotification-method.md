@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8c8725bf21aefa3abf5fc41366d8f983bd686b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c98084b179d27e97ecb3bb34525967d41f8ad1cb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994353"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489609"
 ---
 # <a name="icordebugprocess3setenablecustomnotification-method"></a>ICorDebugProcess3::SetEnableCustomNotification 方法
 啟用和停用指定之型別的自訂偵錯工具通知。  
@@ -44,7 +44,7 @@ HRESULT SetEnableCustomNotification(ICorDebugClass * pClass,
 ## <a name="remarks"></a>備註  
  當`fEnable`設定為`true`，呼叫<xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType>方法觸發程序[ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)回呼。 根據預設，會停用通知因此，偵錯工具必須指定它所知，並想要處理的任何通知類型。 因為[ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)類別的範圍由應用程式定義域、 偵錯工具必須呼叫`SetEnableCustomNotification`程序，如果它要接收通知，跨整個程序中的每個應用程式定義域。  
   
- 從開始[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]，只受支援的通知會跨執行緒相依性通知。  
+ 從.NET Framework 4 開始，唯一支援的通知會是跨執行緒相依性通知。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -53,7 +53,7 @@ HRESULT SetEnableCustomNotification(ICorDebugClass * pClass,
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

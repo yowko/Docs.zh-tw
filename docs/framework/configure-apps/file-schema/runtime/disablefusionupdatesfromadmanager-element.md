@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27c8c1cac68aca1c40826ff549d62d9636d9b0c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c96d5aea150c0dbb55889e9fc26417e7803a155
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704904"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487672"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager > 項目
 指定是否停用預設行為 (亦即允許執行階段主機覆寫應用程式網域的組態設定)。  
@@ -40,7 +40,7 @@ ms.locfileid: "61704904"
   
 |值|描述|  
 |-----------|-----------------|  
-|0|請勿停用覆寫 Fusion 設定的功能。 這是預設行為，從開始[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]。|  
+|0|請勿停用覆寫 Fusion 設定的功能。 這是預設行為，從.NET Framework 4 開始。|  
 |1|停用覆寫 Fusion 設定的功能。 這會還原為舊版.NET Framework 的行為。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -54,7 +54,7 @@ ms.locfileid: "61704904"
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 開頭[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，預設行為是允許<xref:System.AppDomainManager>覆寫組態設定所使用的物件<xref:System.AppDomainSetup.ConfigurationFile%2A>屬性或有<xref:System.AppDomainSetup.SetConfigurationBytes%2A>方法<xref:System.AppDomainSetup>物件會傳遞至您的實作，<xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType>方法，在您的子類別的<xref:System.AppDomainManager>。 針對預設應用程式定義域中，您所變更的設定覆寫所指定的應用程式組態檔的設定。 其他應用程式定義域中，它們會覆寫的組態設定，已傳遞給<xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType>或<xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType>方法。  
+ 從.NET Framework 4 開始，預設行為是以允許<xref:System.AppDomainManager>覆寫組態設定所使用的物件<xref:System.AppDomainSetup.ConfigurationFile%2A>屬性或<xref:System.AppDomainSetup.SetConfigurationBytes%2A>方法<xref:System.AppDomainSetup>物件傳遞至您的實作<xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType>方法，在您的子類別的<xref:System.AppDomainManager>。 針對預設應用程式定義域中，您所變更的設定覆寫所指定的應用程式組態檔的設定。 其他應用程式定義域中，它們會覆寫的組態設定，已傳遞給<xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType>或<xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType>方法。  
   
  您可以將新的組態資訊傳遞，或傳遞 null (`Nothing` Visual Basic 中) 以消除傳入的組態資訊。  
   

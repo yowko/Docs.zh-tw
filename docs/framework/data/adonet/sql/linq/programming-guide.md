@@ -2,12 +2,12 @@
 title: 程式設計手冊
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: 32e62899c13be3f2f08bef7e882d5b9c4d11fda2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 102d2ecba162e19258b707c1c902c29b0a7f2f02
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794442"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490042"
 ---
 # <a name="programming-guide"></a>程式設計手冊
 本節包含如何建立和使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 物件模型 (Object Model) 的相關資訊。 如果您使用 Visual Studio，您也可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]來執行許多相同的工作。  
@@ -40,7 +40,7 @@ ms.locfileid: "61794442"
  [預存程序](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
  包括說明如何使用預存程序 (Stored Procedure) 的主題連結。  
   
- [LINQ 簡介 (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)  
+ [LINQ 簡介 (C#)](../../../../../csharp/programming-guide/concepts/linq/index.md)  
  提供的資源可協助您開始學習 LINQ，若要使用 SQL C#。
 
  [LINQ 簡介 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  

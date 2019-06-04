@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60fcdd902c6acf919e68806ff65e3b8142533280
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: f7a1cf34f63b1ba0dfced8ff23c252f3363723c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456379"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489405"
 ---
 # <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > 項目
 指定執行階段是否會在執行階段自動修復不正確的平台叫用宣告，即使這麼做會使 Managed 和 Unmanaged 程式碼之間的轉換變慢。  
@@ -40,7 +40,7 @@ ms.locfileid: "66456379"
   
 |值|描述|  
 |-----------|-----------------|  
-|`0`|執行階段會使用更快速的 interop 封送處理架構中導入[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]、 其中不會偵測及修正不正確的平台叫用宣告。 這是預設值。|  
+|`0`|執行階段會使用更快速的 interop 封送處理不會偵測.NET Framework 4 中導入的架構，並修正不正確的平台叫用宣告。 這是預設值。|  
 |`1`|執行階段使用的轉換變慢，偵測並修正不正確的平台叫用宣告。|  
   
 ### <a name="child-elements"></a>子元素  

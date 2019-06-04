@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa256fe95013494488ff52258186763fab7a85c9
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: b16f169ca61485cf3031076d32178a9407aa54ff
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456664"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487997"
 ---
 # <a name="code-access-security"></a>程式碼存取安全性
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -34,7 +34,7 @@ ms.locfileid: "66456664"
  .NET Framework 提供一種名為程式碼存取安全性的安全性機制，以協助保護電腦系統免於惡意行動程式碼的傷害、允許來自未知來源的程式碼在受到防護的情況下執行，並協助防止受信任的程式碼有意或無意地危及安全性。 程式碼存取安全性依程式碼的來源和程式碼本身的其他部分，分別給與程式碼不同程度的信任等級。 程式碼存取安全性也會在程式碼上強制執行各種信任層級，這會將必須完全信任才能執行的程式碼數量降到最低。 使用程式碼存取安全性可以減少您的程式碼被惡意或充滿錯誤的程式碼誤用的可能性。 它可減少您的負擔，因為您可以指定一組允許您的程式碼執行的作業。 程式碼存取安全性也有助於減少因為您的程式碼中的安全性弱點而導致的損害。  
   
 > [!NOTE]
->  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中的程式碼存取安全性已有重大變更。 最值得注意的變更已[安全性透明度](../../../docs/framework/misc/security-transparent-code.md)，但也有其他會影響程式碼存取安全性的重大變更。 如需這些變更的資訊，請參閱 <<c0> [ 安全性變更](../../../docs/framework/security/security-changes.md)。  
+>  在.NET Framework 4 中的程式碼存取安全性已對重大變更。 最值得注意的變更已[安全性透明度](../../../docs/framework/misc/security-transparent-code.md)，但也有其他會影響程式碼存取安全性的重大變更。 如需這些變更的資訊，請參閱 <<c0> [ 安全性變更](../../../docs/framework/security/security-changes.md)。  
   
  程式碼存取安全性主要會影響程式庫程式碼和部分信任的應用程式。 程式庫開發人員必須保護其程式碼，不要受到部分信任應用程式的未經授權存取。 部分信任的應用程式是從外部來源 (例如網際網路) 載入的應用程式。 安裝在桌面上或近端內部網路上的應用程式是以完全信任執行。 完全信任應用程式不會影響程式碼存取安全性除非被標示為[安全性透明](../../../docs/framework/misc/security-transparent-code.md)，因為它們是完全受信任。 完全信任應用程式的唯一限制是，標示 <xref:System.Security.SecurityTransparentAttribute> 屬性的應用程式不能呼叫標示 <xref:System.Security.SecurityCriticalAttribute> 屬性的程式碼。 部分信任的應用程式必須在沙箱 (例如，在 Internet Explorer) 中執行，這樣才能套用程式碼存取安全性。 如果您從網際網路下載應用程式，並嘗試從您的桌面執行，您會收到<xref:System.NotSupportedException>訊息：「 嘗試載入組件從網路位置，這導致要沙箱化，在舊版的.NET Framework 組件。 這一版 .NET Framework 預設不會啟用 CAS 原則，所以此載入可能有危險。」 如果您確定可以信任應用程式時，您可以讓它使用可執行以完全信任[ \<loadFromRemoteSources > 項目](../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md)。 如需在沙箱中執行的應用程式的資訊，請參閱[How to:在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)中所述。  
   

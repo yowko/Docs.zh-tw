@@ -2,12 +2,12 @@
 title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 3cc02b4c51b32d0faace4d89d0c6c1f6923dd138
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36e3059869ed048bd7c5294c4f5f5407288610b2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879576"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489935"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
 指定中使用的集合[選取](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)陳述式。  
@@ -46,7 +46,7 @@ LOB.Customers
  如果未指定別名，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 會嘗試依據集合運算式產生別名。  
   
 ### <a name="join-from-clause-item"></a>JOIN FROM 子句項目  
- `JOIN FROM` 子句項目代表介於兩個 `FROM` 子句項目之間的聯結。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援交叉聯結、內部聯結、左右外部連結，以及完整外部連結。 而支援這些聯結的方式與 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 支援的類似。 跟 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 一樣，`FROM` 所包含的兩個 `JOIN` 子句項目必須互為獨立， 也就是不能相互關聯。 `CROSS APPLY` 或 `OUTER APPLY` 適用於這些案例。  
+ `JOIN FROM` 子句項目代表介於兩個 `FROM` 子句項目之間的聯結。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援交叉聯結、內部聯結、左右外部連結，以及完整外部連結。 類似於在 TRANSACT-SQL 中支援的方式支援所有這些聯結。 與 TRANSACT-SQL，這兩個`FROM`子句項目參與`JOIN`必須是獨立的。 也就是不能相互關聯。 `CROSS APPLY` 或 `OUTER APPLY` 適用於這些案例。  
   
 #### <a name="cross-joins"></a>交叉聯結  
  `CROSS JOIN` 查詢運算式可產生兩個集合的笛卡兒乘積，如下列範例所示：  
@@ -77,7 +77,7 @@ LOB.Customers
  前述查詢運算式可對照右集合的每個項目處理左集合的每個項目的組合，其中 `ON` 條件為 true。 如果 `ON` 條件為 false，該運算式仍會對照右項目處理左項目的一個例項，但其結果值會是 null。 如果也對照左項目處理右項目的一個例項，其結果值會是 null。  
   
 > [!NOTE]
->  為了維持與 SQL-92 的相容性，在 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 中 OUTER 關鍵字是選擇性的。 因此，`LEFT JOIN`、`RIGHT JOIN` 和 `FULL JOIN` 是 `LEFT OUTER JOIN`、`RIGHT OUTER JOIN` 和 `FULL OUTER JOIN` 的同義字。  
+>  為了維持與 SQL-92，在 TRANSACT-SQL 中的相容性中 OUTER 關鍵字是選擇性的。 因此，`LEFT JOIN`、`RIGHT JOIN` 和 `FULL JOIN` 是 `LEFT OUTER JOIN`、`RIGHT OUTER JOIN` 和 `FULL OUTER JOIN` 的同義字。  
   
 ### <a name="apply-clause-item"></a>APPLY Clause 子句項目  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 可支援兩種 `APPLY`：`CROSS APPLY` 和 `OUTER APPLY`。  
@@ -93,7 +93,7 @@ LOB.Customers
  `SELECT c, f FROM C AS c OUTER APPLY c.Assoc AS f`  
   
 > [!NOTE]
->  不同於在 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]，在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不需要明確的無巢狀步驟。  
+>  不同於在 TRANSACT-SQL 中則不需要明確無巢狀步驟中針對[!INCLUDE[esql](../../../../../../includes/esql-md.md)]。  
   
 > [!NOTE]
 >  `CROSS` 已引入 `OUTER APPLY` 和 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] 運算子。 在某些案例中，查詢管線可能產生含有 `CROSS APPLY` 和 (或) `OUTER APPLY` 運算子的 Transact-SQL。 因為有些後端提供者，包括 SQL Server 版本早於[!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]，不支援這些運算子，這些後端提供者無法執行這類查詢。  
@@ -137,7 +137,7 @@ from (C as c join D as d) cross apply c.Names as e
 from (C as c join D as d) cross apply c.Names as e  
 ```  
   
- 在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (不同於 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]) 中，`FROM` 子句只會將別名引入範圍內。 對這些集合的資料行 (屬性) 的任何參考都必須以別名限定。  
+ 在  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] （不同於 Amp;#40;transact-SQL&AMP;#41;`FROM`子句只將別名引入範圍內。 對這些集合的資料行 (屬性) 的任何參考都必須以別名限定。  
   
 ## <a name="pulling-up-keys-from-nested-queries"></a>從巢狀查詢取出索引鍵  
  不支援某些需要從巢狀查詢取出索引鍵的查詢類型。 例如，以下是有效的查詢：  

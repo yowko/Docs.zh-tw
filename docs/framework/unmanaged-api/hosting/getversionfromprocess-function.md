@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 452104939acf5de7bb151cba00d65fb6631c98d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3055ac73f15329015f532f42c1f922eab38828cb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985630"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490301"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess 函式
 取得 common language runtime (CLR) 與指定的處理序控制代碼相關聯的版本號碼。  
   
- 此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函式已被取代，在.NET Framework 4。  
   
 ## <a name="syntax"></a>語法  
   
@@ -70,7 +70,7 @@ HRESULT GetVersionFromProcess (
   
  **LIBRARY:** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

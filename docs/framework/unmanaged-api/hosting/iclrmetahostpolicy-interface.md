@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93507ac72b79210dc3a267fea39a6a7b2874916a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 426d77114d3deeff94c39e2f5fc1f2e56e753641
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638679"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490284"
 ---
 # <a name="iclrmetahostpolicy-interface"></a>ICLRMetaHostPolicy 介面
 提供[GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)方法，這個方法會傳回根據原則準則的通用語言執行平台 (CLR) 介面的指標，管理組件、 版本和組態檔。  
@@ -44,7 +44,7 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHostPolicy,
 > [!NOTE]
 >  此介面實際上不會不會載入或啟用 CLR，但只會傳回可用的版本安裝或載入為基礎的慣用的 CLR 版本。  
   
- [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]裝載 API 合併原則，好讓主機的特定需求可能會使用基本功能而不會產生非預期的負面影響。 比方說，許多 MSCorEE.dll 匯出會繫結至特定的 CLR，雖然方法可能會以邏輯方式需要它。 [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)列舉型別提供通用於大部分的主控件的繫結原則。  
+ 裝載 API 的.NET Framework 4 合併原則，好讓主機的特定需求可能會使用基本功能而不會產生非預期的負面影響。 比方說，許多 MSCorEE.dll 匯出會繫結至特定的 CLR，雖然方法可能會以邏輯方式需要它。 [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)列舉型別提供通用於大部分的主控件的繫結原則。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -53,7 +53,7 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHostPolicy,
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

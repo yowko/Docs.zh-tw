@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6819a16f-8656-41af-a54d-dfec0cb66366
-ms.openlocfilehash: e22df1148fab9148c1ca46f27e8603f55f71b34b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e974f643fd1515b701d2e81048725b88055b57dc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607770"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489566"
 ---
 # <a name="cross-table-queries-linq-to-dataset"></a>跨資料表查詢 (LINQ to DataSet)
 除了查詢單一資料表以外，您也可以在 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 中執行跨資料表查詢。 這是藉由使用*聯結*。 聯結是指某個資料來源中的物件與另一個資料來源中共用相同屬性之物件的關聯，例如產品或連絡人識別碼。 在物件導向的程式設計中，物件之間的關聯性相當容易瀏覽，因為每個物件都具有參考另一個物件的成員。 不過，在外部資料庫資料表中，瀏覽關聯性就沒有這麼直接。 資料庫資料表不包含內建關聯性。 在這些情況中，聯結作業可用來比對每個來源的項目。 例如，假設有兩個包含產品資訊和銷售資訊的資料表。此時，您可能會使用聯結作業，針對相同銷售訂單比對銷售資訊和產品。  
   
- [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] Framework 提供兩個聯結運算子<xref:System.Linq.Enumerable.Join%2A>和<xref:System.Linq.Enumerable.GroupJoin%2A>。 這些運算子會執行*等聯結 （equi-join）*： 也就是聯結的比對兩個資料來源只有當索引鍵相等。 (相較之下，[!INCLUDE[tsql](../../../../includes/tsql-md.md)] 支援 `equals` 以外的聯結運算子，例如 `less than` 運算子)。  
+ [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] Framework 提供兩個聯結運算子<xref:System.Linq.Enumerable.Join%2A>和<xref:System.Linq.Enumerable.GroupJoin%2A>。 這些運算子會執行*等聯結 （equi-join）* ： 也就是聯結的比對兩個資料來源只有當索引鍵相等。 (相較之下，TRANSACT-SQL 支援聯結運算子以外`equals`，例如`less than`運算子。)  
   
  在關聯式資料庫詞彙中，<xref:System.Linq.Enumerable.Join%2A> 會實作內部聯結 (Inner Join)。 內部聯結是一種聯結類型，而這種聯結只會傳回在相對資料集內部具有相符項目的物件。  
   

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f66e00c3334aecdf8c653f57e28d1b327c4170e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bd398a5b214ac0046d5fe1965f70eef2eedaa6b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61627998"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490394"
 ---
 # <a name="getcorversion-function"></a>GetCORVersion 函式
 傳回 common language runtime (CLR) 在目前的處理序中執行的版本號碼。  
   
- 此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函式已被取代，在.NET Framework 4。  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,7 +56,7 @@ HRESULT GetCORVersion (
   
  **LIBRARY:** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -2,12 +2,12 @@
 title: 程式碼引號
 description: 深入了解F#程式碼引號，可讓您產生及使用的語言功能F#程式碼運算式以程式設計的方式。
 ms.date: 05/16/2016
-ms.openlocfilehash: 464df5e3fafa683c93fd5fb6e94d24c229903491
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5523d54a271ad1c53c6de85f37f261e0ecf6cced
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641995"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490801"
 ---
 # <a name="code-quotations"></a>程式碼引號
 
@@ -39,9 +39,7 @@ A*加上引號運算式*是F#運算式在程式碼中分隔的方式不編譯一
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet502.fs)]
 
-若要使用的程式碼引號，您必須新增匯入宣告 (使用`open`關鍵字)，開啟[Microsoft.FSharp.Quotations](https://msdn.microsoft.com/library/e9ce8a3a-e00c-4190-bad5-cce52ee089b2)命名空間。
-
-F# PowerPack 支援用於評估和執行F#運算式物件。
+若要評估F#您必須使用引號， [ F#引號評估工具](https://github.com/fsprojects/FSharp.Quotations.Evaluator)。 它提供支援，來評估和執行F#運算式的物件。
 
 ## <a name="expr-type"></a>Expr 型別
 

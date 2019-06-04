@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38adde3cd51a96f0e15ed5a0c539e088f2d3b480
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31e2a075f9202439cd62c81a06528b20c4971656
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701628"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489343"
 ---
 # <a name="timespanlegacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > 項目
 決定是否執行階段會保留舊版行為，在格式化作業與<xref:System.TimeSpan?displayProperty=nameWithType>值。  
@@ -58,7 +58,7 @@ ms.locfileid: "61701628"
 |`runtime`|包含有關執行階段初始化選項的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 開頭[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，則<xref:System.TimeSpan?displayProperty=nameWithType>結構會實作<xref:System.IFormattable>介面，並支援格式化以標準和自訂格式字串的作業。 如果剖析方法遇到不支援的格式規範 」 或 「 格式字串，則會擲回<xref:System.FormatException>。  
+ 從.NET Framework 4<xref:System.TimeSpan?displayProperty=nameWithType>結構實作<xref:System.IFormattable>介面，並支援格式化以標準和自訂格式字串的作業。 如果剖析方法遇到不支援的格式規範 」 或 「 格式字串，則會擲回<xref:System.FormatException>。  
   
  在舊版的.NET Framework 中，<xref:System.TimeSpan>結構未實作<xref:System.IFormattable>和不支援格式字串。 不過，許多開發人員不小心假設<xref:System.TimeSpan>未支援的格式字串集，並使用它們在[格式化作業中的複合](../../../../../docs/standard/base-types/composite-formatting.md)之類的方法與<xref:System.String.Format%2A?displayProperty=nameWithType>。 一般情況下，如果型別會實作<xref:System.IFormattable>並支援格式字串，呼叫格式化方法使用不支援的格式字串通常會擲回<xref:System.FormatException>。 不過，因為<xref:System.TimeSpan>未實作<xref:System.IFormattable>，執行階段略過的格式字串，並改為呼叫<xref:System.TimeSpan.ToString?displayProperty=nameWithType>方法。 這表示，雖然格式字串已不會影響格式化作業，其目前狀態不會造成<xref:System.FormatException>。  
   
@@ -76,13 +76,13 @@ ms.locfileid: "61701628"
 12:30:45  
 ```  
   
- 如果您在 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] (含) 以後版本上執行範例，會出現相當不同的輸出結果：  
+ 這相當不同的輸出如果您在.NET Framework 4 或更新版本上執行的範例：  
   
 ```  
 Invalid Format  
 ```  
   
- 不過，如果您將下列組態檔加入範例的目錄中，然後在 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] (含) 以後版本上執行該範例，則輸出會與在 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 上執行範例時所產生的輸出完全相同。  
+ 不過，如果您將下列組態檔新增至範例的目錄，然後在 .NET Framework 4 或更新版本上執行範例的輸出完全相同上執行時，此範例所產生[!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]。  
   
 ```xml  
 <?xml version ="1.0"?>  

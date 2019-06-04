@@ -2,12 +2,12 @@
 title: 基本序列化技術範例
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 860a33adcb2109ac26045b37631ede37fe1be362
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 803f45db008dc6d12566868ba4a8c61642687d89
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602471"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486396"
 ---
 # <a name="basic-serialization-technology-sample"></a>基本序列化技術範例
 [下載範例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -24,11 +24,11 @@ ms.locfileid: "64602471"
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>若要使用 Visual Studio 建置範例  
   
-1. 開啟 [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]，並巡覽至此範例任一程式設計語言的子目錄。  
+1. 開啟檔案總管並瀏覽至其中一個範例的語言特定子目錄。  
   
 2. 根據您選擇的程式設計語言，按兩下 SerializationCS.sln、SerializationJSL.sln 或 SerializationVB.sln 檔案的圖示，在 Visual Studio 中開啟這個檔案。  
   
-3. 在 [建置] 功能表中，選取 [建置方案]。  
+3. 在 [建置]  功能表中，選取 [建置方案]  。  
   
  這個範例應用程式將建置於預設的 \bin 或 \bin\Debug 子目錄中。  
   

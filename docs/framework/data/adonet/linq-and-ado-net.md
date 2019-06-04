@@ -2,15 +2,15 @@
 title: LINQ 和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: 312eb4b1c0512ca1244daec5bcda3ed864c3646d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bfd5bb845917f9ca8ba3b154a51a946b610ca571
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878322"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489829"
 ---
 # <a name="linq-and-adonet"></a>LINQ 和 ADO.NET
-現今許多商務程式開發人員必須使用兩個 （含） 以上的程式設計語言： 適用於高階語言 （例如 Visual C# 或 Visual Basic）、 商務邏輯和展示層及可與資料庫互動的查詢語言 (例如[!INCLUDE[tsql](../../../../includes/tsql-md.md)])。 因此，開發人員必須精通許多語言才能具有效率，而且也會在開發環境中產生語言不符的情況。 例如，使用資料存取 API 針對資料庫執行查詢的應用程式會使用引號，將查詢指定成字串常值 (String Literal)。 編譯器 (Compiler) 無法讀取這個查詢字串而且不會檢查是否有錯誤，例如語法無效或它所參考的資料行或資料列是否實際存在。 此外，系統無法提供查詢參數的型別檢查和 `IntelliSense` 支援。  
+現今許多商務程式開發人員必須使用兩個 （含） 以上的程式設計語言： 商務邏輯和展示層的高階語言 (例如視覺效果C#或 Visual Basic)，以及互動 （例如 Transact SQL) 資料庫的查詢語言. 因此，開發人員必須精通許多語言才能具有效率，而且也會在開發環境中產生語言不符的情況。 例如，使用資料存取 API 針對資料庫執行查詢的應用程式會使用引號，將查詢指定成字串常值 (String Literal)。 編譯器 (Compiler) 無法讀取這個查詢字串而且不會檢查是否有錯誤，例如語法無效或它所參考的資料行或資料列是否實際存在。 此外，系統無法提供查詢參數的型別檢查和 `IntelliSense` 支援。  
   
  [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 可讓開發人員在其應用程式程式碼中撰寫以集合為基礎的查詢，而不需要使用不同的查詢語言。 您可以針對各種可列舉的資料來源 (亦即，實作 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 介面的資料來源) 撰寫 <xref:System.Collections.IEnumerable> 查詢，而這些資料來源包括記憶體中資料結構、XML 文件、SQL 資料庫和 <xref:System.Data.DataSet> 物件。 雖然這些可列舉的資料來源是以各種不同的方式實作，但是它們全部都會公開 (Expose) 相同的語法和語言建構。 由於您可以用程式語言本身來撰寫查詢，因此不需要使用另一種查詢語言，進而內嵌為編譯器無法了解或驗證的字串常值。 整合的程式設計語言中的查詢也可讓 Visual Studio 程式設計人員可以藉由提供編譯時期型別和語法檢查，可提高生產力和`IntelliSense`。 這些功能會減少查詢偵錯和錯誤修正的需要。  
   

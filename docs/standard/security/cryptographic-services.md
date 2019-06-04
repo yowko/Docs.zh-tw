@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f070419fb8cdca178369bee12545dd1a0d89ea47
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fa05fe1e170a0285df73d179ef39db6301059ac8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592742"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490958"
 ---
 # <a name="cryptographic-services"></a>密碼編譯服務
 
@@ -39,7 +39,7 @@ ms.locfileid: "65592742"
 
 在 .NET Framework 中，在 <xref:System.Security.Cryptography?displayProperty=nameWithType> 類別的命名空間可為您管理許多密碼編譯的細節。 其中某些類別是 Unmanaged Microsoft CryptoAPI 的包裝函式，其他則純粹是 Managed 實作。 您不用是加密專家才能使用這些類別。 當您在其中一個加密演算法類別中建立新執行個體時，會自動產生金鑰以便於使用，而且預設屬性盡可能以安全為主。
 
-此概觀提供了加密方法概要，以及 .NET Framework 所支援的做法，包括在 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]中引入的 ClickOnce 資訊清單、Suite B 和 Cryptography Next Generation (CNG) 支援。
+此概觀提供概要的加密方法和支援的.NET Framework 中，包括 ClickOnce 資訊清單、 Suite B 和 Cryptography Next Generation (CNG) 支援.NET Framework 3.5 中引入的作法。
 
 本概觀包含下列各節：
 
@@ -114,7 +114,7 @@ CBC 加密使用初始化向量 (IV) 來加密純文字的第一個區塊，克�
 
 .NET Framework 會提供以下類別可實作私密金鑰加密演算法：
 
-- <xref:System.Security.Cryptography.AesManaged> (已在 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]中引入)。
+- <xref:System.Security.Cryptography.AesManaged> （在.NET Framework 3.5 中引入）。
 
 - <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
 

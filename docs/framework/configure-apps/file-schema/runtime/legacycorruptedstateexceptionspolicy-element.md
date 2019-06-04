@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8733e11aba30ebea30fc71a5350f76dfd041eb4
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 6191ee2169a85725f0367763874e60c0ceb1d7a4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456409"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489427"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > 項目
 指定 common language runtime 是否允許 managed 程式碼攔截存取違規和其他損毀的狀態例外狀況。  
@@ -56,7 +56,7 @@ ms.locfileid: "66456409"
 ## <a name="remarks"></a>備註  
  在.NET Framework 3.5 和更早版本中，通用語言執行平台允許受管理的程式碼，以擷取損毀處理序狀態已引發的例外狀況。 存取違規是這種類型的例外狀況的範例。  
   
- 開頭[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]受管理的程式碼不會再會攔截這些類型中的例外狀況的`catch`區塊。 不過，您可以覆寫這項變更，並維護兩種方式中的損毀的狀態例外狀況的處理：  
+ 從.NET Framework 4 開始，managed 程式碼不會再會攔截這些類型中的例外狀況的`catch`區塊。 不過，您可以覆寫這項變更，並維護兩種方式中的損毀的狀態例外狀況的處理：  
   
 - 設定`<legacyCorruptedStateExceptionsPolicy>`項目的`enabled`屬性設定為`true`。 此組態設定會套用的 processwide，而且會影響所有方法。  
   

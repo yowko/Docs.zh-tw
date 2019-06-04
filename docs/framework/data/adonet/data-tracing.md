@@ -2,12 +2,12 @@
 title: ADO.NET 中的資料追蹤
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: df49fc7a5f7c437132a4dc24ed7f18492d9e7647
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 120a9e2a817401ba04e0dce8052caecb83115e0e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583774"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489529"
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET 中的資料追蹤
 
@@ -41,7 +41,7 @@ ADO.NET 會傳送用戶端連接 ID 以進行連接作業。 如果連線失敗�
 
 ADO.NET 也會傳送特定執行緒活動 ID。 如果工作階段啟動 TRACK_CAUSALITY 選項啟用擴充的事件工作階段中擷取的活動識別碼。 若要解決與使用中連接相關的效能問題，您可以從用戶端的資料存取追蹤 (`ActivityID`欄位) 取得活動 ID，然後在擴充事件記錄中找到活動 ID。 擴充事件記錄中的活動 ID 是 16 個位元組的 GUID (和用戶端連接 ID 的 GUID 不同)，並且附加一個四位元組的序號。 序列號代表要求在執行緒中的順序，並且表示該執行緒的批次和 RPC 陳述式的相對順序。 啟用資料存取追蹤功能，而且開啟資料存取追蹤組態字詞中的第 18 個位元時，目前會選擇性地傳送 SQL 批次陳述式和 RPC 要求的 `ActivityID`。
 
-下列範例使用 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] 啟動擴充事件工作階段，該工作階段將儲存在信號緩衝區中，而且會記錄從 RPC 和批次作業用戶端傳送的活動 ID。
+以下是使用 TRANSACT-SQL 啟動擴充的事件工作階段，將會儲存在信號緩衝區，並將記錄從 RPC 和批次作業上的用戶端傳送的活動識別碼的範例。
 
 ```sql
 create event session MySession on server

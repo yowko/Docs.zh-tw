@@ -2,12 +2,12 @@
 title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98940c075a01de2ebe061b6dff53917247fc5193
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780441"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489920"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 判斷特定字元 `String` 是否符合指定的模式。  
@@ -49,7 +49,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 > [!NOTE]
 >  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE 運算子和 ESCAPE 子句不可套用到 `System.DateTime` 或 `System.Guid` 值。  
   
- LIKE 支援 ASCII 模式比對和 Unicode 模式比對。 如果所有參數都是 ASCII 字元，便會執行 ASCII 模式比對。 如果有任何引數不是 Unicode 資料類型，所有引數都會轉換成 Unicode，然後執行 Unicode 模式比對。 使用 Unicode 配合 LIKE 時，尾端空白是有意義的；但是對於非 Unicode，尾端空白就無關重要了。 模式字串語法[!INCLUDE[esql](../../../../../../includes/esql-md.md)]的相同[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]。  
+ LIKE 支援 ASCII 模式比對和 Unicode 模式比對。 如果所有參數都是 ASCII 字元，便會執行 ASCII 模式比對。 如果有任何引數不是 Unicode 資料類型，所有引數都會轉換成 Unicode，然後執行 Unicode 模式比對。 使用 Unicode 配合 LIKE 時，尾端空白是有意義的；但是對於非 Unicode，尾端空白就無關重要了。 模式字串語法[!INCLUDE[esql](../../../../../../includes/esql-md.md)]TRANSACT-SQL 相同。  
   
  模式可包括一般字元和萬用字元。 在模式比對期間，一般字元必須與字元 `string` 中所指定的字元完全相符。 不過，萬用字元可以符合任意字元字串片段。 配合萬用字元使用時，LIKE 運算子會比 = 和 != 字串比較運算子更有彈性。  
   

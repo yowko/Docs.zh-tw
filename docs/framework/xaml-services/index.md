@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: c99e44c7d373d050113687753d4f18eca27e0de5
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 61b141642fa3745c3abcf8d0234f70373fa5485e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457393"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491116"
 ---
 # <a name="xaml-services"></a>XAML 服務
 本主題說明的技術集合，稱為.NET Framework XAML 服務的功能。 大部分的服務和描述 Api 位於 System.Xaml，這是隨.NET Framework 4 的.NET core 組件集的組件的組件。 服務包括讀取器和寫入，結構描述類別和結構描述支援的處理站，設定其屬性的類別、 XAML 語言內建支援和其他 XAML 語言功能。  
@@ -38,7 +38,7 @@ ms.locfileid: "66457393"
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET framework XAML 服務和 System.Xaml 中的.NET 架構  
  在舊版的 Microsoft.NET Framework 中，對 XAML 語言功能實作的 Microsoft.NET Framework 建置的架構支援 ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]，Windows Workflow Foundation 和 Windows Communication Foundation (WCF))，因此其行為和 API 所使用的特定架構根據您所使用的各不相同。 這包含 XAML 剖析器和其物件圖形建立機制、 XAML 語言內建函式、 序列化支援等等。  
   
- 在  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，.NET Framework XAML 服務和 System.Xaml 組件定義大部分所需的支援 XAML 語言功能。 這可以包括基底類別的 XAML 讀取器和 XAML 寫入器。 加入不存在於任何架構特定 XAML 實作的.NET Framework XAML 服務的最重要功能是針對 XAML 類型系統表示法。 類型系統表示法呈現 XAML 著重 XAML 功能，但不採取相依性的架構的特定功能以物件導向的方式。  
+ 在.NET Framework 4 中，.NET Framework XAML 服務和 System.Xaml 組件定義大部分所需的支援 XAML 語言功能。 這可以包括基底類別的 XAML 讀取器和 XAML 寫入器。 加入不存在於任何架構特定 XAML 實作的.NET Framework XAML 服務的最重要功能是針對 XAML 類型系統表示法。 類型系統表示法呈現 XAML 著重 XAML 功能，但不採取相依性的架構的特定功能以物件導向的方式。  
   
  XAML 類型系統不受限於標記形式或 XAML 原點; 的執行階段特性也不它受到任何特定的支援型別系統。 XAML 類型系統包含類型、 成員、 XAML 結構描述的內容，XML 層級概念，和其他 XAML 語言概念或 XAML 內建函式的物件的表示。 使用或擴充的 XAML 型別系統可讓您從 XAML 讀取器和 XAML 寫入器，例如類別衍生並擴充到啟用的一種架構、 一種技術或使用應用程式的特定功能的 XAML 表示的功能或XAML 就會發出。 XAML 結構描述內容的概念可讓 XAML 物件寫入器實作，因為通訊透過內容和 XAML 節點中的組件資訊的技術支援型別系統的組合的實際物件 graph 寫入作業來源。 如需有關 XAML 結構描述概念的詳細資訊。 請參閱[預設 XAML 結構描述內容和 WPF XAML 結構描述內容](default-xaml-schema-context-and-wpf-xaml-schema-context.md)。  
   

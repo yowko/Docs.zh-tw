@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cc26f9721e911e05c5b5d4092be21a4e1191c84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab9feaa1c46a45471395fd4c6158490a24882a65
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704748"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489374"
 ---
 # <a name="supportportability-element"></a>\<Supportportability> > 項目
 指定應用程式可以在兩個不同的 .NET Framework 實作中參考相同的組件，方法是停用將組件視為同等的預設行為 (此預設行為是基於應用程式可攜性的考量)。  
@@ -57,7 +57,7 @@ ms.locfileid: "61704748"
 |`assemblyBinding`|包含有關組件版本重新導向和組件位置的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 開頭為[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，支援自動提供的應用程式可以使用其中一個的.NET Framework 中，兩個實作，例如.NET Framework 實作或.NET Framework for Silverlight 實作。 組件繫結器會將兩個實作特定的.NET Framework 組件視為對等項目。 在少數情況下，此應用程式可攜性功能會造成問題。 在這些情況下，`<supportPortability>`項目可以用來停用此功能。  
+ 從.NET Framework 4 開始，支援自動提供給應用程式可以使用其中一個的.NET Framework 中，兩個實作，例如.NET Framework 實作或.NET Framework for Silverlight 實作。 組件繫結器會將兩個實作特定的.NET Framework 組件視為對等項目。 在少數情況下，此應用程式可攜性功能會造成問題。 在這些情況下，`<supportPortability>`項目可以用來停用此功能。  
   
  這類案例之一是具有參考.NET Framework 實作和.NET Framework for Silverlight 實作的特定參考組件的組件。 比方說，撰寫在 Windows Presentation Foundation (WPF) XAML 設計工具可能需要參考這兩個的 WPF 桌面實作，設計工具的使用者介面，並包含在 Silverlight 實作的 WPF 子集。 根據預設，不同的參考會導致編譯器錯誤，因為組件繫結關係會將兩個組件視為對等項目。 這個元素會停用預設行為，並可讓編譯成功。  
   

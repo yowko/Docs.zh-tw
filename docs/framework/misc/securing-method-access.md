@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9d423ef71b76b2dcbbf2812e13850922fb50ac0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8be971cee4aa2ae09745a090396269c80ca62198
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625885"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487955"
 ---
 # <a name="securing-method-access"></a>設定方法存取的安全性
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -60,7 +60,7 @@ public class Class1
  使用這一節中所示的宣告，來防止部分信任程式碼使用特定類別和方法，以及屬性和事件。 您可以藉由將這些宣告套用至類別，來為所有方法、 屬性和事件套用保護，不過請注意存取欄位不會受宣告式安全性影響。 也請注意，連結要求協助防範立即呼叫端，且可能還是會受到引誘攻擊。  
   
 > [!NOTE]
->  新的透明度模型已導入[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中。 [安全性透明程式碼，層級 2](../../../docs/framework/misc/security-transparent-code-level-2.md)模型識別安全程式碼<xref:System.Security.SecurityCriticalAttribute>屬性。 安全性關鍵的程式碼需要呼叫端和繼承者兩者都完全受信任。 從舊版 .NET Framework 程式碼存取安全性規則的組件可以呼叫層級 2 組件。 在此情況下，安全性關鍵屬性會被視為完全信任的連結要求。  
+>  .NET Framework 4 中已引進新的 transparency 模型。 [安全性透明程式碼，層級 2](../../../docs/framework/misc/security-transparent-code-level-2.md)模型識別安全程式碼<xref:System.Security.SecurityCriticalAttribute>屬性。 安全性關鍵的程式碼需要呼叫端和繼承者兩者都完全受信任。 從舊版 .NET Framework 程式碼存取安全性規則的組件可以呼叫層級 2 組件。 在此情況下，安全性關鍵屬性會被視為完全信任的連結要求。  
   
  強式名稱組件中[LinkDemand](../../../docs/framework/misc/link-demands.md)套用至所有可公開存取的方法、 屬性和事件中，以限制它使用完全信任呼叫端。 若要停用此功能，您必須套用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 屬性。 因此，只有不帶正負號的組件或具有此屬性的組件需要明確地標示類別，以排除不受信任的呼叫端您可以使用這些宣告以標記非為不受信任的呼叫端之類型的子集。  
   

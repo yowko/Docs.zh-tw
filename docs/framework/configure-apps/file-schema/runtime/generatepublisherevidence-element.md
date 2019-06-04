@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09a12f062b2fe3ad6e5ac90f0d268bbbeab44876
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a0861436ca727d63cdae58e3222826bf6414610
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674138"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489451"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence > 項目
 指定執行階段是否會建立<xref:System.Security.Policy.Publisher>程式碼存取安全性 (CAS) 的辨識項。  
@@ -57,7 +57,7 @@ ms.locfileid: "61674138"
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  在 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]和更新版本中，這個項目具有不會影響組件載入時間。 如需詳細資訊，請參閱中的 「 安全性原則簡化 」 一節[安全性變更](../../../../../docs/framework/security/security-changes.md)。  
+>  在.NET Framework 4 和更新版本，這個項目會有不會影響組件載入時間。 如需詳細資訊，請參閱中的 「 安全性原則簡化 」 一節[安全性變更](../../../../../docs/framework/security/security-changes.md)。  
   
  Common language runtime (CLR) 會嘗試在載入時間，以建立驗證 Authenticode 簽章<xref:System.Security.Policy.Publisher>組件的辨識項。 不過，根據預設，大部分的應用程式不需要<xref:System.Security.Policy.Publisher>辨識項。 標準的 CAS 原則不會依賴<xref:System.Security.Policy.PublisherMembershipCondition>。 您應該避免與驗證的簽章，除非您的應用程式自訂的 CAS 原則的電腦上執行，或想要滿足需求的相關聯的不必要的啟始成本<xref:System.Security.Permissions.PublisherIdentityPermission>在部分信任環境中。 （對於識別權限需求永遠成功在完全信任環境中）。  
   

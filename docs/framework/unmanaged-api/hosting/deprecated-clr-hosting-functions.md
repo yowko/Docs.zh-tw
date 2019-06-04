@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa84ca0defd173563817673aad183a8b64226d41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dde711f2d626d88fd80009fa83f1198dd9d47810
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905966"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490489"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>已被取代的 CLR 裝載函式
 本節說明的 unmanaged 全域靜態函式舊版裝載 API 的使用。  
   
- 除了基礎結構函式 (`_Cor*`函式)，這僅供.NET Framework 中，這些函式已被取代[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 基礎結構功能除外 (`_Cor*`函式)，這僅供.NET Framework、.NET Framework 4 中，這些函式已被取代。  
   
 ## <a name="activation-functions"></a>啟用函式  
  [ClrCreateManagedInstance 函式](../../../../docs/framework/unmanaged-api/hosting/clrcreatemanagedinstance-function.md)  

@@ -2,12 +2,12 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: d6250871b8e22b73b49a94ee7ae7835f53a7c7cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af704d00800a72b4ab670781c5bb3adec93683cb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797809"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489888"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 指定查詢要傳回的項目。  
@@ -85,7 +85,7 @@ SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C
 SELECT * FROM T1, T2  
 ```  
   
- 現在就按照下列方式以 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 表示前面的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢運算式。  
+ 先前的 TRANSACT-SQL 查詢運算式以表示[!INCLUDE[esql](../../../../../../includes/esql-md.md)]方式如下。  
   
 ```  
 SELECT a1, a2 FROM T1 AS a1, T2 AS a2  

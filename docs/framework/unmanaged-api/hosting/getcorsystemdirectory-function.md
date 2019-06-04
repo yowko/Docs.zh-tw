@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 567e6533a9a9ac718f8b5acac769295c104f7f3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a412bd8410750ec826762e45d70d59c514c61542
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628091"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490380"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory 函式
 傳回 common language runtime (CLR) 載入到處理程序的安裝的目錄。 安裝目錄是完整名稱，例如，"c:\windows\microsoft.net\framework\v1.0.3705 」。  
   
- 此函式已被取代。 被取代[iclrruntimeinfo:: Getruntimedirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md)方法中提供[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函式已被取代。 被取代[iclrruntimeinfo:: Getruntimedirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) .NET Framework 4 中所提供的方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -61,7 +61,7 @@ HRESULT GetCORSystemDirectory (
   
  **LIBRARY:** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03a17e8f30c15e98a350ef558cc1cb6ddf65cade
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cbe9e81f0e8bef36b780878844512a36a5148fec
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584503"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489352"
 ---
 # <a name="systemruntimecaching-element-cache-settings"></a>\<system.runtime.caching > 項目 （快取設定）
 透過組態檔中的 <xref:System.Runtime.Caching.ObjectCache> 項目，提供預設記憶體內 `memoryCache` 實作的組態。  
@@ -51,7 +51,7 @@ ms.locfileid: "65584503"
  這個命名空間中的類別提供如同在 ASP.NET 中使用快取設備的方式，但是不需要在 `System.Web` 組件上的相依性。 如需詳細資訊，請參閱 [Caching in .NET Framework Applications](../../../../../docs/framework/performance/caching-in-net-framework-applications.md)。  
   
 > [!NOTE]
->  輸出快取功能，以及 <xref:System.Runtime.Caching> 命名空間中的類型是 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]中的新功能。  
+>  輸出快取功能與中的型別<xref:System.Runtime.Caching>命名空間是.NET Framework 4 的新功能。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何設定以 <xref:System.Runtime.Caching.MemoryCache> 類別為基礎的快取， 並示範如何設定記憶體快取之 `namedCaches` 項目的執行個體。 您可將 `name` 屬性設為 "default"，以將快取的名稱設定為預設快取項目。  

@@ -2,12 +2,12 @@
 title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: e44f48d040fc77bf702759be0c53a618cd84f9fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3fc916d201ec79c753e06ccfcd6514761f826eb7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607189"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489496"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
 評估一組 `Boolean` 運算式，以便判斷結果。  
@@ -41,7 +41,7 @@ END
  從 `result_expression` 和選擇性 `else_result_expression`的型別集中，傳回優先順序最高的型別。  
   
 ## <a name="remarks"></a>備註  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] CASE 運算式與 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] CASE 運算式很相似。 您可以使用 CASE 運算式來進行一連串條件式測試，以便判斷哪一個運算式會產生適當的結果。 這種 CASE 運算式形式會套用至一個或多個 `Boolean` 運算式，以便判斷正確的結果運算式。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Case 運算式類似於 TRANSACT-SQL 的 case 運算式。 您可以使用 CASE 運算式來進行一連串條件式測試，以便判斷哪一個運算式會產生適當的結果。 這種 CASE 運算式形式會套用至一個或多個 `Boolean` 運算式，以便判斷正確的結果運算式。  
   
  CASE 函式會按照指定的順序針對每個 WHEN 子句評估 `Boolean_expression` ，然後傳回評估為 `result_expression` 之第一個 `Boolean_expression` 的 `true`。 此時，系統就不會評估其餘運算式。 如果沒有任何 `Boolean_expression` 評估為 `true`，Database Engine 就會傳回 `else_result_expression` (如果指定了 ELSE 子句) 或 null 值 (如果沒有指定任何 ELSE 子句)。  
   

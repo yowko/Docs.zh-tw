@@ -2,12 +2,12 @@
 title: 安全性考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 47dbf800852e149f541c512e90a8bafef2077672
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: fe272bada02e6628b6275d2a5282f0def23074c8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879924"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489831"
 ---
 # <a name="security-considerations-entity-framework"></a>安全性考量 (Entity Framework)
 本主題將描述與開發、部署和執行 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式有關的安全性考量。 您也應該遵循建立安全的.NET Framework 應用程式的建議。 如需詳細資訊，請參閱 <<c0> [ 安全性概觀](../../../../../docs/framework/data/adonet/security-overview.md)。  
@@ -92,7 +92,7 @@ ms.locfileid: "65879924"
  查詢概念模型時適用下列安全性考量。 這些考量適用於使用 EntityClient 的 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢以及使用 LINQ、[!INCLUDE[esql](../../../../../includes/esql-md.md)] 的物件，並查詢產生器方法。  
   
 #### <a name="prevent-sql-injection-attacks"></a>避免 SQL 插入式攻擊。  
- 應用程式經常會接受外部輸入 (來自使用者或其他外部代理程式) 以及根據該項輸入執行動作。 任何直接或間接衍生自使用者或外部代理程式的輸入都可能會具有使用目標語言語法以便執行未授權動作的內容。 當目標語言是 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 等結構化查詢語言 (SQL) 時，這種操作方式就稱為 SQL 插入式攻擊。 惡意使用者可能會將命令直接插入查詢中，並且卸除資料庫資料表、導致阻斷服務攻擊，或以其他方式變更正在執行之作業的本質。  
+ 應用程式經常會接受外部輸入 (來自使用者或其他外部代理程式) 以及根據該項輸入執行動作。 任何直接或間接衍生自使用者或外部代理程式的輸入都可能會具有使用目標語言語法以便執行未授權動作的內容。 當目標語言是結構化查詢語言 (SQL)，例如 TRANSACT-SQL，此操作稱為 SQL 插入式攻擊。 惡意使用者可能會將命令直接插入查詢中，並且卸除資料庫資料表、導致阻斷服務攻擊，或以其他方式變更正在執行之作業的本質。  
   
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)] 插入式攻擊：  
   

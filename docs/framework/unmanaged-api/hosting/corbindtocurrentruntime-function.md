@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0acb322fa3348f0bb2d819529a370110580343c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ad977d4d423622ca364f764f91066dff51c5227
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985877"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490615"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime 函式
 載入處理序的 common language runtime (CLR) 使用的 XML 檔案中儲存的版本資訊。 XML 檔案的格式被仿造自標準的應用程式組態檔。 如需組態檔的詳細資訊，請參閱[組態檔結構描述](../../../../docs/framework/configure-apps/file-schema/index.md)。  
   
- 此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。 請參閱[Common Language Runtime 載入處理序](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100))。  
+ 此函式已被取代，在.NET Framework 4。 請參閱[Common Language Runtime 載入處理序](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100))。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ HRESULT CorBindToCurrentRuntime (
   
  **LIBRARY:** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

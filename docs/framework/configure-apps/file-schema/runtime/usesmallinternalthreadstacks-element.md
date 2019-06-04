@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f098065cc005c59ec558ffa1f95202715624e7d
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 70113d98c5a4ab41700f6c9842dba89e2b49c297
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456110"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489323"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > 項目
 藉由指定明確的堆疊大小，它會建立它會在內部使用，而不是使用預設堆疊大小為這些執行緒進行特定執行緒時，使用 common language runtime (CLR)，減少記憶體的要求。  
@@ -41,7 +41,7 @@ ms.locfileid: "66456110"
 |值|描述|  
 |-----------|-----------------|  
 |true|要求明確的堆疊大小。|  
-|False|使用預設堆疊大小。 這是預設值[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]。|  
+|False|使用預設堆疊大小。 這是.NET Framework 4 的預設值。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  

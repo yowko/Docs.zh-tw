@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 310aec9b180b37b7e5f34c4594fd61747ef02d39
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 87ca5470fe5994d34d12a339c2d92a5f3917063d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457054"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490232"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 函式
 載入的 DLL 隨附於.NET Framework 可轉散發套件中指定的版本。  
   
- 此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。 使用[iclrruntimeinfo:: Loadlibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md)方法改為。  
+ 此函式已被取代，在.NET Framework 4。 使用[iclrruntimeinfo:: Loadlibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md)方法改為。  
   
 ## <a name="syntax"></a>語法  
   

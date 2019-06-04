@@ -2,12 +2,12 @@
 title: WHERE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: a8e1061e-0028-4a6f-8f19-b9f48e96c4b8
-ms.openlocfilehash: 02eeaeb8cfa335e5545b26d3d52b91c4e1614629
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 939d4c0ec2c30bc71b22fb65ab36644e063f97de
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879433"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489844"
 ---
 # <a name="where-entity-sql"></a>WHERE (Entity SQL)
 直接之後套用 WHERE 子句[FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)子句。  
@@ -23,7 +23,7 @@ ms.locfileid: "61879433"
  布林型別。  
   
 ## <a name="remarks"></a>備註  
- WHERE 子句的語意與針對 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 所述者相同。 它會將來源集合的項目限制為能通過此條件者，利用這種方式來限制查詢運算式產生的物件。  
+ 如所述，為 TRANSACT-SQL 的 WHERE 子句會有相同的語意。 它會將來源集合的項目限制為能通過此條件者，利用這種方式來限制查詢運算式產生的物件。  
   
 ```  
 select c from cs as c where e  

@@ -2,12 +2,12 @@
 title: Web 服務泛型序列化技術範例
 ms.date: 03/30/2017
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-ms.openlocfilehash: 6549dc1c3d428a5fb74fe0212549ef3f3f6510d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4aa9c21fa2bafce16e93a5d2479b17946dba41b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018043"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490763"
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Web 服務泛型序列化技術範例
 [下載範例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
@@ -16,11 +16,11 @@ ms.locfileid: "62018043"
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>若要使用 Visual Studio 建置範例  
   
-1. 開啟 Visual Studio，然後從 [檔案] 功能表中選取 [新網站]。  
+1. 開啟 Visual Studio，然後從 [檔案]  功能表中選取 [新網站]  。  
   
-2. 在 [新網站] 對話方塊的左窗格中選取想要的程式設計語言，再從右窗格中選取 [ASP.NET Web 服務]。  
+2. 在 [新網站]  對話方塊的左窗格中選取想要的程式設計語言，再從右窗格中選取 [ASP.NET Web 服務]  。  
   
-3. 按一下 [瀏覽] 並巡覽至 \CS\GenericsService 子目錄。  
+3. 按一下 [瀏覽]  並巡覽至 \CS\GenericsService 子目錄。  
   
 4. 選取 Service.asmx，在 Visual Studio 中開啟該檔案。  
   
@@ -32,27 +32,27 @@ ms.locfileid: "62018043"
 > [!NOTE]
 >  以下為建置範例的必要步驟。  
   
-1. 開啟 [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]，巡覽至 \CS 子目錄。  
+1. 開啟檔案總管並巡覽至 \CS 子目錄。  
   
-2. 以滑鼠右鍵按一下 GenericsService 子目錄的圖示，然後選取 [共用和安全性]。  
+2. 以滑鼠右鍵按一下 GenericsService 子目錄的圖示，然後選取 [共用和安全性]  。  
   
-3. 在 [Web 共用] 索引標籤中，選取 [共用此資料夾]。  
+3. 在 [Web 共用]  索引標籤中，選取 [共用此資料夾]  。  
   
 > [!IMPORTANT]
->  記下 [別名] 窗格中列出的虛擬目錄名稱，因為執行範例時會需要這個名稱。  
+>  記下 [別名]  窗格中列出的虛擬目錄名稱，因為執行範例時會需要這個名稱。  
   
 ### <a name="to-build-the-sample-using-internet-information-services"></a>若要使用網際網路資訊服務建置範例  
   
-1. 開啟 [網際網路資訊服務] 管理嵌入式管理單元，並展開 [網站]。  
+1. 開啟 [網際網路資訊服務]  管理嵌入式管理單元，並展開 [網站]  。  
   
-2. 以滑鼠左鍵按一下 [預設的網站]，然後依序選取 [新增]、[虛擬目錄] 以建立 [虛擬目錄建立精靈]。  
+2. 以滑鼠左鍵按一下 [預設的網站]  ，然後依序選取 [新增]  、[虛擬目錄]  以建立 [虛擬目錄建立精靈]  。  
   
-3. 按 [下一步]，輸入虛擬目錄的公用別名，再按 [下一步]。  
+3. 按 [下一步]  ，輸入虛擬目錄的公用別名，再按 [下一步]  。  
   
-4. 輸入儲存範例所在目錄的路徑 (通常是 \CS\GenericsService 子目錄)，然後按 [下一步]。 按 [下一步] 完成精靈。  
+4. 輸入儲存範例所在目錄的路徑 (通常是 \CS\GenericsService 子目錄)，然後按 [下一步]  。 按 [下一步]  完成精靈。  
   
 > [!IMPORTANT]
->  記下 [別名] 窗格中列出的虛擬目錄名稱，因為執行範例時會需要這個名稱。  
+>  記下 [別名]  窗格中列出的虛擬目錄名稱，因為執行範例時會需要這個名稱。  
   
 ### <a name="to-run-the-sample"></a>若要執行範例  
   

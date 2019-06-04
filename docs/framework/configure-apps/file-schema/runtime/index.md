@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21c24040f7d093aa72738957316a4219539510c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: caef2a1d1230f020389c6b86015702075b9fc582
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704813"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489465"
 ---
 # <a name="runtime-settings-schema"></a>執行階段設定結構描述
 執行階段設定會由通用語言執行平台使用，以設定目標是 .NET Framework 的應用程式。  
@@ -121,7 +121,7 @@ ms.locfileid: "61704813"
 |[\<relativeBindForResources>](../../../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md)|最佳化附屬組件的探查。|  
 |[\<remove>](../../../../../docs/framework/configure-apps/file-schema/runtime/remove-element-for-namedcaches.md)|從記憶體快取的 `namedCaches` 集合移除具名快取項目。|  
 |[\<runtime>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)|包含有關組件繫結和記憶體回收行為的資訊。|  
-|[\<shadowCopyTimeStampVerification>](../../../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)|指定陰影複製是否使用在 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 引進的預設啟動行為，或是要還原成舊版 .NET Framework 的啟動行為。|  
+|[\<shadowCopyTimeStampVerification>](../../../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)|指定陰影複製是否使用.NET Framework 4 中導入的預設啟動行為，或會還原為舊版.NET Framework 的啟動行為。|  
 |[\<supportPortability>](../../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)|指定應用程式可以在兩個不同的 .NET Framework 實作中參考相同的組件，方法是停用將組件視為同等的預設行為 (此預設行為是基於應用程式可攜性的考量)。|  
 |[\<system.runtime.caching>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|提供預設記憶體內部物件快取的組態資訊。|  
 |[<Thread_UseAllCpuGroups>](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)|指定執行階段是否會將 Managed 執行緒分散到所有 CPU 群組。|  

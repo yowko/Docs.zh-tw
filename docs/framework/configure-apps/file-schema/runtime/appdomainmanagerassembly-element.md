@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fe1dfbd62a6967ae51031fa12f80e9c5563dc44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff8c91680a0c3049fa9bc2f7e9c1bf3f654a19b9
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704917"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487768"
 ---
 # <a name="appdomainmanagerassembly-element"></a>\<appDomainManagerAssembly > 項目
 針對處理序中的預設應用程式網域，指定提供應用程式網域管理員的組件。  
@@ -58,7 +58,7 @@ ms.locfileid: "61704917"
   
  如需組件的顯示名稱的格式，請參閱<xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>屬性。  
   
- 這個組態項目是僅適用於[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]和更新版本。  
+ 這個組態項目是僅適用於.NET Framework 4 及更新版本。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何指定應用程式定義域管理員，預設應用程式定義域的處理程序會`MyMgr`輸入`AdMgrExample`組件。  

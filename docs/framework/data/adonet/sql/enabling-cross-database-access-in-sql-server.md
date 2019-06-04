@@ -2,12 +2,12 @@
 title: 在 SQL Server 中啟用跨資料庫存取
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: ef018566c5d3881d2f9b77dad932712d1fb11841
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 50e2a9149074d2d29ff2e17fa2a339bd7820b984
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583691"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490089"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>在 SQL Server 中啟用跨資料庫存取
 當一個資料庫中的程序是依照另一個資料庫中的物件而定時，就會發生跨資料庫擁有權鏈結。 跨資料庫擁有權鏈結的運作方式與單一資料庫內的擁有權鏈結相同，但未中斷的擁有權鏈結需要所有的物件擁有者都對應至相同的登入帳戶。 如果來源資料庫中的來源物件以及目標資料庫中的目標物件是由相同的登入帳戶所擁有，則 SQL Server 不會檢查目標物件上的權限。  
@@ -20,7 +20,7 @@ ms.locfileid: "64583691"
 - 具有 CREATE DATABASE 權限的使用者可以建立新的資料庫及附加現有的資料庫。 如果啟用跨資料庫擁有權鏈結，這些使用者即可從其新建立或附加的資料庫，存取其他資料庫中他們可能並不擁有權限的物件。  
   
 ## <a name="enabling-cross-database-ownership-chaining"></a>啟用跨資料庫擁有權鏈結  
- 只有在可以完全信任高權限使用者的環境中，才應該啟用跨資料庫擁有權鏈結。 這項功能可在所有資料庫的安裝期間設定，或者使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 命令 `sp_configure` 和 `ALTER DATABASE` 選擇性地針對特定的資料庫設定。  
+ 只有在可以完全信任高權限使用者的環境中，才應該啟用跨資料庫擁有權鏈結。 這項功能可在所有資料庫的安裝期間設定，或者使用 Transact-SQL 命令 `sp_configure` 和 `ALTER DATABASE` 選擇性地針對特定的資料庫設定。  
   
  若要選擇性地設定跨資料庫擁有權鏈結，請使用 `sp_configure` 關閉伺服器的這項功能。 然後使用具有 SET DB_CHAINING ON 的 ALTER DATABASE 命令，僅針對需要此功能的資料庫設定跨資料庫擁有權鏈結。  
   

@@ -2,12 +2,12 @@
 title: 在 Windows 事件追蹤中追蹤事件
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 129b82da068251d87bd9b0ca029b7e5a1c274936
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3afc04fec996f4e24eb6e5ad771886480cd9cb9
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004805"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491051"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>在 Windows 事件追蹤中追蹤事件
 此範例示範如何啟用 Windows Workflow Foundation (WF) 工作流程服務上追蹤，以及發出追蹤事件的事件追蹤的 Windows (ETW)。 為了將工作流程追蹤記錄發出到 ETW，此範例會使用 ETW 追蹤參與者 (<xref:System.Activities.Tracking.EtwTrackingParticipant>)。
@@ -47,7 +47,7 @@ ms.locfileid: "62004805"
 
      根據預設，此服務會接聽連接埠 53797 (http://localhost:53797/SampleWorkflowService.xamlx)。
 
-4. 使用 [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] 開啟 WCF 測試用戶端。
+4. 使用檔案總管開啟 WCF 測試用戶端。
 
      WCF 測試用戶端 (WcfTestClient.exe) 位於\<Visual Studio 2010 的安裝資料夾 > \Common7\IDE\ 資料夾。
 

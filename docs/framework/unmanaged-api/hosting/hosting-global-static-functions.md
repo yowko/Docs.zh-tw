@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 4e4ad69d-9343-4f6a-aed8-fe0335a3b979
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd0bdee6127aca259ae5ca1fe1aa8ecc574662b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10e01dfd70d40ecfe6b1c9c36da8923734fb9220
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775215"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490297"
 ---
 # <a name="hosting-global-static-functions"></a>裝載全域靜態函式
 本節說明.NET Framework 裝載 Api 所使用的 unmanaged 裝載函式。  
@@ -23,7 +23,7 @@ ms.locfileid: "61775215"
  描述.NET Framework 4 中引入的函式。  
   
  [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
- 說明在.NET Framework 1.1 和 2.0 中已被取代中引進的函式[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 描述.NET Framework 1.1 和 2.0，不再支援的.NET Framework 4 中引入的函式。  
   
 ## <a name="related-sections"></a>相關章節  
  [裝載 Coclass](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  

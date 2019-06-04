@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e9073e48141bc6895d00c773c2d3d2cfeb260f6
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 26fed0a10b9a25f25a580c7ac9a468cbedeb3671
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456469"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489467"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads > 項目
 指定 PerfCounter.dll 是否在 .NET Framework 1.1 版的應用程式中使用 CategoryOptions 登錄設定，以決定要從類別特定共用記憶體或從全域記憶體載入效能計數器資料。  
@@ -55,7 +55,7 @@ enabled="true|false"/>
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 在之前的.NET Framework 的版本中[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，PerfCounter.dll 載入的版本對應到已載入處理序中的執行階段。 如果電腦有兩個.NET Framework 1.1 版和[!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)]安裝，.NET Framework 1.1 應用程式會載入 PerfCounter.dll.NET Framework 1.1 版。 從.NET Framework 4 開始，載入 PerfCounter.dll 已安裝最新版本。 這表示如果在電腦上安裝.NET Framework 4 的.NET Framework 1.1 應用程式會載入 PerfCounter.dll 的.NET Framework 4 版本。  
+ 在.NET Framework 4 之前的.NET Framework 版本中，PerfCounter.dll 載入的版本會對應至執行階段載入處理序中。 如果電腦有兩個.NET Framework 1.1 版和[!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)]安裝，.NET Framework 1.1 應用程式會載入 PerfCounter.dll.NET Framework 1.1 版。 從.NET Framework 4 開始，載入 PerfCounter.dll 已安裝最新版本。 這表示如果在電腦上安裝.NET Framework 4 的.NET Framework 1.1 應用程式會載入 PerfCounter.dll 的.NET Framework 4 版本。  
   
  從.NET Framework 4 中，使用效能計數器時，PerfCounter.dll 會檢查每個提供者，以判斷它是否應該從類別特定共用的記憶體或全域共用的記憶體讀取的 CategoryOptions 登錄項目。 .NET Framework 1.1 PerfCounter.dll 不會讀取該登錄項目，因為它並不知道特定類別的共用記憶體中;它一律會從全域共用記憶體讀取。  
   

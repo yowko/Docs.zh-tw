@@ -2,12 +2,12 @@
 title: 版本相容序列化技術範例
 ms.date: 03/30/2017
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
-ms.openlocfilehash: d7dfcf7548571d29032495ca8be96db70f2336fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c30c39848be02785b6b808ecf4af711c0c9e95d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62028261"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483004"
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>版本相容序列化技術範例
 [下載範例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
@@ -22,7 +22,7 @@ ms.locfileid: "62028261"
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>若要使用 Visual Studio 建置範例  
   
-1. 開啟 [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]，並巡覽至此範例任一程式設計語言的子目錄。  
+1. 開啟檔案總管並瀏覽至其中一個範例的語言特定子目錄。  
   
 2. 巡覽至您在前一個步驟選取之目錄的 [V1 Application] 子目錄。  
   

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ee737f4c6d34e77996f5ba08ce4d84132a99238
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cbc77195c3fe2581475d768b59993de274ac06a6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985656"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490324"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion 函式
 取得 common language runtime (CLR) 所指定的應用程式要求的版本號碼。 如果未安裝該版本，取得要求的版本之前已安裝最新版本。  
   
- 此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函式已被取代，在.NET Framework 4。  
   
 ## <a name="syntax"></a>語法  
   
@@ -69,7 +69,7 @@ HRESULT GetRequestedRuntimeVersion (
   
  **LIBRARY:** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

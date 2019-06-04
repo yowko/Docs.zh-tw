@@ -2,12 +2,12 @@
 title: 傳輸：自訂跨 UDP 異動範例
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: ff53890da73d81165da6b0e845360424ec869a87
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a7b0c4e9ea73fa952710f2b415082b56062dad0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637129"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483096"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>傳輸：自訂跨 UDP 異動範例
 此樣本根據[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Windows Communication Foundation (WCF) 中的範例[傳輸擴充性](../../../../docs/framework/wcf/samples/transport-extensibility.md)。 它會延伸 UDP 傳輸範例以支援自訂異動流程，並示範 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 屬性的使用方式。  
@@ -178,7 +178,7 @@ if (transaction != null)
   
 1. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-2. 目前的範例應該類似於執行[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。 若要執行，請使用 UdpTestService.exe 啟動服務。 如果您是執行 [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]，則必須使用更高的權限來啟動服務。 若要這樣做，請以滑鼠右鍵按一下 UdpTestService.exe 中的[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]，按一下 **系統管理員身分執行**。  
+2. 目前的範例應該類似於執行[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。 若要執行，請使用 UdpTestService.exe 啟動服務。 如果您是執行 [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]，則必須使用更高的權限來啟動服務。 若要這樣做，請以滑鼠右鍵按一下 UdpTestService.exe 檔案總管 中的，按一下**系統管理員身分執行**。  
   
 3. 此程序產生以下輸出。  
   

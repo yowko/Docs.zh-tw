@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac2a5d7f72479d5b5f4180de4452143c4dbc8127
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 1fd594ef1fea4c8723965ad483a5a124892bcf00
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456622"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487868"
 ---
 # <a name="security-transparent-code-level-1"></a>安全性透明程式碼，層級 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 透明度可協助開發人員撰寫更安全的 .NET Framework 程式庫，該程式庫會向部分信任的程式碼公開功能。 層級 1 透明度是在 .NET Framework 2.0 版中所引入的，而且主要只在 Microsoft 中使用。 開頭[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，您可以使用[層級 2 透明度](../../../docs/framework/misc/security-transparent-code-level-2.md)。 不過，以便您可以識別必須以舊版安全性規則執行的舊版程式碼已保留層級 1 透明度。  
+ 透明度可協助開發人員撰寫更安全的 .NET Framework 程式庫，該程式庫會向部分信任的程式碼公開功能。 層級 1 透明度是在 .NET Framework 2.0 版中所引入的，而且主要只在 Microsoft 中使用。 從.NET Framework 4 開始，您可以使用[層級 2 透明度](../../../docs/framework/misc/security-transparent-code-level-2.md)。 不過，以便您可以識別必須以舊版安全性規則執行的舊版程式碼已保留層級 1 透明度。  
   
 > [!IMPORTANT]
 >  您應該僅針對相容性指定層級 1 透明度；也就是說，您應該僅針對使用 .NET Framework 3.5 或更早版本 (使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 或沒有使用透明度模型) 所開發的程式碼指定層級 1。 例如，對於允許來自部分信任呼叫端 (APTCA) 之呼叫的 .NET Framework 2.0 組件，請使用層級 1 透明度。 開發適用於.NET Framework 4 的程式碼，請一律使用層級 2 透明度。  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71cc69eba17de8465cc7999f334c724e4ec14e7d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad0ae023215eeb1f42f9351369ee77d41d537b88
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704995"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487724"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring > 項目
 針對處理序存留期間，指示執行階段收集處理序中所有應用程式網域的統計資料。  
@@ -59,7 +59,7 @@ ms.locfileid: "61704995"
   
  若要啟用監視從 managed 程式碼，請使用<xref:System.AppDomain.MonitoringIsEnabled%2A>屬性。  
   
- 這個組態項目是僅適用於[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]和更新版本。  
+ 這個組態項目是僅適用於.NET Framework 4 及更新版本。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何啟用應用程式定義域資源監視。  

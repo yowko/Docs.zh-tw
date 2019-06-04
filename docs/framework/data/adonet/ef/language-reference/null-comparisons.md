@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: a9e519fb8b2ca021d66adb23659d83efc571afae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3bbb55ec65df1af776779682d307a67034e34b3
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760424"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489895"
 ---
 # <a name="null-comparisons"></a>Null 比較
 資料來源中的 `null` 值表示該值未知。 在 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢中，您可以檢查 null 值，以便讓某些計算或比較只會在包含有效或非 null 資料的資料列上執行。 不過，CLR null 語意 (Semantics) 可能與資料來源的 null 語意不同。 大部分的資料庫都使用三值邏輯來處理 null 比較， 也就是針對 null 值的比較不會評估`true`或是`false`，其評估結果為`unknown`。 通常，這是 ANSI NULLS 的實作，可是實際情況不一定如此。  
   
- 根據預設，SQL Server 中 null 等於 null 的比較會傳回 null 值。 在下列範例中，結果集會排除 `ShipDate` 為 null 的資料列，而 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 陳述式則會傳回 0 個資料列。  
+ 根據預設，SQL Server 中 null 等於 null 的比較會傳回 null 值。 在下列範例中，資料列位置`ShipDate`是 null 會排除的結果集，以及 TRANSACT-SQL 陳述式會傳回 0 個資料列。  
   
 ```  
 -- Find order details and orders with no ship date.  

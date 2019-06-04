@@ -2,12 +2,12 @@
 title: 移轉考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 4e3410c62ba2fb9b8cc3dd0c6aa80707e03793fd
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 0fafa786805a14d9adc3523a5eb876e7e5b0e9c5
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880073"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489876"
 ---
 # <a name="migration-considerations-entity-framework"></a>移轉考量 (Entity Framework)
 ADO.NET Entity Framework 會提供現有的應用程式的多項優點。 其中一項最重要的優勢，就是使用概念模型將應用程式所使用的資料結構從資料來源中的結構描述分隔。 這樣能方便您以後對儲存體模型或資料來源本身進行變更，而不必對應用程式進行補償變更。 針對使用的優點的詳細資訊[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，請參閱 < [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)並[Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)。  
@@ -96,7 +96,7 @@ ADO.NET Entity Framework 會提供現有的應用程式的多項優點。 其中
   
   [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 不支援原生 XML 資料型別， 亦即將實體對應至具有 XML 資料行的資料表時，XML 資料行的對等實體屬性會是字串。 您可以中斷物件的連接，而且將其序列化為 XML。 如需詳細資訊，請參閱 <<c0> [ 序列化的物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100))。  
   
-  如果應用程式需要有查詢 XML 資料的功能，您還是可以使用 LINQ to XML 來善用 LINQ 查詢的優勢。 如需詳細資訊，請參閱 < [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)或是[LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)。  
+  如果應用程式需要有查詢 XML 資料的功能，您還是可以使用 LINQ to XML 來善用 LINQ 查詢的優勢。 如需詳細資訊，請參閱 < [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)或是[LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)。  
   
 - 維護狀態的應用程式。  
 

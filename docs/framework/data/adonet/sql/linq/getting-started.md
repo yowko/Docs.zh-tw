@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: db8a557a-fef8-4f4f-bb91-8cff7250ee25
-ms.openlocfilehash: 506257c13bbaada98dffa9d3a15c834037c1d971
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f9592ecebdaaac7cdec60ce12e99b910275d553
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038554"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490062"
 ---
 # <a name="getting-started"></a>快速入門
 藉由使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，您可以使用[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]技術來存取 SQL 資料庫，就如同存取記憶體中的集合。  
@@ -32,6 +32,6 @@ ms.locfileid: "62038554"
 ## <a name="see-also"></a>另請參閱
 
 - [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
-- [LINQ 簡介 (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)
+- [LINQ 簡介 (C#)](../../../../../csharp/programming-guide/concepts/linq/index.md)
 - [LINQ 簡介 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
 - [LINQ to SQL 物件模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)

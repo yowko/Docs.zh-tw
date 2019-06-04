@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aceb0179c6ee52699370480041af62262eff6bc2
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 89d71b3dfa71438b72fe622a491141364db25f52
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456925"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490649"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 和 4.5 中新增的 CLR 裝載介面
-本節說明 unmanaged 介面主機可用來將 common language runtime (CLR) 整合在[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]，.NET Framework 4.5 中，並在其應用程式的更新版本。 這些介面提供的主機，若要設定及執行階段載入處理序的方法。  
+本節說明 unmanaged 介面主機可以使用整合的 common language runtime (CLR) 中.NET Framework 4、.NET Framework 4.5 和更新版本到其應用程式。 這些介面提供的主機，若要設定及執行階段載入處理序的方法。  
   
  從.NET Framework 4 開始，所有的裝載介面具有下列特性：  
   

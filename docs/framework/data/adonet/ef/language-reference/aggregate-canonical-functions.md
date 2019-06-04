@@ -2,12 +2,12 @@
 title: 彙總標準函式
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: f5d3584c6e9d35c9eb69b4f54cad45187416ee59
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2738d649190b088c34272de5b3e8732d87811a59
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607449"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489505"
 ---
 # <a name="aggregate-canonical-functions"></a>彙總標準函式
 
@@ -224,7 +224,7 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 以群組為基礎之彙總內部的運算式是在 WHERE 子句運算式可見的名稱解析範圍內評估。
 
-依照[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]，群組為基礎的彙總也可以指定 ALL 或 DISTINCT 修飾詞。 如果有指定 DISTINCT 修飾詞，系統就會在計算彙總之前，從彙總輸入集合中刪除重複項目。 如果指定的是 ALL 修飾詞 (或沒有指定任何修飾詞)，就不會執行重複項目刪除作業。
+TRANSACT-SQL，如同以群組為基礎的彙總也可以指定 ALL 或 DISTINCT 修飾詞。 如果有指定 DISTINCT 修飾詞，系統就會在計算彙總之前，從彙總輸入集合中刪除重複項目。 如果指定的是 ALL 修飾詞 (或沒有指定任何修飾詞)，就不會執行重複項目刪除作業。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1e812445c931d45163fefdc4406b27a1fbd5d82
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b45efb634ca9b88768d6e30884085f28ad17b7c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634844"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490596"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx 函式
 可讓 unmanaged 主應用程式將 common language runtime (CLR) 載入程序。 [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)並`CorBindToRuntimeEx`函式會執行相同的作業，但`CorBindToRuntimeEx`函式可讓您設定旗標指定 CLR 的行為。  
   
- 此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函式已被取代，在.NET Framework 4。  
   
  此函數會採用一組參數，可讓主應用程式執行下列作業：  
   
@@ -137,7 +137,7 @@ HRESULT CorBindToRuntimeEx (
   
  **LIBRARY:** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

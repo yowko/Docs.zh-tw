@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 79264687b3a031fcf02ce65a907c7f21e216fbc9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41f29673622fa7918238dd014b97ee3cf0766257
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622757"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486213"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments 指示詞
 限制的傳遞類型泛型型別之建構函式的泛型引的數。  
@@ -79,7 +79,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 <my:BusinessObject x:TypeArguments="x:String,x:Int32"/>  
 ```  
   
- 在 WPF 中，並為目標時[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，您可以使用 XAML 2009 功能，並搭配`x:TypeArguments`但只在鬆散的 XAML (未標記編譯的 XAML)。 WPF 之編譯標記的 XAML 和 BAML 形式的 XAML 目前不支援 XAML 2009 關鍵字和功能。 如果您需要以標記編譯 XAML，您必須在 「 XAML 2006 和 WPF 泛型 XAML 使用方式 」 一節所述的限制下進行操作。  
+ 在 WPF 中並以.NET Framework 4 為目標時，您可以使用 XAML 2009 功能，並搭配`x:TypeArguments`但只在鬆散的 XAML (未標記編譯的 XAML)。 WPF 之編譯標記的 XAML 和 BAML 形式的 XAML 目前不支援 XAML 2009 關鍵字和功能。 如果您需要以標記編譯 XAML，您必須在 「 XAML 2006 和 WPF 泛型 XAML 使用方式 」 一節所述的限制下進行操作。  
   
 ## <a name="see-also"></a>另請參閱
 

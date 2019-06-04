@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
-ms.openlocfilehash: f30974e020545a69ad20c03bc05ac6a28f289b01
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf40d0963c29209d4e8f7e4850f0c99b6702a6bb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780246"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487632"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>異動和大量複製作業
 大量複製作業可做為隔離作業或多步驟交易的其中一個執行步驟。 第二種選項可讓您在同一異動內執行多個大量複製作業，並執行其他資料庫作業 (例如插入、更新及刪除)，同時仍然能夠認可或回復整個異動。  
@@ -25,7 +25,7 @@ ms.locfileid: "61780246"
  執行大量複製作業時，其 <xref:System.Data.SqlClient.SqlBulkCopy.BatchSize%2A> 屬性會設定為 10。 當作業遇到無效的資料列時，系統會擲回例外狀況 (Exception)。 在第一個範例中，大量複製作業是非交易的。 發生錯誤前複製的所有批次作業都會得到認可；處理任何其他批次作業之前，會復原包含重複索引鍵的批次作業，並中止大量複製作業。  
   
 > [!NOTE]
->  此範例不會執行，除非您已建立的工作資料表中所述[大量複製範例設定](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。 此程式碼可示範使用語法**SqlBulkCopy**只。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，就更容易且更快速地使用[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT`陳述式來複製資料。  
+>  此範例不會執行，除非您已建立的工作資料表中所述[大量複製範例設定](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。 此程式碼可示範使用語法**SqlBulkCopy**只。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，就更容易且更快速地使用 Transact SQL`INSERT … SELECT`陳述式來複製資料。  
   
  [!code-csharp[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/VB/source.vb#1)]  
@@ -41,7 +41,7 @@ ms.locfileid: "61780246"
  下列主控台應用程式類似於先前的範例，但有一個例外狀況：在此範例中，大量複製作業會管理其本身的交易。 發生錯誤前複製的所有批次作業都會得到認可；處理任何其他批次作業之前，會復原包含重複索引鍵的批次作業，並中止大量複製作業。  
   
 > [!IMPORTANT]
->  此範例不會執行，除非您已建立的工作資料表中所述[大量複製範例設定](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。 此程式碼可示範使用語法**SqlBulkCopy**只。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，就更容易且更快速地使用[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT`陳述式來複製資料。  
+>  此範例不會執行，除非您已建立的工作資料表中所述[大量複製範例設定](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。 此程式碼可示範使用語法**SqlBulkCopy**只。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，就更容易且更快速地使用 Transact SQL`INSERT … SELECT`陳述式來複製資料。  
   
  [!code-csharp[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/VB/source.vb#1)]  
@@ -54,7 +54,7 @@ ms.locfileid: "61780246"
  下列主控台應用程式類似於第一個 (非異動) 範例，但有一個例外狀況：在此範例中，大量複製作業包含在較大的外部異動中。 當發生主索引鍵違規錯誤時，會復原整個交易，並且不會將任何資料列加入目標資料表中。  
   
 > [!IMPORTANT]
->  此範例不會執行，除非您已建立的工作資料表中所述[大量複製範例設定](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。 此程式碼可示範使用語法**SqlBulkCopy**只。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，就更容易且更快速地使用[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT`陳述式來複製資料。  
+>  此範例不會執行，除非您已建立的工作資料表中所述[大量複製範例設定](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。 此程式碼可示範使用語法**SqlBulkCopy**只。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，就更容易且更快速地使用 Transact SQL`INSERT … SELECT`陳述式來複製資料。  
   
  [!code-csharp[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/VB/source.vb#1)]  

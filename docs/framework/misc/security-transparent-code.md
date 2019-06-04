@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60f2856bea79f36beb3c467158114fa78d99e09a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 44003cbd0f13d2665c5b753454689c10546325b7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456496"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487841"
 ---
 # <a name="security-transparent-code"></a>安全性透明的程式碼
 
@@ -23,7 +23,7 @@ ms.locfileid: "66456496"
 安全性牽涉到三個互動式的部分：沙箱、權限與強化。 沙箱是指建立隔離定義域的做法，其中將某些程式碼視為完全信任，且限制其他程式碼為沙箱授權集中的權限。 在沙箱授權集內部執行的應用程式程式碼會被視為透明的。也就是說，它無法執行任何可能會影響安全性的作業。 沙箱授權集是依照辨識項 (<xref:System.Security.Policy.Evidence> 類別) 決定的。 辨識項會識別沙箱所需的特定權限，以及可建立的沙箱種類。 強化是指讓透明程式碼只能在其授權集內部執行。
 
 > [!IMPORTANT]
-> 安全性原則是舊版 .NET Framework 中的重要項目。 從開始[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，安全性原則是已過時。 安全性原則的刪除獨立於安全性透明規則。 這項變更影響的相關資訊，請參閱[程式碼存取安全性原則相容性和移轉](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md)。
+> 安全性原則是舊版 .NET Framework 中的重要項目。 從.NET Framework 4 開始，安全性原則是已過時。 安全性原則的刪除獨立於安全性透明規則。 這項變更影響的相關資訊，請參閱[程式碼存取安全性原則相容性和移轉](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md)。
 
 本主題將詳細描述透明度模型。 它包含以下各節：
 
@@ -70,7 +70,7 @@ ms.locfileid: "66456496"
 
 ### <a name="level-2-transparency"></a>層級 2 透明度
 
-層級 2 透明度是 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 引入的。 此模型的三個原則是透明程式碼、安全性安全關鍵程式碼和安全性關鍵程式碼。
+層級 2 透明度是.NET Framework 4 中引入的。 此模型的三個原則是透明程式碼、安全性安全關鍵程式碼和安全性關鍵程式碼。
 
 - 不論授與給透明程式碼的權限為何 (包含完全信任)，透明程式碼只能呼叫其他透明程式碼或安全性安全關鍵程式碼。 如果此程式碼受到部分信任，就只能執行該定義域之權限集合所允許的動作。 透明程式碼無法進行下列作業：
 
