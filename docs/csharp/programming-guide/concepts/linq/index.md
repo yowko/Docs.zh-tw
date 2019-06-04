@@ -2,23 +2,29 @@
 title: Language-Integrated Query (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: fbd73d879a3e2fe4cc38d6c8548434d21ca06467
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f2cbab6295fd9a2c2b3458f520dbf231d9b5413
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597076"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484539"
 ---
 # <a name="language-integrated-query-linq"></a>Language Integrated Query (LINQ)
 
-Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# 語言為基礎之技術的名稱。 傳統上，針對資料的查詢是以簡單字串表示，而不會在編譯期間進行型別檢查，或提供 IntelliSense 支援。 此外，您還必須了解每種資料來源類型的不同查詢語言：SQL 資料庫、XML 文件、各種 Web 服務等。 透過 LINQ，查詢會是第一級語言建構，和類別、方法及事件相同。
+Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# 語言為基礎之技術的名稱。 傳統上，針對資料的查詢是以簡單字串表示，而不會在編譯期間進行型別檢查，或提供 IntelliSense 支援。 此外，您還必須了解每種資料來源類型的不同查詢語言：SQL 資料庫、XML 文件、各種 Web 服務等。 透過 LINQ，查詢會是第一級語言建構，和類別、方法及事件相同。 您可以使用語言關鍵字和熟悉的運算子，針對強型別的物件集合撰寫查詢。  LINQ 技術系列會針對物件 (LINQ to Object)、關聯式資料庫 (LINQ to SQL) 與 XML (LINQ to XML)，提供一致的查詢體驗。  
 
-對於撰寫查詢的開發人員來說，LINQ 最明顯的「語言整合」部分就是查詢運算式。 查詢運算式是以宣告式「查詢語法」撰寫。 透過使用查詢語法，您就可以利用最少的程式碼，針對資料來源執行篩選、排序及分組作業。 您可以使用相同的基本查詢運算式模式，來查詢並轉換 SQL 資料庫、ADO .NET 資料集、XML 文件及資料流，以及 .NET 集合中的資料。
+對於撰寫查詢的開發人員來說，LINQ 最明顯的「語言整合」部分就是查詢運算式。 查詢運算式是以宣告式「查詢語法」  撰寫。 透過使用查詢語法，您就可以利用最少的程式碼，針對資料來源執行篩選、排序及分組作業。 您可以使用相同的基本查詢運算式模式，來查詢並轉換 SQL 資料庫、ADO .NET 資料集、XML 文件及資料流，以及 .NET 集合中的資料。
+
+您可以使用 C# 針對下列項目撰寫 LINQ 查詢：SQL Server 資料庫、XML 文件、ADO.NET 資料集，以及支援 <xref:System.Collections.IEnumerable> 或泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面的任何物件集合。 也有協力廠商針對許多 Web 服務和其他資料庫實作提供 LINQ 支援。  
 
 下列範例示範完整的查詢作業。 完整的作業包括建立資料來源、定義查詢運算式，並在 `foreach` 陳述式中執行查詢。
 
 [!code-csharp[csProgGuideLINQ#11](../../../../../samples/snippets/csharp/concepts/linq/index_1.cs)]
 
+ 下圖顯示 Visual Studio 中針對 SQL Server 資料庫以 C# 和 Visual Basic 撰寫之部分完成的 LINQ 查詢，其中有完整的類型檢查和 IntelliSense 支援：  
+  
+ ![顯示具有 Intellisense 的 LINQ 查詢的圖表。](./media/introduction-to-linq/linq-query-intellisense.png)  
+  
 ## <a name="query-expression-overview"></a>查詢運算式概觀
 
 - 查詢運算式可以用來查詢並轉換來自任何已啟用 LINQ 之資料來源的資料。 例如，單一查詢可以從 SQL 資料庫擷取資料，並產生 XML 資料流做為輸出。  
@@ -49,3 +55,7 @@ Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# �
 若要深入了解 LINQ 的一般資訊，請參閱 [C# 中的 LINQ](../../../linq/linq-in-csharp.md)。
 
 若要開始使用 C# 中的 LINQ，請參閱[使用 LINQ](../../../tutorials/working-with-linq.md) 教學課程。
+
+## <a name="see-also"></a>另請參閱
+
+- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
