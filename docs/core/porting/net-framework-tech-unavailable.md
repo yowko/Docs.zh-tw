@@ -3,13 +3,13 @@ title: .NET Core 上無法使用的 .NET Framework 技術
 description: 了解無法在 .NET Core 上使用的 .NET Framework 技術
 author: cartermp
 ms.author: mairaw
-ms.date: 12/07/2018
-ms.openlocfilehash: be55cd1d1c67b0542c8474d1b2e47f6752f658a2
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.date: 04/30/2019
+ms.openlocfilehash: 9485f331856fde3b6836709e8983c2babe094c5b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185801"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456081"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core 上無法使用的 .NET Framework 技術
 
@@ -19,7 +19,7 @@ ms.locfileid: "58185801"
 
 ## <a name="appdomains"></a>AppDomain
 
-應用程式定義域 (AppDomain) 可將應用程式互相隔離。 AppDomain 需要執行階段支援，且通常具有較高的成本。 不支援建立其他的應用程式定義域.. 我們並未計畫於未來加入此功能。 若要隔離程式碼，建議使用不同的處理序或使用容器作為替代方法。 若要以動態方式載入組件，建議使用新的 <xref:System.Runtime.Loader.AssemblyLoadContext> 類別。
+應用程式定義域 (AppDomain) 可將應用程式互相隔離。 AppDomain 需要執行階段支援，且通常具有較高的成本。 不支援建立其他的應用程式定義域. 我們並未計畫於未來加入此功能。 若要隔離程式碼，建議使用不同的處理序或使用容器作為替代方法。 若要以動態方式載入組件，建議使用新的 <xref:System.Runtime.Loader.AssemblyLoadContext> 類別。
 
 為了讓從 .NET Framework 移轉程式碼更加輕鬆，.NET Core 會公開部分 <xref:System.AppDomain> API 介面。 某些 API 會正常運作 (例如 <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>)，某些成員不會執行任何動作 (例如 <xref:System.AppDomain.SetCachePath%2A>)，而其中某些會擲回 <xref:System.PlatformNotSupportedException> (例如 <xref:System.AppDomain.CreateDomain%2A>)。 檢查您在 [dotnet/corefx GitHub repository](https://github.com/dotnet/corefx) (dotnet/corefx GitHub 存放庫) 中，對 [`System.AppDomain` reference source](https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/System/AppDomain.cs) (`System.AppDomain` 參考來源) 使用的類型，確定選取符合您實作版本的分支。
 
@@ -42,6 +42,10 @@ ms.locfileid: "58185801"
 與 CAS 類似，安全性透明度會以宣告方式區隔沙箱化程式碼和安全性關鍵程式碼，但已[不再支援作為安全性界限](~/docs/framework/misc/security-transparent-code.md)。 Silverlight 會大量使用這項功能。 
 
 使用由作業系統提供的安全性界線 (例如虛擬化、容器或使用者帳戶) 來以最少的權限集合執行處理序。
+
+## <a name="systementerpriseservices"></a>System.EnterpriseServices
+
+.NET Core 不支援 System.EnterpiseServices (COM+)。
 
 >[!div class="step-by-step"]
 >[下一步](third-party-deps.md)

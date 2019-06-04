@@ -4,12 +4,12 @@ description: 探索收集使用量資訊以進行分析的 .NET Core SDK 遙測�
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 82410863c81faa95edfb120c95ec6bc186ed1328
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85cceab08fc6e4108a5b951c8b67c1ad5a28f6bb
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751685"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377496"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 遙測
 
@@ -21,12 +21,12 @@ ms.locfileid: "64751685"
 
 `dotnet` 命令用來啟動應用程式和 .NET Core CLI。 `dotnet` 命令本身不會收集遙測。 `dotnet` 命令執行的 .NET Core CLI 命令會收集遙測。
 
-使用 `dotnet` 命令本身，沒有任何附加命令時，「不啟用」遙測：
+使用 `dotnet` 命令本身，沒有任何附加命令時，「不啟用」  遙測：
 
 - `dotnet`
 - `dotnet [path-to-app]`
 
-使用 [.NET Core CLI 命令](index.md) 時會「啟用」遙測，例如：
+使用 [.NET Core CLI 命令](index.md) 時會「啟用」  遙測，例如：
 
 - `dotnet build`
 - `dotnet pack`
@@ -77,9 +77,9 @@ ms.locfileid: "64751685"
 - OSVersion
 - SDKVersion
 
-&#8224;「發生次數」資料行顯示該命令該日用於該資料列計量的彙總計數。
+&#8224;「發生次數」  資料行顯示該命令該日用於該資料列計量的彙總計數。
 
-&#8225;一般而言，「地理位置」資料行會顯示國家/地區的名稱。 在某些情況下，南極大陸會出現在這個資料行，因為研究人員在南極大陸使用 .NET Core 或不正確的位置資料。
+&#8225;一般而言，「地理」  資料行會顯示國家/地區的名稱。 在某些情況下，南極大陸會出現在這個資料行，因為研究人員在南極大陸使用 .NET Core 或不正確的位置資料。
 
 ### <a name="example"></a>範例
 

@@ -7,25 +7,25 @@ helpviewer_keywords:
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7fad67c1a3c53cd83dec6bfa161333b5e20ab4c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b4639402ee99d215edb3fb28ababe6f750fb353
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644693"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457068"
 ---
 # <a name="thread-safe-collections"></a>安全執行緒集合
-[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 引進 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間，其中包含數個具備安全執行緒且可擴充的集合類別。 多個執行緒可以安全且有效率地新增或移除這些集合中的項目，而不需要利用使用者程式碼進行額外同步處理。 當您撰寫新的程式碼時，只要多個執行緒將同時寫入集合，就使用並行集合類別。 如果您僅讀取共用集合，則可以使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間中的類別。 除非您需要將目標設為 .NET Framework 1.1 或舊版本的執行階段，否則建議您不要使用 1.0 集合類別。  
+.NET Framework 4 引進了 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間，其中包含數個兼具安全執行緒與調整能力的集合類別。 多個執行緒可以安全且有效率地新增或移除這些集合中的項目，而不需要利用使用者程式碼進行額外同步處理。 當您撰寫新的程式碼時，只要多個執行緒將同時寫入集合，就使用並行集合類別。 如果您僅讀取共用集合，則可以使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間中的類別。 除非您需要將目標設為 .NET Framework 1.1 或舊版本的執行階段，否則建議您不要使用 1.0 集合類別。  
   
 ## <a name="thread-synchronization-in-the-net-framework-10-and-20-collections"></a>.NET Framework 1.0 和 2.0 集合中的執行緒同步處理  
  您可以在 <xref:System.Collections?displayProperty=nameWithType> 命名空間中找到 .NET Framework 1.0 中引進的集合。 這些包括常用 <xref:System.Collections.ArrayList> 和 <xref:System.Collections.Hashtable> 的集合透過 `Synchronized` 屬性來提供某種安全執行緒，而這個屬性會傳回集合的安全執行緒包裝函式。 包裝函式的運作方式是針對每個新增或移除作業鎖定整個集合。 因此，嘗試存取集合的每個執行緒都必須等待，直到輪到它取得一個鎖定。 這無法進行擴充，而且可能會造成大型集合的重大效能下降。 此外，設計未完全保護競爭情形。 如需詳細資訊，請參閱[泛型集合中的同步處理](https://blogs.msdn.microsoft.com/bclteam/2005/03/15/synchronization-in-generic-collections-brian-grunkemeyer/)。  
   
  您可以在 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間中找到 .NET Framework 2.0 中引進的集合類別， 包括 <xref:System.Collections.Generic.List%601>、<xref:System.Collections.Generic.Dictionary%602> 等。 這些類別提供相較起 .NET Framework 1.0 類別的改良型別安全和效能。 不過，.NET Framework 2.0 集合類別不會提供任何執行緒同步處理；在多個執行緒上同時新增或移除項目時，使用者程式碼必須提供所有同步處理。  
   
- 我們建議使用 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 中的並行集合類別，因為它們不僅提供 .NET Framework 2.0 集合類別的型別安全，而且效率和安全執行緒也會比 [!INCLUDE[net_v10_short](../../../../includes/net-v10-short-md.md)] 集合所提供的效率和安全執行緒更高且完整。  
+ 建議您使用 NET Framework 4 中的並行集合類別，因為這些類別不僅提供 .NET Framework 2.0 集合類別的型別安全，而且提供比 [!INCLUDE[net_v10_short](../../../../includes/net-v10-short-md.md)] 集合更高的效率及更完整的執行緒安全性。  
   
 ## <a name="fine-grained-locking-and-lock-free-mechanisms"></a>更細緻的鎖定和無鎖定機制  
- 有些並行集合類型會使用輕量型同步處理機制，例如 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 中新增的 <xref:System.Threading.SpinLock>、<xref:System.Threading.SpinWait>、<xref:System.Threading.SemaphoreSlim> 和 <xref:System.Threading.CountdownEvent>。 這些同步處理型別通常會先使用短期間的*忙碌旋轉*，再讓執行緒進入真正的 Wait 狀態。 預期等候時間很短時，旋轉的費用遠低於等待，這包含昂貴的核心轉換。 針對使用旋轉的集合類別，這個效率表示多個執行緒可以使用極高的速率來新增和移除項目。 如需旋轉與封鎖比較的詳細資訊，請參閱 [SpinLock](../../../../docs/standard/threading/spinlock.md) 和 [SpinWait](../../../../docs/standard/threading/spinwait.md)。  
+ 有些並行集合類型會使用輕量型同步處理機制，例如 .NET Framework 4 中新增的 <xref:System.Threading.SpinLock>、<xref:System.Threading.SpinWait>、<xref:System.Threading.SemaphoreSlim> 和 <xref:System.Threading.CountdownEvent>。 這些同步處理型別通常會先使用短期間的*忙碌旋轉*，再讓執行緒進入真正的 Wait 狀態。 預期等候時間很短時，旋轉的費用遠低於等待，這包含昂貴的核心轉換。 針對使用旋轉的集合類別，這個效率表示多個執行緒可以使用極高的速率來新增和移除項目。 如需旋轉與封鎖比較的詳細資訊，請參閱 [SpinLock](../../../../docs/standard/threading/spinlock.md) 和 [SpinWait](../../../../docs/standard/threading/spinwait.md)。  
   
  <xref:System.Collections.Concurrent.ConcurrentQueue%601> 和 <xref:System.Collections.Concurrent.ConcurrentStack%601> 類別完全不使用鎖定。 相反地，它們依賴 <xref:System.Threading.Interlocked> 作業來取得安全執行緒。  
   
