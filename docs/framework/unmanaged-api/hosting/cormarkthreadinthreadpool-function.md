@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a39b0f2546d84cf24a58d5367c87d0a862aead93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0200ad36490efc546daebfa93904676b0af7684
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985760"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490523"
 ---
-# <a name="cormarkthreadinthreadpool-function"></a><span data-ttu-id="ec353-102">CorMarkThreadInThreadPool 函式</span><span class="sxs-lookup"><span data-stu-id="ec353-102">CorMarkThreadInThreadPool Function</span></span>
-<span data-ttu-id="ec353-103">標記目前正在執行的執行緒集區執行緒，以便執行 managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="ec353-103">Marks the currently executing thread-pool thread for the execution of managed code.</span></span> <span data-ttu-id="ec353-104">從.NET Framework 2.0 版開始，此函式沒有任何作用。</span><span class="sxs-lookup"><span data-stu-id="ec353-104">Starting with the .NET Framework version 2.0, this function has no effect.</span></span> <span data-ttu-id="ec353-105">它不是必要項，並可從您的程式碼中移除。</span><span class="sxs-lookup"><span data-stu-id="ec353-105">It is not required, and can be removed from your code.</span></span> <span data-ttu-id="ec353-106">此函式已被取代[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="ec353-106">This function is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+# <a name="cormarkthreadinthreadpool-function"></a><span data-ttu-id="a9631-102">CorMarkThreadInThreadPool 函式</span><span class="sxs-lookup"><span data-stu-id="a9631-102">CorMarkThreadInThreadPool Function</span></span>
+<span data-ttu-id="a9631-103">標記目前正在執行的執行緒集區執行緒，以便執行 managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="a9631-103">Marks the currently executing thread-pool thread for the execution of managed code.</span></span> <span data-ttu-id="a9631-104">從.NET Framework 2.0 版開始，此函式沒有任何作用。</span><span class="sxs-lookup"><span data-stu-id="a9631-104">Starting with the .NET Framework version 2.0, this function has no effect.</span></span> <span data-ttu-id="a9631-105">它不是必要項，並可從您的程式碼中移除。</span><span class="sxs-lookup"><span data-stu-id="a9631-105">It is not required, and can be removed from your code.</span></span> <span data-ttu-id="a9631-106">在.NET Framework 4 中，此函式已被取代。</span><span class="sxs-lookup"><span data-stu-id="a9631-106">This function is deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ec353-107">語法</span><span class="sxs-lookup"><span data-stu-id="ec353-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a9631-107">語法</span><span class="sxs-lookup"><span data-stu-id="a9631-107">Syntax</span></span>  
   
 ```  
 void CorMarkThreadInThreadPool ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="ec353-108">需求</span><span class="sxs-lookup"><span data-stu-id="ec353-108">Requirements</span></span>  
- <span data-ttu-id="ec353-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ec353-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a9631-108">需求</span><span class="sxs-lookup"><span data-stu-id="a9631-108">Requirements</span></span>  
+ <span data-ttu-id="a9631-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a9631-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ec353-110">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ec353-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="a9631-110">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a9631-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ec353-111">**LIBRARY:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ec353-111">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="a9631-111">**LIBRARY:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a9631-111">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ec353-112">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ec353-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a9631-112">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a9631-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec353-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ec353-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a9631-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a9631-113">See also</span></span>
 
-- [<span data-ttu-id="ec353-114">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="ec353-114">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="a9631-114">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="a9631-114">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

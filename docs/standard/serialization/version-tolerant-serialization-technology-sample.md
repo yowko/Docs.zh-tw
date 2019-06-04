@@ -2,50 +2,50 @@
 title: 版本相容序列化技術範例
 ms.date: 03/30/2017
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
-ms.openlocfilehash: d7dfcf7548571d29032495ca8be96db70f2336fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c30c39848be02785b6b808ecf4af711c0c9e95d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62028261"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483004"
 ---
-# <a name="version-tolerant-serialization-technology-sample"></a><span data-ttu-id="6c2aa-102">版本相容序列化技術範例</span><span class="sxs-lookup"><span data-stu-id="6c2aa-102">Version Tolerant Serialization Technology Sample</span></span>
-[<span data-ttu-id="6c2aa-103">下載範例</span><span class="sxs-lookup"><span data-stu-id="6c2aa-103">Download Sample</span></span>](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
+# <a name="version-tolerant-serialization-technology-sample"></a><span data-ttu-id="0a0bc-102">版本相容序列化技術範例</span><span class="sxs-lookup"><span data-stu-id="0a0bc-102">Version Tolerant Serialization Technology Sample</span></span>
+[<span data-ttu-id="0a0bc-103">下載範例</span><span class="sxs-lookup"><span data-stu-id="0a0bc-103">Download Sample</span></span>](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
   
- <span data-ttu-id="6c2aa-104">這個範例將示範.NET 序列化的版本相容功能。</span><span class="sxs-lookup"><span data-stu-id="6c2aa-104">This sample demonstrates the version tolerance features of .NET Serialization.</span></span> <span data-ttu-id="6c2aa-105">此範例會建置使用不同版本之 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 將資料序列化及還原序列化的應用程式。</span><span class="sxs-lookup"><span data-stu-id="6c2aa-105">The sample builds applications that use different versions of a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> to serialize and deserialize data.</span></span> <span data-ttu-id="6c2aa-106">雖然有不同型別的版本存在，這些應用程式還是能密切地互相通訊。</span><span class="sxs-lookup"><span data-stu-id="6c2aa-106">Despite the presence of different type versions, the applications communicate seamlessly.</span></span> <span data-ttu-id="6c2aa-107">如需詳細資訊，請參閱[版本相容序列化](../../../docs/standard/serialization/version-tolerant-serialization.md)。</span><span class="sxs-lookup"><span data-stu-id="6c2aa-107">For more information, see [Version Tolerant Serialization](../../../docs/standard/serialization/version-tolerant-serialization.md).</span></span>  
+ <span data-ttu-id="0a0bc-104">這個範例將示範.NET 序列化的版本相容功能。</span><span class="sxs-lookup"><span data-stu-id="0a0bc-104">This sample demonstrates the version tolerance features of .NET Serialization.</span></span> <span data-ttu-id="0a0bc-105">此範例會建置使用不同版本之 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 將資料序列化及還原序列化的應用程式。</span><span class="sxs-lookup"><span data-stu-id="0a0bc-105">The sample builds applications that use different versions of a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> to serialize and deserialize data.</span></span> <span data-ttu-id="0a0bc-106">雖然有不同型別的版本存在，這些應用程式還是能密切地互相通訊。</span><span class="sxs-lookup"><span data-stu-id="0a0bc-106">Despite the presence of different type versions, the applications communicate seamlessly.</span></span> <span data-ttu-id="0a0bc-107">如需詳細資訊，請參閱[版本相容序列化](../../../docs/standard/serialization/version-tolerant-serialization.md)。</span><span class="sxs-lookup"><span data-stu-id="0a0bc-107">For more information, see [Version Tolerant Serialization](../../../docs/standard/serialization/version-tolerant-serialization.md).</span></span>  
   
-### <a name="to-build-the-sample-using-the-command-prompt"></a><span data-ttu-id="6c2aa-108">若要使用命令提示字元建置範例</span><span class="sxs-lookup"><span data-stu-id="6c2aa-108">To build the sample using the command prompt</span></span>  
+### <a name="to-build-the-sample-using-the-command-prompt"></a><span data-ttu-id="0a0bc-108">若要使用命令提示字元建置範例</span><span class="sxs-lookup"><span data-stu-id="0a0bc-108">To build the sample using the command prompt</span></span>  
   
-1. <span data-ttu-id="6c2aa-109">開啟 [命令提示字元] 視窗，並巡覽至此範例的任一程式設計語言的子目錄 (V1 Application 或 V2 Application 底下)。</span><span class="sxs-lookup"><span data-stu-id="6c2aa-109">Open a Command Prompt window and navigate to one of the language-specific subdirectories (under V1 Application or V2 Application) for the sample.</span></span>  
+1. <span data-ttu-id="0a0bc-109">開啟 [命令提示字元] 視窗，並巡覽至此範例的任一程式設計語言的子目錄 (V1 Application 或 V2 Application 底下)。</span><span class="sxs-lookup"><span data-stu-id="0a0bc-109">Open a Command Prompt window and navigate to one of the language-specific subdirectories (under V1 Application or V2 Application) for the sample.</span></span>  
   
-2. <span data-ttu-id="6c2aa-110">在命令列中輸入 **msbuild.exe \<本> application.sln** (其中 \<本> 為 v1 或 v2)。</span><span class="sxs-lookup"><span data-stu-id="6c2aa-110">Type **msbuild.exe \<ver> application.sln** at the command line (where \<ver> is either v1 or v2).</span></span>  
+2. <span data-ttu-id="0a0bc-110">在命令列中輸入 **msbuild.exe \<本> application.sln** (其中 \<本> 為 v1 或 v2)。</span><span class="sxs-lookup"><span data-stu-id="0a0bc-110">Type **msbuild.exe \<ver> application.sln** at the command line (where \<ver> is either v1 or v2).</span></span>  
   
-### <a name="to-build-the-sample-using-visual-studio"></a><span data-ttu-id="6c2aa-111">若要使用 Visual Studio 建置範例</span><span class="sxs-lookup"><span data-stu-id="6c2aa-111">To build the sample using Visual Studio</span></span>  
+### <a name="to-build-the-sample-using-visual-studio"></a><span data-ttu-id="0a0bc-111">若要使用 Visual Studio 建置範例</span><span class="sxs-lookup"><span data-stu-id="0a0bc-111">To build the sample using Visual Studio</span></span>  
   
-1. <span data-ttu-id="6c2aa-112">開啟 [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]，並巡覽至此範例任一程式設計語言的子目錄。</span><span class="sxs-lookup"><span data-stu-id="6c2aa-112">Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to one of the language-specific subdirectories for the sample.</span></span>  
+1. <span data-ttu-id="0a0bc-112">開啟檔案總管並瀏覽至其中一個範例的語言特定子目錄。</span><span class="sxs-lookup"><span data-stu-id="0a0bc-112">Open File Explorer and navigate to one of the language-specific subdirectories for the sample.</span></span>  
   
-2. <span data-ttu-id="6c2aa-113">巡覽至您在前一個步驟選取之目錄的 [V1 Application] 子目錄。</span><span class="sxs-lookup"><span data-stu-id="6c2aa-113">Navigate to the V1 Application subdirectory of the directory you selected in the previous step.</span></span>  
+2. <span data-ttu-id="0a0bc-113">巡覽至您在前一個步驟選取之目錄的 [V1 Application] 子目錄。</span><span class="sxs-lookup"><span data-stu-id="0a0bc-113">Navigate to the V1 Application subdirectory of the directory you selected in the previous step.</span></span>  
   
-3. <span data-ttu-id="6c2aa-114">按兩下 V1 Application.sln 的圖示，在 Visual Studio 中開啟檔案。</span><span class="sxs-lookup"><span data-stu-id="6c2aa-114">Double-click the icon for V1 Application.sln to open the file in Visual Studio.</span></span>  
+3. <span data-ttu-id="0a0bc-114">按兩下 V1 Application.sln 的圖示，在 Visual Studio 中開啟檔案。</span><span class="sxs-lookup"><span data-stu-id="0a0bc-114">Double-click the icon for V1 Application.sln to open the file in Visual Studio.</span></span>  
   
-4. <span data-ttu-id="6c2aa-115">在 [ **建置** ] 功能表上，按一下 [ **建置方案**]。</span><span class="sxs-lookup"><span data-stu-id="6c2aa-115">On the **Build** menu, click **Build Solution**.</span></span>  
+4. <span data-ttu-id="0a0bc-115">在 [ **建置** ] 功能表上，按一下 [ **建置方案**]。</span><span class="sxs-lookup"><span data-stu-id="0a0bc-115">On the **Build** menu, click **Build Solution**.</span></span>  
   
-5. <span data-ttu-id="6c2aa-116">巡覽至 [V2 Application] 子目錄，然後重複前兩個步驟，以建置 V2 Application。</span><span class="sxs-lookup"><span data-stu-id="6c2aa-116">Navigate to the V2 Application subdirectory and repeat the two previous steps to build the V2 Application.</span></span>  
+5. <span data-ttu-id="0a0bc-116">巡覽至 [V2 Application] 子目錄，然後重複前兩個步驟，以建置 V2 Application。</span><span class="sxs-lookup"><span data-stu-id="0a0bc-116">Navigate to the V2 Application subdirectory and repeat the two previous steps to build the V2 Application.</span></span>  
   
- <span data-ttu-id="6c2aa-117">應用程式將建置於其個別專案目錄的預設 \bin 或 \bin\Debug 子目錄中。</span><span class="sxs-lookup"><span data-stu-id="6c2aa-117">The applications will be built in the default \bin or \bin\Debug subdirectories of their respective project directories.</span></span>  
+ <span data-ttu-id="0a0bc-117">應用程式將建置於其個別專案目錄的預設 \bin 或 \bin\Debug 子目錄中。</span><span class="sxs-lookup"><span data-stu-id="0a0bc-117">The applications will be built in the default \bin or \bin\Debug subdirectories of their respective project directories.</span></span>  
   
-### <a name="to-run-the-sample"></a><span data-ttu-id="6c2aa-118">若要執行範例</span><span class="sxs-lookup"><span data-stu-id="6c2aa-118">To run the sample</span></span>  
+### <a name="to-run-the-sample"></a><span data-ttu-id="0a0bc-118">若要執行範例</span><span class="sxs-lookup"><span data-stu-id="0a0bc-118">To run the sample</span></span>  
   
-1. <span data-ttu-id="6c2aa-119">在 [命令提示字元] 視窗中，巡覽至您建置範例應用程式時所選的語言特定子目錄。</span><span class="sxs-lookup"><span data-stu-id="6c2aa-119">In the Command Prompt window, navigate to the language-specific subdirectory that you selected when you built the sample applications.</span></span>  
+1. <span data-ttu-id="0a0bc-119">在 [命令提示字元] 視窗中，巡覽至您建置範例應用程式時所選的語言特定子目錄。</span><span class="sxs-lookup"><span data-stu-id="0a0bc-119">In the Command Prompt window, navigate to the language-specific subdirectory that you selected when you built the sample applications.</span></span>  
   
-2. <span data-ttu-id="6c2aa-120">在命令列輸入 **runme.cmd**，同時執行兩個應用程式。</span><span class="sxs-lookup"><span data-stu-id="6c2aa-120">Type **runme.cmd** at the command line to run both applications at once.</span></span>  
+2. <span data-ttu-id="0a0bc-120">在命令列輸入 **runme.cmd**，同時執行兩個應用程式。</span><span class="sxs-lookup"><span data-stu-id="0a0bc-120">Type **runme.cmd** at the command line to run both applications at once.</span></span>  
   
- <span data-ttu-id="6c2aa-121">或者，巡覽至新可執行檔所在的目錄，然後循序執行這些可執行檔。</span><span class="sxs-lookup"><span data-stu-id="6c2aa-121">Alternatively, navigate to the directories that contain the new executables and run them sequentially.</span></span>  
+ <span data-ttu-id="0a0bc-121">或者，巡覽至新可執行檔所在的目錄，然後循序執行這些可執行檔。</span><span class="sxs-lookup"><span data-stu-id="0a0bc-121">Alternatively, navigate to the directories that contain the new executables and run them sequentially.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6c2aa-122">這個範例會建置一個主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="6c2aa-122">The sample builds console applications.</span></span> <span data-ttu-id="6c2aa-123">您必須在 [命令提示字元] 視窗中啟動及執行這些應用程式，才能檢視這些應用程式的輸出。</span><span class="sxs-lookup"><span data-stu-id="6c2aa-123">You must launch and run them in a Command Prompt window to view their output.</span></span>  
+>  <span data-ttu-id="0a0bc-122">這個範例會建置一個主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="0a0bc-122">The sample builds console applications.</span></span> <span data-ttu-id="0a0bc-123">您必須在 [命令提示字元] 視窗中啟動及執行這些應用程式，才能檢視這些應用程式的輸出。</span><span class="sxs-lookup"><span data-stu-id="0a0bc-123">You must launch and run them in a Command Prompt window to view their output.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6c2aa-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6c2aa-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a0bc-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0a0bc-124">See also</span></span>
 
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>
 - <xref:System.IO.FileStream>
