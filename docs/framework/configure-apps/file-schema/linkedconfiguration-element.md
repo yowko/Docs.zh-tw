@@ -22,9 +22,9 @@ ms.locfileid: "61674645"
 
 指定要包含的組態檔。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<assemblyBinding>**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<assemblyBinding>** ](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<linkedConfiguration>**
 
 ## <a name="syntax"></a>語法
 
@@ -42,7 +42,7 @@ ms.locfileid: "61674645"
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<Assemblybinding> >** 項目](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | 指定位於組態層級的組件繫結原則。 |
+| [ **\<Assemblybinding> >** 項目](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | 指定位於組態層級的組件繫結原則。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -50,7 +50,7 @@ None
 
 ## <a name="remarks"></a>備註
 
- **\<LinkedConfiguration >** 項目可簡化元件組件的服務。 如果一或多個應用程式會使用具有組態檔位於已知位置中的組件，可以使用使用組件的應用程式的組態檔 **\<linkedConfiguration >** 包含組件的組態檔，而不是直接包括組態資訊的項目。 當元件組件受到服務時，更新常見的組態檔提供使用組件的所有應用程式的更新的組態資訊。
+**\<LinkedConfiguration >** 項目可簡化元件組件的服務。 如果一或多個應用程式會使用具有組態檔位於已知位置中的組件，可以使用使用組件的應用程式的組態檔 **\<linkedConfiguration >** 包含組件的組態檔，而不是直接包括組態資訊的項目。 當元件組件受到服務時，更新常見的組態檔提供使用組件的所有應用程式的更新的組態資訊。
 
 > [!NOTE]
 > **\<LinkedConfiguration >** 與 Windows 並排顯示的資訊清單的應用程式不支援項目。
@@ -65,7 +65,7 @@ None
 
 - 所有連結的組態檔會合併以形成一個檔案，類似的行為`#include`指示詞 C /C++。
 
--  **\<LinkedConfiguration >** 項目只允許在應用程式組態檔，它會忽略*Machine.config*。
+- **\<LinkedConfiguration >** 項目只允許在應用程式組態檔，它會忽略*Machine.config*。
 
 - 已偵測到循環參考，並終止。 也就是說，如果 **\<linkedConfiguration >** 的一系列的組態檔項目形成迴圈，是偵測到迴圈，並將其停止。
 
@@ -83,5 +83,5 @@ None
 
 ## <a name="see-also"></a>另請參閱
 
-- [**\<Assemblybinding> >** 項目](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
+- [ **\<Assemblybinding> >** 項目](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
 - [適用於.NET Framework 的組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)
