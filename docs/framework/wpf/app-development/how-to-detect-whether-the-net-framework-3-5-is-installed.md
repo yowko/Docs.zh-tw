@@ -7,21 +7,21 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: 7c373d9fd5934be98735cd814dafb35ed81fddfe
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 69dfa0eb8d9ad9b780d258a874d255484f270cfe
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592639"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690444"
 ---
-# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>作法：偵測有無安裝 .NET Framework 3.5
-系統管理員可以部署為目標的系統上的 Windows Presentation Foundation (WPF) 應用程式之前[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]，它們必須先確認[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]執行階段會出現。 本主題提供撰寫的指令碼在 HTML/JavaScript 中，系統管理員可以用來判斷是否[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]存在於系統上。  
+# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>HOW TO：偵測有無安裝 .NET Framework 3.5
+系統管理員可以部署.NET Framework 3.5 為目標的系統上的 Windows Presentation Foundation (WPF) 應用程式之前，他們必須先確認.NET Framework 3.5 執行階段已存在。 本主題提供以 HTML/JavaScript 撰寫的指令碼，系統管理員可用來判斷是否存在於系統上.NET Framework 3.5。  
   
 > [!NOTE]
 >  如需詳細資訊，在安裝時，部署和偵測.NET Framework，請參閱[安裝適用於開發人員的.NET Framework](../../install/guide-for-developers.md)。  
   
 ## <a name="example"></a>範例  
- 當[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]是安裝，MSI 加入 「.NET CLR"和版本號碼的使用者代理字串。 下列範例顯示簡單的 HTML 網頁中內嵌的指令碼。 指令碼會搜尋使用者代理字串，以判斷是否[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]已安裝，並且會顯示狀態訊息的搜尋結果。  
+ 安裝.NET Framework 3.5 時，MSI 會將 「.NET CLR"和版本號碼加入至使用者代理字串。 下列範例顯示簡單的 HTML 網頁中內嵌的指令碼。 指令碼會搜尋的使用者代理字串，以判斷是否已安裝，.NET Framework 3.5，並且的搜尋結果會顯示狀態訊息。  
   
 > [!NOTE]
 >  此指令碼被設計用於 Internet Explorer。 其他瀏覽器使用者代理字串中，可能不包含.NET CLR 的資訊。  

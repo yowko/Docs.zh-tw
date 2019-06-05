@@ -2,12 +2,12 @@
 title: 設定工作流程的追蹤
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8d3293fd2b271c0e1a00a1fca30d5ecd166df12
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052764"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690574"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>設定工作流程的追蹤
 
@@ -199,7 +199,7 @@ WF 4 提供將追蹤記錄寫入至 ETW (Windows 事件追蹤) 工作階段的�
     </system.serviceModel>
     ```
 
-2. 資訊清單檔案複製 %windir%\Microsoft.NET\Framework\\< 的最新版本[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man 到暫存位置，並重新命名為Microsoft.windows.applicationserver.applications_provider1.man。
+2. 資訊清單檔案複製 %windir%\Microsoft.NET\Framework\\\<最新版本的[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man 到暫存位置，並將它重新命名Microsoft.windows.applicationserver.applications_provider1.man。
 
 3. 將資訊清單檔中的 GUID 變更為新的 GUID。
 

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: 03f7e17983e56cc2d2136b38b3402ce689f719ee
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e39c4ca5e4a6563a94fbf6f386283053a197f5ce
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66491069"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690670"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>從 WPF 移轉至 System.Xaml 的類型
 .NET Framework 3.5 中， [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]，這兩個[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]和 Windows Workflow Foundation 隨附 XAML 語言實作。 有許多為 WPF XAML 實作提供擴充性的公用類型，存在於 WindowsBase、PresentationCore 和 PresentationFramework 組件中。 同樣地，Windows Workflow Foundation XAML 提供擴充性的公用型別存在於 System.Workflow.ComponentModel 組件。 在.NET Framework 4 中，某些與 XAML 相關型別會移轉至 System.Xaml 組件。 常見的.NET Framework 實作的 XAML 語言服務可讓許多 XAML 擴充性情節原先由特定架構的 XAML 實作所定義，但現在是整體的.NET Framework 4 的 XAML 語言支援的一部分。 本主題會列出移轉的類型，並討論與移轉相關的問題。  
   
 <a name="assemblies_and_namespaces"></a>   
 ## <a name="assemblies-and-namespaces"></a>組件和命名空間  
- 在 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]中，WPF 為了支援 XAML 而實作的類型通常位於 <xref:System.Windows.Markup> 命名空間中。 這些類型大多數位於 WindowsBase 組件中。  
+ .NET Framework 3.5 中， [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]，來支援 XAML 的 WPF 實作的類型是通常在<xref:System.Windows.Markup>命名空間。 這些類型大多數位於 WindowsBase 組件中。  
   
  在.NET Framework 4 中，沒有新<xref:System.Xaml>命名空間和新的 System.Xaml 組件。 許多原先針對 WPF XAML 實作的類型，現已提供為任何 XAML 實作的擴充點或服務。 為了可供更多一般情節使用，這些類型已從其原始 WPF 組件類型轉送至 System.Xaml 組件。 如此 XAML 擴充性案例而無須納入其他架構 （例如 WPF 和 Windows Workflow Foundation） 的組件。  
   
@@ -37,11 +37,11 @@ ms.locfileid: "66491069"
   
 <a name="markupextension"></a>   
 ## <a name="markupextension"></a>MarkupExtension  
- 在 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]中，WPF 的 <xref:System.Windows.Markup.MarkupExtension> 類別是位於 WindowsBase 組件中。 Windows Workflow Foundation 的平行類別<xref:System.Workflow.ComponentModel.Serialization.MarkupExtension>System.Workflow.ComponentModel 組件中。 在.NET Framework 4<xref:System.Windows.Markup.MarkupExtension>類別已移轉至 System.Xaml 組件。 在.NET Framework 4<xref:System.Windows.Markup.MarkupExtension>適用於使用.NET Framework XAML 服務，不只是用於建置在特定架構上的任何 XAML 擴充性案例。 進行 XAML 擴充時，也應盡可能將特定架構或架構中的使用者程式碼建置在 <xref:System.Windows.Markup.MarkupExtension> 類別上。  
+ 在.NET Framework 3.5 和[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]，則<xref:System.Windows.Markup.MarkupExtension>類別 WPF 是位於 WindowsBase 組件。 Windows Workflow Foundation 的平行類別<xref:System.Workflow.ComponentModel.Serialization.MarkupExtension>System.Workflow.ComponentModel 組件中。 在.NET Framework 4<xref:System.Windows.Markup.MarkupExtension>類別已移轉至 System.Xaml 組件。 在.NET Framework 4<xref:System.Windows.Markup.MarkupExtension>適用於使用.NET Framework XAML 服務，不只是用於建置在特定架構上的任何 XAML 擴充性案例。 進行 XAML 擴充時，也應盡可能將特定架構或架構中的使用者程式碼建置在 <xref:System.Windows.Markup.MarkupExtension> 類別上。  
   
 <a name="markupextension_supporting_service_classes"></a>   
 ## <a name="markupextension-supporting-service-classes"></a>支援服務類別的 MarkupExtension  
- 過去 WPF 適用的[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 提供了數項服務，可供 <xref:System.Windows.Markup.MarkupExtension> implementers 和 <xref:System.ComponentModel.TypeConverter> 實作用來支援 XAML 中的類型/屬性使用。 這些服務包括：  
+ .NET framework 3.5 和[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]WPF 提供數個服務可以用於<xref:System.Windows.Markup.MarkupExtension>實作者和<xref:System.ComponentModel.TypeConverter>實作以在 XAML 支援類型/屬性使用。 這些服務包括：  
   
 - <xref:System.Windows.Markup.IProvideValueTarget>  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66491069"
 - <xref:System.Windows.Markup.IXamlTypeResolver>  
   
 > [!NOTE]
->  [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 介面是 <xref:System.Windows.Markup.IReceiveMarkupExtension> 中與標記延伸相關的另一項服務。 <xref:System.Windows.Markup.IReceiveMarkupExtension> 並未移轉，而且標示為`[Obsolete]`適用於.NET Framework 4。 先前使用 <xref:System.Windows.Markup.IReceiveMarkupExtension> 的情節應改用 <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> 屬性化回呼。 <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> 也已標記為 `[Obsolete]`。  
+>  另一項服務與標記延伸相關的.NET Framework 3.5 是<xref:System.Windows.Markup.IReceiveMarkupExtension>介面。 <xref:System.Windows.Markup.IReceiveMarkupExtension> 並未移轉，而且標示為`[Obsolete]`適用於.NET Framework 4。 先前使用 <xref:System.Windows.Markup.IReceiveMarkupExtension> 的情節應改用 <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> 屬性化回呼。 <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> 也已標記為 `[Obsolete]`。  
   
 <a name="xaml_language_features"></a>   
 ## <a name="xaml-language-features"></a>XAML 語言功能  
@@ -69,11 +69,11 @@ ms.locfileid: "66491069"
   
 <a name="valueserializer_and_supporting_classes"></a>   
 ## <a name="valueserializer-and-supporting-classes"></a>ValueSerializer 和支援類別  
- <xref:System.Windows.Markup.ValueSerializer> 類別支援將類型轉換成字串，尤其是在 XAML 序列化需要輸出中有多個模式或節點時。 在 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]中，WPF 的 <xref:System.Windows.Markup.ValueSerializer> 是位於 WindowsBase 組件中。 在.NET Framework 4<xref:System.Windows.Markup.ValueSerializer>類別位於 System.Xaml，並用於任何 XAML 擴充性案例中，用不只是用於在 WPF 上建置。 <xref:System.Windows.Markup.IValueSerializerContext> (支援服務) 和 <xref:System.Windows.Markup.DateTimeValueSerializer> (特定子類別) 也會移轉至 System.Xaml。  
+ <xref:System.Windows.Markup.ValueSerializer> 類別支援將類型轉換成字串，尤其是在 XAML 序列化需要輸出中有多個模式或節點時。 .NET Framework 3.5 中， [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]，則<xref:System.Windows.Markup.ValueSerializer>WPF 是位於 WindowsBase 組件。 在.NET Framework 4<xref:System.Windows.Markup.ValueSerializer>類別位於 System.Xaml，並用於任何 XAML 擴充性案例中，用不只是用於在 WPF 上建置。 <xref:System.Windows.Markup.IValueSerializerContext> (支援服務) 和 <xref:System.Windows.Markup.DateTimeValueSerializer> (特定子類別) 也會移轉至 System.Xaml。  
   
 <a name="xamlrelated_attributes"></a>   
 ## <a name="xaml-related-attributes"></a>XAML 相關屬性  
- WPF XAML 隨附數個可套用至 CLR 類型的屬性，以針對其 XAML 行為表示相關資訊。 以下是 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]的 WPF 組件中已有的屬性清單。 這些屬性會移轉至 System.Xaml 中.NET Framework 4。  
+ WPF XAML 隨附數個可套用至 CLR 類型的屬性，以針對其 XAML 行為表示相關資訊。 以下是存在於.NET Framework 3.5 中的 WPF 組件中的屬性清單和[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]。 這些屬性會移轉至 System.Xaml 中.NET Framework 4。  
   
 - <xref:System.Windows.Markup.AmbientAttribute>  
   
@@ -107,9 +107,9 @@ ms.locfileid: "66491069"
   
 <a name="miscellaneous_classes"></a>   
 ## <a name="miscellaneous-classes"></a>其他類別  
- <xref:System.Windows.Markup.IComponentConnector>介面存在於 WindowsBase 中[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]和[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]，但存在於 System.Xaml 中.NET Framework 4。 <xref:System.Windows.Markup.IComponentConnector> 主要用於工具支援和 XAML 標記編譯器。  
+ <xref:System.Windows.Markup.IComponentConnector>介面存在於 WindowsBase 中.NET Framework 3.5 和[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]，但存在於 System.Xaml 中.NET Framework 4。 <xref:System.Windows.Markup.IComponentConnector> 主要用於工具支援和 XAML 標記編譯器。  
   
- <xref:System.Windows.Markup.INameScope>介面存在於 WindowsBase 中[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]和[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]，但存在於 System.Xaml 中.NET Framework 4。 <xref:System.Windows.Markup.INameScope> 為 XAML 名稱範圍定義基本作業。  
+ <xref:System.Windows.Markup.INameScope>介面存在於 WindowsBase 中.NET Framework 3.5 和[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]，但存在於 System.Xaml 中.NET Framework 4。 <xref:System.Windows.Markup.INameScope> 為 XAML 名稱範圍定義基本作業。  
   
 <a name="xamlrelated_classes_with_shared_names_that_exist_in_wpf_and_systemxaml"></a>   
 ## <a name="xaml-related-classes-with-shared-names-that-exist-in-wpf-and-systemxaml"></a>WPF 和 System.Xaml 中具有共用名稱的 XAML 相關類別  

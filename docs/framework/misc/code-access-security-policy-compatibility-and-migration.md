@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 163ed8d00e8f0f886481dbaca956bb633a625871
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 15e693f716d02e6f7ef8b666ddf51a8bd352f642
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487980"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690277"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>程式碼存取安全性原則相容性和移轉
 
@@ -26,7 +26,7 @@ ms.locfileid: "66487980"
 
    \-或-
 
-- 使用[< NetFx40_LegacySecurityPolicy > 組態項目](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)選擇使用舊版的 CAS 原則行為。
+- 使用[ \<NetFx40_LegacySecurityPolicy > 組態項目](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)選擇使用舊版的 CAS 原則行為。
 
 此主題包括下列章節：
 
@@ -142,7 +142,7 @@ CAS 原則通常用於決定組件或應用程式定義域的權限授權集或�
 
 ## <a name="compatibility-using-the-cas-policy-legacy-option"></a>相容性：使用 CAS 原則的舊版選項
 
-[< NetFx40_LegacySecurityPolicy > 組態項目](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)可讓您指定的處理程序或程式庫會使用舊版 CAS 原則。 當您啟用這個項目時，原則和辨識項多載的運作方式與在舊版 Framework 中的運作方式相同。
+[ \<NetFx40_LegacySecurityPolicy > 組態項目](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)可讓您指定的處理程序或程式庫會使用舊版 CAS 原則。 當您啟用這個項目時，原則和辨識項多載的運作方式與在舊版 Framework 中的運作方式相同。
 
 > [!NOTE]
 > CAS 原則行為是以執行階段版本為依據所指定，如此一來，修改某一個執行階段版本的 CAS 原則，就不會影響另一個版本的 CAS 原則。
