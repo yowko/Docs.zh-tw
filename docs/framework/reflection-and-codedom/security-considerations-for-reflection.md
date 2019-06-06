@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ef6b73d683d43b2a33628db13fa592c7f02199a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 116df78eb20d6e6c6355d07099ae5d3de9320f30
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585965"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457289"
 ---
 # <a name="security-considerations-for-reflection"></a>反映的安全性考量
 反映可讓您取得類型和成員的相關資訊，以及存取成員 (也就是呼叫方法和建構函式、取得和設定屬性值、加入和移除事件處理常式等等)。 不限制使用反映來取得類型和成員的相關資訊。 所有程式碼都可以使用反映來執行下列工作：  
@@ -58,10 +58,10 @@ ms.locfileid: "65585965"
   
  從命令列執行的應用程式程式碼會以完全信任來執行。 只要不是標示為透明，就可以使用反映來存取安全性關鍵成員。 以部分信任來執行相同的程式碼時 (例如，在沙箱化應用程式定義域中)，組件的信任層級可決定它是否能夠存取安全性關鍵程式碼：如果組件有強式名稱，並安裝在全域組件快取中，則其為受信任的組件，可以呼叫安全性關鍵成員。 如果不受信任，則會變成透明 (即使它不是標示為透明)，而且不能存取安全性關鍵成員。  
   
- 如需 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中安全性模型的詳細資訊，請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。  
+ 如需 .NET Framework 4 的安全模型詳細資訊，請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。  
   
 ## <a name="reflection-and-transparency"></a>反映和透明度  
- 從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，Common Language Runtime 可以從數個因素來決定類型或成員的透明度，包括組件的信任層級和應用程式定義域的信任層級。 反映提供 <xref:System.Type.IsSecurityCritical%2A>、<xref:System.Type.IsSecuritySafeCritical%2A> 和 <xref:System.Type.IsSecurityTransparent%2A> 屬性，可讓您探索類型的透明度。 下表顯示這些屬性的有效組合。  
+ 從 .NET Framework 4 開始，通用語言執行平台可以從數個因素來決定型別或成員的透明度，包括組件和應用程式定義域二者的信任層級。 反映提供 <xref:System.Type.IsSecurityCritical%2A>、<xref:System.Type.IsSecuritySafeCritical%2A> 和 <xref:System.Type.IsSecurityTransparent%2A> 屬性，可讓您探索類型的透明度。 下表顯示這些屬性的有效組合。  
   
 |安全性層級|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|  
 |--------------------|------------------------|----------------------------|---------------------------|  

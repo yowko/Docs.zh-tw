@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a785401f0477131e6ebf0e9c04ce6d0b0b4d4f5c
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
+ms.openlocfilehash: dfc55bcd97a6c1d68d4ce900b19ace7356d6ee92
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59517534"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378562"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL 反組譯工具)
 
@@ -111,7 +111,7 @@ ildasm [options] [PEfilename] [options]
 
 ## <a name="version-information"></a>版本資訊
 
-從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，*Ildasm.exe* 會藉由顯示原始二進位內容來處理無法辨認的封送處理 BLOB (二進位大型物件)。 例如，下列程式碼將示範如何顯示 C# 程式所產生的封送處理 BLOB：
+從 .NET Framework 4.5 開始，*Ildasm.exe* 會藉由顯示原始二進位內容來處理無法辨認的封送處理 BLOB (二進位大型物件)。 例如，下列程式碼將示範如何顯示 C# 程式所產生的封送處理 BLOB：
 
 ```csharp
 public void Test([MarshalAs((short)70)] int test) { }
@@ -122,7 +122,7 @@ public void Test([MarshalAs((short)70)] int test) { }
 .method public hidebysig instance void Test(int32  marshal({ 46 }) test) cil managed
 ```
 
-從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，*Ildasm.exe* 會顯示套用至介面實作的屬性，如下面 *Ildasm.exe* 輸出的摘要所示：
+從 .NET Framework 4.5 開始，*Ildasm.exe* 會顯示套用至介面實作的屬性，如 *Ildasm.exe* 輸出的下列摘要所示：
 
 ```
 .class public auto ansi beforefieldinit MyClass

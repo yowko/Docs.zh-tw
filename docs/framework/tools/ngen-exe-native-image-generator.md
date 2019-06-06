@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e425394df0d04ffbb4cde41c83a9efe3c5b4abe0
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 011bb2d7a1a700ba4daf86d96d825373e353f57e
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481258"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457424"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (原生映像產生器)
 
@@ -130,7 +130,7 @@ ngen /? | /help
 |`/nologo`|隱藏 Microsoft 程式啟始資訊的顯示。|
 |`/silent`|隱藏成功訊息的顯示。|
 |`/verbose`|顯示用來偵錯的詳細資訊。 **注意：** 由於作業系統限制的關係，這個選項在 Windows 98 和 Windows Millennium Edition 上不會顯示那麼多詳細資訊。|
-|`/help`, `/?`|顯示目前版本的命令語法和選項。|
+|`/help`、 `/?`|顯示目前版本的命令語法和選項。|
 
 ## <a name="remarks"></a>備註
 
@@ -139,7 +139,7 @@ ngen /? | /help
 > [!CAUTION]
 > 請勿在不受完全信任的組件上執行 Ngen.exe。 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，Ngen.exe 都以完全信任的方式來編譯組件，而且不再評估程式碼存取安全性 (CAS) 原則。
 
-從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，以 Ngen.exe 產生的原生映像，不再載入至以部分信任執行的應用程式中。 而是會改為叫用 Just-In-Time (JIT) 編譯器。
+從 .NET Framework 4 開始，系統不會再將 Ngen.exe 所產生原生映像載入以部分信任狀態執行的應用程式。 而是會改為叫用 Just-In-Time (JIT) 編譯器。
 
 Ngen.exe 會產生 `install` 動作的 `assemblyname` 引數所指定組件的原生映像和其所有相依性。 相依性是由組件資訊清單中的參考所決定。 唯一需要個別安裝相依性的狀況，是在應用程式使用反映將它載入時 (例如，藉由呼叫 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法)。
 
@@ -270,7 +270,7 @@ Ngen.exe 產生的原生映像可以在應用程式定義域之間共用。 這�
 
 - 大型應用程式通常可以透過編譯取得原生映像的優勢。 小型應用程式通常就沒有差別。
 
-- 若是長時間執行的應用程式，執行階段 JIT 編譯的執行效能要比原生映像稍微好一點  (硬式繫結在某種程度上可稍微緩和這個效能差異)。
+- 若是長時間執行的應用程式，執行階段 JIT 編譯的執行效能要比原生映像稍微好一點 (硬式繫結在某種程度上可稍微緩和這個效能差異)。
 
 <a name="BaseAddresses"></a>
 
@@ -401,7 +401,7 @@ Ngen.exe 會在產生原生映像時記錄這項資訊。 當您執行組件時�
 
 ### <a name="assembly-binding-log-viewer"></a>組件繫結記錄檔檢視器
 
-若要確認您的應用程式正在使用原生映像，可以使用 [Fuslogvw.exe (組件繫結記錄檔檢視器)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)。 在繫結記錄檔檢視器視窗的 [記錄檔類別] 方塊中，選取 [原生映像]。 Fuslogvw.exe 會提供為何會拒絕原生映像的詳細資訊。
+若要確認您的應用程式正在使用原生映像，可以使用 [Fuslogvw.exe (組件繫結記錄檔檢視器)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)。 在繫結記錄檔檢視器視窗的 [記錄檔類別]  方塊中，選取 [原生映像]  。 Fuslogvw.exe 會提供為何會拒絕原生映像的詳細資訊。
 
 <a name="MDA"></a>
 
@@ -536,7 +536,7 @@ ngen uninstall ClientApp /debug
 ```
 
 > [!NOTE]
-> 解除安裝 `/debug` 情節不會解除安裝情節 (同時包含 `/profile` 和 `/debug.`
+> 解除安裝 `/debug` 情節不會解除安裝同時包含 `/profile` 和 `/debug.` 的情節。
 
 下列命令會解除安裝 `ClientApp.exe` 特定版本的所有情節：
 
@@ -610,7 +610,7 @@ ngen update /queue
 
 `update` 動作會重新產生已經失效的所有原生映像，而不只是使用 `MyComponent` 的那些原生映像。
 
-如果您的應用程式包含許多根目錄，您可以控制延後動作的優先順序。 下列命令會將三個根目錄的安裝排入佇列。 `Assembly1` 會先安裝，而不會等到閒置時間。 `Assembly2` 也是不會等到閒置時間，但要等到所有優先權 1 動作都完成之後才安裝。 `Assembly3` 則會在服務偵測到電腦閒置時安裝。
+如果您的應用程式包含許多根目錄，您可以控制延後動作的優先順序。 下列命令會將三個根目錄的安裝排入佇列。 會先安裝 `Assembly1`，而不會等到閒置時間。 `Assembly2` 也是不會等到閒置時間，但要等到所有優先權 1 動作都完成之後才安裝。 `Assembly3` 則會在服務偵測到電腦閒置時安裝。
 
 ```
 ngen install Assembly1 /queue:1

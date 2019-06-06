@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da29bd6bc53b59f1f20e2272a8293b49e230bff0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 996ea7802473817594420a108470f7604170482e
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622874"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456799"
 ---
 # <a name="garbage-collection-and-performance"></a>記憶體回收和效能
 <a name="top"></a> 本主題描述記憶體回收和記憶體使用量的相關問題。 它解決關於 Managed 堆積的問題，並說明如何將記憶體回收對應用程式的影響降至最低。 每個問題已連結至程序，可讓您用來調查問題。  
@@ -61,7 +61,7 @@ ms.locfileid: "64622874"
  程式碼剖析工具可以提供完整的資訊。 不過，複雜的程式碼剖析工具可能會修改應用程式的行為。  
   
 ### <a name="application-domain-resource-monitoring"></a>應用程式定義域資源監視  
- 從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，應用程式定義域資源監視 (ARM) 可讓主機監視應用程式定義域的 CPU 和記憶體使用量。 如需詳細資訊，請參閱[應用程式定義域資源監視](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)。  
+ 從 .NET Framework 4 開始，應用程式定義域資源監視 (ARM) 可讓主機監視應用程式定義域的 CPU 和記憶體使用量。 如需詳細資訊，請參閱[應用程式定義域資源監視](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)。  
   
  [回到頁首](#top)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "64622874"
   
 <a name="Issue_TooMuchMemory"></a>   
 ### <a name="issue-the-process-uses-too-much-memory"></a>問題：處理序使用太多記憶體  
- 常見的假設是 Windows 工作管理員 [效能] 索引標籤上的記憶體使用量顯示可以指出使用太多記憶體的時刻。 不過，該顯示與工作集有關；它不提供虛擬記憶體使用量的相關資訊。  
+ 常見的假設是 Windows 工作管理員 [效能]  索引標籤上的記憶體使用量顯示可以指出使用太多記憶體的時刻。 不過，該顯示與工作集有關；它不提供虛擬記憶體使用量的相關資訊。  
   
  如果您判斷問題是 Managed 堆積所導致，您必須在一段時間內測量 Managed 堆積，以判斷任何模式。  
   
@@ -269,7 +269,7 @@ ms.locfileid: "64622874"
   
 - 檢查下列兩個記憶體效能計數器：  
   
-    - **在 GC 的時間 %**。 顯示自上次記憶體回收循環後所花費在執行記憶體回收的已耗用時間百分比。 使用此計數器來判斷是否記憶體回收行程花費太多時間才讓 Managed 堆積的空間可供使用。 如果花費在記憶體回收的時間很短，可能表示 Managed 堆積以外的資源問題。 與並行或背景記憶體回收相關時，這個計數器可能不正確。  
+    - **在 GC 的時間 %** 。 顯示自上次記憶體回收循環後所花費在執行記憶體回收的已耗用時間百分比。 使用此計數器來判斷是否記憶體回收行程花費太多時間才讓 Managed 堆積的空間可供使用。 如果花費在記憶體回收的時間很短，可能表示 Managed 堆積以外的資源問題。 與並行或背景記憶體回收相關時，這個計數器可能不正確。  
   
     - **已認可的位元組總數**。 顯示記憶體回收行程目前已認可的虛擬記憶體數目。 使用此計數器來判斷記憶體回收行程所耗用的記憶體是否佔應用程式所使用記憶體的過多數量。  
   
@@ -346,9 +346,9 @@ ms.locfileid: "64622874"
   
 1. 啟動 Windows 工作管理員。  
   
-2. 在 [效能] 索引標籤上，查看已認可的值。 (在 Windows 7 中，查看 [系統群組] 中的 [認可 (KB)]。)  
+2. 在 [效能]  索引標籤上，查看已認可的值。 (在 Windows 7 中，查看 [系統群組]  中的 [認可 (KB)]  。)  
   
-     如果 [總計] 很接近 [限制]，則您的實體記憶體不足。  
+     如果 [總計]  很接近 [限制]  ，則您的實體記憶體不足。  
   
 <a name="ManagedHeapCommit"></a>   
 ##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>判斷 Managed 堆積正在認可的記憶體數量  
@@ -681,9 +681,9 @@ ms.locfileid: "64622874"
     89931464        GCHeapStats            Test.exe    4372          
     ```  
   
-     在 42504816 的 `GCStart_V1` 事件表示這是背景記憶體回收，因為最後一個欄位是 `1`。 這會變成記憶體回收第  102019 號。  
+     在 42504816 的 `GCStart_V1` 事件表示這是背景記憶體回收，因為最後一個欄位是 `1`。 這會變成記憶體回收第 102019 號。  
   
-     因為需要先進行暫時記憶體回收，才能開始背景記憶體回收，因此發生 `GCStart` 事件。 這會變成記憶體回收第  102020 號。  
+     因為需要先進行暫時記憶體回收，才能開始背景記憶體回收，因此發生 `GCStart` 事件。 這會變成記憶體回收第 102020 號。  
   
      在 42514170 處，記憶體回收第 102020 號完成。 Managed 執行緒會在此時重新啟動。 此步驟會在執行緒 4372，觸發此背景記憶體回收完成。  
   

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 716f6ee2c9eb09abcbd4ada16954315ed4a56c02
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: bc27eedcf1957a109a9bcb80cf9a49e9606921fd
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210433"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251005"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 字串內插補點 (C# 參考)
 
-`$` 特殊字元會將字串常值識別為「字串內插補點」。 插入字串是可能包含「插入運算式」的字串常值。 將插入字串解析為結果字串時，會將具有插入運算式的項目取代為運算式結果的字串表示。 C# 6 和更新版本的語言中有提供這項功能。
+`$` 特殊字元會將字串常值識別為「字串內插補點」。 插入字串是可能包含「內插補點運算式」的字串常值。 將插入字串解析為結果字串時，會將具有內插補點運算式之項目取代為運算式結果的字串表示。 C# 6 和更新版本的語言中有提供這項功能。
 
 字串插補在建立格式化字串時，是比[字串複合格式化](../../../standard/base-types/composite-formatting.md)功能更容易理解且方便的語法。 下列範例會使用這兩項功能，產生相同的輸出：
 
@@ -32,18 +32,18 @@ ms.locfileid: "65210433"
 
 若要將字串常值識別為插入字串，請在其前面加上 `$` 符號。 字串常值開頭的 `$` 與 `"` 之間不能有空白字元。 這樣做會導致編譯時期錯誤。
 
-具有插值運算式的項目結構如下所示：
+具有內插補點運算式的項目結構如下所示：
 
 ```
-{<interpolatedExpression>[,<alignment>][:<formatString>]}
+{<interpolationExpression>[,<alignment>][:<formatString>]}
 ```
 
 在方括號中的元素是選擇性的元素。 下表說明每個元素：
 
 |元素|說明|
 |-------------|-----------------|
-|`interpolatedExpression`|產生要格式化之結果的運算式。 `null` 結果的字串表示是 <xref:System.String.Empty?displayProperty=nameWithType>。|
-|`alignment`|常數的運算式，其值定義插值運算式結果的字串表示的字元數下限。 如果是正數，則字串表示是靠右對齊；如果是負數，它是靠左對齊。 如需詳細資訊，請參閱[對齊元件](../../../standard/base-types/composite-formatting.md#alignment-component)。|
+|`interpolationExpression`|產生要格式化之結果的運算式。 `null` 結果的字串表示是 <xref:System.String.Empty?displayProperty=nameWithType>。|
+|`alignment`|常數的運算式，其值定義內插補點運算式結果之字串表示的字元數下限。 如果是正數，則字串表示是靠右對齊；如果是負數，它是靠左對齊。 如需詳細資訊，請參閱[對齊元件](../../../standard/base-types/composite-formatting.md#alignment-component)。|
 |`formatString`|運算式結果的類型所支援的格式字串。 如需詳細資訊，請參閱[格式字串元件](../../../standard/base-types/composite-formatting.md#format-string-component)。|
 
 下列範例會使用上述的選擇性格式化元件：
@@ -54,9 +54,9 @@ ms.locfileid: "65210433"
 
 若要在插入字串所產生的文字中包含大括弧 "{" 或 "}"，請使用雙大括弧 "{{" 或 "}}"。 如需詳細資訊，請參閱[逸出大括號](../../../standard/base-types/composite-formatting.md#escaping-braces)。
 
-因為冒號 (":")　在插入運算式項目中具有特殊意義，為了在插入運算式中使用[條件運算子](../operators/conditional-operator.md)，請用括號括住運算式。
+因為冒號 (":")　在內插補點運算式項目中具有特殊意義，為了在內插補點運算式中使用[條件運算子](../operators/conditional-operator.md)，請用括弧括住運算式。
 
-下列範例示範如何在結果字串中包含大括號以及如何在插入運算式中使用條件運算子：
+下列範例示範如何在結果字串中包含大括弧以及如何在內插補點運算式中使用條件運算子：
 
 [!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
@@ -69,7 +69,7 @@ ms.locfileid: "65210433"
 
 有三個來自插入字串的隱含轉換：
 
-1. 將字串內插補點轉換成字串內插補點解析結果的 <xref:System.String> 執行個體，且插值運算式項目取代為其結果的格式正確字串表示。 這項轉換會使用目前文化特性。
+1. 將插入字串轉換成插入字串解析結果的 <xref:System.String> 執行個體，且內插補點運算式項目取代為其結果的格式正確字串表示。 這項轉換會使用目前文化特性。
 
 1. 將插入字串轉換成 <xref:System.FormattableString> 執行個體，以代表複合格式字串，並將運算式結果格式化。 那可讓您從單一 <xref:System.FormattableString> 執行個體建立多個具有特定文化特性內容的結果字串。 若要執行此工作，請呼叫下列的其中一個方法：
 

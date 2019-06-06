@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6adbe4e5c82d5f886fcffd5ab272a337c377395
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5ca4a087b60e6cb857ec78273dad099e5e5da07a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586121"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457314"
 ---
 # <a name="security-issues-in-reflection-emit"></a>反映發出中的安全性問題
 .NET Framework 提供三種發出 Microsoft 中繼語言 (MSIL) 的方式，每種都有它自己的安全性問題：  
@@ -78,7 +78,7 @@ ms.locfileid: "65586121"
   
  與任何其他發出程式碼一樣，執行動態方法需要動態方法所使用之方法要求的任何權限。  
   
- 裝載匿名裝載動態方法的系統組件會使用 <xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType> 透明度模型，這是在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 之前的 .NET Framework 中所使用的透明度模型 。  
+ 裝載匿名裝載動態方法的系統組件會使用 <xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType> 透明度模型，這是在 .NET Framework 4 之前的 .NET Framework 中所使用透明度模型。  
   
  如需詳細資訊，請參閱 <xref:System.Reflection.Emit.DynamicMethod> 類別。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "65586121"
   
 <a name="Version_Information"></a>   
 ## <a name="version-information"></a>版本資訊  
- 從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，淘汰全機器的安全性原則，且安全性透明度變成預設強制機制。 請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。  
+ 從 .NET Framework 4 開始，已消除全機器的安全性原則，且安全性透明度變成預設強制機制。 請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。  
   
  從 [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 開始，當發出動態組件和動態方法時，不再需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。 此旗標在所有先前版本的 .NET Framework 中都是必要項目。  
   

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51291fbc9ad2927bc3b9649074a6dbf374aaf7f1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5b1c704113c8e05e493cdb3ef24f6376ab54b1cb
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648446"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251118"
 ---
 # <a name="mitigation-path-normalization"></a>風險降低：路徑正規化
-從以 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 為目標的應用程式開始，.NET Framework 中的路徑正規化已有所變更。  
+從以 .NET Framework 4.6.2 為目標的應用程式開始，.NET Framework 中的路徑正規化已有所變更。  
   
 ## <a name="what-is-path-normalization"></a>路徑正規化是什麼？  
  路徑正規化牽涉到修改識別路徑或檔案的字串，使其符合目標作業系統上的有效路徑。 正規化通常牽涉到︰  
@@ -26,7 +26,7 @@ ms.locfileid: "64648446"
 - 修剪指定的字元。  
   
 ## <a name="the-changes"></a>變更  
- 從以 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 為目標的應用程式開始，路徑正規化在以下方面已有所變更：  
+ 從以 .NET Framework 4.6.2 為目標的應用程式開始，路徑正規化在下列方面已有所變更：  
   
 - 執行階段會延後至作業系統的 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) 函式再進行路徑正規化。  
   
@@ -39,12 +39,13 @@ ms.locfileid: "64648446"
 - 支援使用裝置語法存取替代資料流。  
   
 ## <a name="impact"></a>影響  
- 對於以 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更新版本為目標的應用程式，這些變更預設為開啟。 它們應該可以改善效能，同時允許方法存取先前無法存取的路徑。  
+
+對於以 .NET Framework 4.6.2 或更新版本為目標的應用程式，這些變更預設為開啟。 它們應該可以改善效能，同時允許方法存取先前無法存取的路徑。  
   
- 此變更不會影響以 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 和舊版為目標但執行於 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更新版本下的應用程式。  
+此變更不會影響以 .NET Framework 4.6.1 和舊版為目標但執行於 .NET Framework 4.6.2 或更新版本下的應用程式。  
   
 ## <a name="mitigation"></a>緩和  
- 以 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更新版本為目標的應用程式可透過在應用程式組態檔的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段加入下列內容來選擇退出此變更，以使用舊版正規化：  
+ 以 .NET Framework 4.6.2 或更新版本為目標的應用程式，可透過在應用程式組態檔的[\<執行階段>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段中新增下列內容來選擇退出此變更，並使用舊版行為：  
   
 ```xml  
 <runtime>  
@@ -52,7 +53,7 @@ ms.locfileid: "64648446"
 </runtime>  
 ```  
   
- 以 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 或舊版為目標但在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更新版本上執行的應用程式，只要在應用程式組態檔的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段加入下列程式行，就能啟用路徑正規化的變更：  
+以 .NET Framework 4.6.1 或更早版本為目標，但在 .NET Framework 4.6.2 或更新版本上執行的應用程式，可以藉由在應用程式組態檔的[\<執行階段>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段新增下行，就能啟用路徑正規化的變更：  
   
 ```xml  
 <runtime>  

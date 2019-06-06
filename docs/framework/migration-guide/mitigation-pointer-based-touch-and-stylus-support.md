@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d750087cc000ad31a24d91411c0885a75d59e74f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9264d8eb7923663061f9bccfffe5b8f5254549f0
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501935"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379894"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>風險降低：以指標為基礎的觸控及手寫筆支援
 
@@ -38,7 +38,7 @@ ms.locfileid: "54501935"
 
   - 無法再針對觸控/手寫筆事件起始拖放動作。
 
-      這可能會使應用程式停止回應到偵測到滑鼠輸入為止。 開發人員應改為從滑鼠事件起始拖放動作。
+      這可能會導致應用程式停止回應，直到偵測到滑鼠輸入為止。 開發人員應改為從滑鼠事件起始拖放動作。
 
 ## <a name="opting-in-to-wmpointer-based-touchstylus-support"></a>選擇加入 WM_POINTER 式觸控/手寫筆支援
 

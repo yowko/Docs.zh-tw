@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ca7bf5ad4b4d145f484f46ee46220a58f326333
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7db411e9ef38adb42c8df2059d166d1fa4184f95
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635609"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378378"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework 類別庫中已淘汰的功能
 
@@ -43,7 +43,7 @@ ms.locfileid: "65635609"
 
 - 檢閱適用於這個技術領域的文件，以便判斷如何回應取代。
 
-您可以選擇不要針對更新的 .NET Framework 版本重新編譯現有的程式碼， 而改為指定現有已編譯程式碼所執行的目標 .NET Framework 版本。 例如，假設您有一個名為 app1.exe 而且已針對 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 編譯的應用程式，但是您想要讓這個應用程式針對 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 執行。 此時，您需要進行下列步驟：
+您可以選擇不要針對更新的 .NET Framework 版本重新編譯現有的程式碼， 而改為指定現有已編譯程式碼所執行的目標 .NET Framework 版本。 例如，假設您有一個名為 app1.exe 且已針對 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 編譯的應用程式，但是您想要讓這個應用程式針對 .NET Framework 4.5 執行。 此時，您需要進行下列步驟：
 
 1. 建立主要可執行檔的組態檔，並將它命名為 *appName*.exe.config，其中 *appName* 是應用程式可執行檔的名稱。 對於範例中名為 app1.exe 的應用程式而言，您要建立名為 app1.exe.config 的組態檔。
 

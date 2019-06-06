@@ -10,27 +10,27 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 670ed89754aa9b4d2052bb1186e0139618190cd6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d41a88b7a9197a19a131cbda078297a96acdabfb
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676885"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457484"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 簡介
 
 ## <a name="what-is-a-parallel-query"></a>何謂平行查詢？
 
-Language-Integrated Query (LINQ) 是在 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 中引進的。 其特色是以型別安全方法查詢任何 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 資料來源的統一模型。 LINQ to Objects 是 LINQ 查詢的名稱，它是針對記憶體中的集合 (例如 <xref:System.Collections.Generic.List%601> 和陣列) 執行。 此文章假設您已對 LINQ 有基本了解。 如需詳細資訊，請參閱 [Language-Integrated Query (LINQ) - C# ](../../csharp/programming-guide/concepts/linq/index.md) 或 [Language-Integrated Query (LINQ) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)。
+Language-Integrated Query (LINQ) 是在 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 中引進的。 其特色是以型別安全方法查詢任何 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 資料來源的統一模型。 LINQ to Objects 是 LINQ 查詢的名稱，它是針對記憶體中的集合 (例如 <xref:System.Collections.Generic.List%601> 和陣列) 執行。 本文假設您已對 LINQ 有基本了解。 如需詳細資訊，請參閱 [Language-Integrated Query (LINQ) - C# ](../../csharp/programming-guide/concepts/linq/index.md) 或 [Language-Integrated Query (LINQ) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)。
 
 Parallel LINQ (PLINQ) 是平行實作的 LINQ 模式。 PLINQ 查詢在很多方面類似於非平行 LINQ to Objects 查詢。 PLINQ 查詢和循序 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] 查詢一樣，會對記憶體中的 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 資料來源來操作，而且其執行會順延，也就是說，查詢在列舉過後才會開始執行。 這兩種查詢的主要差別在於，PLINQ 會嘗試充分利用系統上的所有處理器。 它所採取的方式是將資料來源分割成多個區段，然後在多個處理器上，以平行方式在不同的背景工作執行緒上對每個區段執行查詢。 在許多情況下，平行執行意謂著查詢的執行速度會明顯加快。
 
 透過平行執行，PLINQ 就能對適用於某些查詢種類的舊版程式碼，達成顯著的效能改善，而這通常只需要對資料來源新增 <xref:System.Linq.ParallelEnumerable.AsParallel%2A> 作業即可做到。 不過，平行處理原則也會帶來自己的複雜性，所以並非所有查詢作業都可透過 PLINQ 加快執行速度。 事實上，平行處理的確會降低某些查詢的速度。 因此，您應該了解各種問題 (例如排序) 會如何影響平行查詢。 如需詳細資訊，請參閱[認識 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。
 
 > [!NOTE]
-> 此文件使用 Lambda 運算式來定義 PLINQ 中的委派。 如果您不熟悉 C# 或 Visual Basic 中的 Lambda 運算式，請參閱 [PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。
+> 本文件使用 Lambda 運算式來定義 PLINQ 中的委派。 如果您不熟悉 C# 或 Visual Basic 中的 Lambda 運算式，請參閱 [PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。
 
-此文章其餘部分會概述 PLINQ 的主要類別，並討論如何建立 PLINQ 查詢。 每一節都附有連結，可供您獲得詳細資訊和程式碼範例。
+本文其餘部分會概述 PLINQ 的主要類別，並討論如何建立 PLINQ 查詢。 每一節都附有連結，可供您獲得詳細資訊和程式碼範例。
 
 ## <a name="the-parallelenumerable-class"></a>ParallelEnumerable 類別
 
@@ -107,7 +107,7 @@ Parallel LINQ (PLINQ) 是平行實作的 LINQ 模式。 PLINQ 查詢在很多方
 
 ## <a name="cancellation"></a>取消
 
-PLINQ 已與 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中的取消作業型別整合  (如需詳細資訊，請參閱 [Managed 執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md))。因此，不像循序 LINQ to Objects 查詢，PLINQ 查詢是可以取消的。 若要建立可取消的 PLINQ 查詢，請在查詢中使用 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> 運算子，並提供 <xref:System.Threading.CancellationToken> 執行個體做為引數。 當權杖上的 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性設為 true 時，PLINQ 將注意到，並會停止所有執行緒上的處理作業，然後擲回 <xref:System.OperationCanceledException>。
+PLINQ 已與 .NET Framework 4 中的取消作業型別整合。 (如需詳細資訊，請參閱 [Managed 執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md))。因此，不像循序 LINQ to Objects 查詢，PLINQ 查詢是可以取消的。 若要建立可取消的 PLINQ 查詢，請在查詢中使用 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> 運算子，並提供 <xref:System.Threading.CancellationToken> 執行個體做為引數。 當權杖上的 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性設為 true 時，PLINQ 將注意到，並會停止所有執行緒上的處理作業，然後擲回 <xref:System.OperationCanceledException>。
 
 在設定了取消權杖之後，PLINQ 查詢還是可能會繼續處理某些元素。
 

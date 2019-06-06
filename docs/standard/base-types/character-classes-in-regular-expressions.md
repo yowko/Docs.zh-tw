@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e577f376b347442f6693a7a5478757ce3b698752
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 556181d32f0539b4a9e24cb1a898b4ccc3788f4e
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053007"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250882"
 ---
 # <a name="character-classes-in-regular-expressions"></a>規則運算式中的字元類別
 
@@ -51,16 +51,18 @@ ms.locfileid: "66053007"
  .NET 支援字元類別減法運算式，可讓您將一組字元定義為從某個字元類別中排除另一個字元類別的結果。 如需詳細資訊，請參閱[字元類別減法](#CharacterClassSubtraction)。  
   
 > [!NOTE]
->  依分類比對字元的字元類別 (例如，[\w](#WordCharacter) 會比對字組字元，或[\p{}](#CategoryOrBlock) 會比對 Unicode 分類) 會依賴 <xref:System.Globalization.CharUnicodeInfo> 類別來提供字元分類的相關資訊。  從 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 開始，字元類別根據 [Unicode 標準 8.0.0 版](https://www.unicode.org/versions/Unicode8.0.0/)。 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 至 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 中，它們根據 [Unicode 標準 6.3.0 版](https://www.unicode.org/versions/Unicode6.3.0/)。  
+>  依分類比對字元的字元類別 (例如，[\w](#WordCharacter) 會比對字組字元，或[\p{}](#CategoryOrBlock) 會比對 Unicode 分類) 會依賴 <xref:System.Globalization.CharUnicodeInfo> 類別來提供字元分類的相關資訊。  從 .NET Framework 4.6.2 開始，字元類別根據 [Unicode 標準 8.0.0 版](https://www.unicode.org/versions/Unicode8.0.0/)。 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 至 .NET Framework 4.6.1 中，則是根據 [Unicode 標準 6.3.0 版](https://www.unicode.org/versions/Unicode6.3.0/)。  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>正字元群組：[ ]  
  正字元群組會指定一份字元清單，其中任何字元都可出現在輸入字串中，以便出現相符項目。 這份字元清單可以個別指定，也可以依範圍指定，或同時依兩種方式指定。  
   
  指定個別字元清單的語法如下所示：  
-  
- [*character_group*]  
-  
+
+```  
+[*character_group*]  
+```
+
  其中 *character_group* 是為了讓比對成功而可以出現在輸入字串中的個別字元清單。 *character_group*可以由一或多個常值字元、[逸出字元](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)或字元類別的任何組合所構成。  
   
  指定字元範圍的語法如下所示：  
@@ -69,9 +71,12 @@ ms.locfileid: "66053007"
 [firstCharacter-lastCharacter]  
 ```  
   
- 其中 *firstCharacter* 是範圍開始的字元，而 *lastCharacter* 是範圍結束的字元。 字元範圍是指一系列連續的字元，定義的方式是指定系列中的第一個字元、連字號 (-)，然後是系列中的最後一個字元。 如果兩個字元具有相鄰的 Unicode 字碼指標，這兩個字元就是連續字元。  
-  
- 下表列出一些包含正字元類別的常見規則運算式模式。  
+ 其中 *firstCharacter* 是範圍開始的字元，而 *lastCharacter* 是範圍結束的字元。 字元範圍是指一系列連續的字元，定義的方式是指定系列中的第一個字元、連字號 (-)，然後是系列中的最後一個字元。 如果兩個字元具有相鄰的 Unicode 字碼指標，這兩個字元就是連續字元。 *firstCharacter* 必須是較低字碼指標的字元，*lastCharacter* 必須是較高字碼指標的字元。
+
+> [!NOTE]
+> 由於正字元群組可以包含一組字元和一個範圍的字元，因此連字號字元 (`-`) 會一律解譯成範圍分隔符號，除非該字元是群組的第一個或最後一個字元。
+
+下表列出一些包含正字元類別的常見規則運算式模式。  
   
 |模式|說明|  
 |-------------|-----------------|  
@@ -112,17 +117,24 @@ ms.locfileid: "66053007"
 ## <a name="negative-character-group-"></a>負字元群組：[^]  
  負字元群組會指定一份字元清單，其中任何字元不得出現在輸入字串中，才會出現相符項目。 字元清單可以個別指定，也可以依範圍指定，或同時依兩種方式指定。  
   
- 指定個別字元清單的語法如下所示：  
-  
- [*^character_group*]  
-  
+指定個別字元清單的語法如下所示：  
+
+```
+[*^character_group*]  
+```
+
  其中 *character_group* 是為了讓比對成功而不可出現在輸入字串中的個別字元清單。 *character_group*可以由一或多個常值字元、[逸出字元](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)或字元類別的任何組合所構成。  
   
  指定字元範圍的語法如下所示：  
-  
- [^*firstCharacter*-*lastCharacter*]  
-  
- 其中 *firstCharacter* 是範圍開始的字元，而 *lastCharacter* 是範圍結束的字元。 字元範圍是指一系列連續的字元，定義的方式是指定系列中的第一個字元、連字號 (-)，然後是系列中的最後一個字元。 如果兩個字元具有相鄰的 Unicode 字碼指標，這兩個字元就是連續字元。  
+
+```
+[^*firstCharacter*-*lastCharacter*]  
+```
+
+其中 *firstCharacter* 是範圍開始的字元，而 *lastCharacter* 是範圍結束的字元。 字元範圍是指一系列連續的字元，定義的方式是指定系列中的第一個字元、連字號 (-)，然後是系列中的最後一個字元。 如果兩個字元具有相鄰的 Unicode 字碼指標，這兩個字元就是連續字元。 *firstCharacter* 必須是較低字碼指標的字元，*lastCharacter* 必須是較高字碼指標的字元。
+
+> [!NOTE]
+> 由於負字元群組可以包含一組字元和一個範圍的字元，因此連字號字元 (`-`) 會一律解譯成範圍分隔符號，除非該字元是群組的第一個或最後一個字元。
   
  可以串連兩個或多個字元範圍。 例如，若要指定從 "0" 到 "9" 的十進位數字範圍、從 "a" 到 "f" 的小寫字母範圍，以及從 "A" 到 "F" 的大寫字母範圍，可以使用 `[0-9a-fA-F]`。  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: f923ca42e67c76f8b4296089953fada65b645f4f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfc8e1cfa6050a6e45373ad023ee8f358e388735
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629016"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423862"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>事件架構非同步模式概觀
 要同時執行許多工作，還能繼續回應使用者互動，這樣的應用程式通常都需要可以使用多執行緒的設計。 <xref:System.Threading> 命名空間提供建立高效能多執行緒應用程式的所有必要工具，但是要有效地使用這些工具，需要具備多執行緒軟體工程的豐富經驗。 對於較簡單的多執行緒應用程式，<xref:System.ComponentModel.BackgroundWorker> 元件提供了簡單明瞭的方案。 如果是較為複雜精細的非同步應用程式，請考慮實作遵守事件架構非同步模式的類別。  
@@ -32,20 +32,20 @@ ms.locfileid: "64629016"
   
 - 同時執行多項作業，並在每項作業完成時都收到通知。  
   
-- 等候資源變成可供使用，而不需要停止 (「擱置」) 應用程式。  
+- 等候資源變成可供使用，而不需要停止 (「封鎖」) 應用程式。  
   
 - 使用熟悉的事件和委派模型，與暫止的非同步作業通訊。 如需使用事件處理常式和委派的詳細資訊，請參閱[事件](../../../docs/standard/events/index.md)。  
   
  支援事件架構非同步模式的類別，會有一或多個名為 _MethodName_**Async** 的方法。 這些方法可能鏡像在目前執行緒上執行相同作業的同步版本。 這個類別可能也具有 _MethodName_**Completed** 事件，且具有 _MethodName_**AsyncCancel** (或簡稱 **CancelAsync**) 方法。  
   
- <xref:System.Windows.Forms.PictureBox> 是支援事件架構非同步模式的一般元件。 您可以呼叫影像的 <xref:System.Windows.Forms.PictureBox.Load%2A> 方法以同步下載影像，不過如果影像非常龐大或是網路連接相當緩慢，在下載作業完成且對 <xref:System.Windows.Forms.PictureBox.Load%2A> 的呼叫傳回之前，應用程式都會是停止 (「擱置」) 狀態。  
+ <xref:System.Windows.Forms.PictureBox> 是支援事件架構非同步模式的一般元件。 您可以呼叫影像的 <xref:System.Windows.Forms.PictureBox.Load%2A> 方法以同步下載影像，但如果影像非常龐大或是網路連接相當緩慢，則在下載作業完成及傳回 <xref:System.Windows.Forms.PictureBox.Load%2A> 的呼叫之前，應用程式都會是停止回應狀態。  
   
  如果要讓應用程式在載入影像時持續執行，您可以呼叫 <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> 方法並處理 <xref:System.Windows.Forms.PictureBox.LoadCompleted> 事件，就像處理其他任何事件一樣。 當您呼叫 <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> 方法時，應用程式就會繼續執行，同時下載會在個別的執行緒上 (「在背景中」) 進行。 當影像載入作業完成時，就會呼叫您的事件處理常式，此時事件處理常式便可以檢查 <xref:System.ComponentModel.AsyncCompletedEventArgs> 參數，以判斷下載是否順利完成。  
   
  事件架構非同步模式需要能夠取消非同步作業，而 <xref:System.Windows.Forms.PictureBox> 控制項以它所具有的 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 方法支援這項需求。 呼叫 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 便會發出要求讓暫止的下載停止，而且在取消工作時，就會引發 <xref:System.Windows.Forms.PictureBox.LoadCompleted> 事件。  
   
 > [!CAUTION]
->  產生 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 要求時剛好完成下載也是可能發生的，因此 <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> 可能無法反映取消的要求。 這種情況稱為「競爭情形」(Race Condition)，這是多執行緒程式設計中的常見問題。 如需多執行緒程式設計問題的詳細資訊，請參閱[受控執行緒處理的最佳做法](../../../docs/standard/threading/managed-threading-best-practices.md)。  
+>  產生 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 要求時剛好完成下載也是可能發生的，因此 <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> 可能無法反映取消的要求。 這種情況稱為「競爭情形」  (Race Condition)，這是多執行緒程式設計中的常見問題。 如需多執行緒程式設計問題的詳細資訊，請參閱[受控執行緒處理的最佳做法](../../../docs/standard/threading/managed-threading-best-practices.md)。  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>事件架構非同步模式的特性  
  事件架構非同步模式可能會採用數種格式，需視特定類別所支援作業的複雜度而定。 最簡單的類別可以有單一的 _MethodName_**Async** 方法和對應的 _MethodName_**Completed** 事件。 比較複雜的類別則可以有數個 _MethodName_**Async** 方法，每一個方法都有對應的 _MethodName_**Completed** 事件，以及這些方法的同步版本。 這些類別可以選擇性地支援每個非同步方法的取消、進度報告和累加結果。  

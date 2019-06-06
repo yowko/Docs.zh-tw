@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 00dc191d53d01d33a5dce3ed2d012942e2672dae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 51bf359ea6ba4e5b45827928a50a095a7960a68f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607519"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456709"
 ---
 # <a name="shadow-copying-assemblies"></a>陰影複製組件
 陰影複製可讓應用程式定義域中使用的組件更新，而不需卸載應用程式定義域。 這對必須連續運作的應用程式特別有用，例如 ASP.NET 網站。  
@@ -67,9 +67,9 @@ ms.locfileid: "64607519"
   
 <a name="StartupPerformance"></a>   
 ## <a name="startup-performance"></a>啟動效能  
- 當使用陰影複製的應用程式定義域啟動時，複製應用程式目錄中的組件到陰影複製目錄會有延遲；或當組件已經在該位置時，驗證組件也會有延遲。 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 之前，會複製所有組件到暫存目錄。 會開啟每個組件來確認組件名稱，且會驗證強式名稱。 會檢查每個組件，以查看它是否已更新為比陰影複製目錄中的複本還要新。 若是如此，則將它複製到陰影複製目錄中。 最後會捨棄暫時複本。  
+ 當使用陰影複製的應用程式定義域啟動時，複製應用程式目錄中的組件到陰影複製目錄會有延遲；或當組件已經在該位置時，驗證組件也會有延遲。 在 .NET Framework 4 之前，系統會將所有組件複製到暫存目錄。 會開啟每個組件來確認組件名稱，且會驗證強式名稱。 會檢查每個組件，以查看它是否已更新為比陰影複製目錄中的複本還要新。 若是如此，則將它複製到陰影複製目錄中。 最後會捨棄暫時複本。  
   
- 從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，預設啟動行為會直接比較應用程式目錄中每個組件的檔案日期和時間以及陰影複製目錄中複本的檔案日期和時間。 如果已更新組件，便會使用和舊版 .NET Framework 相同的程序複製組件；否則會載入陰影複製目錄中的複本。  
+ 從 .NET Framework 4 開始，預設啟動行為會直接比較應用程式目錄中每個組件的檔案日期和時間，以及陰影複製目錄中複本的檔案日期和時間。 如果已更新組件，便會使用和舊版 .NET Framework 相同的程序複製組件；否則會載入陰影複製目錄中的複本。  
   
  對於組件不常變更，且變更通常發生在組件一小部分的應用程式而言，會產生最大的效能改進。 如果應用程式中大部分的組件經常變更，則新的預設行為可能會導致效能變差。 您可以藉由將 [\<shadowCopyVerifyByTimestamp> 項目](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) (並設定 `enabled="false"`) 新增至組態檔，還原舊版 .NET Framework 的啟動行為。  
   

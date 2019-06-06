@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96499d2a3d74deb7208fa49f9fc0927109d93a69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 052f6a61fb1b03b060e22bbff2d8124ac3a1c0c0
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623799"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377664"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>以工作為基礎的非同步模式 (TAP)
 工作式非同步模式 (TAP) 是以 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 命名空間中的 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks?displayProperty=nameWithType> 類型為基礎，這兩種類別用於表示任意非同步作業。 TAP 是進行新的開發工作時，建議使用的非同步設計模式。  
@@ -32,7 +32,7 @@ TAP 使用單一方法表示非同步作業的啟始和完成。 這與非同步
   
  TAP 方法的參數應該與其同步對應項目的參數相符，並且應該以相同順序提供。  不過，`out` 和 `ref` 參數不受限於這項規則，因此應完全避免使用。 所有可能會透過 `out` 或 `ref` 參數傳回的資料，都應該改成做為 `TResult` 所傳回 <xref:System.Threading.Tasks.Task%601> 的一部分傳回，而且應使用 Tuple 或自訂資料結構來容納多個值。 即使 TAP 方法的同步對應項目沒有提供 <xref:System.Threading.CancellationToken> 參數，您也應該考慮新增一個。
  
- 專門用於建立、管理或組合工作的方法 (其中方法的非同步用意以方法名稱或方法所屬的類型名稱清楚表示) 不需要遵循這個命名模式，這類方法通常稱為「組合器」。 組合器的範例包括 <xref:System.Threading.Tasks.Task.WhenAll%2A> 和 <xref:System.Threading.Tasks.Task.WhenAny%2A>，並且將在[使用以工作為基礎的非同步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)文件的[使用內建工作式組合器](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md#combinators)一節中加以討論。  
+ 專門用於建立、管理或組合工作的方法 (其中方法的非同步用意以方法名稱或方法所屬的類型名稱清楚表示) 不需要遵循這個命名模式，這類方法通常稱為「組合器」  。 組合器的範例包括 <xref:System.Threading.Tasks.Task.WhenAll%2A> 和 <xref:System.Threading.Tasks.Task.WhenAny%2A>，並且將在[使用以工作為基礎的非同步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)文件的[使用內建工作式組合器](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md#combinators)一節中加以討論。  
   
  如需說明 TAP 語法與舊有非同步程式設計模式 (例如非同步程式設計模型 (APM) 和事件式非同步模式 (EAP)) 的語法之間差異的範例，請參閱[非同步程式設計模式](../../../docs/standard/asynchronous-programming-patterns/index.md)。  
   
@@ -54,7 +54,7 @@ TAP 使用單一方法表示非同步作業的啟始和完成。 這與非同步
  TAP 方法的呼叫端可能會透過同步等待產生的工作來阻止等待 TAP 方法完成，或是在非同步作業完成時執行其他 (接續) 程式碼。 接續程式碼 (Continuation Code) 的建立者可以控制執行程式碼的位置。 您可以明確建立接續程式碼、透過 <xref:System.Threading.Tasks.Task> 類別的方法建立 (例如 <xref:System.Threading.Tasks.Task.ContinueWith%2A>)，或使用建置於接續之上的語言支援以隱含方式建立 (例如 C# 中的 `await`、Visual Basic 中的 `Await`，或 F# 中的 `AwaitValue`)。  
   
 ## <a name="task-status"></a>工作狀態  
- <xref:System.Threading.Tasks.Task> 類別會提供非同步作業的生命週期，而該週期是以 <xref:System.Threading.Tasks.TaskStatus> 列舉表示。 為了支援從 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 衍生的類型隱密案例，以及支援分隔建構與排程，<xref:System.Threading.Tasks.Task> 類別會公開 <xref:System.Threading.Tasks.Task.Start%2A> 方法。 由公用 <xref:System.Threading.Tasks.Task> 建構函式所建立的工作稱為「靜止工作」(Cold Task)，因為這類工作的生命週期是從非排程的 <xref:System.Threading.Tasks.TaskStatus.Created> 狀態開始，而且只有在這些執行個體上呼叫 <xref:System.Threading.Tasks.Task.Start%2A> 時才會排程。 
+ <xref:System.Threading.Tasks.Task> 類別會提供非同步作業的生命週期，而該週期是以 <xref:System.Threading.Tasks.TaskStatus> 列舉表示。 為了支援從 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 衍生的類型隱密案例，以及支援分隔建構與排程，<xref:System.Threading.Tasks.Task> 類別會公開 <xref:System.Threading.Tasks.Task.Start%2A> 方法。 由公用 <xref:System.Threading.Tasks.Task> 建構函式所建立的工作稱為「靜止工作」(Cold Task)  ，因為這類工作的生命週期是從非排程的 <xref:System.Threading.Tasks.TaskStatus.Created> 狀態開始，而且只有在這些執行個體上呼叫 <xref:System.Threading.Tasks.Task.Start%2A> 時才會排程。 
  
  所有其他工作都是從作用狀態開始其生命週期，也就是說，它們所代表的非同步作業已啟始，而且其工作狀態是 <xref:System.Threading.Tasks.TaskStatus.Created?displayProperty=nameWithType> 以外的列舉值。 從 TAP 方法傳回的所有工作都必須為啟用狀態。 **如果 TAP 方法在內部使用工作的建構函式將所要傳回的工作具現化，則 TAP 方法必須先在 <xref:System.Threading.Tasks.Task> 物件上呼叫 <xref:System.Threading.Tasks.Task.Start%2A>，再將它傳回。** TAP 方法的消費者可以安全地假設傳回的工作為作用中，並且不應嘗試在任何從 TAP 方法傳回的 <xref:System.Threading.Tasks.Task.Start%2A> 上呼叫 <xref:System.Threading.Tasks.Task>。 在作用中工作上呼叫 <xref:System.Threading.Tasks.Task.Start%2A> 會導致 <xref:System.InvalidOperationException> 例外狀況。  
   
@@ -95,7 +95,7 @@ TAP 使用單一方法表示非同步作業的啟始和完成。 這與非同步
  如果 TAP 實作提供接受 `progress` 參數的多載，則必須允許 `null` 引數，而這種情況下就不會報告進度。 TAP 實作應對 <xref:System.Progress%601> 物件同步報告進度，如此可讓非同步方法快速提供進度，並且讓進度消費者判斷處理資訊的最佳方式和位置。 例如，進度執行個體可以選擇在擷取的同步處理內容上封送處理回呼並引發事件。  
   
 ## <a name="iprogresst-implementations"></a>IProgress\<T> 實作  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 提供單一 <xref:System.IProgress%601> 實作：<xref:System.Progress%601>。 <xref:System.Progress%601> 類別的宣告方式如下：  
+ .NET Framework 4.5 提供單一 <xref:System.IProgress%601> 實作：<xref:System.Progress%601>。 <xref:System.Progress%601> 類別的宣告方式如下：  
   
 ```csharp  
 public class Progress<T> : IProgress<T>  

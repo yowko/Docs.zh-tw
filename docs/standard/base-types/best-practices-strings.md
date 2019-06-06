@@ -1,7 +1,7 @@
 ---
 title: 在 .NET 中使用字串的最佳做法
 description: 了解如何在 .NET 應用程式中有效地使用字串。
-ms.date: 09/13/2018
+ms.date: 05/01/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 82fdcae2887cf5a3428a0c874b43d9770f35afcf
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 68bcc9321d5a97620d0e8d24befbd24f4f350f94
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052988"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250812"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>在 .NET 中使用字串的最佳做法
 <a name="top"></a> .NET 可廣泛支援當地語系化和全球化應用程式的開發作業，使您在執行一般作業 (例如排序和顯示字串) 時，可輕鬆套用目前的文化特性或文化特性特定的慣例。 但是，排序或比較字串並不一定是區分文化特性的作業。 例如，應用程式內部使用的字串，通常應該跨所有文化特性皆進行相同處理。 若將與文化特性無關的字串資料 (例如 XML 標記、HTML 標記、使用者名稱、檔案路徑和系統物件的名稱) 進行區分文化特性的解譯時，應用程式程式碼可能會出現細微的 Bug、效能不佳，甚至在某些情況下，會產生安全性問題。  
@@ -69,7 +69,7 @@ ms.locfileid: "66052988"
   
 - 使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 和 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法來排序字串，而不檢查是否相等。  
   
-- 使用區分文化特性的格式來顯示使用者介面中的非字串資料，例如數字和日期。 使用不因文化特性而異的格式來保存字串形式的非字串資料。  
+- 使用區分文化特性的格式來顯示使用者介面中的非字串資料，例如數字和日期。 使用[不因文化特性而異](xref:System.Globalization.CultureInfo.InvariantCulture)的格式，來保存字串形式的非字串資料。  
   
  當您使用字串時，請避免下列作法：  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66052988"
 > [!NOTE]
 > 您可以下載[排序權數資料表](https://www.microsoft.com/download/details.aspx?id=10921)，該文字檔集合包含在 Windows 作業系統排序及比較作業中使用的字元權數資訊，以及下載[預設 Unicode 定序元素資料表](https://www.unicode.org/Public/UCA/latest/allkeys.txt) (適用於 Linux 和 macOS 的最新版本排序權數資料表)。 Linux 和 macOS 上的特定版本排序權數資料表，取決於在系統上安裝的 [International Components for Unicode](http://site.icu-project.org/) 程式庫。 如需其實作的 ICU 版本及 Unicode 版本詳細資訊，請參閱[下載 ICU](http://site.icu-project.org/download)。
 
- 不過，評估兩個字串是否相等或決定排序順序不會產生單一的正確結果，而要取決於用來比較字串的準則而定。 特別是，如果字串比較是序數或根據目前文化特性或不因文化特性而異的大小寫與排序慣例 (根據英文語言的無從驗證地區設定文化特性)，則可能會產生不同的結果。  
+ 不過，評估兩個字串是否相等或決定排序順序不會產生單一的正確結果，而要取決於用來比較字串的準則而定。 特別是，如果字串比較是序數或根據目前文化特性或[不因文化特性而異](xref:System.Globalization.CultureInfo.InvariantCulture)的大小寫與排序慣例 (根據英文語言的無從驗證地區設定文化特性)，則可能會產生不同的結果。  
 
 此外，使用不同版本 .NET 或使用不同作業系統或作業系統版本上 .NET 所做的字串比較，可能會傳回不同的結果。 如需詳細資訊，請參閱[字串及 Unicode 標準](xref:System.String#Unicode)。 
 
@@ -348,10 +348,36 @@ ms.locfileid: "66052988"
  [回到頁首](#top)  
   
 <a name="Formatted"></a>   
-## <a name="displaying-and-persisting-formatted-data"></a>顯示和保存格式化的資料  
- 當您向使用者顯示非字串資料 (例如數字及日期和時間) 時，請採用使用者的文化特性設定進行格式化。 根據預設， <xref:System.String.Format%2A?displayProperty=nameWithType> 方法和 `ToString` 方法 (數字類型與日期和時間類型) 會使用目前執行緒的文化特性進行格式化作業。 若要明確指定則格式化方法應該使用目前的文化特性，您可以呼叫具有 `provider` 參數之格式化方法的多載，例如 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 或 <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>，並將 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 屬性傳遞給它。  
-  
- 您可將非字串資料保存為二進位資料或格式化的資料。 如果您選擇將它儲存為格式化的資料，您應該呼叫包含 `provider` 參數之格式化方法的多載，並將 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 屬性傳遞給它。 針對獨立於文化特性和機器的格式化資料，不因國別而異的文化特性可提供一致的格式。 相較之下，如果資料並非使用不因國別而異的文化特性，而是使用其他文化特性來進行格式化，這類資料的保存會有許多限制：  
+## <a name="displaying-and-persisting-formatted-data"></a>顯示和保存格式化的資料
+
+當您向使用者顯示非字串資料 (例如數字及日期和時間) 時，請採用使用者的文化特性設定進行格式化。 根據預設，下列所有項目都會在格式化作業中使用目前執行緒文化特性：
+
+- [C#](../../csharp/language-reference/tokens/interpolated.md) 和 [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) 編譯器支援的插入字串。
+
+- 使用 [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) 或 [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ) 串連運算子或直接呼叫 <xref:System.String.Concat%2A?displayProperty=nameWithType> 方法的字串串連作業。
+
+- <xref:System.String.Format%2A?displayProperty=nameWithType> 方法
+
+- 數值類型以及日期和時間類型的 `ToString` 方法。
+
+若要明確指定應使用指定的文化特性慣例或[不因文化特性而異](xref:System.Globalization.CultureInfo.InvariantCulture)來格式化字串，您可以執行下列動作：
+
+- 使用 <xref:System.String.Format%2A?displayProperty=nameWithType> 和 `ToString` 方法時，呼叫具有 `provider` 參數的多載 (例如 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 或 <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>)，並為該多載傳遞給 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 屬性 (表示所需文化特性的 <xref:System.Globalization.CultureInfo> 執行個體) 或 <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType> 屬性。  
+
+- 針對字串串連，不允許編譯器執行任何隱含的轉換。 反之，藉由呼叫具有 `provider` 參數的 `ToString` 多載來執行明確轉換。 例如，在將 <xref:System.Double> 值轉換為下列 C# 程式碼中的字串時，編譯器會隱含地使用目前文化特性：
+
+  [!code-csharp[Implicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#1)]
+
+  您可以藉由呼叫 <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType> 方法來明確指定在轉換中使用格式化慣例的文化特性，如下列 C# 程式碼所示：
+
+  [!code-csharp[Explicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#2)]
+
+- 針對字串內插補點，請將插入字串指派給 <xref:System.FormattableString> 執行個體，而非 <xref:System.String>。 接著，您可以呼叫其 <xref:System.FormattableString.ToString?displayProperty=nameWithType> 方法產生會反映目前文化特性慣例的結果字串，也可以呼叫 <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> 方法產生會反映指定文化特性慣例的結果字串。 您也可以將可格式化字串傳遞給靜態的 <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> 方法，以產生會反映不因文化特性而異之慣例的結果字串。 下列範例將示範這個方法。 (此範例的輸出反映 en-US 目前文化特性。)
+
+  [!code-csharp[String interpolation](~/samples/snippets/standard/base-types/string-practices/cs/formattable.cs)]
+  [!code-vb[String interpolation](~/samples/snippets/standard/base-types/string-practices/vb/formattable.vb)]
+
+您可將非字串資料保存為二進位資料或格式化的資料。 如果您選擇將它儲存為格式化的資料，您應該呼叫包含 `provider` 參數之格式化方法的多載，並將 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 屬性傳遞給它。 針對獨立於文化特性和機器的格式化資料，不因國別而異的文化特性可提供一致的格式。 相較之下，如果資料並非使用不因國別而異的文化特性，而是使用其他文化特性來進行格式化，這類資料的保存會有許多限制：  
   
 - 如果在具有不同文化特性的系統上擷取資料，或者，目前系統的使用者變更目前的文化特性，並嘗試擷取資料時，該資料可能會無法使用。  
   
@@ -366,7 +392,7 @@ ms.locfileid: "66052988"
   
  不過，如果您在 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 的呼叫中將 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 屬性取代為 <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>，則保存的日期和時間資料將會成功還原，如下列輸出所示。  
   
-```  
+```console  
 06.05.1758 21:26  
 05.05.1818 07:19  
 22.04.1870 23:54  

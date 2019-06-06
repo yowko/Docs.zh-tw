@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa4b8fdd56ed8a1304b6ee436ce3391c52ae7b9d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 44e5f52ce2bfe03247ab25bb48607ae313523ff0
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622729"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456858"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的共變數和反變數
 <a name="top"></a> 共變數和反變數這兩個詞，是指使用比原本所指定更多 (較明確) 或更少 (較不明確) 衍生類型的能力。 泛型類型參數支援共變數和反變數，可在指派和使用泛型類型時提供更大的彈性。 當您參考類型系統時，共變數、反變數和不可變數的定義如下。 範例中會假設名為 `Base` 的基底類別，以及名為 `Derived`的衍生類別。  
@@ -81,7 +81,7 @@ ms.locfileid: "64622729"
   
 <a name="InterfaceCovariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>具有 Covariant 類型參數的泛型介面  
- 從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]開始，有數個泛型介面具有 Covariant 類型參數，例如： <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.Generic.IEnumerator%601>、 <xref:System.Linq.IQueryable%601>和 <xref:System.Linq.IGrouping%602>。 這些介面的所有類型參數都是共變數，因此類型參數只能用於成員的傳回類型。  
+ 從 .NET Framework 4 開始，有數個泛型介面具有 Covariant 型別參數，例如：<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.Generic.IEnumerator%601>、<xref:System.Linq.IQueryable%601> 和 <xref:System.Linq.IGrouping%602>。 這些介面的所有類型參數都是共變數，因此類型參數只能用於成員的傳回類型。  
   
  下列範例會說明 Covariant 類型參數。 這個範例定義兩個類型： `Base` 具有名為 `PrintBases` 的靜態方法，此方法會接受 `IEnumerable<Base>` (在 Visual Basic 中則為`IEnumerable(Of Base)` ) 並列印項目。 `Derived` 繼承自 `Base`。 範例會建立空的 `List<Derived>` (在 Visual Basic 中則為 `List(Of Derived)`)，並示範可將此類型傳遞至 `PrintBases`，再指派給類型為 `IEnumerable<Base>` 的變數而不用轉型。 <xref:System.Collections.Generic.List%601> 會實作 <xref:System.Collections.Generic.IEnumerable%601>，後者具有單一 Covariant 類型參數。 Covariant 類型參數是可以使用 `IEnumerable<Derived>` 的執行個體而不能使用 `IEnumerable<Base>`的執行個體的原因。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "64622729"
   
 <a name="InterfaceContravariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-contravariant-generic-type-parameters"></a>具有 Contravariant 泛型類型參數的泛型介面  
- 從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]開始，數個泛型介面便具有 Contravariant 類型參數，例如： <xref:System.Collections.Generic.IComparer%601>、 <xref:System.IComparable%601>和 <xref:System.Collections.Generic.IEqualityComparer%601>。 這些介面只有 Contravariant 型別參數，因此型別參數只用來做為介面成員中的參數類型。  
+ 從 .NET Framework 4 開始，有數個泛型介面具有 Contravariant 型別參數，例如：<xref:System.Collections.Generic.IComparer%601>、<xref:System.IComparable%601> 和 <xref:System.Collections.Generic.IEqualityComparer%601>。 這些介面只有 Contravariant 型別參數，因此型別參數只用來做為介面成員中的參數類型。  
   
  下列範例會說明 Contravariant 類型參數。 範例定義了包含`MustInherit` 屬性的抽象 (在 Visual Basic 中為 `Shape` ) `Area` 類別。 範例還定義了實作 `ShapeAreaComparer` (在 Visual Basic 中則為 `IComparer<Shape>` ) 的`IComparer(Of Shape)` 類別。 <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> 方法的實作是以 `Area` 屬性值為基礎，因此可以使用 `ShapeAreaComparer` 依區域排序 `Shape` 物件。  
   
@@ -107,12 +107,12 @@ ms.locfileid: "64622729"
   
 <a name="DelegateVariantTypeParameters"></a>   
 ## <a name="generic-delegates-with-variant-type-parameters"></a>具有 Variant 類型參數的泛型委派  
- 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]中， `Func` 泛型委派 (例如 <xref:System.Func%602>) 具有 Covariant 傳回類型和 Contravariant 類型參數， `Action` 泛型委派 (例如 <xref:System.Action%602>) 則具有 Contravariant 類型參數。 這表示可以將委派指派給具有衍生程度較大參數類型及 (如果是 `Func` 泛型委派) 衍生程度較小的傳回類型的變數。  
+ 在 .NET Framework 4 中，`Func` 泛型委派 (例如 <xref:System.Func%602>) 具有 Covariant 傳回型別和 Contravariant 參數型別。 `Action` 泛型委派 (例如 <xref:System.Action%602>) 則具有 Contravariant 類型參數。 這表示可以將委派指派給具有衍生程度較大參數類型及 (如果是 `Func` 泛型委派) 衍生程度較小的傳回類型的變數。  
   
 > [!NOTE]
 >  `Func` 泛型委派的最後一個泛型類型參數會指定委派簽章中的傳回值類型。 這個參數是 Covariant (`out` 關鍵字)，而其他泛型類型參數則是 Contravariant (`in` 關鍵字)。  
   
- 以下的程式碼可說明這點。 程式碼的第一段會定義名為 `Base`的類別、繼承 `Derived` 的 `Base`類別，和另一個具有 `static` 方法 (在 Visual Basic 中則為`Shared` 方法) 的 `MyMethod`類別。 這個方法會接受 `Base` 的執行個體，然後傳回 `Derived` 的執行個體  (如果引數為 `Derived` 的執行個體，`MyMethod` 即傳回此執行個體；如果引數為 `Base` 的執行個體，`MyMethod` 則傳回新的 `Derived` 執行個體)。在 `Main()` 中，這個範例會建立代表 `Func<Base, Derived>` 的 `Func(Of Base, Derived)` (在 Visual Basic 中則為 `MyMethod`) 執行個體，並將它儲存在變數 `f1` 中。  
+ 以下的程式碼可說明這點。 程式碼的第一段會定義名為 `Base`的類別、繼承 `Derived` 的 `Base`類別，和另一個具有 `static` 方法 (在 Visual Basic 中則為`Shared` 方法) 的 `MyMethod`類別。 這個方法會接受 `Base` 的執行個體，然後傳回 `Derived` 的執行個體 (如果引數為 `Derived` 的執行個體，`MyMethod` 即傳回此執行個體；如果引數為 `Base` 的執行個體，`MyMethod` 則傳回新的 `Derived` 執行個體)。在 `Main()` 中，這個範例會建立代表 `Func<Base, Derived>` 的 `Func(Of Base, Derived)` (在 Visual Basic 中則為 `MyMethod`) 執行個體，並將它儲存在變數 `f1` 中。  
   
  [!code-csharp[CoContravarianceDelegates#2](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravariancedelegates/cs/example.cs#2)]
  [!code-vb[CoContravarianceDelegates#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravariancedelegates/vb/example.vb#2)]  
@@ -146,12 +146,12 @@ ms.locfileid: "64622729"
   
 <a name="DefiningVariantTypeParameters"></a>   
 ## <a name="defining-variant-generic-interfaces-and-delegates"></a>定義 Variant 泛型介面與委派  
- 從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]開始，Visual Basic 和 C# 提供可讓您將介面及委派的泛型類型參數標記為 Covariant 或 Contravariant 的關鍵字。  
+ 從 .NET Framework 4 開始，Visual Basic 和 C# 提供可讓您將介面及委派的泛型型別參數標記為 Covariant 或 Contravariant 的關鍵字。  
   
 > [!NOTE]
->  從 .NET Framework 2.0 版開始，通用語言執行平台在泛型型別參數上支援變異數附註。 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以前，若要定義具有這些附註的泛型類別，唯一的辦法就是使用 Microsoft Intermediate Language (MSIL)，即透過 [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 編譯類別，或是在動態組件中發出類別。  
+>  從 .NET Framework 2.0 版開始，通用語言執行平台在泛型類型參數上支援變異數附註。 在 .NET Framework 4 之前，若要定義具有這些附註的泛型型別，唯一的辦法就是使用 Microsoft Intermediate Language (MSIL)，即透過 [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 編譯類別，或是在動態組件中發出類別。  
   
- Covariant 型別參數是以 `out` 關鍵字 (在 Visual Basic 中為 `Out` 關鍵字，在 [MSIL Assembler](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 中則為 `+`) 來標記。 您可以使用 Covariant 類型參數當做屬於介面之方法的傳回值，或當做委派的傳回類型。 但是，您不能將 Covariant 類型參數當做介面方法的泛型類型條件約束使用。  
+ Covariant 類型參數是以 `out` 關鍵字 (在 Visual Basic 中為`Out` 關鍵字，在 `+` MSIL 組合語言 [中則為](../../../docs/framework/tools/ilasm-exe-il-assembler.md)) 來標記。 您可以使用 Covariant 類型參數當做屬於介面之方法的傳回值，或當做委派的傳回類型。 但是，您不能將 Covariant 類型參數當做介面方法的泛型類型條件約束使用。  
   
 > [!NOTE]
 >  如果介面的方法具有泛型委派類型的參數，就可以使用介面類型的 Covariant 類型參數指定委派類型的 Contravariant 類型參數。  
@@ -168,7 +168,7 @@ ms.locfileid: "64622729"
   
 <a name="VariantList"></a>   
 ## <a name="list-of-variant-generic-interface-and-delegate-types"></a>Variant 泛型介面與委派類型的清單  
- 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]中，下列介面和委派類型具有 Covariant 及/或 Contravariant 類型參數。  
+ 在 .NET Framework 4 中，下列介面和委派型別具有 Covariant 及/或 Contravariant 型別參數。  
   
 |類型|Covariant 類型參數|Contravariant 類型參數|  
 |----------|-------------------------------|-----------------------------------|  

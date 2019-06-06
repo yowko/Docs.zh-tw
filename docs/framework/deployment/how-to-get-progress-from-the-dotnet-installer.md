@@ -9,26 +9,26 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdb74259d7b034511722b1d2992b4ec16adb551e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 991053a2728ec7b8c5d9157dbf6307e0974479c6
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750434"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379937"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>作法：取得 .NET Framework 4.5 安裝程式的進度
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 是可轉散發套件的執行階段。 如果您為這個 .NET Framework 版本開發應用程式，可以在應用程式安裝程式中包含 (鏈結) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式做為必要條件。 若要呈現自訂或整合的安裝體驗，您可能要以無訊息模式啟動 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式並追蹤其進度，同時顯示應用程式的安裝進度。 若要啟用無訊息追蹤，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式 (可監控) 會使用記憶體對應 I/O (MMIO) 區段定義通訊協定，以便與您的安裝程式 (監控程式或 Chainer) 進行通訊。 此通訊協定會定義一種方式讓 Chainer 取得進度資訊、取得詳細結果、回應訊息，以及取消 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式。
+.NET Framework 4.5 是可轉散發的執行階段。 如果您要開發這個 .NET Framework 版本的應用程式，可以在應用程式安裝程式中納入 (鏈結) .NET Framework 4.5 安裝程式作為必要條件。 若要呈現自訂或整合的安裝體驗，您可能要以無訊息模式啟動 .NET Framework 4.5 安裝程式並追蹤其進度，同時顯示應用程式的安裝進度。 若要啟用無訊息追蹤，.NET Framework 4.5 安裝程式 (您可加以監看) 會使用記憶體對應 I/O (MMIO) 區段定義通訊協定，以便與您的安裝程式 (監控程式或 Chainer) 進行通訊。 此通訊協定會定義一種方式讓 Chainer 獲得進度資訊、取得詳細結果、回應訊息，以及取消 .NET Framework 4.5 安裝程式。
 
-- **引動過程**。 若要呼叫 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式並從 MMIO 區段獲取進度資訊，您的安裝程式必須執行下列動作：
+- **引動過程**。 若要呼叫 .NET Framework 4.5 安裝程式並從 MMIO 區段接收進度資訊，您的安裝程式必須執行下列動作：
 
-    1. 呼叫 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 可轉散發程式：
+    1. 呼叫 .NET Framework 4.5 可轉散發程式：
 
         ```
         dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name
         ```
 
-        「區段名稱」是您想要用來識別應用程式的任意名稱。 .NET Framework 安裝程式會以非同步方式讀寫 MMIO 區段，所以您可能會覺得在這段期間使用事件和訊息很方便。 在範例中，.NET Framework 安裝程序是由配置 MMIO 區段 (`TheSectionName`) 及定義事件 (`TheEventName`) 的建構函式所建立：
+        「區段名稱」  是您想要用來識別應用程式的任意名稱。 .NET Framework 安裝程式會以非同步方式讀寫 MMIO 區段，所以您可能會覺得在這段期間使用事件和訊息很方便。 在範例中，.NET Framework 安裝程序是由配置 MMIO 區段 (`TheSectionName`) 及定義事件 (`TheEventName`) 的建構函式所建立：
 
         ```
         Server():ChainerSample::MmioChainer(L"TheSectionName", L"TheEventName")
@@ -36,9 +36,9 @@ ms.locfileid: "64750434"
 
         請用對您安裝程式而言的唯一名稱來取代這些名稱。
 
-    2. 讀取 MMIO 區段。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，下載作業與安裝作業會同時進行：.NET Framework 的某一部分可能會進行安裝，另一個部分則進行下載。 因此，傳回 (也就是寫入) 至 MMIO 區段的進度是從 0 遞增到 255 的兩個數字 (`m_downloadSoFar` 和 `m_installSoFar`)。 當 255 寫入而 .NET Framework 結束時，安裝即已完成。
+    2. 讀取 MMIO 區段。 .NET Framework 4.5 的下載作業與安裝作業會同時進行：.NET Framework 的某一部分可能會進行安裝，另一個部分則進行下載。 因此，傳回 (也就是寫入) 至 MMIO 區段的進度是從 0 遞增到 255 的兩個數字 (`m_downloadSoFar` 和 `m_installSoFar`)。 當 255 寫入而 .NET Framework 結束時，安裝即已完成。
 
-- **結束代碼** 呼叫 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 可轉散發程式命令中的下列結束代碼，會指出安裝成功或失敗：
+- **結束代碼** 呼叫 .NET Framework 4.5 可轉散發程式命令中的下列結束代碼會指出安裝成功或失敗：
 
   - 0 - 安裝順利完成。
 
@@ -52,7 +52,7 @@ ms.locfileid: "64750434"
 
 ## <a name="chainer-sample"></a>Chainer 範例
 
-Chainer 範例以無訊息模式啟動並追蹤 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式，同時顯示進度。 此範例類似為 .NET Framework 4 提供的 Chainer 範例。 但另外，它可以處理關閉 .NET Framework 4 應用程式的訊息方塊，避免系統重新啟動。 如需此訊息方塊的資訊，請參閱[在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../../../docs/framework/deployment/reducing-system-restarts.md)。 您可以使用此範例配合 .NET Framework 4 安裝程式，在該案例中不會傳送訊息。
+Chainer 範例會以無訊息模式啟動並追蹤 .NET Framework 4.5 安裝程式，同時顯示進度。 此範例類似為 .NET Framework 4 提供的 Chainer 範例。 但另外，它可以處理關閉 .NET Framework 4 應用程式的訊息方塊，避免系統重新啟動。 如需此訊息方塊的資訊，請參閱[在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../../../docs/framework/deployment/reducing-system-restarts.md)。 您可以使用此範例配合 .NET Framework 4 安裝程式，在該案例中不會傳送訊息。
 
 > [!WARNING]
 > 您必須以系統管理員身分執行此範例。
@@ -63,7 +63,7 @@ Chainer 範例以無訊息模式啟動並追蹤 [!INCLUDE[net_v45](../../../incl
 
 #### <a name="mmiochainerh"></a>MMIOChainer.h
 
-- MMIOChainer.h 檔案 (請參閱[完整程式碼](https://go.microsoft.com/fwlink/?LinkId=231369)) 包含資料結構定義和基底類別 (Chainer 類別會從其中衍生)。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 會擴充 MMIO 資料結構，處理 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式需要的資料。 MMIO 結構的變更與舊版相容，因此 .NET Framework 4 Chainer 不需要重新編譯，即可使用 .NET Framework 4.5 安裝程式。 不過，本案例不支援減少系統重新啟動的功能。
+- MMIOChainer.h 檔案 (請參閱[完整程式碼](https://go.microsoft.com/fwlink/?LinkId=231369)) 包含資料結構定義和基底類別 (Chainer 類別會從其中衍生)。 .NET Framework 4.5 會擴充 MMIO 資料結構以處理 .NET Framework 4.5 安裝程式需要的資料。 MMIO 結構的變更與舊版相容，因此 .NET Framework 4 Chainer 不需要重新編譯，即可使用 .NET Framework 4.5 安裝程式。 不過，本案例不支援減少系統重新啟動的功能。
 
     版本欄位會提供識別結構和訊息格式修訂的方法。 .NET Framework 安裝程式會呼叫 `VirtualQuery` 函式來判斷檔案對應的大小，以判斷 Chainer 介面的版本。 如果大小足以容納版本欄位，.NET Framework 安裝程式就會使用指定的值。 如果檔案對應太小無法包含版本欄位，也就是 .NET Framework 4 的情況，則安裝程序會假設版本 0 (4)。 如果 Chainer 不支援 .NET Framework 安裝程式想要傳送的訊息版本，.NET Framework 安裝程式會假設忽略回應。
 
@@ -96,7 +96,7 @@ Chainer 範例以無訊息模式啟動並追蹤 [!INCLUDE[net_v45](../../../incl
         };
     ```
 
-- `MmioDataStructure` 資料結構不應直接使用，請改用 `MmioChainer` 類別實作您的 Chainer。 衍生自 `MmioChainer` 類別以鏈結 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 可轉散發套件。
+- `MmioDataStructure` 資料結構不應直接使用，請改用 `MmioChainer` 類別實作您的 Chainer。 衍生自 `MmioChainer` 類別以鏈結 .NET Framework 4.5 可轉散發套件。
 
 #### <a name="iprogressobserverh"></a>IProgressObserver.h
 
@@ -151,7 +151,7 @@ Chainer 範例以無訊息模式啟動並追蹤 [!INCLUDE[net_v45](../../../incl
     }
     ```
 
-- 在啟動安裝之前，Chainer 會藉由呼叫 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 查看是否已安裝 `IsNetFx4Present`。
+- 在啟動安裝之前，Chainer 會呼叫 `IsNetFx4Present` 來查看是否已安裝 .NET Framework 4.5：
 
     ```cpp
     ///  Checks for presence of the .NET Framework 4.
@@ -307,7 +307,7 @@ Chainer 範例以無訊息模式啟動並追蹤 [!INCLUDE[net_v45](../../../incl
     ```
 
     > [!IMPORTANT]
-    > [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 可轉散發套件一般會寫入許多進度訊息和表示完成的單一訊息 (在 Chainer 端)。 它也會以非同步方式讀取，尋找 `Abort` 記錄。 如果收到 `Abort` 記錄，即取消安裝，並在中止安裝且復原安裝作業之後，以 E_ABORT 寫入完成記錄當成資料。
+    > 一般來說，.NET Framework 4.5 可轉散發套件會寫入許多進度訊息和表示完成的單一訊息 (在 Chainer 端上)。 它也會以非同步方式讀取，尋找 `Abort` 記錄。 如果收到 `Abort` 記錄，即取消安裝，並在中止安裝且復原安裝作業之後，以 E_ABORT 寫入完成記錄當成資料。
 
 一般的伺服器會建立隨機的 MMIO 檔案名稱、建立檔案 (如先前 `Server::CreateSection` 的程式碼範例所示)，並使用 `CreateProcess` 方法以 `-pipe someFileSectionName` 選項傳遞管道名稱來啟動可轉散發套件。 伺服器應利用應用程式 UI 特定的程式碼實作 `OnProgress`、`Send` 和 `Finished` 方法。
 

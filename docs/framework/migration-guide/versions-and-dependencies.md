@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3d45ed4f9bfb2c59bf2c01b373e919255c17e41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9ad78c37dda00e0b52ec8e84b8c996ee3dca09a5
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592876"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378674"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和相依性
 每一版 .NET Framework 都包含通用語言執行平台 (CLR)、基底類別庫及其他 Managed 程式庫。 本主題將說明各版 .NET Framework 的主要功能、提供有關基礎 CLR 版本和相關聯開發環境的資訊，以及識別 Windows 作業系統所安裝的版本。  
@@ -56,7 +56,7 @@ ms.locfileid: "64592876"
 ## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>鎖定執行 .NET Framework 4.5 及更新版本的應用程式  
  .NET framework 4.5 是取代您電腦中 .NET Framework 4 的就地更新；同樣地，.NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 和 4.8 都是 .NET Framework 4.5 的就地更新，這表示它們使用相同的執行階段版本，但會更新組件版本並納入新的類型和成員。 安裝其中一個更新之後，您的 .NET Framework 4、.NET Framework 4.5、.NET Framework 4.6 或 .NET Framework 4.7 應用程式會繼續執行，而不需重新編譯。 不過，反向操作則不可行。 不建議您在舊版 .NET Framework 上執行目標為新版 .NET Framework 的應用程式。 例如，我們不建議您在 .NET Framework 4.5 上執行針對 .NET Framework 4.6 的應用程式。 以下是適用的方針：  
   
-- 在 Visual Studio 中，您可以選擇 .NET Framework 4.5 作為專案的目標 Framework (這會設定 <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> 屬性)，將專案編譯為 .NET Framework 4.5 的組件或可執行檔。 此組件或可執行檔可用於任何已安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 或 4.8 的電腦。  
+- 在 Visual Studio 中，您可以選擇 .NET Framework 4.5 作為專案的目標 Framework (這會設定 <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> 屬性)，將專案編譯為 .NET Framework 4.5 的組件或可執行檔。 此組件或可執行檔可用於任何已安裝 .NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 或 4.8 的電腦。  
   
 - 在 Visual Studio 中，您可以選擇 .NET Framework 4.5.1 作為專案的目標 Framework (這會設定 <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> 屬性)，將專案編譯為 .NET Framework 4.5.1 組件或可執行檔。 此組件或可執行檔只應在已安裝 .NET Framework 4.5.1 或更新版本 .NET framework 的電腦上執行。 針對 .NET Framework 4.5.1 的可執行檔，將無法在僅安裝舊版 .NET Framework 的電腦上執行 (例如 .NET Framework 4.5)，系統會提示使用者安裝 .NET Framework 4.5.1。 此外，.NET Framework 4.5.1 組件不應從針對舊版 .NET Framework (例如 .NET Framework 4.5) 的應用程式中呼叫。  
   
@@ -74,9 +74,9 @@ ms.locfileid: "64592876"
   
 - 如果您還不熟悉 .NET Framework，請參閱[概觀](../../../docs/framework/get-started/overview.md)中有關重要概念和功能的簡介。  
   
-- 如需 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其點版本中的新功能和增強功能，請參閱 [.NET Framework 的新功能](../../../docs/framework/whats-new/index.md)。  
+- 如需 .NET Framework 4.5 及其點發行版本中的新功能和增強功能，請參閱 [.NET Framework 的新功能](../../../docs/framework/whats-new/index.md)。  
   
-- 如需將應用程式從 .NET Framework 4 移轉至 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其點版本的資訊，請參閱[移轉手冊](index.md)。  
+- 如需將應用程式從 .NET Framework 4 移轉至 .NET Framework 4.5 及其點發行版本的資訊，請參閱[移轉手冊](index.md)。  
   
 - 如需判斷電腦上已安裝哪些版本或更新的資訊，請參閱[如何：判斷安裝的 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)和[如何：判斷安裝的 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)。  
   

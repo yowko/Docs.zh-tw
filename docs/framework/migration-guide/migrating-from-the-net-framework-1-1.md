@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c683ce454e4db36367cb097371427d27dc4c555
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c43e17edf5795874d8b92db659f07e8f6ec3c30a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636388"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457242"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>從 .NET Framework 1.1 移轉
 
@@ -32,7 +32,7 @@ ms.locfileid: "65636388"
     </configuration>
     ```
 
-- 您可以使用以 .NET Framework 4 和更新版本為目標的編譯器來重新編譯應用程式。 如果您原本使用 Visual Studio 2003 來開發及編譯解決方案，您可以在 Visual Studio 2010 (更新版本也可以) 中開啟此解決方案，並且使用 [專案相容性] 對話方塊來將此解決方案和專案檔從 Visual Studio 2003 使用的格式轉換成 Microsoft Build Engine (MSBuild) 格式。
+- 您可以使用以 .NET Framework 4 和更新版本為目標的編譯器來重新編譯應用程式。 如果您原本使用 Visual Studio 2003 來開發及編譯解決方案，您可以在 Visual Studio 2010 (更新版本也可以) 中開啟此解決方案，並且使用 [專案相容性]  對話方塊來將此解決方案和專案檔從 Visual Studio 2003 使用的格式轉換成 Microsoft Build Engine (MSBuild) 格式。
 
 不論您偏好重新編譯應用程式還是重新設定應用程式的目標，您都必須決定您的應用程式是否會受到較新 .NET Framework 版本中引入的任何變更所影響。 這些變更有兩種：
 
@@ -62,10 +62,10 @@ ms.locfileid: "65636388"
 
 - [.NET Framework 3.5 SP1 中的變更](https://go.microsoft.com/fwlink/?LinkID=186989) 記錄在 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和 [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)]之間的變更。
 
-- [.NET Framework 4 移轉問題](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) 記錄在 [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] 和 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 之間的變更。
+- [.NET Framework 4 移轉問題](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)中記載 [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] 和 .NET Framework 4 之間的變更。
 
 ## <a name="obsolete-types-and-members"></a>過時的型別和成員
 
 對於重新設定目標的應用程式和重新編譯的應用程式而言，已被取代的型別和成員的影響有些不同。 使用過時的型別和成員將不會影響重新設定目標的應用程式，除非已經從其組件中實際移除過時的型別或成員。 重新編譯使用過時型別或成員的應用程式通常會產生編譯器警告，而不是編譯器錯誤。 但是在某些情況下，它會產生編譯器錯誤，而且使用過時型別或成員的程式碼無法成功編譯。 在此情況下，您必須重新撰寫呼叫過時型別或成員的原始程式碼，然後重新編譯應用程式。 如需過時類型和成員的詳細資訊，請參閱[類別庫中的過時功能](../../../docs/framework/whats-new/whats-obsolete.md)。
 
-若要評估自從 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 發行之後已被取代之類型和成員的影響，請參閱[類別庫中的過時功能](../../../docs/framework/whats-new/whats-obsolete.md)。 針對 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)]、[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 檢閱過時的型別和成員清單。
+若要評估自從 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 發行之後已被取代之類型和成員的影響，請參閱[類別庫中的過時功能](../../../docs/framework/whats-new/whats-obsolete.md)。 針對 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)]、[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和 .NET Framework 4，檢閱淘汰的型別和成員清單。

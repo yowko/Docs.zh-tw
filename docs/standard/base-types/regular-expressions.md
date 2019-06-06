@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 201dbc759b619f65599e09c78c14b96d17395952
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cb70b0ef4c6e619418f8464b543795a59c2ddff5
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620705"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423790"
 ---
 # <a name="net-regular-expressions"></a>.NET 規則運算式
 規則運算式提供功能強大、彈性且有效率的方法來處理文字。 規則運算式的廣泛模式比對標記法可讓您快速剖析大量文字，以尋找特定的字元模式；驗證文字，以確保其符合預先定義的模式 (例如電子郵件地址)；擷取、編輯、取代或刪除文字子字串；以及將擷取的字串加入至集合，以產生報告。 對許多處理字串或剖析大型文字區塊的應用程式而言，規則運算式是不可或缺的工具。  
@@ -97,7 +97,7 @@ ms.locfileid: "64620705"
   
 |||  
 |-|-|  
-|`\$`|在輸入字串中尋找單獨出現的貨幣符號 ($)。 規則運算式模式字串包含反斜線，表示貨幣符號要解譯為字面意義，而不是規則運算式錨點。 ($ 符號單獨出現表示規則運算式引擎應該嘗試在字串結尾處開始其比對。)為了確保目前文化特性的貨幣符號不會誤譯為規則運算式符號，此範例呼叫 <xref:System.Text.RegularExpressions.Regex.Escape%2A> 方法以逸出字元。|  
+|`\$`|在輸入字串中尋找單獨出現的貨幣符號 (`$`)。 規則運算式模式字串包含反斜線，表示貨幣符號要解譯為字面意義，而不是規則運算式錨點。 (`$` 符號單獨出現表示規則運算式引擎應該嘗試在字串結尾處開始其比對。)為了確保目前文化特性的貨幣符號不會誤譯為規則運算式符號，此範例呼叫 <xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType> 方法以逸出字元。|  
 |`\s*`|尋找出現零或多次的空格字元。|  
 |`[-+]?`|尋找出現一或多次的正號或負號。|  
 |`([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`|此運算式外面括號將其定義成擷取群組或子運算式。 如果找到相符項目，從 <xref:System.Text.RegularExpressions.Group> 屬性傳回之 <xref:System.Text.RegularExpressions.GroupCollection> 物件中的第二個 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 物件，擷取此部分比對字串的相關資訊。 (集合中的第一個項目代表整個比對。)|  

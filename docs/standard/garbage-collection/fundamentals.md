@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccea0aace05016f8e485de92d61f23622d7db797
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c6b7b120a5a21301ff82aa8ebd1cfc169f7884e4
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615149"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457432"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>記憶體回收的基本概念
 <a name="top"></a> 在 Common Language Runtime (CLR) 中，記憶體回收行程會當做自動記憶體管理員。 它提供了下列優點：  
@@ -149,7 +149,7 @@ ms.locfileid: "64615149"
   
      因為層代 2 回收可能會佔據多個區段，所以提升至層代 2 的物件可能會移至較舊區段。 層代 1 和層代 2 的未回收物件都可能會移至不同的區段，因為它們都會被提升至層代 2。  
   
-     正常情況下，大型物件堆積不會壓縮，因為複製大型物件會帶來效能損失。 不過，從 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]開始，您可以視需要使用 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 屬性壓縮大型物件堆積。  
+     正常情況下，大型物件堆積不會壓縮，因為複製大型物件會帶來效能損失。 不過，從 .NET Framework 4.5.1 開始，您可以視需要使用 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 屬性壓縮大型物件堆積。  
   
  記憶體回收行程會使用下列資訊來判斷物件是否使用中：  
   
@@ -253,7 +253,7 @@ ms.locfileid: "64615149"
  在背景記憶體回收中，當層代 2 的回收正在進行時，會視需要回收暫時層代 (0 和 1)。 背景記憶體回收沒有任何設定。它會自動與並行記憶體回收一起啟用。 背景記憶體回收是並行記憶體回收的取代項目。 與並行記憶體回收一樣，背景記憶體回收會針對專屬執行緒執行，而且僅適用於層代 2 回收。  
   
 > [!NOTE]
->  只有 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 和更新版本才能使用背景記憶體回收。 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]中，只有工作站記憶體回收才會支援它。 從 .NET Framework 4.5 開始，背景記憶體回收可供工作站和伺服器記憶體回收使用。  
+>  只有 .NET Framework 4 和更新版本才能使用背景記憶體回收。 而 .NET Framework 4 只支援將上述功能用於工作站記憶體回收。 從 .NET Framework 4.5 開始，背景記憶體回收可供工作站和伺服器記憶體回收使用。  
   
  背景記憶體回收期間，暫時層代的回收稱為前景記憶體回收。 進行前景記憶體回收時，所有 Managed 執行緒都會暫停。  
   

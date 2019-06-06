@@ -3,12 +3,12 @@ title: 基本類型 - C# 手冊
 description: 了解所有 C# 程式中的核心類型 (數字、字串和物件)
 ms.date: 10/10/2016
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: dc91452bb261b7c799cf3b69cab5b33175148b8a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3619e1dc9a82c7f120680c198c327252744444b4
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508042"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422094"
 ---
 # <a name="types-variables-and-values"></a>類型、變數和值
 
@@ -47,13 +47,13 @@ C# 是強型別語言。 每個變數和常數都有型別，如同每個會評�
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-宣告變數之後，不能以新型別重新宣告它，也無法將與所宣告型別不相容的值指派給它。 例如，您無法宣告 [int](language-reference/keywords/int.md) 並將為 [true](language-reference/keywords/true.md) 的布林值指派給它。 不過，可以將值轉換為其他型別，例如，指派給新的變數，或做為方法引數傳遞時。 編譯器會自動執行不會造成資料遺失的「型別轉換」作業。 而可能導致資料遺失的轉換在原始程式碼中需要有「轉換」。
+宣告變數之後，不能以新型別重新宣告它，也無法將與所宣告型別不相容的值指派給它。 例如，您無法宣告 [int](language-reference/keywords/int.md) 並將為 [true](language-reference/keywords/true-literal.md) 的布林值指派給它。 不過，可以將值轉換為其他型別，例如，指派給新的變數，或做為方法引數傳遞時。 編譯器會自動執行不會造成資料遺失的「型別轉換」作業。 而可能導致資料遺失的轉換在原始程式碼中需要有「轉換」。
 
 如需詳細資訊，請參閱[轉換和類型轉換](programming-guide/types/casting-and-type-conversions.md)。
 
 ## <a name="built-in-types"></a>內建類型
 
-C# 提供一組標準內建數字類型，代表整數、浮點數值、布林運算式、文字字元、十進位值及其他資料型別。 另外還有內建的 **string** 和 **object** 類型。 這些都可供您在任何 C# 程式中使用。 如需內建型別的詳細資訊，請參閱[型別的參考表](language-reference/keywords/reference-tables-for-types.md)。  
+C# 提供一組標準內建數字類型，代表整數、浮點數值、布林運算式、文字字元、十進位值及其他資料型別。 另外還有內建的 **string** 和 **object** 類型。 這些都可供您在任何 C# 程式中使用。 如需內建類型的詳細資訊，請參閱[內建類型的參考資料表](language-reference/keywords/built-in-types-table.md)。  
   
 ## <a name="custom-types"></a>自訂類型
 

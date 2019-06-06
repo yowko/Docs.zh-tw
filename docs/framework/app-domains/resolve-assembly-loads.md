@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c40e2150bf56540fc95281f07bd14c60e138abc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ed4533c934120c3400ddba68e65bc82aabc9370
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607662"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456780"
 ---
 # <a name="resolving-assembly-loads"></a>解析組件載入
 .NET Framework 提供需要更能控制組件載入之應用程式的 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。 藉由處理這個事件，您的應用程式可以將組件從一般探查路徑外部載入到載入內容、選取要載入的數個組件版本、發出動態組件，並傳回它，以此類推。 本主題提供處理 <xref:System.AppDomain.AssemblyResolve> 事件的指引。  
@@ -72,7 +72,7 @@ ms.locfileid: "64607662"
  處理 <xref:System.AppDomain.AssemblyResolve> 事件的主要規則是您不應該嘗試傳回無法辨識的組件。 當您撰寫處理常式時，應該知道哪些組件可能會引發此事件。 針對其他組件，您的處理常式應該傳回 Null。  
   
 > [!IMPORTANT]
->  從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，會針對附屬組件引發 <xref:System.AppDomain.AssemblyResolve> 事件。 如果處理常式嘗試解析所有組件載入要求，則這項變更會影響針對舊版 .NET Framework 所撰寫的事件處理常式。 略過無法辨識組件的事件處理常式不會受到這項變更影響：它們會傳回 Null，並遵循正常後援機制。  
+>  從 .NET Framework 4 開始，會針對附屬組件引發 <xref:System.AppDomain.AssemblyResolve> 事件。 如果處理常式嘗試解析所有組件載入要求，則這項變更會影響針對舊版 .NET Framework 所撰寫的事件處理常式。 略過無法辨識組件的事件處理常式不會受到這項變更影響：它們會傳回 Null，並遵循正常後援機制。  
   
  載入組件時，事件處理常式不得使用任何 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法多載，而此方法多載可以遞迴引發 <xref:System.AppDomain.AssemblyResolve> 事件，因為這可能會導致堆疊溢位。 (請參閱本主題稍早所提供的清單)。即使您提供載入要求的例外狀況處理，也會發生這種情況，因為在傳回所有事件處理常式之前不會擲回任何例外狀況。 因此，如果找不到 `MyAssembly`，則下列程式碼會導致堆疊溢位：  
   

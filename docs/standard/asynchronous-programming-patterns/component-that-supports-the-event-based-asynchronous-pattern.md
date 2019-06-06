@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: d6c35398d54b91c9aa595ffdcde56004e59b7693
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 85e7f10643c57837cf0b66613825241db94c0065
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882496"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423872"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>作法：實作支援事件架構非同步模式的元件
 如果您正在撰寫的類別含有一些可能造成明顯延遲的作業，請考慮實作[事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)，來為它提供非同步功能。  
@@ -176,7 +176,7 @@ ms.locfileid: "65882496"
  `CalculateWorker` 方法會包裝在委派中，且叫用此方法時，會藉由對 `BeginInvoke` 的呼叫以非同步方式叫用。  
   
 > [!NOTE]
->  實作進度回報時，是在 `BuildPrimeNumberList` 方法中實作。 在執行速度快的電腦上，可以快速地連續引發 `ProgressChanged` 事件。 作為這些事件之引發位置的用戶端執行緒必須能夠處理此情況。 使用者介面程式碼可能會湧入大量訊息而來不及處理，導致產生當機行為。 如需可處理此情形的使用者介面範例，請參閱[如何：實作事件架構非同步模式的用戶端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
+>  實作進度回報時，是在 `BuildPrimeNumberList` 方法中實作。 在執行速度快的電腦上，可以快速地連續引發 `ProgressChanged` 事件。 作為這些事件之引發位置的用戶端執行緒必須能夠處理此情況。 使用者介面程式碼可能會湧入大量訊息而來不及處理，導致停止回應。 如需可處理此情形的使用者介面範例，請參閱[如何：實作事件架構非同步模式的用戶端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
   
 #### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>以非同步方式執行質數計算：  
   

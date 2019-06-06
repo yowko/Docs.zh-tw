@@ -3,12 +3,12 @@ title: C# 中的字串插補
 description: 了解如何使用字串插補，在 C# 的結果字串中包含已格式化的運算式結果。
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 068a30bdcb96140787a38e9ae52f9c62d8a57c96
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2990298821fddc8a69430a4cf4bb5e3dd9df314d
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063243"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251021"
 ---
 # <a name="string-interpolation-in-c"></a>C\# 中的字串插補
 
@@ -27,17 +27,17 @@ ms.locfileid: "65063243"
 如範例所示，藉由用括號括住運算式，即可在插入字串中包含運算式：
 
 ```
-{<interpolatedExpression>}
+{<interpolationExpression>}
 ```
 
 插入字串支援[字串符合格式化](../../standard/base-types/composite-formatting.md)功能的所有功能。 相較於使用 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法，它們是可讀性更佳的替代項目。
 
-## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>如何指定插入運算式的格式字串
+## <a name="how-to-specify-a-format-string-for-an-interpolation-expression"></a>如何指定內插補點運算式的格式字串
 
-在插入運算式後面接著冒號 (":") 和格式字串，即可指定運算式結果類型所支援的格式字串：
+在內插補點運算式後面接著冒號 (":") 和格式字串，即可指定運算式結果類型所支援的格式字串：
 
 ```
-{<interpolatedExpression>:<formatString>}
+{<interpolationExpression>:<formatString>}
 ```
 
 下列範例會示範如何針對產生日期與時間或數值結果的運算式，指定標準和自訂的格式字串：
@@ -46,12 +46,12 @@ ms.locfileid: "65063243"
 
 如需詳細資訊，請參閱[複合格式](../../standard/base-types/composite-formatting.md)主題的[格式字串元件](../../standard/base-types/composite-formatting.md#format-string-component)一節。 該節中提供了一些主題連結，以描述 .NET 基底類型所支援的標準和自訂格式字串。
 
-## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolated-expression"></a>如何控制已格式化之插入運算式的欄位寬度和對齊
+## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolation-expression"></a>如何控制已格式化之內插補點運算式的欄位寬度和對齊
 
-在插入運算式後面接著逗號 (",") 和常數運算式，即可指定已格式化之運算式結果的最小欄位寬度和對齊：
+在內插補點運算式後面接著逗號 (",") 和常數運算式，即可指定已格式化之運算式結果的最小欄位寬度和對齊：
 
 ```
-{<interpolatedExpression>,<alignment>}
+{<interpolationExpression>,<alignment>}
 ```
 
 如果 *alignment* 值是正數，已格式化的運算式結果為靠右對齊；如果是負數，則是靠左對齊。
@@ -59,7 +59,7 @@ ms.locfileid: "65063243"
 如果您需要指定對齊和格式字串，請從對齊元件開始：
 
 ```
-{<interpolatedExpression>,<alignment>:<formatString>}
+{<interpolationExpression>,<alignment>:<formatString>}
 ```
 
 下列範例會示範如何指定對齊，並使用管道字元 ("|") 來分隔文字欄位：
@@ -82,9 +82,9 @@ ms.locfileid: "65063243"
 
 [!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
 
-## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolated-expression"></a>如何在插入運算式中使用三元條件運算子 `?:`
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolation-expression"></a>如何在內插補點運算式中使用三元條件運算子 `?:`
 
-因為冒號 (":") 在插入運算式的項目中具有特殊意義，為了在運算式中使用[條件運算子](../language-reference/operators/conditional-operator.md)，請用括號括住運算式，如下列範例所示：
+因為冒號 (":") 在內插補點運算式的項目中具有特殊意義，為了在運算式中使用[條件運算子](../language-reference/operators/conditional-operator.md)，請用括弧括住運算式，如下列範例所示：
 
 [!code-csharp-interactive[conditional operator example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#5)]
 

@@ -1,15 +1,15 @@
 ---
 title: 在銷售異常偵測案例中使用 ML.NET
 description: 探索如何在產品銷售異常偵測案例中使用 ML.NET，以了解如何分析異常暴增及變更點的資料，採取適當的動作。
-ms.date: 05/06/2019
+ms.date: 05/29/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 39e812facccfa75d1643704f8960a387a70c94bc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d31765aa4ff2a0be9c4f140f33de1f5678fc7612
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641137"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423919"
 ---
 # <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>教學課程：使用 ML.NET 處理產品銷售異常偵測 
 
@@ -40,9 +40,9 @@ ms.locfileid: "65641137"
 
 2. 在您專案中建立名為 *Data* 的目錄以儲存資料集檔案。
 
-3. 安裝「Microsoft.ML NuGet 套件」：
+3. 安裝「Microsoft.ML NuGet 套件」  ：
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、從清單中選取 **v1.0.0** 套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。 為 **Microsoft.ML.TimeSeries v0.12.0** 重複這些步驟。
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]  。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、從清單中選取 **v1.0.0** 套件，然後選取 [安裝]  按鈕。 在 [預覽變更]  對話方塊上，選取 [確定]  按鈕，然後在 [授權接受]  對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]  。 為 **Microsoft.ML.TimeSeries v0.12.0** 重複這些步驟。
 
 4. 在您的 *Program.cs* 檔案最上方新增下列 `using` 陳述式：
 
@@ -56,7 +56,7 @@ ms.locfileid: "65641137"
 
      請務必將 \*.csv 檔案儲存至 *Data* 資料夾，或儲存在其他位置之後將 \*.csv 檔案移至 *Data* 資料夾。
 
-2. 在 [方案總管] 中，以滑鼠右鍵按一下 \*.csv 檔案，並選取 [內容]。 在 [進階] 底下，將 [複製到輸出目錄] 的值變更為 [有更新時才複製]。
+2. 在 [方案總管] 中，以滑鼠右鍵按一下 \*.csv 檔案，並選取 [內容]  。 在 [進階]  底下，將 [複製到輸出目錄]  的值變更為 [有更新時才複製]  。
 
 下表是 \*.csv 檔案的資料預覽：
 
@@ -74,9 +74,9 @@ ms.locfileid: "65641137"
 
 將新類別新增至專案：
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [新增] > [新項目]。
+1. 在 [方案總管]  中，以滑鼠右鍵按一下專案，然後選取 [新增] > [新項目]  。
 
-2. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *ProductSalesData.cs*。 接著，選取 [新增] 按鈕。
+2. 在 [新增項目]  對話方塊中，選取 [類別]  ，然後將 [名稱]  欄位變更為 *ProductSalesData.cs*。 接著，選取 [新增]  按鈕。
 
 隨即在程式碼編輯器中開啟 *ProductSalesData.cs* 檔案。 將下列 `using` 陳述式新增至 *ProductSalesData.cs* 的上方：
 
@@ -173,11 +173,11 @@ static void DetectSpike(MLContext mlContext, int docSize, IDataView productSales
 
 [!code-csharp[AddSpikeTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddSpikeTrainer)]
 
-將下列內容新增為 `DetectSpike()` 方法中的下一行程式碼，調整模型為合適於 `productSales` 資料並傳回已定型模型：
+將下列內容新增為 `DetectSpike()` 方法的下一行程式碼，調整模型使其符合 `productSales` 資料：
 
 [!code-csharp[TrainModel1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel1)]
 
-[Fit()](xref:Microsoft.ML.Data.TrivialEstimator%601.Fit%2A) 方法透過轉換資料集和套用定型來定型模型。
+[Fit()](xref:Microsoft.ML.Data.TrivialEstimator%601.Fit%2A) 方法會透過轉換資料集和套用定型來定型模型。
 
 新增下列程式碼將 `productSales` 資料轉換成 `DetectSpike()` 方法中的下一行程式碼：
 
@@ -283,7 +283,7 @@ static void DetectChangepoint(MLContext mlContext, int docSize, IDataView produc
 
 [!code-csharp[AddChangepointTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddChangepointTrainer)]
 
-如您之前的操作，將下列內容新增為 `DetectChangePoint()` 方法中的下一行程式碼，調整模型為合適於 `productSales` 資料並傳回已定型模型：
+如同您先前進行的操作，將下列內容新增為 `DetectChangePoint()` 方法的下一行程式碼，調整模型使其符合 `productSales` 資料：
 
 [!code-csharp[TrainModel2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel2)]
 
