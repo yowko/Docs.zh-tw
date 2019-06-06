@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa05fe1e170a0285df73d179ef39db6301059ac8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1f773b6f7d0b8b4e0b8647b7086d8782d1afbb93
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490958"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690526"
 ---
 # <a name="cryptographic-services"></a>密碼編譯服務
 
@@ -266,7 +266,7 @@ RSA 允許加密和簽章，但是 DSA 只能用於簽章，而且 Diffie-hellma
 
 ## <a name="clickonce-manifests"></a>ClickOnce 資訊清單
 
-在 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]中，下列的密碼編譯類別可讓您使用 [ClickOnce 技術](/visualstudio/deployment/clickonce-security-and-deployment)取得並驗證資訊部署應用程式的資訊清單簽章：
+在.NET Framework 3.5 中，下列的密碼編譯類別可讓您取得並驗證資訊部署使用的應用程式資訊清單簽章的資訊[ClickOnce 技術](/visualstudio/deployment/clickonce-security-and-deployment):
 
 - 當您使用它的 <xref:System.Security.Cryptography.ManifestSignatureInformation> 方法多載時， <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> 類別可取得資訊清單簽章的相關資訊。
 
@@ -290,7 +290,7 @@ RSA 允許加密和簽章，但是 DSA 只能用於簽章，而且 Diffie-hellma
 
 ## <a name="suite-b-support"></a>Suite B 支援
 
-[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 支援美國國家安全局 (NSA) 所發行的 Suite B 組密碼編譯演算法。 如需 Suite B 的詳細資訊，請參閱 [NSA Suite B 密碼編譯說明書](https://www.nsa.gov/what-we-do/information-assurance/)。
+.NET Framework 3.5 支援 Suite B 組發佈藉由美國國家安全局 (NSA) 的密碼編譯演算法。 如需 Suite B 的詳細資訊，請參閱 [NSA Suite B 密碼編譯說明書](https://www.nsa.gov/what-we-do/information-assurance/)。
 
 下列演算法包含：
 
@@ -314,7 +314,7 @@ RSA 允許加密和簽章，但是 DSA 只能用於簽章，而且 Diffie-hellma
 
 <xref:System.Security.Cryptography.CngKey> 類別用於各種其他作業，包括開啟、建立、刪除及匯出金鑰。 它也提供存取基礎金鑰控制代碼，以便在直接呼叫原生函式時使用。
 
-[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 也包括各種支援的 CNG 類別，如下所示：
+.NET Framework 3.5 也包括各種支援的 CNG 類別，如下所示：
 
 - <xref:System.Security.Cryptography.CngProvider> 維護金鑰儲存提供者。
 

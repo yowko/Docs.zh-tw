@@ -2,12 +2,12 @@
 title: .NET 微服務。 容器化 .NET 應用程式的架構
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 微服務是模組化的獨立可部署服務。 適用於 Linux 與 Windows 的 Docker 容器，可統合服務及其相依性到單一個單位，簡化部署及測試，然後即可於隔離的環境中執行。
 ms.date: 01/07/2019
-ms.openlocfilehash: a348a9c122ef7f0293a1385aa05dc98f61deab7e
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: f1abeca8bb7eba615545a88862b20b2711b218fd
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195978"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690631"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服務：容器化 .NET 應用程式的架構
 
@@ -126,7 +126,7 @@ eShopOnContainers 應用程式是 .NET Core 和微服務的開放原始碼參考
 >
 > **Dylan Reisenberger**，Polly 架構師暨開發部門主管
 >
-> **Steve Smith**，ASPSmith Ltd. 軟體工程師暨訓練員
+> **Steve "ardalis" Smith** - 軟體架構設計人員和講師 - [Ardalis.com](https://ardalis.com)
 >
 > **Ian Cooper**，Brighter 程式碼架構師
 >

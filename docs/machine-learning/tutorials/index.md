@@ -3,12 +3,12 @@ title: ML.NET 教學課程
 description: 探索 ML.NET 教學課程，了解如何建置自訂 AI 解決方案，以及將其整合到 .NET 應用程式。
 ms.custom: seodec18
 ms.date: 04/05/2019
-ms.openlocfilehash: 42f781f53c94d9852f2d75117683eb21dd1c5c6e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3f14f463dcdb74beb1605626216acd52dd3f6e9a
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634797"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722330"
 ---
 # <a name="mlnet-tutorials"></a>ML.NET 教學課程 
 
@@ -18,7 +18,7 @@ ms.locfileid: "64634797"
 - [GitHub 問題分類](github-issue-classification.md)：示範如何使用 ML.NET 套用**多元分類**工作。
 - [價格預測工具](taxi-fare.md)：示範如何使用 ML.NET 套用**迴歸**工作。
 - [Iris 叢集](iris-clustering.md)：示範如何使用 ML.NET 套用**叢集**工作。
-- [建議](movie-recommmendation.md)：根據先前使用者的評分產生電影**建議**
+- [建議](movie-recommendation.md)：根據先前使用者的評分產生電影**建議**
 - [影像分類](image-classification.md)：示範如何將現有的 Tensorflow 模型定型以使用 ML.NET 建立自訂影像分類工具。
 
 ## <a name="next-steps"></a>後續步驟

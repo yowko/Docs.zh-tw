@@ -2,12 +2,12 @@
 title: Docker 應用程式的開發程序
 description: 提供 Docker 型應用程式開發選項的高層級概觀。 使用您選擇的 Visual Studio for Windows、Visual Studio for Mac 或適用於多平台支援 (Windows、Mac 與 Linux) 的 Visual Studio Code。
 ms.date: 09/27/2018
-ms.openlocfilehash: 8807bc57365e70a0cbf265dc7bce28c93de16098
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: a32b27f3d98ed7ebf63b637ec0c979c22ee8e1e8
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300652"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690614"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker 應用程式的開發程序
 
@@ -46,5 +46,5 @@ ms.locfileid: "66300652"
 如本指南稍早章節所述，開發 Docker 容器化 .NET 應用程式時，您可以使用 .NET Framework、.NET Core 或開放原始碼 Mono 專案。 當目標設為 Linux 或 Windows 容器時，您可以根據所使用的 .NET Framework，以 C\#、F\# 或 Visual Basic 進行開發。 如需 .NET 語言的詳細資訊，請參閱部落格文章 [The .NET Language Strategy](https://devblogs.microsoft.com/dotnet/the-net-language-strategy/) (.NET 語言策略)。
 
 >[!div class="step-by-step"]
->[上一頁](../architect-microservice-container-applications/using-azure-service-fabric.md)
+>[上一頁](../architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md)
 >[下一頁](docker-app-development-workflow.md)
