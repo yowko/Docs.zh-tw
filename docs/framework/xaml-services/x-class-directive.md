@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: ee94d7bf52f3fb2ea534cdb2f44d0be2cc8699eb
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 7245b14ff2f765c1cfe96a2d49aec34eff7e8a17
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689409"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722561"
 ---
 # <a name="xclass-directive"></a>x:Class 指示詞
 設定要加入標記和程式碼後置的部分類別的 XAML 標記編譯。 在不同的程式碼檔案中定義的程式碼的部分類別[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]語言，而標記的部分類別通常是由 XAML 編譯期間產生的程式碼。  
@@ -52,7 +52,7 @@ ms.locfileid: "66689409"
  在特定層級的架構的意義`x:Class`.NET Framework XAML 服務中未定義。 這是因為.NET Framework XAML 服務不會指定哪一個 XAML 的標記和備份程式碼會連接程式撰寫模型。 其他用法`x:Class`指示詞可能會使用程式設計模型或應用程式模型來定義如何連接 XAML 標記和 CLR 為基礎的程式碼後置的特定架構實作。 每個架構可以有自己的建置動作可讓部分必須包含在建置環境的特定元件或行為。 在架構中，也可能有所不同用於程式碼後置的特定 CLR 語言的建置動作。  
   
 ## <a name="xclass-in-the-wpf-programming-model"></a>WPF 程式設計模型中的 x： 類別  
- WPF 應用程式和 WPF 應用程式模型中，`x:Class`可以宣告為屬性是 XAML 檔案的根目錄，並在編譯任何項目 (其中包含 XAML 在 WPF 應用程式專案中，使用`Page`建置動作)，或如 <c4 > <xref:System.Windows.Application> 編譯的 WPF 應用程式的應用程式定義中的根。 宣告`x:Class`頁面根或應用程式根目錄以外的項目或在未編譯 WPF XAML 檔案，會造成在編譯時期錯誤[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]和.NET Framework 3.5 WPF XAML 編譯器。 如需其他層面`x:Class`WPF 中的處理，請參閱[程式碼後置和 XAML 在 WPF 中的](../wpf/advanced/code-behind-and-xaml-in-wpf.md)。  
+ WPF 應用程式和 WPF 應用程式模型中，`x:Class`可以宣告為屬性是 XAML 檔案的根目錄，並在編譯任何項目 (其中包含 XAML 在 WPF 應用程式專案中，使用`Page`建置動作)，或如 <c4 > <xref:System.Windows.Application> 編譯的 WPF 應用程式的應用程式定義中的根。 宣告`x:Class`頁面根或應用程式根目錄以外的項目或在未編譯 WPF XAML 檔案，會導致.NET Framework 3.0 和.NET Framework 3.5 WPF XAML 編譯器在編譯時期錯誤。 如需其他層面`x:Class`WPF 中的處理，請參閱[程式碼後置和 XAML 在 WPF 中的](../wpf/advanced/code-behind-and-xaml-in-wpf.md)。  
   
 ## <a name="xclass-for-windows-workflow-foundation"></a>X:class for Windows Workflow Foundation  
  對於 Windows Workflow Foundation，`x:Class`名稱全部以 XAML，撰寫之自訂活動的類別或命名活動設計工具與程式碼後置的 XAML 頁面的部分類別。  

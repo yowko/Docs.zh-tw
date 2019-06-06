@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: d1cc6043afb7f795bb1208d2cf333aeca321462f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 6d859f5f341eaf7c86573077ec56eab7b4cd7bb8
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457379"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722553"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML 的類型轉換子和標記延伸
 類型轉換器和標記延伸是 XAML 類型系統和 XAML 寫入器用以產生物件圖形元件的兩項技術。 雖然兩者共用某些特性，但類型轉換器和標記延伸在 XAML 節點資料流中會以不同的方式表示。 在本文件集中，有時會將類型轉換器、標記延伸和類似的建構統稱為值轉換器。  
@@ -45,7 +45,7 @@ ms.locfileid: "66457379"
  如需 XAML 之標記延伸實作模式的詳細資訊，請參閱 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)。  
   
 > [!NOTE]
->  <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 類型都在 <xref:System.Windows.Markup> 命名空間中，而不在 <xref:System.Xaml> 命名空間中。 這不表示這些類型專屬於情況下填入包含字串的 CLR 命名空間的 WPF 或 Windows Form 技術`Windows`。 <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 位於 System.Xaml 組件中，並且沒有特定架構相依性。 這些型別存在於 CLR 命名空間[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]仍存在於 CLR 命名空間，在.NET Framework 4，以避免破壞現有 WPF 專案中的參考。 如需詳細資訊，請參閱 [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md)。  
+>  <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 類型都在 <xref:System.Windows.Markup> 命名空間中，而不在 <xref:System.Xaml> 命名空間中。 這不表示這些類型專屬於情況下填入包含字串的 CLR 命名空間的 WPF 或 Windows Form 技術`Windows`。 <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 位於 System.Xaml 組件中，並且沒有特定架構相依性。 這些類型的.NET Framework 3.0 存在於 CLR 命名空間，而且保留在 CLR 命名空間，在.NET Framework 4，以避免破壞現有 WPF 專案中的參考。 如需詳細資訊，請參閱 [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md)。  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>值序列化程式  
