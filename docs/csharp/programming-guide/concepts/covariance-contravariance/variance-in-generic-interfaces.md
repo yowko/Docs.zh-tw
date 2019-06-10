@@ -1,13 +1,13 @@
 ---
 title: 泛型介面中的差異 (C#)
-ms.date: 04/10/2019
+ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 5874a39a57f85695bedc3d1ffa61adf19fcdbe37
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: a2d0bcc049d62978930b4e5cdef7920349e3b894
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480777"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815957"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>泛型介面中的差異 (C#)
 
@@ -31,9 +31,9 @@ ms.locfileid: "59480777"
 
 開始使用 .NET Framework 4.5，下列介面是變數：
 
-- <xref:System.Collections.Generic.IReadOnlyList%601> (T 是 Contravariant)
+- <xref:System.Collections.Generic.IReadOnlyList%601> (T 是 Covariant)
 
-- <xref:System.Collections.Generic.IReadOnlyCollection%601> (T 是 Contravariant)
+- <xref:System.Collections.Generic.IReadOnlyCollection%601> (T 是 Covariant)
 
 共變數允許方法具有比介面泛型型別參數所定義之衍生程度更大的傳回型別。 若要示範共變數功能，請考慮這些泛型介面︰`IEnumerable<Object>` 和 `IEnumerable<String>`。 `IEnumerable<String>` 介面不會繼承 `IEnumerable<Object>` 介面。 不過，`String` 型別確實會繼承`Object` 型別，而且在某些情況下，您可能希望將這些介面的物件指派給彼此。 這會顯示在以下程式碼範例中。
 
@@ -100,7 +100,7 @@ IEnumerable<Object> listObjects = new List<String>();
 
 ## <a name="see-also"></a>另請參閱
 
-- [針對泛型集合使用介面中的變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
+- [針對泛型集合使用介面中的差異 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
 - [建立 Variant 泛型介面 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
 - [泛型介面](../../../../standard/generics/interfaces.md)
 - [委派中的差異 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
