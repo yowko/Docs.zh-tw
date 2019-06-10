@@ -2,12 +2,12 @@
 title: 將 Windows 容器部署至 Azure Container Instances (ACI) 中的時機
 description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |將 Windows 容器部署至 Azure Container Instances (ACI) 中的時機
 ms.date: 04/29/2018
-ms.openlocfilehash: 9bfa0688d07bd04964a1b28f688f125b5bcd2299
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3b6ae1ced9c4e01f5ab400e2575947a396064ebd
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638929"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758589"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>將 Windows 容器部署至 Azure Container Instances (ACI) 中的時機
 
@@ -36,4 +36,4 @@ Azure Container Instances (ACI) 的主要優點為：
 
 > [!div class="step-by-step"]
 > [上一頁](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
-> [下一頁](when-to-deploy-windows-containers-to-service-fabric.md)
+> [下一頁](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

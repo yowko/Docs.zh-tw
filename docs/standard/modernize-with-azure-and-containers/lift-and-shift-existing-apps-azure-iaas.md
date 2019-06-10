@@ -2,12 +2,12 @@
 title: 撤銷並轉移現有的.NET 應用程式至 Azure IaaS （雲端基礎結構就緒）
 description: 現代化現有的.NET 應用程式與 Azure 雲端和 Windows 容器。
 ms.date: 04/28/2018
-ms.openlocfilehash: 24e413ad82742067b2fee6cd3a7a99e6f0f87b0a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cda316ad01a58f26661395c804547de04e20d052
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643712"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758871"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>撤銷並轉移現有的.NET 應用程式至 Azure IaaS （雲端基礎結構就緒）
 
@@ -39,7 +39,7 @@ ms.locfileid: "65643712"
 
 如果您的目標是單純將現有的應用程式到雲端，首先，識別現有的應用程式不需要在 Azure App Service 中執行的大幅修改。 這些應用程式應該是第一個適合雲端最佳化。 
 
-然後，應用程式，仍無法將移至 Windows 容器和 PaaS 例如 App Service 或 Azure Service Fabric 等協調器移轉到簡單純文字的 Vm (IaaS)。 
+然後，應用程式，仍無法將移至 Windows 容器和 PaaS 例如 App Service 或 Azure Kubernetes 服務，例如 orchestrator 移轉到簡單純文字的 Vm (IaaS)。 
 
 但請記住，正確地設定、 保護和維護 Vm 需要更多的時間和相較於在 Azure 中使用 PaaS 服務的 IT 專業知識。 如果您考慮 Azure 虛擬機器，請確定，您需要考慮修補、 更新和管理 VM 環境所需的持續性維護工作。 Azure 虛擬機器是 IaaS。
 

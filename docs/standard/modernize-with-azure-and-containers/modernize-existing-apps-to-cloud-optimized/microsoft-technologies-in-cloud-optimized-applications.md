@@ -2,12 +2,12 @@
 title: 雲端最佳化應用程式中的 Microsoft 技術
 description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |雲端最佳化應用程式中的 Microsoft 技術
 ms.date: 04/28/2018
-ms.openlocfilehash: ebdbc7bb3a5f51f8408b69a5e13f03f424eae242
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 915aa99d2331c5b9c46eabef3335fb809baa9370
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639037"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758629"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>雲端最佳化應用程式中的 Microsoft 技術
 
@@ -17,7 +17,7 @@ ms.locfileid: "65639037"
 
 - **執行階段**:這一層會提供執行應用程式的環境。 如果您使用的容器，此圖層通常根據[Docker 引擎](https://docs.docker.com/engine/)，在 Linux 主機上或在 Windows 主機上執行。 ([Windows 容器](https://docs.microsoft.com/virtualization/windowscontainers/about/)從 Windows Server 2016 開始，支援。 Windows 容器是在 Windows 執行的現有.NET Framework 應用程式的最佳選擇）。
 
-- **管理雲端**:當您選擇的受管理的雲端選項時，您可以避免費用和複雜的管理和支援的基礎結構，Vm、 OS 修補程式，網路組態。 如果您選擇使用 IaaS 移轉，您會負責所有這些工作，以及相關聯的成本。 在受管理的雲端選項中，您只能管理的應用程式及您開發的服務。 雲端服務提供者通常會管理所有其他項目。 在 Azure 中的受管理的雲端服務的範例包括[Azure SQL Database](https://azure.microsoft.com/services/sql-database)， [Azure Redis 快取](https://azure.microsoft.com/services/cache/)， [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)， [Azure 儲存體](https://azure.microsoft.com/services/storage/)，[適用於 MySQL 的 azure 資料庫](https://azure.microsoft.com/services/mysql/)，[適用於 PostgreSQL 的 Azure 資料庫](https://azure.microsoft.com/services/postgresql/)， [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)，以及管理計算服務，例如[VM 擴展設定](https://azure.microsoft.com/services/virtual-machine-scale-sets/)， [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)， [Azure App Service](https://azure.microsoft.com/services/app-service/)，和[Azure Kubernetes Service](https://azure.microsoft.com/services/container-service/)。
+- **管理雲端**:當您選擇的受管理的雲端選項時，您可以避免費用和複雜的管理和支援的基礎結構，Vm、 OS 修補程式，網路組態。 如果您選擇使用 IaaS 移轉，您會負責所有這些工作，以及相關聯的成本。 在受管理的雲端選項中，您只能管理的應用程式及您開發的服務。 雲端服務提供者通常會管理所有其他項目。 在 Azure 中的受管理的雲端服務的範例包括[Azure SQL Database](https://azure.microsoft.com/services/sql-database)， [Azure Redis 快取](https://azure.microsoft.com/services/cache/)， [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)， [Azure 儲存體](https://azure.microsoft.com/services/storage/)，[適用於 MySQL 的 azure 資料庫](https://azure.microsoft.com/services/mysql/)，[適用於 PostgreSQL 的 Azure 資料庫](https://azure.microsoft.com/services/postgresql/)， [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)，以及管理計算服務，例如[VM 擴展設定](https://azure.microsoft.com/services/virtual-machine-scale-sets/)， [Azure App Service](https://azure.microsoft.com/services/app-service/)，以及[Azure Kubernetes Service](https://azure.microsoft.com/services/container-service/)。
 
 - **應用程式開發**:當您建置在容器中執行的應用程式時，您可以從許多語言進行選擇。 本指南著重[.NET](https://www.microsoft.com/net)，但您可以使用其他語言，例如 Node.js、 Python、 Spring/Java，開發以容器為基礎的應用程式，或移。
 
@@ -27,7 +27,7 @@ ms.locfileid: "65639037"
 
 - **應用程式生命週期**:[Azure 的 DevOps 服務](https://azure.microsoft.com/services/devops/)和其他工具，例如 Jenkins 會建置的 automation 伺服器可協助您實作 CI/CD 管線，包括發行管理。
 
-這一章，以及相關的逐步解說中下, 一節特別著重於執行階段層 （Windows 容器） 的相關詳細資料。 本指南說明您可以部署在 Windows Server 2016 （和更新版本） 的 Windows 容器的 Vm 和 Azure 容器執行個體的方式。 此外，它也會涵蓋更進階的 PaaS 平台，例如 Azure App Service 和 Azure Service Fabric 等 Azure Kubernetes 服務的協調器。
+這一章，以及相關的逐步解說中下, 一節特別著重於執行階段層 （Windows 容器） 的相關詳細資料。 本指南說明您可以部署在 Windows Server 2016 （和更新版本） 的 Windows 容器的 Vm 和 Azure 容器執行個體的方式。 此外，它也會涵蓋更進階的 PaaS 平台，例如 Azure App Service 和 Azure Kubernetes 服務這類協調器。
 
 ## <a name="monolithic-applications-can-be-cloud-optimized"></a>整合型應用程式*可以*雲端最佳化
 

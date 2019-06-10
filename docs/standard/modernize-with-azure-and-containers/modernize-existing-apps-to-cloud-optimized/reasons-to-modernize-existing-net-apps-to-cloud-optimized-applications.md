@@ -2,12 +2,12 @@
 title: 現代化雲端最佳化應用程式的現有.NET 應用程式的原因
 description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |現代化雲端最佳化應用程式的現有.NET 應用程式的原因
 ms.date: 04/28/2018
-ms.openlocfilehash: e09d8066e883aaef55408336e3817158e2c14be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5aa9828f65f76138461c18711fe03bdbe6a70ffd
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639049"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758754"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>現代化雲端最佳化應用程式的現有.NET 應用程式的原因
 
@@ -27,7 +27,7 @@ ms.locfileid: "65639049"
 
 索引鍵是*靈活度*。 您就無法出貨與敏捷性除非絕對最小值減少到生產任何部署問題，以及開發/測試環境問題。 容器 (具體而言，Docker，為既定標準) 和受管理的服務已特別針對此用途設計的。
 
-若要達到靈活度，您也需要自動化的 DevOps 程序為基礎的 CI/CD 管線，從發行到雲端中的可擴充平台。 CI/CD 的平台 （例如 Azure DevOps 服務或 Jenkins） 部署至可調整且具彈性的雲端平台 （例如 Azure App Service、 Azure Service Fabric 或 Azure Kubernetes Service） 是關鍵技術獲得在雲端的靈活度。
+若要達到靈活度，您也需要自動化的 DevOps 程序為基礎的 CI/CD 管線，從發行到雲端中的可擴充平台。 CI/CD 的平台 （例如 Azure DevOps 服務或 Jenkins） 部署至可調整且具彈性的雲端平台 （例如 Azure App Service 或 Azure Kubernetes Service） 是關鍵技術獲得在雲端的靈活度。
 
 下列清單描述的主要宗旨或雲端最佳化應用程式的作法。 請注意，您可以採用所有元件或部分的這些原則，以漸進式或累加式方法：
 

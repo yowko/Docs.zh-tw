@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 0f06ca2251ae1bf9bd5e199562eff116614e7117
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09c51341a2b81c21804bcca3b244bbebdb7342b6
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973834"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758772"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>檔案對話方塊自訂位置的已知資料夾 GUID
-您使用<xref:System.Guid>來指定[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]已知資料夾，當您新增至資料夾<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>集合。 已知資料夾 Guid 不區分大小寫和中的 KnownFolders.h 檔案中定義[!INCLUDE[winSDK](../../../../includes/winsdk-md.md)]。  
+您使用<xref:System.Guid>來指定[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]已知資料夾，當您新增至資料夾<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>集合。 已知的資料夾 Guid 不區分大小寫，而且會定義在 Windows SDK 中的 KnownFolders.h 檔案。  
   
 > [!NOTE]
 >  在某些情況下，將已知資料夾加入至<xref:System.Windows.Forms.FileDialogCustomPlacesCollection>不會顯示在**我的最愛連結**區域。 例如，如果指定的已知資料夾不存在於執行應用程式的電腦上，是不會顯示已知的資料夾。  

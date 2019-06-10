@@ -2,12 +2,12 @@
 title: 將現有 .NET 應用程式部署為 Windows 容器
 description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |將現有.NET 應用程式部署為 Windows 容器
 ms.date: 04/29/2018
-ms.openlocfilehash: 77d10867573765a7e86a9827825e1313de7a3035
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ba9af3fc3a5bf285830bb873fa6a5da8390dc6b4
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643745"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758841"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>將現有 .NET 應用程式部署為 Windows 容器
 
@@ -153,7 +153,6 @@ Azure 會在相同的時間更置於 PaaS （平台即服務） 層級的支援�
 
 - **Azure App Service**
 - **Azure Kubernetes Service （AKS 和 ACS）**
-- **Azure Service Fabric** 
 - **Azure Batch** 
 
 然後，Azure Container Registry 是裝載於 Azure，您可以從所有先前的產品註冊或部署您的自訂容器映像時使用的高可調整的容器登錄。

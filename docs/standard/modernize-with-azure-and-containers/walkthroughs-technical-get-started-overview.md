@@ -2,12 +2,12 @@
 title: 逐步解說和技術入門概觀
 description: 將現有.NET 應用程式與 Azure 雲端和 Windows 容器現代化 |逐步解說和技術開始入門的概觀
 ms.date: 04/28/2018
-ms.openlocfilehash: f5c1ca2b78d27b275845ada72d252450761f5091
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0b0dbae999e31150a55368d669f718eea0925d51
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638972"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758781"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>逐步解說和技術入門概觀
 
@@ -30,8 +30,6 @@ ms.locfileid: "65638972"
 - **將 Windows 容器型應用程式部署至 Azure Vm**
 
 - **在 Azure Container Service 的 kubernetes 部署 Windows 容器型應用程式**
-
-- **部署到 Azure Service Fabric Windows 容器型應用程式**
 
 ## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>逐步解說 1:EShop 舊版應用程式的教學課程
 
@@ -119,7 +117,7 @@ ms.locfileid: "65638972"
 
 另一個優點是開發人員可以在一致的環境所提供的 Windows 容器中執行應用程式。 只能搭配特定版本出現的問題可以立即看出，而不是呈現在預備或生產環境中。 在容器中執行的應用程式時，開發小組的成員所用的開發環境中的差異重要小於。
 
-容器化應用程式也會有 flatter 的向外延展曲線。 容器化應用程式可讓您有多個應用程式和服務執行個體 （以容器為基礎） 中的 VM 或實體機器相較於每部機器的一般應用程式部署。 這會轉譯為密度增加且較少的所需的資源，特別是當您使用 Kubernetes 或 Service Fabric 等協調器。
+容器化應用程式也會有 flatter 的向外延展曲線。 容器化應用程式可讓您有多個應用程式和服務執行個體 （以容器為基礎） 中的 VM 或實體機器相較於每部機器的一般應用程式部署。 這會轉譯為密度增加且較少的所需的資源，特別是當您使用 Kubernetes 等協調器。
 
 容器化，在理想的情況下，不需要對應用程式程式碼進行任何變更 (C\#)。 在大部分情況下，您只需要 Docker 部署中繼資料檔案 （Dockerfiles 和 Docker Compose 檔案）。
 
@@ -210,7 +208,7 @@ Azure Container Instances 可讓您輕鬆地建立及管理 Docker 容器，在 
 
 ### <a name="considerations"></a>考量
 
-將 Windows 容器，使用任一個完整的.NET Framework 部署 / ASP.NET 或 SQL Server 到 Azure Container Instances (ACI) 不是相當一樣快速，因為 Docker 映像必須部署到一般的 Docker 主機 （例如 Windows Server 2016 和 Windows 容器)每次下載 （提取從 Docker 登錄） 和 SQL 容器映像 (15.1 GB) 和 ASP.NET 的容器映像 (13.9 GB) 的大小會相當龐大，不過它是比維護您自己的 docker 主機 （永久線上操作的成本更低Windows Server 2016 與 Windows 容器在 Azure 中的 VM) 在 Azure (AKS/ACS) 或 Azure Service Fabric 中，也就是，相反地，生產環境部署的絕佳選擇的 Kubernetes 等的整個 orchestrator 更是不在話下。
+將 Windows 容器，使用任一個完整的.NET Framework 部署 / ASP.NET 或 SQL Server 到 Azure Container Instances (ACI) 不是相當一樣快速，因為 Docker 映像必須部署到一般的 Docker 主機 （例如 Windows Server 2016 和 Windows 容器)每次下載 （提取從 Docker 登錄） 和 SQL 容器映像 (15.1 GB) 和 ASP.NET 的容器映像 (13.9 GB) 的大小會相當龐大，不過它是比維護您自己的 docker 主機 （永久線上操作的成本更低Windows Server 2016 與 Windows 容器在 Azure 中的 VM) 更別提 Kubernetes Azure (AKS) 中也就是，相反地，極適合用於生產環境部署這類整個協調器。
 
 為主要的結束時，使用 Azure Container Instances 是令人信服選項適用於開發/測試案例及 CI/CD 管線。
 
@@ -279,80 +277,6 @@ Azure Container Service 會特別針對 Azure 最佳化熱門開放原始碼工�
 ## <a name="next-steps"></a>後續步驟
 
 探索 GitHub wiki 上的此更深入的內容： <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)>
-
-## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>逐步解說 6:部署到 Azure Service Fabric Windows 容器型應用程式
-
-### <a name="technical-walkthrough-availability"></a>技術逐步解說可用性
-
-完整的技術逐步解說位於 eShopModernizing GitHub 存放庫 wiki:
-
-<https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)>
-
-### <a name="overview"></a>總覽
-
-基礎 Windows 容器快速的應用程式必須使用平台，從 IaaS 虛擬機器移動更進一步地消失。 這即可以輕鬆地達到高延展性和更自動化延展性，並大幅提升的自動化部署和版本控制。 若要達成這些目標，您即可使用 orchestrator Azure Service Fabric 中，也就是可在 Azure 雲端中，但也可以使用內部部署，或甚至在不同的公用雲端。
-
-### <a name="goals"></a>目標
-
-本逐步解說的目標是了解如何部署 Windows 容器型應用程式到 Azure 中 Service Fabric 叢集。 重新部署至 Service Fabric 是兩個步驟的程序：
-
-1. 將 Service Fabric 叢集部署至 Azure （或不同的環境）。
-
-2. 應用程式和相關的資源部署到 Service Fabric 叢集。
-
-### <a name="scenarios"></a>案例
-
-#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>案例 a:將直接部署到 Service Fabric 叢集從開發環境
-
-![將直接部署到 Service Fabric 叢集從開發環境](./media/image5-9.png)
-
-> **圖 5-9.** 將直接部署到 Service Fabric 叢集從開發環境
-
-### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>案例 b:從 Azure DevOps 服務中的 CI/CD 管線部署至 Service Fabric 叢集
-
-![從 Azure DevOps 服務中的 CI/CD 管線部署至 Service Fabric 叢集](./media/image5-10.png)
-
-**圖 5-10.** 從 Azure DevOps 服務中的 CI/CD 管線部署至 Service Fabric 叢集
-
-## <a name="benefits"></a>優點
-
-部署到 Service Fabric 中的叢集的優點是類似於使用 Kubernetes 的優點。 一項差異，不過是 Service Fabric 是成熟的生產環境，相較於 Kubernetes，是在 beta 階段，適用於在 Kubernetes 中 1.9 版的 Windows 容器的 Windows 應用程式 (12 月 2017)。 Kubernetes 是成熟的環境，適用於 Linux。
-
-使用 Azure Service Fabric 的主要優點是您取得在其中您可以相應放大您想要使用 （內部-現有的節點中的延展性），並根據數目的容器執行個體數目為基礎的應用程式的可實際執行環境節點或叢集 （叢集的全域延展性） 中的 Vm。
-
-Azure Service Fabric 會提供適用於您容器和應用程式組態的可攜性。 您可以讓 Service Fabric 叢集在 Azure 中，或將它安裝在內部部署在自己的資料中心。 您可以更安裝 Service Fabric 叢集在不同的雲端，例如[Amazon AWS](https://blogs.msdn.microsoft.com/azureservicefabric/2017/05/18/tutorial-how-to-create-a-service-fabric-standalone-cluster-with-aws-ec2-instances/)。
-
-Service fabric，開發人員就可以開始思考實體和虛擬機器從進行規劃以容器為中心的基礎結構，可簡化下列功能，其他項目：
-
-- 多個容器為基礎的應用程式。
-
-- 將容器執行個體和水平自動調整的複寫。
-
-- 命名和探索 (例如，內部 DNS)。
-
-- 平衡負載。
-
-- 輪流更新。
-
-- 散發祕密。
-
-- 應用程式健康狀態檢查。
-
-獨佔 （相較於其他協調器） 的 Service Fabric 中的下列功能︰
-
-- 具狀態服務功能，透過 Reliable Services 應用程式模型。
-
-- 動作項目模式，透過 Reliable Actors 應用程式模型。
-
-- 部署簡易的程序，除了 Windows 或 Linux 容器。
-
-- 進階輪流更新和健康情況檢查。
-
-### <a name="next-steps"></a>後續步驟
-
-探索 GitHub wiki 上的此更深入的內容：
-
-<https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)>
 
 > [!div class="step-by-step"]
 > [上一頁](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)

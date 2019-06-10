@@ -2,12 +2,12 @@
 title: 結論
 description: 將現有.NET 應用程式與 Azure 雲端和 Windows 容器現代化 |結論
 ms.date: 10/26/2017
-ms.openlocfilehash: c6f56e312c052f3ea87e62d36a1ae6846a4b8735
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c5d4a3d504e7d62f74cf74e7b3f53f44f4b9b152
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643755"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758872"
 ---
 # <a name="conclusions"></a>結論
 
@@ -15,7 +15,7 @@ ms.locfileid: "65643755"
 
 - Docker 容器會變成任何以伺服器為基礎之應用程式或服務的標準部署單位。
 
-- 針對生產環境，您應該使用協調器 （例如 Service Fabric 或 Kubernetes） 來裝載可調整 Windows 容器型應用程式。
+- 針對生產環境，您應該使用協調器 （例如 Kubernetes) 來裝載可調整 Windows 容器型應用程式。
 
 - 主控容器的 azure Vm 是快速又簡單的方式，在雲端中建立小型的開發/測試環境。
 

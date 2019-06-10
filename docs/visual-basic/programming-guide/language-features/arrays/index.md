@@ -7,12 +7,12 @@ helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-ms.openlocfilehash: 6b131d073e10f99feaf770fe5fd3c393551fa5a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12846b80f04e9fa6d1188485ad55b061cd2863fa
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907165"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758858"
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic 中的陣列
 
@@ -32,7 +32,7 @@ ms.locfileid: "61907165"
 ' Declare a single-dimension array of 5 numbers.
 Dim numbers(4) As Integer
 
-'Declare a single-dimension array and set its 4 values.
+' Declare a single-dimension array and set its 4 values.
 Dim numbers = New Integer() {1, 2, 4, 8}
 
 ' Change the size of an existing array to 16 elements and retain the current values.
@@ -170,7 +170,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 ## <a name="the-array-type"></a>陣列類型
 
-每個陣列有不同於其項目的資料類型的資料類型。 沒有任何單一的資料類型適用於所有的陣列。 陣列的類型反而是由陣列的維度數目，或稱為 *「順位」*(rank) 以及陣列項目的資料類型所決定。 兩個陣列變數屬於相同的資料類型具有相同的陣序規範，其項目包含相同的資料類型。 陣列的維度的長度不會影響陣列資料型別。
+每個陣列有不同於其項目的資料類型的資料類型。 沒有任何單一的資料類型適用於所有的陣列。 陣列的類型反而是由陣列的維度數目，或稱為 *「順位」* (rank) 以及陣列項目的資料類型所決定。 兩個陣列變數屬於相同的資料類型具有相同的陣序規範，其項目包含相同的資料類型。 陣列的維度的長度不會影響陣列資料型別。
 
 每個陣列都繼承自 <xref:System.Array?displayProperty=nameWithType> 類別，而您可以將變數宣告為類型 `Array`，但不能建立類型為 `Array` 的陣列。 比方說，雖然下列程式碼會宣告`arr`類型的變數`Array`，並呼叫<xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>方法具現化的陣列，陣列的型別證實是 Object []。
 
@@ -219,13 +219,13 @@ Dim sales()() As Double = New Double(11)() {}
 
 ## <a name="zero-length-arrays"></a>長度為零的陣列
 
-Visual Basic 會區別未初始化的陣列 (其值是的陣列`Nothing`) 和*長度為零的陣列*或空陣列 （陣列沒有任何項目。）未初始化的陣列是不被建立維度，或已指派給它的任何值。 例如：
+Visual Basic 會區別未初始化的陣列 (其值是的陣列`Nothing`) 和*長度為零的陣列*或空陣列 （陣列沒有任何項目。）未初始化的陣列是不被建立維度，或已指派給它的任何值。 例如:
 
 ```vb
 Dim arr() As String
 ```
 
-長度為零的陣列宣告具有-1 的維度。 例如: 
+長度為零的陣列宣告具有-1 的維度。 例如:
 
 ```vb
 Dim arrZ(-1) As String
