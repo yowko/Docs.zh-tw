@@ -1,23 +1,23 @@
 ---
-title: HOW TO：撰寫具有複雜篩選功能的查詢 (C#)
+title: 作法：撰寫具有複雜篩選功能的查詢 (C#)
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: 847e50cf0c1cf91f8b731457d351bb0d01d725c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a90a754036008463646321a3e9b9b7d83a3be33
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700581"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484578"
 ---
-# <a name="how-to-write-queries-with-complex-filtering-c"></a><span data-ttu-id="62436-102">HOW TO：撰寫具有複雜篩選功能的查詢 (C#)</span><span class="sxs-lookup"><span data-stu-id="62436-102">How to: Write Queries with Complex Filtering (C#)</span></span>
-<span data-ttu-id="62436-103">有時候您會想要利用複雜篩選撰寫 LINQ to XML 查詢。</span><span class="sxs-lookup"><span data-stu-id="62436-103">Sometimes you want to write LINQ to XML queries with complex filters.</span></span> <span data-ttu-id="62436-104">例如，您可能必須尋找其子項目包含特定名稱和值的所有項目。</span><span class="sxs-lookup"><span data-stu-id="62436-104">For example, you might have to find all elements that have a child element with a particular name and value.</span></span> <span data-ttu-id="62436-105">本主題提供利用複雜篩選撰寫查詢的範例。</span><span class="sxs-lookup"><span data-stu-id="62436-105">This topic gives an example of writing a query with complex filtering.</span></span>  
+# <a name="how-to-write-queries-with-complex-filtering-c"></a><span data-ttu-id="31db6-102">作法：撰寫具有複雜篩選功能的查詢 (C#)</span><span class="sxs-lookup"><span data-stu-id="31db6-102">How to: Write Queries with Complex Filtering (C#)</span></span>
+<span data-ttu-id="31db6-103">有時候您會想要利用複雜篩選撰寫 LINQ to XML 查詢。</span><span class="sxs-lookup"><span data-stu-id="31db6-103">Sometimes you want to write LINQ to XML queries with complex filters.</span></span> <span data-ttu-id="31db6-104">例如，您可能必須尋找其子項目包含特定名稱和值的所有項目。</span><span class="sxs-lookup"><span data-stu-id="31db6-104">For example, you might have to find all elements that have a child element with a particular name and value.</span></span> <span data-ttu-id="31db6-105">本主題提供利用複雜篩選撰寫查詢的範例。</span><span class="sxs-lookup"><span data-stu-id="31db6-105">This topic gives an example of writing a query with complex filtering.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="62436-106">範例</span><span class="sxs-lookup"><span data-stu-id="62436-106">Example</span></span>  
- <span data-ttu-id="62436-107">這個範例顯示如何尋找其 `PurchaseOrder` 子項目的 `Address` 屬性等於 "Shipping"，而 `Type` 子項目等於 "NY" 的所有 `State` 項目。</span><span class="sxs-lookup"><span data-stu-id="62436-107">This example shows how to find all `PurchaseOrder` elements that have a child `Address` element that has a `Type` attribute equal to "Shipping" and a child `State` element equal to "NY".</span></span> <span data-ttu-id="62436-108">它會在 `Where` 子句中使用巢狀查詢，而且如果集合在其中有任何項目，`Any` 運算子會傳回 `true`。</span><span class="sxs-lookup"><span data-stu-id="62436-108">It uses a nested query in the `Where` clause, and the `Any` operator returns `true` if the collection has any elements in it.</span></span> <span data-ttu-id="62436-109">如需使用以方法為基礎之查詢語法的資訊，請參閱 [LINQ 中的查詢語法及方法語法](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)。</span><span class="sxs-lookup"><span data-stu-id="62436-109">For information about using method-based query syntax, see [Query Syntax and Method Syntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="31db6-106">範例</span><span class="sxs-lookup"><span data-stu-id="31db6-106">Example</span></span>  
+ <span data-ttu-id="31db6-107">這個範例顯示如何尋找其 `PurchaseOrder` 子項目的 `Address` 屬性等於 "Shipping"，而 `Type` 子項目等於 "NY" 的所有 `State` 項目。</span><span class="sxs-lookup"><span data-stu-id="31db6-107">This example shows how to find all `PurchaseOrder` elements that have a child `Address` element that has a `Type` attribute equal to "Shipping" and a child `State` element equal to "NY".</span></span> <span data-ttu-id="31db6-108">它會在 `Where` 子句中使用巢狀查詢，而且如果集合在其中有任何項目，`Any` 運算子會傳回 `true`。</span><span class="sxs-lookup"><span data-stu-id="31db6-108">It uses a nested query in the `Where` clause, and the `Any` operator returns `true` if the collection has any elements in it.</span></span> <span data-ttu-id="31db6-109">如需使用以方法為基礎之查詢語法的資訊，請參閱 [LINQ 中的查詢語法及方法語法](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)。</span><span class="sxs-lookup"><span data-stu-id="31db6-109">For information about using method-based query syntax, see [Query Syntax and Method Syntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).</span></span>  
   
- <span data-ttu-id="62436-110">此範例使用下列 XML 文件：[XML 範例檔：多個訂購單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="62436-110">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="31db6-110">此範例使用下列 XML 文件：[XML 範例檔：多個訂購單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="31db6-110">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="62436-111">如需 `Any` 運算子的詳細資訊，請參閱[數量詞作業 (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="62436-111">For more information about the `Any` operator, see [Quantifier Operations (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md).</span></span>  
+ <span data-ttu-id="31db6-111">如需 `Any` 運算子的詳細資訊，請參閱[數量詞作業 (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="31db6-111">For more information about the `Any` operator, see [Quantifier Operations (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrders.xml");  
@@ -35,16 +35,16 @@ foreach (XElement el in purchaseOrders)
     Console.WriteLine((string)el.Attribute("PurchaseOrderNumber"));  
 ```  
   
- <span data-ttu-id="62436-112">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="62436-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="31db6-112">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="31db6-112">This code produces the following output:</span></span>  
   
 ```  
 99505  
 ```  
   
-## <a name="example"></a><span data-ttu-id="62436-113">範例</span><span class="sxs-lookup"><span data-stu-id="62436-113">Example</span></span>  
- <span data-ttu-id="62436-114">下列範例顯示命名空間中之 XML 的相同查詢。</span><span class="sxs-lookup"><span data-stu-id="62436-114">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="62436-115">如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="62436-115">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="31db6-113">範例</span><span class="sxs-lookup"><span data-stu-id="31db6-113">Example</span></span>  
+ <span data-ttu-id="31db6-114">下列範例顯示命名空間中之 XML 的相同查詢。</span><span class="sxs-lookup"><span data-stu-id="31db6-114">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="31db6-115">如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="31db6-115">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="62436-116">此範例使用下列 XML 文件：[XML 範例檔：命名空間中的多個訂購單](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="62436-116">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="31db6-116">此範例使用下列 XML 文件：[XML 範例檔：命名空間中的多個訂購單](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="31db6-116">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrdersInNamespace.xml");  
@@ -63,16 +63,15 @@ foreach (XElement el in purchaseOrders)
     Console.WriteLine((string)el.Attribute(aw + "PurchaseOrderNumber"));  
 ```  
   
- <span data-ttu-id="62436-117">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="62436-117">This code produces the following output:</span></span>  
+ <span data-ttu-id="31db6-117">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="31db6-117">This code produces the following output:</span></span>  
   
 ```  
 99505  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="62436-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="62436-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="31db6-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="31db6-118">See also</span></span>
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [<span data-ttu-id="62436-119">基本查詢 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="62436-119">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [<span data-ttu-id="62436-120">投影作業 (C#)</span><span class="sxs-lookup"><span data-stu-id="62436-120">Projection Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
-- [<span data-ttu-id="62436-121">數量詞作業 (C#)</span><span class="sxs-lookup"><span data-stu-id="62436-121">Quantifier Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)
+- [<span data-ttu-id="31db6-119">投影作業 (C#)</span><span class="sxs-lookup"><span data-stu-id="31db6-119">Projection Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+- [<span data-ttu-id="31db6-120">數量詞作業 (C#)</span><span class="sxs-lookup"><span data-stu-id="31db6-120">Quantifier Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)
