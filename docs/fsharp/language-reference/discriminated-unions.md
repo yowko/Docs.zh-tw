@@ -2,12 +2,12 @@
 title: 已區分的聯集
 description: 了解如何使用F#差別聯集。
 ms.date: 05/16/2016
-ms.openlocfilehash: 27fb9205f3f216adc435483fd1dcc839a6e13e03
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: a3958a9ffb021c0c46c24216f17a1e7ee5605dd3
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557964"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816239"
 ---
 # <a name="discriminated-unions"></a>已區分的聯集
 
@@ -111,7 +111,7 @@ let someFunctionUsingShaderProgram (ShaderProgram id) =
 
 ## <a name="struct-discriminated-unions"></a>結構差別聯集
 
-開頭為F#4.1，您也可以表示差別等位做為結構。  做法是使用`[<Struct>]`屬性。
+您也可以表示結構差別聯集。  做法是使用`[<Struct>]`屬性。
 
 ```fsharp
 [<Struct>]
@@ -164,14 +164,46 @@ Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 
 此程式碼執行時，值`result`為 5。
 
-## <a name="common-attributes"></a>常見屬性
+## <a name="members"></a>成員
+
+可以定義在差別聯集的成員。 下列範例示範如何定義屬性，並實作介面：
+
+```fsharp
+open System
+
+type IPrintable =
+    abstract Print: unit -> unit
+
+type Shape =
+    | Circle of float
+    | EquilateralTriangle of float
+    | Square of float
+    | Rectangle of float * float
+
+    member this.Area =
+        match this with
+        | Circle r -> 2.0 * Math.PI * r
+        | EquilateralTriangle s -> s * s * sqrt 3.0 / 4.0
+        | Square s -> s * s
+        | Rectangle(l, w) -> l * w
+
+    interface IPrintable with
+        member this.Print () =
+            match this with
+            | Circle r -> printfn "Circle with radius %f" r
+            | EquilateralTriangle s -> printfn "Equilateral Triangle of side %f" s
+            | Square s -> printfn "Square with side %f" s
+            | Rectangle(l, w) -> printfn "Rectangle with length %f and width %f" l w
+```
+
+## <a name="common-attributes"></a>通用屬性
 
 差別聯集中，常見的下列屬性：
 
-* `[RequireQualifiedAccess]`
-* `[NoEquality]`
-* `[NoComparison]`
-* `[Struct]`
+* `[<RequireQualifiedAccess>]`
+* `[<NoEquality>]`
+* `[<NoComparison>]`
+* `[<Struct>]`
 
 ## <a name="see-also"></a>另請參閱
 

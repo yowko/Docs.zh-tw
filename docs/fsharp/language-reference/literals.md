@@ -1,13 +1,13 @@
 ---
 title: 常值
 description: 深入了解中的常值型別F#程式設計語言。
-ms.date: 02/08/2019
-ms.openlocfilehash: 032bc82d222cd34e7ac62e42ee4394c97d975b2e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.date: 06/08/2019
+ms.openlocfilehash: 93329cd868ff7a2daaffa1b87ba838bbbc98015c
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490984"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816226"
 ---
 # <a name="literals"></a>常值
 
@@ -44,13 +44,16 @@ ms.locfileid: "66490984"
 |byte[]|ASCII 字串|B|`"text"B`|
 |字串或 byte]|逐字字串|@ prefix|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
-## <a name="remarks"></a>備註
+## <a name="named-literals"></a>具名常值
 
-Unicode 字串可以包含您可以使用指定的明確編碼`\u`後面的 16 位元的十六進位碼或您可以使用指定的 UTF-32 編碼`\U`後面接著 32 位元的十六進位代碼，表示 Unicodesurrogate 字組。
+預定要當做常數的值都可以使用標記[常值](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285)屬性。 此屬性會有效果會使要編譯成常數的值。
 
-從F#3.1 中，您可以使用`+`登入合併字串常值。 您也可以使用位元或 (`|||`) 運算子合併列舉旗標。 例如，下列程式碼是合法的在F#3.1:
+在模式比對運算式，開頭為小寫字元的識別碼都被視為變數繫結，而非做為常值，因此您通常應該使用第一個字母大寫定義常值。
 
 ```fsharp
+[<Literal>]
+let SomeJson = """{"numbers":[1,2,3,4,5]}"""
+
 [<Literal>]
 let Literal1 = "a" + "b"
 
@@ -64,13 +67,11 @@ let Literal2 = 1 ||| 64
 let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
-不允許使用其他位元運算子。
+## <a name="remarks"></a>備註
 
-## <a name="named-literals"></a>具名常值
+Unicode 字串可以包含您可以使用指定的明確編碼`\u`後面的 16 位元的十六進位碼或您可以使用指定的 UTF-32 編碼`\U`後面接著 32 位元的十六進位代碼，表示 Unicodesurrogate 字組。
 
-預定要當做常數的值都可以使用標記[常值](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285)屬性。 此屬性會有效果會使要編譯成常數的值。
-
-在模式比對運算式，開頭為小寫字元的識別碼都被視為變數繫結，而非做為常值，因此您通常應該使用第一個字母大寫定義常值。
+其他位元運算子，而不使用`|||`不允許。
 
 ## <a name="integers-in-other-bases"></a>在其他基底的整數
 
@@ -83,7 +84,7 @@ let numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>數值常值中的底線
 
-開頭為F#4.1，您可以使用底線字元來分隔數字 (`_`)。
+您可以使用底線字元來分隔數字 (`_`)。
 
 ```fsharp
 let value = 0xDEAD_BEEF

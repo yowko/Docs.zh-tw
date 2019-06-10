@@ -1,17 +1,17 @@
 ---
 title: 資料錄
 description: 了解如何F#記錄代表具名的值，並選擇性地使用成員的簡單彙總。
-ms.date: 05/16/2016
-ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.date: 06/09/2019
+ms.openlocfilehash: cfb8de8272b479571119ae4cf91ea1d6fd5db73c
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795417"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816199"
 ---
 # <a name="records"></a>資料錄
 
-記錄表示具名值的簡單彙總，並選擇性地搭配成員。  開頭為F#4.1，它們可以是結構或參考類型。  它們是預設的參考型別。
+記錄表示具名值的簡單彙總，並選擇性地搭配成員。 它們可以是結構或參考類型。  它們是預設的參考型別。
 
 ## <a name="syntax"></a>語法
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1aa958e15449949a1b7ca740198fff71295b2ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c13dd2f00e08539d2ba502058c74aa4a1525e3ff
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704958"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816114"
 ---
 # <a name="enforcefipspolicy-element"></a>\<enforceFIPSPolicy > 項目
 指定是否強制執行電腦設定需求，以便讓密碼編譯演算法符合美國聯邦資訊處理標準 (FIPS) 的規範。  
@@ -58,7 +58,7 @@ ms.locfileid: "61704958"
 ## <a name="remarks"></a>備註  
  從.NET Framework 2.0 開始，實作密碼編譯演算法之類別的建立是由電腦的設定所控制。 如果電腦已設定為需要演算法，以符合 FIPS，類別會實作不會符合 FIPS 規範的演算法，任何嘗試建立該類別的執行個體就會擲回例外狀況。 建構函式會擲回<xref:System.InvalidOperationException>例外狀況，並`Create`方法會擲回<xref:System.Reflection.TargetInvocationException>例外狀況，並傳回內部<xref:System.InvalidOperationException>例外狀況。  
   
- 如果您的應用程式在其組態需要 fips，合規性的電腦上執行您的應用程式會使用與 FIPS 不相容的演算法，您可以使用您的組態檔的這個項目以防止從的 common language runtime (CLR)強制執行的 FIPS 合規性。 這個項目中導入[!INCLUDE[net_v20SP1_long](../../../../../includes/net-v20sp1-long-md.md)]。  
+ 如果您的應用程式在其組態需要 fips，合規性的電腦上執行您的應用程式會使用與 FIPS 不相容的演算法，您可以使用您的組態檔的這個項目以防止從的 common language runtime (CLR)強制執行的 FIPS 合規性。 .NET Framework 2.0 Service Pack 1 中引進了這個項目。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何防止 CLR 強制 FIPS 合規性。  

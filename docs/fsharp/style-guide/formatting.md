@@ -1,15 +1,15 @@
 ---
-title: F#程式碼格式化方針
+title: F# 程式碼格式方針
 description: 了解格式的指導方針F#程式碼。
 ms.date: 02/08/2019
-ms.openlocfilehash: ce07bd800984ec082a522bc62cb487f786fa0510
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: bfec950395312eac7e837abf8694a4381d5ca82f
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063596"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816174"
 ---
-# <a name="f-code-formatting-guidelines"></a>F#程式碼格式化方針
+# <a name="f-code-formatting-guidelines"></a>F# 程式碼格式方針
 
 這篇文章提供如何格式化您的程式碼的指導方針，讓您F#的程式碼：
 
@@ -836,14 +836,14 @@ type MyRecord =
 
 ## <a name="formatting-literals"></a>格式化常值
 
-[F#常值](../language-reference/literals.md)使用`Literal`屬性應該將屬性放在它自己的行，並使用 camelCase 命名：
+[F#常值](../language-reference/literals.md)使用`Literal`屬性應該將屬性放在它自己的行，並使用 PascalCase 命名：
 
 ```fsharp
 [<Literal>]
-let path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let Path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let myUrl = "www.mywebsitethatiamworkingwith.com"
+let MyUrl = "www.mywebsitethatiamworkingwith.com"
 ```
 
 避免將屬性放在同一行的值。
