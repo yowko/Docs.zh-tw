@@ -1,15 +1,15 @@
 ---
-title: HOW TO：擷取項目的集合 (LINQ to XML) (C#)
+title: 作法：擷取項目的集合 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b849668c-7976-4974-b8e1-1cd587d34258
-ms.openlocfilehash: 8d01c0499f031ae22fd6383dd77b36e444704c46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42d1eaeb5e0ce43d27cd4675f634ab3dfca80a53
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674998"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485086"
 ---
-# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-c"></a>HOW TO：擷取項目的集合 (LINQ to XML) (C#)
+# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-c"></a>作法：擷取項目的集合 (LINQ to XML) (C#)
 這個主題會示範 <xref:System.Xml.Linq.XContainer.Elements%2A> 方法。 此方法會擷取項目之子項目的集合。  
   
 ## <a name="example"></a>範例  
@@ -37,4 +37,4 @@ Name: Items
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ to XML 座標軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML 座標軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)

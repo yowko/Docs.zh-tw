@@ -2,12 +2,12 @@
 title: LINQ to XML 比較DOM (C#)
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: 6ab775cc259fd3a337358bca2da6055d7b1ea6bd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3cd6edf9e950611d4e0ed205b89c7c7b073955c8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596960"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484327"
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML 比較DOM (C#)
 本節描述 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 和目前主流的 XML 程式設計 API (也就是 W3C 文件物件模型 (DOM)) 之間的一些主要差異。  
@@ -50,7 +50,7 @@ contacts.AppendChild(contact);
 doc.AppendChild(contacts);  
 ```  
   
- 這個編碼樣式在視覺上不會提供太多 XML 樹狀的相關資訊。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 支援使用這個方法來建構 XML 樹狀結構，但是也支援採用「功能建構」的替代方法。 功能結構使用 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 建構函式來建置 XML 樹狀結構。  
+ 這個編碼樣式在視覺上不會提供太多 XML 樹狀的相關資訊。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 支援使用這個方法來建構 XML 樹狀結構，但是也支援採用「功能建構」  的替代方法。 功能結構使用 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 建構函式來建置 XML 樹狀結構。  
   
  此處說明您如何使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 功能建構，來建構相同的 XML 樹狀結構：  
   
@@ -75,7 +75,7 @@ XElement contacts =
   
  請注意，將要建構 XML 樹狀結構的程式碼縮排可顯示基礎 XML 的結構。  
   
- 如需詳細資訊，請參閱[建立 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)。  
+ 如需詳細資訊，請參閱[建立 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)。  
   
 ## <a name="working-directly-with-xml-elements"></a>直接使用 XML 項目  
  當您使用 XML 進行程式設計時，您的主要焦點通常是 XML 項目，也可能是屬性。 在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中，您可以直接使用 XML 項目和屬性。 例如，您可以：  
@@ -100,7 +100,7 @@ doc.AppendChild(name);
  使用 LINQ to XML 時，您僅能在想要於文件根層級上加入註解或處理指示時，才能使用 <xref:System.Xml.Linq.XDocument> 類別。  
   
 ## <a name="simplified-handling-of-names-and-namespaces"></a>簡化的名稱和命名空間處理方式  
- 名稱、命名空間和命名空間前置詞的處理通常是 XML 程式設計的複雜部分。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 不必處理命名空間前置詞，可簡化名稱和命名空間。 您也可以控制命名空間前置詞。 但是，如果您決定不明確控制命名空間前置詞，則在序列化期間，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會指派命名空間前置詞 (如有必要)，或使用預設的命名空間進行序列化 (如果非必要的話)。 如果使用預設的命名空間，在產生的文件中將不會有任何命名空間前置詞。 如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+ 名稱、命名空間和命名空間前置詞的處理通常是 XML 程式設計的複雜部分。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 不必處理命名空間前置詞，可簡化名稱和命名空間。 您也可以控制命名空間前置詞。 但是，如果您決定不明確控制命名空間前置詞，則在序列化期間，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會指派命名空間前置詞 (如有必要)，或使用預設的命名空間進行序列化 (如果非必要的話)。 如果使用預設的命名空間，在產生的文件中將不會有任何命名空間前置詞。 如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)。  
   
  另一個 DOM 問題是，DOM 不會讓您變更節點的名稱， 而是必須建立新的節點，並將所有子節點複製到該節點中，因此會失去原始的節點識別。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會讓您在節點上設定 <xref:System.Xml.Linq.XName> 屬性，藉以避免這個問題。  
   
@@ -133,4 +133,4 @@ doc.AppendChild(name);
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用者入門 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+- [使用者入門 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

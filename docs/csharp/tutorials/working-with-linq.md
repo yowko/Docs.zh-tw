@@ -3,12 +3,12 @@ title: 處理 LINQ
 description: 本教學課程會教導您如何使用 LINQ 產生序列、撰寫用於 LINQ 查詢的方法，並區分立即和延遲評估。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 702770650533b0549e414a1de87acf17d77af4e3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: e51fb166ccba793f9f2aa9d11a109280bf8eea93
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063176"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486993"
 ---
 # <a name="working-with-linq"></a>處理 LINQ
 
@@ -51,7 +51,7 @@ using System.Linq;
 
 如果這三行程式碼 (`using` 陳述式) 不在檔案最上方，我們的程式將不會編譯。
 
-現在已具備您所需的所有參考，請考慮構成一副撲克牌的內容。 通常，一副撲克牌有四種花色，而每種花色有十三個值。 一般來說，您可以考慮立即建立 `Card` 類別，並以手動方式填入 `Card` 物件的集合。 使用 LINQ，您就能使用比平常方式更簡潔的方法來處理一副撲克牌的建立。 您不需建立 `Card` 類別，而是改為建立兩個序列，分別代表花色和順位。 您將建立一對非常簡單的[迭代器方法](../iterators.md#enumeration-sources-with-iterator-methods)，其將會產生順位和花色作為字串的 <xref:System.Collections.Generic.IEnumerable%601>：
+現在已具備您所需的所有參考，請考慮構成一副撲克牌的內容。 通常，一副撲克牌有四種花色，而每種花色有十三個值。 一般來說，您可以考慮立即建立 `Card` 類別，並以手動方式填入 `Card` 物件的集合。 使用 LINQ，您就能使用比平常方式更簡潔的方法來處理一副撲克牌的建立。 您不需建立 `Card` 類別，而是改為建立兩個序列，分別代表花色和順位。 您將建立一對非常簡單的[迭代器方法  ](../iterators.md#enumeration-sources-with-iterator-methods)，其將會產生順位和花色作為字串的 <xref:System.Collections.Generic.IEnumerable%601>：
 
 ```csharp
 // Program.cs
@@ -142,9 +142,9 @@ public static void Main(string[] args)
 
 不過，標準程式庫中並未利用任何洗牌方法，所以您將必須自行撰寫。 您將建立的洗牌方法會舉例說明您將與 LINQ 型程式搭配使用的數種技術，以便在步驟中說明此程序的每個部分。
 
-若要針對您與從 LINQ 查詢中取回的 <xref:System.Collections.Generic.IEnumerable%601> 進行互動的方式新增一些功能，您必須撰寫一些稱為[擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)的特殊種類方法。 簡單地說，擴充方法是具有特殊用途的「靜態方法」，其會將新功能新增到已經存在的類型，而不需修改您想要將功能新增到其中的原始類型。
+若要針對您與從 LINQ 查詢中取回的 <xref:System.Collections.Generic.IEnumerable%601> 進行互動的方式新增一些功能，您必須撰寫一些稱為[擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)的特殊種類方法。 簡單地說，擴充方法是具有特殊用途的「靜態方法」  ，其會將新功能新增到已經存在的類型，而不需修改您想要將功能新增到其中的原始類型。
 
-藉由將新的「靜態」類別檔案新增到名為 `Extensions.cs` 的程式，來為您的擴充方法提供一個新家，然後開始建置第一個擴充方法：
+藉由將新的「靜態」  類別檔案新增到名為 `Extensions.cs` 的程式，來為您的擴充方法提供一個新家，然後開始建置第一個擴充方法：
 
 ```csharp
 // Extensions.cs
@@ -172,7 +172,7 @@ public static IEnumerable<T> InterleaveSequenceWith<T> (this IEnumerable<T> firs
 
 您可以方法的第一個引數上看到加入的 `this` 修飾詞。 這表示您會將方法當作第一個引數之型別的成員方法來呼叫。 此方法宣告也遵循標準慣用語，其中輸入和輸出型別為 `IEnumerable<T>`。 該作法可使 LINQ 方法鏈結在一起，以執行更複雜的查詢。
 
-當然，因為您將這副牌分成數堆，所以必須將這幾堆聯結在一起。 在程式碼中，這表示您將同時列舉您透過 <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 取得的序列、*`interleaving`* 元素，然後建立一個序列：您現在已完成對這副牌的洗牌。 若要撰寫可搭配兩個序列使用的 LINQ 方法，您必須先了解 <xref:System.Collections.Generic.IEnumerable%601> 的運作方式。
+當然，因為您將這副牌分成數堆，所以必須將這幾堆聯結在一起。 在程式碼中，這表示您將同時列舉您透過 <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 取得的序列、 *`interleaving`* 元素，然後建立一個序列：您現在已完成對這副牌的洗牌。 若要撰寫可搭配兩個序列使用的 LINQ 方法，您必須先了解 <xref:System.Collections.Generic.IEnumerable%601> 的運作方式。
 
 <xref:System.Collections.Generic.IEnumerable%601> 介面具有單一方法：<xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A>。 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 傳回的物件具有可移動到下一個元素的方法，以及可擷取目前序列中元素的屬性。 您將會使用那兩個成員來列舉集合並傳回元素。 此交錯方法將會是迭代器方法，因此您將使用上述的 `yield return` 語法，而不是建置集合並傳回集合。
 
@@ -250,7 +250,7 @@ static void Main(string[] args)
 
 ## <a name="optimizations"></a>最佳化
 
-您目前建置的範例會執行「外部洗牌」，牌堆頂端和底部的紙牌，在每次執行時會保持不變。 讓我們做個變化：我們將改用「內部洗牌」，這會變更全部 52 張牌的位置。 對於內部洗牌而言，您要交錯牌堆，讓下半部的第一張紙牌變為牌堆的第一張紙牌。 這表示上半部的最後一張紙牌會變為底部的排。 這是對單行程式碼的簡單變更。 藉由切換 <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 的位置來更新目前的洗牌查詢。 這將會變更這副牌上下半部的順序：
+您目前建置的範例會執行「外部洗牌」  ，牌堆頂端和底部的紙牌，在每次執行時會保持不變。 讓我們做個變化：我們將改用「內部洗牌」  ，這會變更全部 52 張牌的位置。 對於內部洗牌而言，您要交錯牌堆，讓下半部的第一張紙牌變為牌堆的第一張紙牌。 這表示上半部的最後一張紙牌會變為底部的排。 這是對單行程式碼的簡單變更。 藉由切換 <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 的位置來更新目前的洗牌查詢。 這將會變更這副牌上下半部的順序：
 
 ```csharp
 shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
@@ -258,7 +258,7 @@ shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 
 再次執行程式，您將會看到需要反覆運算 52 次，才能使牌堆重新排列回原始順序。 隨著程式持續執行，您也會開始注意到一些效能嚴重降低的情況。
 
-這有幾個原因。 您可以處理導致這個效能降低的其中一個主要原因：無法有效使用[延遲評估](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。
+這有幾個原因。 您可以處理導致這個效能降低的其中一個主要原因：無法有效使用[延遲評估  ](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。
 
 簡單來說，延遲評估表示，在需要陳述式的值之前不會執行該陳述式的評估。 LINQ 查詢是以延遲方式評估的陳述式。 序列只會隨著要求元素產生。 通常，這是 LINQ 的主要優點。 不過，在使用如範例中的程式時，這會導致執行時間呈指數成長。
 
@@ -318,7 +318,7 @@ public static void Main(string[] args)
 
 請注意，您不用在每次存取查詢時進行記錄。 您只需要在建立原始查詢時做出記錄。 程式仍然會花費很長的時間執行，但現在您可以看到原因。 如果您在執行開啟記錄的內部洗牌期間失去耐心，請切換回外部洗牌。 您仍然會看到延遲評估的效果。 在單次執行中，它會執行 2592 次查詢，其中包括所有值和花色的產生。
 
-您可以在此處改善程式碼的效能，以減少您所進行的執行次數。 您可進行的簡單修正是「快取」建構這副牌的原始 LINQ 查詢結果。 目前，您會在每次 do-while 迴圈經歷反覆執行時一再地執行查詢、重新建構這副牌，而且每次都會對它進行重新洗牌。 若要快取這副牌，您可以利用 LINQ 方法 <xref:System.Linq.Enumerable.ToArray%2A> 和 <xref:System.Linq.Enumerable.ToList%2A>；當您將它們附加至查詢時，它們將執行您已告訴它們的相同動作，但現在它們會根據您選擇呼叫的方法，將結果儲存在陣列或清單中。 將 LINQ 方法 <xref:System.Linq.Enumerable.ToArray%2A> 附加至這兩個查詢，然後再次執行程式：
+您可以在此處改善程式碼的效能，以減少您所進行的執行次數。 您可進行的簡單修正是「快取」  建構這副牌的原始 LINQ 查詢結果。 目前，您會在每次 do-while 迴圈經歷反覆執行時一再地執行查詢、重新建構這副牌，而且每次都會對它進行重新洗牌。 若要快取這副牌，您可以利用 LINQ 方法 <xref:System.Linq.Enumerable.ToArray%2A> 和 <xref:System.Linq.Enumerable.ToList%2A>；當您將它們附加至查詢時，它們將執行您已告訴它們的相同動作，但現在它們會根據您選擇呼叫的方法，將結果儲存在陣列或清單中。 將 LINQ 方法 <xref:System.Linq.Enumerable.ToArray%2A> 附加至這兩個查詢，然後再次執行程式：
 
 [!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
@@ -340,9 +340,9 @@ public static void Main(string[] args)
 
 如需有關 LINQ 的詳細資訊，請參閱：
 - [Language-Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
-  - [LINQ 簡介](../programming-guide/concepts/linq/introduction-to-linq.md)
-  - [開始使用 C# 中的 LINQ](../programming-guide/concepts/linq/getting-started-with-linq.md)
-    - [基本 LINQ 查詢作業 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-    - [使用 LINQ 轉換資料 (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-    - [LINQ 中的查詢語法及方法語法 (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-    - [支援 LINQ 的 C# 功能](../programming-guide/concepts/linq/features-that-support-linq.md)
+  - [LINQ 簡介](../programming-guide/concepts/linq/index.md)
+  - [基本 LINQ 查詢作業 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+  - [使用 LINQ 轉換資料 (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+  - [LINQ 中的查詢語法及方法語法 (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+  - [支援 LINQ 的 C# 功能](../programming-guide/concepts/linq/features-that-support-linq.md)
+    

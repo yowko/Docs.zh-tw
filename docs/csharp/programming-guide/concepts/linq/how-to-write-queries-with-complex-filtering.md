@@ -1,15 +1,15 @@
 ---
-title: HOW TO：撰寫具有複雜篩選功能的查詢 (C#)
+title: 作法：撰寫具有複雜篩選功能的查詢 (C#)
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: 847e50cf0c1cf91f8b731457d351bb0d01d725c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a90a754036008463646321a3e9b9b7d83a3be33
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700581"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484578"
 ---
-# <a name="how-to-write-queries-with-complex-filtering-c"></a>HOW TO：撰寫具有複雜篩選功能的查詢 (C#)
+# <a name="how-to-write-queries-with-complex-filtering-c"></a>作法：撰寫具有複雜篩選功能的查詢 (C#)
 有時候您會想要利用複雜篩選撰寫 LINQ to XML 查詢。 例如，您可能必須尋找其子項目包含特定名稱和值的所有項目。 本主題提供利用複雜篩選撰寫查詢的範例。  
   
 ## <a name="example"></a>範例  
@@ -42,7 +42,7 @@ foreach (XElement el in purchaseOrders)
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+ 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)。  
   
  此範例使用下列 XML 文件：[XML 範例檔：命名空間中的多個訂購單](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。  
   
@@ -73,6 +73,5 @@ foreach (XElement el in purchaseOrders)
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
 - [投影作業 (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
 - [數量詞作業 (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)

@@ -1,15 +1,15 @@
 ---
-title: HOW TO：利用 LINQ to XML 使用字典 (C#)
+title: 作法：利用 LINQ to XML 使用字典 (C#)
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
-ms.openlocfilehash: a1104d041c72b48a9aad38a489aefe3ec90a16dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 196720ff9c17e62f8da9e65e1b8c481fed5074cc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582015"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484721"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>HOW TO：利用 LINQ to XML 使用字典 (C#)
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>作法：利用 LINQ to XML 使用字典 (C#)
 將各種資料結構轉換為 XML，以及將 XML 轉回其他資料結構通常很方便。 這個主題藉由來回轉換 <xref:System.Collections.Generic.Dictionary%602> 和 XML 來顯示這個一般方法的特定實作。  
   
 ## <a name="example"></a>範例  
@@ -66,6 +66,3 @@ Child3:Value3
 Child4:Value4  
 ```  
   
-## <a name="see-also"></a>另請參閱
-
-- [投影和轉換 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

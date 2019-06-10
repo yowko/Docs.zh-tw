@@ -1,15 +1,15 @@
 ---
-title: HOW TO：從 Office Open XML 文件擷取段落 (C#)
+title: 作法：從 Office Open XML 文件擷取段落 (C#)
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: 192f04e9862b9cb901494f0a09744d3f9f289399
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b0919b7c5c40444587a18c0087109af8172ebb1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688268"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486452"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>HOW TO：從 Office Open XML 文件擷取段落 (C#)
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>作法：從 Office Open XML 文件擷取段落 (C#)
 本主題顯示的範例可開啟 Office Open XML 文件，並在文件中擷取所有段落的集合。  
   
  如需 Office Open XML 的詳細資訊，請參閱 [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) \(英文\) 和 [www.ericwhite.com](http://ericwhite.com/) \(英文\)。  
@@ -19,7 +19,7 @@ ms.locfileid: "54688268"
   
  此範例會使用名稱為 `StringConcatenate` 的擴充方法，這個方法也隨附的範例中。  
   
- 如需說明此範例如何運作的詳細教學課程，請參閱 [XML 純函數式轉換 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)。  
+ 如需說明此範例如何運作的詳細教學課程，請參閱 [XML 純函數式轉換 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)。  
   
  這個範例會使用在 WindowsBase 組件中找到的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。  
   
@@ -182,7 +182,3 @@ StyleName:Normal >This example produces the following output:<
 StyleName:Normal ><  
 StyleName:Code >Hello World<  
 ```  
-  
-## <a name="see-also"></a>另請參閱
-
-- [進階查詢技術 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

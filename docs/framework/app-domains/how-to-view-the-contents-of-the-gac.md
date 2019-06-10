@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c7d197ea7178abf991247e5ecca02c2b8e94713
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c319c5f7c9bb808b2ce7ee10178722287e456339
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634365"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486436"
 ---
 # <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>作法：檢視全域組件快取的內容
 
@@ -39,7 +39,7 @@ gacutil /l
 ```
 
 > [!NOTE]
-> 在舊版 .NET Framework 中，[Shfusion.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) Windows Shell Extension 可讓您在 [檔案總管] 中檢視全域組件快取。 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]開始，Shfusion.dll 已過時。
+> 在舊版 .NET Framework 中，[Shfusion.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) Windows Shell Extension 可讓您在 [檔案總管] 中檢視全域組件快取。 從 .NET Framework 4 開始，Shfusion.dll 已淘汰。
 
 ## <a name="see-also"></a>另請參閱
 

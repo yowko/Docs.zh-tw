@@ -1,16 +1,16 @@
 ---
-title: HOW TO：尋找相關項目 (XPath-LINQ to XML) (C#)
+title: 作法：尋找相關項目 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 0463be7cabca088a1a5a200b9e8648914f16e7f5
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a4260012899527662638a037fa4616a7a0d6f875
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57843335"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486748"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>作法：尋找相關項目 (XPath-LINQ to XML) (C#)
-此主題顯示如何取得在其他項目值所參考的屬性上選取的項目。  
+本主題顯示如何取得在其他項目值所參考的屬性上選取的項目。  
   
  XPath 運算式為：  
   
@@ -83,7 +83,4 @@ Results are identical
   </FullAddress>  
 </Customer>  
 ```  
-  
-## <a name="see-also"></a>另請參閱
-
-- [XPath 使用者適用的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+ 

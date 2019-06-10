@@ -1,15 +1,15 @@
 ---
-title: HOW TO：篩選屬性 (XPath-LINQ to XML) (C#)
+title: 作法：篩選屬性 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-ms.openlocfilehash: 3b9f3d18bbfe773d782239d67e8f43bdf4ac52d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 927dd781a16aa745b88de3c446682590bd601597
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603790"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485749"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>HOW TO：篩選屬性 (XPath-LINQ to XML) (C#)
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>作法：篩選屬性 (XPath-LINQ to XML) (C#)
 本主題顯示如何取得具有指定之名稱以及具有指定值之屬性的子代項目。  
   
  XPath 運算式為：  
@@ -71,7 +71,3 @@ Results are identical
   <Country>USA</Country>  
 </Address>  
 ```  
-  
-## <a name="see-also"></a>另請參閱
-
-- [XPath 使用者適用的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -1,15 +1,15 @@
 ---
-title: HOW TO：撰寫 LINQ to XML 座標軸方法 (C#)
+title: 作法：撰寫 LINQ to XML 座標軸方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 7e00ba6ba2880ab4f26f59a0b8543ac9f58dfbb0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e777e615d21dd43317f0813461a3f1d8a506c90
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529745"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484657"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>HOW TO：撰寫 LINQ to XML 座標軸方法 (C#)
+# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>作法：撰寫 LINQ to XML 座標軸方法 (C#)
 您可以撰寫自己的座標軸方法來擷取 XML 樹狀結構中的集合。 其中一個最好的方式是，撰寫可傳回項目或屬性集合的擴充方法。 您可以根據您應用程式的需求，撰寫您的擴充方法來傳回項目或屬性的特定子集。  
   
 ## <a name="example"></a>範例  
@@ -291,6 +291,3 @@ class Program
 1999-10-22  
 ```  
   
-## <a name="see-also"></a>另請參閱
-
-- [進階查詢技術 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

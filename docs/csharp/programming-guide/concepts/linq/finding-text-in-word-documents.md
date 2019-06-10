@@ -2,12 +2,12 @@
 title: 尋找 Word 文件中的文字 (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: d421916335f4cf163a449bc7b0c7c7bb30179a5c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9f81795c00c29da34bb5f229afb557eb89af6509
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596621"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487491"
 ---
 # <a name="finding-text-in-word-documents-c"></a>尋找 Word 文件中的文字 (C#)
 本主題會延伸先前的查詢以進行實用的操作：在文件中尋找出現的所有字串。  
@@ -325,10 +325,10 @@ StyleName:Code ><
 ## <a name="next-steps"></a>後續步驟  
  下一節提供有關 WordprocessingML 文件的詳細資訊：  
   
-- [Office Open XML WordprocessingML 文件的詳細資料 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+- [Office Open XML WordprocessingML 文件的詳細資料 (C#)](../../../../csharp/programming-guide/concepts/linq/wordprocessingml-document-with-styles.md)  
   
 ## <a name="see-also"></a>另請參閱
 
-- [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
 - [使用純虛擬函式進行重構 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
 - [LINQ to XML 中的延後執行和延遲評估 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

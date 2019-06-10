@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 345acd17a6357f71f5c047475a4494a1fa793a58
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 083c1e4b6ab8c25956ffcf2288ac32d940f23bc2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595782"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483217"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>逐步解說：在 C# 中撰寫查詢 (LINQ)
 本逐步解說示範用以撰寫 LINQ 查詢運算式的 C# 語言功能。  
@@ -26,15 +26,15 @@ ms.locfileid: "64595782"
   
 1. 啟動 Visual Studio。  
   
-2. 在功能表列上，選擇 [檔案] 、[新增] 、[專案] 。  
+2. 在功能表列上，選擇 [檔案]  、[新增]  、[專案]  。  
   
      [ **新增專案** ] 對話方塊隨即開啟。  
   
-3. 依序展開 [已安裝]、[範本] 和 [Visual C#]，然後選擇 [主控台應用程式]。  
+3. 依序展開 [已安裝]  、[範本]  和 [Visual C#]  ，然後選擇 [主控台應用程式]  。  
   
-4. 在 [名稱] 文字方塊中，輸入不同的名稱或接受預設名稱，然後按一下 [確定] 按鈕。  
+4. 在 [名稱]  文字方塊中，輸入不同的名稱或接受預設名稱，然後按一下 [確定]  按鈕。  
   
-     新的專案隨即會出現在方案總管中。  
+     新的專案隨即會出現在方案總管  中。  
   
 5. 您會發現專案具有 System.Core.dll 的參考和 <xref:System.Linq?displayProperty=nameWithType> 命名空間的 `using` 指示詞。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "64595782"
   
 #### <a name="to-create-a-simple-query"></a>建立簡單查詢  
   
-- 在應用程式的 `Main` 方法中，建立簡單的查詢，即可在執行查詢時產生第一次測驗分數超過 90 分之所有學生的清單。 請注意，因為已選取整個 `Student` 物件，所以查詢的類型是 `IEnumerable<Student>`。 雖然程式碼也可以藉由 [var](../../../../csharp/language-reference/keywords/var.md) 關鍵字來使用隱含類型，但需使用明確類型來清楚說明結果  (如需 `var` 的詳細資訊，請參閱[隱含類型區域變數](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md))。  
+- 在應用程式的 `Main` 方法中，建立簡單的查詢，即可在執行查詢時產生第一次測驗分數超過 90 分之所有學生的清單。 請注意，因為已選取整個 `Student` 物件，所以查詢的類型是 `IEnumerable<Student>`。 雖然程式碼也可以藉由 [var](../../../../csharp/language-reference/keywords/var.md) 關鍵字來使用隱含類型，但需使用明確類型來清楚說明結果 (如需 `var` 的詳細資訊，請參閱[隱含類型區域變數](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md))。  
   
      另請注意，查詢的範圍變數 `student` 可作為來源中每個 `Student` 的參考，並提供每個物件的成員存取。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "64595782"
   
     - 此變數的類型是 `Student`，其與 `IEnumerable<Student>` 查詢變數類型相容。  
   
-2. 加入此程式碼之後，建置並執行應用程式，即可在 [主控台] 視窗中查看結果。  
+2. 加入此程式碼之後，建置並執行應用程式，即可在 [主控台]  視窗中查看結果。  
   
  [!code-csharp[CsLINQGettingStarted#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#13)]  
   
@@ -127,7 +127,7 @@ ms.locfileid: "64595782"
   
      [!code-csharp[CsLINQGettingStarted#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#15)]  
   
-3. 執行應用程式，並在 [主控台] 視窗中檢視結果。  
+3. 執行應用程式，並在 [主控台]  視窗中檢視結果。  
   
      如需詳細資訊，請參閱 [group 子句](../../../../csharp/language-reference/keywords/group-clause.md)。  
   
@@ -178,12 +178,11 @@ ms.locfileid: "64595782"
   
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
+ [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)  
   
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
   
 ## <a name="see-also"></a>另請參閱
 
 - [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
-- [開始使用 C# 中的 LINQ](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [LINQ 查詢運算式](../../../../csharp/programming-guide/linq-query-expressions/index.md)

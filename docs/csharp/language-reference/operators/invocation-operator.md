@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 412d3ac5296eaf7d67f4a5e84b7a42f6fa5bb8a5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8f7382a49c81b6fd8e104b864ffc2f70db7fe4a6
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633827"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758106"
 ---
 # <a name="-operator-c-reference"></a>() 運算子 (C# 參考)
 
@@ -26,7 +26,7 @@ ms.locfileid: "65633827"
 
 以下範例示範如何叫用方法 (使用或不使用引數)，以及委派：
 
-[!code-csharp-interactive[use for invocation](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Invocation)]
+[!code-csharp-interactive[use for invocation](~/samples/csharp/language-reference/operators/InvocationOperatorExamples.cs#Invocation)]
 
 當您使用 [`new`](../keywords/new-operator.md) 運算子叫用[建構函式](../../programming-guide/classes-and-structs/constructors.md)時，您也會使用括號。
 
@@ -38,7 +38,7 @@ ms.locfileid: "65633827"
 
 下列範例將示範數字型別之間的型別轉換：
 
-[!code-csharp-interactive[use for cast](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Cast)]
+[!code-csharp-interactive[use for cast](~/samples/csharp/language-reference/operators/InvocationOperatorExamples.cs#Cast)]
 
 如需在數字型別之間進行預先定義明確轉換的詳細資訊，請參閱[明確數值轉換表](../keywords/explicit-numeric-conversions-table.md)。
 

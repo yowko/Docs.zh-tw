@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 1d6bd14a88f22bfa961ee28f0014b1f89ccb28b5
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: e3fced818a257cb0bde166b0dd98c59c3b41e8ac
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654038"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484109"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ 中的查詢語法及方法語法 (C#)
 介紹性 Language Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) 文件中的大多數查詢都是使用 LINQ 宣告式查詢語法所撰寫。 不過，編譯程式碼時，必須將查詢語法轉譯成 .NET Common Language Runtime (CLR) 的方法呼叫。 這些方法呼叫會叫用標準查詢運算子，而其具有 `Where`、`Select`、`GroupBy`、`Join`、`Max` 和 `Average` 這類名稱。 您可以使用方法語法來直接呼叫它們，而不是使用查詢語法。  
@@ -18,7 +18,7 @@ ms.locfileid: "58654038"
  查詢語法和方法語法的語意相同，但許多人都發現查詢語法較為簡單且更容易閱讀。 某些查詢必須以方法呼叫形式表示。 例如，您必須使用方法呼叫，來表示可擷取符合所指定條件的項目數的查詢。 您也必須針對擷取來源序列中具有最大值的項目的查詢，使用方法呼叫。 <xref:System.Linq> 命名空間中標準查詢運算子的參考文件一般會使用方法語法。 因此，即使開始撰寫 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢時，最好還是熟悉如何在查詢和查詢運算式本身中使用方法語法。  
   
 ## <a name="standard-query-operator-extension-methods"></a>標準查詢運算子擴充方法  
- 下列範例示範簡單「查詢運算式」以及撰寫為「方法查詢」的語意對等查詢。  
+ 下列範例示範簡單「查詢運算式」  以及撰寫為「方法查詢」  的語意對等查詢。  
   
  [!code-csharp[csLINQGettingStarted#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#22)]  
   
@@ -28,7 +28,7 @@ ms.locfileid: "58654038"
   
  ![顯示 Intellisense 中所有標準查詢運算子的螢幕擷取畫面。](./media/query-syntax-and-method-syntax-in-linq/standard-query-operators.png)  
   
- 雖然看起來就像已重新定義 <xref:System.Collections.Generic.IEnumerable%601> 來包含這些額外方法，但是實際上卻不是。 標準查詢運算子會實作為一種稱為「擴充方法」的新方法。 擴充方法會「擴充」現有類型，其呼叫方式就像它們是類型上的執行個體方法一樣。 標準查詢運算子可擴充 <xref:System.Collections.Generic.IEnumerable%601>，而且這是您可以撰寫 `numbers.Where(...)` 的原因。  
+ 雖然看起來就像已重新定義 <xref:System.Collections.Generic.IEnumerable%601> 來包含這些額外方法，但是實際上卻不是。 標準查詢運算子會實作為一種稱為「擴充方法」  的新方法。 擴充方法會「擴充」現有類型，其呼叫方式就像它們是類型上的執行個體方法一樣。 標準查詢運算子可擴充 <xref:System.Collections.Generic.IEnumerable%601>，而且這是您可以撰寫 `numbers.Where(...)` 的原因。  
   
  若要開始使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，您真正只需要知道擴充方法的是如何使用正確的 `using` 指示詞，將它們帶入您應用程式的範圍內。 從您應用程式的觀點來看，擴充方法和一般執行個體方法都相同。  
   
@@ -41,7 +41,3 @@ ms.locfileid: "58654038"
   
 ## <a name="composability-of-queries"></a>查詢的編寫性  
  在上述程式碼範例，請注意，在 `Where` 呼叫上使用點運算子來叫用 `OrderBy` 方法。 `Where` 會產生已篩選的序列，而 `Orderby` 接著會透過排序來運作於該序列。 因為查詢會傳回 `IEnumerable`，所以您可以將方法呼叫鏈結在一起，以在方法語法中撰寫它們。 當您使用查詢語法來撰寫查詢時，這是編譯器在幕後執行的作業。 因為查詢變數不會儲存查詢的結果，所以您隨時都可以修改它，或使用它作為新查詢的基礎，即使已經執行之後也是一樣。  
-  
-## <a name="see-also"></a>另請參閱
-
-- [開始使用 C# 中的 LINQ](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

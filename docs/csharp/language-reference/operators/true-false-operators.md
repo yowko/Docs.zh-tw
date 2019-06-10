@@ -6,12 +6,12 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 003ca79343de14aa3a3b1d95d84d0637c873652c
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: b1acf9a16dd977ec49a7f1dc3bea4ee41792e9be
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66302059"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758134"
 ---
 # <a name="true-and-false-operators-c-reference"></a>true 和 false 運算子 (C# 參考)
 
@@ -26,7 +26,7 @@ ms.locfileid: "66302059"
 
 下列範例顯示同時定義了 `true` 和 `false` 運算子的型別。 此外，它還多載邏輯 AND 運算子 `&`，使得系統也能針對該型別的運算元評估 `&&` 運算子。
 
-[!code-csharp-interactive[true and false operators example](~/samples/snippets/csharp/keywords/TrueFalseOperatorsExample.cs)]
+[!code-csharp[true and false operators example](~/samples/csharp/language-reference/operators/TrueFalseOperators.cs)]
 
 請注意 `&&` 運算子的最少運算行為。 當 `GetFuelLaunchStatus` 方法傳回 `LaunchStatus.Red` 時，系統並不會評估 `&&` 運算子的第二個運算元。 這是因為 `LaunchStatus.Red` 必然為 false。 然後邏輯 AND 的結果並不取決於第二個運算元的值。 此範例的輸出如下：
 

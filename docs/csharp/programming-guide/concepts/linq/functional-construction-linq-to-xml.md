@@ -2,15 +2,15 @@
 title: 函數式建構 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
-ms.openlocfilehash: 663d63ab4828f03dbdcb3d0b81b06d4876f8e28f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 46cf4dbaf190182467cbbe1094070b2da0854c68
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596725"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486034"
 ---
 # <a name="functional-construction-linq-to-xml-c"></a>函數式建構 (LINQ to XML) (C#)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供一種強大的方式來建立 XML 元素，稱為「函數式建構」。 功能結構是在單一陳述式中建立 XML 樹狀結構的能力。  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供一種強大的方式來建立 XML 元素，稱為「函數式建構」  。 功能結構是在單一陳述式中建立 XML 樹狀結構的能力。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 程式介面有數種主要功能可以使用功能結構：  
   
@@ -70,6 +70,3 @@ Console.WriteLine(xmlTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>另請參閱
-
-- [建立 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)

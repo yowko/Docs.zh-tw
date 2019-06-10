@@ -1,16 +1,16 @@
 ---
-title: HOW TO：轉換 XML 樹狀結構的組織結構 (C#)
+title: 作法：轉換 XML 樹狀結構的組織結構 (C#)
 ms.date: 07/20/2015
 ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
-ms.openlocfilehash: 535f528d347e0c72ddaaab74ea78b47993a873a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 39e8bd3232ff19be5e4f7db3c678c6c7af670ab5
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491619"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484785"
 ---
-# <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>HOW TO：轉換 XML 樹狀結構的組織結構 (C#)
-XML 文件的「組織結構」會參考其項目名稱、屬性名稱，及其階層的特性。  
+# <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>作法：轉換 XML 樹狀結構的組織結構 (C#)
+XML 文件的「組織結構」  會參考其項目名稱、屬性名稱，及其階層的特性。  
   
  有時候您必須變更 XML 文件的組織結構。 例如，您可能想要將現有的 XML 文件傳送到需要不同項目和屬性名稱的其他系統。 您可以瀏覽文件，在必要時刪除並重新命名項目，但使用功能結構會使程式碼更容易讀取與維護。 如需函數式建構的詳細資訊，請參閱[函數式建構 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。  
   
@@ -137,7 +137,3 @@ static void Main(string[] args)
   <COUNTRY>USA</COUNTRY>  
 </PO>  
 ```  
-  
-## <a name="see-also"></a>另請參閱
-
-- [投影和轉換 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

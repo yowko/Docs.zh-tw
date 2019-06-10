@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: eec70f5446eec11fa4e241b86eed4ed8d6146f85
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: de0715a2ac946fa47f0d83ac8569595e622f0b97
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195784"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758079"
 ---
 # <a name="member-access-operators-c-reference"></a>成員存取運算子 (C# 參考)
 
@@ -47,17 +47,17 @@ ms.locfileid: "66195784"
 
 - 使用 `.` 來存取命名空間內的巢狀命名空間，如下列 [`using` 指示詞](../keywords/using-directive.md)的範例所示：
 
-  [!code-csharp[nested namespaces](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#NestedNamespace)]
+  [!code-csharp[nested namespaces](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NestedNamespace)]
 
-- 使用 `.` 來形成「限定名稱」以存取命名空間內的類型，如下列程式碼所示：
+- 使用 `.` 來形成「限定名稱」  以存取命名空間內的類型，如下列程式碼所示：
 
-  [!code-csharp[qualified name](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#QualifiedName)]
+  [!code-csharp[qualified name](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#QualifiedName)]
 
   使用 [`using` 指示詞](../keywords/using-directive.md)來使限定名稱的使用為選擇性。
 
 - 使用 `.` 來存取[類型成員](../../programming-guide/classes-and-structs/index.md#members) (靜態及非靜態)，如下列程式碼所示：
 
-  [!code-csharp-interactive[type members](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#TypeMemberAccess)]
+  [!code-csharp-interactive[type members](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#TypeMemberAccess)]
 
 您也可以使用 `.` 來存取[擴充方法](../../programming-guide/classes-and-structs/extension-methods.md)。
 
@@ -69,7 +69,7 @@ ms.locfileid: "66195784"
 
 以下範例將示範如何存取陣列元素：
 
-[!code-csharp-interactive[array access](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#Arrays)]
+[!code-csharp-interactive[array access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Arrays)]
 
 如果陣列索引超出陣列的對應維度界限，就會擲回 <xref:System.IndexOutOfRangeException>。
 
@@ -81,7 +81,7 @@ ms.locfileid: "66195784"
 
 下列範例使用 .NET<xref:System.Collections.Generic.Dictionary%602> 類型示範索引子存取：
 
-[!code-csharp-interactive[indexer access](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#Indexers)]
+[!code-csharp-interactive[indexer access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Indexers)]
 
 索引子可讓您透過與陣列編製索引類似的方式，為使用者定義型別的執行個體編製索引。 與必須是整數的陣列索引不同，索引子引數可以宣告為任何類型。
 
@@ -111,7 +111,7 @@ A?.B?[C];
 
 下列範例示範 `?.` 和 `?[]` 運算子的用法：
 
-[!code-csharp-interactive[null-conditional operators](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
+[!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
 上述範例也示範 [Null 聯合運算子](null-coalescing-operator.md)的用法。 您可以使用 Null 聯合運算子，在 Null 條件運算的結果為 `null` 時提供用於評估的替代運算式。
 
@@ -139,7 +139,7 @@ if (handler != null)
 
 下列範例示範如何呼叫方法 (使用或不使用引數)，以及叫用委派：
 
-[!code-csharp-interactive[invocation with ()](~/samples/snippets/csharp/language-reference/operators/MemberAccessOperators.cs#Invocation)]
+[!code-csharp-interactive[invocation with ()](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Invocation)]
 
 當您使用 [`new`](../keywords/new-operator.md) 運算子叫用[建構函式](../../programming-guide/classes-and-structs/constructors.md)時，您也會使用括號。
 

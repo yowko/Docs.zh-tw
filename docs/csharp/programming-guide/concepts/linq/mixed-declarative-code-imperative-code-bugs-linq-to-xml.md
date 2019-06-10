@@ -2,20 +2,20 @@
 title: 混合的宣告式程式碼-命令式程式碼 Bug (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
-ms.openlocfilehash: 5963e470acebfe259126ab8f2a17e131cb44f25b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 651b1eddb54f0588ddd3a64927fe79f95671d085
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524698"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484244"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>混合的宣告式程式碼/命令式程式碼 Bug (LINQ to XML) (C#)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 包含各種方法，可讓您直接修改 XML 樹狀結構。 您可以加入項目、刪除項目、變更項目的內容、加入屬性等等。 [修改 XML 樹狀結構 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md) 會說明這個程式發展介面。 如果您要逐一查看其中一個座標軸 (例如，<xref:System.Xml.Linq.XContainer.Elements%2A>)，而且您要在逐一查看座標軸時修改 XML 樹狀，您可以解決一些奇怪的 Bug。  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 包含各種方法，可讓您直接修改 XML 樹狀結構。 您可以加入項目、刪除項目、變更項目的內容、加入屬性等等。 [修改 XML 樹狀結構 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md) 會說明這個程式發展介面。 如果您要逐一查看其中一個座標軸 (例如，<xref:System.Xml.Linq.XContainer.Elements%2A>)，而且您要在逐一查看座標軸時修改 XML 樹狀結構，您可以解決一些奇怪的 Bug。  
   
  這種問題有時候稱為「幽靈問題」。  
   
 ## <a name="definition-of-the-problem"></a>問題的定義  
- 當您使用可逐一查看集合的 LINQ 撰寫特定程式碼時，您要以宣告式方法撰寫程式碼。 這比較類似於描述您要的是「什麼」，而不是您要「如何」完成。 如果您撰寫的程式碼可 1) 取得第一個項目、2) 針對某些條件進行測試、3) 加以修改，以及 4) 將其放回清單中，則這會是命令性程式碼。 您是在告訴電腦「如何」進行您要完成的動作。  
+ 當您使用可逐一查看集合的 LINQ 撰寫特定程式碼時，您要以宣告式方法撰寫程式碼。 這比較類似於描述您要的是「什麼」  ，而不是您要「如何」  完成。 如果您撰寫的程式碼可 1) 取得第一個項目、2) 針對某些條件進行測試、3) 加以修改，以及 4) 將其放回清單中，則這會是命令性程式碼。 您是在告訴電腦「如何」  進行您要完成的動作。  
   
  在相同的運算中混用這些程式碼樣式就是導致問題發生的原因。 請考慮下列事項：  
   
@@ -167,7 +167,4 @@ XElement newRoot = new XElement("Root",
 );  
 Console.WriteLine(newRoot);  
 ```  
-  
-## <a name="see-also"></a>另請參閱
-
-- [進階 LINQ to XML 程式設計 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+ 

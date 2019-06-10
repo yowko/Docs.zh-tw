@@ -1,15 +1,15 @@
 ---
-title: HOW TO：尋找具有特定屬性的項目 (C#)
+title: 作法：尋找具有特定屬性的項目 (C#)
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
-ms.openlocfilehash: 800e6cf5c499e616416ac90a561a440d4dcc2d7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ec6240bf399058ca94cc52c66e6029f924fcd29
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629672"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485553"
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>HOW TO：尋找具有特定屬性的項目 (C#)
+# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>作法：尋找具有特定屬性的項目 (C#)
 這個主題顯示如何尋找其屬性具有特定值的項目。  
   
 ## <a name="example"></a>範例  
@@ -41,7 +41,7 @@ foreach (XElement el in address)
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+ 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)。  
   
  此範例使用下列 XML 文件：[XML 範例檔：命名空間中的典型訂購單](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
   
@@ -73,6 +73,5 @@ foreach (XElement el in address)
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
 - [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [投影作業 (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)

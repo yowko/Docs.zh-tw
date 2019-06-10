@@ -2,14 +2,17 @@
 title: 作法：使用反映查詢組件的中繼資料 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: 1e8aa8652470240d63ac950d43e5b41e8b3ef1ca
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 52b961c5a016754964285221e252965ff89efd26
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584412"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485234"
 ---
 # <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>作法：使用反映查詢組件的中繼資料 (LINQ) (C#)
+
+.NET Framework 類別庫的反映 API 可以用來檢查 .NET 組件中的中繼資料，以及建立該組件中之類型、類型成員、參數等項目的集合。 因為這些集合支援泛型 `IEnumerable` 介面，所以可以使用 LINQ 進行查詢。  
+  
 下列範例示範如何搭配使用 LINQ 與反射，來擷取符合所指定搜尋準則之方法的特定中繼資料。 在此情況下，查詢會尋找組件中所有方法的名稱，而這些方法會傳回陣列這類可列舉類型。  
   
 ## <a name="example"></a>範例  

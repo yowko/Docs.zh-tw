@@ -1,15 +1,15 @@
 ---
-title: HOW TO：尋找具有特定子項目的項目 (C#)
+title: 作法：尋找具有特定子項目的項目 (C#)
 ms.date: 07/20/2015
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
-ms.openlocfilehash: 6888de3bc255691fbbb05f2a1debae05492661c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71068774b93581fdd82a0fe57651bc7780ca1ef1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547276"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485566"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>HOW TO：尋找具有特定子項目的項目 (C#)
+# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>作法：尋找具有特定子項目的項目 (C#)
 本主題顯示如何利用特定的值尋找具有子項目的特定項目。  
   
 ## <a name="example"></a>範例  
@@ -35,7 +35,7 @@ foreach (XElement el in tests)
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+ 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)。  
   
  此範例使用下列 XML 文件：[XML 範例檔：測試命名空間中的組態](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace1.md)。  
   
@@ -61,6 +61,5 @@ foreach (XElement el in tests)
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
 - [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [投影作業 (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)

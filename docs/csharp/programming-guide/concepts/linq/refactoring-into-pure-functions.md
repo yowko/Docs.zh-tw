@@ -2,12 +2,12 @@
 title: 重構為純虛擬函式 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 3a498588e9ca1ab85602946b75b593804fa0953a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0ddf3eb937f0ff9ee6b0ce289d73be7640499ba4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596887"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483983"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>重構為純虛擬函式 (C#)
 
@@ -24,7 +24,7 @@ ms.locfileid: "64596887"
   
  轉換為功能性程式設計的其中一種方式為重構現有的程式碼以排除不必要的副作用與外部相依性。 以此種方式，您可以建立現有程式碼的純虛擬函式版本。  
   
- 這個主題討論什麼是純虛擬函式以及什麼不是純虛擬函式。 [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) 教學課程顯示如何管理 WordprocessingML 文件，並包含兩個如何使用純虛擬函式重構的範例。  
+ 這個主題討論什麼是純虛擬函式以及什麼不是純虛擬函式。 [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) 教學課程顯示如何管理 WordprocessingML 文件，並包含兩個如何使用純虛擬函式重構的範例。  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>排除副作用與外部相依性  
  下列範例對照兩個非純虛擬函式與一個純虛擬函式。  

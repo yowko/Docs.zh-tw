@@ -1,15 +1,15 @@
 ---
-title: HOW TO：使用 XmlWriter 填入 XML 樹狀結構 (LINQ to XML) (C#)
+title: 作法：使用 XmlWriter 填入 XML 樹狀結構 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: cd5674d1-5c54-4efc-ba68-e23b2875295f
-ms.openlocfilehash: 32dd06dbd166847298716d1da840cb37f0172b43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e121b246729b2b671d0d07dfed6a31602bfe565
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661018"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485226"
 ---
-# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>HOW TO：使用 XmlWriter 填入 XML 樹狀結構 (LINQ to XML) (C#)
+# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>作法：使用 XmlWriter 填入 XML 樹狀結構 (LINQ to XML) (C#)
 填入 XML 樹狀的其中一種方式是使用 <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 來建立 <xref:System.Xml.XmlWriter>，然後寫入到 <xref:System.Xml.XmlWriter> 中。 XML 樹狀會以寫入到 <xref:System.Xml.XmlWriter> 的所有節點填入。  
   
  當您使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 搭配預期寫入 <xref:System.Xml.XmlWriter> 的其他類別 (例如，<xref:System.Xml.Xsl.XslCompiledTransform>) 時，您通常會使用這個方法。  
@@ -67,4 +67,4 @@ Console.WriteLine(newTree);
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A>
 - <xref:System.Xml.XmlWriter>
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [建立 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+- [建立 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

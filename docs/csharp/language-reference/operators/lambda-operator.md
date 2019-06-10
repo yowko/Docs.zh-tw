@@ -8,12 +8,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 6e6ace55e7557e940970675c99ec4db87c124f1d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4c075cedb3cf479f53409f3b0acf4463fc3d7a03
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633892"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758221"
 ---
 # <a name="-operator-c-reference"></a>=> 運算子 (C# 參考)
 
@@ -25,15 +25,15 @@ ms.locfileid: "65633892"
 
 下列範例使用 [LINQ](../../programming-guide/concepts/linq/index.md) 功能並搭配方法語法來示範 Lambda 運算式的使用方式：
 
-[!code-csharp-interactive[infer types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#InferredTypes)]
+[!code-csharp-interactive[infer types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#InferredTypes)]
 
 Lambda 運算式的輸入變數在編譯時間為強型別。 當編譯器可以推斷輸入變數的類型時 (如上述範例所示)，您可以省略型別宣告。 如果您需要指定輸入變數的類型，您必須針對每個變數執行，如下列範例所示：
 
-[!code-csharp-interactive[specify types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#ExplicitTypes)]
+[!code-csharp-interactive[specify types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#ExplicitTypes)]
 
 下列範例示範如何定義 Lambda 運算式而不需要輸入變數：
 
-[!code-csharp-interactive[without input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#WithoutInput)]
+[!code-csharp-interactive[without input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#WithoutInput)]
 
 如需詳細資訊，請參閱 [Lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)。
 
@@ -45,7 +45,7 @@ Lambda 運算式的輸入變數在編譯時間為強型別。 當編譯器可以
 member => expression;
 ```
 
-其中 *expression* 是有效的運算式。 請注意，只有在成員的傳回型別為 `void` 時，或成員為建構函式、完成項或屬性 `set` 存取子時，*expression* 才可以是「陳述式運算式」。
+其中 *expression* 是有效的運算式。 請注意，只有在成員的傳回型別為 `void` 時，或成員為建構函式、完成項或屬性 `set` 存取子時，*expression* 才可以是「陳述式運算式」  。
 
 下列範例顯示 `Person.ToString` 方法的運算式主體定義：
 

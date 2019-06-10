@@ -1,15 +1,15 @@
 ---
-title: HOW TO：擷取單一子項目 (LINQ to XML) (C#)
+title: 作法：擷取單一子項目 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: ce37db9e-76fa-46eb-b4cc-e8f32d22ad90
-ms.openlocfilehash: edb13ab043e7b7ffa2fb749fa6009727a43454bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 609488bcb8a15218e7d058031d8ee87dbc67092f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672977"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486528"
 ---
-# <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>HOW TO：擷取單一子項目 (LINQ to XML) (C#)
+# <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>作法：擷取單一子項目 (LINQ to XML) (C#)
 這個主題會說明如何擷取單一子項目 (如果有子項目的名稱)。 當您知道子項目的名稱，而且只有一個項目擁有這個名稱，只擷取一個項目 (而不是擷取一個集合) 可能很方便。  
   
  <xref:System.Xml.Linq.XContainer.Element%2A> 方法會使用指定的 <xref:System.Xml.Linq.XElement>，傳回第一個子系 <xref:System.Xml.Linq.XName>。  
@@ -36,7 +36,7 @@ Console.WriteLine(e);
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例顯示命名空間中之 XML 的相同程式碼。 如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+ 下列範例顯示命名空間中之 XML 的相同程式碼。 如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)。  
   
  此範例使用下列 XML 文件：[XML 範例檔：命名空間中的典型訂購單](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)。  
   
@@ -55,4 +55,4 @@ Console.WriteLine(e);
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ to XML 座標軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML 座標軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)

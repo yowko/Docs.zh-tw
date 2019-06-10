@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 3b8ae80ff17ea2cf12c3d78c092dd3233ac0751d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b58219a8a4d45ce01f80fd367ed56b13a773e4bc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755953"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483407"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ 查詢作業中的類型關聯性 (C#)
 若要有效地撰寫查詢，您應該了解完整查詢作業中的變數類型如何彼此相關。 如果您了解這些關聯性，則可更輕鬆地理解文件中的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 範例和程式碼範例。 此外，您將了解使用 `var` 讓變數成為隱含類型時的幕後作業。  
@@ -64,7 +64,3 @@ ms.locfileid: "64755953"
  ![顯示具有隱含類型之類型流程的圖表。](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  
   
  如需 `var` 的詳細資訊，請參閱[隱含類型區域變數](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
-  
-## <a name="see-also"></a>另請參閱
-
-- [開始使用 C# 中的 LINQ](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

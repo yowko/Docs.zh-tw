@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 6d3751ff1ee2c6ee2f058eeda4ffd5db188a988e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3b123ea1ae57735cdcb763087f12c30b8008dc11
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633766"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758207"
 ---
 # <a name="comparison-operators-c-reference"></a>比較運算子 (C#參考)
 
@@ -41,25 +41,25 @@ ms.locfileid: "65633766"
 
 `<` 運算子會傳回 `true` (如果其第一個運算元小於第二個運算元)，否則會傳回 `false`：
 
-[!code-csharp-interactive[less than example](~/samples/snippets/csharp/language-reference/operators/GreaterAndLessOperatorsExamples.cs#Less)]
+[!code-csharp-interactive[less than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Less)]
 
 ## <a name="greater-than-operator-"></a>大於運算子 >
 
 `>` 運算子會傳回 `true` (如果其第一個運算元大於第二個運算元)，否則會傳回 `false`：
 
-[!code-csharp-interactive[greater than example](~/samples/snippets/csharp/language-reference/operators/GreaterAndLessOperatorsExamples.cs#Greater)]
+[!code-csharp-interactive[greater than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Greater)]
 
 ## <a name="less-than-or-equal-operator-"></a>小於或等於運算子 \<=
 
 `<=` 運算子會傳回 `true` (如果其第一個運算元小於或等於第二個運算元)，否則會傳回 `false`：
 
-[!code-csharp-interactive[less than or equal example](~/samples/snippets/csharp/language-reference/operators/GreaterAndLessOperatorsExamples.cs#LessOrEqual)]
+[!code-csharp-interactive[less than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#LessOrEqual)]
 
 ## <a name="greater-than-or-equal-operator-"></a>大於或等於運算子 >=
 
 `>=` 運算子會傳回 `true` (如果其第一個運算元大於或等於第二個運算元)，否則會傳回 `false`：
 
-[!code-csharp-interactive[greater than or equal example](~/samples/snippets/csharp/language-reference/operators/GreaterAndLessOperatorsExamples.cs#GreaterOrEqual)]
+[!code-csharp-interactive[greater than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#GreaterOrEqual)]
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 

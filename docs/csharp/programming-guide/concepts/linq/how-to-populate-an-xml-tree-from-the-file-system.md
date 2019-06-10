@@ -1,15 +1,15 @@
 ---
-title: HOW TO：從檔案系統填入 XML 樹狀結構 (C#)
+title: 作法：從檔案系統填入 XML 樹狀結構 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: 664994dad75871a5b70f2c132df67d1658808c32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc3850c943ebac8980abbff0933413538823d21d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705806"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485166"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>HOW TO：從檔案系統填入 XML 樹狀結構 (C#)
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>作法：從檔案系統填入 XML 樹狀結構 (C#)
 XML 樹狀的常用與實用應用為當做階層式名稱/值資料存放區使用。 您可以利用階層式資料填入 XML 樹狀結構，然後進行查詢、轉換，並在必要時，進行序列化。 在這個使用案例中，許多 XML 專用語意 (Semantics) (例如，命名空間與空白字元行為) 都不重要。 反之，您會使用 XML 樹狀當做記憶體中的小型單一使用者階層式資料庫。  
   
 ## <a name="example"></a>範例  
@@ -115,7 +115,3 @@ class Program
 ------  
 Total File Size:59089  
 ```  
-  
-## <a name="see-also"></a>另請參閱
-
-- [進階查詢技術 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

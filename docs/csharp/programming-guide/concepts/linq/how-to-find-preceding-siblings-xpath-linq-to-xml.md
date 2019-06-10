@@ -1,15 +1,15 @@
 ---
-title: HOW TO：尋找前面同層級項目 (XPath-LINQ to XML) (C#)
+title: 作法：尋找前面同層級項目 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
-ms.openlocfilehash: de5393f720a854b9644dc7cac7d73c3c6d380483
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42663e1c90f7a7a829e858cfc8e20cdcb2ad2d36
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707423"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485456"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>HOW TO：尋找前面同層級項目 (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>作法：尋找前面同層級項目 (XPath-LINQ to XML) (C#)
 這個主題會比較 XPath `preceding-sibling` 座標軸與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 子系 <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> 座標軸。  
   
  XPath 運算式為：  
@@ -52,7 +52,3 @@ Results are identical
 <ContactTitle>Marketing Manager</ContactTitle>  
 <Phone>(503) 555-7555</Phone>  
 ```  
-  
-## <a name="see-also"></a>另請參閱
-
-- [XPath 使用者適用的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

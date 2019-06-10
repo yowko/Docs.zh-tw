@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 012e4fe9b8ee49f3b6b7240ac4ccb21dba70a8a9
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6196cb52cb1b42b3354bc7f8836a171397d0af1e
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882776"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758096"
 ---
 # <a name="pointer-related-operators-c-reference"></a>指標相關運算子 (C# 參考)
 
@@ -46,11 +46,11 @@ ms.locfileid: "65882776"
 
 一元 `&` 運算子會傳回其運算元的位址：
 
-[!code-csharp[address of local](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#AddressOf)]
+[!code-csharp[address of local](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOf)]
 
-`&` 運算子的運算元必須是固定的變數。 「固定」變數是位在不受[記憶體回收行程](../../../standard/garbage-collection/index.md)作業影響之儲存位置的變數。 在前述範例中，區域變數 `number` 是固定的變數，因為它位於堆疊上。 會受到記憶體回收行程影響且位在儲存位置的變數 (例如重新配置)，稱為「可移動」變數。 物件欄位和陣列元素是可移動變數的範例。 如果以 [fixed](../keywords/fixed-statement.md) 陳述式來「修正」或「釘選」它，則您可取得可移動變數的位址。 取得的地址僅在 `fixed` 陳述式區塊持續期間有效。 下例顯示如何使用 `fixed` 陳述式和 `&` 運算子：
+`&` 運算子的運算元必須是固定的變數。 「固定」  變數是位在不受[記憶體回收行程](../../../standard/garbage-collection/index.md)作業影響之儲存位置的變數。 在前述範例中，區域變數 `number` 是固定的變數，因為它位於堆疊上。 會受到記憶體回收行程影響且位在儲存位置的變數 (例如重新配置)，稱為「可移動」  變數。 物件欄位和陣列元素是可移動變數的範例。 如果以 [fixed](../keywords/fixed-statement.md) 陳述式來「修正」或「釘選」它，則您可取得可移動變數的位址。 取得的地址僅在 `fixed` 陳述式區塊持續期間有效。 下例顯示如何使用 `fixed` 陳述式和 `&` 運算子：
 
-[!code-csharp[address of fixed](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#AddressOfFixed)]
+[!code-csharp[address of fixed](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOfFixed)]
 
 您無法取得常數或值的位址。
 
@@ -62,7 +62,7 @@ ms.locfileid: "65882776"
 
 一元指標間接運算子 `*` 取得其運算元指向的變數。 它也稱之為取值運算子。 `*` 運算子的運算元必須是指標型別。
 
-[!code-csharp[pointer indirection](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#PointerIndirection)]
+[!code-csharp[pointer indirection](~/samples/csharp/language-reference/operators/PointerOperators.cs#PointerIndirection)]
 
 您不能將 `*` 運算子套用至 `void*` 型別的運算式。
 
@@ -84,7 +84,7 @@ x->y
 
 下列範例示範 `->` 運算子的用法：
 
-[!code-csharp[pointer member access](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#MemberAccess)]
+[!code-csharp[pointer member access](~/samples/csharp/language-reference/operators/PointerOperators.cs#MemberAccess)]
 
 您不能將 `->` 運算子套用至 `void*` 型別的運算式。
 
@@ -94,7 +94,7 @@ x->y
 
 下例示範如何使用指標和 `[]` 運算子存取陣列元素：
 
-[!code-csharp[pointer element access](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#ElementAccess)]
+[!code-csharp[pointer element access](~/samples/csharp/language-reference/operators/PointerOperators.cs#ElementAccess)]
 
 此範例會使用 [`stackalloc` 運算子](../keywords/stackalloc.md)配置堆疊上的記憶體區塊。
 
@@ -128,7 +128,7 @@ x->y
 
 下例示範 `+` 運算子加指標的用法：
 
-[!code-csharp[pointer addition](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#AddNumber)]
+[!code-csharp[pointer addition](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddNumber)]
 
 ### <a name="pointer-subtraction"></a>指標減法
 
@@ -136,17 +136,17 @@ x->y
 
 下例示範指標減法：
 
-[!code-csharp[pointer subtraction](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#SubtractPointers)]
+[!code-csharp[pointer subtraction](~/samples/csharp/language-reference/operators/PointerOperators.cs#SubtractPointers)]
 
 ### <a name="pointer-increment-and-decrement"></a>指標遞增和遞減
 
 `++` 遞增運算子在其指標運算元中[加](#addition-or-subtraction-of-an-integral-value-to-or-from-a-pointer) 1。 `--` 遞減運算子從其指標運算元中[減](#addition-or-subtraction-of-an-integral-value-to-or-from-a-pointer) 1。
 
-這兩個運算子都支援兩種形式：後置 (`p++` 和 `p--`) 及前置 (`++p` 和 `--p`)。 `p++` 和 `p--` 的結果是運算「前」的 `p` 值。 `++p` 和 `--p` 的結果是運算「後」的 `p` 值。
+這兩個運算子都支援兩種形式：後置 (`p++` 和 `p--`) 及前置 (`++p` 和 `--p`)。 `p++` 和 `p--` 的結果是運算「前」  的 `p` 值。 `++p` 和 `--p` 的結果是運算「後」  的 `p` 值。
 
 下例示範前置和後置遞增運算子的行為：
 
-[!code-csharp[pointer increment](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#Increment)]
+[!code-csharp[pointer increment](~/samples/csharp/language-reference/operators/PointerOperators.cs#Increment)]
 
 ## <a name="pointer-comparison-operators"></a>指標比較運算子
 

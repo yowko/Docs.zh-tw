@@ -1,15 +1,15 @@
 ---
-title: HOW TO：使用群組建立階層 (C#)
+title: 作法：使用群組建立階層 (C#)
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
-ms.openlocfilehash: bd2e8ab9fb0ed1fee68cb51d2d032b202b14ba88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 685c8ad1360ba2959dc81632ae084b935bd37c47
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560850"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485850"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-c"></a>HOW TO：使用群組建立階層 (C#)
+# <a name="how-to-create-hierarchy-using-grouping-c"></a>作法：使用群組建立階層 (C#)
 此範例顯示如何群組資料，然後根據該群組產生 XML。  
   
 ## <a name="example"></a>範例  
@@ -73,7 +73,3 @@ Console.WriteLine(newData);
   </Group>  
 </Root>  
 ```  
-  
-## <a name="see-also"></a>另請參閱
-
-- [進階查詢技術 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

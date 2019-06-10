@@ -2,12 +2,12 @@
 title: 作法：偵錯空的查詢結果集 (C#)
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: d77a92acf54420b5add3bb9ae8b3f0b8c5448d18
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ba82e37ef4f57c78e7ba66676ba90312c2a9400f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357907"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485771"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>作法：偵錯空的查詢結果集 (C#)
 查詢 XML 時所遇到的其中一個最常見的問題是，如果 XML 樹狀結構有預設的命名空間，即使 XML 不在命名空間中，開發人員有時候還是會撰寫查詢。  
@@ -16,7 +16,7 @@ ms.locfileid: "57357907"
   
  第二組範例顯示所需的修正，讓您可以在命名空間中查詢 XML。  
   
- 如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+ 如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)。  
   
 ## <a name="example"></a>範例  
  此範例顯示 XML 在命名空間中的建立，以及傳回空結果集的查詢。  
@@ -81,7 +81,3 @@ Result set follows:
 3  
 End of result set  
 ```  
-  
-## <a name="see-also"></a>另請參閱
-
-- [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

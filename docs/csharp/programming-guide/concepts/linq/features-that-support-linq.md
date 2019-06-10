@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: d0b35bec3bbc30f411a705220c468fa8961b83cb
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: bf9af90c9695ad9428a887a901a95282672a4f75
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186022"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722545"
 ---
 # <a name="c-features-that-support-linq"></a>支援 LINQ 的 C# 功能
 
@@ -49,7 +49,7 @@ var query = from str in stringArray
 物件和集合初始設定式可以初始化物件，而不需要明確呼叫物件的建構函式。 初始設定式通常會用於將來源資料投影為新資料類型的查詢運算式中。 假設有個名為 `Customer` 的類別具有公用的 `Name` 和 `Phone` 屬性，則可如下列程式碼所示使用物件初始設定式：
 
 ```csharp
-Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };
+var cust = new Customer { Name = "Mike", Phone = "555-1212" };
 ```
 
 延續我們的 `Customer` 類別，假設有一個稱為 `IncomingOrders` 的資料來源，而其每個訂單都有大型的 `OrderSize`，我們想要根據該訂單建立新的 `Customer`。 您可以針對此資料來源執行 LINQ 查詢，並使用物件初始化來填滿集合：

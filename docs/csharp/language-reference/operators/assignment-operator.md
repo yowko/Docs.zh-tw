@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 40dc844f2a4b6411ea82aa2f029b36d7dd8f6e5a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85182acb84ea79cb00a9edb315c3954f440305f4
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716307"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758361"
 ---
 # <a name="-operator-c-reference"></a>= 運算子 (C# 參考)
 
@@ -32,13 +32,13 @@ a = (b = c)
 
 下列範例示範如何使用指派運算子將值指派給區域變數、屬性及索引子元素：
 
-[!code-csharp-interactive[assignment operator](~/samples/snippets/csharp/language-reference/operators/AssignmentExamples.cs#Assignments)]
+[!code-csharp-interactive[assignment operator](~/samples/csharp/language-reference/operators/AssignmentExamples.cs#Assignments)]
 
 ## <a name="ref-assignment-operator"></a>ref 指派運算子
 
 從 C# 7.3 開始，您可以使用 ref 指派運算子 `= ref` 來重新指派 [ref 區域變數](../keywords/ref.md#ref-locals)或[ref readonly 區域變數](../keywords/ref.md#ref-readonly-locals)。 下列範例示範 ref 指派運算子的用法：
 
-[!code-csharp[ref assignment operator](~/samples/snippets/csharp/language-reference/operators/AssignmentExamples.cs#RefAssignment)]
+[!code-csharp[ref assignment operator](~/samples/csharp/language-reference/operators/AssignmentExamples.cs#RefAssignment)]
 
 就 ref 指派運算子而言，左方運算元與右方運算元的型別必須相同。
 

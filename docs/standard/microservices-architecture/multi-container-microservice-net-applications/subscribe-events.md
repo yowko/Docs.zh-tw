@@ -2,12 +2,12 @@
 title: 訂閱事件
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解發佈及訂閱整合事件的詳細資料。
 ms.date: 10/02/2018
-ms.openlocfilehash: ff165f6bba7940b99ef9712049191e356b893897
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c0eaacce51b186191431bf827bb84d3a2d2b7b1f
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639711"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722664"
 ---
 # <a name="subscribing-to-events"></a>訂閱事件
 
@@ -93,7 +93,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 當您透過分散式傳訊系統 (例如您的事件匯流排) 發佈整合事件時，會發生以不可部分完成方式更新原始資料庫及發佈事件的問題 (也就是兩個作業皆完成或皆未完成)。 例如，在稍早所示的簡化範例中，程式碼會在產品價格變更時將資料認可至資料庫，然後發行 ProductPriceChangedIntegrationEvent 訊息。 乍看之下，以不可分割方式執行這兩個作業可能很重要。 不過，如果您使用涉及資料庫和訊息代理程式的分散式交易，如同您在 [Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) 等較舊系統中的做法，則不建議這樣做，原因如 [CAP 定理](https://www.quora.com/What-Is-CAP-Theorem-1)所述。
 
-基本上，您可以使用微服務來建置可擴充且高度可用的系統。 簡單來說，CAP 定理指出您無法建置持續可用、極為一致「且」容許任何分割的 (分散式) 資料庫 (或擁有自己模型的微服務)。 您必須從這三個屬性中選擇兩個。
+基本上，您可以使用微服務來建置可擴充且高度可用的系統。 簡單來說，CAP 定理指出您無法建置持續可用、極為一致「且」  容許任何分割的 (分散式) 資料庫 (或擁有自己模型的微服務)。 您必須從這三個屬性中選擇兩個。
 
 在微服務架構中，您應該選擇可用性和容錯，而且您應該不要強調強式一致性。 因此，在大多數現代化微服務架構應用程式中，您通常不想要在傳訊中使用分散式交易 (就像是使用 [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) 實作以 Windows Distributed Transaction Coordinator (DTC) 為基礎的[分散式交易](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85))時一樣)。
 
@@ -107,7 +107,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 - 使用[寄件匣模式](http://gistlabs.com/2014/05/the-outbox/)。 這是交易式資料表，可儲存整合事件 (以延伸本機交易)。
 
-在此案例中，使用完整的事件溯源 (ES) 模式即使不是「最佳」方法，也是最佳方法之一。 不過，在許多應用程式案例中，您可能無法實作完整的 ES 系統。 ES 表示只會將領域事件儲存在您的交易式資料庫中，而不會儲存目前的狀態資料。 只儲存領域事件可能有許多好處，例如提供系統歷程記錄，以及能夠判斷過去任何時間的系統狀態。 不過，實作完整的 ES 系統需要您重新架構大部分的系統，因而引進許多其他的複雜度和需求。 例如，您會想要使用專為事件溯源所建立的資料庫 (例如[事件存放區](https://eventstore.org/))，或文件導向資料庫 (例如 Azure Cosmos DB、MongoDB、Cassandra、CouchDB 或 RavenDB)。 ES 是解決這個問題的最好方法，但除非您已熟悉事件溯源，否則並不是最簡單的解決方法。
+在此案例中，使用完整的事件溯源 (ES) 模式即使不是「最佳」  方法，也是最佳方法之一。 不過，在許多應用程式案例中，您可能無法實作完整的 ES 系統。 ES 表示只會將領域事件儲存在您的交易式資料庫中，而不會儲存目前的狀態資料。 只儲存領域事件可能有許多好處，例如提供系統歷程記錄，以及能夠判斷過去任何時間的系統狀態。 不過，實作完整的 ES 系統需要您重新架構大部分的系統，因而引進許多其他的複雜度和需求。 例如，您會想要使用專為事件溯源所建立的資料庫 (例如[事件存放區](https://eventstore.org/))，或文件導向資料庫 (例如 Azure Cosmos DB、MongoDB、Cassandra、CouchDB 或 RavenDB)。 ES 是解決這個問題的最好方法，但除非您已熟悉事件溯源，否則並不是最簡單的解決方法。
 
 使用交易記錄採礦的選項一開始看起來很簡單。 不過，若要使用此方法，微服務必須與 RDBMS 交易記錄結合，例如 SQL Server 交易記錄。 這可能不適當。 另一個缺點是，交易記錄中記錄的低層級更新可能不會與高層級整合事件位於相同層級。 如果是這樣，可能會很難處理這些交易記錄作業的反向工程。
 
@@ -322,7 +322,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他資源
 
-- **使用 NServiceBus 派生的 eShopOnContainers (Particular Software)** \
+- **使用 NServiceBus 派生的 eShopOnContainers (Particular Software)**  \
     <https://go.particular.net/eShopOnContainers>
 
 - **事件驅動傳訊** \
@@ -367,7 +367,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 - **資料一致性入門** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Rick Saling：CAP 定理：為何雲端及網際網路的「一切都不同」** \
+- **Rick Saling：CAP 定理：為何雲端及網際網路的「一切都不同」**  \
     <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
 - **Eric Brewer：十二年後的 CAP：「規則」變更的方式** \
@@ -378,12 +378,6 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 - **可靠性指南** (RabbitMQ 文件) \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
-
-- **Azure 服務匯流排：代理傳訊：重複項目偵測** \
-    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
-
-- **可靠性指南** (RabbitMQ 文件) \
-    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html%23consumer)
 
 > [!div class="step-by-step"]
 > [上一頁](rabbitmq-event-bus-development-test-environment.md)

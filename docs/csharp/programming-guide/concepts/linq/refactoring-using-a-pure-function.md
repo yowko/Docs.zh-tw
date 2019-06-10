@@ -2,12 +2,12 @@
 title: 使用純虛擬函式進行重構 (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: be0b0d0778fea459701153b1c629f9ce797db1aa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 093374c848a9792d8c184ddc210bbcc8171d3374
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608914"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483993"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>使用純虛擬函式進行重構 (C#)
 下列範例會重構上述範例 ([使用擴充方法進行重構 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)) 來使用此範例中的純虛擬函式，而且尋找段落文字的程式碼會被移到純靜態方法 `ParagraphText`。  
@@ -181,6 +181,6 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>另請參閱
 
-- [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
 - [使用擴充方法進行重構 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
 - [重構為純虛擬函式 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

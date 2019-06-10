@@ -2,12 +2,12 @@
 title: 使用擴充方法進行重構 (C#)
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 0f41c4b4357125b6c92b17d8c818a0cfcf9822e7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 06c09b1c76e0c5287cc3bf96947b2ebf54337592
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596187"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487268"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>使用擴充方法進行重構 (C#)
 這個範例是根據上述範例 ([擷取段落的文字 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)) 所建置，方法是使用當成擴充方法實作的純虛擬函式來重構字串的串連。  
@@ -248,5 +248,5 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>另請參閱
 
-- [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
 - [重構為純虛擬函式 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

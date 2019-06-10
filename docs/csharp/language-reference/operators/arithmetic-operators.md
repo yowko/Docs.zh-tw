@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 84976d37514db851fd19c882b2c4c9cb003fc4bf
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 69b4f3fb52ce5da25081f3da7a8909151e1492f6
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66250810"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758416"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算術運算子 (C# 參考)
 
@@ -51,15 +51,15 @@ ms.locfileid: "66250810"
 
 ### <a name="postfix-increment-operator"></a>後置遞增運算子
 
-`x++` 的結果為運算「之前」的 `x` 值，如下列範例所示：
+`x++` 的結果為運算「之前」  的 `x` 值，如下列範例所示：
 
-[!code-csharp-interactive[postfix increment](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixIncrement)]
+[!code-csharp-interactive[postfix increment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixIncrement)]
 
 ### <a name="prefix-increment-operator"></a>前置遞增運算子
 
-`++x` 的結果為運算「之後」的 `x` 值，如下列範例所示：
+`++x` 的結果為運算「之後」  的 `x` 值，如下列範例所示：
 
-[!code-csharp-interactive[prefix increment](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixIncrement)]
+[!code-csharp-interactive[prefix increment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixIncrement)]
 
 ## <a name="decrement-operator---"></a>遞減運算子 --
 
@@ -69,21 +69,21 @@ ms.locfileid: "66250810"
 
 ### <a name="postfix-decrement-operator"></a>後置遞減運算子
 
-`x--` 的結果為運算「之前」的 `x` 值，如下列範例所示：
+`x--` 的結果為運算「之前」  的 `x` 值，如下列範例所示：
 
-[!code-csharp-interactive[postfix decrement](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixDecrement)]
+[!code-csharp-interactive[postfix decrement](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixDecrement)]
 
 ### <a name="prefix-decrement-operator"></a>前置遞減運算子
 
-`--x` 的結果為運算「之後」的 `x` 值，如下列範例所示：
+`--x` 的結果為運算「之後」  的 `x` 值，如下列範例所示：
 
-[!code-csharp-interactive[prefix decrement](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixDecrement)]
+[!code-csharp-interactive[prefix decrement](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixDecrement)]
 
 ## <a name="unary-plus-and-minus-operators"></a>一元加號和減號運算子
 
 一元 `+` 運算子會傳回其運算元的值。 一元 `-` 運算子會計算其運算元的負數值。
 
-[!code-csharp-interactive[unary plus and minus](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#UnaryPlusAndMinus)]
+[!code-csharp-interactive[unary plus and minus](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#UnaryPlusAndMinus)]
 
 一元 `-` 運算子不支援 [ulong](../keywords/ulong.md) 型別。
 
@@ -91,7 +91,7 @@ ms.locfileid: "66250810"
 
 乘法運算子 `*` 會計算其運算元的乘積：
 
-[!code-csharp-interactive[multiplication operator](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#Multiplication)]
+[!code-csharp-interactive[multiplication operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Multiplication)]
 
 一元 `*` 運算子是一個[指標間接運算子](pointer-related-operators.md#pointer-indirection-operator-)。
 
@@ -103,17 +103,17 @@ ms.locfileid: "66250810"
 
 針對整數型別的運算元，`/` 運算子的結果會是整數型別，且等於兩個運算元捨入為零的商：
 
-[!code-csharp-interactive[integer division](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerDivision)]
+[!code-csharp-interactive[integer division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerDivision)]
 
 若要以浮點數的形式取得兩個運算元的商，請使用 `float`、`double` 或 `decimal` 型別：
 
-[!code-csharp-interactive[integer as floating-point division](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerAsFloatingPointDivision)]
+[!code-csharp-interactive[integer as floating-point division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerAsFloatingPointDivision)]
 
 ### <a name="floating-point-division"></a>浮點除數
 
 針對 `float`、`double` 和 `decimal` 型別，`/` 運算子的結果會是兩個運算元的商：
 
-[!code-csharp-interactive[floating-point division](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#FloatingPointDivision)]
+[!code-csharp-interactive[floating-point division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#FloatingPointDivision)]
 
 如果其中一個運算元是 `decimal`，則另一個運算元便不可以是 `float` 或 `double`，因為 `float` 或 `double` 都無法隱含轉換為 `decimal`。 您必須明確地將 `float` 或 `double` 運算元轉換為 `decimal` 型別。 如需在數值型別之間進行隱含轉換的詳細資訊，請參閱[隱含數值轉換表](../keywords/implicit-numeric-conversions-table.md)。
 
@@ -125,7 +125,7 @@ ms.locfileid: "66250810"
   
 對整數型別的運算元來說，`a % b` 的結果是 `a - (a / b) * b` 所產生的值。 非零餘數的正負號與第一個運算元的正負號相同，如下列範例所示：
 
-[!code-csharp-interactive[integer remainder](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerRemainder)]
+[!code-csharp-interactive[integer remainder](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerRemainder)]
 
 使用 <xref:System.Math.DivRem%2A?displayProperty=nameWithType> 方法計算整數除法和餘數結果。
 
@@ -145,13 +145,13 @@ ms.locfileid: "66250810"
 
 下列範例示範具有浮點運算元的餘數運算子行為：
 
-[!code-csharp-interactive[floating-point remainder](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#FloatingPointRemainder)]
+[!code-csharp-interactive[floating-point remainder](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#FloatingPointRemainder)]
 
 ## <a name="addition-operator-"></a>加法運算子 +
 
 加法運算子 `+` 會計算其運算元的總和：
 
-[!code-csharp-interactive[addition operator](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#Addition)]
+[!code-csharp-interactive[addition operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Addition)]
 
 您也可以使用 `+` 運算子進行字串串連和委派組合。 如需詳細資訊，請參閱 [`+` 和 `+=` 運算子](addition-operator.md)一文。
 
@@ -159,7 +159,7 @@ ms.locfileid: "66250810"
 
 減法運算子 `-` 會從第一個運算元減去第二個運算元：
 
-[!code-csharp-interactive[subtraction operator](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#Subtraction)]
+[!code-csharp-interactive[subtraction operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Subtraction)]
 
 您也可以使用 `-` 運算子進行委派移除。 如需詳細資訊，請參閱 [`-` 運算子](subtraction-operator.md)一文。
 
@@ -181,11 +181,11 @@ x = x op y
 
 下列範例示範如何搭配算術運算子使用複合指派：
 
-[!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
+[!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
 
 由於[數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)的緣故，`op` 作業的結果可能不會隱含轉換成 `x` 的 `T` 類型。 在此情況下，如果 `op` 是預先定義的運算子，且作業結果可以明確轉換成 `x` 的 `T` 型別，則形式 `x op= y` 的複合指派運算式相等於 `x = (T)(x op y)`，唯一的不同在於 `x` 只會評估一次。 下列範例示範了該行為：
 
-[!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
+[!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
 您也可以使用 `+=` 和 `-=` 運算子訂閱及取消訂閱[事件](../keywords/event.md)。 如需詳細資訊，請參閱[如何：訂閱及取消訂閱事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
 
@@ -202,7 +202,7 @@ x = x op y
 
 使用括號 `()` 變更運算子優先順序和關聯性強制執行的評估順序。
 
-[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
+[!code-csharp-interactive[precedence and associativity](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
 
 如需按優先順序層級排序的 C# 運算子完整清單，請參閱 [C# 運算子](index.md)。
 
@@ -221,7 +221,7 @@ x = x op y
 
 除了 [checked 與 unchecked](../keywords/checked-and-unchecked.md) 陳述式之外，您還可以使用 `checked` 和 `unchecked` 運算子控制評估運算式的溢位檢查內容：
 
-[!code-csharp-interactive[checked and unchecked](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CheckedUnchecked)]
+[!code-csharp-interactive[checked and unchecked](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CheckedUnchecked)]
 
 根據預設，*unchecked* 內容中會發生算術運算。
 
@@ -229,7 +229,7 @@ x = x op y
 
 具有 `float` 和 `double` 型別的算術運算永遠不會擲回例外狀況。 具有這些型別之算術運算的結果可以是代表無限值和非數字的其中一個特殊值：
 
-[!code-csharp-interactive[double non-finite values](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#FloatingPointOverflow)]
+[!code-csharp-interactive[double non-finite values](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#FloatingPointOverflow)]
 
 若是 `decimal` 型別的運算元，算術溢位一律會擲回 <xref:System.OverflowException>，且除數為零一定會擲回 <xref:System.DivideByZeroException>。
 
@@ -237,7 +237,7 @@ x = x op y
 
 由於實數和浮點算術的浮點數表示法的一般限制，使用浮點型別計算時可能會發生四捨五入錯誤。 亦即，運算式產生的結果可能不同於預期的數學結果。 下列範例將示範幾個這類案例：
 
-[!code-csharp-interactive[round-off errors](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#RoundOffErrors)]
+[!code-csharp-interactive[round-off errors](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#RoundOffErrors)]
 
 如需詳細資訊，請參閱 [System.Double](/dotnet/api/system.double#remarks)、[System.Single](/dotnet/api/system.single#remarks) 或 [System.Decimal](/dotnet/api/system.decimal#remarks) 參考頁面的備註。
 
