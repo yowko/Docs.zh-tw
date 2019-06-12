@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: b6297c26-7624-4431-8af4-14112d07bcd5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d939063aaefb00d4db3de604df0dbd1b2175bf95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff589285d81a3febf887bba976b62a9ae4a573c8
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698417"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025940"
 ---
 # <a name="debugging-interfaces"></a>偵錯介面
 本節說明 Unmanaged 介面，這類介面會處理通用語言執行平台 (CLR) 中所執行之程式的偵錯。  
@@ -53,7 +53,7 @@ ms.locfileid: "61698417"
  提供方法來使用陣列、指標、函式指標和 ByRef 類型。 這個介面是 `ICorDebugAppDomain` 介面的擴充。  
   
  [ICorDebugAppDomain3 介面](icordebugappdomain3-interface.md)\
- 提供在應用程式定義域中使用 [!INCLUDE[wrt](../../../../includes/wrt-md.md)]類型的方法。 這個介面是 `ICorDebugAppDomain` 和 `ICorDebugAppDomain2` 介面的擴充。  
+ 提供方法來使用應用程式定義域中的 Windows 執行階段類型。 這個介面是 `ICorDebugAppDomain` 和 `ICorDebugAppDomain2` 介面的擴充。  
   
  [ICorDebugAppDomain4 介面](icordebugappdomain4-interface.md)\
  以邏輯方式擴充[ICorDebugAppDomain](icordebugappdomain-interface.md)從 COM 可呼叫包裝函式取得 managed 的物件的介面。  

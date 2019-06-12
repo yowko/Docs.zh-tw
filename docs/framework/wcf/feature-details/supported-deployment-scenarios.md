@@ -2,16 +2,16 @@
 title: 支援的部署案例： WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 986459e14206f073686474f5d65845ce682e1270
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7b508f53365c1b4b90e2883ddb9d5f2a71c7e814
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881052"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025632"
 ---
 # <a name="supported-deployment-scenarios"></a>支援的部署案例
 
-支援在部分信任應用程式中使用的 Windows Communication Foundation (WCF) 功能子集主要被為了符合需求的部分，而不是全部使用 WCF 的案例。 在伺服器上，WCF 符合網際網路範圍的要求會共用主控提供者執行第三方應用程式中[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]度信任權限的安全性考量。 在用戶端，WCF 部分信任支援主要為了符合的部署技術需求這類[ClickOnce 部署](/visualstudio/deployment/clickonce-security-and-deployment)或[!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]的允許無接縫且安全的 XAML 瀏覽器應用程式技術從受信任的站台的桌面應用程式的部署。
+支援在部分信任應用程式中使用的 Windows Communication Foundation (WCF) 功能子集主要被為了符合需求的部分，而不是全部使用 WCF 的案例。 在伺服器上，WCF 會符合網際網路範圍在 ASP.NET 2.0 中度信任權限執行第三方應用程式共用主控提供者設定基於安全性考量的需求。 在用戶端，WCF 部分信任支援主要為了符合的部署技術需求這類[ClickOnce 部署](/visualstudio/deployment/clickonce-security-and-deployment)或[!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]的允許無接縫且安全的 XAML 瀏覽器應用程式技術從受信任的站台的桌面應用程式的部署。
 
 ## <a name="minimum-permission-requirements"></a>最小權限需求
 
@@ -27,7 +27,7 @@ WCF 中其中一個下列標準具名權限集下執行應用程式支援功能�
 
 ## <a name="partial-trust-on-the-server"></a>在伺服器上的部分信任
 
-裝載服務的 ASP.NET Web 應用程式的許多商業的提供者託管其伺服器上執行的應用程式是在執行[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]度信任使用權限集合。 前提是他們所使用，WCF 服務可以在這些環境中執行<xref:System.ServiceModel.BasicHttpBinding>，則<xref:System.ServiceModel.WebHttpBinding>，或<xref:System.ServiceModel.WSHttpBinding>具有傳輸層級安全性。
+裝載服務的 ASP.NET Web 應用程式的許多商業的提供者託管其伺服器上執行的應用程式執行的 ASP.NET 2.0 中度信任權限集合中。 前提是他們所使用，WCF 服務可以在這些環境中執行<xref:System.ServiceModel.BasicHttpBinding>，則<xref:System.ServiceModel.WebHttpBinding>，或<xref:System.ServiceModel.WSHttpBinding>具有傳輸層級安全性。
 
 在中度信任裝載環境執行的 WCF 服務也可以藉由將訊息傳送至用戶端要求的回應中的其他伺服器做為中介層服務。 如果裝載的環境已經授與應用程式適當的 <xref:System.Net.WebPermission> 以便對目的伺服器發出傳出要求時，伺服器便會支援中介層案例。
 

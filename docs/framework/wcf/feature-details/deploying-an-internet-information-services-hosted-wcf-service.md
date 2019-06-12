@@ -2,12 +2,12 @@
 title: 部署已裝載網際網路資訊服務的 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 99ed9ce5304717073057f6712a2b96d910d43bea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a41615ab096f3aa4f1ee94defd775248d0df4d2e
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858311"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025729"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署已裝載網際網路資訊服務的 WCF 服務
 
@@ -41,7 +41,7 @@ WCF、 IIS 和 ASP.NET 必須安裝 IIS 裝載的 WCF 服務，才能正確運�
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>建立新的 IIS 應用程式或是重複使用現有的 ASP.NET 應用程式
 
-IIS 裝載的 WCF 服務必須駐留的 IIS 應用程式。 您可以只建立新的 IIS 應用程式裝載 WCF 服務。 或者，您可以部署到現有的應用程式已經裝載的 WCF 服務[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]內容 （例如.aspx 頁面和 ASP.NET Web 服務 [ASMX]）。 如需這些選項的詳細資訊，請參閱 「 主控 WCF-並存使用 ASP.NET"及"裝載 ASP.NET 相容性模式中的 WCF 服務 > 章節中[WCF 服務與 ASP.NET](wcf-services-and-aspnet.md)。
+IIS 裝載的 WCF 服務必須駐留的 IIS 應用程式。 您可以只建立新的 IIS 應用程式裝載 WCF 服務。 或者，您也可以將 WCF 服務部署到已裝載 ASP.NET 2.0 內容 （例如.aspx 頁面和 ASP.NET Web 服務 [ASMX]） 的現有應用程式。 如需這些選項的詳細資訊，請參閱 「 主控 WCF-並存使用 ASP.NET"及"裝載 ASP.NET 相容性模式中的 WCF 服務 > 章節中[WCF 服務與 ASP.NET](wcf-services-and-aspnet.md)。
 
 請注意， [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 及更新版本會定期重新啟動獨立的物件導向程式設計應用程式。 預設值為 1740 分鐘。 支援的最大值為 71,582 分鐘。 您可以停用這項重新啟動。 如需有關這個屬性的詳細資訊，請參閱 < [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968)。
 
@@ -65,7 +65,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>將服務實作部署到 IIS 應用程式
 
-在 IIS 中裝載的 WCF 服務使用相同的動態編譯模型[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]。 如同 ASP.NET 中，您可以部署在不同位置的數種方式裝載於 IIS 的 WCF 服務的實作程式碼，如下所示：
+在 IIS 中裝載的 WCF 服務使用相同的動態編譯模型與 ASP.NET 2.0。 如同 ASP.NET 中，您可以部署在不同位置的數種方式裝載於 IIS 的 WCF 服務的實作程式碼，如下所示：
 
 - 做為預先編譯的 .dll 檔，位於全域組件快取 (GAC) 或應用程式的 \bin 目錄中。 預先編譯的二進位檔會等到部署了新版本的類別庫之後才會更新。
 
@@ -73,7 +73,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 
 - 因為未編譯的程式碼直接置於.svc 檔案。 實作程式碼也可以在服務的.svc 檔案中，位於的內嵌之後\@ServiceHost 指示詞。 在收到下一個要求時，對內嵌程式碼的任何變更都會導致整個應用程式的回收與重新編譯。
 
-如需詳細資訊[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]編譯模型，請參閱 < [ASP.NET 編譯概觀](https://go.microsoft.com/fwlink/?LinkId=94773)。
+如需有關 ASP.NET 2.0 編譯模型的詳細資訊，請參閱 < [ASP.NET 編譯概觀](https://go.microsoft.com/fwlink/?LinkId=94773)。
 
 ## <a name="configure-the-wcf-service"></a>設定 WCF 服務
 

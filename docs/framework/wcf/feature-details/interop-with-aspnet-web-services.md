@@ -2,17 +2,17 @@
 title: 與 ASP.NET Web 服務的互通性
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: c1b027eda315a76778e772235dc5f66e03c9d83e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: f2f1a8fd2bf34ff61784f2dcb88c0669585da573
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875552"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026014"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>與 ASP.NET Web 服務的互通性
 ASP.NET Web 服務和 Windows Communication Foundation (WCF) Web 服務之間的互通性可藉由確保服務使用這兩種技術實作符合 ws-i-Basic Profile 1.1 規格。 ASP.NET Web 服務符合 WS-Basic Profile 1.1 會使用 WCF 系統提供繫結，與 WCF 用戶端互通<xref:System.ServiceModel.BasicHttpBinding>。  
   
- 請使用 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 選項將 <xref:System.Web.Services.WebService> 和 <xref:System.Web.Services.WebMethodAttribute> 屬性新增至介面 (而不是新增至類別)，並撰寫類別來實作介面，如下列範例程式碼所示。  
+ 使用 ASP.NET 2.0 選擇加入<xref:System.Web.Services.WebService>和<xref:System.Web.Services.WebMethodAttribute>屬性至介面，而不是類別，並撰寫類別來實作介面，如下列範例程式碼所示。  
   
 ```  
 [WebService]  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f50db519410b9513725c3dc10637421ba8bb37ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45a4b5c2a65ae7e4c01ffc3977875e598d076557
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698355"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025934"
 ---
 # <a name="debugging-structures"></a>偵錯結構
 
@@ -60,7 +60,7 @@ ms.locfileid: "61698355"
 
  [CorDebugExceptionObjectStackFrame 結構](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)代表堆疊框架資訊的例外狀況物件。
 
- [CorDebugGuidToTypeMapping 結構](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md)Maps[!INCLUDE[wrt](../../../../includes/wrt-md.md)]至其相對應的 GUID [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md)物件。
+ [CorDebugGuidToTypeMapping 結構](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md)對應至其相對應的 Windows 執行階段 GUID [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md)物件。
 
  [DacpGetModuleAddress 結構](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md)定義模組位址要求的容器。
 

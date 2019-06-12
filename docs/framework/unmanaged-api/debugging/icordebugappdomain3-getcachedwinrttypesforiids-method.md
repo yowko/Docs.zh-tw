@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed1d7ad95b7c8474121994d0f54557c1c36cb531
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 95c84f7f40db0096b26ec448f8f229cdbfe3afb1
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917372"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025901"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs 方法
-取得列舉值的快取[!INCLUDE[wrt](../../../../includes/wrt-md.md)]其介面識別項為基礎的應用程式定義域中的類型。  
+取得其介面識別項為基礎的應用程式定義域中快取的 Windows 執行階段類型的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,22 +42,22 @@ HRESULT GetCachedWinRTTypesForIIDs (
  [in]必要的型別數目。  
   
  `iidsToResolve`  
- [in]指標陣列，其中包含對應至受管理的表示法的介面識別碼[!INCLUDE[wrt](../../../../includes/wrt-md.md)]要擷取的型別。  
+ [in]包含對應至受管理的表示法，要擷取 Windows 執行階段類型的介面識別碼的陣列指標。  
   
  `ppTypesEnum`  
- [out]允許的快取列舉"ICorDebugTypeEnum 」 介面物件的位址指標受管理的表示法[!INCLUDE[wrt](../../../../includes/wrt-md.md)]擷取類型，根據中的介面識別項`iidsToResolve`。  
+ [out]擷取可讓受管理的快取表示，Windows 執行階段類型的列舉型別"ICorDebugTypeEnum 」 介面物件的位址指標，根據中的介面識別項`iidsToResolve`。  
   
 ## <a name="remarks"></a>備註  
  如果方法無法擷取特定的介面識別項的資訊，「 ICorDebugTypeEnum 」 集合中的對應項目會有一種`ELEMENT_TYPE_END`的資料擷取問題，因為錯誤或`ELEMENT_TYPE_VOID`未知的介面識別項。  
   
 ## <a name="requirements"></a>需求  
- **平台：** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
+ **平台：** Windows 執行階段  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

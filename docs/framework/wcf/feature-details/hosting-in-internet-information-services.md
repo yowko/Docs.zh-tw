@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: d881a75e95bc3c3eef1df651b380210ff51ea3ce
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 8563662a4408d0425e92b960301311ce5d423f9d
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877511"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025745"
 ---
 # <a name="hosting-in-internet-information-services"></a>在網際網路資訊服務中裝載
 裝載 Windows Communication Foundation (WCF) 服務的其中一個選項是在 Internet Information Services (IIS) 應用程式內。 這個裝載模型十分類似 ASP.NET 和 ASP.NET Web 服務 (ASMX) Web 服務所使用的模型。  
@@ -34,7 +34,7 @@ ms.locfileid: "65877511"
   
 - ASP.NET 中，例如在 ASP.NET 中裝載的 WCF 服務可以利用 ASP.NET 共用裝載模型的多個應用程式中常見的背景工作處理序，以改進的伺服器密度及延展性的所在位置。  
   
-- 在 IIS 中裝載的 WCF 服務使用相同的動態編譯模型[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]、 可簡化開發和部署的託管服務。  
+- 在 IIS 中裝載的 WCF 服務使用相同的動態編譯模型與 ASP.NET 2.0 中，可簡化開發和部署的託管服務。  
   
  決定要在 IIS 中裝載 WCF 服務時，務必記得 IIS 5.1 和[!INCLUDE[iis601](../../../../includes/iis601-md.md)]僅限於 HTTP 通訊用途。 如需有關選擇裝載環境的詳細資訊，請參閱 <<c0> [ 裝載的服務](../../../../docs/framework/wcf/hosting-services.md)。  
   

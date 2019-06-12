@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c95c77d0b2e2b68750891431822e2637e5e88f9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055013"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025572"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>以多平台為目標之函式庫的應用程式資源
 您可以使用.NET Framework[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)專案類型，以確保您類別庫中的資源，可從多個平台。 這個專案類型會是適用於 Visual Studio 2012，並以.NET Framework 類別庫的可攜式子集為目標。 使用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]可確保能夠從桌面應用程式、Silverlight 應用程式、Windows Phone 應用程式和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式存取您的程式庫。
@@ -47,9 +47,9 @@ ms.locfileid: "62055013"
 ## <a name="the-includenetportableincludesnet-portable-mdmd-and-windows-store-apps"></a>[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]和 Windows 市集應用程式
  [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案會將資源儲存在 .resx 檔中，這些資源接著會編譯為 .resources 檔，並且在編譯時期內嵌於主要組件或附屬組件中。 另一方面，[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式則需要將資源儲存到 .resw 檔中，這些檔案接著會編譯成單一封裝資源索引 (PRI) 檔。 不過，儘管這兩種檔案格式不相容，[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]仍能在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式中運作。
 
- 若要從 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式使用您的類別庫，請在 Windows 市集應用程式專案中加入其參考。 Visual Studio 會明確將您組件中的資源擷取至 .resw 檔中，並用它來產生 PRI 檔，讓 [!INCLUDE[wrt](../../../includes/wrt-md.md)]能夠從該檔案中擷取資源。 在執行階段，[!INCLUDE[wrt](../../../includes/wrt-md.md)]會執行您[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]中的程式碼，不過它會從 PRI 檔擷取您的可攜式類別庫資源。
+ 若要從 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式使用您的類別庫，請在 Windows 市集應用程式專案中加入其參考。 Visual Studio 會以透明的方式從您的組件至.resw 檔擷取資源並用它來產生 PRI 檔案，Windows 執行階段可以從中擷取資源。 在執行階段，Windows 執行階段會執行的程式碼中您[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]，但它會從 PRI 檔案中擷取您的可攜式類別庫資源。
 
- 如果您的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案包含當地語系化資源，則可以使用中樞和支點模型來部署這些資源，就像在桌面應用程式中部署程式庫一樣。 若要使用 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式中的主要資源檔和任何當地語系化資源檔，可以加入主要組件的參考。 在編譯時期，Visual Studio 會將您的主要資源檔和所有當地語系化資源檔中的資源擷取至不同的 .resw 檔。 然後會將 .resw 檔編譯成單一 PRI 檔案，供 [!INCLUDE[wrt](../../../includes/wrt-md.md)]在執行階段時存取。
+ 如果您的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案包含當地語系化資源，則可以使用中樞和支點模型來部署這些資源，就像在桌面應用程式中部署程式庫一樣。 若要使用 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式中的主要資源檔和任何當地語系化資源檔，可以加入主要組件的參考。 在編譯時期，Visual Studio 會將您的主要資源檔和所有當地語系化資源檔中的資源擷取至不同的 .resw 檔。 然後會.resw 檔案編譯成單一 PRI 檔案在執行階段存取的 Windows 執行階段。
 
 <a name="NonLoc"></a>
 ## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>範例：未當地語系化 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]

@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dc7093edaf12e801a1e1adc52b0be823ff92b91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38e1b19d6340f559e6f8b7e0f7bc042a10df16c3
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651791"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025995"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>CorDebugGuidToTypeMapping 結構
-對應[!INCLUDE[wrt](../../../../includes/wrt-md.md)]及其對應的 ICorDebugType 物件的 GUID。  
+Windows 執行階段會將 GUID 對應至其對應的 ICorDebugType 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,17 +41,17 @@ typedef struct CorDebugGuidToTypeMapping {
   
 |成員|描述|  
 |------------|-----------------|  
-|`iid`|快取的 GUID[!INCLUDE[wrt](../../../../includes/wrt-md.md)]型別。|  
+|`iid`|快取的 Windows 執行階段類型之 GUID。|  
 |`pType`|提供有關快取的類型資訊 ICorDebugType 物件的指標。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]。  
+ **平台：** Windows 執行階段。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
