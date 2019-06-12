@@ -2,12 +2,12 @@
 title: F# 程式碼格式方針
 description: 了解格式的指導方針F#程式碼。
 ms.date: 02/08/2019
-ms.openlocfilehash: bfec950395312eac7e837abf8694a4381d5ca82f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 8be5337d3f593c7e5a2f32cb7231cb7f759fb509
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816174"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833910"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 程式碼格式方針
 
@@ -290,12 +290,13 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>使用泛型的前置詞的語法 (`Foo<T>`) 而非後置語法 (`T Foo`)
 
-F#繼承這兩個後置 ML 的樣式命名泛型型別 (例如`int list`) 以及.NET 樣式的前置詞 (例如`list<int>`)。 偏好的.NET 樣式，除了特定的四種類型：
+F#繼承這兩個後置 ML 的樣式命名泛型型別 (例如`int list`) 以及.NET 樣式的前置詞 (例如`list<int>`)。 偏好的.NET 樣式，除了五個特定的類型：
 
 1. 針對F#清單中，使用後置格式：`int list`而非`list<int>`。
 2. 針對F#選項，請使用後置格式：`int option`而非`option<int>`。
-3. 針對F#陣列，請使用語法的名稱`int[]`而非`int array`或是`array<int>`。
-4. 參考儲存格，使用`int ref`而非`ref<int>`或`Ref<int>`。
+3. 針對F#值的選項，使用後置格式：`int voption`而非`voption<int>`。
+4. 針對F#陣列，請使用語法的名稱`int[]`而非`int array`或是`array<int>`。
+5. 參考儲存格，使用`int ref`而非`ref<int>`或`Ref<int>`。
 
 對於所有其他類型，使用前置詞的表單。
 

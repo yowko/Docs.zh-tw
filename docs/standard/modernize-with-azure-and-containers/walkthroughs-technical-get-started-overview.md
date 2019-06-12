@@ -2,12 +2,12 @@
 title: 逐步解說和技術入門概觀
 description: 將現有.NET 應用程式與 Azure 雲端和 Windows 容器現代化 |逐步解說和技術開始入門的概觀
 ms.date: 04/28/2018
-ms.openlocfilehash: 0b0dbae999e31150a55368d669f718eea0925d51
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 1ae6f3c1e739184356b97fa96e74bab402bf1d2a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758781"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832965"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>逐步解說和技術入門概觀
 
@@ -132,7 +132,7 @@ ms.locfileid: "66758781"
 
 ### <a name="technical-walkthrough-availability"></a>技術逐步解說可用性
 
-完整的技術逐步解說位於 eShopModernizing GitHub 存放庫 wiki: <https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
+完整的技術逐步解說位於 eShopModernizing GitHub 存放庫 wiki: <https://github.com/dotnet-architecture/eShopModernizing/wiki/06.-Deploying-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
 
 ### <a name="overview"></a>總覽
 
@@ -178,7 +178,7 @@ Azure 目前提供的 VM **Windows Server 2016 with Containers**。 您可以試
 
 探索 GitHub wiki 上的此更深入的內容：
 
-<https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/06.-Deploying-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
 
 ## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>逐步解說 4:將 Windows 容器型應用程式部署至 Azure Container Instances (ACI)
 
@@ -216,7 +216,7 @@ Azure Container Instances 可讓您輕鬆地建立及管理 Docker 容器，在 
 
 探索 GitHub wiki 上的此更深入的內容：
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)TBD)
+[https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances))
 
 ## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>逐步解說 5:在 Azure Container Service 的 kubernetes 部署 Windows 容器型應用程式
 
@@ -224,7 +224,7 @@ Azure Container Instances 可讓您輕鬆地建立及管理 Docker 容器，在 
 
 完整的技術逐步解說位於 eShopModernizing GitHub 存放庫 wiki:
 
-<https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)>
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
 ### <a name="overview"></a>總覽
 
@@ -276,7 +276,35 @@ Azure Container Service 會特別針對 Azure 最佳化熱門開放原始碼工�
 
 ## <a name="next-steps"></a>後續步驟
 
-探索 GitHub wiki 上的此更深入的內容： <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)>
+探索 GitHub wiki 上的此更深入的內容： <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
+
+## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-app-service-for-containers"></a>逐步解說 6:將 Windows 容器型應用程式部署至適用於容器的 Azure App Service
+
+### <a name="technical-walkthrough-availability"></a>技術逐步解說可用性
+
+完整的技術逐步解說位於 eShopModernizing GitHub 存放庫 wiki:
+
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/Deploy-Windows-Container-to-Azure-App-Service>
+
+### <a name="overview"></a>總覽
+
+簡單的容器化應用程式，以使用 Windows 容器可以輕鬆部署至適用於容器的 Azure App Service。 這是大部分的 Windows 容器應用程式的建議的方法。
+
+### <a name="goals"></a>目標
+
+本逐步解說的目標是了解如何部署 Windows 容器型應用程式至 Azure App Service 容器從登錄 （Docker Hub 或 Azure Container Registry）。
+
+### <a name="scenario"></a>情節
+
+![將 Windows 容器型應用程式部署至適用於容器的 Azure App Service](./media/image5-11.png)
+
+### <a name="benefits"></a>優點
+
+部署到適用於容器的 Azure App Service 的優點的配對的 Azure App Service PaaS 優點的容器。 App service 可以輕鬆地調整垂直和水平，並可設定為自動調整規模以符合不斷變更的需求。 可以執行更新，而不需要停機，也可以輕鬆地設定有設定從登錄進行持續部署。
+
+## <a name="next-steps"></a>後續步驟
+
+探索 GitHub wiki 上的此更深入的內容： <https://github.com/dotnet-architecture/eShopModernizing/wiki/Deploy-Windows-Container-to-Azure-App-Service>
 
 > [!div class="step-by-step"]
 > [上一頁](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)

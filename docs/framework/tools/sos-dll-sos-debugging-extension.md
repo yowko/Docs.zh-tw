@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ddd075de6152d7f040d69682dde0361843971922
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0821b4a680db4822cea1787edb095309e6333cbf
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631835"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690163"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (SOS 偵錯擴充功能)
 
@@ -68,11 +68,11 @@ SOS 偵錯延伸模組副檔名 (SOS.dll) 提供內部 Common Language Runtime (
 |**HeapStat** [ **-inclUnrooted** &#124; **-iu**]|顯示每個堆積的層代大小，以及每個堆積上每個層代中的總可用空間。 如果指定 **-lines** 選項，報告就會包括來自於記憶體回收堆積，且不再為根目錄之 Managed 物件的相關資訊。|
 |**HistClear**|釋放 `Hist` 命令系列所使用的任何資源。<br /><br /> 通常，您不需要明確地呼叫 `HistClear`，因為每個 `HistInit` 都會清除先前的資源。|
 |**HistInit**|初始化在偵錯項目中儲存之壓力記錄檔中的 SOS 結構。|
-|**HistObj** *<obj_address>*|會檢查所有壓力記錄檔重新配置記錄，並顯示可能會使位址被當做引數傳入之記憶體回收重新配置的鏈結。|
-|**HistObjFind**  *<obj_address>*|顯示參考位於指定位址之物件的所有記錄檔項目。|
+|**HistObj** *\<obj_address>*|會檢查所有壓力記錄檔重新配置記錄，並顯示可能會使位址被當做引數傳入之記憶體回收重新配置的鏈結。|
+|**HistObjFind**  *\<obj_address>*|顯示參考位於指定位址之物件的所有記錄檔項目。|
 |**HistRoot** *\<root>*|顯示與指定之根的提升和重新配置都相關的資訊。<br /><br /> 根值可以透過記憶體回收，用來追蹤物件的移動。|
 |**IP2MD** \<*Code address*>|顯示在已進行 JIT 編譯之程式碼中之指定位址的 `MethodDesc` 結構。|
-|`ListNearObj` (`lno`) *<obj_address>*|顯示在指定的位址之前與之後的物件。 此命令會在記憶體回收堆積中，尋找看來像是 Managed 物件之有效開頭的位址 (根據有效方法資料表)，以及引數位址的後接物件。|
+|`ListNearObj` (`lno`) *\<obj_address>*|顯示在指定的位址之前與之後的物件。 此命令會在記憶體回收堆積中，尋找看來像是 Managed 物件之有效開頭的位址 (根據有效方法資料表)，以及引數位址的後接物件。|
 |**MinidumpMode** [**0**] [**1**]|防止在使用小型傾印時執行不安全的命令。<br /><br /> 傳遞 **0** 便可停用這項功能，而傳遞 **1** 便可啟用這項功能。 根據預設，**MinidumpMode** 值會設定為 **0**。<br /><br /> 以 **.dump /m** 命令或 **.dump** 命令建立的小型傾印，都具有有限的 CLR 特定資料，並只允許您正確執行 SOS 命令的子集。 有些命令可能會因未預期的錯誤而失敗，原因是沒有對應或是只有部分對應到必要的記憶體區域。 這個選項可防止您對小型傾印執行不安全的命令。|
 |**Name2EE** \<*module name*> \<*type or method name*><br /><br /> -或-<br /><br /> **Name2EE** \<*module name*> **!** \<*type or method name*>|顯示所指定模組中之指定類型或方法的 `MethodTable` 結構和 `EEClass` 結構。<br /><br /> 指定的模組必須載入到處理序。<br /><br /> 若要取得適當的類型名稱，請使用 [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 瀏覽該模組。 您也可以將 `*` 當做模組名稱參數傳遞，以便搜尋所有已載入的 Managed 模組。 *module name* 參數也可以是模組的偵錯工具名稱，例如 `mscorlib` 或 `image00400000`。<br /><br /> 這個命令支援 <`module`>`!`<`type`> 的 Windows 偵錯工具語法。 這個類型必須具有完整名稱。|
 |**ObjSize** [\<*Object address*>] &#124; [ **-aggregate**] [ **-stat**]|顯示所指定物件的大小。 如果未指定任何參數，**ObjSize** 命令會顯示在 Managed 執行緒上找到之所有物件的大小，並會顯示處理序中的所有記憶體回收行程控制代碼，以及這些控制代碼所指向之任何物件的總大小。 **ObjSize** 命令會包括父代和其他所有子物件的大小。<br /><br /> **-aggregate** 選項可搭配使用 **-stat** 引數，以取得依然為根目錄之類型的詳細檢視。 藉由使用 **!dumpheap -stat** 和 **!objsize -aggregate -stat**，您可以判斷哪些物件不再是根目錄，以及診斷各種記憶體問題。|

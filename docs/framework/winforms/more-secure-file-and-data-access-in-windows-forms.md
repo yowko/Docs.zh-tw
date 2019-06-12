@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 8c161cc27bd45f8f29e4d48c572d26d3c153b8f3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c804a0a751969377c292613fdae8cc19b266ffa9
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592675"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834066"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Form 中更安全的檔案和資料存取
 .NET Framework 會使用的權限，來協助保護資源和資料。 您的應用程式可以讀取或寫入資料的位置取決於應用程式授與權限。 當您的應用程式在部分信任的環境中執行時，您可能無法存取您的資料，或者您可能要改變您存取資料的方式。  
@@ -26,7 +26,7 @@ ms.locfileid: "65592675"
  當您遇到安全性限制時，您有兩個選項：判斷權限 (假設已授與您的應用程式)，或者使用被寫成具有在部分信任環境運作功能的版本。 下列章節將討論如何使用在部分信任環境執行的應用程式所產生的檔案、資料庫以及登錄存取。  
   
 > [!NOTE]
->  根據預設，產生 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署的工具預設這些部署去要求來自執行那些程式之電腦的完全信任。 如果您決定您想要的部分信任中執行的額外的安全性優點，您必須變更此預設值，在 Visual Studio 或其中一個[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]工具 （Mage.exe 或 MageUI.exe）。 如需有關 Windows Forms 安全性，以及如何判斷您的應用程式的適當信任層級的詳細資訊，請參閱[安全性的 Windows Forms Overview](security-in-windows-forms-overview.md)。  
+>  根據預設，產生 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署的工具預設這些部署去要求來自執行那些程式之電腦的完全信任。 如果您決定您想要的部分信任中執行的額外的安全性優點，您必須變更此預設值，在 Visual Studio 或其中一個 Windows 軟體開發套件 (SDK) 工具 （Mage.exe 或 MageUI.exe）。 如需有關 Windows Forms 安全性，以及如何判斷您的應用程式的適當信任層級的詳細資訊，請參閱[安全性的 Windows Forms Overview](security-in-windows-forms-overview.md)。  
   
 ## <a name="file-access"></a>檔案存取  
  <xref:System.Security.Permissions.FileIOPermission>類別 .NET Framework 中的控制檔案和資料夾存取。 根據預設，安全性系統並未將 <xref:System.Security.Permissions.FileIOPermission> 授與部分安全性環境，例如近端內部網路或者網際網路區域。 然而，如果您修改您應用程式的設計或使用不同方法來存取檔案，需要檔案存取的應用程式依然能夠在這些環境中運作。 根據預設，近端內部網路區域已經被授與權限能夠存取相同網站與相同目錄、連線到網站的原始來源、以及從其安裝目錄讀取。 根據預設，網際網路區域只被授與連回其原始網站的權限。  

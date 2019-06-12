@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: e018048df70470e349f06ac80e7a597cd742dac5
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 39f4548bfe9e505c1369a0de8262560070fd6221
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690511"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833919"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>支援 .NET 應用程式部署的 Firefox 附加元件
 啟用 Windows Presentation Foundation (WPF) 外掛程式 Firefox 和.NET Framework Assistant for Firefox [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]、 鬆散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，與 ClickOnce 應用程式，才能使用 Mozilla Firefox 瀏覽器。  
@@ -25,13 +25,13 @@ ms.locfileid: "66690511"
  .NET Framework 4 不包含[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Firefox 的外掛程式。 不過，如果已安裝.NET Framework 3.5 和.NET Framework 4，外掛程式適用於 Firefox 的 WPF 會隨.NET Framework 3.5。 因此.NET Framework 4 應用程式仍會執行因為 WPF 主應用程式會載入正確的 framework 版本。 如需詳細資訊，請參閱 < [WPF 主應用程式 (PresentationHost.exe)](wpf-host-presentationhost-exe.md)。  
   
 ## <a name="net-framework-assistant-for-firefox"></a>.NET Framework Assistant for Firefox  
- 若要從 Firefox 瀏覽器執行的獨立 ClickOnce 應用程式可讓.NET Framework Assistant for Firefox。 .NET Framework Assistant for Firefox 函式只有在安裝之前和之後的 Firefox 瀏覽器時相同。 Firefox 瀏覽器啟動時，[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]是安裝，Firefox 會尋找並會安裝.NET Framework Assistant for Firefox。 使用者可以設定.NET Framework Assistant for Firefox 來執行下列作業：  
+ 若要從 Firefox 瀏覽器執行的獨立 ClickOnce 應用程式可讓.NET Framework Assistant for Firefox。 .NET Framework Assistant for Firefox 函式只有在安裝之前和之後的 Firefox 瀏覽器時相同。 當啟動 Firefox 瀏覽器，並安裝.NET Framework 3.5 SP1 時，Firefox 會尋找並會安裝.NET Framework Assistant for Firefox。 使用者可以設定.NET Framework Assistant for Firefox 來執行下列作業：  
   
 - 執行 ClickOnce 應用程式之前提示。  
   
 - 報告所有已安裝的新版.NET Framework 或只是最新版本。  
   
- .NET Framework Assistant for Firefox 隨附[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]。 移除適用於 Firefox 的.NET Framework Assistant 的詳細資訊，請參閱[如何移除適用於 Firefox 的.NET Framework Assistant](https://go.microsoft.com/fwlink/?LinkId=177944)。  
+ .NET Framework Assistant for Firefox 會隨附在.NET Framework 3.5 SP1。 移除適用於 Firefox 的.NET Framework Assistant 的詳細資訊，請參閱[如何移除適用於 Firefox 的.NET Framework Assistant](https://go.microsoft.com/fwlink/?LinkId=177944)。  
   
 ## <a name="see-also"></a>另請參閱
 

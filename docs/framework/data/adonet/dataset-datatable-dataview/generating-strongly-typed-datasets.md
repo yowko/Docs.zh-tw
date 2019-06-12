@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 25883b7be10c68e527e4e04182b7162574b994d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 198d7f616d843a3c90b8d32cf33096ee253d2935
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880044"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832729"
 ---
 # <a name="generating-strongly-typed-datasets"></a>產生強類型資料集
-如果 XML 結構描述是採用 XML 結構描述定義語言 (XSD) 標準進行編譯，則可以使用 <xref:System.Data.DataSet> 所提供的 XSD.exe 工具產生強型別 [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)]。  
+指定符合 XML 結構描述定義語言 (XSD) 標準的 XML 結構描述，您可以產生強型別<xref:System.Data.DataSet>使用 XSD.exe 工具提供與 Windows 軟體開發套件 (SDK)。  
   
  (若要從資料庫資料表建立 xsd，請參閱<xref:System.Data.DataSet.WriteXmlSchema%2A>或是[使用 Visual Studio 中的資料集](/visualstudio/data-tools/dataset-tools-in-visual-studio))。  
   

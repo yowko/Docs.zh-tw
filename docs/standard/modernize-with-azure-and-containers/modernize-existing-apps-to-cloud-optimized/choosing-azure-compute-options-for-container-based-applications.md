@@ -2,12 +2,12 @@
 title: 選擇容器應用程式的 Azure 計算平台
 description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |選擇容器型應用程式的 Azure 計算平台
 ms.date: 05/04/2018
-ms.openlocfilehash: d91cd279402dc24beb5f766c06cb85ac8d74f482
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 64ae542e006bf7a5d7a0be08fe1cff9770552a77
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758816"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833847"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>選擇容器應用程式的 Azure 計算平台
 
@@ -17,8 +17,7 @@ ms.locfileid: "66758816"
 
 - **單一的單體式應用程式：** 選擇 Azure App Service
 - **多層式架構應用程式：** 如果您有單一或少數的後端服務，請選擇協調器，例如 Azure Kubernetes Service (AKS) 或 App Service
-- **Linux 的微服務：** 選擇 AKS/Kubernetes
-- **Windows 的微服務：** 選擇 Azure Web Apps for Containers
+- **微服務：** 選擇 AKS or Azure Web Apps for Containers
 - **無伺服器函式 （&) 事件處理常式：** 選擇 Azure 函式
 - **大規模的批次：** 選擇 Azure 批次
 

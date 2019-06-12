@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: d536d141d1ac7126c5a3339f75ba374d3e071806
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 286ec3c67e296eb49776e0f2882954c75c53eed8
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591410"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833980"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 瀏覽器應用程式概觀
 <a name="introduction"></a>
@@ -35,7 +35,7 @@ ms.locfileid: "64591410"
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>建立新的 XAML 瀏覽器應用程式 (XBAP)  
- 若要建立新的 XBAP 專案最簡單的方式是使用 Microsoft Visual Studio。 建立新專案時，從範本清單選取 [WPF 瀏覽器應用程式]。 如需詳細資訊，請參閱[如何：建立新的 WPF 瀏覽器應用程式專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))。  
+ 若要建立新的 XBAP 專案最簡單的方式是使用 Microsoft Visual Studio。 建立新專案時，從範本清單選取 [WPF 瀏覽器應用程式]  。 如需詳細資訊，請參閱[如何：建立新的 WPF 瀏覽器應用程式專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))。  
   
  當您執行 XBAP 專案時，它會在瀏覽器視窗中開啟，而不是在獨立視窗中開啟。 當您偵錯 XBAP 從 Visual Studio 時，應用程式會使用網際網路區域權限執行，並因此如果會擲回安全性例外狀況會在超過這些權限。 如需詳細資訊，請參閱[安全性](../security-wpf.md)和 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。  
   
@@ -102,23 +102,23 @@ ms.locfileid: "64591410"
   
 1. 在 Visual Studio 中，開啟專案屬性。  
   
-2. 在 [安全性] 索引標籤上，按一下 [進階]。  
+2. 在 [安全性]  索引標籤上，按一下 [進階]  。  
   
      [進階安全性設定] 對話方塊隨即出現。  
   
-3. 請確定 [允許應用程式存取它的來源網站] 核取方塊已勾選，然後按一下 [確定]。  
+3. 請確定 [允許應用程式存取它的來源網站]  核取方塊已勾選，然後按一下 [確定]  。  
   
-4. 在 [偵錯] 索引標籤上，選取 [瀏覽器起始 URL] 選項，並且指定包含 XBAP 之 HTML 網頁的 URL。  
+4. 在 [偵錯]  索引標籤上，選取 [瀏覽器起始 URL]  選項，並且指定包含 XBAP 之 HTML 網頁的 URL。  
   
-5. 在 Internet Explorer 中，按一下 [工具] 按鈕，然後選取 [網際網路選項]。  
+5. 在 Internet Explorer 中，按一下 [工具]  按鈕，然後選取 [網際網路選項]  。  
   
      [網際網路選項] 對話方塊隨即出現。  
   
-6. 按一下 [進階] 按鈕。  
+6. 按一下 [進階]  按鈕。  
   
-7. 在 [安全性] 底下的 [設定]清單中，勾選 [允許檔案中的主動式內容在我的電腦上執行] 核取方塊。  
+7. 在 [安全性]  底下的 [設定]  清單中，勾選 [允許檔案中的主動式內容在我的電腦上執行]  核取方塊。  
   
-8. 按一下 [確定] 。  
+8. 按一下 [確定]  。  
   
      變更在重新啟動 Internet Explorer 之後才會生效。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "64591410"
   
 1. 在 Visual Studio 中，開啟專案屬性。  
   
-2. 在 [安全性] 索引標籤上，選取 [這是完全信任的應用程式] 選項。  
+2. 在 [安全性]  索引標籤上，選取 [這是完全信任的應用程式]  選項。  
   
  這項設定會進行下列變更︰  
   
@@ -180,9 +180,9 @@ ms.locfileid: "64591410"
   
 <a name="xbap_start_time_performance_considerations"></a>   
 ## <a name="xbap-start-time-performance-considerations"></a>XBAP 開始時間效能考量  
- XBAP 效能很重要的層面是其開始時間。 如果 XBAP 是載入的第一個 WPF 應用程式，「冷啟動」時間可以是 10 秒或以上。 這是因為進度頁面是由 WPF 轉譯，且 CLR 和 WPF 必須冷啟動來顯示應用程式。  
+ XBAP 效能很重要的層面是其開始時間。 如果 XBAP 是載入的第一個 WPF 應用程式，「冷啟動」  時間可以是 10 秒或以上。 這是因為進度頁面是由 WPF 轉譯，且 CLR 和 WPF 必須冷啟動來顯示應用程式。  
   
- 從 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] 開始，藉由在部署週期早期顯示 unmanaged 進度頁面，降低 XBAP 冷啟動時間。 進度頁面幾乎是在應用程式啟動之後立即出現，因為它是由原生裝載程式碼顯示，並且以 HTML 轉譯。  
+ 從.NET Framework 3.5 SP1 開始，您可以在部署週期早期顯示 unmanaged 的進度頁面降低 XBAP 冷啟動時間。 進度頁面幾乎是在應用程式啟動之後立即出現，因為它是由原生裝載程式碼顯示，並且以 HTML 轉譯。  
   
  此外，ClickOnce 下載順序的改善的並行會改善最多 10%的開始時間。 ClickOnce 下載和驗證之後資訊清單、 應用程式的下載會啟動，而進度列開始更新。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: b3dcd46f1158814b836c7491cf1ed3ac468122ad
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 321aad14d17d6ef6fe0b7c112f8f694dd1c767d6
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689336"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832693"
 ---
 # <a name="application-startup-time"></a>應用程式啟動時間
 WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明各種技術來縮短 Windows Presentation Foundation (WPF) 應用程式的認知和實際啟動時間。  
@@ -24,7 +24,7 @@ WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明
  暖啟動發生於主要通用語言執行平台 (CLR) 元件的大部分頁面已經載入記憶體中，可節省寶貴的磁碟存取時間。 這就是為什麼 Managed 應用程式第二次執行時較快啟動。  
   
 ## <a name="implement-a-splash-screen"></a>實作啟動顯示畫面  
- 如果從啟動應用程式到顯示第一個 UI 之間，有很明顯、無可避免的延遲時間，請使用「啟動顯示畫面」  最佳化感知的啟動時間。 這種方法會在使用者啟動應用程式時，幾乎立即顯示影像。 當應用程式準備好顯示第一個 UI 時，啟動顯示畫面會消失。 從開始[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]，您可以使用<xref:System.Windows.SplashScreen>類別來實作啟動顯示畫面。 如需詳細資訊，請參閱[將啟動顯示畫面新增至 WPF 應用程式](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)。  
+ 如果從啟動應用程式到顯示第一個 UI 之間，有很明顯、無可避免的延遲時間，請使用「啟動顯示畫面」  最佳化感知的啟動時間。 這種方法會在使用者啟動應用程式時，幾乎立即顯示影像。 當應用程式準備好顯示第一個 UI 時，啟動顯示畫面會消失。 從.NET Framework 3.5 SP1 中，您可以使用<xref:System.Windows.SplashScreen>類別來實作啟動顯示畫面。 如需詳細資訊，請參閱[將啟動顯示畫面新增至 WPF 應用程式](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)。  
   
  您也可以使用原生 Win32 圖形，以實作您自己的啟動顯示畫面。 顯示您之前的實作<xref:System.Windows.Application.Run%2A>呼叫方法。  
   

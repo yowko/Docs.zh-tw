@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 10ed899f1eda3b7fcaa95391b9af6dddb5c94560
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b46404ee791855301611c1d883f26514b9b9d2f
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949223"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833806"
 ---
 # <a name="reliability-best-practices"></a>可靠性最佳作法
 
@@ -265,7 +265,7 @@ HPA 只會影響裝載 Common Language Runtime 以及實作主機保護的 Unman
 
 ### <a name="avoid-unmanaged-memory-if-possible"></a>盡可能避免 Unmanaged 記憶體
 
-Unmanaged 記憶體可能會流失，就像作業系統控制代碼一樣。  可能的話，請嘗試使用 [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md) 或釘選 Managed 物件 (例如 [fixed 陳述式](~/docs/csharp/language-reference/keywords/fixed-statement.md)或使用 byte[] 的 <xref:System.Runtime.InteropServices.GCHandle>) 來使用堆疊上的記憶體。  <xref:System.GC> 最後會清除這些項目。  不過，如果您必須配置 Unmanaged 記憶體，請考慮使用衍生自 <xref:System.Runtime.InteropServices.SafeHandle> 的類別來包裝記憶體配置。
+Unmanaged 記憶體可能會流失，就像作業系統控制代碼一樣。 可能的話，請嘗試使用 [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) 或釘選 Managed 物件 (例如 [fixed 陳述式](~/docs/csharp/language-reference/keywords/fixed-statement.md)或使用 byte[] 的 <xref:System.Runtime.InteropServices.GCHandle>) 來使用堆疊上的記憶體。 <xref:System.GC> 最後會清除這些項目。 不過，如果您必須配置 Unmanaged 記憶體，請考慮使用衍生自 <xref:System.Runtime.InteropServices.SafeHandle> 的類別來包裝記憶體配置。
 
 請注意，在至少一種情況下，<xref:System.Runtime.InteropServices.SafeHandle> 不足。  針對配置或釋放記憶體的 COM 方法呼叫，其中一個 DLL 通常會透過 `CoTaskMemAlloc` 來配置記憶體，另一個 DLL 則使用 `CoTaskMemFree` 來釋放該記憶體。  不適合在這些位置使用 <xref:System.Runtime.InteropServices.SafeHandle>，因為它會嘗試將 Unmanaged 記憶體的存留期繫結至 <xref:System.Runtime.InteropServices.SafeHandle> 的存留期，而不是允許另一個 DLL 控制記憶體的存留期。
 

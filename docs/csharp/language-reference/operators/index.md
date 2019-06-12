@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: c1f891314a2490d6dbf22977ea5a5f69533b330d
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: c6b83779a630c6d797968d79635793e229751f93
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300315"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833265"
 ---
 # <a name="c-operators"></a>C# 運算子
 
@@ -67,7 +67,7 @@ C# 提供內建型別支援的數個預先定義運算子。 例如，[算術運
 
 [sizeof](../keywords/sizeof.md) – 傳回型別運算元的大小 (以位元組為單位)。
 
-[stackalloc](../keywords/stackalloc.md) -　配置堆疊上的記憶體區塊。
+[stackalloc](stackalloc.md) -　配置堆疊上的記憶體區塊。
 
 [->](pointer-related-operators.md#pointer-member-access-operator--) - 指標間接取值結合成員存取。
 
