@@ -137,7 +137,7 @@ from (C as c join D as d) cross apply c.Names as e
 from (C as c join D as d) cross apply c.Names as e  
 ```  
   
- 在  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] （不同於 Amp;#40;transact-SQL&AMP;#41;`FROM`子句只將別名引入範圍內。 對這些集合的資料行 (屬性) 的任何參考都必須以別名限定。  
+ 在  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] &#40;不同於 transact-SQL&#41;`FROM`子句只將別名引入範圍內。 對這些集合的資料行 (屬性) 的任何參考都必須以別名限定。  
   
 ## <a name="pulling-up-keys-from-nested-queries"></a>從巢狀查詢取出索引鍵  
  不支援某些需要從巢狀查詢取出索引鍵的查詢類型。 例如，以下是有效的查詢：  
