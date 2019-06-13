@@ -17,8 +17,8 @@
       href: tutorials/predict-prices.md
     - name: 分類鳶尾花 (k-means 叢集)
       href: tutorials/iris-clustering.md
-    - name: 電影推薦 (矩陣因式分解)
-      href: tutorials/movie-recommmendation.md
+    - name: 推薦的電影 (矩陣因式分解)
+      href: tutorials/movie-recommendation.md
     - name: 影像分類 (遷移式學習)
       href: tutorials/image-classification.md
     - name: 產品銷售分析 (異常偵測)
