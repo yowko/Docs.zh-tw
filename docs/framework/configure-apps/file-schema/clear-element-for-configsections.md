@@ -40,7 +40,7 @@ ms.locfileid: "66300796"
 
 |     | <span data-ttu-id="ed855-114">描述</span><span class="sxs-lookup"><span data-stu-id="ed855-114">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="ed855-115"> *\*\<configSections >** 項目</span><span class="sxs-lookup"><span data-stu-id="ed855-115">**\<configSections>** Element</span></span>](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | <span data-ttu-id="ed855-116">包含組態區段和命名空間宣告。</span><span class="sxs-lookup"><span data-stu-id="ed855-116">Contains configuration section and namespace declarations.</span></span> |
+| [<span data-ttu-id="ed855-115"> **\<configSections >** 項目</span><span class="sxs-lookup"><span data-stu-id="ed855-115">**\<configSections>** Element</span></span>](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | <span data-ttu-id="ed855-116">包含組態區段和命名空間宣告。</span><span class="sxs-lookup"><span data-stu-id="ed855-116">Contains configuration section and namespace declarations.</span></span> |
 
 ## <a name="child-elements"></a><span data-ttu-id="ed855-117">子元素</span><span class="sxs-lookup"><span data-stu-id="ed855-117">Child elements</span></span>
 

@@ -41,7 +41,7 @@ ms.locfileid: "66301444"
 
 | <span data-ttu-id="6c2c1-119">項目</span><span class="sxs-lookup"><span data-stu-id="6c2c1-119">Element</span></span> | <span data-ttu-id="6c2c1-120">描述</span><span class="sxs-lookup"><span data-stu-id="6c2c1-120">Description</span></span> |
 | ------- | ------------|
-| [<span data-ttu-id="6c2c1-121"> *\*\<sectionName >** 項目</span><span class="sxs-lookup"><span data-stu-id="6c2c1-121">**\<sectionName>** Element</span></span>](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | <span data-ttu-id="6c2c1-122">定義設定使用的自訂組態區段<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。</span><span class="sxs-lookup"><span data-stu-id="6c2c1-122">Defines settings for custom configuration sections that use the <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler> classes.</span></span> |
+| [<span data-ttu-id="6c2c1-121"> **\<sectionName >** 項目</span><span class="sxs-lookup"><span data-stu-id="6c2c1-121">**\<sectionName>** Element</span></span>](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | <span data-ttu-id="6c2c1-122">定義設定使用的自訂組態區段<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。</span><span class="sxs-lookup"><span data-stu-id="6c2c1-122">Defines settings for custom configuration sections that use the <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler> classes.</span></span> |
 
 ## <a name="child-elements"></a><span data-ttu-id="6c2c1-123">子元素</span><span class="sxs-lookup"><span data-stu-id="6c2c1-123">Child elements</span></span>
 
