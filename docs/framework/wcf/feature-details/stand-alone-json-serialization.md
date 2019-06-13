@@ -27,7 +27,7 @@ JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 
 |<xref:System.Enum>|number|請參閱本主題稍後的＜列舉與 JSON＞。|  
 |<xref:System.Boolean>|Boolean|--|  
 |<xref:System.String>、 <xref:System.Char>|String|--|  
-|<xref:System.TimeSpan>、<xref:System.Guid>、<xref:System.Uri>|String|在 JSON 中這些類型的格式是 XML 中相同 (本質上，以 ISO 8601 持續時間格式的時間範圍，「 12345678-ABCD-ABCD-ABCD-1234567890AB"格式的 GUID 和中的自然字串形式的 URI，例如"http://www.example.com」)。 如需精確的資訊，請參閱[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。|  
+|<xref:System.TimeSpan>、<xref:System.Guid>、<xref:System.Uri>|String|在 JSON 中這些類型的格式是 XML 中相同 (本質上，以 ISO 8601 持續時間格式的時間範圍，「 12345678-ABCD-ABCD-ABCD-1234567890AB"格式的 GUID 和中的自然字串形式的 URI，例如"http://www.example.com 」)。 如需精確的資訊，請參閱[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。|  
 |<xref:System.Xml.XmlQualifiedName>|String|格式為 "name:namespace" (第一個冒號前面的就是名稱)。 名稱或命名空間可能會遺失。 如果沒有命名空間，冒號也可以省略。|  
 |型別 <xref:System.Array> 的 <xref:System.Byte>|數字陣列|每個數字代表一個位元組值。|  
 |<xref:System.DateTime>|DateTime 或字串|請參閱本主題稍後的＜日期/時間與 JSON＞。|  
@@ -159,7 +159,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  在 XmlNode 陣列開頭的空白命名空間中的屬性 (在其他項目之前) 會不受支援。  
   
 #### <a name="ixmlserializable-types-including-xelement-and-dataset"></a>IXmlSerializable 型別包括 XElement 和 DataSet  
- <xref:System.Runtime.Serialization.ISerializable> 型別分為「內容型別」、「DataSet 型別」和「項目型別」。 如需這些類型的定義，請參閱[XML and ADO.NET Types in Data Contracts](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)。  
+ <xref:System.Runtime.Serialization.ISerializable> 型別分為「內容型別」、「DataSet 型別」和「項目型別」。 如需這些類型的定義，請參閱[資料合約中的 XML 與 ADO.NET 型別](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)。  
   
  「內容」和「DataSet」型別的序列化類似前一節中所討論的 <xref:System.Array> 的 <xref:System.Xml.XmlNode> 物件。 它們會包裝在一個項目中，該項目的名稱和命名空間對應至所討論的型別的資料合約名稱和命名空間。  
   
@@ -187,7 +187,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 {"__type":"Circle:#MyApp.Shapes","x":50,"y":70,"radius":10}  
 ```  
   
- 截斷 (#MyApp.Shapes) 和完整 (http://schemas.datacontract.org/2004/07/MyApp.Shapes)名稱均可解讀還原序列化。  
+ 截斷 (#MyApp.Shapes) 和完整 (http://schemas.datacontract.org/2004/07/MyApp.Shapes) 名稱均可解讀還原序列化。  
   
 #### <a name="type-hint-position-in-json-objects"></a>JSON 物件中的型別提示位置  
  請注意，型別提示必須最先出現在 JSON 表示中。 只有在這種情況中，索引鍵/值組的順序在 JSON 處理中才會十分重要。 例如，下列不是指定型別提示的有效方法。  

@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
 ms.openlocfilehash: 6da257cad90232426c71221dfd9d418265479bbe
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61879111"
@@ -44,7 +44,7 @@ ms.locfileid: "61879111"
   
 |SQL Server 2000|SQL Server 2005|SQL Server 2008|  
 |---------------------|---------------------|---------------------|  
-|[字串函數 & Amp;#40;transact-SQL&AMP;#41](https://go.microsoft.com/fwlink/?LinkId=115915)|[字串函數 & Amp;#40;transact-SQL&AMP;#41](https://go.microsoft.com/fwlink/?LinkId=115916)|[字串函數 & Amp;#40;transact-SQL&AMP;#41](https://go.microsoft.com/fwlink/?LinkId=115914)|  
+|[字串函式 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115915)|[字串函式 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115916)|[字串函式 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115914)|  
   
 ## <a name="see-also"></a>另請參閱
 
