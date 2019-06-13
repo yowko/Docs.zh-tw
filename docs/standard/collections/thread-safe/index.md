@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0b4639402ee99d215edb3fb28ababe6f750fb353
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 0bc333a828a9d18cd5ad98af42a91c1d53c2569b
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457068"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816204"
 ---
 # <a name="thread-safe-collections"></a>安全執行緒集合
 .NET Framework 4 引進了 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間，其中包含數個兼具安全執行緒與調整能力的集合類別。 多個執行緒可以安全且有效率地新增或移除這些集合中的項目，而不需要利用使用者程式碼進行額外同步處理。 當您撰寫新的程式碼時，只要多個執行緒將同時寫入集合，就使用並行集合類別。 如果您僅讀取共用集合，則可以使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間中的類別。 除非您需要將目標設為 .NET Framework 1.1 或舊版本的執行階段，否則建議您不要使用 1.0 集合類別。  
@@ -22,7 +22,7 @@ ms.locfileid: "66457068"
   
  您可以在 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間中找到 .NET Framework 2.0 中引進的集合類別， 包括 <xref:System.Collections.Generic.List%601>、<xref:System.Collections.Generic.Dictionary%602> 等。 這些類別提供相較起 .NET Framework 1.0 類別的改良型別安全和效能。 不過，.NET Framework 2.0 集合類別不會提供任何執行緒同步處理；在多個執行緒上同時新增或移除項目時，使用者程式碼必須提供所有同步處理。  
   
- 建議您使用 NET Framework 4 中的並行集合類別，因為這些類別不僅提供 .NET Framework 2.0 集合類別的型別安全，而且提供比 [!INCLUDE[net_v10_short](../../../../includes/net-v10-short-md.md)] 集合更高的效率及更完整的執行緒安全性。  
+ 建議您使用 NET Framework 4 中的並行集合類別，因為這些類別不僅提供 .NET Framework 2.0 集合類別的型別安全，而且提供比 .NET Framework 1.0 集合更高的效率及更完整的執行緒安全性。  
   
 ## <a name="fine-grained-locking-and-lock-free-mechanisms"></a>更細緻的鎖定和無鎖定機制  
  有些並行集合類型會使用輕量型同步處理機制，例如 .NET Framework 4 中新增的 <xref:System.Threading.SpinLock>、<xref:System.Threading.SpinWait>、<xref:System.Threading.SemaphoreSlim> 和 <xref:System.Threading.CountdownEvent>。 這些同步處理型別通常會先使用短期間的*忙碌旋轉*，再讓執行緒進入真正的 Wait 狀態。 預期等候時間很短時，旋轉的費用遠低於等待，這包含昂貴的核心轉換。 針對使用旋轉的集合類別，這個效率表示多個執行緒可以使用極高的速率來新增和移除項目。 如需旋轉與封鎖比較的詳細資訊，請參閱 [SpinLock](../../../../docs/standard/threading/spinlock.md) 和 [SpinWait](../../../../docs/standard/threading/spinwait.md)。  

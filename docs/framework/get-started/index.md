@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4c9e85b2a884f6f348d801a27b7f362bd0236b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16e20214981bb5c0f96b26f34be99026aac19266
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644036"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690197"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 使用者入門
 
@@ -53,9 +53,9 @@ ms.locfileid: "61644036"
 
 - 如果您使用的應用程式使用特定版本的 .NET Framework，移除該版本可能會造成應用程式無法執行。
 
-- 有些 .NET Framework 版本是舊版的就地更新。 例如，[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 是 2.0 版的就地更新，而 .NET Framework 4.8 是 4 到 4.7.2 版的就地更新。 如需詳細資訊，請參閱 [.NET Framework 版本和相依性](../migration-guide/versions-and-dependencies.md)。
+- 有些 .NET Framework 版本是舊版的就地更新。 例如，.NET Framework 3.5 是 2.0 版的就地更新，而 .NET Framework 4.8 是 4 到 4.7.2 版的就地更新。 如需詳細資訊，請參閱 [.NET Framework 版本和相依性](../migration-guide/versions-and-dependencies.md)。
 
-在 Windows 8 之前的 Windows 版本中，如果選擇移除 .NET Framework，請一律使用 [控制台] 中的 [程式和功能] 將它解除安裝。 請勿手動移除任何 .NET Framework 版本。 在 Windows 8 (含) 以上版本中，.NET Framework 是作業系統元件，無法單獨解除安裝。
+在 Windows 8 之前的 Windows 版本中，如果選擇移除 .NET Framework，請一律使用 [控制台] 中的 [程式和功能]  將它解除安裝。 請勿手動移除任何 .NET Framework 版本。 在 Windows 8 (含) 以上版本中，.NET Framework 是作業系統元件，無法單獨解除安裝。
 
 請注意，多個 .NET Framework 版本可以同時在單一電腦上並存。 這表示，您不需要解除安裝舊版，就可以直接安裝新版。
 

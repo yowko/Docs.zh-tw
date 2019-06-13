@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: ecde6ca8d3a95e356c5b1389ba95c4ad72b68d45
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5c2332b7371ec4ac7b5cfc0681466536d49bb7be
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623897"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026068"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next 陳述式 (Visual Basic)
 每個項目集合中，會重複一組陳述式。  
@@ -49,7 +49,7 @@ Next [ element ]
 |詞彙|定義|  
 |---|---|  
 |`element`|需要`For Each`陳述式。 選擇性在`Next`陳述式。 變數。 用來逐一查看集合的元素。|  
-|`datatype`|需要`element`不已宣告。 資料類型的`element`。|  
+|`datatype`|選擇性若[ `Option Infer` ](option-infer-statement.md)位於 （預設值） 或`element`已經宣告; 如果需要`Option Infer`關閉和`element`不已宣告。 `element`的資料型別。|  
 |`group`|必要項。 是集合型別或物件類型的變數。 哪些是指集合`statements`會重複執行。|  
 |`statements`|選擇性。 一或多個陳述式之間`For Each`並`Next`中的每個項目上執行`group`。|  
 |`Continue For`|選擇性。 將控制權傳輸至開頭`For Each`迴圈。|  
@@ -113,8 +113,8 @@ Next [ element ]
  當`For Each`...`Next` 陳述式執行時，Visual Basic 會評估集合只有一個之前在迴圈開始的時間。 如果陳述式區塊變更`element`或`group`，這些變更不會影響在迴圈的反覆項目。  
   
  當集合中的所有項目連續指派給`element`，則`For Each`迴圈停駐點，並控制傳遞到之後的陳述式`Next`陳述式。  
-  
- 如果`element`尚未已外宣告此迴圈中，您必須將其宣告中`For Each`陳述式。 您可以宣告的型別`element`明確地使用`As`陳述式，或者您可以依賴指派類型的型別推斷。 在任一情況下，範圍`element`是迴圈的主體。 不過，您不能宣告`element`同時內部和外部迴圈。  
+ 
+如果[Option Infer](option-infer-statement.md)是 （其預設值），在 Visual Basic 編譯器可以推斷的資料型別`element`。 如果是 off 和`element`尚未宣告到迴圈外，您必須將其宣告中`For Each`陳述式。 若要宣告的資料型別`element`明確地使用`As`子句。 除非項目的資料型別外部定義`For Each`...`Next`建構，其範圍是迴圈的主體。 請注意，您不能宣告`element`同時內部和外部迴圈。
   
  您可以選擇性地指定`element`在`Next`陳述式。 這有助於改善您的程式的可讀性，尤其是如果您有巢狀`For Each`迴圈。 您必須指定相同的變數會出現在對應的`For Each`陳述式。  
   
@@ -124,7 +124,7 @@ Next [ element ]
   
  如果您的程式碼相依於周遊集合中特定的順序， `For Each`...`Next`迴圈不是最好的選擇，除非您知道的特性，列舉值物件的集合會公開。 周遊順序不取決於 Visual Basic 中，但取決<xref:System.Collections.IEnumerator.MoveNext%2A>列舉值物件的方法。 因此，您可能會無法預測哪些項目集合中傳回的第一個`element`，或這是要傳回在指定的項目之後的下一步。 您可能會達到更可靠的結果，使用不同的迴圈結構，例如`For`...`Next`或`Do`...`Loop`.  
   
- 資料類型`element`使的資料類型的項目必須是`group`可以轉換成它。  
+執行階段必須能夠轉換中的項目`group`至`element`。 [`Option Strict`] 陳述式可讓您控制是否允許擴展和縮小轉換 (`Option Strict`已關閉，其預設值)，或是否允許只有擴展轉換 (`Option Strict`上)。 如需詳細資訊，請參閱 <<c0> [ 縮小轉換](#narrowing-conversions)。
   
  資料類型`group`必須是指的是集合或陣列，是可列舉的參考型別。 通常這表示`group`實作的物件是指<xref:System.Collections.IEnumerable>介面`System.Collections`命名空間或<xref:System.Collections.Generic.IEnumerable%601>介面`System.Collections.Generic`命名空間。 `System.Collections.IEnumerable` 定義<xref:System.Collections.IEnumerable.GetEnumerator%2A>方法，以傳回集合的列舉值物件。 列舉值物件會實作`System.Collections.IEnumerator`介面`System.Collections`命名空間，並公開<xref:System.Collections.IEnumerator.Current%2A>屬性並<xref:System.Collections.IEnumerator.Reset%2A>和<xref:System.Collections.IEnumerator.MoveNext%2A>方法。 Visual Basic 會使用這些來周遊集合。  
   

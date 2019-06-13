@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 81110736651db9fe00b116c3abbbdaa8d3670bee
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 995aeca60d462c96f951411aff9fcb2c772169d1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456094"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489660"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 工具
 .NET Framework 工具可讓您更輕鬆地建立、部署和管理以 .NET Framework 為目標的應用程式和元件。  
@@ -36,7 +36,7 @@ ms.locfileid: "66456094"
  將 COM 類型程式庫中的類型定義轉換為 Windows Form 控制項中的 ActiveX 控制項。  
   
  [Caspol.exe (程式碼存取安全性原則工具)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
- 可讓您檢視和設定電腦原則層級、使用者原則層級和企業原則層級的安全性原則。 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] (含) 更新版本中，除非將 [\<legacyCasPolicy> 項目](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)設定為 `true`，否則此工具並不會影響程式碼存取安全性 (CAS) 原則。 如需詳細資訊，請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。  
+ 可讓您檢視和設定電腦原則層級、使用者原則層級和企業原則層級的安全性原則。 在 .NET Framework 4 與更新版本中，除非將 [\<legacyCasPolicy> 元素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)設定為 `true`，否則此工具並不會影響程式碼存取安全性 (CAS) 原則。 如需詳細資訊，請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。  
   
  [Cert2spc.exe (軟體發行者憑證測試工具)](../../../docs/framework/tools/cert2spc-exe-software-publisher-certificate-test-tool.md)  
  從一個或多個 X.509 憑證建立軟體發行者憑證 (SPC)。 這個工具僅供測試用。  

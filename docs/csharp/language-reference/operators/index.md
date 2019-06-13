@@ -1,5 +1,5 @@
 ---
-title: C# 運算子
+title: C# 運算子 - C# 參考
 ms.date: 04/30/2019
 f1_keywords:
 - cs.operators
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: c6b83779a630c6d797968d79635793e229751f93
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 98f73ed958f8b43cd4fea700a478cf3337ea68db
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833265"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025130"
 ---
-# <a name="c-operators"></a>C# 運算子
+# <a name="c-operators-c-reference"></a>C# 運算子 (C# 參考)
 
 C# 提供內建型別支援的數個預先定義運算子。 例如，[算術運算子](arithmetic-operators.md)會執行含內建數值型別運算元的算術運算，而[布林邏輯運算子](boolean-logical-operators.md)會執行含 [bool](../keywords/bool.md) 運算元的邏輯運算。
 
@@ -222,7 +222,5 @@ C# 提供內建型別支援的數個預先定義運算子。 例如，[算術運
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C#](../../index.md)
+- [運算子](../../programming-guide/statements-expressions-operators/operators.md)
 - [多載運算子](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
-- [C# 關鍵字](../keywords/index.md)
