@@ -305,7 +305,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 - 允許結合集合型別 (即新增集合的集合)。 不規則陣列會被視為集合的集合。 不支援多維陣列。  
   
-- 位元組的陣列與 <xref:System.Xml.XmlNode> 的陣列，都是會被視為基本型別 (而非集合) 的特殊陣列型別。 序列化位元組陣列時，會產生含有 Base64 編碼資料區塊的單一 XML 元素，而不是針對各個位元組產生個別元素。 如需有關如何陣列<xref:System.Xml.XmlNode>會被視為，請參閱[XML and ADO.NET Types in Data Contracts](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)。 當然，這些特殊型別本身可以參與集合：位元組陣列的陣列會產生多個 XML 項目，其中每個項目會包含 Base64 編碼資料的區塊。  
+- 位元組的陣列與 <xref:System.Xml.XmlNode> 的陣列，都是會被視為基本型別 (而非集合) 的特殊陣列型別。 序列化位元組陣列時，會產生含有 Base64 編碼資料區塊的單一 XML 元素，而不是針對各個位元組產生個別元素。 如需有關如何陣列<xref:System.Xml.XmlNode>會被視為，請參閱[資料合約中的 XML 與 ADO.NET 型別](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)。 當然，這些特殊型別本身可以參與集合：位元組陣列的陣列會產生多個 XML 項目，其中每個項目會包含 Base64 編碼資料的區塊。  
   
 - 如果集合型別套用了 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性，該型別就會被視為一般資料合約類型，而不是集合。  
   
