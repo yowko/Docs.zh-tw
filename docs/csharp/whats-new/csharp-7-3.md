@@ -2,47 +2,47 @@
 title: C# 7.3 的新功能
 description: C# 7.3 新功能的概觀
 ms.date: 05/16/2018
-ms.openlocfilehash: f97bda11d1da3f6deb4597c8d7742fd47e9cf15f
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: aca5c1b82253c02eccf24af1e5c45d0203d0b1b8
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58028681"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832702"
 ---
-# <a name="whats-new-in-c-73"></a><span data-ttu-id="b912d-103">C# 7.3 的新功能</span><span class="sxs-lookup"><span data-stu-id="b912d-103">What's new in C# 7.3</span></span>
+# <a name="whats-new-in-c-73"></a><span data-ttu-id="b0c06-103">C# 7.3 的新功能</span><span class="sxs-lookup"><span data-stu-id="b0c06-103">What's new in C# 7.3</span></span>
 
-<span data-ttu-id="b912d-104">C# 7.3 版有兩個主要的佈景主題。</span><span class="sxs-lookup"><span data-stu-id="b912d-104">There are two main themes to the C# 7.3 release.</span></span> <span data-ttu-id="b912d-105">其中一個佈景主題提供了使安全的程式碼具有與不安全的程式碼一樣高效能的功能。</span><span class="sxs-lookup"><span data-stu-id="b912d-105">One theme provides features that enable safe code to be as performant as unsafe code.</span></span> <span data-ttu-id="b912d-106">第二個佈景主題提供現有功能的累加增強功能。</span><span class="sxs-lookup"><span data-stu-id="b912d-106">The second theme provides incremental improvements to existing features.</span></span> <span data-ttu-id="b912d-107">此外，此版本中加入了新的編譯器選項。</span><span class="sxs-lookup"><span data-stu-id="b912d-107">In addition, new compiler options were added in this release.</span></span>
+<span data-ttu-id="b0c06-104">C# 7.3 版有兩個主要的佈景主題。</span><span class="sxs-lookup"><span data-stu-id="b0c06-104">There are two main themes to the C# 7.3 release.</span></span> <span data-ttu-id="b0c06-105">其中一個佈景主題提供了使安全的程式碼具有與不安全的程式碼一樣高效能的功能。</span><span class="sxs-lookup"><span data-stu-id="b0c06-105">One theme provides features that enable safe code to be as performant as unsafe code.</span></span> <span data-ttu-id="b0c06-106">第二個佈景主題提供現有功能的累加增強功能。</span><span class="sxs-lookup"><span data-stu-id="b0c06-106">The second theme provides incremental improvements to existing features.</span></span> <span data-ttu-id="b0c06-107">此外，此版本中加入了新的編譯器選項。</span><span class="sxs-lookup"><span data-stu-id="b0c06-107">In addition, new compiler options were added in this release.</span></span>
 
-<span data-ttu-id="b912d-108">下列新功能針對安全的程式碼支援較佳效能的佈景主題：</span><span class="sxs-lookup"><span data-stu-id="b912d-108">The following new features support the theme of better performance for safe code:</span></span>
+<span data-ttu-id="b0c06-108">下列新功能針對安全的程式碼支援較佳效能的佈景主題：</span><span class="sxs-lookup"><span data-stu-id="b0c06-108">The following new features support the theme of better performance for safe code:</span></span>
 
-- <span data-ttu-id="b912d-109">您可以在不釘選的情況下存取固定的欄位。</span><span class="sxs-lookup"><span data-stu-id="b912d-109">You can access fixed fields without pinning.</span></span>
-- <span data-ttu-id="b912d-110">您可以重新指派 `ref` 區域變數。</span><span class="sxs-lookup"><span data-stu-id="b912d-110">You can reassign `ref` local variables.</span></span>
-- <span data-ttu-id="b912d-111">您可以在 `stackalloc` 陣列上使用初始設定式。</span><span class="sxs-lookup"><span data-stu-id="b912d-111">You can use initializers on `stackalloc` arrays.</span></span>
-- <span data-ttu-id="b912d-112">您可以搭配支援模式的任何型別使用 `fixed` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="b912d-112">You can use `fixed` statements with any type that supports a pattern.</span></span>
-- <span data-ttu-id="b912d-113">您可以使用其他的泛型限制式。</span><span class="sxs-lookup"><span data-stu-id="b912d-113">You can use additional generic constraints.</span></span>
+- <span data-ttu-id="b0c06-109">您可以在不釘選的情況下存取固定的欄位。</span><span class="sxs-lookup"><span data-stu-id="b0c06-109">You can access fixed fields without pinning.</span></span>
+- <span data-ttu-id="b0c06-110">您可以重新指派 `ref` 區域變數。</span><span class="sxs-lookup"><span data-stu-id="b0c06-110">You can reassign `ref` local variables.</span></span>
+- <span data-ttu-id="b0c06-111">您可以在 `stackalloc` 陣列上使用初始設定式。</span><span class="sxs-lookup"><span data-stu-id="b0c06-111">You can use initializers on `stackalloc` arrays.</span></span>
+- <span data-ttu-id="b0c06-112">您可以搭配支援模式的任何型別使用 `fixed` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="b0c06-112">You can use `fixed` statements with any type that supports a pattern.</span></span>
+- <span data-ttu-id="b0c06-113">您可以使用其他的泛型限制式。</span><span class="sxs-lookup"><span data-stu-id="b0c06-113">You can use additional generic constraints.</span></span>
 
-<span data-ttu-id="b912d-114">已在現有功能中提供下列增強功能：</span><span class="sxs-lookup"><span data-stu-id="b912d-114">The following enhancements were made to existing features:</span></span>
+<span data-ttu-id="b0c06-114">已在現有功能中提供下列增強功能：</span><span class="sxs-lookup"><span data-stu-id="b0c06-114">The following enhancements were made to existing features:</span></span>
 
-- <span data-ttu-id="b912d-115">您可以使用 Tuple 型別測試 `==` 和 `!=`。</span><span class="sxs-lookup"><span data-stu-id="b912d-115">You can test `==` and `!=` with tuple types.</span></span>
-- <span data-ttu-id="b912d-116">您可以在更多位置使用運算式變數。</span><span class="sxs-lookup"><span data-stu-id="b912d-116">You can use expression variables in more locations.</span></span>
-- <span data-ttu-id="b912d-117">您可以將屬性附加至自動實作屬性的支援欄位。</span><span class="sxs-lookup"><span data-stu-id="b912d-117">You may attach attributes to the backing field of auto-implemented properties.</span></span>
-- <span data-ttu-id="b912d-118">已改善當引數依 `in` 不同時的方法解析。</span><span class="sxs-lookup"><span data-stu-id="b912d-118">Method resolution when arguments differ by `in` has been improved.</span></span>
-- <span data-ttu-id="b912d-119">多載解析現在會有較少模稜兩可的情況。</span><span class="sxs-lookup"><span data-stu-id="b912d-119">Overload resolution now has fewer ambiguous cases.</span></span>
+- <span data-ttu-id="b0c06-115">您可以使用 Tuple 型別測試 `==` 和 `!=`。</span><span class="sxs-lookup"><span data-stu-id="b0c06-115">You can test `==` and `!=` with tuple types.</span></span>
+- <span data-ttu-id="b0c06-116">您可以在更多位置使用運算式變數。</span><span class="sxs-lookup"><span data-stu-id="b0c06-116">You can use expression variables in more locations.</span></span>
+- <span data-ttu-id="b0c06-117">您可以將屬性附加至自動實作屬性的支援欄位。</span><span class="sxs-lookup"><span data-stu-id="b0c06-117">You may attach attributes to the backing field of auto-implemented properties.</span></span>
+- <span data-ttu-id="b0c06-118">已改善當引數依 `in` 不同時的方法解析。</span><span class="sxs-lookup"><span data-stu-id="b0c06-118">Method resolution when arguments differ by `in` has been improved.</span></span>
+- <span data-ttu-id="b0c06-119">多載解析現在會有較少模稜兩可的情況。</span><span class="sxs-lookup"><span data-stu-id="b0c06-119">Overload resolution now has fewer ambiguous cases.</span></span>
 
-<span data-ttu-id="b912d-120">新的編譯器選項：</span><span class="sxs-lookup"><span data-stu-id="b912d-120">The new compiler options are:</span></span>
+<span data-ttu-id="b0c06-120">新的編譯器選項：</span><span class="sxs-lookup"><span data-stu-id="b0c06-120">The new compiler options are:</span></span>
 
-- <span data-ttu-id="b912d-121">`-publicsign`，用來啟用組件的開放原始碼軟體 (OSS) 簽署。</span><span class="sxs-lookup"><span data-stu-id="b912d-121">`-publicsign` to enable Open Source Software (OSS) signing of assemblies.</span></span>
-- <span data-ttu-id="b912d-122">`-pathmap`，用來提供來源目錄的對應。</span><span class="sxs-lookup"><span data-stu-id="b912d-122">`-pathmap` to provide a mapping for source directories.</span></span>
+- <span data-ttu-id="b0c06-121">`-publicsign`，用來啟用組件的開放原始碼軟體 (OSS) 簽署。</span><span class="sxs-lookup"><span data-stu-id="b0c06-121">`-publicsign` to enable Open Source Software (OSS) signing of assemblies.</span></span>
+- <span data-ttu-id="b0c06-122">`-pathmap`，用來提供來源目錄的對應。</span><span class="sxs-lookup"><span data-stu-id="b0c06-122">`-pathmap` to provide a mapping for source directories.</span></span>
 
-<span data-ttu-id="b912d-123">這篇文章的其餘部分提供詳細資料和連結，讓您深入了解每個增強功能。</span><span class="sxs-lookup"><span data-stu-id="b912d-123">The remainder of this article provides details and links to learn more about each of the improvements.</span></span>
+<span data-ttu-id="b0c06-123">這篇文章的其餘部分提供詳細資料和連結，讓您深入了解每個增強功能。</span><span class="sxs-lookup"><span data-stu-id="b0c06-123">The remainder of this article provides details and links to learn more about each of the improvements.</span></span>
 
-## <a name="enabling-more-efficient-safe-code"></a><span data-ttu-id="b912d-124">啟用更有效率的安全的程式碼</span><span class="sxs-lookup"><span data-stu-id="b912d-124">Enabling more efficient safe code</span></span>
+## <a name="enabling-more-efficient-safe-code"></a><span data-ttu-id="b0c06-124">啟用更有效率的安全的程式碼</span><span class="sxs-lookup"><span data-stu-id="b0c06-124">Enabling more efficient safe code</span></span>
 
-<span data-ttu-id="b912d-125">您應該能夠安全地撰寫與不安全的程式碼一樣高效能的 C# 程式碼。</span><span class="sxs-lookup"><span data-stu-id="b912d-125">You should be able to write C# code safely that performs as well as unsafe code.</span></span> <span data-ttu-id="b912d-126">安全的程式碼可避免一些錯誤類別，例如緩衝區溢位、偏離的指標和其他記憶體存取錯誤。</span><span class="sxs-lookup"><span data-stu-id="b912d-126">Safe code avoids classes of errors, such as buffer overruns, stray pointers, and other memory access errors.</span></span> <span data-ttu-id="b912d-127">這些新功能擴充了可驗證安全的程式碼的功能。</span><span class="sxs-lookup"><span data-stu-id="b912d-127">These new features expand the capabilities of verifiable safe code.</span></span> <span data-ttu-id="b912d-128">儘可能使用安全的建構來撰寫更多的程式碼。</span><span class="sxs-lookup"><span data-stu-id="b912d-128">Strive to write more of your code using safe constructs.</span></span> <span data-ttu-id="b912d-129">這些功能都讓這變得更容易。</span><span class="sxs-lookup"><span data-stu-id="b912d-129">These features make that easier.</span></span>
+<span data-ttu-id="b0c06-125">您應該能夠安全地撰寫與不安全的程式碼一樣高效能的 C# 程式碼。</span><span class="sxs-lookup"><span data-stu-id="b0c06-125">You should be able to write C# code safely that performs as well as unsafe code.</span></span> <span data-ttu-id="b0c06-126">安全的程式碼可避免一些錯誤類別，例如緩衝區溢位、偏離的指標和其他記憶體存取錯誤。</span><span class="sxs-lookup"><span data-stu-id="b0c06-126">Safe code avoids classes of errors, such as buffer overruns, stray pointers, and other memory access errors.</span></span> <span data-ttu-id="b0c06-127">這些新功能擴充了可驗證安全的程式碼的功能。</span><span class="sxs-lookup"><span data-stu-id="b0c06-127">These new features expand the capabilities of verifiable safe code.</span></span> <span data-ttu-id="b0c06-128">儘可能使用安全的建構來撰寫更多的程式碼。</span><span class="sxs-lookup"><span data-stu-id="b0c06-128">Strive to write more of your code using safe constructs.</span></span> <span data-ttu-id="b0c06-129">這些功能都讓這變得更容易。</span><span class="sxs-lookup"><span data-stu-id="b0c06-129">These features make that easier.</span></span>
 
-### <a name="indexing-fixed-fields-does-not-require-pinning"></a><span data-ttu-id="b912d-130">索引 `fixed` 欄位不需要釘選</span><span class="sxs-lookup"><span data-stu-id="b912d-130">Indexing `fixed` fields does not require pinning</span></span>
+### <a name="indexing-fixed-fields-does-not-require-pinning"></a><span data-ttu-id="b0c06-130">索引 `fixed` 欄位不需要釘選</span><span class="sxs-lookup"><span data-stu-id="b0c06-130">Indexing `fixed` fields does not require pinning</span></span>
 
-<span data-ttu-id="b912d-131">請考量此建構：</span><span class="sxs-lookup"><span data-stu-id="b912d-131">Consider this struct:</span></span>
+<span data-ttu-id="b0c06-131">請考量此建構：</span><span class="sxs-lookup"><span data-stu-id="b0c06-131">Consider this struct:</span></span>
 
 ```csharp
 unsafe struct S
@@ -51,7 +51,7 @@ unsafe struct S
 }
 ```
 
-<span data-ttu-id="b912d-132">在舊版的 C# 中，您需要釘選變數，才能存取屬於 `myFixedField` 的其中一個整數。</span><span class="sxs-lookup"><span data-stu-id="b912d-132">In earlier versions of C#, you needed to pin a variable to access one of the integers that are part of `myFixedField`.</span></span> <span data-ttu-id="b912d-133">現在，下列程式碼會進行編譯而不將變數 `p` 固定在個別的 `fixed` 陳述式內：</span><span class="sxs-lookup"><span data-stu-id="b912d-133">Now, the following code compiles without pinning the variable `p` inside a separate `fixed` statement:</span></span>
+<span data-ttu-id="b0c06-132">在舊版的 C# 中，您需要釘選變數，才能存取屬於 `myFixedField` 的其中一個整數。</span><span class="sxs-lookup"><span data-stu-id="b0c06-132">In earlier versions of C#, you needed to pin a variable to access one of the integers that are part of `myFixedField`.</span></span> <span data-ttu-id="b0c06-133">現在，下列程式碼會進行編譯而不將變數 `p` 固定在個別的 `fixed` 陳述式內：</span><span class="sxs-lookup"><span data-stu-id="b0c06-133">Now, the following code compiles without pinning the variable `p` inside a separate `fixed` statement:</span></span>
 
 ```csharp
 class C
@@ -65,7 +65,7 @@ class C
 }
 ```
 
-<span data-ttu-id="b912d-134">變數 `p` 會存取 `myFixedField` 中的一個元素。</span><span class="sxs-lookup"><span data-stu-id="b912d-134">The variable `p` accesses one element in `myFixedField`.</span></span> <span data-ttu-id="b912d-135">您不需要宣告個別的 `int*` 變數。</span><span class="sxs-lookup"><span data-stu-id="b912d-135">You don't need to declare a separate `int*` variable.</span></span> <span data-ttu-id="b912d-136">請注意，您仍然需要 `unsafe` 內容。</span><span class="sxs-lookup"><span data-stu-id="b912d-136">Note that you still need an `unsafe` context.</span></span> <span data-ttu-id="b912d-137">在舊版的 C# 中，您需要宣告第二個固定指標：</span><span class="sxs-lookup"><span data-stu-id="b912d-137">In earlier versions of C#, you need to declare a second fixed pointer:</span></span>
+<span data-ttu-id="b0c06-134">變數 `p` 會存取 `myFixedField` 中的一個元素。</span><span class="sxs-lookup"><span data-stu-id="b0c06-134">The variable `p` accesses one element in `myFixedField`.</span></span> <span data-ttu-id="b0c06-135">您不需要宣告個別的 `int*` 變數。</span><span class="sxs-lookup"><span data-stu-id="b0c06-135">You don't need to declare a separate `int*` variable.</span></span> <span data-ttu-id="b0c06-136">請注意，您仍然需要 `unsafe` 內容。</span><span class="sxs-lookup"><span data-stu-id="b0c06-136">Note that you still need an `unsafe` context.</span></span> <span data-ttu-id="b0c06-137">在舊版的 C# 中，您需要宣告第二個固定指標：</span><span class="sxs-lookup"><span data-stu-id="b0c06-137">In earlier versions of C#, you need to declare a second fixed pointer:</span></span>
 
 ```csharp
 class C
@@ -82,29 +82,29 @@ class C
 }
 ```
 
-<span data-ttu-id="b912d-138">如需詳細資訊，請參閱有關 [`fixed` 陳述式](../language-reference/keywords/fixed-statement.md)的文章。</span><span class="sxs-lookup"><span data-stu-id="b912d-138">For more information, see the article on the [`fixed` statement](../language-reference/keywords/fixed-statement.md).</span></span>
+<span data-ttu-id="b0c06-138">如需詳細資訊，請參閱有關 [`fixed` 陳述式](../language-reference/keywords/fixed-statement.md)的文章。</span><span class="sxs-lookup"><span data-stu-id="b0c06-138">For more information, see the article on the [`fixed` statement](../language-reference/keywords/fixed-statement.md).</span></span>
 
-### <a name="ref-local-variables-may-be-reassigned"></a><span data-ttu-id="b912d-139">`ref` 區域變數可能會重新指派</span><span class="sxs-lookup"><span data-stu-id="b912d-139">`ref` local variables may be reassigned</span></span>
+### <a name="ref-local-variables-may-be-reassigned"></a><span data-ttu-id="b0c06-139">`ref` 區域變數可能會重新指派</span><span class="sxs-lookup"><span data-stu-id="b0c06-139">`ref` local variables may be reassigned</span></span>
 
-<span data-ttu-id="b912d-140">現在，`ref` 區域變數可能會在初始化之後被重新指派，以參照不同的執行個體。</span><span class="sxs-lookup"><span data-stu-id="b912d-140">Now, `ref` locals may be reassigned to refer to different instances after being initialized.</span></span> <span data-ttu-id="b912d-141">下列程式碼現在會編譯：</span><span class="sxs-lookup"><span data-stu-id="b912d-141">The following code now compiles:</span></span>
+<span data-ttu-id="b0c06-140">現在，`ref` 區域變數可能會在初始化之後被重新指派，以參照不同的執行個體。</span><span class="sxs-lookup"><span data-stu-id="b0c06-140">Now, `ref` locals may be reassigned to refer to different instances after being initialized.</span></span> <span data-ttu-id="b0c06-141">下列程式碼現在會編譯：</span><span class="sxs-lookup"><span data-stu-id="b0c06-141">The following code now compiles:</span></span>
 
 ```csharp
 ref VeryLargeStruct refLocal = ref veryLargeStruct; // initialization
 refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to different storage.
 ```
 
-<span data-ttu-id="b912d-142">如需詳細資訊，請參閱有關 [`ref` 傳回和 `ref` 區域變數](../programming-guide/classes-and-structs/ref-returns.md)的文章，以及有關 [`foreach`](../language-reference/keywords/foreach-in.md) 的文章。</span><span class="sxs-lookup"><span data-stu-id="b912d-142">For more information, see the article on [`ref` returns and `ref` locals](../programming-guide/classes-and-structs/ref-returns.md), and the article on [`foreach`](../language-reference/keywords/foreach-in.md).</span></span>
+<span data-ttu-id="b0c06-142">如需詳細資訊，請參閱有關 [`ref` 傳回和 `ref` 區域變數](../programming-guide/classes-and-structs/ref-returns.md)的文章，以及有關 [`foreach`](../language-reference/keywords/foreach-in.md) 的文章。</span><span class="sxs-lookup"><span data-stu-id="b0c06-142">For more information, see the article on [`ref` returns and `ref` locals](../programming-guide/classes-and-structs/ref-returns.md), and the article on [`foreach`](../language-reference/keywords/foreach-in.md).</span></span>
 
-### <a name="stackalloc-arrays-support-initializers"></a><span data-ttu-id="b912d-143">`stackalloc` 陣列支援初始設定式</span><span class="sxs-lookup"><span data-stu-id="b912d-143">`stackalloc` arrays support initializers</span></span>
+### <a name="stackalloc-arrays-support-initializers"></a><span data-ttu-id="b0c06-143">`stackalloc` 陣列支援初始設定式</span><span class="sxs-lookup"><span data-stu-id="b0c06-143">`stackalloc` arrays support initializers</span></span>
 
-<span data-ttu-id="b912d-144">您可以在初始化陣列時，指定陣列中元素的值：</span><span class="sxs-lookup"><span data-stu-id="b912d-144">You've been able to specify the values for elements in an array when you initialize it:</span></span>
+<span data-ttu-id="b0c06-144">您可以在初始化陣列時，指定陣列中元素的值：</span><span class="sxs-lookup"><span data-stu-id="b0c06-144">You've been able to specify the values for elements in an array when you initialize it:</span></span>
 
 ```csharp
 var arr = new int[3] {1, 2, 3};
 var arr2 = new int[] {1, 2, 3};
 ```
 
-<span data-ttu-id="b912d-145">現在，相同的語法可以套用至使用 `stackalloc` 宣告的陣列：</span><span class="sxs-lookup"><span data-stu-id="b912d-145">Now, that same syntax can be applied to arrays that are declared with `stackalloc`:</span></span>
+<span data-ttu-id="b0c06-145">現在，相同的語法可以套用至使用 `stackalloc` 宣告的陣列：</span><span class="sxs-lookup"><span data-stu-id="b0c06-145">Now, that same syntax can be applied to arrays that are declared with `stackalloc`:</span></span>
 
 ```csharp
 int* pArr = stackalloc int[3] {1, 2, 3};
@@ -112,62 +112,62 @@ int* pArr2 = stackalloc int[] {1, 2, 3};
 Span<int> arr = stackalloc [] {1, 2, 3};
 ```
 
-<span data-ttu-id="b912d-146">如需詳細資訊，請參閱語言參考中的 [`stackalloc` 陳述式](../language-reference/keywords/stackalloc.md)一文。</span><span class="sxs-lookup"><span data-stu-id="b912d-146">For more information, see the [`stackalloc` statement](../language-reference/keywords/stackalloc.md) article in the language reference.</span></span>
+<span data-ttu-id="b0c06-146">如需詳細資訊，請參閱 [`stackalloc` 運算子](../language-reference/operators/stackalloc.md)一文。</span><span class="sxs-lookup"><span data-stu-id="b0c06-146">For more information, see the [`stackalloc` operator](../language-reference/operators/stackalloc.md) article.</span></span>
 
-### <a name="more-types-support-the-fixed-statement"></a><span data-ttu-id="b912d-147">更多型別支援 `fixed` 陳述式</span><span class="sxs-lookup"><span data-stu-id="b912d-147">More types support the `fixed` statement</span></span>
+### <a name="more-types-support-the-fixed-statement"></a><span data-ttu-id="b0c06-147">更多型別支援 `fixed` 陳述式</span><span class="sxs-lookup"><span data-stu-id="b0c06-147">More types support the `fixed` statement</span></span>
 
-<span data-ttu-id="b912d-148">`fixed` 陳述式支援一組有限的型別。</span><span class="sxs-lookup"><span data-stu-id="b912d-148">The `fixed` statement supported a limited set of types.</span></span> <span data-ttu-id="b912d-149">從 C# 7.3 開始，包含傳回 `ref T` 或 `ref readonly T` 之 `GetPinnableReference()` 方法的任何型別都可能是 `fixed`。</span><span class="sxs-lookup"><span data-stu-id="b912d-149">Starting with C# 7.3, any type that contains a `GetPinnableReference()` method that returns a `ref T` or `ref readonly T` may be `fixed`.</span></span> <span data-ttu-id="b912d-150">新增此功能表示 `fixed` 可以與 <xref:System.Span%601?displayProperty=nameWithType> 和相關型別一起使用。</span><span class="sxs-lookup"><span data-stu-id="b912d-150">Adding this feature means that `fixed` can be used with <xref:System.Span%601?displayProperty=nameWithType> and related types.</span></span>
+<span data-ttu-id="b0c06-148">`fixed` 陳述式支援一組有限的型別。</span><span class="sxs-lookup"><span data-stu-id="b0c06-148">The `fixed` statement supported a limited set of types.</span></span> <span data-ttu-id="b0c06-149">從 C# 7.3 開始，包含傳回 `ref T` 或 `ref readonly T` 之 `GetPinnableReference()` 方法的任何型別都可能是 `fixed`。</span><span class="sxs-lookup"><span data-stu-id="b0c06-149">Starting with C# 7.3, any type that contains a `GetPinnableReference()` method that returns a `ref T` or `ref readonly T` may be `fixed`.</span></span> <span data-ttu-id="b0c06-150">新增此功能表示 `fixed` 可以與 <xref:System.Span%601?displayProperty=nameWithType> 和相關型別一起使用。</span><span class="sxs-lookup"><span data-stu-id="b0c06-150">Adding this feature means that `fixed` can be used with <xref:System.Span%601?displayProperty=nameWithType> and related types.</span></span>
 
-<span data-ttu-id="b912d-151">如需詳細資訊，請參閱語言參考中的 [`fixed` 陳述式](../language-reference/keywords/fixed-statement.md)一文。</span><span class="sxs-lookup"><span data-stu-id="b912d-151">For more information, see the [`fixed` statement](../language-reference/keywords/fixed-statement.md) article in the language reference.</span></span>
+<span data-ttu-id="b0c06-151">如需詳細資訊，請參閱語言參考中的 [`fixed` 陳述式](../language-reference/keywords/fixed-statement.md)一文。</span><span class="sxs-lookup"><span data-stu-id="b0c06-151">For more information, see the [`fixed` statement](../language-reference/keywords/fixed-statement.md) article in the language reference.</span></span>
 
-### <a name="enhanced-generic-constraints"></a><span data-ttu-id="b912d-152">增強泛型限制式</span><span class="sxs-lookup"><span data-stu-id="b912d-152">Enhanced generic constraints</span></span>
+### <a name="enhanced-generic-constraints"></a><span data-ttu-id="b0c06-152">增強泛型限制式</span><span class="sxs-lookup"><span data-stu-id="b0c06-152">Enhanced generic constraints</span></span>
 
-<span data-ttu-id="b912d-153">您現在可以指定型別 <xref:System.Enum?displayProperty=nameWithType> 或 <xref:System.Delegate?displayProperty=nameWithType> 作為型別參數的基底類別限制式。</span><span class="sxs-lookup"><span data-stu-id="b912d-153">You can now specify the type <xref:System.Enum?displayProperty=nameWithType> or <xref:System.Delegate?displayProperty=nameWithType> as base class constraints for a type parameter.</span></span>
+<span data-ttu-id="b0c06-153">您現在可以指定型別 <xref:System.Enum?displayProperty=nameWithType> 或 <xref:System.Delegate?displayProperty=nameWithType> 作為型別參數的基底類別限制式。</span><span class="sxs-lookup"><span data-stu-id="b0c06-153">You can now specify the type <xref:System.Enum?displayProperty=nameWithType> or <xref:System.Delegate?displayProperty=nameWithType> as base class constraints for a type parameter.</span></span>
 
-<span data-ttu-id="b912d-154">您也可以使用新的 `unmanaged` 限制式指定型別參數必須是**非受控型別**。</span><span class="sxs-lookup"><span data-stu-id="b912d-154">You can also use the new `unmanaged` constraint, to specify that a type parameter must be an **unmanaged type**.</span></span> <span data-ttu-id="b912d-155">**非受控型別**是非參考型別的型別，而且未包含任何巢狀層級的參考型別。</span><span class="sxs-lookup"><span data-stu-id="b912d-155">An **unmanaged type** is a type that isn't a reference type and doesn't contain any reference type at any level of nesting.</span></span>
+<span data-ttu-id="b0c06-154">您也可以使用新的 `unmanaged` 限制式指定型別參數必須是**非受控型別**。</span><span class="sxs-lookup"><span data-stu-id="b0c06-154">You can also use the new `unmanaged` constraint, to specify that a type parameter must be an **unmanaged type**.</span></span> <span data-ttu-id="b0c06-155">**非受控型別**是非參考型別的型別，而且未包含任何巢狀層級的參考型別。</span><span class="sxs-lookup"><span data-stu-id="b0c06-155">An **unmanaged type** is a type that isn't a reference type and doesn't contain any reference type at any level of nesting.</span></span>
 
-<span data-ttu-id="b912d-156">如需詳細資訊，請參閱有關 [`where` 泛型限制式](../language-reference/keywords/where-generic-type-constraint.md)和[型別參數的限制式](../programming-guide/generics/constraints-on-type-parameters.md)的文章。</span><span class="sxs-lookup"><span data-stu-id="b912d-156">For more information, see the articles on [`where` generic constraints](../language-reference/keywords/where-generic-type-constraint.md) and [constraints on type parameters](../programming-guide/generics/constraints-on-type-parameters.md).</span></span>
+<span data-ttu-id="b0c06-156">如需詳細資訊，請參閱有關 [`where` 泛型限制式](../language-reference/keywords/where-generic-type-constraint.md)和[型別參數的限制式](../programming-guide/generics/constraints-on-type-parameters.md)的文章。</span><span class="sxs-lookup"><span data-stu-id="b0c06-156">For more information, see the articles on [`where` generic constraints](../language-reference/keywords/where-generic-type-constraint.md) and [constraints on type parameters](../programming-guide/generics/constraints-on-type-parameters.md).</span></span>
 
-<span data-ttu-id="b912d-157">將這些條件約束新增至現有型別是[不相容變更](version-update-considerations.md#incompatible-changes)。</span><span class="sxs-lookup"><span data-stu-id="b912d-157">Adding these constraints to existing types is an [incompatible change](version-update-considerations.md#incompatible-changes).</span></span> <span data-ttu-id="b912d-158">封閉式泛型型別可能不再符合這些新的條件約束。</span><span class="sxs-lookup"><span data-stu-id="b912d-158">Closed generic types may no longer meet these new constraints.</span></span>
+<span data-ttu-id="b0c06-157">將這些條件約束新增至現有型別是[不相容變更](version-update-considerations.md#incompatible-changes)。</span><span class="sxs-lookup"><span data-stu-id="b0c06-157">Adding these constraints to existing types is an [incompatible change](version-update-considerations.md#incompatible-changes).</span></span> <span data-ttu-id="b0c06-158">封閉式泛型型別可能不再符合這些新的條件約束。</span><span class="sxs-lookup"><span data-stu-id="b0c06-158">Closed generic types may no longer meet these new constraints.</span></span>
 
-## <a name="make-existing-features-better"></a><span data-ttu-id="b912d-159">讓現有的功能變得更好</span><span class="sxs-lookup"><span data-stu-id="b912d-159">Make existing features better</span></span>
+## <a name="make-existing-features-better"></a><span data-ttu-id="b0c06-159">讓現有的功能變得更好</span><span class="sxs-lookup"><span data-stu-id="b0c06-159">Make existing features better</span></span>
 
-<span data-ttu-id="b912d-160">第二個佈景主題提供了語言功能的改進。</span><span class="sxs-lookup"><span data-stu-id="b912d-160">The second theme provides improvements to features in the language.</span></span> <span data-ttu-id="b912d-161">撰寫 C# 時，這些功能可以提高生產力。</span><span class="sxs-lookup"><span data-stu-id="b912d-161">These features improve productivity when writing C#.</span></span>
+<span data-ttu-id="b0c06-160">第二個佈景主題提供了語言功能的改進。</span><span class="sxs-lookup"><span data-stu-id="b0c06-160">The second theme provides improvements to features in the language.</span></span> <span data-ttu-id="b0c06-161">撰寫 C# 時，這些功能可以提高生產力。</span><span class="sxs-lookup"><span data-stu-id="b0c06-161">These features improve productivity when writing C#.</span></span>
 
-### <a name="tuples-support--and-"></a><span data-ttu-id="b912d-162">Tuple 支援 `==` 和 `!=`</span><span class="sxs-lookup"><span data-stu-id="b912d-162">Tuples support `==` and `!=`</span></span>
+### <a name="tuples-support--and-"></a><span data-ttu-id="b0c06-162">Tuple 支援 `==` 和 `!=`</span><span class="sxs-lookup"><span data-stu-id="b0c06-162">Tuples support `==` and `!=`</span></span>
 
-<span data-ttu-id="b912d-163">C# Tuple 型別現在支援 `==` 和 `!=`。</span><span class="sxs-lookup"><span data-stu-id="b912d-163">The C# tuple types now support `==` and `!=`.</span></span> <span data-ttu-id="b912d-164">如需詳細資訊，請參閱 [Tuple](../tuples.md) 文章中涵蓋[相等](../tuples.md#equality-and-tuples)的一節。</span><span class="sxs-lookup"><span data-stu-id="b912d-164">For more information, see the section covering [equality](../tuples.md#equality-and-tuples) in the article on [tuples](../tuples.md).</span></span>
+<span data-ttu-id="b0c06-163">C# Tuple 型別現在支援 `==` 和 `!=`。</span><span class="sxs-lookup"><span data-stu-id="b0c06-163">The C# tuple types now support `==` and `!=`.</span></span> <span data-ttu-id="b0c06-164">如需詳細資訊，請參閱 [Tuple](../tuples.md) 文章中涵蓋[相等](../tuples.md#equality-and-tuples)的一節。</span><span class="sxs-lookup"><span data-stu-id="b0c06-164">For more information, see the section covering [equality](../tuples.md#equality-and-tuples) in the article on [tuples](../tuples.md).</span></span>
 
-### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a><span data-ttu-id="b912d-165">將屬性附加至自動實作屬性的支援欄位</span><span class="sxs-lookup"><span data-stu-id="b912d-165">Attach attributes to the backing fields for auto-implemented properties</span></span>
+### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a><span data-ttu-id="b0c06-165">將屬性附加至自動實作屬性的支援欄位</span><span class="sxs-lookup"><span data-stu-id="b0c06-165">Attach attributes to the backing fields for auto-implemented properties</span></span>
 
-<span data-ttu-id="b912d-166">現在支援此語法：</span><span class="sxs-lookup"><span data-stu-id="b912d-166">This syntax is now supported:</span></span>
+<span data-ttu-id="b0c06-166">現在支援此語法：</span><span class="sxs-lookup"><span data-stu-id="b0c06-166">This syntax is now supported:</span></span>
 
 ```csharp
 [field: SomeThingAboutFieldAttribute]
 public int SomeProperty { get; set; }
 ```
 
-<span data-ttu-id="b912d-167">屬性 `SomeThingAboutFieldAttribute` 套用至編譯器針對 `SomeProperty` 產生的支援欄位。</span><span class="sxs-lookup"><span data-stu-id="b912d-167">The attribute `SomeThingAboutFieldAttribute` is applied to the compiler generated backing field for `SomeProperty`.</span></span> <span data-ttu-id="b912d-168">如需詳細資訊，請參閱 C# 程式設計指南中的[屬性](../programming-guide/concepts/attributes/index.md)。</span><span class="sxs-lookup"><span data-stu-id="b912d-168">For more information, see [attributes](../programming-guide/concepts/attributes/index.md) in the C# programming guide.</span></span>
+<span data-ttu-id="b0c06-167">屬性 `SomeThingAboutFieldAttribute` 套用至編譯器針對 `SomeProperty` 產生的支援欄位。</span><span class="sxs-lookup"><span data-stu-id="b0c06-167">The attribute `SomeThingAboutFieldAttribute` is applied to the compiler generated backing field for `SomeProperty`.</span></span> <span data-ttu-id="b0c06-168">如需詳細資訊，請參閱 C# 程式設計指南中的[屬性](../programming-guide/concepts/attributes/index.md)。</span><span class="sxs-lookup"><span data-stu-id="b0c06-168">For more information, see [attributes](../programming-guide/concepts/attributes/index.md) in the C# programming guide.</span></span>
 
-### <a name="in-method-overload-resolution-tiebreaker"></a><span data-ttu-id="b912d-169">`in` 方法多載解析 tiebreaker</span><span class="sxs-lookup"><span data-stu-id="b912d-169">`in` method overload resolution tiebreaker</span></span>
+### <a name="in-method-overload-resolution-tiebreaker"></a><span data-ttu-id="b0c06-169">`in` 方法多載解析 tiebreaker</span><span class="sxs-lookup"><span data-stu-id="b0c06-169">`in` method overload resolution tiebreaker</span></span>
 
-<span data-ttu-id="b912d-170">當加入 `in` 引數修飾詞時，這兩種方法會造成模稜兩可：</span><span class="sxs-lookup"><span data-stu-id="b912d-170">When the `in` argument modifier was added, these two methods would cause an ambiguity:</span></span>
+<span data-ttu-id="b0c06-170">當加入 `in` 引數修飾詞時，這兩種方法會造成模稜兩可：</span><span class="sxs-lookup"><span data-stu-id="b0c06-170">When the `in` argument modifier was added, these two methods would cause an ambiguity:</span></span>
 
 ```csharp
 static void M(S arg);
 static void M(in S arg);
 ```
 
-<span data-ttu-id="b912d-171">現在，by 值 (上述範例中的第一個) 多載會優於 by 唯讀參考版本。</span><span class="sxs-lookup"><span data-stu-id="b912d-171">Now, the by value (first in the preceding example) overload is better than the by readonly reference version.</span></span> <span data-ttu-id="b912d-172">若要呼叫具有唯讀參考引數的版本，您呼叫方法時必須包含 `in` 修飾詞。</span><span class="sxs-lookup"><span data-stu-id="b912d-172">To call the version with the readonly reference argument, you must include the `in` modifier when calling the method.</span></span>
+<span data-ttu-id="b0c06-171">現在，by 值 (上述範例中的第一個) 多載會優於 by 唯讀參考版本。</span><span class="sxs-lookup"><span data-stu-id="b0c06-171">Now, the by value (first in the preceding example) overload is better than the by readonly reference version.</span></span> <span data-ttu-id="b0c06-172">若要呼叫具有唯讀參考引數的版本，您呼叫方法時必須包含 `in` 修飾詞。</span><span class="sxs-lookup"><span data-stu-id="b0c06-172">To call the version with the readonly reference argument, you must include the `in` modifier when calling the method.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b912d-173">這已實作為錯誤 (Bug) 修正。</span><span class="sxs-lookup"><span data-stu-id="b912d-173">This was implemented as a bug fix.</span></span> <span data-ttu-id="b912d-174">即使將語言版本設定為 "7.2"，這也不再模棱兩可。</span><span class="sxs-lookup"><span data-stu-id="b912d-174">This no longer is ambiguous even with the language version set to "7.2".</span></span>
+> <span data-ttu-id="b0c06-173">這已實作為錯誤 (Bug) 修正。</span><span class="sxs-lookup"><span data-stu-id="b0c06-173">This was implemented as a bug fix.</span></span> <span data-ttu-id="b0c06-174">即使將語言版本設定為 "7.2"，這也不再模棱兩可。</span><span class="sxs-lookup"><span data-stu-id="b0c06-174">This no longer is ambiguous even with the language version set to "7.2".</span></span>
 
-<span data-ttu-id="b912d-175">如需詳細資訊，請參閱有關 [`in` 參數修飾詞](../language-reference/keywords/in-parameter-modifier.md)的文章。</span><span class="sxs-lookup"><span data-stu-id="b912d-175">For more information, see the article on the [`in` parameter modifier](../language-reference/keywords/in-parameter-modifier.md).</span></span>
+<span data-ttu-id="b0c06-175">如需詳細資訊，請參閱有關 [`in` 參數修飾詞](../language-reference/keywords/in-parameter-modifier.md)的文章。</span><span class="sxs-lookup"><span data-stu-id="b0c06-175">For more information, see the article on the [`in` parameter modifier](../language-reference/keywords/in-parameter-modifier.md).</span></span>
 
-### <a name="extend-expression-variables-in-initializers"></a><span data-ttu-id="b912d-176">在初始設定式中擴充運算式變數</span><span class="sxs-lookup"><span data-stu-id="b912d-176">Extend expression variables in initializers</span></span>
+### <a name="extend-expression-variables-in-initializers"></a><span data-ttu-id="b0c06-176">在初始設定式中擴充運算式變數</span><span class="sxs-lookup"><span data-stu-id="b0c06-176">Extend expression variables in initializers</span></span>
 
-<span data-ttu-id="b912d-177">加入 C# 7.0 中以允許 `out` 變數宣告的語法已經擴充，以包含欄位初始設定式、屬性初始設定式、建構函式初始設定式和查詢子句。</span><span class="sxs-lookup"><span data-stu-id="b912d-177">The syntax added in C# 7.0 to allow `out` variable declarations has been extended to include field initializers, property initializers, constructor initializers, and query clauses.</span></span> <span data-ttu-id="b912d-178">它讓您能執行如下列範例的程式碼：</span><span class="sxs-lookup"><span data-stu-id="b912d-178">It enables code such as the following example:</span></span>
+<span data-ttu-id="b0c06-177">加入 C# 7.0 中以允許 `out` 變數宣告的語法已經擴充，以包含欄位初始設定式、屬性初始設定式、建構函式初始設定式和查詢子句。</span><span class="sxs-lookup"><span data-stu-id="b0c06-177">The syntax added in C# 7.0 to allow `out` variable declarations has been extended to include field initializers, property initializers, constructor initializers, and query clauses.</span></span> <span data-ttu-id="b0c06-178">它讓您能執行如下列範例的程式碼：</span><span class="sxs-lookup"><span data-stu-id="b0c06-178">It enables code such as the following example:</span></span>
 
 ```csharp
 public class B
@@ -187,28 +187,28 @@ public class D : B
 }
 ```
 
-### <a name="improved-overload-candidates"></a><span data-ttu-id="b912d-179">改進的多載候選項目</span><span class="sxs-lookup"><span data-stu-id="b912d-179">Improved overload candidates</span></span>
+### <a name="improved-overload-candidates"></a><span data-ttu-id="b0c06-179">改進的多載候選項目</span><span class="sxs-lookup"><span data-stu-id="b0c06-179">Improved overload candidates</span></span>
 
-<span data-ttu-id="b912d-180">在每個版本中，多載解析規則都會更新，以解決模稜兩可的方法引動過程具有「明確」選項的情況。</span><span class="sxs-lookup"><span data-stu-id="b912d-180">In every release, the overload resolution rules get updated to address situations where ambiguous method invocations have an "obvious" choice.</span></span> <span data-ttu-id="b912d-181">此版本新增三個新的規則，以協助編譯器挑選明確的選項：</span><span class="sxs-lookup"><span data-stu-id="b912d-181">This release adds three new rules to help the compiler pick the obvious choice:</span></span>
+<span data-ttu-id="b0c06-180">在每個版本中，多載解析規則都會更新，以解決模稜兩可的方法引動過程具有「明確」選項的情況。</span><span class="sxs-lookup"><span data-stu-id="b0c06-180">In every release, the overload resolution rules get updated to address situations where ambiguous method invocations have an "obvious" choice.</span></span> <span data-ttu-id="b0c06-181">此版本新增三個新的規則，以協助編譯器挑選明確的選項：</span><span class="sxs-lookup"><span data-stu-id="b0c06-181">This release adds three new rules to help the compiler pick the obvious choice:</span></span>
 
-1. <span data-ttu-id="b912d-182">當方法群組同時包含執行個體和靜態成員時，如果在沒有執行個體接收者或內容的情況下叫用方法，編譯器會捨棄執行個體成員。</span><span class="sxs-lookup"><span data-stu-id="b912d-182">When a method group contains both instance and static members, the compiler discards the instance members if the method was invoked without an instance receiver or context.</span></span> <span data-ttu-id="b912d-183">如果使用執行個體接收者叫用方法，編譯器就會捨棄靜態成員。</span><span class="sxs-lookup"><span data-stu-id="b912d-183">The compiler discards the static members if the method was invoked with an instance receiver.</span></span> <span data-ttu-id="b912d-184">沒有接收者時，編譯器只會在靜態內容中包含靜態成員，否則將同時包含靜態成員和執行個體成員。</span><span class="sxs-lookup"><span data-stu-id="b912d-184">When there is no receiver, the compiler includes only static members in a static context, otherwise both static and instance members.</span></span> <span data-ttu-id="b912d-185">當無法確定接收者是執行個體或型別時，編譯器會包含兩者。</span><span class="sxs-lookup"><span data-stu-id="b912d-185">When the receiver is ambiguously an instance or type, the compiler includes both.</span></span> <span data-ttu-id="b912d-186">無法使用隱含 `this` 執行個體接收者的靜態內容，包括未定義 `this` 的成員主體 (例如靜態成員)，以及不能使用 `this` 的位置 (例如欄位初始設定式和建構函式初始設定式)。</span><span class="sxs-lookup"><span data-stu-id="b912d-186">A static context, where an implicit `this` instance receiver cannot be used, includes the body of members where no `this` is defined, such as static members, as well as places where `this` cannot be used, such as field initializers and constructor-initializers.</span></span>
-1. <span data-ttu-id="b912d-187">當方法群組包含某些型別引數不滿足其限制式的泛型方法時，這些成員將會從候選集合中移除。</span><span class="sxs-lookup"><span data-stu-id="b912d-187">When a method group contains some generic methods whose type arguments do not satisfy their constraints, these members are removed from the candidate set.</span></span>
-1. <span data-ttu-id="b912d-188">針對方法群組轉換，其傳回型別與委派的傳回型別不符合的候選方法，將會從集合中移除。</span><span class="sxs-lookup"><span data-stu-id="b912d-188">For a method group conversion, candidate methods whose return type doesn't match up with the delegate's return type are removed from the set.</span></span>
+1. <span data-ttu-id="b0c06-182">當方法群組同時包含執行個體和靜態成員時，如果在沒有執行個體接收者或內容的情況下叫用方法，編譯器會捨棄執行個體成員。</span><span class="sxs-lookup"><span data-stu-id="b0c06-182">When a method group contains both instance and static members, the compiler discards the instance members if the method was invoked without an instance receiver or context.</span></span> <span data-ttu-id="b0c06-183">如果使用執行個體接收者叫用方法，編譯器就會捨棄靜態成員。</span><span class="sxs-lookup"><span data-stu-id="b0c06-183">The compiler discards the static members if the method was invoked with an instance receiver.</span></span> <span data-ttu-id="b0c06-184">沒有接收者時，編譯器只會在靜態內容中包含靜態成員，否則將同時包含靜態成員和執行個體成員。</span><span class="sxs-lookup"><span data-stu-id="b0c06-184">When there is no receiver, the compiler includes only static members in a static context, otherwise both static and instance members.</span></span> <span data-ttu-id="b0c06-185">當無法確定接收者是執行個體或型別時，編譯器會包含兩者。</span><span class="sxs-lookup"><span data-stu-id="b0c06-185">When the receiver is ambiguously an instance or type, the compiler includes both.</span></span> <span data-ttu-id="b0c06-186">無法使用隱含 `this` 執行個體接收者的靜態內容，包括未定義 `this` 的成員主體 (例如靜態成員)，以及不能使用 `this` 的位置 (例如欄位初始設定式和建構函式初始設定式)。</span><span class="sxs-lookup"><span data-stu-id="b0c06-186">A static context, where an implicit `this` instance receiver cannot be used, includes the body of members where no `this` is defined, such as static members, as well as places where `this` cannot be used, such as field initializers and constructor-initializers.</span></span>
+1. <span data-ttu-id="b0c06-187">當方法群組包含某些型別引數不滿足其限制式的泛型方法時，這些成員將會從候選集合中移除。</span><span class="sxs-lookup"><span data-stu-id="b0c06-187">When a method group contains some generic methods whose type arguments do not satisfy their constraints, these members are removed from the candidate set.</span></span>
+1. <span data-ttu-id="b0c06-188">針對方法群組轉換，其傳回型別與委派的傳回型別不符合的候選方法，將會從集合中移除。</span><span class="sxs-lookup"><span data-stu-id="b0c06-188">For a method group conversion, candidate methods whose return type doesn't match up with the delegate's return type are removed from the set.</span></span>
 
-<span data-ttu-id="b912d-189">您只會注意到此變更，因為若確定何種方法較佳，就會發現模稜兩可的方法多載會有較少的編譯器錯誤。</span><span class="sxs-lookup"><span data-stu-id="b912d-189">You'll only notice this change because you'll find fewer compiler errors for ambiguous method overloads when you are sure which method is better.</span></span>
+<span data-ttu-id="b0c06-189">您只會注意到此變更，因為若確定何種方法較佳，就會發現模稜兩可的方法多載會有較少的編譯器錯誤。</span><span class="sxs-lookup"><span data-stu-id="b0c06-189">You'll only notice this change because you'll find fewer compiler errors for ambiguous method overloads when you are sure which method is better.</span></span>
 
-## <a name="new-compiler-options"></a><span data-ttu-id="b912d-190">新的編譯器選項</span><span class="sxs-lookup"><span data-stu-id="b912d-190">New compiler options</span></span>
+## <a name="new-compiler-options"></a><span data-ttu-id="b0c06-190">新的編譯器選項</span><span class="sxs-lookup"><span data-stu-id="b0c06-190">New compiler options</span></span>
 
-<span data-ttu-id="b912d-191">新的編譯器選項支援 C# 程式的新組建和 DevOps 案例。</span><span class="sxs-lookup"><span data-stu-id="b912d-191">New compiler options support new build and DevOps scenarios for C# programs.</span></span>
+<span data-ttu-id="b0c06-191">新的編譯器選項支援 C# 程式的新組建和 DevOps 案例。</span><span class="sxs-lookup"><span data-stu-id="b0c06-191">New compiler options support new build and DevOps scenarios for C# programs.</span></span>
 
-### <a name="public-or-open-source-signing"></a><span data-ttu-id="b912d-192">公用或開放原始碼簽署</span><span class="sxs-lookup"><span data-stu-id="b912d-192">Public or Open Source signing</span></span>
+### <a name="public-or-open-source-signing"></a><span data-ttu-id="b0c06-192">公用或開放原始碼簽署</span><span class="sxs-lookup"><span data-stu-id="b0c06-192">Public or Open Source signing</span></span>
 
-<span data-ttu-id="b912d-193">`-publicsign` 編譯器選項會指示編譯器使用公開金鑰簽署組件。</span><span class="sxs-lookup"><span data-stu-id="b912d-193">The `-publicsign` compiler option instructs the compiler to sign the assembly using a public key.</span></span> <span data-ttu-id="b912d-194">該組件標示為已簽署，但簽章取自公開金鑰。</span><span class="sxs-lookup"><span data-stu-id="b912d-194">The assembly is marked as signed, but the signature is taken from the public key.</span></span> <span data-ttu-id="b912d-195">此選項可讓您使用公開金鑰，從開放原始碼專案建置簽署的組件。</span><span class="sxs-lookup"><span data-stu-id="b912d-195">This option enables you to build signed assemblies from open-source projects using a public key.</span></span>
+<span data-ttu-id="b0c06-193">`-publicsign` 編譯器選項會指示編譯器使用公開金鑰簽署組件。</span><span class="sxs-lookup"><span data-stu-id="b0c06-193">The `-publicsign` compiler option instructs the compiler to sign the assembly using a public key.</span></span> <span data-ttu-id="b0c06-194">該組件標示為已簽署，但簽章取自公開金鑰。</span><span class="sxs-lookup"><span data-stu-id="b0c06-194">The assembly is marked as signed, but the signature is taken from the public key.</span></span> <span data-ttu-id="b0c06-195">此選項可讓您使用公開金鑰，從開放原始碼專案建置簽署的組件。</span><span class="sxs-lookup"><span data-stu-id="b0c06-195">This option enables you to build signed assemblies from open-source projects using a public key.</span></span>
 
-<span data-ttu-id="b912d-196">如需詳細資訊，請參閱 [-publicsign 編譯器選項](../language-reference/compiler-options/publicsign-compiler-option.md)一文。</span><span class="sxs-lookup"><span data-stu-id="b912d-196">For more information, see the [-publicsign compiler option](../language-reference/compiler-options/publicsign-compiler-option.md) article.</span></span>
+<span data-ttu-id="b0c06-196">如需詳細資訊，請參閱 [-publicsign 編譯器選項](../language-reference/compiler-options/publicsign-compiler-option.md)一文。</span><span class="sxs-lookup"><span data-stu-id="b0c06-196">For more information, see the [-publicsign compiler option](../language-reference/compiler-options/publicsign-compiler-option.md) article.</span></span>
 
-### <a name="pathmap"></a><span data-ttu-id="b912d-197">pathmap</span><span class="sxs-lookup"><span data-stu-id="b912d-197">pathmap</span></span>
+### <a name="pathmap"></a><span data-ttu-id="b0c06-197">pathmap</span><span class="sxs-lookup"><span data-stu-id="b0c06-197">pathmap</span></span>
 
-<span data-ttu-id="b912d-198">`-pathmap` 編譯器選項會指示編譯器使用對應的來源路徑取代建置環境的來源路徑。</span><span class="sxs-lookup"><span data-stu-id="b912d-198">The `-pathmap` compiler option instructs the compiler to replace source paths from the build environment with mapped source paths.</span></span> <span data-ttu-id="b912d-199">`-pathmap` 選項控制編譯器寫入 PDB 檔案或 <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> 的來源路徑。</span><span class="sxs-lookup"><span data-stu-id="b912d-199">The `-pathmap` option controls the source path written by the compiler to PDB files or for the <xref:System.Runtime.CompilerServices.CallerFilePathAttribute>.</span></span>
+<span data-ttu-id="b0c06-198">`-pathmap` 編譯器選項會指示編譯器使用對應的來源路徑取代建置環境的來源路徑。</span><span class="sxs-lookup"><span data-stu-id="b0c06-198">The `-pathmap` compiler option instructs the compiler to replace source paths from the build environment with mapped source paths.</span></span> <span data-ttu-id="b0c06-199">`-pathmap` 選項控制編譯器寫入 PDB 檔案或 <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> 的來源路徑。</span><span class="sxs-lookup"><span data-stu-id="b0c06-199">The `-pathmap` option controls the source path written by the compiler to PDB files or for the <xref:System.Runtime.CompilerServices.CallerFilePathAttribute>.</span></span>
 
-<span data-ttu-id="b912d-200">如需詳細資訊，請參閱 [-pathmap 編譯器選項](../language-reference/compiler-options/pathmap-compiler-option.md)一文。</span><span class="sxs-lookup"><span data-stu-id="b912d-200">For more information, see the [-pathmap compiler option](../language-reference/compiler-options/pathmap-compiler-option.md) article.</span></span>
+<span data-ttu-id="b0c06-200">如需詳細資訊，請參閱 [-pathmap 編譯器選項](../language-reference/compiler-options/pathmap-compiler-option.md)一文。</span><span class="sxs-lookup"><span data-stu-id="b0c06-200">For more information, see the [-pathmap compiler option](../language-reference/compiler-options/pathmap-compiler-option.md) article.</span></span>

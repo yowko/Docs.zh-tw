@@ -2,61 +2,57 @@
 title: 作法：使用反映查詢組件的中繼資料 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: 52b961c5a016754964285221e252965ff89efd26
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 7c209e2524ea6931e0d8f0084a32ea6921adc26e
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485234"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025355"
 ---
-# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a><span data-ttu-id="4529e-102">作法：使用反映查詢組件的中繼資料 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="4529e-102">How to: Query An Assembly's Metadata with Reflection (LINQ) (C#)</span></span>
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a><span data-ttu-id="e32f1-102">作法：使用反映查詢組件的中繼資料 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="e32f1-102">How to: Query An Assembly's Metadata with Reflection (LINQ) (C#)</span></span>
 
-<span data-ttu-id="4529e-103">.NET Framework 類別庫的反映 API 可以用來檢查 .NET 組件中的中繼資料，以及建立該組件中之類型、類型成員、參數等項目的集合。</span><span class="sxs-lookup"><span data-stu-id="4529e-103">The .NET Framework class library reflection APIs can be used to examine the metadata in a .NET assembly and create collections of types, type members, parameters, and so on that are in that assembly.</span></span> <span data-ttu-id="4529e-104">因為這些集合支援泛型 `IEnumerable` 介面，所以可以使用 LINQ 進行查詢。</span><span class="sxs-lookup"><span data-stu-id="4529e-104">Because these collections support the generic `IEnumerable` interface, they can be queried by using LINQ.</span></span>  
+<span data-ttu-id="e32f1-103">.NET Framework 類別庫的反映 API 可以用來檢查 .NET 組件中的中繼資料，以及建立該組件中之類型、類型成員、參數等項目的集合。</span><span class="sxs-lookup"><span data-stu-id="e32f1-103">The .NET Framework class library reflection APIs can be used to examine the metadata in a .NET assembly and create collections of types, type members, parameters, and so on that are in that assembly.</span></span> <span data-ttu-id="e32f1-104">因為這些集合支援泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面，所以可以使用 LINQ 進行查詢。</span><span class="sxs-lookup"><span data-stu-id="e32f1-104">Because these collections support the generic <xref:System.Collections.Generic.IEnumerable%601> interface, they can be queried by using LINQ.</span></span>  
   
-<span data-ttu-id="4529e-105">下列範例示範如何搭配使用 LINQ 與反射，來擷取符合所指定搜尋準則之方法的特定中繼資料。</span><span class="sxs-lookup"><span data-stu-id="4529e-105">The following example shows how LINQ can be used with reflection to retrieve specific metadata about methods that match a specified search criterion.</span></span> <span data-ttu-id="4529e-106">在此情況下，查詢會尋找組件中所有方法的名稱，而這些方法會傳回陣列這類可列舉類型。</span><span class="sxs-lookup"><span data-stu-id="4529e-106">In this case, the query will find the names of all the methods in the assembly that return enumerable types such as arrays.</span></span>  
+<span data-ttu-id="e32f1-105">下列範例示範如何搭配使用 LINQ 與反射，來擷取符合所指定搜尋準則之方法的特定中繼資料。</span><span class="sxs-lookup"><span data-stu-id="e32f1-105">The following example shows how LINQ can be used with reflection to retrieve specific metadata about methods that match a specified search criterion.</span></span> <span data-ttu-id="e32f1-106">在此情況下，查詢會尋找組件中所有方法的名稱，而這些方法會傳回陣列這類可列舉類型。</span><span class="sxs-lookup"><span data-stu-id="e32f1-106">In this case, the query will find the names of all the methods in the assembly that return enumerable types such as arrays.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4529e-107">範例</span><span class="sxs-lookup"><span data-stu-id="4529e-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e32f1-107">範例</span><span class="sxs-lookup"><span data-stu-id="e32f1-107">Example</span></span>  
   
 ```csharp  
+using System;
+using System.Linq;
 using System.Reflection;  
-using System.IO;  
-namespace LINQReflection  
-{  
-    class ReflectionHowTO  
-    {  
-        static void Main(string[] args)  
-        {  
-            Assembly assembly = Assembly.Load("System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken= b77a5c561934e089");  
-            var pubTypesQuery = from type in assembly.GetTypes()  
-                        where type.IsPublic  
-                            from method in type.GetMethods()  
-                            where method.ReturnType.IsArray == true   
-                                || ( method.ReturnType.GetInterface(  
-                                    typeof(System.Collections.Generic.IEnumerable<>).FullName ) != null  
-                                && method.ReturnType.FullName != "System.String" )  
-                            group method.ToString() by type.ToString();  
-  
-            foreach (var groupOfMethods in pubTypesQuery)  
-            {  
-                Console.WriteLine("Type: {0}", groupOfMethods.Key);  
-                foreach (var method in groupOfMethods)  
-                {  
-                    Console.WriteLine("  {0}", method);  
-                }  
-            }  
-  
-            Console.WriteLine("Press any key to exit");  
-            Console.ReadKey();  
-        }  
-    }    
-}  
-```  
-  
- <span data-ttu-id="4529e-108">這個範例會使用 <xref:System.Reflection.Assembly.GetTypes%2A> 方法，以傳回所指定組件中的類型陣列。</span><span class="sxs-lookup"><span data-stu-id="4529e-108">The example uses the <xref:System.Reflection.Assembly.GetTypes%2A> method to return an array of types in the specified assembly.</span></span> <span data-ttu-id="4529e-109">會套用 [where](../../../../csharp/language-reference/keywords/where-clause.md) 篩選，只傳回公用類型。</span><span class="sxs-lookup"><span data-stu-id="4529e-109">The [where](../../../../csharp/language-reference/keywords/where-clause.md) filter is applied so that only public types are returned.</span></span> <span data-ttu-id="4529e-110">對於每一個公用類型，會使用從 <xref:System.Type.GetMethods%2A> 呼叫傳回的 <xref:System.Reflection.MethodInfo> 陣列來產生子查詢。</span><span class="sxs-lookup"><span data-stu-id="4529e-110">For each public type, a subquery is generated by using the <xref:System.Reflection.MethodInfo> array that is returned from the <xref:System.Type.GetMethods%2A> call.</span></span> <span data-ttu-id="4529e-111">這些結果會進行篩選，僅傳回其傳回型別為陣列的方法，或為實作 <xref:System.Collections.Generic.IEnumerable%601> 之類型的方法。</span><span class="sxs-lookup"><span data-stu-id="4529e-111">These results are filtered to return only those methods whose return type is an array or else a type that implements <xref:System.Collections.Generic.IEnumerable%601>.</span></span> <span data-ttu-id="4529e-112">最後，會使用類型名稱作為索引鍵來群組這些結果。</span><span class="sxs-lookup"><span data-stu-id="4529e-112">Finally, these results are grouped by using the type name as a key.</span></span>  
-  
-## <a name="compiling-the-code"></a><span data-ttu-id="4529e-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="4529e-113">Compiling the Code</span></span>  
- <span data-ttu-id="4529e-114">建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。</span><span class="sxs-lookup"><span data-stu-id="4529e-114">Create a C# console application project with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="4529e-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4529e-115">See also</span></span>
 
-- [<span data-ttu-id="4529e-116">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="4529e-116">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+class ReflectionHowTO  
+{  
+    static void Main()  
+    {  
+        Assembly assembly = Assembly.Load("System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken= b77a5c561934e089");  
+        var pubTypesQuery = from type in assembly.GetTypes()  
+                    where type.IsPublic  
+                        from method in type.GetMethods()  
+                        where method.ReturnType.IsArray == true 
+                            || ( method.ReturnType.GetInterface(  
+                                typeof(System.Collections.Generic.IEnumerable<>).FullName ) != null  
+                            && method.ReturnType.FullName != "System.String" )  
+                        group method.ToString() by type.ToString();  
+
+        foreach (var groupOfMethods in pubTypesQuery)  
+        {  
+            Console.WriteLine("Type: {0}", groupOfMethods.Key);  
+            foreach (var method in groupOfMethods)  
+            {  
+                Console.WriteLine("  {0}", method);  
+            }  
+        }  
+
+        Console.WriteLine("Press any key to exit... ");  
+        Console.ReadKey();  
+    }  
+}
+```  
+
+<span data-ttu-id="e32f1-108">這個範例會使用 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> 方法，以傳回所指定組件中的類型陣列。</span><span class="sxs-lookup"><span data-stu-id="e32f1-108">The example uses the <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> method to return an array of types in the specified assembly.</span></span> <span data-ttu-id="e32f1-109">會套用 [where](../../../../csharp/language-reference/keywords/where-clause.md) 篩選，只傳回公用類型。</span><span class="sxs-lookup"><span data-stu-id="e32f1-109">The [where](../../../../csharp/language-reference/keywords/where-clause.md) filter is applied so that only public types are returned.</span></span> <span data-ttu-id="e32f1-110">對於每一個公用類型，會使用從 <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> 呼叫傳回的 <xref:System.Reflection.MethodInfo> 陣列來產生子查詢。</span><span class="sxs-lookup"><span data-stu-id="e32f1-110">For each public type, a subquery is generated by using the <xref:System.Reflection.MethodInfo> array that is returned from the <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> call.</span></span> <span data-ttu-id="e32f1-111">這些結果會進行篩選，僅傳回其傳回型別為陣列的方法，或為實作 <xref:System.Collections.Generic.IEnumerable%601> 之類型的方法。</span><span class="sxs-lookup"><span data-stu-id="e32f1-111">These results are filtered to return only those methods whose return type is an array or else a type that implements <xref:System.Collections.Generic.IEnumerable%601>.</span></span> <span data-ttu-id="e32f1-112">最後，會使用類型名稱作為索引鍵來群組這些結果。</span><span class="sxs-lookup"><span data-stu-id="e32f1-112">Finally, these results are grouped by using the type name as a key.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="e32f1-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e32f1-113">See also</span></span>
+
+- [<span data-ttu-id="e32f1-114">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="e32f1-114">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
