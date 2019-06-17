@@ -1,19 +1,19 @@
 ---
 title: 使用 Docker 和 Microsoft Azure 設計和開發容器化應用程式
-description: 讓我們進入 Docker 應用程式生命週期中的開發/設計工作負載。
+description: 讓我們深入討論 Docker 應用程式生命週期中的開發/設計工作負載。
 ms.date: 02/15/2019
 ms.openlocfilehash: ad7f635feab21cd6e6b31c0b5d43fb2598ffa16c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65641124"
 ---
 # <a name="designing-and-developing-containerized-apps-using-docker-and-microsoft-azure"></a>使用 Docker 和 Microsoft Azure 設計和開發容器化應用程式
 
-*願景：設計和開發記住使用 Docker 的可調整解決方案。*
+*願景：記住使用 Docker 來設計和開發可擴充解決方案。*
 
-*有許多絕佳適合使用案例，適用於容器，不只是針對微服務導向架構，但也當您只需要一般服務或 web 應用程式執行，而且您想要減少開發和生產環境之間的摩擦部署。*
+*有許多十分適合容器的使用案例，且它們不只是適用於微服務導向的架構，也適用於當您僅執行一般服務或 Web 應用程式並想要減少開發與生產環境部署之間的摩擦時。*
 
 >[!div class="step-by-step"]
 >[上一頁](../Microsoft-platform-tools-containerized-apps/index.md)
