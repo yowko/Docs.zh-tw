@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 7c83b4819975f63c6fc19e5c4783603f37d2a885
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bfd9f3f559e4780b910a2e5a3430b08a2183ee3
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700607"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833495"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>固定大小緩衝區 (C# 程式設計手冊)
 
@@ -40,7 +40,7 @@ private fixed char name[30];
 另一個常見的固定大小陣列是 [bool](../../language-reference/keywords/bool.md) 陣列。 `bool` 陣列中的元素大小一律為一個位元組。 `bool` 陣列不適用於建立位元陣列或緩衝區。
 
 > [!NOTE]
-> 除了使用 [stackalloc](../../language-reference/keywords/stackalloc.md) 所建立的記憶體以外，C# 編譯器和 Common Language Runtime (CLR) 不會執行任何安全性緩衝區溢位檢查。 請與所有不安全的程式碼一樣小心使用。
+> 除了使用 [stackalloc](../../language-reference/operators/stackalloc.md) 所建立的記憶體以外，C# 編譯器和 Common Language Runtime (CLR) 不會執行任何安全性緩衝區溢位檢查。 請與所有不安全的程式碼一樣小心使用。
 
 不安全的緩衝區與一般陣列的差異如下：
 

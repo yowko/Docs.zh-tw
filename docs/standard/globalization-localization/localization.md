@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbe7a2c4e920021c925a13ae8873124bfdb6fd67
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 79ec24d16b43bd8e1312b3425e618adf163edd24
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441940"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834016"
 ---
 # <a name="localization"></a>當地語系化
 
@@ -31,7 +31,7 @@ ms.locfileid: "56441940"
 
 針對每個當地語系化版本的應用程式，加入新的附屬組件，其中包含轉譯成適用於目標文化特性之語言的當地語系化使用者介面區塊。 所有文化特性的程式碼區塊應該維持不變。 當地語系化版本的使用者介面區塊結合程式碼區塊之後，會產生您應用程式的當地語系化版本。
 
-[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供的 Windows Forms 資源編輯器 (Winres.exe) 可讓您針對目標文化特性，快速當地語系化 Windows Forms。 如需有關使用此工具的相關資訊，請參閱 [Winres.exe (Windows Forms 資源編輯器)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)。
+Windows Software Development Kit (SDK) 提供 Windows Forms 資源編輯器 (Winres.exe)，讓您可以快速地將 Windows Forms 當地語系化成目標文化特性。 如需有關使用此工具的相關資訊，請參閱 [Winres.exe (Windows Forms 資源編輯器)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)。
 
 ## <a name="see-also"></a>另請參閱
 

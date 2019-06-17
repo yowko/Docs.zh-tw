@@ -3,12 +3,12 @@ title: 撰寫安全且有效率的 C# 程式碼
 description: 最近對 C# 語言的增強功能，可讓您撰寫可驗證的安全程式碼，獲得先前使用不安全程式碼時的效能。
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: 259ce0b9405dfd74adf51a9cc046ffe3f08d242f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 73ad7a84d2ad47f0e0242825d250247ffb39928e
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753896"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832936"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>撰寫安全且有效率的 C# 程式碼
 
@@ -173,7 +173,7 @@ public struct Point3D
 
 [!code-csharp[InArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
-`Point3D` 結構「不是」唯讀結構。 此方法的主體中有六個不同屬性存取呼叫。 在第一次檢查中，您可能會認為這些存取都是安全的。 畢竟，`get` 存取子應該不會修改物件的狀態。 但是沒有任何語言規則強制該行為。 它只是一個常見的慣例。 任何型別都可實作修改內部狀態的 `get` 存取子。 若沒有任何語言保證，編譯器必須先建立引數的暫時複本，再呼叫任何成員。 暫存位置會在堆疊上建立，引數的值則會複製到暫存位置，而該值則會針對每個成員存取，作為 `this` 引數複製到堆疊。 在許多情況下，當引數型別並非 `readonly struct` 時，這些複本會危害效能，使得以值型式傳遞的速度高於以唯讀參考型式傳遞。
+`Point3D` 結構「不是」  唯讀結構。 此方法的主體中有六個不同屬性存取呼叫。 在第一次檢查中，您可能會認為這些存取都是安全的。 畢竟，`get` 存取子應該不會修改物件的狀態。 但是沒有任何語言規則強制該行為。 它只是一個常見的慣例。 任何型別都可實作修改內部狀態的 `get` 存取子。 若沒有任何語言保證，編譯器必須先建立引數的暫時複本，再呼叫任何成員。 暫存位置會在堆疊上建立，引數的值則會複製到暫存位置，而該值則會針對每個成員存取，作為 `this` 引數複製到堆疊。 在許多情況下，當引數型別並非 `readonly struct` 時，這些複本會危害效能，使得以值型式傳遞的速度高於以唯讀參考型式傳遞。
 
 相反的，若距離計算使用固定結構 (`ReadonlyPoint3D`)，便不需要暫存物件：
 
@@ -189,7 +189,7 @@ public struct Point3D
 
 另一項相關語言功能是可宣告實值型別必須限制在單一堆疊框架的能力。 此限制可讓編譯器進行幾項最佳化。 此功能的主要動機是 <xref:System.Span%601> 及相關的結構。 您可以透過使用新的及已更新 .NET API，利用 <xref:System.Span%601> 型別以透過這些增強功能來改善效能。
 
-當您使用以 [`stackalloc`](language-reference/keywords/stackalloc.md) 建立的記憶體，或使用來自 Interop API 的記憶體時，可能會有類似需求。 您可依照那些需求定義自己的 `ref struct` 類型。
+當您使用以 [`stackalloc`](language-reference/operators/stackalloc.md) 建立的記憶體，或使用來自 Interop API 的記憶體時，可能會有類似需求。 您可依照那些需求定義自己的 `ref struct` 類型。
 
 ## <a name="readonly-ref-struct-type"></a>`readonly ref struct` 類型
 

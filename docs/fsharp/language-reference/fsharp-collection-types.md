@@ -2,12 +2,12 @@
 title: F# 集合類型
 description: 深入了解F#集合型別和它們之間的差異從.NET Framework 中的集合型別。
 ms.date: 05/16/2016
-ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b370d850deaacc961dff9515ffa8c20634af4ed6
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996810"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041720"
 ---
 # <a name="f-collection-types"></a>F# 集合類型
 
@@ -83,6 +83,7 @@ ms.locfileid: "61996810"
 |iteri|O(N)|O(N)|O(N)|-|-|指定的函式套用至集合的每個項目。 傳遞至函式的整數表示的項目索引。|
 |iteri2|O(N)|O(N)|-|-|-|適用於一組取自比對兩個陣列中的索引的項目指定的函式。 傳遞至函式的整數表示項目的索引。 兩個陣列必須具有相同的長度。|
 |iter2|O(N)|O(N)|O(N)|-|-|適用於一組取自比對兩個陣列中的索引的項目指定的函式。 兩個陣列必須具有相同的長度。|
+|last|O(1)|O(N)|O(N)|-|-|適用於集合中傳回最後一個項目。|
 |長度|O(1)|O(N)|O(N)|-|-|傳回集合中的項目數目。|
 |map|O(N)|O(N)|O(1)|-|-|建置的集合，其項目是將指定的函式套用至陣列中的每個元素的結果。|
 |map2|O(N)|O(N)|O(1)|-|-|建置的集合，其項目是將指定的函式套用至兩個集合的對應項目成對的結果。 這兩個輸入的陣列必須具有相同的長度。|

@@ -2,12 +2,12 @@
 title: 字串函式
 ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
-ms.openlocfilehash: 6da257cad90232426c71221dfd9d418265479bbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3eb70151628e32f6ad0a87be8ff0cd071ae89235
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879111"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041603"
 ---
 # <a name="string-functions"></a>字串函式
 .NET Framework Data Provider for SQL Server (SqlClient) 提供了 `String` 函式，這些函式會針對輸入 `String` 執行作業，並傳回 `String` 或數值結果。 這些函式位於您使用 SqlClient 時可以使用的 SqlServer 命名空間 (Namespace) 內。 提供者命名空間屬性可以讓 Entity Framework 了解此提供者對特定建構 (例如型別和函式) 所使用的前置詞。  
@@ -27,7 +27,7 @@ ms.locfileid: "61879111"
 |`NCHAR(expression)`|依照 Unicode 標準所定義，傳回含指定整數碼的 Unicode `String`。<br /><br /> **引數**<br /><br /> `expression`：`Int32`。<br /><br /> **傳回值**<br /><br /> Unicode `String`。<br /><br /> **範例**<br /><br /> `SqlServer.NCHAR(65)`|  
 |`PATINDEX('%pattern%', expression)`|傳回某個模式在指定之 `String` 運算式中第一次出現的開始位置。<br /><br /> **引數**<br /><br /> `'%pattern%'`：ASCII 或 Unicode `String` 型別。 此處可以使用萬用字元，但是模式前後都必須加上 % 字元 (除非要搜尋第一個或最後一個字元)。<br /><br /> `expression`：要搜尋指定之模式的 ASCII 或 Unicode `String`。<br /><br /> **傳回值**<br /><br /> `Int32`。<br /><br /> **範例**<br /><br /> `SqlServer.PATINDEX('abc', 'ab')`|  
 |`QUOTENAME('char_string' [, 'quote_char'])`|傳回 Unicode `String`，且附加分隔符號，讓輸入字串成為有效的 SQL Server 2005 分隔識別碼。<br /><br /> **引數**<br /><br /> `char_string`：Unicode `String`。<br /><br /> `quote_char`：用來作為分隔符號的單字元字串。 它可以是單引號 ( ' )、左或右方括號 ( [ ] )，或雙引號 ( " )。 如果未指定 `quote_char`，就會使用方括號。<br /><br /> **傳回值**<br /><br /> Unicode `String`。<br /><br /> **範例**<br /><br /> `SqlServer.QUOTENAME('abc[]def')`|  
-|`REPLACE(expression1, expression2, expression3)`|以指定次數重複字元運算式。<br /><br /> **引數**<br /><br /> `expression1`：要搜尋的字串運算式。 string_expression1 可以是 Unicode 或是 ASCII 字串型別。<br /><br /> `expression2`: 要尋找的子字串。 string_expression2 可以是 Unicode 或是 ASCII 字串型別。<br /><br /> `expression3`；取代字串。 string_expression3 可以是 Unicode 或是 ASCII 字串型別。<br /><br /> **範例**<br /><br /> `SqlServer.REPLACE('aabbcc', 'bc', 'zz')`|  
+|`REPLACE(expression1, expression2, expression3)`|另一個的字元運算式中取代的字元運算式。<br /><br /> **引數**<br /><br /> `expression1`：要搜尋的字串運算式。 `expression1` 可以是 Unicode 或 ASCII String 型別。<br /><br /> `expression2`: 要尋找的子字串。 `expression2` 可以是 Unicode 或 ASCII String 型別。<br /><br /> `expression3`；取代字串。 `expression3` 可以是 Unicode 或 ASCII String 型別。<br /><br /> **範例**<br /><br /> `SqlServer.REPLACE('aabbcc', 'bc', 'zz')`|  
 |`REPLICATE(char_expression, int_expression)`|以指定次數重複字元運算式。<br /><br /> **引數**<br /><br /> `char_expression`：Unicode 或 ASCII `String` 型別。<br /><br /> `int_expression`：`Int64` (在 SQL Server 2000 中不支援) 或 `Int32`。<br /><br /> **傳回值**<br /><br /> Unicode 或 ASCII `String` 型別。<br /><br /> **範例**<br /><br /> `SqlServer.REPLICATE('aa',2)`|  
 |`REVERSE(expression)`|傳回字元位置與輸入字串相反的 Unicode 或 ASCII String。<br /><br /> **引數**<br /><br /> `expression`：Unicode 或 ASCII `String` 型別。<br /><br /> **傳回值**<br /><br /> Unicode 或 ASCII `String` 型別。<br /><br /> **範例**<br /><br /> `SqlServer.REVERSE('abcd')`|  
 |`RIGHT(char_expression, count)`|傳回指定字元數之字元字串的右側部分。<br /><br /> **引數**<br /><br /> `char_expression`: Unicode 或 ASCII String 型別。 使用 CAST 函式可明確轉換 character_expression。<br /><br /> `count`：`Int64` （SQL Server 2000 中不會傳回） 或`Int32`指定將傳回多少 character_expression 字元數的型別。<br /><br /> **傳回值**<br /><br /> ASCII `String` 型別。<br /><br /> **範例**<br /><br /> `SqlServer.RIGHT('SQL Server', 6)`|  

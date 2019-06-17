@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37d25ed142c31ae1e36385448b75a3a850aafa65
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6f6453b8ef2ef2a1b5e86ae461a626808cff7455
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352993"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025519"
 ---
 # <a name="isolated-storage"></a>隔離儲存區
 <a name="top"></a>對於[!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)]應用程式而言，隔離儲存區為資料儲存機制，藉著定義標準化方式，將程式碼與儲存的資料產生關聯，以提供隔離和安全。 標準化也提供其他利益。 系統管理員可以使用設計來操作隔離儲存區的工具，設定檔案存放空間、設定安全性原則，和刪除未使用的資料。 有了隔離儲存區，您的程式碼不再需要唯一路徑去指定檔案系統中的安全位置，並且資料也被保護以免受到只擁有隔離儲存區存取權的其他應用程式的影響。 指示應用程式之存放區域所在位置的硬式編碼資訊是沒有必要的。
 
 > [!IMPORTANT]
-> [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式無法使用隔離儲存區。 請改用 `Windows.Storage` 應用程式開發介面內含的 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 命名空間中的應用程式資料類別來儲存本機資料和檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的 [應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) 。
+> [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式無法使用隔離儲存區。 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的 [應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) 。
 
 此主題包括下列章節：
 
@@ -100,9 +100,9 @@ ms.locfileid: "57352993"
 |容許的使用方式|隔離類型|安全性影響|
 |-------------------|---------------------|---------------------|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.None>|不允許使用隔離儲存區。|沒有安全性影響。|
-|<xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser>|依據使用者、定義域和組件的隔離。 各個組件在定義域中具有分別的子存放區。 電腦也會隱含隔離使用此權限的存放區。|這個使用權限等級開放資源給未經授權的過度使用，即使強制的配額對此增加了一些難度。 這被稱為拒絕服務的攻擊。|
+|<xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser>|依據使用者、定義域和組件的隔離。 各個組件在定義域中具有分別的子存放區。 電腦也會隱含隔離使用這項權限的存放區。|這個使用權限等級開放資源給未經授權的過度使用，即使強制的配額對此增加了一些難度。 這被稱為拒絕服務的攻擊。|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByRoamingUser>|與 `DomainIsolationByUser`相同，但存放區儲存至將漫遊的位置，如果啟用漫遊使用者設定檔而未限制配額的話。|因為配額必須停用，儲存資源將更容易受到拒絕服務的攻擊傷害。|
-|<xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByUser>|依據使用者和組件的隔離。 電腦也會隱含隔離使用此權限的存放區。|配額被強制在這個等級，幫助防止拒絕服務的攻擊。 另一個定義域中的相同組件可以存取這個存放區，開啟資訊可在應用程式之間洩漏的可能性。|
+|<xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByUser>|依據使用者和組件的隔離。 電腦也會隱含隔離使用這項權限的存放區。|配額被強制在這個等級，幫助防止拒絕服務的攻擊。 另一個定義域中的相同組件可以存取這個存放區，開啟資訊可在應用程式之間洩漏的可能性。|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByRoamingUser>|與 `AssemblyIsolationByUser`相同，但存放區儲存至將漫遊的位置，如果啟用漫遊使用者設定檔而未限制配額的話。|與 `AssemblyIsolationByUser`中相同，但沒有配額，遭到拒絕服務攻擊的風險增加。|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser>|依據使用者的隔離。 基本上，只有管理的或偵錯的工具使用這個等級的使用權限。|這個使用權限的存取允許程式碼檢視或刪除使用者的任何隔離儲存區檔案或目錄 (不管組件隔離)。 風險包括資訊洩漏和資料遺失 (但不僅限於此)。|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.UnrestrictedIsolatedStorage>|依據所有使用者、定義域和組件的隔離。 基本上，只有管理的或偵錯的工具使用這個等級的使用權限。|這個使用權限將產生完全洩露所有使用者的全部隔離存放區的可能性。|

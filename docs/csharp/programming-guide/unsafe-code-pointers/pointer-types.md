@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 7f04cfbac72008332a429c4e0ad8bd3f4e60cc83
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3183f8434dd8a6bc8182e2257d0ab3c7e7c014c4
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880334"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833431"
 ---
 # <a name="pointer-types-c-programming-guide"></a>指標類型 (C# 程式設計手冊)
 
@@ -61,7 +61,7 @@ int* myVariable;
 
 這個運算式 `*myVariable` 表示位於 `int` 所包含之位址的 `myVariable` 變數。
 
-[fixed 陳述式](../../language-reference/keywords/fixed-statement.md)和[指標轉換](../../programming-guide/unsafe-code-pointers/pointer-conversions.md)主題中有數個指標範例。 下列範例使用 `unsafe` 關鍵字和 `fixed` 陳述式，並示範如何讓內部指標遞增。  您可以將這個程式碼貼入主控台應用程式的 Main 函式中來執行它  這些範例必須使用 [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) 編譯器選項集合來編譯。
+[fixed 陳述式](../../language-reference/keywords/fixed-statement.md)和[指標轉換](../../programming-guide/unsafe-code-pointers/pointer-conversions.md)主題中有數個指標範例。 下列範例使用 `unsafe` 關鍵字和 `fixed` 陳述式，並示範如何讓內部指標遞增。  您可以將這個程式碼貼入主控台應用程式的 Main 函式中來執行它 這些範例必須使用 [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) 編譯器選項集合來編譯。
 
 [!code-csharp[Using pointer types](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#5)]
 
@@ -82,7 +82,7 @@ int* myVariable;
 |`++` 和 `--`|遞增和遞減指標。|
 |`+` 和 `-`|執行指標算術。|
 |`==`、`!=`、`<`、`>`、`<=` 和 `>=`|比較指標。|
-|[`stackalloc` 運算子](../../language-reference/keywords/stackalloc.md)|在堆疊上配置記憶體。|
+|[`stackalloc` 運算子](../../language-reference/operators/stackalloc.md)|在堆疊上配置記憶體。|
 |[`fixed` 陳述式](../../language-reference/keywords/fixed-statement.md)|暫時固定變數以便找到其位址。|
 
 如需指標相關運算子的詳細資訊，請參閱[指標相關運算子](../../language-reference/operators/pointer-related-operators.md)。

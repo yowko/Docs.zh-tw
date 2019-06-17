@@ -7,12 +7,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: 2c49c8517e15534121b0f8dbc04902b46a92ef20
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 88e2b93fda786db15b3a3a693bdb9293ed31df4c
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959357"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833213"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed 陳述式 (C# 參考)
 
@@ -63,7 +63,7 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-您可以配置堆疊上的記憶體，此處不受記憶體回收限制，因此不需要釘選。 若要那麼做，請使用 [`stackalloc` 運算子](stackalloc.md)。
+您可以配置堆疊上的記憶體，此處不受記憶體回收限制，因此不需要釘選。 若要那麼做，請使用 [`stackalloc` 運算子](../operators/stackalloc.md)。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 

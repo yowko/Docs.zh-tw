@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: df83fd527612af1a6a4b8131ffa2643ef0d1d7dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff3b908e2805f4d51463a82d90f2305efc9f1608
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784227"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041577"
 ---
 # <a name="mid-statement"></a>Mid 陳述式
 取代字元的指定的數目`String`變數與另一個字串中的字元。  
@@ -52,7 +52,7 @@ Mid( _
 ## <a name="remarks"></a>備註  
  被取代的字元數目一律為小於或等於中的字元數`Target`。  
   
- Visual Basic 也有<xref:Microsoft.VisualBasic.Strings.Mid%2A>函式和`Mid`陳述式。 這些項目都會運作指定的字串中的字元數，但`Mid`函式會傳回的字元時`Mid`陳述式會取代字元。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.Strings.Mid%2A>。  
+ Visual Basic 也有<xref:Microsoft.VisualBasic.Strings.Mid%2A>函式和`Mid`陳述式。 這些項目都會運作指定的字串中的字元數，但`Mid`函式會傳回的字元時`Mid`陳述式會取代字元。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.Strings.Mid%2A>。  
   
 > [!NOTE]
 >  `MidB`舊版的 Visual Basic 的陳述式可以取代子字串的位元組，而不是字元。 它是主要用於將雙位元組字元集 (DBCS) 應用程式中的字串轉換。 所有的 Visual Basic 字串為 Unicode，和`MidB`不受支援。  
@@ -63,11 +63,11 @@ Mid( _
  [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
 ## <a name="requirements"></a>需求  
- **命名空間：**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **命名空間：** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
  **模組：** `Strings`  
   
- **組件︰** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
+ **組件：** Visual Basic Runtime Library (位於 Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>另請參閱
 

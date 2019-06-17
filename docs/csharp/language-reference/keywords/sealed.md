@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-ms.openlocfilehash: d86f3ea7b9ee2a7c511119d9b7c3e52f44bd5e6a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7b9551fe892b0335fb445ab9edce4facca0badbe
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634078"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833340"
 ---
 # <a name="sealed-c-reference"></a>sealed (C# 參考)
 
@@ -56,10 +56,6 @@ sealed class B : A {}
 
 `'MyDerivedC': cannot derive from sealed type 'SealedClass'`
 
-## <a name="c-language-specification"></a>C# 語言規格
-
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
-
 ## <a name="remarks"></a>備註
 
 若要判斷是否密封類別、方法或屬性，您通常應該考慮下列兩點︰
@@ -67,6 +63,10 @@ sealed class B : A {}
 - 衍生類別的潛在優點可能是透過類別自訂功能所取得。
 
 - 衍生類別可能會修改您的類別，因此它們無法再正確運作或如預期運作。
+
+## <a name="c-language-specification"></a>C# 語言規格
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>另請參閱
 

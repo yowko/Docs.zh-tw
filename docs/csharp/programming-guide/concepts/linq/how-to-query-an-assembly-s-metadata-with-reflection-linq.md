@@ -2,60 +2,56 @@
 title: 作法：使用反映查詢組件的中繼資料 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: 52b961c5a016754964285221e252965ff89efd26
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 7c209e2524ea6931e0d8f0084a32ea6921adc26e
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485234"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025355"
 ---
 # <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>作法：使用反映查詢組件的中繼資料 (LINQ) (C#)
 
-.NET Framework 類別庫的反映 API 可以用來檢查 .NET 組件中的中繼資料，以及建立該組件中之類型、類型成員、參數等項目的集合。 因為這些集合支援泛型 `IEnumerable` 介面，所以可以使用 LINQ 進行查詢。  
+.NET Framework 類別庫的反映 API 可以用來檢查 .NET 組件中的中繼資料，以及建立該組件中之類型、類型成員、參數等項目的集合。 因為這些集合支援泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面，所以可以使用 LINQ 進行查詢。  
   
 下列範例示範如何搭配使用 LINQ 與反射，來擷取符合所指定搜尋準則之方法的特定中繼資料。 在此情況下，查詢會尋找組件中所有方法的名稱，而這些方法會傳回陣列這類可列舉類型。  
   
 ## <a name="example"></a>範例  
   
 ```csharp  
+using System;
+using System.Linq;
 using System.Reflection;  
-using System.IO;  
-namespace LINQReflection  
+
+class ReflectionHowTO  
 {  
-    class ReflectionHowTO  
+    static void Main()  
     {  
-        static void Main(string[] args)  
+        Assembly assembly = Assembly.Load("System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken= b77a5c561934e089");  
+        var pubTypesQuery = from type in assembly.GetTypes()  
+                    where type.IsPublic  
+                        from method in type.GetMethods()  
+                        where method.ReturnType.IsArray == true 
+                            || ( method.ReturnType.GetInterface(  
+                                typeof(System.Collections.Generic.IEnumerable<>).FullName ) != null  
+                            && method.ReturnType.FullName != "System.String" )  
+                        group method.ToString() by type.ToString();  
+
+        foreach (var groupOfMethods in pubTypesQuery)  
         {  
-            Assembly assembly = Assembly.Load("System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken= b77a5c561934e089");  
-            var pubTypesQuery = from type in assembly.GetTypes()  
-                        where type.IsPublic  
-                            from method in type.GetMethods()  
-                            where method.ReturnType.IsArray == true   
-                                || ( method.ReturnType.GetInterface(  
-                                    typeof(System.Collections.Generic.IEnumerable<>).FullName ) != null  
-                                && method.ReturnType.FullName != "System.String" )  
-                            group method.ToString() by type.ToString();  
-  
-            foreach (var groupOfMethods in pubTypesQuery)  
+            Console.WriteLine("Type: {0}", groupOfMethods.Key);  
+            foreach (var method in groupOfMethods)  
             {  
-                Console.WriteLine("Type: {0}", groupOfMethods.Key);  
-                foreach (var method in groupOfMethods)  
-                {  
-                    Console.WriteLine("  {0}", method);  
-                }  
+                Console.WriteLine("  {0}", method);  
             }  
-  
-            Console.WriteLine("Press any key to exit");  
-            Console.ReadKey();  
         }  
-    }    
-}  
+
+        Console.WriteLine("Press any key to exit... ");  
+        Console.ReadKey();  
+    }  
+}
 ```  
-  
- 這個範例會使用 <xref:System.Reflection.Assembly.GetTypes%2A> 方法，以傳回所指定組件中的類型陣列。 會套用 [where](../../../../csharp/language-reference/keywords/where-clause.md) 篩選，只傳回公用類型。 對於每一個公用類型，會使用從 <xref:System.Type.GetMethods%2A> 呼叫傳回的 <xref:System.Reflection.MethodInfo> 陣列來產生子查詢。 這些結果會進行篩選，僅傳回其傳回型別為陣列的方法，或為實作 <xref:System.Collections.Generic.IEnumerable%601> 之類型的方法。 最後，會使用類型名稱作為索引鍵來群組這些結果。  
-  
-## <a name="compiling-the-code"></a>編譯程式碼  
- 建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。  
+
+這個範例會使用 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> 方法，以傳回所指定組件中的類型陣列。 會套用 [where](../../../../csharp/language-reference/keywords/where-clause.md) 篩選，只傳回公用類型。 對於每一個公用類型，會使用從 <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> 呼叫傳回的 <xref:System.Reflection.MethodInfo> 陣列來產生子查詢。 這些結果會進行篩選，僅傳回其傳回型別為陣列的方法，或為實作 <xref:System.Collections.Generic.IEnumerable%601> 之類型的方法。 最後，會使用類型名稱作為索引鍵來群組這些結果。  
   
 ## <a name="see-also"></a>另請參閱
 

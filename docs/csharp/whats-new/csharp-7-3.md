@@ -2,12 +2,12 @@
 title: C# 7.3 的新功能
 description: C# 7.3 新功能的概觀
 ms.date: 05/16/2018
-ms.openlocfilehash: f97bda11d1da3f6deb4597c8d7742fd47e9cf15f
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: aca5c1b82253c02eccf24af1e5c45d0203d0b1b8
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58028681"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832702"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 的新功能
 
@@ -112,7 +112,7 @@ int* pArr2 = stackalloc int[] {1, 2, 3};
 Span<int> arr = stackalloc [] {1, 2, 3};
 ```
 
-如需詳細資訊，請參閱語言參考中的 [`stackalloc` 陳述式](../language-reference/keywords/stackalloc.md)一文。
+如需詳細資訊，請參閱 [`stackalloc` 運算子](../language-reference/operators/stackalloc.md)一文。
 
 ### <a name="more-types-support-the-fixed-statement"></a>更多型別支援 `fixed` 陳述式
 

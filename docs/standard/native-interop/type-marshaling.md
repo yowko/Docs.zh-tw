@@ -4,12 +4,12 @@ description: 了解 .NET 如何將您的類型封送處理至原生表示法。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: cb18a7607a3d99907401543b4d37995a956a3920
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2cb8898b52b4b4afba1184a886e16c9f7f68f03a
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065961"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041793"
 ---
 # <a name="type-marshaling"></a>類型封送處理
 
@@ -79,6 +79,20 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 | `System.Runtime.InteropServices.HandleRef` | `void*` |
 
 如果這些預設值無法達成您的目的，您可以自訂對參數進行封送處理的方式。 [參數封送處理](customize-parameter-marshaling.md)一文會引導您了解如何自訂對不同參數類型進行封送處理的方式。
+
+## <a name="default-marshaling-in-com-scenarios"></a>COM 案例中的預設封送處理
+
+當您對.NET 中的 COM 物件呼叫方法時，.NET 執行階段會依據常用的 COM 語意，變更此預設封送規則。 下表列出 .NET 執行階段在 COM 案例中使用的規則：
+
+| .NET 型別 | 原生類型 (COM 方法呼叫) |
+|-----------|--------------------------------|
+| `bool`    | `VARIANT_BOOL`                 |
+| `StringBuilder` | `LPWSTR`                 |
+| `string`  | `BSTR`                         |
+| 委派型別 | .NET Framework 中的 `_Delegate*`。 .NET Core 不適用。 |
+| `System.Drawing.Color` | `OLECOLOR`        |
+| .NET 陣列 | `SAFEARRAY`                   |
+| `string[]` | `BSTR` 的 `SAFEARRAY`        |
 
 ## <a name="marshaling-classes-and-structs"></a>封送處理類別和結構
 

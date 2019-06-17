@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac253e5ff294360fff89e9746ca3038b4e1ee75c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3273b8babe44a48d6952620e4331cba4f22b6e9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751109"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026038"
 ---
 # <a name="formatting-types-in-net"></a>在 .NET 中將類型格式化
 
@@ -123,7 +123,7 @@ ms.locfileid: "64751109"
 [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]
 
 > [!WARNING]
-> 從 [!INCLUDE[win81](../../../includes/win81-md.md)] 開始，[!INCLUDE[wrt](../../../includes/wrt-md.md)] 會包含具有單一方法 [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A) 的 <xref:Windows.Foundation.IStringable> 介面，該介面會提供預設的格式化支援。 不過，不建議 Managed 類型實作 `IStringable` 介面。 如需詳細資訊，請參閱 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 參考頁面上的＜ `IStringable` 和 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 介面＞一節。
+> 自 [!INCLUDE[win81](../../../includes/win81-md.md)] 起，Windows 執行階段即包含了 <xref:Windows.Foundation.IStringable> 介面。此介面只有一個方法 [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A)，可提供預設的格式化支援。 不過，不建議 Managed 類型實作 `IStringable` 介面。 如需詳細資訊，請參閱 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 參考頁面中的＜Windows 執行階段與 `IStringable` 介面>＞一節。
 
 因為除介面以外的所有其他類型都會衍生自 <xref:System.Object>，所以您的自訂類別或結構會自動被賦予此功能。 不過，預設 `ToString` 方法所提供的功能會受到限制：雖然其可以識別類型，但無法提供類型之執行個體的任何資訊。 若要提供物件的字串表示來表達該物件的相關資訊，您必須覆寫 `ToString` 方法。
 

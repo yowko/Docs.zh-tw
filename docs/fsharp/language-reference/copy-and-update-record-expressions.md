@@ -1,14 +1,14 @@
 ---
 title: 複製和更新記錄運算式
-description: 了解如何撰寫 '複製和更新記錄運算式'，複製現有的記錄，更新指定的欄位，並傳回更新的記錄。
+description: 了解如何撰寫 '複製和更新運算式' 複製現有的記錄或匿名的記錄，更新指定的欄位，並傳回已更新資料錄或匿名的記錄。
 author: ChrSteinert
-ms.date: 06/04/2016
-ms.openlocfilehash: 7657b0295c9437890baea258295f9e9ab10073dd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/12/2019
+ms.openlocfilehash: d16f5ca337047ab2eecc8828b21d8a423bf39a1f
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645573"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041738"
 ---
 # <a name="copy-and-update-record-expressions"></a>複製和更新記錄運算式
 
@@ -18,12 +18,16 @@ A*複製並更新記錄運算式*是複製現有的記錄、 更新指定的欄�
 
 ```fsharp
 { record-name with
-    updated-member-definitions }
+    updated-labels }
+
+{| anonymous-record-name with
+    updated-labels |}
 ```
 
 ## <a name="remarks"></a>備註
 
-使其沒有可能不會更新現有的記錄，記錄會依預設，不可變。 若要建立已更新的資料錄的一筆記錄的所有欄位必須指定一次。 若要簡化這項工作*複製並更新記錄運算式*可用。 這個運算式會採用現有的記錄，使用運算式指定的欄位和運算式所指定的遺漏欄位會建立一個新的同一個型別。
+記錄和匿名的記錄是根據預設，不變的使其沒有可能不會更新現有的記錄。 若要建立已更新的資料錄的一筆記錄的所有欄位必須指定一次。 若要簡化這項工作*複製並更新運算式*可用。 這個運算式會採用現有的記錄，使用運算式指定的欄位和運算式所指定的遺漏欄位會建立一個新的同一個型別。
+
 當您必須複製現有的記錄，並可能變更的某些欄位值時，這非常有用。
 
 需要執行個體的新建立的記錄。
@@ -37,4 +41,5 @@ A*複製並更新記錄運算式*是複製現有的記錄、 更新指定的欄�
 ## <a name="see-also"></a>另請參閱
 
 - [記錄](records.md)
+- [匿名的記錄](anonymous-records.md)
 - [F# 語言參考](index.md)
