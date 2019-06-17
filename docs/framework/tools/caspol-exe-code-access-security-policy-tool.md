@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2a0e8d95595d663585639c47be34262f7452e94
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: ccb1d78f939d2faf90013392fc60d5597bc3922e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457417"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489686"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (程式碼存取安全性原則工具)
 程式碼存取安全性 (CAS) 原則工具 (Caspol.exe) 可以讓使用者和系統管理員修改電腦原則層級、使用者原則層級和企業原則層級的安全性原則。  
   
 > [!IMPORTANT]
->  從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，除非將 [\<legacyCasPolicy> 項目](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) 設為 `true`，否則 Caspol.exe 不會影響 CAS 原則。 只有在您選擇使用 CAS 原則後，CasPol.exe 所顯示或修改的任何設定才會影響應用程式。 如需詳細資訊，請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。  
+>  從 .NET Framework 4 開始，除非將 [\<legacyCasPolicy> 元素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)設為 `true`，否則 Caspol.exe 不會影響 CAS 原則。 只有在您選擇使用 CAS 原則後，CasPol.exe 所顯示或修改的任何設定才會影響應用程式。 如需詳細資訊，請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。  
   
 > [!NOTE]
 >  64 位元電腦包含 64 位元和 32 位元版本的安全性原則。 為了確保您的原則變更同時套用至 32 位元和 64 位元應用程式，請執行 Caspol.exe 的 32 位元和 64 位元這兩種版本。  

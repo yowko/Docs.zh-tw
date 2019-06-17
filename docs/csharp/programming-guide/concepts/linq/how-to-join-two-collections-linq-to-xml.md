@@ -1,15 +1,15 @@
 ---
-title: HOW TO：聯結兩個集合 (LINQ to XML) (C#)
+title: 作法：聯結兩個集合 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
-ms.openlocfilehash: fb158427afd59caea5eecdad29fa0a68686f6381
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 893966f3b803b92efbc89a65870623f10195c85f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543652"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485375"
 ---
-# <a name="how-to-join-two-collections-linq-to-xml-c"></a>HOW TO：聯結兩個集合 (LINQ to XML) (C#)
+# <a name="how-to-join-two-collections-linq-to-xml-c"></a>作法：聯結兩個集合 (LINQ to XML) (C#)
 XML 文件中的項目或屬性有時候會參考其他項目或屬性。 例如，[XML 範例檔：客戶和訂單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md) XML 文件包含客戶清單與訂單清單。 每個 `Customer` 項目都包含一個 `CustomerID` 屬性。 每個 `Order` 項目都包含一個 `CustomerID` 項目。 每個訂單中的 `CustomerID` 項目都會參考客戶中的 `CustomerID` 屬性。  
   
  [XSD 範例檔：客戶和訂單](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)主題包含可用於驗證此文件的 XSD。 它會使用 XSD 的 `xs:key` 和 `xs:keyref` 功能來建立 `CustomerID` 項目的 `Customer` 屬性為索引鍵，並在每個 `CustomerID` 項目中的 `Order` 項目和每個 `CustomerID` 項目中的 `Customer` 屬性之間建立關聯性。  
@@ -123,7 +123,3 @@ Attempting to validate, custOrdDoc validated
   </Order>  
 </Root>  
 ```  
-  
-## <a name="see-also"></a>另請參閱
-
-- [進階查詢技術 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

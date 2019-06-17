@@ -14,12 +14,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: d03743bad47c60925462d027d18445047ebc0fc9
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 14e62d53fca16212fae374b2627d1e96cbbca6ac
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300107"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025313"
 ---
 # <a name="-and--operators-c-reference"></a>+ 及 += 運算子 (C# 參考)
 
@@ -31,17 +31,19 @@ ms.locfileid: "66300107"
 
 當其中一或兩個運算元的型別為 [string](../keywords/string.md) 時，`+` 運算子會串連其運算元的字串表示：
 
-[!code-csharp-interactive[string concatenation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddStrings)]
+[!code-csharp-interactive[string concatenation](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddStrings)]
 
 從 C# 6 開始，[字串插補](../tokens/interpolated.md)提供更便利的方式進行字串格式設定：
 
-[!code-csharp-interactive[string interpolation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#UseStringInterpolation)]
+[!code-csharp-interactive[string interpolation](~/samples/csharp/language-reference/operators/AdditionOperator.cs#UseStringInterpolation)]
 
 ## <a name="delegate-combination"></a>委派組合
 
 針對相同 [delegate](../keywords/delegate.md) 型別中的運算元，`+` 運算子會傳回新的委派執行個體，(當叫用時) 該執行個體會叫用第一個運算元，然後叫用第二個運算元。 如果其中任一個運算元為 `null`，則 `+` 運算子會傳回另一個運算元的值 (也有可能是 `null`)。 下列範例顯示委派如何與 `+` 運算子結合：
 
-[!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddDelegates)]
+[!code-csharp-interactive[delegate combination](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
+
+若要執行委派移除，請使用 [`-` 運算子](subtraction-operator.md#delegate-removal)。
 
 如需委派型別的詳細資訊，請參閱[委派](../../programming-guide/delegates/index.md)。
 
@@ -63,7 +65,7 @@ x = x + y
   
 下列範例示範 `+=` 運算子的用法：
 
-[!code-csharp-interactive[+= examples](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddAndAssign)]
+[!code-csharp-interactive[+= examples](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddAndAssign)]
 
 當您訂閱[事件](../keywords/event.md)時，您也會使用 `+=` 來指定事件處理常式方法。 如需詳細資訊，請參閱[如何：訂閱及取消訂閱事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
 
@@ -73,17 +75,15 @@ x = x + y
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[一元加號運算子](~/_csharplang/spec/expressions.md#unary-plus-operator)與[加法運算子](~/_csharplang/spec/expressions.md#addition-operator)小節。
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[一元加號運算子](~/_csharplang/spec/expressions.md#unary-plus-operator)與[加法運算子](~/_csharplang/spec/expressions.md#addition-operator)小節。
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 運算子](index.md)
 - [字串內插補點](../tokens/interpolated.md)
 - [如何：串連多個字串](../../how-to/concatenate-multiple-strings.md)
 - [委派](../../programming-guide/delegates/index.md)
 - [事件](../../programming-guide/events/index.md)
-- [Checked 與 Unchecked](../keywords/checked-and-unchecked.md)
 - [算術運算子](arithmetic-operators.md)
 - [ - 及 -= 運算子](subtraction-operator.md)

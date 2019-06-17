@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: adf2e3e3d10f4f32952dbca270be4ca0924d0b73
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 89dfe697f49e8144d15586cc9c1075f69d1f3a07
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457273"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816048"
 ---
 # <a name="in-process-side-by-side-execution"></a>同處理序並存執行
-從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，您可以使用同處理序並存裝載，在單一處理序中執行多個 Common Language Runtime (CLR) 版本。 根據預設，Managed COM 元件會與建置它們的 .NET Framework 版本一起執行，不論針對程序所載入的 .NET Framework 版本為何。  
+從 .NET Framework 4 開始，您可以使用同處理序並存裝載，在單一處理序中執行多個 Common Language Runtime (CLR) 版本。 根據預設，Managed COM 元件會與建置它們的 .NET Framework 版本一起執行，不論針對程序所載入的 .NET Framework 版本為何。  
   
 ## <a name="background"></a>背景  
  .NET Framework 一律會提供受控碼應用程式的並存裝載，但在 .NET Framework 4 之前，並未針對受控 COM 元件提供該功能。 過去，載入至程序的 Managed COM 元件是與已載入的執行階段版本或 .NET Framework 的最新已安裝版本一起執行。 如果此版本與 COM 元件不相容，元件就會失敗。  
@@ -56,7 +56,7 @@ ms.locfileid: "66457273"
   
      處理方式：在此情節中，不執行任何動作。 COM 元件會與註冊它們的 .NET Framework 版本一起執行。  
   
-- **情節 2**：您想同時執行使用 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 建置的受控應用程式與 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]，但也願意在 .NET Framework 2.0 版不存在時於 .NET Framework 4 上執行。  
+- **情節 2**：您想同時執行使用 .NET Framework 2.0 SP1 建置的受控應用程式與 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]，但也願意在 .NET Framework 2.0 版不存在時，於 .NET Framework 4 上執行。  
   
      已安裝的 .NET Framework 版本：舊版 .NET Framework 和 .NET Framework 4。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66457273"
 ## <a name="example"></a>範例  
  下列範例示範執行 Managed COM 元件的 Unmanaged COM 主機，方法是使用編譯元件使用的 .NET Framework 版本。  
   
- 若要執行下列範例，請編譯並註冊下列使用 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 的 Managed COM 元件。 若要註冊元件，請在 [專案]  功能表上按一下 [屬性]  ，再按一下 [組建]  索引標籤，然後選取 [註冊 COM Interop]  核取方塊。  
+ 若要執行下列範例，請編譯並註冊下列使用 .NET Framework 3.5 的受控 COM 元件。 若要註冊元件，請在 [專案]  功能表上按一下 [屬性]  ，再按一下 [組建]  索引標籤，然後選取 [註冊 COM Interop]  核取方塊。  
   
 ```csharp
 using System;  

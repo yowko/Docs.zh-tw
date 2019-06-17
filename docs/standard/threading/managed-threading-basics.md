@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7241dfb7e31ed2f83bf7af0ecc6bf0d97363b999
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: a47946ab8eb26045e641c44642bfe7a026269f3d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960367"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486337"
 ---
 # <a name="managed-threading-basics"></a>受控執行緒處理的基本概念
 
@@ -24,7 +24,7 @@ ms.locfileid: "65960367"
  本節的其餘主題將涵蓋進階主題，包括受控執行緒與 Windows 作業系統的互動。  
   
 > [!NOTE]
->  在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中，工作平行程式庫和 PLINQ 提供適用於多執行緒程式中工作和資料平行處理原則的 API。 如需詳細資訊，請參閱[平行程式設計](../../../docs/standard/parallel-programming/index.md)。  
+>  在 .NET Framework 4 中，工作平行程式庫和 PLINQ 提供適用於多執行緒程式中工作和資料平行處理原則的 API。 如需詳細資訊，請參閱[平行程式設計](../../../docs/standard/parallel-programming/index.md)。  
   
 ## <a name="in-this-section"></a>本節內容
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e836329527740d490bc3ad96cd62d56bc0b7b3e
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 0d5798b8067bde8b711982bfe4f78d66fe1521c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377743"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490831"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>使用以工作為基礎的非同步模式
 
@@ -64,7 +64,7 @@ await someTask.ConfigureAwait(continueOnCapturedContext:false);
 ```
 
 ## <a name="canceling-an-asynchronous-operation"></a>取消非同步作業
- 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，支援取消的 TAP 方法即至少提供一個可接受取消權杖 (<xref:System.Threading.CancellationToken> 物件) 的多載。
+ 從 .NET Framework 4 開始，支援取消的 TAP 方法即至少提供一個可接受取消權杖 (<xref:System.Threading.CancellationToken> 物件) 的多載。
 
  建立取消權杖時，會透過某個取消權杖來源 (<xref:System.Threading.CancellationTokenSource> 物件) 來建立。  來源的 <xref:System.Threading.CancellationTokenSource.Token%2A> 屬性會傳回取消權杖，當呼叫來源的 <xref:System.Threading.CancellationTokenSource.Cancel%2A> 方法時，此權杖就會收到訊號。  例如，若要下載單一網頁，而且想要能夠取消作業，則需建立 <xref:System.Threading.CancellationTokenSource> 物件，將其權杖傳遞給 TAP 方法，然後在您準備好要取消作業時，呼叫來源的 <xref:System.Threading.CancellationTokenSource.Cancel%2A> 方法︰
 

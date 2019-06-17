@@ -2,12 +2,12 @@
 title: 容器化整合型應用程式
 description: 容器化整合型應用程式雖然無法從微服務架構獲得所有好處，但可立即提供重要部署優勢。
 ms.date: 09/20/2018
-ms.openlocfilehash: 061afe86e0d38f058becde2b3afdb45b4428517a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9e457fba56c8fdf946618fca10285f4c0a343af4
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640821"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690540"
 ---
 # <a name="containerizing-monolithic-applications"></a>容器化整合型應用程式
 
@@ -63,9 +63,9 @@ ms.locfileid: "65640821"
 
 **圖 4-4**： 將單一容器應用程式從 Visual Studio 發行至 Azure App Service
 
-之前沒有 Docker 時，如果您需要 Azure App Service 不支援的其他功能、架構或相依性，您必須等到 Azure 小組更新 App Service 中的這些相依性。 或者，您必須切換至其他服務 (例如 Azure Service Fabric、Azure 雲端服務或甚至是 VM)，才能進一步控制並可安裝應用程式的必要元件或架構。
+之前沒有 Docker 時，如果您需要 Azure App Service 不支援的其他功能、架構或相依性，您必須等到 Azure 小組更新 App Service 中的這些相依性。 或者，您必須切換至其他服務 (例如 Azure 雲端服務或 VM)，才能進一步控制並可安裝應用程式的必要元件或架構。
 
-Visual Studio 2017 中的容器支援可讓您在應用程式環境中包含您要的任何項目，如圖 4-4 所示。 由於您在容器中執行，因此如果您將相依性新增至應用程式，您可以在 Dockerfile 或 Docker 映像中包含此相依性。
+Visual Studio 2017 和更新版本中的容器支援可讓您在應用程式環境中包含您要的任何項目，如圖 4-4 所示。 由於您在容器中執行，因此如果您將相依性新增至應用程式，您可以在 Dockerfile 或 Docker 映像中包含此相依性。
 
 此外，如圖 4-4 所示，發行流程會透過容器登錄推送映像。 這可以是 Azure Container Registry (接近您的 Azure 部署並受到 Azure Active Directory 群組和帳戶保護的登錄)，或任何其他 Docker 登錄，例如 Docker Hub 或內部部署登錄。
 

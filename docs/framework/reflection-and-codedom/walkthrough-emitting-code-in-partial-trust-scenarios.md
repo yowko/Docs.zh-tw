@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f461490529f626cfc442d817840b9c2e64df4c19
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7238edb35e7fd69c0161adbc3b80b122575bbf75
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585922"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690306"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>逐步解說：在部分信任情節中發出程式碼
 反映發出在完整或部分信任中使用相同的 API 集合，但在部分信任程式碼中，有些功能需要特殊權限。 此外，反映發出還有一項匿名裝載動態方法的功能，設計搭配部分信任使用並可供安全性透明組件使用。  
   
 > [!NOTE]
->  在 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 之前，發出程式碼需要 <xref:System.Security.Permissions.ReflectionPermission> 及 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 旗標。 根據預設，此權限包含在 `FullTrust` 和 `Intranet` 具名權限集合中，不在 `Internet` 權限集合中。 因此，只有在程式庫有 <xref:System.Security.SecurityCriticalAttribute> 屬性，同時執行了 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 的 <xref:System.Security.PermissionSet.Assert%2A> 方法，才能從部分信任使用該程式庫。 這類程式庫需要仔細的安全性檢閱，因為編碼錯誤可能會造成安全性漏洞。 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 允許在部分信任案例中發出程式碼，而不需提出任何安全性要求，因為產生的程式碼本質上並非有權限的作業。 也就是產生的程式碼之權限不會比發出程式碼的組件還多。 這可讓發出程式碼的程式庫成為安全性透明的，並移除判斷提示 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 的需要，讓撰寫安全的程式庫不需要仔細的安全性檢閱。  
+>  在 .NET Framework 3.5 之前，發出程式碼需要 <xref:System.Security.Permissions.ReflectionPermission> 及 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 旗標。 根據預設，此權限包含在 `FullTrust` 和 `Intranet` 具名權限集合中，不在 `Internet` 權限集合中。 因此，只有在程式庫有 <xref:System.Security.SecurityCriticalAttribute> 屬性，同時執行了 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 的 <xref:System.Security.PermissionSet.Assert%2A> 方法，才能從部分信任使用該程式庫。 這類程式庫需要仔細的安全性檢閱，因為編碼錯誤可能會造成安全性漏洞。 .NET Framework 3.5 允許在部分信任案例中發出程式碼，而不需提出任何安全性要求，因為產生的程式碼本質上並非有權限的作業。 也就是產生的程式碼之權限不會比發出程式碼的組件還多。 這可讓發出程式碼的程式庫成為安全性透明的，並移除判斷提示 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 的需要，讓撰寫安全的程式庫不需要仔細的安全性檢閱。  
   
  這個逐步解說將說明下列工作：  
   

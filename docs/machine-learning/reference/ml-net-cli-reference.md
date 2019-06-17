@@ -3,12 +3,12 @@ title: ML.NET CLI 工具中的 auto-train 命令
 description: ML.NET CLI 工具中的 auto-train 命令概觀、範例和參考。
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 28eb56eb018e3d1cc76f300ee78c298af77c9b91
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: ce5994f392c492e80676b9e65ce54fe010cf03ab
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557934"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722609"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>ML.NET CLI 中的 'auto-train' 命令
 
@@ -187,7 +187,7 @@ CLI 使用 ML.NET AutoML 引擎 (NuGet 套件) 以智慧方式來搜尋最佳品
 
 透過這個引數，您可以藉由使用資料集標頭中所設定的資料行名稱，來指定特定目標/目的資料行 (您想要預測的變數)。
 
-這個引數只能用於受監督的 ML 工作，例如「分類問題」。 不能用於不受監督的 ML 工作，例如「叢集」。
+這個引數只能用於受監督的 ML 工作，例如「分類問題」  。 不能用於不受監督的 ML 工作，例如「叢集」  。
 
 ----------------------------------------------------------
 
@@ -197,7 +197,7 @@ CLI 使用 ML.NET AutoML 引擎 (NuGet 套件) 以智慧方式來搜尋最佳品
 
 *注意：* 如果使用者同時使用 `--label-column-name`，則會使用 `--label-column-name`。
 
-這個引數只能用於受監督的 ML 工作，例如「分類問題」。 不能用於不受監督的 ML 工作，例如「叢集」。
+這個引數只能用於受監督的 ML 工作，例如「分類問題」  。 不能用於不受監督的 ML 工作，例如「叢集」  。
 
 ----------------------------------------------------------
 
@@ -228,7 +228,7 @@ CLI 使用 ML.NET AutoML 引擎 (NuGet 套件) 以智慧方式來搜尋最佳品
 
 `--max-exploration-time | -x` (string)
 
-根據預設，最大探索時間為 10 秒。
+根據預設，最大探索時間為 30 分鐘
 
 這個引數為用於探索多個定型器和設定的程序，設定最大時間 (以秒為單位)。 如果為單一反覆運算所提供的時間太短 (例如 2 秒)，則可能會超過設定的時間。 在此情況下，實際時間是在單一反覆運算中產生一個模型設定所需的時間。
 

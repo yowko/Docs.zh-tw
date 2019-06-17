@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3085812f2467c1e73d94335530441d6bb12db6af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9570578e8ae4397f060805b891f86d7d4f273cd4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613801"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487039"
 ---
 # <a name="generic-interfaces"></a>泛型介面
 本主題概述提供泛型類型系列中常見功能的泛型介面。  
@@ -24,7 +24,7 @@ ms.locfileid: "54613801"
  泛型介面提供非泛型介面的類型安全對應項目，以進行排序和相等比較，以及泛型集合類型的功能。  
   
 > [!NOTE]
->  從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，數個泛型介面的型別參數會標示共變數或反變數，提供更大彈性來指派和使用實作這些介面的類型。 請參閱 [共變數和反變數](../../../docs/standard/generics/covariance-and-contravariance.md)。  
+>  從 .NET Framework 4 開始，數個泛型介面的型別參數會標示共變數或反變數，提供更大彈性來指派和使用實作這些介面的型別。 請參閱 [共變數和反變數](../../../docs/standard/generics/covariance-and-contravariance.md)。  
   
 ### <a name="equality-and-ordering-comparisons"></a>相等和排序比較  
  在 <xref:System> 命名空間中，<xref:System.IComparable%601?displayProperty=nameWithType> 和 <xref:System.IEquatable%601?displayProperty=nameWithType> 泛型介面 (就像其非泛型對應項目) 分別會定義排序比較相等比較的方法。 類型會實作這些介面，以提供執行這類比較的能力。  

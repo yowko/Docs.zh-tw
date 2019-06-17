@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b23edb1c23a7f0c7043fc5be6e7e0eabcdda0316
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 00347b295eb5d9a092fb817e75f852f16004bb87
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626305"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489260"
 ---
 # <a name="deploying-an-interop-application"></a>部署 Interop 應用程式
 Interop 應用程式通常包含 .NET 用戶端組件、代表各種不同 COM 型別程式庫的一或多個 Interop 組件，以及一或多個已登錄的 COM 元件。 Visual Studio 和 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供工具以匯入型別程式庫，並將它轉換成 Interop 組件，如[匯入型別程式庫作為組件](importing-a-type-library-as-an-assembly.md)中所述。 有兩種方式可以部署 Interop 應用程式：  
   
-- 使用內嵌的 Interop 類型：從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，您可以指示編譯器將 Interop 組件的類型資訊內嵌到可執行檔。 編譯器只會內嵌應用程式使用的類型資訊。 您不必與應用程式一起部署 Interop 組件。 這是建議使用的技巧。  
+- 使用內嵌的 Interop 類型：從 .NET Framework 4 開始，您可以指示編譯器將 Interop 組件的類型資訊內嵌到可執行檔。 編譯器只會內嵌應用程式使用的類型資訊。 您不必與應用程式一起部署 Interop 組件。 這是建議使用的技巧。  
   
 - 部署 Interop 組件：您可以建立 Interop 組件的標準參考。 在此情況下，Interop 組件必須與您的應用程式一起部署。 如果您運用這項技巧，但不使用私用的 COM 元件，請一律參考 COM 元件作者發佈的主要 Interop 組件 (PIA)，這是您想要併入 Managed 程式碼的 COM 元件。 如需產生和使用主要 Interop 組件的詳細資訊，請參閱[主要 Interop 組件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))。  
   

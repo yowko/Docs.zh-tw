@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51bf359ea6ba4e5b45827928a50a095a7960a68f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 5bbf579540ccb93101dba05c5b2577ae8f24ec09
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456709"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486518"
 ---
 # <a name="shadow-copying-assemblies"></a>陰影複製組件
 陰影複製可讓應用程式定義域中使用的組件更新，而不需卸載應用程式定義域。 這對必須連續運作的應用程式特別有用，例如 ASP.NET 網站。  
@@ -32,7 +32,7 @@ ms.locfileid: "66456709"
   
 - [啟用和使用陰影複製](#EnablingAndUsing)描述基本的用法，以及陰影複製可用的選項。  
   
-- [啟動效能](#StartupPerformance)描述為了在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中陰影複製而進行的變更，以改善啟動效能，也描述如何還原為舊版的行為。  
+- [啟動效能](#StartupPerformance)描述為了在 .NET Framework 4 中陰影複製而進行的變更，以改善啟動效能，也描述如何還原為舊版的行為。  
   
 - [已淘汰的方法](#ObsoleteMethods)描述對於 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 中控制陰影複製之屬性和方法的變更。  
   

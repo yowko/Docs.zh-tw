@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 011bb2d7a1a700ba4daf86d96d825373e353f57e
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 0c806366e8f80e9fd770b45a5f1154d388ac49ab
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457424"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489673"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (原生映像產生器)
 
 原生映像產生器 (Ngen.exe) 是一種可以增進 Managed 應用程式效能的工具。 Ngen.exe 會建立原生映像，也就是包含已編譯之處理器特定機器碼的檔案，然後將原生映像安裝到本機電腦上的原生映像快取中。 執行階段就可以從快取中使用原生映像，而不是使用 Just-In-Time (JIT) 編譯器來編譯原始組件。
 
-Ngen.exe 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中的變更：
+Ngen.exe 在 .NET Framework 4 版中的變更：
 
 - Ngen.exe 現在會以完全信任的方式編譯組件，而且不再評估程式碼存取安全性 (CAS) 原則。
 
@@ -77,7 +77,7 @@ ngen /? | /help
 |動作|說明|
 |------------|-----------------|
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|產生組件的原生映像及其相依性，並在原生映像快取中安裝映像。<br /><br /> 如果已指定 `/queue`，原生映像服務的動作就會排入佇列。 預設優先權為 3。 請參閱[優先權層級](#PriorityTable)表格。|
-|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|從原生映像快取中刪除組件的原生映像和其相依性。<br /><br /> 若要解除安裝單一映像和其相依性，請使用安裝影像時所用的相同命令列引數。 **注意：** 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，不再支援 `uninstall` * 動作。|
+|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|從原生映像快取中刪除組件的原生映像和其相依性。<br /><br /> 若要解除安裝單一映像和其相依性，請使用安裝影像時所用的相同命令列引數。 **注意：** 從 .NET Framework 4 開始，不再支援 `uninstall` * 動作。|
 |`update` [`/queue`]|更新已經變成無效的原生映像。<br /><br /> 如果已指定 `/queue`，原生映像服務的更新動作就會排入佇列。 更新動作一律會排在優先權 3，因此會在電腦為閒置時才執行。|
 |`display` [`assemblyName` &#124; `assemblyPath`]|顯示組件的原生映像狀態和其相依性。<br /><br /> 如果沒有提供任何引數，將顯示原生映像快取中的每個項目。|
 |`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> -或-<br /><br /> `eqi` [1&#124;2&#124;3]|執行排入佇列的編譯工作。<br /><br /> 如果已指定優先權，就會執行具有較大或相同優先權的編譯工作。 如果沒有指定優先權，將會執行所有排入佇列的編譯工作。|
@@ -137,7 +137,7 @@ ngen /? | /help
 若要執行 Ngen.exe，您必須具有系統管理員權限。
 
 > [!CAUTION]
-> 請勿在不受完全信任的組件上執行 Ngen.exe。 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，Ngen.exe 都以完全信任的方式來編譯組件，而且不再評估程式碼存取安全性 (CAS) 原則。
+> 請勿在不受完全信任的組件上執行 Ngen.exe。 從 .NET Framework 4 開始，Ngen.exe 都以完全信任的方式來編譯組件，而且不再評估程式碼存取安全性 (CAS) 原則。
 
 從 .NET Framework 4 開始，系統不會再將 Ngen.exe 所產生原生映像載入以部分信任狀態執行的應用程式。 而是會改為叫用 Just-In-Time (JIT) 編譯器。
 

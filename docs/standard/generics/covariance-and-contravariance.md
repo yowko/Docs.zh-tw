@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44e5f52ce2bfe03247ab25bb48607ae313523ff0
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: a7e4493fca5b73cfd0bdc59ceab9de097de799aa
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456858"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490740"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的共變數和反變數
 <a name="top"></a> 共變數和反變數這兩個詞，是指使用比原本所指定更多 (較明確) 或更少 (較不明確) 衍生類型的能力。 泛型類型參數支援共變數和反變數，可在指派和使用泛型類型時提供更大的彈性。 當您參考類型系統時，共變數、反變數和不可變數的定義如下。 範例中會假設名為 `Base` 的基底類別，以及名為 `Derived`的衍生類別。  
@@ -59,7 +59,7 @@ ms.locfileid: "66456858"
   
  共變性和逆變性合稱為「 *變異性*」(Variance)。 未標示 Covariant 或 Contravariant 的泛型類型參數，稱為 *Invariant*參數。 通用語言執行平台中變異數事實的簡短摘要。  
   
-- 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中，Variant 類型參數僅限為泛型介面和泛型委派類型。  
+- 在 .NET Framework 4 中，Variant 型別參數限制為泛型介面和泛型委派型別。  
   
 - 泛型介面或泛型委派類型可以同時具有 Covariant 和 Contravariant 類型參數。  
   

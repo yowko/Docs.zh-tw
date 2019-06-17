@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 942ba933126da291e072270318a5657953ddcdb8
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: a658a9f706a53697b341463b443c5145a727b4b9
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613248"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758259"
 ---
 # <a name="com-callable-wrapper"></a>COM 可呼叫包裝函式
 
@@ -186,7 +186,7 @@ public class LoanApp
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>請確定所有 COM 事件通知都是晚期繫結的。
 
-根據預設，COM 型別資訊會直接內嵌到受控組件，而不需主要的 interop 組件 (PIA)。 不過，內嵌型別資訊的其中一個限制是它不支援透過早期繫結 vtable 呼叫的 COM 事件通知傳遞，但只支援晚期繫結的 `IDispatch::Invoke` 呼叫。
+根據預設，COM 型別資訊會直接內嵌到受控組件，而不需主要的 interop 組件 (PIA)。 不過，內嵌類型資訊的其中一個限制是它不支援透過早期繫結 vtable 呼叫的 COM 事件通知傳遞，而僅支援晚期繫結的 `IDispatch::Invoke` 呼叫。
 
 如果您的應用程式需要對 COM 事件介面方法進行早期繫結呼叫，您可以在 Visual Studio 中將**內嵌 Interop 型別**屬性設定為 `true`，或在您的專案檔中包含下列元素：
 

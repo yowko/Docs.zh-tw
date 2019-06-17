@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d41a88b7a9197a19a131cbda078297a96acdabfb
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 39ca7ca02c2bb1050653daf1b53450533cc950dd
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457484"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490965"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 簡介
 
 ## <a name="what-is-a-parallel-query"></a>何謂平行查詢？
 
-Language-Integrated Query (LINQ) 是在 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 中引進的。 其特色是以型別安全方法查詢任何 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 資料來源的統一模型。 LINQ to Objects 是 LINQ 查詢的名稱，它是針對記憶體中的集合 (例如 <xref:System.Collections.Generic.List%601> 和陣列) 執行。 本文假設您已對 LINQ 有基本了解。 如需詳細資訊，請參閱 [Language-Integrated Query (LINQ) - C# ](../../csharp/programming-guide/concepts/linq/index.md) 或 [Language-Integrated Query (LINQ) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)。
+Language-Integrated Query (LINQ) 是在 .NET Framework 3.5 中引進的。 其特色是以型別安全方法查詢任何 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 資料來源的統一模型。 LINQ to Objects 是 LINQ 查詢的名稱，它是針對記憶體中的集合 (例如 <xref:System.Collections.Generic.List%601> 和陣列) 執行。 本文假設您已對 LINQ 有基本了解。 如需詳細資訊，請參閱 [Language-Integrated Query (LINQ) - C# ](../../csharp/programming-guide/concepts/linq/index.md) 或 [Language-Integrated Query (LINQ) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)。
 
 Parallel LINQ (PLINQ) 是平行實作的 LINQ 模式。 PLINQ 查詢在很多方面類似於非平行 LINQ to Objects 查詢。 PLINQ 查詢和循序 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] 查詢一樣，會對記憶體中的 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 資料來源來操作，而且其執行會順延，也就是說，查詢在列舉過後才會開始執行。 這兩種查詢的主要差別在於，PLINQ 會嘗試充分利用系統上的所有處理器。 它所採取的方式是將資料來源分割成多個區段，然後在多個處理器上，以平行方式在不同的背景工作執行緒上對每個區段執行查詢。 在許多情況下，平行執行意謂著查詢的執行速度會明顯加快。
 
@@ -36,7 +36,7 @@ Parallel LINQ (PLINQ) 是平行實作的 LINQ 模式。 PLINQ 查詢在很多方
 
 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> 類別會公開幾乎所有的 PLINQ 功能。 此類別和其餘的 <xref:System.Linq?displayProperty=nameWithType> 命名空間型別會編譯成 System.Core.dll 組件。 Visual Studio 中預設的 C# 和 Visual Basic 專案都會參考此組件並匯入該命名空間。
 
-<xref:System.Linq.ParallelEnumerable> 會實作 LINQ to Objects 所支援的所有標準查詢運算子，但不會嘗試平行處理每個運算子。 如果您不熟悉 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)]，請參閱 [LINQ (C#) 簡介](../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)和 [LINQ (Visual Basic) 簡介](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)。
+<xref:System.Linq.ParallelEnumerable> 會實作 LINQ to Objects 所支援的所有標準查詢運算子，但不會嘗試平行處理每個運算子。 如果您不熟悉 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)]，請參閱 [LINQ (C#) 簡介](../../csharp/programming-guide/concepts/linq/index.md)和 [LINQ (Visual Basic) 簡介](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)。
 
 除了標準查詢運算子外，<xref:System.Linq.ParallelEnumerable> 類別還會包含一組方法，以供啟用平行執行特有的行為。 下表列出這些 PLINQ 特有的方法。
 

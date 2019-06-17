@@ -2,12 +2,12 @@
 title: API 閘道模式與直接用戶端對微服務通訊
 description: 了解 API 閘道模式和直接用戶端對微服務通訊的差異與使用方式。
 ms.date: 01/07/2019
-ms.openlocfilehash: 433ad8bc8204a9a57b8b494040a9de6c533bcca8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4b169d5a9542b10726a36b65328bc6a3dc3839ef
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641401"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690357"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 閘道模式與直接用戶端對微服務通訊
 
@@ -31,7 +31,7 @@ ms.locfileid: "65641401"
 
 開發根據微服務的大型應用程式時，請考慮下列問題：
 
-- 用戶端應用程式如何將後端要求數目最小化，以及減少與多個微服務的過度頻繁通訊？
+- 用戶端應用程式如何將後端要求數目最小化，以及減少與多個微服務的過度頻繁通訊？ 
 
 與多個微服務互動來建置單一 UI 畫面，會增加跨網際網路來回行程的次數。 這會增加 UI 端的延遲和複雜性。 在理想情況下，回應應該有效率地在伺服器端中彙總。 因為多個部分的資料會平行返回，所以可以減少延遲，而某些 UI 一準備好就可以顯示資料。
 
@@ -41,9 +41,9 @@ ms.locfileid: "65641401"
 
 - *用戶端應用程式如何與使用非友善網際網路通訊協定的服務通訊？*
 
-用戶端應用程式通常不支援伺服器端上使用的通訊協定 (例如 AMQP 或二進位通訊協定)。 因此，必須透過 HTTP/HTTPS 這類通訊協定執行要求，而且之後會轉譯成其他通訊協定。 在此情況下，「攔截式」方法可能有幫助。
+用戶端應用程式通常不支援伺服器端上使用的通訊協定 (例如 AMQP 或二進位通訊協定)。 因此，必須透過 HTTP/HTTPS 這類通訊協定執行要求，而且之後會轉譯成其他通訊協定。 在此情況下，「攔截式」  方法可能有幫助。
 
-- 如何形成特別針對行動應用程式所產生的外觀？
+- 如何形成特別針對行動應用程式所產生的外觀？ 
 
 多個微服務 API 的設計可能不是最適合不同用戶端應用程式的需求。 例如，行動應用程式需求可能會與 Web 應用程式需求不同。 針對行動應用程式，您甚至可能需要更進一步最佳化，讓資料回應更具效率。 作法是彙總多個微服務中的資料並傳回一組資料，有時會排除行動應用程式不需要之回應中的任何資料。 而且，您當然可以壓縮該資料。 同樣地，在此案例中，行動應用程式與微服務之間的外觀或 API 可能十分方便使用。
 
@@ -146,7 +146,7 @@ API 閘道產品的作用通常像是連入通訊的反向 Proxy，您也可以�
 
 [Ocelot](https://github.com/ThreeMammals/Ocelot) 是輕量型 API 閘道，如需較簡單的方法建議加以採用。 Ocelot 是開放原始碼的 .NET Core 型 API 閘道，專門為需要系統統一進入點的微服務架構而設計。 它輕量、快速、可調整規模且提供路由和驗證等更多其他功能。
 
-在 [eShopOnContainers reference application](https://github.com/dotnet-architecture/eShopOnContainers) \(英文\) 中使用 Ocelot 的原因主要是 Ocelot 為 .NET Core 輕量型 API 閘道，您可以將它部署到您所部署微服務/容器 (如 Docker 主機、Kubernetes、Service Fabric 等) 的同一個應用程式部署環境。且因為它是以 .NET Core 為基礎，所以能跨平台，讓您可以部署在 Linux 或 Windows 上。
+為 [eShopOnContainers 參考應用程式](https://github.com/dotnet-architecture/eShopOnContainers) \(英文\) 選擇 Ocelot 的原因是因為 Ocelot 為 .NET Core 輕量型 API 閘道，您可以將它部署到您所部署微服務/容器 (如 Docker 主機、Kubernetes 等) 的同一個應用程式部署環境。且因為它是以 .NET Core 為基礎，所以能跨平台，讓您可以部署在 Linux 或 Windows 上。
 
 上面的圖表顯示在容器中執行的自訂 API 閘道，正如同您也可以在容器和微服務型應用程式中執行 Ocelot。
 
@@ -182,10 +182,10 @@ API 閘道產品的作用通常像是連入通訊的反向 Proxy，您也可以�
 - **Azure API 管理** \
   <https://azure.microsoft.com/services/api-management/>
 
-- **Udi Dahan.Service Oriented Composition (服務導向組合)** \
+- **Udi Dahan.Service Oriented Composition (服務導向組合)**  \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
-- **Clemens Vasters：GOTO 2016 的傳訊和微服務 (影片)** \
+- **Clemens Vasters：GOTO 2016 的傳訊和微服務 (影片)**  \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
 - **API 閘道簡介** (ASP.net Core API 閘道教學課程系列)\

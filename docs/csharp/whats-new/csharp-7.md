@@ -3,12 +3,12 @@ title: C# 7.0 的新功能 - C# 指南
 description: 取得 C# 語言版本 7.0 中新功能的概觀。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 942a126ae026897d608c9fb077fc5f10ff73c110
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b4569f31211afc69efb1b853723fded9329ae41
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753067"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815966"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 的新功能
 
@@ -103,7 +103,7 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 
 ## <a name="pattern-matching"></a>模式比對
 
-「模式比對」是一項功能，可讓您對物件類型以外的屬性實作方法分派。 您可能已經熟悉根據物件類型的方法分派。 在物件導向程式設計中，虛擬和覆寫方法可提供語言語法，以根據物件的類型實作方法分派。 基底和衍生類別能提供不同的實作。
+「模式比對」  是一項功能，可讓您對物件類型以外的屬性實作方法分派。 您可能已經熟悉根據物件類型的方法分派。 在物件導向程式設計中，虛擬和覆寫方法可提供語言語法，以根據物件的類型實作方法分派。 基底和衍生類別能提供不同的實作。
 模式比對運算式會擴充這個概念，讓您可以輕鬆地為不是透過繼承階層架構而關聯的類型和資料元素實作類似的分派模式。
 
 模式比對支援 `is` 運算式和 `switch` 運算式。 每個都讓您能檢查物件和其屬性，以判斷該物件是否符合搜尋的模式。 您使用 `when` 關鍵字來指定其他規則給該模式。
@@ -194,7 +194,7 @@ C# 語言具備數個規則，可防止您濫用 `ref` 區域變數並傳回︰
 
 ## <a name="local-functions"></a>區域函式
 
-類別的許多設計都包括從唯一一個位置呼叫的方法。 這些額外的私用方法會使每一種方法維持小而聚焦。 「區域函式」可讓您在另一個方法的內容中宣告方法。 區域函式可讓類別讀者輕鬆查看區域方法只會從其宣告的內容中呼叫。
+類別的許多設計都包括從唯一一個位置呼叫的方法。 這些額外的私用方法會使每一種方法維持小而聚焦。 「區域函式」  可讓您在另一個方法的內容中宣告方法。 區域函式可讓類別讀者輕鬆查看區域方法只會從其宣告的內容中呼叫。
 
 有兩個常見的區域函式使用案例︰公用迭代器方法和公用非同步方法。 這兩種方法都會產生程式碼，比程式設計人員想像更晚才報告錯誤。 在迭代器方法中，任何例外狀況只會在呼叫列舉傳回序列的程式碼時觀察到。 在非同步方法中，任何例外狀況只會在傳回的 `Task` 等候時觀察到。 下列範例示範使用區域函式分隔參數驗證和迭代器實作：
 
@@ -205,11 +205,11 @@ C# 語言具備數個規則，可防止您濫用 `ref` 區域變數並傳回︰
 [!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
-> 區域函式支援的部分設計也可以使用「Lambda 運算式」完成。 有興趣的人可以[進一步了解差異](../local-functions-vs-lambdas.md)
+> 區域函式支援的部分設計也可以使用「Lambda 運算式」  完成。 有興趣的人可以[進一步了解差異](../local-functions-vs-lambdas.md)
 
 ## <a name="more-expression-bodied-members"></a>更多運算式主體成員
 
-C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodied-function-members)和唯讀屬性。 C# 7.0 擴充了可以實作為運算式的允許成員。 在 C# 7.0 中，您可以實作「建構函式」、「完成項」，以及「屬性」和「索引子」上的 `get` 和 `set` 存取子。 下列程式碼將示範各項的範例：
+C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodied-function-members)和唯讀屬性。 C# 7.0 擴充了可以實作為運算式的允許成員。 在 C# 7.0 中，您可以實作「建構函式」  、「完成項」  ，以及「屬性」  和「索引子」  上的 `get` 和 `set` 存取子。 下列程式碼將示範各項的範例：
 
 [!code-csharp[ExpressionBodiedMembers](~/samples/snippets/csharp/new-in-7/expressionmembers.cs#ExpressionBodiedEverything "new expression-bodied members")]
 
@@ -222,7 +222,7 @@ C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodi
 
 ## <a name="throw-expressions"></a>throw 運算式
 
-在 C# 中，`throw` 一直都是陳述式。 因為 `throw` 是陳述式，而不是運算式，所以有您無法在其中使用它的 C# 建構。 這些包含條件運算式、Null 聯合運算式和一些 Lambda 運算式。 新增運算式主體成員會新增 `throw` 運算式適用的更多位置。 為了讓您可以撰寫任何這些建構，C# 7.0 引進了「throw 運算式」。
+在 C# 中，`throw` 一直都是陳述式。 因為 `throw` 是陳述式，而不是運算式，所以有您無法在其中使用它的 C# 建構。 這些包含條件運算式、Null 聯合運算式和一些 Lambda 運算式。 新增運算式主體成員會新增 `throw` 運算式適用的更多位置。 為了讓您可以撰寫任何這些建構，C# 7.0 引進了 [*throw 運算式*](../language-reference/keywords/throw.md#the-throw-expression)。
 
 此新增可讓您更輕鬆地撰寫更多以運算式為基礎的程式碼。 您不需要額外的陳述式就可以進行錯誤檢查。
 
@@ -241,7 +241,7 @@ C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodi
 
 ## <a name="numeric-literal-syntax-improvements"></a>數值常值的語法增強功能
 
-錯譯數值常數，可能會使得在第一次閱讀它時，更加難以了解程式碼。 位元遮罩或其他符號值容易遭到誤解。 C# 7.0 包含兩項新功能，可以用預期用途最容易閱讀的方式來撰寫數字︰「二進位常值」和「數字分隔符號」。
+錯譯數值常數，可能會使得在第一次閱讀它時，更加難以了解程式碼。 位元遮罩或其他符號值容易遭到誤解。 C# 7.0 包含兩項新功能，可以用預期用途最容易閱讀的方式來撰寫數字︰「二進位常值」  和「數字分隔符號」  。
 
 當您在建立位元遮罩時，或是每當數字的二進位表示法構成最容易閱讀的程式碼時，請以二進位撰寫該數字︰
 

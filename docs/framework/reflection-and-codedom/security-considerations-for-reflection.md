@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 116df78eb20d6e6c6355d07099ae5d3de9320f30
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 6446cc3ee102fa57f5bf60c1353f7b9d5522be69
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457289"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816127"
 ---
 # <a name="security-considerations-for-reflection"></a>反映的安全性考量
 反映可讓您取得類型和成員的相關資訊，以及存取成員 (也就是呼叫方法和建構函式、取得和設定屬性值、加入和移除事件處理常式等等)。 不限制使用反映來取得類型和成員的相關資訊。 所有程式碼都可以使用反映來執行下列工作：  
@@ -26,7 +26,7 @@ ms.locfileid: "66457289"
   
 - 列舉及檢查組件和模組。  
   
- 相對地，使用反映來存取成員有所限制。 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]開始，只有受信任的程式碼才能使用反映存取安全性關鍵成員。 此外，只有受信任的程式碼能夠使用反映來存取已編譯程式碼無法直接存取的非公用成員。 最後，使用反映存取安全性關鍵成員的程式碼必須擁有安全關鍵成員所要求的任何權限，就如同編譯的程式碼。  
+ 相對地，使用反映來存取成員有所限制。 從 .NET Framework 4 開始，只有受信任的程式碼才能使用反映存取安全性關鍵成員。 此外，只有受信任的程式碼能夠使用反映來存取已編譯程式碼無法直接存取的非公用成員。 最後，使用反映存取安全性關鍵成員的程式碼必須擁有安全關鍵成員所要求的任何權限，就如同編譯的程式碼。  
   
  受限於所需的權限，程式碼可以使用反映來執行下列類型的存取：  
   
@@ -42,13 +42,13 @@ ms.locfileid: "66457289"
   
  例如，在沙箱化應用程式定義域中執行的程式碼，僅限於此清單中所描述的存取權，除非應用程式定義域授與其他權限。  
   
- 從 [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 開始，嘗試存取通常無法存取的成員時，系統會要求目標物件的授權集，加上具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。 以完全信任執行的程式碼 (例如從命令列啟動之應用程式中的程式碼)，一律可以滿足這些權限。 (這取決於存取安全性關鍵成員時的限制，本文稍後將會說明)。  
+ 從 .NET Framework 2.0 Service Pack 1 開始，嘗試存取通常無法存取的成員時，系統會要求目標物件的授權集，加上具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。 以完全信任執行的程式碼 (例如從命令列啟動之應用程式中的程式碼)，一律可以滿足這些權限。 (這取決於存取安全性關鍵成員時的限制，本文稍後將會說明)。  
   
  (選擇性) 沙箱應用程式定義域可以授權有 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>，本文稍後的[存取通常無法存取的成員](#accessingNormallyInaccessible)一節將會說明。  
   
 <a name="accessingSecurityCritical"></a>   
 ## <a name="accessing-security-critical-members"></a>存取安全性關鍵成員  
- 如果成員有 <xref:System.Security.SecurityCriticalAttribute>、屬於具有 <xref:System.Security.SecurityCriticalAttribute> 的類型，或位於安全性關鍵組件中，就是安全性關鍵成員。 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，存取安全性關鍵成員的規則如下：  
+ 如果成員有 <xref:System.Security.SecurityCriticalAttribute>、屬於具有 <xref:System.Security.SecurityCriticalAttribute> 的類型，或位於安全性關鍵組件中，就是安全性關鍵成員。 從 .NET Framework 4 開始，存取安全性關鍵成員的規則如下：  
   
 - 透明程式碼無法使用反映來存取安全性關鍵成員，即使是完全受信任的程式碼也一樣。 會擲回 <xref:System.MethodAccessException>、<xref:System.FieldAccessException> 或 <xref:System.TypeAccessException>。  
   
@@ -98,9 +98,9 @@ ms.locfileid: "66457289"
   
 ## <a name="version-information"></a>版本資訊  
   
-- 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，透明程式碼無法使用反映來存取安全性關鍵的成員。  
+- 從 .NET Framework 4 開始，透明程式碼無法使用反映來存取安全性關鍵的成員。  
   
-- [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 中已開始使用 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標。 先前版本的 .NET Framework 針對使用反射來存取非公用成員程式碼需要 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 旗標。 絕不要將此權限授與部分受信任的程式碼。  
+- 在 .NET Framework 2.0 Service Pack 1 中推出 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標。 先前版本的 .NET Framework 針對使用反射來存取非公用成員程式碼需要 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 旗標。 絕不要將此權限授與部分受信任的程式碼。  
   
 - 從 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 開始，使用反映來取得非公用類型和成員的相關資訊時，不需要任何權限。 在舊版中，會需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。  
   

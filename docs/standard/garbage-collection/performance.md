@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 996ea7802473817594420a108470f7604170482e
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 23c1bf7412f18674e87896949e0b57ff8bd60d14
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456799"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489593"
 ---
 # <a name="garbage-collection-and-performance"></a>記憶體回收和效能
 <a name="top"></a> 本主題描述記憶體回收和記憶體使用量的相關問題。 它解決關於 Managed 堆積的問題，並說明如何將記憶體回收對應用程式的影響降至最低。 每個問題已連結至程序，可讓您用來調查問題。  
@@ -44,7 +44,7 @@ ms.locfileid: "66456799"
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>記憶體回收 ETW 事件  
- Windows 事件追蹤 (ETW) 是補充 .NET Framework 所提供之程式碼剖析和偵錯支援的追蹤系統。 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，[記憶體回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)會擷取有用的資訊，以便從統計的觀點來分析 Managed 堆積。 例如，引發 `GCStart_V1` 事件時，會發生記憶體回收，這會提供下列資訊：  
+ Windows 事件追蹤 (ETW) 是補充 .NET Framework 所提供之程式碼剖析和偵錯支援的追蹤系統。 從 .NET Framework 4 開始，[記憶體回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)會擷取有用的資訊，以便從統計的觀點來分析受控堆積。 例如，引發 `GCStart_V1` 事件時，會發生記憶體回收，這會提供下列資訊：  
   
 - 所收集物件的層代。  
   

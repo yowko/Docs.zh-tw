@@ -2,12 +2,12 @@
 title: 協調微服務和多容器應用程式的高延展性和可用性
 description: 探索協調微服務和多容器應用程式之高延展性和可用性的各種選項，以及開發 Kubernetes 應用程式生命週期時使用 Azure Dev Spaces 的可能性。
 ms.date: 09/20/2018
-ms.openlocfilehash: 27155736c6b5308d4794b17e5f5bd0b93109b5c1
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 76fa68cee41f8d1f34ec399c346f457efae57151
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196042"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815848"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>協調微服務和多容器應用程式的高延展性和可用性
 
@@ -27,9 +27,9 @@ ms.locfileid: "66196042"
 
 從架構和開發角度來看，如果您要建置由微服務應用程式所組成的大型企業應用程式，請務必了解下列可支援進階案例的平台和產品：
 
-**叢集和協調器**： 當您要跨許多 Docker 主機向外延展應用程式時 (亦即大型微服務應用程式)，您必須簡化基礎平台的複雜性，並以單一叢集的形式來管理其中的所有主機。 而這正是容器叢集和協調器所提供的功能。 Azure Service Fabric 和 Kubernetes 都是範例協調器。 您可以透過 Azure Kubernetes Service 在 Azure 中取得 Kubernetes。
+**叢集和協調器**： 當您要跨許多 Docker 主機向外延展應用程式時 (亦即大型微服務應用程式)，您必須簡化基礎平台的複雜性，並以單一叢集的形式來管理其中的所有主機。 而這正是容器叢集和協調器所提供的功能。 Kubernetes 是協調器的一個範例，可以透過 Azure Kubernetes Service 在 Azure 中取得。
 
-**排程器**： 「排程」可讓系統管理員啟動叢集中的容器，因此這些排程器也會提供 UI。 叢集排程器有下列職責：有效率地使用叢集的資源、設定使用者所提供的條件約束、跨節點或主機有效進行容器負載平衡，以及維持容錯性並保障高可用性。
+**排程器**： 「排程」  可讓系統管理員啟動叢集中的容器，因此這些排程器也會提供 UI。 叢集排程器有下列職責：有效率地使用叢集的資源、設定使用者所提供的條件約束、跨節點或主機有效進行容器負載平衡，以及維持容錯性並保障高可用性。
 
 叢集與排程器的概念密切相關，因此不同廠商所提供的產品通常會兩組功能都提供。 下列清單顯示您可以針對叢集和排程器選擇的最重要平台和軟體。 一般來說，Azure 這類公用雲端都會提供這些協調器。
 
@@ -51,31 +51,9 @@ ms.locfileid: "66196042"
 
 > [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/) 是 Azure 中的受控 Kubernetes 容器協調流程服務，可簡化 Kubernetes 叢集的管理、部署和作業。
 
-### <a name="azure-service-fabric"></a>Azure Service Fabric
-
-![Azure Service Fabric 標誌](./media/image27.png)
-
-> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) 是一種 Microsoft 微服務平台，可用來建置應用程式。 它是一種服務的[協調器](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction)，並可建立電腦叢集。 Service Fabric 可以將服務部署為容器或一般處理序。 它甚至可以將處理序中的服務與相同應用程式和叢集內容器中的服務混合。
->
-> *Service Fabric* 叢集可以在 Azure 中部署、內部部署或部署到任何雲端。 不過，Azure 中的部署會透過受控方法簡化。
->
-> *Service Fabric* 也提供其他選用的規範 [Service Fabric 程式設計模型](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework)，例如[具狀態的服務](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction)和 [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction)。
->
-> 比起 Linux，*Service Fabric* 在 Windows 中相對成熟 (但仍在持續演進中)。
->
-> 自 2017 年起，Service Fabric 即可支援 Linux 和 Windows 容器。
-
-### <a name="azure-service-fabric-mesh"></a>Azure Service Fabric Mesh
-
-![Azure Service Fabric Mesh 標誌](./media/image35.png)
-
-> [*Azure Service Fabric Mesh*](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview) 提供與 Service Fabric 相同的可靠性、任務關鍵性效能和規模，但提供完全受控且無伺服器的平台。 您不需要管理叢集、VM、儲存體或網路組態。 只要專注於您的應用程式開發即可。
->
-> *Service Fabric Mesh* 支援 Windows 和 Linux 容器，讓您可以使用所選擇的任何程式設計語言和架構進行開發。
-
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>在 Microsoft Azure 中使用容器協調器
 
-許多雲端廠商都支援 Docker 容器以及 Docker 叢集和協調流程，包括 Microsoft Azure、Amazon EC2 Container Service 和 Google Container Engine。 Microsoft Azure 透過 Azure Kubernetes Service (AKS)、Azure Service Fabric 和 Azure Service Fabric Mesh 提供 Docker 叢集和協調器支援。
+許多雲端廠商都支援 Docker 容器以及 Docker 叢集和協調流程，包括 Microsoft Azure、Amazon EC2 Container Service 和 Google Container Engine。 Microsoft Azure 透過 Azure Kubernetes Service (AKS)，提供 Docker 叢集和協調器支援。
 
 ## <a name="using-azure-kubernetes-service"></a>使用 Azure Kubernetes Service
 
@@ -145,7 +123,7 @@ Azure Dev Spaces 提供空間概念，讓您能夠在相對隔離的狀況下工
 
 ## <a name="additional-resources"></a>其他資源
 
-- **開始使用 Azure Kubernetes Service (AKS)** \
+- **開始使用 Azure Kubernetes Service (AKS)**  \
   <https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal>
 
 - **Azure Dev Spaces** \
@@ -156,4 +134,4 @@ Azure Dev Spaces 提供空間概念，讓您能夠在相對隔離的狀況下工
 
 >[!div class="step-by-step"]
 >[上一頁](resilient-high-availability-microservices.md)
->[下一頁](using-azure-service-fabric.md)
+>[下一頁](../docker-application-development-process/index.md)

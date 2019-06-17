@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 05/06/2019
-ms.openlocfilehash: 8d6ff6bc55384281119600f2323212441c1815e9
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: f7dc95a9f0b652f1509720fb987cbdb88f64e78c
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452476"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689260"
 ---
 # <a name="whats-new-in-net-core-30-preview-5"></a>.NET Core 3.0 (Preview 5) 的新功能
 
@@ -32,7 +32,7 @@ ms.locfileid: "65452476"
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
-Windows 的 MSI 安裝程式從 .NET Core 3.0 開始即已變更。 SDK 安裝程式現在會就地升級 SDK 功能帶版本。 功能帶是在版本號碼「修補程式」部分以「一百」為單位的群組中定義。 例如，**3.0.*101*** 和 **3.0.*201*** 是兩個不同功能帶中的版本，而 **3.0.*101*** 和 **3.0.*199*** 則位於相同的功能帶。 此外，當安裝 .NET Core SDK **3.0.*101*** 時，會從電腦中移除 .NET Core SDK **3.0.*100*** (如果存在)。 當在相同的電腦上安裝 **3.0.*200*** 時，不會移除 .NET Core SDK **3.0.*101***。
+Windows 的 MSI 安裝程式從 .NET Core 3.0 開始即已變更。 SDK 安裝程式現在會就地升級 SDK 功能帶版本。 功能帶是在版本號碼「修補程式」  部分以「一百」  為單位的群組中定義。 例如，**3.0.*101*** 和 **3.0.*201*** 是兩個不同功能帶中的版本，而 **3.0.*101*** 和 **3.0.*199*** 則位於相同的功能帶。 此外，當安裝 .NET Core SDK **3.0.*101*** 時，會從電腦中移除 .NET Core SDK **3.0.*100*** (如果存在)。 當在相同的電腦上安裝 **3.0.*200*** 時，不會移除 .NET Core SDK **3.0.*101***。
 
 如需版本設定的詳細資訊，請參閱 [.NET Core 版本設定概觀](../versions/index.md)。
 
@@ -192,7 +192,7 @@ dotnet new wpf
 dotnet new winforms
 ```
 
-Visual Studio 2019 會新增 [新增專案] 範本，供 .NET Core 3.0 Windows Forms 和 WPF 使用。
+Visual Studio 2019 會新增 [新增專案]  範本，供 .NET Core 3.0 Windows Forms 和 WPF 使用。
 
 如需如何移植現有 .NET Framework 應用程式的詳細資訊，請參閱[移植 WPF 專案](../porting/wpf.md)和[移植 Windows Forms 專案](../porting/winforms.md)。
 
@@ -306,7 +306,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 .NET 使用者大幅倚賴 [**Json.NET**](https://www.newtonsoft.com/json) 及其他熱門的 JSON 程式庫 (這些仍持續是絕佳的選擇)。 **Json.NET** 使用 .NET 字串作為其基底資料類型，實際上就是 UTF-16。
 
-新的內建 JSON 支援是高效能、低配置，並以 `Span<byte>` 為基礎。 三個新的主要 JSON 相關類型已新增到 .NET Core 3.0 <xref:System.Text.Json?displayProperty=nameWithType> 命名空間。 這些類型「尚未」支援簡單的 CLR 物件 (POCO) 序列化與還原序列化。
+新的內建 JSON 支援是高效能、低配置，並以 `Span<byte>` 為基礎。 三個新的主要 JSON 相關類型已新增到 .NET Core 3.0 <xref:System.Text.Json?displayProperty=nameWithType> 命名空間。 這些類型「尚未」  支援簡單的 CLR 物件 (POCO) 序列化與還原序列化。
 
 ### <a name="utf8jsonreader"></a>Utf8JsonReader
 

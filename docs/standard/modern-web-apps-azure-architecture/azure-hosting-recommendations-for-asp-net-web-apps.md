@@ -3,20 +3,20 @@ title: ASP.NET Web Core 應用程式的 Azure 裝載建議
 description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | ASP.NET Web Core 應用程式的 Azure 裝載建議
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: a93009e66d63aa7d9c3b60951d43eafa3c351a63
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.date: 06/06/2019
+ms.openlocfilehash: 7cfb9ada4f963aa392a41cfb9f1b2df22f542d41
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053269"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758709"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Web Core 應用程式的 Azure 裝載建議
 
-> 「企業營運領導者都繞過 IT 部門，從雲端中取得應用程式 (又名 SaaS) 並為其付費，就像訂閱雜誌一樣。 當不再需要服務的時候，他們可以取消訂閱，且不會有任何設備在角落裡閒置。」  
+> 「企業營運領導者都繞過 IT 部門，從雲端中取得應用程式 (亦稱為 SaaS) 並為其付費，就像訂閱雜誌一樣。 當不再需要服務的時候，他們可以取消訂閱，且不會有任何設備在角落裡閒置。」  
 > _\- Daryl Plummer，Gartner 分析師_
 
-無論您的應用程式需求和架構是什麼，Windows Azure 都可以支援。 您的裝載需求可以像靜態網站一樣簡單，也可以像由數十種服務組成的應用程式一樣複雜。 針對 ASP.NET Core 整合型 Web 應用程式和支援的服務，建議幾種眾所周知的組態。 本文中的建議根據裝載資源的類型分組，不論是完整應用程式、個別處理程序或是資料。
+無論您的應用程式需求和架構是什麼，Microsoft Azure 都可以支援。 您的裝載需求可以像靜態網站一樣簡單，也可以像由數十種服務組成的應用程式一樣複雜。 針對 ASP.NET Core 整合型 Web 應用程式和支援的服務，建議幾種眾所周知的組態。 本文中的建議根據裝載資源的類型分組，不論是完整應用程式、個別處理程序或是資料。
 
 ## <a name="web-applications"></a>Web 應用程式
 
@@ -24,11 +24,11 @@ ms.locfileid: "66053269"
 
 - App Service Web Apps
 
-- 容器
+- 容器 (數個選項)
 
 - 虛擬機器 (VM)
 
-其中，App Service Web Apps 是大多數情況下建議的方法。 針對微服務架構，請考慮容器式方法。 如果您需要更充分掌控執行應用程式的機器，請考慮 Azure 虛擬機器。
+其中，App Service Web Apps 是大多數情況下建議的方法，包括簡單的容器型應用程式。 針對微服務架構，請考慮容器式方法。 如果您需要更充分掌控執行應用程式的機器，請考慮 Azure 虛擬機器。
 
 ### <a name="app-service-web-apps"></a>App Service Web Apps
 
@@ -44,9 +44,37 @@ App Service Web Apps 提供全受管的平台，針對裝載 Web 應用程式最
 
 - Visual Studio 整合。
 
-- 透過[用於容器的 Web App](https://azure.microsoft.com/services/app-service/containers/) 支援 Linux 及 Windows 容器。
+Azure App Service 是大部分 Web 應用程式的最佳選擇。 部署和管理整合至平台中、網站可快速調整以處理高流量負載，以及內建的負載平衡和流量管理員提供高可用性。 您可以使用線上移轉工具，輕鬆將現有網站移動到 Azure App Service、使用 Web 應用程式資源庫中的開放原始碼應用程式，或使用您選擇的架構和工具來建立新網站。 WebJobs 功能可輕鬆將背景工作處理新增至 App Service Web 應用程式。 如果您有使用本機資料庫裝載在內部部署的現有 ASP.NET 應用程式，則有一個明確的路徑，可以使用 Azure SQL Database，將應用程式移轉至 App Service Web 應用程式 (或者如果想要的話，對內部部署資料庫伺服器進行安全存取)。
 
-Azure App Service 是大部分 Web 應用程式的最佳選擇。 部署和管理整合至平台中、網站可快速調整以處理高流量負載，以及內建的負載平衡和流量管理員提供高可用性。 您可以使用線上移轉工具，輕鬆將現有網站移動到 Azure App Service、使用 Web 應用程式資源庫中的開放原始碼應用程式，或使用您選擇的架構和工具來建立新網站。 WebJobs 功能可輕鬆將背景工作處理新增至 App Service Web 應用程式。
+![將內部部署 .NET 應用程式移轉至 Azure App Service 的建議策略](./media/image1-6.png)
+
+在大部分情況下，從本機裝載的 ASP.NET 應用程式移至 App Service Web 應用程式是一個簡單的程序。 幾乎或完全不需要修改應用程式本身，而且它可以快速開始使用 Azure App Service Web Apps 提供的許多功能。
+
+除了未針對雲端最佳化的應用程式之外，Azure App Service Web Apps 還是許多簡單整合型 (非分散式) 應用程式 (例如許多 ASP.NET Core 應用程式) 的絕佳解決方案。 利用這種方法，架構會是基本的，而且易於了解和管理：
+
+![基本 Azure 架構](./media/image1-5.png)
+
+單一資源群組中的少數資源通常就足以管理這類應用程式。 通常部署為單一單元的應用程式 (而不是組成許多不同處理程序的應用程式) 非常適合這種[基本架構方法](https://docs.microsoft.com/azure/architecture/reference-architectures/app-service-web-app/basic-web-app)。 雖然在架構上很簡單，但此方法仍然可讓裝載的應用程式向上擴充 (每個節點多個資源) 以及橫向擴充 (更多裝載的節點) 以符合任何增加需求。 透過自動調整，應用程式可以設定為根據需求和節點間的平均負載，自動調整裝載應用程式的節點數目。
+
+### <a name="app-service-web-apps-for-containers"></a>用於容器的 App Service Web Apps
+
+除了支援直接裝載 Web 應用程式之外，[用於容器的 App Service Web Apps](https://azure.microsoft.com/services/app-service/containers/) 還可以用來在 Windows 和 Linux 上執行容器化的應用程式。 您可以使用這項服務，輕鬆地部署並執行可隨業務調整的容器化應用程式。 此應用程式具備上述所列的所有 App Service Web Apps 功能。 此外，用於容器的 Web Apps 支援簡化的 CI/CD 搭配 Docker Hub、Azure Container Registry 和 GitHub。 您可以使用 Azure DevOps 定義將變更發佈至登錄的組建和部署管線。 這些變更之後可以在預備環境中加以測試，並使用部署位置自動部署至生產環境，進而允許零停機時間升級。 回復到先前的版本可以輕易地完成。
+
+在某些情況下，用於容器的 Web Apps 最合理。 如果您有可以容器化的現有應用程式，則無論是在 Windows 還是 Linux 容器中，您都可以使用此工具組輕鬆地裝載這些應用程式。 只要發佈容器，然後將用於容器的 Web Apps 設定為從選擇的登錄提取該映像的最新版本即可。 這是「隨即轉移」方法，可從傳統的應用程式裝載模型移轉至雲端最佳化模型。
+
+![將容器化的內部部署 .NET 應用程式移轉至用於容器的 Azure Web Apps](./media/image1-8.png)
+
+如果您的開發小組可移至容器型開發程序，這個方法也適用。 開發應用程式含有容器的「內部迴圈」包含建置含有容器的應用程式。 對程式碼以及容器設定所做的變更會推送至原始檔控制，而自動化組建則負責將新的容器映像發佈至 Docker Hub 或 Azure Container Registry 之類的登錄。 這些映像之後會當作其他開發以及部署到生產環境的基礎使用，如下圖所示：
+
+![端對端 Docker DevOps 生命週期工作流程](./media/image1-7.png)
+
+使用容器開發可提供許多優點，特別是在容器用於生產環境時。 相同的容器設定用來裝載每個環境中所執行的應用程式，從本機開發電腦到將系統建置到生產環境並進行測試。 這可大幅降低因電腦設定或軟體版本不同而產生缺失的可能性。 開發人員也可以使用他們最具生產力的任何工具，包括作業系統，因為容器可以在任何 OS 上執行。 在某些情況下，涉及許多容器的分散式應用程式在單一開發電腦上執行可能非常耗費資源。 在此情況下，升級為使用 Kubernetes 和 Azure Dev Spaces 可能是有意義的，如下一節所述。
+
+因為較大應用程式的部分會分割成較小的獨立*微服務*，其他設計模式則可用來改善應用程式行為。 *API 閘道*可以簡化存取以及將用戶端與其後端分離，而不是直接使用個別的服務。 為不同的前端提供個別的服務後端時，也可讓服務隨著其取用者擴展。 常見的服務可以透過個別*側車*容器存取，其中可能包含使用*大使*模式的常見用戶端連線程式庫。
+
+![註明幾種常見設計模式的微服務範例架構。](./media/image1-10.png)
+
+[深入了解要在建置微服務型系統時考慮的設計模式。](https://docs.microsoft.com/azure/architecture/microservices/design/patterns)
 
 ### <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
 
@@ -60,6 +88,19 @@ AKS 透過將大部分責任轉移給 Azure，來降低管理 Kubernetes 叢集�
 - 節省成本 - 只需支付執行中代理程式集區節點的費用。
 
 有了 Azure 負責管理您 AKS 叢集中的節點，您就不再需要手動執行許多工作，像是叢集升級。 由於 Azure 會為您處理這些重要的維護工作，因此 AKS 不提供對叢集的直接存取 (例如透過 SSH)。
+
+運用 AKS 的小組也可以使用 Azure Dev Spaces。 Azure Dev Spaces 可協助小組透過允許小組直接使用其在 AKS 中執行的整個微服務架構或應用程式，藉此將注意力放在其微服務應用程式的開發與快速反覆運算。 Azure Dev Spaces 也會提供一種獨立更新微服務架構部分的方法，而不會影響到其餘的 AKS 叢集或其他開發人員。
+
+![Azure Dev Spaces 工作流程範例](./media/image1-9.gif)
+
+Azure Dev Spaces：
+
+- 將本機電腦設定時間和資源需求降到最低
+- 讓小組更快速地逐一查看
+- 減少小組所需的整合環境數量
+- 開發/測試時，在分散式系統中移除模擬特定服務的需求
+
+[深入了解 Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/about)
 
 ### <a name="azure-virtual-machines"></a>Azure 虛擬機器
 
@@ -93,6 +134,12 @@ Azure 提供各種資料儲存選項，以便您的應用程式可以針對有�
 
 - Azure 解決方案架構\
   <https://azure.microsoft.com/solutions/architecture/>
+
+- Azure 的基本 Web 應用程式架構\
+  <https://docs.microsoft.com/azure/architecture/reference-architectures/app-service-web-app/basic-web-app>
+
+- 微服務的設計模式\
+  <https://docs.microsoft.com/azure/architecture/microservices/design/patterns>
 
 - Azure 開發人員指南\
   <https://azure.microsoft.com/campaigns/developer-guide/>

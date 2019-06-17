@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6b7b120a5a21301ff82aa8ebd1cfc169f7884e4
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 8d3ac6acf756a0ac468eb4483432467429ed91ca
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457432"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483282"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>記憶體回收的基本概念
 <a name="top"></a> 在 Common Language Runtime (CLR) 中，記憶體回收行程會當做自動記憶體管理員。 它提供了下列優點：  
@@ -186,7 +186,7 @@ ms.locfileid: "66457432"
   
      工作站記憶體回收可能是並行或非並行的。 並行記憶體回收可讓 Managed 執行緒在記憶體回收期間繼續運作。  
   
-     從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]開始，背景記憶體回收就取代了並行記憶體回收。  
+     從 .NET Framework 4 開始，背景記憶體回收取代了並行記憶體回收。  
   
 - 伺服器記憶體回收，適用於需要高輸送量和延展性的伺服器應用程式。 伺服器記憶體回收可以是非並行或背景。  
   

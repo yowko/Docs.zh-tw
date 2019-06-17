@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ed4533c934120c3400ddba68e65bc82aabc9370
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 350cc91a2d423bc40cc44466e679db769daac1d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456780"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486982"
 ---
 # <a name="resolving-assembly-loads"></a>解析組件載入
 .NET Framework 提供需要更能控制組件載入之應用程式的 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。 藉由處理這個事件，您的應用程式可以將組件從一般探查路徑外部載入到載入內容、選取要載入的數個組件版本、發出動態組件，並傳回它，以此類推。 本主題提供處理 <xref:System.AppDomain.AssemblyResolve> 事件的指引。  
@@ -52,7 +52,7 @@ ms.locfileid: "66456780"
 > [!NOTE]
 >  此處理常式必須將組件載入到載入來源內容、到載入內容，或沒有內容。如果此處理常式使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> 方法以將組件載入僅限反映的內容，則引發 <xref:System.AppDomain.AssemblyResolve> 事件的載入嘗試會失敗。  
   
- 它負責讓事件處理常式傳回適當的組件。 處理常式可以將 <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> 屬性值傳遞給 <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> 建構函式，以剖析所要求組件的顯示名稱。 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，處理常式可以使用 <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> 屬性來判斷目前的要求是否為另一個組件的相依性。 這項資訊可以協助識別將符合相依性的組件。  
+ 它負責讓事件處理常式傳回適當的組件。 處理常式可以將 <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> 屬性值傳遞給 <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> 建構函式，以剖析所要求組件的顯示名稱。 從 .NET Framework 4 開始，處理常式可以使用 <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> 屬性來判斷目前的要求是否為另一個組件的相依性。 這項資訊可以協助識別將符合相依性的組件。  
   
  事件處理常式可以傳回的組件版本與所要求的版本不同。  
   

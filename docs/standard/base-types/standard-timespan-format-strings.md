@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bf7424c8aa2ae816340f6fa641e5c79a56ae0dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3e67861a32d5863e4c1b4d9b147c507c1bb54c39
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834123"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491092"
 ---
 # <a name="standard-timespan-format-strings"></a>標準 TimeSpan 格式字串
 <a name="Top"></a> 標準 <xref:System.TimeSpan> 格式字串會使用單一格式規範，來定義從格式化作業所產生之 <xref:System.TimeSpan> 值的文字表示。 任何包含一個以上字元 (包含空格) 的格式字串，都會解譯為自訂 <xref:System.TimeSpan> 格式字串。 如需詳細資訊，請參閱[自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)。  
@@ -64,7 +64,7 @@ ms.locfileid: "58834123"
 |*ss*|秒數，範圍從 "0" 到 "59"。|  
 |*fffffff*|秒的選擇性小數部分。  其值的範圍可從 "0000001" (一個刻度或一秒的千萬分之一) 到 "9999999" (一秒的千萬分之 9,999,999，也就是一秒減一個刻度)。|  
   
- 與 "g" 和 "G" 格式規範不同，"c" 格式規範不區分文化特性。 它會產生 <xref:System.TimeSpan> 值的字串表示，而該值是非變異值，且對於 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 之前的所有舊版 .NET Framework 皆通用。 "c" 是預設的 <xref:System.TimeSpan> 格式字串；<xref:System.TimeSpan.ToString?displayProperty=nameWithType> 方法使用 "c" 格式字串來將時間間隔值格式化。  
+ 與 "g" 和 "G" 格式規範不同，"c" 格式規範不區分文化特性。 它會產生 <xref:System.TimeSpan> 值的字串表示法，該值是非變異值，且對於 .NET Framework 4 之前的所有舊版 .NET Framework 皆通用。 "c" 是預設的 <xref:System.TimeSpan> 格式字串；<xref:System.TimeSpan.ToString?displayProperty=nameWithType> 方法使用 "c" 格式字串來將時間間隔值格式化。  
   
 > [!NOTE]
 >  <xref:System.TimeSpan> 也支援 "t" 和 "T" 標準格式字串，它們的行為與 "c" 標準格式字串相同。  

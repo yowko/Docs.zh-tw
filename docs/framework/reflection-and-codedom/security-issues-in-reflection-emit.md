@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ca4a087b60e6cb857ec78273dad099e5e5da07a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 434a88e305f833a5a95bb62835b5badd4a2c4949
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457314"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816144"
 ---
 # <a name="security-issues-in-reflection-emit"></a>反映發出中的安全性問題
 .NET Framework 提供三種發出 Microsoft 中繼語言 (MSIL) 的方式，每種都有它自己的安全性問題：  
@@ -36,7 +36,7 @@ ms.locfileid: "66457314"
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>動態組件  
- 使用 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> 方法的多載來建立動態組件。 由於刪除全機器安全性原則，這個方法的大部分多載已在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中遭取代。 (請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。)無論信任層級為何，剩餘的多載可由任何程式碼執行。 這些多載可分為兩個群組：當建立動態組件時，指定要套用至動態組件的屬性清單，以及不套用至動態組件的屬性清單。 當您建立組件時，如果您未套用 <xref:System.Security.SecurityRulesAttribute> 屬性來指定組件的透明度模型，則透明度模型會繼承自發出的組件。  
+ 使用 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> 方法的多載來建立動態組件。 由於刪除全機器安全性原則，因此這個方法的大部分多載已在 .NET Framework 4 中遭取代。 (請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。)無論信任層級為何，剩餘的多載可由任何程式碼執行。 這些多載可分為兩個群組：當建立動態組件時，指定要套用至動態組件的屬性清單，以及不套用至動態組件的屬性清單。 當您建立組件時，如果您未套用 <xref:System.Security.SecurityRulesAttribute> 屬性來指定組件的透明度模型，則透明度模型會繼承自發出的組件。  
   
 > [!NOTE]
 >  動態組件建立後，使用 <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> 方法套用至動態組件的屬性並不會生效，直到組件已儲存至磁碟並再次載入記憶體中。  
@@ -141,14 +141,14 @@ ms.locfileid: "66457314"
 ## <a name="version-information"></a>版本資訊  
  從 .NET Framework 4 開始，已消除全機器的安全性原則，且安全性透明度變成預設強制機制。 請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。  
   
- 從 [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 開始，當發出動態組件和動態方法時，不再需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。 此旗標在所有先前版本的 .NET Framework 中都是必要項目。  
+ 從 .NET Framework 2.0 Service Pack 1 開始，當發出動態組件和動態方法時，不再需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。 此旗標在所有先前版本的 .NET Framework 中都是必要項目。  
   
 > [!NOTE]
->  根據預設，具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission> 包含在 `FullTrust` 和 `LocalIntranet` 具名權限集合，而不是 `Internet` 權限集合。 因此，在先前版本的 .NET Framework 中，程式庫只有在其針對 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 執行 <xref:System.Security.PermissionSet.Assert%2A> 時，才能搭配網際網路權限使用。 這類程式庫需要仔細的安全性檢閱，因為編碼錯誤可能會造成安全性漏洞。 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 允許在部分信任案例中發出程式碼，而不需提出任何安全性要求，因為產生的程式碼本質上並非有權限的作業。 也就是產生的程式碼之權限不會比發出程式碼的組件還多。 這可讓程式庫發出安全性透明的程式碼，並可免除 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 判斷提示的需要，這可簡化撰寫安全程式庫的工作。  
+>  根據預設，具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission> 包含在 `FullTrust` 和 `LocalIntranet` 具名權限集合，而不是 `Internet` 權限集合。 因此，在先前版本的 .NET Framework 中，程式庫只有在其針對 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 執行 <xref:System.Security.PermissionSet.Assert%2A> 時，才能搭配網際網路權限使用。 這類程式庫需要仔細的安全性檢閱，因為編碼錯誤可能會造成安全性漏洞。 .NET Framework 2.0 SP1 允許在部分信任案例中發出程式碼，而不需提出任何安全性要求，因為產生的程式碼本質上並非有權限的作業。 也就是產生的程式碼之權限不會比發出程式碼的組件還多。 這可讓程式庫發出安全性透明的程式碼，並可免除 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 判斷提示的需要，這可簡化撰寫安全程式庫的工作。  
   
- 此外，[!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 導入了 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標，用來從部分信任的動態方法中存取非公用類型和成員。 .NET Framework 先前版本針對存取非公用型別及成員的動態方法需要 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 旗標；這是永遠不該授與部分信任程式碼的權限。  
+ 此外，.NET Framework 2.0 SP1 導入了 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 旗標，用來從部分信任的動態方法中存取非公用型別和成員。 .NET Framework 先前版本針對存取非公用型別及成員的動態方法需要 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 旗標；這是永遠不該授與部分信任程式碼的權限。  
   
- 最後，[!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 導入了匿名裝載的方法。  
+ 最後，.NET Framework 2.0 SP1 導入了匿名裝載的方法。  
   
 ### <a name="obtaining-information-on-types-and-members"></a>取得類型和成員資訊  
  從 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 開始，取得非公用類型和成員的相關資訊不需要權限。 反映會用來取得發出動態方法需要的資訊。 例如，<xref:System.Reflection.MethodInfo> 物件會用來發出方法呼叫。 .NET Framework 先前版本需要具備 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。 如需詳細資訊，請參閱[反映的安全性考量](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)。  

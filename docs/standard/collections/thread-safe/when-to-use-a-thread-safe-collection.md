@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ca809c28e7d55d7b899809c2fd514c073dd73054
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e18dd5370143dfe4faaffb49017d0a8f62c87433
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543169"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490998"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>使用安全執行緒集合的時機
-[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 引進五種悉的集合類型，特別設計來支援多執行緒新增和移除作業。 若要達到執行緒安全，這些新的類型會使用各種有效率的鎖定和無鎖定同步處理機制。 同步處理會增加作業的負荷。 負荷量取決於使用的同步處理類型、執行的作業類型，以及其他因素 (例如，嘗試同時存取集合的執行緒數目)。  
+.NET Framework 4 引進五種新的集合類型，特別針對支援多執行緒新增和移除作業而設計。 若要達到執行緒安全，這些新的類型會使用各種有效率的鎖定和無鎖定同步處理機制。 同步處理會增加作業的負荷。 負荷量取決於使用的同步處理類型、執行的作業類型，以及其他因素 (例如，嘗試同時存取集合的執行緒數目)。  
   
  在某些情況下，同步處理負荷會顯得微不足道，並且在受到外部鎖定保護時，讓多執行緒類型執行速度大幅加快，而且擴充的狀況遠優於其非安全執行緒對等項目。 在其他情況下，負荷可能會讓安全執行緒類型的執行和擴充速度等於甚於比外部鎖定之非安全執行緒版本的類型還要慢。  
   

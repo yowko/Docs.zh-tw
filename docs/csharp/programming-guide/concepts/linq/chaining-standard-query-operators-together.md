@@ -2,15 +2,15 @@
 title: 將標準查詢運算子鏈結在一起 (C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: 71b364d76860b5daa21ea176947d9cfe9d49b308
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e09b918ab6c33c8e3ccae6f99826dd86f4a2d1e6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582879"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487611"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>將標準查詢運算子鏈結在一起 (C#)
-這是[教學課程：將查詢鏈結在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) 中的最後一個主題。  
+這是[教學課程：將查詢鏈結在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) 中的最後一個主題。  
   
  標準的查詢運算子也可以鏈結在一起。 例如，您可以插入 <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> 運算子，也可以用延遲的方式操作。 但該運算子不會具體化任何中繼結果。  
   
@@ -19,7 +19,7 @@ ms.locfileid: "54582879"
   
  其中一種差異是，在這種情況下，<xref:System.Linq.Enumerable.Where%2A> 方法會逐一查看其來源集合、判斷第一個項目沒有傳遞述詞，然後取得下一個有傳遞的項目。 它接著會產生第二個項目。  
   
- 不過，基本概念是一樣的：除非必要，否則系統不會具體化中繼集合。  
+ 不過，基本概念相同：除非必要，否則系統不會具體化中繼集合。  
   
  使用查詢運算式時，會將這些運算式轉換為標準查詢運算子的呼叫，因此適用相同的原則。  
   
@@ -86,6 +86,3 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
-## <a name="see-also"></a>另請參閱
-
-- [教學課程：將查詢鏈結在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0776db4d045a8e52521859b9126583558bc5b51
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: bdf8d41a99328a8c8fd31eca974e52082abb7e79
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586380"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490783"
 ---
 # <a name="cancellation-in-managed-threads"></a>Managed 執行緒中的取消作業
-隨著 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 一起啟動， .NET Framework 使用統一的模型來進行非同步或長時間執行的同步作業的合作式取消。 此模型是根據一個被稱為取消權杖的輕量級物件。 叫用一或多個可取消作業的物件，例如藉由建立新的執行緒或工作，會將權杖傳遞至每個作業。 個別作業可以依序將權杖的複本傳遞至其他作業。 之後的某些時候 ，建立權杖的物件可以使用它來要求作業停止活動。 只有要求的物件可以發出取消要求，而且每個接聽程式負責留意要求，並且以適當且即時的方式回應。  
+從 .NET Framework 4 開始，.NET Framework 使用統一的模型來進行非同步或長時間執行的同步作業的合作式取消。 此模型是根據一個被稱為取消權杖的輕量級物件。 叫用一或多個可取消作業的物件，例如藉由建立新的執行緒或工作，會將權杖傳遞至每個作業。 個別作業可以依序將權杖的複本傳遞至其他作業。 之後的某些時候 ，建立權杖的物件可以使用它來要求作業停止活動。 只有要求的物件可以發出取消要求，而且每個接聽程式負責留意要求，並且以適當且即時的方式回應。  
   
  合作式取消模型的一般實作模式是：  
   
@@ -45,7 +45,7 @@ ms.locfileid: "65586380"
   
 - 送出要求的物件藉著只使用一個方法呼叫，來發出取消要求給權杖的所有複本。  
   
-- 接聽程式可以透過將這些權杖聯結成單一個「連結的權杖」(linked token) 來同時接聽多個權杖。  
+- 接聽程式可以透過將這些權杖聯結成單一個「連結的權杖」(linked token)  來同時接聽多個權杖。  
   
 - 使用者程式碼可以注意並回應來自程式庫程式碼的取消要求，並且程式庫程式碼可以注意並回應來自使用者程式碼的取消要求。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "65586380"
   
  不過，在更複雜的情況下，使用者委派可能需要通知程式庫程式碼已發生取消。 在這種情況下，終止作業的正確方式是委派要呼叫會導致擲回 <xref:System.OperationCanceledException> 的 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> 方法。 程式庫程式碼可以在使用者委派執行緒上攔截此例外狀況，並檢查例外狀況的權杖來判斷此例外狀況是否表示合作式取消或一些其他的例外狀況。  
   
-  <xref:System.Threading.Tasks.Task> 類別以這種方式控制 <xref:System.OperationCanceledException> 。 如需詳細資訊，請參閱[工作取消](../../../docs/standard/parallel-programming/task-cancellation.md)。  
+ <xref:System.Threading.Tasks.Task> 類別以這種方式控制 <xref:System.OperationCanceledException> 。 如需詳細資訊，請參閱[工作取消](../../../docs/standard/parallel-programming/task-cancellation.md)。  
   
 ### <a name="listening-by-polling"></a>透過輪詢接聽  
  針對長時間執行計算的迴圈或遞迴，您可以透過定期輪詢 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A?displayProperty=nameWithType> 屬性的值來接聽取消要求。 如果其值為 `true` ，方法應該清除並盡快結束。 最佳的輪詢頻率取決於應用程式的類型。 其由開發人員決定任何指定程式的最佳輪詢頻率。 輪詢本身不會大幅影響效能。 下列範例會示範一個輪詢的可行方法。  
@@ -122,7 +122,7 @@ ms.locfileid: "65586380"
  [!code-csharp[Cancellation#5](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex9.cs#5)]
  [!code-vb[Cancellation#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex9.vb#5)]  
   
- 標記 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 、 <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> 和 <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> 的新程式碼中兩者都能以其 `Wait` 方法支援新的取消架構。 您可以傳遞 <xref:System.Threading.CancellationToken> 給該方法，並且當要求取消作業時，事件會甦醒並擲回 <xref:System.OperationCanceledException>。  
+ 在以 .NET Framework 4 為目標的新程式碼中，<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> 和 <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> 都能以其 `Wait` 方法支援新的取消架構。 您可以傳遞 <xref:System.Threading.CancellationToken> 給該方法，並且當要求取消作業時，事件會甦醒並擲回 <xref:System.OperationCanceledException>。  
   
  [!code-csharp[Cancellation#6](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#6)]
  [!code-vb[Cancellation#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#6)]  

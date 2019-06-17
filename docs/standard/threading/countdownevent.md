@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f25ffb16fa5feb382bb42c737440317cfb777b1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b996b60a08a55b1d8e86878974be4887ea2684f8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666312"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490827"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> 是一個同步處理基本類型，在發出了特定次數的訊號給它之後，就會解除封鎖其等候中的執行緒。 <xref:System.Threading.CountdownEvent> 是針對下列案例所設計：您必須使用 <xref:System.Threading.ManualResetEvent> 或 <xref:System.Threading.ManualResetEventSlim>，並在發出訊號給事件之前手動遞減變數。 例如，在分支/聯結案例中，您可以只建立訊號計數為 5 的 <xref:System.Threading.CountdownEvent>，然後在執行緒集區上啟動五個工作項目，並讓每個工作項目在其完成時呼叫 <xref:System.Threading.CountdownEvent.Signal%2A>。 每次呼叫 <xref:System.Threading.CountdownEvent.Signal%2A> 就會將訊號計數遞減 1。 在主執行緒上，對 <xref:System.Threading.CountdownEvent.Wait%2A> 的呼叫將會封鎖，直到訊號計數為零為止。  
@@ -40,7 +40,7 @@ ms.locfileid: "64666312"
  [!code-vb[CDS_CountdownEvent#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/module1.vb#01)]  
   
 ## <a name="countdownevent-with-cancellation"></a>含有取消的 CountdownEvent  
- 下列範例示範如何使用取消語彙基元，來取消 <xref:System.Threading.CountdownEvent> 上的等候作業。 基本模式會遵循適用於統一取消的模型，這是在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中引進的。 如需詳細資訊，請參閱[受控執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)。  
+ 下列範例示範如何使用取消語彙基元，來取消 <xref:System.Threading.CountdownEvent> 上的等候作業。 基本模式會遵循適用於統一取消的模型，這是在 .NET Framework 4 中引進的。 如需詳細資訊，請參閱[受控執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)。  
   
  [!code-csharp[CDS_CountdownEvent#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_countdownevent/cs/countdownevent.cs#02)]
  [!code-vb[CDS_CountdownEvent#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/canceleventwait.vb#02)]  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 9f43a863de69122e251204668af2ea989fcc993c
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: aae10f8b03a16e55f0b26981f17585c8790e00c1
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300082"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816079"
 ---
 # <a name="--and---operators-c-reference"></a>- 及 -= 運算子 (C# 參考)
 
@@ -31,12 +31,22 @@ ms.locfileid: "66300082"
 針對相同 [delegate](../keywords/delegate.md) 型別中的運算元，`-` 運算子會傳回委派執行個體，其計算方式如下：
 
 - 如果兩個運算元都為非 Null，且第二個運算元的引動過程清單是第一個運算元之引動過程清單的適當連續子清單，則作業結果會是新引動過程清單藉由從第一個運算元之引動過程清單來移除第二個運算元的項目所取得。 如果第二個運算元清單與第一個運算元清單中的多個連續子清單相符，則只會移除最右邊的相符子清單。 如果移除導致空白清單，則結果是 `null`。
-- 如果第二個運算元的引動過程清單不是第一個運算元之引動過程清單的適當連續子清單，則作業的結果會是第一個運算元。
+
+  [!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
+
+- 如果第二個運算元的引動過程清單不是第一個運算元之引動過程清單的適當連續子清單，則作業的結果會是第一個運算元。 例如，移除不屬於多點傳送委派的委派就不會執行任何動作，而且會導致多點傳送委派不變。
+
+  [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
+
+  上述範例也會示範在委派移除期間，系統會比較委派執行個體。 例如，從評估相同 [lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)所產生的委派不相等。 如需有關委派等號比較的詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[委派等號比較運算子](~/_csharplang/spec/expressions.md#delegate-equality-operators)一節。
+
 - 如果第一個運算元是 `null`，則作業的結果是 `null`。 如果第二個運算元是 `null`，則作業的結果是第一個運算元。
 
-下列範例顯示 `-` 作業如何執行委派移除：
+  [!code-csharp-interactive[delegate removal and null](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalAndNull)]
 
-[!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
+若要結合委派，請使用 [`+` 運算子](addition-operator.md#delegate-combination)。
+
+如需委派型別的詳細資訊，請參閱[委派](../../programming-guide/delegates/index.md)。
 
 ## <a name="subtraction-assignment-operator--"></a>減法指派運算子 -=
 
@@ -66,7 +76,7 @@ x = x - y
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[一元減號運算子](~/_csharplang/spec/expressions.md#unary-minus-operator)與[減法運算子](~/_csharplang/spec/expressions.md#subtraction-operator)章節。
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[一元減號運算子](~/_csharplang/spec/expressions.md#unary-minus-operator)與[減法運算子](~/_csharplang/spec/expressions.md#subtraction-operator)章節。
 
 ## <a name="see-also"></a>另請參閱
 

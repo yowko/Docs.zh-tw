@@ -2,12 +2,12 @@
 title: 微服務架構中的通訊
 description: 探索微服務之間的不同通訊方式，並了解同步和非同步方式的影響。
 ms.date: 09/20/2018
-ms.openlocfilehash: 7f7a65ef53d401a8533f82168db5a412d5ac9756
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 25d99d3d9b00b8c20c5ded6d8b40c77fcbe0eb46
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644360"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690549"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>微服務架構中的通訊
 
@@ -39,7 +39,7 @@ ms.locfileid: "65644360"
 
 微服務應用程式通常會使用這些通訊樣式的組合。 叫用一般 Web API HTTP 服務時，最常見的類型是使用 HTTP/HTTPS 等同步通訊協定的單一接收者通訊。 微服務通常也會使用傳訊通訊協定，來進行微服務之間的非同步通訊。
 
-這些軸可讓您對可能的通訊機制一目了然，但它們不是建置微服務時的重要考量。 在整合微服務時，用戶端執行緒執行的非同步本質或者所選通訊協定的非同步本質兩者都不是重點。 真正的重點在於您要能夠以非同步方式整合微服務，同時保持微服務的獨立性，如下節所述。
+這些軸可讓您對可能的通訊機制一目了然，但它們不是建置微服務時的重要考量。 在整合微服務時，用戶端執行緒執行的非同步本質或者所選通訊協定的非同步本質兩者都不是重點。 真正的重點  在於您要能夠以非同步方式整合微服務，同時保持微服務的獨立性，如下節所述。
 
 ## <a name="asynchronous-microservice-integration-enforces-microservices-autonomy"></a>非同步的微服務整合可強化微服務的自主性
 
@@ -67,9 +67,9 @@ ms.locfileid: "65644360"
 
 ## <a name="communication-styles"></a>通訊樣式
 
-依據所要使用的通訊類型而定，您可以搭配許多通訊協定和選擇來進行通訊。 如果您是使用以同步要求/回應為基礎的通訊機制，則 HTTP 和 REST 這類通訊協定是最常見的方法，尤其是當您要在 Docker 主機或微服務叢集之外發佈服務時。 如果您要在內部服務 (Docker 主機或微服務叢集內) 之間進行通訊，也可以使用二進位格式的通訊機制 (例如使用 TCP 和二進位格式的 Service Fabric 遠端處理或 WCF)。 或者，您可以使用非同步訊息通訊機制，例如 AMQP。
+依據所要使用的通訊類型而定，您可以搭配許多通訊協定和選擇來進行通訊。 如果您是使用以同步要求/回應為基礎的通訊機制，則 HTTP 和 REST 這類通訊協定是最常見的方法，尤其是當您要在 Docker 主機或微服務叢集之外發佈服務時。 如果您要在內部服務 (Docker 主機或微服務叢集內) 之間進行通訊，也可以使用二進位格式的通訊機制 (例如使用 TCP 和二進位格式的 WCF)。 或者，您可以使用非同步訊息通訊機制，例如 AMQP。
 
-還有很多種訊息格式可能更有效率，如 JSON 或 XML，甚至二進位格式。 如果您選擇的二進位格式不是標準格式，則不建議您使用該格式來公開發佈服務。 您可以在微服務之間的內部通訊使用非標準格式。 好比說，在 Docker 主機或微服務叢集 (Docker 協調器或 Azure Service Fabric) 內的微服務之間進行通訊時，或針對可與微服務通訊的專屬用戶端應用程式，您可以這樣做。
+還有很多種訊息格式可能更有效率，如 JSON 或 XML，甚至二進位格式。 如果您選擇的二進位格式不是標準格式，則不建議您使用該格式來公開發佈服務。 您可以在微服務之間的內部通訊使用非標準格式。 例如，在 Docker 主機或微服務叢集 (如 Docker 協調器) 內的微服務之間進行通訊時，或針對可與微服務通訊的專屬用戶端應用程式，您可以這樣做。
 
 ### <a name="requestresponse-communication-with-http-and-rest"></a>使用 HTTP 和 REST 的要求/回應通訊
 

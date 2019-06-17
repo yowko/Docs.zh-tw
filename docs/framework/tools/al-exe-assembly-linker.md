@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c18b7b34a14e5f854ee72a0462a1969fb6501190
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b947aefae4924a70c394626ace5a5abe1ebf546f
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632177"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816160"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (組件連結器)
 
@@ -126,7 +126,7 @@ al sources options
 |al1035|程式庫無法有進入點<br /><br /> 您無法同時指定 **/target:lib** 選項 (預設值) 和 **/main** 選項。|
 |al1036|可執行應用程式必須有進入點<br /><br /> 使用 **/target:exe** 或 **/target:win** 選項時，也必須指定 **/main** 選項。|
 |al1037|找不到進入點方法 'main'<br /><br /> *Al.exe* 在 **/main** 選項所指定的位置找不到 `Main` 方法。|
-|al1039|全域組件快取管理員初始化失敗 — 原因<br /><br /> 請重新安裝 Visual Studio 或 [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]。|
+|al1039|全域組件快取管理員初始化失敗 — 原因<br /><br /> 重新安裝 Visual Studio 或 Windows SDK。|
 |al1040|無法將組件安裝至快取 — 原因<br /><br /> 只有簽署的組件才能安裝至快取。 如需詳細資訊，請參閱[全域組件快取](../../../docs/framework/app-domains/gac.md)。|
 |al1041|'method': 因為簽章或可見度不正確，或者其為泛型，所以無法成為進入點<br /><br /> 已使用 **/main** 選項指定方法，但是該方法不是靜態、未傳回 `int` 或 `void`、為泛型，或具有無效的引數。|
 |al1042|'exe'：無法為 EXE 新增模組<br /><br /> 已將不含組件的 *.exe* 檔指定為 *Al.exe* 的輸入檔。 *Al.exe* 只能將不含組件的 *.dll* 檔案當作輸入檔。|
@@ -146,7 +146,7 @@ al sources options
 |al1056|參考的組件 'filename' 是當地語系化的附屬組件<br /><br /> 在建立目前的組件時參考到使用 <xref:System.Reflection.AssemblyCultureAttribute> 屬性建立的組件。 <xref:System.Reflection.AssemblyCultureAttribute> 屬性表示檔案是當地語系化的附屬組件，不適合參考附屬組件。 您可能應該改為參考主要父組件。|
 |al1057|可執行檔無法被當地語系化，文化特性需保持空白<br /><br /> 組件是使用 **/target:exe** 建立的，但指定的卻是 **/culture**。 *.exe* 中的組件在 [文化特性] 欄位中不能包含資訊。|
 |al1058|'file' 是組件，而且無法加入為模組<br /><br /> 在 C++ 編譯中，已將包含組件的檔案傳遞至 **/assemblymodule** (連結器選項)。|
-|al1059|未知的錯誤 (code)<br /><br /> *Al.exe* 收到未知的錯誤碼 (`code`)。<br /><br /> 可能的解決方法包括：<br /><br /> 請重新安裝 Visual Studio。<br /><br /> 重新安裝 [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]。<br /><br /> 檢查是否有遺漏的檔案。<br /><br /> 檢查是否有足夠的磁碟空間。<br /><br /> 檢查是否有足夠的記憶體。<br /><br /> 停止其他可能會存取檔案的處理序。<br /><br /> 重新啟動電腦。|
+|al1059|未知的錯誤 (code)<br /><br /> *Al.exe* 收到未知的錯誤碼 (`code`)。<br /><br /> 可能的解決方法包括：<br /><br /> 請重新安裝 Visual Studio。<br /><br /> 重新安裝 Windows SDK。<br /><br /> 檢查是否有遺漏的檔案。<br /><br /> 檢查是否有足夠的磁碟空間。<br /><br /> 檢查是否有足夠的記憶體。<br /><br /> 停止其他可能會存取檔案的處理序。<br /><br /> 重新啟動電腦。|
 |al1060|建立雜湊時密碼編譯失敗 — 原因<br /><br /> 為多檔案組件建立檔案雜湊時發生錯誤。|
 |al1061|無法設定選項 'option'，因為 'reason'<br /><br /> 為這個選項指定的值因指定原因無效。|
 |al1062|模組 'module' 已經被指定多次; 它只能被包括一次<br /><br /> 這個警告會在相同的來源、輸入或模組檔案於命令列上多次指定時產生。 請確定您只指定一次檔案名稱。|

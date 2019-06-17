@@ -1,45 +1,66 @@
 ---
 title: ?? 運算子 - C# 參考
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 06/07/2019
 f1_keywords:
 - ??_CSharpKeyword
 helpviewer_keywords:
-- coalesce operator [C#]
+- null-coalescing operator [C#]
 - ?? operator [C#]
-- conditional-AND operator (&&) [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: e1e981f9ec6a87f6e7de1900008520cde8e46095
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8ca97261b348b7813ab179abbc1f2c5f535966a1
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633938"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816017"
 ---
 # <a name="-operator-c-reference"></a>?? operator (C# 參考)
 
-`??` 運算子稱為 null 聯合運算子。  如果運算元不是 null，則會傳回左方運算元，否則傳回右方運算元。
+如果 Null 聯合運算子 `??` 不是 `null`，會傳回其左方運算元的值；否則它會評估右方運算元，並傳回其結果。 如果左方運算元評估為非 Null，`??` 運算子不會評估其右方運算元。
 
-## <a name="remarks"></a>備註
+Null 聯合運算子是右向關聯運算子，亦即，以下形式的運算式
 
-可為 Null 的類型可以表示來自類型網域的值，或值可以是未定義 (這種情況下，值為 null)。 當左方運算元是可為 Null 的型別且其值為 null 時，您可使用 `??` 運算子的語法表達能力傳回適當的值 (右方運算元)。 如果您嘗試在不使用 `??` 運算子的情況下，將可為 null 的實值類型指派給不可為 null 的實值類型，則會產生編譯時期錯誤。 如果您使用轉型，而可為 null 的實值類型目前為未定義，則會擲回 `InvalidOperationException` 例外狀況。
+```csharp
+a ?? b ?? c
+```
 
-如需詳細資訊，請參閱[可為 Null 的型別](../../programming-guide/nullable-types/index.md)。
+評估為
 
-?? 運算子的結果 不視為常數，即使它的兩個引數都是常數。
+```csharp
+a ?? (b ?? c)
+```
 
-## <a name="example"></a>範例
+`??` 運算子在下列案例中很有用：
 
-[!code-csharp[csRefOperators#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#53)]
+- 在使用 [Null 聯合運算子 ?. 和 ?[]](member-access-operators.md#null-conditional-operators--and-) 的運算式中，您可以使用 Null 聯合運算子在 Null 條件運算的結果為 `null` 的運算式中，提供用於評估的替代運算式：
+
+  [!code-csharp-interactive[with null-conditional](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
+
+- 當您使用[可為 Null 的實值型別](../../programming-guide/nullable-types/index.md)，而且需要提供基礎實值型別的值時，請使用 Null 聯合運算子，在可為 Null 的實值型別為 `null` 時，指定要提供的值：
+
+  [!code-csharp-interactive[with nullable types](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullableTypes)]
+
+  如果可為 Null 型別的值為 `null` 時要使用的值為基礎實值型別的預設值，請使用 <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> 方法。
+
+- 從 C# 7.0 開始，您可以使用 [`throw` 運算式](../keywords/throw.md#the-throw-expression)作為 Null 聯合運算子的右方運算元，讓引數檢查程式碼更簡潔：
+
+  [!code-csharp[with throw expression](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithThrowExpression)]
+
+  上述範例中也會示範如何使用[運算式主體成員](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)定義屬性。
+
+## <a name="operator-overloadability"></a>運算子是否可多載
+
+無法多載 Null 聯合運算子。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的 [null 聯合運算子](~/_csharplang/spec/expressions.md#the-null-coalescing-operator)。 語言規格是 C# 語法及用法的限定來源。
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的 [Null 聯合運算子](~/_csharplang/spec/expressions.md#the-null-coalescing-operator)一節。
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 運算子](index.md)
-- [可為 Null 的型別](../../programming-guide/nullable-types/index.md)
-- [「增益」(Lift) 的真正意義是什麼？](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+- [?. 和 ?[] 運算子](member-access-operators.md#null-conditional-operators--and-)
+- [?: 運算子](conditional-operator.md)

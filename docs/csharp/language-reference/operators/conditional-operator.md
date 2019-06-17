@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 58317c26f87034991c817d0d7221d810657ca332
-ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
+ms.openlocfilehash: ae3039df2c1260211f4c7ec3e813db1d0c6cd42b
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66003718"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815931"
 ---
 # <a name="-operator-c-reference"></a>?:運算子 (C# 參考)
 
@@ -52,7 +52,7 @@ a ? b : (c ? d : e)
 
 下列範例示範條件運算子的用法：
 
-[!code-csharp[non ref conditional](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalValue)]
+[!code-csharp-interactive[non ref conditional](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalValue)]
 
 ## <a name="conditional-ref-expression"></a>條件 ref 運算式
 
@@ -70,7 +70,7 @@ condition ? ref consequent : ref alternative
 
 下列範例示範條件 ref 運算式的用法：
 
-[!code-csharp[conditional ref](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalRef)]
+[!code-csharp-interactive[conditional ref](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalRef)]
 
 如需詳細資訊，請參閱[功能提案注意事項](../../../../_csharplang/proposals/csharp-7.2/conditional-ref.md) \(英文\)。
 
@@ -78,7 +78,7 @@ condition ? ref consequent : ref alternative
 
 當您需要依據條件計算某個值時，透過 [if-else](../keywords/if-else.md) 陳述式使用條件運算子可能使程式碼更為簡潔。 下列範例示範兩種將整數分類為負值或非負值的方法：
 
-[!code-csharp[conditional and if-else](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#CompareWithIf)]
+[!code-csharp[conditional and if-else](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#CompareWithIf)]
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
@@ -86,7 +86,7 @@ condition ? ref consequent : ref alternative
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](../language-specification/index.md)的[條件運算子](~/_csharplang/spec/expressions.md#conditional-operator)一節。
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[條件運算子](~/_csharplang/spec/expressions.md#conditional-operator)一節。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -95,5 +95,5 @@ condition ? ref consequent : ref alternative
 - [C# 運算子](index.md)
 - [if-else 陳述式](../keywords/if-else.md)
 - [?. 和 ?[] 運算子](member-access-operators.md#null-conditional-operators--and-)
-- [??運算子](null-coalescing-operator.md)
+- [?? 運算子](null-coalescing-operator.md)
 - [ref 關鍵字](../keywords/ref.md)
