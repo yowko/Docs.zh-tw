@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 054fa0e1d9d8cc0d7c32efd4a9e8c81b91cb1335
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 7f92049e19688df1fe2b834214950c9109cb0799
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960424"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041534"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什麼是 ML.NET，它如何運作？
 
@@ -32,8 +32,6 @@ ML.NET 能讓您將機器學習新增至 .NET 應用程式。 使用這項功能
 
  ```csharp
     using System;
-    using System.IO;
-    using Microsoft.Data.DataView;
     using Microsoft.ML;
     using Microsoft.ML.Data;
     
@@ -236,13 +234,13 @@ ML.NET 機器學習管線的核心是 [DataView](xref:Microsoft.ML.IDataView) �
 
    ![具有房價預測資料的 ML.NET 資料檢視範例](./media/ml-net-dataview.png)
 
-所有 ML.NET 演算法都在尋找向量的輸入資料行。 根據預設，此向量資料行稱為**特性**。 這就是為什麼我們要在房價範例中，把 [大小] 資料行串連到稱為 [特性]的新資料行。
+所有 ML.NET 演算法都在尋找向量的輸入資料行。 根據預設，此向量資料行稱為**特性**。 這就是為什麼我們要在房價範例中，把 [大小]  資料行串連到稱為 [特性]  的新資料行。
 
  ```csharp
     var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
  ```
 
-所有演算法也都會在執行預測之後，建立新的資料行。 這些新資料行的固定名稱取決於機器學習演算法類型。 若為迴歸工作，其中一個新資料行稱為 [分數]。 這就是為什麼我們要使用這個名稱作為價格資料的屬性。
+所有演算法也都會在執行預測之後，建立新的資料行。 這些新資料行的固定名稱取決於機器學習演算法類型。 若為迴歸工作，其中一個新資料行稱為 [分數]  。 這就是為什麼我們要使用這個名稱作為價格資料的屬性。
 
 ```csharp
     public class Prediction

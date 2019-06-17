@@ -1,16 +1,16 @@
 ---
 title: 定型和評估模型
-description: 了解如何在 ML.NET 中定型及評估機器學習模型
-ms.date: 05/03/2019
+description: 了解如何建置機器學習模型、擷取學習到的參數及使用 ML.NET 測量效能。 雖然此範例訓練的是迴歸模型，但概念可適用於大多數的其他演算法。
+ms.date: 06/11/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to
-ms.openlocfilehash: 3a3f1f672ed078754162dc377cf5c239d206b715
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.custom: mvc, how-to, title-hack-0612
+ms.openlocfilehash: b7799d19f5ad51ce509cc6872d9053cad1158552
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557843"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025588"
 ---
 # <a name="train-and-evaluate-a-model"></a>定型和評估模型
 

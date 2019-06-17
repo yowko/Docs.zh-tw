@@ -4,12 +4,12 @@ description: 本教學課程示範如何建立 .NET Core 主控台應用程式�
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: e145e65e22c955bd547b67de545b883fb0fb3bc2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 674dc2d12cb8f65753730e187e13fc5e522ff6b3
+ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593411"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67135698"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>教學課程：在 ML.NET 中使用二元分類來分析網站評論的情感
 
@@ -39,20 +39,20 @@ ms.locfileid: "65593411"
 
 2. 在專案中建立一個名為 *Data* 的目錄以儲存資料集檔案。
 
-3. 安裝「Microsoft.ML NuGet 套件」：
+3. 安裝「Microsoft.ML NuGet 套件」  ：
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為套件來源，然後選取 [瀏覽] 索引標籤。搜尋 **Microsoft.ML**，選取您想要的套件，然後選取 [安裝] 按鈕。 同意您所選套件的授權條款，以繼續進行安裝。 對 **Microsoft.ML.FastTree** NuGet 套件執行相同的動作。
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]  。 選擇 "nuget.org" 作為套件來源，然後選取 [瀏覽]  索引標籤。搜尋 **Microsoft.ML**，選取您想要的套件，然後選取 [安裝]  按鈕。 同意您所選套件的授權條款，以繼續進行安裝。 對 **Microsoft.ML.FastTree** NuGet 套件執行相同的動作。
 
 ## <a name="prepare-your-data"></a>準備您的資料
 
 > [!NOTE]
-> 此教學課程的資料集是來自 'From Group to Individual Labels using Deep Features' (從群組到使用深度特徵的個別標籤) (Kotzias 等人 al， KDD 2015)，而且裝載於「UCI Machine Learning Repository (UCI 機器學習存放庫)」- Dua, D. and Karra Taniskidou, E.(2017)。 「UCI Machine Learning Repository (UCI 機器學習存放庫)」[http://archive.ics.uci.edu/ml]。 爾灣，加利福尼亞州：加州大學，資訊與電腦科學學院。
+> 此教學課程的資料集是來自 'From Group to Individual Labels using Deep Features' (從群組到使用深度特徵的個別標籤) (Kotzias 等人 al， KDD 2015)，而且裝載於「UCI Machine Learning Repository (UCI 機器學習存放庫)」- Dua, D. and Karra Taniskidou, E.(2017)。 「UCI Machine Learning Repository (UCI 機器學習存放庫)」[http://archive.ics.uci.edu/ml ]。 爾灣，加利福尼亞州：加州大學，資訊與電腦科學學院。
 
 1. 下載並解壓縮 [UCI 情感標記句子資料集 ZIP 檔案](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)。
 
 2. 將 `yelp_labelled.txt` 檔案複製到您所建立的 *Data* 目錄。
 
-3. 在 [方案總管] 中，以滑鼠右鍵按一下 `yelp_labeled.txt` 檔案，並選取 [內容]。 在 [進階] 底下，將 [複製到輸出目錄] 的值變更為 [有更新時才複製]。
+3. 在 [方案總管] 中，以滑鼠右鍵按一下 `yelp_labeled.txt` 檔案，並選取 [內容]  。 在 [進階]  底下，將 [複製到輸出目錄]  的值變更為 [有更新時才複製]  。
 
 ### <a name="create-classes-and-define-paths"></a>建立類別及定義路徑
 
@@ -71,9 +71,9 @@ ms.locfileid: "65593411"
 
 4. 接下來，為輸入資料和預測建立類別。 將新類別新增至專案：
 
-    - 在 [方案總管] 中，於專案上按一下滑鼠右鍵，然後選取 [新增] > [新增項目]。
+    - 在 [方案總管]  中，於專案上按一下滑鼠右鍵，然後選取 [新增]   > [新增項目]  。
 
-    - 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *SentimentData.cs*。 接著，選取 [新增] 按鈕。
+    - 在 [新增項目]  對話方塊中，選取 [類別]  ，然後將 [名稱]  欄位變更為 *SentimentData.cs*。 接著，選取 [新增]  按鈕。
 
 5. *SentimentData.cs* 檔案隨即在程式碼編輯器中開啟。 將以下 `using` 陳述式新增至 *SentimentData.cs* 頂端：
 
@@ -276,13 +276,13 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
     [!code-csharp[CallUseModelWithSingleItem](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallUseModelWithSingleItem "Call the UseModelWithSingleItem method")]
 
-3. 新增下列程式碼，建立作為 `Predict()` 方法中的第一行：
+3. 新增下列程式碼，建立作為 `UseModelWithSingleItem()` 方法中的第一行：
 
     [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
 
     [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) 是一種便利的 API，可讓您傳遞並在單一資料執行個體上接著執行預測。
 
-4. 透過建立 `SentimentData` 的執行個體，在 `Predict()` 方法中新增評論，以測試定型模型的預測：
+4. 透過建立 `SentimentData` 的執行個體，在 `UseModelWithSingleItem()` 方法中新增評論，以測試定型模型的預測：
 
     [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
 

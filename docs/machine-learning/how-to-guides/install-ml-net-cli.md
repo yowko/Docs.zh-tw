@@ -3,12 +3,12 @@ title: 如何安裝 ML.NET 命令列介面 (CLI) 工具
 description: ML.NET 命令列介面 (CLI) 工具的概觀與安裝。
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 9560aa846a1aefabadbd7d4faf8bd306ba72e0de
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 4888acd10570318ef53dc4b1a5a4ff5d8dc0c99b
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557864"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832925"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>如何安裝 ML.NET 命令列介面 (CLI) 工具
 
@@ -34,7 +34,7 @@ ML.NET CLI 的安裝就像任何其他 dotnet 通用工具。 您會使用 `dotn
 下列範例示範如何在 NuGet 摘要位置中安裝 ML.NET CLI：
 
 ```console
-> dotnet tool install -g mlnet
+dotnet tool install -g mlnet
 ```
 
 如果無法安裝此工具 (亦即如果它無法自預設的 NuGet 摘要取得)，則會顯示錯誤訊息。 請確認正在檢查您所預期的摘要。
@@ -49,7 +49,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 您可以鍵入下列命令確認安裝是否成功：
 
 ```console
-> mlnet
+mlnet
 ```
 
 您應該會看到 mlnet 工具可用命令的說明，例如 'auto-train' 命令。
@@ -59,13 +59,13 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 如果您要嘗試安裝發行前版本或特定版本的工具，可以使用下列格式指定[架構](../../standard/frameworks.md)：
 
 ```console
-> dotnet tool install -g mlnet --framework <FRAMEWORK>
+dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 您也可以鍵入下列命令，檢查套件是否正確安裝：
 
 ```console
-> dotnet tool list -g
+dotnet tool list -g
 ```
 
 ## <a name="uninstall-the-cli-package"></a>解除安裝 CLI 套件
@@ -73,7 +73,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 鍵入下列命令，從本機電腦解除安裝套件：
 
 ```console
-> dotnet tool uninstall mlnet -g
+dotnet tool uninstall mlnet -g
 ```
 
 ## <a name="update-the-cli-package"></a>更新 CLI 套件
@@ -81,7 +81,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 鍵入下列命令，從本機電腦更新套件：
 
 ```console
-> dotnet tool update -g mlnet
+dotnet tool update -g mlnet
 ```
 
 ## <a name="set-up-cli-suggestions-tab-based-auto-completion"></a>設定 CLI 建議 (tab 鍵自動完成)
@@ -101,7 +101,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 1. 執行下列命令以安裝 `dotnet-suggest` 通用工具：
 
     ```console
-    > dotnet tool install dotnet-suggest -g
+    dotnet tool install dotnet-suggest -g
     ```
 
 2. 將適當的填充碼指令碼新增至 shell 設定檔。 您可能必須建立 shell 設定檔。 填充碼指令碼會將完成要求，從您的 shell 轉送至 `dotnet-suggest`工具，委派給 `System.CommandLine` 型的應用程式。
@@ -111,7 +111,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
     * 若為 PowerShell，請將 [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) 的內容新增至您的 PowerShell 設定檔。 您可在主控台中執行下列命令，找到 PowerShell 設定檔的預期路徑：
 
     ```console
-    > echo $profile
+    echo $profile
     ``` 
 
 (若為其他 shell，請[尋求](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22)或提出[問題](https://github.com/dotnet/System.CommandLine/issues)。)
