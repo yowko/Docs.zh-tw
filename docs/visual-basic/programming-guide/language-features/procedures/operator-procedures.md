@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: cafc742474d6f7b46fbfb73374a59a350812a2a5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d62c3480db56b5cbf22c1f3f6ff59ab220a48b09
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639092"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152043"
 ---
 # <a name="operator-procedures-visual-basic"></a>運算子程序 (Visual Basic)
 運算子程序是一系列的 Visual Basic 陳述式可定義標準運算式的行為 (例如`*`， `<>`，或`And`) 上類別或您已定義的結構。 這也稱為*多載的運算子*。  
@@ -43,13 +43,15 @@ ms.locfileid: "64639092"
   
 ## <a name="declaration-syntax"></a>宣告語法  
  宣告運算子程序的語法如下所示：  
+ 
+ ```vb 
+ Public Shared [Widening | Narrowing] Operator operatorsymbol ( operand1 [,  operand2 ]) As datatype  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *operatorsymbol*  `(` *operand1*  `[,`  *operand2* `]) As`  *datatype*  
+ ' Statements of the operator procedure.
   
- `' Statements of the operator procedure.`  
-  
- `End Operator`  
-  
+ End Operator
+ ```
+ 
  您使用`Widening`或`Narrowing`關鍵字只在型別轉換運算子。 運算子符號總是[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)的型別轉換運算子。  
   
  您宣告兩個運算元來定義二元運算子，並宣告一個定義的一元運算子，包括型別轉換運算子的運算元。 所有的運算元必須宣告`ByVal`。  

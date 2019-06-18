@@ -2,12 +2,12 @@
 title: 原始碼程式行、檔案與路徑識別項
 description: 了解如何使用內建的F#可讓您存取來源的識別碼值行編號、 目錄和檔案名稱，在您的程式碼。
 ms.date: 05/16/2016
-ms.openlocfilehash: 4b145fe1fe20e3d7f868558e33bab26204fb0125
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f2048aed9ef75037b43cd091a749e3d6bbaf9a3
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663618"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152057"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>原始碼程式行、檔案與路徑識別項
 
@@ -31,7 +31,7 @@ __SOURCE_FILE__
 |---------------------|-----------|
 |`__LINE__`|評估為目前的行號，考慮`#line`指示詞。|
 |`__SOURCE_DIRECTORY__`|評估為目前的完整路徑的來源目錄中，考慮`#line`指示詞。|
-|`__SOURCE_FILE__`|評估為目前的來源檔案名稱和其路徑中，考慮`#line`指示詞。|
+|`__SOURCE_FILE__`|評估為目前的來源檔案名稱，而其路徑中，不考慮`#line`指示詞。|
 
 如需詳細資訊`#line`指示詞，請參閱[編譯器指示詞](compiler-directives.md)。
 
@@ -46,7 +46,7 @@ __SOURCE_FILE__
 ```
 Line: 4
 Source Directory: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo
-Source File: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo\Program.fs
+Source File: Program.fs
 ```
 
 ## <a name="see-also"></a>另請參閱
