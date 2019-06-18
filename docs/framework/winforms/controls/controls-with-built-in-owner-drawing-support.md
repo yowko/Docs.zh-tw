@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-ms.openlocfilehash: df3a61dae9ad926f56da4e9d15e0e8b8c6f1c8a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c053c14bb06d1bb28c7b7e6652ccc6e41af9c4e5
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648253"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170598"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>使用內建主控描繪支援的控制項
 Windows Forms 中的主控描繪也稱為自訂繪圖，是變更特定控制項的視覺外觀的技術。  
@@ -46,7 +46,7 @@ Windows Forms 中的主控描繪也稱為自訂繪圖，是變更特定控制項
   
 - <xref:System.Windows.Forms.TabControl>  
   
- 下列控制項只有在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中才支援主控描繪：  
+ 下列控制項支援主控描繪只在.NET Framework 2.0:  
   
 - <xref:System.Windows.Forms.ToolTip>  
   
@@ -54,7 +54,7 @@ Windows Forms 中的主控描繪也稱為自訂繪圖，是變更特定控制項
   
 - <xref:System.Windows.Forms.TreeView>  
   
- 下列控制項支援主控描繪，而且是 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中的新項目：  
+ 下列控制項支援主控描繪，並且是.NET Framework 2.0 的新功能：  
   
 - <xref:System.Windows.Forms.DataGridView>  
   

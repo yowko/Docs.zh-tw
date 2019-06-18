@@ -2,17 +2,17 @@
 title: 工作 2：裝載工作流程設計工具
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: cce90c6b7f5edfaf960415f0a5d0787f8eee526b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 553a02732e08fa148ffdee250df0305deb8e63b7
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665291"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169989"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>工作 2：裝載工作流程設計工具
 本主題說明的程序裝載的執行個體[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]Windows Presentation Foundation (WPF) 應用程式中。  
   
- 程序會設定**方格**控制項，其中包含設計工具中，以程式設計方式建立的執行個體<xref:System.Activities.Presentation.WorkflowDesigner>，其中包含預設<xref:System.Activities.Statements.Sequence>活動，會註冊提供的設計工具中繼資料設計工具支援所有內建活動和主機[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]在[!INCLUDE[avalon2](../../../includes/avalon2-md.md)]應用程式。  
+ 程序會設定**方格**控制項，其中包含設計工具中，以程式設計方式建立的執行個體<xref:System.Activities.Presentation.WorkflowDesigner>，其中包含預設<xref:System.Activities.Statements.Sequence>活動，會註冊提供的設計工具中繼資料設計工具支援所有內建活動和主機[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]在 WPF 應用程式。  
   
 ### <a name="to-host-the-workflow-designer"></a>若要裝載工作流程設計工具  
   
@@ -22,7 +22,7 @@ ms.locfileid: "64665291"
   
 3. 選取以設定資料格的名稱**格線**設計工具中的面板 (按一下 [] 內的方塊**MainWindow**) 和設定**名稱**頂端的屬性**屬性**為"grid1"視窗。  
   
-4. 在 **屬性** 視窗中，按一下省略符號 (**...**) 旁`ColumnDefinitions`屬性可開啟**集合編輯器** 對話方塊。  
+4. 在 **屬性** 視窗中，按一下省略符號 ( **...** ) 旁`ColumnDefinitions`屬性可開啟**集合編輯器** 對話方塊。  
   
 5. 在 [**集合編輯器**] 對話方塊中，按一下**新增**按鈕三次，以插入版面配置中的三個資料行。 第一個資料行會包含**工具箱**，第二個資料行將裝載[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]，以及第三個資料行用於屬性偵測器。  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - styles [WPF], DatePicker
 - states [WPF], DatePicker
 ms.assetid: c430a657-692f-44bd-a549-2341f92d6115
-ms.openlocfilehash: 5c8e199dd7123e1490c8a836a62ffea158797eb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 013076fdac8666b974fdf0ce9b09740197031c15
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912245"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170545"
 ---
 # <a name="datepicker-styles-and-templates"></a>DatePicker 樣式和範本
 本主題描述的樣式和範本<xref:System.Windows.Controls.DatePicker>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>，讓控制項的獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
@@ -62,8 +62,8 @@ ms.locfileid: "61912245"
 |浮水印|WatermarkStates|控制項會顯示其初始文字。  <xref:System.Windows.Controls.Primitives.DatePickerTextBox>處於執行狀態，當使用者未輸入文字，或選取日期。|  
 |Unwatermarked|WatermarkStates|使用者輸入文字<xref:System.Windows.Controls.Primitives.DatePickerTextBox>或選取的日期<xref:System.Windows.Controls.DatePicker>。|  
 |驗證|ValidationStates|控制項使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`true`已在控制項具有焦點。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`true`有控制項沒有焦點。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`true`和控制項有焦點。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`true`和控制項沒有焦點。|  
   
 ## <a name="datepicker-controltemplate-example"></a>DatePicker ControlTemplate 範例  
  下列範例示範如何定義<xref:System.Windows.Controls.ControlTemplate>針對<xref:System.Windows.Controls.DatePicker>控制項。  

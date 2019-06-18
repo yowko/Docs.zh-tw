@@ -7,12 +7,12 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing in Windows Forms
 - buffering [Windows Forms], double buffering
 ms.assetid: dc484e33-7101-4e4b-ada5-d3c96155fbcd
-ms.openlocfilehash: ac6c9b7f2cc1fea86a75eaaf4a2dde1ea60e4f40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b22336221c7bdda3c9dd7adf23308a2b0bad450
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777152"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169913"
 ---
 # <a name="using-double-buffering"></a>雙重緩衝的使用
 若要減少重繪閃動包含複雜繪製作業的應用程式中，您可以使用雙重緩衝的圖形。 .NET Framework 包含雙重緩衝的內建支援，或者您可以管理並手動呈現圖形。  
@@ -31,11 +31,9 @@ ms.locfileid: "61777152"
  示範如何轉譯雙重緩衝的圖形。  
   
 ## <a name="reference"></a>參考資料  
- <xref:System.Windows.Forms.Control.SetStyle%2A> ,  
- 啟用雙重緩衝處理的控制方法。  
+ <xref:System.Windows.Forms.Control.SetStyle%2A> 啟用雙重緩衝處理的控制方法。  
   
- <xref:System.Drawing.BufferedGraphicsContext> ,  
- 提供方法來建立圖形緩衝區。  
+ <xref:System.Drawing.BufferedGraphicsContext> 提供方法來建立圖形緩衝區。  
   
  <xref:System.Drawing.BufferedGraphicsManager>  
  提供應用程式定義域的存取權的已緩衝的圖形內容。

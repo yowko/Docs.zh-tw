@@ -1,13 +1,13 @@
 ---
-title: HOW TO：建立自訂活動設計工具
+title: 作法：建立自訂活動設計工具
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c6d2ae695a04c85ade6ae4da0b812f4043fa2f6
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945648"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170672"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>HOW TO：建立自訂活動設計工具
 
@@ -17,7 +17,7 @@ ms.locfileid: "61945648"
 
 <xref:System.Activities.Presentation.ActivityDesigner> 會使用兩項 Helper 控制項 (<xref:System.Activities.Presentation.WorkflowItemPresenter> 和 <xref:System.Activities.Presentation.WorkflowItemsPresenter>) 來簡化自訂活動設計工具的開發。 這些 Helper 能夠處理拖放子項目、刪除、選取及加入子項目之類的常見功能。 <xref:System.Activities.Presentation.WorkflowItemPresenter>允許單一子 UI 項目內，提供 「 卸除區 」，而<xref:System.Activities.Presentation.WorkflowItemsPresenter>可支援多個 UI 項目，包括額外的功能，例如排序、 移動、 刪除和加入子項目。
 
-其他需要在實作自訂活動設計工具中強調的重要部分，是有關如何使用 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 資料繫結將視覺化編輯繫結至設計工具中所編輯內容的記憶體內儲存的執行個體。 這項操作可透過模型項目樹狀完成，該樹狀也負責進行變更通知，以及追蹤如狀態變更這類事件。
+劇本所需的自訂活動設計工具的實作中反白顯示的其他重要的部分是有關在其中將視覺化編輯繫結使用 WPF 資料繫結到我們要編輯設計工具中的記憶體內儲存的執行個體的方式。 這項操作可透過模型項目樹狀完成，該樹狀也負責進行變更通知，以及追蹤如狀態變更這類事件。
 
 本主題將說明兩種程序。
 
@@ -29,7 +29,7 @@ ms.locfileid: "61945648"
 
 1. 啟動 Visual Studio 2010。
 
-2. 在 **檔案**功能表上，指向**新增**，然後選取 **專案...**.
+2. 在 **檔案**功能表上，指向**新增**，然後選取 **專案...** .
 
      [ **新增專案** ] 對話方塊隨即開啟。
 
@@ -43,7 +43,7 @@ ms.locfileid: "61945648"
 
 7. 在 **解決方案**方塊中，接受預設值。
 
-8. 按一下 [確定] 。
+8. 按一下 [確定]  。
 
 9. 以滑鼠右鍵按一下 [MainWindows.xaml 檔案中的**方案總管**，選取**刪除**並確認 **[確定]** 中**Microsoft Visual Studio**] 對話方塊。
 

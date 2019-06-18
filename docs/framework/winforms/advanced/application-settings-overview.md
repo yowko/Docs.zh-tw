@@ -8,19 +8,19 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: 49c7ceb431e9ab59b47e3b8b912e2881aeeef6c2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5e70b9c16c3af46b72ea8f8745806c7ebf849e2f
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583560"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169974"
 ---
 # <a name="application-settings-overview"></a>應用程式設定概觀
 本主題討論如何代表您的應用程式和使用者來建立及儲存設定資料。  
   
  Windows Form 應用程式設定功能可讓您輕鬆地建立、儲存和維護自訂應用程式和用戶端電腦上的使用者喜好設定。 利用 Windows Form 應用程式設定，您不只可以儲存應用程式資料，例如資料庫連接字串，也可以儲存使用者專屬資料，例如使用者應用程式喜好設定。 使用 Visual Studio 或自訂的 Managed 程式碼，您可以建立新的設定、從磁碟讀取及寫入磁碟、將其繫結至您表單上的屬性，並驗證載入和儲存之前的設定資料。  
   
- 應用程式設定可讓開發人員使用極少的自訂程式碼，其應用程式中儲存狀態，並取代舊版的.NET Framework 中的動態屬性。 透過唯讀的晚期繫結動態屬性，應用程式設定包含許多改良，而且需要更多的自訂程式設計。 動態屬性類別已保留在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]，但它們只是精簡包裝應用程式設定類別的殼層類別。  
+ 應用程式設定可讓開發人員使用極少的自訂程式碼，其應用程式中儲存狀態，並取代舊版的.NET Framework 中的動態屬性。 透過唯讀的晚期繫結動態屬性，應用程式設定包含許多改良，而且需要更多的自訂程式設計。 動態屬性類別已保留在.NET Framework 2.0 中，但它們只是殼層精簡包裝應用程式設定類別的類別。  
   
 ## <a name="what-are-application-settings"></a>什麼是應用程式設定？  
  Windows Form 應用程式通常需要這些對於執行應用程式很重要的資料，但您不想直接在應用程式的程式碼中包含這些資料。 如果您的應用程式使用 Web 服務或資料庫伺服器，您可能要將此資訊儲存在不同的檔案，以便您在未來可變更它而不需重新編譯。 同樣地，您的應用程式可能需要儲存目前使用者的特定資料。 例如，大部分的應用程式有能自訂應用程式外觀和行為的使用者喜好設定。  

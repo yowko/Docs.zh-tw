@@ -2,12 +2,12 @@
 title: 在 Managed 應用程式中裝載
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
-ms.openlocfilehash: c1f4d91994ba44407ff5c93dbd34aa0bdef9332b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1895f6622f7c528979badd741f5994970bbd1a8c
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591742"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169799"
 ---
 # <a name="hosting-in-a-managed-application"></a>在 Managed 應用程式中裝載
 Windows Communication Foundation (WCF) 服務可以裝載於任何.NET Framework 應用程式。 自我裝載服務是最彈性的裝載選項，因為它只需要最基本的基礎結構就可部署。 不過，也很最不穩固的裝載選項，因為受管理的應用程式不會提供的進階裝載和其他裝載選項在 WCF 中，例如 Internet Information Services (IIS) 和 Windows 服務的管理功能。  
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) 服務可以裝載於任何.NET Framework
  自我裝載可讓的常見案例是執行主控台應用程式內的 WCF 服務。 裝載於主控台應用程式的 WCF 服務一般來說是很有用的服務在開發階段。 這樣一來，您可以很容易地進行偵錯、取得追蹤資訊以便了解應用程式裡面所發生的事，以及藉由將它們複製到新的位置輕易地加以移動。  
   
 ## <a name="rich-client-applications"></a>豐富型用戶端應用程式  
- 自我裝載可讓其他常見案例是豐富型用戶端應用程式，例如 Windows Presentation Foundation (WPF) 或 Windows Forms (WinForms) 為基礎。 這個裝載選項同時可讓豐富型用戶端應用程式 (例如， [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 和 WinForms 應用程式) 更容易與外界通訊。 例如，使用的對等共同作業用戶端[!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]作為其使用者介面，也會裝載 WCF 服務，可讓其他用戶端連線，並共用資訊。  
+ 自我裝載可讓其他常見案例是豐富型用戶端應用程式，例如 Windows Presentation Foundation (WPF) 或 Windows Forms (WinForms) 為基礎。 這個裝載選項也方便對於豐富型用戶端應用程式，例如 WPF 和 WinForms 應用程式，來與外界通訊。 例如，對等共同作業用戶端使用者介面中使用 WPF，也會裝載 WCF 服務，可讓其他用戶端連線，並共用資訊。  
   
 ## <a name="see-also"></a>另請參閱
 

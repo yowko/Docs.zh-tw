@@ -2,12 +2,12 @@
 title: 屬性方格擴充性-WF 範例
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-ms.openlocfilehash: d22b6e21fbf2d5deb4d47fce683553378e990000
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 1cc8b8b34d6236e263f95439da84994e35d627ed
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637690"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170358"
 ---
 # <a name="property-grid-extensibility"></a>屬性方格擴充性
 
@@ -69,7 +69,7 @@ ms.locfileid: "65637690"
 
 1. 建立衍生自 <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor> 的型別。
 
-2. 使用 <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> 資料範本設定建構函式中的 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 值。 這個值可在 XAML 中建立，但是在本範例中會使用程式碼建立。
+2. 設定<xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A>與 WPF 資料範本建構函式中的值。 這個值可在 XAML 中建立，但是在本範例中會使用程式碼建立。
 
 3. 資料範本擁有屬性方格中所呈現項目之 <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> 的資料內容。 在下列程式碼中，此內容會接著繫結至 `Value` 屬性。 此外務必包含 <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton>，以提供在 FilePickerEditor.cs 中引發對話方塊的按鈕。
 

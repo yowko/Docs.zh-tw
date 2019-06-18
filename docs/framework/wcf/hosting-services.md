@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 4641c1c63a4f3c13cefb573dacf4e88b5d63077e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2d926fb3f630d2a1af00242f94ddcb3c2dc284df
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881192"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170061"
 ---
 # <a name="hosting-services"></a>裝載服務
 如果要成為作用中的服務，必須將服務裝載在建立及控制其內容和存留時間的執行階段環境中。 Windows Communication Foundation (WCF) 服務專為在支援 managed 程式碼在任何 Windows 處理程序中執行。  
@@ -23,7 +23,7 @@ ms.locfileid: "65881192"
 #### <a name="self-hosting-in-a-managed-application"></a>在 Managed 應用程式中自我裝載  
  可以在任何受管理的應用程式中裝載 WCF 服務。 這是最彈性的選項，因為它只需要最少的基礎結構就可部署。 您可以將服務的程式碼嵌入 Managed 應用程式程式碼中，然後建立並開啟 <xref:System.ServiceModel.ServiceHost> 的執行個體以便提供服務。 如需詳細資訊，請參閱[如何：裝載 WCF 服務的受管理的應用程式中](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)。  
   
- 此選項可讓兩個常見案例：在主控台應用程式和豐富型用戶端應用程式，例如 Windows Presentation Foundation (WPF) 或 Windows Forms (WinForms) 為基礎執行的 WCF 服務。 裝載於主控台應用程式的 WCF 服務一般來說是很有用的應用程式開發階段。 這樣一來，您可以很容易地進行偵錯、取得追蹤資訊以便了解應用程式裡面所發生的事，以及藉由將它們複製到新的位置輕易地加以移動。 這個裝載選項同時可讓豐富型用戶端應用程式 (例如， [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 和 WinForms 應用程式) 更容易與外界通訊。 例如，使用的對等共同作業用戶端[!INCLUDE[avalon2](../../../includes/avalon2-md.md)]作為其使用者介面，也會裝載 WCF 服務，可讓其他用戶端連線，並共用資訊。  
+ 此選項可讓兩個常見案例：在主控台應用程式和豐富型用戶端應用程式，例如 Windows Presentation Foundation (WPF) 或 Windows Forms (WinForms) 為基礎執行的 WCF 服務。 裝載於主控台應用程式的 WCF 服務一般來說是很有用的應用程式開發階段。 這樣一來，您可以很容易地進行偵錯、取得追蹤資訊以便了解應用程式裡面所發生的事，以及藉由將它們複製到新的位置輕易地加以移動。 這個裝載選項也方便對於豐富型用戶端應用程式，例如 WPF 和 WinForms 應用程式，來與外界通訊。 例如，對等共同作業用戶端使用者介面中使用 WPF，也會裝載 WCF 服務，可讓其他用戶端連線，並共用資訊。  
   
 #### <a name="managed-windows-services"></a>Managed Windows 服務  
  這個裝載選項包含註冊為受管理的 Windows 服務 （之前稱為 NT 服務） 裝載的 WCF 服務，如此一來服務處理序存留期由服務控制管理員 (SCM) 控制應用程式定義域 (AppDomain)Windows 服務。 就像自我裝載選項一樣，此類型的裝載環境要求將某些裝載程式碼撰寫成應用程式的一部分。 服務會實作為兩個 Windows 服務和 WCF 服務會讓它繼承自<xref:System.ServiceProcess.ServiceBase>類別，以及從 WCF 服務合約介面。 <xref:System.ServiceModel.ServiceHost> 接著會透過覆寫的 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 方法來建立並開啟，並透過覆寫的 <xref:System.ServiceProcess.ServiceBase.OnStop> 方法加以關閉。 繼承自 <xref:System.Configuration.Install.Installer> 的安裝程式類別必須同時實作，以允許藉由 Installutil.exe 工具將程式安裝為 Windows 服務。 如需詳細資訊，請參閱[如何：將 WCF 服務裝載於 Managed 的 Windows 服務](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)。 受管理的 Windows 服務裝載選項所啟用的案例是，IIS 外部所裝載非訊息啟動的安全環境中的長時間執行 WCF 服務。 服務的存留期會改由作業系統來控制。 所有 Windows 版本都提供這個裝載選項。  
@@ -43,7 +43,7 @@ ms.locfileid: "65881192"
   
 |裝載環境|常見案例|主要優點與限制|  
 |-------------------------|----------------------|----------------------------------|  
-|Managed 應用程式 (「自我裝載」)|在開發期間使用的主控台應用程式。<br />-豐富型 WinForm 和[!INCLUDE[avalon2](../../../includes/avalon2-md.md)]存取服務的用戶端應用程式。|富彈性。<br />簡單部署。<br />-不企業解決方案的服務。|  
+|Managed 應用程式 (「自我裝載」)|在開發期間使用的主控台應用程式。<br />-豐富型 WinForm 和 WPF 用戶端應用程式存取服務。|富彈性。<br />簡單部署。<br />-不企業解決方案的服務。|  
 |Windows 服務 (之前稱為 NT 服務)|-長期執行的 WCF 服務 IIS 外部所裝載。|服務控制作業系統，在非訊息啟動的處理序存留期。<br />支援所有版本的 Windows。<br />安全的環境。|  
 |IIS 5.1、 [!INCLUDE[iis601](../../../includes/iis601-md.md)]|為 WCF 服務並排顯示與 ASP.NET 內容在網際網路上執行使用 HTTP 通訊協定。|同處理序回收。<br />-閒置關機。<br />-處理序健全狀況監視。<br />-訊息型啟用。<br />-僅限 HTTP。|  
 |Windows Process Activation Service (WAS)|-執行而不需要使用各種傳輸通訊協定在網際網路上安裝 IIS 的 WCF 服務。|不需要 IIS。<br />同處理序回收。<br />-閒置關機。<br />-處理序健全狀況監視。<br />-訊息型啟用。<br />-使用 HTTP、 TCP、 具名的管道和 MSMQ。|  

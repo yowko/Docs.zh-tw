@@ -2,16 +2,16 @@
 title: 支援的部署案例： WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 7b508f53365c1b4b90e2883ddb9d5f2a71c7e814
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 2da55176cbfe618b332f2df210e3e1c0516b17ae
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025632"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170044"
 ---
 # <a name="supported-deployment-scenarios"></a>支援的部署案例
 
-支援在部分信任應用程式中使用的 Windows Communication Foundation (WCF) 功能子集主要被為了符合需求的部分，而不是全部使用 WCF 的案例。 在伺服器上，WCF 會符合網際網路範圍在 ASP.NET 2.0 中度信任權限執行第三方應用程式共用主控提供者設定基於安全性考量的需求。 在用戶端，WCF 部分信任支援主要為了符合的部署技術需求這類[ClickOnce 部署](/visualstudio/deployment/clickonce-security-and-deployment)或[!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]的允許無接縫且安全的 XAML 瀏覽器應用程式技術從受信任的站台的桌面應用程式的部署。
+支援在部分信任應用程式中使用的 Windows Communication Foundation (WCF) 功能子集主要被為了符合需求的部分，而不是全部使用 WCF 的案例。 在伺服器上，WCF 會符合網際網路範圍在 ASP.NET 2.0 中度信任權限執行第三方應用程式共用主控提供者設定基於安全性考量的需求。 在用戶端，WCF 部分信任支援主要為了符合的部署技術需求這類[ClickOnce 部署](/visualstudio/deployment/clickonce-security-and-deployment)或 WPF 的 XAML 瀏覽器應用程式技術，可讓無縫且安全的部署不受信任的站台桌面應用程式。
 
 ## <a name="minimum-permission-requirements"></a>最小權限需求
 
@@ -39,7 +39,7 @@ WCF 中其中一個下列標準具名權限集下執行應用程式支援功能�
 
 ## <a name="partial-trust-on-the-client"></a>在用戶端上的部分信任
 
-在從不受信任的網際網路網站中下載並執行程式碼時，必須採取特定的安全性預防措施。 [ClickOnce 部署](/visualstudio/deployment/clickonce-security-and-deployment) (英文) 和 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]的 XAML 瀏覽器應用程式 (XBAP) 技術兩者都會透過部分信任將有限的使用權限 (網際網路區域) 授與不受信任的程式碼。
+在從不受信任的網際網路網站中下載並執行程式碼時，必須採取特定的安全性預防措施。 兩者[ClickOnce 部署](/visualstudio/deployment/clickonce-security-and-deployment)WPF 的 XAML 瀏覽器應用程式 (XBAP) 技術使用部分信任來授與有限的權限 （網際網路區域） 不受信任的程式碼。
 
 WCF 可以用來與從部分信任的應用程式透過下列方式部署的遠端伺服器通訊[ClickOnce 部署](/visualstudio/deployment/clickonce-security-and-deployment)或 XBAP。 網際網路區域權限集合包含<xref:System.Net.WebPermission>來源的主機，以允許這些應用程式使用任何支援中所述的 WCF 繫結與其來源伺服器與通訊[Partial Trust Feature Compatibility](partial-trust-feature-compatibility.md).
 

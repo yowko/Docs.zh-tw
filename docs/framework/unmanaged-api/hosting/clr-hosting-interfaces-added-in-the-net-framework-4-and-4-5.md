@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89d71b3dfa71438b72fe622a491141364db25f52
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ea95789ea1623985a6a53fcf923b70d7df2ad460
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490649"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170430"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 和 4.5 中新增的 CLR 裝載介面
 本節說明 unmanaged 介面主機可以使用整合的 common language runtime (CLR) 中.NET Framework 4、.NET Framework 4.5 和更新版本到其應用程式。 這些介面提供的主機，若要設定及執行階段載入處理序的方法。  
@@ -22,7 +22,7 @@ ms.locfileid: "66490649"
   
 - 他們使用生命週期管理 (`AddRef`並`Release`)，封裝 （隱含的內容） 和`QueryInterface`從 com 存取。  
   
-- 那里請不要使用 COM 類型這類`BSTR`， `SAFEARRAY`，或`VARIANT`。  
+- 它們不會使用 COM 類型這類`BSTR`， `SAFEARRAY`，或`VARIANT`。  
   
 - 不沒有使用任何 apartment 模型、 彙總或登錄啟用[CoCreateInstance 函式](https://go.microsoft.com/fwlink/?LinkId=142894)。  
   

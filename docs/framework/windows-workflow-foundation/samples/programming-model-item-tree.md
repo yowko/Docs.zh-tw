@@ -2,12 +2,12 @@
 title: 程式設計模型項目樹狀
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: 1aaa1aa9922a7f57138782effe9492ec84198c8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59c1f0c3722d6e68a9f629504f5012377dbacc5f
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004964"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170077"
 ---
 # <a name="programming-model-item-tree"></a>程式設計模型項目樹狀
 這個範例會示範如何瀏覽<xref:System.Activities.Presentation.Model.ModelItem>使用宣告式資料繫結，從 Windows Presentation Foundation (WPF) 樹狀結構檢視。
@@ -33,7 +33,7 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 2. 選取 建置方案**建置方案**從**建置**功能表。
 
-3. 按 F5 執行應用程式。 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 格式隨即顯示。
+3. 按 F5 執行應用程式。 WPF 格式隨即顯示。
 
 4. 按一下 **載入 WF**按鈕以載入<xref:System.Activities.Presentation.Model.ModelItem>並將它繫結至樹狀檢視。
 

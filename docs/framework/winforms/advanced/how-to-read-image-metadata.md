@@ -1,5 +1,5 @@
 ---
-title: HOW TO：讀取影像中繼資料
+title: 作法：讀取影像中繼資料
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3266724503960b8b45cd134dfa5b007a58d578fa
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672597"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169806"
 ---
 # <a name="how-to-read-image-metadata"></a>HOW TO：讀取影像中繼資料
 某些影像檔包含中繼資料，您可以讀取來判斷映像的功能。 比方說，數位相片可能包含您可以讀取來判斷的廠牌與型號，用來擷取影像之相機的中繼資料。 使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您可以讀取現有的中繼資料，您也可以撰寫新的中繼資料映像檔案。  
@@ -57,64 +57,66 @@ ms.locfileid: "61672597"
  下列程式碼範例會讀取並顯示檔案中的中繼資料的七個片段`FakePhoto.jpg`。 在清單中的第二個 （索引 1） 屬性項目具有<xref:System.Drawing.Imaging.PropertyItem.Id%2A>0x010F （設備製造商） 和<xref:System.Drawing.Imaging.PropertyItem.Type%2A>2 （ASCII 編碼的位元組陣列）。 在程式碼範例會顯示該屬性項目的值。  
   
  程式碼會產生類似下面的輸出：  
+ 
+```
+ Property Item 0
   
- `Property Item 0`  
+ id: 0x320
   
- `id: 0x320`  
+ type: 2
+ 
+ length: 16 bytes 
   
- `type: 2`  
+ Property Item 1
   
- `length: 16 bytes`  
+ id: 0x10f
   
- `Property Item 1`  
+ type: 2 
   
- `id: 0x10f`  
+ length: 17 bytes
   
- `type: 2`  
+ Property Item 2
   
- `length: 17 bytes`  
+ id: 0x110
   
- `Property Item 2`  
+ type: 2
   
- `id: 0x110`  
+ length: 7 bytes
   
- `type: 2`  
+ Property Item 3
   
- `length: 7 bytes`  
+ id: 0x9003
   
- `Property Item 3`  
+ type: 2
   
- `id: 0x9003`  
+ length: 20 bytes
   
- `type: 2`  
+ Property Item 4
   
- `length: 20 bytes`  
+ id: 0x829a
   
- `Property Item 4`  
+ type: 5
   
- `id: 0x829a`  
+ length: 8 bytes
   
- `type: 5`  
+ Property Item 5
   
- `length: 8 bytes`  
+ id: 0x5090
   
- `Property Item 5`  
+ type: 3
   
- `id: 0x5090`  
+ length: 128 bytes
   
- `type: 3`  
+ Property Item 6
   
- `length: 128 bytes`  
+ id: 0x5091
   
- `Property Item 6`  
+ type: 3
   
- `id: 0x5091`  
+ length: 128 bytes
   
- `type: 3`  
-  
- `length: 128 bytes`  
-  
- `The equipment make is Northwind Camera.`  
+ The equipment make is Northwind Camera.
+ ```
   
 ### <a name="code"></a>程式碼  
  [!code-csharp[System.Drawing.WorkingWithImages#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#51)]
