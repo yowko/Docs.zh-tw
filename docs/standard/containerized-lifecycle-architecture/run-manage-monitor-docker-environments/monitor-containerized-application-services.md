@@ -1,31 +1,31 @@
 ---
 title: 監視容器化應用程式服務
-description: 了解一些重要的層面的監視容器架構
+description: 了解監視容器架構的一些重要層面
 ms.date: 02/15/2019
 ms.openlocfilehash: e14553d510751d8a75020a1b6beb9fd7bc29596e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65641203"
 ---
 # <a name="monitor-containerized-application-services"></a>監視容器化應用程式服務
 
-最重要的是應用程式分割成多個容器和微服務的方式，來監視及分析整個應用程式的行為。
+對於分割成多個容器和微服務的應用程式來說，最重要的是要有一種方法來監視及分析整個應用程式行為。
 
-## <a name="azure-monitor"></a>Azure Monitor
+## <a name="azure-monitor"></a>Azure 監視器
 
-[Azure 監視器](https://azure.microsoft.com/services/monitor/)是可延伸分析服務，可監視您即時應用程式。 它可協助您偵測並診斷效能問題，並了解使用者實際如何運用您的應用程式。 它被專為開發人員，協助您持續改善效能的目的與您的服務或應用程式的可用性。 Azure 監視器可搭配 web/服務和獨立上各種不同的平台，例如.NET、 Java、 Node.js 和許多其他平台，裝載於內部部署或雲端中的應用程式。
+[Azure 監視器](https://azure.microsoft.com/services/monitor/)是一項可延伸的分析服務，用來監視您的即時應用程式。 它可協助您偵測並診斷效能問題，以及了解實際上使用者如何運用您的應用程式。 它專為開發人員而設計，目的是協助您持續改善服務或應用程式的效能與可用性。 Azure 監視器可與內部部署或雲端中所裝載之各種不同平台 (例如 .NET、Java、Node.js 及許多其他平台) 的 Web/服務和獨立應用程式搭配運作。
 
 ### <a name="additional-resources"></a>其他資源
 
-- **Azure 監視器概觀** \
+- **Azure 監視器的概觀** \
   <https://docs.microsoft.com/azure/azure-monitor/overview>
 
 - **什麼是 Application Insights？** \
   <https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
-- **什麼是 Azure 監視器計量？** \
+- **Azure 監視器計量是什麼？** \
   <https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-metrics>
 
 - **Azure 監視器中的容器監視解決方案** \
@@ -33,21 +33,21 @@ ms.locfileid: "65641203"
 
 ## <a name="security-and-backup-services"></a>安全性與備份服務
 
-有許多支援例行工作，有許多您必須處理以確保您的應用程式和基礎結構來支援商務需求的最上層的波陷條件的詳細資料，而且這種情況就會變成更複雜的微服務領域中，而您需要想辦法當您需要採取動作時，有高階和詳細檢視。
+您必須處理許多內含大量詳細資料的支援例行工作，以確保您的應用程式和基礎結構處於最佳狀態來支援商務需求，且這種情況在微服務領域中變得更加複雜，因此當您需要採取動作時，您需要想辦法同時擁有高階和詳細檢視。
 
-Azure 有工具來管理，並提供四個重要層面雲端和內部部署資源的統一的檢視：
+Azure 具有工具可用來管理雲端和內部部署資源的四個重要層面，並提供其統一檢視：
 
-- **安全性**。 具有[Azure 資訊安全中心](https://azure.microsoft.com/services/security-center/)。
-  - 取得完整的可見度及控制您的虛擬機器、 應用程式和工作負載的安全性。
-  - 集中管理您的安全性原則，並整合現有的程序和工具。
-  - 偵測真正的威脅，使用進階分析。
+- **安全性**。 使用 [Azure 資訊安全中心](https://azure.microsoft.com/services/security-center/)。
+  - 完整檢視及控制虛擬機器、應用程式和工作負載的安全性。
+  - 集中管理您的安全性原則，並整合現有的處理序和工具。
+  - 使用進階分析偵測真正的威脅。
 
-- **備份**。 具有[Azure 備份](https://azure.microsoft.com/services/backup/)。
-  - 避免耗費資源的業務中斷情況、 符合合規性目標和保護資料不受勒索軟體和人為錯誤。
-  - 保留備份資料傳輸中和待用加密。
-  - 請確定以防止未經授權的使用多重要素驗證為基礎的存取。
+- **備份**。 使用 [Azure 備份](https://azure.microsoft.com/services/backup/)。
+  - 避免耗費資源的業務中斷情況、符合相容性目標，以及保護資料不受勒索軟體和人為錯誤影響。
+  - 使資料在傳送過程及待用期間保持加密。
+  - 確保根據多重要素驗證進行存取，以防止未經授權的使用。
 
-- **在內部部署資源**。 具有[真正的一致性混合式雲端](https://azure.microsoft.com/resources/truly-consistent-hybrid-cloud-with-microsoft-azure/)。
+- **內部部署資源**。 使用[真正一致的混合式雲端](https://azure.microsoft.com/resources/truly-consistent-hybrid-cloud-with-microsoft-azure/)。
 
 >[!div class="step-by-step"]
 >[上一頁](manage-production-docker-environments.md)
