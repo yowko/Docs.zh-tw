@@ -2,18 +2,18 @@
 title: ADO.NET 架構
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 13f65d0a2daf3b477a9b29c4de84fb359c946201
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 282f18cc7d379dffc410a0c62dc3b3e66e0a44f6
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877231"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267965"
 ---
 # <a name="adonet-architecture"></a>ADO.NET 架構
 傳統的資料處理主要是依賴相互連接的雙層式模型。 隨著資料處理朝多層式架構發展，程式設計人員也逐漸改用中斷連接的方式，使應用程式更具延展性 (Scalability)。  
   
 ## <a name="adonet-components"></a>ADO.NET 元件  
- 兩個主要元件[!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)]存取和管理資料的.NET Framework 資料提供者和<xref:System.Data.DataSet>。  
+ ADO.NET 來存取及管理資料的兩個主要元件是.NET Framework 資料提供者和<xref:System.Data.DataSet>。  
   
 ### <a name="net-framework-data-providers"></a>.NET Framework 資料提供者  
  .NET Framework 資料提供者是一種明確設計用於管理資料以及快速存取順向唯讀資料的元件。 `Connection` 物件會提供資料來源的連接。 `Command` 物件可讓您存取資料庫命令，以便傳回資料、修改資料、執行預存程序 (Stored Procedure)，並且傳送或擷取參數資訊。 `DataReader` 則可提供來自資料來源的高效能資料流。 最後，`DataAdapter` 會提供 `DataSet` 物件與資料來源之間的橋接器 (Bridge)。 `DataAdapter` 會使用 `Command` 物件於資料來源處執行 SQL 命令，以便將資料載入 `DataSet`，並且將 `DataSet` 內的資料變更調節回資料來源。 如需詳細資訊，請參閱 < [.NET Framework 資料提供者](../../../../docs/framework/data/adonet/data-providers.md)並[擷取和修改 ADO.NET 中的資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)。  

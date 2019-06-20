@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 333bfb539fc375fd8f2dd170a187002fcf81ea2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b945edca8bd739e6f122ed8b3e950508ecc28510
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649750"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268160"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>依分類列出 Visual Basic 編譯器選項
 Visual Basic 命令列編譯器提供從 Visual Studio 整合式的開發環境 (IDE) 內編譯程式的替代方案。 以下是 Visual Basic 命令列編譯器選項，依功能分類排序的清單。  
@@ -39,7 +39,7 @@ Visual Basic 命令列編譯器提供從 Visual Studio 整合式的開發環境 
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|將文件註解處理成 XML 檔案。|  
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|可讓編譯器輸出在輸入相同時編譯之間二進位內容相同的組件。|
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|設定要以 [!INCLUDE[Compact](~/includes/compact-md.md)] 為目標的編譯器。|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|設定.NET Compact Framework 為目標的編譯器。|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|指定輸出檔。|  
 |[-refonly](refonly-compiler-option.md)|輸出僅參考組件。|
 |[-refout](refout-compiler-option.md)|指定參考組件的輸出路徑。|

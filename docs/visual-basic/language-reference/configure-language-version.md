@@ -2,12 +2,12 @@
 title: 選取 Visual Basic 語言版本
 description: 設定編譯器執行特定編譯器版本搭配使用的語法驗證。
 ms.date: 05/24/2018
-ms.openlocfilehash: 3b6d8055dbf64f2a5c38f46b6d66794fc48a1cea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4768d59a37d168b2883396f1dea4d0c1a0ff4ca7
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797029"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268275"
 ---
 # <a name="select-the-visual-basic-language-version"></a>選取 Visual Basic 語言版本
 
@@ -44,6 +44,7 @@ Visual Basic 編譯器會預設為最新的主要版本已發行的語言。 您
 |15|編譯器會接受包含在 Visual Basic 15.0 或更低的語法。|
 |15.3|編譯器會接受包含在 Visual Basic 15.3 或更低的語法。|
 |15.5|編譯器會接受包含在 Visual Basic 15.5 或較低的語法。|
+|15.8|編譯器會接受包含在 Visual Basic 15.8 或較低的語法。|
 |latest|編譯器會接受它可支援的所有有效語言語法。|
 
 特殊字串 `default` 和 `latest` 會分別解析成安裝在組建電腦上的最新主要和次要語言版本。
