@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: cacda830a2501dcd127248955848d207d80bbe2c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f8afece073076b9ae94faaba8477f2a13e11b295
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636986"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268093"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>自動縮放 Windows Form
 
@@ -28,7 +28,7 @@ ms.locfileid: "65636986"
 
 ## <a name="original-support-for-automatic-scaling"></a>自動縮放的原始支援
 
-1.0 和 1.1 版的.NET Framework 支援自動調整的方式直接根據 UI 中，以 Win32 SDK 值表示所使用的 Windows 預設字型**DEFAULT_GUI_FONT**。 這種字型通常只有在顯示解析度變更時才會變更。 之前會使用下列機制來實作自動縮放：
+1\.0 和 1.1 版的.NET Framework 支援自動調整的方式直接根據 UI 中，以 Win32 SDK 值表示所使用的 Windows 預設字型**DEFAULT_GUI_FONT**。 這種字型通常只有在顯示解析度變更時才會變更。 之前會使用下列機制來實作自動縮放：
 
 1. 在設計階段，<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 屬性 (現在已被取代) 會設定為開發人員電腦上預設系統字型的高度和寬度。
 
@@ -48,7 +48,7 @@ ms.locfileid: "65636986"
 
 - 它與不相容所導入的.NET Framework 2.0 版中，這類的新版配置管理員<xref:System.Windows.Forms.FlowLayoutPanel>和<xref:System.Windows.Forms.TableLayoutPanel>。
 
-- 它不支援直接根據顯示解析度進行縮放，但這是與 [!INCLUDE[compact](../../../includes/compact-md.md)] 相容的必要條件。
+- 它不支援直接根據顯示解析度所需的.NET Compact framework 的相容性進行調整。
 
 雖然這項機制會保留在.NET Framework 2.0 版為了與舊版相容，但它已被取代的更強大的縮機制，接下來所述。 因此，<xref:System.Windows.Forms.Form.AutoScale%2A>、<xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>、<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 和特定 <xref:System.Windows.Forms.Control.Scale%2A> 多載會標記為已過時。
 
@@ -63,7 +63,7 @@ ms.locfileid: "65636986"
 
 - <xref:System.Windows.Forms.Control> 類別也具有幾個新成員，以便可以參與縮放並支援在相同表單上使用混合縮放比例。 <xref:System.Windows.Forms.Control.Scale%2A>、<xref:System.Windows.Forms.Control.ScaleChildren%2A> 和 <xref:System.Windows.Forms.Control.GetScaledBounds%2A> 成員尤其支援縮放比例。
 
-- 補充的系統字型支援已新增根據螢幕解析度進行縮放的支援，如 <xref:System.Windows.Forms.AutoScaleMode> 列舉所定義。 這種模式與 [!INCLUDE[compact](../../../includes/compact-md.md)] 支援的自動縮放相容，因此可更輕鬆地進行應用程式移轉。
+- 補充的系統字型支援已新增根據螢幕解析度進行縮放的支援，如 <xref:System.Windows.Forms.AutoScaleMode> 列舉所定義。 此模式適用於自動調整支援的.NET Compact Framework 啟用應用程式移轉作業更為輕鬆。
 
 - 自動縮放實作已新增與配置管理員 (例如 <xref:System.Windows.Forms.FlowLayoutPanel> 和 <xref:System.Windows.Forms.TableLayoutPanel>) 的相容性。
 

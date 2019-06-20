@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /sdkpath compiler option [Visual Basic]
 - sdkpath compiler option [Visual Basic]
 ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
-ms.openlocfilehash: 2024ccadb06fdea0c24d9d304c2fe040f8cce1d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91f64756b2fbf14dc96550420cd936973e6bec87
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61639047"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268289"
 ---
 # <a name="-sdkpath"></a>-sdkpath
 指定 mscorlib.dll 和 Microsoft.VisualBasic.dll 的位置。  
@@ -30,7 +30,7 @@ ms.locfileid: "61639047"
  包含 mscorlib.dll 和 Microsoft.VisualBasic.dll 編譯来使用的版本的目錄。 此路徑未驗證之前載入。 將目錄名稱括在引號 ("") 如果它包含空格。  
   
 ## <a name="remarks"></a>備註  
- 此選項會告訴 Visual Basic 編譯器，從非預設位置載入 mscorlib.dll 和 Microsoft.VisualBasic.dll 的檔案。 `-sdkpath`選項設計來搭配[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)。 [!INCLUDE[Compact](~/includes/compact-md.md)]會使用不同版本的支援程式庫，以避免使用的類型和裝置上找不到的語言功能。  
+ 此選項會告訴 Visual Basic 編譯器，從非預設位置載入 mscorlib.dll 和 Microsoft.VisualBasic.dll 的檔案。 `-sdkpath`選項設計來搭配[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)。 .NET Compact Framework 會使用不同版本的支援程式庫，以避免使用的類型和裝置上找不到的語言功能。  
   
 > [!NOTE]
 >  `-sdkpath`選項不是從 Visual Studio 開發環境中使用; 只有在從命令列編譯時均可使用。 `-sdkpath` Visual Basic 裝置專案載入時，設定選項。  
@@ -38,7 +38,7 @@ ms.locfileid: "61639047"
  您可以指定編譯器應使用編譯 Visual Basic 執行階段程式庫參考`-vbruntime`編譯器選項。 如需詳細資訊，請參閱 < [-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)。  
   
 ## <a name="example"></a>範例  
- 下列程式碼會編譯`Myfile.vb`具有[!INCLUDE[Compact](~/includes/compact-md.md)]，使用 Mscorlib.dll 和 Microsoft.VisualBasic.dll 的新版的預設安裝目錄中找到[!INCLUDE[Compact](~/includes/compact-md.md)]C 磁碟機上。 一般而言，您會使用最新版本的[!INCLUDE[Compact](~/includes/compact-md.md)]。  
+ 下列程式碼編譯`Myfile.vb`使用.NET Compact Framework 中，使用 Mscorlib.dll 和 Microsoft.VisualBasic.dll 的版本中找到.NET Compact Framework 的 C 磁碟機上的預設安裝目錄。 一般而言，您會使用.NET Compact Framework 的最新版本。  
   
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  
