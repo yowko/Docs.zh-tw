@@ -2,12 +2,12 @@
 title: 疑難排解
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: ebcfec475d20492f5ce1f971163544d9faa52223
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b34336871d599b72e548e2db90487c17377ba66
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613748"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307188"
 ---
 # <a name="troubleshooting"></a>疑難排解
 下列資訊將說明一些您在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 應用程式中可能會遇到的問題，並提供建議來避免或降低這些問題的影響。  
@@ -42,7 +42,7 @@ ms.locfileid: "64613748"
 ## <a name="expression-not-queryable"></a>無法查詢運算式  
  如果您看到「運算式 [expression] 無法查詢；是否遺漏組件參考？」 錯誤，請確定下列各項：  
   
-- 應用程式的目標為 [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)]。  
+- 您的應用程式以.NET Compact Framework 3.5 為目標。  
   
 - 您有 `System.Core.dll` 和 `System.Data.Linq.dll` 的參考。  
   

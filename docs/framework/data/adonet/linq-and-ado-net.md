@@ -2,12 +2,12 @@
 title: LINQ 和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: bfd5bb845917f9ca8ba3b154a51a946b610ca571
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a23e152d4688e840f4665e9c8d77835acb683564
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489829"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307311"
 ---
 # <a name="linq-and-adonet"></a>LINQ 和 ADO.NET
 現今許多商務程式開發人員必須使用兩個 （含） 以上的程式設計語言： 商務邏輯和展示層的高階語言 (例如視覺效果C#或 Visual Basic)，以及互動 （例如 Transact SQL) 資料庫的查詢語言. 因此，開發人員必須精通許多語言才能具有效率，而且也會在開發環境中產生語言不符的情況。 例如，使用資料存取 API 針對資料庫執行查詢的應用程式會使用引號，將查詢指定成字串常值 (String Literal)。 編譯器 (Compiler) 無法讀取這個查詢字串而且不會檢查是否有錯誤，例如語法無效或它所參考的資料行或資料列是否實際存在。 此外，系統無法提供查詢參數的型別檢查和 `IntelliSense` 支援。  
@@ -16,7 +16,7 @@ ms.locfileid: "66489829"
   
  將資料從 SQL 資料表傳輸至記憶體中物件通常很費時而且容易產生錯誤。 由 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 和 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 所實作的 [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] 提供者會將來源資料轉換成以 <xref:System.Collections.IEnumerable> 為基礎的物件集合。 當您查詢和更新時，程式設計人員永遠會將資料視為 <xref:System.Collections.IEnumerable> 集合。 針對這些集合撰寫查詢可獲得完整的 `IntelliSense` 支援。  
   
- 有三種不同的 ADO.NET [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 技術：[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] 和 [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 提供更豐富且最佳化的查詢<xref:System.Data.DataSet>並[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]可讓您直接查詢 SQL Server 資料庫結構描述，以及[!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]可讓您查詢[!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]。  
+ 有三種不同的 ADO.NET [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 技術：[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] 和 [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 提供更豐富且最佳化的查詢<xref:System.Data.DataSet>並[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]可讓您直接查詢 SQL Server 資料庫結構描述，和[!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]可讓您查詢實體資料模型。  
   
  下圖將提供 ADO.NET LINQ 技術如何與高階程式語言和啟用 LINQ 之資料來源相關聯的概觀。  
   
@@ -35,9 +35,9 @@ ms.locfileid: "66489829"
  透過 [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]，開發人員就可以使用與記憶體中集合和 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] (以及 XML 等其他資料來源) 相同的 <xref:System.Data.DataSet> 程式設計模式，直接針對儲存結構描述撰寫程式碼。 如需詳細資訊，請參閱 [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)。  
   
 ## <a name="linq-to-entities"></a>LINQ to Entities  
- 目前大部分應用程式都是根據關聯式資料庫所撰寫而成。 同時，這些應用程式將必須與關聯式格式表示的資料互動。 但是，資料庫結構描述不一定適合建立應用程式，而且應用程式的概念模型與資料庫的邏輯模型有所不同。 [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] 是可用於針對特定定義域資料建立模型的概念資料模型，讓應用程式能夠將資料當做物件進行互動。 請參閱[ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)如需詳細資訊。  
+ 目前大部分應用程式都是根據關聯式資料庫所撰寫而成。 同時，這些應用程式將必須與關聯式格式表示的資料互動。 但是，資料庫結構描述不一定適合建立應用程式，而且應用程式的概念模型與資料庫的邏輯模型有所不同。 實體資料模型是可用來針對特定定義域資料，讓應用程式可以與資料當做物件互動模型的概念資料模型。 請參閱[ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)如需詳細資訊。  
   
- 透過 [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]，關聯式資料會公開為 .NET 環境內的物件。 如此一來，物件層就成為理想的 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 支援目標，讓程式開發人員可以根據用於建置商務邏輯的語言，針對資料庫編寫查詢。 這項功能稱為 [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]。 如需詳細資訊，請參閱 [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。  
+ 實體資料模型中，透過關聯式資料公開為.NET 環境中的物件。 如此一來，物件層就成為理想的 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 支援目標，讓程式開發人員可以根據用於建置商務邏輯的語言，針對資料庫編寫查詢。 這項功能稱為 [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]。 如需詳細資訊，請參閱 [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

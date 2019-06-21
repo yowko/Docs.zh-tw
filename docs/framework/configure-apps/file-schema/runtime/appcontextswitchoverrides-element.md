@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79a8d378f69ced0bc22926b066e76dc515b06559
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 04f31748fd53fe3281102fcadcc1e56ea3cc1109
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210435"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307096"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<Appcontextswitchoverrides> > 項目
 定義一或多個由 <xref:System.AppContext> 類別所使用的參數，以提供新功能的退出機制。  
@@ -134,7 +134,7 @@ ms.locfileid: "65210435"
 |`Switch.UseLegacyAccessibilityFeatures`|控制項是否可從.NET Framework 4.7.1 的協助工具功能會啟用或停用。 | .NET Framework 4.7.1 |
 |`Switch.UseLegacyAccessibilityFeatures.2`|協助工具功能提供於.NET Framework 4.7.2 是否已啟用的控制項 (`false`) 或停用 (`true`)。 如果`true`，`Switch.UseLegacyAccessibilityFeatures`也必須是`true`啟用.NET Framework 4.7.1 協助工具功能。|.NET Framework 4.7.2|
 |`Switch.UseLegacyAccessibilityFeatures.3`|協助工具功能是否在.NET Framework 4.8 中導入啟用的控制項 (`false`) 或停用 (`true`)。 如果`true`，`Switch.UseLegacyAccessibilityFeatures`並`Switch.UseLegacyAccessibilityFeatures.2`也必須是`true`。|.NET Framework 4.8|
-|`Switch.UseLegacyToolTipDisplay`|控制項工具提示是否 displaed 當使用者將滑鼠游標停留在上方 WPF 控制項 (`true`)，或它們會顯示鍵盤焦點和透過鍵盤快速鍵 (`false`的預設行為)。 在.NET Framework 4.8 上執行，但以舊版.NET Framework 為目標的應用程式，同時讓鍵盤焦點，且快顯金鑰的支援要求`Switch.UseLegacyAccessibilityFeatures`， `Switch.UseLegacyAccessibilityFeatures.2`，並`Switch.UseLegacyAccessibilityFeatures.3`所有設定為  `false`。|.NET Framework 4.8|
+|`Switch.UseLegacyToolTipDisplay`|控制項是否工具提示會顯示在使用者將滑鼠游標停留在上方 WPF 控制項 (`true`)，或它們會顯示鍵盤焦點和透過鍵盤快速鍵 (`false`的預設行為)。 在.NET Framework 4.8 上執行，但以舊版.NET Framework 為目標的應用程式，同時讓鍵盤焦點，且快顯金鑰的支援要求`Switch.UseLegacyAccessibilityFeatures`， `Switch.UseLegacyAccessibilityFeatures.2`，並`Switch.UseLegacyAccessibilityFeatures.3`所有設定為  `false`。|.NET Framework 4.8|
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|控制是否 XSD 結構描述驗證會忽略空的索引鍵序列中的複合索引鍵。 如需詳細資訊，請參閱[風險降低：XML 結構描述驗證](../../../migration-guide/mitigation-xml-schema-validation.md)。|.NET Framework 4.6|  
   
 > [!NOTE]

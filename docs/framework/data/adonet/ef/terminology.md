@@ -2,12 +2,12 @@
 title: Entity Framework 詞彙
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: f78545102823b19cc65b100f2b270ae71c1bd077
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 53a6888d0b32cfeb73e7254dc0778274fe6cd0eb
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877488"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306344"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework 詞彙
 本主題定義中最常參考的詞彙[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]文件。 而為相關主題提供的連結表示有其他可用的資訊。  
@@ -27,7 +27,7 @@ ms.locfileid: "65877488"
 |並行|讓多個使用者同時存取和變更共用資料的程序。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 預設會實作開放式並行存取 (Optimistic Concurrency) 模型。|  
 |方向|參考某些關聯的非對稱性質。 方向在結構描述內是與 `FromRole` 或 `ToRole` 項目的 `NavigationProperty` 和 `ReferentialConstraint` 屬性一起指定。<br /><br /> 如需詳細資訊，請參閱 < [NavigationProperty 項目 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#navigationproperty-element-csdl)並[導覽屬性](../../../../../docs/framework/data/adonet/navigation-property.md)。|  
 |Eager Loading - 立即載入|載入特定的相關物件組之程序，會連同查詢中所明確要求的物件一起載入。|  
-|.edmx 檔案|XML 檔案，內含概念模型 (以 CSDL 表示)、儲存體模型 (以 SSDL 表示) 和兩種模型之間的對應 (以 MSL 表示)。 .edmx 檔案是由 [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] 工具建立。 如需詳細資訊，請參閱 < [.edmx 檔案概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))。|  
+|.edmx 檔案|XML 檔案，內含概念模型 (以 CSDL 表示)、儲存體模型 (以 SSDL 表示) 和兩種模型之間的對應 (以 MSL 表示)。 實體資料模型工具會建立.edmx 檔案。 如需詳細資訊，請參閱 < [.edmx 檔案概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))。|  
 |end|參與關聯的實體。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 結束項目 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl)並[關聯 end](../../../../../docs/framework/data/adonet/association-end.md)。|  
 |實體|在定義資料型別的應用程式定義域中的概念。<br /><br /> 如需詳細資訊，請參閱 < [EntityType 項目 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl)並[實體類型](../../../../../docs/framework/data/adonet/entity-type.md)。|  
 |EntityClient|包含類別，例如儲存體無關 ADO.NET 資料提供者`EntityConnection`， `EntityCommand`，和`EntityDataReader`。 適用於[!INCLUDE[esql](../../../../../includes/esql-md.md)]並將連線到特定 ADO.NET 資料提供者儲存體，例如`SqlClient`。<br /><br /> 如需詳細資訊，請參閱 < [Entity Framework 的 EntityClient 提供者](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。|  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 78286cde925a4583a3610ce100d23e16adcefe49
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7dd93e5aa44effcf9fc41598e41f6f612a209c86
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878079"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307138"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>作法：建立資料服務，使用 ADO.NET Entity Framework 資料來源 (WCF Data Services)
 
@@ -26,9 +26,9 @@ WCF Data Services 會將實體資料公開為資料服務。 這個實體資料�
 
 3. 輸入模型名稱，然後按一下**新增**。
 
-     [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] 精靈的第一頁隨即出現。
+     Entity Data Model 精靈的第一個頁面便會出現。
 
-4. 在 **選擇模型內容**對話方塊中，選取**從資料庫產生**。 然後按 [下一步] 。
+4. 在 **選擇模型內容**對話方塊中，選取**從資料庫產生**。 然後按 [下一步]  。
 
 5. 按一下 [**新的連接**] 按鈕。
 
@@ -36,7 +36,7 @@ WCF Data Services 會將實體資料公開為資料服務。 這個實體資料�
 
      **選擇資料連接** 對話方塊中已包含您的資料庫連接設定。
 
-7. 請確認**將實體連接設定儲存在 App.Config 中，為：** 核取方塊。 然後按 [下一步] 。
+7. 請確認**將實體連接設定儲存在 App.Config 中，為：** 核取方塊。 然後按 [下一步]  。
 
 8. 在 [**選擇您的資料庫物件**] 對話方塊中，選取的所有資料庫物件想要在資料服務中公開。
 

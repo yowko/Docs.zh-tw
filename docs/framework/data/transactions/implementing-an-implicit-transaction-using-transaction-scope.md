@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: e9e5e09bdde82c7b818fd47275bdbfeda5850682
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f45019ccc54056371954965e105e309fd41d9ffd
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645748"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306207"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>使用交易範圍實作隱含交易
 <xref:System.Transactions.TransactionScope> 類別提供一個簡單的方式，讓您不用與交易互動，即可將一段程式碼標記為參與交易。 交易範圍可以自動選取並管理環境交易。 由於 <xref:System.Transactions.TransactionScope> 類別非常容易使用且很有效率，在您開發交易應用程式時，建議您善加利用。  
@@ -124,7 +124,9 @@ using(TransactionScope scope1 = new TransactionScope())
  在此範例程式碼區段中，不使用任何環境交易，而是以 `scope1` 來建立新範圍 (<xref:System.Transactions.TransactionScopeOption.Required>)。 `scope1` 範圍在建立新交易 (交易 A) 時會成為根範圍，並讓交易 A 成為環境交易。 `Scope1` 接著會建立另外三個物件，各有不同<xref:System.Transactions.TransactionScopeOption>值。 例如，`scope2` 是由 <xref:System.Transactions.TransactionScopeOption.Required> 所建立，而且因為環境交易已經存在，該範圍就會聯結由 `scope1` 所建立的第一個交易。 請注意，`scope3` 是新交易的根範圍，而且 `scope4` 不包含任何環境交易。  
   
  儘管預設且最常用的 <xref:System.Transactions.TransactionScopeOption> 值是 <xref:System.Transactions.TransactionScopeOption.Required>，其他所有值每個都具有唯一的用途。  
-  
+
+### <a name="non-transactional-code-inside-a-transaction-scope"></a>在交易範圍內的非交易式程式碼
+
  <xref:System.Transactions.TransactionScopeOption.Suppress> 當您想要保留程式碼區段中，所執行的作業，並不想要在作業失敗時中止環境交易，則會是很有用。 例如，當您想要執行記錄或稽核作業，或是當您想要將事件發行到訂閱者時 (不管您的環境交易是否已經認可或中止)。 此值可允許您在交易範圍內保有一段非交易式程式碼，如下列範例所示。  
   
 ```csharp  

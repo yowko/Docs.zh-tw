@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1883365f-9d6c-4ccb-9187-df309f47706d
-ms.openlocfilehash: 7c7f1fef5d1fa575cd6d3bfdb7e6cbbea79ade28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69f5489d82511c249c1bde3ab65429561a87af59
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878803"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307270"
 ---
 # <a name="generic-field-and-setfield-methods-linq-to-dataset"></a>泛型 Field 和 SetField 方法 (LINQ to DataSet)
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 提供擴充方法<xref:System.Data.DataRow>類別可用於存取資料行的值：<xref:System.Data.DataRowExtensions.Field%2A>方法和<xref:System.Data.DataRowExtensions.SetField%2A>方法。 這些方法可讓開發人員更容易存取資料行值，尤其是與 Null 值相關的情況。 <xref:System.Data.DataSet> 會使用 <xref:System.DBNull.Value> 來代表 Null 值，而 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 則會使用 [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] 中引進的可為 Null 的型別 (Nullable Type) 支援。 使用預先存在的資料行存取子中<xref:System.Data.DataRow>需要轉型成適當的類型傳回的物件。 如果中的特定欄位<xref:System.Data.DataRow>可為 null，您必須明確檢查是否有 null 值傳回，因為<xref:System.DBNull.Value>並隱含地將它轉型為另一個型別會擲回<xref:System.InvalidCastException>。 在下列範例中，如果<xref:System.Data.DataRow.IsNull%2A>方法沒有用來檢查是否有 null 值，會擲回例外狀況，是否索引子傳回<xref:System.DBNull.Value>，並嘗試將它轉換成<xref:System.String>。  
@@ -27,7 +27,7 @@ ms.locfileid: "61878803"
   
  請注意，`T` 方法和 <xref:System.Data.DataRowExtensions.Field%2A> 方法之泛型參數 <xref:System.Data.DataRowExtensions.SetField%2A> 中指定的資料型別必須與基礎值的型別相符。 否則，系統將擲回 <xref:System.InvalidCastException> 例外狀況。 此外，指定的資料行名稱也必須與 <xref:System.Data.DataSet> 中的資料行名稱相符，否則系統將擲回 <xref:System.ArgumentException>。 在這兩種情況中，其例外狀況是在執行查詢的資料列舉執行階段中擲回。  
   
- <xref:System.Data.DataRowExtensions.SetField%2A> 方法本身不會執行任何型別轉換。 不過，這並不表示不會進行型別轉換。 <xref:System.Data.DataRowExtensions.SetField%2A>方法會公開[!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)]行為<xref:System.Data.DataRow>類別。 無法藉由執行類型轉換<xref:System.Data.DataRow>物件和轉換的值則會儲存到<xref:System.Data.DataRow>物件。  
+ <xref:System.Data.DataRowExtensions.SetField%2A> 方法本身不會執行任何型別轉換。 不過，這並不表示不會進行型別轉換。 <xref:System.Data.DataRowExtensions.SetField%2A>方法公開 （expose) 的 ADO.NET 行為<xref:System.Data.DataRow>類別。 無法藉由執行類型轉換<xref:System.Data.DataRow>物件和轉換的值則會儲存到<xref:System.Data.DataRow>物件。  
   
 ## <a name="see-also"></a>另請參閱
 

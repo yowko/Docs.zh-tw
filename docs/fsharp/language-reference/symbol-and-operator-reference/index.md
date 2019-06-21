@@ -2,12 +2,12 @@
 title: 符號和運算子參考
 description: 深入了解符號和運算子，可在F#程式設計語言。
 ms.date: 02/11/2019
-ms.openlocfilehash: 0ea8337a9055c8df639fe6abdb6c79445d189d64
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 14ea7a66f7e9a79d24b62a4aa0564eecb891ee1a
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490810"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306192"
 ---
 # <a name="symbol-and-operator-reference"></a>符號和運算子參考
 
@@ -47,7 +47,7 @@ ms.locfileid: "66490810"
 |`+?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的類型時，將左側與右側相加。<br /></li></ul>|
 |`,`|[元組](../tuples.md)|<ul><li>分隔 Tuple 的項目或型別參數。<br /></li></ul>|
 |`-`|[算術運算子](arithmetic-operators.md)|<ul><li>當做二元運算子使用時，從左側減去右側。<br /></li><li>當做一元運算子使用時，執行負運算。<br /></li></ul>|
-|`-`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的類型時，從左側減去右側。<br /></li></ul>|
+|`-?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的類型時，從左側減去右側。<br /></li></ul>|
 |`->`|[函式](../functions/index.md)<br /><br />[比對運算式](../match-expressions.md)|<ul><li>在函式類型中，分隔引數並傳回值。<br /></li><li>產生運算式 (在循序項運算式中)；相當於 `yield` 關鍵字。<br /></li><li>用於比對運算式中<br /></li></ul>|
 |`.`|[成員](../members/index.md)<br /><br />[基本類型](../primitive-types.md)|<ul><li>存取成員，並分隔完整名稱中的個別名稱。<br /></li><li>以浮點數指定小數點。<br /></li></ul>|
 |`..`|[迴圈：`for...in` 運算式](../loops-for-in-expression.md)|<ul><li>指定範圍。<br /></li></ul>|

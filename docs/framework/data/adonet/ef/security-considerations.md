@@ -2,12 +2,12 @@
 title: 安全性考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: fe272bada02e6628b6275d2a5282f0def23074c8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 66f8a9217a007ed1faf975638dfa8148e2f1c5ba
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489831"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307306"
 ---
 # <a name="security-considerations-entity-framework"></a>安全性考量 (Entity Framework)
 本主題將描述與開發、部署和執行 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式有關的安全性考量。 您也應該遵循建立安全的.NET Framework 應用程式的建議。 如需詳細資訊，請參閱 <<c0> [ 安全性概觀](../../../../../docs/framework/data/adonet/security-overview.md)。  
@@ -86,7 +86,7 @@ ms.locfileid: "66489831"
  提供者非變異名稱可在 app.config 中修改。用戶端應用程式必須負責使用強式名稱 (Strong Name) 透過標準提供者 Factory 模型存取基礎提供者。  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>限制模型和對應檔的權限。  
- 管理員必須將模型和對應檔 (.edmx、.csdl、.ssdl 和 .msl) 的寫入存取權限制為只有修改模型或對應的使用者。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]只在執行階段需要這些檔案的讀取權限。 管理員也應該限制 [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] 工具所產生之物件層和預先編譯檢視原始程式碼檔的存取權。  
+ 管理員必須將模型和對應檔 (.edmx、.csdl、.ssdl 和 .msl) 的寫入存取權限制為只有修改模型或對應的使用者。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]只在執行階段需要這些檔案的讀取權限。 系統管理員也應該限制存取物件層和 Entity Data Model 工具所產生的先行編譯的檢視原始程式檔。  
   
 ## <a name="security-considerations-for-queries"></a>查詢的安全性考量  
  查詢概念模型時適用下列安全性考量。 這些考量適用於使用 EntityClient 的 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢以及使用 LINQ、[!INCLUDE[esql](../../../../../includes/esql-md.md)] 的物件，並查詢產生器方法。  

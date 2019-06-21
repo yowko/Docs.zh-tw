@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: f35c1387d54fdc02cb421af477671a5a75939c57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 36f0d50994593d1d575a836dfbd04e8c63a21204
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626400"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306269"
 ---
 # <a name="feed-customization-wcf-data-services"></a>自訂摘要 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]將資料公開為摘要。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支援資料摘要的 Atom 和 「 JavaScript 物件標記法 (JSON) 格式。 當您使用 Atom 摘要時，[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]提供標準的方法，用來序列化資料，例如實體和關聯性，為 XML 格式，可以包含在 HTTP 訊息的本文。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 定義包含在實體內的資料與 Atom 項目之間的預設實體屬性對應。 如需詳細資訊，請參閱[OData:Atom 格式](https://go.microsoft.com/fwlink/?LinkID=185794)。  
@@ -42,7 +42,7 @@ ms.locfileid: "64626400"
  如需詳細資訊，請參閱[如何：使用 Entity Framework 提供者自訂摘要](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md)。  
   
 > [!NOTE]
->  由於 Entity Designer 不支援資料模型的副檔名，您必須手動修改包含資料模型的 XML 檔案。 如需.edmx 檔案所產生的詳細資訊[!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]工具，請參閱[.edmx 檔案概觀 (Entity Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))。  
+>  由於 Entity Designer 不支援資料模型的副檔名，您必須手動修改包含資料模型的 XML 檔案。 如需 Entity Data Model 工具所產生的.edmx 檔案的詳細資訊，請參閱[.edmx 檔案概觀 (Entity Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))。  
   
 ### <a name="custom-feed-attributes"></a>自訂摘要屬性  
  下表顯示可自訂摘要的 XML 屬性，您可以將它們加入至定義資料模型的概念結構定義語言 (CSDL) 中。 這些屬性 (Attribute) 相當於搭配反映提供者所使用之 <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> 的屬性 (Property)。  

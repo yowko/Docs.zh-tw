@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-ms.openlocfilehash: 75177b609f14d335aa57aba77d647827f50a8692
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7d7ad92199bb8a8f01290066f8ae023a14c2f9ce
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881891"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307429"
 ---
 # <a name="how-to-obtain-font-metrics"></a>作法：取得字型度量資訊
 <xref:System.Drawing.FontFamily>類別提供下列方法，擷取各種度量，針對特定的系列樣式組合：  
@@ -26,7 +26,7 @@ ms.locfileid: "65881891"
   
 - <xref:System.Drawing.FontFamily.GetLineSpacing%2A>([Fontstyle])  
   
- 這些方法所傳回的數字為字型設計單位，因此它們是獨立的大小和單位的特定<xref:System.Drawing.Font>物件。  
+ 這些方法所傳回的值為字型設計單位，因此它們是獨立的大小和單位的特定<xref:System.Drawing.Font>物件。  
   
  下圖顯示各種計量：
   
