@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 6bf53cba73c4d7331b2a1c68bf7187c13281d844
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c7d5d4ef7d812e186813cd08f9e4e2adf2ab1a58
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633442"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306660"
 ---
 # <a name="lock-statement-c-reference"></a>lock 陳述式 (C# 參考)
 
@@ -54,7 +54,7 @@ finally
 當您同步處理執行緒對共用資源的存取時，請鎖定專用物件執行個體 (例如 `private readonly object balanceLock = new object();`) 或另一個不太可能由程式碼不相關的部分用作鎖定物件的執行個體。 避免對不同的共用資源使用相同的鎖定物件執行個體，因為其可能導致鎖死或鎖定爭用。 尤其要避免使用下列項目當作鎖定物件：
 
 - `this`，呼叫者可能會將其作為鎖定。
-- <xref:System.Type> 執行個體，因為這些可能會由 [typeof](typeof.md) 運算子或反映取得。
+- <xref:System.Type> 執行個體，因為這些可能會由 [typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator) 運算子或反映取得。
 - 字串執行個體 (包括字串常值)，因為那些可能會[暫留](/dotnet/api/system.string.intern#remarks)。
 
 ## <a name="example"></a>範例

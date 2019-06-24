@@ -61,7 +61,7 @@ ms.locfileid: "61701342"
  這個項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用**\<接聽程式 >** 加入接聽程式的項目`MyListener`並`MyEventListener`來**接聽程式**集合。 `MyListener` 建立一個稱為檔案`MyListener.log`並將輸出寫入檔案。 `MyEventListener` 建立事件記錄檔中的項目。  
+ 下列範例示範如何使用 **\<接聽程式>** 加入接聽程式的項目`MyListener`並`MyEventListener`來**接聽程式**集合。 `MyListener` 建立一個稱為檔案`MyListener.log`並將輸出寫入檔案。 `MyEventListener` 建立事件記錄檔中的項目。  
   
 ```xml  
 <configuration>  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 413a04d6ccdfff4b9cbf937821683ab7f7b37361
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b4217221cc5199b9d8904be1ca3073878378b4e9
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208120"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268177"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>在 .NET 中剖析日期和時間字串
 
@@ -55,7 +55,7 @@ ms.locfileid: "59208120"
 下面的範例會示範如何使用 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 方法將 `string` 轉換成 <xref:System.DateTime>。 本範例會使用與目前執行緒相關聯的文化特性。 如果與目前文化特性相關聯的 <xref:System.Globalization.CultureInfo> 無法剖析輸入字串，則會擲回 <xref:System.FormatException>。
 
 > [!TIP]
-> 本文中所有的 C# 範例皆可在您的瀏覽器中執行。 按 [執行] 按鈕以查看輸出。 您也可以編輯它們以進行實驗。
+> 本文中所有的 C# 範例皆可在您的瀏覽器中執行。 按 [執行]  按鈕以查看輸出。 您也可以編輯它們以進行實驗。
 
 > [!NOTE]
 > 這些範例可在 [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) 和 [VB](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions) 兩者的 GitHub 文件存放庫中取得。 或者，您可以為 [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) 或 [VB](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip)將專案下載為 ZIP 檔案。
@@ -65,14 +65,14 @@ ms.locfileid: "59208120"
 
 您也可以明確地定義剖析字串時所使用的文化特性格式設定慣例。 您將指定由 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 屬性傳回的其中一個標準 <xref:System.Globalization.DateTimeFormatInfo> 物件。 下列範例使用格式提供者將德文字串剖析成 <xref:System.DateTime>。 它會建立代表 `de-DE` 文化特性的 <xref:System.Globalization.CultureInfo>。 `CultureInfo` 物件可確保成功剖析此特定字串。 這可排除 <xref:System.Threading.Thread.CurrentThread> 的 <xref:System.Threading.Thread.CurrentCulture> 有任何設定。  
   
-[!code-csharp-interactive[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
+[!code-csharp[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
 [!code-vb[Parsing.DateAndTime#2](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#2)]
 
 不過，雖然您可以使用 <xref:System.DateTime.Parse%2A> 方法的多載來指定自訂的格式提供者，此方法卻不支援剖析非標準的格式。 若要剖析以非標準格式表示的日期和時間，請改用 <xref:System.DateTime.ParseExact%2A> 方法。  
 
 <a name="styles-example"></a>下列範例使用 <xref:System.Globalization.DateTimeStyles> 列舉，以指定不應將目前的日期和時間資訊新增至 <xref:System.DateTime> 的未指定欄位中。  
 
-[!code-csharp-interactive[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
+[!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
 [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#3)]
  
 ## <a name="parseexact"></a>ParseExact
@@ -81,7 +81,7 @@ ms.locfileid: "59208120"
 
 在下列範例中，<xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> 方法收到了要剖析的字串物件，後面依序接著格式指定名稱和 <xref:System.Globalization.CultureInfo> 物件。 此 <xref:System.DateTime.ParseExact%2A> 方法只能剖析遵循 `en-US` 文化特性中完整日期模式的字串。  
 
-[!code-csharp-interactive[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
+[!code-csharp[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
 [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#4)]
 
 <xref:System.DateTime.Parse%2A> 和 <xref:System.DateTime.ParseExact%2A> 方法的每個多載也都有 <xref:System.IFormatProvider> 參數，可提供有關設定字串格式的特定文化特性資訊。 此 <xref:System.IFormatProvider> 物件是代表標準文化特性的 <xref:System.Globalization.CultureInfo> 物件，或 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 屬性所傳回的 <xref:System.Globalization.DateTimeFormatInfo> 物件。  <xref:System.DateTime.ParseExact%2A> 也會使用可定義一或多個自訂日期和時間格式的額外字串或字串陣列引數。  
@@ -92,4 +92,4 @@ ms.locfileid: "59208120"
 - [格式化類型](formatting-types.md)
 - [.NET 中的類型轉換](type-conversion.md)
 - [標準日期和時間格式](standard-date-and-time-format-strings.md)
-- [自訂日期與時間格式字串](custom-date-and-time-format-strings.md)
+- [自訂日期和時間格式字串](custom-date-and-time-format-strings.md)

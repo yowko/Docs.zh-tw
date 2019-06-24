@@ -108,7 +108,7 @@ Windows Communication Foundation (WCF) 服務組態編輯器 (SvcConfigEditor.ex
   
 3. 在對話方塊中輸入基底位址 URI。  
   
-4. 按一下 [確定] 。  
+4. 按一下 [確定]  。  
   
 > [!NOTE]
 >  您無法編輯的值[ \<baseAddressPrefixFilters >](../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)內這項工具。 若要新增或修改這個項目，您應使用文字編輯器或 Visual Studio。  
@@ -185,11 +185,11 @@ Windows Communication Foundation (WCF) 服務組態編輯器 (SvcConfigEditor.ex
   
 1. 選取您要在其中新增擴充功能項目的繫結。  
   
-2. 按一下 [加入] 。  
+2. 按一下 [加入]  。  
   
 3. 從可用延伸清單中，選取您要加入的繫結項目延伸。 若要選取多個項目，請同時按下 CTRL 鍵。  
   
-4. 按一下 [加入] 。  
+4. 按一下 [加入]  。  
   
 #### <a name="adjusting-the-extension-position-in-a-custom-binding"></a>調整自訂繫結中的擴充功能位置  
  自訂繫結是一種會形成堆疊的繫結項目集合。 堆疊上的每個繫結項目都有專屬的組態設定。 自訂繫結中的繫結項目擴充功能順序代表每個擴充功能在堆疊中的位置。 在堆疊頂端的項目會優先套用。 若要變更順序：  
@@ -250,7 +250,7 @@ Windows Communication Foundation (WCF) 服務組態編輯器 (SvcConfigEditor.ex
 > [!NOTE]
 >  如果您想關閉您的應用程式時，自動清除，請啟用追蹤與訊息記錄**自動排清**選項。  
   
- **診斷****摘要頁面**可讓您完成設定診斷方面最常見的工作。 不過，如果您想要以手動方式編輯接聽程式] 和 [來源設定，您必須展開**診斷**中的節點，然後編輯設定**訊息記錄**，**接聽程式**和**來源**節點。  
+ **診斷** **摘要頁面**可讓您完成設定診斷方面最常見的工作。 不過，如果您想要以手動方式編輯接聽程式] 和 [來源設定，您必須展開**診斷**中的節點，然後編輯設定**訊息記錄**，**接聽程式**和**來源**節點。  
   
 #### <a name="enabling-wcf-custom-tracing-or-message-logging"></a>啟用 WCF 自訂追蹤或訊息記錄  
   
@@ -288,11 +288,11 @@ Windows Communication Foundation (WCF) 服務組態編輯器 (SvcConfigEditor.ex
   
 2. 選取您要編輯的行為。  
   
-3. 按一下 [加入] 。  
+3. 按一下 [加入]  。  
   
 4. 從可用擴充功能清單中，選取您要新增的行為項目擴充功能。  
   
-5. 按一下 [加入] 。  
+5. 按一下 [加入]  。  
   
 ##### <a name="adjusting-the-extension-position-in-a-behavior"></a>調整行為中的延伸位置  
  行為是一種會形成堆疊之項目的集合。 堆疊上的每個項目都有專屬的組態。 行為中的行為項目延伸順序代表每個延伸在堆疊中的位置。 在堆疊頂端的項目會優先套用。 若要變更順序：  
@@ -332,11 +332,11 @@ Windows Communication Foundation (WCF) 服務組態編輯器 (SvcConfigEditor.ex
 ##### <a name="adding-a-new-extension"></a>加入新的延伸  
  在進階節點中選取其中一個延伸節點：  
   
-1. 按一下 [新增] 。  
+1. 按一下 [新增]  。  
   
 2. 輸入名稱和型別。  
   
-3. 按一下 [確定] 。  
+3. 按一下 [確定]  。  
   
 4. 擴充功能現在會出現在編輯器的適當位置中。 例如，如果您新增行為項目延伸，則這個功能會出現在可用延伸清單中。  
   

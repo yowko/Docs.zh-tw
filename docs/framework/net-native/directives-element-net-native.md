@@ -28,7 +28,7 @@ ms.locfileid: "61868582"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`xmlns`|XML 命名空間。 其值永遠是 **」 http://schemas.microsoft.com/netfx/2013/01/metadata"**。|  
+|`xmlns`|XML 命名空間。 其值永遠是 **http://schemas.microsoft.com/netfx/2013/01/metadata"** 。|  
   
 ## <a name="child-elements"></a>子元素  
   

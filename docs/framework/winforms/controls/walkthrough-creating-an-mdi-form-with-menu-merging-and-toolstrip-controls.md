@@ -65,7 +65,7 @@ MDI 父表單包含主功能表。 主功能表中有一個功能表項目名為
 
 4. 在 [屬性] 視窗中設定的值<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>屬性設`ToolStripMenuItem1`。
 
-5. 新增至子項目的** 視窗**功能表項目，然後命名子項目的**新增**。
+5. 新增至子項目的 **視窗**功能表項目，然後命名子項目的**新增**。
 
 6. 在 [屬性] 視窗中，按一下**事件**。
 
@@ -122,7 +122,7 @@ MDI 父表單包含主功能表。 主功能表中有一個功能表項目名為
 
 4. 按一下 **新增**數次。
 
-     子表單並自動列底下** 視窗**功能表項目，因為<xref:System.Windows.Forms.MenuStrip>控制項的<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>屬性指派。
+     子表單並自動列底下 **視窗** 功能表項目，因為<xref:System.Windows.Forms.MenuStrip>控制項的<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>屬性指派。
 
 ## <a name="add-toolstrip-support"></a>加入 ToolStrip 的支援
 

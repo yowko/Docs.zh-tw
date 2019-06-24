@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, operator overloading
 - operator overloading [C#]
 ms.assetid: 390d9d01-79fc-40ab-9ed3-0bf448da1b6a
-ms.openlocfilehash: 104473c9659205258d8e160ce0820119a4108471
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 63079569050a70f551887dae837e012044984f85
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301356"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306933"
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>可多載的運算子 (C# 程式設計手冊)
 
@@ -24,9 +24,9 @@ C# 允許使用者定義的類型使用 [operator](../../language-reference/keyw
 |[==](../../language-reference/operators/equality-operators.md#equality-operator-), [!=](../../language-reference/operators/equality-operators.md#inequality-operator-), [\<](../../language-reference/operators/comparison-operators.md#less-than-operator-), [>](../../language-reference/operators/comparison-operators.md#greater-than-operator-), [\<=](../../language-reference/operators/comparison-operators.md#less-than-or-equal-operator-), [>=](../../language-reference/operators/comparison-operators.md#greater-than-or-equal-operator-)|可多載比較運算子 (但請參閱本表後面的注意事項)。|
 |[&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-), [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-)|條件式邏輯運算子無法多載，但它們可以使用可多載的 `&` 和 <code>&#124;</code> 評估。|
 |[&#91;&#93;](../../language-reference/operators/member-access-operators.md#indexer-operator-)|陣列索引運算子無法多載，但您可以定義[索引子](../indexers/index.md)。|
-|[(T)x](../../language-reference/operators/invocation-operator.md)|雖然轉換運算子無法多載，但您可以定義新的轉換運算子 (請參閱[明確](../../language-reference/keywords/explicit.md)和[隱含](../../language-reference/keywords/implicit.md))。|
+|[(T)x](../../language-reference/operators/type-testing-and-conversion-operators.md#cast-operator-)|雖然轉換運算子無法多載，但您可以定義新的轉換運算子 (請參閱[明確](../../language-reference/keywords/explicit.md)和[隱含](../../language-reference/keywords/implicit.md))。|
 |[+=](../../language-reference/operators/arithmetic-operators.md#compound-assignment), [-=](../../language-reference/operators/arithmetic-operators.md#compound-assignment), [\*=](../../language-reference/operators/arithmetic-operators.md#compound-assignment), [/=](../../language-reference/operators/arithmetic-operators.md#compound-assignment), [%=](../../language-reference/operators/arithmetic-operators.md#compound-assignment), [&=](../../language-reference/operators/boolean-logical-operators.md#compound-assignment), [&#124;=](../../language-reference/operators/boolean-logical-operators.md#compound-assignment), [^=](../../language-reference/operators/boolean-logical-operators.md#compound-assignment), [\<\<=](../../language-reference/operators/bitwise-and-shift-operators.md#compound-assignment), [>>=](../../language-reference/operators/bitwise-and-shift-operators.md#compound-assignment)|無法明確多載指派運算子。 不過，當您多載二元運算子時，對應的指派運算子 (若有) 也會隱含地多載。 例如，`+=` 是使用 `+` 進行評估 (可多載)。|
-|[=](../../language-reference/operators/assignment-operator.md)、[.](../../language-reference/operators/member-access-operators.md#member-access-operator-)、[?:](../../language-reference/operators/conditional-operator.md)、[??](../../language-reference/operators/null-coalescing-operator.md)、[->](../../language-reference/operators/pointer-related-operators.md#pointer-member-access-operator--)、[=>](../../language-reference/operators/lambda-operator.md), [f(x)](../../language-reference/operators/member-access-operators.md#invocation-operator-)、[as](../../language-reference/keywords/as.md)、[checked](../../language-reference/keywords/checked.md)、[unchecked](../../language-reference/keywords/unchecked.md)、[default](../../programming-guide/statements-expressions-operators/default-value-expressions.md)、[delegate](../../programming-guide/statements-expressions-operators/anonymous-methods.md)、[is](../../language-reference/keywords/is.md)、[new](../../language-reference/keywords/new.md)、[sizeof](../../language-reference/keywords/sizeof.md)[typeof](../../language-reference/keywords/typeof.md)|這些運算子無法多載。|
+|[=](../../language-reference/operators/assignment-operator.md)、[.](../../language-reference/operators/member-access-operators.md#member-access-operator-)、[?:](../../language-reference/operators/conditional-operator.md)、[??](../../language-reference/operators/null-coalescing-operator.md)、[->](../../language-reference/operators/pointer-related-operators.md#pointer-member-access-operator--)、[=>](../../language-reference/operators/lambda-operator.md), [f(x)](../../language-reference/operators/member-access-operators.md#invocation-operator-)、[as](../../language-reference/operators/type-testing-and-conversion-operators.md#as-operator)、[checked](../../language-reference/keywords/checked.md)、[unchecked](../../language-reference/keywords/unchecked.md)、[default](../../programming-guide/statements-expressions-operators/default-value-expressions.md)、[delegate](../../programming-guide/statements-expressions-operators/anonymous-methods.md)、[is](../../language-reference/operators/type-testing-and-conversion-operators.md#is-operator)、[new](../../language-reference/keywords/new.md)、[sizeof](../../language-reference/keywords/sizeof.md)[typeof](../../language-reference/operators/type-testing-and-conversion-operators.md#typeof-operator)|這些運算子無法多載。|
 
 > [!NOTE]
 > 若要多載比較運算子，則必須成對多載；也就是說，如果多載 `==`，也必須多載 `!=`。 反向也是如此，其中多載 `!=` 需要多載 `==`。 比較運算子 `<` 和 `>` 以及 `<=` 和 `>=` 也是如此。

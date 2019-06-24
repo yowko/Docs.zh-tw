@@ -1,16 +1,16 @@
 ---
-title: HOW TO：修改字串內容 - C# 指南
+title: 作法：修改字串內容 - C# 指南
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 48be71f35634222dd9898199f004ea1190b62f35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cc1166d98a6cc07e0827a138cecb09c0530b899
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664007"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267768"
 ---
-# <a name="how-to-modify-string-contents-in-c"></a>HOW TO：在 C\# 中修改字串內容
+# <a name="how-to-modify-string-contents-in-c"></a>作法：在 C\# 中修改字串內容
 
 本文示範多種技術，會藉由修改現有的 `string`來產生 `string`。 所有示範的技術均會傳回修改結果，作為新的 `string` 物件。 為明確示範此做法，所有的範例都會將結果儲存到新的變數。 接著，您可在執行各個範例時，對原本的 `string` 與修改後產生的 `string` 進行檢查。
 
@@ -24,7 +24,7 @@ ms.locfileid: "54664007"
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#1)]
 
-上述程式碼示範了字串的「固定」屬性。 您可以看到在上述程式碼中，原本的字串 `source` 並未受到修改。 <xref:System.String.Replace%2A?displayProperty=nameWithType> 方法會建立包含修改項目的新 `string`。
+上述程式碼示範了字串的「固定」  屬性。 您可以看到在上述程式碼中，原本的字串 `source` 並未受到修改。 <xref:System.String.Replace%2A?displayProperty=nameWithType> 方法會建立包含修改項目的新 `string`。
 
 <xref:System.String.Replace%2A> 方法可取代字串或單一字元。 在這兩種情況下，所找到之文字的每個項目均會受到取代。  下列範例將所有 ' ' 字元取代為 '\_'：
 
@@ -67,7 +67,7 @@ ms.locfileid: "54664007"
 您可在字串建立後，使用**不安全**的程式碼直接加以修改。 不安全的程式碼會略過許多 .NET 設計來減少程式碼中特定類型 Bug 的功能。 因為字串類別設計為**固定**類型，所以您必須使用不安全的程式碼才能直接修改字串。 建立後即無法變更其值。 不安全的程式碼會藉由存取及修改 `string` 使用的記憶體，而不使用一般 `string` 方式，以規避此屬性。
 下列範例專為特殊情況提供，例如您想要使用不安全的模式來直接修改字串。 此範例示範了如何使用 `fixed` 關鍵字。 `fixed` 關鍵字會在程式碼使用不安全的指標存取記憶體時，禁止記憶體回收行程 (GC) 移動記憶體中的字串物件。 它也示範因為 C# 編譯器在內部儲存 (實習生) 字串的方式，可能造成的字串不安全作業的一個副作用。 一般情況下，除非絕對必要，您不應該使用這項技術。 您可從這邊文章深入了解 [unsafe](../language-reference/keywords/unsafe.md) 與 [fixed](../language-reference/keywords/fixed-statement.md)。 <xref:System.String.Intern%2A> 的 API 參考包含字串暫留的資訊。
 
-[!code-csharp-interactive[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+[!code-csharp[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 
 您可以查看 [GitHub 存放庫](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的程式碼，來嘗試這些範例。 或者，您可以將範例下載[為 ZIP 檔案](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
 

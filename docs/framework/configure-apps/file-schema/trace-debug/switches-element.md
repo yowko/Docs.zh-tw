@@ -53,7 +53,7 @@ ms.locfileid: "61704501"
  您可以將它放在組態檔中，以變更追蹤參數的層級。 如果參數為<xref:System.Diagnostics.BooleanSwitch>，可以先開啟和關閉。 如果參數為<xref:System.Diagnostics.TraceSwitch>，您可以將不同層級指派，以便指定類型的追蹤或偵錯訊息的應用程式輸出。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用**\<切換 >** 要設定項目`General`追蹤參數設<xref:System.Diagnostics.TraceLevel>層級，並且啟用`Data`布林追蹤參數。  
+ 下列範例示範如何使用 **\<切換>** 要設定項目`General`追蹤參數設<xref:System.Diagnostics.TraceLevel>層級，並且啟用`Data`布林追蹤參數。  
   
 ```xml  
 <configuration>  

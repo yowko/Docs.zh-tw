@@ -8,12 +8,12 @@ metadata:
   ms.date: 03/20/2019
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 1b1de22769c86f75684f41635287a73558d1d15a
-  ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+  ms.openlocfilehash: 7cec35e0749ea0b38162244171459f311d27cb25
+  ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 04/28/2019
-  ms.locfileid: "64750377"
+  ms.lasthandoff: 06/18/2019
+  ms.locfileid: "67170229"
 items:
 - durationInMinutes: 1
   content: >
@@ -202,7 +202,7 @@ items:
     若要修改傳回的參考，您需要將 `ref` 修飾詞加入至區域變數宣告，並在呼叫 `Find` 之前，如果傳回值是參考，讓變數成為參考。 修改瀏覽器中的測試程式碼以符合下列內容：
 
 
-    [!code-csharp[EverythingByValue](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#TestByValue "test code for return object by reference")]
+    [!code-csharp[TestByRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#TestByRef "test code for return object by reference")]
 
 
     現在，在上述範例中的第二個 `WriteLine` 陳述式會印出值 `24`，表示已修改矩陣中的儲存體。 區域變數已使用 `ref` 修飾詞宣告，而且它需要 `ref` 傳回。 您必須在宣告 `ref` 變數時先初始化；您無法分割宣告和初始化。

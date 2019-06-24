@@ -458,7 +458,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 1. 從啟動 Service.exe *service\bin*。
 
-1. 從啟動 Client.exe *\client\bin*。 用戶端活動會顯示在用戶端主控台應用程式上。
+1. 從啟動 Client.exe *\client\bin* 。 用戶端活動會顯示在用戶端主控台應用程式上。
 
 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
 
@@ -466,7 +466,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 1. 在服務電腦上建立目錄。
 
-2. 從服務程式檔複製*\service\bin*到服務電腦上的目錄。 同時將 Setup.bat、Cleanup.bat、GetComputerName.vbs 和 ImportClientCert.bat 檔複製到服務電腦上。
+2. 從服務程式檔複製 *\service\bin*到服務電腦上的目錄。 同時將 Setup.bat、Cleanup.bat、GetComputerName.vbs 和 ImportClientCert.bat 檔複製到服務電腦上。
 
 3. 在用戶端電腦上為用戶端二進位碼檔案建立一個目錄。
 
