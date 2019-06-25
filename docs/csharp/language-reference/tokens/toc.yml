@@ -1,7 +1,0 @@
-- name: 'C# 特殊字元'
-  href: index.md
-  items:
-    - name: $ -- 字串插補
-      href: interpolated.md
-    - name: '@ -- 逐字識別項'
-      href: verbatim.md
