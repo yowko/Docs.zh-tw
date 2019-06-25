@@ -53,7 +53,7 @@ ms.locfileid: "66003857"
 
 第一個步驟是建立應用程式基礎結構，包括應用程式定義、 兩個頁面，以及映像。
 
-1. 在 Visual Basic 或 Visual C# 中名為建立新的 WPF 應用程式專案 **`ExpenseIt`**:
+1. 在 Visual Basic 或 Visual C# 中名為建立新的 WPF 應用程式專案 **`ExpenseIt`** :
 
    1. 開啟 Visual Studio，然後選取**建立新的專案**下方**開始**功能表。
 
@@ -61,13 +61,13 @@ ms.locfileid: "66003857"
 
    2. 在 **語言**下拉式清單中，選取**C#** 或是**Visual Basic**。
       
-   3. 選取 [ **WPF 應用程式 (.NET Framework)** 範本，然後選取**下一步]**。 
+   3. 選取 [ **WPF 應用程式 (.NET Framework)** 範本，然後選取**下一步]** 。 
      
       ![建立新的 [專案] 對話方塊](./media/walkthrough-my-first-wpf-desktop-application/create-new-project-dialog.png)
     
       **設定新專案** 對話方塊隨即開啟。
 
-   4. 輸入專案名稱**`ExpenseIt`** ，然後選取**建立**。
+   4. 輸入專案名稱 **`ExpenseIt`** ，然後選取**建立**。
 
       ![設定新的 [專案] 對話方塊](./media/walkthrough-my-first-wpf-desktop-application/configure-new-project-dialog.png)
 
@@ -131,7 +131,7 @@ ms.locfileid: "66003857"
 
 在本節中，您要在應用程式中加入兩頁網頁和一個影像。
 
-1. 將新頁面加入至專案，並將它命名*`ExpenseItHome.xaml`*:
+1. 將新頁面加入至專案，並將它命名 *`ExpenseItHome.xaml`* :
 
    1. 在 [**方案總管] 中**，以滑鼠右鍵按一下 **`ExpenseIt`** 專案節點，然後選擇**新增** > **頁面**。
 
@@ -198,7 +198,7 @@ ms.locfileid: "66003857"
 
     當您建立新的分頁檔時，Visual Studio 會自動建立其*程式碼後置*檔案。 這些程式碼後置檔案會處理用於回應使用者輸入的邏輯。
 
-    您的程式碼應該看起來如下所示**`ExpenseItHome`**:
+    您的程式碼應該看起來如下所示 **`ExpenseItHome`** :
 
     [!code-csharp[ExpenseIt#2_5](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml.cs#2_5)]
 
@@ -242,9 +242,9 @@ ms.locfileid: "66003857"
 > [!TIP]
 > 如需詳細資訊<xref:System.Windows.Controls.Panel>項目，請參閱[面板概觀](../controls/panels-overview.md)。 如需有關配置的詳細資訊，請參閱[版面配置](../advanced/layout.md)。
 
-在本節中，您建立單欄資料表具有三個資料列和 10 個像素邊界藉由新增資料行和資料列定義，以<xref:System.Windows.Controls.Grid>中*`ExpenseItHome.xaml`*。
+在本節中，您建立單欄資料表具有三個資料列和 10 個像素邊界藉由新增資料行和資料列定義，以<xref:System.Windows.Controls.Grid>中 *`ExpenseItHome.xaml`* 。
 
-1. 在  *`ExpenseItHome.xaml`*，將<xref:System.Windows.FrameworkElement.Margin%2A>屬性<xref:System.Windows.Controls.Grid>"10,0,10,10 」，其對應到左、 上、 右和下邊界的項目：
+1. 在  *`ExpenseItHome.xaml`* ，將<xref:System.Windows.FrameworkElement.Margin%2A>屬性<xref:System.Windows.Controls.Grid>"10,0,10,10 」，其對應到左、 上、 右和下邊界的項目：
 
    ```xaml
    <Grid Margin="10,0,10,10">
@@ -277,7 +277,7 @@ ms.locfileid: "66003857"
 
 每個控制項都會在資料列<xref:System.Windows.Controls.Grid>藉由設定<xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType>附加屬性。 如需有關附加屬性的詳細資訊，請參閱[附加屬性概觀](../advanced/attached-properties-overview.md)。
 
-1. 在  *`ExpenseItHome.xaml`*，新增下列 XAML 某處之間<xref:System.Windows.Controls.Grid>標記：
+1. 在  *`ExpenseItHome.xaml`* ，新增下列 XAML 某處之間<xref:System.Windows.Controls.Grid>標記：
 
    [!code-xaml[ExpenseIt#10](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt4/ExpenseItHome.xaml#10)]
 
@@ -294,7 +294,7 @@ ms.locfileid: "66003857"
 
 在本節中，您將使用影像和網頁標題更新在首頁 UI。
 
-1. 在  *`ExpenseItHome.xaml`*，新增另一個資料行<xref:System.Windows.Controls.Grid.ColumnDefinitions%2A>具有固定<xref:System.Windows.Controls.ColumnDefinition.Width%2A>230 像素的：
+1. 在  *`ExpenseItHome.xaml`* ，新增另一個資料行<xref:System.Windows.Controls.Grid.ColumnDefinitions%2A>具有固定<xref:System.Windows.Controls.ColumnDefinition.Width%2A>230 像素的：
 
     [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=52-55)]
 
@@ -326,7 +326,7 @@ ms.locfileid: "66003857"
 
 ## <a name="add-code-to-handle-events"></a>加入程式碼來處理事件
 
-1. 在  *`ExpenseItHome.xaml`*，新增<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式來<xref:System.Windows.Controls.Button>項目。 如需詳細資訊，請參閱[如何：建立簡單的事件處理常式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))。
+1. 在  *`ExpenseItHome.xaml`* ，新增<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式來<xref:System.Windows.Controls.Button>項目。 如需詳細資訊，請參閱[如何：建立簡單的事件處理常式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))。
 
     [!code-xaml[ExpenseIt#15](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
@@ -385,7 +385,7 @@ ms.locfileid: "66003857"
 
     請注意，樣式是資源和子系<xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>屬性項目。 在這裡，樣式會套用至應用程式中的所有元素。 如需在.NET 應用程式中使用資源的範例，請參閱[使用應用程式資源](../advanced/how-to-use-application-resources.md)。
 
-3. 在  *`ExpenseItHome.xaml`*，取代之間的所有內容<xref:System.Windows.Controls.Grid>具有下列的 XAML 項目：
+3. 在  *`ExpenseItHome.xaml`* ，取代之間的所有內容<xref:System.Windows.Controls.Grid>具有下列的 XAML 項目：
 
     [!code-xaml[ExpenseIt#19](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt7/ExpenseItHome.xaml#19)]
 
@@ -409,7 +409,7 @@ ms.locfileid: "66003857"
 
 在本節中，您將建立 XML 資料繫結至不同的控制項。
 
-1. 中*`ExpenseItHome.xaml`*，在開啟之後<xref:System.Windows.Controls.Grid>項目，加入下列 XAML 來建立<xref:System.Windows.Data.XmlDataProvider>包含的每個人資料：
+1. 中 *`ExpenseItHome.xaml`* ，在開啟之後<xref:System.Windows.Controls.Grid>項目，加入下列 XAML 來建立<xref:System.Windows.Data.XmlDataProvider>包含的每個人資料：
 
     [!code-xaml[ExpenseIt#23](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml?range=13,16-40,49)]
 
