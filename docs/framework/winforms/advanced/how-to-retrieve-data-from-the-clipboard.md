@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: e29e71974abda3e6e57d22d9faef28e386ebeefd
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 868afc36f08571d16285d0df52f6d1cad8c9c7a6
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169907"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348209"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>作法：從剪貼簿擷取資料
 <xref:System.Windows.Forms.Clipboard>類別提供方法，您可以使用與 Windows 作業系統的剪貼簿功能互動。 許多應用程式資料做為暫存的儲存機制使用剪貼簿。 例如，文書處理器使用剪貼簿剪下和貼上作業期間。 也適用於將資訊傳送到另一個應用程式從剪貼簿。  
@@ -22,7 +22,7 @@ ms.locfileid: "67169907"
   
  若要判斷 [剪貼簿] 是否包含以特定格式的資料，請使用其中一種`Contains`*格式*方法或<xref:System.Windows.Forms.Clipboard.GetData%2A>方法。 若要從剪貼簿擷取資料，請使用其中一種`Get`*格式*方法或<xref:System.Windows.Forms.Clipboard.GetData%2A>方法。 這些方法是.NET Framework 2.0 的新功能。  
   
- 存取資料，從剪貼簿，使用版本早於[!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]，使用<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>方法呼叫的方法傳回的<xref:System.Windows.Forms.IDataObject>。 若要判斷是否可傳回之物件中特定的格式，例如，呼叫<xref:System.Windows.Forms.IDataObject.GetDataPresent%2A>方法。  
+ 若要存取從剪貼簿的資料，藉由使用.NET Framework 2.0 以前的版本，請使用<xref:System.Windows.Forms.Clipboard.GetDataObject%2A?displayProperty=nameWithType>方法呼叫的方法傳回的<xref:System.Windows.Forms.IDataObject>。 若要判斷是否可傳回之物件中特定的格式，例如，呼叫<xref:System.Windows.Forms.IDataObject.GetDataPresent%2A>方法。  
   
 > [!NOTE]
 >  所有以 Windows 為基礎的應用程式共用系統剪貼簿。 因此，內容會有所變更中是當您切換到另一個應用程式。  
@@ -49,7 +49,7 @@ ms.locfileid: "67169907"
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>若要從以多種格式剪貼簿 擷取資料  
   
-1. 請使用 <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> 方法。 您必須使用這個方法來擷取資料，從剪貼簿上的版本早於[!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]。  
+1. 請使用 <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> 方法。 您必須使用這個方法來擷取剪貼簿上早於.NET Framework 2.0 版本中的資料。  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

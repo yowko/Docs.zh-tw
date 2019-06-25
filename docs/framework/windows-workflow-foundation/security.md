@@ -2,12 +2,12 @@
 title: 安全性
 ms.date: 03/30/2017
 ms.assetid: 737ec121-bfc5-4b75-a504-2d53c2c8af39
-ms.openlocfilehash: d82ad52dd24dbfcb66887693563b08c995baa63a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cbfb82c2db329725d3445e1a88b54e01d5813f36
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619500"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348410"
 ---
 # <a name="security"></a>安全性
 SQL 工作流程執行個體存放區會使用下列資料庫安全性角色，安全地存取持續性資料庫中的執行個體狀態資訊。  
@@ -16,7 +16,7 @@ SQL 工作流程執行個體存放區會使用下列資料庫安全性角色，�
   
 - **System.Activities.DurableInstancing.InstanceStoreObservers**. 這個角色具有公用檢視表的唯讀存取權。  
   
-- **System.Activities.DurableInstancing.WorkflowActivationUsers**。 這個角色具有與執行個體啟動程序相關之預存程序的執行權限。 如需有關執行個體啟用的詳細資訊，請參閱[執行個體啟用](instance-activation.md)。 請將用於執行泛型主機 (例如 [!INCLUDE[dublin](../../../includes/dublin-md.md)] 的工作流程管理服務) 的使用者帳戶加入至這個資料庫角色。  
+- **System.Activities.DurableInstancing.WorkflowActivationUsers**。 這個角色具有與執行個體啟動程序相關之預存程序的執行權限。 如需有關執行個體啟用的詳細資訊，請參閱[執行個體啟用](instance-activation.md)。 泛型主機 （例如 Windows Server AppFabric 裝載功能工作流程管理服務） 所執行的使用者帳戶應該將此資料庫角色。  
   
  如需有關使用 Windows Server App Fabric 持續性存放區安全性的詳細資訊，請參閱[中 App Fabric 持續性存放區的安全性設定](https://go.microsoft.com/fwlink/?LinkId=201208)  
   

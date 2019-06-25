@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1883365f-9d6c-4ccb-9187-df309f47706d
-ms.openlocfilehash: 69f5489d82511c249c1bde3ab65429561a87af59
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 9a2913de6534612455c14858f6baffea8ef78976
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307270"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347483"
 ---
 # <a name="generic-field-and-setfield-methods-linq-to-dataset"></a>泛型 Field 和 SetField 方法 (LINQ to DataSet)
-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 提供擴充方法<xref:System.Data.DataRow>類別可用於存取資料行的值：<xref:System.Data.DataRowExtensions.Field%2A>方法和<xref:System.Data.DataRowExtensions.SetField%2A>方法。 這些方法可讓開發人員更容易存取資料行值，尤其是與 Null 值相關的情況。 <xref:System.Data.DataSet> 會使用 <xref:System.DBNull.Value> 來代表 Null 值，而 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 則會使用 [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] 中引進的可為 Null 的型別 (Nullable Type) 支援。 使用預先存在的資料行存取子中<xref:System.Data.DataRow>需要轉型成適當的類型傳回的物件。 如果中的特定欄位<xref:System.Data.DataRow>可為 null，您必須明確檢查是否有 null 值傳回，因為<xref:System.DBNull.Value>並隱含地將它轉型為另一個型別會擲回<xref:System.InvalidCastException>。 在下列範例中，如果<xref:System.Data.DataRow.IsNull%2A>方法沒有用來檢查是否有 null 值，會擲回例外狀況，是否索引子傳回<xref:System.DBNull.Value>，並嘗試將它轉換成<xref:System.String>。  
+[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 提供擴充方法<xref:System.Data.DataRow>類別可用於存取資料行的值：<xref:System.Data.DataRowExtensions.Field%2A>方法和<xref:System.Data.DataRowExtensions.SetField%2A>方法。 這些方法可讓開發人員更容易存取資料行值，尤其是與 Null 值相關的情況。 <xref:System.Data.DataSet>會使用<xref:System.DBNull.Value?displayProperty=nameWithType>來代表 null 值，而[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]會使用<xref:System.Nullable>和<xref:System.Nullable%601>型別。 使用預先存在的資料行存取子中<xref:System.Data.DataRow>需要轉型成適當的類型傳回的物件。 如果中的特定欄位<xref:System.Data.DataRow>可為 null，您必須明確檢查是否有 null 值傳回，因為<xref:System.DBNull.Value?displayProperty=nameWithType>並隱含地將它轉型為另一個型別會擲回<xref:System.InvalidCastException>。 在下列範例中，如果<xref:System.Data.DataRow.IsNull%2A?displayProperty=nameWithType>方法沒有用來檢查是否有 null 值，會擲回例外狀況，是否索引子傳回<xref:System.DBNull.Value?displayProperty=nameWithType>，並嘗試將它轉換成<xref:System.String>。  
   
  [!code-csharp[DP LINQ to DataSet Examples#WhereIsNull](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#whereisnull)]
  [!code-vb[DP LINQ to DataSet Examples#WhereIsNull](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#whereisnull)]  

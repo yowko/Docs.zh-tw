@@ -8,12 +8,12 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: 3c26b08dd7ec70a1763fce89b34376350b985fb5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5545e89f744c3874840a773556e0670abc0a46a9
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615380"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348060"
 ---
 # <a name="geometry-overview"></a>幾何概觀
 本概觀說明如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<xref:System.Windows.Media.Geometry>類別來描繪圖形。 本主題也會對照之間的差異<xref:System.Windows.Media.Geometry>物件和<xref:System.Windows.Shapes.Shape>項目。  
@@ -105,7 +105,7 @@ ms.locfileid: "64615380"
   
 <a name="wcpsdk_graphics_geometry_pathgeometry"></a>   
 ## <a name="path-geometries"></a>路徑幾何  
- <xref:System.Windows.Media.PathGeometry>類別和其輕量級對等項目，<xref:System.Windows.Media.StreamGeometry>類別中，提供方法來描繪多個複雜形狀組成的弧線、 曲線和線條。  
+ <xref:System.Windows.Media.PathGeometry>類別和其輕量級的對等，<xref:System.Windows.Media.StreamGeometry>類別中，提供方法來描繪多個複雜形狀組成的弧線、 曲線和線條。  
   
  核心<xref:System.Windows.Media.PathGeometry>是一堆<xref:System.Windows.Media.PathFigure>物件，如此命名是因為每個圖表都會描述中的特定圖形<xref:System.Windows.Media.PathGeometry>。 每個<xref:System.Windows.Media.PathFigure>本身包含一或多個<xref:System.Windows.Media.PathSegment>物件，其中每個描述圖的區段。  
   

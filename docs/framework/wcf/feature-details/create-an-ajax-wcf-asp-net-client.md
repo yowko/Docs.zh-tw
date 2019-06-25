@@ -19,7 +19,7 @@ ms.locfileid: "64754613"
 
 1. 從**檔案**功能表上，選取**新增** > **專案**
 
-1. 在**新的專案**] 對話方塊中，展開**已安裝** > **Visual C#** > **Web**類別目錄，然後選取 [ **ASP.NET Web 應用程式 (.NET Framework)**。
+1. 在**新的專案**] 對話方塊中，展開**已安裝** > **Visual C#**  > **Web**類別目錄，然後選取 [ **ASP.NET Web 應用程式 (.NET Framework)** 。
 
 1. 將專案命名為**SandwichServices**然後按一下**確定**。
 
@@ -31,13 +31,13 @@ ms.locfileid: "64754613"
 
 1. 中的 SandwichServices 專案上按一下滑鼠右鍵**方案總管**，然後選取**新增** > **新項目**。
 
-1. 在**加入新項目**] 對話方塊中，展開**已安裝** > **Visual C#** > **Web**類別目錄，然後選取 [ **Web Form**範本。
+1. 在**加入新項目**] 對話方塊中，展開**已安裝** > **Visual C#**  > **Web**類別目錄，然後選取 [ **Web Form**範本。
 
 1. 接受預設名稱 (**WebForm1**)，然後選取**新增**。
 
    *WebForm1.aspx*以開啟**來源**檢視。
 
-1. 將下列標記內加入**\<主體 >** 標記：
+1. 將下列標記內加入 **\<主體>** 標記：
 
    ```html
    <input type="button" value="Price of 3 sandwiches" onclick="Calculate()"/>
@@ -49,7 +49,7 @@ ms.locfileid: "64754613"
 
 1. 中的 SandwichServices 專案上按一下滑鼠右鍵**方案總管**，然後選取**新增** > **新項目**。
 
-1. 在**加入新項目**] 對話方塊中，展開**已安裝** > **Visual C#** > **Web**類別目錄，然後選取 [ **WCF 服務 (ajax)** 範本。
+1. 在**加入新項目**] 對話方塊中，展開**已安裝** > **Visual C#**  > **Web**類別目錄，然後選取 [ **WCF 服務 (ajax)** 範本。
 
    ![在 Visual Studio 中的 WCF 服務 (ajax) 的項目範本](media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
 
@@ -104,7 +104,7 @@ ms.locfileid: "64754613"
 
 ## <a name="run-the-program"></a>執行程式
 
-請確定*WebForm1.aspx*具有焦點，，然後按下**開始**按鈕以啟動 web 用戶端。 按鈕具有綠色的三角形，並顯示類似**IIS Express (Microsoft Edge)**。 或者，您可以按下**F5**。 按一下 **價格的 3 個三明治**按鈕，以產生預期的"3.75"輸出。
+請確定*WebForm1.aspx*具有焦點，，然後按下**開始**按鈕以啟動 web 用戶端。 按鈕具有綠色的三角形，並顯示類似**IIS Express (Microsoft Edge)** 。 或者，您可以按下**F5**。 按一下 **價格的 3 個三明治**按鈕，以產生預期的"3.75"輸出。
 
 ## <a name="example-code"></a>範例程式碼
 

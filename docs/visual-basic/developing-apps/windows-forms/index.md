@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 6ab898c93086e477bf4384b4d6c725fbdc8fe761
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: d1f43a5b7a539c89a753d168fbf0e05ca4118f58
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879153"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347990"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Form 應用程式基本概念 (Visual Basic)
 Visual Basic 中很重要的一部分是建立本機使用者的電腦執行的 Windows Forms 應用程式的能力。 您可以使用 Visual Studio 來建立使用 Windows Form 的應用程式和使用者介面。 在 Windows Forms 應用程式的基礎類別<xref:System.Windows.Forms>命名空間。  
@@ -27,7 +27,7 @@ Visual Basic 中很重要的一部分是建立本機使用者的電腦執行的 
 ## <a name="building-rich-interactive-user-interfaces"></a>建置豐富、互動式的使用者介面  
  Windows Form 是.NET Framework 中，一組 managed 程式庫可讓一般的應用程式工作，例如讀取和寫入至檔案系統的智慧型用戶端元件。 使用像是 Visual Studio 的開發環境，您可以建立 Windows Form 應用程式來顯示資訊、 要求使用者，輸入，並進行通訊與遠端電腦透過網路。  
   
- 在 Windows Forms 中，表單是一種視覺化介面，在上面顯示的資訊給使用者。 通常，您會建置 Windows Form 應用程式將放在表單上的控制項，並開發回應使用者動作，例如滑鼠點按或是按鍵動作。 「控制項」是獨立的使用者介面 (UI) 項目，可顯示資料或接受資料輸入。  
+ 在 Windows Forms 中，表單是一種視覺化介面，在上面顯示的資訊給使用者。 通常，您會建置 Windows Form 應用程式將放在表單上的控制項，並開發回應使用者動作，例如滑鼠點按或是按鍵動作。 「控制項」  是獨立的使用者介面 (UI) 項目，可顯示資料或接受資料輸入。  
   
 ### <a name="events"></a>事件  
  當使用者執行某個動作，您的表單或其中一個控制項時，它會產生事件。 您的應用程式會使用程式碼對這些事件做出反應，並且在事件發生時加以處理。 如需詳細資訊，請參閱[在 Windows Forms 中建立事件處理常式](../../../framework/winforms/creating-event-handlers-in-windows-forms.md)。  
@@ -54,7 +54,7 @@ Visual Basic 中很重要的一部分是建立本機使用者的電腦執行的 
 ## <a name="displaying-and-manipulating-data"></a>顯示和操作資料  
  許多應用程式必須顯示來自資料庫、XML 檔案、XML Web 服務或其他資料來源的資料。 Windows Form 提供彈性的控制項稱為<xref:System.Windows.Forms.DataGridView>呈現傳統資料列和資料行格式，這類表格式資料，使每一項資料佔有自己的儲存格的控制項。 使用<xref:System.Windows.Forms.DataGridView>您可以自訂個別儲存格的外觀、 鎖定任意的資料列和資料行就位，並顯示在儲存格中，至於其他功能的複雜控制項。  
   
- 利用 Windows Form 智慧型用戶端，透過網路連接到資料來源是一項簡單的工作。 <xref:System.Windows.Forms.BindingSource>元件，新的 Visual Studio 2005 中的 Windows Form 和[!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]，代表資料來源的連接，並公開將資料繫結至控制項，巡覽至上一頁和下一頁記錄、 編輯記錄，以及儲存的方法變更回原始的來源。 <xref:System.Windows.Forms.BindingNavigator> 控制項透過 <xref:System.Windows.Forms.BindingSource> 元件提供一個簡單的介面，可讓使用者在記錄之間巡覽。  
+ 利用 Windows Form 智慧型用戶端，透過網路連接到資料來源是一項簡單的工作。 <xref:System.Windows.Forms.BindingSource>新增具有 Visual Studio 2005 和.NET Framework 2.0 中的 Windows Forms 的元件，代表資料來源的連接，並公開資料繫結至控制項，巡覽至上一頁和下一頁記錄，編輯記錄、 方法和將變更儲存回原始來源。 <xref:System.Windows.Forms.BindingNavigator> 控制項透過 <xref:System.Windows.Forms.BindingSource> 元件提供一個簡單的介面，可讓使用者在記錄之間巡覽。  
   
 ### <a name="data-bound-controls"></a>資料繫結控制項  
  您可以建立資料繫結控制項輕鬆地使用資料來源視窗中，顯示您的專案中的資料來源，例如資料庫、 Web 服務和物件。 將項目從這個視窗拖曳到專案中的表單上，即可建立資料繫結控制項。 您也可以將物件從 [資料來源] 視窗拖曳至現有的控制項，以將現有的控制項繫結至資料。  

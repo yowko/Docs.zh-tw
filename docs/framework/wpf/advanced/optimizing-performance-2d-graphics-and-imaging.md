@@ -12,12 +12,12 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: 1869a5c274b3308e718ca550e8e43ff6a72d4b5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 25803bd772832cd22e855f530d10a3f3639c180c
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611844"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348439"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>最佳化效能：2D 圖形和影像處理
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供各種 2D 圖形和影像處理功能，可以針對您的應用程式需求最佳化。 本主題提供下列領域的效能最佳化相關資訊。  
@@ -52,7 +52,7 @@ ms.locfileid: "64611844"
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>StreamGeometry 物件  
- <xref:System.Windows.Media.StreamGeometry>物件是輕量級替代方案<xref:System.Windows.Media.PathGeometry>來建立幾何圖形。 使用<xref:System.Windows.Media.StreamGeometry>當您需要描繪複雜幾何。 <xref:System.Windows.Media.StreamGeometry> 最適合處理許多<xref:System.Windows.Media.PathGeometry>物件，並執行得更好，相較於使用許多個別<xref:System.Windows.Media.PathGeometry>物件。  
+ <xref:System.Windows.Media.StreamGeometry>物件是輕量型替代方案<xref:System.Windows.Media.PathGeometry>來建立幾何圖形。 使用<xref:System.Windows.Media.StreamGeometry>當您需要描繪複雜幾何。 <xref:System.Windows.Media.StreamGeometry> 最適合處理許多<xref:System.Windows.Media.PathGeometry>物件，並執行得更好，相較於使用許多個別<xref:System.Windows.Media.PathGeometry>物件。  
   
  下列範例會使用屬性語法以建立三角形<xref:System.Windows.Media.StreamGeometry>在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
   

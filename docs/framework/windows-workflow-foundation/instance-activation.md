@@ -2,12 +2,12 @@
 title: 執行個體啟動
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-ms.openlocfilehash: 088722ba19a1f38e8a341e34a8344963021f1113
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5e0d5a91a0f0ccc02d13ef96c3470da1942cc520
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584928"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348250"
 ---
 # <a name="instance-activation"></a>執行個體啟動
 SQL 工作流程執行個體存放區會執行內部工作，定期喚醒及偵測持續性資料庫中可執行或可啟動的工作流程執行個體。 如果找到可執行的工作流程執行個體，就會通知工作流程主機，表示主機可以啟動該執行個體。 如果執行個體存放區找到可啟動的工作流程執行個體，則會通知啟動工作流程主機的泛型主機，再由該主機執行工作流程執行個體。 本主題中的下列章節詳細說明執行個體啟動處理序。  
@@ -35,7 +35,7 @@ SQL 工作流程執行個體存放區會執行內部工作，定期喚醒及偵�
 ## <a name="generic-hosts"></a>泛型主機  
  泛型主機是主機的中繼資料屬性的值與**WorkflowServiceType**泛型主機會設為**WorkflowServiceType.Any**表示它可以處理任何工作流程類型。 泛型主機含有名為的 XName 參數**ActivationType**。  
   
- 目前，SQL 工作流程執行個體存放區支援將 ActivationType 參數設定為值的泛型主機**WAS**。 如果 ActivationType 未設定為 WAS，SQL 工作流程執行個體存放區會擲回 <xref:System.Runtime.DurableInstancing.InstancePersistenceException>。 Workflow Management Service 隨附[!INCLUDE[dublin](../../../includes/dublin-md.md)]是泛型主機，已將啟動類型設定為**WAS**。  
+ 目前，SQL 工作流程執行個體存放區支援將 ActivationType 參數設定為值的泛型主機**WAS**。 如果 ActivationType 未設定為 WAS，SQL 工作流程執行個體存放區會擲回 <xref:System.Runtime.DurableInstancing.InstancePersistenceException>。 Workflow Management Service 隨附於 Windows Server AppFabric 裝載功能是泛型主機，已將啟動類型設定為**WAS**。  
   
  針對 WAS 啟動，泛型主機需要一組啟動參數，才能衍生能夠用於啟動新主機的端點位址。 WAS 啟動的啟動參數是網站的名稱、應用程式的路徑 (相對於網站)，以及服務的路徑 (相對於應用程式)。 SQL 工作流程執行個體存放區會在執行 <xref:System.Activities.DurableInstancing.SaveWorkflowCommand> 的期間存放這些啟動參數。  
   

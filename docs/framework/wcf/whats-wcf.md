@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 6e51b93d53e1ad65b2f19f81de8833e83bfb18c1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 13108e86d76b0d806eddf71b2f7e50337ca0afba
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582757"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348316"
 ---
 # <a name="what-is-windows-communication-foundation"></a>何謂 Windows Communication Foundation
 Windows Communication Foundation (WCF) 是用於建置服務導向應用程式的架構。 使用 WCF，您可以將資料傳送非同步訊息形式從一個服務端點之間。 服務端點可能是由 IIS 裝載之持續上線服務的一部分，或為應用程式中裝載的服務。 端點則大致是某項服務的用戶端，會向該服務端點要求資料。 訊息可為簡單的單一字元或以 XML 傳送的字組，乃至如二進位資料的資料流這般複雜的形式都沒問題。 其中幾個範例案例包括：
@@ -92,7 +92,7 @@ Microsoft BizTalk Server R2 同樣使用 WCF，做為通訊技術。 BizTalk 是
 
 Microsoft Silverlight 為可供建立高互通性多樣化 Web 應用程式的平台，能讓開發人員建立媒體播放 (例如串流視訊) 頻繁的網站。 從第 2 版開始，Silverlight 已經納入 WCF 做為通訊技術，來連接至 WCF 端點的 Silverlight 應用程式。
 
-[!INCLUDE[dublin](../../../includes/dublin-md.md)]應用程式伺服器特別建置用於部署和管理使用 WCF 進行通訊的應用程式。 [!INCLUDE[dublin2](../../../includes/dublin2-md.md)]包含專為 WCF 啟用應用程式的豐富工具及組態選項。
+Windows Server AppFabric 應用程式伺服器的裝載功能被專為部署和管理使用 WCF 進行通訊的應用程式。 [!INCLUDE[dublin2](../../../includes/dublin2-md.md)]包含專為 WCF 啟用應用程式的豐富工具及組態選項。
 
 ## <a name="see-also"></a>另請參閱
 

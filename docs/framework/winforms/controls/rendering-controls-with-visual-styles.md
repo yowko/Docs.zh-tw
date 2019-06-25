@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: 4dbccfc881e777309394aed9711a93b8a25315be
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 558600c9256f205598288f9e20d38cb94608c920
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592601"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348478"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>使用視覺化樣式呈現控制項
 .NET Framework 支援來呈現控制項和其他 Windows 使用者介面 (UI) 項目支援的作業系統中使用視覺化樣式。 本主題將討論數個層級的支援.NET Framework 來呈現控制項和其他 UI 項目中使用的作業系統目前視覺化樣式。  
@@ -23,7 +23,7 @@ ms.locfileid: "65592601"
 ## <a name="rendering-classes-for-common-controls"></a>呈現通用控制項的類別  
  呈現控制項是指繪製控制項的使用者介面。 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空間提供的 <xref:System.Windows.Forms.ControlPaint> 類別可用來呈現一些通用的 Windows Forms 控制項。 不過，此類別會使用傳統的 Windows 樣式來繪製控制項，並導致在啟用視覺化樣式的應用程式中繪製自訂控制項時，很難保持一致的 UI 經驗。  
   
- [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] 包含 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空間中的類別，其可使用視覺化樣式呈現通用控制項的組件與狀態。 每個類別皆包括 `static` 方法，可在使用作業系統目前的視覺化樣式時，繪製控制項或特定狀態的控制項組件。  
+ .NET Framework 2.0 中包含的類別中的<xref:System.Windows.Forms?displayProperty=nameWithType>呈現具有視覺化樣式的通用控制項的狀態與組件的命名空間。 每個類別皆包括 `static` 方法，可在使用作業系統目前的視覺化樣式時，繪製控制項或特定狀態的控制項組件。  
   
  不論是否可以使用視覺化樣式，在這些類別中，有一些類別是專門設計來繪製相關的控制項。 如果啟用了視覺化樣式，則類別成員會使用視覺化樣式繪製相關控制項；如果停用了視覺化樣式，類別成員會以傳統的 Windows 樣式繪製控制項。 這些類別包括：  
   

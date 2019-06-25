@@ -1,5 +1,5 @@
 ---
-title: 作法：設定 Windows Forms TreeView 控制項的圖示
+title: HOW TO：設定 Windows Forms TreeView 控制項的圖示
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - icons [Windows Forms], setting for TreeView control
 - tree nodes in TreeView control [Windows Forms], icons
 ms.assetid: c14ddcc0-e5a6-4c21-a2d5-6799fd491781
-ms.openlocfilehash: eb2d75b7c18aa2e65c5e90749852383eea7985b3
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c7c801242c7d5958cce9826a5f60d13a0b257add
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880684"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348047"
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>HOW TO：設定 Windows Forms TreeView 控制項的圖示
 Windows Form<xref:System.Windows.Forms.TreeView>控制項可以顯示每個節點旁邊的圖示。 圖示位於節點文字的左邊。 若要顯示這些圖示，您必須建立關聯的樹狀檢視<xref:System.Windows.Forms.ImageList>控制項。 如需有關影像清單的詳細資訊，請參閱[ImageList 元件](imagelist-component-windows-forms.md)和[How to:新增或移除映像的 Windows Form ImageList 元件](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。  
   
 > [!NOTE]
->  Microsoft.NET Framework 1.1 版中的錯誤可防止映像上出現<xref:System.Windows.Forms.TreeView>節點，當您的應用程式呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>。 若要解決這個錯誤，請呼叫<xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType>在您`Main`方法呼叫之後立即<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>。 已經修正這個錯誤[!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]。  
+>  Microsoft.NET Framework 1.1 版中的錯誤可防止映像上出現<xref:System.Windows.Forms.TreeView>節點，當您的應用程式呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>。 若要解決這個錯誤，請呼叫<xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType>在您`Main`方法呼叫之後立即<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>。 .NET Framework 2.0 中已經修正這個錯誤。  
   
 ### <a name="to-display-images-in-a-tree-view"></a>若要在樹狀檢視中顯示影像  
   

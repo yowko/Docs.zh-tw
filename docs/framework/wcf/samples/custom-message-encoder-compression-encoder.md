@@ -2,12 +2,12 @@
 title: 自訂訊息編碼器：壓縮編碼器
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 6ada1cdeee02eb747f9f85abc9c99602d5f26b72
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 32ca96987a86c04c227f8bb0d680f647898dfccf
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878452"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348432"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>自訂訊息編碼器：壓縮編碼器
 此範例示範如何實作自訂編碼器，使用 Windows Communication Foundation (WCF) 平台。  
@@ -222,7 +222,7 @@ binding.Namespace = "http://tempuri.org/bindings";
   
  雖然這樣做對大多數使用者案例來說已足夠，但在 Web 裝載服務的情況下，支援檔案組態仍然相當重要。 若要支援 Web 裝載的案例，您必須開發自訂組態處理常式，讓自訂繫結項目可在檔案中進行設定。  
   
- 您可以在 [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] 提供的組態系統最上方，建立用於繫結項目的組態處理常式。 繫結項目的組態處理常式必須衍生自 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 類別。 您可以使用 `BindingElementType` 屬性，對組態系統通知要對此區段建立的繫結項目型別。 `BindingElement` 中可以設定的所有項目，都應該公開為 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 衍生類別中的屬性。 您可以使用 <xref:System.Configuration.ConfigurationPropertyAttribute>，在遺失屬性 (Attribute) 的情況下，幫助將組態項目屬性 (Attribute) 對應至屬性 (Properties) 並設定預設值。 載入來自組態的值並將這些值套用至屬性時，就會呼叫 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A> 方法，而這個方法會將屬性轉換為繫結項目的具象執行個體。 您可以使用 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A> 方法，將 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 衍生類別上的屬性轉換為要在新建立之繫結元素上設定的值。  
+ 您可以建立繫結項目，組態系統最上方的組態處理常式。 繫結項目的組態處理常式必須衍生自 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 類別。 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType>通知組態系統的這一節建立的繫結項目的類型。 `BindingElement` 中可以設定的所有項目，都應該公開為 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 衍生類別中的屬性。 <xref:System.Configuration.ConfigurationPropertyAttribute>有助於將組態項目屬性對應至屬性，並設定預設值，如果遺漏了屬性。 載入來自組態的值並將這些值套用至屬性時，就會呼叫 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> 方法，而這個方法會將屬性轉換為繫結項目的具象執行個體。 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType>方法用來上的屬性轉換<xref:System.ServiceModel.Configuration.BindingElementExtensionElement>衍生類別，為新建立的繫結項目上設定的值。  
   
  下列範例程式碼會顯示 `GZipMessageEncodingElement` 實作。  
   

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 StreamGeometry 建立圖形
+title: 作法：使用 StreamGeometry 建立圖形
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - graphics [WPF], shapes
 - shapes [WPF], creating with StreamGeometry class
 ms.assetid: 08f7c8ce-074b-49cd-9aba-cc9592d4ee51
-ms.openlocfilehash: fd191e4cfdfa33c144389d4871a9641e9c811ed3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce2097568349ad376540163f5fe05d6a3e5b0643
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054566"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348022"
 ---
 # <a name="how-to-create-a-shape-using-a-streamgeometry"></a>HOW TO：使用 StreamGeometry 建立圖形
-<xref:System.Windows.Media.StreamGeometry> 是輕量級替代方案<xref:System.Windows.Media.PathGeometry>來建立幾何圖形。 使用<xref:System.Windows.Media.StreamGeometry>當您需要描繪複雜幾何，但不是想資料繫結、 動畫或修改的額外負荷。 例如，因為其效率，<xref:System.Windows.Media.StreamGeometry>類別是不錯的選擇來描繪裝飾項。  
+<xref:System.Windows.Media.StreamGeometry> 是輕量型替代方案<xref:System.Windows.Media.PathGeometry>來建立幾何圖形。 使用<xref:System.Windows.Media.StreamGeometry>當您需要描繪複雜幾何，但不是想資料繫結、 動畫或修改的額外負荷。 例如，因為其效率，<xref:System.Windows.Media.StreamGeometry>類別是不錯的選擇來描繪裝飾項。  
   
 ## <a name="example"></a>範例  
  下列範例會使用屬性語法以建立三角形<xref:System.Windows.Media.StreamGeometry>在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  

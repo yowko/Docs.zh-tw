@@ -4,26 +4,26 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: e78616acc56e75dd06445f7a569ab94e65e20cc0
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8449fe048cc9149e8e8cf02f27f131c0d90d6984
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592224"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348190"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 繫結概觀
 繫結是用來指定連接到 Windows Communication Foundation (WCF) 服務的端點所需之通訊詳細資料的物件。 WCF 服務中的每個端點都需要正確指定的繫結。 本主題概述通訊詳細資料所定義的繫結的繫結、 哪些繫結會包含在 WCF 中，以及如何指定繫結的端點項目的類型。  
   
 ## <a name="what-a-binding-defines"></a>繫結所定義的內容  
- 繫結中的資訊可能很基本，也可能很複雜。 最基本的繫結只會指定連線至端點時必須使用的傳輸通訊協定 (例如 HTTP)。 更一般來說，繫結中所含與如何連線至端點有關的資訊，與下列其中一種類別息息相關。  
+ 繫結中的資訊可能很基本，也可能很複雜。 最基本的繫結只會指定連線至端點時必須使用的傳輸通訊協定 (例如 HTTP)。 更廣泛地繫結包含有關如何連接至端點的資訊可分成下列類別之一：  
   
- 通訊協定  
+ **通訊協定**  
  判斷使用的安全性機制：可靠的傳訊能力或異動內容流量設定。  
   
- 編碼  
+ **編碼方式**  
  判斷訊息的編碼方式 (例如，文字或二進位)。  
   
- Transport  
+ **傳輸**  
  判斷要使用的基礎傳輸通訊協定 (例如，TCP 或 HTTP)。  
   
 ## <a name="the-elements-of-a-binding"></a>繫結項目  

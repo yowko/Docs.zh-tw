@@ -54,17 +54,17 @@ ms.locfileid: "64625855"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>建立簡單的 ASP.NET 應用程式  
   
-1. 啟動 Visual Studio，並依序按一下 [檔案]、[新增] 和 [專案]。  
+1. 啟動 Visual Studio，並依序按一下 [檔案]  、[新增]  和 [專案]  。  
   
-2. 在 [新增專案] 視窗中，按一下 [ASP.NET Web Forms 應用程式]。  
+2. 在 [新增專案]  視窗中，按一下 [ASP.NET Web Forms 應用程式]  。  
   
-3. 在 [名稱] 中，輸入 `TestApp`，然後按 [確定]。  
+3. 在 [名稱]  中，輸入 `TestApp`，然後按 [確定]  。  
   
-4. 以滑鼠右鍵按一下方案總管底下的 [TestApp] 專案，然後選取 [身分識別與存取]。  
+4. 以滑鼠右鍵按一下方案總管  底下的 [TestApp]  專案，然後選取 [身分識別與存取]  。  
   
-5. [身分識別與存取] 視窗隨即出現。 在 [提供者] 底下，選取 [Test your application with the Local Development STS] (使用本機開發 STS 測試應用程式}，然後按一下 [套用]。  
+5. [身分識別與存取]  視窗隨即出現。 在 [提供者]  底下，選取 [Test your application with the Local Development STS] (使用本機開發 STS 測試應用程式}  ，然後按一下 [套用]  。  
   
-6. 將下列 **\<tokenReplayDetection>** 項目加入至 *Web.config* 組態檔中緊接在 **\<system.identityModel>** 和**\<identityConfiguration>** 項目後面的位置，如下所示：  
+6. 將下列 **\<tokenReplayDetection>** 項目加入至 *Web.config* 組態檔中緊接在 **\<system.identityModel>** 和 **\<identityConfiguration>** 項目後面的位置，如下所示：  
   
     ```xml  
     <system.identityModel>  
@@ -79,6 +79,6 @@ ms.locfileid: "64625855"
   
 1. 按 **F5** 鍵執行方案。 您應該會看到預設的 ASP.NET 首頁，並且會以使用者名稱 *Terry* (這是開發 STS 傳回的預設使用者) 自動進行驗證。  
   
-2. 請按瀏覽器的**上一頁**按鈕。 您應該會看到 **'/' 應用程式中的伺服器錯誤**頁面描述如下：*ID1062:用於偵測重新執行：語彙基元：'System.IdentityModel.Tokens.SamlSecurityToken'*，後面接著*AssertionId*並*簽發者*。  
+2. 請按瀏覽器的**上一頁**按鈕。 您應該會看到 **'/' 應用程式中的伺服器錯誤**頁面描述如下：*ID1062:用於偵測重新執行：語彙基元：'System.IdentityModel.Tokens.SamlSecurityToken'* ，後面接著*AssertionId*並*簽發者*。  
   
      因為在偵測到權杖重新執行時，會擲回 <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> 類型的例外狀況，所以您會看到此錯誤頁面。 發生此錯誤的原因是您在權杖第一次出現時，嘗試重新傳送初始 POST 要求。 **上一頁**按鈕不會造成後續的伺服器要求發生這種行為。

@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 效能
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 701e05301e82537aa6119ab3ec894483daee41f3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 51cd5b248789c85ab06073f1bb41a83e5f97c139
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592543"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348528"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 效能
 
@@ -31,7 +31,7 @@ ms.locfileid: "65592543"
 ### <a name="wf-runtime"></a>WF 執行階段
  [!INCLUDE[wf1](../../../includes/wf1-md.md)] 執行階段的核心擁有非同步的排程器，可讓工作流程中的活動執行。 它提供了高效能且可預測的活動執行環境。 這個環境具備妥善定義的執行、接續、完成、取消、例外狀況合約，以及可預測的執行緒模型。
 
- 與 WF3 相較之下，WF4 執行階段的排程器更有效率。 它會利用相同的 I/O 執行緒集區用於 WCF 的人，這是非常有效率，在執行批次的工作項目。 內部工作項目排程器佇列已針對最常見的使用模式完成最佳化。 WF4 執行階段還會透過最低限度的同步處理和事件處理邏輯，以相當輕量的方式管理執行狀態，而 WF3 則須倚賴大量的事件註冊和叫用作業，針對狀態轉換進行複雜的同步處理。
+ 與 WF3 相較之下，WF4 執行階段的排程器更有效率。 它會利用相同的 I/O 執行緒集區用於 WCF 的人，這是非常有效率，在執行批次的工作項目。 內部工作項目排程器佇列已針對最常見的使用模式完成最佳化。 WF4 執行階段也會管理極輕量型的方式，利用最低限度的同步處理與事件處理邏輯，而 WF3 取決於大量的事件註冊和狀態轉換為執行複雜的同步處理的叫用的執行狀態。
 
 ### <a name="data-storage-and-flow"></a>資料儲存和流程
  在 WF3 中，與活動相關聯的資料會透過 <xref:System.Windows.DependencyProperty> 型別所實作的相依性屬性模型化。 相依性屬性模式引進了 Windows Presentation Foundation (WPF) 中。 一般而言，此模式相當富彈性，可支援簡單的資料繫結和其他 UI 功能。 不過，此模式需要將屬性定義為工作流程定義中的靜態欄位。 每當 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 執行階段設定或取得屬性值，就會涉及相當大量的查詢邏輯。
@@ -43,7 +43,7 @@ ms.locfileid: "65592543"
 ### <a name="control-flow"></a>控制流程
  就像任何程式語言一樣，[!INCLUDE[wf1](../../../includes/wf1-md.md)] 透過導入一組用於順序、迴圈、分支和其他模式的控制流程活動，支援工作流程定義的控制流程。 在 WF3 中，當需要重新執行相同的活動時，就會建立新的 <xref:System.Workflow.ComponentModel.ActivityExecutionContext>，而該活動會透過以 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 為基礎的大量序列化和還原序列化邏輯進行複製。 通常反覆執行之控制流程的效能會比執行一系列活動的效能慢很多。
 
- WF4 處理的方式則大為不同。 它會採用活動範本、建立新的 ActivityInstance 物件，並且將該物件加入至排程器佇列。 這整個程序只需要明確地建立物件，作業相當輕量。
+ WF4 處理的方式則大為不同。 它會採用活動範本、建立新的 ActivityInstance 物件，並且將該物件加入至排程器佇列。 這整個程序只會包含建立明確的物件，以及屬於非常輕量型。
 
 ### <a name="asynchronous-programming"></a>非同步程式設計
  應用程式針對長時間執行的封鎖作業 (例如 I/O) 或分散式運算作業採用非同步程式設計時，通常可展現較佳的效能和延展性。 WF4 會透過基礎活動型別 <xref:System.Activities.AsyncCodeActivity> 和 <xref:System.Activities.AsyncCodeActivity%601> 提供非同步支援。 執行階段原本即了解非同步活動，因此可以在非同步工作未處理完畢時，自動將執行個體放入不保存區域中。 您可以從這些類型衍生自訂活動，以執行非同步工作；如此就不會佔用工作流程排程器執行緒，也不會阻擋任何可平行執行的活動。

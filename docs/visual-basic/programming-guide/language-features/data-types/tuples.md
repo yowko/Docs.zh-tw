@@ -4,16 +4,16 @@ ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: 146e9c2360cea153d2f487769d5b983516861e8d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16934232e1e202f1b100680a5101332aa622f2cc
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663293"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348494"
 ---
 # <a name="tuples-visual-basic"></a>Tuple (Visual Basic)
 
-從 Visual Basic 2017 開始，Visual Basic 語言提供內建支援，讓 tuple 建立 tuple 和存取的更容易的 tuple 項目。 Tuple 是輕量級資料結構，其中有特定數目和值的序列。 當您具現化的元組時，您可以定義數目和每個值 （或元素） 的資料類型。 例如，2 tuple （或組） 有兩個項目。 第一個可能`Boolean`值，而第二個是`String`。 Tuple 可以方便將多個值儲存在單一物件，通常是當做從方法傳回多個值的輕量方式使用。
+從 Visual Basic 2017 開始，Visual Basic 語言提供內建支援，讓 tuple 建立 tuple 和存取的更容易的 tuple 項目。 Tuple 是輕量的資料結構，具有特定的數字和值的序列。 當您具現化的元組時，您可以定義數目和每個值 （或元素） 的資料類型。 例如，2 tuple （或組） 有兩個項目。 第一個可能`Boolean`值，而第二個是`String`。 Tuple 可以方便將多個值儲存在單一物件，通常是當做從方法傳回多個值的輕量方式使用。
 
 > [!IMPORTANT]
 > Tuple 支援需要<xref:System.ValueTuple>型別。 如果未安裝.NET Framework 4.7 中，您必須新增 NuGet 套件`System.ValueTuple`，它位在 NuGet 資源庫。 沒有這個套件中，您可能會收到編譯錯誤類似於 「 預先定義類型 'ValueTuple(Of,,,)' 未定義或匯入 」。
