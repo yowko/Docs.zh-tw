@@ -28,7 +28,7 @@ ms.locfileid: "61791465"
 - *.xsd* 
 - *.wsdl*
 
-若要顯示所有檔案類型，請選取**的所有檔案 (\*。\*)** 右下角的下拉式清單中**加入現有項目**視窗。  
+若要顯示所有檔案類型，請選取 **的所有檔案 (\*。\*)** 右下角的下拉式清單中**加入現有項目**視窗。  
   
 ## <a name="common-errors"></a>常見的錯誤
 
@@ -38,7 +38,7 @@ ms.locfileid: "61791465"
 
 進入點是不正確的 Visual Basic 應用程式。 進行下列變更：
 
-   1. 在 **方案總管**視窗中，選取**GettingStartedHost**資料夾，然後再選取**屬性**從捷徑功能表。
+   1. 在 [**方案總管**視窗中，選取**GettingStartedHost**資料夾，然後再選取**屬性**從捷徑功能表。
     a. 在 [ **GettingStartedHost** ] 視窗中，如**啟始物件**，選取**Service.Program** （或特定應用程式的進入點） 從清單。 
     b. 從主功能表中，選取**檔案** > **全部儲存**。
 
@@ -65,7 +65,7 @@ ms.locfileid: "61791465"
 
 **未處理的例外狀況：System.ServiceModel.EndpointNotFoundException:無法連接到 ' http:\//localhost:8000/GettingStarted/CalculatorService '。TCP 錯誤碼 10061:沒有連接，因為目標電腦主動拒絕連線。**
 
-如果您不需要第一個啟動的服務執行用戶端應用程式，就會發生此錯誤。 首先，執行主應用程式啟動服務，然後再執行 用戶端應用程式。
+如果您不需要第一個啟動的服務執行用戶端應用程式，就會發生此錯誤。 首先，執行主應用程式啟動服務，然後再執行 [用戶端應用程式。
 
 ### <a name="use-the-svcutilexe-tool"></a>使用 Svcutil.exe 工具
    
@@ -77,7 +77,7 @@ ms.locfileid: "61791465"
 
 **System.ServiceModel.Security.SecurityNegotiationException:與 SOAP 安全性交涉 'http:\//localhost:8000/GettingStarted/CalculatorService' 的目標 'http:\//localhost:8000/GettingStarted/CalculatorService' 失敗**  
 
-沒有網路連線能力的已加入網域的電腦上，就會發生此錯誤。 將電腦連線到網路，或關閉 服務和用戶端的安全性。 
+沒有網路連線能力的已加入網域的電腦上，就會發生此錯誤。 將電腦連線到網路，或關閉 [服務和用戶端的安全性。 
 
 若要關閉安全性：
 
@@ -88,7 +88,7 @@ ms.locfileid: "61791465"
     selfhost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(SecurityMode.None), "CalculatorService");  
     ```
 
-- 用戶端組態檔中，更新**\<安全性 >** 項目底下**\<繫結 >** 項目，如下所示：  
+- 用戶端組態檔中，更新 **\<安全性>** 項目底下 **\<繫結>** 項目，如下所示：  
   
     ```xml
     <binding name="WSHttpBinding_ICalculator" security mode="None" />
