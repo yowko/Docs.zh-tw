@@ -2,12 +2,12 @@
 title: 部署已裝載網際網路資訊服務的 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: a41615ab096f3aa4f1ee94defd775248d0df4d2e
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 4c46a7ac0482e0f9c969505b87558d240bb1391e
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025729"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402292"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署已裝載網際網路資訊服務的 WCF 服務
 
@@ -43,7 +43,7 @@ WCF、 IIS 和 ASP.NET 必須安裝 IIS 裝載的 WCF 服務，才能正確運�
 
 IIS 裝載的 WCF 服務必須駐留的 IIS 應用程式。 您可以只建立新的 IIS 應用程式裝載 WCF 服務。 或者，您也可以將 WCF 服務部署到已裝載 ASP.NET 2.0 內容 （例如.aspx 頁面和 ASP.NET Web 服務 [ASMX]） 的現有應用程式。 如需這些選項的詳細資訊，請參閱 「 主控 WCF-並存使用 ASP.NET"及"裝載 ASP.NET 相容性模式中的 WCF 服務 > 章節中[WCF 服務與 ASP.NET](wcf-services-and-aspnet.md)。
 
-請注意， [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 及更新版本會定期重新啟動獨立的物件導向程式設計應用程式。 預設值為 1740 分鐘。 支援的最大值為 71,582 分鐘。 您可以停用這項重新啟動。 如需有關這個屬性的詳細資訊，請參閱 < [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968)。
+請注意，IIS 6.0 和更新版本會定期重新啟動獨立的物件導向程式設計應用程式。 預設值為 1740 分鐘。 支援的最大值為 71,582 分鐘。 您可以停用這項重新啟動。 如需有關這個屬性的詳細資訊，請參閱 < [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968)。
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>建立 WCF 服務的 .svc 檔案
 
@@ -103,7 +103,7 @@ IIS 裝載的 WCF 服務會將其組態儲存在應用程式 Web.config 檔案�
 
 ### <a name="available-transports"></a>可用的傳輸
 
-WCF 服務裝載於 IIS 5.1 和[!INCLUDE[iis601](../../../../includes/iis601-md.md)]受限於只能使用 HTTP 通訊。 在這些 IIS 平台上，設定裝載的服務來使用非 HTTP 繫結會在服務啟動期間導致錯誤。 在 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]上，支援的傳輸包括 HTTP、Net.TCP、Net.Pipe、Net.MSMQ，和 msmq.formatname，以便提供與現有 MSMQ 應用程式的回溯相容性。
+WCF 服務裝載於 IIS 5.1 和 IIS 6.0 會受限於只能使用 HTTP 通訊。 在這些 IIS 平台上，設定裝載的服務來使用非 HTTP 繫結會在服務啟動期間導致錯誤。 在 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]上，支援的傳輸包括 HTTP、Net.TCP、Net.Pipe、Net.MSMQ，和 msmq.formatname，以便提供與現有 MSMQ 應用程式的回溯相容性。
 
 ### <a name="http-transport-security"></a>HTTP 傳輸安全性
 

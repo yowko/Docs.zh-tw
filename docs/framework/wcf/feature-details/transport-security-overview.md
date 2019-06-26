@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 04526e8aea09b412de4d3a94f17938b02ad6527b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 450d10c0356a8c22741275e2c1e1a842c1fd4627
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990793"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402043"
 ---
 # <a name="transport-security-overview"></a>傳輸安全性概觀
 Windows Communication Foundation (WCF) 中的傳輸安全性機制取決於繫結和傳輸而有所不同。 例如，使用 <xref:System.ServiceModel.WSHttpBinding> 類別時，傳輸為 HTTP，而保護此傳輸的主要機制則為 Secure Sockets Layer (SSL) over HTTP，通常稱為 HTTPS。 本主題討論 WCF 系統提供繫結中使用的主要傳輸安全性機制。  
@@ -47,19 +47,19 @@ Windows Communication Foundation (WCF) 中的傳輸安全性機制取決於繫�
  下列小節將討論其他的用戶端認證類型。  
   
 #### <a name="basic"></a>基本  
- 這種類型會對應至 IIS 中的基本驗證方法。 在使用此模式時，IIS 伺服器必須透過 Windows 使用者帳戶和適當的 NTFS 檔案系統權限進行設定。 如需詳細資訊[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，請參閱 <<c2> [ 啟用基本驗證及設定領域名稱](https://go.microsoft.com/fwlink/?LinkId=88592)。 如需詳細資訊[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，請參閱[IIS 7.0 Beta:設定基本驗證](https://go.microsoft.com/fwlink/?LinkId=88593)。  
+ 這種類型會對應至 IIS 中的基本驗證方法。 在使用此模式時，IIS 伺服器必須透過 Windows 使用者帳戶和適當的 NTFS 檔案系統權限進行設定。 如需有關 IIS 6.0 的詳細資訊，請參閱[啟用基本驗證及設定領域名稱](https://go.microsoft.com/fwlink/?LinkId=88592)。 如需詳細資訊[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，請參閱[IIS 7.0 Beta:設定基本驗證](https://go.microsoft.com/fwlink/?LinkId=88593)。  
   
 #### <a name="certificate"></a>憑證  
- IIS 有一個會要求用戶端使用憑證登入的選項。 該功能也能讓 IIS 將用戶端憑證對應至 Windows 帳戶。 如需詳細資訊[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，請參閱 <<c2> [ 啟用 IIS 6.0 中的用戶端憑證](https://go.microsoft.com/fwlink/?LinkId=88594)。 如需詳細資訊[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，請參閱[IIS 7.0 Beta:在 IIS 7.0 中設定伺服器憑證](https://go.microsoft.com/fwlink/?LinkId=88595)。  
+ IIS 有一個會要求用戶端使用憑證登入的選項。 該功能也能讓 IIS 將用戶端憑證對應至 Windows 帳戶。 如需有關 IIS 6.0 的詳細資訊，請參閱[啟用 IIS 6.0 中的用戶端憑證](https://go.microsoft.com/fwlink/?LinkId=88594)。 如需詳細資訊[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，請參閱[IIS 7.0 Beta:在 IIS 7.0 中設定伺服器憑證](https://go.microsoft.com/fwlink/?LinkId=88595)。  
   
 #### <a name="digest"></a>摘要  
- 摘要式驗證類似於基本驗證，但是它具備以雜湊而非純文字形式來傳送認證的優點。 如需詳細資訊[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，請參閱 < [IIS 6.0 中的摘要式驗證](https://go.microsoft.com/fwlink/?LinkID=88443)。 如需詳細資訊[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，請參閱[IIS 7.0 Beta:設定摘要式驗證](https://go.microsoft.com/fwlink/?LinkId=88596)。  
+ 摘要式驗證類似於基本驗證，但是它具備以雜湊而非純文字形式來傳送認證的優點。 如需有關 IIS 6.0 的詳細資訊，請參閱[在 IIS 6.0 中的摘要式驗證](https://go.microsoft.com/fwlink/?LinkID=88443)。 如需詳細資訊[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，請參閱[IIS 7.0 Beta:設定摘要式驗證](https://go.microsoft.com/fwlink/?LinkId=88596)。  
   
 #### <a name="windows"></a>Windows  
- 這個類型會對應至 IIS 中的整合式 Windows 驗證。 當設定為這個值時，該伺服器必須出現在以 Kerberos 通訊協定做為網域控制站的 Windows 網域上。 如果伺服器未存在以 Kerberos 為基礎的網域中，或是如果 Kerberos 系統失敗，您可以使用下一節所介紹的 NT LAN Manager (NTLM) 值。 如需詳細資訊[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，請參閱 < [IIS 6.0 中的整合式 Windows 驗證](https://go.microsoft.com/fwlink/?LinkId=88597)。 如需詳細資訊[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，請參閱[IIS 7.0 Beta:在 IIS 7.0 中設定伺服器憑證](https://go.microsoft.com/fwlink/?LinkId=88595)。  
+ 這個類型會對應至 IIS 中的整合式 Windows 驗證。 當設定為這個值時，該伺服器必須出現在以 Kerberos 通訊協定做為網域控制站的 Windows 網域上。 如果伺服器未存在以 Kerberos 為基礎的網域中，或是如果 Kerberos 系統失敗，您可以使用下一節所介紹的 NT LAN Manager (NTLM) 值。 如需有關 IIS 6.0 的詳細資訊，請參閱[在 IIS 6.0 中的整合式 Windows 驗證](https://go.microsoft.com/fwlink/?LinkId=88597)。 如需詳細資訊[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，請參閱[IIS 7.0 Beta:在 IIS 7.0 中設定伺服器憑證](https://go.microsoft.com/fwlink/?LinkId=88595)。  
   
 #### <a name="ntlm"></a>NTLM  
- 這個類型可讓伺服器在 Kerberos 通訊協定失敗時，使用 NTLM 進行驗證。 如需有關中設定 IIS [!INCLUDE[iis601](../../../../includes/iis601-md.md)]，請參閱 <<c2> [ 強制 NTLM 驗證](https://go.microsoft.com/fwlink/?LinkId=88598)。 若是 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，Windows 驗證會包含 NTLM 驗證。 如需詳細資訊，請參閱[IIS 7.0 Beta:在 IIS 7.0 中設定伺服器憑證](https://go.microsoft.com/fwlink/?LinkID=88595)。  
+ 這個類型可讓伺服器在 Kerberos 通訊協定失敗時，使用 NTLM 進行驗證。 如需有關如何在 IIS 6.0 設定 IIS 的詳細資訊，請參閱 <<c0> [ 強制 NTLM 驗證](https://go.microsoft.com/fwlink/?LinkId=88598)。 若是 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，Windows 驗證會包含 NTLM 驗證。 如需詳細資訊，請參閱[IIS 7.0 Beta:在 IIS 7.0 中設定伺服器憑證](https://go.microsoft.com/fwlink/?LinkID=88595)。  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
  <xref:System.ServiceModel.WSHttpBinding> 類別主要是用來與實作 WS-* 規格的服務進行交互操作。 此繫結的傳輸安全性為使用 HTTP 或 HTTPS 的安全通訊端層 (SSL)。 若要建立使用 SSL 的 WCF 應用程式，使用 IIS 來裝載應用程式。 或者，如果您要建立自我裝載的應用程式，請使用 HttpCfg.exe 工具將 X.509 憑證繫結至電腦上的特定連接埠。 連接埠號碼指定為 WCF 應用程式的端點位址的一部分。 當使用傳輸模式時，端點位址必須包含 HTTPS 通訊協定，否則會在執行階段擲回例外狀況。 如需詳細資訊，請參閱 < [HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  

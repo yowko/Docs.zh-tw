@@ -2,15 +2,15 @@
 title: 以 Web 裝載佇列應用程式
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: c44a6b5059f5294646d95b4281dcf7845b369929
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c8584f78b6b31bc95e088b424122a9cf77a17f27
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126018"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402273"
 ---
 # <a name="web-hosting-a-queued-application"></a>以 Web 裝載佇列應用程式
-Windows Process Activation Service (WAS) 管理啟動和包含該主機的 Windows Communication Foundation (WCF) 服務的應用程式的工作者處理序的存留期。 WAS 處理序模型會藉由移除 HTTP 上的相依性，將 HTTP 伺服器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 處理序模型一般化。 這可讓 WCF 服務使用 HTTP 和非 HTTP 通訊協定，例如 net.msmq 和 msmq.formatname，在裝載環境中支援訊息型啟用，並可讓您裝載大量應用程式，在指定的電腦。  
+Windows Process Activation Service (WAS) 管理啟動和包含該主機的 Windows Communication Foundation (WCF) 服務的應用程式的工作者處理序的存留期。 WAS 處理序模型會將 HTTP 伺服器的 IIS 6.0 處理序模型一般化藉由移除 HTTP 的相依性。 這可讓 WCF 服務使用 HTTP 和非 HTTP 通訊協定，例如 net.msmq 和 msmq.formatname，在裝載環境中支援訊息型啟用，並可讓您裝載大量應用程式，在指定的電腦。  
   
  WAS 包括訊息佇列 (MSMQ) 啟動服務，該服務會在佇列的應用程式所使用的其中一個佇列內置放一個或多個訊息時，啟動佇列的應用程式。 MSMQ 啟動服務是 NT 服務，預設為自動啟動。  
   

@@ -2,12 +2,12 @@
 title: F# 編碼慣例
 description: 了解一般的指導方針和慣例撰寫時F#程式碼。
 ms.date: 05/14/2018
-ms.openlocfilehash: 4b292d0a844a4d9efc79aa865b054b4af2cb68c4
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: c8df654cbb94fff1ef7ffb909655439398f30bf5
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052803"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402370"
 ---
 # <a name="f-coding-conventions"></a>F# 編碼慣例
 
@@ -189,7 +189,7 @@ type MyParametricApi(dep1, dep2, dep3) =
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>代表錯誤案例和您的網域內建函式的型別中不合法的狀態
 
-具有[差別聯集](../language-reference/discriminated-unions.md)，F#可讓您能夠代表您的型別系統中的錯誤的程式狀態。 例如：
+具有[差別聯集](../language-reference/discriminated-unions.md)，F#可讓您能夠代表您的型別系統中的錯誤的程式狀態。 例如:
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -378,7 +378,7 @@ type Transactor(ctx, currentBalance) =
         ...
 ```
 
-單元測試`Transactions.doTransaction`在`ImplementationLogic.Tests.fspoj`很簡單：
+單元測試`Transactions.doTransaction`在`ImplementationLogic.Tests.fsproj`很簡單：
 
 ```fsharp
 namespace TransactionsTestingUtil

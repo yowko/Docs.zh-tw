@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c95c77d0b2e2b68750891431822e2637e5e88f9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: ba4546397adcfcf6142b41482f574cf86607a6b9
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025572"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402108"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>以多平台為目標之函式庫的應用程式資源
 您可以使用.NET Framework[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)專案類型，以確保您類別庫中的資源，可從多個平台。 這個專案類型會是適用於 Visual Studio 2012，並以.NET Framework 類別庫的可攜式子集為目標。 使用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]可確保能夠從桌面應用程式、Silverlight 應用程式、Windows Phone 應用程式和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式存取您的程式庫。
@@ -72,12 +72,12 @@ ms.locfileid: "67025572"
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]
 
- 下列程式碼將示範如何從主控台模式應用程式存取 `UILibrary` 類別及其資源。 它需要將 UILIbrary.dll 的參考加入主控台應用程式專案中。
+ 下列程式碼將示範如何從主控台模式應用程式存取 `UILibrary` 類別及其資源。 它需要可以加入至 主控台應用程式專案的 UILibrary.dll 的參考。
 
  [!code-csharp[Conceptual.Resources.Portable#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program.cs#2)]
  [!code-vb[Conceptual.Resources.Portable#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module1.vb#2)]
 
- 下列程式碼將示範如何從 `UILibrary`應用程式存取 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 類別及其資源。 它需要將 UILIbrary.dll 的參考加入 Windows 市集應用程式專案中。
+ 下列程式碼將示範如何從 `UILibrary`應用程式存取 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 類別及其資源。 它需要可以加入至 Windows 市集應用程式專案的 UILibrary.dll 的參考。
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
@@ -94,12 +94,12 @@ ms.locfileid: "67025572"
 |名稱|Nom|
 |標題|Base de données des employés|
 
- 下列程式碼將示範如何從主控台模式應用程式存取 `UILibrary` 類別及其資源。 它需要將 UILIbrary.dll 的參考加入主控台應用程式專案中。
+ 下列程式碼將示範如何從主控台模式應用程式存取 `UILibrary` 類別及其資源。 它需要可以加入至 主控台應用程式專案的 UILibrary.dll 的參考。
 
  [!code-csharp[Conceptual.Resources.Portable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program2.cs#3)]
  [!code-vb[Conceptual.Resources.Portable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module2.vb#3)]
 
- 下列程式碼將示範如何從 `UILibrary`應用程式存取 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 類別及其資源。 它需要將 UILIbrary.dll 的參考加入 Windows 市集應用程式專案中。 它會使用靜態 `ApplicationLanguages.PrimaryLanguageOverride` 屬性將應用程式的慣用語言設定為法文。
+ 下列程式碼將示範如何從 `UILibrary`應用程式存取 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 類別及其資源。 它需要可以加入至 Windows 市集應用程式專案的 UILibrary.dll 的參考。 它會使用靜態 `ApplicationLanguages.PrimaryLanguageOverride` 屬性將應用程式的慣用語言設定為法文。
 
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  

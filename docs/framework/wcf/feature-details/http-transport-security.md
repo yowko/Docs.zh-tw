@@ -2,12 +2,12 @@
 title: HTTP 傳輸安全性
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: ab099302df93ce7d01c2730df88240265411bc8d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 386c24a9b51be56bf5a8195123e573cfced6392f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587675"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402311"
 ---
 # <a name="http-transport-security"></a>HTTP 傳輸安全性
 使用 HTTP 來傳輸時，會由安全通訊端層 (SSL) 實作提供安全性。 在網際網路上會廣泛使用 SSL 以對用戶端驗證服務，進而對通道提供機密性 (加密)。 本主題會說明 SSL 的運作方式，以及如何實作 Windows Communication Foundation (WCF) 中。  
@@ -43,9 +43,9 @@ ms.locfileid: "64587675"
  若要設定憑證以搭配[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，請參閱[IIS 7.0 Beta:在 IIS 7.0 中設定伺服器憑證](https://go.microsoft.com/fwlink/?LinkID=88595)。  
   
 #### <a name="iis-60"></a>IIS 6.0  
- 若要設定[!INCLUDE[iis601](../../../../includes/iis601-md.md)]為安全主機 （使用 SSL），請參閱[設定安全通訊端層](https://go.microsoft.com/fwlink/?LinkId=88601)。  
+ 若要設定為安全主機 （使用 SSL） 的 IIS 6.0，請參閱[設定安全通訊端層](https://go.microsoft.com/fwlink/?LinkId=88601)。  
   
- 若要設定憑證以搭配[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，請參閱 < [Certificates_IIS_SP1_Ops](https://go.microsoft.com/fwlink/?LinkId=88602)。  
+ 若要設定憑證以用於 IIS 6.0，請參閱[Certificates_IIS_SP1_Ops](https://go.microsoft.com/fwlink/?LinkId=88602)。  
   
 ### <a name="using-httpcfg-for-ssl"></a>對 SSL 使用 HttpCfg  
  如果您要建立自我裝載的 WCF 應用程式，下載 HttpCfg.exe 工具，網址[Windows XP Service Pack 2 支援工具網站](https://go.microsoft.com/fwlink/?LinkId=29002)。  

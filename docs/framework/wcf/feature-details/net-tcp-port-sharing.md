@@ -5,12 +5,12 @@ helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: 8eb0a2a5b8b6edad17477e1fd65f72b540a8a674
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 4d7f28c692c7eb3527a851c6456473afc20a9aeb
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960044"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402471"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP Port Sharing
 Windows Communication Foundation (WCF) 的高效能通訊提供全新的 TCP 架構網路通訊協定 (net.tcp://)。 WCF 也引進全新的系統元件，可讓多個使用者處理序共用 net.tcp 連接埠的 Net.TCP Port Sharing Service。  
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) 的高效能通訊提供全新的 TCP 架
   
  在 HTTP.SYS 模型中，許多不同的 HTTP 應用程式流量在經過多工處理後，可以傳入單一 TCP 連接埠，而這已經變成了 Windows 平台的標準做法。 這種做法提供防火牆管理員一個共同的控制點，同時讓應用程式開發人員在建置可以運用網路的新應用程式時，將部署成本降到最低。  
   
- 在多個 HTTP 應用程式之間共用連接埠的能力，一直都是網際網路資訊服務 (IIS) 的標準功能之一。 但是，一直到 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 引進了 HTTP.SYS (核心模式 HTTP 通訊協定接聽項) 之後，才讓這項基礎結構全面普及化。 事實上，HTTP.SYS 可讓任意使用者處理序共用專門用來處理 HTTP 流量的 TCP 連接埠。 這項功能可讓許多 HTTP 應用程式共存於同一部實體電腦內個別、隔離的處理序中，同時透過 TCP 連接埠 80 共用所需的網路基礎結構以便傳送與接收流量。 Net.TCP 連接埠共用服務可讓 net.tcp 應用程式共用同樣類型的連接埠。  
+ 在多個 HTTP 應用程式之間共用連接埠的能力，一直都是網際網路資訊服務 (IIS) 的標準功能之一。 不過，它是僅採用 HTTP。IIS 6.0 中，此基礎結構全面普及化 SYS （核心模式 HTTP 通訊協定接聽程式）。 事實上，HTTP.SYS 可讓任意使用者處理序共用專門用來處理 HTTP 流量的 TCP 連接埠。 這項功能可讓許多 HTTP 應用程式共存於同一部實體電腦內個別、隔離的處理序中，同時透過 TCP 連接埠 80 共用所需的網路基礎結構以便傳送與接收流量。 Net.TCP 連接埠共用服務可讓 net.tcp 應用程式共用同樣類型的連接埠。  
   
 ## <a name="port-sharing-architecture"></a>連接埠共用架構  
  在 WCF 中的連接埠共用架構有三個主要元件：  

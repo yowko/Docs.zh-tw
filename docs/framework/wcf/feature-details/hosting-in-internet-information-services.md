@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 8563662a4408d0425e92b960301311ce5d423f9d
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: f9acadcb594005d7c7eadffcddad3649a3aefc29
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025745"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402194"
 ---
 # <a name="hosting-in-internet-information-services"></a>在網際網路資訊服務中裝載
 裝載 Windows Communication Foundation (WCF) 服務的其中一個選項是在 Internet Information Services (IIS) 應用程式內。 這個裝載模型十分類似 ASP.NET 和 ASP.NET Web 服務 (ASMX) Web 服務所使用的模型。  
@@ -19,9 +19,9 @@ ms.locfileid: "67025745"
   
 - [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 上的 IIS 5.1。 這個環境適合用來設計與開發 IIS 裝載的應用程式，以便稍後部署到 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 之類的伺服器作業系統中。  
   
-- [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 上的 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]。 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 提供進階處理模型，具有改良的延展性、可靠性和應用程式隔離。 此環境適合用來以獨佔模式使用 HTTP 通訊的 WCF 服務的生產環境部署。  
+- IIS 6.0 上的[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]。 IIS 6.0 提供進階的處理模型，可提供改善的延展性、 可靠性和應用程式隔離。 此環境適合用來以獨佔模式使用 HTTP 通訊的 WCF 服務的生產環境部署。  
   
-- [!INCLUDE[wv](../../../../includes/wv-md.md)] 和 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上的 IIS 7.0。 雖然 IIS 7.0 提供和 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 相同的進階處理模型，但是使用 Windows Process Activation Service (WAS) 來允許在 HTTP 以外的通訊協定上進行啟動和網路通訊。 此環境適合用來透過 WCF （包括 HTTP、 net.tcp、 net.pipe 和 net.msmq） 所支援的任何網路通訊協定進行通訊的 WCF 服務的開發。 如需 WAS 的詳細資訊，請參閱[在 Windows Process Activation Service 中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
+- [!INCLUDE[wv](../../../../includes/wv-md.md)] 和 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上的 IIS 7.0。 IIS 7.0 提供與 IIS 6.0 相同的進階的處理模型，但使用 Windows Process Activation Service (WAS) 允許透過 HTTP 以外的通訊協定的啟動和網路通訊。 此環境適合用來透過 WCF （包括 HTTP、 net.tcp、 net.pipe 和 net.msmq） 所支援的任何網路通訊協定進行通訊的 WCF 服務的開發。 如需 WAS 的詳細資訊，請參閱[在 Windows Process Activation Service 中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
   
 - [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496)搭配[!INCLUDE[iisver](../../../../includes/iisver-md.md)]和 Windows Process Activation Service (WAS) 來提供豐富的應用程式裝載環境，為 NET4 WCF 和 WF 服務。 這些優點包括處理序生命週期管理、處理序回收、共用裝載、快速失敗保護、處理序損壞、隨選啟動和健康監視。 如需詳細資訊，請參閱 < [AppFabric 主控功能](https://go.microsoft.com/fwlink/?LinkId=196494)並[AppFabric 主控概念](https://go.microsoft.com/fwlink/?LinkId=196495)。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67025745"
   
 - 在 IIS 中裝載的 WCF 服務使用相同的動態編譯模型與 ASP.NET 2.0 中，可簡化開發和部署的託管服務。  
   
- 決定要在 IIS 中裝載 WCF 服務時，務必記得 IIS 5.1 和[!INCLUDE[iis601](../../../../includes/iis601-md.md)]僅限於 HTTP 通訊用途。 如需有關選擇裝載環境的詳細資訊，請參閱 <<c0> [ 裝載的服務](../../../../docs/framework/wcf/hosting-services.md)。  
+ 決定要在 IIS 中裝載 WCF 服務時，務必記得 IIS 5.1 和 IIS 6.0 僅限於 HTTP 通訊用途。 如需有關選擇裝載環境的詳細資訊，請參閱 <<c0> [ 裝載的服務](../../../../docs/framework/wcf/hosting-services.md)。  
   
 ## <a name="deploying-an-iis-hosted-wcf-service"></a>部署 IIS 裝載的 WCF 服務  
  開發及部署 IIS 裝載的 WCF 服務包含下列工作：  

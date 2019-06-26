@@ -2,12 +2,12 @@
 title: 網際網路資訊服務裝載最佳做法
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 85b8efadca03de71fd98b0f0d1bf5aeb47fe76be
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bb60330aeedfe4b16a2a53d644e79a4a16636afa
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878598"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402442"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>網際網路資訊服務裝載最佳做法
 本主題概述裝載 Windows Communication Foundation (WCF) 服務的最佳作法。  
@@ -16,7 +16,7 @@ ms.locfileid: "65878598"
  實作 WCF 服務以部署至 Web 應用程式的 \bin 目錄的 DLL，讓您重複使用 Web 應用程式模型中，外部服務，例如在測試環境中可能沒有安裝 Internet Information Services (IIS) 部署。  
   
 ## <a name="service-hosts-in-iis-hosted-applications"></a>IIS 裝載應用程式中的服務主機  
- 請勿使用命令式自我裝載 API 來建立可接聽網路傳輸 (原本並非由 IIS 裝載環境所支援) 的新服務主機 (例如，請勿使用 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 來裝載 TCP 服務，因為 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 原本並不支援 TCP 通訊)。 我們不建議您使用這個方式。 IIS 裝載環境無法辨識以命令式語法建立的服務主機。 關鍵在於，當 IIS 判斷裝載應用程式集區是否為閒置時，不會考慮透過命令式語法建立的服務所執行的處理作業。 而且內含此類以命令式語法建立之服務主機的應用程式，會透過 IIS 裝載環境強勢地處理 IIS 裝載處理序。  
+ 請勿使用命令式自我裝載 Api 來建立新的服務主機的設定，可接聽原本不支援由 IIS 裝載環境的網路傳輸 （例如，IIS 6.0 來裝載 TCP 服務，因為 IIS 6.0 上原生不支援 TCP 通訊）。 我們不建議您使用這個方式。 IIS 裝載環境無法辨識以命令式語法建立的服務主機。 關鍵在於，當 IIS 判斷裝載應用程式集區是否為閒置時，不會考慮透過命令式語法建立的服務所執行的處理作業。 而且內含此類以命令式語法建立之服務主機的應用程式，會透過 IIS 裝載環境強勢地處理 IIS 裝載處理序。  
   
 ## <a name="uris-and-iis-hosted-endpoints"></a>URI 和 IIS 裝載端點  
  IIS 裝載服務的端點應該透過相對的統一資源識別元 (URI)，而不是絕對位址來設定。 這樣可保證端點位址落在屬於裝載應用程式的 URI 位址範圍內，並確保訊息式啟動會如預期般發生。  
