@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 1aff57186f08a651aaf5e8dfaa988b5fb296768d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: b2b4b20038024e9fc0bbdfee39b840f68375ab74
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306605"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401509"
 ---
 # <a name="c-keywords"></a>C# 關鍵字
 
@@ -34,7 +34,7 @@ ms.locfileid: "67306605"
 |[foreach](foreach-in.md)|[goto](goto.md)|[if](if-else.md)|[implicit](implicit.md)|  
 |[in](in.md)|[int](int.md)|[interface](interface.md)|[internal](internal.md)|
 |[is](is.md)|[lock](lock-statement.md)|[long](long.md)|[namespace](namespace.md)|
-|[new](new.md)|[null](null.md)|[object](object.md)|[operator](operator.md)|
+|[new](../operators/new-operator.md)|[null](null.md)|[object](object.md)|[operator](operator.md)|
 |[out](out.md)|[override](override.md)|[params](params.md)|[private](private.md)|
 |[protected](protected.md)|[public](public.md)|[readonly](readonly.md)|[ref](ref.md)|
 |[return](return.md)|[sbyte](sbyte.md)|[sealed](sealed.md)|[short](short.md)||
@@ -51,14 +51,14 @@ ms.locfileid: "67306605"
   
 ||||  
 |---|---|---|  
-|[add](add.md)|[alias](extern-alias.md)|[ascending](ascending.md)|
+|[新增](add.md)|[alias](extern-alias.md)|[ascending](ascending.md)|
 |[async](async.md)|[await](await.md)|[by](by.md)|
 |[descending](descending.md)|[dynamic](dynamic.md)|[equals](equals.md)|
 |[from](from-clause.md)|[get](get.md)|[global](global.md)|
 |[group](group-clause.md)|[into](into.md)|[join](join-clause.md)|
 |[let](let-clause.md)|[nameof](nameof.md)|[on](on.md)|
 |[orderby](orderby-clause.md)|[partial (型別)](partial-type.md)|[partial (方法)](partial-method.md)|
-|[remove](remove.md)|[select](select-clause.md)|[set](set.md)|
+|[remove](remove.md) \(英文\)|[select](select-clause.md)|[set](set.md)|
 |[value](value.md)|[var](var.md)|[when (篩選條件)](when.md)|
 |[where (泛型型別條件約束)](where-generic-type-constraint.md)|[where (查詢子句)](where-clause.md)|[yield](yield.md)|
   

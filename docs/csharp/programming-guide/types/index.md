@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: c971a2d5d7caeb030cf504c44be8c8123decc3fc
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 796dbb012426cdaea7828afeea4fba15f57095c6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423412"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398088"
 ---
 # <a name="types-c-programming-guide"></a>類型 (C# 程式設計手冊)
 
@@ -120,13 +120,13 @@ char c = 'Z';
 
 [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]
 
-`System.IO.FileMode.Create` 常數的值為 2。 不過，使用者在讀取原始程式碼時，名稱會更有意義，也因此最好使用列舉，而不要使用常數常值數字。 如需詳細資訊，請參閱<xref:System.IO.FileMode?displayProperty=nameWithType>。
+`System.IO.FileMode.Create` 常數的值為 2。 不過，使用者在讀取原始程式碼時，名稱會更有意義，也因此最好使用列舉，而不要使用常數常值數字。 如需詳細資訊，請參閱 <xref:System.IO.FileMode?displayProperty=nameWithType>。
 
 所有的委派都繼承自 <xref:System.Enum?displayProperty=nameWithType>，該列舉又繼承自 <xref:System.ValueType?displayProperty=nameWithType>。 所有適用於結構的規則，也適用於列舉。 如需有關列舉的詳細資訊，請參閱[列舉型別](../../../csharp/programming-guide/enumeration-types.md)。
 
 ### <a name="reference-types"></a>參考類型
 
-定義為 [class](../../../csharp/language-reference/keywords/class.md)、[delegate](../../../csharp/language-reference/keywords/delegate.md)、array 或 [interface](../../../csharp/language-reference/keywords/interface.md) 的型別即為「參考型別」  。 在執行階段，當您宣告參考型別的變數時，該變數會包含值 [null](../../../csharp/language-reference/keywords/null.md)，直到您使用 [new](../../../csharp/language-reference/keywords/new.md) 運算子明確地建立物件，或為它指派在他處使用 `new` 建立的物件為止，如下列範例所示︰
+定義為 [class](../../../csharp/language-reference/keywords/class.md)、[delegate](../../../csharp/language-reference/keywords/delegate.md)、array 或 [interface](../../../csharp/language-reference/keywords/interface.md) 的型別即為「參考型別」  。 在執行階段，當您宣告參考型別的變數時，該變數會包含值 [null](../../../csharp/language-reference/keywords/null.md)，直到您使用 [new](../../../csharp/language-reference/operators/new-operator.md) 運算子明確地建立物件，或為它指派在他處使用 `new` 建立的物件為止，如下列範例所示︰
 
 ```csharp
 MyClass mc = new MyClass();

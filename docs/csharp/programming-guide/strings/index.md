@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 57781dd5a988435778587636cc458256b966446c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e193d6a51c3d4f1d81e3b74b1474d0e7cdcfca53
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61678500"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398117"
 ---
 # <a name="strings-c-programming-guide"></a>字串 (C# 程式設計手冊)
 字串是 <xref:System.String> 類型的物件，其值為文字。 就內部而言，文字會儲存為 <xref:System.Char> 物件的循序唯讀集合。 C# 字串的結尾沒有終止的 Null 字元，因此 C# 字串可以包含任何數目的內嵌 Null 字元 ('\0')。 字串的 <xref:System.String.Length%2A> 屬性代表它包含的 `Char` 物件數目，而非 Unicode 字元的數目。 若要存取字串中的個別 Unicode 字碼指標，請使用 <xref:System.Globalization.StringInfo> 物件。  
@@ -24,12 +24,12 @@ ms.locfileid: "61678500"
   
  [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
- 請注意，除了使用字元陣列初始化字串以外，您不能使用 [new](../../../csharp/language-reference/keywords/new-operator.md) 運算子建立字串物件。  
+ 請注意，除了使用字元陣列初始化字串以外，您不能使用 [new](../../../csharp/language-reference/operators/new-operator.md) 運算子建立字串物件。  
   
  使用 <xref:System.String.Empty> 常數值初始化字串，以建立字串長度為零的新 <xref:System.String> 物件。 零長度字串的字串常值表示法是 ""。 使用 <xref:System.String.Empty> 值初始化字串，而非 [null](../../../csharp/language-reference/keywords/null.md)，即可降低發生 <xref:System.NullReferenceException> 的機會。 使用靜態 <xref:System.String.IsNullOrEmpty%28System.String%29> 方法，先驗證字串的值，再嘗試進行存取。  
   
 ## <a name="immutability-of-string-objects"></a>字串物件的不變性  
- 字串物件為「不可變」：它們在建立之後將無法變更。 所有看似會修改字串的 <xref:System.String> 方法和 C# 運算子，實際上會以新的字串物件傳回結果。 在下列範例中，當 `s1` 和 `s2` 的內容串連以組成單一字串時，兩個原始字串將不會被修改。 `+=` 運算子會建立新的字串，其中包含結合的內容。 新的物件會指派給變數 `s1`，而先前指派給 `s1` 的原始物件將會被釋放以進行記憶體回收，因為已經沒有其他具有其參考的變數。  
+ 字串物件為「不可變」  ：它們在建立之後將無法變更。 所有看似會修改字串的 <xref:System.String> 方法和 C# 運算子，實際上會以新的字串物件傳回結果。 在下列範例中，當 `s1` 和 `s2` 的內容串連以組成單一字串時，兩個原始字串將不會被修改。 `+=` 運算子會建立新的字串，其中包含結合的內容。 新的物件會指派給變數 `s1`，而先前指派給 `s1` 的原始物件將會被釋放以進行記憶體回收，因為已經沒有其他具有其參考的變數。  
   
  [!code-csharp[csProgGuideStrings#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#2)]  
   
@@ -71,7 +71,7 @@ ms.locfileid: "61678500"
 >  在編譯時期，逐字字串會轉換為具有所有相同逸出序列的一般字串。 因此，如果您在偵錯工具監看式視窗中檢視逐字字串，您會看到由編譯器新增的逸出字元，而非來自於您原始程式碼的逐字版本。 例如，逐字字串 @"C:\files.txt" 會在監看式視窗中顯示為 "C:\\\files.txt"。  
   
 ## <a name="format-strings"></a>格式字串  
- 格式字串是可在執行階段動態決定其內容的字串。 格式字串是透過內嵌「插入的運算式」或字串內大括弧內的預留位置來建立的。 大括弧 (`{...}`) 內的所有內容都會被解析為一個值並在執行階段以格式化字串形式輸出。 有兩種方式可用來建立格式字串：字串插補與複合格式設定。
+ 格式字串是可在執行階段動態決定其內容的字串。 格式字串是透過內嵌「插入的運算式」  或字串內大括弧內的預留位置來建立的。 大括弧 (`{...}`) 內的所有內容都會被解析為一個值並在執行階段以格式化字串形式輸出。 有兩種方式可用來建立格式字串：字串插補與複合格式設定。
 
 ### <a name="string-interpolation"></a>字串插值
 C# 6.0 與更新版本中提供的[*插補字串*](../../language-reference/tokens/interpolated.md)可透過 `$` 特殊字元識別，而且在大括弧中包括插補運算式。 如果您是字串插補的新手，請參閱[字串插補 - C# 互動式教學課程](../../tutorials/exploration/interpolated-strings.yml)以取得快速概觀。
@@ -128,12 +128,12 @@ string s = String.Empty;
   
 |主題|說明|  
 |-----------|-----------------|  
-|[如何：修改字串內容](../../how-to/modify-string-contents.md)|說明轉換字串及修改字串內容的技術。|  
-|[如何：比較字串](../../how-to/compare-strings.md)|示範如何執行字串的序數與文化特定比較。|  
-|[如何：串連多個字串](../../how-to/concatenate-multiple-strings.md)|示範如何將多個字串聯結成一個的各種方式。|
-|[如何：使用 String.Split 剖析字串](../../how-to/parse-strings-using-split.md)|包含說明如何使用 `String.Split` 方法剖析字串的程式碼範例。|  
-|[如何：搜尋字串](../../how-to/search-strings.md)|說明如何對字串中的特定文字或模式使用搜尋。|  
-|[如何：判斷字串是否代表數值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|示範如何安全地剖析字串，以查看它是否有有效的數值。|  
+|[操作說明：修改字串內容](../../how-to/modify-string-contents.md)|說明轉換字串及修改字串內容的技術。|  
+|[操作說明：比較字串](../../how-to/compare-strings.md)|示範如何執行字串的序數與文化特定比較。|  
+|[操作說明：串連多個字串](../../how-to/concatenate-multiple-strings.md)|示範如何將多個字串聯結成一個的各種方式。|
+|[操作說明：使用 String.Split 剖析字串](../../how-to/parse-strings-using-split.md)|包含說明如何使用 `String.Split` 方法剖析字串的程式碼範例。|  
+|[操作說明：搜尋字串](../../how-to/search-strings.md)|說明如何對字串中的特定文字或模式使用搜尋。|  
+|[操作說明：判斷字串是否代表數值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|示範如何安全地剖析字串，以查看它是否有有效的數值。|  
 |[字串內插補點](../../language-reference/tokens/interpolated.md)|描述可提供方便語法以設定格式字串的字串內插補點功能。|
 |[基本字串作業](../../../../docs/standard/base-types/basic-string-operations.md)|提供使用 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 方法執行基本字串作業之主題的連結。|  
 |[剖析字串](../../../standard/base-types/parsing-strings.md)|描述如何將.NET 基底類型的字串表示轉換成對應類型的執行個體。|  
