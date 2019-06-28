@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 3ac8b2260e5da1e91c167e3e9ef91039deb983b2
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 0dfb2469ac3f497a40a3008c9933977947685979
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380237"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425494"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>WorkflowServiceHost 中的並存版本控制
 <xref:System.ServiceModel.Activities.WorkflowServiceHost> .NET Framework 4.5 中引進的並排顯示版本控制提供裝載在單一端點上的工作流程服務的多個版本的功能。 提供的並存功能可讓工作流程服務進行設定，以便工作流程服務的新執行個體是使用新的工作流程定義所建立，而執行中的執行個體則是使用現有的定義完成。 本主題提供使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 並存執行工作流程服務的概觀。  
@@ -82,7 +82,7 @@ End With
 >  如果服務在最初部署中沒有設定 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>，而又建立更新版本，那麼這種做法會很有用。  
   
 ### <a name="adding-a-new-version-to-a-web-hosted-workflow-service"></a>將新版本加入至 Web 主控工作流程服務  
- 在 Web 主控服務中設定新版工作流程服務的第一步，就是在 `App_Code` 資料夾中建立與服務檔同名的新資料夾。 如果服務的 `xamlx` 檔案命名為 `MortgageWorkflow.xamlx`，該資料夾也必須命名為 `MortgageWorkflow`。 將原始服務的 `xamlx` 檔案複本放在這個資料夾中，並重新命名為新的名稱，例如 `MortgageWorkflowV1.xamlx`。 對主要服務進行所需的變更，更新其 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>，然後部署服務。 在下列範例中，<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> 已經以 <xref:System.Activities.WorkflowIdentity.Name%2A> 的 `MortageWorkflow` 和 <xref:System.Activities.WorkflowIdentity.Version%2A> 的 `2.0.0.0` 進行更新。  
+ 在 Web 主控服務中設定新版工作流程服務的第一步，就是在 `App_Code` 資料夾中建立與服務檔同名的新資料夾。 如果服務的 `xamlx` 檔案命名為 `MortgageWorkflow.xamlx`，該資料夾也必須命名為 `MortgageWorkflow`。 將原始服務的 `xamlx` 檔案複本放在這個資料夾中，並重新命名為新的名稱，例如 `MortgageWorkflowV1.xamlx`。 對主要服務進行所需的變更，更新其 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>，然後部署服務。 在下列範例中，<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> 已經以 <xref:System.Activities.WorkflowIdentity.Name%2A> 的 `MortgageWorkflow` 和 <xref:System.Activities.WorkflowIdentity.Version%2A> 的 `2.0.0.0` 進行更新。  
   
  ![如果螢幕擷取畫面顯示 DefinitionIdentity 的 WorkflowIdentity。](./media/side-by-side-versioning-in-workflowservicehost/definitionidentity-workflowidentity.bmp)  
   

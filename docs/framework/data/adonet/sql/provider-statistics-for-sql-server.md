@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: b2b63719149c21eba493b3d8f2fc65309515bb0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de05a8783fa957c459006e3ec27d9e8668e7226c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646003"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422649"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server 的提供者統計資料
 從 .NET Framework 2.0 版開始，.NET Framework Data Provider for SQL Server 便支援執行階段統計資料。 建立有效的連接物件後，您必須藉由將 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 物件的 <xref:System.Data.SqlClient.SqlConnection> 屬性設為 `True`，以啟用統計資料。 統計資料啟用後，透過 <xref:System.Collections.IDictionary> 物件的 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 方法擷取 <xref:System.Data.SqlClient.SqlConnection> 參考，可以將它們做為「某時間的快照集」進行檢閱。 您可使用一組名稱/值配對字典項目的形式透過清單列舉。 這些名稱/值配對沒有排列順序。 您可以隨時呼叫 <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> 物件的 <xref:System.Data.SqlClient.SqlConnection> 方法，以重設計數器。 如果尚未啟用統計資料蒐集，則不會產生例外狀況。 此外，如果呼叫 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 時未先呼叫 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>，則擷取的值會是每個項目的初始值。 如果啟用統計資料，並執行應用程式一段時間，然後停用統計資料，則擷取的值會反映到停用統計資料時所收集的值。 蒐集的所有統計資料值都是以每個連接為基礎。  
@@ -31,7 +31,7 @@ ms.locfileid: "61646003"
 |`BytesSent`|傳回在應用程式已開始使用提供者並啟用統計資料後，TDS 封包中傳送至 SQL Server 之資料的位元組數目。|  
 |`ConnectionTime`|在啟用統計資料後連接已開啟的時間量 (以毫秒為單位；如果統計資料是在開啟連接之前啟用的，則為總連接時間)。|  
 |`CursorOpens`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回透過連接開啟游標的次數。<br /><br /> 請注意，不會將 SELECT 陳述式傳回的唯讀/順向結果視為游標，因此不會影響此計數器。|  
-|`ExecutionTime`|一旦啟用統計資料後，傳回提供者在處理作業所耗用的累計時間量 (以毫秒為單位)，包括等待伺服器回覆的時間，以及提供者自身執行程式碼的時間。<br /><br /> 包含執行時間程式碼的類別有：<br /><br /> SqlConnection<br /><br /> SqlCommand<br /><br /> SqlDataReader<br /><br /> SqlDataAdapter<br /><br /> SqlTransaction<br /><br /> SqlCommandBuilder<br /><br /> 為了讓對效能有關鍵作用的成員數目儘可能最小，不會對下列成員計時：<br /><br /> SqlDataReader<br /><br /> this[] 運算子 (全部多載)<br /><br /> GetBoolean<br /><br /> GetChar<br /><br /> GetDateTime<br /><br /> GetDecimal<br /><br /> GetDouble<br /><br /> GetFloat<br /><br /> GetGuid<br /><br /> GetInt16<br /><br /> GetInt32<br /><br /> GetInt64<br /><br /> GetName<br /><br /> GetOrdinal<br /><br /> GetSqlBinary<br /><br /> GetSqlBoolean <br /><br /> GetSqlByte <br /><br /> GetSqlDateTime <br /><br /> GetSqlDecimal <br /><br /> GetSqlDouble <br /><br /> GetSqlGuid <br /><br /> GetSqlInt16 <br /><br /> GetSqlInt32 <br /><br /> GetSqlInt64 <br /><br /> GetSqlMoney <br /><br /> GetSqlSingle <br /><br /> GetSqlString <br /><br /> GetString<br /><br /> IsDBNull|  
+|`ExecutionTime`|一旦啟用統計資料後，傳回提供者在處理作業所耗用的累計時間量 (以毫秒為單位)，包括等待伺服器回覆的時間，以及提供者自身執行程式碼的時間。<br /><br /> 包含執行時間程式碼的類別有：<br /><br /> SqlConnection<br /><br /> SqlCommand<br /><br /> SqlDataReader<br /><br /> SqlDataAdapter<br /><br /> SqlTransaction<br /><br /> SqlCommandBuilder<br /><br /> 為了讓對效能有關鍵作用的成員數目儘可能最小，不會對下列成員計時：<br /><br /> SqlDataReader<br /><br /> this[] 運算子 (全部多載)<br /><br /> GetBoolean<br /><br /> GetChar<br /><br /> GetDateTime<br /><br /> GetDecimal<br /><br /> GetDouble<br /><br /> GetFloat<br /><br /> GetGuid<br /><br /> GetInt16<br /><br /> GetInt32<br /><br /> GetInt64<br /><br /> GetName<br /><br /> GetOrdinal<br /><br /> GetSqlBinary<br /><br /> GetSqlBoolean<br /><br /> GetSqlByte<br /><br /> GetSqlDateTime<br /><br /> GetSqlDecimal<br /><br /> GetSqlDouble<br /><br /> GetSqlGuid<br /><br /> GetSqlInt16<br /><br /> GetSqlInt32<br /><br /> GetSqlInt64<br /><br /> GetSqlMoney<br /><br /> GetSqlSingle<br /><br /> GetSqlString<br /><br /> GetString<br /><br /> IsDBNull|  
 |`IduCount`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回透過連接執行之 INSERT、DELETE 及 UPDATE 陳述式的總數。|  
 |`IduRows`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回透過連接執行的 INSERT、DELETE 及 UPDATE 陳述式所影響的資料列總數。|  
 |`NetworkServerTime`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回提供者等待伺服器回覆的累計時間量 (以毫秒為單位)。|  
@@ -114,7 +114,7 @@ Module Module1
   
   Function GetConnectionString() As String  
     ' To avoid storing the connection string in your code,  
-    ' you can retrive it from a configuration file.  
+    ' you can retrieve it from a configuration file.  
     Return "Data Source=localhost;Integrated Security=SSPI;" & _  
       "Initial Catalog=AdventureWorks"  
   End Function  
@@ -192,7 +192,7 @@ namespace CS_Stats_Console_GetValue
     private static string GetConnectionString()  
     {  
       // To avoid storing the connection string in your code,  
-      // you can retrive it from a configuration file.  
+      // you can retrieve it from a configuration file.  
       return "Data Source=localhost;Integrated Security=SSPI;" +   
         "Initial Catalog=AdventureWorks";  
     }  
@@ -261,7 +261,7 @@ Module Module1
   
   Function GetConnectionString() As String  
     ' To avoid storing the connection string in your code,  
-    ' you can retrive it from a configuration file.  
+    ' you can retrieve it from a configuration file.  
     Return "Data Source=localhost;Integrated Security=SSPI;" & _  
       "Initial Catalog=AdventureWorks"  
   End Function  
@@ -330,7 +330,7 @@ namespace CS_Stats_Console_GetAll
     private static string GetConnectionString()  
     {  
       // To avoid storing the connection string in your code,  
-      // you can retrive it from a configuration file.  
+      // you can retrieve it from a configuration file.  
       return "Data Source=localhost;Integrated Security=SSPI;" +   
         "Initial Catalog=AdventureWorks";  
     }  

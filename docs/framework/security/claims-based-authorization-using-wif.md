@@ -3,12 +3,12 @@ title: 使用 WIF 進行宣告式授權
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: 0c99053610c8df9b6825c773a09cb1330d1e22f4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9d20f8fbce916a038fc8224492a4077e1978ed8c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650441"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422363"
 ---
 # <a name="claims-based-authorization-using-wif"></a>使用 WIF 進行宣告式授權
 在信賴憑證者應用程式中，授權會判斷哪些是已驗證的識別可以存取的資源，以及可以針對這些資源執行哪些作業。 不適當或弱式授權會導致資訊洩露以及資料遭竄改。 本主題概述可使用 Windows Identity Foundation (WIF) 和 Security Token Service (STS) (例如 Microsoft Azure Access Control Service (ACS)) 為宣告感知 ASP.NET Web 應用程式和服務實作授權的方式。  
@@ -23,13 +23,13 @@ ms.locfileid: "64650441"
  RBAC 是一種授權方式，應用程式會根據使用者角色來管理和落實使用者權限。 如果使用者有執行動作所需的角色，應用程式就會授與存取權限，否則會拒絕存取。  
   
 ### <a name="iprincipalisinrole-method"></a>IPrincipal.IsInRole 方法  
- 若要在宣告感知應用程式中實作 RBAC 這種方式，請使用 **IPrinicpal** 介面中的 **IsInRole()** 方法，就如同在非宣告感知應用程式中的做法一樣。 **IsInRole()** 方法的使用方式有下列幾種：  
+ 若要在宣告感知應用程式中實作 RBAC 這種方式，使用**isinrole （)** 方法中的**IPrincipal**介面，就如同在非宣告感知應用程式。 **IsInRole()** 方法的使用方式有下列幾種：  
   
-- 明確呼叫 **IPrincipal.IsInRole("Administrator")**。 如果使用這種方式，結果會是布林值。 因此，您可以在條件陳述式中使用。 使用時，它可以位於程式碼中的任意位置。  
+- 明確呼叫 **IPrincipal.IsInRole("Administrator")** 。 如果使用這種方式，結果會是布林值。 因此，您可以在條件陳述式中使用。 使用時，它可以位於程式碼中的任意位置。  
   
-- 使用安全性要求 **PrincipalPermission.Demand()**。 使用這種方式時，如果無法滿足要求，結果會發生例外狀況。 因此，您可以在例外狀況處理策略中使用這種方式。 從效能觀點來看，擲回例外狀況與傳回布林值相比，所耗費的效能會多出許多。 使用時，它可以位於程式碼中的任意位置。  
+- 使用安全性要求 **PrincipalPermission.Demand()** 。 使用這種方式時，如果無法滿足要求，結果會發生例外狀況。 因此，您可以在例外狀況處理策略中使用這種方式。 從效能觀點來看，擲回例外狀況與傳回布林值相比，所耗費的效能會多出許多。 使用時，它可以位於程式碼中的任意位置。  
   
-- 使用宣告式屬性 **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]**。 這種方式是用來裝飾方法，因此稱為宣告式。 它不能在方法實作內的程式碼區塊中使用。 如果無法滿足要求，結果會發生例外狀況。 因此，您應該確認可以在例外狀況處理策略中使用這種方式。  
+- 使用宣告式屬性 **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]** 。 這種方式是用來裝飾方法，因此稱為宣告式。 它不能在方法實作內的程式碼區塊中使用。 如果無法滿足要求，結果會發生例外狀況。 因此，您應該確認可以在例外狀況處理策略中使用這種方式。  
   
 - 使用 URL 授權，使用 **web.config** 中的 **\<authorization>** 區段。如果您是在 URL 層級管理授權，就很適合使用這種方式。 與先前提及的方式相比，這種方式是最粗糙的。 其優點在於我們只要變更組態檔內容即可，也就是說，我們不必編譯程式碼就可以獲得變更的好處。  
   

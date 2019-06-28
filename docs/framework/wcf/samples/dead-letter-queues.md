@@ -2,12 +2,12 @@
 title: 寄不出的信件佇列
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 8b3ed5447441622d800cff6147f81fcd9a59c88f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 59e2344d2bd6a9de3396f7d6d878182333138ff3
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650137"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425489"
 ---
 # <a name="dead-letter-queues"></a>寄不出的信件佇列
 這個範例示範如何處理已傳遞失敗的訊息。 它根據[交易 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)範例。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。
@@ -156,7 +156,7 @@ class Client
 ```csharp
 public void SubmitPurchaseOrder(PurchaseOrder po)
 {
-    Console.WriteLine("Submitting purchase order did not succed ", po);
+    Console.WriteLine("Submitting purchase order did not succeed ", po);
     MsmqMessageProperty mqProp =
                   OperationContext.Current.IncomingMessageProperties[
                   MsmqMessageProperty.Name] as MsmqMessageProperty;

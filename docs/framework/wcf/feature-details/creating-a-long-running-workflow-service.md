@@ -2,12 +2,12 @@
 title: 建立長期執行的工作流程服務
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 10a2c568f14c3f3c1818fd8b3240279b798777b8
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 1ca0f2ed4c2ab900191165d100848811e5436c3c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063804"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425412"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>建立長期執行的工作流程服務
 本主題會說明如何建立長時間執行的工作流程服務。 長時間執行的工作流程服務可能會執行一段很長的時間。 有時候，此工作流程可能會處於閒置狀態，等候其他某些資訊。 發生這種情況時，此工作流程會保存至 SQL 資料庫並從記憶體中移除。 當其他資訊可用時，此工作流程執行個體就會重新載入記憶體中並繼續執行。  在本案例中，您要實作非常簡化的訂購系統。  用戶端會將初始訊息傳送至工作流程服務，以便啟動訂單。 然後，服務會將訂單 ID 傳回給用戶端。 此時，工作流程服務會等候用戶端的其他訊息、進入閒置狀態並保存至 SQL Server 資料庫。  當用戶端傳送下一則訊息以訂購項目時，工作流程服務就會重新載入記憶體中，並且完成訂單處理作業。 在程式碼範例中，它會傳回一個字串，表示項目已經加入至訂單。 此程式碼範例並非採用此技術的實際應用程式，而是說明長時間執行工作流程服務的簡單範例。 本主題假設您知道如何建立 Visual Studio 2012 專案和方案。
@@ -91,7 +91,7 @@ ms.locfileid: "65063804"
 
          這樣就會建立新的訂單 ID 並將此值放入 orderId 變數中。
 
-    6. 選取  **ReplyToStartOrder**活動。 在 屬性 視窗中，按一下 省略符號按鈕**CorrelationInitializers**。 選取 **新增初始設定式**連結並輸入`orderIdHandle`在初始設定式 文字方塊中，選取查詢相互關聯類型的相互關聯初始設定式，然後選取 p_orderId XPATH 查詢 下拉式清單方塊下方。 下圖將顯示這些設定。 按一下 [確定] 。  這樣就會初始化用戶端與這個工作流程服務執行個體之間的相互關聯。 收到包含此訂單 ID 的訊息時，它就會路由傳送至這個工作流程服務執行個體。
+    6. 選取  **ReplyToStartOrder**活動。 在 屬性 視窗中，按一下 省略符號按鈕**CorrelationInitializers**。 選取 **新增初始設定式**連結並輸入`orderIdHandle`在初始設定式 文字方塊中，選取查詢相互關聯類型的相互關聯初始設定式，然後選取 p_orderId XPATH 查詢 下拉式清單方塊下方。 下圖將顯示這些設定。 按一下 [確定]  。  這樣就會初始化用戶端與這個工作流程服務執行個體之間的相互關聯。 收到包含此訂單 ID 的訊息時，它就會路由傳送至這個工作流程服務執行個體。
 
          ![加入相互關聯初始設定式](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "新增相互關聯初始設定式。")
 

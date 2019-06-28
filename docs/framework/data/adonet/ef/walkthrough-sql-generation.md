@@ -2,12 +2,12 @@
 title: 逐步解說：SQL 產生
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 380ab80a577fa103c33328047cd24cce6be5cb6e
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 5d8723c6a6d1ab12a2ba1f0f2f7cd5e09e82bfad
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690352"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422767"
 ---
 # <a name="walkthrough-sql-generation"></a>逐步解說：SQL 產生
 
@@ -128,7 +128,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
 
 ![Diagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")
 
-下一個 "false" 會推送到 IsParentAJoin 堆疊上，而且會處理聯結條件 Var(Extent1).CategoryID == Var(Extent2).CategoryID。 Var(extenent1 會解析成\<symbol_Extent1 > 查詢符號表之後。 執行個體已解析為簡單的符號，處理 Var(Extent1) 的結果。CategoryID、 sqlbuilder 並包含\<symbol1 >。 」會傳回 CategoryID"。 同樣地，將會處理比較的另一端，而且瀏覽聯結條件的結果會附加到 SelectStatement1 的 FROM 子句，並從 IsParentAJoin 堆疊推出 "false" 的值。
+下一個 "false" 會推送到 IsParentAJoin 堆疊上，而且會處理聯結條件 Var(Extent1).CategoryID == Var(Extent2).CategoryID。 Var(Extent1) 會解析成\<symbol_Extent1 > 查詢符號表之後。 執行個體已解析為簡單的符號，處理 Var(Extent1) 的結果。CategoryID、 sqlbuilder 並包含\<symbol1 >。 」會傳回 CategoryID"。 同樣地，將會處理比較的另一端，而且瀏覽聯結條件的結果會附加到 SelectStatement1 的 FROM 子句，並從 IsParentAJoin 堆疊推出 "false" 的值。
 
 這樣就已經完整處理 Join1，而且會從符號表推出範圍。
 

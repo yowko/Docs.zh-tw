@@ -2,12 +2,12 @@
 title: <messageSenderAuthentication> 項目
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: 410fffd541926b9a2e75c04d26a2a1e08a262939
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 804c280bcdb0fecc87f71121b7d95b5fd0268de9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764084"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423115"
 ---
 # <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication > 項目
 指定對等訊息寄件者的驗證選項。  
@@ -38,10 +38,10 @@ ms.locfileid: "61764084"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|customCertificateValidatorType|用來驗證自訂型別的型別和組件。 當 `certificateValidationMode` 設定為 `Custom` 時，必須設定這個屬性。|  
-|certifcateValidationMode|指定用來驗證認證之三個模式的其中一個。 如果設定為 `Custom`，也必須提供 `customCertificateValidator`。|  
-|revocationMode|用於檢查撤銷憑證清單 (CRL) 的模式之一。|  
-|trustedStoreLocation|兩個系統存放位置的其中一個：`LocalMachine` 或 `CurrentUser`。 當與用戶端交涉服務憑證時，會使用這個值。 針對執行驗證**受信任的人**將儲存在指定的存放區位置。|  
+|`customCertificateValidatorType`|用來驗證自訂型別的型別和組件。 當 `certificateValidationMode` 設定為 `Custom` 時，必須設定這個屬性。|  
+|`certificateValidationMode`|指定用來驗證認證之三個模式的其中一個。 如果設定為 `Custom`，也必須提供 `customCertificateValidator`。|  
+|`revocationMode`|用於檢查撤銷憑證清單 (CRL) 的模式之一。|  
+|`trustedStoreLocation`|兩個系統存放位置的其中一個：`LocalMachine` 或 `CurrentUser`。 當與用戶端交涉服務憑證時，會使用這個值。 針對執行驗證**受信任的人**將儲存在指定的存放區位置。|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType 屬性  
   

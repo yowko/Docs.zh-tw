@@ -3,12 +3,12 @@ title: 建置第一個宣告感知 ASP.NET Web 應用程式
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: ae313cc16532cf6fc38d28161d4d5a2cf630bbc1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db5060826d3bfcc259c098a160354892a050554c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650475"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422398"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>建置第一個宣告感知 ASP.NET Web 應用程式
 ## <a name="applies-to"></a>適用於  
@@ -27,7 +27,7 @@ ms.locfileid: "64650475"
   
 3. 使用者從 STS 重新導向至宣告感知應用程式，並且要求中已包含 STS 發行的權杖。  
   
-4. 宣告感知應用程式設定為信任 STS 和它發行的權杖。 宣告感知應用程式會使用 WIF 驗證和剖析權杖。 開發人員可以使用適當的 WIF API 和類型 (例如 **ClaimsPrincpal**) 來滿足應用程式的需求 (例如為它實作授權)。  
+4. 宣告感知應用程式設定為信任 STS 和它發行的權杖。 宣告感知應用程式會使用 WIF 驗證和剖析權杖。 開發人員可以使用適當的 WIF API 和類型 (例如 **ClaimsPrincipal**) 來滿足應用程式的需求 (例如為它實作授權)。  
   
  從 .NET 4.5 開始，WIF 是 .NET Framework 套件的一部分。 在架構中直接提供 WIF 類別可讓 .NET 中的宣告式身分識別的整合更加深入，讓您更容易使用宣告。 使用 WIF 4.5，您不必安裝任何超出範圍的元件就能開始開發宣告感知 Web 應用程式。 WIF 類別現在已廣泛存在於各種組件，主要的類別是 System.Security.Claims、System.IdentityModel 和 System.IdentityModel.Services。  
   

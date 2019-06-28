@@ -2,12 +2,12 @@
 title: WCF 中的安全性行為
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: dd59bc97c2f4e2516528a6cbdf40b4c44f4b41eb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 53d8fedb5f562dfbc4aec566f8d0c442b255e1c9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650241"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424684"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF 中的安全性行為
 在 Windows Communication Foundation (WCF) 中，行為會修改服務層級或端點層級的執行階段行為。 (如需行為的詳細資訊在一般情況下，請參閱[指定服務執行階段行為](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。)*安全性行為*可控制認證、 驗證、 授權和稽核記錄。 您可以藉由程式設計的方式或透過組態的方式使用這些行為。 本主題將著重於設定下列與安全性功能相關的行為：  
@@ -114,7 +114,7 @@ ms.locfileid: "64650241"
  </endpointBehaviors>  
 ```  
   
-#### <a name="clientcertifictate-element"></a>\<clientCertifictate > 項目  
+#### <a name="clientcertificate-element"></a>\<clientCertificate > 項目  
  使用此項目來設定用以驗證用戶端的憑證。 如需詳細資訊，請參閱[如何：指定用戶端認證值](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
 #### <a name="httpdigest"></a>\<httpDigest>  
@@ -204,7 +204,7 @@ ms.locfileid: "64650241"
 ```  
   
 ## <a name="secure-metadata-exchange"></a>安全的中繼資料交換  
- 將中繼資料匯出至用戶端對於服務和用戶端的開發人員來說是很方便的，因為如此一來便可以下載設定和用戶端程式碼。 若要降低將服務暴露給惡意使用者的機會，可以使用 SSL over HTTP (HTTPS) 機制來進行安全的傳輸。 若要這麼做，您必須先將適當的 X.509 憑證，繫結至裝載服務之電腦上的特定連接埠  (如需詳細資訊，請參閱 < [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。)第二，新增[ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)至服務組態，並將`HttpsGetEnabled`屬性設定為`true`。 最後，將 `HttpsGetUrl` 屬性設定為服務中繼資料端點的 URL，如下列範例所示。  
+ 將中繼資料匯出至用戶端對於服務和用戶端的開發人員來說是很方便的，因為如此一來便可以下載設定和用戶端程式碼。 若要降低將服務暴露給惡意使用者的機會，可以使用 SSL over HTTP (HTTPS) 機制來進行安全的傳輸。 若要這麼做，您必須先將適當的 X.509 憑證，繫結至裝載服務之電腦上的特定連接埠 (如需詳細資訊，請參閱 < [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。)第二，新增[ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)至服務組態，並將`HttpsGetEnabled`屬性設定為`true`。 最後，將 `HttpsGetUrl` 屬性設定為服務中繼資料端點的 URL，如下列範例所示。  
   
 ```xml  
 <behaviors>  

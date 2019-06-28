@@ -3,12 +3,12 @@ title: 宣告式身分識別模型
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 8560c7fd1969cfed6e43e2982fb69313c45c9405
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b7cafa727251c28b79615a37adce4effe6885392
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650466"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422412"
 ---
 # <a name="claims-based-identity-model"></a>宣告式身分識別模型
 當您建置宣告感知應用程式時，使用者識別會在應用程式中以一組宣告表示。 一個宣告可以是使用者的名稱，另一個可能是電子郵件地址。 這個概念是外部識別系統設定為提供應用程式一切必要資訊，使其了解是哪位使用者在提出要求，並且確保會使用密碼編譯您自受信任來源取得的識別資料。  
@@ -58,7 +58,7 @@ ms.locfileid: "64650466"
  當您建置依賴宣告的應用程式時，表示您建立的是信賴憑證者 (RP) 應用程式。 RP 的同義字包含「宣告感知應用程式」和「宣告式應用程式」。 Web 應用程式和 Web 服務都可以是 RP。 RP 應用程式會使用 STS 發行的權杖，並從權杖擷取宣告方便進行識別相關工作。 WIF 可提供相關功能，協助您建置 RP 應用程式。  
   
 ### <a name="standards"></a>標準  
- 為了讓上述所有項目互通，前述案例中會使用幾項 WS-* 標準。 案例中會使用 WS-MetadataExchange 擷取原則，而原則本身的結構是以 WS-Policy 規格為基礎。 STS 會公開實作 WS-Trust 規格的端點，以描述如何要求和接收安全性權杖。 現今大部分 STS 都是使用安全宣示標記語言 (Security Assertion Markup Langauge，SAML) 格式來發行權杖。 SAML 是業界公認的 XML 詞彙，可用來以互通方式表示宣告。 或者，這可讓您在多重平台的情況下與完全相異平台上的 STS 溝通，並且無論平台為何，單一登入在您的所有應用程式中都可以達成。  
+ 為了讓上述所有項目互通，前述案例中會使用幾項 WS-* 標準。 案例中會使用 WS-MetadataExchange 擷取原則，而原則本身的結構是以 WS-Policy 規格為基礎。 STS 會公開實作 WS-Trust 規格的端點，以描述如何要求和接收安全性權杖。 大部分 Sts 今天格式來發行權杖與安全性判斷提示標記語言 (SAML)。 SAML 是業界公認的 XML 詞彙，可用來以互通方式表示宣告。 或者，這可讓您在多重平台的情況下與完全相異平台上的 STS 溝通，並且無論平台為何，單一登入在您的所有應用程式中都可以達成。  
   
 ### <a name="browser-based-applications"></a>瀏覽器架構應用程式  
  並非只有智慧型用戶端可以使用宣告型識別模型， 瀏覽器架構應用程式 (也稱為被動用戶端) 也可以使用。 下列情況將描述這要如何達成。  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: baf65340e390c7439e8639e334819fb0bf60f952
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 376448502b7b9c7002213be5c3437849a3868166
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662618"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425027"
 ---
 # <a name="federation"></a>同盟
 此主題提供聯合安全性概念的簡短概觀。 它也說明對部署聯合的安全性架構的 Windows Communication Foundation (WCF) 支援。 示範聯合的範例應用程式，請參閱[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
@@ -284,7 +284,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ### <a name="client-at-organization-a"></a>組織 A 的用戶端  
  下圖顯示組織 A 的用戶端，以及關於進行 `MyService` 服務呼叫的步驟。 也會包含其他功能元件以提供完整性。  
   
- ![圖表 showwing MyService 服務呼叫中的步驟。](./media/federation/federation-myservice-service-call-process.gif)  
+ ![此圖表顯示 MyService 服務呼叫中的步驟。](./media/federation/federation-myservice-service-call-process.gif)  
   
 ## <a name="summary"></a>總結  
  聯合安全性清楚地分隔責任，並協助建置安全且可擴充的服務架構。 用於建置及部署分散式應用程式平台，WCF 會提供實作聯合的安全性的原生支援。  

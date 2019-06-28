@@ -2,12 +2,12 @@
 title: 安全性通訊協定 1.0 版
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-ms.openlocfilehash: 8114183109befcb77c3bf2b35fe246118da5afde
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 71855b73bb08d5edef05747dcff9e1ac04fb951f
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586879"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425103"
 ---
 # <a name="security-protocols-version-10"></a>安全性通訊協定 1.0 版
 Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有現有的企業訊息安全性需求。 本節描述 Windows Communication Foundation (WCF) 1.0 版詳細資料 (在中實作<xref:System.ServiceModel.Channels.SecurityBindingElement>) 下列 Web 服務安全性通訊協定。  
@@ -45,18 +45,18 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 |KerberosOverTransport|Windows|X509|Transport|  
 |IssuedTokenOverTransport|聯合|X509|Transport|  
 |SspiNegotiatedOverTransport|交涉的 Windows Sspi|交涉的 Windows Sspi|Transport|  
-|AnonymousForCertificate|None|X509|訊息|  
-|UserNameForCertificate|使用者名稱/密碼|X509|訊息|  
-|MutualCertificate|X509|X509|訊息|  
-|MutualCertificateDuplex|X509|X509|訊息|  
-|IssuedTokenForCertificate|聯合|X509|訊息|  
-|Kerberos|Windows|Windows|訊息|  
-|IssuedToken|聯合|聯合|訊息|  
-|SspiNegotiated|交涉的 Windows Sspi|交涉的 Windows Sspi|訊息|  
-|AnonymousForSslNegotiated|None|X509、TLS-Nego|訊息|  
-|UserNameForSslNegotiated|使用者名稱/密碼|X509、TLS-Nego|訊息|  
-|MutualSslNegotiated|X509|X509、TLS-Nego|訊息|  
-|IssuedTokenForSslNegotiated|聯合|X509、TLS-Nego|訊息|  
+|AnonymousForCertificate|None|X509|Message|  
+|UserNameForCertificate|使用者名稱/密碼|X509|Message|  
+|MutualCertificate|X509|X509|Message|  
+|MutualCertificateDuplex|X509|X509|Message|  
+|IssuedTokenForCertificate|聯合|X509|Message|  
+|Kerberos|Windows|Windows|Message|  
+|IssuedToken|聯合|聯合|Message|  
+|SspiNegotiated|交涉的 Windows Sspi|交涉的 Windows Sspi|Message|  
+|AnonymousForSslNegotiated|None|X509、TLS-Nego|Message|  
+|UserNameForSslNegotiated|使用者名稱/密碼|X509、TLS-Nego|Message|  
+|MutualSslNegotiated|X509|X509、TLS-Nego|Message|  
+|IssuedTokenForSslNegotiated|聯合|X509、TLS-Nego|Message|  
   
  使用這類驗證模式的端點可以使用 WS-SecurityPolicy (WS-SP) 來表示安全性需求。 本文件針對每個驗證模式描述安全性標頭和基礎結構訊息的結構，並提供原則和訊息的範例。  
   
@@ -129,7 +129,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
  WCF 支援 SAML v1.1 權杖 WSS SAML 權杖設定檔 1.0 和 1.1 版。 它也可以實作其他版本的 SAML 權杖格式。  
   
 ### <a name="15-security-context-token"></a>1.5 安全性內容權杖  
- WCF 支援的安全性內容權杖 (SCT) Ws-securecoversation 中引入。 SCT 是用來表示 SecureConversation 和二進位交涉通訊協定 TLS 和 SSPI 中所建立的安全性內容，說明如下。  
+ WCF 支援的安全性內容權杖 (SCT) Ws-secureconversation 中導入。 SCT 是用來表示 SecureConversation 和二進位交涉通訊協定 TLS 和 SSPI 中所建立的安全性內容，說明如下。  
   
 ## <a name="2-common-message-security-parameters"></a>2.通用訊息安全性參數  
   

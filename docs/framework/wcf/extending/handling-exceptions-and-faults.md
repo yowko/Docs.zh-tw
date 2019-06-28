@@ -2,12 +2,12 @@
 title: 處理例外狀況和錯誤
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: f2042bac30ee84530c0da9c30193919dfb99a608
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e99ef5721791af229c68a958e4840a0703d34ac9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655009"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424935"
 ---
 # <a name="handling-exceptions-and-faults"></a>處理例外狀況和錯誤
 例外狀況是用來在本機上傳送服務或用戶端實作內發生的錯誤。 另一方面，錯誤 (Fault) 是用來傳送跨越服務界限 (例如從伺服器到用戶端，反之亦然) 發生的錯誤 (Error)。 除了錯誤 (Fault) 以外，傳輸通道也經常會使用傳輸特定的機制來傳送傳輸層級的錯誤 (Error)。 例如，HTTP 傳輸會使用 404 等狀態碼來傳送不存在的端點 URL (表示沒有端點可傳回錯誤)。 本文件包含的三個章節都提供指引給自訂通道作者。 第一個章節會提供關於何時與如何定義及擲回例外狀況的指引， 而第二個章節會提供關於產生和使用錯誤的指引， 第三個章節則會說明如何提供追蹤資訊，以協助自訂通道的使用者針對執行中的應用程式進行疑難排解。  
@@ -68,11 +68,11 @@ public abstract class MessageFault
 }  
 ```  
   
- `Code` 屬性會對應到 `env:Code` (或是 SOAP 1.1 中的 `faultCode`)，並且會識別該錯誤的類型。 SOAP 1.2 針對 `faultCode` 定義五種可允許的值 (例如，Sender 和 Receiver)，並且定義可以包含任何子代碼值的 `Subcode` 項目  (請參閱[SOAP 1.2 規格](https://go.microsoft.com/fwlink/?LinkId=95176)如可允許的錯誤代碼及其意義的清單。)SOAP 1.1 具有稍有不同的機制：它會定義四個`faultCode`可加以擴充，藉由定義全新的或使用點標記法建立更具體的值 （例如，用戶端和伺服器） `faultCodes`，例如 Client.Authentication。  
+ `Code` 屬性會對應到 `env:Code` (或是 SOAP 1.1 中的 `faultCode`)，並且會識別該錯誤的類型。 SOAP 1.2 針對 `faultCode` 定義五種可允許的值 (例如，Sender 和 Receiver)，並且定義可以包含任何子代碼值的 `Subcode` 項目 (請參閱[SOAP 1.2 規格](https://go.microsoft.com/fwlink/?LinkId=95176)如可允許的錯誤代碼及其意義的清單。)SOAP 1.1 具有稍有不同的機制：它會定義四個`faultCode`可加以擴充，藉由定義全新的或使用點標記法建立更具體的值 （例如，用戶端和伺服器） `faultCodes`，例如 Client.Authentication。  
   
  當您使用 MessageFault 來撰寫錯誤時，FaultCode.Name 和 FaultCode.Namespace 便會對應至 SOAP 1.2 `env:Code` 或 SOAP 1.1 `faultCode` 的名稱和命名空間。 在 SOAP 1.2 中，FaultCode.SubCode 會對應至 `env:Subcode`，若在 SOAP 1.1 則會對應至 null。  
   
- 如果需要以程式設計的方式來區別錯誤，您就應該建立新的錯誤子代碼 (如果是使用 SOAP 1.1 則是建立新的錯誤代碼)。 這種做法類似於建立新的例外狀況類型。 您應該避免搭配 SOAP 1.1 錯誤代碼使用點標記法  ( [WS-Basic profile](https://go.microsoft.com/fwlink/?LinkId=95177)也不建議使用錯誤代碼點標記法。)  
+ 如果需要以程式設計的方式來區別錯誤，您就應該建立新的錯誤子代碼 (如果是使用 SOAP 1.1 則是建立新的錯誤代碼)。 這種做法類似於建立新的例外狀況類型。 您應該避免搭配 SOAP 1.1 錯誤代碼使用點標記法 ( [WS-Basic profile](https://go.microsoft.com/fwlink/?LinkId=95177)也不建議使用錯誤代碼點標記法。)  
   
 ```  
 public class FaultCode  
@@ -286,7 +286,7 @@ public override bool OnTryCreateException(
  如果是復原情形不同的特定錯誤情況，可考慮定義 `ProtocolException` 的衍生類別。  
   
 ### <a name="mustunderstand-processing"></a>MustUnderstand 處理  
- SOAP 會定義一般錯誤，表示接收者不瞭解必要標頭。 這個錯誤稱為 `mustUnderstand` 錯誤。 在 WCF 中，自訂通道永遠不會產生`mustUnderstand`錯誤。 相反地，WCF 發送器，也就是位於 WCF 通訊堆疊的頂端，會檢查，查看所有標頭已標記為 MustUndestand = true 已了解基礎堆疊。 如果全部都不瞭解，此時就會產生 `mustUnderstand` 錯誤。 使用者可以選擇關閉這個 `mustUnderstand` 處理，然後讓應用程式接收所有訊息標頭。 在這種情況下，應用程式便會負責執行 `mustUnderstand` 處理。產生的錯誤包括 NotUnderstood 標頭，其中包含堆疊不瞭解其 MustUnderstand=true 之標頭的名稱。  
+ SOAP 會定義一般錯誤，表示接收者不瞭解必要標頭。 這個錯誤稱為 `mustUnderstand` 錯誤。 在 WCF 中，自訂通道永遠不會產生`mustUnderstand`錯誤。 相反地，WCF 發送器，也就是位於 WCF 通訊堆疊的頂端，會檢查，查看所有標頭已標示為 MustUnderstand = true 已了解基礎堆疊。 如果全部都不瞭解，此時就會產生 `mustUnderstand` 錯誤。 使用者可以選擇關閉這個 `mustUnderstand` 處理，然後讓應用程式接收所有訊息標頭。 在這種情況下，應用程式便會負責執行 `mustUnderstand` 處理。產生的錯誤包括 NotUnderstood 標頭，其中包含堆疊不瞭解其 MustUnderstand=true 之標頭的名稱。  
   
  如果您的通訊協定通道傳送 MustUnderstand=true 的自訂標頭，並且收到 `mustUnderstand` 錯誤，則通道必須瞭解其傳送的標頭是否為該錯誤的成因。 `MessageFault` 類別上有兩個成員適用於這種情況：  
   

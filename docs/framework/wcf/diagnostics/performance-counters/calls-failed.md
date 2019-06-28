@@ -2,18 +2,18 @@
 title: 失敗的呼叫數
 ms.date: 03/30/2017
 ms.assetid: 52afeff8-333c-44a5-96ce-1f3c418523fc
-ms.openlocfilehash: e844f18b96a28c807a6f10195c9ab20780f23306
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8646adf08e2e6141c6117da7129f348c92105a7
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797406"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422143"
 ---
 # <a name="calls-failed"></a>失敗的呼叫數
 計數器名稱：失敗的呼叫數  
   
 ## <a name="description"></a>描述  
- 此作業中包含未處理之例外狀況的呼叫數。 每當此作業含有未處理的例外狀況時，此計數器就會遞增。  
+ 此作業中包含未處理之例外狀況的呼叫數。 此計數器會遞增每次此作業中發生未處理例外狀況。  
   
 ## <a name="see-also"></a>另請參閱
 

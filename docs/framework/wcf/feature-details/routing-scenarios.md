@@ -2,14 +2,14 @@
 title: 路由案例
 ms.date: 03/30/2017
 helpviewer_keywords:
-- rounting [WCF], scenarios
+- routing [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: cab683c11c20f3373a1140a9fd5ad499b2e696e5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0ab071bf7996a296563fbda68dfdc731e95ed897
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626040"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425351"
 ---
 # <a name="routing-scenarios"></a>路由案例
 若路由服務的自訂性相當高，在從頭建立新組態時設計足夠的路由邏輯可能會相當困難。  不過，大多數路由服務組態會遵循數種常見案例。 雖然這些案例可能無法直接套用於特定的組態，但若了解如何設定路由服務處理這些案例，就能協助您了解路由服務。  

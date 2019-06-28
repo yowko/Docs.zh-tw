@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eda4f8d3819af05b022e0633d6883cca940f67e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce001ed25d7704301d7f809887a445e3492e93fc
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866849"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422542"
 ---
 # <a name="library-element-net-native"></a>\<文件庫 > 項目 (.NET Native)
 定義包含類型和類型成員的組件，這些類型和類型成員的中繼資料可在執行階段用於反映。  
@@ -58,7 +58,7 @@ ms.locfileid: "61866849"
   
  `<Library>` 項目可當做容器來使用，以定義在執行階段需要中繼資料的程式項目；這個項目不會表示原則。 在編譯時期，編譯器工具只會在 `<Library>` 項目所指定的程式庫中，搜尋其子項目所識別的程式項目。 在其他情況下，編譯器工具會在所有程式庫 (包含 .NET Framework 核心程式庫) 中，搜尋 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 項目的子項目所識別的程式項目。  
   
- 您可以有條件地利用 `<Library>` 指示詞。 如果名稱`<Library>`項目開頭和結尾為星號 (\*)，則`<Library>`指示詞在應用程式參考星號之間指定的組件時，才有作用。 例如，只有在應用程式參考 Utillities.dll 組件時，下列執行階段指示詞才適用。  
+ 您可以有條件地利用 `<Library>` 指示詞。 如果名稱`<Library>`項目開頭和結尾為星號 (\*)，則`<Library>`指示詞在應用程式參考星號之間指定的組件時，才有作用。 例如，下列執行階段指示詞 Utilities.dll 組件參考的應用程式時，才適用。  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

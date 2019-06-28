@@ -2,12 +2,12 @@
 title: <peerAuthentication> 項目
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 1e99f6d117604f9ba2672972a4b09e7fe9f96792
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6aa11c50ef950a8a9d902a0fb77fdf301d18f7cb
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783368"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423049"
 ---
 # <a name="peerauthentication-element"></a>\<peerAuthentication > 項目
 指定對等用戶端的驗證選項。  
@@ -39,7 +39,7 @@ ms.locfileid: "61783368"
 |屬性|描述|  
 |---------------|-----------------|  
 |`customCertificateValidatorType`|選擇性字串。 用來驗證自訂型別的型別和組件。 當 `certificateValidationMode` 設定為 `Custom` 時，必須設定這個屬性。|  
-|`certifcateValidationMode`|選擇性列舉。 指定用來驗證認證之三個模式的其中一個。 如果設定為 `Custom`，也必須提供 `customCertificateValidator`。 預設為 `ChainTrust`。|  
+|`certificateValidationMode`|選擇性列舉。 指定用來驗證認證之三個模式的其中一個。 如果設定為 `Custom`，也必須提供 `customCertificateValidator`。 預設為 `ChainTrust`。|  
 |`revocationMode`|選擇性列舉。 用於檢查撤銷憑證清單 (CRL) 的模式之一。 預設為 `Online`。|  
 |`trustedStoreLocation`|選擇性列舉。 兩個系統存放位置的其中一個：`LocalMachine` 或 `CurrentUser`。 當與用戶端交涉服務憑證時，會使用這個值。 針對執行驗證**受信任的人**將儲存在指定的存放區位置。 預設為 `CurrentUser`。|  
   

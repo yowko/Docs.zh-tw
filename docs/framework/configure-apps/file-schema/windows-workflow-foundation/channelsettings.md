@@ -3,12 +3,12 @@ title: <channelSettings>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 94a4457f-f43f-458d-a47e-2d11103ee75e
-ms.openlocfilehash: f70e30c903fa9bfc3f5d6054ef2ec34bf1b3cba1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f24efdf6e2ba99eb4fc20b81d238d33c60e6b35a
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790204"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422945"
 ---
 # <a name="channelsettings"></a>\<channelSettings>
 指定通道快取的設定。  
@@ -64,7 +64,7 @@ ms.locfileid: "61790204"
  如需如何變更預設快取共用層級以及通道處理站和通道快取的快取設定的詳細資訊，請參閱[變更傳送活動的快取共用層級](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)。  
   
 ## <a name="example"></a>範例  
- 在裝載的工作流程服務中，您可以在應用程式組態檔中，指定處理站快取和通道快取設定。 若要執行這項操作，請加入包含處理站快取設定和通道快取的服務行為，然後將這個服務行為加入您的服務中。 下列範例顯示組態檔中包含的內容**MyChannelCacheBehavior**服務行為及自訂的處理站快取和通道快取設定。 這個服務行為新增至服務，透過**behaviorConfiguarion**屬性。  
+ 在裝載的工作流程服務中，您可以在應用程式組態檔中，指定處理站快取和通道快取設定。 若要執行這項操作，請加入包含處理站快取設定和通道快取的服務行為，然後將這個服務行為加入您的服務中。 下列範例顯示組態檔中包含的內容`MyChannelCacheBehavior`服務行為及自訂的處理站快取和通道快取設定。 這個服務行為新增至透過服務`behaviorConfiguration`屬性。  
   
 ```xml  
 <configuration>    

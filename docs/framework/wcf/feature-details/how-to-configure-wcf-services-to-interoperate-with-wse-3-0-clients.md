@@ -1,13 +1,13 @@
 ---
-title: HOW TO：將 WCF 服務設為與 WSE 3.0 用戶端相互操作
+title: 作法：將 WCF 服務設為與 WSE 3.0 用戶端相互操作
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 1c5a5e4e92eedb21e3405370e59344d3b861d1dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5034744059e7ed87d4f8b41c6ae89d1af1bf0f56
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619167"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425394"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>HOW TO：將 WCF 服務設為與 WSE 3.0 用戶端相互操作
 當 WCF 服務會設定為使用 August 2004 版本的 Ws-addressing 規格，Windows Communication Foundation (WCF) 服務將會與 Web Services Enhancements 3.0 for Microsoft.NET (WSE) 用戶端的連線層級相容性。  
@@ -24,7 +24,7 @@ ms.locfileid: "64619167"
   
     3. 指定驗證模式，以及用來保護藉由新增子系與 WSE 3.0 相容之訊息的 Ws-security 規格版本[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)到[ \<繫結 >](../../../../docs/framework/misc/binding.md)。  
   
-         若要設定驗證模式，請設定`authenicationMode`的屬性[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)。 驗證模式約略相等於 WSE 3.0 中的組合安全性判斷提示 (Assertion)。 下表會對應到 WSE 3.0 通行安全性判斷提示的 WCF 中的驗證模式。  
+         若要設定驗證模式，請設定`authenticationMode`的屬性[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)。 驗證模式約略相等於 WSE 3.0 中的組合安全性判斷提示 (Assertion)。 下表會對應到 WSE 3.0 通行安全性判斷提示的 WCF 中的驗證模式。  
   
         |WCF 驗證模式|WSE 3.0 組合安全性判斷提示|  
         |-----------------------------|----------------------------------------|  

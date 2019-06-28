@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: 3d345cfa3169e22e7c5e85cd1c7d11c2feef4f5f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d224535bb266d0a3673359388c6c211103df7374
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665966"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424852"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>端點：位址、繫結和合約
 使用 Windows Communication Foundation (WCF) 服務的所有通訊都都會透過*端點*的服務。 端點可讓用戶端存取至 WCF 服務所提供的功能。  
@@ -61,7 +61,7 @@ ms.locfileid: "64665966"
   
      如需有關如何定義合約的詳細資訊，請參閱 < [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md)。  
   
-- 行為：您可以使用端點行為來自訂服務端點的本機行為。 端點行為會藉由參與建置 WCFruntime 的過程中達到此目的。 <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> 屬性是一個端點行為範例，它可讓您指定不同於 SOAP 或 Web 服務描述語言 (WSDL) 位址的接聽位址。 如需詳細資訊，請參閱 < [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md)。  
+- 行為：您可以使用端點行為來自訂服務端點的本機行為。 端點行為會藉由參與建置 WCF 執行階段的過程中達到此目的。 <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> 屬性是一個端點行為範例，它可讓您指定不同於 SOAP 或 Web 服務描述語言 (WSDL) 位址的接聽位址。 如需詳細資訊，請參閱 < [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md)。  
   
 ## <a name="defining-endpoints"></a>定義端點  
  您可以透過命令式程式碼或是宣告式組態來指定服務端點。 如需詳細資訊，請參閱[如何：在組態中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)和[How to:在程式碼中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)。  

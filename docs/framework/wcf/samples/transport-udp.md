@@ -2,12 +2,12 @@
 title: 傳輸：UDP
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 12981e970706c5fc1d954c237309f12c85320c75
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ae4bf22f452035d10ecba6bcf93bf580ab7f5f8
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617377"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422164"
 ---
 # <a name="transport-udp"></a>傳輸：UDP
 UDP 傳輸範例示範如何實作 UDP 單點傳播與多點傳送做為自訂的 Windows Communication Foundation (WCF) 傳輸。 此範例描述，以建立自訂傳輸在 WCF 中，使用通道架構並遵循 WCF 的最佳做法建議的程序。 建立自訂傳輸的步驟如下：  
@@ -446,7 +446,7 @@ Press <ENTER> to terminate the service and exit...
  若要使用 Svcutil.exe 重新產生用戶端程式碼和組態，請啟動服務應用程式，然後從範例的根目錄執行下列 Svcutil.exe。  
   
 ```console
-svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
+svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
 ```  
   
  請注意，Svcutil.exe 不會為 `SampleProfileUdpBinding` 產生繫結延伸組態，所以您必須以手動方式新增。  

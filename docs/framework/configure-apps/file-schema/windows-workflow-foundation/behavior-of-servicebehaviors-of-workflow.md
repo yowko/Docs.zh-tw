@@ -3,12 +3,12 @@ title: 工作流程<behavior> 的 <serviceBehaviors>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a4b718a-1b40-4957-935a-f6122819ab3c
-ms.openlocfilehash: 09bd54f4a7d56dc1215b1acd36ff131ba4cba12c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99f98cba96ed924069ee14e1459e073ca88cd2b0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790308"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422975"
 ---
 # <a name="behavior-of-servicebehaviors-of-workflow"></a>\<行為 > 的\<v > 工作流程
 **行為**項目包含服務行為設定的集合。 每個行為由編製索引及其**名稱**。 服務可連結至每個透過名稱使用的行為**behaviorConfiguration**屬性[\<端點 >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)項目。 如此可允許端點共用通用行為組態，而不用重新定義設定。  
@@ -36,7 +36,7 @@ ms.locfileid: "61790308"
                            maxItemsInCache="Integer" />
         </sendMessageChannelCache>
         <sqlWorkflowInstanceStore connectionStringName="String" 
-                                  honstLockRenewalPeriod="TimeSpan" 
+                                  hostLockRenewalPeriod="TimeSpan" 
                                   instanceCompletionAction="DeleteNothing/DeleteAll" 
                                   instanceEncodingAction="None/GZip" 
                                   instanceLockedExceptionAction="NoRetry/BasicRetry/AggressiveRetry" 
@@ -57,7 +57,7 @@ ms.locfileid: "61790308"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|名稱|唯一的字串，其中包含行為的組態名稱。 這個值是使用者定義的字串，它必須是唯一的，因為它會充當項目的識別字串。|  
+|name|唯一的字串，其中包含行為的組態名稱。 這個值是使用者定義的字串，它必須是唯一的，因為它會充當項目的識別字串。|  
   
 ### <a name="child-elements"></a>子元素  
   

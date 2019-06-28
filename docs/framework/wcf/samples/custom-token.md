@@ -2,12 +2,12 @@
 title: 自訂權杖
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 862b4b26295ef3e90064b27ecd753e9b541471a7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 11b89f6d4f2800f079ba6576801b39c85324f6e0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650207"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425075"
 ---
 # <a name="custom-token"></a>自訂權杖
 此範例示範如何新增自訂權杖實作 Windows Communication Foundation (WCF) 應用程式。 範例會使用 `CreditCardToken`，將用戶端的信用卡資訊安全地傳遞至服務。 權杖會在 WS-Security 訊息標頭中傳遞，並且是使用對稱安全性繫結程序項目，與訊息本文及其他訊息標頭一起經過簽署和加密。 當內建權杖的安全性不足時，這會十分有幫助。 這個範例將示範如何提供自訂安全性權杖給服務，而不使用其中一個內建權杖。 服務會實作定義要求-回覆通訊模式的合約。
@@ -251,7 +251,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 
  在此範例中，因為只是要以用戶端到服務的方向來傳輸信用卡權杖，所以在用戶端只使用了權杖提供者，而在服務上只使用權杖驗證器。
 
- 用戶端的這項功能是在 `CreditCardClientCrendentials`, `CreditCardClientCredentialsSecurityTokenManager` 和 `CreditCardTokenProvider` 類別中。
+ 用戶端的這項功能是在 `CreditCardClientCredentials`, `CreditCardClientCredentialsSecurityTokenManager` 和 `CreditCardTokenProvider` 類別中。
 
  服務上的功能則是在 `CreditCardServiceCredentials`、`CreditCardServiceCredentialsSecurityTokenManager`, `CreditCardTokenAuthenticator` 和 `CreditCardTokenAuthorizationPolicy` 類別中。
 

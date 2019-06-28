@@ -2,12 +2,12 @@
 title: PII 安全性鎖定
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 18095845db094f0911578816e6bacdb7f3776156
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83c100459ca5cf522b9040a807008e66e1a5c9d8
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664776"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425428"
 ---
 # <a name="pii-security-lockdown"></a>PII 安全性鎖定
 這個範例示範如何控制的 Windows Communication Foundation (WCF) 服務的數個安全性相關功能：  
@@ -37,7 +37,7 @@ ms.locfileid: "64664776"
  這個範例示範如何控制在追蹤與訊息記錄檔中的已知個人可識別資訊 (PII) 記錄，例如使用者名稱與密碼。 根據預設，已停用記錄已知 PII，不過在特定情況下，記錄 PII 在偵錯應用程式時相當重要。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 此外，這個範例會使用追蹤和訊息記錄。 如需詳細資訊，請參閱 <<c0> [ 追蹤和訊息記錄](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)範例。  
   
 ## <a name="encrypting-configuration-file-elements"></a>加密組態檔項目  
- 針對安全性目的，在共用的 Web 裝載環境中，可能需要加密特定組態項目，例如包含敏感性資訊的資料庫連線字串。 您可以使用在 .NET Framework 資料夾中找到的 aspnet_regiis.exe 工具來加密組態項目。例如 %WINDIR%\Micrsoft.NET\Framework\v4.0.20728。  
+ 針對安全性目的，在共用的 Web 裝載環境中，可能需要加密特定組態項目，例如包含敏感性資訊的資料庫連線字串。 可能會使用在.NET Framework 資料夾，例如 %windir%\microsoft.net\framework\v4.0.20728 中找到的 aspnet_regiis.exe 工具加密組態項目。  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>若要加密範例 Web.config 中 appSettings 區段的值  
   

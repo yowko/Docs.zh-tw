@@ -2,12 +2,12 @@
 title: 使用者名稱密碼驗證程式
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: ee0e0e85389ecba39c140f383f57be95f15ae879
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 16e5f854dbe76150945145c0ce81d0d5fa4ac0d0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662372"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421818"
 ---
 # <a name="user-name-password-validator"></a>使用者名稱密碼驗證程式
 這個範例會示範如何實作自訂的 UserNamePassword 驗證程式。 當內建 UserNamePassword 驗證模式都不符合應用程式需求時，這個驗證程式就很有用；例如，當使用者名稱/密碼組儲存在某些外部存放區時，例如資料庫中。 這個範例示範的服務具有可檢查兩組特定使用者名稱/密碼組的自訂驗證程式。 用戶端會使用這些使用者名稱/密碼組來向服務驗證。
@@ -32,7 +32,7 @@ ms.locfileid: "64662372"
 
 - 伺服器是使用該伺服器的 X.509 憑證來驗證的。
 
- 服務會公開 (Expose) 單一的端點來與已使用組態檔 App.config 定義之服務進行通訊。端點是由位址、繫結及合約所組成。 繫結設定為標準`wsHttpBinding`經由預設使用 WS Securityand 使用者名稱驗證。 服務行為會指定 `Custom` 模式，以驗證用戶端使用者名稱/密碼組以及該驗證程式類別的類型。 行為也會使用 `serviceCertificate` 項目來指定伺服器憑證。 伺服器憑證必須包含相同的值，如`SubjectName`作為`findValue`中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)。
+ 服務會公開 (Expose) 單一的端點來與已使用組態檔 App.config 定義之服務進行通訊。端點是由位址、繫結及合約所組成。 繫結設定為標準`wsHttpBinding`經由預設使用 Ws-security 和使用者名稱驗證。 服務行為會指定 `Custom` 模式，以驗證用戶端使用者名稱/密碼組以及該驗證程式類別的類型。 行為也會使用 `serviceCertificate` 項目來指定伺服器憑證。 伺服器憑證必須包含相同的值，如`SubjectName`作為`findValue`中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)。
 
 ```xml
 <system.serviceModel>

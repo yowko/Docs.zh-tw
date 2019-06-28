@@ -2,12 +2,12 @@
 title: 作業格式器和作業選取器
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 94daefbc05bf69cf7fa03c5ce4c2988f3b7db91a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 06f6d3e79844f719efc33788b6ea3bd5326e736b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664788"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424977"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>作業格式器和作業選取器
 這個範例會示範如何使用 Windows Communication Foundation (WCF) 擴充性點，以允許在不同的格式，從 WCF 所預期的內容中的訊息資料。 根據預設，WCF 格式器預期方法參數包含`soap:body`項目。 此範例會示範如何實作自訂作業格式器，而這個作業格式器會剖析 HTTP GET 查詢字串中的參數資料，然後使用該資料叫用方法。  
@@ -168,7 +168,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
 >   
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QuieryStringFormatter`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QueryStringFormatter`  
   
 ##### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   

@@ -3,12 +3,12 @@ title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: 6c9c77f96ff6032de43d9b5a257bc0796a19b858
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7dc9cfff15e70eff0086cfd98a19f3360ab8bb0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667375"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423032"
 ---
 # <a name="certificatereference"></a>\<certificateReference>
 指定用來尋找和驗證 X.509 憑證的憑證存放區中的設定。  
@@ -59,4 +59,4 @@ ms.locfileid: "61667375"
 |[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|設定用來加密和解密權杖的憑證。|  
   
 ## <a name="remarks"></a>備註  
- `<certificateReference>`項目會指定用來尋找和驗證 X.509 憑證的憑證存放區中的設定。 指定的子項目為時`<serviceCertficate>`項目，它會指定用來加密和解密權杖的 X.509 憑證的位置和驗證設定。 `<certificateReference>`項目由<xref:System.ServiceModel.Configuration.CertificateReferenceElement>類別。
+ `<certificateReference>`項目會指定用來尋找和驗證 X.509 憑證的憑證存放區中的設定。 指定的子項目為時`<serviceCertificate>`項目，它會指定用來加密和解密權杖的 X.509 憑證的位置和驗證設定。 `<certificateReference>`項目由<xref:System.ServiceModel.Configuration.CertificateReferenceElement>類別。

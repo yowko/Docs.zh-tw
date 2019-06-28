@@ -2,14 +2,14 @@
 title: 發行中繼資料
 ms.date: 03/30/2017
 helpviewer_keywords:
-- meatadata [WCF], publishing
+- metadata [WCF], publishing
 ms.assetid: 3a56831a-cabc-45c0-bd02-12e2e9bd7313
-ms.openlocfilehash: 97836cef12cd1f220e97d2c38d2dca1b878d7484
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 54ab05f32320f3084fc609d8107f2892ffe6efbd
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61959324"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424582"
 ---
 # <a name="publishing-metadata"></a>發行中繼資料
 Windows Communication Foundation (WCF) 服務會發行中繼資料發行一個或多個中繼資料端點。 發行服務中繼資料會使用標準化的通訊協定 (例如 WS-MetadataExchange (MEX) 和 HTTP/GET 要求) 來提供中繼資料。 中繼資料端點與其他服務端點相似的地方，在於兩者都有位址、繫結程序和合約，並且能夠透過組態或命令式程式碼新增至服務主機。  

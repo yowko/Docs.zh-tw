@@ -2,12 +2,12 @@
 title: <authentication> 項目的 <clientCertificate>
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: e232cde8f6838de734e37aeee3f52cd7f7e7502d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2cbc850331dc6bf76c352f975fda834a309564c6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701329"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423244"
 ---
 # <a name="authentication-of-clientcertificate-element"></a>\<驗證 > 的\<clientCertificate > 項目
 指定服務所使用之用戶端憑證的驗證行為。  
@@ -41,7 +41,7 @@ ms.locfileid: "61701329"
 |customCertificateValidatorType|選擇性字串。 用來驗證自訂型別的型別和組件。 當 `certificateValidationMode` 設定為 `Custom` 時，必須設定這個屬性。|  
 |certificateValidationMode|選擇性列舉。 指定用來驗證認證的其中一個模式。 此屬性的型別為 <xref:System.ServiceModel.Security.X509CertificateValidationMode>。 如果設定為 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom?displayProperty=nameWithType>，也必須提供 `customCertificateValidator`。 預設為 <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust?displayProperty=nameWithType>。|  
 |includeWindowsGroups|選擇性布林值。 指定 Windows 群組是否包含在安全性內容中。 將這個屬性設定為 `true` 會有效能方面的影響，因為它會造成完整的群組擴充。 如果您不需要建立使用者所屬之群組的清單，請將此屬性設定為 `false`。|  
-|mapClientCertificateToWindowsAcccount|布林值。 指定是否能夠使用憑證將用戶端對應至 Windows 身分識別。 必須啟用 Active Directory 才能這麼做。|  
+|mapClientCertificateToWindowsAccount|布林值。 指定是否能夠使用憑證將用戶端對應至 Windows 身分識別。 必須啟用 Active Directory 才能這麼做。|  
 |revocationMode|選擇性列舉。 用於檢查撤銷憑證清單 (RCL) 的模式之一。 預設為 `Online`。 使用 HTTP 傳輸安全性時，將忽略此值。|  
 |trustedStoreLocation|選擇性列舉。 兩個系統存放位置的其中一個：`LocalMachine` 或 `CurrentUser`。 當與用戶端交涉服務憑證時，會使用這個值。 針對執行驗證**受信任的人**將儲存在指定的存放區位置。 預設為 `CurrentUser`。|  
   

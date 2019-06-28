@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-ms.openlocfilehash: 872084dabc5d345d10a39f0933ff2ef30ca40355
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4f1dd270ee1b317ec0d3a32e341680646ff0b69d
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584477"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423296"
 ---
 # <a name="memorycache-element-cache-settings"></a>\<memoryCache > 項目 （快取設定）
 定義項目，這個項目會用來設定以 <xref:System.Runtime.Caching.MemoryCache> 類別為基礎的快取。 <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> 類別定義可用來設定快取的 [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) 項目。 多個 <xref:System.Runtime.Caching.MemoryCache> 類別執行個體可以用於單一應用程式。 組態檔中的每個 `memoryCache` 項目都可以包含具名 <xref:System.Runtime.Caching.MemoryCache> 執行個體的設定。  
@@ -30,7 +30,7 @@ ms.locfileid: "65584477"
 </memoryCache>  
 ```  
   
-## <a name="type"></a>類型  
+## <a name="type"></a>type  
  <xref:System.Runtime.Caching.MemoryCache> 類別。  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -71,7 +71,7 @@ ms.locfileid: "65584477"
 - <xref:System.Runtime.Caching.MemoryCache.PollingInterval%2A>  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何透過將 <xref:System.Runtime.Caching.MemoryCache> 屬性設定為 "default"，以將 `name` 物件的名稱設定為預設快取物件名稱。  
+ 下列範例示範如何設定的名稱<xref:System.Runtime.Caching.MemoryCache>物件預設快取的物件名稱，藉由設定`name`屬性為"Default"。  
   
  `cacheMemoryLimitMegabytes` 屬性和 `physicalMemoryLimitPercentage` 屬性都設定為零。 將這些屬性設定為零表示預設會使用 <xref:System.Runtime.Caching.MemoryCache> 自動調整啟發學習法。 快取實作應該會每隔兩分鐘即比較目前的記憶體負載與絕對和百分比型記憶體限制。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "65584477"
   <system.runtime.caching>  
     <memoryCache>  
       <namedCaches>  
-          <add name="default"   
+          <add name="Default"   
                cacheMemoryLimitMegabytes="0"   
                physicalMemoryLimitPercentage="0"  
                pollingInterval="00:02:00" />  

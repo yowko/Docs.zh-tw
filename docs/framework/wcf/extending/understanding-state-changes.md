@@ -2,12 +2,12 @@
 title: 了解狀態變更
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 5bfee392053d9f3fd529d68b533a046e53f20dd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 858da2a88c17920910c05966bb3b211d754fb278
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771566"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424770"
 ---
 # <a name="understanding-state-changes"></a>了解狀態變更
 本主題說明通道具有的狀態和轉換、用來建構通道狀態的型別，以及如何實作。  
@@ -135,7 +135,7 @@ ms.locfileid: "61771566"
   
  擲回的例外狀況取決於狀態。 下表說明不同狀態，以及在狀態下藉由呼叫 ThrowIfXxx 擲回的對應例外狀況型別。  
   
-|狀況|是否已呼叫 Abort？|例外|  
+|State|是否已呼叫 Abort？|例外|  
 |-----------|----------------------------|---------------|  
 |建立時間|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |正在開啟|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  

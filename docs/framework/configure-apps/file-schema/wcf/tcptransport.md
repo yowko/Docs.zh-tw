@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 6c5bb61f234c8d5b8ffc5e16195a2cb50022d142
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b56da9abc4f7bf30601fec7d0c79f454124f41a
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034615"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423149"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
 定義 TCP 傳輸，通道可使用此傳輸來傳輸自訂繫結的訊息。  
@@ -38,7 +38,7 @@ ms.locfileid: "62034615"
   <connectionPoolSettings groupName="String"
                           idleTimeout="TimeSpan"
                           leaseTimeout="TimeSpan"
-                          maxOutboundConnectionsPerEndpopint="Integer" />
+                          maxOutboundConnectionsPerEndpoint="Integer" />
 </tcpTransport>
 ```  
   

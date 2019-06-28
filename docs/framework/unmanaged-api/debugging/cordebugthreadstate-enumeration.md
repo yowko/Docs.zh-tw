@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: efb7f5b8e63742471123a0e0a38cebe605f3696f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba2ee070b7d03efc830058014aa445bb1a3d4329
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61724040"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422269"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState 列舉
 指定要偵錯的執行緒狀態。  
@@ -50,11 +50,11 @@ typedef enum CorDebugThreadState {
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDegug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

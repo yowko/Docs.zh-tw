@@ -2,12 +2,12 @@
 title: 提供者資訊清單規格
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 0f3eaa73a26c3f8519e1c168ab2e2968ed4ab28d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9ae528105119241e05be5182db418312c4120112
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641170"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422724"
 ---
 # <a name="provider-manifest-specification"></a>提供者資訊清單規格
 本節將討論資料存放區提供者如何支援資料存放區中的型別與函式。  
@@ -68,7 +68,7 @@ ms.locfileid: "64641170"
 ### <a name="provider-manifest-token"></a>提供者資訊清單語彙基元  
  當開啟資料存放區連接時，提供者可以查詢資訊，以便傳回正確的資訊清單。 在離線案例中 (無法使用連接資訊或是無法連接至存放區)，可能就無法這樣做。 您可以使用 .ssdl 檔案中 `ProviderManifestToken` 項目的 `Schema` 屬性來識別資訊清單。 這個屬性沒有必要的格式。提供者會選擇識別資訊清單所需的最少資訊，而不必開啟存放區的連接。  
   
- 例如:   
+ 例如:  
   
 ```xml  
 <Schema Namespace="Northwind" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:edm="http://schemas.microsoft.com/ado/2006/04/edm/ssdl" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">  
@@ -83,9 +83,9 @@ ms.locfileid: "64641170"
  存放區中繼資料載入器 (StoreItemCollection) 會使用資料存放區連接或提供者資訊清單語彙基元來載入提供者資訊清單。  
   
 #### <a name="using-a-data-store-connection"></a>使用資料存放區連接  
- 當資料存放區連接可用時，請呼叫 DbProvderServices.GetProviderManifestToken 來傳回傳遞給 GetProviderManifest 方法 (可傳回 DbProviderManifest) 的語彙基元。 這個方法會委派給提供者的 GetDbProviderManifestToken 實作。  
+ 當資料存放區連接可用時，呼叫<xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType>傳回的語彙基元傳遞至<xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A>方法，以傳回<xref:System.Data.Common.DbProviderManifest>。 這個方法會委派的提供者實作`GetDbProviderManifestToken`。  
   
-```  
+```csharp
 public string GetProviderManifestToken(DbConnection connection);  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
@@ -248,7 +248,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
  若要在提供者資訊清單中表示這種型別資訊，每個 TypeInformation 宣告都必須針對每個型別定義許多 Facet 描述：  
   
-|屬性名稱|資料類型|必要|預設值|描述|  
+|屬性名稱|資料類型|必要項|Default Value|描述|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |名稱|String|是|N/A|提供者特有的資料型別名稱。|  
 |PrimitiveTypeKind|PrimitiveTypeKind|是|N/A|EDM 型別名稱。|  
@@ -256,7 +256,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ###### <a name="function-node"></a>Function 節點  
  每個 Function 都會定義透過提供者所提供的單一函式。  
   
-|屬性名稱|資料類型|必要|預設值|描述|  
+|屬性名稱|資料類型|必要項|Default Value|描述|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |名稱|String|是|N/A|函式的識別碼/名稱。|  
 |ReturnType|String|否|Void|函式的 EDM 傳回型別。|  
@@ -270,11 +270,11 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
  每個函式都具有一個或多個 Parameter 節點的集合。  
   
-|屬性名稱|資料類型|必要|預設值|描述|  
+|屬性名稱|資料類型|必要項|Default Value|描述|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |名稱|String|是|N/A|參數的識別碼/名稱。|  
-|類型|String|是|N/A|參數的 EDM 型別。|  
-|模式|參數<br /><br /> 方向|是|N/A|參數的方向：<br /><br /> -在<br />-out<br />-inout|  
+|type|String|是|N/A|參數的 EDM 型別。|  
+|模式|參數<br /><br /> Direction|是|N/A|參數的方向：<br /><br /> -在<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Namespace 屬性  
  每個資料存放區提供者都必須針對資訊清單中定義的資訊定義一個命名空間或命名空間群組。 這個命名空間可用於 Entity SQL 查詢中，以便解析函式和型別的名稱。 若是執行個體：Sql Server。 不過，該命名空間必須與標準命名空間 EDM 不同，後者是實體服務針對要由 Entity SQL 查詢所支援之標準函式定義的。  

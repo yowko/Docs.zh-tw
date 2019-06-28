@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38db390b8fad9cd36dacf33f9647b0272eddc4a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c52c9bf37e67e4d26867d2b3754945e86e2bf609
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616415"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422416"
 ---
 # <a name="interop-etw-events"></a>Interop ETW 事件
 <a name="top"></a> Interop 事件會擷取 Microsoft 中繼語言 (MSIL) Stub 之產生和快取的相關資訊。  
@@ -43,7 +43,7 @@ ms.locfileid: "64616415"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|模組識別項。|  
 |StubMethodID|win:UInt64|虛設常式方法識別項。|  
-|StubFlags|win:UInt64|虛設常式的旗標：<br /><br /> 0x1 - 反向 interop。<br /><br /> 0x2 - COM interop。<br /><br /> 0x4 - NGen.exe 所產生的虛設常式。<br /><br /> 0x8 - 委派。<br /><br /> 0x10 - 變數引數。<br /><br /> 0x20 - Unmanaged 被呼叫者。|  
+|StubFlags|win:UInt64|虛設常式的旗標：<br /><br /> 0x1 - 反向 interop。<br /><br /> 0x2 - COM interop。<br /><br /> 0x4 - NGen.exe 所產生的虛設常式。<br /><br /> 0x8 - 委派。<br /><br /> 0x10-變數引數。<br /><br /> 0x20 - Unmanaged 被呼叫者。|  
 |ManagedInteropMethodToken|win:UInt32|Managed interop 方法的語彙基元。|  
 |ManagedInteropMethodNameSpace|win:UnicodeString|Managed interop 方法的命名空間。|  
 |ManagedInteropMethodName|win:UnicodeString|Managed interop 方法的名稱。|  

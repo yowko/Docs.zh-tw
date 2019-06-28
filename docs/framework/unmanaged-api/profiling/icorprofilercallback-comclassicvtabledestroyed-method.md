@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63dc9ee81c98a23f01948a142018369eca7210b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ace1ecaebe076be3576304ce0a3cc72e119c96d2
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598086"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421890"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed 方法
 通知分析工具 COM interop 的 vtable 正在被終結。  
@@ -40,7 +40,7 @@ HRESULT COMClassicVTableDestroyed(
 ```  
   
 ## <a name="parameters"></a>參數  
- `wrappedClasId`  
+ `wrappedClassId`  
  [in]為其建立此 vtable 類別的識別碼。  
   
  `implementedIID`  
@@ -61,7 +61,7 @@ HRESULT COMClassicVTableDestroyed(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

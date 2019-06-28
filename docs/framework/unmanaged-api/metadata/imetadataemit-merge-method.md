@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 179cfc5c0725934e21d7b89a2f8d4c934b049f78
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 65dbfd526110be5b9b3348fb677fbde7301e4038
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106050"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424656"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge 方法
 將指定的匯入的範圍加入至要合併的範圍清單。  
@@ -44,7 +44,7 @@ HRESULT Merge (
  `pIMap`  
  [in]指標[IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)指定語彙基元重新對應的物件。  
   
- `pHandleer`  
+ `pHandler`  
  [in]指標[IUnknown](/cpp/atl/iunknown)指定錯誤的物件。  
   
 ## <a name="remarks"></a>備註  
@@ -57,7 +57,7 @@ HRESULT Merge (
   
  **LIBRARY:** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -2,12 +2,12 @@
 title: 支援權杖
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: 6257499b22506359c4a23ce7c11655c00c22ef62
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fba9a44342da5b064897b3ab81f34fa39498d379
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650963"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425442"
 ---
 # <a name="supporting-tokens"></a>支援權杖
 這個支援權杖範例會示範如何將其他權杖加入至使用 WS-Security 的訊息。 範例除了使用者名稱安全性權杖之外，還會新增 X.509 二進位安全性權杖。 權杖會在 WS-Security 訊息標頭中從用戶端傳遞至服務，而且使用與 X.509 安全性權杖相關聯的私密金鑰簽署該訊息的一部分，以便向接收者證明持有 X.509 憑證。 在必須有多個宣告與訊息產生關聯才能驗證或授權傳送者的情況下，這將十分有幫助。 服務會實作定義要求-回覆通訊模式的合約。
@@ -156,7 +156,7 @@ public class EchoService : IEchoService
             }
             else if (claimSet is X509CertificateClaimSet)
             {
-                // Try to find an X500DisinguishedName claim. This will
+                // Try to find an X500DistinguishedName claim. This will
                 // have been generated from the client certificate.
                 X500DistinguishedName tmpDistinguishedName;
                 if (TryGetClaimValue<X500DistinguishedName>(claimSet,
@@ -329,7 +329,7 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
         }
         else if (claimSet is X509CertificateClaimSet)
          {
-            //Try to find an X500DisinguishedName claim.
+            //Try to find an X500DistinguishedName claim.
             //This will have been generated from the client
             //certificate.
             X500DistinguishedName tmpDistinguishedName;

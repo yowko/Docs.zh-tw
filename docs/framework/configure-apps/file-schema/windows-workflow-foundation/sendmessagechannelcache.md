@@ -3,12 +3,12 @@ title: <sendMessageChannelCache>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 241e428e-5030-4b13-8a0a-69f05288d3d9
-ms.openlocfilehash: 60847f423c61b9e7f49a4a7594c965fb75354714
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4f77e95cbacc2d025b57dceed5b1bd0d2851e81
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794377"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422895"
 ---
 # <a name="sendmessagechannelcache"></a>\<sendMessageChannelCache>
 服務行為可讓您自訂快取共用層級、 通道處理站快取的設定，以及傳送訊息至服務端點使用傳訊活動傳送的工作流程的通道快取的設定。  
@@ -68,7 +68,7 @@ ms.locfileid: "61794377"
  如需如何變更預設快取共用層級以及通道處理站和通道快取的快取設定的詳細資訊，請參閱[變更傳送活動的快取共用層級](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)。  
   
 ## <a name="example"></a>範例  
- 在裝載的工作流程服務中，您可以在應用程式組態檔中，指定處理站快取和通道快取設定。 若要執行這項操作，請加入包含處理站快取設定和通道快取的服務行為，然後將這個服務行為加入您的服務中。 下列範例顯示組態檔中包含的內容**MyChannelCacheBehavior**服務行為及自訂的處理站快取和通道快取設定。 這個服務行為新增至服務，透過**behaviorConfiguarion**屬性。  
+ 在裝載的工作流程服務中，您可以在應用程式組態檔中，指定處理站快取和通道快取設定。 若要執行這項操作，請加入包含處理站快取設定和通道快取的服務行為，然後將這個服務行為加入您的服務中。 下列範例顯示組態檔中包含的內容`MyChannelCacheBehavior`服務行為及自訂的處理站快取和通道快取設定。 這個服務行為新增至透過服務`behaviorConfiguration`屬性。  
   
 ```xml  
 <configuration>    

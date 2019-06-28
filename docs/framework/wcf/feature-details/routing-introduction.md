@@ -2,12 +2,12 @@
 title: 路由簡介
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 41545d0340ae222e427d1e6d428ed1e3f7b4fa76
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 478c9aa6563cab4ba7769c56d7084c8716c43c58
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912483"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425373"
 ---
 # <a name="routing-introduction"></a>路由簡介
 路由服務提供了泛型的可外掛式 SOAP 媒介，此媒介能夠根據訊息內容路由傳送訊息。 透過路由服務，您就可以建立複雜路由邏輯，以便實作服務彙總、服務版本控制、優先權路由和多點傳送路由等案例。 路由服務還提供錯誤處理，可讓您設定備份端點清單，當傳送至主要目的端點期間發生錯誤時，訊息就會傳送至此清單中的端點。  
@@ -250,7 +250,7 @@ rc.SoapProcessingEnabled = false;
 ### <a name="dynamic-configuration"></a>動態組態  
  當您加入其他用戶端端點，或是需要修改用來路由傳送訊息的篩選時，必須能夠在執行階段動態更新組態，以避免中斷目前正透過路由服務接收訊息的端點服務。 修改組態檔或主應用程式的程式碼不一定足夠，因為這兩種方法都需要回收應用程式，而這樣可能會導致目前正在傳輸的任何訊息遺失，且在等待服務重新啟動時可能發生停機。  
   
- 您只能修改**RoutingConfiguration**以程式設計的方式。 雖然您一開始可以使用組態檔設定服務，您只能修改組態，在執行階段透過建構新**RoutingConfigution**並將它傳遞做為參數<xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A>方法由<xref:System.ServiceModel.Routing.RoutingExtension>服務延伸模組。 目前正在傳輸的任何訊息會繼續使用先前的設定，在呼叫之後收到的訊息時，路由傳送**ApplyConfiguration**使用新的組態。 下列範例示範建立路由服務的執行個體，然後修改組態。  
+ 您只能修改**RoutingConfiguration**以程式設計的方式。 雖然您一開始可以使用組態檔設定服務，您只能修改組態，在執行階段透過建構新**RoutingConfiguration**並將它傳遞做為參數<xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A>方法由<xref:System.ServiceModel.Routing.RoutingExtension>服務延伸模組。 目前正在傳輸的任何訊息會繼續使用先前的設定，在呼叫之後收到的訊息時，路由傳送**ApplyConfiguration**使用新的組態。 下列範例示範建立路由服務的執行個體，然後修改組態。  
   
 ```csharp  
 RoutingConfiguration routingConfig = new RoutingConfiguration();  
@@ -354,7 +354,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 ### <a name="supported-error-patterns"></a>支援的錯誤模式  
  下表說明與使用備份端點清單相容的模式，以及說明特定模式之錯誤處理詳細資料的附註。  
   
-|模式|工作階段|交易|接收內容|支援的備份清單|注意|  
+|模式|工作階段|Transaction|接收內容|支援的備份清單|注意|  
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|  
 |單向||||是|嘗試在備份端點上重新傳送訊息。 如果此訊息為多點傳送，則只有在失敗通道上的訊息會移到備份目的地。|  
 |單向||✓||否|擲回例外狀況，且異動會復原。|  
