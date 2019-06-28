@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 796dbb012426cdaea7828afeea4fba15f57095c6
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 65a7fbb2ef8fd24e80b4ccf979a7f3fc7cf19934
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398088"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423635"
 ---
 # <a name="types-c-programming-guide"></a>類型 (C# 程式設計手冊)
 
@@ -39,12 +39,12 @@ C# 是強型別語言。 每個變數和常數都有型別，如同每個會評�
 
 - 允許的作業類型。
 
-編譯器會使用型別資訊，來確認在您的程式碼中執行的全部都是「型別安全」  的作業。 例如，如果您宣告型別 [int](../../../csharp/language-reference/keywords/int.md) 的變數，編譯器會允許您使用額外的變數和減法運算。 如果您嘗試針對型別 [bool](../../../csharp/language-reference/keywords/bool.md) 的變數執行相同作業，編譯器會產生錯誤，如下列範例所示︰
+編譯器會使用型別資訊，來確認在您的程式碼中執行的全部都是「型別安全」  的作業。 例如，如果您宣告型別 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) 的變數，編譯器會允許您使用額外的變數和減法運算。 如果您嘗試針對型別 [bool](../../../csharp/language-reference/keywords/bool.md) 的變數執行相同作業，編譯器會產生錯誤，如下列範例所示︰
 
 [!code-csharp[csProgGuideTypes#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#42)]
 
 > [!NOTE]
-> C 和 C++ 開發人員要注意在 C# 中，[bool](../../../csharp/language-reference/keywords/bool.md) 不能轉換為 [int](../../../csharp/language-reference/keywords/int.md)。
+> C 和 C++ 開發人員要注意在 C# 中，[bool](../../../csharp/language-reference/keywords/bool.md) 不能轉換為 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)。
 
 編譯器會將型別資訊視為中繼資料內嵌至可執行檔。 通用語言執行平台 (CLR) 會在執行階段使用該中繼資料，以在它配置和回收記憶體時，進一步保證型別安全。
 
@@ -54,11 +54,11 @@ C# 是強型別語言。 每個變數和常數都有型別，如同每個會評�
 
 [!code-csharp[csProgGuideTypes#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#36)]
 
-在方法簽章中指定方法參數和傳回值的型別。 下列簽章顯示的方法要求 [int](../../../csharp/language-reference/keywords/int.md) 做為輸入引數且會傳回字串︰
+在方法簽章中指定方法參數和傳回值的型別。 下列簽章顯示的方法要求 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) 做為輸入引數且會傳回字串︰
 
 [!code-csharp[csProgGuideTypes#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#35)]
 
-宣告變數之後，不能以新型別重新宣告它，也無法將與所宣告型別不相容的值指派給它。 例如，您無法宣告 [int](../../../csharp/language-reference/keywords/int.md) 並將為 [true](../../../csharp/language-reference/keywords/true-literal.md) 的布林值指派給它。 不過，可以將值轉換為其他型別，例如，指派給新的變數，或做為方法引數傳遞時。 編譯器會自動執行不會造成資料遺失的「型別轉換」  作業。 而可能導致資料遺失的轉換在原始程式碼中需要有 *cast*。
+宣告變數之後，不能以新型別重新宣告它，也無法將與所宣告型別不相容的值指派給它。 例如，您無法宣告 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) 並將為 [true](../../../csharp/language-reference/keywords/true-literal.md) 的布林值指派給它。 不過，可以將值轉換為其他型別，例如，指派給新的變數，或做為方法引數傳遞時。 編譯器會自動執行不會造成資料遺失的「型別轉換」  作業。 而可能導致資料遺失的轉換在原始程式碼中需要有 *cast*。
 
 如需詳細資訊，請參閱[轉型和型別轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)。
 
@@ -74,7 +74,7 @@ C# 提供一組標準的內建數字型別，代表整數、浮點數值、布�
 
 請務必了解 .NET 中有關型別系統的兩個基本概念：
 
-- 它支援繼承原則。 型別可以衍生自稱為「基底型別」  的其他型別。 衍生的型別會繼承 (有部份限制) 基底型別的方法、屬性和其他成員。 基底類型同樣可以衍生自一些其他類型，衍生類型則會繼承其繼承階層架構中兩個基底類型的成員。 包括 <xref:System.Int32?displayProperty=nameWithType> (C# 關鍵字：[int](../../../csharp/language-reference/keywords/int.md)) 等內建數字型別在內的所有型別，最終都衍生自單一基底型別，即 <xref:System.Object?displayProperty=nameWithType> (C# 關鍵字：[object](../../../csharp/language-reference/keywords/object.md))。 這種統一型別階層架構稱為[一般型別系統](../../../standard/base-types/common-type-system.md) (CTS)。 如需 C# 中有關繼承的詳細資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。
+- 它支援繼承原則。 型別可以衍生自稱為「基底型別」  的其他型別。 衍生的型別會繼承 (有部份限制) 基底型別的方法、屬性和其他成員。 基底類型同樣可以衍生自一些其他類型，衍生類型則會繼承其繼承階層架構中兩個基底類型的成員。 包括 <xref:System.Int32?displayProperty=nameWithType> (C# 關鍵字：[int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)) 等內建數字型別在內的所有型別，最終都衍生自單一基底型別，即 <xref:System.Object?displayProperty=nameWithType> (C# 關鍵字：[object](../../../csharp/language-reference/keywords/object.md))。 這種統一型別階層架構稱為[一般型別系統](../../../standard/base-types/common-type-system.md) (CTS)。 如需 C# 中有關繼承的詳細資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。
 
 - CTS 中的每個型別都會定義為「實值型別」  或「參考型別」  。 這包括 .NET 類別庫中的所有自訂型別以及您自己的使用者定義型別。 您使用 [struct](../../../csharp/language-reference/keywords/struct.md) 關鍵字定義的型別為實值型別；所有內建的數字型別都是 `structs`。 您使用 [class](../../../csharp/language-reference/keywords/class.md) 關鍵字定義的型別為參考型別。 參考型別和實值型別有不同的編譯時期規則和不同的執行階段行為。
 
@@ -205,4 +205,4 @@ stringList.Add(4);
 - [C# 參考](../../../csharp/language-reference/index.md)
 - [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [XML 資料類型轉換](../../../standard/data/xml/conversion-of-xml-data-types.md)
-- [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [整數型別](../../language-reference/builtin-types/integral-numeric-types.md)

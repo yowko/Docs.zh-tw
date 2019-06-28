@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a9c9072c5565cf322bbf6a913255542fb46cb93
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: b7284975d717bdecc4127e09fe04163e8fd0d243
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378558"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424756"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新功能
 
@@ -563,7 +563,7 @@ public class StaticResourceResolvedEventArgs : EventArgs
 ```
 
 ```vb
-Public Class StaticResourceResolvedEvcentArgs : Inherits EventArgs
+Public Class StaticResourceResolvedEventArgs : Inherits EventArgs
    Public ReadOnly Property TargetObject As Object
    Public ReadOnly Property TargetProperty As Object
    Public ReadOnly Property ResourceDictionary As ResourceDictionary
@@ -1041,7 +1041,7 @@ URI 常數會公開在 <xref:System.Security.Cryptography.Xml.SignedXml>：
 
 <xref:System.Data.SqlClient.PoolBlockingPeriod.Auto>
 
-對於連線到 Azure SQL 資料庫的應用程式，已停用連線集區封鎖期間，而對於連線到任何其他 SQL Server 執行個體的應用程式，已啟用連線集區封鎖期間。 這是預設值。 如果伺服器端點名稱結尾是下列任一個，則會被視為 Azure SQL 資料庫︰
+對於連線到 Azure SQL 資料庫的應用程式，已停用連線集區封鎖期間，而對於連線到任何其他 SQL Server 執行個體的應用程式，已啟用連線集區封鎖期間。 這是預設值。 如果伺服器端點名稱結尾是下列任一項，則會被視為 Azure SQL 資料庫︰
 
 - .database.windows.net
 
@@ -1099,7 +1099,7 @@ AppContext.SetSwitch(disableCngCertificates, False)
 
 **更妥善支援 DataContractJsonSerializer 類別的多個日光節約時間調整規則**
 
-客戶可以使用應用程式組態設定來判斷 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 類別是否支援對單一時區使用多個調整規則。 這是一個選擇性功能。 若要啟用它，請將下列設定加入您的 app.config 檔︰
+客戶可以使用應用程式組態設定來判斷 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 類別是否支援對單一時區使用多個調整規則。 這是一項選擇性功能。 若要啟用它，請將下列設定加入您的 app.config 檔︰
 
 ```xml
 <runtime>
@@ -1737,7 +1737,7 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
 
      此功能在 .NET Framework 4.6 中已擴充以包含 <xref:System.Windows.Forms.DomainUpDown>、<xref:System.Windows.Forms.NumericUpDown>、<xref:System.Windows.Forms.DataGridViewComboBoxColumn>、<xref:System.Windows.Forms.DataGridViewColumn> 與 <xref:System.Windows.Forms.ToolStripSplitButton> 型別，而且當繪製 <xref:System.Drawing.Design.UITypeEditor> 時會使用由 <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> 屬性所指定的矩形。
 
-     這是一個選擇性功能。 若要啟用此功能，請將應用程式組態檔 (app.config) 中的 `EnableWindowsFormsHighDpiAutoResizing` 項目設定為 `true`：
+     這是一項選擇性功能。 若要啟用此功能，請將應用程式組態檔 (app.config) 中的 `EnableWindowsFormsHighDpiAutoResizing` 項目設定為 `true`：
 
     ```xml
     <appSettings>
@@ -1747,7 +1747,7 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
 
 - **字碼頁編碼方式的支援**
 
-     .NET Core 主要支援 Unicode 編碼方式，並且預設會提供字碼頁編碼方式的有限支援。 您可以透過使用 <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> 方法註冊字碼頁編碼方式，來加入 .NET Framework 中可用但不受 .NET Core 支援之字碼頁編碼方式的支援。 如需詳細資訊，請參閱<xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>。
+     .NET Core 主要支援 Unicode 編碼方式，並且預設會提供字碼頁編碼方式的有限支援。 您可以透過使用 <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> 方法註冊字碼頁編碼方式，來加入 .NET Framework 中可用但不受 .NET Core 支援之字碼頁編碼方式的支援。 如需詳細資訊，請參閱 <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>。
 
 - **.NET Native**
 
@@ -1780,7 +1780,7 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
     - <xref:System.Windows.Forms.DataGridView>
     - <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
 
-     這是一個選擇性功能。 若要啟用此功能，請將應用程式組態檔 (app.config) 中的 `EnableWindowsFormsHighDpiAutoResizing` 項目設定為 `true`：
+     這是一項選擇性功能。 若要啟用此功能，請將應用程式組態檔 (app.config) 中的 `EnableWindowsFormsHighDpiAutoResizing` 項目設定為 `true`：
 
     ```xml
     <appSettings>
@@ -1832,7 +1832,7 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
 
     ```vb
     <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name:="FullTrust")>
-    public Function PromoteAndEnlistDurable(GresourceManagerIdentifier As Guid,
+    public Function PromoteAndEnlistDurable(resourceManagerIdentifier As Guid,
                                             promotableNotification As IPromotableSinglePhaseNotification,
                                             enlistmentNotification As ISinglePhaseNotification,
                                             enlistmentOptions As EnlistmentOptions) As Enlistment
