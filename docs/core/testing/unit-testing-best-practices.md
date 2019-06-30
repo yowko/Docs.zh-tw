@@ -5,18 +5,18 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: 7f4699b5277c5feeac4d9116ac85e096247aa748
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 2787f43645250dbaf7a67aa7b7158372cf624be5
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427444"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410371"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 的單元測試最佳做法
 
-撰寫單元測試有許多優點；運用迴歸加以協助、提供文件，並增進良好的設計。 不過，難以閱讀且容易損毀的單元測試可能會破壞程式碼基底。 此文章描述有關為 .NET Core 和 .NET Standard 專案設計單元測試的一些最佳做法。
+撰寫單元測試有許多優點；運用迴歸加以協助、提供文件，並增進良好的設計。 不過，難以閱讀且容易損毀的單元測試可能會破壞程式碼基底。 本文描述有關為 .NET Core 和 .NET Standard 專案設計單元測試的一些最佳做法。
 
-在此指南中，您將了解一些撰寫單元測試時的最佳做法，讓您的測試保有復原能力且易於了解。
+本指南中，您將了解一些撰寫單元測試時的最佳做法，讓您的測試保有復原能力且易於了解。
 
 作者：[John Reese](https://reese.dev) (特別感謝 [Roy Osherove](https://osherove.com/))
 
@@ -82,7 +82,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-透過將類別重新命名為 `FakeOrder`，您已使該類別更加通用，因此可將該類別作為模擬或虛設常式使用。 請取其更適合測試案例者。 在上述範例中，`FakeOrder` 作為虛設常式使用。 在判定期間，您沒有以任何形式使用 `FakeOrder`。 `FakeOrder` 只會傳入 `Purchase` 類別以滿足建構函式的需求。
+透過將類別重新命名為 `FakeOrder`，您已使該類別更加通用，因此可將該類別作為模擬或虛設常式使用。 請取其更適合測試案例者。 在上述範例中，`FakeOrder` 作為虛設常式使用。 在判定期間，您沒有以任何形式使用 `FakeOrder`。 `FakeOrder` 只是傳入 `Purchase` 類別以滿足建構函式的需求。
 
 若要用作模擬，您可以執行類似下述內容
 
@@ -123,12 +123,12 @@ Assert.True(mockOrder.Validated);
 
 ### <a name="arranging-your-tests"></a>排列測試
 **排列、採取動作、判定**是進行單元測試時的常見模式。 顧名思義，其中包含三個主要動作：
-- 「排列」物件，並視需要建立和設定這些物件。
-- 對物件「採取動作」。
-- 「判定」某個項目如預期般運作。
+- 「排列」  物件，並視需要建立和設定這些物件。
+- 對物件「採取動作」  。
+- 「判定」  某個項目如預期般運作。
 
 #### <a name="why"></a>為什麼？
-- 清楚分隔正在測試的項目與「排列」和「判定」步驟。
+- 清楚分隔正在測試的項目與「排列」  和「判定」  步驟。
 - 這麼做可使判定與「採取動作」程式碼相互摻雜的機率更低。
 
 可讀性是撰寫測試時最重要的層面之一。 分隔測試內的每個動作可清楚突顯呼叫程式碼、如何呼叫程式碼，以及您嘗試進行判定所需的相依性。 雖然可以合併某些步驟並減少測試的大小，但主要目標是盡可能讓測試可讀。
@@ -159,7 +159,7 @@ Assert.True(mockOrder.Validated);
 
 #### <a name="why"></a>為什麼？
 - 避免測試的讀者為了找出使該值變得特殊的原因而需要檢查生產環境程式碼。
-- 明確地顯示您想要「證明」的項目，而不是嘗試「完成」的項目。
+- 明確地顯示您想要「證明」  的項目，而不是嘗試「完成」  的項目。
 
 魔術字串可能會對測試的讀者造成混淆。 如果字串看起來不正常，讀者可能會納悶為什麼針對參數或傳回值選擇特定值。 這可能會導致他們過於仔細查看實作詳細資料，而不是專注於測試。
 
@@ -283,7 +283,7 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 ```csharp
 public int GetDiscountedPrice(int price)
 {
-    if(DateTime.Now == DayOfWeek.Tuesday) 
+    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday) 
     {
         return price / 2;
     }
@@ -321,7 +321,7 @@ public void GetDiscountedPrice_OnTuesday_ReturnsHalfPrice()
 - 如果測試套件是在星期二執行，第二項測試會通過，但第一項測試會失敗。
 - 如果測試套件是在其他天執行，第一項測試會通過，但第二項測試會失敗。
 
-若要解決這些問題，您需要將「接合線」帶進生產環境程式碼。 其中一個方法是在介面中包裝您需要控制的程式碼，並使生產環境程式碼相依於該介面。
+若要解決這些問題，您需要將「接合線」  帶進生產環境程式碼。 其中一個方法是在介面中包裝您需要控制的程式碼，並使生產環境程式碼相依於該介面。
 
 ```csharp
 public interface IDateTimeProvider

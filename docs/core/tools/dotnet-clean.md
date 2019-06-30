@@ -1,13 +1,13 @@
 ---
 title: dotnet clean 命令
 description: dotnet clean 命令會清除目前的目錄。
-ms.date: 04/14/2019
-ms.openlocfilehash: fa19f1b041e4031082f928135395a5f06ce702e9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 36630c046ff8f1ad8d513b4e64cfb74a8625776b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631826"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422011"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
@@ -24,7 +24,8 @@ ms.locfileid: "65631826"
 ## <a name="synopsis"></a>概要
 
 ```
-dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
+    [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
@@ -54,7 +55,11 @@ dotnet clean [-h|--help]
 
 * **`--interactive`**
 
-  可讓命令停止，並等候使用者輸入或進行動作。 例如完成驗證。 自 .NET Core 3.0 SDK 起提供。
+  可讓命令停止，並等候使用者輸入或進行動作。 例如完成驗證。 自 .NET Core 3.0 SDK 起提供使用。
+
+* **`--nologo`**
+
+  不要顯示程式啟始橫幅或著作權訊息。 自 .NET Core 3.0 SDK 起提供使用。
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 

@@ -4,12 +4,12 @@ description: 探索收集使用量資訊以進行分析的 .NET Core SDK 遙測�
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 85cceab08fc6e4108a5b951c8b67c1ad5a28f6bb
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 40d9f3f698f513306e087753b4c33d09e8df0046
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377496"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397761"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 遙測
 
@@ -102,7 +102,7 @@ ms.locfileid: "66377496"
 
 ## <a name="license"></a>使用權
 
-Microsoft 的 .NET Core 散發由 [Microsoft 軟體授權所授權：Mirosoft.NET 程式庫](https://aka.ms/dotnet-core-eula)。 如需資料收集與處理的詳細資訊，請參閱＜資料＞一節。
+Microsoft 的 .NET Core 散發由 [Microsoft 軟體授權所授權：Microsoft .NET 程式庫](https://aka.ms/dotnet-core-eula)。 如需資料收集與處理的詳細資訊，請參閱＜資料＞一節。
 
 [.NET NuGet 套件](https://www.nuget.org/profiles/dotnetframework)使用相同的授權，但不啟用遙測 (請參閱[範圍](#scope))。
 
