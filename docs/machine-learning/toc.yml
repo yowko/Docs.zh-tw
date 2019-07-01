@@ -1,13 +1,13 @@
 - name: ML.NET 指南
   href: index.yml
-- name: 總覽
+- name: 概觀
   expanded: true
   items:
     - name: 什麼是 ML.NET 且其如何運作？
       href: how-does-mldotnet-work.md
 - name: 教學課程
   items:
-    - name: 總覽
+    - name: 概觀
       href: tutorials/index.md
     - name: 分析情感 (二元分類)
       href: tutorials/sentiment-analysis.md
@@ -23,7 +23,7 @@
       href: tutorials/image-classification.md
     - name: 產品銷售分析 (異常偵測)
       href: tutorials/sales-anomaly-detection.md
-- name: 作法指南
+- name: 使用說明指南
   items:
     - name: 載入資料
       href: how-to-guides/load-data-ml-net.md
@@ -57,14 +57,14 @@
           href: how-to-guides/matchup-app-infer-net.md
 - name: 參考資料
   items:
-    - name: 應用程式開發介面參考
+    - name: API 參考
       href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
     - name: 預覽 API 參考
       href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
 - name: 資源
   href: resources/index.md
   items:
-    - name: 字彙表
+    - name: 詞彙
       href: resources/glossary.md
     - name: 工作
       href: resources/tasks.md
@@ -78,8 +78,16 @@
       href: resources/improve-machine-learning-model-ml-net.md
 - name: 自動化的 ML 預覽
   items:
-    - name: 總覽
+    - name: 概觀
       href: automl-overview.md
+    - name: 模型建立器
+      items:
+        - name: 什麼是模型建立器？
+          href: automate-training-with-model-builder.md
+        - name: 安裝模型建立器
+          href: how-to-guides/install-model-builder.md
+        - name: 使用模型建立器預測價格
+          href: tutorials/predict-prices-with-model-builder.md
     - name: ML.NET CLI
       items:
         - name: 安裝 CLI
@@ -96,5 +104,5 @@
       items:
         - name: 使用自動化的 ML API
           href: how-to-guides/how-to-use-the-automl-api.md
-        - name: 應用程式開發介面參考
+        - name: API 參考資料
           href: 'https://docs.microsoft.com/dotnet/api/index?view=automl-dotnet'
