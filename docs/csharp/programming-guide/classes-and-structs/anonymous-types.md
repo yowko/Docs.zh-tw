@@ -6,17 +6,18 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 165793155aabac23245b352959be3188b0a5a6e5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7d8bdc5ceef5d82e4bc7e13ee932985cae6c2c10
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971165"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398549"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>匿名類型 (C# 程式設計手冊)
+
 匿名類型提供一個便利的方法，將一組唯讀屬性封裝成一個物件，而不需要事先明確定義類型。 類型名稱會由編譯器產生，並且無法在原始程式碼層級使用。 每個屬性的類型會由編譯器推斷。  
   
- 您可以搭配物件初始設定式使用 [new](../../../csharp/language-reference/keywords/new.md) 運算子，來建立匿名型別。 如需物件初始設定式的詳細資訊，請參閱[物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。  
+ 您可以搭配物件初始設定式使用 [new](../../../csharp/language-reference/operators/new-operator.md) 運算子，來建立匿名型別。 如需物件初始設定式的詳細資訊，請參閱[物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。  
   
  下列範例顯示以兩個名為 `Amount` 和 `Message` 的屬性初始化的匿名類型。  
   

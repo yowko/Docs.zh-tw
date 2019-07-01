@@ -8,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 25f6fb5e8780611a6ca7396873d0a33684b65a48
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: ef219f2b98e37b8a62d3ee7b88dbc5374d87fca5
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301376"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423537"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>作法：將字串轉換為數值 (C# 程式設計指南)
 
@@ -51,7 +51,7 @@ ms.locfileid: "66301376"
 |`uint`|<xref:System.Convert.ToUInt32%28System.String%29>|  
 |`ulong`|<xref:System.Convert.ToUInt64%28System.String%29>|  
   
- 此範例會呼叫 <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> 方法，將輸入字串轉換為 [int](../../../csharp/language-reference/keywords/int.md)。範例會攔截由這個方法擲回之兩種最常見的例外狀況，分別是 <xref:System.FormatException> 與 <xref:System.OverflowException>。 若產生的數字可在不超過 <xref:System.Int32.MaxValue?displayProperty=nameWithType> 的情況下遞增，範例會增加 1 到結果並顯示輸出。  
+ 此範例會呼叫 <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> 方法，將輸入字串轉換為 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)。範例會攔截由這個方法擲回之兩種最常見的例外狀況，分別是 <xref:System.FormatException> 與 <xref:System.OverflowException>。 若產生的數字可在不超過 <xref:System.Int32.MaxValue?displayProperty=nameWithType> 的情況下遞增，範例會增加 1 到結果並顯示輸出。  
   
 [!code-csharp[Parsing with Convert methods](~/samples/snippets/csharp/programming-guide/string-to-number/convert/program.cs)]  
   

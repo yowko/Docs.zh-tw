@@ -194,6 +194,12 @@
           href: core/whats-new/dotnet-core-2-1.md
         - name: .NET Core 2.0 的新功能
           href: core/whats-new/dotnet-core-2-0.md
+    - name: 應用程式相容性
+      items:
+        - name: 評估中斷性變更
+          href: core/compatibility/index.md
+        - name: 中斷性變更類別
+          href: core/compatibility/categories.md
     - name: 教學課程
       href: core/tutorials/index.md
       items:
@@ -496,7 +502,7 @@
       href: csharp/getting-started/
     - name: 教學課程
       items:
-        - name: 總覽
+        - name: 概觀
           href: csharp/tutorials/index.md
         - name: '使用 C# 設計程式的簡介'
           items:

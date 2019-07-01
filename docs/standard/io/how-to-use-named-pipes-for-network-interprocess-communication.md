@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用具名管道進行網路處理序間通訊
+title: 作法：使用具名管道進行網路處理序間通訊
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - multiple connections via named pipes
 - network communications [.NET Framework], named pipes
 - impersonation [.NET Framework], named pipes
-- full duplex communcation [.NET Framework], named pipes
+- full duplex communication [.NET Framework], named pipes
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 608991878b49bf0bafe9ebf90dbfc8eaec69e0e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddd862480a5977a4bada17945e10a25753b44de4
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698865"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402488"
 ---
-# <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>HOW TO：使用具名管道進行網路處理序間通訊
+# <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>作法：使用具名管道進行網路處理序間通訊
 具名管道可在管道伺服器及一個或多個管道用戶端之間提供處理序間通訊。 它們比在本機電腦上處理流程間通訊的匿名管道提供更多的功能。 具名管道支援在網路及多個伺服器執行個體上進行全雙工通訊、訊息架構通訊及用戶端模擬。用戶端模擬可讓連接處理序在遠端伺服器上使用本身的權限集合。  
   
  若要實作具名管道，請使用 <xref:System.IO.Pipes.NamedPipeServerStream> 和 <xref:System.IO.Pipes.NamedPipeClientStream> 類別。  

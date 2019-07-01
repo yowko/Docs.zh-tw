@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-ms.openlocfilehash: e34350e8f431b6ece95186147762d1954b5dd10f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 669357bbd6527324bbedbcf1f537bf570c63ce5b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601687"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423673"
 ---
 # <a name="enumeration-types-c-programming-guide"></a>列舉類型 (C# 程式設計手冊)
 
@@ -21,7 +21,7 @@ ms.locfileid: "54601687"
 
 [!code-csharp[csProgGuideEnums#1](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#1)]
 
-根據預設，每個項目在列舉中的基礎類型是 [int](../../csharp/language-reference/keywords/int.md)。您可以使用冒號指定其他的整數數值類型，如上例所示。 如需可能類型的完整清單，請參閱 [enum (C# 參考)](../../csharp/language-reference/keywords/enum.md)。
+根據預設，每個項目在列舉中的基礎類型是 [int](../../csharp/language-reference/builtin-types/integral-numeric-types.md)。您可以使用冒號指定其他的整數數值類型，如上例所示。 如需可能類型的完整清單，請參閱 [enum (C# 參考)](../../csharp/language-reference/keywords/enum.md)。
 
 您可以透過轉換為基礎類型來驗證基礎數字值，如下例所示。
 
@@ -84,9 +84,9 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 
 [!code-csharp[csProgGuideEnums#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#5)]
 
-如需詳細資訊，請參閱<xref:System.Enum?displayProperty=nameWithType>。
+如需詳細資訊，請參閱 <xref:System.Enum?displayProperty=nameWithType>。
 
-您也可以使用擴充方法，為列舉建立新的方法。 如需詳細資訊，請參閱[＜How to：為列舉建立新方法](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。
+您也可以使用擴充方法，為列舉建立新的方法。 如需詳細資訊，請參閱[如何：為列舉建立新方法](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。
 
 ## <a name="see-also"></a>另請參閱
 

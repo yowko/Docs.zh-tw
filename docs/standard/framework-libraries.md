@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 3e4fed8ddde007eb9ce233eea942d6c052f0f2c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1e825efcb2a352c823391fb0dad3d566189da001
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615183"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425544"
 ---
 # <a name="framework-libraries"></a>Framework 程式庫
 
@@ -28,11 +28,11 @@ BCL 提供最基本的類型和公用程式功能，是所有其他 .NET 類別�
 .NET 包含一組所有程式 (在某種程度上) 都會使用的基本類型。 這些類型包含資料，例如數字、字串、位元組和任意物件。 C# 語言包含這些類型的關鍵字。 以下列出一組範例類型，並提供相符的 C# 關鍵字。
 
 * <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/keywords/object.md)) - CLR 型別系統中的 Ultimate 基底類別。 它是類型階層架構中的根類型。
-* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/keywords/short.md)) - 16 位元帶正負號的整數類型。 也存在不帶正負號的 <xref:System.UInt16>。
-* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/keywords/int.md)) - 32 位元帶正負號的整數類型。 也存在不帶正負號的 [UInt32](../csharp/language-reference/keywords/uint.md)。
+* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 16 位元帶正負號的整數類型。 也存在不帶正負號的 <xref:System.UInt16>。
+* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 32 位元帶正負號的整數類型。 也存在不帶正負號的 [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md)。
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/keywords/float.md)) - 32 位元浮點類型。
 * <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/keywords/decimal.md)) - 128 位元 Decimal 類型。
-* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/keywords/byte.md)) - 代表記憶體位元組之不帶正負號的 8 位元整數。
+* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 代表記憶體位元組之不帶正負號的 8 位元整數。
 * <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)) - 代表 `true` 或 `false` 的布林類型。
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)) - 代表 Unicode 字元的 16 位元數值類型。
 * <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/keywords/string.md)) - 代表連續字元。 不同於 `char[]`，但允許編製索引為 `string` 中的每個 `char`。

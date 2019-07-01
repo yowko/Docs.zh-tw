@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: af3eab1c2453f37aa5bd881dc9804d7504c89298
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 9907811a43f408020e2ee76621d4975a53945570
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422116"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424037"
 ---
 # <a name="value-types-c-reference"></a>實值型別 (C# 參考)
 
@@ -40,11 +40,11 @@ ms.locfileid: "66422116"
 
 「簡單型別」  是 C# 所提供的一組預先定義結構型別，其中包含下列型別：
 
-- [整數型別](integral-types-table.md)：整數數字型別和 [char](char.md) 型別
+- [整數型別](../builtin-types/integral-numeric-types.md)：整數數字型別和 [char](char.md) 型別
 - [浮點類型](floating-point-types-table.md)
 - [bool](bool.md)
 
-透過關鍵字即可識別簡單型別，但這些關鍵字只是 <xref:System> 命名空間中預先定義之結構型別的別名。 例如，[int](int.md) 是 <xref:System.Int32?displayProperty=nameWithType> 的別名。 如需完整的別名清單，請參閱[內建型別表](built-in-types-table.md)。
+透過關鍵字即可識別簡單型別，但這些關鍵字只是 <xref:System> 命名空間中預先定義之結構型別的別名。 例如，[int](../builtin-types/integral-numeric-types.md) 是 <xref:System.Int32?displayProperty=nameWithType> 的別名。 如需完整的別名清單，請參閱[內建型別表](built-in-types-table.md)。
 
 簡單型別與其他結構型別的差異在於它們可允許某些額外的作業：
 
@@ -88,9 +88,9 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-使用 [new](new.md) 運算子會呼叫特定型別的無參數建構函式，並將預設值指派給變數。 在上述範例中，無參數建構函式已將 `0` 值指派給 `myInt`。 如需有關透過呼叫預設建構函式來指派的值之詳細資訊，請參閱[預設值表](default-values-table.md)。
+使用 [new](../operators/new-operator.md) 運算子會呼叫特定型別的無參數建構函式，並將預設值指派給變數。 在上述範例中，無參數建構函式已將 `0` 值指派給 `myInt`。 如需有關透過呼叫預設建構函式來指派的值之詳細資訊，請參閱[預設值表](default-values-table.md)。
 
-如果要使用使用者定義型別，請使用 [new](new.md) 來叫用無參數建構函式。 例如，下列陳述式會叫用 `Point` 結構的無參數建構函式：
+如果要使用使用者定義型別，請使用 [new](../operators/new-operator.md) 來叫用無參數建構函式。 例如，下列陳述式會叫用 `Point` 結構的無參數建構函式：
 
 ```csharp
 Point p = new Point(); // Invoke parameterless constructor for the struct.
@@ -98,7 +98,7 @@ Point p = new Point(); // Invoke parameterless constructor for the struct.
 
 在此呼叫之後，會視為已明確指派結構，也就是說，其所有成員都已初始化為其預設值。
 
-如需有關 `new` 運算子的詳細資訊，請參閱 [new](new.md)。
+如需有關 `new` 運算子的詳細資訊，請參閱 [new](../operators/new-operator.md)。
 
 如需有關將數字型別輸出格式化的資訊，請參閱[格式化數值結果表](formatting-numeric-results-table.md)。
 

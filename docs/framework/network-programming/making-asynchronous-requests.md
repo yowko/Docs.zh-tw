@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: 66cacfbb031a531190a8cc5eafdb3e375609ee1e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bf5c603dfc6668f8378ba7997df543889b733482
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647295"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422447"
 ---
 # <a name="making-asynchronous-requests"></a>進行非同步要求
 <xref:System.Net> 類別會使用 .NET Framework 的標準非同步程式設計模型，非同步存取網際網路資源。 <xref:System.Net.WebRequest> 類別的 <xref:System.Net.WebRequest.BeginGetResponse%2A> 和 <xref:System.Net.WebRequest.EndGetResponse%2A> 方法會啟動和完成網際網路資源的非同步要求。  
@@ -272,7 +272,7 @@ Class ClientGetAsync
        Dim resp As HttpWebResponse = _  
            CType(req.EndGetResponse(ar), HttpWebResponse)  
   
-       ' Start reading data from the respons stream.  
+       ' Start reading data from the response stream.  
        Dim ResponseStream As Stream = resp.GetResponseStream()  
   
        ' Store the reponse stream in RequestState to read  

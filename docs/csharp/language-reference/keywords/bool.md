@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: d87da29872582e9c0d47a6c999312ce88252a5cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: a6aae34433ee6f5d141d95f0c434af1825e9bf4b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334168"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424440"
 ---
 # <a name="bool-c-reference"></a>bool (C# 參考)
 
@@ -53,9 +53,9 @@ ms.locfileid: "59334168"
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../../../csharp/language-reference/index.md)
-- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
-- [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)
-- [內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [整數型別](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
+- [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)
 - [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

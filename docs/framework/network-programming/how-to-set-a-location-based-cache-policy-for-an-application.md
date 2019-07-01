@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- expliciting defining cache behavior
+- explicitly defining cache behavior
 - location-based cache policies
 - local cache
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 1bbbb558134e5f11537de0efef594be2b964cdcb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5b4936a54627e6016cabc41954d1a18ae82cdf90
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647377"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422466"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>作法：為應用程式設定以位置為基礎的快取原則
 以位置為基礎的快取原則，可讓應用程式明確地定義根據所要求資源位置的快取行為。 本主題將示範如何以程式設計方式設定快取原則。 如需使用組態檔為應用程式設定原則的詳細資訊，請參閱 [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  

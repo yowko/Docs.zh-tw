@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: ec6040081d44a389bd42bb50cdd81ac0634abf91
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b5097df8ee559f11bc29c12570e938965e6a9a5
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583117"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398078"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>使用 Override 和 New 關鍵字進行版本控制 (C# 程式設計手冊)
 C# 語言的設計，就是讓不同文件庫的[基底](../../../csharp/language-reference/keywords/base.md)和衍生類別的版本控制能夠發展兼具回溯相容性。 例如，這表示 C# 完全支援在基底[類別](../../../csharp/language-reference/keywords/class.md)中引入與衍生類別成員同名的新成員，不會導致非預期的行為。 這也表示，類別必須明確指出方法是打算覆寫繼承的方法，還是方法是一種新方法，會隱藏名稱相似的繼承方法。  
@@ -20,7 +20,7 @@ C# 語言的設計，就是讓不同文件庫的[基底](../../../csharp/languag
   
 - 基底類別方法必須定義為 [virtual](../../../csharp/language-reference/keywords/virtual.md)。  
   
-- 如果衍生類別中的方法前未加上 [new](../../../csharp/language-reference/keywords/new.md) 或 [override](../../../csharp/language-reference/keywords/override.md) 關鍵字，編譯器就會發出警告，方法會表現為如同有 `new` 關鍵字。  
+- 如果衍生類別中的方法前未加上 [new](../../../csharp/language-reference/keywords/new-modifier.md) 或 [override](../../../csharp/language-reference/keywords/override.md) 關鍵字，編譯器就會發出警告，方法會表現為如同有 `new` 關鍵字。  
   
 - 如果衍生類別中的方法前面加上 `new` 關鍵字，方法會定義為不受基底類別中的方法影響。  
   

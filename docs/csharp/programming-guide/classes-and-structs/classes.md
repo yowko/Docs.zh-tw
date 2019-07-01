@@ -7,17 +7,17 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 4cea68e76c17e5393ab7213f457c0875cdc5b53b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad19099242a3bedbb7283219dfd7733db13231ec
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596695"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398583"
 ---
 # <a name="classes-c-programming-guide"></a>類別 (C# 程式設計手冊)
 
 ## <a name="reference-types"></a>參考型別  
-定義為 [class](../../../csharp/language-reference/keywords/class.md) 的類型即為「參考型別」。 在執行階段，當您宣告參考型別的變數時，該變數會包含 [null](../../../csharp/language-reference/keywords/null.md) 值，直到您使用 [new](../../../csharp/language-reference/keywords/new.md) 運算子明確地建立類別的執行個體，或為其指派在他處建立的相容類型物件為止，如下列範例所示：
+定義為 [class](../../../csharp/language-reference/keywords/class.md) 的類型即為「參考型別」  。 在執行階段，當您宣告參考型別的變數時，該變數會包含 [null](../../../csharp/language-reference/keywords/null.md) 值，直到您使用 [new](../../../csharp/language-reference/operators/new-operator.md) 運算子明確地建立類別的執行個體，或為其指派在他處建立的相容類型物件為止，如下列範例所示：
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -27,7 +27,7 @@ MyClass mc = new MyClass();
 MyClass mc2 = mc;
 ```
 
-建立物件時，會在受控堆積上配置足夠的記憶體給該特定物件，而變數只會保留該物件位置的參考。 配置和由 CLR 的自動記憶體管理功能 (也就是「記憶體回收」) 回收 Managed 堆積上的型別時，都需要額外負荷。 不過，記憶體回收也已獲得高度最佳化，因此在大部分情況下並不會產生效能問題。 如需記憶體回收的詳細資訊，請參閱[自動記憶體管理和記憶體回收](../../../standard/garbage-collection/gc.md)。  
+建立物件時，會在受控堆積上配置足夠的記憶體給該特定物件，而變數只會保留該物件位置的參考。 配置和由 CLR 的自動記憶體管理功能 (也就是「記憶體回收」  ) 回收 Managed 堆積上的型別時，都需要額外負荷。 不過，記憶體回收也已獲得高度最佳化，因此在大部分情況下並不會產生效能問題。 如需記憶體回收的詳細資訊，請參閱[自動記憶體管理和記憶體回收](../../../standard/garbage-collection/gc.md)。  
   
 ## <a name="declaring-classes"></a>宣告類別
 
@@ -41,13 +41,13 @@ MyClass mc2 = mc;
  }
 ```
 
- `class` 關鍵字的前面會加上存取層級。 因為在此情況下會使用 [public](../../language-reference/keywords/public.md)，所以所有人都可以從這個類別建立執行個體。 類別的名稱遵循 `class` 關鍵字。 類別名稱必須是有效的 C# [識別碼名稱](../inside-a-program/identifier-names.md)。 定義的其餘部分是定義行為和資料的類別主體。 類別上的欄位、屬性、方法和事件統稱為「類別成員」。  
+ `class` 關鍵字的前面會加上存取層級。 因為在此情況下會使用 [public](../../language-reference/keywords/public.md)，所以所有人都可以從這個類別建立執行個體。 類別的名稱遵循 `class` 關鍵字。 類別名稱必須是有效的 C# [識別碼名稱](../inside-a-program/identifier-names.md)。 定義的其餘部分是定義行為和資料的類別主體。 類別上的欄位、屬性、方法和事件統稱為「類別成員」  。  
   
 ## <a name="creating-objects"></a>建立物件
 
 雖然它們有時會交換使用，但是類別和物件不同。 類別會定義一種類型的物件，但不是物件本身。 物件是根據類別的具體實體，而且有時稱為類別的執行個體。  
   
- 使用後面接著為物件基礎之類別名稱的 [new](../../language-reference/keywords/new.md) 關鍵字，即可建立物件，與下面類似：  
+ 使用後面接著為物件基礎之類別名稱的 [new](../../language-reference/operators/new-operator.md) 關鍵字，即可建立物件，與下面類似：  
 
  ```csharp
  Customer object1 = new Customer();
@@ -70,9 +70,9 @@ MyClass mc2 = mc;
   
 ## <a name="class-inheritance"></a>類別繼承  
 
-類別完全支援「繼承」，這是物件導向程式設計的基礎特性。 當您建立類別時，可以繼承自任何未定義為 [sealed](../../../csharp/language-reference/keywords/sealed.md) 的介面或類別，而其他類別可以繼承自您的類別並覆寫類別虛擬方法。
+類別完全支援「繼承」  ，這是物件導向程式設計的基礎特性。 當您建立類別時，可以繼承自任何未定義為 [sealed](../../../csharp/language-reference/keywords/sealed.md) 的介面或類別，而其他類別可以繼承自您的類別並覆寫類別虛擬方法。
 
-使用「衍生」可完成繼承，這表示使用從中繼承資料和行為的「基底類別」來宣告類別。 附加冒號以及接著衍生類別名稱後面的基底類別名稱，以指定基底類別，與下面類似：  
+使用「衍生」  可完成繼承，這表示使用從中繼承資料和行為的「基底類別」  來宣告類別。 附加冒號以及接著衍生類別名稱後面的基底類別名稱，以指定基底類別，與下面類似：  
 
  ```csharp
  public class Manager : Employee

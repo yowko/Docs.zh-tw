@@ -12,16 +12,16 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 960394bd61f9e9163fe93c4324bf708d50ec3e08
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 5257d1d677246cdd6d826cd71ed3ffe116d2a4a6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481453"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424117"
 ---
 # <a name="switch-c-reference"></a>switch (C# 參考)
 
-`switch` 為選取範圍陳述式，可根據搭配「比對運算式」的模式比對，從候選項清單中選擇要執行的單一「參數區段」。
+`switch` 是一個選取範圍陳述式，可根據使用「比對運算式」  的模式比對，從候選項清單中選擇要執行的單一「參數區段」  。
 
 [!code-csharp[switch#1](~/samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
 
@@ -46,14 +46,14 @@ ms.locfileid: "59481453"
 - [char](char.md)。
 - [string](string.md)。
 - [bool](bool.md)。
-- 整數值，例如 [int](int.md) 或 [long](long.md)。
+- 整數值，例如 [int](../builtin-types/integral-numeric-types.md) 或 [long](../builtin-types/integral-numeric-types.md)。
 - [enum](enum.md) 值。
 
 從 C# 7.0 開始，比對運算式可以是任何非 Null 運算式。
 
 ## <a name="the-switch-section"></a>參數區段
 
-`switch` 陳述式包含一個或多個參數區段。 每個參數區段都包含一或多個「case 標籤」 (case 或預設標籤)，後面接著一或多個陳述式。 `switch` 陳述式在任何參數區段中最多只能放置一個預設標籤。 下列範例示範擁有三個參數區段的簡單 `switch` 陳述式，每個區段包含兩個陳述式。 第二個參數區段包含 `case 2:` 和 `case 3:` 標籤。
+`switch` 陳述式包含一個或多個參數區段。 每個參數區段都包含一或多個「case 標籤」  (case 或預設標籤)，後面接著一或多個陳述式。 `switch` 陳述式在任何參數區段中最多只能放置一個預設標籤。 下列範例示範擁有三個參數區段的簡單 `switch` 陳述式，每個區段包含兩個陳述式。 第二個參數區段包含 `case 2:` 和 `case 3:` 標籤。
 
 `switch` 陳述式可包含任意數目的參數區段，而每個區段都可以擁有一或多個 case 標籤，如下列範例所示。 不過，不可以有兩個 case 標籤包含相同的運算式。
 
@@ -121,7 +121,7 @@ switch (caseSwitch)
 其中，*constant* 是用來測試的值。 *constant* 可以是下列任何常數運算式：
 
 - [bool](bool.md) 常值：`true` 或 `false`。
-- 任何整數常數，例如 [int](int.md)、[long](long.md) 或 [byte](byte.md)。
+- 任何整數常數，例如 [int](../builtin-types/integral-numeric-types.md)、[long](../builtin-types/integral-numeric-types.md) 或 [byte](../builtin-types/integral-numeric-types.md)。
 - 所宣告之 `const` 變數的名稱。
 - 列舉常數。
 - [char](char.md) 常值。
@@ -157,7 +157,7 @@ switch (caseSwitch)
 
 - *expr* 是衍生自 *type* 的類型執行個體。 換句話說，*expr* 的結果可向上轉型成 *type* 的執行個體。
 
-- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」是定義於其型別宣告的變數類型。 變數的「執行階段類型」是指派給該變數的執行個體類型。
+- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」  是定義於其型別宣告的變數類型。 變數的「執行階段類型」  是指派給該變數的執行個體類型。
 
 - *expr* 是實作 *type* 介面的類型執行個體。
 
@@ -200,7 +200,7 @@ case null:
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計手冊](../../programming-guide/index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [if-else](if-else.md)
 - [模式比對](../../pattern-matching.md)

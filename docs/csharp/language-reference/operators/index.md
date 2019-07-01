@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 98f73ed958f8b43cd4fea700a478cf3337ea68db
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 7d8ee9be8f399bca0aace61d344b19094c9518b0
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025130"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401458"
 ---
 # <a name="c-operators-c-reference"></a>C# 運算子 (C# 參考)
 
@@ -51,9 +51,9 @@ C# 提供內建型別支援的數個預先定義運算子。 例如，[算術運
 
 [x--](arithmetic-operators.md#decrement-operator---) – 後置遞減。 傳回 x 的值，然後利用小於 x 值的值 (通常會減去整數 1) 更新儲存位置。
 
-[new](../keywords/new-operator.md) – 型別執行個體化。
+[new](new-operator.md) – 型別執行個體化。
 
-[typeof](../keywords/typeof.md) - 傳回代表運算元的 <xref:System.Type> 物件。
+[typeof](type-testing-and-conversion-operators.md#typeof-operator) - 傳回代表運算元的 <xref:System.Type> 物件。
 
 [checked](../keywords/checked.md) – 啟動整數作業的溢位檢查。
 
@@ -87,7 +87,7 @@ C# 提供內建型別支援的數個預先定義運算子。 例如，[算術運
 
 [--x](arithmetic-operators.md#decrement-operator---) – 前置遞減。 更新儲存體位置之後，傳回 x 減一的 x 值 (通常減去整數 1)。
 
-[(T)x](invocation-operator.md) – 型別轉換。
+[(T)x](type-testing-and-conversion-operators.md#cast-operator-) – 型別轉換。
 
 [await](../keywords/await.md) – 等候 `Task`。
 
@@ -137,9 +137,9 @@ C# 提供內建型別支援的數個預先定義運算子。 例如，[算術運
 
 [x >= y](comparison-operators.md#greater-than-or-equal-operator-) – 大於或等於。
 
-[is](../keywords/is.md) – 型別相容性。 如果評估的左運算元可以轉換成右運算元中指定的類型 (靜態類型)，則傳回 true。
+[is](type-testing-and-conversion-operators.md#is-operator) – 型別相容性。 如果評估的左運算元可以轉換成右運算元所指定的類型，則傳回 `true`。
 
-[as](../keywords/as.md) – 型別轉換。 傳回的左運算元轉型為右運算元指定的類型 (靜態類型)，但 `as` 傳回 `null`，其中 `(T)x` 會擲回例外狀況。
+[as](type-testing-and-conversion-operators.md#as-operator) – 型別轉換。 傳回左運算元轉換成右運算元所指定的類型，但 `as` 會在 `(T)x` 會擲回例外狀況時傳回 `null`。
 
 ## <a name="equality-operators"></a>等號比較運算子
 
@@ -171,13 +171,13 @@ C# 提供內建型別支援的數個預先定義運算子。 例如，[算術運
 
 此運算子具有的優先順序高於下一個區段且低於前一個區段。
 
-[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) – 邏輯 AND。 如果第一個運算元評估為 false，C# 就不會評估第二個運算元。
+[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) – 邏輯 AND。 如果 `x` 評估為 `false`，則 `y` 不會被評估。
 
 ## <a name="conditional-or-operator"></a>條件 OR 運算子
 
 此運算子具有的優先順序高於下一個區段且低於前一個區段。
 
-[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – 邏輯 OR。 如果第一個運算元評估為 true，C# 就不會評估第二個運算元。
+[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – 邏輯 OR。 如果 `x` 評估為 `true`，則 `y` 不會被評估。
 
 ## <a name="null-coalescing-operator"></a>Null 聯合運算子
 

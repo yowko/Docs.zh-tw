@@ -6,7 +6,7 @@
       href: configure-language-version.md
     - name: 'C# 關鍵字'
       items:
-        - name: 總覽
+        - name: 概觀
           href: keywords/index.md
         - name: 型別
           items:
@@ -48,17 +48,17 @@
               items:
                 - name: 參考類型的功能
                   href: keywords/reference-types.md
-                - name: Class - 類別
+                - name: class
                   href: keywords/class.md
-                - name: Delegate - 委派
+                - name: delegate
                   href: keywords/delegate.md
-                - name: 動態
+                - name: dynamic
                   href: keywords/dynamic.md
                 - name: interface
                   href: keywords/interface.md
                 - name: object
                   href: keywords/object.md
-                - name: 字串
+                - name: string
                   href: keywords/string.md
             - name: void
               href: keywords/void.md
@@ -112,7 +112,7 @@
               href: keywords/async.md
             - name: const
               href: keywords/const.md
-            - name: Event - 事件
+            - name: event
               href: keywords/event.md
             - name: extern
               href: keywords/extern.md
@@ -126,11 +126,11 @@
               href: keywords/readonly.md
             - name: sealed
               href: keywords/sealed.md
-            - name: 靜態
+            - name: static
               href: keywords/static.md
             - name: unsafe
               href: keywords/unsafe.md
-            - name: 虛擬
+            - name: virtual
               href: keywords/virtual.md
             - name: volatile
               href: keywords/volatile.md
@@ -176,7 +176,7 @@
                   href: keywords/try-catch-finally.md
             - name: Checked 與 Unchecked
               items:
-                - name: 總覽
+                - name: 概觀
                   href: keywords/checked-and-unchecked.md
                 - name: checked
                   href: keywords/checked.md
@@ -204,7 +204,7 @@
               href: keywords/namespace.md
             - name: using
               items:
-                - name: 使用內容
+                - name: using 的上下文
                   href: keywords/using.md
                 - name: using 指示詞
                   href: keywords/using-directive.md
@@ -214,14 +214,14 @@
                   href: keywords/using-statement.md
             - name: extern alias
               href: keywords/extern-alias.md
+        - name: 類型測試關鍵字
+          items:
+            - name: is
+              href: keywords/is.md
         - name: 運算子關鍵字
           items:
-            - name: as
-              href: keywords/as.md
             - name: await
               href: keywords/await.md
-            - name: 是
-              href: keywords/is.md
             - name: new
               items:
                 - name: 新運算子、修飾詞及條件約束
@@ -234,8 +234,6 @@
                   href: keywords/new-constraint.md
             - name: sizeof
               href: keywords/sizeof.md
-            - name: typeof
-              href: keywords/typeof.md
             - name: nameof
               href: keywords/nameof.md
         - name: 轉換關鍵字
@@ -270,7 +268,7 @@
               href: keywords/add.md
             - name: get
               href: keywords/get.md
-            - name: 全域
+            - name: global
               href: keywords/global.md
             - name: partial (類型)
               href: keywords/partial-type.md
@@ -278,7 +276,7 @@
               href: keywords/partial-method.md
             - name: remove
               href: keywords/remove.md
-            - name: 設定
+            - name: set
               href: keywords/set.md
             - name: when (篩選條件)
               href: keywords/when.md
@@ -312,17 +310,17 @@
               href: keywords/ascending.md
             - name: descending
               href: keywords/descending.md
-            - name: 於
+            - name: 'on'
               href: keywords/on.md
             - name: equals
               href: keywords/equals.md
             - name: by
               href: keywords/by.md
-            - name: 中的
+            - name: in
               href: keywords/in.md
     - name: 'C# 運算子'
       items:
-        - name: 總覽
+        - name: 概觀
           href: operators/index.md
         - name: 算術運算子
           href: operators/arithmetic-operators.md
@@ -342,36 +340,40 @@
         - name: 成員存取運算子
           href: operators/member-access-operators.md
           displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
+        - name: 類型測試和轉換運算子
+          href: operators/type-testing-and-conversion-operators.md
+          displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), cast'
         - name: 指標相關運算子
           href: operators/pointer-related-operators.md
           displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
-        - name: () 運算子
-          href: operators/invocation-operator.md
-        - name: ':: 運算子'
-          href: operators/namespace-alias-qualifer.md
+        - name: = 運算子
+          href: operators/assignment-operator.md
+          displayName: 'assignment, ref'
         - name: + 及 += 運算子
           href: operators/addition-operator.md
           displayName: 'string concatenation, delegate combination, event subscription'
         - name: '- 及 -= 運算子'
           href: operators/subtraction-operator.md
           displayName: 'delegate removal, event unsubscription'
-        - name: = 運算子
-          href: operators/assignment-operator.md
         - name: '?: 運算子'
           href: operators/conditional-operator.md
-          displayName: 'conditional, ternary'
+          displayName: 'conditional, ternary, ref'
         - name: '?? 運算子'
           href: operators/null-coalescing-operator.md
           displayName: null-coalescing
         - name: => 運算子
           href: operators/lambda-operator.md
-        - name: stackalloc
+          displayName: lambda
+        - name: ':: 運算子'
+          href: operators/namespace-alias-qualifer.md
+          displayName: namespace alias qualifier
+        - name: stackalloc 運算子
           href: operators/stackalloc.md
         - name: true 和 false 運算子
           href: operators/true-false-operators.md
     - name: 'C# 特殊字元'
       items:
-        - name: 總覽
+        - name: 概觀
           href: tokens/index.md
         - name: $ -- 字串插補
           href: tokens/interpolated.md
@@ -379,7 +381,7 @@
           href: tokens/verbatim.md
     - name: 'C# 前置處理器指示詞'
       items:
-        - name: 總覽
+        - name: 概觀
           href: preprocessor-directives/index.md
         - name: '#if'
           href: preprocessor-directives/preprocessor-if.md
@@ -411,7 +413,7 @@
           href: preprocessor-directives/preprocessor-pragma-checksum.md
     - name: 'C# 編譯器選項'
       items:
-        - name: 總覽
+        - name: 概觀
           href: compiler-options/index.md
         - name: 使用 csc.exe 建置命令列
           href: compiler-options/command-line-building-with-csc-exe.md
@@ -575,7 +577,7 @@
           href: ../../../_csharplang/spec/exceptions.md
         - name: 屬性
           href: ../../../_csharplang/spec/attributes.md
-        - name: Unsafe 程式碼
+        - name: 不安全的程式碼
           href: ../../../_csharplang/spec/unsafe-code.md
         - name: 文件註解
           href: ../../../_csharplang/spec/documentation-comments.md

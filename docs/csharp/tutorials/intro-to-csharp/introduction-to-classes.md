@@ -3,12 +3,12 @@ title: 類別和物件 - C# 教學課程簡介
 description: 建立您的第一個 C# 程式並探索物件導向概念
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 6b4c135b7adf96de3a234cde02485a1e84fc9fd3
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 0932ae8a9d3facd4b2a8469664922f163fe4c679
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204778"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397816"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>探索使用類別與物件的物件導向程式設計
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-當您使用 [`new`](../../language-reference/keywords/new.md) 建立物件時，系統便會呼叫建構函式。 以下列行取代 ***program.cs*** 中的 `Console.WriteLine("Hello World!");` 行 (以您的名字取代 `<name>`)：
+當您使用 [`new`](../../language-reference/operators/new-operator.md) 建立物件時，系統便會呼叫建構函式。 以下列行取代 ***program.cs*** 中的 `Console.WriteLine("Hello World!");` 行 (以您的名字取代 `<name>`)：
 
 ```csharp
 var account = new BankAccount("<name>", 1000);

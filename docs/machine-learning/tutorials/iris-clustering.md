@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 05/16/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 208e97419faee097db8e187081f2910b71ca2e35
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 965408a180245712ceda2c3c17bdf42755af1c2c
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882277"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402446"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>教學課程：搭配 ML.NET 使用 K-means 群集分類鳶尾花
 
@@ -41,21 +41,21 @@ ms.locfileid: "65882277"
 
 ## <a name="create-a-console-application"></a>建立主控台應用程式
 
-1. 開啟 Visual Studio。 從功能表列中選取 [檔案]  >  [新增]  >  [專案]。 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點，然後選取 [.NET Core] 節點。 然後選取 [主控台應用程式 (.NET Core)] 專案範本。 在 [名稱] 文字方塊中，鍵入 "IrisFlowerClustering"，然後選取 [確定] 按鈕。
+1. 開啟 Visual Studio。 從功能表列中選取 [檔案]   >  [新增]   >  [專案]  。 在 [新增專案]  對話方塊中，選取 [Visual C#]  節點，然後選取 [.NET Core]  節點。 然後選取 [主控台應用程式 (.NET Core)]  專案範本。 在 [名稱]  文字方塊中，鍵入 "IrisFlowerClustering"，然後選取 [確定]  按鈕。
 
 1. 在您的專案中建立一個名為 *Data* 的目錄以儲存資料集和模型檔案：
 
-    在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [新增] > [新增資料夾]。 輸入 "Data"，然後按 Enter。
+    在 [方案總管]  中，以滑鼠右鍵按一下專案，然後選取 [新增]   > [新增資料夾]  。 輸入 "Data"，然後按 Enter。
 
 1. 安裝 **Microsoft.ML** NuGet 套件：
 
-    在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、從清單中選取 **v1.0.0** 套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
+    在 [方案總管]  中，以滑鼠右鍵按一下專案，然後選取 [管理 NuGet 套件]  。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽]  索引標籤、搜尋 **Microsoft.ML**、從清單中選取 **v1.0.0** 套件，然後選取 [安裝]  按鈕。 在 [預覽變更]  對話方塊上，選取 [確定]  按鈕，然後在 [授權接受]  對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]  。
 
 ## <a name="prepare-the-data"></a>準備資料
 
 1. 下載 [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) 資料集，並將它儲存到上一個步驟中建立的 *Data* 資料夾。 如需有關鳶尾花資料集的詳細資訊，請參閱[鳶尾花資料集](https://en.wikipedia.org/wiki/Iris_flower_data_set)維基百科頁面和[鳶尾花資料集](https://archive.ics.uci.edu/ml/datasets/Iris)頁面 (也就是資料集的來源)。
 
-1. 以滑鼠右鍵按一下 [方案總管] 中的 *iris.data* 檔案，然後選取 [內容]。 在 [進階] 底下，將 [複製到輸出目錄] 的值變更為 [有更新時才複製]。
+1. 以滑鼠右鍵按一下 [方案總管]  中的 *iris.data* 檔案，然後選取 [內容]  。 在 [進階]  底下，將 [複製到輸出目錄]  的值變更為 [有更新時才複製]  。
 
 *Iris.data* 檔案包含五個資料行，分別表示：
 
@@ -71,8 +71,8 @@ ms.locfileid: "65882277"
 
 為輸入資料和預測建立類別：
 
-1. 在 [方案總管] 中，於專案上按一下滑鼠右鍵，然後選取 [新增] > [新增項目]。
-1. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *IrisData.cs*。 接著，選取 [新增] 按鈕。
+1. 在 [方案總管]  中，於專案上按一下滑鼠右鍵，然後選取 [新增]   > [新增項目]  。
+1. 在 [新增項目]  對話方塊中，選取 [類別]  ，然後將 [名稱]  欄位變更為 *IrisData.cs*。 接著，選取 [新增]  按鈕。
 1. 將下列的 `using` 指示詞加入新檔案：
 
    [!code-csharp[Add necessary usings](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#Usings)]
@@ -130,7 +130,7 @@ ms.locfileid: "65882277"
 
 在本教學課程中，叢集工作的學習管線包含下列兩個步驟：
 
-- 將載入的資料行串連成一個 [特徵] 資料行，以供叢集定型器使用；
+- 將載入的資料行串連成一個 [特徵]  資料行，以供叢集定型器使用；
 - 使用 <xref:Microsoft.ML.Trainers.KMeansTrainer> 定型器透過 k-means++ 叢集演算法將模型定型。
 
 將下列程式碼加入 `Main` 方法：
@@ -159,8 +159,8 @@ ms.locfileid: "65882277"
 
 建立 `TestIrisData` 類型以容納測試資料執行個體：
 
-1. 在 [方案總管] 中，於專案上按一下滑鼠右鍵，然後選取 [新增] > [新增項目]。
-1. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *TestIrisData.cs*。 接著，選取 [新增] 按鈕。
+1. 在 [方案總管]  中，於專案上按一下滑鼠右鍵，然後選取 [新增]   > [新增項目]  。
+1. 在 [新增項目]  對話方塊中，選取 [類別]  ，然後將 [名稱]  欄位變更為 *TestIrisData.cs*。 接著，選取 [新增]  按鈕。
 1. 將類別修改成靜態，如以下範例所示：
 
    [!code-csharp[Make class static](~/samples/machine-learning/tutorials/IrisFlowerClustering/TestIrisData.cs#Static)]

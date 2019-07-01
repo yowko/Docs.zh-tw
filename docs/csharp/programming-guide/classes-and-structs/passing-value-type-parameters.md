@@ -6,12 +6,12 @@ helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-ms.openlocfilehash: 0c9d8c33715b4baf11bfac05cd4881d1475f8844
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ba693948bce91fa80f0c6cd73f2d5fc537e5f900
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846994"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423743"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>傳遞實值類型的參數 (C# 程式設計手冊)
 相對於[參考型別](../../../csharp/language-reference/keywords/reference-types.md)變數 (包含對其資料的參考)，[實值型別](../../../csharp/language-reference/keywords/value-types.md)變數會直接包含資料。 以傳值方式將實值型別變數傳遞至方法，意味著將變數的複本傳遞至方法。 任何發生於方法內部的參數變更都不會影響儲存於引數變數中的原始資料。 如果您想要讓呼叫的方法變更參數值，就必須使用 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 關鍵字，以傳址方式來傳遞它。 您也可以使用 [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) 關鍵字以傳址方式傳遞值，以避免發生複製的情況，同時確保該值不會變更。 為求簡化，下列範例使用 `ref`。  
@@ -28,7 +28,7 @@ ms.locfileid: "57846994"
   
  [!code-csharp[csProgGuideParameters#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#4)]  
   
- 在此範例中，它不是所傳遞之 `n` 的值；而是傳遞對 `n` 的參考。 `x` 參數不是 [int](../../../csharp/language-reference/keywords/int.md)；它是對 `int` 的參考，在此案例中，為對 `n` 的參考。 因此，在方法內部將 `x` 平方時，實際平方的是 `x` 所參考的目標，即 `n`。  
+ 在此範例中，它不是所傳遞之 `n` 的值；而是傳遞對 `n` 的參考。 `x` 參數不是 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)；它是對 `int` 的參考，在此案例中，為對 `n` 的參考。 因此，在方法內部將 `x` 平方時，實際平方的是 `x` 所參考的目標，即 `n`。  
   
 ## <a name="swapping-value-types"></a>交換實值型別  
  變更引數值的常見範例是 swap 方法，您會在其中將兩個變數傳遞至方法，而此方法會交換它們的內容。 您必須以傳址方式將引數傳遞至 swap 方法。 否則，您會交換方法內部參數的區域複本，而不會在呼叫方法中發生任何變更。 下例會交換整數值。  

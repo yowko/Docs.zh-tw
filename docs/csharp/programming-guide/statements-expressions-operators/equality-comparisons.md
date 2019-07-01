@@ -5,16 +5,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 7cbd1a2c1a9968ae8ed4f96d503d472bbe9b32c4
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 50b1cdb8b7e5087f1fd6669e7163e2c15e9b23bf
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545451"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423652"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>相等比較 (C# 程式設計指南)
 
-有時候需要比較兩個值是否相等。 在某些情況下，您要測試「值是否相等」 (也稱為「等價」，表示兩個變數所含的值相等。 在其他情況下，您必須判斷兩個變數是否參照記憶體中的相同基礎物件。 這類型的相等稱為「參考相等」或「識別」。 本主題描述這兩種相等，並提供其他主題的連結以取得詳細資訊。  
+有時候需要比較兩個值是否相等。 在某些情況下，您要測試「值是否相等」  (也稱為「等價」  ，表示兩個變數所含的值相等。 在其他情況下，您必須判斷兩個變數是否參照記憶體中的相同基礎物件。 這類型的相等稱為「參考相等」  或「識別」  。 本主題描述這兩種相等，並提供其他主題的連結以取得詳細資訊。  
   
 ## <a name="reference-equality"></a>參考相等
 
@@ -28,7 +28,7 @@ ms.locfileid: "58545451"
 
 ## <a name="value-equality"></a>實值相等
 
- 實值相等表示兩個物件包含相同的值。 對於 [int](../../../csharp/language-reference/keywords/int.md) 或 [bool](../../../csharp/language-reference/keywords/bool.md) 這類基本實值型別，測試實值相等十分簡單。 您可以使用 [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) 運算子，如下列範例所示。  
+ 實值相等表示兩個物件包含相同的值。 對於 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) 或 [bool](../../../csharp/language-reference/keywords/bool.md) 這類基本實值型別，測試實值相等十分簡單。 您可以使用 [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) 運算子，如下列範例所示。  
   
 ```csharp  
 int a = GetOriginalValue();  

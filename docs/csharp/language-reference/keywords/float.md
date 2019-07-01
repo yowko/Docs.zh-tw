@@ -9,12 +9,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 6bf8043b97d23fdb91ca5798ed46cdea783bad7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db0139f2000c1bc2c5a13a3a542164201e73f0fb
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514118"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424215"
 ---
 # <a name="float-c-reference"></a>float (C# 參考)
 
@@ -56,7 +56,7 @@ float x = 3.5F;
 
 ## <a name="example"></a>範例
 
-在下列範例中，會將一個 [int](int.md)、[short](short.md) 和 `float` 加入數學運算式，以產生 `float` 結果 (請記住，`float` 是 <xref:System.Single?displayProperty=nameWithType> 類型的別名。)請注意，運算式中沒有 [double](double.md)。
+在下列範例中，會將一個 [int](../builtin-types/integral-numeric-types.md)、[short](../builtin-types/integral-numeric-types.md) 和 `float` 加入數學運算式，以產生 `float` 結果 (請記住，`float` 是 <xref:System.Single?displayProperty=nameWithType> 類型的別名。)請注意，運算式中沒有 [double](double.md)。
 
 [!code-csharp[csrefKeywordsTypes#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#13)]
 
@@ -71,7 +71,7 @@ float x = 3.5F;
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [轉換和型別轉換](../../programming-guide/types/casting-and-type-conversions.md)
 - [C# 關鍵字](index.md)
-- [整數型別表](integral-types-table.md)
+- [整數型別](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [內建型別表](built-in-types-table.md)
 - [隱含數值轉換表](implicit-numeric-conversions-table.md)
 - [明確數值轉換表](explicit-numeric-conversions-table.md)

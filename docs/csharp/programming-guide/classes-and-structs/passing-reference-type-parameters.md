@@ -6,12 +6,12 @@ helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: 34e3370b0f6d28160be3ad9d918c110fc93f51fe
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1b2aae49fbea138646b5f325919246238b2401ae
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674077"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398349"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>傳遞參考類型的參數 (C# 程式設計手冊)
 [參考型別](../../../csharp/language-reference/keywords/reference-types.md)的變數不會直接包含其資料；它會包含其資料的參考。 以值的方式傳遞參考型別參數時，可以變更屬於參考資料的資料，例如類別成員的值。 但您無法變更參考本身的值；例如，您無法使用相同的參考，為新的物件配置記憶體，並讓其保存在方法之外。 若要這樣做，請使用 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 關鍵字來傳遞參數。 為求簡化，下列範例使用 `ref`。  
@@ -21,7 +21,7 @@ ms.locfileid: "57674077"
   
  [!code-csharp[csProgGuideParameters#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#7)]  
   
- 在上述範例中，作為參考型別的 `arr` 陣列傳遞至方法時，不會使用 `ref` 參數。 在這種情況下，指向 `arr` 的參考複本會傳遞至方法。 輸出顯示方法可以變更陣列元素的內容，在此情況下為 `1` 到 `888`。 不過，在 `Change` 方法內部使用 [new](../../../csharp/language-reference/keywords/new.md) 運算子來配置新的記憶體部分，會讓 `pArray` 參數參考新的陣列。 因此，之後的任何變更將不會影響在 `Main` 內部建立的 `arr` 原始陣列。 事實上，在此範例中會建立兩個陣列，一個在 `Main` 內部，另一個在 `Change` 方法內部。  
+ 在上述範例中，作為參考型別的 `arr` 陣列傳遞至方法時，不會使用 `ref` 參數。 在這種情況下，指向 `arr` 的參考複本會傳遞至方法。 輸出顯示方法可以變更陣列元素的內容，在此情況下為 `1` 到 `888`。 不過，在 `Change` 方法內部使用 [new](../../../csharp/language-reference/operators/new-operator.md) 運算子來配置新的記憶體部分，會讓 `pArray` 參數參考新的陣列。 因此，之後的任何變更將不會影響在 `Main` 內部建立的 `arr` 原始陣列。 事實上，在此範例中會建立兩個陣列，一個在 `Main` 內部，另一個在 `Change` 方法內部。  
   
 ## <a name="passing-reference-types-by-reference"></a>以傳址式傳遞參考型別  
  下列範例與上述範例相同，差別在於 `ref` 關鍵字會新增方法標題和呼叫。 任何在方法中進行的變更會影響呼叫端程式中的原始變數。  

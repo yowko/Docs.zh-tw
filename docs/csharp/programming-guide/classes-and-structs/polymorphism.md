@@ -6,19 +6,19 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 9bce692c767169536d762a36ea2b9343655680c7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a7cd450fbc2e0a5acd32675ab2c6b46dc2c92757
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583077"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398373"
 ---
 # <a name="polymorphism-c-programming-guide"></a>多型 (C# 程式設計手冊)
 多型通常是指物件導向程式設計的第三個重要部分，其重要性僅次於封裝和繼承。 多型在希臘文中表示「多種形狀」，可分成下列兩方面：  
   
 - 在執行階段，衍生類別物件可視為方法參數和集合或陣列等位置中的基底類別物件。 發生此情況時，物件的宣告類型與其執行階段類型將不再相同。  
   
-- 基底類別可以定義和實作 [virtual](../../../csharp/language-reference/keywords/virtual.md)「方法」，而衍生類別可以[覆寫](../../../csharp/language-reference/keywords/override.md)這些方法，換句話說，衍生類別會提供自己的定義和實作。 在執行階段，當用戶端程式碼呼叫方法時，CLR 會查詢物件的執行階段類型，然後叫用虛擬方法的覆寫。 因此，在您的原始程式碼中，您可以在基底類別上呼叫方法，然後執行衍生類別版本的方法。  
+- 基底類別可以定義和實作 [virtual](../../../csharp/language-reference/keywords/virtual.md)「方法」  ，而衍生類別可以[覆寫](../../../csharp/language-reference/keywords/override.md)這些方法，換句話說，衍生類別會提供自己的定義和實作。 在執行階段，當用戶端程式碼呼叫方法時，CLR 會查詢物件的執行階段類型，然後叫用虛擬方法的覆寫。 因此，在您的原始程式碼中，您可以在基底類別上呼叫方法，然後執行衍生類別版本的方法。  
   
  虛擬方法可讓您以一致的方式來使用相關物件群組。 例如，假設您有一個繪圖應用程式，可讓使用者在繪圖介面上建立各種圖形。 您不知道使用者將在編譯時期建立哪一種圖形。 但是，應用程式必須追蹤所建立的所有不同圖形類型，並且必須根據使用者滑鼠動作來更新圖形。 您可以使用多型，分兩個基本步驟來解決這個問題：  
   
@@ -54,7 +54,7 @@ ms.locfileid: "64583077"
  虛擬方法和屬性可讓衍生類別不需要使用方法的基底類別實作，即可擴充基底類別。 如需詳細資訊，請參閱[使用 Override 和 New 關鍵字進行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)。 介面是用來定義將其實作保留給衍生類別之一個方法或一組方法的另一種做法。 如需詳細資訊，請參閱[介面](../../../csharp/programming-guide/interfaces/index.md)。  
   
 ### <a name="hiding-base-class-members-with-new-members"></a>使用新成員隱藏基底類別成員  
- 如果您想讓衍生成員使用與基底類別中成員相同的名稱，但不想讓該成員參與虛擬引動過程，則可以使用 [new](../../../csharp/language-reference/keywords/new.md) 關鍵字。 `new` 關鍵字會放置在要取代之類別成員的傳回類型前面。 下列程式碼提供一個範例：  
+ 如果您想讓衍生成員使用與基底類別中成員相同的名稱，但不想讓該成員參與虛擬引動過程，則可以使用 [new](../../../csharp/language-reference/keywords/new-modifier.md) 關鍵字。 `new` 關鍵字會放置在要取代之類別成員的傳回類型前面。 下列程式碼提供一個範例：  
   
  [!code-csharp[csProgGuideInheritance#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#18)]  
   
