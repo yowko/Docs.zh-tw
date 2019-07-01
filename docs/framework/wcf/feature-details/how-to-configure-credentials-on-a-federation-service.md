@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 4200918057a32d077dbc44f48057f8e886d87a44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7b09578bf39a081b1bed83614cff755f234f8e45
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624493"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487092"
 ---
-# <a name="how-to-configure-credentials-on-a-federation-service"></a>HOW TO：設定同盟服務的認證
+# <a name="how-to-configure-credentials-on-a-federation-service"></a>作法：設定同盟服務的認證
 在 Windows Communication Foundation (WCF) 中，建立聯合的服務包含下列主要程序：  
   
 1. 設定 <xref:System.ServiceModel.WSFederationHttpBinding> 或類似的自訂繫結。 如需建立適當的繫結的詳細資訊，請參閱[How to:建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。  
@@ -28,7 +28,7 @@ ms.locfileid: "64624493"
   
 1. 使用 <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> 類別的 <xref:System.ServiceModel.Description.ServiceCredentials> 屬性，傳回 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 執行個體 (Instance) 的參照。 此屬性可從 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 類別的 <xref:System.ServiceModel.ServiceHostBase> 屬性存取。  
   
-2. 如果是要驗證類似 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> 卡的自行發行權杖，則將 `true` 屬性設定為 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]。 預設為 `false`。  
+2. 設定<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A>屬性設`true`如果自我發行的權杖，例如 CardSpace 卡進行驗證。 預設為 `false`。  
   
 3. 將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 屬性所傳回的集合填入 (Populate) <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 類別的執行個體。 每個執行個體都代表服務將會從該處驗證權杖的簽發者。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "64624493"
   
 1. 建立`<issuedTokenAuthentication>`的子系的項目 <`serviceCredentials`> 項目。  
   
-2. 如果是要驗證類似 `allowUntrustedRsaIssuers` 卡的自行發行權杖，則將 `<issuedTokenAuthentication>` 項目的 `true` 屬性設定為 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]。  
+2. 設定`allowUntrustedRsaIssuers`的屬性`<issuedTokenAuthentication>`項目`true`若驗證自我發行的權杖，例如 CardSpace 卡。  
   
 3. 建立 `<knownCertificates>` 項目做為 `<issuedTokenAuthentication>` 項目的子項。  
   

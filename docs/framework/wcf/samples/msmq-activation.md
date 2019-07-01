@@ -2,12 +2,12 @@
 title: MSMQ 啟用
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 925148c4bd084f843f125ab9e851a5404bbe4b89
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 43d6cde7a9342b57933cd3e7475bd4412da86d92
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664803"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487563"
 ---
 # <a name="msmq-activation"></a>MSMQ 啟用
 這個範例示範如何在 Windows Process Activation Service (WAS) 中裝載可從訊息佇列讀取的應用程式。 這個範例會使用`netMsmqBinding`且根據[雙向通訊](../../../../docs/framework/wcf/samples/two-way-communication.md)範例。 本例中的服務是 Web 裝載的應用程式，而用戶端則會自我裝載並輸出至主控台，以便觀察所送出採購單的狀態。  
@@ -215,11 +215,11 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 請確定已安裝 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，因為 WAS 啟動時需要它。  
+1. 請確認已安裝 IIS 7.0，因為 WAS 啟動需要。  
   
 2. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。 此外，您必須安裝 WCF 非 HTTP 啟動元件：  
   
-    1. 在 [開始] 功能表內選擇 [控制台]。  
+    1. 在 [開始]  功能表內選擇 [控制台]  。  
   
     2. 選取 **程式和功能**。  
   
@@ -249,7 +249,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
      為了方便起見，下列步驟會以範例目錄中名為 AddMsmqSiteBinding.cmd 的批次檔實作。  
   
-    1. 若要支援 net.msmq 啟動，預設的網站必須先繫結至 net.msmq 通訊協定。 使用隨 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 管理工具集安裝的 appcmd.exe 即可完成此操作。 從提高權限的 (系統管理員) 命令提示字元中執行下列命令。  
+    1. 若要支援 net.msmq 啟動，預設的網站必須先繫結至 net.msmq 通訊協定。 使用以 IIS 7.0 管理工具集安裝的 appcmd.exe 完成此操作。 從提高權限的 (系統管理員) 命令提示字元中執行下列命令。  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -332,7 +332,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     1. 執行 Inetmgr.exe。  
   
-    2. 底下**應用程式集區**，以滑鼠右鍵按一下**AppPool** (通常**DefaultAppPool**)，然後選擇 **設定應用程式集區預設值...**.  
+    2. 底下**應用程式集區**，以滑鼠右鍵按一下**AppPool** (通常**DefaultAppPool**)，然後選擇 **設定應用程式集區預設值...** .  
   
     3. 變更 Identity 屬性以使用特定的使用者帳戶。  
   

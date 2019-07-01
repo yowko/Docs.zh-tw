@@ -2,12 +2,12 @@
 title: WCF Web HTTP 程式設計物件模型
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: f8bda6292506b64057dee006fa59b7723fa406b2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2401a8a051ed4dcd386c7794a2197672709ea423
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648402"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487684"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP 程式設計物件模型
 WCF WEB HTTP 程式設計模型可讓開發人員公開透過基本 HTTP 要求的 Windows Communication Foundation (WCF) Web 服務，而不需要使用 SOAP。 WCF WEB HTTP 程式設計模型是建置在現有的 WCF 擴充性模型之上。 這個模型會定義下列類別：  
@@ -97,7 +97,7 @@ WCF WEB HTTP 程式設計模型可讓開發人員公開透過基本 HTTP 要求�
  WCF WEB HTTP 程式設計模型不會使用 SOAP 型訊息，並因此不支援 WS-* 通訊協定。 不過，您可以透過兩個不同的端點來公開相同的合約：一個端點使用 SOAP，而另一個端點不使用 SOAP。 請參閱[如何：公開給 SOAP 和 Web 用戶端合約](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)的範例。  
   
 ## <a name="security"></a>安全性  
- 因為 WCF WEB HTTP 程式設計模型不支援 WS-* 通訊協定來保護在 WCF WEB HTTP 程式設計模型上建置的 Web 服務的唯一方法是運用 SSL 公開服務。 如需有關設定使用 SSL[!INCLUDE[iisver](../../../../includes/iisver-md.md)]請參閱[如何在 IIS 中實作 SSL](https://go.microsoft.com/fwlink/?LinkId=131613)  
+ 因為 WCF WEB HTTP 程式設計模型不支援 WS-* 通訊協定來保護在 WCF WEB HTTP 程式設計模型上建置的 Web 服務的唯一方法是運用 SSL 公開服務。 如需設定 IIS 7.0 與 SSL 的詳細資訊請參閱[如何在 IIS 中實作 SSL](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>另請參閱
 

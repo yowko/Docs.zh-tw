@@ -2,12 +2,12 @@
 title: 部署已裝載網際網路資訊服務的 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 4c46a7ac0482e0f9c969505b87558d240bb1391e
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: fcfad4c6cd7ffb0bf1233bab842b57a10bcc7f87
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402292"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486920"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署已裝載網際網路資訊服務的 WCF 服務
 
@@ -103,7 +103,7 @@ IIS 裝載的 WCF 服務會將其組態儲存在應用程式 Web.config 檔案�
 
 ### <a name="available-transports"></a>可用的傳輸
 
-WCF 服務裝載於 IIS 5.1 和 IIS 6.0 會受限於只能使用 HTTP 通訊。 在這些 IIS 平台上，設定裝載的服務來使用非 HTTP 繫結會在服務啟動期間導致錯誤。 在 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]上，支援的傳輸包括 HTTP、Net.TCP、Net.Pipe、Net.MSMQ，和 msmq.formatname，以便提供與現有 MSMQ 應用程式的回溯相容性。
+WCF 服務裝載於 IIS 5.1 和 IIS 6.0 會受限於只能使用 HTTP 通訊。 在這些 IIS 平台上，設定裝載的服務來使用非 HTTP 繫結會在服務啟動期間導致錯誤。 IIS 7.0，支援的傳輸包含 HTTP、 Net.TCP、 Net.Pipe、 Net.MSMQ 和 msmq.formatname 的回溯相容性與現有 MSMQ 應用程式。
 
 ### <a name="http-transport-security"></a>HTTP 傳輸安全性
 

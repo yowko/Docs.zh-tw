@@ -1,13 +1,13 @@
 ---
-title: 什麼是F#
+title: 什麼是 F#
 description: 了解F#程式語言是以及F#程式設計如下。 了解豐富的資料類型、 函式，以及它們如何相互配合。
 ms.date: 08/03/2018
-ms.openlocfilehash: 9d5b0de9828aa91857d3961bf7d40c02c344adaa
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: fc4f4db771c43a4ec08cc9d3a247cf1f38e60457
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641564"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486836"
 ---
 # <a name="what-is-f"></a>F 是什麼\#
 
@@ -40,7 +40,7 @@ F#有數種功能，包括：
 * 輕量型語法
 * 不可變的預設值
 * 型別推斷和自動一般化
-* 第一級函式
+* 一級函式
 * 功能強大的資料類型
 * 模式比對
 * 非同步程式設計
@@ -100,7 +100,7 @@ F#函式也是第一級，表示它們可以做為參數傳遞，從其他函式
 F#提供物件，也就是有用的資料類型，當您需要的資料與功能的 blend 的完整的支援。 F#函式用來操作物件。
 
 ```fsharp
-type Set<[<EqualityConditionOn>] ‘T when ‘T: comparison>(elements: seq<'T>) =
+type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
     member s.IsEmpty = // Implementation elided
     member s.Contains (value) =// Implementation elided
     member s.Add (value) = // Implementation elided

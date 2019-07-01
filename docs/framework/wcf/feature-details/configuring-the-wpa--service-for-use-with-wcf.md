@@ -2,12 +2,12 @@
 title: 設定用於 Windows Communication Foundation 的 Windows Process Activation Service
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: 9fead93fcb8982f4f69af5d4bb401aa731bf887f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ab62bda5e579bcd80a7403d9af3a7e7f9836647
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654558"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486996"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>設定用於 Windows Communication Foundation 的 Windows Process Activation Service
 本主題說明設定 Windows Process Activation Service (亦稱為 WAS) 所需的步驟[!INCLUDE[wv](../../../../includes/wv-md.md)]來裝載 Windows Communication Foundation (WCF) 服務不會透過 HTTP 通訊的網路通訊協定。 下列各節將概述此組態的各項步驟：  
@@ -23,7 +23,7 @@ ms.locfileid: "64654558"
 ## <a name="configuring-a-site-with-non-http-bindings"></a>使用非 HTTP 繫結來設定網站  
  若要以非 HTTP 繫結來搭配 WAS 一起使用，必須將網站繫結新增至 WAS 組態。 WAS 的組態存放區就是 applicationHost.config 檔 (位於 %windir%\system32\inetsrv\config 目錄)。 這個組態存取區可由 WAS 和 IIS 7.0 同時共用。  
   
- applicationHost.config 是一個可使用任何標準文字編輯器 (例如 [記事本]) 來開啟的 XML 文字檔。 但是，我們建議您使用 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 命令列組態工具 (appcmd.exe) 來新增非 HTTP 的網站繫結。  
+ applicationHost.config 是一個可使用任何標準文字編輯器 (例如 [記事本]) 來開啟的 XML 文字檔。 不過，IIS 7.0 命令列組態工具 (appcmd.exe) 是新增非 HTTP 網站繫結的慣用的方法。  
   
  下列命令會使用 appcmd.exe 將 net.tcp 網站繫結新增至預設的網站 (此命令需以單行方式輸入)。  
   

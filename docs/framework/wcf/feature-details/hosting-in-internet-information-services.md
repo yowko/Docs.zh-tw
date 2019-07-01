@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: f9acadcb594005d7c7eadffcddad3649a3aefc29
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3940d8436ba5441d4e884879213a7a782214cb05
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402194"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486757"
 ---
 # <a name="hosting-in-internet-information-services"></a>在網際網路資訊服務中裝載
 裝載 Windows Communication Foundation (WCF) 服務的其中一個選項是在 Internet Information Services (IIS) 應用程式內。 這個裝載模型十分類似 ASP.NET 和 ASP.NET Web 服務 (ASMX) Web 服務所使用的模型。  
@@ -23,7 +23,7 @@ ms.locfileid: "67402194"
   
 - [!INCLUDE[wv](../../../../includes/wv-md.md)] 和 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上的 IIS 7.0。 IIS 7.0 提供與 IIS 6.0 相同的進階的處理模型，但使用 Windows Process Activation Service (WAS) 允許透過 HTTP 以外的通訊協定的啟動和網路通訊。 此環境適合用來透過 WCF （包括 HTTP、 net.tcp、 net.pipe 和 net.msmq） 所支援的任何網路通訊協定進行通訊的 WCF 服務的開發。 如需 WAS 的詳細資訊，請參閱[在 Windows Process Activation Service 中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
   
-- [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496)搭配[!INCLUDE[iisver](../../../../includes/iisver-md.md)]和 Windows Process Activation Service (WAS) 來提供豐富的應用程式裝載環境，為 NET4 WCF 和 WF 服務。 這些優點包括處理序生命週期管理、處理序回收、共用裝載、快速失敗保護、處理序損壞、隨選啟動和健康監視。 如需詳細資訊，請參閱 < [AppFabric 主控功能](https://go.microsoft.com/fwlink/?LinkId=196494)並[AppFabric 主控概念](https://go.microsoft.com/fwlink/?LinkId=196495)。  
+- [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496)與 IIS 7.0 和 Windows Process Activation Service (WAS)，提供豐富的應用程式裝載環境，為 NET4 WCF 和 WF 服務搭配運作。 這些優點包括處理序生命週期管理、處理序回收、共用裝載、快速失敗保護、處理序損壞、隨選啟動和健康監視。 如需詳細資訊，請參閱 < [AppFabric 主控功能](https://go.microsoft.com/fwlink/?LinkId=196494)並[AppFabric 主控概念](https://go.microsoft.com/fwlink/?LinkId=196495)。  
   
 ## <a name="benefits-of-iis-hosting"></a>IIS 裝載的優點  
  裝載在 IIS 中的 WCF 服務有幾項優點：  

@@ -1,15 +1,15 @@
 ---
-title: HOW TO：安裝和設定 WCF 啟用元件
+title: 作法：安裝和設定 WCF 啟用元件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 953df285d1a439cd8a1a95358915a7a50e98552a
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 1141bd8344887990ddd8646eba9d25c5d9a4287d
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960098"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487055"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>作法：安裝和設定 WCF 啟用元件
 本主題說明設定 Windows Process Activation Service (亦稱為 WAS) 所需的步驟上[!INCLUDE[wv](../../../../includes/wv-md.md)]來裝載 Windows Communication Foundation (WCF) 服務不會透過 HTTP 通訊的網路通訊協定。 下列各節將概述此組態的各項步驟：  
@@ -34,7 +34,7 @@ ms.locfileid: "65960098"
   
 ### <a name="to-configure-the-was-to-support-tcp-activation"></a>若要設定 WAS 來支援 TCP 啟動  
   
-1. 若要支援 net.tcp 啟動，預設的網站必須先繫結至 net.tcp 連接埠。 您可以使用與 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 管理工具集一起安裝的 Appcmd.exe 完成此操作。 從系統管理員層級的 [命令提示字元] 視窗中，執行下列命令。  
+1. 若要支援 net.tcp 啟動，預設的網站必須先繫結至 net.tcp 連接埠。 您可以使用 Appcmd.exe，它會隨 IIS 7.0 管理工具組來執行這項操作。 從系統管理員層級的 [命令提示字元] 視窗中，執行下列命令。  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  

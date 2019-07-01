@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 834829d8eee95a8a62363a05b4af9430c435753b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 695b6c24700fe42664944d6f9c1e03010248d86a
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586232"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487739"
 ---
 # <a name="service-identity-and-authentication"></a>服務身分識別和驗證
 服務的*端點身分識別*是從服務 Web 服務描述語言 (WSDL) 產生的值。 這個值會傳播至任何用戶端上，用來驗證服務。 在用戶端初始化對某個端點的通訊，且服務也向用戶端進行自我驗證之後，用戶端就會比較端點身分識別值與端點驗證處理序傳回的實際值。 如果兩者相符，則可確定用戶端已聯繫所需的服務端點。 這可當作防範*網路釣魚*藉由防止用戶端重新導向至惡意服務所裝載的端點。  
@@ -43,7 +43,7 @@ ms.locfileid: "64586232"
 |身分識別類型|描述|典型案例|  
 |-------------------|-----------------|----------------------|  
 |網域名稱系統 (DNS)|您可以使用此項目來搭配 X.509 憑證或 Windows 帳戶， 它會比較認證中指定的 DNS 名稱與此項目中指定的值。|DNS 檢查可讓您使用包含 DNS 或主體名稱的憑證。 如果重新發行的憑證包含相同的 DNS 或主體名稱，則身分識別檢查仍舊有效。 重新發行憑證時，憑證會取得新的 RSA 金鑰，但會保留相同的 DNS 或主體名稱， 表示用戶端不需要更新與服務相關的用戶端身分識別資訊。|  
-|憑證。 當 `ClientCredentialType` 設為 Certificate 時的預設值。|此項目會指定 Base64 編碼格式的 X.509 憑證值，以便與用戶端進行比較。<br /><br /> 如果您使用 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 做為驗證服務的認證，也要使用此項目。|此項目會根據憑證的指紋值將驗證限制為單一憑證， 因為指紋值是唯一的，所以這麼做可以讓驗證更加嚴格， 這是隨附有一點要注意：如果憑證使用相同的主體名稱重新發出，它也會有新的指紋。 因此，用戶端必須先知道新的指紋，才能驗證服務。 如需尋找憑證指紋的詳細資訊，請參閱[How to:擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。|  
+|憑證。 當 `ClientCredentialType` 設為 Certificate 時的預設值。|此項目會指定 Base64 編碼格式的 X.509 憑證值，以便與用戶端進行比較。<br /><br /> 當使用 CardSpace 做為認證來驗證服務時，也可以使用這個項目。|此項目會根據憑證的指紋值將驗證限制為單一憑證， 因為指紋值是唯一的，所以這麼做可以讓驗證更加嚴格， 這是隨附有一點要注意：如果憑證使用相同的主體名稱重新發出，它也會有新的指紋。 因此，用戶端必須先知道新的指紋，才能驗證服務。 如需尋找憑證指紋的詳細資訊，請參閱[How to:擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。|  
 |憑證參考|與先前所述之「憑證」選項相同。 但是，這個項目可讓您指定憑證名稱與存放區位置，以便從中擷取憑證。|與先前所述之「憑證」案例相同。<br /><br /> 好處是憑證存放區位置可以變更。|  
 |RSA|此項目會指定 RSA 金鑰值，以便與用戶端進行比較。 此選項與憑證選項很類似，但不是使用憑證的指紋，而是改為使用憑證的 RSA 金鑰。|RSA 檢查可讓您根據憑證的 RSA 金鑰將驗證限制為單一憑證， 雖然這個做法可以更嚴格地驗證 RSA 金鑰，但是如果 RSA 金鑰值改變，服務就再也無法與現有的用戶端一起使用。|  
 |使用者主要名稱 (UPN)。 當 `ClientCredentialType` 設為 Windows，且服務處理序不是以其中一個系統帳戶執行時的預設值。|此項目會指定用來執行服務的 UPN。 請參閱 Kerberos 通訊協定和身分識別一節[覆寫來進行驗證的服務身分識別](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)。|這樣可確保服務在特定 Windows 使用者帳戶底下執行。 使用者帳戶可以是目前登入的使用者或是在特定使用者帳戶底下執行的服務。<br /><br /> 如果服務是在 Active Directory 環境中的網域帳戶底下執行，此設定便能充分善用 Windows Kerberos 安全性的優勢。|  

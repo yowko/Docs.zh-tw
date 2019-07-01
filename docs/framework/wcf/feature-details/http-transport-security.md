@@ -2,12 +2,12 @@
 title: HTTP 傳輸安全性
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 386c24a9b51be56bf5a8195123e573cfced6392f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 456df42848c009dcf42022ac674a1d27e5b33972
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402311"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487023"
 ---
 # <a name="http-transport-security"></a>HTTP 傳輸安全性
 使用 HTTP 來傳輸時，會由安全通訊端層 (SSL) 實作提供安全性。 在網際網路上會廣泛使用 SSL 以對用戶端驗證服務，進而對通道提供機密性 (加密)。 本主題會說明 SSL 的運作方式，以及如何實作 Windows Communication Foundation (WCF) 中。  
@@ -38,9 +38,9 @@ ms.locfileid: "67402311"
 ### <a name="using-iis-for-transport-security"></a>在傳輸安全性中使用 IIS  
   
 #### <a name="iis-70"></a>IIS 7.0  
- 若要設定[!INCLUDE[iisver](../../../../includes/iisver-md.md)]為安全主機 （使用 SSL），請參閱[IIS 7.0 Beta:設定安全通訊端層 IIS 7.0 中的](https://go.microsoft.com/fwlink/?LinkId=88600)。  
+ 若要設定為安全主機 （使用 SSL） 的 IIS 7.0，請參閱[IIS 7.0 中設定安全通訊端層](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771438(v=ws.10))。  
   
- 若要設定憑證以搭配[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，請參閱[IIS 7.0 Beta:在 IIS 7.0 中設定伺服器憑證](https://go.microsoft.com/fwlink/?LinkID=88595)。  
+若要使用 IIS 7.0 中設定使用的憑證，請參閱[IIS 7.0 中設定伺服器憑證](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))。  
   
 #### <a name="iis-60"></a>IIS 6.0  
  若要設定為安全主機 （使用 SSL） 的 IIS 6.0，請參閱[設定安全通訊端層](https://go.microsoft.com/fwlink/?LinkId=88601)。  

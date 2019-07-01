@@ -2,12 +2,12 @@
 title: IdentityModel 例外狀況
 ms.date: 03/30/2017
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b8af2620b6179ce4cff59d7f9871377f06ffe5f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998513"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486660"
 ---
 # <a name="identitymodel-exceptions"></a>IdentityModel 例外狀況
 本主題會列出由 IdentityModel 產生的所有例外狀況。  
@@ -100,11 +100,11 @@ ms.locfileid: "61998513"
 |SAMLAssertionMissingMajorVersionAttributeOnRead|所讀取的 SamlAssertion 遺失 MajorVersion 或其長度為 0。|  
 |SamlAttributeClaimRightShouldBePossessProperty|這個 SamlAttribute 建構函式要求宣告權利的值必須是 System.IdentityModel.Claims.Rights.PossessProperty。|  
 |AuthorizationPolicyEvaluated|已評估具有特定識別碼的原則。|  
-|SAMLUnableToLoadCondtions|\<Saml: conditions > 無法載入項目。|  
+|SAMLUnableToLoadCondtions<!-- the misspelling here is deliberate. -->|\<Saml: conditions > 無法載入項目。|  
 |AESKeyLengthNotSupported|不支援指定的 bits Key。 只支援 128、192 和 256 bits Key。|  
 |UserNameCannotBeEmpty|使用者名稱不可以空白。|  
 |AlgorithmAndPublicKeyMisMatch|指定的演算法與公開金鑰不相符。|  
-|SAMLUnableToLoadCondtion|\<Saml: conditions > 無法載入項目。|  
+|SAMLUnableToLoadCondtion<!-- the misspelling here is deliberate. -->|\<Saml: conditions > 無法載入項目。|  
 |SamlAssertionMissingSigningCredentials|尚未對 SamlAssertion 設定 SigningCredentials。 SamlAssertions 必須簽署，請對 SamlAssertion 設定有效的 SigningCredentials，才能繼續進行。|  
 |SspiPayloadNotEncrypted|二進位資料未以 SSPI 安全性內容加密。|  
 |SAMLAuthorizationDecisionShouldHaveOneActionOnRead|所讀取的 SamlAuthorizationDecisionStatement 未包含任何 SamlAction。|  

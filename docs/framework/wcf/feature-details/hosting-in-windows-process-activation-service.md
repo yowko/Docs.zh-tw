@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: eeac535eac95b19889d0d8d74115bcddc3a15224
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: af40660d1af0a88710c4b53009474847cece6deb
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402344"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486644"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>在 Windows Process Activation Service 中裝載
 Windows Process Activation Service (WAS) 管理啟動和包含該主機的 Windows Communication Foundation (WCF) 服務的應用程式的工作者處理序的存留期。 WAS 處理序模型會將 HTTP 伺服器的 IIS 6.0 處理序模型一般化藉由移除 HTTP 的相依性。 這可讓 WCF 服務使用 HTTP 和非 HTTP 通訊協定，例如 Net.TCP，請在裝載環境中支援訊息型啟用，並可讓您裝載大量應用程式，在指定電腦上。  
@@ -25,10 +25,7 @@ Windows Process Activation Service (WAS) 管理啟動和包含該主機的 Windo
 - 集中式應用程式組態和管理。  
   
 - 可讓應用程式善用 IIS 處理序模型的優勢，而不需要部署完整的 IIS 安裝項目。  
-  
- 如需 WAS 功能的詳細資訊，請參閱[IIS 7.0 Beta:IIS 7.0 的 Web 系統管理](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
-  
- [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496)搭配[!INCLUDE[iisver](../../../../includes/iisver-md.md)]和 Windows Process Activation Service (WAS) 來提供豐富的應用程式裝載環境，為 NET4 WCF 和 WF 服務。 這些優點包括處理序生命週期管理、處理序回收、共用裝載、快速失敗保護、處理序損壞、隨選啟動和健康監視。 如需詳細資訊，請參閱 < [AppFabric 主控功能](https://go.microsoft.com/fwlink/?LinkId=196494)並[AppFabric 主控概念](https://go.microsoft.com/fwlink/?LinkId=196495)。  
+[Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496)與 IIS 7.0 和 Windows Process Activation Service (WAS)，提供豐富的應用程式裝載環境，為 NET4 WCF 和 WF 服務搭配運作。 這些優點包括處理序生命週期管理、處理序回收、共用裝載、快速失敗保護、處理序損壞、隨選啟動和健康監視。 如需詳細資訊，請參閱 < [AppFabric 主控功能](https://go.microsoft.com/fwlink/?LinkId=196494)並[AppFabric 主控概念](https://go.microsoft.com/fwlink/?LinkId=196495)。  
   
 ## <a name="elements-of-the-was-addressing-model"></a>WAS 定址模型項目  
  包含統一資源識別元 (URI) 位址的應用程式，這些程式碼單元會經由伺服器來管理自身的存留期和執行環境。 單一 WAS 伺服器執行個體可以裝載許多不同的應用程式。 伺服器會組織成群組呼叫的應用程式*站台*。 同一個網站中的應用程式會依階層架構順序加以排列，以反映做為應用程式外部位址使用的 URI 結構。  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: d6dea344d5af24ba2f5bb4aa4064a4f876408380
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 0946e123e10fbad7357c9be356287e5e87b271d2
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423896"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486930"
 ---
 # <a name="denial-of-service"></a>阻斷服務
 當系統由於無法處理訊息，或者處理訊息的速度極為緩慢而爆滿時，就會發生阻絕服務。  
@@ -67,7 +67,7 @@ ms.locfileid: "66423896"
  在少數情況下，當 X.509 憑證包含多個替代主體名稱，而且您使用替代主體名稱進行授權時，授權可能會失敗。  
   
 ## <a name="protect-configuration-files-with-acls"></a>使用 ACL 保護組態檔  
- 您可以針對 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 發行的權杖，在程式碼和組態檔中指定必要和選用的宣告。 這樣會造成在傳送至安全性權杖服務的 `RequestSecurityToken` 訊息中發出相對應的項目。 攻擊者可以修改程式碼或組態以移除必要或選用的宣告，這樣便有可能取得安全性權杖服務，而發出不允許存取目標服務的權杖。  
+ 您可以在 CardSpace 發行的權杖的程式碼和組態檔中指定必要和選擇性宣告。 這樣會造成在傳送至安全性權杖服務的 `RequestSecurityToken` 訊息中發出相對應的項目。 攻擊者可以修改程式碼或組態以移除必要或選用的宣告，這樣便有可能取得安全性權杖服務，而發出不允許存取目標服務的權杖。  
   
  若要減輕此項目：需要修改組態檔的電腦存取權。 使用檔案存取控制清單 (ACL) 以保護組態檔。 WCF 要求才會允許這類的程式碼，從組態載入程式碼存在於應用程式目錄或全域組件快取。 使用目錄 ACL 以保護目錄。  
   

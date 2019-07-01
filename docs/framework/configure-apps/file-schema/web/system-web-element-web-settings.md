@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: 687398e47ad95e3234c29571eeeac0c9d2d83a39
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: b9a43c5f5141e364ab9aac1cfdff577a8fb8a161
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832780"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486684"
 ---
 # <a name="systemweb-element-web-settings"></a>\<system.web > 項目 （Web 設定）
 包含 ASP.NET 裝載層管理整個處理序行為的方式的相關資訊。  
@@ -47,7 +47,7 @@ ms.locfileid: "66832780"
 |[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|所有由 common language runtime 和.NET Framework 應用程式的組態檔中指定的根項目。|  
   
 ## <a name="remarks"></a>備註  
- `system.web`項目和其子系`applicationPool`元素已新增至.NET Framework，.NET Framework 3.5 sp1。 當您執行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更新版本整合模式中的，此項目組合，可讓您設定 ASP.NET 如何管理執行緒，以及如何它排入佇列的要求 ASP.NET 裝載在 IIS 應用程式集區時。 如果您執行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更新版本在傳統或 ISAPI 模式中，則會忽略這些設定。  
+ `system.web`項目和其子系`applicationPool`元素已新增至.NET Framework，.NET Framework 3.5 sp1。 當您在整合模式中執行 IIS 7.0 或更新版本時，此項目組合，可讓您設定 ASP.NET 如何管理執行緒，以及如何它排入佇列的要求 ASP.NET 裝載在 IIS 應用程式集區時。 如果您在 [傳統] 或 [ISAPI] 模式中執行 IIS 7.0 或更新版本，則會忽略這些設定。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何在 aspnet.config 檔中設定 ASP.NET 全處理序行為，當 ASP.NET 裝載於 IIS 應用程式集區。 此範例假設 IIS 正在執行中整合式驗證模式和應用程式使用.NET Framework 3.5 SP1 或更新版本。 在.NET Framework 3.5 SP1 之前的.NET framework 的版本中，不會發生此行為。 在範例中的值是預設值。  

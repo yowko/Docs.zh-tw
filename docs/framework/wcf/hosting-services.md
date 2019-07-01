@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: db7ca2690fc7b76d3e843a4ed51ef356890ab9eb
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: b1a0a07876e9cc111e8c5eef56f208d7bf2cb49f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402401"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487705"
 ---
 # <a name="hosting-services"></a>裝載服務
 如果要成為作用中的服務，必須將服務裝載在建立及控制其內容和存留時間的執行階段環境中。 Windows Communication Foundation (WCF) 服務專為在支援 managed 程式碼在任何 Windows 處理程序中執行。  
@@ -34,7 +34,7 @@ ms.locfileid: "67402401"
  請注意，IIS 裝載的服務只能使用 HTTP 傳輸。 它在 IIS 5.1 版的實作方式已經為 [!INCLUDE[wxp](../../../includes/wxp-md.md)]帶來一些限制。 在上提供 WCF 服務的 IIS 5.1 訊息式啟動[!INCLUDE[wxp](../../../includes/wxp-md.md)]封鎖其他所有自我裝載的 WCF 服務使用連接埠 80 來通訊的相同電腦上。 WCF 服務可以在 其他應用程式時由 IIS 6.0 上相同的 AppDomain/應用程式集區/背景工作處理序中執行[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]。 但因為 WCF 與 IIS 6.0 都使用核心模式 HTTP 堆疊 (HTTP.sys)，IIS 6.0 與其他不同於 IIS 5.1 的同一部電腦上的自我裝載 WCF 服務可以共用連接埠 80。  
   
 #### <a name="windows-process-activation-service-was"></a>Windows Process Activation Service (WAS)  
- Windows Process Activation Service (WAS) 是 [!INCLUDE[lserver](../../../includes/lserver-md.md)] 上全新的處理序啟動機制 ( [!INCLUDE[wv](../../../includes/wv-md.md)]也提供此機制)。 它會保留熟悉的 IIS 6.0 處理序模型 （應用程式集區和訊息型處理序啟用） 和裝載功能 （例如，快速故障防護、 健康情況監視及回收），但是從啟動中移除對 HTTP 的相依性架構。 [!INCLUDE[iisver](../../../includes/iisver-md.md)] 會使用 WAS，以完成透過 HTTP 的訊息啟用。 WCF 的其他元件也可外掛至 WAS 以提供訊息型啟用，透過 WCF 支援其他通訊協定，例如 TCP、 MSMQ 及具名的管道。 如此便可讓使用通訊協定的應用程式使用 IIS 功能，例如處理序回收、快速故障防護，以及只提供給以 HTTP 為基礎的應用程式使用的常見組態系統等。  
+ Windows Process Activation Service (WAS) 是 [!INCLUDE[lserver](../../../includes/lserver-md.md)] 上全新的處理序啟動機制 ( [!INCLUDE[wv](../../../includes/wv-md.md)]也提供此機制)。 它會保留熟悉的 IIS 6.0 處理序模型 （應用程式集區和訊息型處理序啟用） 和裝載功能 （例如，快速故障防護、 健康情況監視及回收），但是從啟動中移除對 HTTP 的相依性架構。 IIS 7.0 使用 WAS，以完成透過 HTTP 的訊息型啟用。 WCF 的其他元件也可外掛至 WAS 以提供訊息型啟用，透過 WCF 支援其他通訊協定，例如 TCP、 MSMQ 及具名的管道。 如此便可讓使用通訊協定的應用程式使用 IIS 功能，例如處理序回收、快速故障防護，以及只提供給以 HTTP 為基礎的應用程式使用的常見組態系統等。  
   
  這個裝載選項要求必須正確設定 WAS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 如需有關如何設定 WAS 裝載，請參閱[How to:將 WCF 服務裝載於 WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。  
   

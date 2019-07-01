@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 19ffe7e3fb0de9b377279d9cd274f998a104c6b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8de673fae16da8189589e20b6d9a66b96e1823ba
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047811"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487101"
 ---
 # <a name="how-to-create-a-federated-client"></a>HOW TO：建立同盟用戶端
 在 Windows Communication Foundation (WCF) 中，建立適用於用戶端*同盟服務*包含三個主要步驟：  
@@ -39,7 +39,7 @@ ms.locfileid: "62047811"
   
 4. 檢查任何額外[ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)加上註解的項目出 <`alternativeIssuedTokenParameters`> 項目。 使用 Svcutil.exe 工具來產生聯合服務的組態時，如果聯合服務或任何中繼安全性權杖服務未指定發行者位址，而是指定了會公開多個端點之安全性權杖服務的中繼資料位址，則結果組態檔會參照到第一個端點。 標記為註解為組態檔中的其他端點則是 <`alternativeIssuedTokenParameters`> 項目。  
   
-     判斷這些 <`issuedTokenParameters`> 最好是在組態中已存在。 例如，用戶端可能會偏好使用 Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 權杖 (而不是使用者名稱/密碼組) 向安全性權杖服務進行驗證。  
+     判斷這些 <`issuedTokenParameters`> 最好是在組態中已存在。 例如，用戶端可能會想要使用 Windows CardSpace 權杖，而不是使用者名稱/密碼組的安全性權杖的服務進行驗證。  
   
     > [!NOTE]
     >  如果與服務進行通訊之前，必須周遊多個安全性權杖服務時，中繼安全性權杖服務可能會將用戶端導向不正確的安全性權杖服務。 因此，請確定在安全性權杖服務的端點[ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)是預期的安全性權杖服務而不未知的安全性權杖服務。  
@@ -84,7 +84,7 @@ ms.locfileid: "62047811"
   
 2. 如果權杖快取並非必要，設定`cacheIssuedTokens`屬性 (的 <`issuedToken`> 項目) 來`false`。  
   
-3. 如果快取的權杖需要時間限制時，請設定`maxIssuedTokenCachingTime`屬性上 <`issuedToken`> 設為適當值的項目。 例如:   
+3. 如果快取的權杖需要時間限制時，請設定`maxIssuedTokenCachingTime`屬性上 <`issuedToken`> 設為適當值的項目。 例如:  
     `<issuedToken maxIssuedTokenCachingTime='00:10:00' />`  
   
 4. 如果慣用預設值以外的值，設定`issuedTokenRenewalThresholdPercentage`屬性上 <`issuedToken`> 項目設為適當的值，例如：  

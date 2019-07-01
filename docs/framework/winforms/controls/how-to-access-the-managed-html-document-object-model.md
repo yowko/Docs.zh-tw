@@ -1,5 +1,5 @@
 ---
-title: HOW TO：存取受控 HTML 文件物件模型
+title: 作法：存取受控 HTML 文件物件模型
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 0374e63191f5f81891a0c7c78c5e739ac5ec7984
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2a195dc6583d5a0a72bd08b66f8933f4002e879a
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624166"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487280"
 ---
-# <a name="how-to-access-the-managed-html-document-object-model"></a>HOW TO：存取受控 HTML 文件物件模型
+# <a name="how-to-access-the-managed-html-document-object-model"></a>作法：存取受控 HTML 文件物件模型
 您可以從兩種類型的應用程式中，存取受管理的「HTML 文件物件模型」(DOM)：  
   
 - 執行有受管理之 <xref:System.Windows.Forms.WebBrowser> 控制項的 Windows Forms 應用程式 (.exe)。 這兩種技術為互補，<xref:System.Windows.Forms.WebBrowser> 控制項負責將頁面顯示給使用者，HTML DOM 負責顯示文件的邏輯結構。  
@@ -43,7 +43,7 @@ ms.locfileid: "64624166"
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
   
-1. 您的應用程式或 <xref:System.Windows.Forms.UserControl> 需要完全信任，才能存取受管理的 HTML DOM。 若要部署使用 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 的 Windows Forms 應用程式，可以使用「使用權限提高」或「受信任的應用程式部署」要求完全信任；如需詳細資料，請參閱[保護 ClickOnce 應用程式](/visualstudio/deployment/securing-clickonce-applications)。  
+1. 您的應用程式或 <xref:System.Windows.Forms.UserControl> 需要完全信任，才能存取受管理的 HTML DOM。 如果您要部署使用 ClickOnce 在 Windows Forms 應用程式，您可以使用要求完全信任權限提升或受信任的應用程式部署;請參閱[保護 ClickOnce 應用程式](/visualstudio/deployment/securing-clickonce-applications)如需詳細資訊。  
   
 ## <a name="see-also"></a>另請參閱
 

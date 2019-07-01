@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: a049bbe22d29f02acbc7889bb5d5010ec44f9d15
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 717abc8f54669a5ca814a61827a0865215204e1b
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876227"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487346"
 ---
 # <a name="application-settings-architecture"></a>應用程式設定架構
 本主題描述應用程式設定的運作方式，並且瀏覽架構的進階功能 (例如群組設定和設定索引鍵)。  
@@ -109,16 +109,16 @@ ms.locfileid: "65876227"
  如果您實作您自己的設定類別，您可以使用<xref:System.Configuration.SettingsSerializeAsAttribute>將設定標示為針對二進位或自訂序列化使用<xref:System.Configuration.SettingsSerializeAs>列舉型別。 如需有關如何在程式碼中建立您自己的設定類別的詳細資訊，請參閱[How to:建立應用程式設定](how-to-create-application-settings.md)。  
   
 ### <a name="settings-file-locations"></a>設定檔案位置  
- 根據應用程式的安裝方式，`app`.exe.config 和 *user*.config 檔案的位置會有所不同。 Windows Forms 應用程式複製到本機電腦，如`app`.exe.config 所在相同的目錄，做為基底目錄的應用程式的主要可執行檔，並*使用者*.config 位於所指定的位置<xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType>屬性。 對於透過 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 安裝的應用程式，這兩個檔案都位於 %InstallRoot%\Documents and Settings\\*username*\Local Settings 下的 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 資料目錄中。  
+ 根據應用程式的安裝方式，`app`.exe.config 和 *user*.config 檔案的位置會有所不同。 Windows Forms 應用程式複製到本機電腦，如`app`.exe.config 所在相同的目錄，做為基底目錄的應用程式的主要可執行檔，並*使用者*.config 位於所指定的位置<xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType>屬性。 透過 ClickOnce 安裝的應用程式，這兩個檔案都位於 %InstallRoot%\Documents ClickOnce 資料目錄和設定\\*使用者名稱*\Local Settings。  
   
- 如果使用者啟用漫遊設定檔，這些檔案的儲存位置會稍微不同，這可讓使用者在使用網域內的其他電腦時，定義不同的 Windows 和應用程式設定。 在此情況下，[!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 應用程式和 非 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 應用程式的 `app`.exe.config 和 *user*.config 檔案，都儲存在 %InstallRoot%\Documents and Settings\\*username*\Application Data 下。  
+ 如果使用者啟用漫遊設定檔，這些檔案的儲存位置會稍微不同，這可讓使用者在使用網域內的其他電腦時，定義不同的 Windows 和應用程式設定。 在此情況下，ClickOnce 應用程式和非 ClickOnce 應用程式會有他們`app`.exe.config 和*使用者*.config 檔案儲存在 %InstallRoot%\Documents and Settings\\ *使用者名稱*\Application Data。  
   
- 如需應用程式設定功能如何搭配新的部署技術的詳細資訊，請參閱 [ClickOnce 和應用程式設定](/visualstudio/deployment/clickonce-and-application-settings)。 如需 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]資料目錄的詳細資訊，請參閱[在 ClickOnce 應用程式中存取本機和遠端資料](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)。  
+ 如需應用程式設定功能如何搭配新的部署技術的詳細資訊，請參閱 [ClickOnce 和應用程式設定](/visualstudio/deployment/clickonce-and-application-settings)。 如需有關 ClickOnce 資料目錄的詳細資訊，請參閱 <<c0> [ 存取本機和 ClickOnce 應用程式中的遠端資料](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)。  
   
 ## <a name="application-settings-and-security"></a>應用程式設定和安全性  
  應用程式設定設計為在部分信任情況下運作，這是裝載於網際網路或內部網路上的 Windows Forms 應用程式預設的受限制環境。 使用應用程式設定搭配預設的設定提供者時，不需要任何超過部分信任的特殊權限。  
   
- 在 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 應用程式中使用應用程式設定時，`user`.config 檔案儲存在 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 資料目錄中。 應用程式的 `user`.config 檔案大小不能超過 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 設定的資料目錄配額。 如需詳細資訊，請參閱 [ClickOnce 和應用程式設定](/visualstudio/deployment/clickonce-and-application-settings)。  
+ 當應用程式設定 ClickOnce 應用程式中使用`user`.config 檔案會儲存在 ClickOnce 資料目錄。 應用程式的大小`user`.config 檔案不可超過設定的 ClickOnce 資料目錄配額。 如需詳細資訊，請參閱 [ClickOnce 和應用程式設定](/visualstudio/deployment/clickonce-and-application-settings)。  
   
 ## <a name="custom-settings-providers"></a>自訂設定提供者  
  在應用程式設定架構中，為應用程式設定之間的鬆散結合的包裝函式類別衍生自<xref:System.Configuration.ApplicationSettingsBase>，以及相關聯的設定提供者或提供者，衍生自<xref:System.Configuration.SettingsProvider>。 此關聯會定義只由<xref:System.Configuration.SettingsProviderAttribute>套用至包裝函式類別或其個別的屬性。 如果的設定，提供者未明確指定，預設的提供者， <xref:System.Configuration.LocalFileSettingsProvider>，會使用。 因此，此架構支援建立和使用自訂設定提供者。  

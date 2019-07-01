@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: b9dd02724b8c2a9e4f50ecd61d822d5f1a478eee
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 13e58339e55b2071e4c1979de6c4e130fe4c9e32
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402329"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486955"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>使用 WCF 的委派和模擬
 「*模擬* 」(Impersonation) 是服務用來限制用戶端存取服務網域資源的常用技術。 服務網域資源可以是像是本機檔案 (模擬) 的電腦資源，或是在另一部電腦上的資源，例如檔案共用 (委派)。 如需範例應用程式，請參閱 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)。 如需如何使用模擬的範例，請參閱[How to:服務上模擬用戶端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)。  
@@ -57,7 +57,7 @@ ms.locfileid: "67402329"
  服務可以模擬用戶端的程度，取決於服務在嘗試模擬時所擁有的權限、所使用的模擬類型，以及用戶端允許的可能模擬程度。  
   
 > [!NOTE]
->  當用戶端和服務在相同電腦上執行，而且用戶端正以系統帳戶執行時 (例如， `Local System` 或 `Network Service`)，用戶端就無法在安全工作階段是以可設定狀態之安全性內容權杖所建立的情況下進行模擬。 Windows Form 或主控台應用程式 (Console Application) 一般都會以目前登入的帳戶執行，因此依預設可以模擬該帳戶。 不過，用戶端是 ASP.NET 網頁，而該頁面裝載在 IIS 6.0 或[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，然後在執行用戶端為何`Network Service`預設帳戶。 所有支援安全工作階段的系統提供繫結，根據預設，都會使用沒有狀態 (Stateless) 的安全性內容權杖 (SCT)。 不過，如果用戶端是 ASP.NET 網頁，以及含有可設定狀態之 Sct 的安全工作階段的使用，就無法模擬該用戶端。 如需使用安全工作階段中的具狀態的 Sct 的詳細資訊，請參閱[How to:建立安全性內容權杖的安全工作階段](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
+>  當用戶端和服務在相同電腦上執行，而且用戶端正以系統帳戶執行時 (例如， `Local System` 或 `Network Service`)，用戶端就無法在安全工作階段是以可設定狀態之安全性內容權杖所建立的情況下進行模擬。 Windows Form 或主控台應用程式 (Console Application) 一般都會以目前登入的帳戶執行，因此依預設可以模擬該帳戶。 不過，當用戶端 ASP.NET 網頁和該頁面裝載於 IIS 6.0 或 IIS 7.0 中，則用戶端未執行`Network Service`預設帳戶。 所有支援安全工作階段的系統提供繫結，根據預設，都會使用沒有狀態 (Stateless) 的安全性內容權杖 (SCT)。 不過，如果用戶端是 ASP.NET 網頁，以及含有可設定狀態之 Sct 的安全工作階段的使用，就無法模擬該用戶端。 如需使用安全工作階段中的具狀態的 Sct 的詳細資訊，請參閱[How to:建立安全性內容權杖的安全工作階段](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
 ## <a name="impersonation-in-a-service-method-declarative-model"></a>服務方法的模擬：宣告式模型  
  大多數模擬狀況都牽涉到在呼叫端內容中執行服務方法。 WCF 提供的模擬功能，以簡化這可以讓使用者能夠指定模擬需求中的<xref:System.ServiceModel.OperationBehaviorAttribute>屬性。 例如，下列程式碼中，WCF 基礎結構模擬呼叫者之前執行`Hello`方法。 資源的存取控制清單 (ACL) 必須允許呼叫者存取權限，任何存取 `Hello` 方法內部原生資源的嘗試才能繼續。 若要啟用模擬，請將 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 屬性設定為其中一個 <xref:System.ServiceModel.ImpersonationOption> 例舉值，也就是 <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>，如下列範例所示。  

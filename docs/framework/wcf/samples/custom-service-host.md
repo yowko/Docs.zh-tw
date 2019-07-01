@@ -2,12 +2,12 @@
 title: 自訂服務裝載
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: d2eebd502fa02d01ac86cf88f336b72829a6116f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c2a1fc1b398a3a9efcd0c824ca041a790448dd3
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990661"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487650"
 ---
 # <a name="custom-service-host"></a>自訂服務裝載
 這個範例會示範如何使用 <xref:System.ServiceModel.ServiceHost> 類別的自訂衍生，以變更服務的執行階段行為。 這個方法會提供可重複使用替代方案，以便透過常用方法來設定大量服務。 此範例也會示範如何使用 <xref:System.ServiceModel.Activation.ServiceHostFactory> 類別，以便在網際網路資訊服務 (IIS) 或 Windows Process Activation Service (WAS) 裝載環境中使用自訂 ServiceHost。  
@@ -168,11 +168,11 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
   
 2. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3. 在建立方案後，執行 Setup.bat 以便在 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 中安裝 ServiceModelSamples 應用程式。 ServiceModelSamples 目錄現在應該會顯示為 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 應用程式。  
+3. 解決方案之後已經建立的執行 Setup.bat 以便中安裝 ServiceModelSamples 應用程式在 IIS 7.0 中。 ServiceModelSamples 目錄現在應該會出現為 IIS 7.0 應用程式。  
   
 4. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-5. 若要移除 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 應用程式，請執行 Cleanup.bat。  
+5. 若要移除的 IIS 7.0 應用程式，請執行 Cleanup.bat。  
   
 ## <a name="see-also"></a>另請參閱
 

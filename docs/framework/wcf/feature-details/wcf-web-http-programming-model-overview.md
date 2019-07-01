@@ -2,12 +2,12 @@
 title: WCF Web HTTP 程式設計模型概觀
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: a5438857114fba890aac78565ef128bfc5ea95f0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d4908eb75324d4316ea615d1a0acc286750752e7
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613050"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487711"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP 程式設計模型概觀
 Windows Communication Foundation (WCF) WEB HTTP 程式設計模型提供建置 wcf WEB HTTP 服務所需的基本項目。 WCF WEB HTTP 服務設計用來存取最廣泛的可能的用戶端，包括網頁瀏覽器，並具有下列獨特的需求：  
@@ -138,7 +138,7 @@ interface ICustomer
  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]支援 JSON 資料 (AJAX) 以及新聞訂閱摘要 (包括 ATOM 和 RSS)。 如需這些功能的詳細資訊，請參閱[WCF Web HTTP 格式化](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF 新聞訂閱概觀](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)並[AJAX 整合與 JSON 支援](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP 程式設計模型和安全性  
- 因為 WCF WEB HTTP 程式設計模型不支援 WS-* 通訊協定，來保護 WCF WEB HTTP 服務的唯一方法是運用 SSL 透過 HTTPS 公開服務。 如需有關設定使用 SSL [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，請參閱[如何在 IIS 中實作 SSL](https://go.microsoft.com/fwlink/?LinkId=131613)  
+ 因為 WCF WEB HTTP 程式設計模型不支援 WS-* 通訊協定，來保護 WCF WEB HTTP 服務的唯一方法是運用 SSL 透過 HTTPS 公開服務。 如需設定 IIS 7.0 與 SSL 的詳細資訊，請參閱[如何在 IIS 中實作 SSL](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP 程式設計模型疑難排解  
  當呼叫 WCF WEB HTTP 服務以使用 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> 建立通道時，<xref:System.ServiceModel.Description.WebHttpBehavior> 會使用組態檔中設定的 <xref:System.ServiceModel.EndpointAddress>，即便傳遞至 <xref:System.ServiceModel.EndpointAddress> 的 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> 是另一個值亦然。  

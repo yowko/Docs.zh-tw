@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 70ed0fe9191c18e88198871319b3c3ee3c0b4ab4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c4feb52cbefe7e3f8bab7f90568b231302b77372
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626963"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486854"
 ---
 # <a name="distributed-application-security"></a>分散式應用程式安全性
 Windows Communication Foundation (WCF) 安全性分為三個主要的功能區域： 傳輸安全性、 存取控制和稽核。 傳輸安全性提供完整性、機密性與驗證。 傳輸安全性是由下列其中一項提供：傳輸安全性、訊息安全性或 `TransportWithMessageCredential`。  
@@ -80,7 +80,7 @@ Windows Communication Foundation (WCF) 安全性分為三個主要的功能區�
 |Windows|允許在 Windows 認證的已驗證內容中發生 SOAP 訊息交換。 使用 SSPI 交涉機制挑選 Kerberos 通訊協定或 NTLM 做為驗證服務。|  
 |使用者名稱|允許服務要求用戶端必須使用使用者名稱認證進行驗證。 請注意，WCF 不允許任何密碼編譯作業的使用者名稱，例如產生簽章或加密資料。 因此，WCF 會強制使用使用者名稱認證時，保護傳輸。|  
 |憑證|允許服務要求用戶端使用憑證進行驗證。|  
-|[!INCLUDE[infocard](../../../../includes/infocard-md.md)]|允許服務要求用戶端以 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 進行驗證。|  
+|CardSpace|允許服務要求用戶端使用 CardSpace 來驗證。|  
   
 ### <a name="programming-credentials"></a>程式設計認證  
  針對每個用戶端認證類型，WCF 程式設計模型可讓您指定認證值，並使用服務行為和通道行為的認證驗證。  

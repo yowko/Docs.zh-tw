@@ -6,61 +6,61 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: 1212096422f5bb10c7b781228dc54c8790ac97ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 457d74cda7587c81363c13f1e66ae095e2a145ff
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011836"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487333"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Windows Form 的 ClickOnce 部署
-下列主題描述 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]，您可以使用這項技術輕鬆地將 Windows Form 應用程式部署到用戶端電腦。  
+下列主題說明 ClickOnce，用來輕鬆地部署到用戶端電腦的 Windows Forms 應用程式的技術。  
   
 ## <a name="related-sections"></a>相關章節  
  [選擇 ClickOnce 部署策略](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)  
- 顯示部署 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 應用程式的幾個選項。  
+ 顯示部署 ClickOnce 應用程式的數個選項。  
   
  [選擇 ClickOnce 更新策略](/visualstudio/deployment/choosing-a-clickonce-update-strategy)  
- 顯示更新 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 應用程式的幾個選項。  
+ 顯示更新 ClickOnce 應用程式的數個選項。  
   
  [保護 ClickOnce 應用程式](/visualstudio/deployment/securing-clickonce-applications)  
- 說明 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署的安全性影響。  
+ 說明 ClickOnce 部署的安全性含意。  
   
  [疑難排解 ClickOnce 部署](/visualstudio/deployment/troubleshooting-clickonce-deployments)  
- 描述在部署 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 應用程式時可能發生的各種問題，並記載 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 可能產生的最上層錯誤訊息。  
+ 描述各種部署 ClickOnce 應用程式時可能發生的問題和文件可能會產生 ClickOnce 的最上層錯誤訊息。  
   
  [ClickOnce 和應用程式設定](/visualstudio/deployment/clickonce-and-application-settings)  
- 描述 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署如何使用應用程式設定，這些設定會儲存應用程式和使用者設定以供未來擷取。  
+ 描述 ClickOnce 部署應用程式設定，其中儲存應用程式與使用者設定以供未來擷取的運作方式。  
   
  [受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)  
- 描述允許信任的應用程式在用戶端電腦上以更高層級的權限執行的 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 功能。  
+ 描述 ClickOnce 功能，可讓受信任的應用程式在用戶端電腦上使用較高層級的權限執行。  
   
  [ClickOnce 和 Authenticode](/visualstudio/deployment/clickonce-and-authenticode)  
  描述如何在信任的應用程式部署中使用 Authenticode 技術。  
   
  [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
- 示範如何使用命令列和 SDK 工具來部署 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]，而不使用 Visual Studio。  
+ 示範如何使用命令列和 SDK 工具而不使用 Visual Studio 部署 ClickOnce 應用程式。  
   
  [如何：將信任發行者新增到 ClickOnce 應用程式的用戶端電腦](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
  示範信任的應用程式部署所需之用戶端電腦的一次組態。  
   
  [如何：指定部署更新的替代位置](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
- 示範如何使用 SDK 工具設定 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 應用程式，來檢查其他位置是否有新版應用程式。  
+ 示範如何設定 ClickOnce 應用程式，使用 SDK 工具，來檢查新版本的應用程式的不同位置。  
   
  [逐步解說：依需求以 ClickOnce 部署 API 下載組件](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
  示範如何使用應用程式開發介面呼叫，在應用程式第一次嘗試載入組件時擷取組件。  
   
  [如何：在線上 ClickOnce 應用程式中擷取查詢字串資訊](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  
- 示範如何從用來執行 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 應用程式的 URL 擷取參數。  
+ 示範擷取參數，從用來執行 ClickOnce 應用程式的 URL。  
   
  [ClickOnce 快取概觀](/visualstudio/deployment/clickonce-cache-overview)  
- 描述本機電腦上用來儲存 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 應用程式的快取。  
+ 描述用來儲存在本機電腦上的 ClickOnce 應用程式的快取。  
   
  [在 ClickOnce 應用程式中存取本機和遠端資料](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)  
- 描述如何從 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 應用程式存取本機資料檔案和遠端資料來源。  
+ 描述如何從 ClickOnce 應用程式存取本機資料檔和遠端資料來源。  
   
  [如何：在 ClickOnce 應用程式中納入資料檔案](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
- 示範如何標記檔案，以便在 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 資料目錄中使用。  
+ 示範如何將檔案標示，如此就可以使用 ClickOnce 資料目錄中。  
   
 ## <a name="see-also"></a>另請參閱
 

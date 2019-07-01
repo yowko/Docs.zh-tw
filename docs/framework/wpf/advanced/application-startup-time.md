@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 321aad14d17d6ef6fe0b7c112f8f694dd1c767d6
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 8bdd70a6eaea8aff196e2156d88460a6d24b5d3f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832693"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487181"
 ---
 # <a name="application-startup-time"></a>應用程式啟動時間
 WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明各種技術來縮短 Windows Presentation Foundation (WPF) 應用程式的認知和實際啟動時間。  
@@ -65,7 +65,7 @@ WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明
  同時有 Ngen 和 JIT 模組可能得到最差效果。 這是因為必須載入 mscorjit.dll，而且當 JIT 編譯器處理您的程式碼時，JIT 編譯器在讀取組件的中繼資料時必須存取 Ngen 映像中的許多分頁。  
   
 ### <a name="ngen-and-clickonce"></a>Ngen 和 ClickOnce  
- 您打算部署應用程式的方式也會造成載入時間不同。 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 應用程式部署不支援 Ngen。 如果您決定對應用程式使用 Ngen.exe，您必須使用其他部署機制，例如 Windows Installer。  
+ 您打算部署應用程式的方式也會造成載入時間不同。 ClickOnce 應用程式部署不支援 Ngen。 如果您決定對應用程式使用 Ngen.exe，您必須使用其他部署機制，例如 Windows Installer。  
   
  如需詳細資訊，請參閱 [Ngen.exe (原生映像產生器)](../../tools/ngen-exe-native-image-generator.md)。  
   
@@ -112,9 +112,9 @@ WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明
  如果您必須使用<xref:System.Xml.Serialization.XmlSerializer>類別，您可以達到更佳的效能，如果您預先產生序列化組件。  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>將 ClickOnce 設定為啟動之後檢查更新  
- 如果您的應用程式使用 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]，請將 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 設定成在應用程式啟動之後檢查部署網站是否有更新，以避免在啟動時存取網路。  
+ 如果您的應用程式使用 ClickOnce，請設定 ClickOnce 應用程式啟動之後檢查部署網站有更新，以避免在啟動時的網路存取。  
   
- 如果您使用 XAML 瀏覽器應用程式 (XBAP) 模型，請記住，即使 XBAP 已在 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 快取中，[!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 仍會檢查部署網站是否有更新。 如需詳細資訊，請參閱 [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment)。  
+ 如果您使用 XAML 瀏覽器應用程式 (XBAP) 模型，請注意，ClickOnce 會檢查部署網站有更新，即使 XBAP 已在 ClickOnce 快取中。 如需詳細資訊，請參閱 [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment)。  
   
 ## <a name="configure-the-presentationfontcache-service-to-start-automatically"></a>將 PresentationFontCache 服務設定為自動啟動  
  重新開機後第一個執行的 WPF 應用程式是 PresentationFontCache 服務。 此服務會快取系統字型、改善字型存取，並改善整體效能。 啟動服務時會產生額外負荷，在一些受控制的環境中，請考慮將服務設定成在系統重新開機時自動啟動。  

@@ -2,12 +2,12 @@
 title: WCF 中的安全性行為
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: 53d8fedb5f562dfbc4aec566f8d0c442b255e1c9
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 378edb6ddd7a66249a0c7548a3d9465475f670a8
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424684"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487754"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF 中的安全性行為
 在 Windows Communication Foundation (WCF) 中，行為會修改服務層級或端點層級的執行階段行為。 (如需行為的詳細資訊在一般情況下，請參閱[指定服務執行階段行為](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。)*安全性行為*可控制認證、 驗證、 授權和稽核記錄。 您可以藉由程式設計的方式或透過組態的方式使用這些行為。 本主題將著重於設定下列與安全性功能相關的行為：  
@@ -87,7 +87,7 @@ ms.locfileid: "67424684"
  如需使用這個組態項目的詳細資訊，請參閱[How to:Federation Service 上設定認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。  
   
 #### <a name="allowing-anonymous-cardspace-users"></a>允許匿名的 CardSpace 使用者  
- 將 `AllowUntrustedRsaIssuers` 項目的 `<IssuedTokenAuthentication>` 屬性設定為 `true`，以明確地允許任何用戶端提出以任一 RSA 金鑰組所簽署之自行發行的權杖。 簽發者*未受信任*因為索引鍵沒有任何與其相關聯的簽發者資料。 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 使用者可以建立自動發行資訊卡，其中包含自行提供的身分識別宣告。 使用這個功能時必須要很小心。 若要使用此功能，請考慮使用 RSA 公開金鑰做為更安全的密碼，這個金鑰應該與使用者名稱一起儲存在資料庫中。 允許用戶端存取服務之前，請確認用戶端所提出的 RSA 公開金鑰，此動作可透過將用戶端所提出的 RSA 公開金鑰與所呈現之使用者名稱對應的儲存公開金鑰進行比較來達成。 這個情況是假設您已建立註冊程式，以便讓使用者註冊其使用者名稱，並將其與自行發行的 RSA 公開金鑰產生關聯。  
+ 將 `AllowUntrustedRsaIssuers` 項目的 `<IssuedTokenAuthentication>` 屬性設定為 `true`，以明確地允許任何用戶端提出以任一 RSA 金鑰組所簽署之自行發行的權杖。 簽發者*未受信任*因為索引鍵沒有任何與其相關聯的簽發者資料。 CardSpace 使用者可以建立自行發出的卡片，其中包含自行提供的身分識別的宣告。 使用這個功能時必須要很小心。 若要使用此功能，請考慮使用 RSA 公開金鑰做為更安全的密碼，這個金鑰應該與使用者名稱一起儲存在資料庫中。 允許用戶端存取服務之前，請確認用戶端所提出的 RSA 公開金鑰，此動作可透過將用戶端所提出的 RSA 公開金鑰與所呈現之使用者名稱對應的儲存公開金鑰進行比較來達成。 這個情況是假設您已建立註冊程式，以便讓使用者註冊其使用者名稱，並將其與自行發行的 RSA 公開金鑰產生關聯。  
   
 ## <a name="client-credentials"></a>用戶端認證  
  在需要雙向驗證的情況下，用戶端認證可用於驗證服務的用戶端。 在用戶端必須以服務的憑證保護傳遞給服務的訊息時，您可以使用此章節的說明指定服務憑證。  

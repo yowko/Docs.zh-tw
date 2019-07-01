@@ -1,5 +1,5 @@
 ---
-title: HOW TO：設定本機簽發者
+title: 作法：設定本機簽發者
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 46dbb39a31a1ef256bef0f5b7e1bbc41ce1eca3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98d4c01bf2b84a6379eca5d0e1d5dbee68dc7cdd
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779297"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487143"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>HOW TO：設定本機簽發者
 本主題會說明如何將用戶端設定成使用已發行權杖的本機簽發者。  
@@ -23,7 +23,7 @@ ms.locfileid: "61779297"
  Windows Communication Foundation (WCF) 的聯合繫結的簽發者位址的情況下使用本機簽發者 `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` 或`null`。 在這種情況下，您必須設定包含本機簽發者位址的 <xref:System.ServiceModel.Description.ClientCredentials>，以及用來與該簽發者進行通訊的繫結。  
   
 > [!NOTE]
->  如果<xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A>屬性`ClientCredentials`類別設定為`true`、 未指定本機簽發者位址，及所指定的簽發者位址[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)或其他聯合繫結是 `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self` ， `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` ，或者是`null`，然後 Windows[!INCLUDE[infocard](../../../../includes/infocard-md.md)]就使用簽發者。  
+>  如果<xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A>的屬性`ClientCredentials`類別會設定為`true`、 未指定本機簽發者位址，及所指定的簽發者位址[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)或其他同盟的繫結`http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`， `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`，或為`null`，則會使用 Windows CardSpace 簽發者。  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>透過程式碼來設定本機簽發者  
   

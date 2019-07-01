@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing
 ms.date: 03/30/2017
 ms.assetid: 10ef3876-6f8e-4d4e-8444-f47847b64795
-ms.openlocfilehash: f5d74d73cc43b500d3920ca03905f4eb7543619a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93354fbdd0c1726280526ca07a8b3dd1c57c8a25
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779739"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486761"
 ---
 # <a name="microsofttransactionstransactionbridgedurableparticipantreplaywhilepreparing"></a>Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing
 WS-AT 通訊協定服務接收到參與者的「重新執行」訊息，但這些參與者並未回應「準備」。 因此，交易已中止。  
@@ -15,8 +15,9 @@ WS-AT 通訊協定服務接收到參與者的「重新執行」訊息，但這�
 ## <a name="description"></a>描述  
  如果在參與者仍然在「準備」時收到「重新執行」訊息，則會進行追蹤。 這是此狀態的不合法訊息，因此異動即將中止。  
   
-## <a name="troubleshooting"></a>疑難排解  
- 接收這項錯誤可能表示參與者 (包括下層交易管理員) 已經從失敗復原，不過不確定交易結果並要求其狀態。  
+## <a name="troubleshooting"></a>疑難排解
+
+收到這個錯誤可能表示已從災難中復原 （包括下層異動管理員） 的長期參與者不過，它會不確定交易結果，並要求其狀態。  
   
 ## <a name="see-also"></a>另請參閱
 

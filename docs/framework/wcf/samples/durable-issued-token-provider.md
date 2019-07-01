@@ -2,18 +2,18 @@
 title: 永久性發行權杖提供者
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: b7f204fcb2c1b72a73e091ecf37c2921f7575516
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bfe8f8bb8c3775760bc69031e338a156d690ab25
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650077"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487606"
 ---
 # <a name="durable-issued-token-provider"></a>永久性發行權杖提供者
 這個範例示範如何實作自訂用戶端發行的權杖提供者。  
   
 ## <a name="discussion"></a>討論  
- Windows Communication Foundation (WCF) 中的權杖提供者用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附[!INCLUDE[infocard](../../../../includes/infocard-md.md)]權杖提供者。 自訂權杖提供者適用於下列情況：  
+ Windows Communication Foundation (WCF) 中的權杖提供者用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附的 CardSpace 權杖提供者。 自訂權杖提供者適用於下列情況：  
   
 - 如果您有內建權杖提供者無法使用的認證存放區。  
   

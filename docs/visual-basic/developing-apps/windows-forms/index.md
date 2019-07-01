@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: d1f43a5b7a539c89a753d168fbf0e05ca4118f58
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: dd3385d6459199d56f74abfb1b8e0e218a2adf78
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347990"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487796"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Form 應用程式基本概念 (Visual Basic)
 Visual Basic 中很重要的一部分是建立本機使用者的電腦執行的 Windows Forms 應用程式的能力。 您可以使用 Visual Studio 來建立使用 Windows Form 的應用程式和使用者介面。 在 Windows Forms 應用程式的基礎類別<xref:System.Windows.Forms>命名空間。  
@@ -71,19 +71,19 @@ Visual Basic 中很重要的一部分是建立本機使用者的電腦執行的 
 |使用 [資料來源] 視窗|[逐步解說：Windows Form 上顯示資料](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>將應用程式部署到用戶端電腦  
- 一旦您撰寫您的應用程式，您必須傳送給您的使用者，讓他們可以安裝並執行它自己的用戶端電腦上。 使用[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]技術，您可以使用按幾下即可部署您從 Visual Studio 內的應用程式和使用者提供指向您在網站上的應用程式的 URL。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 會管理所有的項目和您的應用程式中的相依性，並確保應用程式已正確安裝用戶端電腦上。  
+ 一旦您撰寫您的應用程式，您必須傳送給您的使用者，讓他們可以安裝並執行它自己的用戶端電腦上。 使用 ClickOnce 技術，您可以使用按幾下即可部署您從 Visual Studio 內的應用程式，並提供使用者指向您在網站上的應用程式的 URL。 ClickOnce 管理的所有項目和您的應用程式中的相依性，並確保應用程式已正確安裝用戶端電腦上。  
   
- [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 應用程式可以設定為只在使用者連線到網路時執行，或是線上和離線時都可執行。 當您指定應用程式應該支援離線作業時，[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]將連結新增至您的應用程式在使用者的**啟動** 功能表，讓使用者可以不用透過 URL 開啟它。  
+ ClickOnce 應用程式可以設定使用者連線到網路時，才執行，或同時執行線上和離線。 當您指定應用程式應該支援離線作業時，ClickOnce 會將連結新增至您的應用程式在使用者的**啟動** 功能表，讓使用者可以不用透過 URL 開啟它。  
   
- 當您更新應用程式時，您可以將新的部署資訊清單和新的應用程式複本發行到 Web 伺服器。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 偵測到有可用的更新，並升級使用者的安裝;沒有自訂的程式設計，才能更新舊組件。  
+ 當您更新應用程式時，您可以將新的部署資訊清單和新的應用程式複本發行到 Web 伺服器。 ClickOnce 偵測到有可用的更新，並升級使用者的安裝;沒有自訂的程式設計，才能更新舊組件。  
   
- 如需 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 的完整介紹，請參閱 [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)。 如需使用這些功能的逐步資訊，請參閱下列說明主題：  
+ ClickOnce 的完整介紹，請參閱 < [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)。 如需使用這些功能的逐步資訊，請參閱下列說明主題：  
   
 |以|請參閱|  
 |--------|---------|  
-|部署應用程式 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[如何：使用 [發佈精靈] 發佈 ClickOnce 應用程式](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
-|更新[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]部署|[如何：管理 ClickOnce 應用程式的更新](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|管理與安全性 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[如何：啟用 ClickOnce 安全性設定](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|部署 ClickOnce 應用程式|[如何：使用 [發佈精靈] 發佈 ClickOnce 應用程式](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|更新 ClickOnce 部署|[如何：管理 ClickOnce 應用程式的更新](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
+|使用 ClickOnce 的安全性管理|[如何：啟用 ClickOnce 安全性設定](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>其他控制項和功能  
  Windows Form 中還有許多其他功能，可讓您快速、輕鬆地實作一般工作，例如支援建立對話方塊、列印、加入說明和文件，以及將您的應用程式當地語系化為多種語言。 此外，Windows Form 依賴.NET Framework 中，讓您發行至您的客戶更安全的應用程式的強固的安全性系統。  

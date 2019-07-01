@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 376448502b7b9c7002213be5c3437849a3868166
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 295e4bd5eca58bc190b31fd96e79f97678e381a4
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425027"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486778"
 ---
 # <a name="federation"></a>同盟
 此主題提供聯合安全性概念的簡短概觀。 它也說明對部署聯合的安全性架構的 Windows Communication Foundation (WCF) 支援。 示範聯合的範例應用程式，請參閱[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
@@ -224,7 +224,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
   
  ![Federation](../../../../docs/framework/wcf/feature-details/media/sts-b.gif "STS_B")  
   
- 與 STS B 類似，STS A 也是發行安全性權杖，並針對此目的公開單一端點的 Web 服務。 但是，它會使用不同的繫結 (`wsHttpBinding`)，並且需要使用者使用 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 宣告提交有效的 `emailAddress`。 它會使用 `userAuthenticated` 宣告發行 SAML 權杖當做回應。 在服務組態中會以宣告方式指定。  
+ 與 STS B 類似，STS A 也是發行安全性權杖，並針對此目的公開單一端點的 Web 服務。 不過，它會使用不同的繫結 (`wsHttpBinding`)，而且需要使用者具有有效 CardSpace`emailAddress`宣告。 它會使用 `userAuthenticated` 宣告發行 SAML 權杖當做回應。 在服務組態中會以宣告方式指定。  
   
 ```xml  
 <system.serviceModel>  

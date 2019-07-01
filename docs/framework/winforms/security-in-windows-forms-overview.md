@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: a2d0f5f740186d3dd7483408f88d612711f57575
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 471ed75a922ab8a7df18f2e4a3ccd89ede171248
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348474"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487267"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Form 中的安全性概觀
 
@@ -21,7 +21,7 @@ ms.locfileid: "67348474"
 
 .NET Framework 導入了一種基礎結構程式碼存取安全性，可讓您區分權限或權限，以及使用者所擁有的權限程式碼呼叫。 根據預設，來自網際網路及內部網路的程式碼，只能在所謂部分信任的環境中執行。 部分信任會使應用程式遵守一系列的限制，例如，限制應用程式不能存取本機硬碟，且無法執行 Unmanaged 程式碼等等。 .NET Framework 控制該程式碼可以存取該程式碼的身分識別為基礎的資源： 它來自何處、 是否有[強式名稱組件](../app-domains/strong-named-assemblies.md)、 是否已簽署的憑證，等等。
 
-您用來部署 Windows Form 應用程式的 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 技術，可協助您更輕鬆地開發可在部分信任、完全信任或提高權限的部分信任中執行的應用程式。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 提供「提高權限」和「受信任的應用程式部署」之類的功能，讓您的應用程式能夠以負責任的方式，向本機使用者要求完全信任或提高權限。
+ClickOnce 技術，可用來部署 Windows Form 應用程式，可協助讓您更輕鬆地開發應用程式，以更高權限執行在部分信任、 完全信任，或在部分信任中。 ClickOnce 提供權限提升和受信任的應用程式部署等功能，讓您的應用程式可以要求完全信任或提高權限本機使用者以負責方式。
 
 ## <a name="understanding-security-in-the-net-framework"></a>了解 .NET Framework 中的安全性
 
@@ -34,7 +34,7 @@ ms.locfileid: "67348474"
 >
 > 各權限集合中授與的預設權限詳列於[預設安全性原則](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100))主題中。 根據應用程式接收的權限，它會正確執行，或是產生安全性例外狀況。
 >
-> 許多 Windows Form 應用程式都會使用 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 來部署。 用來產生 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署的工具所擁有的安全性預設值不同於先前討論的內容。 如需詳細資訊，請參閱下列討論：
+> 許多 Windows Forms 應用程式會使用 ClickOnce 進行部署。 用來產生 ClickOnce 部署工具有不同的安全性預設值，於先前討論的內容。 如需詳細資訊，請參閱下列討論：
 
 授與應用程式的實際權限可能不同於預設值，因為安全性原則是可以修改的，這表示您的應用程式可能在某部電腦上具有權限，而在另一部電腦上則沒有。
 
@@ -64,9 +64,9 @@ ms.locfileid: "67348474"
 
 ### <a name="deploying-an-application-with-the-appropriate-permissions"></a>使用適當的權限部署應用程式
 
-將 Windows Form 應用程式部署至用戶端電腦時，最常見的方法是使用 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]，這個部署技術會描述應用程式必須執行的所有元件。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 使用稱為資訊清單的 XML 檔案來描述構成應用程式的組件和檔案，以及應用程式所需的權限。
+部署用戶端電腦的 Windows Forms 應用程式的最常見的方法是使用 ClickOnce 部署技術會描述所有您的應用程式需要執行的元件。 ClickOnce 會使用稱為資訊清單的 XML 檔案來描述組件和應用程式的檔案，並也您的應用程式所需權限。
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 有兩種技術可在用戶端電腦上要求提高權限。 這兩種技術都需要使用 Authenticode 憑證。 該憑證有助於確保應用程式的使用者是來自受信任的來源。
+ClickOnce 會有兩種技術要求用戶端電腦上的提高權限。 這兩種技術都需要使用 Authenticode 憑證。 該憑證有助於確保應用程式的使用者是來自受信任的來源。
 
 下表將描述這些技術。
 
@@ -77,9 +77,9 @@ ms.locfileid: "67348474"
 
 您要選擇哪一種技術，將取決於您的部署環境。 如需詳細資訊，請參閱[選擇 ClickOnce 部署策略](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)。
 
-根據預設，[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]部署使用 Visual Studio 或.NET Framework SDK 工具 （Mage.exe 和 MageUI.exe） 的應用程式設定為具有完全信任的用戶端電腦上執行。 如果您在部署應用程式時，是使用部分信任，或是只有使用某些額外的權限，則必須變更這個預設值。 您可以使用 Visual Studio 或.NET Framework SDK 工具 MageUI.exe 當您設定您的部署。 如需如何使用 MageUI.exe 的詳細資訊，請參閱 < 逐步解說：部署 ClickOnce 應用程式，從命令列。  另請參閱[How to:設定 ClickOnce 應用程式的自訂權限](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110))或[How to:設定 ClickOnce 應用程式的自訂權限](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)。
+根據預設，ClickOnce 應用程式部署使用 Visual Studio 或.NET Framework SDK 工具 （Mage.exe 和 MageUI.exe） 會設定為具有完全信任的用戶端電腦上執行。 如果您在部署應用程式時，是使用部分信任，或是只有使用某些額外的權限，則必須變更這個預設值。 您可以使用 Visual Studio 或.NET Framework SDK 工具 MageUI.exe 當您設定您的部署。 如需如何使用 MageUI.exe 的詳細資訊，請參閱 < 逐步解說：部署 ClickOnce 應用程式，從命令列。  另請參閱[How to:設定 ClickOnce 應用程式的自訂權限](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110))或[How to:設定 ClickOnce 應用程式的自訂權限](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)。
 
-如需有關 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 安全性層面和權限提高的詳細資訊，請參閱[保護 ClickOnce 應用程式](/visualstudio/deployment/securing-clickonce-applications)。 如需有關受信任的應用程式部署的詳細資訊，請參閱[受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)。
+ClickOnce 和權限提升的安全性方面的相關資訊，請參閱[保護 ClickOnce 應用程式](/visualstudio/deployment/securing-clickonce-applications)。 如需有關受信任的應用程式部署的詳細資訊，請參閱[受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)。
 
 ### <a name="testing-the-application"></a>測試應用程式
 

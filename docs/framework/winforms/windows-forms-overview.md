@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 08e85828451ba6c66b13ff31e3d6c106871b8154
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 71bf50bdcf058e94981dc5df4731b5d32dcc2069
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875878"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487212"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms 概觀
 
@@ -18,13 +18,13 @@ ms.locfileid: "65875878"
 
 ## <a name="windows-forms-and-smart-client-apps"></a>Windows Form 和智慧型用戶端應用程式
 
- 使用 Windows Form 來開發智慧型用戶端。 「智慧型用戶端」是豐富的圖形化應用程式，容易部署及更新，無論是否連接至網際網路都能運作，而且在存取本機電腦上的資源時，所使用的方法比傳統的 Windows 應用程式更安全。
+ 使用 Windows Form 來開發智慧型用戶端。 「智慧型用戶端」  是豐富的圖形化應用程式，容易部署及更新，無論是否連接至網際網路都能運作，而且在存取本機電腦上的資源時，所使用的方法比傳統的 Windows 應用程式更安全。
 
 ### <a name="build-rich-interactive-user-interfaces"></a>建置豐富、 互動式的使用者介面
 
  Windows Form 是.NET Framework 中，一組簡化常見的應用程式工作，例如讀取和寫入至檔案系統的受管理程式庫的智慧型用戶端技術。 當您使用像是 Visual Studio 的開發環境時，則您可以透過網路來建立與遠端電腦來顯示資訊、 要求輸入使用者，以及通訊的 Windows Form 智慧型用戶端應用程式。
 
- 在 Windows Forms 中，「表單」是一種視覺化介面，您可以在上面顯示要提供給使用者的資訊。 通常在建置 Windows Forms 應用程式時，您會將控制項加入表單，以及開發對使用者動作的回應，例如滑鼠點選或是按下按鍵。 「控制項」是獨立的使用者介面 (UI) 項目，可顯示資料或接受資料輸入。
+ 在 Windows Forms 中，「表單」  是一種視覺化介面，您可以在上面顯示要提供給使用者的資訊。 通常在建置 Windows Forms 應用程式時，您會將控制項加入表單，以及開發對使用者動作的回應，例如滑鼠點選或是按下按鍵。 「控制項」  是獨立的使用者介面 (UI) 項目，可顯示資料或接受資料輸入。
 
  當使用者對您的表單或其中一個控制項執行某個動作時，該動作會產生事件。 您的應用程式會使用程式碼對這些事件做出反應，並且在事件發生時加以處理。 如需詳細資訊，請參閱[在 Windows Forms 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)。
 
@@ -57,7 +57,7 @@ ms.locfileid: "65875878"
 
  您可以使用 [資料來源] 視窗，輕鬆地建立資料繫結控制項。 此視窗會顯示您專案中的資料來源，例如資料庫、Web 服務和物件。 將項目從這個視窗拖曳到專案中的表單上，即可建立資料繫結控制項。 您也可以將物件從 [資料來源] 視窗拖曳至現有的控制項，以將現有的控制項繫結至資料。
 
- 在 Windows Forms 中，另一種管理資料繫結的方法是「設定」。 大部分的智慧型用戶端應用程式必須保留其執行階段狀態的一些相關資訊 (例如表單的最後已知大小)，以及保留使用者偏好設定資料 (例如儲存檔案的預設位置)。 應用程式設定功能為因應這些需求，提供了一種簡單的方法，可將這兩種設定都儲存在用戶端電腦上。 使用 Visual Studio 或程式碼編輯器中定義這些設定之後，設定是保存為 XML，並在執行階段自動讀回記憶體。
+ 在 Windows Forms 中，另一種管理資料繫結的方法是「設定」  。 大部分的智慧型用戶端應用程式必須保留其執行階段狀態的一些相關資訊 (例如表單的最後已知大小)，以及保留使用者偏好設定資料 (例如儲存檔案的預設位置)。 應用程式設定功能為因應這些需求，提供了一種簡單的方法，可將這兩種設定都儲存在用戶端電腦上。 使用 Visual Studio 或程式碼編輯器中定義這些設定之後，設定是保存為 XML，並在執行階段自動讀回記憶體。
 
 #### <a name="display-and-manipulate-data"></a>顯示和操作資料
 
@@ -72,21 +72,21 @@ ms.locfileid: "65875878"
 
 ### <a name="deploy-apps-to-client-computers"></a>將應用程式部署至用戶端電腦
 
-撰寫應用程式之後，您必須將該應用程式傳送給您的使用者，讓它們能夠自己在用戶端電腦上安裝及執行該應用程式。 當您使用[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]技術，您可以部署應用程式從 Visual Studio 內使用按幾下，並指向您在網站上的應用程式的 URL 提供給使用者。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 會管理您應用程式中的所有項目和相依性，並確保應用程式已正確安裝在用戶端電腦上。
+撰寫應用程式之後，您必須將該應用程式傳送給您的使用者，讓它們能夠自己在用戶端電腦上安裝及執行該應用程式。 當您使用 ClickOnce 技術時，您可以使用按幾下，部署您從 Visual Studio 內的應用程式，並指向您在網站上的應用程式的 URL 提供給使用者。 ClickOnce 管理所有的項目和您的應用程式中的相依性，並確保應用程式已正確安裝用戶端電腦上。
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 應用程式可以設定為只在使用者連線到網路時執行，或是線上和離線時都可執行。 當您指定應用程式應該支援離線作業時，[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 會在使用者的 [開始] 功能表中新增應用程式的連結。 然後使用者就可以直接開啟應用程式，而不需要使用 URL。
+ClickOnce 應用程式可以設定使用者連線到網路時，才執行，或同時執行線上和離線。 當您指定應用程式應該支援離線作業時，ClickOnce 會將連結新增至您的應用程式在使用者的**啟動**功能表。 然後使用者就可以直接開啟應用程式，而不需要使用 URL。
 
-當您更新應用程式時，您可以將新的部署資訊清單和新的應用程式複本發行到 Web 伺服器。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 會偵測到有可用的更新，並升級使用者的安裝 ，不需要自訂的程式設計，即可更新舊組件。
+當您更新應用程式時，您可以將新的部署資訊清單和新的應用程式複本發行到 Web 伺服器。 ClickOnce 會偵測到有可用的更新，並升級使用者的安裝;沒有自訂的程式設計，才能更新舊組件。
 
 #### <a name="deploy-clickonce-apps"></a>部署 ClickOnce 應用程式
 
-如需 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 的完整介紹，請參閱 [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)。 如需如何使用這些功能的逐步解說資訊，請參閱下列說明主題。
+ClickOnce 的完整介紹，請參閱 < [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)。 如需如何使用這些功能的逐步解說資訊，請參閱下列說明主題。
 
 |描述|說明主題|
 |-----------------|----------------|
-|使用 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 來部署應用程式|[如何：使用 [發佈精靈] 發佈 ClickOnce 應用程式](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
-|更新 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署|[如何：管理 ClickOnce 應用程式的更新](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
-|使用 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 來管理安全性|[如何：啟用 ClickOnce 安全性設定](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
+|使用 ClickOnce 部署應用程式|[如何：使用 [發佈精靈] 發佈 ClickOnce 應用程式](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
+|更新 ClickOnce 部署|[如何：管理 ClickOnce 應用程式的更新](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
+|使用 ClickOnce 管理安全性|[如何：啟用 ClickOnce 安全性設定](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
 
 ### <a name="other-controls-and-features"></a>其他控制項和功能
 

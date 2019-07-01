@@ -2,12 +2,12 @@
 title: NamedPipe 啟用
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 3e6084e8334eddc16b115cc1199819c6ab637666
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a7d940d6be56160945ca0f8697361314af96bc0b
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051841"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487544"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe 啟用
 
@@ -159,13 +159,13 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1. 請確定已安裝 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]。 因為 WAS 啟用時需要 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]。
+1. 確定已安裝 IIS 7.0。 WAS 啟動需要 IIS 7.0。
 
 2. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
     此外，您必須安裝 WCF 非 HTTP 啟動元件：
 
-    1. 在 [開始] 功能表內選擇 [控制台]。
+    1. 在 [開始]  功能表內選擇 [控制台]  。
 
     2. 選取 **程式和功能**。
 

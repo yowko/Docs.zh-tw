@@ -5,18 +5,18 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: 629eb482768e4ed2b3d70ee3d27157b502eeb72b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d6c931ec904e9a7e58d5b747c74898208863b8e9
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832726"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486728"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > 項目 （Web 設定）
-指定 asp.net 用於 ASP.NET 應用程式上執行整合模式中時，管理整個處理序行為的組態設定[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更新版本。  
+指定用來管理整個處理序行為，以整合模式在 IIS 7.0 或更新版本上執行的 ASP.NET 應用程式時由 ASP.NET 組態設定。  
   
 > [!IMPORTANT]
->  這個項目和功能如果您的 ASP.NET 應用程式裝載在支援僅能[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更新版本。  
+>  這個項目和功能它支援唯一的工作，如果您的 ASP.NET 應用程式裝載在 IIS 7.0 或更新版本也一樣。  
   
  \<configuration>  
 \<system.web > 項目 （Web 設定）  
@@ -52,12 +52,12 @@ ms.locfileid: "66832726"
 |[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|包含 ASP.NET 與主應用程式之間的互動方式的相關資訊。|  
   
 ## <a name="remarks"></a>備註  
- 當您執行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更新版本，在整合模式下，此項目組合，可讓您設定 ASP.NET 如何管理執行緒和佇列要求，當應用程式裝載於 IIS 應用程式集區。 如果您執行 IIS 6，或您執行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]以傳統模式，或以 ISAPI 模式，則會忽略這些設定。  
+ 當您在整合模式中執行 IIS 7.0 或更新版本時，此項目組合，可讓您設定 ASP.NET 如何管理執行緒和佇列要求，當應用程式裝載於 IIS 應用程式集區。 如果您執行 IIS 6，或您在以傳統模式，或以 ISAPI 模式執行 IIS 7.0，則會忽略這些設定。  
   
  `applicationPool`設定會套用至特定版本的.NET Framework 執行的所有應用程式集區。 設定包含在 aspnet.config 檔中。 沒有這個檔案 2.0 和.NET framework 4.0 版的版本。 （3.0 與.NET framework 3.5 版會共用 aspnet.config 檔案與 2.0 版）。  
   
 > [!IMPORTANT]
->  如果您執行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]上[!INCLUDE[win7](../../../../../includes/win7-md.md)]，您可以設定每個應用程式集區的個別 aspnet.config 檔案。 這可讓您量身訂做的每個應用程式集區執行緒的效能。  
+>  如果您執行 IIS 7.0 [!INCLUDE[win7](../../../../../includes/win7-md.md)]，您可以設定每個應用程式集區的個別 aspnet.config 檔案。 這可讓您量身訂做的每個應用程式集區執行緒的效能。  
   
  針對`maxConcurrentRequestsPerCPU`設定，「 5000"的預設設定.NET Framework 4 中有效地關閉要求節流受控制的 ASP.NET 中，除非您真的有 5000 個以上的要求，每個 CPU。 預設設定而定來自動管理每一 CPU 的並行存取 CLR 執行緒集區。 應用程式，讓使用大量的非同步要求處理，或有多長時間執行要求被封鎖在網路 I/O，會從更高的預設限制在.NET Framework 4 中獲益。 設定`maxConcurrentRequestsPerCPU`為零會關閉使用的 managed 執行緒來處理 ASP.NET 要求。 應用程式執行時的 IIS 應用程式集區中，要求停留在 IIS I/O 執行緒，因此並行由進行節流處理執行緒的 IIS 設定。  
   
@@ -66,9 +66,9 @@ ms.locfileid: "66832726"
 ## <a name="example"></a>範例  
  下列範例會示範如何在下列情況中 aspnet.config 檔案設定 ASP.NET 全處理序行為：  
   
-- 應用程式裝載於[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]應用程式集區。  
+- 應用程式裝載於 IIS 7.0 應用程式集區。  
   
-- [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 以整合模式執行。  
+- IIS 7.0 整合模式中執行。  
   
 - 應用程式使用.NET Framework 3.5 SP1 或更新版本。  
   

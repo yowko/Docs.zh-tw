@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: 8e401d6ce73c036188d13f40c1293abd1f0de58c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a96e00adbe12365220a58d93edf9dc965825d07e
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781468"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487582"
 ---
 # <a name="iis-hosting-using-inline-code"></a>使用內嵌程式碼的 IIS 裝載
 
@@ -92,7 +92,7 @@ Press <ENTER> to terminate client.
 
 2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 
-3. 在建立方案後，執行 setup.bat 以便在 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 中安裝 ServiceModelSamples 應用程式。 ServiceModelSamples 目錄現在應該會顯示為 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 應用程式。
+3. 解決方案之後已經建立的執行 setup.bat 以便中安裝 ServiceModelSamples 應用程式在 IIS 7.0 中。 ServiceModelSamples 目錄現在應該會出現為 IIS 7.0 應用程式。
 
 4. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 如需有關如何建立可呼叫此服務的用戶端應用程式的範例，請參閱[How to:建立用戶端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。
 

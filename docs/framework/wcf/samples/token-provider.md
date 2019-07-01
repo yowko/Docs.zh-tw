@@ -2,15 +2,15 @@
 title: 權杖提供者
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: f4316e459666dd434da5ec77694d079d9ca5639f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b3f56ed46507d68092268c3202cee6234fda7b42
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622955"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487475"
 ---
 # <a name="token-provider"></a>權杖提供者
-這個範例會示範如何實作自訂權杖提供者。 Windows Communication Foundation (WCF) 中的權杖提供者用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附預設的 「 認證管理員權杖提供者。 WCF 也隨附[!INCLUDE[infocard](../../../../includes/infocard-md.md)]權杖提供者。 自訂權杖提供者適用於下列情況：
+這個範例會示範如何實作自訂權杖提供者。 Windows Communication Foundation (WCF) 中的權杖提供者用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附預設的 「 認證管理員權杖提供者。 WCF 也隨附的 CardSpace 權杖提供者。 自訂權杖提供者適用於下列情況：
 
 - 如果您有這些權杖提供者無法使用的認證存放區。
 
@@ -115,7 +115,7 @@ ms.locfileid: "64622955"
 
      為了執行這個工作，自訂權杖提供者會衍生 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 類別並覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> 方法。 這個方法會建立並傳回新的 `UserNameSecurityToken`。
 
-    ```
+    ```csharp
     protected override SecurityToken GetTokenCore(TimeSpan timeout)
     {
         // obtain username and password from the user using console window
@@ -132,7 +132,7 @@ ms.locfileid: "64622955"
 
      此 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 會用來建立特定 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> (以 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 方法傳遞至該管理員) 的 `CreateSecurityTokenProvider`。 安全性權杖管理員也會用來建立權杖驗證器與權杖序列化程式，但是這些不在本範例的討論範圍。 在這個範例中，自訂安全性權杖管理員繼承自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 類別，並且會覆寫 `CreateSecurityTokenProvider` 方法，以便在傳遞的權杖需求表示要求使用者名稱提供者時傳回自訂使用者名稱權杖提供者。
 
-    ```
+    ```csharp
     public class MyUserNameSecurityTokenManager : ClientCredentialsSecurityTokenManager
     {
         MyUserNameClientCredentials myUserNameClientCredentials;
@@ -163,7 +163,7 @@ ms.locfileid: "64622955"
 
      用戶端認證類別會用來代表針對用戶端 Proxy 設定的認證，並且會建立用來取得權杖驗證器、權杖提供者以及權杖序列化程式的安全性權杖管理員。
 
-    ```
+    ```csharp
     public class MyUserNameClientCredentials : ClientCredentials
     {
         public MyUserNameClientCredentials()
@@ -188,7 +188,7 @@ ms.locfileid: "64622955"
 
      為了讓用戶端使用自訂用戶端認證，此範例會刪除預設用戶端認證類別，並提供新的用戶端認證類別。
 
-    ```
+    ```csharp
     static void Main()
     {
         // ...
@@ -204,7 +204,7 @@ ms.locfileid: "64622955"
 
  為了在服務端上顯示呼叫者的資訊，此時會使用 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>，如下列程式碼範例所示。 <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> 包含有關目前呼叫者的宣告資訊。
 
-```
+```csharp
 static void DisplayIdentityInformation()
 {
     Console.WriteLine("\t\tSecurity context identity  :  {0}",
