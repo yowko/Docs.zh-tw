@@ -2,12 +2,12 @@
 title: WCF 測試用戶端 (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: ee40ca7a07729cac284ef8c634d63d673be3fbd0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9044dc2479e8e0a31a6152321231ee1936b74351
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613082"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487454"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 測試用戶端 (WcfTestClient.exe)
 Windows Communication Foundation (WCF) 測試用戶端 (WcfTestClient.exe) 是一種 GUI 工具，可讓使用者輸入測試參數，請將該服務中，輸入送出，並檢視服務傳回的回應。 它提供了完善的服務測試經驗搭配 WCF 服務主機。  
@@ -53,7 +53,7 @@ Windows Communication Foundation (WCF) 測試用戶端 (WcfTestClient.exe) 是�
   
  若要檢視訊息的 XML，請按一下**XML**。 若要將它們傳送至服務，按一下**Invoke**。  
   
- 資料集參數，按一下  **...** 下一步按鈕**編輯...** 若要在新視窗顯示 DataGrid 中進行編輯。 請注意，出現**複製資料集**並**貼上資料集**按鈕。 如果在第一次編輯時 DataSet 物件的結構描述為未知，DataGrid 為空白。 您必須將具有相同結構描述的 DataSet 物件貼入 DataGrid 中的目前物件  (請注意，您必須在貼上作業前從其他地方複製結構描述)。您也可以按一下來複製 Dataset 物件供未來的使用量**複製資料集** 按鈕。  
+ 資料集參數，按一下  **...** 下一步按鈕**編輯...** 若要在新視窗顯示 DataGrid 中進行編輯。 請注意，出現**複製資料集**並**貼上資料集**按鈕。 如果在第一次編輯時 DataSet 物件的結構描述為未知，DataGrid 為空白。 您必須將具有相同結構描述的 DataSet 物件貼入 DataGrid 中的目前物件 (請注意，您必須在貼上作業前從其他地方複製結構描述)。您也可以按一下來複製 Dataset 物件供未來的使用量**複製資料集** 按鈕。  
   
  服務的回應會出現在測試參數下方。  
   
@@ -154,14 +154,14 @@ Windows Communication Foundation (WCF) 測試用戶端 (WcfTestClient.exe) 是�
   
 - 異動。  
   
-- 安全性：[!INCLUDE[infocard](../../../includes/infocard-md.md)]、憑證和使用者名稱/密碼。  
+- 安全性：CardSpace、 憑證和使用者名稱/密碼。  
   
 - 繫結：WSFederationbinding、 任何內容繫結和 Https 繫結、 WebHttpbinding （Json 回應訊息支援）。  
   
 ## <a name="closing-wcf-test-client"></a>關閉 WCF 測試用戶端  
  您可以透過下列方式來關閉 WCF 測試用戶端：  
   
-- 在 **[檔案]** 功能表上按一下 **[結束]**。 或者，在 WCF 測試用戶端主視窗中，按一下**關閉**。 同時這些動作也關閉 WCF 服務自動主機並停止 Visual Studio 偵錯程序，如果 Visual Studio 啟動 WCF 測試用戶端。  
+- 在 **[檔案]** 功能表上按一下 **[結束]** 。 或者，在 WCF 測試用戶端主視窗中，按一下**關閉**。 同時這些動作也關閉 WCF 服務自動主機並停止 Visual Studio 偵錯程序，如果 Visual Studio 啟動 WCF 測試用戶端。  
   
 - 以滑鼠右鍵按一下**WCF 服務主機**圖示，在通知區域中，然後按一下**結束。** 這會關閉 WCF 服務自動主機和 WCF 測試用戶端，並停止 Visual Studio 偵錯程序。  
   

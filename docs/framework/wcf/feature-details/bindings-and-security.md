@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 12296fbd503a7e9f1866f407964a5e223d1afadd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 58dcfacba302ef3b85a8bc7b24b17f2435115594
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650325"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486653"
 ---
 # <a name="bindings-and-security"></a>繫結和安全性
 包含與 Windows Communication Foundation (WCF) 的系統提供繫結會提供程式 WCF 應用程式的快速方法。 除了一個例外狀況以外，所有繫結預設都會啟用安全性配置。 本主題將根據您的安全性需求，協助您選取正確的繫結。  
@@ -210,7 +210,7 @@ ms.locfileid: "64650325"
 |NTLM|NT LAN Manager (NTLM) 驗證。|  
 |Windows|Windows 驗證。|  
 |憑證|使用憑證執行的驗證。|  
-|IssuedToken|允許服務要求用戶端必須以安全性權杖服務或 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 所發出的權杖進行驗證。 如需詳細資訊，請參閱 <<c0> [ 聯合與發行權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。|  
+|IssuedToken|允許服務要求用戶端會使用安全性權杖服務或 CardSpace 發行的權杖進行驗證。 如需詳細資訊，請參閱 <<c0> [ 聯合與發行權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。|  
   
 ### <a name="message-client-credentials-in-bindings"></a>繫結中的訊息用戶端認證  
  下表列出在訊息安全性模式中使用繫結時，可以使用的用戶端認證類型。  
