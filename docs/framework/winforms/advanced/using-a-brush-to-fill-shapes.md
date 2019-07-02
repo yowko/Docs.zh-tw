@@ -6,15 +6,15 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling
 - brushes
 ms.assetid: bf8f7fff-5a90-41e8-9051-494449fb2844
-ms.openlocfilehash: 95112321794359dc282749b94fd9061305b42c23
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb8112076bf0b835b558a9f88ae2ff59bdb8476d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926941"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505184"
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>使用筆刷填滿形狀
-A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush>物件用來填滿內部的封閉的形狀。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 定義數個填滿樣式： 單色、 規劃圖樣、 影像材質和色彩漸層。  
+GDI +<xref:System.Drawing.Brush>物件用來填滿內部的封閉的形狀。 GDI + 會定義數個填滿樣式： 單色、 規劃圖樣、 影像材質和色彩漸層。  
   
 ## <a name="in-this-section"></a>本節內容  
  [如何：填滿形狀純色](how-to-fill-a-shape-with-a-solid-color.md)  

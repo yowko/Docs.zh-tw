@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: 9c8f2392137d04f56096120cec64b60c42c47419
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81c0ddf5b937d604559a9eb1a8b598885546c97f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791141"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504959"
 ---
 # <a name="using-transformations-to-scale-colors"></a>使用轉換調整色彩
 一或多個所提供的數字的四個色彩元件，將乘上縮放轉換。 下表提供代表調整色彩矩陣項目。  
@@ -35,7 +35,7 @@ ms.locfileid: "61791141"
   
  ![如果螢幕擷取畫面會比較原始和調整色彩。](./media/using-transformations-to-scale-colors/four-bar-scale-one-color.png)  
   
- 下表列出四個橫條的色彩向量之前, 和之後的藍色的縮放比例。 請注意，在第四個彩色橫條的藍色元件發生從 0.8 0.6。 這是因為[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]會保留結果的小數部分。 例如，(2)(0.8) version=1.6 應用程式，而 1.6 的小數部分是 0.6。 保留小數部分，可確保結果一定是在間隔 [0，1]。  
+ 下表列出四個橫條的色彩向量之前, 和之後的藍色的縮放比例。 請注意，在第四個彩色橫條的藍色元件發生從 0.8 0.6。 這是因為 GDI + 會保留結果的小數部分。 例如，(2)(0.8) version=1.6 應用程式，而 1.6 的小數部分是 0.6。 保留小數部分，可確保結果一定是在間隔 [0，1]。  
   
 |原始|調整|  
 |--------------|------------|  

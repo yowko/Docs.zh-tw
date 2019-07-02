@@ -2,12 +2,12 @@
 title: 使用 Async 和 Await 進行非同步程式設計 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: 030ef4549bc820cab66d33fa81c205158c09fff9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 0d8810da424b0759dcfba882efe462514a14145a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67026092"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505964"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>使用 Async 和 Await 進行非同步程式設計 (Visual Basic)
 
@@ -39,7 +39,7 @@ Visual Studio 2012 引進了一種簡化的方法 (非同步程式設計)，來�
 
 ## <a name="BKMK_HowtoWriteanAsyncMethod"></a> 非同步方法比較容易撰寫
 
-Visual Basic 中的 [Async](../../../../visual-basic/language-reference/modifiers/async.md) 和 [Await](../../../../visual-basic/language-reference/modifiers/async.md) 關鍵字都是非同步程式設計的核心。 您可以使用這兩個關鍵字，使用 .NET Framework 或 Windows 執行階段中的資源來建立非同步方法，幾乎就像建立同步方法一樣容易。 使用 `Async` 和 `Await` 定義的非同步方法就稱為非同步方法。
+Visual Basic 中的 [Async](../../../../visual-basic/language-reference/modifiers/async.md) 和 [Await](../../../../visual-basic/language-reference/operators/await-operator.md) 關鍵字都是非同步程式設計的核心。 您可以使用這兩個關鍵字，使用 .NET Framework 或 Windows 執行階段中的資源來建立非同步方法，幾乎就像建立同步方法一樣容易。 使用 `Async` 和 `Await` 定義的非同步方法就稱為非同步方法。
 
 下列範例將示範非同步方法。 程式碼中的一切對您而言應該幾乎完全熟悉。 註解會標註您加入以建立非同步的功能。
 

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：繪製自訂虛線
+title: 作法：繪製自訂虛線
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-ms.openlocfilehash: 8dc1ad41cf8067bea5b811ca126ad29f5a600f69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2184a8d7d7f24b8f631818608ab4bcdb89857c7
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004353"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506044"
 ---
-# <a name="how-to-draw-a-custom-dashed-line"></a>HOW TO：繪製自訂虛線
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供數個虛線樣式中所列<xref:System.Drawing.Drawing2D.DashStyle>列舉型別。 如果這些標準的虛線樣式不符合您的需求，您可以建立自訂虛線圖樣。  
+# <a name="how-to-draw-a-custom-dashed-line"></a>作法：繪製自訂虛線
+GDI + 提供數個虛線樣式中所列<xref:System.Drawing.Drawing2D.DashStyle>列舉型別。 如果這些標準的虛線樣式不符合您的需求，您可以建立自訂虛線圖樣。  
   
 ## <a name="example"></a>範例  
  若要繪製自訂短折線，陣列中放入虛線和間距的長度和指派的值的陣列<xref:System.Drawing.Pen.DashPattern%2A>屬性<xref:System.Drawing.Pen>物件。 下列範例會繪製自訂短折線根據陣列`{5, 2, 15, 4}`。 如果您將陣列的項目乘以 5 的畫筆寬度時，您會收到`{25, 10, 75, 20}`。 顯示連字號替代的長度介於 25 和 75，之間和替代的長度介於 10 到 20 之間的空格。  

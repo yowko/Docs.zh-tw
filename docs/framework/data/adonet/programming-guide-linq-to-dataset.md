@@ -2,19 +2,19 @@
 title: 程式設計手冊 (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 977aedd7-0084-46a0-b56f-345787a55da1
-ms.openlocfilehash: 6f6ab1634769a54bd8dbafe8c9d41b11ff787d50
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d454448771e14b1a540b5a066683bd4c747991ec
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61637994"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504772"
 ---
 # <a name="programming-guide-linq-to-dataset"></a>程式設計手冊 (LINQ to DataSet)
-本節提供使用 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 進行程式設計的概念性資訊和範例。  
+本節提供概念性資訊和範例使用 LINQ 進行程式設計資料集。  
   
 ## <a name="in-this-section"></a>本節內容  
  [LINQ to DataSet 中的查詢](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md)  
- 提供有關如何撰寫 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查詢的資訊。  
+ 提供有關如何撰寫 LINQ to DataSet 查詢資訊。  
   
  [查詢資料集](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
  說明如何查詢 <xref:System.Data.DataSet> 物件。  
@@ -23,7 +23,7 @@ ms.locfileid: "61637994"
  說明如何使用 <xref:System.Data.DataRowComparer> 物件來比較資料列。  
   
  [從查詢建立 DataTable](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
- 提供有關建立資訊<xref:System.Data.DataTable>從[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]使用的查詢<xref:System.Data.DataTableExtensions.CopyToDataTable%2A>方法。  
+ 提供有關建立資訊<xref:System.Data.DataTable>從 LINQ to DataSet 查詢使用<xref:System.Data.DataTableExtensions.CopyToDataTable%2A>方法。  
   
  [如何：實作 CopyToDataTable\<T > 其中泛型型別 T 不是 DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
  描述如何實作通用參數 T 不是 `CopyToDataTable<T>` 型別的自訂 <xref:System.Data.DataRow> 方法。  
@@ -35,10 +35,10 @@ ms.locfileid: "61637994"
  說明如何使用 <xref:System.Data.DataView> 物件進行資料繫結。  
   
  [偵錯 LINQ to DataSet 查詢](../../../../docs/framework/data/adonet/debugging-linq-to-dataset-queries.md)  
- 提供有關偵錯和疑難排解資訊[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]查詢。  
+ 提供偵錯和疑難排解 LINQ to DataSet 查詢的相關資訊。  
   
  [安全性](../../../../docs/framework/data/adonet/security-linq-to-dataset.md)  
- 說明 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 中的安全性問題。  
+ 描述 LINQ to DataSet 中的安全性問題。  
   
  [LINQ to DataSet 範例](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
  提供使用 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 運算子的查詢範例。  

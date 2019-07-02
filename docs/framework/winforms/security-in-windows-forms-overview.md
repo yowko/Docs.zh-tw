@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 471ed75a922ab8a7df18f2e4a3ccd89ede171248
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 88301663a78bb7d6f31c23bb03409ca44a2e55a9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487267"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506172"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Form 中的安全性概觀
 
@@ -77,7 +77,7 @@ ClickOnce 會有兩種技術要求用戶端電腦上的提高權限。 這兩種
 
 您要選擇哪一種技術，將取決於您的部署環境。 如需詳細資訊，請參閱[選擇 ClickOnce 部署策略](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)。
 
-根據預設，ClickOnce 應用程式部署使用 Visual Studio 或.NET Framework SDK 工具 （Mage.exe 和 MageUI.exe） 會設定為具有完全信任的用戶端電腦上執行。 如果您在部署應用程式時，是使用部分信任，或是只有使用某些額外的權限，則必須變更這個預設值。 您可以使用 Visual Studio 或.NET Framework SDK 工具 MageUI.exe 當您設定您的部署。 如需如何使用 MageUI.exe 的詳細資訊，請參閱 < 逐步解說：部署 ClickOnce 應用程式，從命令列。  另請參閱[How to:設定 ClickOnce 應用程式的自訂權限](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110))或[How to:設定 ClickOnce 應用程式的自訂權限](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)。
+根據預設，ClickOnce 應用程式部署使用 Visual Studio 或.NET Framework SDK 工具 （Mage.exe 和 MageUI.exe） 會設定為具有完全信任的用戶端電腦上執行。 如果您在部署應用程式時，是使用部分信任，或是只有使用某些額外的權限，則必須變更這個預設值。 您可以使用 Visual Studio 或.NET Framework SDK 工具 MageUI.exe 當您設定您的部署。 如需如何使用 MageUI.exe 的詳細資訊，請參閱[逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)。  另請參閱[How to:設定 ClickOnce 應用程式的自訂權限](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110))或[How to:設定 ClickOnce 應用程式的自訂權限](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)。
 
 ClickOnce 和權限提升的安全性方面的相關資訊，請參閱[保護 ClickOnce 應用程式](/visualstudio/deployment/securing-clickonce-applications)。 如需有關受信任的應用程式部署的詳細資訊，請參閱[受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)。
 

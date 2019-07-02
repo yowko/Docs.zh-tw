@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: 92aaeabfc12e964ac294fbd69998c4671fc8763c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e3c48aec830cdc3ccceb8683f93e3a99ee6364e2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582613"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506192"
 ---
 # <a name="overriding-the-onpaint-method"></a>覆寫 OnPaint 方法
 覆寫.NET Framework 中定義的任何事件的基本步驟完全相同，並在下列清單摘要說明。  
@@ -82,7 +82,7 @@ public class PaintEventArgs : EventArgs {
 }  
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 是要繪製的矩形，<xref:System.Windows.Forms.PaintEventArgs.Graphics%2A>屬性會參考<xref:System.Drawing.Graphics>物件。 中的類別<xref:System.Drawing?displayProperty=nameWithType>管理命名空間提供的功能的存取權的類別[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，新的 Windows 圖形程式庫。 <xref:System.Drawing.Graphics>物件具有繪製點、 字串、 線條、 弧線、 省略符號，以及許多其他圖形的方法。  
+ <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 是要繪製的矩形，<xref:System.Windows.Forms.PaintEventArgs.Graphics%2A>屬性會參考<xref:System.Drawing.Graphics>物件。 中的類別<xref:System.Drawing?displayProperty=nameWithType>管理命名空間提供的存取權的 GDI + 中，新的 Windows 圖形程式庫功能的類別。 <xref:System.Drawing.Graphics>物件具有繪製點、 字串、 線條、 弧線、 省略符號，以及許多其他圖形的方法。  
   
  控制項叫用以其<xref:System.Windows.Forms.Control.OnPaint%2A>每當程式需要變更其視覺顯示的方法。 這個方法接著會引發<xref:System.Windows.Forms.Control.Paint>事件。  
   

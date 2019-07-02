@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立繪製的圖形物件
+title: 作法：建立繪製的圖形物件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: aa4c3e3cd21d702927b3784254184a9cd329f121
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee57b0409d7bb7574c965ff098e7f86c8332536d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643364"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505499"
 ---
-# <a name="how-to-create-graphics-objects-for-drawing"></a>HOW TO：建立繪製的圖形物件
-您可以繪製線條與圖形之前，呈現文字，或顯示和管理映像[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您需要建立<xref:System.Drawing.Graphics>物件。 <xref:System.Drawing.Graphics>物件代表[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]繪圖介面，而是用來建立圖形影像物件。  
+# <a name="how-to-create-graphics-objects-for-drawing"></a>作法：建立繪製的圖形物件
+您可以繪製線條和形狀、 呈現文字，或顯示和操作使用 GDI + 的映像之前，您需要建立<xref:System.Drawing.Graphics>物件。 <xref:System.Drawing.Graphics>物件代表 GDI + 繪圖介面，而且是用來建立圖形影像的物件。  
   
  使用圖形有兩個步驟：  
   

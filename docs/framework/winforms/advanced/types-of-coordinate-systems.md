@@ -15,15 +15,15 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-ms.openlocfilehash: 765df4bcd3cef83e624ad8b11676696b95f7d035
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24079f24bdae5fefd785a20dda9b29a190fb4068
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792341"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505257"
 ---
 # <a name="types-of-coordinate-systems"></a>座標系統類型
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 使用三個座標空間： 世界、 頁面和裝置。 全局座標是用來建立模型為特定圖形範圍的座標，您將傳遞給方法，在.NET Framework 中的座標。 頁面座標是指繪圖介面，例如表單或控制項所使用的座標系統。 裝置座標是實體裝置上，繪製到螢幕或紙張等所使用的座標。 當您進行呼叫`myGraphics.DrawLine(myPen, 0, 0, 160, 80)`，您將傳遞至的點<xref:System.Drawing.Graphics.DrawLine%2A>方法 —`(0, 0)`和`(160, 80)`— 全局座標空間中。 之前[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可以在螢幕上繪製線條、 座標通過一連串的轉換。 一個轉換，稱為 「 世界 」 轉換中，將全局座標轉換成頁面座標，以及另一個轉換，稱為 「 頁面 」 轉換中，將轉換成頁面座標裝置座標。  
+GDI + 會使用三種座標空間： 世界、 頁面和裝置。 全局座標是用來建立模型為特定圖形範圍的座標，您將傳遞給方法，在.NET Framework 中的座標。 頁面座標是指繪圖介面，例如表單或控制項所使用的座標系統。 裝置座標是實體裝置上，繪製到螢幕或紙張等所使用的座標。 當您進行呼叫`myGraphics.DrawLine(myPen, 0, 0, 160, 80)`，您將傳遞至的點<xref:System.Drawing.Graphics.DrawLine%2A>方法 —`(0, 0)`和`(160, 80)`— 全局座標空間中。 GDI + 可以列在螢幕上繪圖之前，座標會通過一連串的轉換。 一個轉換，稱為 「 世界 」 轉換中，將全局座標轉換成頁面座標，以及另一個轉換，稱為 「 頁面 」 轉換中，將轉換成頁面座標裝置座標。  
   
 ## <a name="transforms-and-coordinate-systems"></a>轉換和座標系統  
  假設您想要使用的工作區，而不是左上角的主體中原點座標系統。 例如，假設您想要從工作區左邊緣的 100 像素且從工作區頂端的 50 個像素的原點。 下圖顯示這類的座標系統。  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - images [Windows Forms], about images
 - Windows Forms, images
 ms.assetid: 7152b45b-a55c-49bc-8c78-ae002a844f71
-ms.openlocfilehash: 2ce19642b37946db7a172e61004688059dba61db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f50d21f4793efb497eb5b030d96a7dc3ab54a04
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003934"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505706"
 ---
 # <a name="images-bitmaps-and-metafiles"></a>影像、點陣圖和中繼檔
 `Image` 類別為抽象基底類別，提供使用點陣影像 (點陣圖) 和向量影像 (中繼檔) 的方法。 `Bitmap` 類別和 <xref:System.Drawing.Imaging.Metafile> 類別都是繼承自 `Image` 類別。 `Bitmap` 類別透過提供載入、儲存和管理點陣影像的其他方法，來擴充 `Image` 類別的功能。 <xref:System.Drawing.Imaging.Metafile> 類別透過提供記錄和檢查向量影像的其他方法，來擴充 `Image` 類別的功能。  
@@ -22,7 +22,7 @@ ms.locfileid: "62003934"
  討論各種影像格式。  
   
  [GDI+ 中的中繼檔](metafiles-in-gdi.md)  
- 討論 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 對中繼檔的支援。  
+ 討論對中繼檔的支援 GDI +。  
   
  [在 GDI+ 中繪製、定位和複製影像](drawing-positioning-and-cloning-images-in-gdi.md)  
  討論使用 Managed 程式碼繪製向量和點陣影像的方法。  

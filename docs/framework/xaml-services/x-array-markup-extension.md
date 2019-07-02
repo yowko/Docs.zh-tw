@@ -8,19 +8,19 @@ helpviewer_keywords:
 - x:Array [XAML Services]
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-ms.openlocfilehash: 4f4e26eb3e5ccaf66b2173c7fc9952375c5f2a58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8acb732841aa7aaaad3e8fdd2cf2962ff44dd60b
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025401"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506067"
 ---
 # <a name="xarray-markup-extension"></a>x:Array 標記延伸
 支援一般的 XAML 中透過標記延伸的物件陣列。 這會對應至`x:ArrayExtension`[MS-XAML] 中的 XAML 型別。  
   
 ## <a name="xaml-object-element-usage"></a>XAML 物件項目用法  
   
-```  
+```xaml
 <x:Array Type="typeName">  
   arrayContents  
 </x:Array>  
@@ -55,17 +55,14 @@ ms.locfileid: "62025401"
   
  例如，以下是簡單陣列的兩個字串，與`sys`前置詞 (以及`x`) 定義層級的陣列。  
   
- [xaml]  
-  
- `<x:Array Type="sys:String" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`  
-  
- `xmlns:sys="clr-namespace:System;assembly=mscorlib">`  
-  
- `<sys:String>Hello</sys:String>`  
-  
- `<sys:String>World</sys:String>`  
-  
- `</x:Array>`  
+```xaml
+<x:Array Type="sys:String"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String>Hello</sys:String>
+    <sys:String>World</sys:String>
+</x:Array>
+```
   
  對於自訂類型做為陣列項目，此類別也必須支援的需求在 XAML 中具現化為物件項目。 如需詳細資訊，請參閱 < [XAML 和自訂類別，如 WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)。  
   

@@ -1,5 +1,5 @@
 ---
-title: 作法：讀取影像中繼資料
+title: HOW TO：讀取影像中繼資料
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: 3266724503960b8b45cd134dfa5b007a58d578fa
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 6c02f7e5744828fd8eddc88be8d7da28f3bc2a2a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169806"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505784"
 ---
 # <a name="how-to-read-image-metadata"></a>HOW TO：讀取影像中繼資料
-某些影像檔包含中繼資料，您可以讀取來判斷映像的功能。 比方說，數位相片可能包含您可以讀取來判斷的廠牌與型號，用來擷取影像之相機的中繼資料。 使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您可以讀取現有的中繼資料，您也可以撰寫新的中繼資料映像檔案。  
+某些影像檔包含中繼資料，您可以讀取來判斷映像的功能。 比方說，數位相片可能包含您可以讀取來判斷的廠牌與型號，用來擷取影像之相機的中繼資料。 使用 GDI + 中，您可以讀取現有的中繼資料，而且您也可以撰寫新的中繼資料映像檔案。  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 儲存中繼資料中段個別<xref:System.Drawing.Imaging.PropertyItem>物件。 您可以閱讀<xref:System.Drawing.Image.PropertyItems%2A>屬性<xref:System.Drawing.Image>要從檔案擷取所有中繼資料物件。 <xref:System.Drawing.Image.PropertyItems%2A>屬性傳回的陣列<xref:System.Drawing.Imaging.PropertyItem>物件。  
+ GDI + 會儲存一段個別中繼資料中<xref:System.Drawing.Imaging.PropertyItem>物件。 您可以閱讀<xref:System.Drawing.Image.PropertyItems%2A>屬性<xref:System.Drawing.Image>要從檔案擷取所有中繼資料物件。 <xref:System.Drawing.Image.PropertyItems%2A>屬性傳回的陣列<xref:System.Drawing.Imaging.PropertyItem>物件。  
   
  A<xref:System.Drawing.Imaging.PropertyItem>物件具有下列四個屬性： `Id`， `Value`， `Len`，和`Type`。  
   

@@ -5,17 +5,17 @@ helpviewer_keywords:
 - image encoders [Windows Forms], using
 - image decoders [Windows Forms], using
 ms.assetid: 0e838ea1-4e7e-4334-b882-ab25df607b8b
-ms.openlocfilehash: e56bc20eb55d694d19b25d9e94e5c9d9e3952628
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8cd66f3ce3da462867da9e23c38b3f6d877c058c
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666451"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505085"
 ---
 # <a name="using-image-encoders-and-decoders-in-managed-gdi"></a>使用 Managed GDI+ 中的影像編碼器和解碼器
-<xref:System.Drawing>命名空間提供<xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>來儲存及操作影像的類別。 使用中的影像編碼器[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您可以將映像從記憶體寫入磁碟。 使用中的影像解碼器[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您可以從磁碟載入影像至記憶體。 編碼器會將轉譯中的資料<xref:System.Drawing.Image>或<xref:System.Drawing.Bitmap>到指定的磁碟檔案格式的物件。 解碼器會轉譯檔案中的資料磁碟所需的格式來<xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>物件。  
+<xref:System.Drawing>命名空間提供<xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>來儲存及操作影像的類別。 藉由使用 GDI + 中的影像編碼器，您可以將映像從記憶體寫入磁碟。 藉由使用 GDI + 中的影像解碼器，您可以從磁碟載入映像載入記憶體。 編碼器會將轉譯中的資料<xref:System.Drawing.Image>或<xref:System.Drawing.Bitmap>到指定的磁碟檔案格式的物件。 解碼器會轉譯檔案中的資料磁碟所需的格式來<xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>物件。  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 具有內建的編碼器和解碼器，支援下列檔案類型：  
+ GDI + 具有內建的編碼器和解碼器，支援下列檔案類型：  
   
 - BMP  
   
@@ -27,7 +27,7 @@ ms.locfileid: "64666451"
   
 - TIFF  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 也有支援下列檔案類型的內建解碼器：  
+ GDI + 還有內建解碼器，支援下列檔案類型：  
   
 - WMF  
   

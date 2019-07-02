@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - transformations [Windows Forms], order significance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-ms.openlocfilehash: 4a65e588984241affea3083810b4901266480ea4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08927ebaa460e19e558dce22f39c13c31f0e49d0
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747455"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504914"
 ---
 # <a name="why-transformation-order-is-significant"></a>為何轉換順序很重要
 單一<xref:System.Drawing.Drawing2D.Matrix>物件可用來儲存單一轉換的序列。 後者稱為 「 複合 」 轉換。 複合轉換矩陣被取得個別轉換的矩陣相乘。  
   
 ## <a name="composite-transform-examples"></a>複合轉換範例  
- 在複合的轉換中，個別轉換的順序很重要的。 例如，如果先旋轉，再調整，然後轉譯，得到不同的結果比先轉換再旋轉，然後調整。 在  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，複合轉換是從左到右。 如果 S、 R 和 T 分別調整、 旋轉和轉譯矩陣，然後產品 SRT （依此順序） 調整規模的第一個是 「 複合 」 轉換的矩陣、 旋轉，然後將轉譯。 該產品所產生的矩陣 SRT 是不同於產品 TRS 所產生的矩陣。  
+ 在複合的轉換中，個別轉換的順序很重要的。 例如，如果先旋轉，再調整，然後轉譯，得到不同的結果比先轉換再旋轉，然後調整。 在 GDI + 中，是從左到右建置複合轉換。 如果 S、 R 和 T 分別調整、 旋轉和轉譯矩陣，然後產品 SRT （依此順序） 調整規模的第一個是 「 複合 」 轉換的矩陣、 旋轉，然後將轉譯。 該產品所產生的矩陣 SRT 是不同於產品 TRS 所產生的矩陣。  
   
  順序很重要的其中一個原因是，例如旋轉和縮放轉換會完成方面座標系統的原點。 縮放中心位於原點的物件產生不同的結果調整已離開來源的物件。 同樣地，旋轉的中心位於原點的物件所產生的旋轉物件已移動離開來源不同的結果。  
   

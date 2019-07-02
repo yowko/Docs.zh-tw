@@ -7,17 +7,17 @@ helpviewer_keywords:
 - GDI+, using in managed code
 - drawing [Windows Forms]
 ms.assetid: 362532c5-1a06-4257-bdc8-723461009ede
-ms.openlocfilehash: 08f87436ade62bb54295b012a1c24dc177ea9667
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e110203605c31f90f71c949f81c18ebf464d52eb
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938173"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505548"
 ---
 # <a name="graphics-and-drawing-in-windows-forms"></a>Windows Form 中的圖形和繪圖
-Common Language Runtime 使用 Windows 圖形裝置介面 ([!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]) 的進階實作，稱為 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。 透過 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您可以建立圖形、繪製文字，並將圖形影像當做物件來管理。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 的設計目的在於提升效能和方便使用。 您可以使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 在 Windows Form 和控制項上呈現圖形影像。 雖然您無法直接在 Web Form 上使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，但是您可以透過 Image Web 伺服器控制項顯示圖形影像。  
+Common language runtime 會使用進階的實作的 Windows 圖形裝置介面 (GDI) 呼叫 GDI +。 使用 GDI + 中，您可以建立圖形、 繪製文字，以及管理圖形影像當做物件。 GDI + 被設計來提供效能和方便使用。 您可以使用 GDI + 呈現在 Windows Form 和控制項上的圖形影像。 雖然您無法使用 GDI + 直接在 Web Form 上，您可以顯示透過 Image Web 伺服器控制項的圖形影像。  
   
- 在本節中，您將找到介紹 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 程式設計之基本概念的主題。 雖然本節不是完整的參考，但包含 <xref:System.Drawing.Graphics>、<xref:System.Drawing.Pen>、<xref:System.Drawing.Brush> 和 <xref:System.Drawing.Color> 物件的相關資訊，並說明如何執行繪製圖案、繪製文字或顯示影像等工作。 如需詳細資訊，請參閱 < [GDI + 參考](/windows/desktop/gdiplus/-gdiplus-class-gdi-reference)。  
+ 在本節中，您將找到介紹 GDI + 程式設計基礎概念的主題。 雖然本節不是完整的參考，但包含 <xref:System.Drawing.Graphics>、<xref:System.Drawing.Pen>、<xref:System.Drawing.Brush> 和 <xref:System.Drawing.Color> 物件的相關資訊，並說明如何執行繪製圖案、繪製文字或顯示影像等工作。 如需詳細資訊，請參閱 < [GDI + 參考](/windows/desktop/gdiplus/-gdiplus-class-gdi-reference)。  
   
  如果您想要參與並立即開始，請參閱[圖形程式設計入門](getting-started-with-graphics-programming.md)。 它包含如何使用程式碼在 Windows 表單上繪製線條、圖形、文字和其他項目的主題。  
   
@@ -26,23 +26,23 @@ Common Language Runtime 使用 Windows 圖形裝置介面 ([!INCLUDE[ndptecgdi](
  介紹與圖形相關的 Managed 類別。  
   
  [關於 GDI+ Managed 程式碼](about-gdi-managed-code.md)  
- 提供 Managed [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 類別的相關資訊。  
+ 提供 managed GDI + 類別的相關資訊。  
   
  [使用 Managed 圖形類別](using-managed-graphics-classes.md)  
- 示範如何使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Managed 類別完成各種工作。  
+ 示範如何以完成各種工作使用 GDI + managed 類別。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Drawing>  
- 提供對 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 基本圖形功能的存取。  
+ 提供對 GDI + 基本繪圖功能的存取。  
   
  <xref:System.Drawing.Drawing2D>  
  提供進階二維和向量圖形功能。  
   
  <xref:System.Drawing.Imaging>  
- 提供進階 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 影像處理功能。  
+ 提供進階的 GDI + 影像處理功能。  
   
  <xref:System.Drawing.Text>  
- 提供進階 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 印刷樣式功能。 這個命名空間中的類別可以用來建立及使用字型集合。  
+ 提供進階的 GDI + 印刷樣式功能。 這個命名空間中的類別可以用來建立及使用字型集合。  
   
  <xref:System.Drawing.Printing>  
  提供列印功能。  

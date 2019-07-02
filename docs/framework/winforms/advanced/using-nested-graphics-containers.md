@@ -9,15 +9,15 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: 6bbf7918ccff184e597204b35aa005ab17d8d8af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4533fbba62c36714f55cd8bd55fde7a1c8f6c9e6
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766267"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505053"
 ---
 # <a name="using-nested-graphics-containers"></a>使用巢狀圖形容器
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供容器，您可以使用暫時取代或擴充中狀態的一部分<xref:System.Drawing.Graphics>物件。 您可以建立一個容器藉由呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>方法的<xref:System.Drawing.Graphics>物件。 您可以呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>重複，以形成巢狀的容器。 每次呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>必須藉由呼叫配對<xref:System.Drawing.Graphics.EndContainer%2A>。  
+GDI + 提供容器，您可以使用暫時取代或擴充中狀態的一部分<xref:System.Drawing.Graphics>物件。 您可以建立一個容器藉由呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>方法的<xref:System.Drawing.Graphics>物件。 您可以呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>重複，以形成巢狀的容器。 每次呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>必須藉由呼叫配對<xref:System.Drawing.Graphics.EndContainer%2A>。  
   
 ## <a name="transformations-in-nested-containers"></a>巢狀容器中的轉換  
  下列範例會建立<xref:System.Drawing.Graphics>物件和容器，以在其中<xref:System.Drawing.Graphics>物件。 自然變換<xref:System.Drawing.Graphics>物件是在 x 方向轉譯 100 單位和 80 的單位，在 y 方向。 容器的自然變換是 30 度的旋轉。 程式碼進行呼叫`DrawRectangle(pen, -60, -30, 120, 60)`兩次。 第一次呼叫<xref:System.Drawing.Graphics.DrawRectangle%2A>內的容器，亦即，呼叫是對呼叫之間<xref:System.Drawing.Graphics.BeginContainer%2A>和<xref:System.Drawing.Graphics.EndContainer%2A>。 第二次呼叫<xref:System.Drawing.Graphics.DrawRectangle%2A>之後呼叫<xref:System.Drawing.Graphics.EndContainer%2A>。  

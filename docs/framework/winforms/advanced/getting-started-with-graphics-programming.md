@@ -7,15 +7,15 @@ helpviewer_keywords:
 - examples [Windows Forms], graphics
 - drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
-ms.openlocfilehash: f19a0e87c140a3fde8c43acc546ae11ea3b62d33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2a330324085f1a73418cd535f83f2b73e9721c0
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747683"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67503950"
 ---
 # <a name="getting-started-with-graphics-programming"></a>圖形程式設計入門
-本節說明如何開始使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Windows Forms 應用程式中。 下列主題示範如何完成數個[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]工作，例如繪製和填滿圖形和文字。  
+本節說明如何開始使用 GDI + 中的 Windows Forms 應用程式。 下列主題示範如何完成數個 GDI + 工作，例如繪圖而填滿圖形和文字。  
   
 ## <a name="in-this-section"></a>本節內容  
  [如何：建立繪圖的圖形物件](how-to-create-graphics-objects-for-drawing.md)  

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: daf4ef0032ef8bfcce02ec925cc957abdecb3643
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: f3671b7071cc30f5fae0dbd85677987f441d846f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910704"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505988"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>逐步解說：在 Visual Basic 中撰寫查詢
 本逐步解說示範如何使用 Visual Basic 語言功能，以及在寫入[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查詢運算式。 逐步解說示範如何建立一份學生物件上的查詢、 如何執行查詢，以及如何修改它們。 查詢會將數個功能，包括物件初始設定式、 區域類型推斷和匿名型別。  
   
- 完成本逐步解說之後, 您就可以移至特定的文件與範例[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]您感興趣的提供者。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者包括[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]， [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)]，和[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。  
+ 完成本逐步解說之後, 您就可以移至特定的文件與範例[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]您感興趣的提供者。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者包括[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]，LINQ to DataSet，和[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。  
   
 ## <a name="create-a-project"></a>建立專案  
   
@@ -25,7 +25,7 @@ ms.locfileid: "64910704"
   
 1. 啟動 Visual Studio。  
   
-2. 在 [檔案]  功能表中，指向 [新增] ，然後按一下 [專案] 。  
+2. 在 [檔案]  功能表中，指向 [新增]  ，然後按一下 [專案]  。  
   
 3. 在 **已安裝的範本**清單中，按一下**Visual Basic**。  
   

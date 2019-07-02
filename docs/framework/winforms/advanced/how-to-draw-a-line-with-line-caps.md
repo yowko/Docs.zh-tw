@@ -10,15 +10,15 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
-ms.openlocfilehash: 682474120cbeeeb4cb83b69188a5a125228279d3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34abfc86e980a24ebb835cfd88d2522f8372c68d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631638"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506019"
 ---
-# <a name="how-to-draw-a-line-with-line-caps"></a>HOW TO：繪製包含線條頭尾圖案的線條
-您可以在其中一種稱為線條帽緣的數個圖形中繪製的開頭或行結尾。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 支援數個線條端點，例如循、 正方形、 菱形、 和箭頭。  
+# <a name="how-to-draw-a-line-with-line-caps"></a>作法：繪製包含線條頭尾圖案的線條
+您可以在其中一種稱為線條帽緣的數個圖形中繪製的開頭或行結尾。 GDI + 支援數個線條端點，例如循、 正方形、 菱形、 和箭頭。  
   
 ## <a name="example"></a>範例  
  您可以指定開始的行 （開始端點），最後一行 （結束端點） 或以虛線 (dash cap) 的連字號的線條端點。  

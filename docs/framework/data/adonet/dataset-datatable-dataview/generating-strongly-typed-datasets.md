@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 198d7f616d843a3c90b8d32cf33096ee253d2935
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 2d3dc99d78ee9ceb3e8e1cac22fc5571cc1545ba
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832729"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504102"
 ---
 # <a name="generating-strongly-typed-datasets"></a>產生強類型資料集
 指定符合 XML 結構描述定義語言 (XSD) 標準的 XML 結構描述，您可以產生強型別<xref:System.Data.DataSet>使用 XSD.exe 工具提供與 Windows 軟體開發套件 (SDK)。  
@@ -23,7 +23,7 @@ ms.locfileid: "66832729"
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- 在這個語法中，`/d`指示詞告訴工具，以產生**資料集**，和`/l:`告訴工具 （例如，C# 或 Visual Basic.NET） 使用哪一種語言。 選擇性`/eld`指示詞會指定您可以使用[!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]來查詢產生**資料集。** 這個選項會在也有指定 `/d` 選項時使用。 如需詳細資訊，請參閱 <<c0> [ 查詢具型別 DataSets](../../../../../docs/framework/data/adonet/querying-typed-datasets.md)。 選擇性`/n:`指示詞會告訴工具也會產生的命名空間**資料集**稱為**XSDSchema.Namespace**。 命令的輸出為 XSDSchemaFileName.cs，可以在 ADO.NET 應用程式中編譯和使用。 產生的程式碼可以編譯為程式庫或模組。  
+ 在這個語法中，`/d`指示詞告訴工具，以產生**資料集**，和`/l:`告訴工具 （例如，C# 或 Visual Basic.NET） 使用哪一種語言。 選擇性`/eld`指示詞會指定，您可以使用 LINQ to DataSet 來查詢產生**資料集。** 這個選項會在也有指定 `/d` 選項時使用。 如需詳細資訊，請參閱 <<c0> [ 查詢具型別 DataSets](../../../../../docs/framework/data/adonet/querying-typed-datasets.md)。 選擇性`/n:`指示詞會告訴工具也會產生的命名空間**資料集**稱為**XSDSchema.Namespace**。 命令的輸出為 XSDSchemaFileName.cs，可以在 ADO.NET 應用程式中編譯和使用。 產生的程式碼可以編譯為程式庫或模組。  
   
  下列程式碼顯示使用 C# 編譯器 (csc.exe)，將產生的程式碼編譯成程式庫的語法。  
   

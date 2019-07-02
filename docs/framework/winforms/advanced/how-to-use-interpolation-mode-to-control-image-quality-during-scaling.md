@@ -1,5 +1,5 @@
 ---
-title: HOW TO：縮放期間使用插補模式控制影像品質
+title: 作法：縮放期間使用插補模式控制影像品質
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - images [Windows Forms], scaling
 - images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
-ms.openlocfilehash: 609851737f142cfcbfeace3b1c020f3ac27bfd7c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ab0ff93b3ee26467c0de448efd31b698167f95c2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636855"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505708"
 ---
 # <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>HOW TO：縮放期間使用插補模式控制影像品質
-插補模式<xref:System.Drawing.Graphics>物件會影響方式[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]標尺 （兩端之間自動縮放和壓縮） 映像。 <xref:System.Drawing.Drawing2D.InterpolationMode>列舉會定義數種插補模式，其中有些下列清單所示：  
+插補模式<xref:System.Drawing.Graphics>物件影響的方式 GDI + （兩端之間自動縮放和壓縮） 的標尺映像。 <xref:System.Drawing.Drawing2D.InterpolationMode>列舉會定義數種插補模式，其中有些下列清單所示：  
   
 - <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
   

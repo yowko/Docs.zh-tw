@@ -2,15 +2,15 @@
 title: 下載範例資料庫 (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-ms.openlocfilehash: 1ef5a5ceac6a7f819551f6221b63197786ab4f09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 340ccd1e0e2d415fe60721775bd39acf9db00f85
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606871"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504509"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>下載範例資料庫 (LINQ to DataSet)
-範例和逐步解說[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]文件會使用 AdventureWorks 範例資料庫。 您可以從 Microsoft 下載網站免費下載這個產品。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 文件中的範例和逐步解說會使用 SQL Server 當做資料存放區。 除了 SQL Server 以外，可免費取得的 SQL Server Express Edition 也可以當做資料存放區使用。  
+範例和逐步解說中的 LINQ to DataSet 文件使用 AdventureWorks 範例資料庫。 您可以從 Microsoft 下載網站免費下載這個產品。 範例和逐步解說，LINQ to DataSet 文件中的使用 SQL Server 作為資料存放區。 除了 SQL Server 以外，可免費取得的 SQL Server Express Edition 也可以當做資料存放區使用。  
   
 ## <a name="downloading-and-installing-the-adventureworks-database"></a>下載和安裝 AdventureWorks 資料庫  
   
@@ -36,7 +36,7 @@ ms.locfileid: "61606871"
   
 2. 從**新增或移除程式**，選取**Microsoft SQL Server 2005**然後按一下**變更**。  
   
-3. 從**選擇的元件**，選取**工作站元件**，然後按一下 [**下一步]**。  
+3. 從**選擇的元件**，選取**工作站元件**，然後按一下 [**下一步]** 。  
   
 4. 從**歡迎使用 SQL Server 安裝精靈**，按一下**下一步**。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "61606871"
      如果您已將這些檔案安裝至不同的磁碟機或目錄，就必須先適當地修訂路徑，然後再執行 `sp_attach_db` 預存程序 (Stored Procedure)。  
   
 ## <a name="downloading-sql-server-express-edition"></a>下載 SQL Server Express Edition  
- 範例和逐步解說[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]區段做為資料存放區中使用 SQL Server 2005，但可以改為使用 SQL Server Express Edition，修改。 SQL Server Express Edition 可免費取得，而且可以將它連同應用程式一起轉散發。 如果您使用 Visual Studio 時，SQL Server Express Edition 包含在 Pro 和更高版本。  
+ 範例和逐步解說中的 LINQ to DataSet 區段做為資料存放區中使用 SQL Server 2005，但可以改為使用 SQL Server Express Edition，修改。 SQL Server Express Edition 可免費取得，而且可以將它連同應用程式一起轉散發。 如果您使用 Visual Studio 時，SQL Server Express Edition 包含在 Pro 和更高版本。  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>若要下載並安裝 SQL Server Express Edition  
   

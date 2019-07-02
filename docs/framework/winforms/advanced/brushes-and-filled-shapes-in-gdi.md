@@ -13,15 +13,15 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad3a4af2474ace61bbf35ea1357a2a6037af039a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779419"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506231"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>GDI+ 中的筆刷和填滿的形狀
-封閉的形狀，例如矩形或橢圓形，是由外框和內部所組成。 使用畫筆繪製外框，並使用筆刷填滿內部。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供來填滿的封閉的形狀內部的筆刷的數個類別： <xref:System.Drawing.SolidBrush>， <xref:System.Drawing.Drawing2D.HatchBrush>， <xref:System.Drawing.TextureBrush>， <xref:System.Drawing.Drawing2D.LinearGradientBrush>，和<xref:System.Drawing.Drawing2D.PathGradientBrush>。 所有這些類別繼承自<xref:System.Drawing.Brush>類別。 下圖顯示使用實心筆刷填滿的矩形和橢圓形填滿影線筆刷。  
+封閉的形狀，例如矩形或橢圓形，是由外框和內部所組成。 使用畫筆繪製外框，並使用筆刷填滿內部。 GDI + 提供數個筆刷類別來填滿封閉的形狀的內部： <xref:System.Drawing.SolidBrush>， <xref:System.Drawing.Drawing2D.HatchBrush>， <xref:System.Drawing.TextureBrush>， <xref:System.Drawing.Drawing2D.LinearGradientBrush>，和<xref:System.Drawing.Drawing2D.PathGradientBrush>。 所有這些類別繼承自<xref:System.Drawing.Brush>類別。 下圖顯示使用實心筆刷填滿的矩形和橢圓形填滿影線筆刷。  
   
  ![填滿形狀](./media/aboutgdip02-art17.gif "Aboutgdip02_art17")  
   
@@ -40,7 +40,7 @@ ms.locfileid: "61779419"
  [!code-csharp[LinesCurvesAndShapes#122](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#122)]
  [!code-vb[LinesCurvesAndShapes#122](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#122)]  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供超過 50 的影線樣式;下圖所示的三個樣式如下<xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>， <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>，和<xref:System.Drawing.Drawing2D.HatchStyle.Cross>。  
+ GDI + 提供 50 個以上的影線樣式。下圖所示的三個樣式如下<xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>， <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>，和<xref:System.Drawing.Drawing2D.HatchStyle.Cross>。  
   
  ![填滿形狀](./media/aboutgdip02-art18.gif "Aboutgdip02_art18")  
   
@@ -59,7 +59,7 @@ ms.locfileid: "61779419"
  ![填滿形狀](./media/aboutgdip02-art20.gif "AboutGdip02_Art20")  
   
 ## <a name="gradient-brushes"></a>漸層筆刷  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供的漸層筆刷的兩種類型： 線性和路徑。 若要變更逐漸，當您移動形狀之間水平、 垂直或對角線方式的色彩填滿圖形，您可以使用線性漸層筆刷。 下列程式碼範例示範如何使用變更從藍綠色當您從省略符號的左邊緣移至 右邊緣的水平漸層筆刷填滿橢圓形。  
+ GDI + 提供兩種類型的漸層筆刷： 線性和路徑。 若要變更逐漸，當您移動形狀之間水平、 垂直或對角線方式的色彩填滿圖形，您可以使用線性漸層筆刷。 下列程式碼範例示範如何使用變更從藍綠色當您從省略符號的左邊緣移至 右邊緣的水平漸層筆刷填滿橢圓形。  
   
  [!code-csharp[LinesCurvesAndShapes#124](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#124)]
  [!code-vb[LinesCurvesAndShapes#124](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#124)]  

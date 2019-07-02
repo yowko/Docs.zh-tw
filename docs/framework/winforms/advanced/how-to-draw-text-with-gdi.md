@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 GDI 繪製文字
+title: 作法：使用 GDI 繪製文字
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - drawing [Windows Forms], text
 - Windows Forms, drawing text with GDI
 ms.assetid: 2a19fe5d-2ace-451c-94db-01cb1118ef7b
-ms.openlocfilehash: 6078f2418219dad193d1a49a704334046c33b082
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3d5b79e82185c044314ff8807b86835ef6a87c45
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582596"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505903"
 ---
-# <a name="how-to-draw-text-with-gdi"></a>作法：使用 GDI 繪製文字
-具有<xref:System.Windows.Forms.TextRenderer.DrawText%2A>方法中的<xref:System.Windows.Forms.TextRenderer>類別，您可以存取[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]表單或控制項上繪製文字的功能。 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 文字轉譯通常提供較佳的效能和更精確的文字比測量[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  
+# <a name="how-to-draw-text-with-gdi"></a>HOW TO：使用 GDI 繪製文字
+具有<xref:System.Windows.Forms.TextRenderer.DrawText%2A>方法中的<xref:System.Windows.Forms.TextRenderer>類別，您可以存取在表單或控制項上繪製文字的 GDI 功能。 GDI 文字轉譯通常提供較佳的效能和更精確比 GDI + 中測量的文字。  
   
 > [!NOTE]
 >  <xref:System.Windows.Forms.TextRenderer.DrawText%2A>方法的<xref:System.Windows.Forms.TextRenderer>類別不支援列印。 列印時，一律使用<xref:System.Drawing.Graphics.DrawString%2A>方法的<xref:System.Drawing.Graphics>類別。  

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - graphics [Windows Forms], transformations
 - matrix transformations
 ms.assetid: 9fef7451-bddf-4c68-9350-400d1f1f25a3
-ms.openlocfilehash: 5093bfa6bc4051c1c6cf3ca059831b0cbe137ef0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d267253a1a75117f986790d1e0002a3607944577
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755762"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506049"
 ---
 # <a name="coordinate-systems-and-transformations"></a>座標系統和轉換
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供全局轉換和頁面轉換，以便您可以將轉換 （旋轉、 縮放、 轉譯，等等） 您繪製的項目。 在兩次轉換也可讓您能夠以各種不同的座標系統。  
+GDI + 提供自然變換和頁面轉換，以便您可以將轉換 （旋轉、 縮放、 轉譯，等等） 您繪製的項目。 在兩次轉換也可讓您能夠以各種不同的座標系統。  
   
 ## <a name="in-this-section"></a>本節內容  
  [座標系統類型](types-of-coordinate-systems.md)  

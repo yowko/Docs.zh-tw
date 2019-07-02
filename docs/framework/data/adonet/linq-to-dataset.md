@@ -2,19 +2,19 @@
 title: LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 743e3755-3ecb-45a2-8d9b-9ed41f0dcf17
-ms.openlocfilehash: 36335f90c7850fa00a15e7112b7473637250c656
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: c4069ef760877935c4ce194144d131d0dc58b4d3
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306240"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504362"
 ---
 # <a name="linq-to-dataset"></a>LINQ to DataSet
-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 可讓您更方便且更快速地查詢在 <xref:System.Data.DataSet> 物件中快取的資料。 具體來說，[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]簡化查詢，讓開發人員撰寫查詢，從程式語言本身，而不是使用不同的查詢語言。 這是特別適用於 Visual Studio 開發人員來說，現在可以利用的編譯時間語法檢查、 靜態型別和 Visual Studio，在查詢中所提供的 IntelliSense 支援。  
+LINQ to DataSet 可輕鬆並更快速地對資料的查詢快取在<xref:System.Data.DataSet>物件。 具體而言，LINQ to DataSet 可簡化讓開發人員撰寫查詢，從程式語言本身，而不是使用不同的查詢語言查詢。 這是特別適用於 Visual Studio 開發人員來說，現在可以利用的編譯時間語法檢查、 靜態型別和 Visual Studio，在查詢中所提供的 IntelliSense 支援。  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 也可用來查詢已經從一個或多個資料來源合併的資料。 這點可以實現許多資料表示和處理方式需要彈性的案例，例如本機查詢彙總的資料和在 Web 應用程式中進行中介層 (Middle Tier) 快取。 尤其，一般報表、分析和商務智慧應用程式都需要這種管理方法。  
+ 也可以用 LINQ to DataSet 查詢已合併一或多個資料來源的資料。 這點可以實現許多資料表示和處理方式需要彈性的案例，例如本機查詢彙總的資料和在 Web 應用程式中進行中介層 (Middle Tier) 快取。 尤其，一般報表、分析和商務智慧應用程式都需要這種管理方法。  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]功能會公開主要是透過的擴充方法<xref:System.Data.DataRowExtensions>和<xref:System.Data.DataTableExtensions>類別。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 是根據使用現有的 ADO.NET 架構，並不是取代應用程式程式碼中的 ADO.NET。 現有的 ADO.NET 程式碼將會繼續運作[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]應用程式。 之間的關係[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]ADO.NET 和資料存放區說明在下列圖表中。  
+ LINQ to DataSet 功能會公開主要是透過的擴充方法<xref:System.Data.DataRowExtensions>和<xref:System.Data.DataTableExtensions>類別。 LINQ to DataSet 是根據和使用現有的 ADO.NET 架構，而不是取代應用程式程式碼中的 ADO.NET。 現有的 ADO.NET 程式碼會繼續在 LINQ to DataSet 應用程式中運作。 LINQ to ADO.NET 和資料存放區的資料集的關聯性是由下列圖所示。  
   
  ![此圖表顯示 LINQ to DataSet 以 ADO.NET 提供者為基礎。](./media/linq-to-dataset/linq-dataset-ado-dotnet-provider.gif)  
   

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - graphics [Windows Forms], using in Windows Forms
 - graphics [Windows Forms], managed classes
 ms.assetid: e6d1a42d-2100-46aa-97e6-a5ddc0baaae5
-ms.openlocfilehash: 86f6b3fff1937694f4b7890249e36d5e12b769dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b6811e1412e1dc5b0731810f159bac633cd1eb2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766164"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505043"
 ---
 # <a name="using-managed-graphics-classes"></a>使用 Managed 圖形類別
-下列主題說明如何使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]managed 的類別 framework 中的 API。  
+下列主題說明如何使用 managed 的類別 framework 中的 GDI + API。  
   
 ## <a name="in-this-section"></a>本節內容  
  [圖形程式設計入門](getting-started-with-graphics-programming.md)  
- 說明如何完成基本工作[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  
+ 說明如何完成使用 GDI + 的基本工作。  
   
  [使用畫筆繪製線條和形狀](using-a-pen-to-draw-lines-and-shapes.md)  
  示範如何建構的畫筆，並使用它來繪製各種不同的線條和形狀。  

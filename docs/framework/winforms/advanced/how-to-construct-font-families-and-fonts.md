@@ -8,15 +8,15 @@ helpviewer_keywords:
 - font families [Windows Forms], constructing
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-ms.openlocfilehash: d3c4b5b4293b62cfec0f8471f90be673854e9009
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2d609525858c7a8ff77c0b86900b4fc7d6b4e39a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590356"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505953"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>作法：建構字型家族和字型
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 分組的字型系列字樣相同但不同的字型。 比方說，新細明體字型系列包含下列字型：  
+GDI + 劃分為具有相同的字樣，但不同的字型的字型系列。 比方說，新細明體字型系列包含下列字型：  
   
 - 新細明體的一般  
   
@@ -26,7 +26,7 @@ ms.locfileid: "65590356"
   
 - 新細明體  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 使用表單系列的四個樣式： 一般、 粗體、 斜體和粗體斜體。 這類的形容詞*縮小*並*捨入*不會被視為樣式; 而是它們屬於的系列名稱。 比方說，新細明體窄時，為字型家族，具有下列成員：  
+ GDI + 會使用表單系列的四個樣式： 一般、 粗體、 斜體和粗體斜體。 這類的形容詞*縮小*並*捨入*不會被視為樣式; 而是它們屬於的系列名稱。 比方說，新細明體窄時，為字型家族，具有下列成員：  
   
 - 新細明體窄一般  
   
@@ -36,7 +36,7 @@ ms.locfileid: "65590356"
   
 - 窄的新細明體  
   
- 您可以繪製的文字之前[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您必須建構<xref:System.Drawing.FontFamily>物件和<xref:System.Drawing.Font>物件。 <xref:System.Drawing.FontFamily>物件會指定 （例如，新細明體），字樣和<xref:System.Drawing.Font>物件指定大小、 樣式和單位。  
+ 您可以繪製使用 GDI + 的文字之前，您必須建構<xref:System.Drawing.FontFamily>物件和<xref:System.Drawing.Font>物件。 <xref:System.Drawing.FontFamily>物件會指定 （例如，新細明體），字樣和<xref:System.Drawing.Font>物件指定大小、 樣式和單位。  
   
 ## <a name="example"></a>範例  
  下列範例會建構規則的樣式新細明體字型的大小為 16 個像素。 在下列程式碼中，第一個引數傳遞給<xref:System.Drawing.Font.%23ctor%2A>建構函式是<xref:System.Drawing.FontFamily>物件。 第二個引數會指定在第四個引數所識別的單位中測量的字型的大小。 第三個引數識別的樣式。  

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: b25de14267bc31ad0ac5e3f51d4cd964b5a0535f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88abd0e5b7f56702c7a7009842253d3ca552d01f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607332"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504211"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>從查詢建立 DataTable (LINQ to DataSet)
 資料繫結 (Data Binding) 是 <xref:System.Data.DataTable> 物件的常見用法。 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法會採用查詢的結果並將資料複製到 <xref:System.Data.DataTable> 中，然後此物件便可用於資料繫結。 執行了資料作業之後，新的 <xref:System.Data.DataTable> 就會合併回來源 <xref:System.Data.DataTable> 中。  
   
  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法會使用下列程序，從查詢中建立 <xref:System.Data.DataTable>：  
   
-1. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法會從來源資料表 (實作 <xref:System.Data.DataTable> 介面的 <xref:System.Data.DataTable> 物件) 中複製 (Clone) <xref:System.Linq.IQueryable%601>。 <xref:System.Collections.IEnumerable> 來源通常源自於 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 運算式或方法查詢。  
+1. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法會從來源資料表 (實作 <xref:System.Data.DataTable> 介面的 <xref:System.Data.DataTable> 物件) 中複製 (Clone) <xref:System.Linq.IQueryable%601>。 <xref:System.Collections.IEnumerable>來源通常源自 LINQ to DataSet 運算式或方法查詢。  
   
 2. 複製的 <xref:System.Data.DataTable> 結構描述是根據來源資料表中第一個列舉 <xref:System.Data.DataRow> 物件的資料行所建立，而且複製之資料表的名稱就是來源資料表的名稱並附加上 "query" 一字。  
   

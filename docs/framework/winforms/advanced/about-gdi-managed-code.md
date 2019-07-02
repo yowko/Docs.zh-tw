@@ -6,19 +6,19 @@ helpviewer_keywords:
 - GDI+
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
-ms.openlocfilehash: 4c7632933e29a59c1db46f84360e271f27edf8b8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 73d1759aec3abe2e3e9c371f949cf051930d103c
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588611"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506123"
 ---
 # <a name="about-gdi-managed-code"></a>關於 GDI+ Managed 程式碼
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 是 Windows 作業系統提供二維向量圖形、影像處理和印刷樣式的部分。 藉由加入新功能，以及最佳化現有的功能，[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 改善了 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (包含在較早版本 Windows 的圖形裝置介面)。  
+GDI + 為 Windows 作業系統提供二維向量圖形、 影像處理和印刷樣式的一部分。 GDI + 改善了 GDI （包含與舊版 Windows 的圖形裝置介面） 加入新功能，以及最佳化現有的功能。  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Managed 的類別介面 （一組包裝函式） 是.NET Framework 中，用於建置、 部署和執行 XML Web service 和其他應用程式的環境的一部分。  
+ GDI + managed 的類別介面 （一組包裝函式） 是.NET Framework 中，用於建置、 部署和執行 XML Web service 和其他應用程式的環境的一部分。  
   
- 本節為使用 Managed 程式碼的程式設計人員提供 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API 的相關資訊。  
+ 本節提供關於 GDI + API 的資訊適用於程式設計人員使用 managed 程式碼。  
   
 ## <a name="in-this-section"></a>本節內容  
  [線條、曲線和形狀](lines-curves-and-shapes.md)  
@@ -28,7 +28,7 @@ ms.locfileid: "65588611"
  討論可用的影像類型，以及如何使用。  
   
  [座標系統和轉換](coordinate-systems-and-transformations.md)  
- 討論如何使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 轉換圖形。  
+ 討論如何轉換使用 GDI + 的圖形。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
