@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立私用字型集合
+title: 作法：建立私用字型集合
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: 1aa3030d9daea57bb9b8970baa78f8117a07bd1a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0bb7293a5423004a13cf98b79bba0a6c411a7c97
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624197"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505524"
 ---
-# <a name="how-to-create-a-private-font-collection"></a>HOW TO：建立私用字型集合
+# <a name="how-to-create-a-private-font-collection"></a>作法：建立私用字型集合
 <xref:System.Drawing.Text.PrivateFontCollection>類別繼承自<xref:System.Drawing.Text.FontCollection>抽象基底類別。 您可以使用<xref:System.Drawing.Text.PrivateFontCollection>来維護一組專為您的應用程式的字型的物件。 私用字型集合可以包含已安裝的系統字型，以及您在尚未安裝在電腦的字型。 若要將字型檔案加入至私用字型集合中，呼叫<xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A>方法的<xref:System.Drawing.Text.PrivateFontCollection>物件。  
   
  <xref:System.Drawing.Text.FontCollection.Families%2A>的屬性<xref:System.Drawing.Text.PrivateFontCollection>物件包含的陣列<xref:System.Drawing.FontFamily>物件。  
@@ -41,9 +41,9 @@ ms.locfileid: "64624197"
   
  ![如果螢幕擷取畫面顯示各種字型中的文字。](./media/how-to-create-a-private-font-collection/various-fonts-text-output.png)  
   
- Arial.tff （這新增下列程式碼範例中的私用字型集合） 是新細明體的一般樣式字型檔案。 不過，要注意的是，程式輸出會顯示數個可用的樣式，而不是一般的新細明體字型系列。 這是因為[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可以模擬的粗體、 斜體和粗體斜體樣式規則的樣式。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 也可以產生底線和 strikeouts 規則的樣式。  
+ Arial.tff （這新增下列程式碼範例中的私用字型集合） 是新細明體的一般樣式字型檔案。 不過，要注意的是，程式輸出會顯示數個可用的樣式，而不是一般的新細明體字型系列。 這是因為 GDI + 可以模擬的粗體、 斜體和粗體斜體樣式規則的樣式。 GDI + 也可以產生底線和 strikeouts 規則的樣式。  
   
- 同樣地，[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]粗體樣式或斜體樣式的粗體斜體樣式模擬。 程式輸出顯示在即使 TimesBd.tff （新細明體，粗體顯示） 是唯一可用於時間系列粗體的斜體樣式集合中的次檔案。  
+ 同樣地，GDI + 可以模擬中粗體樣式或斜體樣式的粗體斜體樣式。 程式輸出顯示在即使 TimesBd.tff （新細明體，粗體顯示） 是唯一可用於時間系列粗體的斜體樣式集合中的次檔案。  
   
  [!code-csharp[System.Drawing.FontsAndText#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#51)]
  [!code-vb[System.Drawing.FontsAndText#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#51)]  

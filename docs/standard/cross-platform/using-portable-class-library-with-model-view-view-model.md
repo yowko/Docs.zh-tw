@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a8c2b6ca9701f5eec4a8f43eaae531a0cfc18c1
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: b53be90764c6537fb27cb1b5ed781a68e69effa0
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377728"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504670"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>搭配 Model-View-View 模型使用可攜式類別庫
 您可以使用.NET Framework[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)實作模型檢視 View Model (MVVM) 模式，並跨多個平台共用的組件。
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
- MVVM 是將使用者介面與基礎商務邏輯隔離的應用程式模式。 您可以實作中的模型和檢視模型類別[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案在 Visual Studio 2012 中，然後再建立 適用於不同平台自訂的檢視。 這個方法讓您只需撰寫資料模型和商務邏輯一次，就可以從 .NET Framework、Silverlight、Windows Phone 和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式使用該程式碼，如下圖所示。
+ MVVM 是將使用者介面與基礎商務邏輯隔離的應用程式模式。 您可以在 Visual Studio 2012 中，可攜式類別庫專案中實作模型和檢視模型類別，然後再建立自訂的不同平台的檢視。 這個方法讓您只需撰寫資料模型和商務邏輯一次，就可以從 .NET Framework、Silverlight、Windows Phone 和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式使用該程式碼，如下圖所示。
 
  ![顯示跨平台的可攜式類別庫搭配 MVVM 共用組件。](./media/using-portable-class-library-with-model-view-view-model/mvvm-share-assemblies-across-platforms.png)
 
- 本主題不提供 MVVM 模式的一般資訊。 它只會提供有關如何使用資訊[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]實作 MVVM。 如需 MVVM 的詳細資訊，請參閱[MVVM 快速入門使用 Prism Library 5.0 for WPF](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40))。
+ 本主題不提供 MVVM 模式的一般資訊。 此外，它只會提供有關如何實作 MVVM 使用可攜式類別庫的資訊。 如需 MVVM 的詳細資訊，請參閱[MVVM 快速入門使用 Prism Library 5.0 for WPF](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40))。
 
 ## <a name="classes-that-support-mvvm"></a>支援 MVVM 類別
- 當您的目標.NET Framework 4.5 中， [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]、 Silverlight 或 Windows Phone 7.5 為您[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案中，下列類別可供實作 MVVM 模式：
+ .NET Framework 4.5 為目標時[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，Silverlight 或 Windows Phone 7.5，可攜式類別庫專案，下列類別可供實作 MVVM 模式：
 
 - <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> 類別
 
@@ -55,17 +55,17 @@ ms.locfileid: "66377728"
 - 中的所有類別<xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType>命名空間
 
 ## <a name="implementing-mvvm"></a>實作 MVVM
- 若要實作 MVVM，您通常會建立模型和檢視模型中的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案，因為[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案無法參考非可攜式專案。 模型和檢視模型可以是相同專案中，或在不同的專案中。 如果您使用不同的專案，請從檢視模型專案中將參考新增到模型專案。
+ 若要實作 MVVM，通常會建立模型和檢視模型在可攜式類別庫專案中，因為非可攜式專案無法參考可攜式類別庫專案。 模型和檢視模型可以是相同專案中，或在不同的專案中。 如果您使用不同的專案，請從檢視模型專案中將參考新增到模型專案。
 
  編譯模型後，當您檢視模型專案時，您會參考包含此檢視的應用程式中的這些組件。 如果檢視互動只具有檢視模型，您只需要參考該組件包含檢視模型。
 
 ### <a name="model"></a>型號
- 下列範例示範簡化的模型類別，可能位於[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案。
+ 下列範例顯示可能位於可攜式類別庫專案的簡化的模型類別。
 
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
  [!code-vb[PortableClassLibraryMVVM#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customer.vb#1)]
 
- 下列範例顯示簡單的方式來填入、 擷取和更新中的資料[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]專案。 在實際的應用程式中，您會從來源，例如 Windows Communication Foundation (WCF) 服務擷取資料。
+ 下列範例顯示簡單的方式來填入、 擷取及更新可攜式類別庫專案中的資料。 在實際的應用程式中，您會從來源，例如 Windows Communication Foundation (WCF) 服務擷取資料。
 
  [!code-csharp[PortableClassLibraryMVVM#2](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customerrepository.cs#2)]
  [!code-vb[PortableClassLibraryMVVM#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerrepository.vb#2)]

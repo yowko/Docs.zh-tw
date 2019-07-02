@@ -9,15 +9,15 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: 9c854d8742e50a7136455da72a239623fb0c0d91
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 64bec47a186b08298a49c6f188795d1b51d234eb
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639750"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505249"
 ---
 # <a name="vector-graphics-overview"></a>向量圖形概觀
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 座標系統上繪製線條、 矩形和其他形狀。 您可以選擇各式各樣的座標系統，但預設座標系統具有原點左上角的 x 軸指向右側和 y 軸指向下方。 預設座標系統中的測量單位為像素。  
+GDI + 繪製線條、 矩形和其他形狀的座標系統上。 您可以選擇各式各樣的座標系統，但預設座標系統具有原點左上角的 x 軸指向右側和 y 軸指向下方。 預設座標系統中的測量單位為像素。  
   
 ## <a name="the-building-blocks-of-gdi"></a>GDI + 的建置組塊  
  ![向量圖形](./media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
@@ -26,11 +26,11 @@ ms.locfileid: "64639750"
   
  ![向量圖形](./media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
   
- 當您使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]繪製線條、 矩形或曲線時，您可以提供要繪製項目的特定索引鍵資訊。 比方說，您可以藉由提供兩個點，來指定一條線，而您可以藉由提供一個點、 高度和寬度指定矩形。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 若要判斷哪一個像素為單位必須開啟，以顯示線條、 矩形或曲線的顯示驅動程式軟體一起運作。 下圖顯示從點 （4，2） 顯示一條線，以點 （12，8） 開啟的像素。  
+ 當您使用 GDI + 繪製線條、 矩形或曲線時，您會提供有關要繪製項目的某些重要資訊。 比方說，您可以藉由提供兩個點，來指定一條線，而您可以藉由提供一個點、 高度和寬度指定矩形。 GDI + 顯示驅動程式軟體，以判斷哪一個像素為單位必須以顯示線條、 矩形或曲線開啟搭配運作。 下圖顯示從點 （4，2） 顯示一條線，以點 （12，8） 開啟的像素。  
   
  ![向量圖形](./media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
   
- 經過一段時間，某些基本的建置組塊證明為十分最適用於建立二維的圖片。 這些建置組塊，所有支援的[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]下, 面清單中指定：  
+ 經過一段時間，某些基本的建置組塊證明為十分最適用於建立二維的圖片。 這些建置組塊，所有支援的 GDI +，會提供下面清單中：  
   
 - 線條  
   
@@ -47,7 +47,7 @@ ms.locfileid: "64639750"
 - 貝茲曲線  
   
 ## <a name="methods-for-drawing-with-a-graphics-object"></a>繪製圖形物件的方法  
- <xref:System.Drawing.Graphics>類別內[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供下列方法來繪製上述清單中的項目： <xref:System.Drawing.Graphics.DrawLine%2A>， <xref:System.Drawing.Graphics.DrawRectangle%2A>， <xref:System.Drawing.Graphics.DrawEllipse%2A>， <xref:System.Drawing.Graphics.DrawPolygon%2A>， <xref:System.Drawing.Graphics.DrawArc%2A>， <xref:System.Drawing.Graphics.DrawCurve%2A> （適用於基本曲線），以及<xref:System.Drawing.Graphics.DrawBezier%2A>. 每一種方法多載;也就是說，每一種方法支援數個不同的參數清單。 比方說，一個變化<xref:System.Drawing.Graphics.DrawLine%2A>方法會接收<xref:System.Drawing.Pen>物件和四個整數，另一種變化的同時<xref:System.Drawing.Graphics.DrawLine%2A>方法會接收<xref:System.Drawing.Pen>物件和兩個<xref:System.Drawing.Point>物件。  
+ <xref:System.Drawing.Graphics> GDI + 中的類別提供下列方法來繪製上述清單中的項目： <xref:System.Drawing.Graphics.DrawLine%2A>， <xref:System.Drawing.Graphics.DrawRectangle%2A>， <xref:System.Drawing.Graphics.DrawEllipse%2A>， <xref:System.Drawing.Graphics.DrawPolygon%2A>， <xref:System.Drawing.Graphics.DrawArc%2A>， <xref:System.Drawing.Graphics.DrawCurve%2A> （適用於基本曲線），並<xref:System.Drawing.Graphics.DrawBezier%2A>. 每一種方法多載;也就是說，每一種方法支援數個不同的參數清單。 比方說，一個變化<xref:System.Drawing.Graphics.DrawLine%2A>方法會接收<xref:System.Drawing.Pen>物件和四個整數，另一種變化的同時<xref:System.Drawing.Graphics.DrawLine%2A>方法會接收<xref:System.Drawing.Pen>物件和兩個<xref:System.Drawing.Point>物件。  
   
  繪製線條、 矩形和貝茲曲線的方法有複數隨附的方法，繪製單一呼叫中的數個項目： <xref:System.Drawing.Graphics.DrawLines%2A>， <xref:System.Drawing.Graphics.DrawRectangles%2A>，和<xref:System.Drawing.Graphics.DrawBeziers%2A>。 此外，<xref:System.Drawing.Graphics.DrawCurve%2A>方法具有附屬方法<xref:System.Drawing.Graphics.DrawClosedCurve%2A>，關閉的曲線，藉由連接曲線的結束點的開始點。  
   

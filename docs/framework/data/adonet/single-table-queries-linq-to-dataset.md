@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 00b0773ba66ad8e0acfdccb37964030a9cacff52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87a2f6853136b4b3e622968327bde01c9862bfdf
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664164"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504640"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>單一資料表查詢 (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 實作的資料來源上的查詢運作<xref:System.Collections.Generic.IEnumerable%601>介面或<xref:System.Linq.IQueryable%601>介面。 <xref:System.Data.DataTable>類別未實作其中一個介面，因此您必須呼叫<xref:System.Data.DataTableExtensions.AsEnumerable%2A>如果您想要使用的方法<xref:System.Data.DataTable>中的來源`From`子句[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]查詢。  
@@ -20,7 +20,7 @@ ms.locfileid: "61664164"
  [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
  [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)] 
   
- 使用查詢運算式中，一或多個資訊來源上套用一或多個查詢運算子，從標準查詢運算子的操作，或在案例中的初始化區域變數查詢[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]，運算子特有<xref:System.Data.DataSet>類別。 上一個範例中的查詢運算式會使用其中兩個標準查詢運算子：`Where` 與 `Select`。  
+ 使用查詢運算式中，一或多個資訊來源上套用一或多個查詢運算子，從標準查詢運算子的操作，或在 LINQ to DataSet，特有運算子的情況下，會初始化區域變數查詢<xref:System.Data.DataSet>類別。 上一個範例中的查詢運算式會使用其中兩個標準查詢運算子：`Where` 與 `Select`。  
   
  在 `Where` 設定為 `OnlineOrderFlag` 的情況中，`true` 子句會根據條件來篩選序列 (Sequence)。 `Select` 運算子會配置並傳回擷取傳遞給運算子之引數的可列舉物件。 在上述範例中，匿名型別是使用三個屬性建立的：`SalesOrderID`、`OrderDate` 和 `SalesOrderNumber`。 這三個屬性的值分別設定為 `SalesOrderID` 資料表中 `OrderDate`、`SalesOrderNumber` 和 `SalesOrderHeader` 資料行的值。  
   

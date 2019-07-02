@@ -8,19 +8,19 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 9cff13cabb0cd496ee4e628664e4b92bd9e60808
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2df74e022b842f7e5c9ff80f6aeddfce51af5eab
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063725"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505785"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>HOW TO：使用色彩矩陣轉換單一色彩
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供<xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>來儲存及操作影像的類別。 <xref:System.Drawing.Image> 和<xref:System.Drawing.Bitmap>物件會儲存每個像素的色彩為 32 位元數字：8 位元用於紅色、 綠色、 藍色和 alpha 的每個。 每四個元件是從 0 到 255，0 代表不含濃度，表示完整濃度 255 的數字。 Alpha 元件指定色彩的透明度：0 是完全透明的而且完全不透明 255。  
+GDI + 提供<xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>來儲存及操作影像的類別。 <xref:System.Drawing.Image> 和<xref:System.Drawing.Bitmap>物件會儲存每個像素的色彩為 32 位元數字：8 位元用於紅色、 綠色、 藍色和 alpha 的每個。 每四個元件是從 0 到 255，0 代表不含濃度，表示完整濃度 255 的數字。 Alpha 元件指定色彩的透明度：0 是完全透明的而且完全不透明 255。  
   
  色彩向量是表單 （紅色、 綠色、 藍色、 alpha） 的 4-tuple。 例如，色彩向量 （0，255，0，255） 表示不透明的色彩，含紅色或藍色，但有綠色的濃度。  
   
- 表示色彩的另一個慣例會將數字 1 用於完整濃度。 使用這個慣例，會由向量 （0、 1、 0、 1） 表示前面段落中所述的色彩。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 會使用 1 慣例成完整濃度，當它執行色彩轉換。  
+ 表示色彩的另一個慣例會將數字 1 用於完整濃度。 使用這個慣例，會由向量 （0、 1、 0、 1） 表示前面段落中所述的色彩。 GDI + 色彩轉換執行時使用 成完整濃度 1 慣例。  
   
  您可以套用色彩向量線性轉換 （旋轉、 縮放和 like） 乘以 4 × 4 矩陣色彩向量。 不過，您無法使用 4 × 4 矩陣，以執行翻譯 （非線性）。 如果您將虛擬的第五個座標 （例如，數字 1） 加入每一個色彩向量時，您可以使用 5 × 5 矩陣来套用的線性轉換和轉譯的任意組合。 轉換，其中包含後面接著翻譯的線性轉換稱為仿射轉換。  
   

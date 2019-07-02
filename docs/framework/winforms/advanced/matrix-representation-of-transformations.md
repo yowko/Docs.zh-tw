@@ -16,12 +16,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-ms.openlocfilehash: c87be8eaf715e373da75dd8f91889b0e396dba0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ceaad7b4bb5a70a890d261e39bc608becb388c17
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967461"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505633"
 ---
 # <a name="matrix-representation-of-transformations"></a>以矩陣來表示轉換
 M × n 矩陣是一組在億個資料列和 n 個資料行中排列的數字。 下圖顯示數個矩陣。  
@@ -66,7 +66,7 @@ M × n 矩陣是一組在億個資料列和 n 個資料行中排列的數字。 
   
  ![Transformations](./media/aboutgdip05-art10.gif "AboutGdip05_art10")  
   
- 在 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]您可以儲存在仿射轉換<xref:System.Drawing.Drawing2D.Matrix>物件。 因為代表仿射轉換矩陣的第三個資料行一律是 （0，0，1），當您建構時，在前兩個資料行中指定的六個數字<xref:System.Drawing.Drawing2D.Matrix>物件。 陳述式`Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)`建構如上圖所示的矩陣。  
+ 在 GDI + 中，您可以儲存在仿射轉換<xref:System.Drawing.Drawing2D.Matrix>物件。 因為代表仿射轉換矩陣的第三個資料行一律是 （0，0，1），當您建構時，在前兩個資料行中指定的六個數字<xref:System.Drawing.Drawing2D.Matrix>物件。 陳述式`Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)`建構如上圖所示的矩陣。  
   
 ## <a name="composite-transformations"></a>複合轉換  
  複合轉換是一連串的轉換，後面接著另一個。 請考慮下列清單中的轉換與矩陣：  

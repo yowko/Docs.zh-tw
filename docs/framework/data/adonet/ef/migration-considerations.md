@@ -2,12 +2,12 @@
 title: 移轉考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 0fafa786805a14d9adc3523a5eb876e7e5b0e9c5
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f0b8e4918844da08ab48525836878b6a21230891
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489876"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504523"
 ---
 # <a name="migration-considerations-entity-framework"></a>移轉考量 (Entity Framework)
 ADO.NET Entity Framework 會提供現有的應用程式的多項優點。 其中一項最重要的優勢，就是使用概念模型將應用程式所使用的資料結構從資料來源中的結構描述分隔。 這樣能方便您以後對儲存體模型或資料來源本身進行變更，而不必對應用程式進行補償變更。 針對使用的優點的詳細資訊[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，請參閱 < [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)並[Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)。  
@@ -66,7 +66,7 @@ ADO.NET Entity Framework 會提供現有的應用程式的多項優點。 其中
 
   [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供的許多資料集，包括記憶體中的持續性，提供相同功能的變更追蹤、 資料繫結，以及將物件序列化為 XML 資料。 如需詳細資訊，請參閱 <<c0> [ 使用物件](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)。  
   
-  如果[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]未提供功能的應用程式所需的資料集，您可以仍然利用 LINQ 查詢的優勢使用[!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]。 如需詳細資訊，請參閱 [LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
+  如果[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]不提供功能的應用程式所需的資料集，您可以仍然利用 LINQ 查詢的優勢使用 LINQ to DataSet。 如需詳細資訊，請參閱 [LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>適用於將資料繫結至控制項的應用程式之考量  
  .NET Framework 可讓您封裝來源中的資料，例如資料集或 ASP.NET 資料來源控制項，然後將使用者介面項目繫結至那些資料控制項。 下列清單說明適用於將控制項繫結至 Entity Framework 資料的考量。  

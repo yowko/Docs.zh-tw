@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e678195e96aea881777c44ab14bb2e56aef015bb
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663892"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505302"
 ---
 # <a name="types-of-bitmaps"></a>點陣圖類型
 點陣圖會指定每個像素色彩的像素矩形陣列中的位元陣列。 組成個別像素的位元數目會決定可以指派給該像素的色彩數目。 比方說，如果每個像素 4 個位元來表示，然後指定像素可以指派其中一個 16 不同的色彩 (2 ^4 = 16 個)。 下表顯示一些範例可以指派給像素，以表示指定之位元數的色彩數目。  
@@ -53,7 +53,7 @@ ms.locfileid: "61663892"
  ![點陣圖範例](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>圖形檔格式  
- 有許多標準格式，將點陣圖儲存在磁碟檔案。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 支援的圖形檔案下列段落中所述的格式。  
+ 有許多標準格式，將點陣圖儲存在磁碟檔案。 GDI + 支援圖形檔案下列段落中所述的格式。  
   
 ### <a name="bmp"></a>BMP  
  BMP 是使用 Windows 儲存裝置和應用程式無關的映像的標準格式。 檔案標頭中指定的每個像素 （1、 4、 8、 15、 24、 32 或 64） 指定 BMP 檔案的位元數。 每個像素 24 位元的 BMP 檔案很常見。 BMP 檔案通常不會壓縮，因此，不適合用來傳輸在網際網路上。  

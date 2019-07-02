@@ -10,21 +10,21 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-ms.openlocfilehash: 9641b6906bc2acaa525aed6df57f189d39317d35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76506e504fdaca83fee502111dbadab5cb41d9b9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614668"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506187"
 ---
 # <a name="rendering-a-windows-forms-control"></a>呈現 Windows Form 控制項
-轉譯是指使用者的畫面上建立的視覺表示法的程序。 Windows Form 使用[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]（的新 Windows 圖形程式庫） 進行轉譯。 Managed 的類別，可提供存取權[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]位於<xref:System.Drawing?displayProperty=nameWithType>命名空間和其子命名空間。  
+轉譯是指使用者的畫面上建立的視覺表示法的程序。 Windows Form 使用 GDI （的新 Windows 圖形程式庫） 進行轉譯。 Managed 的類別，可提供對 GDI 存取位於<xref:System.Drawing?displayProperty=nameWithType>命名空間和其子命名空間。  
   
  控制項的呈現，需要下列項目：  
   
 - 基底類別所提供的繪圖功能<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。  
   
-- 基本項目[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]圖形程式庫。  
+- GDI 圖形程式庫基本項目。  
   
 - 繪圖區域的幾何。  
   
@@ -61,7 +61,7 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics> 會封裝繪圖功能的 managed 的類別的討論內容所述[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]本主題稍後的。 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>的執行個體<xref:System.Drawing.Rectangle>結構，並且定義控制項可在其中繪圖的可用區域。 控制項開發人員可以計算<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>使用<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>控制項，如本主題稍後的幾何的討論中所述的屬性。  
+ <xref:System.Drawing.Graphics> 本主題稍後討論的 GDI 中所述，則會封裝繪圖功能的 managed 的類別。 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>的執行個體<xref:System.Drawing.Rectangle>結構，並且定義控制項可在其中繪圖的可用區域。 控制項開發人員可以計算<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>使用<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>控制項，如本主題稍後的幾何的討論中所述的屬性。  
   
  控制項必須提供轉譯邏輯，藉由覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>方法，它繼承自<xref:System.Windows.Forms.Control>。 <xref:System.Windows.Forms.Control.OnPaint%2A> 取得存取圖形物件和要透過在其中繪製的矩形<xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A>而<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>屬性的<xref:System.Windows.Forms.PaintEventArgs>傳遞給它的執行個體。  
   
@@ -93,7 +93,7 @@ protected virtual void OnPaintBackground(PaintEventArgs pevent);
  雖然<xref:System.Windows.Forms.Control.OnPaintBackground%2A>具有類似事件的命名法，而且會採用相同的引數當做`OnPaint`方法，<xref:System.Windows.Forms.Control.OnPaintBackground%2A>不是真正事件的方法。 沒有任何`PaintBackground`事件和<xref:System.Windows.Forms.Control.OnPaintBackground%2A>不叫用事件委派。 當覆寫<xref:System.Windows.Forms.Control.OnPaintBackground%2A>方法，衍生的類別不需要叫用<xref:System.Windows.Forms.Control.OnPaintBackground%2A>其基底類別的方法。  
   
 ## <a name="gdi-basics"></a>GDI + 基本概念  
- <xref:System.Drawing.Graphics>類別提供方法來繪製各種圖案，例如圓形、 三角形、 弧線和省略符號，以及顯示文字的方法。 <xref:System.Drawing?displayProperty=nameWithType>命名空間和其子命名空間包含類別來封裝圖形項目，例如 （圓形、 矩形、 弧線和其他項目） 的圖形、 色彩、 字型、 筆刷等等。 如需詳細資訊[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]，請參閱 <<c2> [ 使用 Managed 圖形類別](../advanced/using-managed-graphics-classes.md)。 基本知識[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]也有說明[How to:建立顯示進度的 Windows Form 控制項](how-to-create-a-windows-forms-control-that-shows-progress.md)。  
+ <xref:System.Drawing.Graphics>類別提供方法來繪製各種圖案，例如圓形、 三角形、 弧線和省略符號，以及顯示文字的方法。 <xref:System.Drawing?displayProperty=nameWithType>命名空間和其子命名空間包含類別來封裝圖形項目，例如 （圓形、 矩形、 弧線和其他項目） 的圖形、 色彩、 字型、 筆刷等等。 如需 GDI 的詳細資訊，請參閱[使用 Managed 圖形類別](../advanced/using-managed-graphics-classes.md)。 中也說明了必要的 GDI [How to:建立顯示進度的 Windows Form 控制項](how-to-create-a-windows-forms-control-that-shows-progress.md)。  
   
 ## <a name="geometry-of-the-drawing-region"></a>幾何的繪圖區域  
  <xref:System.Windows.Forms.Control.ClientRectangle%2A>控制項的屬性會指定在使用者的畫面上，控制項可用之矩形區域雖然<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>屬性<xref:System.Windows.Forms.PaintEventArgs>指定實際繪製的區域。 (請記得在中完成繪製<xref:System.Windows.Forms.Control.Paint>採用的事件方法<xref:System.Windows.Forms.PaintEventArgs>作為其引數的執行個體)。 控制項可能需要繪製只有部分可用的區域中，在此情況下當一小部分的控制項的顯示變更。 控制項開發人員必須在這些情況下，計算實際的矩形繪製，並傳遞至<xref:System.Windows.Forms.Control.Invalidate%2A>。 多載的版本<xref:System.Windows.Forms.Control.Invalidate%2A>採用<xref:System.Drawing.Rectangle>或是<xref:System.Drawing.Region>做為引數使用該引數來產生<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>屬性<xref:System.Windows.Forms.PaintEventArgs>。  

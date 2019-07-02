@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2811674ad8d870062e3a0c67dbd21e6550f6c48d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d69de3265fa0954f640c8a2f08ba85c106320f3e
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655670"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506222"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>對 Windows Forms 應用程式的雙向支援
 您可以使用 Visual Studio 建立以 Windows 為基礎的應用程式，支援阿拉伯文和希伯來文等雙向 （由右至左） 語言。 這包括標準表單、對話方塊、MDI 表單，以及您可以在這些表單中使用的所有控制項，也就是 <xref:System.Windows.Forms.Control> 命名空間中的所有物件。  
@@ -82,7 +82,7 @@ ms.locfileid: "64655670"
  Windows Form 支援 Unicode，因此當您建立雙向應用程式時，可以包含任何字元集。 不過，並非所有 Windows Form 控制項在所有平台上都支援 Unicode。 如需詳細資訊，請參閱[編碼和 Windows Forms 全球化](encoding-and-windows-forms-globalization.md)。  
   
 ## <a name="gdi"></a>GDI+  
- 您可以使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，以由右至左的讀取順序來繪製文字。 用來繪製文字的 <xref:System.Drawing.Graphics.DrawString%2A> 方法可支援 `StringFormat` 參數，您可以將其設為 <xref:System.Drawing.StringFormatFlags> 列舉的 <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> 成員，以反轉文字原始起點。  
+ 您可以使用 GDI + 繪製從右至左讀取順序的文字。 用來繪製文字的 <xref:System.Drawing.Graphics.DrawString%2A> 方法可支援 `StringFormat` 參數，您可以將其設為 <xref:System.Drawing.StringFormatFlags> 列舉的 <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> 成員，以反轉文字原始起點。  
   
 ## <a name="common-dialog-boxes"></a>通用對話方塊  
  像 [開啟舊檔] 對話方塊之類的系統工具是受 Windows 控制， 所以會繼承作業系統的語言項目。 如果您使用的 Windows 版本具有正確的語言設定，這些對話方塊就可以用雙向語言正確運作。  
@@ -95,9 +95,9 @@ ms.locfileid: "64655670"
  目前唯一的解決方法是將 <xref:System.Windows.Forms.ScrollableControl> 巢放在另一個 <xref:System.Windows.Forms.ScrollableControl> 中。 例如，如果您需要 <xref:System.Windows.Forms.TableLayoutPanel> 在此情況下運作，您可以將它放在 <xref:System.Windows.Forms.Panel> 控制項中，並將 <xref:System.Windows.Forms.Panel> 上的 <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> 設為 <xref:System.Windows.Forms.RightToLeft.Yes>。  
   
 ## <a name="mirroring"></a>鏡像  
- 「鏡像」是指將 UI 元素的版面配置反轉，使其流向變成由右至左。 例如，在鏡像的 Windows Form 中，[最小化]、[最大化] 和 [關閉] 按鈕會出現在標題列最左邊，而不是最右邊。  
+ 「鏡像」  是指將 UI 元素的版面配置反轉，使其流向變成由右至左。 例如，在鏡像的 Windows Form 中，[最小化]、[最大化] 和 [關閉] 按鈕會出現在標題列最左邊，而不是最右邊。  
   
- 將表單或控制項的 <xref:System.Windows.Forms.Control.RightToLeft%2A> 屬性設為 `true`，會反轉表單項目的讀取順序，但此設定並不會將配置反轉成由右至左，也就是不會造成鏡像。 例如，設定此屬性並不會將表單標題列中的 [最小化]、[最大化] 和 [關閉] 按鈕移到表單的左邊。 同樣地，某些控制項 (例如 <xref:System.Windows.Forms.TreeView> 控制項) 需要鏡像處理，才能將其顯示變更為適用於阿拉伯文或希伯來文。 您可以設定 <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> 屬性來鏡像處理這些控制項。  
+ 將表單或控制項的 <xref:System.Windows.Forms.Control.RightToLeft%2A> 屬性設為 `true`，會反轉表單項目的讀取順序，但此設定並不會將配置反轉成由右至左，也就是不會造成鏡像。 例如，設定此屬性並不會將表單標題列中的 [最小化]  、[最大化]  和 [關閉]  按鈕移到表單的左邊。 同樣地，某些控制項 (例如 <xref:System.Windows.Forms.TreeView> 控制項) 需要鏡像處理，才能將其顯示變更為適用於阿拉伯文或希伯來文。 您可以設定 <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> 屬性來鏡像處理這些控制項。  
   
  您可以建立下列控制項的鏡像版本：  
   
