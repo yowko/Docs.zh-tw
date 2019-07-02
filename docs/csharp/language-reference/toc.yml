@@ -6,9 +6,9 @@
       href: configure-language-version.md
     - name: 'C# 關鍵字'
       items:
-        - name: 概觀
+        - name: 總覽
           href: keywords/index.md
-        - name: 型別
+        - name: 內建類型
           items:
             - name: 實值類型
               items:
@@ -16,8 +16,9 @@
                   href: keywords/value-types.md
                 - name: bool
                   href: keywords/bool.md
-                - name: byte
-                  href: keywords/byte.md
+                - name: 整數數值類型
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
+                  href: builtin-types/integral-numeric-types.md
                 - name: char
                   href: keywords/char.md
                 - name: decimal
@@ -28,37 +29,23 @@
                   href: keywords/enum.md
                 - name: float
                   href: keywords/float.md
-                - name: int
-                  href: keywords/int.md
-                - name: long
-                  href: keywords/long.md
-                - name: sbyte
-                  href: keywords/sbyte.md
-                - name: short
-                  href: keywords/short.md
                 - name: struct
                   href: keywords/struct.md
-                - name: uint
-                  href: keywords/uint.md
-                - name: ulong
-                  href: keywords/ulong.md
-                - name: ushort
-                  href: keywords/ushort.md
             - name: 參考類型
               items:
                 - name: 參考類型的功能
                   href: keywords/reference-types.md
-                - name: class
+                - name: Class - 類別
                   href: keywords/class.md
-                - name: delegate
+                - name: Delegate - 委派
                   href: keywords/delegate.md
-                - name: dynamic
+                - name: 動態
                   href: keywords/dynamic.md
                 - name: interface
                   href: keywords/interface.md
                 - name: object
                   href: keywords/object.md
-                - name: string
+                - name: 字串
                   href: keywords/string.md
             - name: void
               href: keywords/void.md
@@ -68,8 +55,6 @@
               items:
                 - name: 內建類型表
                   href: keywords/built-in-types-table.md
-                - name: 整數型別表
-                  href: keywords/integral-types-table.md
                 - name: 浮點數類型表
                   href: keywords/floating-point-types-table.md
                 - name: 實值型別表
@@ -112,12 +97,14 @@
               href: keywords/async.md
             - name: const
               href: keywords/const.md
-            - name: event
+            - name: Event - 事件
               href: keywords/event.md
             - name: extern
               href: keywords/extern.md
             - name: in (泛型修飾詞)
               href: keywords/in-generic-modifier.md
+            - name: new (成員修飾詞)
+              href: keywords/new-modifier.md
             - name: out (泛型修飾詞)
               href: keywords/out-generic-modifier.md
             - name: override
@@ -126,11 +113,11 @@
               href: keywords/readonly.md
             - name: sealed
               href: keywords/sealed.md
-            - name: static
+            - name: 靜態
               href: keywords/static.md
             - name: unsafe
               href: keywords/unsafe.md
-            - name: virtual
+            - name: 虛擬
               href: keywords/virtual.md
             - name: volatile
               href: keywords/volatile.md
@@ -176,7 +163,7 @@
                   href: keywords/try-catch-finally.md
             - name: Checked 與 Unchecked
               items:
-                - name: 概觀
+                - name: 總覽
                   href: keywords/checked-and-unchecked.md
                 - name: checked
                   href: keywords/checked.md
@@ -204,7 +191,7 @@
               href: keywords/namespace.md
             - name: using
               items:
-                - name: using 的上下文
+                - name: 使用內容
                   href: keywords/using.md
                 - name: using 指示詞
                   href: keywords/using-directive.md
@@ -216,22 +203,18 @@
               href: keywords/extern-alias.md
         - name: 類型測試關鍵字
           items:
-            - name: is
+            - name: 是
               href: keywords/is.md
+        - name: 泛型型別條件約束關鍵字
+          items:
+            - name: new 條件約束
+              href: keywords/new-constraint.md
+            - name: 其中
+              href: keywords/where-generic-type-constraint.md
         - name: 運算子關鍵字
           items:
             - name: await
               href: keywords/await.md
-            - name: new
-              items:
-                - name: 新運算子、修飾詞及條件約束
-                  href: keywords/new.md
-                - name: new 運算子
-                  href: keywords/new-operator.md
-                - name: new 修飾詞
-                  href: keywords/new-modifier.md
-                - name: new 條件約束
-                  href: keywords/new-constraint.md
             - name: sizeof
               href: keywords/sizeof.md
             - name: nameof
@@ -268,7 +251,7 @@
               href: keywords/add.md
             - name: get
               href: keywords/get.md
-            - name: global
+            - name: 全域
               href: keywords/global.md
             - name: partial (類型)
               href: keywords/partial-type.md
@@ -276,12 +259,10 @@
               href: keywords/partial-method.md
             - name: remove
               href: keywords/remove.md
-            - name: set
+            - name: 設定
               href: keywords/set.md
             - name: when (篩選條件)
               href: keywords/when.md
-            - name: where (泛型型別條件約束)
-              href: keywords/where-generic-type-constraint.md
             - name: value
               href: keywords/value.md
             - name: yield
@@ -310,17 +291,17 @@
               href: keywords/ascending.md
             - name: descending
               href: keywords/descending.md
-            - name: 'on'
+            - name: 於
               href: keywords/on.md
             - name: equals
               href: keywords/equals.md
             - name: by
               href: keywords/by.md
-            - name: in
+            - name: 中的
               href: keywords/in.md
     - name: 'C# 運算子'
       items:
-        - name: 概觀
+        - name: 總覽
           href: operators/index.md
         - name: 算術運算子
           href: operators/arithmetic-operators.md
@@ -367,13 +348,15 @@
         - name: ':: 運算子'
           href: operators/namespace-alias-qualifer.md
           displayName: namespace alias qualifier
+        - name: new 運算子
+          href: operators/new-operator.md
         - name: stackalloc 運算子
           href: operators/stackalloc.md
         - name: true 和 false 運算子
           href: operators/true-false-operators.md
     - name: 'C# 特殊字元'
       items:
-        - name: 概觀
+        - name: 總覽
           href: tokens/index.md
         - name: $ -- 字串插補
           href: tokens/interpolated.md
@@ -381,7 +364,7 @@
           href: tokens/verbatim.md
     - name: 'C# 前置處理器指示詞'
       items:
-        - name: 概觀
+        - name: 總覽
           href: preprocessor-directives/index.md
         - name: '#if'
           href: preprocessor-directives/preprocessor-if.md
@@ -413,7 +396,7 @@
           href: preprocessor-directives/preprocessor-pragma-checksum.md
     - name: 'C# 編譯器選項'
       items:
-        - name: 概觀
+        - name: 總覽
           href: compiler-options/index.md
         - name: 使用 csc.exe 建置命令列
           href: compiler-options/command-line-building-with-csc-exe.md
@@ -577,7 +560,7 @@
           href: ../../../_csharplang/spec/exceptions.md
         - name: 屬性
           href: ../../../_csharplang/spec/attributes.md
-        - name: 不安全的程式碼
+        - name: Unsafe 程式碼
           href: ../../../_csharplang/spec/unsafe-code.md
         - name: 文件註解
           href: ../../../_csharplang/spec/documentation-comments.md

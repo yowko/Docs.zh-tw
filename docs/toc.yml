@@ -302,8 +302,9 @@
     - name: .NET Core SDK 概觀
       href: core/sdk.md
     - name: .NET Core CLI 工具
-      href: core/tools/index.md
       items:
+        - name: .NET Core CLI 概觀
+          href: core/tools/index.md
         - name: 遙測
           href: core/tools/telemetry.md
         - name: 通用工具
@@ -311,6 +312,8 @@
           items:
             - name: 建立全域工具
               href: core/tools/global-tools-how-to-create.md
+        - name: 較高的存取權
+          href: core/tools/elevated-access.md
         - name: 擴充性模型
           href: core/tools/extensibility.md
         - name: 連續整合
@@ -502,7 +505,7 @@
       href: csharp/getting-started/
     - name: 教學課程
       items:
-        - name: 概觀
+        - name: 總覽
           href: csharp/tutorials/index.md
         - name: '使用 C# 設計程式的簡介'
           items:
@@ -530,8 +533,6 @@
                   href: csharp/tutorials/intro-to-csharp/introduction-to-classes.md
         - name: '探索 C# 6'
           href: csharp/tutorials/exploration/csharp-6.yml
-        - name: '探索 C# 7.0'
-          href: csharp/tutorials/exploration/csharp-7.yml
         - name: 探索字串插補 - 互動式
           href: csharp/tutorials/exploration/interpolated-strings.yml
         - name: 探索您環境中的字串插補
