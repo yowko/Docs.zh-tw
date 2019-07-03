@@ -3,12 +3,12 @@ title: dotnet new 的自訂範本
 description: 了解任何 .NET 專案或檔案類型的自訂範本。
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: d7e9c549ff132deb4682ba81ab5ff354d6cc1522
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 738c6b07f77bdbf6fd946253f95c8691e4172f31
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169623"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410355"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 的自訂範本
 
@@ -100,7 +100,7 @@ dotnet new --list
 01. 已加入 `<PackageType>` 設定並將其設定為 `Template`。
 01. 已加入 `<PackageVersion>` 設定並將其設定為有效的 [NuGet 版本號碼](/nuget/reference/package-versioning)。
 01. 已加入 `<PackageId>` 設定並將其設定為唯一識別碼。 此識別碼是用來將範本套件解除安裝，並由 NuGet 摘要用來註冊您的範本套件。
-01. 應該設定的一般中繼資料：`<Title>`、`<Authors>`、`<Description>`，以及 `<Tags>`。
+01. 應該設定的一般中繼資料：`<Title>`、`<Authors>`、`<Description>`，以及 `<PackageTags>`。
 01. 必須設定 `<TargetFramework>` 設定，即使由範本程序所產生的二進位檔不會被使用。 在下列範例中，它被設定為 `netstandard2.0`。
 
 具有 *.nupkg* NuGet 套件的範本套件，會要求將所有範本都儲存在套件內的 *content* 資料夾中。 還有幾個設定需要被加入至 *.csproj* 檔案，以確保可以將所產生的 *.nupkg* 安裝為範本套件：
@@ -125,7 +125,7 @@ dotnet new --list
     <Title>AdatumCorporation Templates</Title>
     <Authors>Me</Authors>
     <Description>Templates to use when creating an application for Adatum Corporation.</Description>
-    <Tags>dotnet-new;templates;contoso</Tags>
+    <PackageTags>dotnet-new;templates;contoso</PackageTags>
     <TargetFramework>netstandard2.0</TargetFramework>
 
     <IncludeContentInPack>true</IncludeContentInPack>

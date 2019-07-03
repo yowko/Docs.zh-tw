@@ -8,23 +8,26 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: c3d18a52068b17b4a4259200754819dd43e28a03
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 4a51bb0e854de127c632c28f613a7602bf09f432
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267653"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348016"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# 參考)
 
 `readonly` 關鍵字是可以在三種內容中使用的修飾詞：
 
-- 在[欄位宣告](#readonly-field-example)中，`readonly` 表示只有在宣告中或相同類別的建構函式中，才能對欄位進行指派。 可以在欄位宣告及建構函式中指派及多次重新指派 readonly 欄位。 當建構函式結束之後，便無法指派 `readonly` 欄位。 這對實值型別及參考型別分別具有不同的含意：
-- 由於實值型別會直接包含其資料，因此具有 `readonly` 實值型別的欄位是不可變的。 
-- 由於參考型別包含針對其資料的參考，因此 `readonly` 參考型別的欄位必須一律參考相同的物件。 該物件並非不可變的。 `readonly` 修飾詞可防止欄位被不同的參考型別執行個體取代。 不過，修飾詞並無法防止欄位的執行個體資料經由唯讀欄位被修改。
+- 在[欄位宣告](#readonly-field-example)中，`readonly` 表示只有在宣告中或相同類別的建構函式中，才能對欄位進行指派。 可以在欄位宣告及建構函式中指派及多次重新指派 readonly 欄位。 
+  
+  當建構函式結束之後，便無法指派 `readonly` 欄位。 這對實值型別及參考型別分別具有不同的含意：
+  
+  - 由於實值型別會直接包含其資料，因此具有 `readonly` 實值型別的欄位是不可變的。 
+  - 由於參考型別包含針對其資料的參考，因此 `readonly` 參考型別的欄位必須一律參考相同的物件。 該物件並非不可變的。 `readonly` 修飾詞可防止欄位被不同的參考型別執行個體取代。 不過，修飾詞並無法防止欄位的執行個體資料經由唯讀欄位被修改。
 
-> [!WARNING]
-> 包含可變動參考型別之外部可見唯讀欄位的外部可見類型是個潛在的安全性弱點，並可能會觸發警告 [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types)：「不要宣告唯讀的可變動參考類型。」
+  > [!WARNING]
+  > 包含可變動參考型別之外部可見唯讀欄位的外部可見類型是個潛在的安全性弱點，並可能會觸發警告 [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types)：「不要宣告唯讀的可變動參考類型。」
 
 - 在 [`readonly struct` 定義](#readonly-struct-example)中，`readonly` 表示 `struct` 是不可變的。
 - 在 [`ref readonly` 方法傳回](#ref-readonly-return-example)中，`readonly` 修飾詞表示方法會傳回參考且不允許寫入到該參考。
@@ -41,9 +44,9 @@ ms.locfileid: "67267653"
 
 - 在宣告中初始化變數時，例如︰
 
-```csharp
-public readonly int y = 5;
-```
+  ```csharp
+  public readonly int y = 5;
+  ```
 
 - 在包含執行個體欄位宣告的類別執行個體建構函式。
 - 在包含靜態欄位宣告的類別靜態建構函式。
