@@ -3,12 +3,12 @@ title: C# 7.0 的新功能 - C# 指南
 description: 取得 C# 語言版本 7.0 中新功能的概觀。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 9b4569f31211afc69efb1b853723fded9329ae41
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: c3fdee2bdb974640b56bfab3af4be57133ad2f7a
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66815966"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307158"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 的新功能
 
@@ -95,7 +95,7 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 * 執行 [is](../language-reference/keywords/is.md) 及 [switch](../language-reference/keywords/switch.md) 陳述式的模式比對作業時。
 * 作為獨立識別項，當您想要將指派的值明確識別為捨棄時。
 
-下列範例定義的 `QueryCityDataForYears` 方法，會傳回包含兩個不同年份的城市資料之 6 元組。 範例中的方法呼叫只有對方法傳回的兩個母體有效，所以會在解構元組時，將元組中剩餘的值視作捨棄處理。
+下列範例定義的 `QueryCityDataForYears` 方法，會傳回包含兩個不同年份之城市資料的 6 元組。 範例中的方法呼叫只有對方法傳回的兩個母體有效，所以會在解構元組時，將元組中剩餘的值視作捨棄處理。
 
 [!code-csharp[Tuple-discard](~/samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 

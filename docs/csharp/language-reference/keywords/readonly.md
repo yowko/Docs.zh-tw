@@ -8,18 +8,24 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: c7f3b1b1525277bf948070c9121d151f9f520127
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: c3d18a52068b17b4a4259200754819dd43e28a03
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204661"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267653"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# 參考)
 
 `readonly` 關鍵字是可以在三種內容中使用的修飾詞：
 
-- 在[欄位宣告](#readonly-field-example)中，`readonly` 表示只有在宣告中或相同類別的建構函式中，才能對欄位進行指派。
+- 在[欄位宣告](#readonly-field-example)中，`readonly` 表示只有在宣告中或相同類別的建構函式中，才能對欄位進行指派。 可以在欄位宣告及建構函式中指派及多次重新指派 readonly 欄位。 當建構函式結束之後，便無法指派 `readonly` 欄位。 這對實值型別及參考型別分別具有不同的含意：
+- 由於實值型別會直接包含其資料，因此具有 `readonly` 實值型別的欄位是不可變的。 
+- 由於參考型別包含針對其資料的參考，因此 `readonly` 參考型別的欄位必須一律參考相同的物件。 該物件並非不可變的。 `readonly` 修飾詞可防止欄位被不同的參考型別執行個體取代。 不過，修飾詞並無法防止欄位的執行個體資料經由唯讀欄位被修改。
+
+> [!WARNING]
+> 包含可變動參考型別之外部可見唯讀欄位的外部可見類型是個潛在的安全性弱點，並可能會觸發警告 [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types)：「不要宣告唯讀的可變動參考類型。」
+
 - 在 [`readonly struct` 定義](#readonly-struct-example)中，`readonly` 表示 `struct` 是不可變的。
 - 在 [`ref readonly` 方法傳回](#ref-readonly-return-example)中，`readonly` 修飾詞表示方法會傳回參考且不允許寫入到該參考。
 
@@ -55,7 +61,9 @@ public readonly int y = 5;
 
 在上述範例中，如果您使用如下範例的陳述式：
 
-`p2.y = 66;        // Error`
+```csharp
+p2.y = 66;        // Error
+```
 
 則會收到編譯器錯誤訊息：
 
@@ -88,7 +96,7 @@ public readonly struct Point
 `ref return` 上的 `readonly` 修飾詞指出傳回的參考不能修改。 下列範例會傳回對來源的參考。 它會使用 `readonly` 修飾詞來表示呼叫端無法修改來源：
 
 [!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
-傳回的型別不一定得是 `readonly struct`。 `ref` 可傳回的任何型別，`ref readonly` 也可以傳回
+傳回的型別不一定得是 `readonly struct`。 可由 `ref` 傳回的任何類型，都可以由 `ref readonly` 傳回。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 

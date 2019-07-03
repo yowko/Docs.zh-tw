@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfc55bcd97a6c1d68d4ce900b19ace7356d6ee92
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 2239b73eb8418d469085ad72b8a28093146a1f6b
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378562"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025963"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL 反組譯工具)
 
@@ -34,7 +34,7 @@ ildasm [options] [PEfilename] [options]
 
 ## <a name="parameters"></a>參數
 
-下列選項可用於 *.exe*、*.dll*、*.obj*、*.lib* 和 *.winmd* 檔案。
+下列選項可用於 *.exe*、 *.dll*、 *.obj*、 *.lib* 和 *.winmd* 檔案。
 
 | 選項 | 說明 |
 | ------ | ----------- |
@@ -44,7 +44,7 @@ ildasm [options] [PEfilename] [options]
 |**/html**|產生 HTML 格式的輸出。 使用 **/output** 選項時才有效。|
 |**/?**|顯示工具的命令語法和選項。|
 
-下列其他選項可用於 *.exe*、*.dll* 和 *.winmd* 檔案。
+下列其他選項可用於 *.exe*、 *.dll* 和 *.winmd* 檔案。
 
 | 選項 | 說明 |
 | ------ | ----------- |
@@ -53,7 +53,7 @@ ildasm [options] [PEfilename] [options]
 |**/linenum**|包含原始程式行的參考。|
 |**/nobar**|隱藏反組譯碼進度指示器快顯視窗。|
 |**/noca**|隱藏自訂屬性的輸出。|
-|**/project**|以對 Managed 程式碼顯示的方式顯示中繼資料，而不採用在原生 [!INCLUDE[wrt](../../../includes/wrt-md.md)]中顯示的方式。 如果 `PEfilename` 不是 Windows 中繼資料 (*.winmd*) 檔案，這個選項就沒有任何作用。 請參閱[適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)。|
+|**/project**|以對受控程式碼顯示的方式顯示中繼資料，而不採用在原生 Windows 執行階段中顯示的方式。 如果 `PEfilename` 不是 Windows 中繼資料 ( *.winmd*) 檔案，這個選項就沒有任何作用。 請參閱[適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)。|
 |**/pubonly**|僅反組譯公用類型和成員。 相當於 **/visibility:PUB**。|
 |**/quoteallnames**|將所有名稱包含在單引號內。|
 |**/raweh**|以未經處理格式顯示例外狀況處理子句。|
@@ -61,22 +61,22 @@ ildasm [options] [PEfilename] [options]
 |**/tokens**|顯示類別和成員的中繼資料語彙基元。|
 |**/visibility:** `vis`[+`vis`...]|僅反組譯具有所指定可視性的類型或成員。 以下是 `vis` 的有效值：<br /><br /> **PUB**：公開<br /><br /> **PRI**：私用<br /><br /> **FAM**：家族<br /><br /> **ASM**：組件<br /><br /> **FAA**：家族和組件<br /><br /> **FOA**：家族或組件<br /><br /> **PSC**：私用範圍<br /><br /> 如需這些可視性修飾詞的定義，請參閱 <xref:System.Reflection.MethodAttributes> 和 <xref:System.Reflection.TypeAttributes>。|
 
-下列選項只對檔案或主控台輸出的 *.exe*、*.dll* 和 *.winmd* 檔案有效。
+下列選項只對檔案或主控台輸出的 *.exe*、 *.dll* 和 *.winmd* 檔案有效。
 
 | 選項 | 說明 |
 | ------ | ----------- |
-|**/all**|指定 **/header**、**/bytes**、**/stats**、**/classlist** 與 **/tokens** 選項的組合。|
+|**/all**|指定 **/header**、 **/bytes**、 **/stats**、 **/classlist** 與 **/tokens** 選項的組合。|
 |**/classlist**|包括模組中定義的類別清單。|
 |**/forward**|使用 forward 類別宣告。|
 |**/headers**|在輸出中包含檔案標頭資訊。|
-|**/item:** `class`[**::** `member`[`(sig`]]|根據提供的引數反組譯下列項目：<br /><br /> -   反組譯指定的 `class`。<br />-   反組譯 `class` 的指定 `member`。<br />-   以指定的簽章 `sig` 反組譯 `class` 的 `member`。 `sig` 的格式為：<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **注意**：在 .NET Framework 1.0 和 1.1 版中，`sig` 後面必須接著右括號：`(sig)`。 從 Net Framework 2.0 開始，必須省略右括號：`(sig`。|
+|**/item:** `class`[ **::** `member`[`(sig`]]|根據提供的引數反組譯下列項目：<br /><br /> -   反組譯指定的 `class`。<br />-   反組譯 `class` 的指定 `member`。<br />-   以指定的簽章 `sig` 反組譯 `class` 的 `member`。 `sig` 的格式為：<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **注意**：在 .NET Framework 1.0 和 1.1 版中，`sig` 後面必須接著右括號：`(sig)`。 從 Net Framework 2.0 開始，必須省略右括號：`(sig`。|
 |**/noil**|隱藏 IL 組件的程式碼輸出。|
 |**/stats**|包含影像中的統計資料。|
 |**/typelist**|產生完整的類型清單，以便在反覆存取時保留類型順序。|
 |**/unicode**|使用 Unicode 編碼輸出。|
 |**/utf8**|使用 UTF-8 編碼輸出。 預設值為 ANSI。|
 
-下列選項只對檔案或主控台輸出的 *.exe*、*.dll*、*.obj*、*.lib* 和 *.winmd* 檔案有效。
+下列選項只對檔案或主控台輸出的 *.exe*、 *.dll*、 *.obj*、 *.lib* 和 *.winmd* 檔案有效。
 
 | 選項 | 說明 |
 | ------ | ----------- |
@@ -89,7 +89,7 @@ ildasm [options] [PEfilename] [options]
 |**/objectfile**=`filename`|顯示所指定程式庫中單一物件檔案的中繼資料。|
 
 > [!NOTE]
-> *Ildasm.exe* 的所有選項都不區分大小寫，並以前三個字母來辨識。 例如，**/quo** 相當於 **/quoteallnames**。 指定引數的選項可以接受冒號 (:) 或等號 (=) 做為選項與引數之間的分隔符號。 例如，**/output:** <檔案名稱> 相當於 **/output=** <檔案名稱>。
+> *Ildasm.exe* 的所有選項都不區分大小寫，並以前三個字母來辨識。 例如， **/quo** 相當於 **/quoteallnames**。 指定引數的選項可以接受冒號 (:) 或等號 (=) 做為選項與引數之間的分隔符號。 例如， **/output:** <檔案名稱>  相當於 **/output=** <檔案名稱>  。
 
 ## <a name="remarks"></a>備註
 
@@ -100,9 +100,9 @@ ildasm [options] [PEfilename] [options]
 > [!NOTE]
 > 目前您無法將這項技術用於包含內嵌機器碼的 PE 檔 (例如，由 Visual C++ 所產生的 PE 檔)。  
 
-您可以使用 IL 反組譯工具中的預設 GUI，檢視階層樹狀檢視中任何現有 PE 檔的中繼資料和反組譯碼。 若要使用 GUI，請在命令列鍵入 **ildasm**，但不提供 *PEfilename* 引數或任何選項。 您可以從 [檔案] 功能表巡覽至要載入 *Ildasm.exe* 中的 PE 檔。 若要儲存針對所選取 PE 顯示的中繼資料和反組譯程式碼，請選取 [檔案] 功能表中的 [傾印] 命令。 若只要儲存階層樹狀檢閱，請從 [檔案] 功能表中選取 [傾印樹狀檢視] 命令。 如需將檔案載入 *Ildasm.exe* 和解譯輸出的詳細指引，請參閱位於 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 隨附 [Samples] 資料夾中的 *Ildasm.exe* 教學課程。
+您可以使用 IL 反組譯工具中的預設 GUI，檢視階層樹狀檢視中任何現有 PE 檔的中繼資料和反組譯碼。 若要使用 GUI，請在命令列鍵入 **ildasm**，但不提供 *PEfilename* 引數或任何選項。 您可以從 [檔案]  功能表巡覽至要載入 *Ildasm.exe* 中的 PE 檔。 若要儲存針對所選取 PE 顯示的中繼資料和反組譯程式碼，請選取 [檔案]  功能表中的 [傾印]  命令。 若只要儲存階層樹狀檢閱，請從 [檔案]  功能表中選取 [傾印樹狀檢視]  命令。 如需將檔案載入 *Ildasm.exe* 和解譯輸出的詳細指引，請參閱 Windows 軟體開發套件 (SKD) 隨附 [Samples] 資料夾中的 *Ildasm.exe* 教學課程。
 
-如果您將包含內嵌資源的 *PEfilename* 引數提供給 *Ildasm.exe*，這個工具就會產生多個輸出檔案：包含 IL 程式碼的文字檔；每個內嵌的 Managed 資源還會各有一個使用來自中繼資料的資源名稱所產生的 .resources 檔案。 如果 Unmanaged 資源內嵌於 *PEfilename*，**/output** 選項就會使用為 IL 指定的檔案名稱來產生 .res 檔案。
+如果您將包含內嵌資源的 *PEfilename* 引數提供給 *Ildasm.exe*，這個工具就會產生多個輸出檔案：包含 IL 程式碼的文字檔；每個內嵌的 Managed 資源還會各有一個使用來自中繼資料的資源名稱所產生的 .resources 檔案。 如果 Unmanaged 資源內嵌於 *PEfilename*， **/output** 選項就會使用為 IL 指定的檔案名稱來產生 .res 檔案。
 
 > [!NOTE]
 > *Ildasm.exe* 僅會顯示 *.obj* 和 *.lib* 輸入檔的中繼資料描述。 這些檔案類型的 IL 程式碼不會進行反組譯。

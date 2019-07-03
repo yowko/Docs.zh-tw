@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b175d3f8f7fe453596d346949700e220950358c7
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: b045ad7e9a808b3e2b8d89750001ec9c4a33c005
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377546"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170765"
 ---
 # <a name="asynchronous-file-io"></a>非同步檔案 I/O
 
-非同步作業可讓您執行耗用大量資源的 I/O 作業，而不需要封鎖主執行緒。 這項效能考量對於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式或 [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] 應用程式而言特別重要，尤其是針對耗時的資料流作業可能會阻礙 UI 執行緒，使應用程式看起來像是停止運作的情況。
+非同步作業可讓您執行耗用大量資源的 I/O 作業，而不需要封鎖主執行緒。 這項效能考量對於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式或傳統型應用程式而言特別重要，尤其是針對耗時的資料流作業可能會阻礙 UI 執行緒，使應用程式看起來像是停止運作的情況。
 
 從 .NET Framework 4.5 開始，I/O 類型包含非同步方法，可簡化非同步作業。 非同步方法在其名稱中包含 `Async` ，例如 <xref:System.IO.Stream.ReadAsync%2A>、 <xref:System.IO.Stream.WriteAsync%2A>、 <xref:System.IO.Stream.CopyToAsync%2A>、 <xref:System.IO.Stream.FlushAsync%2A>、 <xref:System.IO.TextReader.ReadLineAsync%2A>和 <xref:System.IO.TextReader.ReadToEndAsync%2A>。 這些非同步方法會在 Stream 類別上實作 (例如 <xref:System.IO.Stream>、 <xref:System.IO.FileStream>和 <xref:System.IO.MemoryStream>)，以及在用於從資料流讀取或寫入資料流的類別上實作 (例如 <xref:System.IO.TextReader> 和 <xref:System.IO.TextWriter>)。
 

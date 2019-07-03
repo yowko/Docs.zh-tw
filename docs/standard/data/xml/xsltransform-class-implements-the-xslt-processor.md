@@ -8,17 +8,17 @@ dev_langs:
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aadb478b507cdd5d2828a2d224fbca1dc32b21b3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7c36ff35622ae5c9cddf4ffd1ebd0a60feb348a8
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586457"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170885"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>XslTransform 類別實作 XSLT 處理器
 
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> 類別在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。 如需詳細資訊，請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[從 XslTransform 類別移轉](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。
+> 在 .NET Framework 2.0 中，<xref:System.Xml.Xsl.XslTransform> 類別已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。 如需詳細資訊，請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[從 XslTransform 類別移轉](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。
 
 <xref:System.Xml.Xsl.XslTransform> 類別是可實作 XSL 轉換 (XSLT) 1.0 版建議事項的 XSLT 處理器。 <xref:System.Xml.Xsl.XslTransform.Load%2A> 方法可尋找及讀取樣式表，而 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法則可轉換指定的來源文件。 任何實作 <xref:System.Xml.XPath.IXPathNavigable> 介面的存放區都可用來做為 <xref:System.Xml.Xsl.XslTransform> 的來源文件。 .NET Framework 目前實作 <xref:System.Xml.XmlDocument> 上的 <xref:System.Xml.XPath.IXPathNavigable> 介面、<xref:System.Xml.XmlDataDocument>，以及 <xref:System.Xml.XPath.XPathDocument>，因此這些項目都可以用來作為轉換的輸入來源文件。
 
@@ -34,7 +34,7 @@ ms.locfileid: "65586457"
 
 - XmlReader
 
-- 表示 URL 的字串 
+- 表示 URL 的字串
 
 上述每個輸入類別都有不同的 <xref:System.Xml.Xsl.XslTransform.Load%2A> 方法。 有些方法會採用上述其中一個類別與 <xref:System.Xml.XmlResolver> 類別的組合，來做為引數。 <xref:System.Xml.XmlResolver> 會尋找樣式表中可發現之 `<xsl:import>` 或 `<xsl:include>` 所參考的資源。 下列幾種方法會採用字串 (<xref:System.Xml.XmlReader>) 或 <xref:System.Xml.XPath.XPathNavigator> 做為輸入。
 
@@ -223,7 +223,7 @@ print_root.xsl
 
 下列表格將針對 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法列出已過時的方法和新的方法。 新方法採用的是 <xref:System.Xml.XmlResolver> 物件。
 
-|.NET Framework 1.0 版過時的 Transform 方法 |.NET Framework 1.1 版替代的 Transform 方法|
+|.NET Framework 1.0 版過時的 Transform 方法|.NET Framework 1.1 版替代的 Transform 方法|
 |-----------------------------------------------------------|--------------------------------------------------------------|
 |XmlReader Transform(XPathNavigator input, XsltArgumentList args)|XmlReader Transform(XPathNavigator  input, XsltArgumentList args, XmlResolver resolver)|
 |XmlReader Transform(IXPathNavigable input, XsltArgumentList args)|XmlReader Transform(IXPathNavigable input, XsltArgumentList args, XmlResolver resolver)|

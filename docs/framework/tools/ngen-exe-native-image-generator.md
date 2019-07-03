@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c806366e8f80e9fd770b45a5f1154d388ac49ab
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: fd1773b184b9ea39b83b91c139acb09658beae11
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489673"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832830"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (原生映像產生器)
 
@@ -233,7 +233,7 @@ Ngen.exe 產生的原生映像可以在應用程式定義域之間共用。 這�
 硬式繫結會影響啟動時間，這是因為硬式繫結至主應用程式組件的所有映像都必須在同時間載入。
 
 > [!NOTE]
-> 在 [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)] 之前，您應該將共用、強式名稱的元件放在全域組件快取中，因為載入器會針對不在全域組件快取中的強式名稱組件執行額外驗證，進而有效地消除使用原生映像所取得的任何啟動時間改進。 在 [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] 中引入的最佳化移除額外的驗證。
+> 在 .NET Framework 3.5 Service Pack 1 之前，您應該將共用、強式名稱的元件放在全域組件快取中，因為載入器會針對不在全域組件快取中的強式名稱組件執行額外驗證，進而有效地消除使用原生映像所取得的任何啟動時間改進。 在 .NET Framework 3.5 SP1 中引入的最佳化會移除額外的驗證。
 
 <a name="UsageSummary"></a>
 

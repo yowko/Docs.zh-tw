@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16776e83c8bae6cc82329a8f709fd9d1d7cab145
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 63a3ee099d4256a4bc800f74615fca8eaec2a77f
+ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634346"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67135686"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>規則運算式中的分組建構
 分組建構會描寫規則運算式的子運算式，以及擷取輸入字串的子字串。 您可以使用分組建構來執行下列作業：  
@@ -187,7 +187,7 @@ ms.locfileid: "64634346"
   
  其中 *name1* 是目前群組 (選用)， *name2* 是先前定義的群組，而 *subexpression* 是任何有效的規則運算式模式。 平衡群組定義會刪除 *name2* 的定義，並且將 *name2* 與 *name1* 之間的間隔儲存在 *name1*中。 如果沒有定義 *name2* 群組，比對結果會回溯。 因為刪除 *name2* 最後的定義會顯示 *name2*先前的定義，所以此建構可讓您將擷取堆疊用於群組 *name2* ，以做為追蹤巢狀建構 (例如括弧或左右方括號) 的計數器。  
   
- 平衡群組定義將 *name2* 當作堆疊使用。 每個巢狀建構的開頭字元都會放在群組及其 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合中。 找到配對的結尾字元時，就會從群組中移除其對應的開頭字元，而 <xref:System.Text.RegularExpressions.Group.Captures%2A> 集合中就會減少一個。 所有巢狀建構的開頭和結尾字元都配成對之後， *name1* 就空了。  
+ 平衡群組定義將 *name2* 當作堆疊使用。 每個巢狀建構的開頭字元都會放在群組及其 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合中。 找到配對的結尾字元時，就會從群組中移除其對應的開頭字元，而 <xref:System.Text.RegularExpressions.Group.Captures%2A> 集合中就會減少一個。 所有巢狀建構的開頭和結尾字元都配成對之後，*name2* 就空了。  
   
 > [!NOTE]
 >  在您修改下列範例中的規則運算式來使用巢狀建構的適當開頭和結尾字元之後，即可用它來處理大部分的巢狀建構，例如包含多個巢狀方法呼叫的數學運算式或程式碼字行。  

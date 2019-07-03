@@ -5,18 +5,18 @@ ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31143e17eec097cc67dff0cfffeb628f8a0b2127
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8e956b96b27898e2cad4bed30996622ab0b86656
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590083"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170310"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>解析外部的 XSLT 樣式表和文件
 在轉換期間，您可能需要進行數次外部資源解析。  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> 類別在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。  
+>  在 .NET Framework 2.0 中，<xref:System.Xml.Xsl.XslTransform> 類別已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。  
   
  在轉換期間，您可能需要進行數次外部資源解析：  
   

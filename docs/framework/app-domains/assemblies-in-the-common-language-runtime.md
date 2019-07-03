@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a91890435b1c2b5b955875f52de86249c2ee79df
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a3b516e43c07666f4b52e67f85cb567ab310f020
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607814"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832922"
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Common Language Runtime 中的組件
 組件是 .NET Framework 應用程式的建置組塊；它們構成部署、版本控制、重複使用、啟用範圍和安全性權限的基礎單位。 組件是建置來共同運作及構成一個功能邏輯單位的型別與資源集合。 組件為通用語言執行平台提供了感知型別實作所需的資訊。 對於執行階段而言，型別不會存在於組件的內容以外。  
@@ -42,7 +42,7 @@ ms.locfileid: "64607814"
   
  組件可以是靜態，也可以是動態。 靜態組件可以包含 .NET Framework 型別 (介面和類別)，以及組件的資源 (點陣圖、JPEG 檔案、資源檔案等)。 靜態組件儲存在磁碟上的可攜式執行檔 (PE) 中。 您也可以使用 .NET Framework 建立動態組件，直接從記憶體執行，並且執行前不會儲存至磁碟。 您可以在執行動態組件之後，再將其儲存至磁碟。  
   
- 您可以使用幾種方式建立組件。 您可以使用過去用來建立 .dll 或 .exe 檔案的開發工具，例如 Visual Studio。 您可以使用 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供的工具，搭配其他開發環境中建立的模組來建立組件。 您也可以使用 Common Language Runtime API (例如 <xref:System.Reflection.Emit?displayProperty=nameWithType>) 來建立動態組件。  
+ 您可以使用幾種方式建立組件。 您可以使用過去用來建立 .dll 或 .exe 檔案的開發工具，例如 Visual Studio。 您可以使用 Windows 軟體開發套件 (SDK) 提供的工具，搭配其他開發環境中建立的模組來建立組件。 您也可以使用 Common Language Runtime API (例如 <xref:System.Reflection.Emit?displayProperty=nameWithType>) 來建立動態組件。  
   
 ## <a name="related-topics"></a>相關主題  
   

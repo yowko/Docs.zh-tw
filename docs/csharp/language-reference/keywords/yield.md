@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: 60ee4b8c5ac3a572fd352140c968a8ec8f3a084a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3e5bb96357293c42d4bd2161756260fd849cc099
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632979"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267787"
 ---
 # <a name="yield-c-reference"></a>yield (C# 參考)
 
@@ -30,7 +30,7 @@ yield break;
 
 您可以使用 `yield return` 陳述式一次傳回一個元素。
 
-使用 [foreach](foreach-in.md) 陳述式或 LINQ 查詢，即可使用 iterator 方法。 `foreach` 迴圈的每個反覆項目都會呼叫 Iterator 方法。 當 Iterator 方法中到達 `yield return` 陳述式時，就會傳回 `expression` 並保留程式碼中目前的位置。 下一次呼叫 Iterator 函式時，便會從這個位置重新開始執行。
+從迭代器方法傳回的序列，可以透過使用 [foreach](foreach-in.md) 陳述式或 LINQ 查詢來取用。 `foreach` 迴圈的每個反覆項目都會呼叫 Iterator 方法。 當 Iterator 方法中到達 `yield return` 陳述式時，就會傳回 `expression` 並保留程式碼中目前的位置。 下一次呼叫 Iterator 函式時，便會從這個位置重新開始執行。
 
 您可以使用 `yield break` 陳述式結束反覆項目。
 

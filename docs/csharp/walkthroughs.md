@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: b7240295f154277e722f38e99beb221c1c4d9a34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77ecab9738afd7ff5cfd4f8ef0cd0e49a302eb27
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521994"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025407"
 ---
 # <a name="c-walkthroughs"></a>C# 逐步解說
 逐步解說提供常見情節的逐步指示，使其成為開始學習產品或特定功能區域的最佳去處。  
@@ -24,7 +24,7 @@ ms.locfileid: "54521994"
  說明如何使用 [async](../csharp/language-reference/keywords/async.md) 和 [await](../csharp/language-reference/keywords/await.md) 建立非同步解決方案。  
   
  [以 C# 或 Visual Basic 建立 Windows 執行階段元件，然後從 JavaScript 呼叫該元件](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
- 顯示如何建立 [!INCLUDE[wrt](~/includes/wrt-md.md)]類型，並將其封裝為 [!INCLUDE[wrt](~/includes/wrt-md.md)]元件，然後從 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]應用程式呼叫元件，而應用程式使用 JavaScript 針對 Windows 所建置。  
+ 示範如何建立 Windows 執行階段類型，將其封裝於 Windows 執行階段元件元件中，然後從使用 JavaScript 針對 Windows 所建置的 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 應用程式中呼叫該元件。  
   
  [Office 程式設計 (C# 和 Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
  顯示如何使用 C# 和 Visual Basic 來建立 Excel 活頁簿和 Word 文件。  

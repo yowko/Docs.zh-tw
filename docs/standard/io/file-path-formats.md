@@ -1,6 +1,6 @@
 ---
 title: Windows 系統上的檔案路徑格式
-ms.date: 06/28/2018
+ms.date: 06/06/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecaae9e1af359ead1c15a9e431eac21e41040efe
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 75261bc44b938432c9c22b90dc4db30ca00d630b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835820"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170735"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系統上的檔案路徑格式
 
@@ -76,6 +76,11 @@ Windows 作業系統有指向包括檔案在內所有資源的　統一物件模
 `\\.\C:\Test\Foo.txt`  
 `\\?\C:\Test\Foo.txt`
 
+除了透過磁碟機代號識別磁碟機之外，也可以使用磁碟區 GUID 來識別磁碟區。 它的格式如下：
+
+`\\.\Volume{b75e2c83-0000-0000-0000-602f00000000}\Test\Foo.txt`
+`\\?\Volume{b75e2c83-0000-0000-0000-602f00000000}\Test\Foo.txt`
+
 > [!NOTE]
 > 從 .NET Core 1.1 和 .NET Framework 4.6.2 開始，在 Windows 上執行的 .NET 實作會支援 DOS 裝置路徑語法。
 
@@ -85,12 +90,12 @@ DOS 裝置路徑由以下元件組成：
 
    > [!NOTE]
    > `\\?\` 在所有版本的 .NET Core 和 4.6.2 版開始的 .NET Framework 中受到支援。
-   
-- 「真實」裝置物件的符號連結 (在此案例中為 C:)。
+
+- 「真實」裝置物件的符號連結 (如果是磁碟機名稱即為 C:，若是磁碟區 GUID 則為 Volume{b75e2c83-0000-0000-0000-602f00000000})。
 
    裝置路徑規範識別磁碟區或磁碟機之後，DOS 裝置路徑的第一個區段。 (例如，`\\?\C:\` 和 `\\.\BootPartition\`。)
 
-   對於呼叫的 UNC 有一個特定連結，不用多說，就是 `UNC`。 例如: 
+   對於呼叫的 UNC 有一個特定連結，不用多說，就是 `UNC`。 例如：
 
   `\\.\UNC\Server\Share\Test\Foo.txt`  
   `\\?\UNC\Server\Share\Test\Foo.txt`

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-ms.openlocfilehash: 083fc6ff3dd15252fb6cf2beb27b5be0a6e489f5
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 443d4367cc64eb7f9054b2cd52bef59e589f55b3
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423452"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170248"
 ---
 # <a name="generic-methods-c-programming-guide"></a>泛型方法 (C# 程式設計手冊)
 泛型方法是使用型別參數宣告的方法，如下所示：  
@@ -31,7 +31,7 @@ ms.locfileid: "66423452"
   
  [!code-csharp[csProgGuideGenerics#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#25)]  
   
- 如果您定義的泛型方法接受與包含類別相同的型別參數，編譯器會產生警告 CS0693，因為在方法範圍內，為內部 `T` 提供的引數會隱藏為外部 `T` 提供的引數。 在類別具現化後，如果您需要以不是提供的型別引數來彈性呼叫泛型類別方法，請考慮為方法的型別參數提供另一個識別碼，如下列範例中的 `GenericList2<T>` 所示。  
+ 如果您定義的泛型方法接受與包含類別相同的型別參數，編譯器會產生警告 [CS0693](../../misc/cs0693.md)，因為在方法範圍內，為內部 `T` 提供的引數會隱藏為外部 `T` 提供的引數。 在類別具現化後，如果您需要以不是提供的型別引數來彈性呼叫泛型類別方法，請考慮為方法的型別參數提供另一個識別碼，如下列範例中的 `GenericList2<T>` 所示。  
   
  [!code-csharp[csProgGuideGenerics#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#26)]  
   

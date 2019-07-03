@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: de0715a2ac946fa47f0d83ac8569595e622f0b97
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: b6bca26cc05a13e1384c4fc9642264f65b159ff7
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758079"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306532"
 ---
 # <a name="member-access-operators-c-reference"></a>成員存取運算子 (C# 參考)
 
@@ -147,7 +147,7 @@ if (handler != null)
 
 您也可以使用括號來指定評估運算式中作業的順序。 如需詳細資訊，請參閱[運算子](../../programming-guide/statements-expressions-operators/operators.md)一文的[新增括號](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses)小節。 對於按優先順序層級排序的運算子清單，請參閱 [C# 運算子](index.md)。
 
-叫用轉換運算子的[轉換運算式](invocation-operator.md#cast-expression)也會使用括弧。
+[Cast 運算式](type-testing-and-conversion-operators.md#cast-operator-) \(其能執行明確類型轉換\) 也會使用括號。
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
@@ -165,6 +165,5 @@ if (handler != null)
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 運算子](index.md)
 - [?? (Null 聯合運算子)](null-coalescing-operator.md)

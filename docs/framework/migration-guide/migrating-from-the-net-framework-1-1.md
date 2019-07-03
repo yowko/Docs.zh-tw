@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 441a65f9a72dd0fcffb062710df74bb529767cef
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 9671dd87e3185e9d4b997e2ea75770f756605efb
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816069"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833511"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>從 .NET Framework 1.1 移轉
 
@@ -32,7 +32,7 @@ ms.locfileid: "66816069"
     </configuration>
     ```
 
-- 您可以使用以 .NET Framework 4 和更新版本為目標的編譯器來重新編譯應用程式。 如果您原本使用 Visual Studio 2003 來開發及編譯解決方案，您可以在 Visual Studio 2010 (更新版本也可以) 中開啟此解決方案，並且使用 [專案相容性] 對話方塊來將此解決方案和專案檔從 Visual Studio 2003 使用的格式轉換成 Microsoft Build Engine (MSBuild) 格式。
+- 您可以使用以 .NET Framework 4 和更新版本為目標的編譯器來重新編譯應用程式。 如果您原本使用 Visual Studio 2003 來開發及編譯解決方案，您可以在 Visual Studio 2010 (更新版本也可以) 中開啟此解決方案，並且使用 [專案相容性]  對話方塊來將此解決方案和專案檔從 Visual Studio 2003 使用的格式轉換成 Microsoft Build Engine (MSBuild) 格式。
 
 不論您偏好重新編譯應用程式還是重新設定應用程式的目標，您都必須決定您的應用程式是否會受到較新 .NET Framework 版本中引入的任何變更所影響。 這些變更有兩種：
 
@@ -60,9 +60,9 @@ ms.locfileid: "66816069"
 
 - [.NET Framework 2.0 中的重大變更](https://go.microsoft.com/fwlink/?LinkId=125263)記錄可能會影響以 .NET Framework 1.1 為目標之應用程式的 .NET Framework 2.0 SP1 變更。
 
-- [.NET Framework 3.5 SP1 中的變更](https://go.microsoft.com/fwlink/?LinkID=186989)記錄在 .NET Framework 3.5 和 [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] 之間的變更。
+- [.NET Framework 3.5 SP1 中的變更](https://go.microsoft.com/fwlink/?LinkID=186989)記錄在 .NET Framework 3.5 和 .NET Framework 3.5 SP1 之間的變更。
 
-- [.NET Framework 4 移轉問題](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)中記載 [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] 和 .NET Framework 4 之間的變更。
+- [.NET Framework 4 移轉問題](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)中記載 .NET Framework 3.5 SP1 和 .NET Framework 4 之間的變更。
 
 ## <a name="obsolete-types-and-members"></a>過時的型別和成員
 

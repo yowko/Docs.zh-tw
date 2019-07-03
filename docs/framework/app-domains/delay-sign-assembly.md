@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31c43607a710316696a9765feb6f36b7676f906f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eb055285af7365536f7e1ad7c7d9290e51be50db
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593635"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832858"
 ---
 # <a name="delay-signing-an-assembly"></a>延遲簽署組件
 組織可能會有開發人員無法每日存取的嚴密保護金鑰組。 公開金鑰經常都可以使用，但只有少數人才能存取私密金鑰。 在以強式名稱開發組件時，每個參考強式名稱目標組件的組件都包含用來指定目標組件的強式名稱的公開金鑰語彙基元。 這需要可在開發程序期間使用公開金鑰。  
@@ -28,13 +28,13 @@ ms.locfileid: "64593635"
   
  下列步驟概述延遲簽署組件的程序：  
   
-1. 從將執行最終簽署的組織取得金鑰組的公開金鑰部分。 此金鑰通常格式為 .snk 檔案，這可以使用 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供的[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)建立。  
+1. 從將執行最終簽署的組織取得金鑰組的公開金鑰部分。 此金鑰通常格式為 .snk 檔案，這可以使用 Windows 軟體開發套件 (SDK) 提供的[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 建立。  
   
 2. 使用來自 <xref:System.Reflection> 的兩個自訂屬性為組件的原始碼加上註解：  
   
     - <xref:System.Reflection.AssemblyKeyFileAttribute>，它會將傳遞包含公開金鑰的檔案名稱，作為其建構函式的參數。  
   
-    - <xref:System.Reflection.AssemblyDelaySignAttribute>，它指出正在藉由傳遞 **true** 作為其建構函式的參數來使用延遲簽署。 例如:   
+    - <xref:System.Reflection.AssemblyDelaySignAttribute>，它指出正在藉由傳遞 **true** 作為其建構函式的參數來使用延遲簽署。 例如:  
   
          [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)]
          [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]

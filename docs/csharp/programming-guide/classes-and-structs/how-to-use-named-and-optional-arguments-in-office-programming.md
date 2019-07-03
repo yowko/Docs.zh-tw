@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Office 程式設計中使用具名引數和選用引數 - C# 程式設計指南
+title: 作法：在 Office 程式設計中使用具名引數和選用引數 - C# 程式設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 3ecea9d55ef61d2158da0dabeca22a58460b3bea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a8b09061157c45b865613c31ae1425e5820687f4
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313966"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170390"
 ---
-# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>HOW TO：在 Office 程式設計中使用具名引數和選用引數 (C# 程式設計指南)
-[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 中引進的具名引數和選擇性引數，可加強 C# 程式設計的便利性、彈性和可讀性。 此外，這些功能還可大幅加速對 COM 介面 (例如 Microsoft Office Automation API) 的存取。  
+# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>作法：在 Office 程式設計中使用具名引數和選用引數 (C# 程式設計指南)
+C# 4 中引進的具名引數和選擇性引數，可加強 C# 程式設計的便利性、彈性和可讀性。 此外，這些功能還可大幅加速對 COM 介面 (例如 Microsoft Office Automation API) 的存取。  
   
  在下列範例中，[ConvertToTable](<xref:Microsoft.Office.Interop.Word.Range.ConvertToTable%2A>) 方法有十六個參數，這些參數代表資料表的特性，例如欄數和列數、格式、邊框、字型和顏色。 所有十六個參數都是選擇性的，因為大多時候您不會想要為所有參數指定特定值。 不過，如果不使用具名和選擇性引數，則必須為每個參數提供值或預留位置值。 如果使用具名和選擇性引數，就只會為專案所需的參數指定值。  
   
@@ -27,31 +27,31 @@ ms.locfileid: "59313966"
   
 1. 啟動 Visual Studio。  
   
-2. 在 [檔案]  功能表中，指向 [新增] ，然後按一下 [專案] 。  
+2. 在 [檔案]  功能表中，指向 [新增]  ，然後按一下 [專案]  。  
   
-3. 在 [範本類別] 窗格中，展開 [Visual C#]，然後按一下 [Windows]。  
+3. 在 [範本類別]  窗格中，展開 [Visual C#]  ，然後按一下 [Windows]  。  
   
-4. 查看 [範本] 窗格頂端，確定 [.NET Framework 4] 出現在 [目標 Framework] 方塊中。  
+4. 查看 [範本]  窗格頂端，確定 [.NET Framework 4]  出現在 [目標 Framework]  方塊中。  
   
-5. 按一下 [範本] 窗格中的 [主控台應用程式]。  
+5. 按一下 [範本]  窗格中的 [主控台應用程式]  。  
   
-6. 在 [名稱] 欄位中鍵入專案的名稱。  
+6. 在 [名稱]  欄位中鍵入專案的名稱。  
   
-7. 按一下 [確定]。  
+7. 按一下 [確定]  。  
   
      新的專案隨即會出現在**方案總管**中。  
   
 ### <a name="to-add-a-reference"></a>若要加入參考  
   
-1. 在**方案總管**中，以滑鼠右鍵按一下您的專案名稱，然後按一下 [加入參考]。 [加入參考] 對話方塊隨即出現。  
+1. 在**方案總管**中，以滑鼠右鍵按一下您的專案名稱，然後按一下 [加入參考]  。 [加入參考]  對話方塊隨即出現。  
   
-2. 在 [.NET] 頁面上，選取 [元件名稱] 清單中的 [Microsoft.Office.Interop.Word]。  
+2. 在 [.NET]  頁面上，選取 [元件名稱]  清單中的 [Microsoft.Office.Interop.Word]  。  
   
-3. 按一下 [確定]。  
+3. 按一下 [確定]  。  
   
 ### <a name="to-add-necessary-using-directives"></a>加入必要的 using 指示詞  
   
-1. 在方案總管中，以滑鼠右鍵按一下 **Program.cs** 檔案，然後按一下 [檢視程式碼]。  
+1. 在方案總管  中，以滑鼠右鍵按一下 **Program.cs** 檔案，然後按一下 [檢視程式碼]  。  
   
 2. 將下列 `using` 指示詞加入程式碼檔案頂端。  
   

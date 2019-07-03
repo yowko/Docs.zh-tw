@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 05/06/2019
-ms.openlocfilehash: f7dc95a9f0b652f1509720fb987cbdb88f64e78c
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 369c74d2d8e82f157de0eec4294a5ee50542292b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689260"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169791"
 ---
 # <a name="whats-new-in-net-core-30-preview-5"></a>.NET Core 3.0 (Preview 5) 的新功能
 
@@ -20,10 +20,11 @@ ms.locfileid: "66689260"
 
 .NET Core 3.0 新增 C# 8.0 支援。 強烈建議您搭配 OmniSharp 延伸模組使用最新版的 Visual Studio 2019 Update 1 Preview 或 VSCode。
 
-立即在 Windows、Mac 及 Linux 上[下載並開始使用 .NET Core 3.0 Preview 5](https://aka.ms/netcore3download)。
+立即在 Windows、Mac 及 Linux 上[下載並開始使用 .NET Core 3.0 Preview 6](https://aka.ms/netcore3download) \(英文\)。
 
 如需每個預覽版的詳細資訊，請參閱下列公告：
 
+- [.NET Core 3.0 Preview 6 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/) \(英文\)
 - [.NET Core 3.0 Preview 5 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
 - [.NET Core 3.0 Preview 4 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
 - [.NET Core 3.0 Preview 3 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-3/)
@@ -112,6 +113,34 @@ dotnet publish -r win10-x64 /p:PublishSingleFile=true
 
 如需單一檔案發佈的詳細資訊，請參閱[單一檔案搭配程式設計文件](https://github.com/dotnet/designs/blob/master/accepted/single-file/design.md)。
 
+## <a name="assembly-linking"></a>組件連結
+
+.NET Core 3.0 SDK 隨附能透過分析 IL 並修剪未使用的組件來減少應用程式大小的工具。
+
+自封式應用程式包含執行程式碼所需的一切項目，因此不需要在主機電腦上安裝 .NET。 不過，應用程式經常只需要一小部分的架構子集便能運作，而其他未使用的程式庫則可以被移除。
+
+.NET Core 現在包含會使用 [IL 連結器](https://github.com/mono/linker) \(英文\) 工具來掃描應用程式 IL 的設定。 此工具會偵測所需的程式碼，然後修剪未使用的程式庫。 此工具可以大幅減少某些應用程式的部署大小。
+
+若要啟用此工具，請在專案中使用 `<PublishTrimmed>` 設定並發佈自封式應用程式：
+
+```xml
+<PropertyGroup>
+  <PublishTrimmed>true</PublishTrimmed>
+</PropertyGroup>
+```
+
+```console
+dotnet publish -r <rid> -c Release
+```
+
+例如，所包含的基本 "hello world" 新主控台專案在發佈時的大小大約是 70 MB。 透過使用 `<PublishTrimmed>`，該大小會被縮減為大約 30 MB。
+
+請務必記得，對使用反映或相關動態功能的應用程式或架構 (包括 ASP.NET Core 和 WPF) 進行修剪經常會發生中斷的情況。 會發生此中斷的原因是因為連結器不知道此動態行為，因此無法判斷反映所需的架構類型有哪些。 可以對 IL 連結器工具加以設定來使其注意到此情況。
+
+無論如何，請務必在修剪後測試您的應用程式。
+
+如需 IL 連結器工具的詳細資訊，請參閱[文件](https://aka.ms/dotnet-illink) \(英文\) 或造訪 [mono/linker]( https://github.com/mono/linker) \(英文\) 存放庫。
+
 ## <a name="tiered-compilation"></a>階層式編譯
 
 .NET Core 3.0 預設會開啟[階層式編譯](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (TC)。 這項功能可讓執行階段更彈性地使用 Just-In-Time (JIT) 編譯器來獲得更佳的效能。
@@ -131,6 +160,38 @@ TC 的主要優點是能夠啟用較慢速但較快產生程式碼，或品質�
 ```xml
 <TieredCompilation>false</TieredCompilation>
 ```
+
+## <a name="readytorun-images"></a>ReadyToRun 映像
+
+您可以透過將應用程式組件編譯為 ReadyToRun (R2R) 格式，來改善 .NET Core 應用程式的啟動時間。 R2R 是一種預先(AOT) 編譯。
+
+R2R 二進位檔會透過減少 Just-In-Time (JIT) 編譯器在應用程式載入時所需執行的工作量，來改善啟動效能。 二進位檔包含的機器碼，與 JIT 所會產生的內容類似。
+
+R2R 二進位檔大小較大，因為它們會同時包含中繼語言 (IL) 程式碼 (在某些案例下仍需要使用)，以及相同程式碼的原生版本。 R2R 只有在您發佈以特定執行階段環境 (RID) (例如 Linux x64 或 Windows x64) 為目標的自封式應用程式時才可供使用。
+
+若要將應用程式編譯為 R2R，請加入 `<PublishReadyToRun>` 設定：
+
+```xml
+<PropertyGroup>
+  <PublishReadyToRun>true</PublishReadyToRun>
+</PropertyGroup>
+```
+
+發佈自封式應用程式。 例如，此命令會針對 64 位元版本的 Windows 建立自封式應用程式：
+
+```console
+dotnet publish -c Release -r win-x64 --self-contained true
+```
+
+### <a name="cross-platformarchitecture-restrictions"></a>跨平台/架構限制
+
+ReadyToRun 編譯器目前不支援跨目標。 您必須在指定的目標上進行編譯。 例如，如果您想要適用於 Windows x64 的 R2R 映像，便需要在該環境上執行發佈命令。
+
+跨目標的例外狀況：
+
+- Windows x64 可以用來編譯 Windows ARM32、ARM64 及 x86 映像。
+- Windows x86 可以用來編譯 Windows ARM32 映像。
+- Linux x64 可以用來編譯 Linux ARM32 和 ARM64 映像。
 
 ## <a name="build-copies-dependencies"></a>組建複本相依性
 
@@ -362,9 +423,19 @@ Windows 提供豐富的原生 API，其採用的形式為一般 C API、COM 和 
 
 ## <a name="http2-support"></a>HTTP/2 支援
 
-<xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 類型支援 HTTP/2 通訊協定。 目前停用支援，但可在使用 <xref:System.Net.Http.HttpClient> 之前呼叫 `AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2Support", true);` 來開啟。 您也可以在執行應用程式之前將 `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT` 環境變數設定為 `true` 來啟用 HTTP/2 支援。
+<xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 類型支援 HTTP/2 通訊協定。 如果啟用 HTTP/2，則會透過 TLS/ALPN 交涉 HTTP 通訊協定版本，並會在伺服器選擇使用它時使用 HTTP/2。
 
-如果啟用 HTTP/2，則會透過 TLS/ALPN 交涉 HTTP 通訊協定版本，且只有在伺服器選擇使用時才會使用 HTTP/2。
+預設通訊協定會保持為 HTTP/1.1，但 HTTP/2 可以兩種不同的方式啟用。 首先，您可以設定 HTTP 要求訊息來使用 HTTP/2：
+
+[!CODE-csharp[Http2Request](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Request)]
+
+再來，您可以變更 <xref:System.Net.Http.HttpClient> 來預設使用 HTTP/2：
+
+[!CODE-csharp[Http2Client](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Client)]
+
+當您在開發應用程式時，經常會想要使用未加密的連線。 如果您知道目標端點會使用 HTTP/2，便可以針對 HTTP/2 開啟未加密的連線。 若要開啟它，您可以將 `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT` 環境變數設定為 `1`，或是在應用程式內容中啟用它：
+
+[!CODE-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
 
 ## <a name="tls-13--openssl-111-on-linux"></a>Linux 上的 TLS 1.3 和 OpenSSL 1.1.1
 

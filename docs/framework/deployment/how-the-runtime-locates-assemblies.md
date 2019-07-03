@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b967e6441ae3f3d43e5a6276cfcf79e3c44f74cf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d69fd06f4048667a05ddbfec571067c16f9e86a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613968"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833724"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>執行階段如何找出組件
 若要成功部署 .NET Framework 應用程式，您必須了解 Common Language Runtime 如何找出並繫結至構成應用程式的組件。 根據預設，執行階段會嘗試與用來建置應用程式的組件正確版本繫結。 組態檔設定可覆寫這個預設行為。  
@@ -24,7 +24,7 @@ ms.locfileid: "64613968"
  在嘗試找出組件，並解析組件參考時，Common Language Runtime 會執行數個步驟。 以下各節將會說明每個步驟。 在說明執行階段如何找出組件時，常會使用詞彙探查；它會依據其名稱和文化特性，參考用來尋找組件的啟發學習法集合。  
   
 > [!NOTE]
->  您可以使用 [組件繫結記錄檢視器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)(隨附於 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)])，來檢視記錄檔案中的繫結資訊。  
+>  您可以使用[組件繫結記錄檢視器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) (隨附於 Windows 軟體開發套件 (SDK))，來檢視記錄檔中的繫結資訊。  
   
 ## <a name="initiating-the-bind"></a>初始化繫結  
  當執行階段嘗試將參考解析成另一個組件時，尋找並繫結至組件的程序即開始。 此參考可以是靜態或動態。 編譯器會在建置時，將靜態參考記錄在組件資訊清單的中繼資料中。 動態參考則是呼叫各種方法 (例如 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>) 時，即時建構的結果。  
@@ -132,7 +132,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="safe-mode"></a>安全模式  
  發行者原則檔通常會做為 Service Pack 或程式更新的一部分明確安裝。 如果升級後的共用元件有任何問題，您可以使用安全模式來忽略發行者原則檔中的覆寫。 **\<publisherPolicy apply="yes**&#124;**no"/>** 項目決定安全模式，只能夠在應用程式組態檔中找到。 它會指定是否應該將發行者原則組態資訊從繫結程序中移除。  
   
- 您可以針對整個應用程式或選取的組件來設定安全模式。 亦即，您可以針對構成應用程式的所有組件，關閉此原則，或是針對某些組件開啟此原則，但其他組件不開啟此原則。 若要選擇性地將發行者原則套用至構成應用程式的組件，請設定 **\<publisherPolicy apply\=no/>**，並使用 \<**dependentAssembly**> 項目指定要受影響的組件。 若要將發行者原則套用至構成應用程式的所有組件，請將 **\<publisherPolicy apply\=no/>** 設定為沒有相依組件項目。 如需組態的詳細資訊，請參閱 [使用組態檔設定應用程式](../../../docs/framework/configure-apps/index.md)。  
+ 您可以針對整個應用程式或選取的組件來設定安全模式。 亦即，您可以針對構成應用程式的所有組件，關閉此原則，或是針對某些組件開啟此原則，但其他組件不開啟此原則。 若要選擇性地將發行者原則套用至構成應用程式的組件，請設定 **\<publisherPolicy apply\=no/>** ，並使用 \<**dependentAssembly**> 項目指定要受影響的組件。 若要將發行者原則套用至構成應用程式的所有組件，請將 **\<publisherPolicy apply\=no/>** 設定為沒有相依組件項目。 如需組態的詳細資訊，請參閱 [使用組態檔設定應用程式](../../../docs/framework/configure-apps/index.md)。  
   
 ### <a name="machine-configuration-file"></a>電腦組態檔  
  第三，執行階段會檢查電腦組態檔。 此檔案名為 Machine.config，位在本機電腦上，執行階段安裝所在之根目錄的 Config 子目錄中。 系統管理員可以使用這個檔案來指定電腦本機的組件繫結限制。 電腦組態檔中的設定優先順序高於所有其他組態設定；不過，這不表示所有組態設定都應該放在這個檔案中。 系統管理員原則檔決定的版本為最終版本，不能覆寫。 在 Machine.config 檔案中指定覆寫會影響所有應用程式。 如需組態檔的詳細資訊，請參閱 [使用組態檔設定應用程式](../../../docs/framework/configure-apps/index.md)。  

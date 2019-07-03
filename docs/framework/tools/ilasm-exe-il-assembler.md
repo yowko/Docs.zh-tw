@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fa95755142b5ea3999cca127c868bc878da516e
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 78a601e8b2da4fda0951c1d4f7b565753f0ca03a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378587"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833894"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL 組譯工具)
 
@@ -58,7 +58,7 @@ ilasm [options] filename [[options]filename...]
 |**/include:** `includePath`|設定路徑以搜尋與 `#include`一起包含的檔案。|
 |**/itanium**|將 Intel Itanium 指定為目標處理器。<br /><br /> 如果沒有指定映像位元，則預設為 **/pe64**。|
 |**/key:** `keyFile`|使用包含在 `keyFile` 的私密金鑰來編譯含有強式簽章的 `filename`。|
-|**/key:** @`keySource`|使用產生於 `keySource` 的私密金鑰來編譯含有強式簽章的 `filename`。|
+|**/key:**  @`keySource`|使用產生於 `keySource` 的私密金鑰來編譯含有強式簽章的 `filename`。|
 |**/listing**|產生標準輸出上的清單檔。 如果省略這個選項，將不會產生任何清單檔。<br /><br /> .NET Framework 2.0 (含) 以後不支援此參數。|
 |**/mdv:** `versionString`|設定中繼資料版本字串。|
 |**/msv:** `major`.`minor`|設定中繼資料流版本，其中 `major` 和 `minor` 是整數。|
@@ -79,7 +79,7 @@ ilasm [options] filename [[options]filename...]
 |**/?**|顯示工具的命令語法和選項。|
 
 > [!NOTE]
-> *Ilasm.exe* 的所有選項都不區分大小寫，並以前三個字母來辨識。 例如，**/lis** 相當於 **/listing**，而 **/res**:myresfile.res 相當於 **/resource**:myresfile.res。指定引數的選項可以接受冒號 (:) 或等號 (=) 做為選項與引數之間的分隔符號。 例如， **/output**:*file.ext* 等同於 **/output=**=*file.ext*。
+> *Ilasm.exe* 的所有選項都不區分大小寫，並以前三個字母來辨識。 例如， **/lis** 相當於 **/listing**，而 **/res**:myresfile.res 相當於 **/resource**:myresfile.res。指定引數的選項可以接受冒號 (:) 或等號 (=) 做為選項與引數之間的分隔符號。 例如， **/output**:*file.ext* 等同於 **/output=** =*file.ext*。
 
 ## <a name="remarks"></a>備註
 
@@ -104,7 +104,7 @@ IL 組譯工具可以表示所有現有的中繼資料和以執行階段為目�
 > [!NOTE]
 > *Ildasm.exe* 只能在磁碟的檔案上作業。 它無法在安裝於全域組件快取中的檔案上作業。
 
-如需 IL 文法的詳細資訊，請參閱 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]中的 asmparse.grammar 檔。
+如需 IL 文法的詳細資訊，請參閱 Windows 軟體開發套件 (SDK) 中的 asmparse.grammar 檔案。
 
 ## <a name="version-information"></a>版本資訊
 
@@ -137,7 +137,7 @@ IL 組譯工具可以表示所有現有的中繼資料和以執行階段為目�
         Test(object A_1) cil managed
 ```
 
-如需 IL 文法的詳細資訊，請參閱 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]中的 asmparse.grammar 檔。
+如需 IL 文法的詳細資訊，請參閱 Windows 軟體開發套件 (SDK) 中的 asmparse.grammar 檔案。
 
 ## <a name="examples"></a>範例
 

@@ -1,19 +1,19 @@
 ---
-title: 在銷售異常偵測案例中使用 ML.NET
-description: 探索如何在產品銷售異常偵測案例中使用 ML.NET，以了解如何分析異常暴增及變更點的資料，採取適當的動作。
-ms.date: 05/29/2019
+title: 教學課程：偵測產品銷售中的異常
+description: 了解如何建置產品銷售資料的異常偵測應用程式。 此教學課程會示範如何在 Visual Studio 2019 中使用 C# 建立 .NET Core 主控台應用程式。
+ms.date: 06/11/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: e092aea66ca9f439cf97c1ebee83097def0f520b
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.custom: mvc, title-hack-0612
+ms.openlocfilehash: 3e3e368ed3bcb35e7e2c8bdf08abe71afd4ae87c
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758805"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306232"
 ---
-# <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>教學課程：使用 ML.NET 處理產品銷售異常偵測 
+# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>教學課程：使用 ML.NET 偵測產品銷售中的異常
 
-此範例教學課程示範使用 ML.NET 偵測產品銷售資料的異常，在 Visual Studio 2019 使用 C#，透過 .NET Core 主控台應用程式採取適當的動作。 
+了解如何建置產品銷售資料的異常偵測應用程式。 此教學課程會示範如何在 Visual Studio 中使用 C# 建立 .NET Core 主控台應用程式。
 
 在本教學課程中，您將了解如何：
 > [!div class="checklist"]

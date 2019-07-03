@@ -1,5 +1,5 @@
 ---
-title: ?:運算子 - C# 參考
+title: '?: 運算子 - C# 參考'
 ms.custom: seodec18
 ms.date: 11/20/2018
 f1_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: ae3039df2c1260211f4c7ec3e813db1d0c6cd42b
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 2717505a0a09b9ac1c6ad43153c52771c13f7b5c
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66815931"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025207"
 ---
-# <a name="-operator-c-reference"></a>?:運算子 (C# 參考)
+# <a name="-operator-c-reference"></a>?: 運算子 (C# 參考)
 
 條件運算子 `?:` (通稱為三元條件運算子) 會評估布林運算式，然後根據布林運算式評估為 `true` 或 `false`，傳回評估兩個運算式其中之一的結果。 從 C# 7.2 開始，[條件 ref 運算式](#conditional-ref-expression)會傳回兩個運算式其中之一結果的參考。
 
@@ -91,7 +91,6 @@ condition ? ref consequent : ref alternative
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 運算子](index.md)
 - [if-else 陳述式](../keywords/if-else.md)
 - [?. 和 ?[] 運算子](member-access-operators.md#null-conditional-operators--and-)

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 18e737ec1f6c6f76ff882d48ad311a45ba7b756b
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: a9e1f1fafcee4723c4aed37a0473c0f75512e11a
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456734"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169865"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>使用 dynamic 類型 (C# 程式設計手冊)
 
-[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 引進一種新類型 `dynamic`。 此類型是靜態類型，但 `dynamic` 類型的物件會略過靜態類型檢查。 在大多數情況下，其運作會像是具有 `object` 類型。 在編譯時期，會假設類型為 `dynamic` 的項目能夠支援所有作業。 因此，您無須考慮物件是從 COM API、動態語言 (例如 IronPython)、HTML 文件物件模型 (DOM)、反映或是程式其他地方取得其值。 不過，如果程式碼無效，則會在執行階段攔截到錯誤。
+C# 4 引進一種新型別 `dynamic`。 此類型是靜態類型，但 `dynamic` 類型的物件會略過靜態類型檢查。 在大多數情況下，其運作會像是具有 `object` 類型。 在編譯時期，會假設類型為 `dynamic` 的項目能夠支援所有作業。 因此，您無須考慮物件是從 COM API、動態語言 (例如 IronPython)、HTML 文件物件模型 (DOM)、反映或是程式其他地方取得其值。 不過，如果程式碼無效，則會在執行階段攔截到錯誤。
 
 例如，如果下列程式碼中的執行個體方法 `exampleMethod1` 只有一個參數，則編譯器會將 `ec.exampleMethod1(10, 4)` 方法的第一個呼叫視為無效，因為它包含兩個引數。 呼叫會造成編譯器錯誤。 編譯器不會檢查 `dynamic_ec.exampleMethod1(10, 4)` 方法的第二個呼叫，因為 `dynamic_ec` 的類型為 `dynamic`。 因此，不會報告編譯器錯誤。 不過，這項錯誤並不是永遠不會被發現。 它會在執行階段被攔截，並造成執行階段例外狀況。
 
@@ -64,7 +64,7 @@ Dynamic Language Runtime (DLR) 是 .NET Framework 4 中的新 API。 它提供�
 
 ## <a name="com-interop"></a>COM Interop
 
-[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 包含幾項功能，可改善與 COM API (例如 Office Automation API) 相互操作的體驗。 這些改進包括使用 `dynamic` 類型，以及使用[具名和選擇性引數](../classes-and-structs/named-and-optional-arguments.md)。
+C# 4 包含幾項功能，可改善與 COM API (例如 Office Automation API) 相互操作的體驗。 這些改進包括使用 `dynamic` 類型，以及使用[具名和選擇性引數](../classes-and-structs/named-and-optional-arguments.md)。
 
 許多 COM 方法允許針對引數類型和傳回型別進行變化，方法是將類型指定為 `object`。 這需要對值進行明確轉型，才能與 C# 中的強型別變數配合使用。 如果您使用 [/link (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 選項進行編譯，則引進 `dynamic` 類型可讓您將 COM 簽章中出現的 `object` 項目視為具有 `dynamic` 類型，藉此避免大部分的轉型。 例如，下列陳述式將比較使用 `dynamic` 類型和不使用 `dynamic` 類型存取 Microsoft Office Excel 試算表中儲存格的方式。
 

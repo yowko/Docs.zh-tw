@@ -1,17 +1,17 @@
 ---
 title: 字串 - C# 程式設計手冊
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 06/27/2019
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: e193d6a51c3d4f1d81e3b74b1474d0e7cdcfca53
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 668b3b927ac059acf160f5d96e8fbc614f57ddff
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398117"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67503995"
 ---
 # <a name="strings-c-programming-guide"></a>字串 (C# 程式設計手冊)
 字串是 <xref:System.String> 類型的物件，其值為文字。 就內部而言，文字會儲存為 <xref:System.Char> 物件的循序唯讀集合。 C# 字串的結尾沒有終止的 Null 字元，因此 C# 字串可以包含任何數目的內嵌 Null 字元 ('\0')。 字串的 <xref:System.String.Length%2A> 屬性代表它包含的 `Char` 物件數目，而非 Unicode 字元的數目。 若要存取字串中的個別 Unicode 字碼指標，請使用 <xref:System.Globalization.StringInfo> 物件。  
@@ -62,13 +62,16 @@ ms.locfileid: "67398117"
 |\n|換行|0x000A|  
 |\r|歸位字元|0x000D|  
 |\t|水平 Tab|0x0009|  
-|\U|Surrogate 字組的 Unicode 逸出序列。|\Unnnnnnnn|  
-|\u|Unicode 逸出序列|\u0041 = "A"|  
+|\U|Unicode 逸出序列 (UTF-32)|`\U00nnnnnn` (例如 `\U0001F47D` = "&#x1F47D;")|  
+|\u|Unicode 逸出序列 (UTF-16)|`\unnnn` (例如 `\u0041` = "A")|  
 |\v|垂直 Tab|0x000B|  
-|\x|類似 "\u" (除了變數長度之外) 的 Unicode 逸出序列。|\x0041 或 \x41 = "A"|  
+|\x|類似 "\u" (除了變數長度之外) 的 Unicode 逸出序列。|`\x0041` 或 `\x41` = "A"|  
+  
+> [!WARNING]
+>  當使用 `\x` 逸出序列且指定的十六進位數字少於 4 個時，若尾隨在逸出序列之後的字元是有效的十六進位數字 (亦即 0-9、A-F 及 a-f)，這些數字將會被解譯為逸出序列的一部分。 例如 `\xA1` 會產生 "&#161;"，亦即字碼元素 U+00A1。 倘若下一個字元為 "A" 或 "a"，則逸出序列將會被解譯為 `\xA1A`，進而產生 "&#x0A1A;"，亦即字碼元素 U+0A1A。 由此可知，將 4 個數字全數指定為十六進位數字 (例如 `\x00A1`)，將可避免可能的錯譯。  
   
 > [!NOTE]
->  在編譯時期，逐字字串會轉換為具有所有相同逸出序列的一般字串。 因此，如果您在偵錯工具監看式視窗中檢視逐字字串，您會看到由編譯器新增的逸出字元，而非來自於您原始程式碼的逐字版本。 例如，逐字字串 @"C:\files.txt" 會在監看式視窗中顯示為 "C:\\\files.txt"。  
+>  在編譯時期，逐字字串會轉換為具有所有相同逸出序列的一般字串。 因此，如果您在偵錯工具監看式視窗中檢視逐字字串，您會看到由編譯器新增的逸出字元，而非來自於您原始程式碼的逐字版本。 例如，逐字字串 `@"C:\files.txt"` 會在監看式視窗中顯示為 "C:\\\files.txt"。  
   
 ## <a name="format-strings"></a>格式字串  
  格式字串是可在執行階段動態決定其內容的字串。 格式字串是透過內嵌「插入的運算式」  或字串內大括弧內的預留位置來建立的。 大括弧 (`{...}`) 內的所有內容都會被解析為一個值並在執行階段以格式化字串形式輸出。 有兩種方式可用來建立格式字串：字串插補與複合格式設定。
@@ -128,12 +131,12 @@ string s = String.Empty;
   
 |主題|說明|  
 |-----------|-----------------|  
-|[操作說明：修改字串內容](../../how-to/modify-string-contents.md)|說明轉換字串及修改字串內容的技術。|  
-|[操作說明：比較字串](../../how-to/compare-strings.md)|示範如何執行字串的序數與文化特定比較。|  
-|[操作說明：串連多個字串](../../how-to/concatenate-multiple-strings.md)|示範如何將多個字串聯結成一個的各種方式。|
-|[操作說明：使用 String.Split 剖析字串](../../how-to/parse-strings-using-split.md)|包含說明如何使用 `String.Split` 方法剖析字串的程式碼範例。|  
-|[操作說明：搜尋字串](../../how-to/search-strings.md)|說明如何對字串中的特定文字或模式使用搜尋。|  
-|[操作說明：判斷字串是否代表數值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|示範如何安全地剖析字串，以查看它是否有有效的數值。|  
+|[如何：修改字串內容](../../how-to/modify-string-contents.md)|說明轉換字串及修改字串內容的技術。|  
+|[如何：比較字串](../../how-to/compare-strings.md)|示範如何執行字串的序數與文化特定比較。|  
+|[如何：串連多個字串](../../how-to/concatenate-multiple-strings.md)|示範如何將多個字串聯結成一個的各種方式。|
+|[如何：使用 String.Split 剖析字串](../../how-to/parse-strings-using-split.md)|包含說明如何使用 `String.Split` 方法剖析字串的程式碼範例。|  
+|[如何：搜尋字串](../../how-to/search-strings.md)|說明如何對字串中的特定文字或模式使用搜尋。|  
+|[如何：判斷字串是否代表數值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|示範如何安全地剖析字串，以查看它是否有有效的數值。|  
 |[字串內插補點](../../language-reference/tokens/interpolated.md)|描述可提供方便語法以設定格式字串的字串內插補點功能。|
 |[基本字串作業](../../../../docs/standard/base-types/basic-string-operations.md)|提供使用 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 方法執行基本字串作業之主題的連結。|  
 |[剖析字串](../../../standard/base-types/parsing-strings.md)|描述如何將.NET 基底類型的字串表示轉換成對應類型的執行個體。|  

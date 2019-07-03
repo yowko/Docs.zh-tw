@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e1a5fa5113afdfb94a0b035b83cb59946d0970c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d9124c90d09e2fa94a0eaa2ff8cd4e4ab15206f
+ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664587"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67135677"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>在集合內比較和排序
 <xref:System.Collections> 類別幾乎會在管理集合內的所有處理序中執行比較，包含搜尋要移除的項目，或傳回成對的索引鍵與值。  
@@ -34,7 +34,7 @@ ms.locfileid: "64664587"
   
 - 如果類型 T 未實作 <xref:System.IEquatable%601>，則會使用 <xref:System.Object.Equals%2A?displayProperty=nameWithType> 。  
   
- 此外，有些字典集合的建構函式多載，能接受 <xref:System.Collections.Generic.IEqualityComparer%601> 實作，其可用以比較索引鍵是否相等。 如需範例，請參閱 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> 。  
+ 此外，有些字典集合的建構函式多載可接受用來比較索引鍵是否相等的 <xref:System.Collections.Generic.IEqualityComparer%601> 實作。 如需範例，請參閱 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> 。  
   
 <a name="BKMK_Determiningsortorder"></a>   
 ## <a name="determining-sort-order"></a>決定排序順序  

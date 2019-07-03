@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 89dfe697f49e8144d15586cc9c1075f69d1f3a07
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: b7964b2a59c67380d7f19077c01efa0a4a636cff
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816048"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170509"
 ---
 # <a name="in-process-side-by-side-execution"></a>同處理序並存執行
 從 .NET Framework 4 開始，您可以使用同處理序並存裝載，在單一處理序中執行多個 Common Language Runtime (CLR) 版本。 根據預設，Managed COM 元件會與建置它們的 .NET Framework 版本一起執行，不論針對程序所載入的 .NET Framework 版本為何。  
@@ -56,7 +56,7 @@ ms.locfileid: "66816048"
   
      處理方式：在此情節中，不執行任何動作。 COM 元件會與註冊它們的 .NET Framework 版本一起執行。  
   
-- **情節 2**：您想同時執行使用 .NET Framework 2.0 SP1 建置的受控應用程式與 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]，但也願意在 .NET Framework 2.0 版不存在時，於 .NET Framework 4 上執行。  
+- **情節 2**：您想同時執行使用 .NET Framework 2.0 SP1 建置的受控應用程式與 .NET Framework 2.0，但也願意在 .NET Framework 2.0 版不存在時，於 .NET Framework 4 上執行。  
   
      已安裝的 .NET Framework 版本：舊版 .NET Framework 和 .NET Framework 4。  
   

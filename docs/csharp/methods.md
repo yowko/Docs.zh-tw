@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 9e7434f2267baf82021dfb3875f2da39552e72ef
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 0decc563fdcf068c0b9dc88a55b2bd6f4e3657cd
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186074"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025103"
 ---
 # <a name="methods"></a>方法
 
@@ -62,7 +62,7 @@ ms.locfileid: "58186074"
 
 ## <a name="method-invocation"></a>方法引動過程
 
-方法可以是「執行個體」或「靜態」。 叫用執行個體方法需要您具現化物件並針對該物件呼叫方法，執行個體方法會在該執行個體及資料上運作。 您可以參考方法所屬的類型名稱來叫用靜態方法，靜態方法不操作執行個體資料。 嘗試透過物件執行個體呼叫靜態方法會產生編譯器錯誤。
+方法可以是「執行個體」  或「靜態」  。 叫用執行個體方法需要您具現化物件並針對該物件呼叫方法，執行個體方法會在該執行個體及資料上運作。 您可以參考方法所屬的類型名稱來叫用靜態方法，靜態方法不操作執行個體資料。 嘗試透過物件執行個體呼叫靜態方法會產生編譯器錯誤。
 
 呼叫方法就像是存取欄位。 在物件名稱後 (如果呼叫的是執行個體方法) 或型別名稱後 (如果呼叫的是 `static` 方法)，加上句點、方法名稱及括弧。 引數會在括號中列出，並以逗號分隔。
 
@@ -74,7 +74,7 @@ ms.locfileid: "58186074"
 
 [!code-csharp[csSnippets.Methods#41](../../samples/snippets/csharp/concepts/methods/methods40.cs#41)]
 
-叫用方法時，您也可以使用「具名引數」，而不是使用位置引數。 使用具名引數時，您指定參數名稱，後面接著冒號 (":") 和引數。 方法的引數會以任意順序出現，只要有所有必要的引數。 下例使用具名引數來叫用 `TestMotorcycle.Drive` 方法。 本例中，具名引數的傳遞順序與方法參數清單的順序相反。
+叫用方法時，您也可以使用「具名引數」  ，而不是使用位置引數。 使用具名引數時，您指定參數名稱，後面接著冒號 (":") 和引數。 方法的引數會以任意順序出現，只要有所有必要的引數。 下例使用具名引數來叫用 `TestMotorcycle.Drive` 方法。 本例中，具名引數的傳遞順序與方法參數清單的順序相反。
 
 [!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/named1.cs#45)]
 
@@ -98,7 +98,7 @@ ms.locfileid: "58186074"
 
 ## <a name="passing-parameters"></a>傳遞參數
 
-C# 中的類型為「實值型別」「參考型別」。 如需內建實值型別的清單，請參閱[類型與變數](./tour-of-csharp/types-and-variables.md)。 根據預設，實值型別和參考型別都會以傳值方式傳遞至方法。
+C# 中的類型為「實值型別」  「參考型別」  。 如需內建實值型別的清單，請參閱[類型與變數](./tour-of-csharp/types-and-variables.md)。 根據預設，實值型別和參考型別都會以傳值方式傳遞至方法。
 
 <a name="byval"></a>
 
@@ -144,9 +144,9 @@ C# 中的類型為「實值型別」「參考型別」。 如需內建實值型�
 - 將適當型別各個引數的逗點分隔清單傳遞給方法。
 - 不提供引數給參數陣列。
 
-下例定義名為 `DoStringOperation` 的方法，其執行其第一個參數所指定的字串作業 `StringOperation` 列舉成員。 參數陣列會在字串開始執行作業時即定義字串。 `Main` 方法會示範這三種叫用方法的方式。 請注意，以 `params` 關鍵字標記的方法必須準備好處理參數陣列中無任何提供引數的情況，因此其值是 `null`。
+下列範例會定義能從參數陣列中傳回所有母音，名為 `GetVowels` 的方法。 `Main` 方法會示範這三種叫用方法的方式。 呼叫者不需要針對包含 `params` 修飾詞的參數提供任何引數。 在此情況下，參數會是 `null`。
 
-[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
+[!code-csharp[csSnippets.Methods#75](~/samples/snippets/csharp/concepts/methods/params75.cs#75)]
 
 <a name="optional"></a>
 
@@ -157,7 +157,7 @@ C# 中的類型為「實值型別」「參考型別」。 如需內建實值型�
 參數的預設值必須由下列運算式種類之一指派︰
 
 - 常數，例如常值字串或數字。
-- `new ValType` 形式的運算式，其中 `ValType` 是實值型別。 請注意，這樣會叫用實值型別的隱含預設建構函式，它不是型別的實際成員。
+- `new ValType` 形式的運算式，其中 `ValType` 是實值型別。 請注意，這會叫用實值型別的隱含無參數建構函式，它不是該型別的實際成員。
 - `default(ValType)` 形式的運算式，其中 `ValType` 是實值型別。
 
 如果方法同時包含必要和選擇性參數，則選擇性參數會定義在參數清單結尾，在所有必要參數的後面。
@@ -174,7 +174,7 @@ C# 中的類型為「實值型別」「參考型別」。 如需內建實值型�
 
 [!code-csharp[csSnippets.Methods#22](../../samples/snippets/csharp/concepts/methods/optional1.cs#22)]
 
-使用選擇性參數會影響「多載解析」，或 C# 編譯器判斷依方法呼叫應叫用哪個特定多載的方式，如下所示︰
+使用選擇性參數會影響「多載解析」  ，或 C# 編譯器判斷依方法呼叫應叫用哪個特定多載的方式，如下所示︰
 
 - 如果每個參數都是選擇性或為依名稱或位置對應要呼叫之陳述式的單一引數，且該引數可以轉換成參數的型別，則方法、索引子或建構函式就是執行的候選項目。
 - 如果找到多個候選項目，則慣用轉換的多載解析規則會套用至明確指定的引數。 會忽略選擇性參數的省略引數。
@@ -200,7 +200,7 @@ C# 中的類型為「實值型別」「參考型別」。 如需內建實值型�
 
 使用區域變數，在此情況下的 `result`來儲存值是選擇性的。 它有助於程式碼的可讀性，或如果您需要儲存方法的整個範圍引數的原始值，則可能為必要。
 
-有時候，您希望自己的方法傳回的不止單一值。 從 C# 7.0 開始，您可以使用「Tuple 型別」和「Tuple 常值」輕鬆達到這個目標。 Tuple 型別會定義 Tuple 項目的資料類型。 Tuple 常值會提供傳回 Tuple 的實際值。 在下列範例中，`(string, string, string, int)` 會定義由 `GetPersonalInfo` 方法所傳回的 Tuple 類型。 運算式 `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 是 Tuple 常值，方法會傳回 `PersonInfo` 物件的名字、中間名和姓氏以及年齡。
+有時候，您希望自己的方法傳回的不止單一值。 從 C# 7.0 開始，您可以使用「Tuple 型別」  和「Tuple 常值」  輕鬆達到這個目標。 Tuple 型別會定義 Tuple 項目的資料類型。 Tuple 常值會提供傳回 Tuple 的實際值。 在下列範例中，`(string, string, string, int)` 會定義由 `GetPersonalInfo` 方法所傳回的 Tuple 類型。 運算式 `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 是 Tuple 常值，方法會傳回 `PersonInfo` 物件的名字、中間名和姓氏以及年齡。
 
 ```csharp
 public (string, string, string, int) GetPersonalInfo(string id)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 4c075cedb3cf479f53409f3b0acf4463fc3d7a03
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: a7fea9810cb02269278638ec71cd106463b029e9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758221"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025022"
 ---
 # <a name="-operator-c-reference"></a>=> 運算子 (C# 參考)
 
@@ -77,7 +77,6 @@ public override string ToString()
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 運算子](index.md)
 - [Lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [運算式主體成員](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)

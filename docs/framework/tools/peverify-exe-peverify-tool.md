@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0423946ab32c04274bb3d5656ed8603ec4314d88
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e657b8e2a0a9dbe8db703ce97d41a3767191a26f
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128728"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833859"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify 工具)
 PEVerify 工具可以協助像是編譯器撰寫者、指令碼引擎開發人員等產生 Microsoft Intermediate Language (MSIL) 的開發人員，判斷其 MSIL 程式碼和相關聯的中繼資料是否符合類型安全需求。 只有在避免使用某些語言建構時，某些編譯器才會產生可驗證的類型安全程式碼。 如果您是使用這類編譯器的開發人員，可能會想要驗證您並未損及程式碼的類型安全。 在這種情況下，您可以在檔案上執行 PEVerify 工具來檢查 MSIL 和中繼資料。  
@@ -41,7 +41,7 @@ peverify filename [options]
 |選項|說明|  
 |------------|-----------------|  
 |**/break=** *maxErrorCount*|發生 *maxErrorCount* 錯誤之後中止驗證。<br /><br /> .NET Framework 2.0 (含) 以後版本不支援此參數。|  
-|**/clock**|以毫秒為單位測量並報告下列驗證時間：<br /><br /> **MD Val. 循環**<br /> 中繼資料驗證週期<br /><br /> **MD Val. 單純**<br /> 單純中繼資料驗證<br /><br /> **IL Ver. 循環**<br /> Microsoft Intermediate Language (MSIL) 驗證週期<br /><br /> **IL Ver pure**<br /> 單純 MSIL 驗證<br /><br /> **MD Val. cycle** 和 **IL Ver. cycle** 時間包括了執行必要的啟始和關閉程序所需的時間。 **MD Val. pure** 和 **IL Ver pure** 時間則是反映純粹執行驗證所需的時間。|  
+|**/clock**|以毫秒為單位測量並報告下列驗證時間：<br /><br /> **MD Val. cycle**<br /> 中繼資料驗證週期<br /><br /> **MD Val. pure**<br /> 單純中繼資料驗證<br /><br /> **IL Ver. cycle**<br /> Microsoft Intermediate Language (MSIL) 驗證週期<br /><br /> **IL Ver pure**<br /> 單純 MSIL 驗證<br /><br /> **MD Val. cycle** 和 **IL Ver. cycle** 時間包括了執行必要的啟始和關閉程序所需的時間。 **MD Val. pure** 和 **IL Ver pure** 時間則是反映純粹執行驗證所需的時間。|  
 |**/help**|顯示工具的命令語法和選項。|  
 |**/hresult**|以十六進位格式顯示錯誤碼。|  
 |**/ignore=** *hex.code* [, *hex.code*]|忽略指定的錯誤碼。|  
@@ -61,7 +61,7 @@ peverify filename [options]
   
  如果 **/md** 和 **/il** 兩個選項都未指定，則 Peverify.exe 會執行這兩種檢查。 Peverify.exe 會先執行 **/md** 檢查。 如果沒有任何錯誤，則會執行 **/il** 檢查。 如果您同時指定 **/md** 和 **/il**，則即使中繼資料有錯誤，還是會執行 **/il** 檢查。 因此，如果中繼資料沒有錯誤，**peverify** *filename* 就相當於 **peverify** *filename* **/md** **/il**。  
   
- Peverify.exe 會依據資料流分析加上有效的中繼資料上數百項規則的清單，執行全面性的 MSIL 驗證檢查。 如需 Peverify.exe 所執行檢查的詳細資訊，請參閱 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 的 [Tools Developers Guide] 資料夾中的＜中繼資料驗證規格＞和＜MSIL 指令集規格＞。  
+ Peverify.exe 會依據資料流分析加上有效的中繼資料上數百項規則的清單，執行全面性的 MSIL 驗證檢查。 如需 Peverify.exe 所執行檢查的詳細資訊，請參閱 Windows 軟體開發套件 (SDK) 的 [Tools Developers Guide] 資料夾中的＜中繼資料驗證規格＞和＜MSIL 指令集規格＞。  
   
  請注意，.NET Framework 2.0 版 (含) 以後版本支援傳回使用下列 MSIL 指令指定的可驗證 `byref`：`dup`、`ldsflda`、`ldflda`、`ldelema`、`call` 和 `unbox`。  
   
@@ -123,6 +123,6 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 ## <a name="see-also"></a>另請參閱
 
 - [工具](../../../docs/framework/tools/index.md)
-- [撰寫可驗證的類型安全程式碼](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)
+- [撰寫可驗證的型別安全程式碼](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)
 - [型別安全和安全性](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)
 - [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -1,5 +1,5 @@
 ---
-title: 比較運算子 - C# 參考
+title: 比較運算子 - C#參考
 description: 深入了解可供您檢查數值順序的 C# 比較運算子。
 ms.date: 04/25/2019
 author: pkulikov
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 3b123ea1ae57735cdcb763087f12c30b8008dc11
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 7d8a6b7f5bf83719f96009c301867056da755822
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758207"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025217"
 ---
 # <a name="comparison-operators-c-reference"></a>比較運算子 (C#參考)
 
@@ -74,7 +74,6 @@ ms.locfileid: "66758207"
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 運算子](index.md)
 - <xref:System.IComparable%601?displayProperty=nameWithType>
 - [等號比較運算子](equality-operators.md)
